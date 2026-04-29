@@ -1,0 +1,107 @@
+<Weblab2>
+  <config><![CDATA[{
+  "game_id": 74,
+  "created_at": "2026-04-29T06:29:40.000Z",
+  "level_num": "custom",
+  "user_id": 1574,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "## Generate Your Data with AI\r\n\r\n### Do This:\r\n\r\n1. Open your Backpack and copy your labeled plan from the previous level.\r\n\r\n2. Paste your plan into AI.\r\n\r\n3. Ask AI to generate arrays for your data.\r\n   * You should have one array for each part of your UI.\r\n   * Each array should have at least 3 items.\r\n   \r\n\r\n4. Check your arrays:\r\n   * Do all arrays have the same number of items?\r\n   * Does each index represent one complete item?\r\n\r\n### Reminder:\r\n- Each array stores one type of information\r\n- The same index across arrays should match",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "disable_edit_run_for_submission": "false",
+    "widget_view": "false",
+    "initial_view_mode": "split",
+    "ai_tutor_mode": "engineer",
+    "predict_settings": {
+      "isPredictLevel": false,
+      "solution": "",
+      "questionType": "freeResponse",
+      "placeholderText": "",
+      "multipleChoiceOptions": [
+        ""
+      ],
+      "freeResponseHeight": 50,
+      "codeEditableAfterSubmit": false,
+      "allowMultipleAttempts": false
+    },
+    "start_sources": {
+      "folders": {
+        "1": {
+          "id": "1",
+          "name": "images",
+          "parentId": "0",
+          "open": false
+        }
+      },
+      "files": {
+        "1": {
+          "id": "1",
+          "name": "index.html",
+          "language": "html",
+          "contents": "<!DOCTYPE html>\n<html>\n  <head>\n    <meta charset=\"utf-8\" />\n    <title id=\"pageTitle\">Profiles</title>\n    <link rel=\"stylesheet\" href=\"style.css\" />\n  </head>\n  <body>\n    <main id=\"mainContainer\">\n      <header id=\"header\">\n        <h1 id=\"heading\">Profile</h1>\n        <p id=\"subtitle\">See details about different person or items.</p>\n      </header>\n\n      <section id=\"profileContainer\" class=\"profile-container\"></section>\n    </main>\n\n    <script src=\"helpers.js\" ></script>\n    <script src=\"script.js\"></script>\n  </body>\n</html>",
+          "active": false,
+          "folderId": "0"
+        },
+        "2": {
+          "id": "2",
+          "name": "style.css",
+          "language": "css",
+          "contents": "body {\n  margin: 0;\n  font-family: Arial, sans-serif;\n  background: #eef1f6;\n  color: #14213d;\n}\n\n#mainContainer {\n  max-width: 900px;\n  margin: 0 auto;\n  padding: 24px 16px 40px;\n}\n\n#header {\n  margin-bottom: 24px;\n}\n\n#heading {\n  margin: 0 0 8px;\n  font-size: 1.8rem;\n}\n\n#subtitle {\n  margin: 0;\n  font-size: 0.95rem;\n  color: #5f687a;\n}\n\n#profileContainer {\n  display: grid;\n  grid-template-columns: repeat(auto-fit, minmax(260px, 360px));\n  gap: 20px;\n  justify-content: center;\n}\n\n.profile-card {\n  width: 100%;\n  max-width: 360px;\n  background: #ffffff;\n  border-radius: 16px;\n  padding: 16px;\n  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);\n  box-sizing: border-box;\n}\n\n.profile-top {\n  display: flex;\n  align-items: flex-start;\n  gap: 12px;\n}\n\n.profile-image {\n  width: 72px;\n  height: 72px;\n  border-radius: 50%;\n  object-fit: cover;\n  flex-shrink: 0;\n}\n\n.profile-main {\n  flex: 1;\n  min-width: 0;\n}\n\n.profile-name {\n  margin: 0 0 6px;\n  font-size: 1.3rem;\n  line-height: 1.1;\n  word-break: break-word;\n}\n\n.profile-description {\n  margin: 0;\n  font-size: 0.9rem;\n  color: #5f687a;\n  line-height: 1.4;\n}\n\n.profile-divider {\n  border: none;\n  border-top: 1px solid #e3e7ef;\n  margin: 16px 0 0;\n}\n\n.profile-detail {\n  margin: 0;\n  padding: 12px 0;\n  font-size: 0.9rem;\n  color: #24324a;\n  border-top: 1px solid #e3e7ef;\n}\n\n.profile-detail:first-of-type {\n  border-top: none;\n}",
+          "folderId": "0",
+          "active": false
+        },
+        "3": {
+          "id": "3",
+          "name": "script.js",
+          "language": "js",
+          "contents": "const image = \"images/olivia.png\";\nconst name = \"Olivia Smith\";\nconst description = \"Enthusiastic learner who enjoys problem solving and coding.\";\nconst detail1 = \"olivia.smith@example.com\";\nconst detail2 = \"10th Grade\";\nconst detail3 = \"Los Angeles, CA\";\n\ncreateProfile(image, name, description, detail1, detail2, detail3);",
+          "folderId": "0",
+          "active": true
+        },
+        "4": {
+          "id": "4",
+          "name": "helpers.js",
+          "contents": "let profileCount = 0;\n\nconst createProfile = (imageSrc, name, description, detail1, detail2, detail3) => {\n  const container = document.getElementById(\"profileContainer\");\n\n  const card = document.createElement(\"article\");\n  card.className = \"profile-card\";\n  card.id = \"profile\" + profileCount;\n\n  const top = document.createElement(\"div\");\n  top.className = \"profile-top\";\n  top.id = \"profileTop\" + profileCount;\n\n  const image = document.createElement(\"img\");\n  image.className = \"profile-image\";\n  image.id = \"profileImage\" + profileCount;\n  image.src = imageSrc;\n  image.alt = name;\n\n  const main = document.createElement(\"div\");\n  main.className = \"profile-main\";\n  main.id = \"profileMain\" + profileCount;\n\n  const heading = document.createElement(\"h2\");\n  heading.className = \"profile-name\";\n  heading.id = \"profileName\" + profileCount;\n  heading.textContent = name;\n\n  const descriptionEl = document.createElement(\"p\");\n  descriptionEl.className = \"profile-description\";\n  descriptionEl.id = \"profileDescription\" + profileCount;\n  descriptionEl.textContent = description;\n\n  const divider = document.createElement(\"hr\");\n  divider.className = \"profile-divider\";\n  divider.id = \"profileDivider\" + profileCount;\n\n  const detailOne = document.createElement(\"p\");\n  detailOne.className = \"profile-detail\";\n  detailOne.id = \"profileDetail1_\" + profileCount;\n  detailOne.textContent = detail1;\n\n  const detailTwo = document.createElement(\"p\");\n  detailTwo.className = \"profile-detail\";\n  detailTwo.id = \"profileDetail2_\" + profileCount;\n  detailTwo.textContent = detail2;\n\n  const detailThree = document.createElement(\"p\");\n  detailThree.className = \"profile-detail\";\n  detailThree.id = \"profileDetail3_\" + profileCount;\n  detailThree.textContent = detail3;\n\n  main.appendChild(heading);\n  main.appendChild(descriptionEl);\n\n  top.appendChild(image);\n  top.appendChild(main);\n\n  card.appendChild(top);\n  card.appendChild(divider);\n  card.appendChild(detailOne);\n  card.appendChild(detailTwo);\n  card.appendChild(detailThree);\n\n  container.appendChild(card);\n\n  profileCount++;\n};",
+          "folderId": "0",
+          "active": false,
+          "type": "support"
+        },
+        "6": {
+          "id": "6",
+          "name": "olivia.png",
+          "contents": "",
+          "folderId": "1",
+          "url": "/level_starter_assets/building-data-driven-systems-lesson2-level1c-v1-2026/uuid/72243b9f-64b9-4e4f-8c6a-4618b0ffa46b.png",
+          "type": "starter",
+          "active": false
+        }
+      },
+      "openFiles": [
+        "3"
+      ]
+    },
+    "encrypted_exemplar_sources": "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\nk7tqsBrJPFoTSBJO2FnVVrQv3vvrTxrSb56bcfcdK5Qd9KMs38pW4zQfNEUP\nFZ1dBDPDqQk7uvN58Q4A8BLilrwHccR88W6p1+CWogNn+MX1EjkkV7jAJah1\n5rFoy/jt/KSI6sSP1/rOcSjBHvyB2Mlyc+jglCdGydkDEQE1K+bsJR8miYJ/\nmmZCoAu5fVu6aCJG5nqDF5yGrwS10LWLNlfK+MKRbJpIMjfSMxkCPvw1EAgp\nXWQqMFNf1hp8YlKa2sMyGralTx1PvuJNI0uBqCWzEOLCOM/P88eep8BTLnL/\n5b/8g6VwSaw1bVy366bk2zeV7h9av6XeVGUParKIro5aFP+xNhHWo8ZyRP9Q\nb33TKso66eFmzFBPIQISNJT0u8JOnwvf7gqYb6igQq3IRHbqsfNnokZvL712\nT8pzA0pUaiicd4rsE4pZdW/13rDaMjqSbIBW2HRbK9f9BfJ9TY2Jg800DF07\nRzeD3uCGMagCQ+e4INigpDkP4Lc3KqLXF1Db0dX2v43r3FMiIsCfxF/IubWq\n7PXZsff6Yt4te3fQGPv9DllJsQwAFiXt4L4NLbkVAATfLR250WibnbXsWlxS\nri8gD6r2y2RsG91ij760AaNZGbOzhk7BVHYYmSgTpcPPMPDLCnYnT0F5qxrQ\njTd+qi5Kf4zosHJyGMwQwhQRpw02pBFfc92W00rKmtsorXotQM1i3d9kOkim\n9lwsCmXueN10Wu0wzYA0ffTCw+PaqdwgG3MbmVJZf+Mg3vEjg0Om0wXLMaNR\n/1SHqqy8Vl+P1aOXt+Z6fBUGhonEG2o97dNkA+T4SaMr9v3S/LPGHvOHVkhK\nEF70U8jVKvRlX1ZO6fF1aIm7T7iuqAT8DCHUOjvWXz9r7OUhbgLAUra7UhnY\ns0t7mJ4TROA37KCMVVTQNXiEl31n2M1ujN/gpGijR5Rz9de0jotLrKt304hD\npI3TuP1BQPOSU9fvz/kVybqptknB27jyET+ztt5OLk2dChY1uXdVaid2Ajym\nzqv7xqR5HRqTSNYsYlkA/e/Frk9Pn6iO+B+WbEAdLMlEdoDky43mP5YYLgzP\ny+y6nx3TmWb5RoRUBr+7YZ4Vqq1DO/c8eAGnLBkFSciD5bWL07C8MtaHt1pr\nfNOIYTtyd1SQGRH1BeutuunjOzUyZ4cEQ85amPXuvHlynTNfhWJtJecGz0Wq\n8heYRsI0RhO0ZX2iTUvSkMam/+npFejhYfzqibHr2AforP0wZd6QfrvG5bdL\nYWR52WUYNEzGeln4GEitrv70aSkIH/dZQTgiTOw9BALUg4aL9ax9Y6IvE3TX\n0x52oYIKffgwbOgUu1Wg0TQMUAFba5v1xSuZxMPkCiIvcHdDbS0Im5dZDc9c\nRB8NUga2DCVWvp383HE7Reokrwc+qYn4b9SQkLHw4k/oac7Qm/n3BZOveojF\n47a8Lnk+6EZj6oVSGwGY1VUPBvfUVi3f/DJq78EHnh3DSHM+nAeLRz3TmWKN\nNLvO/3DjfCA3y7n5bj8MCShTy3+MYTkggVcW9/bQnIUy44gjXFPqw7OJH6SA\nZlltPxRI5XFL3sC8FjKlMZMjCuLvuO6v3Wia8WxD0MHyVCGeypIogvm+NNhY\nz3ipU3EPbqu5FwWHFyw24jNpClbPajs8L7svH6XoM2PfTbHZrSSBPE0AAF+b\nLi5/dYs/4UdlyifhVtGWAmMPLyUHuZBYP2DD0b48lXweWejtCq2Pp2ggEftI\niQEjiQt3zLc3dyBMXuPt3JCq+/w6AQvs5EwJXhbERpDJsM4iktETTMmVOqpi\nLrMBf6krZb50uKGP5+/4y4w98cdkZWSUkJ5OXB+F\n",
+    "name_suffix": "_2025-pilot",
+    "offer_browser_tts": "false",
+    "require_edit_to_continue": "false",
+    "ai_tutor_prompt_settings": {
+      "answerTypes": [
+        "ask",
+        "explainCode"
+      ],
+      "answerTypeCustomizations": {
+        "buildJavaScript": "",
+        "ask": "You are helping a beginner student understand how a profile UI is built from data.\n\nExplain how the values passed into a function (like createProfile) control what is shown in the profile.\n\nFocus on:\n- how each value maps to parts of the profile (name, image, details)\n- what one profile represents\n- what would change if one value changes\n\nKeep explanations short and clear.",
+        "explainCode": "You are helping a beginner student understand how a profile UI is built from data.\n\nExplain how the values passed into a function (like createProfile) control what is shown in the profile.\n\nFocus on:\n- how each value maps to parts of the profile (name, image, details)\n- what one profile represents\n- what would change if one value changes\n\nKeep explanations short and clear."
+      }
+    },
+    "display_name": "Card View",
+    "bubble_choice_description": "Generate arrays for your card, including image, title, description, and badge. Each index should represent one complete item.",
+    "thumbnail_url": "https://images.code.org/28831c02a2a353e128c48a922c421419-card_view (2).png",
+    "project_template_level_name": "building-data-driven-systems-lesson2-level3a-template-v2-2026"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-04-29T06:29:40.382+00:00\",\"changed\":[\"cloned from \\\"building-data-driven-systems-lesson2-level1c-v1-2026\\\"\"],\"cloned_from\":\"building-data-driven-systems-lesson2-level1c-v1-2026\"},{\"changed_at\":\"2026-04-29 06:34:51 +0000\",\"changed\":[\"long_instructions\",\"display_name\",\"bubble_choice_description\",\"thumbnail_url\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-04-29 06:42:59 +0000\",\"changed\":[\"encrypted_exemplar_sources\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-04-29 06:58:51 +0000\",\"changed\":[\"encrypted_exemplar_sources\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"}]"
+}]]></config>
+</Weblab2>

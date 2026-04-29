@@ -64,30 +64,21 @@ class VarnishEnvironment < Sinatra::Base
         hash[locale.downcase] = quality ? quality.to_f : 1.0
       end
 
-      http_locales_qualities.sort_by {|_l, q| -q}.lazy.map {|l, _q| language_to_locale(Cdo::I18n::LOCALE_ALIASES[l] || l)}.find(&:itself)
+      http_locales_qualities.sort_by {|_l, q| -q}.lazy.map {|l, _q| language_to_locale(l)}.find(&:itself)
     rescue ArgumentError
       nil
     end
 
     # @return BCP 47 language tag (a normalized locale suitable for I18n e.g. `en-US` or `es-MX`)
     def language_to_locale(language)
-      case language
-      when 'en'
-        return 'en-US'
-      when 'es'
-        return 'es-ES'
-      when 'fa'
-        return 'fa-IR'
-      else
-        language = begin
-          language.to_s.downcase
-        rescue ArgumentError
-          ""
-        end
-        return nil unless locale = settings.locales_supported.find {|i| i == language || i.split('-').first == language}
-        parts = locale.split('-')
-        return "#{parts[0].downcase}-#{parts[1].upcase}"
-      end
+      language = language.to_s
+
+      locale = Cdo::I18n::LOCALE_ALIASES[language] || language
+      return unless settings.locales_supported.include?(locale.downcase)
+
+      locale.sub(/-(.+)\z/, &:upcase)
+    rescue ArgumentError
+      nil
     end
   end
 end

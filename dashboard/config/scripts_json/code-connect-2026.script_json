@@ -8,7 +8,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2026-04-27 20:09:48 UTC",
+    "serialized_at": "2026-04-28 21:11:56 UTC",
     "hide_within_course": false,
     "published_state": "in_development",
     "instruction_type": null,
@@ -144,7 +144,7 @@
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "code_connect_web_app_idea_bot_2026"
+          "2026-code-connect-aichat"
         ],
         "lesson.key": "lesson-1",
         "lesson_group.key": "",
@@ -152,7 +152,7 @@
         "activity_section.key": "8e2df5f7-7804-4973-af40-9792ba311346"
       },
       "level_keys": [
-        "code_connect_web_app_idea_bot_2026"
+        "2026-code-connect-aichat"
       ]
     },
     {
@@ -215,9 +215,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "code_connect_web_app_idea_bot_2026",
+        "level.key": "2026-code-connect-aichat",
         "script_level.level_keys": [
-          "code_connect_web_app_idea_bot_2026"
+          "2026-code-connect-aichat"
         ],
         "lesson.key": "lesson-1",
         "lesson_group.key": "",

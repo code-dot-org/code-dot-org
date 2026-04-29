@@ -8,7 +8,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2026-04-27 17:10:27 UTC",
+    "serialized_at": "2026-04-28 14:50:23 UTC",
     "hide_within_course": false,
     "published_state": "in_development",
     "instruction_type": null,
@@ -703,6 +703,28 @@
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
+          "pl-ai-101-V2-mod5-fictions-11"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-ai-101-v2-mod5",
+        "activity_section.key": "3b376a77-7cd1-401f-93a4-3e77dc31ffe2"
+      },
+      "level_keys": [
+        "pl-ai-101-V2-mod5-fictions-11"
+      ]
+    },
+    {
+      "chapter": 28,
+      "position": 28,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Closing"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
           "pl-ai-101-V2-mod5-closing-00"
         ],
         "lesson.key": "lesson-1",
@@ -715,9 +737,9 @@
       ]
     },
     {
-      "chapter": 28,
-      "position": 28,
-      "activity_section_position": 2,
+      "chapter": 29,
+      "position": 29,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
         "progression": "Closing"
@@ -737,9 +759,9 @@
       ]
     },
     {
-      "chapter": 29,
-      "position": 29,
-      "activity_section_position": 3,
+      "chapter": 30,
+      "position": 30,
+      "activity_section_position": 4,
       "assessment": false,
       "properties": {
         "progression": "Closing"
@@ -1070,6 +1092,18 @@
         "lesson_group.key": "",
         "script.name": "self-paced-pl-ai-101-v2-mod5",
         "activity_section.key": "4782585f-86d8-4dc6-b3f9-17cb97fcd21e"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-ai-101-V2-mod5-fictions-11",
+        "script_level.level_keys": [
+          "pl-ai-101-V2-mod5-fictions-11"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-ai-101-v2-mod5",
+        "activity_section.key": "3b376a77-7cd1-401f-93a4-3e77dc31ffe2"
       }
     },
     {

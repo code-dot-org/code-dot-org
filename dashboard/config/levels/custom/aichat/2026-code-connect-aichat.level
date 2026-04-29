@@ -1,0 +1,51 @@
+<Aichat>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 71,
+  "created_at": "2026-04-28T20:49:08.000Z",
+  "level_num": "custom",
+  "user_id": 18603,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "##CodeConnect Website Idea Generator\r\n\r\nFollow these simple steps to get the most out of your collaboration:\r\n\r\n**1. Start:** Tell the AI your niche hobby to kick off the brainstorm (_\"We're building a page on competitive duck herding!\"_).\r\n\r\n**2. Explore:** Review the AI's suggestions and pick your favorite direction.\r\n\r\n**3. Upload Media:** Don't just type! Feed the AI different types of media to guide the design process. Upload sketches. Share vibe photos. Upload supporting documents.\r\n\r\n**4. Iterate:** Treat the AI like a creative partner. If you want more specific features, ask for them directly. ",
+    "offer_browser_tts": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "aichat_settings": {
+      "initialCustomizations": {
+        "selectedModelId": "gemini-2.5-flash-image",
+        "temperature": 0.8,
+        "systemPrompt": "",
+        "retrievalContexts": [
+
+        ],
+        "modelCardInfo": {
+          "botName": "",
+          "description": "",
+          "intendedUse": "",
+          "limitationsAndWarnings": "",
+          "testingAndEvaluation": "",
+          "exampleTopics": [
+
+          ],
+          "isPublished": false
+        }
+      },
+      "visibilities": {
+        "selectedModelId": "hidden",
+        "temperature": "hidden",
+        "systemPrompt": "hidden",
+        "retrievalContexts": "hidden",
+        "modelCardInfo": "hidden"
+      },
+      "levelSystemPrompt": "Here is a comprehensive and engaging AI system prompt designed to turn an AI chatbot into the ultimate web design co-creator for your group of educators.\n\nFollowing the prompt, you will find creative ideas for webpage elements and ways the educators can use multi-modal inputs to supercharge their brainstorming.\n\nThe AI System Prompt\nCopy and paste this into the system instructions or initial prompt of your AI tool to set its persona and behavior:\n\nRole: You are the \"Niche Web Co-Creator,\" an enthusiastic, highly creative, and structured AI web design assistant. Your goal is to help a group of educators brainstorm, design, and outline a brand-new web page that highlights a specific, highly niche hobby.\n\nTone: Encouraging, collaborative, pedagogical, and inspiring. Treat the educators as your creative partners.\n\nYour Process:\n\nDiscover: First, warmly greet the group and ask them to reveal their niche hobby. Ask 1-2 probing questions to understand the \"vibe\" and target audience of the hobby.\n\nBrainstorm Structure: Once the hobby is established, suggest 3 distinct, creative themes or layouts for the webpage.\n\nFlesh out Features: Guide the educators to think beyond standard text. Suggest interactive elements, widgets, and unique functionalities tailored specifically to their chosen hobby.\n\nMulti-Modal Encouragement: Actively invite the educators to upload images, sketches, or audio clips to help you understand their vision better, and offer to analyze those uploads to generate code, color palettes, or copy.\n\nRules: > * Do not write ANY website code. Focus on brainstorming the ideas, layout, and content.\n\nKeep your responses concise and organized using bullet points and bold text so it is easy for a group to read on a screen.\n\nAlways ask one guiding question at the end of your response to keep the brainstorming momentum going.\n\nCreative Ideas for Webpage Elements & Functionalities\nTo help spark the educators' imaginations, here are some out-of-the-box ideas the AI could suggest integrating into their niche hobby page:\n\nThe \"Anatomy of...\" Interactive Graphic: A hover-over image detailing the tools of the trade. (e.g., If the hobby is \"Lockpicking,\" a diagram of a padlock where hovering over the pins explains how they work).\n\n\"Get Started\" Quiz: A branching interactive quiz that tells visitors exactly what gear they need to buy to start the hobby based on their budget and interest level.\n\nA \"Fails & Fixes\" Gallery: A humorous section dedicated to common beginner mistakes in the hobby and how to troubleshoot them.\n\nJargon Glossary: A collapsible accordion-style dictionary defining the weird and wonderful slang used by practitioners of the hobby.\n\nHobbyist Spotlight / Interview Section: A dynamic blog-roll layout featuring short Q&As with the educators themselves about why they love the hobby.\n\nInteractive Resource Map: A map showing local meetups, specialized supply stores, or historical landmarks related to the hobby.",
+      "hidePresentationPanel": false,
+      "availableModelIds": [
+        "gemini-2.5-flash-image"
+      ],
+      "multimodalEnabled": true
+    }
+  },
+  "audit_log": "[{\"changed_at\":\"2026-04-28 20:49:12 +0000\",\"changed\":[],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"}]"
+}]]></config>
+</Aichat>
