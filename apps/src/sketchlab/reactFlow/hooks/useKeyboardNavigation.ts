@@ -78,11 +78,6 @@ function moveNodesByDelta(
 /**
  * Resize a single node by adding `delta` to both its width and height,
  * clamped to the minimum node dimensions.
- *
- * node.width / node.height are the React Flow fields NodeResizer also writes
- * on drag, so we write there to keep creation, drag, and keyboard resize
- * consistent. node.style is left untouched and reserved for appearance.
- * See https://github.com/xyflow/xyflow/blob/a58568f11bc0e1a1bdca1b3549e959e2e1ca0cdd/packages/react/src/components/NodeWrapper/utils.tsx#L37-L38
  */
 function resizeNodeByDelta(
   currentNodes: SketchlabReactFlowNode[],
