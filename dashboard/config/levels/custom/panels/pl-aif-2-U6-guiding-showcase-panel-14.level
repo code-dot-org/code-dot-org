@@ -10,7 +10,7 @@
     "offer_browser_tts": "false",
     "panels": [
       {
-        "text": "\n",
+        "text": "",
         "imageUrl": "https://images.code.org/16ef83b07285e052bedee29823b2810d-showcase.png",
         "key": "pl-aif-2-U6-guiding-showcase-panel-14-210d08c3-2c01-44bb-8e55-b49857b95c09",
         "layout": "text-bottom-right"
@@ -52,8 +52,9 @@
         "layout": "text-bottom-right"
       }
     ],
-    "name_suffix": "_2025-pilot"
+    "name_suffix": "_2025-pilot",
+    "use_links": "false"
   },
-  "audit_log": "[{\"changed_at\":\"2026-04-15T15:02:18.333+00:00\",\"changed\":[\"cloned from \\\"pl-aif-2-U4-forloop-panel\\\"\"],\"cloned_from\":\"pl-aif-2-U4-forloop-panel\"},{\"changed_at\":\"2026-04-24 15:09:41 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2026-04-15T15:02:18.333+00:00\",\"changed\":[\"cloned from \\\"pl-aif-2-U4-forloop-panel\\\"\"],\"cloned_from\":\"pl-aif-2-U4-forloop-panel\"},{\"changed_at\":\"2026-04-24 15:09:41 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"},{\"changed_at\":\"2026-04-28 15:46:30 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"}]"
 }]]></config>
 </Panels>
