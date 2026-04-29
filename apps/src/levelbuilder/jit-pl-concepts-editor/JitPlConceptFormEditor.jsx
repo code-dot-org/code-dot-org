@@ -11,6 +11,7 @@ import RailsAuthenticityToken from '@cdo/apps/lib/util/RailsAuthenticityToken';
 import {navigateToHref} from '@cdo/apps/utils';
 
 import ExemplarsEditor from './ExemplarsEditor';
+import JsonVideosEditor from './JsonVideosEditor';
 import MisconceptionsEditor from './MisconceptionsEditor';
 import TeachingTipsEditor from './TeachingTipsEditor';
 
@@ -24,11 +25,13 @@ const JitPlConceptFormEditor = ({
   originalMisconceptions,
   originalExemplars,
   originalTeachingTips,
+  originalJsonVideos,
   resources,
 }) => {
   const [name, setName] = useState(originalName);
   const [displayName, setDisplayName] = useState(originalDisplayName);
   const [textContent, setTextContent] = useState(originalTextContent);
+  const [jsonVideos, setJsonVideos] = useState(originalJsonVideos);
   const [isSaving, setIsSaving] = useState(false);
   const [lastUpdated, setLastUpdated] = useState(null);
   const [error, setError] = useState(null);
@@ -46,6 +49,7 @@ const JitPlConceptFormEditor = ({
         display_name: displayName,
         text_content: textContent,
         resource_ids: resources.map(r => r.id),
+        json_video_ids: jsonVideos.map(v => v.id),
       },
     })
       .done(() => {
@@ -95,6 +99,8 @@ const JitPlConceptFormEditor = ({
         resourceContext="jitPlConceptResource"
         resources={resources}
       />
+      <h2>JSON Videos</h2>
+      <JsonVideosEditor jsonVideos={jsonVideos} onChange={setJsonVideos} />
       <h2>Exemplars</h2>
       <ExemplarsEditor
         conceptId={conceptId}
@@ -130,6 +136,7 @@ JitPlConceptFormEditor.propTypes = {
   originalMisconceptions: PropTypes.array,
   originalExemplars: PropTypes.array,
   originalTeachingTips: PropTypes.array,
+  originalJsonVideos: PropTypes.array,
   resources: PropTypes.arrayOf(resourceShape).isRequired,
 };
 

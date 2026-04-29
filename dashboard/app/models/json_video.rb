@@ -40,6 +40,15 @@ class JSONVideo < ApplicationRecord
     JSON.parse(content).symbolize_keys
   end
 
+  def summarize
+    {
+      id: id,
+      key: key,
+      description: description,
+      audience: audience,
+    }
+  end
+
   def self.seed_record(file_path)
     properties = properties_from_file(File.read(file_path))
     objective_keys = Array(properties.delete(:objective_keys))

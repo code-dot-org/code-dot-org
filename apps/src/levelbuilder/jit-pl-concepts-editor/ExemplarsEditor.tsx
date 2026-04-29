@@ -9,6 +9,7 @@ import createResourcesReducer, {
 import TextareaWithMarkdownPreview from '@cdo/apps/levelbuilder/TextareaWithMarkdownPreview';
 import {getStore, hasReducer, registerReducers} from '@cdo/apps/redux';
 
+import JsonVideosEditor, {JsonVideo} from './JsonVideosEditor';
 import moduleStyles from './jitPlConceptsEditor.module.scss';
 
 interface Resource {
@@ -27,6 +28,7 @@ export interface Exemplar {
   code_content?: string;
   exemplar_type?: string;
   resources?: Resource[];
+  json_videos?: JsonVideo[];
 }
 
 const EXEMPLAR_TYPES = ['good', 'bad', 'neutral'];
@@ -50,6 +52,9 @@ const ExemplarForm: React.FC<ExemplarFormProps> = ({
     initial?.id ?? 'new'
   }`;
   const initialResourcesRef = useRef(initial?.resources ?? []);
+  const [jsonVideos, setJsonVideos] = useState<JsonVideo[]>(
+    initial?.json_videos ?? []
+  );
 
   useEffect(() => {
     if (!hasReducer(contextKey)) {
@@ -87,6 +92,7 @@ const ExemplarForm: React.FC<ExemplarFormProps> = ({
         text_content: textContent,
         code_content: codeContent,
         resource_ids: resources.map(r => r.id),
+        json_video_ids: jsonVideos.map(v => v.id),
       },
     })
       .done((data: Exemplar) => onSave(data))
@@ -143,6 +149,8 @@ const ExemplarForm: React.FC<ExemplarFormProps> = ({
         resourceContext={contextKey}
         resources={resources}
       />
+      <h4 className={moduleStyles.resourcesHeading}>JSON Videos</h4>
+      <JsonVideosEditor jsonVideos={jsonVideos} onChange={setJsonVideos} />
       <div className={moduleStyles.formButtons}>
         <button onClick={save} disabled={isSaving} type="button">
           {isSaving ? 'Saving...' : 'Save'}

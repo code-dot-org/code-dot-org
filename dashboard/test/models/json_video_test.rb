@@ -16,6 +16,16 @@ class JSONVideoTest < ActiveSupport::TestCase
     }.merge(overrides)
   end
 
+  test 'summarize returns expected hash' do
+    video = create(:json_video, key: 'test-key', description: 'Test desc', audience: 'student')
+    summary = video.summarize
+
+    assert_equal video.id, summary[:id]
+    assert_equal 'test-key', summary[:key]
+    assert_equal 'Test desc', summary[:description]
+    assert_equal 'student', summary[:audience]
+  end
+
   test 'seed_record creates a new video' do
     File.stubs(:read).returns(video_data.to_json)
 

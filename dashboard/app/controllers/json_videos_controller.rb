@@ -1,5 +1,22 @@
 class JSONVideosController < ApplicationController
   before_action :authenticate_user!
+  before_action :require_levelbuilder_mode_or_test_env, only: [:search, :create]
+  authorize_resource only: [:search, :create]
+
+  # GET /json_videos/search
+  def search
+    render json: JSONVideosAutocomplete.get_search_matches(params[:query].to_s, params[:limit])
+  end
+
+  # POST /json_videos
+  def create
+    video = JSONVideo.new(json_video_params)
+    if video.save
+      render json: video.summarize
+    else
+      render status: :bad_request, json: video.errors.full_messages.join(', ')
+    end
+  end
 
   # GET /json_videos/:id/content
   # Fetches the JSON video file from S3 and returns it directly, keeping S3
@@ -14,6 +31,10 @@ class JSONVideosController < ApplicationController
   rescue => exception
     CDO.log.error "Failed to fetch json video #{params[:id]} from S3: #{exception.message}"
     head :bad_gateway
+  end
+
+  private def json_video_params
+    params.permit(:key, :description, :s3_uri, :json_schema_version, :audience)
   end
 
   private def parse_s3_uri(uri)
