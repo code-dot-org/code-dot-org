@@ -19,6 +19,20 @@ SPECKIT_SKILLS=(
   speckit-taskstoissues
 )
 
+OPENSPEC_SKILLS=(
+  openspec-apply-change
+  openspec-archive-change
+  openspec-explore
+  openspec-propose
+)
+
+OPENSPEC_COMMANDS=(
+  apply
+  archive
+  explore
+  propose
+)
+
 log() {
   printf '%s\n' "$*"
 }
@@ -114,6 +128,16 @@ cleanup_openspec_overlay() {
   log "Cleaning existing OpenSpec overlay..."
   safe_remove_path "openspec"
   safe_remove_path "specs"
+  safe_remove_path ".claude/commands/opsx"
+
+  local skill cmd
+  for skill in "${OPENSPEC_SKILLS[@]}"; do
+    safe_remove_path ".agents/skills/$skill"
+    safe_remove_path ".github/skills/$skill"
+  done
+  for cmd in "${OPENSPEC_COMMANDS[@]}"; do
+    safe_remove_path ".github/prompts/opsx-$cmd.prompt.md"
+  done
 }
 
 cleanup_all_overlays() {
@@ -144,7 +168,7 @@ install_speckit() {
   for skill in "${SPECKIT_SKILLS[@]}"; do
     ensure_target_exists "$tool_dir/.agents/skills/$skill"
     log "Linking $skill..."
-    safe_symlink "../../../$REPO_DIR/speckit/.agents/skills/$skill" ".agents/skills/$skill"
+    safe_symlink "../../$REPO_DIR/speckit/.agents/skills/$skill" ".agents/skills/$skill"
   done
 }
 
@@ -152,6 +176,19 @@ install_openspec() {
   local tool_dir="$REPO_DIR/openspec"
 
   ensure_target_exists "$tool_dir"
+  ensure_target_exists "$tool_dir/.agents/skills"
+  ensure_target_exists "$tool_dir/.claude/commands/opsx"
+  ensure_target_exists "$tool_dir/.github/prompts"
+  ensure_target_exists "$tool_dir/.github/skills"
+  ensure_target_exists "$tool_dir/openspec"
+
+  mkdir -p .agents/skills .claude/commands .github/prompts .github/skills
+
+  log "Linking OpenSpec working dir..."
+  safe_symlink "$REPO_DIR/openspec/openspec" "openspec"
+
+  log "Linking OpenSpec slash commands..."
+  safe_symlink "../../$REPO_DIR/openspec/.claude/commands/opsx" ".claude/commands/opsx"
 
   if [ -e "$tool_dir/specs" ]; then
     log "Linking OpenSpec specs..."
@@ -160,12 +197,20 @@ install_openspec() {
     log "OpenSpec specs directory not present yet; skipping specs symlink."
   fi
 
-  # Add future openspec-specific root links here when defined.
-  # Example:
-  # if [ -e "$tool_dir/openspec" ]; then
-  #   log "Linking openspec..."
-  #   safe_symlink "$REPO_DIR/openspec/openspec" "openspec"
-  # fi
+  local skill cmd
+  for skill in "${OPENSPEC_SKILLS[@]}"; do
+    ensure_target_exists "$tool_dir/.agents/skills/$skill"
+    ensure_target_exists "$tool_dir/.github/skills/$skill"
+    log "Linking $skill..."
+    safe_symlink "../../$REPO_DIR/openspec/.agents/skills/$skill" ".agents/skills/$skill"
+    safe_symlink "../../$REPO_DIR/openspec/.github/skills/$skill" ".github/skills/$skill"
+  done
+
+  for cmd in "${OPENSPEC_COMMANDS[@]}"; do
+    ensure_target_exists "$tool_dir/.github/prompts/opsx-$cmd.prompt.md"
+    log "Linking opsx-$cmd prompt..."
+    safe_symlink "../../$REPO_DIR/openspec/.github/prompts/opsx-$cmd.prompt.md" ".github/prompts/opsx-$cmd.prompt.md"
+  done
 }
 
 ensure_excludes() {
@@ -173,10 +218,18 @@ ensure_excludes() {
   ensure_local_exclude ".specify"
   ensure_local_exclude "specs"
   ensure_local_exclude "openspec"
+  ensure_local_exclude ".claude/commands/opsx"
 
-  local skill
+  local skill cmd
   for skill in "${SPECKIT_SKILLS[@]}"; do
     ensure_local_exclude ".agents/skills/$skill"
+  done
+  for skill in "${OPENSPEC_SKILLS[@]}"; do
+    ensure_local_exclude ".agents/skills/$skill"
+    ensure_local_exclude ".github/skills/$skill"
+  done
+  for cmd in "${OPENSPEC_COMMANDS[@]}"; do
+    ensure_local_exclude ".github/prompts/opsx-$cmd.prompt.md"
   done
 }
 
@@ -193,7 +246,7 @@ Behavior:
 
 Current tools:
   speckit   Supported
-  openspec  Placeholder; update install_openspec() once layout is defined
+  openspec  Supported
 EOF
 }
 
