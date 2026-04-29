@@ -78,8 +78,8 @@ export function useLineToolbar({
     [setEdges]
   );
 
-  const setLineEdgeColor = useCallback(
-    (edgeId: string, strokeColor: string) => {
+  const updateLineEdgeMarker = useCallback(
+    (edgeId: string, markerPatch: {color?: string; strokeWidth?: number}) => {
       setEdges(currentEdges =>
         currentEdges.map(edge => {
           if (edge.id !== edgeId) {
@@ -91,15 +91,11 @@ export function useLineToolbar({
               : undefined;
           return {
             ...edge,
-            style: {
-              ...edge.style,
-              stroke: strokeColor,
-            },
             ...(markerEnd
               ? {
                   markerEnd: {
                     ...markerEnd,
-                    color: strokeColor,
+                    ...markerPatch,
                   },
                 }
               : {}),
@@ -110,36 +106,26 @@ export function useLineToolbar({
     [setEdges]
   );
 
+  const setLineEdgeColor = useCallback(
+    (edgeId: string, strokeColor: string) => {
+      updateLineEdgeStyle(edgeId, currentStyle => ({
+        ...currentStyle,
+        stroke: strokeColor,
+      }));
+      updateLineEdgeMarker(edgeId, {color: strokeColor});
+    },
+    [updateLineEdgeStyle, updateLineEdgeMarker]
+  );
+
   const setLineEdgeWidth = useCallback(
     (edgeId: string, strokeWidth: number) => {
-      setEdges(currentEdges =>
-        currentEdges.map(edge => {
-          if (edge.id !== edgeId) {
-            return edge;
-          }
-          const markerEnd =
-            edge.markerEnd && typeof edge.markerEnd !== 'string'
-              ? edge.markerEnd
-              : undefined;
-          return {
-            ...edge,
-            style: {
-              ...edge.style,
-              strokeWidth,
-            },
-            ...(markerEnd
-              ? {
-                  markerEnd: {
-                    ...markerEnd,
-                    strokeWidth,
-                  },
-                }
-              : {}),
-          };
-        })
-      );
+      updateLineEdgeStyle(edgeId, currentStyle => ({
+        ...currentStyle,
+        strokeWidth,
+      }));
+      updateLineEdgeMarker(edgeId, {strokeWidth});
     },
-    [setEdges]
+    [updateLineEdgeStyle, updateLineEdgeMarker]
   );
 
   const setLineEdgeStrokeStyle = useCallback(
