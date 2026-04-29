@@ -151,7 +151,6 @@ export default function ReactFlowCanvas({
   const {connectingFrom, connectAnnouncement, handleKeyDown} =
     useKeyboardNavigation({
       nodes,
-      edges,
       tabOrder,
       focusEntry,
       setNodes,
@@ -447,6 +446,8 @@ export default function ReactFlowCanvas({
 
       const newNodeId = createUuid();
       // Text nodes auto-size to fit content; shapes and images use fixed defaults.
+      // width/height are the React Flow fields NodeResizer also writes on drag,
+      // keeping creation and resize consistent. style is reserved for appearance.
       // Cast is needed because TS can't preserve the (type, data) correlation
       // of the discriminated union across destructuring.
       const newNode = {
@@ -455,7 +456,8 @@ export default function ReactFlowCanvas({
         data: request.data,
         position,
         ...(type !== 'text' && {
-          style: {width: DEFAULT_NODE_WIDTH, height: DEFAULT_NODE_HEIGHT},
+          width: DEFAULT_NODE_WIDTH,
+          height: DEFAULT_NODE_HEIGHT,
         }),
       } as SketchLabNode;
 
