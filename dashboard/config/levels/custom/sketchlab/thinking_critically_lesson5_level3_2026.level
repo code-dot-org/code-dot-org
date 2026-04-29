@@ -7,7 +7,7 @@
   "user_id": 18603,
   "properties": {
     "encrypted": "false",
-    "long_instructions": "## Thinking Critically about AI Project\r\n\r\nAdd to your project! \r\n* Open the <i class=\"fa-solid fa-backpack\"></i>  **Backpack**\r\n  \r\n* Choose an image you saved from the chat chat to add to your AI usage guide\r\n\r\n* Complete the Prompting Reflection section.\r\n\r\n",
+    "long_instructions": "## Thinking Critically about AI Project\r\n\r\nAdd to your project! \r\n* Open the <i class=\"fa-solid fa-backpack\"></i>  **Backpack**\r\n  \r\n* Choose an image you saved from the chat to add to your AI usage guide\r\n\r\n",
     "start_sources": {
       "source": {
         "type": "excalidraw",
@@ -37,6 +37,6 @@
     "project_template_level_name": "thinking_critically_project-template_2026",
     "name_suffix": "_2026"
   },
-  "audit_log": "[{\"changed_at\":\"2026-04-23T22:20:32.475+00:00\",\"changed\":[\"cloned from \\\"thinking_critically_lesson4_level3_2026\\\"\"],\"cloned_from\":\"thinking_critically_lesson4_level3_2026\"},{\"changed_at\":\"2026-04-23 22:22:26 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-04-23 22:22:59 +0000\",\"changed\":[],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-04-23 22:25:29 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-04-23 22:26:31 +0000\",\"changed\":[],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-04-23 22:30:56 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-04-23 22:40:41 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2026-04-23T22:20:32.475+00:00\",\"changed\":[\"cloned from \\\"thinking_critically_lesson4_level3_2026\\\"\"],\"cloned_from\":\"thinking_critically_lesson4_level3_2026\"},{\"changed_at\":\"2026-04-23 22:22:26 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-04-23 22:22:59 +0000\",\"changed\":[],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-04-23 22:25:29 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-04-23 22:26:31 +0000\",\"changed\":[],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-04-23 22:30:56 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-04-23 22:40:41 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-04-28 23:03:07 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"}]"
 }]]></config>
 </Sketchlab>

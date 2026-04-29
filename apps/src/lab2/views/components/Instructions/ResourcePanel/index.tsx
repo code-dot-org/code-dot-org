@@ -247,12 +247,11 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
     tutorLevel: levelProperties.aiTutorAvailable,
     aiChatAccessLevel: aiChatAccessLevel,
   });
-  const {disabled: aiTutorDisabled, disabledMessage: aiTutorDisabledMessage} =
-    useAiChatDisabledState({
-      appName,
-      isPredictLevel: !!isPredictLevel,
-      hasSubmittedPredictResponse,
-    });
+  const aiChatDisabledState = useAiChatDisabledState({
+    appName,
+    isPredictLevel: !!isPredictLevel,
+    hasSubmittedPredictResponse,
+  });
 
   const showBackpack = backpackProps && !isPermanentlyReadOnly;
   useResourcePanelTours({
@@ -306,8 +305,7 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
         aiTutorSystemPrompt,
         aiTutorResponseSchemaSettings,
         tutorVideos,
-        disabled: aiTutorDisabled,
-        disabledMessage: aiTutorDisabledMessage,
+        disabledState: aiChatDisabledState,
       };
       if (!hasInstructionsDrawer || !levelProperties.longInstructions) {
         tabMap[Tabs.AiTutor] = <AiTutorChat {...aiTutorProps} />;
@@ -410,8 +408,7 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
     aiTutorSystemPrompt,
     aiTutorResponseSchemaSettings,
     tutorVideos,
-    aiTutorDisabled,
-    aiTutorDisabledMessage,
+    aiChatDisabledState,
     hasInstructionsDrawer,
     isPredictLevel,
     selectedVersion,

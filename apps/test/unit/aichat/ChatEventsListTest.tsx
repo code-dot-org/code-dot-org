@@ -34,7 +34,7 @@ jest.mock('@cdo/apps/util/reduxHooks', () => ({
 
 describe('ChatEventsList', () => {
   it('renders general disabled state message when disabled', () => {
-    render(<ChatEventsList events={[]} chatDisabled={true} />);
+    render(<ChatEventsList events={[]} disabledState={{disabled: true}} />);
 
     expect(
       screen.getByText('AI chat is currently disabled')
@@ -51,8 +51,10 @@ describe('ChatEventsList', () => {
     render(
       <ChatEventsList
         events={[]}
-        chatDisabled={true}
-        chatDisabledMessage={customMessage}
+        disabledState={{
+          disabled: true,
+          disabledMessage: customMessage,
+        }}
       />
     );
 

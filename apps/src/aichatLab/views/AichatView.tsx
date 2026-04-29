@@ -280,7 +280,7 @@ const AichatView: React.FunctionComponent<LabProps<AichatLevelProperties>> = ({
     savedAiCustomizations.systemPrompt,
   ]);
 
-  const {disabled, disabledMessage} = useAiChatDisabledState({
+  const disabledState = useAiChatDisabledState({
     appName: levelProperties.appName,
     isPredictLevel: !!levelProperties.predictSettings?.isPredictLevel,
     hasSubmittedPredictResponse,
@@ -444,8 +444,7 @@ const AichatView: React.FunctionComponent<LabProps<AichatLevelProperties>> = ({
                     }
                     multimodalEnabled={levelAichatSettings?.multimodalEnabled}
                     logLevelActivity={logLevelActivity}
-                    disabled={disabled}
-                    disabledMessage={disabledMessage}
+                    disabledState={disabledState}
                     ref={chatWorkspaceRef}
                   />
                 )}

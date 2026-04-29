@@ -6,38 +6,42 @@ import React, {useCallback, useEffect, useRef} from 'react';
 
 import {
   useSketchLabReadOnly,
-  useNodeToolbarVisibility,
+  type ToolbarTarget,
+  useToolbarVisibility,
 } from '@cdo/apps/sketchlab/reactFlow/context';
 import {getViewportOverflow} from '@cdo/apps/sketchlab/reactFlow/utils/viewport';
 
-import styles from './node-toolbar.module.scss';
+import styles from './element-toolbar.module.scss';
 
-const NODE_TOOLBAR_OFFSET_PX = 8;
+const TOOLBAR_OFFSET_PX = 8;
 const PAN_DURATION_MS = 200;
 // Width reserved for React Flow's Controls overlay along the left edge
-// so the node toolbar doesn't sit underneath it after panning into view.
+// so the toolbar doesn't sit underneath it after panning into view.
 const CONTROLS_WIDTH_PX = 60;
 
-interface NodeToolbarShellProps {
-  nodeId: string;
+interface ToolbarShellProps {
+  target: ToolbarTarget;
+  anchorNodeId: string;
   ariaLabel: string;
   children: React.ReactNode;
 }
 
-export default function NodeToolbarShell({
-  nodeId,
+export default function ToolbarShell({
+  target,
+  anchorNodeId,
   ariaLabel,
   children,
-}: NodeToolbarShellProps) {
+}: ToolbarShellProps) {
   const readOnly = useSketchLabReadOnly();
-  const {openNodeToolbarId, trapFocus, closeNodeToolbar} =
-    useNodeToolbarVisibility();
+  const {openToolbarTarget, trapFocus, closeToolbar} = useToolbarVisibility();
   const {getViewport, setViewport} = useReactFlow();
   const containerRef = useRef<HTMLDivElement>(null);
-  const isVisible = openNodeToolbarId === nodeId;
+  const isVisible =
+    openToolbarTarget?.type === target.type &&
+    openToolbarTarget.id === target.id;
   const wasVisibleRef = useRef(false);
 
-  // Pan the viewport into view when the node toolbar first becomes visible.
+  // Pan the viewport into view when the toolbar first becomes visible.
   useEffect(() => {
     if (isVisible && !wasVisibleRef.current) {
       // Defer until after React Flow positions the toolbar in the DOM
@@ -65,26 +69,28 @@ export default function NodeToolbarShell({
     wasVisibleRef.current = isVisible;
   }, [isVisible, getViewport, setViewport]);
 
-  const returnFocusToNode = useCallback(() => {
-    const nodeElement = document.querySelector<HTMLElement>(
-      `.react-flow__node[data-id="${nodeId}"]`
-    );
-    nodeElement?.focus();
-  }, [nodeId]);
+  const returnFocusToTarget = useCallback(() => {
+    const selector =
+      target.type === 'node'
+        ? `.react-flow__node[data-id="${target.id}"]`
+        : `.react-flow__edge[data-id="${target.id}"]`;
+    const element = document.querySelector<HTMLElement>(selector);
+    element?.focus();
+  }, [target.id, target.type]);
 
   const handleClose = useCallback(() => {
-    closeNodeToolbar();
-    returnFocusToNode();
-  }, [closeNodeToolbar, returnFocusToNode]);
+    closeToolbar();
+    returnFocusToTarget();
+  }, [closeToolbar, returnFocusToTarget]);
 
   if (readOnly) {
     return null;
   }
   return (
     <NodeToolbar
-      nodeId={nodeId}
+      nodeId={anchorNodeId}
       position={Position.Left}
-      offset={NODE_TOOLBAR_OFFSET_PX}
+      offset={TOOLBAR_OFFSET_PX}
       isVisible={isVisible}
     >
       <FocusTrap

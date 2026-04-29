@@ -3,11 +3,11 @@ import React, {memo, useCallback, useMemo, useRef, useState} from 'react';
 
 import {MIN_NODE_HEIGHT, MIN_NODE_WIDTH} from '../constants';
 import {useSketchLabReadOnly} from '../context';
+import TextNodeToolbar from '../elementToolbars/TextNodeToolbar';
+import {fontSizePx} from '../elementToolbars/toolbarPalettes';
 import {TextNodeType} from '../types';
 
 import ConnectionHandles from './ConnectionHandles';
-import TextNodeToolbar from './nodeToolbars/TextNodeToolbar';
-import {fontSizePx} from './nodeToolbars/toolbarPalettes';
 
 import styles from './text-node.module.scss';
 
@@ -49,7 +49,10 @@ function TextNode({id, data, selected}: NodeProps<TextNodeType>) {
 
   const commitEdit = useCallback(() => {
     setIsEditing(false);
-    const newText = textRef.current?.textContent ?? '';
+    // innerText preserves visible newlines from <br> and block-element
+    // boundaries that contentEditable inserts on Shift+Enter; textContent
+    // would flatten them.
+    const newText = textRef.current?.innerText ?? '';
     updateNodeData(id, {text: newText});
   }, [id, updateNodeData]);
 

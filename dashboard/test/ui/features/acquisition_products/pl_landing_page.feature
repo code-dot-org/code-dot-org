@@ -62,6 +62,7 @@ Feature: Professional Learning landing page
     # Sees Instructor Professional Learning Sections section
     And I wait until element "button:contains(Create a section)" is visible
 
+  @dashboard_db_access
   Scenario: Regional Partner sees relevant content sections
     Given I am a program manager with a started course
     And I wait for 2 seconds
@@ -82,6 +83,7 @@ Feature: Professional Learning landing page
 
     And I delete the workshop
 
+  @dashboard_db_access
   Scenario: Workshop Organizer sees relevant content sections
     Given I am an organizer with started and completed courses
     And I wait for 2 seconds
