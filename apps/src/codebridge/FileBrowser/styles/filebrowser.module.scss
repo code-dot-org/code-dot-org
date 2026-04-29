@@ -19,6 +19,14 @@
   }
 }
 
+// list-style:none removes default markers; role="list" on every <ol>/<ul> using
+// this class restores the VoiceOver/Safari semantics that list-style:none strips.
+.folder {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
 .row {
   display: flex;
   justify-content: space-between;
@@ -65,7 +73,7 @@
 }
 
 // Adds indent and border when a folder or file is in a folder
-.fileBrowser div.folder div.folder {
+.fileBrowser .folder .folder {
   padding-inline-start: 8px;
 
   .row:not(.dragging) {
@@ -84,7 +92,7 @@
   }
 }
 
-.fileBrowser div.folder div span.button-bar {
+.fileBrowser .folder div span.button-bar {
   display: flex;
   justify-content: flex-start;
   flex-direction: column;
@@ -92,11 +100,11 @@
   white-space: nowrap;
 }
 
-.fileBrowser div.folder div span.button-bar span:hover {
+.fileBrowser .folder div span.button-bar span:hover {
   background-color: var(--background-neutral-quaternary);
 }
 
-.fileBrowser div.folder div span.button-bar span {
+.fileBrowser .folder div span.button-bar span {
   display: grid;
   grid-template-columns: 15px auto;
 }
@@ -123,11 +131,9 @@ button.button-kebab {
   }
 }
 
-// This allows the ellipsis to display when its button host is hovered on or has focus
+// This allows the ellipsis to display when its row is hovered or contains focus
 .row:hover > .button-kebab,
-.notDraggable:focus-within > .row > .button-kebab,
-.draggable:hover > .button-kebab,
-.draggable:focus > .row > .button-kebab,
+.row:focus-within > .button-kebab,
 button.button-kebab:focus {
   opacity: 1;
 }
@@ -147,12 +153,34 @@ button.button-kebab:focus {
 }
 
 .label {
+  // Button reset — removes browser default button chrome
+  appearance: none;
+  -webkit-appearance: none;
+  background: none;
+  border: none;
+  padding: 0;
+  margin: 0;
+  cursor: pointer;
+  color: inherit;
+  font: inherit;
+  text-align: start;
+  // Layout
   display: flex;
   justify-content: flex-start;
+  align-items: center;
+  align-self: stretch;
+  flex: 1;
   overflow: hidden;
+  min-width: 0;
 
   i {
     color: var(--text-neutral-tertiary);
+  }
+
+  &:focus-visible {
+    outline: var(--borders-brand-teal-primary) solid 2px;
+    outline-offset: -2px;
+    border-radius: 0.375rem;
   }
 }
 
@@ -193,9 +221,3 @@ button.button-kebab:focus {
   cursor: grabbing;
 }
 
-.notDraggable:focus-visible,
-.draggable:focus-visible {
-  outline: var(--borders-brand-teal-primary) solid 2px;
-  outline-offset: -2px;
-  border-radius: 0.375rem;
-}

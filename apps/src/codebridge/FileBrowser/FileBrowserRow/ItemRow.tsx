@@ -41,10 +41,14 @@ export const ItemRow: React.FunctionComponent<ItemRowProps> = ({
       className={classNames(moduleStyles.row, className)}
       id={`uitest-file-${item.id}-row`}
     >
-      <div className={moduleStyles.label} onClick={() => openFunction(item.id)}>
+      <button
+        type="button"
+        className={moduleStyles.label}
+        onClick={() => openFunction(item.id)}
+      >
         <IconComponent item={item} />
         <NameComponent item={item} />
-      </div>
+      </button>
       {enableMenu && (
         <PopUpButton
           iconName="ellipsis-v"

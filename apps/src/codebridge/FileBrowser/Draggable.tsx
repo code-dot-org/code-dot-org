@@ -41,7 +41,7 @@ export const Draggable: React.FunctionComponent<DraggableProps> = ({
   onKeyDown,
 }: DraggableProps) => {
   const draggableId = `${data.type}-${data.id}-draggable`;
-  const {attributes, listeners, setNodeRef, transform} = useDraggable({
+  const {listeners, setNodeRef, transform} = useDraggable({
     id: draggableId,
     data,
   });
@@ -71,7 +71,6 @@ export const Draggable: React.FunctionComponent<DraggableProps> = ({
       style: style,
       className: classNames(moduleStyles.draggable, className),
       ...listeners,
-      ...attributes,
       onKeyDown: handleKeyDown,
     },
     children
@@ -98,8 +97,6 @@ export const NotDraggable: React.FunctionComponent<NotDraggableProps> = ({
     {
       onKeyDown: handleKeyDown,
       className: moduleStyles.notDraggable,
-      tabIndex: 0,
-      role: 'button',
     },
     children
   );

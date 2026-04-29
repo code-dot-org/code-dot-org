@@ -216,14 +216,21 @@ export const FileBrowser = React.memo(() => {
                   }
                 )}
               >
-                <div id="uitest-files-list" className={moduleStyles.folder}>
+                {/* role="list" needed: list-style:none strips VoiceOver semantics */}
+                {/* eslint-disable-next-line jsx-a11y/no-redundant-roles */}
+                <ol
+                  id="uitest-files-list"
+                  className={moduleStyles.folder}
+                  role="list"
+                  aria-label={codebridgeI18n.filesHeader()}
+                >
                   <InnerFileBrowser
                     parentId={DEFAULT_FOLDER_ID}
                     folders={source.folders}
                     files={source.files}
                     appName={appName}
                   />
-                </div>
+                </ol>
               </Droppable>
             </DndDataContextProvider>
           </DndContext>
