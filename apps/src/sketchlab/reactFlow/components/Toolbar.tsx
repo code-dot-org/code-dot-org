@@ -2,22 +2,18 @@ import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon
 import {IconButton, Paper, Tooltip} from '@mui/material';
 import React, {ChangeEvent, useCallback, useId} from 'react';
 
-import {SketchlabReactFlowNode} from '@cdo/apps/lab2/types';
 import useHiddenFileInput from '@cdo/apps/util/hooks/useHiddenFileInput';
 import HttpClient from '@cdo/apps/util/HttpClient';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 import {createUuid} from '@cdo/apps/utils';
 
 import {ASSET_PATH_PREFIX} from '../constants';
-import {ShapeType} from '../types';
+import {AddNodeRequest, ShapeType} from '../types';
 
 import styles from './toolbar.module.scss';
 
 interface ToolbarProps {
-  onAddNode: (
-    type: 'shape' | 'image' | 'text',
-    data: SketchlabReactFlowNode['data']
-  ) => void;
+  onAddNode: (request: AddNodeRequest) => void;
 }
 
 export default function Toolbar({onAddNode}: ToolbarProps) {
@@ -27,11 +23,7 @@ export default function Toolbar({onAddNode}: ToolbarProps) {
 
   const addShape = useCallback(
     (shapeType: ShapeType) => {
-      const data: SketchlabReactFlowNode['data'] = {
-        shapeType,
-        label: '',
-      };
-      onAddNode('shape', data);
+      onAddNode({type: 'shape', data: {shapeType, label: ''}});
     },
     [onAddNode]
   );
@@ -49,11 +41,10 @@ export default function Toolbar({onAddNode}: ToolbarProps) {
 
       try {
         await HttpClient.put(uploadUrl, file);
-        const imageData: SketchlabReactFlowNode['data'] = {
-          src: uploadUrl,
-          altText: file.name.replace(/\.[^.]+$/, ''),
-        };
-        onAddNode('image', imageData);
+        onAddNode({
+          type: 'image',
+          data: {src: uploadUrl, altText: file.name.replace(/\.[^.]+$/, '')},
+        });
       } catch (error) {
         console.error('Failed to upload image:', error);
       }
@@ -72,7 +63,7 @@ export default function Toolbar({onAddNode}: ToolbarProps) {
       className={styles.toolbar}
       elevation={3}
       role="toolbar"
-      aria-label="Add shapes and images"
+      aria-label="Add shapes, lines, and images"
       aria-orientation="vertical"
     >
       <Tooltip title="Add rectangle" placement="right">
@@ -114,16 +105,42 @@ export default function Toolbar({onAddNode}: ToolbarProps) {
         </IconButton>
       </Tooltip>
 
+      <Tooltip title="Add diamond" placement="right">
+        <IconButton
+          aria-label="Add diamond"
+          id={`${uid}-diamond`}
+          onClick={() => addShape('diamond')}
+          size="small"
+          color="tertiary"
+          variant="outlined"
+        >
+          <FontAwesomeV6Icon iconName="diamond" />
+        </IconButton>
+      </Tooltip>
+
       <Tooltip title="Add text" placement="right">
         <IconButton
           aria-label="Add text"
           id={`${uid}-text`}
-          onClick={() => onAddNode('text', {text: ''})}
+          onClick={() => onAddNode({type: 'text', data: {text: ''}})}
           size="small"
           color="tertiary"
           variant="outlined"
         >
           <FontAwesomeV6Icon iconName="font" />
+        </IconButton>
+      </Tooltip>
+
+      <Tooltip title="Add line" placement="right">
+        <IconButton
+          aria-label="Add line"
+          id={`${uid}-line`}
+          onClick={() => onAddNode({type: 'line'})}
+          size="small"
+          color="tertiary"
+          variant="outlined"
+        >
+          <FontAwesomeV6Icon iconName="minus" />
         </IconButton>
       </Tooltip>
 

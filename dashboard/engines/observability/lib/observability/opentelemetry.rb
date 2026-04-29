@@ -2,11 +2,9 @@
 
 module Observability
   module OpenTelemetry
-    # Sets up OpenTelemetry tracing. Only runs when CDO.enable_opentelemetry is
-    # true and the process is serving web requests (skips unit test runners,
-    # rake tasks, etc.).
+    # Sets up OpenTelemetry tracing. Runs in all processes except unit test runners.
     def self.setup
-      return unless CDO.enable_opentelemetry && CDO.running_web_application?
+      return unless CDO.enable_opentelemetry && !CDO.unit_test
 
       require 'opentelemetry/sdk'
       require 'opentelemetry/instrumentation/all'
@@ -15,6 +13,13 @@ module Observability
       # Suppress noisy messages from auto-instrumentation gems by default.
       # (e.g. detach/attach mismatches, double-finish on spans).
       ENV['OTEL_LOG_LEVEL'] ||= 'fatal'
+
+      # Always sample every span so the full span volume reaches the collector.
+      # The default parentbased_always_on sampler would drop spans whose remote
+      # parent carries traceparent: sampled=0 (e.g. unsampled frontend sessions),
+      # causing Prometheus spanmetrics to undercount. Sampling decisions for the
+      # APM backend are made at the collector, not here.
+      ENV['OTEL_TRACES_SAMPLER'] ||= 'always_on'
 
       ::OpenTelemetry::SDK.configure do |c|
         c.service_name = 'dashboard'

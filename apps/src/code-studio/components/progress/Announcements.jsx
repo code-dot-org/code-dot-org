@@ -1,3 +1,6 @@
+import Link from '@code-dot-org/component-library/link';
+import NotificationBanner from '@code-dot-org/component-library/notification-banner';
+import classNames from 'classnames';
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 
@@ -6,14 +9,52 @@ import {
   VisibilityType,
 } from '@cdo/apps/code-studio/announcementsRedux';
 import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
-import Notification from '@cdo/apps/sharedComponents/Notification';
 import i18n from '@cdo/locale';
+
+import styles from './announcements.module.scss';
+
+const NOTIFICATION_VARIANT_BY_TYPE = {
+  default: 'primary',
+  information: 'info',
+  success: 'success',
+  failure: 'error',
+  warning: 'warning',
+  course: 'brand',
+  bullhorn: 'info',
+  bullhorn_yellow: 'warning',
+  feedback: 'brand',
+  collaborate: 'primary',
+};
+
+const NOTIFICATION_ICON_BY_TYPE = {
+  default: 'circle-info',
+  information: 'circle-info',
+  success: 'circle-check',
+  failure: 'triangle-exclamation',
+  warning: 'triangle-exclamation',
+  course: 'circle-info',
+  bullhorn: 'bullhorn',
+  bullhorn_yellow: 'triangle-exclamation',
+  feedback: 'envelope',
+  collaborate: 'users',
+};
 
 export default class Announcements extends Component {
   static propTypes = {
     announcements: PropTypes.arrayOf(announcementShape).isRequired,
-    width: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
     viewAs: PropTypes.oneOf(Object.values(ViewType)).isRequired,
+  };
+
+  state = {
+    dismissedKeys: new Set(),
+  };
+
+  dismiss = key => {
+    this.setState(prev => {
+      const dismissedKeys = new Set(prev.dismissedKeys);
+      dismissedKeys.add(key);
+      return {dismissedKeys};
+    });
   };
 
   /*
@@ -40,26 +81,52 @@ export default class Announcements extends Component {
   render() {
     return (
       <div>
-        {this.filteredAnnouncements().map((announcement, index) => (
-          <Notification
-            key={index}
-            type={announcement.type}
-            notice={announcement.notice}
-            details={announcement.details}
-            buttonText={
-              announcement.buttonText === undefined
-                ? i18n.learnMore()
-                : announcement.buttonText
-            }
-            buttonLink={announcement.link}
-            dismissible={
-              announcement.dismissible === undefined
-                ? true
-                : announcement.dismissible
-            }
-            width={this.props.width}
-          />
-        ))}
+        {this.filteredAnnouncements().map((announcement, index) => {
+          const dismissible =
+            announcement.dismissible === undefined
+              ? true
+              : announcement.dismissible;
+          const buttonText =
+            announcement.buttonText === undefined
+              ? i18n.learnMore()
+              : announcement.buttonText;
+          const key = announcement.key || index;
+          if (this.state.dismissedKeys.has(key)) {
+            return null;
+          }
+          return (
+            <NotificationBanner
+              key={key}
+              className={classNames(
+                styles.notificationBanner,
+                'announcement-notification'
+              )}
+              variant={
+                NOTIFICATION_VARIANT_BY_TYPE[announcement.type] || 'info'
+              }
+              style="filled"
+              title={announcement.notice}
+              description={announcement.details}
+              icon={{
+                iconName:
+                  NOTIFICATION_ICON_BY_TYPE[announcement.type] || 'circle-info',
+                iconStyle: 'solid',
+              }}
+              actions={
+                announcement.link && (
+                  <Link
+                    href={announcement.link}
+                    text={buttonText}
+                    type="secondary"
+                    size="s"
+                    openInNewTab
+                  />
+                )
+              }
+              onClose={dismissible ? () => this.dismiss(key) : undefined}
+            />
+          );
+        })}
       </div>
     );
   }

@@ -3,17 +3,31 @@ title 'title'
 description 'description here'
 
 markdown <<MARKDOWN
-# Capstone Project - Web Apps with AI
+# Begin with the End in Mind: Final Project Overview
 
 #### Unit 6 is the Semester 2 capstone, where students design and build a purposeful web app for a real audience. They apply technical skills, human-centered design, and AI literacy while making transparent, ethical choices. 
 
-#### The emphasis is on both creating and reflecting—showing how thoughtful, values-driven design leads to confident, intentional creators.
 
-#### **Project Title:** Capstone Project
-#### **Unit:** Unit 6 - Capstone Project
 #### **Final Product Type:** Complete Web Application (with API integration, documentation, and reflection)
-#### **Student Role or Framing Device:** Students act as intentional designers and developers, rotating through professional roles (software engineer, UX researcher, product manager, ethical technologist)
+
 #### **When Project Begins:** Final two weeks of the semester (full duration of Unit 6)
 
+---
 
+## Sample project
+
+<img src="https://images.code.org/9edc00ade8d52bae08a5de8c16d7372d-image-1776696508445.png" alt="sample explore-style app with grid of cards and detail view" width="750px" style="display: block; margin-left: auto; margin-right: auto; border-radius:10px;"><br>
+
+---
+
+## What success looks like
+
+> #### **By the end, students will:**
+> - #### Design a clear, engaging homepage that communicates the purpose of their project
+> - #### Organize content into meaningful sections that support user understanding
+> - #### Show evidence of planning and iteration by refining their design over time
+> - #### Make intentional design decisions and clearly explain their reasoning
+> - #### Reflect on tradeoffs and how their choices impact usability and clarity
+
+---
 MARKDOWN

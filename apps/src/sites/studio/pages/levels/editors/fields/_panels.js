@@ -7,11 +7,16 @@ import getScriptData from '@cdo/apps/util/getScriptData';
 
 $(document).ready(function () {
   const initialPanels = getScriptData('panels');
+  const initialUseLinks = getScriptData('uselinks') === true;
   const levelName = document.querySelector('script[data-levelname]')?.dataset
     ?.levelname;
 
   createReactRoot(
-    <EditPanels initialPanels={initialPanels} levelName={levelName} />,
+    <EditPanels
+      initialPanels={initialPanels}
+      initialUseLinks={initialUseLinks}
+      levelName={levelName}
+    />,
     document.getElementById('panels-editor'),
     {
       legacyReactDomRender: true,

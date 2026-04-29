@@ -13,8 +13,6 @@ markdown <<MARKDOWN
 
 <img src="https://cdo-curriculum.s3.amazonaws.com/media/uploads/img_tag.png" style="padding-left: 150px; max-width: 500px; margin-top: 20px; margin-bottom: 20px;" alt="An img tab broken down by its elements">
 
-[diagram_nums]
-
 <details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
 <summary style="font-size: 1.5em; font-weight: bold;">🔎 (1) What does the <strong>img</strong> do?</summary>
     <div style="margin-top: 20px; margin-left: 20px; margin-right: 20px;">
@@ -32,9 +30,4 @@ markdown <<MARKDOWN
     <div style="margin-top: 20px; margin-left: 20px; margin-right: 20px;">
     <p style="font-size:16px;">The <strong>alt</strong> attribute is short for <strong>alternative text</strong>. While you won't see this text on your web page, it provides a backup in case your image doesn't download properly or for visually impaired users. In this example, if your browser failed to load the image you would see, <img src="https://cdo-curriculum.s3.amazonaws.com/media/uploads/broken_image.png" style="height: 50px;"> </p></div>
 </details>
-
-
-
-[/diagram_nums]
-
 MARKDOWN
