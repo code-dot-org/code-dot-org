@@ -32,7 +32,10 @@ import {
   type ToolbarTarget,
 } from '../context';
 import LineEdgeToolbar from '../elementToolbars/LineEdgeToolbar';
-import {DEFAULT_STROKE_COLOR} from '../elementToolbars/toolbarPalettes';
+import {
+  DEFAULT_LINE_WIDTH,
+  DEFAULT_STROKE_COLOR,
+} from '../elementToolbars/toolbarPalettes';
 import {useFocusManagement} from '../hooks/useFocusManagement';
 import {useKeyboardNavigation} from '../hooks/useKeyboardNavigation';
 import {useLineEdgeDrag} from '../hooks/useLineEdgeDrag';
@@ -419,7 +422,10 @@ export default function ReactFlowCanvas({
           source: sourceAnchorId,
           target: targetAnchorId,
           type: 'straight',
-          style: {stroke: DEFAULT_STROKE_COLOR},
+          style: {
+            stroke: DEFAULT_STROKE_COLOR,
+            strokeWidth: DEFAULT_LINE_WIDTH,
+          },
         };
 
         setNodes(currentNodes => [...currentNodes, sourceAnchor, targetAnchor]);
@@ -476,7 +482,13 @@ export default function ReactFlowCanvas({
     [readOnly, openToolbar, nodes]
   );
 
-  const {handleEdgeClick, openLineEdge, setLineEdgeColor} = useLineToolbar({
+  const {
+    handleEdgeClick,
+    openLineEdge,
+    setLineEdgeColor,
+    setLineEdgeWidth,
+    setLineEdgeStrokeStyle,
+  } = useLineToolbar({
     edges,
     nodes,
     readOnly,
@@ -537,6 +549,12 @@ export default function ReactFlowCanvas({
                 anchorNodeId={openLineEdge.source}
                 onSelectColor={value =>
                   setLineEdgeColor(openLineEdge.id, value)
+                }
+                onSelectWidth={value =>
+                  setLineEdgeWidth(openLineEdge.id, value)
+                }
+                onSelectStrokeStyle={value =>
+                  setLineEdgeStrokeStyle(openLineEdge.id, value)
                 }
               />
             )}
