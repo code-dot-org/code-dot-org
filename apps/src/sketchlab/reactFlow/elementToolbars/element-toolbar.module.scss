@@ -189,9 +189,6 @@
 }
 
 .rotationSlider {
-  flex: 1;
-  // Keep the slider from blowing up the toolbar width; the toolbar is
-  // anchored to the left of the node so we want a predictable size.
   min-width: 100px;
   color: var(--text-neutral-primary);
 }

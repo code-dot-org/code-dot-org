@@ -10,7 +10,7 @@ export const ROTATION_STEP = 1;
 export const DEFAULT_ROTATION = 0;
 
 // Wrap any input (slider value, raw user-typed number, negative numbers,
-// values >= 360) into the canonical 0-359 range used by the rest of the lab.
+// values >= 360) into a normalized 0-359 range.
 function normalizeRotation(raw: number): number {
   if (!Number.isFinite(raw)) {
     return DEFAULT_ROTATION;
@@ -26,13 +26,12 @@ export interface RotationGroupProps {
 export default function RotationGroup({value, onChange}: RotationGroupProps) {
   const groupLabelId = useId();
   // Local editable string so users can type partials ("", "-", leading
-  // zeros) without the canonical state stomping their cursor.
+  // zeros) without the normalized value overriding their input mid-edit.
   const [inputValue, setInputValue] = useState(String(value));
   const [isFocused, setIsFocused] = useState(false);
 
-  // Sync display to the canonical value, but only while the input is not
-  // focused. Otherwise live-committing during typing would clobber what
-  // the user is mid-typing (e.g. "-4" -> committed 356 -> display "356").
+  // Sync display to the normalized value, but only while the input is not
+  // focused.
   useEffect(() => {
     if (!isFocused) {
       setInputValue(String(value));
@@ -44,7 +43,7 @@ export default function RotationGroup({value, onChange}: RotationGroupProps) {
       const next = event.target.value;
       setInputValue(next);
       // Skip committing on partial input so the user can type a leading
-      // minus or briefly empty the field without us snapping the slider.
+      // minus or briefly empty the field without us changing the slider.
       if (next === '' || next === '-') {
         return;
       }
@@ -63,7 +62,7 @@ export default function RotationGroup({value, onChange}: RotationGroupProps) {
   const handleInputBlur = useCallback(() => {
     setIsFocused(false);
     // On exit, normalize what's displayed (e.g. "045" -> "45", "-4" -> "356")
-    // and reset to the canonical value if the field was left non-numeric.
+    // or reset to the normalized value if the field was left non-numeric.
     const parsed = Number.parseInt(inputValue, 10);
     if (Number.isFinite(parsed)) {
       setInputValue(String(normalizeRotation(parsed)));
@@ -82,6 +81,7 @@ export default function RotationGroup({value, onChange}: RotationGroupProps) {
 
   const handleInputKeyDown = useCallback(
     (event: React.KeyboardEvent<HTMLInputElement>) => {
+      // Remove focus from the inptu box on enter.
       if (event.key === 'Enter') {
         event.preventDefault();
         (event.target as HTMLInputElement).blur();
@@ -102,9 +102,7 @@ export default function RotationGroup({value, onChange}: RotationGroupProps) {
       {/*
        * React Flow opts elements out of canvas panning when they (or their
        * descendants) carry the `nopan` class. Without it a slider drag pans
-       * the workspace instead of moving the thumb. We use `nopan` rather
-       * than stopPropagation so we don't interfere with the focus / toolbar
-       * lifecycle handlers attached at the document level.
+       * the workspace instead of moving the thumb.
        */}
       <div className={`${styles.rotationRow} nopan`}>
         <Slider
