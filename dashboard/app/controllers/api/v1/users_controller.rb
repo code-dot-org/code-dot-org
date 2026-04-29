@@ -58,7 +58,6 @@ class Api::V1::UsersController < Api::V1::JSONApiController
         over_21: current_user.over_21?,
         sort_by_family_name: current_user.sort_by_family_name?,
         ai_rubrics_disabled: current_user.ai_rubrics_disabled,
-        ai_tutor_access_denied: !!current_user.ai_tutor_access_denied,
         has_seen_homepage_welcome: current_user.has_seen_homepage_welcome?,
         has_dismissed_personalization_alert: current_user.has_dismissed_personalization_alert?,
         child_account_compliance_state: current_user.cap_status,
@@ -71,6 +70,7 @@ class Api::V1::UsersController < Api::V1::JSONApiController
         ai_differentiation_enabled: !current_user.ai_differentiation_toggled_off?,
         has_completed_ai_differentiation_welcome: current_user.has_completed_ai_differentiation_welcome?,
         educator_role: current_user.educator_role,
+        grades_teaching: current_user.grades_teaching || [],
         sharing_disabled: current_user.sharing_disabled,
         is_levelbuilder: current_user.levelbuilder?,
         ai_chat_access_level: current_user.ai_chat_access_level,
@@ -290,23 +290,6 @@ class Api::V1::UsersController < Api::V1::JSONApiController
     @user.save
 
     render json: {display_theme: @user.display_theme}
-  end
-
-  # POST /api/v1/users/<user_id>/ai_tutor_access
-  def update_ai_tutor_access
-    return head :unauthorized unless current_user&.teacher?
-    target_user = User.find_by_id(params[:user_id])
-
-    # can?(:manage, target_user) blocks demo students, whose User record is
-    # shared across teachers and should not be modified.
-    unless target_user&.student_of?(current_user) && can?(:manage, target_user)
-      return head :forbidden
-    end
-
-    target_user.ai_tutor_access_denied = !to_bool(params[:ai_tutor_access])
-    target_user.save
-
-    head :no_content
   end
 
   # POST /api/v1/users/has_completed_ai_differentiation_welcome

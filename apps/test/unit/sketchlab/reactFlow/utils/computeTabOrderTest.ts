@@ -8,7 +8,7 @@ import {
 } from '@cdo/apps/sketchlab/reactFlow/utils/computeTabOrder';
 
 function makeNode(id: string, x: number, y: number): SketchlabReactFlowNode {
-  return {id, position: {x, y}, data: {}};
+  return {id, type: 'text', position: {x, y}, data: {text: ''}};
 }
 
 function makeEdge(

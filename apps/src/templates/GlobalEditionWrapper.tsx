@@ -77,7 +77,7 @@ export const GlobalEditionWrapper: React.FunctionComponent<
   const pageConfig: RegionConfigurationPageObject | undefined = pages
     .filter(
       filterInfo =>
-        RegExp(`^/${geRegion}${filterInfo.path}(?:/.*)?`).test(
+        RegExp(`^/${geRegion}(?:/[^/]+)?${filterInfo.path}(?:/.*)?`).test(
           window.location.pathname
         ) && componentId in filterInfo.components
     )

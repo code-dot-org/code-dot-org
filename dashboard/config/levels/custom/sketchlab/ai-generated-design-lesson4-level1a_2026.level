@@ -939,9 +939,9 @@
         }
       }
     },
-    "display_name": "Sketch Lab",
+    "display_name": "Create a Mood Board",
     "thumbnail_url": "https://images.code.org/d2f6256449032ef4cee95fe915800e7c-mood-board.png",
-    "bubble_choice_description": "Build a mood board in Sketch Lab that captures the feeling and personality of your chosen brand or event.",
+    "bubble_choice_description": "Create a mood board that captures the feeling and personality of your chosen brand or event.",
     "exemplar_sources": {
       "source": {
         "type": "excalidraw",
@@ -2373,6 +2373,6 @@
     "name_suffix": "_2026",
     "project_template_level_name": "ai-generated-design-lesson4-level1-template_2026"
   },
-  "audit_log": "[{\"changed_at\":\"2026-02-24T18:10:59.153+00:00\",\"changed\":[\"cloned from \\\"ai-generated-design-lesson4-level1a_2025\\\"\"],\"cloned_from\":\"ai-generated-design-lesson4-level1a_2025\"},{\"changed_at\":\"2026-03-03 22:25:29 +0000\",\"changed\":[],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-03 22:38:44 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-03 22:40:41 +0000\",\"changed\":[],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-04 18:29:30 +0000\",\"changed\":[\"long_instructions\",\"bubble_choice_description\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-27 05:53:22 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-04-15 18:40:14 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2026-04-15 18:41:35 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2026-04-16 17:20:03 +0000\",\"changed\":[],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2026-02-24T18:10:59.153+00:00\",\"changed\":[\"cloned from \\\"ai-generated-design-lesson4-level1a_2025\\\"\"],\"cloned_from\":\"ai-generated-design-lesson4-level1a_2025\"},{\"changed_at\":\"2026-03-03 22:25:29 +0000\",\"changed\":[],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-03 22:38:44 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-03 22:40:41 +0000\",\"changed\":[],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-04 18:29:30 +0000\",\"changed\":[\"long_instructions\",\"bubble_choice_description\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-27 05:53:22 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-04-15 18:40:14 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2026-04-15 18:41:35 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2026-04-16 17:20:03 +0000\",\"changed\":[],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-24 15:24:12 +0000\",\"changed\":[\"display_name\",\"bubble_choice_description\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
 }]]></config>
 </Sketchlab>

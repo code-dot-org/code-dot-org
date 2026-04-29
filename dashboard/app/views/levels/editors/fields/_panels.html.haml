@@ -6,4 +6,4 @@
 
 - content_for :body_scripts do
   %script{src: webpack_asset_path('js/levels/editors/fields/_panels.js'),
-        data: {panels: (@level.properties['panels'] || @level.properties.dig('level_data', 'panels') || []).to_json, levelname: @level.name}}
+        data: {panels: (@level.properties['panels'] || @level.properties.dig('level_data', 'panels') || []).to_json, levelname: @level.name, uselinks: (@level.properties['use_links'].to_s == 'true').to_json}}

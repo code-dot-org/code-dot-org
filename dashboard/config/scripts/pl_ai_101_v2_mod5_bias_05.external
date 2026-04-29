@@ -5,7 +5,7 @@ description 'description here'
 markdown <<MARKDOWN
 # Recognizing Bias
 
-#### Bias in AI doesn’t always appear as something obviously harmful or inappropriate. More often, it shows up in subtle ways—through assumptions, missing perspectives, or patterns in how information is presented.
+#### Bias in AI doesn’t always appear as something obviously harmful or inappropriate. More often, it shows up in subtle ways such as through assumptions, missing perspectives, or patterns in how information is presented.
 
 #### To use AI responsibly, it’s important to recognize these patterns and consider how they might impact students and learning.
 
@@ -24,7 +24,7 @@ AI may repeat common but oversimplified ideas about groups of people.
 </div>
 <div style="font-size:16px; font-weight:700; margin-bottom:6px;">Example:</div>
 <div style="font-size:15px; line-height:1.5;">
-Describing certain jobs, behaviors, or abilities as typical for a specific gender, culture, or background.
+Suggesting that “boys tend to be better at math” or generating examples where engineers are always male and nurses are always female.
 </div>
 </div>
 </div>
@@ -42,8 +42,7 @@ AI may present a single perspective as the “default” or “normal” experie
 </div>
 <div style="font-size:16px; font-weight:700; margin-bottom:6px;">Example:</div>
 <div style="font-size:15px; line-height:1.5;">
-Assuming all students have the same home environment, cultural background, or access to resources.
-</div>
+Writing a classroom scenario where all students celebrate Christmas or have access to a quiet space and internet at home for homework.</div>
 </div>
 </div>
 
@@ -60,8 +59,7 @@ AI responses may ignore or minimize diverse viewpoints.
 </div>
 <div style="font-size:16px; font-weight:700; margin-bottom:6px;">Example:</div>
 <div style="font-size:15px; line-height:1.5;">
-Explaining a historical event from only one perspective without acknowledging others.
-</div>
+Explaining westward expansion in U.S. history only from the perspective of settlers, without acknowledging the impact on Indigenous communities.</div>
 </div>
 </div>
 
@@ -78,15 +76,11 @@ AI may use wording that unintentionally excludes or overlooks certain groups.
 </div>
 <div style="font-size:16px; font-weight:700; margin-bottom:6px;">Example:</div>
 <div style="font-size:15px; line-height:1.5;">
-Using terms or examples that don’t reflect the diversity of students in a classroom.
-</div>
+Using phrases like “ask your parents (mom and dad)” in a classroom example, or referring to all students as “he” in instructions.</div>
 </div>
 </div>
 
 </div>
-
-
-## What to Do When You Notice Bias
 
 #### When something feels off, pause and reflect:
 * #### Whose perspective is represented here?
