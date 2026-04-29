@@ -14,9 +14,9 @@ interface LockedNoticeProps {
   nodeId: string;
 }
 
-// Replacement for the regular toolbar groups when a node is locked.
-// In standard mode, users cannot unlock a locked node, so it only shows
-// a message that the node is locked. In start mode, users can unlock nodes, so it also
+// Replacement for the regular toolbar groups when an element is locked.
+// In standard mode, users cannot unlock a locked element, so it only shows
+// a message that the element is locked. In start mode, users can unlock elements, so it also
 // includes an unlock button.
 export default function LockedNotice({nodeId}: LockedNoticeProps) {
   const {patchNodeData} = useNodeToolbarData<SketchLabNode>(nodeId);
@@ -30,14 +30,14 @@ export default function LockedNotice({nodeId}: LockedNoticeProps) {
     <div
       className={styles['locked-notice']}
       role="group"
-      aria-label="Locked node"
+      aria-label="Locked element"
     >
       <FontAwesomeV6Icon iconName="lock" aria-hidden="true" />
-      <Typography variant="body3">This node is locked.</Typography>
+      <Typography variant="body3">This element is locked.</Typography>
       {isStartMode && (
         <Button
           onClick={handleUnlock}
-          aria-label="Unlock node"
+          aria-label="Unlock element"
           color="secondary"
           variant="outlined"
           size="small"

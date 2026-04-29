@@ -148,8 +148,8 @@ export function useKeyboardNavigation({
       const focusedEdgeId =
         focusedEntry?.type === 'edge' ? focusedEntry.id : undefined;
 
-      // Arrow keys on a focused node move just that node.
-      if (!readOnly && focusedNodeId) {
+      // Arrow keys on a focused node move just that node, unless it's locked.
+      if (!readOnly && focusedNodeId && !getNode(focusedNodeId)?.data?.locked) {
         let deltaX = 0;
         let deltaY = 0;
         if (event.key === 'ArrowLeft') deltaX = -KEYBOARD_MOVE_STEP;

@@ -49,11 +49,11 @@ export default function ActionsGroup({nodeId}: ActionsGroupProps) {
           </IconButton>
         </Tooltip>
         {isStartMode && (
-          <Tooltip title="Lock node" placement="top">
+          <Tooltip title="Lock element" placement="top">
             <IconButton
               size="small"
               className={styles.fontSizeButton}
-              aria-label="Lock node"
+              aria-label="Lock element"
               onClick={handleLock}
             >
               <FontAwesomeV6Icon iconName="lock" />
