@@ -197,7 +197,8 @@ export const FileBrowser = React.memo(() => {
             accessibility={{
               announcements,
               screenReaderInstructions: {
-                draggable: codebridgeI18n.dragAndDropInstructionsFolders(),
+                draggable:
+                  'Press m to pick up, arrow keys to move, m, space, or enter to drop, escape to cancel.',
               },
             }}
           >
