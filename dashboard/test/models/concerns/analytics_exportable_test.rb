@@ -41,22 +41,48 @@ class AnalyticsExportableTest < ActiveSupport::TestCase
     assert_includes error.message, 'StiBase'
   end
 
-  test 'validate_exported_models! raises when model has no primary key' do
+  test 'exportability_errors returns error for model with no primary key' do
+    model = create_base_model('NoPrimaryKeyModel', primary_key: nil)
+    model.export_to_analytics
+
+    errors = AnalyticsExportable.exportability_errors
+    assert_equal 1, errors.size
+    assert_includes errors.first, 'Zero ETL requires a primary key'
+  end
+
+  test 'exportability_errors returns error for model with blob columns' do
+    blob_col = mock_column('avatar', :binary)
+    model = create_base_model('BlobModel', columns: [mock_column('id', :integer), blob_col])
+    model.export_to_analytics
+
+    errors = AnalyticsExportable.exportability_errors
+    assert_equal 1, errors.size
+    assert_includes errors.first, 'Zero ETL does not support blob columns'
+    assert_includes errors.first, 'avatar'
+  end
+
+  test 'exportability_errors returns empty array for valid models' do
+    model = create_base_model('ValidModel')
+    model.export_to_analytics
+    assert_empty AnalyticsExportable.exportability_errors
+  end
+
+  test 'exportability_errors collects errors from multiple models' do
+    no_pk = create_base_model('NoPkModel', primary_key: nil)
+    blob = create_base_model('BlobModel', columns: [mock_column('id', :integer), mock_column('data', :binary)])
+    no_pk.export_to_analytics
+    blob.export_to_analytics
+
+    errors = AnalyticsExportable.exportability_errors
+    assert_equal 2, errors.size
+  end
+
+  test 'validate_exported_models! raises when models are invalid' do
     model = create_base_model('NoPrimaryKeyModel', primary_key: nil)
     model.export_to_analytics
 
     error = assert_raises(ArgumentError) {AnalyticsExportable.validate_exported_models!}
     assert_includes error.message, 'Zero ETL requires a primary key'
-  end
-
-  test 'validate_exported_models! raises when model has blob columns' do
-    blob_col = mock_column('avatar', :binary)
-    model = create_base_model('BlobModel', columns: [mock_column('id', :integer), blob_col])
-    model.export_to_analytics
-
-    error = assert_raises(ArgumentError) {AnalyticsExportable.validate_exported_models!}
-    assert_includes error.message, 'Zero ETL does not support blob columns'
-    assert_includes error.message, 'avatar'
   end
 
   test 'validate_exported_models! passes for valid models' do
@@ -75,51 +101,118 @@ class AnalyticsExportableTest < ActiveSupport::TestCase
   end
 
   test 'zero_etl_exclude_filters excludes tables without a primary key' do
-    no_pk = create_base_model('NoPkModel', table_name: 'schema_migrations', primary_key: nil)
-    ok = create_base_model('OkModel', table_name: 'users')
-
-    excludes = AnalyticsExportable.zero_etl_exclude_filters(
-      environment_type: :production,
-      models: [no_pk, ok]
+    conn = mock_connection('my_db',
+      'schema_migrations' => {primary_key: nil, columns: [mock_column('version', :string)]},
+      'users' => {primary_key: 'id', columns: [mock_column('id', :integer)]}
     )
 
-    assert_equal ['exclude: `dashboard_production`.`schema_migrations`'], excludes
+    excludes = AnalyticsExportable.zero_etl_exclude_filters(connection: conn)
+    assert_equal ['exclude: `my_db`.`schema_migrations`'], excludes
   end
 
   test 'zero_etl_exclude_filters excludes tables with blob columns' do
-    blob_model = create_base_model('BlobModel', table_name: 'attachments',
-      columns: [mock_column('id', :integer), mock_column('data', :binary)]
-    )
-    ok = create_base_model('OkModel', table_name: 'users')
-
-    excludes = AnalyticsExportable.zero_etl_exclude_filters(
-      environment_type: :test,
-      models: [blob_model, ok]
+    conn = mock_connection('my_db',
+      'attachments' => {primary_key: 'id', columns: [mock_column('id', :integer), mock_column('data', :binary)]},
+      'users' => {primary_key: 'id', columns: [mock_column('id', :integer)]}
     )
 
-    assert_equal ['exclude: `dashboard_test`.`attachments`'], excludes
+    excludes = AnalyticsExportable.zero_etl_exclude_filters(connection: conn)
+    assert_equal ['exclude: `my_db`.`attachments`'], excludes
   end
 
-  test 'zero_etl_exclude_filters returns empty array when all models are exportable' do
-    model_a = create_base_model('ModelA', table_name: 'users')
-    model_b = create_base_model('ModelB', table_name: 'projects')
-
-    excludes = AnalyticsExportable.zero_etl_exclude_filters(
-      environment_type: :production,
-      models: [model_a, model_b]
+  test 'zero_etl_exclude_filters returns empty array when all tables are exportable' do
+    conn = mock_connection('my_db',
+      'users' => {primary_key: 'id', columns: [mock_column('id', :integer)]},
+      'projects' => {primary_key: 'id', columns: [mock_column('id', :integer)]}
     )
 
-    assert_empty excludes
+    assert_empty AnalyticsExportable.zero_etl_exclude_filters(connection: conn)
   end
 
-  test 'zero_etl_exclude_filters uses environment_type in database name' do
-    no_pk = create_base_model('NoPkModel', table_name: 'ar_internal_metadata', primary_key: nil)
+  test 'zero_etl_exclude_filters uses current_database in table names' do
+    conn = mock_connection('dashboard_production',
+      'ar_internal_metadata' => {primary_key: nil, columns: [mock_column('key', :string)]}
+    )
 
-    prod = AnalyticsExportable.zero_etl_exclude_filters(environment_type: :production, models: [no_pk])
-    test_env = AnalyticsExportable.zero_etl_exclude_filters(environment_type: :test, models: [no_pk])
+    excludes = AnalyticsExportable.zero_etl_exclude_filters(connection: conn)
+    assert_equal ['exclude: `dashboard_production`.`ar_internal_metadata`'], excludes
+  end
 
-    assert_equal ['exclude: `dashboard_production`.`ar_internal_metadata`'], prod
-    assert_equal ['exclude: `dashboard_test`.`ar_internal_metadata`'], test_env
+  test 'zero_etl_data_filter starts with blanket include then excludes' do
+    conn = mock_connection('dashboard_production',
+      'users' => {primary_key: 'id', columns: [mock_column('id', :integer)]},
+      'schema_migrations' => {primary_key: nil, columns: [mock_column('version', :string)]}
+    )
+
+    filter = AnalyticsExportable.zero_etl_data_filter(connection: conn)
+    assert_equal(
+      'include: `dashboard_production`.*, exclude: `dashboard_production`.`schema_migrations`',
+      filter
+    )
+  end
+
+  test 'zero_etl_data_filter with no excludes returns only the include rule' do
+    conn = mock_connection('my_db',
+      'users' => {primary_key: 'id', columns: [mock_column('id', :integer)]}
+    )
+
+    assert_equal 'include: `my_db`.*', AnalyticsExportable.zero_etl_data_filter(connection: conn)
+  end
+
+  test 'parse_data_filter splits comma-separated rules' do
+    filter = 'include: `db`.*, exclude: `db`.`t1`, exclude: `db`.`t2`'
+    assert_equal(
+      ['include: `db`.*', 'exclude: `db`.`t1`', 'exclude: `db`.`t2`'],
+      AnalyticsExportable.parse_data_filter(filter)
+    )
+  end
+
+  test 'parse_data_filter returns empty array for blank input' do
+    assert_empty AnalyticsExportable.parse_data_filter(nil)
+    assert_empty AnalyticsExportable.parse_data_filter('')
+  end
+
+  test 'reconcile identifies rules to add and remove' do
+    conn = mock_connection('dashboard_prod',
+      'users' => {primary_key: 'id', columns: [mock_column('id', :integer)]},
+      'no_pk' => {primary_key: nil, columns: [mock_column('v', :string)]}
+    )
+    current = 'include: `pegasus`.*, include: `dashboard_prod`.*, exclude: `dashboard_prod`.`old_table`'
+
+    result = AnalyticsExportable.reconcile_zero_etl_filters(current, connection: conn)
+
+    assert_equal ['exclude: `dashboard_prod`.`no_pk`'], result[:to_add]
+    assert_equal ['exclude: `dashboard_prod`.`old_table`'], result[:to_remove]
+    assert_includes result[:reconciled_filter], 'include: `pegasus`.*'
+    assert_includes result[:reconciled_filter], 'exclude: `dashboard_prod`.`no_pk`'
+    refute_includes result[:reconciled_filter], 'old_table'
+  end
+
+  test 'reconcile preserves rules for other databases' do
+    conn = mock_connection('dashboard_prod',
+      'users' => {primary_key: 'id', columns: [mock_column('id', :integer)]}
+    )
+    current = 'include: `pegasus`.*, include: `dashboard_prod`.*'
+
+    result = AnalyticsExportable.reconcile_zero_etl_filters(current, connection: conn)
+
+    assert_empty result[:to_add]
+    assert_empty result[:to_remove]
+    assert_includes result[:reconciled_filter], 'include: `pegasus`.*'
+  end
+
+  test 'reconcile reports unchanged excludes' do
+    conn = mock_connection('dashboard_prod',
+      'users' => {primary_key: 'id', columns: [mock_column('id', :integer)]},
+      'no_pk' => {primary_key: nil, columns: [mock_column('v', :string)]}
+    )
+    current = 'include: `dashboard_prod`.*, exclude: `dashboard_prod`.`no_pk`'
+
+    result = AnalyticsExportable.reconcile_zero_etl_filters(current, connection: conn)
+
+    assert_empty result[:to_add]
+    assert_empty result[:to_remove]
+    assert_equal ['exclude: `dashboard_prod`.`no_pk`'], result[:unchanged]
   end
 
   private def mock_column(name, type)
@@ -127,6 +220,17 @@ class AnalyticsExportableTest < ActiveSupport::TestCase
     col.stubs(:name).returns(name)
     col.stubs(:type).returns(type)
     col
+  end
+
+  private def mock_connection(db_name, tables_hash)
+    conn = stub
+    conn.stubs(:current_database).returns(db_name)
+    conn.stubs(:tables).returns(tables_hash.keys)
+    tables_hash.each do |table_name, spec|
+      conn.stubs(:columns).with(table_name).returns(spec[:columns])
+      conn.stubs(:primary_key).with(table_name).returns(spec[:primary_key])
+    end
+    conn
   end
 
   private def create_base_model(name, table_name: 'test_table', primary_key: 'id', columns: nil)
