@@ -69,6 +69,8 @@ experiments.LESSON_TUTOR = 'lesson-tutor';
 experiments.ONBOARDING = 'onboarding';
 // Enable AI Diff Chat Drawer
 experiments.AI_DIFF_DRAWER = 'ai-diff-drawer';
+// Route all Gemini model traffic through the AI gateway instead of the Rails backend
+experiments.USE_AI_GATEWAY = 'useAiGateway';
 
 /**
  * This was a gamified version of the finish dialog, built in 2018,

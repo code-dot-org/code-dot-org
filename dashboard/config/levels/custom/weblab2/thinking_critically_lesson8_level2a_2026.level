@@ -1,0 +1,67 @@
+<Weblab2>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 74,
+  "created_at": "2026-04-28T15:59:44.000Z",
+  "level_num": "custom",
+  "user_id": 18603,
+  "properties": {
+    "encrypted": "false",
+    "display_name": "Photogram Post",
+    "long_instructions": "## Digital Artifact\r\n\r\n1. Examine the artifact to the right.\r\n2. Find example(s) of **Public**, **Private**, and **Sensitive** data and add it to the table in your Activity Guide.\r\n",
+    "bubble_choice_description": "A photo posted recently to Photogram",
+    "offer_browser_tts": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "false",
+    "widget_view": "true",
+    "initial_view_mode": "split",
+    "require_edit_to_continue": "true",
+    "predict_settings": {
+      "isPredictLevel": false,
+      "solution": "",
+      "questionType": "freeResponse",
+      "placeholderText": "",
+      "multipleChoiceOptions": [
+        ""
+      ],
+      "freeResponseHeight": 50,
+      "codeEditableAfterSubmit": false
+    },
+    "ai_tutor_prompt_settings": {
+      "answerTypes": [
+        "ask"
+      ],
+      "answerTypeCustomizations": {
+      }
+    },
+    "start_sources": {
+      "folders": {
+      },
+      "files": {
+        "1": {
+          "id": "1",
+          "name": "index.html",
+          "contents": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"UTF-8\">\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n  <title>Fake Social Media Post</title>\n  <style>\n    /* Reset and Base Styles */\n    body {\n      font-family: -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Helvetica, Arial, sans-serif;\n      background-color: #fafafa;\n      display: flex;\n      justify-content: center;\n      padding: 20px;\n      margin: 0;\n    }\n\n    /* Post Container */\n    .post-card {\n      background-color: #ffffff;\n      border: 1px solid #dbdbdb;\n      border-radius: 8px;\n      width: 100%;\n      max-width: 400px;\n      box-shadow: 0 2px 5px rgba(0,0,0,0.05);\n      overflow: hidden;\n    }\n\n    /* Header (Profile & Location) */\n    .post-header {\n      display: flex;\n      align-items: center;\n      padding: 12px 16px;\n    }\n\n    .profile-pic {\n      width: 36px;\n      height: 36px;\n      border-radius: 50%;\n      background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);\n      margin-right: 12px;\n    }\n\n    .header-text {\n      display: flex;\n      flex-direction: column;\n      flex-grow: 1;\n    }\n\n    .username {\n      font-weight: 600;\n      font-size: 14px;\n      color: #262626;\n      text-decoration: none;\n    }\n\n    .location {\n      font-size: 12px;\n      color: #8e8e8e;\n      margin-top: 2px;\n    }\n\n    .options {\n      font-weight: bold;\n      color: #262626;\n      cursor: pointer;\n      letter-spacing: 2px;\n    }\n\n    /* Image Area */\n    .post-image {\n      width: 100%;\n      /* Removed aspect-ratio and padding to let the actual image dictate size */\n      background-color: #efefef;\n      display: block; \n      border-top: 1px solid #efefef;\n      border-bottom: 1px solid #efefef;\n    }\n\n    .post-image img {\n      width: 100%;\n      display: block;\n      height: auto;\n    }\n\n    /* Action Bar (Likes, Comments, Share) */\n    .post-actions {\n      padding: 12px 16px 8px;\n      display: flex;\n      gap: 16px;\n    }\n\n    .action-btn {\n      background: none;\n      border: none;\n      padding: 0;\n      cursor: pointer;\n      font-size: 24px;\n      display: flex;\n      align-items: center;\n      justify-content: center;\n    }\n\n    .like-btn {\n      transition: transform 0.1s ease-in-out;\n    }\n    \n    .like-btn:active {\n      transform: scale(1.2);\n    }\n\n    /* Likes Count */\n    .likes-count {\n      padding: 0 16px;\n      font-weight: 600;\n      font-size: 14px;\n      color: #262626;\n      margin-bottom: 8px;\n    }\n\n    /* Caption Area */\n    .post-caption {\n      padding: 0 16px 16px;\n      font-size: 14px;\n      color: #262626;\n      line-height: 1.5;\n    }\n\n    .tags {\n      color: #00376b;\n      cursor: pointer;\n    }\n  </style>\n</head>\n<body>\n\n  <div class=\"post-card\">\n    <div class=\"post-header\">\n      <div class=\"profile-pic\"></div>\n      <div class=\"header-text\">\n        <span class=\"username\">trail_blazer_07</span>\n        <span class=\"location\">📍 Oakwood Community Park</span>\n      </div>\n      <div class=\"options\">•••</div>\n    </div>\n\n    <div class=\"post-image\">\n      <img src=\"image.jpg\" alt=\"Teenager with a golden retriever and a North Ridge backpack\">\n    </div>\n\n    <div class=\"post-actions\">\n      <button class=\"action-btn like-btn\" id=\"like-btn\" title=\"Like\">🤍</button>\n      <button class=\"action-btn\" title=\"Comment\">💬</button>\n      <button class=\"action-btn\" title=\"Share\">✈️</button>\n    </div>\n\n    <div class=\"likes-count\">\n      <span id=\"like-count\">142</span> likes\n    </div>\n\n    <div class=\"post-caption\">\n      <span class=\"username\">trail_blazer_07</span> Barnaby is OBSESSED with my new Limited Edition North Ridge Explorer backpack! 🎒🐕 Ready for the weekend. Too bad I can't pack any peanut butter trail mix for our hike later 🚫🥜.<br><br>\n      <span class=\"tags\">#WeekendVibes #DogLife</span>\n    </div>\n  </div>\n\n  <script>\n    // Simple Interactive Like Button\n    document.addEventListener('DOMContentLoaded', () => {\n      const likeBtn = document.getElementById('like-btn');\n      const likeCountText = document.getElementById('like-count');\n      \n      let isLiked = false;\n      let currentLikes = parseInt(likeCountText.innerText);\n\n      likeBtn.addEventListener('click', () => {\n        isLiked = !isLiked;\n        \n        if (isLiked) {\n          likeBtn.innerText = '❤️';\n          likeCountText.innerText = currentLikes + 1;\n        } else {\n          likeBtn.innerText = '🤍';\n          likeCountText.innerText = currentLikes;\n        }\n      });\n    });\n  </script>\n\n</body>\n</html>",
+          "folderId": "0",
+          "active": false
+        },
+        "2": {
+          "id": "2",
+          "name": "image.jpg",
+          "contents": "",
+          "folderId": "0",
+          "url": "/level_starter_assets/thinking_critically_lesson8_level2a_2026/uuid/62e290b4-1219-4ca0-a868-9a9346709f72.jpg",
+          "type": "starter",
+          "active": false
+        }
+      },
+      "openFiles": [
+
+      ]
+    },
+    "thumbnail_url": "https://images.code.org/719d74eb27c20d9668149746284a701d-one.jpg"
+  },
+  "audit_log": "[{\"changed_at\":\"2026-04-28 15:59:51 +0000\",\"changed\":[],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-28 16:01:55 +0000\",\"changed\":[],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-28 16:02:11 +0000\",\"changed\":[\"widget_view\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-28 16:57:52 +0000\",\"changed\":[],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"}]"
+}]]></config>
+</Weblab2>

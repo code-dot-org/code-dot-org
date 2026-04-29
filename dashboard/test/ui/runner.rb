@@ -100,7 +100,7 @@ def parse_options
     options.os_version = nil
     options.browser_version = nil
     options.features = nil
-    options.pegasus_domain = 'test.code.org'
+    options.pegasus_domain = 'code.org'
     options.dashboard_domain = 'test-studio.code.org'
     options.csedweek_domain = 'test.csedweek.org'
     options.local = nil
@@ -246,17 +246,9 @@ def parse_options
       map! {|feature| feature.gsub(/^\.\//, '')}
 
     if options.force_db_access
-      options.pegasus_db_access = true
-      options.dashboard_db_access = true
-    elsif CI::Utils.running_on_ci?
-      options.pegasus_db_access = true
       options.dashboard_db_access = true
     elsif rack_env?(:development)
-      options.pegasus_db_access = true if /(localhost|ngrok)/.match?(options.pegasus_domain)
       options.dashboard_db_access = true if /(localhost|ngrok)/.match?(options.dashboard_domain)
-    elsif rack_env?(:test)
-      options.pegasus_db_access = true if /test/.match?(options.pegasus_domain)
-      options.dashboard_db_access = true if /test/.match?(options.dashboard_domain)
     end
 
     if options.config
@@ -472,7 +464,23 @@ def server_status_page_url
 end
 
 def status_page_filename
-  "test_status_#{test_type}.html"
+  # SauceLabs runs keep the unqualified name. Device Farm runs are
+  # split into desktop/mobile/combined buckets so a desktop and a
+  # mobile run (which use separate concurrency quotas and are
+  # typically invoked as separate runner.rb commands) don't overwrite
+  # each other's status page in the shared S3 prefix.
+  return "test_status_#{test_type}.html" unless $options.device_farm
+  any_mobile = $browsers.any? {|b| mobile_browser?(b)}
+  all_mobile = $browsers.all? {|b| mobile_browser?(b)}
+  device_farm_kind =
+    if all_mobile
+      'mobile'
+    elsif any_mobile
+      'combined'
+    else
+      'desktop'
+    end
+  "test_status_#{test_type}_device_farm_#{device_farm_kind}.html"
 end
 
 # Returns a permalink URL for the Test Status Page, assuming we can upload it to S3
@@ -719,8 +727,8 @@ def cucumber_arguments_for_browser(browser, options)
   arguments += skip_tag('@no_chrome') if browser['browserName'] == 'chrome'
   arguments += skip_tag('@no_safari') if browser['name'] == 'Safari'
   arguments += skip_tag('@no_firefox') if browser['browserName'] == 'firefox'
+  arguments += skip_tag('@no_device_farm') if options.device_farm
   arguments += skip_tag('@webpurify') unless CDO.webpurify_key
-  arguments += skip_tag('@pegasus_db_access') unless options.pegasus_db_access
   arguments += skip_tag('@dashboard_db_access') unless options.dashboard_db_access
   arguments += skip_tag('@properties_encryption_key') if CDO.properties_encryption_key.blank?
   arguments += skip_tag('@cloudfront_key') if CDO.cloudfront_key_pair_id.blank?
