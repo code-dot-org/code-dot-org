@@ -80,22 +80,66 @@ export function useLineToolbar({
 
   const setLineEdgeColor = useCallback(
     (edgeId: string, strokeColor: string) => {
-      updateLineEdgeStyle(edgeId, currentStyle => ({
-        ...currentStyle,
-        stroke: strokeColor,
-      }));
+      setEdges(currentEdges =>
+        currentEdges.map(edge => {
+          if (edge.id !== edgeId) {
+            return edge;
+          }
+          const markerEnd =
+            edge.markerEnd && typeof edge.markerEnd !== 'string'
+              ? edge.markerEnd
+              : undefined;
+          return {
+            ...edge,
+            style: {
+              ...edge.style,
+              stroke: strokeColor,
+            },
+            ...(markerEnd
+              ? {
+                  markerEnd: {
+                    ...markerEnd,
+                    color: strokeColor,
+                  },
+                }
+              : {}),
+          };
+        })
+      );
     },
-    [updateLineEdgeStyle]
+    [setEdges]
   );
 
   const setLineEdgeWidth = useCallback(
     (edgeId: string, strokeWidth: number) => {
-      updateLineEdgeStyle(edgeId, currentStyle => ({
-        ...currentStyle,
-        strokeWidth,
-      }));
+      setEdges(currentEdges =>
+        currentEdges.map(edge => {
+          if (edge.id !== edgeId) {
+            return edge;
+          }
+          const markerEnd =
+            edge.markerEnd && typeof edge.markerEnd !== 'string'
+              ? edge.markerEnd
+              : undefined;
+          return {
+            ...edge,
+            style: {
+              ...edge.style,
+              strokeWidth,
+            },
+            ...(markerEnd
+              ? {
+                  markerEnd: {
+                    ...markerEnd,
+                    strokeWidth,
+                  },
+                }
+              : {}),
+          };
+        })
+      );
     },
-    [updateLineEdgeStyle]
+    [setEdges]
   );
 
   const setLineEdgeStrokeStyle = useCallback(
