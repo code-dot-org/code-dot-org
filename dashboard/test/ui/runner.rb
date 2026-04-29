@@ -271,7 +271,8 @@ def select_browser_configs(options)
       'browser' => options.browser || 'chrome',
       'name' => 'LocalBrowser',
       'browserName' => options.browser || 'chrome',
-      'version' => options.browser_version || 'latest'
+      'version' => options.browser_version || 'latest',
+      'chromedriverVersion' => options.browser == 'chrome' ? options.browser_version || 'latest' : nil,
     }]
   end
 
