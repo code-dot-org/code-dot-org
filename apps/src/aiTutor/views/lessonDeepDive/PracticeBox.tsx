@@ -118,7 +118,6 @@ const PracticeBox: FC<PracticeBoxProps> = ({
   const {modelParameters, loading} = useAiTutorModelParameters({
     aiTutorSystemPrompt,
     aiTutorJsonSchema: undefined,
-    enableTutorVideos: false,
   });
 
   const aichatContext: AichatContext = useMemo(() => {
