@@ -137,9 +137,12 @@ const LessonDeepDiveContainer: FC<LessonDeepDiveContainerProps> = ({
       case 'practice':
         return (
           <PracticeBox
+            lessonId={lessonDeepDiveData.lessonId}
             lessonName={lessonDeepDiveData.lessonName}
             lessonSummary={lessonDeepDiveData.lessonSummary}
             vocabulary={lessonDeepDiveData.vocabulary}
+            objectives={lessonDeepDiveData.objectives}
+            reflectionData={reflectionData}
           />
         );
       case 'tutor-summary':
