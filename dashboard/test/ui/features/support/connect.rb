@@ -224,14 +224,13 @@ def get_browser(test_run_name)
   # IE11 requires this to be explicitly set.
   browser.manage.timeouts.script_timeout = 30.seconds
 
-  # Maximize the window on desktop, as some tests require 1280px width.
-  # TODO: ENV['MOBILE'] is always a non-empty string ("true"/"false"), so this
-  # condition is always truthy and maximize never runs for remote browsers.
-  # SauceLabs works around this via sauce:options screenResolution. If Device
-  # Farm desktop sessions need 1280px, change to: ENV['MOBILE'] == 'true'
-  unless ENV['MOBILE']
-    max_width, max_height = browser.execute_script('return [window.screen.availWidth, window.screen.availHeight];')
-    browser.manage.window.resize_to(max_width, max_height)
+  # Resize the desktop browser window to 1280x1024, the minimum supported
+  # screen size. SauceLabs' Chrome config also requests this via
+  # sauce:options.screenResolution; this resize covers the other SauceLabs
+  # browsers (Firefox, Safari) and all Device Farm desktop sessions, where
+  # no equivalent capability exists.
+  unless ENV['MOBILE'] == 'true'
+    browser.manage.window.resize_to(1280, 1024)
   end
   browser
 end
