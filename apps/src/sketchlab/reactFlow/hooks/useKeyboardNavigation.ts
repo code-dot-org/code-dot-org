@@ -79,13 +79,10 @@ function moveNodesByDelta(
  * Resize a single node by adding `delta` to both its width and height,
  * clamped to the minimum node dimensions.
  *
- * React Flow renders node size as `node.width ?? node.style?.width`.
+ * node.width / node.height are the React Flow fields NodeResizer also writes
+ * on drag, so using them here keeps creation, drag, and keyboard resize
+ * consistent. node.style is left untouched and reserved for appearance.
  * See https://github.com/xyflow/xyflow/blob/a58568f11bc0e1a1bdca1b3549e959e2e1ca0cdd/packages/react/src/components/NodeWrapper/utils.tsx#L37-L38
- * So we write to both fields to keep them in sync:
- *   - node.width / node.height  — what React Flow uses for layout and what
- *     NodeResizer also writes on drag.
- *   - node.style.width / height — what the canvas sets at creation time and
- *     what gets serialized in the project source.
  */
 function resizeNodeByDelta(
   currentNodes: SketchlabReactFlowNode[],
@@ -94,20 +91,11 @@ function resizeNodeByDelta(
 ) {
   return currentNodes.map(node => {
     if (node.id !== nodeId) return node;
-    const styleWidth =
-      typeof node.style?.width === 'number' ? node.style.width : undefined;
-    const styleHeight =
-      typeof node.style?.height === 'number' ? node.style.height : undefined;
-    const currentWidth = node.width ?? styleWidth ?? DEFAULT_NODE_WIDTH;
-    const currentHeight = node.height ?? styleHeight ?? DEFAULT_NODE_HEIGHT;
+    const currentWidth = node.width ?? DEFAULT_NODE_WIDTH;
+    const currentHeight = node.height ?? DEFAULT_NODE_HEIGHT;
     const newWidth = Math.max(MIN_NODE_WIDTH, currentWidth + delta);
     const newHeight = Math.max(MIN_NODE_HEIGHT, currentHeight + delta);
-    return {
-      ...node,
-      width: newWidth,
-      height: newHeight,
-      style: {...node.style, width: newWidth, height: newHeight},
-    };
+    return {...node, width: newWidth, height: newHeight};
   });
 }
 
