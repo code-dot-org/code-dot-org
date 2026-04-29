@@ -196,18 +196,21 @@
   color: var(--text-neutral-primary);
 }
 
+// The DSCO TextField wrapper hard-codes min-width: 18.75rem on its <label>;
+// override the wrapper and the input so the field fits 3 digits plus the
+// native number spinner.
 .rotationInput {
-  width: 56px;
   flex: 0 0 auto;
+  width: 64px;
+  min-width: 0;
 
-  // The DSCO TextField wrapper has its own min-width; override here so the
-  // numeric input fits in the toolbar column.
-  label {
-    min-width: unset;
-    width: 56px;
+  & > label {
+    min-width: 0;
+    width: 64px;
+  }
 
-    input {
-      width: 56px;
-    }
+  input {
+    width: 64px;
+    min-width: 0;
   }
 }
