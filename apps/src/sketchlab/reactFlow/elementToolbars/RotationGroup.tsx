@@ -25,26 +25,52 @@ export interface RotationGroupProps {
 
 export default function RotationGroup({value, onChange}: RotationGroupProps) {
   const groupLabelId = useId();
-  // Keep an editable string for the numeric input so users can type/clear
-  // freely. We commit (and normalize) on blur or Enter.
+  // Local editable string so users can type partials ("", "-", leading
+  // zeros) without the canonical state stomping their cursor.
   const [inputValue, setInputValue] = useState(String(value));
+  const [isFocused, setIsFocused] = useState(false);
 
+  // Sync display to the canonical value, but only while the input is not
+  // focused. Otherwise live-committing during typing would clobber what
+  // the user is mid-typing (e.g. "-4" -> committed 356 -> display "356").
   useEffect(() => {
-    setInputValue(String(value));
-  }, [value]);
-
-  const commitInput = useCallback(() => {
-    const parsed = Number.parseInt(inputValue, 10);
-    const normalized = Number.isFinite(parsed)
-      ? normalizeRotation(parsed)
-      : value;
-    if (normalized !== value) {
-      onChange(normalized);
-    } else {
-      // Revert any non-numeric typing back to the current canonical value.
+    if (!isFocused) {
       setInputValue(String(value));
     }
-  }, [inputValue, onChange, value]);
+  }, [value, isFocused]);
+
+  const handleInputChange = useCallback(
+    (event: React.ChangeEvent<HTMLInputElement>) => {
+      const next = event.target.value;
+      setInputValue(next);
+      // Skip committing on partial input so the user can type a leading
+      // minus or briefly empty the field without us snapping the slider.
+      if (next === '' || next === '-') {
+        return;
+      }
+      const parsed = Number.parseInt(next, 10);
+      if (!Number.isFinite(parsed)) {
+        return;
+      }
+      const normalized = normalizeRotation(parsed);
+      if (normalized !== value) {
+        onChange(normalized);
+      }
+    },
+    [onChange, value]
+  );
+
+  const handleInputBlur = useCallback(() => {
+    setIsFocused(false);
+    // On exit, normalize what's displayed (e.g. "045" -> "45", "-4" -> "356")
+    // and reset to the canonical value if the field was left non-numeric.
+    const parsed = Number.parseInt(inputValue, 10);
+    if (Number.isFinite(parsed)) {
+      setInputValue(String(normalizeRotation(parsed)));
+    } else {
+      setInputValue(String(value));
+    }
+  }, [inputValue, value]);
 
   const handleSliderChange = useCallback(
     (_: Event, sliderValue: number | number[]) => {
@@ -58,11 +84,10 @@ export default function RotationGroup({value, onChange}: RotationGroupProps) {
     (event: React.KeyboardEvent<HTMLInputElement>) => {
       if (event.key === 'Enter') {
         event.preventDefault();
-        commitInput();
         (event.target as HTMLInputElement).blur();
       }
     },
-    [commitInput]
+    []
   );
 
   return (
@@ -100,8 +125,9 @@ export default function RotationGroup({value, onChange}: RotationGroupProps) {
           aria-label="Rotation in degrees"
           inputType="number"
           value={inputValue}
-          onChange={event => setInputValue(event.target.value)}
-          onBlur={commitInput}
+          onChange={handleInputChange}
+          onFocus={() => setIsFocused(true)}
+          onBlur={handleInputBlur}
           onKeyDown={handleInputKeyDown}
           size="s"
           className={styles.rotationInput}
