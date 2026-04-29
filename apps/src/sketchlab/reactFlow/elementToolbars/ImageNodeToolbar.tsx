@@ -2,6 +2,7 @@ import React from 'react';
 
 import {ImageNodeType} from '../types';
 
+import ActionsGroup from './ActionsGroup';
 import HandleVisibilityToggle from './HandleVisibilityToggle';
 import ToolbarShell from './ToolbarShell';
 import {useNodeToolbarData} from './useNodeToolbarData';
@@ -20,6 +21,7 @@ export default function ImageNodeToolbar({nodeId}: ImageNodeToolbarProps) {
       anchorNodeId={nodeId}
       ariaLabel="Image options"
     >
+      <ActionsGroup nodeId={nodeId} />
       <HandleVisibilityToggle
         visible={handlesVisible}
         onToggle={() => patchNodeData({showHandles: !handlesVisible})}

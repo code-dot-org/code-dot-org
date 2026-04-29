@@ -8,7 +8,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2026-04-24 22:15:10 UTC",
+    "serialized_at": "2026-04-28 21:11:56 UTC",
     "hide_within_course": false,
     "published_state": "in_development",
     "instruction_type": null,
@@ -91,7 +91,7 @@
       "key": "6b283a5d-f5e0-4679-a6e3-cdc1888298b3",
       "position": 3,
       "properties": {
-        "progression_name": "Create a Brand Kit"
+        "progression_name": "Design Your Website"
       },
       "seeding_key": {
         "activity_section.key": "6b283a5d-f5e0-4679-a6e3-cdc1888298b3",
@@ -144,7 +144,7 @@
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "code_connect_web_app_idea_bot_2026"
+          "2026-code-connect-aichat"
         ],
         "lesson.key": "lesson-1",
         "lesson_group.key": "",
@@ -152,7 +152,7 @@
         "activity_section.key": "8e2df5f7-7804-4973-af40-9792ba311346"
       },
       "level_keys": [
-        "code_connect_web_app_idea_bot_2026"
+        "2026-code-connect-aichat"
       ]
     },
     {
@@ -161,12 +161,12 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Create a Brand Kit"
+        "progression": "Design Your Website"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "code_connect_sketch_lab_mood_board_2026"
+          "code-connect-choice-sketch-lab-2026"
         ],
         "lesson.key": "lesson-1",
         "lesson_group.key": "",
@@ -174,7 +174,7 @@
         "activity_section.key": "6b283a5d-f5e0-4679-a6e3-cdc1888298b3"
       },
       "level_keys": [
-        "code_connect_sketch_lab_mood_board_2026"
+        "code-connect-choice-sketch-lab-2026"
       ]
     },
     {
@@ -215,9 +215,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "code_connect_web_app_idea_bot_2026",
+        "level.key": "2026-code-connect-aichat",
         "script_level.level_keys": [
-          "code_connect_web_app_idea_bot_2026"
+          "2026-code-connect-aichat"
         ],
         "lesson.key": "lesson-1",
         "lesson_group.key": "",
@@ -227,9 +227,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "code_connect_sketch_lab_mood_board_2026",
+        "level.key": "code-connect-choice-sketch-lab-2026",
         "script_level.level_keys": [
-          "code_connect_sketch_lab_mood_board_2026"
+          "code-connect-choice-sketch-lab-2026"
         ],
         "lesson.key": "lesson-1",
         "lesson_group.key": "",

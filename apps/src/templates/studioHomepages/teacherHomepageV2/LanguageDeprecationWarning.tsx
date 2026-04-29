@@ -1,12 +1,12 @@
 import Alert, {alertTypes} from '@code-dot-org/component-library/alert';
-import React, {FC} from 'react';
+import React, {FC, useEffect} from 'react';
 
 import {useLocalization} from '@cdo/apps/localization';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import i18n from '@cdo/locale';
 
-const DEPRECATED_LOCALES = [
+const DEPRECATED_LOCALES = new Set([
   'ca-ES', // Catalan
   'fil-PH', // Filipino
   'mn-MN', // Mongolian
@@ -16,12 +16,20 @@ const DEPRECATED_LOCALES = [
   'ur-PK', // Urdu
   'uz-UZ', // Uzbek
   'vi-VN', // Vietnamese
-];
+]);
 
 export const LanguageDeprecationWarning: FC = () => {
   const locale = useLocalization();
+  const shouldShowWarning = DEPRECATED_LOCALES.has(locale);
 
-  if (!DEPRECATED_LOCALES.includes(locale)) return <></>;
+  useEffect(() => {
+    shouldShowWarning &&
+      analyticsReporter.sendEvent(EVENTS.LANGUAGE_DEPRECATION_WARNING_SHOWN, {
+        locale,
+      });
+  }, [shouldShowWarning, locale]);
+
+  if (!shouldShowWarning) return <></>;
 
   return (
     <Alert

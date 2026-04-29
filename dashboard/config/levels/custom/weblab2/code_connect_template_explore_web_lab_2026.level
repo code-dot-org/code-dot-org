@@ -9,7 +9,7 @@
     "encrypted": "false",
     "submittable": "false",
     "disable_edit_run_for_submission": "false",
-    "hide_share_and_remix": "false",
+    "hide_share_and_remix": "true",
     "widget_view": "false",
     "initial_view_mode": "preview",
     "predict_settings": {
@@ -229,6 +229,6 @@
     "offer_browser_tts": "false",
     "require_edit_to_continue": "false"
   },
-  "audit_log": "[{\"changed_at\":\"2026-04-24T22:13:47.840+00:00\",\"changed\":[\"cloned from \\\"ai-generated-design-lesson3-template-level1_2026\\\"\"],\"cloned_from\":\"ai-generated-design-lesson3-template-level1_2026\"},{\"changed_at\":\"2026-04-24 22:14:00 +0000\",\"changed\":[],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2026-04-24T22:13:47.840+00:00\",\"changed\":[\"cloned from \\\"ai-generated-design-lesson3-template-level1_2026\\\"\"],\"cloned_from\":\"ai-generated-design-lesson3-template-level1_2026\"},{\"changed_at\":\"2026-04-24 22:14:00 +0000\",\"changed\":[],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-28 21:53:05 +0000\",\"changed\":[\"hide_share_and_remix\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"}]"
 }]]></config>
 </Weblab2>
