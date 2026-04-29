@@ -9,17 +9,44 @@ markdown <<MARKDOWN
 
 #### The following strategies can help guide these discussions in a way that is productive, inclusive, and grounded in learning.
 
-* #### **Assume AI systems may contain bias**
-#### Approach AI outputs with the understanding that bias is possible. This helps set the expectation that responses should be questioned and evaluated rather than accepted at face value.
+<div style="max-width:900px; margin:20px auto; font-family:ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial; color:#292F36;">
 
-* #### **Approach discussions thoughtfully**
-#### Be intentional about how conversations are framed. Focus on inquiry and exploration rather than assigning blame, and create space for students to share perspectives respectfully.
+<div style="display:grid; grid-template-columns:1fr 1fr; gap:14px;">
 
-* #### **Highlight the value of diverse perspectives**
-#### Emphasize that including multiple viewpoints leads to stronger, more accurate outcomes. Connect this idea to both AI systems and classroom learning.
+<!-- Card 1 -->
+<div style="border:2px solid #8C52BA; border-radius:16px; padding:16px; background:#FFFFFF; box-shadow:0 4px 12px rgba(41,47,54,0.06);">
+<div style="font-size:18px; font-weight:800; margin-bottom:8px;">Assume Bias</div>
+<div style="font-size:15px; line-height:1.5;">
+AI systems can reflect bias from their training data. Help students approach responses with curiosity and skepticism rather than immediate trust.
+</div>
+</div>
 
-* #### **Encourage responsible use and evaluation**
-#### Help students think about how AI tools are developed and used, and reinforce the importance of evaluating outputs and making informed choices.
+<!-- Card 2 -->
+<div style="border:2px solid #8C52BA; border-radius:16px; padding:16px; background:#FFFFFF; box-shadow:0 4px 12px rgba(41,47,54,0.06);">
+<div style="font-size:18px; font-weight:800; margin-bottom:8px;">Guide Thoughtful Discussion</div>
+<div style="font-size:15px; line-height:1.5;">
+Frame conversations around inquiry and exploration. Focus on understanding ideas, not assigning blame, and support respectful sharing of perspectives.
+</div>
+</div>
+
+<!-- Card 3 -->
+<div style="border:2px solid #8C52BA; border-radius:16px; padding:16px; background:#FFFFFF; box-shadow:0 4px 12px rgba(41,47,54,0.06);">
+<div style="font-size:18px; font-weight:800; margin-bottom:8px;">Value Multiple Perspectives</div>
+<div style="font-size:15px; line-height:1.5;">
+Encourage students to consider different viewpoints. More perspectives lead to stronger understanding—both in AI outputs and classroom thinking.
+</div>
+</div>
+
+<!-- Card 4 -->
+<div style="border:2px solid #8C52BA; border-radius:16px; padding:16px; background:#FFFFFF; box-shadow:0 4px 12px rgba(41,47,54,0.06);">
+<div style="font-size:18px; font-weight:800; margin-bottom:8px;">Promote Responsible Use</div>
+<div style="font-size:15px; line-height:1.5;">
+Support students in thinking about how AI tools are built and used. Reinforce evaluating outputs and making thoughtful, informed decisions.
+</div>
+</div>
+
+</div>
+</div>
 
 #### Addressing questions or concerns about AI bias—from students, families, or colleagues—can be challenging. Using structured prompts or discussion supports can help guide these conversations, clarify key ideas, and create a shared understanding.
 MARKDOWN
