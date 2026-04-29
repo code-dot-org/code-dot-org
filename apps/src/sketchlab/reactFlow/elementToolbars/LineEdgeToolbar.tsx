@@ -100,6 +100,7 @@ const ARROW_HEAD_ICONS: Record<ArrowHeadValue, string> = {
   both: 'arrows-left-right',
 };
 
+// Shared edge toolbar for both plain lines and arrows.
 export default function LineEdgeToolbar({
   edge,
   anchorNodeId,
@@ -134,6 +135,7 @@ export default function LineEdgeToolbar({
     : 'end';
   const showArrowHeadOptions =
     edge.data?.isArrow || hasStartArrow || hasEndArrow;
+
   const renderLinePreview = (
     width: number,
     lineStyle: LinePreviewStyle
