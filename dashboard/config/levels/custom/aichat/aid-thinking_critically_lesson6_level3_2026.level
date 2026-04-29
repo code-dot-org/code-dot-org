@@ -1,5 +1,6 @@
 <Aichat>
   <config><![CDATA[{
+  "published": true,
   "game_id": 71,
   "created_at": "2026-04-24T18:59:31.000Z",
   "level_num": "custom",
@@ -44,12 +45,11 @@
       ],
       "multimodalEnabled": true
     },
-    "display_name": "Skeptical Teen",
-    "bubble_choice_description": "Designed to push back like a peer who thinks rules are dramatic or unnecessary.",
-    "thumbnail_url": "https://images.code.org/957fe2186fdc373b9638744f4426fbbc-think.png",
-    "name_suffix": "_2026"
+    "thumbnail_url": "https://images.code.org/e4e5c8e201e38f07fb7ed221f17f6421-ai-chat-lab-icon.png",
+    "name_suffix": "_2026",
+    "display_name": "AI Chat",
+    "bubble_choice_description": "Use this AI Chat level as needed to work on your project."
   },
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2026-04-24T18:59:31.584+00:00\",\"changed\":[\"cloned from \\\"aid-thinking-critically-lesson9-level2_2026-test_2026-pilot_2026\\\"\"],\"cloned_from\":\"aid-thinking-critically-lesson9-level2_2026-test_2026-pilot_2026\"}]"
+  "audit_log": "[{\"changed_at\":\"2026-04-24T18:59:31.584+00:00\",\"changed\":[\"cloned from \\\"aid-thinking-critically-lesson9-level2_2026-test_2026-pilot_2026\\\"\"],\"cloned_from\":\"aid-thinking-critically-lesson9-level2_2026-test_2026-pilot_2026\"},{\"changed_at\":\"2026-04-28 17:53:28 +0000\",\"changed\":[],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-04-28 17:55:13 +0000\",\"changed\":[\"display_name\",\"bubble_choice_description\",\"thumbnail_url\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-04-28 17:57:14 +0000\",\"changed\":[],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"}]"
 }]]></config>
 </Aichat>
