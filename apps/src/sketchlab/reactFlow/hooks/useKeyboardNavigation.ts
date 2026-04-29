@@ -80,7 +80,7 @@ function moveNodesByDelta(
  * clamped to the minimum node dimensions.
  *
  * node.width / node.height are the React Flow fields NodeResizer also writes
- * on drag, so using them here keeps creation, drag, and keyboard resize
+ * on drag, so we write there to keep creation, drag, and keyboard resize
  * consistent. node.style is left untouched and reserved for appearance.
  * See https://github.com/xyflow/xyflow/blob/a58568f11bc0e1a1bdca1b3549e959e2e1ca0cdd/packages/react/src/components/NodeWrapper/utils.tsx#L37-L38
  */
@@ -118,8 +118,8 @@ interface UseKeyboardNavigationOptions {
  *
  * Press "c" on a focused node to enter connect mode, Tab to cycle through
  * candidate target nodes, Enter to create the edge. Escape or "c" again
- * cancels. "[" and "]" resize the focused node by the same step size for shapes and images.
- * Text-only nodes step through font sizes.
+ * cancels. "[" and "]" resize the focused node by adjusting its width and
+ * height by the keyboard resize step.
  * Also handles Tab-based navigation in normal mode and Enter to
  * activate a node's editable content.
  */
@@ -291,7 +291,7 @@ export function useKeyboardNavigation({
         const focusedNode = getNode(focusedNodeId);
         const direction = (event.key === ']' ? 1 : -1) as 1 | -1;
 
-        // Shape and image nodes: resize dimensions.
+        // Any focused non-line-anchor node: resize dimensions.
         event.preventDefault();
         event.stopPropagation();
         setNodes(currentNodes =>
