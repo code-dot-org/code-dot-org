@@ -48,7 +48,11 @@
                 %td.status
                 %td.log-link
                 %td.rerun-command
-                  - rerun_command = "bundle exec ./runner.rb --html #{type == 'Eyes' ? '--eyes' : ''} -c #{browser} -f #{feature} &"
+                  - rerun_flags = ['--html']
+                  - rerun_flags << '--eyes' if type == 'Eyes'
+                  - rerun_flags << '--device-farm' if device_farm
+                  - rerun_flags << '--db' if force_db_access
+                  - rerun_command = "bundle exec ./runner.rb #{rerun_flags.join(' ')} -c #{browser} -f #{feature} &"
                   %button.copy-button{'data-clipboard-text': rerun_command}= "Copy Rerun Cmd"
       %div#help-text
         %p

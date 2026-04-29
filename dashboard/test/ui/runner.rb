@@ -528,7 +528,9 @@ def generate_status_page(suite_start_time)
         git_branch: GIT_BRANCH,
         commit_hash: COMMIT_HASH,
         start_time: suite_start_time,
-        browser_features: browser_features
+        browser_features: browser_features,
+        device_farm: $options.device_farm,
+        force_db_access: $options.force_db_access
       }
     )
   )
