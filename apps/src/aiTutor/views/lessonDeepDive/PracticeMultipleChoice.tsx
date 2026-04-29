@@ -2,7 +2,13 @@ import {Typography} from '@mui/material';
 import classNames from 'classnames';
 import React, {FC, useState} from 'react';
 
-import {PracticeProblem, PracticeProblemTypes} from './types';
+import {
+  MatchSolution,
+  MultiSolution,
+  PracticeProblem,
+  PracticeProblemTypes,
+  ScrambleSolution,
+} from './types';
 
 import styles from './practice-problems.module.scss';
 
@@ -11,6 +17,11 @@ interface PracticeMultipleChoiceProps {
   submitted: boolean;
   submitCallback: React.Dispatch<React.SetStateAction<boolean>>;
   correctCallback: React.Dispatch<React.SetStateAction<boolean>>;
+  studentAnswerCallback: React.Dispatch<
+    React.SetStateAction<
+      (MultiSolution | ScrambleSolution | MatchSolution)[] | null
+    >
+  >;
 }
 
 const PracticeMultipleChoice: FC<PracticeMultipleChoiceProps> = ({
@@ -18,6 +29,7 @@ const PracticeMultipleChoice: FC<PracticeMultipleChoiceProps> = ({
   submitted,
   submitCallback,
   correctCallback,
+  studentAnswerCallback,
 }) => {
   const [selected, setSelected] = useState<string[]>([]);
 
@@ -85,6 +97,14 @@ const PracticeMultipleChoice: FC<PracticeMultipleChoiceProps> = ({
               onClick={() => {
                 submitCallback(true);
                 correctCallback(isCorrect);
+                studentAnswerCallback(
+                  problem.solution.map(s => {
+                    return {
+                      option: s.option,
+                      correct: selected.includes(s.option),
+                    };
+                  })
+                );
               }}
             >
               <Typography variant="body1" className={styles.cardLabel}>
