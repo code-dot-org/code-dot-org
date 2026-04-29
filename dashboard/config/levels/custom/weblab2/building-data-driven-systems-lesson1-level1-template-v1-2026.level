@@ -1,0 +1,77 @@
+<Weblab2>
+  <config><![CDATA[{
+  "game_id": 74,
+  "created_at": "2026-04-29T03:50:23.000Z",
+  "level_num": "custom",
+  "user_id": 19378,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "# template",
+    "offer_browser_tts": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "false",
+    "widget_view": "false",
+    "initial_view_mode": "split",
+    "require_edit_to_continue": "false",
+    "predict_settings": {
+      "isPredictLevel": false,
+      "solution": "",
+      "questionType": "freeResponse",
+      "placeholderText": "",
+      "multipleChoiceOptions": [
+        ""
+      ],
+      "freeResponseHeight": 50,
+      "codeEditableAfterSubmit": false
+    },
+    "ai_tutor_prompt_settings": {
+      "answerTypes": [
+        "buildJavaScript"
+      ],
+      "answerTypeCustomizations": {
+      }
+    },
+    "start_sources": {
+      "folders": {
+      },
+      "files": {
+        "1": {
+          "id": "1",
+          "name": "index.html",
+          "contents": "<!DOCTYPE html>\n<html>\n  <head>\n    <meta charset=\"utf-8\" />\n    <title>My Favorites</title>\n  </head>\n  <body>\n    <h1>My Favorites</h1>\n\n    <h2>Items</h2>\n    <p id=\"item0\">Item at index 0</p>\n    <p id=\"item1\">Item at index 1</p>\n    <p id=\"item2\">Item at index 2</p>\n\n    <h2>Array Info</h2>\n    <p>Total items: <span id=\"count\"></span></p>\n    <p>Last item: <span id=\"lastItem\"></span></p>\n\n    <script src=\"script.js\"></script>\n  </body>\n</html>",
+          "active": false,
+          "folderId": "0"
+        },
+        "2": {
+          "id": "2",
+          "name": "style.css",
+          "contents": "body {\n  font-family: Arial, sans-serif;\n  background-color: #f4f4f9;\n  color: #333;\n  margin: 0;\n  padding: 32px;\n  line-height: 1.5;\n}\n\nh1 {\n  color: #2c3e50;\n  margin-bottom: 24px;\n}\n\nh2 {\n  color: #34495e;\n  margin-top: 32px;\n  margin-bottom: 12px;\n  font-size: 1.1rem;\n  border-bottom: 2px solid #dcdfe6;\n  padding-bottom: 6px;\n}\n\np {\n  background-color: #ffffff;\n  border-left: 5px solid #3498db;\n  padding: 12px 14px;\n  margin: 10px 0;\n  border-radius: 6px;\n  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);\n}\n\nspan {\n  font-weight: bold;\n  color: #2c3e50;\n}\n\n#item0,\n#item1,\n#item2 {\n  border-left-color: #5dade2;\n}\n\n#count {\n  color: #8e44ad;\n}\n\n#lastItem {\n  color: #e67e22;\n}",
+          "folderId": "0",
+          "active": false
+        },
+        "3": {
+          "id": "3",
+          "name": "script.js",
+          "contents": "Add your changes to script.js",
+          "folderId": "0",
+          "active": false
+        },
+        "4": {
+          "id": "4",
+          "name": "prompt.md",
+          "contents": "",
+          "folderId": "0",
+          "active": true
+        }
+      },
+      "openFiles": [
+        "4",
+        "3"
+      ]
+    }
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-04-29 03:51:06 +0000\",\"changed\":[],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-04-29 03:51:06 +0000\",\"changed\":[],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-04-29 03:51:07 +0000\",\"changed\":[],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-04-29 03:51:13 +0000\",\"changed\":[],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-04-29 03:51:13 +0000\",\"changed\":[],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-04-29 03:51:13 +0000\",\"changed\":[],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"}]"
+}]]></config>
+</Weblab2>
