@@ -2,7 +2,7 @@
 @import '../../../mixins.scss';
 @import '../mixins.scss';
 
-$preview-image-size: 48px;
+$preview-image-size: 32px;
 
 .container {
   display: flex;
@@ -61,6 +61,7 @@ $preview-image-size: 48px;
   gap: 0;
   text-align: left;
   align-items: center;
+  min-width: 0;
 
   .fileIcon {
     display: flex;
@@ -77,7 +78,7 @@ $preview-image-size: 48px;
 
     i {
       margin: auto;
-      font-size: 22px;
+      font-size: 13px;
       color: var(--text-neutral-white-fixed);
     }
   }
@@ -86,17 +87,18 @@ $preview-image-size: 48px;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
-    max-width: 160px;
-    height: auto;
-    min-height: 39px;
+    flex: 1;
+    min-width: 0;
+    height: 32px;
+    box-sizing: border-box;
     color: var(--text-neutral-primary);
     background: var(--background-neutral-primary);
-    padding: 0.22rem 0.5rem;
+    padding: 0 0.5rem;
     border: variables.$default-border;
     border-inline-start: 0;
     border-radius: 0 variables.$default-border-radius
       variables.$default-border-radius 0;
-    line-height: 1.5;
+    line-height: 1;
     text-align: initial;
 
     html[dir='rtl'] & {
@@ -115,10 +117,22 @@ $preview-image-size: 48px;
       display: flex;
       align-items: center;
       gap: 4px;
+      overflow: hidden;
+
+      > p:first-child {
+        flex-shrink: 1;
+        min-width: 0;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        margin: 0;
+      }
     }
 
     .timestamp {
       color: var(--text-neutral-tertiary);
+      white-space: nowrap;
+      flex-shrink: 0;
     }
   }
 }
