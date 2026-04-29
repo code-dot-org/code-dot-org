@@ -74,7 +74,14 @@ export default function RotationGroup({value, onChange}: RotationGroupProps) {
       >
         Rotation
       </Typography>
-      <div className={styles.rotationRow}>
+      {/*
+       * React Flow opts elements out of canvas panning when they (or their
+       * descendants) carry the `nopan` class. Without it a slider drag pans
+       * the workspace instead of moving the thumb. We use `nopan` rather
+       * than stopPropagation so we don't interfere with the focus / toolbar
+       * lifecycle handlers attached at the document level.
+       */}
+      <div className={`${styles.rotationRow} nopan`}>
         <Slider
           className={styles.rotationSlider}
           size="small"
