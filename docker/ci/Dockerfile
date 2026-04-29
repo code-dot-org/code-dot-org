@@ -217,11 +217,6 @@ RUN curl -sSLOJ https://github.com/jemalloc/jemalloc/releases/download/5.3.1/jem
     cd .. && \
     rm -rf jemalloc-5.3.1 jemalloc-5.3.1.tar.bz2
 
-# Keep MALLOC_CONF configuration up to date with Chef provisioned Instances: `cookbooks/cdo-jemalloc/attributes/default.rb`
-ENV \
-    LD_PRELOAD=/usr/local/lib/libjemalloc.so.2 \
-    MALLOC_CONF=narenas:2,background_thread:true,dirty_decay_ms:500,muzzy_decay_ms:0
-
 USER ${USER}
 
 WORKDIR /home/${USER}
