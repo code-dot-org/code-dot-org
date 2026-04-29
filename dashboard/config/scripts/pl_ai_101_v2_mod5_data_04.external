@@ -1,0 +1,125 @@
+name 'pl-ai-101-V2-mod5-data-04'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Talking to Students About Data Privacy
+
+#### As students begin using AI tools, it’s important to help them understand not just how to use these tools, but how to use them safely and responsibly. Conversations about data privacy are a key part of this.
+
+#### You don’t need to cover every technical detail. Instead, focus on helping students build awareness and good habits around what they share and how they think about their digital footprint.
+
+<div style="display:grid; gap:16px; max-width:90%; margin:0 auto; font-family:ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial; color:#292F36;">
+
+<!-- Card 1 -->
+<div style="display:grid; grid-template-columns:220px 1fr; gap:16px; border:2px solid #8C52BA; border-radius:16px; padding:18px; background:#FFFFFF; box-shadow:0 4px 12px rgba(41,47,54,0.06);">
+<div style="display:flex; align-items:start; justify-content:center; padding:10px;">
+<img src="https://images.code.org/f85fecc7ec6a1bedacf050a8c98fbef5-Screenshot 2026-04-28 at 11.07.54 AM.png" style="width:175px; height:175px; object-fit:contain;">
+</div>
+<div>
+<div style="font-size:22px; font-weight:800; margin-bottom:8px; color:#141414;">Start with Simple, Clear Ideas</div>
+<div style="font-size:16px; line-height:1.5; margin-bottom:10px;">
+Introduce data privacy using concepts students can easily understand.
+</div>
+<div style="font-size:16px; font-weight:700; margin-bottom:6px;">Focus on ideas like:</div>
+<ul style="margin:0 0 12px 20px; padding:0; font-size:15px; line-height:1.5;">
+<li>What you type matters—information may be stored or reused</li>
+<li>Not everything should be shared (e.g., personal details or passwords)</li>
+<li>AI is not private by default, even if it feels like a conversation</li>
+</ul>
+<div style="font-size:15px; line-height:1.5;">
+Relatable examples help make these ideas concrete and memorable.
+</div>
+</div>
+</div>
+
+<!-- Card 2 -->
+<div style="display:grid; grid-template-columns:220px 1fr; gap:16px; border:2px solid #8C52BA; border-radius:16px; padding:18px; background:#FFFFFF; box-shadow:0 4px 12px rgba(41,47,54,0.06);">
+<div style="display:flex; align-items:start; justify-content:center; padding:10px;">
+<img src="https://images.code.org/f17cf36ea78ec5b094693e84b46295b7-Screenshot 2026-04-28 at 11.07.58 AM.png" style="width:175px; height:175px; object-fit:contain;">
+</div>
+<div>
+<div style="font-size:22px; font-weight:800; margin-bottom:8px; color:#141414;">Set Clear Expectations</div>
+<div style="font-size:16px; line-height:1.5; margin-bottom:10px;">
+Establish guidelines for how AI tools should be used in your classroom.
+</div>
+<div style="font-size:16px; font-weight:700; margin-bottom:6px;">This might include:</div>
+<ul style="margin:0 0 12px 20px; padding:0; font-size:15px; line-height:1.5;">
+<li>Not entering personal or identifying information</li>
+<li>Using only approved tools or platforms</li>
+<li>Asking for help when unsure what is appropriate to share</li>
+</ul>
+<div style="font-size:15px; line-height:1.5;">
+Clear expectations help students understand boundaries and build responsible habits.
+</div>
+</div>
+</div>
+
+<!-- Card 3 -->
+<div style="display:grid; grid-template-columns:220px 1fr; gap:16px; border:2px solid #8C52BA; border-radius:16px; padding:18px; background:#FFFFFF; box-shadow:0 4px 12px rgba(41,47,54,0.06);">
+<div style="display:flex; align-items:start; justify-content:center; padding:10px;">
+<img src="https://images.code.org/2365f4dc634825a8b6edcd0d74628e14-Screenshot 2026-04-28 at 11.08.03 AM.png" style="width:175px; height:175px; object-fit:contain;">
+</div>
+<div>
+<div style="font-size:22px; font-weight:800; margin-bottom:8px; color:#141414;">Model Responsible Use</div>
+<div style="font-size:16px; line-height:1.5; margin-bottom:10px;">
+Students learn from how you use technology in practice.
+</div>
+<div style="font-size:16px; font-weight:700; margin-bottom:6px;">This might include:</div>
+<ul style="margin:0 0 12px 20px; padding:0; font-size:15px; line-height:1.5;">
+<li>Avoiding sensitive information when using AI tools</li>
+<li>Explaining your decisions about what to share</li>
+<li>Demonstrating safe and thoughtful use</li>
+</ul>
+<div style="font-size:15px; line-height:1.5;">
+This helps students see what responsible use looks like in real situations.
+</div>
+</div>
+</div>
+
+<!-- Card 4 -->
+<div style="display:grid; grid-template-columns:220px 1fr; gap:16px; border:2px solid #8C52BA; border-radius:16px; padding:18px; background:#FFFFFF; box-shadow:0 4px 12px rgba(41,47,54,0.06);">
+<div style="display:flex; align-items:start; justify-content:center; padding:10px;">
+<img src="https://images.code.org/ed1a4713fc2db0b9c9fc57175965de69-Screenshot 2026-04-28 at 11.08.07 AM.png" style="width:175px; height:175px; object-fit:contain;">
+</div>
+<div>
+<div style="font-size:22px; font-weight:800; margin-bottom:8px; color:#141414;">Encourage Questions and Reflection</div>
+<div style="font-size:16px; line-height:1.5; margin-bottom:10px;">
+Create space for students to think about and discuss data privacy.
+</div>
+<div style="font-size:16px; font-weight:700; margin-bottom:6px;">You might ask:</div>
+<ul style="margin:0 0 12px 20px; padding:0; font-size:15px; line-height:1.5;">
+<li>What information should stay private?</li>
+<li>Why does it matter who can see what you share?</li>
+<li>How is using AI different from talking to a person?</li>
+</ul>
+<div style="font-size:15px; line-height:1.5;">
+These conversations help students build understanding, not just follow rules.
+</div>
+</div>
+</div>
+
+<!-- Card 5 -->
+<div style="display:grid; grid-template-columns:220px 1fr; gap:16px; border:2px solid #8C52BA; border-radius:16px; padding:18px; background:#FFFFFF; box-shadow:0 4px 12px rgba(41,47,54,0.06);">
+<div style="display:flex; align-items:start; justify-content:center; padding:10px;">
+<img src="https://images.code.org/d42a8bd6e3ab91dda9242d570a3632ab-Screenshot 2026-04-28 at 11.08.15 AM.png" style="width:175px; height:175px; object-fit:contain;">
+</div>
+<div>
+<div style="font-size:22px; font-weight:800; margin-bottom:8px; color:#141414;">Connect to Everyday Technology Use</div>
+<div style="font-size:16px; line-height:1.5; margin-bottom:10px;">
+Help students see that data privacy applies beyond AI tools.
+</div>
+<div style="font-size:16px; font-weight:700; margin-bottom:6px;">This might include:</div>
+<ul style="margin:0 0 12px 20px; padding:0; font-size:15px; line-height:1.5;">
+<li>Social media platforms</li>
+<li>Online games</li>
+<li>Apps and websites</li>
+</ul>
+<div style="font-size:15px; line-height:1.5;">
+This reinforces that protecting personal information is an important everyday skill.
+</div>
+</div>
+</div>
+
+</div>
+MARKDOWN
