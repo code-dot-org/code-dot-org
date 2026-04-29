@@ -79,14 +79,9 @@ Dashboard::Application.configure do
   config.experiment_cache_time_seconds = 0
 
   config.after_initialize do
-    # Bullet must be loaded here (not auto-required via Gemfile) because its
-    # Railtie changes initializer ordering, which breaks new_framework_defaults_7_1.rb
-    # on actionpack 7.0. Safe to remove this workaround after upgrading to Rails 7.1+.
-    require 'bullet'
-    Bullet.enable = true
-    Bullet.alert = true
-    Bullet.bullet_logger = true
-    Bullet.rails_logger = true
-    Bullet.unused_eager_loading_enable = true
+    Prosopite.rails_logger = true
+    Prosopite.prosopite_logger = true
+    Prosopite.stderr_logger = true
+    Prosopite.ignore_queries = [/FROM `experiments`/]
   end
 end

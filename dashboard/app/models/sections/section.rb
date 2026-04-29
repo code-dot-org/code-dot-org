@@ -469,7 +469,7 @@ class Section < ApplicationRecord
       {
         id: id,
         name: name,
-        students: students.distinct(&:id).map(&:summarize),
+        students: students.includes(:primary_contact_info, :latest_parental_permission_request).distinct(&:id).map(&:summarize),
         login_type_name: login_type_name,
         script: {
           id: selected_unit&.id,

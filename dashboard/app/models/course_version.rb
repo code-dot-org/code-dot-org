@@ -175,7 +175,7 @@ class CourseVersion < ApplicationRecord
         locales: content_root.supported_locale_names,
         locale_codes: content_root.supported_locale_codes,
         units: units.map do |u|
-          unit_group_unit = u.unit_group_units.find {|ugu| ugu.unit_group == content_root}
+          unit_group_unit = u.unit_group_units.find {|ugu| ugu.unit_group_id == content_root_id}
           u.summarize_for_assignment_dropdown(unit_group_unit: unit_group_unit)
         end.to_h
       }
@@ -184,7 +184,7 @@ class CourseVersion < ApplicationRecord
 
   def summarize_for_unit_selector
     unit_summaries = units.map do |u|
-      unit_group_unit = u.unit_group_units.find {|ugu| ugu.unit_group == content_root}
+      unit_group_unit = u.unit_group_units.find {|ugu| ugu.unit_group_id == content_root_id}
       u.summarize_for_unit_selector(unit_group_unit: unit_group_unit)
     end
     {

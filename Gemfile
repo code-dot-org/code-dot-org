@@ -106,9 +106,9 @@ group :development, :test do
   gem 'benchmark-ips'
   gem 'better_errors', '>= 2.7.0'
   gem 'brakeman'
-  gem 'bullet', require: false
   gem 'database_cleaner-active_record', '~> 2.1.0'
   gem 'haml-rails' # haml (instead of erb) generators
+  gem 'prosopite'
   gem 'ruby-prof', '>= 1.7.0'
   gem 'vcr', require: false
   # For unit testing.

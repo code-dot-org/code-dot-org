@@ -13,4 +13,8 @@ Dashboard::Application.configure do
 
   # Disable Rails.cache on levelbuilder (until code-dot-org/code-dot-org#8844 is merged)
   config.cache_store = :null_store
+
+  config.after_initialize do
+    Prosopite.enabled = false
+  end
 end

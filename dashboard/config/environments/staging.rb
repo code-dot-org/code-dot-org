@@ -65,4 +65,8 @@ Dashboard::Application.configure do
 
   # don't act like a levelbuilder by default
   config.levelbuilder_mode = CDO.with_default(false).levelbuilder_mode
+
+  config.after_initialize do
+    Prosopite.enabled = false
+  end
 end
