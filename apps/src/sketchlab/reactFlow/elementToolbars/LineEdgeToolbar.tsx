@@ -5,6 +5,8 @@ import React from 'react';
 
 import {SketchlabReactFlowEdge} from '@cdo/apps/lab2/types';
 
+import {isArrowEdge} from '../utils/lineEdges';
+
 import SwatchGroup from './SwatchGroup';
 import {
   DEFAULT_LINE_STROKE_STYLE,
@@ -133,8 +135,7 @@ export default function LineEdgeToolbar({
       ? 'both'
       : 'start'
     : 'end';
-  const showArrowHeadOptions =
-    edge.data?.isArrow || hasStartArrow || hasEndArrow;
+  const showArrowHeadOptions = isArrowEdge(edge);
 
   const renderLinePreview = (
     width: number,

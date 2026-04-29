@@ -122,9 +122,6 @@ export interface SketchlabReactFlowEdge {
   sourceHandle?: string;
   targetHandle?: string;
   type?: string;
-  data?: {
-    isArrow?: boolean;
-  };
   markerStart?: EdgeMarkerType;
   markerEnd?: EdgeMarkerType;
 }

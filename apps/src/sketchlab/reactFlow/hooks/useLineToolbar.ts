@@ -187,7 +187,6 @@ export function useLineToolbar({
 
           return {
             ...edge,
-            data: {...edge.data, isArrow: true},
             markerStart:
               arrowHeads === 'start' || arrowHeads === 'both'
                 ? marker

@@ -425,7 +425,6 @@ export default function ReactFlowCanvas({
           target: targetAnchorId,
           type: 'straight',
           ...(type === 'arrow' && {
-            data: {isArrow: true},
             markerEnd: {
               type: MarkerType.ArrowClosed,
               color: DEFAULT_STROKE_COLOR,
