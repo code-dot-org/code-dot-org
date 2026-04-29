@@ -669,10 +669,12 @@ Resources:
                   - 'devicefarm:ListNetworkProfiles'
                   - 'devicefarm:ListDevicePools'
                   - 'devicefarm:ListRemoteAccessSessions'
+                  - 'devicefarm:ScheduleRun'
                   - 'devicefarm:StopRun'
                   - 'devicefarm:StopJob'
                   - 'devicefarm:StopRemoteAccessSession'
                   - 'devicefarm:CreateUpload'
+                  - 'devicefarm:CreateRemoteAccessSession'
                   - 'devicefarm:DeleteRun'
                   - 'devicefarm:DeleteUpload'
                   - 'devicefarm:DeleteRemoteAccessSession'
@@ -687,20 +689,27 @@ Resources:
                   - !Sub 'arn:aws:devicefarm:*:${AWS::AccountId}:networkprofile:*'
                   - !Sub 'arn:aws:devicefarm:*:${AWS::AccountId}:session:*'
                   - !Sub 'arn:aws:devicefarm:*:${AWS::AccountId}:artifact:*'
-              # Actions evaluated against AWS-managed device ARNs (no account
-              # ID in the ARN) or against account-wide list endpoints — neither
-              # is resource-scopable. CreateRemoteAccessSession and ScheduleRun
-              # take a deviceArn parameter and IAM evaluates them against the
-              # device resource, not the project.
+              # Actions targeting AWS-managed device resources. Device ARNs
+              # contain no account ID — e.g.
+              # arn:aws:devicefarm:us-west-2::device:UUID — so they cannot
+              # appear in any account-scoped pattern. AWS was observed
+              # evaluating CreateRemoteAccessSession against the deviceArn
+              # parameter in addition to the project (which is covered by
+              # the account-scoped statement above).
               - Effect: Allow
                 Action:
                   - 'devicefarm:GetDevice'
+                  - 'devicefarm:CreateRemoteAccessSession'
+                Resource: 'arn:aws:devicefarm:*::device:*'
+              # Account-wide list endpoints. AWS's service authorization
+              # reference assigns these no resource type, so they can only
+              # be granted on '*'.
+              - Effect: Allow
+                Action:
                   - 'devicefarm:ListDevices'
                   - 'devicefarm:ListProjects'
                   - 'devicefarm:ListOfferings'
                   - 'devicefarm:ListOfferingPromotions'
-                  - 'devicefarm:CreateRemoteAccessSession'
-                  - 'devicefarm:ScheduleRun'
                 Resource: '*'
 <% end -%>
       ManagedPolicyArns:
