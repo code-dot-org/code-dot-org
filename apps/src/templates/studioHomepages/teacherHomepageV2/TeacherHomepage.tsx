@@ -284,9 +284,6 @@ const TeacherHomepage: React.FC<TeacherHomepageProps> = ({studioUrlPrefix}) => {
             {!!isMiniTutorialEnabled && (
               <OnboardingChecklist createSectionTour={tour} />
             )}
-            {numSections === 0 ? (
-              <EmptyHomepage showHiddenOnly={showHiddenOnly} />
-            {!!isMiniTutorialEnabled && <OnboardingChecklist />}
             {!isDemoSectionEnabled ? (
               numSections === 0 ? (
                 <EmptyHomepage showHiddenOnly={showHiddenOnly} />
