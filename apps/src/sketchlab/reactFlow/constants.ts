@@ -7,6 +7,8 @@ export const MIN_NODE_HEIGHT = 60;
 // Side length of the hidden node that anchors a line endpoint.
 export const LINE_ANCHOR_SIZE_PX = 10;
 
+export const LINE_DEFAULT_LENGTH_PX = 220;
+
 // Milliseconds to debounce project saves after canvas changes.
 export const SAVE_DEBOUNCE_MS = 300;
 
