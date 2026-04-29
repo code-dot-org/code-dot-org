@@ -28,7 +28,7 @@
   {
     "name": "Chrome",
     "browserName": "chrome",
-    "browserVersion": "109",
+    "browserVersion": "128",
     "platformName": "Windows 10",
     "sauce:options": {
       "screenResolution": "1280x1024",
