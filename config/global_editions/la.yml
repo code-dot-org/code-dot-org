@@ -181,3 +181,5 @@ pages:
         # versions that are translated
         courseFilters:
           language: es-LA
+      # Hide the right panel with "New Features", "Announcements", etc.
+      TeacherPromotions: false
