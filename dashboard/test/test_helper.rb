@@ -132,20 +132,20 @@ class ActiveSupport::TestCase
 
     # https://ttb.software/2026/03/25/debug-memory-leaks-ruby-rails-production/
     # Dump an early trace
-    filename = "/tmp/heap_dump_#{Process.pid}_early.json"
-    unless File.exist?(filename)
+    early_filename = "/tmp/heap_dump_#{Process.pid}_early.json"
+    unless File.exist?(early_filename)
       GC.start(full_mark: true, immediate_sweep: true)
       GC.start # Run twice to clear weak references
-      ObjectSpace.dump_all(output: File.open(filename, 'w'))
+      ObjectSpace.dump_all(output: File.open(early_filename, 'w'))
     end
 
     # Dump a late trace
     if `free -m | awk 'NR==2{print $7}'`.to_i < 10_000
-      filename = "/tmp/heap_dump_#{Process.pid}_late.json"
-      unless File.exist?(filename)
+      late_filename = "/tmp/heap_dump_#{Process.pid}_late.json"
+      unless File.exist?(late_filename)
         GC.start(full_mark: true, immediate_sweep: true)
         GC.start # Run twice to clear weak references
-        ObjectSpace.dump_all(output: File.open(filename, 'w'))
+        ObjectSpace.dump_all(output: File.open(late_filename, 'w'))
       end
     end
   end
