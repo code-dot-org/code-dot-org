@@ -718,7 +718,7 @@ class RegistrationsController < Devise::RegistrationsController
     return unless user.teacher? && !user.verified_teacher?
 
     is_school_owned = user.authentication_options.any? do |auth_option|
-      AuthenticationOption::SCHOOL_OWNED_CREDENTIAL_TYPES.include?(auth_option.credential_type)
+      Policies::User::SCHOOL_OWNED_TYPES.include?(auth_option.credential_type)
     end
 
     user.verify_teacher! if is_school_owned
