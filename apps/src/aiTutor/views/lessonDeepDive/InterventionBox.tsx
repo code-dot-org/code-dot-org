@@ -87,6 +87,25 @@ const InterventionBox: FC<InterventionBoxProps> = ({
   const [selected, setSelected] = useState<CardId | null>(null);
   const userId = useAppSelector(state => state.currentUser.userId);
 
+  const handleNavSelect = useCallback(
+    (toCardId: CardId) => {
+      if (selected && selected !== toCardId) {
+        analyticsReporter.sendEvent(
+          EVENTS.AI_TUTOR_LESSON_DEEP_DIVE_MODALITY_NAVIGATION,
+          {
+            from: selected,
+            to: toCardId,
+            lessonId,
+            lessonName,
+            userId,
+          }
+        );
+      }
+      setSelected(toCardId);
+    },
+    [selected, lessonId, lessonName, userId]
+  );
+
   const handleCardSelect = useCallback(
     (cardId: CardId) => {
       setSelected(cardId);
@@ -165,7 +184,7 @@ const InterventionBox: FC<InterventionBoxProps> = ({
                 className={`${styles.navItem} ${
                   isActive ? card.activeColorClass : ''
                 }`}
-                onClick={() => setSelected(card.id)}
+                onClick={() => handleNavSelect(card.id)}
                 aria-label={card.label}
                 aria-current={isActive ? 'page' : undefined}
               >

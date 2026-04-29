@@ -3,14 +3,14 @@ title 'title'
 description 'description here'
 
 markdown <<MARKDOWN
-# Unit 2 - Web Development Mini-Projects 
+# Web Development Mini-Projects 
 
-#### Mini-Projects act as checkpoints in the CS Discoveries and cover the subset of skills students have seen so far in the unit. They are designed for one to two days of implementation as a way to check in with how well students understand the course content so far. We recommend using these opportunities for formative assessment.
+#### Mini-Projects act as checkpoints in the AI Discoveries and cover the subset of skills students have seen so far in the unit. They are designed for one to two days of implementation as a way to check in with how well students understand the course content so far. We recommend using these opportunities for formative assessment.
 
-#### Both of the Unit 2 - Web Development mini-project are located in Chapter 1: 
+#### Both of the Web Development mini-project are located in Chapter 1: 
 
-* #### <a href="https://studio.code.org/s/csd2-2025/lessons/5" target="blank" rel="noopener noreferrer">Lesson 5: Mini-Project: HTML Web Page</a>
-* #### <a href="https://studio.code.org/s/csd2-2025/lessons/10" target="blank" rel="noopener noreferrer">Lesson 10: Mini-Project: Adding Style to a Web Page</a>
+* #### <a href="https://studio.code.org/courses/ai-discoveries-2026/units/3/lessons/5" target="blank" rel="noopener noreferrer">Lesson 5: Mini-Project: HTML Web Page</a>
+* #### <a href="https://studio.code.org/courses/ai-discoveries-2026/units/3/lessons/10" target="blank" rel="noopener noreferrer">Lesson 10: Mini-Project: Adding Style to a Web Page</a>
 
 ## Pacing Recommendation
 
@@ -28,7 +28,7 @@ markdown <<MARKDOWN
     <p>
 <img src="https://images.code.org/f2108ed3a2d96b39f16b34b00fa627f2-image-1711662091546.41.27 PM.png" alt="A basic web page called Denzel's Delights with recipes for pastries" width="300px" style="float:left; margin-left:20px;  padding-right: 30px;">
 
-#### <a href="https://studio.code.org/s/csd2-2025/lessons/5" target="blank" rel="noopener noreferrer" >Lesson Plan</a>
+#### <a href="https://studio.code.org/courses/ai-discoveries-2026/units/3/lessons/5" target="blank" rel="noopener noreferrer" >Lesson Plan</a>
 
 #### **Question of the Day:** How can I use HTML to design and build a web page for a user?
 
@@ -57,7 +57,7 @@ markdown <<MARKDOWN
     <p>
 <img src="https://images.code.org/8aa1fe63ed2c4affa4d365a9b4ace64e-image-1711662246769.44.04 PM.png" alt="A colorfully styles web page called Denzel's Delights with recipes for pastries" width="250px" style="float:left; margin-left:20px; padding-right: 30px; margin-top: 20px; margin-bottom:40px;">
 
-#### <a href="https://studio.code.org/s/csd2-2025/lessons/10" target="blank" rel="noopener noreferrer" >Lesson Plan</a>
+#### <a href="https://studio.code.org/courses/ai-discoveries-2026/units/3/lessons/10" target="blank" rel="noopener noreferrer" >Lesson Plan</a>
 
 #### **Students will be able to:** 
 * #### Style a webpage based on user needs

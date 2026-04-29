@@ -275,22 +275,84 @@ class MailJetTest < Minitest::Test
 
   def test_create_contact_and_add_to_course_list
     email = 'fake.email@test.xx'
+    sign_up_time = Time.now.to_datetime
 
     user = mock
     user.stubs(:id).returns(1)
     user.stubs(:email).returns(email)
     user.stubs(:name).returns('Fake Name')
+    user.stubs(:given_name).returns('Fake')
+    user.stubs(:family_name).returns('Name')
     user.stubs(:teacher?).returns(true)
+    user.stubs(:created_at).returns(sign_up_time)
 
+    mock_contact_id = 123
     mock_contact = mock('Mailjet::Contact')
-    mock_contact.stubs(:id).returns(123)
+    mock_contact.stubs(:id).returns(mock_contact_id)
 
     MailJet.expects(:find_or_create_contact).with(email, user.name).returns(mock_contact)
+
+    mock_contactdata = mock('Mailjet::Contactdata')
+    Mailjet::Contactdata.expects(:find).with(mock_contact_id).returns(mock_contactdata)
+    mock_contactdata.expects(:update_attributes).with(data: [{name: 'given_name', value: 'Fake'}])
+    mock_contactdata.expects(:update_attributes).with(data: [{name: 'family_name', value: 'Name'}])
+    mock_contactdata.expects(:update_attributes).with(data: [{name: 'display_name', value: 'Fake Name'}])
+    mock_contactdata.expects(:update_attributes).with(data: [{name: 'sign_up_date', value: sign_up_time.rfc3339}])
 
     MailJet.stubs(:subaccount).returns('production')
     MailJet.expects(:add_to_contact_list).with(mock_contact, MailJet::CONTACT_LISTS[:intro_web_lab][:production][:default])
 
     MailJet.create_contact_and_add_to_course_list(user, 'intro-to-web-lab')
+  end
+
+  def test_create_contact_and_add_to_course_list_swallows_duplicate_list_recipient
+    email = 'fake.email@test.xx'
+    sign_up_time = Time.now.to_datetime
+
+    user = mock
+    user.stubs(:id).returns(1)
+    user.stubs(:email).returns(email)
+    user.stubs(:name).returns('Fake Name')
+    user.stubs(:given_name).returns('Fake')
+    user.stubs(:family_name).returns('Name')
+    user.stubs(:teacher?).returns(true)
+    user.stubs(:created_at).returns(sign_up_time)
+
+    mock_contact = mock('Mailjet::Contact')
+    mock_contact.stubs(:id).returns(123)
+
+    MailJet.expects(:find_or_create_contact).with(email, user.name).returns(mock_contact)
+    MailJet.stubs(:update_contact_fields)
+    MailJet.stubs(:subaccount).returns('production')
+    MailJet.expects(:add_to_contact_list).raises(Mailjet::ApiError.new(400, 'A duplicate ListRecipient already exists.', nil, nil, nil))
+
+    MailJet.create_contact_and_add_to_course_list(user, 'intro-to-web-lab')
+  end
+
+  def test_create_contact_and_add_to_course_list_reraises_other_api_errors
+    email = 'fake.email@test.xx'
+    sign_up_time = Time.now.to_datetime
+
+    user = mock
+    user.stubs(:id).returns(1)
+    user.stubs(:email).returns(email)
+    user.stubs(:name).returns('Fake Name')
+    user.stubs(:given_name).returns('Fake')
+    user.stubs(:family_name).returns('Name')
+    user.stubs(:teacher?).returns(true)
+    user.stubs(:created_at).returns(sign_up_time)
+
+    mock_contact = mock('Mailjet::Contact')
+    mock_contact.stubs(:id).returns(123)
+
+    MailJet.expects(:find_or_create_contact).with(email, user.name).returns(mock_contact)
+    MailJet.stubs(:update_contact_fields)
+    MailJet.stubs(:subaccount).returns('production')
+    MailJet.expects(:add_to_contact_list).raises(Mailjet::ApiError.new(500, 'Something else went wrong.', nil, nil, nil))
+
+    assert_raises(Mailjet::ApiError) do
+      MailJet.create_contact_and_add_to_course_list(user, 'intro-to-web-lab')
+    end
   end
 
   def test_create_contact_and_add_to_course_list_non_teacher

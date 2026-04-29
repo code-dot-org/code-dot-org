@@ -5,6 +5,7 @@ import {createRoot} from 'react-dom/client';
 import {initializeCore} from '@code-dot-org/core';
 import {localizationPlugin} from '@code-dot-org/core/plugins/localization';
 import {observabilityPlugin} from '@code-dot-org/core/plugins/observability';
+import {injectFontAwesome} from '@code-dot-org/fonts';
 
 import router from '@/modules/router';
 
@@ -13,8 +14,8 @@ const mount = document.getElementById('vite-root');
 
 if (typeof window !== 'undefined') {
   initializeCore({plugins: [localizationPlugin, observabilityPlugin]});
+  injectFontAwesome();
 }
-console.log(window.__CODE_STUDIO__);
 
 if (mount) {
   const root = createRoot(mount);

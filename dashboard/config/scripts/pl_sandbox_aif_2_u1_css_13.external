@@ -12,7 +12,7 @@ markdown <<MARKDOWN
 </p>
 </div>
 
-#### If HTML is the structure, CSS is the design—it handles colors, fonts, spacing, and layout.
+#### If HTML is the structure, CSS is the design, it handles colors, fonts, spacing, and layout.
 
 <div style="text-align: center; width: 80%; margin: 0 auto;">
   <p style="

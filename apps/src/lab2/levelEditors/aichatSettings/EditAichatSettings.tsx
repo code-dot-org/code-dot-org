@@ -8,7 +8,7 @@ import {
   LevelAichatSettings,
   ModelCardInfo,
   Visibility,
-} from '@cdo/apps/aichat/types';
+} from '@cdo/apps/aichatLab/types';
 import {
   DEFAULT_LEVEL_AICHAT_SETTINGS,
   DEFAULT_VISIBILITIES,
@@ -18,7 +18,7 @@ import {
   MAX_TEMPERATURE,
   MIN_TEMPERATURE,
   SET_TEMPERATURE_STEP,
-} from '@cdo/apps/aichat/views/modelCustomization/constants';
+} from '@cdo/apps/aichatLab/views/modelCustomization/constants';
 import CollapsibleSection from '@cdo/apps/templates/CollapsibleSection';
 import MultiItemInput from '@cdo/apps/templates/MultiItemInput';
 import {getTypedKeys, ValueOf} from '@cdo/apps/types/utils';
