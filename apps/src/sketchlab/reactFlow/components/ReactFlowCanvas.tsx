@@ -22,6 +22,8 @@ import {useSources} from '@cdo/apps/lab2/views/SourcesContainer';
 import {createUuid} from '@cdo/apps/utils';
 
 import {
+  ARROW_MARKER_HEIGHT_PX,
+  ARROW_MARKER_WIDTH_PX,
   DEFAULT_NODE_HEIGHT,
   DEFAULT_NODE_WIDTH,
   LINE_ANCHOR_SIZE_PX,
@@ -73,9 +75,6 @@ const NEW_NODE_STAGGER_PX = 20;
 const FOCUS_DELAY_MS = 100;
 const LINE_DEFAULT_LENGTH_PX = 220;
 const LINE_ANCHOR_SIZE_PX = 10;
-const ARROW_MARKER_WIDTH_PX = 14;
-const ARROW_MARKER_HEIGHT_PX = 14;
-
 export interface ReactFlowCanvasProps {
   updateSources: ReturnType<
     typeof useSources<ReactFlowSketchLabSources>
@@ -426,6 +425,7 @@ export default function ReactFlowCanvas({
           target: targetAnchorId,
           type: 'straight',
           ...(type === 'arrow' && {
+            data: {isArrow: true},
             markerEnd: {
               type: MarkerType.ArrowClosed,
               color: DEFAULT_STROKE_COLOR,
@@ -500,6 +500,7 @@ export default function ReactFlowCanvas({
     setLineEdgeColor,
     setLineEdgeWidth,
     setLineEdgeStrokeStyle,
+    setLineEdgeArrowHeads,
   } = useLineToolbar({
     edges,
     nodes,
@@ -567,6 +568,9 @@ export default function ReactFlowCanvas({
                 }
                 onSelectStrokeStyle={value =>
                   setLineEdgeStrokeStyle(openLineEdge.id, value)
+                }
+                onSelectArrowHeads={value =>
+                  setLineEdgeArrowHeads(openLineEdge.id, value)
                 }
               />
             )}

@@ -1,3 +1,4 @@
+import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import {IconButton, Tooltip, Typography} from '@mui/material';
 import classNames from 'classnames';
 import React from 'react';
@@ -82,7 +83,22 @@ interface LineEdgeToolbarProps {
   onSelectColor: (value: string) => void;
   onSelectWidth: (value: number) => void;
   onSelectStrokeStyle: (value: LineStrokeStyleValue) => void;
+  onSelectArrowHeads: (value: ArrowHeadValue) => void;
 }
+
+type ArrowHeadValue = 'start' | 'end' | 'both';
+
+const ARROW_HEAD_OPTIONS: readonly LineOption[] = [
+  {value: 'start', label: 'Start'},
+  {value: 'end', label: 'End'},
+  {value: 'both', label: 'Both'},
+] as const;
+
+const ARROW_HEAD_ICONS: Record<ArrowHeadValue, string> = {
+  start: 'arrow-left-long',
+  end: 'arrow-right-long',
+  both: 'arrows-left-right',
+};
 
 export default function LineEdgeToolbar({
   edge,
@@ -90,6 +106,7 @@ export default function LineEdgeToolbar({
   onSelectColor,
   onSelectWidth,
   onSelectStrokeStyle,
+  onSelectArrowHeads,
 }: LineEdgeToolbarProps) {
   const selectedValue =
     (typeof edge.style?.stroke === 'string' && edge.style.stroke) ||
@@ -108,6 +125,15 @@ export default function LineEdgeToolbar({
   )
     ? selectedStrokeStyle
     : DEFAULT_LINE_STROKE_STYLE;
+  const hasStartArrow = !!edge.markerStart;
+  const hasEndArrow = !!edge.markerEnd;
+  const selectedArrowHeads: ArrowHeadValue = hasStartArrow
+    ? hasEndArrow
+      ? 'both'
+      : 'start'
+    : 'end';
+  const showArrowHeadOptions =
+    edge.data?.isArrow || hasStartArrow || hasEndArrow;
   const renderLinePreview = (
     width: number,
     lineStyle: LinePreviewStyle
@@ -154,6 +180,20 @@ export default function LineEdgeToolbar({
           renderLinePreview(2, option.value as LinePreviewStyle)
         }
       />
+      {showArrowHeadOptions && (
+        <LineOptionGroup
+          groupLabel="Arrow heads"
+          options={ARROW_HEAD_OPTIONS}
+          selectedValue={selectedArrowHeads}
+          onSelect={value => onSelectArrowHeads(value as ArrowHeadValue)}
+          ariaLabelPrefix="Arrow heads"
+          getButtonContent={option => (
+            <FontAwesomeV6Icon
+              iconName={ARROW_HEAD_ICONS[option.value as ArrowHeadValue]}
+            />
+          )}
+        />
+      )}
     </ToolbarShell>
   );
 }

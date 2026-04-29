@@ -12,3 +12,6 @@ export const SAVE_DEBOUNCE_MS = 300;
 
 // S3 asset path prefix for project files.
 export const ASSET_PATH_PREFIX = '/v3/assets';
+
+export const ARROW_MARKER_WIDTH_PX = 14;
+export const ARROW_MARKER_HEIGHT_PX = 14;
