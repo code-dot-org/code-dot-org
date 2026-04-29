@@ -96,7 +96,9 @@ const JsonVideosEditor: React.FC<Props> = ({jsonVideos, onChange}) => {
         />
       </div>
       {jsonVideos.length > 0 && (
-        <table style={{width: '100%', borderCollapse: 'collapse', marginBottom: 8}}>
+        <table
+          style={{width: '100%', borderCollapse: 'collapse', marginBottom: 8}}
+        >
           <thead>
             <tr>
               <th style={thStyle}>Key</th>
@@ -171,7 +173,11 @@ const JsonVideosEditor: React.FC<Props> = ({jsonVideos, onChange}) => {
             />
           </label>
           <div className={moduleStyles.formButtons}>
-            <button type="button" onClick={handleCreate} disabled={isSubmitting}>
+            <button
+              type="button"
+              onClick={handleCreate}
+              disabled={isSubmitting}
+            >
               {isSubmitting ? 'Creating...' : 'Create'}
             </button>
             <button

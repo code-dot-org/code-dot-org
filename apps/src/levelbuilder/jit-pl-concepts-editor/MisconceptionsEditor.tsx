@@ -11,6 +11,7 @@ import {getStore, hasReducer, registerReducers} from '@cdo/apps/redux';
 
 import ExemplarsEditor, {Exemplar} from './ExemplarsEditor';
 import JsonVideosEditor, {JsonVideo} from './JsonVideosEditor';
+
 import moduleStyles from './jitPlConceptsEditor.module.scss';
 
 interface Resource {
