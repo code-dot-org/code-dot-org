@@ -1,19 +1,8 @@
-class LessonDeepDiveWelcomeAgent < RubyLLM::Agent
-  model "gpt-4o-mini"
-  temperature 0.5
+class ChatWelcome < RubyLLM::Tool
+  description "Submit the composed welcome message. Call this after reviewing student context."
+  param :message, desc: "The 2-3 sentence personalized welcome message to deliver."
 
-  # Generate a personalized welcome message for a student opening the tutor chat.
-  # Uses the GetStudentLessonContext tool so the LLM can examine assessment results
-  # and reflection before composing the message.
-  def self.generate(lesson, assessment_analysis, reflection)
-    context_tool = GetStudentLessonContext.new(assessment_analysis, reflection)
-    agent = chat
-    agent.with_instructions(build_system_prompt(lesson))
-    agent.with_tool(context_tool)
-    agent.ask("Generate a welcome message for this student.").content
-  end
-
-  def self.build_system_prompt(lesson)
+  def self.system_prompt(lesson)
     <<~PROMPT
       You are a friendly AI tutor. A student just finished the lesson "#{lesson.localized_name}".
 
@@ -27,6 +16,14 @@ class LessonDeepDiveWelcomeAgent < RubyLLM::Agent
 
       If the student did well across the board, acknowledge that and suggest deepening understanding
       of the lesson concepts. Do not list every question or repeat the lesson title verbatim.
+
+      Once you have composed the message, call the chat_welcome tool with it.
     PROMPT
+  end
+
+  attr_reader :message
+
+  def execute(message:)
+    @message = message
   end
 end

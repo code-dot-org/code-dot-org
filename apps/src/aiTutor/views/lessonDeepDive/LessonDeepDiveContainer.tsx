@@ -1,5 +1,5 @@
 import {createTheme, ThemeProvider} from '@mui/material/styles';
-import React, {FC, useCallback, useState} from 'react';
+import React, {FC, useCallback, useEffect, useRef, useState} from 'react';
 
 import experiments from '@cdo/apps/util/experiments';
 
@@ -58,6 +58,22 @@ const LessonDeepDiveContainer: FC<LessonDeepDiveContainerProps> = ({
   );
   const [welcomeMessage, setWelcomeMessage] = useState<string | null>(null);
   const [welcomeLoading, setWelcomeLoading] = useState(false);
+  const hasFetchedWelcome = useRef(false);
+
+  useEffect(() => {
+    if (BOX_IDS[currentIndex] !== 'intervention') return;
+    if (!reflectionData) return;
+    if (hasFetchedWelcome.current) return;
+    hasFetchedWelcome.current = true;
+    setWelcomeLoading(true);
+    fetch(`/lessons/${lessonDeepDiveData.lessonId}/tutor_welcome_message`)
+      .then(r => r.json())
+      .then((res: {welcomeMessage: string | null}) =>
+        setWelcomeMessage(res.welcomeMessage ?? null)
+      )
+      .catch(() => setWelcomeMessage(null))
+      .finally(() => setWelcomeLoading(false));
+  }, [currentIndex, reflectionData, lessonDeepDiveData.lessonId]);
 
   const goToNext = useCallback(() => {
     setCurrentIndex(i => Math.min(i + 1, BOX_IDS.length - 1));
@@ -67,20 +83,9 @@ const LessonDeepDiveContainer: FC<LessonDeepDiveContainerProps> = ({
     setCurrentIndex(i => Math.max(i - 1, 0));
   }, []);
 
-  const handleReflectionComplete = useCallback(
-    (data: ReflectionData) => {
-      setReflectionData(data);
-      setWelcomeLoading(true);
-      fetch(`/lessons/${lessonDeepDiveData.lessonId}/tutor_welcome_message`)
-        .then(r => r.json())
-        .then((res: {welcomeMessage: string | null}) =>
-          setWelcomeMessage(res.welcomeMessage ?? null)
-        )
-        .catch(() => setWelcomeMessage(null))
-        .finally(() => setWelcomeLoading(false));
-    },
-    [lessonDeepDiveData.lessonId]
-  );
+  const handleReflectionComplete = useCallback((data: ReflectionData) => {
+    setReflectionData(data);
+  }, []);
 
   if (!experiments.isEnabledAllowingQueryString(experiments.LESSON_TUTOR)) {
     return null;

@@ -123,7 +123,7 @@ class LessonsController < ApplicationController
   def tutor_welcome_message
     assessment_analysis = lesson_assessment_analysis(@lesson.id, current_user.id)
     reflection = lesson_reflection_data(@lesson.id, current_user.id)
-    message = ::LessonDeepDiveWelcomeAgent.generate(@lesson, assessment_analysis, reflection)
+    message = ::LessonTutor.generate(@lesson, assessment_analysis, reflection)
     render json: {welcomeMessage: message}
   rescue => exception
     Rails.logger.error "tutor_welcome_message error: #{exception.message}"
