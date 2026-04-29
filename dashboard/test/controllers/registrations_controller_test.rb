@@ -533,26 +533,28 @@ class RegistrationsControllerTest < ActionController::TestCase
   end
 
   test 'verifies lti users if they are a teacher' do
-    lti_teacher_params = @default_params.update(user_type: 'teacher', email_preference_opt_in: 'yes')
-    Policies::Lti.expects(:lti?).returns(true).at_least(1)
-    Services::Lti.expects(:create_lti_user_identity).returns(:lti_user_identity).at_least(1)
+    teacher = create(:teacher, :with_lti_auth)
     Queries::Lti.expects(:get_lms_name_from_user).returns('test-lms')
-    lti_teacher_params = set_up_partial_registration(lti_teacher_params)
-    post :create, params: {user: lti_teacher_params}
+    Services::PartialRegistration::UserBuilder.stubs(:call).returns(teacher)
 
-    assert assigns(:user).verified_teacher?
+    assert_difference('UserPermission.count', 1) do
+      post :create, params: {user: @default_params}
+    end
+
+    assert teacher.reload.verified_teacher?
   end
 
   test 'do not verify lti users if they are a student' do
-    Policies::Lti.expects(:lti?).returns(true).at_least(1)
-    Services::Lti.expects(:create_lti_user_identity).returns(:lti_user_identity).at_least(1)
+    student = create(:student, :with_lti_auth)
     Queries::Lti.expects(:get_lms_name_from_user).returns('test-lms')
+    student.expects(:verify_teacher!).never
+    Services::PartialRegistration::UserBuilder.stubs(:call).returns(student)
 
-    student_params = set_up_partial_registration(@default_params)
-    post :create, params: {user: student_params}
+    assert_no_difference('UserPermission.count') do
+      post :create, params: {user: @default_params}
+    end
 
-    assigns(:user).expects(:verify_teacher!).never
-    refute assigns(:user).verified_teacher?
+    refute student.reload.verified_teacher?
   end
 
   test 'create verifies teacher with Clever authentication option' do
