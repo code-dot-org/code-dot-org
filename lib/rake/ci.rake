@@ -135,6 +135,8 @@ namespace :ci do
       RakeUtils.wait_for_url('http://test-studio.code.org')
       Dir.chdir('dashboard/test/ui') do
         container_features = `find ./features -name '*.feature' | sort`.split("\n").map {|f| f[2..]}
+        eyes_features = `grep -lr '@eyes' features`.split("\n")
+        container_eyes_features = container_features & eyes_features
         device_farm_browsers = device_farm_browsers_to_run
 
         # The default per-account limit for concurrent desktop sessions is 50.
@@ -152,6 +154,18 @@ namespace :ci do
             "--output-synopsis " \
             "--with-status-page " \
             "--html"
+        if test_eyes?
+          RakeUtils.system_stream_output "bundle exec ./runner.rb " \
+              "--eyes " \
+              "--feature #{container_eyes_features.join(',')} " \
+              "--device-farm " \
+              "--config Chrome " \
+              "--ci " \
+              "--parallel #{PARALLEL_COUNT} " \
+              "--retry_count 1 " \
+              "--with-status-page " \
+              "--html"
+        end
       end
     else
       ui_test_browsers = saucelabs_browsers_to_run
