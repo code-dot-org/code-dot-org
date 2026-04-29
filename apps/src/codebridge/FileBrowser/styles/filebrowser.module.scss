@@ -64,8 +64,8 @@
   }
 }
 
-// list-style:none removes bullets but causes VoiceOver/Safari to strip list
-// semantics; every <ul> using this class must carry role="list" to restore them.
+// list-style:none removes default markers; role="list" on every <ol> using this
+// class restores the VoiceOver/Safari semantics that list-style:none strips.
 .folder {
   list-style: none;
   padding: 0;

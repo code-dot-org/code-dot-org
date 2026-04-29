@@ -218,7 +218,7 @@ export const FileBrowser = React.memo(() => {
               >
                 {/* role="list" needed: list-style:none strips VoiceOver semantics */}
                 {/* eslint-disable-next-line jsx-a11y/no-redundant-roles */}
-                <ul
+                <ol
                   id="uitest-files-list"
                   className={moduleStyles.folder}
                   role="list"
@@ -230,7 +230,7 @@ export const FileBrowser = React.memo(() => {
                     files={source.files}
                     appName={appName}
                   />
-                </ul>
+                </ol>
               </Droppable>
             </DndDataContextProvider>
           </DndContext>

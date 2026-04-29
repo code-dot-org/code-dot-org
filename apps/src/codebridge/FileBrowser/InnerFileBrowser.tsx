@@ -69,14 +69,14 @@ const InnerFileBrowser = React.memo(
                   {f.open && (
                     // role="list" needed: list-style:none strips VoiceOver semantics
                     // eslint-disable-next-line jsx-a11y/no-redundant-roles
-                    <ul className={moduleStyles.folder} role="list">
+                    <ol className={moduleStyles.folder} role="list">
                       <InnerFileBrowser
                         folders={folders}
                         parentId={f.id}
                         files={files}
                         appName={appName}
                       />
-                    </ul>
+                    </ol>
                   )}
                 </MaybeDraggable>
               </Droppable>
