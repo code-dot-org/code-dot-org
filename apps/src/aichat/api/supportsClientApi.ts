@@ -11,6 +11,6 @@ export default function supportsClientApi(modelId: ModelId) {
   if (modelId === AiChatModelIds.GEMINI_2_5_FLASH_IMAGE) return true;
   return (
     isGeminiModel(modelId) &&
-    experiments.isEnabledAllowingQueryString('useAiGateway')
+    experiments.isEnabledAllowingQueryString(experiments.USE_AI_GATEWAY)
   );
 }
