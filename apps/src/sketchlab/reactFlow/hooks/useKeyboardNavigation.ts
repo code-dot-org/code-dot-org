@@ -76,20 +76,21 @@ function moveNodesByDelta(
 }
 
 /**
- * Resize a single node by adding `delta` to both its width and height,
- * clamped to the minimum node dimensions.
+ * Resize a single node by adding `deltaWidth` and `deltaHeight` to its
+ * dimensions, each clamped to the minimum node dimensions independently.
  */
 function resizeNodeByDelta(
   currentNodes: SketchlabReactFlowNode[],
   nodeId: string,
-  delta: number
+  deltaWidth: number,
+  deltaHeight: number
 ) {
   return currentNodes.map(node => {
     if (node.id !== nodeId) return node;
     const currentWidth = node.width ?? DEFAULT_NODE_WIDTH;
     const currentHeight = node.height ?? DEFAULT_NODE_HEIGHT;
-    const newWidth = Math.max(MIN_NODE_WIDTH, currentWidth + delta);
-    const newHeight = Math.max(MIN_NODE_HEIGHT, currentHeight + delta);
+    const newWidth = Math.max(MIN_NODE_WIDTH, currentWidth + deltaWidth);
+    const newHeight = Math.max(MIN_NODE_HEIGHT, currentHeight + deltaHeight);
     return {...node, width: newWidth, height: newHeight};
   });
 }
@@ -278,28 +279,43 @@ export function useKeyboardNavigation({
       // "[" and "]" decrease or increase the size of the focused node.
       // Line-anchor pseudo-nodes are excluded — they have no visible body and can
       // be resized through 'ghost' nodes.
+      // Modifier keys control the resize axis:
+      //   No modifier → both width and height (uniform resize)
+      //   Shift       → width only (horizontal)
+      //   Alt         → height only (vertical)
       if (
         focusedNodeId &&
         !isLineAnchorNodeId(focusedNodeId, nodes) &&
-        (event.key === '[' || event.key === ']')
+        (event.code === 'BracketLeft' || event.code === 'BracketRight')
       ) {
         const focusedNode = getNode(focusedNodeId);
-        const direction = (event.key === ']' ? 1 : -1) as 1 | -1;
+        const direction = (event.code === 'BracketRight' ? 1 : -1) as 1 | -1;
+        const step = direction * KEYBOARD_RESIZE_STEP;
 
-        // Any focused non-line-anchor node: resize dimensions.
+        const deltaWidth = event.altKey ? 0 : step;
+        const deltaHeight = event.shiftKey ? 0 : step;
+
         event.preventDefault();
         event.stopPropagation();
         setNodes(currentNodes =>
           resizeNodeByDelta(
             currentNodes,
             focusedNodeId,
-            direction * KEYBOARD_RESIZE_STEP
+            deltaWidth,
+            deltaHeight
           )
         );
         const nodeLabel = focusedNode
           ? getNodeLabel(focusedNode)
           : focusedNodeId;
-        announce(`${nodeLabel} ${direction > 0 ? 'enlarged' : 'shrunk'}.`);
+        const axis = event.altKey
+          ? 'height'
+          : event.shiftKey
+          ? 'width'
+          : 'size';
+        announce(
+          `${nodeLabel} ${axis} ${direction > 0 ? 'enlarged' : 'shrunk'}.`
+        );
 
         return;
       }
