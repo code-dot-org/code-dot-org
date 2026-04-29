@@ -264,7 +264,17 @@ module Cdo
         # Aws module (unrelated to our Cdo::AWS namespace). Our module's
         # case-different name already protects against collision, but the
         # `::` prefix makes intent unambiguous at the call site.
-        @client ||= ::Aws::DeviceFarm::Client.new(region: REGION)
+        #
+        # retry_mode: 'adaptive' + retry_limit: 10 absorbs DF's per-account
+        # API TPS throttling (separate from the session-concurrency quota)
+        # when many workers burst create_test_grid_url at once. The token
+        # bucket is per-process (post-fork), so this softens each worker's
+        # response to ThrottlingException rather than coordinating workers.
+        @client ||= ::Aws::DeviceFarm::Client.new(
+          region: REGION,
+          retry_mode: 'adaptive',
+          retry_limit: 10
+        )
       end
 
       private_class_method :lookup_devices, :pick_best_device, :project_arn_for,
