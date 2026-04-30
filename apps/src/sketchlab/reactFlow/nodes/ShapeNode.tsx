@@ -1,11 +1,7 @@
 import {NodeResizer, useReactFlow, type NodeProps} from '@xyflow/react';
 import React, {memo, useCallback, useMemo, useRef, useState} from 'react';
 
-import {
-  DEFAULT_ROTATION,
-  MIN_NODE_HEIGHT,
-  MIN_NODE_WIDTH,
-} from '../constants';
+import {DEFAULT_ROTATION, MIN_NODE_HEIGHT, MIN_NODE_WIDTH} from '../constants';
 import {useSketchLabReadOnly} from '../context';
 import ShapeNodeToolbar from '../elementToolbars/ShapeNodeToolbar';
 import {fontSizePx} from '../elementToolbars/toolbarPalettes';

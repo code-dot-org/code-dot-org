@@ -10,11 +10,7 @@ import React, {
   useState,
 } from 'react';
 
-import {
-  DEFAULT_ROTATION,
-  MIN_NODE_HEIGHT,
-  MIN_NODE_WIDTH,
-} from '../constants';
+import {DEFAULT_ROTATION, MIN_NODE_HEIGHT, MIN_NODE_WIDTH} from '../constants';
 import {useSketchLabReadOnly} from '../context';
 import ImageNodeToolbar from '../elementToolbars/ImageNodeToolbar';
 import {ImageNodeType} from '../types';
