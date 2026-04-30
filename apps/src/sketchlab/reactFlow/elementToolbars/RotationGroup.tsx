@@ -25,18 +25,23 @@ export interface RotationGroupProps {
 
 export default function RotationGroup({value, onChange}: RotationGroupProps) {
   const groupLabelId = useId();
+  // Defensively normalize the incoming value. Persisted node data may
+  // include out-of-range numbers from earlier code paths, and feeding such
+  // a value straight to the Slider would trigger an MUI min/max warning
+  // and odd thumb behavior.
+  const normalizedValue = normalizeRotation(value);
   // Local editable string so users can type partials ("", "-", leading
   // zeros) without the normalized value overriding their input mid-edit.
-  const [inputValue, setInputValue] = useState(String(value));
+  const [inputValue, setInputValue] = useState(String(normalizedValue));
   const [isFocused, setIsFocused] = useState(false);
 
   // Sync display to the normalized value, but only while the input is not
   // focused.
   useEffect(() => {
     if (!isFocused) {
-      setInputValue(String(value));
+      setInputValue(String(normalizedValue));
     }
-  }, [value, isFocused]);
+  }, [normalizedValue, isFocused]);
 
   const handleInputChange = useCallback(
     (event: React.ChangeEvent<HTMLInputElement>) => {
@@ -52,11 +57,11 @@ export default function RotationGroup({value, onChange}: RotationGroupProps) {
         return;
       }
       const normalized = normalizeRotation(parsed);
-      if (normalized !== value) {
+      if (normalized !== normalizedValue) {
         onChange(normalized);
       }
     },
-    [onChange, value]
+    [onChange, normalizedValue]
   );
 
   const handleInputBlur = useCallback(() => {
@@ -67,9 +72,9 @@ export default function RotationGroup({value, onChange}: RotationGroupProps) {
     if (Number.isFinite(parsed)) {
       setInputValue(String(normalizeRotation(parsed)));
     } else {
-      setInputValue(String(value));
+      setInputValue(String(normalizedValue));
     }
-  }, [inputValue, value]);
+  }, [inputValue, normalizedValue]);
 
   const handleSliderChange = useCallback(
     (_: Event, sliderValue: number | number[]) => {
@@ -81,7 +86,7 @@ export default function RotationGroup({value, onChange}: RotationGroupProps) {
 
   const handleInputKeyDown = useCallback(
     (event: React.KeyboardEvent<HTMLInputElement>) => {
-      // Remove focus from the inptu box on enter.
+      // Remove focus from the input box on enter.
       if (event.key === 'Enter') {
         event.preventDefault();
         (event.target as HTMLInputElement).blur();
@@ -111,7 +116,7 @@ export default function RotationGroup({value, onChange}: RotationGroupProps) {
           min={ROTATION_MIN}
           max={ROTATION_MAX}
           step={ROTATION_STEP}
-          value={value}
+          value={normalizedValue}
           onChange={handleSliderChange}
           valueLabelDisplay="auto"
           valueLabelFormat={sliderValue => `${sliderValue}°`}
