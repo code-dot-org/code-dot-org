@@ -49,7 +49,10 @@ function TextNode({id, data, selected}: NodeProps<TextNodeType>) {
 
   const commitEdit = useCallback(() => {
     setIsEditing(false);
-    const newText = textRef.current?.textContent ?? '';
+    // innerText preserves visible newlines from <br> and block-element
+    // boundaries that contentEditable inserts on Shift+Enter; textContent
+    // would flatten them.
+    const newText = textRef.current?.innerText ?? '';
     updateNodeData(id, {text: newText});
   }, [id, updateNodeData]);
 

@@ -185,8 +185,8 @@ class RegistrationsController < Devise::RegistrationsController
       storage_id = take_storage_id_ownership_from_cookie(current_user.id)
       current_user.generate_progress_from_storage_id(storage_id, locale: I18n.locale) if storage_id
       PartialRegistration.delete session
+      auto_verify_teacher! current_user
       if Policies::Lti.lti? current_user
-        current_user.verify_teacher! if Policies::Lti.unverified_teacher?(current_user)
         if session[:lti_deployment_id] && current_user.lti_user_identities.any?
           deployment = LtiDeployment.find_by(id: session[:lti_deployment_id])
           lti_identity = current_user.lti_user_identities.find_by(lti_integration_id: deployment.lti_integration_id)
@@ -709,5 +709,18 @@ class RegistrationsController < Devise::RegistrationsController
 
   private def assign_redirect_url
     @redirect_url = session[:user_return_to] || @redirect_url
+  end
+
+  # Auto-verify teachers who sign up using a school-owned login type: Clever, Classlink or LTI.
+  # Google Classroom teachers are not auto-verified at sign-up, but will be after they sync
+  # their first section. This proves they are a roster-bearing user, which is evidence of them being a real teacher.
+  private def auto_verify_teacher!(user)
+    return unless user.teacher? && !user.verified_teacher?
+
+    is_school_owned = user.authentication_options.any? do |auth_option|
+      Policies::User::SCHOOL_OWNED_TYPES.include?(auth_option.credential_type)
+    end
+
+    user.verify_teacher! if is_school_owned
   end
 end
