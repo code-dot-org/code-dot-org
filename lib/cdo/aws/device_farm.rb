@@ -265,15 +265,18 @@ module Cdo
         # case-different name already protects against collision, but the
         # `::` prefix makes intent unambiguous at the call site.
         #
-        # retry_mode: 'adaptive' + retry_limit: 10 absorbs DF's per-account
+        # retry_mode: 'adaptive' + retry_limit: 20 absorbs DF's per-account
         # API TPS throttling (separate from the session-concurrency quota)
         # when many workers burst create_test_grid_url at once. The token
         # bucket is per-process (post-fork), so this softens each worker's
         # response to ThrottlingException rather than coordinating workers.
+        # 20 retries gives a worst-case backoff window of ~350s (full
+        # jitter, capped at 20s/attempt) -- enough to ride out a multi-
+        # minute sustained throttle without giving up.
         @client ||= ::Aws::DeviceFarm::Client.new(
           region: REGION,
           retry_mode: 'adaptive',
-          retry_limit: 10
+          retry_limit: 20
         )
       end
 
