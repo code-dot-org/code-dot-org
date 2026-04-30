@@ -2,6 +2,8 @@ import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon
 import {IconButton, Tooltip, Typography} from '@mui/material';
 import React from 'react';
 
+import {getIsStartMode} from '@cdo/apps/lab2/projects/utils';
+
 import styles from './element-toolbar.module.scss';
 
 interface ActionsGroupProps {
@@ -10,6 +12,8 @@ interface ActionsGroupProps {
 }
 
 export default function ActionsGroup({onDelete, onLock}: ActionsGroupProps) {
+  const isStartMode = getIsStartMode();
+
   return (
     <div className={styles.group} role="group" aria-label="Actions">
       <Typography
@@ -32,7 +36,7 @@ export default function ActionsGroup({onDelete, onLock}: ActionsGroupProps) {
             </IconButton>
           </Tooltip>
         )}
-        {onLock && (
+        {isStartMode && onLock && (
           <Tooltip title="Lock element" placement="top">
             <IconButton
               size="small"

@@ -1,8 +1,6 @@
 import {useReactFlow} from '@xyflow/react';
 import React from 'react';
 
-import {getIsStartMode} from '@cdo/apps/lab2/projects/utils';
-
 import {ShapeNodeType} from '../types';
 
 import ActionsGroup from './ActionsGroup';
@@ -29,7 +27,6 @@ interface ShapeNodeToolbarProps {
 export default function ShapeNodeToolbar({nodeId}: ShapeNodeToolbarProps) {
   const {deleteElements} = useReactFlow();
   const {data, patchNodeData} = useNodeToolbarData<ShapeNodeType>(nodeId);
-  const isStartMode = getIsStartMode();
 
   const {backgroundColor, strokeColor, fontSize, fontColor} = data;
   const handlesVisible = data.showHandles !== false;
@@ -70,9 +67,7 @@ export default function ShapeNodeToolbar({nodeId}: ShapeNodeToolbarProps) {
           />
           <ActionsGroup
             onDelete={() => deleteElements({nodes: [{id: nodeId}]})}
-            onLock={
-              isStartMode ? () => patchNodeData({locked: true}) : undefined
-            }
+            onLock={() => patchNodeData({locked: true})}
           />
           <HandleVisibilityToggle
             visible={handlesVisible}
