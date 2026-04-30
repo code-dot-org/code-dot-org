@@ -3,7 +3,10 @@ import '@testing-library/jest-dom';
 import React from 'react';
 
 import LessonDeepDiveContainer from '@cdo/apps/aiTutor/views/lessonDeepDive/LessonDeepDiveContainer';
-import {LessonDeepDiveData, ReflectionData} from '@cdo/apps/aiTutor/views/lessonDeepDive/types';
+import {
+  LessonDeepDiveData,
+  ReflectionData,
+} from '@cdo/apps/aiTutor/views/lessonDeepDive/types';
 
 // Mock the experiment gate so the container renders.
 jest.mock('@cdo/apps/util/experiments', () => ({
@@ -14,49 +17,46 @@ jest.mock('@cdo/apps/util/experiments', () => ({
 // Capture the onSubmitComplete prop from ReflectionBox so tests can fire it.
 let capturedOnSubmitComplete: ((data: ReflectionData) => void) | null = null;
 
-jest.mock(
-  '@cdo/apps/aiTutor/views/lessonDeepDive/ReflectionBox',
-  () => ({
-    __esModule: true,
-    default: ({
-      onSubmitComplete,
-    }: {
-      onSubmitComplete: (data: ReflectionData) => void;
-    }) => {
-      capturedOnSubmitComplete = onSubmitComplete;
-      return <div data-testid="reflection-box" />;
-    },
-  })
-);
+jest.mock('@cdo/apps/aiTutor/views/lessonDeepDive/ReflectionBox', () => ({
+  __esModule: true,
+  default: ({
+    onSubmitComplete,
+  }: {
+    onSubmitComplete: (data: ReflectionData) => void;
+  }) => {
+    capturedOnSubmitComplete = onSubmitComplete;
+    return <div />;
+  },
+}));
 
 // Stub out all other boxes to avoid rendering their dependencies.
 jest.mock('@cdo/apps/aiTutor/views/lessonDeepDive/WelcomeBox', () => ({
   __esModule: true,
-  default: () => <div data-testid="welcome-box" />,
+  default: () => <div />,
 }));
 jest.mock('@cdo/apps/aiTutor/views/lessonDeepDive/LevelsAttemptedBox', () => ({
   __esModule: true,
-  default: () => <div data-testid="levels-attempted-box" />,
+  default: () => <div />,
 }));
 jest.mock('@cdo/apps/aiTutor/views/lessonDeepDive/TimeSpentBox', () => ({
   __esModule: true,
-  default: () => <div data-testid="time-spent-box" />,
+  default: () => <div />,
 }));
 jest.mock('@cdo/apps/aiTutor/views/lessonDeepDive/ValidatedLevelsBox', () => ({
   __esModule: true,
-  default: () => <div data-testid="validated-levels-box" />,
+  default: () => <div />,
 }));
 jest.mock('@cdo/apps/aiTutor/views/lessonDeepDive/InterventionBox', () => ({
   __esModule: true,
-  default: () => <div data-testid="intervention-box" />,
+  default: () => <div />,
 }));
 jest.mock('@cdo/apps/aiTutor/views/lessonDeepDive/PracticeBox', () => ({
   __esModule: true,
-  default: () => <div data-testid="practice-box" />,
+  default: () => <div />,
 }));
 jest.mock('@cdo/apps/aiTutor/views/lessonDeepDive/TutorSummaryBox', () => ({
   __esModule: true,
-  default: () => <div data-testid="tutor-summary-box" />,
+  default: () => <div />,
 }));
 jest.mock('@cdo/apps/aiTutor/views/lessonDeepDive/FizzyButton', () => ({
   __esModule: true,
@@ -69,7 +69,7 @@ jest.mock('@cdo/apps/aiTutor/views/lessonDeepDive/FizzyButton', () => ({
     ariaLabel: string;
     children: React.ReactNode;
   }) => (
-    <button onClick={onClick} aria-label={ariaLabel}>
+    <button type="button" onClick={onClick} aria-label={ariaLabel}>
       {children}
     </button>
   ),
@@ -120,6 +120,13 @@ describe('LessonDeepDiveContainer welcome fetch', () => {
 
   afterEach(() => {
     jest.clearAllMocks();
+  });
+
+  it('renders next step navigation landmark', () => {
+    render(<LessonDeepDiveContainer lessonDeepDiveData={LESSON_DATA} />);
+    expect(
+      screen.getByRole('navigation', {name: /next step/i})
+    ).toBeInTheDocument();
   });
 
   it('does not fetch before the intervention box is reached', () => {

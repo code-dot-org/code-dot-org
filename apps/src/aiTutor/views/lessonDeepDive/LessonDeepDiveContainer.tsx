@@ -170,7 +170,7 @@ const LessonDeepDiveContainer: FC<LessonDeepDiveContainerProps> = ({
     <ThemeProvider theme={darkTheme}>
       <div className={styles.container}>
         {!isFirst && (
-          <div className={styles.topNav}>
+          <nav aria-label="Previous step" className={styles.topNav}>
             <button
               type="button"
               className={styles.arrowButton}
@@ -193,13 +193,15 @@ const LessonDeepDiveContainer: FC<LessonDeepDiveContainerProps> = ({
                 />
               </svg>
             </button>
-          </div>
+          </nav>
         )}
 
-        <div className={styles.box}>{renderBox()}</div>
+        <div className={styles.box} aria-live="polite" aria-atomic="true">
+          {renderBox()}
+        </div>
 
         {!isLast && (
-          <div className={styles.bottomNav}>
+          <nav aria-label="Next step" className={styles.bottomNav}>
             <FizzyButton onClick={goToNext} ariaLabel="Next">
               <svg
                 width="24"
@@ -217,7 +219,7 @@ const LessonDeepDiveContainer: FC<LessonDeepDiveContainerProps> = ({
                 />
               </svg>
             </FizzyButton>
-          </div>
+          </nav>
         )}
       </div>
     </ThemeProvider>
