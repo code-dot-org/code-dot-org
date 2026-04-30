@@ -19,3 +19,31 @@
   font-size: 16px;
   font-weight: 600;
 }
+
+.toggles {
+  display: flex;
+  gap: 4px;
+  margin-bottom: 4px;
+  pointer-events: auto;
+}
+
+.toggle,
+.toggleActive {
+  font: inherit;
+  font-size: 11px;
+  padding: 2px 6px;
+  border: 1px solid rgb(255 255 255 / 35%);
+  border-radius: 3px;
+  background-color: transparent;
+  color: #fff;
+  cursor: pointer;
+
+  &:hover {
+    background-color: rgb(255 255 255 / 12%);
+  }
+}
+
+.toggleActive {
+  background-color: rgb(255 255 255 / 28%);
+  border-color: #fff;
+}
