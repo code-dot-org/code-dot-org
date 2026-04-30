@@ -100,6 +100,8 @@ class ActiveSupport::TestCase
     Dashboard::Application.config.action_controller.perform_caching = false
     # as in, I still need to clear the cache even though we are not 'performing' caching
     Rails.cache.clear
+    # see if this impacts memory usage
+    Rails.application.assets.cache.clear
 
     # clear log of 'delivered' mails
     ActionMailer::Base.deliveries.clear
