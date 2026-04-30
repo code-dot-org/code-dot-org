@@ -1,5 +1,5 @@
 import Dialog from '@code-dot-org/component-library/dialog';
-import {Button as MuiButton} from '@mui/material';
+import Link from '@code-dot-org/component-library/link';
 import PropTypes from 'prop-types';
 import React from 'react';
 
@@ -56,19 +56,16 @@ export default class ConfirmRemoveStudentDialog extends React.Component {
           </a>
         </p>
         {dependsOnThisSectionForLogin && (
-          <div>
+          <div className={moduleStyles.removeStudentBody2Container}>
             <p>{i18n.removeStudentBody2()}</p>
-            <MuiButton
-              variant="contained"
-              color="primary"
-              size="medium"
-              className={moduleStyles.sendHomeInstructionsButton}
+            <Link
+              size="s"
               href={ADD_A_PERSONAL_LOGIN_HELP_URL}
               target="_blank"
               rel="noopener noreferrer"
             >
               {i18n.removeStudentSendHomeInstructions()}
-            </MuiButton>
+            </Link>
           </div>
         )}
       </div>
