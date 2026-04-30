@@ -1,11 +1,13 @@
 import {useReactFlow} from '@xyflow/react';
 import React from 'react';
 
+import {DEFAULT_ROTATION} from '../constants';
 import {ImageNodeType} from '../types';
 
 import ActionsGroup from './ActionsGroup';
 import HandleVisibilityToggle from './HandleVisibilityToggle';
 import LockedNotice from './LockedNotice';
+import RotationGroup from './RotationGroup';
 import ToolbarShell from './ToolbarShell';
 import {useNodeToolbarData} from './useNodeToolbarData';
 
@@ -28,6 +30,10 @@ export default function ImageNodeToolbar({nodeId}: ImageNodeToolbarProps) {
         <LockedNotice nodeId={nodeId} />
       ) : (
         <>
+          <RotationGroup
+            value={data.rotation ?? DEFAULT_ROTATION}
+            onChange={degrees => patchNodeData({rotation: degrees})}
+          />
           <ActionsGroup
             onDelete={() => deleteElements({nodes: [{id: nodeId}]})}
             onLock={() => patchNodeData({locked: true})}

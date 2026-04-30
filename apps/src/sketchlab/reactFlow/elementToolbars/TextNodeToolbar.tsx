@@ -1,12 +1,14 @@
 import {useReactFlow} from '@xyflow/react';
 import React from 'react';
 
+import {DEFAULT_ROTATION} from '../constants';
 import {TextNodeType} from '../types';
 
 import ActionsGroup from './ActionsGroup';
 import FontSizeGroup from './FontSizeGroup';
 import HandleVisibilityToggle from './HandleVisibilityToggle';
 import LockedNotice from './LockedNotice';
+import RotationGroup from './RotationGroup';
 import SwatchGroup from './SwatchGroup';
 import {
   DEFAULT_FONT_COLOR,
@@ -49,6 +51,10 @@ export default function TextNodeToolbar({nodeId}: TextNodeToolbarProps) {
             swatches={STROKE_FONT_PALETTE}
             selectedValue={fontColor ?? DEFAULT_FONT_COLOR}
             onSelect={value => patchNodeData({fontColor: value})}
+          />
+          <RotationGroup
+            value={data.rotation ?? DEFAULT_ROTATION}
+            onChange={degrees => patchNodeData({rotation: degrees})}
           />
           <ActionsGroup
             onDelete={() => deleteElements({nodes: [{id: nodeId}]})}
