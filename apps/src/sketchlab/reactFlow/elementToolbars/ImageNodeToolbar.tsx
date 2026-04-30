@@ -17,7 +17,7 @@ interface ImageNodeToolbarProps {
 }
 
 export default function ImageNodeToolbar({nodeId}: ImageNodeToolbarProps) {
-  const {deleteElements, updateNode, getNodes} = useReactFlow();
+  const {deleteElements, updateNode, getNodes, getEdges} = useReactFlow();
   const {data, patchNodeData} = useNodeToolbarData<ImageNodeType>(nodeId);
   const handlesVisible = data.showHandles !== false;
 
@@ -39,10 +39,14 @@ export default function ImageNodeToolbar({nodeId}: ImageNodeToolbarProps) {
             onDelete={() => deleteElements({nodes: [{id: nodeId}]})}
             onLock={() => patchNodeData({locked: true})}
             onBringToFront={() =>
-              updateNode(nodeId, {zIndex: nextFrontZIndex(getNodes())})
+              updateNode(nodeId, {
+                zIndex: nextFrontZIndex([...getNodes(), ...getEdges()]),
+              })
             }
             onSendToBack={() =>
-              updateNode(nodeId, {zIndex: nextBackZIndex(getNodes())})
+              updateNode(nodeId, {
+                zIndex: nextBackZIndex([...getNodes(), ...getEdges()]),
+              })
             }
           />
           <HandleVisibilityToggle

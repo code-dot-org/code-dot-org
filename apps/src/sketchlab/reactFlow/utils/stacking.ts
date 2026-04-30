@@ -1,6 +1,6 @@
 // Helpers for "Bring to front" / "Send to back". With React Flow's
-// zIndexMode="manual", stacking is driven by each item's explicit zIndex,
-// not array order. We pick a value one above the current max (front) or
+// zIndexMode="manual", stacking is driven by each item's explicit zIndex.
+// We pick a value one above the current max (front) or
 // one below the current min (back). Treat undefined zIndex as 0.
 
 interface ZItem {

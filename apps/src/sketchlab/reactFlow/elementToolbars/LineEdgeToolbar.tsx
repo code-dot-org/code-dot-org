@@ -114,7 +114,7 @@ export default function LineEdgeToolbar({
   onSelectStrokeStyle,
   onSelectArrowHeads,
 }: LineEdgeToolbarProps) {
-  const {deleteElements, updateEdge, getEdges} = useReactFlow();
+  const {deleteElements, updateEdge, getNodes, getEdges} = useReactFlow();
   const selectedValue =
     (typeof edge.style?.stroke === 'string' && edge.style.stroke) ||
     DEFAULT_STROKE_COLOR;
@@ -204,10 +204,14 @@ export default function LineEdgeToolbar({
       <ActionsGroup
         onDelete={() => deleteElements({edges: [{id: edge.id}]})}
         onBringToFront={() =>
-          updateEdge(edge.id, {zIndex: nextFrontZIndex(getEdges())})
+          updateEdge(edge.id, {
+            zIndex: nextFrontZIndex([...getNodes(), ...getEdges()]),
+          })
         }
         onSendToBack={() =>
-          updateEdge(edge.id, {zIndex: nextBackZIndex(getEdges())})
+          updateEdge(edge.id, {
+            zIndex: nextBackZIndex([...getNodes(), ...getEdges()]),
+          })
         }
       />
     </ToolbarShell>

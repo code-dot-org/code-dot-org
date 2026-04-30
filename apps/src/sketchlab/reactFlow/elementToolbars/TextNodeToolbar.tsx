@@ -25,7 +25,7 @@ interface TextNodeToolbarProps {
 }
 
 export default function TextNodeToolbar({nodeId}: TextNodeToolbarProps) {
-  const {deleteElements, updateNode, getNodes} = useReactFlow();
+  const {deleteElements, updateNode, getNodes, getEdges} = useReactFlow();
   const {data, patchNodeData} = useNodeToolbarData<TextNodeType>(nodeId);
 
   const {fontSize, fontColor} = data;
@@ -61,10 +61,14 @@ export default function TextNodeToolbar({nodeId}: TextNodeToolbarProps) {
             onDelete={() => deleteElements({nodes: [{id: nodeId}]})}
             onLock={() => patchNodeData({locked: true})}
             onBringToFront={() =>
-              updateNode(nodeId, {zIndex: nextFrontZIndex(getNodes())})
+              updateNode(nodeId, {
+                zIndex: nextFrontZIndex([...getNodes(), ...getEdges()]),
+              })
             }
             onSendToBack={() =>
-              updateNode(nodeId, {zIndex: nextBackZIndex(getNodes())})
+              updateNode(nodeId, {
+                zIndex: nextBackZIndex([...getNodes(), ...getEdges()]),
+              })
             }
           />
           <HandleVisibilityToggle
