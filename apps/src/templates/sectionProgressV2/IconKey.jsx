@@ -1,3 +1,4 @@
+import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import Link from '@code-dot-org/component-library/link';
 import {Typography} from '@mui/material';
 import PropTypes from 'prop-types';
@@ -7,8 +8,6 @@ import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import {tryGetLocalStorage, trySetLocalStorage} from '@cdo/apps/utils';
 import i18n from '@cdo/locale';
-
-import FontAwesome from '../../legacySharedComponents/FontAwesome';
 
 import AssignmentCompletionStatesBox from './AssignmentCompletionStatesBox';
 import LevelTypesBox from './LevelTypesBox';
@@ -74,7 +73,10 @@ export default function IconKey({sectionId}) {
           tabIndex="0"
         >
           <Typography variant="h6" gutterBottom>
-            <FontAwesome className={styles.iconKeyCaret} icon={caret(isOpen)} />
+            <FontAwesomeV6Icon
+              className={styles.iconKeyCaret}
+              iconName={caret(isOpen)}
+            />
             {i18n.iconKey()}
           </Typography>
         </div>

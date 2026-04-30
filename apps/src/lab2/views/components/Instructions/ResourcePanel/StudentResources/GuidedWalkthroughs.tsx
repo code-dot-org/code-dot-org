@@ -4,8 +4,10 @@ import React, {useCallback, useEffect} from 'react';
 import {Tour} from 'shepherd.js';
 
 import useLifecycleNotifier from '@cdo/apps/lab2/hooks/useLifecycleNotifier';
+import {TriggerSource} from '@cdo/apps/lab2/productTours/constants';
 import {ProductTourConfig} from '@cdo/apps/lab2/productTours/productToursPerLab';
-import {LifecycleEvent} from '@cdo/apps/lab2/utils';
+import {LifecycleEvent, sendLab2AnalyticsEvent} from '@cdo/apps/lab2/utils';
+import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import {createTourWithSteps} from '@cdo/apps/sharedComponents/productTour/productTourHelpers';
 
 import styles from './guided-walkthroughs.module.scss';
@@ -55,8 +57,31 @@ const GuidedWalkthroughs: React.FC<GuidedWalkthroughsProps> = ({
       setIsTourRunning(true);
       const tour = createTourWithSteps(tourConfig.getSteps);
       activeTourRef.current = tour;
-      tour.on('complete', () => endActiveTour(false));
-      tour.on('cancel', () => endActiveTour(false));
+      tour.on('start', () =>
+        sendLab2AnalyticsEvent(EVENTS.INTRO_FLOW_STARTED, {
+          flowName: tourConfig.metricName,
+          triggerSource: TriggerSource.StudentResourcesTab,
+        })
+      );
+      tour.on('complete', () => {
+        endActiveTour(false);
+
+        sendLab2AnalyticsEvent(EVENTS.INTRO_FLOW_COMPLETED, {
+          flowName: tourConfig.metricName,
+          triggerSource: TriggerSource.StudentResourcesTab,
+        });
+      });
+      tour.on('cancel', () => {
+        endActiveTour(false);
+        const currentIndex = tour.currentStep
+          ? tour.steps.indexOf(tour.currentStep)
+          : 0;
+        sendLab2AnalyticsEvent(EVENTS.INTRO_FLOW_EXIT, {
+          flowName: tourConfig.metricName,
+          step: currentIndex.toString(),
+          triggerSource: TriggerSource.StudentResourcesTab,
+        });
+      });
       tour.start();
     }
   };
@@ -68,7 +93,8 @@ const GuidedWalkthroughs: React.FC<GuidedWalkthroughsProps> = ({
         size="extraSmall"
         onClick={() => startTour(tour.name, type)}
         aria-label={`Play ${tour.displayName}`}
-        className={styles.tourPlayButton}
+        variant="outlined"
+        color="tertiary"
       >
         <FontAwesomeV6Icon iconName="play" />
       </IconButton>
@@ -92,9 +118,9 @@ const GuidedWalkthroughs: React.FC<GuidedWalkthroughsProps> = ({
           </Typography>
         )}
         {levelTours.map(tour => renderTourChip(tour, 'level'))}
-        {otherAvailableTours.length > 0 && (
+        {otherAvailableTours.length > 0 && levelTours.length > 0 && (
           <Typography variant="overline3" className={styles.subSectionHeading}>
-            All Walkthroughs
+            Additional Walkthroughs
           </Typography>
         )}
         {otherAvailableTours.map(tour => renderTourChip(tour, 'other'))}

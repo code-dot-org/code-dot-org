@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2026_04_20_120000) do
+ActiveRecord::Schema[7.0].define(version: 2026_04_27_000000) do
   create_table "activities", id: :integer, charset: "utf8mb3", collation: "utf8mb3_unicode_ci", force: :cascade do |t|
     t.integer "user_id"
     t.integer "level_id"
@@ -69,37 +69,6 @@ ActiveRecord::Schema[7.0].define(version: 2026_04_20_120000) do
     t.text "podcast_script"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-  end
-
-  create_table "ai_tutor_interaction_feedbacks", charset: "utf8mb3", collation: "utf8mb3_unicode_ci", force: :cascade do |t|
-    t.bigint "ai_tutor_interaction_id", null: false
-    t.integer "user_id", null: false
-    t.boolean "thumbs_up"
-    t.boolean "thumbs_down"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.text "details"
-    t.index ["ai_tutor_interaction_id", "user_id"], name: "index_ai_tutor_feedback_on_interaction_and_user", unique: true
-    t.index ["user_id"], name: "fk_rails_105c1f9428"
-  end
-
-  create_table "ai_tutor_interactions", charset: "utf8mb4", collation: "utf8mb4_unicode_ci", force: :cascade do |t|
-    t.integer "user_id", null: false
-    t.integer "level_id"
-    t.integer "script_id"
-    t.string "ai_model_version"
-    t.string "type"
-    t.string "project_id"
-    t.string "project_version_id"
-    t.text "prompt", size: :medium
-    t.string "status"
-    t.text "ai_response", size: :medium
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["level_id"], name: "index_ai_tutor_interactions_on_level_id"
-    t.index ["script_id"], name: "index_ai_tutor_interactions_on_script_id"
-    t.index ["user_id", "level_id", "script_id"], name: "index_ati_user_level_script"
-    t.index ["user_id"], name: "index_ai_tutor_interactions_on_user_id"
   end
 
   create_table "aichat_events", charset: "utf8mb4", collation: "utf8mb4_bin", force: :cascade do |t|
@@ -859,6 +828,13 @@ ActiveRecord::Schema[7.0].define(version: 2026_04_20_120000) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "jit_pl_concepts_json_videos", id: false, charset: "utf8mb4", collation: "utf8mb4_unicode_ci", force: :cascade do |t|
+    t.bigint "jit_pl_concept_id", null: false
+    t.bigint "json_video_id", null: false
+    t.index ["jit_pl_concept_id", "json_video_id"], name: "index_concepts_json_videos_on_concept_id_and_video_id", unique: true
+    t.index ["json_video_id", "jit_pl_concept_id"], name: "index_concepts_json_videos_on_video_id_and_concept_id", unique: true
+  end
+
   create_table "jit_pl_concepts_lessons", id: false, charset: "utf8mb4", collation: "utf8mb4_unicode_ci", force: :cascade do |t|
     t.bigint "jit_pl_concept_id", null: false
     t.bigint "lesson_id", null: false
@@ -891,6 +867,13 @@ ActiveRecord::Schema[7.0].define(version: 2026_04_20_120000) do
     t.index ["jit_pl_misconception_id"], name: "index_jit_pl_exemplars_on_jit_pl_misconception_id"
   end
 
+  create_table "jit_pl_exemplars_json_videos", id: false, charset: "utf8mb4", collation: "utf8mb4_unicode_ci", force: :cascade do |t|
+    t.bigint "jit_pl_exemplar_id", null: false
+    t.bigint "json_video_id", null: false
+    t.index ["jit_pl_exemplar_id", "json_video_id"], name: "index_exemplars_json_videos_on_exemplar_id_and_video_id", unique: true
+    t.index ["json_video_id", "jit_pl_exemplar_id"], name: "index_exemplars_json_videos_on_video_id_and_exemplar_id", unique: true
+  end
+
   create_table "jit_pl_exemplars_resources", id: false, charset: "utf8mb4", collation: "utf8mb4_unicode_ci", force: :cascade do |t|
     t.bigint "jit_pl_exemplar_id", null: false
     t.bigint "resource_id", null: false
@@ -906,6 +889,13 @@ ActiveRecord::Schema[7.0].define(version: 2026_04_20_120000) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["jit_pl_concept_id"], name: "index_jit_pl_misconceptions_on_jit_pl_concept_id"
+  end
+
+  create_table "jit_pl_misconceptions_json_videos", id: false, charset: "utf8mb4", collation: "utf8mb4_unicode_ci", force: :cascade do |t|
+    t.bigint "jit_pl_misconception_id", null: false
+    t.bigint "json_video_id", null: false
+    t.index ["jit_pl_misconception_id", "json_video_id"], name: "index_misconceptions_json_videos_on_misc_id_and_video_id", unique: true
+    t.index ["json_video_id", "jit_pl_misconception_id"], name: "index_misconceptions_json_videos_on_video_id_and_misc_id", unique: true
   end
 
   create_table "jit_pl_misconceptions_resources", id: false, charset: "utf8mb4", collation: "utf8mb4_unicode_ci", force: :cascade do |t|
@@ -2303,7 +2293,6 @@ ActiveRecord::Schema[7.0].define(version: 2026_04_20_120000) do
     t.text "properties"
     t.string "participant_type", default: "student", null: false
     t.bigint "lti_integration_id"
-    t.boolean "ai_tutor_enabled", default: false
     t.integer "avatar_color"
     t.integer "avatar_emoji"
     t.string "ai_chat_access_level", default: "disabled"
@@ -2870,8 +2859,6 @@ ActiveRecord::Schema[7.0].define(version: 2026_04_20_120000) do
     t.index ["word", "definition"], name: "index_vocabularies_on_word_and_definition", type: :fulltext
   end
 
-  add_foreign_key "ai_tutor_interaction_feedbacks", "ai_tutor_interactions"
-  add_foreign_key "ai_tutor_interaction_feedbacks", "users"
   add_foreign_key "aichat_events", "aichat_requests", column: "request_id"
   add_foreign_key "aidiff_message_feedbacks", "aidiff_messages"
   add_foreign_key "cap_user_events", "users"

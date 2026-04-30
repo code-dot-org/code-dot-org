@@ -5,6 +5,7 @@ import SegmentedButtons, {
 } from '@code-dot-org/component-library/segmentedButtons';
 import React, {useCallback, useEffect, useMemo, useRef} from 'react';
 
+import {useAiChatDisabledState} from '@cdo/apps/aichat/hooks/useAiChatDisabledState';
 import {
   addChatEvent,
   clearChatMessages,
@@ -20,7 +21,7 @@ import {
   updateAiCustomization,
   initializeAiCustomizations,
 } from '@cdo/apps/aichat/redux';
-import {AssetSource, ChatAsset, ModelParameters} from '@cdo/apps/aichat/types';
+import {ModelParameters} from '@cdo/apps/aichat/types';
 import {getAllowedFileTypes} from '@cdo/apps/aichat/utils';
 import AiChatHeaderButtons from '@cdo/apps/aichat/views/aiChatHeaderButtons/AiChatHeaderButtons';
 import ChatWorkspace, {
@@ -30,10 +31,8 @@ import ChatWarningModal from '@cdo/apps/aiComponentLibrary/warningModal/ChatWarn
 import {queryParams} from '@cdo/apps/code-studio/utils';
 import FlowLab from '@cdo/apps/flowlab/views/flow/FlowLab';
 import {PERMISSIONS} from '@cdo/apps/lab2/constants';
-import {useAiChatDisabledState} from '@cdo/apps/lab2/hooks/useAiChatDisabledState';
 import {useLevelActivityMetrics} from '@cdo/apps/lab2/hooks/useLevelActivityMetrics';
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
-import {isProjectTemplateLevel} from '@cdo/apps/lab2/redux/lab2ReduxSelectors';
 import {LabProps} from '@cdo/apps/lab2/types';
 import TeacherViewingStudentProjectAlert from '@cdo/apps/lab2/views/alerts/teacherViewingStudentProject';
 import IconButtonWithTooltip from '@cdo/apps/lab2/views/components/IconButtonWithTooltip';
@@ -41,6 +40,7 @@ import ResourcePanel, {
   BackpackProps,
 } from '@cdo/apps/lab2/views/components/Instructions/ResourcePanel';
 import PanelContainer from '@cdo/apps/lab2/views/components/PanelContainer';
+import {WorkspaceHeader} from '@cdo/apps/lab2/views/components/WorkspaceHeader';
 import {useDialogControl, DialogType} from '@cdo/apps/lab2/views/dialogs';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import {
@@ -48,7 +48,6 @@ import {
   BackpackContextType,
 } from '@cdo/apps/sharedComponents/backpack/BackpackAPIContext';
 import BackpackClientApi from '@cdo/apps/sharedComponents/backpack/BackpackClientApi';
-import ProjectTemplateWorkspaceIconV2 from '@cdo/apps/templates/ProjectTemplateWorkspaceIconV2';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 import {tryGetLocalStorage, trySetLocalStorage} from '@cdo/apps/utils';
 import {AiChatClientTypes} from '@cdo/generated-scripts/sharedConstants';
@@ -78,7 +77,6 @@ const AichatView: React.FunctionComponent<LabProps<AichatLevelProperties>> = ({
     aichatSettings: levelAichatSettings,
     starterAssets,
   } = levelProperties;
-  const projectTemplateLevel = useAppSelector(isProjectTemplateLevel);
   const currentAiCustomizations = useAppSelector(
     state => state.aichat.currentAiCustomizations
   );
@@ -245,9 +243,6 @@ const AichatView: React.FunctionComponent<LabProps<AichatLevelProperties>> = ({
   const chatWorkspaceHeader = (
     <div className={moduleStyles.workspaceHeaderContent}>
       {viewMode === ViewMode.EDIT ? 'AI Chat' : botName}
-      {projectTemplateLevel && (
-        <ProjectTemplateWorkspaceIconV2 tooltipPlace="onBottom" />
-      )}
     </div>
   );
 
@@ -284,7 +279,7 @@ const AichatView: React.FunctionComponent<LabProps<AichatLevelProperties>> = ({
     savedAiCustomizations.systemPrompt,
   ]);
 
-  const {disabled, disabledMessage} = useAiChatDisabledState({
+  const disabledState = useAiChatDisabledState({
     appName: levelProperties.appName,
     isPredictLevel: !!levelProperties.predictSettings?.isPredictLevel,
     hasSubmittedPredictResponse,
@@ -310,41 +305,35 @@ const AichatView: React.FunctionComponent<LabProps<AichatLevelProperties>> = ({
 
   const backpackProps: BackpackProps = useMemo(() => {
     return {
+      addFileTooltipText: 'Add to chat',
+      addFileHandler: async params => {
+        const {fileName, getFile, notifySuccess, notifyError} = params;
+        const file = await getFile();
+        chatWorkspaceRef.current?.addFiles([file], flaggedFilename =>
+          notifyError(
+            `${flaggedFilename} has been flagged by our content moderation policy and has not been added to your chat message.`
+          )
+        );
+        notifySuccess(
+          'new',
+          `${fileName} has been added to your chat message.`
+        );
+      },
       validateFileName: (fileName: string) => ({
         newFileName: fileName,
         isSupportFileName: false,
       }),
-      // no-op; we're always importing backpack files as new files.
+      // no-ops since we're using the addFileHandler.
       saveFileToProject: () => {},
-      createNewProjectFile: (
-        _fileName: string,
-        _contents: string,
-        url?: string
-      ) => {
-        const metricsReporter = Lab2Registry.getInstance().getMetricsReporter();
-        if (!url) {
-          metricsReporter.logWarning(
-            'Missing URL for imported backpack file. Cannot add to AI chat.'
-          );
-          return;
-        }
-        const filename = url.split('/').pop();
-        if (!filename) {
-          metricsReporter.logWarning(
-            'Could not parse backpack filename from URL. Cannot add to AI chat.'
-          );
-          return;
-        }
-        const asset: ChatAsset = {filename, source: AssetSource.PROJECT};
-        chatWorkspaceRef.current?.addAssets([asset]);
-      },
-      // no-op; we're always importing backpack files as new files.
+      createNewProjectFile: () => {},
       findIdForFileName: () => undefined,
-      supportedFileTypes: getAllowedFileTypes(
-        modelParameters.selectedModelId
-      ).map(f => f.split('.').pop() || ''),
+      supportedFileTypes: levelAichatSettings?.multimodalEnabled
+        ? getAllowedFileTypes(modelParameters.selectedModelId).map(
+            f => f.split('.').pop() || ''
+          )
+        : [],
     };
-  }, [modelParameters.selectedModelId]);
+  }, [modelParameters.selectedModelId, levelAichatSettings?.multimodalEnabled]);
 
   if (queryParams('show-flow-lab') === 'true' && isLevelbuilder) {
     return <FlowLab />;
@@ -429,7 +418,12 @@ const AichatView: React.FunctionComponent<LabProps<AichatLevelProperties>> = ({
                 headerContent={chatWorkspaceHeader}
                 className={moduleStyles.panelContainer}
                 headerClassName={moduleStyles.panelHeader}
-                rightHeaderContent={<AiChatHeaderButtons />}
+                rightHeaderContent={
+                  <>
+                    <WorkspaceHeader.TemplateIcon />
+                    <AiChatHeaderButtons />
+                  </>
+                }
               >
                 {chatWorkspaceInitialized && (
                   <ChatWorkspace
@@ -442,8 +436,7 @@ const AichatView: React.FunctionComponent<LabProps<AichatLevelProperties>> = ({
                     }
                     multimodalEnabled={levelAichatSettings?.multimodalEnabled}
                     logLevelActivity={logLevelActivity}
-                    disabled={disabled}
-                    disabledMessage={disabledMessage}
+                    disabledState={disabledState}
                     ref={chatWorkspaceRef}
                   />
                 )}

@@ -48,7 +48,7 @@ markdown <<MARKDOWN
 <div style="background-color: #B7E0E5; border-radius: 40px; color: #000000; width: 95%; padding: 1px 20px 1px 20px;">
 
 <p style="line-height: 1.5; margin-left: 10px; margin-right: 10px; margin-top: 10px; margin-bottom: 10px; font-size: 18px; ">
-<b> 💡Teacher Tip: </b>Each shape in the flowchart connects directly to part of the code — the question becomes the condition, and the arrows become the paths the program can take. Encourage students to trace the code back to the flowchart to check their logic. This helps students see that their code is following the exact plan they created, building confidence and accuracy in their thinking.
+<b> 💡Teacher Tip: </b>Each shape in the flowchart connects directly to part of the code. The question becomes the condition, and the arrows become the paths the program can take. Encourage students to trace the code back to the flowchart to check their logic. This helps students see that their code is following the exact plan they created, building confidence and accuracy in their thinking.
 </p>
 
 </div>

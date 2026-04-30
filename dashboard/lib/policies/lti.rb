@@ -30,6 +30,14 @@ class Policies::Lti
   JWT_CLIENT_ASSERTION_TYPE = 'urn:ietf:params:oauth:client-assertion-type:jwt-bearer'
   JWT_ISSUER = CDO.studio_url('', CDO.default_scheme).freeze
   DEFAULT_TARGET_LINK_URI = CDO.studio_url('/lti/v1/sync_course', CDO.default_scheme).freeze
+  # For security reasons, we only allow target_link_uris that are on domains we control.
+  # This is to prevent abuse of our LTI integration to launch unexpected URLs.
+  ALLOWED_TARGET_LINK_URI_DOMAINS = Set.new(
+    [
+      'code.org',
+      'csforall.org',
+    ]
+).freeze
 
   MEMBERSHIP_CONTAINER_CONTENT_TYPE = 'application/vnd.ims.lti-nrps.v2.membershipcontainer+json'
   TEACHER_ROLES = Set.new(['http://purl.imsglobal.org/vocab/lis/v1/institution/person#Instructor',
@@ -199,6 +207,21 @@ class Policies::Lti
   def self.find_platform_name_by_issuer(issuer)
     platform_name, _ = LMS_PLATFORMS.find {|_, platform| platform[:issuer] == issuer}
     platform_name.to_s
+  end
+
+  def self.allowed_target_link_uri?(target_link_uri)
+    uri = URI.parse(target_link_uri.to_s)
+    return false unless uri.is_a?(URI::HTTP)
+
+    host = uri.host.to_s.downcase
+    return false if host.blank?
+
+    ALLOWED_TARGET_LINK_URI_DOMAINS.any? do |domain|
+      normalized_domain = domain.downcase
+      host == normalized_domain || host.end_with?(".#{normalized_domain}")
+    end
+  rescue URI::InvalidURIError
+    false
   end
 
   # Returns the email provided by the LMS when creating the User through LTI

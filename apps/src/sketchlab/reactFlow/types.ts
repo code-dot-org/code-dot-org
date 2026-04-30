@@ -5,9 +5,9 @@ import type {
   SketchlabReactFlowSource,
 } from '@cdo/apps/lab2/types';
 
-import type {FontSizeValue} from './nodes/nodeToolbars/toolbarPalettes';
+import type {FontSizeValue} from './elementToolbars/toolbarPalettes';
 
-export type ShapeType = 'rectangle' | 'triangle' | 'circle';
+export type ShapeType = 'rectangle' | 'triangle' | 'circle' | 'diamond';
 
 export type ReactFlowSketchLabSources = ProjectSources & {
   source: SketchlabReactFlowSource;
@@ -22,6 +22,7 @@ export type ShapeNodeData = {
   fontColor?: string;
   fontSize?: FontSizeValue;
   showHandles?: boolean;
+  locked?: boolean;
 };
 
 export type TextNodeData = {
@@ -29,16 +30,35 @@ export type TextNodeData = {
   fontColor?: string;
   fontSize?: FontSizeValue;
   showHandles?: boolean;
+  locked?: boolean;
 };
 
 export type ImageNodeData = {
   src: string;
   altText: string;
   showHandles?: boolean;
+  locked?: boolean;
 };
+
+export type LineAnchorNodeData = {
+  lineAnchorRole: 'source' | 'target';
+  // TODO: this is not used yet, but is included for ease of typing.
+  locked?: boolean;
+};
+
+export type AddNodeRequest =
+  | {type: 'shape'; data: ShapeNodeData}
+  | {type: 'text'; data: TextNodeData}
+  | {type: 'image'; data: ImageNodeData}
+  | {type: 'line'}
+  | {type: 'arrow'};
 
 export type ShapeNodeType = Node<ShapeNodeData, 'shape'>;
 export type TextNodeType = Node<TextNodeData, 'text'>;
 export type ImageNodeType = Node<ImageNodeData, 'image'>;
-
-export type SketchLabNode = ShapeNodeType | TextNodeType | ImageNodeType;
+export type LineAnchorNodeType = Node<LineAnchorNodeData, 'lineAnchor'>;
+export type SketchLabNode =
+  | ShapeNodeType
+  | TextNodeType
+  | ImageNodeType
+  | LineAnchorNodeType;

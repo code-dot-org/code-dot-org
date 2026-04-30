@@ -97,7 +97,6 @@ const ChatEventView = forwardRef<HTMLDivElement, ChatEventViewProps>(
       const teacherFlagged =
         isCompletedChatMessage(event) &&
         event.teacherFeedback === TeacherFeedback.CLEAN_DISAGREE;
-      const teacherFlaggedHidden = teacherFlagged && !isTeacherView;
       return (
         <div
           ref={ref}
@@ -108,7 +107,7 @@ const ChatEventView = forwardRef<HTMLDivElement, ChatEventViewProps>(
             event.role,
             event.chatMessageText,
             false, // Profane messages are never shown in the aria-label context to prevent screen readers from reading inappropriate content.
-            teacherFlaggedHidden
+            teacherFlagged
           )}
           className={styles.chatMessageOutline}
         >
@@ -119,7 +118,7 @@ const ChatEventView = forwardRef<HTMLDivElement, ChatEventViewProps>(
             clientType={clientType}
             modelParameters={modelParameters}
             postText={postText}
-            teacherFlaggedHidden={teacherFlaggedHidden}
+            teacherFlagged={teacherFlagged}
           />
         </div>
       );

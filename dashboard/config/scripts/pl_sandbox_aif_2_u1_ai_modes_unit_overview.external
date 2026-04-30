@@ -5,7 +5,9 @@ description 'description here'
 markdown <<MARKDOWN
 # AI Course Progression
 
-#### In Unit1, the AI tutor operates in designer mode. Students define goals and plan the layout or behavior of their website, while the AI suggests options and offers feedback. Students remain in control of what to build and why.
+#### In Unit1, the AI tutor operates in **designer mode**.
+
+#### Students define goals and plan the layout or behavior of their website, while the AI suggests options and offers feedback. Students remain in control of what to build and why.
 
 #### **Students do not need to write HTML or CSS themselves**. Instead, they focus on creativity and design. The AI supports this process by suggesting ideas, generating code, and helping debug. 
 

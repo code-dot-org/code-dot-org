@@ -8,6 +8,7 @@ import {
   getEntryFromDOM,
   type TabOrderEntry,
 } from '../utils/computeTabOrder';
+import {getViewportOverflow} from '../utils/viewport';
 
 const PAN_DURATION_MS = 200;
 
@@ -28,7 +29,7 @@ export function useFocusManagement(
 ) {
   const {fitView, getZoom} = useReactFlow();
 
-  // Close the node toolbar on clicks outside nodes, edges, and the
+  // Close the toolbar on clicks outside nodes, edges, and the
   // toolbar itself. Clicking on non-focusable areas (e.g. the canvas
   // pane background) does not move DOM focus, so blur-based detection
   // alone misses this case. Scoped to when a node/edge is focused so
@@ -57,16 +58,7 @@ export function useFocusManagement(
   /** Pan the viewport so that `entry` is fully visible, if it isn't already. */
   const panToEntryIfNeeded = useCallback(
     (entry: TabOrderEntry, element: HTMLElement) => {
-      const container = element.closest<HTMLElement>('.react-flow');
-      if (!container) return;
-      const containerRect = container.getBoundingClientRect();
-      const elementRect = element.getBoundingClientRect();
-      const notFullyVisible =
-        elementRect.left < containerRect.left ||
-        elementRect.right > containerRect.right ||
-        elementRect.top < containerRect.top ||
-        elementRect.bottom > containerRect.bottom;
-      if (!notFullyVisible) return;
+      if (!getViewportOverflow(element)) return;
       const zoom = getZoom();
       if (entry.type === 'edge') {
         const edge = edges.find(e => e.id === entry.id);

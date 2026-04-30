@@ -1,6 +1,5 @@
 <Aichat>
   <config><![CDATA[{
-  "published": true,
   "game_id": 71,
   "created_at": "2026-04-20T14:46:24.000Z",
   "level_num": "custom",
@@ -45,12 +44,13 @@
       ],
       "multimodalEnabled": true
     },
-    "display_name": "Content Creation Co-Pilot",
-    "bubble_choice_description": "How can AI act as a co-pilot to assist with creating content on my channel?",
+    "display_name": "AI for Content Creation",
+    "bubble_choice_description": "Test out how AI can help with with creating content on my channel?",
     "thumbnail_url": "https://images.code.org/360177dbd1fea45aabf21c3b930441b1-ai_content_titlecard.jpg",
     "name_suffix": "_2026",
     "project_template_level_name": "thinking_critically_lesson4_level1_chat-template_2026"
   },
-  "audit_log": "[{\"changed_at\":\"2026-04-20T14:46:24.316+00:00\",\"changed\":[\"cloned from \\\"aid-thinking-critically-lesson3-level2c_2026-test_2026-pilot_2026\\\"\"],\"cloned_from\":\"aid-thinking-critically-lesson3-level2c_2026-test_2026-pilot_2026\"},{\"changed_at\":\"2026-04-20 14:46:26 +0000\",\"changed\":[],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-20 18:36:07 +0000\",\"changed\":[\"long_instructions\",\"aichat_settings\",\"display_name\",\"bubble_choice_description\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-20 18:40:00 +0000\",\"changed\":[\"aichat_settings\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-21 14:49:57 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-21 14:51:39 +0000\",\"changed\":[],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"}]"
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-04-20T14:46:24.316+00:00\",\"changed\":[\"cloned from \\\"aid-thinking-critically-lesson3-level2c_2026-test_2026-pilot_2026\\\"\"],\"cloned_from\":\"aid-thinking-critically-lesson3-level2c_2026-test_2026-pilot_2026\"},{\"changed_at\":\"2026-04-20 14:46:26 +0000\",\"changed\":[],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-20 18:36:07 +0000\",\"changed\":[\"long_instructions\",\"aichat_settings\",\"display_name\",\"bubble_choice_description\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-20 18:40:00 +0000\",\"changed\":[\"aichat_settings\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-21 14:49:57 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-21 14:51:39 +0000\",\"changed\":[],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-23 15:51:11 +0000\",\"changed\":[\"display_name\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-04-23 15:51:25 +0000\",\"changed\":[\"bubble_choice_description\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"}]"
 }]]></config>
 </Aichat>

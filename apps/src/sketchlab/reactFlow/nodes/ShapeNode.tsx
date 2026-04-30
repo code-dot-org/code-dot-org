@@ -3,16 +3,18 @@ import React, {memo, useCallback, useMemo, useRef, useState} from 'react';
 
 import {MIN_NODE_HEIGHT, MIN_NODE_WIDTH} from '../constants';
 import {useSketchLabReadOnly} from '../context';
+import ShapeNodeToolbar from '../elementToolbars/ShapeNodeToolbar';
+import {fontSizePx} from '../elementToolbars/toolbarPalettes';
 import {ShapeNodeType, ShapeType} from '../types';
 
 import ConnectionHandles from './ConnectionHandles';
-import ShapeNodeToolbar from './nodeToolbars/ShapeNodeToolbar';
-import {fontSizePx} from './nodeToolbars/toolbarPalettes';
 
 import styles from './shape-node.module.scss';
 
 // SVG path for an equilateral-ish triangle filling a 100x100 viewBox.
 const TRIANGLE_POINTS = '50,5 95,95 5,95';
+// SVG path for a diamond (rhombus) filling a 100x100 viewBox: top, right, bottom, left.
+const DIAMOND_POINTS = '50,5 95,50 50,95 5,50';
 const SHAPE_BORDER_PX = 2;
 
 interface ShapeSvgProps {
@@ -65,6 +67,25 @@ function ShapeSvg({shapeType, strokeColor, backgroundColor}: ShapeSvgProps) {
       </svg>
     );
   }
+  if (shapeType === 'diamond') {
+    return (
+      <svg
+        aria-hidden="true"
+        width="100%"
+        height="100%"
+        viewBox="0 0 100 100"
+        preserveAspectRatio="none"
+        className={styles.shapeSvg}
+      >
+        <polygon
+          points={DIAMOND_POINTS}
+          style={{fill, stroke}}
+          strokeWidth={SHAPE_BORDER_PX}
+          vectorEffect="non-scaling-stroke"
+        />
+      </svg>
+    );
+  }
   // rectangle: styled via CSS border
   return null;
 }
@@ -79,7 +100,7 @@ function ShapeNode({id, data, selected}: NodeProps<ShapeNodeType>) {
   const showHandles = data.showHandles !== false;
 
   const startEditing = useCallback(() => {
-    if (isEditing || readOnly) {
+    if (isEditing || readOnly || data.locked) {
       return;
     }
     setIsEditing(true);
@@ -94,7 +115,7 @@ function ShapeNode({id, data, selected}: NodeProps<ShapeNodeType>) {
         selection?.addRange(range);
       }
     }, 0);
-  }, [isEditing, readOnly]);
+  }, [isEditing, readOnly, data.locked]);
 
   const commitEdit = useCallback(() => {
     setIsEditing(false);
@@ -150,7 +171,7 @@ function ShapeNode({id, data, selected}: NodeProps<ShapeNodeType>) {
       onDoubleClick={startEditing}
     >
       <NodeResizer
-        isVisible={selected}
+        isVisible={selected && !data.locked}
         minWidth={MIN_NODE_WIDTH}
         minHeight={MIN_NODE_HEIGHT}
       />
