@@ -131,6 +131,25 @@ function resetPositionsOfLearningGoals(keyConceptList) {
   return keyConceptList;
 }
 
+export async function deleteRubric(rubricId) {
+  const csrfToken = document.querySelector('meta[name="csrf-token"]')
+    ? document.querySelector('meta[name="csrf-token"]').attributes['content']
+        .value
+    : null;
+  const response = await fetch(`/rubrics/${rubricId}`, {
+    method: 'DELETE',
+    headers: {
+      'Content-Type': 'application/json',
+      'X-CSRF-Token': csrfToken,
+    },
+  });
+  if (!response.ok) {
+    const errorData = await response.json();
+    throw new Error(`Error deleting rubric: ${JSON.stringify(errorData)}`);
+  }
+  return response.json();
+}
+
 function clearNotification(setSaveNotificationText) {
   setTimeout(() => {
     setSaveNotificationText('');
@@ -146,5 +165,13 @@ export const styles = {
   bottomRow: {
     display: 'flex',
     justifyContent: 'end',
+  },
+  bottomRowSpread: {
+    display: 'flex',
+    justifyContent: 'flex-end',
+    alignItems: 'center',
+  },
+  addNewConceptButton: {
+    marginTop: 20,
   },
 };

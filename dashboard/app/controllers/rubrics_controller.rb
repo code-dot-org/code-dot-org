@@ -43,6 +43,14 @@ class RubricsController < ApplicationController
     end
   end
 
+  # DELETE /rubrics/:rubric_id
+  def destroy
+    @lesson = @rubric.lesson
+    @rubric.destroy
+    @lesson.script.write_script_json
+    render json: {lessonEditPath: @lesson.get_uncached_edit_path}
+  end
+
   # GET /rubrics/:id
   def show
     render json: {rubric: @rubric.summarize, canShowTaScoresAlert: can_show_ta_scores_alert?(@rubric.lesson)}

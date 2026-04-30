@@ -143,6 +143,35 @@ class RubricsControllerTest < ActionController::TestCase
     assert_equal 'updated learning goal', learning_goal.learning_goal
   end
 
+  test 'destroy rubric returns lesson edit path for levelbuilder' do
+    sign_in @levelbuilder
+    Rails.application.config.stubs(:levelbuilder_mode).returns true
+
+    lesson = create(:lesson, :with_lesson_group)
+    level = create(:level)
+    create(:script_level, script: lesson.script, lesson: lesson, levels: [level])
+    rubric = create(:rubric, lesson: lesson, level: level)
+    unit_name = rubric.lesson.script.name
+    File.stubs(:write).with do |filename, _|
+      filename == "#{Rails.root}/config/scripts_json/#{unit_name}.script_json"
+    end.once
+
+    assert_destroys(Rubric) do
+      delete :destroy, params: {id: rubric.id}
+    end
+    assert_response :success
+    response_json = JSON.parse(response.body)
+    assert response_json.key?('lessonEditPath')
+    refute_nil response_json['lessonEditPath']
+  end
+
+  test 'destroy rubric is forbidden for non-levelbuilder users' do
+    sign_in @teacher
+
+    delete :destroy, params: {id: @rubric.id}
+    assert_response :forbidden
+  end
+
   test 'cannot update ai_enabled learning goal to non-ai-configured name' do
     sign_in @levelbuilder
 

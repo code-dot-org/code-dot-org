@@ -53,12 +53,14 @@ export default function RubricEditor({
       <Button
         color={Button.ButtonColor.gray}
         text={'Add new Key Concept'}
+        style={styles.addNewConceptButton}
         onClick={addNewConcept}
         size={Button.ButtonSize.narrow}
         icon="circle-plus"
         iconClassName="fa-solid fa-circle-plus"
         id="ui-test-add-new-concept-button"
       />
+      <hr />
     </div>
   );
 }

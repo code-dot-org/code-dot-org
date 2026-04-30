@@ -7,7 +7,8 @@ import getScriptData from '@cdo/apps/util/getScriptData';
 $(document).ready(() => {
   const rubric = getScriptData('rubricData');
   const lessonData = getScriptData('lessonData');
-  const {unitName, lessonNumber, levels} = lessonData;
+  const {unitName, lessonNumber, levels, allowMajorCurriculumChanges} =
+    lessonData;
   const submittableLevels = levels.filter(level => level.isSubmittable);
 
   createReactRoot(
@@ -16,6 +17,7 @@ $(document).ready(() => {
       lessonNumber={lessonNumber}
       submittableLevels={submittableLevels}
       rubric={rubric}
+      allowMajorCurriculumChanges={allowMajorCurriculumChanges}
     />,
     document.getElementById('form'),
     {
