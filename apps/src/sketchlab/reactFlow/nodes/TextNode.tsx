@@ -30,7 +30,7 @@ function TextNode({id, data, selected}: NodeProps<TextNodeType>) {
   }, [data.fontColor, data.fontSize]);
 
   const startEditing = useCallback(() => {
-    if (isEditing || readOnly) {
+    if (isEditing || readOnly || data.locked) {
       return;
     }
     setIsEditing(true);
@@ -45,7 +45,7 @@ function TextNode({id, data, selected}: NodeProps<TextNodeType>) {
         selection?.addRange(range);
       }
     }, 0);
-  }, [isEditing, readOnly]);
+  }, [isEditing, readOnly, data.locked]);
 
   const commitEdit = useCallback(() => {
     setIsEditing(false);
@@ -82,7 +82,7 @@ function TextNode({id, data, selected}: NodeProps<TextNodeType>) {
       onDoubleClick={startEditing}
     >
       <NodeResizer
-        isVisible={selected}
+        isVisible={selected && !data.locked}
         minWidth={MIN_NODE_WIDTH}
         minHeight={MIN_NODE_HEIGHT}
       />
