@@ -63,7 +63,7 @@ export default function ActionsGroup({
               aria-label="Bring to front"
               onClick={onBringToFront}
             >
-              <FontAwesomeV6Icon iconName="arrow-up-to-line" />
+              <FontAwesomeV6Icon iconName="bring-front" />
             </IconButton>
           </Tooltip>
         )}
@@ -75,7 +75,7 @@ export default function ActionsGroup({
               aria-label="Send to back"
               onClick={onSendToBack}
             >
-              <FontAwesomeV6Icon iconName="arrow-down-to-line" />
+              <FontAwesomeV6Icon iconName="send-back" />
             </IconButton>
           </Tooltip>
         )}
