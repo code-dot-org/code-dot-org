@@ -1590,7 +1590,7 @@
   "imAtaNewSchool": "I'm at a new school",
   "import": "Import",
   "importCSV": "Import csv",
-  "importFromCSV": "Import from CSV",
+  "importFromCSVDragBrowse": "Drag a CSV file here, or click to browse",
   "importingWithEllipsis": "Importing...",
   "importFromGoogleClassroom": "Import section from Google Classroom",
   "importFromClever": "Import section from Clever",

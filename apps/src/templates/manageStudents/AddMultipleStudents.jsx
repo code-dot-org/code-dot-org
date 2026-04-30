@@ -207,7 +207,7 @@ class AddMultipleStudents extends Component {
                     </div>
                   ) : (
                     <div style={styles.dropPrompt}>
-                      Drag a CSV file here, or click to browse
+                      {i18n.importFromCSVDragBrowse()}
                     </div>
                   )}
                 </div>
