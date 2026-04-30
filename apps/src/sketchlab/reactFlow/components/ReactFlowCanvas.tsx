@@ -562,6 +562,7 @@ export default function ReactFlowCanvas({
             // it manages things like moving nodes with arrow keys.
             disableKeyboardA11y={false}
             autoPanOnNodeFocus={false} // We manage viewport on focus manually in useFocusManagement.
+            zIndexMode={'manual'}
           >
             {openLineEdge && (
               <LineEdgeToolbar
