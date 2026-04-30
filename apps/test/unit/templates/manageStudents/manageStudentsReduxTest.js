@@ -65,6 +65,7 @@ const expectedBlankRow = {
   isEditing: true,
   rowType: RowType.ADD,
 };
+
 describe('parseAge', () => {
   it('accepts valid ages', () => {
     assert.strictEqual(parseAge('12'), '12');
@@ -130,6 +131,57 @@ describe('parseUsState', () => {
     assert.strictEqual(parseUsState(''), '');
     assert.strictEqual(parseUsState(null), '');
     assert.strictEqual(parseUsState(undefined), '');
+  });
+});
+
+describe('addMultipleAddRows', () => {
+  it('filters blank names and maps imported fields into new student rows', () => {
+    const dispatch = sinon.spy();
+
+    addMultipleAddRows([
+      {
+        name: '',
+        familyName: 'ignored',
+        age: '12',
+        gender: 'f',
+        usState: 'CA',
+      },
+      {
+        name: 'Ada',
+        familyName: 'Lovelace',
+        age: '14',
+        gender: 'f',
+        usState: 'CA',
+      },
+      {name: 'Grace'},
+    ])(dispatch);
+
+    assert.strictEqual(dispatch.calledOnce, true);
+
+    const action = dispatch.firstCall.args[0];
+    const rows = Object.values(action.studentData);
+    assert.strictEqual(rows.length, 2);
+
+    const adaRow = rows.find(row => row.name === 'Ada');
+    const graceRow = rows.find(row => row.name === 'Grace');
+
+    assert.strictEqual(adaRow.familyName, 'Lovelace');
+    assert.strictEqual(adaRow.age, '14');
+    assert.strictEqual(adaRow.genderTeacherInput, 'f');
+    assert.strictEqual(adaRow.usState, 'CA');
+    assert.strictEqual(adaRow.isEditing, true);
+    assert.strictEqual(adaRow.rowType, RowType.NEW_STUDENT);
+
+    assert.strictEqual(graceRow.familyName, '');
+    assert.strictEqual(graceRow.age, '');
+    assert.strictEqual(graceRow.genderTeacherInput, '');
+    assert.strictEqual(graceRow.usState, null);
+    assert.strictEqual(graceRow.isEditing, true);
+    assert.strictEqual(graceRow.rowType, RowType.NEW_STUDENT);
+
+    assert.isBelow(adaRow.id, 0);
+    assert.isBelow(graceRow.id, 0);
+    assert.notStrictEqual(adaRow.id, graceRow.id);
   });
 });
 
@@ -838,57 +890,6 @@ describe('manageStudentsRedux', () => {
       assert.deepEqual(nextState.studentData['-1'].age, '');
       assert.deepEqual(nextState.studentData['-1'].genderTeacherInput, '');
       assert.deepEqual(nextState.studentData['-1'].usState, null);
-    });
-  });
-
-  describe('addMultipleAddRows', () => {
-    it('filters blank names and maps imported fields into new student rows', () => {
-      const dispatch = sinon.spy();
-
-      addMultipleAddRows([
-        {
-          name: '',
-          familyName: 'ignored',
-          age: '12',
-          gender: 'f',
-          usState: 'CA',
-        },
-        {
-          name: 'Ada',
-          familyName: 'Lovelace',
-          age: '14',
-          gender: 'f',
-          usState: 'CA',
-        },
-        {name: 'Grace'},
-      ])(dispatch);
-
-      assert.strictEqual(dispatch.calledOnce, true);
-
-      const action = dispatch.firstCall.args[0];
-      const rows = Object.values(action.studentData);
-      assert.strictEqual(rows.length, 2);
-
-      const adaRow = rows.find(row => row.name === 'Ada');
-      const graceRow = rows.find(row => row.name === 'Grace');
-
-      assert.strictEqual(adaRow.familyName, 'Lovelace');
-      assert.strictEqual(adaRow.age, '14');
-      assert.strictEqual(adaRow.genderTeacherInput, 'f');
-      assert.strictEqual(adaRow.usState, 'CA');
-      assert.strictEqual(adaRow.isEditing, true);
-      assert.strictEqual(adaRow.rowType, RowType.NEW_STUDENT);
-
-      assert.strictEqual(graceRow.familyName, '');
-      assert.strictEqual(graceRow.age, '');
-      assert.strictEqual(graceRow.genderTeacherInput, '');
-      assert.strictEqual(graceRow.usState, null);
-      assert.strictEqual(graceRow.isEditing, true);
-      assert.strictEqual(graceRow.rowType, RowType.NEW_STUDENT);
-
-      assert.isBelow(adaRow.id, 0);
-      assert.isBelow(graceRow.id, 0);
-      assert.notStrictEqual(adaRow.id, graceRow.id);
     });
   });
 
