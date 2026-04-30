@@ -389,6 +389,7 @@ class ManageStudentsTable extends Component {
             color="primary"
             size="small"
             onClick={this.handleSaveAllClick}
+            className={moduleStyles.actionColumnHeaderSaveAllButton}
             type="button"
           >
             {i18n.saveAll()}
