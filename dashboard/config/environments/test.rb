@@ -30,8 +30,9 @@ Dashboard::Application.configure do
   config.consider_all_requests_local = true
   config.action_controller.perform_caching = false
 
-  # Use smaller cache size when running unit tests.
-  config.cache_store = :memory_store, {size: 64.megabytes} if CDO.unit_test
+  # Avoid using an actual cache when running unit tests, to avoid runaway
+  # memory growth.
+  config.cache_store = :null_store if CDO.unit_test
 
   # config.action_mailer.raise_delivery_errors = true
   # config.action_mailer.delivery_method = :smtp
