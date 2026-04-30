@@ -76,6 +76,32 @@
               "height": 120
             },
             "dragging": false
+          },
+          {
+            "id": "cb650d47-0924-4571-b0a6-0df017b93e63",
+            "type": "shape",
+            "data": {
+              "shapeType": "triangle",
+              "label": "immovable triangle",
+              "locked": true
+            },
+            "position": {
+              "x": 228.79613527564902,
+              "y": 459.64602796373435
+            },
+            "style": {
+              "width": 160,
+              "height": 120
+            },
+            "measured": {
+              "width": 160,
+              "height": 120
+            },
+            "dragging": false,
+            "selected": true,
+            "domAttributes": {
+              "tabIndex": 0
+            }
           }
         ],
         "edges": [
@@ -91,9 +117,9 @@
           }
         ],
         "viewport": {
-          "x": -467.5,
-          "y": -502,
-          "zoom": 2
+          "x": -6.965315661406294,
+          "y": -343.0092128661571,
+          "zoom": 1.4989996017555476
         }
       }
     },
@@ -137,6 +163,6 @@
     }
   },
   "published": true,
-  "audit_log": "[{\"changed_at\":\"2026-04-21T15:01:15.829-07:00\",\"changed\":[\"cloned from \\\"allthethings sketchlab 1\\\"\"],\"cloned_from\":\"allthethings sketchlab 1\"},{\"changed_at\":\"2026-04-21 15:01:55 -0700\",\"changed\":[\"long_instructions\"],\"changed_by_id\":2,\"changed_by_email\":\"molly+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-21 15:07:12 -0700\",\"changed\":[],\"changed_by_id\":2,\"changed_by_email\":\"molly+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-21 15:12:54 -0700\",\"changed\":[],\"changed_by_id\":2,\"changed_by_email\":\"molly+levelbuilder@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2026-04-21T15:01:15.829-07:00\",\"changed\":[\"cloned from \\\"allthethings sketchlab 1\\\"\"],\"cloned_from\":\"allthethings sketchlab 1\"},{\"changed_at\":\"2026-04-21 15:01:55 -0700\",\"changed\":[\"long_instructions\"],\"changed_by_id\":2,\"changed_by_email\":\"molly+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-21 15:07:12 -0700\",\"changed\":[],\"changed_by_id\":2,\"changed_by_email\":\"molly+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-21 15:12:54 -0700\",\"changed\":[],\"changed_by_id\":2,\"changed_by_email\":\"molly+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-28 10:30:43 -0700\",\"changed\":[\"start_sources\"],\"changed_by_id\":2,\"changed_by_email\":\"molly+levelbuilder@code.org\"}]"
 }]]></config>
 </Sketchlab>

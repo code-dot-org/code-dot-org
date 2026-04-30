@@ -24,6 +24,7 @@ export type ShapeNodeData = {
   showHandles?: boolean;
   // rotation is in degrees, normalized 0-359.
   rotation?: number;
+  locked?: boolean;
 };
 
 export type TextNodeData = {
@@ -32,6 +33,7 @@ export type TextNodeData = {
   fontSize?: FontSizeValue;
   showHandles?: boolean;
   rotation?: number;
+  locked?: boolean;
 };
 
 export type ImageNodeData = {
@@ -39,10 +41,13 @@ export type ImageNodeData = {
   altText: string;
   showHandles?: boolean;
   rotation?: number;
+  locked?: boolean;
 };
 
 export type LineAnchorNodeData = {
   lineAnchorRole: 'source' | 'target';
+  // TODO: this is not used yet, but is included for ease of typing.
+  locked?: boolean;
 };
 
 export type AddNodeRequest =

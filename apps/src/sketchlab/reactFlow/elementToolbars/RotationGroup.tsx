@@ -26,9 +26,9 @@ export interface RotationGroupProps {
 
 export default function RotationGroup({value, onChange}: RotationGroupProps) {
   const groupLabelId = useId();
-  // Persisted node data may include out-of-range numbers, and feeding such
-  // a value straight to the Slider would trigger an MUI min/max warning
-  // and odd thumb behavior. Therefore, we normalize the value before passing it to the Slider.
+  // Persisted node data may include out-of-range numbers, which would
+  // trigger an MUI min/max warning and odd thumb behavior on the Slider.
+  // Therefore, we normalize the value before passing it to the Slider.
   const normalizedValue = normalizeRotation(value);
   // Local editable string so users can type partials ("", "-", leading
   // zeros) without the normalized value overriding their input mid-edit.
@@ -67,7 +67,7 @@ export default function RotationGroup({value, onChange}: RotationGroupProps) {
   const handleInputBlur = useCallback(() => {
     setIsFocused(false);
     // On exit, normalize what's displayed (e.g. "045" -> "45", "-4" -> "356")
-    // or reset to the normalized value if the field was left non-numeric.
+    // or reset to the last known value if the field was left non-numeric.
     const parsed = Number.parseInt(inputValue, 10);
     if (Number.isFinite(parsed)) {
       setInputValue(String(normalizeRotation(parsed)));

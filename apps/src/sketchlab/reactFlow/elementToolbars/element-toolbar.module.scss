@@ -212,6 +212,16 @@
   }
 }
 
+.locked-notice {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  padding: 4px 8px;
+  color: var(--text-neutral-primary);
+  text-align: center;
+}
+
 .lineStyleButtons {
   display: flex;
   flex-direction: row;

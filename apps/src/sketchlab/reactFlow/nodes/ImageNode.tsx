@@ -45,12 +45,12 @@ function ImageNode({id, data, selected}: NodeProps<ImageNodeType>) {
   }, [isEditingAlt, id]);
 
   const startEditingAlt = useCallback(() => {
-    if (readOnly) {
+    if (readOnly || data.locked) {
       return;
     }
     setAltValue(altText);
     setIsEditingAlt(true);
-  }, [readOnly, altText]);
+  }, [readOnly, altText, data.locked]);
 
   const commitAltEdit = useCallback(() => {
     if (cancelledRef.current) {
@@ -82,7 +82,7 @@ function ImageNode({id, data, selected}: NodeProps<ImageNodeType>) {
   return (
     <div className={styles.imageNode} aria-label={altText || 'Image node'}>
       <NodeResizer
-        isVisible={selected}
+        isVisible={selected && !data.locked}
         minWidth={MIN_NODE_WIDTH}
         minHeight={MIN_NODE_HEIGHT}
       />
@@ -98,7 +98,8 @@ function ImageNode({id, data, selected}: NodeProps<ImageNodeType>) {
         />
       </div>
 
-      {/* Alt-text editor: button is keyboard-accessible, opens inline input */}
+      {/* Alt-text editor: button is keyboard-accessible, opens inline input.
+          Hidden entirely on locked nodes since alt text can't change. */}
       {isEditingAlt ? (
         <div className={styles.altEditor}>
           <TextField
@@ -113,18 +114,20 @@ function ImageNode({id, data, selected}: NodeProps<ImageNodeType>) {
           />
         </div>
       ) : (
-        <MuiButton
-          className={styles.editAltButton}
-          onClick={startEditingAlt}
-          aria-label="Edit alt text"
-          title="Edit alt text"
-          tabIndex={-1}
-          color="secondary"
-          variant="outlined"
-          size="small"
-        >
-          Alt
-        </MuiButton>
+        !data.locked && (
+          <MuiButton
+            className={styles.editAltButton}
+            onClick={startEditingAlt}
+            aria-label="Edit alt text"
+            title="Edit alt text"
+            tabIndex={-1}
+            color="secondary"
+            variant="outlined"
+            size="small"
+          >
+            Alt
+          </MuiButton>
+        )
       )}
 
       <ConnectionHandles visible={showHandles} />

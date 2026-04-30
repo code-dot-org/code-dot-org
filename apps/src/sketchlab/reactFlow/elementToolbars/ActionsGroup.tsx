@@ -3,6 +3,12 @@ import {IconButton, Tooltip, Typography} from '@mui/material';
 import {useReactFlow} from '@xyflow/react';
 import React from 'react';
 
+import {getIsStartMode} from '@cdo/apps/lab2/projects/utils';
+
+import {SketchLabNode} from '../types';
+
+import {useNodeToolbarData} from './useNodeToolbarData';
+
 import styles from './element-toolbar.module.scss';
 
 interface ActionsGroupProps {
@@ -11,9 +17,15 @@ interface ActionsGroupProps {
 
 export default function ActionsGroup({nodeId}: ActionsGroupProps) {
   const {deleteElements} = useReactFlow();
+  const {patchNodeData} = useNodeToolbarData<SketchLabNode>(nodeId);
+  const isStartMode = getIsStartMode();
 
   const handleDelete = () => {
     deleteElements({nodes: [{id: nodeId}]});
+  };
+
+  const handleLock = () => {
+    patchNodeData({locked: true});
   };
 
   return (
@@ -36,6 +48,18 @@ export default function ActionsGroup({nodeId}: ActionsGroupProps) {
             <FontAwesomeV6Icon iconName="trash" />
           </IconButton>
         </Tooltip>
+        {isStartMode && (
+          <Tooltip title="Lock element" placement="top">
+            <IconButton
+              size="small"
+              className={styles.fontSizeButton}
+              aria-label="Lock element"
+              onClick={handleLock}
+            >
+              <FontAwesomeV6Icon iconName="lock" />
+            </IconButton>
+          </Tooltip>
+        )}
       </div>
     </div>
   );
