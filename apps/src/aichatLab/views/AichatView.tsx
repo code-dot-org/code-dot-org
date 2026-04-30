@@ -5,14 +5,14 @@ import SegmentedButtons, {
 } from '@code-dot-org/component-library/segmentedButtons';
 import React, {useCallback, useEffect, useMemo, useRef} from 'react';
 
-// TODO: FIX!!
 import {useAiChatDisabledState} from '@cdo/apps/aichat/hooks/useAiChatDisabledState';
+// [FIX]
 import {
   addChatEvent,
   clearChatMessages,
   sendAnalytics,
 } from '@cdo/apps/aichat/redux';
-import {AssetSource, ChatAsset, ModelParameters} from '@cdo/apps/aichat/types';
+import {ModelParameters} from '@cdo/apps/aichat/types';
 import {getAllowedFileTypes} from '@cdo/apps/aichat/utils';
 import AiChatHeaderButtons from '@cdo/apps/aichat/views/aiChatHeaderButtons/AiChatHeaderButtons';
 import ChatWorkspace, {

@@ -2,7 +2,7 @@ import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import {RootState} from '@cdo/apps/types/redux';
 import {AppDispatch} from '@cdo/apps/util/reduxHooks';
 
-// TODO: WHAT ARE WE DOING ABOUT THIS???
+// [FIX]: WHAT ARE WE DOING ABOUT THIS???
 // This thunk sends aichat analytics events to Amplitude and Statsig.
 export const sendAnalytics =
   (event: string, properties: object) =>

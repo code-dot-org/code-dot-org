@@ -10,7 +10,7 @@ import {
 } from '@cdo/apps/aichat/redux/slice';
 import {getAssetUrl} from '@cdo/apps/aichat/utils';
 import {setChatMessageSent} from '@cdo/apps/aichatLab/redux/slice';
-import {AichatLevelProperties} from '@cdo/apps/aichatLab/types';
+import type {AichatLevelProperties} from '@cdo/apps/aichatLab/types';
 import {Role} from '@cdo/apps/aiComponentLibrary/chatMessage/types';
 import {isTurnstileDevToolsError} from '@cdo/apps/aiGateway/turnstile';
 import {sendProgressReport} from '@cdo/apps/code-studio/progressRedux';
@@ -123,7 +123,7 @@ export const submitChatContents = createAsyncThunk(
       updateId: createUuid(),
     };
     dispatch(addEventToChatEventsCurrent(newUserMessage));
-    // FIX!!
+    // [FIX]: Maybe ChatWorkspace gets a generic onMessageSent callback. AI Chat Lab can use that to manage this state internally.
     dispatch(setChatMessageSent(true));
 
     if (logLevelActivity) {

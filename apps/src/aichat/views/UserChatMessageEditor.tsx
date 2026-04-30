@@ -80,7 +80,7 @@ const UserChatMessageEditor: React.FunctionComponent<
     isViewingAiTutorVersionFileUpdates
   );
 
-  // FIX!!!
+  // [FIX]: pass in generic "disabled" prop to top level ChatWorkspace. AI Chat Lab will set this when save in progress
   const saveInProgress = useAppSelector(
     state => state.aichatLab.saveInProgress
   );

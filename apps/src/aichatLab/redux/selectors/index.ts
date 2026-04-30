@@ -1,11 +1,11 @@
 import {createSelector} from '@reduxjs/toolkit';
 
+import {findChangedProperties} from '@cdo/apps/aichat/redux/utils';
 import type {RootState} from '@cdo/apps/types/redux';
 
 import {
   allFieldsHidden,
   anyFieldsChanged,
-  findChangedProperties,
   hasFilledOutModelCard,
 } from '../utils';
 
