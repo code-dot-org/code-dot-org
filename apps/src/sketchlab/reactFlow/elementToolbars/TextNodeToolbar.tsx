@@ -1,12 +1,11 @@
 import React from 'react';
 
+import {DEFAULT_ROTATION} from '../constants';
 import {TextNodeType} from '../types';
 
 import ActionsGroup from './ActionsGroup';
 import FontSizeGroup from './FontSizeGroup';
 import HandleVisibilityToggle from './HandleVisibilityToggle';
-import {DEFAULT_ROTATION} from '../constants';
-
 import RotationGroup from './RotationGroup';
 import SwatchGroup from './SwatchGroup';
 import {
