@@ -272,6 +272,8 @@ const styles = {
     width: '100%',
     boxSizing: 'border-box',
     maxWidth: '100%',
+    marginTop: 4,
+    marginBottom: 0,
   },
   textareaDisabled: {
     opacity: 0.5,
