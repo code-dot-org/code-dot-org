@@ -25,6 +25,9 @@ class AddMultipleStudents extends Component {
 
   state = {
     isDialogOpen: false,
+    fileName: null,
+    selectedFile: null,
+    isDragging: false,
   };
 
   openDialog = () => {
@@ -32,7 +35,15 @@ class AddMultipleStudents extends Component {
   };
 
   closeDialog = () => {
-    this.setState({isDialogOpen: false});
+    this.setState({
+      isDialogOpen: false,
+      fileName: null,
+      selectedFile: null,
+      isDragging: false,
+    });
+    if (this.fileInput) {
+      this.fileInput.value = '';
+    }
   };
 
   onImportCSV = () => {
@@ -42,37 +53,64 @@ class AddMultipleStudents extends Component {
   onFileUpload = e => {
     const file = e.target.files[0];
     if (!file) return;
-
-    Papa.parse(file, {
-      skipEmptyLines: true,
-      complete: results => {
-        this.refs.studentsTextBox.value = this.refs.studentsTextBox.value
-          ? this.refs.studentsTextBox.value + '\n' + Papa.unparse(results.data)
-          : Papa.unparse(results.data);
-        this.fileInput.value = '';
-      },
-      error: () => {
-        this.fileInput.value = '';
-      },
-    });
+    this.setState({fileName: file.name, selectedFile: file});
   };
 
-  // Column order: DisplayName, FamilyName, Age, Gender, State
+  onDragOver = e => {
+    e.preventDefault();
+    e.stopPropagation();
+    this.setState({isDragging: true});
+  };
+
+  onDragLeave = e => {
+    e.preventDefault();
+    e.stopPropagation();
+    this.setState({isDragging: false});
+  };
+
+  onDrop = e => {
+    e.preventDefault();
+    e.stopPropagation();
+    this.setState({isDragging: false});
+    const file = e.dataTransfer.files[0];
+    if (!file) return;
+    this.setState({fileName: file.name, selectedFile: file});
+  };
+
   add = () => {
-    const value = this.refs.studentsTextBox.value;
-    const results = Papa.parse(value, {
-      skipEmptyLines: true,
-    });
-    const studentDataArray = results.data.map(parts => {
-      const name = (parts[0] || '').trim();
-      const familyName = (parts[1] || '').trim() || null;
-      const age = parseAge(parts[2]);
-      const gender = parseGender(parts[3]);
-      const usState = parseUsState(parts[4]) || null;
-      return {name, familyName, age, gender, usState};
-    });
-    this.props.addMultipleStudents(studentDataArray);
-    this.closeDialog();
+    if (this.state.selectedFile) {
+      Papa.parse(this.state.selectedFile, {
+        complete: results => {
+          const studentDataArray = results.data.map(parts => {
+            const name = (parts[0] || '').trim();
+            const familyName = (parts[1] || '').trim() || null;
+            const age = parseAge(parts[2]);
+            const gender = parseGender(parts[3]);
+            const usState = parseUsState(parts[4]) || null;
+            return {name, familyName, age, gender, usState};
+          });
+          this.props.addMultipleStudents(studentDataArray);
+          this.setState({fileName: null, selectedFile: null});
+          this.closeDialog();
+        },
+        error: () => {
+          console.error('CSV parse error');
+        },
+      });
+    } else {
+      const value = this.refs.studentsTextBox.value;
+      const results = Papa.parse(value);
+      const studentDataArray = results.data.map(parts => {
+        const name = (parts[0] || '').trim();
+        const familyName = (parts[1] || '').trim() || null;
+        const age = parseAge(parts[2]);
+        const gender = parseGender(parts[3]);
+        const usState = parseUsState(parts[4]) || null;
+        return {name, familyName, age, gender, usState};
+      });
+      this.props.addMultipleStudents(studentDataArray);
+      this.closeDialog();
+    }
   };
 
   render() {
@@ -93,33 +131,70 @@ class AddMultipleStudents extends Component {
         >
           <h2>{i18n.addStudentsMultiple()}</h2>
           <div>{i18n.addStudentsMultipleInstructions()}</div>
-          <hr style={styles.divider} />
-          <input
-            type="file"
-            accept=".csv"
-            ref={input => (this.fileInput = input)}
-            style={styles.hiddenFileInput}
-            onChange={this.onFileUpload}
-          />
-          <div style={styles.textareaHeader}>
-            <label htmlFor="students-text-box">
-              {i18n.addStudentsTypeLabel()}
-            </label>
-            <Button
-              style={styles.button}
-              text={i18n.importFromCSV()}
-              onClick={this.onImportCSV}
-              color={Button.ButtonColor.gray}
-              icon="upload"
-            />
+          <div style={styles.inputRow}>
+            <div style={styles.textareaSection}>
+              <label htmlFor="students-text-box">
+                {i18n.addStudentsTypeLabel()}
+              </label>
+              <textarea
+                id="students-text-box"
+                rows="8"
+                cols="35"
+                ref="studentsTextBox"
+                style={{
+                  ...styles.textarea,
+                  ...(this.state.selectedFile ? styles.textareaDisabled : {}),
+                }}
+                disabled={!!this.state.selectedFile}
+              />
+            </div>
+            <div style={styles.dividerSection}>
+              <div style={styles.verticalDivider} />
+              <div style={styles.orLabel}>{i18n.or()}</div>
+              <div style={styles.verticalDivider} />
+            </div>
+            <div style={styles.dropSection}>
+              <label>{i18n.addStudentsImportLabel()}</label>
+              <input
+                type="file"
+                accept=".csv"
+                ref={input => (this.fileInput = input)}
+                style={styles.hiddenFileInput}
+                onChange={this.onFileUpload}
+              />
+              <div
+                style={{
+                  ...styles.dropZone,
+                  ...(this.state.isDragging ? styles.dropZoneActive : {}),
+                  ...(this.state.selectedFile ? styles.dropZoneHasFile : {}),
+                }}
+                onDragOver={this.onDragOver}
+                onDragLeave={this.onDragLeave}
+                onDrop={this.onDrop}
+                onClick={this.onImportCSV}
+              >
+                {this.state.fileName ? (
+                  <div style={styles.fileSelected}>
+                    <div style={styles.fileName}>{this.state.fileName}</div>
+                    <button
+                      style={styles.removeFile}
+                      onClick={e => {
+                        e.stopPropagation();
+                        this.fileInput.value = '';
+                        this.setState({fileName: null, selectedFile: null});
+                      }}
+                    >
+                      ✕
+                    </button>
+                  </div>
+                ) : (
+                  <div style={styles.dropPrompt}>
+                    Drag a CSV file here, or click to browse
+                  </div>
+                )}
+              </div>
+            </div>
           </div>
-          <textarea
-            id="students-text-box"
-            rows="8"
-            cols="70"
-            ref="studentsTextBox"
-            style={styles.textarea}
-          />
           <DialogFooter>
             <Button
               style={styles.button}
@@ -146,9 +221,6 @@ const styles = {
     paddingRight: 20,
     paddingBottom: 20,
   },
-  textarea: {
-    width: '75%',
-  },
   button: {
     margin: 0,
     marginBottom: 5,
@@ -156,16 +228,93 @@ const styles = {
   hiddenFileInput: {
     display: 'none',
   },
-  divider: {
-    borderTop: '1px solid #e7e8ea',
-    margin: '10px 0',
+  inputRow: {
+    display: 'flex',
+    flexDirection: 'row',
+    alignItems: 'stretch',
+    gap: 10,
+    paddingTop: 10,
   },
-  textareaHeader: {
+  textareaSection: {
+    display: 'flex',
+    flexDirection: 'column',
+    flex: 1,
+    maxWidth: '80%',
+  },
+  textarea: {
+    width: '100%',
+    boxSizing: 'border-box',
+    maxWidth: '100%',
+  },
+  textareaDisabled: {
+    opacity: 0.5,
+    cursor: 'not-allowed',
+  },
+  dividerSection: {
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'center',
+    justifyContent: 'center',
+    gap: 8,
+  },
+  verticalDivider: {
+    flex: 1,
+    width: 1,
+    background: '#e7e8ea',
+  },
+  orLabel: {
+    fontSize: 12,
+    textTransform: 'uppercase',
+  },
+  dropSection: {
+    display: 'flex',
+    flexDirection: 'column',
+    flex: 1,
+  },
+  dropZone: {
+    flex: 1,
+    borderWidth: 2,
+    borderStyle: 'dashed',
+    borderColor: '#e7e8ea',
+    borderRadius: 4,
     display: 'flex',
     alignItems: 'center',
-    justifyContent: 'flex-start',
-    gap: 10,
-    marginBottom: 5,
+    justifyContent: 'center',
+    cursor: 'pointer',
+    padding: 10,
+    marginTop: 4,
+  },
+  dropZoneHasFile: {
+    borderColor: '#333',
+    borderStyle: 'solid',
+  },
+  dropZoneActive: {
+    borderColor: '#7765a0',
+    background: '#f0eef5',
+  },
+  dropPrompt: {
+    color: '#666',
+    textAlign: 'center',
+    fontSize: 14,
+  },
+  fileName: {
+    color: '#333',
+    textAlign: 'center',
+    fontSize: 14,
+    wordBreak: 'break-all',
+  },
+  fileSelected: {
+    display: 'flex',
+    alignItems: 'center',
+    gap: 8,
+  },
+  removeFile: {
+    background: 'none',
+    border: 'none',
+    cursor: 'pointer',
+    color: '#666',
+    fontSize: 14,
+    padding: 0,
   },
 };
 
