@@ -14,6 +14,8 @@ import {RootState} from '@cdo/apps/types/redux';
 import {CapLinks} from '@cdo/generated-scripts/sharedConstants';
 import i18n from '@cdo/locale';
 
+import moduleStyles from './bulkSetModal.module.scss';
+
 const BulkSetModal: React.FC<BulkSetModalProps> = ({
   isOpen = false,
   onClose,
@@ -64,6 +66,7 @@ const BulkSetModal: React.FC<BulkSetModalProps> = ({
           <SimpleDropdown
             id="us-state"
             name="us-state"
+            className={moduleStyles.usStateDropdown}
             labelText={i18n.usState()}
             size="s"
             items={items}
