@@ -79,19 +79,15 @@ Sign in to Docker Hub through the command line; when prompted, enter the passwor
 docker login -u codedotorg
 ```
 
-Build a full image to your local machine
+Build an x86 image and tag it with an incremented version number. Our CI
+containers run on x86 (linux/amd64), so the `--platform` flag is required
+when building on ARM machines (such as those using Apple Silicon).
 
 ```
-docker build .
+docker buildx build . --platform linux/amd64 -t codedotorg/cdo-ci:<version>
 ```
 
-Tag the new image with an incremented version number. You can get the image id from the end of the build log or from `docker image list`.
-
-```
-docker tag <image_id> codedotorg/cdo-ci:<version>
-```
-
-Upload the image to docker hub (supply the version used in the previous step)
+Upload the image to docker hub
 
 ```
 docker push codedotorg/cdo-ci:<version>

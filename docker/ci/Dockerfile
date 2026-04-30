@@ -205,6 +205,18 @@ RUN mkdir sauce_connect && \
     cd .. && \
     rm -rf sauce_connect
 
+# Install jemalloc (matching production config in cookbooks/cdo-jemalloc).
+# Until we upgrade to Ubuntu 24 (which ships jemalloc 5.3 as an apt package), we'll have to compile from source.
+RUN curl -sSLOJ https://github.com/jemalloc/jemalloc/releases/download/5.3.1/jemalloc-5.3.1.tar.bz2 && \
+    echo '3826bc80232f22ed5c4662f3034f799ca316e819103bdc7bb99018a421706f92  jemalloc-5.3.1.tar.bz2' | sha256sum -c && \
+    tar -xjf jemalloc-5.3.1.tar.bz2 && \
+    cd jemalloc-5.3.1 && \
+    ./configure && \
+    make -j"$(nproc)" && \
+    make install && \
+    cd .. && \
+    rm -rf jemalloc-5.3.1 jemalloc-5.3.1.tar.bz2
+
 USER ${USER}
 
 WORKDIR /home/${USER}

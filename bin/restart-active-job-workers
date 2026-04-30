@@ -1,4 +1,13 @@
 #!/usr/bin/env ruby
+
+# Use jemalloc if available (installed by cdo-jemalloc cookbook on production instances).
+jemalloc_lib = '/usr/local/lib/libjemalloc.so.2'
+if File.exist?(jemalloc_lib)
+  ENV['LD_PRELOAD'] = jemalloc_lib
+  # Keep these settings in sync with how Chef configures `jemalloc`: `cookbooks/cdo-jemalloc/attributes/default.rb`
+  ENV['MALLOC_CONF'] ||= 'narenas:2,background_thread:true,dirty_decay_ms:500,muzzy_decay_ms:0'
+end
+
 require_relative '../deployment'
 require 'cdo/active_job_backend'
 

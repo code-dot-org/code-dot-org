@@ -1,5 +1,5 @@
-default['cdo-jemalloc']['version'] = '5.1.0'
-default['cdo-jemalloc']['checksum'] = '5396e61cc6103ac393136c309fae09e44d74743c86f90e266948c50f3dbb7268'
+default['cdo-jemalloc']['version'] = '5.3.1'
+default['cdo-jemalloc']['checksum'] = '3826bc80232f22ed5c4662f3034f799ca316e819103bdc7bb99018a421706f92'
 default['cdo-jemalloc']['lib'] = '/usr/local/lib/libjemalloc.so.2'
 
 # See:
@@ -7,6 +7,8 @@ default['cdo-jemalloc']['lib'] = '/usr/local/lib/libjemalloc.so.2'
 # http://jemalloc.net/jemalloc.3.html
 # To convert this attributes hash to a malloc_conf string, run:
 # node['cdo-jemalloc']['malloc_conf'].map {|x| x.join(':')}.join(',')
+# Any changes to MALLOC_CONF must also be applied to our Docker continuous integration builds:
+#   `docker/ci/scripts/prepare_ci_env.sh`
 default['cdo-jemalloc']['malloc_conf'] = {
   # Maximum number of arenas to use for automatic multiplexing of threads and arenas.
   # The default is four times the number of CPUs, or one if there is a single CPU.
@@ -31,6 +33,9 @@ default['cdo-jemalloc']['malloc_conf'] = {
   # (usually at the cost of more CPU cycles spent on purging), and vice versa.
   #
   # Suggested: tune the values based on the desired trade-offs.
-  dirty_decay_ms: 1_000, # Default 10_000
-  muzzy_decay_ms: 0 # Default 10_000
+  dirty_decay_ms: 500, # Default 10_000
+  muzzy_decay_ms: 0, # Default 10_000
+
+  # Abort on invalid MALLOC_CONF options rather than silently ignoring them.
+  abort_conf: true
 }
