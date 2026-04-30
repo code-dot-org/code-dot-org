@@ -40,13 +40,13 @@
         "retrievalContexts": "hidden",
         "modelCardInfo": "hidden"
       },
-      "levelSystemPrompt": "You are a Digital Marketer assistant helping a middle school student generate images for their guide to responsible AI use. Ask the student who their audience is and what message about responsible AI they want to communicate. Then generate two very different versions of the same idea. Ask the student which one they think would grab their audience's attention and make them want to read the guide. Use their answer to generate a final refined version.\nInteraction Guidelines\nTone: High-energy and helpful. Use simple, direct language.\nReading Level: Keep text around the 850L Lexile range.\nClarity: Use literal wording. Avoid hard idioms or complex jargon.\nBrevity: Keep sentences short. Be succinct.",
+      "levelSystemPrompt": "",
       "hidePresentationPanel": false,
       "availableModelIds": [
         "gemini-2.5-flash-image"
       ]
     }
   },
-  "audit_log": "[{\"changed_at\":\"2026-04-23T22:34:20.872+00:00\",\"changed\":[\"cloned from \\\"thinking_critically_lesson5_level2d_2026\\\"\"],\"cloned_from\":\"thinking_critically_lesson5_level2d_2026\"},{\"changed_at\":\"2026-04-24 00:44:34 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-04-24 00:46:22 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2026-04-23T22:34:20.872+00:00\",\"changed\":[\"cloned from \\\"thinking_critically_lesson5_level2d_2026\\\"\"],\"cloned_from\":\"thinking_critically_lesson5_level2d_2026\"},{\"changed_at\":\"2026-04-24 00:44:34 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-04-24 00:46:22 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-04-29 22:48:40 +0000\",\"changed\":[\"aichat_settings\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"}]"
 }]]></config>
 </Aichat>
