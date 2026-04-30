@@ -75,6 +75,14 @@ const NODE_TYPES = {
 const NEW_NODE_STAGGER_PX = 20;
 const FOCUS_DELAY_MS = 100;
 
+function stripDisplayFields<T extends object>(item: T): T {
+  const result = {...item} as Record<string, unknown>;
+  delete result.domAttributes;
+  delete result.className;
+  delete result.selected;
+  return result as T;
+}
+
 export interface ReactFlowCanvasProps {
   updateSources: ReturnType<
     typeof useSources<ReactFlowSketchLabSources>
@@ -301,7 +309,18 @@ export default function ReactFlowCanvas({
       clearTimeout(saveTimerRef.current);
     }
     saveTimerRef.current = setTimeout(() => {
-      const source: SketchlabReactFlowSource = {nodes, edges, viewport};
+      // updateNode/updateEdge from useReactFlow round-trip through the
+      // store, which mirrors the displayNodes/displayEdges we render.
+      // That spreads display-only fields (domAttributes — including the
+      // onMouseDown closure on line edges — className, selected) back
+      // into our canonical state. Strip them before persisting so
+      // structuredClone of the source on reload doesn't choke on the
+      // function.
+      const source: SketchlabReactFlowSource = {
+        nodes: nodes.map(stripDisplayFields) as SketchlabReactFlowNode[],
+        edges: edges.map(stripDisplayFields) as SketchlabReactFlowEdge[],
+        viewport,
+      };
       updateSources(prev => ({...prev, source}));
     }, SAVE_DEBOUNCE_MS);
 
