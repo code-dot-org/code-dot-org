@@ -45,7 +45,6 @@ class Services::MarkdownPreprocessorTest < ActiveSupport::TestCase
   end
 
   test 'process is cached' do
-    # Use a clean local cache to ensure consistent results.
     Rails.cache.with_local_cache do
       input = "[r first-resource/test-course/1999]"
 
@@ -73,7 +72,6 @@ class Services::MarkdownPreprocessorTest < ActiveSupport::TestCase
   end
 
   test 'process caching can be modified with options' do
-    # Use a clean local cache to ensure consistent results.
     Rails.cache.with_local_cache do
       input = "[r first-resource/test-course/1999][v first_vocab/test-course/1999]"
 
