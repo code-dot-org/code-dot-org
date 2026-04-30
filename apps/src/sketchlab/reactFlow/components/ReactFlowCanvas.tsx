@@ -24,6 +24,7 @@ import {createUuid} from '@cdo/apps/utils';
 import {
   DEFAULT_NODE_HEIGHT,
   DEFAULT_NODE_WIDTH,
+  LINE_ANCHOR_SIZE_PX,
   SAVE_DEBOUNCE_MS,
 } from '../constants';
 import {
@@ -32,7 +33,10 @@ import {
   type ToolbarTarget,
 } from '../context';
 import LineEdgeToolbar from '../elementToolbars/LineEdgeToolbar';
-import {DEFAULT_STROKE_COLOR} from '../elementToolbars/toolbarPalettes';
+import {
+  DEFAULT_LINE_WIDTH,
+  DEFAULT_STROKE_COLOR,
+} from '../elementToolbars/toolbarPalettes';
 import {useFocusManagement} from '../hooks/useFocusManagement';
 import {useKeyboardNavigation} from '../hooks/useKeyboardNavigation';
 import {useLineEdgeDrag} from '../hooks/useLineEdgeDrag';
@@ -68,7 +72,6 @@ const NODE_TYPES = {
 const NEW_NODE_STAGGER_PX = 20;
 const FOCUS_DELAY_MS = 100;
 const LINE_DEFAULT_LENGTH_PX = 220;
-const LINE_ANCHOR_SIZE_PX = 10;
 
 export interface ReactFlowCanvasProps {
   updateSources: ReturnType<
@@ -148,7 +151,6 @@ export default function ReactFlowCanvas({
   const {connectingFrom, connectAnnouncement, handleKeyDown} =
     useKeyboardNavigation({
       nodes,
-      edges,
       tabOrder,
       focusEntry,
       setNodes,
@@ -419,7 +421,10 @@ export default function ReactFlowCanvas({
           source: sourceAnchorId,
           target: targetAnchorId,
           type: 'straight',
-          style: {stroke: DEFAULT_STROKE_COLOR},
+          style: {
+            stroke: DEFAULT_STROKE_COLOR,
+            strokeWidth: DEFAULT_LINE_WIDTH,
+          },
         };
 
         setNodes(currentNodes => [...currentNodes, sourceAnchor, targetAnchor]);
@@ -441,6 +446,8 @@ export default function ReactFlowCanvas({
 
       const newNodeId = createUuid();
       // Text nodes auto-size to fit content; shapes and images use fixed defaults.
+      // width/height are the React Flow fields NodeResizer also writes on drag,
+      // keeping creation and resize consistent. style is reserved for appearance.
       // Cast is needed because TS can't preserve the (type, data) correlation
       // of the discriminated union across destructuring.
       const newNode = {
@@ -449,7 +456,8 @@ export default function ReactFlowCanvas({
         data: request.data,
         position,
         ...(type !== 'text' && {
-          style: {width: DEFAULT_NODE_WIDTH, height: DEFAULT_NODE_HEIGHT},
+          width: DEFAULT_NODE_WIDTH,
+          height: DEFAULT_NODE_HEIGHT,
         }),
       } as SketchLabNode;
 
@@ -476,7 +484,13 @@ export default function ReactFlowCanvas({
     [readOnly, openToolbar, nodes]
   );
 
-  const {handleEdgeClick, openLineEdge, setLineEdgeColor} = useLineToolbar({
+  const {
+    handleEdgeClick,
+    openLineEdge,
+    setLineEdgeColor,
+    setLineEdgeWidth,
+    setLineEdgeStrokeStyle,
+  } = useLineToolbar({
     edges,
     nodes,
     readOnly,
@@ -537,6 +551,12 @@ export default function ReactFlowCanvas({
                 anchorNodeId={openLineEdge.source}
                 onSelectColor={value =>
                   setLineEdgeColor(openLineEdge.id, value)
+                }
+                onSelectWidth={value =>
+                  setLineEdgeWidth(openLineEdge.id, value)
+                }
+                onSelectStrokeStyle={value =>
+                  setLineEdgeStrokeStyle(openLineEdge.id, value)
                 }
               />
             )}

@@ -101,6 +101,7 @@ export default class Announcements extends Component {
                 styles.notificationBanner,
                 'announcement-notification'
               )}
+              fullWidth={false}
               variant={
                 NOTIFICATION_VARIANT_BY_TYPE[announcement.type] || 'info'
               }

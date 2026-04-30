@@ -669,12 +669,10 @@ Resources:
                   - 'devicefarm:ListNetworkProfiles'
                   - 'devicefarm:ListDevicePools'
                   - 'devicefarm:ListRemoteAccessSessions'
-                  - 'devicefarm:ScheduleRun'
                   - 'devicefarm:StopRun'
                   - 'devicefarm:StopJob'
                   - 'devicefarm:StopRemoteAccessSession'
                   - 'devicefarm:CreateUpload'
-                  - 'devicefarm:CreateRemoteAccessSession'
                   - 'devicefarm:DeleteRun'
                   - 'devicefarm:DeleteUpload'
                   - 'devicefarm:DeleteRemoteAccessSession'
@@ -689,8 +687,11 @@ Resources:
                   - !Sub 'arn:aws:devicefarm:*:${AWS::AccountId}:networkprofile:*'
                   - !Sub 'arn:aws:devicefarm:*:${AWS::AccountId}:session:*'
                   - !Sub 'arn:aws:devicefarm:*:${AWS::AccountId}:artifact:*'
-              # Device-level and account-wide list actions are not resource-scopable
-              # (devices are AWS-managed and have no account in their ARN).
+              # Actions evaluated against AWS-managed device ARNs (no account
+              # ID in the ARN) or against account-wide list endpoints — neither
+              # is resource-scopable. CreateRemoteAccessSession and ScheduleRun
+              # take a deviceArn parameter and IAM evaluates them against the
+              # device resource, not the project.
               - Effect: Allow
                 Action:
                   - 'devicefarm:GetDevice'
@@ -698,6 +699,8 @@ Resources:
                   - 'devicefarm:ListProjects'
                   - 'devicefarm:ListOfferings'
                   - 'devicefarm:ListOfferingPromotions'
+                  - 'devicefarm:CreateRemoteAccessSession'
+                  - 'devicefarm:ScheduleRun'
                 Resource: '*'
 <% end -%>
       ManagedPolicyArns:

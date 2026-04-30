@@ -6,6 +6,10 @@ import {
 } from '@cdo/apps/lab2/types';
 
 import {ToolbarTarget} from '../context';
+import {
+  LineStrokeStyleValue,
+  strokeDasharrayFromStyle,
+} from '../elementToolbars/toolbarPalettes';
 import {isLineEdge} from '../utils/lineEdges';
 
 interface UseLineToolbarOptions {
@@ -53,21 +57,67 @@ export function useLineToolbar({
     return edge;
   }, [openToolbarTarget, edges, nodes]);
 
-  const setLineEdgeColor = useCallback(
-    (edgeId: string, strokeColor: string) => {
+  const updateLineEdgeStyle = useCallback(
+    (
+      edgeId: string,
+      updateStyle: (currentStyle: React.CSSProperties) => React.CSSProperties
+    ) => {
       setEdges(currentEdges =>
-        currentEdges.map(edge =>
-          edge.id === edgeId
-            ? {
-                ...edge,
-                style: {...edge.style, stroke: strokeColor},
-              }
-            : edge
-        )
+        currentEdges.map(edge => {
+          if (edge.id !== edgeId) {
+            return edge;
+          }
+          const currentStyle = {...edge.style};
+          return {
+            ...edge,
+            style: updateStyle(currentStyle),
+          };
+        })
       );
     },
     [setEdges]
   );
 
-  return {handleEdgeClick, openLineEdge, setLineEdgeColor};
+  const setLineEdgeColor = useCallback(
+    (edgeId: string, strokeColor: string) => {
+      updateLineEdgeStyle(edgeId, currentStyle => ({
+        ...currentStyle,
+        stroke: strokeColor,
+      }));
+    },
+    [updateLineEdgeStyle]
+  );
+
+  const setLineEdgeWidth = useCallback(
+    (edgeId: string, strokeWidth: number) => {
+      updateLineEdgeStyle(edgeId, currentStyle => ({
+        ...currentStyle,
+        strokeWidth,
+      }));
+    },
+    [updateLineEdgeStyle]
+  );
+
+  const setLineEdgeStrokeStyle = useCallback(
+    (edgeId: string, strokeStyle: LineStrokeStyleValue) => {
+      const strokeDasharray = strokeDasharrayFromStyle(strokeStyle);
+      updateLineEdgeStyle(edgeId, currentStyle => {
+        if (!strokeDasharray) {
+          const styleWithoutDasharray = {...currentStyle};
+          delete styleWithoutDasharray.strokeDasharray;
+          return styleWithoutDasharray;
+        }
+        return {...currentStyle, strokeDasharray};
+      });
+    },
+    [updateLineEdgeStyle]
+  );
+
+  return {
+    handleEdgeClick,
+    openLineEdge,
+    setLineEdgeColor,
+    setLineEdgeWidth,
+    setLineEdgeStrokeStyle,
+  };
 }
