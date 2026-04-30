@@ -6,7 +6,8 @@ class DBQueryTest < ActionDispatch::IntegrationTest
     ActiveRecord::Base.connection.disable_query_cache!
     @unit = create(:unit, :with_levels)
     create(:single_unit_course, unit: @unit)
-    setup_script_cache
+    Unit.stubs(:should_cache?).returns(true)
+    Unit.clear_cache
   end
 
   test "script level show" do
@@ -23,7 +24,7 @@ class DBQueryTest < ActionDispatch::IntegrationTest
         script: script,
         level: level,
         level_source: create(:level_source, level: level)
-  )
+      )
 
       assert_cached_queries(18) do
         get course_unit_lesson_script_level_path(
@@ -51,7 +52,7 @@ class DBQueryTest < ActionDispatch::IntegrationTest
         script: script,
         level: level,
         level_source: create(:level_source, level: level)
-  )
+      )
 
       user_app_options_path = user_app_options_path(
         script: script.name,
@@ -78,8 +79,7 @@ class DBQueryTest < ActionDispatch::IntegrationTest
       sl = script.script_levels[2]
       params = {program: 'fake program', testResult: 100, result: 'true'}
 
-      setup_script_cache
-      assert_cached_queries(10) do
+      assert_cached_queries(9) do
         post milestone_path(
           user_id: student.id,
           script_level_id: sl.id,
@@ -100,7 +100,7 @@ class DBQueryTest < ActionDispatch::IntegrationTest
       sl = script.script_levels[1]
       params = {program: 'fake program', testResult: 100, result: 'true'}
 
-      setup_script_cache
+      Unit.clear_cache
       assert_cached_queries(8) do
         post milestone_path(
           user_id: student.id,
@@ -180,9 +180,7 @@ class DBQueryTest < ActionDispatch::IntegrationTest
       course = create(:single_unit_course, unit: unit, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable, version_year: 'unversioned', family_name: 'hoc-family')
       CourseOffering.add_course_offering(course)
 
-      # make sure the new unit is in the cache
-      setup_script_cache
-
+      Unit.clear_cache
       level = unit.levels.first
 
       teacher = create(:teacher)

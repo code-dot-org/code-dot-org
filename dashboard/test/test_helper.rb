@@ -412,16 +412,6 @@ class ActiveSupport::TestCase
     Rails.logger.info '--------------'
     ActiveRecord::Base.stubs(:connection).raises 'Database disconnected'
   end
-
-  def setup_script_cache
-    Unit.stubs(:should_cache?).returns true
-    Unit.clear_cache
-    # turn on the cache (off by default in test env so tests don't confuse each other)
-    Rails.application.config.action_controller.perform_caching = true
-    Rails.application.config.cache_store = :memory_store, {size: 64.megabytes}
-
-    Rails.cache.clear
-  end
 end
 
 # Helpers for all controller test cases

@@ -28,7 +28,6 @@ class CongratsControllerTest < ActionController::TestCase
   test "cached query test for hoc course" do
     hoc_course = create(:hoc_course)
 
-    setup_script_cache
     UnitGroup.clear_cache
 
     assert_cached_queries(0) do
