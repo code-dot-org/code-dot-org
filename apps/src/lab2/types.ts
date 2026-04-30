@@ -102,6 +102,11 @@ export type Source =
 interface SketchlabReactFlowNodeBase {
   id: string;
   position: {x: number; y: number};
+  // width and height are set by NodeResizer when the user drags a handle
+  // (or by keyboard resize) and are persisted so the node restores at the
+  // correct size on reload.
+  width?: number;
+  height?: number;
   style?: CSSProperties;
 }
 
@@ -122,6 +127,7 @@ export interface SketchlabReactFlowEdge {
   sourceHandle?: string;
   targetHandle?: string;
   type?: string;
+  markerStart?: EdgeMarkerType;
   markerEnd?: EdgeMarkerType;
 }
 

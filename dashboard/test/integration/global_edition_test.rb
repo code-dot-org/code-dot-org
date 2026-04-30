@@ -10,7 +10,7 @@ class GlobalEditionTest < ActionDispatch::IntegrationTest
 
   let(:ge_region) {'fa'}
   let(:document) {Nokogiri::HTML(response.body)}
-  let(:ge_region_script_data) {document.at('script[data-ge-region]').try(:[], 'data-ge-region')}
+  let(:ge_region_html_data) {document.at('html[data-ge-region]').try(:[], 'data-ge-region')}
   let(:page_lang) {document.at('html[lang]').try(:[], 'lang')}
 
   before do
@@ -137,7 +137,7 @@ class GlobalEditionTest < ActionDispatch::IntegrationTest
 
       it 'sets script ge-region data attribute' do
         get_regional_page
-        _(ge_region_script_data).must_equal ge_region
+        _(ge_region_html_data).must_equal ge_region
       end
 
       it 'sets request :ge_region cookie' do
@@ -365,7 +365,7 @@ class GlobalEditionTest < ActionDispatch::IntegrationTest
       must_respond_with 200
       _(path).must_equal regional_page_path
       _(request.params[extra_param_key]).must_equal extra_param_val
-      _(ge_region_script_data).must_equal ge_region
+      _(ge_region_html_data).must_equal ge_region
       _(page_lang).must_equal locale
 
       expect(Metrics::Events).to have_received(:log_event).with(
@@ -397,7 +397,7 @@ class GlobalEditionTest < ActionDispatch::IntegrationTest
       must_respond_with 200
       _(path).must_equal regional_page_path
       _(request.params[extra_param_key]).must_equal extra_param_val
-      _(ge_region_script_data).must_equal ge_region
+      _(ge_region_html_data).must_equal ge_region
       _(page_lang).must_equal locale
 
       expect(Metrics::Events).to have_received(:log_event).with(
@@ -433,7 +433,7 @@ class GlobalEditionTest < ActionDispatch::IntegrationTest
         must_respond_with 200
         _(path).must_equal regional_page_path
         _(request.params[extra_param_key]).must_equal extra_param_val
-        _(ge_region_script_data).must_equal ge_region
+        _(ge_region_html_data).must_equal ge_region
         _(page_lang).must_equal locale
 
         expect(Metrics::Events).to have_received(:log_event).with(

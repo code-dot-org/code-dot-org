@@ -281,12 +281,14 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
   private def sign_in_classlink(user)
     prepare_locale_cookie user
     user.update_oauth_credential_tokens auth_hash
+    auto_verify_teacher! user
     sign_in_user user
   end
 
   private def sign_in_clever(user)
     prepare_locale_cookie user
     user.update_oauth_credential_tokens auth_hash
+    auto_verify_teacher! user
     sign_in_user user
   end
 
@@ -456,6 +458,10 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
     clever_data = OmniAuth::AuthHash.new(dob: dob, gender: gender, user_type: user_type)
     auth.info&.merge!(clever_data)
     auth
+  end
+
+  private def auto_verify_teacher!(user)
+    user.verify_teacher! if user.teacher? && !user.verified_teacher?
   end
 
   # Moves non-standard attributes from the extra ClassLink OAuth data and puts it in the location we
