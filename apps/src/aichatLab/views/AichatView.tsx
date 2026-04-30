@@ -309,15 +309,26 @@ const AichatView: React.FunctionComponent<LabProps<AichatLevelProperties>> = ({
       addFileHandler: async params => {
         const {fileName, getFile, notifySuccess, notifyError} = params;
         const file = await getFile();
-        chatWorkspaceRef.current?.addFiles([file], flaggedFilename =>
-          notifyError(
-            `${flaggedFilename} has been flagged by our content moderation policy and has not been added to your chat message.`
-          )
-        );
-        notifySuccess(
-          'new',
-          `${fileName} has been added to your chat message.`
-        );
+        chatWorkspaceRef.current?.addFiles([file], status => {
+          if (status === 'uploaded') {
+            notifySuccess(
+              'new',
+              `${fileName} has been added to your chat message.`
+            );
+          } else if (status === 'imageFileFlagged') {
+            notifyError(
+              `${fileName} has been flagged by our content moderation policy and has not been added to your chat message.`
+            );
+          } else if (status === 'sizeLimitExceeded') {
+            notifyError(
+              `${fileName} exceeds the maximum file size limit and has not been added to your chat message. Please try a smaller file.`
+            );
+          } else {
+            notifyError(
+              `There was an error uploading ${fileName}. Please try again.`
+            );
+          }
+        });
       },
       validateFileName: (fileName: string) => ({
         newFileName: fileName,
