@@ -543,7 +543,10 @@ end
 def test_run_identifier(browser, feature)
   feature_name = feature.gsub(/.*features\//, '').gsub('.feature', '').tr('/', '_')
   browser_name = browser_name_or_unknown(browser)
-  "#{browser_name}_#{feature_name}" + (eyes? ? '_eyes' : '')
+  # _df distinguishes Device Farm output from concurrent SauceLabs runs
+  # against the same browser+feature during the migration. Drop after we
+  # cut over fully to DF (or to a SauceLabs-only/DF-only steady state).
+  "#{browser_name}_#{feature_name}" + (eyes? ? '_eyes' : '') + ($options.device_farm ? '_df' : '')
 end
 
 def browser_name_or_unknown(browser)
