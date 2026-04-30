@@ -161,17 +161,6 @@ const ChatWorkspace = forwardRef<ChatWorkspaceHandle, ChatWorkspaceProps>(
     const canUploadAssets =
       supportsMultimodalInput && multimodalEnabled && canDisplayAssets;
 
-    const stagedFiles = useAppSelector(state => state.aichat.stagedFiles);
-    const stagedFilesAlert = useAppSelector(
-      state => state.aichat.stagedFilesAlert
-    );
-    const userAddedSelectionContext = useAppSelector(
-      state => state.aichat.userAddedSelectionContext
-    );
-    const hasChips =
-      (canUploadAssets && (stagedFiles.length > 0 || !!stagedFilesAlert)) ||
-      Object.keys(userAddedSelectionContext ?? {}).length > 0;
-
     const buildAssetUrl = useCallback(
       (asset: ChatAsset) => {
         return getAssetUrl(asset, channelId, levelName);
@@ -400,14 +389,13 @@ const ChatWorkspace = forwardRef<ChatWorkspaceHandle, ChatWorkspaceProps>(
           />
         )}
         <div className={moduleStyles.footer}>
-          {hasChips && (
-            <div className={moduleStyles.chipsRow}>
-              {canUploadAssets && (
-                <StagedFilesPreview buildAssetUrl={buildAssetUrl} />
-              )}
-              <UserAddedSelectionContextPreview />
-            </div>
-          )}
+          <div className={moduleStyles.chipsRow}>
+            {canUploadAssets && (
+              <StagedFilesPreview buildAssetUrl={buildAssetUrl} />
+            )}
+            <UserAddedSelectionContextPreview />
+          </div>
+
           {canChatWithModel && (
             <UserChatMessageEditor
               clientType={clientType}

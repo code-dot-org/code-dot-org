@@ -122,13 +122,14 @@ $preview-image-size: 32px;
       gap: 4px;
       overflow: hidden;
 
-      > p:first-child {
+      .filenameText {
         flex-shrink: 1;
         min-width: 0;
         overflow: hidden;
         text-overflow: ellipsis;
         white-space: nowrap;
         margin: 0;
+        font-weight: 600;
       }
     }
 
