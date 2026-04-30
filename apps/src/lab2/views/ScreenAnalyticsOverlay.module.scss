@@ -1,0 +1,21 @@
+.overlay {
+  position: fixed;
+  top: 8px;
+  right: 8px;
+  z-index: 9999;
+  padding: 8px 10px;
+  background-color: rgb(0 0 0 / 78%);
+  color: #fff;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  font-size: 12px;
+  line-height: 1.35;
+  border-radius: 4px;
+  pointer-events: none;
+  user-select: none;
+  white-space: nowrap;
+}
+
+.percent {
+  font-size: 16px;
+  font-weight: 600;
+}
