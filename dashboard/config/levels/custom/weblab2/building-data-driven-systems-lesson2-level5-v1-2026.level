@@ -1,0 +1,122 @@
+<Weblab2>
+  <config><![CDATA[{
+  "game_id": 74,
+  "created_at": "2026-04-30T05:14:45.000Z",
+  "level_num": "custom",
+  "user_id": 22366,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "## Predict What .map() Does\r\n\r\n### Do This:\r\n\r\n1. Look at the code and think about what is happening:\r\n   * What is being repeated?\r\n   * How is `index` being used?\r\n\r\n2. Predict what this code will do and submit your predictions below:\r\n   * How many cards will be created?\r\n   * What will each card show?\r\n\r\n3. Prompt AI to explain the syntax of `.map()` in this code.",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "false",
+    "widget_view": "false",
+    "initial_view_mode": "split",
+    "predict_settings": {
+      "isPredictLevel": true,
+      "solution": "",
+      "questionType": "freeResponse",
+      "placeholderText": "I think this code will create cards showing… because…",
+      "multipleChoiceOptions": [
+        ""
+      ],
+      "freeResponseHeight": 50,
+      "codeEditableAfterSubmit": false
+    },
+    "ai_tutor_prompt_settings": {
+      "answerTypes": [
+        "explainCode",
+        "documentation"
+      ],
+      "answerTypeCustomizations": {
+        "explainCode": "You are helping a beginner student understand how .map() works in JavaScript.\n\nExplain the syntax of .map() based on the code the student is viewing.\n\nFocus on:\n- what .map() is doing in this example\n- how many times the code runs\n- what the index represents\n\nDo not introduce advanced terms (like callbacks, return values, or functional programming).\nDo not rewrite or generate new code.\n\nKeep the explanation short, clear, and focused on what the student sees."
+      }
+    },
+    "start_sources": {
+      "folders": {
+        "1": {
+          "id": "1",
+          "name": "images",
+          "parentId": "0",
+          "open": false
+        }
+      },
+      "files": {
+        "1": {
+          "id": "1",
+          "name": "index.html",
+          "contents": "<!DOCTYPE html>\n<html>\n  <head>\n    <meta charset=\"utf-8\" />\n    <title id=\"pageTitle\">Today's Special</title>\n    <link rel=\"stylesheet\" href=\"style.css\" />\n  </head>\n  <body>\n    <main id=\"mainContainer\" class=\"page\">\n      <header id=\"header\">\n        <h1 id=\"heading\">Today's Special</h1>\n        <p id=\"subtitle\">See what’s featured on the menu today.</p>\n      </header>\n\n      <section id=\"cardContainer\" class=\"card-container\"></section>\n    </main>\n\n    <script src=\"helpers.js\"></script>\n    <script src=\"script.js\"></script>\n  </body>\n</html>",
+          "active": false,
+          "folderId": "0"
+        },
+        "2": {
+          "id": "2",
+          "name": "style.css",
+          "contents": "body {\n  margin: 0;\n  font-family: Arial, sans-serif;\n  background: #eef1f6;\n  color: #14213d;\n}\n\n#mainContainer {\n  max-width: 1100px;\n  margin: 0 auto;\n  padding: 32px 16px 40px;\n}\n\n#header {\n  margin-bottom: 20px;\n}\n\n#heading {\n  margin: 0 0 8px;\n  font-size: 2rem;\n}\n\n#subtitle {\n  margin: 0;\n  font-size: 0.95rem;\n  color: #5f687a;\n}\n\n/* ---------- CARD VIEW ---------- */\n\n#cardContainer {\n  display: grid;\n  grid-template-columns: repeat(auto-fit, minmax(260px, 320px));\n  gap: 20px;\n}\n\n.card {\n  background: #ffffff;\n  border-radius: 16px;\n  padding: 12px;\n  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);\n}\n\n.card-image {\n  width: 100%;\n  height: 200px;\n  object-fit: cover;\n  border-radius: 12px;\n}\n\n.card-body {\n  padding: 12px 4px 0;\n}\n\n.card-title {\n  margin: 0 0 6px;\n  font-size: 1.4rem;\n}\n\n.card-description {\n  margin: 0 0 12px;\n  font-size: 0.9rem;\n  color: #5f687a;\n}\n\n.card-badge {\n  display: inline-block;\n  padding: 4px 10px;\n  border-radius: 8px;\n  background: #e6f4ea;\n  color: #2e7d32;\n  font-size: 0.75rem;\n  font-weight: 600;\n}",
+          "folderId": "0",
+          "active": false
+        },
+        "3": {
+          "id": "3",
+          "name": "script.js",
+          "contents": "document.getElementById(\"heading\").textContent = \"Trending Sneakers\";\ndocument.getElementById(\"subtitle\").textContent = \"See what’s popular right now.\";\n\nconst imageArray = [\n  \"images/sneaker1.png\",\n  \"images/sneaker2.png\",\n  \"images/sneaker3.png\"\n];\n\nconst titleArray = [\n  \"Air Max\",\n  \"Jordan 1\",\n  \"Classic Runner\"\n];\n\nconst descriptionArray = [\n  \"Red and white running shoe\",\n  \"Black high-top sneaker\",\n  \"Lightweight everyday sneaker\"\n];\n\nconst badgeArray = [\n  \"Nike\",\n  \"Jordan\",\n  \"Reebok\"\n];\n\ntitleArray.map((item, index) => {\n  createCard(\n    imageArray[index],\n    titleArray[index],\n    descriptionArray[index],\n    badgeArray[index]\n  );\n});",
+          "folderId": "0",
+          "active": true
+        },
+        "4": {
+          "id": "4",
+          "name": "plant.png",
+          "contents": "",
+          "folderId": "0",
+          "url": "/level_starter_assets/ai-and-algorithmic-decisions-lesson2-level1-revised_2026/uuid/debf3eef-9b9f-43ed-9fdf-836b85191544.png",
+          "type": "starter",
+          "active": false
+        },
+        "5": {
+          "id": "5",
+          "name": "helpers.js",
+          "contents": "let cardCount = 0;\n\nconst createCard = (imageSrc, title, description, badgeText) => {\n  const container = document.getElementById(\"cardContainer\");\n\n  const card = document.createElement(\"article\");\n  card.className = \"card\";\n  card.id = \"card\" + cardCount;\n\n  const image = document.createElement(\"img\");\n  image.className = \"card-image\";\n  image.id = \"image\" + cardCount;\n  image.src = imageSrc;\n  image.alt = title;\n\n  const body = document.createElement(\"div\");\n  body.className = \"card-body\";\n  body.id = \"body\" + cardCount;\n\n  const heading = document.createElement(\"h2\");\n  heading.className = \"card-title\";\n  heading.id = \"title\" + cardCount;\n  heading.textContent = title;\n\n  const descriptionEl = document.createElement(\"p\");\n  descriptionEl.className = \"card-description\";\n  descriptionEl.id = \"description\" + cardCount;\n  descriptionEl.textContent = description;\n\n  const badge = document.createElement(\"div\");\n  badge.className = \"card-badge\";\n  badge.id = \"badge\" + cardCount;\n  badge.textContent = badgeText;\n\n  body.appendChild(heading);\n  body.appendChild(descriptionEl);\n  body.appendChild(badge);\n\n  card.appendChild(image);\n  card.appendChild(body);\n\n  container.appendChild(card);\n\n  cardCount++;\n};",
+          "folderId": "0",
+          "active": false,
+          "type": "support"
+        },
+        "6": {
+          "id": "6",
+          "name": "sneaker1.png",
+          "contents": "",
+          "folderId": "1",
+          "url": "/level_starter_assets/building-data-driven-systems-lesson2-level5-v1-2026/uuid/fdd74528-008b-4650-ba8f-89a27beb2a8d.png",
+          "type": "starter",
+          "active": false
+        },
+        "7": {
+          "id": "7",
+          "name": "sneaker2.png",
+          "contents": "",
+          "folderId": "1",
+          "url": "/level_starter_assets/building-data-driven-systems-lesson2-level5-v1-2026/uuid/0aeedd82-d94d-4d88-8aa5-1aeb63a878e9.png",
+          "type": "starter",
+          "active": false
+        },
+        "8": {
+          "id": "8",
+          "name": "sneaker3.png",
+          "contents": "",
+          "folderId": "1",
+          "url": "/level_starter_assets/building-data-driven-systems-lesson2-level5-v1-2026/uuid/f3c3105a-c549-4a47-b647-949e92b20490.png",
+          "type": "starter",
+          "active": false
+        }
+      },
+      "openFiles": [
+        "3"
+      ]
+    },
+    "encrypted_exemplar_sources": "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\nAioy1UoZNA==\n",
+    "offer_browser_tts": "false",
+    "require_edit_to_continue": "false"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-04-30T05:14:45.877+00:00\",\"changed\":[\"cloned from \\\"ai-and-algorithmic-decisions-lesson2-level1-revised_2026\\\"\"],\"cloned_from\":\"ai-and-algorithmic-decisions-lesson2-level1-revised_2026\"},{\"changed_at\":\"2026-04-30 05:17:51 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\",\"ai_tutor_prompt_settings\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-04-30 05:23:02 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-04-30 05:23:18 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-04-30 05:23:18 +0000\",\"changed\":[],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-04-30 05:23:18 +0000\",\"changed\":[],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-04-30 05:23:18 +0000\",\"changed\":[],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-04-30 05:23:18 +0000\",\"changed\":[],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"}]"
+}]]></config>
+</Weblab2>

@@ -47,7 +47,10 @@ const EditProductTourSettings: React.FunctionComponent<
     <div>
       <Typography variant="body3" gutterBottom>
         Select which product tours will be triggered on this level. A user will
-        only see the product tour if they have not seen it before on any level.
+        only see the product tour automatically if they have not seen it before
+        on any level. All product tours are always available in the resource tab
+        on a level so users can access them manually. If not selected, the
+        product tour will be listed under “Additional Walkthroughs”.
       </Typography>
       <input
         id="level_product_tour_settings"

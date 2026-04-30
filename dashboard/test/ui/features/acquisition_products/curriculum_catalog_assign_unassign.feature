@@ -133,7 +133,13 @@ Feature: Curriculum Catalog Assign and Unassign
     And element "input[type=checkbox]:eq(2)" is not checked
     And the "Section 1" checkbox is not selected
     And the "Section 2" checkbox is selected
+
+    # Speculative attempt to fix occasional flakiness when running this test
+    # in Device Farm, by adding waits before and after clicking the checkbox.
+    And I wait for 2 seconds
     And I click the "Section 2" checkbox in the dialog
+    And I wait for 2 seconds
+
     And the "Section 1" checkbox is not selected
     And the "Section 2" checkbox is not selected
     And I click selector "button:contains(Confirm section assignments)"
