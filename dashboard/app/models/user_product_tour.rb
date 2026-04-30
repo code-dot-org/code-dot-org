@@ -2,7 +2,7 @@
 #
 # Table name: user_product_tours
 #
-#  id           :integer          not null, primary key
+#  id           :bigint           not null, primary key
 #  user_id      :integer          not null
 #  tour_name    :string(255)      not null
 #  completed_at :datetime         not null
