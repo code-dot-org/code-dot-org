@@ -397,7 +397,7 @@ class ManageStudentsTable extends Component {
         {numberOfEditingRows <= 1 && (
           <span className={moduleStyles.verticalAlign}>
             <div className={moduleStyles.headerName}>{i18n.actions()}</div>
-            <div className={moduleStyles.headerIcon}>
+            <div>
               <ManageStudentsActionsHeaderCell
                 editAll={this.props.editAll}
                 isShareColumnVisible={this.props.showSharingColumn}
@@ -429,7 +429,7 @@ class ManageStudentsTable extends Component {
         >
           <div>{i18n.shareSettingMoreDetailsTooltip()}</div>
         </ReactTooltip>
-        <div className={moduleStyles.headerIcon}>
+        <div>
           <SharingControlActionsHeaderCell />
         </div>
       </span>
