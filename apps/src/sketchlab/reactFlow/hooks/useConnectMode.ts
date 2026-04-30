@@ -98,8 +98,6 @@ export function useConnectMode({
       }
       const handles = pickHandles(sourceNode, targetNode);
       setEdges(currentEdges => {
-        // Re-check inside the updater: nodes may have changed since the
-        // outer guard ran (e.g. an endpoint was just connected).
         if (!canCreateConnection(connectingFrom, targetNodeId, nodes)) {
           return currentEdges;
         }
