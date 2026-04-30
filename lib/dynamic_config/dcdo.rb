@@ -70,6 +70,7 @@ class DCDOBase < DynamicConfigBase
       'ai-gateway-enabled': DCDO.get('ai-gateway-enabled', true),
       'frontend-observability-enabled': DCDO.get('frontend-observability-enabled', false),
       'frontend-newrelic-enabled': DCDO.get('frontend-newrelic-enabled', true),
+      'browser-events-enabled': DCDO.get('browser-events-enabled', true),
       'onboarding-enabled': DCDO.get('onboarding-enabled', false),
       'ai-diff-drawer': DCDO.get('ai-diff-drawer', false),
       'language-deprecation-warning-enabled': DCDO.get('language-deprecation-warning-enabled', false),
