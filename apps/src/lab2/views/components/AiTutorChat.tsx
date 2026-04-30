@@ -6,6 +6,7 @@ import classNames from 'classnames';
 import React, {useCallback, useMemo} from 'react';
 
 import {
+  AiChatDisabledState,
   ChatButtonClickHandler,
   ChatButtonData,
   ResponseSchemaSettings,
@@ -40,8 +41,7 @@ interface AiTutorChatProps {
   tutorVideos?: JsonVideoFileMetadata[];
   isLessonDeepDive?: boolean;
   lessonId?: number;
-  disabled?: boolean;
-  disabledMessage?: string;
+  disabledState?: AiChatDisabledState;
 }
 
 // A free chat with lab-supplied context added to each question.
@@ -57,8 +57,7 @@ const AiTutorChat: React.FunctionComponent<AiTutorChatProps> = ({
   tutorVideos,
   isLessonDeepDive = false,
   lessonId,
-  disabled,
-  disabledMessage,
+  disabledState,
 }) => {
   const viewingAiTutorVersionFileUpdates = useAppSelector(
     isViewingAiTutorVersionFileUpdates
@@ -152,8 +151,7 @@ const AiTutorChat: React.FunctionComponent<AiTutorChatProps> = ({
         responseCallback={aiTutorResponseSchemaSettings?.responseCallback}
         hasInstructionsDrawer={hasInstructionsDrawer}
         lessonId={lessonId}
-        disabled={disabled}
-        disabledMessage={disabledMessage}
+        disabledState={disabledState}
         renderLastMessagePostText={renderLastMessagePostText}
       />
     </div>

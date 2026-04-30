@@ -7,9 +7,9 @@ markdown <<MARKDOWN
 
 ## AI Teaching Assistant
 
-#### **AI Teaching Assistant** is an exciting new teaching tool! Designed for CS educators, it offers instant, insightful project assessments, enabling teachers to concentrate on inspiring and connecting with their students.
+#### **AI Teaching Assistant** is an exciting new teaching tool! Designed for computer science and AI educators, it offers instant, insightful project assessments, enabling teachers to concentrate on inspiring and connecting with their students.
 
-#### The AI Teaching Assistant transforms CS education, easing the workload for new and experienced teachers alike. By streamlining assessments, it boosts educator confidence, enabling a focus on enriching student interactions and tailored learning experiences.
+#### The AI Teaching Assistant transforms computer science and AI education, easing the workload for new and experienced teachers alike. By streamlining assessments, it boosts educator confidence, enabling a focus on enriching student interactions and tailored learning experiences.
 <br>
 
 <div style="background-color: #C6E3E7; border-radius: 40px; color: #000000; width: 95%; padding: 10px 10px 10px 10px;"> <p style="line-height: 1.5; margin-left: 10px; margin-right: 10px; margin-top: 20px; margin-bottom: 20px; font-size: 18px;">
@@ -25,7 +25,7 @@ markdown <<MARKDOWN
 <img src="https://images.code.org/5543660633edc8e63426f5e5ec97f205-image-1715031688258.40.57 PM.png" alt="Examples of AI TA assessing student work.">
 <br>
 
-#### AI Teaching Assistant is a feature available for mini-projects and projects in CS Discoveries Unit 3 - Interactive Animations and Games. It uses It provides the following:
+#### AI Teaching Assistant is a feature available for mini-projects and projects in CS Discoveries Unteractive Animations and Games. It provides the following:
 
 * #### **Automated Assessment**: Instantly assess student work against Code.org's rubrics.
 * #### **Feedback Insights**: Provide targeted, constructive feedback to foster student growth.

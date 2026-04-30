@@ -46,6 +46,7 @@ const aif_prefixes = [
   '/courses/teaching-ai-foundations-2025',
   '/courses/oceans',
   '/courses/how-ai-works-2023',
+  '/courses/problem-solving-with-ai-2025',
 ];
 
 const dashboard_prefixes = [
@@ -90,6 +91,7 @@ const live = [
   '/courses/teaching-ai-foundations-2025',
   '/courses/oceans',
   '/courses/how-ai-works-2023',
+  '/courses/problem-solving-with-ai-2025',
 ];
 
 const experiments =

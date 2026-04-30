@@ -1,0 +1,109 @@
+<Weblab2>
+  <config><![CDATA[{
+  "game_id": 74,
+  "created_at": "2026-04-29T06:32:03.000Z",
+  "level_num": "custom",
+  "user_id": 19378,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "# template",
+    "offer_browser_tts": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "false",
+    "widget_view": "false",
+    "initial_view_mode": "split",
+    "require_edit_to_continue": "true",
+    "predict_settings": {
+      "isPredictLevel": false,
+      "solution": "",
+      "questionType": "freeResponse",
+      "placeholderText": "",
+      "multipleChoiceOptions": [
+        ""
+      ],
+      "freeResponseHeight": 50,
+      "codeEditableAfterSubmit": false
+    },
+    "ai_tutor_prompt_settings": {
+      "answerTypes": [
+        "buildHTML",
+        "buildCSS",
+        "ask",
+        "hint",
+        "debug",
+        "example",
+        "explainCode",
+        "documentation",
+        "pseudocode",
+        "testCase"
+      ],
+      "answerTypeCustomizations": {
+      }
+    },
+    "start_sources": {
+      "folders": {
+        "1": {
+          "id": "1",
+          "name": "images",
+          "parentId": "0",
+          "open": false
+        }
+      },
+      "files": {
+        "1": {
+          "id": "1",
+          "name": "index.html",
+          "contents": "<!DOCTYPE html>\n<html>\n  <head>\n    <meta charset=\"utf-8\" />\n    <title id=\"pageTitle\">Sneaker Drops</title>\n    <link rel=\"stylesheet\" href=\"style.css\" />\n  </head>\n  <body>\n    <main id=\"mainContainer\" class=\"page\">\n      <header id=\"header\">\n        <h1 id=\"heading\">Latest Sneaker Drops</h1>\n        <p id=\"subtitle\">Check out today’s featured sneakers.</p>\n      </header>\n\n      <section id=\"cardContainer\" class=\"card-container\"></section>\n    </main>\n\n    <script src=\"helpers.js\"></script>\n    <script src=\"script.js\"></script>\n  </body>\n</html>",
+          "active": false,
+          "folderId": "0"
+        },
+        "2": {
+          "id": "2",
+          "name": "style.css",
+          "contents": "body {\n  margin: 0;\n  font-family: Arial, sans-serif;\n  background: #eef1f6;\n  color: #14213d;\n}\n\n#mainContainer {\n  max-width: 1100px;\n  margin: 0 auto;\n  padding: 32px 16px 40px;\n}\n\n#header {\n  margin-bottom: 20px;\n}\n\n#heading {\n  margin: 0 0 8px;\n  font-size: 2rem;\n}\n\n#subtitle {\n  margin: 0;\n  font-size: 0.95rem;\n  color: #5f687a;\n}\n\n/* ---------- CARD VIEW ---------- */\n\n#cardContainer {\n  display: grid;\n  grid-template-columns: repeat(auto-fit, minmax(260px, 320px));\n  gap: 20px;\n}\n\n.card {\n  background: #ffffff;\n  border-radius: 16px;\n  padding: 12px;\n  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);\n}\n\n.card-image {\n  width: 100%;\n  height: 200px;\n  object-fit: cover;\n  border-radius: 12px;\n}\n\n.card-body {\n  padding: 12px 4px 0;\n}\n\n.card-title {\n  margin: 0 0 6px;\n  font-size: 1.4rem;\n}\n\n.card-description {\n  margin: 0 0 12px;\n  font-size: 0.9rem;\n  color: #5f687a;\n}\n\n.card-badge {\n  display: inline-block;\n  padding: 4px 10px;\n  border-radius: 8px;\n  background: #e6f4ea;\n  color: #2e7d32;\n  font-size: 0.75rem;\n  font-weight: 600;\n}",
+          "folderId": "0",
+          "active": false
+        },
+        "3": {
+          "id": "3",
+          "name": "helpers.js",
+          "contents": "let cardCount = 0;\n\nconst createCard = (imageSrc, title, description, badgeText) => {\n  const container = document.getElementById(\"cardContainer\");\n\n  const card = document.createElement(\"article\");\n  card.className = \"card\";\n  card.id = \"card\" + cardCount;\n\n  const image = document.createElement(\"img\");\n  image.className = \"card-image\";\n  image.id = \"image\" + cardCount;\n  image.src = imageSrc;\n  image.alt = title;\n\n  const body = document.createElement(\"div\");\n  body.className = \"card-body\";\n  body.id = \"body\" + cardCount;\n\n  const heading = document.createElement(\"h2\");\n  heading.className = \"card-title\";\n  heading.id = \"title\" + cardCount;\n  heading.textContent = title;\n\n  const descriptionEl = document.createElement(\"p\");\n  descriptionEl.className = \"card-description\";\n  descriptionEl.id = \"description\" + cardCount;\n  descriptionEl.textContent = description;\n\n  const badge = document.createElement(\"div\");\n  badge.className = \"card-badge\";\n  badge.id = \"badge\" + cardCount;\n  badge.textContent = badgeText;\n\n  body.appendChild(heading);\n  body.appendChild(descriptionEl);\n  body.appendChild(badge);\n\n  card.appendChild(image);\n  card.appendChild(body);\n\n  container.appendChild(card);\n\n  cardCount++;\n};",
+          "folderId": "0",
+          "active": false,
+          "type": "support"
+        },
+        "4": {
+          "id": "4",
+          "name": "script.js",
+          "contents": "",
+          "folderId": "0",
+          "active": false
+        },
+        "6": {
+          "id": "6",
+          "name": "prompt.md",
+          "contents": "",
+          "folderId": "0",
+          "active": true
+        },
+        "7": {
+          "id": "7",
+          "name": "sneaker1.png",
+          "contents": "",
+          "folderId": "1",
+          "url": "/level_starter_assets/building-data-driven-systems-lesson2-level3a-template-v2-2026/uuid/0b265c5f-d55d-4c3d-ba87-e39912fd4db7.png",
+          "type": "starter",
+          "active": false
+        }
+      },
+      "openFiles": [
+        "6",
+        "4"
+      ]
+    }
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-04-29 06:32:15 +0000\",\"changed\":[],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-04-29 06:33:52 +0000\",\"changed\":[],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-04-29 06:33:52 +0000\",\"changed\":[],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-04-29 06:33:52 +0000\",\"changed\":[],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-04-29 06:33:52 +0000\",\"changed\":[],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-04-29 06:33:58 +0000\",\"changed\":[],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-04-29 06:34:31 +0000\",\"changed\":[],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-04-29 06:34:31 +0000\",\"changed\":[],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-04-29 06:34:31 +0000\",\"changed\":[],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-04-29 06:36:51 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-04-29 06:36:52 +0000\",\"changed\":[],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-04-29 06:36:52 +0000\",\"changed\":[],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-04-29 06:36:52 +0000\",\"changed\":[],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-04-29 06:36:52 +0000\",\"changed\":[],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-04-29 06:36:52 +0000\",\"changed\":[],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-04-29 06:36:52 +0000\",\"changed\":[],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-04-30 04:15:16 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-04-30 04:15:16 +0000\",\"changed\":[],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-04-30 04:15:16 +0000\",\"changed\":[],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-04-30 04:15:43 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-04-30 04:15:43 +0000\",\"changed\":[],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-04-30 04:15:43 +0000\",\"changed\":[],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-04-30 04:15:43 +0000\",\"changed\":[],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-04-30 04:15:43 +0000\",\"changed\":[],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-04-30 04:15:43 +0000\",\"changed\":[],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-04-30 04:23:41 +0000\",\"changed\":[],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-04-30 04:23:41 +0000\",\"changed\":[],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-04-30 04:23:41 +0000\",\"changed\":[],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-04-30 04:39:03 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-04-30 04:39:03 +0000\",\"changed\":[],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-04-30 04:39:03 +0000\",\"changed\":[],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"}]"
+}]]></config>
+</Weblab2>

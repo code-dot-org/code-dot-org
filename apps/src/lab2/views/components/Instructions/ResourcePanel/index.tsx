@@ -48,6 +48,7 @@ import NavigationArea from '../NavigationArea';
 import AiTutorChatWithInstructionDrawer from './AiTutorChatWithInstructionsDrawer/AiTutorChatWithInstructionDrawer';
 import BackpackHeaderButtons from './Backpack/BackpackHeaderButtons';
 import BackpackPanel from './Backpack/BackpackPanel';
+import type {AddFileHandler} from './Backpack/types';
 import {
   resourcePanelInstructionsElementId,
   resourcePanelTabsElementId,
@@ -101,6 +102,10 @@ export interface BackpackProps {
     ) => Promise<void>;
   };
   supportedFileTypes: string[];
+  /** Custom tooltip text to display for the Add File button. */
+  addFileTooltipText?: string;
+  /** Alternative file handler that allows labs to control how files are added. If provided, the other callbacks will not be used. */
+  addFileHandler?: AddFileHandler;
 }
 
 const tabInfo: {[key in Tabs]: {title: string; icon: string}} = {
@@ -242,12 +247,11 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
     tutorLevel: levelProperties.aiTutorAvailable,
     aiChatAccessLevel: aiChatAccessLevel,
   });
-  const {disabled: aiTutorDisabled, disabledMessage: aiTutorDisabledMessage} =
-    useAiChatDisabledState({
-      appName,
-      isPredictLevel: !!isPredictLevel,
-      hasSubmittedPredictResponse,
-    });
+  const aiChatDisabledState = useAiChatDisabledState({
+    appName,
+    isPredictLevel: !!isPredictLevel,
+    hasSubmittedPredictResponse,
+  });
 
   const showBackpack = backpackProps && !isPermanentlyReadOnly;
   useResourcePanelTours({
@@ -301,8 +305,7 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
         aiTutorSystemPrompt,
         aiTutorResponseSchemaSettings,
         tutorVideos,
-        disabled: aiTutorDisabled,
-        disabledMessage: aiTutorDisabledMessage,
+        disabledState: aiChatDisabledState,
       };
       if (!hasInstructionsDrawer || !levelProperties.longInstructions) {
         tabMap[Tabs.AiTutor] = <AiTutorChat {...aiTutorProps} />;
@@ -405,8 +408,7 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
     aiTutorSystemPrompt,
     aiTutorResponseSchemaSettings,
     tutorVideos,
-    aiTutorDisabled,
-    aiTutorDisabledMessage,
+    aiChatDisabledState,
     hasInstructionsDrawer,
     isPredictLevel,
     selectedVersion,

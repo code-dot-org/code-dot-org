@@ -1,0 +1,38 @@
+<Panels>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 73,
+  "created_at": "2026-04-29T21:20:40.000Z",
+  "level_num": "custom",
+  "user_id": 18603,
+  "properties": {
+    "encrypted": "false",
+    "offer_browser_tts": "false",
+    "use_links": "false",
+    "panels": [
+      {
+        "text": "Imagine asking an AI, \"Help me with my writing.\" The AI might write a huge essay for you! It tried to help, but it took away your chance to be creative and do your own work.",
+        "imageUrl": "https://images.code.org/f7b4a9720704862d1e2ed7b907fe8b95-panel_one.jpg",
+        "key": "thinking_critically_lesson3_level2-panel_2026-b1ab3554-4d6c-4fe6-bcdf-a7a10d890990",
+        "typing": true,
+        "layout": "text-bottom-right"
+      },
+      {
+        "text": "Why did this happen? Because you did not give the AI a clear Goal. \n\nA Goal tells the AI what you actually want it to do. ",
+        "imageUrl": "https://images.code.org/54452c2f96cad0b185f1984410b6a960-panel_two.jpg",
+        "key": "thinking_critically_lesson3_level2-panel_2026-cff2f3e0-b989-4b0a-9412-99a131f702cf",
+        "typing": true,
+        "layout": "text-bottom-left"
+      },
+      {
+        "text": "You can fix this by giving the AI a clear task. Try telling the AI: \"I want you to give me 3 ideas for how to add detail to my writing\". \n\nNow the AI is helping you think, instead of doing the work for you!",
+        "imageUrl": "https://images.code.org/1126cf554519d1e056173c28dcc161d8-panel_three.jpg",
+        "key": "thinking_critically_lesson3_level2-panel_2026-5fab007e-dfc8-4625-b539-e2a6e3e20628",
+        "typing": true,
+        "layout": "text-top-left"
+      }
+    ]
+  },
+  "audit_log": "[{\"changed_at\":\"2026-04-29T21:20:40.144+00:00\",\"changed\":[\"cloned from \\\"thinking_critically_lesson3_level2-panel_2026\\\"\"],\"cloned_from\":\"thinking_critically_lesson3_level2-panel_2026\"},{\"changed_at\":\"2026-04-29 21:31:20 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"}]"
+}]]></config>
+</Panels>

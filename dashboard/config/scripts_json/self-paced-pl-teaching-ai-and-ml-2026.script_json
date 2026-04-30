@@ -12,7 +12,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2026-04-23 22:27:53 UTC",
+    "serialized_at": "2026-04-24 18:59:10 UTC",
     "hide_within_course": false,
     "published_state": "in_development",
     "instruction_type": null,
@@ -120,6 +120,23 @@
         "lesson_group.key": "",
         "script.name": "self-paced-pl-teaching-ai-and-ml-2026"
       }
+    },
+    {
+      "key": "lesson-6",
+      "name": "Teaching AI and Machine Learning",
+      "absolute_position": 6,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 6,
+      "properties": {
+        "overview": "**You will**:\n\n* Consider the role of the teacher in a computer science classroom.\n* Learn about authentic CS practices that students will develop throughout the AI and Machine Learning unit.\n* Reflect on how you will support student learning through differentiation, ongoing assessment, and promoting a culture of inclusion.\n\n**Suggested Time**: 25 minutes",
+        "student_overview": "**You will**:\n\n* Consider the role of the teacher in a computer science classroom.\n* Learn about authentic CS practices that students will develop throughout the AI and Machine Learning unit.\n* Reflect on how you will support student learning through differentiation, ongoing assessment, and promoting a culture of inclusion.\n\n**Suggested Time**: 25 minutes"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-ai-and-ml-2026"
+      }
     }
   ],
   "lesson_activities": [
@@ -184,6 +201,18 @@
       "seeding_key": {
         "lesson_activity.key": "cc8d12d4-6bc4-4f26-b965-4730d325d518",
         "lesson.key": "Unit Wrap Up",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-ai-and-ml-2026"
+      }
+    },
+    {
+      "key": "f409303c-daaf-43a9-9f37-cd3fe6185518",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "f409303c-daaf-43a9-9f37-cd3fe6185518",
+        "lesson.key": "lesson-6",
         "lesson_group.key": "",
         "script.name": "self-paced-pl-teaching-ai-and-ml-2026"
       }
@@ -342,6 +371,72 @@
       "seeding_key": {
         "activity_section.key": "43f1e847-a70b-426a-b93f-d4428f2edc39",
         "lesson_activity.key": "cc8d12d4-6bc4-4f26-b965-4730d325d518"
+      }
+    },
+    {
+      "key": "ca474cc0-a2d8-43f5-91d5-0d684639ef41",
+      "position": 1,
+      "properties": {
+        "progression_name": "Overview"
+      },
+      "seeding_key": {
+        "activity_section.key": "ca474cc0-a2d8-43f5-91d5-0d684639ef41",
+        "lesson_activity.key": "f409303c-daaf-43a9-9f37-cd3fe6185518"
+      }
+    },
+    {
+      "key": "841043ad-3cec-443a-a950-e47dc7169f24",
+      "position": 2,
+      "properties": {
+        "progression_name": "The Role of the Teacher"
+      },
+      "seeding_key": {
+        "activity_section.key": "841043ad-3cec-443a-a950-e47dc7169f24",
+        "lesson_activity.key": "f409303c-daaf-43a9-9f37-cd3fe6185518"
+      }
+    },
+    {
+      "key": "83e71bcb-286d-4e85-812c-b598588114ba",
+      "position": 3,
+      "properties": {
+        "progression_name": "Teaching and Learning Strategies"
+      },
+      "seeding_key": {
+        "activity_section.key": "83e71bcb-286d-4e85-812c-b598588114ba",
+        "lesson_activity.key": "f409303c-daaf-43a9-9f37-cd3fe6185518"
+      }
+    },
+    {
+      "key": "af5e1ce0-6782-414d-b86d-462f23b2464e",
+      "position": 4,
+      "properties": {
+        "progression_name": "Meeting Student Needs"
+      },
+      "seeding_key": {
+        "activity_section.key": "af5e1ce0-6782-414d-b86d-462f23b2464e",
+        "lesson_activity.key": "f409303c-daaf-43a9-9f37-cd3fe6185518"
+      }
+    },
+    {
+      "key": "2e6ad5be-a741-44a7-9263-39074a26e87f",
+      "position": 5,
+      "properties": {
+        "progression_name": "Assessment"
+      },
+      "seeding_key": {
+        "activity_section.key": "2e6ad5be-a741-44a7-9263-39074a26e87f",
+        "lesson_activity.key": "f409303c-daaf-43a9-9f37-cd3fe6185518"
+      }
+    },
+    {
+      "key": "26cf2639-1273-4b5a-a902-5126a7c0f514",
+      "position": 6,
+      "properties": {
+        "progression_name": "Wrap Up"
+      },
+      "seeding_key": {
+        "activity_section.key": "26cf2639-1273-4b5a-a902-5126a7c0f514",
+        "lesson_activity.key": "f409303c-daaf-43a9-9f37-cd3fe6185518"
       }
     }
   ],
@@ -1181,6 +1276,402 @@
       "level_keys": [
         "SP-VPL-21-CSD-mod5-MakeAPlan-AIML_-22_23_25_2026"
       ]
+    },
+    {
+      "chapter": 39,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Overview"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "SP-VPL-physical-computing-Overview-26"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-ai-and-ml-2026",
+        "activity_section.key": "ca474cc0-a2d8-43f5-91d5-0d684639ef41"
+      },
+      "level_keys": [
+        "SP-VPL-physical-computing-Overview-26"
+      ]
+    },
+    {
+      "chapter": 40,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "The Role of the Teacher"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "SP-VPL-AIML-RoleoftheTeacher-1"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-ai-and-ml-2026",
+        "activity_section.key": "841043ad-3cec-443a-a950-e47dc7169f24"
+      },
+      "level_keys": [
+        "SP-VPL-AIML-RoleoftheTeacher-1"
+      ]
+    },
+    {
+      "chapter": 41,
+      "position": 3,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "The Role of the Teacher"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "SP-VPL-AIML-RoleoftheTeacher-2"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-ai-and-ml-2026",
+        "activity_section.key": "841043ad-3cec-443a-a950-e47dc7169f24"
+      },
+      "level_keys": [
+        "SP-VPL-AIML-RoleoftheTeacher-2"
+      ]
+    },
+    {
+      "chapter": 42,
+      "position": 4,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "The Role of the Teacher"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "SP-VPL-AIML-RoleoftheTeacher-3"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-ai-and-ml-2026",
+        "activity_section.key": "841043ad-3cec-443a-a950-e47dc7169f24"
+      },
+      "level_keys": [
+        "SP-VPL-AIML-RoleoftheTeacher-3"
+      ]
+    },
+    {
+      "chapter": 43,
+      "position": 5,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Teaching and Learning Strategies"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "SP-VPL-AIML-TLStrategies-1"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-ai-and-ml-2026",
+        "activity_section.key": "83e71bcb-286d-4e85-812c-b598588114ba"
+      },
+      "level_keys": [
+        "SP-VPL-AIML-TLStrategies-1"
+      ]
+    },
+    {
+      "chapter": 44,
+      "position": 6,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Teaching and Learning Strategies"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "SP-VPL-AIML-TLStrategies-2"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-ai-and-ml-2026",
+        "activity_section.key": "83e71bcb-286d-4e85-812c-b598588114ba"
+      },
+      "level_keys": [
+        "SP-VPL-AIML-TLStrategies-2"
+      ]
+    },
+    {
+      "chapter": 45,
+      "position": 7,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Teaching and Learning Strategies"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "SP-VPL-AIML-TLStrategies-3"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-ai-and-ml-2026",
+        "activity_section.key": "83e71bcb-286d-4e85-812c-b598588114ba"
+      },
+      "level_keys": [
+        "SP-VPL-AIML-TLStrategies-3"
+      ]
+    },
+    {
+      "chapter": 46,
+      "position": 8,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "progression": "Teaching and Learning Strategies"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "SP-VPL-AIML-TLStrategies-4"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-ai-and-ml-2026",
+        "activity_section.key": "83e71bcb-286d-4e85-812c-b598588114ba"
+      },
+      "level_keys": [
+        "SP-VPL-AIML-TLStrategies-4"
+      ]
+    },
+    {
+      "chapter": 47,
+      "position": 9,
+      "activity_section_position": 5,
+      "assessment": false,
+      "properties": {
+        "progression": "Teaching and Learning Strategies"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "SP-VPL-AIML-TLStrategies-5"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-ai-and-ml-2026",
+        "activity_section.key": "83e71bcb-286d-4e85-812c-b598588114ba"
+      },
+      "level_keys": [
+        "SP-VPL-AIML-TLStrategies-5"
+      ]
+    },
+    {
+      "chapter": 48,
+      "position": 10,
+      "activity_section_position": 6,
+      "assessment": false,
+      "properties": {
+        "progression": "Teaching and Learning Strategies"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "SP-VPL-AIML-TLStrategies-6"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-ai-and-ml-2026",
+        "activity_section.key": "83e71bcb-286d-4e85-812c-b598588114ba"
+      },
+      "level_keys": [
+        "SP-VPL-AIML-TLStrategies-6"
+      ]
+    },
+    {
+      "chapter": 49,
+      "position": 11,
+      "activity_section_position": 7,
+      "assessment": false,
+      "properties": {
+        "progression": "Teaching and Learning Strategies"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "SP-VPL-AIML-TLStrategies-7"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-ai-and-ml-2026",
+        "activity_section.key": "83e71bcb-286d-4e85-812c-b598588114ba"
+      },
+      "level_keys": [
+        "SP-VPL-AIML-TLStrategies-7"
+      ]
+    },
+    {
+      "chapter": 50,
+      "position": 12,
+      "activity_section_position": 8,
+      "assessment": false,
+      "properties": {
+        "progression": "Teaching and Learning Strategies"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "SP-VPL-AIML-TLStrategies-8"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-ai-and-ml-2026",
+        "activity_section.key": "83e71bcb-286d-4e85-812c-b598588114ba"
+      },
+      "level_keys": [
+        "SP-VPL-AIML-TLStrategies-8"
+      ]
+    },
+    {
+      "chapter": 51,
+      "position": 13,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Meeting Student Needs"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "SP-VPL-AIML-MeetingNeeds1"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-ai-and-ml-2026",
+        "activity_section.key": "af5e1ce0-6782-414d-b86d-462f23b2464e"
+      },
+      "level_keys": [
+        "SP-VPL-AIML-MeetingNeeds1"
+      ]
+    },
+    {
+      "chapter": 52,
+      "position": 14,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Meeting Student Needs"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "SP-VPL-AIML-MeetingNeeds2"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-ai-and-ml-2026",
+        "activity_section.key": "af5e1ce0-6782-414d-b86d-462f23b2464e"
+      },
+      "level_keys": [
+        "SP-VPL-AIML-MeetingNeeds2"
+      ]
+    },
+    {
+      "chapter": 53,
+      "position": 15,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Meeting Student Needs"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "SP-VPL-AIML-MeetingNeeds3"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-ai-and-ml-2026",
+        "activity_section.key": "af5e1ce0-6782-414d-b86d-462f23b2464e"
+      },
+      "level_keys": [
+        "SP-VPL-AIML-MeetingNeeds3"
+      ]
+    },
+    {
+      "chapter": 54,
+      "position": 16,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Assessment"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "SP-VPL-AIML-Assessment1"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-ai-and-ml-2026",
+        "activity_section.key": "2e6ad5be-a741-44a7-9263-39074a26e87f"
+      },
+      "level_keys": [
+        "SP-VPL-AIML-Assessment1"
+      ]
+    },
+    {
+      "chapter": 55,
+      "position": 17,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Assessment"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "SP-VPL-AIML-Assessment2"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-ai-and-ml-2026",
+        "activity_section.key": "2e6ad5be-a741-44a7-9263-39074a26e87f"
+      },
+      "level_keys": [
+        "SP-VPL-AIML-Assessment2"
+      ]
+    },
+    {
+      "chapter": 56,
+      "position": 18,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Wrap Up"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "SP-VPL-AIML-WrapUp"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-ai-and-ml-2026",
+        "activity_section.key": "26cf2639-1273-4b5a-a902-5126a7c0f514"
+      },
+      "level_keys": [
+        "SP-VPL-AIML-WrapUp"
+      ]
     }
   ],
   "levels_script_levels": [
@@ -1638,6 +2129,222 @@
         "lesson_group.key": "",
         "script.name": "self-paced-pl-teaching-ai-and-ml-2026",
         "activity_section.key": "43f1e847-a70b-426a-b93f-d4428f2edc39"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "SP-VPL-physical-computing-Overview-26",
+        "script_level.level_keys": [
+          "SP-VPL-physical-computing-Overview-26"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-ai-and-ml-2026",
+        "activity_section.key": "ca474cc0-a2d8-43f5-91d5-0d684639ef41"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "SP-VPL-AIML-RoleoftheTeacher-1",
+        "script_level.level_keys": [
+          "SP-VPL-AIML-RoleoftheTeacher-1"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-ai-and-ml-2026",
+        "activity_section.key": "841043ad-3cec-443a-a950-e47dc7169f24"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "SP-VPL-AIML-RoleoftheTeacher-2",
+        "script_level.level_keys": [
+          "SP-VPL-AIML-RoleoftheTeacher-2"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-ai-and-ml-2026",
+        "activity_section.key": "841043ad-3cec-443a-a950-e47dc7169f24"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "SP-VPL-AIML-RoleoftheTeacher-3",
+        "script_level.level_keys": [
+          "SP-VPL-AIML-RoleoftheTeacher-3"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-ai-and-ml-2026",
+        "activity_section.key": "841043ad-3cec-443a-a950-e47dc7169f24"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "SP-VPL-AIML-TLStrategies-1",
+        "script_level.level_keys": [
+          "SP-VPL-AIML-TLStrategies-1"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-ai-and-ml-2026",
+        "activity_section.key": "83e71bcb-286d-4e85-812c-b598588114ba"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "SP-VPL-AIML-TLStrategies-2",
+        "script_level.level_keys": [
+          "SP-VPL-AIML-TLStrategies-2"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-ai-and-ml-2026",
+        "activity_section.key": "83e71bcb-286d-4e85-812c-b598588114ba"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "SP-VPL-AIML-TLStrategies-3",
+        "script_level.level_keys": [
+          "SP-VPL-AIML-TLStrategies-3"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-ai-and-ml-2026",
+        "activity_section.key": "83e71bcb-286d-4e85-812c-b598588114ba"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "SP-VPL-AIML-TLStrategies-4",
+        "script_level.level_keys": [
+          "SP-VPL-AIML-TLStrategies-4"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-ai-and-ml-2026",
+        "activity_section.key": "83e71bcb-286d-4e85-812c-b598588114ba"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "SP-VPL-AIML-TLStrategies-5",
+        "script_level.level_keys": [
+          "SP-VPL-AIML-TLStrategies-5"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-ai-and-ml-2026",
+        "activity_section.key": "83e71bcb-286d-4e85-812c-b598588114ba"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "SP-VPL-AIML-TLStrategies-6",
+        "script_level.level_keys": [
+          "SP-VPL-AIML-TLStrategies-6"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-ai-and-ml-2026",
+        "activity_section.key": "83e71bcb-286d-4e85-812c-b598588114ba"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "SP-VPL-AIML-TLStrategies-7",
+        "script_level.level_keys": [
+          "SP-VPL-AIML-TLStrategies-7"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-ai-and-ml-2026",
+        "activity_section.key": "83e71bcb-286d-4e85-812c-b598588114ba"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "SP-VPL-AIML-TLStrategies-8",
+        "script_level.level_keys": [
+          "SP-VPL-AIML-TLStrategies-8"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-ai-and-ml-2026",
+        "activity_section.key": "83e71bcb-286d-4e85-812c-b598588114ba"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "SP-VPL-AIML-MeetingNeeds1",
+        "script_level.level_keys": [
+          "SP-VPL-AIML-MeetingNeeds1"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-ai-and-ml-2026",
+        "activity_section.key": "af5e1ce0-6782-414d-b86d-462f23b2464e"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "SP-VPL-AIML-MeetingNeeds2",
+        "script_level.level_keys": [
+          "SP-VPL-AIML-MeetingNeeds2"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-ai-and-ml-2026",
+        "activity_section.key": "af5e1ce0-6782-414d-b86d-462f23b2464e"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "SP-VPL-AIML-MeetingNeeds3",
+        "script_level.level_keys": [
+          "SP-VPL-AIML-MeetingNeeds3"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-ai-and-ml-2026",
+        "activity_section.key": "af5e1ce0-6782-414d-b86d-462f23b2464e"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "SP-VPL-AIML-Assessment1",
+        "script_level.level_keys": [
+          "SP-VPL-AIML-Assessment1"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-ai-and-ml-2026",
+        "activity_section.key": "2e6ad5be-a741-44a7-9263-39074a26e87f"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "SP-VPL-AIML-Assessment2",
+        "script_level.level_keys": [
+          "SP-VPL-AIML-Assessment2"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-ai-and-ml-2026",
+        "activity_section.key": "2e6ad5be-a741-44a7-9263-39074a26e87f"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "SP-VPL-AIML-WrapUp",
+        "script_level.level_keys": [
+          "SP-VPL-AIML-WrapUp"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-ai-and-ml-2026",
+        "activity_section.key": "26cf2639-1273-4b5a-a902-5126a7c0f514"
       }
     }
   ],
