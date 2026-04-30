@@ -9,6 +9,7 @@ import {AssetSource, ChatAsset} from '../../types';
 import {
   addStagedFile,
   clearStagedFilesAlert,
+  removeStagedFile,
   stagedFilesLimitExceeded,
   stagedFileUploadFinished,
 } from '../slice';
@@ -20,14 +21,12 @@ export const uploadFiles = createAppAsyncThunk<
   {
     files: File[];
     buildAssetUrl: (asset: ChatAsset) => string;
-    skipModeration?: boolean;
+    /** Called instead of showing the in-chat flagged-file error when a file fails moderation. */
+    onFileFlagged?: (filename: string) => void;
   }
 >(
   'aichat/uploadFiles',
-  async (
-    {files, buildAssetUrl, skipModeration = false},
-    {dispatch, getState}
-  ) => {
+  async ({files, buildAssetUrl, onFileFlagged}, {dispatch, getState}) => {
     const numStagedFiles = getState().aichat.stagedFiles.length;
     const numAllowedFiles = MAX_NUM_FILES - numStagedFiles;
 
@@ -72,12 +71,19 @@ export const uploadFiles = createAppAsyncThunk<
 
       if (file.name.endsWith('.pdf')) {
         fileCountPdf += 1;
-      } else if (!skipModeration) {
-        // Moderate images before uploading, unless directed to skip.
+      } else {
         const moderationResult = await moderateImage(file, 'aichat', {});
         if (moderationResult === 'flagged') {
           imageFlaggedCount += 1;
-          dispatch(stagedFileUploadFinished({key, status: 'imageFileFlagged'}));
+          if (onFileFlagged) {
+            // Caller owns the error UI; remove the pending staged entry.
+            dispatch(removeStagedFile(key));
+            onFileFlagged(file.name);
+          } else {
+            dispatch(
+              stagedFileUploadFinished({key, status: 'imageFileFlagged'})
+            );
+          }
           continue;
         }
         fileCountImage += 1;

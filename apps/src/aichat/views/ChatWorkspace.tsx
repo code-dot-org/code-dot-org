@@ -52,8 +52,12 @@ import moduleStyles from './chatWorkspace.module.scss';
 
 /** Handle for interacting with the Chat Workspace */
 export interface ChatWorkspaceHandle {
-  /** Uploads files to the chat message. */
-  addFiles: (files: File[], skipModeration?: boolean) => void;
+  /**
+   * Uploads files to the chat message. If `onFileFlagged` is provided it is
+   * called (instead of showing the in-chat error) when a file fails content
+   * moderation, letting the caller customize the error UI.
+   */
+  addFiles: (files: File[], onFileFlagged?: (filename: string) => void) => void;
 }
 
 interface ChatWorkspaceProps {
@@ -348,9 +352,9 @@ const ChatWorkspace = forwardRef<ChatWorkspaceHandle, ChatWorkspaceProps>(
     useImperativeHandle(
       ref,
       () => ({
-        addFiles: (files, skipModeration) => {
+        addFiles: (files, onFileFlagged) => {
           if (canUploadAssets) {
-            dispatch(uploadFiles({files, buildAssetUrl, skipModeration}));
+            dispatch(uploadFiles({files, buildAssetUrl, onFileFlagged}));
           }
         },
       }),
