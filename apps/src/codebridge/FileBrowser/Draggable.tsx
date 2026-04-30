@@ -6,11 +6,16 @@ import {DragDataType} from './types';
 
 import moduleStyles from './styles/filebrowser.module.scss';
 
-// Provides the dnd-kit aria-describedby ID down to the label button in ItemRow
-// so screen readers announce drag instructions when the button is focused.
-export const DragDescriptionContext = React.createContext<string | undefined>(
-  undefined
-);
+type DragAriaAttributes = {
+  'aria-describedby': string | undefined;
+  'aria-roledescription': string;
+  'aria-pressed': true | undefined;
+};
+
+// Threads dnd-kit ARIA attributes down to the label button in ItemRow.
+export const DragDescriptionContext = React.createContext<
+  DragAriaAttributes | undefined
+>(undefined);
 
 type DraggableProps = {
   children: React.ReactNode;
@@ -46,7 +51,13 @@ export const Draggable: React.FunctionComponent<DraggableProps> = ({
     },
     React.createElement(
       DragDescriptionContext.Provider,
-      {value: attributes['aria-describedby']},
+      {
+        value: {
+          'aria-describedby': attributes['aria-describedby'],
+          'aria-roledescription': attributes['aria-roledescription'],
+          'aria-pressed': attributes['aria-pressed'] as true | undefined,
+        },
+      },
       children
     )
   );

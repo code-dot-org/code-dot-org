@@ -38,7 +38,7 @@ export const ItemRow: React.FunctionComponent<ItemRowProps> = ({
   openFunction,
   className,
 }) => {
-  const dragDescribedBy = useContext(DragDescriptionContext);
+  const dragAriaAttributes = useContext(DragDescriptionContext);
 
   return (
     <div
@@ -49,7 +49,9 @@ export const ItemRow: React.FunctionComponent<ItemRowProps> = ({
         type="button"
         className={moduleStyles.label}
         onClick={() => openFunction(item.id)}
-        aria-describedby={dragDescribedBy}
+        aria-describedby={dragAriaAttributes?.['aria-describedby']}
+        aria-roledescription={dragAriaAttributes?.['aria-roledescription']}
+        aria-pressed={dragAriaAttributes?.['aria-pressed']}
       >
         <IconComponent item={item} />
         <NameComponent item={item} />
