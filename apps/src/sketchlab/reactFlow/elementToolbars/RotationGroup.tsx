@@ -31,24 +31,18 @@ export default function RotationGroup({value, onChange}: RotationGroupProps) {
   // a value straight to the Slider would trigger an MUI min/max warning
   // and odd thumb behavior.
   const normalizedValue = normalizeRotation(value);
-  // While the user is actively dragging the slider thumb we update the display value,
-  // but the parent (and the rotated shape on the canvas) only
-  // updates once the drag commits. This avoids firing updateNodeData on
-  // every pixel of pointer movement.
-  const [dragValue, setDragValue] = useState<number | null>(null);
-  const displayValue = dragValue ?? normalizedValue;
   // Local editable string so users can type partials ("", "-", leading
   // zeros) without the normalized value overriding their input mid-edit.
   const [inputValue, setInputValue] = useState(String(normalizedValue));
   const [isFocused, setIsFocused] = useState(false);
 
-  // Sync display to whatever is current (drag preview or committed value),
-  // but only while the input is not focused.
+  // Sync display to the normalized value, but only while the input is not
+  // focused.
   useEffect(() => {
     if (!isFocused) {
-      setInputValue(String(displayValue));
+      setInputValue(String(normalizedValue));
     }
-  }, [displayValue, isFocused]);
+  }, [normalizedValue, isFocused]);
 
   const handleInputChange = useCallback(
     (event: React.ChangeEvent<HTMLInputElement>) => {
@@ -83,19 +77,12 @@ export default function RotationGroup({value, onChange}: RotationGroupProps) {
     }
   }, [inputValue, normalizedValue]);
 
-  const handleSliderChange = useCallback((_: Event, sliderValue: number) => {
-    setDragValue(normalizeRotation(sliderValue));
-  }, []);
-
-  const handleSliderChangeCommitted = useCallback(
-    (_: Event | React.SyntheticEvent, sliderValue: number) => {
-      const normalized = normalizeRotation(sliderValue);
-      setDragValue(null);
-      if (normalized !== normalizedValue) {
-        onChange(normalized);
-      }
+  const handleSliderChange = useCallback(
+    (_: Event, sliderValue: number | number[]) => {
+      const next = Array.isArray(sliderValue) ? sliderValue[0] : sliderValue;
+      onChange(normalizeRotation(next));
     },
-    [onChange, normalizedValue]
+    [onChange]
   );
 
   const handleInputKeyDown = useCallback(
@@ -130,9 +117,8 @@ export default function RotationGroup({value, onChange}: RotationGroupProps) {
           min={ROTATION_MIN}
           max={ROTATION_MAX}
           step={ROTATION_STEP}
-          value={displayValue}
+          value={normalizedValue}
           onChange={handleSliderChange}
-          onChangeCommitted={handleSliderChangeCommitted}
           valueLabelDisplay="auto"
           valueLabelFormat={sliderValue => `${sliderValue}°`}
           aria-labelledby={groupLabelId}
