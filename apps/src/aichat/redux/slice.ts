@@ -284,7 +284,12 @@ const aichatSlice = createSlice({
     },
     addStagedFile(
       state,
-      action: PayloadAction<{key: string; asset: ChatAsset; loaded?: boolean}>
+      action: PayloadAction<{
+        key: string;
+        asset: ChatAsset;
+        loaded?: boolean;
+        timestamp?: string;
+      }>
     ) {
       state.stagedFiles.push({
         ...action.payload,

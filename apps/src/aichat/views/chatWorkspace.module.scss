@@ -159,6 +159,14 @@ $tabs-default-spacing: 4px;
   }
 }
 
+.chipsRow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  align-items: flex-start;
+  min-width: 0;
+}
+
 .alertLink {
   white-space: nowrap;
 }
