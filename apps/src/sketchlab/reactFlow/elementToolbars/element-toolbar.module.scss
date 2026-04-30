@@ -181,6 +181,37 @@
   border-color: var(--text-neutral-primary);
 }
 
+.rotationRow {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 8px;
+}
+
+.rotationSlider {
+  min-width: 100px;
+  color: var(--text-neutral-primary);
+}
+
+// The DSCO TextField wrapper hard-codes min-width: 18.75rem on its <label>;
+// override the wrapper and the input so the field fits 3 digits plus the
+// native number spinner.
+.rotationInput {
+  flex: 0 0 auto;
+  width: 68px;
+  min-width: 0;
+
+  & > label {
+    min-width: 0;
+    width: 68px;
+  }
+
+  input {
+    width: 68px;
+    min-width: 0;
+  }
+}
+
 .locked-notice {
   display: flex;
   flex-direction: column;

@@ -385,10 +385,13 @@ const ChatWorkspace = forwardRef<ChatWorkspaceHandle, ChatWorkspaceProps>(
           />
         )}
         <div className={moduleStyles.footer}>
-          {canUploadAssets && (
-            <StagedFilesPreview buildAssetUrl={buildAssetUrl} />
-          )}
-          <UserAddedSelectionContextPreview />
+          <div className={moduleStyles.chipsRow}>
+            {canUploadAssets && (
+              <StagedFilesPreview buildAssetUrl={buildAssetUrl} />
+            )}
+            <UserAddedSelectionContextPreview />
+          </div>
+
           {canChatWithModel && (
             <UserChatMessageEditor
               clientType={clientType}

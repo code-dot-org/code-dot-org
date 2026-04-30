@@ -1,7 +1,7 @@
 import {NodeResizer, useReactFlow, type NodeProps} from '@xyflow/react';
 import React, {memo, useCallback, useMemo, useRef, useState} from 'react';
 
-import {MIN_NODE_HEIGHT, MIN_NODE_WIDTH} from '../constants';
+import {DEFAULT_ROTATION, MIN_NODE_HEIGHT, MIN_NODE_WIDTH} from '../constants';
 import {useSketchLabReadOnly} from '../context';
 import ShapeNodeToolbar from '../elementToolbars/ShapeNodeToolbar';
 import {fontSizePx} from '../elementToolbars/toolbarPalettes';
@@ -164,6 +164,12 @@ function ShapeNode({id, data, selected}: NodeProps<ShapeNodeType>) {
     return style;
   }, [data.fontColor, data.fontSize]);
 
+  const rotation = data.rotation ?? DEFAULT_ROTATION;
+  const rotatableStyle: React.CSSProperties = useMemo(
+    () => ({transform: `rotate(${rotation}deg)`}),
+    [rotation]
+  );
+
   return (
     <div
       className={styles.shapeNode}
@@ -178,36 +184,38 @@ function ShapeNode({id, data, selected}: NodeProps<ShapeNodeType>) {
 
       <ShapeNodeToolbar nodeId={id} />
 
-      {/* Background shape */}
-      {isRectangle ? (
-        <div
-          className={styles.rectangleBackground}
-          style={rectangleStyle}
-          aria-hidden="true"
-        />
-      ) : (
-        <ShapeSvg
-          shapeType={shapeType}
-          strokeColor={strokeColor}
-          backgroundColor={backgroundColor}
-        />
-      )}
+      <div className={styles.rotatable} style={rotatableStyle}>
+        {/* Background shape */}
+        {isRectangle ? (
+          <div
+            className={styles.rectangleBackground}
+            style={rectangleStyle}
+            aria-hidden="true"
+          />
+        ) : (
+          <ShapeSvg
+            shapeType={shapeType}
+            strokeColor={strokeColor}
+            backgroundColor={backgroundColor}
+          />
+        )}
 
-      {/* Text label: click or enter to start editing */}
-      <div
-        ref={labelRef}
-        className={styles.label}
-        style={labelStyle}
-        contentEditable={isEditing}
-        suppressContentEditableWarning
-        onFocus={startEditing}
-        onBlur={commitEdit}
-        onKeyDown={handleLabelKeyDown}
-        tabIndex={-1}
-        role="textbox"
-        aria-label={`${shapeType} label${isEditing ? ' (editing)' : ''}`}
-      >
-        {label}
+        {/* Text label: click or enter to start editing */}
+        <div
+          ref={labelRef}
+          className={styles.label}
+          style={labelStyle}
+          contentEditable={isEditing}
+          suppressContentEditableWarning
+          onFocus={startEditing}
+          onBlur={commitEdit}
+          onKeyDown={handleLabelKeyDown}
+          tabIndex={-1}
+          role="textbox"
+          aria-label={`${shapeType} label${isEditing ? ' (editing)' : ''}`}
+        >
+          {label}
+        </div>
       </div>
 
       <ConnectionHandles visible={showHandles} />

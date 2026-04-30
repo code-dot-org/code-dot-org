@@ -1,11 +1,14 @@
+import {useReactFlow} from '@xyflow/react';
 import React from 'react';
 
+import {DEFAULT_ROTATION} from '../constants';
 import {ShapeNodeType} from '../types';
 
 import ActionsGroup from './ActionsGroup';
 import FontSizeGroup from './FontSizeGroup';
 import HandleVisibilityToggle from './HandleVisibilityToggle';
 import LockedNotice from './LockedNotice';
+import RotationGroup from './RotationGroup';
 import SwatchGroup from './SwatchGroup';
 import {
   BACKGROUND_PALETTE,
@@ -24,6 +27,7 @@ interface ShapeNodeToolbarProps {
 }
 
 export default function ShapeNodeToolbar({nodeId}: ShapeNodeToolbarProps) {
+  const {deleteElements} = useReactFlow();
   const {data, patchNodeData} = useNodeToolbarData<ShapeNodeType>(nodeId);
 
   const {backgroundColor, strokeColor, fontSize, fontColor} = data;
@@ -63,7 +67,14 @@ export default function ShapeNodeToolbar({nodeId}: ShapeNodeToolbarProps) {
             selectedValue={fontColor ?? DEFAULT_FONT_COLOR}
             onSelect={value => patchNodeData({fontColor: value})}
           />
-          <ActionsGroup nodeId={nodeId} />
+          <RotationGroup
+            value={data.rotation ?? DEFAULT_ROTATION}
+            onChange={degrees => patchNodeData({rotation: degrees})}
+          />
+          <ActionsGroup
+            onDelete={() => deleteElements({nodes: [{id: nodeId}]})}
+            onLock={() => patchNodeData({locked: true})}
+          />
           <HandleVisibilityToggle
             visible={handlesVisible}
             onToggle={() => patchNodeData({showHandles: !handlesVisible})}
