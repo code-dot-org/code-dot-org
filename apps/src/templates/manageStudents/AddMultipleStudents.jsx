@@ -195,6 +195,7 @@ class AddMultipleStudents extends Component {
                     <div style={styles.fileSelected}>
                       <div style={styles.fileName}>{this.state.fileName}</div>
                       <button
+                        type="button"
                         style={styles.removeFile}
                         onClick={e => {
                           e.stopPropagation();
