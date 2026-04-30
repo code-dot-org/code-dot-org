@@ -101,7 +101,6 @@ class DBQueryTest < ActionDispatch::IntegrationTest
       params = {program: 'fake program', testResult: 100, result: 'true'}
 
       setup_script_cache
-      # SELECT `level_sources`.* FROM `level_sources` WHERE `level_sources`.`level_id` = 81 AND `level_sources`.`md5` = '6617221a4d7eba590a8954b6d08061e7' ORDER BY `level_sources`.`id` ASC LIMIT 1
       assert_cached_queries(8) do
         post milestone_path(
           user_id: student.id,
