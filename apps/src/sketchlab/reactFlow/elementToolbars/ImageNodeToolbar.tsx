@@ -3,7 +3,7 @@ import React from 'react';
 
 import {DEFAULT_ROTATION} from '../constants';
 import {ImageNodeType} from '../types';
-import {moveToEnd, moveToStart} from '../utils/stacking';
+import {nextBackZIndex, nextFrontZIndex} from '../utils/stacking';
 
 import ActionsGroup from './ActionsGroup';
 import HandleVisibilityToggle from './HandleVisibilityToggle';
@@ -17,7 +17,7 @@ interface ImageNodeToolbarProps {
 }
 
 export default function ImageNodeToolbar({nodeId}: ImageNodeToolbarProps) {
-  const {deleteElements, setNodes} = useReactFlow();
+  const {deleteElements, updateNode, getNodes} = useReactFlow();
   const {data, patchNodeData} = useNodeToolbarData<ImageNodeType>(nodeId);
   const handlesVisible = data.showHandles !== false;
 
@@ -39,10 +39,10 @@ export default function ImageNodeToolbar({nodeId}: ImageNodeToolbarProps) {
             onDelete={() => deleteElements({nodes: [{id: nodeId}]})}
             onLock={() => patchNodeData({locked: true})}
             onBringToFront={() =>
-              setNodes(current => moveToEnd(current, nodeId))
+              updateNode(nodeId, {zIndex: nextFrontZIndex(getNodes())})
             }
             onSendToBack={() =>
-              setNodes(current => moveToStart(current, nodeId))
+              updateNode(nodeId, {zIndex: nextBackZIndex(getNodes())})
             }
           />
           <HandleVisibilityToggle

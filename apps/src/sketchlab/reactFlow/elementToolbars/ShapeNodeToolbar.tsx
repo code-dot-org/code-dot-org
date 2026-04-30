@@ -3,7 +3,7 @@ import React from 'react';
 
 import {DEFAULT_ROTATION} from '../constants';
 import {ShapeNodeType} from '../types';
-import {moveToEnd, moveToStart} from '../utils/stacking';
+import {nextBackZIndex, nextFrontZIndex} from '../utils/stacking';
 
 import ActionsGroup from './ActionsGroup';
 import FontSizeGroup from './FontSizeGroup';
@@ -28,7 +28,7 @@ interface ShapeNodeToolbarProps {
 }
 
 export default function ShapeNodeToolbar({nodeId}: ShapeNodeToolbarProps) {
-  const {deleteElements, setNodes} = useReactFlow();
+  const {deleteElements, updateNode, getNodes} = useReactFlow();
   const {data, patchNodeData} = useNodeToolbarData<ShapeNodeType>(nodeId);
 
   const {backgroundColor, strokeColor, fontSize, fontColor} = data;
@@ -76,10 +76,10 @@ export default function ShapeNodeToolbar({nodeId}: ShapeNodeToolbarProps) {
             onDelete={() => deleteElements({nodes: [{id: nodeId}]})}
             onLock={() => patchNodeData({locked: true})}
             onBringToFront={() =>
-              setNodes(current => moveToEnd(current, nodeId))
+              updateNode(nodeId, {zIndex: nextFrontZIndex(getNodes())})
             }
             onSendToBack={() =>
-              setNodes(current => moveToStart(current, nodeId))
+              updateNode(nodeId, {zIndex: nextBackZIndex(getNodes())})
             }
           />
           <HandleVisibilityToggle

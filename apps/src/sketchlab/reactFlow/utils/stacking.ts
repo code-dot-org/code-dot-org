@@ -1,18 +1,28 @@
-// Reorder helpers for the nodes/edges arrays. React Flow paints later items
-// on top, so moving an element to the end brings it to the front and moving
-// it to the start sends it to the back.
+// Helpers for "Bring to front" / "Send to back". With React Flow's
+// zIndexMode="manual", stacking is driven by each item's explicit zIndex,
+// not array order. We pick a value one above the current max (front) or
+// one below the current min (back). Treat undefined zIndex as 0.
 
-export function moveToEnd<T extends {id: string}>(items: T[], id: string): T[] {
-  const target = items.find(item => item.id === id);
-  if (!target) return items;
-  return [...items.filter(item => item.id !== id), target];
+interface ZItem {
+  zIndex?: number;
 }
 
-export function moveToStart<T extends {id: string}>(
-  items: T[],
-  id: string
-): T[] {
-  const target = items.find(item => item.id === id);
-  if (!target) return items;
-  return [target, ...items.filter(item => item.id !== id)];
+export function nextFrontZIndex(items: readonly ZItem[]): number {
+  let max = 0;
+  for (const item of items) {
+    if (typeof item.zIndex === 'number' && item.zIndex > max) {
+      max = item.zIndex;
+    }
+  }
+  return max + 1;
+}
+
+export function nextBackZIndex(items: readonly ZItem[]): number {
+  let min = 0;
+  for (const item of items) {
+    if (typeof item.zIndex === 'number' && item.zIndex < min) {
+      min = item.zIndex;
+    }
+  }
+  return min - 1;
 }
