@@ -22,6 +22,7 @@ export type ShapeNodeData = {
   fontColor?: string;
   fontSize?: FontSizeValue;
   showHandles?: boolean;
+  locked?: boolean;
 };
 
 export type TextNodeData = {
@@ -29,23 +30,28 @@ export type TextNodeData = {
   fontColor?: string;
   fontSize?: FontSizeValue;
   showHandles?: boolean;
+  locked?: boolean;
 };
 
 export type ImageNodeData = {
   src: string;
   altText: string;
   showHandles?: boolean;
+  locked?: boolean;
 };
 
 export type LineAnchorNodeData = {
   lineAnchorRole: 'source' | 'target';
+  // TODO: this is not used yet, but is included for ease of typing.
+  locked?: boolean;
 };
 
 export type AddNodeRequest =
   | {type: 'shape'; data: ShapeNodeData}
   | {type: 'text'; data: TextNodeData}
   | {type: 'image'; data: ImageNodeData}
-  | {type: 'line'};
+  | {type: 'line'}
+  | {type: 'arrow'};
 
 export type ShapeNodeType = Node<ShapeNodeData, 'shape'>;
 export type TextNodeType = Node<TextNodeData, 'text'>;
