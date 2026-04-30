@@ -1,0 +1,12 @@
+name 'thinking_critically_lesson1_level5_2026'
+display_name 'AI Chat! Try it out'
+description 'Choose one activity below and type your prompt into the chatbot. Experiment to discover what kinds of prompts get the best results!'
+
+sublevels
+level 'thinking_critically_lesson1_level5a_2026'
+level 'thinking_critically_lesson1_level5b_2026'
+level 'thinking_critically_lesson1_level5c_2026'
+level 'thinking_critically_lesson1_level5d_2026'
+
+uses_lab2
+navigation_type 'next_level'

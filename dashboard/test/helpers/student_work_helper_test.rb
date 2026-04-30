@@ -85,6 +85,19 @@ class StudentWorkHelperTest < ActionView::TestCase
     assert_includes entry, :student_response
   end
 
+  test "returns unattempted entries when student_id is nil (signed-out user)" do
+    multi = create(:multi)
+    make_assessment_script_level(multi)
+
+    result = lesson_assessment_analysis(@lesson.id, nil)
+
+    assert_equal 1, result.length
+    entry = result.first
+    assert_equal 0, entry[:attempts]
+    assert_equal false, entry[:correct]
+    assert_equal "No attempt yet", entry[:student_response]
+  end
+
   test "non-assessment script levels are excluded" do
     create(:script_level, levels: [create(:multi)], lesson: @lesson, script: @script,
       activity_section: @lesson.activity_sections.first

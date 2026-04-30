@@ -21,7 +21,6 @@ const LoadingSectionsSetUpContainer: React.FC<
     restrictSection: false,
     ttsAutoplayEnabled: false,
     lessonExtras: true,
-    aiTutorEnabled: false,
     sharing_disabled: false,
     sharingDisabled: false,
     primaryInstructor: {

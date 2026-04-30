@@ -1,5 +1,6 @@
 <Weblab2>
   <config><![CDATA[{
+  "published": true,
   "game_id": 74,
   "created_at": "2026-04-01T20:54:05.000Z",
   "level_num": "custom",
@@ -9,7 +10,7 @@
     "submittable": "false",
     "hide_share_and_remix": "false",
     "disable_edit_run_for_submission": "false",
-    "widget_view": "true",
+    "widget_view": "false",
     "initial_view_mode": "preview",
     "ai_tutor_mode": "engineer",
     "predict_settings": {
@@ -178,7 +179,7 @@
         "2"
       ]
     },
-    "long_instructions": "## Safety and Privacy Mini-Lesson: Metadata\r\n\r\nUse this interactive exploration to investigate data that might be hidden in images and video.\r\n\r\nUse the hotspots to explore deeper into a topic, and use the back-arrows to return to a previous screen.\r\n\r\nOnce you've explored several examples, click \"Finish\" at the bottom to continue.",
+    "long_instructions": "## Safety and Privacy: Hidden Data\r\n\r\nUse this activity to explore data hidden in pictures and videos.\r\n\r\n* **Explore**: Click the hotspots to learn more about a topic.\r\n\r\n* **Go Back**: Use the back-arrows to return to the last screen.\r\n\r\n* **Ask**: Use the AI Chat to ask questions and learn more.",
     "ai_tutor_prompt_answer_types": [
       "buildHTML",
       "buildCSS",
@@ -210,9 +211,10 @@
     "display_name": "Hidden Data?",
     "bubble_choice_description": "Explore data that might be hidden within images and video",
     "thumbnail_url": "https://images.code.org/10f07a9638e7ed5808cdf879552649bf-one-three.jpg",
-    "name_suffix": "_2026"
+    "name_suffix": "_2026",
+    "offer_browser_tts": "false",
+    "require_edit_to_continue": "false"
   },
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2026-04-01T20:54:05.761+00:00\",\"changed\":[\"cloned from \\\"aid-thinking-critically-lesson7-level3b_2026-test_2026-pilot\\\"\"],\"cloned_from\":\"aid-thinking-critically-lesson7-level3b_2026-test_2026-pilot\"}]"
+  "audit_log": "[{\"changed_at\":\"2026-04-01T20:54:05.761+00:00\",\"changed\":[\"cloned from \\\"aid-thinking-critically-lesson7-level3b_2026-test_2026-pilot\\\"\"],\"cloned_from\":\"aid-thinking-critically-lesson7-level3b_2026-test_2026-pilot\"},{\"changed_at\":\"2026-04-17 14:32:51 +0000\",\"changed\":[\"widget_view\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-17 16:57:11 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"}]"
 }]]></config>
 </Weblab2>

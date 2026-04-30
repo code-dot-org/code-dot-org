@@ -3,8 +3,7 @@
 Feature: Global Edition - Farsi MVP - Professional Learning landing page
 
   Background:
-    Given I am on "http://studio.code.org"
-    And I use a cookie to mock the DCDO key "global_edition_enabled" as "true"
+    Given Global Edition is enabled
 
   @eyes
   Scenario: New teacher without PL history sees relevant content sections for Farsi MVP
@@ -16,6 +15,7 @@ Feature: Global Edition - Farsi MVP - Professional Learning landing page
     And I see no difference for "Full page"
     And I close my eyes
 
+  @dashboard_db_access
   Scenario: Facilitator does not see Facilitator Center in Farsi MVP
     Given I am a facilitator with started and completed courses
 
@@ -39,6 +39,7 @@ Feature: Global Edition - Farsi MVP - Professional Learning landing page
     When I visit Farsi version of Professional Learning Lending page
     Then element "button#myPLTabs-tab-instructorCenter" is visible
 
+  @dashboard_db_access
   Scenario: Regional Partner does not see Regional Partner Center in Farsi MVP
     Given I am a program manager with a started course
     And I wait for 2 seconds
@@ -51,6 +52,7 @@ Feature: Global Edition - Farsi MVP - Professional Learning landing page
 
     And I delete the workshop
 
+  @dashboard_db_access
   Scenario: Workshop Organizer does not see Workshop Organizer Tab in Farsi MVP
     Given I am an organizer with started and completed courses
     And I wait for 2 seconds

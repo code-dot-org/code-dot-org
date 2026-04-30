@@ -130,6 +130,7 @@ const LessonDeepDiveContainer: FC<LessonDeepDiveContainerProps> = ({
             vocabulary={lessonDeepDiveData.vocabulary}
             assessmentAnalysis={lessonDeepDiveData.assessmentAnalysis}
             objectives={lessonDeepDiveData.objectives}
+            jsonVideos={lessonDeepDiveData.jsonVideos}
             reflectionData={reflectionData}
           />
         );
@@ -147,7 +148,7 @@ const LessonDeepDiveContainer: FC<LessonDeepDiveContainerProps> = ({
   };
   return (
     <ThemeProvider theme={darkTheme}>
-      <div className={styles.container}>
+      <div className={styles.container} data-theme={'Dark'}>
         {!isFirst && (
           <div className={styles.topNav}>
             <button

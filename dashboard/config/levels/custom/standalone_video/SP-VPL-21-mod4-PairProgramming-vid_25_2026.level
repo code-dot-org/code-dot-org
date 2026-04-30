@@ -1,5 +1,6 @@
 <StandaloneVideo>
   <config><![CDATA[{
+  "published": true,
   "game_id": 54,
   "created_at": "2026-04-10T20:46:39.000Z",
   "level_num": "custom",
@@ -12,11 +13,10 @@
     "parent_level_id": 28811,
     "name_suffix": "_2026",
     "encrypted": "false",
-    "long_instructions": "\r\n\r\n#### This video is included in the CS Discoveries curriculum to introduce students to pair programming. \r\n\r\n## As you watch the video, consider the following:\r\n\r\n### How might my students benefit from pair programming?\r\n"
+    "long_instructions": "\r\n\r\n#### This video is included in the AI Discoveries curriculum to introduce students to pair programming. \r\n\r\n## As you watch the video, consider the following:\r\n\r\n### How might my students benefit from pair programming?\r\n"
   },
-  "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2026-04-10T20:46:39.356+00:00\",\"changed\":[\"cloned from \\\"SP-VPL-21-mod4-PairProgramming-vid_25\\\"\"],\"cloned_from\":\"SP-VPL-21-mod4-PairProgramming-vid_25\"}]",
+  "audit_log": "[{\"changed_at\":\"2026-04-10T20:46:39.356+00:00\",\"changed\":[\"cloned from \\\"SP-VPL-21-mod4-PairProgramming-vid_25\\\"\"],\"cloned_from\":\"SP-VPL-21-mod4-PairProgramming-vid_25\"},{\"changed_at\":\"2026-04-23 20:37:55 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":10559,\"changed_by_email\":\"aryanna@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

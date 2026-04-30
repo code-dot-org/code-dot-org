@@ -1,0 +1,55 @@
+<Aichat>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 71,
+  "created_at": "2026-04-20T18:56:36.000Z",
+  "level_num": "custom",
+  "user_id": 18603,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "##Exploration: Choose Your Own Co-Creation\r\n\r\n\r\n\r\n\r\n#### Task:\r\n\r\n* **Describe** your own idea for a chatbot that supports one of your purposes.\r\n* **Test** the output to see how well it helps with your purpose.\r\n* **Judge** what AI did well and what it did not do well.\r\n\r\n_**Prompt example:**_\r\n\r\n_I want you to help me come up with interesting names for basketball plays. I will describe the play and you give me some ideas for funny, cool names._\r\n",
+    "offer_browser_tts": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "aichat_settings": {
+      "initialCustomizations": {
+        "selectedModelId": "gemini-2.5-flash",
+        "temperature": 0.8,
+        "systemPrompt": "",
+        "retrievalContexts": [
+
+        ],
+        "modelCardInfo": {
+          "botName": "",
+          "description": "",
+          "intendedUse": "",
+          "limitationsAndWarnings": "",
+          "testingAndEvaluation": "",
+          "exampleTopics": [
+
+          ],
+          "isPublished": false
+        }
+      },
+      "visibilities": {
+        "selectedModelId": "hidden",
+        "temperature": "hidden",
+        "systemPrompt": "hidden",
+        "retrievalContexts": "hidden",
+        "modelCardInfo": "hidden"
+      },
+      "levelSystemPrompt": "You are a personal AI Co-Pilot created by a student. Your specific job is [Student: Insert Job Here, e.g., \"Helping me with Math\" or \"Explaining History\"].\n\nThe 850L Language Filter\nSimple Words: Use words that a middle school student uses every day.\n\nNo Jargon: If you must use a hard \"school word,\" explain it simply in the same sentence.\n\nBe Literal: Do not use jokes, metaphors, or idioms. Do not say \"it’s a walk in the park\"; say \"it is easy.\"\n\n3. Sentence Collapsing\nKeep sentences short.\n\nIf two ideas are about the same thing, combine them into one short, clear sentence.\n\nCut out extra words like \"It is important to note that...\" or \"Interestingly...\"",
+      "hidePresentationPanel": false,
+      "availableModelIds": [
+        "gemini-2.5-flash"
+      ],
+      "multimodalEnabled": true
+    },
+    "display_name": "Create Your Own Co-Pilot",
+    "bubble_choice_description": "How can AI be a co-pilot for a task of my own choosing?",
+    "thumbnail_url": "https://images.code.org/63c1d7f3546da5092b24b61080d06b0f-create-your-own_titlecard.jpg",
+    "name_suffix": "_2026"
+  },
+  "audit_log": "[{\"changed_at\":\"2026-04-20T18:56:36.430+00:00\",\"changed\":[\"cloned from \\\"thinking_critically_lesson4_level2b_2026\\\"\"],\"cloned_from\":\"thinking_critically_lesson4_level2b_2026\"},{\"changed_at\":\"2026-04-20 20:10:06 +0000\",\"changed\":[\"long_instructions\",\"aichat_settings\",\"display_name\",\"bubble_choice_description\",\"thumbnail_url\",\"project_template_level_name\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-21 16:48:42 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-29 14:14:38 +0000\",\"changed\":[],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-29 17:50:52 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-29 18:16:45 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"}]"
+}]]></config>
+</Aichat>

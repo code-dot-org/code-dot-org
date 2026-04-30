@@ -1622,6 +1622,10 @@ body.iframe_embed_app_and_code {
 
 .x-close {
   @include close-button($cornerOffset: -20px);
+  // Reset native <button> styles so the icon matches the old <div>-based markup.
+  // (background-color already reset by the `background` shorthand in close-button mixin.)
+  border: 0;
+  padding: 0;
 }
 
 .open-link {

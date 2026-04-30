@@ -43,7 +43,7 @@ namespace :test do
       '--magic_retry',
       '--with-status-page',
       '--fail_fast',
-      '--priority 0'
+      '--saucelabs-priority 0'
     )
     if failed_browser_count == 0
       message = '┬──┬ ﻿ノ( ゜-゜ノ) UI tests for <b>dashboard</b> succeeded.'
@@ -54,6 +54,60 @@ namespace :test do
       ChatClient.log message, color: 'red'
       ChatClient.message 'server operations', message, color: 'red', notify: 1
       raise "UI tests failed"
+    end
+  end
+
+  # Runs a single group of UI tests against AWS Device Farm. Shared body
+  # between :devicefarm_desktop_ui and :devicefarm_mobile_ui.
+  def run_devicefarm_ui(config:, parallel:, label:)
+    ChatClient.log "Running <b>dashboard</b> UI tests on AWS Device Farm (#{label})..."
+    failed_browser_count = RakeUtils.system_with_chat_logging(
+      "cd #{dashboard_dir('test/ui')} &&",
+      'bundle', 'exec', './runner.rb',
+      '--device-farm',
+      '-c', config,
+      '-d', CDO.site_host('studio.code.org'),
+      '-p', CDO.site_host('code.org'),
+      '--db', # Ensure features that require database access are run even if the server name isn't "test"
+      '--parallel', parallel.to_s,
+      '--magic_retry',
+      '--with-status-page',
+      '--fail_fast'
+    )
+    if failed_browser_count == 0
+      message = "┬──┬ ﻿ノ( ゜-゜ノ) Device Farm UI tests for <b>dashboard</b> (#{label}) succeeded."
+      ChatClient.log message
+      ChatClient.message 'server operations', message, color: 'green'
+    else
+      message = "(╯°□°）╯︵ ┻━┻ Device Farm UI tests for <b>dashboard</b> (#{label}) failed on #{failed_browser_count} browser(s)."
+      ChatClient.log message, color: 'red'
+      ChatClient.message 'server operations', message, color: 'red', notify: 1
+      raise "Device Farm UI (#{label}) tests failed"
+    end
+  end
+
+  timed_task_with_logging :devicefarm_desktop_ui do
+    # The default per-AWS-account concurrency limit for desktop browser sessions
+    # in Device Farm is 50.
+    run_devicefarm_ui(config: 'Chrome,Firefox', parallel: 50, label: 'desktop')
+  end
+
+  timed_task_with_logging :devicefarm_mobile_ui do
+    # As of April 2026, our concurrency limit for remote access sessions on real
+    # mobile devices in Device Farm within our prod AWS account is 40. However,
+    # the devices take so long to spin up and shut down that we can saturate our
+    # Device Farm concurrency by setting parallelism equal to half of that limit.
+    run_devicefarm_ui(config: 'iPhone,iPad', parallel: 20, label: 'mobile')
+  end
+
+  # Runs desktop and mobile Device Farm UI suites in parallel threads so
+  # they use their independent concurrency quotas. Kept separate from
+  # regular_ui and intentionally not wired into ui_all -- currently used
+  # for manual trial runs against the test machine
+  # (bundle exec rake test:devicefarm_ui).
+  timed_task_with_logging :devicefarm_ui do
+    Parallel.each([:devicefarm_desktop_ui, :devicefarm_mobile_ui], in_threads: 2) do |target|
+      Rake::Task["test:#{target}"].invoke
     end
   end
 
@@ -71,7 +125,7 @@ namespace :test do
       '--magic_retry',
       '--with-status-page',
       '-f', eyes_features.join(","),
-      '--parallel', (eyes_features.count * 2).to_s
+      '--parallel', '20'
     )
     if failed_browser_count == 0
       message = '⊙‿⊙ Eyes tests for <b>dashboard</b> succeeded, no changes detected.'
@@ -82,6 +136,35 @@ namespace :test do
       ChatClient.log message, color: 'red'
       ChatClient.message 'server operations', message, color: 'red', notify: 1
       raise "Eyes tests failed"
+    end
+  end
+
+  timed_task_with_logging :devicefarm_eyes_ui do
+    ChatClient.log 'Running <b>dashboard</b> UI visual tests on AWS Device Farm...'
+    eyes_features = `cd #{dashboard_dir('test/ui')} && find features/ -name "*.feature" | xargs grep -lr '@eyes'`.split("\n")
+    failed_browser_count = RakeUtils.system_with_chat_logging(
+      "cd #{dashboard_dir('test/ui')} &&",
+      'bundle', 'exec', './runner.rb',
+      '--device-farm',
+      '-c', 'Chrome',
+      '-d', CDO.site_host('studio.code.org'),
+      '-p', CDO.site_host('code.org'),
+      '--db', # Ensure features that require database access are run even if the server name isn't "test"
+      '--eyes',
+      '--magic_retry',
+      '--with-status-page',
+      '-f', eyes_features.join(","),
+      '--parallel', '25'
+    )
+    if failed_browser_count == 0
+      message = '⊙‿⊙ Device Farm Eyes tests for <b>dashboard</b> succeeded, no changes detected.'
+      ChatClient.log message
+      ChatClient.message 'server operations', message, color: 'green'
+    else
+      message = 'ಠ_ಠ Device Farm Eyes tests for <b>dashboard</b> failed. See <a href="https://eyes.applitools.com/app/sessions/">the console</a> for results or to modify baselines.'
+      ChatClient.log message, color: 'red'
+      ChatClient.message 'server operations', message, color: 'red', notify: 1
+      raise "Device Farm Eyes tests failed"
     end
   end
 
@@ -165,6 +248,15 @@ namespace :test do
     ENV.delete 'USE_PEGASUS_UNITTEST_DB'
   end
 
+  timed_task_with_logging :dashboard_observability_engine_qa do
+    # isolate unit tests from the pegasus_test DB
+    ENV['USE_PEGASUS_UNITTEST_DB'] = '1'
+    ENV['TEST_ENV_NUMBER'] = '1'
+    TestRunUtils.run_dashboard_observability_engine_tests
+    ENV.delete 'TEST_ENV_NUMBER'
+    ENV.delete 'USE_PEGASUS_UNITTEST_DB'
+  end
+
   timed_task_with_logging :shared_qa do
     # isolate unit tests from the pegasus_test DB
     ENV['USE_PEGASUS_UNITTEST_DB'] = '1'
@@ -209,6 +301,7 @@ namespace :test do
     :dashboard_legacy_qa,
     :dashboard_hoc_legacy_engine_qa,
     :dashboard_cdo_contentful_engine_qa,
+    :dashboard_observability_engine_qa,
     :lib_qa,
     :bin_qa,
     :ui_live
@@ -235,6 +328,11 @@ namespace :test do
   desc 'Runs dashboard hoc_legacy engine tests.'
   timed_task_with_logging :dashboard_hoc_legacy_engine do
     TestRunUtils.run_dashboard_hoc_legacy_engine_tests
+  end
+
+  desc 'Runs dashboard observability engine tests.'
+  timed_task_with_logging :dashboard_observability_engine do
+    TestRunUtils.run_dashboard_observability_engine_tests
   end
 
   desc 'Runs pegasus tests.'
@@ -353,6 +451,16 @@ namespace :test do
       end
     end
 
+    desc 'Runs dashboard observability engine tests'
+    timed_task_with_logging :dashboard_observability_engine do
+      run_tests_if_changed(
+        'dashboard observability engine',
+        %w[Gemfile Gemfile.lock dashboard/engines/observability/**/*],
+      ) do
+        TestRunUtils.run_dashboard_observability_engine_tests
+      end
+    end
+
     desc 'Runs pegasus tests if pegasus might have changed from staging.'
     timed_task_with_logging :pegasus do
       run_tests_if_changed(
@@ -448,6 +556,7 @@ namespace :test do
       :dashboard_legacy,
       :dashboard_cdo_contentful_engine,
       :dashboard_hoc_legacy_engine,
+      :dashboard_observability_engine,
       :pegasus,
       :shared,
       :lib,
@@ -469,6 +578,7 @@ namespace :test do
     :dashboard_legacy,
     :dashboard_cdo_contentful_engine,
     :dashboard_hoc_legacy_engine,
+    :dashboard_observability_engine,
     :pegasus,
     :shared,
     :lib,
@@ -482,6 +592,7 @@ timed_task_with_logging test: ['test:changed']
 GLOBS_AFFECTING_EVERYTHING = %w(
   .drone.yml
   lib/rake/test.rake
+  docker/ci/**/*
 )
 
 def run_tests_if_changed(test_name, changed_globs, ignore: [])

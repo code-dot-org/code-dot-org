@@ -90,7 +90,7 @@ steps:
 
   - name: unit-tests
     # see: docker/ci/Dockerfile
-    image: codedotorg/cdo-ci:1.18
+    image: codedotorg/cdo-ci:1.20
     pull: always
     environment:
       CI_JOB: 'unit_tests'
@@ -212,7 +212,7 @@ steps:
 
   - name: ui-tests
     # see: docker/ci/Dockerfile
-    image: codedotorg/cdo-ci:1.18
+    image: codedotorg/cdo-ci:1.20
     pull: always
     volumes:
       - name: mysql
@@ -232,6 +232,8 @@ steps:
         from_secret: SAUCE_USERNAME
       SAUCE_ACCESS_KEY:
         from_secret: SAUCE_ACCESS_KEY
+      DEVICE_FARM_DESKTOP_PROJECT_ARN:
+        from_secret: DEVICE_FARM_DESKTOP_PROJECT_ARN
     shm_size: '2gb' # necessary to avoid "invalid session id"/"session deleted because of page crash" errors in Selenium
     commands:
       # Cached data gets restored by the root user, so we need to reassign
@@ -295,7 +297,7 @@ steps:
   # snapshot of the fully-built project and resulting database, but don't
   # actually run the tests.
   - name: prepare-cacheable-build
-    image: codedotorg/cdo-ci:1.18
+    image: codedotorg/cdo-ci:1.20
     pull: always
     environment:
       CI_JOB: 'prepare_cacheable_build'
@@ -342,6 +344,6 @@ trigger:
 
 ---
 kind: signature
-hmac: 8380ec279dc40128beca1b341a9fff3212255c2a343d9fed59c9c839ab095669
+hmac: 737c499e8c5036a43dfcef713bafadff8d5e604cce81c2d895de471f46250dc2
 
 ...

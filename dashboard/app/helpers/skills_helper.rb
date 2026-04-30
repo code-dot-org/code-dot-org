@@ -2,8 +2,8 @@ module SkillsHelper
   def self.get_section_skills_data(section, unit)
     student_ids = section.students.pluck(:id)
     skill_ids = unit.levels.joins(:skills).
-                       pluck('skills.id').
-                       uniq
+      pluck('skills.id').
+      uniq
 
     evaluations_data = UserLevelSkillEvaluation.where(
       student_id: student_ids,
