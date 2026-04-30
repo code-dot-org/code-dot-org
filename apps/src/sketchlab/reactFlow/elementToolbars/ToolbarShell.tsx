@@ -18,6 +18,10 @@ const PAN_DURATION_MS = 200;
 // Width reserved for React Flow's Controls overlay along the left edge
 // so the toolbar doesn't sit underneath it after panning into view.
 const CONTROLS_WIDTH_PX = 60;
+// React Flow normally stacks the toolbar at its anchor node's zIndex + 1.
+// Pin the toolbar to a large constant so it always
+// floats above the canvas regardless of the anchor's zIndex.
+const TOOLBAR_Z_INDEX = 1000;
 
 interface ToolbarShellProps {
   target: ToolbarTarget;
@@ -92,6 +96,7 @@ export default function ToolbarShell({
       position={Position.Left}
       offset={TOOLBAR_OFFSET_PX}
       isVisible={isVisible}
+      style={{zIndex: TOOLBAR_Z_INDEX}}
     >
       <FocusTrap
         active={isVisible && trapFocus}
