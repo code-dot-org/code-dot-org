@@ -203,16 +203,14 @@ export default function LineEdgeToolbar({
       )}
       <ActionsGroup
         onDelete={() => deleteElements({edges: [{id: edge.id}]})}
-        onBringToFront={() =>
-          updateEdge(edge.id, {
-            zIndex: nextFrontZIndex([...getNodes(), ...getEdges()]),
-          })
-        }
-        onSendToBack={() =>
-          updateEdge(edge.id, {
-            zIndex: nextBackZIndex([...getNodes(), ...getEdges()]),
-          })
-        }
+        onBringToFront={() => {
+          const items = [...getNodes(), ...getEdges()];
+          updateEdge(edge.id, {zIndex: nextFrontZIndex(items, edge.id)});
+        }}
+        onSendToBack={() => {
+          const items = [...getNodes(), ...getEdges()];
+          updateEdge(edge.id, {zIndex: nextBackZIndex(items, edge.id)});
+        }}
       />
     </ToolbarShell>
   );

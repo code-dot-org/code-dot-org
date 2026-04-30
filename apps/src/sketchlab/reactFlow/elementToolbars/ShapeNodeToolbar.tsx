@@ -75,16 +75,14 @@ export default function ShapeNodeToolbar({nodeId}: ShapeNodeToolbarProps) {
           <ActionsGroup
             onDelete={() => deleteElements({nodes: [{id: nodeId}]})}
             onLock={() => patchNodeData({locked: true})}
-            onBringToFront={() =>
-              updateNode(nodeId, {
-                zIndex: nextFrontZIndex([...getNodes(), ...getEdges()]),
-              })
-            }
-            onSendToBack={() =>
-              updateNode(nodeId, {
-                zIndex: nextBackZIndex([...getNodes(), ...getEdges()]),
-              })
-            }
+            onBringToFront={() => {
+              const items = [...getNodes(), ...getEdges()];
+              updateNode(nodeId, {zIndex: nextFrontZIndex(items, nodeId)});
+            }}
+            onSendToBack={() => {
+              const items = [...getNodes(), ...getEdges()];
+              updateNode(nodeId, {zIndex: nextBackZIndex(items, nodeId)});
+            }}
           />
           <HandleVisibilityToggle
             visible={handlesVisible}
