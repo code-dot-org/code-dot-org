@@ -27,8 +27,11 @@ module Cdo::CloudFormation
     # Hard-coded constants and default values.
     CHEF_BIN = '/usr/local/bin/chef-cdo-app'
     CHEF_KEY = rack_env?(:adhoc) ? 'adhoc/chef' : 'chef'
-    # Use AMI for Ubuntu 20 (ubuntu/images/hvm-ssd/ubuntu-focal-20.04-amd64-server-20230517)
-    IMAGE_ID = ENV['IMAGE_ID'] || 'ami-0261755bbcb8c4a84'
+    # Our long-running Chef-managed EC2 Instances (staging, test, levelbuilder, production) use an Ubuntu 20 AMI, but
+    # have been manually upgraded to Ubuntu 22. To maintain parity, all adhoc environments use an Ubuntu 22 AMI.
+    UBUNTU_20_AMI = 'ami-0261755bbcb8c4a84' # us-east-1 ubuntu/images/hvm-ssd/ubuntu-focal-20.04-amd64-server-20230517
+    UBUNTU_22_AMI = 'ami-0ff290337e78c83bf' # us-east-1 ubuntu/images/hvm-ssd/ubuntu-jammy-22.04-amd64-server-20260424
+    IMAGE_ID = ENV['IMAGE_ID'] || (rack_env?(:adhoc) ? UBUNTU_22_AMI : UBUNTU_20_AMI)
     ORIGIN = "https://github.com/code-dot-org/code-dot-org.git"
     CHEF_VERSION = '17.6.18'
     DOMAIN = 'cdn-code.org'

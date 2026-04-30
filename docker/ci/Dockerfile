@@ -7,7 +7,7 @@
 
 
 #########################################################
-FROM ubuntu:20.04 AS base
+FROM ubuntu:22.04 AS base
 #########################################################
 # multi-stage build for parallel compiling ruby:
 # see: https://docs.docker.com/build/building/multi-stage/
@@ -73,7 +73,6 @@ FROM base AS primary-layer
 
 # MAINLINE UBUNTU PACKAGE DEPS SHOULD BE ADDED HERE
 RUN apt-get install -y --no-install-recommends \
-    apt-transport-https \
     ca-certificates \
     enscript \
     ghostscript \
@@ -87,8 +86,8 @@ RUN apt-get install -y --no-install-recommends \
     moreutils \
     openssh-client \
     parallel \
-    python \
-    python-dev \
+    python3 \
+    python3-dev \
     python3-pip \
     software-properties-common \
     sudo \
@@ -118,7 +117,7 @@ RUN service mysql start && \
     echo "GRANT SELECT ON dashboard_test.* TO 'readonly'@'localhost';" | mysql && \
     service mysql stop
 
-# For some reason, MySQL 8 on Ubuntu 20 does not have a home directory by
+# For some reason, MySQL 8 on Ubuntu does not have a home directory by
 # default, so we explicity specify one to avoid the error:
 #
 #   su: warning: cannot change directory to /nonexistent: No such file or directory
@@ -128,17 +127,12 @@ RUN service mysql start && \
 #  https://stackoverflow.com/a/63040661/1810460
 RUN usermod -d /var/lib/mysql/ mysql
 
-# Also for some reason, MySQL 8 on Ubuntu 20 only grants read permissions to
+# Also for some reason, MySQL 8 on Ubuntu only grants read permissions to
 # the mysqld directory to the mysql user, but we need to be able to connect as
 # ci, so we explicitly grant permissions to avoid the error:
 #
 #  ERROR 2002 (HY000): Can't connect to local MySQL server through socket '/run/mysqld/mysqld.sock' (13) 
 RUN sudo chmod -R 755 /run/mysqld
-
-# we need git >= 2.15 to use git rev-parse --is-shallow-clone feature
-RUN add-apt-repository ppa:git-core/ppa && \
-    apt-get update && \
-    apt-get install -y git>=2.15
 
 # we need git-lfs >= 3.0 to use SSH authentication with git-lfs
 RUN curl -sS https://packagecloud.io/install/repositories/github/git-lfs/script.deb.sh | bash && \
@@ -175,9 +169,7 @@ RUN export CHROME_STABLE_VERSION=$(curl -s https://googlechromelabs.github.io/ch
 
 # install pdftk & tidy
 RUN mv /usr/bin/parallel /usr/bin/gnu_parallel && \
-    curl -sSLOJ https://mirrors.kernel.org/ubuntu/pool/universe/p/pdftk-java/pdftk-java_3.0.9-1_all.deb && \
-    dpkg -i pdftk-java_3.0.9-1_all.deb || apt-get -fy install && \
-    rm pdftk-java_3.0.9-1_all.deb && \
+    apt-get install -y pdftk-java && \
     curl -sSLOJ https://github.com/htacg/tidy-html5/releases/download/5.4.0/tidy-5.4.0-64bit.deb && \
     dpkg -i tidy-5.4.0-64bit.deb && \
     rm tidy-5.4.0-64bit.deb && \
