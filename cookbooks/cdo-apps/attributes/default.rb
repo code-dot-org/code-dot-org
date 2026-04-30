@@ -5,7 +5,8 @@ default['cdo-apps'] = {
       RUBY_GC_HEAP_FREE_SLOTS: 600_000, # Default is 4096
       RUBY_GC_MALLOC_LIMIT_MAX: 134_217_728, # 128MB, default is 32MB
       RUBY_GC_OLDMALLOC_LIMIT_MAX: 300_000_000, # 300MB, default is 128MB
-      RUBY_GC_HEAP_OLDOBJECT_LIMIT_FACTOR: 3 # Default is 2.0
+      RUBY_GC_HEAP_OLDOBJECT_LIMIT_FACTOR: 3, # Default is 2.0
+      RUBYOPT: '--yjit'
     }
   },
 
