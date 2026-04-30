@@ -21,9 +21,9 @@
 
     .chip {
       display: inline-block;
-      background-color: var(--neutral-base-white);
-      border: 1px solid var(--neutral-base-black);
-      color: var(--neutral-base-black);
+      background-color: var(--background-neutral-primary);
+      border: 1px solid var(--borders-neutral-solid);
+      color: var(--text-neutral-primary);
       min-width: 30px;
       text-align: center;
       border-radius: 100px;
@@ -44,58 +44,58 @@
 
       // Checked styles
       &:has(input[type='checkbox']:checked) {
-        border: 1px solid var(--brand-teal-50);
-        background-color: var(--brand-teal-50);
-        color: var(--neutral-base-white);
+        border: 1px solid var(--borders-brand-teal-primary);
+        background-color: var(--background-brand-teal-primary);
+        color: var(--text-neutral-white-fixed);
       }
 
       // Hover styles
       &:hover {
-        background-color: var(--neutral-gray-10);
+        background-color: var(--background-neutral-tertiary);
 
         &:has(input[type='checkbox']:checked) {
-          background-color: var(--brand-teal-70);
+          background-color: var(--background-brand-teal-strong);
         }
       }
 
       // Pressed styles
       &:active {
-        background-color: var(--neutral-gray-10);
-        outline: var(--brand-teal-50) solid 2px;
+        background-color: var(--background-neutral-tertiary);
+        outline: var(--borders-brand-teal-primary) solid 2px;
         outline-offset: -2px;
 
         &:has(input[type='checkbox']:checked) {
-          background-color: var(--brand-teal-70);
-          outline: var(--brand-teal-50) solid 2px;
+          background-color: var(--background-brand-teal-strong);
+          outline: var(--borders-brand-teal-primary) solid 2px;
           outline-offset: -2px;
         }
       }
 
       // Focus styles
       &:has(input[type='checkbox']:focus-visible) {
-        outline: 2px solid var(--brand-teal-50);
+        outline: 2px solid var(--borders-brand-teal-primary);
         outline-offset: 2px;
       }
 
       //Disabled styles
       &:has(input[type='checkbox']:disabled) {
-        color: var(--neutral-gray-20);
-        border-color: var(--neutral-gray-20);
+        color: var(--text-neutral-disabled);
+        border-color: var(--borders-neutral-disabled);
 
         &:hover {
           cursor: not-allowed;
-          background-color: var(--neutral-base-white);
+          background-color: var(--background-neutral-primary);
         }
 
         &:active {
-          background-color: var(--neutral-base-white);
+          background-color: var(--background-neutral-primary);
           outline: none;
         }
       }
 
       &:has(input[type='checkbox']:disabled:checked) {
-        background-color: var(--neutral-gray-20);
-        color: var(--neutral-base-white);
+        background-color: var(--background-neutral-disabled);
+        color: var(--text-neutral-white-fixed);
       }
     }
   }
@@ -109,7 +109,7 @@
 .chips-black {
   fieldset {
     .chip {
-      border-color: var(--neutral-base-black);
+      border-color: var(--borders-neutral-solid);
     }
   }
 }
@@ -117,7 +117,7 @@
 .chips-gray {
   fieldset {
     .chip {
-      border-color: var(--neutral-gray-40);
+      border-color: var(--borders-neutral-strong);
     }
   }
 }
