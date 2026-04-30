@@ -23,7 +23,7 @@ services:
     ports:
       - 3306
     environment:
-      MYSQL_ROOT_PASSWORD: 'pass'
+      MYSQL_ROOT_PASSWORD: 'not-a-secret'
 
 steps:
   - name: bin/drone/shell
@@ -146,7 +146,7 @@ services:
     ports:
       - 3306
     environment:
-      MYSQL_ROOT_PASSWORD: 'pass'
+      MYSQL_ROOT_PASSWORD: 'not-a-secret'
 
 steps:
   - name: bin/drone/shell
@@ -245,7 +245,7 @@ steps:
       # Cached data gets restored by the root user, so we need to reassign
       - sudo chown -R ci:ci .
       # Restore cached database
-      - mysql -uroot -ppass -hci-tests-mysql < mysql_databases.sql
+      - mysql --user=root --password=not-a-secret --host=ci-tests-mysql < mysql_databases.sql
       # Depended on by CI: https://github.com/code-dot-org/code-dot-org/blob/048e4ddffd52e62fd6a13566ea6ccd38a6701d89/lib/cdo/ci.rb/#L16
       - export GIT_COMMIT=$DRONE_COMMIT
       - export CI_BASE_BRANCH=$DRONE_TARGET_BRANCH
@@ -288,7 +288,7 @@ services:
     ports:
       - 3306
     environment:
-      MYSQL_ROOT_PASSWORD: 'pass'
+      MYSQL_ROOT_PASSWORD: 'not-a-secret'
 
 steps:
   - name: clone
@@ -319,7 +319,7 @@ steps:
     commands:
       - sudo chown -R ci:ci .
       - /entrypoint.sh docker/ci/scripts/prepare_cacheable_build.sh
-      - mysqldump -uroot -ppass -hci-tests-mysql --all-databases > mysql_databases.sql
+      - mysqldump --user=root --password=not-a-secret --host=ci-tests-mysql --all-databases > mysql_databases.sql
       # Generate baseline file count for validation
       - touch .cached-staging-build-file-count
       - "find . -type f -not -path './.git/*' | wc -l > .cached-staging-build-file-count"

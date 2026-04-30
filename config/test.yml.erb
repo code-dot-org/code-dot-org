@@ -147,8 +147,8 @@ netsim_redis_groups:
 - master: redis://ci-tests-redis:6379
 
 # custom database config for CI
-db_writer: 'mysql://root:pass@ci-tests-mysql/'
-db_reader: 'mysql://root:pass@ci-tests-mysql/'
+db_writer: 'mysql://root:not-a-secret@ci-tests-mysql/'
+db_reader: 'mysql://root:not-a-secret@ci-tests-mysql/'
 
 # CI-specific S3 settings, to avoid collisions between concurrent CI jobs
 animations_s3_directory: <%= "animations_circle/#{ENV['CI_BUILD_NUMBER']}" %>
