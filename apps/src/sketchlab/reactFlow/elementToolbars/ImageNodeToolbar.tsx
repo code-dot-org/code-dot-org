@@ -1,5 +1,7 @@
+import {useReactFlow} from '@xyflow/react';
 import React from 'react';
 
+import {getIsStartMode} from '@cdo/apps/lab2/projects/utils';
 import {ImageNodeType} from '../types';
 
 import ActionsGroup from './ActionsGroup';
@@ -13,7 +15,9 @@ interface ImageNodeToolbarProps {
 }
 
 export default function ImageNodeToolbar({nodeId}: ImageNodeToolbarProps) {
+  const {deleteElements} = useReactFlow();
   const {data, patchNodeData} = useNodeToolbarData<ImageNodeType>(nodeId);
+  const isStartMode = getIsStartMode();
   const handlesVisible = data.showHandles !== false;
 
   return (
@@ -26,7 +30,12 @@ export default function ImageNodeToolbar({nodeId}: ImageNodeToolbarProps) {
         <LockedNotice nodeId={nodeId} />
       ) : (
         <>
-          <ActionsGroup nodeId={nodeId} />
+          <ActionsGroup
+            onDelete={() => deleteElements({nodes: [{id: nodeId}]})}
+            onLock={
+              isStartMode ? () => patchNodeData({locked: true}) : undefined
+            }
+          />
           <HandleVisibilityToggle
             visible={handlesVisible}
             onToggle={() => patchNodeData({showHandles: !handlesVisible})}
