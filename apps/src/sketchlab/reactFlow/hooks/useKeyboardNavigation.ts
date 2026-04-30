@@ -151,7 +151,7 @@ export function useKeyboardNavigation({
       }
 
       const focusedEntry = getEntryFromDOM(target);
-      const ctx: KeyContext = {
+      const keyContext: KeyContext = {
         event,
         focusedEntry,
         focusedNodeId:
@@ -161,25 +161,30 @@ export function useKeyboardNavigation({
       };
 
       // Tab navigation works in both read-only and edit mode.
-      if (handleTabNavigation(ctx)) return;
+      if (handleTabNavigation(keyContext)) return;
 
       // Escape cancels connect mode.
-      if (handleEscapeCancelConnect(ctx)) return;
+      if (handleEscapeCancelConnect(keyContext)) return;
 
       // Everything below mutates the canvas and requires edit access.
       if (readOnly) return;
 
-      if (handleOpenToolbar(ctx)) return;
-      if (handleConnectToggle(ctx)) return;
-      if (handleConnectComplete(ctx)) return;
+      if (handleOpenToolbar(keyContext)) return;
+      if (handleConnectToggle(keyContext)) return;
+      if (handleConnectComplete(keyContext)) return;
 
       // All further interactions require an unlocked node, if a node is focused.
-      if (ctx.focusedNodeId && getNode(ctx.focusedNodeId)?.data?.locked) return;
+      if (
+        keyContext.focusedNodeId &&
+        getNode(keyContext.focusedNodeId)?.data?.locked
+      ) {
+        return;
+      }
 
-      if (handleMoveNode(ctx)) return;
-      if (handleMoveEdge(ctx)) return;
-      if (handleResize(ctx)) return;
-      handleEnterEdit(ctx);
+      if (handleMoveNode(keyContext)) return;
+      if (handleMoveEdge(keyContext)) return;
+      if (handleResize(keyContext)) return;
+      handleEnterEdit(keyContext);
     },
     // The named handlers below close over hook-scope state. ESLint
     // can't trace those references through local function declarations,
@@ -211,8 +216,8 @@ export function useKeyboardNavigation({
   // lets React Flow run its own selection logic). Each handler owns
   // its own propagation calls.
 
-  function handleTabNavigation(ctx: KeyContext): boolean {
-    const {event, focusedEntry, focusedNodeId} = ctx;
+  function handleTabNavigation(keyContext: KeyContext): boolean {
+    const {event, focusedEntry, focusedNodeId} = keyContext;
     if (event.key !== 'Tab') return false;
     if (tabOrder.length === 0) return true;
 
@@ -252,16 +257,16 @@ export function useKeyboardNavigation({
     return true;
   }
 
-  function handleEscapeCancelConnect(ctx: KeyContext): boolean {
-    if (ctx.event.key !== 'Escape' || !connectingFrom) return false;
-    ctx.event.preventDefault();
-    ctx.event.stopPropagation();
+  function handleEscapeCancelConnect(keyContext: KeyContext): boolean {
+    if (keyContext.event.key !== 'Escape' || !connectingFrom) return false;
+    keyContext.event.preventDefault();
+    keyContext.event.stopPropagation();
     cancelConnect();
     return true;
   }
 
-  function handleOpenToolbar(ctx: KeyContext): boolean {
-    const {event, focusedEntry} = ctx;
+  function handleOpenToolbar(keyContext: KeyContext): boolean {
+    const {event, focusedEntry} = keyContext;
     if (event.key !== 'e') return false;
     if (connectingFrom || !focusedEntry) return false;
     if (isLineAnchorNodeId(focusedEntry.id, nodes)) return false;
@@ -270,8 +275,8 @@ export function useKeyboardNavigation({
     return true;
   }
 
-  function handleConnectToggle(ctx: KeyContext): boolean {
-    const {event, focusedNodeId} = ctx;
+  function handleConnectToggle(keyContext: KeyContext): boolean {
+    const {event, focusedNodeId} = keyContext;
     if (event.key !== 'c') return false;
     if (connectingFrom) {
       event.preventDefault();
@@ -286,8 +291,8 @@ export function useKeyboardNavigation({
     return true;
   }
 
-  function handleConnectComplete(ctx: KeyContext): boolean {
-    const {event, focusedNodeId} = ctx;
+  function handleConnectComplete(keyContext: KeyContext): boolean {
+    const {event, focusedNodeId} = keyContext;
     if (event.key !== 'Enter' || !connectingFrom) return false;
     if (focusedNodeId && focusedNodeId !== connectingFrom) {
       event.preventDefault();
@@ -300,8 +305,8 @@ export function useKeyboardNavigation({
     return true;
   }
 
-  function handleMoveNode(ctx: KeyContext): boolean {
-    const {event, focusedNodeId} = ctx;
+  function handleMoveNode(keyContext: KeyContext): boolean {
+    const {event, focusedNodeId} = keyContext;
     if (!focusedNodeId) return false;
     const {deltaX, deltaY} = getArrowDelta(event.key);
     if (!deltaX && !deltaY) return false;
@@ -313,8 +318,8 @@ export function useKeyboardNavigation({
     return true;
   }
 
-  function handleMoveEdge(ctx: KeyContext): boolean {
-    const {event, focusedEdgeId} = ctx;
+  function handleMoveEdge(keyContext: KeyContext): boolean {
+    const {event, focusedEdgeId} = keyContext;
     if (!focusedEdgeId) return false;
     const {deltaX, deltaY} = getArrowDelta(event.key);
     if (!deltaX && !deltaY) return false;
@@ -342,8 +347,8 @@ export function useKeyboardNavigation({
    *   Shift       → width only (horizontal)
    *   Alt         → height only (vertical)
    */
-  function handleResize(ctx: KeyContext): boolean {
-    const {event, focusedNodeId} = ctx;
+  function handleResize(keyContext: KeyContext): boolean {
+    const {event, focusedNodeId} = keyContext;
     if (!focusedNodeId) return false;
     if (event.code !== 'BracketLeft' && event.code !== 'BracketRight') {
       return false;
@@ -372,8 +377,8 @@ export function useKeyboardNavigation({
    * Do NOT stopPropagation here: React Flow's handler needs to fire
    * to select the node, which enables arrow-key movement.
    */
-  function handleEnterEdit(ctx: KeyContext): boolean {
-    const {event, focusedNodeId} = ctx;
+  function handleEnterEdit(keyContext: KeyContext): boolean {
+    const {event, focusedNodeId} = keyContext;
     if (event.key !== 'Enter' || !focusedNodeId) return false;
     const nodeEl = getElementForEntry({type: 'node', id: focusedNodeId});
     const editable = nodeEl?.querySelector<HTMLElement>(
