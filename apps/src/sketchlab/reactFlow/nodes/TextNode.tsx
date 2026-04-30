@@ -30,7 +30,7 @@ function TextNode({id, data, selected}: NodeProps<TextNodeType>) {
   }, [data.fontColor, data.fontSize]);
 
   const startEditing = useCallback(() => {
-    if (isEditing || readOnly) {
+    if (isEditing || readOnly || data.locked) {
       return;
     }
     setIsEditing(true);
@@ -45,11 +45,14 @@ function TextNode({id, data, selected}: NodeProps<TextNodeType>) {
         selection?.addRange(range);
       }
     }, 0);
-  }, [isEditing, readOnly]);
+  }, [isEditing, readOnly, data.locked]);
 
   const commitEdit = useCallback(() => {
     setIsEditing(false);
-    const newText = textRef.current?.textContent ?? '';
+    // innerText preserves visible newlines from <br> and block-element
+    // boundaries that contentEditable inserts on Shift+Enter; textContent
+    // would flatten them.
+    const newText = textRef.current?.innerText ?? '';
     updateNodeData(id, {text: newText});
   }, [id, updateNodeData]);
 
@@ -79,7 +82,7 @@ function TextNode({id, data, selected}: NodeProps<TextNodeType>) {
       onDoubleClick={startEditing}
     >
       <NodeResizer
-        isVisible={selected}
+        isVisible={selected && !data.locked}
         minWidth={MIN_NODE_WIDTH}
         minHeight={MIN_NODE_HEIGHT}
       />

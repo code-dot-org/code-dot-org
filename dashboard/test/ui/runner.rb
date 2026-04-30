@@ -723,12 +723,6 @@ def cucumber_arguments_for_browser(browser, options)
   arguments += skip_tag('@no_phone') if browser['name'] == 'iPhone'
   arguments += skip_tag('@only_phone') unless browser['name'] == 'iPhone'
   arguments += skip_tag('@no_ci') if options.is_ci
-
-  # always run locally or during CI runs.
-  # Note that you may end up running in more than one browser if you use flags
-  # like [test safari] or [test firefox] during a CI run.
-  arguments += skip_tag('@only_one_browser') if !options.local && !options.is_ci
-
   arguments += skip_tag('@chrome') if browser['browserName'] != 'chrome' && !options.local
   arguments += skip_tag('@no_chrome') if browser['browserName'] == 'chrome'
   arguments += skip_tag('@no_safari') if browser['name'] == 'Safari'
