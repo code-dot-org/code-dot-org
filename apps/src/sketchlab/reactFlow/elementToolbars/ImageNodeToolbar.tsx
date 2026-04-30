@@ -4,7 +4,9 @@ import {ImageNodeType} from '../types';
 
 import ActionsGroup from './ActionsGroup';
 import HandleVisibilityToggle from './HandleVisibilityToggle';
-import RotationGroup, {DEFAULT_ROTATION} from './RotationGroup';
+import {DEFAULT_ROTATION} from '../constants';
+
+import RotationGroup from './RotationGroup';
 import ToolbarShell from './ToolbarShell';
 import {useNodeToolbarData} from './useNodeToolbarData';
 

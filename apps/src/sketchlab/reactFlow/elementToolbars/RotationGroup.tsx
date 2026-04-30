@@ -2,12 +2,13 @@ import TextField from '@code-dot-org/component-library/textField';
 import {Slider, Typography} from '@mui/material';
 import React, {useCallback, useEffect, useId, useState} from 'react';
 
+import {DEFAULT_ROTATION} from '../constants';
+
 import styles from './element-toolbar.module.scss';
 
 export const ROTATION_MIN = 0;
 export const ROTATION_MAX = 359;
 export const ROTATION_STEP = 1;
-export const DEFAULT_ROTATION = 0;
 
 // Wrap any input (slider value, raw user-typed number, negative numbers,
 // values >= 360) into a normalized 0-359 range.

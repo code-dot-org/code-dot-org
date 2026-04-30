@@ -5,7 +5,9 @@ import {ShapeNodeType} from '../types';
 import ActionsGroup from './ActionsGroup';
 import FontSizeGroup from './FontSizeGroup';
 import HandleVisibilityToggle from './HandleVisibilityToggle';
-import RotationGroup, {DEFAULT_ROTATION} from './RotationGroup';
+import {DEFAULT_ROTATION} from '../constants';
+
+import RotationGroup from './RotationGroup';
 import SwatchGroup from './SwatchGroup';
 import {
   BACKGROUND_PALETTE,

@@ -4,6 +4,9 @@ export const DEFAULT_NODE_HEIGHT = 120;
 export const MIN_NODE_WIDTH = 80;
 export const MIN_NODE_HEIGHT = 60;
 
+// Default rotation in degrees.
+export const DEFAULT_ROTATION = 0;
+
 // Milliseconds to debounce project saves after canvas changes.
 export const SAVE_DEBOUNCE_MS = 300;
 
