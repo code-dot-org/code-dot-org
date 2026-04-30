@@ -1,3 +1,4 @@
+import {useReactFlow} from '@xyflow/react';
 import React from 'react';
 
 import {TextNodeType} from '../types';
@@ -21,6 +22,7 @@ interface TextNodeToolbarProps {
 }
 
 export default function TextNodeToolbar({nodeId}: TextNodeToolbarProps) {
+  const {deleteElements} = useReactFlow();
   const {data, patchNodeData} = useNodeToolbarData<TextNodeType>(nodeId);
 
   const {fontSize, fontColor} = data;
@@ -48,7 +50,10 @@ export default function TextNodeToolbar({nodeId}: TextNodeToolbarProps) {
             selectedValue={fontColor ?? DEFAULT_FONT_COLOR}
             onSelect={value => patchNodeData({fontColor: value})}
           />
-          <ActionsGroup nodeId={nodeId} />
+          <ActionsGroup
+            onDelete={() => deleteElements({nodes: [{id: nodeId}]})}
+            onLock={() => patchNodeData({locked: true})}
+          />
           <HandleVisibilityToggle
             visible={handlesVisible}
             onToggle={() => patchNodeData({showHandles: !handlesVisible})}
