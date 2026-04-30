@@ -3,6 +3,7 @@ class LessonTutor < RubyLLM::Agent
   temperature 0.5
 
   def self.generate(lesson, assessment_analysis, reflection)
+    RubyLLM.configure {|config| config.openai_api_key = CDO.openai_student_learning_api_key}
     context_tool = GetStudentLessonContext.new(assessment_analysis, reflection)
     welcome_tool = ChatWelcome.new
     agent = chat
