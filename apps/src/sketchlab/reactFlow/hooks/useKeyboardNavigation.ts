@@ -1,5 +1,5 @@
-import {addEdge, MarkerType, useReactFlow} from '@xyflow/react';
-import React, {useCallback, useEffect, useRef, useState} from 'react';
+import {useReactFlow} from '@xyflow/react';
+import React, {useCallback} from 'react';
 
 import {
   SketchlabReactFlowEdge,
@@ -16,44 +16,16 @@ import {
 } from '../constants';
 import {
   entriesMatch,
+  getElementForEntry,
   getEntryFromDOM,
   type TabOrderEntry,
 } from '../utils/computeTabOrder';
-import {
-  canCreateConnection,
-  isLineAnchorNodeId,
-} from '../utils/connectionRules';
+import {isLineAnchorNodeId} from '../utils/connectionRules';
 import {isLineEdge} from '../utils/lineEdges';
+import {getNodeLabel} from '../utils/nodeLabel';
 
-/**
- * Pick source/target handles based on relative node positions so the arrow
- * points in a sensible direction.
- */
-function pickHandles(
-  source: SketchlabReactFlowNode,
-  target: SketchlabReactFlowNode
-) {
-  const deltaX = target.position.x - source.position.x;
-  const deltaY = target.position.y - source.position.y;
-  if (Math.abs(deltaX) >= Math.abs(deltaY)) {
-    return deltaX >= 0
-      ? {sourceHandle: 'right-source', targetHandle: 'left-target'}
-      : {sourceHandle: 'left-source', targetHandle: 'right-target'};
-  }
-  return deltaY >= 0
-    ? {sourceHandle: 'bottom-source', targetHandle: 'top-target'}
-    : {sourceHandle: 'top-source', targetHandle: 'bottom-target'};
-}
-
-function getNodeLabel(node: SketchlabReactFlowNode): string {
-  if (node.type === 'shape' && node.data.label) {
-    return node.data.label;
-  }
-  if (node.type === 'text' && node.data.text) {
-    return node.data.text;
-  }
-  return node.type;
-}
+import {useAriaAnnouncer} from './useAriaAnnouncer';
+import {useConnectMode} from './useConnectMode';
 
 function moveNodesByDelta(
   currentNodes: SketchlabReactFlowNode[],
@@ -95,6 +67,24 @@ function resizeNodeByDelta(
   });
 }
 
+/**
+ * Read a single-step arrow-key delta. Returns zeros for non-arrow keys.
+ */
+function getArrowDelta(key: string) {
+  switch (key) {
+    case 'ArrowLeft':
+      return {deltaX: -KEYBOARD_MOVE_STEP, deltaY: 0};
+    case 'ArrowRight':
+      return {deltaX: KEYBOARD_MOVE_STEP, deltaY: 0};
+    case 'ArrowUp':
+      return {deltaX: 0, deltaY: -KEYBOARD_MOVE_STEP};
+    case 'ArrowDown':
+      return {deltaX: 0, deltaY: KEYBOARD_MOVE_STEP};
+    default:
+      return {deltaX: 0, deltaY: 0};
+  }
+}
+
 interface UseKeyboardNavigationOptions {
   nodes: SketchlabReactFlowNode[];
   tabOrder: TabOrderEntry[];
@@ -107,6 +97,18 @@ interface UseKeyboardNavigationOptions {
   ) => void;
   readOnly: boolean;
   openToolbar: (entry: TabOrderEntry, options?: {trapFocus?: boolean}) => void;
+}
+
+/**
+ * Per-keystroke context shared between the dispatcher and individual
+ * key handlers. Computed once at the top of `handleKeyDown` so each
+ * handler reads the same view of focus and event state.
+ */
+interface KeyContext {
+  event: React.KeyboardEvent;
+  focusedEntry: TabOrderEntry | null;
+  focusedNodeId: string | undefined;
+  focusedEdgeId: string | undefined;
 }
 
 /**
@@ -132,28 +134,9 @@ export function useKeyboardNavigation({
     SketchlabReactFlowNode,
     SketchlabReactFlowEdge
   >();
-  const [connectingFrom, setConnectingFrom] = useState<string | null>(null);
-  const [connectAnnouncement, setConnectAnnouncement] = useState('');
-  // Counter appended to announcements so identical consecutive strings
-  // still trigger an aria-live update.
-  const announceCountRef = useRef(0);
-
-  function announce(message: string) {
-    announceCountRef.current += 1;
-    // Append a non-visible token so React always sees a new string.
-    setConnectAnnouncement(
-      `${message}\u00A0`.repeat(1).trimEnd() +
-        '\u200B'.repeat(announceCountRef.current % 2 === 0 ? 1 : 2)
-    );
-  }
-
-  // Cancel connect mode when the source node is deleted.
-  useEffect(() => {
-    if (connectingFrom && !nodes.some(n => n.id === connectingFrom)) {
-      setConnectingFrom(null);
-      announce('Connect mode cancelled.');
-    }
-  }, [connectingFrom, nodes]);
+  const {announcement: connectAnnouncement, announce} = useAriaAnnouncer();
+  const {connectingFrom, startConnect, cancelConnect, completeConnect} =
+    useConnectMode({nodes, setEdges, announce});
 
   const handleKeyDown = useCallback(
     (event: React.KeyboardEvent) => {
@@ -168,265 +151,45 @@ export function useKeyboardNavigation({
       }
 
       const focusedEntry = getEntryFromDOM(target);
-      const focusedNodeId =
-        focusedEntry?.type === 'node' ? focusedEntry.id : undefined;
-      const focusedEdgeId =
-        focusedEntry?.type === 'edge' ? focusedEntry.id : undefined;
+      const ctx: KeyContext = {
+        event,
+        focusedEntry,
+        focusedNodeId:
+          focusedEntry?.type === 'node' ? focusedEntry.id : undefined,
+        focusedEdgeId:
+          focusedEntry?.type === 'edge' ? focusedEntry.id : undefined,
+      };
 
-      // Tab navigation works in both read-only and edit mode and uses the computed tab order.
-      // We stopPropagation so React Flow's built-in Tab handler (which cycles
-      // nodes in array order) never fires.
-      if (event.key === 'Tab') {
-        if (tabOrder.length === 0) return;
-        const currentIdx = focusedEntry
-          ? tabOrder.findIndex(tabEntry => entriesMatch(tabEntry, focusedEntry))
-          : -1;
-        const tabDirection = event.shiftKey ? -1 : 1;
-
-        if (connectingFrom) {
-          // Connect mode: cycle through nodes only, wrap around.
-          const nodeEntries = tabOrder.filter(
-            tabEntry => tabEntry.type === 'node'
-          );
-          if (nodeEntries.length === 0) return;
-          const curNodeIdx = focusedNodeId
-            ? nodeEntries.findIndex(tabEntry => tabEntry.id === focusedNodeId)
-            : -1;
-          const nextNodeIdx =
-            (curNodeIdx + tabDirection + nodeEntries.length) %
-            nodeEntries.length;
-          event.preventDefault();
-          event.stopPropagation();
-          focusEntry(nodeEntries[nextNodeIdx]);
-          return;
-        }
-
-        // Normal mode: move through full order; escape at boundaries.
-        if (focusedEntry) {
-          // Block ReactFlow's built-in Tab handler when focus is on a
-          // node/edge (it conflicts with elementsSelectable=false in
-          // read-only mode).
-          event.stopPropagation();
-          const nextIdx = currentIdx + tabDirection;
-          if (nextIdx >= 0 && nextIdx < tabOrder.length) {
-            event.preventDefault();
-            focusEntry(tabOrder[nextIdx]);
-          }
-          // Boundary: no preventDefault lets the browser move focus out.
-          return;
-        }
-      }
+      // Tab navigation works in both read-only and edit mode.
+      if (handleTabNavigation(ctx)) return;
 
       // Escape cancels connect mode.
-      if (event.key === 'Escape' && connectingFrom) {
-        event.preventDefault();
-        event.stopPropagation();
-        setConnectingFrom(null);
-        announce('Connect mode cancelled.');
-        return;
-      }
+      if (handleEscapeCancelConnect(ctx)) return;
 
       // Everything below mutates the canvas and requires edit access.
       if (readOnly) return;
 
-      // OPEN TOOLBAR
-      // "e" opens the node/line/image toolbar. ToolbarShell's FocusTrap
-      // moves focus to the first tabbable item when isVisible flips.
-      if (
-        event.key === 'e' &&
-        !connectingFrom &&
-        focusedEntry &&
-        !isLineAnchorNodeId(focusedEntry.id, nodes)
-      ) {
-        event.preventDefault();
-        openToolbar(focusedEntry, {trapFocus: true});
-        return;
-      }
-
-      // CREATE EDGES BETWEEN NODES
-      // "c" toggles connect mode on/off (nodes only).
-      if (event.key === 'c') {
-        if (connectingFrom) {
-          event.preventDefault();
-          setConnectingFrom(null);
-          announce('Connect mode cancelled.');
-          return;
-        }
-        if (focusedNodeId) {
-          event.preventDefault();
-          const node = getNode(focusedNodeId);
-          setConnectingFrom(focusedNodeId);
-          announce(
-            `Connect mode: ${
-              node ? getNodeLabel(node) : focusedNodeId
-            } selected as source. Tab to a target node and press Enter to connect. Press Escape or C to cancel.`
-          );
-        }
-        return;
-      }
-
-      // Enter on a different node completes the connection.
-      if (event.key === 'Enter' && connectingFrom) {
-        if (focusedNodeId && focusedNodeId !== connectingFrom) {
-          event.preventDefault();
-          event.stopPropagation();
-          const sourceNode = getNode(connectingFrom);
-          const targetNode = getNode(focusedNodeId);
-          if (sourceNode && targetNode) {
-            const handles = pickHandles(sourceNode, targetNode);
-            const connectionRejected = !canCreateConnection(
-              connectingFrom,
-              focusedNodeId,
-              nodes
-            );
-            if (connectionRejected) {
-              announce(
-                'Connection not created. Line endpoints cannot accept additional connections.'
-              );
-            } else {
-              setEdges(currentEdges => {
-                if (
-                  !canCreateConnection(connectingFrom, focusedNodeId, nodes)
-                ) {
-                  return currentEdges;
-                }
-                return addEdge(
-                  {
-                    source: connectingFrom,
-                    target: focusedNodeId,
-                    ...handles,
-                    markerEnd: {type: MarkerType.ArrowClosed},
-                  },
-                  currentEdges
-                );
-              });
-              announce(`Edge created to ${getNodeLabel(targetNode)}.`);
-            }
-          }
-          setConnectingFrom(null);
-        }
-        return;
-      }
+      if (handleOpenToolbar(ctx)) return;
+      if (handleConnectToggle(ctx)) return;
+      if (handleConnectComplete(ctx)) return;
 
       // All further interactions require an unlocked node, if a node is focused.
-      if (focusedNodeId && getNode(focusedNodeId)?.data?.locked) return;
+      if (ctx.focusedNodeId && getNode(ctx.focusedNodeId)?.data?.locked) return;
 
-      // MOVE NODE
-      // Arrow keys on a focused node move just that node.
-      if (focusedNodeId) {
-        let deltaX = 0;
-        let deltaY = 0;
-        if (event.key === 'ArrowLeft') deltaX = -KEYBOARD_MOVE_STEP;
-        if (event.key === 'ArrowRight') deltaX = KEYBOARD_MOVE_STEP;
-        if (event.key === 'ArrowUp') deltaY = -KEYBOARD_MOVE_STEP;
-        if (event.key === 'ArrowDown') deltaY = KEYBOARD_MOVE_STEP;
-
-        if (deltaX || deltaY) {
-          event.preventDefault();
-          event.stopPropagation();
-          setNodes(currentNodes =>
-            moveNodesByDelta(currentNodes, [focusedNodeId], deltaX, deltaY)
-          );
-          return;
-        }
-      }
-
-      // MOVE EDGE
-      // Arrow keys on a focused line edge move the whole line by moving
-      // both line-anchor nodes together.
-      if (focusedEdgeId) {
-        let deltaX = 0;
-        let deltaY = 0;
-        if (event.key === 'ArrowLeft') deltaX = -KEYBOARD_MOVE_STEP;
-        if (event.key === 'ArrowRight') deltaX = KEYBOARD_MOVE_STEP;
-        if (event.key === 'ArrowUp') deltaY = -KEYBOARD_MOVE_STEP;
-        if (event.key === 'ArrowDown') deltaY = KEYBOARD_MOVE_STEP;
-
-        if (deltaX || deltaY) {
-          const focusedEdge = getEdge(focusedEdgeId);
-          if (focusedEdge && isLineEdge(focusedEdge, nodes)) {
-            event.preventDefault();
-            event.stopPropagation();
-            setNodes(currentNodes =>
-              moveNodesByDelta(
-                currentNodes,
-                [focusedEdge.source, focusedEdge.target],
-                deltaX,
-                deltaY
-              )
-            );
-            return;
-          }
-        }
-      }
-
-      // CHANGE NODE SIZE
-      // "[" and "]" decrease or increase the size of the focused node.
-      // Line-anchor pseudo-nodes are excluded — they have no visible body and can
-      // be resized through 'ghost' nodes.
-      // Modifier keys control the resize axis:
-      //   No modifier → both width and height (uniform resize)
-      //   Shift       → width only (horizontal)
-      //   Alt         → height only (vertical)
-      if (
-        focusedNodeId &&
-        !isLineAnchorNodeId(focusedNodeId, nodes) &&
-        (event.code === 'BracketLeft' || event.code === 'BracketRight')
-      ) {
-        const focusedNode = getNode(focusedNodeId);
-        const direction = (event.code === 'BracketRight' ? 1 : -1) as 1 | -1;
-        const step = direction * KEYBOARD_RESIZE_STEP;
-
-        const deltaWidth = event.altKey ? 0 : step;
-        const deltaHeight = event.shiftKey ? 0 : step;
-
-        event.preventDefault();
-        event.stopPropagation();
-        setNodes(currentNodes =>
-          resizeNodeByDelta(
-            currentNodes,
-            focusedNodeId,
-            deltaWidth,
-            deltaHeight
-          )
-        );
-        const nodeLabel = focusedNode
-          ? getNodeLabel(focusedNode)
-          : focusedNodeId;
-        const axis = event.altKey
-          ? 'height'
-          : event.shiftKey
-          ? 'width'
-          : 'size';
-        announce(
-          `${nodeLabel} ${axis} ${direction > 0 ? 'enlarged' : 'shrunk'}.`
-        );
-
-        return;
-      }
-
-      // EDIT NODE TEXT
-      // Enter on a focused node (outside connect mode) enters edit mode.
-      // Do NOT stopPropagation here: React Flow's handler needs to fire
-      // to select the node, which enables arrow-key movement.
-      if (event.key === 'Enter' && focusedNodeId) {
-        const focusedNodeElement = document.querySelector<HTMLElement>(
-          `.react-flow__node[data-id="${focusedNodeId}"]`
-        );
-        const editable = focusedNodeElement?.querySelector<HTMLElement>(
-          '[role="textbox"], button, input'
-        );
-        if (editable) {
-          event.preventDefault();
-          if (editable.tagName === 'BUTTON') {
-            editable.click();
-          } else {
-            editable.focus();
-          }
-        }
-      }
+      if (handleMoveNode(ctx)) return;
+      if (handleMoveEdge(ctx)) return;
+      if (handleResize(ctx)) return;
+      handleEnterEdit(ctx);
     },
+    // The named handlers below close over hook-scope state. ESLint
+    // can't trace those references through local function declarations,
+    // so we curate the dep list to match the union of what each
+    // handler actually reads.
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     [
+      announce,
+      cancelConnect,
+      completeConnect,
       connectingFrom,
       focusEntry,
       getEdge,
@@ -434,11 +197,197 @@ export function useKeyboardNavigation({
       nodes,
       openToolbar,
       readOnly,
-      setEdges,
       setNodes,
+      startConnect,
       tabOrder,
     ]
   );
+
+  // ------- key handlers -------
+  // Each returns true when it handled the event (dispatcher stops).
+  // Returning true does NOT imply preventDefault/stopPropagation were
+  // called: a few branches deliberately let propagation continue (the
+  // Tab boundary case lets the browser move focus out; Enter-edit
+  // lets React Flow run its own selection logic). Each handler owns
+  // its own propagation calls.
+
+  function handleTabNavigation(ctx: KeyContext): boolean {
+    const {event, focusedEntry, focusedNodeId} = ctx;
+    if (event.key !== 'Tab') return false;
+    if (tabOrder.length === 0) return true;
+
+    const tabDirection = event.shiftKey ? -1 : 1;
+
+    if (connectingFrom) {
+      // Connect mode: cycle through nodes only, wrap around.
+      const nodeEntries = tabOrder.filter(entry => entry.type === 'node');
+      if (nodeEntries.length === 0) return true;
+      const curNodeIdx = focusedNodeId
+        ? nodeEntries.findIndex(entry => entry.id === focusedNodeId)
+        : -1;
+      const nextNodeIdx =
+        (curNodeIdx + tabDirection + nodeEntries.length) % nodeEntries.length;
+      event.preventDefault();
+      event.stopPropagation();
+      focusEntry(nodeEntries[nextNodeIdx]);
+      return true;
+    }
+
+    // Normal mode: move through full order; escape at boundaries.
+    if (!focusedEntry) return false;
+
+    // Block ReactFlow's built-in Tab handler when focus is on a
+    // node/edge (it conflicts with elementsSelectable=false in
+    // read-only mode).
+    event.stopPropagation();
+    const currentIdx = tabOrder.findIndex(entry =>
+      entriesMatch(entry, focusedEntry)
+    );
+    const nextIdx = currentIdx + tabDirection;
+    if (nextIdx >= 0 && nextIdx < tabOrder.length) {
+      event.preventDefault();
+      focusEntry(tabOrder[nextIdx]);
+    }
+    // Boundary: no preventDefault lets the browser move focus out.
+    return true;
+  }
+
+  function handleEscapeCancelConnect(ctx: KeyContext): boolean {
+    if (ctx.event.key !== 'Escape' || !connectingFrom) return false;
+    ctx.event.preventDefault();
+    ctx.event.stopPropagation();
+    cancelConnect();
+    return true;
+  }
+
+  function handleOpenToolbar(ctx: KeyContext): boolean {
+    const {event, focusedEntry} = ctx;
+    if (event.key !== 'e') return false;
+    if (connectingFrom || !focusedEntry) return false;
+    if (isLineAnchorNodeId(focusedEntry.id, nodes)) return false;
+    event.preventDefault();
+    openToolbar(focusedEntry, {trapFocus: true});
+    return true;
+  }
+
+  function handleConnectToggle(ctx: KeyContext): boolean {
+    const {event, focusedNodeId} = ctx;
+    if (event.key !== 'c') return false;
+    if (connectingFrom) {
+      event.preventDefault();
+      cancelConnect();
+      return true;
+    }
+    if (focusedNodeId) {
+      event.preventDefault();
+      startConnect(focusedNodeId);
+    }
+    // Always consume "c" so it never falls through to other handlers.
+    return true;
+  }
+
+  function handleConnectComplete(ctx: KeyContext): boolean {
+    const {event, focusedNodeId} = ctx;
+    if (event.key !== 'Enter' || !connectingFrom) return false;
+    if (focusedNodeId && focusedNodeId !== connectingFrom) {
+      event.preventDefault();
+      event.stopPropagation();
+      completeConnect(focusedNodeId);
+    }
+    // Enter while connecting always consumes the event, even with no
+    // valid target — falling through to handleEnterEdit would re-enter
+    // the source node's text edit on the same keystroke.
+    return true;
+  }
+
+  function handleMoveNode(ctx: KeyContext): boolean {
+    const {event, focusedNodeId} = ctx;
+    if (!focusedNodeId) return false;
+    const {deltaX, deltaY} = getArrowDelta(event.key);
+    if (!deltaX && !deltaY) return false;
+    event.preventDefault();
+    event.stopPropagation();
+    setNodes(currentNodes =>
+      moveNodesByDelta(currentNodes, [focusedNodeId], deltaX, deltaY)
+    );
+    return true;
+  }
+
+  function handleMoveEdge(ctx: KeyContext): boolean {
+    const {event, focusedEdgeId} = ctx;
+    if (!focusedEdgeId) return false;
+    const {deltaX, deltaY} = getArrowDelta(event.key);
+    if (!deltaX && !deltaY) return false;
+    const focusedEdge = getEdge(focusedEdgeId);
+    if (!focusedEdge || !isLineEdge(focusedEdge, nodes)) return false;
+    event.preventDefault();
+    event.stopPropagation();
+    setNodes(currentNodes =>
+      moveNodesByDelta(
+        currentNodes,
+        [focusedEdge.source, focusedEdge.target],
+        deltaX,
+        deltaY
+      )
+    );
+    return true;
+  }
+
+  /**
+   * "[" and "]" decrease or increase the size of the focused node.
+   * Line-anchor pseudo-nodes are excluded — they have no visible body
+   * and are resized through 'ghost' nodes.
+   * Modifier keys control the resize axis:
+   *   No modifier → both width and height (uniform resize)
+   *   Shift       → width only (horizontal)
+   *   Alt         → height only (vertical)
+   */
+  function handleResize(ctx: KeyContext): boolean {
+    const {event, focusedNodeId} = ctx;
+    if (!focusedNodeId) return false;
+    if (event.code !== 'BracketLeft' && event.code !== 'BracketRight') {
+      return false;
+    }
+    if (isLineAnchorNodeId(focusedNodeId, nodes)) return false;
+
+    const focusedNode = getNode(focusedNodeId);
+    const direction = (event.code === 'BracketRight' ? 1 : -1) as 1 | -1;
+    const step = direction * KEYBOARD_RESIZE_STEP;
+    const deltaWidth = event.altKey ? 0 : step;
+    const deltaHeight = event.shiftKey ? 0 : step;
+
+    event.preventDefault();
+    event.stopPropagation();
+    setNodes(currentNodes =>
+      resizeNodeByDelta(currentNodes, focusedNodeId, deltaWidth, deltaHeight)
+    );
+    const nodeLabel = focusedNode ? getNodeLabel(focusedNode) : focusedNodeId;
+    const axis = event.altKey ? 'height' : event.shiftKey ? 'width' : 'size';
+    announce(`${nodeLabel} ${axis} ${direction > 0 ? 'enlarged' : 'shrunk'}.`);
+    return true;
+  }
+
+  /**
+   * Enter on a focused node (outside connect mode) enters edit mode.
+   * Do NOT stopPropagation here: React Flow's handler needs to fire
+   * to select the node, which enables arrow-key movement.
+   */
+  function handleEnterEdit(ctx: KeyContext): boolean {
+    const {event, focusedNodeId} = ctx;
+    if (event.key !== 'Enter' || !focusedNodeId) return false;
+    const nodeEl = getElementForEntry({type: 'node', id: focusedNodeId});
+    const editable = nodeEl?.querySelector<HTMLElement>(
+      '[role="textbox"], button, input'
+    );
+    if (!editable) return false;
+    event.preventDefault();
+    if (editable.tagName === 'BUTTON') {
+      editable.click();
+    } else {
+      editable.focus();
+    }
+    return true;
+  }
 
   return {connectingFrom, connectAnnouncement, handleKeyDown};
 }
