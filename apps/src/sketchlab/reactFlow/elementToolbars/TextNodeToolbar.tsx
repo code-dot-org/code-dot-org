@@ -1,14 +1,12 @@
-import {useReactFlow} from '@xyflow/react';
 import React from 'react';
 
 import {DEFAULT_ROTATION} from '../constants';
 import {TextNodeType} from '../types';
-import {nextBackZIndex, nextFrontZIndex} from '../utils/stacking';
 
-import ActionsGroup from './ActionsGroup';
 import FontSizeGroup from './FontSizeGroup';
 import HandleVisibilityToggle from './HandleVisibilityToggle';
 import LockedNotice from './LockedNotice';
+import NodeActionsGroup from './NodeActionsGroup';
 import RotationGroup from './RotationGroup';
 import SwatchGroup from './SwatchGroup';
 import {
@@ -25,7 +23,6 @@ interface TextNodeToolbarProps {
 }
 
 export default function TextNodeToolbar({nodeId}: TextNodeToolbarProps) {
-  const {deleteElements, updateNode, getNodes, getEdges} = useReactFlow();
   const {data, patchNodeData} = useNodeToolbarData<TextNodeType>(nodeId);
 
   const {fontSize, fontColor} = data;
@@ -57,18 +54,7 @@ export default function TextNodeToolbar({nodeId}: TextNodeToolbarProps) {
             value={data.rotation ?? DEFAULT_ROTATION}
             onChange={degrees => patchNodeData({rotation: degrees})}
           />
-          <ActionsGroup
-            onDelete={() => deleteElements({nodes: [{id: nodeId}]})}
-            onLock={() => patchNodeData({locked: true})}
-            onBringToFront={() => {
-              const items = [...getNodes(), ...getEdges()];
-              updateNode(nodeId, {zIndex: nextFrontZIndex(items, nodeId)});
-            }}
-            onSendToBack={() => {
-              const items = [...getNodes(), ...getEdges()];
-              updateNode(nodeId, {zIndex: nextBackZIndex(items, nodeId)});
-            }}
-          />
+          <NodeActionsGroup nodeId={nodeId} />
           <HandleVisibilityToggle
             visible={handlesVisible}
             onToggle={() => patchNodeData({showHandles: !handlesVisible})}
