@@ -3,7 +3,11 @@ import {Button as MuiButton} from '@mui/material';
 import classNames from 'classnames';
 import React from 'react';
 
-import {ChatButtonData, ResponseSchemaSettings} from '@cdo/apps/aichat/types';
+import {
+  AiChatDisabledState,
+  ChatButtonData,
+  ResponseSchemaSettings,
+} from '@cdo/apps/aichat/types';
 import type {JsonVideoFileMetadata} from '@cdo/apps/jsonVideo/jsonVideoPrompt';
 import AiTutorChat from '@cdo/apps/lab2/views/components/AiTutorChat';
 import ResizeBar from '@cdo/apps/lab2/views/components/layout/ResizeBar';
@@ -24,8 +28,7 @@ interface AiTutorChatWithInstructionDrawerProps {
   isCollapsedByDefault: boolean;
   tutorVideos?: JsonVideoFileMetadata[];
   isPredictLevel?: boolean;
-  disabled?: boolean;
-  disabledMessage?: string;
+  disabledState?: AiChatDisabledState;
 }
 
 const AiTutorChatWithInstructionDrawer: React.FunctionComponent<
@@ -42,8 +45,7 @@ const AiTutorChatWithInstructionDrawer: React.FunctionComponent<
   isCollapsedByDefault,
   tutorVideos,
   isPredictLevel,
-  disabled,
-  disabledMessage,
+  disabledState,
 }) => {
   const {
     containerRef,
@@ -122,8 +124,7 @@ const AiTutorChatWithInstructionDrawer: React.FunctionComponent<
             aiTutorResponseSchemaSettings={aiTutorResponseSchemaSettings}
             hasInstructionsDrawer={true}
             tutorVideos={tutorVideos}
-            disabled={disabled}
-            disabledMessage={disabledMessage}
+            disabledState={disabledState}
           />
         </div>
       </div>

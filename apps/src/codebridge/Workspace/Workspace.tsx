@@ -137,6 +137,7 @@ const Workspace: React.FunctionComponent<WorkspaceProps> = ({
               <Typography
                 className={moduleStyles.fileBrowserHeaderText}
                 variant="body4"
+                component="h2"
               >
                 {codebridgeI18n.filesHeader()}
               </Typography>
