@@ -31,7 +31,6 @@ Dashboard::Application.configure do
   config.action_controller.perform_caching = false
 
   # Use smaller cache size when running unit tests.
-  # make arbitrary change to trigger tests
   config.cache_store = :memory_store, {size: 64.megabytes} if CDO.unit_test
 
   # config.action_mailer.raise_delivery_errors = true
