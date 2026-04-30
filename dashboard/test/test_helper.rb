@@ -1,9 +1,6 @@
 require 'test_reporter'
 require 'faker'
 
-require 'objspace'
-ObjectSpace.trace_object_allocations_start
-
 require_relative '../../lib/cdo/ci_utils'
 
 if defined? ActiveRecord
@@ -129,15 +126,6 @@ class ActiveSupport::TestCase
     Dashboard::Application.config.action_controller.perform_caching = false
     I18n.locale = I18n.default_locale
     set_env :test
-    # https://ttb.software/2026/03/25/debug-memory-leaks-ruby-rails-production/
-    if `free -m | awk 'NR==2{print $7}'`.to_i < 10_000
-      filename = "/tmp/heap_dump_#{Process.pid}.json"
-      unless File.exist?(filename)
-        GC.start(full_mark: true, immediate_sweep: true)
-        GC.start # Run twice to clear weak references
-        ObjectSpace.dump_all(output: File.open(filename, 'w'))
-      end
-    end
   end
 
   def after_teardown
