@@ -22,9 +22,12 @@ import {useSources} from '@cdo/apps/lab2/views/SourcesContainer';
 import {createUuid} from '@cdo/apps/utils';
 
 import {
+  ARROW_MARKER_HEIGHT_PX,
+  ARROW_MARKER_WIDTH_PX,
   DEFAULT_NODE_HEIGHT,
   DEFAULT_NODE_WIDTH,
   LINE_ANCHOR_SIZE_PX,
+  LINE_DEFAULT_LENGTH_PX,
   SAVE_DEBOUNCE_MS,
 } from '../constants';
 import {
@@ -71,7 +74,6 @@ const NODE_TYPES = {
 // Offset added per new node so they don't stack exactly on top of each other.
 const NEW_NODE_STAGGER_PX = 20;
 const FOCUS_DELAY_MS = 100;
-const LINE_DEFAULT_LENGTH_PX = 220;
 
 export interface ReactFlowCanvasProps {
   updateSources: ReturnType<
@@ -379,8 +381,8 @@ export default function ReactFlowCanvas({
         y: window.innerHeight / 2 + stagger,
       });
 
-      // For lines, we create two hidden nodes and connecting anchors between them.
-      if (type === 'line') {
+      // For lines/arrows, create two hidden anchor nodes and connect them.
+      if (type === 'line' || type === 'arrow') {
         const sourceAnchorId = createUuid();
         const targetAnchorId = createUuid();
         const lineEdgeId = createUuid();
@@ -421,6 +423,15 @@ export default function ReactFlowCanvas({
           source: sourceAnchorId,
           target: targetAnchorId,
           type: 'straight',
+          ...(type === 'arrow' && {
+            markerEnd: {
+              type: MarkerType.ArrowClosed,
+              color: DEFAULT_STROKE_COLOR,
+              width: ARROW_MARKER_WIDTH_PX,
+              height: ARROW_MARKER_HEIGHT_PX,
+              strokeWidth: DEFAULT_LINE_WIDTH,
+            },
+          }),
           style: {
             stroke: DEFAULT_STROKE_COLOR,
             strokeWidth: DEFAULT_LINE_WIDTH,
@@ -490,6 +501,7 @@ export default function ReactFlowCanvas({
     setLineEdgeColor,
     setLineEdgeWidth,
     setLineEdgeStrokeStyle,
+    setLineEdgeArrowHeads,
   } = useLineToolbar({
     edges,
     nodes,
@@ -557,6 +569,9 @@ export default function ReactFlowCanvas({
                 }
                 onSelectStrokeStyle={value =>
                   setLineEdgeStrokeStyle(openLineEdge.id, value)
+                }
+                onSelectArrowHeads={value =>
+                  setLineEdgeArrowHeads(openLineEdge.id, value)
                 }
               />
             )}

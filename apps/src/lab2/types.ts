@@ -127,6 +127,7 @@ export interface SketchlabReactFlowEdge {
   sourceHandle?: string;
   targetHandle?: string;
   type?: string;
+  markerStart?: EdgeMarkerType;
   markerEnd?: EdgeMarkerType;
 }
 
