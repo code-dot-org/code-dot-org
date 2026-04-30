@@ -53,21 +53,13 @@ class CachingTest < ActionDispatch::IntegrationTest
   end
 
   test "post milestone to other hoc unit passing" do
-    Rails.cache.with_local_cache do
-      sl = Unit.find_by_name(@other_hoc_unit.name).script_levels[2]
-      params = {program: 'fake program', testResult: 100, result: 'true'}
+    sl = Unit.find_by_name(@other_hoc_unit.name).script_levels[2]
+    params = {program: 'fake program', testResult: 100, result: 'true'}
 
-      # The very first post with a brand-new cache queries level_sources
-      assert_cached_queries(1) do
-        post "/milestone/0/#{sl.id}", params: params
-      end
-
-      # All future posts are entirely cached
-      assert_cached_queries(0) do
-        post "/milestone/0/#{sl.id}", params: params
-      end
-      assert_response 200
+    assert_cached_queries(0) do
+      post "/milestone/0/#{sl.id}", params: params
     end
+    assert_response 200
   end
 
   #
@@ -101,22 +93,14 @@ class CachingTest < ActionDispatch::IntegrationTest
   end
 
   test "post milestone to multi-lesson course passing" do
-    Rails.cache.with_local_cache do
-      unit = create(:unit, :with_levels, lessons_count: 3, levels_count: 10)
-      sl = unit.script_levels[2]
-      params = {program: 'fake program', testResult: 100, result: 'true'}
+    unit = create(:unit, :with_levels, lessons_count: 3, levels_count: 10)
+    sl = unit.script_levels[2]
+    params = {program: 'fake program', testResult: 100, result: 'true'}
 
-      # The very first post with a brand-new cache queries level_sources
-      assert_cached_queries(1) do
-        post "/milestone/0/#{sl.id}", params: params
-      end
-
-      # All future posts are entirely cached
-      assert_cached_queries(0) do
-        post "/milestone/0/#{sl.id}", params: params
-      end
-      assert_response :success
+    assert_cached_queries(0) do
+      post "/milestone/0/#{sl.id}", params: params
     end
+    assert_response :success
   end
 
   test 'should cache script after initialization' do

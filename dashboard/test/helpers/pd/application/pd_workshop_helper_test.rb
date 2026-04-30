@@ -55,64 +55,56 @@ module Pd::Application
     end
 
     test 'workshop cache' do
-      Rails.cache.with_local_cache do
-        create(:pd_enrollment, workshop: @workshop, user: @application.user)
+      create(:pd_enrollment, workshop: @workshop, user: @application.user)
 
-        # Original query: Workshop, Sessions, Enrollments
-        assert_queries 3 do
-          assert_equal @workshop, @application.workshop
-        end
+      # Original query: Workshop, Sessions, Enrollments
+      assert_queries 3 do
+        assert_equal @workshop, @application.workshop
+      end
 
-        # Cached
-        assert_queries 0 do
-          assert_equal @workshop, @application.workshop
-          assert @application.registered_workshop?
-        end
+      # Cached
+      assert_queries 0 do
+        assert_equal @workshop, @application.workshop
+        assert @application.registered_workshop?
       end
     end
 
     test 'workshop cache prefetch' do
-      Rails.cache.with_local_cache do
-        # Workshops, Sessions, Enrollments
-        assert_queries 3 do
-          TEACHER_APPLICATION_CLASS.prefetch_workshops([@application.pd_workshop_id])
-        end
+      # Workshops, Sessions, Enrollments
+      assert_queries 3 do
+        TEACHER_APPLICATION_CLASS.prefetch_workshops([@application.pd_workshop_id])
+      end
 
-        assert_queries 0 do
-          assert_equal @workshop, @application.workshop
-        end
+      assert_queries 0 do
+        assert_equal @workshop, @application.workshop
       end
     end
 
     test 'cache expires in 30 seconds' do
-      Rails.cache.with_local_cache do
-        ActiveRecord::Base.connection.uncached do
-          TEACHER_APPLICATION_CLASS.prefetch_associated_models([@application])
+      ActiveRecord::Base.connection.uncached do
+        TEACHER_APPLICATION_CLASS.prefetch_associated_models([@application])
 
-          Timecop.travel(30.seconds) do
-            assert_queries 3 do
-              assert_equal @workshop, @application.workshop
-            end
+        Timecop.travel(30.seconds) do
+          assert_queries 3 do
+            assert_equal @workshop, @application.workshop
           end
         end
       end
     end
 
     test 'prefetch scales without additional queries' do
-      Rails.cache.with_local_cache do
-        workshops = create_list(:workshop, 10)
-        applications = Array.new(10) do |i|
-          create TEACHER_APPLICATION_FACTORY, pd_workshop_id: workshops[i].id
-        end
+      workshops = create_list(:workshop, 10)
+      applications = Array.new(10) do |i|
+        create TEACHER_APPLICATION_FACTORY, pd_workshop_id: workshops[i].id
+      end
 
-        # 10 applications, still only 5 queries
-        assert_queries 5 do
-          TEACHER_APPLICATION_CLASS.prefetch_associated_models(applications)
-        end
+      # 10 applications, still only 5 queries
+      assert_queries 5 do
+        TEACHER_APPLICATION_CLASS.prefetch_associated_models(applications)
+      end
 
-        assert_queries 0 do
-          assert_equal workshops, applications.map(&:workshop)
-        end
+      assert_queries 0 do
+        assert_equal workshops, applications.map(&:workshop)
       end
     end
   end
