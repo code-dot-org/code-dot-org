@@ -51,6 +51,9 @@ class Gamelab < Blockly
     start_libraries
     libraries_enabled
     validation_enabled
+    ai_enabled
+    ai_model_id
+    ai_model_name
   )
 
   # List of possible skins, the first is used as a default.

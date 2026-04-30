@@ -27,3 +27,17 @@ export const setKeyValue = function (key, value, onSuccess, onError) {
     onError,
   });
 };
+
+export const getPrediction = function (
+  modelName,
+  modelId,
+  testValues,
+  callback
+) {
+  return GameLab.executeCmd(null, 'getPrediction', {
+    modelName,
+    modelId,
+    testValues,
+    callback,
+  });
+};
