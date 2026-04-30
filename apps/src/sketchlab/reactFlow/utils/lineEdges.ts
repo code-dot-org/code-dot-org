@@ -11,3 +11,7 @@ export function isLineEdge(
   const targetNode = nodes.find(node => node.id === edge.target);
   return sourceNode?.type === 'lineAnchor' && targetNode?.type === 'lineAnchor';
 }
+
+export function isArrowEdge(edge: SketchlabReactFlowEdge): boolean {
+  return Boolean(edge.markerStart || edge.markerEnd);
+}

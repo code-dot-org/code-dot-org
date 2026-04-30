@@ -1,6 +1,5 @@
 <Weblab2>
   <config><![CDATA[{
-  "published": true,
   "game_id": 74,
   "created_at": "2026-04-29T04:09:00.000Z",
   "level_num": "custom",
@@ -32,7 +31,7 @@
           "id": "1",
           "name": "images",
           "parentId": "0",
-          "open": false
+          "open": true
         }
       },
       "files": {
@@ -40,7 +39,7 @@
           "id": "1",
           "name": "index.html",
           "language": "html",
-          "contents": "<!DOCTYPE html>\n<html>\n  <head>\n    <meta charset=\"utf-8\" />\n    <title id=\"pageTitle\">Today's Special</title>\n    <link rel=\"stylesheet\" href=\"style.css\" />\n  </head>\n  <body>\n    <main id=\"mainContainer\" class=\"page\">\n      <header id=\"header\">\n        <h1 id=\"heading\">Today's Special</h1>\n        <p id=\"subtitle\">See what’s featured on the menu today.</p>\n      </header>\n\n      <section id=\"cardContainer\" class=\"card-container\"></section>\n    </main>\n\n    <script src=\"helpers.js\"></script>\n    <script src=\"script.js\"></script>\n  </body>\n</html>",
+          "contents": "<!DOCTYPE html>\n<html>\n  <head>\n    <meta charset=\"utf-8\" />\n    <title id=\"pageTitle\">Sneaker Drops</title>\n    <link rel=\"stylesheet\" href=\"style.css\" />\n  </head>\n  <body>\n    <main id=\"mainContainer\" class=\"page\">\n      <header id=\"header\">\n        <h1 id=\"heading\">Latest Sneaker Drops</h1>\n        <p id=\"subtitle\">Check out today’s featured sneakers.</p>\n      </header>\n\n      <section id=\"cardContainer\" class=\"card-container\"></section>\n    </main>\n\n    <script src=\"helpers.js\"></script>\n    <script src=\"script.js\"></script>\n  </body>\n</html>",
           "active": false,
           "folderId": "0"
         },
@@ -56,7 +55,7 @@
           "id": "3",
           "name": "script.js",
           "language": "js",
-          "contents": "const image = \"images/empanada.png\";\nconst title = \"Empanada\";\nconst description = \"A baked or fried pastry filled with savory ingredients like meat, cheese, or vegetables.\";\nconst badge = \"Popular Dish\";\n\ncreateCard(image, title, description, badge);",
+          "contents": "const image = \"images/sneaker1.png\";\nconst title = \"Air Max\";\nconst description = \"Red and white running shoe\";\nconst badge = \"Nike\";\n\ncreateCard(image, title, description, badge);",
           "folderId": "0",
           "active": true
         },
@@ -70,10 +69,10 @@
         },
         "5": {
           "id": "5",
-          "name": "empanada.png",
+          "name": "sneaker1.png",
           "contents": "",
           "folderId": "1",
-          "url": "/level_starter_assets/building-data-driven-systems-lesson2-level1a-v1-2026/uuid/6ac452b2-8aa2-4d23-a0b8-b560a8f7fcd2.png",
+          "url": "/level_starter_assets/building-data-driven-systems-lesson2-level1a-v1-2026/uuid/07f4df17-b1bb-4eaf-98a3-b9ca469f4a8b.png",
           "type": "starter",
           "active": false
         }
@@ -99,8 +98,9 @@
     },
     "display_name": "Card View",
     "bubble_choice_description": "Displays one item with multiple pieces of information, such as an image, title, and description.",
-    "thumbnail_url": "https://images.code.org/0a10a4fe1efcb1daf9da3839dfdd4515-card_view (2).png"
+    "thumbnail_url": "https://images.code.org/0b75730c0b783f52e0794b96af0c3da3-card.png"
   },
-  "audit_log": "[{\"changed_at\":\"2026-04-29T04:09:00.661+00:00\",\"changed\":[\"cloned from \\\"building-data-driven-systems-lesson1-level4-v1-2026\\\"\"],\"cloned_from\":\"building-data-driven-systems-lesson1-level4-v1-2026\"},{\"changed_at\":\"2026-04-29 04:15:33 +0000\",\"changed\":[\"long_instructions\",\"ai_tutor_prompt_settings\",\"project_template_level_name\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-04-29 04:20:26 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-04-29 04:20:27 +0000\",\"changed\":[],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-04-29 04:35:54 +0000\",\"changed\":[\"thumbnail_url\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"}]"
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-04-29T04:09:00.661+00:00\",\"changed\":[\"cloned from \\\"building-data-driven-systems-lesson1-level4-v1-2026\\\"\"],\"cloned_from\":\"building-data-driven-systems-lesson1-level4-v1-2026\"},{\"changed_at\":\"2026-04-29 04:15:33 +0000\",\"changed\":[\"long_instructions\",\"ai_tutor_prompt_settings\",\"project_template_level_name\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-04-29 04:20:26 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-04-29 04:20:27 +0000\",\"changed\":[],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-04-29 04:35:54 +0000\",\"changed\":[\"thumbnail_url\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-04-30 04:05:26 +0000\",\"changed\":[\"thumbnail_url\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-04-30 04:06:16 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-04-30 04:06:16 +0000\",\"changed\":[],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-04-30 04:09:21 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-04-30 04:09:22 +0000\",\"changed\":[],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-04-30 04:09:22 +0000\",\"changed\":[],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-04-30 04:09:28 +0000\",\"changed\":[],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-04-30 04:09:28 +0000\",\"changed\":[],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-04-30 04:09:28 +0000\",\"changed\":[],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"}]"
 }]]></config>
 </Weblab2>

@@ -49,7 +49,8 @@ export type AddNodeRequest =
   | {type: 'shape'; data: ShapeNodeData}
   | {type: 'text'; data: TextNodeData}
   | {type: 'image'; data: ImageNodeData}
-  | {type: 'line'};
+  | {type: 'line'}
+  | {type: 'arrow'};
 
 export type ShapeNodeType = Node<ShapeNodeData, 'shape'>;
 export type TextNodeType = Node<TextNodeData, 'text'>;

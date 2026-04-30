@@ -4,5 +4,8 @@ description '### Choose the same UI you used in the previous level. You will use
 
 sublevels
 level 'building-data-driven-systems-lesson2-level3a-v2-2026'
+level 'building-data-driven-systems-lesson2-level3b-v2-2026'
+level 'building-data-driven-systems-lesson2-level3c-v2-2026'
+
 
 uses_lab2

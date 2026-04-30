@@ -211,3 +211,35 @@
     min-width: 0;
   }
 }
+
+.lineStyleButtons {
+  display: flex;
+  flex-direction: row;
+  gap: 4px;
+}
+
+.lineStyleButton {
+  border: 1px solid var(--borders-neutral-primary);
+  background-color: var(--background-neutral-primary);
+  color: var(--text-neutral-primary);
+  border-radius: 6px;
+  min-width: 36px;
+  height: 24px;
+  padding: 0 8px;
+
+  &:hover {
+    background-color: var(--background-neutral-secondary);
+  }
+}
+
+.lineStyleButtonSelected {
+  background-color: var(--background-neutral-secondary);
+  border-color: var(--text-neutral-primary);
+}
+
+.linePreview {
+  display: inline-block;
+  width: 16px;
+  border-top-color: currentColor;
+  border-top-style: solid;
+}

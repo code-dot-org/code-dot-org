@@ -14,6 +14,14 @@ export RACK_ENV=test
 export DISABLE_SPRING=1
 export LD_LIBRARY_PATH=/usr/local/lib
 
+# Enable jemalloc, both for memory optimization and parity with our deployed
+# application. Configuration options based on the defaults used in chef (see
+# cookbooks/cdo-jemalloc/attributes/default.rb), with the notable exception of
+# `background_thread:true` since that breaks chromedriver (see
+# https://issues.chromium.org/issues/378077860).
+export LD_PRELOAD=/usr/lib/x86_64-linux-gnu/libjemalloc.so.2
+export MALLOC_CONF=narenas:2,thp:never,dirty_decay_ms:1000,muzzy_decay_ms:0
+
 # Number of parallel processes for dashboard ruby unit tests,
 # optimized for drone m7i.4xlarge workers with 16 vCPUs and 64 GB RAM.
 # We ran into OOM errors with 7, and get a persistent unexplained failure in

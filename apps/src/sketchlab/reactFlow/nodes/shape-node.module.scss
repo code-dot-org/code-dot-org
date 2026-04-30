@@ -44,7 +44,9 @@
   max-width: 90%;
   min-width: 40px;
   min-height: 20px;
-  word-break: break-word;
+  word-break: normal;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
   font-size: 14px;
   line-height: 1.3;
   pointer-events: all;
