@@ -93,7 +93,7 @@
   "addStudentsToCurrentSection": "Add students to the current section",
   "addStudentsMultiple": "Add multiple students",
   "addStudentsMultipleInstructions": "Add student data as comma-separated values in the following format: Display Name, Family Name, Age, Gender, State (only Display Name is required — leave blanks between commas to omit values).",
-  "addStudentsMultipleWithFamilyNameInstructions": "Add students one per line as comma-separated values, or import via CSV: Display Name, Family Name, Age, Gender, State. Only Display Name is required.",
+  "addStudentsMultipleWithFamilyNameInstructions": "Type or paste the display names of your students, one per line. Optionally, you can include their family name after a comma on the same line.",
   "addStudentsTypeLabel": "Type or paste below, one student per line",
   "addStudentsImportLabel": "Import from file",
   "addStudentsManageMyOwn": "Create and manage my own list of students",

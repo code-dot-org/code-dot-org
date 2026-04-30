@@ -4,6 +4,7 @@ import React, {Component} from 'react';
 import {connect} from 'react-redux';
 
 import Button from '@cdo/apps/legacySharedComponents/Button';
+import experiments from '@cdo/apps/util/experiments';
 import i18n from '@cdo/locale';
 
 import BaseDialog from '../BaseDialog';
@@ -78,35 +79,47 @@ class AddMultipleStudents extends Component {
   };
 
   add = () => {
-    if (this.state.selectedFile) {
-      Papa.parse(this.state.selectedFile, {
-        complete: results => {
-          const studentDataArray = results.data.map(parts => {
-            const name = (parts[0] || '').trim();
-            const familyName = (parts[1] || '').trim() || null;
-            const age = parseAge(parts[2]);
-            const gender = parseGender(parts[3]);
-            const usState = parseUsState(parts[4]) || null;
-            return {name, familyName, age, gender, usState};
-          });
-          this.props.addMultipleStudents(studentDataArray);
-          this.setState({fileName: null, selectedFile: null});
-          this.closeDialog();
-        },
-        error: () => {
-          console.error('CSV parse error');
-        },
-      });
+    if (experiments.isEnabled('add-students-csv-import')) {
+      if (this.state.selectedFile) {
+        Papa.parse(this.state.selectedFile, {
+          complete: results => {
+            const studentDataArray = results.data.map(parts => {
+              const name = (parts[0] || '').trim();
+              const familyName = (parts[1] || '').trim() || null;
+              const age = parseAge(parts[2]);
+              const gender = parseGender(parts[3]);
+              const usState = parseUsState(parts[4]) || null;
+              return {name, familyName, age, gender, usState};
+            });
+            this.props.addMultipleStudents(studentDataArray);
+            this.setState({fileName: null, selectedFile: null});
+            this.closeDialog();
+          },
+          error: () => {
+            console.error('CSV parse error');
+          },
+        });
+      } else {
+        const value = this.refs.studentsTextBox.value;
+        const results = Papa.parse(value);
+        const studentDataArray = results.data.map(parts => {
+          const name = (parts[0] || '').trim();
+          const familyName = (parts[1] || '').trim() || null;
+          const age = parseAge(parts[2]);
+          const gender = parseGender(parts[3]);
+          const usState = parseUsState(parts[4]) || null;
+          return {name, familyName, age, gender, usState};
+        });
+        this.props.addMultipleStudents(studentDataArray);
+        this.closeDialog();
+      }
     } else {
       const value = this.refs.studentsTextBox.value;
-      const results = Papa.parse(value);
-      const studentDataArray = results.data.map(parts => {
-        const name = (parts[0] || '').trim();
-        const familyName = (parts[1] || '').trim() || null;
-        const age = parseAge(parts[2]);
-        const gender = parseGender(parts[3]);
-        const usState = parseUsState(parts[4]) || null;
-        return {name, familyName, age, gender, usState};
+      const studentDataArray = value.split('\n').map(line => {
+        const parts = line.split(',');
+        const name = parts[0].trim();
+        const familyName = parts.length > 1 ? parts[1].trim() : null;
+        return {name, familyName};
       });
       this.props.addMultipleStudents(studentDataArray);
       this.closeDialog();
@@ -130,71 +143,85 @@ class AddMultipleStudents extends Component {
           handleClose={this.closeDialog}
         >
           <h2>{i18n.addStudentsMultiple()}</h2>
-          <div>{i18n.addStudentsMultipleInstructions()}</div>
-          <div style={styles.inputRow}>
-            <div style={styles.textareaSection}>
-              <label htmlFor="students-text-box">
-                {i18n.addStudentsTypeLabel()}
-              </label>
-              <textarea
-                id="students-text-box"
-                rows="8"
-                cols="35"
-                ref="studentsTextBox"
-                style={{
-                  ...styles.textarea,
-                  ...(this.state.selectedFile ? styles.textareaDisabled : {}),
-                }}
-                disabled={!!this.state.selectedFile}
-              />
-            </div>
-            <div style={styles.dividerSection}>
-              <div style={styles.verticalDivider} />
-              <div style={styles.orLabel}>{i18n.or()}</div>
-              <div style={styles.verticalDivider} />
-            </div>
-            <div style={styles.dropSection}>
-              <label>{i18n.addStudentsImportLabel()}</label>
-              <input
-                type="file"
-                accept=".csv"
-                ref={input => (this.fileInput = input)}
-                style={styles.hiddenFileInput}
-                onChange={this.onFileUpload}
-              />
-              <div
-                style={{
-                  ...styles.dropZone,
-                  ...(this.state.isDragging ? styles.dropZoneActive : {}),
-                  ...(this.state.selectedFile ? styles.dropZoneHasFile : {}),
-                }}
-                onDragOver={this.onDragOver}
-                onDragLeave={this.onDragLeave}
-                onDrop={this.onDrop}
-                onClick={this.onImportCSV}
-              >
-                {this.state.fileName ? (
-                  <div style={styles.fileSelected}>
-                    <div style={styles.fileName}>{this.state.fileName}</div>
-                    <button
-                      style={styles.removeFile}
-                      onClick={e => {
-                        e.stopPropagation();
-                        this.fileInput.value = '';
-                        this.setState({fileName: null, selectedFile: null});
-                      }}
-                    >
-                      ✕
-                    </button>
-                  </div>
-                ) : (
-                  <div style={styles.dropPrompt}>
-                    Drag a CSV file here, or click to browse
-                  </div>
-                )}
+          {experiments.isEnabled('add-students-csv-import') ? (
+            <div>{i18n.addStudentsMultipleInstructions()}</div>
+          ) : (
+            <div>{i18n.addStudentsMultipleWithFamilyNameInstructions()}</div>
+          )}
+          {experiments.isEnabled('add-students-csv-import') ? (
+            <div style={styles.inputRow}>
+              <div style={styles.textareaSection}>
+                <label htmlFor="students-text-box">
+                  {i18n.addStudentsTypeLabel()}
+                </label>
+                <textarea
+                  id="students-text-box"
+                  rows="8"
+                  cols="35"
+                  ref="studentsTextBox"
+                  style={{
+                    ...styles.textarea,
+                    ...(this.state.selectedFile ? styles.textareaDisabled : {}),
+                  }}
+                  disabled={!!this.state.selectedFile}
+                />
+              </div>
+              <div style={styles.dividerSection}>
+                <div style={styles.verticalDivider} />
+                <div style={styles.orLabel}>{i18n.or()}</div>
+                <div style={styles.verticalDivider} />
+              </div>
+              <div style={styles.dropSection}>
+                <label>{i18n.addStudentsImportLabel()}</label>
+                <input
+                  type="file"
+                  accept=".csv"
+                  ref={input => (this.fileInput = input)}
+                  style={styles.hiddenFileInput}
+                  onChange={this.onFileUpload}
+                />
+                <div
+                  style={{
+                    ...styles.dropZone,
+                    ...(this.state.isDragging ? styles.dropZoneActive : {}),
+                    ...(this.state.selectedFile ? styles.dropZoneHasFile : {}),
+                  }}
+                  onDragOver={this.onDragOver}
+                  onDragLeave={this.onDragLeave}
+                  onDrop={this.onDrop}
+                  onClick={this.onImportCSV}
+                >
+                  {this.state.fileName ? (
+                    <div style={styles.fileSelected}>
+                      <div style={styles.fileName}>{this.state.fileName}</div>
+                      <button
+                        style={styles.removeFile}
+                        onClick={e => {
+                          e.stopPropagation();
+                          this.fileInput.value = '';
+                          this.setState({fileName: null, selectedFile: null});
+                        }}
+                      >
+                        ✕
+                      </button>
+                    </div>
+                  ) : (
+                    <div style={styles.dropPrompt}>
+                      Drag a CSV file here, or click to browse
+                    </div>
+                  )}
+                </div>
               </div>
             </div>
-          </div>
+          ) : (
+            <textarea
+              rows="15"
+              cols="70"
+              ref="studentsTextBox"
+              style={styles.textarea}
+              aria-label={i18n.addStudentsMultiple()}
+            />
+          )}
           <DialogFooter>
             <Button
               style={styles.button}
