@@ -43,6 +43,8 @@ const BackpackPanel: React.FC<BackpackPanelProps> = ({
   supportedFileTypes,
   backpackRefreshKey,
   onImageFlagged,
+  addFileTooltipText,
+  addFileHandler,
 }) => {
   const backpackContext = useBackpackAPIContext();
   const primaryBackpackApi = backpackContext?.primaryApi;
@@ -285,6 +287,8 @@ const BackpackPanel: React.FC<BackpackPanelProps> = ({
         disableActions={actionInProgress}
         isSecondaryBackpack={isSecondaryBackpack}
         onImageFlagged={onImageFlagged}
+        addFileTooltipText={addFileTooltipText}
+        addFileHandler={addFileHandler}
       />
     );
   };

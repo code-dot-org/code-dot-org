@@ -1,5 +1,6 @@
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import {IconButton, Tooltip, Typography} from '@mui/material';
+import {useReactFlow} from '@xyflow/react';
 import classNames from 'classnames';
 import React from 'react';
 
@@ -7,6 +8,7 @@ import {SketchlabReactFlowEdge} from '@cdo/apps/lab2/types';
 
 import {isArrowEdge} from '../utils/lineEdges';
 
+import ActionsGroup from './ActionsGroup';
 import SwatchGroup from './SwatchGroup';
 import {
   DEFAULT_LINE_STROKE_STYLE,
@@ -111,6 +113,7 @@ export default function LineEdgeToolbar({
   onSelectStrokeStyle,
   onSelectArrowHeads,
 }: LineEdgeToolbarProps) {
+  const {deleteElements} = useReactFlow();
   const selectedValue =
     (typeof edge.style?.stroke === 'string' && edge.style.stroke) ||
     DEFAULT_STROKE_COLOR;
@@ -197,6 +200,7 @@ export default function LineEdgeToolbar({
           )}
         />
       )}
+      <ActionsGroup onDelete={() => deleteElements({edges: [{id: edge.id}]})} />
     </ToolbarShell>
   );
 }

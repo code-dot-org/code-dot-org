@@ -1,3 +1,4 @@
+import {useReactFlow} from '@xyflow/react';
 import React from 'react';
 
 import {DEFAULT_ROTATION} from '../constants';
@@ -23,6 +24,7 @@ interface TextNodeToolbarProps {
 }
 
 export default function TextNodeToolbar({nodeId}: TextNodeToolbarProps) {
+  const {deleteElements} = useReactFlow();
   const {data, patchNodeData} = useNodeToolbarData<TextNodeType>(nodeId);
 
   const {fontSize, fontColor} = data;
@@ -54,7 +56,10 @@ export default function TextNodeToolbar({nodeId}: TextNodeToolbarProps) {
             value={data.rotation ?? DEFAULT_ROTATION}
             onChange={degrees => patchNodeData({rotation: degrees})}
           />
-          <ActionsGroup nodeId={nodeId} />
+          <ActionsGroup
+            onDelete={() => deleteElements({nodes: [{id: nodeId}]})}
+            onLock={() => patchNodeData({locked: true})}
+          />
           <HandleVisibilityToggle
             visible={handlesVisible}
             onToggle={() => patchNodeData({showHandles: !handlesVisible})}

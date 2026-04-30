@@ -1,3 +1,4 @@
+import {useReactFlow} from '@xyflow/react';
 import React from 'react';
 
 import {DEFAULT_ROTATION} from '../constants';
@@ -26,6 +27,7 @@ interface ShapeNodeToolbarProps {
 }
 
 export default function ShapeNodeToolbar({nodeId}: ShapeNodeToolbarProps) {
+  const {deleteElements} = useReactFlow();
   const {data, patchNodeData} = useNodeToolbarData<ShapeNodeType>(nodeId);
 
   const {backgroundColor, strokeColor, fontSize, fontColor} = data;
@@ -69,7 +71,10 @@ export default function ShapeNodeToolbar({nodeId}: ShapeNodeToolbarProps) {
             value={data.rotation ?? DEFAULT_ROTATION}
             onChange={degrees => patchNodeData({rotation: degrees})}
           />
-          <ActionsGroup nodeId={nodeId} />
+          <ActionsGroup
+            onDelete={() => deleteElements({nodes: [{id: nodeId}]})}
+            onLock={() => patchNodeData({locked: true})}
+          />
           <HandleVisibilityToggle
             visible={handlesVisible}
             onToggle={() => patchNodeData({showHandles: !handlesVisible})}
