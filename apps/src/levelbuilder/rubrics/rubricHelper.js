@@ -171,7 +171,9 @@ export const styles = {
     justifyContent: 'flex-end',
     alignItems: 'center',
   },
-  addNewConceptButton: {
+  addNewConceptButtonContainer: {
     marginTop: 20,
+    display: 'flex',
+    justifyContent: 'right',
   },
 };
