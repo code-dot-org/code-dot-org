@@ -950,4 +950,59 @@ class StudentWorkHelperTest < ActionView::TestCase
 
     assert_equal 0, lesson_time_spent(@lesson.id, @student.id)
   end
+
+  # ---------------------------------------------------------------------------
+  # lesson_reflection_data
+  # ---------------------------------------------------------------------------
+
+  test "reflection_data: returns nil success and struggle and empty objectives when no reflection exists" do
+    result = lesson_reflection_data(@lesson.id, @student.id)
+
+    assert_nil result[:success]
+    assert_nil result[:struggle]
+    assert_equal [], result[:objective_reflections]
+  end
+
+  test "reflection_data: returns success and struggle from UserLessonReflection" do
+    create(:user_lesson_reflection, student: @student, lesson: @lesson,
+      success: "I got loops", struggle: "Recursion was hard"
+    )
+
+    result = lesson_reflection_data(@lesson.id, @student.id)
+
+    assert_equal "I got loops", result[:success]
+    assert_equal "Recursion was hard", result[:struggle]
+  end
+
+  test "reflection_data: returns objective_reflections for each UserLessonObjectiveReflection" do
+    objective = create(:objective, lesson: @lesson)
+    create(:user_lesson_objective_reflection,
+      student: @student,
+      objective: objective,
+      reflection: "confident"
+    )
+
+    result = lesson_reflection_data(@lesson.id, @student.id)
+
+    assert_equal 1, result[:objective_reflections].length
+    entry = result[:objective_reflections].first
+    assert_equal objective.id, entry[:objective_id]
+    assert_equal objective.description, entry[:description]
+    assert_equal "confident", entry[:rating]
+  end
+
+  test "reflection_data: excludes objectives from a different lesson" do
+    other_lesson_group = create(:lesson_group, script: @script)
+    other_lesson = create(:lesson, lesson_group: other_lesson_group, script: @script)
+    other_objective = create(:objective, lesson: other_lesson)
+    create(:user_lesson_objective_reflection,
+      student: @student,
+      objective: other_objective,
+      reflection: "lost"
+    )
+
+    result = lesson_reflection_data(@lesson.id, @student.id)
+
+    assert_equal [], result[:objective_reflections]
+  end
 end

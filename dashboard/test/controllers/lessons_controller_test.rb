@@ -126,6 +126,35 @@ class LessonsControllerTest < ActionController::TestCase
   test_user_gets_response_for :tutor, params: -> {{course_course_name: @course.name, unit_position: 1, lesson_position: @lesson.relative_position}}, user: :student, response: :success, name: 'student can view tutor'
   test_user_gets_response_for :tutor, params: -> {{course_course_name: @course.name, unit_position: 1, lesson_position: @lesson.relative_position}}, user: :teacher, response: :success, name: 'teacher can view tutor'
 
+  # tutor_welcome_message — access and response
+  test 'signed out user is redirected for tutor_welcome_message' do
+    get :tutor_welcome_message, params: {id: @lesson.id}
+    assert_response :redirect
+  end
+
+  test 'student gets 200 with welcomeMessage from tutor_welcome_message' do
+    sign_in create(:student)
+    LessonTutor.stubs(:generate).returns('Welcome back!')
+    get :tutor_welcome_message, params: {id: @lesson.id}
+    assert_response :success
+    assert_equal 'Welcome back!', JSON.parse(@response.body)['welcomeMessage']
+  end
+
+  test 'teacher gets 200 from tutor_welcome_message' do
+    sign_in create(:teacher)
+    LessonTutor.stubs(:generate).returns('Hello!')
+    get :tutor_welcome_message, params: {id: @lesson.id}
+    assert_response :success
+  end
+
+  test 'tutor_welcome_message returns 500 with nil welcomeMessage when agent raises' do
+    sign_in create(:student)
+    LessonTutor.stubs(:generate).raises(StandardError, 'api failure')
+    get :tutor_welcome_message, params: {id: @lesson.id}
+    assert_response :internal_server_error
+    assert_nil JSON.parse(@response.body)['welcomeMessage']
+  end
+
   # limit access to lesson plans in pilots
   test_user_gets_response_for :show, response: :not_found, user: nil,
                               params: -> {{course_course_name: @pilot_course.name, unit_position: 1, position: @pilot_script.lessons[0].relative_position}},
