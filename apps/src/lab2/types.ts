@@ -129,6 +129,8 @@ export interface SketchlabReactFlowEdge {
   type?: string;
   markerStart?: EdgeMarkerType;
   markerEnd?: EdgeMarkerType;
+  data?: {kind?: 'line'};
+  reconnectable?: boolean;
 }
 
 export interface SketchlabReactFlowSource {

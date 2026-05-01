@@ -8,12 +8,14 @@ import {
 
 type FlowPoint = {x: number; y: number};
 
+interface DraggingAnchor {
+  id: string;
+  startPosition: FlowPoint;
+}
+
 interface DragState {
-  sourceId: string;
-  targetId: string;
+  anchors: DraggingAnchor[];
   startPointer: FlowPoint;
-  startSourcePosition: FlowPoint;
-  startTargetPosition: FlowPoint;
 }
 
 interface UseLineEdgeDragOptions {
@@ -24,7 +26,10 @@ interface UseLineEdgeDragOptions {
   screenToFlowPosition: (position: {x: number; y: number}) => FlowPoint;
 }
 
-// This hook enables moving both endpoints of a line edge simultaneously by dragging the edge itself.
+// Dragging the body of a line edge translates the line's free endpoints
+// (lineAnchor nodes). Endpoints that are attached to real nodes stay put;
+// the edge follows them naturally because React Flow re-routes by id. If
+// both endpoints are attached, the drag is a no-op.
 export function useLineEdgeDrag({
   readOnly,
   setNodes,
@@ -52,25 +57,19 @@ export function useLineEdgeDrag({
 
       setNodes(currentNodes =>
         currentNodes.map(node => {
-          if (node.id === dragState.sourceId) {
-            return {
-              ...node,
-              position: {
-                x: dragState.startSourcePosition.x + deltaX,
-                y: dragState.startSourcePosition.y + deltaY,
-              },
-            };
+          const draggingAnchor = dragState.anchors.find(
+            anchor => anchor.id === node.id
+          );
+          if (!draggingAnchor) {
+            return node;
           }
-          if (node.id === dragState.targetId) {
-            return {
-              ...node,
-              position: {
-                x: dragState.startTargetPosition.x + deltaX,
-                y: dragState.startTargetPosition.y + deltaY,
-              },
-            };
-          }
-          return node;
+          return {
+            ...node,
+            position: {
+              x: draggingAnchor.startPosition.x + deltaX,
+              y: draggingAnchor.startPosition.y + deltaY,
+            },
+          };
         })
       );
     },
@@ -91,9 +90,15 @@ export function useLineEdgeDrag({
 
       const sourceNode = getNode(edge.source);
       const targetNode = getNode(edge.target);
-      const isLineEdge =
-        sourceNode?.type === 'lineAnchor' && targetNode?.type === 'lineAnchor';
-      if (!sourceNode || !targetNode || !isLineEdge) {
+      const anchors: DraggingAnchor[] = [];
+      if (sourceNode?.type === 'lineAnchor') {
+        anchors.push({id: sourceNode.id, startPosition: {...sourceNode.position}});
+      }
+      if (targetNode?.type === 'lineAnchor') {
+        anchors.push({id: targetNode.id, startPosition: {...targetNode.position}});
+      }
+      if (anchors.length === 0) {
+        // Both endpoints attached to real nodes; nothing to drag.
         return;
       }
 
@@ -101,14 +106,11 @@ export function useLineEdgeDrag({
       event.stopPropagation();
 
       draggingLineEdgeRef.current = {
-        sourceId: sourceNode.id,
-        targetId: targetNode.id,
+        anchors,
         startPointer: screenToFlowPosition({
           x: event.clientX,
           y: event.clientY,
         }),
-        startSourcePosition: {...sourceNode.position},
-        startTargetPosition: {...targetNode.position},
       };
 
       window.addEventListener('mousemove', handleLineEdgeMouseMove);

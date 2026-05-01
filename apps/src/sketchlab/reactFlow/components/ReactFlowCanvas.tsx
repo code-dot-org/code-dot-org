@@ -2,12 +2,16 @@ import {
   addEdge,
   Background,
   Controls,
+  type FinalConnectionState,
   type IsValidConnection,
   MarkerType,
   ReactFlow,
   useEdgesState,
   useNodesState,
   useReactFlow,
+  type Connection,
+  type Edge,
+  type HandleType,
   type OnConnect,
 } from '@xyflow/react';
 import classNames from 'classnames';
@@ -28,6 +32,7 @@ import {
   DEFAULT_NODE_WIDTH,
   LINE_ANCHOR_SIZE_PX,
   LINE_DEFAULT_LENGTH_PX,
+  LINE_RECONNECT_SNAP_RADIUS_PX,
   SAVE_DEBOUNCE_MS,
 } from '../constants';
 import {
@@ -131,7 +136,7 @@ export default function ReactFlowCanvas({
     [openToolbarTarget, trapFocus, openToolbar, closeToolbar]
   );
 
-  const {screenToFlowPosition, getNode} = useReactFlow();
+  const {screenToFlowPosition} = useReactFlow();
   const addedNodeCountRef = useRef(0);
   const {
     tabOrder,
@@ -312,6 +317,12 @@ export default function ReactFlowCanvas({
     };
   }, [nodes, edges, viewport, updateSources]);
 
+  // Tracks an in-flight edge reconnect (drag of an existing edge endpoint).
+  // `landed` flips true in onReconnect; onReconnectEnd uses it to decide
+  // whether the drop landed on a valid handle (do nothing more) or on empty
+  // canvas (spawn a fresh anchor).
+  const reconnectingEdgeRef = useRef<{landed: boolean} | null>(null);
+
   const onConnect: OnConnect = useCallback(
     connection =>
       setEdges(currentEdges => {
@@ -337,9 +348,104 @@ export default function ReactFlowCanvas({
       if (!source || !target) {
         return false;
       }
+      // During an in-flight reconnect we relax the anchor restriction so the
+      // user can drag a line endpoint onto a real node's handle. We still
+      // block self-loops (same node on both ends).
+      if (reconnectingEdgeRef.current) {
+        return source !== target;
+      }
       return canCreateConnection(source, target, nodes);
     },
     [nodes]
+  );
+
+  const handleReconnectStart = useCallback(() => {
+    reconnectingEdgeRef.current = {landed: false};
+  }, []);
+
+  const handleReconnect = useCallback(
+    (oldEdge: Edge, newConnection: Connection) => {
+      if (reconnectingEdgeRef.current) {
+        reconnectingEdgeRef.current.landed = true;
+      }
+      setEdges(currentEdges =>
+        currentEdges.map(currentEdge => {
+          if (currentEdge.id !== oldEdge.id) {
+            return currentEdge;
+          }
+          return {
+            ...currentEdge,
+            source: newConnection.source,
+            target: newConnection.target,
+            sourceHandle: newConnection.sourceHandle ?? undefined,
+            targetHandle: newConnection.targetHandle ?? undefined,
+          };
+        })
+      );
+    },
+    [setEdges]
+  );
+
+  const handleReconnectEnd = useCallback(
+    (
+      event: MouseEvent | TouchEvent,
+      edge: Edge,
+      handleType: HandleType,
+      connectionState: FinalConnectionState
+    ) => {
+      const reconnectState = reconnectingEdgeRef.current;
+      reconnectingEdgeRef.current = null;
+      if (reconnectState?.landed) {
+        return;
+      }
+
+      // Drop on empty canvas: spawn a fresh anchor at the pointer and
+      // attach the dragged endpoint to it. Prefer the flow-coordinate
+      // position React Flow already computed; fall back to the raw
+      // pointer if that's missing.
+      let dropPosition = connectionState.to;
+      if (!dropPosition) {
+        const clientPoint =
+          event instanceof MouseEvent
+            ? {x: event.clientX, y: event.clientY}
+            : (() => {
+                const touch =
+                  event.changedTouches[0] ?? event.touches[0] ?? null;
+                return touch ? {x: touch.clientX, y: touch.clientY} : null;
+              })();
+        if (!clientPoint) {
+          return;
+        }
+        dropPosition = screenToFlowPosition(clientPoint);
+      }
+
+      const anchorRole: 'source' | 'target' =
+        handleType === 'source' ? 'source' : 'target';
+      const anchorId = createUuid();
+      const anchor: SketchlabReactFlowNode = {
+        id: anchorId,
+        type: 'lineAnchor',
+        position: {
+          x: dropPosition.x - LINE_ANCHOR_SIZE_PX / 2,
+          y: dropPosition.y - LINE_ANCHOR_SIZE_PX / 2,
+        },
+        data: {lineAnchorRole: anchorRole},
+        style: {width: LINE_ANCHOR_SIZE_PX, height: LINE_ANCHOR_SIZE_PX},
+      };
+      const handleId = `line-anchor-${anchorRole}`;
+      setNodes(currentNodes => [...currentNodes, anchor]);
+      setEdges(currentEdges =>
+        currentEdges.map(currentEdge => {
+          if (currentEdge.id !== edge.id) {
+            return currentEdge;
+          }
+          return handleType === 'source'
+            ? {...currentEdge, source: anchorId, sourceHandle: handleId}
+            : {...currentEdge, target: anchorId, targetHandle: handleId};
+        })
+      );
+    },
+    [screenToFlowPosition, setEdges, setNodes]
   );
 
   const handleMoveEnd = useCallback(
@@ -349,32 +455,24 @@ export default function ReactFlowCanvas({
     []
   );
 
-  const handleEdgesDelete = useCallback(
-    (deletedEdges: SketchlabReactFlowEdge[]) => {
-      setNodes(currentNodes => {
-        const lineAnchorIdsToDelete = new Set<string>();
-
-        deletedEdges.forEach(edge => {
-          const sourceNode = getNode(edge.source);
-          const targetNode = getNode(edge.target);
-          if (
-            sourceNode?.type === 'lineAnchor' &&
-            targetNode?.type === 'lineAnchor'
-          ) {
-            lineAnchorIdsToDelete.add(edge.source);
-            lineAnchorIdsToDelete.add(edge.target);
-          }
-        });
-
-        if (lineAnchorIdsToDelete.size === 0) {
-          return currentNodes;
-        }
-
-        return currentNodes.filter(node => !lineAnchorIdsToDelete.has(node.id));
+  // Cleanup orphaned line anchors after any edge mutation. An anchor only
+  // exists to terminate a line; if no edge references it (because the line
+  // was deleted, or the endpoint was reconnected to a real node), it should
+  // disappear too. Using an effect keeps this in one place rather than
+  // sprinkling cleanup through every edge-mutating handler.
+  useEffect(() => {
+    setNodes(currentNodes => {
+      const referenced = new Set<string>();
+      edges.forEach(edge => {
+        referenced.add(edge.source);
+        referenced.add(edge.target);
       });
-    },
-    [getNode, setNodes]
-  );
+      const filtered = currentNodes.filter(
+        node => node.type !== 'lineAnchor' || referenced.has(node.id)
+      );
+      return filtered.length === currentNodes.length ? currentNodes : filtered;
+    });
+  }, [edges, setNodes]);
 
   const handleAddNode = useCallback(
     (request: AddNodeRequest) => {
@@ -429,6 +527,8 @@ export default function ReactFlowCanvas({
           source: sourceAnchorId,
           target: targetAnchorId,
           type: 'straight',
+          data: {kind: 'line'},
+          reconnectable: true,
           ...(type === 'arrow' && {
             markerEnd: {
               type: MarkerType.ArrowClosed,
@@ -541,11 +641,14 @@ export default function ReactFlowCanvas({
             edges={displayEdges}
             onNodesChange={onNodesChange}
             onEdgesChange={onEdgesChange}
-            onEdgesDelete={handleEdgesDelete}
             onNodeClick={handleNodeClick}
             onEdgeClick={handleEdgeClick}
             onConnect={onConnect}
+            onReconnectStart={handleReconnectStart}
+            onReconnect={handleReconnect}
+            onReconnectEnd={handleReconnectEnd}
             isValidConnection={isValidConnection}
+            connectionRadius={LINE_RECONNECT_SNAP_RADIUS_PX}
             nodeTypes={NODE_TYPES}
             onMoveEnd={handleMoveEnd}
             defaultViewport={initialViewport}
