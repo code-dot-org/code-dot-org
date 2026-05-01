@@ -252,7 +252,7 @@ const PanelsView: React.FunctionComponent<PanelsProps> = ({
             className={styles.image}
             style={{
               backgroundImage: `url("${localization.translate(
-                previousPanel.imageUrl,
+                previousPanel.imageUrl ?? '',
                 ['lz-image']
               )}")`,
             }}
@@ -261,9 +261,10 @@ const PanelsView: React.FunctionComponent<PanelsProps> = ({
         <div
           className={classNames(styles.image, styles.imageCurrent)}
           style={{
-            backgroundImage: `url("${localization.translate(panel.imageUrl, [
-              'lz-image',
-            ])}")`,
+            backgroundImage: `url("${localization.translate(
+              panel.imageUrl ?? '',
+              ['lz-image']
+            )}")`,
           }}
         />
         {nextPanel && (
@@ -271,7 +272,7 @@ const PanelsView: React.FunctionComponent<PanelsProps> = ({
             className={classNames(styles.image, styles.imageInvisible)}
             style={{
               backgroundImage: `url("${localization.translate(
-                nextPanel.imageUrl,
+                nextPanel.imageUrl ?? '',
                 ['lz-image']
               )}")`,
             }}

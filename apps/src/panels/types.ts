@@ -14,7 +14,11 @@ export type PanelLayout =
   | 'text-bottom-right';
 
 export interface Panel {
-  imageUrl: string;
+  // Either imageUrl or imagePrompt is required. When imagePrompt is set
+  // (AI-generated levels), the frontend resolves it to an imageUrl by
+  // asking the AI Gateway to render an image at level-load time.
+  imageUrl?: string;
+  imagePrompt?: string;
   text: string;
   key: string;
   nextUrl?: string;

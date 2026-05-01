@@ -19,6 +19,7 @@ import useWindowSize from '../util/hooks/useWindowSize';
 
 import PanelsView from './PanelsView';
 import {PanelsLevelProperties} from './types';
+import usePanelImages from './usePanelImages';
 
 const sendAnalyticsEvent = async (event: string, data?: object) => {
   analyticsReporter.sendEvent(event, {
@@ -34,6 +35,16 @@ const PanelsLabView: React.FunctionComponent<
 
   const {panels, appName, skipUrl, offerBrowserTts, useLinks} = levelProperties;
   const currentLevelId = useAppSelector(state => state.progress.currentLevelId);
+  const scriptId = useAppSelector(state => state.progress.scriptId);
+  const channelId = useAppSelector(state => state.lab.channel?.id);
+  const {panels: resolvedPanels, loading: imagesLoading} = usePanelImages(
+    panels,
+    {
+      currentLevelId: currentLevelId ? parseInt(currentLevelId) : null,
+      scriptId,
+      channelId,
+    }
+  );
 
   const dialogControl = useDialogControl();
 
@@ -106,13 +117,16 @@ const PanelsLabView: React.FunctionComponent<
 
   const [windowWidth, windowHeight] = useWindowSize();
 
-  if (!panels) {
+  if (!resolvedPanels) {
     return <div />;
+  }
+  if (imagesLoading) {
+    return <div>Generating panel images…</div>;
   }
 
   return (
     <PanelsView
-      panels={panels}
+      panels={resolvedPanels}
       onContinue={onContinue}
       onSkip={skipUrl ? onSkip : undefined}
       targetWidth={windowWidth}

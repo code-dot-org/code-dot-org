@@ -31,6 +31,7 @@ class Weblab2 < Level
 
   serialized_attrs %w(
     start_sources
+    generate_prompt
     hide_share_and_remix
     is_project_level
     encrypted_exemplar_sources
@@ -97,6 +98,24 @@ class Weblab2 < Level
     # And if this is a widget2 level, then show it as a widget.
     if properties.dig("widget2", "id")
       properties_camelized[:widgetView] = true
+    end
+
+    # If a generate_prompt is set, ask Claude to produce both the student
+    # instructions and the start_sources JSON at level-load time. The
+    # generated values override the static long_instructions and any
+    # start_sources/widget2 sources resolved above.
+    #
+    # Force usesProjects = false in this branch (same trick the widget2
+    # branch uses): otherwise lab2 loads the student's previously
+    # persisted project sources from the channel and ignores our
+    # freshly generated startSources on every load after the first.
+    if generate_prompt.present?
+      generated = Weblab2LevelGenerator.generate(generate_prompt)
+      if generated
+        properties_camelized[:startSources] = generated['startSources']
+        properties_camelized[:longInstructions] = generated['longInstructions'] if generated['longInstructions']
+        properties_camelized[:usesProjects] = false
+      end
     end
 
     properties_camelized

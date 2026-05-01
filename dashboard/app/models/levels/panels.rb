@@ -31,6 +31,7 @@ class Panels < Level
     background
     level_data
     panels
+    generate_prompt
     use_links
   )
 
@@ -55,5 +56,14 @@ class Panels < Level
   def enable_scrolling?
     # ensures we have the small footer
     true
+  end
+
+  def summarize_for_lab2_properties(script, script_level = nil, current_user = nil, unit_group_unit: nil)
+    level_properties = super
+    if generate_prompt.present?
+      generated_panels = PanelsLevelGenerator.generate(generate_prompt, name)
+      level_properties["panels"] = generated_panels if generated_panels
+    end
+    level_properties
   end
 end

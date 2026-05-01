@@ -40,6 +40,7 @@ class Music < Blockly
     disable_edit_run_for_submission
     background
     level_data
+    generate_prompt
     predict_settings
     validations
     encrypted_exemplar_sources
@@ -67,5 +68,14 @@ class Music < Blockly
   def enable_scrolling?
     # ensures we have the small footer
     true
+  end
+
+  def summarize_for_lab2_properties(script, script_level = nil, current_user = nil, unit_group_unit: nil)
+    level_properties = super
+    if generate_prompt.present?
+      generated = MusicLevelGenerator.generate(generate_prompt)
+      level_properties[:levelData] = generated if generated
+    end
+    level_properties
   end
 end
