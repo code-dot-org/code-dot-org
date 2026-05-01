@@ -200,7 +200,10 @@ export default function LineEdgeToolbar({
           )}
         />
       )}
-      <ActionsGroup onDelete={() => deleteElements({edges: [{id: edge.id}]})} />
+      <ActionsGroup
+        lineEdgeId={edge.id}
+        onDelete={() => deleteElements({edges: [{id: edge.id}]})}
+      />
     </ToolbarShell>
   );
 }

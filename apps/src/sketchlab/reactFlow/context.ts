@@ -45,10 +45,12 @@ export interface ClipboardContents {
 
 interface ClipboardContextValue {
   duplicateNode: (nodeId: string) => void;
+  duplicateLine: (edgeId: string) => void;
 }
 
 const ClipboardContext = createContext<ClipboardContextValue>({
   duplicateNode: () => {},
+  duplicateLine: () => {},
 });
 
 export const ClipboardProvider = ClipboardContext.Provider;

@@ -160,6 +160,7 @@ export default function ReactFlowCanvas({
 
   const {
     duplicateNode,
+    duplicateLine,
     copyEntry,
     cutEntry,
     paste,
@@ -168,8 +169,8 @@ export default function ReactFlowCanvas({
   } = useCopyPaste({nodes, edges});
 
   const clipboardContextValue = useMemo(
-    () => ({duplicateNode}),
-    [duplicateNode]
+    () => ({duplicateNode, duplicateLine}),
+    [duplicateNode, duplicateLine]
   );
 
   const {connectingFrom, connectAnnouncement, handleKeyDown} =

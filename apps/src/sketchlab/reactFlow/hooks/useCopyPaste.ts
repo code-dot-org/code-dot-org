@@ -29,10 +29,12 @@ export function useCopyPaste({nodes, edges}: UseCopyPasteOptions) {
   // Last known mouse position in flow coordinates for paste-at-cursor.
   const mousePositionRef = useRef<{x: number; y: number} | null>(null);
 
-  // Tracks the last duplicate result so consecutive toolbar duplicates
-  // stagger from the previous copy rather than the original.
+  // Stagger tracking for toolbar duplicates: separate refs for nodes and edges
+  // so duplicating a node and a line in alternation both chain correctly.
   const lastDuplicateRef = useRef<ClipboardContents | null>(null);
   const lastDuplicateNodeIdRef = useRef<string | null>(null);
+  const lastDuplicateLineRef = useRef<ClipboardContents | null>(null);
+  const lastDuplicateEdgeIdRef = useRef<string | null>(null);
 
   const writeClipboard = useCallback((contents: ClipboardContents) => {
     clipboardRef.current = contents;
@@ -80,10 +82,17 @@ export function useCopyPaste({nodes, edges}: UseCopyPasteOptions) {
       const newNodes = source.nodes.map(node => {
         const newId = createUuid();
         idMap.set(node.id, newId);
+        // A locked source node may have draggable/connectable/deletable set
+        // to false at runtime (React Flow writes them back via onNodesChange).
+        // Reset them to undefined so the duplicate inherits the global setting.
+        const base = node as unknown as Record<string, unknown>;
         return {
-          ...node,
+          ...base,
           id: newId,
           selected: false,
+          draggable: undefined,
+          connectable: undefined,
+          deletable: undefined,
           data: {...node.data, locked: false},
           position: {
             x: node.position.x + PASTE_OFFSET_PX,
@@ -98,6 +107,54 @@ export function useCopyPaste({nodes, edges}: UseCopyPasteOptions) {
       setNodes(currentNodes => [...currentNodes, ...newNodes]);
     },
     [buildNodeClipboard, setNodes]
+  );
+
+  // Toolbar action: duplicate a line edge (both anchor nodes + the edge).
+  const duplicateLine = useCallback(
+    (edgeId: string) => {
+      let source: ClipboardContents | null;
+      if (
+        lastDuplicateEdgeIdRef.current === edgeId &&
+        lastDuplicateLineRef.current
+      ) {
+        source = lastDuplicateLineRef.current;
+      } else {
+        source = buildLineEdgeClipboard(edgeId);
+      }
+      if (!source) return;
+
+      const idMap = new Map<string, string>();
+      const newNodes = source.nodes.map(node => {
+        const newId = createUuid();
+        idMap.set(node.id, newId);
+        const base = node as unknown as Record<string, unknown>;
+        return {
+          ...base,
+          id: newId,
+          selected: false,
+          draggable: undefined,
+          connectable: undefined,
+          deletable: undefined,
+          position: {
+            x: node.position.x + PASTE_OFFSET_PX,
+            y: node.position.y + PASTE_OFFSET_PX,
+          },
+        } as unknown as SketchlabReactFlowNode;
+      });
+      const newEdges = source.edges.map(edge => ({
+        ...edge,
+        id: createUuid(),
+        source: idMap.get(edge.source) ?? edge.source,
+        target: idMap.get(edge.target) ?? edge.target,
+      }));
+
+      lastDuplicateLineRef.current = {nodes: newNodes, edges: newEdges};
+      lastDuplicateEdgeIdRef.current = edgeId;
+
+      setNodes(currentNodes => [...currentNodes, ...newNodes]);
+      setEdges(currentEdges => [...currentEdges, ...newEdges]);
+    },
+    [buildLineEdgeClipboard, setNodes, setEdges]
   );
 
   // Keyboard copy/cut/paste.
@@ -168,10 +225,14 @@ export function useCopyPaste({nodes, edges}: UseCopyPasteOptions) {
     const newNodes = contents.nodes.map(node => {
       const newId = createUuid();
       idMap.set(node.id, newId);
+      const base = node as unknown as Record<string, unknown>;
       return {
-        ...node,
+        ...base,
         id: newId,
         selected: false,
+        draggable: undefined,
+        connectable: undefined,
+        deletable: undefined,
         data: {...node.data, locked: false},
         position: {
           x: node.position.x + deltaX,
@@ -209,6 +270,7 @@ export function useCopyPaste({nodes, edges}: UseCopyPasteOptions) {
 
   return {
     duplicateNode,
+    duplicateLine,
     copyEntry,
     cutEntry,
     paste,

@@ -10,17 +10,19 @@ import styles from './element-toolbar.module.scss';
 
 interface ActionsGroupProps {
   nodeId?: string;
+  lineEdgeId?: string;
   onDelete?: () => void;
   onLock?: () => void;
 }
 
 export default function ActionsGroup({
   nodeId,
+  lineEdgeId,
   onDelete,
   onLock,
 }: ActionsGroupProps) {
   const isStartMode = getIsStartMode();
-  const {duplicateNode} = useClipboard();
+  const {duplicateNode, duplicateLine} = useClipboard();
 
   return (
     <div className={styles.group} role="group" aria-label="Actions">
@@ -39,6 +41,18 @@ export default function ActionsGroup({
               className={styles.fontSizeButton}
               aria-label="Duplicate"
               onClick={() => duplicateNode(nodeId)}
+            >
+              <FontAwesomeV6Icon iconName="copy" />
+            </IconButton>
+          </Tooltip>
+        )}
+        {lineEdgeId && (
+          <Tooltip title="Duplicate" placement="top">
+            <IconButton
+              size="small"
+              className={styles.fontSizeButton}
+              aria-label="Duplicate"
+              onClick={() => duplicateLine(lineEdgeId)}
             >
               <FontAwesomeV6Icon iconName="copy" />
             </IconButton>
