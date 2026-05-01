@@ -8,10 +8,8 @@ markdown <<MARKDOWN
 ## Additional Resources
 * #### <a href="https://www.teachai.org/" target="_blank">TeachAI.org</a> Empowering educators to teach with and about AI.
 * #### <a href="https://www.teachai.org/ailiteracy" target="_blank">AILit Framework</a> from TeachAI.org.
-* #### <a href="https://quickdraw.withgoogle.com/" target="_blank">Quick, Draw with Google</a> a quick and fun AI-powered game.
-* #### <a href="https://www.khanmigo.ai/" target="_blank">Khanmigo</a> Khanacademy’s on-demand AI-powered support for education.
-* #### <a href="https://labs.google/" target="_blank">Labs.Google</a> Google’s home for the latest AI tools, technology and discourse.
-
+* #### <a href="https://code.org/en-US/artificial-intelligence" target="_blank">AI Curriculum Resources</a> from Code.org.
+* #### <a href="https://aipedagogy.org/assignments/" target="_blank">AI Assignments</a> from AI Pedagogy Project.
 
 ## Take it Further Activities
 
@@ -20,38 +18,25 @@ markdown <<MARKDOWN
 <details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
 
 <summary style="font-size: 16px; font-weight: bold">
-	Learn More About AI
+	AI Literacy Skills
 </summary>
 
 <div style="margin-top: 10px; padding-top: 10px; border-top: 1px solid #ddd;">
-<p style="margin: 5px 0 10px 0; font-size: 16px; line-height: 1.5;">A TED Talk is a short, powerful presentation, typically 18 minutes or less, given by experts on a wide range of topics including technology, entertainment, and design, aimed at spreading innovative ideas and sparking discussion. <br> Learn some more about AI on your own. Watch one or more AI-themed Ted Talks. 
+<p style="margin: 5px 0 10px 0; font-size: 16px; line-height: 1.5;">Does your state or district have AI Literacy Skills or Standards? Search online to see if you can find them, and take the time to read them over. How do they compare to the AILit Framework you learned about in this module?
 </p>
-
-<a href="https://www.ted.com/playlists/310/artificial_intelligence" 
-         target="blank" 
-         rel="noopener noreferrer" 
-         style="display: inline-block; margin-top: 5px; padding: 8px 12px; background-color: #026C7A; color: #ffffff; text-decoration: none; border-radius: 6px; font-size: 14px;">Check it Out
-</a>
-</div>
-
 </details>
 
   <!-- Dropdown 2 -->
 <details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
 
 <summary style="font-size: 16px; font-weight: bold">
-	AI Literacy Activities for the Classroom
+	AI-Integrated Project
 </summary>
 
 <div style="margin-top: 10px; padding-top: 10px; border-top: 1px solid #ddd;">
-<p style="margin: 5px 0 10px 0; font-size: 16px; line-height: 1.5;">TeachAI.org has ready-to-use AI Literacy focused activity ideas for every subject. Designed to fit into a 40-minute class with almost no prep required.<br> Review these activities and choose one to implement in your classroom.
+<p style="margin: 5px 0 10px 0; font-size: 16px; line-height: 1.5;">Take the idea of designing with AI in mind to the next level by creating your own AI-Integrated project that not only encourages the use of AI, but includes using AI as part of the learning objectives.<br><br>Feel free to modify an existing project or start fresh.
 </p>
 
-<a href="https://www.teachai.org/media/learningscenarios_deck_final-j9gmue" 
-         target="blank" 
-         rel="noopener noreferrer" 
-         style="display: inline-block; margin-top: 5px; padding: 8px 12px; background-color: #026C7A; color: #ffffff; text-decoration: none; border-radius: 6px; font-size: 14px;">Check it Out
-</a>
 </div>
 
 </details>

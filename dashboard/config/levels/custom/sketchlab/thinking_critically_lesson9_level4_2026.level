@@ -1,12 +1,13 @@
 <Sketchlab>
   <config><![CDATA[{
+  "published": true,
   "game_id": 75,
   "created_at": "2026-04-27T00:39:02.000Z",
   "level_num": "custom",
   "user_id": 18603,
   "properties": {
     "encrypted": "false",
-    "long_instructions": "## Thinking Critically about AI Project\r\n\r\nYou will use this canvas to create your project as you move through the unit. Any work that you add will be saved and will be available in upcoming lessons.\r\n\r\n#### Task:\r\n\r\n* Open the **Backpack** tab on the left-hand side of the screen.\r\n* Import one of the AI Chats that you saved into the `Evidence Log` section.\r\n\r\n",
+    "long_instructions": "## Thinking Critically about AI Project\r\n\r\n\r\n\r\n#### Task:\r\n\r\n* Apply feedback and ideas you received from the Rubric Reviewer Bot or your custom bot.\r\n* Add your final statement about using AI!\r\n  - Include things AI can help with or do for you\r\n  - Add you main guidance the audience should consider when using AI\r\n  - Include reasons why following the guidance is important.\r\n\r\n> You can use this sentence frame:\r\n>\r\n>**AI can [____] as long as [___], because [___].**\r\n\r\n* Refine your project. \r\n\r\n",
     "start_sources": {
       "source": {
         "type": "excalidraw",
@@ -36,7 +37,6 @@
     "project_template_level_name": "thinking_critically_project-template_2026",
     "name_suffix": "_2026"
   },
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2026-04-27T00:39:02.640+00:00\",\"changed\":[\"cloned from \\\"thinking_critically_lesson4_level3_2026\\\"\"],\"cloned_from\":\"thinking_critically_lesson4_level3_2026\"}]"
+  "audit_log": "[{\"changed_at\":\"2026-04-27T00:39:02.640+00:00\",\"changed\":[\"cloned from \\\"thinking_critically_lesson4_level3_2026\\\"\"],\"cloned_from\":\"thinking_critically_lesson4_level3_2026\"},{\"changed_at\":\"2026-04-30 22:31:58 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-04-30 22:33:21 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"}]"
 }]]></config>
 </Sketchlab>
