@@ -2,6 +2,10 @@ body {
   font-family: Futura, "Trebuchet MS", Arial, sans-serif;
 }
 
+h1 {
+  clear: both;
+}
+
 h2 {
   font-family: monospace;
   font-size: 1.1em;
