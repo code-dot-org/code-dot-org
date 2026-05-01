@@ -6,7 +6,6 @@ import SegmentedButtons, {
 import React, {useCallback, useEffect, useMemo, useRef} from 'react';
 
 import {useAiChatDisabledState} from '@cdo/apps/aichat/hooks/useAiChatDisabledState';
-// [FIX]
 import {
   addChatEvent,
   clearChatMessages,
@@ -154,6 +153,7 @@ const AichatView: React.FunctionComponent<LabProps<AichatLevelProperties>> = ({
     // ChatWorkspaceLogger is intialized in ChatWorkspace so we need to wait on it.
     // Logging fronm AichatView could be cleaned up to avoid this fragile timing.
     if (chatWorkspaceInitialized) {
+      // TODO: Remove dependency on aichat redux slice.
       dispatch(
         addChatEvent({
           timestamp: Date.now(),
@@ -255,6 +255,7 @@ const AichatView: React.FunctionComponent<LabProps<AichatLevelProperties>> = ({
     dispatch(resetToDefaultAiCustomizations(levelAichatSettings));
     // Save the customizations to the user's project.
     dispatch(updateAiCustomization());
+    // TODO: Remove dependency on aichat redux slice.
     dispatch(clearChatMessages());
   }, [dispatch, levelAichatSettings]);
 

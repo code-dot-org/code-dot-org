@@ -123,7 +123,7 @@ export const submitChatContents = createAsyncThunk(
       updateId: createUuid(),
     };
     dispatch(addEventToChatEventsCurrent(newUserMessage));
-    // [FIX]: Maybe ChatWorkspace gets a generic onMessageSent callback. AI Chat Lab can use that to manage this state internally.
+    // TODO: Remove dependency on aichatLab redux slice.
     dispatch(setChatMessageSent(true));
 
     if (logLevelActivity) {
