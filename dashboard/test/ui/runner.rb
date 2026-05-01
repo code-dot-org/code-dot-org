@@ -474,6 +474,35 @@ def server_status_page_url
   CDO.studio_url('/ui_test/' + status_page_filename, scheme_for_environment, ge_region: nil)
 end
 
+# Ordered list of UI/Eyes test status pages used to render the
+# cross-page navigation row at the top of each status page. Each entry's
+# :filename must equal the value status_page_filename returns when that
+# page is being generated, so the active entry can be rendered unlinked.
+# For now, the UI Test Status page will render this as:
+#
+#   UI Test Status | <a href="...">Eyes Test Status</a>
+#
+# TODO(device-farm-launch): rename the UI entry's filename to
+# 'test_status_UI_sauce_labs.html', update status_page_filename below to
+# match for the SauceLabs branch, and add device farm desktop/mobile
+# entries.
+STATUS_PAGES_NAVIGATION = [
+  {filename: 'test_status_UI.html',   display_name: 'UI Test Status'},
+  {filename: 'test_status_Eyes.html', display_name: 'Eyes Test Status'},
+].freeze
+
+def status_pages_navigation
+  # Include the navigation row on any status pages generated during the DTT,
+  # so that the oncall engineer can quickly find all the pages they need to
+  # check for UI test failures.
+  return nil unless GIT_BRANCH == 'test'
+  STATUS_PAGES_NAVIGATION.map do |page|
+    page.merge(
+      url: CDO.studio_url("/ui_test/#{page[:filename]}", scheme_for_environment, ge_region: nil)
+    )
+  end
+end
+
 def status_page_filename
   # SauceLabs runs keep the unqualified name. Device Farm runs are
   # split into desktop/mobile/combined buckets so a desktop and a
@@ -530,7 +559,9 @@ def generate_status_page(suite_start_time)
         start_time: suite_start_time,
         browser_features: browser_features,
         device_farm: $options.device_farm,
-        force_db_access: $options.force_db_access
+        force_db_access: $options.force_db_access,
+        status_pages: status_pages_navigation,
+        current_status_page_filename: status_page_filename
       }
     )
   )
