@@ -3,6 +3,8 @@ import React, {useState} from 'react';
 
 import SearchBox from '@cdo/apps/levelbuilder/lesson-editor/SearchBox';
 
+const AUDIENCE_OPTIONS = ['Student', 'Teacher', 'Verified Teacher'];
+
 import moduleStyles from './jitPlConceptsEditor.module.scss';
 
 export interface JsonVideo {
@@ -12,9 +14,16 @@ export interface JsonVideo {
   audience?: string;
 }
 
+interface AssociationTarget {
+  type: 'jit_pl_exemplar' | 'jit_pl_misconception' | 'jit_pl_concept';
+  id: number;
+}
+
 interface Props {
   jsonVideos: JsonVideo[];
   onChange: (videos: JsonVideo[]) => void;
+  onVideoCreatingChange?: (isCreating: boolean) => void;
+  associationTarget?: AssociationTarget;
 }
 
 interface SearchOption {
@@ -23,11 +32,15 @@ interface SearchOption {
   video: JsonVideo;
 }
 
-const JsonVideosEditor: React.FC<Props> = ({jsonVideos, onChange}) => {
+const JsonVideosEditor: React.FC<Props> = ({
+  jsonVideos,
+  onChange,
+  onVideoCreatingChange,
+  associationTarget,
+}) => {
   const [isCreating, setIsCreating] = useState(false);
   const [newKey, setNewKey] = useState('');
   const [newS3Uri, setNewS3Uri] = useState('');
-  const [newSchemaVersion, setNewSchemaVersion] = useState('1');
   const [newAudience, setNewAudience] = useState('');
   const [newDescription, setNewDescription] = useState('');
   const [createError, setCreateError] = useState<string | null>(null);
@@ -53,6 +66,7 @@ const JsonVideosEditor: React.FC<Props> = ({jsonVideos, onChange}) => {
 
   const handleCreate = () => {
     setIsSubmitting(true);
+    onVideoCreatingChange?.(true);
     setCreateError(null);
     $.ajax({
       url: '/json_videos',
@@ -60,9 +74,12 @@ const JsonVideosEditor: React.FC<Props> = ({jsonVideos, onChange}) => {
       data: {
         key: newKey,
         s3_uri: newS3Uri,
-        json_schema_version: parseInt(newSchemaVersion),
+        json_schema_version: 1,
         audience: newAudience,
         description: newDescription,
+        ...(associationTarget && {
+          [`${associationTarget.type}_id`]: associationTarget.id,
+        }),
       },
     })
       .done((video: JsonVideo) => {
@@ -70,13 +87,14 @@ const JsonVideosEditor: React.FC<Props> = ({jsonVideos, onChange}) => {
         setIsCreating(false);
         setNewKey('');
         setNewS3Uri('');
-        setNewSchemaVersion('1');
         setNewAudience('');
         setNewDescription('');
         setIsSubmitting(false);
+        onVideoCreatingChange?.(false);
       })
       .fail((err: {responseText: string}) => {
         setIsSubmitting(false);
+        onVideoCreatingChange?.(false);
         setCreateError(err.responseText);
       });
   };
@@ -148,21 +166,18 @@ const JsonVideosEditor: React.FC<Props> = ({jsonVideos, onChange}) => {
             />
           </label>
           <label className={moduleStyles.label}>
-            JSON Schema Version
-            <input
-              className={moduleStyles.input}
-              type="number"
-              value={newSchemaVersion}
-              onChange={e => setNewSchemaVersion(e.target.value)}
-            />
-          </label>
-          <label className={moduleStyles.label}>
             Audience
-            <input
-              className={moduleStyles.input}
+            <select
               value={newAudience}
               onChange={e => setNewAudience(e.target.value)}
-            />
+            >
+              <option value="">{''}</option>
+              {AUDIENCE_OPTIONS.map(opt => (
+                <option key={opt} value={opt}>
+                  {opt}
+                </option>
+              ))}
+            </select>
           </label>
           <label className={moduleStyles.label}>
             Description

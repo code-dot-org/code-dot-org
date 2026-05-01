@@ -32,12 +32,13 @@ const JitPlConceptFormEditor = ({
   const [displayName, setDisplayName] = useState(originalDisplayName);
   const [textContent, setTextContent] = useState(originalTextContent);
   const [jsonVideos, setJsonVideos] = useState(originalJsonVideos);
+  const [isVideoCreating, setIsVideoCreating] = useState(false);
   const [isSaving, setIsSaving] = useState(false);
   const [lastUpdated, setLastUpdated] = useState(null);
   const [error, setError] = useState(null);
 
   const save = (e, saveAndClose) => {
-    if (isSaving) {
+    if (isSaving || isVideoCreating) {
       return;
     }
     setIsSaving(true);
@@ -100,7 +101,12 @@ const JitPlConceptFormEditor = ({
         resources={resources}
       />
       <h2>JSON Videos</h2>
-      <JsonVideosEditor jsonVideos={jsonVideos} onChange={setJsonVideos} />
+      <JsonVideosEditor
+        jsonVideos={jsonVideos}
+        onChange={setJsonVideos}
+        onVideoCreatingChange={setIsVideoCreating}
+        associationTarget={{type: 'jit_pl_concept', id: conceptId}}
+      />
       <h2>Exemplars</h2>
       <ExemplarsEditor
         conceptId={conceptId}

@@ -97,4 +97,57 @@ class JSONVideosControllerTest < ActionController::TestCase
     post :create, params: {key: '', s3_uri: '', json_schema_version: nil, audience: ''}
     assert_response :bad_request
   end
+
+  test 'create with jit_pl_exemplar_id immediately associates the video' do
+    sign_in create(:levelbuilder)
+    concept = create(:jit_pl_concept)
+    exemplar = create(:jit_pl_exemplar, jit_pl_concept: concept)
+
+    post :create, params: {
+      key: 'exemplar-video',
+      s3_uri: 's3://b/v.json',
+      json_schema_version: 1,
+      audience: 'student',
+      jit_pl_exemplar_id: exemplar.id
+    }
+    assert_response :ok
+
+    video = JSONVideo.find_by!(key: 'exemplar-video')
+    assert_includes exemplar.reload.json_videos, video
+  end
+
+  test 'create with jit_pl_misconception_id immediately associates the video' do
+    sign_in create(:levelbuilder)
+    concept = create(:jit_pl_concept)
+    misconception = create(:jit_pl_misconception, jit_pl_concept: concept)
+
+    post :create, params: {
+      key: 'misconception-video',
+      s3_uri: 's3://b/v.json',
+      json_schema_version: 1,
+      audience: 'student',
+      jit_pl_misconception_id: misconception.id
+    }
+    assert_response :ok
+
+    video = JSONVideo.find_by!(key: 'misconception-video')
+    assert_includes misconception.reload.json_videos, video
+  end
+
+  test 'create with jit_pl_concept_id immediately associates the video' do
+    sign_in create(:levelbuilder)
+    concept = create(:jit_pl_concept)
+
+    post :create, params: {
+      key: 'concept-video',
+      s3_uri: 's3://b/v.json',
+      json_schema_version: 1,
+      audience: 'student',
+      jit_pl_concept_id: concept.id
+    }
+    assert_response :ok
+
+    video = JSONVideo.find_by!(key: 'concept-video')
+    assert_includes concept.reload.json_videos, video
+  end
 end

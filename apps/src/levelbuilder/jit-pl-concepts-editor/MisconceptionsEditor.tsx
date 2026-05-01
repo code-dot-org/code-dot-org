@@ -56,6 +56,7 @@ const MisconceptionForm: React.FC<MisconceptionFormProps> = ({
   const [jsonVideos, setJsonVideos] = useState<JsonVideo[]>(
     initial?.json_videos ?? []
   );
+  const [isVideoCreating, setIsVideoCreating] = useState(false);
 
   useEffect(() => {
     if (!hasReducer(contextKey)) {
@@ -121,9 +122,18 @@ const MisconceptionForm: React.FC<MisconceptionFormProps> = ({
         resources={resources}
       />
       <h4 className={moduleStyles.resourcesHeading}>JSON Videos</h4>
-      <JsonVideosEditor jsonVideos={jsonVideos} onChange={setJsonVideos} />
+      <JsonVideosEditor
+        jsonVideos={jsonVideos}
+        onChange={setJsonVideos}
+        onVideoCreatingChange={setIsVideoCreating}
+        associationTarget={
+          initial
+            ? {type: 'jit_pl_misconception', id: initial.id}
+            : undefined
+        }
+      />
       <div className={moduleStyles.formButtons}>
-        <button onClick={save} disabled={isSaving} type="button">
+        <button onClick={save} disabled={isSaving || isVideoCreating} type="button">
           {isSaving ? 'Saving...' : 'Save'}
         </button>
         <button

@@ -12,6 +12,7 @@ class JSONVideosController < ApplicationController
   def create
     video = JSONVideo.new(json_video_params)
     if video.save
+      associate_with_jit_pl_object(video)
       render json: video.summarize
     else
       render status: :bad_request, json: video.errors.full_messages.join(', ')
@@ -35,6 +36,16 @@ class JSONVideosController < ApplicationController
 
   private def json_video_params
     params.permit(:key, :description, :s3_uri, :json_schema_version, :audience)
+  end
+
+  private def associate_with_jit_pl_object(video)
+    if (id = params[:jit_pl_exemplar_id])
+      JitPlExemplar.find_by(id: id)&.json_videos&.<<(video)
+    elsif (id = params[:jit_pl_misconception_id])
+      JitPlMisconception.find_by(id: id)&.json_videos&.<<(video)
+    elsif (id = params[:jit_pl_concept_id])
+      JitPlConcept.find_by(id: id)&.json_videos&.<<(video)
+    end
   end
 
   private def parse_s3_uri(uri)
