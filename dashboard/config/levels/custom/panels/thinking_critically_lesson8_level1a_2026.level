@@ -11,7 +11,7 @@
     "use_links": "true",
     "panels": [
       {
-        "text": "##Can you trust your eyes and ears today?\n\nWelcome to the age of **deepfakes**. A deepfake is a fake video or voice clip made by AI. It makes a real person look or sound like they are saying things they never did. \n\nLearn how deepfakes work and how to use your judgment to spot them.",
+        "text": "Can you trust your eyes and ears today?\n\n\nWelcome to the age of **deepfakes**. A deepfake is a fake video or voice clip made by AI. It makes a real person look or sound like they are saying things they never did. \n\nLearn how deepfakes work and how to use your judgment to spot them.",
         "imageUrl": "https://images.code.org/0bd6cd5cdaf896d4369056620649abe9-title.jpg",
         "key": "thinking_critically_lesson8_level1a_2026-76cfc3a9-f66a-4395-aa1f-c847b4c2ff9c",
         "links": [
@@ -37,7 +37,7 @@
             "width": 12
           }
         ],
-        "typing": false
+        "typing": true
       },
       {
         "text": "AI doesn't just record you. It studies your voice patterns. It learns how you breathe, your accent, and how you show feelings. By looking at a small audio clip, it builds a digital map of your voice",
@@ -74,13 +74,13 @@
           }
         ],
         "layout": "text-bottom-left",
-        "typing": true
+        "typing": false
       },
       {
         "text": "Scammers use AI to create a stressful moment. They make you feel you must act fast to help a friend in trouble. They use public info to make the talk feel private. They hope you will not stop to ask questions.",
         "imageUrl": "https://images.code.org/53b3694fdff456c93e603e6a24ab5e3f-two.jpg",
         "key": "thinking_critically_lesson8_level1a_2026-e7abd69c-9e43-4cb7-a607-3612f34a9d27",
-        "typing": true,
+        "typing": false,
         "links": [
           {
             "text": "< **BACK**",
@@ -116,7 +116,7 @@
         "text": "To stay safe, use your brain. Make rules to check if a person is real or an AI copy.",
         "imageUrl": "https://images.code.org/28e74e93d0ce1980fa6a568cef636c03-three.jpg",
         "key": "thinking_critically_lesson8_level1a_2026-b73c1718-f5c9-45ce-ba98-07f63a5df2a3",
-        "typing": true,
+        "typing": false,
         "links": [
           {
             "text": "< **BACK**",
@@ -152,7 +152,7 @@
         "text": "People used to think you needed hours of recording to copy a voice. Now, AI only needs 3 seconds of audio to make a realistic clone. It can take this from a public video, like a TikTok or a gaming stream.",
         "imageUrl": "https://images.code.org/044ebc9091c926afd9518a587091b6c9-one-one.jpg",
         "key": "thinking_critically_lesson8_level1a_2026-b82b8d90-07cd-4bdb-b2d9-88a92552312f",
-        "typing": true,
+        "typing": false,
         "links": [
           {
             "text": "< **BACK**",
@@ -162,13 +162,14 @@
             "width": 11
           }
         ],
-        "layout": "text-bottom-right"
+        "layout": "text-bottom-right",
+        "showContinueButton": true
       },
       {
         "text": "Look for red flags like weird breathing or robotic sounds. These signs show a pattern that is not human.",
         "imageUrl": "https://images.code.org/78b7de7316839247b590a2fb0c9fe2ab-one-two.jpg",
         "key": "thinking_critically_lesson8_level1a_2026-88dd4601-08d5-49ab-ae9e-5921634e512b",
-        "typing": true,
+        "typing": false,
         "links": [
           {
             "text": "< **BACK**",
@@ -178,13 +179,14 @@
             "width": 11
           }
         ],
-        "layout": "text-bottom-right"
+        "layout": "text-bottom-right",
+        "showContinueButton": true
       },
       {
         "text": "AI can add sensitive traits like panic or crying to a cloned voice to stop you from thinking clearly.",
         "imageUrl": "https://images.code.org/5a904398b4f19c68180759c919ab1500-one-three.jpg",
         "key": "thinking_critically_lesson8_level1a_2026-41b1747e-c624-4681-bb54-3d915970eed0",
-        "typing": true,
+        "typing": false,
         "links": [
           {
             "text": "< **BACK**",
@@ -194,7 +196,8 @@
             "width": 11
           }
         ],
-        "layout": "text-bottom-center"
+        "layout": "text-bottom-center",
+        "showContinueButton": true
       },
       {
         "text": "Hanging up and calling the person back on a different app is a great way to stay safe.",
@@ -209,8 +212,9 @@
             "width": 11
           }
         ],
-        "typing": true,
-        "layout": "text-bottom-center"
+        "typing": false,
+        "layout": "text-bottom-center",
+        "showContinueButton": true
       },
       {
         "text": "Scammers use tools to change the caller ID on your phone. They make it show a name you trust, like a parent or a friend.",
@@ -225,8 +229,9 @@
             "width": 11
           }
         ],
-        "typing": true,
-        "layout": "text-bottom-left"
+        "typing": false,
+        "layout": "text-bottom-left",
+        "showContinueButton": true
       },
       {
         "text": "AI calls use fake emergencies to trick you. They want you to share your password or location fast.",
@@ -241,8 +246,9 @@
             "width": 11
           }
         ],
-        "typing": true,
-        "layout": "text-bottom-center"
+        "typing": false,
+        "layout": "text-bottom-center",
+        "showContinueButton": true
       },
       {
         "text": "Families can pick a secret word. If a caller does not know it, they are likely a deepfake.",
@@ -257,8 +263,9 @@
             "width": 11
           }
         ],
-        "typing": true,
-        "layout": "text-bottom-right"
+        "typing": false,
+        "layout": "text-bottom-right",
+        "showContinueButton": true
       },
       {
         "text": "Always double-check who you are talking to. It is a smart way to live with AI.",
@@ -273,7 +280,8 @@
             "width": 11
           }
         ],
-        "typing": true
+        "typing": false,
+        "showContinueButton": true
       },
       {
         "text": "Ask a question about something that happened offline, like what you ate for breakfast. An AI would not know the answer.",
@@ -289,13 +297,14 @@
           }
         ],
         "layout": "text-bottom-center",
-        "typing": true
+        "typing": false,
+        "showContinueButton": true
       }
     ],
     "display_name": "Real or AI?",
     "bubble_choice_description": "Explore the effects of artificial media produced by AI",
     "thumbnail_url": "https://images.code.org/7cbcd82871f25ba99b76c5fe21be3bbe-one.jpg"
   },
-  "audit_log": "[{\"changed_at\":\"2026-04-27 18:47:31 +0000\",\"changed\":[\"name\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-27 18:56:55 +0000\",\"changed\":[],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-27 19:00:00 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-27 19:04:58 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-27 19:22:34 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-27 19:28:55 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-27 21:08:35 +0000\",\"changed\":[],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2026-04-27 18:47:31 +0000\",\"changed\":[\"name\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-27 18:56:55 +0000\",\"changed\":[],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-27 19:00:00 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-27 19:04:58 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-27 19:22:34 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-27 19:28:55 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-27 21:08:35 +0000\",\"changed\":[],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-30 18:26:30 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-30 18:26:52 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"}]"
 }]]></config>
 </Panels>

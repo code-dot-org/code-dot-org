@@ -18,6 +18,7 @@ export const FolderRowIcon: FileBrowserIconComponentType = ({item}) => {
       iconName={folderItem.open ? 'folder-open' : 'folder'}
       iconStyle={'solid'}
       className={moduleStyles.rowIcon}
+      aria-hidden
     />
   );
 };

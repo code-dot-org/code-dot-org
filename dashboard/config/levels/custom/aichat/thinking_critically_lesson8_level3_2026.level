@@ -7,7 +7,7 @@
   "user_id": 18603,
   "properties": {
     "encrypted": "false",
-    "long_instructions": "##AI Safety and Privacy\r\n\r\n1. In the chat window, click **Add File** then **From Library**. Select the digital artifact that your examined.\r\n2. Prompt the AI to see what public, private, and sensitive information it can uncover.\r\n3. Try adding another artifact(s) and see how AI is able to build a more complete profile of the user.",
+    "long_instructions": "##AI Safety and Privacy\r\n\r\n####Task:\r\n1. In the chat window, click **Add File** then **From Library**. Attach the digital artifact that you examined.\r\n2. **Prompt** the AI: _What public, private, and sensitive information is contained in this artifact?_\r\n3. **Prompt** the AI: _What inferences can you make about this person?_\r\n4. **Compare** AI's analysis to your own- which was more thorough?\r\n",
     "offer_browser_tts": "false",
     "submittable": "false",
     "disable_edit_run_for_submission": "false",
@@ -54,6 +54,6 @@
       "6.jpg": "b1b070ba-d079-4593-99ce-8afdc5cdc75f.jpg"
     }
   },
-  "audit_log": "[{\"changed_at\":\"2026-04-28 16:59:21 +0000\",\"changed\":[],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-28 17:03:23 +0000\",\"changed\":[\"aichat_settings\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-28 17:08:03 +0000\",\"changed\":[\"long_instructions\",\"aichat_settings\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-28 17:09:55 +0000\",\"changed\":[\"aichat_settings\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-28 17:12:53 +0000\",\"changed\":[\"aichat_settings\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2026-04-28 16:59:21 +0000\",\"changed\":[],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-28 17:03:23 +0000\",\"changed\":[\"aichat_settings\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-28 17:08:03 +0000\",\"changed\":[\"long_instructions\",\"aichat_settings\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-28 17:09:55 +0000\",\"changed\":[\"aichat_settings\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-28 17:12:53 +0000\",\"changed\":[\"aichat_settings\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-30 20:32:27 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-30 20:33:52 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"}]"
 }]]></config>
 </Aichat>
