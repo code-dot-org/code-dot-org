@@ -16,12 +16,36 @@ module DevelopersTopic
   DEVELOPERS_ROOM = 'developers'.freeze
   DEPLOY_STATUS_ROOM = 'deploy-status'.freeze
 
-  # @return [String] The DOTD (without the '@' symbol), as per the Slack#developers topic.
-  def self.dotd
-    current_topic = Slack.get_topic 'developers'
-    dotd = /DOTD: @?([^;]+);/i.match(current_topic)
-    raise 'developers topic not propertly formatted' unless dotd
-    dotd[1]
+  # @return [String] The Slack user ID (e.g. 'U12345') of the DOTD, extracted
+  #   from the user mention in the developers room topic.
+  # @raise [RuntimeError] If the topic does not contain a DOTD mention.
+  def self.dotd_id
+    current_topic = Slack.get_topic('developers', raw: true)
+    match = /DOTD: <@([A-Z0-9]+)>/.match(current_topic)
+    raise 'developers topic missing DOTD mention' unless match
+    match[1]
+  end
+
+  # @return [String] A Slack mention tag '<@U12345>' for the DOTD, suitable for
+  #   pinging the user from a chat message.
+  # @raise [RuntimeError] If the topic does not contain a DOTD mention.
+  def self.dotd_mention
+    "<@#{dotd_id}>"
+  end
+
+  # @return [String] A human-friendly username for the DOTD. Resolves the user
+  #   mention to a display name when present; falls back to the literal text
+  #   after 'DOTD:' for hand-edited topics that omit the mention.
+  # @raise [RuntimeError] If the topic does not specify a DOTD field.
+  def self.dotd_username
+    current_topic = Slack.get_topic('developers', raw: true)
+    if (match = /DOTD: <@([A-Z0-9]+)>/.match(current_topic))
+      Slack.get_display_name(match[1])
+    elsif (match = /DOTD: @?([^;]+);/.match(current_topic))
+      match[1]
+    else
+      raise 'developers topic not properly formatted'
+    end
   end
 
   # @return [Boolean] Whether DTS is yes.
@@ -90,6 +114,15 @@ module DevelopersTopic
   # @raise [RuntimeError] If the existing DTL topic does not specify a message.
   def self.set_dtl(message)
     set_branch_message LEVELBUILDER, message
+  end
+
+  # Replace the DOTD field in the developers room topic.
+  # @param mention_tag [String] The new value, typically a Slack mention tag
+  #   like '<@U12345>' produced by Slack.user_mention_tag.
+  def self.set_dotd_mention(mention_tag)
+    current_topic = Slack.get_topic('developers', raw: true)
+    new_topic = current_topic.sub(/^.+?;/, "DOTD: #{mention_tag};")
+    Slack.update_topic 'developers', new_topic unless new_topic == current_topic
   end
 
   private_class_method def self.get_room_for_branch(branch)
