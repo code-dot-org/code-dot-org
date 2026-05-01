@@ -229,97 +229,7 @@ export function useKeyboardNavigation({
       // Everything below mutates the canvas and requires edit access.
       if (readOnly) return;
 
-      // Arrow keys on a focused node move just that node.
-      if (focusedNodeId) {
-        let deltaX = 0;
-        let deltaY = 0;
-        if (event.key === 'ArrowLeft') deltaX = -KEYBOARD_MOVE_STEP;
-        if (event.key === 'ArrowRight') deltaX = KEYBOARD_MOVE_STEP;
-        if (event.key === 'ArrowUp') deltaY = -KEYBOARD_MOVE_STEP;
-        if (event.key === 'ArrowDown') deltaY = KEYBOARD_MOVE_STEP;
-
-        if (deltaX || deltaY) {
-          event.preventDefault();
-          event.stopPropagation();
-          setNodes(currentNodes =>
-            moveNodesByDelta(currentNodes, [focusedNodeId], deltaX, deltaY)
-          );
-          return;
-        }
-      }
-
-      // Arrow keys on a focused line edge move the whole line by moving
-      // both line-anchor nodes together.
-      if (focusedEdgeId) {
-        let deltaX = 0;
-        let deltaY = 0;
-        if (event.key === 'ArrowLeft') deltaX = -KEYBOARD_MOVE_STEP;
-        if (event.key === 'ArrowRight') deltaX = KEYBOARD_MOVE_STEP;
-        if (event.key === 'ArrowUp') deltaY = -KEYBOARD_MOVE_STEP;
-        if (event.key === 'ArrowDown') deltaY = KEYBOARD_MOVE_STEP;
-
-        if (deltaX || deltaY) {
-          const focusedEdge = getEdge(focusedEdgeId);
-          if (focusedEdge && isLineEdge(focusedEdge, nodes)) {
-            event.preventDefault();
-            event.stopPropagation();
-            setNodes(currentNodes =>
-              moveNodesByDelta(
-                currentNodes,
-                [focusedEdge.source, focusedEdge.target],
-                deltaX,
-                deltaY
-              )
-            );
-            return;
-          }
-        }
-      }
-
-      // "[" and "]" decrease or increase the size of the focused node.
-      // Line-anchor pseudo-nodes are excluded — they have no visible body and can
-      // be resized through 'ghost' nodes.
-      // Modifier keys control the resize axis:
-      //   No modifier → both width and height (uniform resize)
-      //   Shift       → width only (horizontal)
-      //   Alt         → height only (vertical)
-      if (
-        focusedNodeId &&
-        !isLineAnchorNodeId(focusedNodeId, nodes) &&
-        (event.code === 'BracketLeft' || event.code === 'BracketRight')
-      ) {
-        const focusedNode = getNode(focusedNodeId);
-        const direction = (event.code === 'BracketRight' ? 1 : -1) as 1 | -1;
-        const step = direction * KEYBOARD_RESIZE_STEP;
-
-        const deltaWidth = event.altKey ? 0 : step;
-        const deltaHeight = event.shiftKey ? 0 : step;
-
-        event.preventDefault();
-        event.stopPropagation();
-        setNodes(currentNodes =>
-          resizeNodeByDelta(
-            currentNodes,
-            focusedNodeId,
-            deltaWidth,
-            deltaHeight
-          )
-        );
-        const nodeLabel = focusedNode
-          ? getNodeLabel(focusedNode)
-          : focusedNodeId;
-        const axis = event.altKey
-          ? 'height'
-          : event.shiftKey
-          ? 'width'
-          : 'size';
-        announce(
-          `${nodeLabel} ${axis} ${direction > 0 ? 'enlarged' : 'shrunk'}.`
-        );
-
-        return;
-      }
-
+      // OPEN TOOLBAR
       // "e" opens the node/line/image toolbar. ToolbarShell's FocusTrap
       // moves focus to the first tabbable item when isVisible flips.
       if (
@@ -333,6 +243,7 @@ export function useKeyboardNavigation({
         return;
       }
 
+      // CREATE EDGES BETWEEN NODES
       // "c" toggles connect mode on/off (nodes only).
       if (event.key === 'c') {
         if (connectingFrom) {
@@ -397,6 +308,104 @@ export function useKeyboardNavigation({
         return;
       }
 
+      // All further interactions require an unlocked node, if a node is focused.
+      if (focusedNodeId && getNode(focusedNodeId)?.data?.locked) return;
+
+      // MOVE NODE
+      // Arrow keys on a focused node move just that node.
+      if (focusedNodeId) {
+        let deltaX = 0;
+        let deltaY = 0;
+        if (event.key === 'ArrowLeft') deltaX = -KEYBOARD_MOVE_STEP;
+        if (event.key === 'ArrowRight') deltaX = KEYBOARD_MOVE_STEP;
+        if (event.key === 'ArrowUp') deltaY = -KEYBOARD_MOVE_STEP;
+        if (event.key === 'ArrowDown') deltaY = KEYBOARD_MOVE_STEP;
+
+        if (deltaX || deltaY) {
+          event.preventDefault();
+          event.stopPropagation();
+          setNodes(currentNodes =>
+            moveNodesByDelta(currentNodes, [focusedNodeId], deltaX, deltaY)
+          );
+          return;
+        }
+      }
+
+      // MOVE EDGE
+      // Arrow keys on a focused line edge move the whole line by moving
+      // both line-anchor nodes together.
+      if (focusedEdgeId) {
+        let deltaX = 0;
+        let deltaY = 0;
+        if (event.key === 'ArrowLeft') deltaX = -KEYBOARD_MOVE_STEP;
+        if (event.key === 'ArrowRight') deltaX = KEYBOARD_MOVE_STEP;
+        if (event.key === 'ArrowUp') deltaY = -KEYBOARD_MOVE_STEP;
+        if (event.key === 'ArrowDown') deltaY = KEYBOARD_MOVE_STEP;
+
+        if (deltaX || deltaY) {
+          const focusedEdge = getEdge(focusedEdgeId);
+          if (focusedEdge && isLineEdge(focusedEdge, nodes)) {
+            event.preventDefault();
+            event.stopPropagation();
+            setNodes(currentNodes =>
+              moveNodesByDelta(
+                currentNodes,
+                [focusedEdge.source, focusedEdge.target],
+                deltaX,
+                deltaY
+              )
+            );
+            return;
+          }
+        }
+      }
+
+      // CHANGE NODE SIZE
+      // "[" and "]" decrease or increase the size of the focused node.
+      // Line-anchor pseudo-nodes are excluded — they have no visible body and can
+      // be resized through 'ghost' nodes.
+      // Modifier keys control the resize axis:
+      //   No modifier → both width and height (uniform resize)
+      //   Shift       → width only (horizontal)
+      //   Alt         → height only (vertical)
+      if (
+        focusedNodeId &&
+        !isLineAnchorNodeId(focusedNodeId, nodes) &&
+        (event.code === 'BracketLeft' || event.code === 'BracketRight')
+      ) {
+        const focusedNode = getNode(focusedNodeId);
+        const direction = (event.code === 'BracketRight' ? 1 : -1) as 1 | -1;
+        const step = direction * KEYBOARD_RESIZE_STEP;
+
+        const deltaWidth = event.altKey ? 0 : step;
+        const deltaHeight = event.shiftKey ? 0 : step;
+
+        event.preventDefault();
+        event.stopPropagation();
+        setNodes(currentNodes =>
+          resizeNodeByDelta(
+            currentNodes,
+            focusedNodeId,
+            deltaWidth,
+            deltaHeight
+          )
+        );
+        const nodeLabel = focusedNode
+          ? getNodeLabel(focusedNode)
+          : focusedNodeId;
+        const axis = event.altKey
+          ? 'height'
+          : event.shiftKey
+          ? 'width'
+          : 'size';
+        announce(
+          `${nodeLabel} ${axis} ${direction > 0 ? 'enlarged' : 'shrunk'}.`
+        );
+
+        return;
+      }
+
+      // EDIT NODE TEXT
       // Enter on a focused node (outside connect mode) enters edit mode.
       // Do NOT stopPropagation here: React Flow's handler needs to fire
       // to select the node, which enables arrow-key movement.

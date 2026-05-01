@@ -1,7 +1,7 @@
 import {NodeResizer, useReactFlow, type NodeProps} from '@xyflow/react';
 import React, {memo, useCallback, useMemo, useRef, useState} from 'react';
 
-import {MIN_NODE_HEIGHT, MIN_NODE_WIDTH} from '../constants';
+import {DEFAULT_ROTATION, MIN_NODE_HEIGHT, MIN_NODE_WIDTH} from '../constants';
 import {useSketchLabReadOnly} from '../context';
 import TextNodeToolbar from '../elementToolbars/TextNodeToolbar';
 import {fontSizePx} from '../elementToolbars/toolbarPalettes';
@@ -29,8 +29,14 @@ function TextNode({id, data, selected}: NodeProps<TextNodeType>) {
     return style;
   }, [data.fontColor, data.fontSize]);
 
+  const rotation = data.rotation ?? DEFAULT_ROTATION;
+  const rotatableStyle: React.CSSProperties = useMemo(
+    () => ({transform: `rotate(${rotation}deg)`}),
+    [rotation]
+  );
+
   const startEditing = useCallback(() => {
-    if (isEditing || readOnly) {
+    if (isEditing || readOnly || data.locked) {
       return;
     }
     setIsEditing(true);
@@ -45,7 +51,7 @@ function TextNode({id, data, selected}: NodeProps<TextNodeType>) {
         selection?.addRange(range);
       }
     }, 0);
-  }, [isEditing, readOnly]);
+  }, [isEditing, readOnly, data.locked]);
 
   const commitEdit = useCallback(() => {
     setIsEditing(false);
@@ -82,27 +88,29 @@ function TextNode({id, data, selected}: NodeProps<TextNodeType>) {
       onDoubleClick={startEditing}
     >
       <NodeResizer
-        isVisible={selected}
+        isVisible={selected && !data.locked}
         minWidth={MIN_NODE_WIDTH}
         minHeight={MIN_NODE_HEIGHT}
       />
 
       <TextNodeToolbar nodeId={id} />
 
-      <div
-        ref={textRef}
-        className={styles.text}
-        style={textStyle}
-        contentEditable={isEditing}
-        suppressContentEditableWarning
-        onFocus={startEditing}
-        onBlur={commitEdit}
-        onKeyDown={handleKeyDown}
-        tabIndex={-1}
-        role="textbox"
-        aria-label={`Text content${isEditing ? ' (editing)' : ''}`}
-      >
-        {text}
+      <div className={styles.rotatable} style={rotatableStyle}>
+        <div
+          ref={textRef}
+          className={styles.text}
+          style={textStyle}
+          contentEditable={isEditing}
+          suppressContentEditableWarning
+          onFocus={startEditing}
+          onBlur={commitEdit}
+          onKeyDown={handleKeyDown}
+          tabIndex={-1}
+          role="textbox"
+          aria-label={`Text content${isEditing ? ' (editing)' : ''}`}
+        >
+          {text}
+        </div>
       </div>
 
       <ConnectionHandles visible={showHandles} />

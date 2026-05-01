@@ -120,6 +120,12 @@ export default function ToolbarShell({
           elevation={3}
           role="toolbar"
           aria-label={ariaLabel}
+          // The toolbar is a DOM portal but React events still bubble
+          // through the component tree to the owning node, whose
+          // onDoubleClick starts inline label/text editing. Stop double clicks
+          // here so double-clicking inside the toolbar (e.g. on the rotation input)
+          // does not enter edit mode.
+          onDoubleClick={event => event.stopPropagation()}
         >
           <div className={styles.header}>
             <Tooltip title="Close toolbar" placement="top">

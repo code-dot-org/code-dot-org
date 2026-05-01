@@ -4,6 +4,9 @@ export const DEFAULT_NODE_HEIGHT = 120;
 export const MIN_NODE_WIDTH = 80;
 export const MIN_NODE_HEIGHT = 60;
 
+// Default rotation in degrees.
+export const DEFAULT_ROTATION = 0;
+
 export const KEYBOARD_RESIZE_STEP = 20;
 export const KEYBOARD_MOVE_STEP = 10;
 

@@ -241,9 +241,15 @@ export default function ReactFlowCanvas({
       displayNodes: nodes.map(node => {
         const isConnectSource = connectingFrom === node.id;
         const {selected, domAttributes} = applyDisplayProps(node, 'node');
+        const locked = node.data?.locked === true;
         return {
           ...node,
           selected,
+          ...(locked && {
+            draggable: false,
+            connectable: false,
+            deletable: false,
+          }),
           className: isConnectSource ? styles.connectSource : undefined,
           domAttributes: {
             ...domAttributes,

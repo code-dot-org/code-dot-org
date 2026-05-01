@@ -107,7 +107,7 @@
         },
         {
           "type": "rating",
-          "name": "know_what_students_learn_designing_building_ai",
+          "name": "know_what_students_learn_curriculum",
           "visibleIf": "{module} = 'Designing & Building with AI'",
           "title": "After completing this professional learning experience, I understand what my students will learn in Code.org's {module} curriculum.",
           "rateCount": 7,
