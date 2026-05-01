@@ -35,6 +35,7 @@ export default function ImageNodeToolbar({nodeId}: ImageNodeToolbarProps) {
             onChange={degrees => patchNodeData({rotation: degrees})}
           />
           <ActionsGroup
+            nodeId={nodeId}
             onDelete={() => deleteElements({nodes: [{id: nodeId}]})}
             onLock={() => patchNodeData({locked: true})}
           />

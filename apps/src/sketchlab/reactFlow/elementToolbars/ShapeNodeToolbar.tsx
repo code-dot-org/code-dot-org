@@ -72,6 +72,7 @@ export default function ShapeNodeToolbar({nodeId}: ShapeNodeToolbarProps) {
             onChange={degrees => patchNodeData({rotation: degrees})}
           />
           <ActionsGroup
+            nodeId={nodeId}
             onDelete={() => deleteElements({nodes: [{id: nodeId}]})}
             onLock={() => patchNodeData({locked: true})}
           />

@@ -4,15 +4,23 @@ import React from 'react';
 
 import {getIsStartMode} from '@cdo/apps/lab2/projects/utils';
 
+import {useClipboard} from '../context';
+
 import styles from './element-toolbar.module.scss';
 
 interface ActionsGroupProps {
+  nodeId?: string;
   onDelete?: () => void;
   onLock?: () => void;
 }
 
-export default function ActionsGroup({onDelete, onLock}: ActionsGroupProps) {
+export default function ActionsGroup({
+  nodeId,
+  onDelete,
+  onLock,
+}: ActionsGroupProps) {
   const isStartMode = getIsStartMode();
+  const {duplicateNode} = useClipboard();
 
   return (
     <div className={styles.group} role="group" aria-label="Actions">
@@ -24,6 +32,18 @@ export default function ActionsGroup({onDelete, onLock}: ActionsGroupProps) {
         Actions
       </Typography>
       <div className={styles.fontSizeButtons}>
+        {nodeId && (
+          <Tooltip title="Duplicate" placement="top">
+            <IconButton
+              size="small"
+              className={styles.fontSizeButton}
+              aria-label="Duplicate"
+              onClick={() => duplicateNode(nodeId)}
+            >
+              <FontAwesomeV6Icon iconName="copy" />
+            </IconButton>
+          </Tooltip>
+        )}
         {onDelete && (
           <Tooltip title="Delete" placement="top">
             <IconButton
