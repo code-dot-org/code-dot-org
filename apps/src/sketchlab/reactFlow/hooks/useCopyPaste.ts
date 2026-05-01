@@ -15,11 +15,24 @@ import {isLineEdge} from '../utils/lineEdges';
 interface UseCopyPasteOptions {
   nodes: SketchlabReactFlowNode[];
   edges: SketchlabReactFlowEdge[];
+  setNodes: (
+    updater: (nodes: SketchlabReactFlowNode[]) => SketchlabReactFlowNode[]
+  ) => void;
+  setEdges: (
+    updater: (edges: SketchlabReactFlowEdge[]) => SketchlabReactFlowEdge[]
+  ) => void;
 }
 
-export function useCopyPaste({nodes, edges}: UseCopyPasteOptions) {
-  const {setNodes, setEdges, deleteElements, screenToFlowPosition} =
-    useReactFlow<SketchlabReactFlowNode, SketchlabReactFlowEdge>();
+export function useCopyPaste({
+  nodes,
+  edges,
+  setNodes,
+  setEdges,
+}: UseCopyPasteOptions) {
+  const {deleteElements, screenToFlowPosition} = useReactFlow<
+    SketchlabReactFlowNode,
+    SketchlabReactFlowEdge
+  >();
 
   // Keyboard clipboard. useRef holds data (no re-renders); useState tracks
   // whether anything is available so dependent UI can update.
@@ -78,10 +91,8 @@ export function useCopyPaste({nodes, edges}: UseCopyPasteOptions) {
       }
       if (!source) return;
 
-      const idMap = new Map<string, string>();
       const newNodes = source.nodes.map(node => {
         const newId = createUuid();
-        idMap.set(node.id, newId);
         // A locked source node may have draggable/connectable/deletable set
         // to false at runtime (React Flow writes them back via onNodesChange).
         // Reset them to undefined so the duplicate inherits the global setting.

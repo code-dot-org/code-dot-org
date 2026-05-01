@@ -166,7 +166,7 @@ export default function ReactFlowCanvas({
     paste,
     handleMouseMove,
     handleMouseLeave,
-  } = useCopyPaste({nodes, edges});
+  } = useCopyPaste({nodes, edges, setNodes, setEdges});
 
   const clipboardContextValue = useMemo(
     () => ({duplicateNode, duplicateLine}),
