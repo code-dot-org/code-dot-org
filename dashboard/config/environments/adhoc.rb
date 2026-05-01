@@ -36,8 +36,4 @@ Dashboard::Application.configure do
   # Show mail previews (rails/mailers).
   # See http://edgeguides.rubyonrails.org/action_mailer_basics.html#previewing-emails
   config.action_mailer.show_previews = true
-
-  config.after_initialize do
-    Prosopite.enabled = false
-  end
 end

@@ -82,12 +82,6 @@ Dashboard::Application.configure do
 
   config.experiment_cache_time_seconds = 0
 
-  config.after_initialize do
-    Prosopite.rails_logger = true
-    Prosopite.raise = false
-    Prosopite.ignore_queries = [/FROM `experiments`/]
-  end
-
   # Prevent merge conflicts on schema.rb by skipping regeneration of schema.rb
   # on the test machine. this is necessary because as of April 2025 the test DB
   # schema differs from other environments due to utf8mb3 vs utf8mb4 issues.
