@@ -142,4 +142,48 @@ class RedisSessionStoreTest < ActiveSupport::TestCase
       end
     end
   end
+
+  describe '.create' do
+    subject(:create_session) {ActionDispatch::Request::Session.create(redis_session_store, request, session_options)}
+
+    let(:session_options) {{}}
+
+    context 'when session is a raw hash' do
+      before do
+        request.set_header(ActionDispatch::Request::Session::ENV_SESSION_KEY, {'statsig_stable_id' => 'abc123'})
+      end
+
+      it 'creates a Rails session without raising' do
+        _(create_session).must_be_instance_of ActionDispatch::Request::Session
+        _(create_session[:fake_session_data]).must_equal 'default'
+        _(create_session[:statsig_stable_id]).must_equal 'abc123'
+      end
+
+      it 'replaces the raw rack session hash with the Rails session object' do
+        create_session
+
+        _(request.get_header(ActionDispatch::Request::Session::ENV_SESSION_KEY)).must_equal create_session
+      end
+
+      it 'can write to the session after replacing the raw rack session hash' do
+        create_session[:fake_session_data] = 'updated'
+
+        _(request.get_header(ActionDispatch::Request::Session::ENV_SESSION_KEY)).must_equal create_session
+        _(create_session[:fake_session_data]).must_equal 'updated'
+      end
+
+      context 'when session options are missing' do
+        before do
+          request.delete_header(ActionDispatch::Request::Session::ENV_SESSION_OPTIONS_KEY)
+          _(request.get_header(ActionDispatch::Request::Session::ENV_SESSION_OPTIONS_KEY)).must_be_nil
+        end
+
+        it 'initializes Rails session options during initialization' do
+          create_session
+
+          _(request.session_options).must_be_instance_of ActionDispatch::Request::Session::Options
+        end
+      end
+    end
+  end
 end

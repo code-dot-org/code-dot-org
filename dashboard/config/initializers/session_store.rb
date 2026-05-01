@@ -13,10 +13,33 @@ module UnnecessarySessionWritePrevention
       @changed.present?
     end
 
+    def options
+      normalize_session_options!
+      super
+    end
+
     # @see https://github.com/rails/rails/blob/v6.1.7.7/actionpack/lib/action_dispatch/request/session.rb#L229-L231
     private def load_for_write!
       @changed = true
+      normalize_rack_session!
       super
+    end
+
+    private def normalize_session_options!
+      session_options = @req.get_header(ActionDispatch::Request::Session::ENV_SESSION_OPTIONS_KEY)
+      return unless session_options.nil? || session_options.is_a?(Hash)
+
+      ActionDispatch::Request::Session::Options.set(
+        @req,
+        ActionDispatch::Request::Session::Options.new(@by, session_options || {})
+      )
+    end
+
+    private def normalize_rack_session!
+      rack_session = @req.get_header(ActionDispatch::Request::Session::ENV_SESSION_KEY)
+      return unless rack_session.is_a?(Hash)
+
+      ActionDispatch::Request::Session.set(@req, self)
     end
   end
 
