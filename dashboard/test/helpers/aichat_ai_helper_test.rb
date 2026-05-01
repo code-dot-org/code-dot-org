@@ -24,31 +24,49 @@ class AichatAiHelperTest < ActionView::TestCase
       }
     end
 
-    before do
-      AichatAssetHelper.expects(:get_asset_base64_string).
-        with('image.png', 'project', encrypted_channel_id, level_name).
-        returns('image-base64')
-      AichatAssetHelper.expects(:get_asset_base64_string).
-        with('notes.pdf', 'level', encrypted_channel_id, level_name).
-        returns('pdf-base64')
+    context 'with png and pdf assets' do
+      before do
+        AichatAssetHelper.expects(:get_asset_base64_string).
+          with('image.png', 'project', encrypted_channel_id, level_name).
+          returns('image-base64')
+        AichatAssetHelper.expects(:get_asset_base64_string).
+          with('notes.pdf', 'level', encrypted_channel_id, level_name).
+          returns('pdf-base64')
+      end
+
+      it 'includes text and file message parts with mime types' do
+        parts = AichatAiHelper.format_message_parts(message_payload, encrypted_channel_id, level_name)
+
+        _(parts.length).must_equal 3
+        _(parts.first.type).must_equal 'text'
+        _(parts.first.content).must_equal 'Hello AI'
+
+        _(parts.second.type).must_equal 'file'
+        _(parts.second.content.name).must_equal 'image.png'
+        _(parts.second.content.mimeType).must_equal 'image/png'
+        _(parts.second.content.data).must_equal 'image-base64'
+
+        _(parts.third.type).must_equal 'file'
+        _(parts.third.content.name).must_equal 'notes.pdf'
+        _(parts.third.content.mimeType).must_equal 'application/pdf'
+        _(parts.third.content.data).must_equal 'pdf-base64'
+      end
     end
 
-    it 'includes text and file message parts with mime types' do
-      parts = AichatAiHelper.format_message_parts(message_payload, encrypted_channel_id, level_name)
+    it 'uses image/webp for webp filenames' do
+      webp_payload = {
+        'chatMessageText' => 'Describe this',
+        'assets' => [{'filename' => 'shot.webp', 'source' => 'project'}]
+      }
+      AichatAssetHelper.expects(:get_asset_base64_string).
+        with('shot.webp', 'project', encrypted_channel_id, level_name).
+        returns('webp-base64')
 
-      _(parts.length).must_equal 3
-      _(parts.first.type).must_equal 'text'
-      _(parts.first.content).must_equal 'Hello AI'
+      parts = AichatAiHelper.format_message_parts(webp_payload, encrypted_channel_id, level_name)
 
-      _(parts.second.type).must_equal 'file'
-      _(parts.second.content.name).must_equal 'image.png'
-      _(parts.second.content.mimeType).must_equal 'image/png'
-      _(parts.second.content.data).must_equal 'image-base64'
-
-      _(parts.third.type).must_equal 'file'
-      _(parts.third.content.name).must_equal 'notes.pdf'
-      _(parts.third.content.mimeType).must_equal 'application/pdf'
-      _(parts.third.content.data).must_equal 'pdf-base64'
+      _(parts.length).must_equal 2
+      _(parts.second.content.mimeType).must_equal 'image/webp'
+      _(parts.second.content.data).must_equal 'webp-base64'
     end
   end
 

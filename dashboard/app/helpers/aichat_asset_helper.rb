@@ -8,6 +8,15 @@ module AichatAssetHelper
     @@asset_bucket ||= AssetBucket.new
   end
 
+  # MIME type for AI Chat assets. Rack::Mime omits some allowed extensions (e.g. .webp),
+  # which would otherwise resolve to application/octet-stream and fail AichatAiClientTypes checks.
+  def self.mime_type_for_filename(filename)
+    ext = File.extname(filename.to_s).downcase
+    return 'image/webp' if ext == '.webp'
+
+    Rack::Mime.mime_type(ext)
+  end
+
   # Returns a base64 string for the given asset.
   def self.get_asset_base64_string(filename, source, channel_id, level_name)
     asset = fetch_asset(filename, source, channel_id, level_name)
@@ -16,7 +25,7 @@ module AichatAssetHelper
 
   # Returns a data URI in base64 format for the given asset.
   def self.get_asset_data_uri(filename, source, channel_id, level_name)
-    mime_type = Rack::Mime.mime_type(File.extname(filename))
+    mime_type = mime_type_for_filename(filename)
     base64_data = get_asset_base64_string(filename, source, channel_id, level_name)
 
     "data:#{mime_type};base64,#{base64_data}"

@@ -67,7 +67,7 @@ export const getAllowedFileTypes = (
   // Gemini 2.5 Flash Image model, we have stricter input criteria so only
   // safe image uploads are allowed. For other multimodal models, we don't
   // do any input moderation, and allow both image and PDF uploads.
-  const images = ['.jpg', '.jpeg', '.png'];
+  const images = ['.jpg', '.jpeg', '.png', '.webp'];
   return modelId === AiChatModelIds.GEMINI_2_5_FLASH_IMAGE
     ? images
     : [...images, '.pdf'];

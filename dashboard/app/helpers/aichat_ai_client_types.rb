@@ -16,10 +16,10 @@ module AichatAiClientTypes
   FileMessagePartType = string("file")
   MessagePartType = TextMessagePartType | FileMessagePartType
 
-  # type FileMessageImageMimeType = "image/jpeg" | "image/png" | "image/gif"
+  # type FileMessageImageMimeType = "image/jpeg" | "image/png" | "image/gif" | "image/webp"
   # type FileMessagePdfMimeType =  "application/pdf";
   # type FileMessageMimeType = FileMessageImageMimeType | FileMessagePdfMimeType;
-  FileMessageImageMimeType = string("image/jpeg") | string("image/png") | string("image/gif")
+  FileMessageImageMimeType = string("image/jpeg") | string("image/png") | string("image/gif") | string("image/webp")
   FileMessagePdfMimeType = string("application/pdf")
   FileMessageMimeType = FileMessageImageMimeType | FileMessagePdfMimeType
 

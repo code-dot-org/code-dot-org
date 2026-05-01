@@ -19,6 +19,17 @@ class AichatAssetHelperTest < ActionView::TestCase
   let(:level_asset)   {{"filename" => "level.png", "source" => "level"}}
   let(:missing_asset) {{"filename" => "missing.png", "source" => "level"}}
 
+  describe '.mime_type_for_filename' do
+    it 'returns image/webp for webp paths' do
+      _(AichatAssetHelper.mime_type_for_filename('photo.webp')).must_equal 'image/webp'
+      _(AichatAssetHelper.mime_type_for_filename('path/photo.WEBP')).must_equal 'image/webp'
+    end
+
+    it 'delegates other extensions to Rack::Mime' do
+      _(AichatAssetHelper.mime_type_for_filename('x.png')).must_equal 'image/png'
+    end
+  end
+
   before do
     AichatAssetHelper.stubs(:asset_bucket).returns(FAKE_BUCKET)
 
@@ -68,6 +79,22 @@ class AichatAssetHelperTest < ActionView::TestCase
 
       it 'returns a base64-encoded data URI' do
         subject.must_match(/^data:image\/png;base64,/)
+        Base64.decode64(subject.split(',').last).must_equal "stubbed content"
+      end
+    end
+
+    context 'when fetch_asset succeeds for webp' do
+      let(:filename) {'photo.webp'}
+      let(:source) {project_asset["source"]}
+
+      before do
+        AichatAssetHelper.stubs(:fetch_asset).with('photo.webp', 'project', channel_id, level_name).returns(
+          "stubbed content"
+        )
+      end
+
+      it 'returns a webp data URI' do
+        subject.must_match(/^data:image\/webp;base64,/)
         Base64.decode64(subject.split(',').last).must_equal "stubbed content"
       end
     end
