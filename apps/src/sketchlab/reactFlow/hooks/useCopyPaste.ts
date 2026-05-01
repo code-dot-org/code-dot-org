@@ -21,17 +21,16 @@ export function useCopyPaste({nodes, edges}: UseCopyPasteOptions) {
   const {setNodes, setEdges, deleteElements, screenToFlowPosition} =
     useReactFlow<SketchlabReactFlowNode, SketchlabReactFlowEdge>();
 
-  // useRef holds the actual clipboard data (changing it doesn't trigger
-  // re-renders). useState tracks the boolean so the Paste button updates.
+  // Keyboard clipboard. useRef holds data (no re-renders); useState tracks
+  // whether anything is available so dependent UI can update.
   const clipboardRef = useRef<ClipboardContents | null>(null);
   const [hasClipboard, setHasClipboard] = useState(false);
 
-  // Last known mouse position in flow coordinates, updated on every mouse
-  // move over the canvas. Null when the mouse is outside the canvas.
+  // Last known mouse position in flow coordinates for paste-at-cursor.
   const mousePositionRef = useRef<{x: number; y: number} | null>(null);
 
-  // Tracks the last duplicate result so consecutive duplicates of the same
-  // node stagger from the previous copy rather than the original.
+  // Tracks the last duplicate result so consecutive toolbar duplicates
+  // stagger from the previous copy rather than the original.
   const lastDuplicateRef = useRef<ClipboardContents | null>(null);
   const lastDuplicateNodeIdRef = useRef<string | null>(null);
 
@@ -63,12 +62,18 @@ export function useCopyPaste({nodes, edges}: UseCopyPasteOptions) {
     [nodes, edges]
   );
 
+  // Toolbar action: duplicate a node in-place with stagger chaining.
   const duplicateNode = useCallback(
     (nodeId: string) => {
-      const source =
-        lastDuplicateNodeIdRef.current === nodeId && lastDuplicateRef.current
-          ? lastDuplicateRef.current
-          : buildNodeClipboard(nodeId);
+      let source: ClipboardContents | null;
+      if (
+        lastDuplicateNodeIdRef.current === nodeId &&
+        lastDuplicateRef.current
+      ) {
+        source = lastDuplicateRef.current;
+      } else {
+        source = buildNodeClipboard(nodeId);
+      }
       if (!source) return;
 
       const idMap = new Map<string, string>();
@@ -86,25 +91,16 @@ export function useCopyPaste({nodes, edges}: UseCopyPasteOptions) {
           },
         } as unknown as SketchlabReactFlowNode;
       });
-      const newEdges = source.edges.map(edge => ({
-        ...edge,
-        id: createUuid(),
-        source: idMap.get(edge.source) ?? edge.source,
-        target: idMap.get(edge.target) ?? edge.target,
-      }));
 
-      lastDuplicateRef.current = {nodes: newNodes, edges: newEdges};
+      lastDuplicateRef.current = {nodes: newNodes, edges: []};
       lastDuplicateNodeIdRef.current = nodeId;
 
       setNodes(currentNodes => [...currentNodes, ...newNodes]);
-      if (newEdges.length > 0) {
-        setEdges(currentEdges => [...currentEdges, ...newEdges]);
-      }
     },
-    [buildNodeClipboard, setNodes, setEdges]
+    [buildNodeClipboard, setNodes]
   );
 
-  // Used by the keyboard handler in useKeyboardNavigation.
+  // Keyboard copy/cut/paste.
   const copyEntry = useCallback(
     (entry: TabOrderEntry) => {
       if (entry.type === 'node') {
@@ -155,9 +151,8 @@ export function useCopyPaste({nodes, edges}: UseCopyPasteOptions) {
     if (!contents) return;
 
     // When the mouse is over the canvas, paste with the first node at the
-    // cursor and maintain all other nodes' positions relative to it.
-    // When the mouse is outside the canvas (keyboard-only path), fall back
-    // to a fixed offset so pasted elements don't stack on originals.
+    // cursor. When the mouse is outside (keyboard-only path), fall back to
+    // a fixed offset so pasted elements don't stack on originals.
     const mousePos = mousePositionRef.current;
     const anchorNode = contents.nodes[0];
     const deltaX =
