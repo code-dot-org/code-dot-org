@@ -1,3 +1,9 @@
+$border: #69788a;
+$card-bg: #424d59;
+$nav-bg: #292f36;
+
+// ── Outer shell ───────────────────────────────────────────────────────────────
+
 .container {
   display: flex;
   flex-direction: column;
@@ -7,149 +13,200 @@
 .content {
   flex: 1;
   overflow-y: auto;
-  display: flex;
-  flex-direction: column;
+  min-height: 0;
 }
+
+// ── Menu (unselected state) ───────────────────────────────────────────────────
 
 .prompt {
-  flex: 1;
   display: flex;
   flex-direction: column;
+  gap: 0;
 }
 
-// ── Big selection grid ────────────────────────────────────────────────────────
-
-.grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 16px;
-  margin: auto;
-  width: 100%;
-  max-width: 400px;
-  padding: 24px 0;
+.overline {
+  font-size: 0.875rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: #d4dae1;
+  margin: 0 0 12px;
 }
 
-.card {
+.heading {
+  font-family: var(--font-family-barlow-semi-condensed-semibold);
+  font-size: clamp(2rem, 8vw, 3.75rem);
+  font-weight: 800;
+  line-height: 1;
+  color: #fff;
+  margin: 0 0 12px;
+}
+
+.subtitle {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #d4dae1;
+  line-height: 1.4;
+  margin: 0 0 24px;
+  max-width: 700px;
+}
+
+.menuList {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
   gap: 12px;
-  aspect-ratio: 1;
-  border: none;
-  border-radius: 16px;
+  max-width: 440px;
+}
+
+.menuCard {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+  padding: 20px;
+  background: $card-bg;
+  border: 1px solid $border;
+  border-radius: 4px;
   cursor: pointer;
-  color: white;
-  font-size: 2rem;
-  transition: filter 0.15s ease, transform 0.15s ease;
+  color: #f0f2f5;
+  text-align: left;
+  font-size: 1rem;
+  transition: filter 0.12s ease;
 
   &:hover {
-    filter: brightness(1.15);
-    transform: scale(1.03);
+    filter: brightness(1.12);
   }
 
   &:focus-visible {
-    outline: 3px solid #6b9fd4;
-    outline-offset: 3px;
-  }
-
-  @media (max-width: 480px) {
-    border-radius: 12px;
-    gap: 8px;
-    font-size: 1.5rem;
+    outline: 2px solid #a374d6;
+    outline-offset: 2px;
   }
 }
 
-.cardLabel {
-  font-size: 0.9rem;
-  font-weight: 600;
+.menuCardIcon {
+  flex-shrink: 0;
+  font-size: 1.5rem;
+  width: 25px;
   text-align: center;
-
-  @media (max-width: 480px) {
-    font-size: 0.8rem;
-  }
 }
 
-// ── Bottom mini-nav ───────────────────────────────────────────────────────────
+// ── Bottom nav ────────────────────────────────────────────────────────────────
 
 .bottomNav {
-  display: flex;
-  flex-direction: row;
-  align-items: stretch;
-  border-top: 1px solid #242424;
   flex-shrink: 0;
+  display: flex;
+  align-items: stretch;
+  background: $nav-bg;
+  border-top: 1px solid $border;
 }
 
-.navItem {
-  flex: 1;
+// Menu / grid icon (left slot)
+.navMenuButton {
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 4px;
-  padding: 10px 4px;
+  width: 72px;
+  padding: 8px 4px;
   border: none;
-  border-radius: 0;
+  border-bottom: 2px solid transparent;
   background: transparent;
-  color: #9898b8;
-  font-size: 1.1rem;
+  color: #f0f2f5;
+  font-size: 1.25rem;
   cursor: pointer;
-  transition: background-color 0.15s ease, color 0.15s ease;
+  flex-shrink: 0;
+  transition: color 0.12s ease;
 
   &:hover {
-    background-color: #1e1e1e;
-    color: #e8e8f2;
+    color: #fff;
   }
 
   &:focus-visible {
-    outline: 2px solid #6b9fd4;
+    outline: 2px solid #a374d6;
     outline-offset: -2px;
   }
 }
 
+.navMenuButtonActive {
+  border-bottom-color: #fff;
+}
+
+.navDivider {
+  width: 1px;
+  background: $border;
+  margin: 4px 0;
+  flex-shrink: 0;
+}
+
+// Mode icon tabs
+.navItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+  min-width: 0;
+  padding: 8px 4px;
+  border: none;
+  border-bottom: 2px solid transparent;
+  background: transparent;
+  color: #f0f2f5;
+  font-size: 1.25rem;
+  cursor: pointer;
+  transition: color 0.12s ease;
+
+  &:hover {
+    color: #fff;
+  }
+
+  &:focus-visible {
+    outline: 2px solid #a374d6;
+    outline-offset: -2px;
+  }
+}
+
+.navItemActive {
+  border-bottom-color: #fff;
+  color: #fff;
+}
+
 .navLabel {
-  font-size: 0.65rem;
-  font-weight: 600;
+  font-size: 0.75rem;
+  line-height: 1.3;
   text-align: center;
-  line-height: 1.2;
+  margin-top: 2px;
+  white-space: nowrap;
 }
 
-// ── Card colors (big grid) ────────────────────────────────────────────────────
-
-.cardTeal {
-  background-color: #29ab87;
+// Done button (right slot)
+.doneWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 20px;
+  flex-shrink: 0;
 }
 
-.cardPurple {
-  background-color: #7b5ea7;
-}
+.doneButton {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 5px 12px;
+  border: 1px solid #a1aebb;
+  border-radius: 4px;
+  background: transparent;
+  color: #fff;
+  font-size: 0.875rem;
+  font-weight: 600;
+  white-space: nowrap;
+  cursor: pointer;
+  transition: background-color 0.12s ease;
 
-.cardOrange {
-  background-color: #e5700f;
-}
+  &:hover {
+    background: rgba(255 255 255 / 0.08);
+  }
 
-.cardBlue {
-  background-color: #1565c0;
-}
-
-// ── Active nav item colors (dark-theme tints, all pass WCAG AA) ───────────────
-
-.activeCardTeal {
-  background-color: #0a1a10;
-  color: #6dd4b4; // 5.4:1 on bg
-}
-
-.activeCardPurple {
-  background-color: #120c20;
-  color: #c09ee0; // 8:1 on bg
-}
-
-.activeCardOrange {
-  background-color: #180d00;
-  color: #f09850; // 6.3:1 on bg
-}
-
-.activeCardBlue {
-  background-color: #0a1628;
-  color: #7ab3e8; // 5.2:1 on bg
+  &:focus-visible {
+    outline: 2px solid #a374d6;
+    outline-offset: 2px;
+  }
 }

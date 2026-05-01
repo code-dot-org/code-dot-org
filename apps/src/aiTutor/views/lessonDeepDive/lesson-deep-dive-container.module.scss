@@ -1,5 +1,6 @@
 // 50px = .header-wrapper height (application.scss .header-wrapper)
 $header-height: 50px;
+$purple: hsl(271deg 58% 65%);
 
 .container {
   display: flex;
@@ -7,8 +8,55 @@ $header-height: 50px;
   height: calc(100vh - #{$header-height});
   width: 100%;
   overflow: hidden;
-  background-color: #121212;
-  color: #e8e8f2;
+  background-color: #292f36;
+  color: #fff;
+}
+
+.topNav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 20px;
+  flex-shrink: 0;
+}
+
+.tutorWordmark {
+  font-family: var(--font-family-barlow-semi-condensed-semibold);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: $purple;
+  user-select: none;
+}
+
+.arrowButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border: none;
+  border-radius: 50%;
+  background: transparent;
+  color: rgba(255 255 255 / 0.5);
+  cursor: pointer;
+  transition: background-color 0.15s ease, color 0.15s ease;
+
+  @media (max-width: 480px) {
+    width: 44px;
+    height: 44px;
+  }
+
+  &:hover {
+    background-color: rgba(255 255 255 / 0.08);
+    color: #fff;
+  }
+
+  &:focus-visible {
+    outline: 2px solid $purple;
+    outline-offset: 2px;
+  }
 }
 
 .box {
@@ -16,29 +64,71 @@ $header-height: 50px;
   display: flex;
   flex-direction: column;
   overflow-y: auto;
-  padding: 40px;
+  padding: 24px 40px 40px;
+  position: relative;
 
   @media (max-width: 480px) {
-    padding: 20px 16px;
+    padding: 16px 20px 24px;
   }
 }
 
-.topNav {
+.dotsNav {
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
   display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 8px 16px;
-  border-bottom: 1px solid #242424;
+  flex-direction: column;
+  gap: 8px;
+  z-index: 1;
+}
+
+.dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: rgba(255 255 255 / 0.25);
+  transition: background-color 0.2s ease, transform 0.2s ease;
   flex-shrink: 0;
+}
+
+.dotActive {
+  background-color: $purple;
+  transform: scale(1.25);
 }
 
 .bottomNav {
   display: flex;
   align-items: center;
-  justify-content: center;
-  padding: 8px 16px;
-  border-top: 1px solid #242424;
+  justify-content: flex-start;
+  padding: 12px 20px;
   flex-shrink: 0;
+}
+
+.scrollCue {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 10px;
+  border: none;
+  border-radius: 6px;
+  background: transparent;
+  font-size: 0.75rem;
+  color: rgba(255 255 255 / 0.4);
+  letter-spacing: 0.06em;
+  cursor: pointer;
+  user-select: none;
+  transition: color 0.15s ease, background-color 0.15s ease;
+
+  &:hover {
+    color: rgba(255 255 255 / 0.75);
+    background-color: rgba(255 255 255 / 0.06);
+  }
+
+  &:focus-visible {
+    outline: 2px solid $purple;
+    outline-offset: 2px;
+  }
 }
 
 @keyframes fizz-rise {
@@ -56,33 +146,11 @@ $header-height: 50px;
   }
 }
 
-.arrowButton {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 36px;
-  height: 36px;
-  border: none;
-  border-radius: 50%;
-  background: transparent;
-  color: #c8c8e0;
-  cursor: pointer;
-  transition: background-color 0.15s ease;
-
-  @media (max-width: 480px) {
-    width: 44px;
-    height: 44px;
-  }
-
-  &:hover {
-    background-color: #1e1e1e;
-    color: #e8e8f2;
-  }
-
-  &:focus-visible {
-    outline: 2px solid #6b9fd4;
-    outline-offset: 2px;
-  }
+.pageIndicator {
+  font-size: 14px;
+  color: rgba(255 255 255 / 0.35);
+  min-width: 48px;
+  text-align: center;
 }
 
 .fizzyButton {
@@ -95,11 +163,4 @@ $header-height: 50px;
   pointer-events: none;
   z-index: 9999;
   animation: fizz-rise ease-out forwards;
-}
-
-.pageIndicator {
-  font-size: 14px;
-  color: #9898b8;
-  min-width: 48px;
-  text-align: center;
 }

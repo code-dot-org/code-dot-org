@@ -1,152 +1,136 @@
-// Each word slot: height + margin-bottom. The clip window height matches
-// word height exactly so the gap is hidden between transitions.
-$word-h: 5rem;
-$word-gap: 2rem;
-$slot: 7rem; // $word-h + $word-gap
+// Pill height: 60px font × 1.2 line-height + 8px top + 16px bottom padding ≈ 96px.
+// Must match .word height exactly so the clip window hides the seam.
+$word-h: 6rem;
+$slot: $word-h; // no gap between word items in the track
 
-// 7 words, 14s loop. Each word visible for 11% (~1.5s), slide takes 3% (~0.4s)
-// with a smooth cubic-bezier. The timing-function is set on the keyframe that
-// *starts* each slide so it applies only to that outgoing transition.
-// Last word gets a slightly longer hold (15.99%) before the instant snap back.
+// 5 words, 14s loop. Each word visible for 17% (~2.4s), slide takes 3% (~0.4s)
+// with a smooth cubic-bezier. Last word gets 19.99% before instant snap back.
 @keyframes word-flip {
   0% {
     margin-top: 0;
   }
-  11% {
+  17% {
     margin-top: 0;
     animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   }
-  14% {
+  20% {
     margin-top: -#{$slot};
   }
-  25% {
+  37% {
     margin-top: -#{$slot};
     animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   }
-  28% {
+  40% {
     margin-top: calc(#{$slot} * -2);
   }
-  39% {
+  57% {
     margin-top: calc(#{$slot} * -2);
     animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   }
-  42% {
+  60% {
     margin-top: calc(#{$slot} * -3);
   }
-  53% {
+  77% {
     margin-top: calc(#{$slot} * -3);
     animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   }
-  56% {
+  80% {
     margin-top: calc(#{$slot} * -4);
-  }
-  67% {
-    margin-top: calc(#{$slot} * -4);
-    animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  }
-  70% {
-    margin-top: calc(#{$slot} * -5);
-  }
-  81% {
-    margin-top: calc(#{$slot} * -5);
-    animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  }
-  84% {
-    margin-top: calc(#{$slot} * -6);
   }
   99.99% {
-    margin-top: calc(#{$slot} * -6);
+    margin-top: calc(#{$slot} * -4);
   }
   100% {
-    margin-top: 0; // instant snap back to start
+    margin-top: 0;
   }
 }
 
 .container {
   display: flex;
-  align-items: center;
+  flex-direction: column;
+  align-items: flex-start;
   justify-content: center;
   height: 100%;
 }
 
-.sentence {
-  font-size: 2rem;
-  font-weight: 700;
-  color: #fff;
+.headline {
   display: flex;
-  align-items: center;
-  flex-wrap: wrap;
-  justify-content: center;
-  text-align: center;
-  gap: 0.35em;
-  line-height: 1.4;
-  margin: 0 auto;
-  padding: 0;
-  max-width: 375px;
+  flex-direction: column;
+  gap: 24px;
+  font-family: var(--font-family-barlow-semi-condensed-semibold);
+  font-size: 3.75rem;
+  font-weight: 800;
+  color: #fff;
+  white-space: nowrap;
 }
 
-// Clip window — shows exactly one word at a time.
+// Clip window — shows exactly one word pill at a time.
 .wordWindow {
-  display: inline-block;
+  display: block;
   height: $word-h;
   overflow: hidden;
-  vertical-align: middle;
+  margin-top: 10px;
 }
 
-// Animated track — all words stacked, slides up via margin-top.
+// Animated track — all pills stacked, slides up via margin-top.
 .wordTrack {
   display: block;
   animation: word-flip 14s linear infinite;
 }
 
 .word {
-  display: block;
-  box-sizing: border-box;
-  height: $word-h;
-  margin-bottom: $word-gap;
-  padding: 0.05em 0.4em;
-  border-radius: 0.2em;
-  color: #fff;
-  font-weight: 700;
-  line-height: $word-h;
-  white-space: nowrap;
-  text-align: center;
-}
-
-.todayLine {
-  width: 100%; // forces a new row in the flex-wrap sentence
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 0.3em;
+  box-sizing: border-box;
+  height: $word-h;
+  padding: 8px 32px 16px;
+  border-radius: 8px;
+  color: #fff;
+  white-space: nowrap;
 }
 
-// Rainbow colors spaced evenly across the hue wheel (72° apart),
-// matching the random-hue bubbles in the down-nav fizzy effect.
+.todayLine {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
 .wordCoded {
-  background-color: hsl(5deg 85% 58%);
+  background-color: #00818f;
 }
 
 .wordPrompted {
   background-color: hsl(35deg 90% 52%);
 }
 
-.wordDesigned {
-  background-color: hsl(145deg 65% 42%);
-}
-
-.wordDebated {
-  background-color: hsl(215deg 85% 60%);
+.wordDebugged {
+  background-color: hsl(5deg 85% 58%);
 }
 
 .wordCreated {
   background-color: hsl(285deg 72% 62%);
 }
 
-.wordDebugged {
-  background-color: hsl(175deg 72% 40%);
+.wordPersisted {
+  background-color: hsl(145deg 65% 42%);
 }
 
-.wordProblemSolved {
-  background-color: hsl(55deg 88% 45%);
+.letsGoButton {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3em;
+  margin-top: 1.5rem;
+  padding: 0.35em 0.9em;
+  border: none;
+  border-radius: 999px;
+  background-color: hsl(285deg 72% 62%);
+  color: #fff;
+  font-size: 0.85rem;
+  font-weight: 700;
+  cursor: pointer;
+
+  &:hover {
+    background-color: hsl(285deg 72% 55%);
+  }
 }

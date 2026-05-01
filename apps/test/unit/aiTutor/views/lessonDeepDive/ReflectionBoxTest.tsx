@@ -28,6 +28,7 @@ function renderReflectionBox(onSubmitComplete: jest.Mock = jest.fn()) {
       lessonId={LESSON_ID}
       objectives={OBJECTIVES}
       onSubmitComplete={onSubmitComplete}
+      onNext={jest.fn()}
     />
   );
 }

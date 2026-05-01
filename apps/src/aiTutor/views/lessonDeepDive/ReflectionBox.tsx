@@ -1,4 +1,4 @@
-import {Button, Typography} from '@mui/material';
+import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import React, {FC, useCallback, useState} from 'react';
 
 import {
@@ -18,6 +18,7 @@ interface ReflectionBoxProps {
   lessonId: number;
   objectives: LessonDeepDiveData['objectives'];
   onSubmitComplete: (data: ReflectionData) => void;
+  onNext: () => void;
   initialValues?: ReflectionData | null;
 }
 
@@ -25,6 +26,7 @@ const ReflectionBox: FC<ReflectionBoxProps> = ({
   lessonId,
   objectives,
   onSubmitComplete,
+  onNext,
   initialValues,
 }) => {
   const [objectiveReflections, setObjectiveReflections] = useState<
@@ -68,6 +70,7 @@ const ReflectionBox: FC<ReflectionBoxProps> = ({
         success,
         struggle,
       });
+      onNext();
     } finally {
       setIsSubmitting(false);
     }
@@ -78,40 +81,41 @@ const ReflectionBox: FC<ReflectionBoxProps> = ({
     objectives,
     objectiveReflections,
     onSubmitComplete,
+    onNext,
   ]);
 
   return (
-    <div>
-      <Typography variant="h2" className={styles.reflectionHeading}>
-        Reflection
-      </Typography>
-      <Typography variant="body1">
-        How do you feel about each of the learning objectives for this lesson?
-      </Typography>
-      {objectives.map(objective => (
-        <LessonObjectiveReflection
-          key={objective.id}
-          objective={objective}
-          selected={objectiveReflections[objective.id] ?? null}
-          onSelectionChange={handleSelectionChange}
-        />
-      ))}
+    <div className={styles.container}>
+      <p className={styles.sectionLabel}>How did it go?</p>
+      <h2 className={styles.reflectionHeading}>How did it go?</h2>
+      <p className={styles.reflectionSubheading}>
+        Rate each objective honestly. This shapes what we focus on first.
+      </p>
+      <div className={styles.objectivesList}>
+        {objectives.map(objective => (
+          <LessonObjectiveReflection
+            key={objective.id}
+            objective={objective}
+            selected={objectiveReflections[objective.id] ?? null}
+            onSelectionChange={handleSelectionChange}
+          />
+        ))}
+      </div>
       <LessonReflection
         success={success}
         struggle={struggle}
         onSuccessChange={setSuccess}
         onStruggleChange={setStruggle}
       />
-      <Button
-        variant="contained"
+      <button
         type="button"
-        fullWidth
+        className={styles.submitButton}
         disabled={isSubmitting}
         onClick={handleSubmit}
-        className={styles.submitButton}
       >
-        Submit Reflection
-      </Button>
+        Start practicing
+        <FontAwesomeV6Icon iconName="arrow-right" />
+      </button>
     </div>
   );
 };

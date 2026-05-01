@@ -1,3 +1,5 @@
+$purple: hsl(271deg 58% 65%);
+
 @property --validated-count {
   syntax: '<integer>';
   inherits: false;
@@ -13,109 +15,68 @@
   }
 }
 
-@keyframes bubble-pop {
-  0% {
-    transform: scale(0);
-    opacity: 0;
-  }
-  60% {
-    transform: scale(1.25);
-    opacity: 1;
-  }
-  100% {
-    transform: scale(1);
-    opacity: 1;
-  }
-}
-
 .container {
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  text-align: center;
-  color: #fff;
   height: 100%;
-}
-
-.lessonName {
-  font-size: 2rem;
-  font-weight: 700;
   color: #fff;
-  line-height: 1.4;
-  text-align: center;
-  margin: 0 auto;
-  padding: 0;
-  max-width: 375px;
 }
 
-.countSection {
+.label {
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: rgba(255 255 255 / 0.5);
+  margin-bottom: 16px;
+}
+
+.statBlock {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  padding: 28px 0 8px;
-  text-align: center;
+  gap: 4px;
 }
 
-.levelNumber {
-  font-size: 5rem;
-  font-weight: 700;
-  color: #fff;
-  line-height: 1;
+// "X /Y" row — X in purple, /Y dimmed
+.fractionRow {
+  display: flex;
+  align-items: baseline;
+  line-height: 0.9;
+}
+
+.bigNumber {
+  font-family: var(--font-family-barlow-semi-condensed-semibold);
+  font-size: clamp(7rem, 20vw, 14rem);
+  font-weight: 800;
+  color: $purple;
   counter-reset: validated-count var(--validated-count);
-  animation: count-up 1.5s ease-out forwards;
+  animation: count-up 1.2s cubic-bezier(0.16, 1, 0.3, 1) forwards;
 
   &::after {
     content: counter(validated-count);
   }
 }
 
-.levelLabel {
-  margin-top: 8px;
-  font-size: 0.75rem;
+.denominator {
+  font-family: var(--font-family-barlow-semi-condensed-semibold);
+  font-size: clamp(3.5rem, 10vw, 7rem);
+  font-weight: 800;
+  color: rgba(255 255 255 / 0.3);
+  margin-left: 4px;
+}
+
+.statHeading {
+  font-family: var(--font-family-barlow-semi-condensed-semibold);
+  font-size: clamp(2rem, 6vw, 3.5rem);
+  font-weight: 800;
   color: #fff;
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
+  line-height: 1;
+  margin: 0;
 }
 
-.bubblesRow {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 6px;
-  justify-content: center;
-  margin-top: 20px;
-  max-width: 420px;
-}
-
-.bubble {
-  width: 34px;
-  height: 34px;
-  border-radius: 50%;
-  border: 2px solid;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.statSubtitle {
   font-size: 1rem;
-  font-weight: 700;
-  opacity: 0;
-  flex-shrink: 0;
-  animation: bubble-pop 0.25s ease-out forwards;
-}
-
-.bubbleCorrect {
-  color: hsl(145deg 65% 52%);
-  border-color: hsl(145deg 65% 42%);
-  background-color: hsl(145deg 65% 42% / 0.12);
-}
-
-.bubbleIncorrect {
-  color: hsl(35deg 90% 62%);
-  border-color: hsl(35deg 90% 52%);
-  background-color: hsl(35deg 90% 52% / 0.12);
-}
-
-.bubbleUnattempted {
-  color: hsl(215deg 20% 60%);
-  border-color: hsl(215deg 20% 50%);
-  background-color: hsl(215deg 20% 50% / 0.12);
+  color: rgba(255 255 255 / 0.55);
+  margin-top: 8px;
 }

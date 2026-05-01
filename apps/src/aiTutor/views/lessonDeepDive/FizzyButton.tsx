@@ -6,9 +6,10 @@ interface FizzyButtonProps {
   onClick: () => void;
   ariaLabel: string;
   children: React.ReactNode;
+  className?: string;
 }
 
-const FizzyButton: FC<FizzyButtonProps> = ({onClick, ariaLabel, children}) => {
+const FizzyButton: FC<FizzyButtonProps> = ({onClick, ariaLabel, children, className}) => {
   const buttonRef = useRef<HTMLButtonElement>(null);
   const intervalRef = useRef<ReturnType<typeof setInterval> | null>(null);
 
@@ -56,7 +57,7 @@ const FizzyButton: FC<FizzyButtonProps> = ({onClick, ariaLabel, children}) => {
     <button
       ref={buttonRef}
       type="button"
-      className={`${styles.arrowButton} ${styles.fizzyButton}`}
+      className={`${styles.fizzyButton} ${className ?? styles.arrowButton}`}
       onClick={onClick}
       aria-label={ariaLabel}
       onMouseEnter={handleMouseEnter}

@@ -7,28 +7,29 @@ const darkTheme = createTheme({
   palette: {
     mode: 'dark',
     background: {
-      default: '#121212',
-      paper: '#1c1c1c',
+      default: '#292f36',
+      paper: '#343b44',
     },
     text: {
-      primary: '#e8e8f2',
-      secondary: '#9898b8',
+      primary: '#ffffff',
+      secondary: 'rgba(255,255,255,0.6)',
     },
     primary: {
-      main: '#6b9fd4',
+      main: '#a374d6',
     },
-    divider: '#242424',
+    divider: '#3a4048',
   },
 });
 
 import FizzyButton from './FizzyButton';
 import InterventionBox from './InterventionBox';
+import PrePracticeBox from './PrePracticeBox';
 import LevelsAttemptedBox from './LevelsAttemptedBox';
 import PracticeBox from './PracticeBox';
 import ReflectionBox from './ReflectionBox';
 import TimeSpentBox from './TimeSpentBox';
 import TutorSummaryBox from './TutorSummaryBox';
-import {LessonDeepDiveData, ReflectionData} from './types';
+import {LessonDeepDiveData, ReflectionData, ReflectionValue} from './types';
 import ValidatedLevelsBox from './ValidatedLevelsBox';
 import WelcomeBox from './WelcomeBox';
 
@@ -40,6 +41,7 @@ const BOX_IDS = [
   'time-spent',
   'validated-levels',
   'reflection',
+  'pre-practice',
   'intervention',
   'practice',
   'tutor-summary',
@@ -69,6 +71,23 @@ const LessonDeepDiveContainer: FC<LessonDeepDiveContainerProps> = ({
     setReflectionData(data);
   }, []);
 
+  // Returns the description of the first objective the student is struggling
+  // with or still working on, used as the focus topic in PrePracticeBox.
+  const getFocusTopic = useCallback(
+    (data: ReflectionData | null): string | undefined => {
+      if (!data) return undefined;
+      const priority: ReflectionValue[] = ['lost', 'unsure'] as ReflectionValue[];
+      for (const level of priority) {
+        const match = lessonDeepDiveData.objectives.find(
+          o => data.objectiveReflections[o.id] === level
+        );
+        if (match) return match.description;
+      }
+      return undefined;
+    },
+    [lessonDeepDiveData.objectives]
+  );
+
   if (!experiments.isEnabledAllowingQueryString(experiments.LESSON_TUTOR)) {
     return null;
   }
@@ -79,7 +98,7 @@ const LessonDeepDiveContainer: FC<LessonDeepDiveContainerProps> = ({
   const renderBox = () => {
     switch (BOX_IDS[currentIndex]) {
       case 'welcome':
-        return <WelcomeBox />;
+        return <WelcomeBox onNext={goToNext} />;
       case 'levels-attempted':
         return (
           <LevelsAttemptedBox
@@ -118,7 +137,15 @@ const LessonDeepDiveContainer: FC<LessonDeepDiveContainerProps> = ({
             lessonId={lessonDeepDiveData.lessonId}
             objectives={lessonDeepDiveData.objectives}
             onSubmitComplete={handleReflectionComplete}
+            onNext={goToNext}
             initialValues={reflectionData}
+          />
+        );
+      case 'pre-practice':
+        return (
+          <PrePracticeBox
+            focusTopic={getFocusTopic(reflectionData)}
+            onNext={goToNext}
           />
         );
       case 'intervention':
@@ -132,6 +159,7 @@ const LessonDeepDiveContainer: FC<LessonDeepDiveContainerProps> = ({
             objectives={lessonDeepDiveData.objectives}
             jsonVideos={lessonDeepDiveData.jsonVideos}
             reflectionData={reflectionData}
+            onNext={goToNext}
           />
         );
       case 'practice':
@@ -149,11 +177,13 @@ const LessonDeepDiveContainer: FC<LessonDeepDiveContainerProps> = ({
         return <TutorSummaryBox />;
     }
   };
+
   return (
     <ThemeProvider theme={darkTheme}>
       <div className={styles.container} data-theme={'Dark'}>
-        {!isFirst && (
-          <div className={styles.topNav}>
+        <div className={styles.topNav}>
+          <span className={styles.tutorWordmark}>Tutor+</span>
+          {!isFirst && (
             <button
               type="button"
               className={styles.arrowButton}
@@ -161,8 +191,8 @@ const LessonDeepDiveContainer: FC<LessonDeepDiveContainerProps> = ({
               aria-label="Previous"
             >
               <svg
-                width="24"
-                height="24"
+                width="20"
+                height="20"
                 viewBox="0 0 24 24"
                 fill="none"
                 aria-hidden="true"
@@ -176,17 +206,34 @@ const LessonDeepDiveContainer: FC<LessonDeepDiveContainerProps> = ({
                 />
               </svg>
             </button>
+          )}
+        </div>
+
+        <div className={styles.box}>
+          {renderBox()}
+          <div className={styles.dotsNav} aria-hidden="true">
+            {BOX_IDS.map((_, i) => (
+              <div
+                key={i}
+                className={`${styles.dot} ${
+                  i === currentIndex ? styles.dotActive : ''
+                }`}
+              />
+            ))}
           </div>
-        )}
+        </div>
 
-        <div className={styles.box}>{renderBox()}</div>
-
-        {!isLast && (
+        {!isLast && BOX_IDS[currentIndex] !== 'intervention' && (
           <div className={styles.bottomNav}>
-            <FizzyButton onClick={goToNext} ariaLabel="Next">
+            <FizzyButton
+              onClick={goToNext}
+              ariaLabel="Next"
+              className={styles.scrollCue}
+            >
+              Scroll to continue
               <svg
-                width="24"
-                height="24"
+                width="14"
+                height="14"
                 viewBox="0 0 24 24"
                 fill="none"
                 aria-hidden="true"

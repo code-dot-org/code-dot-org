@@ -1,5 +1,6 @@
-import {TextField, Typography} from '@mui/material';
 import React, {FC} from 'react';
+
+import styles from './reflection.module.scss';
 
 interface LessonReflectionProps {
   success: string;
@@ -14,29 +15,34 @@ const LessonReflection: FC<LessonReflectionProps> = ({
   onSuccessChange,
   onStruggleChange,
 }) => (
-  <div>
-    <Typography variant="body1" component="label" htmlFor="reflection-success">
-      A moment I felt successful today...
-    </Typography>
-    <TextField
-      id="reflection-success"
-      multiline
-      fullWidth
-      minRows={4}
-      value={success}
-      onChange={e => onSuccessChange(e.target.value)}
-    />
-    <Typography variant="body1" component="label" htmlFor="reflection-struggle">
-      Something I&apos;m still confused about or working on...
-    </Typography>
-    <TextField
-      id="reflection-struggle"
-      multiline
-      fullWidth
-      minRows={4}
-      value={struggle}
-      onChange={e => onStruggleChange(e.target.value)}
-    />
+  <div className={styles.anythingElse}>
+    <p className={styles.anythingElseLabel}>Anything else?</p>
+    <div className={styles.textAreaGroup}>
+      <div>
+        <p className={styles.textAreaLabel}>
+          A moment I felt successful today...
+        </p>
+        <textarea
+          id="reflection-success"
+          className={styles.textArea}
+          placeholder="Optional"
+          value={success}
+          onChange={e => onSuccessChange(e.target.value)}
+        />
+      </div>
+      <div>
+        <p className={styles.textAreaLabel}>
+          Something I&apos;m still confused about or working on...
+        </p>
+        <textarea
+          id="reflection-struggle"
+          className={styles.textArea}
+          placeholder="Optional"
+          value={struggle}
+          onChange={e => onStruggleChange(e.target.value)}
+        />
+      </div>
+    </div>
   </div>
 );
 
