@@ -48,7 +48,16 @@ class AddMultipleStudents extends Component {
   };
 
   onImportCSV = () => {
-    this.fileInput.click();
+    if (this.fileInput) {
+      this.fileInput.click();
+    }
+  };
+
+  removeSelectedFile = () => {
+    if (this.fileInput) {
+      this.fileInput.value = '';
+    }
+    this.setState({fileName: null, selectedFile: null});
   };
 
   onFileUpload = e => {
@@ -172,13 +181,17 @@ class AddMultipleStudents extends Component {
                 <div style={styles.verticalDivider} />
               </div>
               <div style={styles.dropSection}>
-                <label>{i18n.addStudentsImportLabel()}</label>
+                <label htmlFor="students-csv-file-input">
+                  {i18n.addStudentsImportLabel()}
+                </label>
                 <input
+                  id="students-csv-file-input"
                   type="file"
                   accept=".csv"
                   ref={input => (this.fileInput = input)}
                   style={styles.hiddenFileInput}
                   onChange={this.onFileUpload}
+                  aria-label={i18n.addStudentsImportLabel()}
                 />
                 <div
                   style={{
@@ -189,27 +202,41 @@ class AddMultipleStudents extends Component {
                   onDragOver={this.onDragOver}
                   onDragLeave={this.onDragLeave}
                   onDrop={this.onDrop}
-                  onClick={this.onImportCSV}
                 >
                   {this.state.fileName ? (
                     <div style={styles.fileSelected}>
-                      <div style={styles.fileName}>{this.state.fileName}</div>
+                      <button
+                        type="button"
+                        style={styles.fileNameButton}
+                        onClick={this.onImportCSV}
+                        aria-label={
+                          `${this.state.fileName}. ` +
+                          i18n.importFromCSVDragBrowse()
+                        }
+                      >
+                        <span style={styles.fileName}>
+                          {this.state.fileName}
+                        </span>
+                      </button>
                       <button
                         type="button"
                         style={styles.removeFile}
-                        onClick={e => {
-                          e.stopPropagation();
-                          this.fileInput.value = '';
-                          this.setState({fileName: null, selectedFile: null});
-                        }}
+                        aria-label={`${i18n.dialogRemove()} ${
+                          this.state.fileName
+                        }`}
+                        onClick={this.removeSelectedFile}
                       >
-                        ✕
+                        <span aria-hidden="true">&times;</span>
                       </button>
                     </div>
                   ) : (
-                    <div style={styles.dropPrompt}>
+                    <button
+                      type="button"
+                      style={styles.dropZoneButton}
+                      onClick={this.onImportCSV}
+                    >
                       {i18n.importFromCSVDragBrowse()}
-                    </div>
+                    </button>
                   )}
                 </div>
               </div>
@@ -310,7 +337,6 @@ const styles = {
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'center',
-    cursor: 'pointer',
     padding: 10,
     marginTop: 4,
   },
@@ -322,21 +348,48 @@ const styles = {
     borderColor: '#7765a0',
     background: '#f0eef5',
   },
-  dropPrompt: {
+  dropZoneButton: {
+    alignItems: 'center',
+    alignSelf: 'stretch',
+    background: 'none',
+    border: 'none',
     color: '#666',
-    textAlign: 'center',
+    cursor: 'pointer',
+    display: 'flex',
+    flex: 1,
     fontSize: 14,
+    justifyContent: 'center',
+    margin: 0,
+    padding: 0,
+    textAlign: 'center',
+    width: '100%',
+  },
+  fileNameButton: {
+    alignItems: 'center',
+    alignSelf: 'stretch',
+    background: 'none',
+    border: 'none',
+    cursor: 'pointer',
+    display: 'flex',
+    flex: 1,
+    justifyContent: 'center',
+    margin: 0,
+    minWidth: 0,
+    padding: 0,
   },
   fileName: {
     color: '#333',
+    display: 'block',
     textAlign: 'center',
     fontSize: 14,
     wordBreak: 'break-all',
   },
   fileSelected: {
     display: 'flex',
+    alignSelf: 'stretch',
     alignItems: 'center',
     gap: 8,
+    width: '100%',
   },
   removeFile: {
     background: 'none',
@@ -344,6 +397,7 @@ const styles = {
     cursor: 'pointer',
     color: '#666',
     fontSize: 14,
+    lineHeight: 1,
     padding: 0,
   },
 };
