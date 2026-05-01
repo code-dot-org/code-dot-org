@@ -344,7 +344,11 @@ export function useKeyboardNavigation({
 
         if (deltaX || deltaY) {
           const focusedEdge = getEdge(focusedEdgeId);
-          if (focusedEdge && isLineEdge(focusedEdge, nodes)) {
+          if (
+            focusedEdge &&
+            isLineEdge(focusedEdge, nodes) &&
+            focusedEdge.data?.locked !== true
+          ) {
             event.preventDefault();
             event.stopPropagation();
             setNodes(currentNodes =>

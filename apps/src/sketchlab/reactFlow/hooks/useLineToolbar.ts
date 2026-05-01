@@ -73,10 +73,36 @@ export function useLineToolbar({
           if (edge.id !== edgeId) {
             return edge;
           }
+          if (edge.data?.locked === true) {
+            return edge;
+          }
           const currentStyle = {...edge.style};
           return {
             ...edge,
             style: updateStyle(currentStyle),
+          };
+        })
+      );
+    },
+    [setEdges]
+  );
+
+  const updateLineEdgeData = useCallback(
+    (
+      edgeId: string,
+      updateData: (
+        currentData: NonNullable<SketchlabReactFlowEdge['data']>
+      ) => NonNullable<SketchlabReactFlowEdge['data']>
+    ) => {
+      setEdges(currentEdges =>
+        currentEdges.map(edge => {
+          if (edge.id !== edgeId) {
+            return edge;
+          }
+          const currentData = {...(edge.data || {})};
+          return {
+            ...edge,
+            data: updateData(currentData),
           };
         })
       );
@@ -89,6 +115,9 @@ export function useLineToolbar({
       setEdges(currentEdges =>
         currentEdges.map(edge => {
           if (edge.id !== edgeId) {
+            return edge;
+          }
+          if (edge.data?.locked === true) {
             return edge;
           }
           const markerStart =
@@ -168,6 +197,9 @@ export function useLineToolbar({
           if (edge.id !== edgeId) {
             return edge;
           }
+          if (edge.data?.locked === true) {
+            return edge;
+          }
 
           const strokeColor =
             typeof edge.style?.stroke === 'string'
@@ -202,6 +234,16 @@ export function useLineToolbar({
     [setEdges]
   );
 
+  const setLineEdgeLocked = useCallback(
+    (edgeId: string, locked: boolean) => {
+      updateLineEdgeData(edgeId, currentData => ({
+        ...currentData,
+        locked,
+      }));
+    },
+    [updateLineEdgeData]
+  );
+
   return {
     handleEdgeClick,
     openLineEdge,
@@ -209,5 +251,6 @@ export function useLineToolbar({
     setLineEdgeWidth,
     setLineEdgeStrokeStyle,
     setLineEdgeArrowHeads,
+    setLineEdgeLocked,
   };
 }
