@@ -157,9 +157,9 @@ const aichatLabSlice = createSlice({
     },
   },
 });
-registerReducers({aichat: aichatLabSlice.reducer});
+registerReducers({aichatLab: aichatLabSlice.reducer});
 
-export const aichatReducer = aichatLabSlice.reducer;
+export const aichatLabReducer = aichatLabSlice.reducer;
 
 export const {
   startSave,

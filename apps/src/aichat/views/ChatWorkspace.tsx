@@ -11,7 +11,6 @@ import React, {
   useImperativeHandle,
 } from 'react';
 
-import {findChangedProperties} from '@cdo/apps/aichat/redux/utils';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 import usePrevious from '@cdo/apps/util/usePrevious';
 import {AiChatClientTypes} from '@cdo/generated-scripts/sharedConstants';
@@ -33,7 +32,7 @@ import {
   uploadFiles,
 } from '../redux';
 import {clearUserAddedSelectionContext} from '../redux/slice';
-import {getNewRemoveId} from '../redux/utils';
+import {findChangedProperties, getNewRemoveId} from '../redux/utils';
 import {
   AiChatClientType,
   AiChatDisabledState,

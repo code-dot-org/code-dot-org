@@ -1,11 +1,10 @@
-// This variable keeps track of the most recent remove event ID so that we can
-// assign a unique remove event ID in increasing sequence to a new event.
-// This ID is specifically used to look up and remove events from the chat workspace
-
 import {getTypedKeys, ValueOf} from '@cdo/apps/types/utils';
 
 import {ModelParameters} from '../types';
 
+// This variable keeps track of the most recent remove event ID so that we can
+// assign a unique remove event ID in increasing sequence to a new event.
+// This ID is specifically used to look up and remove events from the chat workspace
 // (e.g. model updates and notification events).
 let latestRemoveId = 0;
 export const getNewRemoveId = () => {
