@@ -107,7 +107,7 @@ class AnalyticsExportableTest < ActiveSupport::TestCase
     )
 
     excludes = AnalyticsExportable.zero_etl_exclude_filters(connection: conn)
-    assert_equal ['exclude: `my_db`.`schema_migrations`'], excludes
+    assert_equal ['exclude: my_db.schema_migrations'], excludes
   end
 
   test 'zero_etl_exclude_filters excludes tables with blob columns' do
@@ -117,7 +117,7 @@ class AnalyticsExportableTest < ActiveSupport::TestCase
     )
 
     excludes = AnalyticsExportable.zero_etl_exclude_filters(connection: conn)
-    assert_equal ['exclude: `my_db`.`attachments`'], excludes
+    assert_equal ['exclude: my_db.attachments'], excludes
   end
 
   test 'zero_etl_exclude_filters returns empty array when all tables are exportable' do
@@ -135,7 +135,7 @@ class AnalyticsExportableTest < ActiveSupport::TestCase
     )
 
     excludes = AnalyticsExportable.zero_etl_exclude_filters(connection: conn)
-    assert_equal ['exclude: `dashboard_production`.`ar_internal_metadata`'], excludes
+    assert_equal ['exclude: dashboard_production.ar_internal_metadata'], excludes
   end
 
   test 'zero_etl_data_filter starts with blanket include then excludes' do
@@ -146,7 +146,7 @@ class AnalyticsExportableTest < ActiveSupport::TestCase
 
     filter = AnalyticsExportable.zero_etl_data_filter(connection: conn)
     assert_equal(
-      'include: `dashboard_production`.*, exclude: `dashboard_production`.`schema_migrations`',
+      'include: dashboard_production.*, exclude: dashboard_production.schema_migrations',
       filter
     )
   end
@@ -156,13 +156,13 @@ class AnalyticsExportableTest < ActiveSupport::TestCase
       'users' => {primary_key: 'id', columns: [mock_column('id', :integer)]}
     )
 
-    assert_equal 'include: `my_db`.*', AnalyticsExportable.zero_etl_data_filter(connection: conn)
+    assert_equal 'include: my_db.*', AnalyticsExportable.zero_etl_data_filter(connection: conn)
   end
 
   test 'parse_data_filter splits comma-separated rules' do
-    filter = 'include: `db`.*, exclude: `db`.`t1`, exclude: `db`.`t2`'
+    filter = 'include: db.*, exclude: db.t1, exclude: db.t2'
     assert_equal(
-      ['include: `db`.*', 'exclude: `db`.`t1`', 'exclude: `db`.`t2`'],
+      ['include: db.*', 'exclude: db.t1', 'exclude: db.t2'],
       AnalyticsExportable.parse_data_filter(filter)
     )
   end
@@ -177,14 +177,14 @@ class AnalyticsExportableTest < ActiveSupport::TestCase
       'users' => {primary_key: 'id', columns: [mock_column('id', :integer)]},
       'no_pk' => {primary_key: nil, columns: [mock_column('v', :string)]}
     )
-    current = 'include: `pegasus`.*, include: `dashboard_prod`.*, exclude: `dashboard_prod`.`old_table`'
+    current = 'include: pegasus.*, include: dashboard_prod.*, exclude: dashboard_prod.old_table'
 
     result = AnalyticsExportable.reconcile_zero_etl_filters(current, connection: conn)
 
-    assert_equal ['exclude: `dashboard_prod`.`no_pk`'], result[:to_add]
-    assert_equal ['exclude: `dashboard_prod`.`old_table`'], result[:to_remove]
-    assert_includes result[:reconciled_filter], 'include: `pegasus`.*'
-    assert_includes result[:reconciled_filter], 'exclude: `dashboard_prod`.`no_pk`'
+    assert_equal ['exclude: dashboard_prod.no_pk'], result[:to_add]
+    assert_equal ['exclude: dashboard_prod.old_table'], result[:to_remove]
+    assert_includes result[:reconciled_filter], 'include: pegasus.*'
+    assert_includes result[:reconciled_filter], 'exclude: dashboard_prod.no_pk'
     refute_includes result[:reconciled_filter], 'old_table'
   end
 
@@ -192,13 +192,13 @@ class AnalyticsExportableTest < ActiveSupport::TestCase
     conn = mock_connection('dashboard_prod',
       'users' => {primary_key: 'id', columns: [mock_column('id', :integer)]}
     )
-    current = 'include: `pegasus`.*, include: `dashboard_prod`.*'
+    current = 'include: pegasus.*, include: dashboard_prod.*'
 
     result = AnalyticsExportable.reconcile_zero_etl_filters(current, connection: conn)
 
     assert_empty result[:to_add]
     assert_empty result[:to_remove]
-    assert_includes result[:reconciled_filter], 'include: `pegasus`.*'
+    assert_includes result[:reconciled_filter], 'include: pegasus.*'
   end
 
   test 'reconcile reports unchanged excludes' do
@@ -206,13 +206,13 @@ class AnalyticsExportableTest < ActiveSupport::TestCase
       'users' => {primary_key: 'id', columns: [mock_column('id', :integer)]},
       'no_pk' => {primary_key: nil, columns: [mock_column('v', :string)]}
     )
-    current = 'include: `dashboard_prod`.*, exclude: `dashboard_prod`.`no_pk`'
+    current = 'include: dashboard_prod.*, exclude: dashboard_prod.no_pk'
 
     result = AnalyticsExportable.reconcile_zero_etl_filters(current, connection: conn)
 
     assert_empty result[:to_add]
     assert_empty result[:to_remove]
-    assert_equal ['exclude: `dashboard_prod`.`no_pk`'], result[:unchanged]
+    assert_equal ['exclude: dashboard_prod.no_pk'], result[:unchanged]
   end
 
   private def mock_column(name, type)

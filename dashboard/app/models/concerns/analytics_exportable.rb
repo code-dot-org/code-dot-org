@@ -30,10 +30,12 @@ module AnalyticsExportable
     end
   end
 
+  # Due to lazy validation, be sure to load all models (`Rails.application.eager_load!`) before calling this method.
   def self.exported_models
     @exported_models ||= Set.new
   end
 
+  # Needed for unit tests.
   def self.reset_exported_models!
     @exported_models = Set.new
   end
@@ -61,30 +63,34 @@ module AnalyticsExportable
 
   # Returns Maxwell filter exclude expressions for tables that cannot be
   # replicated via Zero ETL (no primary key or blob columns). Iterates over
-  # every table in the database. Intended to be paired with a blanket include:
-  #   include: `dashboard_production`.*
+  # every table in the local database connection.
   #
+  # @param db_name [String] database name to use in filter expressions.
+  #   Defaults to the connection's current database. Override to generate
+  #   filters for a different environment (e.g., dashboard_production)
+  #   while scanning tables from the local development database.
   # @param connection [ActiveRecord::ConnectionAdapters::AbstractAdapter]
-  # @return [Array<String>] e.g., ["exclude: `dashboard_production`.`schema_migrations`"]
-  def self.zero_etl_exclude_filters(connection: ActiveRecord::Base.connection)
-    db_name = connection.current_database
+  # @return [Array<String>] e.g., ["exclude: dashboard_production.schema_migrations"]
+  def self.zero_etl_exclude_filters(db_name: nil, connection: ActiveRecord::Base.connection)
+    db_name ||= connection.current_database
     connection.tables.filter_map do |table_name|
       columns = connection.columns(table_name)
       has_pk = columns.any? {|col| col.name == connection.primary_key(table_name)}
       has_blob = columns.any? {|col| BLOB_DATA_TYPES.include?(col.type)}
-      "exclude: `#{db_name}`.`#{table_name}`" unless has_pk && !has_blob
+      "exclude: #{db_name}.#{table_name}" unless has_pk && !has_blob
     end
   end
 
   # Builds the complete data_filter string for the dashboard database in a
   # Zero ETL integration: a blanket include followed by per-table excludes.
   #
+  # @param db_name [String] see zero_etl_exclude_filters.
   # @param connection [ActiveRecord::ConnectionAdapters::AbstractAdapter]
   # @return [String] Maxwell filter expression
-  def self.zero_etl_data_filter(connection: ActiveRecord::Base.connection)
-    db_name = connection.current_database
-    rules = ["include: `#{db_name}`.*"]
-    rules.concat(zero_etl_exclude_filters(connection: connection))
+  def self.zero_etl_data_filter(db_name: nil, connection: ActiveRecord::Base.connection)
+    db_name ||= connection.current_database
+    rules = ["include: #{db_name}.*"]
+    rules.concat(zero_etl_exclude_filters(db_name: db_name, connection: connection))
     rules.join(", ")
   end
 
@@ -96,7 +102,7 @@ module AnalyticsExportable
 
   # Returns true if a Maxwell filter rule references the given database.
   def self.rule_for_database?(rule, db_name)
-    rule.include?("`#{db_name}`")
+    rule.match?(/\b#{Regexp.escape(db_name)}\./)
   end
 
   # Computes the diff between the current integration filter and the desired
@@ -104,10 +110,11 @@ module AnalyticsExportable
   # untouched.
   #
   # @param current_data_filter [String] the integration's current data_filter.
+  # @param db_name [String] see zero_etl_exclude_filters.
   # @param connection [ActiveRecord::ConnectionAdapters::AbstractAdapter]
   # @return [Hash] :to_add, :to_remove, :unchanged, :reconciled_filter
-  def self.reconcile_zero_etl_filters(current_data_filter, connection: ActiveRecord::Base.connection)
-    db_name = connection.current_database
+  def self.reconcile_zero_etl_filters(current_data_filter, db_name: nil, connection: ActiveRecord::Base.connection)
+    db_name ||= connection.current_database
     current_rules = parse_data_filter(current_data_filter)
 
     other_rules = current_rules.reject {|r| rule_for_database?(r, db_name)}
@@ -115,13 +122,13 @@ module AnalyticsExportable
       current_rules.select {|r| r.start_with?('exclude:') && rule_for_database?(r, db_name)}
     )
 
-    desired_dashboard_excludes = Set.new(zero_etl_exclude_filters(connection: connection))
+    desired_dashboard_excludes = Set.new(zero_etl_exclude_filters(db_name: db_name, connection: connection))
 
     to_add = (desired_dashboard_excludes - current_dashboard_excludes).sort
     to_remove = (current_dashboard_excludes - desired_dashboard_excludes).sort
     unchanged = (current_dashboard_excludes & desired_dashboard_excludes).sort
 
-    reconciled = other_rules + ["include: `#{db_name}`.*"] + desired_dashboard_excludes.sort
+    reconciled = other_rules + ["include: #{db_name}.*"] + desired_dashboard_excludes.sort
 
     {
       to_add: to_add,
@@ -135,11 +142,12 @@ module AnalyticsExportable
   # the dashboard database excludes, and optionally applies the update.
   #
   # @param integration_arn [String] ARN of the Zero ETL integration.
+  # @param db_name [String] see zero_etl_exclude_filters.
   # @param connection [ActiveRecord::ConnectionAdapters::AbstractAdapter]
   # @param dry_run [Boolean] when true, computes the diff without applying.
   # @param rds_client [Aws::RDS::Client] injectable for testing.
   # @return [Hash] reconciliation result from reconcile_zero_etl_filters.
-  def self.update_zero_etl_integration!(integration_arn:, connection: ActiveRecord::Base.connection, dry_run: false, rds_client: nil)
+  def self.update_zero_etl_integration!(integration_arn:, db_name: nil, connection: ActiveRecord::Base.connection, dry_run: false, rds_client: nil)
     require 'aws-sdk-rds'
     rds_client ||= Aws::RDS::Client.new
 
@@ -147,7 +155,7 @@ module AnalyticsExportable
     integration = resp.integrations.first
     raise ArgumentError, "Integration not found: #{integration_arn}" unless integration
 
-    result = reconcile_zero_etl_filters(integration.data_filter, connection: connection)
+    result = reconcile_zero_etl_filters(integration.data_filter, db_name: db_name, connection: connection)
 
     unless dry_run || (result[:to_add].empty? && result[:to_remove].empty?)
       rds_client.modify_integration(
