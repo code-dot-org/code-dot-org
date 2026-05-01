@@ -41,6 +41,7 @@ export interface AichatState {
     key: string;
     asset: ChatAsset;
     status: 'uploading' | 'uploaded';
+    timestamp?: string;
   }[];
   // Alert to display for staged files if something went wrong.
   stagedFilesAlert:

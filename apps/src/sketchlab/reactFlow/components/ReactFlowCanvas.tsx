@@ -22,8 +22,12 @@ import {useSources} from '@cdo/apps/lab2/views/SourcesContainer';
 import {createUuid} from '@cdo/apps/utils';
 
 import {
+  ARROW_MARKER_HEIGHT_PX,
+  ARROW_MARKER_WIDTH_PX,
   DEFAULT_NODE_HEIGHT,
   DEFAULT_NODE_WIDTH,
+  LINE_ANCHOR_SIZE_PX,
+  LINE_DEFAULT_LENGTH_PX,
   SAVE_DEBOUNCE_MS,
 } from '../constants';
 import {
@@ -32,7 +36,10 @@ import {
   type ToolbarTarget,
 } from '../context';
 import LineEdgeToolbar from '../elementToolbars/LineEdgeToolbar';
-import {DEFAULT_STROKE_COLOR} from '../elementToolbars/toolbarPalettes';
+import {
+  DEFAULT_LINE_WIDTH,
+  DEFAULT_STROKE_COLOR,
+} from '../elementToolbars/toolbarPalettes';
 import {useFocusManagement} from '../hooks/useFocusManagement';
 import {useKeyboardNavigation} from '../hooks/useKeyboardNavigation';
 import {useLineEdgeDrag} from '../hooks/useLineEdgeDrag';
@@ -67,8 +74,6 @@ const NODE_TYPES = {
 // Offset added per new node so they don't stack exactly on top of each other.
 const NEW_NODE_STAGGER_PX = 20;
 const FOCUS_DELAY_MS = 100;
-const LINE_DEFAULT_LENGTH_PX = 220;
-const LINE_ANCHOR_SIZE_PX = 10;
 
 export interface ReactFlowCanvasProps {
   updateSources: ReturnType<
@@ -148,7 +153,6 @@ export default function ReactFlowCanvas({
   const {connectingFrom, connectAnnouncement, handleKeyDown} =
     useKeyboardNavigation({
       nodes,
-      edges,
       tabOrder,
       focusEntry,
       setNodes,
@@ -237,9 +241,15 @@ export default function ReactFlowCanvas({
       displayNodes: nodes.map(node => {
         const isConnectSource = connectingFrom === node.id;
         const {selected, domAttributes} = applyDisplayProps(node, 'node');
+        const locked = node.data?.locked === true;
         return {
           ...node,
           selected,
+          ...(locked && {
+            draggable: false,
+            connectable: false,
+            deletable: false,
+          }),
           className: isConnectSource ? styles.connectSource : undefined,
           domAttributes: {
             ...domAttributes,
@@ -377,8 +387,8 @@ export default function ReactFlowCanvas({
         y: window.innerHeight / 2 + stagger,
       });
 
-      // For lines, we create two hidden nodes and connecting anchors between them.
-      if (type === 'line') {
+      // For lines/arrows, create two hidden anchor nodes and connect them.
+      if (type === 'line' || type === 'arrow') {
         const sourceAnchorId = createUuid();
         const targetAnchorId = createUuid();
         const lineEdgeId = createUuid();
@@ -419,7 +429,19 @@ export default function ReactFlowCanvas({
           source: sourceAnchorId,
           target: targetAnchorId,
           type: 'straight',
-          style: {stroke: DEFAULT_STROKE_COLOR},
+          ...(type === 'arrow' && {
+            markerEnd: {
+              type: MarkerType.ArrowClosed,
+              color: DEFAULT_STROKE_COLOR,
+              width: ARROW_MARKER_WIDTH_PX,
+              height: ARROW_MARKER_HEIGHT_PX,
+              strokeWidth: DEFAULT_LINE_WIDTH,
+            },
+          }),
+          style: {
+            stroke: DEFAULT_STROKE_COLOR,
+            strokeWidth: DEFAULT_LINE_WIDTH,
+          },
         };
 
         setNodes(currentNodes => [...currentNodes, sourceAnchor, targetAnchor]);
@@ -441,6 +463,8 @@ export default function ReactFlowCanvas({
 
       const newNodeId = createUuid();
       // Text nodes auto-size to fit content; shapes and images use fixed defaults.
+      // width/height are the React Flow fields NodeResizer also writes on drag,
+      // keeping creation and resize consistent. style is reserved for appearance.
       // Cast is needed because TS can't preserve the (type, data) correlation
       // of the discriminated union across destructuring.
       const newNode = {
@@ -449,7 +473,8 @@ export default function ReactFlowCanvas({
         data: request.data,
         position,
         ...(type !== 'text' && {
-          style: {width: DEFAULT_NODE_WIDTH, height: DEFAULT_NODE_HEIGHT},
+          width: DEFAULT_NODE_WIDTH,
+          height: DEFAULT_NODE_HEIGHT,
         }),
       } as SketchLabNode;
 
@@ -476,7 +501,14 @@ export default function ReactFlowCanvas({
     [readOnly, openToolbar, nodes]
   );
 
-  const {handleEdgeClick, openLineEdge, setLineEdgeColor} = useLineToolbar({
+  const {
+    handleEdgeClick,
+    openLineEdge,
+    setLineEdgeColor,
+    setLineEdgeWidth,
+    setLineEdgeStrokeStyle,
+    setLineEdgeArrowHeads,
+  } = useLineToolbar({
     edges,
     nodes,
     readOnly,
@@ -537,6 +569,15 @@ export default function ReactFlowCanvas({
                 anchorNodeId={openLineEdge.source}
                 onSelectColor={value =>
                   setLineEdgeColor(openLineEdge.id, value)
+                }
+                onSelectWidth={value =>
+                  setLineEdgeWidth(openLineEdge.id, value)
+                }
+                onSelectStrokeStyle={value =>
+                  setLineEdgeStrokeStyle(openLineEdge.id, value)
+                }
+                onSelectArrowHeads={value =>
+                  setLineEdgeArrowHeads(openLineEdge.id, value)
                 }
               />
             )}

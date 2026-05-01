@@ -144,6 +144,19 @@ export default function Toolbar({onAddNode}: ToolbarProps) {
         </IconButton>
       </Tooltip>
 
+      <Tooltip title="Add arrow" placement="right">
+        <IconButton
+          aria-label="Add arrow"
+          id={`${uid}-arrow`}
+          onClick={() => onAddNode({type: 'arrow'})}
+          size="small"
+          color="tertiary"
+          variant="outlined"
+        >
+          <FontAwesomeV6Icon iconName="arrow-right-long" />
+        </IconButton>
+      </Tooltip>
+
       <Tooltip title="Add image" placement="right">
         <IconButton
           aria-label="Add image"
