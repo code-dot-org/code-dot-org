@@ -13,7 +13,7 @@ export type ReactFlowSketchLabSources = ProjectSources & {
   source: SketchlabReactFlowSource;
 };
 
-export type ElementDataBase = {
+export type NodeDataBase = {
   showHandles?: boolean;
   // rotation is in degrees, normalized 0-359.
   rotation?: number;
@@ -21,7 +21,7 @@ export type ElementDataBase = {
 };
 
 // Typed runtime data shapes for each custom node.
-export type ShapeNodeData = ElementDataBase & {
+export type ShapeNodeData = NodeDataBase & {
   shapeType: ShapeType;
   label: string;
   backgroundColor?: string;
@@ -30,18 +30,18 @@ export type ShapeNodeData = ElementDataBase & {
   fontSize?: FontSizeValue;
 };
 
-export type TextNodeData = ElementDataBase & {
+export type TextNodeData = NodeDataBase & {
   text: string;
   fontColor?: string;
   fontSize?: FontSizeValue;
 };
 
-export type ImageNodeData = ElementDataBase & {
+export type ImageNodeData = NodeDataBase & {
   src: string;
   altText: string;
 };
 
-export type LineAnchorNodeData = ElementDataBase & {
+export type LineAnchorNodeData = NodeDataBase & {
   lineAnchorRole: 'source' | 'target';
 };
 
