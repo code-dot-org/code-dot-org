@@ -121,7 +121,12 @@ module DevelopersTopic
   #   like '<@U12345>' produced by Slack.user_mention_tag.
   def self.set_dotd_mention(mention_tag)
     current_topic = Slack.get_topic('developers', raw: true)
-    new_topic = current_topic.sub(/^.+?;/, "DOTD: #{mention_tag};")
+    # Match the DOTD field wherever it appears in the topic: the literal
+    # "DOTD:" followed by any non-';' characters and a closing ';'.
+    # `[^;]+` keeps the match scoped to a single field; `sub` (not `gsub`)
+    # only touches the first DOTD field, leaving sibling fields like
+    # "DTS: no (build pipeline issues); ..." untouched.
+    new_topic = current_topic.sub(/DOTD:[^;]+;/i, "DOTD: #{mention_tag};")
     Slack.update_topic 'developers', new_topic unless new_topic == current_topic
   end
 
