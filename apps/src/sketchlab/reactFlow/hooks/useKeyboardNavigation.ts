@@ -383,7 +383,7 @@ export function useKeyboardNavigation({
       if (handleConnectToggle(keyContext)) return;
       if (handleConnectComplete(keyContext)) return;
 
-      // All further interactions require an unlocked element, if a is focused.
+      // All further interactions require an unlocked element, if an element is focused.
       if (
         keyContext.focusedNodeId &&
         getNode(keyContext.focusedNodeId)?.data?.locked
