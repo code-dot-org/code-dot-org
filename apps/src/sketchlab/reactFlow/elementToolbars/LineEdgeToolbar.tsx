@@ -1,15 +1,15 @@
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
-import {Button, IconButton, Tooltip, Typography} from '@mui/material';
+import {IconButton, Tooltip, Typography} from '@mui/material';
 import {useReactFlow} from '@xyflow/react';
 import classNames from 'classnames';
 import React from 'react';
 
-import {getIsStartMode} from '@cdo/apps/lab2/projects/utils';
 import {SketchlabReactFlowEdge} from '@cdo/apps/lab2/types';
 
 import {isArrowEdge} from '../utils/lineEdges';
 
 import ActionsGroup from './ActionsGroup';
+import LockedNotice from './LockedNotice';
 import SwatchGroup from './SwatchGroup';
 import {
   DEFAULT_LINE_STROKE_STYLE,
@@ -117,7 +117,6 @@ export default function LineEdgeToolbar({
   onSetLocked,
 }: LineEdgeToolbarProps) {
   const {deleteElements} = useReactFlow();
-  const isStartMode = getIsStartMode();
   const isLocked = edge.data?.locked === true;
   const selectedValue =
     (typeof edge.style?.stroke === 'string' && edge.style.stroke) ||
@@ -166,28 +165,7 @@ export default function LineEdgeToolbar({
       ariaLabel="Line style"
     >
       {isLocked ? (
-        <div
-          className={styles['locked-notice']}
-          role="group"
-          aria-label="Locked element"
-        >
-          <FontAwesomeV6Icon iconName="lock" aria-hidden="true" />
-          <Typography variant="body3">This element is locked.</Typography>
-          {isStartMode && (
-            <Button
-              onClick={() => onSetLocked(false)}
-              aria-label="Unlock element"
-              color="secondary"
-              variant="outlined"
-              size="small"
-              startIcon={
-                <FontAwesomeV6Icon iconName="lock-open" aria-hidden="true" />
-              }
-            >
-              Unlock
-            </Button>
-          )}
-        </div>
+        <LockedNotice onUnlock={() => onSetLocked(false)} />
       ) : (
         <>
           <SwatchGroup
