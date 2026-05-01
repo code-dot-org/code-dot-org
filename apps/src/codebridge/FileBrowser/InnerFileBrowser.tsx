@@ -5,10 +5,9 @@ import React from 'react';
 
 import {START_SOURCES} from '@cdo/apps/lab2/constants';
 import {getAppOptionsEditBlocks} from '@cdo/apps/lab2/projects/utils';
-import {setActiveFileThunk} from '@cdo/apps/lab2/redux/lab2ProjectReduxThunks';
 import {isReadOnlyWorkspace} from '@cdo/apps/lab2/redux/lab2ReduxSelectors';
 import {MultiFileSource, ProjectFileType} from '@cdo/apps/lab2/types';
-import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
+import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 import {useDndDataContext} from './DnDDataContextProvider';
 import {NotDraggable, Draggable} from './Draggable';
@@ -38,7 +37,6 @@ const InnerFileBrowser = React.memo(
       f => f.type === ProjectFileType.VALIDATION
     );
     const isReadOnly = useAppSelector(isReadOnlyWorkspace);
-    const dispatch = useAppDispatch();
 
     return (
       <>
@@ -51,7 +49,7 @@ const InnerFileBrowser = React.memo(
               <Droppable
                 data={{id: f.id}}
                 key={f.id + f.open}
-                Component="div"
+                Component="li"
                 className={classNames(moduleStyles.droppableArea, {
                   [moduleStyles.acceptingDrop]: f.id === dropData?.id,
                 })}
@@ -69,14 +67,16 @@ const InnerFileBrowser = React.memo(
                     enableMenu={!isReadOnly && !dragData?.id}
                   />
                   {f.open && (
-                    <div className={moduleStyles.folder}>
+                    // role="list" needed: list-style:none strips VoiceOver semantics
+                    // eslint-disable-next-line jsx-a11y/no-redundant-roles
+                    <ol className={moduleStyles.folder} role="list">
                       <InnerFileBrowser
                         folders={folders}
                         parentId={f.id}
                         files={files}
                         appName={appName}
                       />
-                    </div>
+                    </ol>
                   )}
                 </MaybeDraggable>
               </Droppable>
@@ -98,18 +98,14 @@ const InnerFileBrowser = React.memo(
             };
             const MaybeDraggable = isDraggingLocked ? NotDraggable : Draggable;
             return (
-              <MaybeDraggable
-                data={{id: f.id, type: DragType.FILE, parentId: f.folderId}}
-                key={f.id}
-                Component="div"
-                onKeyDown={event => {
-                  if (event.key === 'Enter' || event.key === ' ') {
-                    dispatch(setActiveFileThunk(f.id));
-                  }
-                }}
-              >
-                <FileRow {...fileRowProps} />
-              </MaybeDraggable>
+              <li key={f.id}>
+                <MaybeDraggable
+                  data={{id: f.id, type: DragType.FILE, parentId: f.folderId}}
+                  Component="div"
+                >
+                  <FileRow {...fileRowProps} />
+                </MaybeDraggable>
+              </li>
             );
           })}
       </>

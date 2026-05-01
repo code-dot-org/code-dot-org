@@ -22,6 +22,8 @@ export type ShapeNodeData = {
   fontColor?: string;
   fontSize?: FontSizeValue;
   showHandles?: boolean;
+  // rotation is in degrees, normalized 0-359.
+  rotation?: number;
   locked?: boolean;
 };
 
@@ -30,6 +32,7 @@ export type TextNodeData = {
   fontColor?: string;
   fontSize?: FontSizeValue;
   showHandles?: boolean;
+  rotation?: number;
   locked?: boolean;
 };
 
@@ -37,6 +40,7 @@ export type ImageNodeData = {
   src: string;
   altText: string;
   showHandles?: boolean;
+  rotation?: number;
   locked?: boolean;
 };
 

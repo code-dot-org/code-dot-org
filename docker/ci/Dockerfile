@@ -72,7 +72,8 @@ FROM base AS primary-layer
 #########################################################
 
 # MAINLINE UBUNTU PACKAGE DEPS SHOULD BE ADDED HERE
-RUN apt-get install -y --no-install-recommends \
+RUN apt-get update && \
+    apt-get install -y --no-install-recommends \
     apt-transport-https \
     ca-certificates \
     enscript \
@@ -92,7 +93,6 @@ RUN apt-get install -y --no-install-recommends \
     python \
     python-dev \
     python3-pip \
-    software-properties-common \
     sudo \
     tar \
     tzdata \
@@ -112,11 +112,6 @@ RUN locale-gen en_US.UTF-8
 # Install MySQL client; implicitly targeting MySQL 8.0
 RUN apt-get update && \
     apt-get install --yes libmysqlclient-dev mysql-client
-
-# we need git >= 2.15 to use git rev-parse --is-shallow-clone feature
-RUN add-apt-repository ppa:git-core/ppa && \
-    apt-get update && \
-    apt-get install -y git>=2.15
 
 # we need git-lfs >= 3.0 to use SSH authentication with git-lfs
 RUN curl -sS https://packagecloud.io/install/repositories/github/git-lfs/script.deb.sh | bash && \

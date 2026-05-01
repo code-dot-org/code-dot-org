@@ -5,6 +5,7 @@ import {SketchlabReactFlowEdge} from '@cdo/apps/lab2/types';
 
 import {
   entriesMatch,
+  getElementForEntry,
   getEntryFromDOM,
   type TabOrderEntry,
 } from '../utils/computeTabOrder';
@@ -82,11 +83,7 @@ export function useFocusManagement(
 
   const focusEntry = useCallback(
     (entry: TabOrderEntry) => {
-      const selector =
-        entry.type === 'node'
-          ? `.react-flow__node[data-id="${entry.id}"]`
-          : `.react-flow__edge[data-id="${entry.id}"]`;
-      const element = document.querySelector<HTMLElement>(selector);
+      const element = getElementForEntry(entry);
       if (!element) return;
       setLastFocusedEntry(entry);
       setNodeOrEdgeFocused(true);
@@ -106,12 +103,10 @@ export function useFocusManagement(
         // Deferred so it runs after React Flow finishes processing the
         // focus event internally; calling fitView synchronously here
         // gets overridden by React Flow's state reconciliation.
+        // The lookup must stay inside the rAF — it has to outlast that
+        // synchronous reconciliation.
         requestAnimationFrame(() => {
-          const selector =
-            entry.type === 'node'
-              ? `.react-flow__node[data-id="${entry.id}"]`
-              : `.react-flow__edge[data-id="${entry.id}"]`;
-          const element = document.querySelector<HTMLElement>(selector);
+          const element = getElementForEntry(entry);
           if (element) {
             panToEntryIfNeeded(entry, element);
           }

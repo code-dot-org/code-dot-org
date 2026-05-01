@@ -9,3 +9,9 @@ export enum AssetSource {
   LEVEL = 'level',
   LEVEL_UUID = 'level_uuid',
 }
+
+export type UploadStatus =
+  | 'uploaded'
+  | 'uploadFailed'
+  | 'sizeLimitExceeded'
+  | 'imageFileFlagged';
