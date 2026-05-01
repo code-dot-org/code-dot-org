@@ -7844,6 +7844,25 @@ columns:
     default_function: 
     collation: 
     comment: 
+  user_product_tours:
+  - *9
+  - *18
+  - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
+    name: tour_name
+    sql_type_metadata: *3
+    'null': false
+    default: 
+    default_function: 
+    collation: utf8mb4_unicode_ci
+    comment: 
+  - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
+    name: completed_at
+    sql_type_metadata: *8
+    'null': false
+    default: 
+    default_function: 
+    collation: 
+    comment: 
   user_proficiencies:
   - *5
   - *18
@@ -8929,6 +8948,7 @@ primary_keys:
   user_module_task_assignments: id
   user_permissions: id
   user_preferences: id
+  user_product_tours: id
   user_proficiencies: id
   user_project_storage_ids: id
   user_school_infos: id
@@ -9162,6 +9182,7 @@ data_sources:
   user_module_task_assignments: true
   user_permissions: true
   user_preferences: true
+  user_product_tours: true
   user_proficiencies: true
   user_project_storage_ids: true
   user_school_infos: true
@@ -15318,6 +15339,21 @@ indexes:
     type: 
     using: :btree
     comment: 
+  user_product_tours:
+  - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
+    table: user_product_tours
+    name: index_user_product_tours_on_user_id_and_tour_name
+    unique: true
+    columns:
+    - user_id
+    - tour_name
+    lengths: {}
+    orders: {}
+    opclasses: {}
+    where: 
+    type: 
+    using: :btree
+    comment: 
   user_proficiencies:
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: user_proficiencies
@@ -15676,7 +15712,7 @@ indexes:
     type: :fulltext
     using: 
     comment: 
-version: 20260427000000
+version: 20260429120000
 database_version: !ruby/object:ActiveRecord::ConnectionAdapters::AbstractAdapter::Version
   version:
   - 8
