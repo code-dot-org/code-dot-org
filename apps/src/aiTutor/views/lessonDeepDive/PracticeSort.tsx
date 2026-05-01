@@ -15,7 +15,12 @@ import React, {FC, useState} from 'react';
 import {Droppable} from '@cdo/apps/codebridge/FileBrowser/Droppable';
 
 import {DraggableOptions} from './DraggableOptions';
-import {MatchSolution, PracticeProblem} from './types';
+import {
+  MatchSolution,
+  MultiSolution,
+  PracticeProblem,
+  ScrambleSolution,
+} from './types';
 
 import styles from './practice-problems.module.scss';
 
@@ -24,6 +29,11 @@ interface PracticeSortProps {
   submitted: boolean;
   submitCallback: React.Dispatch<React.SetStateAction<boolean>>;
   correctCallback: React.Dispatch<React.SetStateAction<boolean>>;
+  studentAnswerCallback: React.Dispatch<
+    React.SetStateAction<
+      (MultiSolution | ScrambleSolution | MatchSolution)[] | null
+    >
+  >;
 }
 
 const PracticeSort: FC<PracticeSortProps> = ({
@@ -31,6 +41,7 @@ const PracticeSort: FC<PracticeSortProps> = ({
   submitted,
   submitCallback,
   correctCallback,
+  studentAnswerCallback,
 }) => {
   const solutions = problem.solution.map(s => {
     return {...s};
@@ -159,6 +170,7 @@ const PracticeSort: FC<PracticeSortProps> = ({
               onClick={() => {
                 submitCallback(true);
                 correctCallback(isCorrect);
+                studentAnswerCallback([...dragAndDropPairs]);
               }}
             >
               <Typography variant="body1" className={styles.cardLabel}>

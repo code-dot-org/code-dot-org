@@ -34,6 +34,7 @@ import {
   ChatMessage,
   isPendingOrCompletedChatMessage,
   CompletedChatMessage,
+  UploadStatus,
 } from '../types';
 
 import {AichatState} from './state';
@@ -284,7 +285,12 @@ const aichatSlice = createSlice({
     },
     addStagedFile(
       state,
-      action: PayloadAction<{key: string; asset: ChatAsset; loaded?: boolean}>
+      action: PayloadAction<{
+        key: string;
+        asset: ChatAsset;
+        loaded?: boolean;
+        timestamp?: string;
+      }>
     ) {
       state.stagedFiles.push({
         ...action.payload,
@@ -295,23 +301,22 @@ const aichatSlice = createSlice({
       state,
       action: PayloadAction<{
         key: string;
-        status:
-          | 'uploaded'
-          | 'uploadFailed'
-          | 'sizeLimitExceeded'
-          | 'imageFileFlagged';
+        status: UploadStatus;
+        hideAlert?: boolean;
       }>
     ) {
-      const {key, status} = action.payload;
+      const {key, status, hideAlert} = action.payload;
       if (status === 'uploaded') {
         const fileIndex = state.stagedFiles.findIndex(file => file.key === key);
         if (fileIndex !== -1) {
           state.stagedFiles[fileIndex].status = 'uploaded';
         }
       } else {
-        // Remove from staged files and set alert
+        // Remove from staged files and set alert (unless hidden)
         state.stagedFiles = state.stagedFiles.filter(file => file.key !== key);
-        state.stagedFilesAlert = status;
+        if (!hideAlert) {
+          state.stagedFilesAlert = status;
+        }
       }
     },
     stagedFilesLimitExceeded(state) {

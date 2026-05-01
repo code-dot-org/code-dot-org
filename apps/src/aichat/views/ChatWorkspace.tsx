@@ -11,7 +11,6 @@ import React, {
   useImperativeHandle,
 } from 'react';
 
-import {isModelUpdate, WorkspaceTeacherViewTab} from '@cdo/apps/aichat/types';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 import usePrevious from '@cdo/apps/util/usePrevious';
 import {AiChatClientTypes} from '@cdo/generated-scripts/sharedConstants';
@@ -30,8 +29,9 @@ import {
   setClientType,
   setNewChatSession,
   setChatWorkspaceSelectedTab,
+  uploadFiles,
 } from '../redux';
-import {addStagedFile, clearUserAddedSelectionContext} from '../redux/slice';
+import {clearUserAddedSelectionContext} from '../redux/slice';
 import {findChangedProperties, getNewRemoveId} from '../redux/utils';
 import {
   AiChatClientType,
@@ -39,6 +39,9 @@ import {
   ChatAsset,
   ChatButtonAndKey,
   ModelParameters,
+  isModelUpdate,
+  UploadStatus,
+  WorkspaceTeacherViewTab,
 } from '../types';
 import {getAssetUrl, getShortName} from '../utils';
 
@@ -51,8 +54,14 @@ import moduleStyles from './chatWorkspace.module.scss';
 
 /** Handle for interacting with the Chat Workspace */
 export interface ChatWorkspaceHandle {
-  /** Adds staged assets to the chat message. */
-  addAssets: (assets: ChatAsset[]) => void;
+  /**
+   * Uploads files to the chat message.
+   * @param onUploadFinished Optional callback allowing callers to notify external components of the file status.
+   */
+  addFiles: (
+    files: File[],
+    onUploadFinished?: (status: UploadStatus) => void
+  ) => void;
 }
 
 interface ChatWorkspaceProps {
@@ -347,22 +356,13 @@ const ChatWorkspace = forwardRef<ChatWorkspaceHandle, ChatWorkspaceProps>(
     useImperativeHandle(
       ref,
       () => ({
-        addAssets: assets => {
-          if (!canUploadAssets) {
-            return;
-          }
-          for (const asset of assets) {
-            dispatch(
-              addStagedFile({
-                key: `${asset.filename}-${Date.now()}`,
-                asset,
-                loaded: true,
-              })
-            );
+        addFiles: (files, onUploadFinished) => {
+          if (canUploadAssets) {
+            dispatch(uploadFiles({files, buildAssetUrl, onUploadFinished}));
           }
         },
       }),
-      [canUploadAssets, dispatch]
+      [canUploadAssets, dispatch, buildAssetUrl]
     );
 
     return (
@@ -389,10 +389,13 @@ const ChatWorkspace = forwardRef<ChatWorkspaceHandle, ChatWorkspaceProps>(
           />
         )}
         <div className={moduleStyles.footer}>
-          {canUploadAssets && (
-            <StagedFilesPreview buildAssetUrl={buildAssetUrl} />
-          )}
-          <UserAddedSelectionContextPreview />
+          <div className={moduleStyles.chipsRow}>
+            {canUploadAssets && (
+              <StagedFilesPreview buildAssetUrl={buildAssetUrl} />
+            )}
+            <UserAddedSelectionContextPreview />
+          </div>
+
           {canChatWithModel && (
             <UserChatMessageEditor
               clientType={clientType}

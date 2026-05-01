@@ -5,6 +5,14 @@
   outline: none;
 }
 
+// Rotatable layer holds only the <img>. The Alt button and editor stay
+// outside so they remain readable and clickable at any angle.
+.rotatable {
+  position: absolute;
+  inset: 0;
+  transform-origin: center;
+}
+
 .image {
   width: 100%;
   height: 100%;
