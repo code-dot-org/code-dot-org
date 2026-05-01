@@ -72,7 +72,8 @@ FROM base AS primary-layer
 #########################################################
 
 # MAINLINE UBUNTU PACKAGE DEPS SHOULD BE ADDED HERE
-RUN apt-get install -y --no-install-recommends \
+RUN apt-get update && \
+    apt-get install -y --no-install-recommends \
     apt-transport-https \
     ca-certificates \
     enscript \
@@ -91,7 +92,6 @@ RUN apt-get install -y --no-install-recommends \
     python \
     python-dev \
     python3-pip \
-    software-properties-common \
     sudo \
     tar \
     tzdata \
@@ -135,11 +135,6 @@ RUN usermod -d /var/lib/mysql/ mysql
 #
 #  ERROR 2002 (HY000): Can't connect to local MySQL server through socket '/run/mysqld/mysqld.sock' (13) 
 RUN sudo chmod -R 755 /run/mysqld
-
-# we need git >= 2.15 to use git rev-parse --is-shallow-clone feature
-RUN add-apt-repository ppa:git-core/ppa && \
-    apt-get update && \
-    apt-get install -y git>=2.15
 
 # we need git-lfs >= 3.0 to use SSH authentication with git-lfs
 RUN curl -sS https://packagecloud.io/install/repositories/github/git-lfs/script.deb.sh | bash && \
