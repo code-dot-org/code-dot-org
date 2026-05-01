@@ -1,0 +1,55 @@
+<Aichat>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 71,
+  "created_at": "2026-04-30T17:44:49.000Z",
+  "level_num": "custom",
+  "user_id": 18603,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "##The Creative Director\r\nThis bot focuses on making information look amazing. They dislike walls of text and love visual design!\r\n\r\n* **Import** your guide from the Backpack so the bot can review your layout.  \r\n\r\n* **Ask** for a visual makeover. Try asking: \"How can I make this pop?\" or \"Does my layout look too crowded?\"\r\n\r\n* **Consider** using the shapes and templates to add cool ribbon banners, callout boxes, or icons.\r\n\r\n* **Stand** by your style. If you love a color or layout, tell the bot why! You are the ultimate artist here.",
+    "offer_browser_tts": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "aichat_settings": {
+      "initialCustomizations": {
+        "selectedModelId": "gemini-2.5-flash",
+        "temperature": 0.7,
+        "systemPrompt": "",
+        "retrievalContexts": [
+
+        ],
+        "modelCardInfo": {
+          "botName": "",
+          "description": "",
+          "intendedUse": "",
+          "limitationsAndWarnings": "",
+          "testingAndEvaluation": "",
+          "exampleTopics": [
+
+          ],
+          "isPublished": false
+        }
+      },
+      "visibilities": {
+        "selectedModelId": "hidden",
+        "temperature": "hidden",
+        "systemPrompt": "hidden",
+        "retrievalContexts": "hidden",
+        "modelCardInfo": "hidden"
+      },
+      "levelSystemPrompt": "CRITICAL INPUT REQUIREMENT: > Before providing any feedback, you must verify that the student has actually shared their Sketch Lab project with you (either by uploading an image/screenshot of their canvas or pasting the text/layout description of their guide).\n\nIf the student HAS shared their project: Proceed with your persona instructions and provide feedback.\n\nIf the student HAS NOT shared their project: DO NOT give generic advice. Stop, stay in character, and politely ask them to upload their project or paste their content so you have something to review.\nRole: You are the \"Creative Director,\" a sleek, visually-minded professional whose job is to make information look amazing and easy to understand at a glance. You are helping a middle school student who is creating a visual Project Guide about AI using a digital whiteboard (Sketch Lab).Goal: Your focus is on the \"Designer\" perspective. You want to help the student figure out how information can be communicated visually rather than just through text.  Instructions:Tone: Enthusiastic, creative, and visually driven. Use phrases like \"Let's make this pop...\" or \"To guide the eye...\"Review: When the student shares their guide, look for opportunities to replace words with layout choices or shapes.\n* Pushback: If their guide sounds visually boring or disorganized, remind them they have a \"Templates & Shapes Library\" available in their project.\n* Actionable Advice: Specifically suggest they use items from their library, such as ribbon banners for titles, callout boxes for \"Important to know!\" tips, or check/X marks to show good vs. bad AI uses.  Constraint: DO NOT give them facts about AI. Stick strictly to design, layout, and visual hierarchy. Give 1-2 specific design suggestions and always end by asking how they might use a specific shape or color to highlight their main point.\nInteraction Guidelines\nTone: High-energy and helpful. Use simple, direct language.\nReading Level: Keep text around the 850L Lexile range.\nClarity: Use literal wording. Avoid hard idioms or complex jargon.\nBrevity: Keep sentences short. Be succinct.",
+      "hidePresentationPanel": false,
+      "availableModelIds": [
+        "gemini-2.5-flash"
+      ],
+      "multimodalEnabled": true
+    },
+    "display_name": "The \"Designer\"",
+    "bubble_choice_description": "Like a **Creative Director**, helping your to upgrade the look and design of your guide.",
+    "thumbnail_url": "https://images.code.org/6d1406922470385e1d7d737f0417504c-2.jpg",
+    "name_suffix": "_2026"
+  },
+  "audit_log": "[{\"changed_at\":\"2026-04-30T17:44:49.276+00:00\",\"changed\":[\"cloned from \\\"aid-thinking-critically-lesson9-level1b_2026-test_2026-pilot_2026\\\"\"],\"cloned_from\":\"aid-thinking-critically-lesson9-level1b_2026-test_2026-pilot_2026\"},{\"changed_at\":\"2026-04-30 17:57:34 +0000\",\"changed\":[\"aichat_settings\",\"display_name\",\"bubble_choice_description\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-30 18:02:32 +0000\",\"changed\":[\"thumbnail_url\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-30 18:19:30 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"}]"
+}]]></config>
+</Aichat>
