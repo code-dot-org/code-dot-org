@@ -4,7 +4,7 @@ require 'retryable'
 require 'json'
 require 'cdo/honeybadger'
 
-class Slack
+module Slack
   COLOR_MAP = {
     green: 'good',
     yellow: 'warning',
