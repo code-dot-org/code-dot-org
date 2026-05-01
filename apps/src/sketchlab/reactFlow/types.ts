@@ -13,41 +13,36 @@ export type ReactFlowSketchLabSources = ProjectSources & {
   source: SketchlabReactFlowSource;
 };
 
-// Typed runtime data shapes for each custom node.
-export type ShapeNodeData = {
-  shapeType: ShapeType;
-  label: string;
-  backgroundColor?: string;
-  strokeColor?: string;
-  fontColor?: string;
-  fontSize?: FontSizeValue;
+export type ElementDataBase = {
   showHandles?: boolean;
   // rotation is in degrees, normalized 0-359.
   rotation?: number;
   locked?: boolean;
 };
 
-export type TextNodeData = {
+// Typed runtime data shapes for each custom node.
+export type ShapeNodeData = ElementDataBase & {
+  shapeType: ShapeType;
+  label: string;
+  backgroundColor?: string;
+  strokeColor?: string;
+  fontColor?: string;
+  fontSize?: FontSizeValue;
+};
+
+export type TextNodeData = ElementDataBase & {
   text: string;
   fontColor?: string;
   fontSize?: FontSizeValue;
-  showHandles?: boolean;
-  rotation?: number;
-  locked?: boolean;
 };
 
-export type ImageNodeData = {
+export type ImageNodeData = ElementDataBase & {
   src: string;
   altText: string;
-  showHandles?: boolean;
-  rotation?: number;
-  locked?: boolean;
 };
 
-export type LineAnchorNodeData = {
+export type LineAnchorNodeData = ElementDataBase & {
   lineAnchorRole: 'source' | 'target';
-  // TODO: this is not used yet, but is included for ease of typing.
-  locked?: boolean;
 };
 
 export type AddNodeRequest =

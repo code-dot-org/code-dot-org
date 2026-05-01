@@ -108,6 +108,7 @@ interface SketchlabReactFlowNodeBase {
   width?: number;
   height?: number;
   style?: CSSProperties;
+  locked?: boolean;
 }
 
 export type SketchlabReactFlowNode =
@@ -126,7 +127,6 @@ export interface SketchlabReactFlowEdge {
   style?: CSSProperties;
   data?: {
     locked?: boolean;
-    [key: string]: unknown;
   };
   sourceHandle?: string;
   targetHandle?: string;
