@@ -261,14 +261,16 @@ export default function ReactFlowCanvas({
       // raw IDs (React Flow defaults to "Edge from {sourceId} to {targetId}").
       displayEdges: edges.map(edge => {
         const lineEdge = isLineEdge(edge, nodes);
+        const locked = edge.data?.locked === true;
         const {selected, domAttributes} = applyDisplayProps(edge, 'edge');
         return {
           ...edge,
           selected,
+          ...(locked && {deletable: false}),
           className: lineEdge ? styles.lineEdge : undefined,
           domAttributes: {
             ...domAttributes,
-            ...(lineEdge && !readOnly
+            ...(lineEdge && !readOnly && !locked
               ? {
                   onMouseDown: (event: React.MouseEvent) => {
                     focusEntry({type: 'edge', id: edge.id});
@@ -508,6 +510,7 @@ export default function ReactFlowCanvas({
     setLineEdgeWidth,
     setLineEdgeStrokeStyle,
     setLineEdgeArrowHeads,
+    setLineEdgeLocked,
   } = useLineToolbar({
     edges,
     nodes,
@@ -579,6 +582,7 @@ export default function ReactFlowCanvas({
                 onSelectArrowHeads={value =>
                   setLineEdgeArrowHeads(openLineEdge.id, value)
                 }
+                onSetLocked={value => setLineEdgeLocked(openLineEdge.id, value)}
               />
             )}
             <Background />
