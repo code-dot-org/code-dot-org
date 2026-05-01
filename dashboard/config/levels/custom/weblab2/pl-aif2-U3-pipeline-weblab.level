@@ -7,7 +7,7 @@
   "user_id": 18603,
   "properties": {
     "encrypted": "false",
-    "long_instructions": "# VibeCheck's \"For You\" Page\r\n\r\nYou are part of a team building a fictional social media app called VibeCheck.\r\nYour task is to design a “For You” page and decide what content a user sees first.\r\n\r\nVibeCheck already has a dataset of posts, but it’s your job to decide:\r\n\r\n- What content should be shown\r\n\r\n- In what order\r\n\r\n- How those decisions are made using code\r\n\r\nYou’ll do this by creating a pipeline using sorting and filtering.\r\n\r\n\r\n### 1. Explore the data and decide your goal\r\n* Inspect the data in the code, and decompose ways that you might filter and sort this data.\r\n* Decide what your algorithm values most.\r\n\r\n*(Ex: popularity -> sort by likes, virality -> sort by shares)*\r\n\r\n### 2. Create a sort function\r\n* Sort the data that remains by an algorithm of your design.\r\n* Work with AI Tutor to implement a sorting function.\r\n\r\n### 3. Create a filter function\r\n* Determine how you want to filter this data \r\n* Work with AI Tutor to implement a filtering function.\r\n\r\n### 4. Build the pipeline\r\n* Connect the pipeline at the bottom: sort > filter > render\r\n\r\n*(Do this by creating new variables to call the functions to.)*\r\n* Render the new array\r\n\r\n\r\n\r\n",
+    "long_instructions": "# VibeCheck's \"For You\" Page\r\n\r\nYou are part of a team building a fictional social media app called VibeCheck.\r\nYour task is to design a “For You” page and decide what content a user sees first.\r\n\r\nVibeCheck already has a dataset of posts, but it’s your job to decide:\r\n\r\n- What content should be shown\r\n\r\n- In what order\r\n\r\n- How those decisions are made using code\r\n\r\nYou’ll do this by creating a pipeline using sorting and filtering.\r\n\r\n\r\n### 1. Explore the data and decide your goal\r\n* Inspect the data in the code, and decompose ways that you might filter and sort this data.\r\n* Decide what your algorithm values most.\r\n\r\n*(Ex: popularity -> sort by likes, virality -> sort by shares)*\r\n\r\n### 2. Create a sort function\r\n* Sort the data that remains by an algorithm of your design.\r\n* Work with AI Tutor to implement a sorting function.\r\n\r\n### 3. Create a filter function\r\n* Determine how you want to filter this data \r\n* Work with AI Tutor to implement a filtering function.\r\n\r\n### 4. Build the pipeline\r\n* Connect the pipeline at the bottom: sort > filter > render\r\n\r\n*(Do this by creating new variables to call the functions to.)*\r\n* Render the new array\r\n\r\n\r\n### 5. Test and evaluate\r\n\r\n* Does the feed reflect your goal?\r\n* What posts are showing first, and why?\r\n* Work with AI to do a finial testing pass on your app, ensuring that in works as expected. \r\n",
     "submittable": "false",
     "hide_share_and_remix": "false",
     "widget_view": "false",
@@ -74,8 +74,26 @@
     "teacher_markdown": "# VibeCheck's \"For You\" Page\r\n\r\nUse the CHAT Framework to update the basic functionality of VibeCheck's \"For You\" page.\r\n\r\nPossibilities for students: \r\n\r\n### 1. Clarify\r\n* Inspect the data in the code, and choose filtering and sorting \r\n    * *Popularity?* Sort by `likes`.\r\n    * *Virality?* Sort by `shares`.\r\n    * *Clickbait?* Sort by `views`.\r\n\r\n### 2. Hone / Apply (Build the Filter)\r\nE.g. - Remove the noise (posts older than 24 hours).\r\n* Create `filterRecent(data)` and a new empty array `recentPosts`.\r\n* Use `.map()` to loop through `data`.\r\n* **If** `post.hoursAgo < 24`, **push** the post to `recentPosts`.\r\n* Return the `recentPosts` array.\r\n\r\n### 3. Hone / Apply (Build the Sorter)\r\nRank the content using your chosen metric.\r\n* Create `rankByValues(data)`.\r\n* Call `data.sort()`.\r\n* Inside the sort function `(a, b)`, subtract your chosen field (e.g., `b.shares - a.shares`) to sort descending.\r\n\r\n### 4. Apply & Test\r\nConnect the pipeline at the bottom:\r\n1.  Call `filterRecent` -> save to variable.\r\n2.  Call `rankByValues` on that variable.\r\n3.  Call `renderFeed` to see if your unique algorithm works!",
     "display_name": "\"For You\" Feed",
     "bubble_choice_description": "You have been hired to fix the \"For You\" feed for a new video app called **VibeCheck**.",
-    "thumbnail_url": "https://images.code.org/1e897361cb01ce52a56dfe980fa2ca90-tiktok.jpg"
+    "thumbnail_url": "https://images.code.org/1e897361cb01ce52a56dfe980fa2ca90-tiktok.jpg",
+    "offer_browser_tts": "false",
+    "require_edit_to_continue": "false",
+    "ai_tutor_prompt_settings": {
+      "answerTypes": [
+        "buildHTML",
+        "buildCSS",
+        "buildJavaScript",
+        "ask",
+        "hint",
+        "debug",
+        "example",
+        "explainCode",
+        "documentation",
+        "pseudocode"
+      ],
+      "answerTypeCustomizations": {
+      }
+    }
   },
-  "audit_log": "[{\"changed_at\":\"2026-01-08T15:42:38.134+00:00\",\"changed\":[\"cloned from \\\"building-data-driven-systems-lesson10-level2b-test-2025\\\"\"],\"cloned_from\":\"building-data-driven-systems-lesson10-level2b-test-2025\"},{\"changed_at\":\"2026-01-08 16:07:41 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2026-01-08T15:42:38.134+00:00\",\"changed\":[\"cloned from \\\"building-data-driven-systems-lesson10-level2b-test-2025\\\"\"],\"cloned_from\":\"building-data-driven-systems-lesson10-level2b-test-2025\"},{\"changed_at\":\"2026-01-08 16:07:41 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"},{\"changed_at\":\"2026-04-30 14:39:10 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"}]"
 }]]></config>
 </Weblab2>

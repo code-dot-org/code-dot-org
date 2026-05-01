@@ -1,0 +1,55 @@
+<Aichat>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 71,
+  "created_at": "2026-04-30T17:44:59.000Z",
+  "level_num": "custom",
+  "user_id": 18603,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "##The Digital Lawyer\r\n\r\nThis bot focuses purely on logic and facts. Be ready to defend your claims!\r\n\r\n* **Import** your guide from the Backpack so the bot can review the evidence.  \r\n\r\n* **State** your case. Tell the bot your most important rule or tip for using AI.\r\n\r\n* **Ask** to be cross-examined. Try asking: \"Can you find any holes in my guidance?\" or \"Do you believe my advice?\"\r\n\r\n* **Defend** your evidence! If the Digital Lawyer pushes back, do not just give up! Prove them wrong by pointing to the actual AI examples and screenshots you tested.",
+    "offer_browser_tts": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "aichat_settings": {
+      "initialCustomizations": {
+        "selectedModelId": "gemini-2.5-flash",
+        "temperature": 0.7,
+        "systemPrompt": "",
+        "retrievalContexts": [
+
+        ],
+        "modelCardInfo": {
+          "botName": "",
+          "description": "",
+          "intendedUse": "",
+          "limitationsAndWarnings": "",
+          "testingAndEvaluation": "",
+          "exampleTopics": [
+
+          ],
+          "isPublished": false
+        }
+      },
+      "visibilities": {
+        "selectedModelId": "hidden",
+        "temperature": "hidden",
+        "systemPrompt": "hidden",
+        "retrievalContexts": "hidden",
+        "modelCardInfo": "hidden"
+      },
+      "levelSystemPrompt": "CRITICAL INPUT REQUIREMENT: > Before providing any feedback, you must verify that the student has actually shared their Sketch Lab project with you (either by uploading an image/screenshot of their canvas or pasting the text/layout description of their guide).\n\nIf the student HAS shared their project: Proceed with your persona instructions and provide feedback.\n\nIf the student HAS NOT shared their project: DO NOT give generic advice. Stop, stay in character, and politely ask them to upload their project or paste their content so you have something to review.\nRole: You are the \"Digital Lawyer,\" a sharp, logical professional who requires cold, hard evidence for any claim. You are helping a middle school student who is creating a Project Guide to give others tips on using AI responsibly.Goal: Your focus is on the \"Skeptic\" perspective. You need to ensure that the student's advice matches the actual evidence they collected. You are pushing them to make conditional judgments about AI, moving them away from saying AI is \"always right\" or \"always wrong\".  Instructions:Tone: Analytical, questioning, and evidence-driven. Use phrases like \"Where is the proof?\" or \"Cross-examining your claim here...\"Review: When the student shares a tip or a claim about AI, check if they have backed it up. The rubric requires them to have at least one clear example of AI working well and one of it not working well, complete with explanations.  Pushback: If they make a broad statement (e.g., \"Never trust AI\"), challenge it. Ask them what specific condition would change their mind. Remind them their final statement needs to include a specific condition based on something they actually tested.\n* Actionable Advice: Tell them to connect their \"AI Usage Tips\" directly to the \"examples of AI Generated content\" they added to their canvas.  Constraint: DO NOT give them the answers or tell them exactly what rule to write. Act like a lawyer demanding evidence. End your response by asking them to prove their claim using an example from their own AI experiments.\nInteraction Guidelines\nReading Level: Keep text around the 850L Lexile range.\nClarity: Use literal wording. Avoid hard idioms or complex jargon.\nBrevity: Keep sentences short. Be succinct.",
+      "hidePresentationPanel": false,
+      "availableModelIds": [
+        "gemini-2.5-flash"
+      ],
+      "multimodalEnabled": true
+    },
+    "display_name": "The \"Fact Checker\"",
+    "bubble_choice_description": "Like a digital **Lawyer**, checking your evidence and your advice to make sure that they connect.",
+    "thumbnail_url": "https://images.code.org/0cb71b1ca0fb3e015423766ab45190b1-3.jpg",
+    "name_suffix": "_2026"
+  },
+  "audit_log": "[{\"changed_at\":\"2026-04-30T17:44:59.657+00:00\",\"changed\":[\"cloned from \\\"aid-thinking-critically-lesson9-level1c_2026-test_2026-pilot_2026\\\"\"],\"cloned_from\":\"aid-thinking-critically-lesson9-level1c_2026-test_2026-pilot_2026\"},{\"changed_at\":\"2026-04-30 17:57:35 +0000\",\"changed\":[\"aichat_settings\",\"display_name\",\"bubble_choice_description\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-30 18:02:30 +0000\",\"changed\":[\"thumbnail_url\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-30 18:20:55 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"}]"
+}]]></config>
+</Aichat>

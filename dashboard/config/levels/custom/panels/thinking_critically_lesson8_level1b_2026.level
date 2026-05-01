@@ -11,7 +11,7 @@
     "use_links": "true",
     "panels": [
       {
-        "text": "##Can your photos tell secrets?\n\nWhen you post photos, you leave behind hidden info called **metadata**. To us, it is just a picture. To AI, it is data like your GPS location, the time, and your phone type. AI uses these details to map your life, habits, and where you go.",
+        "text": "Can your photos tell secrets?\n\nWhen you post photos, you leave behind hidden info called **metadata**. To us, it is just a picture. To AI, it is data like your GPS location, the time, and your phone type. AI uses these details to map your life, habits, and where you go.",
         "imageUrl": "https://images.code.org/b5d5a4848ebb19f510c1df72df647fb5-title.jpg",
         "key": "thinking_critically_lesson8_level1a_2026-76cfc3a9-f66a-4395-aa1f-c847b4c2ff9c",
         "links": [
@@ -37,7 +37,7 @@
             "width": 12
           }
         ],
-        "typing": false
+        "typing": true
       },
       {
         "text": "Phones add hidden data to photos. This includes the exact spot where you took the picture. AI tools can read this to find your home or school, even if the background is just a plain wall.",
@@ -74,13 +74,13 @@
           }
         ],
         "layout": "text-bottom-left",
-        "typing": true
+        "typing": false
       },
       {
         "text": "Computer vision is AI that \"sees\" things. It can find logos or landmarks in the blurry background of your videos. While you look at a face, the AI looks at the data behind you.",
         "imageUrl": "https://images.code.org/6859d5b208397ff6ce8b4db1cdc5d3c4-two.jpg",
         "key": "thinking_critically_lesson8_level1a_2026-e7abd69c-9e43-4cb7-a607-3612f34a9d27",
-        "typing": true,
+        "typing": false,
         "links": [
           {
             "text": "< **BACK**",
@@ -116,7 +116,7 @@
         "text": "AI can make a profile of you. It looks at when you are online, your local teams, and the weather in your photos. It could use these patterns to guess who you are and where you live.",
         "imageUrl": "https://images.code.org/994e8d56afde19c050755c50e5f264bb-three.jpg",
         "key": "thinking_critically_lesson8_level1a_2026-b73c1718-f5c9-45ce-ba98-07f63a5df2a3",
-        "typing": true,
+        "typing": false,
         "links": [
           {
             "text": "< **BACK**",
@@ -152,7 +152,7 @@
         "text": "AI doesn't just see a sunset. It reads the hidden tag that shows exactly where you stood to take the photo.",
         "imageUrl": "https://images.code.org/b8cd915a033afbe02355c243e1590b95-one-one.jpg",
         "key": "thinking_critically_lesson8_level1a_2026-b82b8d90-07cd-4bdb-b2d9-88a92552312f",
-        "typing": true,
+        "typing": false,
         "links": [
           {
             "text": "< **BACK**",
@@ -162,13 +162,14 @@
             "width": 11
           }
         ],
-        "layout": "text-bottom-right"
+        "layout": "text-bottom-right",
+        "showContinueButton": true
       },
       {
         "text": "If you leave Location Services on for your camera, you share your home address with every photo you post.",
         "imageUrl": "https://images.code.org/8a6d741ee123b362f5935f0b473749fc-one-two.jpg",
         "key": "thinking_critically_lesson8_level1a_2026-88dd4601-08d5-49ab-ae9e-5921634e512b",
-        "typing": true,
+        "typing": false,
         "links": [
           {
             "text": "< **BACK**",
@@ -178,13 +179,14 @@
             "width": 11
           }
         ],
-        "layout": "text-top-center"
+        "layout": "text-top-center",
+        "showContinueButton": true
       },
       {
         "text": "Before posting, ask: Does this file have hidden info inside it?",
         "imageUrl": "https://images.code.org/627e49c3372dec5c6aa723e6803b2179-one-three.jpg",
         "key": "thinking_critically_lesson8_level1a_2026-41b1747e-c624-4681-bb54-3d915970eed0",
-        "typing": true,
+        "typing": false,
         "links": [
           {
             "text": "< **BACK**",
@@ -194,7 +196,8 @@
             "width": 11
           }
         ],
-        "layout": "text-bottom-center"
+        "layout": "text-bottom-center",
+        "showContinueButton": true
       },
       {
         "text": "AI can scan a tiny logo on a hat in your room. It checks a list of local stores to guess exactly where you live.",
@@ -209,8 +212,9 @@
             "width": 11
           }
         ],
-        "typing": true,
-        "layout": "text-top-center"
+        "typing": false,
+        "layout": "text-top-center",
+        "showContinueButton": true
       },
       {
         "text": "Use a background blur or a virtual wall during calls. This keeps your private home hidden.",
@@ -225,8 +229,9 @@
             "width": 11
           }
         ],
-        "typing": true,
-        "layout": "text-top-center"
+        "typing": false,
+        "layout": "text-top-center",
+        "showContinueButton": true
       },
       {
         "text": "Treat your camera view like a public art piece. Scan the background for clues that show your private life.",
@@ -241,8 +246,9 @@
             "width": 11
           }
         ],
-        "typing": true,
-        "layout": "text-bottom-right"
+        "typing": false,
+        "layout": "text-bottom-right",
+        "showContinueButton": true
       },
       {
         "text": "AI can look at your public comments to guess your private beliefs, like your religion or politics.",
@@ -257,8 +263,9 @@
             "width": 11
           }
         ],
-        "typing": true,
-        "layout": "text-bottom-right"
+        "typing": false,
+        "layout": "text-bottom-right",
+        "showContinueButton": true
       },
       {
         "text": "Sorting data makes your feeds more relevant, but it also means an algorithm knows you better than some of your friends.",
@@ -273,8 +280,9 @@
             "width": 11
           }
         ],
-        "typing": true,
-        "layout": "text-bottom-right"
+        "typing": false,
+        "layout": "text-bottom-right",
+        "showContinueButton": true
       },
       {
         "text": "AI systems are shaped by the data you provide. Choose what parts of your identity you want to be discoverable.",
@@ -290,13 +298,14 @@
           }
         ],
         "layout": "text-bottom-center",
-        "typing": true
+        "typing": false,
+        "showContinueButton": true
       }
     ],
     "display_name": "Hidden Data?",
     "bubble_choice_description": "Explore data that might be hidden within images and video",
     "thumbnail_url": "https://images.code.org/10f07a9638e7ed5808cdf879552649bf-one-three.jpg"
   },
-  "audit_log": "[{\"changed_at\":\"2026-04-27T20:43:03.789+00:00\",\"changed\":[\"cloned from \\\"thinking_critically_lesson8_level1a_2026\\\"\"],\"cloned_from\":\"thinking_critically_lesson8_level1a_2026\"},{\"changed_at\":\"2026-04-27 20:58:58 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-27 21:05:48 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-27 21:07:58 +0000\",\"changed\":[],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2026-04-27T20:43:03.789+00:00\",\"changed\":[\"cloned from \\\"thinking_critically_lesson8_level1a_2026\\\"\"],\"cloned_from\":\"thinking_critically_lesson8_level1a_2026\"},{\"changed_at\":\"2026-04-27 20:58:58 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-27 21:05:48 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-27 21:07:58 +0000\",\"changed\":[],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-30 18:29:02 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-30 18:30:12 +0000\",\"changed\":[],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"}]"
 }]]></config>
 </Panels>
