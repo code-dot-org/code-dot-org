@@ -10,10 +10,12 @@ import {registerReducers} from '@cdo/apps/redux';
 import instructionsDialog from '@cdo/apps/redux/instructionsDialog';
 import ExpandableImageDialog from '@cdo/apps/templates/lessonOverview/ExpandableImageDialog';
 import StudentLessonOverview from '@cdo/apps/templates/lessonOverview/StudentLessonOverview';
+import {prepareBlocklyForEmbeddingAllEnvironments} from '@cdo/apps/templates/utils/embeddedBlocklyUtils';
 import {createReactRoot} from '@cdo/apps/util/createReactRoot';
 import getScriptData from '@cdo/apps/util/getScriptData';
 
 $(document).ready(function () {
+  prepareBlocklyForEmbeddingAllEnvironments();
   displayLessonOverview();
   prepareExpandableImageDialog();
 });
