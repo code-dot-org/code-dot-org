@@ -64,8 +64,8 @@
             "id": "hhOY46IDv6yCMIADoafXX",
             "type": "shape",
             "position": {
-              "x": -593.3250157103103,
-              "y": 854.0724450348112
+              "x": -550.8897687143156,
+              "y": 845.2927387597778
             },
             "style": {
               "width": 271.887796805218,
@@ -291,8 +291,8 @@
             "id": "qVZ-BbTsuF78bY6Q5H27e",
             "type": "text",
             "position": {
-              "x": -423.3188617522435,
-              "y": 961.0714386496302
+              "x": -377.9570459979044,
+              "y": 949.3651636162523
             },
             "data": {
               "text": "makeBasket = true",
@@ -547,6 +547,46 @@
               "width": 10,
               "height": 10
             }
+          },
+          {
+            "id": "8d482d4a-8fa5-4678-9bff-dc5793d8202e",
+            "type": "text",
+            "data": {
+              "text": "Yes"
+            },
+            "position": {
+              "x": -139.657510165749,
+              "y": 607.9284981041819
+            },
+            "measured": {
+              "width": 58,
+              "height": 39
+            },
+            "dragging": false,
+            "selected": true,
+            "domAttributes": {
+              "tabIndex": 0
+            }
+          },
+          {
+            "id": "bb1b4285-8806-4bb9-a212-bfb49be4ef83",
+            "type": "text",
+            "data": {
+              "text": "No"
+            },
+            "position": {
+              "x": -375.24629521247806,
+              "y": 771.8163485714716
+            },
+            "measured": {
+              "width": 58,
+              "height": 39
+            },
+            "dragging": false,
+            "selected": false,
+            "domAttributes": {
+              "tabIndex": -1
+            }
           }
         ],
         "edges": [
@@ -618,12 +658,22 @@
             "markerEnd": {
               "type": "arrowclosed"
             }
+          },
+          {
+            "source": "hhOY46IDv6yCMIADoafXX",
+            "sourceHandle": "left-source",
+            "target": "q6wJmbUdH7s4NOF2InDwp",
+            "targetHandle": "left-target",
+            "markerEnd": {
+              "type": "arrowclosed"
+            },
+            "id": "xy-edge__hhOY46IDv6yCMIADoafXXleft-source-q6wJmbUdH7s4NOF2InDwpleft-target"
           }
         ],
         "viewport": {
-          "x": 1182.4411269289653,
-          "y": 43.545214343036264,
-          "zoom": 0.6833941605839416
+          "x": 1051.7012517450908,
+          "y": 706.4102502803523,
+          "zoom": 0.5
         }
       }
     },
@@ -2296,6 +2346,6 @@
     "name_suffix": "_2026"
   },
   "published": true,
-  "audit_log": "[{\"changed_at\":\"2026-04-01T21:39:55.967+00:00\",\"changed\":[\"cloned from \\\"iterating-with-ai-lesson1-level7-test_2025-pilot\\\"\"],\"cloned_from\":\"iterating-with-ai-lesson1-level7-test_2025-pilot\"},{\"changed_at\":\"2026-05-01 14:38:15 -0400\",\"changed\":[\"start_sources\"],\"changed_by_id\":1,\"changed_by_email\":\"levelbuilder@dev.com\"}]"
+  "audit_log": "[{\"changed_at\":\"2026-04-01T21:39:55.967+00:00\",\"changed\":[\"cloned from \\\"iterating-with-ai-lesson1-level7-test_2025-pilot\\\"\"],\"cloned_from\":\"iterating-with-ai-lesson1-level7-test_2025-pilot\"},{\"changed_at\":\"2026-05-01 14:38:15 -0400\",\"changed\":[\"start_sources\"],\"changed_by_id\":1,\"changed_by_email\":\"levelbuilder@dev.com\"},{\"changed_at\":\"2026-05-01 14:50:11 -0400\",\"changed\":[\"start_sources\"],\"changed_by_id\":1,\"changed_by_email\":\"levelbuilder@dev.com\"}]"
 }]]></config>
 </Sketchlab>
