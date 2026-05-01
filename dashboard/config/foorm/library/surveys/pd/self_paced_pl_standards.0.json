@@ -316,7 +316,7 @@
           "columns": [
             {
               "value": "1",
-              "text": "1 - Not"
+              "text": "1 - Not helpful"
             },
             {
               "value": "2",
@@ -340,7 +340,7 @@
             },
             {
               "value": "7",
-              "text": "7 - Very"
+              "text": "7 - Very helpful"
             }
           ],
           "rows": [

@@ -1,0 +1,55 @@
+<Aichat>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 71,
+  "created_at": "2026-04-30T17:44:38.000Z",
+  "level_num": "custom",
+  "user_id": 18603,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "##The UX (User Experience) Researcher\r\n\r\nThis chatbot wants to make sure your guide is easy for your audience to use without getting a headache.\r\n\r\n* **Import** your guide from the Backpack so the bot can see what you are working on.\r\n\r\n* **Tell** the bot who your audience is. (Are you writing for gamers? Teachers? Skeptical teens?)\r\n\r\n* **Ask** for a readability check! Try asking: \"Is this too much text?\" or \"Will my audience understand these big words?\"\r\n\r\n* **Take** the advice. If the UX Researcher says it's confusing, try breaking long paragraphs into shorter bullet points!",
+    "offer_browser_tts": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "aichat_settings": {
+      "initialCustomizations": {
+        "selectedModelId": "gemini-2.5-flash",
+        "temperature": 0.7,
+        "systemPrompt": "",
+        "retrievalContexts": [
+
+        ],
+        "modelCardInfo": {
+          "botName": "",
+          "description": "",
+          "intendedUse": "",
+          "limitationsAndWarnings": "",
+          "testingAndEvaluation": "",
+          "exampleTopics": [
+
+          ],
+          "isPublished": false
+        }
+      },
+      "visibilities": {
+        "selectedModelId": "hidden",
+        "temperature": "hidden",
+        "systemPrompt": "hidden",
+        "retrievalContexts": "hidden",
+        "modelCardInfo": "hidden"
+      },
+      "levelSystemPrompt": "CRITICAL INPUT REQUIREMENT: > Before providing any feedback, you must verify that the student has actually shared their Sketch Lab project with you (either by uploading an image/screenshot of their canvas or pasting the text/layout description of their guide).\n\nIf the student HAS shared their project: Proceed with your persona instructions and provide feedback.\n\nIf the student HAS NOT shared their project: DO NOT give generic advice. Stop, stay in character, and politely ask them to upload their project or paste their content so you have something to review.\nRole: You are the \"UX (User Experience) Researcher,\" a friendly but analytical professional whose job is to make sure digital products are easy for people to use. You are helping a middle school student who is creating a visual Project Guide about AI.Goal: Your focus is on the \"Reader\" perspective. You want to ensure the student's writing is clear, easy to follow, and perfectly tailored to their chosen audience.  Instructions:Tone: Encouraging, curious, and user-focused. Use phrases like \"As a user...\" or \"Thinking about your audience...\"\n* Review: When the student shares their text or guide description, check if it makes sense for their specific target audience (which they should have defined in their \"Your Audience\" box).  Pushback: If the text is too dense (a \"wall of text\"), uses confusing jargon, or doesn't match the audience, gently call it out.Actionable Advice: Suggest they break up long paragraphs or use bullet points to avoid \"cognitive overload.\"Constraint: DO NOT rewrite their text for them. Give them 1-2 specific points of feedback and always end with a question that makes them think about the reader's experience.\nInteraction Guidelines\nTone: High-energy and helpful. Use simple, direct language.\nReading Level: Keep text around the 850L Lexile range.\nClarity: Use literal wording. Avoid hard idioms or complex jargon.\nBrevity: Keep sentences short. Be succinct.\n",
+      "hidePresentationPanel": false,
+      "availableModelIds": [
+        "gemini-2.5-flash"
+      ],
+      "multimodalEnabled": true
+    },
+    "display_name": "The \"Reader\"",
+    "bubble_choice_description": "Like a **UX (User Experience) Researcher**, looking at how your audience might interpret your guide.",
+    "thumbnail_url": "https://images.code.org/6631bf4a7fb6bbb915876fd49f037b5a-1.jpg",
+    "name_suffix": "_2026"
+  },
+  "audit_log": "[{\"changed_at\":\"2026-04-30T17:44:38.857+00:00\",\"changed\":[\"cloned from \\\"aid-thinking-critically-lesson9-level1a_2026-test_2026-pilot_2026\\\"\"],\"cloned_from\":\"aid-thinking-critically-lesson9-level1a_2026-test_2026-pilot_2026\"},{\"changed_at\":\"2026-04-30 17:57:32 +0000\",\"changed\":[\"long_instructions\",\"aichat_settings\",\"display_name\",\"bubble_choice_description\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-30 18:02:36 +0000\",\"changed\":[\"thumbnail_url\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-30 18:17:23 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"}]"
+}]]></config>
+</Aichat>
