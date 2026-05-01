@@ -21,7 +21,8 @@ const CONTROLS_WIDTH_PX = 60;
 // React Flow normally stacks the toolbar at its anchor node's zIndex + 1.
 // Pin the toolbar to a large constant so it always
 // floats above the canvas regardless of the anchor's zIndex.
-const TOOLBAR_Z_INDEX = 1000;
+// 2147483647 is the max signed 32-bit integer, a commonly used CSS z-index cap.
+const TOOLBAR_Z_INDEX = 2147483647;
 
 interface ToolbarShellProps {
   target: ToolbarTarget;

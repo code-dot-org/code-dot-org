@@ -309,13 +309,10 @@ export default function ReactFlowCanvas({
       clearTimeout(saveTimerRef.current);
     }
     saveTimerRef.current = setTimeout(() => {
-      // updateNode/updateEdge from useReactFlow round-trip through the
+      // updateNode/updateEdge from useReactFlow round-trips through React Flow's internal
       // store, which mirrors the displayNodes/displayEdges we render.
-      // That spreads display-only fields (domAttributes — including the
-      // onMouseDown closure on line edges — className, selected) back
-      // into our canonical state. Strip them before persisting so
-      // structuredClone of the source on reload doesn't choke on the
-      // function.
+      // That spreads display-only fields (including domAttributes, which can include a function)
+      // back into our state, which can then fail to clone. Strip them before persisting.
       const source: SketchlabReactFlowSource = {
         nodes: nodes.map(stripDisplayFields) as SketchlabReactFlowNode[],
         edges: edges.map(stripDisplayFields) as SketchlabReactFlowEdge[],

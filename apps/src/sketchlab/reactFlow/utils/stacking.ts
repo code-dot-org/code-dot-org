@@ -4,14 +4,13 @@
 //
 // We exclude the target from the max/min comparison so we only bump the
 // zIndex when the target isn't already strictly above (or below) the rest.
-// If the target already clears the others, return its current value.
 
 interface ZItem {
   id: string;
   zIndex?: number;
 }
 
-function zOf(item: ZItem): number {
+function getZIndex(item: ZItem): number {
   return item.zIndex ?? 0;
 }
 
@@ -19,38 +18,38 @@ export function nextFrontZIndex(
   items: readonly ZItem[],
   targetId: string
 ): number {
-  let maxOther: number | null = null;
-  let targetZ = 0;
+  let maxOtherZIndex: number | null = null;
+  let targetZIndex = 0;
   for (const item of items) {
     if (item.id === targetId) {
-      targetZ = zOf(item);
+      targetZIndex = getZIndex(item);
       continue;
     }
-    const z = zOf(item);
-    if (maxOther === null || z > maxOther) {
-      maxOther = z;
+    const zIndex = getZIndex(item);
+    if (maxOtherZIndex === null || zIndex > maxOtherZIndex) {
+      maxOtherZIndex = zIndex;
     }
   }
-  if (maxOther === null) return targetZ;
-  return targetZ > maxOther ? targetZ : maxOther + 1;
+  if (maxOtherZIndex === null) return targetZIndex;
+  return targetZIndex > maxOtherZIndex ? targetZIndex : maxOtherZIndex + 1;
 }
 
 export function nextBackZIndex(
   items: readonly ZItem[],
   targetId: string
 ): number {
-  let minOther: number | null = null;
-  let targetZ = 0;
+  let minOtherZIndex: number | null = null;
+  let targetZIndex = 0;
   for (const item of items) {
     if (item.id === targetId) {
-      targetZ = zOf(item);
+      targetZIndex = getZIndex(item);
       continue;
     }
-    const z = zOf(item);
-    if (minOther === null || z < minOther) {
-      minOther = z;
+    const zIndex = getZIndex(item);
+    if (minOtherZIndex === null || zIndex < minOtherZIndex) {
+      minOtherZIndex = zIndex;
     }
   }
-  if (minOther === null) return targetZ;
-  return targetZ < minOther ? targetZ : minOther - 1;
+  if (minOtherZIndex === null) return targetZIndex;
+  return targetZIndex < minOtherZIndex ? targetZIndex : minOtherZIndex - 1;
 }
