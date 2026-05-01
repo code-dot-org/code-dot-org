@@ -7,7 +7,7 @@ import React from 'react';
 import {SketchlabReactFlowEdge} from '@cdo/apps/lab2/types';
 
 import {isArrowEdge} from '../utils/lineEdges';
-import {nextBackZIndex, nextFrontZIndex} from '../utils/stacking';
+import {newBackZIndex, newFrontZIndex} from '../utils/stacking';
 
 import ActionsGroup from './ActionsGroup';
 import SwatchGroup from './SwatchGroup';
@@ -205,11 +205,11 @@ export default function LineEdgeToolbar({
         onDelete={() => deleteElements({edges: [{id: edge.id}]})}
         onBringToFront={() => {
           const items = [...getNodes(), ...getEdges()];
-          updateEdge(edge.id, {zIndex: nextFrontZIndex(items, edge.id)});
+          updateEdge(edge.id, {zIndex: newFrontZIndex(items, edge.id)});
         }}
         onSendToBack={() => {
           const items = [...getNodes(), ...getEdges()];
-          updateEdge(edge.id, {zIndex: nextBackZIndex(items, edge.id)});
+          updateEdge(edge.id, {zIndex: newBackZIndex(items, edge.id)});
         }}
       />
     </ToolbarShell>

@@ -14,7 +14,7 @@ function getZIndex(item: ZItem): number {
   return item.zIndex ?? 0;
 }
 
-export function nextFrontZIndex(
+export function newFrontZIndex(
   items: readonly ZItem[],
   targetId: string
 ): number {
@@ -34,7 +34,7 @@ export function nextFrontZIndex(
   return targetZIndex > maxOtherZIndex ? targetZIndex : maxOtherZIndex + 1;
 }
 
-export function nextBackZIndex(
+export function newBackZIndex(
   items: readonly ZItem[],
   targetId: string
 ): number {

@@ -1,7 +1,7 @@
 import {useReactFlow} from '@xyflow/react';
 import React from 'react';
 
-import {nextBackZIndex, nextFrontZIndex} from '../utils/stacking';
+import {newBackZIndex, newFrontZIndex} from '../utils/stacking';
 
 import ActionsGroup from './ActionsGroup';
 
@@ -18,11 +18,11 @@ export default function NodeActionsGroup({nodeId}: NodeActionsGroupProps) {
       onLock={() => updateNodeData(nodeId, {locked: true})}
       onBringToFront={() => {
         const items = [...getNodes(), ...getEdges()];
-        updateNode(nodeId, {zIndex: nextFrontZIndex(items, nodeId)});
+        updateNode(nodeId, {zIndex: newFrontZIndex(items, nodeId)});
       }}
       onSendToBack={() => {
         const items = [...getNodes(), ...getEdges()];
-        updateNode(nodeId, {zIndex: nextBackZIndex(items, nodeId)});
+        updateNode(nodeId, {zIndex: newBackZIndex(items, nodeId)});
       }}
     />
   );
