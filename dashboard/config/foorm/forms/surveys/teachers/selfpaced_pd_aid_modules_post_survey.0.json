@@ -37,9 +37,9 @@
         },
         {
           "type": "rating",
-          "name": "comfort_supporting_students_learn_designing_building_ai",
-          "visibleIf": "{module} = 'Designing & Building with AI'",
-          "title": "After completing this module, I am more comfortable in my ability to support students in navigating the AI Foundations curriculum, identifying foundational AI concepts, and understanding best practices for managing AI in the classroom.",
+          "name": "comfort_supporting_students_thinking_critically_about_ai",
+          "visibleIf": "{module} = 'Thinking Critically about AI'",
+          "title": "After completing this module, I am more comfortable in my ability to support students in analyzing AI outputs for accuracy, safety, and ethical implications; and in understanding how human decisions can influence AI behavior",
           "rateCount": 7,
           "rateMax": 7,
           "minRateDescription": "Less comfortable",
@@ -47,9 +47,9 @@
         },
         {
           "type": "rating",
-          "name": "comfort_supporting_students_learn_ai_generated_design",
-          "visibleIf": "{module} = 'AI-Generated Design'",
-          "title": "After completing this module, I am more comfortable in my ability to support students with human-centered design practices; foundational web development skills using AI to build HTML & CSS; and with visual planning using sitemaps and wireframes for accessibility & responsive design.",
+          "name": "comfort_supporting_students_ai_and_machine_learning",
+          "visibleIf": "{module} = 'AI and Machine Learning'",
+          "title": "After completing this module, I am more comfortable in my ability to support students in their understanding of AI and machine learning; and in how to train machine learning models",
           "rateCount": 7,
           "rateMax": 7,
           "minRateDescription": "Less comfortable",
@@ -57,9 +57,9 @@
         },
         {
           "type": "rating",
-          "name": "comfort_supporting_students_learn_ai_algorithmic_decisions",
-          "visibleIf": "{module} = 'AI and Algorithmic Decisions'",
-          "title": "After completing this module, I am more comfortable in my ability to support students’ understanding of event-driven programming; visual planning with flowcharts as tools for mapping algorithms and predicting program behavior; and foundational JavaScript skills.",
+          "name": "comfort_supporting_students_programming_with_music_lab",
+          "visibleIf": "{module} = 'Programming with Music Lab'",
+          "title": "After completing this module, I am more comfortable in my ability to support students in their understanding of relevant musical terminology, and in exploring programming concepts through music",
           "rateCount": 7,
           "rateMax": 7,
           "minRateDescription": "Less comfortable",
@@ -67,9 +67,9 @@
         },
         {
           "type": "rating",
-          "name": "comfort_supporting_students_learn_building_data_driven_systems_with_ai",
-          "visibleIf": "{module} = 'Building Data-Driven Systems with AI'",
-          "title": "After completing this module, I am more comfortable in my ability to support students’ understanding of arrays, objects, and schemas in real-world data; modeling core data-structure skills; and common array and object operations.",
+          "name": "comfort_supporting_students_interactive_animations_and_games",
+          "visibleIf": "{module} = 'Interactive Animations and Games'",
+          "title": "After completing this module, I am more comfortable in my ability to support students in how to use Game Lab, and in their understanding of loops and conditionals in game design",
           "rateCount": 7,
           "rateMax": 7,
           "minRateDescription": "Less comfortable",
@@ -77,9 +77,9 @@
         },
         {
           "type": "rating",
-          "name": "comfort_supporting_students_learn_iterating_with_ai",
-          "visibleIf": "{module} = 'Iterating with AI'",
-          "title": "After completing this module, I am more comfortable in my ability to support students’ understanding of iteration and loops; using loops to create interactive features such as filters, searches, and views; and using AI-generated scaffolds that emphasize accountability in data choices and code.",
+          "name": "comfort_supporting_students_the_design_process",
+          "visibleIf": "{module} = 'The Design Process'",
+          "title": "After completing this module, I am more comfortable in my ability to support students in their understanding of the design process, and in building prototypes in App Lab",
           "rateCount": 7,
           "rateMax": 7,
           "minRateDescription": "Less comfortable",
@@ -87,9 +87,9 @@
         },
         {
           "type": "rating",
-          "name": "comfort_supporting_students_learn_designing_reliable_apps",
-          "visibleIf": "{module} = 'Designing Reliable Apps with AI and APIs'",
-          "title": "After completing this module, I am more comfortable in my ability to support students using JavaScript to get data from external APIs; understanding of APIs; and understanding of local data versus API data.",
+          "name": "comfort_supporting_students_data_and_society",
+          "visibleIf": "{module} = 'Data and Society'",
+          "title": "After completing this module, I am more comfortable in my ability to support students in applying the problem solving process to solve data problems; in their understanding of how to represent text, images, and numbers using binary; and in their understanding of how to keep data private",
           "rateCount": 7,
           "rateMax": 7,
           "minRateDescription": "Less comfortable",
@@ -97,9 +97,9 @@
         },
         {
           "type": "rating",
-          "name": "comfort_supporting_students_learn_web_apps_with_ai_capstone",
-          "visibleIf": "{module} = 'Web Apps with AI Capstone'",
-          "title": "After completing this module, I am more comfortable in my ability to support students in designing and building a complete web app with a clear purpose and audience; and in understanding the ethical implications of their application.",
+          "name": "comfort_supporting_students_creating_apps_with_devices_microbit",
+          "visibleIf": "{module} = 'Creating Apps with Devices (micro:bit)'",
+          "title": "After completing this module, I am more comfortable in my ability to support students in using a physical device to prototype and create apps, and in their understanding of key CS concepts in the unit",
           "rateCount": 7,
           "rateMax": 7,
           "minRateDescription": "Less comfortable",
@@ -107,23 +107,29 @@
         },
         {
           "type": "rating",
-          "name": "know_what_students_learn_curriculum",
-          "visibleIf": "{module} = 'Designing & Building with AI'",
-          "title": "After completing this professional learning experience, I understand what my students will learn in Code.org's {module} curriculum.",
+          "name": "comfort_supporting_students_creating_apps_with_devices_circuit",
+          "visibleIf": "{module} = 'Creating Apps with Devices (Circuit Playground)'",
+          "title": "After completing this module, I am more comfortable in my ability to support students in using a physical device to prototype and create apps, and in their understanding of key CS concepts in the unit",
           "rateCount": 7,
           "rateMax": 7,
-          "minRateDescription": "Strongly disagree",
-          "maxRateDescription": "Strongly agree"
+          "minRateDescription": "Less comfortable",
+          "maxRateDescription": "Much more comfortable"
         },
         {
           "type": "rating",
-          "name": "know_what_students_learn_module",
-          "visibleIf": "{module} <> 'Designing & Building with AI'",
-          "title": "After completing this professional learning experience, I understand what my students will learn in Code.org's {module} unit.",
+          "name": "comfort_supporting_students_preparing_to_teach_web_development",
+          "visibleIf": "{module} = 'Preparing to Teach Web Development'",
+          "title": "After completing this module, I am more comfortable in my ability to support students in their understanding of key web development concepts in the unit, and in their understanding of how to use Web Lab",
           "rateCount": 7,
           "rateMax": 7,
-          "minRateDescription": "Strongly disagree",
-          "maxRateDescription": "Strongly agree"
+          "minRateDescription": "Less comfortable",
+          "maxRateDescription": "Much more comfortable"
+        },
+        {
+          "type": "library_item",
+          "library_name": "surveys/pd/self_paced_pl_standards",
+          "library_version": 0,
+          "name": "know_what_students_learn_module"
         },
         {
           "type": "library_item",
@@ -140,13 +146,23 @@
         },
         {
           "type": "rating",
-          "name": "familiar_student_programming_environments",
+          "name": "familiar_student_programming_environments_ai_and_computing",
           "title": "After completing this module, I am more familiar with the programming environments and learning tools that students will use in the {module} curriculum.",
           "rateCount": 7,
           "rateMax": 7,
           "minRateDescription": "Strongly disagree",
           "maxRateDescription": "Strongly agree",
-          "visibleIf": "{module} <> 'Cybersecurity and Global Impacts'"
+          "visibleIf": "{module} = 'Exploring AI & Computing'"
+        },
+        {
+          "type": "rating",
+          "name": "confidence_use_skills_ai_and_computing",
+          "title": "After completing this module, do you feel more or less confident than before about using the skills you learned in this module?",
+          "rateCount": 7,
+          "rateMax": 7,
+          "minRateDescription": "Less confident",
+          "maxRateDescription": "Much more confident",
+          "visibleIf": "{module} = 'Exploring AI & Computing'"
         },
         {
           "type": "library_item",
@@ -154,6 +170,16 @@
           "library_version": 0,
           "name": "plan_to_teach",
           "natalia_comment": "INCLUDE ONLY IF MODULE IS ABOUT CS CURRICULUM"
+        },
+        {
+          "type": "rating",
+          "name": "plan_use_skills_learned_ai_and_computing",
+          "title": "Are you planning to use what you learned in this module in your role as an educator?",
+          "rateCount": 7,
+          "rateMax": 7,
+          "minRateDescription": "Not at all",
+          "maxRateDescription": "Yes, definitely",
+          "visibleIf": "{module} = 'Exploring AI & Computing'"
         },
         {
           "type": "library_item",
@@ -188,10 +214,14 @@
           "name": "how_long_to_complete_module"
         },
         {
-          "type": "library_item",
-          "library_name": "surveys/pd/self_paced_pl_standards",
-          "library_version": 0,
-          "name": "skills_content_relevant_role"
+          "type": "rating",
+          "name": "skills_content_relevant_role_ai_and_computing",
+          "title": "Was the content of the module relevant to your role?",
+          "rateCount": 7,
+          "rateMax": 7,
+          "minRateDescription": "Not relevant at all",
+          "maxRateDescription": "Extremely relevant",
+          "visibleIf": "{module} = 'Exploring AI & Computing'"
         },
         {
           "type": "library_item",

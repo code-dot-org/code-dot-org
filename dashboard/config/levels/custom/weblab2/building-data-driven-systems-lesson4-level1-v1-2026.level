@@ -1,12 +1,12 @@
 <Weblab2>
   <config><![CDATA[{
   "game_id": 74,
-  "created_at": "2026-04-29T04:09:00.000Z",
+  "created_at": "2026-05-01T06:52:22.000Z",
   "level_num": "custom",
   "user_id": 1574,
   "properties": {
     "encrypted": "false",
-    "long_instructions": "## Explore a Card\r\n\r\n### Do This:\r\n\r\n1. Look at the card on the screen.\r\n\r\n2. Find the function call (for example, `createCard(...)`).\r\n\r\n3. Count how many values are passed into the function.\r\n\r\n4. Match each value to the card:\r\n   * Which value controls the image?\r\n   * Which value controls the title?\r\n   * Which value controls the description?\r\n\r\n5. Think about:\r\n   * What does one card represent?\r\n   * What would need to change to show a different card?\r\n\r\n### Reminder:\r\n- Each value passed into the function controls part of the card\r\n- One function call creates one item\r\n",
+    "long_instructions": "## Explore a Backpack\r\n\r\n### Do This:\r\n\r\n1. Look at the backpack card on the screen.\r\n\r\n2. Find the `backpack` object in `script.js`.\r\n\r\n3. Count how many properties are in the object.\r\n\r\n4. Match each property to the card:\r\n   - Which property controls the value \"blue\"?\r\n   - Which property controls the value \"20L\"?\r\n   - Which property controls the value \"canvas\"?\r\n\r\n5. Think about:\r\n   - What does one backpack represent?\r\n   - What would need to change to show a different backpack?\r\n\r\n### Reminder:\r\n- Each property controls part of the backpack  \r\n- One object represents one item  ",
     "submittable": "false",
     "hide_share_and_remix": "false",
     "disable_edit_run_for_submission": "false",
@@ -39,7 +39,7 @@
           "id": "1",
           "name": "index.html",
           "language": "html",
-          "contents": "<!DOCTYPE html>\n<html>\n  <head>\n    <meta charset=\"utf-8\" />\n    <title id=\"pageTitle\">Sneaker Drops</title>\n    <link rel=\"stylesheet\" href=\"style.css\" />\n  </head>\n  <body>\n    <main id=\"mainContainer\" class=\"page\">\n      <header id=\"header\">\n        <h1 id=\"heading\">Latest Sneaker Drops</h1>\n        <p id=\"subtitle\">Check out today’s featured sneakers.</p>\n      </header>\n\n      <section id=\"cardContainer\" class=\"card-container\"></section>\n    </main>\n\n    <script src=\"helpers.js\"></script>\n    <script src=\"script.js\"></script>\n  </body>\n</html>",
+          "contents": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"UTF-8\">\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n  <title>Backpack</title>\n  <link rel=\"stylesheet\" href=\"style.css\">\n</head>\n<body>\n\n  <div class=\"card\">\n    <h2>Backpack</h2>\n\n    <img id=\"display-image\" src=\"\" alt=\"Backpack\">\n\n    <div class=\"stats\">\n      <p>Color: <span id=\"display-color\"></span></p>\n      <p>Size: <span id=\"display-size\"></span></p>\n      <p>Material: <span id=\"display-material\"></span></p>\n    </div>\n  </div>\n\n  <script src=\"script.js\"></script>\n</body>\n</html>",
           "active": false,
           "folderId": "0"
         },
@@ -47,7 +47,7 @@
           "id": "2",
           "name": "style.css",
           "language": "css",
-          "contents": "body {\n  margin: 0;\n  font-family: Arial, sans-serif;\n  background: #eef1f6;\n  color: #14213d;\n}\n\n#mainContainer {\n  max-width: 1100px;\n  margin: 0 auto;\n  padding: 32px 16px 40px;\n}\n\n#header {\n  margin-bottom: 20px;\n}\n\n#heading {\n  margin: 0 0 8px;\n  font-size: 2rem;\n}\n\n#subtitle {\n  margin: 0;\n  font-size: 0.95rem;\n  color: #5f687a;\n}\n\n/* ---------- CARD VIEW ---------- */\n\n#cardContainer {\n  display: grid;\n  grid-template-columns: repeat(auto-fit, minmax(260px, 320px));\n  gap: 20px;\n}\n\n.card {\n  background: #ffffff;\n  border-radius: 16px;\n  padding: 12px;\n  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);\n}\n\n.card-image {\n  width: 100%;\n  height: 200px;\n  object-fit: cover;\n  border-radius: 12px;\n}\n\n.card-body {\n  padding: 12px 4px 0;\n}\n\n.card-title {\n  margin: 0 0 6px;\n  font-size: 1.4rem;\n}\n\n.card-description {\n  margin: 0 0 12px;\n  font-size: 0.9rem;\n  color: #5f687a;\n}\n\n.card-badge {\n  display: inline-block;\n  padding: 4px 10px;\n  border-radius: 8px;\n  background: #e6f4ea;\n  color: #2e7d32;\n  font-size: 0.75rem;\n  font-weight: 600;\n}",
+          "contents": "body {\n  margin: 0;\n  font-family: Arial, sans-serif;\n  background: #eef1f6;\n  color: #14213d;\n}\n\n#mainContainer {\n  max-width: 1100px;\n  margin: 0 auto;\n  padding: 32px 16px 40px;\n}\n\n#header {\n  margin-bottom: 20px;\n}\n\n#heading {\n  margin: 0 0 8px;\n  font-size: 2rem;\n}\n\n#subtitle {\n  margin: 0;\n  font-size: 0.95rem;\n  color: #5f687a;\n}\nimg {\n  width: 100%;\n  max-width: 200px;\n  display: block;\n  margin: 0 auto 10px;\n}\n/* ---------- CARD VIEW ---------- */\n\n#cardContainer {\n  display: grid;\n  grid-template-columns: repeat(auto-fit, minmax(260px, 320px));\n  gap: 20px;\n}\n\n.card {\n  background: #ffffff;\n  border-radius: 16px;\n  padding: 12px;\n  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);\n}\n\n.card-image {\n  width: 100%;\n  height: 200px;\n  object-fit: cover;\n  border-radius: 12px;\n}\n\n.card-body {\n  padding: 12px 4px 0;\n}\n\n.card-title {\n  margin: 0 0 6px;\n  font-size: 1.4rem;\n}\n\n.card-description {\n  margin: 0 0 12px;\n  font-size: 0.9rem;\n  color: #5f687a;\n}\n\n.card-badge {\n  display: inline-block;\n  padding: 4px 10px;\n  border-radius: 8px;\n  background: #e6f4ea;\n  color: #2e7d32;\n  font-size: 0.75rem;\n  font-weight: 600;\n}",
           "folderId": "0",
           "active": false
         },
@@ -55,7 +55,7 @@
           "id": "3",
           "name": "script.js",
           "language": "js",
-          "contents": "const image = \"images/sneaker1.png\";\nconst title = \"Air Max\";\nconst description = \"Red and white running shoe\";\nconst badge = \"Nike\";\n\ncreateCard(image, title, description, badge);",
+          "contents": "// Object\nconst backpack = {\n  image: \"images/backpack.png\",\n  color: \"blue\",\n  size: \"20L\",\n  material: \"canvas\"\n};\n\n// Display values\ndocument.getElementById(\"display-image\").src = backpack.image;\ndocument.getElementById(\"display-color\").textContent = backpack.color;\ndocument.getElementById(\"display-size\").textContent = backpack.size;\ndocument.getElementById(\"display-material\").textContent = backpack.material;",
           "folderId": "0",
           "active": true
         },
@@ -67,12 +67,12 @@
           "active": false,
           "type": "starter"
         },
-        "5": {
-          "id": "5",
-          "name": "sneaker1.png",
+        "6": {
+          "id": "6",
+          "name": "backpack.png",
           "contents": "",
           "folderId": "1",
-          "url": "/level_starter_assets/building-data-driven-systems-lesson2-level1a-v1-2026/uuid/07f4df17-b1bb-4eaf-98a3-b9ca469f4a8b.png",
+          "url": "/level_starter_assets/building-data-driven-systems-lesson4-level1-v1-2026/uuid/0fae9734-9293-49dc-98da-7fafb9550533.png",
           "type": "starter",
           "active": false
         }
@@ -101,6 +101,6 @@
     "thumbnail_url": "https://images.code.org/0b75730c0b783f52e0794b96af0c3da3-card.png"
   },
   "published": true,
-  "audit_log": "[{\"changed_at\":\"2026-04-29T04:09:00.661+00:00\",\"changed\":[\"cloned from \\\"building-data-driven-systems-lesson1-level4-v1-2026\\\"\"],\"cloned_from\":\"building-data-driven-systems-lesson1-level4-v1-2026\"},{\"changed_at\":\"2026-04-29 04:15:33 +0000\",\"changed\":[\"long_instructions\",\"ai_tutor_prompt_settings\",\"project_template_level_name\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-04-29 04:20:26 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-04-29 04:20:27 +0000\",\"changed\":[],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-04-29 04:35:54 +0000\",\"changed\":[\"thumbnail_url\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-04-30 04:05:26 +0000\",\"changed\":[\"thumbnail_url\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-04-30 04:06:16 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-04-30 04:06:16 +0000\",\"changed\":[],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-04-30 04:09:21 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-04-30 04:09:22 +0000\",\"changed\":[],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-04-30 04:09:22 +0000\",\"changed\":[],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-04-30 04:09:28 +0000\",\"changed\":[],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-04-30 04:09:28 +0000\",\"changed\":[],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-04-30 04:09:28 +0000\",\"changed\":[],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-04-30 19:56:39 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2026-05-01T06:52:22.199+00:00\",\"changed\":[\"cloned from \\\"building-data-driven-systems-lesson2-level1a-v1-2026\\\"\"],\"cloned_from\":\"building-data-driven-systems-lesson2-level1a-v1-2026\"},{\"changed_at\":\"2026-05-01 06:56:16 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-05-01 07:00:52 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-05-01 07:01:34 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-05-01 07:01:34 +0000\",\"changed\":[],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-05-01 07:01:34 +0000\",\"changed\":[],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-05-01 07:01:34 +0000\",\"changed\":[],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-05-01 07:01:34 +0000\",\"changed\":[],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"}]"
 }]]></config>
 </Weblab2>
