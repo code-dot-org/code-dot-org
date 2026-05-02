@@ -450,6 +450,7 @@
     "eslint-plugin-storybook": "^10.1.7",
     "glob": "^11.1.0",
     "globals": "catalog:",
+    "identity-obj-proxy": "^3.0.0",
     "jscodeshift": "^0.15.2",
     "jsdom": "catalog:",
     "postcss": "^8.5.10",
