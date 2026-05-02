@@ -242,29 +242,41 @@ export async function generateWeblab2Level(
     throw new Error('Model returned no instructions');
   }
 
-  const rootFolderId = createUuid();
+  // Weblab2 expects files to live directly in the implicit root folder "0"
+  // — `folders` stays empty and every file's `folderId` is "0". A nested
+  // folder with parentId "0" is technically valid, but the editor and
+  // preview parent-by-id walks don't surface files that are one level
+  // deeper than they expect, so they render as missing. See the
+  // pre-existing weblab2 levels under dashboard/config/levels/custom/weblab2
+  // for the canonical shape.
   const files: Record<string, object> = {};
-  let firstFileId: string | null = null;
+  const fileIds: string[] = [];
+  let activeFileId: string | null = null;
   for (const f of plan.files) {
     const id = createUuid();
-    if (!firstFileId) firstFileId = id;
+    fileIds.push(id);
+    // Activate index.html if present, otherwise the first file we saw.
+    if (!activeFileId || /^index\.html?$/i.test(f.name)) {
+      activeFileId = id;
+    }
     files[id] = {
       id,
       name: f.name,
       contents: f.contents,
-      folderId: rootFolderId,
+      folderId: '0',
       type: 'starter',
-      active: id === firstFileId,
+      active: false, // overwritten below for activeFileId
     };
+  }
+  if (activeFileId) {
+    files[activeFileId] = {...files[activeFileId], active: true};
   }
 
   return {
     startSources: {
-      folders: {
-        [rootFolderId]: {id: rootFolderId, name: '', parentId: '0', open: true},
-      },
+      folders: {},
       files,
-      openFiles: firstFileId ? [firstFileId] : [],
+      openFiles: fileIds,
     },
     longInstructions: plan.longInstructions.trim(),
   };
