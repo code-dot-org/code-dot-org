@@ -63,11 +63,11 @@
     "@types/tldjs": "^2",
     "@types/uuid": "^10.0.0",
     "eslint": "catalog:",
-    "eslint-plugin-react-hooks": "^7.0.1",
-    "eslint-plugin-react-refresh": "^0.4.24",
+    "eslint-plugin-react-hooks": "catalog:",
+    "eslint-plugin-react-refresh": "catalog:",
     "ky": "^1.14.3",
     "prettier": "catalog:",
-    "react": "^19.2.0",
+    "react": "catalog:",
     "typescript": "catalog:",
     "uuid": "^11.1.0",
     "vite": "catalog:",
@@ -78,7 +78,7 @@
   "peerDependencies": {
     "@sentry/browser": "^10.51.0",
     "ky": "^1.14.3",
-    "react": "^17.0.0 || ^18.0.0 || ^19.0.0",
+    "react": "^18.0.0 || ^19.0.0",
     "uuid": ">=8.3.2"
   }
 }

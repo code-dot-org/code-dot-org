@@ -415,7 +415,6 @@
     "extends": "@code-dot-org/lint-config/stylelint/index.mjs"
   },
   "dependencies": {
-    "@mui/material": "^7.3.2",
     "lodash": "^4.17.21",
     "react-player": "^3.4.0",
     "react-schemaorg": "^2.0.0"
@@ -425,6 +424,9 @@
     "@code-dot-org/component-library-styles": "workspace:*",
     "@code-dot-org/fonts": "workspace:*",
     "@code-dot-org/lint-config": "workspace:*",
+    "@emotion/react": "catalog:",
+    "@emotion/styled": "catalog:",
+    "@mui/material": "catalog:",
     "@release-it/conventional-changelog": "^10.0.0",
     "@swc/core": "^1.9.3",
     "@swc/jest": "^0.2.37",
@@ -435,8 +437,8 @@
     "@types/jest": "^29.5.14",
     "@types/lodash": "^4",
     "@types/node": "catalog:",
-    "@types/react": "^18.3.12",
-    "@types/react-dom": "^18.3.1",
+    "@types/react": "catalog:",
+    "@types/react-dom": "catalog:",
     "classnames": "catalog:",
     "clean-package": "^2.2.0",
     "esbuild-sass-plugin": "^3.3.1",
@@ -450,8 +452,8 @@
     "jscodeshift": "^0.15.2",
     "postcss": "^8.4.49",
     "postcss-modules": "^6.0.1",
-    "react": "^18.3.1",
-    "react-dom": "^18.3.1",
+    "react": "catalog:",
+    "react-dom": "catalog:",
     "release-it": "^18.1.2",
     "rimraf": "^6.0.1",
     "schema-dts": "^1.1.5",
@@ -467,9 +469,12 @@
     "vite-plugin-lib-inject-css": "^2.2.2"
   },
   "peerDependencies": {
+    "@emotion/react": "^11.0.0",
+    "@emotion/styled": "^11.0.0",
+    "@mui/material": "^7.0.0",
     "classnames": "^2.5.1",
-    "react": ">=16",
-    "react-dom": ">=16",
+    "react": "^18.0.0 || ^19.0.0",
+    "react-dom": "^18.0.0 || ^19.0.0",
     "swiper": "^11.0.5"
   },
   "engines": {

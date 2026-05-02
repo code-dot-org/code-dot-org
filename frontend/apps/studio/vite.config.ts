@@ -35,11 +35,7 @@ export default defineConfig(({mode}) => {
         target: 'react',
         autoCodeSplitting: true,
       }),
-      react({
-        babel: {
-          plugins: [['babel-plugin-react-compiler']],
-        },
-      }),
+      react(),
     ],
   };
 });
