@@ -47,6 +47,18 @@
   gap: 12px;
 }
 
+.levelCardUnsupported {
+  background: #f3f3f3;
+  border-style: dashed;
+}
+
+.unsupportedNote {
+  margin: 0;
+  font-style: italic;
+  color: #555;
+  font-size: 13px;
+}
+
 .levelCardHeader {
   display: flex;
   align-items: center;

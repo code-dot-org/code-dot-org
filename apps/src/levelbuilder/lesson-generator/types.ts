@@ -13,6 +13,22 @@ export interface LevelSpec {
   // decide whether to default `generate` on or off as the user edits.
   // Undefined means the level has never been generated.
   lastGeneratedDescription?: string;
+  // Set if this card represents a level already in the lesson. Carries the
+  // information needed to put the level back in the same activity/section
+  // on save while honouring the new order.
+  existing?: ExistingLevelRef;
+  // Set if the existing level uses a lab type the generator doesn't
+  // support. The card is rendered read-only and never generated; it's only
+  // here so the user can see and reorder around it.
+  unsupportedType?: string;
+}
+
+export interface ExistingLevelRef {
+  activityIndex: number;
+  sectionIndex: number;
+  // The full original script_level summary, sent back verbatim when this
+  // spec wasn't (re)generated, so the server keeps the same row.
+  scriptLevel: SerializedScriptLevel;
 }
 
 export interface ExistingLessonData {

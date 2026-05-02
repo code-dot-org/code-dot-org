@@ -6,8 +6,8 @@ import {AiChatClientTypes} from '@cdo/generated-scripts/sharedConstants';
 
 import {generatePanelsForLevel, generateWeblab2Level} from './aiGeneration';
 import {
-  attachLevelsToLesson,
   createOrFindLevel,
+  saveLessonActivities,
   updateGeneratePrompt,
   updateLongInstructions,
   updatePanelsLevel,
@@ -19,6 +19,7 @@ import {
   LabType,
   LevelSpec,
   ProgressUpdate,
+  SerializedActivity,
   SerializedLevel,
   SerializedScriptLevel,
 } from './types';
@@ -38,37 +39,103 @@ const newLevelSpec = (): LevelSpec => ({
   generate: true,
 });
 
-// True if any script_level inside the lesson's activities references a level
-// with this id. Used to avoid double-attaching when we reuse a pre-existing
-// level by name.
-function isLevelAttached(lesson: ExistingLessonData, levelId: number): boolean {
-  const idStr = String(levelId);
-  for (const activity of lesson.activities || []) {
-    for (const section of activity.activitySections || []) {
-      for (const sl of section.scriptLevels || []) {
-        for (const l of sl.levels || []) {
-          if (String(l.id) === idStr) return true;
-        }
-      }
-    }
-  }
-  return false;
-}
-
 const SUPPORTED_TYPES: ReadonlySet<string> = new Set(['Panels', 'Weblab2']);
 
-// Walk the lesson's activities in order and yield each level whose lab type
-// the generator supports. Order matches the lesson's display order.
-function listSupportedLevels(lesson: ExistingLessonData): SerializedLevel[] {
-  const out: SerializedLevel[] = [];
-  for (const activity of lesson.activities || []) {
-    for (const section of activity.activitySections || []) {
-      for (const sl of section.scriptLevels || []) {
-        for (const level of sl.levels || []) {
-          if (level.type && SUPPORTED_TYPES.has(level.type)) {
-            out.push(level);
-          }
-        }
+interface Placement {
+  scriptLevel: SerializedScriptLevel;
+  // -1 means "place at the tail of the last activity section". Used for
+  // brand-new levels that don't already live anywhere in the lesson.
+  activityIndex: number;
+  sectionIndex: number;
+}
+
+function blankActivity(position: number): SerializedActivity {
+  return {
+    position,
+    name: '',
+    duration: 0,
+    activitySections: [blankSection(1)],
+  };
+}
+
+function blankSection(position: number) {
+  return {
+    position,
+    name: '',
+    description: '',
+    duration: 0,
+    remarks: '',
+    progressionName: '',
+    tips: [],
+    scriptLevels: [],
+  };
+}
+
+// Rebuild the lesson's activities array from a fresh list of placements.
+// We clone the original tree, empty every section's scriptLevels, then
+// drop each placement back into its target section (or the last section
+// for placements with index -1) in the order the caller provides. The
+// server's update_activities pipeline diffs against the existing rows by
+// id, so existing script_levels keep their ids and just get repositioned.
+function rebuildActivities(
+  originalActivities: SerializedActivity[],
+  placements: Placement[]
+): SerializedActivity[] {
+  const cloned: SerializedActivity[] = JSON.parse(
+    JSON.stringify(originalActivities)
+  );
+
+  for (const a of cloned) {
+    a.activitySections = a.activitySections || [];
+    for (const s of a.activitySections) {
+      s.scriptLevels = [];
+    }
+  }
+  if (cloned.length === 0) cloned.push(blankActivity(1));
+  const lastActivity = cloned[cloned.length - 1];
+  if (lastActivity.activitySections.length === 0) {
+    lastActivity.activitySections.push(blankSection(1));
+  }
+  const lastSection =
+    lastActivity.activitySections[lastActivity.activitySections.length - 1];
+
+  for (const p of placements) {
+    let section = lastSection;
+    if (p.activityIndex >= 0 && cloned[p.activityIndex]) {
+      const sections = cloned[p.activityIndex].activitySections || [];
+      section = sections[p.sectionIndex] || section;
+    }
+    section.scriptLevels.push({
+      ...p.scriptLevel,
+      activitySectionPosition: section.scriptLevels.length + 1,
+    });
+  }
+  return cloned;
+}
+
+interface LessonLevelEntry {
+  level: SerializedLevel;
+  scriptLevel: SerializedScriptLevel;
+  activityIndex: number;
+  sectionIndex: number;
+}
+
+// Walk every level in the lesson in display order, yielding the level
+// summary along with the activity/section it belongs to and the
+// surrounding script_level (which we ship back verbatim on save).
+function listLessonLevels(lesson: ExistingLessonData): LessonLevelEntry[] {
+  const out: LessonLevelEntry[] = [];
+  const activities = lesson.activities || [];
+  for (let a = 0; a < activities.length; a++) {
+    const sections = activities[a].activitySections || [];
+    for (let s = 0; s < sections.length; s++) {
+      const scriptLevels = sections[s].scriptLevels || [];
+      for (const scriptLevel of scriptLevels) {
+        // Each script_level can contain variant levels. The lesson edit
+        // page treats the first level as the canonical one; mirror that.
+        const level = (scriptLevel.levels || [])[0];
+        if (!level) continue;
+        out.push({level, scriptLevel, activityIndex: a, sectionIndex: s});
       }
     }
   }
@@ -104,31 +171,42 @@ interface InitialState {
 }
 
 function buildInitialState(lesson: ExistingLessonData): InitialState {
-  const supported = listSupportedLevels(lesson);
-  if (supported.length === 0) {
+  const entries = listLessonLevels(lesson);
+  if (entries.length === 0) {
     return {prefix: '', specs: [newLevelSpec()]};
   }
-  const prefix = inferPrefix(supported.map(l => l.name));
+  // Infer the shared prefix only from supported levels — unsupported
+  // placeholders may have unrelated names (or names that share no prefix
+  // with the supported ones) and would otherwise erode the inferred
+  // prefix to the empty string.
+  const supportedNames = entries
+    .filter(e => e.level.type && SUPPORTED_TYPES.has(e.level.type))
+    .map(e => e.level.name);
+  const prefix = inferPrefix(supportedNames);
   const stripPrefix = (name: string) =>
     prefix && name.startsWith(prefix + '-')
       ? name.slice(prefix.length + 1)
       : name;
-  const specs = supported.map(level => {
-    const description = level.generatePrompt || '';
-    return {
-      key: createUuid(),
-      id: stripPrefix(level.name),
-      labType: level.type as LabType,
-      description,
-      // Loaded levels start with the saved prompt as their last-generated
-      // description, which keeps the Generate checkbox unchecked unless the
-      // user edits the description (or has no saved prompt at all).
-      lastGeneratedDescription: level.generatePrompt
-        ? level.generatePrompt
-        : undefined,
-      generate: !level.generatePrompt,
-    };
-  });
+  const specs = entries.map(
+    ({level, scriptLevel, activityIndex, sectionIndex}) => {
+      const supported = !!(level.type && SUPPORTED_TYPES.has(level.type));
+      const description = level.generatePrompt || '';
+      return {
+        key: createUuid(),
+        id: stripPrefix(level.name),
+        // Pick a valid LabType for the dropdown; if the level isn't
+        // generator-supported, the dropdown is hidden anyway.
+        labType: supported ? (level.type as LabType) : 'Panels',
+        description,
+        lastGeneratedDescription: level.generatePrompt
+          ? level.generatePrompt
+          : undefined,
+        generate: supported && !level.generatePrompt,
+        existing: {activityIndex, sectionIndex, scriptLevel},
+        unsupportedType: supported ? undefined : level.type,
+      };
+    }
+  );
   return {prefix, specs};
 }
 
@@ -219,11 +297,16 @@ const LessonGenerator: React.FC<LessonGeneratorProps> = ({lesson}) => {
   const validationError = useMemo(() => {
     if (levelSpecs.length === 0) return 'Add at least one level.';
     for (const spec of levelSpecs) {
+      // Read-only placeholders for unsupported lab types are exempt from
+      // the id/description requirements — we never create or regenerate
+      // them here.
+      if (spec.unsupportedType) continue;
       if (!spec.id.trim()) return 'Every level needs an ID.';
       if (!spec.description.trim()) return 'Every level needs a description.';
     }
     const ids = new Set<string>();
     for (const spec of levelSpecs) {
+      if (spec.unsupportedType) continue;
       const id = spec.id.trim();
       if (ids.has(id)) return `Duplicate level ID: ${id}`;
       ids.add(id);
@@ -252,11 +335,11 @@ const LessonGenerator: React.FC<LessonGeneratorProps> = ({lesson}) => {
 
     const created: GenerationSummary['created'] = [];
     const failed: GenerationSummary['failed'] = [];
-    const newScriptLevels: SerializedScriptLevel[] = [];
+    const placements: Placement[] = [];
     // For each spec key that finished successfully, the trimmed description
-    // we should record as `lastGeneratedDescription` afterward. We capture it
-    // here rather than reading it back off state because state updates are
-    // batched.
+    // we should record as `lastGeneratedDescription` afterward. We capture
+    // it here rather than reading it back off state because state updates
+    // are batched.
     const succeededDescriptions = new Map<string, string>();
 
     for (let i = 0; i < levelSpecs.length; i++) {
@@ -272,7 +355,27 @@ const LessonGenerator: React.FC<LessonGeneratorProps> = ({lesson}) => {
         });
       };
 
+      // Unsupported placeholder: pass the existing script_level through to
+      // its original section unchanged. Lets the user reorder around it.
+      if (spec.unsupportedType) {
+        if (spec.existing) {
+          placements.push({
+            scriptLevel: spec.existing.scriptLevel,
+            activityIndex: spec.existing.activityIndex,
+            sectionIndex: spec.existing.sectionIndex,
+          });
+        }
+        continue;
+      }
+
       const shouldGenerate = spec.generate;
+      const isExisting = !!spec.existing;
+
+      // A brand-new card the user added but unchecked Generate on without
+      // ever generating: nothing to attach. Drop it silently.
+      if (!shouldGenerate && !isExisting) {
+        continue;
+      }
 
       try {
         setStage('creating');
@@ -282,7 +385,7 @@ const LessonGenerator: React.FC<LessonGeneratorProps> = ({lesson}) => {
             : `Skipping content generation for "${levelName}" (Generate is unchecked).`
         );
         const level = await createOrFindLevel(spec.labType, levelName);
-        if (level.reused && shouldGenerate) {
+        if (level.reused && shouldGenerate && !isExisting) {
           appendLog(
             `Level "${levelName}" already exists — reusing and overwriting its content.`
           );
@@ -321,10 +424,10 @@ const LessonGenerator: React.FC<LessonGeneratorProps> = ({lesson}) => {
           }
         }
 
-        // Save the prompt onto the level itself so reopening /generate later
-        // pre-populates it. We do this even on skip so an edited prompt
-        // still persists. Failures here are non-fatal: the level content
-        // is already saved.
+        // Save the prompt onto the level itself so reopening /generate
+        // later pre-populates it. We do this even on skip so an edited
+        // prompt still persists. Failures here are non-fatal: the level
+        // content is already saved.
         try {
           await updateGeneratePrompt(level.id, spec.description.trim());
         } catch (err) {
@@ -334,27 +437,34 @@ const LessonGenerator: React.FC<LessonGeneratorProps> = ({lesson}) => {
           );
         }
 
-        const alreadyInLesson =
-          level.reused && isLevelAttached(lesson, level.id);
-        if (!alreadyInLesson) {
-          newScriptLevels.push({
-            activitySectionPosition: 0, // overwritten on the server
-            assessment: false,
-            bonus: false,
-            challenge: false,
-            variants: [],
-            levels: [
-              {
-                id: String(level.id),
-                name: level.name,
-                url: `/levels/${level.id}/edit`,
-              },
-            ],
+        // Place this spec back into the lesson tree. Existing levels keep
+        // their original (activity, section) so we honour the curriculum
+        // structure; new levels are appended to the last section.
+        if (spec.existing) {
+          placements.push({
+            scriptLevel: spec.existing.scriptLevel,
+            activityIndex: spec.existing.activityIndex,
+            sectionIndex: spec.existing.sectionIndex,
           });
         } else {
-          appendLog(
-            `Level "${levelName}" is already attached to this lesson; leaving its position unchanged.`
-          );
+          placements.push({
+            scriptLevel: {
+              activitySectionPosition: 0, // recomputed during rebuild
+              assessment: false,
+              bonus: false,
+              challenge: false,
+              variants: [],
+              levels: [
+                {
+                  id: String(level.id),
+                  name: level.name,
+                  url: `/levels/${level.id}/edit`,
+                },
+              ],
+            },
+            activityIndex: -1,
+            sectionIndex: -1,
+          });
         }
         created.push({
           name: level.name,
@@ -365,10 +475,20 @@ const LessonGenerator: React.FC<LessonGeneratorProps> = ({lesson}) => {
         const message = err instanceof Error ? err.message : String(err);
         appendLog(`Failed "${levelName}": ${message}`);
         failed.push({name: levelName, error: message});
+        // Even on failure, keep an existing level in the lesson — the
+        // failure was about regenerating its content, not about removing
+        // it from the curriculum structure.
+        if (spec.existing) {
+          placements.push({
+            scriptLevel: spec.existing.scriptLevel,
+            activityIndex: spec.existing.activityIndex,
+            sectionIndex: spec.existing.sectionIndex,
+          });
+        }
       }
     }
 
-    if (newScriptLevels.length > 0) {
+    if (placements.length > 0) {
       try {
         setProgress({
           levelIndex: levelSpecs.length - 1,
@@ -376,24 +496,22 @@ const LessonGenerator: React.FC<LessonGeneratorProps> = ({lesson}) => {
           levelName: '',
           phase: 'attaching',
         });
-        appendLog(
-          `Attaching ${newScriptLevels.length} level(s) to the lesson…`
-        );
-        await attachLevelsToLesson(
-          lesson.id,
+        appendLog(`Saving lesson with ${placements.length} level(s)…`);
+        const newActivities = rebuildActivities(
           lesson.activities || [],
-          newScriptLevels
+          placements
         );
+        await saveLessonActivities(lesson.id, newActivities);
         appendLog('Lesson updated.');
       } catch (err) {
         const message = err instanceof Error ? err.message : String(err);
-        appendLog(`Failed to attach levels to lesson: ${message}`);
+        appendLog(`Failed to save lesson activities: ${message}`);
         // Mark the otherwise-created levels as failed so the user knows the
         // levels exist but aren't part of the lesson yet.
         for (const c of created) {
           failed.push({
             name: c.name,
-            error: 'Created, but could not be attached to the lesson.',
+            error: 'Created, but the lesson could not be saved.',
           });
         }
       }
@@ -528,11 +646,23 @@ const LevelCard: React.FC<LevelCardProps> = ({
   onRemove,
   onMove,
 }) => {
+  const unsupported = !!spec.unsupportedType;
   return (
-    <div className={moduleStyles.levelCard}>
+    <div
+      className={
+        unsupported
+          ? `${moduleStyles.levelCard} ${moduleStyles.levelCardUnsupported}`
+          : moduleStyles.levelCard
+      }
+    >
       <div className={moduleStyles.levelCardHeader}>
         <h3>
-          Level {index + 1} — <code>{previewName}</code>
+          Level {index + 1} —{' '}
+          <code>
+            {unsupported && spec.existing
+              ? spec.existing.scriptLevel.levels?.[0]?.name || previewName
+              : previewName}
+          </code>
         </h3>
         <button
           type="button"
@@ -560,7 +690,11 @@ const LevelCard: React.FC<LevelCardProps> = ({
           onClick={() => onRemove(spec.key)}
           disabled={disabled}
           aria-label="Remove level"
-          title="Remove level"
+          title={
+            unsupported
+              ? 'Remove from this lesson (the level itself is preserved)'
+              : 'Remove level'
+          }
         >
           🗑
         </button>
@@ -574,45 +708,67 @@ const LevelCard: React.FC<LevelCardProps> = ({
               value={spec.id}
               onChange={e => onChange(spec.key, {id: e.target.value})}
               placeholder="e.g. intro-1"
-              disabled={disabled}
+              disabled={disabled || unsupported}
             />
           </div>
           <div className={moduleStyles.cardField}>
             <label htmlFor={`lab-${spec.key}`}>Lab</label>
-            <select
-              id={`lab-${spec.key}`}
-              value={spec.labType}
-              onChange={e =>
-                onChange(spec.key, {labType: e.target.value as LabType})
-              }
-              disabled={disabled}
-            >
-              {LAB_OPTIONS.map(opt => (
-                <option key={opt.value} value={opt.value}>
-                  {opt.label}
-                </option>
-              ))}
-            </select>
+            {unsupported ? (
+              <input
+                id={`lab-${spec.key}`}
+                value={spec.unsupportedType}
+                disabled
+              />
+            ) : (
+              <select
+                id={`lab-${spec.key}`}
+                value={spec.labType}
+                onChange={e =>
+                  onChange(spec.key, {labType: e.target.value as LabType})
+                }
+                disabled={disabled}
+              >
+                {LAB_OPTIONS.map(opt => (
+                  <option key={opt.value} value={opt.value}>
+                    {opt.label}
+                  </option>
+                ))}
+              </select>
+            )}
           </div>
-          <label className={moduleStyles.skipLabel}>
-            <input
-              type="checkbox"
-              checked={spec.generate}
-              onChange={e => onChange(spec.key, {generate: e.target.checked})}
-              disabled={disabled}
-            />
-            Generate
-          </label>
+          {!unsupported && (
+            <label className={moduleStyles.skipLabel}>
+              <input
+                type="checkbox"
+                checked={spec.generate}
+                onChange={e => onChange(spec.key, {generate: e.target.checked})}
+                disabled={disabled}
+              />
+              Generate
+            </label>
+          )}
         </div>
         <div className={moduleStyles.cardMain}>
-          <label htmlFor={`desc-${spec.key}`}>Description</label>
-          <textarea
-            id={`desc-${spec.key}`}
-            value={spec.description}
-            onChange={e => onChange(spec.key, {description: e.target.value})}
-            placeholder="What this level should teach or do."
-            disabled={disabled}
-          />
+          {unsupported ? (
+            <p className={moduleStyles.unsupportedNote}>
+              The generator doesn't support this lab type. The level stays in
+              the lesson at this position; edit its content from the level edit
+              page.
+            </p>
+          ) : (
+            <>
+              <label htmlFor={`desc-${spec.key}`}>Description</label>
+              <textarea
+                id={`desc-${spec.key}`}
+                value={spec.description}
+                onChange={e =>
+                  onChange(spec.key, {description: e.target.value})
+                }
+                placeholder="What this level should teach or do."
+                disabled={disabled}
+              />
+            </>
+          )}
         </div>
       </div>
     </div>

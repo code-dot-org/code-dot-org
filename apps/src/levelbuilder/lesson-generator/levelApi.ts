@@ -1,4 +1,4 @@
-import {LabType, SerializedActivity, SerializedScriptLevel} from './types';
+import {LabType, SerializedActivity} from './types';
 
 const csrfToken = (): string => {
   const meta = document.querySelector('meta[name="csrf-token"]');
@@ -184,87 +184,27 @@ export async function uploadLevelAsset(
   return result.newAssetUrl;
 }
 
-// PATCH /lessons/:id — append the given (already-created) levels into the
-// last activity section of the lesson, preserving everything else. We
-// re-send the existing activities verbatim (with display fields renamed
-// where the lesson update endpoint expects different names).
-export async function attachLevelsToLesson(
+// PUT /lessons/:id — replace the lesson's activity tree wholesale. The
+// caller is responsible for building a complete activities array (including
+// any new script_levels in their final positions); this function just
+// serializes it and posts. The server's update_activities/update_activity_sections
+// pipeline does the diff.
+export async function saveLessonActivities(
   lessonId: number,
-  activities: SerializedActivity[],
-  newScriptLevels: SerializedScriptLevel[]
+  activities: SerializedActivity[]
 ): Promise<void> {
-  const updated = appendLevelsToLastSection(activities, newScriptLevels);
   const response = await fetch(`/lessons/${lessonId}`, {
     method: 'PUT',
     headers: jsonHeaders(),
     body: JSON.stringify({
-      activities: JSON.stringify(updated),
+      activities: JSON.stringify(activities),
     }),
   });
   if (!response.ok) {
     throw new Error(
-      `Failed to attach levels to lesson: ${
+      `Failed to save lesson activities: ${
         response.status
       } ${await response.text()}`
     );
   }
-}
-
-// Append new script levels to the last activity section of the given
-// activities, returning a fresh array suitable for posting to the lesson
-// update endpoint. Mirrors the shape produced by getSerializedActivities
-// in activitiesEditorRedux.js. If the lesson has no activity or no section
-// yet, a placeholder of each is synthesized — the server's fetch_activity
-// and fetch_activity_section helpers turn id-less entries into freshly
-// created records, so we don't need to call the lesson edit page first.
-function appendLevelsToLastSection(
-  activities: SerializedActivity[],
-  newScriptLevels: SerializedScriptLevel[]
-): SerializedActivity[] {
-  const cloned: SerializedActivity[] = JSON.parse(JSON.stringify(activities));
-
-  if (cloned.length === 0) {
-    cloned.push(blankActivity(1));
-  }
-
-  const lastActivity = cloned[cloned.length - 1];
-  lastActivity.activitySections = lastActivity.activitySections || [];
-  if (lastActivity.activitySections.length === 0) {
-    lastActivity.activitySections.push(blankSection(1));
-  }
-  const lastSection =
-    lastActivity.activitySections[lastActivity.activitySections.length - 1];
-  lastSection.scriptLevels = lastSection.scriptLevels || [];
-
-  let nextPosition = lastSection.scriptLevels.length + 1;
-  for (const sl of newScriptLevels) {
-    lastSection.scriptLevels.push({
-      ...sl,
-      activitySectionPosition: nextPosition++,
-    });
-  }
-
-  return cloned;
-}
-
-function blankActivity(position: number): SerializedActivity {
-  return {
-    position,
-    name: '',
-    duration: 0,
-    activitySections: [blankSection(1)],
-  };
-}
-
-function blankSection(position: number) {
-  return {
-    position,
-    name: '',
-    description: '',
-    duration: 0,
-    remarks: '',
-    progressionName: '',
-    tips: [],
-    scriptLevels: [],
-  };
 }
