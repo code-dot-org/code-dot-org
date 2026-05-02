@@ -80,8 +80,8 @@ describe('Slider Component', () => {
     const handleChange = jest.fn();
     renderComponent({
       onChange: handleChange,
-      leftButtonProps: {icon: {iconName: 'minus'}, 'aria-label': 'Decrease'},
-      rightButtonProps: {icon: {iconName: 'plus'}, 'aria-label': 'Increase'},
+      leftButtonProps: {'aria-label': 'Decrease'},
+      rightButtonProps: {'aria-label': 'Increase'},
     });
 
     const leftButton = screen.getByLabelText('Decrease');

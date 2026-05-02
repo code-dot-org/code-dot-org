@@ -1,66 +1,6 @@
 import {createTheme} from '@mui/material';
 
-// MUI module augmentations are declared inline (rather than in a
-// separate file) so they are preserved in the emitted `index.d.ts`.
-// vite-plugin-dts strips side-effect imports without exported types,
-// which breaks cross-package augmentation propagation. Top-level
-// `declare module` blocks in this entry point survive emit, so any
-// consumer of `@code-dot-org/component-library/themes` picks them up.
-declare module '@mui/material/Button' {
-  interface ButtonPropsSizeOverrides {
-    extraSmall: true;
-    small: true;
-    medium: true;
-    large: true;
-  }
-
-  interface ButtonPropsColorOverrides {
-    white: true;
-    tertiary: true;
-  }
-}
-
-// MUI Button renders as <a> when href is provided, but the base
-// ButtonProps don't include anchor attributes. Augment the barrel
-// (`@mui/material`), not `@mui/material/Button`, because
-// `ButtonOwnProps` is defined in the sub-module and re-exported —
-// augmenting the subpath doesn't merge under node16 module resolution.
-declare module '@mui/material' {
-  interface ButtonOwnProps {
-    target?: string;
-    rel?: string;
-  }
-}
-
-declare module '@mui/material/IconButton' {
-  interface IconButtonPropsSizeOverrides {
-    extraSmall: true;
-    small: true;
-    medium: true;
-    large: true;
-  }
-
-  interface IconButtonPropsColorOverrides {
-    white: true;
-    tertiary: true;
-  }
-
-  interface IconButtonPropsVariantOverrides {
-    contained: true;
-    outlined: true;
-    text: true;
-  }
-
-  interface IconButtonOwnProps {
-    variant?: 'contained' | 'outlined' | 'text';
-  }
-}
-
-declare module '@mui/material/Breadcrumbs' {
-  interface BreadcrumbsOwnProps {
-    size?: 'xs' | 's' | 'm' | 'l';
-  }
-}
+export type * from './muiAugmentation';
 
 import {
   NOTO_FONT,
