@@ -1,29 +1,21 @@
 /**
- * Type declarations to extend MUI's Button, IconButton, and Breadcrumbs components with custom sizes and colors
+ * Apps-specific MUI module augmentations.
  *
- * IMPORTANT: These type augmentations must be manually copied to apps/src/types/mui.d.ts
- * when they change. Right now, TypeScript module augmentation doesn't work across package boundaries
- * in this monorepo setup, so manual synchronization is required.
+ * Design-system-wide augmentations (Button, IconButton, Breadcrumbs)
+ * are published from `@code-dot-org/component-library/themes` and pulled
+ * in transitively wherever apps imports from that subpath (see
+ * `apps/src/util/brand.ts` and the studentSnapshot stories).
  *
- * To update apps types:
- * 1. Make changes to this file
- * 2. Copy the Button, IconButton, and Breadcrumbs declare module blocks to apps/src/types/mui.d.ts
- * 3. Keep the source reference comment in apps/src/types/mui.d.ts pointing to this file
- *
- * If at any point we find a solution for sharing this without
- * need of manually syncing the types - you're welcome to update this!
+ * Only Typography variants live here — they extend MUI's Typography
+ * for apps's typography system and are not part of the design-system
+ * theme contract.
  */
 
 import {Theme as MuiTheme} from '@mui/material/styles';
-import '@mui/material/Button';
-import '@mui/material/IconButton';
-import '@mui/material/Breadcrumbs';
 
 type Theme = Omit<MuiTheme, 'components'>;
 
-// Apps-specific Typography type augmentations
 declare module '@mui/material/styles' {
-  // Custom Typography definitions
   interface TypographyVariants {
     body3: React.CSSProperties;
     body4: React.CSSProperties;
@@ -63,67 +55,6 @@ declare module '@mui/material/Typography' {
     label4: true;
     strong: true;
     em: true;
-  }
-}
-
-// Button and IconButton type augmentations (manually copied from component-library)
-// Source: frontend/packages/component-library/src/themes/code.org/types.d.ts
-declare module '@mui/material/Button' {
-  interface ButtonPropsSizeOverrides {
-    extraSmall: true;
-    small: true;
-    medium: true;
-    large: true;
-  }
-
-  interface ButtonPropsColorOverrides {
-    white: true;
-    tertiary: true;
-  }
-}
-
-// MUI Button renders as <a> when href is provided, but the base
-// ButtonProps don't include anchor attributes.
-// Must target '@mui/material' (barrel), not '@mui/material/Button',
-// because ButtonOwnProps is defined in a sub-module (Button/Button.d.ts)
-// and re-exported — augmenting the subpath doesn't merge with the
-// original definition under node16 module resolution.
-declare module '@mui/material' {
-  interface ButtonOwnProps {
-    target?: string;
-    rel?: string;
-  }
-}
-
-declare module '@mui/material/IconButton' {
-  interface IconButtonPropsSizeOverrides {
-    extraSmall: true;
-    small: true;
-    medium: true;
-    large: true;
-  }
-
-  interface IconButtonPropsColorOverrides {
-    white: true;
-    tertiary: true;
-  }
-
-  interface IconButtonPropsVariantOverrides {
-    contained: true;
-    outlined: true;
-    text: true;
-  }
-
-  // Extend IconButtonOwnProps to include variant prop
-  interface IconButtonOwnProps {
-    variant?: 'contained' | 'outlined' | 'text';
-  }
-}
-
-// Breadcrumbs type augmentations
-declare module '@mui/material/Breadcrumbs' {
-  interface BreadcrumbsOwnProps {
-    size?: 'xs' | 's' | 'm' | 'l';
   }
 }
 
