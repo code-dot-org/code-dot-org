@@ -35,6 +35,7 @@ const newLevelSpec = (): LevelSpec => ({
   id: '',
   labType: 'Panels',
   description: '',
+  generate: true,
 });
 
 // True if any script_level inside the lesson's activities references a level
@@ -112,12 +113,22 @@ function buildInitialState(lesson: ExistingLessonData): InitialState {
     prefix && name.startsWith(prefix + '-')
       ? name.slice(prefix.length + 1)
       : name;
-  const specs = supported.map(level => ({
-    key: createUuid(),
-    id: stripPrefix(level.name),
-    labType: level.type as LabType,
-    description: level.generatePrompt || '',
-  }));
+  const specs = supported.map(level => {
+    const description = level.generatePrompt || '';
+    return {
+      key: createUuid(),
+      id: stripPrefix(level.name),
+      labType: level.type as LabType,
+      description,
+      // Loaded levels start with the saved prompt as their last-generated
+      // description, which keeps the Generate checkbox unchecked unless the
+      // user edits the description (or has no saved prompt at all).
+      lastGeneratedDescription: level.generatePrompt
+        ? level.generatePrompt
+        : undefined,
+      generate: !level.generatePrompt,
+    };
+  });
   return {prefix, specs};
 }
 
@@ -168,7 +179,20 @@ const LessonGenerator: React.FC<LessonGeneratorProps> = ({lesson}) => {
 
   const updateSpec = useCallback((key: string, patch: Partial<LevelSpec>) => {
     setLevelSpecs(specs =>
-      specs.map(s => (s.key === key ? {...s, ...patch} : s))
+      specs.map(s => {
+        if (s.key !== key) return s;
+        const next = {...s, ...patch};
+        // If the description was edited, re-derive whether to generate based
+        // on whether it now matches the description recorded at the last
+        // successful generation. The user can still manually toggle the
+        // checkbox afterward.
+        if ('description' in patch) {
+          next.generate =
+            next.lastGeneratedDescription === undefined ||
+            next.description.trim() !== next.lastGeneratedDescription;
+        }
+        return next;
+      })
     );
   }, []);
 
@@ -229,6 +253,11 @@ const LessonGenerator: React.FC<LessonGeneratorProps> = ({lesson}) => {
     const created: GenerationSummary['created'] = [];
     const failed: GenerationSummary['failed'] = [];
     const newScriptLevels: SerializedScriptLevel[] = [];
+    // For each spec key that finished successfully, the trimmed description
+    // we should record as `lastGeneratedDescription` afterward. We capture it
+    // here rather than reading it back off state because state updates are
+    // batched.
+    const succeededDescriptions = new Map<string, string>();
 
     for (let i = 0; i < levelSpecs.length; i++) {
       const spec = levelSpecs[i];
@@ -243,47 +272,58 @@ const LessonGenerator: React.FC<LessonGeneratorProps> = ({lesson}) => {
         });
       };
 
+      const shouldGenerate = spec.generate;
+
       try {
         setStage('creating');
-        appendLog(`Creating level "${levelName}"…`);
+        appendLog(
+          shouldGenerate
+            ? `Creating level "${levelName}"…`
+            : `Skipping content generation for "${levelName}" (Generate is unchecked).`
+        );
         const level = await createOrFindLevel(spec.labType, levelName);
-        if (level.reused) {
+        if (level.reused && shouldGenerate) {
           appendLog(
             `Level "${levelName}" already exists — reusing and overwriting its content.`
           );
         }
 
-        setStage('planning');
-        appendLog(`Planning content for "${levelName}"…`);
-        if (spec.labType === 'Panels') {
-          const panels = await generatePanelsForLevel(
-            levelName,
-            spec.description.trim(),
-            {
-              onPlanned: count =>
-                appendLog(`Planned ${count} panel(s) for "${levelName}".`),
-              onPanelStart: (idx, count) => {
-                setStage('generating-image', `panel ${idx + 1} of ${count}`);
-                appendLog(`Generating image for panel ${idx + 1} of ${count}…`);
-              },
-            }
-          );
-          setStage('saving-properties');
-          appendLog(`Saving panel data for "${levelName}"…`);
-          await updatePanelsLevel(level.id, panels);
-        } else if (spec.labType === 'Weblab2') {
-          const {startSources, longInstructions} = await generateWeblab2Level(
-            spec.description.trim()
-          );
-          setStage('saving-properties');
-          appendLog(`Saving start sources for "${levelName}"…`);
-          await updateStartSources(level.id, startSources);
-          appendLog(`Saving instructions for "${levelName}"…`);
-          await updateLongInstructions(level.id, longInstructions);
+        if (shouldGenerate) {
+          setStage('planning');
+          appendLog(`Planning content for "${levelName}"…`);
+          if (spec.labType === 'Panels') {
+            const panels = await generatePanelsForLevel(
+              levelName,
+              spec.description.trim(),
+              {
+                onPlanned: count =>
+                  appendLog(`Planned ${count} panel(s) for "${levelName}".`),
+                onPanelStart: (idx, count) => {
+                  setStage('generating-image', `panel ${idx + 1} of ${count}`);
+                  appendLog(
+                    `Generating image for panel ${idx + 1} of ${count}…`
+                  );
+                },
+              }
+            );
+            setStage('saving-properties');
+            appendLog(`Saving panel data for "${levelName}"…`);
+            await updatePanelsLevel(level.id, panels);
+          } else if (spec.labType === 'Weblab2') {
+            const {startSources, longInstructions} = await generateWeblab2Level(
+              spec.description.trim()
+            );
+            setStage('saving-properties');
+            appendLog(`Saving start sources for "${levelName}"…`);
+            await updateStartSources(level.id, startSources);
+            appendLog(`Saving instructions for "${levelName}"…`);
+            await updateLongInstructions(level.id, longInstructions);
+          }
         }
 
         // Save the prompt onto the level itself so reopening /generate later
-        // pre-populates it. Failures here are non-fatal: the level content
+        // pre-populates it. We do this even on skip so an edited prompt
+        // still persists. Failures here are non-fatal: the level content
         // is already saved.
         try {
           await updateGeneratePrompt(level.id, spec.description.trim());
@@ -320,6 +360,7 @@ const LessonGenerator: React.FC<LessonGeneratorProps> = ({lesson}) => {
           name: level.name,
           editUrl: `/levels/${level.id}/edit`,
         });
+        succeededDescriptions.set(spec.key, spec.description.trim());
       } catch (err) {
         const message = err instanceof Error ? err.message : String(err);
         appendLog(`Failed "${levelName}": ${message}`);
@@ -356,6 +397,20 @@ const LessonGenerator: React.FC<LessonGeneratorProps> = ({lesson}) => {
           });
         }
       }
+    }
+
+    // Record the description we used for each successful spec, and clear
+    // its Generate flag. Subsequent runs default to off for these unless
+    // the user edits the description (which auto-rechecks via updateSpec)
+    // or clicks the checkbox manually.
+    if (succeededDescriptions.size > 0) {
+      setLevelSpecs(specs =>
+        specs.map(s => {
+          const desc = succeededDescriptions.get(s.key);
+          if (desc === undefined) return s;
+          return {...s, lastGeneratedDescription: desc, generate: false};
+        })
+      );
     }
 
     setSummary({created, failed});
@@ -539,6 +594,15 @@ const LevelCard: React.FC<LevelCardProps> = ({
               ))}
             </select>
           </div>
+          <label className={moduleStyles.skipLabel}>
+            <input
+              type="checkbox"
+              checked={spec.generate}
+              onChange={e => onChange(spec.key, {generate: e.target.checked})}
+              disabled={disabled}
+            />
+            Generate
+          </label>
         </div>
         <div className={moduleStyles.cardMain}>
           <label htmlFor={`desc-${spec.key}`}>Description</label>

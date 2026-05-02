@@ -5,6 +5,14 @@ export interface LevelSpec {
   id: string;
   labType: LabType;
   description: string;
+  // Whether the next Generate run should run the AI for this level. Defaults
+  // to true for fresh rows and any row whose description has drifted from
+  // the description recorded at the last successful generation.
+  generate: boolean;
+  // The trimmed description as of the last successful generation, used to
+  // decide whether to default `generate` on or off as the user edits.
+  // Undefined means the level has never been generated.
+  lastGeneratedDescription?: string;
 }
 
 export interface ExistingLessonData {

@@ -116,6 +116,20 @@
   gap: 12px;
 }
 
+.skipLabel {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13px;
+  font-weight: 600;
+  user-select: none;
+  cursor: pointer;
+}
+
+.skipLabel input[type='checkbox'] {
+  margin: 0;
+}
+
 .cardMain {
   flex: 1;
   display: flex;
