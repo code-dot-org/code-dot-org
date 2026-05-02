@@ -1261,6 +1261,7 @@ __metadata:
     storybook-addon-rtl: "npm:^3.0.1"
     stylelint: "catalog:"
     tsx: "npm:^4.19.2"
+    typescript: "catalog:"
     vitest: "catalog:"
     wait-on: "npm:^8.0.1"
   languageName: unknown
