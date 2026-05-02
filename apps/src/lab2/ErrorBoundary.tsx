@@ -3,7 +3,7 @@ import React, {ErrorInfo} from 'react';
 interface ErrorBoundaryProps {
   fallback: React.ReactNode;
   children: React.ReactNode;
-  onError: (error: Error, componentStack: string) => void;
+  onError: (error: Error, componentStack: ErrorInfo['componentStack']) => void;
 }
 
 interface ErrorBoundaryState {
@@ -34,7 +34,7 @@ export default class ErrorBoundary extends React.Component<
   }
 
   componentDidCatch(error: Error, info: ErrorInfo) {
-    this.props.onError(error, info.componentStack ?? '');
+    this.props.onError(error, info.componentStack);
   }
 
   render() {
