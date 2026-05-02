@@ -38,7 +38,7 @@
     "globals": "catalog:",
     "prettier": "catalog:",
     "prettier-plugin-packagejson": "^2.5.5",
-    "stylelint": "^16.14.1",
+    "stylelint": "catalog:",
     "stylelint-config-standard-scss": "^14.0.0",
     "typescript-eslint": "catalog:"
   }

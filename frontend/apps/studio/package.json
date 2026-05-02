@@ -35,16 +35,16 @@
   "devDependencies": {
     "@code-dot-org/lint-config": "workspace:*",
     "@tanstack/router-plugin": "^1.139.14",
-    "@types/node": "^24.6.0",
+    "@types/node": "catalog:",
     "@types/react": "catalog:",
     "@types/react-dom": "catalog:",
     "@vitejs/plugin-react": "catalog:",
-    "eslint-plugin-react-hooks": "^5.2.0",
+    "eslint-plugin-react-hooks": "catalog:",
     "eslint-plugin-react-refresh": "catalog:",
     "globals": "catalog:",
     "typescript": "~5.9.3",
     "typescript-eslint": "catalog:",
-    "vite": "^7.1.7",
+    "vite": "catalog:",
     "vite-plugin-rails": "^0.5.0",
     "vitest": "catalog:"
   }
