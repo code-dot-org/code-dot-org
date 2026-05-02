@@ -30,6 +30,8 @@
     "@eslint/js": "catalog:",
     "@tsconfig/node22": "^22.0.4",
     "@tsconfig/vite-react": "^7.0.2",
+    "@vitejs/plugin-react": "catalog:",
+    "@vitest/eslint-plugin": "^1.6.16",
     "eslint": "catalog:",
     "eslint-import-resolver-typescript": "^4.4.0",
     "eslint-plugin-import-x": "^4.16.1",
@@ -40,6 +42,7 @@
     "prettier-plugin-packagejson": "^2.5.5",
     "stylelint": "catalog:",
     "stylelint-config-standard-scss": "^14.0.0",
-    "typescript-eslint": "catalog:"
+    "typescript-eslint": "catalog:",
+    "vitest": "catalog:"
   }
 }

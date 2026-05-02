@@ -1,6 +1,6 @@
 import {render, screen} from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
-import '@testing-library/jest-dom';
+import {vi} from 'vitest';
 
 import Alert from './../index';
 
@@ -55,7 +55,7 @@ describe('Design System - Alert', () => {
 
   it('calls onClose', async () => {
     const user = userEvent.setup();
-    const spyOnClose = jest.fn();
+    const spyOnClose = vi.fn();
 
     render(<Alert text="Closable Alert" onClose={spyOnClose} />);
 
@@ -67,7 +67,7 @@ describe('Design System - Alert', () => {
 
   it('renders icon, text, link, and onClose at the same time', async () => {
     const user = userEvent.setup();
-    const spyOnClose = jest.fn();
+    const spyOnClose = vi.fn();
     const link = {href: 'https://google.com/', children: 'Click here'};
     const icon = {iconName: 'check-circle', title: 'Check Icon'};
 
