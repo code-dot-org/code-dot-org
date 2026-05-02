@@ -57,7 +57,7 @@
   },
   "devDependencies": {
     "@code-dot-org/lint-config": "workspace:*",
-    "@sentry/browser": "^10.51.0",
+    "@sentry/browser": "catalog:",
     "@types/flat": "^5.0.5",
     "@types/node": "catalog:",
     "@types/tldjs": "^2",
@@ -65,7 +65,7 @@
     "eslint": "catalog:",
     "eslint-plugin-react-hooks": "catalog:",
     "eslint-plugin-react-refresh": "catalog:",
-    "ky": "^1.14.3",
+    "ky": "catalog:",
     "prettier": "catalog:",
     "react": "catalog:",
     "typescript": "catalog:",
