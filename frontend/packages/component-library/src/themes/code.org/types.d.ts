@@ -69,3 +69,30 @@ declare module '@mui/material/Breadcrumbs' {
     size?: 'xs' | 's' | 'm' | 'l';
   }
 }
+
+// MuiFooter slot/prop augmentation — source of truth; sync to apps/src/types/mui.d.ts
+declare module '@mui/material/styles' {
+  interface ComponentNameToClassKey {
+    MuiFooter:
+      | 'root'
+      | 'grid'
+      | 'links'
+      | 'link'
+      | 'localeSelect'
+      | 'copyright'
+      | 'fineprint'
+      | 'imageLink';
+  }
+
+  interface ComponentsPropsList {
+    MuiFooter: Record<string, unknown>;
+  }
+
+  interface Components {
+    MuiFooter?: {
+      defaultProps?: ComponentsPropsList['MuiFooter'];
+      styleOverrides?: ComponentsOverrides<Theme>['MuiFooter'];
+      variants?: ComponentsVariants['MuiFooter'];
+    };
+  }
+}

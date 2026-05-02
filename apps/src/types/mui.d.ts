@@ -127,4 +127,32 @@ declare module '@mui/material/Breadcrumbs' {
   }
 }
 
+// MuiFooter slot/prop augmentation (manually synced from
+// frontend/packages/component-library/src/themes/code.org/types.d.ts)
+declare module '@mui/material/styles' {
+  interface ComponentNameToClassKey {
+    MuiFooter:
+      | 'root'
+      | 'grid'
+      | 'links'
+      | 'link'
+      | 'localeSelect'
+      | 'copyright'
+      | 'fineprint'
+      | 'imageLink';
+  }
+
+  interface ComponentsPropsList {
+    MuiFooter: Record<string, unknown>;
+  }
+
+  interface Components {
+    MuiFooter?: {
+      defaultProps?: ComponentsPropsList['MuiFooter'];
+      styleOverrides?: ComponentsOverrides<Theme>['MuiFooter'];
+      variants?: ComponentsVariants['MuiFooter'];
+    };
+  }
+}
+
 export {};

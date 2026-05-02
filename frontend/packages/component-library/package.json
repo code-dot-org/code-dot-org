@@ -223,6 +223,14 @@
       "import": "./dist/formFieldWrapper/index.mjs",
       "require": "./dist/formFieldWrapper/index.js"
     },
+    "./footer": {
+      "types": {
+        "import": "./dist/footer/index.d.ts",
+        "require": "./dist/footer/index.d.ts"
+      },
+      "import": "./dist/footer/index.mjs",
+      "require": "./dist/footer/index.js"
+    },
     "./header": {
       "types": {
         "import": "./dist/header/index.d.ts",

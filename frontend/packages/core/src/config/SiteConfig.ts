@@ -2,6 +2,7 @@ import type {Brand} from '../brand/brand';
 import {getBrandFromHostname} from '../brand/getBrandFromHostname';
 import {getDashboardApiUrl} from '../dashboard/getDashboardApiUrl';
 import {getEnvironmentFromHostname, type Environment} from '../environment';
+import {getMarketingOrigin, type MarketingOrigin} from './getMarketingOrigin';
 import {parse} from 'tldts';
 
 declare global {
@@ -63,6 +64,8 @@ export class SiteConfig {
   public readonly brand: Brand;
   public readonly environment: Environment;
   public readonly dashboardApiUrl: string;
+  /** Marketing site origin for this brand+environment, or null in local dev. */
+  public readonly marketingOrigin: MarketingOrigin;
 
   /**
    * Observability runtime config parsed from the meta tag.
@@ -78,12 +81,29 @@ export class SiteConfig {
     this.brand = getBrandFromHostname(this.host);
     this.environment = getEnvironmentFromHostname();
     this.dashboardApiUrl = getDashboardApiUrl(this.environment);
+    this.marketingOrigin = getMarketingOrigin(this.brand, this.environment);
 
     const runtime = parseRuntimeConfig();
     this.observability = {
       provider: runtime.observability?.provider ?? 'none',
       ...runtime.observability,
     };
+  }
+
+  /**
+   * Returns an absolute marketing-site URL for the given path.
+   * Mirrors Rails's `CDO.code_org_url(path)` pattern.
+   *
+   * When no marketing origin is available (local dev), returns the path as-is
+   * so links degrade gracefully to relative hrefs.
+   *
+   * @param path - An absolute path (e.g. `'/privacy'`) or empty string for the origin root.
+   * @returns A fully-qualified URL string, or the raw path when no origin is known.
+   */
+  marketingUrl(path: string = ''): string {
+    if (!this.marketingOrigin) return path;
+    if (!path) return this.marketingOrigin;
+    return new URL(path, this.marketingOrigin).toString();
   }
 }
 

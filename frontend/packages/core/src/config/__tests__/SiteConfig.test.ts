@@ -2,7 +2,7 @@
  * @vitest-environment jsdom
  */
 
-import {afterEach, describe, expect, it} from 'vitest';
+import {afterEach, beforeEach, describe, expect, it} from 'vitest';
 
 import {SiteConfig} from '../SiteConfig';
 
@@ -27,6 +27,42 @@ describe('SiteConfig', () => {
 
   it('should determine the dashboard API URL', () => {
     expect(siteConfig.dashboardApiUrl).toBeDefined();
+  });
+});
+
+describe('SiteConfig.marketingUrl', () => {
+  it('composes a marketing URL with new URL when origin is non-null', () => {
+    const config = new SiteConfig();
+    if (config.marketingOrigin === null) return; // skip when running locally
+    const result = config.marketingUrl('/privacy');
+    expect(result).toMatch(/^https?:\/\//);
+    expect(result).toContain('/privacy');
+  });
+
+  it('returns the path as-is when marketingOrigin is null', () => {
+    const config = new SiteConfig();
+    Object.assign(config, {marketingOrigin: null});
+    expect(config.marketingUrl('/privacy')).toBe('/privacy');
+  });
+
+  it('returns the origin when path is empty and marketingOrigin is non-null', () => {
+    const config = new SiteConfig();
+    Object.assign(config, {marketingOrigin: 'https://code.org'});
+    expect(config.marketingUrl('')).toBe('https://code.org');
+    expect(config.marketingUrl()).toBe('https://code.org');
+  });
+
+  it('passes an absolute URL through unchanged (new URL base is ignored)', () => {
+    const config = new SiteConfig();
+    Object.assign(config, {marketingOrigin: 'https://code.org'});
+    const absolute = 'https://support.code.org/path';
+    expect(config.marketingUrl(absolute)).toBe(absolute);
+  });
+
+  it('normalises slash via new URL (no double-slash)', () => {
+    const config = new SiteConfig();
+    Object.assign(config, {marketingOrigin: 'https://code.org'});
+    expect(config.marketingUrl('/privacy')).toBe('https://code.org/privacy');
   });
 });
 

@@ -4,8 +4,6 @@ import ViteRails from 'vite-plugin-rails';
 import path from 'node:path';
 import {tanstackRouter} from '@tanstack/router-plugin/vite';
 
-const workspaceRoot = searchForWorkspaceRoot(process.cwd());
-
 // https://vite.dev/config/
 export default defineConfig(({mode}) => {
   const isDev = mode === 'development';
@@ -17,15 +15,12 @@ export default defineConfig(({mode}) => {
     server: {
       allowedHosts: isDev ? ['localhost-studio.code.org'] : undefined,
       fs: {
-        // Allow serving files from the workspace root for monorepo setups
         allow: [searchForWorkspaceRoot(process.cwd())],
       },
     },
     resolve: {
       alias: {
         '@': path.resolve(__dirname, './src'),
-        react: path.resolve(workspaceRoot, 'node_modules/react'),
-        'react-dom': path.resolve(workspaceRoot, 'node_modules/react-dom'),
       },
     },
     plugins: [
@@ -35,11 +30,7 @@ export default defineConfig(({mode}) => {
         target: 'react',
         autoCodeSplitting: true,
       }),
-      react({
-        babel: {
-          plugins: [['babel-plugin-react-compiler']],
-        },
-      }),
+      react(),
     ],
   };
 });

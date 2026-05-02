@@ -11,6 +11,7 @@ import {TanStackRouterDevtools} from '@tanstack/react-router-devtools';
 import Header from '@code-dot-org/component-library/header';
 import {CdoTheme} from '@code-dot-org/component-library/themes';
 
+import {StudioFooter} from '@/components/footer';
 import CdoLogo from '@/config/brand/assets/cdo-logo-inverse.webp';
 import Bootstrap from '@/modules/bootstrap';
 
@@ -35,6 +36,7 @@ function RootLayout() {
       />
 
       <Outlet />
+      <StudioFooter />
       <TanStackRouterDevtools />
     </ThemeProvider>
   );
