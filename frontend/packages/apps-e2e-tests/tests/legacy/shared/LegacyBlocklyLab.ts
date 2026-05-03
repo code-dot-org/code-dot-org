@@ -161,6 +161,16 @@ export abstract class LegacyBlocklyLab {
     }, blocksJson);
   }
 
+  /**
+   * Returns a locator for a Blockly block's top-level SVG element.
+   * Use for class assertions (toHaveClass) and presence checks (toBeAttached).
+   *
+   * @param blockId - value of the element's data-id attribute
+   */
+  blockLocator(blockId: string): Locator {
+    return this.page.locator(`.blocklySvg g[data-id="${blockId}"]`).first();
+  }
+
   async run(): Promise<void> {
     await this.runButton.click();
   }

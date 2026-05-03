@@ -1,0 +1,186 @@
+# Cucumber → Playwright Migration Status
+
+Source: `dashboard/test/ui/features/star_labs/`  
+Target: `frontend/packages/apps-e2e-tests/tests/`  
+As of: 2026-05-02
+
+---
+
+## Summary
+
+| Status                                      | Count                                         |
+| ------------------------------------------- | --------------------------------------------- |
+| Ported                                      | 11 feature files (105+ tests, all 3 browsers) |
+| Covered by ported                           | 2 (maze2, jigsaw2 rolled into existing specs) |
+| Skipped — @eyes                             | 10                                            |
+| Skipped — auth required                     | 30+                                           |
+| Skipped — @skip / @eyes_mobile              | 3                                             |
+| Skipped — cookie/session manipulation       | 2                                             |
+| Out of scope — separate lab (not CSF/Music) | 40+                                           |
+| Porteable, not yet done                     | 1 (musiclab_timeline_nav)                     |
+
+---
+
+## Ported
+
+| Feature file          | Playwright spec                                | Browsers | Notes                               |
+| --------------------- | ---------------------------------------------- | -------- | ----------------------------------- |
+| `maze.feature`        | `tests/legacy/maze/maze.spec.ts`               | C+F+W    |                                     |
+| `maze2.feature`       | `tests/legacy/maze/maze.spec.ts`               | C+F+W    | Rolled into Maze — level 4 describe |
+| `farmer.feature`      | `tests/legacy/farmer/farmer.spec.ts`           | C+F+W    |                                     |
+| `bee.feature`         | `tests/legacy/bee/bee.spec.ts`                 | C+F+W    |                                     |
+| `artist.feature`      | `tests/legacy/artist/artist.spec.ts`           | C+F+W    |                                     |
+| `bounce.feature`      | `tests/legacy/bounce/bounce.spec.ts`           | C+F+W    |                                     |
+| `flappy.feature`      | `tests/legacy/flappy/flappy.spec.ts`           | C+F+W    |                                     |
+| `jigsaw.feature`      | `tests/legacy/jigsaw/jigsaw.spec.ts`           | C+F+W    |                                     |
+| `jigsaw2.feature`     | `tests/legacy/jigsaw/jigsaw.spec.ts`           | C+F+W    | Rolled into level 2/3 describes     |
+| `step_mode.feature`   | `tests/legacy/step/step-mode.spec.ts`          | C+F+W    | All 5 scenarios ported              |
+| `clearpuzzle.feature` | `tests/legacy/clearpuzzle/clearpuzzle.spec.ts` | C+F+W    | All 2 scenarios ported              |
+
+C = Chromium, F = Firefox, W = WebKit.
+
+---
+
+## Skipped — @eyes (visual regression)
+
+These tests use Applitools screenshot comparison. No equivalent in Playwright without a
+visual regression service; skip unless that infrastructure is added.
+
+| Feature file                                   |
+| ---------------------------------------------- |
+| `angle_helper.feature` (also @skip)            |
+| `artist_autorun.feature`                       |
+| `applab/eyes1.feature` through `eyes4.feature` |
+| `dance/dance_ai_modal_eyes.feature`            |
+| `gamelab/eyes.feature`                         |
+| `musiclab/musiclab_switching_levels.feature`   |
+| `public_key_cryptography/eyes.feature`         |
+| `spritelab/eyes.feature`                       |
+
+---
+
+## Skipped — @skip in legacy suite
+
+Already disabled upstream; no porting action needed.
+
+| Feature file                           | Reason                 |
+| -------------------------------------- | ---------------------- |
+| `musiclab/musiclab_drag_block.feature` | @skip                  |
+| `craft/aquatic.feature`                | @skip (CI instability) |
+| `mobile_portait.feature`               | @skip + @eyes_mobile   |
+
+---
+
+## Skipped — authentication required
+
+Scenarios require `@as_student`, `@as_teacher`, `@as_taught_student`, or explicit
+account creation steps. The Playwright teacher-tools auth helper (`createTeacher`) exists
+but covers only the teacher-panel flow; porting these would need a full student/teacher
+session fixture.
+
+| Feature file                               | Auth dependency                    |
+| ------------------------------------------ | ---------------------------------- |
+| `can_see_finish.feature`                   | creates student                    |
+| `custom_blocks.feature`                    | creates levelbuilder               |
+| `droplet.feature`                          | @as_student                        |
+| `applab_submittable.feature`               | creates teacher-associated student |
+| `gamelab_submittable.feature`              | @as_taught_student                 |
+| `legacy_share_remix.feature`               | @as_student                        |
+| `maker_projects.feature`                   | @as_student                        |
+| `share_buttons.feature`                    | @as_student                        |
+| `sharepage_logo.feature`                   | @as_student                        |
+| `applab/clipping.feature`                  | @as_student                        |
+| `applab/embed.feature`                     | @as_student                        |
+| `applab/html_sanitization.feature`         | @as_student                        |
+| `applab/scenarios.feature`                 | @as_student                        |
+| `applab/scenarios2.feature`                | @as_student                        |
+| `applab/scenarios3.feature`                | @as_student                        |
+| `applab/shared_apps.feature`               | @single_session                    |
+| `applab/sharing_from_script_level.feature` | @as_student                        |
+| `applab/versions.feature`                  | @no_phone (session state)          |
+| `craft/hero_logged_in.feature`             | logged-in user                     |
+| `gamelab/export_animations.feature`        | @as_student                        |
+| `gamelab/level_options.feature`            | @as_student                        |
+| `gamelab/loading_animations.feature`       | @as_student                        |
+| `spritelab/loading_costumes.feature`       | @as_student                        |
+| `dance/age_filter.feature`                 | age-gate cookie/session            |
+| `dance/age_filter2.feature`                | age-gate cookie/session            |
+| `aichat/chat.feature`                      | student-facing AI feature          |
+| `aichat/chat_multimodal.feature`           | student-facing AI feature          |
+| `aichat/view_student_chat_history.feature` | teacher auth                       |
+| `ai_tutor/chat.feature`                    | student auth                       |
+| `manage_assets.feature`                    | asset upload state                 |
+
+---
+
+## Skipped — cookie/session manipulation
+
+Steps use `delete the cookie` and `clear session storage` Selenium primitives. Playwright
+has `context.clearCookies()` and `evaluate(localStorage.clear())`, but these scenarios
+exist mainly to test UI state reset on re-visit — low value vs. cost.
+
+| Feature file              |
+| ------------------------- |
+| `signin_callout.feature`  |
+| `signin_callout2.feature` |
+
+---
+
+## Skipped — coordinate math / block position assertions
+
+These use pixel-coordinate `near offset` assertions (± tolerance). The Cucumber steps
+calculate absolute element positions via JS and compare to stored coordinates. Replicating
+this in Playwright is possible but brittle and high-maintenance.
+
+| Feature file          | Blocker                     |
+| --------------------- | --------------------------- |
+| `blocklayout.feature` | block position pixel checks |
+
+---
+
+## Out of scope — separate labs
+
+These labs have their own architectures, editors, and server dependencies beyond what the
+current CSF/Music porting effort targets. Each would need a dedicated Lab POM and
+potentially a local server or mocked API.
+
+| Lab                     | Feature files                                                                                                                                 |
+| ----------------------- | --------------------------------------------------------------------------------------------------------------------------------------------- |
+| App Lab (Droplet/ACE)   | `applab/data_blocks.feature`, `data_tab.feature`, `level_options.feature`, `libraries.feature`, `template_backed.feature`, `tooltips.feature` |
+| Game Lab                | `gamelab/libraries.feature`                                                                                                                   |
+| Sprite Lab              | `spritelab/spritelab.feature`                                                                                                                 |
+| Dance Party             | `dance/dance_party.feature`, `dance_ai_modal.feature`, `dance/save_for_share.feature`                                                         |
+| Minecraft (Craft)       | `craft/dialogs.feature`, `craft/hero_logged_out.feature`, `craft/can_see_finish.feature`                                                      |
+| Web Lab                 | `weblab/too_young.feature`, `weblab/weblab.feature`, `weblab/weblab_submittable.feature`, `weblab/versions.feature`                           |
+| Studio (Sprite resize)  | `studio.feature`                                                                                                                              |
+| NetSim                  | `netsim_lobby.feature`                                                                                                                        |
+| Pixelation              | `pixelation.feature`                                                                                                                          |
+| Mix & Move AI           | `mix_move_ai.feature`                                                                                                                         |
+| Share page              | `sharepage.feature`                                                                                                                           |
+| Public Key Cryptography | `public_key_cryptography/continue_button.feature`                                                                                             |
+
+---
+
+## Porteable, not yet done
+
+| Feature file                             | Notes                                                                                                                                                                                          |
+| ---------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `musiclab/musiclab_timeline_nav.feature` | Keyboard accessibility test for Music Lab timeline. No auth, no eyes. Could be added to `tests/lab2/music/music.spec.ts`. Needs investigation of `Tab`/`Enter` key navigation in the timeline. |
+
+---
+
+## All CSF legacy feature files — complete
+
+Every porteable scenario from the legacy CSF lab feature files has been ported:
+
+- All Maze levels + step-mode, hints, inline feedback
+- All Farmer levels + authored hints
+- All Bee levels + conditionals, repeat
+- All Artist levels
+- All Bounce levels + freeplay finish
+- All Flappy levels
+- All Jigsaw levels (image render, connect, moveToGhost)
+- Step Mode (step-only + step-and-run, 5 scenarios)
+- Clear Puzzle (delete + load blocks, 2 scenarios)
+
+The Cucumber legacy CSF suite for these labs is fully superseded by the Playwright suite.
