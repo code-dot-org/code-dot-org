@@ -37,3 +37,37 @@ test.describe('Music Lab — level 2', () => {
     await expect(music.feedbackMessage).toContainText('Nice work.');
   });
 });
+
+/**
+ * Music Lab — lesson 46, level 6 (timeline keyboard navigation).
+ *
+ * Source: dashboard/test/ui/features/star_labs/musiclab/musiclab_timeline_nav.feature
+ * Tagged @no_safari in the Cucumber suite — skipped on webkit.
+ */
+test.describe('Music Lab — level 6 — timeline keyboard navigation', () => {
+  let music: MusicLab;
+
+  test.beforeEach(async ({page}) => {
+    music = new MusicLab(page);
+    await music.gotoLevel(6);
+  });
+
+  test('Enter enters timeline, ArrowRight moves focus, Escape exits to container', async ({
+    browserName,
+  }) => {
+    test.skip(browserName === 'webkit', '@no_safari');
+
+    await music.timeline.focus();
+    await music.page.keyboard.press('Enter');
+
+    // First .timeline-element button receives focus on Enter.
+    await expect(music.timelineElement).toBeFocused();
+
+    await music.page.keyboard.press('ArrowRight');
+    // Focus moves to the next element; first element is no longer focused.
+    await expect(music.timelineElement).not.toBeFocused();
+
+    await music.page.keyboard.press('Escape');
+    await expect(music.timeline).toBeFocused();
+  });
+});

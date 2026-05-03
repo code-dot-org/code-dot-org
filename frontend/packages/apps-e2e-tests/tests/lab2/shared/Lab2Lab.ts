@@ -8,7 +8,7 @@ import {type Locator, type Page} from '@playwright/test';
  * Each subclass supplies the URL scheme and its own ready signal.
  */
 export abstract class Lab2Lab {
-  protected readonly page: Page;
+  readonly page: Page;
 
   /**
    * Validation feedback rendered by lab2 NavigationArea after Run.

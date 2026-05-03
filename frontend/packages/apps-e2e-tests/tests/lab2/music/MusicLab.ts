@@ -19,6 +19,9 @@ export class MusicLab extends Lab2Lab {
    */
   readonly timelineElement: Locator;
 
+  /** The `#timeline` container — keyboard entry point for timeline navigation. */
+  readonly timeline: Locator;
+
   /**
    * The `when_run_simple2` block in the workspace, identified by the
    * explicit `id="when-run-block"` set in the level startSources.
@@ -30,6 +33,7 @@ export class MusicLab extends Lab2Lab {
     this.runButton = page.locator('#run-button');
     this.timelineElement = page.locator('.timeline-element').first();
     this.whenRunBlock = page.locator("[data-id='when-run-block']");
+    this.timeline = page.locator('#timeline');
   }
 
   protected buildLevelUrl(level: number): string {
