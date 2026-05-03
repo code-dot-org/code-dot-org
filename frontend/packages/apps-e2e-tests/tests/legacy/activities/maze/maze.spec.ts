@@ -6,13 +6,13 @@ import {
   TOO_MANY_MAZE_BLOCKS,
   VALID_MAZE_BLOCKS,
 } from './blocks';
-import {MazeLab} from './MazeLab';
+import {Maze} from './Maze';
 
 test.describe('Maze — level 5', () => {
-  let maze: MazeLab;
+  let maze: Maze;
 
   test.beforeEach(async ({page}) => {
-    maze = new MazeLab(page);
+    maze = new Maze(page);
     await maze.gotoLevel(5);
   });
 
@@ -70,10 +70,10 @@ test.describe('Maze — level 5', () => {
 });
 
 test.describe('Maze — level 4', () => {
-  let maze: MazeLab;
+  let maze: Maze;
 
   test.beforeEach(async ({page}) => {
-    maze = new MazeLab(page);
+    maze = new Maze(page);
     await maze.gotoLevel(4);
   });
 

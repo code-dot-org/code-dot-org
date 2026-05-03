@@ -1,13 +1,13 @@
 import {type Locator, type Page} from '@playwright/test';
 
-import {labLevelUrl} from '../../shared/urls';
-import {LegacyBlocklyLab} from '../shared/LegacyBlocklyLab';
+import {labLevelUrl} from '../../../shared/urls';
+import {LegacyBlocklyLab} from '../../shared/LegacyBlocklyLab';
 
 /**
  * Page Object for the Artist (turtle) lab — lesson 3 of allthethingscourse.
  * Extends LegacyBlocklyLab with artist-specific level-art locators.
  */
-export class ArtistLab extends LegacyBlocklyLab {
+export class Artist extends LegacyBlocklyLab {
   /** The static artist avatar image used as level art. */
   readonly artistAvatar: Locator;
 

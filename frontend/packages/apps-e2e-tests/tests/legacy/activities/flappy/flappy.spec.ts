@@ -1,13 +1,13 @@
 import {expect, test} from '@playwright/test';
 
 import {LEVEL_1_FLAPPY_BLOCKS, LEVEL_2_FLAPPY_BLOCKS} from './blocks';
-import {FlappyLab} from './FlappyLab';
+import {Flappy} from './Flappy';
 
 test.describe('Flappy — level 1', () => {
-  let flappy: FlappyLab;
+  let flappy: Flappy;
 
   test.beforeEach(async ({page}) => {
-    flappy = new FlappyLab(page);
+    flappy = new Flappy(page);
     await flappy.gotoLevel(1);
     await expect(flappy.runButton).toBeVisible();
     await expect(flappy.resetButton).toBeHidden();
@@ -28,10 +28,10 @@ test.describe('Flappy — level 1', () => {
 });
 
 test.describe('Flappy — level 2', () => {
-  let flappy: FlappyLab;
+  let flappy: Flappy;
 
   test.beforeEach(async ({page}) => {
-    flappy = new FlappyLab(page);
+    flappy = new Flappy(page);
     await flappy.gotoLevel(2);
     await expect(flappy.runButton).toBeVisible();
     await expect(flappy.resetButton).toBeHidden();

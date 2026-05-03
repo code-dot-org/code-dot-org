@@ -1,13 +1,13 @@
 import {expect, test} from '@playwright/test';
 
-import {ArtistLab} from './ArtistLab';
+import {Artist} from './Artist';
 import {LOSING_ARTIST_BLOCKS, WINNING_ARTIST_BLOCKS} from './blocks';
 
 test.describe('Contextual hints — Artist level 6', () => {
-  let artist: ArtistLab;
+  let artist: Artist;
 
   test.beforeEach(async ({page}) => {
-    artist = new ArtistLab(page);
+    artist = new Artist(page);
     await artist.gotoLevel(6);
   });
 
@@ -29,10 +29,10 @@ test.describe('Contextual hints — Artist level 6', () => {
 });
 
 test.describe('Artist — level 2', () => {
-  let artist: ArtistLab;
+  let artist: Artist;
 
   test.beforeEach(async ({page}) => {
-    artist = new ArtistLab(page);
+    artist = new Artist(page);
     await artist.gotoLevel(2);
   });
 

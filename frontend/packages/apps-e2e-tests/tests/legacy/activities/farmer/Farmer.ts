@@ -1,14 +1,14 @@
 import {type Locator, type Page} from '@playwright/test';
 
-import {labLevelUrl} from '../../shared/urls';
-import {LegacyBlocklyLab} from '../shared/LegacyBlocklyLab';
+import {labLevelUrl} from '../../../shared/urls';
+import {LegacyBlocklyLab} from '../../shared/LegacyBlocklyLab';
 
 /**
  * Page Object for the Farmer lab — lesson 6 of allthethingscourse.
  * Extends LegacyBlocklyLab with farmer-specific locators and game-state helpers.
  * lightbulb, hintCount, instructionsPanel, and acceptHint() are inherited.
  */
-export class FarmerLab extends LegacyBlocklyLab {
+export class Farmer extends LegacyBlocklyLab {
   /** The farmer character rendered in the grid. */
   readonly pegman: Locator;
 

@@ -1,7 +1,7 @@
 import {expect, type Locator, type Page} from '@playwright/test';
 
-import {labLevelUrl} from '../../shared/urls';
-import {LegacyBlocklyLab} from '../shared/LegacyBlocklyLab';
+import {labLevelUrl} from '../../../shared/urls';
+import {LegacyBlocklyLab} from '../../shared/LegacyBlocklyLab';
 
 /**
  * Page Object for the Jigsaw lab — lesson 1 of allthethingscourse.
@@ -11,7 +11,7 @@ import {LegacyBlocklyLab} from '../shared/LegacyBlocklyLab';
  * Puzzles complete automatically when the block lands in the correct slot;
  * no Run button click is needed. Congrats appears inside a modal.
  */
-export class JigsawLab extends LegacyBlocklyLab {
+export class Jigsaw extends LegacyBlocklyLab {
   /** The Blockly SVG workspace — visible once the lab is initialized. */
   readonly workspace: Locator;
 

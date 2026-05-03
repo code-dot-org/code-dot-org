@@ -1,10 +1,10 @@
 import {type Locator, type Page} from '@playwright/test';
 
-import {labLevelUrl} from '../../shared/urls';
-import {LegacyBlocklyLab} from '../shared/LegacyBlocklyLab';
+import {labLevelUrl} from '../../../shared/urls';
+import {LegacyBlocklyLab} from '../../shared/LegacyBlocklyLab';
 
 /** Page Object for the Bee lab — lesson 4 of allthethingscourse. */
-export class BeeLab extends LegacyBlocklyLab {
+export class Bee extends LegacyBlocklyLab {
   /** Button shown after suboptimal completion to request block feedback. */
   readonly hintRequestButton: Locator;
 

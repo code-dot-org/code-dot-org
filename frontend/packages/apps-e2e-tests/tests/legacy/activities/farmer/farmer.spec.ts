@@ -1,13 +1,13 @@
 import {expect, test} from '@playwright/test';
 
 import {LOSING_FARMER_BLOCKS, WINNING_FARMER_BLOCKS} from './blocks';
-import {FarmerLab} from './FarmerLab';
+import {Farmer} from './Farmer';
 
 test.describe('Farmer — level 1', () => {
-  let farmer: FarmerLab;
+  let farmer: Farmer;
 
   test.beforeEach(async ({page}) => {
-    farmer = new FarmerLab(page);
+    farmer = new Farmer(page);
     await farmer.gotoLevel(1);
   });
 
@@ -62,10 +62,10 @@ test.describe('Farmer — level 1', () => {
 });
 
 test.describe('Contextual hints — Farmer level 2', () => {
-  let farmer: FarmerLab;
+  let farmer: Farmer;
 
   test.beforeEach(async ({page}) => {
-    farmer = new FarmerLab(page);
+    farmer = new Farmer(page);
     await farmer.gotoLevel(2);
   });
 
@@ -94,10 +94,10 @@ test.describe('Contextual hints — Farmer level 2', () => {
 });
 
 test.describe('Authored hints — Farmer level 2', () => {
-  let farmer: FarmerLab;
+  let farmer: Farmer;
 
   test.beforeEach(async ({page}) => {
-    farmer = new FarmerLab(page);
+    farmer = new Farmer(page);
     await farmer.gotoLevel(2);
   });
 

@@ -5,13 +5,13 @@ import {
   LEVEL_3_BOUNCE_BLOCKS,
   LEVEL_5_BOUNCE_BLOCKS,
 } from './blocks';
-import {BounceLab} from './BounceLab';
+import {Bounce} from './Bounce';
 
 test.describe('Bounce — level 1', () => {
-  let bounce: BounceLab;
+  let bounce: Bounce;
 
   test.beforeEach(async ({page}) => {
-    bounce = new BounceLab(page);
+    bounce = new Bounce(page);
     await bounce.gotoLevel(1);
     await expect(bounce.runButton).toBeVisible();
     await expect(bounce.resetButton).toBeHidden();
@@ -32,10 +32,10 @@ test.describe('Bounce — level 1', () => {
 });
 
 test.describe('Bounce — level 3', () => {
-  let bounce: BounceLab;
+  let bounce: Bounce;
 
   test.beforeEach(async ({page}) => {
-    bounce = new BounceLab(page);
+    bounce = new Bounce(page);
     await bounce.gotoLevel(3);
     await expect(bounce.runButton).toBeVisible();
     await expect(bounce.resetButton).toBeHidden();
@@ -56,10 +56,10 @@ test.describe('Bounce — level 3', () => {
 });
 
 test.describe('Bounce — level 5', () => {
-  let bounce: BounceLab;
+  let bounce: Bounce;
 
   test.beforeEach(async ({page}) => {
-    bounce = new BounceLab(page);
+    bounce = new Bounce(page);
     await bounce.gotoLevel(5);
     await expect(bounce.runButton).toBeVisible();
     await expect(bounce.resetButton).toBeHidden();
@@ -92,10 +92,10 @@ test.describe('Bounce — level 5', () => {
 });
 
 test.describe('Bounce — freeplay level 10', () => {
-  let bounce: BounceLab;
+  let bounce: Bounce;
 
   test.beforeEach(async ({page}) => {
-    bounce = new BounceLab(page);
+    bounce = new Bounce(page);
     await bounce.gotoLevel(10);
     await expect(bounce.runButton).toBeVisible();
     await expect(bounce.finishButton).toBeHidden();

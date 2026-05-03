@@ -1,13 +1,13 @@
 import {expect, test} from '@playwright/test';
 
-import {BeeLab} from './BeeLab';
+import {Bee} from './Bee';
 import {RECOMMENDED_BEE_LEVEL_5_BLOCKS, WINNING_BEE_BLOCKS} from './blocks';
 
 test.describe('Bee — level 4', () => {
-  let bee: BeeLab;
+  let bee: Bee;
 
   test.beforeEach(async ({page}) => {
-    bee = new BeeLab(page);
+    bee = new Bee(page);
     await bee.gotoLevel(4);
   });
 
@@ -26,10 +26,10 @@ test.describe('Bee — level 4', () => {
 });
 
 test.describe('Feedback — Bee level 5', () => {
-  let bee: BeeLab;
+  let bee: Bee;
 
   test.beforeEach(async ({page}) => {
-    bee = new BeeLab(page);
+    bee = new Bee(page);
     await bee.gotoLevel(5);
   });
 

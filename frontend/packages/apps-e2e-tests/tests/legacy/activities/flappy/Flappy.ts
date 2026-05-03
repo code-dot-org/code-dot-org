@@ -1,5 +1,5 @@
-import {flappyLevelUrl} from '../../shared/urls';
-import {LegacyBlocklyLab} from '../shared/LegacyBlocklyLab';
+import {flappyLevelUrl} from '../../../shared/urls';
+import {LegacyBlocklyLab} from '../../shared/LegacyBlocklyLab';
 
 /**
  * Page Object for the Flappy lab.
@@ -7,7 +7,7 @@ import {LegacyBlocklyLab} from '../shared/LegacyBlocklyLab';
  * modal rather than the default overlay.
  * Extends LegacyBlocklyLab with Flappy-specific game-event methods.
  */
-export class FlappyLab extends LegacyBlocklyLab {
+export class Flappy extends LegacyBlocklyLab {
   protected override get congratsSelector(): string {
     return '.modal .congrats';
   }

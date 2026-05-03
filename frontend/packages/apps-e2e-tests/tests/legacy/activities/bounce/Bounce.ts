@@ -1,13 +1,13 @@
 import {type Locator, type Page} from '@playwright/test';
 
-import {labLevelUrl} from '../../shared/urls';
-import {LegacyBlocklyLab} from '../shared/LegacyBlocklyLab';
+import {labLevelUrl} from '../../../shared/urls';
+import {LegacyBlocklyLab} from '../../shared/LegacyBlocklyLab';
 
 /**
  * Page Object for the Bounce lab — lesson 1 of the events course.
  * Extends LegacyBlocklyLab with keyboard helpers and the freeplay finish button.
  */
-export class BounceLab extends LegacyBlocklyLab {
+export class Bounce extends LegacyBlocklyLab {
   /** Finish button shown in freeplay mode after pressing Run. */
   readonly finishButton: Locator;
 

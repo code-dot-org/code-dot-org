@@ -1,12 +1,12 @@
 import {expect, test} from '@playwright/test';
 
-import {JigsawLab} from './JigsawLab';
+import {Jigsaw} from './Jigsaw';
 
 test.describe('Jigsaw — level 1', () => {
-  let jigsaw: JigsawLab;
+  let jigsaw: Jigsaw;
 
   test.beforeEach(async ({page}) => {
-    jigsaw = new JigsawLab(page);
+    jigsaw = new Jigsaw(page);
     await jigsaw.gotoLevel(1);
   });
 
@@ -35,10 +35,10 @@ test.describe('Jigsaw — level 1', () => {
 });
 
 test.describe('Jigsaw — level 2', () => {
-  let jigsaw: JigsawLab;
+  let jigsaw: Jigsaw;
 
   test.beforeEach(async ({page}) => {
-    jigsaw = new JigsawLab(page);
+    jigsaw = new Jigsaw(page);
     await jigsaw.gotoLevel(2);
   });
 
