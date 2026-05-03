@@ -4,6 +4,12 @@ import {WINNING_DANCE_LEVEL_8_BLOCKS} from './blocks';
 import {Dance} from './Dance';
 
 /**
+ * Blockly re-generates variable IDs on each workspace deserialization.
+ * Strip all id="..." attributes before comparing saved vs reloaded XML.
+ */
+const stripVarIds = (xml: string) => xml.replace(/ id="[^"]+"/g, '');
+
+/**
  * Dance Party — lesson 37, level 2 (run/reset toggle).
  *
  * Source: dashboard/test/ui/features/star_labs/dance/dance_party.feature
@@ -102,7 +108,9 @@ test.describe('Dance Party — dance course — set tint block (level 8)', () =>
   test('winning blocks with set tint pass the level', async () => {
     await dance.loadBlocks(WINNING_DANCE_LEVEL_8_BLOCKS);
     await dance.run();
-    await expect(dance.congratsMessage).toBeVisible();
+    // Level 8 fires at timestamp 4 measures (~17s at the default song BPM).
+    // Override the global 15s expect timeout for this assertion only.
+    await expect(dance.congratsMessage).toBeVisible({timeout: 30_000});
   });
 });
 
@@ -127,11 +135,14 @@ test.describe('Dance Party — lesson 37 — AI Modal (level 3)', () => {
     await dance.clickBlockField(
       "[data-id='setup'] > [data-id='dance_ai'] > .blocklyEditableField",
     );
+    // Wait for the modal emoji picker to render before pressing emoji buttons.
+    // pressJQuery doesn't reach React portal event listeners; use direct clicks.
+    await expect(dance.aiModalHeader).toBeVisible();
 
     // First emoji selection and generate.
-    await dance.pressJQuery('[aria-label="🎉"]');
-    await dance.pressJQuery('[aria-label="🤖"]');
-    await dance.pressJQuery('[aria-label="🪩"]');
+    await dance.page.locator('[aria-label="🎉"]').click();
+    await dance.page.locator('[aria-label="🤖"]').click();
+    await dance.page.locator('[aria-label="🪩"]').click();
     await dance.generateAiEffects();
 
     // Toggle between code view and effects view.
@@ -147,9 +158,9 @@ test.describe('Dance Party — lesson 37 — AI Modal (level 3)', () => {
 
     // Start over and second emoji selection.
     await dance.startOverAi();
-    await dance.pressJQuery('[aria-label="💎"]');
-    await dance.pressJQuery('[aria-label="🌊"]');
-    await dance.pressJQuery('[aria-label="🚀"]');
+    await dance.page.locator('[aria-label="💎"]').click();
+    await dance.page.locator('[aria-label="🌊"]').click();
+    await dance.page.locator('[aria-label="🚀"]').click();
     await dance.generateAiEffects();
 
     // Use the generated effects — modal closes.
@@ -161,9 +172,12 @@ test.describe('Dance Party — lesson 37 — AI Modal (level 3)', () => {
     await expect(dance.runButton).toBeVisible();
 
     // Reopen modal by clicking the AI block field, toggle to code, convert.
+    // After useAiEffects(), the block stores the generated effects; reopening
+    // shows the effects view (Use button visible), not the empty emoji picker.
     await dance.clickBlockField(
       "[data-id='setup'] > [data-id='dance_ai'] > .blocklyEditableField",
     );
+    await expect(dance.aiUseButton).toBeVisible();
     await dance.toggleAiCodeView();
     await dance.convertAiToBlocks();
 
@@ -209,9 +223,9 @@ test.describe('Dance Party — lesson 37 — AI Modal eyes (level 4)', () => {
 
       // Start over and select new emojis in LTR.
       await dance.startOverAi();
-      await dance.pressJQuery('[aria-label="💎"]');
-      await dance.pressJQuery('[aria-label="🌊"]');
-      await dance.pressJQuery('[aria-label="🚀"]');
+      await dance.page.locator('[aria-label="💎"]').click();
+      await dance.page.locator('[aria-label="🌊"]').click();
+      await dance.page.locator('[aria-label="🚀"]').click();
       // visual checkpoint: "selecting new emojis"
 
       // RTL: navigate to Arabic locale of the same level.
@@ -234,9 +248,9 @@ test.describe('Dance Party — lesson 37 — AI Modal eyes (level 4)', () => {
       // visual checkpoint: "starting over in Dance AI modal in RTL"
 
       // RTL: select new emojis.
-      await dance.pressJQuery('[aria-label="💎"]');
-      await dance.pressJQuery('[aria-label="🌊"]');
-      await dance.pressJQuery('[aria-label="🚀"]');
+      await dance.page.locator('[aria-label="💎"]').click();
+      await dance.page.locator('[aria-label="🌊"]').click();
+      await dance.page.locator('[aria-label="🚀"]').click();
       // visual checkpoint: "selecting new emojis in RTL"
     },
   );
@@ -260,28 +274,28 @@ test.describe('Dance Party — dance course — free play save (level 13)', () =
     await dance.gotoDanceCourseLevel(13);
     await expect(dance.clearPuzzleHeader).toBeVisible();
     await dance.clearPuzzleHeader.click();
+    // Dismiss the "Are you sure?" confirmation that appears after clicking Start Over.
+    await dance.page.locator('#confirm-button').click();
     // Remove block "5" (make a new cat) to create a code state distinct from default.
     await dance.disposeBlock('5');
   });
 
   test('saves when Share is clicked', {tag: '@no_mobile'}, async () => {
-    const memorizedCode = await dance.getBlockXML();
+    const memorizedCode = stripVarIds(await dance.getBlockXML());
     await dance.projectShareButton.click();
     // Allow the async project save to complete before reloading.
     await dance.page.waitForTimeout(500);
     await dance.page.reload();
     await expect(dance.runButton).toBeVisible();
-    const currentCode = await dance.getBlockXML();
-    expect(currentCode).toBe(memorizedCode);
+    expect(stripVarIds(await dance.getBlockXML())).toBe(memorizedCode);
   });
 
   test('saves when Finish is clicked', {tag: '@no_mobile'}, async () => {
-    const memorizedCode = await dance.getBlockXML();
+    const memorizedCode = stripVarIds(await dance.getBlockXML());
     await dance.finishButton.click();
     await expect(dance.projectUpdatedAt).toContainText('Saved');
     await dance.page.reload();
     await expect(dance.runButton).toBeVisible();
-    const currentCode = await dance.getBlockXML();
-    expect(currentCode).toBe(memorizedCode);
+    expect(stripVarIds(await dance.getBlockXML())).toBe(memorizedCode);
   });
 });
