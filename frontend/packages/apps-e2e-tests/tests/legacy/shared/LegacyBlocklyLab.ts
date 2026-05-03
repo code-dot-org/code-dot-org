@@ -222,6 +222,19 @@ export abstract class LegacyBlocklyLab {
   }
 
   /**
+   * Post-navigation wait: initial load + optional overlays + ready.
+   * Equivalent to the steps performed by navigate() but without the session
+   * reset and page.goto() — call this after a direct page.goto() in a test.
+   * Subclass overrides to waitForInitialLoad() and dismissOptionalOverlays()
+   * are honoured automatically.
+   */
+  async waitForLabPage(): Promise<void> {
+    await this.waitForInitialLoad();
+    await this.dismissOptionalOverlays();
+    await this.waitForReady();
+  }
+
+  /**
    * Wait for the run button to be visible and the sign-in callout to be gone.
    * Use after navigateDirect() or any navigation that bypasses navigate().
    */

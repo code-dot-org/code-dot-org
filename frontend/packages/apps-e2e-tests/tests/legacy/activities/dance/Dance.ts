@@ -80,6 +80,20 @@ export class Dance extends LegacyBlocklyLab {
   }
 
   /**
+   * Select the given age and submit the age-gate dialog.
+   * Waits for the selector to be visible before interacting.
+   * Mirrors `I select age N in the age dialog`.
+   *
+   * @param age - numeric age to select (e.g. 10, 13)
+   */
+  async selectAgeInDialog(age: number): Promise<void> {
+    const ageSelector = this.page.locator('#uitest-age-selector');
+    await ageSelector.waitFor({state: 'visible'});
+    await ageSelector.selectOption(String(age));
+    await this.page.locator('#uitest-submit-age').click();
+  }
+
+  /**
    * Select age 10 and submit the age-gate dialog, if present.
    * Mirrors `I bypass the age dialog` / `I select age 10 in the age dialog`.
    */
@@ -89,6 +103,61 @@ export class Dance extends LegacyBlocklyLab {
       await ageSelector.selectOption('10');
       await this.page.locator('#uitest-submit-age').click();
     }
+  }
+
+  /**
+   * Navigate to a Dance level as an anonymous user, leaving the age-gate
+   * dialog visible for the caller to interact with. Closes the instructions
+   * overlay but does NOT dismiss the age dialog.
+   * Use in tests that need to assert on age-dialog behaviour.
+   *
+   * @param level - allthethingscourse lesson-37 level number
+   */
+  async gotoLevelAnonymous(level: number): Promise<void> {
+    await this.page.goto('/reset_session');
+    await this.page.goto(this.buildLevelUrl(level));
+    await this.waitForInitialLoad();
+    // Dismiss instructions overlay only — age dialog stays for caller.
+    await super.dismissOptionalOverlays();
+  }
+
+  /**
+   * Close the instructions overlay (#overlay or [aria-label="Close"]).
+   * Call after selectAgeInDialog() when the instructions overlay appears
+   * after the age dialog is dismissed.
+   */
+  async dismissInstructions(): Promise<void> {
+    await super.dismissOptionalOverlays();
+  }
+
+  /**
+   * Assert both known PG-13 song option values are absent from #song_selector.
+   * Values checked: `synthesize` (local) and `badhabit_stevelacy` (test-studio).
+   * Mirrors `I do not see "X" option in the dropdown "#song_selector"`.
+   */
+  async expectPg13SongsFiltered(): Promise<void> {
+    await expect(
+      this.page.locator('#song_selector option[value="synthesize"]'),
+    ).not.toBeAttached();
+    await expect(
+      this.page.locator('#song_selector option[value="badhabit_stevelacy"]'),
+    ).not.toBeAttached();
+  }
+
+  /**
+   * Assert at least one PG-13 song option value is present in #song_selector.
+   * Mirrors `I see option "Synthesize" or "Steve Lacy - Bad Habit" in the dropdown`.
+   */
+  async expectPg13SongsAvailable(): Promise<void> {
+    await expect(
+      this.page
+        .locator('#song_selector option[value="synthesize"]')
+        .or(
+          this.page.locator(
+            '#song_selector option[value="badhabit_stevelacy"]',
+          ),
+        ),
+    ).toBeAttached();
   }
 
   /**
