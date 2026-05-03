@@ -39,6 +39,27 @@ test.describe('Music Lab — level 2', () => {
 });
 
 /**
+ * Music Lab — lesson 46, levels 4 → 5 (level switching).
+ *
+ * Source: dashboard/test/ui/features/star_labs/musiclab/musiclab_switching_levels.feature
+ * @eyes steps annotated as visual checkpoints.
+ */
+test.describe('Music Lab — level switching', () => {
+  let music: MusicLab;
+
+  test.beforeEach(async ({page}) => {
+    music = new MusicLab(page);
+    await music.gotoLevel(4);
+  });
+
+  test('clicking level 5 bubble loads level 5 workspace', async () => {
+    await music.page.locator("[title='Level 5 Lesson Music']").click();
+    await expect(music.runButton).toBeVisible();
+    // visual checkpoint: "new level loading"
+  });
+});
+
+/**
  * Music Lab — lesson 46, level 6 (timeline keyboard navigation).
  *
  * Source: dashboard/test/ui/features/star_labs/musiclab/musiclab_timeline_nav.feature

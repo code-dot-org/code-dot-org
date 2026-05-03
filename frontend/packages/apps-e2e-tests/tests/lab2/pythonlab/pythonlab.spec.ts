@@ -2,6 +2,58 @@ import {expect, test} from '@playwright/test';
 
 import {PythonLab} from './PythonLab';
 
+/** Skip webkit for all Python Lab tests (@no_safari — web workers not supported). */
+const skipSafari = ({browserName}: {browserName: string}) =>
+  test.skip(browserName === 'webkit', '@no_safari');
+
+/**
+ * Python Lab — lesson 50, level 1 (run output).
+ *
+ * Source: dashboard/test/ui/features/code_tools/pythonlab/pythonlab_run_eyes.feature
+ * @no_mobile @no_safari — webkit skipped. @eyes steps annotated as visual checkpoints.
+ */
+test.describe('Python Lab — level 1 — run output', () => {
+  let lab: PythonLab;
+
+  test.beforeEach(async ({page, browserName}) => {
+    skipSafari({browserName});
+    lab = new PythonLab(page);
+    await lab.gotoLevel(1);
+    await expect(lab.runButton).toBeEnabled();
+  });
+
+  test('running prints Hello from the start! to the console', async () => {
+    // visual checkpoint: "initial load"
+    await lab.run();
+    await expect(lab.console).toContainText('Hello from the start!');
+    // visual checkpoint: "completed run"
+  });
+});
+
+/**
+ * Python Lab — lesson 50, level 10 (Neighborhood).
+ *
+ * Source: dashboard/test/ui/features/code_tools/pythonlab/pythonlab_neighborhood.feature
+ * @no_mobile @no_safari — webkit skipped. @eyes steps annotated as visual checkpoints.
+ */
+test.describe('Python Lab — level 10 — Neighborhood', () => {
+  let lab: PythonLab;
+
+  test.beforeEach(async ({page, browserName}) => {
+    skipSafari({browserName});
+    lab = new PythonLab(page);
+    await lab.gotoLevel(10);
+    await expect(lab.runButton).toBeEnabled();
+  });
+
+  test('running Neighborhood program outputs 10 to the console', async () => {
+    // visual checkpoint: "initial load"
+    await lab.run();
+    await expect(lab.console).toContainText('10');
+    // visual checkpoint: "completed run"
+  });
+});
+
 /**
  * Python Lab — lesson 50, level 1 (file management).
  *
@@ -12,7 +64,7 @@ test.describe('Python Lab — level 1 — file management', () => {
   let lab: PythonLab;
 
   test.beforeEach(async ({page, browserName}) => {
-    test.skip(browserName === 'webkit', '@no_safari');
+    skipSafari({browserName});
     lab = new PythonLab(page);
     await lab.gotoLevel(1);
   });

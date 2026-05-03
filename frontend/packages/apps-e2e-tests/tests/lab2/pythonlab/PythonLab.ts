@@ -21,12 +21,16 @@ export class PythonLab extends Lab2Lab {
   /** Add-file button (`+`) in the files panel header. */
   readonly filesPlus: Locator;
 
+  /** Console output panel — `#uitest-codebridge-console`. */
+  readonly console: Locator;
+
   constructor(page: Page) {
     super(page);
     this.runButton = page.locator('#uitest-codebridge-run');
     this.editorContent = page.locator('.cm-content');
     this.filesList = page.locator('#uitest-files-list');
     this.filesPlus = page.locator('#uitest-files-plus');
+    this.console = page.locator('#uitest-codebridge-console');
   }
 
   protected buildLevelUrl(level: number): string {
@@ -40,6 +44,11 @@ export class PythonLab extends Lab2Lab {
    */
   protected async waitForReady(): Promise<void> {
     await this.runButton.waitFor({state: 'visible'});
+  }
+
+  /** Clicks the run button. */
+  async run(): Promise<void> {
+    await this.runButton.click();
   }
 
   /**
