@@ -104,7 +104,7 @@ test.describe('Dance Party age filter — anonymous user, age dialog', () => {
         '/courses/dance/units/1/lessons/1/levels/9?noautoplay=true',
       );
       await dance.waitForDancePage();
-      await expect(page.locator('.age-dialog')).toBeHidden();
+      await expect(dance.ageDialog).toBeHidden();
       await expect(dance.runButton).toBeVisible();
       await expect(dance.songSelector).toBeVisible();
       await dance.expectPg13SongsAvailable();
@@ -121,7 +121,7 @@ test.describe('Dance Party age filter — anonymous user, age dialog', () => {
         '/courses/allthethingscourse/units/1/lessons/37/levels/1?noautoplay=true&songfilter=on',
       );
       await dance.waitForDancePage();
-      await expect(page.locator('.age-dialog')).toBeHidden();
+      await expect(dance.ageDialog).toBeHidden();
       await dance.expectPg13SongsFiltered();
     },
   );
@@ -136,7 +136,7 @@ test.describe('Dance Party age filter — anonymous user, age dialog', () => {
         '/courses/allthethingscourse/units/1/lessons/37/levels/1?noautoplay=true&songfilter=on',
       );
       await dance.waitForDancePage();
-      await expect(page.locator('.age-dialog')).toBeHidden();
+      await expect(dance.ageDialog).toBeHidden();
       await dance.expectPg13SongsFiltered();
 
       // Run until level success, then follow the continue link.

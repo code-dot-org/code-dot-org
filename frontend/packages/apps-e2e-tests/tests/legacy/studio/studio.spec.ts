@@ -1,6 +1,6 @@
 import {expect, test} from '@playwright/test';
 
-import {labLevelUrl} from '../../shared/urls';
+import {Studio} from './Studio';
 
 /**
  * PlayLab (studio) — sprite resize after run.
@@ -13,19 +13,17 @@ import {labLevelUrl} from '../../shared/urls';
  */
 test.describe('PlayLab — sprite resize', () => {
   test('sprites resize after running the program', async ({page}) => {
-    await page.goto('/reset_session');
-    await page.goto(labLevelUrl(22, 1));
-    await page.locator('#runButton').waitFor({state: 'visible'});
+    const studio = new Studio(page);
+    await studio.gotoLevel(1);
 
-    const sprites = page.locator('#spriteLayer image');
-    await expect(sprites.nth(0)).toHaveAttribute('height', '100');
-    await expect(sprites.nth(15)).toHaveAttribute('height', '100');
+    await expect(studio.sprites.nth(0)).toHaveAttribute('height', '100');
+    await expect(studio.sprites.nth(15)).toHaveAttribute('height', '100');
 
-    await page.locator('#runButton').click();
-    await page.locator('.congrats').waitFor({state: 'visible'});
-    await page.locator('#again-button').click();
+    await studio.run();
+    await expect(studio.congratsMessage).toBeVisible();
+    await studio.tryAgain();
 
-    await expect(sprites.nth(0)).toHaveAttribute('height', '50');
-    await expect(sprites.nth(15)).toHaveAttribute('height', '150');
+    await expect(studio.sprites.nth(0)).toHaveAttribute('height', '50');
+    await expect(studio.sprites.nth(15)).toHaveAttribute('height', '150');
   });
 });

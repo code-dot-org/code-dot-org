@@ -11,9 +11,7 @@ test.describe('Jigsaw — level 1', () => {
   });
 
   test('level renders the blank jigsaw image', async () => {
-    await expect(
-      jigsaw.page.locator('img[src*="jigsaw/blank.png"]'),
-    ).toBeVisible();
+    await expect(jigsaw.blankImage).toBeVisible();
   });
 
   test.fixme(

@@ -16,9 +16,23 @@ export class Flappy extends LegacyBlocklyLab {
    */
   readonly rightButton: Locator;
 
+  /** Close button inside the share/congrats modal — `#x-close`. */
+  readonly xClose: Locator;
+
+  /** Small-footer "more" menu toggle — `div.small-footer-base button.more-link`. */
+  readonly footerMoreButton: Locator;
+
+  /** Blockly code workspace container — `#codeWorkspace`. */
+  readonly codeWorkspace: Locator;
+
   constructor(page: Page) {
     super(page);
     this.rightButton = page.locator('#rightButton');
+    this.xClose = page.locator('#x-close');
+    this.footerMoreButton = page.locator(
+      'div.small-footer-base button.more-link',
+    );
+    this.codeWorkspace = page.locator('#codeWorkspace');
   }
 
   protected override get congratsSelector(): string {

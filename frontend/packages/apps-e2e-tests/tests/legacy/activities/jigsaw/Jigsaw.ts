@@ -15,6 +15,9 @@ export class Jigsaw extends LegacyBlocklyLab {
   /** The Blockly SVG workspace — visible once the lab is initialized. */
   readonly workspace: Locator;
 
+  /** Blank jigsaw tile image — `img[src*="jigsaw/blank.png"]`. */
+  readonly blankImage: Locator;
+
   protected override get congratsSelector(): string {
     return '.modal .congrats';
   }
@@ -22,6 +25,7 @@ export class Jigsaw extends LegacyBlocklyLab {
   constructor(page: Page) {
     super(page);
     this.workspace = page.locator('.blocklyWorkspace');
+    this.blankImage = page.locator('img[src*="jigsaw/blank.png"]');
   }
 
   protected buildLevelUrl(level: number): string {

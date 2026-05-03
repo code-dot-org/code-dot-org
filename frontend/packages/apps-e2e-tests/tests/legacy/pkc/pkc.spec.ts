@@ -1,6 +1,6 @@
 import {expect, test} from '@playwright/test';
 
-import {labLevelUrl} from '../../shared/urls';
+import {PKC} from './PKC';
 
 /**
  * Public Key Cryptography — Continue button regression test.
@@ -14,17 +14,12 @@ import {labLevelUrl} from '../../shared/urls';
  */
 test.describe('Public Key Cryptography — continue button', () => {
   test('last Continue button advances to level 2', async ({page}) => {
-    await page.goto('/reset_session');
-    await page.goto(labLevelUrl(31, 1));
-    await page
-      .locator('#public-key-cryptography-mount')
-      .waitFor({state: 'visible'});
+    const pkc = new PKC(page);
+    await pkc.gotoLevel(1);
 
     await page.getByRole('button', {name: 'Continue'}).last().click();
 
-    await expect(page.locator('#public-key-cryptography-mount')).toContainText(
-      'Pick a character',
-    );
+    await expect(pkc.mount).toContainText('Pick a character');
     await expect(page).toHaveURL(/\/lessons\/31\/levels\/2/);
   });
 });

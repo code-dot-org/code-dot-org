@@ -36,6 +36,9 @@ export class Dance extends LegacyBlocklyLab {
   /** Use-effects button inside the AI modal. Visible once effects are generated. */
   readonly aiUseButton: Locator;
 
+  /** Age-gate dialog overlay — `.age-dialog`. */
+  readonly ageDialog: Locator;
+
   constructor(page: Page) {
     super(page);
     this.songSelector = page.locator('#song_selector');
@@ -45,6 +48,7 @@ export class Dance extends LegacyBlocklyLab {
     this.projectUpdatedAt = page.locator('.project_updated_at');
     this.aiModalHeader = page.locator('#ai-modal-header-area');
     this.aiUseButton = page.locator('#use-button');
+    this.ageDialog = page.locator('.age-dialog');
   }
 
   /** Lesson 37 of allthethingscourse — used by LegacyBlocklyLab.gotoLevel(). */

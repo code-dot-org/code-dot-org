@@ -50,7 +50,7 @@ test.describe('Flappy — share page', () => {
 
     await flappy.runButton.click();
     await flappy.rightButton.click();
-    await page.locator('#x-close').waitFor({state: 'visible'});
+    await flappy.xClose.waitFor({state: 'visible'});
 
     await flappy.ensureShareDialogOpen();
     const shareUrl = await flappy.getShareUrl();
@@ -60,7 +60,7 @@ test.describe('Flappy — share page', () => {
     await page.waitForFunction(
       () => typeof (window as any).Flappy !== 'undefined', // eslint-disable-line @typescript-eslint/no-explicit-any
     );
-    await page.locator('#runButton').waitFor({state: 'visible'});
+    await flappy.runButton.waitFor({state: 'visible'});
 
     expect(await flappy.gameState()).toBe(0); // WAITING
 
@@ -74,7 +74,7 @@ test.describe('Flappy — share page', () => {
     expect(await flappy.gameState()).toBe(1); // ACTIVE
 
     // Open the small-footer menu and click "How it Works (View Code)".
-    await page.locator('div.small-footer-base button.more-link').click();
+    await flappy.footerMoreButton.click();
     await page
       .locator('ul#more-menu')
       .getByText('How it Works (View Code)')
@@ -85,7 +85,7 @@ test.describe('Flappy — share page', () => {
     const historyState = await page.evaluate(() => window.history.state);
     expect(historyState).toBeNull();
 
-    await page.locator('#codeWorkspace').waitFor({state: 'visible'});
+    await flappy.codeWorkspace.waitFor({state: 'visible'});
 
     // Wait for Flappy to reinitialise on the workspace page.
     await page.waitForFunction(
@@ -104,17 +104,13 @@ test.describe('Flappy — share page', () => {
     expect(await flappy.gameState()).toBe(1); // ACTIVE
 
     // Verify block parent relationships in the workspace SVG.
-    const flapHeight = page
-      .locator('.blocklySvg g[data-id="flapHeight"]')
-      .first();
+    const flapHeight = flappy.blockLocator('flapHeight');
     await expect(flapHeight.locator('xpath=..')).toHaveAttribute(
       'data-id',
       'whenClick',
     );
 
-    const playSound = page
-      .locator('.blocklySvg g[data-id="playSound"]')
-      .first();
+    const playSound = flappy.blockLocator('playSound');
     await expect(playSound.locator('xpath=..')).toHaveAttribute(
       'data-id',
       'flapHeight',
