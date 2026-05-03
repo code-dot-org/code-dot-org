@@ -2,7 +2,7 @@
 
 Source: `dashboard/test/ui/features/star_labs/`, `features/code_tools/`, and `features/student_learning/`  
 Target: `frontend/packages/apps-e2e-tests/tests/`  
-As of: 2026-05-05 (updated 2026-05-05 — HOC + catalog + challenge_level ported)
+As of: 2026-05-05 (updated 2026-05-05 — dance age_filter + can_see_finish ported)
 
 ---
 
@@ -10,7 +10,7 @@ As of: 2026-05-05 (updated 2026-05-05 — HOC + catalog + challenge_level ported
 
 | Status                                 | Count                                                                             |
 | -------------------------------------- | --------------------------------------------------------------------------------- |
-| Ported                                 | 36 feature files (C+F for pythonlab + mixmoveai; C+F+W for rest)                  |
+| Ported                                 | 39 feature files (C+F for pythonlab + mixmoveai; C+F+W for rest)                  |
 | Covered by ported                      | 2 (maze2, jigsaw2 rolled into existing specs)                                     |
 | Partial — @eyes (visual checkpoints)   | 5 ported up to snapshot; @eyes auth blocked 3                                     |
 | Skipped — auth required                | 30+                                                                               |
@@ -64,6 +64,9 @@ As of: 2026-05-05 (updated 2026-05-05 — HOC + catalog + challenge_level ported
 | `student_learning/hour_of_code/hoc_reset.feature`              | `tests/legacy/hoc/hoc.spec.ts`                                     | C+F      | hoc/reset re-triggers video + callout state          |
 | `acquisition_products/curriculum_catalog.feature` (scenario 1) | `tests/catalog/catalog.spec.ts`                                    | C+F+W    | signed-out redirect; other scenarios auth-blocked    |
 | `teacher_tools/challenge_level.feature`                        | `tests/legacy/challenge-level/challenge-level.spec.ts`             | C+F+W    | 2 scenarios; JS click bypasses viz overlay           |
+| `dance/age_filter.feature`                                     | `tests/legacy/activities/dance/dance-age-filter.spec.ts`           | C+F+W    | student + anonymous; age dialog + ?songfilter=on     |
+| `dance/age_filter2.feature`                                    | `tests/legacy/activities/dance/dance-age-filter.spec.ts`           | C+F+W    | age-13 dialog; filter persists across levels         |
+| `can_see_finish.feature` (blockly @no_mobile)                  | `tests/legacy/can-see-finish/can-see-finish.spec.ts`               | C+F+W    | 5 labs at 1366×727; Game Lab + Minecraft omitted     |
 
 C = Chromium, F = Firefox, W = WebKit.
 
@@ -126,7 +129,7 @@ session fixture.
 
 | Feature file                                                      | Auth dependency                    |
 | ----------------------------------------------------------------- | ---------------------------------- |
-| `can_see_finish.feature`                                          | creates student                    |
+| `can_see_finish.feature` (mobile @only_mobile variants)           | needs mobile Playwright project    |
 | `custom_blocks.feature`                                           | creates levelbuilder               |
 | `droplet.feature`                                                 | @as_student                        |
 | `applab_submittable.feature`                                      | creates teacher-associated student |
@@ -149,8 +152,6 @@ session fixture.
 | `gamelab/level_options.feature`                                   | @as_student                        |
 | `gamelab/loading_animations.feature`                              | @as_student                        |
 | `spritelab/loading_costumes.feature`                              | @as_student                        |
-| `dance/age_filter.feature`                                        | age-gate cookie/session            |
-| `dance/age_filter2.feature`                                       | age-gate cookie/session            |
 | `aichat/chat.feature`                                             | student auth (AI chat feature)     |
 | `aichat/chat_multimodal.feature`                                  | student auth (AI chat feature)     |
 | `aichat/view_student_chat_history.feature`                        | teacher auth (AI chat feature)     |
