@@ -10,14 +10,14 @@ As of: 2026-05-03
 
 | Status                                 | Count                                         |
 | -------------------------------------- | --------------------------------------------- |
-| Ported                                 | 13 feature files (all 3 browsers)             |
+| Ported                                 | 16 feature files (all 3 browsers)             |
 | Covered by ported                      | 2 (maze2, jigsaw2 rolled into existing specs) |
-| Skipped — @eyes                        | 10                                            |
+| Partial — @eyes (visual checkpoints)   | 3 ported up to snapshot; @eyes auth blocked 4 |
 | Skipped — auth required                | 30+                                           |
 | Skipped — @skip / @eyes_mobile         | 3                                             |
 | Skipped — cookie/session manipulation  | 2                                             |
 | Out of scope — non-CSF labs            | 6 labs, ~20 feature files (star_labs)         |
-| Out of scope — lab2 auth/eyes          | 7 (pythonlab ×5, weblab ×2 porteable blocked) |
+| Out of scope — lab2 auth/eyes          | 4 (pythonlab ×3 auth/eyes, weblab ×1 @skip)   |
 | Out of scope — platform/infrastructure | 3                                             |
 | Out of scope — standalone tools        | 4                                             |
 | Porteable, not yet done                | 0                                             |
@@ -26,41 +26,60 @@ As of: 2026-05-03
 
 ## Ported
 
-| Feature file                                   | Playwright spec                                | Browsers | Notes                               |
-| ---------------------------------------------- | ---------------------------------------------- | -------- | ----------------------------------- |
-| `maze.feature`                                 | `tests/legacy/maze/maze.spec.ts`               | C+F+W    |                                     |
-| `maze2.feature`                                | `tests/legacy/maze/maze.spec.ts`               | C+F+W    | Rolled into Maze — level 4 describe |
-| `farmer.feature`                               | `tests/legacy/farmer/farmer.spec.ts`           | C+F+W    |                                     |
-| `bee.feature`                                  | `tests/legacy/bee/bee.spec.ts`                 | C+F+W    |                                     |
-| `artist.feature`                               | `tests/legacy/artist/artist.spec.ts`           | C+F+W    |                                     |
-| `bounce.feature`                               | `tests/legacy/bounce/bounce.spec.ts`           | C+F+W    |                                     |
-| `flappy.feature`                               | `tests/legacy/flappy/flappy.spec.ts`           | C+F+W    |                                     |
-| `jigsaw.feature`                               | `tests/legacy/jigsaw/jigsaw.spec.ts`           | C+F+W    |                                     |
-| `jigsaw2.feature`                              | `tests/legacy/jigsaw/jigsaw.spec.ts`           | C+F+W    | Rolled into level 2/3 describes     |
-| `step_mode.feature`                            | `tests/legacy/step/step-mode.spec.ts`          | C+F+W    | All 5 scenarios ported              |
-| `clearpuzzle.feature`                          | `tests/legacy/clearpuzzle/clearpuzzle.spec.ts` | C+F+W    | All 2 scenarios ported              |
-| `musiclab/musiclab_timeline_nav.feature`       | `tests/lab2/music/music.spec.ts`               | C+F+W    | @no_safari; webkit skipped          |
-| `code_tools/pythonlab/pythonlab_files.feature` | `tests/lab2/pythonlab/pythonlab.spec.ts`       | C+F      | @no_safari; webkit skipped          |
+| Feature file                                          | Playwright spec                                | Browsers | Notes                               |
+| ----------------------------------------------------- | ---------------------------------------------- | -------- | ----------------------------------- |
+| `maze.feature`                                        | `tests/legacy/maze/maze.spec.ts`               | C+F+W    |                                     |
+| `maze2.feature`                                       | `tests/legacy/maze/maze.spec.ts`               | C+F+W    | Rolled into Maze — level 4 describe |
+| `farmer.feature`                                      | `tests/legacy/farmer/farmer.spec.ts`           | C+F+W    |                                     |
+| `bee.feature`                                         | `tests/legacy/bee/bee.spec.ts`                 | C+F+W    |                                     |
+| `artist.feature`                                      | `tests/legacy/artist/artist.spec.ts`           | C+F+W    |                                     |
+| `bounce.feature`                                      | `tests/legacy/bounce/bounce.spec.ts`           | C+F+W    |                                     |
+| `flappy.feature`                                      | `tests/legacy/flappy/flappy.spec.ts`           | C+F+W    |                                     |
+| `jigsaw.feature`                                      | `tests/legacy/jigsaw/jigsaw.spec.ts`           | C+F+W    |                                     |
+| `jigsaw2.feature`                                     | `tests/legacy/jigsaw/jigsaw.spec.ts`           | C+F+W    | Rolled into level 2/3 describes     |
+| `step_mode.feature`                                   | `tests/legacy/step/step-mode.spec.ts`          | C+F+W    | All 5 scenarios ported              |
+| `clearpuzzle.feature`                                 | `tests/legacy/clearpuzzle/clearpuzzle.spec.ts` | C+F+W    | All 2 scenarios ported              |
+| `musiclab/musiclab_timeline_nav.feature`              | `tests/lab2/music/music.spec.ts`               | C+F+W    | @no_safari; webkit skipped          |
+| `code_tools/pythonlab/pythonlab_files.feature`        | `tests/lab2/pythonlab/pythonlab.spec.ts`       | C+F      | @no_safari; webkit skipped          |
+| `musiclab/musiclab_switching_levels.feature` (@eyes)  | `tests/lab2/music/music.spec.ts`               | C+F+W    | visual checkpoints annotated        |
+| `code_tools/pythonlab/pythonlab_run_eyes.feature`     | `tests/lab2/pythonlab/pythonlab.spec.ts`       | C+F      | visual checkpoints annotated        |
+| `code_tools/pythonlab/pythonlab_neighborhood.feature` | `tests/lab2/pythonlab/pythonlab.spec.ts`       | C+F      | visual checkpoints annotated        |
 
 C = Chromium, F = Firefox, W = WebKit.
 
 ---
 
-## Skipped — @eyes (visual regression)
+## @eyes features — visual checkpoints annotated, snapshot assertions pending
 
-These tests use Applitools screenshot comparison. No equivalent in Playwright without a
-visual regression service; skip unless that infrastructure is added.
+@eyes features are ported up to the visual snapshot call. Each snapshot site is
+marked `// visual checkpoint: "<name>"` in the spec. The actual `toHaveScreenshot`
+or equivalent assertion is deferred until visual regression infrastructure exists.
 
-| Feature file                                   |
-| ---------------------------------------------- |
-| `angle_helper.feature` (also @skip)            |
-| `artist_autorun.feature`                       |
-| `applab/eyes1.feature` through `eyes4.feature` |
-| `dance/dance_ai_modal_eyes.feature`            |
-| `gamelab/eyes.feature`                         |
-| `musiclab/musiclab_switching_levels.feature`   |
-| `public_key_cryptography/eyes.feature`         |
-| `spritelab/eyes.feature`                       |
+### Ported (functional steps + visual checkpoints)
+
+| Feature file                                          | Notes                        |
+| ----------------------------------------------------- | ---------------------------- |
+| `musiclab/musiclab_switching_levels.feature`          | level nav + run-button ready |
+| `code_tools/pythonlab/pythonlab_run_eyes.feature`     | run → console text assertion |
+| `code_tools/pythonlab/pythonlab_neighborhood.feature` | run → console text assertion |
+
+### Blocked — auth required
+
+| Feature file                                             | Auth blocker      |
+| -------------------------------------------------------- | ----------------- |
+| `code_tools/pythonlab/pythonlab_start_mode_eyes.feature` | levelbuilder auth |
+| `gamelab/eyes.feature`                                   | `@as_student`     |
+| `spritelab/eyes.feature`                                 | `@as_student`     |
+
+### Blocked — also @skip or too few non-visual steps to port
+
+| Feature file                                   | Reason                            |
+| ---------------------------------------------- | --------------------------------- |
+| `angle_helper.feature`                         | @skip wins                        |
+| `artist_autorun.feature`                       | legacy lab; all assertions visual |
+| `applab/eyes1.feature` through `eyes4.feature` | auth-required (App Lab)           |
+| `dance/dance_ai_modal_eyes.feature`            | Dance Party POM not yet built     |
+| `public_key_cryptography/eyes.feature`         | heavy custom step definitions     |
 
 ---
 
