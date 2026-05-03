@@ -1,15 +1,36 @@
-import {expect, type Locator} from '@playwright/test';
+import {expect, type Locator, type Page} from '@playwright/test';
 
 import {LegacyBlocklyLab} from '../shared/LegacyBlocklyLab';
 
 /**
  * Page Object for an Hour of Code level (/hoc/N).
  *
- * Used to test the clear-puzzle workspace feature, which resets the
- * Blockly workspace to its initial levelbuilder state via
- * #clear-puzzle-header → modal → #confirm-button.
+ * Covers clear-puzzle, progress tracking, video modals, and callout tooltips.
  */
 export class HocLevel extends LegacyBlocklyLab {
+  /** Generic modal overlay — `.modal`. */
+  readonly modal: Locator;
+
+  /** Intro video modal — `.video-modal`. */
+  readonly videoModal: Locator;
+
+  /** Callout tooltip container — `.cdo-qtips`. */
+  readonly callouts: Locator;
+
+  /** User-stats block on the course overview page — `.user-stats-block`. */
+  readonly userStatsBlock: Locator;
+
+  /** Last reference-area link — `.reference_area a`. */
+  readonly referenceAreaLink: Locator;
+
+  constructor(page: Page) {
+    super(page);
+    this.modal = page.locator('.modal');
+    this.videoModal = page.locator('.video-modal');
+    this.callouts = page.locator('.cdo-qtips');
+    this.userStatsBlock = page.locator('.user-stats-block');
+    this.referenceAreaLink = page.locator('.reference_area a').last();
+  }
   protected buildLevelUrl(level: number): string {
     return `/hoc/${level}?noautoplay=true`;
   }
@@ -33,6 +54,33 @@ export class HocLevel extends LegacyBlocklyLab {
       .waitFor({state: 'visible', timeout: 1000})
       .catch(() => {});
     await this.dismissOptionalOverlays();
+  }
+
+  /**
+   * Locator for a callout tooltip containing the given text.
+   *
+   * @param text - substring to match against `.qtip-content`
+   */
+  callout(text: string): Locator {
+    return this.page.locator('.qtip-content', {hasText: text});
+  }
+
+  /**
+   * Close the puzzle-congrats modal (`.modal`) and wait for it to be hidden.
+   * Clicks the `#x-close` button inside the modal.
+   */
+  async closeModal(): Promise<void> {
+    await this.page.locator('#x-close').click();
+    await expect(this.modal).toBeHidden();
+  }
+
+  /**
+   * Close the intro video modal (`.video-modal`) and wait for it to be hidden.
+   * Clicks the `#x-close` button inside the video modal.
+   */
+  async closeVideoModal(): Promise<void> {
+    await this.page.locator('#x-close').click();
+    await expect(this.videoModal).toBeHidden();
   }
 
   /** Click the clear-puzzle toolbar button to open the confirmation modal. */

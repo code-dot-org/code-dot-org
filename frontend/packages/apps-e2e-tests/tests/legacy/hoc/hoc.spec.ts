@@ -37,14 +37,11 @@ test.describe('Hour of Code — anonymous progress tracking', () => {
     await hoc.loadBlocks(TWO_MOVE_FORWARD_BLOCKS);
     await hoc.run();
 
-    await page.locator('.modal').waitFor({state: 'visible'});
-    await expect(page.locator('.modal .congrats')).toContainText(
-      'You completed Puzzle 1.',
-    );
+    await hoc.modal.waitFor({state: 'visible'});
+    await expect(hoc.congratsMessage).toContainText('You completed Puzzle 1.');
 
     // Closing the congrats stays on the same level (no auto-advance for anon).
-    await page.locator('#x-close').click();
-    await page.locator('.modal').waitFor({state: 'hidden'});
+    await hoc.closeModal();
     expect(page.url()).toContain('/hoc/1');
 
     // Navigate to hoc/2 and verify progress bubble for level 1 is perfect.
@@ -53,7 +50,7 @@ test.describe('Hour of Code — anonymous progress tracking', () => {
 
     // Course overview for hourofcode unit 1 should also reflect perfect.
     await page.goto('/courses/hourofcode/units/1');
-    await page.locator('.user-stats-block').waitFor({state: 'visible'});
+    await hoc.userStatsBlock.waitFor({state: 'visible'});
     await hoc.expectProgressOnOverview(1, 1, 'perfect');
 
     // A different course should show level 1 as not_tried (progress is scoped).
@@ -88,17 +85,15 @@ test.describe('Hour of Code — anonymous progress tracking', () => {
 
     // Run with default (empty) workspace — bird stays put, level fails.
     await hoc.run();
-    await page
-      .locator('.uitest-topInstructions-inline-feedback')
-      .waitFor({state: 'visible'});
+    await hoc.inlineFeedback.waitFor({state: 'visible'});
 
     await page.reload();
-    await page.locator('#runButton').waitFor({state: 'visible'});
+    await hoc.runButton.waitFor({state: 'visible'});
     await hoc.expectProgressInHeader(1, 'attempted');
 
     // Course overview should also reflect attempted.
     await page.goto('/courses/hourofcode/units/1');
-    await page.locator('.user-stats-block').waitFor({state: 'visible'});
+    await hoc.userStatsBlock.waitFor({state: 'visible'});
     await hoc.expectProgressOnOverview(1, 1, 'attempted');
   });
 
@@ -106,51 +101,50 @@ test.describe('Hour of Code — anonymous progress tracking', () => {
     'video at puzzle 10 not re-shown after first viewing',
     {tag: '@no_mobile'},
     async ({page}) => {
+      const hoc = new HocLevel(page);
+
       // Level 10 has an intro video — load without noautoplay so it fires.
       await page.goto('/hoc/10');
-      await page.locator('.video-modal').waitFor({state: 'visible'});
-      await page.locator('#x-close').click();
-      await page.locator('.video-modal').waitFor({state: 'hidden'});
+      await hoc.videoModal.waitFor({state: 'visible'});
+      await hoc.closeVideoModal();
 
       // Navigate away and return.
       await page.goto('/hoc/11');
       await page.waitForURL(/\/hoc\/11/);
-      await page.locator('#runButton').waitFor({state: 'visible'});
+      await hoc.runButton.waitFor({state: 'visible'});
 
       await page.goto('/hoc/10');
       await page.waitForURL(/\/hoc\/10/);
-      await page.locator('#runButton').waitFor({state: 'visible'});
+      await hoc.runButton.waitFor({state: 'visible'});
 
       // Video must NOT reappear.
-      await expect(page.locator('.video-modal')).toBeHidden();
+      await expect(hoc.videoModal).toBeHidden();
 
       // Reference-area link is accessible after the auto-video is suppressed.
-      await page.locator('.reference_area a').last().click();
+      await hoc.referenceAreaLink.click();
     },
   );
 
   test('callouts at puzzle 9 not re-shown after first viewing', async ({
     page,
   }) => {
+    const hoc = new HocLevel(page);
+
     await page.goto('/hoc/9?noautoplay=true');
-    await page.locator('#runButton').waitFor({state: 'visible'});
+    await hoc.runButton.waitFor({state: 'visible'});
 
     // The first-visit callout about grey blocks should appear.
-    await expect(
-      page.locator('.qtip-content', {hasText: 'Blocks that are grey'}),
-    ).toBeVisible();
+    await expect(hoc.callout('Blocks that are grey')).toBeVisible();
 
     // Navigate away and return.
     await page.goto('/hoc/10?noautoplay=true');
     await page.waitForURL(/\/hoc\/10/);
     await page.goto('/hoc/9?noautoplay=true');
     await page.waitForURL(/\/hoc\/9/);
-    await page.locator('#runButton').waitFor({state: 'visible'});
+    await hoc.runButton.waitFor({state: 'visible'});
 
     // Callout must NOT reappear on second visit.
-    await expect(
-      page.locator('.qtip-content', {hasText: 'Blocks that are grey'}),
-    ).not.toBeAttached();
+    await expect(hoc.callout('Blocks that are grey')).not.toBeAttached();
   });
 });
 
@@ -163,12 +157,13 @@ test.describe('Hour of Code — hoc/reset', () => {
   test('hoc/reset clears videos, callouts, and level progress', async ({
     page,
   }) => {
+    const hoc = new HocLevel(page);
+
     // First visit to hoc/reset: intro video and callout appear.
     await page.goto('/hoc/reset');
-    await page.locator('.video-modal').waitFor({state: 'visible'});
-    await page.locator('#x-close').click();
-    await page.locator('.video-modal').waitFor({state: 'hidden'});
-    await expect(page.locator('.cdo-qtips').first()).toBeVisible();
+    await hoc.videoModal.waitFor({state: 'visible'});
+    await hoc.closeVideoModal();
+    await expect(hoc.callouts.first()).toBeVisible();
 
     // Simulate some mid-course navigation.
     await page.goto('/hoc/2');
@@ -178,9 +173,8 @@ test.describe('Hour of Code — hoc/reset', () => {
 
     // Second hoc/reset: video and callout must reappear (state fully cleared).
     await page.goto('/hoc/reset');
-    await page.locator('.video-modal').waitFor({state: 'visible'});
-    await page.locator('#x-close').click();
-    await page.locator('.video-modal').waitFor({state: 'hidden'});
-    await expect(page.locator('.cdo-qtips').first()).toBeVisible();
+    await hoc.videoModal.waitFor({state: 'visible'});
+    await hoc.closeVideoModal();
+    await expect(hoc.callouts.first()).toBeVisible();
   });
 });

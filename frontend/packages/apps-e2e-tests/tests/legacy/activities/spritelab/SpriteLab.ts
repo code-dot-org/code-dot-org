@@ -1,4 +1,4 @@
-import {type Locator, type Page} from '@playwright/test';
+import {expect, type Locator, type Page} from '@playwright/test';
 
 import {labLevelUrl} from '../../../shared/urls';
 import {LegacyBlocklyLab} from '../../shared/LegacyBlocklyLab';
@@ -8,7 +8,8 @@ import {LegacyBlocklyLab} from '../../shared/LegacyBlocklyLab';
  *
  * Uses allthethingscourse lesson 36.
  * Extends LegacyBlocklyLab for the shared run/reset/congrats interface.
- * Adds the p5 loading barrier and Blockly grid dropdown interaction helpers.
+ * Adds the p5 loading barrier, Blockly grid dropdown helpers, and the
+ * Modal Function Editor interaction surface.
  */
 export class SpriteLab extends LegacyBlocklyLab {
   /** Avatar sprite image shown on level load — `img[src*="spritelab/avatar"]`. */
@@ -17,10 +18,14 @@ export class SpriteLab extends LegacyBlocklyLab {
   /** Blockly field dropdown div — appears when a field editor is opened. */
   readonly dropdown: Locator;
 
+  /** Modal function editor overlay — `#modalFunctionEditor`. */
+  readonly modalFunctionEditor: Locator;
+
   constructor(page: Page) {
     super(page);
     this.spriteAvatarImage = page.locator('img[src*="spritelab/avatar"]');
     this.dropdown = page.locator('.blocklyDropDownDiv');
+    this.modalFunctionEditor = page.locator('#modalFunctionEditor');
   }
 
   /** Lesson 36 of allthethingscourse — used by LegacyBlocklyLab.gotoLevel(). */
@@ -77,5 +82,92 @@ export class SpriteLab extends LegacyBlocklyLab {
       const items = document.querySelectorAll('.blocklyFieldGridItem');
       (items[idx] as HTMLElement)?.click();
     }, index);
+  }
+
+  // --- Modal Function Editor ---
+
+  /**
+   * Count of function blocks in the toolbox flyout.
+   * Reads `Blockly.mainBlockSpace.getFlyout().getWorkspace().getTopBlocks().length`.
+   */
+  async getFlyoutFunctionCount(): Promise<number> {
+    return this.page.evaluate(
+      () =>
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
+        (window as any).Blockly.mainBlockSpace
+          .getFlyout()
+          .getWorkspace()
+          .getTopBlocks().length as number,
+    );
+  }
+
+  /**
+   * Click the "+" flyout button to create a new function and open the editor.
+   * Mirrors `I click the new function button`.
+   */
+  async openFunctionFromFlyoutButton(): Promise<void> {
+    await this.page.locator('.blocklyFlyoutButton').click();
+    await expect(this.modalFunctionEditor).toBeVisible();
+  }
+
+  /**
+   * Open the modal function editor by clicking the edit field on a block.
+   * Mirrors `I click block edit button` (fieldRow[1].onClick()).
+   *
+   * @param blockIndex - zero-based index into Blockly.mainBlockSpace.getAllBlocks()
+   */
+  async openFunctionEditorFromBlock(blockIndex: number): Promise<void> {
+    await this.page.evaluate(idx => {
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
+      (window as any).Blockly.mainBlockSpace
+        .getAllBlocks()
+        [idx].inputList[0].fieldRow[1].onClick();
+    }, blockIndex);
+    await expect(this.modalFunctionEditor).toBeVisible();
+  }
+
+  /**
+   * Close the modal function editor and wait for it to be hidden.
+   * Mirrors `I close the modal function editor`.
+   */
+  async closeFunctionEditor(): Promise<void> {
+    await this.page.locator('#closeModalFunctionEditor').click();
+    await expect(this.modalFunctionEditor).toBeHidden();
+  }
+
+  /**
+   * Open a toolbox category inside the modal function editor.
+   *
+   * @param name - ARIA treeitem label (e.g. 'Sprites')
+   */
+  async openFunctionEditorCategory(name: string): Promise<void> {
+    await this.modalFunctionEditor
+      .getByRole('treeitem', {name})
+      .first()
+      .click();
+  }
+
+  /**
+   * Locator for the nth draggable block in the modal function editor flyout.
+   *
+   * @param index - zero-based index
+   */
+  functionEditorFlyoutBlock(index: number): Locator {
+    return this.modalFunctionEditor
+      .locator('.blocklyFlyout .blocklyDraggable')
+      .nth(index);
+  }
+
+  /**
+   * Count of blocks in the function editor workspace.
+   * Reads `Blockly.getFunctionEditorWorkspace().getAllBlocks().length`.
+   */
+  async getFunctionEditorBlockCount(): Promise<number> {
+    return this.page.evaluate(
+      () =>
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
+        (window as any).Blockly.getFunctionEditorWorkspace().getAllBlocks()
+          .length as number,
+    );
   }
 }
