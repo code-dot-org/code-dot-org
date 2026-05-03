@@ -52,11 +52,15 @@ test.describe('Music Lab — level switching', () => {
     await music.gotoLevel(4);
   });
 
-  test('clicking level 5 bubble loads level 5 workspace', async () => {
-    await music.page.locator("[title='Level 5 Lesson Music']").click();
-    await expect(music.runButton).toBeVisible();
-    // visual checkpoint: "new level loading"
-  });
+  test(
+    'clicking level 5 bubble loads level 5 workspace',
+    {tag: '@visual'},
+    async () => {
+      await music.page.locator("[title='Level 5 Lesson Music']").click();
+      await expect(music.runButton).toBeVisible();
+      // visual checkpoint: "new level loading"
+    },
+  );
 });
 
 /**

@@ -22,12 +22,16 @@ test.describe('Python Lab — level 1 — run output', () => {
     await expect(lab.runButton).toBeEnabled();
   });
 
-  test('running prints Hello from the start! to the console', async () => {
-    // visual checkpoint: "initial load"
-    await lab.run();
-    await expect(lab.console).toContainText('Hello from the start!');
-    // visual checkpoint: "completed run"
-  });
+  test(
+    'running prints Hello from the start! to the console',
+    {tag: '@visual'},
+    async () => {
+      // visual checkpoint: "initial load"
+      await lab.run();
+      await expect(lab.console).toContainText('Hello from the start!');
+      // visual checkpoint: "completed run"
+    },
+  );
 });
 
 /**
@@ -46,12 +50,16 @@ test.describe('Python Lab — level 10 — Neighborhood', () => {
     await expect(lab.runButton).toBeEnabled();
   });
 
-  test('running Neighborhood program outputs 10 to the console', async () => {
-    // visual checkpoint: "initial load"
-    await lab.run();
-    await expect(lab.console).toContainText('10');
-    // visual checkpoint: "completed run"
-  });
+  test(
+    'running Neighborhood program outputs 10 to the console',
+    {tag: '@visual'},
+    async () => {
+      // visual checkpoint: "initial load"
+      await lab.run();
+      await expect(lab.console).toContainText('10');
+      // visual checkpoint: "completed run"
+    },
+  );
 });
 
 /**
