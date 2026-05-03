@@ -40,7 +40,7 @@ tests/
     activities/            ← CSF Blockly activities (Maze, Bee, Artist, etc.)
       {name}/
         {Name}.ts          ← concrete POM (no "Lab" suffix — these are not product labs)
-        blocks.ts          ← Blockly workspace JSON fixtures (JSON strings)
+        blocks.ts          ← Blockly workspace object fixtures (TS objects)
         {name}.spec.ts     ← Playwright spec
     {feature}/             ← platform/workspace features (step, clearpuzzle, …)
       {FeatureType}.ts     ← concrete POM
@@ -51,7 +51,7 @@ tests/
       Lab2Lab.ts           ← abstract base for lab2 labs
     {lab}/
       {Lab}Lab.ts          ← concrete POM
-      blocks.ts            ← Blockly workspace JSON fixtures (TS objects)
+      blocks.ts            ← Blockly workspace object fixtures (TS objects)
       {lab}.spec.ts        ← Playwright spec
 ```
 
@@ -68,8 +68,12 @@ tests/
   `congratsMessage`, `inlineFeedback`, `instructions`, `instructionsPanel`,
   `lightbulb`, `hintCount`
 - Shared methods: `gotoLevel(n)`, `reloadLevel(n)`, `waitForLevel(n)`,
-  `loadBlocks(json)`, `run()`, `reset()`, `nextLevel()`, `tryAgain()`,
+  `loadBlocks(blocksJson: object)`, `run()`, `reset()`, `nextLevel()`, `tryAgain()`,
   `waitForReady()`, `acceptHint()`
+- Protected hook `navigate(url: string)` runs the full 4-step sequence
+  (reset_session → goto → waitForInitialLoad → dismissOptionalOverlays → waitForReady).
+  Available to subclasses that need an alternate URL scheme (e.g. Dance course vs
+  allthethingscourse); do not duplicate the sequence manually.
 
 ---
 
@@ -197,25 +201,48 @@ export class Farmer extends LegacyBlocklyLab {
 
 ### Step 5 — Write `blocks.ts`
 
-Extract JSON from `blockly_initialization_blocks.rb`.
+Extract JSON from `blockly_initialization_blocks.rb` and represent it as a
+TypeScript object literal. `LegacyBlocklyLab.loadBlocks(blocksJson: object)`
+passes the object directly to `Blockly.serialization.workspaces.load()` via
+structured-clone serialization — no JSON string or `JSON.stringify` needed.
 
-**Escape conversion:** the Ruby source uses single-quoted strings. Occurrences
-of `\"` in the Ruby source need to become `\\"` in the TypeScript single-quoted
-string:
-
-```ruby
-# Ruby (single-quoted): \"DIR\" → actual value: \"DIR\"
-load_json_blocks('{"fields":{"DIR":"<field name=\"DIR\">"}}')
-```
+The `<field name="...">` XML values embedded in block `fields` become plain
+TypeScript string values with single-quoted strings (no backslash escaping):
 
 ```typescript
-// TypeScript (single-quoted): \\"DIR\\" → actual value: \"DIR\"
-export const WINNING_ARTIST_BLOCKS =
-  '{"fields":{"DIR":"<field name=\\"DIR\\">..."}}';
+// Ruby source (escaped quotes): \"<field name=\\\"DIR\\\">turnLeft</field>\"
+// TypeScript object literal (no escaping needed):
+export const WINNING_ARTIST_BLOCKS = {
+  blocks: {
+    languageVersion: 0,
+    blocks: [
+      {
+        type: 'when_run',
+        x: 32,
+        y: 32,
+        next: {
+          block: {
+            type: 'draw_move_by_constant',
+            fields: {
+              DIR: '<field name="DIR">moveForward</field>',
+              VALUE: '100',
+            },
+          },
+        },
+      },
+    ],
+  },
+};
 ```
 
-If the Ruby source uses `\\"` (double-backslash-quote) — which appears in some
-blocks — copy it as-is; the semantics are identical.
+If the workspace has `variables`, include them at the top level alongside `blocks`:
+
+```typescript
+export const MY_BLOCKS = {
+  variables: [{name: 'dancer1', id: 'some-id'}],
+  blocks: { languageVersion: 0, blocks: [...] },
+};
+```
 
 ### Step 6 — Write `{name}.spec.ts`
 
@@ -458,6 +485,25 @@ After completing or abandoning each port, produce:
 
 ## Common patterns reference
 
+**POM encapsulation rule**: Spec files call POM methods, not raw locators. Define
+every UI interaction as a named method on the POM class.
+
+```typescript
+// Correct — interaction owned by POM:
+await bounce.finish();
+await dance.generateAiEffects();
+
+// Wrong — raw selector in spec body:
+await bounce.finishButton.click();
+await dance.page.locator('#generate-button').click();
+```
+
+The `lab.page` property is public for cases where Playwright-specific operations
+(keyboard events, `waitForTimeout`, DOM assertions) have no POM equivalent.
+Use it sparingly and only in the spec, not inside POM methods.
+
+---
+
 **Key-hold for Bounce** (Bounce lab has `holdKey`/`releaseKey` methods):
 
 ```typescript
@@ -506,15 +552,24 @@ await expect(bounce.congratsMessage).toBeVisible();
 
 ```typescript
 import {createTeacher} from '../shared/auth';
+import {Maze} from '../legacy/activities/maze/Maze';
 
 // Creates and signs in a teacher via /api/test/create_user (test env only).
-// Do NOT use LegacyBlocklyLab.gotoLevel() after this — it calls /reset_session
-// which clears the session. Navigate directly with page.goto(labLevelUrl(...)).
+// Use reloadLevel() (no session reset) after createTeacher so the auth session
+// is preserved. gotoLevel() calls /reset_session, which would clear the session.
 await createTeacher(page);
-await page.goto(labLevelUrl(2, 4));
+const maze = new Maze(page);
+await maze.reloadLevel(4);
 await expect(
   page.getByRole('heading', {name: 'Teacher Panel', level: 3}),
 ).toBeVisible();
+
+// Anonymous user: use gotoLevel() normally.
+const maze2 = new Maze(page);
+await maze2.gotoLevel(4);
+await expect(
+  page.getByRole('heading', {name: 'Teacher Panel', level: 3}),
+).not.toBeAttached();
 ```
 
 **Teacher panel selector caveat:**
@@ -559,6 +614,45 @@ export class Jigsaw extends LegacyBlocklyLab {
     await expect(this.workspace).toBeVisible();
     await expect(this.page.locator('.uitest-signincallout')).toBeHidden();
   }
+}
+```
+
+**Blockly grid dropdown** (Sprite Lab sprite picker):
+`I click block field "selector" number N` dispatches pointer events on the nth editable
+field SVG element. Use `locator.dispatchEvent()` (not `evaluate`) so WebKit receives
+correctly-formed events. The grid items briefly detach during Blockly's open animation;
+wait for `attached` state then click via `evaluate()` to bypass Playwright's stability check:
+
+```typescript
+// in SpriteLab.ts
+async clickBlockFieldAt(selector: string, index: number): Promise<void> {
+  const locator = this.page.locator(selector).nth(index);
+  await locator.dispatchEvent('pointerdown', {bubbles: true});
+  await locator.dispatchEvent('pointerup', {bubbles: true});
+}
+
+async selectDropdownItem(index: number): Promise<void> {
+  await this.page.locator('.blocklyFieldGridItem').nth(index).waitFor({state: 'attached'});
+  await this.page.evaluate(idx => {
+    const items = document.querySelectorAll('.blocklyFieldGridItem');
+    (items[idx] as HTMLElement)?.click();
+  }, index);
+}
+```
+
+**Phaser game ready signal** (Minecraft/Craft labs):
+`I wait until the Minecraft game is loaded` polls `Craft?.phaserLoaded()`. Override
+`waitForInitialLoad()` to wait for both `#runButton` and the Phaser ready flag:
+
+```typescript
+// in Craft.ts
+protected override async waitForInitialLoad(): Promise<void> {
+  await this.runButton.waitFor({state: 'visible'});
+  await this.page.waitForFunction(
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    () => !!(window as any).Craft?.phaserLoaded(),
+    {timeout: 60000},
+  );
 }
 ```
 
