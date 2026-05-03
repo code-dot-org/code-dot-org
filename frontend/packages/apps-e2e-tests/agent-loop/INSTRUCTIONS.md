@@ -683,8 +683,10 @@ await this.pressJQuery('[aria-label="🎉"]');
 await this.page.locator('[aria-label="🎉"]').click();
 ```
 
-The `pressJQuery` method is still valid for elements with jQuery handlers that
-are not React portal children.
+The `pressJQuery` method has been removed. Use `page.locator(selector).click()`
+universally — Playwright dispatches real browser events that reach all listener
+types. Only fall back to `page.evaluate(() => el.click())` when Playwright's
+hit-testing must be bypassed (e.g. element obscured by a modal backdrop).
 
 ---
 

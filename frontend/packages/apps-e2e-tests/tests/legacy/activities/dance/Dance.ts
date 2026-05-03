@@ -230,30 +230,15 @@ export class Dance extends LegacyBlocklyLab {
   }
 
   /**
-   * Click an element via jQuery `.click()`.
-   * Required for elements registered with jQuery event handlers.
-   * Does NOT reach React portal event listeners — use page.locator().click()
-   * for React-managed elements (e.g. AI modal emoji buttons).
-   * Mirrors `I press "selector" using jQuery`.
-   */
-  async pressJQuery(selector: string): Promise<void> {
-    await this.page.evaluate(sel => {
-      // eslint-disable-next-line @typescript-eslint/no-explicit-any
-      const $ = (window as any).$;
-      $(sel).click();
-    }, selector);
-  }
-
-  /**
    * Wait until the song selector has a non-empty value.
    * Mirrors `I wait for the song selector to load` from dance.rb.
    */
   async waitForSongSelector(): Promise<void> {
-    await this.page.waitForFunction(() => {
-      // eslint-disable-next-line @typescript-eslint/no-explicit-any
-      const $ = (window as any).$;
-      return $ && !!$('#song_selector').val();
-    });
+    await this.page.waitForFunction(
+      () =>
+        !!(document.querySelector('#song_selector') as HTMLSelectElement)
+          ?.value,
+    );
   }
 
   /**
