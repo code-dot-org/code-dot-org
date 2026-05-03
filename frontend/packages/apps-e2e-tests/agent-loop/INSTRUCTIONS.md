@@ -665,3 +665,122 @@ display instruction hints prompt (Do you want a hint? yes or no) if hints are av
 ```typescript
 await page.getByRole('button', {name: 'Yes', exact: true}).click();
 ```
+
+---
+
+**React portal event delegation** (AI modal emoji buttons):
+React 17 moved event delegation from `document` to the root app container.
+jQuery `.click()` dispatches synthetic events that do not reach React portal
+listeners. Use direct Playwright `.click()` for any element rendered in a React
+portal (modal, tooltip, dropdown). Document in POM JSDoc: "Direct click required
+— React portal listeners do not receive jQuery synthetic events."
+
+```typescript
+// Wrong — jQuery does not reach portal listeners:
+await this.pressJQuery('[aria-label="🎉"]');
+
+// Correct — real browser event propagates to portal root:
+await this.page.locator('[aria-label="🎉"]').click();
+```
+
+The `pressJQuery` method is still valid for elements with jQuery handlers that
+are not React portal children.
+
+---
+
+**Blockly variable ID instability** (save round-trip XML comparison):
+`Blockly.serialization.workspaces.load()` regenerates all variable `id="..."`
+attributes on every deserialization. Exact XML comparison after a save/reload
+fails because IDs are re-rolled. Strip them before comparing:
+
+```typescript
+const stripVarIds = (xml: string) => xml.replace(/ id="[^"]+"/g, '');
+
+const before = stripVarIds(await dance.getBlockXML());
+await dance.projectShareButton.click();
+await dance.waitForProjectSave();
+await dance.page.reload();
+expect(stripVarIds(await dance.getBlockXML())).toBe(before);
+```
+
+Define `stripVarIds` as a module-level const in the spec file. Extract to a
+shared utility only if a second spec needs it.
+
+---
+
+**Per-assertion timeout override** (slow timer-based levels):
+When a level fires success at a fixed timestamp that exceeds the global
+`expect.timeout` (default 15s in this suite), override the timeout on the
+specific assertion — not on the whole test or describe block:
+
+```typescript
+// Level fires at 4 measures (~17s at default BPM) — override expect timeout.
+await expect(dance.congratsMessage).toBeVisible({timeout: 30_000});
+```
+
+Document the reason inline: which timestamp block, approximate elapsed time,
+and why the global timeout is insufficient.
+
+---
+
+**Confirmation modal after Start Over** (free-play levels):
+Clicking `#clear-puzzle-header` (Start Over) opens a "Are you sure?" modal.
+It must be explicitly dismissed before subsequent workspace interactions:
+
+```typescript
+await dance.clearPuzzleHeader.click();
+await dance.confirmStartOver(); // clicks #confirm-button in the confirmation modal
+```
+
+Define `confirmStartOver()` on the POM. Tests that skip this step will fail
+on any subsequent click because `.modal-backdrop` intercepts events.
+
+---
+
+**`waitForTimeout` is an antipattern** (Playwright best practice):
+`page.waitForTimeout(n)` is a fixed-time sleep — it adds latency and can mask
+failures on slow machines. Replace with a real condition wherever possible:
+
+| Instead of                         | Use                                              |
+| ---------------------------------- | ------------------------------------------------ |
+| `waitForTimeout(500)` after save   | `expect(updatedAt).toContainText('Saved')`       |
+| `waitForTimeout(1000)` after share | `page.waitForResponse('/api/...')` or DOM signal |
+| `waitForTimeout(n)` polling state  | `page.waitForFunction(condition)`                |
+
+When no DOM signal exists (e.g. Share button async save), encapsulate the wait
+in a named POM method with a `TODO:` comment documenting the gap:
+
+```typescript
+/** @todo Replace once Share exposes a DOM save-complete indicator. */
+async waitForProjectSave(): Promise<void> {
+  await this.page.waitForTimeout(500);
+}
+```
+
+---
+
+## Codebase-wide POM completeness status
+
+Three levels of POM coverage observed across the suite:
+
+**Complete** (spec reads as requirements, all interactions in POM):
+`dance`, `maze`, `artist`, `bee`, `farmer`, `bounce`, `flappy`, `jigsaw`,
+`spritelab`, `music`, `pythonlab`.
+
+**Partial** (POM exists but raw `page.locator()` still in spec body):
+`mixmoveai` (24 violations), `studio` (6), `challenge-level` (7),
+`sharepage` (7), `netsim` (29 — no POM class), `hoc` (25 — no POM class),
+`modal-function-editor` (15 — no POM class).
+
+**When porting new tests or modifying existing ones in the partial/no-POM
+category**, migrate inline selectors to the POM as you go — don't add more.
+If a file has no POM at all, create one before adding tests.
+
+Repeated selectors worth extracting to a POM or shared constant:
+
+| Selector               | Count | Current location             |
+| ---------------------- | ----- | ---------------------------- |
+| `#x-close`             | 8     | hoc, netsim, sharepage specs |
+| `.video-modal`         | 7     | hoc.spec.ts inline           |
+| `#modalFunctionEditor` | 9     | modal-function-editor spec   |
+| `.netsim-lobby-panel`  | 4     | netsim.spec.ts inline        |

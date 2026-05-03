@@ -231,8 +231,9 @@ export class Dance extends LegacyBlocklyLab {
 
   /**
    * Click an element via jQuery `.click()`.
-   * Required for elements registered with jQuery event handlers (e.g. emoji
-   * aria-label buttons in the AI modal).
+   * Required for elements registered with jQuery event handlers.
+   * Does NOT reach React portal event listeners — use page.locator().click()
+   * for React-managed elements (e.g. AI modal emoji buttons).
    * Mirrors `I press "selector" using jQuery`.
    */
   async pressJQuery(selector: string): Promise<void> {
@@ -278,7 +279,49 @@ export class Dance extends LegacyBlocklyLab {
     }, blockId);
   }
 
+  /**
+   * Dismiss the "Are you sure?" confirmation dialog that appears after
+   * clicking #clear-puzzle-header (Start Over). Clicks #confirm-button.
+   */
+  async confirmStartOver(): Promise<void> {
+    await this.page.locator('#confirm-button').click();
+  }
+
+  /**
+   * Wait for a project save triggered by Share button click.
+   * The Share save is asynchronous with no DOM completion signal; a brief
+   * settled wait is required before reloading to avoid a stale-state read.
+   * TODO: replace once the save API exposes a reliable DOM indicator.
+   */
+  async waitForProjectSave(): Promise<void> {
+    await this.page.waitForTimeout(500);
+  }
+
   // --- AI modal interaction methods ---
+
+  /**
+   * Open the Dance AI modal by dispatching pointer events on the Dancelab_ai
+   * editable field inside the setup block. This is the canonical entry point
+   * used by all Dance AI tests.
+   */
+  async openAiModal(): Promise<void> {
+    await this.clickBlockField(
+      "[data-id='setup'] > [data-id='dance_ai'] > .blocklyEditableField",
+    );
+  }
+
+  /**
+   * Click one or more emoji buttons in the AI modal picker.
+   * Direct Playwright clicks are required — React 17 uses root-container event
+   * delegation, so jQuery synthetic events do not reach portal listeners.
+   *
+   * @param emojis - emoji characters matching the buttons' aria-label attributes
+   */
+  async selectAiEmojis(...emojis: string[]): Promise<void> {
+    for (const emoji of emojis) {
+      await this.page.locator(`[aria-label="${emoji}"]`).click();
+    }
+  }
 
   /**
    * Click Generate and wait for the Use button to confirm effects are ready.
