@@ -49,11 +49,24 @@ export async function createTeacher(page: Page): Promise<void> {
 }
 
 /**
- * Creates a student account (age 16) and signs in.
- * Mirrors `I create a student named "..."` from account_steps.rb:
- *   create_user(name, user_type: 'student', age: '16', sign_in_count: 2)
+ * Options for {@link createStudent}.
+ *
+ * @property age - student age; defaults to 16. Pass a value < 13 for
+ *   under-13 behaviour (age-restriction redirects, song-filter enforcement).
  */
-export async function createStudent(page: Page): Promise<void> {
+interface CreateStudentOptions {
+  age?: number;
+}
+
+/**
+ * Creates a student account and signs in.
+ * Mirrors `I create a student named "..."` / `I create a young student named "..."`
+ * from account_steps.rb: create_user(name, user_type: 'student', age:, sign_in_count: 2)
+ */
+export async function createStudent(
+  page: Page,
+  {age = 16}: CreateStudentOptions = {},
+): Promise<void> {
   await page.goto('/reset_session');
   const csrf = await page
     .locator('meta[name="csrf-token"]')
@@ -75,7 +88,7 @@ export async function createStudent(page: Page): Promise<void> {
         password,
         password_confirmation: password,
         name: `TestStudent${ts}`,
-        age: '16',
+        age: String(age),
         sign_in_count: 2,
       },
     },
@@ -84,48 +97,6 @@ export async function createStudent(page: Page): Promise<void> {
   if (!response.ok()) {
     throw new Error(
       `create_user (student) failed: ${response.status()} — ${await response.text()}`,
-    );
-  }
-}
-
-/**
- * Creates a student account aged 10 (under-13) and signs in.
- * Mirrors `I create a young student named "..."` from account_steps.rb:
- *   create_user(name, user_type: 'student', age: '10', sign_in_count: 2)
- *
- * Used for age-restriction redirect tests (e.g. weblab/too_young.feature).
- */
-export async function createYoungStudent(page: Page): Promise<void> {
-  await page.goto('/reset_session');
-  const csrf = await page
-    .locator('meta[name="csrf-token"]')
-    .getAttribute('content');
-
-  const ts = Date.now();
-  const email = `young_${ts}@test.xx`;
-  const password = `YoungPass${ts}`;
-
-  const response = await page.request.post('/api/test/create_user', {
-    headers: {
-      'Content-Type': 'application/json',
-      'X-CSRF-Token': csrf ?? '',
-    },
-    data: {
-      user: {
-        user_type: 'student',
-        email,
-        password,
-        password_confirmation: password,
-        name: `TestYoungStudent${ts}`,
-        age: '10',
-        sign_in_count: 2,
-      },
-    },
-  });
-
-  if (!response.ok()) {
-    throw new Error(
-      `create_user (young student) failed: ${response.status()} — ${await response.text()}`,
     );
   }
 }

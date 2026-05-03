@@ -1,6 +1,6 @@
 import {expect, test} from '@playwright/test';
 
-import {createYoungStudent} from '../../shared/auth';
+import {createStudent} from '../../shared/auth';
 
 /**
  * Web Lab — age restriction redirect.
@@ -15,7 +15,7 @@ import {createYoungStudent} from '../../shared/auth';
  */
 test.describe('Web Lab — age restriction', () => {
   test('young student is redirected from weblab to home', async ({page}) => {
-    await createYoungStudent(page);
+    await createStudent(page, {age: 10});
     await page.goto('/projects/weblab/new');
     await page.waitForURL('**/home');
     await expect(page.locator('.alert-danger')).toContainText(
