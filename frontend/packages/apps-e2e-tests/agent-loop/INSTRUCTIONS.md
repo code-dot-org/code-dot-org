@@ -890,7 +890,7 @@ the POM class; no raw `page.locator()` calls remain in spec bodies.
 `flappy`, `jigsaw`, `spritelab`, `studio`, `challenge-level`, `pixelation`,
 `pkc`, `music`, `pythonlab`, `mixmoveai`, `netsim`, `hoc`, `hoc-signed-in`,
 `modal-function-editor`, `sharepage`, `applab`, `user-menu`, `csp-instructions`,
-`teacher-panel`, `catalog`, `weblab`.
+`teacher-panel`, `catalog`, `weblab`, `multi`, `match`.
 
 When porting or modifying any spec, all interactions must live on the POM.
 If a file has no POM at all, create one before adding tests.
