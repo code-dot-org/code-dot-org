@@ -14,7 +14,7 @@ test.describe('Clear Puzzle — HOC level 1', () => {
   });
 
   test('clearing after deleting a block restores the original workspace', async () => {
-    await clear.deleteBlock('startBlock');
+    await clear.disposeBlock('startBlock');
     await clear.clearPuzzle();
     await clear.confirmClear();
 

@@ -122,7 +122,7 @@ export abstract class LegacyBlocklyLab {
    * overlays. Called from navigate() before dismissOptionalOverlays().
    *
    * Override in subclasses where #runButton is absent or hidden on mount
-   * (e.g. JigsawLab waits for .blocklyWorkspace instead).
+   * (e.g. Jigsaw waits for .blocklyWorkspace instead).
    */
   protected async waitForInitialLoad(): Promise<void> {
     await expect(this.runButton).toBeVisible();
@@ -146,18 +146,18 @@ export abstract class LegacyBlocklyLab {
   }
 
   /**
-   * Load a Blockly workspace from a JSON string.
+   * Load a Blockly workspace from a serialisation object.
    * Mirrors load_json_blocks() from blockly_helpers.rb:
-   *   Blockly.serialization.workspaces.load(JSON, Blockly.getMainWorkspace())
+   *   Blockly.serialization.workspaces.load(obj, Blockly.getMainWorkspace())
+   *
+   * @param blocksJson - plain workspace object (same shape as startSources.blocks
+   *   in level configs — `blocks` key required, `variables` optional).
    */
-  async loadBlocks(blocksJson: string): Promise<void> {
+  async loadBlocks(blocksJson: object): Promise<void> {
     await this.page.evaluate(json => {
       // eslint-disable-next-line @typescript-eslint/no-explicit-any
       const blockly = (window as any).Blockly;
-      blockly.serialization.workspaces.load(
-        JSON.parse(json),
-        blockly.getMainWorkspace(),
-      );
+      blockly.serialization.workspaces.load(json, blockly.getMainWorkspace());
     }, blocksJson);
   }
 
@@ -188,6 +188,40 @@ export abstract class LegacyBlocklyLab {
   }
 
   /**
+   * Connect one block's previousConnection to another's nextConnection via JS.
+   * Mirrors connect_block() from blockly_helpers.rb.
+   *
+   * @param fromId - data-id of the block to move
+   * @param toId   - data-id of the target block (its nextConnection receives fromId)
+   */
+  async connectBlock(fromId: string, toId: string): Promise<void> {
+    await this.page.evaluate(
+      ({from, to}: {from: string; to: string}) => {
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
+        const workspace = (window as any).Blockly.getMainWorkspace();
+        const blockToMove = workspace.getBlockById(from);
+        const targetBlock = workspace.getBlockById(to);
+        targetBlock.nextConnection.connect(blockToMove.previousConnection);
+      },
+      {from: fromId, to: toId},
+    );
+  }
+
+  /**
+   * Remove a block from the workspace via the Blockly JS API.
+   * Mirrors delete_block() from blockly_helpers.rb.
+   *
+   * @param blockId - data-id of the block to remove
+   */
+  async disposeBlock(blockId: string): Promise<void> {
+    await this.page.evaluate((id: string) => {
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
+      const workspace = (window as any).Blockly.getMainWorkspace();
+      workspace.getBlockById(id)?.dispose();
+    }, blockId);
+  }
+
+  /**
    * Wait for the run button to be visible and the sign-in callout to be gone.
    * Use after navigateDirect() or any navigation that bypasses navigate().
    */
@@ -198,9 +232,10 @@ export abstract class LegacyBlocklyLab {
 
   /**
    * Full navigation: reset session, load URL, dismiss optional overlays, then
-   * confirm the lab is ready. Use for the first visit to a level.
+   * confirm the lab is ready. Use for the first visit to a level or when a
+   * subclass needs an alternate URL scheme (e.g. Dance course vs allthethings).
    */
-  private async navigate(url: string): Promise<void> {
+  protected async navigate(url: string): Promise<void> {
     await this.page.goto('/reset_session');
     await this.page.goto(url);
     await this.waitForInitialLoad();
@@ -224,7 +259,12 @@ export abstract class LegacyBlocklyLab {
   protected async dismissOptionalOverlays(): Promise<void> {
     const overlay = this.page.locator('#overlay');
     if (await overlay.isVisible()) {
-      await overlay.click();
+      // JS click mirrors Cucumber's $(selector)[0].click() — bypasses browser
+      // hit-testing so a modal-backdrop on top (e.g. challenge-level dialog) does
+      // not intercept the event or steal focus from the overlay.
+      await this.page.evaluate(() =>
+        (document.querySelector('#overlay') as HTMLElement)?.click(),
+      );
     }
 
     const closeBtn = this.page.locator('[aria-label="Close"]');
