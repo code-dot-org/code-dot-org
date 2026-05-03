@@ -3,6 +3,31 @@ import {expect, test} from '@playwright/test';
 import {ArtistLab} from './ArtistLab';
 import {LOSING_ARTIST_BLOCKS, WINNING_ARTIST_BLOCKS} from './blocks';
 
+test.describe('Contextual hints — Artist level 6', () => {
+  let artist: ArtistLab;
+
+  test.beforeEach(async ({page}) => {
+    artist = new ArtistLab(page);
+    await artist.gotoLevel(6);
+  });
+
+  test(
+    'running on a level with no authored hints creates a contextual hint',
+    {tag: '@no_mobile'},
+    async () => {
+      // Level 6 has no authored hints — lightbulb is not in the DOM yet.
+      await expect(artist.lightbulb).not.toBeAttached();
+
+      // Running the default workspace triggers feedback and dynamically
+      // adds a contextual hint, making the lightbulb appear with count 1.
+      await artist.run();
+      await expect(artist.inlineFeedback).toBeVisible();
+      await expect(artist.lightbulb).toBeVisible();
+      await expect(artist.hintCount).toHaveText('1');
+    },
+  );
+});
+
 test.describe('Artist — level 2', () => {
   let artist: ArtistLab;
 

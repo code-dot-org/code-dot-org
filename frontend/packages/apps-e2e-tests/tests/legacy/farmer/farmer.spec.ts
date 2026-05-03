@@ -61,6 +61,38 @@ test.describe('Farmer — level 1', () => {
   );
 });
 
+test.describe('Contextual hints — Farmer level 2', () => {
+  let farmer: FarmerLab;
+
+  test.beforeEach(async ({page}) => {
+    farmer = new FarmerLab(page);
+    await farmer.gotoLevel(2);
+  });
+
+  test(
+    'running with default workspace adds a contextual hint and renders a block visual',
+    {tag: '@no_mobile'},
+    async () => {
+      // Level 2 starts with 3 authored hints. Running the default workspace
+      // (no fill block) triggers feedback and prepends a contextual hint,
+      // bringing the total to 4.
+      await farmer.run();
+      await expect(farmer.inlineFeedback).toBeVisible();
+      await expect(farmer.hintCount).toHaveText('4');
+
+      // The contextual hint renders a block visual inside the panel.
+      await farmer.lightbulb.click();
+      await farmer.acceptHint();
+      await expect(farmer.instructionsPanel).toContainText(
+        'Try using a block like this to solve the puzzle.',
+      );
+      await expect(
+        farmer.instructionsPanel.locator('.block-space'),
+      ).toBeVisible();
+    },
+  );
+});
+
 test.describe('Authored hints — Farmer level 2', () => {
   let farmer: FarmerLab;
 
