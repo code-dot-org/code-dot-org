@@ -39,6 +39,26 @@ export abstract class LegacyBlocklyLab {
   readonly instructions: Locator;
 
   /**
+   * Outer instructions container (.csf-top-instructions).
+   * Authored hint text is appended here; use toContainText rather than
+   * the narrower `instructions` locator (.csf-top-instructions p).
+   */
+  readonly instructionsPanel: Locator;
+
+  /**
+   * Authored-hints lightbulb toggle button.
+   * Not present on levels without authored hints — use not.toBeAttached()
+   * for the negative assertion.
+   */
+  readonly lightbulb: Locator;
+
+  /**
+   * Hint count badge shown next to the lightbulb.
+   * Removed from the DOM after the last hint is viewed.
+   */
+  readonly hintCount: Locator;
+
+  /**
    * Returns the relative URL for the given level number.
    * Each lab owns its own URL scheme — allthethingscourse path, events course,
    * standalone /flappy/ route, etc.
@@ -74,6 +94,19 @@ export abstract class LegacyBlocklyLab {
       '.uitest-topInstructions-inline-feedback',
     );
     this.instructions = page.locator(this.instructionsSelector);
+    this.instructionsPanel = page.locator('.csf-top-instructions');
+    this.lightbulb = page.locator('#lightbulb');
+    this.hintCount = page.locator('#hintCount');
+  }
+
+  /**
+   * Click the 'Yes' confirm button on the authored-hint prompt.
+   * Uses exact:true because the lightbulb div[role=button] also contains
+   * "yes" in its aria-label, which would otherwise cause a strict-mode
+   * violation on partial match.
+   */
+  async acceptHint(): Promise<void> {
+    await this.page.getByRole('button', {name: 'Yes', exact: true}).click();
   }
 
   /**
@@ -167,7 +200,7 @@ export abstract class LegacyBlocklyLab {
    * Click away any one-time overlays that appear on first visit.
    * Called after the page has loaded (runButton visible) so isVisible() is stable.
    */
-  private async dismissOptionalOverlays(): Promise<void> {
+  protected async dismissOptionalOverlays(): Promise<void> {
     const overlay = this.page.locator('#overlay');
     if (await overlay.isVisible()) {
       await overlay.click();
