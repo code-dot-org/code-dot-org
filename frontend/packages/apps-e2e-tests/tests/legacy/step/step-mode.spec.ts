@@ -1,13 +1,13 @@
 import {expect, test} from '@playwright/test';
 
 import {COMPLETE_STEP_BLOCKS, TWO_MOVE_FORWARD_BLOCKS} from './blocks';
-import {StepModeLab} from './StepModeLab';
+import {StepModeLevel} from './StepModeLevel';
 
 test.describe('Step Mode — level 1 (step only)', () => {
-  let step: StepModeLab;
+  let step: StepModeLevel;
 
   test.beforeEach(async ({page}) => {
-    step = new StepModeLab(page);
+    step = new StepModeLevel(page);
     await step.gotoLevel(1);
     await expect(step.runButton).toBeHidden();
     await expect(step.resetButton).toBeHidden();
@@ -78,10 +78,10 @@ test.describe('Step Mode — level 1 (step only)', () => {
 });
 
 test.describe('Step Mode — level 2 (step and run)', () => {
-  let step: StepModeLab;
+  let step: StepModeLevel;
 
   test.beforeEach(async ({page}) => {
-    step = new StepModeLab(page);
+    step = new StepModeLevel(page);
     await step.gotoLevel(2);
     await expect(step.runButton).toBeVisible();
     await expect(step.resetButton).toBeHidden();

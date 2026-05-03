@@ -1,13 +1,13 @@
 import {expect, test} from '@playwright/test';
 
 import {HOC_BLOCKS_TO_CLEAR} from './blocks';
-import {ClearPuzzleLab} from './ClearPuzzleLab';
+import {HocLevel} from './HocLevel';
 
 test.describe('Clear Puzzle — HOC level 1', () => {
-  let clear: ClearPuzzleLab;
+  let clear: HocLevel;
 
   test.beforeEach(async ({page}) => {
-    clear = new ClearPuzzleLab(page);
+    clear = new HocLevel(page);
     await clear.gotoLevel(1);
     await expect(clear.runButton).toBeVisible();
     await expect(clear.resetButton).toBeHidden();

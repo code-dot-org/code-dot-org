@@ -4,13 +4,14 @@ import {labLevelUrl} from '../../shared/urls';
 import {LegacyBlocklyLab} from '../shared/LegacyBlocklyLab';
 
 /**
- * Page Object for the Step Mode lab — lesson 1 of the step course.
+ * Page Object for a level in the step course.
  *
- * Step mode executes one block per click of #stepButton. Level 1 (step-only)
- * hides #runButton entirely; level 2 (step and run) shows both. Both hooks
- * are overridden to wait on #stepButton so gotoLevel() works for either level.
+ * Step mode is a CSF workspace feature that executes one block per click of
+ * #stepButton. Level 1 (step-only) hides #runButton entirely; level 2
+ * (step and run) shows both. Both hooks are overridden to wait on #stepButton
+ * so gotoLevel() works for either level.
  */
-export class StepModeLab extends LegacyBlocklyLab {
+export class StepModeLevel extends LegacyBlocklyLab {
   /** Advances execution by one block. Disabled while a step is in progress. */
   readonly stepButton: Locator;
 

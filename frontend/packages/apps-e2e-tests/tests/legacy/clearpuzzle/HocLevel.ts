@@ -3,12 +3,13 @@ import {expect} from '@playwright/test';
 import {LegacyBlocklyLab} from '../shared/LegacyBlocklyLab';
 
 /**
- * Page Object for the Clear Puzzle flow — tested on the first Hour of Code level.
+ * Page Object for an Hour of Code level (/hoc/N).
  *
- * The "clear puzzle" feature resets the workspace to its initial levelbuilder
- * state. It is tested via #clear-puzzle-header → modal → #confirm-button.
+ * Used to test the clear-puzzle workspace feature, which resets the
+ * Blockly workspace to its initial levelbuilder state via
+ * #clear-puzzle-header → modal → #confirm-button.
  */
-export class ClearPuzzleLab extends LegacyBlocklyLab {
+export class HocLevel extends LegacyBlocklyLab {
   protected buildLevelUrl(level: number): string {
     return `/hoc/${level}?noautoplay=true`;
   }
