@@ -277,13 +277,14 @@ export class Dance extends LegacyBlocklyLab {
   }
 
   /**
-   * Wait for a project save triggered by Share button click.
-   * The Share save is asynchronous with no DOM completion signal; a brief
-   * settled wait is required before reloading to avoid a stale-state read.
-   * TODO: replace once the save API exposes a reliable DOM indicator.
+   * Wait for the project save triggered by Share button click.
+   * The Finish button uses the same `.project_updated_at` "Saved" indicator,
+   * and the Share button triggers the same underlying save path.
    */
   async waitForProjectSave(): Promise<void> {
-    await this.page.waitForTimeout(500);
+    await expect(this.projectUpdatedAt).toContainText('Saved', {
+      timeout: 10_000,
+    });
   }
 
   // --- AI modal interaction methods ---

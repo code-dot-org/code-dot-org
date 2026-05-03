@@ -56,11 +56,7 @@ test.describe('Flappy — share page', () => {
     const shareUrl = await flappy.getShareUrl();
 
     await page.goto(shareUrl);
-    // Wait for Flappy to initialise on the share page.
-    await page.waitForFunction(
-      () => typeof (window as any).Flappy !== 'undefined', // eslint-disable-line @typescript-eslint/no-explicit-any
-    );
-    await flappy.runButton.waitFor({state: 'visible'});
+    await flappy.waitForFlappyInitialize();
 
     expect(await flappy.gameState()).toBe(0); // WAITING
 
@@ -82,15 +78,11 @@ test.describe('Flappy — share page', () => {
 
     await page.waitForURL('**/edit**');
     // dashboard-history navigation sets history.state to null.
-    const historyState = await page.evaluate(() => window.history.state);
-    expect(historyState).toBeNull();
+    expect(await flappy.getHistoryState()).toBeNull();
 
     await flappy.codeWorkspace.waitFor({state: 'visible'});
 
-    // Wait for Flappy to reinitialise on the workspace page.
-    await page.waitForFunction(
-      () => typeof (window as any).Flappy !== 'undefined', // eslint-disable-line @typescript-eslint/no-explicit-any
-    );
+    await flappy.waitForFlappyInitialize();
 
     expect(await flappy.gameState()).toBe(0); // WAITING on workspace page
 
@@ -104,16 +96,7 @@ test.describe('Flappy — share page', () => {
     expect(await flappy.gameState()).toBe(1); // ACTIVE
 
     // Verify block parent relationships in the workspace SVG.
-    const flapHeight = flappy.blockLocator('flapHeight');
-    await expect(flapHeight.locator('xpath=..')).toHaveAttribute(
-      'data-id',
-      'whenClick',
-    );
-
-    const playSound = flappy.blockLocator('playSound');
-    await expect(playSound.locator('xpath=..')).toHaveAttribute(
-      'data-id',
-      'flapHeight',
-    );
+    await flappy.expectBlockParent('flapHeight', 'whenClick');
+    await flappy.expectBlockParent('playSound', 'flapHeight');
   });
 });

@@ -761,6 +761,127 @@ async waitForProjectSave(): Promise<void> {
 
 ---
 
+## Clean code and Playwright best practices
+
+These rules were extracted from the live codebase. Apply them in new ports
+and fix them when touching existing files.
+
+### POM boundary: all interactions belong on the POM
+
+Spec files must read as a list of requirements, not a list of selectors.
+Every interaction — click, wait, evaluate, network intercept — belongs on
+the POM class. The only exception is the `lab.page` escape hatch for
+Playwright-specific operations with no POM equivalent (keyboard events,
+viewport resize).
+
+```typescript
+// Correct — spec body is requirement prose:
+await applab.waitForDataLibrary();
+await applab.selectDataTable('table_name2');
+await applab.expectDataTableCell('Seattle');
+
+// Wrong — spec leaks selectors:
+await studentPage
+  .locator('#data-library-container')
+  .waitFor({state: 'visible'});
+await studentPage.locator('a', {hasText: 'table_name2'}).click();
+await expect(studentPage.locator('td', {hasText: 'Seattle'})).toBeVisible();
+```
+
+### Use `expect()` assertions not `isVisible()` snapshot reads
+
+`isVisible()` is a synchronous snapshot — it does not retry. Replacing it
+with `expect(...).toBeVisible()` gets Playwright's auto-retry and produces
+a clearer failure message.
+
+```typescript
+// Wrong — single snapshot, no retry:
+if (await chevron.isVisible()) {
+  await chevron.click();
+}
+
+// Correct for conditional click (still OK as guard, but document why):
+// isVisible() intentional: chevron is absent on course-level pages
+if (await chevron.isVisible()) {
+  await chevron.click();
+}
+```
+
+For assertions (not guards), always use `expect`:
+
+```typescript
+// Wrong:
+expect(await foo.isVisible()).toBe(true);
+
+// Correct:
+await expect(foo).toBeVisible();
+```
+
+### `.catch(() => {})` swallows all errors
+
+Only suppress `TimeoutError` when polling for an optional element; re-throw
+everything else so genuine failures surface.
+
+```typescript
+// Wrong — swallows network errors, assertion errors, everything:
+await locator.waitFor({state: 'visible', timeout: 1000}).catch(() => {});
+
+// Correct:
+import {errors} from '@playwright/test';
+await locator.waitFor({state: 'visible', timeout: 1000}).catch((e: unknown) => {
+  if (!(e instanceof errors.TimeoutError)) throw e;
+});
+```
+
+### `waitForTimeout` is always wrong
+
+See the dedicated anti-pattern table above. Always replace with a real
+wait signal. For saves: `expect(updatedAt).toContainText('Saved')`. For
+async server operations: `page.waitForResponse()`. For polling game state:
+`page.waitForFunction()`.
+
+### Pre-navigation `waitForResponse` for fire-and-forget requests
+
+Some levels fire async server requests immediately on page load (e.g. App
+Lab `populate_tables`). The response completes _after_ the DOM is ready,
+so waiting for a DOM signal is not enough. Set up the `waitForResponse`
+listener **before** `page.goto()`, then await it after `waitForReady()`:
+
+```typescript
+const populatePromise = page.waitForResponse(
+  r => r.url().includes('populate_tables'),
+  {timeout: 15_000},
+);
+await page.goto(url);
+await lab.waitForReady();
+await populatePromise; // blocks until server confirms table data written
+```
+
+### Extract common auth boilerplate with a private helper
+
+`createTeacher` and `createStudent` share identical CSRF / POST / error
+logic. Extract to a private `createTestUser(page, payload)` function in
+`tests/shared/auth.ts`. The public helpers then only build the payload
+fields that differ between user types.
+
+### DRY repeated color/state mappings with a private helper
+
+When a method and its sibling encode the same `state → CSS value` mapping,
+extract the mapping to a private helper that both call:
+
+```typescript
+private progressColors(state: 'not_tried' | 'attempted' | 'perfect'): {
+  bg: string; border: string;
+} {
+  return {
+    bg: state === 'perfect' ? 'rgb(14, 190, 14)' : 'rgb(254, 254, 254)',
+    border: state === 'not_tried' ? 'rgb(198, 202, 205)' : 'rgb(14, 190, 14)',
+  };
+}
+```
+
+---
+
 ## Codebase-wide POM completeness status
 
 Three levels of POM coverage observed across the suite:
@@ -768,10 +889,10 @@ Three levels of POM coverage observed across the suite:
 **Complete** (spec reads as requirements, all interactions in POM):
 `dance`, `maze`, `artist`, `bee`, `farmer`, `bounce`, `flappy`, `jigsaw`,
 `spritelab`, `music`, `pythonlab`, `mixmoveai`, `netsim`, `hoc`,
-`modal-function-editor`.
+`modal-function-editor`, `sharepage`, `applab`.
 
 **Partial** (POM exists but raw `page.locator()` still in spec body):
-`studio` (6 violations), `challenge-level` (7), `sharepage` (7),
+`studio` (6 violations), `challenge-level` (7),
 `pixelation` (10), `dance-age-filter` (3), `pkc` (1).
 
 **When porting new tests or modifying existing ones in the partial

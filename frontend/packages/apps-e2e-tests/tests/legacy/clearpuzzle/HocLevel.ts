@@ -1,4 +1,4 @@
-import {expect, type Locator, type Page} from '@playwright/test';
+import {errors, expect, type Locator, type Page} from '@playwright/test';
 
 import {LegacyBlocklyLab} from '../shared/LegacyBlocklyLab';
 
@@ -52,7 +52,9 @@ export class HocLevel extends LegacyBlocklyLab {
     await this.page
       .locator('#overlay')
       .waitFor({state: 'visible', timeout: 1000})
-      .catch(() => {});
+      .catch((e: unknown) => {
+        if (!(e instanceof errors.TimeoutError)) throw e;
+      });
     await this.dismissOptionalOverlays();
   }
 
@@ -139,12 +141,24 @@ export class HocLevel extends LegacyBlocklyLab {
   }
 
   /**
-   * Assert that the header progress bubble for the given level matches state.
-   *
-   * CSS values from progress.rb color_string():
+   * CSS colors for a progress bubble in a given state.
+   * Values from progress.rb color_string():
    *   not_tried  — bg rgb(254,254,254)  border rgb(198,202,205)
    *   attempted  — bg rgb(254,254,254)  border rgb(14,190,14)
    *   perfect    — bg rgb(14,190,14)    border rgb(14,190,14)
+   */
+  private progressColors(state: 'not_tried' | 'attempted' | 'perfect'): {
+    bg: string;
+    border: string;
+  } {
+    return {
+      bg: state === 'perfect' ? 'rgb(14, 190, 14)' : 'rgb(254, 254, 254)',
+      border: state === 'not_tried' ? 'rgb(198, 202, 205)' : 'rgb(14, 190, 14)',
+    };
+  }
+
+  /**
+   * Assert that the header progress bubble for the given level matches state.
    *
    * @param level - 1-based level number
    * @param state - progress state name
@@ -153,14 +167,11 @@ export class HocLevel extends LegacyBlocklyLab {
     level: number,
     state: 'not_tried' | 'attempted' | 'perfect',
   ): Promise<void> {
-    const bgColor =
-      state === 'perfect' ? 'rgb(14, 190, 14)' : 'rgb(254, 254, 254)';
-    const borderColor =
-      state === 'not_tried' ? 'rgb(198, 202, 205)' : 'rgb(14, 190, 14)';
+    const {bg, border} = this.progressColors(state);
     const bubble = this.progressBubble(level);
     await expect(bubble).toBeVisible();
-    await expect(bubble).toHaveCSS('background-color', bgColor);
-    await expect(bubble).toHaveCSS('border-top-color', borderColor);
+    await expect(bubble).toHaveCSS('background-color', bg);
+    await expect(bubble).toHaveCSS('border-top-color', border);
   }
 
   /**
@@ -175,13 +186,10 @@ export class HocLevel extends LegacyBlocklyLab {
     level: number,
     state: 'not_tried' | 'attempted' | 'perfect',
   ): Promise<void> {
-    const bgColor =
-      state === 'perfect' ? 'rgb(14, 190, 14)' : 'rgb(254, 254, 254)';
-    const borderColor =
-      state === 'not_tried' ? 'rgb(198, 202, 205)' : 'rgb(14, 190, 14)';
+    const {bg, border} = this.progressColors(state);
     const bubble = this.progressBubbleOnOverview(lesson, level);
     await expect(bubble).toBeVisible();
-    await expect(bubble).toHaveCSS('background-color', bgColor);
-    await expect(bubble).toHaveCSS('border-top-color', borderColor);
+    await expect(bubble).toHaveCSS('background-color', bg);
+    await expect(bubble).toHaveCSS('border-top-color', border);
   }
 }

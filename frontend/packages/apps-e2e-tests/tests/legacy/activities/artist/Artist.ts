@@ -14,12 +14,16 @@ export class Artist extends LegacyBlocklyLab {
   /** The intro video thumbnail shown on the first level. */
   readonly videoThumbnail: Locator;
 
+  /** Finish button — #finishButton — shown on free-play levels. */
+  readonly finishButton: Locator;
+
   constructor(page: Page) {
     super(page);
     this.artistAvatar = page.locator('img[src*="artist/small_static_avatar"]');
     this.videoThumbnail = page.locator(
       'img[src*="video_thumbnails/C2_artist_intro"]',
     );
+    this.finishButton = page.locator('#finishButton');
   }
 
   protected buildLevelUrl(level: number): string {

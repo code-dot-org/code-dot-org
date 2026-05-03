@@ -23,6 +23,8 @@ export default defineConfig({
   use: {
     baseURL: 'https://test-studio.code.org',
     trace: 'on-first-retry',
+    screenshot: 'only-on-failure',
+    video: 'retain-on-failure',
   },
 
   projects: [

@@ -1,4 +1,4 @@
-import {type Locator, type Page} from '@playwright/test';
+import {expect, type Locator, type Page} from '@playwright/test';
 
 import {flappyLevelUrl} from '../../../shared/urls';
 import {LegacyBlocklyLab} from '../../shared/LegacyBlocklyLab';
@@ -149,14 +149,51 @@ export class Flappy extends LegacyBlocklyLab {
    * Mirrors the Cucumber "reopen the congrats dialog unless I see the sharing input" step.
    */
   async ensureShareDialogOpen(): Promise<void> {
-    if (await this.page.locator('#sharing-dialog-copy-button').isVisible()) {
+    const copyButton = this.page.locator('#sharing-dialog-copy-button');
+    if (await copyButton.isVisible()) {
       return;
     }
     await this.againButton.click();
-    await this.page.locator(this.congratsSelector).waitFor({state: 'hidden'});
+    await expect(this.page.locator(this.congratsSelector)).toBeHidden();
     await this.resetButton.click();
     await this.runButton.click();
     await this.rightButton.click();
-    await this.page.locator(this.congratsSelector).waitFor({state: 'visible'});
+    await expect(this.page.locator(this.congratsSelector)).toBeVisible();
+    await expect(copyButton).toBeVisible();
+  }
+
+  /**
+   * Wait for the Flappy engine to initialise in the current page context.
+   * Call after page.goto() on the share page or workspace edit page.
+   * Blocks until `window.Flappy` is defined and `#runButton` is visible.
+   */
+  async waitForFlappyInitialize(): Promise<void> {
+    await this.page.waitForFunction(
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
+      () => typeof (window as any).Flappy !== 'undefined',
+    );
+    await expect(this.runButton).toBeVisible();
+  }
+
+  /**
+   * Read `window.history.state` from the current page context.
+   * Used to assert dashboard-history navigation sets state to null.
+   */
+  async getHistoryState(): Promise<unknown> {
+    return this.page.evaluate(() => window.history.state);
+  }
+
+  /**
+   * Assert that the block identified by childId is a direct DOM child of
+   * the block identified by parentId in the Blockly SVG workspace.
+   * Mirrors HocLevel.expectBlockIsChildOf for Flappy-specific block IDs.
+   *
+   * @param childId - data-id of the child block
+   * @param parentId - expected data-id of the parent element
+   */
+  async expectBlockParent(childId: string, parentId: string): Promise<void> {
+    await expect(
+      this.blockLocator(childId).locator('xpath=..'),
+    ).toHaveAttribute('data-id', parentId);
   }
 }

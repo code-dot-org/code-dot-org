@@ -21,11 +21,15 @@ export class SpriteLab extends LegacyBlocklyLab {
   /** Modal function editor overlay — `#modalFunctionEditor`. */
   readonly modalFunctionEditor: Locator;
 
+  /** Finish button — #finishButton — shown on free-play levels. */
+  readonly finishButton: Locator;
+
   constructor(page: Page) {
     super(page);
     this.spriteAvatarImage = page.locator('img[src*="spritelab/avatar"]');
     this.dropdown = page.locator('.blocklyDropDownDiv');
     this.modalFunctionEditor = page.locator('#modalFunctionEditor');
+    this.finishButton = page.locator('#finishButton');
   }
 
   /** Lesson 36 of allthethingscourse — used by LegacyBlocklyLab.gotoLevel(). */
@@ -119,9 +123,8 @@ export class SpriteLab extends LegacyBlocklyLab {
   async openFunctionEditorFromBlock(blockIndex: number): Promise<void> {
     await this.page.evaluate(idx => {
       // eslint-disable-next-line @typescript-eslint/no-explicit-any
-      (window as any).Blockly.mainBlockSpace
-        .getAllBlocks()
-        [idx].inputList[0].fieldRow[1].onClick();
+      const blocks = (window as any).Blockly.mainBlockSpace.getAllBlocks();
+      blocks[idx].inputList[0].fieldRow[1].onClick();
     }, blockIndex);
     await expect(this.modalFunctionEditor).toBeVisible();
   }

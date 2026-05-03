@@ -60,7 +60,7 @@ test.describe('can see finish button — small screen', () => {
       await artist.waitForLabPage();
       await studentPage.setViewportSize(SMALL_SCREEN);
       await artist.run();
-      await expect(studentPage.locator('#finishButton')).toBeInViewport();
+      await expect(artist.finishButton).toBeInViewport();
     },
   );
 
@@ -101,7 +101,7 @@ test.describe('can see finish button — small screen', () => {
       await spritelab.waitForLabPage();
       await studentPage.setViewportSize(SMALL_SCREEN);
       await spritelab.run();
-      await expect(studentPage.locator('#finishButton')).toBeInViewport();
+      await expect(spritelab.finishButton).toBeInViewport();
     },
   );
 });
