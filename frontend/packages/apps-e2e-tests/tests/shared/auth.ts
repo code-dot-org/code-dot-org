@@ -15,7 +15,8 @@ export async function createTeacher(page: Page): Promise<void> {
     .getAttribute('content');
 
   const ts = Date.now();
-  const email = `teacher_${ts}@test.xx`;
+  const rand = Math.random().toString(36).slice(2, 8);
+  const email = `teacher_${ts}_${rand}@test.xx`;
   const password = `TeacherPass${ts}`;
 
   const response = await page.request.post('/api/test/create_user', {
@@ -73,7 +74,8 @@ export async function createStudent(
     .getAttribute('content');
 
   const ts = Date.now();
-  const email = `student_${ts}@test.xx`;
+  const rand = Math.random().toString(36).slice(2, 8);
+  const email = `student_${ts}_${rand}@test.xx`;
   const password = `StudentPass${ts}`;
 
   const response = await page.request.post('/api/test/create_user', {

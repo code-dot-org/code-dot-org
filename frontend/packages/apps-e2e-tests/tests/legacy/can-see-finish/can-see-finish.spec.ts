@@ -86,7 +86,9 @@ test.describe('can see finish button — small screen', () => {
       await flappy.waitForLabPage();
       await studentPage.setViewportSize(SMALL_SCREEN);
       await flappy.run();
-      await expect(studentPage.locator('#finishButton')).toBeInViewport();
+      // Flappy uses #rightButton (text "Finish") — no #finishButton on this lab.
+      // Cucumber step: button:contains('Finish').
+      await expect(flappy.rightButton).toBeInViewport();
     },
   );
 
