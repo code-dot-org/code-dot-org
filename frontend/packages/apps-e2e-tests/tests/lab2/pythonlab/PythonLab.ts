@@ -1,4 +1,4 @@
-import {type Locator, type Page} from '@playwright/test';
+import {expect, type Locator, type Page} from '@playwright/test';
 
 import {labLevelUrl} from '../../shared/urls';
 import {Lab2Lab} from '../shared/Lab2Lab';
@@ -24,6 +24,18 @@ export class PythonLab extends Lab2Lab {
   /** Console output panel — `#uitest-codebridge-console`. */
   readonly console: Locator;
 
+  /** Validate button on the validation resource panel tab. */
+  readonly validateButton: Locator;
+
+  /** Validation tab in the resource panel. */
+  readonly validationTab: Locator;
+
+  /** Project save status indicator in the header (shows "Saved" when up to date). */
+  readonly projectUpdatedAt: Locator;
+
+  /** Extra Links button visible to levelbuilders only. */
+  readonly extraLinksButton: Locator;
+
   constructor(page: Page) {
     super(page);
     this.runButton = page.locator('#uitest-codebridge-run');
@@ -31,6 +43,10 @@ export class PythonLab extends Lab2Lab {
     this.filesList = page.locator('#uitest-files-list');
     this.filesPlus = page.locator('#uitest-files-plus');
     this.console = page.locator('#uitest-codebridge-console');
+    this.validateButton = page.locator('#instructions-validate-button');
+    this.validationTab = page.locator('#resource-panel-tab-validation');
+    this.projectUpdatedAt = page.locator('.project_updated_at');
+    this.extraLinksButton = page.locator('#uitest-extra-links-button');
   }
 
   protected buildLevelUrl(level: number): string {
@@ -71,5 +87,66 @@ export class PythonLab extends Lab2Lab {
    */
   filePopup(fileIndex: number): Locator {
     return this.page.locator(`#uitest-file-${fileIndex}-popup`);
+  }
+
+  /**
+   * Returns the progress bubble locator for the given 1-based level number.
+   * The header renders one bubble per level; level 1 is index 0.
+   */
+  progressBubble(level: number): Locator {
+    return this.page
+      .locator('.header_level .react_stage a')
+      .nth(level - 1)
+      .locator('.progress-bubble');
+  }
+
+  /**
+   * Asserts that the header progress bubble for the given level matches state.
+   *
+   * CSS values from progress.rb `color_string()`:
+   *   not_tried  — bg rgb(254,254,254)  border rgb(198,202,205)
+   *   attempted  — bg rgb(254,254,254)  border rgb(14,190,14)
+   *   perfect    — bg rgb(14,190,14)    border rgb(14,190,14)
+   *
+   * @param level - 1-based level number
+   * @param state - progress state name
+   */
+  async expectProgressIs(
+    level: number,
+    state: 'not_tried' | 'attempted' | 'perfect',
+  ): Promise<void> {
+    const bgColor =
+      state === 'perfect' ? 'rgb(14, 190, 14)' : 'rgb(254, 254, 254)';
+    const borderColor =
+      state === 'not_tried' ? 'rgb(198, 202, 205)' : 'rgb(14, 190, 14)';
+    const bubble = this.progressBubble(level);
+    await expect(bubble).toBeVisible();
+    await expect(bubble).toHaveCSS('background-color', bgColor);
+    await expect(bubble).toHaveCSS('border-top-color', borderColor);
+  }
+
+  /**
+   * Clicks in the editor, then types text (including any trailing newline).
+   * Mirrors `I focus selector ".cm-content"` + `I press keys "..."`.
+   */
+  async typeInEditor(text: string): Promise<void> {
+    await this.editorContent.click();
+    await this.editorContent.pressSequentially(text);
+  }
+
+  /**
+   * Navigates to start mode via the Extra Links modal.
+   * Waits for the Extra Links button to appear, for the project to report
+   * "Saved", opens the modal, and clicks the [s]tart link.
+   * Calls waitForReady() after navigation completes.
+   */
+  async navigateToStartMode(): Promise<void> {
+    await expect(this.extraLinksButton).toBeVisible();
+    await expect(this.projectUpdatedAt).toContainText('Saved');
+    await this.extraLinksButton.click();
+    const startLink = this.page.locator('a', {hasText: '[s]tart'});
+    await expect(startLink).toBeVisible();
+    await startLink.click();
+    await this.waitForReady();
   }
 }

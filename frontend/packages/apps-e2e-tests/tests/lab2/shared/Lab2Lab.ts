@@ -45,4 +45,13 @@ export abstract class Lab2Lab {
     await this.page.goto(this.buildLevelUrl(level));
     await this.waitForReady();
   }
+
+  /**
+   * Navigates to the given level without resetting the session.
+   * Use after createStudent/createLevelbuilder to preserve the auth cookie.
+   */
+  async reloadLevel(level: number): Promise<void> {
+    await this.page.goto(this.buildLevelUrl(level));
+    await this.waitForReady();
+  }
 }
