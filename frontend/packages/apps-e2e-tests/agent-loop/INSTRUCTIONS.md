@@ -767,22 +767,13 @@ Three levels of POM coverage observed across the suite:
 
 **Complete** (spec reads as requirements, all interactions in POM):
 `dance`, `maze`, `artist`, `bee`, `farmer`, `bounce`, `flappy`, `jigsaw`,
-`spritelab`, `music`, `pythonlab`.
+`spritelab`, `music`, `pythonlab`, `mixmoveai`, `netsim`, `hoc`,
+`modal-function-editor`.
 
 **Partial** (POM exists but raw `page.locator()` still in spec body):
-`mixmoveai` (24 violations), `studio` (6), `challenge-level` (7),
-`sharepage` (7), `netsim` (29 — no POM class), `hoc` (25 — no POM class),
-`modal-function-editor` (15 — no POM class).
+`studio` (6 violations), `challenge-level` (7), `sharepage` (7),
+`pixelation` (10), `dance-age-filter` (3), `pkc` (1).
 
-**When porting new tests or modifying existing ones in the partial/no-POM
+**When porting new tests or modifying existing ones in the partial
 category**, migrate inline selectors to the POM as you go — don't add more.
 If a file has no POM at all, create one before adding tests.
-
-Repeated selectors worth extracting to a POM or shared constant:
-
-| Selector               | Count | Current location             |
-| ---------------------- | ----- | ---------------------------- |
-| `#x-close`             | 8     | hoc, netsim, sharepage specs |
-| `.video-modal`         | 7     | hoc.spec.ts inline           |
-| `#modalFunctionEditor` | 9     | modal-function-editor spec   |
-| `.netsim-lobby-panel`  | 4     | netsim.spec.ts inline        |
