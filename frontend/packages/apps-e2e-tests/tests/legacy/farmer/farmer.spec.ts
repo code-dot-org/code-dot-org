@@ -75,20 +75,27 @@ test.describe('Authored hints — Farmer level 2', () => {
   });
 
   test('viewing all 3 hints decrements counter then removes it', async () => {
-    // Hint 1
+    // Hint 1 — text includes basic markup
     await farmer.lightbulb.click();
     await farmer.acceptHint();
     await expect(farmer.instructionsPanel).toContainText(
       'This is the first hint.',
     );
+    await expect(farmer.instructionsPanel).toContainText(
+      'It has some basic markup',
+    );
     await expect(farmer.hintCount).toHaveText('2');
 
-    // Hint 2
+    // Hint 2 — rendered with a hint video; an img element appears inside the panel
     await farmer.lightbulb.click();
     await farmer.acceptHint();
     await expect(farmer.instructionsPanel).toContainText(
-      'This is the second hint.',
+      'This is the second hint. It has a hint video.',
     );
+    // Immersive Reader icon is also an img; target the hint video thumbnail specifically
+    await expect(
+      farmer.instructionsPanel.locator('img[src*="farmer_intro"]'),
+    ).toBeVisible();
     await expect(farmer.hintCount).toHaveText('1');
 
     // Hint 3 — counter element removed from DOM after last hint
@@ -98,5 +105,19 @@ test.describe('Authored hints — Farmer level 2', () => {
       'This is the third and final hint.',
     );
     await expect(farmer.hintCount).not.toBeAttached();
+  });
+
+  test('clicking lightbulb after all hints shows no further prompt', async () => {
+    for (let i = 0; i < 3; i++) {
+      await farmer.lightbulb.click();
+      await farmer.acceptHint();
+    }
+    await expect(farmer.hintCount).not.toBeAttached();
+
+    await farmer.lightbulb.click();
+    // Prompt must not appear after hints are exhausted
+    await expect(
+      farmer.page.getByRole('button', {name: 'Yes', exact: true}),
+    ).not.toBeAttached();
   });
 });
