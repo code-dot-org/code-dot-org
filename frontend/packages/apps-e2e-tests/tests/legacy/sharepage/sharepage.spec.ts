@@ -67,7 +67,7 @@ test.describe('Flappy — share page', () => {
     await flappy.runButton.click();
     expect(await flappy.gameState()).toBe(0); // still WAITING — game loop started but no flap
 
-    await page.waitForTimeout(1000);
+    await flappy.waitForFirstTick();
     expect(await flappy.tickCount()).toBeGreaterThan(0);
 
     await flappy.simulateFlappyMousedown();
@@ -97,7 +97,7 @@ test.describe('Flappy — share page', () => {
     await flappy.runButton.click();
     expect(await flappy.gameState()).toBe(0);
 
-    await page.waitForTimeout(1000);
+    await flappy.waitForFirstTick();
     expect(await flappy.tickCount()).toBeGreaterThan(0);
 
     await flappy.simulateFlappyMousedown();

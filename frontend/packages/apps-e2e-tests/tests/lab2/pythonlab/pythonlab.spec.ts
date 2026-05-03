@@ -130,8 +130,7 @@ test.describe('Python Lab — run as student', () => {
 
     await lab.typeInEditor("print('more code')");
     await lab.page.keyboard.press('Enter');
-    // Deliberate wait — the editor update must be flushed before run.
-    await lab.page.waitForTimeout(1000);
+    await expect(lab.editorContent).toContainText("print('more code')");
     await lab.run();
     await expect(lab.console).toContainText('more code');
     await lab.expectProgressIs(1, 'attempted');

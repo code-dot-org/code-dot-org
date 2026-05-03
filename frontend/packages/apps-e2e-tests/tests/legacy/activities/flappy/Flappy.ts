@@ -91,6 +91,18 @@ export class Flappy extends LegacyBlocklyLab {
   }
 
   /**
+   * Wait until the game loop has fired at least one tick.
+   * Use after run() to confirm the Flappy engine is executing before
+   * reading game state or tick count.
+   */
+  async waitForFirstTick(): Promise<void> {
+    await this.page.waitForFunction(
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
+      () => ((window as any).Flappy?.tickCount ?? 0) > 0,
+    );
+  }
+
+  /**
    * Dispatch a mousedown event on the last <rect> in #svgFlappy.
    * Mirrors the Cucumber step "I simulate a mousedown on the svg":
    *   $('svgFlappy rect').last().simulate('mousedown')
