@@ -8,16 +8,18 @@ As of: 2026-05-02
 
 ## Summary
 
-| Status                                      | Count                                         |
-| ------------------------------------------- | --------------------------------------------- |
-| Ported                                      | 11 feature files (105+ tests, all 3 browsers) |
-| Covered by ported                           | 2 (maze2, jigsaw2 rolled into existing specs) |
-| Skipped — @eyes                             | 10                                            |
-| Skipped — auth required                     | 30+                                           |
-| Skipped — @skip / @eyes_mobile              | 3                                             |
-| Skipped — cookie/session manipulation       | 2                                             |
-| Out of scope — separate lab (not CSF/Music) | 40+                                           |
-| Porteable, not yet done                     | 1 (musiclab_timeline_nav)                     |
+| Status                                 | Count                                         |
+| -------------------------------------- | --------------------------------------------- |
+| Ported                                 | 11 feature files (105+ tests, all 3 browsers) |
+| Covered by ported                      | 2 (maze2, jigsaw2 rolled into existing specs) |
+| Skipped — @eyes                        | 10                                            |
+| Skipped — auth required                | 30+                                           |
+| Skipped — @skip / @eyes_mobile         | 3                                             |
+| Skipped — cookie/session manipulation  | 2                                             |
+| Out of scope — non-CSF labs            | 6 labs, ~20 feature files                     |
+| Out of scope — platform/infrastructure | 3                                             |
+| Out of scope — standalone tools        | 4                                             |
+| Porteable, not yet done                | 1 (musiclab_timeline_nav)                     |
 
 ---
 
@@ -105,10 +107,10 @@ session fixture.
 | `spritelab/loading_costumes.feature`       | @as_student                        |
 | `dance/age_filter.feature`                 | age-gate cookie/session            |
 | `dance/age_filter2.feature`                | age-gate cookie/session            |
-| `aichat/chat.feature`                      | student-facing AI feature          |
-| `aichat/chat_multimodal.feature`           | student-facing AI feature          |
-| `aichat/view_student_chat_history.feature` | teacher auth                       |
-| `ai_tutor/chat.feature`                    | student auth                       |
+| `aichat/chat.feature`                      | student auth (AI chat feature)     |
+| `aichat/chat_multimodal.feature`           | student auth (AI chat feature)     |
+| `aichat/view_student_chat_history.feature` | teacher auth (AI chat feature)     |
+| `ai_tutor/chat.feature`                    | student auth (AI tutor feature)    |
 | `manage_assets.feature`                    | asset upload state                 |
 
 ---
@@ -138,26 +140,48 @@ this in Playwright is possible but brittle and high-maintenance.
 
 ---
 
-## Out of scope — separate labs
+## Out of scope — non-CSF coding labs
 
-These labs have their own architectures, editors, and server dependencies beyond what the
-current CSF/Music porting effort targets. Each would need a dedicated Lab POM and
-potentially a local server or mocked API.
+These are student coding environments with their own editors or execution engines outside
+the CSF Blockly runtime targeted by this porting effort. Each needs a fresh POM.
 
-| Lab                     | Feature files                                                                                                                                 |
-| ----------------------- | --------------------------------------------------------------------------------------------------------------------------------------------- |
-| App Lab (Droplet/ACE)   | `applab/data_blocks.feature`, `data_tab.feature`, `level_options.feature`, `libraries.feature`, `template_backed.feature`, `tooltips.feature` |
-| Game Lab                | `gamelab/libraries.feature`                                                                                                                   |
-| Sprite Lab              | `spritelab/spritelab.feature`                                                                                                                 |
-| Dance Party             | `dance/dance_party.feature`, `dance_ai_modal.feature`, `dance/save_for_share.feature`                                                         |
-| Minecraft (Craft)       | `craft/dialogs.feature`, `craft/hero_logged_out.feature`, `craft/can_see_finish.feature`                                                      |
-| Web Lab                 | `weblab/too_young.feature`, `weblab/weblab.feature`, `weblab/weblab_submittable.feature`, `weblab/versions.feature`                           |
-| Studio (Sprite resize)  | `studio.feature`                                                                                                                              |
-| NetSim                  | `netsim_lobby.feature`                                                                                                                        |
-| Pixelation              | `pixelation.feature`                                                                                                                          |
-| Mix & Move AI           | `mix_move_ai.feature`                                                                                                                         |
-| Share page              | `sharepage.feature`                                                                                                                           |
-| Public Key Cryptography | `public_key_cryptography/continue_button.feature`                                                                                             |
+Sprite Lab (p5lab) and Dance Party share the CSF `#runButton`/`#resetButton`/`.congrats`
+UI layer but add a p5 preload barrier (`#p5_loading`) and, for Dance Party, an age dialog.
+
+| Lab         | Editor / runtime   | Feature files                                                                                                                                 |
+| ----------- | ------------------ | --------------------------------------------------------------------------------------------------------------------------------------------- |
+| App Lab     | Droplet / ACE JS   | `applab/data_blocks.feature`, `data_tab.feature`, `level_options.feature`, `libraries.feature`, `template_backed.feature`, `tooltips.feature` |
+| Game Lab    | p5.js              | `gamelab/libraries.feature`                                                                                                                   |
+| Sprite Lab  | Blockly + p5.js    | `spritelab/spritelab.feature`                                                                                                                 |
+| Dance Party | Blockly + p5.js    | `dance/dance_party.feature`, `dance/dance_ai_modal.feature`, `dance/save_for_share.feature`                                                   |
+| Web Lab     | HTML/CSS/JS files  | `weblab/too_young.feature`, `weblab/weblab.feature`, `weblab/weblab_submittable.feature`, `weblab/versions.feature`                           |
+| Minecraft   | Custom interpreter | `craft/dialogs.feature`, `craft/hero_logged_out.feature`, `craft/can_see_finish.feature`                                                      |
+
+---
+
+## Out of scope — platform and workspace infrastructure
+
+These feature files test shared CSF platform code, not any particular lab.
+
+| Feature file            | What it tests                                                       | Blocker                      |
+| ----------------------- | ------------------------------------------------------------------- | ---------------------------- |
+| `studio.feature`        | Sprite image resize after run on a PlayLab level (custom DOM check) | No standard selector pattern |
+| `sharepage.feature`     | Share URL generation, "View Code" redirect, embedded workspace      | No auth, but share URL state |
+| `manage_assets.feature` | Asset upload dialog, audio record button visibility                 | Auth (asset upload state)    |
+
+---
+
+## Out of scope — standalone educational tools
+
+These are interactive CS Principles tools or simulations, not Blockly-based coding
+environments. No run/reset/workspace interface.
+
+| Tool / simulator             | Feature files                                     | Notes                              |
+| ---------------------------- | ------------------------------------------------- | ---------------------------------- |
+| Internet Simulator (NetSim)  | `netsim_lobby.feature`                            | Multiplayer; needs paired sessions |
+| Pixelation widget            | `pixelation.feature`                              | Binary/hex input widget            |
+| Public Key Cryptography tool | `public_key_cryptography/continue_button.feature` | Custom navigation widget           |
+| Mix & Move AI                | `mix_move_ai.feature`                             | Separate course app                |
 
 ---
 
