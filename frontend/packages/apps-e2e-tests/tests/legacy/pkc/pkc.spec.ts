@@ -17,7 +17,7 @@ test.describe('Public Key Cryptography — continue button', () => {
     const pkc = new PKC(page);
     await pkc.gotoLevel(1);
 
-    await page.getByRole('button', {name: 'Continue'}).last().click();
+    await pkc.clickLastContinueButton();
 
     await expect(pkc.mount).toContainText('Pick a character');
     await expect(page).toHaveURL(/\/lessons\/31\/levels\/2/);

@@ -135,6 +135,20 @@ export class Dance extends LegacyBlocklyLab {
   }
 
   /**
+   * Navigate to a Dance level as an anonymous user with ?songfilter=on,
+   * bypassing the age-gate dialog entirely. The song filter suppresses
+   * PG-13 songs without requiring age selection.
+   * Mirrors the `?songfilter=on` Cucumber steps in age_filter2.feature.
+   *
+   * @param level - allthethingscourse lesson-37 level number
+   */
+  async gotoAnonymousSongFilter(level: number): Promise<void> {
+    await this.page.goto('/reset_session');
+    await this.page.goto(`${this.buildLevelUrl(level)}&songfilter=on`);
+    await this.waitForDancePage();
+  }
+
+  /**
    * Assert both known PG-13 song option values are absent from #song_selector.
    * Values checked: `synthesize` (local) and `badhabit_stevelacy` (test-studio).
    * Mirrors `I do not see "X" option in the dropdown "#song_selector"`.

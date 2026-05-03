@@ -45,9 +45,9 @@ test.describe('Challenge level — Maze level 6', () => {
     await maze.expectChallengeTitle('Challenge Complete!');
   });
 
-  test('skip button navigates to the next level', async ({page}) => {
+  test('skip button navigates to the next level', async () => {
     await maze.challengePrimaryButton.click();
     await maze.clickSkipButton();
-    await page.waitForURL(/\/lessons\/2\/levels\/7/);
+    await maze.waitForLevel(7);
   });
 });

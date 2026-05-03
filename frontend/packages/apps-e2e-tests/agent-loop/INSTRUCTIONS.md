@@ -749,13 +749,11 @@ failures on slow machines. Replace with a real condition wherever possible:
 | `waitForTimeout(1000)` after share | `page.waitForResponse('/api/...')` or DOM signal |
 | `waitForTimeout(n)` polling state  | `page.waitForFunction(condition)`                |
 
-When no DOM signal exists (e.g. Share button async save), encapsulate the wait
-in a named POM method with a `TODO:` comment documenting the gap:
+For save completion, `.project_updated_at` shows "Saved" — use that:
 
 ```typescript
-/** @todo Replace once Share exposes a DOM save-complete indicator. */
 async waitForProjectSave(): Promise<void> {
-  await this.page.waitForTimeout(500);
+  await expect(this.projectUpdatedAt).toContainText('Saved', {timeout: 10_000});
 }
 ```
 
@@ -884,17 +882,15 @@ private progressColors(state: 'not_tried' | 'attempted' | 'perfect'): {
 
 ## Codebase-wide POM completeness status
 
-Three levels of POM coverage observed across the suite:
+All current specs are fully POM-encapsulated. Every interaction lives on
+the POM class; no raw `page.locator()` calls remain in spec bodies.
 
 **Complete** (spec reads as requirements, all interactions in POM):
-`dance`, `maze`, `artist`, `bee`, `farmer`, `bounce`, `flappy`, `jigsaw`,
-`spritelab`, `music`, `pythonlab`, `mixmoveai`, `netsim`, `hoc`,
-`modal-function-editor`, `sharepage`, `applab`.
+`dance`, `dance-age-filter`, `maze`, `artist`, `bee`, `farmer`, `bounce`,
+`flappy`, `jigsaw`, `spritelab`, `studio`, `challenge-level`, `pixelation`,
+`pkc`, `music`, `pythonlab`, `mixmoveai`, `netsim`, `hoc`, `hoc-signed-in`,
+`modal-function-editor`, `sharepage`, `applab`, `user-menu`, `csp-instructions`,
+`teacher-panel`, `catalog`, `weblab`.
 
-**Partial** (POM exists but raw `page.locator()` still in spec body):
-`studio` (6 violations), `challenge-level` (7),
-`pixelation` (10), `dance-age-filter` (3), `pkc` (1).
-
-**When porting new tests or modifying existing ones in the partial
-category**, migrate inline selectors to the POM as you go — don't add more.
+When porting or modifying any spec, all interactions must live on the POM.
 If a file has no POM at all, create one before adding tests.

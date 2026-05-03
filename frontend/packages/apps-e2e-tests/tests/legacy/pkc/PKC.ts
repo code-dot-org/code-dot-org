@@ -30,4 +30,14 @@ export class PKC {
     await this.page.goto(labLevelUrl(31, level));
     await this.mount.waitFor({state: 'visible'});
   }
+
+  /**
+   * Click the last Continue button in the PKC widget.
+   * PKC renders multiple Continue buttons for multi-step panels; the last
+   * one advances to the next level.
+   * Mirrors `I click the last "Continue" button` from continue_button.feature.
+   */
+  async clickLastContinueButton(): Promise<void> {
+    await this.page.getByRole('button', {name: 'Continue'}).last().click();
+  }
 }

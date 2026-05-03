@@ -116,11 +116,7 @@ test.describe('Dance Party age filter — anonymous user, age dialog', () => {
     {tag: '@no_mobile'},
     async ({page}) => {
       const dance = new Dance(page);
-      await page.goto('/reset_session');
-      await page.goto(
-        '/courses/allthethingscourse/units/1/lessons/37/levels/1?noautoplay=true&songfilter=on',
-      );
-      await dance.waitForDancePage();
+      await dance.gotoAnonymousSongFilter(1);
       await expect(dance.ageDialog).toBeHidden();
       await dance.expectPg13SongsFiltered();
     },
@@ -131,11 +127,7 @@ test.describe('Dance Party age filter — anonymous user, age dialog', () => {
     {tag: '@no_mobile'},
     async ({page}) => {
       const dance = new Dance(page);
-      await page.goto('/reset_session');
-      await page.goto(
-        '/courses/allthethingscourse/units/1/lessons/37/levels/1?noautoplay=true&songfilter=on',
-      );
-      await dance.waitForDancePage();
+      await dance.gotoAnonymousSongFilter(1);
       await expect(dance.ageDialog).toBeHidden();
       await dance.expectPg13SongsFiltered();
 
@@ -143,7 +135,7 @@ test.describe('Dance Party age filter — anonymous user, age dialog', () => {
       await dance.run();
       await expect(dance.congratsMessage).toBeVisible();
       await dance.continueButton.click();
-      await page.waitForURL('**/lessons/37/levels/2**');
+      await dance.waitForLevel(2);
       await dance.waitForDancePage();
       await dance.waitForSongSelector();
       await dance.expectPg13SongsFiltered();
