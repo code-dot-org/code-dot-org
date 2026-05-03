@@ -45,9 +45,7 @@ export class MusicLab extends Lab2Lab {
    * `[data-id='when-run-block']` is the correct single ready signal.
    */
   protected async waitForReady(): Promise<void> {
-    await this.page
-      .locator("[data-id='when-run-block']")
-      .waitFor({state: 'visible'});
+    await this.whenRunBlock.waitFor({state: 'visible'});
   }
 
   /**

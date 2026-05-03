@@ -38,4 +38,9 @@ export class BounceLab extends LegacyBlocklyLab {
   async releaseKey(key: string): Promise<void> {
     await this.page.keyboard.up(key);
   }
+
+  /** Click the freeplay finish button to submit the open-ended level. */
+  async finish(): Promise<void> {
+    await this.finishButton.click();
+  }
 }

@@ -6,13 +6,13 @@ import {LegacyBlocklyLab} from '../shared/LegacyBlocklyLab';
 /**
  * Page Object for the Jigsaw lab — lesson 1 of allthethingscourse.
  *
- * Jigsaw hides #runButton immediately after mount, so gotoLevel() waits for
- * the Blockly workspace SVG instead. Puzzles complete automatically when the
- * block is placed in the correct slot; no Run button click is needed.
- * Congrats appears inside a modal, so congratsSelector is overridden.
+ * Jigsaw hides #runButton immediately after mount, so waitForInitialLoad()
+ * and waitForReady() are overridden to use the Blockly workspace SVG instead.
+ * Puzzles complete automatically when the block lands in the correct slot;
+ * no Run button click is needed. Congrats appears inside a modal.
  */
 export class JigsawLab extends LegacyBlocklyLab {
-  /** The Blockly SVG workspace, used as a ready signal since #runButton is hidden. */
+  /** The Blockly SVG workspace — visible once the lab is initialized. */
   readonly workspace: Locator;
 
   protected override get congratsSelector(): string {
@@ -28,16 +28,12 @@ export class JigsawLab extends LegacyBlocklyLab {
     return labLevelUrl(1, level);
   }
 
-  /**
-   * Navigate to a jigsaw level, bypassing the standard runButton-based ready
-   * check. Waits for the Blockly workspace SVG to confirm initialization.
-   */
-  override async gotoLevel(level: number): Promise<void> {
-    const url = this.buildLevelUrl(level);
-    await this.page.goto('/reset_session');
-    await this.page.goto(url);
+  protected override async waitForInitialLoad(): Promise<void> {
     await expect(this.workspace).toBeVisible();
-    await this.dismissOptionalOverlays();
+  }
+
+  override async waitForReady(): Promise<void> {
+    await expect(this.workspace).toBeVisible();
     await expect(this.page.locator('.uitest-signincallout')).toBeHidden();
   }
 

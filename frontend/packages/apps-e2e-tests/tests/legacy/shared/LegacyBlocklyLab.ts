@@ -118,6 +118,17 @@ export abstract class LegacyBlocklyLab {
   }
 
   /**
+   * Wait until the page has rendered enough to reliably check for optional
+   * overlays. Called from navigate() before dismissOptionalOverlays().
+   *
+   * Override in subclasses where #runButton is absent or hidden on mount
+   * (e.g. JigsawLab waits for .blocklyWorkspace instead).
+   */
+  protected async waitForInitialLoad(): Promise<void> {
+    await expect(this.runButton).toBeVisible();
+  }
+
+  /**
    * Navigate directly to a level without session reset.
    * Use for mid-test navigation within the same session.
    */
@@ -182,7 +193,7 @@ export abstract class LegacyBlocklyLab {
   private async navigate(url: string): Promise<void> {
     await this.page.goto('/reset_session');
     await this.page.goto(url);
-    await expect(this.runButton).toBeVisible();
+    await this.waitForInitialLoad();
     await this.dismissOptionalOverlays();
     await this.waitForReady();
   }

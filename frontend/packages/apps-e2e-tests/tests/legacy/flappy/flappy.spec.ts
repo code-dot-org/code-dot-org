@@ -9,12 +9,11 @@ test.describe('Flappy — level 1', () => {
   test.beforeEach(async ({page}) => {
     flappy = new FlappyLab(page);
     await flappy.gotoLevel(1);
+    await expect(flappy.runButton).toBeVisible();
+    await expect(flappy.resetButton).toBeHidden();
   });
 
   test('winning solution with inverted gravity completes the puzzle', async () => {
-    await expect(flappy.runButton).toBeVisible();
-    await expect(flappy.resetButton).toBeHidden();
-
     await flappy.loadBlocks(LEVEL_1_FLAPPY_BLOCKS);
     await flappy.run();
     // Negative gravity makes the bird float upward past all pipes in one flap.
@@ -34,12 +33,11 @@ test.describe('Flappy — level 2', () => {
   test.beforeEach(async ({page}) => {
     flappy = new FlappyLab(page);
     await flappy.gotoLevel(2);
+    await expect(flappy.runButton).toBeVisible();
+    await expect(flappy.resetButton).toBeHidden();
   });
 
   test('winning solution completes the puzzle', async () => {
-    await expect(flappy.runButton).toBeVisible();
-    await expect(flappy.resetButton).toBeHidden();
-
     await flappy.loadBlocks(LEVEL_2_FLAPPY_BLOCKS);
     await flappy.run();
     await flappy.flap();
@@ -54,9 +52,6 @@ test.describe('Flappy — level 2', () => {
     'run with no blocks shows inline feedback',
     {tag: '@no_mobile'},
     async () => {
-      await expect(flappy.runButton).toBeVisible();
-      await expect(flappy.resetButton).toBeHidden();
-
       await flappy.run();
       await flappy.flap();
 

@@ -13,12 +13,11 @@ test.describe('Bounce — level 1', () => {
   test.beforeEach(async ({page}) => {
     bounce = new BounceLab(page);
     await bounce.gotoLevel(1);
+    await expect(bounce.runButton).toBeVisible();
+    await expect(bounce.resetButton).toBeHidden();
   });
 
   test('winning solution with left-key hold completes the puzzle', async () => {
-    await expect(bounce.runButton).toBeVisible();
-    await expect(bounce.resetButton).toBeHidden();
-
     await bounce.loadBlocks(LEVEL_1_BOUNCE_BLOCKS);
     await bounce.run();
     await bounce.holdKey('ArrowLeft');
@@ -38,12 +37,11 @@ test.describe('Bounce — level 3', () => {
   test.beforeEach(async ({page}) => {
     bounce = new BounceLab(page);
     await bounce.gotoLevel(3);
+    await expect(bounce.runButton).toBeVisible();
+    await expect(bounce.resetButton).toBeHidden();
   });
 
   test('winning solution with up-key hold completes the puzzle', async () => {
-    await expect(bounce.runButton).toBeVisible();
-    await expect(bounce.resetButton).toBeHidden();
-
     await bounce.loadBlocks(LEVEL_3_BOUNCE_BLOCKS);
     await bounce.run();
     await bounce.holdKey('ArrowUp');
@@ -63,15 +61,14 @@ test.describe('Bounce — level 5', () => {
   test.beforeEach(async ({page}) => {
     bounce = new BounceLab(page);
     await bounce.gotoLevel(5);
+    await expect(bounce.runButton).toBeVisible();
+    await expect(bounce.resetButton).toBeHidden();
   });
 
   test(
     'run with no blocks shows inline feedback',
     {tag: '@no_mobile'},
     async () => {
-      await expect(bounce.runButton).toBeVisible();
-      await expect(bounce.resetButton).toBeHidden();
-
       await bounce.run();
 
       await expect(bounce.inlineFeedback).toBeVisible();
@@ -84,9 +81,6 @@ test.describe('Bounce — level 5', () => {
   );
 
   test('winning solution completes the puzzle', async () => {
-    await expect(bounce.runButton).toBeVisible();
-    await expect(bounce.resetButton).toBeHidden();
-
     await bounce.loadBlocks(LEVEL_5_BOUNCE_BLOCKS);
     await bounce.run();
 
@@ -103,16 +97,15 @@ test.describe('Bounce — freeplay level 10', () => {
   test.beforeEach(async ({page}) => {
     bounce = new BounceLab(page);
     await bounce.gotoLevel(10);
+    await expect(bounce.runButton).toBeVisible();
+    await expect(bounce.finishButton).toBeHidden();
   });
 
   test('finish button appears after run and completes freeplay', async () => {
-    await expect(bounce.runButton).toBeVisible();
-    await expect(bounce.finishButton).toBeHidden();
-
     await bounce.run();
 
     await expect(bounce.finishButton).toBeVisible();
-    await bounce.finishButton.click();
+    await bounce.finish();
 
     await expect(bounce.congratsMessage).toBeVisible();
   });

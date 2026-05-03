@@ -32,13 +32,11 @@ base (see **Adding a new lab2 lab** below).
 ```
 tests/
   shared/
-    urls.ts                ← labLevelUrl + flappyLevelUrl (shared by both archs)
+    urls.ts                ← labLevelUrl + flappyLevelUrl (canonical; used by all labs)
   legacy/
     shared/
       LegacyBlocklyLab.ts  ← abstract base (do not modify unless adding a new
                               shared capability; never add lab-specific code here)
-      urls.ts              ← re-exports from ../../shared/urls (preserved for
-                              backward compat; prefer tests/shared/urls in new code)
     {lab}/
       {Lab}Lab.ts          ← concrete POM
       blocks.ts            ← Blockly workspace JSON fixtures (JSON strings)
@@ -57,11 +55,16 @@ tests/
 - `protected abstract buildLevelUrl(level: number): string` — each lab's URL
 - `protected get instructionsSelector(): string` — default `.csf-top-instructions p`
 - `protected get congratsSelector(): string` — default `.congrats`
+- `protected async waitForInitialLoad()` — default waits for `#runButton` visible;
+  override in labs where `#runButton` is absent or hidden on mount (e.g. Jigsaw)
+- `async waitForReady()` — default checks `#runButton` visible + signincallout hidden;
+  override together with `waitForInitialLoad()` when the run-button assumption breaks
 - Shared locators: `runButton`, `resetButton`, `continueButton`, `againButton`,
-  `congratsMessage`, `inlineFeedback`, `instructions`
+  `congratsMessage`, `inlineFeedback`, `instructions`, `instructionsPanel`,
+  `lightbulb`, `hintCount`
 - Shared methods: `gotoLevel(n)`, `reloadLevel(n)`, `waitForLevel(n)`,
   `loadBlocks(json)`, `run()`, `reset()`, `nextLevel()`, `tryAgain()`,
-  `waitForReady()`
+  `waitForReady()`, `acceptHint()`
 
 ---
 
@@ -81,10 +84,10 @@ Read (do not rely on memory):
 
 ### Step 2 — Determine URL scheme
 
-**allthethingscourse labs** (Maze, Bee, Artist, Farmer):
+**allthethingscourse labs** (Maze, Bee, Artist, Farmer, Jigsaw):
 
 ```typescript
-import {labLevelUrl} from '../shared/urls';
+import {labLevelUrl} from '../../shared/urls';
 protected buildLevelUrl(level: number): string {
   return labLevelUrl(lessonNumber, level);   // course defaults to 'allthethingscourse'
 }
@@ -92,7 +95,7 @@ protected buildLevelUrl(level: number): string {
 
 Lesson numbers (allthethingscourse/units/1):
 
-- Maze → 2, Artist → 3, Bee → 4, Farmer → 6
+- Jigsaw → 1, Maze → 2, Artist → 3, Bee → 4, Farmer → 6
 
 **Other-course labs** (Bounce):
 
@@ -103,7 +106,7 @@ return labLevelUrl(1, level, 'events'); // course = 'events'
 **Standalone route labs** (Flappy):
 
 ```typescript
-import {flappyLevelUrl} from '../shared/urls';
+import {flappyLevelUrl} from '../../shared/urls';
 protected buildLevelUrl(level: number): string { return flappyLevelUrl(level); }
 ```
 
@@ -139,7 +142,7 @@ Minimal lab (no extra locators, default selectors):
 
 ```typescript
 import {LegacyBlocklyLab} from '../shared/LegacyBlocklyLab';
-import {labLevelUrl} from '../shared/urls';
+import {labLevelUrl} from '../../shared/urls';
 
 /** Page Object for the Bee lab — lesson 4 of allthethingscourse. */
 export class BeeLab extends LegacyBlocklyLab {
@@ -154,7 +157,7 @@ Lab with extra locators:
 ```typescript
 import {type Locator, type Page} from '@playwright/test';
 import {LegacyBlocklyLab} from '../shared/LegacyBlocklyLab';
-import {labLevelUrl} from '../shared/urls';
+import {labLevelUrl} from '../../shared/urls';
 
 export class FarmerLab extends LegacyBlocklyLab {
   readonly pegman: Locator;
@@ -176,7 +179,9 @@ export class FarmerLab extends LegacyBlocklyLab {
 
   async getDirtAt(x: number, y: number): Promise<number> {
     return this.page.evaluate(
-      ({x, y}) => (window as any).Maze.controller.map.getValue(x, y),
+      ({x, y}: {x: number; y: number}) =>
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
+        (window as any).Maze.controller.map.getValue(x, y) as number,
       {x, y},
     );
   }
@@ -355,15 +360,15 @@ export class MusicLab extends Lab2Lab {
   }
 
   protected async waitForReady(): Promise<void> {
-    await this.page
-      .locator("[data-id='when-run-block']")
-      .waitFor({state: 'visible'});
+    await this.whenRunBlock.waitFor({state: 'visible'});
   }
 
   async loadBlocks(json: object): Promise<void> {
     await this.page.evaluate(blocksJson => {
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
       (window as any).Blockly.serialization.workspaces.load(
         blocksJson,
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
         (window as any).Blockly.getMainWorkspace(),
       );
     }, json);
@@ -486,7 +491,7 @@ await maze.run();
 await expect(bounce.finishButton).toBeHidden();
 await bounce.run();
 await expect(bounce.finishButton).toBeVisible();
-await bounce.finishButton.click();
+await bounce.finish(); // calls finishButton.click() — prefer method over raw locator
 await expect(bounce.congratsMessage).toBeVisible();
 ```
 
@@ -516,6 +521,38 @@ page.getByRole('heading', {name: 'Teacher Panel', level: 3});
 await expect(
   page.getByRole('heading', {name: 'Teacher Panel', level: 3}),
 ).not.toBeAttached();
+```
+
+**Labs without a visible run button** (Jigsaw):
+Some labs hide `#runButton` on mount. Override both `waitForInitialLoad()` and
+`waitForReady()` in the subclass; the base `gotoLevel()` then works unchanged:
+
+```typescript
+export class JigsawLab extends LegacyBlocklyLab {
+  readonly workspace: Locator;
+
+  protected override get congratsSelector(): string {
+    return '.modal .congrats';
+  }
+
+  constructor(page: Page) {
+    super(page);
+    this.workspace = page.locator('.blocklyWorkspace');
+  }
+
+  protected buildLevelUrl(level: number): string {
+    return labLevelUrl(1, level);
+  }
+
+  protected override async waitForInitialLoad(): Promise<void> {
+    await expect(this.workspace).toBeVisible();
+  }
+
+  override async waitForReady(): Promise<void> {
+    await expect(this.workspace).toBeVisible();
+    await expect(this.page.locator('.uitest-signincallout')).toBeHidden();
+  }
+}
 ```
 
 **`getByRole` partial match vs lightbulb** (authored hints):
