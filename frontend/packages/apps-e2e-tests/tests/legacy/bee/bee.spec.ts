@@ -33,7 +33,7 @@ test.describe('Feedback — Bee level 5', () => {
     await bee.gotoLevel(5);
   });
 
-  test('suboptimal solution shows feedback and hint request button', async () => {
+  test('suboptimal solution shows feedback; hint request reveals blocks panel', async () => {
     await bee.run();
 
     await expect(bee.congratsMessage).toBeVisible();
@@ -42,7 +42,12 @@ test.describe('Feedback — Bee level 5', () => {
     );
     await expect(bee.hintRequestButton).toBeVisible();
 
+    // After clicking the hint-request button the congrats text is replaced
+    // with a prompt to try the recommended blocks.
     await bee.hintRequestButton.click();
+    await expect(bee.congratsMessage).toHaveText(
+      'Try using one of the blocks below:',
+    );
     await expect(bee.feedbackBlocks).toBeVisible();
   });
 
