@@ -34,7 +34,7 @@
   },
   "prettier": "@code-dot-org/lint-config/prettier/index.mjs",
   "devDependencies": {
-    "@axe-core/playwright": "^4.10.1",
+    "@axe-core/playwright": "^4.11.0",
     "@eslint/js": "catalog:",
     "@turbo/gen": "^2.6.3",
     "@types/node": "catalog:",
