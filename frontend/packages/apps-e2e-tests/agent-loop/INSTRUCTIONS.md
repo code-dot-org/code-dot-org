@@ -37,10 +37,15 @@ tests/
     shared/
       LegacyBlocklyLab.ts  ← abstract base (do not modify unless adding a new
                               shared capability; never add lab-specific code here)
-    {lab}/
-      {Lab}Lab.ts          ← concrete POM
-      blocks.ts            ← Blockly workspace JSON fixtures (JSON strings)
-      {lab}.spec.ts        ← Playwright spec
+    activities/            ← CSF Blockly activities (Maze, Bee, Artist, etc.)
+      {name}/
+        {Name}.ts          ← concrete POM (no "Lab" suffix — these are not product labs)
+        blocks.ts          ← Blockly workspace JSON fixtures (JSON strings)
+        {name}.spec.ts     ← Playwright spec
+    {feature}/             ← platform/workspace features (step, clearpuzzle, …)
+      {FeatureType}.ts     ← concrete POM
+      blocks.ts
+      {feature}.spec.ts
   lab2/
     shared/
       Lab2Lab.ts           ← abstract base for lab2 labs
@@ -84,10 +89,11 @@ Read (do not rely on memory):
 
 ### Step 2 — Determine URL scheme
 
-**allthethingscourse labs** (Maze, Bee, Artist, Farmer, Jigsaw):
+**allthethingscourse activities** (Maze, Bee, Artist, Farmer, Jigsaw) — files live
+under `tests/legacy/activities/{name}/`:
 
 ```typescript
-import {labLevelUrl} from '../../shared/urls';
+import {labLevelUrl} from '../../../shared/urls';
 protected buildLevelUrl(level: number): string {
   return labLevelUrl(lessonNumber, level);   // course defaults to 'allthethingscourse'
 }
@@ -97,20 +103,21 @@ Lesson numbers (allthethingscourse/units/1):
 
 - Jigsaw → 1, Maze → 2, Artist → 3, Bee → 4, Farmer → 6
 
-**Other-course labs** (Bounce):
+**Other-course activities** (Bounce):
 
 ```typescript
 return labLevelUrl(1, level, 'events'); // course = 'events'
 ```
 
-**Standalone route labs** (Flappy):
+**Standalone route activities** (Flappy):
 
 ```typescript
-import {flappyLevelUrl} from '../../shared/urls';
+import {flappyLevelUrl} from '../../../shared/urls';
 protected buildLevelUrl(level: number): string { return flappyLevelUrl(level); }
 ```
 
-**Lab2 labs** (Music Lab etc.) — import from the top-level shared module:
+**Lab2 labs** (Music Lab etc.) — files live under `tests/lab2/{lab}/`; import
+from the top-level shared module:
 
 ```typescript
 import {labLevelUrl} from '../../shared/urls';
@@ -136,30 +143,30 @@ protected override get congratsSelector(): string {
 }
 ```
 
-### Step 4 — Write `{Lab}Lab.ts`
+### Step 4 — Write `{Name}.ts`
 
-Minimal lab (no extra locators, default selectors):
+Minimal activity (no extra locators, default selectors):
 
 ```typescript
-import {LegacyBlocklyLab} from '../shared/LegacyBlocklyLab';
-import {labLevelUrl} from '../../shared/urls';
+import {LegacyBlocklyLab} from '../../shared/LegacyBlocklyLab';
+import {labLevelUrl} from '../../../shared/urls';
 
-/** Page Object for the Bee lab — lesson 4 of allthethingscourse. */
-export class BeeLab extends LegacyBlocklyLab {
+/** Page Object for the Bee activity — lesson 4 of allthethingscourse. */
+export class Bee extends LegacyBlocklyLab {
   protected buildLevelUrl(level: number): string {
     return labLevelUrl(4, level);
   }
 }
 ```
 
-Lab with extra locators:
+Activity with extra locators:
 
 ```typescript
 import {type Locator, type Page} from '@playwright/test';
-import {LegacyBlocklyLab} from '../shared/LegacyBlocklyLab';
-import {labLevelUrl} from '../../shared/urls';
+import {LegacyBlocklyLab} from '../../shared/LegacyBlocklyLab';
+import {labLevelUrl} from '../../../shared/urls';
 
-export class FarmerLab extends LegacyBlocklyLab {
+export class Farmer extends LegacyBlocklyLab {
   readonly pegman: Locator;
   readonly farmerAvatar: Locator;
 
@@ -210,20 +217,20 @@ export const WINNING_ARTIST_BLOCKS =
 If the Ruby source uses `\\"` (double-backslash-quote) — which appears in some
 blocks — copy it as-is; the semantics are identical.
 
-### Step 6 — Write `{lab}.spec.ts`
+### Step 6 — Write `{name}.spec.ts`
 
 Pattern:
 
 ```typescript
 import {expect, test} from '@playwright/test';
 import {WINNING_BEE_BLOCKS} from './blocks';
-import {BeeLab} from './BeeLab';
+import {Bee} from './Bee';
 
 test.describe('Bee — level 4', () => {
-  let bee: BeeLab;
+  let bee: Bee;
 
   test.beforeEach(async ({page}) => {
-    bee = new BeeLab(page);
+    bee = new Bee(page);
     await bee.gotoLevel(4);
   });
 
@@ -271,7 +278,7 @@ await expect(bee.inlineFeedback).toHaveText(
 yarn turbo run typecheck --filter=@code-dot-org/apps-e2e-tests
 
 # From frontend/packages/apps-e2e-tests/
-yarn playwright test tests/legacy/{lab} --project=chromium --reporter=line
+yarn playwright test tests/legacy/activities/{name} --project=chromium --reporter=line
 ```
 
 ---
@@ -442,7 +449,7 @@ Every entry must include:
 
 After completing or abandoning each port, produce:
 
-1. **Test file** at `tests/legacy/{lab}/{lab}.spec.ts`
+1. **Test file** at `tests/legacy/activities/{name}/{name}.spec.ts` (or `tests/legacy/{feature}/` for platform features)
 2. **Iteration log** at `agent-loop/logs/{lab}-{scenario-slug}.iteration.md`
    (format: see `ITERATION_LOG_FORMAT.md`)
 3. **Update `agent-loop/batch-report.md`** with any fixme/skip entries
@@ -528,7 +535,7 @@ Some labs hide `#runButton` on mount. Override both `waitForInitialLoad()` and
 `waitForReady()` in the subclass; the base `gotoLevel()` then works unchanged:
 
 ```typescript
-export class JigsawLab extends LegacyBlocklyLab {
+export class Jigsaw extends LegacyBlocklyLab {
   readonly workspace: Locator;
 
   protected override get congratsSelector(): string {
