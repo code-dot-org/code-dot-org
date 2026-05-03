@@ -1,6 +1,4 @@
-import {expect, test} from '@playwright/test';
-
-import {createStudent} from '../../shared/auth';
+import {expect, test} from '../../shared/fixtures';
 
 /**
  * Web Lab — age restriction redirect.
@@ -14,11 +12,14 @@ import {createStudent} from '../../shared/auth';
  * path touches no editor content and is safe to port.
  */
 test.describe('Web Lab — age restriction', () => {
-  test('young student is redirected from weblab to home', async ({page}) => {
-    await createStudent(page, {age: 10});
-    await page.goto('/projects/weblab/new');
-    await page.waitForURL('**/home');
-    await expect(page.locator('.alert-danger')).toContainText(
+  test.use({studentAge: 10});
+
+  test('young student is redirected from weblab to home', async ({
+    studentPage,
+  }) => {
+    await studentPage.goto('/projects/weblab/new');
+    await studentPage.waitForURL('**/home');
+    await expect(studentPage.locator('.alert-danger')).toContainText(
       'This content has age restrictions in place',
     );
   });

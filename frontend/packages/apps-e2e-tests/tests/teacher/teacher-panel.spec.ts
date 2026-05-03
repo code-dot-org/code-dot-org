@@ -1,18 +1,16 @@
-import {expect, test} from '@playwright/test';
-
 import {Maze} from '../legacy/activities/maze/Maze';
-import {createTeacher} from '../shared/auth';
+import {expect, test} from '../shared/fixtures';
 
 test.describe('Teacher panel — Maze level 4', () => {
-  test('authenticated teacher sees Teacher Panel heading', async ({page}) => {
-    await createTeacher(page);
-    const maze = new Maze(page);
-    // reloadLevel: no session reset — teacher session just created by createTeacher.
+  test('authenticated teacher sees Teacher Panel heading', async ({
+    teacherPage,
+  }) => {
+    const maze = new Maze(teacherPage);
     await maze.reloadLevel(4);
     // #teacher-panel-container is a zero-dimension wrapper around a position:fixed
     // child; assert on the h3 heading directly, which has real dimensions.
     await expect(
-      page.getByRole('heading', {name: 'Teacher Panel', level: 3}),
+      teacherPage.getByRole('heading', {name: 'Teacher Panel', level: 3}),
     ).toBeVisible();
   });
 
