@@ -47,3 +47,112 @@ export async function createTeacher(page: Page): Promise<void> {
     );
   }
 }
+
+/**
+ * Creates a student account (age 16) and signs in.
+ * Mirrors `I create a student named "..."` from account_steps.rb:
+ *   create_user(name, user_type: 'student', age: '16', sign_in_count: 2)
+ */
+export async function createStudent(page: Page): Promise<void> {
+  await page.goto('/reset_session');
+  const csrf = await page
+    .locator('meta[name="csrf-token"]')
+    .getAttribute('content');
+
+  const ts = Date.now();
+  const email = `student_${ts}@test.xx`;
+  const password = `StudentPass${ts}`;
+
+  const response = await page.request.post('/api/test/create_user', {
+    headers: {
+      'Content-Type': 'application/json',
+      'X-CSRF-Token': csrf ?? '',
+    },
+    data: {
+      user: {
+        user_type: 'student',
+        email,
+        password,
+        password_confirmation: password,
+        name: `TestStudent${ts}`,
+        age: '16',
+        sign_in_count: 2,
+      },
+    },
+  });
+
+  if (!response.ok()) {
+    throw new Error(
+      `create_user (student) failed: ${response.status()} — ${await response.text()}`,
+    );
+  }
+}
+
+/**
+ * Creates a student account aged 10 (under-13) and signs in.
+ * Mirrors `I create a young student named "..."` from account_steps.rb:
+ *   create_user(name, user_type: 'student', age: '10', sign_in_count: 2)
+ *
+ * Used for age-restriction redirect tests (e.g. weblab/too_young.feature).
+ */
+export async function createYoungStudent(page: Page): Promise<void> {
+  await page.goto('/reset_session');
+  const csrf = await page
+    .locator('meta[name="csrf-token"]')
+    .getAttribute('content');
+
+  const ts = Date.now();
+  const email = `young_${ts}@test.xx`;
+  const password = `YoungPass${ts}`;
+
+  const response = await page.request.post('/api/test/create_user', {
+    headers: {
+      'Content-Type': 'application/json',
+      'X-CSRF-Token': csrf ?? '',
+    },
+    data: {
+      user: {
+        user_type: 'student',
+        email,
+        password,
+        password_confirmation: password,
+        name: `TestYoungStudent${ts}`,
+        age: '10',
+        sign_in_count: 2,
+      },
+    },
+  });
+
+  if (!response.ok()) {
+    throw new Error(
+      `create_user (young student) failed: ${response.status()} — ${await response.text()}`,
+    );
+  }
+}
+
+/**
+ * Creates a levelbuilder account and signs in.
+ * Mirrors `I create a levelbuilder named "..."` from levelbuilder_steps.rb:
+ *   I create a teacher named "..." + I get levelbuilder access
+ *   (POST /api/test/levelbuilder_access)
+ */
+export async function createLevelbuilder(page: Page): Promise<void> {
+  await createTeacher(page);
+
+  const csrf = await page
+    .locator('meta[name="csrf-token"]')
+    .getAttribute('content');
+
+  const response = await page.request.post('/api/test/levelbuilder_access', {
+    headers: {
+      'Content-Type': 'application/json',
+      'X-CSRF-Token': csrf ?? '',
+    },
+  });
+
+  if (!response.ok()) {
+    throw new Error(
+      `levelbuilder_access failed: ${response.status()} — ${await response.text()}`,
+    );
+  }
+}
