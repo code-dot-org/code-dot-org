@@ -13,6 +13,10 @@ export interface SnapTarget {
   handleType: 'source' | 'target';
 }
 
+// Reads the type from React Flow's class hint. v12's `Handle` adds the
+// bare `source` / `target` class to the rendered div; revisit if the
+// React Flow major changes — there's no public `data-handletype` to
+// fall back on.
 function getHandleType(handle: HTMLElement): 'source' | 'target' | null {
   if (handle.classList.contains('source')) {
     return 'source';
@@ -21,6 +25,20 @@ function getHandleType(handle: HTMLElement): 'source' | 'target' | null {
     return 'target';
   }
   return null;
+}
+
+// Pulls a {clientX, clientY} pair out of either a MouseEvent (direct
+// fields) or a TouchEvent (first changedTouches/touches entry). Returns
+// null when no touch is present (e.g. a touchend with empty touches and
+// no changedTouches, which shouldn't occur in normal browsers).
+export function getEventClientPoint(
+  event: MouseEvent | TouchEvent
+): {x: number; y: number} | null {
+  if (event instanceof MouseEvent) {
+    return {x: event.clientX, y: event.clientY};
+  }
+  const touch = event.changedTouches[0] ?? event.touches[0] ?? null;
+  return touch ? {x: touch.clientX, y: touch.clientY} : null;
 }
 
 export function findNearestHandle(

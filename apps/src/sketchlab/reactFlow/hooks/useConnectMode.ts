@@ -1,4 +1,4 @@
-import {addEdge, MarkerType, useReactFlow} from '@xyflow/react';
+import {addEdge, useReactFlow} from '@xyflow/react';
 import {useCallback, useEffect, useState} from 'react';
 
 import {
@@ -6,12 +6,8 @@ import {
   SketchlabReactFlowNode,
 } from '@cdo/apps/lab2/types';
 
-import {ARROW_MARKER_HEIGHT_PX, ARROW_MARKER_WIDTH_PX} from '../constants';
-import {
-  DEFAULT_LINE_WIDTH,
-  DEFAULT_STROKE_COLOR,
-} from '../elementToolbars/toolbarPalettes';
 import {canCreateConnection} from '../utils/connectionRules';
+import {defaultLineEdgeFields} from '../utils/lineEdges';
 import {getNodeLabel} from '../utils/nodeLabel';
 
 /**
@@ -113,18 +109,7 @@ export function useConnectMode({
             source: connectingFrom,
             target: targetNodeId,
             ...handles,
-            type: 'straight',
-            style: {
-              stroke: DEFAULT_STROKE_COLOR,
-              strokeWidth: DEFAULT_LINE_WIDTH,
-            },
-            markerEnd: {
-              type: MarkerType.ArrowClosed,
-              color: DEFAULT_STROKE_COLOR,
-              width: ARROW_MARKER_WIDTH_PX,
-              height: ARROW_MARKER_HEIGHT_PX,
-              strokeWidth: DEFAULT_LINE_WIDTH,
-            },
+            ...defaultLineEdgeFields({arrow: true}),
           },
           currentEdges
         );

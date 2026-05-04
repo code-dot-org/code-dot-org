@@ -1,4 +1,4 @@
-import {useReactFlow} from '@xyflow/react';
+import {useReactFlow, type XYPosition} from '@xyflow/react';
 import React, {useCallback, useEffect, useRef} from 'react';
 
 import {
@@ -6,34 +6,30 @@ import {
   SketchlabReactFlowNode,
 } from '@cdo/apps/lab2/types';
 
-import {
-  LINE_ANCHOR_SIZE_PX,
-  LINE_RECONNECT_SNAP_RADIUS_PX,
-} from '../constants';
+import {LINE_RECONNECT_SNAP_RADIUS_PX} from '../constants';
 import {findNearestHandle} from '../utils/handleSnap';
 import {
+  anchorHandleFlowPosition,
   createLineAnchorAtHandle,
   getHandleFlowPosition,
 } from '../utils/lineAnchors';
 
-type FlowPoint = {x: number; y: number};
-
 interface DraggingAnchor {
   id: string;
   side: 'source' | 'target';
-  startPosition: FlowPoint;
+  startPosition: XYPosition;
 }
 
 interface PendingDetach {
   side: 'source' | 'target';
-  flowPosition: FlowPoint;
+  flowPosition: XYPosition;
 }
 
 interface DragState {
   edgeId: string;
   anchors: DraggingAnchor[];
   pendingDetaches: PendingDetach[];
-  startPointer: FlowPoint;
+  startPointer: XYPosition;
   hasMoved: boolean;
 }
 
@@ -45,8 +41,8 @@ interface UseLineEdgeDragOptions {
   setEdges: (
     updater: (edges: SketchlabReactFlowEdge[]) => SketchlabReactFlowEdge[]
   ) => void;
-  screenToFlowPosition: (position: {x: number; y: number}) => FlowPoint;
-  flowToScreenPosition: (position: {x: number; y: number}) => FlowPoint;
+  screenToFlowPosition: (position: XYPosition) => XYPosition;
+  flowToScreenPosition: (position: XYPosition) => XYPosition;
 }
 
 // Dragging the body of a line edge translates the line as a whole. Free
@@ -142,6 +138,9 @@ export function useLineEdgeDrag({
     [screenToFlowPosition, setNodes, setEdges]
   );
 
+  // Dual usage: registered as a `mouseup` listener (event present) AND
+  // called from the unmount cleanup (no event) to drop dangling listeners.
+  // The `!event` branch below handles the cleanup path.
   const stopLineEdgeDrag = useCallback(
     (event?: MouseEvent) => {
       const dragState = draggingLineEdgeRef.current;
@@ -168,21 +167,13 @@ export function useLineEdgeDrag({
 
       const edgePatch: Partial<SketchlabReactFlowEdge> = {};
       dragState.anchors.forEach(anchor => {
-        const finalPosition: FlowPoint = {
+        const finalPosition: XYPosition = {
           x: anchor.startPosition.x + deltaX,
           y: anchor.startPosition.y + deltaY,
         };
-        const handleFlowPosition: FlowPoint =
-          anchor.side === 'source'
-            ? {
-                x: finalPosition.x + LINE_ANCHOR_SIZE_PX,
-                y: finalPosition.y + LINE_ANCHOR_SIZE_PX / 2,
-              }
-            : {
-                x: finalPosition.x,
-                y: finalPosition.y + LINE_ANCHOR_SIZE_PX / 2,
-              };
-        const handleScreen = flowToScreenPosition(handleFlowPosition);
+        const handleScreen = flowToScreenPosition(
+          anchorHandleFlowPosition(finalPosition, anchor.side)
+        );
         const snap = findNearestHandle(
           handleScreen,
           anchor.id,

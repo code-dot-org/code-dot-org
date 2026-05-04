@@ -3,7 +3,6 @@ import {
   Background,
   Controls,
   type IsValidConnection,
-  MarkerType,
   ReactFlow,
   useEdgesState,
   useNodesState,
@@ -22,8 +21,6 @@ import {useSources} from '@cdo/apps/lab2/views/SourcesContainer';
 import {createUuid} from '@cdo/apps/utils';
 
 import {
-  ARROW_MARKER_HEIGHT_PX,
-  ARROW_MARKER_WIDTH_PX,
   DEFAULT_NODE_HEIGHT,
   DEFAULT_NODE_WIDTH,
   LINE_ANCHOR_SIZE_PX,
@@ -37,10 +34,6 @@ import {
   type ToolbarTarget,
 } from '../context';
 import LineEdgeToolbar from '../elementToolbars/LineEdgeToolbar';
-import {
-  DEFAULT_LINE_WIDTH,
-  DEFAULT_STROKE_COLOR,
-} from '../elementToolbars/toolbarPalettes';
 import {useFocusManagement} from '../hooks/useFocusManagement';
 import {useKeyboardNavigation} from '../hooks/useKeyboardNavigation';
 import {useLineEdgeDrag} from '../hooks/useLineEdgeDrag';
@@ -60,6 +53,7 @@ import {
   canCreateConnection,
   isLineAnchorNodeId,
 } from '../utils/connectionRules';
+import {defaultLineEdgeFields} from '../utils/lineEdges';
 
 import Toolbar from './Toolbar';
 
@@ -375,18 +369,7 @@ export default function ReactFlowCanvas({
         return addEdge(
           {
             ...connection,
-            type: 'straight',
-            style: {
-              stroke: DEFAULT_STROKE_COLOR,
-              strokeWidth: DEFAULT_LINE_WIDTH,
-            },
-            markerEnd: {
-              type: MarkerType.ArrowClosed,
-              color: DEFAULT_STROKE_COLOR,
-              width: ARROW_MARKER_WIDTH_PX,
-              height: ARROW_MARKER_HEIGHT_PX,
-              strokeWidth: DEFAULT_LINE_WIDTH,
-            },
+            ...defaultLineEdgeFields({arrow: true}),
           },
           currentEdges
         );
@@ -489,20 +472,7 @@ export default function ReactFlowCanvas({
           id: lineEdgeId,
           source: sourceAnchorId,
           target: targetAnchorId,
-          type: 'straight',
-          ...(type === 'arrow' && {
-            markerEnd: {
-              type: MarkerType.ArrowClosed,
-              color: DEFAULT_STROKE_COLOR,
-              width: ARROW_MARKER_WIDTH_PX,
-              height: ARROW_MARKER_HEIGHT_PX,
-              strokeWidth: DEFAULT_LINE_WIDTH,
-            },
-          }),
-          style: {
-            stroke: DEFAULT_STROKE_COLOR,
-            strokeWidth: DEFAULT_LINE_WIDTH,
-          },
+          ...defaultLineEdgeFields({arrow: type === 'arrow'}),
         };
 
         setNodes(currentNodes => [...currentNodes, sourceAnchor, targetAnchor]);

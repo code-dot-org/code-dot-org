@@ -13,7 +13,7 @@ import {
 } from '@cdo/apps/lab2/types';
 
 import {LINE_RECONNECT_SNAP_RADIUS_PX} from '../constants';
-import {findNearestHandle} from '../utils/handleSnap';
+import {findNearestHandle, getEventClientPoint} from '../utils/handleSnap';
 import {createLineAnchorAtHandle} from '../utils/lineAnchors';
 
 interface UseReconnectOptions {
@@ -98,14 +98,7 @@ export function useReconnect({
       // pointer if that's missing.
       let dropPosition = connectionState.to;
       if (!dropPosition) {
-        const clientPoint =
-          event instanceof MouseEvent
-            ? {x: event.clientX, y: event.clientY}
-            : (() => {
-                const touch =
-                  event.changedTouches[0] ?? event.touches[0] ?? null;
-                return touch ? {x: touch.clientX, y: touch.clientY} : null;
-              })();
+        const clientPoint = getEventClientPoint(event);
         if (!clientPoint) {
           return;
         }
@@ -136,7 +129,7 @@ export function useReconnect({
   // space and find the nearest matching handle on a non-anchor node within
   // the snap radius. The orphaned anchor is removed by the prune effect.
   const handleNodeDragStop = useCallback(
-    (event: React.MouseEvent | MouseEvent, node: SketchlabReactFlowNode) => {
+    (event: React.MouseEvent, node: SketchlabReactFlowNode) => {
       if (node.type !== 'lineAnchor') {
         return;
       }
