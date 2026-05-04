@@ -57,8 +57,7 @@ export function useCopyPaste({
   const buildNodeClipboard = useCallback(
     (nodeId: string): ClipboardContents | null => {
       const node = nodes.find(n => n.id === nodeId);
-      if (!node || (node as {data?: {locked?: boolean}}).data?.locked)
-        return null;
+      if (!node || node.data.locked) return null;
       return {nodes: [node], edges: []};
     },
     [nodes]
@@ -93,20 +92,14 @@ export function useCopyPaste({
       }
       if (!source) return;
 
-      const newNodes = source.nodes.map(node => {
-        const newId = createUuid();
-        const base = node as unknown as Record<string, unknown>;
-        return {
-          ...base,
-          id: newId,
-          selected: false,
-          data: {...node.data},
-          position: {
-            x: node.position.x + PASTE_OFFSET_PX,
-            y: node.position.y + PASTE_OFFSET_PX,
-          },
-        } as unknown as SketchlabReactFlowNode;
-      });
+      const newNodes = source.nodes.map(node => ({
+        ...node,
+        id: createUuid(),
+        position: {
+          x: node.position.x + PASTE_OFFSET_PX,
+          y: node.position.y + PASTE_OFFSET_PX,
+        },
+      }));
 
       lastDuplicateRef.current = {nodes: newNodes, edges: []};
       lastDuplicateNodeIdRef.current = nodeId;
@@ -134,19 +127,14 @@ export function useCopyPaste({
       const newNodes = source.nodes.map(node => {
         const newId = createUuid();
         idMap.set(node.id, newId);
-        const base = node as unknown as Record<string, unknown>;
         return {
-          ...base,
+          ...node,
           id: newId,
-          selected: false,
-          draggable: undefined,
-          connectable: undefined,
-          deletable: undefined,
           position: {
             x: node.position.x + PASTE_OFFSET_PX,
             y: node.position.y + PASTE_OFFSET_PX,
           },
-        } as unknown as SketchlabReactFlowNode;
+        };
       });
       const newEdges = source.edges.map(edge => ({
         ...edge,
@@ -229,17 +217,14 @@ export function useCopyPaste({
     const newNodes = contents.nodes.map(node => {
       const newId = createUuid();
       idMap.set(node.id, newId);
-      const base = node as unknown as Record<string, unknown>;
       return {
-        ...base,
+        ...node,
         id: newId,
-        selected: false,
-        data: {...node.data},
         position: {
           x: node.position.x + deltaX,
           y: node.position.y + deltaY,
         },
-      } as unknown as SketchlabReactFlowNode;
+      };
     });
 
     const newEdges = contents.edges.map(edge => ({
