@@ -99,13 +99,14 @@ function TextNode({id, data, selected}: NodeProps<TextNodeType>) {
       <div className={styles.rotatable} style={rotatableStyle}>
         <div
           ref={textRef}
-          className={styles.text}
+          className={`${styles.text}${isEditing ? ' nodrag nopan' : ''}`}
           style={textStyle}
           contentEditable={isEditing}
           suppressContentEditableWarning
           onFocus={startEditing}
           onBlur={commitEdit}
           onKeyDown={handleKeyDown}
+          onMouseDown={isEditing ? e => e.stopPropagation() : undefined}
           tabIndex={-1}
           role="textbox"
           aria-label={`Text content${isEditing ? ' (editing)' : ''}`}
