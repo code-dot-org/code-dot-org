@@ -81,7 +81,7 @@ const WithTooltip = forwardRef<WithTooltipHandle, WithTooltipProps>(
       setShowTooltip(show);
       clearHideTimeout();
       if (!isTooltip) {
-        setNodePosition(show ? (event.target as HTMLElement) : null);
+        setNodePosition(show ? (event.currentTarget as HTMLElement) : null);
       }
     };
 
@@ -173,7 +173,7 @@ const WithTooltip = forwardRef<WithTooltipHandle, WithTooltipProps>(
     const componentToWrap =
       isValidElement<HTMLAttributes<HTMLElement>>(children) &&
       cloneElement(children, {
-        'aria-describedby': tooltipProps.tooltipId,
+        'aria-describedby': showTooltip ? tooltipProps.tooltipId : undefined,
         onFocus: (event: React.FocusEvent<HTMLElement>) => {
           handleShowTooltip(true, event);
           children.props.onFocus?.(event);

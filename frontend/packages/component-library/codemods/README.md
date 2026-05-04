@@ -139,3 +139,33 @@ The transformation process:
 5. Reconstructs JSX with `MuiButton`/`MuiIconButton` and transformed props
 6. Updates imports to use MUI components
 7. Writes the transformed code back to the file
+
+### `tags-to-mui-chip.ts`
+
+Updates Tags usage to the new Tag API.
+
+**What it does:**
+
+- Renames `onClose` → `onDelete`
+- Removes `type="closable"` / `type: 'closable'` / `type: 'default'`
+- Leaves imports intact
+
+### Running the Tags Codemod
+
+Use the yarn script (run from `frontend/packages/component-library` directory):
+
+```bash
+yarn codemod:tags ../../../apps/src/templates/courseOfferings
+```
+
+### Direct Command (Alternative)
+
+```bash
+cd frontend/packages/component-library
+TS_NODE_TRANSPILE_ONLY=true npx jscodeshift \
+  -t ./codemods/tags-to-mui-chip.ts \
+  --parser=tsx \
+  --extensions=js,jsx,ts,tsx \
+  --require ts-node/register \
+  <path-to-files-or-directory>
+```

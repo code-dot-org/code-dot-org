@@ -14,6 +14,7 @@ import '@mui/material/styles';
 import '@mui/material/Button';
 import '@mui/material/IconButton';
 import '@mui/material/Breadcrumbs';
+import '@mui/material/Chip';
 
 // Button and IconButton type augmentations (manually copied from component-library)
 // Source: frontend/packages/component-library/src/themes/code.org/types.d.ts
@@ -67,5 +68,24 @@ declare module '@mui/material/IconButton' {
 declare module '@mui/material/Breadcrumbs' {
   interface BreadcrumbsOwnProps {
     size?: 'xs' | 's' | 'm' | 'l';
+  }
+}
+
+declare module '@mui/material/Chip' {
+  interface ChipPropsSizeOverrides {
+    large: true;
+  }
+
+  interface ChipPropsColorOverrides {
+    teal: true;
+    purple: true;
+    aqua: true;
+    gray: true;
+    disabled: true;
+  }
+
+  interface ChipPropsVariantOverrides {
+    light: true;
+    solid: true;
   }
 }
