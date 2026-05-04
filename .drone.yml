@@ -90,7 +90,7 @@ steps:
 
   - name: unit-tests
     # see: docker/ci/Dockerfile
-    image: codedotorg/cdo-ci:1.20
+    image: codedotorg/cdo-ci:1.21
     pull: always
     environment:
       CI_JOB: 'unit_tests'
@@ -212,7 +212,7 @@ steps:
 
   - name: ui-tests
     # see: docker/ci/Dockerfile
-    image: codedotorg/cdo-ci:1.20
+    image: codedotorg/cdo-ci:1.21
     pull: always
     volumes:
       - name: mysql
@@ -297,7 +297,7 @@ steps:
   # snapshot of the fully-built project and resulting database, but don't
   # actually run the tests.
   - name: prepare-cacheable-build
-    image: codedotorg/cdo-ci:1.20
+    image: codedotorg/cdo-ci:1.21
     pull: always
     environment:
       CI_JOB: 'prepare_cacheable_build'
@@ -344,6 +344,6 @@ trigger:
 
 ---
 kind: signature
-hmac: 737c499e8c5036a43dfcef713bafadff8d5e604cce81c2d895de471f46250dc2
+hmac: 74be814fc7cc53487d50b033ff80d47c1477e0ad5d8856b2e52633b0a548d03d
 
 ...
