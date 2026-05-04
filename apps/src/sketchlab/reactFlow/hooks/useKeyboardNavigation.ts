@@ -13,6 +13,7 @@ import {
   MIN_NODE_WIDTH,
   KEYBOARD_RESIZE_STEP,
   KEYBOARD_MOVE_STEP,
+  KEYBOARD_SNAP_RADIUS_FLOW_UNITS,
   LINE_RECONNECT_SNAP_RADIUS_PX,
 } from '../constants';
 import {
@@ -155,8 +156,13 @@ export function useKeyboardNavigation({
   readOnly,
   openToolbar,
 }: UseKeyboardNavigationOptions) {
-  const {getEdge, getNode, screenToFlowPosition, flowToScreenPosition} =
-    useReactFlow<SketchlabReactFlowNode, SketchlabReactFlowEdge>();
+  const {
+    getEdge,
+    getNode,
+    getZoom,
+    screenToFlowPosition,
+    flowToScreenPosition,
+  } = useReactFlow<SketchlabReactFlowNode, SketchlabReactFlowEdge>();
   const {announcement: connectAnnouncement, announce} = useAriaAnnouncer();
   const {connectingFrom, startConnect, cancelConnect, completeConnect} =
     useConnectMode({nodes, setEdges, announce});
@@ -334,11 +340,22 @@ export function useKeyboardNavigation({
           };
         }
 
+        // Keyboard moves are stepwise, so the snap window must be at
+        // least one step wide in flow space — otherwise an arrow press
+        // can step past a handle without ever landing inside the radius.
+        // We multiply by zoom so the flow-unit window stays consistent
+        // regardless of how zoomed-in the canvas is, and floor at the
+        // mouse default so we're never less generous than mouse drags.
+        const keyboardRadiusPx = KEYBOARD_SNAP_RADIUS_FLOW_UNITS * getZoom();
+        const snapRadiusPx = Math.max(
+          LINE_RECONNECT_SNAP_RADIUS_PX,
+          keyboardRadiusPx
+        );
         const snap = findNearestHandle(
           flowToScreenPosition(postMoveHandleFlow),
           endpointId,
           side,
-          LINE_RECONNECT_SNAP_RADIUS_PX
+          snapRadiusPx
         );
         if (snap) {
           if (side === 'source') {
@@ -402,6 +419,7 @@ export function useKeyboardNavigation({
     [
       getEdge,
       getNode,
+      getZoom,
       setNodes,
       setEdges,
       screenToFlowPosition,
