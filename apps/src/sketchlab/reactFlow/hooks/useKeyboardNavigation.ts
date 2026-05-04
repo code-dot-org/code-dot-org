@@ -13,6 +13,8 @@ import {
   MIN_NODE_WIDTH,
   KEYBOARD_RESIZE_STEP,
   KEYBOARD_MOVE_STEP,
+  LINE_ANCHOR_SIZE_PX,
+  LINE_RECONNECT_SNAP_RADIUS_PX,
 } from '../constants';
 import {
   entriesMatch,
@@ -21,6 +23,11 @@ import {
   type TabOrderEntry,
 } from '../utils/computeTabOrder';
 import {isLineAnchorNodeId} from '../utils/connectionRules';
+import {findNearestHandle} from '../utils/handleSnap';
+import {
+  createLineAnchorAtHandle,
+  getHandleFlowPosition,
+} from '../utils/lineAnchors';
 import {getNodeLabel} from '../utils/nodeLabel';
 
 import {useAriaAnnouncer} from './useAriaAnnouncer';
@@ -135,10 +142,8 @@ export function useKeyboardNavigation({
   readOnly,
   openToolbar,
 }: UseKeyboardNavigationOptions) {
-  const {getEdge, getNode} = useReactFlow<
-    SketchlabReactFlowNode,
-    SketchlabReactFlowEdge
-  >();
+  const {getEdge, getNode, screenToFlowPosition, flowToScreenPosition} =
+    useReactFlow<SketchlabReactFlowNode, SketchlabReactFlowEdge>();
   const {announcement: connectAnnouncement, announce} = useAriaAnnouncer();
   const {connectingFrom, startConnect, cancelConnect, completeConnect} =
     useConnectMode({nodes, setEdges, announce});
@@ -271,24 +276,129 @@ export function useKeyboardNavigation({
       if (!deltaX && !deltaY) return false;
       const focusedEdge = getEdge(focusedEdgeId);
       if (!focusedEdge) return false;
-      // Only the anchor endpoints translate; real-node endpoints stay put
-      // (the edge will follow them by id, same as a mouse edge-body drag).
-      const idsToMove: string[] = [];
-      if (isLineAnchorNodeId(focusedEdge.source, nodes)) {
-        idsToMove.push(focusedEdge.source);
-      }
-      if (isLineAnchorNodeId(focusedEdge.target, nodes)) {
-        idsToMove.push(focusedEdge.target);
-      }
-      if (idsToMove.length === 0) return false;
+
+      // Per side: figure out the post-move handle position, check if it
+      // would land on another node's handle (snap), and otherwise either
+      // translate the existing anchor or detach the real-node end into a
+      // fresh anchor placed at the post-move position. Snapping skips both
+      // the anchor creation and the translate; any orphaned anchor is
+      // cleaned up by the prune effect.
+      const anchorIdsToMove: string[] = [];
+      const newAnchors: SketchlabReactFlowNode[] = [];
+      const edgePatch: Partial<SketchlabReactFlowEdge> = {};
+
+      const collectSide = (side: 'source' | 'target') => {
+        const endpointId = focusedEdge[side];
+        const isAnchor = isLineAnchorNodeId(endpointId, nodes);
+
+        let postMoveHandleFlow: {x: number; y: number};
+        if (isAnchor) {
+          const node = getNode(endpointId);
+          if (!node) return;
+          const handleBefore =
+            side === 'source'
+              ? {
+                  x: node.position.x + LINE_ANCHOR_SIZE_PX,
+                  y: node.position.y + LINE_ANCHOR_SIZE_PX / 2,
+                }
+              : {
+                  x: node.position.x,
+                  y: node.position.y + LINE_ANCHOR_SIZE_PX / 2,
+                };
+          postMoveHandleFlow = {
+            x: handleBefore.x + deltaX,
+            y: handleBefore.y + deltaY,
+          };
+        } else {
+          const handlePos = getHandleFlowPosition(
+            endpointId,
+            side === 'source'
+              ? focusedEdge.sourceHandle
+              : focusedEdge.targetHandle,
+            screenToFlowPosition
+          );
+          if (!handlePos) return;
+          postMoveHandleFlow = {
+            x: handlePos.x + deltaX,
+            y: handlePos.y + deltaY,
+          };
+        }
+
+        // Snap test. Excluding the original endpoint prevents same-spot
+        // re-attachment when the move is smaller than the snap radius.
+        const snap = findNearestHandle(
+          flowToScreenPosition(postMoveHandleFlow),
+          endpointId,
+          side,
+          LINE_RECONNECT_SNAP_RADIUS_PX
+        );
+        if (snap) {
+          if (side === 'source') {
+            edgePatch.source = snap.nodeId;
+            edgePatch.sourceHandle = snap.handleId ?? undefined;
+          } else {
+            edgePatch.target = snap.nodeId;
+            edgePatch.targetHandle = snap.handleId ?? undefined;
+          }
+          return;
+        }
+
+        if (isAnchor) {
+          anchorIdsToMove.push(endpointId);
+          return;
+        }
+        // Detach: spawn an anchor already at the post-move position so we
+        // don't need to translate it afterwards.
+        const anchor = createLineAnchorAtHandle(postMoveHandleFlow, side);
+        newAnchors.push(anchor);
+        if (side === 'source') {
+          edgePatch.source = anchor.id;
+          edgePatch.sourceHandle = 'line-anchor-source';
+        } else {
+          edgePatch.target = anchor.id;
+          edgePatch.targetHandle = 'line-anchor-target';
+        }
+      };
+      collectSide('source');
+      collectSide('target');
+
+      const didAnything =
+        anchorIdsToMove.length > 0 ||
+        newAnchors.length > 0 ||
+        Object.keys(edgePatch).length > 0;
+      if (!didAnything) return false;
+
       event.preventDefault();
       event.stopPropagation();
-      setNodes(currentNodes =>
-        moveNodesByDelta(currentNodes, idsToMove, deltaX, deltaY)
-      );
+
+      if (newAnchors.length > 0) {
+        setNodes(currentNodes => [...currentNodes, ...newAnchors]);
+      }
+      if (Object.keys(edgePatch).length > 0) {
+        setEdges(currentEdges =>
+          currentEdges.map(currentEdge =>
+            currentEdge.id === focusedEdgeId
+              ? {...currentEdge, ...edgePatch}
+              : currentEdge
+          )
+        );
+      }
+      if (anchorIdsToMove.length > 0) {
+        setNodes(currentNodes =>
+          moveNodesByDelta(currentNodes, anchorIdsToMove, deltaX, deltaY)
+        );
+      }
       return true;
     },
-    [getEdge, nodes, setNodes]
+    [
+      getEdge,
+      getNode,
+      nodes,
+      setNodes,
+      setEdges,
+      screenToFlowPosition,
+      flowToScreenPosition,
+    ]
   );
 
   /**
