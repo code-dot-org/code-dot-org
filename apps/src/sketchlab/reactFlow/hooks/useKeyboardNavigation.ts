@@ -1,5 +1,5 @@
 import {useReactFlow} from '@xyflow/react';
-import React, {useCallback} from 'react';
+import React, {useCallback, useEffect, useRef} from 'react';
 
 import {
   SketchlabReactFlowEdge,
@@ -148,6 +148,13 @@ export function useKeyboardNavigation({
   const {connectingFrom, startConnect, cancelConnect, completeConnect} =
     useConnectMode({nodes, setEdges, announce});
 
+  // Remembers the edge most recently translated by an arrow keypress so
+  // that subsequent presses can keep moving the same edge even if the
+  // mutation knocked DOM focus off the edge wrapper. Cleared whenever a
+  // non-arrow key is pressed (Tab, Escape, etc.) so unrelated key presses
+  // don't accidentally pick it up.
+  const keyboardMovingEdgeRef = useRef<string | null>(null);
+
   const handleTabNavigation = useCallback(
     (keyContext: KeyContext): boolean => {
       const {event, focusedEntry, focusedNodeId} = keyContext;
@@ -289,21 +296,21 @@ export function useKeyboardNavigation({
 
       const collectSide = (side: 'source' | 'target') => {
         const endpointId = focusedEdge[side];
-        const isAnchor = isLineAnchorNodeId(endpointId, nodes);
+        const endpointNode = getNode(endpointId);
+        if (!endpointNode) return;
+        const isAnchor = endpointNode.type === 'lineAnchor';
 
         let postMoveHandleFlow: {x: number; y: number};
         if (isAnchor) {
-          const node = getNode(endpointId);
-          if (!node) return;
           const handleBefore =
             side === 'source'
               ? {
-                  x: node.position.x + LINE_ANCHOR_SIZE_PX,
-                  y: node.position.y + LINE_ANCHOR_SIZE_PX / 2,
+                  x: endpointNode.position.x + LINE_ANCHOR_SIZE_PX,
+                  y: endpointNode.position.y + LINE_ANCHOR_SIZE_PX / 2,
                 }
               : {
-                  x: node.position.x,
-                  y: node.position.y + LINE_ANCHOR_SIZE_PX / 2,
+                  x: endpointNode.position.x,
+                  y: endpointNode.position.y + LINE_ANCHOR_SIZE_PX / 2,
                 };
           postMoveHandleFlow = {
             x: handleBefore.x + deltaX,
@@ -324,8 +331,6 @@ export function useKeyboardNavigation({
           };
         }
 
-        // Snap test. Excluding the original endpoint prevents same-spot
-        // re-attachment when the move is smaller than the snap radius.
         const snap = findNearestHandle(
           flowToScreenPosition(postMoveHandleFlow),
           endpointId,
@@ -388,12 +393,15 @@ export function useKeyboardNavigation({
           moveNodesByDelta(currentNodes, anchorIdsToMove, deltaX, deltaY)
         );
       }
+      // The mutation can knock focus off the edge wrapper. Remember which
+      // edge we just moved so the next arrow keypress can fall back to it
+      // when DOM focus has drifted to body.
+      keyboardMovingEdgeRef.current = focusedEdgeId;
       return true;
     },
     [
       getEdge,
       getNode,
-      nodes,
       setNodes,
       setEdges,
       screenToFlowPosition,
@@ -475,13 +483,24 @@ export function useKeyboardNavigation({
       }
 
       const focusedEntry = getEntryFromDOM(target);
+      const arrowDelta = getArrowDelta(event.key);
+      const isArrowKey = !!arrowDelta.deltaX || !!arrowDelta.deltaY;
+      // If the user is pressing an arrow key but DOM focus is on body
+      // (not on a node/edge), fall back to the edge we were just moving.
+      // Cleared on any non-arrow key so it doesn't survive Tab/Escape/etc.
+      let fallbackEdgeId: string | undefined;
+      if (isArrowKey && !focusedEntry && keyboardMovingEdgeRef.current) {
+        fallbackEdgeId = keyboardMovingEdgeRef.current;
+      } else if (!isArrowKey) {
+        keyboardMovingEdgeRef.current = null;
+      }
       const keyContext: KeyContext = {
         event,
         focusedEntry,
         focusedNodeId:
           focusedEntry?.type === 'node' ? focusedEntry.id : undefined,
         focusedEdgeId:
-          focusedEntry?.type === 'edge' ? focusedEntry.id : undefined,
+          focusedEntry?.type === 'edge' ? focusedEntry.id : fallbackEdgeId,
       };
 
       // Tab navigation works in both read-only and edit mode.
@@ -531,6 +550,43 @@ export function useKeyboardNavigation({
       handleEnterEdit,
     ]
   );
+
+  // When DOM focus drifts off the edge (React Flow can knock the wrapper
+  // out of focus during a mutation), keydown events fire on `body` and
+  // never traverse the canvas div, so the `onKeyDownCapture` handler
+  // doesn't run. While we're tracking a recently-moved edge, listen at
+  // the window level and forward arrow keypresses into handleKeyDown.
+  // Bubble phase + the stopPropagation that handleKeyDown already calls
+  // for in-canvas events means this listener only fires for events whose
+  // path doesn't go through the canvas — exactly the case we need to
+  // recover.
+  useEffect(() => {
+    const handler = (nativeEvent: KeyboardEvent) => {
+      if (!keyboardMovingEdgeRef.current) return;
+      const arrowDelta = getArrowDelta(nativeEvent.key);
+      if (!arrowDelta.deltaX && !arrowDelta.deltaY) return;
+      const target = nativeEvent.target as HTMLElement;
+      if (
+        target.isContentEditable ||
+        target.tagName === 'INPUT' ||
+        target.tagName === 'TEXTAREA'
+      ) {
+        return;
+      }
+      handleKeyDown({
+        target,
+        key: nativeEvent.key,
+        code: nativeEvent.code,
+        shiftKey: nativeEvent.shiftKey,
+        altKey: nativeEvent.altKey,
+        preventDefault: () => nativeEvent.preventDefault(),
+        stopPropagation: () => nativeEvent.stopPropagation(),
+        nativeEvent,
+      } as unknown as React.KeyboardEvent);
+    };
+    window.addEventListener('keydown', handler);
+    return () => window.removeEventListener('keydown', handler);
+  }, [handleKeyDown]);
 
   return {connectingFrom, connectAnnouncement, handleKeyDown};
 }
