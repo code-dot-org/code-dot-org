@@ -1,6 +1,6 @@
 name 'thinking_critically_lesson6_level1_2026'
-display_name 'The AI Stress Test'
-description 'Stress test your Responsible AI Guide by choosing one of these purpose-built AI Chatbots designed to challenge your thinking'
+display_name 'The AI Reviewers'
+description 'Get feedback on your Generate and Judge Project from one of these AI chatbots designed to challenge your thinking.'
 
 sublevels
 level 'thinking_critically_lesson6_level1a_2026'
