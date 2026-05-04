@@ -1,1876 +1,1279 @@
 <Sketchlab>
   <config><![CDATA[{
-  "published": true,
   "game_id": 75,
-  "created_at": "2026-04-22T21:14:45.000Z",
+  "created_at": "2026-04-29T00:49:37.000Z",
   "level_num": "custom",
   "user_id": 18603,
   "properties": {
     "encrypted": "false",
-    "long_instructions": "## Digital Gallery Walk\r\n\r\n1. Use the hand tool and zoom in/out to move around the canvas. As you look at each guide, ask yourself:\r\n\r\n   - What are the separate sections?\r\n   - What does each section do?\r\n   - What would be missing if one section was removed?\r\n\r\n   Use the text tool to label what you notice on two or three guides.\r\n\r\n2. After you look at all nine posters, try circling some of the designs and ideas you like.\r\n\r\n\r\n",
+    "long_instructions": "##Digital Gallery Walk\r\n\r\n1. Use the hand tool and zoom in/out to move around the canvas.\r\n2. After you look at all nine posters, try circling some of the designs and ideas you like.\r\n3. You can type notes using the text tool. \r\n\r\n\r\n",
     "start_sources": {
       "source": {
-        "type": "excalidraw",
-        "version": 2,
-        "source": "https://levelbuilder-studio.code.org",
-        "elements": [
+        "nodes": [
           {
-            "type": "image",
-            "version": 707,
-            "versionNonce": 1673048810,
-            "isDeleted": false,
             "id": "18WD9Ge3cvv7ndlfDptOF",
-            "fillStyle": "solid",
-            "strokeWidth": 2,
-            "strokeStyle": "solid",
-            "roughness": 1,
-            "opacity": 100,
-            "angle": 5.527190431986144,
-            "x": -3781.5224814374956,
-            "y": 102.12857810683977,
-            "strokeColor": "transparent",
-            "backgroundColor": "transparent",
-            "width": 187,
-            "height": 316,
-            "seed": 1258851089,
-            "groupIds": [
-
-            ],
-            "frameId": null,
-            "roundness": null,
-            "boundElements": [
-
-            ],
-            "updated": 1777486733405,
-            "link": null,
-            "locked": true,
-            "status": "pending",
-            "fileId": "50db5111f7b9db1a9694736a605030c9710529da",
-            "scale": [
-              1,
-              1
-            ]
+            "type": "image",
+            "position": {
+              "x": -3696.96692588194,
+              "y": 139.07302255128423
+            },
+            "style": {
+              "width": 187,
+              "height": 316
+            },
+            "data": {
+              "src": "/level_starter_assets/aid-thinking-critically-lesson2-level2_2026-test_2026-pilot_2026/uuid/50db5111f7b9db1a9694736a605030c9710529da.png",
+              "altText": "",
+              "showHandles": false,
+              "rotation": 320
+            },
+            "measured": {
+              "width": 187,
+              "height": 316
+            },
+            "selected": true,
+            "domAttributes": {
+              "tabIndex": 0
+            },
+            "dragging": false
           },
           {
-            "type": "rectangle",
-            "version": 1057,
-            "versionNonce": 1469040822,
-            "isDeleted": false,
             "id": "ibiylEeygtsLiPY-gemhl",
-            "fillStyle": "solid",
-            "strokeWidth": 2,
-            "strokeStyle": "solid",
-            "roughness": 1,
-            "opacity": 100,
-            "angle": 0,
-            "x": -4078.8500750686467,
-            "y": -246.01701710474265,
-            "strokeColor": "#1e1e1e",
-            "backgroundColor": "transparent",
-            "width": 552.4096389055268,
-            "height": 225.24414062499997,
-            "seed": 1246929912,
-            "groupIds": [
-
-            ],
-            "frameId": null,
-            "roundness": {
-              "type": 3
+            "type": "shape",
+            "position": {
+              "x": -4069.1278528464245,
+              "y": -243.23923932696488
             },
-            "boundElements": [
-
-            ],
-            "updated": 1777486733405,
-            "link": null,
-            "locked": true
+            "style": {
+              "width": 552.4096389055268,
+              "height": 225.24414062499997
+            },
+            "data": {
+              "shapeType": "rectangle",
+              "label": "",
+              "backgroundColor": "transparent",
+              "strokeColor": "#1e1e1e"
+            },
+            "measured": {
+              "width": 602,
+              "height": 225
+            },
+            "width": 602,
+            "height": 225,
+            "resizing": false,
+            "dragging": false
           },
           {
-            "type": "image",
-            "version": 585,
-            "versionNonce": 11978154,
-            "isDeleted": false,
             "id": "YS16P5XavpzHppFU09VwJ",
-            "fillStyle": "solid",
-            "strokeWidth": 2,
-            "strokeStyle": "solid",
-            "roughness": 1,
-            "opacity": 100,
-            "angle": 0,
-            "x": 70.48740304438479,
-            "y": -272.908514728182,
-            "strokeColor": "transparent",
-            "backgroundColor": "transparent",
-            "width": 506.13359849022675,
-            "height": 719.6014826587174,
-            "seed": 357281478,
-            "groupIds": [
-
-            ],
-            "frameId": null,
-            "roundness": null,
-            "boundElements": [
-
-            ],
-            "updated": 1777486733405,
-            "link": null,
-            "locked": true,
-            "status": "pending",
-            "fileId": "e999d9f6a37af5afbffbd4fb51c484a532098540",
-            "scale": [
-              1,
-              1
-            ]
+            "type": "image",
+            "position": {
+              "x": 70.48740304438479,
+              "y": -272.908514728182
+            },
+            "style": {
+              "width": 506.13359849022675,
+              "height": 719.6014826587174
+            },
+            "data": {
+              "src": "/level_starter_assets/aid-thinking-critically-lesson2-level2_2026-test/uuid/e999d9f6a37af5afbffbd4fb51c484a532098540.png",
+              "altText": "",
+              "showHandles": false
+            },
+            "measured": {
+              "width": 506,
+              "height": 720
+            }
           },
           {
-            "type": "image",
-            "version": 594,
-            "versionNonce": 524370422,
-            "isDeleted": false,
             "id": "hW708rVcUOMHRNEnVu71_",
-            "fillStyle": "solid",
-            "strokeWidth": 2,
-            "strokeStyle": "solid",
-            "roughness": 1,
-            "opacity": 100,
-            "angle": 0,
-            "x": 3327.481362621029,
-            "y": -264.5385054671543,
-            "strokeColor": "transparent",
-            "backgroundColor": "transparent",
-            "width": 486.48761300404783,
-            "height": 702.8614641366621,
-            "seed": 737990278,
-            "groupIds": [
-
-            ],
-            "frameId": null,
-            "roundness": null,
-            "boundElements": [
-
-            ],
-            "updated": 1777486733405,
-            "link": null,
-            "locked": true,
-            "status": "pending",
-            "fileId": "29c2621e6b3786b9b2ae81ed247a04336698c892",
-            "scale": [
-              1,
-              1
-            ]
+            "type": "image",
+            "position": {
+              "x": 3327.481362621029,
+              "y": -264.5385054671543
+            },
+            "style": {
+              "width": 486.48761300404783,
+              "height": 702.8614641366621
+            },
+            "data": {
+              "src": "/level_starter_assets/aid-thinking-critically-lesson2-level2_2026-test/uuid/29c2621e6b3786b9b2ae81ed247a04336698c892.png",
+              "altText": "",
+              "showHandles": false
+            },
+            "measured": {
+              "width": 486,
+              "height": 703
+            }
           },
           {
-            "type": "image",
-            "version": 590,
-            "versionNonce": 1642365034,
-            "isDeleted": false,
             "id": "TITbBhCshy5qkqWpt1zUK",
-            "fillStyle": "solid",
-            "strokeWidth": 2,
-            "strokeStyle": "solid",
-            "roughness": 1,
-            "opacity": 100,
-            "angle": 0,
-            "x": 754.1617067166408,
-            "y": -271.0785331186652,
-            "strokeColor": "transparent",
-            "backgroundColor": "transparent",
-            "width": 515.1432301811415,
-            "height": 715.9415194396838,
-            "seed": 988207046,
-            "groupIds": [
-
-            ],
-            "frameId": null,
-            "roundness": null,
-            "boundElements": [
-
-            ],
-            "updated": 1777486733405,
-            "link": null,
-            "locked": true,
-            "status": "pending",
-            "fileId": "505797b8ebf1102137df3a89187a6cfd3dd68638",
-            "scale": [
-              1,
-              1
-            ]
+            "type": "image",
+            "position": {
+              "x": 754.1617067166408,
+              "y": -271.0785331186652
+            },
+            "style": {
+              "width": 515.1432301811415,
+              "height": 715.9415194396838
+            },
+            "data": {
+              "src": "/level_starter_assets/aid-thinking-critically-lesson2-level2_2026-test/uuid/505797b8ebf1102137df3a89187a6cfd3dd68638.png",
+              "altText": "",
+              "showHandles": false
+            },
+            "measured": {
+              "width": 515,
+              "height": 716
+            }
           },
           {
-            "type": "image",
-            "version": 318,
-            "versionNonce": 856482602,
-            "isDeleted": false,
             "id": "ZmuYJ7a7QQAQt2o2SXm0Q",
-            "fillStyle": "solid",
-            "strokeWidth": 2,
-            "strokeStyle": "solid",
-            "roughness": 1,
-            "opacity": 100,
-            "angle": 0,
-            "x": -1090.7101872165172,
-            "y": -285.3717242916804,
-            "strokeColor": "transparent",
-            "backgroundColor": "transparent",
-            "width": 999.7056988449768,
-            "height": 744.5279017857142,
-            "seed": 1983909978,
-            "groupIds": [
-
-            ],
-            "frameId": null,
-            "roundness": null,
-            "boundElements": [
-
-            ],
-            "updated": 1777486733405,
-            "link": null,
-            "locked": true,
-            "status": "pending",
-            "fileId": "748daf564f87e59089defca52b6a180fd4759f4d",
-            "scale": [
-              1,
-              1
-            ]
+            "type": "image",
+            "position": {
+              "x": -1090.7101872165172,
+              "y": -285.3717242916804
+            },
+            "style": {
+              "width": 999.7056988449768,
+              "height": 744.5279017857142
+            },
+            "data": {
+              "src": "/level_starter_assets/aid-thinking-critically-lesson2-level2_2026-test/uuid/748daf564f87e59089defca52b6a180fd4759f4d.png",
+              "altText": "",
+              "showHandles": false
+            },
+            "measured": {
+              "width": 1000,
+              "height": 745
+            }
           },
           {
-            "type": "image",
-            "version": 357,
-            "versionNonce": 2063973494,
-            "isDeleted": false,
             "id": "7RPNhAK6aZqF-1CsCfyE7",
-            "fillStyle": "solid",
-            "strokeWidth": 2,
-            "strokeStyle": "solid",
-            "roughness": 1,
-            "opacity": 100,
-            "angle": 0,
-            "x": -2711.5492931547624,
-            "y": -280.1793369108781,
-            "strokeColor": "transparent",
-            "backgroundColor": "transparent",
-            "width": 607.1975446428572,
-            "height": 734.1431270241095,
-            "seed": 1588651846,
-            "groupIds": [
-
-            ],
-            "frameId": null,
-            "roundness": null,
-            "boundElements": [
-
-            ],
-            "updated": 1777486733405,
-            "link": null,
-            "locked": true,
-            "status": "pending",
-            "fileId": "3368c035ebd12d85c73d6428e67c8ea68961bc86",
-            "scale": [
-              1,
-              1
-            ]
+            "type": "image",
+            "position": {
+              "x": -2711.5492931547624,
+              "y": -280.1793369108781
+            },
+            "style": {
+              "width": 607.1975446428572,
+              "height": 734.1431270241095
+            },
+            "data": {
+              "src": "/level_starter_assets/aid-thinking-critically-lesson2-level2_2026-test/uuid/3368c035ebd12d85c73d6428e67c8ea68961bc86.png",
+              "altText": "",
+              "showHandles": false
+            },
+            "measured": {
+              "width": 607,
+              "height": 734
+            }
           },
           {
-            "type": "image",
-            "version": 379,
-            "versionNonce": 1855647210,
-            "isDeleted": false,
             "id": "1nw8sHcJO3FXE3hsLZnmh",
-            "fillStyle": "solid",
-            "strokeWidth": 2,
-            "strokeStyle": "solid",
-            "roughness": 1,
-            "opacity": 100,
-            "angle": 0,
-            "x": 1401.39929836379,
-            "y": -282.86018596927,
-            "strokeColor": "transparent",
-            "backgroundColor": "transparent",
-            "width": 724.8382367508339,
-            "height": 739.5048251408934,
-            "seed": 2006367002,
-            "groupIds": [
-
-            ],
-            "frameId": null,
-            "roundness": null,
-            "boundElements": [
-
-            ],
-            "updated": 1777486733405,
-            "link": null,
-            "locked": true,
-            "status": "pending",
-            "fileId": "9b7ef43d2f658bb85d7d7c8e76366473c895126c",
-            "scale": [
-              1,
-              1
-            ]
+            "type": "image",
+            "position": {
+              "x": 1401.39929836379,
+              "y": -282.86018596927
+            },
+            "style": {
+              "width": 724.8382367508339,
+              "height": 739.5048251408934
+            },
+            "data": {
+              "src": "/level_starter_assets/aid-thinking-critically-lesson2-level2_2026-test/uuid/9b7ef43d2f658bb85d7d7c8e76366473c895126c.png",
+              "altText": "",
+              "showHandles": false
+            },
+            "measured": {
+              "width": 725,
+              "height": 740
+            }
           },
           {
-            "type": "image",
-            "version": 312,
-            "versionNonce": 256032182,
-            "isDeleted": false,
             "id": "U_iQTt26TsZzFd3DVFqsS",
-            "fillStyle": "solid",
-            "strokeWidth": 2,
-            "strokeStyle": "solid",
-            "roughness": 1,
-            "opacity": 100,
-            "angle": 0,
-            "x": -3432.3284398119463,
-            "y": -290.1040066577518,
-            "strokeColor": "transparent",
-            "backgroundColor": "transparent",
-            "width": 558.1605640678983,
-            "height": 753.9924665178571,
-            "seed": 1369745542,
-            "groupIds": [
-
-            ],
-            "frameId": null,
-            "roundness": null,
-            "boundElements": [
-
-            ],
-            "updated": 1777486733405,
-            "link": null,
-            "locked": true,
-            "status": "pending",
-            "fileId": "ee01edb2695267c543a583687c4d012f5c3720ab",
-            "scale": [
-              1,
-              1
-            ]
+            "type": "image",
+            "position": {
+              "x": -3421.2173287008354,
+              "y": -291.49289554664074
+            },
+            "style": {
+              "width": 558.1605640678983,
+              "height": 753.9924665178571
+            },
+            "data": {
+              "src": "/level_starter_assets/aid-thinking-critically-lesson2-level2_2026-test/uuid/ee01edb2695267c543a583687c4d012f5c3720ab.png",
+              "altText": "",
+              "showHandles": false
+            },
+            "measured": {
+              "width": 558,
+              "height": 754
+            },
+            "dragging": false
           },
           {
-            "type": "image",
-            "version": 471,
-            "versionNonce": 161063082,
-            "isDeleted": false,
             "id": "z9Ha4XNn4yaucTkiTfIC1",
-            "fillStyle": "solid",
-            "strokeWidth": 2,
-            "strokeStyle": "solid",
-            "roughness": 1,
-            "opacity": 100,
-            "angle": 0,
-            "x": -1953.075817870512,
-            "y": -297.56602513458483,
-            "strokeColor": "transparent",
-            "backgroundColor": "transparent",
-            "width": 305.5953830467471,
-            "height": 765.6139649734994,
-            "seed": 1459270874,
-            "groupIds": [
-              "IbAPXRQehhbmLUXW1__EG"
-            ],
-            "frameId": null,
-            "roundness": null,
-            "boundElements": [
-
-            ],
-            "updated": 1777486733405,
-            "link": null,
-            "locked": true,
-            "status": "pending",
-            "fileId": "d6415dec44a0fca451c0c442aa76f70cb9b36750",
-            "scale": [
-              1,
-              1
-            ]
+            "type": "image",
+            "position": {
+              "x": -1953.075817870512,
+              "y": -297.56602513458483
+            },
+            "style": {
+              "width": 305.5953830467471,
+              "height": 765.6139649734994
+            },
+            "data": {
+              "src": "/level_starter_assets/aid-thinking-critically-lesson2-level2_2026-test/uuid/d6415dec44a0fca451c0c442aa76f70cb9b36750.png",
+              "altText": "",
+              "showHandles": false
+            },
+            "measured": {
+              "width": 306,
+              "height": 766
+            }
           },
           {
-            "type": "image",
-            "version": 565,
-            "versionNonce": 785225462,
-            "isDeleted": false,
             "id": "tVmzz6wuOBfc9MpcrkXJt",
-            "fillStyle": "solid",
-            "strokeWidth": 2,
-            "strokeStyle": "solid",
-            "roughness": 1,
-            "opacity": 100,
-            "angle": 0,
-            "x": -1645.5840095743615,
-            "y": -292.0122083327602,
-            "strokeColor": "transparent",
-            "backgroundColor": "transparent",
-            "width": 362.4881405288543,
-            "height": 605.5014903452834,
-            "seed": 1156778694,
-            "groupIds": [
-              "IbAPXRQehhbmLUXW1__EG"
-            ],
-            "frameId": null,
-            "roundness": null,
-            "boundElements": [
-
-            ],
-            "updated": 1777486733405,
-            "link": null,
-            "locked": true,
-            "status": "pending",
-            "fileId": "7067ae8fba6a55fda7613446ed671b1713805428",
-            "scale": [
-              1,
-              1
-            ]
-          },
-          {
-            "type": "text",
-            "version": 975,
-            "versionNonce": 531889002,
-            "isDeleted": false,
-            "id": "XrXz_FXypyHlsHzBzccNr",
-            "fillStyle": "solid",
-            "strokeWidth": 2,
-            "strokeStyle": "solid",
-            "roughness": 1,
-            "opacity": 100,
-            "angle": 0,
-            "x": -4047.0800453178213,
-            "y": -212.00955695634224,
-            "strokeColor": "#0c8599",
-            "backgroundColor": "transparent",
-            "width": 446.4215393066406,
-            "height": 56.91925202013393,
-            "seed": 148725151,
-            "groupIds": [
-
-            ],
-            "frameId": null,
-            "roundness": null,
-            "boundElements": [
-
-            ],
-            "updated": 1777486733405,
-            "link": null,
-            "locked": true,
-            "fontSize": 45.535401616107144,
-            "fontFamily": 1,
-            "text": "Digital Gallery Walk",
-            "textAlign": "left",
-            "verticalAlign": "top",
-            "containerId": null,
-            "originalText": "Digital Gallery Walk",
-            "lineHeight": 1.25,
-            "baseline": 39
-          },
-          {
-            "type": "text",
-            "version": 914,
-            "versionNonce": 1647003702,
-            "isDeleted": false,
-            "id": "RFI8oBMgLilqmpHyo15pX",
-            "fillStyle": "solid",
-            "strokeWidth": 2,
-            "strokeStyle": "solid",
-            "roughness": 1,
-            "opacity": 100,
-            "angle": 0,
-            "x": -4044.854560144172,
-            "y": 120.03907528230224,
-            "strokeColor": "#1e1e1e",
-            "backgroundColor": "transparent",
-            "width": 254.599609375,
-            "height": 115,
-            "seed": 921014783,
-            "groupIds": [
-
-            ],
-            "frameId": null,
-            "roundness": null,
-            "boundElements": [
-
-            ],
-            "updated": 1777486733405,
-            "link": null,
-            "locked": true,
-            "fontSize": 20,
-            "fontFamily": 2,
-            "text": "Use the hand tool to \n\nmove the canvas\n\nand see all of the examples. ",
-            "textAlign": "left",
-            "verticalAlign": "top",
-            "containerId": null,
-            "originalText": "Use the hand tool to \n\nmove the canvas\n\nand see all of the examples. ",
-            "lineHeight": 1.15,
-            "baseline": 109
-          },
-          {
-            "type": "text",
-            "version": 1245,
-            "versionNonce": 523566634,
-            "isDeleted": false,
-            "id": "vyk5QEP11-RQwlA5R0Fe1",
-            "fillStyle": "solid",
-            "strokeWidth": 2,
-            "strokeStyle": "solid",
-            "roughness": 1,
-            "opacity": 100,
-            "angle": 0,
-            "x": -4042.2727119136357,
-            "y": -129.63250086439217,
-            "strokeColor": "#1e1e1e",
-            "backgroundColor": "transparent",
-            "width": 498.046875,
-            "height": 69,
-            "seed": 2130105848,
-            "groupIds": [
-
-            ],
-            "frameId": null,
-            "roundness": null,
-            "boundElements": [
-
-            ],
-            "updated": 1777486733405,
-            "link": null,
-            "locked": true,
-            "fontSize": 20,
-            "fontFamily": 2,
-            "text": "Look at the 9 examples of guides.\n\nThink about how you want your AI Guide Project to look.",
-            "textAlign": "left",
-            "verticalAlign": "top",
-            "containerId": null,
-            "originalText": "Look at the 9 examples of guides.\n\nThink about how you want your AI Guide Project to look.",
-            "lineHeight": 1.15,
-            "baseline": 63
-          },
-          {
-            "type": "text",
-            "version": 1303,
-            "versionNonce": 1497420150,
-            "isDeleted": false,
-            "id": "dXfkULvHASgme2YmV6ABA",
-            "fillStyle": "solid",
-            "strokeWidth": 2,
-            "strokeStyle": "solid",
-            "roughness": 1,
-            "opacity": 100,
-            "angle": 0,
-            "x": -4047.59785685055,
-            "y": 58.07908305827098,
-            "strokeColor": "#e03131",
-            "backgroundColor": "transparent",
-            "width": 239.5006103515625,
-            "height": 55.34266250344757,
-            "seed": 449120831,
-            "groupIds": [
-
-            ],
-            "frameId": null,
-            "roundness": null,
-            "boundElements": [
-
-            ],
-            "updated": 1777486733405,
-            "link": null,
-            "locked": true,
-            "fontSize": 44.274130002758056,
-            "fontFamily": 1,
-            "text": "Start Here",
-            "textAlign": "left",
-            "verticalAlign": "top",
-            "containerId": null,
-            "originalText": "Start Here",
-            "lineHeight": 1.25,
-            "baseline": 39
-          },
-          {
             "type": "image",
-            "version": 509,
-            "versionNonce": 1963436266,
-            "isDeleted": false,
-            "id": "lkGTDVR_VvNc84Y0jVYf1",
-            "fillStyle": "solid",
-            "strokeWidth": 2,
-            "strokeStyle": "solid",
-            "roughness": 1,
-            "opacity": 100,
-            "angle": 0,
-            "x": 3902.392068191146,
-            "y": -16.56691189235781,
-            "strokeColor": "transparent",
-            "backgroundColor": "transparent",
-            "width": 206.91827698706902,
-            "height": 206.91827698706902,
-            "seed": 525881311,
-            "groupIds": [
-
-            ],
-            "frameId": null,
-            "roundness": null,
-            "boundElements": [
-
-            ],
-            "updated": 1777486733405,
-            "link": null,
-            "locked": true,
-            "status": "pending",
-            "fileId": "6a53d999ccec2ccd2677ecd35bdbf6d59d11e4e9",
-            "scale": [
-              1,
-              1
-            ]
+            "position": {
+              "x": -1645.5840095743615,
+              "y": -292.0122083327602
+            },
+            "style": {
+              "width": 362.4881405288543,
+              "height": 605.5014903452834
+            },
+            "data": {
+              "src": "/level_starter_assets/aid-thinking-critically-lesson2-level2_2026-test/uuid/7067ae8fba6a55fda7613446ed671b1713805428.png",
+              "altText": "",
+              "showHandles": false
+            },
+            "measured": {
+              "width": 362,
+              "height": 606
+            }
           },
           {
-            "type": "freedraw",
-            "version": 776,
-            "versionNonce": 2136158902,
-            "isDeleted": false,
-            "id": "E2Vv-O_a1s3JszTG15Tmd",
-            "fillStyle": "solid",
-            "strokeWidth": 2,
-            "strokeStyle": "solid",
-            "roughness": 1,
-            "opacity": 100,
-            "angle": 0,
-            "x": -4034.066654612245,
-            "y": -46.546289811598,
-            "strokeColor": "#15aabf",
-            "backgroundColor": "transparent",
-            "width": 409.2354910714283,
-            "height": 3.020368303571445,
-            "seed": 501205496,
-            "groupIds": [
-
-            ],
-            "frameId": null,
-            "roundness": null,
-            "boundElements": [
-
-            ],
-            "updated": 1777486733405,
-            "link": null,
-            "locked": true,
-            "points": [
-              [
-                0,
-                -5.609021079375189
-              ],
-              [
-                0.7282606327901697,
-                -5.609021079375189
-              ],
-              [
-                2.325735569234432,
-                -5.609021079375189
-              ],
-              [
-                13.872190440738969,
-                -6.314939286360399
-              ],
-              [
-                19.157953098091273,
-                -6.485408698573579
-              ],
-              [
-                37.34097663938185,
-                -7.30497318036754
-              ],
-              [
-                48.40583980210521,
-                -7.5322657299850775
-              ],
-              [
-                75.06957587363662,
-                -7.975923302796218
-              ],
-              [
-                92.39513125051221,
-                -8.168247767857224
-              ],
-              [
-                130.26468415562937,
-                -8.168247767857224
-              ],
-              [
-                158.30271851807197,
-                -8.168247767857224
-              ],
-              [
-                208.89334021854998,
-                -8.168247767857224
-              ],
-              [
-                246.55146261737318,
-                -8.168247767857224
-              ],
-              [
-                280.8854276116838,
-                -8.168247767857224
-              ],
-              [
-                326.6248938066358,
-                -7.409877434037174
-              ],
-              [
-                356.50707202953237,
-                -6.905025713252083
-              ],
-              [
-                386.7651267080628,
-                -5.895322271681895
-              ],
-              [
-                399.4157186679921,
-                -5.482261772857729
-              ],
-              [
-                408.50723043863735,
-                -5.147879464285779
-              ],
-              [
-                409.2354910714283,
-                -5.147879464285779
-              ],
-              [
-                409.2354910714283,
-                -5.147879464285779
-              ]
-            ],
-            "lastCommittedPoint": null,
-            "simulatePressure": true,
-            "pressures": [
-
-            ]
-          },
-          {
-            "type": "rectangle",
-            "version": 113,
-            "versionNonce": 951516074,
-            "isDeleted": false,
-            "id": "nWx0yBJHAhlmj3OevVH6H",
-            "fillStyle": "solid",
-            "strokeWidth": 4,
-            "strokeStyle": "solid",
-            "roughness": 0,
-            "opacity": 100,
-            "angle": 0,
-            "x": -3452.798272240855,
-            "y": -320.44245531846616,
-            "strokeColor": "#0c8599",
-            "backgroundColor": "transparent",
-            "width": 598.5700334821431,
-            "height": 814.6693638392858,
-            "seed": 484165000,
-            "groupIds": [
-
-            ],
-            "frameId": null,
-            "roundness": {
-              "type": 3
-            },
-            "boundElements": [
-
-            ],
-            "updated": 1777486733405,
-            "link": null,
-            "locked": true
-          },
-          {
-            "type": "rectangle",
-            "version": 245,
-            "versionNonce": 252144630,
-            "isDeleted": false,
-            "id": "bHpDPD7sa8xPZVUDk675r",
-            "fillStyle": "solid",
-            "strokeWidth": 4,
-            "strokeStyle": "solid",
-            "roughness": 0,
-            "opacity": 100,
-            "angle": 0,
-            "x": -2727.2423291604982,
-            "y": -320.44245531846616,
-            "strokeColor": "#0c8599",
-            "backgroundColor": "transparent",
-            "width": 651.7647879464291,
-            "height": 814.6693638392858,
-            "seed": 1266449400,
-            "groupIds": [
-
-            ],
-            "frameId": null,
-            "roundness": {
-              "type": 3
-            },
-            "boundElements": [
-
-            ],
-            "updated": 1777486733405,
-            "link": null,
-            "locked": true
-          },
-          {
-            "type": "rectangle",
-            "version": 522,
-            "versionNonce": 1483601514,
-            "isDeleted": false,
-            "id": "vCbNfmuoiyqDeFG3uH8BF",
-            "fillStyle": "solid",
-            "strokeWidth": 4,
-            "strokeStyle": "solid",
-            "roughness": 0,
-            "opacity": 100,
-            "angle": 0,
-            "x": -1971.0410946156253,
-            "y": -320.9928784014701,
-            "strokeColor": "#0c8599",
-            "backgroundColor": "transparent",
-            "width": 709.8249460314585,
-            "height": 814.6693638392858,
-            "seed": 822374904,
-            "groupIds": [
-
-            ],
-            "frameId": null,
-            "roundness": {
-              "type": 3
-            },
-            "boundElements": [
-              {
-                "id": "yqHUCzVdMOOzJhtQX4DX4",
-                "type": "arrow"
-              },
-              {
-                "id": "pQIV9CW1NNEY7crDBlnGo",
-                "type": "arrow"
-              }
-            ],
-            "updated": 1777486733405,
-            "link": null,
-            "locked": true
-          },
-          {
-            "type": "rectangle",
-            "version": 611,
-            "versionNonce": 643988790,
-            "isDeleted": false,
-            "id": "WCzx_p0WHbFKyBncuWhfK",
-            "fillStyle": "solid",
-            "strokeWidth": 4,
-            "strokeStyle": "solid",
-            "roughness": 0,
-            "opacity": 100,
-            "angle": 0,
-            "x": -1118.8875254218922,
-            "y": -320.44245531846616,
-            "strokeColor": "#0c8599",
-            "backgroundColor": "transparent",
-            "width": 1064.2990429649772,
-            "height": 814.6693638392858,
-            "seed": 1779463560,
-            "groupIds": [
-
-            ],
-            "frameId": null,
-            "roundness": {
-              "type": 3
-            },
-            "boundElements": [
-
-            ],
-            "updated": 1777486733405,
-            "link": null,
-            "locked": true
-          },
-          {
-            "type": "rectangle",
-            "version": 715,
-            "versionNonce": 1157077290,
-            "isDeleted": false,
-            "id": "5WYZ_9XHpUE7BVOreSkan",
-            "fillStyle": "solid",
-            "strokeWidth": 4,
-            "strokeStyle": "solid",
-            "roughness": 0,
-            "opacity": 100,
-            "angle": 0,
-            "x": 13.555982476246754,
-            "y": -320.44245531846616,
-            "strokeColor": "#0c8599",
-            "backgroundColor": "transparent",
-            "width": 621.852237071666,
-            "height": 814.6693638392858,
-            "seed": 192040440,
-            "groupIds": [
-
-            ],
-            "frameId": null,
-            "roundness": {
-              "type": 3
-            },
-            "boundElements": [
-
-            ],
-            "updated": 1777486733405,
-            "link": null,
-            "locked": true
-          },
-          {
-            "type": "rectangle",
-            "version": 682,
-            "versionNonce": 1523148406,
-            "isDeleted": false,
-            "id": "hI4H_YYtXiWCAe1PHTJA5",
-            "fillStyle": "solid",
-            "strokeWidth": 4,
-            "strokeStyle": "solid",
-            "roughness": 0,
-            "opacity": 100,
-            "angle": 0,
-            "x": 711.2090279194795,
-            "y": -320.44245531846616,
-            "strokeColor": "#0c8599",
-            "backgroundColor": "transparent",
-            "width": 583.9220866701817,
-            "height": 814.6693638392858,
-            "seed": 197774328,
-            "groupIds": [
-
-            ],
-            "frameId": null,
-            "roundness": {
-              "type": 3
-            },
-            "boundElements": [
-
-            ],
-            "updated": 1777486733405,
-            "link": null,
-            "locked": true
-          },
-          {
-            "type": "rectangle",
-            "version": 723,
-            "versionNonce": 499049450,
-            "isDeleted": false,
-            "id": "NXdc6RnTjYXSPNK1kcqL-",
-            "fillStyle": "solid",
-            "strokeWidth": 4,
-            "strokeStyle": "solid",
-            "roughness": 0,
-            "opacity": 100,
-            "angle": 0,
-            "x": 1356.9395646977762,
-            "y": -320.44245531846616,
-            "strokeColor": "#0c8599",
-            "backgroundColor": "transparent",
-            "width": 813.905362147767,
-            "height": 814.6693638392858,
-            "seed": 311395832,
-            "groupIds": [
-
-            ],
-            "frameId": null,
-            "roundness": {
-              "type": 3
-            },
-            "boundElements": [
-
-            ],
-            "updated": 1777486733405,
-            "link": null,
-            "locked": true
-          },
-          {
-            "type": "rectangle",
-            "version": 705,
-            "versionNonce": 1291921334,
-            "isDeleted": false,
-            "id": "z2i0YbeiKnPRBtrlYp3Sy",
-            "fillStyle": "solid",
-            "strokeWidth": 4,
-            "strokeStyle": "solid",
-            "roughness": 0,
-            "opacity": 100,
-            "angle": 0,
-            "x": 2225.649385226588,
-            "y": -320.44245531846616,
-            "strokeColor": "#0c8599",
-            "backgroundColor": "transparent",
-            "width": 997.7357306229296,
-            "height": 814.6693638392858,
-            "seed": 653847176,
-            "groupIds": [
-
-            ],
-            "frameId": null,
-            "roundness": {
-              "type": 3
-            },
-            "boundElements": [
-
-            ],
-            "updated": 1777486733405,
-            "link": null,
-            "locked": true
-          },
-          {
-            "type": "rectangle",
-            "version": 718,
-            "versionNonce": 1557059242,
-            "isDeleted": false,
-            "id": "gagKqJHf_cCjsZ0opYbje",
-            "fillStyle": "solid",
-            "strokeWidth": 4,
-            "strokeStyle": "solid",
-            "roughness": 0,
-            "opacity": 100,
-            "angle": 0,
-            "x": 3263.9433066183865,
-            "y": -320.44245531846616,
-            "strokeColor": "#0c8599",
-            "backgroundColor": "transparent",
-            "width": 569.5273797464479,
-            "height": 814.6693638392858,
-            "seed": 100333704,
-            "groupIds": [
-
-            ],
-            "frameId": null,
-            "roundness": {
-              "type": 3
-            },
-            "boundElements": [
-
-            ],
-            "updated": 1777486733405,
-            "link": null,
-            "locked": true
-          },
-          {
-            "type": "arrow",
-            "version": 372,
-            "versionNonce": 1026474230,
-            "isDeleted": false,
-            "id": "zTzlyJZm9DdJUmbY-D36E",
-            "fillStyle": "solid",
-            "strokeWidth": 4,
-            "strokeStyle": "solid",
-            "roughness": 1,
-            "opacity": 100,
-            "angle": 0,
-            "x": -2827.9980724931743,
-            "y": 83.99635142278726,
-            "strokeColor": "#e03131",
-            "backgroundColor": "transparent",
-            "width": 75.53653321769298,
-            "height": 0.04272428349418078,
-            "seed": 615232648,
-            "groupIds": [
-
-            ],
-            "frameId": null,
-            "roundness": {
-              "type": 2
-            },
-            "boundElements": [
-
-            ],
-            "updated": 1777486733405,
-            "link": null,
-            "locked": true,
-            "startBinding": null,
-            "endBinding": null,
-            "lastCommittedPoint": null,
-            "startArrowhead": null,
-            "endArrowhead": "arrow",
-            "points": [
-              [
-                0,
-                0
-              ],
-              [
-                75.53653321769298,
-                -0.04272428349418078
-              ]
-            ]
-          },
-          {
-            "type": "arrow",
-            "version": 440,
-            "versionNonce": 47346026,
-            "isDeleted": false,
-            "id": "yqHUCzVdMOOzJhtQX4DX4",
-            "fillStyle": "solid",
-            "strokeWidth": 4,
-            "strokeStyle": "solid",
-            "roughness": 1,
-            "opacity": 100,
-            "angle": 0,
-            "x": -2067.1162982077244,
-            "y": 93.15823348676417,
-            "strokeColor": "#e03131",
-            "backgroundColor": "transparent",
-            "width": 75.53653321769298,
-            "height": 0.1351936223839516,
-            "seed": 99975560,
-            "groupIds": [
-
-            ],
-            "frameId": null,
-            "roundness": {
-              "type": 2
-            },
-            "boundElements": [
-
-            ],
-            "updated": 1777486733405,
-            "link": null,
-            "locked": true,
-            "startBinding": null,
-            "endBinding": {
-              "elementId": "vCbNfmuoiyqDeFG3uH8BF",
-              "gap": 20.538670374406024,
-              "focus": -0.014729670539033738
-            },
-            "lastCommittedPoint": null,
-            "startArrowhead": null,
-            "endArrowhead": "arrow",
-            "points": [
-              [
-                0,
-                0
-              ],
-              [
-                75.53653321769298,
-                -0.1351936223839516
-              ]
-            ]
-          },
-          {
-            "type": "arrow",
-            "version": 438,
-            "versionNonce": 517419574,
-            "isDeleted": false,
-            "id": "pQIV9CW1NNEY7crDBlnGo",
-            "fillStyle": "solid",
-            "strokeWidth": 4,
-            "strokeStyle": "solid",
-            "roughness": 1,
-            "opacity": 100,
-            "angle": 0,
-            "x": -1235.1003170556007,
-            "y": 91.65788669599509,
-            "strokeColor": "#e03131",
-            "backgroundColor": "transparent",
-            "width": 75.53653321769298,
-            "height": 0.04272428349418078,
-            "seed": 1939430024,
-            "groupIds": [
-
-            ],
-            "frameId": null,
-            "roundness": {
-              "type": 2
-            },
-            "boundElements": [
-
-            ],
-            "updated": 1777486733405,
-            "link": null,
-            "locked": true,
-            "startBinding": {
-              "elementId": "vCbNfmuoiyqDeFG3uH8BF",
-              "focus": 0.013573291044977426,
-              "gap": 26.11583152856622
-            },
-            "endBinding": null,
-            "lastCommittedPoint": null,
-            "startArrowhead": null,
-            "endArrowhead": "arrow",
-            "points": [
-              [
-                0,
-                0
-              ],
-              [
-                75.53653321769298,
-                -0.04272428349418078
-              ]
-            ]
-          },
-          {
-            "type": "arrow",
-            "version": 415,
-            "versionNonce": 1125430314,
-            "isDeleted": false,
-            "id": "9Ps1uFLZnJh-cOy7ozofg",
-            "fillStyle": "solid",
-            "strokeWidth": 4,
-            "strokeStyle": "solid",
-            "roughness": 1,
-            "opacity": 100,
-            "angle": 0,
-            "x": -71.11884786879205,
-            "y": 103.64645655548813,
-            "strokeColor": "#e03131",
-            "backgroundColor": "transparent",
-            "width": 75.53653321769298,
-            "height": 0.04272428349418078,
-            "seed": 736425464,
-            "groupIds": [
-
-            ],
-            "frameId": null,
-            "roundness": {
-              "type": 2
-            },
-            "boundElements": [
-
-            ],
-            "updated": 1777486733405,
-            "link": null,
-            "locked": true,
-            "startBinding": null,
-            "endBinding": null,
-            "lastCommittedPoint": null,
-            "startArrowhead": null,
-            "endArrowhead": "arrow",
-            "points": [
-              [
-                0,
-                0
-              ],
-              [
-                75.53653321769298,
-                -0.04272428349418078
-              ]
-            ]
-          },
-          {
-            "type": "arrow",
-            "version": 421,
-            "versionNonce": 752843638,
-            "isDeleted": false,
-            "id": "zNOowxU2cL-3SUz4IwS54",
-            "fillStyle": "solid",
-            "strokeWidth": 4,
-            "strokeStyle": "solid",
-            "roughness": 1,
-            "opacity": 100,
-            "angle": 0,
-            "x": 619.9621906593334,
-            "y": 125.6775843423041,
-            "strokeColor": "#e03131",
-            "backgroundColor": "transparent",
-            "width": 75.53653321769298,
-            "height": 0.04272428349418078,
-            "seed": 2007818744,
-            "groupIds": [
-
-            ],
-            "frameId": null,
-            "roundness": {
-              "type": 2
-            },
-            "boundElements": [
-
-            ],
-            "updated": 1777486733405,
-            "link": null,
-            "locked": true,
-            "startBinding": null,
-            "endBinding": null,
-            "lastCommittedPoint": null,
-            "startArrowhead": null,
-            "endArrowhead": "arrow",
-            "points": [
-              [
-                0,
-                0
-              ],
-              [
-                75.53653321769298,
-                -0.04272428349418078
-              ]
-            ]
-          },
-          {
-            "type": "arrow",
-            "version": 401,
-            "versionNonce": 796958442,
-            "isDeleted": false,
-            "id": "L_aGWeD5vvxFD2mq71Uj8",
-            "fillStyle": "solid",
-            "strokeWidth": 4,
-            "strokeStyle": "solid",
-            "roughness": 1,
-            "opacity": 100,
-            "angle": 0,
-            "x": 1295.2993534552124,
-            "y": 131.176488497347,
-            "strokeColor": "#e03131",
-            "backgroundColor": "transparent",
-            "width": 75.53653321769298,
-            "height": 0.04272428349418078,
-            "seed": 1803416568,
-            "groupIds": [
-
-            ],
-            "frameId": null,
-            "roundness": {
-              "type": 2
-            },
-            "boundElements": [
-
-            ],
-            "updated": 1777486733405,
-            "link": null,
-            "locked": true,
-            "startBinding": null,
-            "endBinding": null,
-            "lastCommittedPoint": null,
-            "startArrowhead": null,
-            "endArrowhead": "arrow",
-            "points": [
-              [
-                0,
-                0
-              ],
-              [
-                75.53653321769298,
-                -0.04272428349418078
-              ]
-            ]
-          },
-          {
-            "type": "arrow",
-            "version": 398,
-            "versionNonce": 2106367158,
-            "isDeleted": false,
-            "id": "XLPcKV8XYoFbDRyhWcZTR",
-            "fillStyle": "solid",
-            "strokeWidth": 4,
-            "strokeStyle": "solid",
-            "roughness": 1,
-            "opacity": 100,
-            "angle": 0,
-            "x": 2172.966714888351,
-            "y": 133.6338612292098,
-            "strokeColor": "#e03131",
-            "backgroundColor": "transparent",
-            "width": 75.53653321769298,
-            "height": 0.04272428349418078,
-            "seed": 1198666232,
-            "groupIds": [
-
-            ],
-            "frameId": null,
-            "roundness": {
-              "type": 2
-            },
-            "boundElements": [
-
-            ],
-            "updated": 1777486733406,
-            "link": null,
-            "locked": true,
-            "startBinding": null,
-            "endBinding": null,
-            "lastCommittedPoint": null,
-            "startArrowhead": null,
-            "endArrowhead": "arrow",
-            "points": [
-              [
-                0,
-                0
-              ],
-              [
-                75.53653321769298,
-                -0.04272428349418078
-              ]
-            ]
-          },
-          {
-            "type": "arrow",
-            "version": 432,
-            "versionNonce": 1688285610,
-            "isDeleted": false,
-            "id": "3kO3jl9hsRSWTiOfNRgKW",
-            "fillStyle": "solid",
-            "strokeWidth": 4,
-            "strokeStyle": "solid",
-            "roughness": 1,
-            "opacity": 100,
-            "angle": 0,
-            "x": 3189.656742621631,
-            "y": 100.26224237417932,
-            "strokeColor": "#e03131",
-            "backgroundColor": "transparent",
-            "width": 75.53653321769298,
-            "height": 0.04272428349418078,
-            "seed": 1367604872,
-            "groupIds": [
-
-            ],
-            "frameId": null,
-            "roundness": {
-              "type": 2
-            },
-            "boundElements": [
-
-            ],
-            "updated": 1777486733406,
-            "link": null,
-            "locked": true,
-            "startBinding": null,
-            "endBinding": null,
-            "lastCommittedPoint": null,
-            "startArrowhead": null,
-            "endArrowhead": "arrow",
-            "points": [
-              [
-                0,
-                0
-              ],
-              [
-                75.53653321769298,
-                -0.04272428349418078
-              ]
-            ]
-          },
-          {
+            "id": "XrXz_FXypyHlsHzBzccNr",
             "type": "text",
-            "version": 312,
-            "versionNonce": 377722358,
-            "isDeleted": false,
+            "position": {
+              "x": -4047.0800453178213,
+              "y": -212.00955695634224
+            },
+            "data": {
+              "text": "Digital Gallery Walk",
+              "fontColor": "#0c8599",
+              "fontSize": "large",
+              "showHandles": false
+            },
+            "measured": {
+              "width": 207,
+              "height": 47
+            }
+          },
+          {
+            "id": "RFI8oBMgLilqmpHyo15pX",
+            "type": "text",
+            "position": {
+              "x": -4066.854560144172,
+              "y": 122.03907528230224
+            },
+            "data": {
+              "text": "Use the hand tool to \n\nmove the canvas\n\nand see all of the examples. ",
+              "fontColor": "#1e1e1e",
+              "fontSize": "large",
+              "showHandles": false
+            },
+            "measured": {
+              "width": 293,
+              "height": 161
+            },
+            "selected": false,
+            "domAttributes": {
+              "tabIndex": -1
+            },
+            "dragging": false
+          },
+          {
+            "id": "vyk5QEP11-RQwlA5R0Fe1",
+            "type": "text",
+            "position": {
+              "x": -4061.939378580302,
+              "y": -162.74361197550326
+            },
+            "data": {
+              "text": "Look at the 9 examples of guides.\n\nThink about how you want your AI Guide Project to look.",
+              "fontColor": "#1e1e1e",
+              "fontSize": "large",
+              "showHandles": false
+            },
+            "measured": {
+              "width": 571,
+              "height": 104
+            },
+            "dragging": false,
+            "selected": false,
+            "domAttributes": {
+              "tabIndex": -1
+            }
+          },
+          {
+            "id": "dXfkULvHASgme2YmV6ABA",
+            "type": "text",
+            "position": {
+              "x": -4047.59785685055,
+              "y": 58.07908305827098
+            },
+            "data": {
+              "text": "Start Here",
+              "fontColor": "#e03131",
+              "fontSize": "large",
+              "showHandles": false
+            },
+            "measured": {
+              "width": 120,
+              "height": 47
+            },
+            "selected": false,
+            "domAttributes": {
+              "tabIndex": -1
+            }
+          },
+          {
+            "id": "lkGTDVR_VvNc84Y0jVYf1",
+            "type": "image",
+            "position": {
+              "x": 3902.392068191146,
+              "y": -16.56691189235781
+            },
+            "style": {
+              "width": 206.91827698706902,
+              "height": 206.91827698706902
+            },
+            "data": {
+              "src": "/level_starter_assets/aid-thinking-critically-lesson2-level2_2026-test_2026-pilot_2026/uuid/6a53d999ccec2ccd2677ecd35bdbf6d59d11e4e9.png",
+              "altText": "",
+              "showHandles": false
+            },
+            "measured": {
+              "width": 207,
+              "height": 207
+            }
+          },
+          {
+            "id": "nWx0yBJHAhlmj3OevVH6H",
+            "type": "shape",
+            "position": {
+              "x": -3440.2982722408556,
+              "y": -324.6091219851328
+            },
+            "style": {
+              "width": 598.5700334821431,
+              "height": 814.6693638392858
+            },
+            "data": {
+              "shapeType": "rectangle",
+              "label": "",
+              "backgroundColor": "transparent",
+              "strokeColor": "#0c8599"
+            },
+            "measured": {
+              "width": 599,
+              "height": 815
+            },
+            "dragging": false
+          },
+          {
+            "id": "bHpDPD7sa8xPZVUDk675r",
+            "type": "shape",
+            "position": {
+              "x": -2727.2423291604982,
+              "y": -320.44245531846616
+            },
+            "style": {
+              "width": 651.7647879464291,
+              "height": 814.6693638392858
+            },
+            "data": {
+              "shapeType": "rectangle",
+              "label": "",
+              "backgroundColor": "transparent",
+              "strokeColor": "#0c8599"
+            },
+            "measured": {
+              "width": 652,
+              "height": 815
+            }
+          },
+          {
+            "id": "vCbNfmuoiyqDeFG3uH8BF",
+            "type": "shape",
+            "position": {
+              "x": -1971.0410946156253,
+              "y": -320.9928784014701
+            },
+            "style": {
+              "width": 709.8249460314585,
+              "height": 814.6693638392858
+            },
+            "data": {
+              "shapeType": "rectangle",
+              "label": "",
+              "backgroundColor": "transparent",
+              "strokeColor": "#0c8599"
+            },
+            "measured": {
+              "width": 710,
+              "height": 815
+            }
+          },
+          {
+            "id": "WCzx_p0WHbFKyBncuWhfK",
+            "type": "shape",
+            "position": {
+              "x": -1118.8875254218922,
+              "y": -320.44245531846616
+            },
+            "style": {
+              "width": 1064.2990429649772,
+              "height": 814.6693638392858
+            },
+            "data": {
+              "shapeType": "rectangle",
+              "label": "",
+              "backgroundColor": "transparent",
+              "strokeColor": "#0c8599"
+            },
+            "measured": {
+              "width": 1064,
+              "height": 815
+            }
+          },
+          {
+            "id": "5WYZ_9XHpUE7BVOreSkan",
+            "type": "shape",
+            "position": {
+              "x": 21.445074592821015,
+              "y": -326.75372901172557
+            },
+            "style": {
+              "width": 621.852237071666,
+              "height": 814.6693638392858
+            },
+            "data": {
+              "shapeType": "rectangle",
+              "label": "",
+              "backgroundColor": "transparent",
+              "strokeColor": "#0c8599"
+            },
+            "measured": {
+              "width": 585,
+              "height": 819
+            },
+            "dragging": false,
+            "width": 585,
+            "height": 819,
+            "resizing": false
+          },
+          {
+            "id": "hI4H_YYtXiWCAe1PHTJA5",
+            "type": "shape",
+            "position": {
+              "x": 711.2090279194795,
+              "y": -320.44245531846616
+            },
+            "style": {
+              "width": 583.9220866701817,
+              "height": 814.6693638392858
+            },
+            "data": {
+              "shapeType": "rectangle",
+              "label": "",
+              "backgroundColor": "transparent",
+              "strokeColor": "#0c8599"
+            },
+            "measured": {
+              "width": 584,
+              "height": 815
+            }
+          },
+          {
+            "id": "NXdc6RnTjYXSPNK1kcqL-",
+            "type": "shape",
+            "position": {
+              "x": 1397.9395646977762,
+              "y": -320.44245531846616
+            },
+            "style": {
+              "width": 813.905362147767,
+              "height": 814.6693638392858
+            },
+            "data": {
+              "shapeType": "rectangle",
+              "label": "",
+              "backgroundColor": "transparent",
+              "strokeColor": "#0c8599"
+            },
+            "measured": {
+              "width": 738,
+              "height": 805
+            },
+            "width": 738,
+            "height": 805,
+            "resizing": false
+          },
+          {
+            "id": "z2i0YbeiKnPRBtrlYp3Sy",
+            "type": "shape",
+            "position": {
+              "x": 2257.9159299566436,
+              "y": -329.9093658583552
+            },
+            "style": {
+              "width": 997.7357306229296,
+              "height": 814.6693638392858
+            },
+            "data": {
+              "shapeType": "rectangle",
+              "label": "",
+              "backgroundColor": "transparent",
+              "strokeColor": "#0c8599"
+            },
+            "measured": {
+              "width": 924,
+              "height": 816
+            },
+            "dragging": false,
+            "width": 924,
+            "height": 816,
+            "resizing": false
+          },
+          {
+            "id": "gagKqJHf_cCjsZ0opYbje",
+            "type": "shape",
+            "position": {
+              "x": 3308.9433066183865,
+              "y": -320.44245531846616
+            },
+            "style": {
+              "width": 569.5273797464479,
+              "height": 814.6693638392858
+            },
+            "data": {
+              "shapeType": "rectangle",
+              "label": "",
+              "backgroundColor": "transparent",
+              "strokeColor": "#0c8599"
+            },
+            "measured": {
+              "width": 525,
+              "height": 810
+            },
+            "width": 525,
+            "height": 810,
+            "resizing": false
+          },
+          {
             "id": "F4Gzn3X2M34ZZVymb8j9Q",
-            "fillStyle": "solid",
-            "strokeWidth": 4,
-            "strokeStyle": "solid",
-            "roughness": 1,
-            "opacity": 100,
-            "angle": 0,
-            "x": 3891.0903701557045,
-            "y": 238.8524321824224,
-            "strokeColor": "#e03131",
-            "backgroundColor": "transparent",
-            "width": 432.228515625,
-            "height": 207,
-            "seed": 1570484616,
-            "groupIds": [
-
-            ],
-            "frameId": null,
-            "roundness": null,
-            "boundElements": [
-
-            ],
-            "updated": 1777486733406,
-            "link": null,
-            "locked": true,
-            "fontSize": 36,
-            "fontFamily": 2,
-            "text": "Next, use the pencil tool \n\nto circle designs and ideas\n \nyou like in these examples.",
-            "textAlign": "left",
-            "verticalAlign": "top",
-            "containerId": null,
-            "originalText": "Next, use the pencil tool \n\nto circle designs and ideas\n \nyou like in these examples.",
-            "lineHeight": 1.15,
-            "baseline": 198
-          },
-          {
-            "type": "freedraw",
-            "version": 138,
-            "versionNonce": 899771498,
-            "isDeleted": false,
-            "id": "Tf1hP3T3LMpq4rmynRi9D",
-            "fillStyle": "solid",
-            "strokeWidth": 4,
-            "strokeStyle": "solid",
-            "roughness": 1,
-            "opacity": 100,
-            "angle": 6.263750469255779,
-            "x": 3983.2815652140744,
-            "y": 290.8219702928395,
-            "strokeColor": "#1e1e1e",
-            "backgroundColor": "transparent",
-            "width": 306.64780177483544,
-            "height": 13.689554741808138,
-            "seed": 1976873096,
-            "groupIds": [
-
-            ],
-            "frameId": null,
-            "roundness": null,
-            "boundElements": [
-
-            ],
-            "updated": 1777486733406,
-            "link": null,
-            "locked": true,
-            "points": [
-              [
-                0,
-                0
-              ],
-              [
-                1.9531141654979365,
-                0
-              ],
-              [
-                11.523373576437734,
-                -1.5269801657530024
-              ],
-              [
-                19.886253321433287,
-                -2.4502704985337687
-              ],
-              [
-                34.37480931276332,
-                -2.4502704985337687
-              ],
-              [
-                112.74795409919807,
-                2.272714665306694
-              ],
-              [
-                144.06880308045584,
-                5.264530455183035
-              ],
-              [
-                221.05701236771938,
-                8.256346245059376
-              ],
-              [
-                265.2062702996336,
-                8.256346245059376
-              ],
-              [
-                300.15813607038535,
-                10.449160785413824
-              ],
-              [
-                306.0973786918312,
-                11.23928424327437
-              ],
-              [
-                306.64780177483544,
-                11.23928424327437
-              ],
-              [
-                306.64780177483544,
-                11.23928424327437
-              ]
-            ],
-            "lastCommittedPoint": null,
-            "simulatePressure": true,
-            "pressures": [
-
-            ]
-          },
-          {
-            "type": "freedraw",
-            "version": 667,
-            "versionNonce": 13199158,
-            "isDeleted": false,
-            "id": "y2sjldV06muYBheEUHAXS",
-            "fillStyle": "solid",
-            "strokeWidth": 2,
-            "strokeStyle": "solid",
-            "roughness": 1,
-            "opacity": 100,
-            "angle": 0,
-            "x": -4037.3586987500057,
-            "y": 157.90579491049584,
-            "strokeColor": "#1e1e1e",
-            "backgroundColor": "transparent",
-            "width": 147.43958482037007,
-            "height": 0.0679220606619281,
-            "seed": 2126870776,
-            "groupIds": [
-
-            ],
-            "frameId": null,
-            "roundness": null,
-            "boundElements": [
-
-            ],
-            "updated": 1777486733406,
-            "link": null,
-            "locked": true,
-            "points": [
-              [
-                0,
-                -7.540851946651415
-              ],
-              [
-                0.2601603511643411,
-                -7.540851946651415
-              ],
-              [
-                4.0282893083518285,
-                -7.540851946651415
-              ],
-              [
-                7.981048192171839,
-                -7.540851946651415
-              ],
-              [
-                29.125370926322258,
-                -7.547222702701957
-              ],
-              [
-                53.429383086711205,
-                -7.554132522726006
-              ],
-              [
-                79.89860075033901,
-                -7.576969232876408
-              ],
-              [
-                121.5788066876909,
-                -7.592847117186989
-              ],
-              [
-                139.1857878729451,
-                -7.608774007313343
-              ],
-              [
-                145.55132420707983,
-                -7.608774007313343
-              ],
-              [
-                147.43958482037007,
-                -7.604902547867244
-              ],
-              [
-                147.43958482037007,
-                -7.604902547867244
-              ]
-            ],
-            "lastCommittedPoint": null,
-            "simulatePressure": true,
-            "pressures": [
-
-            ]
+            "type": "text",
+            "position": {
+              "x": 3891.0903701557045,
+              "y": 238.8524321824224
+            },
+            "data": {
+              "text": "Next, use the pencil tool \n\nto circle designs and ideas\n \nyou like in these examples.",
+              "fontColor": "#e03131",
+              "fontSize": "large",
+              "showHandles": false
+            },
+            "measured": {
+              "width": 278,
+              "height": 161
+            }
           },
           {
             "id": "Y1DxT45-zbo1VqCqre0Og",
             "type": "image",
-            "x": 2277.4831717511483,
-            "y": -154.32386085654827,
-            "width": 890.7378809341005,
-            "height": 500.62767937685095,
-            "angle": 0,
-            "strokeColor": "transparent",
-            "backgroundColor": "transparent",
-            "fillStyle": "solid",
-            "strokeWidth": 2,
-            "strokeStyle": "solid",
-            "roughness": 1,
-            "opacity": 100,
-            "groupIds": [
-
-            ],
-            "frameId": null,
-            "roundness": null,
-            "seed": 1592659114,
-            "version": 204,
-            "versionNonce": 1195166506,
-            "isDeleted": false,
-            "boundElements": null,
-            "updated": 1777486783538,
-            "link": null,
-            "locked": true,
-            "status": "pending",
-            "fileId": "2303d86df32b4ddaeabb5ea7901cc35fe4e68798",
-            "scale": [
-              1,
-              1
-            ]
+            "position": {
+              "x": 2277.4831717511483,
+              "y": -154.32386085654827
+            },
+            "style": {
+              "width": 890.7378809341005,
+              "height": 500.62767937685095
+            },
+            "data": {
+              "src": "/level_starter_assets/thinking_critically_lesson2_level1_sketch_2026/uuid/2303d86df32b4ddaeabb5ea7901cc35fe4e68798.png",
+              "altText": "",
+              "showHandles": false
+            },
+            "measured": {
+              "width": 891,
+              "height": 501
+            }
+          },
+          {
+            "id": "e5645f2f-f6b1-4203-9369-ad9b600e2f80",
+            "type": "lineAnchor",
+            "position": {
+              "x": -4026.850067300222,
+              "y": 154.78233314003182
+            },
+            "data": {
+              "lineAnchorRole": "source"
+            },
+            "style": {
+              "width": 10,
+              "height": 10
+            },
+            "measured": {
+              "width": 10,
+              "height": 10
+            }
+          },
+          {
+            "id": "e9cc05a0-f0c1-49e0-aee7-98e37998e550",
+            "type": "lineAnchor",
+            "position": {
+              "x": -3796.850067300222,
+              "y": 154.78233314003182
+            },
+            "data": {
+              "lineAnchorRole": "target"
+            },
+            "style": {
+              "width": 10,
+              "height": 10
+            },
+            "measured": {
+              "width": 10,
+              "height": 10
+            }
+          },
+          {
+            "id": "f55aba02-4f07-4676-a000-085b08683f87",
+            "type": "lineAnchor",
+            "position": {
+              "x": -4061.9334006335557,
+              "y": -64.91211130441263
+            },
+            "data": {
+              "lineAnchorRole": "source"
+            },
+            "style": {
+              "width": 10,
+              "height": 10
+            },
+            "measured": {
+              "width": 10,
+              "height": 10
+            }
+          },
+          {
+            "id": "8026a664-19e7-4bc4-b0b1-d1d64a2f296b",
+            "type": "lineAnchor",
+            "position": {
+              "x": -3587.4889561891114,
+              "y": -67.6898890821904
+            },
+            "data": {
+              "lineAnchorRole": "target"
+            },
+            "style": {
+              "width": 10,
+              "height": 10
+            },
+            "measured": {
+              "width": 10,
+              "height": 10
+            },
+            "dragging": false
+          },
+          {
+            "id": "aa72f41d-d247-4df0-a79c-592175b87510",
+            "type": "lineAnchor",
+            "position": {
+              "x": -2836.350069843353,
+              "y": 94.81011091780965
+            },
+            "data": {
+              "lineAnchorRole": "source"
+            },
+            "style": {
+              "width": 10,
+              "height": 10
+            },
+            "measured": {
+              "width": 10,
+              "height": 10
+            },
+            "dragging": false
+          },
+          {
+            "id": "7df433fb-41e9-4f42-8537-070a440d096d",
+            "type": "lineAnchor",
+            "position": {
+              "x": -2753.5722920655758,
+              "y": 94.81011091780965
+            },
+            "data": {
+              "lineAnchorRole": "target"
+            },
+            "style": {
+              "width": 10,
+              "height": 10
+            },
+            "measured": {
+              "width": 10,
+              "height": 10
+            }
+          },
+          {
+            "id": "db7e37bd-7874-468c-bb20-f74b36a2ab31",
+            "type": "lineAnchor",
+            "position": {
+              "x": -2083.34768663616,
+              "y": 93.6446848193562
+            },
+            "data": {
+              "lineAnchorRole": "source"
+            },
+            "style": {
+              "width": 10,
+              "height": 10
+            },
+            "measured": {
+              "width": 10,
+              "height": 10
+            },
+            "dragging": false
+          },
+          {
+            "id": "85456ab0-01b8-4ce6-aecc-aa5aaf746541",
+            "type": "lineAnchor",
+            "position": {
+              "x": -1984.3066157712922,
+              "y": 92.06686639604135
+            },
+            "data": {
+              "lineAnchorRole": "target"
+            },
+            "style": {
+              "width": 10,
+              "height": 10
+            },
+            "measured": {
+              "width": 10,
+              "height": 10
+            }
+          },
+          {
+            "id": "5dc59032-111f-4acf-aa89-3175e2a91373",
+            "type": "lineAnchor",
+            "position": {
+              "x": -791.114397941304,
+              "y": 350.8290878196756
+            },
+            "data": {
+              "lineAnchorRole": "source"
+            },
+            "style": {
+              "width": 10,
+              "height": 10
+            },
+            "measured": {
+              "width": 10,
+              "height": 10
+            }
+          },
+          {
+            "id": "36825b9a-1ef5-4430-af5a-7a5090857eac",
+            "type": "lineAnchor",
+            "position": {
+              "x": -561.114397941304,
+              "y": 350.8290878196756
+            },
+            "data": {
+              "lineAnchorRole": "target"
+            },
+            "style": {
+              "width": 10,
+              "height": 10
+            },
+            "measured": {
+              "width": 10,
+              "height": 10
+            }
+          },
+          {
+            "id": "43c28b77-bd0c-49fb-9002-228f92eece48",
+            "type": "lineAnchor",
+            "position": {
+              "x": -1245.5261038559788,
+              "y": 92.06686639604123
+            },
+            "data": {
+              "lineAnchorRole": "source"
+            },
+            "style": {
+              "width": 10,
+              "height": 10
+            },
+            "measured": {
+              "width": 10,
+              "height": 10
+            },
+            "dragging": false
+          },
+          {
+            "id": "9d16ead8-b8ab-4a42-9e84-c50fd58f2695",
+            "type": "lineAnchor",
+            "position": {
+              "x": -1157.5297619543148,
+              "y": 92.06686639604123
+            },
+            "data": {
+              "lineAnchorRole": "target"
+            },
+            "style": {
+              "width": 10,
+              "height": 10
+            },
+            "measured": {
+              "width": 10,
+              "height": 10
+            }
+          },
+          {
+            "id": "88d4df5b-2f81-42bc-8f3f-92130970f6d9",
+            "type": "lineAnchor",
+            "position": {
+              "x": -68.47356006310608,
+              "y": 79.44431900952259
+            },
+            "data": {
+              "lineAnchorRole": "source"
+            },
+            "style": {
+              "width": 10,
+              "height": 10
+            },
+            "measured": {
+              "width": 10,
+              "height": 10
+            },
+            "dragging": false
+          },
+          {
+            "id": "1c4271d9-41a8-4d7d-a985-85a47fccdf1f",
+            "type": "lineAnchor",
+            "position": {
+              "x": 17.94496341524318,
+              "y": 79.44431900952259
+            },
+            "data": {
+              "lineAnchorRole": "target"
+            },
+            "style": {
+              "width": 10,
+              "height": 10
+            },
+            "measured": {
+              "width": 10,
+              "height": 10
+            }
+          },
+          {
+            "id": "574130f6-73be-4cbe-a3e1-48936b979073",
+            "type": "lineAnchor",
+            "position": {
+              "x": 3953.3856009664287,
+              "y": 281.77487838678695
+            },
+            "data": {
+              "lineAnchorRole": "source"
+            },
+            "style": {
+              "width": 10,
+              "height": 10
+            },
+            "measured": {
+              "width": 10,
+              "height": 10
+            }
+          },
+          {
+            "id": "0f7fb68a-4629-4417-a7c1-1f7b6771211d",
+            "type": "lineAnchor",
+            "position": {
+              "x": 4183.385600966429,
+              "y": 281.77487838678695
+            },
+            "data": {
+              "lineAnchorRole": "target"
+            },
+            "style": {
+              "width": 10,
+              "height": 10
+            },
+            "measured": {
+              "width": 10,
+              "height": 10
+            }
+          },
+          {
+            "id": "d63a8713-ed60-4779-bdef-da2decc9748e",
+            "type": "lineAnchor",
+            "position": {
+              "x": 3188.1436656587302,
+              "y": 90.85884916569103
+            },
+            "data": {
+              "lineAnchorRole": "source"
+            },
+            "style": {
+              "width": 10,
+              "height": 10
+            },
+            "measured": {
+              "width": 10,
+              "height": 10
+            },
+            "dragging": false
+          },
+          {
+            "id": "18923795-c95f-46f7-9149-a080985c6be5",
+            "type": "lineAnchor",
+            "position": {
+              "x": 3280.8734628303387,
+              "y": 89.28103074237617
+            },
+            "data": {
+              "lineAnchorRole": "target"
+            },
+            "style": {
+              "width": 10,
+              "height": 10
+            },
+            "measured": {
+              "width": 10,
+              "height": 10
+            }
+          },
+          {
+            "id": "a513ebb5-e3c6-4dbb-9956-2a7eb462c49e",
+            "type": "lineAnchor",
+            "position": {
+              "x": 2146.672662215438,
+              "y": 83.33955824208135
+            },
+            "data": {
+              "lineAnchorRole": "source"
+            },
+            "style": {
+              "width": 10,
+              "height": 10
+            },
+            "measured": {
+              "width": 10,
+              "height": 10
+            },
+            "dragging": false
+          },
+          {
+            "id": "b4c8f14d-6f9d-40dc-87d1-294a695538ac",
+            "type": "lineAnchor",
+            "position": {
+              "x": 2225.202093577213,
+              "y": 83.33955824208135
+            },
+            "data": {
+              "lineAnchorRole": "target"
+            },
+            "style": {
+              "width": 10,
+              "height": 10
+            },
+            "measured": {
+              "width": 10,
+              "height": 10
+            }
+          },
+          {
+            "id": "6f3af211-6f48-4ede-a166-c3a5d2fc50bb",
+            "type": "lineAnchor",
+            "position": {
+              "x": 1294.6507136254227,
+              "y": 84.9173766653962
+            },
+            "data": {
+              "lineAnchorRole": "source"
+            },
+            "style": {
+              "width": 10,
+              "height": 10
+            },
+            "measured": {
+              "width": 10,
+              "height": 10
+            },
+            "dragging": false
+          },
+          {
+            "id": "704b7005-1cc2-4f3b-8375-a7ffe7a5364c",
+            "type": "lineAnchor",
+            "position": {
+              "x": 1379.491418680457,
+              "y": 84.9173766653962
+            },
+            "data": {
+              "lineAnchorRole": "target"
+            },
+            "style": {
+              "width": 10,
+              "height": 10
+            },
+            "measured": {
+              "width": 10,
+              "height": 10
+            }
+          },
+          {
+            "id": "10113861-7a87-4d53-ac4e-6562058d2053",
+            "type": "lineAnchor",
+            "position": {
+              "x": 616.1968087743408,
+              "y": 77.39808574178653
+            },
+            "data": {
+              "lineAnchorRole": "source"
+            },
+            "style": {
+              "width": 10,
+              "height": 10
+            },
+            "measured": {
+              "width": 10,
+              "height": 10
+            },
+            "dragging": false
+          },
+          {
+            "id": "c5dddf3a-41ad-4ba3-8536-07d981c87d03",
+            "type": "lineAnchor",
+            "position": {
+              "x": 693.1484217128011,
+              "y": 77.39808574178653
+            },
+            "data": {
+              "lineAnchorRole": "target"
+            },
+            "style": {
+              "width": 10,
+              "height": 10
+            },
+            "measured": {
+              "width": 10,
+              "height": 10
+            }
           }
         ],
-        "appState": {
-          "gridSize": null,
-          "viewBackgroundColor": "#ffffff",
-          "scrollX": -2007.9042245255175,
-          "scrollY": 386.522198971226,
-          "zoom": {
-            "value": 1.000012204050836
+        "edges": [
+          {
+            "id": "f693f3c3-9f3c-4fca-af59-ff92085c7d12",
+            "source": "e5645f2f-f6b1-4203-9369-ad9b600e2f80",
+            "target": "e9cc05a0-f0c1-49e0-aee7-98e37998e550",
+            "type": "straight",
+            "style": {
+              "stroke": "var(--sketchlab-stroke-default)",
+              "strokeWidth": 5
+            },
+            "selected": false
+          },
+          {
+            "id": "40cfb405-497b-42f5-972a-e1cbf4b75807",
+            "source": "f55aba02-4f07-4676-a000-085b08683f87",
+            "target": "8026a664-19e7-4bc4-b0b1-d1d64a2f296b",
+            "type": "straight",
+            "style": {
+              "stroke": "var(--sketchlab-stroke-blue)",
+              "strokeWidth": 5
+            }
+          },
+          {
+            "id": "c74a12c9-5d06-4dad-b361-d98c39fd9f01",
+            "source": "aa72f41d-d247-4df0-a79c-592175b87510",
+            "target": "7df433fb-41e9-4f42-8537-070a440d096d",
+            "type": "straight",
+            "markerEnd": {
+              "type": "arrowclosed",
+              "color": "var(--sketchlab-stroke-red)",
+              "width": 14,
+              "height": 14,
+              "strokeWidth": 5
+            },
+            "style": {
+              "stroke": "var(--sketchlab-stroke-red)",
+              "strokeWidth": 5
+            }
+          },
+          {
+            "id": "b0ceea49-43b8-437f-9b4b-03602af71fd9",
+            "source": "db7e37bd-7874-468c-bb20-f74b36a2ab31",
+            "target": "85456ab0-01b8-4ce6-aecc-aa5aaf746541",
+            "type": "straight",
+            "markerEnd": {
+              "type": "arrowclosed",
+              "color": "var(--sketchlab-stroke-red)",
+              "width": 14,
+              "height": 14,
+              "strokeWidth": 5
+            },
+            "style": {
+              "stroke": "var(--sketchlab-stroke-red)",
+              "strokeWidth": 5
+            }
+          },
+          {
+            "id": "5736911c-a28d-4342-9697-69fd9a2fadca",
+            "source": "5dc59032-111f-4acf-aa89-3175e2a91373",
+            "target": "36825b9a-1ef5-4430-af5a-7a5090857eac",
+            "type": "straight",
+            "markerEnd": {
+              "type": "arrowclosed",
+              "color": "var(--sketchlab-stroke-default)",
+              "width": 14,
+              "height": 14,
+              "strokeWidth": 1
+            },
+            "style": {
+              "stroke": "var(--sketchlab-stroke-default)",
+              "strokeWidth": 1
+            }
+          },
+          {
+            "id": "10ce1ea4-8b43-4315-b75d-43fac7924f95",
+            "source": "43c28b77-bd0c-49fb-9002-228f92eece48",
+            "target": "9d16ead8-b8ab-4a42-9e84-c50fd58f2695",
+            "type": "straight",
+            "markerEnd": {
+              "type": "arrowclosed",
+              "color": "var(--sketchlab-stroke-red)",
+              "width": 14,
+              "height": 14,
+              "strokeWidth": 5
+            },
+            "style": {
+              "stroke": "var(--sketchlab-stroke-red)",
+              "strokeWidth": 5
+            }
+          },
+          {
+            "id": "c6d7308d-d9e1-4632-b3c2-7e53ce2e9f0d",
+            "source": "88d4df5b-2f81-42bc-8f3f-92130970f6d9",
+            "target": "1c4271d9-41a8-4d7d-a985-85a47fccdf1f",
+            "type": "straight",
+            "markerEnd": {
+              "type": "arrowclosed",
+              "color": "var(--sketchlab-stroke-red)",
+              "width": 14,
+              "height": 14,
+              "strokeWidth": 5
+            },
+            "style": {
+              "stroke": "var(--sketchlab-stroke-red)",
+              "strokeWidth": 5
+            }
+          },
+          {
+            "id": "6ea1f2ba-b3bd-44c2-8a75-a5fdbf71f93d",
+            "source": "574130f6-73be-4cbe-a3e1-48936b979073",
+            "target": "0f7fb68a-4629-4417-a7c1-1f7b6771211d",
+            "type": "straight",
+            "style": {
+              "stroke": "var(--sketchlab-stroke-default)",
+              "strokeWidth": 5
+            }
+          },
+          {
+            "id": "c9288a5c-d692-4257-bc26-a3488afff140",
+            "source": "d63a8713-ed60-4779-bdef-da2decc9748e",
+            "target": "18923795-c95f-46f7-9149-a080985c6be5",
+            "type": "straight",
+            "markerEnd": {
+              "type": "arrowclosed",
+              "color": "var(--sketchlab-stroke-red)",
+              "width": 14,
+              "height": 14,
+              "strokeWidth": 5
+            },
+            "style": {
+              "stroke": "var(--sketchlab-stroke-red)",
+              "strokeWidth": 5
+            }
+          },
+          {
+            "id": "a4c5639f-e2e8-41bd-a6eb-3fcdc4cec50f",
+            "source": "a513ebb5-e3c6-4dbb-9956-2a7eb462c49e",
+            "target": "b4c8f14d-6f9d-40dc-87d1-294a695538ac",
+            "type": "straight",
+            "markerEnd": {
+              "type": "arrowclosed",
+              "color": "var(--sketchlab-stroke-red)",
+              "width": 14,
+              "height": 14,
+              "strokeWidth": 5
+            },
+            "style": {
+              "stroke": "var(--sketchlab-stroke-red)",
+              "strokeWidth": 5
+            }
+          },
+          {
+            "id": "45beb823-d053-4c19-84c4-0c58db693b76",
+            "source": "6f3af211-6f48-4ede-a166-c3a5d2fc50bb",
+            "target": "704b7005-1cc2-4f3b-8375-a7ffe7a5364c",
+            "type": "straight",
+            "markerEnd": {
+              "type": "arrowclosed",
+              "color": "var(--sketchlab-stroke-red)",
+              "width": 14,
+              "height": 14,
+              "strokeWidth": 5
+            },
+            "style": {
+              "stroke": "var(--sketchlab-stroke-red)",
+              "strokeWidth": 5
+            }
+          },
+          {
+            "id": "62c6cc45-199c-465e-a2d4-d0d52a8f22fb",
+            "source": "10113861-7a87-4d53-ac4e-6562058d2053",
+            "target": "c5dddf3a-41ad-4ba3-8536-07d981c87d03",
+            "type": "straight",
+            "markerEnd": {
+              "type": "arrowclosed",
+              "color": "var(--sketchlab-stroke-red)",
+              "width": 14,
+              "height": 14,
+              "strokeWidth": 5
+            },
+            "style": {
+              "stroke": "var(--sketchlab-stroke-red)",
+              "strokeWidth": 5
+            }
           }
-        },
-        "files": {
-          "50db5111f7b9db1a9694736a605030c9710529da": {
-            "mimeType": "image/png",
-            "id": "50db5111f7b9db1a9694736a605030c9710529da",
-            "created": 1775739898816,
-            "lastRetrieved": 1775739898816
-          },
-          "e999d9f6a37af5afbffbd4fb51c484a532098540": {
-            "mimeType": "image/png",
-            "id": "e999d9f6a37af5afbffbd4fb51c484a532098540",
-            "created": 1772552905175,
-            "lastRetrieved": 1772552905175
-          },
-          "29c2621e6b3786b9b2ae81ed247a04336698c892": {
-            "mimeType": "image/png",
-            "id": "29c2621e6b3786b9b2ae81ed247a04336698c892",
-            "created": 1772552918357,
-            "lastRetrieved": 1772552918357
-          },
-          "505797b8ebf1102137df3a89187a6cfd3dd68638": {
-            "mimeType": "image/png",
-            "id": "505797b8ebf1102137df3a89187a6cfd3dd68638",
-            "created": 1772553035695,
-            "lastRetrieved": 1772553035695
-          },
-          "748daf564f87e59089defca52b6a180fd4759f4d": {
-            "mimeType": "image/png",
-            "id": "748daf564f87e59089defca52b6a180fd4759f4d",
-            "created": 1772553068630,
-            "lastRetrieved": 1772553068630
-          },
-          "3368c035ebd12d85c73d6428e67c8ea68961bc86": {
-            "mimeType": "image/png",
-            "id": "3368c035ebd12d85c73d6428e67c8ea68961bc86",
-            "created": 1772553079132,
-            "lastRetrieved": 1772553079132
-          },
-          "9b7ef43d2f658bb85d7d7c8e76366473c895126c": {
-            "mimeType": "image/png",
-            "id": "9b7ef43d2f658bb85d7d7c8e76366473c895126c",
-            "created": 1772553095834,
-            "lastRetrieved": 1772553095834
-          },
-          "ee01edb2695267c543a583687c4d012f5c3720ab": {
-            "mimeType": "image/png",
-            "id": "ee01edb2695267c543a583687c4d012f5c3720ab",
-            "created": 1772553107793,
-            "lastRetrieved": 1772553107793
-          },
-          "d6415dec44a0fca451c0c442aa76f70cb9b36750": {
-            "mimeType": "image/png",
-            "id": "d6415dec44a0fca451c0c442aa76f70cb9b36750",
-            "created": 1772553128379,
-            "lastRetrieved": 1772553128379
-          },
-          "7067ae8fba6a55fda7613446ed671b1713805428": {
-            "mimeType": "image/png",
-            "id": "7067ae8fba6a55fda7613446ed671b1713805428",
-            "created": 1772553135844,
-            "lastRetrieved": 1772553135844
-          },
-          "6a53d999ccec2ccd2677ecd35bdbf6d59d11e4e9": {
-            "mimeType": "image/png",
-            "id": "6a53d999ccec2ccd2677ecd35bdbf6d59d11e4e9",
-            "created": 1775739996085,
-            "lastRetrieved": 1775739996085
-          },
-          "2303d86df32b4ddaeabb5ea7901cc35fe4e68798": {
-            "mimeType": "image/png",
-            "id": "2303d86df32b4ddaeabb5ea7901cc35fe4e68798",
-            "created": 1777486770592,
-            "lastRetrieved": 1777486770592
-          }
-        },
-        "externalFiles": {
-          "12877665782cbbb40e4a1e086ded42f6f176453c": {
-            "id": "12877665782cbbb40e4a1e086ded42f6f176453c",
-            "url": "/level_starter_assets/aid-thinking-critically-lesson2-level2_2026-test/uuid/12877665782cbbb40e4a1e086ded42f6f176453c.png",
-            "starterAsset": true,
-            "filenameWithExtension": "12877665782cbbb40e4a1e086ded42f6f176453c.png",
-            "uploaded": true
-          },
-          "e999d9f6a37af5afbffbd4fb51c484a532098540": {
-            "id": "e999d9f6a37af5afbffbd4fb51c484a532098540",
-            "url": "/level_starter_assets/aid-thinking-critically-lesson2-level2_2026-test/uuid/e999d9f6a37af5afbffbd4fb51c484a532098540.png",
-            "starterAsset": true,
-            "filenameWithExtension": "e999d9f6a37af5afbffbd4fb51c484a532098540.png",
-            "uploaded": true
-          },
-          "29c2621e6b3786b9b2ae81ed247a04336698c892": {
-            "id": "29c2621e6b3786b9b2ae81ed247a04336698c892",
-            "url": "/level_starter_assets/aid-thinking-critically-lesson2-level2_2026-test/uuid/29c2621e6b3786b9b2ae81ed247a04336698c892.png",
-            "starterAsset": true,
-            "filenameWithExtension": "29c2621e6b3786b9b2ae81ed247a04336698c892.png",
-            "uploaded": true
-          },
-          "505797b8ebf1102137df3a89187a6cfd3dd68638": {
-            "id": "505797b8ebf1102137df3a89187a6cfd3dd68638",
-            "url": "/level_starter_assets/aid-thinking-critically-lesson2-level2_2026-test/uuid/505797b8ebf1102137df3a89187a6cfd3dd68638.png",
-            "starterAsset": true,
-            "filenameWithExtension": "505797b8ebf1102137df3a89187a6cfd3dd68638.png",
-            "uploaded": true
-          },
-          "73a8aae0dd928f3862fec01a18604fdcfccca61e": {
-            "id": "73a8aae0dd928f3862fec01a18604fdcfccca61e",
-            "url": "/level_starter_assets/aid-thinking-critically-lesson2-level2_2026-test/uuid/73a8aae0dd928f3862fec01a18604fdcfccca61e.png",
-            "starterAsset": true,
-            "filenameWithExtension": "73a8aae0dd928f3862fec01a18604fdcfccca61e.png",
-            "uploaded": true
-          },
-          "748daf564f87e59089defca52b6a180fd4759f4d": {
-            "id": "748daf564f87e59089defca52b6a180fd4759f4d",
-            "url": "/level_starter_assets/aid-thinking-critically-lesson2-level2_2026-test/uuid/748daf564f87e59089defca52b6a180fd4759f4d.png",
-            "starterAsset": true,
-            "filenameWithExtension": "748daf564f87e59089defca52b6a180fd4759f4d.png",
-            "uploaded": true
-          },
-          "3368c035ebd12d85c73d6428e67c8ea68961bc86": {
-            "id": "3368c035ebd12d85c73d6428e67c8ea68961bc86",
-            "url": "/level_starter_assets/aid-thinking-critically-lesson2-level2_2026-test/uuid/3368c035ebd12d85c73d6428e67c8ea68961bc86.png",
-            "starterAsset": true,
-            "filenameWithExtension": "3368c035ebd12d85c73d6428e67c8ea68961bc86.png",
-            "uploaded": true
-          },
-          "9b7ef43d2f658bb85d7d7c8e76366473c895126c": {
-            "id": "9b7ef43d2f658bb85d7d7c8e76366473c895126c",
-            "url": "/level_starter_assets/aid-thinking-critically-lesson2-level2_2026-test/uuid/9b7ef43d2f658bb85d7d7c8e76366473c895126c.png",
-            "starterAsset": true,
-            "filenameWithExtension": "9b7ef43d2f658bb85d7d7c8e76366473c895126c.png",
-            "uploaded": true
-          },
-          "ee01edb2695267c543a583687c4d012f5c3720ab": {
-            "id": "ee01edb2695267c543a583687c4d012f5c3720ab",
-            "url": "/level_starter_assets/aid-thinking-critically-lesson2-level2_2026-test/uuid/ee01edb2695267c543a583687c4d012f5c3720ab.png",
-            "starterAsset": true,
-            "filenameWithExtension": "ee01edb2695267c543a583687c4d012f5c3720ab.png",
-            "uploaded": true
-          },
-          "d6415dec44a0fca451c0c442aa76f70cb9b36750": {
-            "id": "d6415dec44a0fca451c0c442aa76f70cb9b36750",
-            "url": "/level_starter_assets/aid-thinking-critically-lesson2-level2_2026-test/uuid/d6415dec44a0fca451c0c442aa76f70cb9b36750.png",
-            "starterAsset": true,
-            "filenameWithExtension": "d6415dec44a0fca451c0c442aa76f70cb9b36750.png",
-            "uploaded": true
-          },
-          "7067ae8fba6a55fda7613446ed671b1713805428": {
-            "id": "7067ae8fba6a55fda7613446ed671b1713805428",
-            "url": "/level_starter_assets/aid-thinking-critically-lesson2-level2_2026-test/uuid/7067ae8fba6a55fda7613446ed671b1713805428.png",
-            "starterAsset": true,
-            "filenameWithExtension": "7067ae8fba6a55fda7613446ed671b1713805428.png",
-            "uploaded": true
-          },
-          "50db5111f7b9db1a9694736a605030c9710529da": {
-            "id": "50db5111f7b9db1a9694736a605030c9710529da",
-            "url": "/level_starter_assets/aid-thinking-critically-lesson2-level2_2026-test_2026-pilot_2026/uuid/50db5111f7b9db1a9694736a605030c9710529da.png",
-            "starterAsset": true,
-            "filenameWithExtension": "50db5111f7b9db1a9694736a605030c9710529da.png",
-            "uploaded": true
-          },
-          "6a53d999ccec2ccd2677ecd35bdbf6d59d11e4e9": {
-            "id": "6a53d999ccec2ccd2677ecd35bdbf6d59d11e4e9",
-            "url": "/level_starter_assets/aid-thinking-critically-lesson2-level2_2026-test_2026-pilot_2026/uuid/6a53d999ccec2ccd2677ecd35bdbf6d59d11e4e9.png",
-            "starterAsset": true,
-            "filenameWithExtension": "6a53d999ccec2ccd2677ecd35bdbf6d59d11e4e9.png",
-            "uploaded": true
-          },
-          "2303d86df32b4ddaeabb5ea7901cc35fe4e68798": {
-            "id": "2303d86df32b4ddaeabb5ea7901cc35fe4e68798",
-            "url": "/level_starter_assets/thinking_critically_lesson2_level1_sketch_2026/uuid/2303d86df32b4ddaeabb5ea7901cc35fe4e68798.png",
-            "starterAsset": true,
-            "filenameWithExtension": "2303d86df32b4ddaeabb5ea7901cc35fe4e68798.png",
-            "uploaded": true
-          }
+        ],
+        "viewport": {
+          "x": 2713.5870254576053,
+          "y": 297.5964097244096,
+          "zoom": 0.6462072364804284
         }
       }
     },
     "name_suffix": "_2026"
   },
-  "audit_log": "[{\"changed_at\":\"2026-04-22T21:14:45.218+00:00\",\"changed\":[\"cloned from \\\"aid-thinking-critically-lesson2-level2_2026-test_2026-pilot_2026\\\"\"],\"cloned_from\":\"aid-thinking-critically-lesson2-level2_2026-test_2026-pilot_2026\"},{\"changed_at\":\"2026-04-22 21:39:46 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-04-22 21:43:41 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-04-22 21:45:54 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-04-22 21:47:55 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-04-23 15:21:07 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2026-04-29 18:19:47 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-05-03 18:36:57 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-04-22T21:14:45.218+00:00\",\"changed\":[\"cloned from \\\"aid-thinking-critically-lesson2-level2_2026-test_2026-pilot_2026\\\"\"],\"cloned_from\":\"aid-thinking-critically-lesson2-level2_2026-test_2026-pilot_2026\"},{\"changed_at\":\"2026-04-22 21:39:46 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-04-22 21:43:41 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-04-22 21:45:54 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-04-22 21:47:55 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-04-23 15:21:07 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2026-04-29 18:19:47 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-05-01 16:20:55 -0400\",\"changed\":[\"start_sources\"],\"changed_by_id\":1,\"changed_by_email\":\"levelbuilder@dev.com\"}]"
 }]]></config>
 </Sketchlab>

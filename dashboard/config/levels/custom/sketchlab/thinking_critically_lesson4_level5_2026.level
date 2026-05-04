@@ -7,7 +7,7 @@
   "user_id": 18603,
   "properties": {
     "encrypted": "false",
-    "long_instructions": "## Generate and Judge Project\r\n\r\n1. Import evidence from your **Backpack** that shows the following:\r\n   - One helpful way to use AI \r\n   - One non-helpful way to use AI\r\n\r\n2. Start to create your project! Use the provided shapes or create your own.\r\n",
+    "long_instructions": "## Thinking Critically about AI Project\r\n\r\n_You will use this canvas to create your project as you move through the unit. Any work that you add will be saved and will be available in upcoming lessons._\r\n\r\n#### Task:\r\n\r\n* Import useful evidence from the **Backpack** to show the following:\r\n  * One helpful way to use AI \r\n  * One non-helpful way to use AI\r\n\r\n* Start to create your guide! Use the provided shapes or create your own\r\n",
     "start_sources": {
       "source": {
         "type": "excalidraw",
@@ -31,12 +31,12 @@
         }
       }
     },
-    "display_name": "Project Work",
-    "bubble_choice_description": "Work on your Generate and Judge Project.",
+    "display_name": "Sketch Lab",
+    "bubble_choice_description": "Create your project in Sketch Lab!",
     "thumbnail_url": "https://images.code.org/036edeb5693631c7f5819c9f4ce3187e-wireframe.png",
     "project_template_level_name": "thinking_critically_project-template_2026",
     "name_suffix": "_2026"
   },
-  "audit_log": "[{\"changed_at\":\"2026-04-21T15:49:23.345+00:00\",\"changed\":[\"cloned from \\\"thinking_critically_lesson4_level3_2026\\\"\"],\"cloned_from\":\"thinking_critically_lesson4_level3_2026\"},{\"changed_at\":\"2026-04-21 15:53:46 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-21 16:42:00 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-29 19:15:29 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-05-01 16:42:26 +0000\",\"changed\":[\"long_instructions\",\"display_name\",\"bubble_choice_description\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2026-05-01 19:26:03 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2026-04-21T15:49:23.345+00:00\",\"changed\":[\"cloned from \\\"thinking_critically_lesson4_level3_2026\\\"\"],\"cloned_from\":\"thinking_critically_lesson4_level3_2026\"},{\"changed_at\":\"2026-04-21 15:53:46 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-21 16:42:00 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-29 19:15:29 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"}]"
 }]]></config>
 </Sketchlab>
