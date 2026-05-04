@@ -70,7 +70,7 @@ namespace :test do
       '-p', CDO.site_host('code.org'),
       '--db', # Ensure features that require database access are run even if the server name isn't "test"
       '--parallel', parallel.to_s,
-      '--magic_retry',
+      '--retry_count', '2',
       '--with-status-page',
       '--fail_fast'
     )
