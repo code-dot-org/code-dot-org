@@ -391,9 +391,9 @@ module.exports = function (grunt) {
   });
 
   grunt.registerTask('preconcatForKarma', [
+    'exec:generateSharedConstants',
     'newer:messages',
     'exec:convertScssVars',
-    'exec:generateSharedConstants',
     'exec:generateRegionConfigurations',
     'newer:copy:static',
   ]);
@@ -541,9 +541,9 @@ module.exports = function (grunt) {
   grunt.registerTask('prebuild', [
     'checkDropletSize',
     'lint-entry-points',
+    'exec:generateSharedConstants',
     'newer:messages',
     'exec:convertScssVars',
-    'exec:generateSharedConstants',
     'exec:generateRegionConfigurations',
     'newer:copy:src',
     'newer:copy:lib',

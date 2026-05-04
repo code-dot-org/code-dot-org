@@ -10,73 +10,290 @@
     "offer_browser_tts": "false",
     "panels": [
       {
+        "text": "###Balancing AI & Human Skills\n\nAI can help us think, write, and solve problems. But how do we use it without weakening our own skills?",
+        "imageUrl": "https://images.code.org/ee5cc96a8a5c834333ec656df40047e1-panel0.png",
+        "key": "thinking_critically_lesson5_level2panels_2026-61c12f93-e668-4a3b-ab10-8b09009a01a3",
+        "layout": "text-top-center",
+        "links": [
+          {
+            "text": "Brain Skills",
+            "x": 42,
+            "y": 76,
+            "targetKey": "thinking_critically_lesson5_level2panels_2026-371c1d10-09fe-49b6-8cd1-f79f8f6ee6bf",
+            "width": 9
+          },
+          {
+            "text": "The Pilot Analogy",
+            "x": 72,
+            "y": 62,
+            "targetKey": "thinking_critically_lesson5_level2panels_2026-0c70d15f-04dc-42e5-8c8e-6a62cafa5f48",
+            "width": 13
+          },
+          {
+            "text": "Smart AI Use",
+            "x": 28,
+            "y": 50,
+            "targetKey": "thinking_critically_lesson5_level2panels_2026-c16be7f1-46e7-4448-997e-d22428db25ea",
+            "width": 10
+          }
+        ]
+      },
+      {
         "text": "#What happens to your brain when AI does the thinking?\nYour brain is like a muscle and if you stop using certain skills, they get weaker over time. Using AI for everything can make you miss the practice that keeps your brain strong.",
         "imageUrl": "https://images.code.org/dd1e7a1c422b5005f83b8dc18b6cc82c-one_panel.png",
-        "key": "thinking_critically_lesson5_level2panels_2026-371c1d10-09fe-49b6-8cd1-f79f8f6ee6bf"
+        "key": "thinking_critically_lesson5_level2panels_2026-371c1d10-09fe-49b6-8cd1-f79f8f6ee6bf",
+        "links": [
+          {
+            "text": "Generate to Remember",
+            "x": 11,
+            "y": 36,
+            "targetKey": "thinking_critically_lesson5_level2panels_2026-90b1d169-1598-430a-94ed-8b32367dbe0f",
+            "width": 15
+          },
+          {
+            "text": "The Memory Trap",
+            "x": 53,
+            "y": 60,
+            "targetKey": "thinking_critically_lesson5_level2panels_2026-d8f2b85b-3a5e-4133-a024-2381dcceff16",
+            "width": 11
+          },
+          {
+            "text": "The Muscle Effect",
+            "x": 42,
+            "y": 18,
+            "targetKey": "thinking_critically_lesson5_level2panels_2026-bed6cab6-30c1-4d4e-8e8f-694f3b73f732",
+            "width": 15
+          },
+          {
+            "text": "< Back",
+            "x": 85,
+            "y": 85,
+            "targetKey": "thinking_critically_lesson5_level2panels_2026-61c12f93-e668-4a3b-ab10-8b09009a01a3",
+            "width": 15
+          }
+        ]
       },
       {
         "text": "When people use tools to remember things for them, they are less likely to remember that information later.\n\n",
         "imageUrl": "https://images.code.org/b148818445f9a92f03698377f661fb06-oneone_panel.png",
         "key": "thinking_critically_lesson5_level2panels_2026-90b1d169-1598-430a-94ed-8b32367dbe0f",
-        "layout": "text-top-left"
+        "layout": "text-top-left",
+        "links": [
+          {
+            "text": "< Back",
+            "x": 18,
+            "y": 85,
+            "targetKey": "thinking_critically_lesson5_level2panels_2026-371c1d10-09fe-49b6-8cd1-f79f8f6ee6bf",
+            "width": 17
+          }
+        ],
+        "showContinueButton": true
       },
       {
         "text": "Students remember information better when they come up with their own answers instead of just reading them.",
         "imageUrl": "https://images.code.org/8c718c09a0234f1a3bd67c83e88612b8-onetwo_panel.png",
         "key": "thinking_critically_lesson5_level2panels_2026-d8f2b85b-3a5e-4133-a024-2381dcceff16",
-        "layout": "text-top-left"
+        "layout": "text-top-left",
+        "links": [
+          {
+            "text": "< Back",
+            "x": 18,
+            "y": 85,
+            "targetKey": "thinking_critically_lesson5_level2panels_2026-371c1d10-09fe-49b6-8cd1-f79f8f6ee6bf",
+            "width": 16
+          }
+        ],
+        "showContinueButton": true
       },
       {
         "text": "When you practice a skill, it builds stronger connections in your brain, making that skill faster and easier over time.",
         "imageUrl": "https://images.code.org/7f4bf4d78f317b197c197224396c6f8a-onethree_panel.png",
         "key": "thinking_critically_lesson5_level2panels_2026-bed6cab6-30c1-4d4e-8e8f-694f3b73f732",
-        "layout": "text-top-left"
+        "layout": "text-top-left",
+        "links": [
+          {
+            "text": "< Back",
+            "x": 16,
+            "y": 86,
+            "targetKey": "thinking_critically_lesson5_level2panels_2026-371c1d10-09fe-49b6-8cd1-f79f8f6ee6bf",
+            "width": 16
+          }
+        ],
+        "showContinueButton": true
       },
       {
         "text": "#Which tasks should AI handle — and which should humans keep?\n\nSome tasks are repetitive, while others need creativity and judgment. Smart AI use means choosing which tasks to give to AI so you keep building the skills that matter most.",
         "imageUrl": "https://images.code.org/21ae4164d2398ffc77f5edf42d16e929-two_panel.png",
-        "key": "thinking_critically_lesson5_level2panels_2026-c16be7f1-46e7-4448-997e-d22428db25ea"
+        "key": "thinking_critically_lesson5_level2panels_2026-c16be7f1-46e7-4448-997e-d22428db25ea",
+        "links": [
+          {
+            "text": "Deeper Learning",
+            "x": 6,
+            "y": 8,
+            "targetKey": "thinking_critically_lesson5_level2panels_2026-44fd41c5-4038-4316-97e8-69e5e375959d",
+            "width": 10
+          },
+          {
+            "text": "Skills of the Future",
+            "x": 43,
+            "y": 26,
+            "targetKey": "thinking_critically_lesson5_level2panels_2026-e365cc66-bf8a-4df1-ae4d-4da6b0c457d9",
+            "width": 10
+          },
+          {
+            "text": "The Spell Checker Model",
+            "x": 16,
+            "y": 44,
+            "targetKey": "thinking_critically_lesson5_level2panels_2026-71536ebe-b760-4a4f-8904-5463b564b75d",
+            "width": 11
+          },
+          {
+            "text": "< Back",
+            "x": 87,
+            "y": 86,
+            "targetKey": "thinking_critically_lesson5_level2panels_2026-61c12f93-e668-4a3b-ab10-8b09009a01a3",
+            "width": 15
+          }
+        ],
+        "showContinueButton": false
       },
       {
         "text": "Deeper learning happens when students explain ideas, look at evidence, and solve problems on their own.\n\n",
         "imageUrl": "https://images.code.org/4d4bb0e110adb6b770e487ca4b1640b7-twoone_panel.png",
-        "key": "thinking_critically_lesson5_level2panels_2026-71536ebe-b760-4a4f-8904-5463b564b75d"
+        "key": "thinking_critically_lesson5_level2panels_2026-71536ebe-b760-4a4f-8904-5463b564b75d",
+        "links": [
+          {
+            "text": "< Back",
+            "x": 18,
+            "y": 85,
+            "targetKey": "thinking_critically_lesson5_level2panels_2026-c16be7f1-46e7-4448-997e-d22428db25ea",
+            "width": 15
+          }
+        ],
+        "showContinueButton": true
       },
       {
         "text": "How do pilots keep their skills when autopilot does the flying?\n\n",
         "imageUrl": "https://images.code.org/61a4ca74aa0cd411acad917986dbf6b7-twotwo_panel.png",
         "key": "thinking_critically_lesson5_level2panels_2026-e365cc66-bf8a-4df1-ae4d-4da6b0c457d9",
-        "layout": "text-top-left"
+        "layout": "text-top-left",
+        "links": [
+          {
+            "text": "< Back",
+            "x": 18,
+            "y": 86,
+            "targetKey": "thinking_critically_lesson5_level2panels_2026-c16be7f1-46e7-4448-997e-d22428db25ea",
+            "width": 15
+          }
+        ],
+        "showContinueButton": true
       },
       {
         "text": "Spell checkers have improved writing accuracy for decades without replacing human authors.\n\n",
         "imageUrl": "https://images.code.org/7ae3658090bce2c5beb0170fb4a02304-twothree_panel.png",
         "key": "thinking_critically_lesson5_level2panels_2026-44fd41c5-4038-4316-97e8-69e5e375959d",
-        "layout": "text-top-left"
+        "layout": "text-top-left",
+        "links": [
+          {
+            "text": "< Back",
+            "x": 18,
+            "y": 85,
+            "targetKey": "thinking_critically_lesson5_level2panels_2026-c16be7f1-46e7-4448-997e-d22428db25ea",
+            "width": 15
+          }
+        ],
+        "showContinueButton": true
       },
       {
         "text": "How do pilots keep their skills when autopilot does the flying?\n",
         "imageUrl": "https://images.code.org/ef1a6a169593c94a5d1ed116cfa72ebd-three_panel.png",
         "key": "thinking_critically_lesson5_level2panels_2026-0c70d15f-04dc-42e5-8c8e-6a62cafa5f48",
-        "layout": "text-top-left"
+        "layout": "text-top-right",
+        "links": [
+          {
+            "text": "Practice Makes Permanent",
+            "x": 13,
+            "y": 15,
+            "targetKey": "thinking_critically_lesson5_level2panels_2026-7a996cfe-0d33-4b6d-acb8-d63d8e6b114e",
+            "width": 18
+          },
+          {
+            "text": "Better Together",
+            "x": 42,
+            "y": 16,
+            "targetKey": "thinking_critically_lesson5_level2panels_2026-bd952ac1-d8b8-41ef-b664-354663330928",
+            "width": 17
+          },
+          {
+            "text": "Staying in Command",
+            "x": 19,
+            "y": 72,
+            "targetKey": "thinking_critically_lesson5_level2panels_2026-9eff3e43-15b6-4bed-a52d-0a1b46844bee",
+            "width": 21
+          },
+          {
+            "text": "< Back",
+            "x": 90,
+            "y": 89,
+            "targetKey": "thinking_critically_lesson5_level2panels_2026-61c12f93-e668-4a3b-ab10-8b09009a01a3",
+            "width": 16
+          }
+        ]
       },
       {
-        "text": "",
+        "text": "Like any skill, flying ability gets weaker without practice — so pilots train in simulators to stay prepared.",
         "imageUrl": "https://images.code.org/5fdcb0ceada286a4504caffb428d5ac9-threeone_panel.png",
-        "key": "thinking_critically_lesson5_level2panels_2026-7a996cfe-0d33-4b6d-acb8-d63d8e6b114e"
+        "key": "thinking_critically_lesson5_level2panels_2026-7a996cfe-0d33-4b6d-acb8-d63d8e6b114e",
+        "links": [
+          {
+            "text": "< Back",
+            "x": 18,
+            "y": 85,
+            "targetKey": "thinking_critically_lesson5_level2panels_2026-0c70d15f-04dc-42e5-8c8e-6a62cafa5f48",
+            "width": 16
+          }
+        ],
+        "layout": "text-top-left",
+        "showContinueButton": true
       },
       {
-        "text": "",
+        "text": "Autopilot systems help pilots fly more safely than they could on their own.",
         "imageUrl": "https://images.code.org/bfa8de2b3427f946e28db1b590b4f6c6-thretwo_panel.png",
-        "key": "thinking_critically_lesson5_level2panels_2026-bd952ac1-d8b8-41ef-b664-354663330928"
+        "key": "thinking_critically_lesson5_level2panels_2026-bd952ac1-d8b8-41ef-b664-354663330928",
+        "links": [
+          {
+            "text": "< Back",
+            "x": 18,
+            "y": 84,
+            "targetKey": "thinking_critically_lesson5_level2panels_2026-0c70d15f-04dc-42e5-8c8e-6a62cafa5f48",
+            "width": 14
+          }
+        ],
+        "layout": "text-top-left",
+        "showContinueButton": true
       },
       {
-        "text": "",
+        "text": "Using AI responsibly means staying focused, checking its work, and stepping in when something seems wrong.",
         "imageUrl": "https://images.code.org/b4a9528caa68571c8dd40787c90f9d54-threthree_panel.png",
-        "key": "thinking_critically_lesson5_level2panels_2026-9eff3e43-15b6-4bed-a52d-0a1b46844bee"
+        "key": "thinking_critically_lesson5_level2panels_2026-9eff3e43-15b6-4bed-a52d-0a1b46844bee",
+        "links": [
+          {
+            "text": "< Back",
+            "x": 18,
+            "y": 84,
+            "targetKey": "thinking_critically_lesson5_level2panels_2026-0c70d15f-04dc-42e5-8c8e-6a62cafa5f48",
+            "width": 15
+          }
+        ],
+        "layout": "text-top-left",
+        "showContinueButton": true
       }
-    ]
+    ],
+    "use_links": "true",
+    "display_name": "Impact on Human Skills",
+    "bubble_choice_description": "Explore how AI affects human skills",
+    "thumbnail_url": "https://images.code.org/1300318f06910b4211a34df062ce0e5c-two.jpg"
   },
-  "audit_log": "[{\"changed_at\":\"2026-04-24 02:07:26 +0000\",\"changed\":[],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-04-24 02:22:20 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-04-24 02:23:23 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-04-24 02:26:37 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-04-24 02:28:12 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-04-24 02:29:34 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-04-24 02:35:10 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-04-24 02:36:29 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-04-24 02:39:51 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-04-24 02:40:52 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2026-04-24 02:07:26 +0000\",\"changed\":[],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-04-24 02:22:20 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-04-24 02:23:23 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-04-24 02:26:37 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-04-24 02:28:12 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-04-24 02:29:34 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-04-24 02:35:10 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-04-24 02:36:29 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-04-24 02:39:51 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-04-24 02:40:52 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-04-27 19:30:41 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-04-27 19:31:34 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-04-27 19:32:35 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-04-27 19:33:11 +0000\",\"changed\":[],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-04-27 19:34:06 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-04-27 19:35:24 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-04-27 19:44:50 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-04-27 19:45:18 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-04-27 19:45:40 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-04-27 19:46:03 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-04-27 19:52:46 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-04-27 19:53:43 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-04-27 19:54:47 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-04-27 19:56:39 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-04-27 19:58:14 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-04-27 20:01:43 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-04-27 20:06:37 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-04-27 20:07:06 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-04-27 20:51:27 +0000\",\"changed\":[],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-04-30 16:11:38 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-30 16:11:59 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-30 16:13:43 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-30 16:14:02 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-05-01 16:13:19 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-05-01 16:32:53 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"}]"
 }]]></config>
 </Panels>

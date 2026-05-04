@@ -10,31 +10,31 @@
     "offer_browser_tts": "false",
     "panels": [
       {
-        "text": "UX Design is the process of creating products that provide meaningful, smooth, and relevant experiences to users.",
-        "imageUrl": "https://images.code.org/ea904832c5ab0ebd50286264726e0769-l2-p1.jpg",
+        "text": "Inclusive Designers ensure that products work for the widest range of people possible, regardless of their age, ability, or background.",
+        "imageUrl": "https://images.code.org/bdcc236d8da4b186836b073ed32330c3-lesson9-panel1.png",
         "key": "undefined-f97b510a-e1c0-4e9c-88a0-6911a42ef05a",
         "layout": "text-bottom-left"
       },
       {
-        "text": "Designers create \"wireframes\"—digital blueprints that focus on the layout and functionality before any colors or images are added.",
-        "imageUrl": "https://images.code.org/35e2ec77987685175f6ec5bde1629e65-l2-p2.jpg",
+        "text": "From screen readers for the blind to closed captions for the deaf, accessibility features aren't \"extras\"—they are essential tools for millions.",
+        "imageUrl": "https://images.code.org/3752147037d3ebff10fcd4f8a5754d9c-lesson9-panel2.png",
         "key": "undefined-e9c5e44d-7dc1-4c0b-b8f9-d4991047b009",
-        "layout": "text-bottom-center"
-      },
-      {
-        "text": "By researching human behavior, UX designers organize information so that the most important buttons are exactly where you expect them to be.",
-        "imageUrl": "https://images.code.org/83eca41729b97d8e46318bcdadbdd732-l2-p3.jpg",
-        "key": "undefined-27e7d451-ed33-4ec9-a662-b9f8fd73455f",
-        "layout": "text-bottom-right"
-      },
-      {
-        "text": "Great UX design ensures technology is usable for everyone, including people with different physical or cognitive abilities.",
-        "imageUrl": "https://images.code.org/c284ed07e8be97fd96e49e48f26b2108-l2-p4.jpg",
-        "key": "undefined-2c9ccff0-1dcc-43e3-bc17-dde6078e4cc9",
         "layout": "text-top-left"
+      },
+      {
+        "text": "When we design for people with disabilities, we often make things better for *everyone*—like how sidewalk ramps help both wheelchair users and people with strollers.",
+        "imageUrl": "https://images.code.org/cba684467fab753acfbc730647a5556d-lesson9-panel3.png",
+        "key": "undefined-27e7d451-ed33-4ec9-a662-b9f8fd73455f",
+        "layout": "text-top-right"
+      },
+      {
+        "text": "The goal isn't to be perfect; it's to constantly listen to users and fix barriers so that technology empowers every single person.",
+        "imageUrl": "https://images.code.org/11dd6d7a76d082330f49c08563e34b36-lesson9-panel4.png",
+        "key": "undefined-2c9ccff0-1dcc-43e3-bc17-dde6078e4cc9",
+        "layout": "text-bottom-left"
       }
     ]
   },
-  "audit_log": "[{\"changed_at\":\"2026-04-24T02:33:43.641+00:00\",\"changed\":[\"cloned from \\\"ai-generated-design-lesson6-careerpanel_2026\\\"\"],\"cloned_from\":\"ai-generated-design-lesson6-careerpanel_2026\"},{\"changed_at\":\"2026-04-24 02:33:46 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2026-04-24T02:33:43.641+00:00\",\"changed\":[\"cloned from \\\"ai-generated-design-lesson6-careerpanel_2026\\\"\"],\"cloned_from\":\"ai-generated-design-lesson6-careerpanel_2026\"},{\"changed_at\":\"2026-04-24 02:33:46 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2026-04-24 11:45:41 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2026-04-24 13:32:20 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
 }]]></config>
 </Panels>

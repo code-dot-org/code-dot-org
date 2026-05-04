@@ -10,7 +10,13 @@ import useThemeSetting from '@cdo/apps/lab2/hooks/useThemeSetting';
 import {useVerticalLayout} from '@cdo/apps/lab2/hooks/useVerticalLayout';
 import {isReadOnlyWorkspace} from '@cdo/apps/lab2/redux/lab2ReduxSelectors';
 import {setHasRun} from '@cdo/apps/lab2/redux/systemRedux';
-import {LabProps, LevelProperties, ProjectSources} from '@cdo/apps/lab2/types';
+import {
+  ExcalidrawSourceWithExternalFiles,
+  LabProps,
+  LevelProperties,
+  ProjectSources,
+  SketchlabReactFlowSource,
+} from '@cdo/apps/lab2/types';
 import TeacherViewingStudentProjectAlert from '@cdo/apps/lab2/views/alerts/teacherViewingStudentProject';
 import ResourcePanel from '@cdo/apps/lab2/views/components/Instructions/ResourcePanel';
 import ResizeBar from '@cdo/apps/lab2/views/components/layout/ResizeBar';
@@ -25,6 +31,10 @@ import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 import ReactFlowCanvas from './components/ReactFlowCanvas';
 import {ReactFlowSketchLabSources} from './types';
+import {
+  convertExcalidrawToReactFlow,
+  uploadConvertedDataUrlImages,
+} from './utils/convertExcalidrawSources';
 import {handleSaveToBackpack} from './utils/handleSaveToBackpack';
 
 import styles from './react-flow-sketch-lab-view.module.scss';
@@ -57,6 +67,7 @@ function ReactFlowSketchLabViewInner({
   const reactFlow = useReactFlow();
   const dialogControl = useDialogControl();
   const currentUserId = useAppSelector(state => state.currentUser.userId);
+  const channelId = useAppSelector(state => state.lab.channel?.id) ?? '';
   // The Backpack API redirects to sign-in for signed-out users, so we only
   // create an instance when we have a user.
   const backpackContext = useMemo(
@@ -167,13 +178,49 @@ function ReactFlowSketchLabViewInner({
     [reactFlow, backpackContext, dialogControl]
   );
 
-  // Deep-clone so React Flow can mutate node style objects during resize.
-  const source = currentSources.source;
-  const hasValidNodes = Array.isArray(source?.nodes);
-  const cloned = hasValidNodes ? structuredClone(source) : null;
-  const initialNodes = cloned?.nodes ?? [];
-  const initialEdges = cloned?.edges ?? [];
-  const initialViewport = cloned?.viewport;
+  // Read sources, converting from Excalidraw if this project was last
+  // saved by the old lab. Deep-clone so React Flow can mutate node
+  // style objects during resize.
+  const {initialNodes, initialEdges, initialViewport, convertedFromExcalidraw} =
+    useMemo(() => {
+      const source = currentSources.source as
+        | SketchlabReactFlowSource
+        | ExcalidrawSourceWithExternalFiles
+        | undefined;
+      let normalized: SketchlabReactFlowSource | null = null;
+      let didConvert = false;
+      if (source && (source as {type?: string}).type === 'excalidraw') {
+        normalized = convertExcalidrawToReactFlow(
+          source as ExcalidrawSourceWithExternalFiles
+        );
+        didConvert = true;
+      } else if (Array.isArray((source as SketchlabReactFlowSource)?.nodes)) {
+        normalized = source as SketchlabReactFlowSource;
+      }
+      const cloned = normalized ? structuredClone(normalized) : null;
+      return {
+        initialNodes: cloned?.nodes ?? [],
+        initialEdges: cloned?.edges ?? [],
+        initialViewport: cloned?.viewport,
+        convertedFromExcalidraw: didConvert,
+      };
+    }, [currentSources.source]);
+
+  // Only after a fresh Excalidraw conversion, upload any ImageNode
+  // whose src is still a base64 dataURL — these can come from old
+  // start sources or exemplar sources. The canvas's debounced save
+  // then persists the resulting asset URLs instead of base64. We
+  // don't run this for native React Flow sources, as they never use base64.
+  useEffect(() => {
+    if (!convertedFromExcalidraw || readonlyWorkspace) return;
+    uploadConvertedDataUrlImages(reactFlow, channelId, levelProperties.name);
+  }, [
+    convertedFromExcalidraw,
+    reactFlow,
+    channelId,
+    levelProperties.name,
+    readonlyWorkspace,
+  ]);
 
   return (
     <BackpackAPIContext.Provider value={backpackContext}>
@@ -187,6 +234,7 @@ function ReactFlowSketchLabViewInner({
             settings={[useThemeSetting('sketchlab')]}
             versionHistoryProps={{
               startSources:
+                (levelProperties?.templateSources as ProjectSources) ||
                 (levelProperties?.startSources as ProjectSources) ||
                 REACT_FLOW_DEFAULT_SOURCES,
               onLoadVersion,

@@ -1,0 +1,107 @@
+<Weblab2>
+  <config><![CDATA[{
+  "game_id": 74,
+  "created_at": "2026-04-30T05:00:53.000Z",
+  "level_num": "custom",
+  "user_id": 1574,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "## Display One Profile\r\n\r\n### Do This:\r\n\r\n1. Use the arrays you generated in the previous level.\r\n\r\n2. Create variables that store the values at index 0 from each array.\r\n\r\n3. Use those variables to call `createProfile()`.\r\n\r\n4. Run your code and check:\r\n   * Does one profile display correctly?\r\n   * Do all parts of the profile match?\r\n\r\n### Reminder:\r\n- Index 0 represents one complete profile\r\n- All values at the same index should match",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "disable_edit_run_for_submission": "false",
+    "widget_view": "false",
+    "initial_view_mode": "split",
+    "ai_tutor_mode": "engineer",
+    "predict_settings": {
+      "isPredictLevel": false,
+      "solution": "",
+      "questionType": "freeResponse",
+      "placeholderText": "",
+      "multipleChoiceOptions": [
+        ""
+      ],
+      "freeResponseHeight": 50,
+      "codeEditableAfterSubmit": false,
+      "allowMultipleAttempts": false
+    },
+    "start_sources": {
+      "folders": {
+        "1": {
+          "id": "1",
+          "name": "images",
+          "parentId": "0",
+          "open": false
+        }
+      },
+      "files": {
+        "1": {
+          "id": "1",
+          "name": "index.html",
+          "language": "html",
+          "contents": "<!DOCTYPE html>\n<html>\n  <head>\n    <meta charset=\"utf-8\" />\n    <title id=\"pageTitle\">Profiles</title>\n    <link rel=\"stylesheet\" href=\"style.css\" />\n  </head>\n  <body>\n    <main id=\"mainContainer\">\n      <header id=\"header\">\n        <h1 id=\"heading\">Profile</h1>\n        <p id=\"subtitle\">See details about different person or items.</p>\n      </header>\n\n      <section id=\"profileContainer\" class=\"profile-container\"></section>\n    </main>\n\n    <script src=\"helpers.js\" ></script>\n    <script src=\"script.js\"></script>\n  </body>\n</html>",
+          "active": false,
+          "folderId": "0"
+        },
+        "2": {
+          "id": "2",
+          "name": "style.css",
+          "language": "css",
+          "contents": "body {\n  margin: 0;\n  font-family: Arial, sans-serif;\n  background: #eef1f6;\n  color: #14213d;\n}\n\n#mainContainer {\n  max-width: 900px;\n  margin: 0 auto;\n  padding: 24px 16px 40px;\n}\n\n#header {\n  margin-bottom: 24px;\n}\n\n#heading {\n  margin: 0 0 8px;\n  font-size: 1.8rem;\n}\n\n#subtitle {\n  margin: 0;\n  font-size: 0.95rem;\n  color: #5f687a;\n}\n\n#profileContainer {\n  display: grid;\n  grid-template-columns: repeat(auto-fit, minmax(260px, 360px));\n  gap: 20px;\n  justify-content: center;\n}\n\n.profile-card {\n  width: 100%;\n  max-width: 360px;\n  background: #ffffff;\n  border-radius: 16px;\n  padding: 16px;\n  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);\n  box-sizing: border-box;\n}\n\n.profile-top {\n  display: flex;\n  align-items: flex-start;\n  gap: 12px;\n}\n\n.profile-image {\n  width: 72px;\n  height: 72px;\n  border-radius: 50%;\n  object-fit: cover;\n  flex-shrink: 0;\n}\n\n.profile-main {\n  flex: 1;\n  min-width: 0;\n}\n\n.profile-name {\n  margin: 0 0 6px;\n  font-size: 1.3rem;\n  line-height: 1.1;\n  word-break: break-word;\n}\n\n.profile-description {\n  margin: 0;\n  font-size: 0.9rem;\n  color: #5f687a;\n  line-height: 1.4;\n}\n\n.profile-divider {\n  border: none;\n  border-top: 1px solid #e3e7ef;\n  margin: 16px 0 0;\n}\n\n.profile-detail {\n  margin: 0;\n  padding: 12px 0;\n  font-size: 0.9rem;\n  color: #24324a;\n  border-top: 1px solid #e3e7ef;\n}\n\n.profile-detail:first-of-type {\n  border-top: none;\n}",
+          "folderId": "0",
+          "active": false
+        },
+        "3": {
+          "id": "3",
+          "name": "script.js",
+          "language": "js",
+          "contents": "const image = \"images/olivia.png\";\nconst name = \"Olivia Smith\";\nconst description = \"Enthusiastic learner who enjoys problem solving and coding.\";\nconst detail1 = \"olivia.smith@example.com\";\nconst detail2 = \"10th Grade\";\nconst detail3 = \"Los Angeles, CA\";\n\ncreateProfile(image, name, description, detail1, detail2, detail3);",
+          "folderId": "0",
+          "active": true
+        },
+        "4": {
+          "id": "4",
+          "name": "helpers.js",
+          "contents": "let profileCount = 0;\n\nconst createProfile = (imageSrc, name, description, detail1, detail2, detail3) => {\n  const container = document.getElementById(\"profileContainer\");\n\n  const card = document.createElement(\"article\");\n  card.className = \"profile-card\";\n  card.id = \"profile\" + profileCount;\n\n  const top = document.createElement(\"div\");\n  top.className = \"profile-top\";\n  top.id = \"profileTop\" + profileCount;\n\n  const image = document.createElement(\"img\");\n  image.className = \"profile-image\";\n  image.id = \"profileImage\" + profileCount;\n  image.src = imageSrc;\n  image.alt = name;\n\n  const main = document.createElement(\"div\");\n  main.className = \"profile-main\";\n  main.id = \"profileMain\" + profileCount;\n\n  const heading = document.createElement(\"h2\");\n  heading.className = \"profile-name\";\n  heading.id = \"profileName\" + profileCount;\n  heading.textContent = name;\n\n  const descriptionEl = document.createElement(\"p\");\n  descriptionEl.className = \"profile-description\";\n  descriptionEl.id = \"profileDescription\" + profileCount;\n  descriptionEl.textContent = description;\n\n  const divider = document.createElement(\"hr\");\n  divider.className = \"profile-divider\";\n  divider.id = \"profileDivider\" + profileCount;\n\n  const detailOne = document.createElement(\"p\");\n  detailOne.className = \"profile-detail\";\n  detailOne.id = \"profileDetail1_\" + profileCount;\n  detailOne.textContent = detail1;\n\n  const detailTwo = document.createElement(\"p\");\n  detailTwo.className = \"profile-detail\";\n  detailTwo.id = \"profileDetail2_\" + profileCount;\n  detailTwo.textContent = detail2;\n\n  const detailThree = document.createElement(\"p\");\n  detailThree.className = \"profile-detail\";\n  detailThree.id = \"profileDetail3_\" + profileCount;\n  detailThree.textContent = detail3;\n\n  main.appendChild(heading);\n  main.appendChild(descriptionEl);\n\n  top.appendChild(image);\n  top.appendChild(main);\n\n  card.appendChild(top);\n  card.appendChild(divider);\n  card.appendChild(detailOne);\n  card.appendChild(detailTwo);\n  card.appendChild(detailThree);\n\n  container.appendChild(card);\n\n  profileCount++;\n};",
+          "folderId": "0",
+          "active": false,
+          "type": "support"
+        },
+        "6": {
+          "id": "6",
+          "name": "olivia.png",
+          "contents": "",
+          "folderId": "1",
+          "url": "/level_starter_assets/building-data-driven-systems-lesson2-level1c-v1-2026/uuid/72243b9f-64b9-4e4f-8c6a-4618b0ffa46b.png",
+          "type": "starter",
+          "active": false
+        }
+      },
+      "openFiles": [
+        "3"
+      ]
+    },
+    "encrypted_exemplar_sources": "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\nOwLM/k54zazEheKL0xal/nyeY3/9PYCANMfyCwM=\n",
+    "name_suffix": "_2025-pilot",
+    "offer_browser_tts": "false",
+    "require_edit_to_continue": "false",
+    "ai_tutor_prompt_settings": {
+      "answerTypes": [
+        "buildJavaScript",
+        "documentation"
+      ],
+      "answerTypeCustomizations": {
+        "buildJavaScript": "You are helping a beginner student use arrays to display one item.\n\nThe student already has arrays (images, names, descriptions, detail1, detail2, detail3).\n\nYour job is to:\n- Use index 0 to get values from each array\n- Store them in variables\n- Call createProfile() with those variables\n\nRules:\n- Do not create new arrays\n- Do not use loops or .map()\n- Do not change variable names\n\nReturn only simple JavaScript code. No explanation.\n\nExample:\nconst image = imageArray[0];\nconst name = nameArray[0];\nconst description = descriptionArray[0];\nconst detail1 = detailOneArray[0];\nconst detail2 = detailTwoArray[0];\nconst detail3 = detailThreeArray[0];\n\ncreateProfile(image, name, description, detail1, detail2, detail3);",
+        "ask": "You are helping a beginner student understand how a profile UI is built from data.\n\nExplain how the values passed into a function (like createProfile) control what is shown in the profile.\n\nFocus on:\n- how each value maps to parts of the profile (name, image, details)\n- what one profile represents\n- what would change if one value changes\n\nKeep explanations short and clear.",
+        "explainCode": "You are helping a beginner student understand how a profile UI is built from data.\n\nExplain how the values passed into a function (like createProfile) control what is shown in the profile.\n\nFocus on:\n- how each value maps to parts of the profile (name, image, details)\n- what one profile represents\n- what would change if one value changes\n\nKeep explanations short and clear."
+      }
+    },
+    "display_name": "Profile View",
+    "bubble_choice_description": "Use your arrays to display one profile by selecting values at the same index (image, name, and details).",
+    "thumbnail_url": "https://images.code.org/c0469ea3da73ef6ede8d849cfd17d752-profile_view (2).png",
+    "project_template_level_name": "building-data-driven-systems-lesson2-level3c-template-v2-2026"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-04-30T05:00:53.151+00:00\",\"changed\":[\"cloned from \\\"building-data-driven-systems-lesson2-level4b-v1-2026\\\"\"],\"cloned_from\":\"building-data-driven-systems-lesson2-level4b-v1-2026\"},{\"changed_at\":\"2026-04-30 05:04:12 +0000\",\"changed\":[\"long_instructions\",\"ai_tutor_prompt_settings\",\"display_name\",\"thumbnail_url\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-04-30 05:05:13 +0000\",\"changed\":[\"project_template_level_name\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-04-30 05:06:32 +0000\",\"changed\":[\"bubble_choice_description\",\"thumbnail_url\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-04-30 05:09:05 +0000\",\"changed\":[\"encrypted_exemplar_sources\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-04-30 05:10:50 +0000\",\"changed\":[\"encrypted_exemplar_sources\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-04-30 05:53:34 +0000\",\"changed\":[\"encrypted_exemplar_sources\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"}]"
+}]]></config>
+</Weblab2>

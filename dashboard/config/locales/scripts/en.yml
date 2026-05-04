@@ -25303,7 +25303,7 @@ en:
           title: Pre-Learning for Teaching AI Foundations Semester 2
           description_audience: ''
           description_short: ''
-          description: "# Welcome!\n#### This short professional learning module introduces you to the concepts in **AI Foundations (Semester 2)** course, a curriculum where students code alongside AI to build real-world interactive projects.\n\n#### This quick overview answers the questions: What is AI Foundations, and how is it different? \n\n#### **Suggested Time: 25 minutes**"
+          description: "## Welcome!\n#### This short professional learning module introduces you to the concepts in **AI Foundations (Semester 2)** course, a curriculum where students code alongside AI to build real-world interactive projects.\n\n#### This quick overview answers the questions: What is AI Foundations, and how is it different? \n\n#### **Suggested Time: 25 minutes**"
           student_description: "# Welcome!\n#### This short professional learning module introduces you to the concepts in **AI Foundations (Semester 2)** course, a curriculum where students code alongside AI to build real-world interactive projects.\n\n#### This quick overview answers the questions: What is AI Foundations, and how is it different? \n\n#### **Suggested Time: 25 minutes**"
         pl-sandbox-aif-sem-2-unit-1:
           lessons:
@@ -25311,11 +25311,11 @@ en:
               name: Introduction to WebApps
           lesson_groups: {}
           name: pl-sandbox-aif-sem-2-unit-1
-          title: Teaching Introduction AI Generated Design
+          title: 'Teaching Unit 1: Introduction AI Generated Design'
           description_audience: ''
           description_short: ''
-          description: |+
-            ## Welcome
+          description: |2+
+
             #### This professional learning module prepares you to teach **Unit 1: AI Generated Design**—a unit where students design and build web apps by combining empathy-driven design thinking with AI-assisted creation.
 
             #### Here, you will explore and create with Web Lab and learn the skills needed to build websites with AI.
@@ -25323,8 +25323,8 @@ en:
             #### **Suggested Time: 60 minutes**
 
 
-          student_description: |+
-            ## Welcome
+          student_description: |2+
+
             #### This professional learning module prepares you to teach **Unit 1: AI Generated Design**—a unit where students design and build web apps by combining empathy-driven design thinking with AI-assisted creation.
 
             #### Here, you will explore and create with Web Lab and learn the skills needed to build websites with AI.
@@ -25337,18 +25337,18 @@ en:
               name: Teaching AI and Algorithmic Thinking
           lesson_groups: {}
           name: pl-sandbox-aif-sem-2-unit-2
-          title: 'Unit 2: Teaching AI and Algorithmic Decisions'
+          title: 'Teaching Unit 2: AI and Algorithmic Decisions'
           description_audience: ''
           description_short: ''
-          description: |-
-            ## Welcome!
+          description: |2-
+
             #### This professional learning module prepares you to teach **Unit 2: AI and Algorithmic Decisions.**  In this unit,  students bring their web apps to life with JavaScript, using AI as a debugging partner and coding coach.
 
             #### Here, you will prepare to teach event-driven programming, explaining how user interactions drive algorithms and conditional logic in interactive apps.
 
             #### **Suggested Time: 75 minutes**
-          student_description: |-
-            ## Welcome!
+          student_description: |2-
+
             #### This professional learning module prepares you to teach **Unit 2: AI and Algorithmic Decisions.**  In this unit,  students bring their web apps to life with JavaScript, using AI as a debugging partner and coding coach.
 
             #### Here, you will prepare to teach event-driven programming, explaining how user interactions drive algorithms and conditional logic in interactive apps.
@@ -26424,14 +26424,12 @@ en:
           description_short: ''
           description: |2
 
-            ## Welcome!
             #### This professional learning module prepares you to teach Unit 3: Building Data-Driven Systems with A. In this unit, students expand their skills as developers by creating web apps that organize, display, and manipulate meaningful datasets.
             #### In this module, you will prepare to teach a unit where students shift from writing isolated interactions to building full web apps that manage and display meaningful datasets through arrays, objects, and schema-informed design.
 
             #### **Suggested Time: 75 minutes**
           student_description: |2+
 
-            ## Welcome!
             #### This professional learning module prepares you to teach Unit 3: Building Data-Driven Systems with A. In this unit, students expand their skills as developers by creating web apps that organize, display, and manipulate meaningful datasets.
             #### In this  module, you will prepare to teach a unit where students shift from writing isolated interactions to building full web apps that manage and display meaningful datasets through arrays, objects, and schema-informed design.
 
@@ -27544,7 +27542,7 @@ en:
               display_name: Content
             lessonGroup-4:
               display_name: Post-Assessment
-          title: 'AI Discoveries: Thinking Critically About AI'
+          title: 'Thinking Critically About AI '
           description: |-
             In this unit, students develop the conceptual foundation and habits of mind they'll need to engage with AI thoughtfully. Students examine how AI systems work at a high level, why they can fail, and how human choices shape both their risks and benefits. They investigate real examples of bias, misinformation, and misuse alongside AI's genuine potential to support learning and creativity. Rather than treating AI as magic or as a threat, students develop a balanced, questioning stance: learning to evaluate AI outputs critically, make intentional decisions about when and how to use AI, and articulate shared norms for responsible use. By the end of the unit, students have a durable lens for thinking about AI.
 
@@ -27569,6 +27567,8 @@ en:
             - Articulate personal and shared norms for ethical and productive AI use.
           description_short: ''
           description_audience: ''
+          lessons: {}
+          name: thinking-critically-about-ai-2026
         ai-and-machine-learning-2026:
           lesson_groups:
             lessonGroup-4:
@@ -27633,11 +27633,13 @@ en:
               display_name: 'Chapter 2: Building Physical Prototypes'
             lessonGroup-5:
               display_name: End of Unit Survey
-          title: "(Option A) Creating Apps with Devices (Circuit Playground)"
+          title: Creating Apps with Devices (Circuit Playground)
           description: "In the Creating Apps for Devices unit, students explore the role of physical devices in computing. Using App Lab and Adafruit’s Circuit Playground, students develop programs that utilize the same hardware inputs and outputs that you see in the smart devices, looking at how a simple rough prototype can lead to a finished product. Then, students explore how physical devices can be used to react to the world around them using a “maker” mindset to create prototypes with everyday materials.\n\n⚠️ This unit uses the **Circuit Playground** to introduce physical computing and the \"maker\" mindset. You can also teach this content using **micro:bit** devices by assigning the [(Option B) Creating Apps with Devices unit](/s/csd6b-2023). Both units teach the same content and are equivalent - you do not need to buy both sets of devices or teach both units.\n\n::: details [**Chapter 1 Overview**]\n**Description:** This unit emphasizes the interactions between inputs and outputs on the circuit playground and an app screen. On their circuit playground, students learn to control inputs like buttons or toggle switches and outputs like the buzzer or LED. Students also interact with inputs and outputs in App Lab, such as buttons and text inputs and dropdowns. By the end of the chapter, students will be able to create an app that controls a device, similar to many \"smart\" hardware they may experience in their day-to-day lives.\n\n\n**Goals:**\n* Design and build a physical computing device that integrates physical inputs and outputs with digital apps. \n* Create app prototypes that use a physical device to control a digital app.\n\n\n**Big Questions:**\n- What inputs and outputs are available on a physical device?\n- What inputs and outputs are available on an app?\n- How can we create apps that use a physical device to control a digital app?\n\n:::\n\n::: details [**Chapter 2 Overview**]\n**Description:** In this chapter, students focus on how their physical device can interact with the outside world. They learn how to use sensors and the accelerometer to react to the physical environment. They learn to attach external LEDs and buttons that extend the types of devices they can make. Throughout the unit, students use physical materials like paper or cardboard to extend the functionality of their devices. By the end of the unit, students will have created an interactive art project and developed a prototype for a physical device that solves a problem.\n\n\n**Goals:**\n* Design and build a physical computing device that integrates sensors with digital apps. \n* Create app prototypes that use a physical device to solve real-world problems.\n* Use physical computing to solve problems in fun and innovative ways.\n\n\n**Big Questions:**\n- How can a physical device use sensors to react to a physical environment?\n- How can simple hardware be used to develop innovative new products?\n\n:::\n\n\n::: details [**Implementation Guidance for Creating Apps with Devices**]\n- This unit requires students to have access to Circuit Playground's - [click here](https://code.org/maker/circuitplayground) for more information about using Circuit Playground's in your classroom\n- Guidance for how to support students in programming levels and differentiate tasks are available in the [Programming Levels Guide](https://docs.google.com/document/d/1LlbzDHvq_DXggzeGg_sBcNov9pZX7h9NqardkGW4ELw/view) and [Differentiation Guide](https://docs.google.com/document/d/10u5N7zCf52IZiSf4drQplEz3d3zS1iqWpegbBMDm0RQ/view)\n- You can view the [Implementation Guide](https://docs.google.com/document/d/1sM_1Oxb7TGp5gSfuMjs0X0_Tko9tm8QJ4N6L26NI_iE/view) for more information about this unit\n:::\n\n::: details [**Professional Development**]\nIf you are interested in teaching this course, we recommend completing the free [Creating Apps for Devices Self-Paced Professional Development Module](https://studio.code.org/courses/teaching-csd-physical-computing-2025/). The module is designed to take 2 hours to complete. No previous experience with coding or devices is assumed.\n:::\n\n## Finished Teaching This Unit?\nAnswer this [**short survey**](https://studio.code.org/form/teacher_csd_unit_survey?survey_data%5Bunit_number%5D=6) to let the Code.org curriculum team know how the unit went."
           student_description: This unit explores the role of hardware platforms in computing and how different sensors can provide more effective input and output than the traditional keyboard, mouse, and monitor. Using App Lab and Adafruit’s Circuit Playground, you’ll develop programs that utilize the same hardware inputs and outputs that you see in the smart devices, looking at how a simple rough prototype can lead to a finished product. The unit concludes with a design challenge to use the Circuit Playground as the basis for an innovation of your own design.
           description_short: Learn to program with physical devices.
           description_audience: ''
+          lessons: {}
+          name: creating-apps-with-devices-circuit-2026
         creating-apps-with-devices-microbit-2026:
           lesson_groups:
             lessonGroup-2:
@@ -27648,11 +27650,13 @@ en:
               display_name: Building Physical Prototypes
             lessonGroup-5:
               display_name: End of Unit Survey
-          title: "(Option B)  Creating Apps with Devices (micro:bit)"
+          title: Creating Apps with Devices (micro:bit)
           description: "In the Creating Apps with Devices unit, students explore the role of physical devices in computing. Using App Lab and BBC micro:bit, students develop programs that utilize the same hardware inputs and outputs that you see in the smart devices, looking at how a simple rough prototype can lead to a finished product. Then, students explore how physical devices can be used to react to the world around them using a “maker” mindset to create prototypes with everyday materials.\n\n⚠️ This unit uses the **micro:bit** to introduce physical computing and the \"maker\" mindset. You can also teach this content using **circuit playground** devices by assigning the [Creating Apps with Devices (Circuit Playground) unit](/s/csd6a-2023). Both units teach the same content and are equivalent - you do not need to buy both sets of devices or teach both units.\n\n::: details [**Chapter 1 Overview**]\n**Description:** This unit emphasizes the interactions between inputs and outputs on the micro:bit and an app screen. On their micro:bit, students learn to control inputs like buttons and outputs like the LED Screen. Students also interact with inputs and outputs in App Lab, such as buttons and text inputs and dropdowns. By the end of the chapter, students will be able to create an app that controls a device, similar to many \"smart\" hardware they may experience in their day-to-day lives.\n\n\n**Goals:**\n* Design and build a physical computing device that integrates physical inputs and outputs with digital apps. \n* Create app prototypes that use a physical device to control a digital app.\n\n\n**Big Questions:**\n- What inputs and outputs are available on a physical device?\n- What inputs and outputs are available on an app?\n- How can we create apps that use a physical device to control a digital app?\n\n:::\n\n::: details [**Chapter 2 Overview**]\n**Description:** In this chapter, students focus on how their physical device can interact with the outside world. They learn how to use sensors and the accelerometer to react to the physical environment. They learn to attach external LEDs and buttons that extend the types of devices they can make. Throughout the unit, students use physical materials like paper or cardboard to extend the functionality of their devices. By the end of the unit, students will have created an interactive art project and developed a prototype for a physical device that solves a problem.\n\n\n**Goals:**\n* Design and build a physical computing device that integrates sensors with digital apps. \n* Create app prototypes that use a physical device to solve real-world problems.\n* Use physical computing to solve problems in fun and innovative ways.\n\n\n**Big Questions:**\n- How can a physical device use sensors to react to a physical environment?\n- How can simple hardware be used to develop innovative new products?\n\n:::\n\n\n::: details [**Implementation Guidance for Creating Apps with Devices**]\n- This unit requires students to have access to micro:bit devices - [click here for more information about using micro:bit's in your classroom](https://code.org/maker/microbit)\n- Guidance for how to support students in programming levels and differentiate tasks are available in the [Programming Levels Guide](https://docs.google.com/document/d/1LlbzDHvq_DXggzeGg_sBcNov9pZX7h9NqardkGW4ELw/preview) and [Differentiation Guide](https://docs.google.com/document/d/10u5N7zCf52IZiSf4drQplEz3d3zS1iqWpegbBMDm0RQ/preview)\n:::\n\n::: details [**Professional Development**]\nIf you are interested in teaching this course, we recommend completing the free [Creating Apps for Devices (micro:bit) Self-Paced Professional Development Module](https://studio.code.org/courses/teaching-csd-microbit-2025/). The module is designed to take 2 hours to complete. No previous experience with coding or devices is assumed.\n:::\n\n## Finished Teaching This Unit?\nAnswer this [**short survey**](https://studio.code.org/form/teacher_csd_unit_survey?survey_data%5Bunit_number%5D=6) to let the Code.org curriculum team know how the unit went."
           student_description: This unit explores the role of hardware platforms in computing and how different sensors can provide more effective input and output than the traditional keyboard, mouse, and monitor. Using App Lab and BBC micro:bit, you’ll develop programs that utilize the same hardware inputs and outputs that you see in the smart devices, looking at how a simple rough prototype can lead to a finished product. The unit concludes with a design challenge to use the micro:bit as the basis for an innovation of your own design.
           description_short: ''
           description_audience: ''
+          lessons: {}
+          name: creating-apps-with-devices-microbit-2026
         problem-solving-with-ai-2026:
           lesson_groups:
             lessonGroup-3:
@@ -28264,8 +28268,14 @@ en:
           title: 'Teaching Unit 6: Web Apps with AI Capstone Project'
           description_audience: ''
           description_short: ''
-          description: ''
-          student_description: ''
+          description: |-
+            #### This professional learning module prepares you to teach a **Unit 6: Web Apps with AI Capstone Project** where students synthesize their learning to design and build a complete web app with a clear purpose and audience.
+
+            #### **Suggested Time: 30 minutes**
+          student_description: |-
+            #### This professional learning module prepares you to teach a **Unit 6: Web Apps with AI Capstone Project** where students synthesize their learning to design and build a complete web app with a clear purpose and audience.
+
+            #### **Suggested Time: 30 minutes**
         self-paced-pl-teaching-web-dev-2026:
           lessons: {}
           lesson_groups: {}
@@ -28346,7 +28356,7 @@ en:
           lessons: {}
           lesson_groups: {}
           name: self-paced-pl-teaching-interactive-animations-and-games-2026
-          title: 'Preparing to Teach: Interactive Animations and Games'
+          title: Preparing to Teach Interactive Animations and Games
           description_audience: "'26-'27"
           description_short: ''
           description: "This professional learning module is designed to help you prepare to teach Code.org's Interactive Animations and Games unit. \n\n**In this professional learning module, you will:**\n* Get an introduction to Interactive Animations and Games.\n* Practice key concepts included in the unit.\n* Engage with Game Lab.\n* Explore end-of-chapter projects.\n\n**Suggested time:** 120 minutes"
@@ -28370,7 +28380,9 @@ en:
           description: "**You will:**\n* Get an introduction to Creating Apps for Devices.\n* Set up your micro:bit. \n* Practice key concepts included in the unit.\n* Preview end of chapter projects.\n* Consider the role of the teacher in a computer science classroom.\n\n**Suggested time:** 100 minutes"
           student_description: "**You will:**\n* Get an introduction to Creating Apps for Devices.\n* Set up your micro:bit. \n* Practice key concepts included in the unit.\n* Preview end of chapter projects.\n* Consider the role of the teacher in a computer science classroom.\n\n**Suggested time:** 100 minutes"
         self-paced-pl-teaching-ai-and-ml-2026:
-          lessons: {}
+          lessons:
+            lesson-6:
+              name: Teaching AI and Machine Learning
           lesson_groups: {}
           name: self-paced-pl-teaching-ai-and-ml-2026
           title: 'Preparing to Teach AI and Machine Learning '
@@ -28458,6 +28470,17 @@ en:
           lesson_groups: {}
           name: pl-facilitators-tools-ai-enabled-classroom-fac-2026
           title: AI Tools
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        code-connect-2026:
+          lessons:
+            lesson-1:
+              name: Build Your First Web Page with AI
+          lesson_groups: {}
+          name: code-connect-2026
+          title: Code Connect 2026
           description_audience: ''
           description_short: ''
           description: ''

@@ -35,7 +35,7 @@ Scenario: CSF hint top instructions
   And I wait to see ".uitest-topInstructions-inline-feedback"
   And I see no difference for "farmer with hints"
 
-  Then I press "lightbulb"
+  Then I click selector "#lightbulb"
   And I see no difference for "farmer with hint prompt"
 
   Then I resize top instructions to "200" pixels tall
@@ -45,11 +45,11 @@ Scenario: CSF hint top instructions
   And I wait to see ".block-space"
   And I see no difference for "farmer with block hint"
 
-  Then I press "lightbulb"
+  Then I click selector "#lightbulb"
   And I press ".csf-top-instructions button:contains('Yes')" using jQuery
   And I see no difference for "farmer with markdown hint"
 
-  Then I press "lightbulb"
+  Then I click selector "#lightbulb"
   And I press ".csf-top-instructions button:contains('Yes')" using jQuery
   And I see no difference for "farmer with video hint"
 

@@ -1,5 +1,6 @@
 <Aichat>
   <config><![CDATA[{
+  "published": true,
   "game_id": 71,
   "created_at": "2026-04-23T19:39:43.000Z",
   "level_num": "custom",
@@ -8,7 +9,7 @@
     "display_name": "Turn words and ideas into images",
     "bubble_choice_description": "Like an **Illustrator** who brings stories, comics, and apps to life visually.",
     "encrypted": "false",
-    "long_instructions": "### Use AI like an Illustrator\r\n\r\n1. Type a description of the image you want into the chat.\r\n   \r\n2. Include who is in it, what is happening, and how it should feel.\r\n\r\n3. Send it and see what the AI generates.\r\n4. Add more details to get closer to what you imagined.\r\n\r\n>Use your prompting strategy: Include a goal, context, and details.",
+    "long_instructions": "### Use AI like an Illustrator\r\n\r\n1. Think about the audience of your guide and an image they may want.\r\n   \r\n2. Type a detailed prompt into the chat.\r\n\r\n4. Try different prompts & compare results. \r\n\r\n5. Save an image you like to the backpack for your project. \r\n\r\n>**Use your prompting strategy:** Include a goal, context, and details.\r\n>\r\n>*For example:* `A portrait of a young, female player with a red and black jersey for a special article in the school newspaper.`",
     "offer_browser_tts": "false",
     "submittable": "false",
     "disable_edit_run_for_submission": "false",
@@ -47,7 +48,6 @@
     },
     "thumbnail_url": "https://images.code.org/b3e8a25cc1cae84c925085e3d8fae2ae-5.4b.png"
   },
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2026-04-23 19:41:53 +0000\",\"changed\":[],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-04-23 19:46:23 +0000\",\"changed\":[\"bubble_choice_description\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-04-23 21:27:43 +0000\",\"changed\":[],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-04-23 21:30:10 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-04-23 21:56:34 +0000\",\"changed\":[\"aichat_settings\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-04-23 23:56:10 +0000\",\"changed\":[],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2026-04-23 19:41:53 +0000\",\"changed\":[],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-04-23 19:46:23 +0000\",\"changed\":[\"bubble_choice_description\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-04-23 21:27:43 +0000\",\"changed\":[],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-04-23 21:30:10 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-04-23 21:56:34 +0000\",\"changed\":[\"aichat_settings\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-04-23 23:56:10 +0000\",\"changed\":[],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-04-29 23:25:56 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"}]"
 }]]></config>
 </Aichat>

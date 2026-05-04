@@ -43,9 +43,19 @@ class ProgressLessonTeacherInfo extends React.Component {
   }
 
   onClickHiddenToggle(value) {
-    const {unitName, section, lesson, toggleHiddenLesson} = this.props;
+    const {unitName, section, lesson, hiddenLessonState, toggleHiddenLesson} =
+      this.props;
     const sectionId = (section && section.id.toString()) || '';
-    toggleHiddenLesson(unitName, sectionId, lesson.id, value === 'hidden');
+    const nextHidden = value === 'hidden';
+    const currentHidden = isLessonHiddenForSection(
+      hiddenLessonState,
+      sectionId,
+      lesson.id
+    );
+    if (nextHidden === currentHidden) {
+      return;
+    }
+    toggleHiddenLesson(unitName, sectionId, lesson.id, nextHidden);
   }
 
   render() {

@@ -15,7 +15,7 @@
       "initialCustomizations": {
         "selectedModelId": "gemini-2.5-flash",
         "temperature": 0.7,
-        "systemPrompt": "##CONTEXT\n\n\n##GOAL\n\n\n",
+        "systemPrompt": "",
         "retrievalContexts": [
 
         ],
@@ -45,6 +45,6 @@
       ]
     }
   },
-  "audit_log": "[{\"changed_at\":\"2026-04-22T18:17:41.430+00:00\",\"changed\":[\"cloned from \\\"thinking_critically_lesson3_level1_2026\\\"\"],\"cloned_from\":\"thinking_critically_lesson3_level1_2026\"},{\"changed_at\":\"2026-04-22 18:22:34 +0000\",\"changed\":[\"long_instructions\",\"aichat_settings\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-22 22:44:46 +0000\",\"changed\":[\"aichat_settings\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-22 23:33:55 +0000\",\"changed\":[\"aichat_settings\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2026-04-22T18:17:41.430+00:00\",\"changed\":[\"cloned from \\\"thinking_critically_lesson3_level1_2026\\\"\"],\"cloned_from\":\"thinking_critically_lesson3_level1_2026\"},{\"changed_at\":\"2026-04-22 18:22:34 +0000\",\"changed\":[\"long_instructions\",\"aichat_settings\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-22 22:44:46 +0000\",\"changed\":[\"aichat_settings\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-22 23:33:55 +0000\",\"changed\":[\"aichat_settings\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-29 20:45:44 +0000\",\"changed\":[\"aichat_settings\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"}]"
 }]]></config>
 </Aichat>

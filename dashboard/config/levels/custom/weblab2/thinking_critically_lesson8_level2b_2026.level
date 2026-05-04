@@ -1,0 +1,68 @@
+<Weblab2>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 74,
+  "created_at": "2026-04-28T16:04:42.000Z",
+  "level_num": "custom",
+  "user_id": 18603,
+  "properties": {
+    "encrypted": "false",
+    "display_name": "Social Media Post",
+    "long_instructions": "## Digital Artifact\r\n\r\n1. Examine the artifact to the right.\r\n2. Find example(s) of **Public**, **Private**, and **Sensitive** data and add it to the table in your Activity Guide.\r\n",
+    "bubble_choice_description": "A post added to a social media channel",
+    "offer_browser_tts": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "false",
+    "widget_view": "true",
+    "initial_view_mode": "split",
+    "require_edit_to_continue": "true",
+    "predict_settings": {
+      "isPredictLevel": false,
+      "solution": "",
+      "questionType": "freeResponse",
+      "placeholderText": "",
+      "multipleChoiceOptions": [
+        ""
+      ],
+      "freeResponseHeight": 50,
+      "codeEditableAfterSubmit": false
+    },
+    "ai_tutor_prompt_settings": {
+      "answerTypes": [
+        "ask"
+      ],
+      "answerTypeCustomizations": {
+      }
+    },
+    "start_sources": {
+      "folders": {
+      },
+      "files": {
+        "1": {
+          "id": "1",
+          "name": "index.html",
+          "contents": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n    <title>Fake Social Media Post - Neo-Brutalist</title>\n    <link href=\"https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;700&family=Space+Mono:ital@0;1&display=swap\" rel=\"stylesheet\">\n    \n    <style>\n        :root {\n            --bg-color: #b19cd9; /* Pastel purple */\n            --card-bg: #ffffff;\n            --text-primary: #000000;\n            --accent-color: #ff3b30;\n            --border-color: #000000;\n            --border-width: 3px;\n        }\n\n        body {\n            font-family: 'Space Grotesk', sans-serif;\n            background-color: var(--bg-color);\n            /* Retro polka-dot background */\n            background-image: radial-gradient(var(--border-color) 2px, transparent 2px);\n            background-size: 24px 24px;\n            color: var(--text-primary);\n            display: flex;\n            justify-content: center;\n            align-items: center;\n            min-height: 100vh;\n            margin: 0;\n        }\n\n        .feed-container {\n            width: 100%;\n            max-width: 550px;\n            padding: 20px;\n        }\n\n        .post-card {\n            background-color: var(--card-bg);\n            border: var(--border-width) solid var(--border-color);\n            border-radius: 12px;\n            padding: 24px;\n            /* Hard neo-brutalist shadow */\n            box-shadow: 10px 10px 0px var(--border-color);\n            position: relative;\n            transition: transform 0.2s ease;\n        }\n\n        .post-header {\n            display: flex;\n            gap: 16px;\n            margin-bottom: 20px;\n            position: relative;\n        }\n\n        .avatar {\n            width: 56px;\n            height: 56px;\n            border-radius: 8px; /* Square with slightly rounded corners */\n            border: var(--border-width) solid var(--border-color);\n            object-fit: cover;\n            background-color: #ff5722;\n        }\n\n        .user-meta {\n            display: flex;\n            flex-direction: column;\n            justify-content: center;\n            flex-grow: 1;\n        }\n\n        .user-identifiers {\n            display: flex;\n            align-items: center;\n            gap: 10px;\n            flex-wrap: wrap;\n        }\n\n        .display-name {\n            font-weight: 700;\n            font-size: 18px;\n            letter-spacing: -0.5px;\n        }\n\n        .handle {\n            color: #555;\n            font-size: 14px;\n            font-weight: 700;\n        }\n\n        .tag-badge {\n            background-color: #fff200; /* Neon yellow */\n            border: 2px solid var(--border-color);\n            padding: 2px 8px;\n            font-size: 10px;\n            font-weight: 700;\n            border-radius: 50px;\n            box-shadow: 2px 2px 0px var(--border-color);\n        }\n\n        .user-bio {\n            font-family: 'Space Mono', monospace;\n            color: #444;\n            font-size: 11px;\n            margin-top: 6px;\n            background: #f0f0f0;\n            padding: 4px 8px;\n            border-radius: 4px;\n            display: inline-block;\n            border: 1px dashed #000;\n        }\n\n        .timestamp {\n            position: absolute;\n            top: 0;\n            right: 0;\n            font-family: 'Space Mono', monospace;\n            font-weight: 700;\n            font-size: 14px;\n            background: var(--border-color);\n            color: #fff;\n            padding: 4px 10px;\n            border-radius: 8px;\n            transform: rotate(3deg);\n        }\n\n        .post-body p {\n            font-size: 18px;\n            line-height: 1.6;\n            font-weight: 700;\n            margin: 0 0 24px 0;\n            word-wrap: break-word;\n        }\n\n        .post-footer {\n            display: flex;\n            gap: 16px;\n            border-top: var(--border-width) solid var(--border-color);\n            padding-top: 16px;\n        }\n\n        .action-btn {\n            background: #fff;\n            border: 2px solid var(--border-color);\n            color: var(--text-primary);\n            font-family: 'Space Grotesk', sans-serif;\n            font-weight: 700;\n            font-size: 16px;\n            display: flex;\n            align-items: center;\n            gap: 8px;\n            cursor: pointer;\n            padding: 8px 16px;\n            border-radius: 8px;\n            box-shadow: 4px 4px 0px var(--border-color);\n            transition: all 0.1s ease-in-out;\n        }\n\n        .action-btn:hover {\n            background-color: #f0f0f0;\n            transform: translate(-2px, -2px);\n            box-shadow: 6px 6px 0px var(--border-color);\n        }\n\n        /* The button physically presses down when clicked */\n        .action-btn:active {\n            transform: translate(4px, 4px);\n            box-shadow: 0px 0px 0px var(--border-color);\n        }\n\n        .action-btn.comment { background-color: #4facf7; color: white; }\n        .action-btn.repost { background-color: #68d391; color: white; }\n\n        .action-btn.like { \n            background-color: #fff; \n        }\n\n        .action-btn.like.liked {\n            background-color: #ffb6c1;\n            border-color: #e0245e;\n            box-shadow: 4px 4px 0px #e0245e;\n        }\n        .action-btn.like.liked:hover { box-shadow: 6px 6px 0px #e0245e; }\n        .action-btn.like.liked:active { box-shadow: 0px 0px 0px #e0245e; }\n    </style>\n</head>\n<body>\n\n    <div class=\"feed-container\">\n        <article class=\"post-card\">\n            \n            <div class=\"post-header\">\n                <img src=\"avatar.jpg\" alt=\"Profile Picture\" class=\"avatar\" onerror=\"this.src='https://via.placeholder.com/60/FF5722/000000?text=SC'\">\n                \n                <div class=\"user-meta\">\n                    <div class=\"user-identifiers\">\n                        <span class=\"display-name\">ShadowCatcher</span>\n                        <span class=\"handle\">@ShadowCatcher_99</span>\n                        <div class=\"tag-badge\">ON THE MOVE</div>\n                    </div>\n                    <div class=\"user-bio\">&gt; Formerly JavierG_Oakwood_Middle | Est. 2012</div>\n                </div>\n                \n                <div class=\"timestamp\">4:15 PM</div>\n            </div>\n\n            <div class=\"post-body\">\n                <p>Just finished soccer practice at the fields! ⚽ Exhausted. If Route 42 is late one more time, I'm going to lose my mind. At least I've got a massive slice from Tony's on 5th Street waiting for me at home. Let's go Blue Hawks! 🦅🍕🚌</p>\n            </div>\n\n            <div class=\"post-footer\">\n                <button class=\"action-btn comment\">\n                    <span class=\"icon\">💬</span> 4\n                </button>\n                <button class=\"action-btn repost\">\n                    <span class=\"icon\">🔁</span> 2\n                </button>\n                <button class=\"action-btn like\" id=\"like-btn\">\n                    <span class=\"icon\" id=\"like-icon\">🤍</span> <span id=\"like-count\">38</span>\n                </button>\n            </div>\n        </article>\n    </div>\n\n    <script>\n        document.addEventListener(\"DOMContentLoaded\", () => {\n            const likeBtn = document.getElementById(\"like-btn\");\n            const likeIcon = document.getElementById(\"like-icon\");\n            const likeCountSpan = document.getElementById(\"like-count\");\n            \n            let isLiked = false;\n            let likeCount = parseInt(likeCountSpan.innerText);\n\n            likeBtn.addEventListener(\"click\", () => {\n                isLiked = !isLiked;\n                \n                if (isLiked) {\n                    likeIcon.innerText = \"❤️\";\n                    likeBtn.classList.add(\"liked\");\n                    likeCount++;\n                } else {\n                    likeIcon.innerText = \"🤍\";\n                    likeBtn.classList.remove(\"liked\");\n                    likeCount--;\n                }\n                \n                likeCountSpan.innerText = likeCount;\n            });\n        });\n    </script>\n</body>\n</html>",
+          "folderId": "0",
+          "active": false
+        },
+        "2": {
+          "id": "2",
+          "name": "avatar.jpg",
+          "contents": "",
+          "folderId": "0",
+          "url": "/level_starter_assets/thinking_critically_lesson8_level2b_2026/uuid/11cbcc31-6803-4353-a3d5-2a3f20f42f44.jpg",
+          "type": "starter",
+          "active": true
+        }
+      },
+      "openFiles": [
+        "1",
+        "2"
+      ]
+    },
+    "thumbnail_url": "https://images.code.org/5fb5e274c9dae3549905f279cb8e7dc0-two.jpg"
+  },
+  "audit_log": "[{\"changed_at\":\"2026-04-28T16:04:42.792+00:00\",\"changed\":[\"cloned from \\\"thinking_critically_lesson8_level2a_2026\\\"\"],\"cloned_from\":\"thinking_critically_lesson8_level2a_2026\"},{\"changed_at\":\"2026-04-28 16:09:50 +0000\",\"changed\":[\"display_name\",\"bubble_choice_description\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-28 16:10:12 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-28 16:57:43 +0000\",\"changed\":[\"display_name\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"}]"
+}]]></config>
+</Weblab2>

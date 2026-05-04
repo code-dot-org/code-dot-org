@@ -37,7 +37,29 @@
         },
         {
           "type": "radiogroup",
-          "name": "main_goal_intro_to_teaching_ai_foundations_sem_1",
+          "name": "main_goal_curriculum",
+          "visibleIf": "{module} = 'Exploring AI & Computing'",
+          "title": "My main goal for this professional learning is to:",
+          "choices": [
+            {
+              "value": "better_understand_module",
+              "text": "Better understand Code.org's {module} curriculum"
+            },
+            {
+              "value": "learn_cs_teaching_strategies",
+              "text": "Learn best strategies for teaching {module}"
+            },
+            {
+              "value": "continuing_education_requirements",
+              "text": "Fulfill continuing education requirements or pursue professional credentials"
+            }
+          ],
+          "hasOther": true
+        },
+        {
+          "type": "radiogroup",
+          "name": "main_goal_module",
+          "visibleIf": "{module} != 'Exploring AI & Computing'",
           "title": "My main goal for this professional learning is to:",
           "choices": [
             {
@@ -46,7 +68,7 @@
             },
             {
               "value": "learn_content_module",
-              "text": "Learn the {module} content covered in this curriculum"
+              "text": "Learn the {module} content covered in this module"
             },
             {
               "value": "learn_cs_teaching_strategies",

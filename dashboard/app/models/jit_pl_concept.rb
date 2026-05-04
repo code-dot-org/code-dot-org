@@ -18,6 +18,7 @@ class JitPlConcept < ApplicationRecord
   has_and_belongs_to_many :resources, join_table: :jit_pl_concepts_resources
   has_and_belongs_to_many :lessons, join_table: :jit_pl_concepts_lessons
   has_and_belongs_to_many :rubrics, join_table: :jit_pl_concepts_rubrics
+  has_and_belongs_to_many :json_videos, join_table: :jit_pl_concepts_json_videos
 
   validates_uniqueness_of :name, case_sensitive: false
 

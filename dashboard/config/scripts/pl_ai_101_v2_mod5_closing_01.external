@@ -6,27 +6,28 @@ markdown <<MARKDOWN
 # Don't stop here, keep learning!
 
 ## Additional Resources
-* #### <a href="https://docs.google.com/presentation/d/1WXvjG9TscUuH5Xz8Pj2okz6lMIKV__g0v6AoYVXKb40/copy " target="_blank">Large Language Model Prompts for Educators</a> from Code.org. 
-* #### <a href="https://www.aiforeducation.io/prompt-library " target="_blank">Educator's Prompt Library</a> from AI for Education.
 * #### <a href="https://www.teachai.org/" target="_blank">TeachAI.org</a> Empowering educators to teach with and about AI.
-* #### <a href="https://www.teachai.org/ailiteracy" target="_blank">AILit Framework</a> from TeachAI.org.
 * #### <a href="https://iste-ascd.org/ai" target="_blank">Artificial Intelligence in Education</a> from ISTE.
+* #### <a href="https://iacomputinged.org/graiser/" target="_blank">Guidelines for Responsible Use of AI in Education Research</a> from Advancing Computing Education.
+* #### <a href="https://aipedagogy.org/" target="_blank">AI Pedagogy Project</a>
+
 
 ## Take it Further Activities
 
 #### Want to learn more? Try out the following optional activities.
-  <!-- Dropdown 1 -->
+
+  <!-- Dropdown 3 -->
 <details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
 
 <summary style="font-size: 16px; font-weight: bold">
-	Google AI in K12 Education
+	Check out AI Guidance in your State/Country
 </summary>
 
 <div style="margin-top: 10px; padding-top: 10px; border-top: 1px solid #ddd;">
-<p style="margin: 5px 0 10px 0; font-size: 16px; line-height: 1.5;">If your school uses Google AI, take one of their online courses to learn how to make the most of those systems.
+<p style="margin: 5px 0 10px 0; font-size: 16px; line-height: 1.5;">The TeachAI AI in Education Guidance and Policy Tracker can help you find AI gudiance for your state or country.
 </p>
 
-<a href="https://edu.exceedlms.com/student/path/1725537" 
+  <a href="https://www.teachai.org/policy-tracker" 
          target="blank" 
          rel="noopener noreferrer" 
          style="display: inline-block; margin-top: 5px; padding: 8px 12px; background-color: #026C7A; color: #ffffff; text-decoration: none; border-radius: 6px; font-size: 14px;">Check it Out
@@ -39,32 +40,26 @@ markdown <<MARKDOWN
 <details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
 
 <summary style="font-size: 16px; font-weight: bold">
-	Tool Comparison Activity
+	Create an AI Use Guideline for Your Classroom
 </summary>
 
 <div style="margin-top: 10px; padding-top: 10px; border-top: 1px solid #ddd;">
-<p style="margin: 5px 0 10px 0; font-size: 16px; line-height: 1.5;">Every LLM responds slightly differently and users often develop preferences for one over the other. Take the time to try out the same prompt in multiple LLMs and see how the responses differ. <br><br>Reflect on which set of responses do you prefer and try to articulate why.
+<p style="margin: 5px 0 10px 0; font-size: 16px; line-height: 1.5;">Draft a short set of expectations for how students should use AI tools. Include guidelines for privacy, accuracy, and appropriate use. Reference the <a href="https://www.teachai.org/toolkit-guidance" target="_blank">Sample Guidance</a> from TeachAI.org to help you.
 </p>
 </div>
 
 </details>
 
-  <!-- Dropdown 3 -->
+  <!-- Dropdown 1 -->
 <details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
 
 <summary style="font-size: 16px; font-weight: bold">
-	In Depth Look at Prompting
+	AI Mini-Lesson
 </summary>
 
 <div style="margin-top: 10px; padding-top: 10px; border-top: 1px solid #ddd;">
-<p style="margin: 5px 0 10px 0; font-size: 16px; line-height: 1.5;">This module introduces prompting and one possible prompting framework, but prompt engineering goes way deeper. OpenAI publishes clear explanation of how prompts affect outputs and examples of improving prompts with structure and detail.
+<p style="margin: 5px 0 10px 0; font-size: 16px; line-height: 1.5;">Design a mini-lesson or activity for your classroom that addresses topics of AI misinformation, bias, or data privacy.
 </p>
-
-  <a href="https://developers.openai.com/api/docs/guides/prompt-guidance" 
-         target="blank" 
-         rel="noopener noreferrer" 
-         style="display: inline-block; margin-top: 5px; padding: 8px 12px; background-color: #026C7A; color: #ffffff; text-decoration: none; border-radius: 6px; font-size: 14px;">Check it Out
-</a>
 </div>
 
 </details>

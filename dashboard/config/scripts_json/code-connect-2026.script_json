@@ -1,0 +1,385 @@
+{
+  "script": {
+    "name": "code-connect-2026",
+    "wrapup_video_id": null,
+    "login_required": false,
+    "properties": {
+      "is_migrated": true
+    },
+    "new_name": null,
+    "family_name": null,
+    "serialized_at": "2026-05-01 20:45:27 UTC",
+    "hide_within_course": false,
+    "published_state": "in_development",
+    "instruction_type": null,
+    "instructor_audience": null,
+    "participant_audience": null,
+    "seeding_key": {
+      "script.name": "code-connect-2026"
+    }
+  },
+  "lesson_groups": [
+    {
+      "key": "",
+      "user_facing": false,
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_group.key": "",
+        "script.name": "code-connect-2026"
+      }
+    }
+  ],
+  "lessons": [
+    {
+      "key": "lesson-1",
+      "name": "Build Your First Web Page with AI",
+      "absolute_position": 1,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "code-connect-2026"
+      }
+    }
+  ],
+  "lesson_activities": [
+    {
+      "key": "a555fad6-bc01-4c38-ad78-0a476afdbb91",
+      "position": 1,
+      "properties": {
+        "duration": 45,
+        "name": "Build Your First Web Page with AI"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "a555fad6-bc01-4c38-ad78-0a476afdbb91",
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "code-connect-2026"
+      }
+    }
+  ],
+  "activity_sections": [
+    {
+      "key": "3bdafcc0-e126-4d3a-bc14-819cf553486f",
+      "position": 1,
+      "properties": {
+        "progression_name": "Explore Web Lab!"
+      },
+      "seeding_key": {
+        "activity_section.key": "3bdafcc0-e126-4d3a-bc14-819cf553486f",
+        "lesson_activity.key": "a555fad6-bc01-4c38-ad78-0a476afdbb91"
+      }
+    },
+    {
+      "key": "8e2df5f7-7804-4973-af40-9792ba311346",
+      "position": 2,
+      "properties": {
+        "progression_name": "Brainstorm Your Idea"
+      },
+      "seeding_key": {
+        "activity_section.key": "8e2df5f7-7804-4973-af40-9792ba311346",
+        "lesson_activity.key": "a555fad6-bc01-4c38-ad78-0a476afdbb91"
+      }
+    },
+    {
+      "key": "6b283a5d-f5e0-4679-a6e3-cdc1888298b3",
+      "position": 3,
+      "properties": {
+        "progression_name": "Design Your Website"
+      },
+      "seeding_key": {
+        "activity_section.key": "6b283a5d-f5e0-4679-a6e3-cdc1888298b3",
+        "lesson_activity.key": "a555fad6-bc01-4c38-ad78-0a476afdbb91"
+      }
+    },
+    {
+      "key": "5c60fe80-24f2-430b-87af-63b8b7656383",
+      "position": 4,
+      "properties": {
+        "progression_name": "Share Your Feedback: Sketch Lab"
+      },
+      "seeding_key": {
+        "activity_section.key": "5c60fe80-24f2-430b-87af-63b8b7656383",
+        "lesson_activity.key": "a555fad6-bc01-4c38-ad78-0a476afdbb91"
+      }
+    },
+    {
+      "key": "36f9a0a9-d3e6-470e-b028-5467b51c8731",
+      "position": 5,
+      "properties": {
+        "progression_name": "Build Your Website"
+      },
+      "seeding_key": {
+        "activity_section.key": "36f9a0a9-d3e6-470e-b028-5467b51c8731",
+        "lesson_activity.key": "a555fad6-bc01-4c38-ad78-0a476afdbb91"
+      }
+    },
+    {
+      "key": "00605858-af15-4b31-8fc1-5bc0cd9f1268",
+      "position": 6,
+      "properties": {
+        "progression_name": "Share Your Feedback: Web Lab"
+      },
+      "seeding_key": {
+        "activity_section.key": "00605858-af15-4b31-8fc1-5bc0cd9f1268",
+        "lesson_activity.key": "a555fad6-bc01-4c38-ad78-0a476afdbb91"
+      }
+    }
+  ],
+  "script_levels": [
+    {
+      "chapter": 1,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Explore Web Lab!"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "code_connect_template_explore_web_lab_2026"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "code-connect-2026",
+        "activity_section.key": "3bdafcc0-e126-4d3a-bc14-819cf553486f"
+      },
+      "level_keys": [
+        "code_connect_template_explore_web_lab_2026"
+      ]
+    },
+    {
+      "chapter": 2,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Brainstorm Your Idea"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "2026-code-connect-aichat"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "code-connect-2026",
+        "activity_section.key": "8e2df5f7-7804-4973-af40-9792ba311346"
+      },
+      "level_keys": [
+        "2026-code-connect-aichat"
+      ]
+    },
+    {
+      "chapter": 3,
+      "position": 3,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Design Your Website"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "code-connect-choice-sketch-lab-2026"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "code-connect-2026",
+        "activity_section.key": "6b283a5d-f5e0-4679-a6e3-cdc1888298b3"
+      },
+      "level_keys": [
+        "code-connect-choice-sketch-lab-2026"
+      ]
+    },
+    {
+      "chapter": 4,
+      "position": 4,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Share Your Feedback: Sketch Lab"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "code-connect-sketch-lab-survey-2026"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "code-connect-2026",
+        "activity_section.key": "5c60fe80-24f2-430b-87af-63b8b7656383"
+      },
+      "level_keys": [
+        "code-connect-sketch-lab-survey-2026"
+      ]
+    },
+    {
+      "chapter": 5,
+      "position": 5,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Build Your Website"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "code_connect_build_your_web_app_project_2026"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "code-connect-2026",
+        "activity_section.key": "36f9a0a9-d3e6-470e-b028-5467b51c8731"
+      },
+      "level_keys": [
+        "code_connect_build_your_web_app_project_2026"
+      ]
+    },
+    {
+      "chapter": 6,
+      "position": 6,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Share Your Feedback: Web Lab"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "code-connect-web-lab-survey-2026"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "code-connect-2026",
+        "activity_section.key": "00605858-af15-4b31-8fc1-5bc0cd9f1268"
+      },
+      "level_keys": [
+        "code-connect-web-lab-survey-2026"
+      ]
+    }
+  ],
+  "levels_script_levels": [
+    {
+      "seeding_key": {
+        "level.key": "code_connect_template_explore_web_lab_2026",
+        "script_level.level_keys": [
+          "code_connect_template_explore_web_lab_2026"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "code-connect-2026",
+        "activity_section.key": "3bdafcc0-e126-4d3a-bc14-819cf553486f"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "2026-code-connect-aichat",
+        "script_level.level_keys": [
+          "2026-code-connect-aichat"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "code-connect-2026",
+        "activity_section.key": "8e2df5f7-7804-4973-af40-9792ba311346"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "code-connect-choice-sketch-lab-2026",
+        "script_level.level_keys": [
+          "code-connect-choice-sketch-lab-2026"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "code-connect-2026",
+        "activity_section.key": "6b283a5d-f5e0-4679-a6e3-cdc1888298b3"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "code-connect-sketch-lab-survey-2026",
+        "script_level.level_keys": [
+          "code-connect-sketch-lab-survey-2026"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "code-connect-2026",
+        "activity_section.key": "5c60fe80-24f2-430b-87af-63b8b7656383"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "code_connect_build_your_web_app_project_2026",
+        "script_level.level_keys": [
+          "code_connect_build_your_web_app_project_2026"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "code-connect-2026",
+        "activity_section.key": "36f9a0a9-d3e6-470e-b028-5467b51c8731"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "code-connect-web-lab-survey-2026",
+        "script_level.level_keys": [
+          "code-connect-web-lab-survey-2026"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "code-connect-2026",
+        "activity_section.key": "00605858-af15-4b31-8fc1-5bc0cd9f1268"
+      }
+    }
+  ],
+  "resources": [
+
+  ],
+  "lessons_resources": [
+
+  ],
+  "scripts_resources": [
+
+  ],
+  "scripts_student_resources": [
+
+  ],
+  "vocabularies": [
+
+  ],
+  "lessons_vocabularies": [
+
+  ],
+  "lessons_programming_expressions": [
+
+  ],
+  "objectives": [
+
+  ],
+  "lessons_standards": [
+
+  ],
+  "lessons_opportunity_standards": [
+
+  ],
+  "jit_pl_concepts_lessons": [
+
+  ],
+  "rubrics": [
+
+  ],
+  "learning_goals": [
+
+  ],
+  "learning_goal_evidence_levels": [
+
+  ]
+}

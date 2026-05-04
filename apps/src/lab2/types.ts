@@ -25,6 +25,7 @@ import {AiTutorPromptSettings} from '@cdo/apps/weblab2/types';
 import {lab2EntryPoints} from '../../lab2EntryPoints';
 import type {
   ImageNodeData,
+  LineAnchorNodeData,
   ShapeNodeData,
   TextNodeData,
 } from '../sketchlab/reactFlow/types';
@@ -101,21 +102,35 @@ export type Source =
 interface SketchlabReactFlowNodeBase {
   id: string;
   position: {x: number; y: number};
+  // width and height are set by NodeResizer when the user drags a handle
+  // (or by keyboard resize) and are persisted so the node restores at the
+  // correct size on reload.
+  width?: number;
+  height?: number;
   style?: CSSProperties;
 }
 
 export type SketchlabReactFlowNode =
   | (SketchlabReactFlowNodeBase & {type: 'shape'; data: ShapeNodeData})
   | (SketchlabReactFlowNodeBase & {type: 'text'; data: TextNodeData})
-  | (SketchlabReactFlowNodeBase & {type: 'image'; data: ImageNodeData});
+  | (SketchlabReactFlowNodeBase & {type: 'image'; data: ImageNodeData})
+  | (SketchlabReactFlowNodeBase & {
+      type: 'lineAnchor';
+      data: LineAnchorNodeData;
+    });
 
 export interface SketchlabReactFlowEdge {
   id: string;
   source: string;
   target: string;
+  style?: CSSProperties;
+  data?: {
+    locked?: boolean;
+  };
   sourceHandle?: string;
   targetHandle?: string;
   type?: string;
+  markerStart?: EdgeMarkerType;
   markerEnd?: EdgeMarkerType;
 }
 

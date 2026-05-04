@@ -12,7 +12,7 @@ Given "I am in Europe" do
   end
 
   # Get an appropriately european IP address
-  location_cookie = '102.177.191.255' # Spain
+  location_cookie = '150.214.39.255' # Spain
   steps %Q[Given I use a cookie to mock my IP address as "#{location_cookie}"]
 end
 

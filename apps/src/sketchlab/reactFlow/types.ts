@@ -5,40 +5,59 @@ import type {
   SketchlabReactFlowSource,
 } from '@cdo/apps/lab2/types';
 
-import type {FontSizeValue} from './nodes/nodeToolbars/toolbarPalettes';
+import type {FontSizeValue} from './elementToolbars/toolbarPalettes';
 
-export type ShapeType = 'rectangle' | 'triangle' | 'circle';
+export type ShapeType = 'rectangle' | 'triangle' | 'circle' | 'diamond';
 
 export type ReactFlowSketchLabSources = ProjectSources & {
   source: SketchlabReactFlowSource;
 };
 
+export type NodeDataBase = {
+  showHandles?: boolean;
+  // rotation is in degrees, normalized 0-359.
+  rotation?: number;
+  locked?: boolean;
+};
+
 // Typed runtime data shapes for each custom node.
-export type ShapeNodeData = {
+export type ShapeNodeData = NodeDataBase & {
   shapeType: ShapeType;
   label: string;
   backgroundColor?: string;
   strokeColor?: string;
   fontColor?: string;
   fontSize?: FontSizeValue;
-  showHandles?: boolean;
 };
 
-export type TextNodeData = {
+export type TextNodeData = NodeDataBase & {
   text: string;
   fontColor?: string;
   fontSize?: FontSizeValue;
-  showHandles?: boolean;
 };
 
-export type ImageNodeData = {
+export type ImageNodeData = NodeDataBase & {
   src: string;
   altText: string;
-  showHandles?: boolean;
 };
+
+export type LineAnchorNodeData = NodeDataBase & {
+  lineAnchorRole: 'source' | 'target';
+};
+
+export type AddNodeRequest =
+  | {type: 'shape'; data: ShapeNodeData}
+  | {type: 'text'; data: TextNodeData}
+  | {type: 'image'; data: ImageNodeData}
+  | {type: 'line'}
+  | {type: 'arrow'};
 
 export type ShapeNodeType = Node<ShapeNodeData, 'shape'>;
 export type TextNodeType = Node<TextNodeData, 'text'>;
 export type ImageNodeType = Node<ImageNodeData, 'image'>;
-
-export type SketchLabNode = ShapeNodeType | TextNodeType | ImageNodeType;
+export type LineAnchorNodeType = Node<LineAnchorNodeData, 'lineAnchor'>;
+export type SketchLabNode =
+  | ShapeNodeType
+  | TextNodeType
+  | ImageNodeType
+  | LineAnchorNodeType;
