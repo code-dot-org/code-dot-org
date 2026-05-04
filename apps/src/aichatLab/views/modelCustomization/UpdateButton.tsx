@@ -5,7 +5,7 @@ import React, {useCallback} from 'react';
 import {
   selectHavePropertiesChanged,
   updateAiCustomization,
-} from '@cdo/apps/aichat/redux';
+} from '@cdo/apps/aichatLab/redux';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 import styles from '../model-customization-workspace.module.scss';
@@ -22,8 +22,12 @@ const UpdateButton: React.FunctionComponent<UpdateButtonProps> = ({
     () => dispatch(updateAiCustomization()),
     [dispatch]
   );
-  const saveInProgress = useAppSelector(state => state.aichat.saveInProgress);
-  const currentSaveType = useAppSelector(state => state.aichat.currentSaveType);
+  const saveInProgress = useAppSelector(
+    state => state.aichatLab.saveInProgress
+  );
+  const currentSaveType = useAppSelector(
+    state => state.aichatLab.currentSaveType
+  );
   const havePropertiesChanged = useAppSelector(selectHavePropertiesChanged);
 
   return (

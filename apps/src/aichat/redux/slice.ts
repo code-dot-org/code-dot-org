@@ -1,39 +1,24 @@
 import {createSlice, PayloadAction} from '@reduxjs/toolkit';
 
-import {
-  AiCustomizations,
-  LevelAichatSettings,
-  ModalTypes,
-  ModelCardInfo,
-  SaveError,
-  SaveType,
-  ViewMode,
-  Visibility,
-} from '@cdo/apps/aichatLab/types';
-import {validateModelId} from '@cdo/apps/aichatLab/utils';
-import {
-  DEFAULT_VISIBILITIES,
-  EMPTY_AI_CUSTOMIZATIONS,
-} from '@cdo/apps/aichatLab/views/modelCustomization/constants';
 import {registerReducers} from '@cdo/apps/redux';
 import {AiChatClientTypes} from '@cdo/generated-scripts/sharedConstants';
 
 import {RESET_CONVERSATION_CUSTOMIZATION_UPDATES} from '../constants';
 import {
+  AiChatClientType,
+  ChatAsset,
   ChatEvent,
+  ChatMessage,
+  CompletedChatMessage,
+  FeedbackValue,
+  isCompletedChatMessage,
   isModelUpdate,
   isNotification,
-  isUserActionEvent,
-  FeedbackValue,
-  ServerChatEvent,
-  isCompletedChatMessage,
-  ChatAsset,
-  AiChatClientType,
-  WorkspaceTeacherViewTab,
-  UserAddedSelectionContextItem,
-  ChatMessage,
   isPendingOrCompletedChatMessage,
-  CompletedChatMessage,
+  isUserActionEvent,
+  ServerChatEvent,
+  UserAddedSelectionContextItem,
+  WorkspaceTeacherViewTab,
   UploadStatus,
 } from '../types';
 
@@ -44,22 +29,8 @@ const initialState: AichatState = {
   chatEventsPast: [],
   chatEventsCurrent: [],
   studentChatHistory: [],
-  showModalType: undefined,
-  initialAiCustomizations: EMPTY_AI_CUSTOMIZATIONS,
-  currentAiCustomizations: EMPTY_AI_CUSTOMIZATIONS,
-  savedAiCustomizations: EMPTY_AI_CUSTOMIZATIONS,
-  fieldVisibilities: DEFAULT_VISIBILITIES,
-  viewMode: ViewMode.EDIT,
-  saveInProgress: false,
-  currentSaveType: undefined,
   stagedFiles: [],
   stagedFilesAlert: undefined,
-  hasSentMessage: false,
-  hasUpdatedCustomizations: false,
-  saveError: undefined,
-  showResetMessage: false,
-  showUnsupportedModelMessage: false,
-  hasSetInitialCustomizations: false,
   chatWorkspaceSelectedTab: null,
   userAddedSelectionContext: {},
 };
@@ -168,120 +139,9 @@ const aichatSlice = createSlice({
       if (!event) return;
       (event as CompletedChatMessage).requestId = action.payload.requestId;
     },
-    setChatMessageSent: (state, action: PayloadAction<boolean>) => {
-      state.hasSentMessage = action.payload;
-    },
     setNewChatSession: state => {
       state.chatEventsPast.push(...state.chatEventsCurrent);
       state.chatEventsCurrent = [];
-    },
-    setShowModalType: (
-      state,
-      action: PayloadAction<ModalTypes | undefined>
-    ) => {
-      state.showModalType = action.payload;
-    },
-    setViewMode: (state, action: PayloadAction<ViewMode>) => {
-      state.viewMode = action.payload;
-    },
-    setInitialConfiguration: (
-      state,
-      action: PayloadAction<{
-        customizations: AiCustomizations;
-        visibilities: {[key in keyof AiCustomizations]: Visibility};
-        showUnsupportedModelMessage: boolean;
-      }>
-    ) => {
-      const {customizations, visibilities, showUnsupportedModelMessage} =
-        action.payload;
-      state.initialAiCustomizations = customizations;
-      state.savedAiCustomizations = customizations;
-      state.currentAiCustomizations = customizations;
-      state.fieldVisibilities = visibilities;
-
-      // Reset sent message and updated customizations flags
-      state.hasSentMessage = false;
-      state.hasUpdatedCustomizations = false;
-      state.hasSetInitialCustomizations = true;
-      state.showUnsupportedModelMessage = showUnsupportedModelMessage;
-    },
-    clearHasSetInitialCustomizations: state => {
-      state.hasSetInitialCustomizations = false;
-    },
-    resetToDefaultAiCustomizations: (
-      state,
-      action: PayloadAction<LevelAichatSettings | undefined>
-    ) => {
-      const levelAichatSettings = action.payload;
-
-      let defaultAiCustomizations: AiCustomizations =
-        levelAichatSettings?.initialCustomizations || EMPTY_AI_CUSTOMIZATIONS;
-
-      // Make sure model ID is valid
-      defaultAiCustomizations = {
-        ...defaultAiCustomizations,
-        selectedModelId: validateModelId(
-          defaultAiCustomizations.selectedModelId,
-          levelAichatSettings?.availableModelIds
-        ).modelId,
-      };
-
-      state.currentAiCustomizations = defaultAiCustomizations;
-      state.fieldVisibilities =
-        levelAichatSettings?.visibilities || DEFAULT_VISIBILITIES;
-      state.showResetMessage = true;
-    },
-    setSavedAiCustomizations: (
-      state,
-      action: PayloadAction<AiCustomizations>
-    ) => {
-      state.savedAiCustomizations = action.payload;
-      state.hasUpdatedCustomizations = true;
-    },
-    setAiCustomizationProperty: <T extends keyof AiCustomizations>(
-      state: AichatState,
-      action: PayloadAction<{
-        property: T;
-        value: AiCustomizations[T];
-      }>
-    ) => {
-      const {property, value} = action.payload;
-      const updatedAiCustomizations = {
-        ...state.currentAiCustomizations,
-        [property]: value,
-      };
-      state.currentAiCustomizations = updatedAiCustomizations;
-      // Clear save error and reset message, if any.
-      state.saveError = undefined;
-      state.showResetMessage = false;
-      state.showUnsupportedModelMessage = false;
-    },
-    setModelCardProperty: <T extends keyof ModelCardInfo>(
-      state: AichatState,
-      action: PayloadAction<{
-        property: T;
-        value: ModelCardInfo[T];
-      }>
-    ) => {
-      const {property, value} = action.payload;
-      const updatedModelCardInfo: ModelCardInfo = {
-        ...state.currentAiCustomizations.modelCardInfo,
-        [property]: value,
-      };
-      state.currentAiCustomizations.modelCardInfo = updatedModelCardInfo;
-      state.showResetMessage = false;
-      state.showUnsupportedModelMessage = false;
-    },
-    startSave(state, action: PayloadAction<SaveType>) {
-      state.saveInProgress = true;
-      state.currentSaveType = action.payload;
-      // Clear save error, if any.
-      state.saveError = undefined;
-      state.showUnsupportedModelMessage = false;
-    },
-    endSave(state) {
-      state.saveInProgress = false;
-      state.currentSaveType = undefined;
     },
     addStagedFile(
       state,
@@ -334,9 +194,6 @@ const aichatSlice = createSlice({
     clearStagedFiles(state) {
       state.stagedFiles = [];
       state.stagedFilesAlert = undefined;
-    },
-    setSaveError(state, action: PayloadAction<SaveError | undefined>) {
-      state.saveError = action.payload;
     },
     setChatWorkspaceSelectedTab(
       state,
@@ -394,33 +251,21 @@ export const aichatReducer = aichatSlice.reducer;
 
 export const {
   addEventToChatEventsCurrent,
-  startSave,
   updateChatMessageStatus,
   updateRequestId,
-  setChatMessageSent,
-  setSavedAiCustomizations,
   updateChatMessageFeedback,
   clearChatMessages,
-  endSave,
   removeUpdateMessage,
-  resetToDefaultAiCustomizations,
-  setAiCustomizationProperty,
-  setModelCardProperty,
   setNewChatSession,
-  setShowModalType,
-  setInitialConfiguration,
   setStudentChatHistory,
   setOwnChatHistory,
   setClientType,
-  setViewMode,
   addStagedFile,
   stagedFileUploadFinished,
   removeStagedFile,
   clearStagedFiles,
   stagedFilesLimitExceeded,
   clearStagedFilesAlert,
-  setSaveError,
-  clearHasSetInitialCustomizations,
   setChatWorkspaceSelectedTab,
   addItemToUserAddedSelectionContext,
   removeItemFromUserAddedSelectionContext,

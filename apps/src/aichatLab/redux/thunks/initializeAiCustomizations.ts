@@ -1,3 +1,4 @@
+import {sendAnalytics} from '@cdo/apps/aichat/redux';
 import {
   AiCustomizations,
   LevelAichatSettings,
@@ -13,8 +14,6 @@ import {getTypedKeys} from '@cdo/apps/types/utils';
 import {AppDispatch} from '@cdo/apps/util/reduxHooks';
 
 import {setInitialConfiguration} from '../slice';
-
-import {sendAnalytics} from './sendAnalytics';
 
 /**
  * Initialize AI customizations for the level by reconciling student customizations
