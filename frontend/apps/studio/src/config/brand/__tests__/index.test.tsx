@@ -10,14 +10,6 @@ import type {Brand} from '@code-dot-org/core';
 import {getBrandConfig} from '../index';
 
 describe('getBrandConfig', () => {
-  it('returns Code.org legalName for code.org brand', () => {
-    expect(getBrandConfig('code.org').legalName).toBe('Code.org');
-  });
-
-  it('returns AIDay legalName for aiday brand', () => {
-    expect(getBrandConfig('aiday').legalName).toBe('AIDay');
-  });
-
   it('code.org copyright renders brand name and current year', () => {
     const {copyright} = getBrandConfig('code.org');
     const {container} = render(<>{copyright}</>);
@@ -40,8 +32,24 @@ describe('getBrandConfig', () => {
     expect(container.textContent).toContain('trademarks of Code.org');
   });
 
+  it('code.org fineprint contains vendor attributions and trademark', () => {
+    const {fineprint} = getBrandConfig('code.org');
+    const {container} = render(<>{fineprint}</>);
+    const text = container.textContent ?? '';
+    expect(text).toContain('Amazon, Google, and Microsoft');
+    expect(text).toContain('trademarks of Code.org');
+    expect(text).toContain('Built on GitHub from Microsoft');
+  });
+
+  it('aiday fineprint contains aiday trademark', () => {
+    const {fineprint} = getBrandConfig('aiday');
+    const {container} = render(<>{fineprint}</>);
+    expect(container.textContent).toContain('trademarks of AIDay');
+  });
+
   it('falls back to Code.org content for unknown brands', () => {
     const config = getBrandConfig('unknown-brand' as Brand);
-    expect(config.legalName).toBe('Code.org');
+    const {container} = render(<>{config.copyright}</>);
+    expect(container.textContent).toContain('Code.org');
   });
 });

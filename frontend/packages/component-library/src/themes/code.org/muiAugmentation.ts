@@ -114,20 +114,25 @@ declare module '@mui/material/Typography' {
   }
 }
 
-import type {CSSInterpolation} from '@mui/material/styles';
+import type {CSSInterpolation, Theme} from '@mui/material/styles';
+
+// Slot values accept either a plain style object or a theme callback.
+type SlotOverride =
+  | CSSInterpolation
+  | ((props: {theme: Theme}) => CSSInterpolation);
 
 declare module '@mui/material/styles' {
   interface Components {
     MuiFooter?: {
       styleOverrides?: {
-        root?: CSSInterpolation;
-        grid?: CSSInterpolation;
-        links?: CSSInterpolation;
-        link?: CSSInterpolation;
-        localeSelect?: CSSInterpolation;
-        copyright?: CSSInterpolation;
-        fineprint?: CSSInterpolation;
-        imageLink?: CSSInterpolation;
+        root?: SlotOverride;
+        grid?: SlotOverride;
+        links?: SlotOverride;
+        link?: SlotOverride;
+        localeSelect?: SlotOverride;
+        copyright?: SlotOverride;
+        fineprint?: SlotOverride;
+        imageLink?: SlotOverride;
       };
     };
   }

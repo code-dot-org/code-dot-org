@@ -1,13 +1,12 @@
-import {useEffect, useRef, useState} from 'react';
+import {useCallback, useEffect, useMemo, useRef, useState} from 'react';
 
 import Footer from '@code-dot-org/component-library/footer';
-import type {FooterLanguageOption} from '@code-dot-org/component-library/footer';
 import {CodeStudioConfig as siteConfig} from '@code-dot-org/core';
 import {localization} from '@code-dot-org/core/plugins/localization';
 import type {LanguageInfo} from '@code-dot-org/core/plugins/localization';
 
 import {getBrandConfig} from '@/config/brand';
-import {FOOTER_LINKS} from '@/config/footerLinks';
+import {getFooterLinks} from '@/config/footerLinks';
 
 import poweredByAwsSrc from './powered-by-aws.webp';
 
@@ -25,7 +24,9 @@ function useLocaleSelectorState(): {
     locale: localization.locale,
     locales: localization.locales,
   });
-  const [isReady, setIsReady] = useState(false);
+  // Probe synchronously so pages that already have localization loaded skip
+  // the skeleton frame entirely.
+  const [isReady, setIsReady] = useState(() => localization.isLoaded ?? false);
   const mountedRef = useRef(true);
 
   useEffect(() => {
@@ -39,17 +40,24 @@ function useLocaleSelectorState(): {
 
     localization.on('change', onChange);
 
-    localization.waitUntilLoaded().then(() => {
-      if (mountedRef.current) {
-        setIsReady(true);
-        setState({locale: localization.locale, locales: localization.locales});
-      }
-    });
+    if (!isReady) {
+      localization.waitUntilLoaded().then(() => {
+        if (mountedRef.current) {
+          setIsReady(true);
+          setState({
+            locale: localization.locale,
+            locales: localization.locales,
+          });
+        }
+      });
+    }
 
     return () => {
       mountedRef.current = false;
       localization.off('change', onChange);
     };
+    // isReady intentionally omitted — we only need the sync initial value
+    // to decide whether to await the promise.
   }, []);
 
   return {locale: state.locale, locales: state.locales, isReady};
@@ -65,47 +73,26 @@ const StudioFooter = () => {
   const brandConfig = getBrandConfig(brand);
   const {locale, locales, isReady} = useLocaleSelectorState();
 
-  const languages: FooterLanguageOption[] = locales.map(l => ({
-    value: l.value,
-    text: l.text,
-  }));
+  const siteLinks = useMemo(() => getFooterLinks(), []);
 
-  const fineprint = (
-    <>
-      Engineers from Amazon, Google, and Microsoft helped create these
-      materials.
-      <br />
-      Minecraft™ © Microsoft. All Rights Reserved. Star Wars™ © Disney and
-      Lucasfilm. All Rights Reserved. Frozen™ © Disney. All Rights Reserved.
-      Ice Age™ © 20th Century Fox. All Rights Reserved. Angry Birds ©
-      2009-2026 Rovio Entertainment Ltd. All Rights Reserved. Plants vs.
-      Zombies™ © Electronic Arts Inc. All Rights Reserved. DreamWorks The Bad
-      Guys © DreamWorks Animation LLC. All Rights Reserved. Paramount Pictures
-      Transformers One © Paramount Pictures. All Rights Reserved.
-      <br />
-      {brandConfig.trademark}
-      <br />
-      Built on GitHub from Microsoft
-    </>
-  );
+  const handleLanguageChange = useCallback((code: string) => {
+    localization.locale = code;
+  }, []);
 
   return (
     <Footer
-      siteLinks={FOOTER_LINKS}
+      siteLinks={siteLinks}
       copyright={brandConfig.copyright}
-      fineprint={fineprint}
+      fineprint={brandConfig.fineprint}
       imageLink={{
         src: poweredByAwsSrc,
         altText: 'Powered by AWS Cloud Computing',
         href: 'https://aws.amazon.com/what-is-cloud-computing',
         external: true,
       }}
-      languages={languages}
+      languages={isReady ? locales : 'loading'}
       selectedLocaleCode={locale}
-      languagesReady={isReady}
-      onLanguageChange={code => {
-        localization.locale = code;
-      }}
+      onLanguageChange={handleLanguageChange}
     />
   );
 };

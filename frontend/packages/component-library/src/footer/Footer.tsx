@@ -3,7 +3,7 @@
  *
  * Design-system footer primitive. Renders the site-links row, language
  * picker (with skeleton loading state), copyright/fineprint text, and
- * an optional AWS attribution image link.
+ * an optional attribution image link.
  *
  * All paint (colours, spacing, responsive breakpoints) lives in the
  * MuiFooter theme override. The component declares styled-component slot
@@ -16,6 +16,7 @@
 import {
   FormControl,
   Grid,
+  InputLabel,
   Link,
   List,
   ListItem,
@@ -25,7 +26,8 @@ import {
 } from '@mui/material';
 import type {LinkProps} from '@mui/material/Link';
 import {styled} from '@mui/material/styles';
-import type {ReactNode} from 'react';
+import {useId} from 'react';
+import type {CSSProperties, ReactNode} from 'react';
 
 // ---------------------------------------------------------------------------
 // Prop interfaces
@@ -42,7 +44,7 @@ export interface FooterSiteLink {
   accent?: boolean;
 }
 
-/** The AWS (or other image) attribution link rendered at the bottom. */
+/** The attribution image link rendered at the bottom. */
 export interface FooterImageLink {
   src: string;
   altText: string;
@@ -68,26 +70,25 @@ export interface FooterProps {
    * by the studio composer so the year `<span>` selector stays at the source.
    */
   copyright: ReactNode;
-  /** Art-credits + "Built on GitHub" block, rendered below copyright. */
+  /** Art-credits + trademark block, rendered below copyright. */
   fineprint?: ReactNode;
-  /** AWS attribution image + link, rendered at the very bottom. */
+  /** Attribution image + link, rendered at the very bottom. */
   imageLink?: FooterImageLink;
-  /** Available languages for the locale picker. */
-  languages: FooterLanguageOption[];
+  /**
+   * Available languages for the locale picker, or `'loading'` to show a
+   * skeleton while the list is being fetched. Passing `'loading'` avoids a
+   * 1→N option flicker when the language list resolves asynchronously.
+   */
+  languages: FooterLanguageOption[] | 'loading';
   /** Currently selected locale code (controls the picker's selected option). */
   selectedLocaleCode: string;
   /** Called with the chosen language code when the user changes the picker. */
   onLanguageChange: (code: string) => void;
-  /**
-   * When true the language list is not yet available; renders an MUI Skeleton
-   * in place of the picker to avoid a 1→N option flicker.
-   */
-  languagesReady?: boolean;
   className?: string;
 }
 
 // ---------------------------------------------------------------------------
-// Slot wrappers — empty bodies; all paint lives in the theme override (4.1)
+// Slot wrappers — empty bodies; all paint lives in the theme override
 // ---------------------------------------------------------------------------
 
 const FooterRoot = styled('footer', {
@@ -125,28 +126,51 @@ const FooterFineprint = styled(Typography, {
   slot: 'fineprint',
 })({});
 
-const FooterImageLinkSlot = styled('div', {
+const ImageLinkWrapper = styled('div', {
   name: 'MuiFooter',
   slot: 'imageLink',
 })({});
 
 // ---------------------------------------------------------------------------
-// Private FooterLink wrapper (D10)
+// Visually-hidden utility (standard clip pattern — no visible change)
 // ---------------------------------------------------------------------------
 
-// TODO(footer): remove this wrapper once the DSCO `link` → MUI `Link` migration
-// (per MIGRATION_STATUS.md) lands and MUI `Link` carries the `external` semantics
-// natively. At that point this entire block collapses to `<Link external />`.
-const FooterLink = ({external, ...props}: LinkProps & {external?: boolean}) => (
+const visuallyHidden: CSSProperties = {
+  position: 'absolute',
+  width: '1px',
+  height: '1px',
+  padding: 0,
+  margin: '-1px',
+  overflow: 'hidden',
+  clip: 'rect(0,0,0,0)',
+  whiteSpace: 'nowrap',
+  borderWidth: 0,
+};
+
+// ---------------------------------------------------------------------------
+// Private FooterAnchor wrapper
+// ---------------------------------------------------------------------------
+
+// TODO(footer): remove once DSCO `link` → MUI `Link` migration lands
+// (per MIGRATION_STATUS.md#link) and MUI `Link` carries `external` natively.
+const FooterAnchor = ({
+  external,
+  children,
+  ...props
+}: LinkProps & {external?: boolean}) => (
   <Link
     {...props}
     {...(external ? {rel: 'noopener noreferrer', target: '_blank'} : {})}
-  />
+  >
+    {children}
+  </Link>
 );
 
 // ---------------------------------------------------------------------------
 // Footer component
 // ---------------------------------------------------------------------------
+
+const LOCALE_SELECT_ID = 'footer-locale-select';
 
 /**
  * Site footer with navigation links, language picker, copyright, fineprint,
@@ -162,11 +186,20 @@ const Footer = ({
   languages,
   selectedLocaleCode,
   onLanguageChange,
-  languagesReady = true,
   className,
 }: FooterProps) => {
+  const isLoading = languages === 'loading';
+  const extLinkDescId = useId();
+
   return (
     <FooterRoot className={className}>
+      <span
+        id={extLinkDescId}
+        data-testid="footer-ext-link-notice"
+        style={visuallyHidden}
+      >
+        (opens in a new tab)
+      </span>
       <FooterGrid container>
         {/* Top: links (left) and locale picker (right), picker wraps above links on mobile */}
         <Grid
@@ -177,31 +210,47 @@ const Footer = ({
           gap={2}
         >
           <Grid size={{md: 'grow'}}>
-            <FooterLinks disablePadding>
-              {siteLinks.map(link => (
-                <ListItem
-                  key={link.id}
-                  disablePadding
-                  disableGutters
-                  sx={{display: 'inline', width: 'auto'}}
-                >
-                  <FooterLinkItem data-accent={link.accent || undefined}>
-                    <FooterLink href={link.href} external={link.external}>
-                      {link.label}
-                    </FooterLink>
-                  </FooterLinkItem>
-                </ListItem>
-              ))}
-            </FooterLinks>
+            <nav aria-label="Footer">
+              <FooterLinks disablePadding>
+                {siteLinks.map(link => (
+                  <ListItem key={link.id} disablePadding disableGutters>
+                    <FooterLinkItem>
+                      <FooterAnchor
+                        href={link.href}
+                        external={link.external}
+                        data-accent={link.accent || undefined}
+                        aria-describedby={
+                          link.external ? extLinkDescId : undefined
+                        }
+                      >
+                        {link.label}
+                      </FooterAnchor>
+                    </FooterLinkItem>
+                  </ListItem>
+                ))}
+              </FooterLinks>
+            </nav>
           </Grid>
-          {languagesReady ? (
+          {isLoading ? (
+            <FooterLocaleSelect>
+              <Skeleton
+                variant="rectangular"
+                width="8.5rem"
+                height="1.5rem"
+                role="status"
+                aria-label="Loading language options"
+              />
+            </FooterLocaleSelect>
+          ) : (
             <FooterLocaleSelect>
               <FormControl>
+                <InputLabel htmlFor={LOCALE_SELECT_ID} style={visuallyHidden}>
+                  Language
+                </InputLabel>
                 <NativeSelect
                   value={selectedLocaleCode}
                   onChange={e => onLanguageChange(e.target.value)}
-                  aria-label="Select language"
-                  inputProps={{'aria-label': 'Select language'}}
+                  inputProps={{id: LOCALE_SELECT_ID}}
                 >
                   {languages.map(lang => (
                     <option key={lang.value} value={lang.value}>
@@ -211,16 +260,16 @@ const Footer = ({
                 </NativeSelect>
               </FormControl>
             </FooterLocaleSelect>
-          ) : (
-            <FooterLocaleSelect>
-              <Skeleton variant="rectangular" />
-            </FooterLocaleSelect>
           )}
         </Grid>
 
         {/* Copyright — right-aligned to sit below the locale picker */}
         <Grid size={12}>
-          <FooterCopyright component="p" variant="body2">
+          <FooterCopyright
+            component="p"
+            variant="body2"
+            data-testid="footer-copyright"
+          >
             {copyright}
           </FooterCopyright>
         </Grid>
@@ -228,24 +277,34 @@ const Footer = ({
         {/* Fineprint */}
         {fineprint && (
           <Grid size={12}>
-            <FooterFineprint component="p" variant="body2">
+            <FooterFineprint
+              component="p"
+              variant="body2"
+              data-testid="footer-fineprint"
+            >
               {fineprint}
             </FooterFineprint>
           </Grid>
         )}
 
-        {/* AWS attribution image */}
+        {/* Attribution image */}
         {imageLink && (
           <Grid size={12}>
-            <FooterImageLinkSlot>
-              <FooterLink href={imageLink.href} external={imageLink.external}>
+            <ImageLinkWrapper>
+              <FooterAnchor
+                href={imageLink.href}
+                external={imageLink.external}
+                aria-describedby={
+                  imageLink.external ? extLinkDescId : undefined
+                }
+              >
                 <img
                   src={imageLink.src}
                   alt={imageLink.altText}
                   loading="lazy"
                 />
-              </FooterLink>
-            </FooterImageLinkSlot>
+              </FooterAnchor>
+            </ImageLinkWrapper>
           </Grid>
         )}
       </FooterGrid>

@@ -1,5 +1,10 @@
 import {Components, Theme} from '@mui/material/styles';
 
+// Shared dimension tokens — select and skeleton must stay in sync.
+const SELECT_MIN_WIDTH = '8.5rem';
+// Icon sits at insetInlineEnd: 0.25rem; this clearance keeps text from sliding under it.
+const SELECT_ICON_CLEARANCE = '1.25rem';
+
 /**
  * MuiFooter slot overrides for the code.org theme.
  * Colors use CSS custom properties. Spacing uses rem literals — no spacing
@@ -11,19 +16,19 @@ export const FOOTER_OVERRIDES: Components<Theme>['MuiFooter'] = {
     root: () => ({
       backgroundColor: 'var(--background-neutral-primary-inverse)',
       color: 'var(--text-neutral-inverse)',
-      // Production has 20px top padding only — no bottom padding; the AWS
-      // image sits flush at the bottom of the content area.
+      // Production has 20px top padding only — no bottom padding; the
+      // attribution image sits flush at the bottom of the content area.
       paddingBlockStart: '1.25rem',
     }),
     grid: () => ({
       maxWidth: '960px',
       margin: '0 auto',
       // Production uses 10px horizontal gutter (Bootstrap grid); 1rem keeps
-      // breathing room on narrow viewports while expanding content width closer
-      // to production's 940px (vs 32px → 896px).
+      // breathing room on narrow viewports while expanding content width
+      // closer to production's 940px (vs 32px → 896px).
       paddingInline: '1rem',
-      // Production inner .container has paddingBottom: 10px giving the AWS
-      // image 10px of breathing room below it.
+      // Production inner .container has paddingBottom: 10px giving the
+      // attribution image 10px of breathing room below it.
       paddingBlockEnd: '0.625rem',
       rowGap: '0.5rem',
     }),
@@ -34,21 +39,23 @@ export const FOOTER_OVERRIDES: Components<Theme>['MuiFooter'] = {
       paddingInlineStart: 0,
       '& .MuiListItem-root': {
         display: 'inline',
+        width: 'auto',
         // Pipe separators between links via CSS content so the DOM stays
-        // clean (no extra text nodes) and separators are skipped by screen
-        // readers that ignore generated content.
+        // clean (no extra text nodes). The " / """ syntax (CSS Content
+        // Level 3) marks the separator as presentational — screen readers
+        // that support the spec skip it.
         '&::after': {
-          content: '"\\00a0|\\00a0"',
+          content: '"\\00a0|\\00a0" / ""',
           color: 'var(--text-neutral-inverse)',
         },
         '&:last-child::after': {
-          content: '""',
+          content: 'none',
         },
         // On mobile, stack vertically — hide pipe separators.
         [`@media (max-width: ${theme.breakpoints.values.md}px)`]: {
           display: 'block',
           '&::after': {
-            content: '""',
+            content: 'none',
           },
         },
       },
@@ -67,9 +74,11 @@ export const FOOTER_OVERRIDES: Components<Theme>['MuiFooter'] = {
           color: 'var(--neutral-white-alpha-80)',
         },
       },
-      // Accent links (e.g. Privacy Policy) render in brand orange.
-      '&[data-accent] a': {
+      // Accent links (e.g. Privacy Policy) render in brand orange with bold
+      // weight — both color and weight signal the distinction (WCAG 1.4.1).
+      '& a[data-accent]': {
         color: 'var(--accent-orange-60)',
+        fontWeight: 'bold',
       },
     }),
     localeSelect: ({theme}: {theme: Theme}) => ({
@@ -80,19 +89,26 @@ export const FOOTER_OVERRIDES: Components<Theme>['MuiFooter'] = {
         border: '1px solid var(--neutral-white-alpha-40)',
         borderRadius: '0.25rem',
       },
-      // MUI triples its hash class for (0,3,0) specificity; element+two-classes
-      // gives (0,3,1) which wins. MuiNativeSelect-outlined is always present on
-      // the select when rendered inside FormControl without an explicit variant.
-      '& select.MuiNativeSelect-select.MuiNativeSelect-outlined': {
+      // Target the native <select> via a stable ancestor class + element
+      // selector, giving (0,2,1) specificity to beat MUI's doubled hash
+      // class (0,2,0) without relying on variant-specific class names.
+      '& .MuiInputBase-root select.MuiNativeSelect-select': {
         color: 'var(--text-neutral-inverse)',
         paddingTop: '0.25rem',
         paddingBottom: '0.25rem',
-        paddingLeft: '0.375rem',
-        // Icon sits at insetInlineEnd: 0.25rem (4px); 1.25rem gives clearance.
-        paddingRight: '1.25rem',
+        paddingInlineStart: '0.375rem',
+        paddingInlineEnd: SELECT_ICON_CLEARANCE,
         fontSize: 'var(--font-size-body-xs)',
-        minWidth: '8.5rem',
-        '&:focus': {
+        minWidth: SELECT_MIN_WIDTH,
+        // Keyboard focus ring — replaces the suppressed browser default.
+        '&:focus-visible': {
+          outline: '2px solid var(--text-neutral-inverse)',
+          outlineOffset: '2px',
+          backgroundColor: 'var(--background-neutral-primary-inverse)',
+          borderRadius: '0.25rem',
+        },
+        // Suppress pointer-click outline; :focus-visible handles keyboard.
+        '&:focus:not(:focus-visible)': {
           backgroundColor: 'var(--background-neutral-primary-inverse)',
           borderRadius: '0.25rem',
         },
@@ -107,7 +123,7 @@ export const FOOTER_OVERRIDES: Components<Theme>['MuiFooter'] = {
         display: 'none',
       },
       '& .MuiSkeleton-root': {
-        width: '8.5rem',
+        width: SELECT_MIN_WIDTH,
         height: '1.5rem',
         borderRadius: '0.25rem',
         backgroundColor: 'var(--neutral-white-alpha-20)',
@@ -121,10 +137,10 @@ export const FOOTER_OVERRIDES: Components<Theme>['MuiFooter'] = {
         '& .MuiInputBase-root': {
           width: '100%',
         },
-        '& select.MuiNativeSelect-select': {
+        '& .MuiInputBase-root select.MuiNativeSelect-select': {
           minWidth: 'unset',
           width: '100%',
-          paddingRight: '1.25rem',
+          paddingInlineEnd: SELECT_ICON_CLEARANCE,
         },
       },
     }),
@@ -145,6 +161,7 @@ export const FOOTER_OVERRIDES: Components<Theme>['MuiFooter'] = {
       // Same token as copyright — 13px × 1.38 ≈ 18px line-height matching production.
       fontSize: 'var(--font-size-body-xs)',
       lineHeight: 1.38,
+      textAlign: 'start',
     }),
     imageLink: () => ({
       marginBlockStart: '0.625rem',

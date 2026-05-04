@@ -1,19 +1,16 @@
 import attributionImg from '@public/images/action-block-01.png';
-import {Meta, StoryFn} from '@storybook/react-vite';
-import {within, expect} from 'storybook/test';
+import type {Meta, StoryObj} from '@storybook/react-vite';
+import {within, expect, userEvent, fn} from 'storybook/test';
 
 import Footer, {FooterProps} from '../Footer';
 
 export default {
   title: 'DesignSystem/Footer',
   component: Footer,
-} as Meta;
+} as Meta<FooterProps>;
 
-const Template: StoryFn<FooterProps> = (args: FooterProps) => (
-  <Footer {...args} />
-);
+type Story = StoryObj<FooterProps>;
 
-/** Realistic studio footer links — Privacy Policy uses accent (brand orange). */
 const SITE_LINKS: FooterProps['siteLinks'] = [
   {id: 'privacy', label: 'Privacy Policy', href: '/privacy', accent: true},
   {id: 'manage_cookies', label: 'Manage Cookies', href: '/cookies'},
@@ -33,7 +30,7 @@ const LANGUAGES: FooterProps['languages'] = [
   {value: 'fr', text: 'Français'},
 ];
 
-const IMAGE_LINK: FooterProps['imageLink'] = {
+const IMAGE_LINK: NonNullable<FooterProps['imageLink']> = {
   src: attributionImg,
   altText: 'Attribution image',
   href: '/attribution',
@@ -49,78 +46,94 @@ const BASE_ARGS: FooterProps = {
   imageLink: IMAGE_LINK,
   languages: LANGUAGES,
   selectedLocaleCode: 'en',
-  languagesReady: true,
-  onLanguageChange: () => {},
+  onLanguageChange: fn(),
 };
 
 /** Full footer with all slots populated, Privacy Policy in accent (brand orange). */
-export const Default = Template.bind({});
-Default.args = BASE_ARGS;
-Default.play = async ({canvasElement}: {canvasElement: HTMLElement}) => {
-  const canvas = within(canvasElement);
+export const Default: Story = {
+  args: BASE_ARGS,
+  play: async ({canvasElement}) => {
+    const canvas = within(canvasElement);
 
-  // All links present with correct labels.
-  for (const link of SITE_LINKS) {
+    // All links present.
+    for (const link of SITE_LINKS) {
+      expect(
+        await canvas.findByRole('link', {name: new RegExp(link.label)}),
+      ).toBeInTheDocument();
+    }
+
+    // Privacy Policy anchor carries data-accent for orange + bold styling.
+    const privacyLink = await canvas.findByRole('link', {
+      name: /Privacy Policy/,
+    });
+    expect(privacyLink).toHaveAttribute('data-accent');
+
+    // Footer links are inside a navigation landmark.
     expect(
-      await canvas.findByRole('link', {name: link.label}),
+      canvas.getByRole('navigation', {name: 'Footer'}),
     ).toBeInTheDocument();
-  }
 
-  // Privacy Policy wrapper carries data-accent for orange styling.
-  const privacyLink = await canvas.findByRole('link', {name: 'Privacy Policy'});
-  expect(privacyLink.closest('[data-accent]')).not.toBeNull();
+    // Language select is rendered, seeded with English, and labelled.
+    expect(canvas.getByLabelText('Language')).toHaveValue('en');
 
-  // Language select is rendered and seeded with English.
-  const select = canvas.getByRole('combobox') as HTMLSelectElement;
-  expect(select.value).toBe('en');
-
-  // Attribution image present with non-empty alt text.
-  expect(canvas.getByAltText(IMAGE_LINK.altText)).toBeInTheDocument();
+    // Attribution image present.
+    expect(canvas.getByAltText(IMAGE_LINK.altText)).toBeInTheDocument();
+  },
 };
 
 /** Skeleton placeholder shown while language list is loading. */
-export const SkeletonLoading = Template.bind({});
-SkeletonLoading.args = {
-  ...BASE_ARGS,
-  languagesReady: false,
-  languages: [],
-};
-SkeletonLoading.play = async ({
-  canvasElement,
-}: {
-  canvasElement: HTMLElement;
-}) => {
-  const canvas = within(canvasElement);
+export const SkeletonLoading: Story = {
+  args: {
+    ...BASE_ARGS,
+    languages: 'loading',
+  },
+  play: async ({canvasElement}) => {
+    const canvas = within(canvasElement);
 
-  // No select rendered during loading.
-  expect(canvas.queryByRole('combobox')).toBeNull();
+    // No select rendered during loading.
+    expect(canvas.queryByRole('combobox')).toBeNull();
 
-  // MUI Skeleton is present in its place.
-  expect(canvasElement.querySelector('.MuiSkeleton-root')).not.toBeNull();
+    // Loading status indicator is present.
+    expect(canvas.getByRole('status')).toBeInTheDocument();
+  },
 };
 
 /** Footer without fineprint or attribution image — minimum required props. */
-export const WithoutOptionals = Template.bind({});
-WithoutOptionals.args = {
-  ...BASE_ARGS,
-  fineprint: undefined,
-  imageLink: undefined,
+export const WithoutOptionals: Story = {
+  args: {
+    ...BASE_ARGS,
+    fineprint: undefined,
+    imageLink: undefined,
+  },
+  play: async ({canvasElement}) => {
+    const canvas = within(canvasElement);
+
+    // No attribution image when imageLink is omitted.
+    expect(canvas.queryByAltText(IMAGE_LINK.altText)).toBeNull();
+
+    // No fineprint element rendered.
+    expect(canvas.queryByTestId('footer-fineprint')).toBeNull();
+
+    // Core links still present.
+    expect(
+      canvas.getByRole('link', {name: /Privacy Policy/}),
+    ).toBeInTheDocument();
+  },
 };
-WithoutOptionals.play = async ({
-  canvasElement,
-}: {
-  canvasElement: HTMLElement;
-}) => {
-  const canvas = within(canvasElement);
 
-  // No attribution image when imageLink is omitted.
-  expect(canvas.queryByAltText(IMAGE_LINK.altText)).toBeNull();
+/** Language picker interaction — verifies onLanguageChange fires with the chosen code. */
+export const LanguageChange: Story = {
+  args: {
+    ...BASE_ARGS,
+    onLanguageChange: fn(),
+  },
+  play: async ({canvasElement, args}) => {
+    const canvas = within(canvasElement);
+    const select = canvas.getByLabelText('Language');
 
-  // No fineprint element rendered.
-  expect(canvasElement.querySelector('.MuiFooter-fineprint')).toBeNull();
+    await userEvent.selectOptions(select, 'es');
 
-  // Core links still present.
-  expect(
-    canvas.getByRole('link', {name: 'Privacy Policy'}),
-  ).toBeInTheDocument();
+    expect(select).toHaveValue('es');
+    expect(args.onLanguageChange).toHaveBeenCalledWith('es');
+  },
 };

@@ -6,7 +6,7 @@ import {describe, expect, it} from 'vitest';
 
 import {CodeStudioConfig as siteConfig} from '@code-dot-org/core';
 
-import {FOOTER_LINKS} from '../footerLinks';
+import {getFooterLinks} from '../footerLinks';
 
 const EXPECTED_IDS = [
   'privacy',
@@ -16,18 +16,20 @@ const EXPECTED_IDS = [
   'tos_short',
 ];
 
-describe('FOOTER_LINKS', () => {
+describe('getFooterLinks', () => {
   it('contains all expected link ids in order', () => {
-    expect(FOOTER_LINKS.map(l => l.id)).toEqual(EXPECTED_IDS);
+    expect(getFooterLinks().map(l => l.id)).toEqual(EXPECTED_IDS);
   });
 
   it('marks help_support and store as external', () => {
-    const externalIds = FOOTER_LINKS.filter(l => l.external).map(l => l.id);
+    const externalIds = getFooterLinks()
+      .filter(l => l.external)
+      .map(l => l.id);
     expect(externalIds).toEqual(['help_support', 'store']);
   });
 
   it('non-external links have no external flag', () => {
-    const nonExternal = FOOTER_LINKS.filter(l => !l.external);
+    const nonExternal = getFooterLinks().filter(l => !l.external);
     expect(nonExternal.length).toBeGreaterThan(0);
     for (const link of nonExternal) {
       expect(link.external).toBeFalsy();
@@ -35,9 +37,10 @@ describe('FOOTER_LINKS', () => {
   });
 
   it('marketing-url entries resolve against the test-environment origin', () => {
+    const links = getFooterLinks();
     const marketingIds = ['privacy', 'manage_cookies', 'tos_short'];
     for (const id of marketingIds) {
-      const link = FOOTER_LINKS.find(l => l.id === id)!;
+      const link = links.find(l => l.id === id)!;
       const path =
         id === 'manage_cookies' ? 'cookies' : id === 'tos_short' ? 'tos' : id;
       expect(link.href).toBe(siteConfig.marketingUrl(`/${path}`));
@@ -45,7 +48,7 @@ describe('FOOTER_LINKS', () => {
   });
 
   it('every link has a non-empty label and href', () => {
-    for (const link of FOOTER_LINKS) {
+    for (const link of getFooterLinks()) {
       expect(link.label).toBeTruthy();
       expect(link.href).toBeTruthy();
     }

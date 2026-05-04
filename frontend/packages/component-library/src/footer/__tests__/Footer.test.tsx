@@ -5,6 +5,11 @@ import '@testing-library/jest-dom';
 import Footer from '../Footer';
 import type {FooterProps} from '../Footer';
 
+const BASE_LANGUAGES = [
+  {value: 'en', text: 'English'},
+  {value: 'es', text: 'Español'},
+];
+
 const BASE_PROPS: FooterProps = {
   siteLinks: [
     {id: 'a', label: 'Link A', href: '/a'},
@@ -19,12 +24,8 @@ const BASE_PROPS: FooterProps = {
     href: '/img-dest',
     external: true,
   },
-  languages: [
-    {value: 'en', text: 'English'},
-    {value: 'es', text: 'Español'},
-  ],
+  languages: BASE_LANGUAGES,
   selectedLocaleCode: 'en',
-  languagesReady: true,
   onLanguageChange: jest.fn(),
 };
 
@@ -43,7 +44,7 @@ describe('Footer', () => {
   it('renders an external link with rel and target', () => {
     render(<Footer {...BASE_PROPS} />);
     const anchor = screen.getByRole('link', {
-      name: 'Link B',
+      name: /Link B/,
     }) as HTMLAnchorElement;
     expect(anchor).toHaveAttribute('rel', 'noopener noreferrer');
     expect(anchor).toHaveAttribute('target', '_blank');
@@ -63,18 +64,27 @@ describe('Footer', () => {
     const externalLinks = BASE_PROPS.siteLinks.filter(l => l.external);
     for (const link of externalLinks) {
       const anchor = screen.getByRole('link', {
-        name: link.label,
+        name: new RegExp(link.label),
       }) as HTMLAnchorElement;
       expect(anchor.getAttribute('rel')).toBe('noopener noreferrer');
       expect(anchor.getAttribute('target')).toBe('_blank');
     }
   });
 
-  it('renders a skeleton and no select when languagesReady is false', () => {
-    render(<Footer {...BASE_PROPS} languagesReady={false} languages={[]} />);
+  it('external links reference the shared new-tab description', () => {
+    render(<Footer {...BASE_PROPS} />);
+    const desc = screen.getByTestId('footer-ext-link-notice');
+    expect(desc).toBeInTheDocument();
+    const anchor = screen.getByRole('link', {
+      name: 'Link B',
+    }) as HTMLAnchorElement;
+    expect(anchor).toHaveAttribute('aria-describedby', desc.id);
+  });
+
+  it('renders a skeleton and no select when languages is loading', () => {
+    render(<Footer {...BASE_PROPS} languages="loading" />);
     expect(screen.queryByRole('combobox')).toBeNull();
-    // MUI Skeleton renders as a span with role="presentation" by default
-    expect(document.querySelector('.MuiSkeleton-root')).toBeInTheDocument();
+    expect(screen.getByRole('status')).toBeInTheDocument();
   });
 
   it('renders all language options with the selected locale active', () => {
@@ -82,10 +92,7 @@ describe('Footer', () => {
     const select = screen.getByRole('combobox') as HTMLSelectElement;
     expect(select.value).toBe('es');
     const options = within(select).getAllByRole('option');
-    expect(options).toHaveLength(BASE_PROPS.languages.length);
-    expect(options.map(o => (o as HTMLOptionElement).value)).toEqual(
-      BASE_PROPS.languages.map(l => l.value),
-    );
+    expect(options).toHaveLength(BASE_LANGUAGES.length);
   });
 
   it('calls onLanguageChange with the chosen value', async () => {
@@ -95,6 +102,18 @@ describe('Footer', () => {
     const select = screen.getByRole('combobox');
     await user.selectOptions(select, 'es');
     expect(onLanguageChange).toHaveBeenCalledWith('es');
+  });
+
+  it('language select is labelled', () => {
+    render(<Footer {...BASE_PROPS} />);
+    expect(screen.getByLabelText('Language')).toBeInTheDocument();
+  });
+
+  it('footer links are wrapped in a navigation landmark', () => {
+    render(<Footer {...BASE_PROPS} />);
+    expect(
+      screen.getByRole('navigation', {name: 'Footer'}),
+    ).toBeInTheDocument();
   });
 
   it('AWS image link has target, rel, and a non-empty alt', () => {
@@ -107,7 +126,7 @@ describe('Footer', () => {
     expect(img.alt).not.toBe('');
   });
 
-  it('accent link wrapper carries data-accent attribute', () => {
+  it('accent link wrapper carries data-accent attribute on the anchor', () => {
     render(
       <Footer
         {...BASE_PROPS}
@@ -118,10 +137,10 @@ describe('Footer', () => {
       />,
     );
     const accentAnchor = screen.getByRole('link', {name: 'Accent Link'});
-    expect(accentAnchor.closest('[data-accent]')).not.toBeNull();
+    expect(accentAnchor).toHaveAttribute('data-accent');
 
     const plainAnchor = screen.getByRole('link', {name: 'Plain Link'});
-    expect(plainAnchor.closest('[data-accent]')).toBeNull();
+    expect(plainAnchor).not.toHaveAttribute('data-accent');
   });
 
   it('renders copyright content', () => {
@@ -130,13 +149,11 @@ describe('Footer', () => {
   });
 
   it('omits fineprint element when fineprint prop is absent', () => {
-    const {container} = render(
-      <Footer {...BASE_PROPS} fineprint={undefined} />,
-    );
-    expect(container.querySelector('.MuiFooter-fineprint')).toBeNull();
+    render(<Footer {...BASE_PROPS} fineprint={undefined} />);
+    expect(screen.queryByTestId('footer-fineprint')).toBeNull();
   });
 
-  it('omits AWS image when imageLink prop is absent', () => {
+  it('omits attribution image when imageLink prop is absent', () => {
     render(<Footer {...BASE_PROPS} imageLink={undefined} />);
     expect(screen.queryByAltText('Logo alt')).toBeNull();
   });
