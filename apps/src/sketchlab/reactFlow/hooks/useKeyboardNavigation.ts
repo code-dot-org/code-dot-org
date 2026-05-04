@@ -438,10 +438,16 @@ export function useKeyboardNavigation({
       if (handleConnectToggle(keyContext)) return;
       if (handleConnectComplete(keyContext)) return;
 
-      // All further interactions require an unlocked node, if a node is focused.
+      // All further interactions require an unlocked element, if an element is focused.
       if (
         keyContext.focusedNodeId &&
         getNode(keyContext.focusedNodeId)?.data?.locked
+      ) {
+        return;
+      }
+      if (
+        keyContext.focusedEdgeId &&
+        getEdge(keyContext.focusedEdgeId)?.data?.locked
       ) {
         return;
       }
@@ -453,6 +459,7 @@ export function useKeyboardNavigation({
     },
     [
       readOnly,
+      getEdge,
       getNode,
       handleTabNavigation,
       handleEscapeCancelConnect,

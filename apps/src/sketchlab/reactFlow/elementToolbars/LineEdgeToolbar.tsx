@@ -11,6 +11,7 @@ import {isArrowEdge} from '../utils/lineEdges';
 import {newBackZIndex, newFrontZIndex} from '../utils/stacking';
 
 import ActionsGroup from './ActionsGroup';
+import LockedNotice from './LockedNotice';
 import SwatchGroup from './SwatchGroup';
 import {
   DEFAULT_LINE_STROKE_STYLE,
@@ -90,6 +91,7 @@ interface LineEdgeToolbarProps {
   onSelectWidth: (value: number) => void;
   onSelectStrokeStyle: (value: LineStrokeStyleValue) => void;
   onSelectArrowHeads: (value: ArrowHeadValue) => void;
+  onSetLocked: (value: boolean) => void;
 }
 
 type ArrowHeadValue = 'start' | 'end' | 'both';
@@ -114,8 +116,12 @@ export default function LineEdgeToolbar({
   onSelectWidth,
   onSelectStrokeStyle,
   onSelectArrowHeads,
+  onSetLocked,
 }: LineEdgeToolbarProps) {
   const {deleteElements, updateEdge, getNodes, getEdges} = useReactFlow();
+
+  const isLocked = edge.data?.locked === true;
+
   const selectedValue =
     (typeof edge.style?.stroke === 'string' && edge.style.stroke) ||
     DEFAULT_STROKE_COLOR;
@@ -164,45 +170,57 @@ export default function LineEdgeToolbar({
       anchorNodeId={anchorNodeId}
       ariaLabel="Line style"
     >
-      <SwatchGroup
-        groupLabel="Line color"
-        swatches={STROKE_FONT_PALETTE}
-        selectedValue={selectedValue}
-        onSelect={onSelectColor}
-      />
-      <LineOptionGroup
-        groupLabel="Line width"
-        options={LINE_WIDTH_OPTIONS}
-        selectedValue={selectedWidthValue}
-        onSelect={value => onSelectWidth(value as number)}
-        ariaLabelPrefix="Line width"
-        getButtonContent={option =>
-          renderLinePreview(option.value as number, 'solid')
-        }
-      />
-      <LineOptionGroup
-        groupLabel="Stroke style"
-        options={LINE_STROKE_STYLE_OPTIONS}
-        selectedValue={selectedStrokeStyleValue}
-        onSelect={value => onSelectStrokeStyle(value as LineStrokeStyleValue)}
-        ariaLabelPrefix="Stroke style"
-        getButtonContent={option =>
-          renderLinePreview(2, option.value as LinePreviewStyle)
-        }
-      />
-      {showArrowHeadOptions && (
-        <LineOptionGroup
-          groupLabel="Arrow heads"
-          options={ARROW_HEAD_OPTIONS}
-          selectedValue={selectedArrowHeads}
-          onSelect={value => onSelectArrowHeads(value as ArrowHeadValue)}
-          ariaLabelPrefix="Arrow heads"
-          getButtonContent={option => (
-            <FontAwesomeV6Icon
-              iconName={ARROW_HEAD_ICONS[option.value as ArrowHeadValue]}
+      {isLocked ? (
+        <LockedNotice onUnlock={() => onSetLocked(false)} />
+      ) : (
+        <>
+          <SwatchGroup
+            groupLabel="Line color"
+            swatches={STROKE_FONT_PALETTE}
+            selectedValue={selectedValue}
+            onSelect={onSelectColor}
+          />
+          <LineOptionGroup
+            groupLabel="Line width"
+            options={LINE_WIDTH_OPTIONS}
+            selectedValue={selectedWidthValue}
+            onSelect={value => onSelectWidth(value as number)}
+            ariaLabelPrefix="Line width"
+            getButtonContent={option =>
+              renderLinePreview(option.value as number, 'solid')
+            }
+          />
+          <LineOptionGroup
+            groupLabel="Stroke style"
+            options={LINE_STROKE_STYLE_OPTIONS}
+            selectedValue={selectedStrokeStyleValue}
+            onSelect={value =>
+              onSelectStrokeStyle(value as LineStrokeStyleValue)
+            }
+            ariaLabelPrefix="Stroke style"
+            getButtonContent={option =>
+              renderLinePreview(2, option.value as LinePreviewStyle)
+            }
+          />
+          {showArrowHeadOptions && (
+            <LineOptionGroup
+              groupLabel="Arrow heads"
+              options={ARROW_HEAD_OPTIONS}
+              selectedValue={selectedArrowHeads}
+              onSelect={value => onSelectArrowHeads(value as ArrowHeadValue)}
+              ariaLabelPrefix="Arrow heads"
+              getButtonContent={option => (
+                <FontAwesomeV6Icon
+                  iconName={ARROW_HEAD_ICONS[option.value as ArrowHeadValue]}
+                />
+              )}
             />
           )}
-        />
+          <ActionsGroup
+            onDelete={() => deleteElements({edges: [{id: edge.id}]})}
+            onLock={() => onSetLocked(true)}
+          />
+        </>
       )}
       <ActionsGroup
         onDelete={() => deleteElements({edges: [{id: edge.id}]})}
