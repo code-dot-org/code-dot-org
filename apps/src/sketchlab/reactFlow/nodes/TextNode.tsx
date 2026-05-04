@@ -26,8 +26,9 @@ function TextNode({id, data, selected}: NodeProps<TextNodeType>) {
       style.color = data.fontColor;
     }
     style.fontSize = fontSizePx(data.fontSize);
+    style.textAlign = data.textAlign ?? 'center';
     return style;
-  }, [data.fontColor, data.fontSize]);
+  }, [data.fontColor, data.fontSize, data.textAlign]);
 
   const rotation = data.rotation ?? DEFAULT_ROTATION;
   const rotatableStyle: React.CSSProperties = useMemo(
