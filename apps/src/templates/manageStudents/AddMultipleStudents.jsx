@@ -153,7 +153,7 @@ class AddMultipleStudents extends Component {
         >
           <h2>{i18n.addStudentsMultiple()}</h2>
           {experiments.isEnabled('add-students-csv-import') ? (
-            <div>{i18n.addStudentsMultipleInstructions()}</div>
+            <div>{i18n.addStudentsMultipleCSVInstructions()}</div>
           ) : (
             <div>{i18n.addStudentsMultipleWithFamilyNameInstructions()}</div>
           )}
