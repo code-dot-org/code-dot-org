@@ -278,7 +278,7 @@ const Footer = ({
         {fineprint && (
           <Grid size={12}>
             <FooterFineprint
-              component="p"
+              component="div"
               variant="body2"
               data-testid="footer-fineprint"
             >

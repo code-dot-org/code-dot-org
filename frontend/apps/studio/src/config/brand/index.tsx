@@ -1,3 +1,4 @@
+import {Typography} from '@mui/material';
 import type {ReactNode} from 'react';
 
 import type {Brand} from '@code-dot-org/core';
@@ -69,20 +70,25 @@ export function getBrandConfig(brand: Brand): BrandConfig {
 function buildFineprint(trademark: ReactNode): ReactNode {
   return (
     <>
-      Engineers from Amazon, Google, and Microsoft helped create these
-      materials.
-      <br />
-      Minecraft™ © Microsoft. All Rights Reserved. Star Wars™ © Disney and
-      Lucasfilm. All Rights Reserved. Frozen™ © Disney. All Rights Reserved.
-      Ice Age™ © 20th Century Fox. All Rights Reserved. Angry Birds ©
-      2009-2026 Rovio Entertainment Ltd. All Rights Reserved. Plants vs.
-      Zombies™ © Electronic Arts Inc. All Rights Reserved. DreamWorks The Bad
-      Guys © DreamWorks Animation LLC. All Rights Reserved. Paramount Pictures
-      Transformers One © Paramount Pictures. All Rights Reserved.
-      <br />
-      {trademark}
-      <br />
-      Built on GitHub from Microsoft
+      <Typography component="p" variant="inherit">
+        Engineers from Amazon, Google, and Microsoft helped create these
+        materials.
+      </Typography>
+      <Typography component="p" variant="inherit">
+        Minecraft™ © Microsoft. All Rights Reserved. Star Wars™ © Disney and
+        Lucasfilm. All Rights Reserved. Frozen™ © Disney. All Rights Reserved.
+        Ice Age™ © 20th Century Fox. All Rights Reserved. Angry Birds ©
+        2009-2026 Rovio Entertainment Ltd. All Rights Reserved. Plants vs.
+        Zombies™ © Electronic Arts Inc. All Rights Reserved. DreamWorks The
+        Bad Guys © DreamWorks Animation LLC. All Rights Reserved. Paramount
+        Pictures Transformers One © Paramount Pictures. All Rights Reserved.
+      </Typography>
+      <Typography component="p" variant="inherit">
+        {trademark}
+      </Typography>
+      <Typography component="p" variant="inherit">
+        Built on GitHub from Microsoft
+      </Typography>
     </>
   );
 }
