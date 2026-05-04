@@ -34,7 +34,7 @@ describe('ManageStudentAgeCell', () => {
   });
 
   it('renders age select dropdown, when editing', () => {
-    const wrapper = mount(
+    const wrapper = shallow(
       <ManageStudentAgeCell
         {...DEFAULT_PROPS}
         age={10}
@@ -43,7 +43,7 @@ describe('ManageStudentAgeCell', () => {
         setSharingDefault={setSharingDefault}
       />
     );
-    expect(wrapper.find('select').exists()).to.be.true;
+    expect(wrapper.find('select').exists());
     expect(wrapper.find('option')).to.have.length(19);
   });
 

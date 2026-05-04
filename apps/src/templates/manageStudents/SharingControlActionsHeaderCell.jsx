@@ -1,15 +1,15 @@
-import {ActionDropdown} from '@code-dot-org/component-library/dropdown';
-import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
 
+import PopUpMenu, {MenuBreak} from '@cdo/apps/sharedComponents/PopUpMenu';
 import i18n from '@cdo/locale';
 
-import {handleShareSetting} from './manageStudentsRedux';
+import QuickActionsCell, {
+  QuickActionsCellType,
+} from '../tables/QuickActionsCell';
 
-const LEARN_MORE_URL =
-  'https://support.code.org/hc/en-us/articles/115001554911-Configuring-sharing-options-for-students-using-App-Lab-Game-Lab-and-Web-Lab';
+import {handleShareSetting} from './manageStudentsRedux';
 
 class SharingControlActionsHeaderCell extends Component {
   static propTypes = {
@@ -24,46 +24,26 @@ class SharingControlActionsHeaderCell extends Component {
     this.props.handleShareSetting(true);
   };
 
-  onLearnMore = () => {
-    window.open(LEARN_MORE_URL, '_blank', 'noopener,noreferrer');
-  };
-
   render() {
-    const options = [
-      {
-        value: 'enable-all-sharing',
-        label: i18n.projectSharingEnableAll(),
-        icon: {iconName: 'circle-check'},
-        onClick: this.onEnableAll,
-      },
-      {
-        value: 'disable-all-sharing',
-        label: i18n.projectSharingDisableAll(),
-        icon: {iconName: 'circle-xmark'},
-        onClick: this.onDisableAll,
-      },
-      {
-        value: 'learn-more-sharing',
-        label: i18n.learnMore(),
-        icon: {iconName: 'arrow-up-right-from-square'},
-        onClick: this.onLearnMore,
-      },
-    ];
-
     return (
       <div>
-        <ActionDropdown
-          name="sharing-control-actions"
-          labelText={i18n.actions()}
-          size="s"
-          menuPlacement="right"
-          options={options}
-          triggerButtonProps={{
-            color: 'tertiary',
-            variant: 'text',
-            children: <FontAwesomeV6Icon iconName="gear" />,
-          }}
-        />
+        <QuickActionsCell type={QuickActionsCellType.header}>
+          <PopUpMenu.Item onClick={this.onEnableAll}>
+            {i18n.projectSharingEnableAll()}
+          </PopUpMenu.Item>
+          <PopUpMenu.Item onClick={this.onDisableAll}>
+            {i18n.projectSharingDisableAll()}
+          </PopUpMenu.Item>
+          <MenuBreak />
+          <PopUpMenu.Item
+            href={
+              'https://support.code.org/hc/en-us/articles/115001554911-Configuring-sharing-options-for-students-using-App-Lab-Game-Lab-and-Web-Lab'
+            }
+            openInNewTab
+          >
+            {i18n.learnMore()}
+          </PopUpMenu.Item>
+        </QuickActionsCell>
       </div>
     );
   }

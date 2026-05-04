@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import {Draggable} from 'react-beautiful-dnd';
 
-import moduleStyles from './student.module.scss';
+import color from '@cdo/apps/util/color';
 
 // A Student is a component that
 // can be dragged between StudentGroups
@@ -24,15 +24,16 @@ export default function Student({followerId, name, index}) {
         <div
           ref={provided.innerRef}
           {...provided.draggableProps}
-          className={moduleStyles.studentRow}
-          style={{
-            ...provided.draggableProps.style,
-            background: snapshot.isDragging
-              ? 'var(--background-neutral-secondary)'
-              : 'var(--background-neutral-primary)',
-          }}
+          style={getStudentStyle(
+            snapshot.isDragging,
+            provided.draggableProps.style
+          )}
         >
-          <div className={moduleStyles.studentRowInner}>
+          <div
+            style={{
+              display: 'flex',
+            }}
+          >
             <DragHandle {...provided.dragHandleProps} />
             <div>{name}</div>
           </div>
@@ -53,17 +54,53 @@ Student.propTypes = {
  */
 function DragHandle(props) {
   return (
-    <div {...props} className={moduleStyles.dragHandle}>
-      <div className={moduleStyles.dotColumn}>
-        <span className={moduleStyles.dot} />
-        <span className={moduleStyles.dot} />
-        <span className={moduleStyles.dot} />
+    <div {...props} style={handleStyles.container}>
+      <div style={handleStyles.dotColumn}>
+        <span style={handleStyles.dot} />
+        <span style={handleStyles.dot} />
+        <span style={handleStyles.dot} />
       </div>
-      <div className={moduleStyles.dotColumn}>
-        <span className={moduleStyles.dot} />
-        <span className={moduleStyles.dot} />
-        <span className={moduleStyles.dot} />
+      <div style={handleStyles.dotColumn}>
+        <span style={handleStyles.dot} />
+        <span style={handleStyles.dot} />
+        <span style={handleStyles.dot} />
       </div>
     </div>
   );
 }
+
+const getStudentStyle = (isDragging, draggableStyle) => ({
+  userSelect: 'none',
+  padding: '16px 12px',
+  color: color.dark_charcoal,
+  width: 'auto',
+  border: `1px solid ${color.lighter_gray}`,
+  fontSize: 14,
+  lineHeight: '21px',
+
+  // change background colour if dragging
+  background: isDragging ? color.background_gray : color.white,
+
+  // styles we need to apply on draggables
+  ...draggableStyle,
+});
+
+const handleStyles = {
+  container: {
+    marginRight: 12,
+    display: 'flex',
+    alignItems: 'center',
+  },
+  dotColumn: {
+    display: 'flex',
+    flexDirection: 'column',
+  },
+  dot: {
+    width: 3,
+    height: 3,
+    backgroundColor: color.dark_charcoal,
+    borderRadius: '50%',
+    display: 'inline-block',
+    margin: 1.5,
+  },
+};

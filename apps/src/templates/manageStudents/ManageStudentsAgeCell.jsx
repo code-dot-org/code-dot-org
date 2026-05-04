@@ -1,9 +1,6 @@
-import SimpleDropdown from '@code-dot-org/component-library/dropdown/simpleDropdown';
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
-
-import i18n from '@cdo/locale';
 
 import {ages} from '../AgeDropdown';
 
@@ -35,15 +32,18 @@ class ManageStudentAgeCell extends Component {
       <div>
         {!this.props.isEditing && <div>{age}</div>}
         {this.props.isEditing && (
-          <SimpleDropdown
+          <select
+            style={{width: 50, marginBottom: 0}}
             name="age"
-            labelText={i18n.age()}
-            isLabelVisible={false}
-            size="s"
-            items={ages.map(a => ({value: String(a), text: String(a)}))}
-            selectedValue={editedValue !== undefined ? String(editedValue) : ''}
+            value={editedValue}
             onChange={this.onChangeAge}
-          />
+          >
+            {ages.map(age => (
+              <option key={age} value={age}>
+                {age}
+              </option>
+            ))}
+          </select>
         )}
       </div>
     );

@@ -1,4 +1,3 @@
-import SimpleDropdown from '@code-dot-org/component-library/dropdown/simpleDropdown';
 import React, {useCallback} from 'react';
 
 import {STATE_CODES} from '@cdo/apps/geographyConstants';
@@ -7,7 +6,6 @@ import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import {editStudent} from '@cdo/apps/templates/manageStudents/manageStudentsRedux';
 import {selectedSectionSelector} from '@cdo/apps/templates/teacherDashboard/teacherSectionsReduxSelectors';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
-import i18n from '@cdo/locale';
 
 import {CellProps} from './interface';
 
@@ -21,7 +19,7 @@ const Cell: React.FC<CellProps> = ({
   const section = useAppSelector(state => selectedSectionSelector(state));
   const dispatch = useAppDispatch();
   const handleChange = useCallback(
-    (event: React.ChangeEvent<HTMLSelectElement>) => {
+    (event: {target: {value: string}}) => {
       const selectedUsState = event.target.value || null;
 
       dispatch(editStudent(studentId, {usState: selectedUsState}));
@@ -45,23 +43,22 @@ const Cell: React.FC<CellProps> = ({
     ]
   );
 
-  const items = [
-    {value: '', text: ''},
-    ...STATE_CODES.map(code => ({value: code, text: code})),
-  ];
-
   return (
     <>
       {isEditing ? (
-        <SimpleDropdown
+        <select
+          style={{width: 60, margin: 0}}
           name="usState"
-          labelText={i18n.usState()}
-          isLabelVisible={false}
-          size="s"
-          items={items}
-          selectedValue={editedValue}
+          value={editedValue}
           onChange={handleChange}
-        />
+        >
+          <option value="" />
+          {STATE_CODES.map(code => (
+            <option key={code} value={code}>
+              {code}
+            </option>
+          ))}
+        </select>
       ) : (
         value
       )}

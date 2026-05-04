@@ -7,7 +7,7 @@
   "user_id": 18603,
   "properties": {
     "encrypted": "false",
-    "long_instructions": "## The User Experience (UX) Researcher\r\n\r\nThis chatbot wants to make sure your guide is easy for your audience to use.\r\n\r\n1. Import your guide from the Backpack and add it to the chat.\r\n\r\n2. Tell the bot who your audience is.\r\n\r\n3. Ask it to check how easy it is to read. Try asking: \"Is this too much text?\" or \"Will my audience understand these big words?\"\r\n\r\n4. Take the advice. If the UX Researcher says it's confusing, try breaking long paragraphs into shorter bullet points!",
+    "long_instructions": "##The UX (User Experience) Researcher\r\n\r\nThis chatbot wants to make sure your guide is easy for your audience to use without getting a headache.\r\n\r\n* **Import** your guide from the Backpack so the bot can see what you are working on.\r\n\r\n* **Tell** the bot who your audience is. (Are you writing for gamers? Teachers? Skeptical teens?)\r\n\r\n* **Ask** for a readability check! Try asking: \"Is this too much text?\" or \"Will my audience understand these big words?\"\r\n\r\n* **Take** the advice. If the UX Researcher says it's confusing, try breaking long paragraphs into shorter bullet points!",
     "offer_browser_tts": "false",
     "submittable": "false",
     "disable_edit_run_for_submission": "false",
@@ -45,11 +45,11 @@
       ],
       "multimodalEnabled": true
     },
-    "display_name": "The UX Researcher",
-    "bubble_choice_description": "This chatbot wants to make sure your guide is easy for your audience to use.",
+    "display_name": "The \"Reader\"",
+    "bubble_choice_description": "Like a **UX (User Experience) Researcher**, looking at how your audience might interpret your guide.",
     "thumbnail_url": "https://images.code.org/6631bf4a7fb6bbb915876fd49f037b5a-1.jpg",
     "name_suffix": "_2026"
   },
-  "audit_log": "[{\"changed_at\":\"2026-04-30T17:44:38.857+00:00\",\"changed\":[\"cloned from \\\"aid-thinking-critically-lesson9-level1a_2026-test_2026-pilot_2026\\\"\"],\"cloned_from\":\"aid-thinking-critically-lesson9-level1a_2026-test_2026-pilot_2026\"},{\"changed_at\":\"2026-04-30 17:57:32 +0000\",\"changed\":[\"long_instructions\",\"aichat_settings\",\"display_name\",\"bubble_choice_description\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-30 18:02:36 +0000\",\"changed\":[\"thumbnail_url\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-30 18:17:23 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-05-03 01:08:26 +0000\",\"changed\":[\"long_instructions\",\"display_name\",\"bubble_choice_description\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2026-04-30T17:44:38.857+00:00\",\"changed\":[\"cloned from \\\"aid-thinking-critically-lesson9-level1a_2026-test_2026-pilot_2026\\\"\"],\"cloned_from\":\"aid-thinking-critically-lesson9-level1a_2026-test_2026-pilot_2026\"},{\"changed_at\":\"2026-04-30 17:57:32 +0000\",\"changed\":[\"long_instructions\",\"aichat_settings\",\"display_name\",\"bubble_choice_description\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-30 18:02:36 +0000\",\"changed\":[\"thumbnail_url\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-30 18:17:23 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"}]"
 }]]></config>
 </Aichat>

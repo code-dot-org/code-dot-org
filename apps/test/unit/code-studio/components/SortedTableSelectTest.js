@@ -24,7 +24,7 @@ const DEFAULT_PROPS = {
 
 describe('SortedTableSelect', () => {
   it('renders an empty option as default', () => {
-    const wrapper = mount(<SortedTableSelect {...DEFAULT_PROPS} />);
+    const wrapper = shallow(<SortedTableSelect {...DEFAULT_PROPS} />);
     const options = wrapper.find('option');
     expect(options.at(0).text()).toBe('');
     expect(options.at(1).text()).toBe('optiona');

@@ -1,15 +1,14 @@
-import Checkbox from '@code-dot-org/component-library/checkbox';
-import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
 import ReactTooltip from 'react-tooltip';
 
+import FontAwesome from '@cdo/apps/legacySharedComponents/FontAwesome';
 import i18n from '@cdo/locale';
 
-import {editStudent} from './manageStudentsRedux';
+import color from '../../util/color';
 
-import moduleStyles from './manageStudentsSharingCell.module.scss';
+import {editStudent} from './manageStudentsRedux';
 
 class ManageStudentsSharingCell extends Component {
   static propTypes = {
@@ -30,14 +29,12 @@ class ManageStudentsSharingCell extends Component {
 
   renderCheckbox = () => {
     return (
-      <Checkbox
-        name="sharing"
-        ariaLabel={i18n.projectSharingColumnHeader()}
-        className={moduleStyles.checkbox}
-        checked={!!this.props.editedValue}
+      <input
+        type="checkbox"
         disabled={this.props.disabled}
+        checked={this.props.editedValue}
         onChange={this.changeSharing}
-        size="s"
+        style={styles.checkbox}
       />
     );
   };
@@ -51,9 +48,10 @@ class ManageStudentsSharingCell extends Component {
         {!isEditing && (
           <div>
             {checked && (
-              <FontAwesomeV6Icon
-                iconName="check"
-                className={moduleStyles.checkboxIcon}
+              <FontAwesome
+                icon="check"
+                className="fa-check"
+                style={styles.checkboxIcon}
               />
             )}
           </div>
@@ -85,6 +83,16 @@ class ManageStudentsSharingCell extends Component {
     );
   }
 }
+
+const styles = {
+  checkboxIcon: {
+    color: color.lighter_gray,
+  },
+  checkbox: {
+    height: 20,
+    width: 20,
+  },
+};
 
 export const UnconnectedManageStudentsSharingCell = ManageStudentsSharingCell;
 

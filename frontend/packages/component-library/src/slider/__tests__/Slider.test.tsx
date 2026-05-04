@@ -2,8 +2,6 @@ import {render, screen, fireEvent} from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 
 import '@testing-library/jest-dom';
-import FontAwesomeV6Icon from '@/fontAwesomeV6Icon';
-
 import Slider, {SliderProps} from '../index';
 
 describe('Slider Component', () => {
@@ -82,24 +80,8 @@ describe('Slider Component', () => {
     const handleChange = jest.fn();
     renderComponent({
       onChange: handleChange,
-      leftButtonProps: {
-        children: (
-          <FontAwesomeV6Icon
-            iconName="minus"
-            title="Decrease"
-            aria-label="Decrease"
-          />
-        ),
-      },
-      rightButtonProps: {
-        children: (
-          <FontAwesomeV6Icon
-            iconName="plus"
-            title="Increase"
-            aria-label="Increase"
-          />
-        ),
-      },
+      leftButtonProps: {icon: {iconName: 'minus'}, 'aria-label': 'Decrease'},
+      rightButtonProps: {icon: {iconName: 'plus'}, 'aria-label': 'Increase'},
     });
 
     const leftButton = screen.getByLabelText('Decrease');

@@ -205,7 +205,7 @@ describe('ManageStudentsTable', () => {
         </Provider>
       );
       expect(
-        screen.getByRole('columnheader', {name: /Actions/})
+        screen.getByRole('columnheader', {name: 'Actions'})
       ).toBeInTheDocument();
     });
 

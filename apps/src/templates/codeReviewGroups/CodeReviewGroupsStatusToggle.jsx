@@ -6,11 +6,10 @@ import {connect} from 'react-redux';
 import Spinner from '@cdo/apps/sharedComponents/Spinner';
 import {setSectionCodeReviewExpiresAt} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import {selectedSectionSelector} from '@cdo/apps/templates/teacherDashboard/teacherSectionsReduxSelectors';
+import color from '@cdo/apps/util/color';
 import i18n from '@cdo/locale';
 
 import CodeReviewGroupsDataApi from './CodeReviewGroupsDataApi';
-
-import moduleStyles from './codeReviewGroupsStatusToggle.module.scss';
 
 function CodeReviewGroupsStatusToggle({
   codeReviewExpiresAt,
@@ -49,7 +48,7 @@ function CodeReviewGroupsStatusToggle({
 
   return (
     <div>
-      <div className={moduleStyles.toggleAndError}>
+      <div style={styles.toggleAndError}>
         <Toggle
           id="uitest-code-review-groups-toggle"
           name="enableCodeReviewToggle"
@@ -57,13 +56,9 @@ function CodeReviewGroupsStatusToggle({
           onChange={toggleEnableCodeReview}
           label={i18n.enableCodeReview()}
         />
-        {saveInProgress && (
-          <span className={moduleStyles.spinner}>
-            <Spinner size="medium" />
-          </span>
-        )}
+        {saveInProgress && <Spinner style={styles.spinner} size="medium" />}
         {saveError && (
-          <p className={moduleStyles.saveError}>
+          <p style={styles.saveError}>
             {isToggledOn
               ? i18n.codeReviewToggleDisableError()
               : i18n.codeReviewToggleEnableError()}
@@ -73,7 +68,7 @@ function CodeReviewGroupsStatusToggle({
 
       {isToggledOn && (
         <p
-          className={moduleStyles.enabledMessage}
+          style={styles.enabledMessage}
           name="enabledCodeReviewMessage"
           id="uitest-code-review-groups-status-message"
         >
@@ -103,3 +98,21 @@ export default connect(
       dispatch(setSectionCodeReviewExpiresAt(sectionId, expiration)),
   })
 )(CodeReviewGroupsStatusToggle);
+
+const styles = {
+  enabledMessage: {
+    fontStyle: 'italic',
+    color: color.dark_charcoal,
+    width: 360,
+  },
+  saveError: {
+    color: color.red,
+    margin: 8,
+  },
+  toggleAndError: {
+    display: 'flex',
+  },
+  spinner: {
+    marginLeft: 8,
+  },
+};

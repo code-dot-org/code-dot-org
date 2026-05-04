@@ -1,17 +1,14 @@
-import {Button as MuiButton} from '@mui/material';
-import $ from 'jquery';
 import _ from 'lodash';
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
 import ReactTooltip from 'react-tooltip';
 
+import Button from '@cdo/apps/legacySharedComponents/Button';
 import {SectionLoginType} from '@cdo/generated-scripts/sharedConstants';
 import i18n from '@cdo/locale';
 
 import {setSecretImage, setSecretWords} from './manageStudentsRedux';
-
-import moduleStyles from './showSecret.module.scss';
 
 class ShowSecret extends Component {
   static propTypes = {
@@ -84,27 +81,24 @@ class ShowSecret extends Component {
         : i18n.hidePicture();
 
     return (
-      <div className={moduleStyles.showSecretContainer}>
+      <div>
         {!this.state.isShowing && (
           <span data-for={tooltipId} data-tip>
-            <MuiButton
-              variant="outlined"
-              color="tertiary"
-              size="small"
+            <Button
               onClick={this.show}
+              color={Button.ButtonColor.white}
+              text={showButtonText}
               disabled={secretLoginDisabled}
               className="uitest-show-picture-or-word"
-              type="button"
-            >
-              {showButtonText}
-            </MuiButton>
+              style={styles.button}
+            />
             <ReactTooltip id={tooltipId} role="tooltip" effect="solid">
               <div>{i18n.disabledForTeacherAccountsTooltip()}</div>
             </ReactTooltip>
           </span>
         )}
         {this.state.isShowing && (
-          <div className={moduleStyles.showRow}>
+          <div>
             {this.props.loginType === SectionLoginType.word && (
               <p>{this.props.secretWord}</p>
             )}
@@ -113,35 +107,42 @@ class ShowSecret extends Component {
               // Verify or update this alt-text as necessary
               <img
                 src={this.props.secretPictureUrl}
-                className={moduleStyles.image}
+                style={styles.image}
                 alt=""
               />
             )}
-            <MuiButton
-              variant="contained"
-              color="primary"
-              size="small"
+            <Button
               onClick={this.reset}
+              color={Button.ButtonColor.blue}
+              text={i18n.reset()}
+              style={{...styles.button, ...styles.reset}}
               className="uitest-reset-password"
-              type="button"
-            >
-              {i18n.reset()}
-            </MuiButton>
-            <MuiButton
-              variant="outlined"
-              color="tertiary"
-              size="small"
+            />
+            <Button
               onClick={this.hide}
-              type="button"
-            >
-              {hideButtonText}
-            </MuiButton>
+              color={Button.ButtonColor.white}
+              text={hideButtonText}
+              style={styles.button}
+            />
           </div>
         )}
       </div>
     );
   }
 }
+
+const styles = {
+  reset: {
+    marginRight: 10,
+  },
+  image: {
+    width: 45,
+  },
+  button: {
+    margin: 0,
+    boxShadow: 'inset 0 2px 0 0 rgb(255 255 255 / 40%)',
+  },
+};
 
 export const UnconnectedShowSecret = ShowSecret;
 

@@ -1,6 +1,5 @@
 <Dancelab>
   <config><![CDATA[{
-  "published": true,
   "game_id": 63,
   "created_at": "2026-04-22T20:46:45.000Z",
   "level_num": "custom",
@@ -35,18 +34,14 @@
     "uses_lab2": "true",
     "guide_mode": "aiDancerGenerate",
     "ai_dancer_generate_adlib": "creature-05",
-    "long_instructions": "## Use AI to design your dancer\r\n\r\nA prompt is an instruction that tells AI what to do.\r\n\r\n1. Modify the prompt below.\r\n\r\n2. Press Generate dancer.",
+    "long_instructions": "### Use AI to design your dancer\r\nA prompt is an instruction that tells AI what to do.\r\n1. Modify the prompt below.\r\n2. Press Generate dancer.",
     "project_template_level_name": "mix-move-ai-dancer-prompt-template_2026-pilot_2026",
     "offer_browser_tts": "true",
     "name_suffix": "_2026",
-    "preload_asset_list": null,
-    "encrypted_examples": [
-
-    ]
+    "preload_asset_list": null
   },
-  "audit_log": "[{\"changed_at\":\"2026-04-22T20:46:45.072+00:00\",\"changed\":[\"cloned from \\\"aid-thinking-critically-lesson1-level1_2026-test_2026-pilot_2026\\\"\"],\"cloned_from\":\"aid-thinking-critically-lesson1-level1_2026-test_2026-pilot_2026\"},{\"changed_at\":\"2026-05-03 18:07:57 +0000\",\"changed\":[\"long_instructions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]",
-  "level_concept_difficulty": {
-  }
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-04-22T20:46:45.072+00:00\",\"changed\":[\"cloned from \\\"aid-thinking-critically-lesson1-level1_2026-test_2026-pilot_2026\\\"\"],\"cloned_from\":\"aid-thinking-critically-lesson1-level1_2026-test_2026-pilot_2026\"}]"
 }]]></config>
   <blocks/>
 </Dancelab>

@@ -1,6 +1,6 @@
 name 'aid-thinking_critically_lesson6_level2choice_2026'
-display_name 'Improve Your Project'
-description 'Use the feedback you got from the AI Reviewers to improve your project.'
+display_name 'Improve your project.'
+description 'Improve your project.'
 
 sublevels
 level 'aid-thinking_critically_lesson6_level4a_2026'

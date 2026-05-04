@@ -1,5 +1,5 @@
-import Dialog from '@code-dot-org/component-library/dialog';
-import Link from '@code-dot-org/component-library/link';
+import {Button as MuiButton} from '@mui/material';
+import _ from 'lodash';
 import PropTypes from 'prop-types';
 import React from 'react';
 
@@ -10,7 +10,12 @@ import {
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 import i18n from '@cdo/locale';
 
-import moduleStyles from './confirmRemoveStudentDialog.module.scss';
+import {
+  Header,
+  ConfirmCancelFooter,
+} from '../../sharedComponents/SystemDialog/SystemDialog';
+import color from '../../util/color';
+import BaseDialog from '../BaseDialog';
 
 // A stub set of otherwise-required props for use in stories and unit tests.
 export const MINIMUM_TEST_PROPS = {
@@ -20,9 +25,13 @@ export const MINIMUM_TEST_PROPS = {
   onCancel: () => {},
 };
 
+// This set of props will be 'inherited' from BaseDialog and automatically
+// passed through to it.
+const propsFromBaseDialog = ['isOpen', 'hideBackdrop'];
+
 export default class ConfirmRemoveStudentDialog extends React.Component {
   static propTypes = {
-    isOpen: PropTypes.bool,
+    ..._.pick(BaseDialog.propTypes, propsFromBaseDialog),
     disabled: PropTypes.bool,
     studentName: PropTypes.string.isRequired,
     hasEverSignedIn: PropTypes.bool,
@@ -38,70 +47,74 @@ export default class ConfirmRemoveStudentDialog extends React.Component {
       : i18n.removeUnusedStudentHeader({studentName});
   }
 
-  renderBody() {
-    const {hasEverSignedIn, dependsOnThisSectionForLogin} = this.props;
-    if (!hasEverSignedIn) {
-      return null;
-    }
-    return (
-      <div>
-        <SafeMarkdown markdown={i18n.removeStudentBody1()} />
-        <p>
-          <a
-            href={RELEASE_OR_DELETE_RECORDS_EXPLANATION}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            {i18n.learnMore()}
-          </a>
-        </p>
-        {dependsOnThisSectionForLogin && (
-          <div className={moduleStyles.removeStudentBody2Container}>
-            <p>{i18n.removeStudentBody2()}</p>
-            <Link
-              size="s"
-              href={ADD_A_PERSONAL_LOGIN_HELP_URL}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              {i18n.removeStudentSendHomeInstructions()}
-            </Link>
-          </div>
-        )}
-      </div>
-    );
-  }
-
   render() {
-    const {isOpen, disabled, onConfirm, onCancel} = this.props;
-    if (!isOpen) {
-      return null;
-    }
-
+    const {
+      disabled,
+      hasEverSignedIn,
+      dependsOnThisSectionForLogin,
+      onConfirm,
+      onCancel,
+    } = this.props;
     return (
-      <Dialog
-        title={this.headerText()}
-        customContent={
-          <div id="dsco-dialog-description">{this.renderBody()}</div>
-        }
-        icon={{
-          iconName: 'circle-exclamation',
-          iconFamily: 'solid',
-          style: {display: 'flex'},
-        }}
-        onClose={onCancel}
-        primaryButtonProps={{
-          children: i18n.removeStudent(),
-          onClick: onConfirm,
-          color: 'error',
-          disabled: !!disabled,
-        }}
-        secondaryButtonProps={{
-          children: i18n.cancel(),
-          onClick: onCancel,
-          disabled: !!disabled,
-        }}
-      />
+      <BaseDialog
+        {..._.pick(this.props, propsFromBaseDialog)}
+        useUpdatedStyles
+        handleClose={onCancel}
+      >
+        <div style={styles.container}>
+          <Header text={this.headerText()} hideBorder={!hasEverSignedIn} />
+          {hasEverSignedIn && (
+            <div>
+              <SafeMarkdown markdown={i18n.removeStudentBody1()} />
+              <p>
+                <a
+                  href={RELEASE_OR_DELETE_RECORDS_EXPLANATION}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  {i18n.learnMore()}
+                </a>
+              </p>
+              {dependsOnThisSectionForLogin && (
+                <div>
+                  <p>{i18n.removeStudentBody2()}</p>
+                  <MuiButton
+                    variant="contained"
+                    color="primary"
+                    size="medium"
+                    style={styles.sendHomeInstructionsButton}
+                    href={ADD_A_PERSONAL_LOGIN_HELP_URL}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    {i18n.removeStudentSendHomeInstructions()}
+                  </MuiButton>
+                </div>
+              )}
+            </div>
+          )}
+          <ConfirmCancelFooter
+            confirmText={i18n.removeStudent()}
+            confirmColor="error"
+            onConfirm={onConfirm}
+            onCancel={onCancel}
+            disableConfirm={!!disabled}
+            disableCancel={!!disabled}
+          />
+        </div>
+      </BaseDialog>
     );
   }
 }
+
+const styles = {
+  container: {
+    margin: 20,
+    color: color.charcoal,
+  },
+  sendHomeInstructionsButton: {
+    display: 'block',
+    textAlign: 'center',
+    marginBottom: '1em',
+  },
+};

@@ -42,9 +42,6 @@
   gap: 8px;
 }
 
-// TODO: Make this selector higher specificity, as font awesome icons might get display from font awesome styles right
-// now, which breaks the styling. Once done - remove inline styles display flex from icon
-// in apps/src/templates/manageStudents/ConfirmRemoveStudentDialog.jsx
 .dialogIcon {
   position: absolute;
   inset-block-start: -32px;

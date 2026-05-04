@@ -1,6 +1,5 @@
 <Dancelab>
   <config><![CDATA[{
-  "published": true,
   "game_id": 63,
   "created_at": "2026-04-22T20:47:09.000Z",
   "level_num": "custom",
@@ -35,18 +34,14 @@
     "uses_lab2": "true",
     "guide_mode": "aiDancerGenerate",
     "ai_dancer_generate_adlib": "creature-attire-05",
-    "long_instructions": "## Use a prompt with more details\r\n\r\nExtra details help AI create what you have in mind.\r\n\r\nBefore you change your prompt, reflect:\r\n\r\n- What am I changing?\r\n- What do I predict will happen?\r\n\r\nAfter you test it, discuss with a partner: What actually happened?",
+    "long_instructions": "### Use a prompt with more details\r\n\r\nExtra details help AI create what you have in mind.",
     "project_template_level_name": "mix-move-ai-dancer-prompt-template_2026-pilot_2026",
     "offer_browser_tts": "true",
     "name_suffix": "_2026",
-    "preload_asset_list": null,
-    "encrypted_examples": [
-
-    ]
+    "preload_asset_list": null
   },
-  "audit_log": "[{\"changed_at\":\"2026-04-22T20:47:09.244+00:00\",\"changed\":[\"cloned from \\\"aid-thinking-critically-lesson1-level2_2026-test_2026-pilot_2026\\\"\"],\"cloned_from\":\"aid-thinking-critically-lesson1-level2_2026-test_2026-pilot_2026\"},{\"changed_at\":\"2026-05-03 18:07:17 +0000\",\"changed\":[\"long_instructions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]",
-  "level_concept_difficulty": {
-  }
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-04-22T20:47:09.244+00:00\",\"changed\":[\"cloned from \\\"aid-thinking-critically-lesson1-level2_2026-test_2026-pilot_2026\\\"\"],\"cloned_from\":\"aid-thinking-critically-lesson1-level2_2026-test_2026-pilot_2026\"}]"
 }]]></config>
   <blocks/>
 </Dancelab>

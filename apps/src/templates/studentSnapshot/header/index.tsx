@@ -191,6 +191,7 @@ const Header: React.FC<HeaderProps> = ({
           items={studentOptions}
           selectedValue={selectedStudent?.id.toString() || ''}
           onChange={event => setSelectedStudentId(Number(event.target.value))}
+          placeholder="Select a student"
           className={styles.dropdown}
           size="s"
           color="gray"

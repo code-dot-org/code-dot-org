@@ -1,6 +1,7 @@
 import fontConstants from '@cdo/apps/fontConstants';
 
 import styleConstants from '../../styleConstants';
+import color from '../../util/color';
 
 // Constants for React tables
 
@@ -67,22 +68,21 @@ export const tableLayoutStyles = {
   table: {
     borderWidth: 1,
     borderStyle: 'solid',
-    borderColor: 'var(--borders-neutral-primary)',
+    borderColor: color.border_gray,
     width: styleConstants['content-width'],
-    backgroundColor: 'var(--background-neutral-primary)',
+    backgroundColor: color.table_light_row,
   },
   cell: {
     maxWidth: 200,
     border: '1px solid',
-    borderColor: 'var(--borders-neutral-primary)',
+    borderColor: color.border_light_gray,
     padding: 10,
     fontSize: 14,
-    color: 'var(--text-neutral-primary)',
   },
   headerCell: {
-    backgroundColor: 'var(--background-neutral-tertiary)',
+    backgroundColor: color.table_header,
     fontWeight: 'bold',
-    borderColor: 'var(--borders-neutral-primary)',
+    borderColor: color.border_light_gray,
     borderStyle: 'solid',
     borderBottomWidth: 1,
     borderTopWidth: 0,
@@ -90,7 +90,7 @@ export const tableLayoutStyles = {
     borderRightWidth: 1,
     paddingTop: 20,
     paddingBottom: 20,
-    color: 'var(--text-neutral-primary)',
+    color: color.charcoal,
     textAlign: 'inherit',
   },
   flexCell: {
@@ -114,13 +114,13 @@ export const plTableLayoutStyles = {
   link: {
     ...fontConstants['main-font-semi-bold'],
     fontSize: 14,
-    color: 'var(--text-neutral-primary)',
+    color: color.neutral_dark,
     textDecoration: 'underline',
   },
   sectionCodeLink: {
     ...fontConstants['main-font-semi-bold'],
     fontSize: 14,
-    color: 'var(--text-brand-purple-primary)',
+    color: color.brand_secondary_default,
   },
   currentUnit: {
     marginTop: 10,
@@ -143,7 +143,7 @@ export const plTableLayoutStyles = {
 // Settings for WrappedSortable
 export const sortableOptions = {
   // Dim inactive sorting icons in the column headers
-  default: {color: 'var(--text-neutral-tertiary)'},
+  default: {color: 'rgba(0, 0, 0, 0.2 )'},
 };
 
 export const NAME_CELL_INPUT_WIDTH = 160;

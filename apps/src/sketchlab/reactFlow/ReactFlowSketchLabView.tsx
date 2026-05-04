@@ -234,7 +234,6 @@ function ReactFlowSketchLabViewInner({
             settings={[useThemeSetting('sketchlab')]}
             versionHistoryProps={{
               startSources:
-                (levelProperties?.templateSources as ProjectSources) ||
                 (levelProperties?.startSources as ProjectSources) ||
                 REACT_FLOW_DEFAULT_SOURCES,
               onLoadVersion,

@@ -91,7 +91,7 @@ describe('MoveStudents', () => {
     expect(cancelStudentTransfer).toHaveBeenCalledTimes(1);
   });
 
-  it('renders an error message if the transfer status is fail', async () => {
+  it('renders an error message if the transfer status is fail', () => {
     const transferStatus = {
       status: TransferStatus.FAIL,
       error: 'failed to transfer students!',
@@ -100,11 +100,8 @@ describe('MoveStudents', () => {
       <MoveStudents {...DEFAULT_PROPS} transferStatus={transferStatus} />
     );
 
-    await act(async () => {
-      wrapper.instance().openDialog();
-    });
-    wrapper.update();
-    const errorElement = wrapper.find('#uitest-error').hostNodes();
+    wrapper.find('Button').simulate('click');
+    const errorElement = wrapper.find('#uitest-error');
     expect(errorElement.exists()).toBe(true);
     expect(errorElement.text()).toBe(transferStatus.error);
   });

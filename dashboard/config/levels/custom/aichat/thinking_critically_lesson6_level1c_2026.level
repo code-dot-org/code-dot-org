@@ -7,7 +7,7 @@
   "user_id": 18603,
   "properties": {
     "encrypted": "false",
-    "long_instructions": "## The Digital Lawyer\r\n\r\nThis bot focuses purely on logic and facts.\r\n\r\n1. Import your guide from the Backpack and add it to the chat.\r\n\r\n2. State your case. Tell the bot your most important rule or tip for using AI.\r\n\r\n3. Ask it to check your evidence. Try asking: \"Can you find any holes in my guidance?\" or \"Do you believe my advice?\"\r\n\r\n4. If the Digital Lawyer pushes back, don't give up! Prove them wrong by pointing to the actual AI examples and screenshots you tested.\r\n",
+    "long_instructions": "##The Digital Lawyer\r\n\r\nThis bot focuses purely on logic and facts. Be ready to defend your claims!\r\n\r\n* **Import** your guide from the Backpack so the bot can review the evidence.  \r\n\r\n* **State** your case. Tell the bot your most important rule or tip for using AI.\r\n\r\n* **Ask** to be cross-examined. Try asking: \"Can you find any holes in my guidance?\" or \"Do you believe my advice?\"\r\n\r\n* **Defend** your evidence! If the Digital Lawyer pushes back, do not just give up! Prove them wrong by pointing to the actual AI examples and screenshots you tested.",
     "offer_browser_tts": "false",
     "submittable": "false",
     "disable_edit_run_for_submission": "false",
@@ -45,11 +45,11 @@
       ],
       "multimodalEnabled": true
     },
-    "display_name": "The Digital Lawyer",
-    "bubble_choice_description": "This bot focuses purely on logic and facts.",
+    "display_name": "The \"Fact Checker\"",
+    "bubble_choice_description": "Like a digital **Lawyer**, checking your evidence and your advice to make sure that they connect.",
     "thumbnail_url": "https://images.code.org/0cb71b1ca0fb3e015423766ab45190b1-3.jpg",
     "name_suffix": "_2026"
   },
-  "audit_log": "[{\"changed_at\":\"2026-04-30T17:44:59.657+00:00\",\"changed\":[\"cloned from \\\"aid-thinking-critically-lesson9-level1c_2026-test_2026-pilot_2026\\\"\"],\"cloned_from\":\"aid-thinking-critically-lesson9-level1c_2026-test_2026-pilot_2026\"},{\"changed_at\":\"2026-04-30 17:57:35 +0000\",\"changed\":[\"aichat_settings\",\"display_name\",\"bubble_choice_description\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-30 18:02:30 +0000\",\"changed\":[\"thumbnail_url\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-30 18:20:55 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-05-03 01:11:25 +0000\",\"changed\":[\"long_instructions\",\"display_name\",\"bubble_choice_description\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2026-04-30T17:44:59.657+00:00\",\"changed\":[\"cloned from \\\"aid-thinking-critically-lesson9-level1c_2026-test_2026-pilot_2026\\\"\"],\"cloned_from\":\"aid-thinking-critically-lesson9-level1c_2026-test_2026-pilot_2026\"},{\"changed_at\":\"2026-04-30 17:57:35 +0000\",\"changed\":[\"aichat_settings\",\"display_name\",\"bubble_choice_description\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-30 18:02:30 +0000\",\"changed\":[\"thumbnail_url\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-30 18:20:55 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"}]"
 }]]></config>
 </Aichat>

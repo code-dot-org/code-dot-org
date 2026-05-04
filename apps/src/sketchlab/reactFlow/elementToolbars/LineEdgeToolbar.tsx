@@ -7,7 +7,6 @@ import React from 'react';
 import {SketchlabReactFlowEdge} from '@cdo/apps/lab2/types';
 
 import {isArrowEdge} from '../utils/lineEdges';
-import {newBackZIndex, newFrontZIndex} from '../utils/stacking';
 
 import ActionsGroup from './ActionsGroup';
 import SwatchGroup from './SwatchGroup';
@@ -114,7 +113,7 @@ export default function LineEdgeToolbar({
   onSelectStrokeStyle,
   onSelectArrowHeads,
 }: LineEdgeToolbarProps) {
-  const {deleteElements, updateEdge, getNodes, getEdges} = useReactFlow();
+  const {deleteElements} = useReactFlow();
   const selectedValue =
     (typeof edge.style?.stroke === 'string' && edge.style.stroke) ||
     DEFAULT_STROKE_COLOR;
@@ -201,17 +200,7 @@ export default function LineEdgeToolbar({
           )}
         />
       )}
-      <ActionsGroup
-        onDelete={() => deleteElements({edges: [{id: edge.id}]})}
-        onBringToFront={() => {
-          const items = [...getNodes(), ...getEdges()];
-          updateEdge(edge.id, {zIndex: newFrontZIndex(items, edge.id)});
-        }}
-        onSendToBack={() => {
-          const items = [...getNodes(), ...getEdges()];
-          updateEdge(edge.id, {zIndex: newBackZIndex(items, edge.id)});
-        }}
-      />
+      <ActionsGroup onDelete={() => deleteElements({edges: [{id: edge.id}]})} />
     </ToolbarShell>
   );
 }

@@ -2,9 +2,9 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import {Droppable} from 'react-beautiful-dnd';
 
-import Student from './Student';
+import color from '@cdo/apps/util/color';
 
-import moduleStyles from './studentGroup.module.scss';
+import Student from './Student';
 
 // A StudentGroup is a component that
 // Students can be dragged between as teachers are arranging students
@@ -31,7 +31,7 @@ export default function StudentGroup({
           {...provided.droppableProps}
         >
           {members && members.length > 0 ? (
-            <div className={moduleStyles.studentList}>
+            <div style={styles.studentList}>
               {members.map((member, index) => (
                 <Student
                   followerId={member.followerId}
@@ -43,9 +43,7 @@ export default function StudentGroup({
               {provided.placeholder}
             </div>
           ) : (
-            showEmptyGroupPlaceholder && (
-              <div className={moduleStyles.emptyGroup} />
-            )
+            showEmptyGroupPlaceholder && <div style={styles.emptyGroup} />
           )}
         </div>
       )}
@@ -63,7 +61,17 @@ StudentGroup.propTypes = {
 };
 
 const getListStyle = isDraggingOver => ({
-  background: isDraggingOver
-    ? 'var(--background-neutral-tertiary)'
-    : 'var(--background-neutral-primary)',
+  background: isDraggingOver ? color.lightest_gray : color.white,
 });
+
+const GRAY_BORDER = `1px solid ${color.lighter_gray}`;
+
+const styles = {
+  studentList: {
+    border: GRAY_BORDER,
+  },
+  emptyGroup: {
+    paddingBottom: 53,
+    border: GRAY_BORDER,
+  },
+};

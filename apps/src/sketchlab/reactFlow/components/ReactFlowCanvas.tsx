@@ -75,14 +75,6 @@ const NODE_TYPES = {
 const NEW_NODE_STAGGER_PX = 20;
 const FOCUS_DELAY_MS = 100;
 
-function stripDisplayFields<T extends object>(item: T): T {
-  const result = {...item} as Record<string, unknown>;
-  delete result.domAttributes;
-  delete result.className;
-  delete result.selected;
-  return result as T;
-}
-
 export interface ReactFlowCanvasProps {
   updateSources: ReturnType<
     typeof useSources<ReactFlowSketchLabSources>
@@ -309,15 +301,7 @@ export default function ReactFlowCanvas({
       clearTimeout(saveTimerRef.current);
     }
     saveTimerRef.current = setTimeout(() => {
-      // updateNode/updateEdge from useReactFlow round-trips through React Flow's internal
-      // store, which mirrors the displayNodes/displayEdges we render.
-      // That spreads display-only fields (including domAttributes, which can include a function)
-      // back into our state, which can then fail to clone. Strip them before persisting.
-      const source: SketchlabReactFlowSource = {
-        nodes: nodes.map(stripDisplayFields) as SketchlabReactFlowNode[],
-        edges: edges.map(stripDisplayFields) as SketchlabReactFlowEdge[],
-        viewport,
-      };
+      const source: SketchlabReactFlowSource = {nodes, edges, viewport};
       updateSources(prev => ({...prev, source}));
     }, SAVE_DEBOUNCE_MS);
 
@@ -578,7 +562,6 @@ export default function ReactFlowCanvas({
             // it manages things like moving nodes with arrow keys.
             disableKeyboardA11y={false}
             autoPanOnNodeFocus={false} // We manage viewport on focus manually in useFocusManagement.
-            zIndexMode={'manual'}
           >
             {openLineEdge && (
               <LineEdgeToolbar
