@@ -145,7 +145,7 @@ export default function ReactFlowCanvas({
     [openToolbarTarget, trapFocus, openToolbar, closeToolbar]
   );
 
-  const {screenToFlowPosition} = useReactFlow();
+  const {screenToFlowPosition, flowToScreenPosition} = useReactFlow();
   const addedNodeCountRef = useRef(0);
   const {
     tabOrder,
@@ -180,6 +180,7 @@ export default function ReactFlowCanvas({
     setNodes,
     setEdges,
     screenToFlowPosition,
+    flowToScreenPosition,
   });
 
   // Close the toolbar when focus moves off the owning node/edge: to a

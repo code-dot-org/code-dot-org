@@ -7,6 +7,11 @@ import {
 } from '@cdo/apps/lab2/types';
 
 import {
+  LINE_ANCHOR_SIZE_PX,
+  LINE_RECONNECT_SNAP_RADIUS_PX,
+} from '../constants';
+import {findNearestHandle} from '../utils/handleSnap';
+import {
   createLineAnchorAtHandle,
   getHandleFlowPosition,
 } from '../utils/lineAnchors';
@@ -15,6 +20,7 @@ type FlowPoint = {x: number; y: number};
 
 interface DraggingAnchor {
   id: string;
+  side: 'source' | 'target';
   startPosition: FlowPoint;
 }
 
@@ -40,6 +46,7 @@ interface UseLineEdgeDragOptions {
     updater: (edges: SketchlabReactFlowEdge[]) => SketchlabReactFlowEdge[]
   ) => void;
   screenToFlowPosition: (position: {x: number; y: number}) => FlowPoint;
+  flowToScreenPosition: (position: {x: number; y: number}) => FlowPoint;
 }
 
 // Dragging the body of a line edge translates the line as a whole. Free
@@ -54,6 +61,7 @@ export function useLineEdgeDrag({
   setNodes,
   setEdges,
   screenToFlowPosition,
+  flowToScreenPosition,
 }: UseLineEdgeDragOptions) {
   const {getNode} = useReactFlow<
     SketchlabReactFlowNode,
@@ -90,6 +98,7 @@ export function useLineEdgeDrag({
           }
           dragState.anchors.push({
             id: anchor.id,
+            side: pending.side,
             startPosition: {...anchor.position},
           });
         });
@@ -133,11 +142,82 @@ export function useLineEdgeDrag({
     [screenToFlowPosition, setNodes, setEdges]
   );
 
-  const stopLineEdgeDrag = useCallback(() => {
-    draggingLineEdgeRef.current = null;
-    window.removeEventListener('mousemove', handleLineEdgeMouseMove);
-    window.removeEventListener('mouseup', stopLineEdgeDrag);
-  }, [handleLineEdgeMouseMove]);
+  const stopLineEdgeDrag = useCallback(
+    (event?: MouseEvent) => {
+      const dragState = draggingLineEdgeRef.current;
+      draggingLineEdgeRef.current = null;
+      window.removeEventListener('mousemove', handleLineEdgeMouseMove);
+      window.removeEventListener('mouseup', stopLineEdgeDrag);
+
+      // Snap-on-release: for each anchor that moved during the drag, check
+      // whether its handle ended up close enough to a real-node handle to
+      // attach. We compute each anchor's final flow position from the drag
+      // delta, project the anchor's Handle (offset within the 10×10 box)
+      // to screen space, and look up the nearest matching handle. The
+      // orphan-prune effect then removes the anchor since no edge points
+      // at it anymore.
+      if (!dragState || !dragState.hasMoved || !event) {
+        return;
+      }
+      const finalPointer = screenToFlowPosition({
+        x: event.clientX,
+        y: event.clientY,
+      });
+      const deltaX = finalPointer.x - dragState.startPointer.x;
+      const deltaY = finalPointer.y - dragState.startPointer.y;
+
+      const edgePatch: Partial<SketchlabReactFlowEdge> = {};
+      dragState.anchors.forEach(anchor => {
+        const finalPosition: FlowPoint = {
+          x: anchor.startPosition.x + deltaX,
+          y: anchor.startPosition.y + deltaY,
+        };
+        const handleFlowPosition: FlowPoint =
+          anchor.side === 'source'
+            ? {
+                x: finalPosition.x + LINE_ANCHOR_SIZE_PX,
+                y: finalPosition.y + LINE_ANCHOR_SIZE_PX / 2,
+              }
+            : {
+                x: finalPosition.x,
+                y: finalPosition.y + LINE_ANCHOR_SIZE_PX / 2,
+              };
+        const handleScreen = flowToScreenPosition(handleFlowPosition);
+        const snap = findNearestHandle(
+          handleScreen,
+          anchor.id,
+          anchor.side,
+          LINE_RECONNECT_SNAP_RADIUS_PX
+        );
+        if (!snap) {
+          return;
+        }
+        if (anchor.side === 'source') {
+          edgePatch.source = snap.nodeId;
+          edgePatch.sourceHandle = snap.handleId ?? undefined;
+        } else {
+          edgePatch.target = snap.nodeId;
+          edgePatch.targetHandle = snap.handleId ?? undefined;
+        }
+      });
+
+      if (Object.keys(edgePatch).length > 0) {
+        setEdges(currentEdges =>
+          currentEdges.map(currentEdge =>
+            currentEdge.id === dragState.edgeId
+              ? {...currentEdge, ...edgePatch}
+              : currentEdge
+          )
+        );
+      }
+    },
+    [
+      handleLineEdgeMouseMove,
+      screenToFlowPosition,
+      flowToScreenPosition,
+      setEdges,
+    ]
+  );
 
   const handleEdgeMouseDown = useCallback(
     (event: React.MouseEvent, edge: SketchlabReactFlowEdge) => {
@@ -153,6 +233,7 @@ export function useLineEdgeDrag({
       if (sourceNode?.type === 'lineAnchor') {
         anchors.push({
           id: sourceNode.id,
+          side: 'source',
           startPosition: {...sourceNode.position},
         });
       } else if (sourceNode) {
@@ -168,6 +249,7 @@ export function useLineEdgeDrag({
       if (targetNode?.type === 'lineAnchor') {
         anchors.push({
           id: targetNode.id,
+          side: 'target',
           startPosition: {...targetNode.position},
         });
       } else if (targetNode) {
