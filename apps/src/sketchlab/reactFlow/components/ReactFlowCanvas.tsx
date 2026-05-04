@@ -63,6 +63,7 @@ import {
   canCreateConnection,
   isLineAnchorNodeId,
 } from '../utils/connectionRules';
+import {findNearestHandle} from '../utils/handleSnap';
 import {isLineEdge} from '../utils/lineEdges';
 
 import Toolbar from './Toolbar';
@@ -482,6 +483,59 @@ export default function ReactFlowCanvas({
     []
   );
 
+  // Snap a line endpoint onto a real node's handle when the user drops the
+  // anchor close enough. We look at where the pointer landed in screen
+  // space and find the nearest matching handle on a non-anchor node within
+  // the snap radius. The orphaned anchor is removed by the prune effect.
+  const handleNodeDragStop = useCallback(
+    (event: React.MouseEvent | MouseEvent, node: SketchlabReactFlowNode) => {
+      if (node.type !== 'lineAnchor') {
+        return;
+      }
+      const associatedEdge = edges.find(
+        edge => edge.source === node.id || edge.target === node.id
+      );
+      if (!associatedEdge) {
+        return;
+      }
+      const isSourceSide = associatedEdge.source === node.id;
+      const requiredHandleType: 'source' | 'target' = isSourceSide
+        ? 'source'
+        : 'target';
+
+      const snapTarget = findNearestHandle(
+        {x: event.clientX, y: event.clientY},
+        node.id,
+        requiredHandleType,
+        LINE_RECONNECT_SNAP_RADIUS_PX
+      );
+      if (!snapTarget) {
+        return;
+      }
+
+      setEdges(currentEdges =>
+        currentEdges.map(currentEdge => {
+          if (currentEdge.id !== associatedEdge.id) {
+            return currentEdge;
+          }
+          if (isSourceSide) {
+            return {
+              ...currentEdge,
+              source: snapTarget.nodeId,
+              sourceHandle: snapTarget.handleId ?? undefined,
+            };
+          }
+          return {
+            ...currentEdge,
+            target: snapTarget.nodeId,
+            targetHandle: snapTarget.handleId ?? undefined,
+          };
+        })
+      );
+    },
+    [edges, setEdges]
+  );
+
   // Cleanup orphaned line anchors after any edge mutation. An anchor only
   // exists to terminate a line; if no edge references it (because the line
   // was deleted, or the endpoint was reconnected to a real node), it should
@@ -675,6 +729,7 @@ export default function ReactFlowCanvas({
             onReconnectStart={handleReconnectStart}
             onReconnect={handleReconnect}
             onReconnectEnd={handleReconnectEnd}
+            onNodeDragStop={handleNodeDragStop}
             isValidConnection={isValidConnection}
             connectionRadius={LINE_RECONNECT_SNAP_RADIUS_PX}
             nodeTypes={NODE_TYPES}
