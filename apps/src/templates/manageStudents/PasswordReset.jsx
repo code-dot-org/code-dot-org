@@ -1,10 +1,13 @@
+import TextField from '@code-dot-org/component-library/textField';
+import {Button as MuiButton} from '@mui/material';
 import _ from 'lodash';
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 import ReactTooltip from 'react-tooltip';
 
-import Button from '@cdo/apps/legacySharedComponents/Button';
 import i18n from '@cdo/locale';
+
+import moduleStyles from './passwordReset.module.scss';
 
 // This min length is configured in user.rb with validates_length_of :password
 const MIN_PASSWORD_LENGTH = 6;
@@ -95,15 +98,19 @@ class PasswordReset extends Component {
     const tooltipId = resetDisabled && _.uniqueId();
 
     return (
-      <div>
+      <div className={moduleStyles.passwordResetContainer}>
         {!this.state.isResetting && (
           <span data-for={tooltipId} data-tip>
-            <Button
+            <MuiButton
+              variant="outlined"
+              color="tertiary"
+              size="small"
               onClick={this.reset}
-              color={Button.ButtonColor.white}
-              text={i18n.resetPassword()}
               disabled={resetDisabled}
-            />
+              type="button"
+            >
+              {i18n.resetPassword()}
+            </MuiButton>
             {resetDisabled && (
               <ReactTooltip id={tooltipId} role="tooltip" effect="solid">
                 <div>{i18n.resetTeacherPasswordTooltip()}</div>
@@ -112,43 +119,43 @@ class PasswordReset extends Component {
           </span>
         )}
         {this.state.isResetting && (
-          <div>
-            <input
-              style={styles.input}
-              placeholder={i18n.newPassword()}
-              value={this.state.input}
-              onChange={this.updateInput}
-            />
-            <Button
-              onClick={this.save}
-              color={Button.ButtonColor.blue}
-              text={i18n.save()}
-              style={styles.button}
-            />
-            <Button
-              onClick={this.cancel}
-              color={Button.ButtonColor.white}
-              text={i18n.cancel()}
-              style={styles.button}
-            />
+          <div className={moduleStyles.resetRow}>
+            <div className={moduleStyles.inputWrapper}>
+              <TextField
+                name="newPassword"
+                inputType="password"
+                size="s"
+                placeholder={i18n.newPassword()}
+                value={this.state.input}
+                onChange={this.updateInput}
+                aria-label={i18n.newPassword()}
+              />
+            </div>
+            <div className={moduleStyles.buttonsWrapper}>
+              <MuiButton
+                variant="contained"
+                color="primary"
+                size="small"
+                onClick={this.save}
+                type="button"
+              >
+                {i18n.save()}
+              </MuiButton>
+              <MuiButton
+                variant="outlined"
+                color="tertiary"
+                size="small"
+                onClick={this.cancel}
+                type="button"
+              >
+                {i18n.cancel()}
+              </MuiButton>
+            </div>
           </div>
         )}
       </div>
     );
   }
 }
-
-const styles = {
-  input: {
-    width: '90%',
-    height: 29,
-    marginRight: 10,
-    marginLeft: 5,
-    padding: 5,
-  },
-  button: {
-    margin: 5,
-  },
-};
 
 export default PasswordReset;
