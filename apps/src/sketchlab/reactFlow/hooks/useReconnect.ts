@@ -3,6 +3,7 @@ import {
   Edge,
   FinalConnectionState,
   HandleType,
+  XYPosition,
 } from '@xyflow/react';
 import React, {useCallback, useRef} from 'react';
 
@@ -15,8 +16,6 @@ import {LINE_RECONNECT_SNAP_RADIUS_PX} from '../constants';
 import {findNearestHandle} from '../utils/handleSnap';
 import {createLineAnchorAtHandle} from '../utils/lineAnchors';
 
-type FlowPoint = {x: number; y: number};
-
 interface UseReconnectOptions {
   edges: SketchlabReactFlowEdge[];
   setNodes: (
@@ -25,12 +24,12 @@ interface UseReconnectOptions {
   setEdges: (
     updater: (edges: SketchlabReactFlowEdge[]) => SketchlabReactFlowEdge[]
   ) => void;
-  screenToFlowPosition: (position: FlowPoint) => FlowPoint;
+  screenToFlowPosition: (position: XYPosition) => XYPosition;
 }
 
 // Owns the lifecycle for moving an edge endpoint onto a node handle. Two
 // entry points feed into the same outcome:
-//   - React Flow's edge-endpoint dot:
+//   - React Flow's edge-endpoint handle:
 //       onReconnectStart -> onReconnect (landed)
 //                        \-> onReconnectEnd (canvas drop spawns an anchor)
 //   - Dragging a lineAnchor node directly: onNodeDragStop snaps it onto a
@@ -38,7 +37,7 @@ interface UseReconnectOptions {
 //     unused anchor.
 //
 // `isReconnecting` lets the caller relax connection validation while a
-// reconnect is in flight — anchor↔real-node drops are otherwise blocked
+// reconnect is in flight — line anchor to real node connections are blocked
 // for fresh connections.
 export function useReconnect({
   edges,

@@ -411,7 +411,6 @@ export default function ReactFlowCanvas({
     [nodes, isReconnecting]
   );
 
-
   const handleMoveEnd = useCallback(
     (_event: unknown, newViewport: SketchlabReactFlowSource['viewport']) => {
       setViewport(newViewport);
