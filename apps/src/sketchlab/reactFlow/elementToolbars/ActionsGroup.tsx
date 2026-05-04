@@ -13,6 +13,8 @@ interface ActionsGroupProps {
   lineEdgeId?: string;
   onDelete?: () => void;
   onLock?: () => void;
+  onBringToFront?: () => void;
+  onSendToBack?: () => void;
 }
 
 export default function ActionsGroup({
@@ -20,6 +22,8 @@ export default function ActionsGroup({
   lineEdgeId,
   onDelete,
   onLock,
+  onBringToFront,
+  onSendToBack,
 }: ActionsGroupProps) {
   const isStartMode = getIsStartMode();
   const {duplicateNode, duplicateLine} = useClipboard();
@@ -79,6 +83,30 @@ export default function ActionsGroup({
               onClick={onLock}
             >
               <FontAwesomeV6Icon iconName="lock" />
+            </IconButton>
+          </Tooltip>
+        )}
+        {onBringToFront && (
+          <Tooltip title="Bring to front" placement="top">
+            <IconButton
+              size="small"
+              className={styles.fontSizeButton}
+              aria-label="Bring to front"
+              onClick={onBringToFront}
+            >
+              <FontAwesomeV6Icon iconName="bring-front" />
+            </IconButton>
+          </Tooltip>
+        )}
+        {onSendToBack && (
+          <Tooltip title="Send to back" placement="top">
+            <IconButton
+              size="small"
+              className={styles.fontSizeButton}
+              aria-label="Send to back"
+              onClick={onSendToBack}
+            >
+              <FontAwesomeV6Icon iconName="send-back" />
             </IconButton>
           </Tooltip>
         )}
