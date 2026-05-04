@@ -6,11 +6,12 @@ import {
   saveUserLessonReflection,
 } from '@cdo/apps/aiTutor/reflectionsApi';
 
+import {LessonDeepDiveData, ReflectionData} from '../types';
+
 import LessonObjectiveReflection, {
   ReflectionValue,
 } from './LessonObjectiveReflection';
 import LessonReflection from './LessonReflection';
-import {LessonDeepDiveData, ReflectionData} from './types';
 
 import styles from './reflection.module.scss';
 

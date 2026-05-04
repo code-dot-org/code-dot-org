@@ -1,0 +1,149 @@
+$red: #ed6060;
+$purple: #9657c7;
+
+.container {
+  display: flex;
+  flex-direction: column;
+  color: #fff;
+}
+
+.overline {
+  font-size: 0.875rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: $red;
+  margin: 0 0 20px;
+}
+
+// ── Waveform ──────────────────────────────────────────────────────────────────
+
+.waveform {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  height: 140px;
+  margin: 0 auto 24px;
+}
+
+.bar {
+  width: 10px;
+  border-radius: 6px;
+  transition: height 0.3s ease;
+  flex-shrink: 0;
+}
+
+@keyframes pulse {
+  0%, 100% { transform: scaleY(1); }
+  50%       { transform: scaleY(0.5); }
+}
+
+.barAnimating {
+  animation: pulse 0.8s ease-in-out infinite;
+}
+
+// ── Player ────────────────────────────────────────────────────────────────────
+
+.playerArea {
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.volumeRow {
+  display: flex;
+  justify-content: flex-end;
+  color: #d4dae1;
+  font-size: 1rem;
+}
+
+.progressTrack {
+  width: 100%;
+  height: 6px;
+  background: #a1aebb;
+  border-radius: 8px;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.progressFill {
+  height: 100%;
+  background: $purple;
+  border-radius: 8px;
+  transition: width 0.2s linear;
+}
+
+.timestamps {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.75rem;
+  color: #fff;
+}
+
+.controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 4px;
+}
+
+.controlButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 7px;
+  border: none;
+  border-radius: 4px;
+  background: transparent;
+  color: #d4dae1;
+  font-size: 0.875rem;
+  cursor: pointer;
+
+  &:hover {
+    color: #fff;
+  }
+
+  &:focus-visible {
+    outline: 2px solid #a374d6;
+    outline-offset: 2px;
+  }
+}
+
+.playButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 60px;
+  height: 60px;
+  border: none;
+  border-radius: 50%;
+  background: #fff;
+  color: #292f36;
+  font-size: 1.25rem;
+  cursor: pointer;
+  transition: background-color 0.12s ease;
+
+  &:hover {
+    background: #e8eaed;
+  }
+
+  &:focus-visible {
+    outline: 2px solid #a374d6;
+    outline-offset: 2px;
+  }
+}
+
+// ── Description ───────────────────────────────────────────────────────────────
+
+.description {
+  font-size: 0.875rem;
+  line-height: 1.55;
+  color: #f0f2f5;
+  margin: 24px auto 0;
+  max-width: 600px;
+}

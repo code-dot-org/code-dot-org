@@ -1,7 +1,7 @@
+import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import {useSortable} from '@dnd-kit/sortable';
 import {CSS} from '@dnd-kit/utilities';
 import {Typography} from '@mui/material';
-import classNames from 'classnames';
 import React from 'react';
 
 import styles from './practice-problems.module.scss';
@@ -29,7 +29,7 @@ export const SortableOptionCard: React.FC<SortableOptionProps> = ({
   };
 
   return (
-    <li
+    <div
       {...attributes}
       {...listeners}
       className={styles.sectionCardWrapper}
@@ -38,20 +38,32 @@ export const SortableOptionCard: React.FC<SortableOptionProps> = ({
       aria-labelledby={`section-card-title-${option}`}
     >
       <div
-        className={classNames([
+        className={[
           styles.card,
           styles.carddraggable,
           showAnswer
             ? correct
               ? styles.cardcorrect
               : styles.cardincorrect
-            : null,
-        ])}
+            : '',
+        ]
+          .filter(Boolean)
+          .join(' ')}
       >
         <Typography variant="body1" className={styles.cardLabel}>
           {option}
         </Typography>
+        {showAnswer && correct && (
+          <span className={styles.correctIcon}>
+            <FontAwesomeV6Icon iconName="check" />
+          </span>
+        )}
+        {showAnswer && !correct && (
+          <span className={styles.incorrectIcon}>
+            <FontAwesomeV6Icon iconName="xmark" />
+          </span>
+        )}
       </div>
-    </li>
+    </div>
   );
 };

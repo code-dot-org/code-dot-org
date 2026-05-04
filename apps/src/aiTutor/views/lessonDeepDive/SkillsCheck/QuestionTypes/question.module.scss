@@ -1,0 +1,42 @@
+.questionText {
+  font-family: var(--font-family-body, Figtree);
+  font-size: var(--font-size-body-lg, 20px);
+  font-style: normal;
+  font-weight: 600;
+  line-height: var(--font-line-height-body-lg, 28px);
+  font-feature-settings: 'liga' off, 'clig' off;
+  color: var(--text-neutral-quaternary, #d4dae1);
+  margin-left: 10px;
+}
+
+.submitButton {
+  display: block;
+  width: 100%;
+  max-width: 250px;
+  padding: 8px 16px;
+  margin: 0;
+  background: #9657c7;
+  border: none;
+  border-radius: 4px;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  text-align: center;
+  transition: background-color 0.12s ease;
+
+  &:hover:not(:disabled) {
+    background: #7d42ad;
+  }
+
+  &:disabled {
+    background: #69788a;
+    color: #292f36;
+    cursor: default;
+  }
+
+  &:focus-visible {
+    outline: 2px solid #a374d6;
+    outline-offset: 2px;
+  }
+}

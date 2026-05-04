@@ -1,20 +1,17 @@
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
-import {createTheme, ThemeProvider} from '@mui/material/styles';
 import React, {FC, useCallback, useState} from 'react';
 
-const lightTheme = createTheme({palette: {mode: 'light'}});
-
-import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
-import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
-import {useAppSelector} from '@cdo/apps/util/reduxHooks';
-
-import LessonDeepDiveTutorChat from './LessonDeepDiveTutorChat';
-import PodcastsBox from './PodcastsBox';
 import {
   LessonDeepDiveData,
   ReflectionData,
   AssessmentQuestionResult,
-} from './types';
+} from '@cdo/apps/aiTutor/views/lessonDeepDive/types';
+import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
+import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
+import {useAppSelector} from '@cdo/apps/util/reduxHooks';
+
+import Chat from './Chat';
+import PodcastsBox from './PodcastsBox';
 import VideosBox from './VideosBox';
 import VocabularyFlashcards from './VocabularyFlashcards';
 
@@ -156,17 +153,15 @@ const InterventionBox: FC<InterventionBoxProps> = ({
           <VocabularyFlashcards vocabulary={vocabulary} />
         )}
         {selected === 'chat' && (
-          <ThemeProvider theme={lightTheme}>
-            <LessonDeepDiveTutorChat
-              lessonId={lessonId}
-              lessonName={lessonName}
-              lessonSummary={lessonSummary}
-              vocabulary={vocabulary}
-              assessmentAnalysis={assessmentAnalysis}
-              objectives={objectives}
-              reflectionData={reflectionData}
-            />
-          </ThemeProvider>
+          <Chat
+            lessonId={lessonId}
+            lessonName={lessonName}
+            lessonSummary={lessonSummary}
+            vocabulary={vocabulary}
+            assessmentAnalysis={assessmentAnalysis}
+            objectives={objectives}
+            reflectionData={reflectionData}
+          />
         )}
         {selected === 'videos' && <VideosBox jsonVideos={jsonVideos} />}
         {selected === 'podcasts' && <PodcastsBox />}

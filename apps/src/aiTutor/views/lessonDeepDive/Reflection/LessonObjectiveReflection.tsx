@@ -1,9 +1,11 @@
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import React, {FC} from 'react';
 
+import {
+  LessonDeepDiveData,
+  ReflectionValue,
+} from '@cdo/apps/aiTutor/views/lessonDeepDive/types';
 import {LessonObjectiveReflectionValues} from '@cdo/generated-scripts/sharedConstants';
-
-import {LessonDeepDiveData, ReflectionValue} from './types';
 
 import styles from './reflection.module.scss';
 

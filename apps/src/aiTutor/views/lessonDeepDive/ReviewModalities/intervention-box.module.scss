@@ -96,8 +96,11 @@ $nav-bg: #292f36;
   flex-shrink: 0;
   display: flex;
   align-items: stretch;
+  justify-content: center;
+  gap: 20px;
   background: $nav-bg;
   border-top: 1px solid $border;
+  padding: 0 24px;
 }
 
 // Menu / grid icon (left slot)
@@ -106,14 +109,14 @@ $nav-bg: #292f36;
   align-items: center;
   justify-content: center;
   width: 72px;
+  flex-shrink: 0;
   padding: 8px 4px;
   border: none;
   border-bottom: 2px solid transparent;
   background: transparent;
-  color: #f0f2f5;
+  color: #a374d6;
   font-size: 1.25rem;
   cursor: pointer;
-  flex-shrink: 0;
   transition: color 0.12s ease;
 
   &:hover {
@@ -143,8 +146,8 @@ $nav-bg: #292f36;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  flex: 1;
-  min-width: 0;
+  width: 72px;
+  flex-shrink: 0;
   padding: 8px 4px;
   border: none;
   border-bottom: 2px solid transparent;

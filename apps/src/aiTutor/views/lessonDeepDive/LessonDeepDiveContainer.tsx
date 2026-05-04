@@ -21,16 +21,19 @@ const darkTheme = createTheme({
   },
 });
 
+import {LessonObjectiveReflectionValues} from '@cdo/generated-scripts/sharedConstants';
+
 import FizzyButton from './FizzyButton';
-import InterventionBox from './InterventionBox';
-import PrePracticeBox from './PrePracticeBox';
-import LevelsAttemptedBox from './LevelsAttemptedBox';
-import PracticeBox from './PracticeBox';
-import ReflectionBox from './ReflectionBox';
-import TimeSpentBox from './TimeSpentBox';
+import PrePracticeBox from './PreReviewBox';
+import PreSkillsCheck from './PreSkillsCheck';
+import ReflectionBox from './Reflection/ReflectionBox';
+import InterventionBox from './ReviewModalities/InterventionBox';
+import SkillsCheck from './SkillsCheck/SkillsCheck';
+import LevelsAttemptedBox from './StudentLessonStats/LevelsAttemptedBox';
+import TimeSpentBox from './StudentLessonStats/TimeSpentBox';
+import ValidatedLevelsBox from './StudentLessonStats/ValidatedLevelsBox';
 import TutorSummaryBox from './TutorSummaryBox';
 import {LessonDeepDiveData, ReflectionData, ReflectionValue} from './types';
-import ValidatedLevelsBox from './ValidatedLevelsBox';
 import WelcomeBox from './WelcomeBox';
 
 import styles from './lesson-deep-dive-container.module.scss';
@@ -43,7 +46,8 @@ const BOX_IDS = [
   'reflection',
   'pre-practice',
   'intervention',
-  'practice',
+  'pre-skills-check',
+  'skills-check',
   'tutor-summary',
 ] as const;
 
@@ -76,7 +80,10 @@ const LessonDeepDiveContainer: FC<LessonDeepDiveContainerProps> = ({
   const getFocusTopic = useCallback(
     (data: ReflectionData | null): string | undefined => {
       if (!data) return undefined;
-      const priority: ReflectionValue[] = ['lost', 'unsure'] as ReflectionValue[];
+      const priority: ReflectionValue[] = [
+        LessonObjectiveReflectionValues.LOST,
+        LessonObjectiveReflectionValues.UNSURE,
+      ];
       for (const level of priority) {
         const match = lessonDeepDiveData.objectives.find(
           o => data.objectiveReflections[o.id] === level
@@ -162,9 +169,13 @@ const LessonDeepDiveContainer: FC<LessonDeepDiveContainerProps> = ({
             onNext={goToNext}
           />
         );
-      case 'practice':
+      case 'pre-skills-check':
         return (
-          <PracticeBox
+          <PreSkillsCheck onKeepPracticing={goToPrev} onTestSkills={goToNext} />
+        );
+      case 'skills-check':
+        return (
+          <SkillsCheck
             lessonId={lessonDeepDiveData.lessonId}
             lessonName={lessonDeepDiveData.lessonName}
             lessonSummary={lessonDeepDiveData.lessonSummary}
@@ -223,32 +234,35 @@ const LessonDeepDiveContainer: FC<LessonDeepDiveContainerProps> = ({
           </div>
         </div>
 
-        {!isLast && BOX_IDS[currentIndex] !== 'intervention' && (
-          <div className={styles.bottomNav}>
-            <FizzyButton
-              onClick={goToNext}
-              ariaLabel="Next"
-              className={styles.scrollCue}
-            >
-              Scroll to continue
-              <svg
-                width="14"
-                height="14"
-                viewBox="0 0 24 24"
-                fill="none"
-                aria-hidden="true"
+        {!isLast &&
+          BOX_IDS[currentIndex] !== 'intervention' &&
+          BOX_IDS[currentIndex] !== 'pre-skills-check' &&
+          BOX_IDS[currentIndex] !== 'skills-check' && (
+            <div className={styles.bottomNav}>
+              <FizzyButton
+                onClick={goToNext}
+                ariaLabel="Next"
+                className={styles.scrollCue}
               >
-                <path
-                  d="M7 10l5 5 5-5"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                />
-              </svg>
-            </FizzyButton>
-          </div>
-        )}
+                Continue
+                <svg
+                  width="14"
+                  height="14"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M7 10l5 5 5-5"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  />
+                </svg>
+              </FizzyButton>
+            </div>
+          )}
       </div>
     </ThemeProvider>
   );

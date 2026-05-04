@@ -1,0 +1,91 @@
+$amber: #ffb42e;
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+  gap: 8px;
+}
+
+.header,
+.contextIntro,
+.chatPanel {
+  width: 100%;
+  max-width: 600px;
+}
+
+// ── Header ────────────────────────────────────────────────────────────────────
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: #d4dae1;
+  flex-shrink: 0;
+}
+
+.toggleButton {
+  display: flex;
+  align-items: center;
+  border: none;
+  background: transparent;
+  color: #d4dae1;
+  cursor: pointer;
+  padding: 2px 4px;
+
+  &:hover {
+    color: #fff;
+  }
+
+  &:focus-visible {
+    outline: 2px solid #a374d6;
+    outline-offset: 2px;
+    border-radius: 2px;
+  }
+}
+
+.overline {
+  font-size: 0.875rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: $amber;
+  margin: 0;
+}
+
+// ── Context intro ─────────────────────────────────────────────────────────────
+
+.contextIntro {
+  font-size: 0.875rem;
+  line-height: 1.55;
+  color: #dfe3e9;
+  margin: 0;
+  flex-shrink: 0;
+  filter: drop-shadow(0 3px 3px rgba(0, 0, 0, 0.2));
+}
+
+// ── Chat panel ────────────────────────────────────────────────────────────────
+
+.chatPanel {
+  flex: 1;
+  min-height: 0;
+  border-radius: 4px;
+  overflow: hidden;
+
+  // Black panel background to match Figma
+  :global(#chat-workspace-area) {
+    background-color: #000;
+    border-radius: 4px;
+  }
+
+  // Scale down the copy button
+  :global(.MuiIconButton-sizeExtraSmall) {
+    padding: 1px;
+    font-size: 10px;
+
+    :global(.fa-copy) {
+      font-size: 10px;
+    }
+  }
+}

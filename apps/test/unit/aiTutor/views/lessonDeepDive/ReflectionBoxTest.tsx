@@ -6,7 +6,7 @@ import {
   saveUserLessonReflection,
   saveUserLessonObjectiveReflection,
 } from '@cdo/apps/aiTutor/reflectionsApi';
-import ReflectionBox from '@cdo/apps/aiTutor/views/lessonDeepDive/ReflectionBox';
+import ReflectionBox from '@cdo/apps/aiTutor/views/lessonDeepDive/Reflection/ReflectionBox';
 
 jest.mock('@cdo/apps/aiTutor/reflectionsApi', () => ({
   saveUserLessonReflection: jest.fn(),
