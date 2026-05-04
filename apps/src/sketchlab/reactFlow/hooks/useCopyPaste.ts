@@ -77,7 +77,7 @@ export function useCopyPaste({
     [nodes, edges]
   );
 
-  // Toolbar action: duplicate a node in-place with stagger chaining.
+  // Toolbar action: duplicate a node in-place but offset by PASTE_OFFSET_PX in both dimensions.
   const duplicateNode = useCallback(
     (nodeId: string) => {
       let source: ClipboardContents | null;
