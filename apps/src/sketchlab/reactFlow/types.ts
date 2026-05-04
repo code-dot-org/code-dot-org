@@ -31,6 +31,7 @@ export type ShapeNodeData = NodeDataBase & {
   strokeColor?: string;
   fontColor?: string;
   fontSize?: FontSizeValue;
+  textAlign?: TextAlignValue;
 };
 
 export type TextNodeData = NodeDataBase & {

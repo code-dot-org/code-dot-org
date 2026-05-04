@@ -10,11 +10,13 @@ import styles from './element-toolbar.module.scss';
 export interface TextAlignGroupProps {
   selectedValue: TextAlignValue;
   onSelect: (value: TextAlignValue) => void;
+  isLongLabel?: boolean;
 }
 
 export default function TextAlignGroup({
   selectedValue,
   onSelect,
+  isLongLabel = false,
 }: TextAlignGroupProps) {
   return (
     <div className={styles.group} role="group" aria-label="Text alignment">
@@ -23,7 +25,7 @@ export default function TextAlignGroup({
         className={styles.groupLabel}
         aria-hidden="true"
       >
-        Alignment
+        {isLongLabel ? 'Text alignment' : 'Alignment'}
       </Typography>
       <div className={styles.fontSizeButtons}>
         {TEXT_ALIGN_OPTIONS.map(option => {

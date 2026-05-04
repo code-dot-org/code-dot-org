@@ -47,17 +47,17 @@ export default function TextNodeToolbar({nodeId}: TextNodeToolbarProps) {
               patchNodeData({fontSize: value as FontSizeValue})
             }
           />
-          <SwatchGroup
-            groupLabel="Font color"
-            swatches={STROKE_FONT_PALETTE}
-            selectedValue={fontColor ?? DEFAULT_FONT_COLOR}
-            onSelect={value => patchNodeData({fontColor: value})}
-          />
           <TextAlignGroup
             selectedValue={textAlign ?? DEFAULT_TEXT_ALIGN}
             onSelect={value =>
               patchNodeData({textAlign: value as TextAlignValue})
             }
+          />
+          <SwatchGroup
+            groupLabel="Font color"
+            swatches={STROKE_FONT_PALETTE}
+            selectedValue={fontColor ?? DEFAULT_FONT_COLOR}
+            onSelect={value => patchNodeData({fontColor: value})}
           />
           <RotationGroup
             value={data.rotation ?? DEFAULT_ROTATION}

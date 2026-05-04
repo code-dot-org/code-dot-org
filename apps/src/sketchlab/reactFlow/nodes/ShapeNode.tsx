@@ -161,8 +161,9 @@ function ShapeNode({id, data, selected}: NodeProps<ShapeNodeType>) {
       style.color = data.fontColor;
     }
     style.fontSize = fontSizePx(data.fontSize);
+    style.textAlign = data.textAlign ?? 'center';
     return style;
-  }, [data.fontColor, data.fontSize]);
+  }, [data.fontColor, data.fontSize, data.textAlign]);
 
   const rotation = data.rotation ?? DEFAULT_ROTATION;
   const rotatableStyle: React.CSSProperties = useMemo(
@@ -203,13 +204,14 @@ function ShapeNode({id, data, selected}: NodeProps<ShapeNodeType>) {
         {/* Text label: click or enter to start editing */}
         <div
           ref={labelRef}
-          className={styles.label}
+          className={`${styles.label}${isEditing ? ' nodrag nopan' : ''}`}
           style={labelStyle}
           contentEditable={isEditing}
           suppressContentEditableWarning
           onFocus={startEditing}
           onBlur={commitEdit}
           onKeyDown={handleLabelKeyDown}
+          onMouseDown={isEditing ? e => e.stopPropagation() : undefined}
           tabIndex={-1}
           role="textbox"
           aria-label={`${shapeType} label${isEditing ? ' (editing)' : ''}`}
