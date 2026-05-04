@@ -393,7 +393,7 @@
     "dist"
   ],
   "scripts": {
-    "build": "vite build && tsc --noEmit",
+    "build": "vite build",
     "clean": "rimraf dist .turbo",
     "codemod:buttons": "TS_NODE_TRANSPILE_ONLY=true npx jscodeshift -t ./codemods/button-to-mui-button.ts --parser=tsx --extensions=js,jsx,ts,tsx --require ts-node/register",
     "dev": "vite build --watch",
@@ -408,7 +408,7 @@
     "stylelint": "stylelint src/**/*.{css,scss,sass}",
     "stylelint:fix": "yarn run stylelint --fix",
     "test": "jest",
-    "typecheck": "tsc --noEmit"
+    "typecheck": "tsc -b --noEmit"
   },
   "prettier": "@code-dot-org/lint-config/prettier/index.mjs",
   "stylelint": {

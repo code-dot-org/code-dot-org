@@ -4,8 +4,6 @@ import ViteRails from 'vite-plugin-rails';
 import path from 'node:path';
 import {tanstackRouter} from '@tanstack/router-plugin/vite';
 
-const workspaceRoot = searchForWorkspaceRoot(process.cwd());
-
 // https://vite.dev/config/
 export default defineConfig(({mode}) => {
   const isDev = mode === 'development';
@@ -24,8 +22,6 @@ export default defineConfig(({mode}) => {
     resolve: {
       alias: {
         '@': path.resolve(__dirname, './src'),
-        react: path.resolve(workspaceRoot, 'node_modules/react'),
-        'react-dom': path.resolve(workspaceRoot, 'node_modules/react-dom'),
       },
     },
     plugins: [
