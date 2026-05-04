@@ -42,6 +42,51 @@
         },
         {
           "type": "checkbox",
+          "name": "barriers_implementation_teaching_ai_and_cs",
+          "title": "Do you anticipate any barriers to using what you’ve learned about teaching {module}?",
+          "description": "(Select all that apply)",
+          "choices": [
+            {
+              "value": "none",
+              "text": "I don't anticipate any barriers"
+            },
+            {
+              "value": "application_unclear",
+              "text": "It is not clear to me how to apply what I’ve learned"
+            },
+            {
+              "value": "need_more_preparation",
+              "text": "I need more preparation before teaching this content in my classroom"
+            },
+            {
+              "value": "limited_time",
+              "text": "I have limited time to adopt new curriculum"
+            },
+            {
+              "value": "lack_admin_support",
+              "text": "I don't have enough support from my school's administration"
+            },
+            {
+              "value": "lack_student_interest",
+              "text": "My students don’t seem interested in this content"
+            },
+            {
+              "value": "school_discouraged_use",
+              "text": "AI use has been discouraged in my school/district"
+            },
+            {
+              "value": "lack_access_ai_tools",
+              "text": "My school/district restricts access to AI tools"
+            },
+            {
+              "value": "lack_school_ai_policy",
+              "text": "My school/district doesn't have clear guidance or policies around using and teaching about AI "
+            }
+          ],
+          "hasOther": true
+        },
+        {
+          "type": "checkbox",
           "name": "barriers_implementation_teaching_cs",
           "title": "Do you anticipate any barriers to using what you’ve learned about teaching {module}?",
           "description": "(Select all that apply)",
