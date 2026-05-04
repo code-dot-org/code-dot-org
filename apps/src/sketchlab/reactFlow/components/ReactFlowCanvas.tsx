@@ -612,7 +612,7 @@ export default function ReactFlowCanvas({
               />
             )}
             <Background />
-            <Controls />
+            <Controls position="bottom-right" />
           </ReactFlow>
         </div>
       </ToolbarVisibilityProvider>
