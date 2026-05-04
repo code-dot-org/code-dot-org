@@ -9,24 +9,38 @@ markdown <<MARKDOWN
 
 #### In an AI-supported classroom, strong assessment design is the most effective way to support learning and reduce misuse. Rather than focusing only on what students produce, the goal is to understand how they think, make decisions, and improve their work.
 
-## Design for Visible Thinking
+<div style="max-width:900px; margin:20px auto; font-family:ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial; color:#292F36;">
 
-#### Create tasks that require students to show their thinking throughout the process:
+<div style="display:grid; grid-template-columns:1fr 1fr; gap:16px;">
 
-* #### **Emphasize Process Over Product** Include drafts, revisions, annotations, or checkpoints that capture how students’ ideas develop over time.
-* #### **Incorporate Explanation and Reflection** Ask students to explain their reasoning, describe how they approached the task, or reflect on what they learned and what challenged them.
-* #### **Use In-Class Components and Check-Ins** Writing, discussion, or brief conferences help you see students’ thinking in real time and clarify their understanding.
-* #### **Incorporate Personalization** Connect assignments to students’ experiences, perspectives, or local context to encourage authentic, original responses.
+<!-- Card 1 -->
+<div style="border:2px solid #8C52BA; border-radius:18px; padding:18px; background:#FFFFFF; box-shadow:0 4px 12px rgba(41,47,54,0.06);">
+<div style="font-size:20px; font-weight:800; margin-bottom:10px; color:#1F2933;">
+Design for Visible Thinking
+</div>
+<ul style="margin:0; padding-left:18px; font-size:15px; line-height:1.6;">
+<li><strong>Emphasize process over product</strong> — Use drafts, revisions, annotations, or checkpoints to show how ideas develop over time</li>
+<li><strong>Incorporate explanation and reflection</strong> — Have students explain their reasoning and reflect on their approach and learning</li>
+<li><strong>Use in-class components and check-ins</strong> — Writing, discussion, and conferences help reveal thinking in real time</li>
+<li><strong>Incorporate personalization</strong> — Connect work to students’ experiences and perspectives to encourage authentic responses</li>
+</ul>
+</div>
 
-## Grade What Matters Most
+<!-- Card 2 -->
+<div style="border:2px solid #8C52BA; border-radius:18px; padding:18px; background:#FFFFFF; box-shadow:0 4px 12px rgba(41,47,54,0.06);">
+<div style="font-size:20px; font-weight:800; margin-bottom:10px; color:#1F2933;">
+Grade What Matters Most
+</div>
+<ul style="margin:0; padding-left:18px; font-size:15px; line-height:1.6;">
+<li><strong>Student thinking</strong> — Prioritize clarity of ideas, reasoning, and demonstrated understanding</li>
+<li><strong>Revision and improvement</strong> — Focus on how students use feedback to refine their work</li>
+<li><strong>Critical use of AI</strong> — Evaluate how well students analyze outputs and make thoughtful choices</li>
+<li><strong>Overall approach</strong> — Emphasize thinking, effort, and decision-making over a perfect final product</li>
+</ul>
+</div>
 
-#### When AI is part of the learning process, grading should prioritize:
-
-* #### **Student Thinking** How clearly students explain their ideas, justify decisions, and demonstrate understanding
-* #### **Revision and Improvement** How students use feedback—whether from AI or other sources—to refine their work
-* #### **Critical Use of AI** How well students evaluate AI-generated content, identify inaccuracies, and make thoughtful choices about what to keep or change
-
-#### Clear grading criteria should reinforce that thinking, effort, and decision-making are more important than producing a perfect final answer.
+</div>
+</div>
 
 ## Focus on Design Over Detection
 

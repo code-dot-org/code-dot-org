@@ -1,5 +1,6 @@
 <Aichat>
   <config><![CDATA[{
+  "published": true,
   "game_id": 71,
   "created_at": "2026-04-23T19:39:48.000Z",
   "level_num": "custom",
@@ -8,7 +9,7 @@
     "display_name": "Create something polished for your guide",
     "bubble_choice_description": "like a **Graphic Designer** who makes logos, posters, and layouts look good.",
     "encrypted": "false",
-    "long_instructions": "### Use AI like a Graphic Designer\r\n1. Type your theme, audience, and colors into the chat.\r\n2. Ask the AI to make an image that fits your guide.\r\n3. Send it and see what the AI generates.\r\n4. Keep refining until it fits your guide.",
+    "long_instructions": "### Use AI like a Graphic Designer\r\n1. Type your theme, audience, and colors of your project into the chat.\r\n\r\n2. Ask the AI to make an image that fits your guide.\r\n3. Try different prompts & compare results. \r\n4. Save an image you like to the backpack for your project. \r\n\r\n>**Use your prompting strategy:** Include a goal, context, and details.\r\n>\r\n>*For example:* `The theme of the guide is basketball and it is for middle school athletes using orange and black colors to match the bobcat team mascot. Make a new logo for the team.`",
     "offer_browser_tts": "false",
     "submittable": "false",
     "disable_edit_run_for_submission": "false",
@@ -47,7 +48,6 @@
     },
     "thumbnail_url": "https://images.code.org/28506edcf522c29d72f70b00d223f903-5.4c.png"
   },
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2026-04-23 19:47:38 +0000\",\"changed\":[],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-04-23 19:47:40 +0000\",\"changed\":[],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-04-23 19:48:13 +0000\",\"changed\":[],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-04-23 21:32:49 +0000\",\"changed\":[],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-04-23 21:38:15 +0000\",\"changed\":[\"aichat_settings\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-04-23 21:39:43 +0000\",\"changed\":[\"aichat_settings\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-04-23 21:42:09 +0000\",\"changed\":[\"aichat_settings\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-04-23 21:57:36 +0000\",\"changed\":[\"aichat_settings\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-04-23 23:59:35 +0000\",\"changed\":[],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2026-04-23 19:47:38 +0000\",\"changed\":[],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-04-23 19:47:40 +0000\",\"changed\":[],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-04-23 19:48:13 +0000\",\"changed\":[],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-04-23 21:32:49 +0000\",\"changed\":[],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-04-23 21:38:15 +0000\",\"changed\":[\"aichat_settings\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-04-23 21:39:43 +0000\",\"changed\":[\"aichat_settings\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-04-23 21:42:09 +0000\",\"changed\":[\"aichat_settings\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-04-23 21:57:36 +0000\",\"changed\":[\"aichat_settings\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-04-23 23:59:35 +0000\",\"changed\":[],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-04-29 23:29:37 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"}]"
 }]]></config>
 </Aichat>

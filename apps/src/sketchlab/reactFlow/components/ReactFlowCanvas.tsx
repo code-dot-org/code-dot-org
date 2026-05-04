@@ -22,9 +22,12 @@ import {useSources} from '@cdo/apps/lab2/views/SourcesContainer';
 import {createUuid} from '@cdo/apps/utils';
 
 import {
+  ARROW_MARKER_HEIGHT_PX,
+  ARROW_MARKER_WIDTH_PX,
   DEFAULT_NODE_HEIGHT,
   DEFAULT_NODE_WIDTH,
   LINE_ANCHOR_SIZE_PX,
+  LINE_DEFAULT_LENGTH_PX,
   SAVE_DEBOUNCE_MS,
 } from '../constants';
 import {
@@ -71,7 +74,14 @@ const NODE_TYPES = {
 // Offset added per new node so they don't stack exactly on top of each other.
 const NEW_NODE_STAGGER_PX = 20;
 const FOCUS_DELAY_MS = 100;
-const LINE_DEFAULT_LENGTH_PX = 220;
+
+function stripDisplayFields<T extends object>(item: T): T {
+  const result = {...item} as Record<string, unknown>;
+  delete result.domAttributes;
+  delete result.className;
+  delete result.selected;
+  return result as T;
+}
 
 export interface ReactFlowCanvasProps {
   updateSources: ReturnType<
@@ -239,9 +249,15 @@ export default function ReactFlowCanvas({
       displayNodes: nodes.map(node => {
         const isConnectSource = connectingFrom === node.id;
         const {selected, domAttributes} = applyDisplayProps(node, 'node');
+        const locked = node.data?.locked === true;
         return {
           ...node,
           selected,
+          ...(locked && {
+            draggable: false,
+            connectable: false,
+            deletable: false,
+          }),
           className: isConnectSource ? styles.connectSource : undefined,
           domAttributes: {
             ...domAttributes,
@@ -293,7 +309,15 @@ export default function ReactFlowCanvas({
       clearTimeout(saveTimerRef.current);
     }
     saveTimerRef.current = setTimeout(() => {
-      const source: SketchlabReactFlowSource = {nodes, edges, viewport};
+      // updateNode/updateEdge from useReactFlow round-trips through React Flow's internal
+      // store, which mirrors the displayNodes/displayEdges we render.
+      // That spreads display-only fields (including domAttributes, which can include a function)
+      // back into our state, which can then fail to clone. Strip them before persisting.
+      const source: SketchlabReactFlowSource = {
+        nodes: nodes.map(stripDisplayFields) as SketchlabReactFlowNode[],
+        edges: edges.map(stripDisplayFields) as SketchlabReactFlowEdge[],
+        viewport,
+      };
       updateSources(prev => ({...prev, source}));
     }, SAVE_DEBOUNCE_MS);
 
@@ -379,8 +403,8 @@ export default function ReactFlowCanvas({
         y: window.innerHeight / 2 + stagger,
       });
 
-      // For lines, we create two hidden nodes and connecting anchors between them.
-      if (type === 'line') {
+      // For lines/arrows, create two hidden anchor nodes and connect them.
+      if (type === 'line' || type === 'arrow') {
         const sourceAnchorId = createUuid();
         const targetAnchorId = createUuid();
         const lineEdgeId = createUuid();
@@ -421,6 +445,15 @@ export default function ReactFlowCanvas({
           source: sourceAnchorId,
           target: targetAnchorId,
           type: 'straight',
+          ...(type === 'arrow' && {
+            markerEnd: {
+              type: MarkerType.ArrowClosed,
+              color: DEFAULT_STROKE_COLOR,
+              width: ARROW_MARKER_WIDTH_PX,
+              height: ARROW_MARKER_HEIGHT_PX,
+              strokeWidth: DEFAULT_LINE_WIDTH,
+            },
+          }),
           style: {
             stroke: DEFAULT_STROKE_COLOR,
             strokeWidth: DEFAULT_LINE_WIDTH,
@@ -490,6 +523,7 @@ export default function ReactFlowCanvas({
     setLineEdgeColor,
     setLineEdgeWidth,
     setLineEdgeStrokeStyle,
+    setLineEdgeArrowHeads,
   } = useLineToolbar({
     edges,
     nodes,
@@ -544,6 +578,7 @@ export default function ReactFlowCanvas({
             // it manages things like moving nodes with arrow keys.
             disableKeyboardA11y={false}
             autoPanOnNodeFocus={false} // We manage viewport on focus manually in useFocusManagement.
+            zIndexMode={'manual'}
           >
             {openLineEdge && (
               <LineEdgeToolbar
@@ -557,6 +592,9 @@ export default function ReactFlowCanvas({
                 }
                 onSelectStrokeStyle={value =>
                   setLineEdgeStrokeStyle(openLineEdge.id, value)
+                }
+                onSelectArrowHeads={value =>
+                  setLineEdgeArrowHeads(openLineEdge.id, value)
                 }
               />
             )}
