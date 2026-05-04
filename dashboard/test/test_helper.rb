@@ -24,7 +24,7 @@ ENV["RAILS_ENV"] = "test"
 ENV["RACK_ENV"] = "test"
 ENV['TZ'] = 'UTC'
 
-# deal with some ordering issues -- sometimes environment is loaded
+# Deal with some ordering issues -- sometimes environment is loaded
 # before test_helper and sometimes after. The CDO stuff uses RACK_ENV,
 # but running unit tests in the test env for developers only sets
 # RAILS ENV. We fix it above but we need to reload some stuff...
@@ -36,11 +36,15 @@ Rails.application&.reload_routes! if defined?(Rails) && defined?(Rails.applicati
 
 require File.expand_path('../../config/environment', __FILE__)
 
-# Disable CSRF protection for unit tests. We cannot target the config layer
-# from this file because Spring may have already loaded the Rails application,
-# copying `config.action_controller` onto ActionController::Base. Set the
-# runtime attribute directly instead.
+# ... then, we apply some unit-test-specific configuration. We cannot target
+# the config layer from this file because Spring may have already loaded the
+# Rails application, applying all config options to the relevant components.
+# Set the runtime attributes directly instead.
+
+# Disable CSRF protection.
 ActionController::Base.allow_forgery_protection = false
+# Avoid using an actual cache, to prevent state leakage.
+Rails.cache = ActiveSupport::Cache.lookup_store(:null_store)
 
 if CDO.test_system? && !ENV.fetch('TEST_ENV_NUMBER', nil)
   # Raise rather than silently correcting the error, because it's possible that the data in

@@ -57,12 +57,6 @@ class CachingTest < ActionDispatch::IntegrationTest
       sl = Unit.find_by_name(@other_hoc_unit.name).script_levels[2]
       params = {program: 'fake program', testResult: 100, result: 'true'}
 
-      # The very first post with a brand-new cache queries level_sources
-      assert_cached_queries(1) do
-        post "/milestone/0/#{sl.id}", params: params
-      end
-
-      # All future posts are entirely cached
       assert_cached_queries(0) do
         post "/milestone/0/#{sl.id}", params: params
       end
@@ -106,12 +100,6 @@ class CachingTest < ActionDispatch::IntegrationTest
       sl = unit.script_levels[2]
       params = {program: 'fake program', testResult: 100, result: 'true'}
 
-      # The very first post with a brand-new cache queries level_sources
-      assert_cached_queries(1) do
-        post "/milestone/0/#{sl.id}", params: params
-      end
-
-      # All future posts are entirely cached
       assert_cached_queries(0) do
         post "/milestone/0/#{sl.id}", params: params
       end

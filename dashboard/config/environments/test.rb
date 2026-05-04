@@ -30,9 +30,6 @@ Dashboard::Application.configure do
   config.consider_all_requests_local = true
   config.action_controller.perform_caching = false
 
-  # Avoid using an actual cache in unit tests, to prevent state leakage
-  config.cache_store = :null_store if CDO.unit_test
-
   # config.action_mailer.raise_delivery_errors = true
   # config.action_mailer.delivery_method = :smtp
 
