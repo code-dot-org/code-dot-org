@@ -21,7 +21,6 @@ import {
   type TabOrderEntry,
 } from '../utils/computeTabOrder';
 import {isLineAnchorNodeId} from '../utils/connectionRules';
-import {isLineEdge} from '../utils/lineEdges';
 import {getNodeLabel} from '../utils/nodeLabel';
 
 import {useAriaAnnouncer} from './useAriaAnnouncer';
@@ -271,16 +270,21 @@ export function useKeyboardNavigation({
       const {deltaX, deltaY} = getArrowDelta(event.key);
       if (!deltaX && !deltaY) return false;
       const focusedEdge = getEdge(focusedEdgeId);
-      if (!focusedEdge || !isLineEdge(focusedEdge, nodes)) return false;
+      if (!focusedEdge) return false;
+      // Only the anchor endpoints translate; real-node endpoints stay put
+      // (the edge will follow them by id, same as a mouse edge-body drag).
+      const idsToMove: string[] = [];
+      if (isLineAnchorNodeId(focusedEdge.source, nodes)) {
+        idsToMove.push(focusedEdge.source);
+      }
+      if (isLineAnchorNodeId(focusedEdge.target, nodes)) {
+        idsToMove.push(focusedEdge.target);
+      }
+      if (idsToMove.length === 0) return false;
       event.preventDefault();
       event.stopPropagation();
       setNodes(currentNodes =>
-        moveNodesByDelta(
-          currentNodes,
-          [focusedEdge.source, focusedEdge.target],
-          deltaX,
-          deltaY
-        )
+        moveNodesByDelta(currentNodes, idsToMove, deltaX, deltaY)
       );
       return true;
     },

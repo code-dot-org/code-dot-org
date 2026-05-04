@@ -64,7 +64,6 @@ import {
   isLineAnchorNodeId,
 } from '../utils/connectionRules';
 import {findNearestHandle} from '../utils/handleSnap';
-import {isLineEdge} from '../utils/lineEdges';
 
 import Toolbar from './Toolbar';
 
@@ -240,10 +239,17 @@ export default function ReactFlowCanvas({
   // Also applies connect-source styling and aria-selected via React
   // rather than direct DOM classList manipulation.
   const {displayNodes, displayEdges} = useMemo(() => {
+    // Anchor endpoints of a locked edge inherit the lock so the user can't
+    // drag them around. Real-node endpoints have their own lock state.
     const lockedLineAnchorIds = new Set<string>();
     edges.forEach(edge => {
-      if (edge.data?.locked === true && isLineEdge(edge, nodes)) {
+      if (edge.data?.locked !== true) return;
+      const sourceNode = nodes.find(node => node.id === edge.source);
+      const targetNode = nodes.find(node => node.id === edge.target);
+      if (sourceNode?.type === 'lineAnchor') {
         lockedLineAnchorIds.add(edge.source);
+      }
+      if (targetNode?.type === 'lineAnchor') {
         lockedLineAnchorIds.add(edge.target);
       }
     });
@@ -285,17 +291,16 @@ export default function ReactFlowCanvas({
       // TODO: Add meaningful ariaLabel to edges using node labels instead of
       // raw IDs (React Flow defaults to "Edge from {sourceId} to {targetId}").
       displayEdges: edges.map(edge => {
-        const lineEdge = isLineEdge(edge, nodes);
         const locked = edge.data?.locked === true;
         const {selected, domAttributes} = applyDisplayProps(edge, 'edge');
         return {
           ...edge,
           selected,
           ...(locked && {deletable: false}),
-          className: lineEdge ? styles.lineEdge : undefined,
+          className: styles.lineEdge,
           domAttributes: {
             ...domAttributes,
-            ...(lineEdge && !readOnly && !locked
+            ...(!readOnly && !locked
               ? {
                   onMouseDown: (event: React.MouseEvent) => {
                     focusEntry({type: 'edge', id: edge.id});
@@ -364,14 +369,13 @@ export default function ReactFlowCanvas({
           return currentEdges;
         }
 
-        // Connections share the line-edge data shape so the line toolbar,
-        // reconnect, and edge-body drag all apply uniformly. They start
-        // with an end-arrow since that's the conventional connection look.
+        // Connections start with an end-arrow since that's the conventional
+        // connection look. Same shape as line-tool edges so the line
+        // toolbar, reconnect, and edge-body drag all apply uniformly.
         return addEdge(
           {
             ...connection,
             type: 'straight',
-            data: {kind: 'line'},
             reconnectable: true,
             style: {
               stroke: DEFAULT_STROKE_COLOR,
@@ -629,7 +633,6 @@ export default function ReactFlowCanvas({
           source: sourceAnchorId,
           target: targetAnchorId,
           type: 'straight',
-          data: {kind: 'line'},
           reconnectable: true,
           ...(type === 'arrow' && {
             markerEnd: {
@@ -713,7 +716,6 @@ export default function ReactFlowCanvas({
     setLineEdgeLocked,
   } = useLineToolbar({
     edges,
-    nodes,
     readOnly,
     openToolbarTarget,
     openToolbar,

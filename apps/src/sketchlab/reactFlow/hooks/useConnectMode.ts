@@ -114,7 +114,6 @@ export function useConnectMode({
             target: targetNodeId,
             ...handles,
             type: 'straight',
-            data: {kind: 'line'},
             reconnectable: true,
             style: {
               stroke: DEFAULT_STROKE_COLOR,
