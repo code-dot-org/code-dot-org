@@ -144,8 +144,11 @@ export async function deleteRubric(rubricId) {
     },
   });
   if (!response.ok) {
-    const errorData = await response.json();
-    throw new Error(`Error deleting rubric: ${JSON.stringify(errorData)}`);
+    const contentType = response.headers.get('Content-Type') || '';
+    const body = contentType.includes('application/json')
+      ? JSON.stringify(await response.json())
+      : await response.text();
+    throw new Error(`Error deleting rubric: ${response.status} ${body}`);
   }
   return response.json();
 }
@@ -174,6 +177,6 @@ export const styles = {
   addNewConceptButtonContainer: {
     marginTop: 20,
     display: 'flex',
-    justifyContent: 'right',
+    justifyContent: 'flex-end',
   },
 };
