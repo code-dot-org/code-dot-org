@@ -4,29 +4,24 @@ import React from 'react';
 
 import {getIsStartMode} from '@cdo/apps/lab2/projects/utils';
 
-import {useClipboard} from '../context';
-
 import styles from './element-toolbar.module.scss';
 
 interface ActionsGroupProps {
-  nodeId?: string;
-  lineEdgeId?: string;
   onDelete?: () => void;
   onLock?: () => void;
   onBringToFront?: () => void;
   onSendToBack?: () => void;
+  onDuplicate?: () => void;
 }
 
 export default function ActionsGroup({
-  nodeId,
-  lineEdgeId,
   onDelete,
   onLock,
   onBringToFront,
   onSendToBack,
+  onDuplicate,
 }: ActionsGroupProps) {
   const isStartMode = getIsStartMode();
-  const {duplicateNode, duplicateLine} = useClipboard();
 
   return (
     <div className={styles.group} role="group" aria-label="Actions">
@@ -38,25 +33,13 @@ export default function ActionsGroup({
         Actions
       </Typography>
       <div className={styles.fontSizeButtons}>
-        {nodeId && (
+        {onDuplicate && (
           <Tooltip title="Duplicate" placement="top">
             <IconButton
               size="small"
               className={styles.fontSizeButton}
               aria-label="Duplicate"
-              onClick={() => duplicateNode(nodeId)}
-            >
-              <FontAwesomeV6Icon iconName="copy" />
-            </IconButton>
-          </Tooltip>
-        )}
-        {lineEdgeId && (
-          <Tooltip title="Duplicate" placement="top">
-            <IconButton
-              size="small"
-              className={styles.fontSizeButton}
-              aria-label="Duplicate"
-              onClick={() => duplicateLine(lineEdgeId)}
+              onClick={onDuplicate}
             >
               <FontAwesomeV6Icon iconName="copy" />
             </IconButton>

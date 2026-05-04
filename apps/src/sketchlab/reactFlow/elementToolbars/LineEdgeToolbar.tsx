@@ -6,6 +6,7 @@ import React from 'react';
 
 import {SketchlabReactFlowEdge} from '@cdo/apps/lab2/types';
 
+import {useClipboard} from '../context';
 import {isArrowEdge} from '../utils/lineEdges';
 import {newBackZIndex, newFrontZIndex} from '../utils/stacking';
 
@@ -141,6 +142,8 @@ export default function LineEdgeToolbar({
     : 'end';
   const showArrowHeadOptions = isArrowEdge(edge);
 
+  const {duplicateLine} = useClipboard();
+
   const renderLinePreview = (
     width: number,
     lineStyle: LinePreviewStyle
@@ -202,8 +205,8 @@ export default function LineEdgeToolbar({
         />
       )}
       <ActionsGroup
-        lineEdgeId={edge.id}
         onDelete={() => deleteElements({edges: [{id: edge.id}]})}
+        onDuplicate={() => duplicateLine(edge.id)}
         onBringToFront={() => {
           const items = [...getNodes(), ...getEdges()];
           updateEdge(edge.id, {zIndex: newFrontZIndex(items, edge.id)});
