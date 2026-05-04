@@ -19,6 +19,9 @@
 
 class JSONVideo < ApplicationRecord
   has_and_belongs_to_many :objectives, join_table: :json_video_objectives
+  has_and_belongs_to_many :jit_pl_concepts, join_table: :jit_pl_concepts_json_videos
+  has_and_belongs_to_many :jit_pl_misconceptions, join_table: :jit_pl_misconceptions_json_videos
+  has_and_belongs_to_many :jit_pl_exemplars, join_table: :jit_pl_exemplars_json_videos
 
   validates :key, presence: true, uniqueness: true
   validates :s3_uri, presence: true

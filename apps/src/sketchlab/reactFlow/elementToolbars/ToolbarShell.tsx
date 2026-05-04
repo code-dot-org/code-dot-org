@@ -18,6 +18,11 @@ const PAN_DURATION_MS = 200;
 // Width reserved for React Flow's Controls overlay along the left edge
 // so the toolbar doesn't sit underneath it after panning into view.
 const CONTROLS_WIDTH_PX = 60;
+// React Flow normally stacks the toolbar at its anchor node's zIndex + 1.
+// Pin the toolbar to a large constant so it always
+// floats above the canvas regardless of the anchor's zIndex.
+// 2147483647 is the max signed 32-bit integer, a commonly used CSS z-index cap.
+const TOOLBAR_Z_INDEX = 2147483647;
 
 interface ToolbarShellProps {
   target: ToolbarTarget;
@@ -92,6 +97,7 @@ export default function ToolbarShell({
       position={Position.Left}
       offset={TOOLBAR_OFFSET_PX}
       isVisible={isVisible}
+      style={{zIndex: TOOLBAR_Z_INDEX}}
     >
       <FocusTrap
         active={isVisible && trapFocus}
@@ -120,6 +126,12 @@ export default function ToolbarShell({
           elevation={3}
           role="toolbar"
           aria-label={ariaLabel}
+          // The toolbar is a DOM portal but React events still bubble
+          // through the component tree to the owning node, whose
+          // onDoubleClick starts inline label/text editing. Stop double clicks
+          // here so double-clicking inside the toolbar (e.g. on the rotation input)
+          // does not enter edit mode.
+          onDoubleClick={event => event.stopPropagation()}
         >
           <div className={styles.header}>
             <Tooltip title="Close toolbar" placement="top">
