@@ -37,6 +37,46 @@ export function useLineToolbar({
   openToolbar,
   setEdges,
 }: UseLineToolbarOptions) {
+  const updateLineEdge = useCallback(
+    (
+      edgeId: string,
+      updater: (edge: SketchlabReactFlowEdge) => SketchlabReactFlowEdge
+    ) => {
+      setEdges(currentEdges =>
+        currentEdges.map(edge => {
+          if (edge.id !== edgeId) {
+            return edge;
+          }
+          if (edge.data?.locked === true) {
+            return edge;
+          }
+          return updater(edge);
+        })
+      );
+    },
+    [setEdges]
+  );
+
+  const updateLineEdgeLockState = useCallback(
+    (edgeId: string, locked: boolean) => {
+      setEdges(currentEdges =>
+        currentEdges.map(edge => {
+          if (edge.id !== edgeId) {
+            return edge;
+          }
+          return {
+            ...edge,
+            data: {
+              ...(edge.data || {}),
+              locked,
+            },
+          };
+        })
+      );
+    },
+    [setEdges]
+  );
+
   const handleEdgeClick = useCallback(
     (_event: React.MouseEvent, edge: {id: string}) => {
       if (readOnly) {
@@ -68,60 +108,50 @@ export function useLineToolbar({
       edgeId: string,
       updateStyle: (currentStyle: React.CSSProperties) => React.CSSProperties
     ) => {
-      setEdges(currentEdges =>
-        currentEdges.map(edge => {
-          if (edge.id !== edgeId) {
-            return edge;
-          }
-          const currentStyle = {...edge.style};
-          return {
-            ...edge,
-            style: updateStyle(currentStyle),
-          };
-        })
-      );
+      updateLineEdge(edgeId, edge => {
+        const currentStyle = {...edge.style};
+        return {
+          ...edge,
+          style: updateStyle(currentStyle),
+        };
+      });
     },
-    [setEdges]
+    [updateLineEdge]
   );
 
   const updateLineEdgeMarker = useCallback(
     (edgeId: string, markerPatch: {color?: string; strokeWidth?: number}) => {
-      setEdges(currentEdges =>
-        currentEdges.map(edge => {
-          if (edge.id !== edgeId) {
-            return edge;
-          }
-          const markerStart =
-            edge.markerStart && typeof edge.markerStart !== 'string'
-              ? edge.markerStart
-              : undefined;
-          const markerEnd =
-            edge.markerEnd && typeof edge.markerEnd !== 'string'
-              ? edge.markerEnd
-              : undefined;
-          return {
-            ...edge,
-            ...(markerStart
-              ? {
-                  markerStart: {
-                    ...markerStart,
-                    ...markerPatch,
-                  },
-                }
-              : {}),
-            ...(markerEnd
-              ? {
-                  markerEnd: {
-                    ...markerEnd,
-                    ...markerPatch,
-                  },
-                }
-              : {}),
-          };
-        })
-      );
+      updateLineEdge(edgeId, edge => {
+        const markerStart =
+          edge.markerStart && typeof edge.markerStart !== 'string'
+            ? edge.markerStart
+            : undefined;
+        const markerEnd =
+          edge.markerEnd && typeof edge.markerEnd !== 'string'
+            ? edge.markerEnd
+            : undefined;
+        return {
+          ...edge,
+          ...(markerStart
+            ? {
+                markerStart: {
+                  ...markerStart,
+                  ...markerPatch,
+                },
+              }
+            : {}),
+          ...(markerEnd
+            ? {
+                markerEnd: {
+                  ...markerEnd,
+                  ...markerPatch,
+                },
+              }
+            : {}),
+        };
+      });
     },
-    [setEdges]
+    [updateLineEdge]
   );
 
   const setLineEdgeColor = useCallback(
@@ -163,43 +193,42 @@ export function useLineToolbar({
 
   const setLineEdgeArrowHeads = useCallback(
     (edgeId: string, arrowHeads: ArrowHeadValue) => {
-      setEdges(currentEdges =>
-        currentEdges.map(edge => {
-          if (edge.id !== edgeId) {
-            return edge;
-          }
+      updateLineEdge(edgeId, edge => {
+        const strokeColor =
+          typeof edge.style?.stroke === 'string'
+            ? edge.style.stroke
+            : DEFAULT_STROKE_COLOR;
+        const strokeWidth = Number(edge.style?.strokeWidth);
+        const markerStrokeWidth = Number.isFinite(strokeWidth)
+          ? strokeWidth
+          : DEFAULT_LINE_WIDTH;
+        const marker = {
+          type: MarkerType.ArrowClosed,
+          color: strokeColor,
+          width: ARROW_MARKER_WIDTH_PX,
+          height: ARROW_MARKER_HEIGHT_PX,
+          strokeWidth: markerStrokeWidth,
+        };
 
-          const strokeColor =
-            typeof edge.style?.stroke === 'string'
-              ? edge.style.stroke
-              : DEFAULT_STROKE_COLOR;
-          const strokeWidth = Number(edge.style?.strokeWidth);
-          const markerStrokeWidth = Number.isFinite(strokeWidth)
-            ? strokeWidth
-            : DEFAULT_LINE_WIDTH;
-          const marker = {
-            type: MarkerType.ArrowClosed,
-            color: strokeColor,
-            width: ARROW_MARKER_WIDTH_PX,
-            height: ARROW_MARKER_HEIGHT_PX,
-            strokeWidth: markerStrokeWidth,
-          };
-
-          return {
-            ...edge,
-            markerStart:
-              arrowHeads === 'start' || arrowHeads === 'both'
-                ? marker
-                : undefined,
-            markerEnd:
-              arrowHeads === 'end' || arrowHeads === 'both'
-                ? marker
-                : undefined,
-          };
-        })
-      );
+        return {
+          ...edge,
+          markerStart:
+            arrowHeads === 'start' || arrowHeads === 'both'
+              ? marker
+              : undefined,
+          markerEnd:
+            arrowHeads === 'end' || arrowHeads === 'both' ? marker : undefined,
+        };
+      });
     },
-    [setEdges]
+    [updateLineEdge]
+  );
+
+  const setLineEdgeLocked = useCallback(
+    (edgeId: string, locked: boolean) => {
+      updateLineEdgeLockState(edgeId, locked);
+    },
+    [updateLineEdgeLockState]
   );
 
   return {
@@ -209,5 +238,6 @@ export function useLineToolbar({
     setLineEdgeWidth,
     setLineEdgeStrokeStyle,
     setLineEdgeArrowHeads,
+    setLineEdgeLocked,
   };
 }
