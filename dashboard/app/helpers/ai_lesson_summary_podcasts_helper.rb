@@ -78,7 +78,7 @@ module AiLessonSummaryPodcastsHelper
       }
 
       HTTParty.post(
-        ELEVENLABS_URL + ELEVENLABS_TTS_PATH,
+        ELEVENLABS_BASE_URL + ELEVENLABS_TTS_PATH,
         headers: headers,
         body: data.to_json,
         timeout: 180,
