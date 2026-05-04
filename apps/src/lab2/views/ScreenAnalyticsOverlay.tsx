@@ -249,9 +249,6 @@ const ScreenAnalyticsOverlay: React.FC = () => {
       <Typography variant="body4">
         {size.w} &times; {size.h}
       </Typography>
-      <Typography variant="body4">
-        {fits.toLocaleString()} / {total.toLocaleString()} users
-      </Typography>
     </div>
   );
 };
