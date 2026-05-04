@@ -6,6 +6,11 @@ import {
   SketchlabReactFlowNode,
 } from '@cdo/apps/lab2/types';
 
+import {
+  createLineAnchorAtHandle,
+  getHandleFlowPosition,
+} from '../utils/lineAnchors';
+
 type FlowPoint = {x: number; y: number};
 
 interface DraggingAnchor {
@@ -13,9 +18,17 @@ interface DraggingAnchor {
   startPosition: FlowPoint;
 }
 
+interface PendingDetach {
+  side: 'source' | 'target';
+  flowPosition: FlowPoint;
+}
+
 interface DragState {
+  edgeId: string;
   anchors: DraggingAnchor[];
+  pendingDetaches: PendingDetach[];
   startPointer: FlowPoint;
+  hasMoved: boolean;
 }
 
 interface UseLineEdgeDragOptions {
@@ -23,16 +36,23 @@ interface UseLineEdgeDragOptions {
   setNodes: (
     updater: (nodes: SketchlabReactFlowNode[]) => SketchlabReactFlowNode[]
   ) => void;
+  setEdges: (
+    updater: (edges: SketchlabReactFlowEdge[]) => SketchlabReactFlowEdge[]
+  ) => void;
   screenToFlowPosition: (position: {x: number; y: number}) => FlowPoint;
 }
 
-// Dragging the body of a line edge translates the line's free endpoints
-// (lineAnchor nodes). Endpoints that are attached to real nodes stay put;
-// the edge follows them naturally because React Flow re-routes by id. If
-// both endpoints are attached, the drag is a no-op.
+// Dragging the body of a line edge translates the line as a whole. Free
+// endpoints (lineAnchor nodes) follow the pointer directly. Attached
+// endpoints (real nodes) get detached on first move — we spawn a fresh
+// anchor at the current handle position, rewrite the edge to point at it,
+// and treat it like any other dragging anchor from then on. This is the
+// inverse of the snap-on-drop attach. If neither endpoint is attached and
+// neither is an anchor, the drag is a no-op.
 export function useLineEdgeDrag({
   readOnly,
   setNodes,
+  setEdges,
   screenToFlowPosition,
 }: UseLineEdgeDragOptions) {
   const {getNode} = useReactFlow<
@@ -47,6 +67,43 @@ export function useLineEdgeDrag({
       if (!dragState) {
         return;
       }
+
+      // First-move detach: materialize fresh anchors at any attached
+      // endpoint, splice them into the edge, and add them to the dragging
+      // set. We do this here (not on mousedown) so a click-without-drag
+      // doesn't detach the line.
+      if (!dragState.hasMoved && dragState.pendingDetaches.length > 0) {
+        const newAnchors: SketchlabReactFlowNode[] = [];
+        const edgePatch: Partial<SketchlabReactFlowEdge> = {};
+        dragState.pendingDetaches.forEach(pending => {
+          const anchor = createLineAnchorAtHandle(
+            pending.flowPosition,
+            pending.side
+          );
+          newAnchors.push(anchor);
+          if (pending.side === 'source') {
+            edgePatch.source = anchor.id;
+            edgePatch.sourceHandle = 'line-anchor-source';
+          } else {
+            edgePatch.target = anchor.id;
+            edgePatch.targetHandle = 'line-anchor-target';
+          }
+          dragState.anchors.push({
+            id: anchor.id,
+            startPosition: {...anchor.position},
+          });
+        });
+        setNodes(currentNodes => [...currentNodes, ...newAnchors]);
+        setEdges(currentEdges =>
+          currentEdges.map(currentEdge =>
+            currentEdge.id === dragState.edgeId
+              ? {...currentEdge, ...edgePatch}
+              : currentEdge
+          )
+        );
+        dragState.pendingDetaches = [];
+      }
+      dragState.hasMoved = true;
 
       const currentPointer = screenToFlowPosition({
         x: event.clientX,
@@ -73,7 +130,7 @@ export function useLineEdgeDrag({
         })
       );
     },
-    [screenToFlowPosition, setNodes]
+    [screenToFlowPosition, setNodes, setEdges]
   );
 
   const stopLineEdgeDrag = useCallback(() => {
@@ -91,14 +148,39 @@ export function useLineEdgeDrag({
       const sourceNode = getNode(edge.source);
       const targetNode = getNode(edge.target);
       const anchors: DraggingAnchor[] = [];
+      const pendingDetaches: PendingDetach[] = [];
+
       if (sourceNode?.type === 'lineAnchor') {
-        anchors.push({id: sourceNode.id, startPosition: {...sourceNode.position}});
+        anchors.push({
+          id: sourceNode.id,
+          startPosition: {...sourceNode.position},
+        });
+      } else if (sourceNode) {
+        const handlePos = getHandleFlowPosition(
+          edge.source,
+          edge.sourceHandle,
+          screenToFlowPosition
+        );
+        if (handlePos) {
+          pendingDetaches.push({side: 'source', flowPosition: handlePos});
+        }
       }
       if (targetNode?.type === 'lineAnchor') {
-        anchors.push({id: targetNode.id, startPosition: {...targetNode.position}});
+        anchors.push({
+          id: targetNode.id,
+          startPosition: {...targetNode.position},
+        });
+      } else if (targetNode) {
+        const handlePos = getHandleFlowPosition(
+          edge.target,
+          edge.targetHandle,
+          screenToFlowPosition
+        );
+        if (handlePos) {
+          pendingDetaches.push({side: 'target', flowPosition: handlePos});
+        }
       }
-      if (anchors.length === 0) {
-        // Both endpoints attached to real nodes; nothing to drag.
+      if (anchors.length === 0 && pendingDetaches.length === 0) {
         return;
       }
 
@@ -106,11 +188,14 @@ export function useLineEdgeDrag({
       event.stopPropagation();
 
       draggingLineEdgeRef.current = {
+        edgeId: edge.id,
         anchors,
+        pendingDetaches,
         startPointer: screenToFlowPosition({
           x: event.clientX,
           y: event.clientY,
         }),
+        hasMoved: false,
       };
 
       window.addEventListener('mousemove', handleLineEdgeMouseMove);

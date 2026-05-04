@@ -178,6 +178,7 @@ export default function ReactFlowCanvas({
   const {handleEdgeMouseDown} = useLineEdgeDrag({
     readOnly,
     setNodes,
+    setEdges,
     screenToFlowPosition,
   });
 
