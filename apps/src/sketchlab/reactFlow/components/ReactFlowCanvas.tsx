@@ -2,16 +2,12 @@ import {
   addEdge,
   Background,
   Controls,
-  type FinalConnectionState,
   type IsValidConnection,
   MarkerType,
   ReactFlow,
   useEdgesState,
   useNodesState,
   useReactFlow,
-  type Connection,
-  type Edge,
-  type HandleType,
   type OnConnect,
 } from '@xyflow/react';
 import classNames from 'classnames';
@@ -49,6 +45,7 @@ import {useFocusManagement} from '../hooks/useFocusManagement';
 import {useKeyboardNavigation} from '../hooks/useKeyboardNavigation';
 import {useLineEdgeDrag} from '../hooks/useLineEdgeDrag';
 import {useLineToolbar} from '../hooks/useLineToolbar';
+import {useReconnect} from '../hooks/useReconnect';
 import {useTabOrder} from '../hooks/useTabOrder';
 import ImageNode from '../nodes/ImageNode';
 import LineAnchorNode from '../nodes/LineAnchorNode';
@@ -63,7 +60,6 @@ import {
   canCreateConnection,
   isLineAnchorNodeId,
 } from '../utils/connectionRules';
-import {findNearestHandle} from '../utils/handleSnap';
 
 import Toolbar from './Toolbar';
 
@@ -352,11 +348,18 @@ export default function ReactFlowCanvas({
     };
   }, [nodes, edges, viewport, updateSources]);
 
-  // Tracks an in-flight edge reconnect (drag of an existing edge endpoint).
-  // `landed` flips true in onReconnect; onReconnectEnd uses it to decide
-  // whether the drop landed on a valid handle (do nothing more) or on empty
-  // canvas (spawn a fresh anchor).
-  const reconnectingEdgeRef = useRef<{landed: boolean} | null>(null);
+  const {
+    isReconnecting,
+    handleReconnectStart,
+    handleReconnect,
+    handleReconnectEnd,
+    handleNodeDragStop,
+  } = useReconnect({
+    edges,
+    setNodes,
+    setEdges,
+    screenToFlowPosition,
+  });
 
   const onConnect: OnConnect = useCallback(
     connection =>
@@ -369,9 +372,6 @@ export default function ReactFlowCanvas({
           return currentEdges;
         }
 
-        // Connections start with an end-arrow since that's the conventional
-        // connection look. Same shape as line-tool edges so the line
-        // toolbar, reconnect, and edge-body drag all apply uniformly.
         return addEdge(
           {
             ...connection,
@@ -403,161 +403,20 @@ export default function ReactFlowCanvas({
       // During an in-flight reconnect we relax the anchor restriction so the
       // user can drag a line endpoint onto a real node's handle. We still
       // block self-loops (same node on both ends).
-      if (reconnectingEdgeRef.current) {
+      if (isReconnecting()) {
         return source !== target;
       }
       return canCreateConnection(source, target, nodes);
     },
-    [nodes]
+    [nodes, isReconnecting]
   );
 
-  const handleReconnectStart = useCallback(() => {
-    reconnectingEdgeRef.current = {landed: false};
-  }, []);
-
-  const handleReconnect = useCallback(
-    (oldEdge: Edge, newConnection: Connection) => {
-      if (reconnectingEdgeRef.current) {
-        reconnectingEdgeRef.current.landed = true;
-      }
-      setEdges(currentEdges =>
-        currentEdges.map(currentEdge => {
-          if (currentEdge.id !== oldEdge.id) {
-            return currentEdge;
-          }
-          return {
-            ...currentEdge,
-            source: newConnection.source,
-            target: newConnection.target,
-            sourceHandle: newConnection.sourceHandle ?? undefined,
-            targetHandle: newConnection.targetHandle ?? undefined,
-          };
-        })
-      );
-    },
-    [setEdges]
-  );
-
-  const handleReconnectEnd = useCallback(
-    (
-      event: MouseEvent | TouchEvent,
-      edge: Edge,
-      handleType: HandleType,
-      connectionState: FinalConnectionState
-    ) => {
-      const reconnectState = reconnectingEdgeRef.current;
-      reconnectingEdgeRef.current = null;
-      if (reconnectState?.landed) {
-        return;
-      }
-
-      // Drop on empty canvas: spawn a fresh anchor at the pointer and
-      // attach the dragged endpoint to it. Prefer the flow-coordinate
-      // position React Flow already computed; fall back to the raw
-      // pointer if that's missing.
-      let dropPosition = connectionState.to;
-      if (!dropPosition) {
-        const clientPoint =
-          event instanceof MouseEvent
-            ? {x: event.clientX, y: event.clientY}
-            : (() => {
-                const touch =
-                  event.changedTouches[0] ?? event.touches[0] ?? null;
-                return touch ? {x: touch.clientX, y: touch.clientY} : null;
-              })();
-        if (!clientPoint) {
-          return;
-        }
-        dropPosition = screenToFlowPosition(clientPoint);
-      }
-
-      const anchorRole: 'source' | 'target' =
-        handleType === 'source' ? 'source' : 'target';
-      const anchorId = createUuid();
-      const anchor: SketchlabReactFlowNode = {
-        id: anchorId,
-        type: 'lineAnchor',
-        position: {
-          x: dropPosition.x - LINE_ANCHOR_SIZE_PX / 2,
-          y: dropPosition.y - LINE_ANCHOR_SIZE_PX / 2,
-        },
-        data: {lineAnchorRole: anchorRole},
-        style: {width: LINE_ANCHOR_SIZE_PX, height: LINE_ANCHOR_SIZE_PX},
-      };
-      const handleId = `line-anchor-${anchorRole}`;
-      setNodes(currentNodes => [...currentNodes, anchor]);
-      setEdges(currentEdges =>
-        currentEdges.map(currentEdge => {
-          if (currentEdge.id !== edge.id) {
-            return currentEdge;
-          }
-          return handleType === 'source'
-            ? {...currentEdge, source: anchorId, sourceHandle: handleId}
-            : {...currentEdge, target: anchorId, targetHandle: handleId};
-        })
-      );
-    },
-    [screenToFlowPosition, setEdges, setNodes]
-  );
 
   const handleMoveEnd = useCallback(
     (_event: unknown, newViewport: SketchlabReactFlowSource['viewport']) => {
       setViewport(newViewport);
     },
     []
-  );
-
-  // Snap a line endpoint onto a real node's handle when the user drops the
-  // anchor close enough. We look at where the pointer landed in screen
-  // space and find the nearest matching handle on a non-anchor node within
-  // the snap radius. The orphaned anchor is removed by the prune effect.
-  const handleNodeDragStop = useCallback(
-    (event: React.MouseEvent | MouseEvent, node: SketchlabReactFlowNode) => {
-      if (node.type !== 'lineAnchor') {
-        return;
-      }
-      const associatedEdge = edges.find(
-        edge => edge.source === node.id || edge.target === node.id
-      );
-      if (!associatedEdge) {
-        return;
-      }
-      const isSourceSide = associatedEdge.source === node.id;
-      const requiredHandleType: 'source' | 'target' = isSourceSide
-        ? 'source'
-        : 'target';
-
-      const snapTarget = findNearestHandle(
-        {x: event.clientX, y: event.clientY},
-        node.id,
-        requiredHandleType,
-        LINE_RECONNECT_SNAP_RADIUS_PX
-      );
-      if (!snapTarget) {
-        return;
-      }
-
-      setEdges(currentEdges =>
-        currentEdges.map(currentEdge => {
-          if (currentEdge.id !== associatedEdge.id) {
-            return currentEdge;
-          }
-          if (isSourceSide) {
-            return {
-              ...currentEdge,
-              source: snapTarget.nodeId,
-              sourceHandle: snapTarget.handleId ?? undefined,
-            };
-          }
-          return {
-            ...currentEdge,
-            target: snapTarget.nodeId,
-            targetHandle: snapTarget.handleId ?? undefined,
-          };
-        })
-      );
-    },
-    [edges, setEdges]
   );
 
   // Cleanup orphaned line anchors after any edge mutation. An anchor only
