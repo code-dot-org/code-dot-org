@@ -127,13 +127,15 @@ const MisconceptionForm: React.FC<MisconceptionFormProps> = ({
         onChange={setJsonVideos}
         onVideoCreatingChange={setIsVideoCreating}
         associationTarget={
-          initial
-            ? {type: 'jit_pl_misconception', id: initial.id}
-            : undefined
+          initial ? {type: 'jit_pl_misconception', id: initial.id} : undefined
         }
       />
       <div className={moduleStyles.formButtons}>
-        <button onClick={save} disabled={isSaving || isVideoCreating} type="button">
+        <button
+          onClick={save}
+          disabled={isSaving || isVideoCreating}
+          type="button"
+        >
           {isSaving ? 'Saving...' : 'Save'}
         </button>
         <button
