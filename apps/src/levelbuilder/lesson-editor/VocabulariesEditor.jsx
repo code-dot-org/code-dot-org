@@ -147,16 +147,16 @@ class VocabulariesEditor extends Component {
     return {options: vocabularies};
   };
 
-  handleRemoveVocabularyDialogClose = () => {
+  handleDeleteVocabularyDialogClose = () => {
     this.setState({
       confirmRemovalDialogOpen: false,
       vocabularyForRemoval: null,
     });
   };
 
-  handleRemoveVocabularyConfirm = () => {
+  handleDeleteVocabularyConfirm = () => {
     this.props.removeVocabulary(this.state.vocabularyForRemoval.key);
-    this.handleRemoveVocabularyDialogClose();
+    this.handleDeleteVocabularyDialogClose();
   };
 
   render() {

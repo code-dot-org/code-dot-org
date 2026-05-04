@@ -28,7 +28,7 @@ Scenario: Teacher can open and close Icon Key and details
   # Teacher can open the more details of the icon key and close it
   Then I click selector "a:contains('More Details')"
   And I wait until element "h3:contains(Progress Tracking Icon Key)" is visible
-  And I click selector "#ui-close-dialog"
+  And I click selector "button:contains('OK')"
   And element "h3:contains(Progress Tracking Icon Key)" is hidden
 
 @properties_encryption_key

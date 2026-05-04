@@ -8,14 +8,14 @@
           "type": "panel",
           "name": "variable_panel",
           "title": "Panel to hold variables for foorm. HIDE AFTER TESTING",
-          "visible": "false",
+          "visible": "true",
           "elements": [
             {
               "type": "text",
               "name": "module",
               "startWithNewLine": false,
               "defaultValueExpression": "{module_name}",
-              "readOnly": true
+              "readOnly": false
             }
           ]
         },
@@ -107,7 +107,7 @@
         },
         {
           "type": "rating",
-          "name": "know_what_students_learn_designing_building_ai",
+          "name": "know_what_students_learn_curriculum",
           "visibleIf": "{module} = 'Designing & Building with AI'",
           "title": "After completing this professional learning experience, I understand what my students will learn in Code.org's {module} curriculum.",
           "rateCount": 7,
@@ -159,14 +159,7 @@
           "type": "library_item",
           "library_name": "surveys/pd/self_paced_pl_standards",
           "library_version": 0,
-          "name": "barriers_implementation_ai",
-          "natalia_comment": "INCLUDE ONLY IF MODULE IS ABOUT AI"
-        },
-        {
-          "type": "library_item",
-          "library_name": "surveys/pd/self_paced_pl_standards",
-          "library_version": 0,
-          "name": "barriers_implementation_teaching_cs",
+          "name": "barriers_implementation_teaching_ai_and_cs",
           "natalia_comment": "INCLUDE ONLY IF MODULE IS ABOUT CS CURRICULUM"
         },
         {
@@ -186,12 +179,6 @@
           "library_name": "surveys/pd/self_paced_pl_standards",
           "library_version": 0,
           "name": "how_long_to_complete_module"
-        },
-        {
-          "type": "library_item",
-          "library_name": "surveys/pd/self_paced_pl_standards",
-          "library_version": 0,
-          "name": "skills_content_relevant_role"
         },
         {
           "type": "library_item",

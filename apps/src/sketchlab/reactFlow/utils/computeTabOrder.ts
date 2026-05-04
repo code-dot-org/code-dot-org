@@ -151,6 +151,23 @@ export function getEntryFromDOM(target: HTMLElement): TabOrderEntry | null {
 }
 
 /**
+ * Forward lookup: find the React Flow DOM element for a tab order entry.
+ * Counterpart to `getEntryFromDOM`. Defaults to searching the whole
+ * document; pass a `scope` to limit the search (useful for tests or
+ * multi-canvas pages).
+ */
+export function getElementForEntry(
+  entry: TabOrderEntry,
+  scope: ParentNode = document
+): HTMLElement | null {
+  const selector =
+    entry.type === 'node'
+      ? `.react-flow__node[data-id="${entry.id}"]`
+      : `.react-flow__edge[data-id="${entry.id}"]`;
+  return scope.querySelector<HTMLElement>(selector);
+}
+
+/**
  * Compute a logical tab order for React Flow nodes and edges.
  *
  * 1. Nodes connected by edges are traversed first, following edge direction
