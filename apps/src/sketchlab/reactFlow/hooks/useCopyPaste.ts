@@ -57,7 +57,8 @@ export function useCopyPaste({
   const buildNodeClipboard = useCallback(
     (nodeId: string): ClipboardContents | null => {
       const node = nodes.find(n => n.id === nodeId);
-      if (!node) return null;
+      if (!node || (node as {data?: {locked?: boolean}}).data?.locked)
+        return null;
       return {nodes: [node], edges: []};
     },
     [nodes]
@@ -77,7 +78,8 @@ export function useCopyPaste({
     [nodes, edges]
   );
 
-  // Toolbar action: duplicate a node in-place but offset by PASTE_OFFSET_PX in both dimensions.
+  // Toolbar action: duplicate a node in-place with 'stagger' chaining, i.e., each duplicate is
+  // offset by PASTE_OFFSET_PX in both dimensions.
   const duplicateNode = useCallback(
     (nodeId: string) => {
       let source: ClipboardContents | null;
@@ -93,18 +95,12 @@ export function useCopyPaste({
 
       const newNodes = source.nodes.map(node => {
         const newId = createUuid();
-        // A locked source node may have draggable/connectable/deletable set
-        // to false at runtime (React Flow writes them back via onNodesChange).
-        // Reset them to undefined so the duplicate inherits the global setting.
         const base = node as unknown as Record<string, unknown>;
         return {
           ...base,
           id: newId,
           selected: false,
-          draggable: undefined,
-          connectable: undefined,
-          deletable: undefined,
-          data: {...node.data, locked: false},
+          data: {...node.data},
           position: {
             x: node.position.x + PASTE_OFFSET_PX,
             y: node.position.y + PASTE_OFFSET_PX,
@@ -185,8 +181,6 @@ export function useCopyPaste({
   const cutEntry = useCallback(
     (entry: TabOrderEntry) => {
       if (entry.type === 'node') {
-        const node = nodes.find(n => n.id === entry.id);
-        if (!node || (node as {data?: {locked?: boolean}}).data?.locked) return;
         const contents = buildNodeClipboard(entry.id);
         if (!contents) return;
         writeClipboard(contents);
@@ -205,7 +199,6 @@ export function useCopyPaste({
       }
     },
     [
-      nodes,
       edges,
       buildNodeClipboard,
       buildLineEdgeClipboard,
@@ -241,10 +234,7 @@ export function useCopyPaste({
         ...base,
         id: newId,
         selected: false,
-        draggable: undefined,
-        connectable: undefined,
-        deletable: undefined,
-        data: {...node.data, locked: false},
+        data: {...node.data},
         position: {
           x: node.position.x + deltaX,
           y: node.position.y + deltaY,
