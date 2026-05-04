@@ -19,6 +19,9 @@ export class Match {
   /** Top submit button. */
   readonly submitButton: Locator;
 
+  /** Bottom submit button — Cucumber targets it as `.submitButton:last`. */
+  readonly reviewButton: Locator;
+
   /** Modal overlay shown after submission. */
   readonly modal: Locator;
 
@@ -35,6 +38,7 @@ export class Match {
     this.page = page;
     this.questionText = page.locator('.match .content2');
     this.submitButton = page.locator('.submitButton').first();
+    this.reviewButton = page.locator('.submitButton').last();
     this.modal = page.locator('.modal');
     this.modalTitle = page.locator('.modal .dialog-title');
     this.okButton = page.locator('#ok-button');

@@ -132,6 +132,183 @@ export async function createStudent(
   });
 }
 
+/** Credentials returned by {@link createTeacherAssociatedStudent}. */
+export interface TeacherStudentPair {
+  /** Teacher's email address, used with {@link signIn} to switch sessions. */
+  teacherEmail: string;
+  /** Teacher's password. */
+  teacherPassword: string;
+  /** Section join code. */
+  sectionCode: string;
+}
+
+/**
+ * Signs in an existing user by POSTing to /users/sign_in.
+ * Navigates to /reset_session first to clear any existing session and obtain a
+ * fresh CSRF token.
+ *
+ * @param page - Playwright page
+ * @param email - user's login email
+ * @param password - user's password
+ */
+export async function signIn(
+  page: Page,
+  email: string,
+  password: string,
+): Promise<void> {
+  await page.goto('/reset_session');
+  const csrf = await page
+    .locator('meta[name="csrf-token"]')
+    .getAttribute('content');
+
+  const response = await page.request.post('/users/sign_in', {
+    headers: {
+      'Content-Type': 'application/json',
+      'X-CSRF-Token': csrf ?? '',
+    },
+    data: {user: {login: email, password}},
+  });
+
+  if (!response.ok()) {
+    throw new Error(
+      `sign_in failed: ${response.status()} — ${await response.text()}`,
+    );
+  }
+}
+
+/**
+ * Options for {@link createTeacherAssociatedStudent}.
+ *
+ * @property studentAge - student age; defaults to 16
+ * @property studentName - display name; auto-generated if omitted
+ * @property authorized - grant /api/test/authorized_teacher_access to the teacher
+ */
+interface CreateTeacherAssociatedStudentOptions {
+  studentAge?: number;
+  studentName?: string;
+  authorized?: boolean;
+}
+
+/**
+ * Creates a teacher, creates a student section under that teacher, creates a
+ * student, and enrolls the student in the section.  After the call the browser
+ * context is signed in as the student.
+ *
+ * Mirrors `I create a(n authorized)? teacher-associated student named "..."` from
+ * section_management_steps.rb.
+ *
+ * @param page - Playwright page whose browser context receives the session
+ * @param options - optional overrides for student age, name, and authorization
+ * @returns teacher credentials and section code, for tests that later sign in
+ *   as the teacher via {@link signIn}
+ */
+export async function createTeacherAssociatedStudent(
+  page: Page,
+  {
+    studentAge = 16,
+    studentName,
+    authorized = false,
+  }: CreateTeacherAssociatedStudentOptions = {},
+): Promise<TeacherStudentPair> {
+  const ts = Date.now();
+  const rand = Math.random().toString(36).slice(2, 8);
+  const teacherEmail = `teacher_${ts}_${rand}@test.xx`;
+  const teacherPassword = `TeacherPass${ts}`;
+  const teacherDisplayName = `TestTeacher${ts}`;
+
+  // Create teacher and sign in as teacher.
+  await createTestUser(page, {
+    user_type: 'teacher',
+    email: teacherEmail,
+    password: teacherPassword,
+    password_confirmation: teacherPassword,
+    name: teacherDisplayName,
+    age: '21+',
+    sign_in_count: 2,
+    terms_of_service_version: '1',
+    email_preference_opt_in: 'yes',
+    email_preference_form_kind: teacherEmail,
+    email_preference_request_ip: '127.0.0.1',
+    email_preference_source: 'ACCOUNT_SIGN_UP',
+  });
+
+  // Optionally grant authorized teacher access while signed in as teacher.
+  if (authorized) {
+    const csrfForAuth = await page
+      .locator('meta[name="csrf-token"]')
+      .getAttribute('content');
+    const authResp = await page.request.post(
+      '/api/test/authorized_teacher_access',
+      {
+        headers: {
+          'Content-Type': 'application/json',
+          'X-CSRF-Token': csrfForAuth ?? '',
+        },
+      },
+    );
+    if (!authResp.ok()) {
+      throw new Error(
+        `authorized_teacher_access failed: ${authResp.status()} — ${await authResp.text()}`,
+      );
+    }
+  }
+
+  // Create a student section under the teacher.
+  const csrfForSection = await page
+    .locator('meta[name="csrf-token"]')
+    .getAttribute('content');
+  const sectionResp = await page.request.post('/dashboardapi/sections', {
+    headers: {
+      'Content-Type': 'application/json',
+      'X-CSRF-Token': csrfForSection ?? '',
+    },
+    data: {login_type: 'email', participant_type: 'student'},
+  });
+  if (!sectionResp.ok()) {
+    throw new Error(
+      `create section failed: ${sectionResp.status()} — ${await sectionResp.text()}`,
+    );
+  }
+  const sectionCode = (
+    (await sectionResp.json()) as {code: string}
+  ).code;
+
+  // Create student and sign in as student.
+  const studentTs = Date.now();
+  const studentRand = Math.random().toString(36).slice(2, 8);
+  const studentEmail = `student_${studentTs}_${studentRand}@test.xx`;
+  const studentPassword = `StudentPass${studentTs}`;
+  const studentDisplayName = studentName ?? `TestStudent${studentTs}`;
+
+  await createTestUser(page, {
+    user_type: 'student',
+    email: studentEmail,
+    password: studentPassword,
+    password_confirmation: studentPassword,
+    name: studentDisplayName,
+    age: String(studentAge),
+    sign_in_count: 2,
+  });
+
+  // Enroll student in the section.
+  const csrfForJoin = await page
+    .locator('meta[name="csrf-token"]')
+    .getAttribute('content');
+  const joinResp = await page.request.post(`/join/${sectionCode}`, {
+    headers: {
+      'Content-Type': 'application/json',
+      'X-CSRF-Token': csrfForJoin ?? '',
+    },
+  });
+  if (!joinResp.ok()) {
+    throw new Error(
+      `join section failed: ${joinResp.status()} — ${await joinResp.text()}`,
+    );
+  }
+
+  return {teacherEmail, teacherPassword, sectionCode};
+}
+
 /**
  * Creates a levelbuilder account and signs in.
  * Mirrors `I create a levelbuilder named "..."` from levelbuilder_steps.rb:
