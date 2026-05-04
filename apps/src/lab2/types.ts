@@ -130,7 +130,6 @@ export interface SketchlabReactFlowEdge {
   markerStart?: EdgeMarkerType;
   markerEnd?: EdgeMarkerType;
   data?: {locked?: boolean};
-  reconnectable?: boolean;
 }
 
 export interface SketchlabReactFlowSource {

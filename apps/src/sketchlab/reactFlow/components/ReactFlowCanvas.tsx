@@ -376,7 +376,6 @@ export default function ReactFlowCanvas({
           {
             ...connection,
             type: 'straight',
-            reconnectable: true,
             style: {
               stroke: DEFAULT_STROKE_COLOR,
               strokeWidth: DEFAULT_LINE_WIDTH,
@@ -633,7 +632,6 @@ export default function ReactFlowCanvas({
           source: sourceAnchorId,
           target: targetAnchorId,
           type: 'straight',
-          reconnectable: true,
           ...(type === 'arrow' && {
             markerEnd: {
               type: MarkerType.ArrowClosed,
