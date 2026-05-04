@@ -6,6 +6,11 @@ import {
   SketchlabReactFlowNode,
 } from '@cdo/apps/lab2/types';
 
+import {ARROW_MARKER_HEIGHT_PX, ARROW_MARKER_WIDTH_PX} from '../constants';
+import {
+  DEFAULT_LINE_WIDTH,
+  DEFAULT_STROKE_COLOR,
+} from '../elementToolbars/toolbarPalettes';
 import {canCreateConnection} from '../utils/connectionRules';
 import {getNodeLabel} from '../utils/nodeLabel';
 
@@ -101,12 +106,27 @@ export function useConnectMode({
         if (!canCreateConnection(connectingFrom, targetNodeId, nodes)) {
           return currentEdges;
         }
+        // Match the line-tool data shape so the line toolbar, reconnect,
+        // and edge-body drag all apply to keyboard-created connections too.
         return addEdge(
           {
             source: connectingFrom,
             target: targetNodeId,
             ...handles,
-            markerEnd: {type: MarkerType.ArrowClosed},
+            type: 'straight',
+            data: {kind: 'line'},
+            reconnectable: true,
+            style: {
+              stroke: DEFAULT_STROKE_COLOR,
+              strokeWidth: DEFAULT_LINE_WIDTH,
+            },
+            markerEnd: {
+              type: MarkerType.ArrowClosed,
+              color: DEFAULT_STROKE_COLOR,
+              width: ARROW_MARKER_WIDTH_PX,
+              height: ARROW_MARKER_HEIGHT_PX,
+              strokeWidth: DEFAULT_LINE_WIDTH,
+            },
           },
           currentEdges
         );

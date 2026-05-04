@@ -363,8 +363,27 @@ export default function ReactFlowCanvas({
           return currentEdges;
         }
 
+        // Connections share the line-edge data shape so the line toolbar,
+        // reconnect, and edge-body drag all apply uniformly. They start
+        // with an end-arrow since that's the conventional connection look.
         return addEdge(
-          {...connection, markerEnd: {type: MarkerType.ArrowClosed}},
+          {
+            ...connection,
+            type: 'straight',
+            data: {kind: 'line'},
+            reconnectable: true,
+            style: {
+              stroke: DEFAULT_STROKE_COLOR,
+              strokeWidth: DEFAULT_LINE_WIDTH,
+            },
+            markerEnd: {
+              type: MarkerType.ArrowClosed,
+              color: DEFAULT_STROKE_COLOR,
+              width: ARROW_MARKER_WIDTH_PX,
+              height: ARROW_MARKER_HEIGHT_PX,
+              strokeWidth: DEFAULT_LINE_WIDTH,
+            },
+          },
           currentEdges
         );
       }),
