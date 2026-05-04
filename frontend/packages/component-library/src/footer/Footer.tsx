@@ -14,6 +14,7 @@
  */
 
 import {
+  Box,
   FormControl,
   Grid,
   InputLabel,
@@ -26,8 +27,9 @@ import {
 } from '@mui/material';
 import type {LinkProps} from '@mui/material/Link';
 import {styled} from '@mui/material/styles';
+import {visuallyHidden} from '@mui/utils';
 import {useId} from 'react';
-import type {CSSProperties, ReactNode} from 'react';
+import type {ReactNode} from 'react';
 
 // ---------------------------------------------------------------------------
 // Prop interfaces
@@ -132,22 +134,6 @@ const ImageLinkWrapper = styled('div', {
 })({});
 
 // ---------------------------------------------------------------------------
-// Visually-hidden utility (standard clip pattern — no visible change)
-// ---------------------------------------------------------------------------
-
-const visuallyHidden: CSSProperties = {
-  position: 'absolute',
-  width: '1px',
-  height: '1px',
-  padding: 0,
-  margin: '-1px',
-  overflow: 'hidden',
-  clip: 'rect(0,0,0,0)',
-  whiteSpace: 'nowrap',
-  borderWidth: 0,
-};
-
-// ---------------------------------------------------------------------------
 // Private FooterAnchor wrapper
 // ---------------------------------------------------------------------------
 
@@ -193,13 +179,14 @@ const Footer = ({
 
   return (
     <FooterRoot className={className}>
-      <span
+      <Box
+        component="span"
         id={extLinkDescId}
         data-testid="footer-ext-link-notice"
-        style={visuallyHidden}
+        sx={visuallyHidden}
       >
         (opens in a new tab)
-      </span>
+      </Box>
       <FooterGrid container>
         {/* Top: links (left) and locale picker (right), picker wraps above links on mobile */}
         <Grid
@@ -244,7 +231,7 @@ const Footer = ({
           ) : (
             <FooterLocaleSelect>
               <FormControl>
-                <InputLabel htmlFor={LOCALE_SELECT_ID} style={visuallyHidden}>
+                <InputLabel htmlFor={LOCALE_SELECT_ID} sx={visuallyHidden}>
                   Language
                 </InputLabel>
                 <NativeSelect

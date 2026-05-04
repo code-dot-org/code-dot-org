@@ -70,11 +70,11 @@ export function getBrandConfig(brand: Brand): BrandConfig {
 function buildFineprint(trademark: ReactNode): ReactNode {
   return (
     <>
-      <Typography component="p" variant="inherit">
+      <Typography component="p" variant="body2">
         Engineers from Amazon, Google, and Microsoft helped create these
         materials.
       </Typography>
-      <Typography component="p" variant="inherit">
+      <Typography component="p" variant="body2">
         Minecraft™ © Microsoft. All Rights Reserved. Star Wars™ © Disney and
         Lucasfilm. All Rights Reserved. Frozen™ © Disney. All Rights Reserved.
         Ice Age™ © 20th Century Fox. All Rights Reserved. Angry Birds ©
@@ -83,10 +83,10 @@ function buildFineprint(trademark: ReactNode): ReactNode {
         Bad Guys © DreamWorks Animation LLC. All Rights Reserved. Paramount
         Pictures Transformers One © Paramount Pictures. All Rights Reserved.
       </Typography>
-      <Typography component="p" variant="inherit">
+      <Typography component="p" variant="body2">
         {trademark}
       </Typography>
-      <Typography component="p" variant="inherit">
+      <Typography component="p" variant="body2">
         Built on GitHub from Microsoft
       </Typography>
     </>
