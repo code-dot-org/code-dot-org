@@ -80,6 +80,26 @@ class JSONVideoTest < ActiveSupport::TestCase
     assert_equal 0, video.reload.objectives.count
   end
 
+  test 'write_serialization writes a file readable by seed_record' do
+    Dir.mktmpdir do |tmpdir|
+      video = create(:json_video, key: 'write-test', description: 'Test', s3_uri: 's3://b/v.json', json_schema_version: 1, audience: 'Teacher')
+      video.objectives << @objective1
+
+      Rails.application.config.stubs(:levelbuilder_mode).returns(true)
+      video.stubs(:file_path).returns(Pathname.new(tmpdir).join('write-test.json'))
+
+      video.write_serialization
+
+      written = JSON.parse(File.read(video.file_path))
+      assert_equal 'write-test', written['key']
+      assert_equal 'Test', written['description']
+      assert_equal 's3://b/v.json', written['s3_uri']
+      assert_equal 1, written['json_schema_version']
+      assert_equal 'Teacher', written['audience']
+      assert_equal [@objective1.key], written['objective_keys']
+    end
+  end
+
   test 'seed_all skips bad files and continues seeding remaining files' do
     Dir.mktmpdir do |tmpdir|
       root = Pathname.new(tmpdir)

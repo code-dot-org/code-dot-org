@@ -13,6 +13,7 @@ class JSONVideosController < ApplicationController
     video = JSONVideo.new(json_video_params)
     if video.save
       associate_with_jit_pl_object(video)
+      video.write_serialization
       render json: video.summarize
     else
       render status: :bad_request, json: video.errors.full_messages.join(', ')

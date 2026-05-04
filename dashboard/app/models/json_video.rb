@@ -49,6 +49,27 @@ class JSONVideo < ApplicationRecord
     }
   end
 
+  def file_path
+    Rails.root.join("config/json_videos/#{key}.json")
+  end
+
+  def write_serialization
+    return unless Rails.application.config.levelbuilder_mode
+    FileUtils.mkdir_p(File.dirname(file_path))
+    File.write(
+      file_path,
+      JSON.pretty_generate(
+        key: key,
+        description: description,
+        s3_uri: s3_uri,
+        labs: labs || [],
+        json_schema_version: json_schema_version,
+        audience: audience,
+        objective_keys: objectives.map(&:key),
+      )
+    )
+  end
+
   def self.seed_record(file_path)
     properties = properties_from_file(File.read(file_path))
     objective_keys = Array(properties.delete(:objective_keys))
