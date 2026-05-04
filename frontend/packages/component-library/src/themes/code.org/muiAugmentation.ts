@@ -1,8 +1,8 @@
 /**
  * Design-system MUI module augmentations: Button, IconButton, and
  * Breadcrumbs custom sizes, colors, and variants; anchor attrs on
- * ButtonOwnProps; and Typography variants matching the design-system
- * type scale.
+ * ButtonOwnProps; Typography variants matching the design-system type scale;
+ * and the MuiFooter custom component slot declarations.
  */
 
 import '@mui/material/Button';
@@ -111,6 +111,25 @@ declare module '@mui/material/Typography' {
     label4: true;
     strong: true;
     em: true;
+  }
+}
+
+import type {CSSInterpolation} from '@mui/material/styles';
+
+declare module '@mui/material/styles' {
+  interface Components {
+    MuiFooter?: {
+      styleOverrides?: {
+        root?: CSSInterpolation;
+        grid?: CSSInterpolation;
+        links?: CSSInterpolation;
+        link?: CSSInterpolation;
+        localeSelect?: CSSInterpolation;
+        copyright?: CSSInterpolation;
+        fineprint?: CSSInterpolation;
+        imageLink?: CSSInterpolation;
+      };
+    };
   }
 }
 
