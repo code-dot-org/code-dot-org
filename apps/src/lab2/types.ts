@@ -124,15 +124,12 @@ export interface SketchlabReactFlowEdge {
   source: string;
   target: string;
   style?: CSSProperties;
-  data?: {
-    locked?: boolean;
-  };
   sourceHandle?: string;
   targetHandle?: string;
   type?: string;
   markerStart?: EdgeMarkerType;
   markerEnd?: EdgeMarkerType;
-  data?: {kind?: 'line'};
+  data?: {kind?: 'line'; locked?: boolean};
   reconnectable?: boolean;
 }
 
