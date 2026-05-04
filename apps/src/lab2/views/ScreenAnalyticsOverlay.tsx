@@ -1,26 +1,23 @@
-// ScreenAnalyticsOverlay
+// ScreenAnalyticsOverlay -- viewport-fit diagnostic overlay.
 //
-// Floating diagnostic overlay enabled by `show-screen-analytics=true` in the
-// URL query string.  Reports the share of real visitors (from a Statsig sample
-// of inner-window dimensions) whose viewport is no larger than the current
-// window in *both* axes.  Useful for sizing decisions when laying out new lab
-// UI: drag the window down to a target size and read off the fraction of
-// users that fit.
-//
-// Three age-band datasets are bundled (K-5, 6-8, 9-12); 6-8 is the default.
-// Counts are summed across days because what matters is the distribution of
-// viewport sizes, not when they were observed.  Each sample was collected
-// 2026-02-23..2026-03-15 from the corresponding Statsig segment.
+// Enabled by `?show-screen-analytics=true`.  Reports the fraction of sampled
+// users whose innerWidth and innerHeight are both <= the current window's.
+// Three samples are bundled, one per age band (K-5, 6-8, 9-12); 6-8 default.
+// Each sample is a Statsig export from 2026-02-23..2026-03-15, summed across
+// days -- the distribution of sizes is what matters, not the date.
 
+import SegmentedButtons from '@code-dot-org/component-library/segmentedButtons';
+import {Typography} from '@mui/material';
 import React, {useEffect, useState} from 'react';
 
 import moduleStyles from './ScreenAnalyticsOverlay.module.scss';
 
+type DatasetId = 'k5' | '68' | '912';
 type Sample = ReadonlyArray<readonly [number, number, number]>;
 
-// [innerWidth, innerHeight, userCount].
+// rows are [width, height, users].
 const DATASETS: ReadonlyArray<{
-  id: 'k5' | '68' | '912';
+  id: DatasetId;
   label: string;
   sample: Sample;
 }> = [
@@ -194,7 +191,7 @@ const DATASETS: ReadonlyArray<{
   },
 ] as const;
 
-const DEFAULT_DATASET = '68';
+const DEFAULT_DATASET: DatasetId = '68';
 
 function totalUsers(sample: Sample): number {
   return sample.reduce((s, [, , n]) => s + n, 0);
@@ -218,8 +215,7 @@ function isEnabled(): boolean {
 
 const ScreenAnalyticsOverlay: React.FC = () => {
   const [enabled] = useState(isEnabled);
-  const [datasetId, setDatasetId] =
-    useState<(typeof DATASETS)[number]['id']>(DEFAULT_DATASET);
+  const [datasetId, setDatasetId] = useState<DatasetId>(DEFAULT_DATASET);
   const [size, setSize] = useState(() => ({
     w: typeof window === 'undefined' ? 0 : window.innerWidth,
     h: typeof window === 'undefined' ? 0 : window.innerHeight,
@@ -241,30 +237,23 @@ const ScreenAnalyticsOverlay: React.FC = () => {
   const pct = (100 * fits) / total;
 
   return (
-    <div className={moduleStyles.overlay} aria-hidden="true">
+    <div className={moduleStyles.overlay} data-theme="Dark" aria-hidden="true">
       <div className={moduleStyles.toggles}>
-        {DATASETS.map(d => (
-          <button
-            key={d.id}
-            type="button"
-            className={
-              d.id === datasetId
-                ? moduleStyles.toggleActive
-                : moduleStyles.toggle
-            }
-            onClick={() => setDatasetId(d.id)}
-          >
-            {d.label}
-          </button>
-        ))}
+        <SegmentedButtons
+          color="strong"
+          size="xs"
+          selectedButtonValue={datasetId}
+          onChange={value => setDatasetId(value as DatasetId)}
+          buttons={DATASETS.map(d => ({label: d.label, value: d.id}))}
+        />
       </div>
-      <div className={moduleStyles.percent}>{pct.toFixed(1)}% fit</div>
-      <div>
+      <Typography variant="h4">{pct.toFixed(1)}% fit</Typography>
+      <Typography variant="body4">
         {size.w} &times; {size.h}
-      </div>
-      <div>
+      </Typography>
+      <Typography variant="body4">
         {fits.toLocaleString()} / {total.toLocaleString()} users
-      </div>
+      </Typography>
     </div>
   );
 };
