@@ -11,6 +11,7 @@ interface ActionsGroupProps {
   onLock?: () => void;
   onBringToFront?: () => void;
   onSendToBack?: () => void;
+  onDuplicate?: () => void;
 }
 
 export default function ActionsGroup({
@@ -18,6 +19,7 @@ export default function ActionsGroup({
   onLock,
   onBringToFront,
   onSendToBack,
+  onDuplicate,
 }: ActionsGroupProps) {
   const isStartMode = getIsStartMode();
 
@@ -31,6 +33,18 @@ export default function ActionsGroup({
         Actions
       </Typography>
       <div className={styles.fontSizeButtons}>
+        {onDuplicate && (
+          <Tooltip title="Duplicate" placement="top">
+            <IconButton
+              size="small"
+              className={styles.fontSizeButton}
+              aria-label="Duplicate"
+              onClick={onDuplicate}
+            >
+              <FontAwesomeV6Icon iconName="copy" />
+            </IconButton>
+          </Tooltip>
+        )}
         {onDelete && (
           <Tooltip title="Delete" placement="top">
             <IconButton
