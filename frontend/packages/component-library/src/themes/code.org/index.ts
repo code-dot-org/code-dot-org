@@ -1,5 +1,7 @@
 import {createTheme} from '@mui/material';
 
+export type * from './muiAugmentation';
+
 import {
   NOTO_FONT,
   BARLOW_FONT,
