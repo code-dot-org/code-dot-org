@@ -4,7 +4,10 @@ import React, {memo, useCallback, useMemo, useRef, useState} from 'react';
 import {DEFAULT_ROTATION, MIN_NODE_HEIGHT, MIN_NODE_WIDTH} from '../constants';
 import {useSketchLabReadOnly} from '../context';
 import ShapeNodeToolbar from '../elementToolbars/ShapeNodeToolbar';
-import {fontSizePx} from '../elementToolbars/toolbarPalettes';
+import {
+  fontSizePx,
+  DEFAULT_TEXT_ALIGN,
+} from '../elementToolbars/toolbarPalettes';
 import {ShapeNodeType, ShapeType} from '../types';
 
 import ConnectionHandles from './ConnectionHandles';
@@ -161,7 +164,7 @@ function ShapeNode({id, data, selected}: NodeProps<ShapeNodeType>) {
       style.color = data.fontColor;
     }
     style.fontSize = fontSizePx(data.fontSize);
-    style.textAlign = data.textAlign ?? 'center';
+    style.textAlign = data.textAlign ?? DEFAULT_TEXT_ALIGN;
     return style;
   }, [data.fontColor, data.fontSize, data.textAlign]);
 
