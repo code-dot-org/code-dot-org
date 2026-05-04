@@ -37,7 +37,9 @@ describe('CustomDialog Component', () => {
   });
 
   it('should warn if the description element with id="dsco-dialog-description" is not provided', () => {
-    const consoleWarnSpy = vi.spyOn(console, 'warn').mockImplementation();
+    const consoleWarnSpy = vi
+      .spyOn(console, 'warn')
+      .mockImplementation(() => {});
     render(
       <CustomDialog {...defaultProps}>
         <div />
