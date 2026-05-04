@@ -10,6 +10,8 @@ import SegmentedButtons from '@code-dot-org/component-library/segmentedButtons';
 import {Typography} from '@mui/material';
 import React, {useEffect, useState} from 'react';
 
+import {queryParams} from '@cdo/apps/code-studio/utils';
+
 import moduleStyles from './ScreenAnalyticsOverlay.module.scss';
 
 type DatasetId = 'k5' | '68' | '912';
@@ -206,11 +208,7 @@ function fitCount(sample: Sample, width: number, height: number): number {
 }
 
 function isEnabled(): boolean {
-  if (typeof window === 'undefined') return false;
-  return (
-    new URLSearchParams(window.location.search).get('show-screen-analytics') ===
-    'true'
-  );
+  return queryParams('show-screen-analytics') === 'true';
 }
 
 const ScreenAnalyticsOverlay: React.FC = () => {
