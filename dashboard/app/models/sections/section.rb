@@ -24,7 +24,6 @@
 #  properties           :text(65535)
 #  participant_type     :string(255)      default("student"), not null
 #  lti_integration_id   :bigint
-#  ai_tutor_enabled     :boolean          default(FALSE)
 #  avatar_color         :integer
 #  avatar_emoji         :integer
 #  ai_chat_access_level :string(255)      default("disabled")
@@ -440,7 +439,6 @@ class Section < ApplicationRecord
         participant_type: participant_type,
         sectionInstructors: serialized_section_instructors,
         sync_enabled: Policies::Lti.roster_sync_enabled?(teacher),
-        ai_tutor_enabled: ai_tutor_enabled,
         avatar_color: avatar_color,
         avatar_emoji: avatar_emoji,
         at_risk_age_gated_date: at_risk_age_gated_student&.at_risk_age_gated_date,
@@ -573,7 +571,6 @@ class Section < ApplicationRecord
           post_milestone_disabled: !!script && !Gatekeeper.allows('postMilestone', where: {script_name: script.name}, default: true),
           code_review_expires_at: code_review_expires_at,
           sync_enabled: Policies::Lti.roster_sync_enabled?(teacher),
-          ai_tutor_enabled: ai_tutor_enabled,
           at_risk_age_gated_date: at_risk_student&.at_risk_age_gated_date,
           at_risk_age_gated_us_state: at_risk_student&.us_state,
           avatar_color: avatar_color,

@@ -4,7 +4,7 @@ import {
   LevelAichatSettings,
   ModelCardInfo,
   Visibility,
-} from '@cdo/apps/aichat/types';
+} from '@cdo/apps/aichatLab/types';
 
 export const MIN_TEMPERATURE = 0.1;
 export const MAX_TEMPERATURE = 1;
@@ -113,16 +113,6 @@ export const DEFAULT_LEVEL_AICHAT_SETTINGS: LevelAichatSettings = {
   levelSystemPrompt: '',
   hidePresentationPanel: false,
   availableModelIds: [modelDescriptions[0].id],
-};
-
-export const AI_CUSTOMIZATIONS_LABELS: {
-  [key in keyof AiCustomizations]: string;
-} = {
-  selectedModelId: 'Selected model',
-  temperature: 'Temperature',
-  systemPrompt: 'System prompt',
-  retrievalContexts: 'Retrieval',
-  modelCardInfo: 'Model card information',
 };
 
 // Model customization fields that are checked for toxicity before updating.

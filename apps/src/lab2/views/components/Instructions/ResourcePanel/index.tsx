@@ -8,9 +8,10 @@ import classNames from 'classnames';
 import React, {useEffect, useMemo, useState, useCallback, useRef} from 'react';
 
 import {shouldShowAiTutor} from '@cdo/apps/aichat/helpers/aiChatAccess';
+import {useAiChatDisabledState} from '@cdo/apps/aichat/hooks/useAiChatDisabledState';
 import {ChatButtonData, ResponseSchemaSettings} from '@cdo/apps/aichat/types';
 import AiChatHeaderButtons from '@cdo/apps/aichat/views/aiChatHeaderButtons/AiChatHeaderButtons';
-import {useAiChatDisabledState} from '@cdo/apps/lab2/hooks/useAiChatDisabledState';
+import type {JsonVideoFileMetadata} from '@cdo/apps/jsonVideo/jsonVideoPrompt';
 import usePanelPosition from '@cdo/apps/lab2/hooks/usePanelPosition';
 import lab2I18n from '@cdo/apps/lab2/locale';
 import {
@@ -47,6 +48,7 @@ import NavigationArea from '../NavigationArea';
 import AiTutorChatWithInstructionDrawer from './AiTutorChatWithInstructionsDrawer/AiTutorChatWithInstructionDrawer';
 import BackpackHeaderButtons from './Backpack/BackpackHeaderButtons';
 import BackpackPanel from './Backpack/BackpackPanel';
+import type {AddFileHandler} from './Backpack/types';
 import {
   resourcePanelInstructionsElementId,
   resourcePanelTabsElementId,
@@ -100,6 +102,10 @@ export interface BackpackProps {
     ) => Promise<void>;
   };
   supportedFileTypes: string[];
+  /** Custom tooltip text to display for the Add File button. */
+  addFileTooltipText?: string;
+  /** Alternative file handler that allows labs to control how files are added. If provided, the other callbacks will not be used. */
+  addFileHandler?: AddFileHandler;
 }
 
 const tabInfo: {[key in Tabs]: {title: string; icon: string}} = {
@@ -142,7 +148,7 @@ type ResourcePanelProps = InstructionsProps & {
   styleNavigationAsBubble?: boolean;
   aiTutorSystemPrompt?: string;
   aiTutorResponseSchemaSettings?: ResponseSchemaSettings;
-  enableTutorVideos?: boolean;
+  tutorVideos?: JsonVideoFileMetadata[];
   documentationUrl?: string;
   /** Only display the sidebar and hide all tabs. */
   sidebarOnly?: boolean;
@@ -174,7 +180,7 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
   styleNavigationAsBubble = false,
   aiTutorSystemPrompt,
   aiTutorResponseSchemaSettings,
-  enableTutorVideos,
+  tutorVideos,
   documentationUrl,
   sidebarOnly = false,
   backpackProps,
@@ -241,12 +247,11 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
     tutorLevel: levelProperties.aiTutorAvailable,
     aiChatAccessLevel: aiChatAccessLevel,
   });
-  const {disabled: aiTutorDisabled, disabledMessage: aiTutorDisabledMessage} =
-    useAiChatDisabledState({
-      appName,
-      isPredictLevel: !!isPredictLevel,
-      hasSubmittedPredictResponse,
-    });
+  const aiChatDisabledState = useAiChatDisabledState({
+    appName,
+    isPredictLevel: !!isPredictLevel,
+    hasSubmittedPredictResponse,
+  });
 
   const showBackpack = backpackProps && !isPermanentlyReadOnly;
   useResourcePanelTours({
@@ -299,9 +304,8 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
         aiTutorChatButtonData,
         aiTutorSystemPrompt,
         aiTutorResponseSchemaSettings,
-        enableTutorVideos,
-        disabled: aiTutorDisabled,
-        disabledMessage: aiTutorDisabledMessage,
+        tutorVideos,
+        disabledState: aiChatDisabledState,
       };
       if (!hasInstructionsDrawer || !levelProperties.longInstructions) {
         tabMap[Tabs.AiTutor] = <AiTutorChat {...aiTutorProps} />;
@@ -403,9 +407,8 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
     aiTutorChatButtonData,
     aiTutorSystemPrompt,
     aiTutorResponseSchemaSettings,
-    enableTutorVideos,
-    aiTutorDisabled,
-    aiTutorDisabledMessage,
+    tutorVideos,
+    aiChatDisabledState,
     hasInstructionsDrawer,
     isPredictLevel,
     selectedVersion,

@@ -7,7 +7,7 @@
   "user_id": 18603,
   "properties": {
     "encrypted": "false",
-    "long_instructions": "##Descriptive Writing Co-Pilot\r\n\r\nThis chat will help make your descriptive writing come to life!\r\n\r\n#### Task:\r\n\r\n* Type a sentence into the AI Chat that seems plain or boring.\r\n\r\n_**For example:**_\r\n_The sky was really blue today_ ",
+    "long_instructions": "## Write Better Descriptions\r\n\r\nThis chatbot will help make your descriptive writing come to life.\r\n\r\n1. Choose one the purposes for using AI that you identified.\r\n\r\n2. Test this chatbot to see how well it helps with that purpose.\r\n\r\n   **Prompt example:** The sky was really blue today.\r\n\r\n3. Judge what AI did well and what it did not do well.\r\n",
     "offer_browser_tts": "false",
     "submittable": "false",
     "disable_edit_run_for_submission": "false",
@@ -45,11 +45,11 @@
       ],
       "multimodalEnabled": true
     },
-    "display_name": "Descriptive Writing",
-    "bubble_choice_description": "How can AI assist with creating amazing descriptions?",
-    "thumbnail_url": "https://images.code.org/413da1945f3333c6538ee374595e84ef-descriptive_writing_titlecard.jpg",
+    "display_name": "Write Better Descriptions",
+    "bubble_choice_description": "This chatbot will help make your descriptive writing come to life.",
+    "thumbnail_url": "https://images.code.org/63c1d7f3546da5092b24b61080d06b0f-create-your-own_titlecard.jpg",
     "name_suffix": "_2026"
   },
-  "audit_log": "[{\"changed_at\":\"2026-04-20T18:56:28.070+00:00\",\"changed\":[\"cloned from \\\"thinking_critically_lesson4_level2c_2026\\\"\"],\"cloned_from\":\"thinking_critically_lesson4_level2c_2026\"},{\"changed_at\":\"2026-04-20 19:30:05 +0000\",\"changed\":[\"long_instructions\",\"display_name\",\"bubble_choice_description\",\"thumbnail_url\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-20 19:59:46 +0000\",\"changed\":[\"long_instructions\",\"aichat_settings\",\"display_name\",\"bubble_choice_description\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-20 20:04:24 +0000\",\"changed\":[\"project_template_level_name\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2026-04-20T18:56:28.070+00:00\",\"changed\":[\"cloned from \\\"thinking_critically_lesson4_level2c_2026\\\"\"],\"cloned_from\":\"thinking_critically_lesson4_level2c_2026\"},{\"changed_at\":\"2026-04-20 19:30:05 +0000\",\"changed\":[\"long_instructions\",\"display_name\",\"bubble_choice_description\",\"thumbnail_url\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-20 19:59:46 +0000\",\"changed\":[\"long_instructions\",\"aichat_settings\",\"display_name\",\"bubble_choice_description\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-20 20:04:24 +0000\",\"changed\":[\"project_template_level_name\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-21 16:47:32 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-29 14:12:32 +0000\",\"changed\":[\"display_name\",\"bubble_choice_description\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-29 14:14:20 +0000\",\"changed\":[\"thumbnail_url\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-29 18:11:21 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-05-01 15:59:45 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2026-05-01 16:31:07 +0000\",\"changed\":[\"long_instructions\",\"display_name\",\"bubble_choice_description\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
 }]]></config>
 </Aichat>

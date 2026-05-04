@@ -71,6 +71,11 @@ const getAnswerJsonSchema = (): JsonObjectSchema => {
         description:
           "1-2 concrete example(s) of the code or plain-text answer(s) to the student's question. Use markdown.",
       },
+      videoUrl: {
+        type: 'string',
+        description:
+          'Optional. URL of a single tutorial video to share with the student, copied exactly from the available videos list. Omit if no video is relevant.',
+      },
     },
     // We return answerType and goal but do not show them to the student.
     // These are used to help guide the AI's response.
@@ -85,6 +90,7 @@ const getAnswerJsonSchema = (): JsonObjectSchema => {
       'example',
       'nextSteps',
       'questions',
+      'videoUrl',
     ],
     additionalProperties: false,
   };
@@ -157,6 +163,9 @@ export const formatCopyPasteResponse = (response: any): string => {
   formattedResponse += formatSection('Example', response.example);
   formattedResponse += formatSection('Next Steps', response.nextSteps);
   formattedResponse += formatSection('Questions', response.questions);
+  if (response.videoUrl) {
+    formattedResponse += `\n[Watch this video](${response.videoUrl})\n`;
+  }
 
   return formattedResponse;
 };
@@ -178,8 +187,11 @@ export const formatAcceptRejectResponse = (
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   response: any
 ): AcceptRejectFormattedResponse => {
+  const explanation =
+    formatSection('Explanation', response.explanation) +
+    (response.videoUrl ? `\n[Watch this video](${response.videoUrl})\n` : '');
   return {
-    explanation: formatSection('Explanation', response.explanation),
+    explanation,
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     code: response.code.map((codeFile: any) => ({
       name: codeFile.filename,

@@ -1,25 +1,26 @@
 import {createSlice, PayloadAction} from '@reduxjs/toolkit';
 
 import {
-  DEFAULT_VISIBILITIES,
-  EMPTY_AI_CUSTOMIZATIONS,
-} from '@cdo/apps/aichatLab/views/modelCustomization/constants';
-import {validateModelId} from '@cdo/apps/aichatLab/views/modelCustomization/utils';
-import {registerReducers} from '@cdo/apps/redux';
-import {AiChatClientTypes} from '@cdo/generated-scripts/sharedConstants';
-
-import {
-  ModalTypes,
-  RESET_CONVERSATION_CUSTOMIZATION_UPDATES,
-} from '../constants';
-import {
   AiCustomizations,
-  ChatEvent,
   LevelAichatSettings,
+  ModalTypes,
   ModelCardInfo,
+  SaveError,
   SaveType,
   ViewMode,
   Visibility,
+} from '@cdo/apps/aichatLab/types';
+import {validateModelId} from '@cdo/apps/aichatLab/utils';
+import {
+  DEFAULT_VISIBILITIES,
+  EMPTY_AI_CUSTOMIZATIONS,
+} from '@cdo/apps/aichatLab/views/modelCustomization/constants';
+import {registerReducers} from '@cdo/apps/redux';
+import {AiChatClientTypes} from '@cdo/generated-scripts/sharedConstants';
+
+import {RESET_CONVERSATION_CUSTOMIZATION_UPDATES} from '../constants';
+import {
+  ChatEvent,
   isModelUpdate,
   isNotification,
   isUserActionEvent,
@@ -27,13 +28,13 @@ import {
   ServerChatEvent,
   isCompletedChatMessage,
   ChatAsset,
-  SaveError,
   AiChatClientType,
   WorkspaceTeacherViewTab,
   UserAddedSelectionContextItem,
   ChatMessage,
   isPendingOrCompletedChatMessage,
   CompletedChatMessage,
+  UploadStatus,
 } from '../types';
 
 import {AichatState} from './state';
@@ -284,7 +285,12 @@ const aichatSlice = createSlice({
     },
     addStagedFile(
       state,
-      action: PayloadAction<{key: string; asset: ChatAsset; loaded?: boolean}>
+      action: PayloadAction<{
+        key: string;
+        asset: ChatAsset;
+        loaded?: boolean;
+        timestamp?: string;
+      }>
     ) {
       state.stagedFiles.push({
         ...action.payload,
@@ -295,23 +301,22 @@ const aichatSlice = createSlice({
       state,
       action: PayloadAction<{
         key: string;
-        status:
-          | 'uploaded'
-          | 'uploadFailed'
-          | 'sizeLimitExceeded'
-          | 'imageFileFlagged';
+        status: UploadStatus;
+        hideAlert?: boolean;
       }>
     ) {
-      const {key, status} = action.payload;
+      const {key, status, hideAlert} = action.payload;
       if (status === 'uploaded') {
         const fileIndex = state.stagedFiles.findIndex(file => file.key === key);
         if (fileIndex !== -1) {
           state.stagedFiles[fileIndex].status = 'uploaded';
         }
       } else {
-        // Remove from staged files and set alert
+        // Remove from staged files and set alert (unless hidden)
         state.stagedFiles = state.stagedFiles.filter(file => file.key !== key);
-        state.stagedFilesAlert = status;
+        if (!hideAlert) {
+          state.stagedFilesAlert = status;
+        }
       }
     },
     stagedFilesLimitExceeded(state) {

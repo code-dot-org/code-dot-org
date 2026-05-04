@@ -1,7 +1,7 @@
-import {defineConfig} from 'vite';
 import react from '@vitejs/plugin-react';
-import {externalizeDeps} from 'vite-plugin-externalize-deps';
+import {defineConfig} from 'vite';
 import dts from 'vite-plugin-dts';
+import {externalizeDeps} from 'vite-plugin-externalize-deps';
 
 // https://vite.dev/config/
 export default defineConfig({

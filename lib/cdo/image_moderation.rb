@@ -1,5 +1,7 @@
 require 'cdo/azure_ai_content_safety'
 require 'cdo/imagemagick_guard'
+require 'cdo/shared_constants'
+
 require 'honeybadger/ruby'
 require 'mini_magick'
 require 'stringio'

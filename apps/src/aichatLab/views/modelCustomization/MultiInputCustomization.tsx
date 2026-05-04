@@ -2,7 +2,7 @@ import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon
 import {Typography, Button as MuiButton} from '@mui/material';
 import React, {useState, useCallback} from 'react';
 
-import {Visibility} from '@cdo/apps/aichat/types';
+import {Visibility} from '@cdo/apps/aichatLab/types';
 
 import FieldLabel from './FieldLabel';
 import {isDisabled} from './utils';
@@ -80,7 +80,9 @@ const MultiInputCustomization: React.FunctionComponent<{
         </>
       )}
       <div className={modelCustomizationStyles.addedItemsHeaderContainer}>
-        <Typography variant="strong">{'Added'}</Typography>
+        <Typography variant="label2" component="h3">
+          {'Added'}
+        </Typography>
       </div>
       {addedItems.map((message, index) => {
         return (

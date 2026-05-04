@@ -25,9 +25,32 @@
       "codeEditableAfterSubmit": false
     },
     "long_instructions": "##Mode: Suggest\r\n\r\n**Use Case**: This is a sample level to utilize in order to use the AI Chat to generate pages using different modes.",
-    "name_suffix": "_2026"
+    "name_suffix": "_2026",
+    "start_sources": {
+      "folders": {
+      },
+      "files": {
+        "1": {
+          "id": "1",
+          "name": "index.html",
+          "contents": "<!DOCTYPE html>\n<html>\n  <body>\n    Content goes here!\n  </body>\n</html>\n  ",
+          "active": false,
+          "folderId": "0"
+        },
+        "2": {
+          "id": "2",
+          "name": "planning.md",
+          "contents": "Project Overview\n\nWhat is the theme of your magazine? Provide a short description of its purpose or focus.\n\nAnswer:\n\n---\n\nMain Interaction: What will the user do? What should happen as a result?\n\nAnswer:\n",
+          "folderId": "0",
+          "active": true
+        }
+      },
+      "openFiles": [
+        "2"
+      ]
+    }
   },
   "published": true,
-  "audit_log": "[{\"changed_at\":\"2026-02-24T18:14:10.634+00:00\",\"changed\":[\"cloned from \\\"ai-generated-design-lesson13-weblab-template-test-2025\\\"\"],\"cloned_from\":\"ai-generated-design-lesson13-weblab-template-test-2025\"}]"
+  "audit_log": "[{\"changed_at\":\"2026-02-24T18:14:10.634+00:00\",\"changed\":[\"cloned from \\\"ai-generated-design-lesson13-weblab-template-test-2025\\\"\"],\"cloned_from\":\"ai-generated-design-lesson13-weblab-template-test-2025\"},{\"changed_at\":\"2026-04-21 21:25:45 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2026-04-21 21:25:48 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2026-04-21 21:48:29 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
 }]]></config>
 </Weblab2>

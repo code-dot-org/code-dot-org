@@ -1,14 +1,17 @@
-import {ModalTypes} from '../constants';
 import {
   AiCustomizations,
+  FieldVisibilities,
+  ModalTypes,
+  SaveError,
+  SaveType,
+  ViewMode,
+} from '@cdo/apps/aichatLab/types';
+
+import {
   AiChatClientType,
   ChatAsset,
   ChatEvent,
-  FieldVisibilities,
-  SaveError,
-  SaveType,
   ServerChatEvent,
-  ViewMode,
   WorkspaceTeacherViewTab,
   UserAddedSelectionContext,
 } from '../types';
@@ -38,6 +41,7 @@ export interface AichatState {
     key: string;
     asset: ChatAsset;
     status: 'uploading' | 'uploaded';
+    timestamp?: string;
   }[];
   // Alert to display for staged files if something went wrong.
   stagedFilesAlert:

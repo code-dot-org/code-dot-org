@@ -4,6 +4,258 @@
     {
       "elements": [
         {
+          "type": "panel",
+          "name": "ap_high_school_courses_panel",
+          "visibleIf": "{survey_variable_name_csp}='csp'",
+          "elements": [
+            {
+              "type": "radiogroup",
+              "name": "csp_teach_plans_next_sy",
+              "title": "Are you planning to teach CS Principles (CSP) again next school year?",
+              "choices": [
+                {
+                  "value": "yes",
+                  "text": "Yes"
+                },
+                {
+                  "value": "no",
+                  "text": "No"
+                },
+                {
+                  "value": "not_sure",
+                  "text": "Not sure"
+                }
+              ]
+            },
+            {
+              "type": "checkbox",
+              "name": "csp_teach_plans_next_sy_reasons_no",
+              "visibleIf": "{csp_teach_plans_next_sy} anyof ['no', 'not_sure']",
+              "title": "Please select the reason(s) why you don't plan to teach CS Principles (CSP) next school year (or are unsure about continuing to teach it)",
+              "description": "(Select all that apply)",
+              "choices": [
+                {
+                  "value": "not_teaching_still_taught_at_school",
+                  "text": "Another teacher will be teaching the course"
+                },
+                {
+                  "value": "lack_student_enrollment",
+                  "text": "There is not enough student enrollment to continue teaching the course"
+                },
+                {
+                  "value": "lack_admin_interest",
+                  "text": "There is not enough administrator support to continue teaching the course"
+                },
+                {
+                  "value": "teach_other_content_ai",
+                  "text": "I want to teach other content that is more focused on AI"
+                },
+                {
+                  "value": "teach_other_content_not_ai",
+                  "text": "I want to teach other content, not related to AI"
+                },
+                {
+                  "value": "scheduling",
+                  "text": "Given scheduling constraints, the course is no longer offered"
+                },
+                {
+                  "value": "cs_no_longer_relevant",
+                  "text": "Learning computer science is no longer a priority given what AI is able to do"
+                }
+              ],
+              "hasOther": true
+            }
+          ]
+        },
+        {
+          "type": "panel",
+          "name": "cdo_implementation_panel",
+          "elements": [
+            {
+              "type": "checkbox",
+              "name": "cdo_method_implementation",
+              "title": "How do you incorporate Code.org into your classroom?",
+              "description": "(Please select all that apply)",
+              "choices": [
+                {
+                  "value": "section_assignment_tracking",
+                  "text": "I set up a section, assign Code.org content to my students, and track their progress"
+                },
+                {
+                  "value": "section_assignment",
+                  "text": "I set up a section and use it to assign Code.org curriculum, but do not track progress"
+                },
+                {
+                  "value": "teaching_resources_for_activities",
+                  "text": "I use Code.org teaching resources (lesson plan, slides, etc.) to lead classroom activities"
+                },
+                {
+                  "value": "students_selfpaced",
+                  "text": "My students find the Code.org activities they want to engage with, and they engage with them independently"
+                },
+                {
+                  "value": "cdo_labs",
+                  "text": "We use Code.org labs to create projects (labs like AppLab, GameLab, MusicLab, SpriteLab, WebLab, etc.)"
+                },
+                {
+                  "value": "cdo_widgets",
+                  "text": "We use Code.org widgets to support learning on specific topics (widgets like NetSim/Internet Simulator, Cryptography, Pixelation, etc.)"
+                }
+              ],
+              "hasOther": true
+            },
+            {
+              "type": "checkbox",
+              "name": "cdo_not_using_sections",
+              "visibleIf": "{cdo_method_implementation} notcontains 'section_assignment_tracking' and {cdo_method_implementation} notcontains 'section_assignment'",
+              "title": "If you are not using a section - why not?",
+              "description": "(Please select all that apply)",
+              "choices": [
+                {
+                  "value": "section_what_is_it",
+                  "text": "What is a section?"
+                },
+                {
+                  "value": "section_dont_understand",
+                  "text": "I don't understand how to use sections"
+                },
+                {
+                  "value": "section_unnecessary",
+                  "text": "I don't feel sections are necessary for how I use Code.org in my classroom"
+                },
+                {
+                  "value": "section_not_valuable",
+                  "text": "I don't see the value or usefulness of setting up a section"
+                }
+              ],
+              "hasOther": true
+            }
+          ]
+        },
+        {
+          "type": "checkbox",
+          "name": "cdo_method_implementation",
+          "title": "How do you incorporate Code.org into your classroom?",
+          "description": "(Please select all that apply)",
+          "choices": [
+            {
+              "value": "section_assignment_tracking",
+              "text": "I set up a section, assign Code.org content to my students, and track their progress"
+            },
+            {
+              "value": "section_assignment",
+              "text": "I set up a section and use it to assign Code.org curriculum, but do not track progress"
+            },
+            {
+              "value": "teaching_resources_for_activities",
+              "text": "I use Code.org teaching resources (lesson plan, slides, etc.) to lead classroom activities"
+            },
+            {
+              "value": "students_selfpaced",
+              "text": "My students find the Code.org activities they want to engage with, and they engage with them independently"
+            },
+            {
+              "value": "cdo_labs",
+              "text": "We use Code.org labs to create projects (labs like AppLab, GameLab, MusicLab, SpriteLab, WebLab, etc.)"
+            },
+            {
+              "value": "cdo_widgets",
+              "text": "We use Code.org widgets to support learning on specific topics (widgets like NetSim/Internet Simulator, Cryptography, Pixelation, etc.)"
+            }
+          ],
+          "hasOther": true
+        },
+        {
+          "type": "checkbox",
+          "name": "cdo_not_using_sections",
+          "title": "If you are not using a section - why not?",
+          "description": "(Please select all that apply)",
+          "visibleIf": "{cdo_method_implementation} noneof ['section_assignment_tracking', 'section_assignment']",
+          "choices": [
+            {
+              "value": "section_what_is_it",
+              "text": "What is a section?"
+            },
+            {
+              "value": "section_dont_understand",
+              "text": "I don't understand how to use sections"
+            },
+            {
+              "value": "section_unnecessary",
+              "text": "I don't feel like it's necessary for how I use Code.org in my classroom"
+            },
+            {
+              "value": "section_not_valuable",
+              "text": "I don't see the value or usefulness of setting up a section"
+            }
+          ],
+          "hasOther": true
+        },
+        {
+          "type": "panel",
+          "name": "csa_panel",
+          "visibleIf": "{survey_variable_name_csa}='csa'",
+          "elements": [
+            {
+              "type": "radiogroup",
+              "name": "csa_teach_plans_next_sy",
+              "title": "Are you planning to teach Computer Science A (CSA) again next school year?",
+              "choices": [
+                {
+                  "value": "yes",
+                  "text": "Yes"
+                },
+                {
+                  "value": "no",
+                  "text": "No"
+                },
+                {
+                  "value": "not_sure",
+                  "text": "Not sure"
+                }
+              ]
+            },
+            {
+              "type": "checkbox",
+              "name": "csa_teach_plans_next_sy_reasons_no",
+              "visibleIf": "{csa_teach_plans_next_sy} anyof ['no', 'not_sure']",
+              "title": "Please select the reason(s) why you don't plan to teach Computer Science A (CSA) next school year (or are unsure about continuing to teach it)",
+              "description": "(Select all that apply)",
+              "choices": [
+                {
+                  "value": "not_teaching_still_taught_at_school",
+                  "text": "Another teacher will be teaching the course"
+                },
+                {
+                  "value": "lack_student_enrollment",
+                  "text": "There is not enough student enrollment to continue teaching the course"
+                },
+                {
+                  "value": "lack_admin_interest",
+                  "text": "There is not enough administrator support to continue teaching the course"
+                },
+                {
+                  "value": "teach_other_content_ai",
+                  "text": "I want to teach other content that is more focused on AI"
+                },
+                {
+                  "value": "teach_other_content_not_ai",
+                  "text": "I want to teach other content, not related to AI"
+                },
+                {
+                  "value": "scheduling",
+                  "text": "Given scheduling constraints, the course is no longer offered"
+                },
+                {
+                  "value": "cs_no_longer_relevant",
+                  "text": "Learning computer science is no longer a priority given what AI is able to do"
+                }
+              ],
+              "hasOther": true
+            }
+          ]
+        },
+        {
           "type": "checkbox",
           "name": "csd_improvement_areas",
           "title": "What are aspects of Code.org's CS Discoveries that could be improved and/or currently prevent you from teaching it?",
@@ -61,6 +313,11 @@
           "description": "(Please select all that apply)",
           "choices": [
             {
+              "value": "a_plus_college_ready",
+              "text": "A+ College Ready",
+              "natalia_comment": "NOTE: added 2026"
+            },
+            {
               "value": "ap_classroom",
               "text": "AP Classroom"
             },
@@ -79,6 +336,11 @@
             {
               "value": "codecademy",
               "text": "Codecademy"
+            },
+            {
+              "value": "code_combat",
+              "text": "Code Combat",
+              "natalia_comment": "NOTE: added 2026"
             },
             {
               "value": "code_hs",
@@ -121,6 +383,11 @@
               "text": "Kodable"
             },
             {
+              "value": "lego_education",
+              "text": "Lego Education / Lego Robotics / Lego Spike Prime",
+              "natalia_comment": "NOTE: added 2026"
+            },
+            {
               "value": "popfizz",
               "text": "Popfizz"
             },
@@ -139,6 +406,11 @@
             {
               "value": "tynker",
               "text": "Tynker"
+            },
+            {
+              "value": "wonder_workshop",
+              "text": "Wonder Workshop",
+              "natalia_comment": "NOTE: added 2026"
             }
           ],
           "hasOther": true
@@ -147,6 +419,7 @@
           "type": "checkbox",
           "name": "pl_interest_content",
           "title": "What additional professional development content would you like to see offered by Code.org?",
+          "description": "(Please select all that apply)",
           "choices": [
             {
               "value": "additional_cs_content",
@@ -183,6 +456,7 @@
           "type": "checkbox",
           "name": "pl_interest_format",
           "title": "What types of professional learning experiences could Code.org offer to support your growth as a computer science teacher?",
+          "description": "(Please select all that apply)",
           "choices": [
             {
               "value": "self_paced_pl",

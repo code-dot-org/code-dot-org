@@ -11,7 +11,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2026-04-10 20:47:58 UTC",
+    "serialized_at": "2026-04-21 19:48:32 UTC",
     "hide_within_course": false,
     "published_state": "in_development",
     "instruction_type": null,
@@ -43,8 +43,8 @@
       "has_lesson_plan": false,
       "relative_position": 1,
       "properties": {
-        "overview": "**You will:**\n* Consider the role of the teacher in a CS Discoveries classroom. \n\n\n**Suggested Time:** 5 minutes",
-        "student_overview": "**You will:**\n* Consider the role of the teacher in a CS Discoveries classroom. \n\n\n**Suggested Time:** 5 minutes"
+        "overview": "**You will:**\n* Consider the role of the teacher in a AI Discoveries classroom. \n\n\n**Suggested Time:** 5 minutes",
+        "student_overview": "**You will:**\n* Consider the role of the teacher in a AI Discoveries classroom. \n\n\n**Suggested Time:** 5 minutes"
       },
       "seeding_key": {
         "lesson.key": "Role of the Teacher",
@@ -54,14 +54,14 @@
     },
     {
       "key": "Learning CS Discoveries",
-      "name": "Learning CS Discoveries",
+      "name": "Learning AI Discoveries",
       "absolute_position": 2,
       "lockable": false,
       "has_lesson_plan": false,
       "relative_position": 2,
       "properties": {
-        "overview": "**You will:**\n\n* Learn about authentic CS practices that students will develop throughout the CS Discoveries course.\n\n**Suggested Time:** 20 minutes",
-        "student_overview": "**You will:**\n\n* Learn about authentic CS practices that students will develop throughout the CS Discoveries course.\n\n**Suggested Time:** 20 minutes"
+        "overview": "**You will:**\n\n* Learn about authentic computer science and AI practices that students will develop throughout the AI Discoveries course.\n\n**Suggested Time:** 20 minutes",
+        "student_overview": "**You will:**\n\n* Learn about authentic computer science and AI practices that students will develop throughout the AI Discoveries course.\n\n**Suggested Time:** 20 minutes"
       },
       "seeding_key": {
         "lesson.key": "Learning CS Discoveries",
@@ -71,7 +71,7 @@
     },
     {
       "key": "Teaching CS Discoveries",
-      "name": "Teaching CS Discoveries",
+      "name": "Teaching AI Discoveries",
       "absolute_position": 3,
       "lockable": false,
       "has_lesson_plan": false,
@@ -88,14 +88,14 @@
     },
     {
       "key": "Connect with the CS Community",
-      "name": "Connect with the CS Community",
+      "name": "Connect with the Computer Science and AI Community",
       "absolute_position": 4,
       "lockable": false,
       "has_lesson_plan": false,
       "relative_position": 4,
       "properties": {
-        "overview": "**You will**:\n\n* Learn about opportunities to connect with the broader CS community.\n\n**Suggested Time**: 10 minutes",
-        "student_overview": "**You will**:\n\n* Learn about opportunities to connect with the broader CS community.\n\n**Suggested Time**: 10 minutes"
+        "overview": "**You will**:\n\n* Learn about opportunities to connect with the broader computer science and AI community.\n\n**Suggested Time**: 10 minutes",
+        "student_overview": "**You will**:\n\n* Learn about opportunities to connect with the broader computer science and AI community.\n\n**Suggested Time**: 10 minutes"
       },
       "seeding_key": {
         "lesson.key": "Connect with the CS Community",
@@ -295,7 +295,7 @@
       "key": "9104e19c-2e44-4a01-a673-a4b77729a3c3",
       "position": 2,
       "properties": {
-        "progression_name": "Connect with the CS community"
+        "progression_name": "Connect with the Computer Science and AI community"
       },
       "seeding_key": {
         "activity_section.key": "9104e19c-2e44-4a01-a673-a4b77729a3c3",
@@ -915,7 +915,7 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Connect with the CS community"
+        "progression": "Connect with the Computer Science and AI community"
       },
       "bonus": false,
       "seeding_key": {
@@ -937,7 +937,7 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "progression": "Connect with the CS community"
+        "progression": "Connect with the Computer Science and AI community"
       },
       "bonus": false,
       "seeding_key": {
@@ -959,7 +959,7 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "progression": "Connect with the CS community"
+        "progression": "Connect with the Computer Science and AI community"
       },
       "bonus": false,
       "seeding_key": {
@@ -981,7 +981,7 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
-        "progression": "Connect with the CS community"
+        "progression": "Connect with the Computer Science and AI community"
       },
       "bonus": false,
       "seeding_key": {
@@ -1003,7 +1003,7 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
-        "progression": "Connect with the CS community"
+        "progression": "Connect with the Computer Science and AI community"
       },
       "bonus": false,
       "seeding_key": {
@@ -1468,6 +1468,9 @@
 
   ],
   "lessons_opportunity_standards": [
+
+  ],
+  "jit_pl_concepts_lessons": [
 
   ],
   "rubrics": [

@@ -4,9 +4,9 @@ description 'description here'
 
 markdown <<MARKDOWN
 # Chapter 1 Project
-<img src="https://images.code.org/5c7f5731f419113f89a84845e3da0d7c-image-1711664715459.25.12 PM.png" alt="A website with a resume for a user named Alana" width="300px" style="float:right; margin-left:20px;padding-right: 10px;">
+<img src="https://images.code.org/d360461271d0f8d230673bc48cf12ea2-image-1777324109530.07.07 PM.png" alt="A website with a resume for a user named Alana" width="300px" style="float:right; margin-left:20px;padding-right: 10px;">
 
-#### <a href="https://studio.code.org/s/csd2-2025/lessons/14" target="blank" rel="noopener noreferrer">Lesson Plan</a>
+#### <a href="https://studio.code.org/courses/ai-discoveries-2026/units/3/lessons/14" target="blank" rel="noopener noreferrer">Lesson Plan</a>
 
 #### Chapter 1 of the Web Development unit concludes with a multi-lesson project where students will use the skills they have learned throughout the unit to create and design a web page for a user. They will be able to choose from several different users with distinct needs to style their web page.
 
@@ -28,7 +28,7 @@ markdown <<MARKDOWN
 </div></details>
 <br>
 
-#### **Option 2** - Intermediate: Students add `div` tags, classes, and Flexbox to the webpage they styled for Lesson 10. Choose this option if your students are up for the challenge and you have the extra time (possibly 2 days) to allow students to shift their HTML code, iterating on their HTML to make their page look as their user requests.
+#### **Option 2 - Intermediate**: Students add `div` tags, classes, and Flexbox to the webpage they styled for Lesson 10. Choose this option if your students are up for the challenge and you have the extra time (possibly 2 days) to allow students to shift their HTML code, iterating on their HTML to make their page look as their user requests.
 
 <details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
     <summary style="font-size: 18px; font-weight: bold;">Option 2 Project Resources</summary>
@@ -40,7 +40,7 @@ markdown <<MARKDOWN
 </div></details>
 <br>
 
-#### **Option 3** - Challenging: Students create a webpage for a new user from scratch. Choose this option if you have at least 2-3 days to dedicate to this project and would like students to have the experience of building a webpage from beginning to end without breaks in between the process.
+#### **Option 3 - Challenging**: Students create a webpage for a new user from scratch. Choose this option if you have at least 2-3 days to dedicate to this project and would like students to have the experience of building a webpage from beginning to end without breaks in between the process.
 
 <details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
     <summary style="font-size: 18px; font-weight: bold;">Option 3 Project Resources</summary>
@@ -60,11 +60,11 @@ markdown <<MARKDOWN
 
 #### Click the images below to view the sample projects in a new tab.
 
-<div style="float: left; text-align:center;"><strong>Ken's Soccer Club</strong><br /><a href="https://studio.code.org/projects/weblab/6dmaYZIItR7ixewgOyztK5pq3dkbY6ta0aQ8mDrb7l0/view" target="blank" rel="noopener noreferrer"><img style="border-radius:10px; margin-right: 25px; margin-bottom:10px;" src="https://images.code.org/5db832f7c38ca16ace6faa4e8e422993-image-1711665052786.30.26 PM.png" width="280px"; alt="A web page for a soccer club"></a></div>
+<div style="float: left; text-align:center; font-size: 13pt;"><strong>Ken's Soccer Club Page</strong><br /><a href="https://studio.code.org/courses/ai-discoveries-2026/units/3/lessons/14/levels/1/sublevel/2?exemplar=true" target="blank" rel="noopener noreferrer"><img style="border-radius:10px; margin-right: 25px; margin-bottom:10px;" src="https://images.code.org/a7e17b8f1c10eedf5114940c01c8a74f-image-1777324081733.06.56 PM.png" width="280px"; alt="A web page for a soccer club"></a></div>
 
-<div style="float: left; text-align:center;"><strong>Denzel's Delights</strong><br /><a href="https://studio.code.org/projects/weblab/DV1U_Ywcb8w858vOTg2USHx9_1XYVU-31ZyHMpP5HrQ/view" target="blank" rel="noopener noreferrer"><img style="border-radius:10px; margin-right: 25px; margin-bottom:10px;" src="https://images.code.org/2bbfe0a5695f08ceb20d716fb63f6437-image-1711665079431.30.10 PM.png" width="250px" alt="A web page for recipes"></a></div>
+<div style="float: left; text-align:center; font-size: 13pt;"><strong>Angelina's Comic Books Page</strong><br /><a href="https://studio.code.org/courses/ai-discoveries-2026/units/3/lessons/14/levels/1/sublevel/1?exemplar=true" target="blank" rel="noopener noreferrer"><img style="border-radius:10px; margin-right: 25px; margin-bottom:10px;" src="https://images.code.org/afd73a08fb000d1fff9ab5a44ab0de86-image-1777324055416.06.27 PM.png" width="250px" alt="A web page for recipes"></a></div>
 
-<div style="float: left; text-align:center;"><strong>Alana's Resume</strong><br /><a href="https://studio.code.org/projects/weblab/zvk_bjQYjdQvtDBJZdXLa_IZygoZU57SGq1_GTGIkv8/view" target="blank" rel="noopener noreferrer"><img style="border-radius:10px; margin-right: 25px; margin-bottom:10px;" src="https://images.code.org/349aea0117223bfd4956095db7c8986b-image-1711665154547.29.51 PM.png" width="250px" alt="A web page for a resume"></a></div>
+<div style="float: left; text-align:center; font-size: 13pt;"><strong>Jamila's Wild Guardian Page</strong><br /><a href="https://studio.code.org/courses/ai-discoveries-2026/units/3/lessons/14/levels/1/sublevel/3?exemplar=true" target="blank" rel="noopener noreferrer"><img style="border-radius:10px; margin-bottom:10px;" src="https://images.code.org/d360461271d0f8d230673bc48cf12ea2-image-1777324109530.07.07 PM.png" width="250px" alt="A web page for a resume"></a></div>
 
 <div style="clear:both"/>
 MARKDOWN

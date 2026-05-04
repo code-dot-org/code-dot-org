@@ -1,32 +1,38 @@
 import TextField from '@code-dot-org/component-library/textField';
 import {Button as MuiButton} from '@mui/material';
-import {NodeResizer, useReactFlow} from '@xyflow/react';
-import React, {memo, useCallback, useEffect, useRef, useState} from 'react';
+import {NodeResizer, useReactFlow, type NodeProps} from '@xyflow/react';
+import React, {
+  memo,
+  useCallback,
+  useEffect,
+  useMemo,
+  useRef,
+  useState,
+} from 'react';
 
-import {SketchlabReactFlowNode} from '@cdo/apps/lab2/types';
-
-import {MIN_NODE_HEIGHT, MIN_NODE_WIDTH} from '../constants';
+import {DEFAULT_ROTATION, MIN_NODE_HEIGHT, MIN_NODE_WIDTH} from '../constants';
 import {useSketchLabReadOnly} from '../context';
+import ImageNodeToolbar from '../elementToolbars/ImageNodeToolbar';
+import {ImageNodeType} from '../types';
 
 import ConnectionHandles from './ConnectionHandles';
 
 import styles from './image-node.module.scss';
 
-interface ImageNodeProps {
-  id: string;
-  data: SketchlabReactFlowNode['data'];
-  selected: boolean;
-}
-
-function ImageNode({id, data, selected}: ImageNodeProps) {
+function ImageNode({id, data, selected}: NodeProps<ImageNodeType>) {
   const readOnly = useSketchLabReadOnly();
   const {updateNodeData} = useReactFlow();
   const [isEditingAlt, setIsEditingAlt] = useState(false);
   const [altValue, setAltValue] = useState('');
   const cancelledRef = useRef(false);
 
-  const src = (data.src as string) ?? '';
-  const altText = (data.altText as string) ?? '';
+  const {src, altText} = data;
+  const showHandles = data.showHandles !== false;
+  const rotation = data.rotation ?? DEFAULT_ROTATION;
+  const rotatableStyle: React.CSSProperties = useMemo(
+    () => ({transform: `rotate(${rotation}deg)`}),
+    [rotation]
+  );
 
   useEffect(() => {
     if (isEditingAlt) {
@@ -35,12 +41,12 @@ function ImageNode({id, data, selected}: ImageNodeProps) {
   }, [isEditingAlt, id]);
 
   const startEditingAlt = useCallback(() => {
-    if (readOnly) {
+    if (readOnly || data.locked) {
       return;
     }
     setAltValue(altText);
     setIsEditingAlt(true);
-  }, [readOnly, altText]);
+  }, [readOnly, altText, data.locked]);
 
   const commitAltEdit = useCallback(() => {
     if (cancelledRef.current) {
@@ -72,14 +78,24 @@ function ImageNode({id, data, selected}: ImageNodeProps) {
   return (
     <div className={styles.imageNode} aria-label={altText || 'Image node'}>
       <NodeResizer
-        isVisible={selected}
+        isVisible={selected && !data.locked}
         minWidth={MIN_NODE_WIDTH}
         minHeight={MIN_NODE_HEIGHT}
       />
 
-      <img src={src} alt={altText} className={styles.image} draggable={false} />
+      <ImageNodeToolbar nodeId={id} />
 
-      {/* Alt-text editor: button is keyboard-accessible, opens inline input */}
+      <div className={styles.rotatable} style={rotatableStyle}>
+        <img
+          src={src}
+          alt={altText}
+          className={styles.image}
+          draggable={false}
+        />
+      </div>
+
+      {/* Alt-text editor: button is keyboard-accessible, opens inline input.
+          Hidden entirely on locked nodes since alt text can't change. */}
       {isEditingAlt ? (
         <div className={styles.altEditor}>
           <TextField
@@ -94,21 +110,23 @@ function ImageNode({id, data, selected}: ImageNodeProps) {
           />
         </div>
       ) : (
-        <MuiButton
-          className={styles.editAltButton}
-          onClick={startEditingAlt}
-          aria-label="Edit alt text"
-          title="Edit alt text"
-          tabIndex={-1}
-          color="secondary"
-          variant="outlined"
-          size="small"
-        >
-          Alt
-        </MuiButton>
+        !data.locked && (
+          <MuiButton
+            className={styles.editAltButton}
+            onClick={startEditingAlt}
+            aria-label="Edit alt text"
+            title="Edit alt text"
+            tabIndex={-1}
+            color="secondary"
+            variant="outlined"
+            size="small"
+          >
+            Alt
+          </MuiButton>
+        )
       )}
 
-      <ConnectionHandles />
+      <ConnectionHandles visible={showHandles} />
     </div>
   );
 }

@@ -321,8 +321,6 @@ const EVENTS = {
     'AI Differentiation Notification AI Prompt Clicked',
 
   // AI Tutor
-  AI_TUTOR_DISABLED: 'Teacher disabled AI Tutor for a section',
-  AI_TUTOR_ENABLED: 'Teacher enabled AI Tutor for a section',
   AI_TUTOR_SIDEBAR_CLICK: 'AI Tutor Sidebar Suggested Prompt Clicked',
   AI_TUTOR_SIDEBAR_OPEN: 'User opened AI Tutor from Sidebar',
   AI_TUTOR_CODE_SNIPPET_ADDED_TO_CONTEXT:
@@ -400,9 +398,6 @@ const EVENTS = {
   SIGNED_IN_USER_CLICKS_HELP_MENU: 'Signed In User Clicks Help Menu',
   SIGNED_IN_USER_CLICKS_HELP_MENU_OPTION:
     'Signed In User Clicks Help Menu Option',
-  HEADER_LESSON_NAME_CLICKED: 'Header Lesson Name Clicked',
-  HEADER_PROGRESS_BUBBLE_LINK_CLICKED: 'Header Progress Bubble Link Clicked',
-  HEADER_UNIT_DETAILS_TOGGLED: 'Header Unit Details Toggled',
 
   // Header Create menu - signed in
 
@@ -691,6 +686,9 @@ const EVENTS = {
     'AI-generated feedback is successfully returned and displayed in the feedback text box',
   LESSON_SNAPSHOT_FEEDBACK_WIDGET_LOADED:
     "Teacher opens a student's lesson view and the feedback widget is rendered",
+
+  LANGUAGE_DEPRECATION_WARNING_SHOWN: 'Language deprecation warning shown',
+  LANGUAGE_DEPRECATION_WARNING_CLICKED: 'Language deprecation warning clicked',
 };
 
 const EVENT_GROUP_NAMES = {
