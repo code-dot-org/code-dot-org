@@ -12,7 +12,7 @@ class AiLessonSummaryPodcastsHelperTest < ActionView::TestCase
     # Mock CDO constant
     CDO.stubs(:elevenlabs_api_key).returns(@api_key)
 
-    @expected_url = "https://api.elevenlabs.io/v1/text-to-speech/#{@voice_id}?output_format=mp3_44100_128"
+    @expected_tts_url = "https://api.elevenlabs.io/v1/text-to-speech/#{@voice_id}?output_format=mp3_44100_128"
     @expected_headers = {
       "Content-Type" => "application/json",
       "xi-api-key" => @api_key
@@ -141,7 +141,7 @@ class AiLessonSummaryPodcastsHelperTest < ActionView::TestCase
 
     # Expect HTTParty.post to be called with correct parameters
     HTTParty.expects(:post).with(
-      @expected_url,
+      @expected_tts_url,
       headers: @expected_headers,
       body: @expected_body,
       timeout: 180
@@ -159,8 +159,7 @@ class AiLessonSummaryPodcastsHelperTest < ActionView::TestCase
     HTTParty.stubs(:post).returns(mock_response)
 
     # Capture the actual headers sent
-    HTTParty.expects(:post).with do |url, options|
-      puts url
+    HTTParty.expects(:post).with do |_url, options|
       headers = options[:headers]
       headers["Content-Type"] == "application/json" &&
         headers["xi-api-key"] == @api_key
@@ -176,8 +175,7 @@ class AiLessonSummaryPodcastsHelperTest < ActionView::TestCase
     HTTParty.stubs(:post).returns(mock_response)
 
     # Capture the actual body sent
-    HTTParty.expects(:post).with do |url, options|
-      puts url
+    HTTParty.expects(:post).with do |_url, options|
       body_data = JSON.parse(options[:body])
       body_data["model_id"] == @model &&
         body_data["text"] == @test_script
@@ -192,7 +190,7 @@ class AiLessonSummaryPodcastsHelperTest < ActionView::TestCase
     mock_response = mock('response')
 
     # Expect HTTParty.post to be called with the exact URL
-    HTTParty.expects(:post).with(@expected_url, anything).returns(mock_response)
+    HTTParty.expects(:post).with(@expected_tts_url, anything).returns(mock_response)
 
     client.request_podcast(@test_script)
   end
@@ -208,7 +206,7 @@ class AiLessonSummaryPodcastsHelperTest < ActionView::TestCase
     mock_response.stubs(:body).returns(@test_audio_data)
 
     HTTParty.expects(:post).with(
-      @expected_url,
+      @expected_tts_url,
       headers: @expected_headers,
       body: @expected_body,
       timeout: 180
@@ -295,7 +293,7 @@ class AiLessonSummaryPodcastsHelperTest < ActionView::TestCase
     }.to_json
 
     HTTParty.expects(:post).with(
-      @expected_url,
+      @expected_tts_url,
       headers: @expected_headers,
       body: expected_body,
       timeout: 180
