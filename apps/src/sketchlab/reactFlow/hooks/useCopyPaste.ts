@@ -42,12 +42,10 @@ export function useCopyPaste({
   // Last known mouse position in flow coordinates for paste-at-cursor.
   const mousePositionRef = useRef<{x: number; y: number} | null>(null);
 
-  // Stagger tracking for toolbar duplicates: separate refs for nodes and edges
-  // so duplicating a node and a line in alternation both chain correctly.
+  // Each successive duplicate of the same element is offset from the previous duplicate
+  // vertically and horizontally rather than the original, so repeated duplicates fan out visually.
   const lastDuplicateRef = useRef<ClipboardContents | null>(null);
-  const lastDuplicateNodeIdRef = useRef<string | null>(null);
-  const lastDuplicateLineRef = useRef<ClipboardContents | null>(null);
-  const lastDuplicateEdgeIdRef = useRef<string | null>(null);
+  const lastDuplicateIdRef = useRef<string | null>(null);
 
   const writeClipboard = useCallback((contents: ClipboardContents) => {
     clipboardRef.current = contents;
@@ -81,15 +79,10 @@ export function useCopyPaste({
   // offset by PASTE_OFFSET_PX in both dimensions.
   const duplicateNode = useCallback(
     (nodeId: string) => {
-      let source: ClipboardContents | null;
-      if (
-        lastDuplicateNodeIdRef.current === nodeId &&
-        lastDuplicateRef.current
-      ) {
-        source = lastDuplicateRef.current;
-      } else {
-        source = buildNodeClipboard(nodeId);
-      }
+      const source =
+        lastDuplicateIdRef.current === nodeId && lastDuplicateRef.current
+          ? lastDuplicateRef.current
+          : buildNodeClipboard(nodeId);
       if (!source) return;
 
       const newNodes = source.nodes.map(node => ({
@@ -102,7 +95,7 @@ export function useCopyPaste({
       }));
 
       lastDuplicateRef.current = {nodes: newNodes, edges: []};
-      lastDuplicateNodeIdRef.current = nodeId;
+      lastDuplicateIdRef.current = nodeId;
 
       setNodes(currentNodes => [...currentNodes, ...newNodes]);
     },
@@ -112,15 +105,10 @@ export function useCopyPaste({
   // Toolbar action: duplicate a line edge (both anchor nodes + the edge).
   const duplicateLine = useCallback(
     (edgeId: string) => {
-      let source: ClipboardContents | null;
-      if (
-        lastDuplicateEdgeIdRef.current === edgeId &&
-        lastDuplicateLineRef.current
-      ) {
-        source = lastDuplicateLineRef.current;
-      } else {
-        source = buildLineEdgeClipboard(edgeId);
-      }
+      const source =
+        lastDuplicateIdRef.current === edgeId && lastDuplicateRef.current
+          ? lastDuplicateRef.current
+          : buildLineEdgeClipboard(edgeId);
       if (!source) return;
 
       const idMap = new Map<string, string>();
@@ -143,8 +131,8 @@ export function useCopyPaste({
         target: idMap.get(edge.target) ?? edge.target,
       }));
 
-      lastDuplicateLineRef.current = {nodes: newNodes, edges: newEdges};
-      lastDuplicateEdgeIdRef.current = edgeId;
+      lastDuplicateRef.current = {nodes: newNodes, edges: newEdges};
+      lastDuplicateIdRef.current = edgeId;
 
       setNodes(currentNodes => [...currentNodes, ...newNodes]);
       setEdges(currentEdges => [...currentEdges, ...newEdges]);
