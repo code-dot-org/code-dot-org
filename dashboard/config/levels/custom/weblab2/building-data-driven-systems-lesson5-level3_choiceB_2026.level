@@ -1,13 +1,43 @@
 <Weblab2>
   <config><![CDATA[{
+  "published": true,
   "game_id": 74,
   "created_at": "2026-05-01T23:03:38.000Z",
   "level_num": "custom",
   "user_id": 22366,
   "properties": {
-    "require_edit_to_continue": true
+    "require_edit_to_continue": "true",
+    "encrypted": "false",
+    "display_name": "Community Events",
+    "long_instructions": "## Examine the Display\r\n\r\n### **Do This:**\r\n\r\n1. Run the app and look at the events displayed.\r\n2. Compare the events shown to the full `events` array in the code.\r\n3. Look for patterns in what is shown.\r\n\r\n\r\n### **Reflect:**\r\n\r\n- What events are shown in the app?\r\n- Does the app show all events in the dataset?\r\n- How is what you see different from the full dataset?\r\n- What might a user assume based on what is shown?",
+    "bubble_choice_description": "Look at how the app displays events and compare it to the full dataset.",
+    "thumbnail_url": "https://images.code.org/812ef632739c46021474ede1e51874bd-community.png",
+    "offer_browser_tts": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "false",
+    "widget_view": "false",
+    "initial_view_mode": "split",
+    "predict_settings": {
+      "isPredictLevel": false,
+      "solution": "",
+      "questionType": "freeResponse",
+      "placeholderText": "",
+      "multipleChoiceOptions": [
+        ""
+      ],
+      "freeResponseHeight": 50,
+      "codeEditableAfterSubmit": false
+    },
+    "ai_tutor_prompt_settings": {
+      "answerTypes": [
+        "explainCode"
+      ],
+      "answerTypeCustomizations": {
+      }
+    },
+    "project_template_level_name": "template_building-data-driven-systems-lesson5-level1_choiceb_2026"
   },
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2026-05-01T23:03:38.637+00:00\",\"changed\":[\"cloned from \\\"building-data-driven-systems-lesson5-level3_choiceA_2026\\\"\"],\"cloned_from\":\"building-data-driven-systems-lesson5-level3_choiceA_2026\"}]"
+  "audit_log": "[{\"changed_at\":\"2026-05-01T23:03:38.637+00:00\",\"changed\":[\"cloned from \\\"building-data-driven-systems-lesson5-level3_choiceA_2026\\\"\"],\"cloned_from\":\"building-data-driven-systems-lesson5-level3_choiceA_2026\"},{\"changed_at\":\"2026-05-04 14:12:59 +0000\",\"changed\":[\"require_edit_to_continue\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-05-04 14:13:55 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-05-04 14:41:53 +0000\",\"changed\":[],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"}]"
 }]]></config>
 </Weblab2>

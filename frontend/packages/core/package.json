@@ -69,7 +69,7 @@
     "prettier": "catalog:",
     "react": "catalog:",
     "typescript": "catalog:",
-    "uuid": "^11.1.0",
+    "uuid": "^14.0.0",
     "vite": "catalog:",
     "vite-plugin-dts": "catalog:",
     "vite-plugin-externalize-deps": "catalog:",
