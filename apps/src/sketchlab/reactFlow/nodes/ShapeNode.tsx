@@ -147,6 +147,9 @@ function ShapeNode({id, data, selected}: NodeProps<ShapeNodeType>) {
   );
 
   const isRectangle = shapeType === 'rectangle';
+  const isCircle = shapeType === 'circle';
+  const isTriangle = shapeType === 'triangle';
+  const isDiamond = shapeType === 'diamond';
 
   const rectangleStyle: React.CSSProperties = useMemo(() => {
     const style: React.CSSProperties = {};
@@ -166,21 +169,8 @@ function ShapeNode({id, data, selected}: NodeProps<ShapeNodeType>) {
     }
     style.fontSize = fontSizePx(data.fontSize);
     style.textAlign = data.textAlign ?? DEFAULT_TEXT_ALIGN;
-    if (shapeType === 'rectangle') {
-      style.padding = '4px 8px';
-    } else if (shapeType === 'circle') {
-      style.padding = '12%';
-    } else if (shapeType === 'triangle') {
-      // Triangle apex is at top; push text toward the wider base.
-      style.paddingTop = '30%';
-      style.paddingLeft = '20%';
-      style.paddingRight = '20%';
-      style.paddingBottom = '5%';
-    } else if (shapeType === 'diamond') {
-      style.padding = '20% 15%';
-    }
     return style;
-  }, [data.fontColor, data.fontSize, data.textAlign, isEditing, shapeType]);
+  }, [data.fontColor, data.fontSize, data.textAlign, isEditing]);
 
   const rotation = data.rotation ?? DEFAULT_ROTATION;
   const rotatableStyle: React.CSSProperties = useMemo(
@@ -221,7 +211,14 @@ function ShapeNode({id, data, selected}: NodeProps<ShapeNodeType>) {
         {/* Text label: click or enter to start editing */}
         <div
           ref={labelRef}
-          className={classNames(styles.label, isEditing && 'nodrag nopan')}
+          className={classNames(
+            styles.label,
+            isEditing && 'nodrag nopan',
+            isCircle && styles.circleLabel,
+            isTriangle && styles.triangleLabel,
+            isDiamond && styles.diamondLabel,
+            isRectangle && styles.rectangleLabel
+          )}
           style={labelStyle}
           contentEditable={isEditing}
           suppressContentEditableWarning
