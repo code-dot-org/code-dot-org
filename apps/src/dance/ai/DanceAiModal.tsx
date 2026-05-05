@@ -526,17 +526,17 @@ const DanceAiModal: React.FunctionComponent<DanceAiModalProps> = ({
         origBlock
           ?.getPreviousBlock()
           ?.getInput('DO')
-          ?.connection?.connect(blocksSvg[0].previousConnection);
+          ?.connection?.connect(blocksSvg[0].previousConnection!);
       } else {
         // origBlock has a regular block above it.
         origBlock
           ?.getPreviousBlock()
-          ?.nextConnection?.connect(blocksSvg[0].previousConnection);
+          ?.nextConnection?.connect(blocksSvg[0].previousConnection!);
       }
 
       origBlock
         ?.getNextBlock()
-        ?.previousConnection?.connect(blocksSvg[1].nextConnection);
+        ?.previousConnection?.connect(blocksSvg[1].nextConnection!);
 
       blocksSvg.forEach(blockSvg => {
         blockSvg.initSvg();

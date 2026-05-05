@@ -42,7 +42,7 @@ export const generateAiEffectBlocksFromResult = (
   );
 
   // Connect the blocks.
-  blocksSvg[0].nextConnection.connect(blocksSvg[1].previousConnection);
+  blocksSvg[0].nextConnection!.connect(blocksSvg[1].previousConnection!);
 
   return blocksSvg;
 };

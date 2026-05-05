@@ -2,7 +2,6 @@ import {
   ObservableParameterModel,
   ObservableProcedureModel,
 } from '@blockly/block-shareable-procedures';
-import {KeyboardNavigation} from '@blockly/keyboard-navigation';
 import * as BlocklyCore from 'blockly/core';
 import {javascriptGenerator} from 'blockly/javascript';
 
@@ -148,7 +147,6 @@ export interface BlocklyWrapperType extends BlocklyCoreType {
   blockIdOverrides: {
     [originalBlockId: string]: string;
   };
-  KeyboardNavigation?: typeof KeyboardNavigation;
   shortcutBackups: {
     [name: string]: BlocklyCore.ShortcutRegistry.KeyboardShortcut | undefined;
   };

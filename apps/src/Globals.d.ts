@@ -65,7 +65,6 @@ interface Window {
 
 // Modules without types
 declare module '@blockly/plugin-scroll-options';
-declare module '@blockly/keyboard-navigation';
 declare module '@blockly/field-angle';
 declare module '@blockly/field-bitmap';
 declare module '@blockly/field-colour';

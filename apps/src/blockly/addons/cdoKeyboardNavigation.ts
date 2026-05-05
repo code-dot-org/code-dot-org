@@ -1,4 +1,3 @@
-import {KeyboardNavigation} from '@blockly/keyboard-navigation';
 import * as BlocklyCore from 'blockly/core';
 import './shortcutMenuStyles.scss';
 
@@ -14,22 +13,17 @@ import {
 // Store the keyboard listener reference for cleanup
 let slashKeyListener: ((event: KeyboardEvent) => void) | null = null;
 
-let stylesRegistered = false;
+// Track whether our keyboard navigation setup has been run
+let keyboardNavigationInitialized = false;
 
-// This is a Monkey patch while Blockly fixes issue #713. Once merged and
-// bumped, we can replace this class and the manual registry of
-// NavigationDeferringToolbox below with one line function.
+// Monkey patch: prevents toolbox from consuming keydown events so they reach
+// the workspace keyboard navigation handler. Still needed per blockly issue #713.
 export class NavigationDeferringToolbox extends BlocklyCore.Toolbox {
   protected override onKeyDown_(e: KeyboardEvent) {}
 }
 
-// Covers functions that need to be called prior to Blockly Inject. Because
-// we initialize and dispose here, we need to call these ourselves.
+// Covers functions that need to be called prior to Blockly Inject.
 export function preInjectRegistrations() {
-  if (!stylesRegistered) {
-    stylesRegistered = true;
-    KeyboardNavigation.registerKeyboardNavigationStyles();
-  }
   BlocklyCore.registry.register(
     BlocklyCore.registry.Type.TOOLBOX,
     BlocklyCore.registry.DEFAULT,
@@ -42,15 +36,14 @@ export function initializeKeyboardNavigation(
   workspace: BlocklyCore.WorkspaceSvg,
   isDarkTheme: boolean
 ) {
-  if (Blockly.KeyboardNavigation) {
+  if (keyboardNavigationInitialized) {
     disableSlashKeyListener();
-    Blockly.KeyboardNavigation.dispose();
   }
   unregisterCrossTabPluginOptions();
   createShortcutsModalContainer(isDarkTheme);
-  Blockly.KeyboardNavigation = new KeyboardNavigation(workspace, {
-    allowCrossWorkspacePaste: true,
-  });
+  // Blockly 13: keyboard navigation is built-in. Activate cursor visualization.
+  BlocklyCore.keyboardNavigationController.setIsActive(true);
+  keyboardNavigationInitialized = true;
   // Re-register context menu options with our custom weights.
   reorderContextMenu();
   enableShortcutModalEscape();
@@ -60,12 +53,8 @@ export function initializeKeyboardNavigation(
 export function initializeAdditionalWorkspace(
   workspace: BlocklyCore.WorkspaceSvg
 ) {
-  // Ensure that any additional workspace also has keyboard navigation
-  // initialized.
-  if (Blockly.KeyboardNavigation) {
-    Blockly.KeyboardNavigation.navigationController.addWorkspace(workspace);
-    Blockly.KeyboardNavigation.navigationController.enable(workspace);
-  }
+  // Blockly 13: keyboard navigation is workspace-agnostic via the global
+  // singleton; no per-workspace initialization is required.
 }
 
 function createShortcutsModalContainer(isDarkTheme: boolean) {
