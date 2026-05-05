@@ -2,12 +2,12 @@
   <config><![CDATA[{
   "published": true,
   "game_id": 74,
-  "created_at": "2026-05-04T04:51:51.000Z",
+  "created_at": "2026-05-05T04:37:30.000Z",
   "level_num": "custom",
   "user_id": 1574,
   "properties": {
     "encrypted": "false",
-    "long_instructions": "## Render the Order Queue\r\n\r\n### Do This:\r\n\r\n1. Look at the `orders` array in `script.js`.\r\n\r\n2. Complete the `renderOrders()` function.\r\n   * Use `.map()` to go through the `orders` array.\r\n   * Call `createOrderCard()` to create a card for each order.\r\n   * Display all the cards inside `orderList`.\r\n\r\n### Check Your Code:\r\n\r\n- Does each order object create one card?\r\n- Does the order count match the number of orders?\r\n- Where does `.map()` repeat the same rendering rule?",
+    "long_instructions": "## Make the Queue Interactive\r\n\r\n### Do This:\r\n\r\n1. Find the buttons in `script.js`:\r\n   - `completeOldestButton`\r\n   - `removeNewestButton`\r\n2. When **Complete Oldest** is clicked:\r\n   - Remove the first item from the `orders` array.\r\n   - Call `renderOrders()`.\r\n3. When **Remove Newest** is clicked:\r\n   - Remove the last item from the `orders` array.\r\n   - Call `renderOrders()`.\r\n\r\n### Check Your Code:\r\n- Does clicking **Complete Oldest** remove the first order?\r\n- Does clicking **Remove Newest** remove the last order?\r\n- Does the list update after each click?\r\n- Where are you calling `renderOrders()`?",
     "submittable": "false",
     "hide_share_and_remix": "false",
     "disable_edit_run_for_submission": "false",
@@ -97,11 +97,11 @@
         "explainCode": "You are helping a beginner student understand how a profile UI is built from data.\n\nExplain how the values passed into a function (like createProfile) control what is shown in the profile.\n\nFocus on:\n- how each value maps to parts of the profile (name, image, details)\n- what one profile represents\n- what would change if one value changes\n\nKeep explanations short and clear."
       }
     },
-    "display_name": "Render Order Queue",
-    "bubble_choice_description": "Use `.map()` to display a list of orders from an array of objects. Each order should appear as one item on the screen using the provided function.",
+    "display_name": "Order Queue Buttons",
+    "bubble_choice_description": "Use buttons to update the order queue array and re-render the list.",
     "project_template_level_name": "building-data-driven-systems-lesson6-level3a-template-v2-2026",
     "thumbnail_url": "https://images.code.org/4591f39923f85e97475d6bd4cf99b30f-Screenshot 2026-05-04 212943.png"
   },
-  "audit_log": "[{\"changed_at\":\"2026-05-04T04:51:51.723+00:00\",\"changed\":[\"cloned from \\\"building-data-driven-systems-lesson2-level6a-v1-2026\\\"\"],\"cloned_from\":\"building-data-driven-systems-lesson2-level6a-v1-2026\"},{\"changed_at\":\"2026-05-04 04:52:43 +0000\",\"changed\":[\"long_instructions\",\"display_name\",\"bubble_choice_description\",\"thumbnail_url\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-05-04 04:53:54 +0000\",\"changed\":[\"project_template_level_name\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-05-04 04:57:37 +0000\",\"changed\":[\"encrypted_exemplar_sources\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-05-04 04:58:10 +0000\",\"changed\":[\"encrypted_exemplar_sources\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-05-04 05:04:49 +0000\",\"changed\":[\"encrypted_exemplar_sources\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-05-04 05:18:46 +0000\",\"changed\":[\"encrypted_exemplar_sources\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-05-04 05:21:29 +0000\",\"changed\":[\"long_instructions\",\"ai_tutor_prompt_settings\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-05-04 05:27:44 +0000\",\"changed\":[\"encrypted_exemplar_sources\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-05-05 04:30:58 +0000\",\"changed\":[\"thumbnail_url\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2026-05-05T04:37:30.008+00:00\",\"changed\":[\"cloned from \\\"building-data-driven-systems-lesson6-level3a-v2-2026\\\"\"],\"cloned_from\":\"building-data-driven-systems-lesson6-level3a-v2-2026\"},{\"changed_at\":\"2026-05-05 04:41:34 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-05-05 04:45:40 +0000\",\"changed\":[\"display_name\",\"bubble_choice_description\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-05-05 04:47:33 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"}]"
 }]]></config>
 </Weblab2>

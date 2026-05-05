@@ -1,22 +1,18 @@
 <Weblab2>
   <config><![CDATA[{
-  "published": true,
   "game_id": 74,
-  "created_at": "2026-05-01T14:00:57.000Z",
+  "created_at": "2026-05-04T14:36:27.000Z",
   "level_num": "custom",
   "user_id": 22366,
   "properties": {
-    "require_edit_to_continue": "true",
     "encrypted": "false",
-    "display_name": "Animal Adoption",
-    "long_instructions": "## Generate Data\r\n\r\n### **Do This:**\r\n\r\n1. Look at the animal object in the code.\r\n2. Highlight the object and prompt AI to generate an array of objects called `animals`.\r\n3. Run the code and inspect the generated dataset.\r\n4. Look for patterns in the kinds of animals and information that appear.",
-    "bubble_choice_description": "Start with one animal object, then use AI to generate a larger dataset that follows the same structure.",
     "offer_browser_tts": "false",
     "submittable": "false",
     "disable_edit_run_for_submission": "false",
     "hide_share_and_remix": "false",
     "widget_view": "false",
     "initial_view_mode": "split",
+    "require_edit_to_continue": "true",
     "predict_settings": {
       "isPredictLevel": false,
       "solution": "",
@@ -30,15 +26,11 @@
     },
     "ai_tutor_prompt_settings": {
       "answerTypes": [
-        "documentation",
         "buildJavaScript"
       ],
       "answerTypeCustomizations": {
-        "buildJavaScript": "Generate an array called `animals` containing exactly 8 animal objects. Each object should follow this general shape (but not all fields must always be present):\n\n```js\n{\n  name: \"Buddy\",\n  species: \"Dog\",\n  breed: \"Golden Retriever\",\n  image: \"golden_retriever_dog.png\",\n  age: 3,\n  gender: \"Male\",\n  color: \"Golden\",\n  status: \"Available\",\n  bio: \"Friendly and loves to play fetch. Great with kids and other dogs!\"\n}\n```\n\n**Data constraints (bias + imbalance):**\n\n* At least 4 of the 6 animals must be dogs.\n* Include exactly 2 cats.\n* The dataset should skew male (most animals should be male).\n* Place similar animals (same species or similar breeds) at the beginning of the array.\n\n**Image constraints (strict):**\n\n* You must ONLY use image file names from this list:\n\n  * `pomeranian_dog.png`\n  * `bordercollie_dog.png`\n  * `boxer_dog.png`\n  * `doodle_dog.jpg`\n  * `chiuaua_dog.png`\n  * `golden_retriever_dog.png`\n  * `pitt_bull_dog.png`\n  * `rottweiler_dog.png`\n  * `white_cat.png`\n  * `tuxedo_cat.jpg`\n  * `siamese_cat.jpg`\n* Do NOT use URLs.\n* Do NOT invent new file names.\n* Every object must include an `image` field using one of the valid file names.\n\n**Intentional inconsistency (very important):**\n\n* Not all objects should include every field.\n* Some objects should be missing fields like `bio`, `age`, or `color`.\n* Some `bio` fields should be:\n  * Detailed (2–3 sentences)\n  * Very short (1 sentence)\n  * Completely missing\n* Some values can be vague (e.g., `\"color\": \"Brown\"` vs `\"Light golden with white patches\"`).\n* The dataset should feel uneven, messy, and biased—not clean or perfectly structured.\n\n**Output rules:**\n* Return ONLY:\n\n```js\nconst animals = [ ... ]\n```\n\n* No explanations, no extra text.\n"
       }
     },
-    "thumbnail_url": "https://images.code.org/6790b1f01af119e8693152087b11b56d-Pasted Graphic 3.png",
-    "project_template_level_name": "template_building-data-driven-systems-lesson5-level1_choicea_2026",
     "start_sources": {
       "folders": {
       },
@@ -77,8 +69,107 @@
         "5": {
           "id": "5",
           "name": "prompt.md",
+          "contents": "Add your changes to prompt.md",
+          "folderId": "0",
+          "active": false
+        },
+        "6": {
+          "id": "6",
+          "name": "siamese_cat.jpg",
           "contents": "",
           "folderId": "0",
+          "url": "/level_starter_assets/template_building-data-driven-systems-lesson5-level1_choicea_2026/uuid/0d11d187-3587-4b74-a639-287a4963e806.jpg",
+          "type": "support",
+          "active": false
+        },
+        "7": {
+          "id": "7",
+          "name": "doodle_dog.jpg",
+          "contents": "",
+          "folderId": "0",
+          "url": "/level_starter_assets/template_building-data-driven-systems-lesson5-level1_choicea_2026/uuid/19742635-eb89-4cba-8634-f4e6acfa6867.jpg",
+          "type": "support",
+          "active": false
+        },
+        "8": {
+          "id": "8",
+          "name": "tuxedo_cat.jpg",
+          "contents": "",
+          "folderId": "0",
+          "url": "/level_starter_assets/template_building-data-driven-systems-lesson5-level1_choicea_2026/uuid/ba5fc965-0533-4d6c-b7c9-6d0e3913af24.jpg",
+          "type": "support",
+          "active": false
+        },
+        "9": {
+          "id": "9",
+          "name": "golden_retriever_dog.png",
+          "contents": "",
+          "folderId": "0",
+          "url": "/level_starter_assets/template_building-data-driven-systems-lesson5-level1_choicea_2026/uuid/1f4b974d-b9ba-4a49-8f34-d62d7ac2e671.png",
+          "type": "support",
+          "active": false
+        },
+        "10": {
+          "id": "10",
+          "name": "chiuaua_dog.png",
+          "contents": "",
+          "folderId": "0",
+          "url": "/level_starter_assets/template_building-data-driven-systems-lesson5-level1_choicea_2026/uuid/129be4ec-11ac-4806-a751-4549c50b8c69.png",
+          "type": "support",
+          "active": false
+        },
+        "11": {
+          "id": "11",
+          "name": "pomeranian_dog.png",
+          "contents": "",
+          "folderId": "0",
+          "url": "/level_starter_assets/template_building-data-driven-systems-lesson5-level1_choicea_2026/uuid/ccbc5d70-4d80-4df7-ac76-7b6389ea82ff.png",
+          "type": "support",
+          "active": false
+        },
+        "12": {
+          "id": "12",
+          "name": "white_cat.png",
+          "contents": "",
+          "folderId": "0",
+          "url": "/level_starter_assets/template_building-data-driven-systems-lesson5-level1_choicea_2026/uuid/233d79f9-e215-4497-835d-d67a432e5680.png",
+          "type": "support",
+          "active": false
+        },
+        "13": {
+          "id": "13",
+          "name": "boxer_dog.png",
+          "contents": "",
+          "folderId": "0",
+          "url": "/level_starter_assets/template_building-data-driven-systems-lesson5-level1_choicea_2026/uuid/77a4fa86-b709-40ac-be5c-e2d788c18c04.png",
+          "type": "support",
+          "active": false
+        },
+        "14": {
+          "id": "14",
+          "name": "pitt_bull_dog.png",
+          "contents": "",
+          "folderId": "0",
+          "url": "/level_starter_assets/template_building-data-driven-systems-lesson5-level1_choicea_2026/uuid/14b85134-71b3-4fca-95f8-e3411c903619.png",
+          "type": "support",
+          "active": false
+        },
+        "15": {
+          "id": "15",
+          "name": "rottweiler_dog.png",
+          "contents": "",
+          "folderId": "0",
+          "url": "/level_starter_assets/template_building-data-driven-systems-lesson5-level1_choicea_2026/uuid/556b5b00-1cf3-40e7-9af6-55b8df2640cf.png",
+          "type": "support",
+          "active": false
+        },
+        "16": {
+          "id": "16",
+          "name": "bordercollie_dog.png",
+          "contents": "",
+          "folderId": "0",
+          "url": "/level_starter_assets/template_building-data-driven-systems-lesson5-level1_choicea_2026/uuid/7b5dab62-5837-4189-8335-ead6c0090552.png",
+          "type": "support",
           "active": false
         }
       },
@@ -88,6 +179,7 @@
       ]
     }
   },
-  "audit_log": "[{\"changed_at\":\"2026-05-04 13:30:11 +0000\",\"changed\":[\"require_edit_to_continue\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-05-04 13:32:02 +0000\",\"changed\":[\"ai_tutor_prompt_settings\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-05-04 13:33:02 +0000\",\"changed\":[\"ai_tutor_prompt_settings\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-05-04 14:36:58 +0000\",\"changed\":[],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-05-04 15:37:23 +0000\",\"changed\":[],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-05-04 15:37:49 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-05-04 23:04:17 +0000\",\"changed\":[\"ai_tutor_prompt_settings\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"}]"
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-05-04 14:36:29 +0000\",\"changed\":[],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-05-04 15:45:58 +0000\",\"changed\":[],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-05-04 15:46:42 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-05-04 15:46:43 +0000\",\"changed\":[],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-05-04 15:46:49 +0000\",\"changed\":[],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-05-04 15:47:44 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-05-04 22:58:14 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-05-04 22:58:16 +0000\",\"changed\":[],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-05-04 22:58:36 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"}]"
 }]]></config>
 </Weblab2>

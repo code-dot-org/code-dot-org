@@ -1,13 +1,45 @@
 <Weblab2>
   <config><![CDATA[{
+  "published": true,
   "game_id": 74,
   "created_at": "2026-05-01T23:02:51.000Z",
   "level_num": "custom",
   "user_id": 22366,
   "properties": {
-    "require_edit_to_continue": true
+    "require_edit_to_continue": "true",
+    "encrypted": "false",
+    "display_name": "Transit Stops",
+    "long_instructions": "## Generate Data\r\n\r\n### Do This:\r\n\r\n1. Look at the transit stop object in the code.\r\n2. Highlight the object and prompt AI to generate an array of objects called `stops`.\r\n3. Run the code and inspect the generated dataset.\r\n4. Look for patterns in the kinds of stops and information that appear.",
+    "bubble_choice_description": "Start with one transit stop object, then use AI to generate a larger dataset that follows the same structure.",
+    "thumbnail_url": "https://images.code.org/8177861adf9963f09de10f582b3f8dcb-transit_stop.png",
+    "offer_browser_tts": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "false",
+    "widget_view": "false",
+    "initial_view_mode": "split",
+    "predict_settings": {
+      "isPredictLevel": false,
+      "solution": "",
+      "questionType": "freeResponse",
+      "placeholderText": "",
+      "multipleChoiceOptions": [
+        ""
+      ],
+      "freeResponseHeight": 50,
+      "codeEditableAfterSubmit": false
+    },
+    "ai_tutor_prompt_settings": {
+      "answerTypes": [
+        "buildJavaScript",
+        "documentation"
+      ],
+      "answerTypeCustomizations": {
+        "buildJavaScript": "\n\n```js\nconst stops = [ ... ]\n```\n\nwith exactly 6 transit stop objects.\n\n**Object shape (fields may be missing or incomplete):**\n\n```js\n{\n  name: \"Main St Station\",\n  line: \"Blue Line\",\n  neighborhood: \"Downtown\",\n  status: \"Proposed\",\n  ridership: 1200,\n  accessibility: \"Accessible\",\n  image: \"subway_station_modern.jpg\",\n  notes: \"High foot traffic area near businesses and offices.\"\n}\n```\n\n**Constraints:**\n\n* Most stops should be `\"Proposed\"` or `\"Under Review\"`\n* At least 4 stops should be in busy/commercial neighborhoods\n* Similar stops should appear first\n* Ridership values should be uneven, with some high and some very low\n\n**Images:**\nUse mostly valid image names from:\n`subway_station_modern.jpg`, `subway_station_old.jpg`, `elevated_train_stop.jpg`, `bus_stop_shelter.jpg`, `bus_stop_basic.jpg`, `downtown_transit_hub.jpg`, `neighborhood_train_stop.jpg`, `accessible_station.jpg`, `non_accessible_stop.jpg`, `construction_station.jpg`\n\n* Do not use URLs\n* At least 1 object should have a broken image filename\n* At least 1 object should have a missing or `null` image\n\n**Uneven completeness:**\n\n* Some fields should be missing entirely\n* Some values should be `null` or `\"Unknown\"`\n* Notes should vary: detailed, short, or missing\n* Mix specific and vague values\n* Dataset should feel biased, incomplete, and inconsistent\n\n**Output:**\nOnly return `const stops = [...]` with no extra text."
+      }
+    },
+    "project_template_level_name": "template_building-data-driven-systems-lesson5-level1_choicec_2026"
   },
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2026-05-01T23:02:51.506+00:00\",\"changed\":[\"cloned from \\\"building-data-driven-systems-lesson5-level1_choiceA_2026\\\"\"],\"cloned_from\":\"building-data-driven-systems-lesson5-level1_choiceA_2026\"}]"
+  "audit_log": "[{\"changed_at\":\"2026-05-01T23:02:51.506+00:00\",\"changed\":[\"cloned from \\\"building-data-driven-systems-lesson5-level1_choiceA_2026\\\"\"],\"cloned_from\":\"building-data-driven-systems-lesson5-level1_choiceA_2026\"},{\"changed_at\":\"2026-05-04 14:04:18 +0000\",\"changed\":[\"require_edit_to_continue\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-05-04 14:43:19 +0000\",\"changed\":[],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-05-04 23:50:02 +0000\",\"changed\":[\"ai_tutor_prompt_settings\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"}]"
 }]]></config>
 </Weblab2>
