@@ -15,7 +15,7 @@ class RegistrationsController < Devise::RegistrationsController
   respond_to :json
   prepend_before_action :authenticate_scope!, only: [
     :edit, :update, :destroy, :upgrade, :set_email, :set_user_type,
-    :migrate_to_multi_auth, :demigrate_from_multi_auth
+    :migrate_to_multi_auth
   ]
   skip_before_action :verify_authenticity_token, only: [:set_student_information]
   skip_before_action :clear_sign_up_session_vars, only: [:new, :begin_sign_up, :begin_creating_user, :cancel, :create]
@@ -441,15 +441,6 @@ class RegistrationsController < Devise::RegistrationsController
     current_user.migrate_to_multi_auth
     redirect_to edit_registration_path(current_user),
       notice: I18n.t('auth.migration_success')
-  end
-
-  #
-  # GET /users/demigrate_from_multi_auth
-  #
-  def demigrate_from_multi_auth
-    current_user.demigrate_from_multi_auth
-    redirect_to edit_registration_path(current_user),
-      notice: I18n.t('auth.demigration_success')
   end
 
   def existing_account
