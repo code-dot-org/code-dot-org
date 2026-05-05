@@ -133,7 +133,8 @@ export const LanguageChange: Story = {
 
     await userEvent.selectOptions(select, 'es');
 
-    expect(select).toHaveValue('es');
+    // Footer is a controlled component — selectedLocaleCode doesn't update
+    // via the fn() spy, so we assert the callback was called rather than the DOM value.
     expect(args.onLanguageChange).toHaveBeenCalledWith('es');
   },
 };

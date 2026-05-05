@@ -18,6 +18,7 @@ import type {LinkProps} from '@mui/material/Link';
 import {styled} from '@mui/material/styles';
 import {visuallyHidden} from '@mui/utils';
 import {useId} from 'react';
+import type {ElementType} from 'react';
 
 import type {FooterImageLink, FooterProps} from './Footer.types';
 import FooterLocalePicker from './FooterLocalePicker';
@@ -39,11 +40,14 @@ const FooterGrid = styled(Grid, {name: 'MuiFooter', slot: 'grid'})({});
 const FooterCopyright = styled(Typography, {
   name: 'MuiFooter',
   slot: 'copyright',
-})({});
+})<{component?: ElementType}>({});
+FooterCopyright.defaultProps = {component: 'p'};
+
 const FooterFineprint = styled(Typography, {
   name: 'MuiFooter',
   slot: 'fineprint',
-})({});
+})<{component?: ElementType}>({});
+FooterFineprint.defaultProps = {component: 'div'};
 const ImageLinkWrapper = styled('div', {name: 'MuiFooter', slot: 'imageLink'})(
   {},
 );
@@ -134,22 +138,14 @@ const Footer = ({
         </Grid>
 
         <Grid size={12}>
-          <FooterCopyright
-            component="p"
-            variant="body2"
-            data-testid="footer-copyright"
-          >
+          <FooterCopyright variant="body2" data-testid="footer-copyright">
             {copyright}
           </FooterCopyright>
         </Grid>
 
         {fineprint && (
           <Grid size={12}>
-            <FooterFineprint
-              component="div"
-              variant="body2"
-              data-testid="footer-fineprint"
-            >
+            <FooterFineprint variant="body2" data-testid="footer-fineprint">
               {fineprint}
             </FooterFineprint>
           </Grid>
