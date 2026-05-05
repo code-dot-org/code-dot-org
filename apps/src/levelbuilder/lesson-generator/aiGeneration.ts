@@ -104,8 +104,13 @@ interface PanelPlan {
 
 // Returns the per-panel plan for a Panels-type level. We split planning from
 // image generation so the levelbuilder gets per-panel progress and so a single
-// failed image doesn't waste the whole panel set.
-async function planPanels(description: string): Promise<PanelPlan[]> {
+// failed image doesn't waste the whole panel set. Pass `lessonContext` to
+// give the model the outline that frames the whole lesson, so the panels
+// for this level stay coherent with the surrounding levels.
+async function planPanels(
+  description: string,
+  lessonContext?: string
+): Promise<PanelPlan[]> {
   const prompt = [
     'You are helping a curriculum author build a "Panels" level: a short,',
     'comic-strip-style sequence of full-width panels with overlay text.',
@@ -114,6 +119,15 @@ async function planPanels(description: string): Promise<PanelPlan[]> {
     'classroom. Each panel needs short overlay text (1-3 sentences,',
     'markdown allowed) and an image prompt for a single 16:9 illustration',
     'with no embedded text.',
+    ...(lessonContext
+      ? [
+          '',
+          'Lesson context (this level is one piece of a larger lesson — keep',
+          'tone, characters, and continuity consistent with this outline,',
+          'but only produce content for the specific level description below):',
+          lessonContext,
+        ]
+      : []),
     '',
     `Description: ${description}`,
   ].join('\n');
@@ -198,9 +212,10 @@ export interface PanelGenerationCallbacks {
 export async function generatePanelsForLevel(
   levelName: string,
   description: string,
-  callbacks: PanelGenerationCallbacks = {}
+  callbacks: PanelGenerationCallbacks = {},
+  lessonContext?: string
 ): Promise<Panel[]> {
-  const plan = await planPanels(description);
+  const plan = await planPanels(description, lessonContext);
   callbacks.onPlanned?.(plan.length);
 
   const panels: Panel[] = [];
@@ -253,9 +268,12 @@ export interface Weblab2Generation {
 // structure produced by prepareSourceForLevelbuilderSave in the codebridge
 // editor. We synthesize a minimal one with a single root folder. Alongside
 // the starter files we ask the model for student-facing instructions (the
-// level's `long_instructions` markdown field).
+// level's `long_instructions` markdown field). Pass `lessonContext` to
+// give the model the lesson outline that frames this level, so the starter
+// code and instructions stay coherent with surrounding panels.
 export async function generateWeblab2Level(
-  description: string
+  description: string,
+  lessonContext?: string
 ): Promise<Weblab2Generation> {
   const prompt = [
     'You are helping a curriculum author build a "Web Lab 2" level: a',
@@ -268,6 +286,15 @@ export async function generateWeblab2Level(
     '     include an index.html. Keep total content under a few kilobytes',
     '     per file. Do not include external script or stylesheet links —',
     '     everything should be local.',
+    ...(lessonContext
+      ? [
+          '',
+          'Lesson context (this level is one piece of a larger lesson — keep',
+          'continuity with prior steps, but only build the specific level',
+          'described below):',
+          lessonContext,
+        ]
+      : []),
     '',
     `Description: ${description}`,
   ].join('\n');

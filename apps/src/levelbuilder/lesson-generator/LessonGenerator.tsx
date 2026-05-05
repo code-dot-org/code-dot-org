@@ -230,7 +230,7 @@ const LessonGenerator: React.FC<LessonGeneratorProps> = ({lesson}) => {
   const [progressLog, setProgressLog] = useState<string[]>([]);
   const [summary, setSummary] = useState<GenerationSummary | null>(null);
   const [topLevelError, setTopLevelError] = useState<string | null>(null);
-  const [outline, setOutline] = useState<string>('');
+  const [outline, setOutline] = useState<string>(lesson.generateOutline || '');
   const [isOutlining, setIsOutlining] = useState(false);
   const [outlineError, setOutlineError] = useState<string | null>(null);
 
@@ -436,6 +436,10 @@ const LessonGenerator: React.FC<LessonGeneratorProps> = ({lesson}) => {
         if (shouldGenerate) {
           setStage('planning');
           appendLog(`Planning content for "${levelName}"…`);
+          // The outline (if the user typed one) gives every level call the
+          // same lesson-wide framing, so panels + weblab2 levels in the same
+          // lesson stay tonally coherent.
+          const lessonContext = outline.trim() || undefined;
           if (spec.labType === 'Panels') {
             const panels = await generatePanelsForLevel(
               levelName,
@@ -449,14 +453,16 @@ const LessonGenerator: React.FC<LessonGeneratorProps> = ({lesson}) => {
                     `Generating image for panel ${idx + 1} of ${count}…`
                   );
                 },
-              }
+              },
+              lessonContext
             );
             setStage('saving-properties');
             appendLog(`Saving panel data for "${levelName}"…`);
             await updatePanelsLevel(level.id, panels);
           } else if (spec.labType === 'Weblab2') {
             const {startSources, longInstructions} = await generateWeblab2Level(
-              spec.description.trim()
+              spec.description.trim(),
+              lessonContext
             );
             setStage('saving-properties');
             appendLog(`Saving start sources for "${levelName}"…`);
@@ -543,7 +549,9 @@ const LessonGenerator: React.FC<LessonGeneratorProps> = ({lesson}) => {
           lesson.activities || [],
           placements
         );
-        await saveLessonActivities(lesson.id, newActivities);
+        // Persist the outline so reopening /generate restores it. Sending
+        // an empty string clears any previously-saved value.
+        await saveLessonActivities(lesson.id, newActivities, outline.trim());
         appendLog('Lesson updated.');
       } catch (err) {
         const message = err instanceof Error ? err.message : String(err);
@@ -576,7 +584,7 @@ const LessonGenerator: React.FC<LessonGeneratorProps> = ({lesson}) => {
     setSummary({created, failed});
     setIsGenerating(false);
     setProgress(null);
-  }, [validationError, lesson, levelSpecs, fullName, appendLog]);
+  }, [validationError, lesson, levelSpecs, fullName, appendLog, outline]);
 
   return (
     <div className={moduleStyles.container}>

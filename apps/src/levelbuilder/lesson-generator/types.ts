@@ -37,6 +37,9 @@ export interface ExistingLessonData {
   lessonPath: string;
   editLessonUrl: string;
   activities?: SerializedActivity[];
+  // Persisted outline that drove the last "Generate outline" run (if any).
+  // Stored on the lesson so reopening /generate restores it.
+  generateOutline?: string;
 }
 
 // The shape returned by Lesson#summarize_for_lesson_edit, narrowed to the

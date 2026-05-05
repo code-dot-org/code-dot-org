@@ -184,21 +184,27 @@ export async function uploadLevelAsset(
   return result.newAssetUrl;
 }
 
-// PUT /lessons/:id — replace the lesson's activity tree wholesale. The
+// PUT /lessons/:id — replace the lesson's activity tree wholesale, and
+// optionally update the persisted /generate outline at the same time. The
 // caller is responsible for building a complete activities array (including
 // any new script_levels in their final positions); this function just
 // serializes it and posts. The server's update_activities/update_activity_sections
 // pipeline does the diff.
 export async function saveLessonActivities(
   lessonId: number,
-  activities: SerializedActivity[]
+  activities: SerializedActivity[],
+  generateOutline?: string
 ): Promise<void> {
+  const body: Record<string, string> = {
+    activities: JSON.stringify(activities),
+  };
+  if (generateOutline !== undefined) {
+    body.generate_outline = generateOutline;
+  }
   const response = await fetch(`/lessons/${lessonId}`, {
     method: 'PUT',
     headers: jsonHeaders(),
-    body: JSON.stringify({
-      activities: JSON.stringify(activities),
-    }),
+    body: JSON.stringify(body),
   });
   if (!response.ok) {
     throw new Error(
