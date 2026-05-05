@@ -23,7 +23,6 @@ import {
 import {isLineAnchorNodeId} from '../utils/connectionRules';
 import {
   findNearestHandleInRadius,
-  snapEdgeEndpointToHandle,
   snapResultToEdgePatch,
 } from '../utils/handleSnap';
 import {
@@ -125,6 +124,14 @@ interface UseKeyboardNavigationOptions {
   // (which renders outside .react-flow__node), so getEntryFromDOM returns
   // null. lastFocusedEntry gives us the last known node/edge target.
   lastFocusedEntry: TabOrderEntry | null;
+  // Snap helper from useAnchorMove. Used when an arrow-key move places a
+  // line anchor close enough to a real-node handle to attach. Returns the
+  // affected edge's id when a snap fired, or null otherwise.
+  attemptAnchorSnap: (params: {
+    anchorId: string;
+    screenPoint: XYPosition;
+    radiusPx: number;
+  }) => string | null;
 }
 
 /**
@@ -167,6 +174,7 @@ export function useKeyboardNavigation({
   cutEntry,
   paste,
   lastFocusedEntry,
+  attemptAnchorSnap,
 }: UseKeyboardNavigationOptions) {
   const {
     getEdge,
@@ -333,7 +341,7 @@ export function useKeyboardNavigation({
   // lands within snap range of a real node's handle, attach the edge to
   // that handle directly instead of translating; the now-unreferenced
   // anchor is cleaned up by the prune effect. Returns false if the node
-  // isn't a lineAnchor or has no associated edge.
+  // isn't a lineAnchor, has no associated edge, or no snap fired.
   const snapAnchorIfNearHandle = useCallback(
     (anchorId: string, deltaX: number, deltaY: number): boolean => {
       const anchorNode = getNode(anchorId);
@@ -342,33 +350,34 @@ export function useKeyboardNavigation({
         edge => edge.source === anchorId || edge.target === anchorId
       );
       if (!associatedEdge) return false;
-      const isSourceSide = associatedEdge.source === anchorId;
-      const side = isSourceSide ? 'source' : 'target';
+      const side: 'source' | 'target' =
+        associatedEdge.source === anchorId ? 'source' : 'target';
 
-      const positionBeforeMove = anchorHandleFlowPosition(
-        anchorNode.position,
-        side
-      );
-      const positionAfterMove = {
-        x: positionBeforeMove.x + deltaX,
-        y: positionBeforeMove.y + deltaY,
+      const handleBefore = anchorHandleFlowPosition(anchorNode.position, side);
+      const handleAfter = {
+        x: handleBefore.x + deltaX,
+        y: handleBefore.y + deltaY,
       };
-      const snapped = snapEdgeEndpointToHandle({
-        edgeId: associatedEdge.id,
-        excludeNodeId: anchorId,
-        side,
-        screenPoint: flowToScreenPosition(positionAfterMove),
+      const snappedEdgeId = attemptAnchorSnap({
+        anchorId,
+        screenPoint: flowToScreenPosition(handleAfter),
         radiusPx: KEYBOARD_MOVE_STEP * getZoom(),
-        setEdges,
       });
-      if (!snapped) return false;
-      // The anchor we were focused on is about to be pruned; move
-      // focus to the edge it terminated so the user stays on a useful
-      // target. Deferred so we update focus after re-render.
-      setTimeout(() => focusEntry({type: 'edge', id: associatedEdge.id}), 0);
+      if (!snappedEdgeId) return false;
+      // The anchor we were focused on is about to be pruned; move focus
+      // to the edge it terminated so the user stays on a useful target.
+      // Deferred so we update focus after re-render.
+      setTimeout(() => focusEntry({type: 'edge', id: snappedEdgeId}), 0);
       return true;
     },
-    [getEdges, getNode, getZoom, flowToScreenPosition, setEdges, focusEntry]
+    [
+      getEdges,
+      getNode,
+      getZoom,
+      flowToScreenPosition,
+      attemptAnchorSnap,
+      focusEntry,
+    ]
   );
 
   const handleMoveNode = useCallback(

@@ -35,6 +35,7 @@ import {
   type ToolbarTarget,
 } from '../context';
 import LineEdgeToolbar from '../elementToolbars/LineEdgeToolbar';
+import {useAnchorMove} from '../hooks/useAnchorMove';
 import {useCopyPaste} from '../hooks/useCopyPaste';
 import {useFocusManagement} from '../hooks/useFocusManagement';
 import {useKeyboardNavigation} from '../hooks/useKeyboardNavigation';
@@ -176,6 +177,20 @@ export default function ReactFlowCanvas({
     setNodeOrEdgeFocused
   );
 
+  const {attemptAnchorSnap} = useAnchorMove();
+
+  const handleNodeDragStop = useCallback(
+    (event: React.MouseEvent, node: SketchlabReactFlowNode) => {
+      if (node.type !== 'lineAnchor') return;
+      attemptAnchorSnap({
+        anchorId: node.id,
+        screenPoint: {x: event.clientX, y: event.clientY},
+        radiusPx: LINE_RECONNECT_SNAP_RADIUS_PX,
+      });
+    },
+    [attemptAnchorSnap]
+  );
+
   const {connectingFrom, connectAnnouncement, handleKeyDown} =
     useKeyboardNavigation({
       nodes,
@@ -189,6 +204,7 @@ export default function ReactFlowCanvas({
       cutEntry,
       paste,
       lastFocusedEntry,
+      attemptAnchorSnap,
     });
 
   const {handleEdgeMouseDown} = useLineEdgeDrag({
@@ -374,9 +390,7 @@ export default function ReactFlowCanvas({
     handleReconnectStart,
     handleReconnect,
     handleReconnectEnd,
-    handleNodeDragStop,
   } = useReconnect({
-    edges,
     setNodes,
     setEdges,
     screenToFlowPosition,

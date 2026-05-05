@@ -5,22 +5,17 @@ import {
   HandleType,
   XYPosition,
 } from '@xyflow/react';
-import React, {useCallback, useRef} from 'react';
+import {useCallback, useRef} from 'react';
 
 import {
   SketchlabReactFlowEdge,
   SketchlabReactFlowNode,
 } from '@cdo/apps/lab2/types';
 
-import {LINE_RECONNECT_SNAP_RADIUS_PX} from '../constants';
-import {
-  getEventClientPosition,
-  snapEdgeEndpointToHandle,
-} from '../utils/handleSnap';
+import {getEventClientPosition} from '../utils/handleSnap';
 import {createLineAnchorAtHandle} from '../utils/lineAnchors';
 
 interface UseReconnectOptions {
-  edges: SketchlabReactFlowEdge[];
   setNodes: (
     updater: (nodes: SketchlabReactFlowNode[]) => SketchlabReactFlowNode[]
   ) => void;
@@ -30,19 +25,17 @@ interface UseReconnectOptions {
   screenToFlowPosition: (position: XYPosition) => XYPosition;
 }
 
-// Owns the lifecycle for moving an edge endpoint onto a node handle. Two
-// entry points feed into the same outcome:
-//   - React Flow's edge-endpoint handle:
-//       onReconnectStart -> onReconnect (landed)
-//                        \-> onReconnectEnd (canvas drop spawns an anchor)
-//   - Dragging a lineAnchor node directly: onNodeDragStop snaps it onto a
-//     nearby real-node handle, and the orphan-prune effect drops the now-
-//     unused anchor.
+// Owns the lifecycle for React Flow's edge-endpoint reconnect:
+//   onReconnectStart -> onReconnect (landed on a handle)
+//                    \-> onReconnectEnd (dropped on canvas; spawn an anchor)
+//
+// The other "anchor moved" path — dragging a lineAnchor node directly with
+// the mouse — lives in `useAnchorMove`, which also handles the keyboard
+// equivalents.
 //
 // `isReconnecting` lets the caller relax connection validation while a
 // reconnect is in flight.
 export function useReconnect({
-  edges,
   setNodes,
   setEdges,
   screenToFlowPosition,
@@ -126,39 +119,10 @@ export function useReconnect({
     [screenToFlowPosition, setEdges, setNodes]
   );
 
-  // Snap a line endpoint onto a real node's handle when the user drops the
-  // anchor close enough. We look at where the pointer landed in screen
-  // space and find the nearest matching handle on a non-anchor node within
-  // the snap radius. The orphaned anchor is removed by the prune effect.
-  const handleNodeDragStop = useCallback(
-    (event: React.MouseEvent, node: SketchlabReactFlowNode) => {
-      if (node.type !== 'lineAnchor') {
-        return;
-      }
-      const associatedEdge = edges.find(
-        edge => edge.source === node.id || edge.target === node.id
-      );
-      if (!associatedEdge) {
-        return;
-      }
-      const isSourceSide = associatedEdge.source === node.id;
-      snapEdgeEndpointToHandle({
-        edgeId: associatedEdge.id,
-        excludeNodeId: node.id,
-        side: isSourceSide ? 'source' : 'target',
-        screenPoint: {x: event.clientX, y: event.clientY},
-        radiusPx: LINE_RECONNECT_SNAP_RADIUS_PX,
-        setEdges,
-      });
-    },
-    [edges, setEdges]
-  );
-
   return {
     isReconnecting,
     handleReconnectStart,
     handleReconnect,
     handleReconnectEnd,
-    handleNodeDragStop,
   };
 }
