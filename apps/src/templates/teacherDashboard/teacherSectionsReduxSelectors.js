@@ -154,6 +154,7 @@ export const sectionFromServerSection = serverSection => ({
   unitPosition: serverSection.unitPosition,
   isAssignedSingleUnitCourse: serverSection.is_assigned_single_unit_course,
   createdAt: serverSection.createdAt,
+  demoType: serverSection.demo_type,
   loginType: serverSection.login_type,
   loginTypeName: serverSection.login_type_name,
   grades: serverSection.grades,
