@@ -400,26 +400,20 @@ def test_type
   eyes? ? 'Eyes' : 'UI'
 end
 
-# Human-readable test-run label used in Slack/log report headers. Device
-# Farm desktop, mobile, and combined runs are dispatched as separate
-# runner.rb invocations against separate concurrency quotas; without a
-# distinguishing prefix the per-suite report messages from a single DTT
-# look identical in #infra-test. SauceLabs runs are left as just the
-# bare test_type for now -- the 'Sauce Labs' prefix lands in the Device
-# Farm launch PR.
+# Human-readable suite label used in Slack/log report headers and as
+# the status page <title> and <h1>. The provider (SauceLabs / Device
+# Farm) is no longer surfaced -- oncall sees a label that names the
+# suite by its browsers. Eyes runs are always "Eyes" (eyes only runs
+# on SauceLabs today). Non-eyes runs derive the label from their
+# active browser configs and append "UI" so it's clear the suite is
+# UI tests:
+#   -c Safari          => "Safari UI"
+#   -c Chrome,Firefox  => "Chrome + Firefox UI"
+#   -c iPhone,iPad     => "Mobile UI"
 def test_type_label
-  return test_type unless $options.device_farm
-  any_mobile = $browsers.any? {|b| mobile_browser?(b)}
-  all_mobile = $browsers.all? {|b| mobile_browser?(b)}
-  device_farm_kind =
-    if all_mobile
-      'Mobile'
-    elsif any_mobile
-      'Combined'
-    else
-      'Desktop'
-    end
-  "Device Farm #{device_farm_kind} #{test_type}"
+  return test_type if eyes?
+  return 'Mobile UI' if $browsers.all? {|b| mobile_browser?(b)}
+  "#{$browsers.map {|b| b['name']}.uniq.sort.join(' + ')} UI"
 end
 
 def eyes?
@@ -500,17 +494,12 @@ end
 # cross-page navigation row at the top of each status page. Each entry's
 # :filename must equal the value status_page_filename returns when that
 # page is being generated, so the active entry can be rendered unlinked.
-# For now, the UI Test Status page will render this as:
-#
-#   UI Test Status | <a href="...">Eyes Test Status</a>
-#
-# TODO(device-farm-launch): rename the UI entry's filename to
-# 'test_status_UI_sauce_labs.html', update status_page_filename below to
-# match for the SauceLabs branch, and add device farm desktop/mobile
-# entries.
+# The four entries are the four suites rake test:ui_all dispatches.
 STATUS_PAGES_NAVIGATION = [
-  {filename: 'test_status_UI.html',   display_name: 'UI Test Status'},
-  {filename: 'test_status_Eyes.html', display_name: 'Eyes Test Status'},
+  {filename: 'test_status_Safari_UI.html',         display_name: 'Safari UI'},
+  {filename: 'test_status_Chrome_Firefox_UI.html', display_name: 'Chrome + Firefox UI'},
+  {filename: 'test_status_Mobile_UI.html',         display_name: 'Mobile UI'},
+  {filename: 'test_status_Eyes.html',              display_name: 'Eyes'},
 ].freeze
 
 def status_pages_navigation
@@ -525,24 +514,15 @@ def status_pages_navigation
   end
 end
 
+# Status page filename per suite. Eyes keeps a stable name across
+# providers (we only run eyes on SauceLabs). Other suites name their
+# page after the suite label so the four ui_all suites
+# (Safari UI, Chrome + Firefox UI, Mobile UI, Eyes) get unique pages
+# and don't overwrite each other in the shared S3 prefix or in
+# dashboard/public/ui_test/.
 def status_page_filename
-  # SauceLabs runs keep the unqualified name. Device Farm runs are
-  # split into desktop/mobile/combined buckets so a desktop and a
-  # mobile run (which use separate concurrency quotas and are
-  # typically invoked as separate runner.rb commands) don't overwrite
-  # each other's status page in the shared S3 prefix.
-  return "test_status_#{test_type}.html" unless $options.device_farm
-  any_mobile = $browsers.any? {|b| mobile_browser?(b)}
-  all_mobile = $browsers.all? {|b| mobile_browser?(b)}
-  device_farm_kind =
-    if all_mobile
-      'mobile'
-    elsif any_mobile
-      'combined'
-    else
-      'desktop'
-    end
-  "test_status_#{test_type}_device_farm_#{device_farm_kind}.html"
+  return 'test_status_Eyes.html' if eyes?
+  "test_status_#{test_type_label.tr(' +', '_').squeeze('_')}.html"
 end
 
 # Returns a permalink URL for the Test Status Page, assuming we can upload it to S3
@@ -597,10 +577,7 @@ end
 def test_run_identifier(browser, feature)
   feature_name = feature.gsub(/.*features\//, '').gsub('.feature', '').tr('/', '_')
   browser_name = browser_name_or_unknown(browser)
-  # _df distinguishes Device Farm output from concurrent SauceLabs runs
-  # against the same browser+feature during the migration. Drop after we
-  # cut over fully to DF (or to a SauceLabs-only/DF-only steady state).
-  "#{browser_name}_#{feature_name}" + (eyes? ? '_eyes' : '') + ($options.device_farm ? '_df' : '')
+  "#{browser_name}_#{feature_name}" + (eyes? ? '_eyes' : '')
 end
 
 def browser_name_or_unknown(browser)
