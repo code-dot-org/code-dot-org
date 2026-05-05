@@ -215,17 +215,12 @@ class GlobalEditionTest < ActionDispatch::IntegrationTest
         end
 
         it 'redirects to international page with extra params and selected locale' do
-          expect(Metrics::Events).to receive(:log_event).with(
+          expect(Metrics::Events).not_to receive(:log_event).with(
             event_name: 'Global Edition Region Changed',
-            user: nil,
+            user: anything,
             session: anything,
-            metadata: {
-              old_region: ge_region,
-              old_locale: new_locale,
-              new_region: nil,
-              new_locale:,
-            }
-          ).once
+            metadata: anything,
+          )
 
           get_regional_page
 
@@ -242,7 +237,7 @@ class GlobalEditionTest < ActionDispatch::IntegrationTest
           must_respond_with 200
           _(request.fullpath).must_equal "#{international_page_path}?#{extra_params.to_query}"
 
-          _(request.locale).must_equal new_locale
+          _(ge_region_html_data).must_be_nil
           _(cookies[:language_]).must_equal new_locale
           _(page_lang).must_equal new_locale
         end

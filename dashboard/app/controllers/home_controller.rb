@@ -31,7 +31,7 @@ class HomeController < ApplicationController
     if params[:locale]
       redirect_uri = URI(redirect_path)
       redirect_params = URI.decode_www_form(redirect_uri.query.to_s).to_h
-      redirect_params[VarnishEnvironment::LOCALE_PARAM_KEY] = params[:locale]
+      redirect_params[Middleware::I18n::LOCALE_PARAM_KEY] = params[:locale]
       # Query parameter for browser cache to be avoided and load new locale
       redirect_params['lang'] = params[:locale].split('|').first
       redirect_uri.query = URI.encode_www_form(redirect_params)

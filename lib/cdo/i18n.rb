@@ -78,16 +78,6 @@ module Cdo
         LOCALE_CONFIGS.dig(locale.to_s, :dir) || TEXT_DIRECTION_LTR
       end
 
-      def language_change_url(url, locale)
-        uri = URI.parse(url)
-
-        params = URI.decode_www_form(uri.query.to_s).to_h
-        params[VarnishEnvironment::LOCALE_PARAM_KEY] = locale
-        uri.query = URI.encode_www_form(params)
-
-        uri.to_s
-      end
-
       # @param cdo_language [CdoLanguage] CDO language record
       # @return [Boolean] whether the language is a debug language
       private def debug_language?(cdo_language)
