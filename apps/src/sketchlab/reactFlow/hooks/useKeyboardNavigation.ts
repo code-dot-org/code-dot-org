@@ -74,10 +74,9 @@ function resizeNodeByDelta(
 
 /**
  * Returns true if `target` is a context where text editing/typing is the
- * primary purpose — input, textarea, or contentEditable. We use this in
- * keyboard handlers to stay out of the user's way while they're typing.
+ * primary purpose — input, textarea, or contentEditable.
  */
-function isEditingTarget(target: HTMLElement): boolean {
+function isTargetEditable(target: HTMLElement): boolean {
   return (
     target.isContentEditable ||
     target.tagName === 'INPUT' ||
@@ -179,9 +178,7 @@ export function useKeyboardNavigation({
 
   // Remembers the edge most recently translated by an arrow keypress so
   // that subsequent presses can keep moving the same edge even if the
-  // mutation knocked DOM focus off the edge wrapper. Cleared whenever a
-  // non-arrow key is pressed (Tab, Escape, etc.) so unrelated key presses
-  // don't accidentally pick it up.
+  // mutation took DOM focus off the edge wrapper.
   const keyboardMovingEdgeRef = useRef<string | null>(null);
 
   const handleTabNavigation = useCallback(
@@ -331,9 +328,8 @@ export function useKeyboardNavigation({
   // Move a single line-anchor by delta. If the post-move handle position
   // lands within snap range of a real node's handle, attach the edge to
   // that handle directly instead of translating; the now-unreferenced
-  // anchor is cleaned up by the prune effect. Returns false (and does
-  // nothing) if the node isn't a lineAnchor or has no associated edge,
-  // letting the caller fall back to a generic translate.
+  // anchor is cleaned up by the prune effect. Returns false if the node
+  // isn't a lineAnchor or has no associated edge.
   const snapAnchorIfNearHandle = useCallback(
     (anchorId: string, deltaX: number, deltaY: number): boolean => {
       const anchorNode = getNode(anchorId);
@@ -343,20 +339,23 @@ export function useKeyboardNavigation({
       );
       if (!associatedEdge) return false;
       const isSourceSide = associatedEdge.source === anchorId;
-      const side: 'source' | 'target' = isSourceSide ? 'source' : 'target';
+      const side = isSourceSide ? 'source' : 'target';
 
-      const handleBefore = anchorHandleFlowPosition(anchorNode.position, side);
-      const postMoveHandleFlow: XYPosition = {
-        x: handleBefore.x + deltaX,
-        y: handleBefore.y + deltaY,
+      const positionBeforeMove = anchorHandleFlowPosition(
+        anchorNode.position,
+        side
+      );
+      const positionAfterMove = {
+        x: positionBeforeMove.x + deltaX,
+        y: positionBeforeMove.y + deltaY,
       };
-      const snap = findNearestHandle(
-        flowToScreenPosition(postMoveHandleFlow),
+      const snapTarget = findNearestHandle(
+        flowToScreenPosition(positionAfterMove),
         anchorId,
         side,
         KEYBOARD_MOVE_STEP * getZoom()
       );
-      if (!snap) return false;
+      if (!snapTarget) return false;
 
       setEdges(currentEdges =>
         currentEdges.map(currentEdge => {
@@ -364,20 +363,19 @@ export function useKeyboardNavigation({
           return isSourceSide
             ? {
                 ...currentEdge,
-                source: snap.nodeId,
-                sourceHandle: snap.handleId ?? undefined,
+                source: snapTarget.nodeId,
+                sourceHandle: snapTarget.handleId ?? undefined,
               }
             : {
                 ...currentEdge,
-                target: snap.nodeId,
-                targetHandle: snap.handleId ?? undefined,
+                target: snapTarget.nodeId,
+                targetHandle: snapTarget.handleId ?? undefined,
               };
         })
       );
-      // The anchor we were focused on is about to be orphan-pruned; move
+      // The anchor we were focused on is about to be pruned; move
       // focus to the edge it terminated so the user stays on a useful
-      // target. Deferred so the focus call runs after React commits and
-      // the new edge wrapper exists in the DOM.
+      // target. Deferred so we update focus after re-render.
       setTimeout(() => focusEntry({type: 'edge', id: associatedEdge.id}), 0);
       return true;
     },
@@ -392,10 +390,6 @@ export function useKeyboardNavigation({
       if (!deltaX && !deltaY) return false;
       event.preventDefault();
       event.stopPropagation();
-      // For a focused line anchor, try snap-on-step first. If a real
-      // handle is in range, the edge attaches there and the anchor is
-      // pruned. Otherwise (or for any non-anchor node) fall through to
-      // the plain translate.
       if (snapAnchorIfNearHandle(focusedNodeId, deltaX, deltaY)) {
         return true;
       }
@@ -407,11 +401,11 @@ export function useKeyboardNavigation({
     [setNodes, snapAnchorIfNearHandle]
   );
 
-  // Per side: figure out the post-move handle position, check if it would
-  // land on another node's handle (snap), and otherwise either translate
-  // the existing anchor or detach the real-node end into a fresh anchor at
-  // the post-move position. Snapping skips both the anchor creation and
-  // the translate; any orphaned anchor is cleaned up by the prune effect.
+  // On each end ('side') of the edge, figure out the post-move handle position
+  // and determine if it would snap onto a real node's handle. If so,
+  // snap it there. Otherwise, move the existing anchor if it already has one,
+  // or detach the previously-attached node and create a new anchor.
+  // Any orphaned anchor is cleaned up by the prune effect.
   // Returns true when at least one mutation was applied.
   const moveEdgeByDelta = useCallback(
     (edgeId: string, deltaX: number, deltaY: number): boolean => {
@@ -422,64 +416,61 @@ export function useKeyboardNavigation({
       const newAnchors: SketchlabReactFlowNode[] = [];
       const edgePatch: Partial<SketchlabReactFlowEdge> = {};
 
-      const collectSide = (side: 'source' | 'target') => {
+      const handleMoveSide = (side: 'source' | 'target') => {
         const endpointId = focusedEdge[side];
         const endpointNode = getNode(endpointId);
         if (!endpointNode) return;
         const isAnchor = endpointNode.type === 'lineAnchor';
 
-        let postMoveHandleFlow: XYPosition;
+        // Find the position of the current handle for this side.
+        let handlePosition: XYPosition | null;
         if (isAnchor) {
-          const handleBefore = anchorHandleFlowPosition(
+          handlePosition = anchorHandleFlowPosition(
             endpointNode.position,
             side
           );
-          postMoveHandleFlow = {
-            x: handleBefore.x + deltaX,
-            y: handleBefore.y + deltaY,
-          };
         } else {
-          const handlePos = getHandleFlowPosition(
+          handlePosition = getHandleFlowPosition(
             endpointId,
             side === 'source'
               ? focusedEdge.sourceHandle
               : focusedEdge.targetHandle,
             screenToFlowPosition
           );
-          if (!handlePos) return;
-          postMoveHandleFlow = {
-            x: handlePos.x + deltaX,
-            y: handlePos.y + deltaY,
-          };
         }
+        if (!handlePosition) return false;
 
-        // Keyboard snap radius equals the keyboard step (in flow units),
-        // converted to screen px via zoom. Snap radius must equal step to avoid
-        // the handle getting trapped by the snap radius.
-        const snap = findNearestHandle(
-          flowToScreenPosition(postMoveHandleFlow),
+        const postMovePosition = {
+          x: handlePosition.x + deltaX,
+          y: handlePosition.y + deltaY,
+        };
+
+        // If there is a snap target in the radius of the new position, snap to it.
+        const snapTarget = findNearestHandle(
+          flowToScreenPosition(postMovePosition),
           endpointId,
           side,
           KEYBOARD_MOVE_STEP * getZoom()
         );
-        if (snap) {
+        if (snapTarget) {
           if (side === 'source') {
-            edgePatch.source = snap.nodeId;
-            edgePatch.sourceHandle = snap.handleId ?? undefined;
+            edgePatch.source = snapTarget.nodeId;
+            edgePatch.sourceHandle = snapTarget.handleId ?? undefined;
           } else {
-            edgePatch.target = snap.nodeId;
-            edgePatch.targetHandle = snap.handleId ?? undefined;
+            edgePatch.target = snapTarget.nodeId;
+            edgePatch.targetHandle = snapTarget.handleId ?? undefined;
           }
           return;
         }
 
+        // If it's already an anchor, move it.
         if (isAnchor) {
           anchorIdsToMove.push(endpointId);
           return;
         }
-        // Detach: spawn an anchor already at the post-move position so we
-        // don't need to translate it afterwards.
-        const anchor = createLineAnchorAtHandle(postMoveHandleFlow, side);
+
+        // Otherwise, spawn an anchor at the post-move position.
+        const anchor = createLineAnchorAtHandle(postMovePosition, side);
         newAnchors.push(anchor);
         if (side === 'source') {
           edgePatch.source = anchor.id;
@@ -489,8 +480,8 @@ export function useKeyboardNavigation({
           edgePatch.targetHandle = 'line-anchor-target';
         }
       };
-      collectSide('source');
-      collectSide('target');
+      handleMoveSide('source');
+      handleMoveSide('target');
 
       const didAnything =
         anchorIdsToMove.length > 0 ||
@@ -498,6 +489,7 @@ export function useKeyboardNavigation({
         Object.keys(edgePatch).length > 0;
       if (!didAnything) return false;
 
+      // If we made changes during the move, apply them.
       if (newAnchors.length > 0) {
         setNodes(currentNodes => [...currentNodes, ...newAnchors]);
       }
@@ -515,11 +507,7 @@ export function useKeyboardNavigation({
           moveNodesByDelta(currentNodes, anchorIdsToMove, deltaX, deltaY)
         );
       }
-      // The mutation can knock focus off the edge wrapper. Remember which
-      // edge we just moved so the next arrow keypress can fall back to it
-      // when DOM focus has drifted to body, and restore focus on the next
-      // tick so the visible focus outline comes back. The window-level
-      // listener picks up arrows even when this refocus doesn't take.
+      // The mutation can remove focus on the edge wrapper, reapply it here.
       keyboardMovingEdgeRef.current = edgeId;
       setTimeout(() => focusEntry({type: 'edge', id: edgeId}), 0);
       return true;
@@ -611,35 +599,50 @@ export function useKeyboardNavigation({
     return true;
   }, []);
 
+  const handleArrowMove = useCallback(
+    (
+      keyContext: KeyContext,
+      arrowDelta: {deltaX: number; deltaY: number}
+    ): boolean => {
+      const {deltaX, deltaY} = arrowDelta;
+      if (!deltaX && !deltaY) return false;
+      // When DOM focus has drifted off the canvas mid-move,
+      // fall back to the edge we were last translating.
+      const fallbackEdgeId = !keyContext.focusedEntry
+        ? keyboardMovingEdgeRef.current ?? undefined
+        : undefined;
+      const effectiveContext: KeyContext = {
+        ...keyContext,
+        focusedEdgeId: keyContext.focusedEdgeId ?? fallbackEdgeId,
+      };
+      if (handleMoveNode(effectiveContext)) return true;
+      if (handleMoveEdge(effectiveContext)) return true;
+      return false;
+    },
+    [handleMoveNode, handleMoveEdge]
+  );
+
   const handleKeyDown = useCallback(
     (event: React.KeyboardEvent) => {
       const target = event.target as HTMLElement;
-      // Don't intercept non-Tab keys when the user is editing text content.
-      if (isEditingTarget(target) && event.key !== 'Tab') {
+      // Don't intercept non-Tab keys when the user is on an editable field.
+      if (isTargetEditable(target) && event.key !== 'Tab') {
         return;
       }
 
       const focusedEntry = getEntryFromDOM(target);
+      // Clear the moving-edge ref on any non-arrow key.
       const arrowDelta = getArrowDelta(event.key);
-      const isArrowKey = !!arrowDelta.deltaX || !!arrowDelta.deltaY;
-      // Clear the moving-edge ref on any non-arrow key so Tab/Escape/etc.
-      // don't get hijacked by it later.
-      if (!isArrowKey) {
+      if (!arrowDelta.deltaX && !arrowDelta.deltaY) {
         keyboardMovingEdgeRef.current = null;
       }
-      // When DOM focus has drifted off a node/edge but the user is still
-      // arrow-keying, fall back to the edge we were just moving.
-      const fallbackEdgeId =
-        isArrowKey && !focusedEntry
-          ? keyboardMovingEdgeRef.current ?? undefined
-          : undefined;
       const keyContext: KeyContext = {
         event,
         focusedEntry,
         focusedNodeId:
           focusedEntry?.type === 'node' ? focusedEntry.id : undefined,
         focusedEdgeId:
-          focusedEntry?.type === 'edge' ? focusedEntry.id : fallbackEdgeId,
+          focusedEntry?.type === 'edge' ? focusedEntry.id : undefined,
       };
 
       // Tab navigation works in both read-only and edit mode.
@@ -673,8 +676,7 @@ export function useKeyboardNavigation({
         return;
       }
 
-      if (handleMoveNode(keyContext)) return;
-      if (handleMoveEdge(keyContext)) return;
+      if (handleArrowMove(keyContext, arrowDelta)) return;
       if (handleResize(keyContext)) return;
       handleEnterEdit(keyContext);
     },
@@ -690,8 +692,7 @@ export function useKeyboardNavigation({
       handleOpenToolbar,
       handleConnectToggle,
       handleConnectComplete,
-      handleMoveNode,
-      handleMoveEdge,
+      handleArrowMove,
       handleResize,
       handleEnterEdit,
     ]
@@ -712,7 +713,7 @@ export function useKeyboardNavigation({
       const {deltaX, deltaY} = getArrowDelta(nativeEvent.key);
       if (!deltaX && !deltaY) return;
       const target = nativeEvent.target as HTMLElement;
-      if (isEditingTarget(target)) return;
+      if (isTargetEditable(target)) return;
       if (moveEdgeByDelta(edgeId, deltaX, deltaY)) {
         nativeEvent.preventDefault();
       }

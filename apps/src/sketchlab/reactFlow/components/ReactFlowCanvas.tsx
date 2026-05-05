@@ -35,10 +35,6 @@ import {
   type ToolbarTarget,
 } from '../context';
 import LineEdgeToolbar from '../elementToolbars/LineEdgeToolbar';
-import {
-  DEFAULT_LINE_WIDTH,
-  DEFAULT_STROKE_COLOR,
-} from '../elementToolbars/toolbarPalettes';
 import {useCopyPaste} from '../hooks/useCopyPaste';
 import {useFocusManagement} from '../hooks/useFocusManagement';
 import {useKeyboardNavigation} from '../hooks/useKeyboardNavigation';
@@ -432,22 +428,21 @@ export default function ReactFlowCanvas({
     []
   );
 
-  // Cleanup orphaned line anchors after any edge mutation. An anchor only
-  // exists to terminate a line; if no edge references it (because the line
-  // was deleted, or the endpoint was reconnected to a real node), it should
-  // disappear too. Using an effect keeps this in one place rather than
-  // sprinkling cleanup through every edge-mutating handler.
+  // Cleanup orphaned line anchors after any edge mutation. Anchors could be orphaned
+  // if a line is deleted or if it was connected to a node.
   useEffect(() => {
     setNodes(currentNodes => {
-      const referenced = new Set<string>();
+      const referencedNodes = new Set<string>();
       edges.forEach(edge => {
-        referenced.add(edge.source);
-        referenced.add(edge.target);
+        referencedNodes.add(edge.source);
+        referencedNodes.add(edge.target);
       });
-      const filtered = currentNodes.filter(
-        node => node.type !== 'lineAnchor' || referenced.has(node.id)
+      const activeNodes = currentNodes.filter(
+        node => node.type !== 'lineAnchor' || referencedNodes.has(node.id)
       );
-      return filtered.length === currentNodes.length ? currentNodes : filtered;
+      return activeNodes.length === currentNodes.length
+        ? currentNodes
+        : activeNodes;
     });
   }, [edges, setNodes]);
 

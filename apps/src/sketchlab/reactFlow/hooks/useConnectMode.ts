@@ -102,8 +102,6 @@ export function useConnectMode({
         if (!canCreateConnection(connectingFrom, targetNodeId, nodes)) {
           return currentEdges;
         }
-        // Match the line-tool data shape so the line toolbar, reconnect,
-        // and edge-body drag all apply to keyboard-created connections too.
         return addEdge(
           {
             source: connectingFrom,
