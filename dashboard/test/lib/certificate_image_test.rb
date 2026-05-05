@@ -100,6 +100,16 @@ class CertificateImageTest < ActiveSupport::TestCase
     assert_equal '\\\\', CertificateImage.escape_image_magick_string('\\')
   end
 
+  def test_hoai_pl_course_returns_pl_certificate_type
+    unit = create(:script)
+    course = create(:single_unit_course, unit: unit, instructor_audience: 'facilitator', participant_audience: 'teacher')
+    cv = create(:course_version, content_root: course)
+    create(:course_offering, course_versions: [cv], key: unit.name, marketing_initiative: 'HOAI')
+    unit.reload
+
+    assert_equal CERTIFICATE_COURSE_TYPES[:PL], CertificateImage.course_type(unit.name)
+  end
+
   def test_hoc_course
     coursea = create(:script, name: "coursea-2021")
     coursea_course = create(:single_unit_course, unit: coursea, name: "coursea-2021", family_name: 'coursea', version_year: '2021')
