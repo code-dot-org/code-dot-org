@@ -20,32 +20,16 @@ default['cdo-otel-collector'] = {
   'apm_trace_sample_rate' => 0.1,
 
   # APM backend to forward telemetry to. Supported values:
-  #   'datadog'  - DataDog exporter (computes APM stats client-side; applies DD-specific processors).
-  #                Requires secret: <env>/cdo/datadog_api_key in AWS Secrets Manager.
-  #   'sentry'   - Sentry via standard OTLP/HTTP. No DD-specific processors applied.
+  #   'sentry'   - Sentry via standard OTLP/HTTP.
   #                Requires secret: <env>/cdo/sentry_auth_token in AWS Secrets Manager.
-  #   'splunk'   - Splunk Observability Cloud via OTLP/HTTP with realm-specific endpoints.
-  #                Requires secret: <env>/cdo/splunk_access_token in AWS Secrets Manager.
-  #                Note: logs pipeline is not supported for this backend (Splunk uses HEC, not OTLP).
   'apm_backend' => 'sentry',
 
   # Set to true to enable the logs pipeline (syslog + OTLP logs forwarded to the APM backend).
   # Disabled by default
   'enable_logs' => false,
 
-  # -- Datadog-specific -----------------------------------------------------------------
-  # DataDog site for the exporter (US1 is optimized for AWS operations).
-  # Find site at https://docs.datadoghq.com/getting_started/site/ under "DD_SITE parameter".
-  'datadog_site' => 'datadoghq.com',
-
   # -- Sentry-specific ------------------------------------------------------------------
   # OTLP/HTTP endpoint for Sentry. Construct from your project DSN found in Sentry under
   # Settings > Projects > <project> > Client Keys (DSN):
-  'sentry_otlp_endpoint' => '',
-
-  # -- Splunk Observability Cloud-specific ----------------------------------------------
-  # Splunk realm (e.g. us0, us1, eu0, ap0). Determines the ingest endpoint region.
-  # Find your realm in Splunk Observability Cloud under Settings > General Settings.
-  # Used to construct: https://ingest.<realm>.signalfx.com/{traces,metrics} endpoints.
-  'splunk_realm' => ''
+  'sentry_otlp_endpoint' => ''
 }

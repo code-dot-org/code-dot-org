@@ -4,7 +4,7 @@ This cookbook installs and configures the [OpenTelemetry Contrib Collector](http
 
 ## Overview
 
-The OTel Contrib Collector receives telemetry data (traces, metrics, logs) via OTLP and forwards it to a configurable APM backend. Supported backends are **Datadog**, **Sentry** (default), and **Splunk Observability Cloud**. The active backend is controlled by the `apm_backend` attribute.
+The OTel Contrib Collector receives telemetry data (traces, metrics, logs) via OTLP and forwards it to an APM backend. The active backend is controlled by the `apm_backend` attribute. Currently the only supported value is **Sentry**; other backends were evaluated and removed.
 
 ## Requirements
 
@@ -28,10 +28,8 @@ The following ports must be locally accessible:
 | `node['cdo-otel-collector']['otelcol_version']` | `0.147.0` | OTel Contrib version to install |
 | `node['cdo-otel-collector']['otelcol_deb_sha256']` | *(see attributes/default.rb)* | SHA256 of the linux_amd64 .deb (must match the version) |
 | `node['cdo-otel-collector']['apm_trace_sample_rate']` | `0.1` | APM trace sampling percentage (float, 0.0-100.0). Hashes trace ID for consistent per-trace decisions — all spans in a trace are kept or dropped together. |
-| `node['cdo-otel-collector']['apm_backend']` | `'sentry'` | APM backend: `'datadog'`, `'sentry'`, or `'splunk'` |
-| `node['cdo-otel-collector']['datadog_site']` | `'datadoghq.com'` | **(Datadog)** DataDog site. See [DataDog site docs](https://docs.datadoghq.com/getting_started/site/). |
+| `node['cdo-otel-collector']['apm_backend']` | `'sentry'` | APM backend; only `'sentry'` is currently supported |
 | `node['cdo-otel-collector']['sentry_otlp_endpoint']` | `''` | **(Sentry)** OTLP/HTTP endpoint. Construct from your DSN: `https://o<org_id>.ingest.sentry.io/api/<project_id>/otlp/` |
-| `node['cdo-otel-collector']['splunk_realm']` | `''` | **(Splunk)** Observability Cloud realm (e.g. `us0`, `us1`, `eu0`). Found under Settings > General Settings. |
 
 When upgrading `otelcol_version`, update `otelcol_deb_sha256` to match the corresponding entry in the release's `otelcol-contrib_checksums.txt`.
 
@@ -41,9 +39,7 @@ Each backend requires its credential to be stored in AWS Secrets Manager under `
 
 | Backend | Secret name | Notes |
 |---|---|---|
-| `datadog` | `datadog_api_key` | Applies Datadog-specific processors for error tracking and resource naming |
 | `sentry` | `sentry_auth_token` | Standard OTLP/HTTP; metrics pipeline disabled (Sentry does not ingest OTLP metrics) |
-| `splunk` | `splunk_access_token` | Standard OTLP/HTTP with per-signal realm endpoints; logs pipeline disabled (Splunk uses HEC, not OTLP, for logs) |
 
 ## Usage
 
@@ -135,7 +131,5 @@ sudo otelcol-contrib validate --config /etc/otelcol-contrib/config.yaml
 
 - [OpenTelemetry Collector Installation](https://opentelemetry.io/docs/collector/installation/)
 - [OTel Contrib Releases](https://github.com/open-telemetry/opentelemetry-collector-releases/releases)
-- [DataDog Exporter](https://github.com/open-telemetry/opentelemetry-collector-contrib/tree/main/exporter/datadogexporter)
 - [Sentry OpenTelemetry Integration](https://docs.sentry.io/product/sentry-basics/integrate-backend/opentelemetry/)
-- [Splunk Observability Cloud OTLP/HTTP Exporter](https://help.splunk.com/en/splunk-observability-cloud/manage-data/splunk-distribution-of-the-opentelemetry-collector/get-started-with-the-splunk-distribution-of-the-opentelemetry-collector/collector-components/exporters/otlphttp-exporter)
 - [Chef Cookbook Documentation](https://docs.chef.io/cookbooks/)
