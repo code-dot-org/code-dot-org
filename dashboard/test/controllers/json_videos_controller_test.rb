@@ -48,10 +48,10 @@ class JSONVideosControllerTest < ActionController::TestCase
   test_user_gets_response_for :search, user: :teacher, response: :forbidden
   test_user_gets_response_for :search, user: :levelbuilder, response: :success
 
-  test_user_gets_response_for :create, method: :post, params: -> {{key: 'new-unique-video', s3_uri: 's3://b/k.json', json_schema_version: 1, audience: 'student'}}, user: nil, response: :redirect, redirected_to: '/users/sign_in'
-  test_user_gets_response_for :create, method: :post, params: -> {{key: 'new-unique-video', s3_uri: 's3://b/k.json', json_schema_version: 1, audience: 'student'}}, user: :student, response: :forbidden
-  test_user_gets_response_for :create, method: :post, params: -> {{key: 'new-unique-video', s3_uri: 's3://b/k.json', json_schema_version: 1, audience: 'student'}}, user: :teacher, response: :forbidden
-  test_user_gets_response_for :create, method: :post, params: -> {{key: 'new-unique-video', s3_uri: 's3://b/k.json', json_schema_version: 1, audience: 'student'}}, user: :levelbuilder, response: :success
+  test_user_gets_response_for :create, method: :post, params: -> {{key: 'new-unique-video', s3_uri: 's3://b/k.json', json_schema_version: 1, audience: 'Student'}}, user: nil, response: :redirect, redirected_to: '/users/sign_in'
+  test_user_gets_response_for :create, method: :post, params: -> {{key: 'new-unique-video', s3_uri: 's3://b/k.json', json_schema_version: 1, audience: 'Student'}}, user: :student, response: :forbidden
+  test_user_gets_response_for :create, method: :post, params: -> {{key: 'new-unique-video', s3_uri: 's3://b/k.json', json_schema_version: 1, audience: 'Student'}}, user: :teacher, response: :forbidden
+  test_user_gets_response_for :create, method: :post, params: -> {{key: 'new-unique-video', s3_uri: 's3://b/k.json', json_schema_version: 1, audience: 'Student'}}, user: :levelbuilder, response: :success
 
   test 'search returns videos matching the query' do
     sign_in create(:levelbuilder)
@@ -79,7 +79,7 @@ class JSONVideosControllerTest < ActionController::TestCase
   test 'create creates a new json video and returns its summary' do
     sign_in create(:levelbuilder)
 
-    post :create, params: {key: 'brand-new-video', s3_uri: 's3://my-bucket/video.json', json_schema_version: 1, audience: 'student', description: 'A test video'}
+    post :create, params: {key: 'brand-new-video', s3_uri: 's3://my-bucket/video.json', json_schema_version: 1, audience: 'Student', description: 'A test video'}
     assert_response :ok
 
     video = JSONVideo.find_by!(key: 'brand-new-video')
@@ -107,7 +107,7 @@ class JSONVideosControllerTest < ActionController::TestCase
       key: 'exemplar-video',
       s3_uri: 's3://b/v.json',
       json_schema_version: 1,
-      audience: 'student',
+      audience: 'Student',
       jit_pl_exemplar_id: exemplar.id
     }
     assert_response :ok
@@ -125,7 +125,7 @@ class JSONVideosControllerTest < ActionController::TestCase
       key: 'misconception-video',
       s3_uri: 's3://b/v.json',
       json_schema_version: 1,
-      audience: 'student',
+      audience: 'Student',
       jit_pl_misconception_id: misconception.id
     }
     assert_response :ok
@@ -142,7 +142,7 @@ class JSONVideosControllerTest < ActionController::TestCase
       key: 'concept-video',
       s3_uri: 's3://b/v.json',
       json_schema_version: 1,
-      audience: 'student',
+      audience: 'Student',
       jit_pl_concept_id: concept.id
     }
     assert_response :ok

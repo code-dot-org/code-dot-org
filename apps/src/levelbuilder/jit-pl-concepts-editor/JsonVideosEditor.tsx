@@ -105,7 +105,7 @@ const JsonVideosEditor: React.FC<Props> = ({
 
   return (
     <div>
-      <div style={{marginBottom: 8}}>
+      <div className={moduleStyles.videoSearchWrapper}>
         <strong>Select a video to add</strong>
         <SearchBox
           onSearchSelect={onSearchSelect}
@@ -114,24 +114,22 @@ const JsonVideosEditor: React.FC<Props> = ({
         />
       </div>
       {jsonVideos.length > 0 && (
-        <table
-          style={{width: '100%', borderCollapse: 'collapse', marginBottom: 8}}
-        >
+        <table className={moduleStyles.videoTable}>
           <thead>
             <tr>
-              <th style={thStyle}>Key</th>
-              <th style={thStyle}>Description</th>
-              <th style={thStyle}>Audience</th>
-              <th style={{...thStyle, width: '8%'}}>Actions</th>
+              <th className={moduleStyles.videoTh}>Key</th>
+              <th className={moduleStyles.videoTh}>Description</th>
+              <th className={moduleStyles.videoTh}>Audience</th>
+              <th className={moduleStyles.videoThActions}>Actions</th>
             </tr>
           </thead>
           <tbody>
             {jsonVideos.map(v => (
               <tr key={v.id}>
-                <td style={tdStyle}>{v.key}</td>
-                <td style={tdStyle}>{v.description || ''}</td>
-                <td style={tdStyle}>{v.audience || ''}</td>
-                <td style={tdStyle}>
+                <td className={moduleStyles.videoTd}>{v.key}</td>
+                <td className={moduleStyles.videoTd}>{v.description || ''}</td>
+                <td className={moduleStyles.videoTd}>{v.audience || ''}</td>
+                <td className={moduleStyles.videoTd}>
                   <button
                     type="button"
                     onClick={() => handleRemove(v.id)}
@@ -215,19 +213,6 @@ const JsonVideosEditor: React.FC<Props> = ({
       )}
     </div>
   );
-};
-
-const thStyle: React.CSSProperties = {
-  textAlign: 'left',
-  padding: '4px 8px',
-  borderBottom: '1px solid #ddd',
-  background: '#f5f5f5',
-};
-
-const tdStyle: React.CSSProperties = {
-  padding: '4px 8px',
-  borderBottom: '1px solid #eee',
-  verticalAlign: 'middle',
 };
 
 export default JsonVideosEditor;

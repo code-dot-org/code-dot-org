@@ -12,18 +12,31 @@ class JSONVideoTest < ActiveSupport::TestCase
       description: 'A test video',
       s3_uri: 's3://bucket/test.json',
       json_schema_version: 1,
-      audience: 'student',
+      audience: 'Student',
     }.merge(overrides)
   end
 
+  test 'valid audiences are accepted' do
+    JSONVideo::AUDIENCES.each do |audience|
+      video = build(:json_video, audience: audience)
+      assert video.valid?, "Expected #{audience.inspect} to be valid"
+    end
+  end
+
+  test 'invalid audience is rejected' do
+    video = build(:json_video, audience: 'student')
+    assert_not video.valid?
+    assert_includes video.errors[:audience], 'is not included in the list'
+  end
+
   test 'summarize returns expected hash' do
-    video = create(:json_video, key: 'test-key', description: 'Test desc', audience: 'student')
+    video = create(:json_video, key: 'test-key', description: 'Test desc', audience: 'Student')
     summary = video.summarize
 
     assert_equal video.id, summary[:id]
     assert_equal 'test-key', summary[:key]
     assert_equal 'Test desc', summary[:description]
-    assert_equal 'student', summary[:audience]
+    assert_equal 'Student', summary[:audience]
   end
 
   test 'seed_record creates a new video' do
@@ -36,7 +49,7 @@ class JSONVideoTest < ActiveSupport::TestCase
     assert_equal 'A test video', video.description
     assert_equal 's3://bucket/test.json', video.s3_uri
     assert_equal 1, video.json_schema_version
-    assert_equal 'student', video.audience
+    assert_equal 'Student', video.audience
   end
 
   test 'seed_record updates an existing video' do
