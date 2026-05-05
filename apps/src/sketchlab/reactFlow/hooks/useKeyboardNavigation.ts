@@ -29,7 +29,7 @@ import {
 import {
   anchorHandleFlowPosition,
   attachEdgeToFreshAnchor,
-  endpointHandleFlowPosition,
+  resolveEdgeEndpoint,
 } from '../utils/lineAnchors';
 import {getNodeLabel} from '../utils/nodeLabel';
 
@@ -399,24 +399,24 @@ export function useKeyboardNavigation({
       const edgePatch: Partial<SketchlabReactFlowEdge> = {};
 
       const handleMoveSide = (side: 'source' | 'target') => {
-        const resolved = endpointHandleFlowPosition(
+        const endpoint = resolveEdgeEndpoint(
           focusedEdge,
           side,
           getNode,
           screenToFlowPosition
         );
-        if (!resolved) return;
-        const isAnchor = resolved.node.type === 'lineAnchor';
+        if (!endpoint) return;
+        const isAnchor = endpoint.node.type === 'lineAnchor';
 
         const postMovePosition = {
-          x: resolved.flowPosition.x + deltaX,
-          y: resolved.flowPosition.y + deltaY,
+          x: endpoint.flowPosition.x + deltaX,
+          y: endpoint.flowPosition.y + deltaY,
         };
 
         // If there is a snap target in the radius of the new position, snap to it.
         const snapTarget = findNearestHandleInRadius(
           flowToScreenPosition(postMovePosition),
-          resolved.node.id,
+          endpoint.node.id,
           side,
           KEYBOARD_MOVE_STEP * getZoom()
         );
@@ -430,7 +430,7 @@ export function useKeyboardNavigation({
 
         // If it's already an anchor, move it.
         if (isAnchor) {
-          anchorIdsToMove.push(resolved.node.id);
+          anchorIdsToMove.push(endpoint.node.id);
           return;
         }
 

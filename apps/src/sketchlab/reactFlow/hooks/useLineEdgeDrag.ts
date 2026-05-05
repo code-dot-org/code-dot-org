@@ -11,7 +11,7 @@ import {snapEdgeEndpointToHandle} from '../utils/handleSnap';
 import {
   anchorHandleFlowPosition,
   attachEdgeToFreshAnchor,
-  endpointHandleFlowPosition,
+  resolveEdgeEndpoint,
 } from '../utils/lineAnchors';
 
 interface DraggingAnchor {
@@ -185,21 +185,21 @@ export function useLineEdgeDrag({
       // Determine whether the given side terminates in an anchor or a real
       // node handle, and prepare the drag state accordingly.
       const planSide = (side: 'source' | 'target') => {
-        const resolved = endpointHandleFlowPosition(
+        const endpoint = resolveEdgeEndpoint(
           edge,
           side,
           getNode,
           screenToFlowPosition
         );
-        if (!resolved) return;
-        if (resolved.node.type === 'lineAnchor') {
+        if (!endpoint) return;
+        if (endpoint.node.type === 'lineAnchor') {
           anchors.push({
-            id: resolved.node.id,
+            id: endpoint.node.id,
             side,
-            startPosition: {...resolved.node.position},
+            startPosition: {...endpoint.node.position},
           });
         } else {
-          pendingDetaches.push({side, flowPosition: resolved.flowPosition});
+          pendingDetaches.push({side, flowPosition: endpoint.flowPosition});
         }
       };
       planSide('source');

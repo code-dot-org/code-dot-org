@@ -6,9 +6,6 @@ import {XYPosition} from '@xyflow/react';
 import type {SketchlabReactFlowEdge} from '@cdo/apps/lab2/types';
 
 // Builds the partial edge fields that point one side at a node+handle.
-// All endpoint mutations — snap results, fresh-anchor attachments,
-// reconnect drops — funnel through here so the source/target/handle
-// field naming convention lives in one place.
 export function endpointPatch(
   side: 'source' | 'target',
   nodeId: string,
@@ -139,9 +136,7 @@ export function snapEdgeEndpointToHandle({
 }
 
 // Snap a free-floating anchor onto a nearby real-node handle, if any.
-// Looks up which edge the anchor terminates and delegates to
-// snapEdgeEndpointToHandle. Returns the edge id when snapping happened
-// so the caller can move focus to it (the orphaned anchor will be pruned).
+// Returns the edge id when snapping occurred, null otherwise.
 export function snapAnchorIfNearby({
   anchorId,
   screenPoint,

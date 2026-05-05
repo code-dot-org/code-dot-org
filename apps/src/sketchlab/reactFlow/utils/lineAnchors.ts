@@ -10,9 +10,7 @@ import {LINE_ANCHOR_SIZE_PX} from '../constants';
 
 import {endpointPatch} from './handleSnap';
 
-// The Handle id rendered by LineAnchorNode for a given role. Lines attach
-// to anchors through these ids; reusing the helper keeps callers in sync
-// with the node's render.
+// The Handle id rendered by LineAnchorNode for a given role.
 export function lineAnchorHandleId(role: 'source' | 'target'): string {
   return `line-anchor-${role}`;
 }
@@ -64,9 +62,7 @@ export function anchorHandleFlowPosition(
 }
 
 // Spawns a fresh lineAnchor at `flowPosition` and returns the partial
-// edge fields that point one side of an edge at it. Used everywhere a
-// drag, keyboard move, or reconnect needs to break an edge endpoint
-// off a real node.
+// edge fields that point one side of an edge at it.
 export function attachEdgeToFreshAnchor(
   flowPosition: XYPosition,
   side: 'source' | 'target'
@@ -79,10 +75,9 @@ export function attachEdgeToFreshAnchor(
   return {anchor, edgePatch};
 }
 
-// Returns the current flow position of the given side's handle for an
-// edge, plus the endpoint node. Anchor endpoints are computed from the
-// node position; real-node endpoints fall back to a DOM lookup.
-export function endpointHandleFlowPosition(
+// Returns an object containing the current flow position of the
+// given side's handle for an edge and the endpoint node.
+export function resolveEdgeEndpoint(
   edge: SketchlabReactFlowEdge,
   side: 'source' | 'target',
   getNode: (id: string) => SketchlabReactFlowNode | undefined,
