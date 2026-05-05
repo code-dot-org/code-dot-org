@@ -25,28 +25,16 @@ const PageAction = makeEnum(
   'NoValidAmplitudeEventNameError'
 );
 
-const MAX_FIELD_LENGTH = 4095;
-
-// Names ending in "Error" or "Failed" are routed to Sentry's exception stream;
-// everything else lands on Sentry's structured log stream as info-level events.
-const isErrorAction = name => /(Error|Failed)$/.test(name);
-
-const truncateLongStrings = value => {
-  const attributes = {};
-  for (const prop in value) {
-    let v = value[prop];
-    if (typeof v === 'string' && v.length > MAX_FIELD_LENGTH) {
-      v = v.substring(0, MAX_FIELD_LENGTH);
-    }
-    attributes[prop] = v;
-  }
-  return attributes;
-};
-
 /**
- * Legacy facade for the New Relic browser agent. Routes page actions and
- * errors through the in-repo observability plugin (Sentry today). Existing
- * callers should keep working unchanged; new code should call into
+ * Legacy facade for the New Relic browser agent. Mirrors NR's split between
+ * `record_custom_event` (information attached to the page session, addPageAction
+ * here) and `noticeError` (the exception stream, logError here):
+ *
+ *   - addPageAction -> Observability.logger.info, regardless of name. Page
+ *     actions in NR were structured events, not exceptions.
+ *   - logError      -> Observability.recordError, the exception stream.
+ *
+ * Existing callers keep working unchanged; new code should call into
  * `@code-dot-org/core/plugins/observability` directly.
  */
 module.exports = {
@@ -76,13 +64,7 @@ module.exports = {
       return;
     }
 
-    const attributes = truncateLongStrings(value);
-
-    if (isErrorAction(actionName)) {
-      Observability.recordError(new Error(actionName), attributes);
-    } else {
-      Observability.logger.info(actionName, attributes);
-    }
+    Observability.logger.info(actionName, value);
   },
 
   logError(error) {
