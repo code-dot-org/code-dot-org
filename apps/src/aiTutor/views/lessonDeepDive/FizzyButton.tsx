@@ -9,7 +9,12 @@ interface FizzyButtonProps {
   className?: string;
 }
 
-const FizzyButton: FC<FizzyButtonProps> = ({onClick, ariaLabel, children, className}) => {
+const FizzyButton: FC<FizzyButtonProps> = ({
+  onClick,
+  ariaLabel,
+  children,
+  className,
+}) => {
   const buttonRef = useRef<HTMLButtonElement>(null);
   const intervalRef = useRef<ReturnType<typeof setInterval> | null>(null);
 

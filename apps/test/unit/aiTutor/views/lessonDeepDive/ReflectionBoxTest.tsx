@@ -25,6 +25,7 @@ const OBJECTIVES = [
 function renderReflectionBox(onSubmitComplete: jest.Mock = jest.fn()) {
   render(
     <ReflectionBox
+      unitLabel={'unit 1'}
       lessonId={LESSON_ID}
       objectives={OBJECTIVES}
       onSubmitComplete={onSubmitComplete}

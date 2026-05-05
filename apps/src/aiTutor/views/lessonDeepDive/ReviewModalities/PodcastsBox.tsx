@@ -68,7 +68,10 @@ const PodcastsBox: FC = () => {
 
   const skipBack = useCallback(() => {
     if (audioRef.current) {
-      audioRef.current.currentTime = Math.max(0, audioRef.current.currentTime - 10);
+      audioRef.current.currentTime = Math.max(
+        0,
+        audioRef.current.currentTime - 10
+      );
     }
   }, []);
 
@@ -97,7 +100,15 @@ const PodcastsBox: FC = () => {
   return (
     <div className={styles.container}>
       {/* no src — placeholder UI until podcast content is wired up */}
-      <audio ref={audioRef} />
+      <audio ref={audioRef}>
+        <track
+          kind="captions"
+          label="English captions"
+          src=""
+          srcLang="en"
+          default
+        />
+      </audio>
 
       <p className={styles.overline}>Podcast</p>
 
@@ -124,12 +135,16 @@ const PodcastsBox: FC = () => {
           className={styles.progressTrack}
           onClick={handleProgressClick}
           role="slider"
+          tabIndex={0}
           aria-label="Playback position"
           aria-valuenow={Math.round(currentTime)}
           aria-valuemin={0}
           aria-valuemax={Math.round(duration)}
         >
-          <div className={styles.progressFill} style={{width: `${progress}%`}} />
+          <div
+            className={styles.progressFill}
+            style={{width: `${progress}%`}}
+          />
         </div>
 
         <div className={styles.timestamps}>

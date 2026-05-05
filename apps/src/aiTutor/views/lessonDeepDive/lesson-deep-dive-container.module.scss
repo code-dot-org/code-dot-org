@@ -12,6 +12,21 @@ $purple: hsl(271deg 58% 65%);
   color: #fff;
 }
 
+.progressBar {
+  height: 4px;
+  width: 100%;
+  background: transparent;
+  flex-shrink: 0;
+  overflow: hidden;
+}
+
+.progressFill {
+  height: 100%;
+  background: #9657c7;
+  transition: width 0.4s ease;
+  min-width: 0;
+}
+
 .topNav {
   display: flex;
   align-items: center;

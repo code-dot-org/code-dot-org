@@ -1,3 +1,4 @@
+import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import React, {FC} from 'react';
 
 const styles: Record<string, React.CSSProperties> = {
@@ -18,20 +19,41 @@ const styles: Record<string, React.CSSProperties> = {
     maxWidth: '560px',
   },
   footer: {
-    fontSize: '0.95rem',
-    color: 'rgba(255,255,255,0.5)',
+    display: 'flex',
+    justifyContent: 'flex-end',
     marginTop: 'auto',
+  },
+  continueButton: {
+    display: 'inline-flex',
+    alignItems: 'center',
+    gap: '8px',
+    padding: '10px 16px',
+    border: 'none',
+    borderRadius: '4px',
+    background: '#9657c7',
+    color: '#fff',
+    fontSize: '1.25rem',
+    fontWeight: 600,
+    cursor: 'pointer',
+    textDecoration: 'none',
   },
 };
 
-const TutorSummaryBox: FC = () => (
+interface TutorSummaryBoxProps {
+  nextLessonUrl: string | null;
+}
+
+const TutorSummaryBox: FC<TutorSummaryBoxProps> = ({nextLessonUrl}) => (
   <div style={styles.container}>
-    <h2 style={styles.heading}>
-      Nice session. Here&apos;s where you ended up.
-    </h2>
-    <p style={styles.footer}>
-      Next time: you still have more objectives to explore.
-    </p>
+    <h2 style={styles.heading}>Awesome session. 🎉</h2>
+    {nextLessonUrl && (
+      <div style={styles.footer}>
+        <a href={nextLessonUrl} style={styles.continueButton}>
+          Next lesson
+          <FontAwesomeV6Icon iconName="arrow-right" />
+        </a>
+      </div>
+    )}
   </div>
 );
 

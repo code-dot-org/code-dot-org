@@ -16,6 +16,7 @@ import LessonReflection from './LessonReflection';
 import styles from './reflection.module.scss';
 
 interface ReflectionBoxProps {
+  unitLabel: string | null;
   lessonId: number;
   objectives: LessonDeepDiveData['objectives'];
   onSubmitComplete: (data: ReflectionData) => void;
@@ -24,6 +25,7 @@ interface ReflectionBoxProps {
 }
 
 const ReflectionBox: FC<ReflectionBoxProps> = ({
+  unitLabel,
   lessonId,
   objectives,
   onSubmitComplete,
@@ -87,7 +89,7 @@ const ReflectionBox: FC<ReflectionBoxProps> = ({
 
   return (
     <div className={styles.container}>
-      <p className={styles.sectionLabel}>How did it go?</p>
+      <p className={styles.sectionLabel}>{unitLabel}</p>
       <h2 className={styles.reflectionHeading}>How did it go?</h2>
       <p className={styles.reflectionSubheading}>
         Rate each objective honestly. This shapes what we focus on first.

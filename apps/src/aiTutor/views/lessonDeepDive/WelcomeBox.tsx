@@ -32,11 +32,7 @@ const WelcomeBox: FC<WelcomeBoxProps> = ({onNext}) => (
       </div>
     </div>
     {onNext && (
-      <button
-        type="button"
-        className={styles.letsGoButton}
-        onClick={onNext}
-      >
+      <button type="button" className={styles.letsGoButton} onClick={onNext}>
         {"Let's go"}
         <FontAwesomeV6Icon iconName={'arrow-right'} />
       </button>

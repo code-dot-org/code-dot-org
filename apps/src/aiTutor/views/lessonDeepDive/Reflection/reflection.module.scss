@@ -173,30 +173,32 @@ $purple: hsl(271deg 58% 65%);
 
 .submitButton {
   display: inline-flex;
+  width: 250px;
+  padding: 10px 16px;
+  justify-content: center;
   align-items: center;
   gap: 8px;
-  padding: 12px 24px;
+  margin-top: 25px;
+  background: var(--background-brand-purple-primary, #9657c7);
   border: none;
-  border-radius: 999px;
-  background: $purple;
+  border-radius: 4px;
   color: #fff;
   font-size: 1rem;
-  font-weight: 700;
+  font-weight: 600;
   cursor: pointer;
-  transition: background-color 0.15s ease;
-  margin-top: 8px;
+  transition: background-color 0.12s ease;
 
-  &:hover {
-    background: hsl(271deg 58% 55%);
+  &:hover:not(:disabled) {
+    background: var(--background-brand-purple-hover, #7d42ad);
   }
 
   &:disabled {
     opacity: 0.5;
-    cursor: not-allowed;
+    cursor: default;
   }
 
   &:focus-visible {
-    outline: 2px solid $purple;
-    outline-offset: 3px;
+    outline: 2px solid var(--background-brand-purple-focus, #a374d6);
+    outline-offset: 2px;
   }
 }

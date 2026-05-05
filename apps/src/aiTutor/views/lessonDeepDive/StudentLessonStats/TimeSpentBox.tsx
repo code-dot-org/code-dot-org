@@ -9,7 +9,10 @@ interface TimeSpentBoxProps {
   timeSpentSeconds: number;
 }
 
-const TimeSpentBox: FC<TimeSpentBoxProps> = ({lessonName, timeSpentSeconds}) => {
+const TimeSpentBox: FC<TimeSpentBoxProps> = ({
+  lessonName,
+  timeSpentSeconds,
+}) => {
   const totalMinutes = Math.round(timeSpentSeconds / 60);
   const [displayMinutes, setDisplayMinutes] = useState(0);
 

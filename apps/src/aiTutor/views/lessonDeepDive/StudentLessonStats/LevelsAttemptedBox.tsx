@@ -20,7 +20,9 @@ const LevelsAttemptedBox: FC<LevelsAttemptedBoxProps> = ({
     >
       <div className={styles.bigNumber} />
       <p className={styles.statHeading}>levels attempted</p>
-      <p className={styles.statSubtitle}>out of {levelsTotal} in today&apos;s lesson</p>
+      <p className={styles.statSubtitle}>
+        out of {levelsTotal} in today&apos;s lesson
+      </p>
     </div>
   </div>
 );

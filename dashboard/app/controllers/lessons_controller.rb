@@ -101,6 +101,13 @@ class LessonsController < ApplicationController
     @lesson = script.lessons.find do |l|
       l.has_lesson_plan && l.relative_position == params[:lesson_position].to_i
     end
+    unit_group_unit = unit_context[:unit_group_unit]
+    unit_label = unit_group_unit ? "Unit #{unit_group_unit.position}" : nil
+    lessons_with_plans = script.lessons.select(&:has_lesson_plan).sort_by(&:relative_position)
+    next_lesson = lessons_with_plans.find {|l| l.relative_position > @lesson.relative_position}
+    next_lesson_first_level = next_lesson&.script_levels&.first
+    next_lesson_url = next_lesson_first_level &&
+      build_script_level_path(next_lesson_first_level, unit_group_unit: unit_group_unit)
     json_videos = JSONVideo.joins(:objectives).where(objectives: {lesson_id: @lesson.id}).distinct
     @lesson_deep_dive_data = {
       lessonId: @lesson.id,
@@ -113,7 +120,9 @@ class LessonsController < ApplicationController
       progressCounts: lesson_progress_status(@lesson.id, current_user&.id).transform_keys do |k|
         k.to_s.camelize(:lower).to_sym
       end,
-      timeSpentSeconds: lesson_time_spent(@lesson.id, current_user&.id)
+      timeSpentSeconds: lesson_time_spent(@lesson.id, current_user&.id),
+      nextLessonUrl: next_lesson_url,
+      unitLabel: unit_label
     }
   end
 

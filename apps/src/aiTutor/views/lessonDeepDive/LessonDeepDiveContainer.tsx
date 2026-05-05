@@ -2,6 +2,7 @@ import {createTheme, ThemeProvider} from '@mui/material/styles';
 import React, {FC, useCallback, useState} from 'react';
 
 import experiments from '@cdo/apps/util/experiments';
+import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 const darkTheme = createTheme({
   palette: {
@@ -24,6 +25,7 @@ const darkTheme = createTheme({
 import {LessonObjectiveReflectionValues} from '@cdo/generated-scripts/sharedConstants';
 
 import FizzyButton from './FizzyButton';
+import PersonalizedWelcomeBox from './PersonalizedWelcomeBox';
 import PrePracticeBox from './PreReviewBox';
 import PreSkillsCheck from './PreSkillsCheck';
 import ReflectionBox from './Reflection/ReflectionBox';
@@ -40,6 +42,7 @@ import styles from './lesson-deep-dive-container.module.scss';
 
 const BOX_IDS = [
   'welcome',
+  'personalized-welcome',
   'levels-attempted',
   'time-spent',
   'validated-levels',
@@ -61,6 +64,9 @@ const LessonDeepDiveContainer: FC<LessonDeepDiveContainerProps> = ({
   const [currentIndex, setCurrentIndex] = useState(0);
   const [reflectionData, setReflectionData] = useState<ReflectionData | null>(
     null
+  );
+  const displayName = useAppSelector(
+    state => state.currentUser.displayName as string | undefined
   );
 
   const goToNext = useCallback(() => {
@@ -106,6 +112,14 @@ const LessonDeepDiveContainer: FC<LessonDeepDiveContainerProps> = ({
     switch (BOX_IDS[currentIndex]) {
       case 'welcome':
         return <WelcomeBox onNext={goToNext} />;
+      case 'personalized-welcome':
+        return (
+          <PersonalizedWelcomeBox
+            lessonName={lessonDeepDiveData.lessonName}
+            unitLabel={lessonDeepDiveData.unitLabel}
+            displayName={displayName}
+          />
+        );
       case 'levels-attempted':
         return (
           <LevelsAttemptedBox
@@ -142,6 +156,7 @@ const LessonDeepDiveContainer: FC<LessonDeepDiveContainerProps> = ({
         return (
           <ReflectionBox
             lessonId={lessonDeepDiveData.lessonId}
+            unitLabel={lessonDeepDiveData.unitLabel}
             objectives={lessonDeepDiveData.objectives}
             onSubmitComplete={handleReflectionComplete}
             onNext={goToNext}
@@ -182,16 +197,27 @@ const LessonDeepDiveContainer: FC<LessonDeepDiveContainerProps> = ({
             vocabulary={lessonDeepDiveData.vocabulary}
             objectives={lessonDeepDiveData.objectives}
             reflectionData={reflectionData}
+            onComplete={goToNext}
           />
         );
       case 'tutor-summary':
-        return <TutorSummaryBox />;
+        return (
+          <TutorSummaryBox nextLessonUrl={lessonDeepDiveData.nextLessonUrl} />
+        );
     }
   };
 
   return (
     <ThemeProvider theme={darkTheme}>
       <div className={styles.container} data-theme={'Dark'}>
+        <div className={styles.progressBar} aria-hidden="true">
+          <div
+            className={styles.progressFill}
+            style={{
+              width: `${(currentIndex / (BOX_IDS.length - 1)) * 100}%`,
+            }}
+          />
+        </div>
         <div className={styles.topNav}>
           <span className={styles.tutorWordmark}>Tutor+</span>
           {!isFirst && (

@@ -53,6 +53,7 @@ interface SkillsCheckProps {
   vocabulary: LessonDeepDiveData['vocabulary'];
   objectives: LessonDeepDiveData['objectives'];
   reflectionData: ReflectionData | null;
+  onComplete: () => void;
 }
 
 const SkillsCheck: FC<SkillsCheckProps> = ({
@@ -62,6 +63,7 @@ const SkillsCheck: FC<SkillsCheckProps> = ({
   vocabulary,
   objectives,
   reflectionData,
+  onComplete,
 }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isSubmitted, setIsSubmitted] = useState(false);
@@ -218,6 +220,15 @@ const SkillsCheck: FC<SkillsCheckProps> = ({
           >
             Next question
             <FontAwesomeV6Icon iconName="arrow-right" />
+          </button>
+        )}
+        {isSubmitted && isLast && (
+          <button
+            type="button"
+            className={styles.submitButton}
+            onClick={onComplete}
+          >
+            Continue
           </button>
         )}
       </footer>

@@ -97,40 +97,53 @@ $slot: $word-h; // no gap between word items in the track
 }
 
 .wordCoded {
-  background-color: #00818f;
+  background: var(--background-brand-teal-primary, #00818f);
 }
 
 .wordPrompted {
-  background-color: hsl(35deg 90% 52%);
+  background: var(--accent-orange-60, #ffa400);
 }
 
 .wordDebugged {
-  background-color: hsl(5deg 85% 58%);
+  background: var(--background-success-primary, #3ea33e);
 }
 
 .wordCreated {
-  background-color: hsl(285deg 72% 62%);
+  background-color: var(--background-brand-purple-primary, #9657c7);
 }
 
 .wordPersisted {
-  background-color: hsl(145deg 65% 42%);
+  background-color: var(--background-brand-red-primary, #e84b3a);
 }
 
 .letsGoButton {
   display: inline-flex;
+  min-width: 48px;
+  padding: 10px 16px;
+  justify-content: center;
   align-items: center;
-  gap: 0.3em;
-  margin-top: 1.5rem;
-  padding: 0.35em 0.9em;
+  gap: 8px;
+  margin-top: 25px;
+  background: var(--background-brand-purple-primary, #9657c7);
   border: none;
-  border-radius: 999px;
-  background-color: hsl(285deg 72% 62%);
+  border-radius: 4px;
   color: #fff;
-  font-size: 0.85rem;
-  font-weight: 700;
+  font-size: 1rem;
+  font-weight: 600;
   cursor: pointer;
+  transition: background-color 0.12s ease;
 
-  &:hover {
-    background-color: hsl(285deg 72% 55%);
+  &:hover:not(:disabled) {
+    background: var(--background-brand-purple-hover, #7d42ad);
+  }
+
+  &:disabled {
+    opacity: 0.5;
+    cursor: default;
+  }
+
+  &:focus-visible {
+    outline: 2px solid var(--background-brand-purple-focus, #a374d6);
+    outline-offset: 2px;
   }
 }

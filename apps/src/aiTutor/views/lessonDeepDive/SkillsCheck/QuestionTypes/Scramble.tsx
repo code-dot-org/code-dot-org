@@ -15,7 +15,6 @@ import {
   sortableKeyboardCoordinates,
   verticalListSortingStrategy,
 } from '@dnd-kit/sortable';
-import {Typography} from '@mui/material';
 import React, {FC, useState} from 'react';
 
 import {
