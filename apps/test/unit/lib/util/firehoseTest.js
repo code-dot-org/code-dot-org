@@ -19,7 +19,7 @@ describe('firehoseDataSize', () => {
     logToCloud.logError.restore();
   });
 
-  it('checks json size to send newrelic error', () => {
+  it('reports an error when the data_json column would exceed the limit', () => {
     const valid_record = {data_json: 'x'.repeat(maxDataJSONBytes - 1)};
     expect(validateFirehoseDataSize(valid_record)).not.to.be.true;
     expect(logToCloud.logError).not.to.be.called;
@@ -32,7 +32,7 @@ describe('firehoseDataSize', () => {
     expect(validateFirehoseDataSize(invalid_record)).to.be.true;
   });
 
-  it('checks string size to send newrelic error', () => {
+  it('reports an error when the data_string column would exceed the limit', () => {
     const valid_record = {data_string: 'x'.repeat(maxDataStringBytes - 1)};
     expect(validateFirehoseDataSize(valid_record)).not.to.be.true;
     expect(logToCloud.logError).not.to.be.called;

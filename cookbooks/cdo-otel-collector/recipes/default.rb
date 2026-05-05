@@ -24,7 +24,7 @@ end
 
 apm_backend = node['cdo-otel-collector']['apm_backend']
 
-allowed_backends = %w[datadog newrelic sentry splunk]
+allowed_backends = %w[datadog sentry splunk]
 unless allowed_backends.include?(apm_backend)
   Chef::Application.fatal!("Invalid cdo-otel-collector apm_backend '#{apm_backend}'. Allowed values: #{allowed_backends.join(', ')}")
 end
@@ -32,8 +32,6 @@ end
 # Fetch the APM backend's credential from AWS Secrets Manager. The secret name follows
 # the standard <env>/cdo/<service>_<credential> convention.
 apm_api_key = case apm_backend
-              when 'newrelic'
-                secret(name: "#{node.chef_environment}/cdo/newrelic_api_key", service: :aws_secrets_manager, version: 'AWSCURRENT')
               when 'sentry'
                 secret(name: "#{node.chef_environment}/cdo/sentry_auth_token", service: :aws_secrets_manager, version: 'AWSCURRENT')
               when 'splunk'
@@ -80,7 +78,6 @@ template '/etc/otelcol-contrib/config.yaml' do
               apm_backend: apm_backend,
               apm_api_key: apm_api_key,
               datadog_site: node['cdo-otel-collector']['datadog_site'],
-              newrelic_otlp_endpoint: node['cdo-otel-collector']['newrelic_otlp_endpoint'],
               sentry_otlp_endpoint: node['cdo-otel-collector']['sentry_otlp_endpoint'],
               splunk_realm: node['cdo-otel-collector']['splunk_realm'],
               prometheus_remote_write_url: node['cdo-otel-collector']['prometheus_remote_write_url'],

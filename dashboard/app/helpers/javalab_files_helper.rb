@@ -11,10 +11,10 @@ module JavalabFilesHelper
     end
     return response
   rescue StandardError => exception
-    event_details = {
-      error_details: exception.to_json
-    }
-    NewRelic::Agent.record_custom_event("JavabuilderHttpConnectionError", event_details) if CDO.newrelic_logging
+    OpenTelemetry::Trace.current_span.add_event(
+      "JavabuilderHttpConnectionError",
+      attributes: {'error_details' => exception.to_json}
+    )
     nil
   end
 

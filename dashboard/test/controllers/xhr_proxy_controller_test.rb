@@ -1,7 +1,7 @@
 require 'test_helper'
 require 'webmock/minitest'
 WebMock.disable_net_connect!(allow_localhost: true)
-require_relative '../../../shared/test/spy_newrelic_agent'
+require_relative '../../../shared/test/observability_test_recorder'
 
 class XhrProxyControllerTest < ActionController::TestCase
   XHR_REDIRECT_URI = 'https://www.wikipedia.org/bar/a1b2'
@@ -37,15 +37,14 @@ class XhrProxyControllerTest < ActionController::TestCase
     assert_equal XHR_DATA, response.body
   end
 
-  test "should log to newrelic" do
-    CDO.stubs(:newrelic_logging).returns(true) do
-      stub_request(:get, XHR_URI).to_return(body: XHR_DATA, headers: {content_type: XHR_CONTENT_TYPE})
-      assert NewRelic::Agent.events.empty?, 'no custom events initially recorded'
-      get :get, params: {u: XHR_URI, c: @channel_id}
-      assert_response :success
-      assert NewRelic::Agent.events.length == 1, 'one custom event recorded'
-      assert NewRelic::Agent.events[0].first == 'XhrProxyControllerRequest', 'XhrProxyControllerRequest event recorded'
-    end
+  test "should log proxy requests as observability events" do
+    ObservabilityTestRecorder.install
+    stub_request(:get, XHR_URI).to_return(body: XHR_DATA, headers: {content_type: XHR_CONTENT_TYPE})
+    assert ObservabilityTestRecorder.events.empty?, 'no events initially recorded'
+    get :get, params: {u: XHR_URI, c: @channel_id}
+    assert_response :success
+    assert_equal 1, ObservabilityTestRecorder.events.length, 'one event recorded'
+    assert_equal 'XhrProxyControllerRequest', ObservabilityTestRecorder.events[0].first, 'XhrProxyControllerRequest event recorded'
   end
 
   test "should fetch proxied data request with redirects" do

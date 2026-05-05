@@ -5,14 +5,13 @@
   # Resolve the exporter name and whether Datadog-specific processors are needed.
   # Datadog uses a first-party exporter that computes APM stats (RED metrics by service/resource)
   # client-side and expects Datadog-specific span attributes for error tracking and resource naming.
-  # New Relic, Sentry, and Splunk consume standard OTLP and do not need those attribute rewrites.
+  # Sentry and Splunk consume standard OTLP and do not need those attribute rewrites.
   apm_exporter_name = case @apm_backend
-                      when 'newrelic' then 'otlp/newrelic'
                       when 'sentry'   then 'otlphttp/sentry'
                       when 'splunk'   then 'otlphttp/splunk'
                       when 'datadog'  then 'datadog'
                       else
-                        raise "Unsupported APM backend: #{@apm_backend.inspect}. Expected 'datadog', 'newrelic', 'sentry', or 'splunk'."
+                        raise "Unsupported APM backend: #{@apm_backend.inspect}. Expected 'datadog', 'sentry', or 'splunk'."
                       end
   is_datadog_backend = apm_exporter_name == 'datadog'
 %>
@@ -191,15 +190,6 @@ exporters:
     sending_queue:
       batch:
         flush_timeout: 10s
-
-<% elsif @apm_backend == 'newrelic' %>
-  # New Relic exporter via standard OTLP/gRPC.
-  # Authenticates with a license key passed as the api-key header.
-  # See: https://docs.newrelic.com/docs/opentelemetry/best-practices/opentelemetry-otlp/
-  otlp/newrelic:
-    endpoint: <%= @newrelic_otlp_endpoint %>
-    headers:
-      api-key: <%= @apm_api_key %>
 
 <% elsif @apm_backend == 'sentry' %>
   # Sentry exporter via standard OTLP/HTTP.

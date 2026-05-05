@@ -33,15 +33,13 @@ module Pd
 
       return if experimental_redirect! @form_id, @form_params
 
-      if CDO.newrelic_logging
-        NewRelic::Agent.record_custom_event(
-          "RenderJotFormView",
-          {
-            route: "GET /pd/post_course_survey/#{params[:course_initials]}",
-            form_id: @form_id
-          }
-        )
-      end
+      OpenTelemetry::Trace.current_span.add_event(
+        "RenderJotFormView",
+        attributes: {
+          'route' => "GET /pd/post_course_survey/#{params[:course_initials]}",
+          'form_id' => @form_id
+        }
+      )
     end
 
     # POST /pd/post_course_survey/submit

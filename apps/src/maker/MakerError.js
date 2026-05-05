@@ -26,7 +26,7 @@ export class ConnectionFailedError extends MakerError {
  * Conditionally transform errors that can be returned by our underlying
  * libraries into appropriate MakerErrors, because we know they're fairly
  * common and don't need to bubble up past our regular failure handling to
- * New Relic reporting.
+ * the browser observability provider.
  * @param {Error} originalError
  * @return {Error|MakerError} The original error, or a wrapped version of it.
  */

@@ -22,8 +22,6 @@ default['cdo-otel-collector'] = {
   # APM backend to forward telemetry to. Supported values:
   #   'datadog'  - DataDog exporter (computes APM stats client-side; applies DD-specific processors).
   #                Requires secret: <env>/cdo/datadog_api_key in AWS Secrets Manager.
-  #   'newrelic' - New Relic via standard OTLP/gRPC. No DD-specific processors applied.
-  #                Requires secret: <env>/cdo/newrelic_api_key in AWS Secrets Manager.
   #   'sentry'   - Sentry via standard OTLP/HTTP. No DD-specific processors applied.
   #                Requires secret: <env>/cdo/sentry_auth_token in AWS Secrets Manager.
   #   'splunk'   - Splunk Observability Cloud via OTLP/HTTP with realm-specific endpoints.
@@ -39,12 +37,6 @@ default['cdo-otel-collector'] = {
   # DataDog site for the exporter (US1 is optimized for AWS operations).
   # Find site at https://docs.datadoghq.com/getting_started/site/ under "DD_SITE parameter".
   'datadog_site' => 'datadoghq.com',
-
-  # -- New Relic-specific ---------------------------------------------------------------
-  # OTLP/gRPC endpoint for New Relic. Find your regional endpoint in the New Relic UI under
-  # Account settings > API keys > OTLP endpoint, or see
-  # https://docs.newrelic.com/docs/opentelemetry/best-practices/opentelemetry-otlp/#configure-endpoint-port-protocol
-  'newrelic_otlp_endpoint' => 'https://otlp.nr-data.net:4317',
 
   # -- Sentry-specific ------------------------------------------------------------------
   # OTLP/HTTP endpoint for Sentry. Construct from your project DSN found in Sentry under

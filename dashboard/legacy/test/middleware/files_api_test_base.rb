@@ -3,7 +3,7 @@ require 'mocha/mini_test'
 require_relative '../../middleware/files_api'
 require_relative '../../middleware/channels_api'
 require 'cdo/aws/s3'
-require_relative '../../../../shared/test/spy_newrelic_agent'
+require_relative '../../../../shared/test/observability_test_recorder'
 
 #
 # Base class for tests against the FilesApi (which include SourcesTest,
@@ -90,9 +90,10 @@ class FilesApiTestBase < Minitest::Test
     assert_equal(expected['size'], actual['size'])
   end
 
-  def assert_newrelic_metrics(names)
+  def assert_recorded_metric_names(names)
     expected = names.join '\n'
-    actual = NewRelic::Agent.metrics.map(&:first).join '\n'
+    metric_events = ObservabilityTestRecorder.events.select {|_n, attrs| attrs.key?('value')}
+    actual = metric_events.map(&:first).join '\n'
     assert_equal expected, actual
   end
 
