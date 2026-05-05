@@ -673,7 +673,12 @@ export function useKeyboardNavigation({
       const edgeId = keyboardMovingEdgeRef.current;
       if (!edgeId) return;
       const {deltaX, deltaY} = getArrowDelta(nativeEvent.key);
-      if (!deltaX && !deltaY) return;
+      if (!deltaX && !deltaY) {
+        // If we are not moving with an arrow key, clear the ref to avoid
+        // accidentally moving the edge unintentionally later.
+        keyboardMovingEdgeRef.current = null;
+        return;
+      }
       const target = nativeEvent.target as HTMLElement;
       if (isTargetEditable(target)) return;
       if (moveEdgeByDelta(edgeId, deltaX, deltaY)) {
