@@ -295,6 +295,7 @@ const LessonGenerator: React.FC<LessonGeneratorProps> = ({lesson}) => {
   }, []);
 
   const validationError = useMemo(() => {
+    if (!prefix.trim()) return 'Set a level name prefix before generating.';
     if (levelSpecs.length === 0) return 'Add at least one level.';
     for (const spec of levelSpecs) {
       // Read-only placeholders for unsupported lab types are exempt from
@@ -312,7 +313,7 @@ const LessonGenerator: React.FC<LessonGeneratorProps> = ({lesson}) => {
       ids.add(id);
     }
     return null;
-  }, [levelSpecs]);
+  }, [prefix, levelSpecs]);
 
   const fullName = useCallback(
     (id: string) => (prefix ? `${prefix}-${id}` : id),
