@@ -49,7 +49,7 @@ const TeacherHomepage: React.FC<TeacherHomepageProps> = ({studioUrlPrefix}) => {
     experiments.isEnabled(experiments.ONBOARDING) ||
     DCDO.get('onboarding-enabled', false);
   // TODO: replace with real data once teacher grade level is stored on the platform
-  const isElementaryTeacher = false;
+  const isElementaryTeacher = true;
   const tour = useCreateSectionTour(isElementaryTeacher);
   const isDemoSectionEnabled = experiments.isEnabled('demo-section');
 

@@ -4,6 +4,7 @@ import {
   createCompletionStep,
   nextButton,
 } from '@cdo/apps/sharedComponents/productTour/productTourHelpers';
+import {trySetSessionStorage} from '@cdo/apps/utils';
 
 // Wraps step text with the sparkle icon + text layout.
 const withSparkle = (text: string): string => `
@@ -14,6 +15,15 @@ const withSparkle = (text: string): string => `
 `;
 
 export const CREATE_SECTION_BUTTON_ID = 'create-section-button';
+
+// Must match the id of the first step in createSectionsNewSteps.
+const SECTIONS_NEW_FIRST_STEP_ID = 'name-section';
+
+const LOGIN_SELECTORS = [
+  '.uitest-pictureLogin',
+  '.uitest-wordLogin',
+  '.uitest-emailLogin',
+];
 
 const waitForElement = (
   selector: string,
@@ -65,17 +75,24 @@ const highlightAttachedElement = (selector: string) => ({
   },
 });
 
-export const createSectionOnboardingTourSteps = (
+// Steps shown on the teacher homepage before navigating to /sections/new.
+export const createHomepageSteps = (
   tour: Tour,
-  isElementaryTeacher: boolean
+  isElementaryTeacher: boolean,
+  sessionStorageKey: string
 ): StepOptions[] => {
   const loginSelector = isElementaryTeacher
-    ? '.uitest-pictureLogin'
-    : '.uitest-emailLogin';
+    ? LOGIN_SELECTORS[0]
+    : LOGIN_SELECTORS[2];
 
   const controller = new AbortController();
   tour.on('cancel', () => controller.abort());
   tour.on('complete', () => controller.abort());
+
+  // Shared click handler and the elements it was attached to, tracked so
+  // hide() can clean up if the step is dismissed without a click (e.g. cancel).
+  let loginClickHandler: (() => void) | null = null;
+  let sectionTypeButtons: Element[] = [];
 
   return [
     {
@@ -94,7 +111,7 @@ export const createSectionOnboardingTourSteps = (
       when: highlightAttachedElement(`#${CREATE_SECTION_BUTTON_ID}`),
     },
     {
-      // TODO: This will require more logic in the future once we have the grade sign up flow and need to show/hide different options based on teacher choice
+      // TODO: This will require more logic in the future once we have the grade sign up started.
       id: 'picture-login',
       attachTo: {
         element: loginSelector,
@@ -106,12 +123,62 @@ export const createSectionOnboardingTourSteps = (
           : 'Select <strong>Email Login</strong> for older students — they can sign in using their email.'
       ),
       beforeShowPromise: () => waitForElement(loginSelector, controller.signal),
-      advanceOn: {
-        selector: loginSelector,
-        event: 'click',
+      // No advanceOn: this is the last homepage step, so tour.next() would fire
+      // tour.complete() and clear sessionStorage before the page navigates to
+      // /sections/new. Instead, click listeners on all login options save the
+      // next page's first step so resumeCreateSectionOnboardingTour resumes there.
+      when: {
+        show() {
+          document
+            .querySelector(loginSelector)
+            ?.classList.add('tour-step-highlight');
+
+          sectionTypeButtons = LOGIN_SELECTORS.map(sel =>
+            document.querySelector(sel)
+          ).filter((el): el is Element => el !== null);
+
+          loginClickHandler = () => {
+            trySetSessionStorage(sessionStorageKey, SECTIONS_NEW_FIRST_STEP_ID);
+            sectionTypeButtons.forEach(el =>
+              el.removeEventListener('click', loginClickHandler!)
+            );
+            // Dismiss the tooltip immediately so it doesn't float while the
+            // page navigates. hide() does not fire cancel/complete, so
+            // sessionStorage is preserved for the next page to resume from.
+            tour.getCurrentStep()?.hide();
+          };
+
+          sectionTypeButtons.forEach(el =>
+            el.addEventListener('click', loginClickHandler!)
+          );
+        },
+        hide() {
+          document
+            .querySelector(loginSelector)
+            ?.classList.remove('tour-step-highlight');
+          if (loginClickHandler !== null) {
+            sectionTypeButtons.forEach(el =>
+              el.removeEventListener('click', loginClickHandler!)
+            );
+          }
+          sectionTypeButtons = [];
+          loginClickHandler = null;
+        },
       },
-      when: highlightAttachedElement(loginSelector),
     },
+  ];
+};
+
+// Steps shown on /sections/new after navigating from the homepage.
+export const createSectionsNewSteps = (
+  tour: Tour,
+  isElementaryTeacher: boolean
+): StepOptions[] => {
+  const controller = new AbortController();
+  tour.on('cancel', () => controller.abort());
+  tour.on('complete', () => controller.abort());
+
+  return [
     {
       id: 'name-section',
       attachTo: {
@@ -145,19 +212,16 @@ export const createSectionOnboardingTourSteps = (
     {
       id: 'co-teacher-container',
       attachTo: {
-        element: '#uitest-expandable-coteacher-container',
+        element: '#uitest-expandable-coteacher',
         on: 'bottom',
       },
       text: withSparkle(
         'Teaching this class with a colleague, or want a department head to be able to check in? Adding a co-teacher gives them the same access you have.'
       ),
       beforeShowPromise: () =>
-        waitForElement(
-          '#uitest-expandable-coteacher-container',
-          controller.signal
-        ),
+        waitForElement('#uitest-expandable-coteacher', controller.signal),
       buttons: [nextButton(tour)],
-      when: highlightAttachedElement('#uitest-expandable-coteacher-container'),
+      when: highlightAttachedElement('#uitest-expandable-coteacher'),
     },
     createCompletionStep(
       tour,
