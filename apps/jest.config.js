@@ -97,9 +97,11 @@ const config = {
   // globals: {},
 
   // The maximum amount of workers used to run your tests. Can be specified as % or a number. E.g. maxWorkers: 10% will use 10% of your CPU amount + 1 as the maximum worker number. maxWorkers: 2 will use a maximum of 2 workers.
-  // On CI (process.env.CI=true set by prepare_ci_env.sh) leave workers uncapped.
-  // On dev machines, cap at 50% of cores to prevent OOM on low-RAM hosts (e.g. 8 GB MacBooks).
-  maxWorkers: process.env.CI ? undefined : '50%',
+  // On CI (process.env.CI=true set by prepare_ci_env.sh) the key is omitted so
+  // run-tests-in-parallel.sh's --maxWorkers flag wins. On dev machines, cap at
+  // 50% of cores to prevent OOM on low-RAM hosts (e.g. 8 GB MacBooks). Jest
+  // validates this key's type, so we must omit it rather than set undefined.
+  ...(process.env.CI ? {} : {maxWorkers: '50%'}),
 
   // Kill and respawn workers that exceed this RSS threshold between test files,
   // preventing long-running workers from accumulating heap across many suites.
