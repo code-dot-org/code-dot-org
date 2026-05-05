@@ -92,8 +92,9 @@ class FilesApiTestBase < Minitest::Test
 
   def assert_recorded_metric_names(names)
     expected = names.join '\n'
-    metric_events = ObservabilityTestRecorder.events.select {|_n, attrs| attrs.key?('value')}
-    actual = metric_events.map(&:first).join '\n'
+    # Metric attributes set by record_metric / track_list_operation use Custom/* keys.
+    metric_log = ObservabilityTestRecorder.attribute_log.select {|key, _| key.start_with?('Custom/')}
+    actual = metric_log.map(&:first).join '\n'
     assert_equal expected, actual
   end
 

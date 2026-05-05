@@ -37,14 +37,16 @@ class XhrProxyControllerTest < ActionController::TestCase
     assert_equal XHR_DATA, response.body
   end
 
-  test "should log proxy requests as observability events" do
+  test "should log proxy requests as observability span attributes" do
     ObservabilityTestRecorder.install
     stub_request(:get, XHR_URI).to_return(body: XHR_DATA, headers: {content_type: XHR_CONTENT_TYPE})
-    assert ObservabilityTestRecorder.events.empty?, 'no events initially recorded'
+    assert ObservabilityTestRecorder.attribute_log.empty?, 'no attributes initially recorded'
     get :get, params: {u: XHR_URI, c: @channel_id}
     assert_response :success
-    assert_equal 1, ObservabilityTestRecorder.events.length, 'one event recorded'
-    assert_equal 'XhrProxyControllerRequest', ObservabilityTestRecorder.events[0].first, 'XhrProxyControllerRequest event recorded'
+    attrs = ObservabilityTestRecorder.attributes
+    assert_equal true, attrs['XhrProxyControllerRequest'], 'XhrProxyControllerRequest marker recorded'
+    assert_equal @channel_id, attrs['XhrProxyControllerRequest.channel_id']
+    assert_equal XHR_URI, attrs['XhrProxyControllerRequest.url']
   end
 
   test "should fetch proxied data request with redirects" do

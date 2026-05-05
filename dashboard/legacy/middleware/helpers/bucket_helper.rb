@@ -528,9 +528,8 @@ class BucketHelper
   end
 
   protected def track_list_operation(source_name)
-    OpenTelemetry::Trace.current_span.add_event(
-      "Custom/ListRequests/#{self.class.name}/#{source_name}",
-      attributes: {'value' => 1}
+    OpenTelemetry::Trace.current_span.set_attribute(
+      "Custom/ListRequests/#{self.class.name}/#{source_name}", 1
     )
   end
 end

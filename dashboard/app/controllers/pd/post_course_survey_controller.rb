@@ -33,13 +33,10 @@ module Pd
 
       return if experimental_redirect! @form_id, @form_params
 
-      OpenTelemetry::Trace.current_span.add_event(
-        "RenderJotFormView",
-        attributes: {
-          'route' => "GET /pd/post_course_survey/#{params[:course_initials]}",
-          'form_id' => @form_id
-        }
-      )
+      span = OpenTelemetry::Trace.current_span
+      span.set_attribute('RenderJotFormView', true)
+      span.set_attribute('RenderJotFormView.route', "GET /pd/post_course_survey/#{params[:course_initials]}")
+      span.set_attribute('RenderJotFormView.form_id', @form_id)
     end
 
     # POST /pd/post_course_survey/submit

@@ -1,29 +1,37 @@
 require 'opentelemetry'
 
-# Test helper that captures span events recorded during a test by stubbing
+# Test helper that captures span attributes set during a test by stubbing
 # OpenTelemetry::Trace.current_span with a recording double. Call install in
 # setup; mocha resets stubs between tests so re-installing per-test is required.
-# Read captures via .events / .get_events; .install clears prior captures.
+# Read captures via .attribute_log (ordered) or .attributes (last-write-wins).
 module ObservabilityTestRecorder
-  def self.events
-    @@events ||= []
+  # Ordered list of [key, value] tuples, one entry per set_attribute call.
+  # Preserves repeat sets so tests can assert call count and order.
+  def self.attribute_log
+    @@attribute_log ||= []
   end
 
-  def self.get_events(regex)
-    events.select {|name, _| regex.match(name)}
+  # Last-write-wins snapshot, mirroring what OTel actually retains on the span.
+  def self.attributes
+    attribute_log.each_with_object({}) {|(k, v), h| h[k] = v}
+  end
+
+  # Filter the ordered log to entries whose key matches the regex.
+  def self.matching(regex)
+    attribute_log.select {|key, _| regex.match(key)}
   end
 
   def self.reset
-    @@events = []
+    @@attribute_log = []
   end
 
   def self.install
     reset
-    events_ref = events
+    log_ref = attribute_log
 
     span = Object.new
-    span.define_singleton_method(:add_event) do |name, attributes: {}|
-      events_ref << [name.to_s, attributes || {}]
+    span.define_singleton_method(:set_attribute) do |key, value|
+      log_ref << [key.to_s, value]
     end
 
     valid_ctx = Object.new

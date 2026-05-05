@@ -87,23 +87,20 @@ class FilesApi < Sinatra::Base
   end
 
   def record_metric(quota_event_type, quota_type, value = 1)
-    OpenTelemetry::Trace.current_span.add_event(
-      "Custom/FilesApi/#{quota_event_type}_#{quota_type}",
-      attributes: {'value' => value}
+    OpenTelemetry::Trace.current_span.set_attribute(
+      "Custom/FilesApi/#{quota_event_type}_#{quota_type}", value
     )
   end
 
   def record_event(quota_event_type, quota_type, encrypted_channel_id)
     owner_storage_id, _ = get_storage_id_and_project_id(encrypted_channel_id)
     owner_user_id = user_id_for_storage_id(owner_storage_id)
-    OpenTelemetry::Trace.current_span.add_event(
-      "FilesApi#{quota_event_type}",
-      attributes: {
-        'quota_type' => quota_type,
-        'encrypted_channel_id' => encrypted_channel_id,
-        'owner_user_id' => owner_user_id
-      }
-    )
+    span = OpenTelemetry::Trace.current_span
+    event_name = "FilesApi#{quota_event_type}"
+    span.set_attribute(event_name, true)
+    span.set_attribute("#{event_name}.quota_type", quota_type)
+    span.set_attribute("#{event_name}.encrypted_channel_id", encrypted_channel_id)
+    span.set_attribute("#{event_name}.owner_user_id", owner_user_id)
   end
 
   helpers do

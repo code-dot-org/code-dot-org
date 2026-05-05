@@ -113,15 +113,15 @@ class DeliverPosteMessagesProcess
 
     # How many emails we sent on _this run_ of the cronjob
     sent_count = POSTE_DB[:poste_deliveries].where(Sequel.lit('sent_at >= ?', started_at)).count
-    span.add_event("Custom/Poste/Sent", attributes: {'value' => sent_count})
+    span.set_attribute('Custom/Poste/Sent', sent_count)
 
     # How many total abandoned emails we have
     abandon_count = POSTE_DB[:poste_deliveries].where(sent_at: 0).count
-    span.add_event("Custom/Poste/Abandoned", attributes: {'value' => abandon_count})
+    span.set_attribute('Custom/Poste/Abandoned', abandon_count)
 
     # How many emails are still queued for send on subsequent runs
     remaining_count = POSTE_DB[:poste_deliveries].where(sent_at: nil).count
-    span.add_event("Custom/Poste/Queued", attributes: {'value' => remaining_count})
+    span.set_attribute('Custom/Poste/Queued', remaining_count)
   end
 
   def self.message_queue

@@ -537,17 +537,18 @@ class AssetsTest < FilesApiTestBase
 
   private def assert_assets_custom_metric(index, metric_type, length_msg = nil, expected_value = 1)
     # Filter out metrics from other test cases.
-    metrics = ObservabilityTestRecorder.get_events %r{^Custom/FilesApi}
+    metrics = ObservabilityTestRecorder.matching %r{^Custom/FilesApi}
     length_msg ||= "custom metrics recorded: #{index}"
     assert_equal index, metrics.length, length_msg
     last_metric = metrics.last
     assert_equal "Custom/FilesApi/#{metric_type}_assets", last_metric.first, "#{metric_type} metric recorded"
-    assert_equal expected_value, last_metric.last['value'], "#{metric_type} metric value"
+    assert_equal expected_value, last_metric.last, "#{metric_type} metric value"
   end
 
   private def assert_assets_custom_event(index, event_type)
-    # Filter out events from other test cases.
-    events = ObservabilityTestRecorder.get_events %r{^FilesApi}
+    # Marker attributes are flat names like "FilesApiQuotaExceeded";
+    # the per-field attributes ("FilesApiQuotaExceeded.quota_type" etc) are excluded.
+    events = ObservabilityTestRecorder.matching %r{^FilesApi[A-Z][A-Za-z]+\z}
     assert_equal index, events.length, "custom events recorded: #{index}"
     assert_equal "FilesApi#{event_type}", events.last.first, "#{event_type} event recorded"
   end

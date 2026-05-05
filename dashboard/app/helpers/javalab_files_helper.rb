@@ -11,10 +11,9 @@ module JavalabFilesHelper
     end
     return response
   rescue StandardError => exception
-    OpenTelemetry::Trace.current_span.add_event(
-      "JavabuilderHttpConnectionError",
-      attributes: {'error_details' => exception.to_json}
-    )
+    span = OpenTelemetry::Trace.current_span
+    span.set_attribute('JavabuilderHttpConnectionError', true)
+    span.set_attribute('JavabuilderHttpConnectionError.error_details', exception.to_json)
     nil
   end
 

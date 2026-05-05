@@ -16,22 +16,17 @@ module Pd
       )
     end
 
-    test 'post course survey reports render via observability events' do
+    test 'post course survey reports render via observability span attributes' do
       ObservabilityTestRecorder.install
 
       sign_in create :teacher
       get "/pd/post_course_survey/csp"
       assert_response :success
 
-      events = ObservabilityTestRecorder.get_events(/^RenderJotFormView$/)
-      assert_equal 1, events.length, 'one RenderJotFormView event recorded'
-      assert_equal(
-        {
-          'route' => 'GET /pd/post_course_survey/csp',
-          'form_id' => PostCourseSurvey.form_id,
-        },
-        events.first.last
-      )
+      attrs = ObservabilityTestRecorder.attributes
+      assert_equal true, attrs['RenderJotFormView'], 'RenderJotFormView marker recorded'
+      assert_equal 'GET /pd/post_course_survey/csp', attrs['RenderJotFormView.route']
+      assert_equal PostCourseSurvey.form_id, attrs['RenderJotFormView.form_id']
     end
   end
 end
