@@ -25,7 +25,7 @@ export default function ImageNodeToolbar({nodeId}: ImageNodeToolbarProps) {
       ariaLabel="Image options"
     >
       {data.locked ? (
-        <LockedNotice nodeId={nodeId} />
+        <LockedNotice onUnlock={() => patchNodeData({locked: false})} />
       ) : (
         <>
           <RotationGroup

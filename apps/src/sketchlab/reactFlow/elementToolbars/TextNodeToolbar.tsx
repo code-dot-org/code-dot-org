@@ -35,7 +35,7 @@ export default function TextNodeToolbar({nodeId}: TextNodeToolbarProps) {
       ariaLabel="Text style"
     >
       {data.locked ? (
-        <LockedNotice nodeId={nodeId} />
+        <LockedNotice onUnlock={() => patchNodeData({locked: false})} />
       ) : (
         <>
           <FontSizeGroup

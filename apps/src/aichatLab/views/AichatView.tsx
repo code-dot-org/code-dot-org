@@ -9,17 +9,7 @@ import {useAiChatDisabledState} from '@cdo/apps/aichat/hooks/useAiChatDisabledSt
 import {
   addChatEvent,
   clearChatMessages,
-  onSaveComplete,
-  onSaveFail,
-  onSaveNoop,
-  clearHasSetInitialCustomizations,
-  resetToDefaultAiCustomizations,
-  selectAllFieldsHidden,
   sendAnalytics,
-  setShowModalType,
-  setViewMode,
-  updateAiCustomization,
-  initializeAiCustomizations,
 } from '@cdo/apps/aichat/redux';
 import {ModelParameters} from '@cdo/apps/aichat/types';
 import {getAllowedFileTypes} from '@cdo/apps/aichat/utils';
@@ -27,6 +17,18 @@ import AiChatHeaderButtons from '@cdo/apps/aichat/views/aiChatHeaderButtons/AiCh
 import ChatWorkspace, {
   ChatWorkspaceHandle,
 } from '@cdo/apps/aichat/views/ChatWorkspace';
+import {
+  onSaveComplete,
+  onSaveFail,
+  onSaveNoop,
+  clearHasSetInitialCustomizations,
+  resetToDefaultAiCustomizations,
+  selectAllFieldsHidden,
+  setShowModalType,
+  setViewMode,
+  updateAiCustomization,
+  initializeAiCustomizations,
+} from '@cdo/apps/aichatLab/redux';
 import ChatWarningModal from '@cdo/apps/aiComponentLibrary/warningModal/ChatWarningModal';
 import {queryParams} from '@cdo/apps/code-studio/utils';
 import FlowLab from '@cdo/apps/flowlab/views/flow/FlowLab';
@@ -78,21 +80,23 @@ const AichatView: React.FunctionComponent<LabProps<AichatLevelProperties>> = ({
     starterAssets,
   } = levelProperties;
   const currentAiCustomizations = useAppSelector(
-    state => state.aichat.currentAiCustomizations
+    state => state.aichatLab.currentAiCustomizations
   );
   const savedAiCustomizations = useAppSelector(
-    state => state.aichat.savedAiCustomizations
+    state => state.aichatLab.savedAiCustomizations
   );
-  const viewMode = useAppSelector(state => state.aichat.viewMode);
-  const showModalType = useAppSelector(state => state.aichat.showModalType);
+  const viewMode = useAppSelector(state => state.aichatLab.viewMode);
+  const showModalType = useAppSelector(state => state.aichatLab.showModalType);
 
   const {botName, isPublished} = currentAiCustomizations.modelCardInfo;
 
   const allFieldsHidden = useAppSelector(selectAllFieldsHidden);
 
-  const hasSentMessage = useAppSelector(state => state.aichat.hasSentMessage);
+  const hasSentMessage = useAppSelector(
+    state => state.aichatLab.hasSentMessage
+  );
   const hasUpdatedCustomizations = useAppSelector(
-    state => state.aichat.hasUpdatedCustomizations
+    state => state.aichatLab.hasUpdatedCustomizations
   );
 
   const channelId = useAppSelector(state => state.lab.channel?.id);
@@ -108,7 +112,7 @@ const AichatView: React.FunctionComponent<LabProps<AichatLevelProperties>> = ({
   );
 
   const hasSetInitialCustomizations = useAppSelector(
-    state => state.aichat.hasSetInitialCustomizations
+    state => state.aichatLab.hasSetInitialCustomizations
   );
 
   const chatWorkspaceInitialized = hasSetInitialCustomizations;
@@ -149,6 +153,7 @@ const AichatView: React.FunctionComponent<LabProps<AichatLevelProperties>> = ({
     // ChatWorkspaceLogger is intialized in ChatWorkspace so we need to wait on it.
     // Logging fronm AichatView could be cleaned up to avoid this fragile timing.
     if (chatWorkspaceInitialized) {
+      // TODO: Remove dependency on aichat redux slice.
       dispatch(
         addChatEvent({
           timestamp: Date.now(),
@@ -250,6 +255,7 @@ const AichatView: React.FunctionComponent<LabProps<AichatLevelProperties>> = ({
     dispatch(resetToDefaultAiCustomizations(levelAichatSettings));
     // Save the customizations to the user's project.
     dispatch(updateAiCustomization());
+    // TODO: Remove dependency on aichat redux slice.
     dispatch(clearChatMessages());
   }, [dispatch, levelAichatSettings]);
 

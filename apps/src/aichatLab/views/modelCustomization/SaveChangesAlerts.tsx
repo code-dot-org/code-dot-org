@@ -6,7 +6,7 @@ import {
   selectCurrentCustomizationsMatchInitial,
   selectHavePropertiesChanged,
   selectSavedCustomizationsMatchInitial,
-} from '@cdo/apps/aichat/redux';
+} from '@cdo/apps/aichatLab/redux';
 import {commonI18n} from '@cdo/apps/types/locale';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 
@@ -18,23 +18,25 @@ const FAQ_LINK =
 const SaveChangesAlerts: React.FunctionComponent<{isReadOnly: boolean}> = ({
   isReadOnly,
 }) => {
-  const saveInProgress = useAppSelector(state => state.aichat.saveInProgress);
+  const saveInProgress = useAppSelector(
+    state => state.aichatLab.saveInProgress
+  );
   const havePropertiesChanged = useAppSelector(selectHavePropertiesChanged);
   const isCurrentDefault = useAppSelector(
     selectCurrentCustomizationsMatchInitial
   );
   const isSavedDefault = useAppSelector(selectSavedCustomizationsMatchInitial);
-  const saveError = useAppSelector(state => state.aichat.saveError);
+  const saveError = useAppSelector(state => state.aichatLab.saveError);
   const showResetMessage = useAppSelector(
-    state => state.aichat.showResetMessage
+    state => state.aichatLab.showResetMessage
   );
   const showUnsupportedModelMessage = useAppSelector(
-    state => state.aichat.showUnsupportedModelMessage
+    state => state.aichatLab.showUnsupportedModelMessage
   );
   const currentModelName = useAppSelector(
     state =>
       modelDescriptions.find(
-        ({id}) => id === state.aichat.currentAiCustomizations.selectedModelId
+        ({id}) => id === state.aichatLab.currentAiCustomizations.selectedModelId
       )?.name
   );
 

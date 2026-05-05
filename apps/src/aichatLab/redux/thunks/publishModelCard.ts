@@ -19,7 +19,7 @@ export const publishModelCard = createAsyncThunk(
     // Otherwise, there's no state change detected and the updated published state won't be saved.
     const state = getState() as RootState;
     await saveAiCustomization(
-      state.aichat.currentAiCustomizations,
+      state.aichatLab.currentAiCustomizations,
       'publishModelCard',
       dispatch as AppDispatch,
       parseInt(state.progress.currentLevelId || '')
