@@ -4,7 +4,13 @@ This cookbook installs and configures the [OpenTelemetry Contrib Collector](http
 
 ## Overview
 
-The OTel Contrib Collector receives telemetry data (traces, metrics, logs) via OTLP and forwards it to an APM backend. The active backend is controlled by the `apm_backend` attribute. Currently the only supported value is **Sentry**.
+The OTel Contrib Collector receives telemetry data via OTLP and forwards it to Sentry as the APM backend. Pipelines wired up by this cookbook:
+
+- **Traces**: always exported to Sentry.
+- **Logs**: opt-in via the `enable_logs` attribute (default `false`). When enabled, the cookbook also installs an rsyslog forwarding rule so syslog flows through the collector to Sentry. With `enable_logs=false` (the default), raw app logs remain in CloudWatch only.
+- **Metrics**: not exported to Sentry. RED metrics derived from Rack spans are sent to Prometheus via the `spanmetrics` connector when `prometheus_remote_write_url` is configured. Sentry does not ingest OTLP metrics.
+
+The `apm_backend` attribute is retained as a single-value (`'sentry'`) hook so re-introducing an alternate backend later is a localized change.
 
 ## Requirements
 
