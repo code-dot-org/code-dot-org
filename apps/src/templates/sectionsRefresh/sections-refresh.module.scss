@@ -10,6 +10,12 @@
   border-bottom: 1px solid $neutral_dark20;
 }
 
+.sectionHeader {
+  margin-bottom: 16px;
+  display: flex;
+  align-items: center;
+}
+
 p.noMarginBottomParagraph {
   margin-bottom: 0;
 }

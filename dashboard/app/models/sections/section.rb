@@ -441,6 +441,7 @@ class Section < ApplicationRecord
         sync_enabled: Policies::Lti.roster_sync_enabled?(teacher),
         avatar_color: avatar_color,
         avatar_emoji: avatar_emoji,
+        demo_type: demo_type,
         at_risk_age_gated_date: at_risk_age_gated_student&.at_risk_age_gated_date,
         at_risk_age_gated_us_state: at_risk_age_gated_student&.us_state,
       }
@@ -488,6 +489,7 @@ class Section < ApplicationRecord
         primaryInstructor: primary_instructor,
         avatar_color: avatar_color,
         avatar_emoji: avatar_emoji,
+        demo_type: demo_type,
         assigned_ai_chat_tools_dependency: assigned_ai_chat_tools_dependency,
         ai_chat_access_level: ai_chat_access_level,
       }
@@ -575,6 +577,7 @@ class Section < ApplicationRecord
           at_risk_age_gated_us_state: at_risk_student&.us_state,
           avatar_color: avatar_color,
           avatar_emoji: avatar_emoji,
+          demo_type: demo_type,
           assigned_ai_chat_tools_dependency: assigned_ai_chat_tools_dependency,
           ai_chat_access_level: ai_chat_access_level,
         }
