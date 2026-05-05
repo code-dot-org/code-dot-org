@@ -23,7 +23,7 @@ class JSONVideo < ApplicationRecord
   has_and_belongs_to_many :jit_pl_misconceptions, join_table: :jit_pl_misconceptions_json_videos
   has_and_belongs_to_many :jit_pl_exemplars, join_table: :jit_pl_exemplars_json_videos
 
-  AUDIENCES = %w[Student Teacher Verified\ Teacher].freeze
+  AUDIENCES = ['Student', 'Teacher', 'Verified Teacher'].freeze
 
   validates :key, presence: true, uniqueness: true
   validates :s3_uri, presence: true

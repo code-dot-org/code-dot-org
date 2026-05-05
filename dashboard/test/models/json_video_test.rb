@@ -25,7 +25,7 @@ class JSONVideoTest < ActiveSupport::TestCase
 
   test 'invalid audience is rejected' do
     video = build(:json_video, audience: 'student')
-    assert_not video.valid?
+    refute video.valid?
     assert_includes video.errors[:audience], 'is not included in the list'
   end
 
