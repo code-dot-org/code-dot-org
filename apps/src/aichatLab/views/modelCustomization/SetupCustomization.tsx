@@ -7,9 +7,9 @@ import React, {useState, useMemo} from 'react';
 import {useSelector} from 'react-redux';
 
 import {modelDescriptions} from '@cdo/apps/aichat/constants';
-import {setAiCustomizationProperty} from '@cdo/apps/aichat/redux';
 import {ModelDescription} from '@cdo/apps/aichat/types';
 import {useLevelProperties} from '@cdo/apps/aichatLab/levelPropertiesContext';
+import {setAiCustomizationProperty} from '@cdo/apps/aichatLab/redux';
 import {isReadOnlyWorkspace} from '@cdo/apps/lab2/redux/lab2ReduxSelectors';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 
@@ -38,9 +38,9 @@ const SetupCustomization: React.FunctionComponent = () => {
     temperature,
     systemPrompt,
     selectedModelId = DEFAULT_VISIBILITIES.selectedModelId,
-  } = useAppSelector(state => state.aichat.fieldVisibilities);
+  } = useAppSelector(state => state.aichatLab.fieldVisibilities);
   const aiCustomizations = useAppSelector(
-    state => state.aichat.currentAiCustomizations
+    state => state.aichatLab.currentAiCustomizations
   );
 
   const availableModelIds =

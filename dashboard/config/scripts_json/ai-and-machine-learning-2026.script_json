@@ -22,7 +22,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2026-04-01 20:57:07 UTC",
+    "serialized_at": "2026-05-04 16:59:14 UTC",
     "hide_within_course": false,
     "published_state": null,
     "instruction_type": null,
@@ -11460,10 +11460,11 @@
     },
     {
       "name": "Classifying Fish",
-      "url": "https://docs.google.com/document/d/1ZCRVbRA6XLj1tRCzPed5fSGfqGjJ2I1ImES-BTo3GmY/view",
+      "url": "https://docs.google.com/document/d/1pYgLFLnCWbWfITxmyZKZ_fHrGuMQ_ec8iWMF0aiBo8U/view",
       "key": "classifying_fish",
       "properties": {
         "audience": "Student",
+        "embeddability_type": "embed_and_resource_dropdown",
         "include_in_pdf": true,
         "type": "Activity Guide"
       },
@@ -11789,10 +11790,11 @@
     },
     {
       "name": "Innovations in AI - Activity Guide",
-      "url": "https://docs.google.com/document/d/1GwSQtWmUvuGGTefN3jW0r5MtgJt361I9ESe_Zi9y6ws/view",
+      "url": "https://docs.google.com/document/d/1UNGQpDjJqN-xLwcz6fud4zktPMkQVjovp1LJLJ_VZDA/view",
       "key": "innovations_in_ai_-_activity_guide",
       "properties": {
         "audience": "Student",
+        "embeddability_type": "embed_and_resource_dropdown",
         "type": "Activity Guide"
       },
       "seeding_key": {
@@ -11801,10 +11803,11 @@
     },
     {
       "name": "Innovations in AI Research Areas - Student Resource",
-      "url": "https://docs.google.com/document/d/1gJ9VpNdZWk05Ad7oEbuMal02MsYaZtnrLUqecmf8Obg/view",
+      "url": "https://docs.google.com/document/d/1H6I5dgELXQsFZc8v6kcxpxg_Vt8bJEwOCKjv85o-YBk/view",
       "key": "innovations_in_ai_research_areas_-_student_resource",
       "properties": {
         "audience": "Student",
+        "embeddability_type": "embed_and_resource_dropdown",
         "include_in_pdf": true,
         "type": "Resource"
       },
@@ -12292,10 +12295,11 @@
     },
     {
       "name": "Types of Machine Learning",
-      "url": "https://docs.google.com/document/d/1QxjxUn_X9RXolJfIMHVYYxxZB-9tAtJC067r__oQZfM/view",
+      "url": "https://docs.google.com/document/d/1Eza2A4FGhgo7zQxQDHgd_jlTKlBO_22ezHGxfA1X6J4/view",
       "key": "types_of_machine_learning_1",
       "properties": {
         "audience": "Student",
+        "embeddability_type": "embed_and_resource_dropdown",
         "include_in_pdf": true,
         "type": "Activity Guide"
       },
@@ -12305,10 +12309,11 @@
     },
     {
       "name": "Types of Machine Learning",
-      "url": "https://docs.google.com/document/d/1EEHJruthZ3ObknGOaVsC2SKY5RaZp042ozgzGau5NWw/view",
+      "url": "https://docs.google.com/document/d/1eY48TkxDm2Ig1r4m7vvlW9CIYfzt0C6Yi1O-gW4IlwQ/view",
       "key": "types_of_machine_learning_2",
       "properties": {
         "audience": "Verified Teacher",
+        "embeddability_type": "embed_and_resource_dropdown",
         "type": "Answer Key"
       },
       "seeding_key": {
@@ -14269,6 +14274,9 @@
     }
   ],
   "lessons_opportunity_standards": [
+
+  ],
+  "jit_pl_concepts_lessons": [
 
   ],
   "rubrics": [

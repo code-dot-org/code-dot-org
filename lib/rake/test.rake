@@ -39,7 +39,7 @@ namespace :test do
       '-d', CDO.site_host('studio.code.org'),
       '-p', CDO.site_host('code.org'),
       '--db', # Ensure features that require database access are run even if the server name isn't "test"
-      '--parallel', '120',
+      '--parallel', '50',
       '--magic_retry',
       '--with-status-page',
       '--fail_fast',
@@ -70,7 +70,7 @@ namespace :test do
       '-p', CDO.site_host('code.org'),
       '--db', # Ensure features that require database access are run even if the server name isn't "test"
       '--parallel', parallel.to_s,
-      '--magic_retry',
+      '--retry_count', '2',
       '--with-status-page',
       '--fail_fast'
     )
@@ -87,17 +87,17 @@ namespace :test do
   end
 
   timed_task_with_logging :devicefarm_desktop_ui do
-    # The default per-AWS-account concurrency limit for desktop browser sessions
-    # in Device Farm is 50.
+    # As of April 2026, our concurrency limit for desktop browser sessions in
+    # Device Farm within our prod AWS account is 150.
     run_devicefarm_ui(config: 'Chrome,Firefox', parallel: 50, label: 'desktop')
   end
 
   timed_task_with_logging :devicefarm_mobile_ui do
     # As of April 2026, our concurrency limit for remote access sessions on real
-    # mobile devices in Device Farm within our prod AWS account is 40. However,
+    # mobile devices in Device Farm within our prod AWS account is 80. However,
     # the devices take so long to spin up and shut down that we can saturate our
     # Device Farm concurrency by setting parallelism equal to half of that limit.
-    run_devicefarm_ui(config: 'iPhone,iPad', parallel: 20, label: 'mobile')
+    run_devicefarm_ui(config: 'iPhone,iPad', parallel: 40, label: 'mobile')
   end
 
   # Runs desktop and mobile Device Farm UI suites in parallel threads so
@@ -125,7 +125,7 @@ namespace :test do
       '--magic_retry',
       '--with-status-page',
       '-f', eyes_features.join(","),
-      '--parallel', '20'
+      '--parallel', '15'
     )
     if failed_browser_count == 0
       message = '⊙‿⊙ Eyes tests for <b>dashboard</b> succeeded, no changes detected.'
@@ -136,6 +136,35 @@ namespace :test do
       ChatClient.log message, color: 'red'
       ChatClient.message 'server operations', message, color: 'red', notify: 1
       raise "Eyes tests failed"
+    end
+  end
+
+  timed_task_with_logging :devicefarm_eyes_ui do
+    ChatClient.log 'Running <b>dashboard</b> UI visual tests on AWS Device Farm...'
+    eyes_features = `cd #{dashboard_dir('test/ui')} && find features/ -name "*.feature" | xargs grep -lr '@eyes'`.split("\n")
+    failed_browser_count = RakeUtils.system_with_chat_logging(
+      "cd #{dashboard_dir('test/ui')} &&",
+      'bundle', 'exec', './runner.rb',
+      '--device-farm',
+      '-c', 'Chrome',
+      '-d', CDO.site_host('studio.code.org'),
+      '-p', CDO.site_host('code.org'),
+      '--db', # Ensure features that require database access are run even if the server name isn't "test"
+      '--eyes',
+      '--magic_retry',
+      '--with-status-page',
+      '-f', eyes_features.join(","),
+      '--parallel', '25'
+    )
+    if failed_browser_count == 0
+      message = '⊙‿⊙ Device Farm Eyes tests for <b>dashboard</b> succeeded, no changes detected.'
+      ChatClient.log message
+      ChatClient.message 'server operations', message, color: 'green'
+    else
+      message = 'ಠ_ಠ Device Farm Eyes tests for <b>dashboard</b> failed. See <a href="https://eyes.applitools.com/app/sessions/">the console</a> for results or to modify baselines.'
+      ChatClient.log message, color: 'red'
+      ChatClient.message 'server operations', message, color: 'red', notify: 1
+      raise "Device Farm Eyes tests failed"
     end
   end
 

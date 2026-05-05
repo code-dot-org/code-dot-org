@@ -19,15 +19,10 @@ export interface RegionConfiguration {
 }
 
 /**
- * This returns the current region while allowing for a script data override.
+ * This returns the current GE region code.
  */
-export const getGlobalEditionRegion = () => {
-  const geRegionScript = document.querySelector(
-    'script[data-ge-region]'
-  ) as HTMLScriptElement;
-
-  return geRegionScript?.dataset?.geRegion;
-};
+export const getGlobalEditionRegion = () =>
+  document.documentElement.dataset.geRegion || null;
 
 /**
  * This returns the current region's configuration data.

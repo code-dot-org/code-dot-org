@@ -19,7 +19,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2026-04-06 15:49:19 UTC",
+    "serialized_at": "2026-05-04 17:08:47 UTC",
     "hide_within_course": false,
     "published_state": null,
     "instruction_type": null,
@@ -105,7 +105,7 @@
           }
         ],
         "overview": "To kick off a unit focused on creative coding and designing interactive music experiences, students will take on the role of music experience designers. Their challenge: help clients bring their ideas for unique songs to life using Music Lab.\n\nStudents begin by reviewing a variety of early songs, each showcasing different musical genres, sounds, and techniques. Then, they read through short client stories—each with a specific goal or mood in mind—and match each client with the song that best fits their vision.\n\nTo wrap up, students reflect on how understanding a user’s goals can shape creative decisions and consider how they might adapt or remix prototypes in Music Lab to better serve different needs.",
-        "preparation": "* Print a copy of the activity guide for each student\n- Preview the examples in Code Studio to get familiar with the student experience\n- Get familiar with the musical terms in the [Music Lab Glossary](https://docs.google.com/presentation/d/1wvllTFs0IBWJI8uzfUhuFW4mUYItUK5nmmVjArNRlCM/edit?slide=id.g33d63a1df26_0_86#slide=id.g33d63a1df26_0_86) begin highlighting the connections between coding and music.",
+        "preparation": "* Print a copy of the activity guide for each student\n- Preview the examples in Code Studio to get familiar with the student experience\n- Get familiar with the musical terms in the Music Lab Glossary begin highlighting the connections between coding and music.",
         "student_overview": "Today, you’ll be a music experience designer! Your job is to help different “clients” bring their song ideas to life. First, you’ll check out some song prototypes in Music Lab. Then, you’ll read each client’s story and decide which prototype fits their idea best.\n\nYou’ll explain your choice and think about how to make the music even better for them."
       },
       "seeding_key": {
@@ -135,7 +135,7 @@
           }
         ],
         "overview": "Students are introduced to sequencing by following step-by-step instructions to build a song. They learn how to layer tracks and use blocks like play together to combine sounds. Teachers guide discussions, highlight patterns, and encourage students to make predictions before running code.",
-        "preparation": "- Review the levels from the curriculum and their example solutions. [Click here to see how to access example solutions](https://www.loom.com/share/36ee8c6709aa4e8dbe2449103e1b07be). \n\n- Print out the [Sequencing Cheat Sheet](https://drive.google.com/file/d/1wO6RJOBslmoDm2Wwua50BW2v6XpShcuV/view) to keep handy while reviewing students’ work on Check-In and Assessment levels"
+        "preparation": "- Review the levels from the curriculum and their example solutions. [Click here to see how to access example solutions](https://www.loom.com/share/36ee8c6709aa4e8dbe2449103e1b07be). \n\n- Print out the Sequencing Cheat Sheet to keep handy while reviewing students’ work on Check-In and Assessment levels"
       },
       "seeding_key": {
         "lesson.key": "Sequencing - Explore",
@@ -295,7 +295,7 @@
           }
         ],
         "overview": "Students listen to mashups and identify patterns that make each part of a song stand out. In Music Lab, they learn to use functions to organize code into reusable sections. Through Predict and Investigate levels, students discover how functions help reduce repetition and clarify musical structure.",
-        "preparation": "- Review the levels from the curriculum and their example solutions. [Click here to see how to access example solutions](https://www.loom.com/share/36ee8c6709aa4e8dbe2449103e1b07be).\n- Print out the [Functions Cheat Sheet](https://drive.google.com/file/d/1PFQdLhk1Yi4HdzBmI17N31GtybQcm2Nm/view) to keep handy while reviewing students’ work on Check-In and Assessment levels"
+        "preparation": "- Review the levels from the curriculum and their example solutions. [Click here to see how to access example solutions](https://www.loom.com/share/36ee8c6709aa4e8dbe2449103e1b07be).\n- Print out the Functions Cheat Sheet to keep handy while reviewing students’ work on Check-In and Assessment levels"
       },
       "seeding_key": {
         "lesson.key": "Functions - Explore",
@@ -1216,7 +1216,7 @@
       "key": "d070a910-e7f1-49e0-ae3c-928931ce4a11",
       "position": 4,
       "properties": {
-        "description": "**Circulate & Distribute:** Have students share their thoughts with a neighbor. Listen for examples that may be worth using as examples throughout the lesson. \n\nAs students share, distribute a copy of the [Word Search](https://docs.google.com/document/d/1M1_eMuqtPX4Yo2eQl3JOo9MbSyPB-4C1mLYyNlh1HKc/view) to each student, face down. Make sure students don't start the word search ahead of time.\n"
+        "description": "**Circulate & Distribute:** Have students share their thoughts with a neighbor. Listen for examples that may be worth using as examples throughout the lesson. \n\nAs students share, distribute a copy of the Word Search to each student, face down. Make sure students don't start the word search ahead of time.\n"
       },
       "seeding_key": {
         "activity_section.key": "d070a910-e7f1-49e0-ae3c-928931ce4a11",
@@ -1541,7 +1541,7 @@
       "key": "108f1937-14b7-4e7a-900b-a7b5501b1fb3",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-video-camera\" aria-hidden=\"true\"></i> **Video:**  Show the [Make Music, Learn Code](https://www.youtube.com/watch?v=GqlP5s7KTl4) video\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Think Pair Share:** After watching the video, silently brainstorm how music and technology work together how using computers to make music creates new opportunities for musicians. Then have student turn to a partner to share. Call on 2-3 groups to share their discussion. \n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Use this prompt to surface observations from the video about how music and technology are interconnected, such as designing songs fully \"within the box\". Extend the discussion to highlight areas that students may be excited by as they learn more about music lab.\n\n**Distribute:** [Problem Solving & Computational Thinking](https://docs.google.com/document/d/1b670YBrm2H0PwBKAVoef7lfdsI3ci5SYJz9zWnWTiRI/template/preview) resource. Students will use this resource to follow a clear problem-solving process and apply computational thinking strategies at each step to solve complex problems effectively.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show students the four aspects of computational thinking:\n- **Algorithmic Thinking:** Going step-by-step to solve a problem\n- **Pattern Recognition:** Using similarities and patterns to solve a problem\n- **Abstraction:** Breaking down a problem into smaller pieces\n- **Decomposition:** Focusing on important details to solve a problem\n\n<i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> There are many ways music and technology are connected in real-life, but another important aspect is how musicians and computer scientists think about creating songs or solving problems. Throughout this unit, we're going to explore four key computational mindsets for how to create songs with code. Be on the lookout for these as we learn more about Music Lab today!",
+        "description": "<i class=\"fa fa-video-camera\" aria-hidden=\"true\"></i> **Video:**  Show the [Make Music, Learn Code](https://www.youtube.com/watch?v=GqlP5s7KTl4) video\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Think Pair Share:** After watching the video, silently brainstorm how music and technology work together how using computers to make music creates new opportunities for musicians. Then have student turn to a partner to share. Call on 2-3 groups to share their discussion. \n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Use this prompt to surface observations from the video about how music and technology are interconnected, such as designing songs fully \"within the box\". Extend the discussion to highlight areas that students may be excited by as they learn more about music lab.\n\n**Distribute:** Problem Solving & Computational Thinking resource. Students will use this resource to follow a clear problem-solving process and apply computational thinking strategies at each step to solve complex problems effectively.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show students the four aspects of computational thinking:\n- **Algorithmic Thinking:** Going step-by-step to solve a problem\n- **Pattern Recognition:** Using similarities and patterns to solve a problem\n- **Abstraction:** Breaking down a problem into smaller pieces\n- **Decomposition:** Focusing on important details to solve a problem\n\n<i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> There are many ways music and technology are connected in real-life, but another important aspect is how musicians and computer scientists think about creating songs or solving problems. Throughout this unit, we're going to explore four key computational mindsets for how to create songs with code. Be on the lookout for these as we learn more about Music Lab today!",
         "progression_name": "Make Music, Learn Code Video"
       },
       "seeding_key": {
@@ -1580,7 +1580,7 @@
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "**No Wrong Answers** - These questions are intentionally structured to encourage \"no wrong answer\" thinking, which invites students to make unstructured observations and participate in class discussions. These predict levels are based on the PRIMM pedagogy for teaching coding, which shows increased engagement and ownership when students are asked to form hypotheses about code before seeing it in action. As you structure these discussions, ensure all students feel supported in participating and try to avoid confirming or denying any ideas and instead letting students make those observations themselves when running the code.\n\n**Music Terminology**- A shared vocabulary is the foundation of meaningful collaboration. The third page of this [Anchor Chart set](https://docs.google.com/presentation/d/12R4e0xxMFBbkyu4gaXbXfwyLba-OjivpRNggZlw8hiE/edit?usp=sharing) could be a powerful resource to share with students at this point. Additionally, the [Music Terms Glossary](https://docs.google.com/presentation/d/1wvllTFs0IBWJI8uzfUhuFW4mUYItUK5nmmVjArNRlCM/edit?usp=sharing) includes definitions and explanations to support instruction.  "
+            "markdown": "**No Wrong Answers** - These questions are intentionally structured to encourage \"no wrong answer\" thinking, which invites students to make unstructured observations and participate in class discussions. These predict levels are based on the PRIMM pedagogy for teaching coding, which shows increased engagement and ownership when students are asked to form hypotheses about code before seeing it in action. As you structure these discussions, ensure all students feel supported in participating and try to avoid confirming or denying any ideas and instead letting students make those observations themselves when running the code.\n\n**Music Terminology**- A shared vocabulary is the foundation of meaningful collaboration. The third page of the Anchor Chart could be a powerful resource to share with students at this point. Additionally, the Music Terms Glossary includes definitions and explanations to support instruction.  "
           }
         ]
       },
@@ -2101,7 +2101,7 @@
       "key": "945099ab-b795-4d67-b8c0-c4a62abaafe7",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Pass out a copy of the [Walk Up Songs Activity Guide](https://docs.google.com/document/d/1-NOQXuyOA4TXy2X4oACt97K0f64h2TlkP2tc3-YQKRI/edit) to each student\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Read the Overview as a class\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students complete the Define portion of the activity guide\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students return to Music Lab to learn more about triggers.",
+        "description": "<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Pass out a copy of the Walk Up Songs Activity Guide to each student.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Read the Overview as a class\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students complete the Define portion of the activity guide\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students return to Music Lab to learn more about triggers.",
         "progression_name": "Triggers"
       },
       "seeding_key": {
@@ -2113,7 +2113,7 @@
       "key": "a0a158f4-5b4d-467a-9b36-218995b835d9",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> Do This: Have students complete the Prepare section of their activity guide. Use this level to plan which tracks they will use!\n\nRemind students of the [Track Types anchor chart](https://drive.google.com/file/d/16ONMCb6K-cWYW_WVRwYXJM6TXbCI6Okz/view?usp=drive_link) to use as a guide to plan their tracks.\n\n",
+        "description": "<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> Do This: Have students complete the Prepare section of their activity guide. Use this level to plan which tracks they will use!\n\nRemind students of the Track Types anchor chart to use as a guide to plan their tracks.\n\n",
         "progression_name": "Prepare"
       },
       "seeding_key": {
@@ -2125,7 +2125,7 @@
       "key": "cf61bc39-fd53-4f81-b252-72bf19cad3f9",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate & Approve:** As students complete their project plan, circulate to give them a quick review and a thumbs-up. Hand them the [Walk Up Songs Rubric](https://docs.google.com/document/d/1poW9kQYsXnBX2w7jCKhN9qjTbJ52qRDrn8jZf62S3-g/edit?tab=t.0) once their plan is solid. Students do not need to stop and wait for you."
+        "description": "<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate & Approve:** As students complete their project plan, circulate to give them a quick review and a thumbs-up. Hand them the Walk Up Songs Rubric once their plan is solid. Students do not need to stop and wait for you."
       },
       "seeding_key": {
         "activity_section.key": "cf61bc39-fd53-4f81-b252-72bf19cad3f9",
@@ -2704,7 +2704,7 @@
       "key": "08f0902f-4bbf-4d45-9676-cf45c0a60767",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Pass out a copy of the [Cat GIFs Activity Guide](https://docs.google.com/document/d/1JQWXQ39-DKoE2gbwLi7v-BdV0Dcn3Z9IMY0515-pKVI/edit) to each student\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Read the Overview as a class\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students complete the Define portion of the activity guide\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students return to Music Lab to learn about the Play Random and complete the Prepare portion of the activity guide",
+        "description": "<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Pass out a copy of the Cat GIFs Activity Guide to each student.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Read the Overview as a class\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students complete the Define portion of the activity guide\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students return to Music Lab to learn about the Play Random and complete the Prepare portion of the activity guide",
         "progression_name": "Play Random"
       },
       "seeding_key": {
@@ -2728,7 +2728,7 @@
       "key": "87f6c64b-b3c5-4289-8443-f63e70eaec96",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate & Approve:** As students complete their project plan, circulate to give them a quick review and a thumbs-up. Hand them the [Cat GIF Loops Rubric](https://docs.google.com/document/d/1ZW8gD3eA3lXAur9_PSC8nL2h6VJrcW2fBC3rxwm8Moc/edit?tab=t.0) once their plan is solid. Students do not need to stop and wait for you..",
+        "description": "<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate & Approve:** As students complete their project plan, circulate to give them a quick review and a thumbs-up. Hand them the Cat GIF Loops Rubric once their plan is solid. Students do not need to stop and wait for you..",
         "progression_name": "Musical Cat GIFs"
       },
       "seeding_key": {
@@ -3028,7 +3028,7 @@
         "tips": [
           {
             "type": "assessmentOpportunity",
-            "markdown": "**Formative Assessment:** Check-in levels are strategically placed in the middle of the lesson so you can check-in on how students are doing while they are still in the room with you and you can adjust instruction if needed. For example:\n- If you notice most students are able to complete the check-in with no assistance, the class can continue to the remaining problems\n- If most of the class is struggling with the check-in, consider regrouping as a class and completing the Investigate levels together or completing the check-in as a class\n- If a few students are struggling, consider working individually with those students to ensure they can be successful in later levels.\n- Use the tips and guiding questions on the [Functions Cheat Sheet.](https://drive.google.com/file/d/1PFQdLhk1Yi4HdzBmI17N31GtybQcm2Nm/view)"
+            "markdown": "**Formative Assessment:** Check-in levels are strategically placed in the middle of the lesson so you can check-in on how students are doing while they are still in the room with you and you can adjust instruction if needed. For example:\n- If you notice most students are able to complete the check-in with no assistance, the class can continue to the remaining problems\n- If most of the class is struggling with the check-in, consider regrouping as a class and completing the Investigate levels together or completing the check-in as a class\n- If a few students are struggling, consider working individually with those students to ensure they can be successful in later levels.\n- Use the tips and guiding questions on the Functions Cheat Sheet."
           }
         ]
       },
@@ -7632,10 +7632,11 @@
   "resources": [
     {
       "name": "[Key] Client Stories",
-      "url": "https://docs.google.com/document/d/1ROBaDdO6Hlndp1jKpEcBL9bdFTNhrBLgmIqfxrYlZVM/edit",
+      "url": "https://docs.google.com/document/d/1hyG0hPeuCR4L0sbGvnqLYE0Lt5vGVDyNJhQAuM8bFPc/view",
       "key": "_key_client_stories",
       "properties": {
         "audience": "Verified Teacher",
+        "embeddability_type": "embed_and_resource_dropdown",
         "type": "Answer Key"
       },
       "seeding_key": {
@@ -7644,10 +7645,11 @@
     },
     {
       "name": "[Key] Music Word Search",
-      "url": "https://docs.google.com/document/d/13jQbeXZy5NvY0CyHAHTpyN9pjdBhtHL2OM8IHMFONIQ/edit",
+      "url": "https://docs.google.com/document/d/1Ymq92WifEsQaCRbF-D8SsPFhhCVy0IUyCylQSmotLuw/view",
       "key": "_key_music_word_search",
       "properties": {
         "audience": "Verified Teacher",
+        "embeddability_type": "embed_and_resource_dropdown",
         "type": "Answer Key"
       },
       "seeding_key": {
@@ -7701,10 +7703,11 @@
     },
     {
       "name": "Cat GIF Loops",
-      "url": "https://docs.google.com/document/d/1JQWXQ39-DKoE2gbwLi7v-BdV0Dcn3Z9IMY0515-pKVI/edit",
+      "url": "https://docs.google.com/document/d/1_0rHElTXsOLvVvdH8wNRMqoGLaVMwymKBYJSxPwEdpU/view",
       "key": "cat_gif_loops",
       "properties": {
         "audience": "Student",
+        "embeddability_type": "embed_and_resource_dropdown",
         "include_in_pdf": true,
         "type": "Activity Guide"
       },
@@ -7714,10 +7717,11 @@
     },
     {
       "name": "Cat GIF Loops Rubric",
-      "url": "https://docs.google.com/document/d/1ZW8gD3eA3lXAur9_PSC8nL2h6VJrcW2fBC3rxwm8Moc/edit?tab=t.0",
+      "url": "https://docs.google.com/document/d/1x7VUuf2-ol0bbb3Tyfk98PT8Y7vc5w6hF9qV1WEPucE/view",
       "key": "cat_gif_loops_rubric",
       "properties": {
         "audience": "Student",
+        "embeddability_type": "embed_and_resource_dropdown",
         "type": "Rubric"
       },
       "seeding_key": {
@@ -7726,10 +7730,11 @@
     },
     {
       "name": "Client Stories",
-      "url": "https://docs.google.com/document/d/1YDGmbxZSHZhvMWVPzoawNm0ceKRoPffgt1kc0HQDWhk/view",
+      "url": "https://docs.google.com/document/d/1l48ozZeWPQ8EKuE0JT6JM7T6iTItRtcP28ziKs0XGdc/view",
       "key": "client_stories",
       "properties": {
         "audience": "Student",
+        "embeddability_type": "embed_and_resource_dropdown",
         "include_in_pdf": true,
         "type": "Activity Guide"
       },
@@ -7739,10 +7744,11 @@
     },
     {
       "name": "Functions - Explore",
-      "url": "https://docs.google.com/presentation/d/1niuLGiC8RNMM9GO1XlTxg3vZoLC2TZ5CPXs2OLAM5rw/template/preview",
+      "url": "https://docs.google.com/presentation/d/1rKiKIuhBKHayAtlGBaLQuY4P3_pF4g80iEbZLqvpSh0/view",
       "key": "functions_-_explore",
       "properties": {
         "audience": "Teacher",
+        "embeddability_type": "embed_and_resource_dropdown",
         "type": "Slides"
       },
       "seeding_key": {
@@ -7751,10 +7757,11 @@
     },
     {
       "name": "Functions - Practice",
-      "url": "https://docs.google.com/presentation/d/1M5Dkkj6zLFROOD3QG9j2p3AbVLkvx0VBzD0ECysvn8Q/template/preview",
+      "url": "https://docs.google.com/presentation/d/1AC7zLGCpe-19lOqwMXR_CsCKBQPgWsfIbT-Xbg9ePCk/view",
       "key": "functions_-_practice",
       "properties": {
         "audience": "Teacher",
+        "embeddability_type": "embed_and_resource_dropdown",
         "type": "Slides"
       },
       "seeding_key": {
@@ -7763,10 +7770,11 @@
     },
     {
       "name": "Functions - Synthesis",
-      "url": "https://docs.google.com/presentation/d/1j97kHjLKvm-yQbgT4bRSqKRdZin33ER2bobOJDAJ_OQ/template/preview",
+      "url": "https://docs.google.com/presentation/d/1AtKPcNaSvNN8rJbbIHDD0h0d0TLFB3YvHiIJkS8Mh6E/view",
       "key": "functions_-_synthesis",
       "properties": {
         "audience": "Teacher",
+        "embeddability_type": "embed_and_resource_dropdown",
         "type": "Slides"
       },
       "seeding_key": {
@@ -7775,10 +7783,11 @@
     },
     {
       "name": "Functions Assessment Levels Cheat Sheet",
-      "url": "https://drive.google.com/file/d/1PFQdLhk1Yi4HdzBmI17N31GtybQcm2Nm/view",
+      "url": "https://drive.google.com/file/d/1D_2ADmIJtgxg3M2HdhKm3mCnWr715SWp/view",
       "key": "functions_assessment_levels_cheat_sheet",
       "properties": {
         "audience": "Teacher",
+        "embeddability_type": "embed_and_resource_dropdown",
         "type": "Answer Key"
       },
       "seeding_key": {
@@ -7787,10 +7796,11 @@
     },
     {
       "name": "Genre Mashup",
-      "url": "https://docs.google.com/document/d/12HPEKHdaWP7EG4m84TnoNppAu1eqeYBF6rUEmIFcyLU/edit",
+      "url": "https://docs.google.com/document/d/12DJQTfngPaUV4J_Gty035BJjyL7nttxFhLRmMGsVvNU/view",
       "key": "genre_mashup",
       "properties": {
         "audience": "Student",
+        "embeddability_type": "embed_and_resource_dropdown",
         "include_in_pdf": true,
         "type": "Activity Guide"
       },
@@ -7800,10 +7810,11 @@
     },
     {
       "name": "Genre Mashup Rubric",
-      "url": "https://docs.google.com/document/d/1FQAtWffIufswEhLG6LwZnyKSfnP7KG1nhthJi5w65bM/edit?tab=t.0",
+      "url": "https://docs.google.com/document/d/1K1nRPmklg_QjSlzyiWgxjFFNKRXCAaOHpTGonWM5isM/view",
       "key": "genre_mashup_rubric",
       "properties": {
         "audience": "Student",
+        "embeddability_type": "embed_and_resource_dropdown",
         "type": "Rubric"
       },
       "seeding_key": {
@@ -7812,10 +7823,11 @@
     },
     {
       "name": "Introduction to Music Lab",
-      "url": "https://docs.google.com/presentation/d/14X814gR4KUxcZKEkbqhOSR03pg-8XKWZZMhIn7AJo4w/template/preview",
+      "url": "https://docs.google.com/presentation/d/1YnHGJ_2FcsJgFsiA_PyKrLv4BdEgzTEQu4Vvrm1Cb8Q/view",
       "key": "introduction_to_music_lab",
       "properties": {
         "audience": "Teacher",
+        "embeddability_type": "embed_and_resource_dropdown",
         "type": "Slides"
       },
       "seeding_key": {
@@ -7824,10 +7836,11 @@
     },
     {
       "name": "Loops - Explore",
-      "url": "https://docs.google.com/presentation/d/1n01W_XFQbH-gwSCfhJdvJRggagbapxXSx23tys4refA/template/preview",
+      "url": "https://docs.google.com/presentation/d/1SafThiiR3XDqQwZUOt3N-VqV787K75CM96l8wnhYB6s/view",
       "key": "loops_-_explore",
       "properties": {
         "audience": "Teacher",
+        "embeddability_type": "embed_and_resource_dropdown",
         "type": "Slides"
       },
       "seeding_key": {
@@ -7836,10 +7849,11 @@
     },
     {
       "name": "Loops - Practice",
-      "url": "https://docs.google.com/presentation/d/1zj_nA_H4-fa-vKZWKNX6JylIdMj6rFQuu_UPN9NG_7o/template/preview",
+      "url": "https://docs.google.com/presentation/d/1arWgmbyXB63_s5j350-ihFVvcDfAMYAft89-rxQyIN0/view",
       "key": "loops_-_practice",
       "properties": {
         "audience": "Teacher",
+        "embeddability_type": "embed_and_resource_dropdown",
         "type": "Slides"
       },
       "seeding_key": {
@@ -7848,10 +7862,11 @@
     },
     {
       "name": "Loops - Synthesis",
-      "url": "https://docs.google.com/presentation/d/1s02366Iz1uO2K-ytHOjL1fQtamjKq8mcF3AUVDk8Ab8/template/preview",
+      "url": "https://docs.google.com/presentation/d/1oKgXkfvSiP1IvB67kI0dRM525K78sPtMmedUd0yutMA/view",
       "key": "loops_-_synthesis",
       "properties": {
         "audience": "Teacher",
+        "embeddability_type": "embed_and_resource_dropdown",
         "type": "Slides"
       },
       "seeding_key": {
@@ -7885,10 +7900,11 @@
     },
     {
       "name": "Mini Project - Cat GIF Loops",
-      "url": "https://docs.google.com/presentation/d/1j5lpbvr9BM4UfC6z7Mju9mZSlKJpLz7dEVaGBbw1hbo/template/preview",
+      "url": "https://docs.google.com/presentation/d/12fH-zz4OWNHhxsrGrp8DOnQkn3aWxo0jbug0sVzgnEI/view",
       "key": "mini_project_-_cat_gif_loops",
       "properties": {
         "audience": "Teacher",
+        "embeddability_type": "embed_and_resource_dropdown",
         "type": "Slides"
       },
       "seeding_key": {
@@ -7897,10 +7913,11 @@
     },
     {
       "name": "Mini Project - Walk Up Songs",
-      "url": "https://docs.google.com/presentation/d/1nQQ_vqwmOqhENzt-qAQYEjQ07R_xO8xTfteYVWnl3MY/template/preview",
+      "url": "https://docs.google.com/presentation/d/1MQ1GprZJDQo6gf4lLRvVIQLpX2RpAEmKZYbw8h_LImY/view",
       "key": "mini_project_-_walk_up_songs",
       "properties": {
         "audience": "Teacher",
+        "embeddability_type": "embed_and_resource_dropdown",
         "type": "Slides"
       },
       "seeding_key": {
@@ -7909,10 +7926,11 @@
     },
     {
       "name": "Music Word Search",
-      "url": "https://docs.google.com/document/d/1M1_eMuqtPX4Yo2eQl3JOo9MbSyPB-4C1mLYyNlh1HKc/view",
+      "url": "https://docs.google.com/document/d/1-CgptJGd37pMQ5Kgndlc2zWlhjxBwYQYZAvSZ1lbThE/view",
       "key": "music_word_search",
       "properties": {
         "audience": "Student",
+        "embeddability_type": "embed_and_resource_dropdown",
         "include_in_pdf": true,
         "type": "Activity Guide"
       },
@@ -7922,10 +7940,11 @@
     },
     {
       "name": "Musical Terms Anchor Chart - Organizing Music",
-      "url": "https://drive.google.com/file/d/1RDFizyrovrwzPzZEjapEur2H3mUzfqs4/view?usp=drive_link",
+      "url": "https://drive.google.com/file/d/1ykouwZs_pE2YBp6e2JhetLpWEaLqs-aB/view",
       "key": "musical_terms_anchor_chart_-_organizing_music",
       "properties": {
         "audience": "Student",
+        "embeddability_type": "embed_and_resource_dropdown",
         "type": "Resource"
       },
       "seeding_key": {
@@ -7934,10 +7953,11 @@
     },
     {
       "name": "Musical Terms Anchor Charts - Song Structure",
-      "url": "https://drive.google.com/file/d/18VrhTjB7wkv4rJxJIYHg7sPa-i4seZtQ/view?usp=drive_link",
+      "url": "https://drive.google.com/file/d/17_TvCuO65HMB6DUJaq1UM3NCUdLi-x-R/view",
       "key": "musical_terms_anchor_charts_-_song_structure",
       "properties": {
         "audience": "Student",
+        "embeddability_type": "embed_and_resource_dropdown",
         "type": "Resource"
       },
       "seeding_key": {
@@ -7946,10 +7966,11 @@
     },
     {
       "name": "Musical Terms Anchor Charts - Track Types",
-      "url": "https://drive.google.com/file/d/16ONMCb6K-cWYW_WVRwYXJM6TXbCI6Okz/view?usp=sharing",
+      "url": "https://docs.google.com/document/d/1lww48mUd5tc3EEE4KDW1U0N-FTEN5OJxMgICXff0ABg/view",
       "key": "musical_terms_anchor_charts_-_track_types",
       "properties": {
         "audience": "Student",
+        "embeddability_type": "embed_and_resource_dropdown",
         "type": "Resource"
       },
       "seeding_key": {
@@ -7958,10 +7979,11 @@
     },
     {
       "name": "Musical Terms Glossary",
-      "url": "https://docs.google.com/presentation/d/1wvllTFs0IBWJI8uzfUhuFW4mUYItUK5nmmVjArNRlCM/view",
+      "url": "https://docs.google.com/presentation/d/15KuOR_on06H8WOrSdnRI-wIM5LWj4EDQ5d4Krwna9H0/view",
       "key": "musical_terms_glossary",
       "properties": {
         "audience": "Teacher",
+        "embeddability_type": "embed_and_resource_dropdown",
         "type": "Resource"
       },
       "seeding_key": {
@@ -8019,10 +8041,11 @@
     },
     {
       "name": "Project - Genre Mash Up",
-      "url": "https://docs.google.com/presentation/d/13sI-kHNF7fvgy0ThzjmhtIQhE5d0Otg4yx_kEoHDFT8/template/preview",
+      "url": "https://docs.google.com/presentation/d/1y5jvaWZQwNEfoi-9bEqma1pvMNNQ7HbA47xhAXDVhsM/view",
       "key": "project_-_genre_mash_up",
       "properties": {
         "audience": "Teacher",
+        "embeddability_type": "embed_and_resource_dropdown",
         "type": "Slides"
       },
       "seeding_key": {
@@ -8031,10 +8054,11 @@
     },
     {
       "name": "Sequencing - Explore",
-      "url": "https://docs.google.com/presentation/d/1wvDRrS2P_cY9n-pR_pZd7yi5Ew8MjmJeUSkIFz2hpOo/template/preview",
+      "url": "https://docs.google.com/presentation/d/1pzDC0CiWM0rtPN7JX6-2Jxsv_VWcpZ12B85eIpMkTAI/view",
       "key": "sequencing_-_explore",
       "properties": {
         "audience": "Teacher",
+        "embeddability_type": "embed_and_resource_dropdown",
         "type": "Slides"
       },
       "seeding_key": {
@@ -8043,10 +8067,11 @@
     },
     {
       "name": "Sequencing - Practice",
-      "url": "https://docs.google.com/presentation/d/1ObRxUvZcal2jUOnuIaMSs6o_CIC9QnOnHzwAZGv_Nes/template/preview",
+      "url": "https://docs.google.com/presentation/d/1Je6TWYCW0lXAAFTIxBAxdL5OpT-JuH1ICVessPJ5DuU/view",
       "key": "sequencing_-_practice",
       "properties": {
         "audience": "Teacher",
+        "embeddability_type": "embed_and_resource_dropdown",
         "type": "Slides"
       },
       "seeding_key": {
@@ -8055,10 +8080,11 @@
     },
     {
       "name": "Sequencing - Synthesis",
-      "url": "https://docs.google.com/presentation/d/1w_ZKy07bfN4k32dW4q_u0YpWRekM5Q3yk7DBEnqcHIQ/template/preview",
+      "url": "https://docs.google.com/presentation/d/1c_D5sq0EBaowfKyoF9TmPtnh_6pBheqnMQTpMqXqz1E/view",
       "key": "sequencing_-_synthesis",
       "properties": {
         "audience": "Teacher",
+        "embeddability_type": "embed_and_resource_dropdown",
         "type": "Slides"
       },
       "seeding_key": {
@@ -8067,10 +8093,11 @@
     },
     {
       "name": "Sequencing Assessment Levels Cheat Sheet",
-      "url": "https://drive.google.com/file/d/1wO6RJOBslmoDm2Wwua50BW2v6XpShcuV/view",
+      "url": "https://drive.google.com/file/d/1v-YrUvSbAal2KIC21D0Ese6qO7lrjNpg/view",
       "key": "sequencing_assessment_levels_cheat_sheet",
       "properties": {
         "audience": "Teacher",
+        "embeddability_type": "embed_and_resource_dropdown",
         "type": "Answer Key"
       },
       "seeding_key": {
@@ -8105,10 +8132,11 @@
     },
     {
       "name": "Walk Up Songs",
-      "url": "https://docs.google.com/document/d/1-NOQXuyOA4TXy2X4oACt97K0f64h2TlkP2tc3-YQKRI/edit",
+      "url": "https://docs.google.com/document/d/1ZdtFjxD_xbZby18OtrNUv-DFS9DJWTKVG1KTC8r6lfU/view",
       "key": "walk_up_songs",
       "properties": {
         "audience": "Student",
+        "embeddability_type": "embed_and_resource_dropdown",
         "include_in_pdf": true,
         "type": "Activity Guide"
       },
@@ -8118,10 +8146,11 @@
     },
     {
       "name": "Walk Up Songs Rubric",
-      "url": "https://docs.google.com/document/d/1poW9kQYsXnBX2w7jCKhN9qjTbJ52qRDrn8jZf62S3-g/edit?tab=t.0",
+      "url": "https://docs.google.com/document/d/175z2Yqoqv8SpCer030kihnsXKT6Vpv5AiyE6DYchJI0/view",
       "key": "walk_up_songs_rubric",
       "properties": {
         "audience": "Student",
+        "embeddability_type": "embed_and_resource_dropdown",
         "type": "Rubric"
       },
       "seeding_key": {
@@ -8134,6 +8163,12 @@
       "seeding_key": {
         "lesson.key": "Functions - Explore",
         "resource.key": "functions_-_explore"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Functions - Explore",
+        "resource.key": "functions_assessment_levels_cheat_sheet"
       }
     },
     {
@@ -8891,6 +8926,9 @@
     }
   ],
   "lessons_opportunity_standards": [
+
+  ],
+  "jit_pl_concepts_lessons": [
 
   ],
   "rubrics": [

@@ -8,7 +8,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2026-04-27 20:09:48 UTC",
+    "serialized_at": "2026-05-01 20:45:27 UTC",
     "hide_within_course": false,
     "published_state": "in_development",
     "instruction_type": null,
@@ -99,13 +99,35 @@
       }
     },
     {
-      "key": "36f9a0a9-d3e6-470e-b028-5467b51c8731",
+      "key": "5c60fe80-24f2-430b-87af-63b8b7656383",
       "position": 4,
+      "properties": {
+        "progression_name": "Share Your Feedback: Sketch Lab"
+      },
+      "seeding_key": {
+        "activity_section.key": "5c60fe80-24f2-430b-87af-63b8b7656383",
+        "lesson_activity.key": "a555fad6-bc01-4c38-ad78-0a476afdbb91"
+      }
+    },
+    {
+      "key": "36f9a0a9-d3e6-470e-b028-5467b51c8731",
+      "position": 5,
       "properties": {
         "progression_name": "Build Your Website"
       },
       "seeding_key": {
         "activity_section.key": "36f9a0a9-d3e6-470e-b028-5467b51c8731",
+        "lesson_activity.key": "a555fad6-bc01-4c38-ad78-0a476afdbb91"
+      }
+    },
+    {
+      "key": "00605858-af15-4b31-8fc1-5bc0cd9f1268",
+      "position": 6,
+      "properties": {
+        "progression_name": "Share Your Feedback: Web Lab"
+      },
+      "seeding_key": {
+        "activity_section.key": "00605858-af15-4b31-8fc1-5bc0cd9f1268",
         "lesson_activity.key": "a555fad6-bc01-4c38-ad78-0a476afdbb91"
       }
     }
@@ -144,7 +166,7 @@
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "code_connect_web_app_idea_bot_2026"
+          "2026-code-connect-aichat"
         ],
         "lesson.key": "lesson-1",
         "lesson_group.key": "",
@@ -152,7 +174,7 @@
         "activity_section.key": "8e2df5f7-7804-4973-af40-9792ba311346"
       },
       "level_keys": [
-        "code_connect_web_app_idea_bot_2026"
+        "2026-code-connect-aichat"
       ]
     },
     {
@@ -183,6 +205,28 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "progression": "Share Your Feedback: Sketch Lab"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "code-connect-sketch-lab-survey-2026"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "code-connect-2026",
+        "activity_section.key": "5c60fe80-24f2-430b-87af-63b8b7656383"
+      },
+      "level_keys": [
+        "code-connect-sketch-lab-survey-2026"
+      ]
+    },
+    {
+      "chapter": 5,
+      "position": 5,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
         "progression": "Build Your Website"
       },
       "bonus": false,
@@ -197,6 +241,28 @@
       },
       "level_keys": [
         "code_connect_build_your_web_app_project_2026"
+      ]
+    },
+    {
+      "chapter": 6,
+      "position": 6,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Share Your Feedback: Web Lab"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "code-connect-web-lab-survey-2026"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "code-connect-2026",
+        "activity_section.key": "00605858-af15-4b31-8fc1-5bc0cd9f1268"
+      },
+      "level_keys": [
+        "code-connect-web-lab-survey-2026"
       ]
     }
   ],
@@ -215,9 +281,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "code_connect_web_app_idea_bot_2026",
+        "level.key": "2026-code-connect-aichat",
         "script_level.level_keys": [
-          "code_connect_web_app_idea_bot_2026"
+          "2026-code-connect-aichat"
         ],
         "lesson.key": "lesson-1",
         "lesson_group.key": "",
@@ -239,6 +305,18 @@
     },
     {
       "seeding_key": {
+        "level.key": "code-connect-sketch-lab-survey-2026",
+        "script_level.level_keys": [
+          "code-connect-sketch-lab-survey-2026"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "code-connect-2026",
+        "activity_section.key": "5c60fe80-24f2-430b-87af-63b8b7656383"
+      }
+    },
+    {
+      "seeding_key": {
         "level.key": "code_connect_build_your_web_app_project_2026",
         "script_level.level_keys": [
           "code_connect_build_your_web_app_project_2026"
@@ -247,6 +325,18 @@
         "lesson_group.key": "",
         "script.name": "code-connect-2026",
         "activity_section.key": "36f9a0a9-d3e6-470e-b028-5467b51c8731"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "code-connect-web-lab-survey-2026",
+        "script_level.level_keys": [
+          "code-connect-web-lab-survey-2026"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "code-connect-2026",
+        "activity_section.key": "00605858-af15-4b31-8fc1-5bc0cd9f1268"
       }
     }
   ],

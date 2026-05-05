@@ -1,4 +1,15 @@
 #!/usr/bin/env ruby
+
+# On macOS, runner.rb's Parallel.map (in_processes) workers segfault inside
+# libsystem_trace _os_log_preferences_refresh during their first AWS S3
+# upload's net/http connect. Disable os_activity and ObjC initialize-fork
+# safety in the env before any require touches those macOS subsystems.
+# Read lazily by the OS on first use; harmless on Linux (vars ignored).
+if RUBY_PLATFORM.include?('darwin')
+  ENV['OS_ACTIVITY_MODE'] ||= 'disable'
+  ENV['OBJC_DISABLE_INITIALIZE_FORK_SAFETY'] ||= 'YES'
+end
+
 require_relative '../../../deployment'
 
 UI_TEST_DIR = File.expand_path(__dir__)
@@ -100,7 +111,7 @@ def parse_options
     options.os_version = nil
     options.browser_version = nil
     options.features = nil
-    options.pegasus_domain = 'test.code.org'
+    options.pegasus_domain = 'code.org'
     options.dashboard_domain = 'test-studio.code.org'
     options.csedweek_domain = 'test.csedweek.org'
     options.local = nil
@@ -246,17 +257,9 @@ def parse_options
       map! {|feature| feature.gsub(/^\.\//, '')}
 
     if options.force_db_access
-      options.pegasus_db_access = true
-      options.dashboard_db_access = true
-    elsif CI::Utils.running_on_ci?
-      options.pegasus_db_access = true
       options.dashboard_db_access = true
     elsif rack_env?(:development)
-      options.pegasus_db_access = true if /(localhost|ngrok)/.match?(options.pegasus_domain)
       options.dashboard_db_access = true if /(localhost|ngrok)/.match?(options.dashboard_domain)
-    elsif rack_env?(:test)
-      options.pegasus_db_access = true if /test/.match?(options.pegasus_domain)
-      options.dashboard_db_access = true if /test/.match?(options.dashboard_domain)
     end
 
     if options.config
@@ -397,6 +400,28 @@ def test_type
   eyes? ? 'Eyes' : 'UI'
 end
 
+# Human-readable test-run label used in Slack/log report headers. Device
+# Farm desktop, mobile, and combined runs are dispatched as separate
+# runner.rb invocations against separate concurrency quotas; without a
+# distinguishing prefix the per-suite report messages from a single DTT
+# look identical in #infra-test. SauceLabs runs are left as just the
+# bare test_type for now -- the 'Sauce Labs' prefix lands in the Device
+# Farm launch PR.
+def test_type_label
+  return test_type unless $options.device_farm
+  any_mobile = $browsers.any? {|b| mobile_browser?(b)}
+  all_mobile = $browsers.all? {|b| mobile_browser?(b)}
+  device_farm_kind =
+    if all_mobile
+      'Mobile'
+    elsif any_mobile
+      'Combined'
+    else
+      'Desktop'
+    end
+  "Device Farm #{device_farm_kind} #{test_type}"
+end
+
 def eyes?
   $options.run_eyes_tests
 end
@@ -416,7 +441,7 @@ def applitools_batch_url
 end
 
 def report_tests_starting
-  ChatClient.log "Starting #{browser_features.count} <b>dashboard</b> #{test_type} tests in #{$options.parallel_limit} threads..."
+  ChatClient.log "Starting #{browser_features.count} <b>dashboard</b> #{test_type_label} tests in #{$options.parallel_limit} threads..."
   if eyes?
     ChatClient.log "Batching eyes tests as <a href=\"#{applitools_batch_url}\">#{ENV.fetch('BATCH_NAME', nil)}</a>."
   end
@@ -452,16 +477,16 @@ def report_tests_finished(start_time, run_results, run_status_page_url = nil)
 
   ChatClient.log "Skipped tests tagged with: #{skipped_tags.to_a.join(', ')}"
 
-  test_report =  "\n#{test_type.upcase} TEST REPORT: #{failures.any? ? '*❌ FAILED*' : '*✅ PASSED*'}\n"
+  test_report =  "\n#{test_type_label.upcase} TEST REPORT: #{failures.any? ? '*❌ FAILED*' : '*✅ PASSED*'}\n"
   test_report += "\n#{failures.count}x failed features:\n" + failures.map {|failure| "• #{failure}\n"}.join if failures.any?
   test_report += "\n"
   test_report += "Applitools Eyes Results:\n#{applitools_batch_url}\n\n" if applitools_batch_url
-  test_report += "#{test_type} Test Status Page (permalink for this run):\n#{run_status_page_url}\n\n" if run_status_page_url
-  test_report += "#{test_type} Test Status Page (for this server, *if you're lost start here*):\n#{server_status_page_url}\n\n" unless CI::Utils.running_on_ci?
+  test_report += "#{test_type_label} Test Status Page (permalink for this run):\n#{run_status_page_url}\n\n" if run_status_page_url
+  test_report += "#{test_type_label} Test Status Page (for this server, *if you're lost start here*):\n#{server_status_page_url}\n\n" unless CI::Utils.running_on_ci?
   test_report += "\n"
   test_report += "#{suite_success_count} passed. #{failures.count} failed. Test count: #{run_results.count}. Duration: #{RakeUtils.format_duration(suite_duration)}. Total successful reruns of flaky tests: #{total_flaky_successful_reruns}.\n"
   test_report += "\n"
-  test_report += "\n*#{test_type.upcase}* TESTS #{failures.any? ? 'FAILED' : 'PASSED'}\n\n"
+  test_report += "\n*#{test_type_label.upcase}* TESTS #{failures.any? ? 'FAILED' : 'PASSED'}\n\n"
 
   ChatClient.log test_report, color: 'purple'
 end
@@ -471,8 +496,53 @@ def server_status_page_url
   CDO.studio_url('/ui_test/' + status_page_filename, scheme_for_environment, ge_region: nil)
 end
 
+# Ordered list of UI/Eyes test status pages used to render the
+# cross-page navigation row at the top of each status page. Each entry's
+# :filename must equal the value status_page_filename returns when that
+# page is being generated, so the active entry can be rendered unlinked.
+# For now, the UI Test Status page will render this as:
+#
+#   UI Test Status | <a href="...">Eyes Test Status</a>
+#
+# TODO(device-farm-launch): rename the UI entry's filename to
+# 'test_status_UI_sauce_labs.html', update status_page_filename below to
+# match for the SauceLabs branch, and add device farm desktop/mobile
+# entries.
+STATUS_PAGES_NAVIGATION = [
+  {filename: 'test_status_UI.html',   display_name: 'UI Test Status'},
+  {filename: 'test_status_Eyes.html', display_name: 'Eyes Test Status'},
+].freeze
+
+def status_pages_navigation
+  # Include the navigation row on any status pages generated during the DTT,
+  # so that the oncall engineer can quickly find all the pages they need to
+  # check for UI test failures.
+  return nil unless GIT_BRANCH == 'test'
+  STATUS_PAGES_NAVIGATION.map do |page|
+    page.merge(
+      url: CDO.studio_url("/ui_test/#{page[:filename]}", scheme_for_environment, ge_region: nil)
+    )
+  end
+end
+
 def status_page_filename
-  "test_status_#{test_type}.html"
+  # SauceLabs runs keep the unqualified name. Device Farm runs are
+  # split into desktop/mobile/combined buckets so a desktop and a
+  # mobile run (which use separate concurrency quotas and are
+  # typically invoked as separate runner.rb commands) don't overwrite
+  # each other's status page in the shared S3 prefix.
+  return "test_status_#{test_type}.html" unless $options.device_farm
+  any_mobile = $browsers.any? {|b| mobile_browser?(b)}
+  all_mobile = $browsers.all? {|b| mobile_browser?(b)}
+  device_farm_kind =
+    if all_mobile
+      'mobile'
+    elsif any_mobile
+      'combined'
+    else
+      'desktop'
+    end
+  "test_status_#{test_type}_device_farm_#{device_farm_kind}.html"
 end
 
 # Returns a permalink URL for the Test Status Page, assuming we can upload it to S3
@@ -482,10 +552,10 @@ def upload_status_page_to_s3(status_page_path = File.join(UI_TEST_DIR, status_pa
 
   return LOG_UPLOADER.upload_file(status_page_path, {content_type: 'text/html'})
 rescue Aws::Sigv4::Errors::MissingCredentialsError
-  ChatClient.log "No AWS credentials set, skipping upload of the '#{test_type} Test Status Page' to S3"
+  ChatClient.log "No AWS credentials set, skipping upload of the '#{test_type_label} Test Status Page' to S3"
   nil
 rescue Exception => exception
-  ChatClient.log "WARNING: exception raised while attempting to upload the '#{test_type} Test Status Page' to S3:\n#{exception.class}: #{exception}\n#{exception.backtrace&.first(5)&.join("\n")}"
+  ChatClient.log "WARNING: exception raised while attempting to upload the '#{test_type_label} Test Status Page' to S3:\n#{exception.class}: #{exception}\n#{exception.backtrace&.first(5)&.join("\n")}"
   nil
 end
 
@@ -506,23 +576,31 @@ def generate_status_page(suite_start_time)
         s3_bucket: S3_LOGS_BUCKET,
         s3_prefix: S3_LOGS_PREFIX,
         type: test_type,
+        type_label: test_type_label,
         git_branch: GIT_BRANCH,
         commit_hash: COMMIT_HASH,
         start_time: suite_start_time,
-        browser_features: browser_features
+        browser_features: browser_features,
+        device_farm: $options.device_farm,
+        force_db_access: $options.force_db_access,
+        status_pages: status_pages_navigation,
+        current_status_page_filename: status_page_filename
       }
     )
   )
   run_status_page_url = upload_status_page_to_s3(status_page_path)
-  ChatClient.log "#{test_type} Test Status Page (permalink for this run):\n#{run_status_page_url}\n\n" if run_status_page_url
-  ChatClient.log "#{test_type} Test Status Page (for this server):\n#{server_status_page_url}\n\n" unless CI::Utils.running_on_ci?
+  ChatClient.log "#{test_type_label} Test Status Page (permalink for this run):\n#{run_status_page_url}\n\n" if run_status_page_url
+  ChatClient.log "#{test_type_label} Test Status Page (for this server):\n#{server_status_page_url}\n\n" unless CI::Utils.running_on_ci?
   return run_status_page_url
 end
 
 def test_run_identifier(browser, feature)
   feature_name = feature.gsub(/.*features\//, '').gsub('.feature', '').tr('/', '_')
   browser_name = browser_name_or_unknown(browser)
-  "#{browser_name}_#{feature_name}" + (eyes? ? '_eyes' : '')
+  # _df distinguishes Device Farm output from concurrent SauceLabs runs
+  # against the same browser+feature during the migration. Drop after we
+  # cut over fully to DF (or to a SauceLabs-only/DF-only steady state).
+  "#{browser_name}_#{feature_name}" + (eyes? ? '_eyes' : '') + ($options.device_farm ? '_df' : '')
 end
 
 def browser_name_or_unknown(browser)
@@ -715,18 +793,12 @@ def cucumber_arguments_for_browser(browser, options)
   arguments += skip_tag('@no_phone') if browser['name'] == 'iPhone'
   arguments += skip_tag('@only_phone') unless browser['name'] == 'iPhone'
   arguments += skip_tag('@no_ci') if options.is_ci
-
-  # always run locally or during CI runs.
-  # Note that you may end up running in more than one browser if you use flags
-  # like [test safari] or [test firefox] during a CI run.
-  arguments += skip_tag('@only_one_browser') if !options.local && !options.is_ci
-
   arguments += skip_tag('@chrome') if browser['browserName'] != 'chrome' && !options.local
   arguments += skip_tag('@no_chrome') if browser['browserName'] == 'chrome'
   arguments += skip_tag('@no_safari') if browser['name'] == 'Safari'
   arguments += skip_tag('@no_firefox') if browser['browserName'] == 'firefox'
+  arguments += skip_tag('@no_device_farm') if options.device_farm
   arguments += skip_tag('@webpurify') unless CDO.webpurify_key
-  arguments += skip_tag('@pegasus_db_access') unless options.pegasus_db_access
   arguments += skip_tag('@dashboard_db_access') unless options.dashboard_db_access
   arguments += skip_tag('@properties_encryption_key') if CDO.properties_encryption_key.blank?
   arguments += skip_tag('@cloudfront_key') if CDO.cloudfront_key_pair_id.blank?

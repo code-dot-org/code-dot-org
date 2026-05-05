@@ -8,14 +8,14 @@
           "type": "panel",
           "name": "variable_panel",
           "title": "Panel to hold variables for foorm. HIDE AFTER TESTING",
-          "visible": "false",
+          "visible": "true",
           "elements": [
             {
               "type": "text",
               "name": "module",
               "startWithNewLine": false,
               "defaultValueExpression": "{module_name}",
-              "readOnly": true
+              "readOnly": false
             }
           ]
         },
@@ -37,7 +37,7 @@
         },
         {
           "type": "rating",
-          "name": "comfort_teaching_exploring_ai_and_computing",
+          "name": "comfort_supporting_students_learn_aif_ai_and_computing",
           "visibleIf": "{module} = 'Exploring AI & Computing'",
           "title": "After completing this module, I am more comfortable in my ability to navigate the AI Foundations curriculum, identify foundational AI concepts, and understand best practices for managing AI in the classroom",
           "rateCount": 7,
@@ -47,7 +47,57 @@
         },
         {
           "type": "rating",
-          "name": "comfort_supporting_students_learn_AI_threats_and_defenses",
+          "name": "comfort_supporting_students_learn_aif_programming",
+          "visibleIf": "{module} = 'Foundations of AI Programming'",
+          "title": "After completing this module, I am more comfortable in my ability to support students in designing, analyzing, and debugging programs, including the ethical use of AI tools in their development.",
+          "rateCount": 7,
+          "rateMax": 7,
+          "minRateDescription": "Less confident",
+          "maxRateDescription": "Much more confident"
+        },
+        {
+          "type": "rating",
+          "name": "comfort_supporting_students_learn_aif_systems",
+          "visibleIf": "{module} = 'AI and the Systems that Power It'",
+          "title": "After completing this module, I am more comfortable in my ability to support students in understanding computational systems, applying human-centered design, and critically evaluating the societal and ethical implications of AI and emerging technologies.",
+          "rateCount": 7,
+          "rateMax": 7,
+          "minRateDescription": "Less confident",
+          "maxRateDescription": "Much more confident"
+        },
+        {
+          "type": "rating",
+          "name": "comfort_supporting_students_learn_aif_internet",
+          "visibleIf": "{module} = 'Fabric of the Internet and AI'",
+          "title": "After completing this module, I am more comfortable in my ability to support students in understanding Internet communication, analyzing network security challenges, and evaluating the ethical use of AI in network security.",
+          "rateCount": 7,
+          "rateMax": 7,
+          "minRateDescription": "Less confident",
+          "maxRateDescription": "Much more confident"
+        },
+        {
+          "type": "rating",
+          "name": "comfort_supporting_students_learn_aif_data",
+          "visibleIf": "{module} = 'Insights from Data and AI'",
+          "title": "After completing this module, I am more comfortable in my ability to support students in understanding data science foundations, analyzing datasets, and telling ethical data stories.",
+          "rateCount": 7,
+          "rateMax": 7,
+          "minRateDescription": "Less confident",
+          "maxRateDescription": "Much more confident"
+        },
+        {
+          "type": "rating",
+          "name": "comfort_supporting_students_learn_aif_problem_solving",
+          "visibleIf": "{module} = 'Problem-Solving with AI'",
+          "title": "After completing this module, I am more comfortable in my ability to support students in understanding, critically evaluating, and responsibly utilizing AI.",
+          "rateCount": 7,
+          "rateMax": 7,
+          "minRateDescription": "Less confident",
+          "maxRateDescription": "Much more confident"
+        },
+        {
+          "type": "rating",
+          "name": "comfort_supporting_students_learn_aif_threats_and_defenses",
           "visibleIf": "{module} = 'AI-Powered Threats and Defenses'",
           "title": "After completing this module, I am more comfortable in my ability to support students in critically assessing computing's impact, understanding data privacy and security threats, and advocating for responsible technological advancements",
           "rateCount": 7,
@@ -57,7 +107,7 @@
         },
         {
           "type": "rating",
-          "name": "know_what_students_learn_exploring_ai_and_computing",
+          "name": "know_what_students_learn_curriculum",
           "visibleIf": "{module} = 'Exploring AI & Computing'",
           "title": "After completing this professional learning experience, I understand what my students will learn in Code.org's {module} curriculum.",
           "rateCount": 7,
@@ -66,10 +116,14 @@
           "maxRateDescription": "Strongly agree"
         },
         {
-          "type": "library_item",
-          "library_name": "surveys/pd/self_paced_pl_standards",
-          "library_version": 0,
-          "name": "know_what_students_learn_module"
+          "type": "rating",
+          "name": "know_what_students_learn_module",
+          "visibleIf": "{module} <> 'Exploring AI & Computing'",
+          "title": "After completing this professional learning experience, I understand what my students will learn in Code.org's {module} unit.",
+          "rateCount": 7,
+          "rateMax": 7,
+          "minRateDescription": "Strongly disagree",
+          "maxRateDescription": "Strongly agree"
         },
         {
           "type": "library_item",
@@ -86,23 +140,13 @@
         },
         {
           "type": "rating",
-          "name": "familiar_student_programming_environments_ai_and_computing",
+          "name": "familiar_student_programming_environments",
           "title": "After completing this module, I am more familiar with the programming environments and learning tools that students will use in the {module} curriculum.",
           "rateCount": 7,
           "rateMax": 7,
           "minRateDescription": "Strongly disagree",
           "maxRateDescription": "Strongly agree",
-          "visibleIf": "{module} = 'Exploring AI & Computing'"
-        },
-        {
-          "type": "rating",
-          "name": "confidence_use_skills_ai_and_computing",
-          "title": "After completing this module, do you feel more or less confident than before about using the skills you learned in this module?",
-          "rateCount": 7,
-          "rateMax": 7,
-          "minRateDescription": "Less confident",
-          "maxRateDescription": "Much more confident",
-          "visibleIf": "{module} = 'Exploring AI & Computing'"
+          "visibleIf": "{module} <> 'AI-Powered Threats and Defenses'"
         },
         {
           "type": "library_item",
@@ -112,28 +156,11 @@
           "natalia_comment": "INCLUDE ONLY IF MODULE IS ABOUT CS CURRICULUM"
         },
         {
-          "type": "rating",
-          "name": "plan_use_skills_learned_ai_and_computing",
-          "title": "Are you planning to use what you learned in this module in your role as an educator?",
-          "rateCount": 7,
-          "rateMax": 7,
-          "minRateDescription": "Not at all",
-          "maxRateDescription": "Yes, definitely",
-          "visibleIf": "{module} = 'Exploring AI & Computing'"
-        },
-        {
           "type": "library_item",
           "library_name": "surveys/pd/self_paced_pl_standards",
           "library_version": 0,
-          "name": "barriers_implementation_ai",
+          "name": "barriers_implementation_teaching_ai_and_cs",
           "natalia_comment": "INCLUDE ONLY IF MODULE IS ABOUT AI"
-        },
-        {
-          "type": "library_item",
-          "library_name": "surveys/pd/self_paced_pl_standards",
-          "library_version": 0,
-          "name": "barriers_implementation_teaching_cs",
-          "natalia_comment": "INCLUDE ONLY IF MODULE IS ABOUT CS CURRICULUM"
         },
         {
           "type": "library_item",
