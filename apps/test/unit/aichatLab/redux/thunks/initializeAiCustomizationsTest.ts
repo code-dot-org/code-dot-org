@@ -1,6 +1,6 @@
-import {setInitialConfiguration} from '@cdo/apps/aichat/redux/slice';
-import {initializeAiCustomizations} from '@cdo/apps/aichat/redux/thunks/initializeAiCustomizations';
 import {sendAnalytics} from '@cdo/apps/aichat/redux/thunks/sendAnalytics';
+import {initializeAiCustomizations} from '@cdo/apps/aichatLab/redux';
+import {setInitialConfiguration} from '@cdo/apps/aichatLab/redux/slice';
 import {
   AiCustomizations,
   LevelAichatSettings,

@@ -18,6 +18,9 @@ export const LINE_DEFAULT_LENGTH_PX = 220;
 // Milliseconds to debounce project saves after canvas changes.
 export const SAVE_DEBOUNCE_MS = 300;
 
+// How far to offset pasted/duplicated elements from their original position.
+export const PASTE_OFFSET_PX = 20;
+
 // S3 asset path prefix for project files.
 export const ASSET_PATH_PREFIX = '/v3/assets';
 
