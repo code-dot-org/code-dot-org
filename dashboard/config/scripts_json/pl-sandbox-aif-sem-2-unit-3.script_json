@@ -8,7 +8,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2026-04-27 16:23:29 UTC",
+    "serialized_at": "2026-05-04 20:23:33 UTC",
     "hide_within_course": false,
     "published_state": "in_development",
     "instruction_type": null,
@@ -860,31 +860,6 @@
       "assessment": false,
       "properties": {
         "level_keys": [
-          "pl-aif-2-U3-CHAT-12"
-        ],
-        "progression": "Objects"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "pl-aif-2-U3-CHAT-12"
-        ],
-        "lesson.key": "lesson-1",
-        "lesson_group.key": "",
-        "script.name": "pl-sandbox-aif-sem-2-unit-3",
-        "activity_section.key": "0bde05e8-dfe4-4e24-b8a1-133f764cca7c"
-      },
-      "level_keys": [
-        "pl-aif-2-U3-CHAT-12"
-      ]
-    },
-    {
-      "chapter": 31,
-      "position": 31,
-      "activity_section_position": 12,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
           "pl-aif-2-U3-CFU-map-13"
         ],
         "progression": "Objects"
@@ -904,8 +879,8 @@
       ]
     },
     {
-      "chapter": 32,
-      "position": 32,
+      "chapter": 31,
+      "position": 31,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -929,8 +904,8 @@
       ]
     },
     {
-      "chapter": 33,
-      "position": 33,
+      "chapter": 32,
+      "position": 32,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
@@ -954,8 +929,8 @@
       ]
     },
     {
-      "chapter": 34,
-      "position": 34,
+      "chapter": 33,
+      "position": 33,
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
@@ -976,8 +951,8 @@
       ]
     },
     {
-      "chapter": 35,
-      "position": 35,
+      "chapter": 34,
+      "position": 34,
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
@@ -1001,8 +976,8 @@
       ]
     },
     {
-      "chapter": 36,
-      "position": 36,
+      "chapter": 35,
+      "position": 35,
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
@@ -1026,8 +1001,8 @@
       ]
     },
     {
-      "chapter": 37,
-      "position": 37,
+      "chapter": 36,
+      "position": 36,
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
@@ -1051,8 +1026,8 @@
       ]
     },
     {
-      "chapter": 38,
-      "position": 38,
+      "chapter": 37,
+      "position": 37,
       "activity_section_position": 7,
       "assessment": false,
       "properties": {
@@ -1076,8 +1051,8 @@
       ]
     },
     {
-      "chapter": 39,
-      "position": 39,
+      "chapter": 38,
+      "position": 38,
       "activity_section_position": 8,
       "assessment": false,
       "properties": {
@@ -1101,8 +1076,8 @@
       ]
     },
     {
-      "chapter": 40,
-      "position": 40,
+      "chapter": 39,
+      "position": 39,
       "activity_section_position": 9,
       "assessment": false,
       "properties": {
@@ -1126,8 +1101,8 @@
       ]
     },
     {
-      "chapter": 41,
-      "position": 41,
+      "chapter": 40,
+      "position": 40,
       "activity_section_position": 10,
       "assessment": false,
       "properties": {
@@ -1148,8 +1123,8 @@
       ]
     },
     {
-      "chapter": 42,
-      "position": 42,
+      "chapter": 41,
+      "position": 41,
       "activity_section_position": 11,
       "assessment": false,
       "properties": {
@@ -1173,8 +1148,8 @@
       ]
     },
     {
-      "chapter": 43,
-      "position": 43,
+      "chapter": 42,
+      "position": 42,
       "activity_section_position": 12,
       "assessment": false,
       "properties": {
@@ -1198,8 +1173,8 @@
       ]
     },
     {
-      "chapter": 44,
-      "position": 44,
+      "chapter": 43,
+      "position": 43,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -1223,8 +1198,8 @@
       ]
     },
     {
-      "chapter": 45,
-      "position": 45,
+      "chapter": 44,
+      "position": 44,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
@@ -1248,8 +1223,8 @@
       ]
     },
     {
-      "chapter": 46,
-      "position": 46,
+      "chapter": 45,
+      "position": 45,
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
@@ -1615,18 +1590,6 @@
         "level.key": "aif-2-U3-map-with-objects-weblab-10",
         "script_level.level_keys": [
           "aif-2-U3-map-with-objects-weblab-10"
-        ],
-        "lesson.key": "lesson-1",
-        "lesson_group.key": "",
-        "script.name": "pl-sandbox-aif-sem-2-unit-3",
-        "activity_section.key": "0bde05e8-dfe4-4e24-b8a1-133f764cca7c"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "pl-aif-2-U3-CHAT-12",
-        "script_level.level_keys": [
-          "pl-aif-2-U3-CHAT-12"
         ],
         "lesson.key": "lesson-1",
         "lesson_group.key": "",

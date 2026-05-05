@@ -5,7 +5,7 @@ description 'description here'
 markdown <<MARKDOWN
 # Social Media Scheduler (Lesson Overview)
 
-#### In the upcoming activity from **Lesson 3**, students will choose from three small-business scenarios and take on the role of a web designer. Their task will be to update a social media scheduler for their business using core JavaScript array methods.
+#### In the upcoming activity, students will choose from three small-business scenarios and take on the role of a web designer. Their task will be to update a social media scheduler for their business using core JavaScript array methods.
 
 #### Students will choose one of the professions below and update their scheduler based on unique events in the scenario. Throughout the activity, they will use the array methods `pop()`, `push()`, `shift()`, and `unshift()` to modify the schedule as new posts are added or old posts are removed.
 
@@ -44,15 +44,5 @@ markdown <<MARKDOWN
 #### Reflection supports deeper understanding by prompting students to synthesize their thinking, describe their decisions, and make connections between the activity and the broader concepts.
 
 <div style="clear:both;"></div>
-
-## PAIR Framework: Prompt – Analyze – Integrate – Reflect
-
-#### As you work, think about the PAIR framework. 
-#### **P**rompt the AI
-#### **A**nalyze the result
-#### **I**ntegrate the code
-#### **R**eflect on the code, changes, and interaction.
-
-#### The Reflect step is especially important in AI-supported learning. Use the `reflection.md` file to complete the R – Reflect portion of the process. Encourage students to do the same during classroom instruction.
 
 MARKDOWN

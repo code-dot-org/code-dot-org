@@ -12,7 +12,7 @@ class AiLessonSummaryPodcastsHelperTest < ActionView::TestCase
     # Mock CDO constant
     CDO.stubs(:elevenlabs_api_key).returns(@api_key)
 
-    @expected_url = "https://api.elevenlabs.io/v1/text-to-speech/#{@voice_id}?output_format=mp3_44100_128"
+    @expected_tts_url = "https://api.elevenlabs.io/v1/text-to-speech/#{@voice_id}?output_format=mp3_44100_128"
     @expected_headers = {
       "Content-Type" => "application/json",
       "xi-api-key" => @api_key
@@ -121,8 +121,10 @@ class AiLessonSummaryPodcastsHelperTest < ActionView::TestCase
 
   test "Client has correct constants" do
     assert_equal "Fc5CaIGWKvLHapoOSM2K", AiLessonSummaryPodcastsHelper::Client::VOICE_ID
-    assert_equal "https://api.elevenlabs.io/v1/text-to-speech/Fc5CaIGWKvLHapoOSM2K?output_format=mp3_44100_128",
-                 AiLessonSummaryPodcastsHelper::Client::ELEVENLABS_URL
+    assert_equal "https://api.elevenlabs.io/v1", AiLessonSummaryPodcastsHelper::Client::ELEVENLABS_BASE_URL
+    assert_equal "/user/subscription", AiLessonSummaryPodcastsHelper::Client::ELEVENLABS_SUBSCRIPTION_PATH
+    assert_equal "/text-to-speech/Fc5CaIGWKvLHapoOSM2K?output_format=mp3_44100_128",
+                 AiLessonSummaryPodcastsHelper::Client::ELEVENLABS_TTS_PATH
   end
 
   # *****
@@ -139,7 +141,7 @@ class AiLessonSummaryPodcastsHelperTest < ActionView::TestCase
 
     # Expect HTTParty.post to be called with correct parameters
     HTTParty.expects(:post).with(
-      @expected_url,
+      @expected_tts_url,
       headers: @expected_headers,
       body: @expected_body,
       timeout: 180
@@ -157,8 +159,7 @@ class AiLessonSummaryPodcastsHelperTest < ActionView::TestCase
     HTTParty.stubs(:post).returns(mock_response)
 
     # Capture the actual headers sent
-    HTTParty.expects(:post).with do |url, options|
-      puts url
+    HTTParty.expects(:post).with do |_url, options|
       headers = options[:headers]
       headers["Content-Type"] == "application/json" &&
         headers["xi-api-key"] == @api_key
@@ -174,8 +175,7 @@ class AiLessonSummaryPodcastsHelperTest < ActionView::TestCase
     HTTParty.stubs(:post).returns(mock_response)
 
     # Capture the actual body sent
-    HTTParty.expects(:post).with do |url, options|
-      puts url
+    HTTParty.expects(:post).with do |_url, options|
       body_data = JSON.parse(options[:body])
       body_data["model_id"] == @model &&
         body_data["text"] == @test_script
@@ -190,7 +190,7 @@ class AiLessonSummaryPodcastsHelperTest < ActionView::TestCase
     mock_response = mock('response')
 
     # Expect HTTParty.post to be called with the exact URL
-    HTTParty.expects(:post).with(@expected_url, anything).returns(mock_response)
+    HTTParty.expects(:post).with(@expected_tts_url, anything).returns(mock_response)
 
     client.request_podcast(@test_script)
   end
@@ -206,7 +206,7 @@ class AiLessonSummaryPodcastsHelperTest < ActionView::TestCase
     mock_response.stubs(:body).returns(@test_audio_data)
 
     HTTParty.expects(:post).with(
-      @expected_url,
+      @expected_tts_url,
       headers: @expected_headers,
       body: @expected_body,
       timeout: 180
@@ -293,7 +293,7 @@ class AiLessonSummaryPodcastsHelperTest < ActionView::TestCase
     }.to_json
 
     HTTParty.expects(:post).with(
-      @expected_url,
+      @expected_tts_url,
       headers: @expected_headers,
       body: expected_body,
       timeout: 180
@@ -370,5 +370,124 @@ class AiLessonSummaryPodcastsHelperTest < ActionView::TestCase
     end
 
     assert_includes error.message, "status code 500"
+  end
+
+  test "get_podcast_from_script handles Net::OpenTimeout error" do
+    mock_client = mock('client')
+    mock_client.expects(:request_podcast).raises(Net::OpenTimeout)
+    AiLessonSummaryPodcastsHelper::Client.expects(:new).returns(mock_client)
+
+    error = assert_raises(StandardError) do
+      AiLessonSummaryPodcastsHelper.get_podcast_from_script(@test_script)
+    end
+
+    assert_equal "Timeout waiting for AI client to return lesson summary podcast", error.message
+  end
+
+  # *****
+  # Client class tests - available_credits method
+  # *****
+
+  test "Client available_credits returns true when under 95% usage" do
+    client = AiLessonSummaryPodcastsHelper::Client.new(@api_key, @model)
+
+    mock_response = mock('response')
+    mock_response.stubs(:body).returns(JSON.generate({'character_count' => 900, 'character_limit' => 1000}))
+
+    HTTParty.expects(:get).with(
+      "https://api.elevenlabs.io/v1/user/subscription",
+      headers: @expected_headers,
+      timeout: 180
+    ).returns(mock_response)
+
+    assert client.available_credits
+  end
+
+  test "Client available_credits returns false when at or above 95% usage" do
+    client = AiLessonSummaryPodcastsHelper::Client.new(@api_key, @model)
+
+    mock_response = mock('response')
+    mock_response.stubs(:body).returns(JSON.generate({'character_count' => 950, 'character_limit' => 1000}))
+
+    HTTParty.stubs(:get).returns(mock_response)
+
+    refute client.available_credits
+  end
+
+  test "Client available_credits returns false when exactly at 95% usage" do
+    client = AiLessonSummaryPodcastsHelper::Client.new(@api_key, @model)
+
+    mock_response = mock('response')
+    mock_response.stubs(:body).returns(JSON.generate({'character_count' => 95, 'character_limit' => 100}))
+
+    HTTParty.stubs(:get).returns(mock_response)
+
+    refute client.available_credits
+  end
+
+  # *****
+  # create_and_save_to_s3 tests
+  # *****
+
+  test "create_and_save_to_s3 skips all processing when credits unavailable" do
+    mock_client = mock('client')
+    mock_client.stubs(:available_credits).returns(false)
+    AiLessonSummaryPodcastsHelper.stubs(:client).returns(mock_client)
+
+    AiLessonSummariesHelper.expects(:retrieve_and_save_ai_lesson_summary).never
+    AWS::S3.expects(:upload_to_bucket).never
+
+    AiLessonSummaryPodcastsHelper.create_and_save_to_s3(42, 1)
+  end
+
+  test "create_and_save_to_s3 generates and uploads podcast when credits available and file absent" do
+    mock_client = mock('client')
+    mock_client.stubs(:available_credits).returns(true)
+    AiLessonSummaryPodcastsHelper.stubs(:client).returns(mock_client)
+
+    AiLessonSummariesHelper.stubs(:retrieve_and_save_ai_lesson_summary).with(42, 1, true).
+      returns({script: @test_script})
+    AWS::S3.stubs(:exists_in_bucket).returns(false)
+    AiLessonSummaryPodcastsHelper.stubs(:get_podcast_from_script).returns(@test_audio_data)
+
+    expected_filename = 'podcasts/lesson_42_podcast.mp3'
+    AWS::S3.expects(:upload_to_bucket).with(
+      AiLessonSummaryPodcastsHelper::PODCAST_BUCKET,
+      expected_filename,
+      @test_audio_data,
+      no_random: true
+    )
+
+    AiLessonSummaryPodcastsHelper.create_and_save_to_s3(42, 1)
+  end
+
+  test "create_and_save_to_s3 skips upload when file already exists in S3" do
+    mock_client = mock('client')
+    mock_client.stubs(:available_credits).returns(true)
+    AiLessonSummaryPodcastsHelper.stubs(:client).returns(mock_client)
+
+    AiLessonSummariesHelper.stubs(:retrieve_and_save_ai_lesson_summary).returns({script: @test_script})
+    AWS::S3.stubs(:exists_in_bucket).returns(true)
+
+    AWS::S3.expects(:upload_to_bucket).never
+
+    AiLessonSummaryPodcastsHelper.create_and_save_to_s3(42, 1)
+  end
+
+  # *****
+  # retrieve_podcast_from_s3 tests
+  # *****
+
+  test "retrieve_podcast_from_s3 downloads from correct bucket and path" do
+    expected_filename = 'podcasts/lesson_42_podcast.mp3'
+
+    AWS::S3.expects(:download_from_bucket).with(
+      AiLessonSummaryPodcastsHelper::PODCAST_BUCKET,
+      expected_filename
+    ).returns(@test_audio_data)
+
+    result = AiLessonSummaryPodcastsHelper.retrieve_podcast_from_s3(42)
+
+    assert_equal @test_audio_data, result
   end
 end

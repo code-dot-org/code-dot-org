@@ -4,12 +4,14 @@ module AiLessonSummaryPodcastsHelper
   PODCAST_FOLDER = 'podcasts/'
 
   def self.create_and_save_to_s3(lesson_id, user_id)
-    script = AiLessonSummariesHelper.retrieve_and_save_ai_lesson_summary(lesson_id, user_id, true)[:script]
-    filename = PODCAST_FOLDER + 'lesson_' + lesson_id.to_s + '_podcast.mp3'
+    if client.available_credits
+      script = AiLessonSummariesHelper.retrieve_and_save_ai_lesson_summary(lesson_id, user_id, true)[:script]
+      filename = PODCAST_FOLDER + 'lesson_' + lesson_id.to_s + '_podcast.mp3'
 
-    unless AWS::S3.exists_in_bucket(PODCAST_BUCKET, filename)
-      podcast = get_podcast_from_script(script)
-      AWS::S3.upload_to_bucket(PODCAST_BUCKET, filename, podcast, no_random: true)
+      unless AWS::S3.exists_in_bucket(PODCAST_BUCKET, filename)
+        podcast = get_podcast_from_script(script)
+        AWS::S3.upload_to_bucket(PODCAST_BUCKET, filename, podcast, no_random: true)
+      end
     end
   end
 
@@ -38,11 +40,30 @@ module AiLessonSummaryPodcastsHelper
     attr_accessor :api_key, :model
 
     VOICE_ID = "Fc5CaIGWKvLHapoOSM2K"
-    ELEVENLABS_URL = "https://api.elevenlabs.io/v1/text-to-speech/#{VOICE_ID}?output_format=mp3_44100_128"
+    ELEVENLABS_BASE_URL = "https://api.elevenlabs.io/v1"
+    ELEVENLABS_SUBSCRIPTION_PATH = "/user/subscription"
+    ELEVENLABS_TTS_PATH = "/text-to-speech/#{VOICE_ID}?output_format=mp3_44100_128"
 
     def initialize(api_key, model)
       @api_key = api_key
       @model = model
+    end
+
+    def available_credits
+      headers = {
+        "Content-Type" => "application/json",
+        "xi-api-key" => @api_key
+      }
+
+      user_response = HTTParty.get(
+        ELEVENLABS_BASE_URL + ELEVENLABS_SUBSCRIPTION_PATH,
+        headers: headers,
+        timeout: 180,
+      )
+
+      subscription_info = JSON.parse(user_response.body)
+
+      subscription_info['character_count'] < subscription_info['character_limit'] * 0.95
     end
 
     def request_podcast(prompt)
@@ -57,7 +78,7 @@ module AiLessonSummaryPodcastsHelper
       }
 
       HTTParty.post(
-        ELEVENLABS_URL,
+        ELEVENLABS_BASE_URL + ELEVENLABS_TTS_PATH,
         headers: headers,
         body: data.to_json,
         timeout: 180,

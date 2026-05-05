@@ -58,6 +58,7 @@ class Services::User::PiiScrubberTest < ActiveSupport::TestCase
     end
 
     it 'redacts section names' do
+      section
       scrub_pii
       user.sections_owned.with_deleted.each do |section|
         _(section.reload.name).must_equal Services::User::PiiScrubber::REDACTED_STRING
