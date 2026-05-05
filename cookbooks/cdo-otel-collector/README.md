@@ -4,7 +4,7 @@ This cookbook installs and configures the [OpenTelemetry Contrib Collector](http
 
 ## Overview
 
-The OTel Contrib Collector receives telemetry data (traces, metrics, logs) via OTLP and forwards it to an APM backend. The active backend is controlled by the `apm_backend` attribute. Currently the only supported value is **Sentry**; other backends were evaluated and removed.
+The OTel Contrib Collector receives telemetry data (traces, metrics, logs) via OTLP and forwards it to an APM backend. The active backend is controlled by the `apm_backend` attribute. Currently the only supported value is **Sentry**.
 
 ## Requirements
 
