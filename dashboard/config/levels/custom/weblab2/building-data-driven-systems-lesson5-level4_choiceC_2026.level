@@ -1,13 +1,43 @@
 <Weblab2>
   <config><![CDATA[{
+  "published": true,
   "game_id": 74,
   "created_at": "2026-05-01T23:04:12.000Z",
   "level_num": "custom",
   "user_id": 22366,
   "properties": {
-    "require_edit_to_continue": true
+    "require_edit_to_continue": "true",
+    "encrypted": "false",
+    "display_name": "Transit Stops",
+    "long_instructions": "## Compare Data Completeness\r\n\r\n### Do This:\r\n1. Look through the `stops` array.\r\n2. Compare how much information each stop has.\r\n3. Focus on the `notes` field across stops.\r\n\r\n\r\n### **Reflect:**\r\n\r\n- Which stops have more detailed information?\r\n- Which have less or missing information?\r\n- Which stop would seem more important or useful? Why?",
+    "bubble_choice_description": "Look at how much information each transit stop has and compare them.",
+    "thumbnail_url": "https://images.code.org/e7d226838777bca69d25a203152f3359-transit_stop.png",
+    "offer_browser_tts": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "false",
+    "widget_view": "false",
+    "initial_view_mode": "split",
+    "predict_settings": {
+      "isPredictLevel": false,
+      "solution": "",
+      "questionType": "freeResponse",
+      "placeholderText": "",
+      "multipleChoiceOptions": [
+        ""
+      ],
+      "freeResponseHeight": 50,
+      "codeEditableAfterSubmit": false
+    },
+    "ai_tutor_prompt_settings": {
+      "answerTypes": [
+        "explainCode"
+      ],
+      "answerTypeCustomizations": {
+      }
+    },
+    "project_template_level_name": "template_building-data-driven-systems-lesson5-level1_choicec_2026"
   },
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2026-05-01T23:04:12.468+00:00\",\"changed\":[\"cloned from \\\"building-data-driven-systems-lesson5-level4_choiceA_2026\\\"\"],\"cloned_from\":\"building-data-driven-systems-lesson5-level4_choiceA_2026\"}]"
+  "audit_log": "[{\"changed_at\":\"2026-05-01T23:04:12.468+00:00\",\"changed\":[\"cloned from \\\"building-data-driven-systems-lesson5-level4_choiceA_2026\\\"\"],\"cloned_from\":\"building-data-driven-systems-lesson5-level4_choiceA_2026\"},{\"changed_at\":\"2026-05-04 14:23:51 +0000\",\"changed\":[\"require_edit_to_continue\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-05-04 14:24:50 +0000\",\"changed\":[\"ai_tutor_prompt_settings\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-05-04 14:44:07 +0000\",\"changed\":[],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"}]"
 }]]></config>
 </Weblab2>

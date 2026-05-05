@@ -7,7 +7,7 @@
   "user_id": 18603,
   "properties": {
     "encrypted": "false",
-    "long_instructions": "## Build Your Web App\r\n\r\n### What to do:\r\nStart building your web app. Use AI to create your HTML and CSS structure and add in your own images to make it come alive!\r\n\r\n**Focus On:**\r\n- Setting up your main page and linking to other pages.\r\n- Styling your webpage to match your brand kit. Upload your sketches to AI Tutor!\r\n- Adding in custom images and content.\r\n\r\n**Ask AI for help if you get stuck.** ",
+    "long_instructions": "## Build Your Web App\r\n\r\n### What to do:\r\nStart building your web app. Use AI to create your HTML and CSS structure and add in your own images to make it come alive! Click this link for an [example website](https://studio.code.org/projects/weblab2/58034262-e51b-4ed2-9981-8cbb0fac3ee2).\r\n\r\n**Focus On:**\r\n- Setting up your main page and linking to other pages.\r\n- Styling your webpage to match your brand kit. Upload your sketches to AI Tutor!\r\n- Adding in custom images and content.\r\n\r\n**Ask AI for help if you get stuck.** ",
     "submittable": "false",
     "hide_share_and_remix": "false",
     "widget_view": "false",
@@ -42,6 +42,6 @@
       }
     }
   },
-  "audit_log": "[{\"changed_at\":\"2026-04-24T22:09:21.768+00:00\",\"changed\":[\"cloned from \\\"ai-and-algorithmic-decisions-lesson11-level2_2026\\\"\"],\"cloned_from\":\"ai-and-algorithmic-decisions-lesson11-level2_2026\"},{\"changed_at\":\"2026-04-24 22:09:31 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-28 21:15:30 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-28 21:53:57 +0000\",\"changed\":[\"ai_tutor_prompt_settings\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2026-04-24T22:09:21.768+00:00\",\"changed\":[\"cloned from \\\"ai-and-algorithmic-decisions-lesson11-level2_2026\\\"\"],\"cloned_from\":\"ai-and-algorithmic-decisions-lesson11-level2_2026\"},{\"changed_at\":\"2026-04-24 22:09:31 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-28 21:15:30 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-28 21:53:57 +0000\",\"changed\":[\"ai_tutor_prompt_settings\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-05-04 16:06:23 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"}]"
 }]]></config>
 </Weblab2>
