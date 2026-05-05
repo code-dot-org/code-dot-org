@@ -3,6 +3,7 @@ Feature: Using the V2 progress page
   Background:
     Given I am on "http://studio.code.org"
 
+@no_device_farm
 Scenario: Teacher can open and close Icon Key and details
   Given I create an authorized teacher-associated student named "Sally"
   Given I am assigned to course "allthethingscourse" with teacher "Teacher_Sally" in a section named "Test Section"
@@ -27,7 +28,7 @@ Scenario: Teacher can open and close Icon Key and details
   # Teacher can open the more details of the icon key and close it
   Then I click selector "a:contains('More Details')"
   And I wait until element "h3:contains(Progress Tracking Icon Key)" is visible
-  And I click selector "#ui-close-dialog"
+  And I click selector "button:contains('OK')"
   And element "h3:contains(Progress Tracking Icon Key)" is hidden
 
 @properties_encryption_key

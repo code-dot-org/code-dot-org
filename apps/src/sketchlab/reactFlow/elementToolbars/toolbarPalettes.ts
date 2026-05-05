@@ -38,10 +38,38 @@ export const FONT_SIZE_OPTIONS = [
 
 export type FontSizeValue = (typeof FONT_SIZE_OPTIONS)[number]['value'];
 
+export const LINE_WIDTH_OPTIONS = [
+  {value: 1, label: 'Thin'},
+  {value: 3, label: 'Medium'},
+  {value: 5, label: 'Thick'},
+] as const;
+
+export type LineWidthValue = (typeof LINE_WIDTH_OPTIONS)[number]['value'];
+
+export const LINE_STROKE_STYLE_OPTIONS = [
+  {value: 'solid', label: 'Solid'},
+  {value: 'dashed', label: 'Dashed'},
+  {value: 'dotted', label: 'Dotted'},
+] as const;
+
+export type LineStrokeStyleValue =
+  (typeof LINE_STROKE_STYLE_OPTIONS)[number]['value'];
+
+export const TEXT_ALIGN_OPTIONS = [
+  {value: 'left', label: 'Align left', icon: 'align-left'},
+  {value: 'center', label: 'Align center', icon: 'align-center'},
+  {value: 'right', label: 'Align right', icon: 'align-right'},
+] as const;
+
+export type TextAlignValue = (typeof TEXT_ALIGN_OPTIONS)[number]['value'];
+
 export const DEFAULT_BACKGROUND_COLOR = 'transparent';
 export const DEFAULT_STROKE_COLOR = 'var(--sketchlab-stroke-default)';
 export const DEFAULT_FONT_COLOR = 'var(--sketchlab-stroke-default)';
 export const DEFAULT_FONT_SIZE: FontSizeValue = 'medium';
+export const DEFAULT_TEXT_ALIGN: TextAlignValue = 'center';
+export const DEFAULT_LINE_WIDTH: LineWidthValue = 1;
+export const DEFAULT_LINE_STROKE_STYLE: LineStrokeStyleValue = 'solid';
 
 export function fontSizePx(value: string | undefined): number | undefined {
   const match = FONT_SIZE_OPTIONS.find(option => option.value === value);
@@ -49,4 +77,30 @@ export function fontSizePx(value: string | undefined): number | undefined {
     match?.px ||
     FONT_SIZE_OPTIONS.find(option => option.value === DEFAULT_FONT_SIZE)?.px
   );
+}
+
+export function strokeDasharrayFromStyle(
+  style: LineStrokeStyleValue
+): string | undefined {
+  if (style === 'dashed') {
+    return '8 4';
+  }
+  if (style === 'dotted') {
+    return '2 4';
+  }
+  return undefined;
+}
+
+export function strokeStyleFromDasharray(
+  dasharray: string | number | undefined
+): LineStrokeStyleValue {
+  const normalizedDasharray =
+    typeof dasharray === 'number' ? `${dasharray}` : dasharray;
+  if (normalizedDasharray === strokeDasharrayFromStyle('dashed')) {
+    return 'dashed';
+  }
+  if (normalizedDasharray === strokeDasharrayFromStyle('dotted')) {
+    return 'dotted';
+  }
+  return DEFAULT_LINE_STROKE_STYLE;
 }

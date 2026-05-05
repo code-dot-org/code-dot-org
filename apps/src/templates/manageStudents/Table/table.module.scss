@@ -1,0 +1,32 @@
+.additionalControlsContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+
+  .additionalControlsButtonsRow {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+}
+
+.headerName {
+  width: 60%;
+  float: left;
+  margin-right: 5px;
+}
+
+.headerIcon {
+  width: 20%;
+  float: left;
+}
+
+.verticalAlign {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.actionColumnHeaderSaveAllButton {
+  white-space: nowrap;
+}

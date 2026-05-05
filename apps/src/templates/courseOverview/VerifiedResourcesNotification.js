@@ -20,6 +20,7 @@ const VerifiedResourcesNotification = ({inLesson}) => {
     <NotificationBanner
       variant="warning"
       style="filled"
+      fullWidth={false}
       title={i18n.verifiedResourcesNotice()}
       className={classNames(
         styles.verifiedResourcesNotification,

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2026_04_23_120000) do
+ActiveRecord::Schema[7.0].define(version: 2026_04_29_120000) do
   create_table "activities", id: :integer, charset: "utf8mb3", collation: "utf8mb3_unicode_ci", force: :cascade do |t|
     t.integer "user_id"
     t.integer "level_id"
@@ -828,6 +828,13 @@ ActiveRecord::Schema[7.0].define(version: 2026_04_23_120000) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "jit_pl_concepts_json_videos", id: false, charset: "utf8mb4", collation: "utf8mb4_unicode_ci", force: :cascade do |t|
+    t.bigint "jit_pl_concept_id", null: false
+    t.bigint "json_video_id", null: false
+    t.index ["jit_pl_concept_id", "json_video_id"], name: "index_concepts_json_videos_on_concept_id_and_video_id", unique: true
+    t.index ["json_video_id", "jit_pl_concept_id"], name: "index_concepts_json_videos_on_video_id_and_concept_id", unique: true
+  end
+
   create_table "jit_pl_concepts_lessons", id: false, charset: "utf8mb4", collation: "utf8mb4_unicode_ci", force: :cascade do |t|
     t.bigint "jit_pl_concept_id", null: false
     t.bigint "lesson_id", null: false
@@ -860,6 +867,13 @@ ActiveRecord::Schema[7.0].define(version: 2026_04_23_120000) do
     t.index ["jit_pl_misconception_id"], name: "index_jit_pl_exemplars_on_jit_pl_misconception_id"
   end
 
+  create_table "jit_pl_exemplars_json_videos", id: false, charset: "utf8mb4", collation: "utf8mb4_unicode_ci", force: :cascade do |t|
+    t.bigint "jit_pl_exemplar_id", null: false
+    t.bigint "json_video_id", null: false
+    t.index ["jit_pl_exemplar_id", "json_video_id"], name: "index_exemplars_json_videos_on_exemplar_id_and_video_id", unique: true
+    t.index ["json_video_id", "jit_pl_exemplar_id"], name: "index_exemplars_json_videos_on_video_id_and_exemplar_id", unique: true
+  end
+
   create_table "jit_pl_exemplars_resources", id: false, charset: "utf8mb4", collation: "utf8mb4_unicode_ci", force: :cascade do |t|
     t.bigint "jit_pl_exemplar_id", null: false
     t.bigint "resource_id", null: false
@@ -875,6 +889,13 @@ ActiveRecord::Schema[7.0].define(version: 2026_04_23_120000) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["jit_pl_concept_id"], name: "index_jit_pl_misconceptions_on_jit_pl_concept_id"
+  end
+
+  create_table "jit_pl_misconceptions_json_videos", id: false, charset: "utf8mb4", collation: "utf8mb4_unicode_ci", force: :cascade do |t|
+    t.bigint "jit_pl_misconception_id", null: false
+    t.bigint "json_video_id", null: false
+    t.index ["jit_pl_misconception_id", "json_video_id"], name: "index_misconceptions_json_videos_on_misc_id_and_video_id", unique: true
+    t.index ["json_video_id", "jit_pl_misconception_id"], name: "index_misconceptions_json_videos_on_video_id_and_misc_id", unique: true
   end
 
   create_table "jit_pl_misconceptions_resources", id: false, charset: "utf8mb4", collation: "utf8mb4_unicode_ci", force: :cascade do |t|
@@ -2653,6 +2674,13 @@ ActiveRecord::Schema[7.0].define(version: 2026_04_23_120000) do
     t.json "console_font_size"
     t.json "theme"
     t.index ["user_id"], name: "index_user_preferences_on_user_id"
+  end
+
+  create_table "user_product_tours", charset: "utf8mb4", collation: "utf8mb4_unicode_ci", force: :cascade do |t|
+    t.integer "user_id", null: false
+    t.string "tour_name", null: false
+    t.datetime "completed_at", null: false
+    t.index ["user_id", "tour_name"], name: "index_user_product_tours_on_user_id_and_tour_name", unique: true
   end
 
   create_table "user_proficiencies", id: :integer, charset: "utf8mb3", collation: "utf8mb3_unicode_ci", force: :cascade do |t|

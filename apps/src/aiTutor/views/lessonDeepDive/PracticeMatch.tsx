@@ -19,7 +19,12 @@ import {Typography} from '@mui/material';
 import React, {FC, useState} from 'react';
 
 import {SortableOptionCard} from './SortableOptionCard';
-import {MatchSolution, PracticeProblem} from './types';
+import {
+  MatchSolution,
+  MultiSolution,
+  PracticeProblem,
+  ScrambleSolution,
+} from './types';
 
 import styles from './practice-problems.module.scss';
 
@@ -28,6 +33,11 @@ interface PracticeMatchProps {
   submitted: boolean;
   submitCallback: React.Dispatch<React.SetStateAction<boolean>>;
   correctCallback: React.Dispatch<React.SetStateAction<boolean>>;
+  studentAnswerCallback: React.Dispatch<
+    React.SetStateAction<
+      (MultiSolution | ScrambleSolution | MatchSolution)[] | null
+    >
+  >;
 }
 
 const PracticeMatch: FC<PracticeMatchProps> = ({
@@ -35,6 +45,7 @@ const PracticeMatch: FC<PracticeMatchProps> = ({
   submitted,
   submitCallback,
   correctCallback,
+  studentAnswerCallback,
 }) => {
   const solutions = problem.solution.map(s => {
     return {...s};
@@ -177,6 +188,14 @@ const PracticeMatch: FC<PracticeMatchProps> = ({
               onClick={() => {
                 submitCallback(true);
                 correctCallback(isCorrect);
+                studentAnswerCallback(
+                  sortableOptions.map((opt, index) => {
+                    return {
+                      option: opt,
+                      correct: sortableMatches[index],
+                    };
+                  })
+                );
               }}
             >
               <Typography variant="body1" className={styles.cardLabel}>

@@ -6,6 +6,15 @@
   color: var(--text-neutral-primary);
 }
 
+// Rotatable layer that contains only the visual content (shape + label).
+// React Flow's NodeResizer, toolbar, and ConnectionHandles sit outside this
+// wrapper so resize math and edge attachment stay axis-aligned.
+.rotatable {
+  position: absolute;
+  inset: 0;
+  transform-origin: center;
+}
+
 .shapeSvg {
   position: absolute;
   top: 0;
@@ -29,13 +38,15 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  text-align: center;
+  width: 100%;
   cursor: default;
   user-select: none;
   max-width: 90%;
   min-width: 40px;
   min-height: 20px;
-  word-break: break-word;
+  word-break: normal;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
   font-size: 14px;
   line-height: 1.3;
   pointer-events: all;

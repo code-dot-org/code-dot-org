@@ -19,7 +19,7 @@
     }
   },
   "scripts": {
-    "build": "vite build && tsc --noEmit",
+    "build": "vite build",
     "dev": "vite",
     "lint": "eslint .",
     "lint:fix": "eslint --fix .",
@@ -27,7 +27,7 @@
     "prettier:fix": "prettier --write .",
     "preview": "vite preview",
     "test": "vitest --run",
-    "typecheck": "tsc --noEmit"
+    "typecheck": "tsc -b --noEmit"
   },
   "prettier": "@code-dot-org/lint-config/prettier/index.mjs",
   "dependencies": {
