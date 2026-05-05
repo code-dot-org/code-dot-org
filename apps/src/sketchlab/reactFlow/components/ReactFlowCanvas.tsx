@@ -425,9 +425,9 @@ export default function ReactFlowCanvas({
       }
       // During an in-flight reconnect we relax the anchor restriction so the
       // user can drag a line endpoint onto a real node's handle. We still
-      // block self-loops (same node on both ends).
+      // block self-loops and reconnecting to another line anchor.
       if (isReconnecting()) {
-        return source !== target;
+        return source !== target && !isLineAnchorNodeId(target, nodes);
       }
       return canCreateConnection(source, target, nodes);
     },
