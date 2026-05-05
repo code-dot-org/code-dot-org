@@ -177,7 +177,7 @@ export default function ReactFlowCanvas({
     setNodeOrEdgeFocused
   );
 
-  const {attemptAnchorSnap} = useAnchorMove();
+  const {attemptAnchorSnap} = useAnchorMove({setEdges});
 
   const handleNodeDragStop = useCallback(
     (event: React.MouseEvent, node: SketchlabReactFlowNode) => {
@@ -204,7 +204,6 @@ export default function ReactFlowCanvas({
       cutEntry,
       paste,
       lastFocusedEntry,
-      attemptAnchorSnap,
     });
 
   const {handleEdgeMouseDown} = useLineEdgeDrag({

@@ -8,9 +8,15 @@ import type {
 
 import {snapEdgeEndpointToHandle} from '../utils/handleSnap';
 
+interface UseAnchorMoveOptions {
+  setEdges: (
+    updater: (edges: SketchlabReactFlowEdge[]) => SketchlabReactFlowEdge[]
+  ) => void;
+}
+
 // Helper for snapping a line anchor to a real node handle when it has moved close enough.
-export function useAnchorMove() {
-  const {getEdges, setEdges} = useReactFlow<
+export function useAnchorMove({setEdges}: UseAnchorMoveOptions) {
+  const {getEdges} = useReactFlow<
     SketchlabReactFlowNode,
     SketchlabReactFlowEdge
   >();

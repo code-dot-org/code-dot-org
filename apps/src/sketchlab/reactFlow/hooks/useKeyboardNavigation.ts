@@ -32,6 +32,7 @@ import {
 } from '../utils/lineAnchors';
 import {getNodeLabel} from '../utils/nodeLabel';
 
+import {useAnchorMove} from './useAnchorMove';
 import {useAriaAnnouncer} from './useAriaAnnouncer';
 import {useConnectMode} from './useConnectMode';
 
@@ -124,14 +125,6 @@ interface UseKeyboardNavigationOptions {
   // (which renders outside .react-flow__node), so getEntryFromDOM returns
   // null. lastFocusedEntry gives us the last known node/edge target.
   lastFocusedEntry: TabOrderEntry | null;
-  // Snap helper from useAnchorMove. Used when an arrow-key move places a
-  // line anchor close enough to a real-node handle to attach. Returns the
-  // affected edge's id when a snap fired, or null otherwise.
-  attemptAnchorSnap: (params: {
-    anchorId: string;
-    screenPoint: XYPosition;
-    radiusPx: number;
-  }) => string | null;
 }
 
 /**
@@ -174,7 +167,6 @@ export function useKeyboardNavigation({
   cutEntry,
   paste,
   lastFocusedEntry,
-  attemptAnchorSnap,
 }: UseKeyboardNavigationOptions) {
   const {
     getEdge,
@@ -187,6 +179,7 @@ export function useKeyboardNavigation({
   const {announcement: connectAnnouncement, announce} = useAriaAnnouncer();
   const {connectingFrom, startConnect, cancelConnect, completeConnect} =
     useConnectMode({nodes, setEdges, announce});
+  const {attemptAnchorSnap} = useAnchorMove({setEdges});
 
   // Remembers the edge most recently translated by an arrow keypress so
   // that subsequent presses can keep moving the same edge even if the
