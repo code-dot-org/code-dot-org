@@ -4,7 +4,11 @@ import AichatContextManager from '@cdo/apps/aichat/aichatContextManager';
 import {createUuid} from '@cdo/apps/utils';
 import {AiChatClientTypes} from '@cdo/generated-scripts/sharedConstants';
 
-import {generatePanelsForLevel, generateWeblab2Level} from './aiGeneration';
+import {
+  generateLessonOutline,
+  generatePanelsForLevel,
+  generateWeblab2Level,
+} from './aiGeneration';
 import {
   createOrFindLevel,
   saveLessonActivities,
@@ -226,6 +230,9 @@ const LessonGenerator: React.FC<LessonGeneratorProps> = ({lesson}) => {
   const [progressLog, setProgressLog] = useState<string[]>([]);
   const [summary, setSummary] = useState<GenerationSummary | null>(null);
   const [topLevelError, setTopLevelError] = useState<string | null>(null);
+  const [outline, setOutline] = useState<string>('');
+  const [isOutlining, setIsOutlining] = useState(false);
+  const [outlineError, setOutlineError] = useState<string | null>(null);
 
   // The AI gateway expects an AichatContext on every access-token request.
   // We're not actually inside an aichat lab here, but setting the context
@@ -293,6 +300,40 @@ const LessonGenerator: React.FC<LessonGeneratorProps> = ({lesson}) => {
   const addSpec = useCallback(() => {
     setLevelSpecs(specs => [...specs, newLevelSpec()]);
   }, []);
+
+  const handleGenerateOutline = useCallback(async () => {
+    if (!outline.trim()) {
+      setOutlineError('Type an outline first.');
+      return;
+    }
+    setOutlineError(null);
+    setIsOutlining(true);
+    try {
+      const planned = await generateLessonOutline(outline.trim());
+      const newSpecs: LevelSpec[] = planned.map(level => ({
+        key: createUuid(),
+        id: level.id,
+        labType: level.labType,
+        description: level.description,
+        generate: true,
+      }));
+      // Drop any blank brand-new rows (the default "Add level" placeholder
+      // when nothing has been typed yet) before appending the AI plan, so
+      // a fresh page replaces the empty starter card cleanly.
+      setLevelSpecs(prev => {
+        const kept = prev.filter(s => {
+          if (s.existing || s.unsupportedType) return true;
+          return !!(s.id.trim() || s.description.trim());
+        });
+        return [...kept, ...newSpecs];
+      });
+    } catch (err) {
+      const message = err instanceof Error ? err.message : String(err);
+      setOutlineError(message);
+    } finally {
+      setIsOutlining(false);
+    }
+  }, [outline]);
 
   const validationError = useMemo(() => {
     if (!prefix.trim()) return 'Set a level name prefix before generating.';
@@ -546,6 +587,38 @@ const LessonGenerator: React.FC<LessonGeneratorProps> = ({lesson}) => {
         Plan a sequence of levels and let AI fill them with starter content.
         Each level is created, populated, and added to the end of this lesson.
       </p>
+
+      <details className={moduleStyles.outlineBlock}>
+        <summary>Optional: generate the levels below from an outline</summary>
+        <p className={moduleStyles.outlineHelp}>
+          Describe the learning experience you want this lesson to take a
+          student through. The AI will turn that into a sequence of Panels and
+          Web Lab 2 levels with IDs and per-level descriptions. You can edit or
+          remove any of them before generating their content below.
+        </p>
+        <textarea
+          className={moduleStyles.outlineInput}
+          value={outline}
+          onChange={e => setOutline(e.target.value)}
+          placeholder="e.g. Introduce the student to CSS selectors, then have them style a simple form, then reflect on what they learned."
+          disabled={isOutlining || isGenerating}
+        />
+        <div className={moduleStyles.outlineActions}>
+          <button
+            type="button"
+            className={moduleStyles.secondaryButton}
+            onClick={handleGenerateOutline}
+            disabled={isOutlining || isGenerating || !outline.trim()}
+          >
+            {isOutlining ? 'Generating outline…' : 'Generate outline'}
+          </button>
+          {outlineError && (
+            <span className={moduleStyles.summaryBad} role="alert">
+              {outlineError}
+            </span>
+          )}
+        </div>
+      </details>
 
       <div className={moduleStyles.fieldRow}>
         <label htmlFor="level-prefix">Level name prefix</label>
