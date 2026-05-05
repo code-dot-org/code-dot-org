@@ -97,7 +97,13 @@ const config = {
   // globals: {},
 
   // The maximum amount of workers used to run your tests. Can be specified as % or a number. E.g. maxWorkers: 10% will use 10% of your CPU amount + 1 as the maximum worker number. maxWorkers: 2 will use a maximum of 2 workers.
-  // maxWorkers: '100%',
+  // On CI (process.env.CI=true set by prepare_ci_env.sh) leave workers uncapped.
+  // On dev machines, cap at 50% of cores to prevent OOM on low-RAM hosts (e.g. 8 GB MacBooks).
+  maxWorkers: process.env.CI ? undefined : '50%',
+
+  // Kill and respawn workers that exceed this RSS threshold between test files,
+  // preventing long-running workers from accumulating heap across many suites.
+  workerIdleMemoryLimit: '1GB',
 
   // An array of directory names to be searched recursively up from the requiring module's location
   // moduleDirectories: [
