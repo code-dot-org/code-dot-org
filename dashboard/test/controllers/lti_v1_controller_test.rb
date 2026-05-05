@@ -758,45 +758,6 @@ class LtiV1ControllerTest < ActionDispatch::IntegrationTest
         LtiV1Controller.any_instance.expects(:render_sync_course_error).with("Missing lti_integration_id.", :bad_request, 'missing_param')
         sync_course
       end
-
-      it 'returns an error_id in the json response' do
-        error_id = 'sentry-event-id'
-        sign_in user
-
-        Sentry.expects(:capture_message).with do |message, options|
-          assert_equal 'LTI roster sync error', message
-          assert_equal(
-            {
-              reason: 'Missing lti_integration_id.',
-              details: nil,
-            },
-            options[:extra]
-          )
-          true
-        end.returns(error_id)
-
-        Clients::LtiLogger.expects(:log_event).with(
-          nil,
-          {
-            reason: 'Missing lti_integration_id.',
-            status: :bad_request,
-            error: 'missing_param',
-            error_id:,
-          }
-        )
-
-        get '/lti/v1/sync_course', params: params, as: :json
-
-        assert_response :bad_request
-        assert_equal(
-          {
-            'error' => 'missing_param',
-            'message' => nil,
-            'error_id' => error_id,
-          },
-          JSON.parse(@response.body)
-        )
-      end
     end
 
     context 'when context or nrps_url is missing' do

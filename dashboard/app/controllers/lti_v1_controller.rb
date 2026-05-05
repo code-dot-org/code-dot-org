@@ -257,13 +257,7 @@ class LtiV1Controller < ApplicationController
   end
 
   def render_sync_course_error(reason, status, error = nil, message: nil)
-    error_id = Sentry.capture_message(
-      'LTI roster sync error',
-      extra: {
-        reason:,
-        details: message,
-      }
-    )
+    error_id = capture_sync_course_error_id(reason, message)
     Clients::LtiLogger.log_event(
       message,
       {
@@ -281,6 +275,18 @@ class LtiV1Controller < ApplicationController
       end
       format.json {render json: @lti_section_sync_result, status: status}
     end
+  end
+
+  def capture_sync_course_error_id(reason, message)
+    return unless Observability::Sentry.enabled? && defined?(::Sentry)
+
+    ::Sentry.capture_message(
+      'LTI roster sync error',
+      extra: {
+        reason:,
+        details: message,
+      }
+    )
   end
 
   # GET /lti/v1/sync_course
