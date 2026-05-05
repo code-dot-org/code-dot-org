@@ -9,14 +9,17 @@ import LockedNotice from './LockedNotice';
 import NodeActionsGroup from './NodeActionsGroup';
 import RotationGroup from './RotationGroup';
 import SwatchGroup from './SwatchGroup';
+import TextAlignGroup from './TextAlignGroup';
 import {
   BACKGROUND_PALETTE,
   DEFAULT_BACKGROUND_COLOR,
   DEFAULT_FONT_COLOR,
   DEFAULT_FONT_SIZE,
+  DEFAULT_TEXT_ALIGN,
   DEFAULT_STROKE_COLOR,
   FontSizeValue,
   STROKE_FONT_PALETTE,
+  TextAlignValue,
 } from './toolbarPalettes';
 import ToolbarShell from './ToolbarShell';
 import {useNodeToolbarData} from './useNodeToolbarData';
@@ -28,7 +31,7 @@ interface ShapeNodeToolbarProps {
 export default function ShapeNodeToolbar({nodeId}: ShapeNodeToolbarProps) {
   const {data, patchNodeData} = useNodeToolbarData<ShapeNodeType>(nodeId);
 
-  const {backgroundColor, strokeColor, fontSize, fontColor} = data;
+  const {backgroundColor, strokeColor, fontSize, fontColor, textAlign} = data;
   const handlesVisible = data.showHandles !== false;
 
   return (
@@ -58,6 +61,13 @@ export default function ShapeNodeToolbar({nodeId}: ShapeNodeToolbarProps) {
             onSelect={value =>
               patchNodeData({fontSize: value as FontSizeValue})
             }
+          />
+          <TextAlignGroup
+            selectedValue={textAlign ?? DEFAULT_TEXT_ALIGN}
+            onSelect={value =>
+              patchNodeData({textAlign: value as TextAlignValue})
+            }
+            isLongLabel={true}
           />
           <SwatchGroup
             groupLabel="Font color"
