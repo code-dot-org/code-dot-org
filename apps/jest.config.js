@@ -103,10 +103,6 @@ const config = {
   // validates this key's type, so we must omit it rather than set undefined.
   ...(process.env.CI ? {} : {maxWorkers: '50%'}),
 
-  // Kill and respawn workers that exceed this RSS threshold between test files,
-  // preventing long-running workers from accumulating heap across many suites.
-  workerIdleMemoryLimit: '1GB',
-
   // An array of directory names to be searched recursively up from the requiring module's location
   // moduleDirectories: [
   //   "node_modules"
