@@ -23,7 +23,6 @@ import {createUuid} from '@cdo/apps/utils';
 import {
   DEFAULT_NODE_HEIGHT,
   DEFAULT_NODE_WIDTH,
-  LINE_ANCHOR_SIZE_PX,
   LINE_DEFAULT_LENGTH_PX,
   LINE_RECONNECT_SNAP_RADIUS_PX,
   SAVE_DEBOUNCE_MS,
@@ -35,7 +34,6 @@ import {
   type ToolbarTarget,
 } from '../context';
 import LineEdgeToolbar from '../elementToolbars/LineEdgeToolbar';
-import {useAnchorMove} from '../hooks/useAnchorMove';
 import {useCopyPaste} from '../hooks/useCopyPaste';
 import {useFocusManagement} from '../hooks/useFocusManagement';
 import {useKeyboardNavigation} from '../hooks/useKeyboardNavigation';
@@ -56,6 +54,8 @@ import {
   canCreateConnection,
   isLineAnchorNodeId,
 } from '../utils/connectionRules';
+import {snapAnchorIfNearby} from '../utils/handleSnap';
+import {createLineAnchorAtHandle} from '../utils/lineAnchors';
 import {defaultLineEdgeFields} from '../utils/lineEdges';
 
 import Toolbar from './Toolbar';
@@ -139,7 +139,10 @@ export default function ReactFlowCanvas({
     [openToolbarTarget, trapFocus, openToolbar, closeToolbar]
   );
 
-  const {screenToFlowPosition, flowToScreenPosition} = useReactFlow();
+  const {screenToFlowPosition, flowToScreenPosition, getEdges} = useReactFlow<
+    SketchlabReactFlowNode,
+    SketchlabReactFlowEdge
+  >();
   const addedNodeCountRef = useRef(0);
   const canvasContainerRef = useRef<HTMLDivElement>(null);
   const handlePaneClick = useCallback(() => {
@@ -177,18 +180,18 @@ export default function ReactFlowCanvas({
     setNodeOrEdgeFocused
   );
 
-  const {attemptAnchorSnap} = useAnchorMove({setEdges});
-
   const handleNodeDragStop = useCallback(
     (event: React.MouseEvent, node: SketchlabReactFlowNode) => {
       if (node.type !== 'lineAnchor') return;
-      attemptAnchorSnap({
+      snapAnchorIfNearby({
         anchorId: node.id,
         screenPoint: {x: event.clientX, y: event.clientY},
         radiusPx: LINE_RECONNECT_SNAP_RADIUS_PX,
+        edges: getEdges(),
+        setEdges,
       });
     },
-    [attemptAnchorSnap]
+    [getEdges, setEdges]
   );
 
   const {connectingFrom, connectAnnouncement, handleKeyDown} =
@@ -472,45 +475,24 @@ export default function ReactFlowCanvas({
 
       // For lines/arrows, create two hidden anchor nodes and connect them.
       if (type === 'line' || type === 'arrow') {
-        const sourceAnchorId = createUuid();
-        const targetAnchorId = createUuid();
-        const lineEdgeId = createUuid();
-
-        const sourceAnchor: SketchlabReactFlowNode = {
-          id: sourceAnchorId,
-          type: 'lineAnchor',
-          position: {
-            x:
-              centerPosition.x -
-              LINE_DEFAULT_LENGTH_PX / 2 -
-              LINE_ANCHOR_SIZE_PX,
-            y: centerPosition.y - LINE_ANCHOR_SIZE_PX / 2,
+        const sourceAnchor = createLineAnchorAtHandle(
+          {
+            x: centerPosition.x - LINE_DEFAULT_LENGTH_PX / 2,
+            y: centerPosition.y,
           },
-          data: {lineAnchorRole: 'source'},
-          style: {
-            width: LINE_ANCHOR_SIZE_PX,
-            height: LINE_ANCHOR_SIZE_PX,
-          },
-        };
-
-        const targetAnchor: SketchlabReactFlowNode = {
-          id: targetAnchorId,
-          type: 'lineAnchor',
-          position: {
+          'source'
+        );
+        const targetAnchor = createLineAnchorAtHandle(
+          {
             x: centerPosition.x + LINE_DEFAULT_LENGTH_PX / 2,
-            y: centerPosition.y - LINE_ANCHOR_SIZE_PX / 2,
+            y: centerPosition.y,
           },
-          data: {lineAnchorRole: 'target'},
-          style: {
-            width: LINE_ANCHOR_SIZE_PX,
-            height: LINE_ANCHOR_SIZE_PX,
-          },
-        };
-
+          'target'
+        );
         const newLine: SketchlabReactFlowEdge = {
-          id: lineEdgeId,
-          source: sourceAnchorId,
-          target: targetAnchorId,
+          id: createUuid(),
+          source: sourceAnchor.id,
+          target: targetAnchor.id,
           ...defaultLineEdgeFields({arrow: type === 'arrow'}),
         };
 
@@ -520,7 +502,7 @@ export default function ReactFlowCanvas({
         // Move focus to the new line after React Flow renders it.
         (document.activeElement as HTMLElement)?.blur();
         setTimeout(
-          () => focusEntry({type: 'edge', id: lineEdgeId}),
+          () => focusEntry({type: 'edge', id: newLine.id}),
           FOCUS_DELAY_MS
         );
         return;

@@ -5,6 +5,20 @@ import {XYPosition} from '@xyflow/react';
 
 import type {SketchlabReactFlowEdge} from '@cdo/apps/lab2/types';
 
+// Builds the partial edge fields that point one side at a node+handle.
+// All endpoint mutations — snap results, fresh-anchor attachments,
+// reconnect drops — funnel through here so the source/target/handle
+// field naming convention lives in one place.
+export function endpointPatch(
+  side: 'source' | 'target',
+  nodeId: string,
+  handleId: string | null | undefined
+): Partial<SketchlabReactFlowEdge> {
+  return side === 'source'
+    ? {source: nodeId, sourceHandle: handleId ?? undefined}
+    : {target: nodeId, targetHandle: handleId ?? undefined};
+}
+
 export interface SnapTarget {
   nodeId: string;
   handleId: string | null;
@@ -88,17 +102,6 @@ export function findNearestHandleInRadius(
   return closest;
 }
 
-// Convert a snap result into the partial edge fields that wire that side
-// of the edge to the snapped handle.
-export function snapResultToEdgePatch(
-  side: 'source' | 'target',
-  snap: SnapTarget
-): Partial<SketchlabReactFlowEdge> {
-  return side === 'source'
-    ? {source: snap.nodeId, sourceHandle: snap.handleId ?? undefined}
-    : {target: snap.nodeId, targetHandle: snap.handleId ?? undefined};
-}
-
 // Handles snapping an edge endpoint onto a real node handle.
 // Looks up the nearest valid handle and, if found, rewrites the edge.
 // Returns true when a snap was performed, false otherwise.
@@ -126,11 +129,49 @@ export function snapEdgeEndpointToHandle({
     radiusPx
   );
   if (!snap) return false;
-  const patch = snapResultToEdgePatch(side, snap);
+  const patch = endpointPatch(side, snap.nodeId, snap.handleId);
   setEdges(currentEdges =>
     currentEdges.map(currentEdge =>
       currentEdge.id === edgeId ? {...currentEdge, ...patch} : currentEdge
     )
   );
   return true;
+}
+
+// Snap a free-floating anchor onto a nearby real-node handle, if any.
+// Looks up which edge the anchor terminates and delegates to
+// snapEdgeEndpointToHandle. Returns the edge id when snapping happened
+// so the caller can move focus to it (the orphaned anchor will be pruned).
+export function snapAnchorIfNearby({
+  anchorId,
+  screenPoint,
+  radiusPx,
+  edges,
+  setEdges,
+}: {
+  anchorId: string;
+  screenPoint: XYPosition;
+  radiusPx: number;
+  edges: SketchlabReactFlowEdge[];
+  setEdges: (
+    updater: (
+      currentEdges: SketchlabReactFlowEdge[]
+    ) => SketchlabReactFlowEdge[]
+  ) => void;
+}): string | null {
+  const associatedEdge = edges.find(
+    edge => edge.source === anchorId || edge.target === anchorId
+  );
+  if (!associatedEdge) return null;
+  const side: 'source' | 'target' =
+    associatedEdge.source === anchorId ? 'source' : 'target';
+  const snapped = snapEdgeEndpointToHandle({
+    edgeId: associatedEdge.id,
+    excludeNodeId: anchorId,
+    side,
+    screenPoint,
+    radiusPx,
+    setEdges,
+  });
+  return snapped ? associatedEdge.id : null;
 }

@@ -10,8 +10,8 @@ import {LINE_RECONNECT_SNAP_RADIUS_PX} from '../constants';
 import {snapEdgeEndpointToHandle} from '../utils/handleSnap';
 import {
   anchorHandleFlowPosition,
-  createLineAnchorAtHandle,
-  getHandleFlowPosition,
+  attachEdgeToFreshAnchor,
+  endpointHandleFlowPosition,
 } from '../utils/lineAnchors';
 
 interface DraggingAnchor {
@@ -74,20 +74,14 @@ export function useLineEdgeDrag({
       // and add them to the dragging set.
       if (!dragState.hasMoved && dragState.pendingDetaches.length > 0) {
         const newAnchors: SketchlabReactFlowNode[] = [];
-        const edgePatch: Partial<SketchlabReactFlowEdge> = {};
+        const combinedPatch: Partial<SketchlabReactFlowEdge> = {};
         dragState.pendingDetaches.forEach(pending => {
-          const anchor = createLineAnchorAtHandle(
+          const {anchor, edgePatch} = attachEdgeToFreshAnchor(
             pending.flowPosition,
             pending.side
           );
           newAnchors.push(anchor);
-          if (pending.side === 'source') {
-            edgePatch.source = anchor.id;
-            edgePatch.sourceHandle = 'line-anchor-source';
-          } else {
-            edgePatch.target = anchor.id;
-            edgePatch.targetHandle = 'line-anchor-target';
-          }
+          Object.assign(combinedPatch, edgePatch);
           dragState.anchors.push({
             id: anchor.id,
             side: pending.side,
@@ -98,7 +92,7 @@ export function useLineEdgeDrag({
         setEdges(currentEdges =>
           currentEdges.map(currentEdge =>
             currentEdge.id === dragState.edgeId
-              ? {...currentEdge, ...edgePatch}
+              ? {...currentEdge, ...combinedPatch}
               : currentEdge
           )
         );
@@ -188,33 +182,28 @@ export function useLineEdgeDrag({
       const anchors: DraggingAnchor[] = [];
       const pendingDetaches: PendingDetach[] = [];
 
-      // Determine whether the given side has an anchor handle or
-      // a read node handle, and prepare the drag state accordingly.
-      const getHandleForSide = (side: 'source' | 'target') => {
-        const endpointId = side === 'source' ? edge.source : edge.target;
-        const handleId =
-          side === 'source' ? edge.sourceHandle : edge.targetHandle;
-        const endpointNode = getNode(endpointId);
-        if (!endpointNode) return;
-        if (endpointNode.type === 'lineAnchor') {
-          anchors.push({
-            id: endpointNode.id,
-            side,
-            startPosition: {...endpointNode.position},
-          });
-          return;
-        }
-        const handlePosition = getHandleFlowPosition(
-          endpointId,
-          handleId,
+      // Determine whether the given side terminates in an anchor or a real
+      // node handle, and prepare the drag state accordingly.
+      const planSide = (side: 'source' | 'target') => {
+        const resolved = endpointHandleFlowPosition(
+          edge,
+          side,
+          getNode,
           screenToFlowPosition
         );
-        if (handlePosition) {
-          pendingDetaches.push({side, flowPosition: handlePosition});
+        if (!resolved) return;
+        if (resolved.node.type === 'lineAnchor') {
+          anchors.push({
+            id: resolved.node.id,
+            side,
+            startPosition: {...resolved.node.position},
+          });
+        } else {
+          pendingDetaches.push({side, flowPosition: resolved.flowPosition});
         }
       };
-      getHandleForSide('source');
-      getHandleForSide('target');
+      planSide('source');
+      planSide('target');
       if (anchors.length === 0 && pendingDetaches.length === 0) {
         return;
       }

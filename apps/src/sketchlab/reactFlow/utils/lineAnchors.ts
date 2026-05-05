@@ -1,9 +1,21 @@
 import type {XYPosition} from '@xyflow/react';
 
-import {SketchlabReactFlowNode} from '@cdo/apps/lab2/types';
+import {
+  SketchlabReactFlowEdge,
+  SketchlabReactFlowNode,
+} from '@cdo/apps/lab2/types';
 import {createUuid} from '@cdo/apps/utils';
 
 import {LINE_ANCHOR_SIZE_PX} from '../constants';
+
+import {endpointPatch} from './handleSnap';
+
+// The Handle id rendered by LineAnchorNode for a given role. Lines attach
+// to anchors through these ids; reusing the helper keeps callers in sync
+// with the node's render.
+export function lineAnchorHandleId(role: 'source' | 'target'): string {
+  return `line-anchor-${role}`;
+}
 
 // Builds a lineAnchor node positioned so that its visible Handle ends up at
 // `handleFlowPosition`. Source anchors render their Handle on the right
@@ -49,6 +61,46 @@ export function anchorHandleFlowPosition(
         x: position.x,
         y: position.y + LINE_ANCHOR_SIZE_PX / 2,
       };
+}
+
+// Spawns a fresh lineAnchor at `flowPosition` and returns the partial
+// edge fields that point one side of an edge at it. Used everywhere a
+// drag, keyboard move, or reconnect needs to break an edge endpoint
+// off a real node.
+export function attachEdgeToFreshAnchor(
+  flowPosition: XYPosition,
+  side: 'source' | 'target'
+): {
+  anchor: SketchlabReactFlowNode;
+  edgePatch: Partial<SketchlabReactFlowEdge>;
+} {
+  const anchor = createLineAnchorAtHandle(flowPosition, side);
+  const edgePatch = endpointPatch(side, anchor.id, lineAnchorHandleId(side));
+  return {anchor, edgePatch};
+}
+
+// Returns the current flow position of the given side's handle for an
+// edge, plus the endpoint node. Anchor endpoints are computed from the
+// node position; real-node endpoints fall back to a DOM lookup.
+export function endpointHandleFlowPosition(
+  edge: SketchlabReactFlowEdge,
+  side: 'source' | 'target',
+  getNode: (id: string) => SketchlabReactFlowNode | undefined,
+  screenToFlowPosition: (point: XYPosition) => XYPosition
+): {flowPosition: XYPosition; node: SketchlabReactFlowNode} | null {
+  const endpointId = side === 'source' ? edge.source : edge.target;
+  const node = getNode(endpointId);
+  if (!node) return null;
+  if (node.type === 'lineAnchor') {
+    return {flowPosition: anchorHandleFlowPosition(node.position, side), node};
+  }
+  const handleId = side === 'source' ? edge.sourceHandle : edge.targetHandle;
+  const flowPosition = getHandleFlowPosition(
+    endpointId,
+    handleId ?? undefined,
+    screenToFlowPosition
+  );
+  return flowPosition ? {flowPosition, node} : null;
 }
 
 // Resolves the on-screen position of a node's handle to canvas coordinates.

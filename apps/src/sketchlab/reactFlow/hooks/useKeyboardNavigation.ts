@@ -1,4 +1,4 @@
-import {useReactFlow, type XYPosition} from '@xyflow/react';
+import {useReactFlow} from '@xyflow/react';
 import React, {useCallback, useEffect, useRef} from 'react';
 
 import {
@@ -22,17 +22,17 @@ import {
 } from '../utils/computeTabOrder';
 import {isLineAnchorNodeId} from '../utils/connectionRules';
 import {
+  endpointPatch,
   findNearestHandleInRadius,
-  snapResultToEdgePatch,
+  snapAnchorIfNearby,
 } from '../utils/handleSnap';
 import {
   anchorHandleFlowPosition,
-  createLineAnchorAtHandle,
-  getHandleFlowPosition,
+  attachEdgeToFreshAnchor,
+  endpointHandleFlowPosition,
 } from '../utils/lineAnchors';
 import {getNodeLabel} from '../utils/nodeLabel';
 
-import {useAnchorMove} from './useAnchorMove';
 import {useAriaAnnouncer} from './useAriaAnnouncer';
 import {useConnectMode} from './useConnectMode';
 
@@ -179,7 +179,6 @@ export function useKeyboardNavigation({
   const {announcement: connectAnnouncement, announce} = useAriaAnnouncer();
   const {connectingFrom, startConnect, cancelConnect, completeConnect} =
     useConnectMode({nodes, setEdges, announce});
-  const {attemptAnchorSnap} = useAnchorMove({setEdges});
 
   // Remembers the edge most recently translated by an arrow keypress so
   // that subsequent presses can keep moving the same edge even if the
@@ -349,10 +348,12 @@ export function useKeyboardNavigation({
         x: handleBefore.x + deltaX,
         y: handleBefore.y + deltaY,
       };
-      const snappedEdgeId = attemptAnchorSnap({
+      const snappedEdgeId = snapAnchorIfNearby({
         anchorId,
         screenPoint: flowToScreenPosition(handleAfter),
         radiusPx: KEYBOARD_MOVE_STEP * getZoom(),
+        edges: getEdges(),
+        setEdges,
       });
       if (!snappedEdgeId) return false;
       // The anchor we were focused on is about to be pruned; move focus
@@ -361,14 +362,7 @@ export function useKeyboardNavigation({
       setTimeout(() => focusEntry({type: 'edge', id: snappedEdgeId}), 0);
       return true;
     },
-    [
-      getEdges,
-      getNode,
-      getZoom,
-      flowToScreenPosition,
-      attemptAnchorSnap,
-      focusEntry,
-    ]
+    [getEdges, getNode, getZoom, flowToScreenPosition, setEdges, focusEntry]
   );
 
   const handleMoveNode = useCallback(
@@ -405,62 +399,48 @@ export function useKeyboardNavigation({
       const edgePatch: Partial<SketchlabReactFlowEdge> = {};
 
       const handleMoveSide = (side: 'source' | 'target') => {
-        const endpointId = focusedEdge[side];
-        const endpointNode = getNode(endpointId);
-        if (!endpointNode) return;
-        const isAnchor = endpointNode.type === 'lineAnchor';
-
-        // Find the position of the current handle for this side.
-        let handlePosition: XYPosition | null;
-        if (isAnchor) {
-          handlePosition = anchorHandleFlowPosition(
-            endpointNode.position,
-            side
-          );
-        } else {
-          handlePosition = getHandleFlowPosition(
-            endpointId,
-            side === 'source'
-              ? focusedEdge.sourceHandle
-              : focusedEdge.targetHandle,
-            screenToFlowPosition
-          );
-        }
-        if (!handlePosition) return false;
+        const resolved = endpointHandleFlowPosition(
+          focusedEdge,
+          side,
+          getNode,
+          screenToFlowPosition
+        );
+        if (!resolved) return;
+        const isAnchor = resolved.node.type === 'lineAnchor';
 
         const postMovePosition = {
-          x: handlePosition.x + deltaX,
-          y: handlePosition.y + deltaY,
+          x: resolved.flowPosition.x + deltaX,
+          y: resolved.flowPosition.y + deltaY,
         };
 
         // If there is a snap target in the radius of the new position, snap to it.
         const snapTarget = findNearestHandleInRadius(
           flowToScreenPosition(postMovePosition),
-          endpointId,
+          resolved.node.id,
           side,
           KEYBOARD_MOVE_STEP * getZoom()
         );
         if (snapTarget) {
-          Object.assign(edgePatch, snapResultToEdgePatch(side, snapTarget));
+          Object.assign(
+            edgePatch,
+            endpointPatch(side, snapTarget.nodeId, snapTarget.handleId)
+          );
           return;
         }
 
         // If it's already an anchor, move it.
         if (isAnchor) {
-          anchorIdsToMove.push(endpointId);
+          anchorIdsToMove.push(resolved.node.id);
           return;
         }
 
         // Otherwise, spawn an anchor at the post-move position.
-        const anchor = createLineAnchorAtHandle(postMovePosition, side);
+        const {anchor, edgePatch: patch} = attachEdgeToFreshAnchor(
+          postMovePosition,
+          side
+        );
         newAnchors.push(anchor);
-        if (side === 'source') {
-          edgePatch.source = anchor.id;
-          edgePatch.sourceHandle = 'line-anchor-source';
-        } else {
-          edgePatch.target = anchor.id;
-          edgePatch.targetHandle = 'line-anchor-target';
-        }
+        Object.assign(edgePatch, patch);
       };
       handleMoveSide('source');
       handleMoveSide('target');

@@ -13,7 +13,7 @@ import {
 } from '@cdo/apps/lab2/types';
 
 import {getEventClientPosition} from '../utils/handleSnap';
-import {createLineAnchorAtHandle} from '../utils/lineAnchors';
+import {attachEdgeToFreshAnchor} from '../utils/lineAnchors';
 
 interface UseReconnectOptions {
   setNodes: (
@@ -28,10 +28,6 @@ interface UseReconnectOptions {
 // Owns the lifecycle for React Flow's edge-endpoint reconnect:
 //   onReconnectStart -> onReconnect (landed on a handle)
 //                    \-> onReconnectEnd (dropped on canvas; spawn an anchor)
-//
-// The other "anchor moved" path — dragging a lineAnchor node directly with
-// the mouse — lives in `useAnchorMove`, which also handles the keyboard
-// equivalents.
 //
 // `isReconnecting` lets the caller relax connection validation while a
 // reconnect is in flight.
@@ -100,20 +96,17 @@ export function useReconnect({
         dropPosition = screenToFlowPosition(clientPosition);
       }
 
-      const anchorRole: 'source' | 'target' =
-        handleType === 'source' ? 'source' : 'target';
-      const anchor = createLineAnchorAtHandle(dropPosition, anchorRole);
-      const handleId = `line-anchor-${anchorRole}`;
+      const {anchor, edgePatch} = attachEdgeToFreshAnchor(
+        dropPosition,
+        handleType
+      );
       setNodes(currentNodes => [...currentNodes, anchor]);
       setEdges(currentEdges =>
-        currentEdges.map(currentEdge => {
-          if (currentEdge.id !== edge.id) {
-            return currentEdge;
-          }
-          return handleType === 'source'
-            ? {...currentEdge, source: anchor.id, sourceHandle: handleId}
-            : {...currentEdge, target: anchor.id, targetHandle: handleId};
-        })
+        currentEdges.map(currentEdge =>
+          currentEdge.id === edge.id
+            ? {...currentEdge, ...edgePatch}
+            : currentEdge
+        )
       );
     },
     [screenToFlowPosition, setEdges, setNodes]
