@@ -30,7 +30,7 @@
     "test-storybook": "vitest --project=storybook",
     "test:ui:ci": "bash ./scripts/test-storybook.sh",
     "test:ui:local": "test-storybook --url http://localhost:6006",
-    "typecheck": "tsc --noEmit"
+    "typecheck": "tsc -b --noEmit"
   },
   "prettier": "@code-dot-org/lint-config/prettier/index.mjs",
   "stylelint": {
@@ -66,6 +66,7 @@
     "storybook-addon-rtl": "^3.0.1",
     "stylelint": "catalog:",
     "tsx": "^4.19.2",
+    "typescript": "catalog:",
     "vitest": "catalog:",
     "wait-on": "^8.0.1"
   }
