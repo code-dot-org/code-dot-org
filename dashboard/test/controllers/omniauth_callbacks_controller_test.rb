@@ -430,6 +430,12 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
     user = create(:teacher, :with_clever_authentication_option)
     clever_auth_option = user.authentication_options.find_by(credential_type: AuthenticationOption::CLEVER)
     refute user.verified_teacher?
+    Metrics::Events.stubs(:log_event)
+    Metrics::Events.expects(:log_event).with do |args|
+      args[:user] == user &&
+        args[:event_name] == 'teacher_auto_verified' &&
+        args[:metadata] == {'login_provider' => AuthenticationOption::CLEVER}
+    end.once
 
     auth = generate_auth_user_hash(
       provider: AuthenticationOption::CLEVER,
@@ -1698,6 +1704,12 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
 
       it 'verifies an unverified teacher' do
         refute existing_user.verified_teacher?
+        Metrics::Events.stubs(:log_event)
+        Metrics::Events.expects(:log_event).with do |args|
+          args[:user] == existing_user &&
+            args[:event_name] == 'teacher_auto_verified' &&
+            args[:metadata] == {'login_provider' => AuthenticationOption::CLASSLINK}
+        end.once
 
         assert_difference('UserPermission.count', 1) do
           classlink_req

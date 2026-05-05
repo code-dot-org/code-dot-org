@@ -708,10 +708,18 @@ class RegistrationsController < Devise::RegistrationsController
   private def auto_verify_teacher!(user)
     return unless user.teacher? && !user.verified_teacher?
 
-    is_school_owned = user.authentication_options.any? do |auth_option|
+    school_owned_auth_option = user.authentication_options.find do |auth_option|
       Policies::User::SCHOOL_OWNED_TYPES.include?(auth_option.credential_type)
     end
 
-    user.verify_teacher! if is_school_owned
+    return unless school_owned_auth_option
+
+    user.verify_teacher!
+    Metrics::Events.log_event(
+      user: user,
+      event_name: 'teacher_auto_verified',
+      metadata: {'login_provider' => school_owned_auth_option.credential_type},
+      session: session,
+    )
   end
 end
