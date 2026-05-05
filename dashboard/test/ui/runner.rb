@@ -1,4 +1,15 @@
 #!/usr/bin/env ruby
+
+# On macOS, runner.rb's Parallel.map (in_processes) workers segfault inside
+# libsystem_trace _os_log_preferences_refresh during their first AWS S3
+# upload's net/http connect. Disable os_activity and ObjC initialize-fork
+# safety in the env before any require touches those macOS subsystems.
+# Read lazily by the OS on first use; harmless on Linux (vars ignored).
+if RUBY_PLATFORM.include?('darwin')
+  ENV['OS_ACTIVITY_MODE'] ||= 'disable'
+  ENV['OBJC_DISABLE_INITIALIZE_FORK_SAFETY'] ||= 'YES'
+end
+
 require_relative '../../../deployment'
 
 UI_TEST_DIR = File.expand_path(__dir__)
@@ -517,7 +528,9 @@ def generate_status_page(suite_start_time)
         git_branch: GIT_BRANCH,
         commit_hash: COMMIT_HASH,
         start_time: suite_start_time,
-        browser_features: browser_features
+        browser_features: browser_features,
+        device_farm: $options.device_farm,
+        force_db_access: $options.force_db_access
       }
     )
   )
@@ -530,7 +543,10 @@ end
 def test_run_identifier(browser, feature)
   feature_name = feature.gsub(/.*features\//, '').gsub('.feature', '').tr('/', '_')
   browser_name = browser_name_or_unknown(browser)
-  "#{browser_name}_#{feature_name}" + (eyes? ? '_eyes' : '')
+  # _df distinguishes Device Farm output from concurrent SauceLabs runs
+  # against the same browser+feature during the migration. Drop after we
+  # cut over fully to DF (or to a SauceLabs-only/DF-only steady state).
+  "#{browser_name}_#{feature_name}" + (eyes? ? '_eyes' : '') + ($options.device_farm ? '_df' : '')
 end
 
 def browser_name_or_unknown(browser)

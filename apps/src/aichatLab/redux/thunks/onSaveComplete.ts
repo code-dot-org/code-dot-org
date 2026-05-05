@@ -1,3 +1,5 @@
+import {sendAnalytics} from '@cdo/apps/aichat/redux';
+import {findChangedProperties} from '@cdo/apps/aichat/redux/utils';
 import {SaveType, ViewMode} from '@cdo/apps/aichatLab/types';
 import {sendProgressReport} from '@cdo/apps/code-studio/progressRedux';
 import {TestResults} from '@cdo/apps/constants';
@@ -6,9 +8,6 @@ import {RootState} from '@cdo/apps/types/redux';
 import {AppDispatch} from '@cdo/apps/util/reduxHooks';
 
 import {endSave, setSavedAiCustomizations, setViewMode} from '../slice';
-import {findChangedProperties} from '../utils';
-
-import {sendAnalytics} from './sendAnalytics';
 
 const saveTypeToAnalyticsEvent: {[key in SaveType]: string} = {
   updateChatbot: EVENTS.UPDATE_CHATBOT,
@@ -21,7 +20,7 @@ const saveTypeToAnalyticsEvent: {[key in SaveType]: string} = {
 export const onSaveComplete =
   () => (dispatch: AppDispatch, getState: () => RootState) => {
     const {savedAiCustomizations, currentAiCustomizations, currentSaveType} =
-      getState().aichat;
+      getState().aichatLab;
 
     const changedProperties = findChangedProperties(
       savedAiCustomizations,

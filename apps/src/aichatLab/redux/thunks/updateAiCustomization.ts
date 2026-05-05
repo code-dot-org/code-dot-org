@@ -15,7 +15,7 @@ export const updateAiCustomization = createAsyncThunk(
     const state = getState() as RootState;
 
     await saveAiCustomization(
-      state.aichat.currentAiCustomizations,
+      state.aichatLab.currentAiCustomizations,
       'updateChatbot',
       dispatch as AppDispatch,
       parseInt(state.progress.currentLevelId || '')

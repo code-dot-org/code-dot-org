@@ -1,5 +1,6 @@
 import Alert from '@code-dot-org/component-library/alert';
 import classNames from 'classnames';
+import moment from 'moment';
 import React, {forwardRef, memo} from 'react';
 
 import AiTutorVersionActionNotification from '@cdo/apps/aiComponentLibrary/aiTutorVersionActionNotification/AiTutorVersionActionNotification';
@@ -8,7 +9,6 @@ import {AiChatTeacherFeedback as TeacherFeedback} from '@cdo/generated-scripts/s
 
 import {modelDescriptions, MODEL_PARAMETER_LABELS} from '../constants';
 import {removeUpdateMessage} from '../redux';
-import {timestampToLocalTime} from '../redux/utils';
 import {
   AI_TUTOR_VERSION_ACTION_ACCEPT,
   AI_TUTOR_VERSION_ACTION_REJECT,
@@ -26,6 +26,9 @@ import {
 import ChatMessageView, {getChatMessageDisplayText} from './ChatMessageView';
 
 import styles from './chatWorkspace.module.scss';
+
+const timestampToLocalTime = (timestamp: number) =>
+  moment(timestamp).format('LT');
 
 const chatEventDescriptionsOwner = {
   CLEAR_CHAT: 'You cleared the chat workspace.',
