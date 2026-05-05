@@ -12,10 +12,8 @@ export function isArrowEdge(edge: SketchlabReactFlowEdge): boolean {
   return Boolean(edge.markerStart || edge.markerEnd);
 }
 
-// Default visual fields shared by every line edge: tool-created lines and
-// arrows, mouse-drag connections, and keyboard-driven connections. Spread
-// into the edge being built. `arrow: true` adds the end-arrow marker;
-// `arrow: false` (the line tool) omits it.
+// Default visual fields shared by every line edge.
+// `arrow: true` adds the end-arrow marker;`arrow: false` omits it.
 export function defaultLineEdgeFields({arrow}: {arrow: boolean}) {
   return {
     type: 'straight',

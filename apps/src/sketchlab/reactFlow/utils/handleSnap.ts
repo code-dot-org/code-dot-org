@@ -1,11 +1,7 @@
-// Searches the DOM for the React Flow handle nearest to a screen-space
-// point. Used to snap a dragged line-anchor onto a node's handle when the
-// user drops the anchor close enough.
-//
-// Operates on the rendered DOM rather than node geometry because React
-// Flow already lays handles out at their final on-screen positions
-// (factoring in node size, transform, zoom, etc.). Reading those is
-// simpler than re-deriving the handle position from node state.
+// Utils for handling edge 'snap' behavior, where an edge will snap
+// to a nearby node handle when it is close enough.
+
+import {XYPosition} from '@xyflow/react';
 
 import type {SketchlabReactFlowEdge} from '@cdo/apps/lab2/types';
 
@@ -17,8 +13,7 @@ export interface SnapTarget {
 
 // Reads the type from React Flow's class hint. v12's `Handle` adds the
 // bare `source` / `target` class to the rendered div; revisit if the
-// React Flow major changes — there's no public `data-handletype` to
-// fall back on.
+// React Flow major changes.
 function getHandleType(handle: HTMLElement): 'source' | 'target' | null {
   if (handle.classList.contains('source')) {
     return 'source';
@@ -29,13 +24,12 @@ function getHandleType(handle: HTMLElement): 'source' | 'target' | null {
   return null;
 }
 
-// Pulls a {clientX, clientY} pair out of either a MouseEvent (direct
+// Pulls an (x,y) position out of either a MouseEvent (direct
 // fields) or a TouchEvent (first changedTouches/touches entry). Returns
-// null when no touch is present (e.g. a touchend with empty touches and
-// no changedTouches, which shouldn't occur in normal browsers).
-export function getEventClientPoint(
+// null when no touch is present.
+export function getEventClientPosition(
   event: MouseEvent | TouchEvent
-): {x: number; y: number} | null {
+): XYPosition | null {
   if (event instanceof MouseEvent) {
     return {x: event.clientX, y: event.clientY};
   }
@@ -43,8 +37,10 @@ export function getEventClientPoint(
   return touch ? {x: touch.clientX, y: touch.clientY} : null;
 }
 
-export function findNearestHandle(
-  screenPoint: {x: number; y: number},
+// Returns the nearest handle matching the criteria within the radius, or null if
+// none found.
+export function findNearestHandleInRadius(
+  screenPoint: XYPosition,
   excludeNodeId: string,
   requiredType: 'source' | 'target',
   radiusPx: number
@@ -103,7 +99,7 @@ export function snapResultToEdgePatch(
     : {target: snap.nodeId, targetHandle: snap.handleId ?? undefined};
 }
 
-// Handles snapping an edge endpoint onto a real-node handle.
+// Handles snapping an edge endpoint onto a real node handle.
 // Looks up the nearest valid handle and, if found, rewrites the edge.
 // Returns true when a snap was performed, false otherwise.
 export function snapEdgeEndpointToHandle({
@@ -117,13 +113,18 @@ export function snapEdgeEndpointToHandle({
   edgeId: string;
   excludeNodeId: string;
   side: 'source' | 'target';
-  screenPoint: {x: number; y: number};
+  screenPoint: XYPosition;
   radiusPx: number;
   setEdges: (
     updater: (edges: SketchlabReactFlowEdge[]) => SketchlabReactFlowEdge[]
   ) => void;
 }): boolean {
-  const snap = findNearestHandle(screenPoint, excludeNodeId, side, radiusPx);
+  const snap = findNearestHandleInRadius(
+    screenPoint,
+    excludeNodeId,
+    side,
+    radiusPx
+  );
   if (!snap) return false;
   const patch = snapResultToEdgePatch(side, snap);
   setEdges(currentEdges =>

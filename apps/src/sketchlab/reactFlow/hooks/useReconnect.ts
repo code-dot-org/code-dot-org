@@ -14,7 +14,7 @@ import {
 
 import {LINE_RECONNECT_SNAP_RADIUS_PX} from '../constants';
 import {
-  getEventClientPoint,
+  getEventClientPosition,
   snapEdgeEndpointToHandle,
 } from '../utils/handleSnap';
 import {createLineAnchorAtHandle} from '../utils/lineAnchors';
@@ -100,11 +100,11 @@ export function useReconnect({
       // pointer if that's missing.
       let dropPosition = connectionState.to;
       if (!dropPosition) {
-        const clientPoint = getEventClientPoint(event);
-        if (!clientPoint) {
+        const clientPosition = getEventClientPosition(event);
+        if (!clientPosition) {
           return;
         }
-        dropPosition = screenToFlowPosition(clientPoint);
+        dropPosition = screenToFlowPosition(clientPosition);
       }
 
       const anchorRole: 'source' | 'target' =

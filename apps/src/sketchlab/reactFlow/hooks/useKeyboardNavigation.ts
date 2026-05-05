@@ -22,7 +22,7 @@ import {
 } from '../utils/computeTabOrder';
 import {isLineAnchorNodeId} from '../utils/connectionRules';
 import {
-  findNearestHandle,
+  findNearestHandleInRadius,
   snapEdgeEndpointToHandle,
   snapResultToEdgePatch,
 } from '../utils/handleSnap';
@@ -435,7 +435,7 @@ export function useKeyboardNavigation({
         };
 
         // If there is a snap target in the radius of the new position, snap to it.
-        const snapTarget = findNearestHandle(
+        const snapTarget = findNearestHandleInRadius(
           flowToScreenPosition(postMovePosition),
           endpointId,
           side,

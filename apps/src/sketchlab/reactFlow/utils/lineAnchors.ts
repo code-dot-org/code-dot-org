@@ -51,10 +51,9 @@ export function anchorHandleFlowPosition(
       };
 }
 
-// Resolves the on-screen position of a node's handle to flow coordinates.
-// Returns null if the node isn't currently rendered (e.g. off-screen with
-// virtualization, though we don't currently use that). When the handleId
-// can't be matched exactly we fall back to any handle on the node, which
+// Resolves the on-screen position of a node's handle to canvas coordinates.
+// Returns null if the node isn't currently rendered. When the handleId
+// can't be matched we fall back to any handle on the node, which
 // keeps the line endpoint roughly correct rather than dropping the drag.
 export function getHandleFlowPosition(
   nodeId: string,
