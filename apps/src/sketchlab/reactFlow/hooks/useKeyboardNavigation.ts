@@ -13,8 +13,6 @@ import {
   MIN_NODE_WIDTH,
   KEYBOARD_RESIZE_STEP,
   KEYBOARD_MOVE_STEP,
-  KEYBOARD_SNAP_RADIUS_FLOW_UNITS,
-  LINE_RECONNECT_SNAP_RADIUS_PX,
 } from '../constants';
 import {
   entriesMatch,
@@ -301,15 +299,11 @@ export function useKeyboardNavigation({
         x: handleBefore.x + deltaX,
         y: handleBefore.y + deltaY,
       };
-      const snapRadiusPx = Math.max(
-        LINE_RECONNECT_SNAP_RADIUS_PX,
-        KEYBOARD_SNAP_RADIUS_FLOW_UNITS * getZoom()
-      );
       const snap = findNearestHandle(
         flowToScreenPosition(postMoveHandleFlow),
         anchorId,
         side,
-        snapRadiusPx
+        KEYBOARD_MOVE_STEP * getZoom()
       );
       if (!snap) return false;
 
@@ -408,22 +402,14 @@ export function useKeyboardNavigation({
           };
         }
 
-        // Keyboard moves are stepwise, so the snap window must be at
-        // least one step wide in flow space — otherwise an arrow press
-        // can step past a handle without ever landing inside the radius.
-        // We multiply by zoom so the flow-unit window stays consistent
-        // regardless of how zoomed-in the canvas is, and floor at the
-        // mouse default so we're never less generous than mouse drags.
-        const keyboardRadiusPx = KEYBOARD_SNAP_RADIUS_FLOW_UNITS * getZoom();
-        const snapRadiusPx = Math.max(
-          LINE_RECONNECT_SNAP_RADIUS_PX,
-          keyboardRadiusPx
-        );
+        // Keyboard snap radius equals the keyboard step (in flow units),
+        // converted to screen px via zoom. Snap radius must equal step to avoid
+        // the handle getting trapped by the snap radius.
         const snap = findNearestHandle(
           flowToScreenPosition(postMoveHandleFlow),
           endpointId,
           side,
-          snapRadiusPx
+          KEYBOARD_MOVE_STEP * getZoom()
         );
         if (snap) {
           if (side === 'source') {

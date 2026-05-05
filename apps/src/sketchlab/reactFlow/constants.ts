@@ -16,16 +16,8 @@ export const LINE_ANCHOR_SIZE_PX = 10;
 export const LINE_DEFAULT_LENGTH_PX = 220;
 
 // Magnetic snap radius (in screen pixels) used when reconnecting an edge
-// endpoint to a node handle. Applies to mouse drags and to React Flow's
-// own connection drag (via the `connectionRadius` prop). Matches React
-// Flow's default of 20 px; surfaced as a constant so we can tune by feel.
+// endpoint to a node handle. Applies to mouse drags.
 export const LINE_RECONNECT_SNAP_RADIUS_PX = 20;
-
-// Snap radius (in FLOW units) for keyboard-driven edge moves. Sized so
-// that any arrow press whose post-move position lands within one move
-// step of a target handle still snaps. Converted to screen pixels at the
-// call site by multiplying with the current zoom.
-export const KEYBOARD_SNAP_RADIUS_FLOW_UNITS = 20;
 
 // Milliseconds to debounce project saves after canvas changes.
 export const SAVE_DEBOUNCE_MS = 300;
