@@ -4,8 +4,7 @@ require 'test_helper'
 
 describe Observability::Errors do
   before do
-    CDO.stubs(:enable_sentry).returns(false)
-    CDO.stubs(:unit_test).returns(false)
+    Observability::Sentry.stubs(:enabled?).returns(false)
   end
 
   describe '.capture_exception' do
@@ -18,7 +17,7 @@ describe Observability::Errors do
     end
 
     it 'delegates to Sentry when Sentry is enabled' do
-      CDO.stubs(:enable_sentry).returns(true)
+      Observability::Sentry.stubs(:enabled?).returns(true)
 
       Sentry.expects(:capture_exception).with(exception, tags: {source: 'test'})
       Observability::Errors.capture_exception(exception, tags: {source: 'test'})
@@ -35,7 +34,7 @@ describe Observability::Errors do
     end
 
     it 'delegates to Sentry when Sentry is enabled' do
-      CDO.stubs(:enable_sentry).returns(true)
+      Observability::Sentry.stubs(:enabled?).returns(true)
 
       Sentry.expects(:capture_message).with(error_message, level: :warning)
       Observability::Errors.capture_message(error_message, level: :warning)
