@@ -11,7 +11,6 @@ const {mockLocalization, mockSiteConfig} = vi.hoisted(() => {
   const mockLocalization = {
     locale: 'en',
     locales: [{value: 'en', text: 'English', rtl: false}],
-    isLoaded: true,
     on: vi.fn((_event: string, cb: () => void) => cb()),
     off: vi.fn(),
     waitUntilLoaded: vi.fn(() => Promise.resolve(true)),
@@ -45,7 +44,6 @@ import StudioFooter from '../index';
 
 beforeEach(() => {
   mockLocalization.waitUntilLoaded.mockResolvedValue(true);
-  mockLocalization.isLoaded = true;
   mockSiteConfig.brand = 'code.org';
 });
 
@@ -69,7 +67,6 @@ describe('StudioFooter', () => {
   });
 
   it('shows the skeleton until localization resolves, then the picker', async () => {
-    mockLocalization.isLoaded = false;
     let resolveLoaded!: (v: boolean) => void;
     const pending = new Promise<boolean>(r => (resolveLoaded = r));
     mockLocalization.waitUntilLoaded.mockReturnValueOnce(pending);

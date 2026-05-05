@@ -24,9 +24,7 @@ function useLocaleSelectorState(): {
     locale: localization.locale,
     locales: localization.locales,
   });
-  // Probe synchronously so pages that already have localization loaded skip
-  // the skeleton frame entirely.
-  const [isReady, setIsReady] = useState(() => localization.isLoaded ?? false);
+  const [isReady, setIsReady] = useState(false);
   const mountedRef = useRef(true);
 
   useEffect(() => {
@@ -40,24 +38,20 @@ function useLocaleSelectorState(): {
 
     localization.on('change', onChange);
 
-    if (!isReady) {
-      localization.waitUntilLoaded().then(() => {
-        if (mountedRef.current) {
-          setIsReady(true);
-          setState({
-            locale: localization.locale,
-            locales: localization.locales,
-          });
-        }
-      });
-    }
+    localization.waitUntilLoaded().then(() => {
+      if (mountedRef.current) {
+        setIsReady(true);
+        setState({
+          locale: localization.locale,
+          locales: localization.locales,
+        });
+      }
+    });
 
     return () => {
       mountedRef.current = false;
       localization.off('change', onChange);
     };
-    // isReady intentionally omitted — we only need the sync initial value
-    // to decide whether to await the promise.
   }, []);
 
   return {locale: state.locale, locales: state.locales, isReady};
