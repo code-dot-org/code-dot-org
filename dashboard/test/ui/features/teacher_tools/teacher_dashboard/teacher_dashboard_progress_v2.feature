@@ -3,6 +3,7 @@ Feature: Using the V2 progress page
   Background:
     Given I am on "http://studio.code.org"
 
+@no_device_farm
 Scenario: Teacher can open and close Icon Key and details
   Given I create an authorized teacher-associated student named "Sally"
   Given I am assigned to course "allthethingscourse" with teacher "Teacher_Sally" in a section named "Test Section"
