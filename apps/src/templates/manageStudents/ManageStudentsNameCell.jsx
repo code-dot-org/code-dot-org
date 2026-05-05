@@ -17,6 +17,8 @@ import {
 
 import {editStudent} from './manageStudentsRedux';
 
+import moduleStyles from './ManageStudentsNameCell.module.scss';
+
 class ManageStudentNameCell extends Component {
   static propTypes = {
     id: PropTypes.number.isRequired,
@@ -61,7 +63,7 @@ class ManageStudentNameCell extends Component {
         {!this.props.isEditing && (
           <div>
             {studentUrl && (
-              <span style={styles.nameWithChip}>
+              <span className={moduleStyles.nameWithChip}>
                 <a
                   style={tableLayoutStyles.link}
                   href={studentUrl}
@@ -71,17 +73,17 @@ class ManageStudentNameCell extends Component {
                   {name}
                 </a>
                 {this.props.isDemoStudent && (
-                  <span style={styles.demoChipWrapper}>
+                  <span className={moduleStyles.demoChipWrapper}>
                     <DemoChip />
                   </span>
                 )}
               </span>
             )}
             {!studentUrl && (
-              <span style={styles.nameWithChip}>
+              <span className={moduleStyles.nameWithChip}>
                 {name}
                 {this.props.isDemoStudent && (
-                  <span style={styles.demoChipWrapper}>
+                  <span className={moduleStyles.demoChipWrapper}>
                     <DemoChip />
                   </span>
                 )}
@@ -115,15 +117,6 @@ class ManageStudentNameCell extends Component {
 }
 
 const styles = {
-  nameWithChip: {
-    display: 'inline-flex',
-    alignItems: 'center',
-    lineHeight: 'normal',
-  },
-  demoChipWrapper: {
-    display: 'inline-flex',
-    transform: 'translateY(-1px)',
-  },
   inputBox: {
     width: NAME_CELL_INPUT_WIDTH,
   },
