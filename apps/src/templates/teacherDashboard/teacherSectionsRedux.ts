@@ -1054,16 +1054,15 @@ function fetchJSON(url: string, params?: object) {
   return new Promise((resolve, reject) => {
     $.getJSON(url, params)
       .done(resolve)
-      .fail(jqxhr =>
-        reject(
-          new Error(`
-        url: ${url}
-        status: ${jqxhr.status}
-        statusText: ${jqxhr.statusText}
-        responseText: ${jqxhr.responseText}
-      `)
-        )
-      );
+      .fail(jqxhr => {
+        const err = Object.assign(
+          new Error(`url: ${url}, status: ${jqxhr.status} ${jqxhr.statusText}`),
+          {
+            responseText: jqxhr.responseText as string,
+          }
+        );
+        reject(err);
+      });
   });
 }
 

@@ -11,6 +11,7 @@ import LtiSectionSyncDialog, {
 } from '@cdo/apps/simpleSignUp/lti/sync/LtiSectionSyncDialog';
 import BaseDialog from '@cdo/apps/templates/BaseDialog';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
+import ReauthorizeClever from '@cdo/apps/templates/teacherDashboard/ReauthorizeClever';
 import ReauthorizeGoogleClassroom from '@cdo/apps/templates/teacherDashboard/ReauthorizeGoogleClassroom';
 import {importOrUpdateRoster} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import {
@@ -67,6 +68,7 @@ class SyncOmniAuthSectionControl extends React.Component {
     syncFailErrorLog: '',
     isLtiDialogOpen: false,
     needsGoogleReauth: false,
+    needsCleverReauth: false,
   };
 
   onClick = () => {
@@ -99,13 +101,17 @@ class SyncOmniAuthSectionControl extends React.Component {
       })
       .catch(sync_error => {
         const errorText = '' + sync_error;
-        // Show reauthorize CTA when Google Classroom returns 403
+        const userMessage = sync_error.responseText || errorText;
         const isGoogle =
           this.props.sectionProvider === OAuthSectionTypes.google_classroom;
+        const isClever =
+          this.props.sectionProvider === OAuthSectionTypes.clever;
         const needsGoogleReauth = isGoogle && /status:\s*403\b/.test(errorText);
+        const needsCleverReauth = isClever && /status:\s*401\b/.test(errorText);
         this.setState({
-          syncFailErrorLog: errorText,
-          needsGoogleReauth: needsGoogleReauth,
+          syncFailErrorLog: userMessage,
+          needsGoogleReauth,
+          needsCleverReauth,
         });
         this.openDialog();
       });
@@ -174,11 +180,19 @@ class SyncOmniAuthSectionControl extends React.Component {
               <ReauthorizeGoogleClassroom />
             </div>
           )}
-          <div style={styles.scroll}>
-            <pre>
-              <code>{this.state.syncFailErrorLog}</code>
-            </pre>
-          </div>
+          {this.state.needsCleverReauth && (
+            <div style={{margin: '12px 0'}}>
+              <p>{i18n.authorizeCleverText()}</p>
+              <ReauthorizeClever />
+            </div>
+          )}
+          {!this.state.needsGoogleReauth && !this.state.needsCleverReauth && (
+            <div style={styles.scroll}>
+              <pre>
+                <code>{this.state.syncFailErrorLog}</code>
+              </pre>
+            </div>
+          )}
           <div style={styles.needHelpMessage}>
             <SafeMarkdown
               markdown={i18n.loginTypeSyncButtonDialogTroubleshooting({

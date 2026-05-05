@@ -370,6 +370,8 @@
   "audioSaveError": "There's been an error saving your recording. Please re-record and try again. If this issue persists, please refresh the page and try again.",
   "audioSummary": "Daily Byte Podcast",
   "audioTranscript": "Audio Transcript",
+  "authorizeClever": "To authorize Clever, click here.",
+  "authorizeCleverText": "In order to sync with Clever, Code.org must have up-to-date authorization to access your Clever account.",
   "authorizeGoogleClassrooms": "To authorize Google Classroom, click here.",
   "authorizeGoogleClassroomsText": "In order to sync with Google Classroom, Code.org must have up-to-date authorization to access your Google Classroom account.",
   "authorName": "**Author:** {name}",

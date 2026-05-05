@@ -630,6 +630,8 @@ class ApiController < ApplicationController
     rescue RestClient::ExceptionWithResponse => exception
       if exception.http_code == 401 && exception.response.body.include?('Unrecognized token string')
         render status: exception.response.code, plain: I18n.t('auth.token_expired', provider: I18n.t('auth.clever'))
+      elsif exception.http_code == 404
+        render status: exception.response.code, plain: I18n.t('section.clever_section_not_found')
       else
         render status: exception.response.code, json: {error: exception.response.body}
       end
