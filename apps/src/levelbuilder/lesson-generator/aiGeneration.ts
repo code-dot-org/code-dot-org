@@ -21,6 +21,39 @@ const getTextModel = () => googleProvider(AiChatModelIds.GEMINI_2_5_FLASH);
 const getImageModel = () =>
   googleProvider(AiChatModelIds.GEMINI_2_5_FLASH_IMAGE);
 
+// Stable identifiers for each prompt site, used as a console.log prefix so
+// debugging conversations can refer to e.g. "the panels-plan prompt" without
+// ambiguity. Add a new tag here if you add another generateText call site.
+export const PROMPT_TAGS = {
+  PANELS_PLAN: 'lesson-gen/panels-plan',
+  PANELS_IMAGE: 'lesson-gen/panels-image',
+  WEBLAB2_PLAN: 'lesson-gen/weblab2-plan',
+} as const;
+
+type PromptTag = (typeof PROMPT_TAGS)[keyof typeof PROMPT_TAGS];
+
+// Logs the prompt and (when it returns) the model output to the browser
+// console under a stable tag. We use console.groupCollapsed so the entries
+// stay readable but don't dominate the console for users who aren't
+// debugging.
+function logPrompt(tag: PromptTag, prompt: string): void {
+  // eslint-disable-next-line no-console
+  console.groupCollapsed(`[${tag}] prompt sent`);
+  // eslint-disable-next-line no-console
+  console.log(prompt);
+  // eslint-disable-next-line no-console
+  console.groupEnd();
+}
+
+function logResponse(tag: PromptTag, response: unknown): void {
+  // eslint-disable-next-line no-console
+  console.groupCollapsed(`[${tag}] response received`);
+  // eslint-disable-next-line no-console
+  console.log(response);
+  // eslint-disable-next-line no-console
+  console.groupEnd();
+}
+
 const PANEL_LAYOUTS: PanelLayout[] = [
   'text-top-left',
   'text-top-center',
@@ -84,11 +117,13 @@ async function planPanels(description: string): Promise<PanelPlan[]> {
     `Description: ${description}`,
   ].join('\n');
 
+  logPrompt(PROMPT_TAGS.PANELS_PLAN, prompt);
   const response = await generateText({
     model: getTextModel(),
     prompt,
     output: panelsPlanSchema,
   });
+  logResponse(PROMPT_TAGS.PANELS_PLAN, response.output);
   const plan = (response.output as {panels: PanelPlan[]}).panels;
   if (!plan?.length) {
     throw new Error('Model returned no panels');
@@ -109,15 +144,25 @@ async function generateAndUploadPanelImage(
   levelName: string,
   panelIndex: number
 ): Promise<string> {
+  const fullPrompt = [
+    'Generate a single 16:9 widescreen illustration suitable for a',
+    'middle-school classroom. Do not include any embedded text or',
+    'captions in the image. Subject:',
+    imagePrompt,
+  ].join(' ');
+  logPrompt(PROMPT_TAGS.PANELS_IMAGE, fullPrompt);
   const response = await generateText({
     model: getImageModel(),
-    prompt: [
-      'Generate a single 16:9 widescreen illustration suitable for a',
-      'middle-school classroom. Do not include any embedded text or',
-      'captions in the image. Subject:',
-      imagePrompt,
-    ].join(' '),
+    prompt: fullPrompt,
   });
+  // Log file metadata only — the binary payload would flood the console.
+  logResponse(
+    PROMPT_TAGS.PANELS_IMAGE,
+    (response.files || []).map(f => ({
+      mediaType: f.mediaType,
+      bytes: f.uint8Array.length,
+    }))
+  );
   const imageFile = (response.files || []).find(f =>
     f.mediaType.startsWith('image/')
   );
@@ -226,6 +271,7 @@ export async function generateWeblab2Level(
     `Description: ${description}`,
   ].join('\n');
 
+  logPrompt(PROMPT_TAGS.WEBLAB2_PLAN, prompt);
   const response = await generateText({
     model: getTextModel(),
     prompt,
@@ -235,6 +281,7 @@ export async function generateWeblab2Level(
     longInstructions: string;
     files: {name: string; contents: string}[];
   };
+  logResponse(PROMPT_TAGS.WEBLAB2_PLAN, plan);
   if (!plan.files?.length) {
     throw new Error('Model returned no files');
   }
