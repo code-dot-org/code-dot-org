@@ -5,7 +5,7 @@ import {
 import {installAllBlocks as installFieldColourBlocks} from '@blockly/field-colour';
 import {CrossTabCopyPaste} from '@blockly/plugin-cross-tab-copy-paste';
 import {
-  ScrollBlockDragger,
+  ScrollBlockDragger as ScrollBlockDraggerBase,
   ScrollOptions,
 } from '@blockly/plugin-scroll-options';
 import * as BlocklyCore from 'blockly/core';
@@ -111,6 +111,15 @@ import {
   setThemeAndRenderBlocks,
   strip,
 } from './utils';
+
+// Blockly 13 removed `workspace` from the Dragger base class. The scroll
+// plugin still references `this.workspace`, so we re-expose it via the
+// draggable (which for blocks is always a BlockSvg with a workspace).
+class ScrollBlockDragger extends ScrollBlockDraggerBase {
+  get workspace(): BlocklyCore.WorkspaceSvg {
+    return (this.draggable as BlocklyCore.BlockSvg).workspace;
+  }
+}
 
 const options: {contextMenu: true; shortcut: true} = {
   contextMenu: true,

@@ -15,6 +15,7 @@ export default BlocklyCore.Theme.defineTheme(Themes.DARK, {
   componentStyles: {
     workspaceBackgroundColour: color.neutral_dark,
     blackBackground: color.light_gray_950,
+    toolboxBackgroundColour: color.light_gray_950,
     flyoutBackgroundColour: color.light_gray_950,
     flyoutOpacity: 0.8,
   },

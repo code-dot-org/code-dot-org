@@ -84,9 +84,8 @@ export function gestureOverrides(blocklyWrapper) {
     }
 
     this.calledUpdateIsDragging = true;
-    // If we drag a block out of the flyout, it updates `common.getSelected`
-    // to return the new block.
-    if (this.flyout) this.updateIsDraggingFromFlyout();
+    // Blockly 13: flyout dragging is handled automatically by the gesture
+    // before updateIsDragging is called; updateIsDraggingFromFlyout is gone.
     const selected = Blockly.common.getSelected();
     if (selected && Blockly.isDraggable(selected) && selected.isMovable()) {
       this.dragging = true;

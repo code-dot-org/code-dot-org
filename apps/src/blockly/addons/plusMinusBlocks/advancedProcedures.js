@@ -840,31 +840,31 @@ BlocklyCore.Extensions.register('argument_report_get_var_models', function () {
 });
 
 export function filterFunctionArgVariables(workspace, flyoutContents) {
-  if (!workspace) {
-    return flyoutContents;
-  }
+  if (!workspace) return flyoutContents;
   const nonParamVarIds = getNonFunctionVariableIds(workspace);
-  return flyoutContents.filter(toolboxItem => {
+
+  return flyoutContents.filter(item => {
+    const kind = item.kind?.toLowerCase();
+
     // If we don't have any variables to show, just show the button to create one.
-    if (
-      !nonParamVarIds.length &&
-      toolboxItem.tagName.toLowerCase() !== 'button'
-    ) {
-      return false;
-    }
+    if (!nonParamVarIds.length && kind !== 'button') return false;
 
     // For non-getter variables, select the first valid variable in the dropdown.
-    if (
-      toolboxItem.tagName.toLowerCase() === 'block' &&
-      toolboxItem.getAttribute('type') !== BLOCK_TYPES.variableGet
-    ) {
-      toolboxItem.firstElementChild?.setAttribute('id', nonParamVarIds[0]);
+    if (kind === 'block' && item.type !== BLOCK_TYPES.variableGet) {
+      const firstVar = workspace.getVariableById(nonParamVarIds[0]);
+      if (firstVar) {
+        item.fields = {
+          ...item.fields,
+          VAR: {name: firstVar.getName(), type: firstVar.getType()},
+        };
+      }
     }
+
     // Preserve all blocks except getters with invalid variables.
-    return (
-      toolboxItem.getAttribute('type') !== BLOCK_TYPES.variableGet ||
-      nonParamVarIds.includes(toolboxItem.firstElementChild.getAttribute('id'))
-    );
+    if (item.type !== BLOCK_TYPES.variableGet) return true;
+    const varName = item.fields?.VAR?.name;
+    const varModel = varName && workspace.getVariable(varName);
+    return varModel ? nonParamVarIds.includes(varModel.getId()) : false;
   });
 }
 
