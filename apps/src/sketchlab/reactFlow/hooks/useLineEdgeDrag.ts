@@ -185,43 +185,36 @@ export function useLineEdgeDrag({
         return;
       }
 
-      const sourceNode = getNode(edge.source);
-      const targetNode = getNode(edge.target);
       const anchors: DraggingAnchor[] = [];
       const pendingDetaches: PendingDetach[] = [];
 
-      if (sourceNode?.type === 'lineAnchor') {
-        anchors.push({
-          id: sourceNode.id,
-          side: 'source',
-          startPosition: {...sourceNode.position},
-        });
-      } else if (sourceNode) {
+      // Determine whether the given side has an anchor handle or
+      // a read node handle, and prepare the drag state accordingly.
+      const getHandleForSide = (side: 'source' | 'target') => {
+        const endpointId = side === 'source' ? edge.source : edge.target;
+        const handleId =
+          side === 'source' ? edge.sourceHandle : edge.targetHandle;
+        const endpointNode = getNode(endpointId);
+        if (!endpointNode) return;
+        if (endpointNode.type === 'lineAnchor') {
+          anchors.push({
+            id: endpointNode.id,
+            side,
+            startPosition: {...endpointNode.position},
+          });
+          return;
+        }
         const handlePosition = getHandleFlowPosition(
-          edge.source,
-          edge.sourceHandle,
+          endpointId,
+          handleId,
           screenToFlowPosition
         );
         if (handlePosition) {
-          pendingDetaches.push({side: 'source', flowPosition: handlePosition});
+          pendingDetaches.push({side, flowPosition: handlePosition});
         }
-      }
-      if (targetNode?.type === 'lineAnchor') {
-        anchors.push({
-          id: targetNode.id,
-          side: 'target',
-          startPosition: {...targetNode.position},
-        });
-      } else if (targetNode) {
-        const handlePosition = getHandleFlowPosition(
-          edge.target,
-          edge.targetHandle,
-          screenToFlowPosition
-        );
-        if (handlePosition) {
-          pendingDetaches.push({side: 'target', flowPosition: handlePosition});
-        }
-      }
+      };
+      getHandleForSide('source');
+      getHandleForSide('target');
       if (anchors.length === 0 && pendingDetaches.length === 0) {
         return;
       }
