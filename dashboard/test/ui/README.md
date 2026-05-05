@@ -22,12 +22,12 @@ The UI tests run as part of our deployment during the Deploy To Test (DTT) via `
 
 | Suite | Provider | Browsers |
 |-------|----------|----------|
-| Safari | SauceLabs | `Safari` (`browsers_saucelabs.json`) |
-| Chrome + Firefox | AWS Device Farm | `Chrome`, `Firefox` (`browsers_device_farm.json`) |
-| Mobile | AWS Device Farm | `iPhone`, `iPad` (`browsers_device_farm.json`) |
+| Safari UI | SauceLabs | `Safari` (`browsers_saucelabs.json`) |
+| Chrome + Firefox UI | AWS Device Farm | `Chrome`, `Firefox` (`browsers_device_farm.json`) |
+| Mobile UI | AWS Device Farm | `iPhone`, `iPad` (`browsers_device_farm.json`) |
 | Eyes | SauceLabs | `Chrome`, `iPhone` (Applitools visual diff, `@eyes` / `@eyes_mobile`) |
 
-Each suite uploads its own status page (`test_status_{Safari,Chrome_Firefox,Mobile,Eyes}.html`) to the test machine and to S3. Provider names ("SauceLabs", "Device Farm") are not surfaced in Slack messages or status page headings -- the suite label is what oncall sees.
+Each suite uploads its own status page (`test_status_{Safari_UI,Chrome_Firefox_UI,Mobile_UI,Eyes}.html`) to the test machine and to S3. Provider names ("SauceLabs", "Device Farm") are not surfaced in Slack messages or status page headings -- the suite label is what oncall sees.
 
 ## Local Setup
 

@@ -405,14 +405,15 @@ end
 # Farm) is no longer surfaced -- oncall sees a label that names the
 # suite by its browsers. Eyes runs are always "Eyes" (eyes only runs
 # on SauceLabs today). Non-eyes runs derive the label from their
-# active browser configs:
-#   -c Safari          => "Safari"
-#   -c Chrome,Firefox  => "Chrome + Firefox"
-#   -c iPhone,iPad     => "Mobile"
+# active browser configs and append "UI" so it's clear the suite is
+# UI tests:
+#   -c Safari          => "Safari UI"
+#   -c Chrome,Firefox  => "Chrome + Firefox UI"
+#   -c iPhone,iPad     => "Mobile UI"
 def test_type_label
   return test_type if eyes?
-  return 'Mobile' if $browsers.all? {|b| mobile_browser?(b)}
-  $browsers.map {|b| b['name']}.uniq.sort.join(' + ')
+  return 'Mobile UI' if $browsers.all? {|b| mobile_browser?(b)}
+  "#{$browsers.map {|b| b['name']}.uniq.sort.join(' + ')} UI"
 end
 
 def eyes?
@@ -495,10 +496,10 @@ end
 # page is being generated, so the active entry can be rendered unlinked.
 # The four entries are the four suites rake test:ui_all dispatches.
 STATUS_PAGES_NAVIGATION = [
-  {filename: 'test_status_Safari.html',         display_name: 'Safari'},
-  {filename: 'test_status_Chrome_Firefox.html', display_name: 'Chrome + Firefox'},
-  {filename: 'test_status_Mobile.html',         display_name: 'Mobile'},
-  {filename: 'test_status_Eyes.html',           display_name: 'Eyes'},
+  {filename: 'test_status_Safari_UI.html',         display_name: 'Safari UI'},
+  {filename: 'test_status_Chrome_Firefox_UI.html', display_name: 'Chrome + Firefox UI'},
+  {filename: 'test_status_Mobile_UI.html',         display_name: 'Mobile UI'},
+  {filename: 'test_status_Eyes.html',              display_name: 'Eyes'},
 ].freeze
 
 def status_pages_navigation
@@ -516,8 +517,8 @@ end
 # Status page filename per suite. Eyes keeps a stable name across
 # providers (we only run eyes on SauceLabs). Other suites name their
 # page after the suite label so the four ui_all suites
-# (Safari, Chrome+Firefox, Mobile, Eyes) get unique pages and don't
-# overwrite each other in the shared S3 prefix or in
+# (Safari UI, Chrome + Firefox UI, Mobile UI, Eyes) get unique pages
+# and don't overwrite each other in the shared S3 prefix or in
 # dashboard/public/ui_test/.
 def status_page_filename
   return 'test_status_Eyes.html' if eyes?
