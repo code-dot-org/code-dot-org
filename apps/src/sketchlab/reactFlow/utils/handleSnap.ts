@@ -7,6 +7,8 @@
 // (factoring in node size, transform, zoom, etc.). Reading those is
 // simpler than re-deriving the handle position from node state.
 
+import type {SketchlabReactFlowEdge} from '@cdo/apps/lab2/types';
+
 export interface SnapTarget {
   nodeId: string;
   handleId: string | null;
@@ -88,4 +90,46 @@ export function findNearestHandle(
   });
 
   return closest;
+}
+
+// Convert a snap result into the partial edge fields that wire that side
+// of the edge to the snapped handle.
+export function snapResultToEdgePatch(
+  side: 'source' | 'target',
+  snap: SnapTarget
+): Partial<SketchlabReactFlowEdge> {
+  return side === 'source'
+    ? {source: snap.nodeId, sourceHandle: snap.handleId ?? undefined}
+    : {target: snap.nodeId, targetHandle: snap.handleId ?? undefined};
+}
+
+// Handles snapping an edge endpoint onto a real-node handle.
+// Looks up the nearest valid handle and, if found, rewrites the edge.
+// Returns true when a snap was performed, false otherwise.
+export function snapEdgeEndpointToHandle({
+  edgeId,
+  excludeNodeId,
+  side,
+  screenPoint,
+  radiusPx,
+  setEdges,
+}: {
+  edgeId: string;
+  excludeNodeId: string;
+  side: 'source' | 'target';
+  screenPoint: {x: number; y: number};
+  radiusPx: number;
+  setEdges: (
+    updater: (edges: SketchlabReactFlowEdge[]) => SketchlabReactFlowEdge[]
+  ) => void;
+}): boolean {
+  const snap = findNearestHandle(screenPoint, excludeNodeId, side, radiusPx);
+  if (!snap) return false;
+  const patch = snapResultToEdgePatch(side, snap);
+  setEdges(currentEdges =>
+    currentEdges.map(currentEdge =>
+      currentEdge.id === edgeId ? {...currentEdge, ...patch} : currentEdge
+    )
+  );
+  return true;
 }

@@ -21,7 +21,11 @@ import {
   type TabOrderEntry,
 } from '../utils/computeTabOrder';
 import {isLineAnchorNodeId} from '../utils/connectionRules';
-import {findNearestHandle} from '../utils/handleSnap';
+import {
+  findNearestHandle,
+  snapEdgeEndpointToHandle,
+  snapResultToEdgePatch,
+} from '../utils/handleSnap';
 import {
   anchorHandleFlowPosition,
   createLineAnchorAtHandle,
@@ -349,30 +353,15 @@ export function useKeyboardNavigation({
         x: positionBeforeMove.x + deltaX,
         y: positionBeforeMove.y + deltaY,
       };
-      const snapTarget = findNearestHandle(
-        flowToScreenPosition(positionAfterMove),
-        anchorId,
+      const snapped = snapEdgeEndpointToHandle({
+        edgeId: associatedEdge.id,
+        excludeNodeId: anchorId,
         side,
-        KEYBOARD_MOVE_STEP * getZoom()
-      );
-      if (!snapTarget) return false;
-
-      setEdges(currentEdges =>
-        currentEdges.map(currentEdge => {
-          if (currentEdge.id !== associatedEdge.id) return currentEdge;
-          return isSourceSide
-            ? {
-                ...currentEdge,
-                source: snapTarget.nodeId,
-                sourceHandle: snapTarget.handleId ?? undefined,
-              }
-            : {
-                ...currentEdge,
-                target: snapTarget.nodeId,
-                targetHandle: snapTarget.handleId ?? undefined,
-              };
-        })
-      );
+        screenPoint: flowToScreenPosition(positionAfterMove),
+        radiusPx: KEYBOARD_MOVE_STEP * getZoom(),
+        setEdges,
+      });
+      if (!snapped) return false;
       // The anchor we were focused on is about to be pruned; move
       // focus to the edge it terminated so the user stays on a useful
       // target. Deferred so we update focus after re-render.
@@ -453,13 +442,7 @@ export function useKeyboardNavigation({
           KEYBOARD_MOVE_STEP * getZoom()
         );
         if (snapTarget) {
-          if (side === 'source') {
-            edgePatch.source = snapTarget.nodeId;
-            edgePatch.sourceHandle = snapTarget.handleId ?? undefined;
-          } else {
-            edgePatch.target = snapTarget.nodeId;
-            edgePatch.targetHandle = snapTarget.handleId ?? undefined;
-          }
+          Object.assign(edgePatch, snapResultToEdgePatch(side, snapTarget));
           return;
         }
 

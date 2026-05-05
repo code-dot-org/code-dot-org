@@ -7,7 +7,7 @@ import {
 } from '@cdo/apps/lab2/types';
 
 import {LINE_RECONNECT_SNAP_RADIUS_PX} from '../constants';
-import {findNearestHandle} from '../utils/handleSnap';
+import {snapEdgeEndpointToHandle} from '../utils/handleSnap';
 import {
   anchorHandleFlowPosition,
   createLineAnchorAtHandle,
@@ -154,42 +154,22 @@ export function useLineEdgeDrag({
       const deltaX = finalPointer.x - dragState.startPointer.x;
       const deltaY = finalPointer.y - dragState.startPointer.y;
 
-      const edgePatch: Partial<SketchlabReactFlowEdge> = {};
       dragState.anchors.forEach(anchor => {
         const finalPosition: XYPosition = {
           x: anchor.startPosition.x + deltaX,
           y: anchor.startPosition.y + deltaY,
         };
-        const handlePosition = flowToScreenPosition(
-          anchorHandleFlowPosition(finalPosition, anchor.side)
-        );
-        const snapTarget = findNearestHandle(
-          handlePosition,
-          anchor.id,
-          anchor.side,
-          LINE_RECONNECT_SNAP_RADIUS_PX
-        );
-        if (!snapTarget) {
-          return;
-        }
-        if (anchor.side === 'source') {
-          edgePatch.source = snapTarget.nodeId;
-          edgePatch.sourceHandle = snapTarget.handleId ?? undefined;
-        } else {
-          edgePatch.target = snapTarget.nodeId;
-          edgePatch.targetHandle = snapTarget.handleId ?? undefined;
-        }
+        snapEdgeEndpointToHandle({
+          edgeId: dragState.edgeId,
+          excludeNodeId: anchor.id,
+          side: anchor.side,
+          screenPoint: flowToScreenPosition(
+            anchorHandleFlowPosition(finalPosition, anchor.side)
+          ),
+          radiusPx: LINE_RECONNECT_SNAP_RADIUS_PX,
+          setEdges,
+        });
       });
-
-      if (Object.keys(edgePatch).length > 0) {
-        setEdges(currentEdges =>
-          currentEdges.map(currentEdge =>
-            currentEdge.id === dragState.edgeId
-              ? {...currentEdge, ...edgePatch}
-              : currentEdge
-          )
-        );
-      }
     },
     [
       handleLineEdgeMouseMove,

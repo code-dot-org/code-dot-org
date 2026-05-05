@@ -13,7 +13,10 @@ import {
 } from '@cdo/apps/lab2/types';
 
 import {LINE_RECONNECT_SNAP_RADIUS_PX} from '../constants';
-import {findNearestHandle, getEventClientPoint} from '../utils/handleSnap';
+import {
+  getEventClientPoint,
+  snapEdgeEndpointToHandle,
+} from '../utils/handleSnap';
 import {createLineAnchorAtHandle} from '../utils/lineAnchors';
 
 interface UseReconnectOptions {
@@ -139,39 +142,14 @@ export function useReconnect({
         return;
       }
       const isSourceSide = associatedEdge.source === node.id;
-      const requiredHandleType: 'source' | 'target' = isSourceSide
-        ? 'source'
-        : 'target';
-
-      const snapTarget = findNearestHandle(
-        {x: event.clientX, y: event.clientY},
-        node.id,
-        requiredHandleType,
-        LINE_RECONNECT_SNAP_RADIUS_PX
-      );
-      if (!snapTarget) {
-        return;
-      }
-
-      setEdges(currentEdges =>
-        currentEdges.map(currentEdge => {
-          if (currentEdge.id !== associatedEdge.id) {
-            return currentEdge;
-          }
-          if (isSourceSide) {
-            return {
-              ...currentEdge,
-              source: snapTarget.nodeId,
-              sourceHandle: snapTarget.handleId ?? undefined,
-            };
-          }
-          return {
-            ...currentEdge,
-            target: snapTarget.nodeId,
-            targetHandle: snapTarget.handleId ?? undefined,
-          };
-        })
-      );
+      snapEdgeEndpointToHandle({
+        edgeId: associatedEdge.id,
+        excludeNodeId: node.id,
+        side: isSourceSide ? 'source' : 'target',
+        screenPoint: {x: event.clientX, y: event.clientY},
+        radiusPx: LINE_RECONNECT_SNAP_RADIUS_PX,
+        setEdges,
+      });
     },
     [edges, setEdges]
   );
