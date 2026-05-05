@@ -45,7 +45,7 @@ module.exports = {
    * @param {object} value - Object literal of context attributes for the event.
    * @param {number} [sampleRate] - Optional sample rate. Default is 1.0.
    */
-  addPageAction(actionName, value, sampleRate) {
+  addPageAction: function (actionName, value, sampleRate) {
     if (sampleRate === undefined) {
       sampleRate = 1.0;
     }
@@ -67,10 +67,10 @@ module.exports = {
     Observability.logger.info(actionName, value);
   },
 
-  logError(error) {
-    if (!error) {
+  logError(e) {
+    if (!e) {
       return;
     }
-    Observability.recordError(error);
+    Observability.recordError(e);
   },
 };
