@@ -219,21 +219,18 @@ export default function LineEdgeToolbar({
           <ActionsGroup
             onDelete={() => deleteElements({edges: [{id: edge.id}]})}
             onLock={() => onSetLocked(true)}
+            onDuplicate={() => duplicateLine(edge.id)}
+            onBringToFront={() => {
+              const items = [...getNodes(), ...getEdges()];
+              updateEdge(edge.id, {zIndex: newFrontZIndex(items, edge.id)});
+            }}
+            onSendToBack={() => {
+              const items = [...getNodes(), ...getEdges()];
+              updateEdge(edge.id, {zIndex: newBackZIndex(items, edge.id)});
+            }}
           />
         </>
       )}
-      <ActionsGroup
-        onDelete={() => deleteElements({edges: [{id: edge.id}]})}
-        onDuplicate={() => duplicateLine(edge.id)}
-        onBringToFront={() => {
-          const items = [...getNodes(), ...getEdges()];
-          updateEdge(edge.id, {zIndex: newFrontZIndex(items, edge.id)});
-        }}
-        onSendToBack={() => {
-          const items = [...getNodes(), ...getEdges()];
-          updateEdge(edge.id, {zIndex: newBackZIndex(items, edge.id)});
-        }}
-      />
     </ToolbarShell>
   );
 }
