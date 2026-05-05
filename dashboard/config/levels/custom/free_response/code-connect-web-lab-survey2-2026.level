@@ -7,7 +7,7 @@
   "user_id": 16889,
   "properties": {
     "encrypted": "false",
-    "long_instructions": "Question 2",
+    "long_instructions": "If you could change one thing about this activity, what would it be?",
     "stay_on_level_after_submit": "false",
     "submittable": "false",
     "allow_multiple_attempts": "true",
@@ -17,7 +17,7 @@
     "skip_dialog": true,
     "skip_sound": true
   },
-  "audit_log": "[{\"changed_at\":\"2026-05-01T20:44:48.580+00:00\",\"changed\":[\"cloned from \\\"code-connect-web-lab-survey1-2026\\\"\"],\"cloned_from\":\"code-connect-web-lab-survey1-2026\"},{\"changed_at\":\"2026-05-01 20:44:54 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2026-05-01T20:44:48.580+00:00\",\"changed\":[\"cloned from \\\"code-connect-web-lab-survey1-2026\\\"\"],\"cloned_from\":\"code-connect-web-lab-survey1-2026\"},{\"changed_at\":\"2026-05-01 20:44:54 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-05-04 22:00:00 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

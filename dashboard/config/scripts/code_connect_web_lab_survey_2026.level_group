@@ -5,6 +5,8 @@ anonymous 'false'
 activity_guide_level 'true'
 
 page
-level 'code-connect-web-lab-multi2-survey-2026'
 level 'code-connect-web-lab-survey1-2026'
+level 'code-connect-web-lab-multi2-survey-2026'
+level 'code-connect-web-lab-multi-survey-2026'
 level 'code-connect-web-lab-survey2-2026'
+level 'code-connect-web-lab-survey3-2026'
