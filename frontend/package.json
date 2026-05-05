@@ -41,7 +41,7 @@
     "eslint": "catalog:",
     "lint-staged": "catalog:",
     "prettier": "catalog:",
-    "rimraf": "^6.0.1",
+    "rimraf": "catalog:",
     "turbo": "^2.6.3",
     "typescript": "catalog:",
     "typescript-eslint": "catalog:"

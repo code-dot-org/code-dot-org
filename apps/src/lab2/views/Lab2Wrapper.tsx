@@ -46,6 +46,7 @@ import {ErrorFallbackPage, ErrorUI} from './ErrorFallbackPage';
 import LevelPropertiesWrapper from './LevelPropertiesWrapper';
 import Loading from './Loading';
 import {ProjectBlockedUI} from './ProjectBlockedUI';
+import ScreenAnalyticsOverlay from './ScreenAnalyticsOverlay';
 
 import moduleStyles from './Lab2Wrapper.module.scss';
 
@@ -186,6 +187,7 @@ const Lab2Wrapper: React.FunctionComponent<Lab2WrapperProps> = ({children}) => {
             isProjectValidator={isProjectValidator}
           />
         )}
+        <ScreenAnalyticsOverlay />
       </div>
     </ErrorBoundary>
   );

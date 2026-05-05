@@ -257,7 +257,7 @@ class Section < ApplicationRecord
 
   after_save :ensure_owner_is_active_instructor
   def ensure_owner_is_active_instructor
-    return if user.blank?
+    return if user.blank? || user.deleted?
 
     add_instructor(user)
   end

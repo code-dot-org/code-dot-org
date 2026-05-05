@@ -38,7 +38,7 @@ export default function ShapeNodeToolbar({nodeId}: ShapeNodeToolbarProps) {
       ariaLabel="Shape style"
     >
       {data.locked ? (
-        <LockedNotice nodeId={nodeId} />
+        <LockedNotice onUnlock={() => patchNodeData({locked: false})} />
       ) : (
         <>
           <SwatchGroup
