@@ -480,8 +480,11 @@ export function useKeyboardNavigation({
       }
       // The mutation can knock focus off the edge wrapper. Remember which
       // edge we just moved so the next arrow keypress can fall back to it
-      // when DOM focus has drifted to body.
+      // when DOM focus has drifted to body, and restore focus on the next
+      // tick so the visible focus outline comes back. The window-level
+      // listener picks up arrows even when this refocus doesn't take.
       keyboardMovingEdgeRef.current = edgeId;
+      setTimeout(() => focusEntry({type: 'edge', id: edgeId}), 0);
       return true;
     },
     [
@@ -492,6 +495,7 @@ export function useKeyboardNavigation({
       setEdges,
       screenToFlowPosition,
       flowToScreenPosition,
+      focusEntry,
     ]
   );
 
