@@ -158,6 +158,7 @@ export function useKeyboardNavigation({
 }: UseKeyboardNavigationOptions) {
   const {
     getEdge,
+    getEdges,
     getNode,
     getZoom,
     screenToFlowPosition,
@@ -278,6 +279,66 @@ export function useKeyboardNavigation({
     [connectingFrom, completeConnect]
   );
 
+  // Move a single line-anchor by delta. If the post-move handle position
+  // lands within snap range of a real node's handle, attach the edge to
+  // that handle directly instead of translating; the now-unreferenced
+  // anchor is cleaned up by the prune effect. Returns false (and does
+  // nothing) if the node isn't a lineAnchor or has no associated edge,
+  // letting the caller fall back to a generic translate.
+  const snapAnchorIfNearHandle = useCallback(
+    (anchorId: string, deltaX: number, deltaY: number): boolean => {
+      const anchorNode = getNode(anchorId);
+      if (!anchorNode || anchorNode.type !== 'lineAnchor') return false;
+      const associatedEdge = getEdges().find(
+        edge => edge.source === anchorId || edge.target === anchorId
+      );
+      if (!associatedEdge) return false;
+      const isSourceSide = associatedEdge.source === anchorId;
+      const side: 'source' | 'target' = isSourceSide ? 'source' : 'target';
+
+      const handleBefore = anchorHandleFlowPosition(anchorNode.position, side);
+      const postMoveHandleFlow: XYPosition = {
+        x: handleBefore.x + deltaX,
+        y: handleBefore.y + deltaY,
+      };
+      const snapRadiusPx = Math.max(
+        LINE_RECONNECT_SNAP_RADIUS_PX,
+        KEYBOARD_SNAP_RADIUS_FLOW_UNITS * getZoom()
+      );
+      const snap = findNearestHandle(
+        flowToScreenPosition(postMoveHandleFlow),
+        anchorId,
+        side,
+        snapRadiusPx
+      );
+      if (!snap) return false;
+
+      setEdges(currentEdges =>
+        currentEdges.map(currentEdge => {
+          if (currentEdge.id !== associatedEdge.id) return currentEdge;
+          return isSourceSide
+            ? {
+                ...currentEdge,
+                source: snap.nodeId,
+                sourceHandle: snap.handleId ?? undefined,
+              }
+            : {
+                ...currentEdge,
+                target: snap.nodeId,
+                targetHandle: snap.handleId ?? undefined,
+              };
+        })
+      );
+      // The anchor we were focused on is about to be orphan-pruned; move
+      // focus to the edge it terminated so the user stays on a useful
+      // target. Deferred so the focus call runs after React commits and
+      // the new edge wrapper exists in the DOM.
+      setTimeout(() => focusEntry({type: 'edge', id: associatedEdge.id}), 0);
+      return true;
+    },
+    [getEdges, getNode, getZoom, flowToScreenPosition, setEdges, focusEntry]
+  );
+
   const handleMoveNode = useCallback(
     (keyContext: KeyContext): boolean => {
       const {event, focusedNodeId} = keyContext;
@@ -286,12 +347,19 @@ export function useKeyboardNavigation({
       if (!deltaX && !deltaY) return false;
       event.preventDefault();
       event.stopPropagation();
+      // For a focused line anchor, try snap-on-step first. If a real
+      // handle is in range, the edge attaches there and the anchor is
+      // pruned. Otherwise (or for any non-anchor node) fall through to
+      // the plain translate.
+      if (snapAnchorIfNearHandle(focusedNodeId, deltaX, deltaY)) {
+        return true;
+      }
       setNodes(currentNodes =>
         moveNodesByDelta(currentNodes, [focusedNodeId], deltaX, deltaY)
       );
       return true;
     },
-    [setNodes]
+    [setNodes, snapAnchorIfNearHandle]
   );
 
   // Per side: figure out the post-move handle position, check if it would
