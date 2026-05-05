@@ -5,7 +5,7 @@ import {makeEnum} from './utils';
 const PageAction = makeEnum(
   'DropletTransitionError',
   'SanitizedLevelHtml',
-  'UserJavascriptError',
+  'UserJavaScriptError',
   'RunButtonClick',
   'StartWebRequest',
   'StaticResourceFetchError',
