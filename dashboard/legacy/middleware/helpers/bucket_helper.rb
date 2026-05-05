@@ -139,7 +139,7 @@ class BucketHelper
       filename = %r{#{src_prefix}(.+)$}.match(fileinfo.key)[1]
       next unless (!options[:filenames] && (!options[:exclude_filenames] || !options[:exclude_filenames].include?(filename))) || options[:filenames].try(:include?, filename)
       mime_type = Sinatra::Base.mime_type(File.extname(filename))
-      category = mime_type.split('/').first  # e.g. 'image' or 'audio'
+      category = mime_type.try(:split, '/').try(:first)
 
       src = "#{@bucket}/#{src_prefix}#{filename}"
       dest = s3_path dest_owner_id, dest_storage_app_id, filename
