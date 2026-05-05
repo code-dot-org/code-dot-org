@@ -89,6 +89,7 @@ export interface ReactFlowCanvasProps {
   updateSources: ReturnType<
     typeof useSources<ReactFlowSketchLabSources>
   >['updateSources'];
+  levelName: string;
   initialNodes: SketchlabReactFlowNode[];
   initialEdges: SketchlabReactFlowEdge[];
   initialViewport: SketchlabReactFlowSource['viewport'];
@@ -100,6 +101,7 @@ export const SKETCHLAB_CONTAINER_CLASS = 'sketchlab-react-flow-container';
 
 export default function ReactFlowCanvas({
   updateSources,
+  levelName,
   initialNodes,
   initialEdges,
   initialViewport,
@@ -590,7 +592,9 @@ export default function ReactFlowCanvas({
             onMouseMove={handleMouseMove}
             onMouseLeave={handleMouseLeave}
           >
-            {!readOnly && <Toolbar onAddNode={handleAddNode} />}
+            {!readOnly && (
+              <Toolbar onAddNode={handleAddNode} levelName={levelName} />
+            )}
             <div aria-live="assertive" className={styles.srOnly}>
               {connectAnnouncement}
             </div>
