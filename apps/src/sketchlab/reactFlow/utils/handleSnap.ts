@@ -47,15 +47,21 @@ export function findNearestHandle(
   requiredType: 'source' | 'target',
   radiusPx: number
 ): SnapTarget | null {
-  const handles = document.querySelectorAll<HTMLElement>(
-    '.react-flow__handle'
-  );
+  const handles = document.querySelectorAll<HTMLElement>('.react-flow__handle');
   let closest: SnapTarget | null = null;
   let closestDistance = radiusPx;
 
   handles.forEach(handle => {
     const nodeId = handle.dataset.nodeid;
     if (!nodeId || nodeId === excludeNodeId) {
+      return;
+    }
+    // Lines only attach to real nodes (shape/text/image), not other line's hidden anchors.
+    if (
+      handle
+        .closest('.react-flow__node')
+        ?.classList.contains('react-flow__node-lineAnchor')
+    ) {
       return;
     }
     const handleType = getHandleType(handle);
