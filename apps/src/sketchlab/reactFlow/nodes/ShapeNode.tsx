@@ -1,4 +1,5 @@
 import {NodeResizer, useReactFlow, type NodeProps} from '@xyflow/react';
+import classNames from 'classnames';
 import React, {memo, useCallback, useMemo, useRef, useState} from 'react';
 
 import {DEFAULT_ROTATION, MIN_NODE_HEIGHT, MIN_NODE_WIDTH} from '../constants';
@@ -207,14 +208,13 @@ function ShapeNode({id, data, selected}: NodeProps<ShapeNodeType>) {
         {/* Text label: click or enter to start editing */}
         <div
           ref={labelRef}
-          className={`${styles.label}${isEditing ? ' nodrag nopan' : ''}`}
+          className={classNames(styles.text, isEditing && 'nodrag nopan')}
           style={labelStyle}
           contentEditable={isEditing}
           suppressContentEditableWarning
           onFocus={startEditing}
           onBlur={commitEdit}
           onKeyDown={handleLabelKeyDown}
-          onMouseDown={isEditing ? e => e.stopPropagation() : undefined}
           tabIndex={-1}
           role="textbox"
           aria-label={`${shapeType} label${isEditing ? ' (editing)' : ''}`}

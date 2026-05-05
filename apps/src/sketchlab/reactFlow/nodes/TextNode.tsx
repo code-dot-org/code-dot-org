@@ -1,4 +1,5 @@
 import {NodeResizer, useReactFlow, type NodeProps} from '@xyflow/react';
+import classNames from 'classnames';
 import React, {memo, useCallback, useMemo, useRef, useState} from 'react';
 
 import {DEFAULT_ROTATION, MIN_NODE_HEIGHT, MIN_NODE_WIDTH} from '../constants';
@@ -102,14 +103,13 @@ function TextNode({id, data, selected}: NodeProps<TextNodeType>) {
       <div className={styles.rotatable} style={rotatableStyle}>
         <div
           ref={textRef}
-          className={`${styles.text}${isEditing ? ' nodrag nopan' : ''}`}
+          className={classNames(styles.text, isEditing && 'nodrag nopan')}
           style={textStyle}
           contentEditable={isEditing}
           suppressContentEditableWarning
           onFocus={startEditing}
           onBlur={commitEdit}
           onKeyDown={handleKeyDown}
-          onMouseDown={isEditing ? e => e.stopPropagation() : undefined}
           tabIndex={-1}
           role="textbox"
           aria-label={`Text content${isEditing ? ' (editing)' : ''}`}
