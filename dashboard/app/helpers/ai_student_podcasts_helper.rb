@@ -2,6 +2,8 @@ module AiStudentPodcastsHelper
   MODEL = "eleven_v3"
   PODCAST_BUCKET = CDO.dashboard_hostname.split('.').reverse.join('.') + '.user-content'
   PODCAST_FOLDER = 'student_podcasts/'
+  VOICE_ID_DAN = "0sqkv877qKv8jUXFfsXj"
+  VOICE_ID_SAM = "w7LY6CndrQObaTsPvYeB"
 
   def self.create_and_save_to_s3(fragment)
     filename = s3_filename(fragment.id)
@@ -16,9 +18,21 @@ module AiStudentPodcastsHelper
     AWS::S3.download_from_bucket(PODCAST_BUCKET, s3_filename(fragment_id))
   end
 
-  def self.get_podcast_from_script(script)
+  VOICE_ID_MAP = {
+    'Dan' => VOICE_ID_DAN,
+    'Sam' => VOICE_ID_SAM
+  }.freeze
+
+  def self.resolve_voice_ids(podcast_script)
+    parsed = JSON.parse(podcast_script)
+    parsed.map do |entry|
+      entry.merge('voice_id' => VOICE_ID_MAP.fetch(entry['voice_id'], entry['voice_id']))
+    end
+  end
+
+  def self.get_podcast_from_script(podcast_script)
     begin
-      response = client.request_podcast(script)
+      response = client.request_podcast(resolve_voice_ids(podcast_script))
     rescue Net::OpenTimeout, Net::ReadTimeout
       raise StandardError.new("Timeout waiting for AI client to return student podcast")
     rescue StandardError => exception
@@ -26,6 +40,7 @@ module AiStudentPodcastsHelper
     end
 
     if response.code == 200
+      File.binwrite(Rails.root.join('..', 'test_podcast.mp3'), response.body)
       return response.body
     else
       raise StandardError.new("Error processing AI student podcast: status code #{response.code}: #{response.body}")
@@ -35,8 +50,6 @@ module AiStudentPodcastsHelper
   class Client
     attr_accessor :api_key, :model
 
-    VOICE_ID_ADAM = "s3TPKV1kjDlVtZbl4Ksh"
-    VOICE_ID_HOPE = "tnSpp4vdxKPjI9w0GnoV"
     ELEVENLABS_URL = "https://api.elevenlabs.io/v1/text-to-dialogue"
 
     def initialize(api_key, model)
@@ -52,7 +65,7 @@ module AiStudentPodcastsHelper
 
       data = {
         model_id: @model,
-        text: prompt
+        inputs: prompt
       }
 
       HTTParty.post(

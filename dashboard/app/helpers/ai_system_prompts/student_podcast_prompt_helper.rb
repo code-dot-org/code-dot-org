@@ -24,24 +24,19 @@ and examples in response.
 discuss and answer it.
 
 The language in each segment should be geared toward students in a middle and high school
-setting and should be friendly and conversational. Avoid academic or formal language. Use
-contractions. Keep sentences short. Never introduce a technical term without immediately
-explaining it in plain language. Do not use passive voice, numbered lists, or academic
-phrasing in the dialog.
+setting and should be friendly and conversational. Each segment should transition naturally
+from one to the next Avoid academic or formal language. Use contractions. Keep sentences
+short. Never introduce a technical term without immediately explaining it in plain language.
+Do not use passive voice, numbered lists, or academic phrasing in the dialog.
 
 The podcast should use examples from the provided resources, but also offer at least one
 alternative explanation drawn from everyday experiences familiar to teenagers: games,
 social media, smartphones, school life. By the end of the podcast, a listener should
-understand these objectives in at least 2 different ways. The podcast should be, at most,
-3 minutes long.
+understand the learning objectives in at least 2 different ways. The podcast should be,
+at most, 3 minutes long.
 
-The script should be returned in JSON format with the following requirements:
-1. The script should be organized into the following segments: an intro segment, a lesson
-overview segment, one segment per learning ojective, and a closing segment. These should be
-formatted as follows:
-{'intro': [dialog], 'lesson_overview': [dialog], learning_objective_id: [dialog], 'closing': [dialog]}
-2. Dialog in each segment should be a list of objects with the following format:
-{'voice': the name of the character speaking (Dan or Sam), 'text': The lines spoken by the character}
+The script should be returned in JSON format as a list of dialog objects with the following format:
+{'voice_id': the name of the character speaking (Dan or Sam), 'text': The lines spoken by the character}
 
 "
 
