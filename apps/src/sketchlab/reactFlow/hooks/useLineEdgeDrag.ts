@@ -70,8 +70,8 @@ export function useLineEdgeDrag({
         return;
       }
 
-      // On detach, create fresh anchors at any attached endpoint,
-      // splice them into the edge, and add them to the dragging set.
+      // On detach, create fresh anchors at any attached endpoint
+      // and add them to the dragging set.
       if (!dragState.hasMoved && dragState.pendingDetaches.length > 0) {
         const newAnchors: SketchlabReactFlowNode[] = [];
         const edgePatch: Partial<SketchlabReactFlowEdge> = {};

@@ -332,9 +332,7 @@ export function useKeyboardNavigation({
 
   // Move a single line-anchor by delta. If the post-move handle position
   // lands within snap range of a real node's handle, attach the edge to
-  // that handle directly instead of translating; the now-unreferenced
-  // anchor is cleaned up by the prune effect. Returns false if the node
-  // isn't a lineAnchor, has no associated edge, or no snap fired.
+  // that handle directly instead of translating. Returns false if snap didn't occur.
   const snapAnchorIfNearHandle = useCallback(
     (anchorId: string, deltaX: number, deltaY: number): boolean => {
       const anchorNode = getNode(anchorId);
@@ -396,8 +394,7 @@ export function useKeyboardNavigation({
   // and determine if it would snap onto a real node's handle. If so,
   // snap it there. Otherwise, move the existing anchor if it already has one,
   // or detach the previously-attached node and create a new anchor.
-  // Any orphaned anchor is cleaned up by the prune effect.
-  // Returns true when at least one mutation was applied.
+  // Returns true if at least one mutation was applied.
   const moveEdgeByDelta = useCallback(
     (edgeId: string, deltaX: number, deltaY: number): boolean => {
       const focusedEdge = getEdge(edgeId);
@@ -683,14 +680,14 @@ export function useKeyboardNavigation({
     ]
   );
 
-  // When DOM focus drifts off the edge (React Flow can knock the wrapper
-  // out of focus during a mutation), keydown events fire on `body` and
-  // never traverse the canvas div, so the `onKeyDownCapture` handler
-  // doesn't run. While we're tracking a recently-moved edge, listen at
-  // the window level so arrow keys still translate the same edge. The
+  // When DOM focus moves off the edge (which can occur during an edge mutation),
+  // keydown events fire on `body` and never traverse the canvas div,
+  // so the `onKeyDownCapture` handler doesn't run.
+  // While we're tracking a recently-moved edge, listen at
+  // the window level so arrow keys still move the same edge. The
   // canvas's `onKeyDownCapture` calls stopPropagation for events it
-  // handles, so this bubble-phase listener only fires for events whose
-  // path doesn't go through the canvas — exactly the recovery case.
+  // handles, so this listener only fires for events whose
+  // path doesn't go through the canvas.
   useEffect(() => {
     const handler = (nativeEvent: KeyboardEvent) => {
       const edgeId = keyboardMovingEdgeRef.current;
