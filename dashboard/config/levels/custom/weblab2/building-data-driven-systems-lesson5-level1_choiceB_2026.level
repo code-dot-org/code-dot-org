@@ -1,13 +1,45 @@
 <Weblab2>
   <config><![CDATA[{
+  "published": true,
   "game_id": 74,
   "created_at": "2026-05-01T23:02:46.000Z",
   "level_num": "custom",
   "user_id": 22366,
   "properties": {
-    "require_edit_to_continue": true
+    "require_edit_to_continue": "true",
+    "encrypted": "false",
+    "display_name": "Community Events",
+    "long_instructions": "## Generate Data\r\n\r\n### Do This:\r\n\r\n1. Look at the `event` object in the code.\r\n2. Highlight the object and prompt AI to generate an array of objects called `events`.\r\n3. Run the code and inspect the generated dataset.\r\n4. Look for patterns in the kinds of events and information that appear.\r\n",
+    "thumbnail_url": "https://images.code.org/3f3c213e0cbac76cd0817eb9639ca150-community.png",
+    "offer_browser_tts": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "false",
+    "widget_view": "false",
+    "initial_view_mode": "split",
+    "predict_settings": {
+      "isPredictLevel": false,
+      "solution": "",
+      "questionType": "freeResponse",
+      "placeholderText": "",
+      "multipleChoiceOptions": [
+        ""
+      ],
+      "freeResponseHeight": 50,
+      "codeEditableAfterSubmit": false
+    },
+    "ai_tutor_prompt_settings": {
+      "answerTypes": [
+        "documentation",
+        "buildJavaScript"
+      ],
+      "answerTypeCustomizations": {
+        "buildJavaScript": "```js\nconst events = [ ... ]\n```\n\nwith exactly 8 event objects.\n\n**Object shape (fields may be missing or incomplete):**\n\n```js\n{\n  title: \"Neighborhood Festival\",\n  type: \"Festival\",\n  location: \"Central Park\",\n  date: \"2026-06-12\",\n  status: \"Open\",\n  audience: \"All Ages\",\n  image: \"festival_event.png\",\n  description: \"A fun outdoor event with food, music, and games for the whole family.\"\n}\n```\n\n**Constraints (bias + ordering):**\n\n* ≥4 outdoor/community-style events (festivals, markets, cleanups)\n* Exactly 1 small indoor event (book club or workshop)\n* Most events should be `\"Open\"`\n* Similar event types appear first\n\n**Images (intentionally imperfect):**\nUse ONLY:\n`festival_event.png`, `farmers_market_event.png`, `concert_event.png`, `workshop_event.png`, `fitness_class_event.png`, `food_truck_event.png`, `art_show_event.png`, `community_cleanup_event.png`, `book_club_event.png`, `kids_activity_event.png`\n\n* Most objects should use valid image names from the list\n* At least **1 object should have a broken image** (e.g., wrong filename like `\"fest_event.png\"`)\n* At least **1 object should have a missing or null image field**\n* Do not use URLs\n\n**Uneven completeness (required):**\n\n* Some objects missing fields entirely\n* Some fields set to `null` or `\"Unknown\"`\n* Descriptions vary: 2–3 sentences, 1 sentence, or missing\n* Mix specific and vague values\n* Dataset should feel inconsistent, biased, and imperfect\n\n**Output:**\nOnly return `const events = [...]` with no extra text."
+      }
+    },
+    "bubble_choice_description": "Start with one event object, then use AI to generate a larger dataset that follows the same structure.",
+    "project_template_level_name": "template_building-data-driven-systems-lesson5-level1_choiceb_2026"
   },
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2026-05-01T23:02:46.170+00:00\",\"changed\":[\"cloned from \\\"building-data-driven-systems-lesson5-level1_choiceA_2026\\\"\"],\"cloned_from\":\"building-data-driven-systems-lesson5-level1_choiceA_2026\"}]"
+  "audit_log": "[{\"changed_at\":\"2026-05-01T23:02:46.170+00:00\",\"changed\":[\"cloned from \\\"building-data-driven-systems-lesson5-level1_choiceA_2026\\\"\"],\"cloned_from\":\"building-data-driven-systems-lesson5-level1_choiceA_2026\"},{\"changed_at\":\"2026-05-04 14:01:14 +0000\",\"changed\":[\"require_edit_to_continue\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-05-04 14:02:33 +0000\",\"changed\":[],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-05-04 14:02:59 +0000\",\"changed\":[],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-05-04 14:40:49 +0000\",\"changed\":[],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-05-04 23:27:51 +0000\",\"changed\":[\"ai_tutor_prompt_settings\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-05-04 23:31:54 +0000\",\"changed\":[\"ai_tutor_prompt_settings\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-05-04 23:37:18 +0000\",\"changed\":[\"ai_tutor_prompt_settings\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"}]"
 }]]></config>
 </Weblab2>

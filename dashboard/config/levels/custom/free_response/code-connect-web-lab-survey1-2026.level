@@ -7,7 +7,7 @@
   "user_id": 16889,
   "properties": {
     "encrypted": "false",
-    "long_instructions": "Question 1",
+    "long_instructions": "What did you enjoy most about building a web app?",
     "stay_on_level_after_submit": "false",
     "submittable": "false",
     "allow_multiple_attempts": "true",
@@ -17,7 +17,7 @@
     "skip_dialog": true,
     "skip_sound": true
   },
-  "audit_log": "[{\"changed_at\":\"2026-05-01T20:44:40.409+00:00\",\"changed\":[\"cloned from \\\"code-connect-sketch-lab-survey1-2026\\\"\"],\"cloned_from\":\"code-connect-sketch-lab-survey1-2026\"},{\"changed_at\":\"2026-05-01 20:44:43 +0000\",\"changed\":[],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2026-05-01T20:44:40.409+00:00\",\"changed\":[\"cloned from \\\"code-connect-sketch-lab-survey1-2026\\\"\"],\"cloned_from\":\"code-connect-sketch-lab-survey1-2026\"},{\"changed_at\":\"2026-05-01 20:44:43 +0000\",\"changed\":[],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-05-04 21:54:20 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
