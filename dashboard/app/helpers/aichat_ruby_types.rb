@@ -54,7 +54,7 @@ module AichatRubyTypes
 
     # Helper to determine if a value is this type. Needs to be implemented in derived classes.
     def value_is_type?(value)
-      AichatRubyTypes.raise_or_notify_type_error("not implmemented")
+      AichatRubyTypes.raise_or_notify_type_error("not implemented")
     end
 
     # Assert whether a value is this type.  Relies on `value_is_type?` helper.
