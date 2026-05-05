@@ -37,8 +37,7 @@ interface UseReconnectOptions {
 //     unused anchor.
 //
 // `isReconnecting` lets the caller relax connection validation while a
-// reconnect is in flight — line anchor to real node connections are blocked
-// for fresh connections.
+// reconnect is in flight.
 export function useReconnect({
   edges,
   setNodes,
