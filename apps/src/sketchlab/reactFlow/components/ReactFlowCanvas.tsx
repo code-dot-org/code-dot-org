@@ -34,6 +34,10 @@ import {
   type ToolbarTarget,
 } from '../context';
 import LineEdgeToolbar from '../elementToolbars/LineEdgeToolbar';
+import {
+  DEFAULT_LINE_WIDTH,
+  DEFAULT_STROKE_COLOR,
+} from '../elementToolbars/toolbarPalettes';
 import {useCopyPaste} from '../hooks/useCopyPaste';
 import {useFocusManagement} from '../hooks/useFocusManagement';
 import {useKeyboardNavigation} from '../hooks/useKeyboardNavigation';
@@ -630,11 +634,11 @@ export default function ReactFlowCanvas({
               defaultEdgeOptions={{
                 type: 'straight',
                 style: {
-                  stroke: 'var(--sketchlab-stroke-default)',
-                  strokeWidth: 1,
+                  stroke: DEFAULT_STROKE_COLOR,
+                  strokeWidth: DEFAULT_LINE_WIDTH,
                 },
               }}
-              defaultMarkerColor={'var(--sketchlab-stroke-default)'}
+              defaultMarkerColor={DEFAULT_STROKE_COLOR}
             >
               {openLineEdge && (
                 <LineEdgeToolbar
