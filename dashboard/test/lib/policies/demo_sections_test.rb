@@ -123,11 +123,16 @@ class Policies::DemoSectionsTest < ActiveSupport::TestCase
   end
 
   test 'preset_view returns nil when the unit cannot be resolved' do
+    Unit.expects(:get_from_cache).with('aif2-2025', raise_exceptions: false).returns(nil)
+
     assert_nil Policies::DemoSections.preset_view(:high)
   end
 
   test 'preset_view returns nil when the unit group cannot be resolved' do
-    create(:unit, name: 'aif2-2025')
+    Unit.stubs(:get_from_cache).with('aif2-2025', raise_exceptions: false).returns(
+      build_stubbed(:unit, name: 'aif2-2025')
+    )
+    UnitGroup.expects(:get_from_cache).with('artificial-intelligence-foundations-2025').returns(nil)
 
     assert_nil Policies::DemoSections.preset_view(:high)
   end
