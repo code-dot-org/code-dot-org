@@ -4020,24 +4020,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@code-dot-org/ml-activities@npm:0.1.3":
-  version: 0.1.3
-  resolution: "@code-dot-org/ml-activities@npm:0.1.3"
-  dependencies:
-    "@fortawesome/fontawesome-svg-core": "npm:^1.2.25"
-    "@fortawesome/free-solid-svg-icons": "npm:^5.11.2"
-    "@fortawesome/react-fontawesome": "npm:^0.1.7"
-    messageformat: "npm:2.3.0"
-    react-typist: "npm:^2.0.5"
-  peerDependencies:
-    lodash: ^4.17.5
-    radium: ^0.25.2
-    react: ~16.14.0
-    react-dom: ~16.14.0
-  checksum: 10/d99e38527011bc115e4e0ffcd27bcdd3e1f44fe3dfc521b2f20ddbd055438f1aecc8e93d7f06455fa055360b5644bc8a0b6bbcef91eeccea4856efe478f31e80
-  languageName: node
-  linkType: hard
-
 "@code-dot-org/ml-playground@npm:0.0.47":
   version: 0.0.47
   resolution: "@code-dot-org/ml-playground@npm:0.0.47"
@@ -4051,6 +4033,12 @@ __metadata:
   checksum: 10/79a3aa73f29c468422f2e08e232c6ec56480689987a6d6eb33d8b82de228bd7c3a788778a86a06ddd57202bdaf8e0d3c3868db3468457986d4e820f18f0c1f28
   languageName: node
   linkType: hard
+
+"@code-dot-org/oceans-lab@link:../frontend/packages/labs/oceans::locator=blockly-mooc%40workspace%3A.":
+  version: 0.0.0-use.local
+  resolution: "@code-dot-org/oceans-lab@link:../frontend/packages/labs/oceans::locator=blockly-mooc%40workspace%3A."
+  languageName: node
+  linkType: soft
 
 "@code-dot-org/p5.play@npm:1.3.21-cdo":
   version: 1.3.21-cdo
@@ -11383,8 +11371,8 @@ __metadata:
     "@code-dot-org/js-interpreter": "npm:1.3.13"
     "@code-dot-org/js-numbers": "npm:0.1.0-cdo.0"
     "@code-dot-org/maze": "npm:2.16.0"
-    "@code-dot-org/ml-activities": "npm:0.1.3"
     "@code-dot-org/ml-playground": "npm:0.0.47"
+    "@code-dot-org/oceans-lab": "link:../frontend/packages/labs/oceans"
     "@code-dot-org/p5.play": "npm:1.3.21-cdo"
     "@code-dot-org/piskel": "npm:0.13.0-cdo.13"
     "@code-dot-org/redactable-markdown": "npm:^0.10.0"
