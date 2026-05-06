@@ -107,12 +107,9 @@ export default function OceansContainer() {
         // Match the ocean-blue body background from the curriculum path
         // (body.oceans-blue { background-color: rgb(2, 0, 28) }).
         backgroundColor: 'rgb(2, 0, 28)',
-        // 10px gap above the canvas, matching the curriculum path layout.
-        paddingTop: '10px',
-        // Side inset so the canvas doesn't bleed to the viewport edge on
-        // narrow screens. None needed once the canvas is narrower than the
-        // viewport (i.e. wider than ~570px where 16:9 headroom appears).
-        px: {xs: 1, sm: 0},
+        // 10px gap above and on each side, matching the curriculum path
+        // layout where the #app shell has 10px horizontal padding.
+        padding: '10px',
       }}
     >
       {dims.containerWidth > 0 && (
