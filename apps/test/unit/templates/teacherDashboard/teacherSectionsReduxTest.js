@@ -584,6 +584,7 @@ describe('teacherSectionsRedux', () => {
         isAssignedSingleUnitCourse: undefined,
         courseId: undefined,
         createdAt: createdAt,
+        demoType: undefined,
         studentCount: 1,
         hidden: false,
         restrictSection: false,
@@ -949,6 +950,7 @@ describe('teacherSectionsRedux', () => {
           isAssignedSingleUnitCourse: undefined,
           courseId: undefined,
           createdAt: createdAt,
+          demoType: undefined,
           hidden: false,
           restrictSection: false,
           postMilestoneDisabled: false,
@@ -1245,6 +1247,14 @@ describe('teacherSectionsRedux', () => {
     it('sets student count', () => {
       const section = sectionFromServerSection(serverSection);
       assert.equal(section.studentCount, 10);
+    });
+
+    it('maps demo_type', () => {
+      const section = sectionFromServerSection({
+        ...serverSection,
+        demo_type: 'high',
+      });
+      assert.equal(section.demoType, 'high');
     });
   });
 

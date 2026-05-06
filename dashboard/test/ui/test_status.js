@@ -27,6 +27,7 @@ const STATUS_FAILED = "FAILED";
 const STATUS_SUCCEEDED = "SUCCEEDED";
 
 // Derived constants
+// Mirrors test_run_identifier in runner.rb: <browser>_<feature>[_eyes].
 const S3_KEY_SUFFIX = `${/eyes/i.test(TEST_TYPE) ? "_eyes" : ""}_output.html`;
 const API_BASEPATH = `${API_ORIGIN}/api/v1/test_logs`;
 

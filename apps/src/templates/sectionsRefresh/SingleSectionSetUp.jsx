@@ -12,6 +12,7 @@ import SectionAvatar from '@cdo/apps/templates/studioHomepages/teacherHomepageV2
 import {StudentGradeLevels} from '@cdo/generated-scripts/sharedConstants';
 import i18n from '@cdo/locale';
 
+import DemoChip from '../DemoChip';
 import SectionAvatarEditDialog from '../studioHomepages/teacherHomepageV2/sectionAvatars/SectionAvatarEditDialog';
 
 import moduleStyles from './sections-refresh.module.scss';
@@ -43,9 +44,12 @@ export default function SingleSectionSetUp({
   return (
     <div>
       <div className={moduleStyles.containerWithMarginTop}>
-        <Typography variant="h2" gutterBottom>
-          {i18n.classSection()}
-        </Typography>
+        <div className={moduleStyles.sectionHeader}>
+          <Typography variant="h2">
+            {i18n.classSection()}
+            {section.demoType && <DemoChip />}
+          </Typography>
+        </div>
         {isLoading ? (
           <>
             <div className={moduleStyles.typographyLabelTwo}>

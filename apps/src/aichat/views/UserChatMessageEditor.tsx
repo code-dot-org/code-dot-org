@@ -80,7 +80,10 @@ const UserChatMessageEditor: React.FunctionComponent<
     isViewingAiTutorVersionFileUpdates
   );
 
-  const saveInProgress = useAppSelector(state => state.aichat.saveInProgress);
+  // TODO: Remove dependency on aichatLab redux slice.
+  const saveInProgress = useAppSelector(
+    state => state.aichatLab.saveInProgress
+  );
   const chatAssets = useAppSelector(state =>
     state.aichat.stagedFiles.map(file => file.asset)
   );

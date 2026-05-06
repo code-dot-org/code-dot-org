@@ -116,6 +116,7 @@ def device_farm_mobile_browser(http_client: nil)
       device_arns: $device_farm_browser_config['device_arns']
     )
     $device_farm_mobile_session_arn = session[:session_arn]
+    $device_farm_mobile_device = session[:device]
 
     capabilities = Selenium::WebDriver::Remote::Capabilities.new(
       $device_farm_browser_config.except(*Cdo::AWS::DeviceFarm::INTERNAL_KEYS)
@@ -197,6 +198,10 @@ def get_device_farm_browser
       Cdo::AWS::DeviceFarm.desktop_session_url(browser.session_id)
     end
   puts "visual log on device farm: <a href='#{console_url}'>#{console_url}</a>" if console_url
+  if is_mobile && $device_farm_mobile_device
+    d = $device_farm_mobile_device
+    puts "mobile device on device farm: #{d.name} (#{d.platform} #{d.os}) #{d.arn}"
+  end
   browser
 end
 

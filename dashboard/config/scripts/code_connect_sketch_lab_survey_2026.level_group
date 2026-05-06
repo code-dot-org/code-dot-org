@@ -6,6 +6,8 @@ activity_guide_level 'true'
 
 page
 level 'code-connect-sketch-lab-multi-survey-2026'
-level 'code-connect-sketch-lab-multi2-survey-2026'
 level 'code-connect-sketch-lab-survey1-2026'
+level 'code-connect-sketch-lab-multi2-survey-2026'
 level 'code-connect-sketch-lab-survey2-2026'
+level 'code-connect-sketch-lab-multi3-survey-2026'
+level 'code-connect-sketch-lab-survey3-2026'

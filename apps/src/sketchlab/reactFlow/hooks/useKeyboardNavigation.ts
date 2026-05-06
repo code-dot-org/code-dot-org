@@ -97,6 +97,13 @@ interface UseKeyboardNavigationOptions {
   ) => void;
   readOnly: boolean;
   openToolbar: (entry: TabOrderEntry, options?: {trapFocus?: boolean}) => void;
+  copyEntry: (entry: TabOrderEntry) => void;
+  cutEntry: (entry: TabOrderEntry) => void;
+  paste: () => void;
+  // Fallback for Ctrl/Cmd shortcuts: DOM focus may be inside a NodeToolbar
+  // (which renders outside .react-flow__node), so getEntryFromDOM returns
+  // null. lastFocusedEntry gives us the last known node/edge target.
+  lastFocusedEntry: TabOrderEntry | null;
 }
 
 /**
@@ -135,6 +142,10 @@ export function useKeyboardNavigation({
   setEdges,
   readOnly,
   openToolbar,
+  copyEntry,
+  cutEntry,
+  paste,
+  lastFocusedEntry,
 }: UseKeyboardNavigationOptions) {
   const {getEdge, getNode} = useReactFlow<
     SketchlabReactFlowNode,
@@ -197,6 +208,46 @@ export function useKeyboardNavigation({
       return true;
     },
     [connectingFrom, cancelConnect]
+  );
+
+  const handleCopy = useCallback(
+    (keyContext: KeyContext): boolean => {
+      const {event, focusedEntry} = keyContext;
+      if (event.key !== 'c' || !(event.ctrlKey || event.metaKey)) return false;
+      const entry = focusedEntry ?? lastFocusedEntry;
+      if (!entry) return false;
+      copyEntry(entry);
+      event.preventDefault();
+      event.stopPropagation();
+      return true;
+    },
+    [copyEntry, lastFocusedEntry]
+  );
+
+  const handleCut = useCallback(
+    (keyContext: KeyContext): boolean => {
+      const {event, focusedEntry} = keyContext;
+      if (event.key !== 'x' || !(event.ctrlKey || event.metaKey)) return false;
+      const entry = focusedEntry ?? lastFocusedEntry;
+      if (!entry) return false;
+      cutEntry(entry);
+      event.preventDefault();
+      event.stopPropagation();
+      return true;
+    },
+    [cutEntry, lastFocusedEntry]
+  );
+
+  const handlePaste = useCallback(
+    (keyContext: KeyContext): boolean => {
+      const {event} = keyContext;
+      if (event.key !== 'v' || !(event.ctrlKey || event.metaKey)) return false;
+      paste();
+      event.preventDefault();
+      event.stopPropagation();
+      return true;
+    },
+    [paste]
   );
 
   const handleOpenToolbar = useCallback(
@@ -379,14 +430,24 @@ export function useKeyboardNavigation({
       // Everything below mutates the canvas and requires edit access.
       if (readOnly) return;
 
+      if (handleCopy(keyContext)) return;
+      if (handleCut(keyContext)) return;
+      if (handlePaste(keyContext)) return;
+
       if (handleOpenToolbar(keyContext)) return;
       if (handleConnectToggle(keyContext)) return;
       if (handleConnectComplete(keyContext)) return;
 
-      // All further interactions require an unlocked node, if a node is focused.
+      // All further interactions require an unlocked element, if an element is focused.
       if (
         keyContext.focusedNodeId &&
         getNode(keyContext.focusedNodeId)?.data?.locked
+      ) {
+        return;
+      }
+      if (
+        keyContext.focusedEdgeId &&
+        getEdge(keyContext.focusedEdgeId)?.data?.locked
       ) {
         return;
       }
@@ -398,9 +459,13 @@ export function useKeyboardNavigation({
     },
     [
       readOnly,
+      getEdge,
       getNode,
       handleTabNavigation,
       handleEscapeCancelConnect,
+      handleCopy,
+      handleCut,
+      handlePaste,
       handleOpenToolbar,
       handleConnectToggle,
       handleConnectComplete,

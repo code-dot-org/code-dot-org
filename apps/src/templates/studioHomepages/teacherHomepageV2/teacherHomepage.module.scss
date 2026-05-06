@@ -117,6 +117,27 @@
   display: flex;
   align-items: center;
   gap: 8px;
+  min-width: 0;
+
+  h5 {
+    min-width: 0;
+  }
+}
+
+.sectionCardTitle {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.sectionCardTitleText {
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.sectionCardDemoChip {
+  margin-left: 0;
 }
 
 .sectionCardHeaderRight {
