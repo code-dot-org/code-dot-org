@@ -1,4 +1,5 @@
 @import 'shepherd.js/dist/css/shepherd.css';
+@import 'color.scss';
 
 .tour-step-highlight {
   outline: 2px solid orange !important;
@@ -165,7 +166,7 @@
 .custom-shepherd-onboarding-container {
   @extend %shepherd-step-container-base;
 
-  background-color: rgb(41 47 54);
+  background-color: $light_black;
   color: #fff;
 
   // Lay out the content as a flex row so the sparkle+text and the X button
