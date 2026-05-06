@@ -42,6 +42,7 @@ class P5LabView extends React.Component {
     hidePauseButton: PropTypes.bool.isRequired,
     onPromptAnswer: PropTypes.func,
     labType: PropTypes.oneOf(Object.keys(P5LabType)).isRequired,
+    autogenerateML: PropTypes.func,
 
     // Provided by Redux
     interfaceMode: PropTypes.oneOf([
@@ -189,7 +190,10 @@ class P5LabView extends React.Component {
         )}
         <VisualizationResizeBar />
         <InstructionsWithWorkspace>
-          <CodeWorkspace withSettingsCog={!this.props.isBlockly} />
+          <CodeWorkspace
+            withSettingsCog
+            autogenerateML={this.props.autogenerateML}
+          />
           <ModalFunctionEditor />
         </InstructionsWithWorkspace>
       </div>

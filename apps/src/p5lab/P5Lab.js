@@ -10,6 +10,7 @@ import {
   outputError,
   injectErrorHandler,
 } from '@cdo/apps/lib/util/javascriptMode';
+import {preloadModel} from '@cdo/apps/lib/util/mlApi';
 import {createReactRoot} from '@cdo/apps/util/createReactRoot';
 import experiments from '@cdo/apps/util/experiments';
 
@@ -461,7 +462,24 @@ export default class P5Lab {
       isSubmitted: !!config.level.submitted,
       librariesEnabled: !!config.level.librariesEnabled,
       validationEnabled: !!config.level.validationEnabled,
+      // P5 labs rely on the SettingsCog → "Manage AI Models" menu for
+      // per-project model import, so the menu is always available.
+      // level.aiEnabled remains the levelbuilder switch for autogen UX
+      // (App Lab) and pre-populates the dialog with the level-configured
+      // model when set.
+      aiEnabled: true,
+      aiModelId: config.level.aiModelId,
+      aiModelName: config.level.aiModelName,
     });
+
+    // If a model has been imported into this project, warm the cache so the
+    // first prediction at run time fires synchronously.
+    const importedModel = config.level.aiModel;
+    if (importedModel?.id) {
+      preloadModel(importedModel.id).catch(() => {
+        // Cache stays cold; getPrediction will fall back to its async path.
+      });
+    }
 
     // Push project-sourced animation metadata into store. Always use the
     // animations specified by the level definition for embed and contained
@@ -507,6 +525,7 @@ export default class P5Lab {
               hidePauseButton={!!this.level.hidePauseButton}
               onPromptAnswer={this.onPromptAnswer?.bind(this)}
               labType={this.getLabType()}
+              autogenerateML={this.autogenerateML.bind(this)}
             />
           </Provider>,
           document.getElementById(config.containerId),
@@ -1182,10 +1201,26 @@ export default class P5Lab {
    *         loading the game.
    */
   onP5Preload() {
-    this.preloadLabAssets()
+    Promise.all([this.preloadLabAssets(), this.preloadImportedModel_()])
       .then(() => this.runPreloadEventHandler_())
       .then(() => this.p5Wrapper.notifyPreloadPhaseComplete());
     return false;
+  }
+
+  /**
+   * If the project has an imported AI Lab model, await its fetch so the
+   * sync predict block returns a result instead of 'Error: model not
+   * loaded' on the very first call. Failure is soft — getPrediction will
+   * surface its own error string at runtime.
+   */
+  preloadImportedModel_() {
+    const model = project.getAiModel?.();
+    if (!model?.id) {
+      return Promise.resolve();
+    }
+    return preloadModel(model.id).catch(() => {
+      // Cache stays cold; getPrediction will return an error string.
+    });
   }
 
   loadValidationCodeIfNeeded_() {
@@ -1469,6 +1504,23 @@ export default class P5Lab {
       retVal = gamelabCommands[name](opts);
     }
     return retVal;
+  }
+
+  /**
+   * Wired into the SettingsCog's "Manage AI Models" → Import flow. Unlike
+   * App Lab's autogenerateML, P5 labs don't have a design surface to drop
+   * UI widgets onto, so we just preload the trained model and persist a
+   * pointer to it on the project source. Subsequent predictions hit the
+   * warm cache and fire their callback synchronously.
+   */
+  async autogenerateML(modelId) {
+    // preloadModel rejects on fetch failure; let that bubble up so the
+    // dialog's import button surfaces the error.
+    const modelData = await preloadModel(modelId);
+    await project.saveAiModel({
+      id: modelId,
+      name: modelData?.name,
+    });
   }
 
   /**

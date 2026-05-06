@@ -127,6 +127,7 @@ var currentSources = {
   animations: null,
   selectedSong: null,
   selectedPoem: null,
+  aiModel: null,
   inRestrictedShareMode: false,
   teacherHasConfirmedUploadWarning: false,
 };
@@ -153,6 +154,7 @@ function unpackSources(data) {
     makerAPIsEnabled: data.makerAPIsEnabled,
     selectedSong: data.selectedSong,
     selectedPoem: data.selectedPoem,
+    aiModel: data.aiModel,
     libraries: data.libraries,
     inRestrictedShareMode: data.inRestrictedShareMode,
     teacherHasConfirmedUploadWarning: data.teacherHasConfirmedUploadWarning,
@@ -683,6 +685,10 @@ var projects = (module.exports = {
 
       if (currentSources.selectedPoem) {
         sourceHandler.setSelectedPoem(currentSources.selectedPoem);
+      }
+
+      if (currentSources.aiModel) {
+        sourceHandler.setAiModel(currentSources.aiModel);
       }
 
       if (currentSources.animations) {
@@ -1247,6 +1253,17 @@ var projects = (module.exports = {
     return this.save();
   },
 
+  // Set the project's imported AI Lab model and persist immediately. Pass
+  // null to clear. The model object is {id, name}.
+  saveAiModel(model) {
+    this.sourceHandler.setAiModel(model);
+    return this.save();
+  },
+
+  getAiModel() {
+    return currentSources.aiModel;
+  },
+
   setInRestrictedShareMode(inRestrictedShareMode) {
     this.sourceHandler.setInRestrictedShareMode(inRestrictedShareMode);
     return this.save();
@@ -1342,6 +1359,9 @@ var projects = (module.exports = {
           const makerAPIsEnabled = this.sourceHandler.getMakerAPIsEnabled();
           const selectedSong = this.sourceHandler.getSelectedSong();
           const selectedPoem = this.sourceHandler.getSelectedPoem();
+          const aiModel = this.sourceHandler.getAiModel
+            ? this.sourceHandler.getAiModel()
+            : null;
           const libraries = this.sourceHandler.getLibrariesList();
           const inRestrictedShareMode =
             this.sourceHandler.inRestrictedShareMode();
@@ -1354,6 +1374,7 @@ var projects = (module.exports = {
             makerAPIsEnabled,
             selectedSong,
             selectedPoem,
+            aiModel,
             libraries,
             inRestrictedShareMode,
             teacherHasConfirmedUploadWarning,

@@ -27,3 +27,26 @@ export const setKeyValue = function (key, value, onSuccess, onError) {
     onError,
   });
 };
+
+// Run a prediction against a trained AI Lab model. Two call shapes:
+//   getPrediction(modelName, modelId, testValues, callback)
+//   getPrediction(testValues, callback)              -- uses imported model
+export const getPrediction = function (
+  modelName,
+  modelId,
+  testValues,
+  callback
+) {
+  if (typeof modelName === 'object' && typeof modelId === 'function') {
+    callback = modelId;
+    testValues = modelName;
+    modelName = undefined;
+    modelId = undefined;
+  }
+  return GameLab.executeCmd(null, 'getPrediction', {
+    modelName,
+    modelId,
+    testValues,
+    callback,
+  });
+};

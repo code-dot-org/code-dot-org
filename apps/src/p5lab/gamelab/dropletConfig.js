@@ -1935,6 +1935,13 @@ draw() - USEFUL?
   {func: 'getUserId', parent: api, category: 'World', noAutocomplete: true},
   {func: 'getKeyValue', parent: api, category: 'World', noAutocomplete: true},
   {func: 'setKeyValue', parent: api, category: 'World', noAutocomplete: true},
+  {
+    func: 'getPrediction',
+    parent: api,
+    category: 'Data',
+    paletteParams: ['data', 'callback'],
+    params: ['data', 'function (value) {\n \n}'],
+  },
 
   // Advanced
 ];

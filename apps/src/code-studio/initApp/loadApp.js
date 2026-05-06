@@ -489,6 +489,12 @@ const sourceHandler = {
   getSelectedPoem() {
     return getAppOptions().level.selectedPoem;
   },
+  setAiModel(model) {
+    getAppOptions().level.aiModel = model;
+  },
+  getAiModel() {
+    return getAppOptions().level.aiModel;
+  },
   setInitialLevelHtml(levelHtml) {
     getAppOptions().level.levelHtml = levelHtml;
   },

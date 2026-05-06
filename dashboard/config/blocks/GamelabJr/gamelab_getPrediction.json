@@ -1,0 +1,15 @@
+{
+  "category": "World",
+  "config": {
+    "func": "getPrediction",
+    "blockText": "predict with inputs {INPUTS}",
+    "returnType": "None",
+    "args": [
+      {
+        "name": "INPUTS",
+        "type": "String"
+      }
+    ],
+    "style": "default"
+  }
+}

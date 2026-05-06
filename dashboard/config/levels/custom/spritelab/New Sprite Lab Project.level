@@ -169,6 +169,13 @@
               </shadow>
             </value>
           </block>
+          <block type="gamelab_getPrediction" id="aiPredict_blk_~1Z9q^.0">
+            <value name="INPUTS">
+              <shadow type="text" id="aiPredict_txt_in_~1Z9q">
+                <field name="TEXT"/>
+              </shadow>
+            </value>
+          </block>
           <block type="gamelab_resetTimer" id="|%Y,FE[[3^za_pLwl+}r"/>
           <block type="gamelab_getTime" id="u?_!Y0dpbOmRn@DXQEIb">
             <field name="UNIT">"seconds"</field>

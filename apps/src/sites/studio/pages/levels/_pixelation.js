@@ -460,6 +460,10 @@ function initProjects() {
       getSelectedPoem: function () {
         return false;
       },
+      setAiModel: function () {},
+      getAiModel: function () {
+        return null;
+      },
       setInitialLevelHtml: function (levelHtml) {},
       getLevelHtml: function () {
         return '';

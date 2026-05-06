@@ -1,5 +1,6 @@
 /** @file Non-p5 GameLab commands */
 import {commands as audioCommands} from '@cdo/apps/lib/util/audioApi';
+import {commands as mlCommands} from '@cdo/apps/lib/util/mlApi';
 import {commands as timeoutCommands} from '@cdo/apps/lib/util/timeoutApi';
 import {rateLimit} from '@cdo/apps/storage/rateLimit';
 import {singleton as studioApp} from '@cdo/apps/StudioApp';
@@ -65,3 +66,4 @@ gamelabCommands.handleSetKeyValue = function (opts) {
 // Include playSound, stopSound, etc.
 Object.assign(gamelabCommands, audioCommands);
 Object.assign(gamelabCommands, timeoutCommands);
+Object.assign(gamelabCommands, mlCommands);

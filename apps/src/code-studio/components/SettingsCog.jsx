@@ -32,11 +32,25 @@ export class SettingsCog extends Component {
     confirmingEnableMaker: false,
     managingLibraries: false,
     managingModels: false,
+    importedModel: project.getAiModel?.() || null,
   };
 
-  open = () => this.setState({open: true});
+  // Re-read the imported model from the project source — it can change when
+  // the dialog imports a new one or after autosave.
+  refreshImportedModel = () =>
+    this.setState({importedModel: project.getAiModel?.() || null});
+
+  open = () => {
+    this.refreshImportedModel();
+    this.setState({open: true});
+  };
   close = () => this.setState({open: false});
-  toggleOpen = () => this.setState({open: !this.state.open});
+  toggleOpen = () => {
+    if (!this.state.open) {
+      this.refreshImportedModel();
+    }
+    this.setState({open: !this.state.open});
+  };
 
   manageAssets = () => {
     this.close();
@@ -73,7 +87,10 @@ export class SettingsCog extends Component {
   showConfirmation = () => this.setState({confirmingEnableMaker: true});
   hideConfirmation = () => this.setState({confirmingEnableMaker: false});
   closeLibraryManager = () => this.setState({managingLibraries: false});
-  closeModelManager = () => this.setState({managingModels: false});
+  closeModelManager = () => {
+    this.refreshImportedModel();
+    this.setState({managingModels: false});
+  };
   handleClickOutside = () => this.close();
 
   getPageConstants() {
@@ -127,7 +144,12 @@ export class SettingsCog extends Component {
             {this.areLibrariesEnabled() &&
               renderMenuItem(this.manageLibraries, msg.manageLibraries())}
             {this.areAIToolsEnabled() &&
-              renderMenuItem(this.manageModels, msg.manageAIModels())}
+              renderMenuItem(
+                this.manageModels,
+                this.state.importedModel?.name
+                  ? `${msg.manageAIModels()} (${this.state.importedModel.name})`
+                  : msg.manageAIModels()
+              )}
             {this.props.showMakerToggle &&
               !this.isCurriculumLevel() &&
               renderMakerButton(this.toggleMakerToolkit)}
