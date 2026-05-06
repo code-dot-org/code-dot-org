@@ -535,7 +535,7 @@ class Pd::Workshop < ApplicationRecord
   def self.send_reminder_for_upcoming_in_days(days)
     # Collect errors, but do not stop batch. Rethrow all errors below.
     errors = []
-    scheduled_start_in_days(days).includes(:facilitators, :regional_partner, :organizer, enrollments: :user).each do |workshop|
+    scheduled_start_in_days(days).each do |workshop|
       next if workshop.suppress_reminders?
 
       # Send reminder email to workshop enrollees
