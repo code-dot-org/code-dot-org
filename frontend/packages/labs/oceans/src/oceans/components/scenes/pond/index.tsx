@@ -77,7 +77,7 @@ const UnwrappedPond = class Pond extends Component {
       nextFishSet.length > 0 &&
       !(nextFishSet as {getXY(): unknown}[])[0].getXY()
     ) {
-      arrangeFish(nextFishSet);
+      arrangeFish(nextFishSet as Parameters<typeof arrangeFish>[0]);
     }
 
     if (currentFishSet.length === 0) {

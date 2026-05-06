@@ -1,30 +1,32 @@
 import {AppMode, Modes} from '../constants';
-const turtleImage = new URL(
-  '../../assets/images/turtle-large.png',
-  import.meta.url,
-).href;
+import I18n from '../i18n';
+import type {State} from '../state';
+
+import type {GuideEntry} from './guideTypes';
+
 const seahorseImage = new URL(
   '../../assets/images/seahorse-large.png',
   import.meta.url,
 ).href;
-const trashBottleImage = new URL(
-  '../../assets/images/bottle-large.png',
-  import.meta.url,
-).href;
-const trashCanImage = new URL(
-  '../../assets/images/can-large.png',
-  import.meta.url,
-).href;
-import I18n from '../i18n';
 
-const imageStyleOverrides = {
+const imageStyleOverrides: Record<string, Record<string, string>> = {
   turtle: {bottom: '1%', left: '6%'},
   seahorse: {bottom: '2%', left: '14%'},
   bottle: {bottom: '1%', left: '20%'},
   can: {bottom: '2%', left: '16%'},
 };
 
-const guidesHoc = [
+/** Training counts at which "please continue" nudge guides are shown for FishLong. */
+const encourageStopTrainingCountsFishLong = [150, 200, 250];
+
+/** Training counts at which "please continue" nudge guides are shown for all other modes. */
+const encourageStopTrainingCountsDefault = [
+  100,
+  ...encourageStopTrainingCountsFishLong,
+];
+
+/** Full guide sequence for the K–5 experience. */
+const guidesK5: GuideEntry[] = [
   {
     id: 'fishvtrash-training-init1',
     textFn: () => {
@@ -55,51 +57,12 @@ const guidesHoc = [
     arrow: 'LowerCenter',
   },
   {
-    id: 'fishvtrash-training-pause1',
-    textFn: () => I18n.t('fishvtrash-training-pause1'),
-    when: {
-      appMode: AppMode.FishVTrash,
-      currentMode: Modes.Training,
-      fn: state => {
-        return state.yesCount + state.noCount >= 5;
-      },
-    },
-    style: 'Info',
-    image: trashBottleImage,
-    imageStyle: imageStyleOverrides.bottle,
-  },
-  {
     id: 'fishvtrash-training-pause2',
     textFn: () => I18n.t('fishvtrash-training-pause2'),
     when: {
       appMode: AppMode.FishVTrash,
       currentMode: Modes.Training,
-      fn: state => {
-        return state.yesCount + state.noCount >= 5;
-      },
-    },
-  },
-  {
-    id: 'fishvtrash-training-pause3',
-    textFn: () => I18n.t('fishvtrash-training-pause3'),
-    when: {
-      appMode: AppMode.FishVTrash,
-      currentMode: Modes.Training,
-      fn: state => {
-        return state.yesCount + state.noCount >= 15;
-      },
-    },
-    style: 'Info',
-    image: trashCanImage,
-    imageStyle: imageStyleOverrides.can,
-  },
-  {
-    id: 'fishvtrash-training-pause4',
-    textFn: () => I18n.t('fishvtrash-training-pause4'),
-    when: {
-      appMode: AppMode.FishVTrash,
-      currentMode: Modes.Training,
-      fn: state => {
+      fn: (state: State) => {
         return state.yesCount + state.noCount >= 15;
       },
     },
@@ -110,11 +73,24 @@ const guidesHoc = [
     when: {
       appMode: AppMode.FishVTrash,
       currentMode: Modes.Training,
-      fn: state => {
-        return state.yesCount + state.noCount >= 30;
+      fn: (state: State) => {
+        return state.yesCount + state.noCount >= 50;
       },
     },
   },
+  ...encourageStopTrainingCountsDefault.map((count): GuideEntry => {
+    return {
+      id: `fishvtrash-training-generic-please-continue-count-${count}`,
+      textFn: () => I18n.t('training-generic-please-continue'),
+      when: {
+        appMode: AppMode.FishVTrash,
+        currentMode: Modes.Training,
+        fn: (state: State) => {
+          return state.yesCount + state.noCount >= count;
+        },
+      },
+    };
+  }),
   {
     id: 'fishvtrash-predicting-init1',
     textFn: () => I18n.t('fishvtrash-predicting-init1'),
@@ -138,8 +114,8 @@ const guidesHoc = [
     when: {
       appMode: AppMode.FishVTrash,
       currentMode: Modes.Pond,
-      fn: state => {
-        return state.fishData && state.totalPondFish !== null;
+      fn: (state: State) => {
+        return !!(state.fishData && state.totalPondFish !== null);
       },
     },
   },
@@ -149,8 +125,8 @@ const guidesHoc = [
     when: {
       appMode: AppMode.FishVTrash,
       currentMode: Modes.Pond,
-      fn: state => {
-        return state.fishData && state.totalPondFish !== null;
+      fn: (state: State) => {
+        return !!(state.fishData && state.totalPondFish !== null);
       },
     },
     arrow: 'UpperRight',
@@ -161,8 +137,8 @@ const guidesHoc = [
     when: {
       appMode: AppMode.FishVTrash,
       currentMode: Modes.Pond,
-      fn: state => {
-        return state.fishData && state.totalPondFish !== null;
+      fn: (state: State) => {
+        return !!(state.fishData && state.totalPondFish !== null);
       },
     },
     arrow: 'LowerLeft',
@@ -173,8 +149,8 @@ const guidesHoc = [
     when: {
       appMode: AppMode.FishVTrash,
       currentMode: Modes.Pond,
-      fn: state => {
-        return state.fishData && state.totalPondFish !== null;
+      fn: (state: State) => {
+        return !!(state.fishData && state.totalPondFish !== null);
       },
     },
     arrow: 'LowerRight',
@@ -182,7 +158,10 @@ const guidesHoc = [
   {
     id: 'creaturesvtrashdemo-predicting-init1',
     textFn: () => I18n.t('creaturesvtrashdemo-predicting-init1'),
-    when: {appMode: AppMode.CreaturesVTrashDemo, currentMode: Modes.Predicting},
+    when: {
+      appMode: AppMode.CreaturesVTrashDemo,
+      currentMode: Modes.Predicting,
+    },
   },
   {
     id: 'creaturesvtrashdemo-predicting-init2',
@@ -250,8 +229,8 @@ const guidesHoc = [
     when: {
       appMode: AppMode.CreaturesVTrash,
       currentMode: Modes.Training,
-      fn: state => {
-        return state.yesCount + state.noCount >= 5;
+      fn: (state: State) => {
+        return state.yesCount + state.noCount >= 15;
       },
     },
     style: 'Info',
@@ -264,32 +243,7 @@ const guidesHoc = [
     when: {
       appMode: AppMode.CreaturesVTrash,
       currentMode: Modes.Training,
-      fn: state => {
-        return state.yesCount + state.noCount >= 5;
-      },
-    },
-  },
-  {
-    id: 'creaturesvtrash-training-init4',
-    textFn: () => I18n.t('creaturesvtrash-training-init4'),
-    when: {
-      appMode: AppMode.CreaturesVTrash,
-      currentMode: Modes.Training,
-      fn: state => {
-        return state.yesCount + state.noCount >= 15;
-      },
-    },
-    style: 'Info',
-    image: turtleImage,
-    imageStyle: imageStyleOverrides.turtle,
-  },
-  {
-    id: 'creaturesvtrash-training-init5',
-    textFn: () => I18n.t('creaturesvtrash-training-init5'),
-    when: {
-      appMode: AppMode.CreaturesVTrash,
-      currentMode: Modes.Training,
-      fn: state => {
+      fn: (state: State) => {
         return state.yesCount + state.noCount >= 15;
       },
     },
@@ -300,11 +254,24 @@ const guidesHoc = [
     when: {
       appMode: AppMode.CreaturesVTrash,
       currentMode: Modes.Training,
-      fn: state => {
-        return state.yesCount + state.noCount >= 30;
+      fn: (state: State) => {
+        return state.yesCount + state.noCount >= 50;
       },
     },
   },
+  ...encourageStopTrainingCountsDefault.map((count): GuideEntry => {
+    return {
+      id: `creaturesvtrash-training-generic-please-continue-count-${count}`,
+      textFn: () => I18n.t('training-generic-please-continue'),
+      when: {
+        appMode: AppMode.CreaturesVTrash,
+        currentMode: Modes.Training,
+        fn: (state: State) => {
+          return state.yesCount + state.noCount >= count;
+        },
+      },
+    };
+  }),
   {
     id: 'creaturesvtrash-predicting-init1',
     textFn: () => I18n.t('creaturesvtrash-predicting-init1'),
@@ -316,8 +283,8 @@ const guidesHoc = [
     when: {
       appMode: AppMode.CreaturesVTrash,
       currentMode: Modes.Pond,
-      fn: state => {
-        return state.fishData && state.totalPondFish !== null;
+      fn: (state: State) => {
+        return !!(state.fishData && state.totalPondFish !== null);
       },
     },
   },
@@ -337,7 +304,7 @@ const guidesHoc = [
     when: {
       appMode: AppMode.FishShort,
       currentMode: Modes.Training,
-      fn: state => {
+      fn: (state: State) => {
         return state.yesCount + state.noCount >= 10;
       },
     },
@@ -348,39 +315,39 @@ const guidesHoc = [
     when: {
       appMode: AppMode.FishShort,
       currentMode: Modes.Training,
-      fn: state => {
+      fn: (state: State) => {
         return state.yesCount + state.noCount >= 30;
       },
     },
   },
   {
     id: 'fishshort-predicting-init1',
-    textFn: state =>
+    textFn: (state?: State) =>
       I18n.t('fishshort-predicting-init1', {
-        word: state.word.toLowerCase(),
+        word: state?.word?.toLowerCase(),
       }),
     when: {appMode: AppMode.FishShort, currentMode: Modes.Predicting},
   },
   {
     id: 'fishshort-predicting-init2',
-    textFn: state =>
+    textFn: (state?: State) =>
       I18n.t('fishshort-predicting-init2', {
-        word: state.word.toLowerCase(),
+        word: state?.word?.toLowerCase(),
       }),
     when: {appMode: AppMode.FishShort, currentMode: Modes.Predicting},
   },
   {
     id: 'fishshort-pond-init1',
-    textFn: state =>
+    textFn: (state?: State) =>
       I18n.t('fishshort-pond-init1', {
-        n: state.fishData.length,
-        word: state.word.toLowerCase(),
+        n: state?.fishData.length,
+        word: state?.word?.toLowerCase(),
       }),
     when: {
       appMode: AppMode.FishShort,
       currentMode: Modes.Pond,
-      fn: state => {
-        return state.fishData && state.totalPondFish !== null;
+      fn: (state: State) => {
+        return !!(state.fishData && state.totalPondFish !== null);
       },
     },
   },
@@ -390,8 +357,8 @@ const guidesHoc = [
     when: {
       appMode: AppMode.FishShort,
       currentMode: Modes.Pond,
-      fn: state => {
-        return state.fishData && state.totalPondFish !== null;
+      fn: (state: State) => {
+        return !!(state.fishData && state.totalPondFish !== null);
       },
     },
     arrow: 'UpperFarRight',
@@ -412,7 +379,7 @@ const guidesHoc = [
     when: {
       appMode: AppMode.FishLong,
       currentMode: Modes.Training,
-      fn: state => {
+      fn: (state: State) => {
         return state.yesCount + state.noCount > 5;
       },
     },
@@ -423,7 +390,7 @@ const guidesHoc = [
     when: {
       appMode: AppMode.FishLong,
       currentMode: Modes.Training,
-      fn: state => {
+      fn: (state: State) => {
         return state.yesCount + state.noCount >= 30;
       },
     },
@@ -434,7 +401,7 @@ const guidesHoc = [
     when: {
       appMode: AppMode.FishLong,
       currentMode: Modes.Training,
-      fn: state => {
+      fn: (state: State) => {
         return state.yesCount + state.noCount >= 50;
       },
     },
@@ -445,50 +412,63 @@ const guidesHoc = [
     when: {
       appMode: AppMode.FishLong,
       currentMode: Modes.Training,
-      fn: state => {
+      fn: (state: State) => {
         return state.yesCount + state.noCount >= 100;
       },
     },
   },
+  ...encourageStopTrainingCountsFishLong.map((count): GuideEntry => {
+    return {
+      id: `fishlong-training-generic-please-continue-count-${count}`,
+      textFn: () => I18n.t('training-generic-please-continue'),
+      when: {
+        appMode: AppMode.FishLong,
+        currentMode: Modes.Training,
+        fn: (state: State) => {
+          return state.yesCount + state.noCount >= count;
+        },
+      },
+    };
+  }),
   {
     id: 'fishlong-training-many',
     textFn: () => I18n.t('fishlong-training-many'),
     when: {
       appMode: AppMode.FishLong,
       currentMode: Modes.Training,
-      fn: state => {
+      fn: (state: State) => {
         return state.yesCount + state.noCount >= 300;
       },
     },
   },
   {
     id: 'fishlong-predicting-init1',
-    textFn: state =>
+    textFn: (state?: State) =>
       I18n.t('fishlong-predicting-init1', {
-        word: state.word.toLowerCase(),
+        word: state?.word?.toLowerCase(),
       }),
     when: {appMode: AppMode.FishLong, currentMode: Modes.Predicting},
   },
   {
     id: 'fishlong-predicting-init2',
-    textFn: state =>
+    textFn: (state?: State) =>
       I18n.t('fishlong-predicting-init2', {
-        word: state.word.toLowerCase(),
+        word: state?.word?.toLowerCase(),
       }),
     when: {appMode: AppMode.FishLong, currentMode: Modes.Predicting},
   },
   {
     id: 'fishlong-pond-init1',
-    textFn: state =>
+    textFn: (state?: State) =>
       I18n.t('fishlong-pond-init1', {
-        n: state.fishData.length,
-        word: state.word.toLowerCase(),
+        n: state?.fishData.length,
+        word: state?.word?.toLowerCase(),
       }),
     when: {
       appMode: AppMode.FishLong,
       currentMode: Modes.Pond,
-      fn: state => {
-        return state.fishData && state.totalPondFish !== null;
+      fn: (state: State) => {
+        return !!(state.fishData && state.totalPondFish !== null);
       },
     },
   },
@@ -498,8 +478,8 @@ const guidesHoc = [
     when: {
       appMode: AppMode.FishLong,
       currentMode: Modes.Pond,
-      fn: state => {
-        return state.fishData && state.totalPondFish !== null;
+      fn: (state: State) => {
+        return !!(state.fishData && state.totalPondFish !== null);
       },
     },
     arrow: 'LowerLeft',
@@ -510,12 +490,12 @@ const guidesHoc = [
     when: {
       appMode: AppMode.FishLong,
       currentMode: Modes.Pond,
-      fn: state => {
-        return state.fishData && state.totalPondFish !== null;
+      fn: (state: State) => {
+        return !!(state.fishData && state.totalPondFish !== null);
       },
     },
     arrow: 'LowishRight',
   },
 ];
 
-export default guidesHoc;
+export default guidesK5;

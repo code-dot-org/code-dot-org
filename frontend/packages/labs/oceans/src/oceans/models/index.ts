@@ -1,5 +1,6 @@
 import {Modes} from '../constants';
 import {reportPageView} from '../helpers';
+import type {State} from '../state';
 
 import {init as initLoading} from './loading';
 import {init as initPond} from './pond';
@@ -7,9 +8,13 @@ import {init as initPredicting} from './predict';
 import train from './train';
 import {init as initWords} from './words';
 
-// Initialize a model (if that model has an `init` method) based on mode.
-// Should only be called when mode changes.
-export const init = state => {
+/**
+ * Initialize the model for the current mode and report a synthetic page view.
+ * Should only be called when the mode changes.
+ *
+ * @param state - Current lab state, providing currentMode.
+ */
+export const init = (state: State): void => {
   switch (state.currentMode) {
     case Modes.Loading:
       initLoading();
@@ -29,12 +34,12 @@ export const init = state => {
   }
 
   // Report a synthetic pageview to Google Analytics.
-  const modeToPage = {
+  const modeToPage: Record<number, string> = {
     [Modes.Loading]: 'loading',
     [Modes.Words]: 'words',
     [Modes.Training]: 'training',
     [Modes.Pond]: 'pond',
     [Modes.Instructions]: 'instructions',
   };
-  reportPageView(modeToPage[state.currentMode]);
+  reportPageView(modeToPage[state.currentMode!]);
 };

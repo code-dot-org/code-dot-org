@@ -3,8 +3,15 @@ import {getState, setState} from '../state';
 
 import guidesHoc from './guidesHoc';
 import guidesK5 from './guidesK5';
+import type {GuideEntry} from './guideTypes';
 
-const getCurrentGuide = () => {
+/**
+ * Return the first guide whose conditions match the current state, or null
+ * if no guide should be shown (e.g. guides are disabled or all are dismissed).
+ *
+ * @returns The matching GuideEntry, or null.
+ */
+const getCurrentGuide = (): GuideEntry | null => {
   if (queryStrFor('guide') === 'off') {
     return null;
   }
@@ -18,8 +25,9 @@ const getCurrentGuide = () => {
     if (
       Object.keys(guide.when).every(key => {
         return key === 'fn'
-          ? guide.when['fn'](getState())
-          : guide.when[key] === state[key];
+          ? guide.when['fn']!(getState())
+          : guide.when[key] ===
+              (state as unknown as Record<string, unknown>)[key];
       })
     ) {
       // And if we haven't already dismissed this particular guide...
@@ -34,15 +42,19 @@ const getCurrentGuide = () => {
   return null;
 };
 
-const dismissCurrentGuide = () => {
+/**
+ * Dismiss the currently visible guide if one is showing.
+ *
+ * @returns True if a guide was dismissed; false if none was active or visible.
+ */
+const dismissCurrentGuide = (): boolean => {
   const currentGuide = getCurrentGuide();
 
-  // If we have a current guide, and it's actually showing (rather than still
-  // typing).
+  // If we have a current guide, and it's actually showing (rather than still typing).
   if (currentGuide && getState().guideShowing) {
     const state = getState();
     const currentGuideDismissals = state.guideDismissals;
-    let newGuideDismissals = [...currentGuideDismissals];
+    const newGuideDismissals = [...currentGuideDismissals];
     newGuideDismissals.push(currentGuide.id);
     setState({guideDismissals: newGuideDismissals, guideShowing: false});
 

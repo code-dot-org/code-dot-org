@@ -1,10 +1,11 @@
+import type {State} from './state';
 import {setState} from './state';
 
 /**
  * Registered once at startup by modeHelpers.ts so that toMode can call
  * models/index.init without creating a static import cycle.
  */
-let _initModel: ((state: unknown) => void) | null = null;
+let _initModel: ((state: State) => void) | null = null;
 
 /**
  * Registers the model-init dispatcher. Called by modeHelpers.ts at module
@@ -12,7 +13,7 @@ let _initModel: ((state: unknown) => void) | null = null;
  *
  * @param fn - Function that dispatches models/index.init for a given state.
  */
-export const setModelInitCallback = (fn: (state: unknown) => void): void => {
+export const setModelInitCallback = (fn: (state: State) => void): void => {
   _initModel = fn;
 };
 

@@ -1,8 +1,17 @@
 import {randomInt} from '../helpers';
 
-let registerSoundAPI, playSoundAPI;
+/** API functions injected from the host Sound system. */
+interface SoundAPIs {
+  registerSound: (cfg: {id: string; mp3: string}) => void;
+  playSound: (url: string, opts: {volume?: number}) => void;
+}
 
-const soundLibrary = {
+/** Module-level references to the injected sound API functions. */
+let registerSoundAPI: SoundAPIs['registerSound'];
+let playSoundAPI: SoundAPIs['playSound'];
+
+/** Sound categories mapped to their asset URL arrays. */
+const soundLibrary: Record<string, string[]> = {
   yes: [
     new URL('../../assets/sounds/yes/yes_1.mp3', import.meta.url).href,
     new URL('../../assets/sounds/yes/yes_2.mp3', import.meta.url).href,
@@ -41,18 +50,30 @@ const soundLibrary = {
   ],
 };
 
-const injectSoundAPIs = ({registerSound, playSound}) => {
-  registerSoundAPI = registerSound;
-  playSoundAPI = playSound;
+/**
+ * Store references to the host Sound system APIs for later use.
+ *
+ * @param apis - Object containing registerSound and playSound functions.
+ */
+const injectSoundAPIs = (apis: SoundAPIs): void => {
+  registerSoundAPI = apis.registerSound;
+  playSoundAPI = apis.playSound;
 };
 
-const loadSounds = () => {
+/** Register all sounds in every category with the injected Sound system. */
+const loadSounds = (): void => {
   Object.entries(soundLibrary).forEach(([, category]) =>
     category.forEach(sound => registerSoundAPI({id: sound, mp3: sound})),
   );
 };
 
-const playSound = (categoryName, volume = undefined) => {
+/**
+ * Play a random sound from the named category.
+ *
+ * @param categoryName - Key into soundLibrary (e.g. 'yes', 'no', 'sortyes').
+ * @param volume - Optional playback volume (0–1); defaults to 1.0.
+ */
+const playSound = (categoryName: string, volume?: number): void => {
   const index = randomInt(0, soundLibrary[categoryName].length - 1);
   playSoundAPI(soundLibrary[categoryName][index], {volume: volume || 1.0});
 };
