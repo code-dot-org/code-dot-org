@@ -76,7 +76,16 @@ export default function OceansContainer() {
   const measure = useCallback(() => {
     const el = wrapperRef.current;
     if (!el) return;
-    setDims(computeDimensions(el.offsetWidth, el.offsetHeight));
+    const style = getComputedStyle(el);
+    const availableWidth =
+      el.offsetWidth -
+      parseFloat(style.paddingLeft) -
+      parseFloat(style.paddingRight);
+    const availableHeight =
+      el.offsetHeight -
+      parseFloat(style.paddingTop) -
+      parseFloat(style.paddingBottom);
+    setDims(computeDimensions(availableWidth, availableHeight));
   }, []);
 
   useEffect(() => {
@@ -100,6 +109,10 @@ export default function OceansContainer() {
         backgroundColor: 'rgb(2, 0, 28)',
         // 10px gap above the canvas, matching the curriculum path layout.
         paddingTop: '10px',
+        // Side inset so the canvas doesn't bleed to the viewport edge on
+        // narrow screens. None needed once the canvas is narrower than the
+        // viewport (i.e. wider than ~570px where 16:9 headroom appears).
+        px: {xs: 1, sm: 0},
       }}
     >
       {dims.containerWidth > 0 && (
