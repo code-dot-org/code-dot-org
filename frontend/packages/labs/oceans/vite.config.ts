@@ -33,6 +33,11 @@ function emitModelAssets(): Plugin {
 }
 
 export default defineConfig({
+  // Radium's CSS vendor-prefix plugin references `global`; shim it so the
+  // browser environment doesn't throw during standalone `yarn dev`.
+  define: {
+    global: 'globalThis',
+  },
   plugins: [
     react(),
     emitModelAssets(),
