@@ -2,8 +2,7 @@
 Feature: Global Edition - Farsi MVP - Sign In page
 
   Background:
-    Given Global Edition is enabled
-    And I switch to the Global Edition region "fa"
+    Given I switch to the Global Edition region "fa"
 
   @eyes
   Scenario: I see the Farsi MVP Sign In page
