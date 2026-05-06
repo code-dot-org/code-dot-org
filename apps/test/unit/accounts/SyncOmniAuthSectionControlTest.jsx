@@ -14,6 +14,7 @@ import {
 } from '@cdo/apps/accounts/SyncOmniAuthSectionControl';
 import Button from '@cdo/apps/legacySharedComponents/Button';
 import BaseDialog from '@cdo/apps/templates/BaseDialog';
+import ReauthorizeClever from '@cdo/apps/templates/teacherDashboard/ReauthorizeClever';
 import * as utils from '@cdo/apps/utils';
 import {SectionLoginType} from '@cdo/generated-scripts/sharedConstants';
 
@@ -36,8 +37,8 @@ describe('SyncOmniAuthSectionControl', () => {
         testSyncSucceeds = testSyncFails = undefined;
         return promise;
       };
-      testSyncFails = () => {
-        testSyncFails && reject(new Error('Intentional test failure'));
+      testSyncFails = error => {
+        testSyncFails && reject(error || new Error('Intentional test failure'));
         testSyncSucceeds = testSyncFails = undefined;
         return promise;
       };
@@ -228,5 +229,48 @@ describe('SyncOmniAuthSectionControl', () => {
     expect(button.prop('buttonState')).to.equal(DISABLED);
 
     expect(wrapper.find(ReactTooltip)).to.have.lengthOf(1);
+  });
+
+  it('shows Clever reauthorize CTA when Clever sync returns 401', () => {
+    const wrapper = shallow(
+      <SyncOmniAuthSectionControl
+        {...defaultProps}
+        sectionCode="C-12345"
+        sectionProvider={OAuthSectionTypes.clever}
+        sectionProviderName="Clever"
+      />
+    );
+    wrapper.find(SyncOmniAuthSectionButton).simulate('click');
+    const error = Object.assign(
+      new Error('url: /sections/12345/users, status: 401 Unauthorized'),
+      {responseText: 'Unrecognized token string'}
+    );
+    return expect(testSyncFails(error)).to.be.rejected.then(() => {
+      expect(wrapper.find(BaseDialog).prop('isOpen')).to.equal(true);
+      expect(wrapper.find(ReauthorizeClever)).to.have.lengthOf(1);
+    });
+  });
+
+  it('shows plain-text responseText for Clever 404', () => {
+    const wrapper = shallow(
+      <SyncOmniAuthSectionControl
+        {...defaultProps}
+        sectionCode="C-12345"
+        sectionProvider={OAuthSectionTypes.clever}
+        sectionProviderName="Clever"
+      />
+    );
+    wrapper.find(SyncOmniAuthSectionButton).simulate('click');
+    const error = Object.assign(
+      new Error('url: /sections/12345/users, status: 404 Not Found'),
+      {responseText: 'Section not found in Clever'}
+    );
+    return expect(testSyncFails(error)).to.be.rejected.then(() => {
+      expect(wrapper.find(BaseDialog).prop('isOpen')).to.equal(true);
+      expect(wrapper.find(ReauthorizeClever)).to.have.lengthOf(0);
+      expect(wrapper.find('code').text()).to.equal(
+        'Section not found in Clever'
+      );
+    });
   });
 });

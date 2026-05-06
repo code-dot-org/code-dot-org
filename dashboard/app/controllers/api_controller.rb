@@ -106,6 +106,9 @@ class ApiController < ApplicationController
       section = CleverSection.from_service(course_id, current_user.id, students, course_name)
       render json: section.summarize
     end
+  rescue RestClient::ExceptionWithResponse => exception
+    raise unless exception.http_code == 404
+    render status: :not_found, plain: I18n.t('section.clever_section_not_found')
   end
 
   def google_classrooms
@@ -630,8 +633,6 @@ class ApiController < ApplicationController
     rescue RestClient::ExceptionWithResponse => exception
       if exception.http_code == 401 && exception.response.body.include?('Unrecognized token string')
         render status: exception.response.code, plain: I18n.t('auth.token_expired', provider: I18n.t('auth.clever'))
-      elsif exception.http_code == 404
-        render status: exception.response.code, plain: I18n.t('section.clever_section_not_found')
       else
         render status: exception.response.code, json: {error: exception.response.body}
       end

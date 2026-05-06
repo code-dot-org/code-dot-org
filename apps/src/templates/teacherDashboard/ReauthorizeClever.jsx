@@ -2,29 +2,16 @@ import React from 'react';
 
 import locale from '@cdo/locale';
 
-import RailsAuthenticityToken from '../../lib/util/RailsAuthenticityToken';
-import color from '../../util/color';
+import ReauthorizeProviderButton from './ReauthorizeProviderButton';
 
 const REAUTHORIZE_URL = '/users/auth/clever';
 
-const ctaButtonStyle = {
-  background: color.orange,
-  color: color.white,
-  border: '1px solid #b07202',
-  borderRadius: 3,
-  boxShadow: 'inset 0 1px 0 0 rgba(255, 255, 255, 0.63)',
-  fontSize: 14,
-  padding: '8px 20px',
-};
-
 function ReauthorizeClever() {
   return (
-    <form method="POST" action={REAUTHORIZE_URL}>
-      <RailsAuthenticityToken />
-      <button type="submit" style={ctaButtonStyle}>
-        {locale.authorizeClever()}
-      </button>
-    </form>
+    <ReauthorizeProviderButton
+      url={REAUTHORIZE_URL}
+      label={locale.authorizeClever()}
+    />
   );
 }
 

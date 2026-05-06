@@ -101,13 +101,22 @@ class SyncOmniAuthSectionControl extends React.Component {
       })
       .catch(sync_error => {
         const errorText = '' + sync_error;
-        const userMessage = sync_error.responseText || errorText;
         const isGoogle =
           this.props.sectionProvider === OAuthSectionTypes.google_classroom;
         const isClever =
           this.props.sectionProvider === OAuthSectionTypes.clever;
         const needsGoogleReauth = isGoogle && /status:\s*403\b/.test(errorText);
         const needsCleverReauth = isClever && /status:\s*401\b/.test(errorText);
+        // In some cases, Clever returns a 404 when trying to access a section that no longer exists in Clever.
+        // In that case, we want to show the user friendly the message about the section not being found.
+        const shouldUseResponseText =
+          isClever &&
+          /status:\s*404\b/.test(errorText) &&
+          typeof sync_error.responseText === 'string' &&
+          sync_error.responseText.trim().length > 0;
+        const userMessage = shouldUseResponseText
+          ? sync_error.responseText
+          : errorText;
         this.setState({
           syncFailErrorLog: userMessage,
           needsGoogleReauth,
