@@ -1,4 +1,5 @@
 import Chips from '@code-dot-org/component-library/chips';
+import TextField from '@code-dot-org/component-library/textField';
 import {Typography, Button as MuiButton} from '@mui/material';
 import classNames from 'classnames';
 import PropTypes from 'prop-types';
@@ -45,29 +46,32 @@ export default function SingleSectionSetUp({
         <Typography variant="h2" gutterBottom>
           {i18n.classSection()}
         </Typography>
-        <label className={moduleStyles.typographyLabelTwo}>
-          {i18n.className()}
-
-          {isLoading ? (
+        {isLoading ? (
+          <>
+            <div className={moduleStyles.typographyLabelTwo}>
+              {i18n.className()}
+            </div>
             <div
               className={classNames(
                 moduleStyles.skeletonTextField,
                 skeletonizeContent.skeletonizeContent
               )}
             />
-          ) : (
-            <input
-              required
-              type="text"
-              id="uitest-section-name-setup"
-              className={moduleStyles.classNameTextField}
-              value={section.name}
-              onChange={e => updateSection('name', e.target.value)}
-              onKeyDown={e => e.key === 'Enter' && e.preventDefault()}
-              disabled={isLoading}
-            />
-          )}
-        </label>
+          </>
+        ) : (
+          <TextField
+            required
+            id="uitest-section-name-setup"
+            name="name"
+            fullWidth
+            label={i18n.className()}
+            value={section.name}
+            onChange={e => updateSection('name', e.target.value)}
+            onKeyDown={e => e.key === 'Enter' && e.preventDefault()}
+            className={moduleStyles.sectionNameTextField}
+            disabled={isLoading}
+          />
+        )}
       </div>
       <label className={moduleStyles.typographyLabelTwo}>
         {i18n.avatar()}

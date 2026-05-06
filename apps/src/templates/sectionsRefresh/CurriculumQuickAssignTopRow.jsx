@@ -1,8 +1,9 @@
+import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
+import {Button as MuiButton} from '@mui/material';
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
 import React from 'react';
 
-import Button from '@cdo/apps/legacySharedComponents/Button';
 import i18n from '@cdo/locale';
 
 import moduleStyles from './sections-refresh.module.scss';
@@ -23,21 +24,23 @@ function MarketingAudienceButton({
   text,
 }) {
   const isActive = selectedMarketingAudience === audience;
-  const icon = isActive ? 'caret-down' : 'caret-right';
+  const iconName = isActive ? 'caret-down' : 'caret-right';
 
   return (
-    <Button
+    <MuiButton
       id={`uitest-${audience}-button`}
       className={classnames(
         moduleStyles.buttonStyle,
         isActive && moduleStyles.activeMarketingAudienceButton
       )}
-      text={text}
-      size={Button.ButtonSize.large}
-      icon={icon}
+      variant="text"
+      size="large"
+      startIcon={<FontAwesomeV6Icon iconName={iconName} />}
       onClick={() => determineMarketingAudience(audience)}
       type="button"
-    />
+    >
+      {text}
+    </MuiButton>
   );
 }
 

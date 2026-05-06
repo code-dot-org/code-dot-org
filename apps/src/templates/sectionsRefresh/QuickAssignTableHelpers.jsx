@@ -1,3 +1,4 @@
+import RadioButton from '@code-dot-org/component-library/radioButton';
 import {Typography} from '@mui/material';
 import classnames from 'classnames';
 import React from 'react';
@@ -60,27 +61,16 @@ function renderOfferings(
       )}
       key={course.display_name}
     >
-      <input
-        id={course.display_name}
-        className={classnames(
-          moduleStyles.radio,
-          moduleStyles.withBrandAccentColor
-        )}
-        type="radio"
-        name={course.display_name}
-        value={course.display_name}
+      <RadioButton
+        name="course-offering"
+        label={course.display_name}
+        value={String(course.id)}
         checked={sectionCourse?.courseOfferingId === course.id}
         onChange={() => {
           updateSectionCourse(updateCourse, course);
           setSelectedCourseOffering(course);
         }}
       />
-      <label
-        className={moduleStyles.courseOptionLabel}
-        htmlFor={course.display_name}
-      >
-        {course.display_name}
-      </label>
       {course.ai_teaching_assistant_available && (
         <img
           src={taImage}
