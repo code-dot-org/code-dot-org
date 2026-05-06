@@ -11,6 +11,7 @@ class JitPlExemplarsController < ApplicationController
     @exemplar = parent_scope.new(exemplar_params)
     if @exemplar.save
       @exemplar.resources = Resource.where(id: params[:resource_ids] || [])
+      @exemplar.json_videos = JSONVideo.where(id: params[:json_video_ids] || [])
       @concept.reload.write_serialization
       render json: @exemplar.serialize
     else
@@ -23,6 +24,7 @@ class JitPlExemplarsController < ApplicationController
   def update
     @exemplar.update!(exemplar_params)
     @exemplar.resources = Resource.where(id: params[:resource_ids] || [])
+    @exemplar.json_videos = JSONVideo.where(id: params[:json_video_ids] || [])
     @concept.reload.write_serialization
     render json: @exemplar.serialize
   end
