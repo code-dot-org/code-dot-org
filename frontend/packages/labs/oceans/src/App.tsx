@@ -72,6 +72,7 @@ export default function OceansLab({
             left: 0,
             width: '100%',
             height: '100%',
+            borderRadius: 10,
           }}
         />
         <canvas
@@ -83,6 +84,7 @@ export default function OceansLab({
             left: 0,
             width: '100%',
             height: '100%',
+            borderRadius: 10,
           }}
         />
         {/*
