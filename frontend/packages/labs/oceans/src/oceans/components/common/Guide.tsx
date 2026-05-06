@@ -9,7 +9,7 @@ import Typist from 'react-typist';
 
 import '@/oceans/styles/fade.css';
 
-import {Button} from '@/oceans/components/common';
+import Button from '@/oceans/components/common/Button';
 import I18n from '@/oceans/i18n';
 import guide from '@/oceans/models/guide';
 import soundLibrary from '@/oceans/models/soundLibrary';

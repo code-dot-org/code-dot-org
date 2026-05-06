@@ -1,16 +1,8 @@
 import {init as initModel} from './models';
-import {setState} from './state';
+import {setModelInitCallback, toMode} from './modeTransition';
 
-/**
- * Transitions the lab to a new UI mode, reinitialising the model layer.
- *
- * @param mode - The `Modes` integer value to switch to.
- */
-const toMode = (mode: number): void => {
-  const state = setState({currentMode: mode});
-  initModel(state);
-};
+// Wire up the model-init dispatcher so that modeTransition.toMode can invoke
+// models/index.init without models/loading.js needing to import this module.
+setModelInitCallback(initModel);
 
-export default {
-  toMode,
-};
+export default {toMode};
