@@ -319,7 +319,7 @@ function updateProgressNow() {
   }
 
   // Only enable "Copy Failing Rerun Commands" when there's something to copy.
-  // Otherwise a click would clobber the clipboard with an empty string and the
+  // Otherwise a click leave previous clipboard contents intact and the
   // user might not notice — leaving them to paste a stale command they had
   // copied earlier.
   copyFailingRerunButton.disabled = failureCount === 0;
@@ -430,7 +430,7 @@ async function refresh() {
   refreshButton.disabled = true;
   let lastRefreshEpochSeconds = Math.floor(lastRefreshTime.getTime() / 1000);
   let newTime = new Date();
-  
+
   try {
     const json = await fetchMetadata(lastRefreshEpochSeconds);
 
