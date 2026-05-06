@@ -10,10 +10,11 @@
     .centered-column
       %div#refresh-controls
         %span#last-refresh-time
-        %button#refresh-button Refresh
-        %button#auto-refresh-button Pause Auto-Refresh
-        %button#hide-succeeded-button Hide Succeeded
-        %button#copy-failing-rerun-button{disabled: true} Copy Failing Rerun Commands
+        %span.button-group
+          %button#refresh-button Refresh
+          %button#auto-refresh-button Pause Auto-Refresh
+          %button#hide-succeeded-button Hide Succeeded
+          %button#copy-failing-rerun-button{disabled: true} Copy Failing Rerun Commands
       %h1= "#{type_label} Test Status"
       - if status_pages
         %h2#status-pages-nav
