@@ -1,8 +1,7 @@
 <Sketchlab>
   <config><![CDATA[{
-  "published": true,
   "game_id": 75,
-  "created_at": "2026-02-24T18:11:10.000Z",
+  "created_at": "2026-03-13T19:11:55.000Z",
   "level_num": "custom",
   "user_id": 18603,
   "properties": {
@@ -13,2004 +12,920 @@
     "thumbnail_url": "https://images.code.org/9ec2319247c597ffcc1f04ecbd019f2d-graphic-designer.png",
     "start_sources": {
       "source": {
-        "type": "excalidraw",
-        "version": 2,
-        "source": "https://levelbuilder-studio.code.org",
-        "elements": [
+        "nodes": [
           {
-            "type": "rectangle",
-            "version": 611,
-            "versionNonce": 1826455479,
-            "isDeleted": false,
             "id": "3fsTrQdsTVDVb4Yj9dkDB",
-            "fillStyle": "solid",
-            "strokeWidth": 2,
-            "strokeStyle": "solid",
-            "roughness": 1,
-            "opacity": 100,
-            "angle": 0,
-            "x": 33.18218688249107,
-            "y": 200.78396535743371,
-            "strokeColor": "#1e1e1e",
-            "backgroundColor": "transparent",
-            "width": 1676.3295335605014,
-            "height": 1339.218648973283,
-            "seed": 780519095,
-            "groupIds": [
-
-            ],
-            "frameId": null,
-            "roundness": {
-              "type": 3
+            "type": "shape",
+            "position": {
+              "x": 19.182186882491123,
+              "y": 140.78396535743377
             },
-            "boundElements": [
-
-            ],
-            "updated": 1760476747945,
-            "link": null,
-            "locked": false
+            "style": {
+              "width": 1676.3295335605014,
+              "height": 1339.218648973283
+            },
+            "data": {
+              "shapeType": "rectangle",
+              "label": "",
+              "backgroundColor": "transparent",
+              "strokeColor": "#1e1e1e"
+            },
+            "measured": {
+              "width": 2064,
+              "height": 1397
+            },
+            "width": 2064,
+            "height": 1397,
+            "resizing": false,
+            "dragging": false
           },
           {
-            "type": "text",
-            "version": 483,
-            "versionNonce": 675328567,
-            "isDeleted": false,
             "id": "7V2YgqTCJth1e-EGicPI5",
-            "fillStyle": "solid",
-            "strokeWidth": 2,
-            "strokeStyle": "solid",
-            "roughness": 1,
-            "opacity": 100,
-            "angle": 0,
-            "x": -316.93006795722,
-            "y": -799.4394118350589,
-            "strokeColor": "#1e1e1e",
-            "backgroundColor": "transparent",
-            "width": 338.12109375,
-            "height": 62.95408795042826,
-            "seed": 442043927,
-            "groupIds": [
-
-            ],
-            "frameId": null,
-            "roundness": null,
-            "boundElements": [
-
-            ],
-            "updated": 1760476869406,
-            "link": null,
-            "locked": false,
-            "fontSize": 26.23086997934511,
-            "fontFamily": 3,
-            "text": "1. Select a fictional \nproduct",
-            "textAlign": "left",
-            "verticalAlign": "top",
-            "containerId": null,
-            "originalText": "1. Select a fictional \nproduct",
-            "lineHeight": 1.2,
-            "baseline": 56
+            "type": "text",
+            "position": {
+              "x": -299.7111211115663,
+              "y": -1029.0253697771084
+            },
+            "data": {
+              "text": "1. Select a fictional \nproduct",
+              "fontColor": "#1e1e1e",
+              "fontSize": "large",
+              "showHandles": false
+            },
+            "measured": {
+              "width": 207,
+              "height": 75
+            },
+            "dragging": false,
+            "selected": true,
+            "domAttributes": {
+              "tabIndex": 0
+            }
           },
           {
-            "type": "rectangle",
-            "version": 497,
-            "versionNonce": 863279577,
-            "isDeleted": false,
             "id": "1h2iRM8cSUy8RCVsRpDP3",
-            "fillStyle": "solid",
-            "strokeWidth": 2,
-            "strokeStyle": "solid",
-            "roughness": 1,
-            "opacity": 100,
-            "angle": 0,
-            "x": 37.976630749529534,
-            "y": -505.79432641325053,
-            "strokeColor": "#1e1e1e",
-            "backgroundColor": "transparent",
-            "width": 1537.7967861824775,
-            "height": 620.4257313568713,
-            "seed": 1265125143,
-            "groupIds": [
-
-            ],
-            "frameId": null,
-            "roundness": {
-              "type": 3
+            "type": "shape",
+            "position": {
+              "x": 27.976630749529477,
+              "y": -779.7943264132505
             },
-            "boundElements": [
-
-            ],
-            "updated": 1760476353013,
-            "link": null,
-            "locked": false
+            "style": {
+              "width": 1537.7967861824775,
+              "height": 620.4257313568713
+            },
+            "data": {
+              "shapeType": "rectangle",
+              "label": "",
+              "backgroundColor": "transparent",
+              "strokeColor": "#1e1e1e"
+            },
+            "measured": {
+              "width": 2124,
+              "height": 664
+            },
+            "width": 2124,
+            "height": 664,
+            "resizing": false,
+            "dragging": false
           },
           {
-            "type": "text",
-            "version": 655,
-            "versionNonce": 391261465,
-            "isDeleted": false,
             "id": "xLSNY3qniAX0mpdb3XGAH",
-            "fillStyle": "solid",
-            "strokeWidth": 2,
-            "strokeStyle": "solid",
-            "roughness": 1,
-            "opacity": 100,
-            "angle": 0,
-            "x": -306.3107051953343,
-            "y": -430.79429092517574,
-            "strokeColor": "#1e1e1e",
-            "backgroundColor": "transparent",
-            "width": 292.013671875,
-            "height": 62.95408795042826,
-            "seed": 393504055,
-            "groupIds": [
-
-            ],
-            "frameId": null,
-            "roundness": null,
-            "boundElements": [
-
-            ],
-            "updated": 1760476353235,
-            "link": null,
-            "locked": false,
-            "fontSize": 26.23086997934511,
-            "fontFamily": 3,
-            "text": "2. Select a sample \nuser persona",
-            "textAlign": "left",
-            "verticalAlign": "top",
-            "containerId": null,
-            "originalText": "2. Select a sample \nuser persona",
-            "lineHeight": 1.2,
-            "baseline": 56
+            "type": "text",
+            "position": {
+              "x": -274.9809228645785,
+              "y": -504.5114258210719
+            },
+            "data": {
+              "text": "2. Select a sample \nuser persona",
+              "fontColor": "#1e1e1e",
+              "fontSize": "large",
+              "showHandles": false
+            },
+            "measured": {
+              "width": 200,
+              "height": 75
+            },
+            "dragging": false,
+            "selected": false,
+            "domAttributes": {
+              "tabIndex": -1
+            }
           },
           {
-            "type": "ellipse",
-            "version": 291,
-            "versionNonce": 843370137,
-            "isDeleted": false,
             "id": "y0liYbHku_76NH-M6FS2e",
-            "fillStyle": "solid",
-            "strokeWidth": 2,
-            "strokeStyle": "dashed",
-            "roughness": 1,
-            "opacity": 100,
-            "angle": 0,
-            "x": 86.11961610644067,
-            "y": 256.9576793491146,
-            "strokeColor": "#1e1e1e",
-            "backgroundColor": "#fff0f6",
-            "width": 432.36165453828517,
-            "height": 432.36165453828517,
-            "seed": 742434391,
-            "groupIds": [
-
-            ],
-            "frameId": null,
-            "roundness": {
-              "type": 2
+            "type": "shape",
+            "position": {
+              "x": 150.11961610644067,
+              "y": 212.95767934911458
             },
-            "boundElements": [
-              {
-                "type": "text",
-                "id": "E9KKrDjYbOqHUJZ7DpHh6"
-              }
-            ],
-            "updated": 1760476353014,
-            "link": null,
-            "locked": false
+            "style": {
+              "width": 432.36165453828517,
+              "height": 432.36165453828517
+            },
+            "data": {
+              "shapeType": "circle",
+              "label": "My Product",
+              "backgroundColor": "#fff0f6",
+              "strokeColor": "#1e1e1e",
+              "fontColor": "#1e1e1e",
+              "fontSize": "large"
+            },
+            "measured": {
+              "width": 520,
+              "height": 470
+            },
+            "width": 520,
+            "height": 470,
+            "resizing": false,
+            "dragging": false
           },
           {
-            "type": "text",
-            "version": 147,
-            "versionNonce": 561512697,
-            "isDeleted": false,
-            "id": "E9KKrDjYbOqHUJZ7DpHh6",
-            "fillStyle": "solid",
-            "strokeWidth": 2,
-            "strokeStyle": "dashed",
-            "roughness": 1,
-            "opacity": 100,
-            "angle": 0,
-            "x": 196.96876445105482,
-            "y": 451.67557769372877,
-            "strokeColor": "#1e1e1e",
-            "backgroundColor": "#fff0f6",
-            "width": 210.9375,
-            "height": 43.199999999999996,
-            "seed": 472367991,
-            "groupIds": [
-
-            ],
-            "frameId": null,
-            "roundness": null,
-            "boundElements": [
-
-            ],
-            "updated": 1760476755849,
-            "link": null,
-            "locked": false,
-            "fontSize": 36,
-            "fontFamily": 3,
-            "text": "My Product",
-            "textAlign": "center",
-            "verticalAlign": "middle",
-            "containerId": "y0liYbHku_76NH-M6FS2e",
-            "originalText": "My Product",
-            "lineHeight": 1.2,
-            "baseline": 35
-          },
-          {
-            "type": "rectangle",
-            "version": 1232,
-            "versionNonce": 722648153,
-            "isDeleted": false,
             "id": "rHnfZTa00LVcTlsJa_-JU",
-            "fillStyle": "solid",
-            "strokeWidth": 2,
-            "strokeStyle": "dashed",
-            "roughness": 1,
-            "opacity": 100,
-            "angle": 0,
-            "x": 151.7536613572592,
-            "y": 787.1404582338384,
-            "strokeColor": "#1e1e1e",
-            "backgroundColor": "#fff0f6",
-            "width": 334.7691678784647,
-            "height": 556.7092075584368,
-            "seed": 2003713175,
-            "groupIds": [
-
-            ],
-            "frameId": null,
-            "roundness": {
-              "type": 3
+            "type": "shape",
+            "position": {
+              "x": 129.75366135725926,
+              "y": 769.1404582338384
             },
-            "boundElements": [
-              {
-                "type": "text",
-                "id": "2nit3U5c5zITJ_F7ojzx3"
-              }
-            ],
-            "updated": 1760476353014,
-            "link": null,
-            "locked": false
+            "style": {
+              "width": 334.7691678784647,
+              "height": 556.7092075584368
+            },
+            "data": {
+              "shapeType": "rectangle",
+              "label": "My Persona",
+              "backgroundColor": "#fff0f6",
+              "strokeColor": "#1e1e1e",
+              "fontColor": "#1e1e1e",
+              "fontSize": "large"
+            },
+            "measured": {
+              "width": 585,
+              "height": 679
+            },
+            "width": 585,
+            "height": 679,
+            "resizing": false,
+            "dragging": false
           },
           {
-            "type": "text",
-            "version": 401,
-            "versionNonce": 1252993689,
-            "isDeleted": false,
-            "id": "2nit3U5c5zITJ_F7ojzx3",
-            "fillStyle": "solid",
-            "strokeWidth": 2,
-            "strokeStyle": "solid",
-            "roughness": 1,
-            "opacity": 100,
-            "angle": 0,
-            "x": 226.59820623399156,
-            "y": 1043.8950620130568,
-            "strokeColor": "#1e1e1e",
-            "backgroundColor": "#fff5f5",
-            "width": 185.080078125,
-            "height": 43.199999999999996,
-            "seed": 1372098999,
-            "groupIds": [
-
-            ],
-            "frameId": null,
-            "roundness": null,
-            "boundElements": [
-
-            ],
-            "updated": 1760476353166,
-            "link": null,
-            "locked": false,
-            "fontSize": 36,
-            "fontFamily": 3,
-            "text": "My Persona",
-            "textAlign": "center",
-            "verticalAlign": "middle",
-            "containerId": "rHnfZTa00LVcTlsJa_-JU",
-            "originalText": "My Persona",
-            "lineHeight": 1.2,
-            "baseline": 35
-          },
-          {
-            "type": "text",
-            "version": 894,
-            "versionNonce": 2117952151,
-            "isDeleted": false,
             "id": "ByO9NEtVVhMjN7WzleHor",
-            "fillStyle": "solid",
-            "strokeWidth": 2,
-            "strokeStyle": "solid",
-            "roughness": 1,
-            "opacity": 100,
-            "angle": 0,
-            "x": -493.5117204429925,
-            "y": 240.85153351108596,
-            "strokeColor": "#1e1e1e",
-            "backgroundColor": "transparent",
-            "width": 491.8125,
-            "height": 251.81635180171304,
-            "seed": 556588471,
-            "groupIds": [
-
-            ],
-            "frameId": null,
-            "roundness": null,
-            "boundElements": [
-
-            ],
-            "updated": 1760476894061,
-            "link": null,
-            "locked": false,
-            "fontSize": 26.23086997934511,
-            "fontFamily": 3,
-            "text": "3. Build a mini brand kit with:\n   * 3–5 color swatches\n   * A font pair \n   * 1–2 descriptive style words\n\nConnect your design choices for \nyour fictional product back to \nthe sample user persona ",
-            "textAlign": "left",
-            "verticalAlign": "top",
-            "containerId": null,
-            "originalText": "3. Build a mini brand kit with:\n   * 3–5 color swatches\n   * A font pair \n   * 1–2 descriptive style words\n\nConnect your design choices for \nyour fictional product back to \nthe sample user persona ",
-            "lineHeight": 1.2,
-            "baseline": 245
+            "type": "text",
+            "position": {
+              "x": -483.5117204429925,
+              "y": 620.851533511086
+            },
+            "data": {
+              "text": "3. Build a mini brand kit with\n* 3–5 color swatches\n   * A font pair \n   * 1–2 descriptive style words\n\nConnect your design choices for \nyour fictional product back to \nthe sample user persona ",
+              "fontColor": "#1e1e1e",
+              "fontSize": "large",
+              "showHandles": false
+            },
+            "measured": {
+              "width": 344,
+              "height": 247
+            },
+            "dragging": false,
+            "selected": false,
+            "domAttributes": {
+              "tabIndex": -1
+            }
           },
           {
-            "type": "rectangle",
-            "version": 135,
-            "versionNonce": 2048102137,
-            "isDeleted": false,
             "id": "i_Lc_rlF4ihf6w_AxtKMr",
-            "fillStyle": "solid",
-            "strokeWidth": 2,
-            "strokeStyle": "solid",
-            "roughness": 1,
-            "opacity": 100,
-            "angle": 0,
-            "x": 601.2969128397217,
-            "y": 276.86243179780575,
-            "strokeColor": "#1e1e1e",
-            "backgroundColor": "transparent",
-            "width": 198.93643426017286,
-            "height": 191.28500674832299,
-            "seed": 263901175,
-            "groupIds": [
-
-            ],
-            "frameId": null,
-            "roundness": null,
-            "boundElements": [
-              {
-                "type": "text",
-                "id": "FHJfBJw0rSBGI1M_3wkZo"
-              }
-            ],
-            "updated": 1760476353014,
-            "link": null,
-            "locked": false
+            "type": "shape",
+            "position": {
+              "x": 797.2969128397217,
+              "y": 258.86243179780575
+            },
+            "style": {
+              "width": 198.93643426017286,
+              "height": 191.28500674832299
+            },
+            "data": {
+              "shapeType": "rectangle",
+              "label": "Color 1",
+              "backgroundColor": "transparent",
+              "strokeColor": "#1e1e1e",
+              "fontColor": "#1e1e1e",
+              "fontSize": "large"
+            },
+            "measured": {
+              "width": 199,
+              "height": 191
+            },
+            "dragging": false,
+            "resizing": false
           },
           {
-            "type": "text",
-            "version": 33,
-            "versionNonce": 1082158969,
-            "isDeleted": false,
-            "id": "FHJfBJw0rSBGI1M_3wkZo",
-            "fillStyle": "solid",
-            "strokeWidth": 2,
-            "strokeStyle": "solid",
-            "roughness": 1,
-            "opacity": 100,
-            "angle": 0,
-            "x": 643.2758721573082,
-            "y": 350.00493517196725,
-            "strokeColor": "#1e1e1e",
-            "backgroundColor": "transparent",
-            "width": 114.978515625,
-            "height": 45,
-            "seed": 233552151,
-            "groupIds": [
-
-            ],
-            "frameId": null,
-            "roundness": null,
-            "boundElements": [
-
-            ],
-            "updated": 1760476353175,
-            "link": null,
-            "locked": false,
-            "fontSize": 36,
-            "fontFamily": 1,
-            "text": "Color 1",
-            "textAlign": "center",
-            "verticalAlign": "middle",
-            "containerId": "i_Lc_rlF4ihf6w_AxtKMr",
-            "originalText": "Color 1",
-            "lineHeight": 1.25,
-            "baseline": 32
-          },
-          {
-            "type": "rectangle",
-            "version": 251,
-            "versionNonce": 666166457,
-            "isDeleted": false,
             "id": "-tAadncXyZZ6fo3JsuDOh",
-            "fillStyle": "solid",
-            "strokeWidth": 2,
-            "strokeStyle": "solid",
-            "roughness": 1,
-            "opacity": 100,
-            "angle": 0,
-            "x": 818.3630295617827,
-            "y": 275.4649976157934,
-            "strokeColor": "#1e1e1e",
-            "backgroundColor": "transparent",
-            "width": 198.93643426017286,
-            "height": 191.28500674832299,
-            "seed": 610434615,
-            "groupIds": [
-
-            ],
-            "frameId": null,
-            "roundness": null,
-            "boundElements": [
-              {
-                "type": "text",
-                "id": "Zb4FhHc_XUnt6QELiXaoJ"
-              }
-            ],
-            "updated": 1760476353014,
-            "link": null,
-            "locked": false
+            "type": "shape",
+            "position": {
+              "x": 1036.3630295617827,
+              "y": 263.4649976157934
+            },
+            "style": {
+              "width": 198.93643426017286,
+              "height": 191.28500674832299
+            },
+            "data": {
+              "shapeType": "rectangle",
+              "label": "Color 2",
+              "backgroundColor": "transparent",
+              "strokeColor": "#1e1e1e",
+              "fontColor": "#1e1e1e",
+              "fontSize": "large"
+            },
+            "measured": {
+              "width": 199,
+              "height": 191
+            },
+            "dragging": false
           },
           {
-            "type": "text",
-            "version": 151,
-            "versionNonce": 2039879769,
-            "isDeleted": false,
-            "id": "Zb4FhHc_XUnt6QELiXaoJ",
-            "fillStyle": "solid",
-            "strokeWidth": 2,
-            "strokeStyle": "solid",
-            "roughness": 1,
-            "opacity": 100,
-            "angle": 0,
-            "x": 860.3419888793692,
-            "y": 348.6075009899549,
-            "strokeColor": "#1e1e1e",
-            "backgroundColor": "transparent",
-            "width": 114.978515625,
-            "height": 45,
-            "seed": 100900695,
-            "groupIds": [
-
-            ],
-            "frameId": null,
-            "roundness": null,
-            "boundElements": [
-
-            ],
-            "updated": 1760476353179,
-            "link": null,
-            "locked": false,
-            "fontSize": 36,
-            "fontFamily": 1,
-            "text": "Color 2",
-            "textAlign": "center",
-            "verticalAlign": "middle",
-            "containerId": "-tAadncXyZZ6fo3JsuDOh",
-            "originalText": "Color 2",
-            "lineHeight": 1.25,
-            "baseline": 32
-          },
-          {
-            "type": "rectangle",
-            "version": 353,
-            "versionNonce": 1976289913,
-            "isDeleted": false,
             "id": "f_qpC_zj9nPoVaeSvJ1CI",
-            "fillStyle": "solid",
-            "strokeWidth": 2,
-            "strokeStyle": "solid",
-            "roughness": 1,
-            "opacity": 100,
-            "angle": 0,
-            "x": 1032.427765047038,
-            "y": 270.93276989559575,
-            "strokeColor": "#1e1e1e",
-            "backgroundColor": "transparent",
-            "width": 198.93643426017286,
-            "height": 191.28500674832299,
-            "seed": 354655351,
-            "groupIds": [
-
-            ],
-            "frameId": null,
-            "roundness": null,
-            "boundElements": [
-              {
-                "type": "text",
-                "id": "HBmefpIr5VH2B8_uD6ceJ"
-              }
-            ],
-            "updated": 1760476353014,
-            "link": null,
-            "locked": false
+            "type": "shape",
+            "position": {
+              "x": 1280.427765047038,
+              "y": 266.93276989559575
+            },
+            "style": {
+              "width": 198.93643426017286,
+              "height": 191.28500674832299
+            },
+            "data": {
+              "shapeType": "rectangle",
+              "label": "Color 3",
+              "backgroundColor": "transparent",
+              "strokeColor": "#1e1e1e",
+              "fontColor": "#1e1e1e",
+              "fontSize": "large"
+            },
+            "measured": {
+              "width": 199,
+              "height": 191
+            },
+            "dragging": false,
+            "selected": true,
+            "domAttributes": {
+              "tabIndex": 0
+            }
           },
           {
-            "type": "text",
-            "version": 254,
-            "versionNonce": 1472439609,
-            "isDeleted": false,
-            "id": "HBmefpIr5VH2B8_uD6ceJ",
-            "fillStyle": "solid",
-            "strokeWidth": 2,
-            "strokeStyle": "solid",
-            "roughness": 1,
-            "opacity": 100,
-            "angle": 0,
-            "x": 1074.4067243646246,
-            "y": 344.07527326975725,
-            "strokeColor": "#1e1e1e",
-            "backgroundColor": "transparent",
-            "width": 114.978515625,
-            "height": 45,
-            "seed": 1971778967,
-            "groupIds": [
-
-            ],
-            "frameId": null,
-            "roundness": null,
-            "boundElements": [
-
-            ],
-            "updated": 1760476353181,
-            "link": null,
-            "locked": false,
-            "fontSize": 36,
-            "fontFamily": 1,
-            "text": "Color 3",
-            "textAlign": "center",
-            "verticalAlign": "middle",
-            "containerId": "f_qpC_zj9nPoVaeSvJ1CI",
-            "originalText": "Color 3",
-            "lineHeight": 1.25,
-            "baseline": 32
-          },
-          {
-            "type": "rectangle",
-            "version": 523,
-            "versionNonce": 1345601593,
-            "isDeleted": false,
             "id": "Ktbgh7lasjBTnnGh6DRR-",
-            "fillStyle": "solid",
-            "strokeWidth": 2,
-            "strokeStyle": "solid",
-            "roughness": 1,
-            "opacity": 100,
-            "angle": 0,
-            "x": 1246.3875436158523,
-            "y": 269.7815993349579,
-            "strokeColor": "#1e1e1e",
-            "backgroundColor": "transparent",
-            "width": 198.93643426017286,
-            "height": 191.28500674832299,
-            "seed": 1583491767,
-            "groupIds": [
-
-            ],
-            "frameId": null,
-            "roundness": null,
-            "boundElements": [
-              {
-                "type": "text",
-                "id": "FG9hkoMa0t16toYPvgy11"
-              }
-            ],
-            "updated": 1760476353014,
-            "link": null,
-            "locked": false
+            "type": "shape",
+            "position": {
+              "x": 1526.3875436158523,
+              "y": 265.7815993349579
+            },
+            "style": {
+              "width": 198.93643426017286,
+              "height": 191.28500674832299
+            },
+            "data": {
+              "shapeType": "rectangle",
+              "label": "Color 4",
+              "backgroundColor": "transparent",
+              "strokeColor": "#1e1e1e",
+              "fontColor": "#1e1e1e",
+              "fontSize": "large"
+            },
+            "measured": {
+              "width": 199,
+              "height": 191
+            },
+            "dragging": false
           },
           {
-            "type": "text",
-            "version": 424,
-            "versionNonce": 913085977,
-            "isDeleted": false,
-            "id": "FG9hkoMa0t16toYPvgy11",
-            "fillStyle": "solid",
-            "strokeWidth": 2,
-            "strokeStyle": "solid",
-            "roughness": 1,
-            "opacity": 100,
-            "angle": 0,
-            "x": 1288.3665029334388,
-            "y": 342.9241027091194,
-            "strokeColor": "#1e1e1e",
-            "backgroundColor": "transparent",
-            "width": 114.978515625,
-            "height": 45,
-            "seed": 744078295,
-            "groupIds": [
-
-            ],
-            "frameId": null,
-            "roundness": null,
-            "boundElements": [
-
-            ],
-            "updated": 1760476353184,
-            "link": null,
-            "locked": false,
-            "fontSize": 36,
-            "fontFamily": 1,
-            "text": "Color 4",
-            "textAlign": "center",
-            "verticalAlign": "middle",
-            "containerId": "Ktbgh7lasjBTnnGh6DRR-",
-            "originalText": "Color 4",
-            "lineHeight": 1.25,
-            "baseline": 32
-          },
-          {
-            "type": "rectangle",
-            "version": 627,
-            "versionNonce": 1539982841,
-            "isDeleted": false,
             "id": "6Nm9l4fJ2vhFzrNf5SsJZ",
-            "fillStyle": "solid",
-            "strokeWidth": 2,
-            "strokeStyle": "solid",
-            "roughness": 1,
-            "opacity": 100,
-            "angle": 0,
-            "x": 1460.4522791011077,
-            "y": 267.7816966275188,
-            "strokeColor": "#1e1e1e",
-            "backgroundColor": "transparent",
-            "width": 198.93643426017286,
-            "height": 191.28500674832299,
-            "seed": 864168183,
-            "groupIds": [
-
-            ],
-            "frameId": null,
-            "roundness": null,
-            "boundElements": [
-              {
-                "type": "text",
-                "id": "mIvFnUvn3LyEWChZjkSDW"
-              }
-            ],
-            "updated": 1760476353014,
-            "link": null,
-            "locked": false
+            "type": "shape",
+            "position": {
+              "x": 1764.4522791011077,
+              "y": 265.7816966275188
+            },
+            "style": {
+              "width": 198.93643426017286,
+              "height": 191.28500674832299
+            },
+            "data": {
+              "shapeType": "rectangle",
+              "label": "Color 5",
+              "backgroundColor": "transparent",
+              "strokeColor": "#1e1e1e",
+              "fontColor": "#1e1e1e",
+              "fontSize": "large"
+            },
+            "measured": {
+              "width": 199,
+              "height": 191
+            },
+            "dragging": false,
+            "selected": true,
+            "domAttributes": {
+              "tabIndex": 0
+            }
           },
           {
-            "type": "text",
-            "version": 529,
-            "versionNonce": 948202233,
-            "isDeleted": false,
-            "id": "mIvFnUvn3LyEWChZjkSDW",
-            "fillStyle": "solid",
-            "strokeWidth": 2,
-            "strokeStyle": "solid",
-            "roughness": 1,
-            "opacity": 100,
-            "angle": 0,
-            "x": 1502.4312384186942,
-            "y": 340.9242000016803,
-            "strokeColor": "#1e1e1e",
-            "backgroundColor": "transparent",
-            "width": 114.978515625,
-            "height": 45,
-            "seed": 1365242391,
-            "groupIds": [
-
-            ],
-            "frameId": null,
-            "roundness": null,
-            "boundElements": [
-
-            ],
-            "updated": 1760476353187,
-            "link": null,
-            "locked": false,
-            "fontSize": 36,
-            "fontFamily": 1,
-            "text": "Color 5",
-            "textAlign": "center",
-            "verticalAlign": "middle",
-            "containerId": "6Nm9l4fJ2vhFzrNf5SsJZ",
-            "originalText": "Color 5",
-            "lineHeight": 1.25,
-            "baseline": 32
-          },
-          {
-            "type": "rectangle",
-            "version": 395,
-            "versionNonce": 912907193,
-            "isDeleted": false,
             "id": "xe7ixN-WVThMg_UzPsDJF",
-            "fillStyle": "solid",
-            "strokeWidth": 2,
-            "strokeStyle": "solid",
-            "roughness": 1,
-            "opacity": 100,
-            "angle": 0,
-            "x": 619.9150952367991,
-            "y": 615.5420982027483,
-            "strokeColor": "#1e1e1e",
-            "backgroundColor": "transparent",
-            "width": 1038.3082682871354,
-            "height": 99.74547186258886,
-            "seed": 1055364919,
-            "groupIds": [
-
-            ],
-            "frameId": null,
-            "roundness": null,
-            "boundElements": [
-
-            ],
-            "updated": 1760476353014,
-            "link": null,
-            "locked": false
+            "type": "shape",
+            "position": {
+              "x": 837.9150952367991,
+              "y": 605.5420982027483
+            },
+            "style": {
+              "width": 1038.3082682871354,
+              "height": 99.74547186258886
+            },
+            "data": {
+              "shapeType": "rectangle",
+              "label": "",
+              "backgroundColor": "transparent",
+              "strokeColor": "#1e1e1e"
+            },
+            "measured": {
+              "width": 1038,
+              "height": 100
+            },
+            "dragging": false
           },
           {
-            "type": "rectangle",
-            "version": 474,
-            "versionNonce": 523417,
-            "isDeleted": false,
             "id": "kxr77qsSdrjGbEg7pbkhX",
-            "fillStyle": "solid",
-            "strokeWidth": 2,
-            "strokeStyle": "solid",
-            "roughness": 1,
-            "opacity": 100,
-            "angle": 0,
-            "x": 623.0180861791396,
-            "y": 798.6214639030086,
-            "strokeColor": "#1e1e1e",
-            "backgroundColor": "transparent",
-            "width": 1038.3082682871354,
-            "height": 99.74547186258886,
-            "seed": 578656343,
-            "groupIds": [
-
-            ],
-            "frameId": null,
-            "roundness": null,
-            "boundElements": [
-
-            ],
-            "updated": 1760476353014,
-            "link": null,
-            "locked": false
+            "type": "shape",
+            "position": {
+              "x": 835.0180861791396,
+              "y": 794.6214639030086
+            },
+            "style": {
+              "width": 1038.3082682871354,
+              "height": 99.74547186258886
+            },
+            "data": {
+              "shapeType": "rectangle",
+              "label": "",
+              "backgroundColor": "transparent",
+              "strokeColor": "#1e1e1e"
+            },
+            "measured": {
+              "width": 1038,
+              "height": 100
+            },
+            "dragging": false
           },
           {
-            "type": "rectangle",
-            "version": 745,
-            "versionNonce": 921633145,
-            "isDeleted": false,
             "id": "VvLiVKWKIGAdzI2OYCmax",
-            "fillStyle": "solid",
-            "strokeWidth": 2,
-            "strokeStyle": "solid",
-            "roughness": 1,
-            "opacity": 100,
-            "angle": 0,
-            "x": 627.6726909641673,
-            "y": 1008.0765485419565,
-            "strokeColor": "#1e1e1e",
-            "backgroundColor": "transparent",
-            "width": 596.125311827134,
-            "height": 99.74547186258886,
-            "seed": 1643541879,
-            "groupIds": [
-
-            ],
-            "frameId": null,
-            "roundness": null,
-            "boundElements": [
-              {
-                "type": "text",
-                "id": "BKPGsoFCSNxB5TRnWbifY"
-              }
-            ],
-            "updated": 1760476353014,
-            "link": null,
-            "locked": false
+            "type": "shape",
+            "position": {
+              "x": 839.6726909641673,
+              "y": 1012.0765485419565
+            },
+            "style": {
+              "width": 596.125311827134,
+              "height": 99.74547186258886
+            },
+            "data": {
+              "shapeType": "rectangle",
+              "label": "word 1",
+              "backgroundColor": "transparent",
+              "strokeColor": "#1e1e1e",
+              "fontColor": "#1e1e1e",
+              "fontSize": "large"
+            },
+            "measured": {
+              "width": 596,
+              "height": 100
+            },
+            "dragging": false
           },
           {
-            "type": "text",
-            "version": 12,
-            "versionNonce": 1452188633,
-            "isDeleted": false,
-            "id": "BKPGsoFCSNxB5TRnWbifY",
-            "fillStyle": "solid",
-            "strokeWidth": 2,
-            "strokeStyle": "solid",
-            "roughness": 1,
-            "opacity": 100,
-            "angle": 0,
-            "x": 870.9794875027343,
-            "y": 1035.449284473251,
-            "strokeColor": "#1e1e1e",
-            "backgroundColor": "transparent",
-            "width": 109.51171875,
-            "height": 45,
-            "seed": 882290327,
-            "groupIds": [
-
-            ],
-            "frameId": null,
-            "roundness": null,
-            "boundElements": [
-
-            ],
-            "updated": 1760476353189,
-            "link": null,
-            "locked": false,
-            "fontSize": 36,
-            "fontFamily": 1,
-            "text": "word 1",
-            "textAlign": "center",
-            "verticalAlign": "middle",
-            "containerId": "VvLiVKWKIGAdzI2OYCmax",
-            "originalText": "word 1",
-            "lineHeight": 1.25,
-            "baseline": 32
-          },
-          {
-            "type": "rectangle",
-            "version": 824,
-            "versionNonce": 758495033,
-            "isDeleted": false,
             "id": "bX6JtHgEs1j_-G4PXIv9r",
-            "fillStyle": "solid",
-            "strokeWidth": 2,
-            "strokeStyle": "solid",
-            "roughness": 1,
-            "opacity": 100,
-            "angle": 0,
-            "x": 627.6726909641673,
-            "y": 1143.0586668495607,
-            "strokeColor": "#1e1e1e",
-            "backgroundColor": "transparent",
-            "width": 596.125311827134,
-            "height": 99.74547186258886,
-            "seed": 1964164023,
-            "groupIds": [
-
-            ],
-            "frameId": null,
-            "roundness": null,
-            "boundElements": [
-              {
-                "type": "text",
-                "id": "XnexYUdo-J-BjoWennalk"
-              }
-            ],
-            "updated": 1760476353014,
-            "link": null,
-            "locked": false
+            "type": "shape",
+            "position": {
+              "x": 841.6726909641673,
+              "y": 1141.0586668495607
+            },
+            "style": {
+              "width": 596.125311827134,
+              "height": 99.74547186258886
+            },
+            "data": {
+              "shapeType": "rectangle",
+              "label": "word 2",
+              "backgroundColor": "transparent",
+              "strokeColor": "#1e1e1e",
+              "fontColor": "#1e1e1e",
+              "fontSize": "large"
+            },
+            "measured": {
+              "width": 596,
+              "height": 100
+            },
+            "dragging": false
           },
           {
-            "type": "text",
-            "version": 12,
-            "versionNonce": 748601529,
-            "isDeleted": false,
-            "id": "XnexYUdo-J-BjoWennalk",
-            "fillStyle": "solid",
-            "strokeWidth": 2,
-            "strokeStyle": "solid",
-            "roughness": 1,
-            "opacity": 100,
-            "angle": 0,
-            "x": 870.9794875027343,
-            "y": 1170.4314027808553,
-            "strokeColor": "#1e1e1e",
-            "backgroundColor": "transparent",
-            "width": 109.51171875,
-            "height": 45,
-            "seed": 865023191,
-            "groupIds": [
-
-            ],
-            "frameId": null,
-            "roundness": null,
-            "boundElements": [
-
-            ],
-            "updated": 1760476353190,
-            "link": null,
-            "locked": false,
-            "fontSize": 36,
-            "fontFamily": 1,
-            "text": "word 2",
-            "textAlign": "center",
-            "verticalAlign": "middle",
-            "containerId": "bX6JtHgEs1j_-G4PXIv9r",
-            "originalText": "word 2",
-            "lineHeight": 1.25,
-            "baseline": 32
-          },
-          {
-            "type": "text",
-            "version": 65,
-            "versionNonce": 916398585,
-            "isDeleted": false,
             "id": "1Q-xL4HrZIpZhfOEmWze-",
-            "fillStyle": "solid",
-            "strokeWidth": 2,
-            "strokeStyle": "solid",
-            "roughness": 1,
-            "opacity": 100,
-            "angle": 0,
-            "x": 637.6005539231535,
-            "y": 550.6383302983336,
-            "strokeColor": "#1e1e1e",
-            "backgroundColor": "transparent",
-            "width": 253.125,
-            "height": 43.199999999999996,
-            "seed": 127959543,
-            "groupIds": [
-
-            ],
-            "frameId": null,
-            "roundness": null,
-            "boundElements": [
-
-            ],
-            "updated": 1760476353239,
-            "link": null,
-            "locked": false,
-            "fontSize": 36,
-            "fontFamily": 3,
-            "text": "Heading Font",
-            "textAlign": "center",
-            "verticalAlign": "top",
-            "containerId": null,
-            "originalText": "Heading Font",
-            "lineHeight": 1.2,
-            "baseline": 35
+            "type": "text",
+            "position": {
+              "x": 837.6005539231535,
+              "y": 536.6383302983336
+            },
+            "data": {
+              "text": "Heading Font",
+              "fontColor": "#1e1e1e",
+              "fontSize": "large",
+              "showHandles": false
+            },
+            "measured": {
+              "width": 152,
+              "height": 47
+            },
+            "dragging": false,
+            "selected": true,
+            "domAttributes": {
+              "tabIndex": 0
+            }
           },
           {
-            "type": "text",
-            "version": 150,
-            "versionNonce": 1607915031,
-            "isDeleted": false,
             "id": "KH09_Pvz3d-Ve8Yk3KqCL",
-            "fillStyle": "solid",
-            "strokeWidth": 2,
-            "strokeStyle": "solid",
-            "roughness": 1,
-            "opacity": 100,
-            "angle": 0,
-            "x": 635.1076866998219,
-            "y": 739.923441140242,
-            "strokeColor": "#1e1e1e",
-            "backgroundColor": "transparent",
-            "width": 189.84375,
-            "height": 43.199999999999996,
-            "seed": 575351575,
-            "groupIds": [
-
-            ],
-            "frameId": null,
-            "roundness": null,
-            "boundElements": [
-
-            ],
-            "updated": 1760476353239,
-            "link": null,
-            "locked": false,
-            "fontSize": 36,
-            "fontFamily": 3,
-            "text": "Body Font",
-            "textAlign": "center",
-            "verticalAlign": "top",
-            "containerId": null,
-            "originalText": "Body Font",
-            "lineHeight": 1.2,
-            "baseline": 35
+            "type": "text",
+            "position": {
+              "x": 835.1076866998219,
+              "y": 721.923441140242
+            },
+            "data": {
+              "text": "Body Font",
+              "fontColor": "#1e1e1e",
+              "fontSize": "large",
+              "showHandles": false
+            },
+            "measured": {
+              "width": 119,
+              "height": 47
+            },
+            "dragging": false,
+            "selected": true,
+            "domAttributes": {
+              "tabIndex": 0
+            }
           },
           {
-            "type": "text",
-            "version": 273,
-            "versionNonce": 1312455385,
-            "isDeleted": false,
             "id": "k8HhR1tdIxIvwd0wo4UK4",
-            "fillStyle": "solid",
-            "strokeWidth": 2,
-            "strokeStyle": "solid",
-            "roughness": 1,
-            "opacity": 100,
-            "angle": 0,
-            "x": 1164.0072799826548,
-            "y": 549.0866572698885,
-            "strokeColor": "#1e1e1e",
-            "backgroundColor": "transparent",
-            "width": 474.26385498046875,
-            "height": 45,
-            "seed": 537112631,
-            "groupIds": [
-
-            ],
-            "frameId": null,
-            "roundness": null,
-            "boundElements": [
-
-            ],
-            "updated": 1760476353240,
-            "link": null,
-            "locked": false,
-            "fontSize": 36,
-            "fontFamily": 1,
-            "text": " https://fonts.google.com/ ",
-            "textAlign": "center",
-            "verticalAlign": "top",
-            "containerId": null,
-            "originalText": " https://fonts.google.com/ ",
-            "lineHeight": 1.25,
-            "baseline": 32
+            "type": "text",
+            "position": {
+              "x": 1234.0072799826548,
+              "y": 535.0866572698885
+            },
+            "data": {
+              "text": " https://fonts.google.com/ ",
+              "fontColor": "#1e1e1e",
+              "fontSize": "large",
+              "showHandles": false
+            },
+            "measured": {
+              "width": 285,
+              "height": 47
+            },
+            "dragging": false,
+            "selected": true,
+            "domAttributes": {
+              "tabIndex": 0
+            }
           },
           {
-            "type": "text",
-            "version": 269,
-            "versionNonce": 618789687,
-            "isDeleted": false,
             "id": "QQ14kVgTK1ZQvkKVs08Ju",
-            "fillStyle": "solid",
-            "strokeWidth": 2,
-            "strokeStyle": "solid",
-            "roughness": 1,
-            "opacity": 100,
-            "angle": 0,
-            "x": 634.8456371483053,
-            "y": 936.9663844525523,
-            "strokeColor": "#1e1e1e",
-            "backgroundColor": "transparent",
-            "width": 485.15625,
-            "height": 43.199999999999996,
-            "seed": 447648087,
-            "groupIds": [
-
-            ],
-            "frameId": null,
-            "roundness": null,
-            "boundElements": [
-
-            ],
-            "updated": 1760476353242,
-            "link": null,
-            "locked": false,
-            "fontSize": 36,
-            "fontFamily": 3,
-            "text": "Descriptive style words",
-            "textAlign": "center",
-            "verticalAlign": "top",
-            "containerId": null,
-            "originalText": "Descriptive style words",
-            "lineHeight": 1.2,
-            "baseline": 35
+            "type": "text",
+            "position": {
+              "x": 834.8456371483053,
+              "y": 932.9663844525523
+            },
+            "data": {
+              "text": "Descriptive style words",
+              "fontColor": "#1e1e1e",
+              "fontSize": "large",
+              "showHandles": false
+            },
+            "measured": {
+              "width": 248,
+              "height": 47
+            },
+            "dragging": false,
+            "selected": true,
+            "domAttributes": {
+              "tabIndex": 0
+            }
           },
           {
-            "type": "rectangle",
-            "version": 608,
-            "versionNonce": 1210792057,
-            "isDeleted": false,
             "id": "S94c3ayHDXzMV9rGutqK2",
-            "fillStyle": "solid",
-            "strokeWidth": 2,
-            "strokeStyle": "solid",
-            "roughness": 1,
-            "opacity": 100,
-            "angle": 0,
-            "x": 609.054390195573,
-            "y": 1278.0409035286823,
-            "strokeColor": "#1e1e1e",
-            "backgroundColor": "transparent",
-            "width": 1038.3082682871354,
-            "height": 206.80031657457656,
-            "seed": 2074103415,
-            "groupIds": [
-
-            ],
-            "frameId": null,
-            "roundness": null,
-            "boundElements": [
-              {
-                "type": "text",
-                "id": "NIPrWjgmVxv08-q2K-wxl"
-              }
-            ],
-            "updated": 1760476353014,
-            "link": null,
-            "locked": false
-          },
-          {
-            "type": "text",
-            "version": 53,
-            "versionNonce": 1340309559,
-            "isDeleted": false,
-            "id": "NIPrWjgmVxv08-q2K-wxl",
-            "fillStyle": "solid",
-            "strokeWidth": 2,
-            "strokeStyle": "solid",
-            "roughness": 1,
-            "opacity": 100,
-            "angle": 0,
-            "x": 614.054390195573,
-            "y": 1283.0409035286823,
-            "strokeColor": "#1e1e1e",
-            "backgroundColor": "transparent",
-            "width": 914.0625,
-            "height": 48,
-            "seed": 228419479,
-            "groupIds": [
-
-            ],
-            "frameId": null,
-            "roundness": null,
-            "boundElements": [
-
-            ],
-            "updated": 1760476846870,
-            "link": null,
-            "locked": false,
-            "fontSize": 20,
-            "fontFamily": 3,
-            "text": "My design choices for my fictional product connect to the sample user persona \nbecause...",
-            "textAlign": "left",
-            "verticalAlign": "top",
-            "containerId": "S94c3ayHDXzMV9rGutqK2",
-            "originalText": "My design choices for my fictional product connect to the sample user persona because...",
-            "lineHeight": 1.2,
-            "baseline": 44
-          },
-          {
-            "type": "arrow",
-            "version": 182,
-            "versionNonce": 133796601,
-            "isDeleted": false,
-            "id": "kRUCeEOAtg8WqxXaOxw7J",
-            "fillStyle": "solid",
-            "strokeWidth": 4,
-            "strokeStyle": "solid",
-            "roughness": 1,
-            "opacity": 100,
-            "angle": 0,
-            "x": -246.73787144252242,
-            "y": -325.18497454930787,
-            "strokeColor": "#1e1e1e",
-            "backgroundColor": "transparent",
-            "width": 170.66650390625,
-            "height": 527.9999796549477,
-            "seed": 1245337753,
-            "groupIds": [
-
-            ],
-            "frameId": null,
-            "roundness": {
-              "type": 2
+            "type": "shape",
+            "position": {
+              "x": 849.054390195573,
+              "y": 1272.0409035286823
             },
-            "boundElements": [
-
-            ],
-            "updated": 1760476735287,
-            "link": null,
-            "locked": false,
-            "startBinding": null,
-            "endBinding": null,
-            "lastCommittedPoint": null,
-            "startArrowhead": null,
-            "endArrowhead": "arrow",
-            "points": [
-              [
-                0,
-                0
-              ],
-              [
-                -170.66650390625,
-                248.00008138020814
-              ],
-              [
-                -80,
-                527.9999796549477
-              ]
-            ]
+            "style": {
+              "width": 1038.3082682871354,
+              "height": 206.80031657457656
+            },
+            "data": {
+              "shapeType": "rectangle",
+              "label": "My design choices for my fictional product connect to the sample user persona \nbecause...",
+              "backgroundColor": "transparent",
+              "strokeColor": "#1e1e1e",
+              "fontColor": "#1e1e1e",
+              "fontSize": "large"
+            },
+            "measured": {
+              "width": 1038,
+              "height": 207
+            },
+            "selected": true,
+            "domAttributes": {
+              "tabIndex": 0
+            },
+            "dragging": false
           },
           {
-            "type": "text",
-            "version": 101,
-            "versionNonce": 2121485305,
-            "isDeleted": false,
             "id": "F0oAtM1IinZqk-pXr5h6y",
-            "fillStyle": "solid",
-            "strokeWidth": 4,
-            "strokeStyle": "solid",
-            "roughness": 1,
-            "opacity": 100,
-            "angle": 0,
-            "x": 693.3597303118029,
-            "y": 216.41505037338086,
-            "strokeColor": "#1e1e1e",
-            "backgroundColor": "transparent",
-            "width": 253.125,
-            "height": 43.199999999999996,
-            "seed": 304404153,
-            "groupIds": [
-
-            ],
-            "frameId": null,
-            "roundness": null,
-            "boundElements": [
-
-            ],
-            "updated": 1760476772108,
-            "link": null,
-            "locked": false,
-            "fontSize": 36,
-            "fontFamily": 3,
-            "text": "My Brand Kit",
-            "textAlign": "left",
-            "verticalAlign": "top",
-            "containerId": null,
-            "originalText": "My Brand Kit",
-            "lineHeight": 1.2,
-            "baseline": 35
+            "type": "text",
+            "position": {
+              "x": 925.3597303118029,
+              "y": 160.41505037338086
+            },
+            "data": {
+              "text": "My Brand Kit",
+              "fontColor": "#1e1e1e",
+              "fontSize": "large",
+              "showHandles": false
+            },
+            "measured": {
+              "width": 143,
+              "height": 47
+            },
+            "dragging": false,
+            "selected": false,
+            "domAttributes": {
+              "tabIndex": -1
+            }
           },
           {
-            "type": "text",
-            "version": 1179,
-            "versionNonce": 1873532101,
-            "isDeleted": false,
             "id": "Ys_JK_E726uD988qD8sI-",
-            "fillStyle": "solid",
-            "strokeWidth": 2,
-            "strokeStyle": "solid",
-            "roughness": 1,
-            "opacity": 100,
-            "angle": 0,
-            "x": -920.7116716148676,
-            "y": -106.01886111428641,
-            "strokeColor": "#1e1e1e",
-            "backgroundColor": "transparent",
-            "width": 451.1296081542969,
-            "height": 65.57717494836277,
-            "seed": 1415267031,
-            "groupIds": [
-
-            ],
-            "frameId": null,
-            "roundness": null,
-            "boundElements": [
-
-            ],
-            "updated": 1774626995540,
-            "link": null,
-            "locked": false,
-            "fontSize": 26.23086997934511,
-            "fontFamily": 1,
-            "text": "Drag your product and persona\ndown into the Brand Kit workspace",
-            "textAlign": "left",
-            "verticalAlign": "top",
-            "containerId": null,
-            "originalText": "Drag your product and persona\ndown into the Brand Kit workspace",
-            "lineHeight": 1.25,
-            "baseline": 55
+            "type": "text",
+            "position": {
+              "x": -620.7116716148676,
+              "y": -782.0188611142864
+            },
+            "data": {
+              "text": "Drag your product and persona\ndown into the Brand Kit workspace",
+              "fontColor": "#1e1e1e",
+              "fontSize": "large",
+              "showHandles": false
+            },
+            "measured": {
+              "width": 361,
+              "height": 75
+            },
+            "dragging": false,
+            "selected": false,
+            "domAttributes": {
+              "tabIndex": -1
+            }
           },
           {
-            "type": "rectangle",
-            "version": 314,
-            "versionNonce": 1292232683,
-            "isDeleted": false,
             "id": "h9GduFxJZVC529uOQ3dxV",
-            "fillStyle": "solid",
-            "strokeWidth": 2,
-            "strokeStyle": "solid",
-            "roughness": 1,
-            "opacity": 100,
-            "angle": 0,
-            "x": 36.70141715402809,
-            "y": -824.2530241824229,
-            "strokeColor": "#1e1e1e",
-            "backgroundColor": "transparent",
-            "width": 1537.7967861824775,
-            "height": 262.3999633789062,
-            "seed": 1839847383,
-            "groupIds": [
-
-            ],
-            "frameId": null,
-            "roundness": {
-              "type": 3
+            "type": "shape",
+            "position": {
+              "x": 29.048551889293037,
+              "y": -1121.9973133885187
             },
-            "boundElements": [
-
-            ],
-            "updated": 1774627008459,
-            "link": null,
-            "locked": false
+            "style": {
+              "width": 1537.7967861824775,
+              "height": 262.3999633789062
+            },
+            "data": {
+              "shapeType": "rectangle",
+              "label": "",
+              "backgroundColor": "transparent",
+              "strokeColor": "#1e1e1e"
+            },
+            "measured": {
+              "width": 1538,
+              "height": 262
+            },
+            "dragging": false
           },
           {
-            "type": "image",
-            "version": 292,
-            "versionNonce": 1553801285,
-            "isDeleted": false,
             "id": "-OIxLHQlZIZm3Ekc62dGR",
-            "fillStyle": "solid",
-            "strokeWidth": 2,
-            "strokeStyle": "solid",
-            "roughness": 1,
-            "opacity": 100,
-            "angle": 0,
-            "x": 148.33642892920187,
-            "y": -795.7035311448451,
-            "strokeColor": "transparent",
-            "backgroundColor": "transparent",
-            "width": 141.79447843420633,
-            "height": 141.79447843420633,
-            "seed": 208585975,
-            "groupIds": [
-
-            ],
-            "frameId": null,
-            "roundness": null,
-            "boundElements": [
-
-            ],
-            "updated": 1774627008459,
-            "link": null,
-            "locked": false,
-            "status": "pending",
-            "fileId": "59d7aead4526d6cb860cbbb1be5ae4b4ac4433af",
-            "scale": [
-              1,
-              1
-            ]
+            "type": "image",
+            "position": {
+              "x": 121.55140050262943,
+              "y": -1111.3842233151631
+            },
+            "style": {
+              "width": 141.79447843420633,
+              "height": 141.79447843420633
+            },
+            "data": {
+              "src": "/level_starter_assets/ai-generated-design-lesson5-level2a_2026/uuid/59d7aead4526d6cb860cbbb1be5ae4b4ac4433af.png",
+              "altText": "",
+              "showHandles": false
+            },
+            "measured": {
+              "width": 142,
+              "height": 142
+            },
+            "dragging": false
           },
           {
-            "type": "image",
-            "version": 374,
-            "versionNonce": 527938187,
-            "isDeleted": false,
             "id": "PQ0LGrpR2iMIuMGOfsQEM",
-            "fillStyle": "solid",
-            "strokeWidth": 2,
-            "strokeStyle": "solid",
-            "roughness": 1,
-            "opacity": 100,
-            "angle": 0,
-            "x": 531.5482647779586,
-            "y": -785.9084337467932,
-            "strokeColor": "transparent",
-            "backgroundColor": "transparent",
-            "width": 138.26839410672196,
-            "height": 138.26839410672196,
-            "seed": 1113404215,
-            "groupIds": [
-
-            ],
-            "frameId": null,
-            "roundness": null,
-            "boundElements": [
-
-            ],
-            "updated": 1774627008459,
-            "link": null,
-            "locked": false,
-            "status": "pending",
-            "fileId": "1ae69ed99ea747b302c2690e06edc05f502c7210",
-            "scale": [
-              1,
-              1
-            ]
+            "type": "image",
+            "position": {
+              "x": 510.50288529993736,
+              "y": -1113.068423814214
+            },
+            "style": {
+              "width": 138.26839410672196,
+              "height": 138.26839410672196
+            },
+            "data": {
+              "src": "/level_starter_assets/ai-generated-design-lesson5-level2a_2026/uuid/1ae69ed99ea747b302c2690e06edc05f502c7210.png",
+              "altText": "",
+              "showHandles": false
+            },
+            "measured": {
+              "width": 138,
+              "height": 138
+            },
+            "dragging": false
           },
           {
-            "type": "image",
-            "version": 378,
-            "versionNonce": 2063257509,
-            "isDeleted": false,
             "id": "adOI2t44O4OJFMFr0CpvU",
-            "fillStyle": "solid",
-            "strokeWidth": 2,
-            "strokeStyle": "solid",
-            "roughness": 1,
-            "opacity": 100,
-            "angle": 0,
-            "x": 897.1206463309009,
-            "y": -800.5745232252723,
-            "strokeColor": "transparent",
-            "backgroundColor": "transparent",
-            "width": 166.80040347886504,
-            "height": 166.80040347886504,
-            "seed": 1558164567,
-            "groupIds": [
-
-            ],
-            "frameId": null,
-            "roundness": null,
-            "boundElements": [
-
-            ],
-            "updated": 1774627008459,
-            "link": null,
-            "locked": false,
-            "status": "pending",
-            "fileId": "82b62e0b57816313bdfd528953a908318e888ee9",
-            "scale": [
-              1,
-              1
-            ]
-          },
-          {
-            "type": "text",
-            "version": 251,
-            "versionNonce": 1654073643,
-            "isDeleted": false,
-            "id": "4UQnwfP18sXnEfANRmRCF",
-            "fillStyle": "solid",
-            "strokeWidth": 2,
-            "strokeStyle": "solid",
-            "roughness": 1,
-            "opacity": 100,
-            "angle": 0,
-            "x": 843.8712343982279,
-            "y": -631.162282082194,
-            "strokeColor": "#1e1e1e",
-            "backgroundColor": "transparent",
-            "width": 304.6875,
-            "height": 48,
-            "seed": 1102385527,
-            "groupIds": [
-
-            ],
-            "frameId": null,
-            "roundness": null,
-            "boundElements": [
-
-            ],
-            "updated": 1774627008459,
-            "link": null,
-            "locked": false,
-            "fontSize": 20,
-            "fontFamily": 3,
-            "text": "WaveNote \n(voice-to-notes for class)",
-            "textAlign": "center",
-            "verticalAlign": "top",
-            "containerId": null,
-            "originalText": "WaveNote \n(voice-to-notes for class)",
-            "lineHeight": 1.2,
-            "baseline": 44
-          },
-          {
-            "type": "text",
-            "version": 406,
-            "versionNonce": 346788613,
-            "isDeleted": false,
-            "id": "nSU2C0BBsgZR4CoV6VS6n",
-            "fillStyle": "solid",
-            "strokeWidth": 2,
-            "strokeStyle": "solid",
-            "roughness": 1,
-            "opacity": 100,
-            "angle": 0,
-            "x": 439.38056755244935,
-            "y": -632.0880272360248,
-            "strokeColor": "#1e1e1e",
-            "backgroundColor": "transparent",
-            "width": 328.125,
-            "height": 72,
-            "seed": 1512163991,
-            "groupIds": [
-
-            ],
-            "frameId": null,
-            "roundness": null,
-            "boundElements": [
-
-            ],
-            "updated": 1774627008459,
-            "link": null,
-            "locked": false,
-            "fontSize": 20,
-            "fontFamily": 3,
-            "text": "SnapStudy \n(study timer + focus sounds)\n",
-            "textAlign": "center",
-            "verticalAlign": "top",
-            "containerId": null,
-            "originalText": "SnapStudy \n(study timer + focus sounds)\n",
-            "lineHeight": 1.2,
-            "baseline": 68
-          },
-          {
-            "type": "text",
-            "version": 267,
-            "versionNonce": 198101963,
-            "isDeleted": false,
-            "id": "fK7ZEmm9EnxTj3og1E9J8",
-            "fillStyle": "solid",
-            "strokeWidth": 2,
-            "strokeStyle": "solid",
-            "roughness": 1,
-            "opacity": 100,
-            "angle": 0,
-            "x": 1270.0073000858765,
-            "y": -629.537502752461,
-            "strokeColor": "#1e1e1e",
-            "backgroundColor": "transparent",
-            "width": 222.65625,
-            "height": 72,
-            "seed": 1926913975,
-            "groupIds": [
-
-            ],
-            "frameId": null,
-            "roundness": null,
-            "boundElements": [
-
-            ],
-            "updated": 1774627008459,
-            "link": null,
-            "locked": false,
-            "fontSize": 20,
-            "fontFamily": 3,
-            "text": "Patch & Play \n(eco sneaker brand)\n",
-            "textAlign": "center",
-            "verticalAlign": "top",
-            "containerId": null,
-            "originalText": "Patch & Play \n(eco sneaker brand)\n",
-            "lineHeight": 1.2,
-            "baseline": 68
-          },
-          {
-            "type": "text",
-            "version": 435,
-            "versionNonce": 1982655077,
-            "isDeleted": false,
-            "id": "Hru-tHG2zdrZgdZI0fxl6",
-            "fillStyle": "solid",
-            "strokeWidth": 2,
-            "strokeStyle": "solid",
-            "roughness": 1,
-            "opacity": 100,
-            "angle": 0,
-            "x": 101.65211171999027,
-            "y": -629.5374541061806,
-            "strokeColor": "#1e1e1e",
-            "backgroundColor": "transparent",
-            "width": 246.09375,
-            "height": 48,
-            "seed": 1308840151,
-            "groupIds": [
-
-            ],
-            "frameId": null,
-            "roundness": null,
-            "boundElements": [
-
-            ],
-            "updated": 1774627008459,
-            "link": null,
-            "locked": false,
-            "fontSize": 20,
-            "fontFamily": 3,
-            "text": "Spark Smoothie Bar \n(on-campus smoothies)",
-            "textAlign": "center",
-            "verticalAlign": "top",
-            "containerId": null,
-            "originalText": "Spark Smoothie Bar \n(on-campus smoothies)",
-            "lineHeight": 1.2,
-            "baseline": 44
-          },
-          {
             "type": "image",
-            "version": 224,
-            "versionNonce": 2134448747,
-            "isDeleted": false,
+            "position": {
+              "x": 895.207430014717,
+              "y": -1120.081648027958
+            },
+            "style": {
+              "width": 166.80040347886504,
+              "height": 166.80040347886504
+            },
+            "data": {
+              "src": "/level_starter_assets/ai-generated-design-lesson5-level2a_2026/uuid/82b62e0b57816313bdfd528953a908318e888ee9.png",
+              "altText": "",
+              "showHandles": false
+            },
+            "measured": {
+              "width": 167,
+              "height": 167
+            },
+            "dragging": false
+          },
+          {
+            "id": "4UQnwfP18sXnEfANRmRCF",
+            "type": "text",
+            "position": {
+              "x": 838.1315854496767,
+              "y": -950.6694068848797
+            },
+            "data": {
+              "text": "WaveNote \n(voice-to-notes for class)",
+              "fontColor": "#1e1e1e",
+              "fontSize": "large",
+              "showHandles": false
+            },
+            "measured": {
+              "width": 269,
+              "height": 75
+            },
+            "dragging": false,
+            "selected": true,
+            "domAttributes": {
+              "tabIndex": 0
+            }
+          },
+          {
+            "id": "nSU2C0BBsgZR4CoV6VS6n",
+            "type": "text",
+            "position": {
+              "x": 431.7277022877144,
+              "y": -947.7687194063429
+            },
+            "data": {
+              "text": "SnapStudy \n(study timer + focus sounds)\n",
+              "fontColor": "#1e1e1e",
+              "fontSize": "large",
+              "showHandles": false
+            },
+            "measured": {
+              "width": 302,
+              "height": 75
+            },
+            "dragging": false,
+            "selected": true,
+            "domAttributes": {
+              "tabIndex": 0
+            }
+          },
+          {
+            "id": "fK7ZEmm9EnxTj3og1E9J8",
+            "type": "text",
+            "position": {
+              "x": 1264.2676511373252,
+              "y": -960.5239254522492
+            },
+            "data": {
+              "text": "Patch & Play \n(eco sneaker brand)\n",
+              "fontColor": "#1e1e1e",
+              "fontSize": "large",
+              "showHandles": false
+            },
+            "measured": {
+              "width": 213,
+              "height": 75
+            },
+            "dragging": false,
+            "selected": true,
+            "domAttributes": {
+              "tabIndex": 0
+            }
+          },
+          {
+            "id": "Hru-tHG2zdrZgdZI0fxl6",
+            "type": "text",
+            "position": {
+              "x": 63.38778539631535,
+              "y": -939.4784973279475
+            },
+            "data": {
+              "text": "Spark Smoothie Bar \n(on-campus smoothies)",
+              "fontColor": "#1e1e1e",
+              "fontSize": "large",
+              "showHandles": false
+            },
+            "measured": {
+              "width": 253,
+              "height": 75
+            },
+            "dragging": false,
+            "selected": true,
+            "domAttributes": {
+              "tabIndex": 0
+            }
+          },
+          {
             "id": "M66NANWMyVsSUhf2Z4Vp9",
-            "fillStyle": "solid",
-            "strokeWidth": 2,
-            "strokeStyle": "solid",
-            "roughness": 1,
-            "opacity": 100,
-            "angle": 0,
-            "x": 1281.158261993315,
-            "y": -805.5668827419479,
-            "strokeColor": "transparent",
-            "backgroundColor": "transparent",
-            "width": 184.26514403552505,
-            "height": 184.26514403552505,
-            "seed": 1966153207,
-            "groupIds": [
-
-            ],
-            "frameId": null,
-            "roundness": null,
-            "boundElements": [
-
-            ],
-            "updated": 1774627008459,
-            "link": null,
-            "locked": false,
-            "status": "pending",
-            "fileId": "3f53d0ac6624584607dad5048b72e4bbb8aa02a3",
-            "scale": [
-              1,
-              1
-            ]
+            "type": "image",
+            "position": {
+              "x": 1281.158261993315,
+              "y": -1138.46652175792
+            },
+            "style": {
+              "width": 184.26514403552505,
+              "height": 184.26514403552505
+            },
+            "data": {
+              "src": "/level_starter_assets/ai-generated-design-lesson5-level2a_2026/uuid/3f53d0ac6624584607dad5048b72e4bbb8aa02a3.png",
+              "altText": "",
+              "showHandles": false
+            },
+            "measured": {
+              "width": 184,
+              "height": 184
+            },
+            "dragging": false
           },
           {
-            "type": "rectangle",
-            "version": 946,
-            "versionNonce": 1915034277,
-            "isDeleted": false,
             "id": "jkaGdJ9cjochJIL3OtDgQ",
-            "fillStyle": "solid",
-            "strokeWidth": 2,
-            "strokeStyle": "solid",
-            "roughness": 1,
-            "opacity": 100,
-            "angle": 0,
-            "x": 68.83483477756005,
-            "y": -473.5750202022203,
-            "strokeColor": "#1e1e1e",
-            "backgroundColor": "#fff5f5",
-            "width": 334.7691678784647,
-            "height": 556.7092075584368,
-            "seed": 1595755575,
-            "groupIds": [
-
-            ],
-            "frameId": null,
-            "roundness": {
-              "type": 3
+            "type": "shape",
+            "position": {
+              "x": 44.83483477756005,
+              "y": -755.7552487401698
             },
-            "boundElements": [
-              {
-                "type": "text",
-                "id": "k-UE9ayBwdHnKJQg2iFnd"
-              }
-            ],
-            "updated": 1774627013174,
-            "link": null,
-            "locked": false
+            "style": {
+              "width": 334.7691678784647,
+              "height": 556.7092075584368
+            },
+            "data": {
+              "shapeType": "rectangle",
+              "label": "User Persona #1\n\nWho she is: Varsity winger \n+ part-time barista. Ten-\nminute passing periods are \nher whole window.\n\nHabits & prefs: Saves \nfavorite orders; lactose-\nsensitive; lives in Notes \nand Reminders; cracked \niPhone screen.\n\nNeeds: Speed, price \nclarity, and simple choices\nthat don’t derail her day.\n\n",
+              "backgroundColor": "#fff5f5",
+              "strokeColor": "#1e1e1e",
+              "fontColor": "#1e1e1e",
+              "fontSize": "large"
+            },
+            "measured": {
+              "width": 515,
+              "height": 615
+            },
+            "selected": true,
+            "domAttributes": {
+              "tabIndex": 0
+            },
+            "dragging": false,
+            "width": 515,
+            "height": 615,
+            "resizing": false
           },
           {
-            "type": "text",
-            "version": 98,
-            "versionNonce": 38473259,
-            "isDeleted": false,
-            "id": "k-UE9ayBwdHnKJQg2iFnd",
-            "fillStyle": "solid",
-            "strokeWidth": 2,
-            "strokeStyle": "solid",
-            "roughness": 1,
-            "opacity": 100,
-            "angle": 0,
-            "x": 78.0162937167924,
-            "y": -468.5750202022203,
-            "strokeColor": "#1e1e1e",
-            "backgroundColor": "#fff5f5",
-            "width": 316.40625,
-            "height": 432,
-            "seed": 2083827031,
-            "groupIds": [
-
-            ],
-            "frameId": null,
-            "roundness": null,
-            "boundElements": [
-
-            ],
-            "updated": 1774627013174,
-            "link": null,
-            "locked": false,
-            "fontSize": 20,
-            "fontFamily": 3,
-            "text": "User Persona #1\n\nWho she is: Varsity winger \n+ part-time barista. Ten-\nminute passing periods are \nher whole window.\n\nHabits & prefs: Saves \nfavorite orders; lactose-\nsensitive; lives in Notes \nand Reminders; cracked \niPhone screen.\n\nNeeds: Speed, price \nclarity, and simple choices\nthat don’t derail her day.\n\n",
-            "textAlign": "center",
-            "verticalAlign": "top",
-            "containerId": "jkaGdJ9cjochJIL3OtDgQ",
-            "originalText": "User Persona #1\n\nWho she is: Varsity winger + part-time barista. Ten-minute passing periods are her whole window.\n\nHabits & prefs: Saves favorite orders; lactose-sensitive; lives in Notes and Reminders; cracked iPhone screen.\n\nNeeds: Speed, price clarity, and simple choices that don’t derail her day.\n\n",
-            "lineHeight": 1.2,
-            "baseline": 428
-          },
-          {
-            "type": "rectangle",
-            "version": 982,
-            "versionNonce": 1716813317,
-            "isDeleted": false,
             "id": "1nZdswJ616y66jjcMI7Eb",
-            "fillStyle": "solid",
-            "strokeWidth": 2,
-            "strokeStyle": "solid",
-            "roughness": 1,
-            "opacity": 100,
-            "angle": 0,
-            "x": 445.0653734446667,
-            "y": -472.419087096718,
-            "strokeColor": "#1e1e1e",
-            "backgroundColor": "#fff5f5",
-            "width": 334.7691678784647,
-            "height": 556.7092075584368,
-            "seed": 2114120311,
-            "groupIds": [
-
-            ],
-            "frameId": null,
-            "roundness": {
-              "type": 3
+            "type": "shape",
+            "position": {
+              "x": 581.3257244961155,
+              "y": -755.460491302513
             },
-            "boundElements": [
-              {
-                "type": "text",
-                "id": "roYElvXNIGKdyLcaaazBC"
-              }
-            ],
-            "updated": 1774627013174,
-            "link": null,
-            "locked": false
+            "style": {
+              "width": 334.7691678784647,
+              "height": 556.7092075584368
+            },
+            "data": {
+              "shapeType": "rectangle",
+              "label": "User Persona #2\n\nWho he is: Practices late, \nstudies later. Earbuds \nalways in, notifications \nmostly off.\n\nHabits & prefs: Dark mode, \nhaptics off, hates sudden \nsounds; likes quiet status \ncues.\n\nNeeds: Low-glare UI, gentle\nfeedback, and control over \nalerts.\n",
+              "backgroundColor": "#fff5f5",
+              "strokeColor": "#1e1e1e",
+              "fontColor": "#1e1e1e",
+              "fontSize": "large"
+            },
+            "measured": {
+              "width": 521,
+              "height": 611
+            },
+            "dragging": false,
+            "selected": true,
+            "domAttributes": {
+              "tabIndex": 0
+            },
+            "width": 521,
+            "height": 611,
+            "resizing": false
           },
           {
-            "type": "text",
-            "version": 20,
-            "versionNonce": 901648587,
-            "isDeleted": false,
-            "id": "roYElvXNIGKdyLcaaazBC",
-            "fillStyle": "solid",
-            "strokeWidth": 2,
-            "strokeStyle": "solid",
-            "roughness": 1,
-            "opacity": 100,
-            "angle": 0,
-            "x": 454.24683238389906,
-            "y": -467.419087096718,
-            "strokeColor": "#1e1e1e",
-            "backgroundColor": "#fff5f5",
-            "width": 316.40625,
-            "height": 384,
-            "seed": 1632404375,
-            "groupIds": [
-
-            ],
-            "frameId": null,
-            "roundness": null,
-            "boundElements": [
-
-            ],
-            "updated": 1774627013174,
-            "link": null,
-            "locked": false,
-            "fontSize": 20,
-            "fontFamily": 3,
-            "text": "User Persona #2\n\nWho he is: Practices late, \nstudies later. Earbuds \nalways in, notifications \nmostly off.\n\nHabits & prefs: Dark mode, \nhaptics off, hates sudden \nsounds; likes quiet status \ncues.\n\nNeeds: Low-glare UI, gentle\nfeedback, and control over \nalerts.\n",
-            "textAlign": "center",
-            "verticalAlign": "top",
-            "containerId": "1nZdswJ616y66jjcMI7Eb",
-            "originalText": "User Persona #2\n\nWho he is: Practices late, studies later. Earbuds always in, notifications mostly off.\n\nHabits & prefs: Dark mode, haptics off, hates sudden sounds; likes quiet status cues.\n\nNeeds: Low-glare UI, gentle feedback, and control over alerts.\n",
-            "lineHeight": 1.2,
-            "baseline": 380
-          },
-          {
-            "type": "rectangle",
-            "version": 982,
-            "versionNonce": 427849061,
-            "isDeleted": false,
             "id": "xXobLZZrnAVOSQjakU9p7",
-            "fillStyle": "solid",
-            "strokeWidth": 2,
-            "strokeStyle": "solid",
-            "roughness": 1,
-            "opacity": 100,
-            "angle": 0,
-            "x": 827.3641690081533,
-            "y": -470.901878194656,
-            "strokeColor": "#1e1e1e",
-            "backgroundColor": "#fff5f5",
-            "width": 334.7691678784647,
-            "height": 556.7092075584368,
-            "seed": 373684407,
-            "groupIds": [
-
-            ],
-            "frameId": null,
-            "roundness": {
-              "type": 3
+            "type": "shape",
+            "position": {
+              "x": 1129.3641690081533,
+              "y": -754.901878194656
             },
-            "boundElements": [
-              {
-                "type": "text",
-                "id": "phJXVQvoSGiG1_UAc-q_I"
-              }
-            ],
-            "updated": 1774627013174,
-            "link": null,
-            "locked": false
+            "style": {
+              "width": 334.7691678784647,
+              "height": 556.7092075584368
+            },
+            "data": {
+              "shapeType": "rectangle",
+              "label": "User Persona #3\n\nWho he is: Juggles class, \nwork, and family errands. \nBilingual \n(Spanish/English).\n\nHabits & prefs: Uses school\nChromebook + budget \nAndroid; watches how-to \nclips.\n\nNeeds: Step-by-step flows, \nbilingual support, works-\non-anything reliability.\n",
+              "backgroundColor": "#fff5f5",
+              "strokeColor": "#1e1e1e",
+              "fontColor": "#1e1e1e",
+              "fontSize": "large"
+            },
+            "measured": {
+              "width": 507,
+              "height": 611
+            },
+            "selected": true,
+            "domAttributes": {
+              "tabIndex": 0
+            },
+            "width": 507,
+            "height": 611,
+            "resizing": false,
+            "dragging": false
           },
           {
-            "type": "text",
-            "version": 19,
-            "versionNonce": 351780715,
-            "isDeleted": false,
-            "id": "phJXVQvoSGiG1_UAc-q_I",
-            "fillStyle": "solid",
-            "strokeWidth": 2,
-            "strokeStyle": "solid",
-            "roughness": 1,
-            "opacity": 100,
-            "angle": 0,
-            "x": 836.5456279473857,
-            "y": -465.901878194656,
-            "strokeColor": "#1e1e1e",
-            "backgroundColor": "#fff5f5",
-            "width": 316.40625,
-            "height": 384,
-            "seed": 311675351,
-            "groupIds": [
-
-            ],
-            "frameId": null,
-            "roundness": null,
-            "boundElements": [
-
-            ],
-            "updated": 1774627013174,
-            "link": null,
-            "locked": false,
-            "fontSize": 20,
-            "fontFamily": 3,
-            "text": "User Persona #3\n\nWho he is: Juggles class, \nwork, and family errands. \nBilingual \n(Spanish/English).\n\nHabits & prefs: Uses school\nChromebook + budget \nAndroid; watches how-to \nclips.\n\nNeeds: Step-by-step flows, \nbilingual support, works-\non-anything reliability.\n",
-            "textAlign": "center",
-            "verticalAlign": "top",
-            "containerId": "xXobLZZrnAVOSQjakU9p7",
-            "originalText": "User Persona #3\n\nWho he is: Juggles class, work, and family errands. Bilingual (Spanish/English).\n\nHabits & prefs: Uses school Chromebook + budget Android; watches how-to clips.\n\nNeeds: Step-by-step flows, bilingual support, works-on-anything reliability.\n",
-            "lineHeight": 1.2,
-            "baseline": 380
-          },
-          {
-            "type": "rectangle",
-            "version": 1072,
-            "versionNonce": 653689029,
-            "isDeleted": false,
             "id": "q1eJtc9XsNJCxfkP76c6L",
-            "fillStyle": "solid",
-            "strokeWidth": 2,
-            "strokeStyle": "solid",
-            "roughness": 1,
-            "opacity": 100,
-            "angle": 0,
-            "x": 1211.1798841177686,
-            "y": -475.4531576737215,
-            "strokeColor": "#1e1e1e",
-            "backgroundColor": "#fff5f5",
-            "width": 334.7691678784647,
-            "height": 556.7092075584368,
-            "seed": 592082679,
-            "groupIds": [
-
-            ],
-            "frameId": null,
-            "roundness": {
-              "type": 3
+            "type": "shape",
+            "position": {
+              "x": 1665.1798841177686,
+              "y": -755.4531576737215
             },
-            "boundElements": [
-              {
-                "type": "text",
-                "id": "7XVsjimt8GOS-KTZPuBhO"
-              }
-            ],
-            "updated": 1774627013174,
-            "link": null,
-            "locked": false
-          },
-          {
-            "type": "text",
-            "version": 21,
-            "versionNonce": 1245878795,
-            "isDeleted": false,
-            "id": "7XVsjimt8GOS-KTZPuBhO",
-            "fillStyle": "solid",
-            "strokeWidth": 2,
-            "strokeStyle": "solid",
-            "roughness": 1,
-            "opacity": 100,
-            "angle": 0,
-            "x": 1226.2207180570008,
-            "y": -470.4531576737215,
-            "strokeColor": "#1e1e1e",
-            "backgroundColor": "#fff5f5",
-            "width": 304.6875,
-            "height": 360,
-            "seed": 2129559575,
-            "groupIds": [
-
-            ],
-            "frameId": null,
-            "roundness": null,
-            "boundElements": [
-
-            ],
-            "updated": 1774627013174,
-            "link": null,
-            "locked": false,
-            "fontSize": 20,
-            "fontFamily": 3,
-            "text": "User Persona #4\n\nWho she is: Club officer, \ngroup-chat admin, event \nplanner in sneakers.\n\nHabits & prefs: Makes \nshared docs; loves \ntemplates; posts recaps, \nnot selfies.\n\nNeeds: Easy ways to \ncoordinate, share, and \ncelebrate together.\n",
-            "textAlign": "center",
-            "verticalAlign": "top",
-            "containerId": "q1eJtc9XsNJCxfkP76c6L",
-            "originalText": "User Persona #4\n\nWho she is: Club officer, group-chat admin, event planner in sneakers.\n\nHabits & prefs: Makes shared docs; loves templates; posts recaps, not selfies.\n\nNeeds: Easy ways to coordinate, share, and celebrate together.\n",
-            "lineHeight": 1.2,
-            "baseline": 356
+            "style": {
+              "width": 334.7691678784647,
+              "height": 556.7092075584368
+            },
+            "data": {
+              "shapeType": "rectangle",
+              "label": "User Persona #4\n\nWho she is: Club officer, \ngroup-chat admin, event \nplanner in sneakers.\n\nHabits & prefs: Makes \nshared docs; loves \ntemplates; posts recaps, \nnot selfies.\n\nNeeds: Easy ways to \ncoordinate, share, and \ncelebrate together.\n",
+              "backgroundColor": "#fff5f5",
+              "strokeColor": "#1e1e1e",
+              "fontColor": "#1e1e1e",
+              "fontSize": "large"
+            },
+            "measured": {
+              "width": 469,
+              "height": 609
+            },
+            "selected": true,
+            "domAttributes": {
+              "tabIndex": 0
+            },
+            "width": 469,
+            "height": 609,
+            "resizing": false,
+            "dragging": false
           }
         ],
-        "appState": {
-          "gridSize": null,
-          "viewBackgroundColor": "#ffffff",
-          "scrollX": 799.4040456242221,
-          "scrollY": 1756.5029006148543,
-          "zoom": {
-            "value": 0.3352373774780337
-          }
-        },
-        "files": {
-          "59d7aead4526d6cb860cbbb1be5ae4b4ac4433af": {
-            "mimeType": "image/png",
-            "id": "59d7aead4526d6cb860cbbb1be5ae4b4ac4433af",
-            "created": 1760472901400,
-            "lastRetrieved": 1760472901400
-          },
-          "1ae69ed99ea747b302c2690e06edc05f502c7210": {
-            "mimeType": "image/png",
-            "id": "1ae69ed99ea747b302c2690e06edc05f502c7210",
-            "created": 1760473297852,
-            "lastRetrieved": 1760473297852
-          },
-          "82b62e0b57816313bdfd528953a908318e888ee9": {
-            "mimeType": "image/png",
-            "id": "82b62e0b57816313bdfd528953a908318e888ee9",
-            "created": 1760473480925,
-            "lastRetrieved": 1760473480925
-          },
-          "3f53d0ac6624584607dad5048b72e4bbb8aa02a3": {
-            "mimeType": "image/png",
-            "id": "3f53d0ac6624584607dad5048b72e4bbb8aa02a3",
-            "created": 1760473790533,
-            "lastRetrieved": 1760473790533
-          }
-        },
-        "externalFiles": {
-          "59d7aead4526d6cb860cbbb1be5ae4b4ac4433af": {
-            "id": "59d7aead4526d6cb860cbbb1be5ae4b4ac4433af",
-            "url": "/level_starter_assets/ai-generated-design-lesson5-level2a_2026/uuid/59d7aead4526d6cb860cbbb1be5ae4b4ac4433af.png",
-            "starterAsset": true,
-            "filenameWithExtension": "59d7aead4526d6cb860cbbb1be5ae4b4ac4433af.png",
-            "uploaded": true
-          },
-          "1ae69ed99ea747b302c2690e06edc05f502c7210": {
-            "id": "1ae69ed99ea747b302c2690e06edc05f502c7210",
-            "url": "/level_starter_assets/ai-generated-design-lesson5-level2a_2026/uuid/1ae69ed99ea747b302c2690e06edc05f502c7210.png",
-            "starterAsset": true,
-            "filenameWithExtension": "1ae69ed99ea747b302c2690e06edc05f502c7210.png",
-            "uploaded": true
-          },
-          "82b62e0b57816313bdfd528953a908318e888ee9": {
-            "id": "82b62e0b57816313bdfd528953a908318e888ee9",
-            "url": "/level_starter_assets/ai-generated-design-lesson5-level2a_2026/uuid/82b62e0b57816313bdfd528953a908318e888ee9.png",
-            "starterAsset": true,
-            "filenameWithExtension": "82b62e0b57816313bdfd528953a908318e888ee9.png",
-            "uploaded": true
-          },
-          "3f53d0ac6624584607dad5048b72e4bbb8aa02a3": {
-            "id": "3f53d0ac6624584607dad5048b72e4bbb8aa02a3",
-            "url": "/level_starter_assets/ai-generated-design-lesson5-level2a_2026/uuid/3f53d0ac6624584607dad5048b72e4bbb8aa02a3.png",
-            "starterAsset": true,
-            "filenameWithExtension": "3f53d0ac6624584607dad5048b72e4bbb8aa02a3.png",
-            "uploaded": true
-          }
+        "edges": [
+
+        ],
+        "viewport": {
+          "x": 326.40890691794993,
+          "y": -3.9374412861714063,
+          "zoom": 0.5
         }
       }
     },
@@ -4035,6 +2950,7 @@
     },
     "name_suffix": "_2026"
   },
-  "audit_log": "[{\"changed_at\":\"2026-02-24T18:11:10.008+00:00\",\"changed\":[\"cloned from \\\"ai-generated-design-lesson5-level2a_2025\\\"\"],\"cloned_from\":\"ai-generated-design-lesson5-level2a_2025\"},{\"changed_at\":\"2026-03-04 21:48:30 +0000\",\"changed\":[\"long_instructions\",\"bubble_choice_description\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-04 21:50:28 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-04 22:01:42 +0000\",\"changed\":[],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-04 22:20:44 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-04 23:16:56 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-05 00:20:28 +0000\",\"changed\":[\"bubble_choice_description\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-05 00:29:35 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-11 19:13:30 +0000\",\"changed\":[\"display_name\",\"bubble_choice_description\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-11 19:17:39 +0000\",\"changed\":[\"display_name\",\"bubble_choice_description\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-11 19:24:03 +0000\",\"changed\":[\"bubble_choice_description\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-27 15:56:54 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-27 19:40:41 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-09 19:00:15 +0000\",\"changed\":[\"project_template_level_name\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-09 19:00:38 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-15 19:10:49 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2026-04-21 21:54:09 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2026-04-24 15:25:48 +0000\",\"changed\":[\"display_name\",\"bubble_choice_description\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-02-24T18:11:10.008+00:00\",\"changed\":[\"cloned from \\\"ai-generated-design-lesson5-level2a_2025\\\"\"],\"cloned_from\":\"ai-generated-design-lesson5-level2a_2025\"},{\"changed_at\":\"2026-03-04 21:48:30 +0000\",\"changed\":[\"long_instructions\",\"bubble_choice_description\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-04 21:50:28 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-04 22:01:42 +0000\",\"changed\":[],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-04 22:20:44 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-04 23:16:56 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-05 00:20:28 +0000\",\"changed\":[\"bubble_choice_description\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-05 00:29:35 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-11 19:13:30 +0000\",\"changed\":[\"display_name\",\"bubble_choice_description\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-11 19:17:39 +0000\",\"changed\":[\"display_name\",\"bubble_choice_description\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-11 19:24:03 +0000\",\"changed\":[\"bubble_choice_description\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-27 15:56:54 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-27 19:40:41 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-09 19:00:15 +0000\",\"changed\":[\"project_template_level_name\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-09 19:00:38 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-15 19:10:49 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2026-04-21 21:54:09 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2026-04-24 15:25:48 +0000\",\"changed\":[\"display_name\",\"bubble_choice_description\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2026-04-30 17:59:52 -0400\",\"changed\":[\"start_sources\"],\"changed_by_id\":1,\"changed_by_email\":\"levelbuilder@dev.com\"},{\"changed_at\":\"2026-04-30 18:03:24 -0400\",\"changed\":[\"start_sources\"],\"changed_by_id\":1,\"changed_by_email\":\"levelbuilder@dev.com\"},{\"changed_at\":\"2026-04-30 18:05:14 -0400\",\"changed\":[\"start_sources\"],\"changed_by_id\":1,\"changed_by_email\":\"levelbuilder@dev.com\"}]"
 }]]></config>
 </Sketchlab>

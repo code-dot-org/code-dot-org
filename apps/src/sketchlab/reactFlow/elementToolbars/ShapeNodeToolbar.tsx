@@ -1,23 +1,25 @@
-import {useReactFlow} from '@xyflow/react';
 import React from 'react';
 
 import {DEFAULT_ROTATION} from '../constants';
 import {ShapeNodeType} from '../types';
 
-import ActionsGroup from './ActionsGroup';
 import FontSizeGroup from './FontSizeGroup';
 import HandleVisibilityToggle from './HandleVisibilityToggle';
 import LockedNotice from './LockedNotice';
+import NodeActionsGroup from './NodeActionsGroup';
 import RotationGroup from './RotationGroup';
 import SwatchGroup from './SwatchGroup';
+import TextAlignGroup from './TextAlignGroup';
 import {
   BACKGROUND_PALETTE,
   DEFAULT_BACKGROUND_COLOR,
   DEFAULT_FONT_COLOR,
   DEFAULT_FONT_SIZE,
+  DEFAULT_TEXT_ALIGN,
   DEFAULT_STROKE_COLOR,
   FontSizeValue,
   STROKE_FONT_PALETTE,
+  TextAlignValue,
 } from './toolbarPalettes';
 import ToolbarShell from './ToolbarShell';
 import {useNodeToolbarData} from './useNodeToolbarData';
@@ -27,10 +29,9 @@ interface ShapeNodeToolbarProps {
 }
 
 export default function ShapeNodeToolbar({nodeId}: ShapeNodeToolbarProps) {
-  const {deleteElements} = useReactFlow();
   const {data, patchNodeData} = useNodeToolbarData<ShapeNodeType>(nodeId);
 
-  const {backgroundColor, strokeColor, fontSize, fontColor} = data;
+  const {backgroundColor, strokeColor, fontSize, fontColor, textAlign} = data;
   const handlesVisible = data.showHandles !== false;
 
   return (
@@ -40,7 +41,7 @@ export default function ShapeNodeToolbar({nodeId}: ShapeNodeToolbarProps) {
       ariaLabel="Shape style"
     >
       {data.locked ? (
-        <LockedNotice nodeId={nodeId} />
+        <LockedNotice onUnlock={() => patchNodeData({locked: false})} />
       ) : (
         <>
           <SwatchGroup
@@ -61,6 +62,13 @@ export default function ShapeNodeToolbar({nodeId}: ShapeNodeToolbarProps) {
               patchNodeData({fontSize: value as FontSizeValue})
             }
           />
+          <TextAlignGroup
+            selectedValue={textAlign ?? DEFAULT_TEXT_ALIGN}
+            onSelect={value =>
+              patchNodeData({textAlign: value as TextAlignValue})
+            }
+            isLongLabel={true}
+          />
           <SwatchGroup
             groupLabel="Font color"
             swatches={STROKE_FONT_PALETTE}
@@ -71,10 +79,7 @@ export default function ShapeNodeToolbar({nodeId}: ShapeNodeToolbarProps) {
             value={data.rotation ?? DEFAULT_ROTATION}
             onChange={degrees => patchNodeData({rotation: degrees})}
           />
-          <ActionsGroup
-            onDelete={() => deleteElements({nodes: [{id: nodeId}]})}
-            onLock={() => patchNodeData({locked: true})}
-          />
+          <NodeActionsGroup nodeId={nodeId} />
           <HandleVisibilityToggle
             visible={handlesVisible}
             onToggle={() => patchNodeData({showHandles: !handlesVisible})}

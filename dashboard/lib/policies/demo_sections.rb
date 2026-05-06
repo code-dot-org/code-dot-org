@@ -2,8 +2,8 @@
 
 class Policies::DemoSections
   DEMO_TYPES = %i[high middle elementary].freeze
-  DRONE_UNIT_NAME = 'allthethings'
-  DRONE_UNIT_GROUP_NAME = 'original-allthethings-course'
+  ALLTHETHINGS_UNIT_NAME = 'allthethings'
+  ALLTHETHINGS_UNIT_GROUP_NAME = 'original-allthethings-course'
 
   DEMO_SECTION_PRESETS = {
     elementary: {
@@ -45,10 +45,11 @@ class Policies::DemoSections
   }.freeze
 
   def self.get_preset(demo_type)
-    preset = DEMO_SECTION_PRESETS[demo_type.to_sym]
+    demo_type = demo_type.to_sym
+    preset = DEMO_SECTION_PRESETS[demo_type]
     return nil unless preset
 
-    preset.merge(curriculum_names(preset))
+    preset.merge(curriculum_names(demo_type, preset))
   end
 
   def self.demo_student_ids(demo_type)
@@ -115,18 +116,24 @@ class Policies::DemoSections
     UnitGroup.get_from_cache(unit_group_name)
   end
 
-  def self.curriculum_names(preset)
+  def self.curriculum_names(demo_type, preset)
     if CDO.rack_env?(:adhoc)
+      unit_overrides = adhoc_curriculum_overrides(CDO.demo_section_units, :demo_section_units)
+      unit_group_overrides = adhoc_curriculum_overrides(
+        CDO.demo_section_unit_groups,
+        :demo_section_unit_groups
+      )
+
       return {
-        unit_name: CDO.demo_section_unit_name,
-        unit_group_name: CDO.demo_section_unit_group_name,
+        unit_name: unit_overrides.fetch(demo_type.to_s, preset[:unit_name]),
+        unit_group_name: unit_group_overrides.fetch(demo_type.to_s, preset[:unit_group_name]),
       }
     end
 
-    if CDO.ci_webserver?
+    if CDO.ci_webserver? || CDO.rack_env?(:test)
       return {
-        unit_name: DRONE_UNIT_NAME,
-        unit_group_name: DRONE_UNIT_GROUP_NAME,
+        unit_name: ALLTHETHINGS_UNIT_NAME,
+        unit_group_name: ALLTHETHINGS_UNIT_GROUP_NAME,
       }
     end
 
@@ -136,5 +143,21 @@ class Policies::DemoSections
     }
   end
 
-  private_class_method :resolve_unit, :resolve_unit_group, :curriculum_names
+  def self.adhoc_curriculum_overrides(overrides, config_name)
+    return {} if overrides.nil?
+    return overrides if overrides.is_a?(Hash)
+
+    Rails.logger.error(
+      "Ignoring malformed CDO.#{config_name} for demo section curriculum overrides: " \
+        "expected Hash, got #{overrides.class}"
+    )
+    {}
+  end
+
+  private_class_method(
+    :resolve_unit,
+    :resolve_unit_group,
+    :curriculum_names,
+    :adhoc_curriculum_overrides
+  )
 end
