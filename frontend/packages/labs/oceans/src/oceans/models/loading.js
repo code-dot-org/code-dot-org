@@ -1,11 +1,10 @@
-import 'idempotent-babel-polyfill';
-import {initRenderer} from '../renderer';
-import {getState, setState} from '../state';
-import {AppMode, Modes} from '../constants';
 import {initFishData} from '../../utils/fishData';
+import KNNTrainer from '../../utils/KNNTrainer';
+import {AppMode, Modes} from '../constants';
 import {getAppMode, $time, finishLoading} from '../helpers';
 import modeHelpers from '../modeHelpers';
-import KNNTrainer from '../../utils/KNNTrainer';
+import {initRenderer} from '../renderer';
+import {getState, setState} from '../state';
 
 export const init = async () => {
   const startTime = $time();
@@ -15,11 +14,11 @@ export const init = async () => {
   const loadTrashImages = [
     AppMode.FishVTrash,
     AppMode.CreaturesVTrash,
-    AppMode.CreaturesVTrashDemo
+    AppMode.CreaturesVTrashDemo,
   ].includes(appModeBase);
   const loadCreatureImages = [
     AppMode.CreaturesVTrash,
-    AppMode.CreaturesVTrashDemo
+    AppMode.CreaturesVTrashDemo,
   ].includes(appModeBase);
 
   if (appModeBase === AppMode.CreaturesVTrashDemo) {

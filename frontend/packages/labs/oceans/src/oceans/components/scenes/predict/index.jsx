@@ -1,30 +1,33 @@
-import React from 'react'
-import Radium from "radium";
+import {
+  faBackward,
+  faForward,
+  faPause,
+  faPlay,
+} from '@fortawesome/free-solid-svg-icons';
+import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
+import Radium from 'radium';
+import React from 'react';
 
-import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
-import {faBackward, faForward, faPause, faPlay} from "@fortawesome/free-solid-svg-icons";
-
-import {getState, setState} from "@ml/oceans/state";
-import {$time, currentRunTime, finishMovement} from "@ml/oceans/helpers";
-import constants, {AppMode, Modes} from "@ml/oceans/constants";
-import modeHelpers from "@ml/oceans/modeHelpers";
-import {Body, Button} from "@ml/oceans/components/common";
-import styles from "@ml/oceans/styles";
-import I18n from "@ml/oceans/i18n";
-
+import {Body, Button} from '@/oceans/components/common';
+import constants, {AppMode, Modes} from '@/oceans/constants';
+import {$time, currentRunTime, finishMovement} from '@/oceans/helpers';
+import I18n from '@/oceans/i18n';
+import modeHelpers from '@/oceans/modeHelpers';
+import {getState, setState} from '@/oceans/state';
+import styles from '@/oceans/styles';
 
 const defaultTimeScale = 1;
 const timeScales = [1, 2];
 const MediaControl = Object.freeze({
   Rewind: 'rewind',
   Play: 'play',
-  FastForward: 'fast-forward'
+  FastForward: 'fast-forward',
 });
 
 let UnwrappedPredict = class Predict extends React.Component {
   state = {
     displayControls: false,
-    timeScale: defaultTimeScale
+    timeScale: defaultTimeScale,
   };
 
   onRun = () => {
@@ -62,7 +65,7 @@ let UnwrappedPredict = class Predict extends React.Component {
       isRunning: !state.isRunning,
       isPaused: !state.isPaused,
       rewind: false,
-      moveTime: constants.defaultMoveTime / defaultTimeScale
+      moveTime: constants.defaultMoveTime / defaultTimeScale,
     });
     this.setState({timeScale: defaultTimeScale});
   };
@@ -77,7 +80,7 @@ let UnwrappedPredict = class Predict extends React.Component {
       rewind,
       isRunning: true,
       isPaused: false,
-      moveTime: constants.defaultMoveTime / timeScale
+      moveTime: constants.defaultMoveTime / timeScale,
     });
     this.setState({timeScale});
   };
@@ -104,7 +107,7 @@ let UnwrappedPredict = class Predict extends React.Component {
               style={[
                 styles.mediaControl,
                 selectedControl === MediaControl.Rewind &&
-                styles.selectedControl
+                  styles.selectedControl,
               ]}
               key={MediaControl.Rewind}
             >
@@ -127,7 +130,7 @@ let UnwrappedPredict = class Predict extends React.Component {
               style={[
                 styles.mediaControl,
                 selectedControl === MediaControl.FastForward &&
-                styles.selectedControl
+                  styles.selectedControl,
               ]}
               key={MediaControl.FastForward}
             >

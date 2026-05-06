@@ -1,10 +1,9 @@
-import 'idempotent-babel-polyfill';
-import {setState, getState} from '../state';
-import {ClassType, AppMode} from '../constants';
+import {generateOcean} from '../../utils/generateOcean';
 import KNNTrainer from '../../utils/KNNTrainer';
 import SVMTrainer from '../../utils/SVMTrainer';
-import {generateOcean} from '../../utils/generateOcean';
+import {ClassType, AppMode} from '../constants';
 import I18n from '../i18n';
+import {setState, getState} from '../state';
 
 const init = () => {
   const state = getState();
@@ -21,13 +20,13 @@ const init = () => {
   if (state.appMode === AppMode.FishVTrash) {
     setState({
       word: I18n.t('fish'),
-      trainingQuestion: I18n.t('isThisAFish')
+      trainingQuestion: I18n.t('isThisAFish'),
     });
   }
   if (state.appMode === AppMode.CreaturesVTrash) {
     setState({
       word: I18n.t('waterCreature'),
-      trainingQuestion: I18n.t('doesThisBelongInWater')
+      trainingQuestion: I18n.t('doesThisBelongInWater'),
     });
   }
 
@@ -35,7 +34,7 @@ const init = () => {
     fishData: generateOcean(100),
     trainingIndex: 0,
     trainer,
-    isRunning: true
+    isRunning: true,
   });
 };
 
@@ -50,7 +49,7 @@ const onClassifyFish = doesLike => {
   const classId = doesLike ? ClassType.Like : ClassType.Dislike;
   state.trainer.addTrainingExample(
     state.fishData[state.trainingIndex],
-    classId
+    classId,
   );
 
   let fishData = [...state.fishData];
@@ -69,7 +68,7 @@ const onClassifyFish = doesLike => {
   setState({
     trainingIndex: state.trainingIndex + 1,
     fishData,
-    isRunning: true
+    isRunning: true,
   });
 
   return true;
@@ -77,5 +76,5 @@ const onClassifyFish = doesLike => {
 
 export default {
   init,
-  onClassifyFish
+  onClassifyFish,
 };

@@ -1,40 +1,77 @@
-import 'idempotent-babel-polyfill';
-import {getState, setState} from './state';
-import constants, {AppMode, Modes, ClassType} from './constants';
+import {fishData} from '../utils/fishData';
+
 import CanvasCache from './canvasCache';
+import constants, {AppMode, Modes, ClassType} from './constants';
 import {
   backgroundPathForMode,
   finishMovement,
   currentRunTime,
   randomInt,
   filterFishComponents,
-  $time
+  $time,
 } from './helpers';
-import {fishData} from '../utils/fishData';
-import colors from './styles/colors';
 import {predictFish} from './models/predict';
+import soundLibrary from './models/soundLibrary';
 import {
   loadAllFishPartImages,
   loadAllSeaCreatureImages,
   loadAllTrashImages,
   initMobilenet,
   FishOceanObject,
-  SeaCreatureOceanObject
+  SeaCreatureOceanObject,
 } from './OceanObject';
-import aiBotClosed from '@public/images/ai-bot/ai-bot-closed.png';
-import aiBotYes from '@public/images/ai-bot/ai-bot-yes.png';
-import aiBotNo from '@public/images/ai-bot/ai-bot-no.png';
-import redScanner from '@public/images/ai-bot/red-scanner.png';
-import greenScanner from '@public/images/ai-bot/green-scanner.png';
-import blueScanner from '@public/images/ai-bot/blue-scanner.png';
-import soundLibrary from './models/soundLibrary';
-import bluePredictionFrame from '@public/images/blue-prediction-frame.png';
-import questionIcon from '@public/images/question-icon.png';
-import greenPredictionFrame from '@public/images/green-prediction-frame.png';
-import checkmarkIcon from '@public/images/checkmark-icon.png';
-import redPredictionFrame from '@public/images/red-prediction-frame.png';
-import banIcon from '@public/images/ban-icon.png';
-import polaroidFrame from '@public/images/polaroid-frame.png';
+import {getState, setState} from './state';
+import colors from './styles/colors';
+
+const aiBotClosed = new URL(
+  '../assets/images/ai-bot/ai-bot-closed.png',
+  import.meta.url,
+).href;
+const aiBotYes = new URL(
+  '../assets/images/ai-bot/ai-bot-yes.png',
+  import.meta.url,
+).href;
+const aiBotNo = new URL(
+  '../assets/images/ai-bot/ai-bot-no.png',
+  import.meta.url,
+).href;
+const redScanner = new URL(
+  '../assets/images/ai-bot/red-scanner.png',
+  import.meta.url,
+).href;
+const greenScanner = new URL(
+  '../assets/images/ai-bot/green-scanner.png',
+  import.meta.url,
+).href;
+const blueScanner = new URL(
+  '../assets/images/ai-bot/blue-scanner.png',
+  import.meta.url,
+).href;
+const bluePredictionFrame = new URL(
+  '../assets/images/blue-prediction-frame.png',
+  import.meta.url,
+).href;
+const questionIcon = new URL(
+  '../assets/images/question-icon.png',
+  import.meta.url,
+).href;
+const greenPredictionFrame = new URL(
+  '../assets/images/green-prediction-frame.png',
+  import.meta.url,
+).href;
+const checkmarkIcon = new URL(
+  '../assets/images/checkmark-icon.png',
+  import.meta.url,
+).href;
+const redPredictionFrame = new URL(
+  '../assets/images/red-prediction-frame.png',
+  import.meta.url,
+).href;
+const banIcon = new URL('../assets/images/ban-icon.png', import.meta.url).href;
+const polaroidFrame = new URL(
+  '../assets/images/polaroid-frame.png',
+  import.meta.url,
+).href;
 
 let prevState = {};
 let currentModeStartTime = $time();
@@ -137,13 +174,13 @@ export const render = () => {
         if (state.biasTextTime) {
           setState({
             canSkipPredict:
-              $time() >= state.biasTextTime + timeBeforeCanSkipBiasText
+              $time() >= state.biasTextTime + timeBeforeCanSkipBiasText,
           });
         }
       } else if (state.isRunning) {
         setState({
           canSkipPredict:
-            $time() >= state.runStartTime + timeBeforeCanSkipPredict
+            $time() >= state.runStartTime + timeBeforeCanSkipPredict,
         });
       }
 
@@ -154,7 +191,7 @@ export const render = () => {
       setState({
         canSkipPond: $time() >= currentModeStartTime + timeBeforeCanSkipPond,
         canSeePondText:
-          $time() >= currentModeStartTime + timeBeforeCanSeePondText
+          $time() >= currentModeStartTime + timeBeforeCanSeePondText,
       });
       break;
   }
@@ -189,7 +226,7 @@ export const drawBackground = state => {
 const loadImage = imgPath => {
   return new Promise((resolve, reject) => {
     const img = new Image();
-    img.addEventListener('load', e => resolve(img));
+    img.addEventListener('load', () => resolve(img));
     img.addEventListener('error', () => {
       reject(new Error(`Failed to load image at #{imgPath}`));
     });
@@ -206,7 +243,7 @@ const loadAllBotImages = async () => {
     likeBot: aiBotYes,
     likeScanner: greenScanner,
     dislikeBot: aiBotNo,
-    dislikeScanner: redScanner
+    dislikeScanner: redScanner,
   };
   let imagePromises = [];
 
@@ -214,7 +251,7 @@ const loadAllBotImages = async () => {
     imagePromises.push(
       loadImage(imagesToLoad[key]).then(img => {
         botImages[key] = img;
-      })
+      }),
     );
   });
 
@@ -230,7 +267,7 @@ const loadAllPredictionImages = async () => {
     likeFrame: greenPredictionFrame,
     likeIcon: checkmarkIcon,
     dislikeFrame: redPredictionFrame,
-    dislikeIcon: banIcon
+    dislikeIcon: banIcon,
   };
   let imagePromises = [];
 
@@ -238,7 +275,7 @@ const loadAllPredictionImages = async () => {
     imagePromises.push(
       loadImage(imagesToLoad[key]).then(img => {
         predictionImages[key] = img;
-      })
+      }),
     );
   });
 
@@ -321,11 +358,11 @@ const drawMovingFish = state => {
       : constants.canvasWidth + constants.fishCanvasWidth;
   const startFishIdx = Math.max(
     getFishIdxForLocation(maxScreenX, offsetX, state.fishData.length),
-    0
+    0,
   );
   const lastFishIdx = Math.min(
     getFishIdxForLocation(0, offsetX, state.fishData.length),
-    state.fishData.length - 1
+    state.fishData.length - 1,
   );
   const ctx = state.canvas.getContext('2d');
   const midScreenX = constants.canvasWidth / 2 - constants.fishCanvasWidth / 2;
@@ -339,7 +376,7 @@ const drawMovingFish = state => {
       i,
       state,
       offsetX,
-      fish.getResult() ? fish.getResult().predictedClassId : false
+      fish.getResult() ? fish.getResult().predictedClassId : false,
     );
 
     let drawPrediction = false;
@@ -427,7 +464,7 @@ const drawPolaroid = (ctx, x, y, size = 1) => {
     adjustedY - padding,
     rectSize + padding * 2,
     rectSize + paddingBottom,
-    colors.white
+    colors.white,
   );
   // Dark grey inner polaroid frame (where item is displayed)
   DrawRect(adjustedX, adjustedY, rectSize, rectSize, colors.darkGrey);
@@ -596,7 +633,7 @@ const drawPondFishImages = () => {
     if (t > pondFishTransitionTime) {
       setState({
         showRecallFish: !state.showRecallFish,
-        pondFishTransitionStartTime: null
+        pondFishTransitionStartTime: null,
       });
     }
   }
@@ -634,7 +671,7 @@ const drawPondFishImages = () => {
         // Record this screen location so that we can separately check for clicks on it.
         fishBounds.push({
           fishId: fish.id,
-          ...fishBound
+          ...fishBound,
         });
       }
     });
@@ -654,7 +691,7 @@ const drawSingleFish = (
   ctx,
   size = 1,
   withPrediction = false,
-  withPolaroid = false
+  withPolaroid = false,
 ) => {
   const [fishCanvas, hit] = canvasCache.getCanvas(fish.id);
   if (!hit) {
@@ -681,7 +718,7 @@ const drawSingleFish = (
       ctx,
       adjustedFishXPos,
       adjustedFishYPos,
-      fish.getResult().predictedClassId
+      fish.getResult().predictedClassId,
     );
   }
 
@@ -751,7 +788,7 @@ window.requestAnimFrame = (() => {
     window.mozRequestAnimationFrame ||
     window.oRequestAnimationFrame ||
     window.msRequestAnimationFrame ||
-    function(/* function */ callback, /* DOMElement */ element) {
+    function (/* function */ callback) {
       window.setTimeout(callback, 1000 / 60);
     }
   );

@@ -1,10 +1,10 @@
+import PropTypes from 'prop-types';
+import Radium from 'radium';
 import React from 'react';
-import Radium from "radium";
-import PropTypes from "prop-types";
 
-import guide from "@ml/oceans/models/guide";
-import soundLibrary from "@ml/oceans/models/soundLibrary";
-import styles from "@ml/oceans/styles";
+import guide from '@/oceans/models/guide';
+import soundLibrary from '@/oceans/models/soundLibrary';
+import styles from '@/oceans/styles';
 
 const UnwrappedButton = class Button extends React.Component {
   static propTypes = {
@@ -12,7 +12,7 @@ const UnwrappedButton = class Button extends React.Component {
     style: PropTypes.object,
     children: PropTypes.node,
     onClick: PropTypes.func,
-    sound: PropTypes.string
+    sound: PropTypes.string,
   };
 
   onClick = event => {

@@ -1,17 +1,20 @@
-import React from 'react';
 import PropTypes from 'prop-types';
+import React from 'react';
 
-import styles from '@ml/oceans/styles';
-import guide from '@ml/oceans/models/guide';
-import Guide from '@ml/oceans/components/common/Guide';
-import Button from '@ml/oceans/components/common/Button';
-import ConfirmationDialog from '@ml/oceans/components/common/ConfirmationDialog';
-import loadingGif from '@public/images/loading.gif';
+import Button from '@/oceans/components/common/Button';
+import ConfirmationDialog from '@/oceans/components/common/ConfirmationDialog';
+import Guide from '@/oceans/components/common/Guide';
+import guide from '@/oceans/models/guide';
+import styles from '@/oceans/styles';
+const loadingGif = new URL(
+  '../../../assets/images/loading.gif',
+  import.meta.url,
+).href;
 
 class Body extends React.Component {
   static propTypes = {
     children: PropTypes.node,
-    onClick: PropTypes.func
+    onClick: PropTypes.func,
   };
 
   render() {
@@ -31,7 +34,7 @@ class Body extends React.Component {
 
 const Content = ({children}) => <div style={styles.content}>{children}</div>;
 Content.propTypes = {
-  children: PropTypes.node
+  children: PropTypes.node,
 };
 
 const Loading = () => (

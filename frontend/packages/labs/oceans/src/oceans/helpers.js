@@ -1,14 +1,22 @@
 import _ from 'lodash';
 import queryString from 'query-string';
+
 import {FishBodyPart} from '../utils/fishData';
-import {setState} from './state';
+
 import constants, {Modes} from './constants';
-import labBackground from '@public/images/lab-background.png';
-import waterBackground from '@public/images/water-background.png';
+import {setState} from './state';
+const labBackground = new URL(
+  '../assets/images/lab-background.png',
+  import.meta.url,
+).href;
+const waterBackground = new URL(
+  '../assets/images/water-background.png',
+  import.meta.url,
+).href;
 
 export const $time =
   Date.now ||
-  function() {
+  function () {
     return +new Date();
   };
 
@@ -105,7 +113,7 @@ export const filterFishComponents = (fishComponents, appMode) => {
   let filteredCopy = {...fishComponents};
   Object.keys(filteredCopy).forEach(key => {
     filteredCopy[key] = Object.values(filteredCopy[key]).filter(
-      option => !(option.exclusions || []).includes(appMode)
+      option => !(option.exclusions || []).includes(appMode),
     );
   });
 
@@ -146,7 +154,7 @@ export const generateColorPalette = (colors, bodyIndex = null) => {
     bodyRgb: bodyColor.rgb,
     finRgb: colors[finIndex].rgb,
     knnData: [...bodyColor.knnData, ...colors[finIndex].knnData],
-    fieldInfos: [...bodyColor.fieldInfos, ...colors[finIndex].fieldInfos]
+    fieldInfos: [...bodyColor.fieldInfos, ...colors[finIndex].fieldInfos],
   };
 };
 
@@ -171,7 +179,7 @@ export const finishMovement = (t, pause = true) => {
     isRunning: false,
     isPaused: pause,
     lastPauseTime: t,
-    lastStartTime: null
+    lastStartTime: null,
   });
 };
 
@@ -179,7 +187,7 @@ const resetTraining = state => {
   state.trainer.clearAll();
   setState({
     yesCount: 0,
-    noCount: 0
+    noCount: 0,
   });
 };
 
@@ -209,5 +217,5 @@ export const reportPageView = page => {
 };
 
 export default {
-  resetTraining
+  resetTraining,
 };

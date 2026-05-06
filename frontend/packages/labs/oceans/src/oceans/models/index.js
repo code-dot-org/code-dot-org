@@ -1,10 +1,11 @@
-import {init as initLoading} from './loading';
-import {init as initWords} from './words';
-import train from './train';
-import {init as initPredicting} from './predict';
-import {init as initPond} from './pond';
 import {Modes} from '../constants';
 import {reportPageView} from '../helpers';
+
+import {init as initLoading} from './loading';
+import {init as initPond} from './pond';
+import {init as initPredicting} from './predict';
+import train from './train';
+import {init as initWords} from './words';
 
 // Initialize a model (if that model has an `init` method) based on mode.
 // Should only be called when mode changes.
@@ -33,7 +34,7 @@ export const init = state => {
     [Modes.Words]: 'words',
     [Modes.Training]: 'training',
     [Modes.Pond]: 'pond',
-    [Modes.Instructions]: 'instructions'
+    [Modes.Instructions]: 'instructions',
   };
   reportPageView(modeToPage[state.currentMode]);
 };

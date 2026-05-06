@@ -1,10 +1,7 @@
-const supportedVoiceLanguages = ['en', 'it'];
-const recommendedVoices = {};
-supportedVoiceLanguages.forEach(supportedVoiceLanguage => {
-  recommendedVoices[
-    supportedVoiceLanguage
-  ] = require(`./textToSpeech/${supportedVoiceLanguage}.json`);
-});
+import en from './textToSpeech/en.json';
+import it from './textToSpeech/it.json';
+
+const recommendedVoices = {en, it};
 
 export function hasTextToSpeechVoices() {
   return speechSynthesis.getVoices().length !== 0;
@@ -55,12 +52,12 @@ function filterAvailableVoices(jsonData) {
   const availableVoices = [];
   const voices = speechSynthesis.getVoices();
 
-  jsonData.voices.forEach(function(voice) {
+  jsonData.voices.forEach(function (voice) {
     if (voices.some(apiVoice => apiVoice.name === voice.name)) {
       availableVoices.push(voice);
     } else {
       if (voice.altNames) {
-        voice.altNames.forEach(function(altName) {
+        voice.altNames.forEach(function (altName) {
           if (voices.some(apiVoice => apiVoice.name === altName)) {
             voice.name = altName;
             availableVoices.push(voice);

@@ -1,13 +1,12 @@
-import 'idempotent-babel-polyfill';
 import ReactDOM from 'react-dom';
-import React from 'react';
-import UI from './ui';
+
 import constants, {Modes} from './constants';
-import {setInitialState, setSetStateCallback} from './state';
-import {render as renderCanvas} from './renderer';
+import I18n from './i18n';
 import modeHelpers from './modeHelpers';
 import soundLibrary from './models/soundLibrary';
-import I18n from './i18n';
+import {render as renderCanvas} from './renderer';
+import {setInitialState, setSetStateCallback} from './state';
+import UI from './ui';
 
 //
 // Required in options:
@@ -17,7 +16,7 @@ import I18n from './i18n';
 //  onContinue
 //  guides
 //
-export const initAll = function(options) {
+export const initAll = function (options) {
   const {canvas, backgroundCanvas} = options;
 
   canvas.width = backgroundCanvas.width = constants.canvasWidth;
@@ -33,7 +32,7 @@ export const initAll = function(options) {
   // Set initial state for UI elements.
   setInitialState({
     currentMode: Modes.Loading,
-    ...options
+    ...options,
   });
 
   // Initialize our first model.

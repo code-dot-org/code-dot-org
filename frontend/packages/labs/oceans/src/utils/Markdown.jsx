@@ -3,11 +3,11 @@
  * of SafeMarkdown in the main code-dot-org repo.
  *
  */
-import PropTypes from 'prop-types';
-import React from 'react';
-
-import remarkRehype from 'remark-rehype';
+import * as PropTypes from 'prop-types';
+import * as React from 'react';
 import rehypeReact from 'rehype-react';
+import remarkRehype from 'remark-rehype';
+
 import Parser from '@code-dot-org/redactable-markdown';
 
 const markdownProcessor = Parser.create()
@@ -17,7 +17,7 @@ const markdownProcessor = Parser.create()
 
 export default class Markdown extends React.Component {
   static propTypes = {
-    markdown: PropTypes.string.isRequired
+    markdown: PropTypes.string.isRequired,
   };
 
   render() {

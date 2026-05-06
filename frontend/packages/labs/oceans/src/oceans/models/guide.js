@@ -1,5 +1,6 @@
-import {getState, setState} from '../state';
 import {queryStrFor} from '../helpers';
+import {getState, setState} from '../state';
+
 import guidesHoc from './guidesHoc';
 import guidesK5 from './guidesK5';
 
@@ -53,5 +54,5 @@ const dismissCurrentGuide = () => {
 
 export default {
   getCurrentGuide,
-  dismissCurrentGuide
+  dismissCurrentGuide,
 };

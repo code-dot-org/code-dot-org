@@ -1,22 +1,25 @@
-import React from 'react';
+import {faBan, faCheck, faInfo} from '@fortawesome/free-solid-svg-icons';
+import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import _ from 'lodash';
 import Radium from 'radium';
+import React from 'react';
 
-import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
-import {faBan, faCheck, faInfo} from '@fortawesome/free-solid-svg-icons';
+import {Body, Button} from '@/oceans/components/common';
+import PondPanel from '@/oceans/components/scenes/pond/PondPanel';
+import constants, {AppMode, Modes} from '@/oceans/constants';
+import helpers, {$time} from '@/oceans/helpers';
+import I18n from '@/oceans/i18n';
+import modeHelpers from '@/oceans/modeHelpers';
+import guide from '@/oceans/models/guide';
+import {arrangeFish} from '@/oceans/models/pond';
+import soundLibrary from '@/oceans/models/soundLibrary';
+import {getState, setState} from '@/oceans/state';
+import styles from '@/oceans/styles';
 
-import {getState, setState} from '@ml/oceans/state';
-import styles from '@ml/oceans/styles';
-import I18n from '@ml/oceans/i18n';
-import soundLibrary from '@ml/oceans/models/soundLibrary';
-import {arrangeFish} from '@ml/oceans/models/pond';
-import helpers, {$time} from '@ml/oceans/helpers';
-import guide from '@ml/oceans/models/guide';
-import constants, {AppMode, Modes} from '@ml/oceans/constants';
-import {Body, Button} from '@ml/oceans/components/common';
-import aiBotClosed from '@public/images/ai-bot/ai-bot-closed.png';
-import modeHelpers from '@ml/oceans/modeHelpers';
-import PondPanel from '@ml/oceans/components/scenes/pond/PondPanel';
+const aiBotClosed = new URL(
+  '../../../../assets/images/ai-bot/ai-bot-closed.png',
+  import.meta.url,
+).href;
 
 function Collide(x1, y1, w1, h1, x2, y2, w2, h2) {
   // Detect a non-collision.
@@ -46,7 +49,10 @@ let UnwrappedPond = class Pond extends React.Component {
     // pondFish are fish that are matching the word/attribute.
     // showMatching true -> want matching (showRecallFish false)
     // showMatching false -> want recalled fish (showRecallFish true).
-    if (state.pondFishTransitionStartTime || state.showRecallFish === !showMatching) {
+    if (
+      state.pondFishTransitionStartTime ||
+      state.showRecallFish === !showMatching
+    ) {
       return;
     }
 
@@ -122,15 +128,15 @@ let UnwrappedPond = class Pond extends React.Component {
             normalizedClickX,
             normalizedClickY,
             1,
-            1
+            1,
           )
         ) {
           setState({
             pondClickedFish: {
               id: fishBound.fishId,
               x: fishBound.x,
-              y: fishBound.y
-            }
+              y: fishBound.y,
+            },
           });
           fishClicked = true;
           soundLibrary.playSound('yes');
@@ -140,10 +146,10 @@ let UnwrappedPond = class Pond extends React.Component {
             state.appMode === AppMode.FishLong
           ) {
             const clickedFish = fishCollection.find(
-              f => f.id === fishBound.fishId
+              f => f.id === fishBound.fishId,
             );
             setState({
-              pondExplainFishSummary: state.trainer.explainFish(clickedFish)
+              pondExplainFishSummary: state.trainer.explainFish(clickedFish),
             });
             if (normalizedClickX < constants.canvasWidth / 2) {
               setState({pondPanelSide: 'right'});
@@ -166,7 +172,7 @@ let UnwrappedPond = class Pond extends React.Component {
 
     if ([AppMode.FishShort, AppMode.FishLong].includes(state.appMode)) {
       setState({
-        pondPanelShowing: !state.pondPanelShowing
+        pondPanelShowing: !state.pondPanelShowing,
       });
 
       if (state.pondPanelShowing) {
@@ -204,7 +210,7 @@ let UnwrappedPond = class Pond extends React.Component {
             style={{
               ...styles.toggleIcon,
               ...styles.matchingIconLeft,
-              ...(state.showRecallFish ? {} : styles.bgGreen)
+              ...(state.showRecallFish ? {} : styles.bgGreen),
             }}
           >
             <FontAwesomeIcon
@@ -220,7 +226,7 @@ let UnwrappedPond = class Pond extends React.Component {
             style={{
               ...styles.toggleIcon,
               ...styles.nonMatchingIconRight,
-              ...(state.showRecallFish ? styles.bgRed : {})
+              ...(state.showRecallFish ? styles.bgRed : {}),
             }}
           >
             <FontAwesomeIcon
@@ -233,7 +239,7 @@ let UnwrappedPond = class Pond extends React.Component {
           <div
             style={{
               ...styles.infoIconContainer,
-              ...(!state.pondPanelShowing ? {} : styles.bgTeal)
+              ...(!state.pondPanelShowing ? {} : styles.bgTeal),
             }}
             onClick={this.onPondPanelButtonClick}
             id="uitest-info-btn"

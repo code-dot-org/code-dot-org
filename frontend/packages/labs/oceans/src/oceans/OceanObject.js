@@ -1,14 +1,20 @@
-import * as mobilenetModule from '@tensorflow-models/mobilenet';
 import * as tf from '@tensorflow/tfjs';
+import * as mobilenetModule from '@tensorflow-models/mobilenet';
+
 import {fishData, FishBodyPart} from '../utils/fishData';
+import {trashImagePaths, seaCreatureImagePaths} from '../utils/imagePaths';
+
 import constants from './constants';
 import {
   bodyAnchorFromType,
   colorForFishPart,
-  generateColorPalette
+  generateColorPalette,
 } from './helpers';
-import {trashImagePaths, seaCreatureImagePaths} from '../utils/imagePaths';
-import model from './model.json';
+
+// Both model.json and group1-shard1of1.bin are emitted to assets/models/ by
+// the emitModelAssets Vite plugin (vite.config.ts). At runtime import.meta.url
+// resolves relative to this bundle's location so TFJS can fetch both files.
+const modelUrl = new URL('./assets/models/model.json', import.meta.url).href;
 
 let fishPartImages = {};
 let trashImages = [];
@@ -24,7 +30,7 @@ let mobilenet;
 const loadImage = data => {
   return new Promise((resolve, reject) => {
     const img = new Image();
-    img.addEventListener('load', e => resolve({img, data}));
+    img.addEventListener('load', () => resolve({img, data}));
     img.addEventListener('error', () => {
       reject(new Error(`failed to load image at ${data.src}`));
     });
@@ -43,12 +49,12 @@ export const loadAllFishPartImages = () => {
   let fishPartImagesToLoad = [];
   Object.keys(fishData)
     .filter(partName => partName !== 'colors')
-    .forEach((partName, partIndex) => {
+    .forEach(partName => {
       Object.keys(fishData[partName]).forEach(variationName => {
         const partData = {
           partIndex: fishData[partName][variationName].type,
           variationIndex: fishData[partName][variationName].index,
-          src: fishData[partName][variationName].src
+          src: fishData[partName][variationName].src,
         };
         fishPartImagesToLoad.push(partData);
       });
@@ -66,7 +72,7 @@ export const loadAllFishPartImages = () => {
 
 export const initMobilenet = () => {
   return mobilenetModule
-    .load({version: 1, modelUrl: model})
+    .load({version: 1, modelUrl: modelUrl})
     .then(res => (mobilenet = res));
 };
 
@@ -99,7 +105,7 @@ export const loadAllSeaCreatureImages = () => {
 export const generateRandomOceanObject = (
   allowedClasses,
   id,
-  possibleFishComponents = null
+  possibleFishComponents = null,
 ) => {
   const idx = Math.floor(Math.random() * allowedClasses.length);
   const OceanObjectType = allowedClasses[idx];
@@ -128,6 +134,7 @@ export class OceanObject {
 
   // Draws the object to the given canvas and
   // generates the mobilenet data (logits) if generateLogits is true
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   drawToCanvas(canvas, generateLogits = true) {
     throw 'Not yet implemented!';
   }
@@ -145,7 +152,7 @@ export class OceanObject {
           0,
           0,
           evaluationCanvas.width,
-          evaluationCanvas.height
+          evaluationCanvas.height,
         );
         this.drawToCanvas(evaluationCanvas, false);
         this.generateLogits(evaluationCanvas);
@@ -207,10 +214,10 @@ export class FishOceanObject extends OceanObject {
     }
     if (!this.pectoralFinFront) {
       const pectoralFinsFront = Object.values(
-        this.componentOptions.pectoralFinsFront
+        this.componentOptions.pectoralFinsFront,
       );
       const pectoralFinsBack = Object.values(
-        this.componentOptions.pectoralFinsBack
+        this.componentOptions.pectoralFinsBack,
       );
 
       const finIdx = Math.floor(Math.random() * pectoralFinsFront.length);
@@ -240,7 +247,7 @@ export class FishOceanObject extends OceanObject {
       ...this.mouth.knnData,
       ...this.dorsalFin.knnData,
       ...this.tail.knnData,
-      ...this.colorPalette.knnData
+      ...this.colorPalette.knnData,
     ];
     this.fieldInfos = [
       ...this.body.fieldInfos,
@@ -248,7 +255,7 @@ export class FishOceanObject extends OceanObject {
       ...this.mouth.fieldInfos,
       ...this.dorsalFin.fieldInfos,
       ...this.tail.fieldInfos,
-      ...this.colorPalette.fieldInfos
+      ...this.colorPalette.fieldInfos,
     ];
   }
 
@@ -268,12 +275,12 @@ export class FishOceanObject extends OceanObject {
     ctx.drawImage(
       eyeImg,
       bodyAnchor[0] + anchor[0] + (maxComponentWidth - eyeImg.width) / 2,
-      bodyAnchor[1] + anchor[1]
+      bodyAnchor[1] + anchor[1],
     );
     ctx.drawImage(
       mouthImg,
       bodyAnchor[0] + anchor[0] + (maxComponentWidth - mouthImg.width) / 2,
-      bodyAnchor[1] + anchor[1] + eyeImg.height + distBetweenEyeAndMouth
+      bodyAnchor[1] + anchor[1] + eyeImg.height + distBetweenEyeAndMouth,
     );
   }
 
@@ -282,7 +289,7 @@ export class FishOceanObject extends OceanObject {
       0,
       0,
       constants.fishCanvasWidth,
-      constants.fishCanvasHeight
+      constants.fishCanvasHeight,
     );
 
     let anchor = [0, 0];
@@ -332,7 +339,7 @@ export class FishOceanObject extends OceanObject {
         xPos,
         yPos,
         img.width,
-        img.height
+        img.height,
       );
       let data = imageData.data;
 
@@ -352,7 +359,7 @@ export class FishOceanObject extends OceanObject {
       constants.fishCanvasWidth / 2 - intermediateCanvas.width / 2,
       constants.fishCanvasHeight / 2 - intermediateCanvas.height / 2,
       constants.fishCanvasWidth,
-      constants.fishCanvasHeight
+      constants.fishCanvasHeight,
     );
   }
 

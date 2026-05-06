@@ -1,14 +1,13 @@
-import React from 'react'
-import _ from "lodash";
-import Radium from "radium";
+import _ from 'lodash';
+import Radium from 'radium';
+import React from 'react';
 
-import {getState, setState} from "@ml/oceans/state";
-import I18n from "@ml/oceans/i18n";
-import modeHelpers from "@ml/oceans/modeHelpers";
-import {AppMode, Modes} from "@ml/oceans/constants";
-import {Body, Button, Content} from "@ml/oceans/components/common";
-import styles from "@ml/oceans/styles";
-
+import {Body, Button, Content} from '@/oceans/components/common';
+import {AppMode, Modes} from '@/oceans/constants';
+import I18n from '@/oceans/i18n';
+import modeHelpers from '@/oceans/modeHelpers';
+import {getState, setState} from '@/oceans/state';
+import styles from '@/oceans/styles';
 
 /*
  * The choices for each word set are i18n keys. If adding or changing a word
@@ -22,9 +21,9 @@ export const wordSet = {
     textKey: 'wordQuestionShort',
     choices: [
       ['blue', 'green', 'red'],
-      ['circular', 'rectangular', 'triangular']
+      ['circular', 'rectangular', 'triangular'],
     ],
-    style: styles.button2col
+    style: styles.button2col,
   },
   long: {
     textKey: 'wordQuestionLong',
@@ -44,11 +43,11 @@ export const wordSet = {
         'scary',
         'silly',
         'spooky',
-        'wild'
-      ]
+        'wild',
+      ],
     ],
-    style: styles.button3col
-  }
+    style: styles.button3col,
+  },
 };
 
 let UnwrappedWords = class Words extends React.Component {
@@ -90,7 +89,7 @@ let UnwrappedWords = class Words extends React.Component {
     const word = I18n.t(wordKey);
     setState({
       word,
-      trainingQuestion: I18n.t('isThisFish', {word: word.toLowerCase()})
+      trainingQuestion: I18n.t('isThisFish', {word: word.toLowerCase()}),
     });
     modeHelpers.toMode(Modes.Training);
 
@@ -98,7 +97,7 @@ let UnwrappedWords = class Words extends React.Component {
     if (window.trackEvent) {
       const appModeToString = {
         [AppMode.FishShort]: 'words-short',
-        [AppMode.FishLong]: 'words-long'
+        [AppMode.FishLong]: 'words-long',
       };
 
       window.trackEvent('oceans', appModeToString[getState().appMode], wordKey);

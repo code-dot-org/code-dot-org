@@ -1,12 +1,14 @@
+import _ from 'lodash';
+
+import {filterFishComponents, generateColorPalette} from '../oceans/helpers';
 import {
   FishOceanObject,
   SeaCreatureOceanObject,
-  TrashOceanObject
+  TrashOceanObject,
 } from '../oceans/OceanObject';
 import {getState} from '../oceans/state';
+
 import {fishData} from './fishData';
-import {filterFishComponents, generateColorPalette} from '../oceans/helpers';
-import _ from 'lodash';
 
 /*
  * Generates a set of ocean objects of size numFish.
@@ -20,7 +22,7 @@ export const generateOcean = (
   idStart = 0,
   loadFish = true,
   loadTrashImages,
-  loadCreatureImages
+  loadCreatureImages,
 ) => {
   const state = getState();
   let ocean = [];
@@ -43,7 +45,7 @@ export const generateOcean = (
 
   const possibleFishComponents = filterFishComponents(
     fishData,
-    getState().appMode
+    getState().appMode,
   );
   let bodies = _.shuffle(Object.values(possibleFishComponents.bodies));
   let eyes = _.shuffle(Object.values(possibleFishComponents.eyes));
@@ -53,7 +55,7 @@ export const generateOcean = (
   for (var i = idStart; i < numFish + idStart; ++i) {
     const object = new possibleObjects[i % possibleObjects.length](
       i,
-      possibleFishComponents
+      possibleFishComponents,
     );
     if (object instanceof FishOceanObject) {
       // For each of these components, use the next variation on the list
@@ -87,12 +89,12 @@ export const generateOcean = (
 
 export const filterOcean = async (ocean, trainer) => {
   const predictionPromises = [];
-  ocean.forEach((fish, idx) => {
+  ocean.forEach(fish => {
     if (!fish.getResult()) {
       predictionPromises.push(
         trainer.predict(fish).then(res => {
           fish.setResult(res);
-        })
+        }),
       );
     }
   });

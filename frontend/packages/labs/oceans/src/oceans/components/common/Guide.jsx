@@ -1,24 +1,33 @@
-import React from 'react';
 import Radium from 'radium';
+import React from 'react';
 import Typist from 'react-typist';
 
-import '@ml/oceans/styles/fade.css';
+import '@/oceans/styles/fade.css';
 
-import {getState, setState} from '@ml/oceans/state';
-import guide from '@ml/oceans/models/guide';
-import soundLibrary from '@ml/oceans/models/soundLibrary';
-import styles from '@ml/oceans/styles';
-import colors from '@ml/oceans/styles/colors';
-import I18n from '@ml/oceans/i18n';
-import {Button} from '@ml/oceans/components/common';
-import arrowDownImage from '@public/images/arrow-down.png';
+import {Button} from '@/oceans/components/common';
+import I18n from '@/oceans/i18n';
+import guide from '@/oceans/models/guide';
+import soundLibrary from '@/oceans/models/soundLibrary';
+import {getState, setState} from '@/oceans/state';
+import styles from '@/oceans/styles';
+import colors from '@/oceans/styles/colors';
+const arrowDownImage = new URL(
+  '../../../assets/images/arrow-down.png',
+  import.meta.url,
+).href;
 import {
   startTextToSpeech,
   stopTextToSpeech,
-  hasTextToSpeechVoices
-} from '@ml/utils/TextToSpeech';
-import fingerClickIcon1 from '@public/images/finger-click-icon-1.svg';
-import fingerClickIcon2 from '@public/images/finger-click-icon-2.svg';
+  hasTextToSpeechVoices,
+} from '@/utils/TextToSpeech';
+const fingerClickIcon1 = new URL(
+  '../../../assets/images/finger-click-icon-1.svg',
+  import.meta.url,
+).href;
+const fingerClickIcon2 = new URL(
+  '../../../assets/images/finger-click-icon-2.svg',
+  import.meta.url,
+).href;
 
 export const stopTypingSounds = () => {
   const state = getState();
@@ -69,9 +78,9 @@ let UnwrappedGuide = class Guide extends React.Component {
       setState(
         {
           hasTextToSpeechStartedByClick: true,
-          textToSpeechCurrentGuide: currentGuide
+          textToSpeechCurrentGuide: currentGuide,
         },
-        {skipCallback: true}
+        {skipCallback: true},
       );
     } else {
       // Make sure we don't try and dismiss a guide if it's
@@ -125,7 +134,7 @@ let UnwrappedGuide = class Guide extends React.Component {
     // believe it has started.
     return startTextToSpeech(
       currentGuide.textFn(getState()),
-      state.textToSpeechLocale
+      state.textToSpeechLocale,
     );
   };
 
@@ -192,7 +201,7 @@ let UnwrappedGuide = class Guide extends React.Component {
                 className="guide-dialog"
                 style={{
                   ...styles.guide,
-                  ...styles[`guide${currentGuide.style}`]
+                  ...styles[`guide${currentGuide.style}`],
                 }}
               >
                 <div>
@@ -258,7 +267,7 @@ let UnwrappedGuide = class Guide extends React.Component {
                 src={arrowDownImage}
                 style={{
                   ...styles.guideArrow,
-                  ...styles[`arrow${currentGuide.arrow}`]
+                  ...styles[`arrow${currentGuide.arrow}`],
                 }}
                 alt=""
               />

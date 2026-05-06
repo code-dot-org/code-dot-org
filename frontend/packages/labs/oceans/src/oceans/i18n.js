@@ -1,5 +1,6 @@
+import MessageFormat from 'messageformat';
+
 import data from '../../i18n/oceans.json';
-import MessageFormat from 'messageformat'
 
 let messages;
 
@@ -11,12 +12,12 @@ const initI18n = (i18n = {}) => {
 
 const t = (key, options) => {
   if (!messages) {
-    throw "I18n must be initialized before calling t";
+    throw 'I18n must be initialized before calling t';
   }
   return messages[key](options);
 };
 
 export default {
   initI18n,
-  t
+  t,
 };

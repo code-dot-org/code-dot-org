@@ -1,14 +1,14 @@
-import 'idempotent-babel-polyfill';
 import _ from 'lodash';
-import {setState, getState} from '../state';
+
 import constants, {ClassType, AppMode} from '../constants';
+import {setState, getState} from '../state';
 
 export const init = async () => {
   const state = getState();
   let fishWithPredictions = await predictAllFish(state);
   const fishByClassType = _.groupBy(
     fishWithPredictions,
-    fish => fish.getResult().predictedClassId
+    fish => fish.getResult().predictedClassId,
   );
 
   let pondFish = fishByClassType[ClassType.Like] || [];
@@ -16,7 +16,7 @@ export const init = async () => {
   pondFish = pondFish.splice(0, constants.maxPondFish);
   const recallFish = (fishByClassType[ClassType.Dislike] || []).splice(
     0,
-    constants.maxPondFish
+    constants.maxPondFish,
   );
   arrangeFish(pondFish);
   arrangeFish(recallFish);
@@ -30,7 +30,7 @@ export const init = async () => {
       setState({
         pondExplainGeneralSummary: state.trainer.summarize(firstFishFieldInfos),
         pondFishMaxExplainValue: getMaxExplainValue(pondFish),
-        pondRecallFishMaxExplainValue: getMaxExplainValue(recallFish)
+        pondRecallFishMaxExplainValue: getMaxExplainValue(recallFish),
       });
     }
   }
@@ -89,7 +89,7 @@ const getMaxExplainValue = fishCollection => {
 const arrangement = [
   [2, 1, 0, 0, 0, 1, 2],
   [2, 1, 0, 0, 0, 1, 2],
-  [2, 1, 0, null, 0, 1, 2]
+  [2, 1, 0, null, 0, 1, 2],
 ];
 
 // Reformats the arrangement constant into a 1-dimensional array of x-y coordinates,

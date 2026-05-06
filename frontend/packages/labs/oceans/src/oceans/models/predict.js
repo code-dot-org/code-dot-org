@@ -1,8 +1,7 @@
-import 'idempotent-babel-polyfill';
-import {getState, setState} from '../state';
 import {generateOcean} from '../../utils/generateOcean';
 import {AppMode, Modes} from '../constants';
 import {$time, finishLoading, reportPageView} from '../helpers';
+import {getState, setState} from '../state';
 
 export const init = () => {
   const state = getState();
@@ -10,7 +9,7 @@ export const init = () => {
   // Conditionally display a loading spinner during initialiation, as state.trainer.train() operation
   // can take multiple seconds.
   const setLoadingSpinner = [AppMode.FishShort, AppMode.FishLong].includes(
-    state.appMode
+    state.appMode,
   );
   let startTime;
   let trainingDelayTime;
@@ -51,14 +50,14 @@ export const init = () => {
       } else {
         onLoadComplete(fishData);
       }
-    }
+    },
   );
 };
 
 const onLoadComplete = fishData => {
   setState({
     fishData,
-    currentMode: Modes.Predicting
+    currentMode: Modes.Predicting,
   });
 };
 
