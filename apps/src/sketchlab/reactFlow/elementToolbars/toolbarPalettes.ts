@@ -42,6 +42,10 @@ export type FontSizeValue = (typeof FONT_SIZE_OPTIONS)[number]['value'];
 // fontSize on a node may be a named preset or a raw pixel number.
 export type FontSize = FontSizeValue | number;
 
+// We set a minimum font size for sanity-checking but do not set a maximum,
+// since the canvas can be zoomed out.
+export const MIN_FONT_SIZE_PX = 6;
+
 export const LINE_WIDTH_OPTIONS = [
   {value: 1, label: 'Thin'},
   {value: 3, label: 'Medium'},

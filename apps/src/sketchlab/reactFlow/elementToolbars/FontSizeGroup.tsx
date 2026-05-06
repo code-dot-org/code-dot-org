@@ -3,7 +3,12 @@ import {IconButton, Tooltip, Typography} from '@mui/material';
 import classNames from 'classnames';
 import React, {useCallback, useEffect, useState} from 'react';
 
-import {FONT_SIZE_OPTIONS, FontSize, fontSizePx} from './toolbarPalettes';
+import {
+  FONT_SIZE_OPTIONS,
+  FontSize,
+  fontSizePx,
+  MIN_FONT_SIZE_PX,
+} from './toolbarPalettes';
 
 import styles from './element-toolbar.module.scss';
 
@@ -30,9 +35,12 @@ export default function FontSizeGroup({
 
   const commitFontSize = useCallback(
     (text: string): number | null => {
-      const parsedValue = Number.parseInt(text, 10);
+      let parsedValue = Number.parseInt(text, 10);
       if (!Number.isFinite(parsedValue)) {
         return null;
+      }
+      if (parsedValue < MIN_FONT_SIZE_PX) {
+        parsedValue = MIN_FONT_SIZE_PX;
       }
       if (parsedValue !== resolvedPx) {
         onSelect(parsedValue);
