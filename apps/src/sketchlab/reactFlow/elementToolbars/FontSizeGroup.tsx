@@ -5,6 +5,8 @@ import React, {useCallback, useEffect, useState} from 'react';
 
 import {
   clampFontSizePx,
+  FONT_SIZE_MAX,
+  FONT_SIZE_MIN,
   FONT_SIZE_OPTIONS,
   FontSize,
   fontSizePx,
@@ -33,6 +35,21 @@ export default function FontSizeGroup({
     }
   }, [resolvedPx, isFocused]);
 
+  const commitFontSize = useCallback(
+    (text: string): number | null => {
+      const parsedValue = Number.parseInt(text, 10);
+      if (!Number.isFinite(parsedValue)) {
+        return null;
+      }
+      const clampedValue = clampFontSizePx(parsedValue);
+      if (clampedValue !== resolvedPx) {
+        onSelect(clampedValue);
+      }
+      return clampedValue;
+    },
+    [onSelect, resolvedPx]
+  );
+
   const handleInputChange = useCallback(
     (event: React.ChangeEvent<HTMLInputElement>) => {
       const next = event.target.value;
@@ -42,31 +59,16 @@ export default function FontSizeGroup({
       if (next === '') {
         return;
       }
-      const parsed = Number.parseInt(next, 10);
-      if (!Number.isFinite(parsed)) {
-        return;
-      }
-      const clamped = clampFontSizePx(parsed);
-      if (clamped !== resolvedPx) {
-        onSelect(clamped);
-      }
+      commitFontSize(next);
     },
-    [onSelect, resolvedPx]
+    [commitFontSize]
   );
 
   const handleInputBlur = useCallback(() => {
     setIsFocused(false);
-    const parsed = Number.parseInt(inputValue, 10);
-    if (Number.isFinite(parsed)) {
-      const clamped = clampFontSizePx(parsed);
-      setInputValue(String(clamped));
-      if (clamped !== resolvedPx) {
-        onSelect(clamped);
-      }
-    } else {
-      setInputValue(String(resolvedPx));
-    }
-  }, [inputValue, resolvedPx, onSelect]);
+    const clampedValue = commitFontSize(inputValue);
+    setInputValue(String(clampedValue ?? resolvedPx));
+  }, [inputValue, resolvedPx, commitFontSize]);
 
   const handleInputKeyDown = useCallback(
     (event: React.KeyboardEvent<HTMLInputElement>) => {
@@ -117,6 +119,8 @@ export default function FontSizeGroup({
           onKeyDown={handleInputKeyDown}
           size="s"
           className={styles.fontSizeInput}
+          min={FONT_SIZE_MIN}
+          max={FONT_SIZE_MAX}
         />
       </div>
     </div>
