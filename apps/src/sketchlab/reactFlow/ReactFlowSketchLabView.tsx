@@ -282,6 +282,7 @@ function ReactFlowSketchLabViewInner({
             <ReactFlowCanvas
               key={mountKey}
               updateSources={updateSources}
+              levelName={levelProperties.name}
               initialNodes={initialNodes}
               initialEdges={initialEdges}
               initialViewport={initialViewport}
