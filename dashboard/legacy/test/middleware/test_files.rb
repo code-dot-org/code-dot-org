@@ -304,6 +304,31 @@ class FilesTest < FilesApiTestBase
     delete_all_manifest_versions
   end
 
+  def test_content_type_for_webp_and_markdown
+    webp_filename = @api.randomize_filename('image.webp')
+    md_filename = @api.randomize_filename('readme.md')
+
+    post_file_data(@api, webp_filename, 'fake-webp-bytes', 'image/webp')
+    assert successful?
+    post_file_data(@api, md_filename, '# Hello', 'text/markdown')
+    assert successful?
+
+    @api.get_object(webp_filename)
+    assert successful?
+    assert_match 'image/webp', last_response['Content-Type']
+
+    @api.get_object(md_filename)
+    assert successful?
+    assert_match 'text/markdown', last_response['Content-Type']
+
+    @api.delete_object(webp_filename)
+    assert successful?
+    @api.delete_object(md_filename)
+    assert successful?
+
+    delete_all_manifest_versions
+  end
+
   # Quick pass/fail tests for the Content-Disposition header sanitization
   def test_content_disposition_header_injection
     # Upload a file with CR/LF in the filename to test header injection sanitization
