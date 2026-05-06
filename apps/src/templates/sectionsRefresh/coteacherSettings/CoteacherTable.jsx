@@ -136,7 +136,9 @@ export default function CoteacherTable({
 
   return coteachers.length === 0 ? (
     <div className={styles.table}>
-      <div className={styles.tableRow}>{i18n.coteacherNoCoteachers()}</div>
+      <div className={styles.tableRow}>
+        <Typography variant="body2">{i18n.coteacherNoCoteachers()}</Typography>
+      </div>
     </div>
   ) : (
     <table className={styles.table}>
