@@ -200,7 +200,7 @@ def get_device_farm_browser
     end
   if console_url
     account_suffix = CI::Utils.running_on_ci? ? ' (codeorg-dev AWS account)' : ''
-    puts "visual log on device farm: <a href='#{console_url}'>#{console_url}</a>#{account_suffix}"
+    puts "visual log on device farm#{account_suffix}: <a href='#{console_url}'>#{console_url}</a>"
   end
   if is_mobile && $device_farm_mobile_device
     d = $device_farm_mobile_device
