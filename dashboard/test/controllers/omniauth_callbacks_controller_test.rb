@@ -770,7 +770,7 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
     assert_equal uid, partial_user.uid
     assert_equal auth[:credentials][:token], partial_user.oauth_token
     assert_equal auth[:credentials][:expires_at], partial_user.oauth_token_expiration
-    assert_nil partial_user.oauth_refresh_token
+    assert_equal auth[:credentials][:refresh_token], partial_user.oauth_refresh_token
   end
 
   test 'google_oauth2: sets tokens in session/cache when redirecting to complete registration (new_sign_up_experience)' do
@@ -799,7 +799,7 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
     assert_equal uid, partial_user.uid
     assert_equal auth[:credentials][:token], partial_user.oauth_token
     assert_equal auth[:credentials][:expires_at], partial_user.oauth_token_expiration
-    assert_nil partial_user.oauth_refresh_token
+    assert_equal auth[:credentials][:refresh_token], partial_user.oauth_refresh_token
   end
 
   test 'login: google_oauth2 silently takes over unmigrated student with matching email' do
