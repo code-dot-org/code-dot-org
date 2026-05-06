@@ -3,14 +3,7 @@ import {IconButton, Tooltip, Typography} from '@mui/material';
 import classNames from 'classnames';
 import React, {useCallback, useEffect, useState} from 'react';
 
-import {
-  clampFontSizePx,
-  FONT_SIZE_MAX,
-  FONT_SIZE_MIN,
-  FONT_SIZE_OPTIONS,
-  FontSize,
-  fontSizePx,
-} from './toolbarPalettes';
+import {FONT_SIZE_OPTIONS, FontSize, fontSizePx} from './toolbarPalettes';
 
 import styles from './element-toolbar.module.scss';
 
@@ -41,11 +34,10 @@ export default function FontSizeGroup({
       if (!Number.isFinite(parsedValue)) {
         return null;
       }
-      const clampedValue = clampFontSizePx(parsedValue);
-      if (clampedValue !== resolvedPx) {
-        onSelect(clampedValue);
+      if (parsedValue !== resolvedPx) {
+        onSelect(parsedValue);
       }
-      return clampedValue;
+      return parsedValue;
     },
     [onSelect, resolvedPx]
   );
@@ -66,8 +58,8 @@ export default function FontSizeGroup({
 
   const handleInputBlur = useCallback(() => {
     setIsFocused(false);
-    const clampedValue = commitFontSize(inputValue);
-    setInputValue(String(clampedValue ?? resolvedPx));
+    const parsedValue = commitFontSize(inputValue);
+    setInputValue(String(parsedValue ?? resolvedPx));
   }, [inputValue, resolvedPx, commitFontSize]);
 
   const handleInputKeyDown = useCallback(
@@ -119,8 +111,6 @@ export default function FontSizeGroup({
           onKeyDown={handleInputKeyDown}
           size="s"
           className={styles.smallInput}
-          min={FONT_SIZE_MIN}
-          max={FONT_SIZE_MAX}
         />
       </div>
     </div>
