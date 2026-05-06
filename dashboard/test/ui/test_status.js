@@ -164,6 +164,13 @@ Test.prototype.publicLogUrl = function () {
 
 // Connect up "Copy Rerun Command" buttons
 new Clipboard("button.copy-button");
+new Clipboard("#copy-failing-rerun-button", {
+  text: () =>
+    Array.from(
+      document.querySelectorAll("tr.FAILED td.rerun-command button.copy-button"),
+      (btn) => btn.getAttribute("data-clipboard-text")
+    ).join("\n"),
+});
 
 function keyify(str) {
   return str.replace(/\//g, "_");
