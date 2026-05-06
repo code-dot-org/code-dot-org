@@ -2,6 +2,7 @@ require 'selenium/webdriver'
 require 'cgi'
 require 'httparty'
 require_relative '../../../../../deployment'
+require 'cdo/ci_utils'
 require_relative '../../../../../lib/cdo/aws/device_farm'
 require 'active_support/core_ext/object/blank'
 require_relative '../../utils/selenium_browser'
@@ -197,7 +198,10 @@ def get_device_farm_browser
     else
       Cdo::AWS::DeviceFarm.desktop_session_url(browser.session_id)
     end
-  puts "visual log on device farm: <a href='#{console_url}'>#{console_url}</a>" if console_url
+  if console_url
+    account_suffix = CI::Utils.running_on_ci? ? ' (codeorg-dev AWS account)' : ''
+    puts "visual log on device farm: <a href='#{console_url}'>#{console_url}</a>#{account_suffix}"
+  end
   if is_mobile && $device_farm_mobile_device
     d = $device_farm_mobile_device
     puts "mobile device on device farm: #{d.name} (#{d.platform} #{d.os}) #{d.arn}"
