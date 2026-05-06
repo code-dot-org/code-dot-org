@@ -1332,7 +1332,7 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
 
   test 'bad time_zone value results in nil' do
     workshop = create(:workshop, time_zone: 'Bad/Zone')
-    assert_equal nil, workshop.time_zone
+    assert_nil workshop.time_zone
   end
 
   test 'subject_must_be_valid_for_course validation passes if workshop has valid subject in course' do

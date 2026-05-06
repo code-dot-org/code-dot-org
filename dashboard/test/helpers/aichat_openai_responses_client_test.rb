@@ -154,8 +154,8 @@ class AichatOpenaiResponsesClientTest < AichatAiClientTest
         let(:stubbed_response_body) {stubbed_fail_response_body}
         it 'raises StandardError' do
           # Check that we raise and that the error contains our error message.
-          err = -> {subject}.must_raise(StandardError)
-          err.message.must_include @specific_error_message
+          err = _ {subject}.must_raise(StandardError)
+          _(err.message).must_include @specific_error_message
         end
       end
 
@@ -207,8 +207,8 @@ class AichatOpenaiResponsesClientTest < AichatAiClientTest
         let(:stubbed_response_body) {stubbed_success_response_body}
         it 'raises StandardError' do
           # Check that we raise and that the error contains our error message.
-          err = -> {subject}.must_raise(StandardError)
-          err.message.must_include @ruby_types_error
+          err = _ {subject}.must_raise(StandardError)
+          _(err.message).must_include @ruby_types_error
         end
       end
 
@@ -224,8 +224,8 @@ class AichatOpenaiResponsesClientTest < AichatAiClientTest
         let(:stubbed_response_body) {stubbed_success_response_body}
         it 'raises StandardError' do
           # Check that we raise and that the error contains our error message.
-          err = -> {subject}.must_raise(StandardError)
-          err.message.must_include @ruby_types_error
+          err = _ {subject}.must_raise(StandardError)
+          _(err.message).must_include @ruby_types_error
         end
       end
 
@@ -241,8 +241,8 @@ class AichatOpenaiResponsesClientTest < AichatAiClientTest
         let(:stubbed_response_body) {stubbed_success_response_body}
         it 'raises StandardError' do
           # Check that we raise and that the error contains our error message.
-          err = -> {subject}.must_raise(StandardError)
-          err.message.must_include @json_schema_required_error
+          err = _ {subject}.must_raise(StandardError)
+          _(err.message).must_include @json_schema_required_error
         end
       end
 
@@ -258,8 +258,8 @@ class AichatOpenaiResponsesClientTest < AichatAiClientTest
         let(:stubbed_response_body) {stubbed_success_response_body}
         it 'raises StandardError' do
           # Check that we raise and that the error contains our error message.
-          err = -> {subject}.must_raise(StandardError)
-          err.message.must_include @ruby_types_error
+          err = _ {subject}.must_raise(StandardError)
+          _(err.message).must_include @ruby_types_error
         end
       end
 
@@ -275,8 +275,8 @@ class AichatOpenaiResponsesClientTest < AichatAiClientTest
         let(:stubbed_response_body) {stubbed_success_response_body}
         it 'raises StandardError' do
           # Check that we raise and that the error contains our error message.
-          err = -> {subject}.must_raise(StandardError)
-          err.message.must_include @ruby_types_error
+          err = _ {subject}.must_raise(StandardError)
+          _(err.message).must_include @ruby_types_error
         end
       end
 
@@ -314,7 +314,7 @@ class AichatOpenaiResponsesClientTest < AichatAiClientTest
 
       it 'raises ModelRateLimitedError' do
         stub_request(:post, endpoint_url).to_return(status: 429, body: {}.to_json)
-        -> {call_get_response(internal_model_id, level, new_message, nil)}.must_raise(AichatAiHelper::ModelRateLimitedError)
+        _ {call_get_response(internal_model_id, level, new_message, nil)}.must_raise(AichatAiHelper::ModelRateLimitedError)
       end
     end
 

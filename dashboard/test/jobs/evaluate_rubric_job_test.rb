@@ -688,7 +688,7 @@ class EvaluateRubricJobTest < ActiveJob::TestCase
       assert_equal expected_understanding, ai_eval.understanding
       assert_equal LearningGoalAiEvaluation::AI_CONFIDENCE_LEVELS[:MEDIUM], ai_eval.ai_confidence
       expected_confidence = include_exact_confidence ? LearningGoalAiEvaluation::AI_CONFIDENCE_LEVELS[:LOW] : nil
-      assert_equal expected_confidence, ai_eval.ai_confidence_exact_match
+      expected_confidence.nil? ? assert_nil(ai_eval.ai_confidence_exact_match) : assert_equal(expected_confidence, ai_eval.ai_confidence_exact_match)
     end
   end
 end

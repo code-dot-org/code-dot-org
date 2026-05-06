@@ -143,7 +143,7 @@ class BubbleChoiceTest < ActiveSupport::TestCase
     summary = bubble_choice.summarize_for_lab2_properties(script)
 
     assert_equal expected_summary[:levelData], summary[:levelData]
-    assert_equal expected_summary[:redirect_url], summary[:finishUrl]
+    assert_nil summary[:finishUrl]
   end
 
   test 'summarize_for_lab2_properties with letters hidden' do

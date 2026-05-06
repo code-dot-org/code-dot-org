@@ -605,7 +605,7 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
     partial_user = User.new_from_partial_registration(session)
     assert_equal auth[:credentials][:token], partial_user.oauth_token
     assert_equal auth[:credentials][:expires_at], partial_user.oauth_token_expiration
-    assert_equal auth[:credentials][:refresh_token], partial_user.oauth_refresh_token
+    assert_nil partial_user.oauth_refresh_token
   end
 
   test 'google_oauth2: signs in user if user is found by credentials' do
@@ -770,7 +770,7 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
     assert_equal uid, partial_user.uid
     assert_equal auth[:credentials][:token], partial_user.oauth_token
     assert_equal auth[:credentials][:expires_at], partial_user.oauth_token_expiration
-    assert_equal auth[:credentials][:refresh_token], partial_user.oauth_refresh_token
+    assert_nil partial_user.oauth_refresh_token
   end
 
   test 'google_oauth2: sets tokens in session/cache when redirecting to complete registration (new_sign_up_experience)' do
@@ -799,7 +799,7 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
     assert_equal uid, partial_user.uid
     assert_equal auth[:credentials][:token], partial_user.oauth_token
     assert_equal auth[:credentials][:expires_at], partial_user.oauth_token_expiration
-    assert_equal auth[:credentials][:refresh_token], partial_user.oauth_refresh_token
+    assert_nil partial_user.oauth_refresh_token
   end
 
   test 'login: google_oauth2 silently takes over unmigrated student with matching email' do
@@ -1643,7 +1643,7 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
       it 'sets token on new user' do
         classlink_req
         _(partial_user.oauth_token).must_equal TEST_CLASSLINK_AUTH_HASH.credentials.token
-        _(partial_user.oauth_token_expiration).must_equal TEST_CLASSLINK_AUTH_HASH.credentials.expires_at
+        _(partial_user.oauth_token_expiration).must_be_nil
       end
     end
     context 'when authorizing with unknown Student' do
@@ -1688,7 +1688,7 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
         classlink_req
         existing_user.reload
         _(existing_user.primary_contact_info.data_hash[:oauth_token]).must_equal auth_hash[:credentials][:token]
-        _(existing_user.primary_contact_info.data_hash[:oauth_token_expiration]).must_equal auth_hash[:credentials][:expires_at]
+        _(existing_user.primary_contact_info.data_hash[:oauth_token_expiration]).must_be_nil
       end
 
       it 'signs in the existing user' do

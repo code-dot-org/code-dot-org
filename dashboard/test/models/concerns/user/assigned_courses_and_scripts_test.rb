@@ -645,7 +645,7 @@ class AssignedCoursesAndScripts < ActiveSupport::TestCase
       end
 
       it 'returns nil finish_url' do
-        _(pl_units_started.first[:finish_url]).must_equal nil
+        _(pl_units_started.first[:finish_url]).must_be_nil
       end
 
       it 'returns the current Lesson name' do

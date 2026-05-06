@@ -69,7 +69,7 @@ module Pd::Summary
 
       assert_equal @ended_workshop.organizer&.name, report[:organizer_name]
       assert_equal @ended_workshop.organizer&.email, report[:organizer_email]
-      assert_equal @ended_workshop.regional_partner.try(:name), report[:regional_partner_name]
+      assert_nil report[:regional_partner_name]
       assert_equal @ended_workshop.sessions.sum(&:hours), report[:num_hours]
       assert_equal @workshop_summary.attendance_url, report[:attendance_url]
       assert_equal @ended_workshop.facilitators.count, report[:num_facilitators]

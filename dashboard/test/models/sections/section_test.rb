@@ -1668,7 +1668,7 @@ class SectionTest < ActiveSupport::TestCase
     end
 
     it 'does not return a student' do
-      _(at_risk_age_gated_student).must_equal nil
+      _(at_risk_age_gated_student).must_be_nil
     end
 
     context 'has an at risk student' do
@@ -1682,7 +1682,7 @@ class SectionTest < ActiveSupport::TestCase
         let(:archived?) {true}
 
         it 'does not return a student' do
-          _(at_risk_age_gated_student).must_equal nil
+          _(at_risk_age_gated_student).must_be_nil
         end
       end
     end

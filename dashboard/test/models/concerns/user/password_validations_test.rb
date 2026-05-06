@@ -122,7 +122,7 @@ class User::PasswordValidationsTest < ActiveSupport::TestCase
     context 'when a new user is created with no authentication provided' do
       let(:user) {build(:user, password: nil)}
 
-      it {password_required?.must_equal true}
+      it {_(password_required?).must_equal true}
     end
 
     context 'when the user changes their password' do

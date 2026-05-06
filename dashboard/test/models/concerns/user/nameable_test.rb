@@ -119,8 +119,8 @@ class NameableTest < ActiveSupport::TestCase
     it {_(build(:user, name: 'Laurel Fan').second_name).must_equal 'Fan'} # first name last name
     it {_(build(:user, name: 'Winnie the Pooh').second_name).must_equal 'the'} # middle name
     it {_(build(:user, name: "D'Andre Means").second_name).must_equal "Means"} # punctuation ok
-    it {_(build(:user, name: '樊瑞').second_name).must_equal nil} # ok, this isn't actually right but ok for now
-    it {_(build(:user, name: 'Laurel').second_name).must_equal nil} # just one name
+    it {_(build(:user, name: '樊瑞').second_name).must_be_nil} # ok, this isn't actually right but ok for now
+    it {_(build(:user, name: 'Laurel').second_name).must_be_nil} # just one name
     it {_(build(:user, name: '  some whitespace in front  ').second_name).must_equal 'whitespace'} # whitespace in front
   end
 

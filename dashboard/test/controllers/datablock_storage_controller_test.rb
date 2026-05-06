@@ -48,7 +48,7 @@ class DatablockStorageControllerTest < ActionDispatch::IntegrationTest
     }
     assert_response :success
     val = JSON.parse(@response.body)
-    assert_equal value, val
+    value.nil? ? assert_nil(val) : assert_equal(value, val)
   end
 
   test "sets and gets string value" do
