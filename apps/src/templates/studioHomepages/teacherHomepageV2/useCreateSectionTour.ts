@@ -11,7 +11,7 @@ import {
 export const CREATE_SECTION_ONBOARDING_STEP_KEY =
   'createSectionOnboardingCurrentStep';
 
-const recordTourCompletion = () => {
+export const recordTourCompletion = () => {
   HttpClient.post(
     '/dashboardapi/v1/user_product_tours',
     JSON.stringify({tour_name: 'create_class_section'}),
