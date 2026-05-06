@@ -28,7 +28,6 @@ const styles = {
     padding: '0.75em 1.5em',
     borderRadius: 8,
     minWidth: '15%',
-    outline: 'none',
     border: 'none',
     whiteSpace: 'nowrap',
     lineHeight: 1.3,

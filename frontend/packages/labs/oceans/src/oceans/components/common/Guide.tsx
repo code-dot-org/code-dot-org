@@ -70,6 +70,14 @@ const UnwrappedGuide = class Guide extends Component<
       this.guideDialogRef.current.focus({preventScroll: false});
       this.lastFocusedGuideId = currentGuideId;
     } else if (!currentGuide) {
+      if (this.lastFocusedGuideId !== null) {
+        // Guide just cleared — return focus to the first activity button so
+        // keyboard users land inside the game instead of on the page shell.
+        const firstBtn = document.querySelector<HTMLElement>(
+          '#container-react button',
+        );
+        firstBtn?.focus({preventScroll: true});
+      }
       this.lastFocusedGuideId = null;
     }
   }
