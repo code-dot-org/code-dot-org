@@ -36,7 +36,6 @@
     "extends": "@code-dot-org/lint-config/stylelint/index.mjs"
   },
   "dependencies": {
-    "@code-dot-org/core": "workspace:*",
     "@code-dot-org/redactable-markdown": "^0.4.0",
     "@code-dot-org/svm": "^0.1.1",
     "@tensorflow-models/knn-classifier": "~1.1.0",
@@ -49,6 +48,7 @@
     "remark-rehype": "^5.0.0"
   },
   "devDependencies": {
+    "@code-dot-org/core": "workspace:*",
     "@code-dot-org/lint-config": "workspace:*",
     "@fortawesome/fontawesome-svg-core": "^1.2.25",
     "@fortawesome/free-solid-svg-icons": "^5.11.2",
