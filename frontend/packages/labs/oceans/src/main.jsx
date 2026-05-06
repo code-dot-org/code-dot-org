@@ -1,16 +1,15 @@
-import {useCallback, useEffect, useRef, useState} from 'react';
+import {useState} from 'react';
 import {createRoot} from 'react-dom/client';
 
 import {initializeCore} from '@code-dot-org/core';
 import {localizationPlugin} from '@code-dot-org/core/plugins/localization';
 
-import {stopTypingSounds} from './oceans/components/common/Guide';
+import OceansLab from './App';
 import {AppMode} from './oceans/constants';
-import {initAll} from './oceans/init';
-import Sounds from './oceans/Sounds';
 
 initializeCore({plugins: [localizationPlugin]});
 
+/** All playable modes in sequence, used by the mode picker and onContinue handler. */
 const APP_MODES = [
   {id: AppMode.FishVTrash, label: 'Fish vs Trash'},
   {id: AppMode.FishShort, label: 'Fish Short'},
@@ -19,47 +18,25 @@ const APP_MODES = [
   {id: AppMode.CreaturesVTrashDemo, label: 'Creatures Demo'},
 ];
 
+/** Read initial mode from ?mode= URL param, fallback to FishVTrash. */
 function getInitialMode() {
   const params = new URLSearchParams(window.location.search);
   return params.get('mode') || AppMode.FishVTrash;
 }
 
+/** Dev harness: mode picker + OceansLab component. */
 function DemoShell() {
-  const canvasRef = useRef(null);
-  const backgroundCanvasRef = useRef(null);
   const [appMode, setAppMode] = useState(getInitialMode);
-  const soundsRef = useRef(null);
+  const params = new URLSearchParams(window.location.search);
 
-  const launch = useCallback(mode => {
-    if (!soundsRef.current) {
-      soundsRef.current = new Sounds();
+  /** Advance to next mode in sequence when the user completes one. */
+  function handleContinue() {
+    const idx = APP_MODES.findIndex(m => m.id === appMode);
+    const next = APP_MODES[idx + 1];
+    if (next) {
+      setAppMode(next.id);
     }
-    const sounds = soundsRef.current;
-
-    initAll({
-      appMode: mode,
-      guides: new URLSearchParams(window.location.search).get('guides'),
-      textToSpeechLocale: new URLSearchParams(window.location.search).get(
-        'tts',
-      ),
-      onContinue: () => {
-        const idx = APP_MODES.findIndex(m => m.id === mode);
-        const next = APP_MODES[idx + 1];
-        if (next) {
-          setAppMode(next.id);
-        }
-      },
-      canvas: canvasRef.current,
-      backgroundCanvas: backgroundCanvasRef.current,
-      playSound: sounds.play.bind(sounds),
-      registerSound: sounds.register.bind(sounds),
-    });
-  }, []);
-
-  useEffect(() => {
-    stopTypingSounds();
-    launch(appMode);
-  }, [appMode, launch]);
+  }
 
   return (
     <div style={{fontFamily: 'sans-serif', padding: 8}}>
@@ -77,21 +54,12 @@ function DemoShell() {
           </label>
         ))}
       </div>
-      <div
-        id="container-react"
-        style={{position: 'relative', width: 1024, height: 576}}
-      >
-        <canvas
-          id="background-canvas"
-          ref={backgroundCanvasRef}
-          style={{position: 'absolute', top: 0, left: 0}}
-        />
-        <canvas
-          id="activity-canvas"
-          ref={canvasRef}
-          style={{position: 'absolute', top: 0, left: 0}}
-        />
-      </div>
+      <OceansLab
+        appMode={appMode}
+        guides={params.get('guides') ?? undefined}
+        textToSpeechLocale={params.get('tts') ?? undefined}
+        onContinue={handleContinue}
+      />
     </div>
   );
 }
