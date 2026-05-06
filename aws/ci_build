@@ -159,7 +159,7 @@ def main
         InfraProductionTopic.set_dtp_commit GitHub.sha('production')
 
         # Schedule a reminder for the dotd to check Zendesk in 2 hours
-        Slack.remind(Slack.user_id(DevelopersTopic.dotd), Time.now.to_i + 7200, 'Reminder: check <https://codeorg.zendesk.com/agent/filters/44863373|Zendesk>')
+        Slack.remind(DevelopersTopic.dotd, Time.now.to_i + 7200, 'Reminder: check <https://codeorg.zendesk.com/agent/filters/44863373|Zendesk>')
       end
     else
       message = "<b>#{projects}</b> failed to build!" + time_message + log_link
