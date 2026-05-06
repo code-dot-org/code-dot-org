@@ -13,7 +13,7 @@ class LanguageTest < ActionDispatch::IntegrationTest
 
         get new_user_session_path, env: request_env, params: request_params
 
-        follow_redirect! if response.status == 302
+        follow_redirect! while response.status == 302
         must_respond_with :success
 
         _(request.locale).must_equal expected_locale

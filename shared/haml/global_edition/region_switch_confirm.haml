@@ -2,7 +2,7 @@
   require 'cdo/global_edition'
 
   ge_region = Cdo::GlobalEdition.country_region(request.country_code)
-  return if ge_region.nil? || ge_region == request.ge_region
+  return if ge_region.nil? || ge_region == request.ge_region || !Cdo::GlobalEdition.region_available?(ge_region)
 
   enabled_regions = DCDO.get('global_edition_region_switch_confirm_enabled_in', [])
   return unless enabled_regions.include?('all') || enabled_regions.include?(ge_region)
