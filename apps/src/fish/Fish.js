@@ -1,3 +1,4 @@
+import {setAssetPath} from '@code-dot-org/ml-activities/dist/assetPath';
 import React from 'react';
 import {Provider} from 'react-redux';
 
@@ -153,7 +154,9 @@ Fish.prototype.initMLActivities = function () {
   const canvas = document.getElementById('activity-canvas');
   const backgroundCanvas = document.getElementById('background-canvas');
 
-  const {initAll} = require('@code-dot-org/oceans-lab');
+  setAssetPath('/blockly/media/skins/fish/');
+
+  const {initAll} = require('@code-dot-org/ml-activities');
 
   // Localize
   const msg = Object.entries(fishMsg).reduce((acc, [key, msgFunction]) => {
