@@ -164,12 +164,16 @@ Test.prototype.publicLogUrl = function () {
 
 // Connect up "Copy Rerun Command" buttons
 new Clipboard("button.copy-button");
+// Each per-row rerun command already ends with `&` to background the run.
+// Join with ` \<newline>` so when the user pastes the block into a shell, the
+// shell treats it as one line-continued input — giving the user a chance to
+// review and hit Enter rather than executing each command on paste.
 new Clipboard("#copy-failing-rerun-button", {
   text: () =>
     Array.from(
       document.querySelectorAll("tr.FAILED td.rerun-command button.copy-button"),
       (btn) => btn.getAttribute("data-clipboard-text")
-    ).join("\n"),
+    ).join(" \\\n"),
 });
 
 function keyify(str) {
