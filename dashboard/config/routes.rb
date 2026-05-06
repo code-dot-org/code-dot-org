@@ -1248,8 +1248,6 @@ Dashboard::Application.routes.draw do
     # Routes used by donor teacher banner
     post '/dashboardapi/v1/users/:user_id/dismiss_donor_teacher_banner', to: 'api/v1/users#dismiss_donor_teacher_banner'
 
-    post '/dashboardapi/v1/user_product_tours', to: 'api/v1/user_product_tours#create'
-
     # Routes used by teacher scores
     post '/dashboardapi/v1/teacher_scores', to: 'api/v1/teacher_scores#score_lessons_for_section'
     get '/dashboardapi/v1/teacher_scores/:section_id/:script_id', to: 'api/v1/teacher_scores#get_teacher_scores_for_script', defaults: {format: 'json'}
