@@ -5,7 +5,7 @@ description 'description here'
 markdown <<MARKDOWN
 # Begin with the End in Mind: Final Project Overview
 
-#### Let's take a moment to begin with the end in mind by taking a look at the Final Project for this Unit.
+#### Let's take a moment to begin with the end in mind by taking a look at the final project for this unit.
 
 <div style="display:flex; gap:30px; align-items:flex-start; max-width:1000px; margin:20px auto;">
 
@@ -51,7 +51,7 @@ style="width:100%; border-radius:10px; box-shadow:0 4px 10px rgba(0,0,0,0.2);">
 
 </div>
 
-#### The result is a web app that helps users explore opportunities through different perspectives, while demonstrating that **data design and algorithms always involve choices.**
+
 
 ---
 
@@ -98,7 +98,7 @@ Reflects on data design decisions and trade-offs made during development
 
 ## Now, let’s see how we get here!
 
-#### Arrays are up next!
+
 
 
 MARKDOWN
