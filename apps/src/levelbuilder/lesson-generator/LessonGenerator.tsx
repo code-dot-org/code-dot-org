@@ -1,6 +1,7 @@
 import React, {useCallback, useEffect, useMemo, useState} from 'react';
 
 import AichatContextManager from '@cdo/apps/aichat/aichatContextManager';
+import {Panel} from '@cdo/apps/panels/types';
 import {createUuid} from '@cdo/apps/utils';
 import {AiChatClientTypes} from '@cdo/generated-scripts/sharedConstants';
 
@@ -8,9 +9,11 @@ import {
   generateLessonOutline,
   generatePanelsForLevel,
   generateWeblab2Level,
+  Weblab2Generation,
 } from './aiGeneration';
 import {
   createOrFindLevel,
+  loadLessonLevelProperties,
   saveLessonActivities,
   updateGeneratePrompt,
   updateLongInstructions,
@@ -81,6 +84,99 @@ function blankSection(position: number) {
 // for placements with index -1) in the order the caller provides. The
 // server's update_activities pipeline diffs against the existing rows by
 // id, so existing script_levels keep their ids and just get repositioned.
+// Per-spec content captured during a single Generate run, so each level we
+// process can be told what came before it. Existing levels that we skipped
+// don't have content here (we'd need an extra round-trip to fetch it from
+// the server); those just contribute their description to the context.
+interface PriorOutput {
+  panels?: Panel[];
+  weblab2?: Weblab2Generation;
+}
+
+interface PriorEntry {
+  position: number;
+  name: string;
+  labType: string;
+  description: string;
+  output?: PriorOutput;
+}
+
+// Adapt the camelCased level properties returned by /lessons/:id/level_properties
+// to the same PriorOutput shape we use for content we just generated. This
+// lets the continuity context for skipped levels match what we'd send for
+// regenerated ones, so the AI sees a uniform record.
+function priorOutputFromLevelProperties(
+  props: Record<string, unknown> | undefined,
+  labType: LabType
+): PriorOutput | undefined {
+  if (!props) return undefined;
+  if (labType === 'Panels') {
+    const panels = props.panels as Panel[] | undefined;
+    if (Array.isArray(panels) && panels.length > 0) {
+      return {panels};
+    }
+    return undefined;
+  }
+  if (labType === 'Weblab2') {
+    const startSources = props.startSources as
+      | {files?: Record<string, {name: string; contents: string}>}
+      | undefined;
+    const longInstructions = (props.longInstructions as string) || '';
+    const files = startSources?.files
+      ? Object.values(startSources.files).map(f => ({
+          name: f.name,
+          contents: f.contents,
+        }))
+      : [];
+    if (files.length === 0 && !longInstructions) return undefined;
+    return {
+      weblab2: {
+        startSources: startSources || {folders: {}, files: {}},
+        longInstructions,
+        files,
+      },
+    };
+  }
+  return undefined;
+}
+
+// Render the running preceding-levels context as a plain-text block. Image
+// URLs and binary data are deliberately left out — only the text content
+// matters for continuity, and feeding image bytes to a text model is
+// pointless waste. Caller responsibility to skip emitting a heading when
+// this returns the empty string.
+function formatPrecedingLevels(entries: PriorEntry[]): string {
+  if (entries.length === 0) return '';
+  const blocks = entries.map(e => {
+    const lines: string[] = [];
+    lines.push(`Level ${e.position}: ${e.name} (${e.labType})`);
+    if (e.description) {
+      lines.push(`  Description: ${e.description}`);
+    }
+    if (e.output?.panels?.length) {
+      lines.push('  Panels:');
+      e.output.panels.forEach((p, i) => {
+        lines.push(`    ${i + 1}. [${p.layout || 'default'}] ${p.text}`);
+      });
+    }
+    if (e.output?.weblab2) {
+      lines.push('  Files:');
+      for (const f of e.output.weblab2.files) {
+        lines.push(`    ${f.name}:`);
+        for (const line of f.contents.split('\n')) {
+          lines.push(`      ${line}`);
+        }
+      }
+      lines.push('  Instructions:');
+      for (const line of e.output.weblab2.longInstructions.split('\n')) {
+        lines.push(`    ${line}`);
+      }
+    }
+    return lines.join('\n');
+  });
+  return blocks.join('\n\n');
+}
+
 function rebuildActivities(
   originalActivities: SerializedActivity[],
   placements: Placement[]
@@ -383,6 +479,25 @@ const LessonGenerator: React.FC<LessonGeneratorProps> = ({lesson}) => {
     // it here rather than reading it back off state because state updates
     // are batched.
     const succeededDescriptions = new Map<string, string>();
+    // Generated content for each spec we've already processed this run, in
+    // order. Fed to subsequent levels as continuity context so panels/sources
+    // can build on what came before.
+    const priorEntries: PriorEntry[] = [];
+
+    // Pull the live properties for every existing level in the lesson so
+    // levels we're skipping this run still contribute their full content
+    // (panel text, weblab2 files, instructions) to the continuity context
+    // for later levels. Soft-fail: if this round-trip fails, we just lose
+    // the extra context and fall back to descriptions.
+    let levelPropertiesById: Record<string, Record<string, unknown>> = {};
+    try {
+      levelPropertiesById = await loadLessonLevelProperties(lesson.id);
+    } catch (err) {
+      const message = err instanceof Error ? err.message : String(err);
+      appendLog(
+        `Warning: couldn't load existing level content for context: ${message}`
+      );
+    }
 
     for (let i = 0; i < levelSpecs.length; i++) {
       const spec = levelSpecs[i];
@@ -407,6 +522,13 @@ const LessonGenerator: React.FC<LessonGeneratorProps> = ({lesson}) => {
             sectionIndex: spec.existing.sectionIndex,
           });
         }
+        priorEntries.push({
+          position: i + 1,
+          name: levelName,
+          labType: spec.unsupportedType,
+          description:
+            '(unsupported lab type — content not visible to the generator)',
+        });
         continue;
       }
 
@@ -418,6 +540,14 @@ const LessonGenerator: React.FC<LessonGeneratorProps> = ({lesson}) => {
       if (!shouldGenerate && !isExisting) {
         continue;
       }
+
+      // Snapshot the running context for this level. We deliberately do
+      // not include image bytes — text + layouts is what carries continuity.
+      const precedingLevelsText = formatPrecedingLevels(priorEntries);
+
+      // Filled in below if we actually run AI for this level. Used to feed
+      // the next iteration's continuity context.
+      let generatedOutput: PriorOutput | undefined;
 
       try {
         setStage('creating');
@@ -454,21 +584,25 @@ const LessonGenerator: React.FC<LessonGeneratorProps> = ({lesson}) => {
                   );
                 },
               },
-              lessonContext
+              lessonContext,
+              precedingLevelsText
             );
             setStage('saving-properties');
             appendLog(`Saving panel data for "${levelName}"…`);
             await updatePanelsLevel(level.id, panels);
+            generatedOutput = {panels};
           } else if (spec.labType === 'Weblab2') {
-            const {startSources, longInstructions} = await generateWeblab2Level(
+            const result = await generateWeblab2Level(
               spec.description.trim(),
-              lessonContext
+              lessonContext,
+              precedingLevelsText
             );
             setStage('saving-properties');
             appendLog(`Saving start sources for "${levelName}"…`);
-            await updateStartSources(level.id, startSources);
+            await updateStartSources(level.id, result.startSources);
             appendLog(`Saving instructions for "${levelName}"…`);
-            await updateLongInstructions(level.id, longInstructions);
+            await updateLongInstructions(level.id, result.longInstructions);
+            generatedOutput = {weblab2: result};
           }
         }
 
@@ -519,6 +653,23 @@ const LessonGenerator: React.FC<LessonGeneratorProps> = ({lesson}) => {
           editUrl: `/levels/${level.id}/edit`,
         });
         succeededDescriptions.set(spec.key, spec.description.trim());
+        // For skipped existing levels (no fresh generatedOutput), fall back
+        // to the server-fetched properties so subsequent levels still see
+        // the actual content rather than just a description.
+        let outputForContext = generatedOutput;
+        if (!outputForContext) {
+          outputForContext = priorOutputFromLevelProperties(
+            levelPropertiesById[String(level.id)],
+            spec.labType
+          );
+        }
+        priorEntries.push({
+          position: i + 1,
+          name: level.name,
+          labType: spec.labType,
+          description: spec.description.trim(),
+          output: outputForContext,
+        });
       } catch (err) {
         const message = err instanceof Error ? err.message : String(err);
         appendLog(`Failed "${levelName}": ${message}`);

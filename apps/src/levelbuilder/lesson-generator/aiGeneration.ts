@@ -38,20 +38,14 @@ type PromptTag = (typeof PROMPT_TAGS)[keyof typeof PROMPT_TAGS];
 // stay readable but don't dominate the console for users who aren't
 // debugging.
 function logPrompt(tag: PromptTag, prompt: string): void {
-  // eslint-disable-next-line no-console
   console.groupCollapsed(`[${tag}] prompt sent`);
-  // eslint-disable-next-line no-console
   console.log(prompt);
-  // eslint-disable-next-line no-console
   console.groupEnd();
 }
 
 function logResponse(tag: PromptTag, response: unknown): void {
-  // eslint-disable-next-line no-console
   console.groupCollapsed(`[${tag}] response received`);
-  // eslint-disable-next-line no-console
   console.log(response);
-  // eslint-disable-next-line no-console
   console.groupEnd();
 }
 
@@ -109,7 +103,8 @@ interface PanelPlan {
 // for this level stay coherent with the surrounding levels.
 async function planPanels(
   description: string,
-  lessonContext?: string
+  lessonContext?: string,
+  precedingLevels?: string
 ): Promise<PanelPlan[]> {
   const prompt = [
     'You are helping a curriculum author build a "Panels" level: a short,',
@@ -126,6 +121,16 @@ async function planPanels(
           'tone, characters, and continuity consistent with this outline,',
           'but only produce content for the specific level description below):',
           lessonContext,
+        ]
+      : []),
+    ...(precedingLevels
+      ? [
+          '',
+          'Preceding levels in this lesson, in order. Use them for continuity',
+          '— recurring characters, callbacks, building on earlier setups —',
+          'but do NOT regenerate or summarize them; only build the level',
+          'described last:',
+          precedingLevels,
         ]
       : []),
     '',
@@ -213,9 +218,10 @@ export async function generatePanelsForLevel(
   levelName: string,
   description: string,
   callbacks: PanelGenerationCallbacks = {},
-  lessonContext?: string
+  lessonContext?: string,
+  precedingLevels?: string
 ): Promise<Panel[]> {
-  const plan = await planPanels(description, lessonContext);
+  const plan = await planPanels(description, lessonContext, precedingLevels);
   callbacks.onPlanned?.(plan.length);
 
   const panels: Panel[] = [];
@@ -262,6 +268,10 @@ const weblabPlanSchema = Output.object({
 export interface Weblab2Generation {
   startSources: object;
   longInstructions: string;
+  // The raw file list as returned by the model, before it's wrapped into a
+  // MultiFileSource. Exposed so callers can include it in continuity
+  // context for later levels without re-parsing the wrapped form.
+  files: {name: string; contents: string}[];
 }
 
 // Web Lab 2 stores its starter sources as a MultiFileSource, the same
@@ -273,7 +283,8 @@ export interface Weblab2Generation {
 // code and instructions stay coherent with surrounding panels.
 export async function generateWeblab2Level(
   description: string,
-  lessonContext?: string
+  lessonContext?: string,
+  precedingLevels?: string
 ): Promise<Weblab2Generation> {
   const prompt = [
     'You are helping a curriculum author build a "Web Lab 2" level: a',
@@ -293,6 +304,15 @@ export async function generateWeblab2Level(
           'continuity with prior steps, but only build the specific level',
           'described below):',
           lessonContext,
+        ]
+      : []),
+    ...(precedingLevels
+      ? [
+          '',
+          'Preceding levels in this lesson, in order. Use them for continuity',
+          '— building on the same code, reusing characters or examples — but',
+          'do NOT restate them; only build the level described last:',
+          precedingLevels,
         ]
       : []),
     '',
@@ -354,6 +374,7 @@ export async function generateWeblab2Level(
       openFiles: fileIds,
     },
     longInstructions: plan.longInstructions.trim(),
+    files: plan.files,
   };
 }
 

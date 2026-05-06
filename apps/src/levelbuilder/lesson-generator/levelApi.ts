@@ -17,18 +17,21 @@ export interface CreatedLevel {
   reused: boolean;
 }
 
-// POST /levels — create a level of the given type with the given name. We
-// pass `do_not_redirect=true` so the controller returns the created Level
-// record as JSON instead of a redirect URL.
+// Look up a level by name first; fall back to POST /levels if it doesn't
+// exist. Looking up first avoids the noisy 406 "name has already been
+// taken" round-trip that the levelbuilder regenerates an existing level
+// would otherwise produce. The 406 fallback is still here for the rare
+// race where another tab creates the level between our find and our POST.
 //
-// If the level name is already taken (Rails uniqueness validation), we
-// look up the existing level by name and return it with reused=true so
-// the caller can overwrite its content. This matches what a levelbuilder
-// would do by hand — go open the existing level and edit it.
+// POST passes `do_not_redirect=true` so the controller returns the created
+// Level record as JSON instead of a redirect URL.
 export async function createOrFindLevel(
   type: LabType,
   name: string
 ): Promise<CreatedLevel> {
+  const existing = await findLevelByName(type, name);
+  if (existing) return {...existing, reused: true};
+
   const response = await fetch('/levels?do_not_redirect=true', {
     method: 'POST',
     headers: jsonHeaders(),
@@ -40,8 +43,8 @@ export async function createOrFindLevel(
   }
   const body = await response.text();
   if (response.status === 406 && /name has already been taken/i.test(body)) {
-    const existing = await findLevelByName(type, name);
-    if (existing) return {...existing, reused: true};
+    const racy = await findLevelByName(type, name);
+    if (racy) return {...racy, reused: true};
   }
   throw new Error(
     `Failed to create level "${name}": ${response.status} ${body}`
@@ -182,6 +185,27 @@ export async function uploadLevelAsset(
     );
   }
   return result.newAssetUrl;
+}
+
+// GET /lessons/:id/level_properties — fetch the camelCased properties bag
+// for every level in this lesson, keyed by level id (as a string). Used by
+// the generator to feed full content of skipped levels into the continuity
+// context for subsequent generations, so the AI has visibility into the
+// levels we're not regenerating.
+export async function loadLessonLevelProperties(
+  lessonId: number
+): Promise<Record<string, Record<string, unknown>>> {
+  const response = await fetch(`/lessons/${lessonId}/level_properties`, {
+    headers: {Accept: 'application/json'},
+  });
+  if (!response.ok) {
+    throw new Error(
+      `Failed to load level properties: ${
+        response.status
+      } ${await response.text()}`
+    );
+  }
+  return await response.json();
 }
 
 // PUT /lessons/:id — replace the lesson's activity tree wholesale, and
