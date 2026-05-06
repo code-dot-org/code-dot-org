@@ -1,5 +1,12 @@
-# Declares that a model's database table should be exported to the analytics
-# data warehouse via AWS Zero ETL. Including this concern and calling
+# Declares that a model's database table should be exported to the analytics data warehouse via AWS Zero ETL. In
+# practice, it is simpler to configure Zero ETL to export all tables with an Include filter statement
+# (`include: dashboard_test.*`) and then selectively exclude tables that should not be exported due to compatibility
+# issues with Zero ETL (don't have a primary key, or contain one or more blob columns). Declaring a model to be
+# exportable to analytics ensures that `Cdo::Aws::Redshift::MaterializedViews` creates a PII and non-PII Materialized
+# View in Redshift to make the target (exported) Zero ETL available for Data Analysts and their reporting systems to
+# query.
+#
+# Including this concern and calling
 # `export_to_analytics` in a model class registers it for materialized view
 # generation in Redshift.
 #
