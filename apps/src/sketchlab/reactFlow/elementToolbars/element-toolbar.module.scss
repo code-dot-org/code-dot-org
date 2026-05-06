@@ -161,7 +161,27 @@
 .fontSizeButtons {
   display: flex;
   flex-direction: row;
+  align-items: center;
   gap: 4px;
+}
+
+// The DSCO TextField wrapper hard-codes min-width: 18.75rem on its <label>;
+// override the wrapper and the input so the field sits inline with the four
+// IconButtons and fits 2-3 digits plus the native number spinner.
+.fontSizeInput {
+  flex: 0 0 auto;
+  width: 64px;
+  min-width: 0;
+
+  & > label {
+    min-width: 0;
+    width: 64px;
+  }
+
+  input {
+    width: 64px;
+    min-width: 0;
+  }
 }
 
 .fontSizeButton {

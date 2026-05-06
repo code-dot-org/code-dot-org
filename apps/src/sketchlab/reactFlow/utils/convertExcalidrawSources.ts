@@ -17,18 +17,7 @@ import {createUuid} from '@cdo/apps/utils';
 
 import {uploadBase64ToUrl} from '../../excalidraw/utils/uploadBase64ToUrl';
 import {ASSET_PATH_PREFIX, LINE_ANCHOR_SIZE_PX} from '../constants';
-import {FontSizeValue} from '../elementToolbars/toolbarPalettes';
 import {ShapeNodeData, ShapeType} from '../types';
-
-// Maps Excalidraw px font size to our small/medium/large bands. The
-// thresholds are midpoints between fontSizePx in toolbarPalettes.ts
-// (small=12, medium=16, large=22, extra-large=30).
-function fontSizeBand(px: number): FontSizeValue {
-  if (px < 14) return 'small';
-  if (px < 19) return 'medium';
-  if (px < 26) return 'large';
-  return 'extra-large';
-}
 
 function shapeTypeFor(el: ExcalidrawElement): ShapeType | null {
   if (el.type === 'rectangle') return 'rectangle';
@@ -104,7 +93,7 @@ export function convertExcalidrawToReactFlow(
       };
       if (label) {
         data.fontColor = label.strokeColor;
-        data.fontSize = fontSizeBand(label.fontSize);
+        data.fontSize = label.fontSize;
       }
       const node: SketchlabReactFlowNode = {
         id: el.id,
@@ -128,7 +117,7 @@ export function convertExcalidrawToReactFlow(
         data: {
           text: el.text,
           fontColor: el.strokeColor,
-          fontSize: fontSizeBand(el.fontSize),
+          fontSize: el.fontSize,
           showHandles: false,
         },
       };

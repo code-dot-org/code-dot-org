@@ -39,6 +39,16 @@ export const FONT_SIZE_OPTIONS = [
 
 export type FontSizeValue = (typeof FONT_SIZE_OPTIONS)[number]['value'];
 
+// fontSize on a node may be a named preset or a raw pixel number.
+export type FontSize = FontSizeValue | number;
+
+export const FONT_SIZE_MIN = 8;
+export const FONT_SIZE_MAX = 96;
+
+export function clampFontSizePx(n: number): number {
+  return Math.min(FONT_SIZE_MAX, Math.max(FONT_SIZE_MIN, Math.round(n)));
+}
+
 export const LINE_WIDTH_OPTIONS = [
   {value: 1, label: 'Thin'},
   {value: 3, label: 'Medium'},
@@ -72,7 +82,10 @@ export const DEFAULT_TEXT_ALIGN: TextAlignValue = 'center';
 export const DEFAULT_LINE_WIDTH: LineWidthValue = 1;
 export const DEFAULT_LINE_STROKE_STYLE: LineStrokeStyleValue = 'solid';
 
-export function fontSizePx(value: string | undefined): number | undefined {
+export function fontSizePx(value: FontSize | undefined): number | undefined {
+  if (typeof value === 'number') {
+    return value;
+  }
   const match = FONT_SIZE_OPTIONS.find(option => option.value === value);
   return (
     match?.px ||
