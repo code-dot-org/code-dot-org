@@ -1,4 +1,4 @@
-class AiStudentPodcastFragmentsController < ApplicationController
+class AiStudentPodcastsController < ApplicationController
   before_action :authenticate_user!
   before_action :set_fragment, only: [:show, :update, :destroy]
 
