@@ -1,0 +1,521 @@
+{
+  "language": "it",
+  "testUtterance": "Questo testo ha lo scopo di verificare se queste voci italiane suonano bene come dovrebbero.",
+  "voices": [
+    {
+      "label": "Elsa (Alta qualita)",
+      "name": "Microsoft Elsa Online (Natural) - Italian (Italy)",
+      "note": "This voice is pre-loaded in Edge on desktop. Unlike some of the other voices ranked at the top of that list, it's not available to be installed on Windows yet.",
+      "language": "it-IT",
+      "gender": "female",
+      "quality": [
+        "veryHigh"
+      ],
+      "rate": 1,
+      "pitchControl": false,
+      "browser": [
+        "Edge"
+      ],
+      "preloaded": true
+    },
+    {
+      "label": "Isabella",
+      "name": "Microsoft Isabella Online (Natural) - Italian (Italy)",
+      "note": "This voice is pre-loaded in Edge on desktop. Unlike some of the other voices ranked at the top of that list, it's not available to be installed on Windows yet.",
+      "language": "it-IT",
+      "gender": "female",
+      "quality": [
+        "veryHigh"
+      ],
+      "rate": 1,
+      "pitchControl": false,
+      "browser": [
+        "Edge"
+      ],
+      "preloaded": true
+    },
+    {
+      "label": "Giuseppe",
+      "name": "Microsoft Giuseppe Online (Natural) - Italian (Italy)",
+      "note": "This voice is pre-loaded in Edge on desktop. Unlike some of the other voices ranked at the top of that list, it's not available to be installed on Windows yet.",
+      "language": "it-IT",
+      "gender": "male",
+      "quality": [
+        "veryHigh"
+      ],
+      "rate": 1,
+      "pitchControl": false,
+      "browser": [
+        "Edge"
+      ],
+      "preloaded": true
+    },
+    {
+      "label": "Diego",
+      "name": "Microsoft Diego Online (Natural) - Italian (Italy)",
+      "note": "This voice is pre-loaded in Edge on desktop. Unlike some of the other voices ranked at the top of that list, it's not available to be installed on Windows yet.",
+      "language": "it-IT",
+      "gender": "male",
+      "quality": [
+        "veryHigh"
+      ],
+      "rate": 1,
+      "pitchControl": false,
+      "browser": [
+        "Edge"
+      ],
+      "preloaded": true
+    },
+    {
+      "label": "Federica",
+      "name": "Federica",
+      "note": "This voice can be installed on all Apple devices and offers three variants. Like all voices that can be installed on Apple devices, it suffers from inconsistent naming due to localization.",
+      "altNames": [
+        "Federica (Premium)",
+        "Federica (premium)",
+        "Federica (de qualité)",
+        "Federica (prèmium)",
+        "Federica (korkealaatuinen)",
+        "Federica (høj kvalitet)",
+        "Federica (Enhanced)",
+        "Federica (mejorada)",
+        "Federica (ottimizzata)",
+        "Federica (melhorada)",
+        "Federica (erweitert)",
+        "Federica (verbeterd)",
+        "Federica (millorada)",
+        "Federica (parannettu)",
+        "Federica (förbättrad)",
+        "Federica (forbedret)",
+        "Federica (Italian (Italie))",
+        "Federica (italien (Italie))",
+        "Federica (italiano (Italia))",
+        "Federica (italiano (Itália))",
+        "Federica (Italienisch (Italien))",
+        "Federica (Italiaans (Italië))",
+        "Federica (italià (Itàlia))",
+        "Federica (italia (Italia))",
+        "Federica (italienska (Italien))",
+        "Federica (italiensk (Italien))",
+        "Federica (italiensk (Italia))"
+      ],
+      "language": "it-IT",
+      "gender": "female",
+      "quality": [
+        "low",
+        "normal",
+        "high"
+      ],
+      "rate": 1,
+      "pitch": 1,
+      "os": [
+        "macOS",
+        "iOS",
+        "iPadOS"
+      ]
+    },
+    {
+      "label": "Emma",
+      "name": "Emma",
+      "note": "This voice can be installed on all Apple devices and offers three variants. Like all voices that can be installed on Apple devices, it suffers from inconsistent naming due to localization.",
+      "altNames": [
+        "Emma (Premium)",
+        "Emma (premium)",
+        "Emma (de qualité)",
+        "Emma (prèmium)",
+        "Emma (korkealaatuinen)",
+        "Emma (høj kvalitet)",
+        "Emma (Enhanced)",
+        "Emma (mejorada)",
+        "Emma (ottimizzata)",
+        "Emma (melhorada)",
+        "Emma (erweitert)",
+        "Emma (verbeterd)",
+        "Emma (millorada)",
+        "Emma (parannettu)",
+        "Emma (förbättrad)",
+        "Emma (forbedret)",
+        "Emma (Italian (Italie))",
+        "Emma (italien (Italie))",
+        "Emma (italiano (Italia))",
+        "Emma (italiano (Itália))",
+        "Emma (Italienisch (Italien))",
+        "Emma (Italiaans (Italië))",
+        "Emma (italià (Itàlia))",
+        "Emma (italia (Italia))",
+        "Emma (italienska (Italien))",
+        "Emma (italiensk (Italien))",
+        "Emma (italiensk (Italia))"
+      ],
+      "language": "it-IT",
+      "gender": "female",
+      "quality": [
+        "low",
+        "normal",
+        "high"
+      ],
+      "rate": 1,
+      "pitch": 1,
+      "os": [
+        "macOS",
+        "iOS",
+        "iPadOS"
+      ]
+    },
+    {
+      "label": "Alice",
+      "name": "Alice (ottimizzata)",
+      "note": "While this is meant to identify the highest quality variant for the voice, it can be difficult to do so due to inconsistencies in how voices are exposed to browsers through the Web Speech API. Since the lowest quality of the voice is pre-loaded on Apple devices, the situation is worse than with other voices that need to be installed.",
+      "altNames": [
+        "Alice (Enhanced)",
+        "Alice (premium)",
+        "Alice (mejorada)",
+        "Alice (melhorada)",
+        "Alice (erweitert)",
+        "Alice (verbeterd)",
+        "Alice (millorada)",
+        "Alice (parannettu)",
+        "Alice (förbättrad)",
+        "Alice (forbedret)",
+        "Alice (Italian (Italie))",
+        "Alice (italien (Italie))",
+        "Alice (italiano (Italia))",
+        "Alica (italiano (Itália))",
+        "Alice (Italienisch (Italien))",
+        "Alice (Italiaans (Italië))",
+        "Alice (italià (Itàlia))",
+        "Alice (italia (Italia))",
+        "Alice (italienska (Italien))",
+        "Alice (italiensk (Italien))",
+        "Alice (italiensk (Italia))"
+      ],
+      "overrides": "Alice",
+      "language": "it-IT",
+      "gender": "female",
+      "quality": [
+        "normal"
+      ],
+      "rate": 1,
+      "pitch": 1,
+      "os": [
+        "macOS",
+        "iOS",
+        "iPadOS"
+      ]
+    },
+    {
+      "label": "Paola",
+      "name": "Paola",
+      "note": "This voice can be installed on all Apple devices and offers two variants. Like all voices that can be installed on Apple devices, it suffers from inconsistent naming due to localization.",
+      "altNames": [
+        "Paola (ottimizzata)",
+        "Paola (Enhanced)",
+        "Paola (premium)",
+        "Paola (mejorada)",
+        "Paola (melhorada)",
+        "Paola (erweitert)",
+        "Paola (verbeterd)",
+        "Paola (millorada)",
+        "Paola (parannettu)",
+        "Paola (förbättrad)",
+        "Paola (forbedret)",
+        "Paola (Italian (Italie))",
+        "Paola (italien (Italie))",
+        "Paola (italiano (Italia))",
+        "Paola (italiano (Itália))",
+        "Paola (Italienisch (Italien))",
+        "Paola (Italiaans (Italië))",
+        "Paola (italià (Itàlia))",
+        "Paola (italia (Italia))",
+        "Paola (italienska (Italien))",
+        "Paola (italiensk (Italien))",
+        "Paola (italiensk (Italia))"
+      ],
+      "language": "it-IT",
+      "gender": "female",
+      "quality": [
+        "low",
+        "normal"
+      ],
+      "rate": 1,
+      "pitch": 1,
+      "os": [
+        "macOS",
+        "iOS",
+        "iPadOS"
+      ]
+    },
+    {
+      "label": "Luca",
+      "name": "Luca",
+      "note": "This voice can be installed on all Apple devices and offers two variants. Like all voices that can be installed on Apple devices, it suffers from inconsistent naming due to localization.",
+      "altNames": [
+        "Luca (ottimizzata)",
+        "Luca (Enhanced)",
+        "Luca (premium)",
+        "Luca (mejorada)",
+        "Luca (melhorada)",
+        "Luca (erweitert)",
+        "Luca (verbeterd)",
+        "Luca (millorada)",
+        "Luca (parannettu)",
+        "Luca (förbättrad)",
+        "Luca (forbedret)",
+        "Luca (Italian (Italie))",
+        "Luca (italien (Italie))",
+        "Luca (italiano (Italia))",
+        "Luca (italiano (Itália))",
+        "Luca (Italienisch (Italien))",
+        "Luca (Italiaans (Italië))",
+        "Luca (italià (Itàlia))",
+        "Luca (italia (Italia))",
+        "Luca (italienska (Italien))",
+        "Luca (italiensk (Italien))",
+        "Luca (italiensk (Italia))"
+      ],
+      "language": "it-IT",
+      "gender": "male",
+      "quality": [
+        "low",
+        "normal"
+      ],
+      "rate": 1,
+      "pitch": 1,
+      "os": [
+        "macOS",
+        "iOS",
+        "iPadOS"
+      ]
+    },
+    {
+      "label": "Voce Google femminile",
+      "name": "Google italiano",
+      "note": "This voice is pre-loaded in Chrome on desktop. Utterances that are longer than 14 seconds long can trigger a bug with this voice, check the notes in the project's README for more information.",
+      "language": "it-IT",
+      "gender": "female",
+      "quality": [
+        "high"
+      ],
+      "rate": 1,
+      "pitch": 1,
+      "browser": [
+        "ChromeDesktop"
+      ],
+      "preloaded": true
+    },
+    {
+      "label": "Elsa",
+      "name": "Microsoft Elsa - Italian (Italy)",
+      "note": "This voices is pre-loaded in Windows 10 and 11. While it's nowhere nearly as good as Microsoft's Natural Voices, it's good to have this voice listed as a fallback",
+      "language": "it-IT",
+      "gender": "female",
+      "quality": [
+        "normal"
+      ],
+      "rate": 1,
+      "pitch": 1,
+      "os": [
+        "Windows"
+      ],
+      "preloaded": true
+    },
+    {
+      "label": "Cosimo",
+      "name": "Microsoft Cosimo - Italian (Italy)",
+      "note": "This voices is pre-loaded in Windows 10 and 11. While it's nowhere nearly as good as Microsoft's Natural Voices, it's good to have this voice listed as a fallback",
+      "language": "it-IT",
+      "gender": "male",
+      "quality": [
+        "normal"
+      ],
+      "rate": 1,
+      "pitch": 1,
+      "os": [
+        "Windows"
+      ],
+      "preloaded": true
+    },
+    {
+      "label": "Alice",
+      "name": "Alice",
+      "note": "This entry is meant to identify the pre-loaded variant of the voice, but it might not work on all browsers. In some cases, the previous entry might be the one detecting the pre-loaded variant unfortunately.",
+      "language": "it-IT",
+      "gender": "female",
+      "quality": [
+        "low"
+      ],
+      "rate": 1,
+      "pitch": 1,
+      "os": [
+        "macOS",
+        "iOS",
+        "iPadOS"
+      ],
+      "preloaded": true
+    },
+    {
+      "label": "Voce femminile 1",
+      "name": "Android Speech Recognition and Synthesis from Google it-it-x-itb-network",
+      "note": "This pre-loaded voice on ChromeOS is tied to the Android compatibility layer and requires network access for this version, which is very much a requirement for using Chrome OS anyway. Fallbacks to offline variant as well.",
+      "altNames": [
+        "Android Speech Recognition and Synthesis from Google it-it-x-itb-local"
+      ],
+      "language": "it-IT",
+      "gender": "female",
+      "quality": [
+        "high"
+      ],
+      "rate": 1,
+      "pitch": 1,
+      "os": [
+        "ChromeOS"
+      ],
+      "preloaded": true
+    },
+    {
+      "label": "Voce femminile 2",
+      "name": "Android Speech Recognition and Synthesis from Google it-it-x-kda-network",
+      "note": "This pre-loaded voice on ChromeOS is tied to the Android compatibility layer and requires network access for this version, which is very much a requirement for using Chrome OS anyway. Fallbacks to offline variant as well.",
+      "altNames": [
+        "Android Speech Recognition and Synthesis from Google it-it-x-kda-local"
+      ],
+      "language": "it-IT",
+      "gender": "female",
+      "quality": [
+        "high"
+      ],
+      "rate": 1,
+      "pitch": 1,
+      "os": [
+        "ChromeOS"
+      ],
+      "preloaded": true
+    },
+    {
+      "label": "Voce femminile 3",
+      "name": "Chrome OS italiano 1",
+      "language": "it-IT",
+      "gender": "female",
+      "quality": [
+        "low"
+      ],
+      "rate": 1,
+      "pitch": 1,
+      "os": [
+        "ChromeOS"
+      ],
+      "preloaded": true
+    },
+    {
+      "label": "Voce femminile 4",
+      "name": "Chrome OS italiano 2",
+      "language": "it-IT",
+      "gender": "female",
+      "quality": [
+        "low"
+      ],
+      "rate": 1,
+      "pitch": 1,
+      "os": [
+        "ChromeOS"
+      ],
+      "preloaded": true
+    },
+    {
+      "label": "Voce maschile 1",
+      "name": "Android Speech Recognition and Synthesis from Google it-it-x-itc-network",
+      "note": "This pre-loaded voice on ChromeOS is tied to the Android compatibility layer and requires network access for this version, which is very much a requirement for using Chrome OS anyway. Fallbacks to offline variant as well.",
+      "altNames": [
+        "Android Speech Recognition and Synthesis from Google it-it-x-itc-local"
+      ],
+      "language": "it-IT",
+      "gender": "male",
+      "quality": [
+        "high"
+      ],
+      "rate": 1,
+      "pitch": 1,
+      "os": [
+        "ChromeOS"
+      ],
+      "preloaded": true
+    },
+    {
+      "label": "Voce maschile 2",
+      "name": "Android Speech Recognition and Synthesis from Google it-it-x-itd-network",
+      "note": "This pre-loaded voice on ChromeOS is tied to the Android compatibility layer and requires network access for this version, which is very much a requirement for using Chrome OS anyway. Fallbacks to offline variant as well.",
+      "altNames": [
+        "Android Speech Recognition and Synthesis from Google it-it-x-itd-local"
+      ],
+      "language": "it-IT",
+      "gender": "male",
+      "quality": [
+        "high"
+      ],
+      "rate": 1,
+      "pitch": 1,
+      "os": [
+        "ChromeOS"
+      ],
+      "preloaded": true
+    },
+    {
+      "label": "Voce maschile 3",
+      "name": "Chrome OS italiano 3",
+      "language": "it-IT",
+      "gender": "male",
+      "quality": [
+        "low"
+      ],
+      "rate": 1,
+      "pitch": 1,
+      "os": [
+        "ChromeOS"
+      ],
+      "preloaded": true
+    },
+    {
+      "label": "Voce maschile 4",
+      "name": "Chrome OS italiano 4",
+      "language": "it-IT",
+      "gender": "male",
+      "quality": [
+        "low"
+      ],
+      "rate": 1,
+      "pitch": 1,
+      "os": [
+        "ChromeOS"
+      ],
+      "preloaded": true
+    },
+    {
+      "label": "Voce italiana",
+      "name": "italiano Italia",
+      "note": "On Android, voice selection is only supported at a system level and Web Speech API doesn't return a true list of voices available, just a list of languages and regions",
+      "altNames": [
+        "Italian Italy",
+        "italien Italie",
+        "italiano Italia",
+        "Italienisch Italien",
+        "Italiaans Italië",
+        "italiano Itália",
+        "italià Itàlia",
+        "italia Italia",
+        "italienska Italien",
+        "italiensk Italien",
+        "italiensk Italia"
+      ],
+      "language": "it-IT",
+      "quality": [
+        "high"
+      ],
+      "rate": 1,
+      "pitch": 1,
+      "os": [
+        "Android"
+      ],
+      "preloaded": true
+    }
+  ]
+}

@@ -1,0 +1,2099 @@
+{
+  "language": "en",
+  "testUtterance": "This text is meant to test if these English voices sound as good as they should.",
+  "voices": [
+    {
+      "label": "Emma (US)",
+      "name": "Microsoft EmmaMultilingual Online (Natural) - English (United States)",
+      "note": "This voice is pre-loaded in Edge on desktop. Unlike some of the other voices ranked at the top of that list, it's not available to be installed on Windows yet.",
+      "language": "en-US",
+      "multiLingual": true,
+      "gender": "female",
+      "quality": [
+        "veryHigh"
+      ],
+      "rate": 1,
+      "pitchControl": false,
+      "browser": [
+        "Edge"
+      ],
+      "preloaded": true
+    },
+    {
+      "label": "Jenny (US)",
+      "name": "Microsoft Jenny Online (Natural) - English (United States)",
+      "note": "This voice is pre-loaded in Edge on desktop. It can also be installed on Windows 11 but isn't currently accessible through the Web Speech API.",
+      "language": "en-US",
+      "gender": "female",
+      "quality": [
+        "veryHigh"
+      ],
+      "rate": 1,
+      "pitchControl": false,
+      "browser": [
+        "Edge"
+      ],
+      "preloaded": true
+    },
+    {
+      "label": "Aria (US)",
+      "name": "Microsoft Aria Online (Natural) - English (United States)",
+      "note": "This voice is pre-loaded in Edge on desktop. It can also be installed on Windows 11 but isn't currently accessible through the Web Speech API.",
+      "language": "en-US",
+      "gender": "female",
+      "quality": [
+        "veryHigh"
+      ],
+      "rate": 1,
+      "pitchControl": false,
+      "browser": [
+        "Edge"
+      ],
+      "preloaded": true
+    },
+    {
+      "label": "Michelle (US)",
+      "name": "Microsoft Michelle Online (Natural) - English (United States)",
+      "note": "This voice is pre-loaded in Edge on desktop. Unlike some of the other voices ranked at the top of that list, it's not available to be installed on Windows yet.",
+      "language": "en-US",
+      "gender": "female",
+      "quality": [
+        "veryHigh"
+      ],
+      "rate": 1,
+      "pitchControl": false,
+      "browser": [
+        "Edge"
+      ],
+      "preloaded": true
+    },
+    {
+      "label": "Ana (US)",
+      "name": "Microsoft Ana Online (Natural) - English (United States)",
+      "note": "This voice is pre-loaded in Edge on desktop. Unlike some of the other voices ranked at the top of that list, it's not available to be installed on Windows yet.",
+      "language": "en-US",
+      "gender": "female",
+      "children": true,
+      "quality": [
+        "veryHigh"
+      ],
+      "rate": 1,
+      "pitchControl": false,
+      "browser": [
+        "Edge"
+      ],
+      "preloaded": true
+    },
+    {
+      "label": "Andrew (US)",
+      "name": "Microsoft AndrewMultilingual Online (Natural) - English (United States)",
+      "note": "This voice is pre-loaded in Edge on desktop. Unlike some of the other voices ranked at the top of that list, it's not available to be installed on Windows yet.",
+      "language": "en-US",
+      "multiLingual": true,
+      "gender": "male",
+      "quality": [
+        "veryHigh"
+      ],
+      "rate": 1,
+      "pitchControl": false,
+      "browser": [
+        "Edge"
+      ],
+      "preloaded": true
+    },
+    {
+      "label": "Brian (US)",
+      "name": "Microsoft BrianMultilingual Online (Natural) - English (United States)",
+      "note": "This voice is pre-loaded in Edge on desktop. Unlike some of the other voices ranked at the top of that list, it's not available to be installed on Windows yet.",
+      "language": "en-US",
+      "multiLingual": true,
+      "gender": "male",
+      "quality": [
+        "veryHigh"
+      ],
+      "rate": 1,
+      "pitchControl": false,
+      "browser": [
+        "Edge"
+      ],
+      "preloaded": true
+    },
+    {
+      "label": "Guy (US)",
+      "name": "Microsoft Guy Online (Natural) - English (United States)",
+      "note": "This voice is pre-loaded in Edge on desktop. It can also be installed on Windows 11 but isn't currently accessible through the Web Speech API.",
+      "language": "en-US",
+      "gender": "male",
+      "quality": [
+        "veryHigh"
+      ],
+      "rate": 1,
+      "pitchControl": false,
+      "browser": [
+        "Edge"
+      ],
+      "preloaded": true
+    },
+    {
+      "label": "Eric (US)",
+      "name": "Microsoft Eric Online (Natural) - English (United States)",
+      "note": "This voice is pre-loaded in Edge on desktop. Unlike some of the other voices ranked at the top of that list, it's not available to be installed on Windows yet.",
+      "language": "en-US",
+      "gender": "male",
+      "quality": [
+        "veryHigh"
+      ],
+      "rate": 1,
+      "pitchControl": false,
+      "browser": [
+        "Edge"
+      ],
+      "preloaded": true
+    },
+    {
+      "label": "Steffan (US)",
+      "name": "Microsoft Steffan Online (Natural) - English (United States)",
+      "note": "This voice is pre-loaded in Edge on desktop. Unlike some of the other voices ranked at the top of that list, it's not available to be installed on Windows yet.",
+      "language": "en-US",
+      "gender": "male",
+      "quality": [
+        "veryHigh"
+      ],
+      "rate": 1,
+      "pitchControl": false,
+      "browser": [
+        "Edge"
+      ],
+      "preloaded": true
+    },
+    {
+      "label": "Christopher (US)",
+      "name": "Microsoft Christopher Online (Natural) - English (United States)",
+      "note": "This voice is pre-loaded in Edge on desktop. Unlike some of the other voices ranked at the top of that list, it's not available to be installed on Windows yet.",
+      "language": "en-US",
+      "gender": "male",
+      "quality": [
+        "veryHigh"
+      ],
+      "rate": 1,
+      "pitchControl": false,
+      "browser": [
+        "Edge"
+      ],
+      "preloaded": true
+    },
+    {
+      "label": "Roger (US)",
+      "name": "Microsoft Roger Online (Natural) - English (United States)",
+      "note": "This voice is pre-loaded in Edge on desktop. Unlike some of the other voices ranked at the top of that list, it's not available to be installed on Windows yet.",
+      "language": "en-US",
+      "gender": "male",
+      "quality": [
+        "veryHigh"
+      ],
+      "rate": 1,
+      "pitchControl": false,
+      "browser": [
+        "Edge"
+      ],
+      "preloaded": true
+    },
+    {
+      "label": "Sonia (UK)",
+      "name": "Microsoft Sonia Online (Natural) - English (United Kingdom)",
+      "note": "This voice is pre-loaded in Edge on desktop. It can also be installed on Windows 11 but isn't currently accessible through the Web Speech API.",
+      "language": "en-GB",
+      "gender": "female",
+      "quality": [
+        "veryHigh"
+      ],
+      "rate": 1,
+      "pitchControl": false,
+      "browser": [
+        "Edge"
+      ],
+      "preloaded": true
+    },
+    {
+      "label": "Libby (UK)",
+      "name": "Microsoft Libby Online (Natural) - English (United Kingdom)",
+      "note": "This voice is pre-loaded in Edge on desktop. Unlike some of the other voices ranked at the top of that list, it's not available to be installed on Windows yet.",
+      "language": "en-GB",
+      "gender": "female",
+      "quality": [
+        "veryHigh"
+      ],
+      "rate": 1,
+      "pitchControl": false,
+      "browser": [
+        "Edge"
+      ],
+      "preloaded": true
+    },
+    {
+      "label": "Maisie (UK)",
+      "name": "Microsoft Maisie Online (Natural) - English (United Kingdom)",
+      "note": "This voice is pre-loaded in Edge on desktop. Unlike some of the other voices ranked at the top of that list, it's not available to be installed on Windows yet.",
+      "language": "en-GB",
+      "gender": "female",
+      "children": true,
+      "quality": [
+        "veryHigh"
+      ],
+      "rate": 1,
+      "pitchControl": false,
+      "browser": [
+        "Edge"
+      ],
+      "preloaded": true
+    },
+    {
+      "label": "Ryan (UK)",
+      "name": "Microsoft Ryan Online (Natural) - English (United Kingdom)",
+      "note": "This voice is pre-loaded in Edge on desktop. It can also be installed on Windows 11 but isn't currently accessible through the Web Speech API.",
+      "language": "en-GB",
+      "gender": "male",
+      "quality": [
+        "veryHigh"
+      ],
+      "rate": 1,
+      "pitchControl": false,
+      "browser": [
+        "Edge"
+      ],
+      "preloaded": true
+    },
+    {
+      "label": "Thomas (UK)",
+      "name": "Microsoft Thomas Online (Natural) - English (United Kingdom)",
+      "note": "This voice is pre-loaded in Edge on desktop. Unlike some of the other voices ranked at the top of that list, it's not available to be installed on Windows yet.",
+      "language": "en-GB",
+      "gender": "male",
+      "quality": [
+        "veryHigh"
+      ],
+      "rate": 1,
+      "pitchControl": false,
+      "browser": [
+        "Edge"
+      ],
+      "preloaded": true
+    },
+    {
+      "label": "Natasha (Australia)",
+      "name": "Microsoft Natasha Online (Natural) - English (Australia)",
+      "note": "This voice is pre-loaded in Edge on desktop. Unlike some of the other voices ranked at the top of that list, it's not available to be installed on Windows yet.",
+      "language": "en-AU",
+      "gender": "female",
+      "quality": [
+        "veryHigh"
+      ],
+      "rate": 1,
+      "pitchControl": false,
+      "browser": [
+        "Edge"
+      ],
+      "preloaded": true
+    },
+    {
+      "label": "William (Australia)",
+      "name": "Microsoft William Online (Natural) - English (Australia)",
+      "note": "This voice is pre-loaded in Edge on desktop. Unlike some of the other voices ranked at the top of that list, it's not available to be installed on Windows yet.",
+      "language": "en-AU",
+      "gender": "male",
+      "quality": [
+        "veryHigh"
+      ],
+      "rate": 1,
+      "pitchControl": false,
+      "browser": [
+        "Edge"
+      ],
+      "preloaded": true
+    },
+    {
+      "label": "Clara (Canada)",
+      "name": "Microsoft Clara Online (Natural) - English (Canada)",
+      "note": "This voice is pre-loaded in Edge on desktop. Unlike some of the other voices ranked at the top of that list, it's not available to be installed on Windows yet.",
+      "language": "en-CA",
+      "gender": "female",
+      "quality": [
+        "veryHigh"
+      ],
+      "rate": 1,
+      "pitchControl": false,
+      "browser": [
+        "Edge"
+      ],
+      "preloaded": true
+    },
+    {
+      "label": "Liam (Canada)",
+      "name": "Microsoft Liam Online (Natural) - English (Canada)",
+      "note": "This voice is pre-loaded in Edge on desktop. Unlike some of the other voices ranked at the top of that list, it's not available to be installed on Windows yet.",
+      "language": "en-CA",
+      "gender": "male",
+      "quality": [
+        "veryHigh"
+      ],
+      "rate": 1,
+      "pitchControl": false,
+      "browser": [
+        "Edge"
+      ],
+      "preloaded": true
+    },
+    {
+      "label": "Ava (US)",
+      "name": "Ava",
+      "note": "This voice can be installed on all Apple devices and offers three variants. Like all voices that can be installed on Apple devices, it suffers from inconsistent naming due to localization.",
+      "altNames": [
+        "Ava (Premium)",
+        "Ava (premium)",
+        "Ava (de qualité)",
+        "Ava (prèmium)",
+        "Ava (korkealaatuinen)",
+        "Ava (høj kvalitet)",
+        "Ava (Enhanced)",
+        "Ava (mejorada)",
+        "Ava (ottimizzata)",
+        "Ava (melhorada)",
+        "Ava (erweitert)",
+        "Ava (verbeterd)",
+        "Ava (millorada)",
+        "Ava (parannettu)",
+        "Ava (förbättrad)",
+        "Ava (forbedret)",
+        "Ava (English (United States))",
+        "Ava (anglais (États-Unis))",
+        "Ava (inglés (Estados Unidos))",
+        "Ava (inglese (Stati Uniti))",
+        "Ava (inglês (Estados Unidos))",
+        "Ava (Englisch (Vereinigte Staaten))",
+        "Ava (Engels (Verenigde Staten))",
+        "Ava (anglès (Estats Units))",
+        "Ava (englanti (Yhdysvallat))",
+        "Ava (engelska (USA))",
+        "Ava (engelsk (USA))"
+      ],
+      "language": "en-US",
+      "gender": "female",
+      "quality": [
+        "low",
+        "normal",
+        "high"
+      ],
+      "rate": 1,
+      "pitch": 1,
+      "os": [
+        "macOS",
+        "iOS",
+        "iPadOS"
+      ]
+    },
+    {
+      "label": "Zoe (US)",
+      "name": "Zoe",
+      "note": "This voice can be installed on all Apple devices and offers three variants. Like all voices that can be installed on Apple devices, it suffers from inconsistent naming due to localization.",
+      "altNames": [
+        "Zoe (Premium)",
+        "Zoe (premium)",
+        "Zoe (de qualité)",
+        "Zoe (prèmium)",
+        "Zoe (korkealaatuinen)",
+        "Zoe (høj kvalitet)",
+        "Zoe (Enhanced)",
+        "Zoe (mejorada)",
+        "Zoe (ottimizzata)",
+        "Zoe (melhorada)",
+        "Zoe (erweitert)",
+        "Zoe (verbeterd)",
+        "Zoe (millorada)",
+        "Zoe (parannettu)",
+        "Zoe (förbättrad)",
+        "Zoe (forbedret)",
+        "Zoe (English (United States))",
+        "Zoe (anglais (États-Unis))",
+        "Zoe (inglés (Estados Unidos))",
+        "Zoe (inglese (Stati Uniti))",
+        "Zoe (inglês (Estados Unidos))",
+        "Zoe (Englisch (Vereinigte Staaten))",
+        "Zoe (Engels (Verenigde Staten))",
+        "Zoe (anglès (Estats Units))",
+        "Zoe (englanti (Yhdysvallat))",
+        "Zoe (engelska (USA))",
+        "Zoe (engelsk (USA))"
+      ],
+      "language": "en-US",
+      "gender": "female",
+      "quality": [
+        "low",
+        "normal",
+        "high"
+      ],
+      "rate": 1,
+      "pitch": 1,
+      "os": [
+        "macOS",
+        "iOS",
+        "iPadOS"
+      ]
+    },
+    {
+      "label": "Allison (US)",
+      "name": "Allison",
+      "note": "This voice can be installed on all Apple devices and offers two variants. Like all voices that can be installed on Apple devices, it suffers from inconsistent naming due to localization.",
+      "altNames": [
+        "Allison (Enhanced)",
+        "Allison (mejorada)",
+        "Allison (premium)",
+        "Allison (ottimizzata)",
+        "Allison (melhorada)",
+        "Allison (erweitert)",
+        "Allison (verbeterd)",
+        "Allison (millorada)",
+        "Allison (parannettu)",
+        "Allison (förbättrad)",
+        "Allison (forbedret)",
+        "Allison (English (United States))",
+        "Allison (anglais (États-Unis))",
+        "Allison (inglés (Estados Unidos))",
+        "Allison (inglese (Stati Uniti))",
+        "Allison (inglês (Estados Unidos))",
+        "Allison (Englisch (Vereinigte Staaten))",
+        "Allison (Engels (Verenigde Staten))",
+        "Allison (anglès (Estats Units))",
+        "Allison (englanti (Yhdysvallat))",
+        "Allison (engelska (USA))",
+        "Allison (engelsk (USA))"
+      ],
+      "language": "en-US",
+      "gender": "female",
+      "quality": [
+        "low",
+        "normal"
+      ],
+      "rate": 1,
+      "pitch": 1,
+      "os": [
+        "macOS",
+        "iOS",
+        "iPadOS"
+      ]
+    },
+    {
+      "label": "Samantha (US)",
+      "name": "Samantha (Enhanced)",
+      "note": "While this is meant to identify the highest quality variant for the Samantha voice, it can be difficult to do so due to inconsistencies in how voices are exposed to browsers through the Web Speech API. Since the lowest quality of the Samantha voice is pre-loaded on Apple devices, the situation is worse than with other voices that need to be installed.",
+      "altNames": [
+        "Samantha (mejorada)",
+        "Samantha (premium)",
+        "Samantha (ottimizzata)",
+        "Samantha (melhorada)",
+        "Samantha (erweitert)",
+        "Samantha (verbeterd)",
+        "Samantha (millorada)",
+        "Samantha (parannettu)",
+        "Samantha (förbättrad)",
+        "Samantha (forbedret)",
+        "Samantha (English (United States))",
+        "Samantha (anglais (États-Unis))",
+        "Samantha (inglés (Estados Unidos))",
+        "Samantha (inglese (Stati Uniti))",
+        "Samantha (inglês (Estados Unidos))",
+        "Samantha (Englisch (Vereinigte Staaten))",
+        "Samantha (Engels (Verenigde Staten))",
+        "Samantha (anglès (Estats Units))",
+        "Samantha (englanti (Yhdysvallat))",
+        "Samantha (engelska (USA))",
+        "Samantha (engelsk (USA))"
+      ],
+      "overrides": "Samantha",
+      "language": "en-US",
+      "gender": "female",
+      "quality": [
+        "normal"
+      ],
+      "rate": 1,
+      "pitch": 1,
+      "os": [
+        "macOS",
+        "iOS",
+        "iPadOS"
+      ]
+    },
+    {
+      "label": "Joelle (US)",
+      "name": "Joelle",
+      "note": "This voice can be installed on all Apple devices. Unlike most other voices on Apple devices, Joelle has a single variant. Like all voices that can be installed on Apple devices, it suffers from inconsistent naming due to localization.",
+      "altNames": [
+        "Joelle (Enhanced)",
+        "Joelle (mejorada)",
+        "Joelle (premium)",
+        "Joelle (ottimizzata)",
+        "Joelle (melhorada)",
+        "Joelle (erweitert)",
+        "Joelle (verbeterd)",
+        "Joelle (millorada)",
+        "Joelle (parannettu)",
+        "Joelle (förbättrad)",
+        "Joelle (forbedret)",
+        "Joelle (English (United States))",
+        "Joelle (anglais (États-Unis))",
+        "Joelle (inglés (Estados Unidos))",
+        "Joelle (inglese (Stati Uniti))",
+        "Joelle (inglês (Estados Unidos))",
+        "Joelle (Englisch (Vereinigte Staaten))",
+        "Joelle (Engels (Verenigde Staten))",
+        "Joelle (anglès (Estats Units))",
+        "Joelle (englanti (Yhdysvallat))",
+        "Joelle (engelska (USA))",
+        "Joelle (engelsk (USA))"
+      ],
+      "language": "en-US",
+      "gender": "female",
+      "children": true,
+      "quality": [
+        "normal"
+      ],
+      "rate": 1,
+      "pitch": 1,
+      "os": [
+        "macOS",
+        "iOS",
+        "iPadOS"
+      ]
+    },
+    {
+      "label": "Evan (US)",
+      "name": "Evan",
+      "note": "This voice can be installed on all Apple devices and offers two variants. Like all voices that can be installed on Apple devices, it suffers from inconsistent naming due to localization.",
+      "altNames": [
+        "Evan (Enhanced)",
+        "Evan (mejorada)",
+        "Evan (premium)",
+        "Evan (ottimizzata)",
+        "Evan (melhorada)",
+        "Evan (erweitert)",
+        "Evan (verbeterd)",
+        "Evan (millorada)",
+        "Evan (parannettu)",
+        "Evan (förbättrad)",
+        "Evan (forbedret)",
+        "Evan (English (United States))",
+        "Evan (anglais (États-Unis))",
+        "Evan (inglés (Estados Unidos))",
+        "Evan (inglese (Stati Uniti))",
+        "Evan (inglês (Estados Unidos))",
+        "Evan (Englisch (Vereinigte Staaten))",
+        "Evan (Engels (Verenigde Staten))",
+        "Evan (anglès (Estats Units))",
+        "Evan (englanti (Yhdysvallat))",
+        "Evan (engelska (USA))",
+        "Evan (engelsk (USA))"
+      ],
+      "language": "en-US",
+      "gender": "male",
+      "quality": [
+        "low",
+        "normal"
+      ],
+      "rate": 1,
+      "pitch": 1,
+      "os": [
+        "macOS",
+        "iOS",
+        "iPadOS"
+      ]
+    },
+    {
+      "label": "Nathan (US)",
+      "name": "Nathan",
+      "note": "This voice can be installed on all Apple devices and offers two variants. Like all voices that can be installed on Apple devices, it suffers from inconsistent naming due to localization.",
+      "altNames": [
+        "Nathan (Enhanced)",
+        "Nathan (mejorada)",
+        "Nathan (premium)",
+        "Nathan (ottimizzata)",
+        "Nathan (melhorada)",
+        "Nathan (erweitert)",
+        "Nathan (verbeterd)",
+        "Nathan (millorada)",
+        "Nathan (parannettu)",
+        "Nathan (förbättrad)",
+        "Nathan (forbedret)",
+        "Nathan (English (United States))",
+        "Nathan (anglais (États-Unis))",
+        "Nathan (inglés (Estados Unidos))",
+        "Nathan (inglese (Stati Uniti))",
+        "Nathan (inglês (Estados Unidos))",
+        "Nathan (Englisch (Vereinigte Staaten))",
+        "Nathan (Engels (Verenigde Staten))",
+        "Nathan (anglès (Estats Units))",
+        "Nathan (englanti (Yhdysvallat))",
+        "Nathan (engelska (USA))",
+        "Nathan (engelsk (USA))"
+      ],
+      "language": "en-US",
+      "gender": "male",
+      "quality": [
+        "low",
+        "normal"
+      ],
+      "rate": 1,
+      "pitch": 1,
+      "os": [
+        "macOS",
+        "iOS",
+        "iPadOS"
+      ]
+    },
+    {
+      "label": "Tom (US)",
+      "name": "Tom",
+      "note": "This voice can be installed on all Apple devices and offers two variants. Like all voices that can be installed on Apple devices, it suffers from inconsistent naming due to localization.",
+      "altNames": [
+        "Tom (Enhanced)",
+        "Tom (mejorada)",
+        "Tom (premium)",
+        "Tom (ottimizzata)",
+        "Tom (melhorada)",
+        "Tom (erweitert)",
+        "Tom (verbeterd)",
+        "Tom (millorada)",
+        "Tom (parannettu)",
+        "Tom (förbättrad)",
+        "Tom (forbedret)",
+        "Tom (English (United States))",
+        "Tom (anglais (États-Unis))",
+        "Tom (inglés (Estados Unidos))",
+        "Tom (inglese (Stati Uniti))",
+        "Tom (inglês (Estados Unidos))",
+        "Tom (Englisch (Vereinigte Staaten))",
+        "Tom (Engels (Verenigde Staten))",
+        "Tom (anglès (Estats Units))",
+        "Tom (englanti (Yhdysvallat))",
+        "Tom (engelska (USA))",
+        "Tom (engelsk (USA))"
+      ],
+      "language": "en-US",
+      "gender": "male",
+      "quality": [
+        "low",
+        "normal"
+      ],
+      "rate": 1,
+      "pitch": 1,
+      "os": [
+        "macOS",
+        "iOS",
+        "iPadOS"
+      ]
+    },
+    {
+      "label": "Alex (US)",
+      "name": "Alex",
+      "note": "This voice can be installed on all Apple devices. Unlike most other voices on Apple devices, Alex has a single variant. Like all voices that can be installed on Apple devices, it suffers from inconsistent naming due to localization.",
+      "altNames": [
+        "Alex (English (United States))",
+        "Alex (anglais (États-Unis))",
+        "Alex (inglés (Estados Unidos))",
+        "Alex (inglese (Stati Uniti))",
+        "Alex (inglês (Estados Unidos))",
+        "Alex (Englisch (Vereinigte Staaten))",
+        "Alex (Engels (Verenigde Staten))",
+        "Alex (anglès (Estats Units))",
+        "Alex (englanti (Yhdysvallat))",
+        "Alex (engelska (USA))",
+        "Alex (engelsk (USA))"
+      ],
+      "language": "en-US",
+      "gender": "male",
+      "quality": [
+        "high"
+      ],
+      "rate": 1,
+      "pitch": 1,
+      "os": [
+        "macOS",
+        "iOS",
+        "iPadOS"
+      ]
+    },
+    {
+      "label": "Kate (UK)",
+      "name": "Kate",
+      "note": "This voice can be installed on all Apple devices and offers two variants. Like all voices that can be installed on Apple devices, it suffers from inconsistent naming due to localization.",
+      "altNames": [
+        "Kate (Enhanced)",
+        "Kate (mejorada)",
+        "Kate (premium)",
+        "Kate (ottimizzata)",
+        "Kate (melhorada)",
+        "Kate (erweitert)",
+        "Kate (verbeterd)",
+        "Kate (millorada)",
+        "Kate (parannettu)",
+        "Kate (förbättrad)",
+        "Kate (forbedret)",
+        "Kate (English (United Kingdom))",
+        "Kate (anglais (Royaume-Uni))",
+        "Kate (inglés (Reino Unido))",
+        "Kate (inglese (Regno Unito))",
+        "Kate (inglês (Reino Unido))",
+        "Kate (Englisch (Vereinigtes Königreich))",
+        "Kate (Engels (Verenigd Koninkrijk))",
+        "Kate (anglès (Regne Unit))",
+        "Kate (englanti (Iso-Britannia))",
+        "Kate (engelska (Storbritannien))",
+        "Kate (engelsk (Storbritannien))",
+        "Kate (engelsk (Storbritannia))"
+      ],
+      "language": "en-GB",
+      "gender": "female",
+      "quality": [
+        "low",
+        "normal"
+      ],
+      "rate": 1,
+      "pitch": 1,
+      "os": [
+        "macOS",
+        "iOS",
+        "iPadOS"
+      ]
+    },
+    {
+      "label": "Stephanie (UK)",
+      "name": "Stephanie",
+      "note": "This voice can be installed on all Apple devices and offers two variants. Like all voices that can be installed on Apple devices, it suffers from inconsistent naming due to localization.",
+      "altNames": [
+        "Stephanie (Enhanced)",
+        "Stephanie (mejorada)",
+        "Stephanie (premium)",
+        "Stephanie (ottimizzata)",
+        "Stephanie (melhorada)",
+        "Stephanie (erweitert)",
+        "Stephanie (verbeterd)",
+        "Stephanie (millorada)",
+        "Stephanie (parannettu)",
+        "Stephanie (förbättrad)",
+        "Stephanie (forbedret)",
+        "Stephanie (English (United Kingdom))",
+        "Stephanie (anglais (Royaume-Uni))",
+        "Stephanie (inglés (Reino Unido))",
+        "Stephanie (inglese (Regno Unito))",
+        "Stephanie (inglês (Reino Unido))",
+        "Stephanie (Englisch (Vereinigtes Königreich))",
+        "Stephanie (Engels (Verenigd Koninkrijk))",
+        "Stephanie (anglès (Regne Unit))",
+        "Stephanie (englanti (Iso-Britannia))",
+        "Stephanie (engelska (Storbritannien))",
+        "Stephanie (engelsk (Storbritannien))",
+        "Stephanie (engelsk (Storbritannia))"
+      ],
+      "language": "en-GB",
+      "gender": "female",
+      "quality": [
+        "low",
+        "normal"
+      ],
+      "rate": 1,
+      "pitch": 1,
+      "os": [
+        "macOS",
+        "iOS",
+        "iPadOS"
+      ]
+    },
+    {
+      "label": "Serena (UK)",
+      "name": "Serena",
+      "note": "This voice can be installed on all Apple devices and offers three variants. Like all voices that can be installed on Apple devices, it suffers from inconsistent naming due to localization.",
+      "altNames": [
+        "Serena (Premium)",
+        "Serena (premium)",
+        "Serena (de qualité)",
+        "Serena (prèmium)",
+        "Serena (korkealaatuinen)",
+        "Serena (høj kvalitet)",
+        "Serena (Enhanced)",
+        "Serena (mejorada)",
+        "Serena (ottimizzata)",
+        "Serena (melhorada)",
+        "Serena (erweitert)",
+        "Serena (verbeterd)",
+        "Serena (millorada)",
+        "Serena (parannettu)",
+        "Serena (förbättrad)",
+        "Serena (forbedret)",
+        "Serena (English (United Kingdom))",
+        "Serena (anglais (Royaume-Uni))",
+        "Serena (inglés (Reino Unido))",
+        "Serena (inglese (Regno Unito))",
+        "Serena (inglês (Reino Unido))",
+        "Serena (Englisch (Vereinigtes Königreich))",
+        "Serena (Engels (Verenigd Koninkrijk))",
+        "Serena (anglès (Regne Unit))",
+        "Serena (englanti (Iso-Britannia))",
+        "Serena (engelska (Storbritannien))",
+        "Serena (engelsk (Storbritannien))",
+        "Serena (engelsk (Storbritannia))"
+      ],
+      "language": "en-GB",
+      "gender": "female",
+      "quality": [
+        "low",
+        "normal",
+        "high"
+      ],
+      "rate": 1,
+      "pitch": 1,
+      "os": [
+        "macOS",
+        "iOS",
+        "iPadOS"
+      ]
+    },
+    {
+      "label": "Jamie (UK)",
+      "name": "Jamie",
+      "note": "This voice can be installed on all Apple devices and offers three variants. Like all voices that can be installed on Apple devices, it suffers from inconsistent naming due to localization.",
+      "altNames": [
+        "Jamie (Premium)",
+        "Jamie (premium)",
+        "Jamie (de qualité)",
+        "Jamie (prèmium)",
+        "Jamie (korkealaatuinen)",
+        "Jamie (høj kvalitet)",
+        "Jamie (Enhanced)",
+        "Jamie (mejorada)",
+        "Jamie (ottimizzata)",
+        "Jamie (melhorada)",
+        "Jamie (erweitert)",
+        "Jamie (verbeterd)",
+        "Jamie (millorada)",
+        "Jamie (parannettu)",
+        "Jamie (förbättrad)",
+        "Jamie (forbedret)",
+        "Jamie (English (United Kingdom))",
+        "Jamie (anglais (Royaume-Uni))",
+        "Jamie (inglés (Reino Unido))",
+        "Jamie (inglese (Regno Unito))",
+        "Jamie (inglês (Reino Unido))",
+        "Jamie (Englisch (Vereinigtes Königreich))",
+        "Jamie (Engels (Verenigd Koninkrijk))",
+        "Jamie (anglès (Regne Unit))",
+        "Jamie (englanti (Iso-Britannia))",
+        "Jamie (engelska (Storbritannien))",
+        "Jamie (engelsk (Storbritannien))",
+        "Jamie (engelsk (Storbritannia))"
+      ],
+      "language": "en-GB",
+      "gender": "male",
+      "quality": [
+        "low",
+        "normal",
+        "high"
+      ],
+      "rate": 1,
+      "pitch": 1,
+      "os": [
+        "macOS",
+        "iOS",
+        "iPadOS"
+      ]
+    },
+    {
+      "label": "Oliver (UK)",
+      "name": "Oliver",
+      "note": "This voice can be installed on all Apple devices and offers two variants. Like all voices that can be installed on Apple devices, it suffers from inconsistent naming due to localization.",
+      "altNames": [
+        "Oliver (Enhanced)",
+        "Oliver (mejorada)",
+        "Oliver (premium)",
+        "Oliver (ottimizzata)",
+        "Oliver (melhorada)",
+        "Oliver (erweitert)",
+        "Oliver (verbeterd)",
+        "Oliver (millorada)",
+        "Oliver (parannettu)",
+        "Oliver (förbättrad)",
+        "Oliver (forbedret)",
+        "Oliver (English (United Kingdom))",
+        "Oliver (anglais (Royaume-Uni))",
+        "Oliver (inglés (Reino Unido))",
+        "Oliver (inglese (Regno Unito))",
+        "Oliver (inglês (Reino Unido))",
+        "Oliver (Englisch (Vereinigtes Königreich))",
+        "Oliver (Engels (Verenigd Koninkrijk))",
+        "Oliver (anglès (Regne Unit))",
+        "Oliver (englanti (Iso-Britannia))",
+        "Oliver (engelska (Storbritannien))",
+        "Oliver (engelsk (Storbritannien))",
+        "Oliver (engelsk (Storbritannia))"
+      ],
+      "language": "en-GB",
+      "gender": "male",
+      "quality": [
+        "low",
+        "normal"
+      ],
+      "rate": 1,
+      "pitch": 1,
+      "os": [
+        "macOS",
+        "iOS",
+        "iPadOS"
+      ]
+    },
+    {
+      "label": "Daniel (UK)",
+      "name": "Daniel (Enhanced)",
+      "note": "While this is meant to identify the highest quality variant for the Daniel voice, it can be difficult to do so due to inconsistencies in how voices are exposed to browsers through the Web Speech API. Since the lowest quality of the Daniel voice is pre-loaded on Apple devices, the situation is worse than with other voices that need to be installed.",
+      "altNames": [
+        "Daniel (mejorada)",
+        "Daniel (premium)",
+        "Daniel (ottimizzata)",
+        "Daniel (melhorada)",
+        "Daniel (erweitert)",
+        "Daniel (verbeterd)",
+        "Daniel (millorada)",
+        "Daniel (parannettu)",
+        "Daniel (förbättrad)",
+        "Daniel (forbedret)",
+        "Daniel (English (United Kingdom))",
+        "Daniel (anglais (Royaume-Uni))",
+        "Daniel (inglés (Reino Unido))",
+        "Daniel (inglese (Regno Unito))",
+        "Daniel (inglês (Reino Unido))",
+        "Daniel (Englisch (Vereinigtes Königreich))",
+        "Daniel (Engels (Verenigd Koninkrijk))",
+        "Daniel (anglès (Regne Unit))",
+        "Daniel (englanti (Iso-Britannia))",
+        "Daniel (engelska (Storbritannien))",
+        "Daniel (engelsk (Storbritannien))",
+        "Daniel (engelsk (Storbritannia))"
+      ],
+      "overrides": "Daniel",
+      "language": "en-GB",
+      "gender": "male",
+      "quality": [
+        "normal"
+      ],
+      "rate": 1,
+      "pitch": 1,
+      "os": [
+        "macOS",
+        "iOS",
+        "iPadOS"
+      ],
+      "preloaded": true
+    },
+    {
+      "label": "Matilda (Australia)",
+      "name": "Matilda",
+      "note": "This voice can be installed on all Apple devices and offers three variants. Like all voices that can be installed on Apple devices, it suffers from inconsistent naming due to localization.",
+      "altNames": [
+        "Matilda (Premium)",
+        "Matilda (premium)",
+        "Matilda (de qualité)",
+        "Matilda (prèmium)",
+        "Matilda (korkealaatuinen)",
+        "Matilda (høj kvalitet)",
+        "Matilda (Enhanced)",
+        "Matilda (mejorada)",
+        "Matilda (ottimizzata)",
+        "Matilda (melhorada)",
+        "Matilda (erweitert)",
+        "Matilda (verbeterd)",
+        "Matilda (millorada)",
+        "Matilda (parannettu)",
+        "Matilda (förbättrad)",
+        "Matilda (forbedret)",
+        "Matilda (English (Australia))",
+        "Matilda (anglais (Australie))",
+        "Matilda (inglés (Australia))",
+        "Matilda (inglese (Australia))",
+        "Matilda (inglês (Austrália))",
+        "Matilda (Englisch (Australien))",
+        "Matilda (Engels (Australië))",
+        "Matilda (anglès (Austràlia))",
+        "Matilda (englanti (Australia))",
+        "Matilda (engelska (Australien))",
+        "Matilda (engelsk (Australien))",
+        "Matilda (engelsk (Australia))"
+      ],
+      "language": "en-AU",
+      "gender": "female",
+      "quality": [
+        "low",
+        "normal",
+        "high"
+      ],
+      "rate": 1,
+      "pitch": 1,
+      "os": [
+        "macOS",
+        "iOS",
+        "iPadOS"
+      ]
+    },
+    {
+      "label": "Karen (Australia)",
+      "name": "Karen (Enhanced)",
+      "note": "While this is meant to identify the highest quality variant for the Daniel voice, it can be difficult to do so due to inconsistencies in how voices are exposed to browsers through the Web Speech API. Since the lowest quality of the Daniel voice is pre-loaded on Apple devices, the situation is worse than with other voices that need to be installed.",
+      "altNames": [
+        "Karen (Premium)",
+        "Karen (premium)",
+        "Karen (de qualité)",
+        "Karen (prèmium)",
+        "Karen (korkealaatuinen)",
+        "Karen (høj kvalitet)",
+        "Karen (mejorada)",
+        "Karen (ottimizzata)",
+        "Karen (melhorada)",
+        "Karen (erweitert)",
+        "Karen (verbeterd)",
+        "Karen (millorada)",
+        "Karen (parannettu)",
+        "Karen (förbättrad)",
+        "Karen (forbedret)",
+        "Karen (English (Australia))",
+        "Karen (anglais (Australie))",
+        "Karen (inglés (Australia))",
+        "Karen (inglese (Australia))",
+        "Karen (inglês (Austrália))",
+        "Karen (Englisch (Australien))",
+        "Karen (Engels (Australië))",
+        "Karen (anglès (Austràlia))",
+        "Karen (englanti (Australia))",
+        "Karen (engelska (Australien))",
+        "Karen (engelsk (Australien))",
+        "Karen (engelsk (Australia))"
+      ],
+      "overrides": "Karen",
+      "language": "en-AU",
+      "gender": "female",
+      "quality": [
+        "normal",
+        "high"
+      ],
+      "rate": 1,
+      "pitch": 1,
+      "os": [
+        "macOS",
+        "iOS",
+        "iPadOS"
+      ]
+    },
+    {
+      "label": "Lee (Australia)",
+      "name": "Lee",
+      "note": "This voice can be installed on all Apple devices and offers three variants. Like all voices that can be installed on Apple devices, it suffers from inconsistent naming due to localization.",
+      "altNames": [
+        "Lee (Premium)",
+        "Lee (premium)",
+        "Lee (de qualité)",
+        "Lee (prèmium)",
+        "Lee (korkealaatuinen)",
+        "Lee (høj kvalitet)",
+        "Lee (Enhanced)",
+        "Lee (mejorada)",
+        "Lee (ottimizzata)",
+        "Lee (melhorada)",
+        "Lee (erweitert)",
+        "Lee (verbeterd)",
+        "Lee (millorada)",
+        "Lee (parannettu)",
+        "Lee (förbättrad)",
+        "Lee (forbedret)",
+        "Lee (English (Australia))",
+        "Lee (anglais (Australie))",
+        "Lee (inglés (Australia))",
+        "Lee (inglese (Australia))",
+        "Lee (inglês (Austrália))",
+        "Lee (Englisch (Australien))",
+        "Lee (Engels (Australië))",
+        "Lee (anglès (Austràlia))",
+        "Lee (englanti (Australia))",
+        "Lee (engelska (Australien))",
+        "Lee (engelsk (Australien))",
+        "Lee (engelsk (Australia))"
+      ],
+      "language": "en-AU",
+      "gender": "male",
+      "quality": [
+        "low",
+        "normal",
+        "high"
+      ],
+      "rate": 1,
+      "pitch": 1,
+      "os": [
+        "macOS",
+        "iOS",
+        "iPadOS"
+      ]
+    },
+    {
+      "label": "Female Google voice (US)",
+      "name": "Google US English",
+      "note": "This voice is pre-loaded in Chrome on desktop. Utterances that are longer than 14 seconds long can trigger a bug with this voice, check the notes in the project's README for more information.",
+      "language": "en-US",
+      "gender": "female",
+      "quality": [
+        "high"
+      ],
+      "rate": 1,
+      "pitch": 1,
+      "browser": [
+        "ChromeDesktop"
+      ],
+      "preloaded": true
+    },
+    {
+      "label": "Female Google voice (UK)",
+      "name": "Google UK English Female",
+      "note": "This voice is pre-loaded in Chrome on desktop. Utterances that are longer than 14 seconds long can trigger a bug with this voice, check the notes in the project's README for more information.",
+      "language": "en-GB",
+      "gender": "female",
+      "quality": [
+        "high"
+      ],
+      "rate": 1,
+      "pitch": 1,
+      "browser": [
+        "ChromeDesktop"
+      ],
+      "preloaded": true
+    },
+    {
+      "label": "Male Google voice (UK)",
+      "name": "Google UK English Male",
+      "note": "This voice is pre-loaded in Chrome on desktop. Utterances that are longer than 14 seconds long can trigger a bug with this voice, check the notes in the project's README for more information.",
+      "language": "en-GB",
+      "gender": "male",
+      "quality": [
+        "high"
+      ],
+      "rate": 1,
+      "pitch": 1,
+      "browser": [
+        "ChromeDesktop"
+      ],
+      "preloaded": true
+    },
+    {
+      "label": "Zira (US)",
+      "name": "Microsoft Zira - English (United States)",
+      "note": "This voices is pre-loaded in Windows 10 and 11. While it's nowhere nearly as good as Microsoft's Natural Voices, it's good to have this voice listed as a fallback",
+      "language": "en-US",
+      "gender": "female",
+      "quality": [
+        "normal"
+      ],
+      "rate": 1,
+      "pitch": 1,
+      "os": [
+        "Windows"
+      ],
+      "preloaded": true
+    },
+    {
+      "label": "David (US)",
+      "name": "Microsoft David - English (United States)",
+      "note": "This voices is pre-loaded in Windows 10 and 11. While it's nowhere nearly as good as Microsoft's Natural Voices, it's good to have this voice listed as a fallback",
+      "language": "en-US",
+      "gender": "male",
+      "quality": [
+        "normal"
+      ],
+      "rate": 1,
+      "pitch": 1,
+      "os": [
+        "Windows"
+      ],
+      "preloaded": true
+    },
+    {
+      "label": "Mark (US)",
+      "name": "Microsoft Mark - English (United States)",
+      "note": "This voices is pre-loaded in Windows 10 and 11. While it's nowhere nearly as good as Microsoft's Natural Voices, it's good to have this voice listed as a fallback",
+      "language": "en-US",
+      "gender": "male",
+      "quality": [
+        "normal"
+      ],
+      "rate": 1,
+      "pitch": 1,
+      "os": [
+        "Windows"
+      ],
+      "preloaded": true
+    },
+    {
+      "label": "Hazel (UK)",
+      "name": "Microsoft Hazel - English (Great Britain)",
+      "note": "This voices is pre-loaded in Windows 10 and 11. While it's nowhere nearly as good as Microsoft's Natural Voices, it's good to have this voice listed as a fallback",
+      "language": "en-GB",
+      "gender": "female",
+      "quality": [
+        "normal"
+      ],
+      "rate": 1,
+      "pitch": 1,
+      "os": [
+        "Windows"
+      ],
+      "preloaded": true
+    },
+    {
+      "label": "Susan (UK)",
+      "name": "Microsoft Susan - English (Great Britain)",
+      "note": "This voices is pre-loaded in Windows 10 and 11. While it's nowhere nearly as good as Microsoft's Natural Voices, it's good to have this voice listed as a fallback",
+      "language": "en-GB",
+      "gender": "female",
+      "quality": [
+        "normal"
+      ],
+      "rate": 1,
+      "pitch": 1,
+      "os": [
+        "Windows"
+      ],
+      "preloaded": true
+    },
+    {
+      "label": "George (UK)",
+      "name": "Microsoft George - English (Great Britain)",
+      "note": "This voices is pre-loaded in Windows 10 and 11. While it's nowhere nearly as good as Microsoft's Natural Voices, it's good to have this voice listed as a fallback",
+      "language": "en-GB",
+      "gender": "male",
+      "quality": [
+        "normal"
+      ],
+      "rate": 1,
+      "pitch": 1,
+      "os": [
+        "Windows"
+      ],
+      "preloaded": true
+    },
+    {
+      "label": "Catherine (Australia)",
+      "name": "Microsoft Catherine - English (Austalia)",
+      "note": "This voices is pre-loaded in Windows 10 and 11. While it's nowhere nearly as good as Microsoft's Natural Voices, it's good to have this voice listed as a fallback",
+      "language": "en-AU",
+      "gender": "female",
+      "quality": [
+        "normal"
+      ],
+      "rate": 1,
+      "pitch": 1,
+      "os": [
+        "Windows"
+      ],
+      "preloaded": true
+    },
+    {
+      "label": "James (Australia)",
+      "name": "Microsoft Richard - English (Australia)",
+      "note": "This voices is pre-loaded in Windows 10 and 11. While it's nowhere nearly as good as Microsoft's Natural Voices, it's good to have this voice listed as a fallback",
+      "language": "en-AU",
+      "gender": "male",
+      "quality": [
+        "normal"
+      ],
+      "rate": 1,
+      "pitch": 1,
+      "os": [
+        "Windows"
+      ],
+      "preloaded": true
+    },
+    {
+      "label": "Linda (Canada)",
+      "name": "Microsoft Linda - English (Canada)",
+      "note": "This voices is pre-loaded in Windows 10 and 11. While it's nowhere nearly as good as Microsoft's Natural Voices, it's good to have this voice listed as a fallback",
+      "language": "en-CA",
+      "gender": "female",
+      "quality": [
+        "normal"
+      ],
+      "rate": 1,
+      "pitch": 1,
+      "os": [
+        "Windows"
+      ],
+      "preloaded": true
+    },
+    {
+      "label": "Richard (Canada)",
+      "name": "Microsoft Richard - English (Canada)",
+      "note": "This voices is pre-loaded in Windows 10 and 11. While it's nowhere nearly as good as Microsoft's Natural Voices, it's good to have this voice listed as a fallback",
+      "language": "en-CA",
+      "gender": "male",
+      "quality": [
+        "normal"
+      ],
+      "rate": 1,
+      "pitch": 1,
+      "os": [
+        "Windows"
+      ],
+      "preloaded": true
+    },
+    {
+      "label": "Samantha (US)",
+      "name": "Samantha",
+      "note": "This entry is meant to identify the pre-loaded variant of the Samantha voice, but it might not work on all browsers. In some cases, the previous entry might be the one detecting the pre-loaded variant unfortunately.",
+      "language": "en-US",
+      "gender": "female",
+      "quality": [
+        "low"
+      ],
+      "rate": 0.9,
+      "pitch": 1,
+      "os": [
+        "macOS",
+        "iOS",
+        "iPadOS"
+      ],
+      "preloaded": true
+    },
+    {
+      "label": "Nicky (US)",
+      "name": "Nicky",
+      "note": "Nicky is missing the usual info about voice quality in its name, which means that we can't identify its variants. For this reason, this voice is listed lower than other high quality voices available for Apple devices. That said, Nicky is probably the best pre-loaded voice on Apple devices.",
+      "altNames": [
+        "Nicky (English (United States))",
+        "Nicky (anglais (États-Unis))",
+        "Nicky (inglés (Estados Unidos))",
+        "Nicky (inglese (Stati Uniti))",
+        "Nicky (inglês (Estados Unidos))",
+        "Nicky (Englisch (Vereinigte Staaten))",
+        "Nicky (Engels (Verenigde Staten))",
+        "Nicky (anglès (Estats Units))",
+        "Nicky (englanti (Yhdysvallat))",
+        "Nicky (engelska (USA))"
+      ],
+      "language": "en-US",
+      "gender": "female",
+      "quality": [
+        "low",
+        "normal"
+      ],
+      "rate": 1,
+      "pitch": 1,
+      "os": [
+        "macOS",
+        "iOS",
+        "iPadOS"
+      ],
+      "preloaded": true
+    },
+    {
+      "label": "Daniel (UK)",
+      "name": "Daniel",
+      "note": "This entry is meant to identify the pre-loaded variant of the Daniel voice, but it might not work on all browsers. In some cases, the previous entry might be the one detecting the pre-loaded variant unfortunately.",
+      "language": "en-GB",
+      "gender": "male",
+      "quality": [
+        "low"
+      ],
+      "rate": 0.9,
+      "pitch": 1,
+      "os": [
+        "macOS",
+        "iOS",
+        "iPadOS"
+      ],
+      "preloaded": true
+    },
+    {
+      "label": "Karen (Australia)",
+      "name": "Karen",
+      "note": "This entry is meant to identify the pre-loaded variant of this voice, but it might not work on all browsers. In some cases, the previous entry might be the one detecting the pre-loaded variant unfortunately.",
+      "language": "en-AU",
+      "gender": "male",
+      "quality": [
+        "low"
+      ],
+      "rate": 1,
+      "pitch": 1,
+      "os": [
+        "macOS",
+        "iOS",
+        "iPadOS"
+      ],
+      "preloaded": true
+    },
+    {
+      "label": "Female voice 1 (US)",
+      "name": "Google US English 5 (Natural)",
+      "note": "This pre-loaded voice on ChromeOS is tied to the Android compatibility layer and requires network access for this version, which is very much a requirement for using Chrome OS anyway. Fallbacks to natural voice and offline variant as well.",
+      "altNames": [
+        "Android Speech Recognition and Synthesis from Google en-us-x-tpc-network",
+        "Android Speech Recognition and Synthesis from Google en-us-x-tpc-local"
+      ],
+      "language": "en-US",
+      "gender": "female",
+      "quality": [
+        "high"
+      ],
+      "rate": 1,
+      "pitch": 1,
+      "os": [
+        "ChromeOS"
+      ],
+      "preloaded": true
+    },
+    {
+      "label": "Female voice 2 (US)",
+      "name": "Google US English 1 (Natural)",
+      "note": "This pre-loaded voice on ChromeOS is tied to the Android compatibility layer and requires network access for this version, which is very much a requirement for using Chrome OS anyway. Fallbacks to natural voice and offline variant as well.",
+      "altNames": [
+        "Android Speech Recognition and Synthesis from Google en-us-x-iob-network",
+        "Android Speech Recognition and Synthesis from Google en-us-x-iob-local"
+      ],
+      "language": "en-US",
+      "gender": "female",
+      "quality": [
+        "high"
+      ],
+      "rate": 1,
+      "pitch": 1,
+      "os": [
+        "ChromeOS"
+      ],
+      "preloaded": true
+    },
+    {
+      "label": "Female voice 3 (US)",
+      "name": "Google US English 2 (Natural)",
+      "note": "This pre-loaded voice on ChromeOS is tied to the Android compatibility layer and requires network access for this version, which is very much a requirement for using Chrome OS anyway. Fallbacks to natural voice and offline variant as well.",
+      "altNames": [
+        "Google US English 2 (Natural)",
+        "Android Speech Recognition and Synthesis from Google en-us-x-iog-network",
+        "Android Speech Recognition and Synthesis from Google en-us-x-iog-local"
+      ],
+      "language": "en-US",
+      "gender": "female",
+      "quality": [
+        "high"
+      ],
+      "rate": 1,
+      "pitch": 1,
+      "os": [
+        "ChromeOS"
+      ],
+      "preloaded": true
+    },
+    {
+      "label": "Female voice 4 (US)",
+      "name": "Google US English 7 (Natural)",
+      "note": "This pre-loaded voice on ChromeOS is tied to the Android compatibility layer and requires network access for this version, which is very much a requirement for using Chrome OS anyway. Fallbacks to natural voice and offline variant as well.",
+      "altNames": [
+        "Android Speech Recognition and Synthesis from Google en-us-x-tpf-network",
+        "Android Speech Recognition and Synthesis from Google en-us-x-tpf-local"
+      ],
+      "language": "en-US",
+      "gender": "female",
+      "quality": [
+        "high"
+      ],
+      "rate": 1,
+      "pitch": 1,
+      "os": [
+        "ChromeOS"
+      ],
+      "preloaded": true
+    },
+    {
+      "label": "Female voice 5 (US)",
+      "name": "Android Speech Recognition and Synthesis from Google en-us-x-sfg-network",
+      "note": "This pre-loaded voice on ChromeOS is tied to the Android compatibility layer and requires network access for this version, which is very much a requirement for using Chrome OS anyway. Fallbacks to offline variant as well.",
+      "altNames": [
+        "Android Speech Recognition and Synthesis from Google en-us-x-sfg-local"
+      ],
+      "language": "en-US",
+      "gender": "female",
+      "quality": [
+        "normal"
+      ],
+      "rate": 1,
+      "pitch": 1,
+      "os": [
+        "ChromeOS"
+      ],
+      "preloaded": true
+    },
+    {
+      "label": "Female voice 6 (US)",
+      "name": "Chrome OS US English 1",
+      "note": "This pre-loaded voice on ChromeOS is available locally but isn't as high quality as some of the network-only voices available through the Android compatibility layer.",
+      "language": "en-US",
+      "gender": "female",
+      "quality": [
+        "low"
+      ],
+      "rate": 1,
+      "pitch": 1,
+      "os": [
+        "ChromeOS"
+      ],
+      "preloaded": true
+    },
+    {
+      "label": "Female voice 7 (US)",
+      "name": "Chrome OS US English 2",
+      "note": "This pre-loaded voice on ChromeOS is available locally but isn't as high quality as some of the network-only voices available through the Android compatibility layer.",
+      "language": "en-US",
+      "gender": "female",
+      "quality": [
+        "low"
+      ],
+      "rate": 1,
+      "pitch": 1,
+      "os": [
+        "ChromeOS"
+      ],
+      "preloaded": true
+    },
+    {
+      "label": "Female voice 8 (US)",
+      "name": "Chrome OS US English 3",
+      "note": "This pre-loaded voice on ChromeOS is available locally but isn't as high quality as some of the network-only voices available through the Android compatibility layer.",
+      "language": "en-US",
+      "gender": "female",
+      "quality": [
+        "low"
+      ],
+      "rate": 1,
+      "pitch": 1,
+      "os": [
+        "ChromeOS"
+      ],
+      "preloaded": true
+    },
+    {
+      "label": "Female voice 9 (US)",
+      "name": "Chrome OS US English 6",
+      "note": "This pre-loaded voice on ChromeOS is available locally but isn't as high quality as some of the network-only voices available through the Android compatibility layer.",
+      "language": "en-US",
+      "gender": "female",
+      "quality": [
+        "low"
+      ],
+      "rate": 1,
+      "pitch": 1,
+      "os": [
+        "ChromeOS"
+      ],
+      "preloaded": true
+    },
+    {
+      "label": "Female voice 10 (US)",
+      "name": "Chrome OS US English 8",
+      "note": "This pre-loaded voice on ChromeOS is available locally but isn't as high quality as some of the network-only voices available through the Android compatibility layer.",
+      "language": "en-US",
+      "gender": "female",
+      "quality": [
+        "low"
+      ],
+      "rate": 1,
+      "pitch": 1,
+      "os": [
+        "ChromeOS"
+      ],
+      "preloaded": true
+    },
+    {
+      "label": "Male voice 1 (US)",
+      "name": "Google US English 4 (Natural)",
+      "note": "This pre-loaded voice on ChromeOS is tied to the Android compatibility layer and requires network access for this version, which is very much a requirement for using Chrome OS anyway. Fallbacks to natural voice and offline variant as well.",
+      "altNames": [
+        "Android Speech Recognition and Synthesis from Google en-us-x-iom-network",
+        "Android Speech Recognition and Synthesis from Google en-us-x-iom-local"
+      ],
+      "language": "en-US",
+      "gender": "male",
+      "quality": [
+        "high"
+      ],
+      "rate": 1,
+      "pitch": 1,
+      "os": [
+        "ChromeOS"
+      ],
+      "preloaded": true
+    },
+    {
+      "label": "Male voice 2 (US)",
+      "name": "Google US English 3 (Natural)",
+      "note": "This pre-loaded voice on ChromeOS is tied to the Android compatibility layer and requires network access for this version, which is very much a requirement for using Chrome OS anyway. Fallbacks to natural voice and offline variant as well.",
+      "altNames": [
+        "Android Speech Recognition and Synthesis from Google en-us-x-iol-network",
+        "Android Speech Recognition and Synthesis from Google en-us-x-iol-local"
+      ],
+      "language": "en-US",
+      "gender": "male",
+      "quality": [
+        "high"
+      ],
+      "rate": 1,
+      "pitch": 1,
+      "os": [
+        "ChromeOS"
+      ],
+      "preloaded": true
+    },
+    {
+      "label": "Male voice 3 (US)",
+      "name": "Google US English 6 (Natural)",
+      "note": "This pre-loaded voice on ChromeOS is tied to the Android compatibility layer and requires network access for this version, which is very much a requirement for using Chrome OS anyway. Fallbacks to natural voice and offline variant as well.",
+      "altNames": [
+        "Android Speech Recognition and Synthesis from Google en-us-x-tpd-network",
+        "Android Speech Recognition and Synthesis from Google en-us-x-tpd-local"
+      ],
+      "language": "en-US",
+      "gender": "male",
+      "quality": [
+        "high"
+      ],
+      "rate": 1,
+      "pitch": 1,
+      "os": [
+        "ChromeOS"
+      ],
+      "preloaded": true
+    },
+    {
+      "label": "Male voice 4 (US)",
+      "name": "Chrome OS US English 4",
+      "note": "This pre-loaded voice on ChromeOS is available locally but isn't as high quality as some of the network-only voices available through the Android compatibility layer.",
+      "language": "en-US",
+      "gender": "male",
+      "quality": [
+        "low"
+      ],
+      "rate": 1,
+      "pitch": 1,
+      "os": [
+        "ChromeOS"
+      ],
+      "preloaded": true
+    },
+    {
+      "label": "Male voice 5 (US)",
+      "name": "Chrome OS US English 5",
+      "note": "This pre-loaded voice on ChromeOS is available locally but isn't as high quality as some of the network-only voices available through the Android compatibility layer.",
+      "language": "en-US",
+      "gender": "male",
+      "quality": [
+        "low"
+      ],
+      "rate": 1,
+      "pitch": 1,
+      "os": [
+        "ChromeOS"
+      ],
+      "preloaded": true
+    },
+    {
+      "label": "Male voice 6 (US)",
+      "name": "Chrome OS US English 7",
+      "note": "This pre-loaded voice on ChromeOS is available locally but isn't as high quality as some of the network-only voices available through the Android compatibility layer.",
+      "language": "en-US",
+      "gender": "male",
+      "quality": [
+        "low"
+      ],
+      "rate": 1,
+      "pitch": 1,
+      "os": [
+        "ChromeOS"
+      ],
+      "preloaded": true
+    },
+    {
+      "label": "Female voice 1 (UK)",
+      "name": "Android Speech Recognition and Synthesis from Google en-gb-x-gba-network",
+      "note": "This pre-loaded voice on ChromeOS is tied to the Android compatibility layer and requires network access for this version, which is very much a requirement for using Chrome OS anyway. Fallbacks to offline variant as well.",
+      "altNames": [
+        "Android Speech Recognition and Synthesis from Google en-gb-x-gba-local"
+      ],
+      "language": "en-GB",
+      "gender": "female",
+      "quality": [
+        "high"
+      ],
+      "rate": 1,
+      "pitch": 1,
+      "os": [
+        "ChromeOS"
+      ],
+      "preloaded": true
+    },
+    {
+      "label": "Female voice 2 (UK)",
+      "name": "Android Speech Recognition and Synthesis from Google en-gb-x-gbc-network",
+      "note": "This pre-loaded voice on ChromeOS is tied to the Android compatibility layer and requires network access for this version, which is very much a requirement for using Chrome OS anyway. Fallbacks to offline variant as well.",
+      "altNames": [
+        "Android Speech Recognition and Synthesis from Google en-gb-x-gbc-local"
+      ],
+      "language": "en-GB",
+      "gender": "female",
+      "quality": [
+        "high"
+      ],
+      "rate": 1,
+      "pitch": 1,
+      "os": [
+        "ChromeOS"
+      ],
+      "preloaded": true
+    },
+    {
+      "label": "Female voice 3 (UK)",
+      "name": "Android Speech Recognition and Synthesis from Google en-gb-x-gbg-network",
+      "note": "This pre-loaded voice on ChromeOS is tied to the Android compatibility layer and requires network access for this version, which is very much a requirement for using Chrome OS anyway. Fallbacks to offline variant as well.",
+      "altNames": [
+        "Android Speech Recognition and Synthesis from Google en-gb-x-gbg-local"
+      ],
+      "language": "en-GB",
+      "gender": "female",
+      "quality": [
+        "high"
+      ],
+      "rate": 1,
+      "pitch": 1,
+      "os": [
+        "ChromeOS"
+      ],
+      "preloaded": true
+    },
+    {
+      "label": "Female voice 4 (UK)",
+      "name": "Chrome OS UK English 1",
+      "language": "en-GB",
+      "gender": "female",
+      "quality": [
+        "low"
+      ],
+      "rate": 1,
+      "pitch": 1,
+      "os": [
+        "ChromeOS"
+      ],
+      "preloaded": true
+    },
+    {
+      "label": "Female voice 5 (UK)",
+      "name": "Chrome OS UK English 3",
+      "language": "en-GB",
+      "gender": "female",
+      "quality": [
+        "low"
+      ],
+      "rate": 1,
+      "pitch": 1,
+      "os": [
+        "ChromeOS"
+      ],
+      "preloaded": true
+    },
+    {
+      "label": "Female voice 6 (UK)",
+      "name": "Chrome OS UK English 5",
+      "language": "en-GB",
+      "gender": "female",
+      "quality": [
+        "low"
+      ],
+      "rate": 1,
+      "pitch": 1,
+      "os": [
+        "ChromeOS"
+      ],
+      "preloaded": true
+    },
+    {
+      "label": "Female voice 7 (UK)",
+      "name": "Chrome OS UK English 7",
+      "language": "en-GB",
+      "gender": "female",
+      "quality": [
+        "low"
+      ],
+      "rate": 1,
+      "pitch": 1,
+      "os": [
+        "ChromeOS"
+      ],
+      "preloaded": true
+    },
+    {
+      "label": "Male voice 1 (UK)",
+      "name": "Android Speech Recognition and Synthesis from Google en-gb-x-rjs-network",
+      "note": "This pre-loaded voice on ChromeOS is tied to the Android compatibility layer and requires network access for this version, which is very much a requirement for using Chrome OS anyway. Fallbacks to offline variant as well.",
+      "altNames": [
+        "Android Speech Recognition and Synthesis from Google en-gb-x-rjs-local"
+      ],
+      "language": "en-GB",
+      "gender": "male",
+      "quality": [
+        "high"
+      ],
+      "rate": 1,
+      "pitch": 1,
+      "os": [
+        "ChromeOS"
+      ],
+      "preloaded": true
+    },
+    {
+      "label": "Male voice 2 (UK)",
+      "name": "Android Speech Recognition and Synthesis from Google en-gb-x-gbb-network",
+      "note": "This pre-loaded voice on ChromeOS is tied to the Android compatibility layer and requires network access for this version, which is very much a requirement for using Chrome OS anyway. Fallbacks to offline variant as well.",
+      "altNames": [
+        "Android Speech Recognition and Synthesis from Google en-gb-x-gbb-local"
+      ],
+      "language": "en-GB",
+      "gender": "male",
+      "quality": [
+        "high"
+      ],
+      "rate": 1,
+      "pitch": 1,
+      "os": [
+        "ChromeOS"
+      ],
+      "preloaded": true
+    },
+    {
+      "label": "Male voice 3 (UK)",
+      "name": "Android Speech Recognition and Synthesis from Google en-gb-x-gbd-network",
+      "note": "This pre-loaded voice on ChromeOS is tied to the Android compatibility layer and requires network access for this version, which is very much a requirement for using Chrome OS anyway. Fallbacks to offline variant as well.",
+      "altNames": [
+        "Android Speech Recognition and Synthesis from Google en-gb-x-gbd-local"
+      ],
+      "language": "en-GB",
+      "gender": "male",
+      "quality": [
+        "high"
+      ],
+      "rate": 1,
+      "pitch": 1,
+      "os": [
+        "ChromeOS"
+      ],
+      "preloaded": true
+    },
+    {
+      "label": "Male voice 4 (UK)",
+      "name": "Chrome OS UK English 2",
+      "language": "en-GB",
+      "gender": "male",
+      "quality": [
+        "low"
+      ],
+      "rate": 1,
+      "pitch": 1,
+      "os": [
+        "ChromeOS"
+      ],
+      "preloaded": true
+    },
+    {
+      "label": "Male voice 5 (UK)",
+      "name": "Chrome OS UK English 4",
+      "language": "en-GB",
+      "gender": "male",
+      "quality": [
+        "low"
+      ],
+      "rate": 1,
+      "pitch": 1,
+      "os": [
+        "ChromeOS"
+      ],
+      "preloaded": true
+    },
+    {
+      "label": "Male voice 6 (UK)",
+      "name": "Chrome OS UK English 6",
+      "language": "en-GB",
+      "gender": "male",
+      "quality": [
+        "low"
+      ],
+      "rate": 1,
+      "pitch": 1,
+      "os": [
+        "ChromeOS"
+      ],
+      "preloaded": true
+    },
+    {
+      "label": "Female voice 1 (Australia)",
+      "name": "Android Speech Recognition and Synthesis from Google en-au-x-aua-network",
+      "note": "This pre-loaded voice on ChromeOS is tied to the Android compatibility layer and requires network access for this version, which is very much a requirement for using Chrome OS anyway. Fallbacks to offline variant as well.",
+      "altNames": [
+        "Android Speech Recognition and Synthesis from Google en-au-x-aua-local"
+      ],
+      "language": "en-AU",
+      "gender": "female",
+      "quality": [
+        "high"
+      ],
+      "rate": 1,
+      "pitch": 1,
+      "os": [
+        "ChromeOS"
+      ],
+      "preloaded": true
+    },
+    {
+      "label": "Female voice 2 (Australia)",
+      "name": "Android Speech Recognition and Synthesis from Google en-au-x-auc-network",
+      "note": "This pre-loaded voice on ChromeOS is tied to the Android compatibility layer and requires network access for this version, which is very much a requirement for using Chrome OS anyway. Fallbacks to offline variant as well.",
+      "altNames": [
+        "Android Speech Recognition and Synthesis from Google en-au-x-auc-local"
+      ],
+      "language": "en-AU",
+      "gender": "female",
+      "quality": [
+        "high"
+      ],
+      "rate": 1,
+      "pitch": 1,
+      "os": [
+        "ChromeOS"
+      ],
+      "preloaded": true
+    },
+    {
+      "label": "Male voice 1 (Australia)",
+      "name": "Android Speech Recognition and Synthesis from Google en-au-x-aub-network",
+      "note": "This pre-loaded voice on ChromeOS is tied to the Android compatibility layer and requires network access for this version, which is very much a requirement for using Chrome OS anyway. Fallbacks to offline variant as well.",
+      "altNames": [
+        "Android Speech Recognition and Synthesis from Google en-au-x-aub-local"
+      ],
+      "language": "en-AU",
+      "gender": "female",
+      "quality": [
+        "high"
+      ],
+      "rate": 1,
+      "pitch": 1,
+      "os": [
+        "ChromeOS"
+      ],
+      "preloaded": true
+    },
+    {
+      "label": "Male voice 2 (Australia)",
+      "name": "Android Speech Recognition and Synthesis from Google en-au-x-aud-network",
+      "note": "This pre-loaded voice on ChromeOS is tied to the Android compatibility layer and requires network access for this version, which is very much a requirement for using Chrome OS anyway. Fallbacks to offline variant as well.",
+      "altNames": [
+        "Android Speech Recognition and Synthesis from Google en-au-x-aud-local"
+      ],
+      "language": "en-AU",
+      "gender": "female",
+      "quality": [
+        "high"
+      ],
+      "rate": 1,
+      "pitch": 1,
+      "os": [
+        "ChromeOS"
+      ],
+      "preloaded": true
+    },
+    {
+      "label": "US voice",
+      "name": "English United States",
+      "note": "On Android, voice selection is only supported at a system level and Web Speech API doesn't return a true list of voices available, just a list of languages and regions",
+      "altNames": [
+        "anglais États-Unis",
+        "inglés Estados Unidos",
+        "inglese Stati Uniti",
+        "Englisch Vereinigte Staaten",
+        "Engels Verenigde Staten",
+        "inglês Estados Unidos",
+        "anglès Estats Units",
+        "englanti Yhdysvallat",
+        "engelska USA",
+        "engelsk USA"
+      ],
+      "language": "en-US",
+      "quality": [
+        "high"
+      ],
+      "rate": 1,
+      "pitch": 1,
+      "os": [
+        "Android"
+      ],
+      "preloaded": true
+    },
+    {
+      "label": "UK voice",
+      "name": "English United Kingdom",
+      "note": "On Android, voice selection is only supported at a system level and Web Speech API doesn't return a true list of voices available, just a list of languages and regions",
+      "altNames": [
+        "anglais Royaume-Uni",
+        "inglés Reino Unido",
+        "inglese Regno Unito",
+        "Englisch Vereinigtes Königreich",
+        "Engels Verenigd Koninkrijk",
+        "inglês Reino Unido",
+        "anglès Regne Unit",
+        "englanti Iso-Britannia",
+        "engelska Storbritannien",
+        "engelsk Storbritannien",
+        "engelsk Storbritannia"
+      ],
+      "language": "en-GB",
+      "quality": [
+        "high"
+      ],
+      "rate": 1,
+      "pitch": 1,
+      "os": [
+        "Android"
+      ],
+      "preloaded": true
+    },
+    {
+      "label": "Australian voice",
+      "name": "English Australia",
+      "note": "On Android, voice selection is only supported at a system level and Web Speech API doesn't return a true list of voices available, just a list of languages and regions",
+      "altNames": [
+        "anglais Australie",
+        "inglés Australia",
+        "inglese Australia",
+        "Englisch Australien",
+        "Engels Australië",
+        "inglês Austrália",
+        "anglès Austràlia",
+        "englanti Australia",
+        "engelska Australien",
+        "engelsk Australien",
+        "engelsk Australia"
+      ],
+      "language": "en-AU",
+      "quality": [
+        "high"
+      ],
+      "rate": 1,
+      "pitch": 1,
+      "os": [
+        "Android"
+      ],
+      "preloaded": true
+    }
+  ]
+}

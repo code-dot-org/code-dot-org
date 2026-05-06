@@ -1,0 +1,28 @@
+@keyframes fadein {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes blink {
+  0%, 45% {
+    opacity: 0;
+  }
+  55%, 100% {
+    opacity: 1;
+  }
+}
+
+/* Only show focus outline when navigating with keyboard, not on programmatic focus */
+.guide-dialog:focus {
+  outline: none;
+}
+
+.guide-dialog:focus-visible {
+  outline: 2px solid white;
+  outline-offset: 2px;
+  box-shadow: 0 0 0 4px black;
+}

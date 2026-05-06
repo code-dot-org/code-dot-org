@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>ML Activities Playground</title>
+    <style>
+      #level-select {
+        height: 70px;
+        justify-content: center;
+        align-items: center;
+        display: flex;
+      }
+      input[type='radio'] {
+        cursor: pointer;
+      }
+
+      #container {
+        position: relative;
+        width: 100%;
+        min-width: 480px;
+        margin: 0 auto;
+        user-select: none;
+      }
+      #container-react {
+        position: absolute;
+        width: 100%;
+        min-width: 480px;
+        margin: 0 auto;
+        user-select: none;
+        font-family: arial, sans-serif;
+        font-size: 18px;
+        line-height: 1.3;
+        color: rgb(30, 30, 30);
+      }
+      #background-canvas {
+        position: absolute;
+        left: 0;
+        width: 100%;
+        z-index: -1;
+        border-radius: 10px;
+      }
+      #activity-canvas {
+        width: 100%;
+        border-radius: 10px;
+        border: none;
+      }
+      button {
+        padding: 1.5% 3%;
+      }
+
+      #pondTextMarkdown p {
+        margin: 0
+      }
+      #pondTextMarkdown strong {
+        color: #eb5757;
+        font-weight: normal;
+      }
+      #pondTextMarkdown em {
+        color: #56c568;
+        font-style: normal;
+      }
+
+
+      /*
+       * Primary aim is to fit the width up to 0.9 of the screen width.
+       * Secondary aim is that the vertical fits on the screen.
+       * (0.9 lets us get the native 930px on a 1024px screen.. though with
+       * a bit of a manual adjustment up due to rounding.)
+       *
+       * e.g.
+       * Given a screen min-width of 800px, the screen min-height should be
+       * (800 * 0.9) / 16 * 9 + 110 (where the 110 represents the header height).
+       * And the max-width of the container should be (800 * 0.9).
+       * And the font-size is (18px * (800 * 0.9 / 930)
+       */
+      @media screen {
+        #container {
+          max-width: 480px;
+        }
+        #container-react {
+          font-size: calc(18px * 480 / 930);
+        }
+      }
+      @media screen and (min-width: 800px) and (min-height: 515px) {
+        #container {
+          max-width: 720px;
+        }
+        #container-react {
+          font-size: calc(18px * 720 / 930);
+        }
+      }
+      @media screen and (min-width: 1024px) and (min-height: 628px) {
+        #container {
+          max-width: 930px;
+        }
+        #container-react {
+          font-size: calc(18px * 930 / 930);
+        }
+      }
+      @media screen and (min-width: 1137px) and (min-height: 685px) {
+        #container {
+          max-width: 1024px;
+        }
+        #container-react {
+          font-size: calc(18px * 1024 / 930);
+        }
+      }
+      @media screen and (min-width: 1422px) and (min-height: 830px) {
+        #container {
+          max-width: 1280px;
+        }
+        #container-react {
+          font-size: calc(18px * 1280 / 930);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div id="level-select">
+      <input
+        type="radio"
+        class="level-radio"
+        name="level-radio"
+        id="fishvtrash"
+      />
+      <input
+        type="radio"
+        class="level-radio"
+        name="level-radio"
+        id="creaturesvtrashdemo"
+      />
+      <input
+        type="radio"
+        class="level-radio"
+        name="level-radio"
+        id="creaturesvtrash"
+      />
+      <input type="radio" class="level-radio" name="level-radio" id="short" />
+      <input type="radio" class="level-radio" name="level-radio" id="long" />
+    </div>
+    <div id="container">
+      <div id="container-react"></div>
+      <canvas id="background-canvas"></canvas>
+      <canvas id="activity-canvas"></canvas>
+    </div>
+    <script src="oceans.js"></script>
+  </body>
+</html>
