@@ -91,7 +91,8 @@ const Whale = new URL(
   import.meta.url,
 ).href;
 
-export const trashImagePaths = [
+/** Absolute URLs for all trash item images, in display order. */
+export const trashImagePaths: string[] = [
   Trash_6pack,
   Trash_Apple,
   Trash_Banana,
@@ -109,7 +110,8 @@ export const trashImagePaths = [
   Trash_Wing,
 ];
 
-export const seaCreatureImagePaths = [
+/** Absolute URLs for all sea-creature images, in display order. */
+export const seaCreatureImagePaths: string[] = [
   Crab,
   Dolphin,
   Jellyfish,

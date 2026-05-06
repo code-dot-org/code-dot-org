@@ -445,9 +445,11 @@ const scales12_image = new URL(
   import.meta.url,
 ).href;
 
-// Describe the different body parts of the fish. The object
-// is ordered by its render dependency (i.e., dorsalFin should be rendered
-// before body).
+/**
+ * Identifies which anatomical layer of the fish a component belongs to.
+ * Ordered by render dependency: parts earlier in the enum draw behind later ones
+ * (e.g. dorsalFin must render before body so it appears behind the body).
+ */
 export const FishBodyPart = Object.freeze({
   DORSAL_FIN: 0,
   TAIL: 1,
@@ -459,12 +461,28 @@ export const FishBodyPart = Object.freeze({
   EYE: 7,
 });
 
+/** Numeric value of a {@link FishBodyPart} entry. */
+export type FishBodyPartValue =
+  (typeof FishBodyPart)[keyof typeof FishBodyPart];
+
+/**
+ * Sentiment encoded in a fish mouth shape, fed into the KNN classifier
+ * as a categorical attribute.
+ */
 export const MouthExpression = Object.freeze({
   SMILE: 0,
   NEUTRAL: 1,
   FROWN: 2,
 });
 
+/** Numeric value of a {@link MouthExpression} entry. */
+export type MouthExpressionValue =
+  (typeof MouthExpression)[keyof typeof MouthExpression];
+
+/**
+ * Broad geometric shape category for a fish body, used as a KNN attribute
+ * so the classifier can reason about body silhouette.
+ */
 export const BodyShape = Object.freeze({
   CIRCLE: 0,
   OVAL: 1,
@@ -473,12 +491,139 @@ export const BodyShape = Object.freeze({
   OTHER: 4,
 });
 
+/** Numeric value of a {@link BodyShape} entry. */
+export type BodyShapeValue = (typeof BodyShape)[keyof typeof BodyShape];
+
+/**
+ * Distinguishes the semantic role of a KNN data field:
+ * - ATTRIBUTE: a measured property of the part (e.g. area, ratio)
+ * - ID: a one-hot encoded boolean distinguishing one variant from another
+ *
+ * See: https://hackernoon.com/what-is-one-hot-encoding-why-and-when-do-you-have-to-use-it-e3c6186d008f
+ */
 export const FieldType = Object.freeze({
-  ATTRIBUTE: 'attribute', // Means the field came from the "knnData"
-  ID: 'id', // Means the field is a one-hot encoded boolean value corresponding to an ID for a part variation
+  ATTRIBUTE: 'attribute',
+  ID: 'id',
 });
 
-const fishComponents = {
+/** String value of a {@link FieldType} entry. */
+export type FieldTypeValue = (typeof FieldType)[keyof typeof FieldType];
+
+/**
+ * Metadata for a single field within a component's knnData array,
+ * recorded during {@link initFishData} so callers can trace each
+ * dimension back to its source.
+ */
+export interface FieldInfo {
+  /** Which fishComponents category this field belongs to (e.g. "bodies"). */
+  partType: string;
+  /** Whether this dimension is a measured attribute or a one-hot ID. */
+  fieldType: FieldTypeValue;
+  /** Zero-based position of this field within its group. */
+  index: number;
+}
+
+/**
+ * Base shape shared by every fish component category. After
+ * {@link initFishData} runs, knnData is normalized and augmented with
+ * one-hot IDs; fieldInfos and index are also populated at that time.
+ */
+export interface FishComponent {
+  /** Resolved URL of the component's PNG asset. */
+  src: string;
+  /**
+   * Raw measurement vector used for KNN classification.
+   * Semantics vary per category (see inline comments in fishComponents).
+   * Mutated in-place by {@link initFishData} to become normalized + one-hot augmented.
+   */
+  knnData: number[];
+  /** Which render layer this component occupies. */
+  type: FishBodyPartValue;
+  /**
+   * AppMode values where this component should be hidden.
+   * Absent means the component is available in all modes.
+   */
+  exclusions?: string[];
+  /**
+   * Per-field metadata populated by {@link initFishData}.
+   * Undefined before initialization.
+   */
+  fieldInfos?: FieldInfo[];
+  /**
+   * Zero-based position among siblings within the same category,
+   * populated by {@link initFishData}.
+   */
+  index?: number;
+}
+
+/**
+ * Body components carry anchor coordinates that position every other
+ * part relative to the body image.  All anchor values are pixel offsets
+ * from the top-left of the body PNG at its natural size.
+ */
+export interface BodyComponent extends FishComponent {
+  /** [x, y] pixel offset from the body image origin to the fish's eye socket. */
+  anchor: [number, number];
+  /** [x, y] where the face/eye cluster is placed on the body. */
+  faceAnchor: [number, number];
+  /** [x, y] attachment point for the rear pectoral fin. */
+  pectoralFinBackAnchor: [number, number];
+  /** [x, y] attachment point for the front pectoral fin. */
+  pectoralFinFrontAnchor: [number, number];
+  /** [x, y] attachment point for the dorsal fin. */
+  dorsalFinAnchor: [number, number];
+  /** [x, y] attachment point for the tail fin. */
+  tailAnchor: [number, number];
+  /** [x, y] attachment point for the scales overlay. */
+  scalesAnchor: [number, number];
+}
+
+/**
+ * Dorsal fins may need a horizontal nudge to align with curved body anchors;
+ * x_adjustment is the signed pixel offset applied at render time.
+ */
+export interface DorsalFinComponent extends FishComponent {
+  /** Signed horizontal pixel offset applied when placing the fin on the body anchor. */
+  x_adjustment?: number;
+}
+
+/** All fish component categories keyed by category name. */
+export interface FishComponents {
+  bodies: Record<string, BodyComponent>;
+  eyes: Record<string, FishComponent>;
+  mouths: Record<string, FishComponent>;
+  pectoralFinsFront: Record<string, FishComponent>;
+  pectoralFinsBack: Record<string, FishComponent>;
+  dorsalFins: Record<string, DorsalFinComponent>;
+  tails: Record<string, FishComponent>;
+  scales: Record<string, FishComponent>;
+  colors: Record<string, ColorComponent>;
+}
+
+/**
+ * Color swatches are pure data — no image asset.  rgb and knnData both
+ * carry [R, G, B] in 0-255 range; knnData is normalized by {@link initFishData}.
+ */
+export interface ColorComponent {
+  /** [R, G, B] display values in 0-255 range. */
+  rgb: [number, number, number];
+  /**
+   * KNN input vector — same values as rgb before init, normalized afterward.
+   * Typed as number[] because {@link initFishData} mutates the array in place.
+   */
+  knnData: number[];
+  /** AppMode values where this color is hidden. */
+  exclusions?: string[];
+  /** Per-field metadata populated by {@link initFishData}. */
+  fieldInfos?: FieldInfo[];
+  /** Zero-based position among siblings, populated by {@link initFishData}. */
+  index?: number;
+}
+
+// Describe the different body parts of the fish. The object
+// is ordered by its render dependency (i.e., dorsalFin should be rendered
+// before body).
+const fishComponents: FishComponents = {
   // BODY KNN DATA: [area, BodyShape]
   bodies: {
     circle_1: {
@@ -1954,74 +2099,106 @@ const fishComponents = {
   },
 };
 
-// https://hackernoon.com/what-is-one-hot-encoding-why-and-when-do-you-have-to-use-it-e3c6186d008f
-const oneHotEncode = (index, numCategories) => {
-  const result = Array(numCategories);
-  result.fill(0, 0, numCategories);
+/**
+ * Produce a one-hot encoded vector of length numCategories with a 1 at index.
+ * Used to append a unique identifier dimension to each component's knnData so
+ * the KNN classifier can distinguish variants that share identical attributes.
+ *
+ * See: https://hackernoon.com/what-is-one-hot-encoding-why-and-when-do-you-have-to-use-it-e3c6186d008f
+ *
+ * @param index - Zero-based position to set to 1.
+ * @param numCategories - Total length of the output vector.
+ * @returns Array of length numCategories, all zeros except position index.
+ */
+const oneHotEncode = (index: number, numCategories: number): number[] => {
+  const result = new Array<number>(numCategories).fill(0);
   result[index] = 1;
   return result;
 };
 
-// Normalize the KNN data for all components.
+/** Whether {@link initFishData} has already run. Prevents double-initialization. */
 let initialized = false;
-export const initFishData = () => {
+
+/**
+ * Normalize the KNN data for all components and augment each with a one-hot
+ * identity vector.  Must be called once before using fishData for classification.
+ *
+ * For each category the function:
+ * 1. Min-max normalizes every attribute dimension to [0, 1].
+ * 2. Appends a one-hot ID vector so the classifier can distinguish variants
+ *    whose measured attributes happen to be equal.
+ * 3. Records per-field metadata in component.fieldInfos and a positional
+ *    index in component.index.
+ *
+ * Idempotent — subsequent calls are no-ops.
+ */
+export const initFishData = (): void => {
   if (!initialized) {
-    Object.keys(fishComponents).forEach(key => {
-      const variations = fishComponents[key];
-      const knnDataLength = Object.values(fishComponents[key])[0].knnData
-        .length;
-      const minArray = new Array(knnDataLength);
-      minArray.fill(Number.POSITIVE_INFINITY);
-      const maxArray = new Array(knnDataLength);
-      maxArray.fill(Number.NEGATIVE_INFINITY);
-      Object.values(variations).forEach(component => {
-        for (var i = 0; i < component.knnData.length; ++i) {
-          if (component.knnData[i] < minArray[i]) {
-            minArray[i] = component.knnData[i];
+    (Object.keys(fishComponents) as Array<keyof FishComponents>).forEach(
+      key => {
+        const variations = fishComponents[key] as Record<
+          string,
+          FishComponent | ColorComponent
+        >;
+        const firstComponent = Object.values(variations)[0];
+        const knnDataLength = firstComponent.knnData.length;
+        const minArray = new Array<number>(knnDataLength).fill(
+          Number.POSITIVE_INFINITY,
+        );
+        const maxArray = new Array<number>(knnDataLength).fill(
+          Number.NEGATIVE_INFINITY,
+        );
+        Object.values(variations).forEach(component => {
+          for (let i = 0; i < component.knnData.length; ++i) {
+            if (component.knnData[i] < minArray[i]) {
+              minArray[i] = component.knnData[i];
+            }
+            if (component.knnData[i] > maxArray[i]) {
+              maxArray[i] = component.knnData[i];
+            }
           }
-          if (component.knnData[i] > maxArray[i]) {
-            maxArray[i] = component.knnData[i];
-          }
-        }
-      });
-      Object.values(variations).forEach((component, idx) => {
-        component.fieldInfos = [];
-        for (var i = 0; i < component.knnData.length; ++i) {
-          component.fieldInfos.push({
-            partType: key,
-            fieldType: FieldType.ATTRIBUTE,
-            index: i,
-          });
-        }
-
-        for (i = 0; i < component.knnData.length; ++i) {
-          if (maxArray[i] === minArray[i]) {
-            component.knnData[i] = 0;
-          } else {
-            component.knnData[i] =
-              (component.knnData[i] - minArray[i]) /
-              (maxArray[i] - minArray[i]);
-          }
-        }
-        component.index = idx;
-        // Add an "id" to each component to train on
-        const numVariations = Object.keys(variations).length;
-        if (numVariations > 1) {
-          const indexVector = oneHotEncode(idx, numVariations);
-          component.knnData.push(...indexVector);
-
-          for (i = 0; i < indexVector.length; ++i) {
+        });
+        Object.values(variations).forEach((component, idx) => {
+          component.fieldInfos = [];
+          for (let i = 0; i < component.knnData.length; ++i) {
             component.fieldInfos.push({
               partType: key,
-              fieldType: FieldType.ID,
+              fieldType: FieldType.ATTRIBUTE,
               index: i,
             });
           }
-        }
-      });
-    });
+
+          for (let i = 0; i < component.knnData.length; ++i) {
+            if (maxArray[i] === minArray[i]) {
+              component.knnData[i] = 0;
+            } else {
+              component.knnData[i] =
+                (component.knnData[i] - minArray[i]) /
+                (maxArray[i] - minArray[i]);
+            }
+          }
+          component.index = idx;
+          // Add a one-hot "id" to each component so the classifier can
+          // discriminate between variants with otherwise identical attributes.
+          const numVariations = Object.keys(variations).length;
+          if (numVariations > 1) {
+            const indexVector = oneHotEncode(idx, numVariations);
+            component.knnData.push(...indexVector);
+
+            for (let i = 0; i < indexVector.length; ++i) {
+              component.fieldInfos.push({
+                partType: key,
+                fieldType: FieldType.ID,
+                index: i,
+              });
+            }
+          }
+        });
+      },
+    );
     initialized = true;
   }
 };
 
-export const fishData = fishComponents;
+/** The full fish component dataset. Callers should treat this as read-only after {@link initFishData}. */
+export const fishData: FishComponents = fishComponents;
