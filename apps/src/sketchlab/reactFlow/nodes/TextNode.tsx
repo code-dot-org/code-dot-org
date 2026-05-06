@@ -1,10 +1,14 @@
 import {NodeResizer, useReactFlow, type NodeProps} from '@xyflow/react';
+import classNames from 'classnames';
 import React, {memo, useCallback, useMemo, useRef, useState} from 'react';
 
-import {MIN_NODE_HEIGHT, MIN_NODE_WIDTH} from '../constants';
+import {DEFAULT_ROTATION, MIN_NODE_HEIGHT, MIN_NODE_WIDTH} from '../constants';
 import {useSketchLabReadOnly} from '../context';
 import TextNodeToolbar from '../elementToolbars/TextNodeToolbar';
-import {fontSizePx} from '../elementToolbars/toolbarPalettes';
+import {
+  fontSizePx,
+  DEFAULT_TEXT_ALIGN,
+} from '../elementToolbars/toolbarPalettes';
 import {TextNodeType} from '../types';
 
 import ConnectionHandles from './ConnectionHandles';
@@ -26,8 +30,15 @@ function TextNode({id, data, selected}: NodeProps<TextNodeType>) {
       style.color = data.fontColor;
     }
     style.fontSize = fontSizePx(data.fontSize);
+    style.textAlign = data.textAlign ?? DEFAULT_TEXT_ALIGN;
     return style;
-  }, [data.fontColor, data.fontSize]);
+  }, [data.fontColor, data.fontSize, data.textAlign]);
+
+  const rotation = data.rotation ?? DEFAULT_ROTATION;
+  const rotatableStyle: React.CSSProperties = useMemo(
+    () => ({transform: `rotate(${rotation}deg)`}),
+    [rotation]
+  );
 
   const startEditing = useCallback(() => {
     if (isEditing || readOnly || data.locked) {
@@ -89,20 +100,22 @@ function TextNode({id, data, selected}: NodeProps<TextNodeType>) {
 
       <TextNodeToolbar nodeId={id} />
 
-      <div
-        ref={textRef}
-        className={styles.text}
-        style={textStyle}
-        contentEditable={isEditing}
-        suppressContentEditableWarning
-        onFocus={startEditing}
-        onBlur={commitEdit}
-        onKeyDown={handleKeyDown}
-        tabIndex={-1}
-        role="textbox"
-        aria-label={`Text content${isEditing ? ' (editing)' : ''}`}
-      >
-        {text}
+      <div className={styles.rotatable} style={rotatableStyle}>
+        <div
+          ref={textRef}
+          className={classNames(styles.text, isEditing && 'nodrag nopan')}
+          style={textStyle}
+          contentEditable={isEditing}
+          suppressContentEditableWarning
+          onFocus={startEditing}
+          onBlur={commitEdit}
+          onKeyDown={handleKeyDown}
+          tabIndex={-1}
+          role="textbox"
+          aria-label={`Text content${isEditing ? ' (editing)' : ''}`}
+        >
+          {text}
+        </div>
       </div>
 
       <ConnectionHandles visible={showHandles} />

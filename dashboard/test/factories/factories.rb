@@ -1437,7 +1437,7 @@ FactoryBot.define do
     description {'fake description'}
     s3_uri {'s3://fake-bucket/fake-path/video.json'}
     json_schema_version {1}
-    audience {'student'}
+    audience {'Student'}
   end
 
   factory :user_lesson_objective_reflection do

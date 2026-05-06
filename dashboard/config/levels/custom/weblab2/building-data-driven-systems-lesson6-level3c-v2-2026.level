@@ -1,0 +1,107 @@
+<Weblab2>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 74,
+  "created_at": "2026-05-05T04:23:06.000Z",
+  "level_num": "custom",
+  "user_id": 1574,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "## Render the Curbside Pickup Queue\r\n\r\n### Do This:\r\n\r\n1. Look at the `pickups` array in `script.js`.\r\n\r\n2. Complete the `renderPickups()` function.\r\n   * Use `.map()` to go through the `pickups` array.\r\n   * Call `createPickupCard()` to create a card for each rental.\r\n   * Display all the cards inside `pickupList`.\r\n\r\n### Check Your Code:\r\n\r\n- Does each pickup object create one card?\r\n- Does the pickup count match the number of pickups?\r\n- Where does `.map()` repeat the same rendering rule?",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "disable_edit_run_for_submission": "false",
+    "widget_view": "false",
+    "initial_view_mode": "split",
+    "ai_tutor_mode": "engineer",
+    "predict_settings": {
+      "isPredictLevel": false,
+      "solution": "",
+      "questionType": "freeResponse",
+      "placeholderText": "",
+      "multipleChoiceOptions": [
+        ""
+      ],
+      "freeResponseHeight": 50,
+      "codeEditableAfterSubmit": false,
+      "allowMultipleAttempts": false
+    },
+    "start_sources": {
+      "folders": {
+        "1": {
+          "id": "1",
+          "name": "images",
+          "parentId": "0",
+          "open": false
+        }
+      },
+      "files": {
+        "1": {
+          "id": "1",
+          "name": "index.html",
+          "language": "html",
+          "contents": "<!DOCTYPE html>\n<html>\n  <head>\n    <meta charset=\"utf-8\" />\n    <title id=\"pageTitle\">Profiles</title>\n    <link rel=\"stylesheet\" href=\"style.css\" />\n  </head>\n  <body>\n    <main id=\"mainContainer\">\n      <header id=\"header\">\n        <h1 id=\"heading\">Profile</h1>\n        <p id=\"subtitle\">See details about different person or items.</p>\n      </header>\n\n      <section id=\"profileContainer\" class=\"profile-container\"></section>\n    </main>\n\n    <script src=\"helpers.js\" ></script>\n    <script src=\"script.js\"></script>\n  </body>\n</html>",
+          "active": false,
+          "folderId": "0"
+        },
+        "2": {
+          "id": "2",
+          "name": "style.css",
+          "language": "css",
+          "contents": "body {\n  margin: 0;\n  font-family: Arial, sans-serif;\n  background: #eef1f6;\n  color: #14213d;\n}\n\n#mainContainer {\n  max-width: 900px;\n  margin: 0 auto;\n  padding: 24px 16px 40px;\n}\n\n#header {\n  margin-bottom: 24px;\n}\n\n#heading {\n  margin: 0 0 8px;\n  font-size: 1.8rem;\n}\n\n#subtitle {\n  margin: 0;\n  font-size: 0.95rem;\n  color: #5f687a;\n}\n\n#profileContainer {\n  display: grid;\n  grid-template-columns: repeat(auto-fit, minmax(260px, 360px));\n  gap: 20px;\n  justify-content: center;\n}\n\n.profile-card {\n  width: 100%;\n  max-width: 360px;\n  background: #ffffff;\n  border-radius: 16px;\n  padding: 16px;\n  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);\n  box-sizing: border-box;\n}\n\n.profile-top {\n  display: flex;\n  align-items: flex-start;\n  gap: 12px;\n}\n\n.profile-image {\n  width: 72px;\n  height: 72px;\n  border-radius: 50%;\n  object-fit: cover;\n  flex-shrink: 0;\n}\n\n.profile-main {\n  flex: 1;\n  min-width: 0;\n}\n\n.profile-name {\n  margin: 0 0 6px;\n  font-size: 1.3rem;\n  line-height: 1.1;\n  word-break: break-word;\n}\n\n.profile-description {\n  margin: 0;\n  font-size: 0.9rem;\n  color: #5f687a;\n  line-height: 1.4;\n}\n\n.profile-divider {\n  border: none;\n  border-top: 1px solid #e3e7ef;\n  margin: 16px 0 0;\n}\n\n.profile-detail {\n  margin: 0;\n  padding: 12px 0;\n  font-size: 0.9rem;\n  color: #24324a;\n  border-top: 1px solid #e3e7ef;\n}\n\n.profile-detail:first-of-type {\n  border-top: none;\n}",
+          "folderId": "0",
+          "active": false
+        },
+        "3": {
+          "id": "3",
+          "name": "script.js",
+          "language": "js",
+          "contents": "const image = \"images/olivia.png\";\nconst name = \"Olivia Smith\";\nconst description = \"Enthusiastic learner who enjoys problem solving and coding.\";\nconst detail1 = \"olivia.smith@example.com\";\nconst detail2 = \"10th Grade\";\nconst detail3 = \"Los Angeles, CA\";\n\ncreateProfile(image, name, description, detail1, detail2, detail3);",
+          "folderId": "0",
+          "active": true
+        },
+        "4": {
+          "id": "4",
+          "name": "helpers.js",
+          "contents": "let profileCount = 0;\n\nconst createProfile = (imageSrc, name, description, detail1, detail2, detail3) => {\n  const container = document.getElementById(\"profileContainer\");\n\n  const card = document.createElement(\"article\");\n  card.className = \"profile-card\";\n  card.id = \"profile\" + profileCount;\n\n  const top = document.createElement(\"div\");\n  top.className = \"profile-top\";\n  top.id = \"profileTop\" + profileCount;\n\n  const image = document.createElement(\"img\");\n  image.className = \"profile-image\";\n  image.id = \"profileImage\" + profileCount;\n  image.src = imageSrc;\n  image.alt = name;\n\n  const main = document.createElement(\"div\");\n  main.className = \"profile-main\";\n  main.id = \"profileMain\" + profileCount;\n\n  const heading = document.createElement(\"h2\");\n  heading.className = \"profile-name\";\n  heading.id = \"profileName\" + profileCount;\n  heading.textContent = name;\n\n  const descriptionEl = document.createElement(\"p\");\n  descriptionEl.className = \"profile-description\";\n  descriptionEl.id = \"profileDescription\" + profileCount;\n  descriptionEl.textContent = description;\n\n  const divider = document.createElement(\"hr\");\n  divider.className = \"profile-divider\";\n  divider.id = \"profileDivider\" + profileCount;\n\n  const detailOne = document.createElement(\"p\");\n  detailOne.className = \"profile-detail\";\n  detailOne.id = \"profileDetail1_\" + profileCount;\n  detailOne.textContent = detail1;\n\n  const detailTwo = document.createElement(\"p\");\n  detailTwo.className = \"profile-detail\";\n  detailTwo.id = \"profileDetail2_\" + profileCount;\n  detailTwo.textContent = detail2;\n\n  const detailThree = document.createElement(\"p\");\n  detailThree.className = \"profile-detail\";\n  detailThree.id = \"profileDetail3_\" + profileCount;\n  detailThree.textContent = detail3;\n\n  main.appendChild(heading);\n  main.appendChild(descriptionEl);\n\n  top.appendChild(image);\n  top.appendChild(main);\n\n  card.appendChild(top);\n  card.appendChild(divider);\n  card.appendChild(detailOne);\n  card.appendChild(detailTwo);\n  card.appendChild(detailThree);\n\n  container.appendChild(card);\n\n  profileCount++;\n};",
+          "folderId": "0",
+          "active": false,
+          "type": "support"
+        },
+        "6": {
+          "id": "6",
+          "name": "olivia.png",
+          "contents": "",
+          "folderId": "1",
+          "url": "/level_starter_assets/building-data-driven-systems-lesson2-level1c-v1-2026/uuid/72243b9f-64b9-4e4f-8c6a-4618b0ffa46b.png",
+          "type": "starter",
+          "active": false
+        }
+      },
+      "openFiles": [
+        "3"
+      ]
+    },
+    "encrypted_exemplar_sources": "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\nHPpNaef+qXiUEQ==\n",
+    "name_suffix": "_2025-pilot",
+    "offer_browser_tts": "false",
+    "require_edit_to_continue": "false",
+    "ai_tutor_prompt_settings": {
+      "answerTypes": [
+        "documentation",
+        "explainCode"
+      ],
+      "answerTypeCustomizations": {
+        "buildJavaScript": "You are helping a beginner student refactor JavaScript code.\n\nThe student already has arrays (imageArray, titleArray, descriptionArray, badgeArray) and code that displays one card.\n\nYour job is to:\n- Refactor the code to use `.map()` to display all items\n- Use the same index across all arrays\n- Call createCard() for each item\n\nRules:\n- Do not create new arrays\n- Do not change variable names\n- Do not use loops other than `.map()`\n- Do not add extra features or explanations\n\nUse this pattern:\n\ntitleArray.map((item, index) => {\n  createCard(\n    imageArray[index],\n    titleArray[index],\n    descriptionArray[index],\n    badgeArray[index]\n  );\n});\n\nReturn only simple JavaScript code.",
+        "ask": "You are helping a beginner student understand how a profile UI is built from data.\n\nExplain how the values passed into a function (like createProfile) control what is shown in the profile.\n\nFocus on:\n- how each value maps to parts of the profile (name, image, details)\n- what one profile represents\n- what would change if one value changes\n\nKeep explanations short and clear.",
+        "explainCode": "You are helping a beginner student understand how a profile UI is built from data.\n\nExplain how the values passed into a function (like createProfile) control what is shown in the profile.\n\nFocus on:\n- how each value maps to parts of the profile (name, image, details)\n- what one profile represents\n- what would change if one value changes\n\nKeep explanations short and clear."
+      }
+    },
+    "display_name": "Render Pickup Queue",
+    "bubble_choice_description": "Use `.map()` to display a list of curbside pickups from an array of objects. Each pickup  should appear as one item on the screen using the provided function.",
+    "project_template_level_name": "building-data-driven-systems-lesson6-level3c-template-v2-2026",
+    "thumbnail_url": "https://images.code.org/5d9774b5d2d57eb4e98c9a0cbd360361-Screenshot 2026-05-04 213008.png"
+  },
+  "audit_log": "[{\"changed_at\":\"2026-05-05T04:23:06.565+00:00\",\"changed\":[\"cloned from \\\"building-data-driven-systems-lesson6-level3b-v2-2026\\\"\"],\"cloned_from\":\"building-data-driven-systems-lesson6-level3b-v2-2026\"},{\"changed_at\":\"2026-05-05 04:24:50 +0000\",\"changed\":[\"long_instructions\",\"display_name\",\"bubble_choice_description\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-05-05 04:26:28 +0000\",\"changed\":[\"encrypted_exemplar_sources\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-05-05 04:26:48 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-05-05 04:31:55 +0000\",\"changed\":[\"project_template_level_name\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"}]"
+}]]></config>
+</Weblab2>

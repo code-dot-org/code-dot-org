@@ -6,10 +6,10 @@ import PasswordReset from '@cdo/apps/templates/manageStudents/PasswordReset';
 describe('PasswordReset', () => {
   it('disables reset password button if resetDisabled prop is true', () => {
     let wrapper = mount(<PasswordReset />);
-    expect(wrapper.find('Button').prop('disabled')).toBeUndefined();
+    expect(wrapper.find('button').first().prop('disabled')).toBeFalsy();
 
     wrapper = mount(<PasswordReset resetDisabled={true} />);
-    expect(wrapper.find('Button').prop('disabled')).toBe(true);
+    expect(wrapper.find('button').first().prop('disabled')).toBe(true);
   });
 
   it('calls props.setPasswordLengthFailure with true if setting password fails with too short error', async () => {
@@ -18,11 +18,11 @@ describe('PasswordReset', () => {
     const wrapper = mount(
       <PasswordReset setPasswordLengthFailure={setPasswordLengthFailureSpy} />
     );
-    wrapper.find('Button').simulate('click');
+    wrapper.find('button').first().simulate('click');
     wrapper.find('input').simulate('change', {
       target: {value: 'short'},
     });
-    const saveButton = wrapper.find('Button').first();
+    const saveButton = wrapper.find('button').first();
     saveButton.simulate('click');
     expect(setPasswordLengthFailureSpy).toHaveBeenCalledWith(true);
   });

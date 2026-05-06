@@ -1,10 +1,12 @@
 import React from 'react';
 
+import {DEFAULT_ROTATION} from '../constants';
 import {ImageNodeType} from '../types';
 
-import ActionsGroup from './ActionsGroup';
 import HandleVisibilityToggle from './HandleVisibilityToggle';
 import LockedNotice from './LockedNotice';
+import NodeActionsGroup from './NodeActionsGroup';
+import RotationGroup from './RotationGroup';
 import ToolbarShell from './ToolbarShell';
 import {useNodeToolbarData} from './useNodeToolbarData';
 
@@ -23,10 +25,14 @@ export default function ImageNodeToolbar({nodeId}: ImageNodeToolbarProps) {
       ariaLabel="Image options"
     >
       {data.locked ? (
-        <LockedNotice nodeId={nodeId} />
+        <LockedNotice onUnlock={() => patchNodeData({locked: false})} />
       ) : (
         <>
-          <ActionsGroup nodeId={nodeId} />
+          <RotationGroup
+            value={data.rotation ?? DEFAULT_ROTATION}
+            onChange={degrees => patchNodeData({rotation: degrees})}
+          />
+          <NodeActionsGroup nodeId={nodeId} />
           <HandleVisibilityToggle
             visible={handlesVisible}
             onToggle={() => patchNodeData({showHandles: !handlesVisible})}

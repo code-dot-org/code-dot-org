@@ -86,7 +86,8 @@
             "targetKey": "thinking_critically_lesson5_level2panels_2026-371c1d10-09fe-49b6-8cd1-f79f8f6ee6bf",
             "width": 17
           }
-        ]
+        ],
+        "showContinueButton": true
       },
       {
         "text": "AI does not save the images it studies. Instead, it records numbers that describe the patterns it sees.",
@@ -101,7 +102,8 @@
             "targetKey": "thinking_critically_lesson5_level2panels_2026-371c1d10-09fe-49b6-8cd1-f79f8f6ee6bf",
             "width": 16
           }
-        ]
+        ],
+        "showContinueButton": true
       },
       {
         "text": "After training, AI mixes what it learned to make new images. It is not copying any one image directly.",
@@ -116,7 +118,8 @@
             "targetKey": "thinking_critically_lesson5_level2panels_2026-371c1d10-09fe-49b6-8cd1-f79f8f6ee6bf",
             "width": 16
           }
-        ]
+        ],
+        "showContinueButton": true
       },
       {
         "text": "#Is AI creative?\n\nWhen you look at a painting, you see a story.\nWhen AI looks at the same painting, it sees patterns — shapes, colors, and lines.\nAI does not copy the image. It breaks down how the artist made it and stores that as numbers.",
@@ -166,7 +169,8 @@
             "width": 15
           }
         ],
-        "layout": "text-top-left"
+        "layout": "text-top-left",
+        "showContinueButton": true
       },
       {
         "text": "###AI sees patterns in how colors are used\n\nAI notes which colors appear most often and how they are placed next to each other.\n\n",
@@ -181,7 +185,8 @@
             "targetKey": "thinking_critically_lesson5_level2panels_2026-c16be7f1-46e7-4448-997e-d22428db25ea",
             "width": 15
           }
-        ]
+        ],
+        "showContinueButton": true
       },
       {
         "text": "###AI sees patterns in light and shadow\nAI learns how an artist uses light and shadow to make a flat image look three-dimensional.",
@@ -196,7 +201,8 @@
             "targetKey": "thinking_critically_lesson5_level2panels_2026-c16be7f1-46e7-4448-997e-d22428db25ea",
             "width": 15
           }
-        ]
+        ],
+        "showContinueButton": true
       },
       {
         "text": "Is it okay for AI to learn from artists' work — or is that stealing?\n",
@@ -247,7 +253,8 @@
             "width": 16
           }
         ],
-        "layout": "text-top-left"
+        "layout": "text-top-left",
+        "showContinueButton": true
       },
       {
         "text": "Some people argue that AI is just inspired by patterns, the same way human artists learn by studying other artists.",
@@ -262,7 +269,8 @@
             "width": 14
           }
         ],
-        "layout": "text-top-left"
+        "layout": "text-top-left",
+        "showContinueButton": true
       },
       {
         "text": "Some new ideas: give artists credit when their work is used, pay them for it, or let them choose if their work can be used to train AI.",
@@ -277,7 +285,8 @@
             "width": 15
           }
         ],
-        "layout": "text-top-left"
+        "layout": "text-top-left",
+        "showContinueButton": true
       }
     ],
     "use_links": "true",
@@ -285,6 +294,6 @@
     "bubble_choice_description": "Explore how AI impacts artists",
     "thumbnail_url": "https://images.code.org/0e22ed062569a627207c0038ea5285e8-one-two.jpg"
   },
-  "audit_log": "[{\"changed_at\":\"2026-04-27T20:24:54.813+00:00\",\"changed\":[\"cloned from \\\"thinking_critically_lesson5_level2panels_2026\\\"\"],\"cloned_from\":\"thinking_critically_lesson5_level2panels_2026\"},{\"changed_at\":\"2026-04-27 20:34:31 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-04-27 20:39:08 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-04-27 20:40:30 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-04-27 20:45:24 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-04-27 20:45:55 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-04-27 20:47:16 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-04-27 20:50:38 +0000\",\"changed\":[],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2026-04-27T20:24:54.813+00:00\",\"changed\":[\"cloned from \\\"thinking_critically_lesson5_level2panels_2026\\\"\"],\"cloned_from\":\"thinking_critically_lesson5_level2panels_2026\"},{\"changed_at\":\"2026-04-27 20:34:31 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-04-27 20:39:08 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-04-27 20:40:30 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-04-27 20:45:24 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-04-27 20:45:55 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-04-27 20:47:16 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-04-27 20:50:38 +0000\",\"changed\":[],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-05-01 16:33:54 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"}]"
 }]]></config>
 </Panels>

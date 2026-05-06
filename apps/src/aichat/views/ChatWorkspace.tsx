@@ -11,7 +11,6 @@ import React, {
   useImperativeHandle,
 } from 'react';
 
-import {isModelUpdate, WorkspaceTeacherViewTab} from '@cdo/apps/aichat/types';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 import usePrevious from '@cdo/apps/util/usePrevious';
 import {AiChatClientTypes} from '@cdo/generated-scripts/sharedConstants';
@@ -40,6 +39,9 @@ import {
   ChatAsset,
   ChatButtonAndKey,
   ModelParameters,
+  isModelUpdate,
+  UploadStatus,
+  WorkspaceTeacherViewTab,
 } from '../types';
 import {getAssetUrl, getShortName} from '../utils';
 
@@ -53,11 +55,13 @@ import moduleStyles from './chatWorkspace.module.scss';
 /** Handle for interacting with the Chat Workspace */
 export interface ChatWorkspaceHandle {
   /**
-   * Uploads files to the chat message. If `onFileFlagged` is provided it is
-   * called (instead of showing the in-chat error) when a file fails content
-   * moderation, letting the caller customize the error UI.
+   * Uploads files to the chat message.
+   * @param onUploadFinished Optional callback allowing callers to notify external components of the file status.
    */
-  addFiles: (files: File[], onFileFlagged?: (filename: string) => void) => void;
+  addFiles: (
+    files: File[],
+    onUploadFinished?: (status: UploadStatus) => void
+  ) => void;
 }
 
 interface ChatWorkspaceProps {
@@ -352,9 +356,9 @@ const ChatWorkspace = forwardRef<ChatWorkspaceHandle, ChatWorkspaceProps>(
     useImperativeHandle(
       ref,
       () => ({
-        addFiles: (files, onFileFlagged) => {
+        addFiles: (files, onUploadFinished) => {
           if (canUploadAssets) {
-            dispatch(uploadFiles({files, buildAssetUrl, onFileFlagged}));
+            dispatch(uploadFiles({files, buildAssetUrl, onUploadFinished}));
           }
         },
       }),
@@ -385,10 +389,13 @@ const ChatWorkspace = forwardRef<ChatWorkspaceHandle, ChatWorkspaceProps>(
           />
         )}
         <div className={moduleStyles.footer}>
-          {canUploadAssets && (
-            <StagedFilesPreview buildAssetUrl={buildAssetUrl} />
-          )}
-          <UserAddedSelectionContextPreview />
+          <div className={moduleStyles.chipsRow}>
+            {canUploadAssets && (
+              <StagedFilesPreview buildAssetUrl={buildAssetUrl} />
+            )}
+            <UserAddedSelectionContextPreview />
+          </div>
+
           {canChatWithModel && (
             <UserChatMessageEditor
               clientType={clientType}

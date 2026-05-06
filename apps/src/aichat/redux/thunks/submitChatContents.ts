@@ -5,12 +5,12 @@ import {
   addEventToChatEventsCurrent,
   clearStagedFiles,
   clearUserAddedSelectionContext,
-  setChatMessageSent,
   updateChatMessageStatus,
   updateRequestId,
 } from '@cdo/apps/aichat/redux/slice';
 import {getAssetUrl} from '@cdo/apps/aichat/utils';
-import {AichatLevelProperties} from '@cdo/apps/aichatLab/types';
+import {setChatMessageSent} from '@cdo/apps/aichatLab/redux/slice';
+import type {AichatLevelProperties} from '@cdo/apps/aichatLab/types';
 import {Role} from '@cdo/apps/aiComponentLibrary/chatMessage/types';
 import {isTurnstileDevToolsError} from '@cdo/apps/aiGateway/turnstile';
 import {sendProgressReport} from '@cdo/apps/code-studio/progressRedux';
@@ -123,6 +123,7 @@ export const submitChatContents = createAsyncThunk(
       updateId: createUuid(),
     };
     dispatch(addEventToChatEventsCurrent(newUserMessage));
+    // TODO: Remove dependency on aichatLab redux slice.
     dispatch(setChatMessageSent(true));
 
     if (logLevelActivity) {

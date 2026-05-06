@@ -1,10 +1,14 @@
 import {NodeResizer, useReactFlow, type NodeProps} from '@xyflow/react';
+import classNames from 'classnames';
 import React, {memo, useCallback, useMemo, useRef, useState} from 'react';
 
-import {MIN_NODE_HEIGHT, MIN_NODE_WIDTH} from '../constants';
+import {DEFAULT_ROTATION, MIN_NODE_HEIGHT, MIN_NODE_WIDTH} from '../constants';
 import {useSketchLabReadOnly} from '../context';
 import ShapeNodeToolbar from '../elementToolbars/ShapeNodeToolbar';
-import {fontSizePx} from '../elementToolbars/toolbarPalettes';
+import {
+  fontSizePx,
+  DEFAULT_TEXT_ALIGN,
+} from '../elementToolbars/toolbarPalettes';
 import {ShapeNodeType, ShapeType} from '../types';
 
 import ConnectionHandles from './ConnectionHandles';
@@ -143,6 +147,9 @@ function ShapeNode({id, data, selected}: NodeProps<ShapeNodeType>) {
   );
 
   const isRectangle = shapeType === 'rectangle';
+  const isCircle = shapeType === 'circle';
+  const isTriangle = shapeType === 'triangle';
+  const isDiamond = shapeType === 'diamond';
 
   const rectangleStyle: React.CSSProperties = useMemo(() => {
     const style: React.CSSProperties = {};
@@ -157,12 +164,19 @@ function ShapeNode({id, data, selected}: NodeProps<ShapeNodeType>) {
 
   const labelStyle: React.CSSProperties = useMemo(() => {
     const style: React.CSSProperties = {};
-    if (data.fontColor) {
+    if (data.fontColor && !isEditing) {
       style.color = data.fontColor;
     }
     style.fontSize = fontSizePx(data.fontSize);
+    style.textAlign = data.textAlign ?? DEFAULT_TEXT_ALIGN;
     return style;
-  }, [data.fontColor, data.fontSize]);
+  }, [data.fontColor, data.fontSize, data.textAlign, isEditing]);
+
+  const rotation = data.rotation ?? DEFAULT_ROTATION;
+  const rotatableStyle: React.CSSProperties = useMemo(
+    () => ({transform: `rotate(${rotation}deg)`}),
+    [rotation]
+  );
 
   return (
     <div
@@ -178,36 +192,45 @@ function ShapeNode({id, data, selected}: NodeProps<ShapeNodeType>) {
 
       <ShapeNodeToolbar nodeId={id} />
 
-      {/* Background shape */}
-      {isRectangle ? (
-        <div
-          className={styles.rectangleBackground}
-          style={rectangleStyle}
-          aria-hidden="true"
-        />
-      ) : (
-        <ShapeSvg
-          shapeType={shapeType}
-          strokeColor={strokeColor}
-          backgroundColor={backgroundColor}
-        />
-      )}
+      <div className={styles.rotatable} style={rotatableStyle}>
+        {/* Background shape */}
+        {isRectangle ? (
+          <div
+            className={styles.rectangleBackground}
+            style={rectangleStyle}
+            aria-hidden="true"
+          />
+        ) : (
+          <ShapeSvg
+            shapeType={shapeType}
+            strokeColor={strokeColor}
+            backgroundColor={backgroundColor}
+          />
+        )}
 
-      {/* Text label: click or enter to start editing */}
-      <div
-        ref={labelRef}
-        className={styles.label}
-        style={labelStyle}
-        contentEditable={isEditing}
-        suppressContentEditableWarning
-        onFocus={startEditing}
-        onBlur={commitEdit}
-        onKeyDown={handleLabelKeyDown}
-        tabIndex={-1}
-        role="textbox"
-        aria-label={`${shapeType} label${isEditing ? ' (editing)' : ''}`}
-      >
-        {label}
+        {/* Text label: click or enter to start editing */}
+        <div
+          ref={labelRef}
+          className={classNames(
+            styles.label,
+            isEditing && 'nodrag nopan',
+            isCircle && styles.circleLabel,
+            isTriangle && styles.triangleLabel,
+            isDiamond && styles.diamondLabel,
+            isRectangle && styles.rectangleLabel
+          )}
+          style={labelStyle}
+          contentEditable={isEditing}
+          suppressContentEditableWarning
+          onFocus={startEditing}
+          onBlur={commitEdit}
+          onKeyDown={handleLabelKeyDown}
+          tabIndex={-1}
+          role="textbox"
+          aria-label={`${shapeType} label${isEditing ? ' (editing)' : ''}`}
+        >
+          {label}
+        </div>
       </div>
 
       <ConnectionHandles visible={showHandles} />

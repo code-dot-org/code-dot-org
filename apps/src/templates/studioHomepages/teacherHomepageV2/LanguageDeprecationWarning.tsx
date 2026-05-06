@@ -11,7 +11,6 @@ const DEPRECATED_LOCALES = new Set([
   'fil-PH', // Filipino
   'mn-MN', // Mongolian
   'ms-MY', // Malay
-  'ro-RO', // Romanian
   'sq-AL', // Albanian
   'ur-PK', // Urdu
   'uz-UZ', // Uzbek

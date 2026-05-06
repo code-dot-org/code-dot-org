@@ -70,6 +70,30 @@ class JitPlExemplarsControllerTest < ActionController::TestCase
     assert_equal 'renamed', data['name']
   end
 
+  test 'json_videos are saved when updating a concept exemplar' do
+    sign_in @levelbuilder
+    JitPlConcept.any_instance.stubs(:write_serialization)
+    video = create(:json_video)
+
+    put :update, params: {jit_pl_concept_id: @concept.id, id: @concept_exemplar.id, json_video_ids: [video.id]}
+    assert_response :ok
+
+    @concept_exemplar.reload
+    assert_equal [video.id], @concept_exemplar.json_videos.map(&:id)
+  end
+
+  test 'json_videos are saved when creating a concept exemplar' do
+    sign_in @levelbuilder
+    JitPlConcept.any_instance.stubs(:write_serialization)
+    video = create(:json_video)
+
+    post :create, params: {jit_pl_concept_id: @concept.id, name: 'with-video', json_video_ids: [video.id]}
+    assert_response :ok
+
+    exemplar = JitPlExemplar.find_by!(name: 'with-video')
+    assert_equal [video.id], exemplar.json_videos.map(&:id)
+  end
+
   test 'resources are saved when updating a concept exemplar' do
     sign_in @levelbuilder
     JitPlConcept.any_instance.stubs(:write_serialization)

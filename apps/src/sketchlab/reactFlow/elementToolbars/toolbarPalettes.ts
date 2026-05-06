@@ -55,10 +55,19 @@ export const LINE_STROKE_STYLE_OPTIONS = [
 export type LineStrokeStyleValue =
   (typeof LINE_STROKE_STYLE_OPTIONS)[number]['value'];
 
+export const TEXT_ALIGN_OPTIONS = [
+  {value: 'left', label: 'Align left', icon: 'align-left'},
+  {value: 'center', label: 'Align center', icon: 'align-center'},
+  {value: 'right', label: 'Align right', icon: 'align-right'},
+] as const;
+
+export type TextAlignValue = (typeof TEXT_ALIGN_OPTIONS)[number]['value'];
+
 export const DEFAULT_BACKGROUND_COLOR = 'transparent';
 export const DEFAULT_STROKE_COLOR = 'var(--sketchlab-stroke-default)';
 export const DEFAULT_FONT_COLOR = 'var(--sketchlab-stroke-default)';
 export const DEFAULT_FONT_SIZE: FontSizeValue = 'medium';
+export const DEFAULT_TEXT_ALIGN: TextAlignValue = 'center';
 export const DEFAULT_LINE_WIDTH: LineWidthValue = 1;
 export const DEFAULT_LINE_STROKE_STYLE: LineStrokeStyleValue = 'solid';
 

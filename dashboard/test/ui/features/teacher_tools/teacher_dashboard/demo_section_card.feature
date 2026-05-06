@@ -1,5 +1,4 @@
 @no_mobile
-@skip
 Feature: Demo section card on the teacher homepage
 
   Scenario: Teacher with zero sections can create a practice section from the homepage

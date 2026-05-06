@@ -22,10 +22,10 @@ const darkTheme = createTheme({
 });
 
 import FizzyButton from './FizzyButton';
-import InterventionBox from './InterventionBox';
 import LevelsAttemptedBox from './LevelsAttemptedBox';
 import PracticeBox from './PracticeBox';
 import ReflectionBox from './ReflectionBox';
+import InterventionBox from './ReviewModalities/InterventionBox';
 import TimeSpentBox from './TimeSpentBox';
 import TutorSummaryBox from './TutorSummaryBox';
 import {LessonDeepDiveData, ReflectionData} from './types';
@@ -132,14 +132,18 @@ const LessonDeepDiveContainer: FC<LessonDeepDiveContainerProps> = ({
             objectives={lessonDeepDiveData.objectives}
             jsonVideos={lessonDeepDiveData.jsonVideos}
             reflectionData={reflectionData}
+            onNext={goToNext}
           />
         );
       case 'practice':
         return (
           <PracticeBox
+            lessonId={lessonDeepDiveData.lessonId}
             lessonName={lessonDeepDiveData.lessonName}
             lessonSummary={lessonDeepDiveData.lessonSummary}
             vocabulary={lessonDeepDiveData.vocabulary}
+            objectives={lessonDeepDiveData.objectives}
+            reflectionData={reflectionData}
           />
         );
       case 'tutor-summary':
