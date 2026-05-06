@@ -40,7 +40,7 @@ namespace :test do
       '-d', CDO.site_host('studio.code.org'),
       '-p', CDO.site_host('code.org'),
       '--db', # Ensure features that require database access are run even if the server name isn't "test"
-      '--parallel', '15',
+      '--parallel', '20',
       '--magic_retry',
       '--with-status-page',
       '--fail_fast',
