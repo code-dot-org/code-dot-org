@@ -4,14 +4,12 @@ module AiLessonSummaryPodcastsHelper
   PODCAST_FOLDER = 'podcasts/'
 
   def self.create_and_save_to_s3(lesson_id, user_id)
-    if client.available_credits
-      script = AiLessonSummariesHelper.retrieve_and_save_ai_lesson_summary(lesson_id, user_id, true)[:script]
-      filename = PODCAST_FOLDER + 'lesson_' + lesson_id.to_s + '_podcast.mp3'
+    script = AiLessonSummariesHelper.retrieve_and_save_ai_lesson_summary(lesson_id, user_id, true)[:script]
+    filename = PODCAST_FOLDER + 'lesson_' + lesson_id.to_s + '_podcast.mp3'
 
-      unless AWS::S3.exists_in_bucket(PODCAST_BUCKET, filename)
-        podcast = get_podcast_from_script(script)
-        AWS::S3.upload_to_bucket(PODCAST_BUCKET, filename, podcast, no_random: true)
-      end
+    if !AWS::S3.exists_in_bucket(PODCAST_BUCKET, filename) && client.available_credits
+      podcast = get_podcast_from_script(script)
+      AWS::S3.upload_to_bucket(PODCAST_BUCKET, filename, podcast, no_random: true)
     end
   end
 
