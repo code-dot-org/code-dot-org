@@ -62,9 +62,9 @@ function renderOfferings(
       key={course.display_name}
     >
       <RadioButton
-        name="course-offering"
+        name={course.display_name}
         label={course.display_name}
-        value={String(course.id)}
+        value={course.display_name}
         checked={sectionCourse?.courseOfferingId === course.id}
         onChange={() => {
           updateSectionCourse(updateCourse, course);
