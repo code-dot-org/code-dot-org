@@ -1,6 +1,6 @@
 module AiSystemPrompts::StudentPodcastPromptHelper
-  def self.get_openai_system_prompt(lesson_id, user_id = nil)
-    lesson_plan = get_lesson_materials(lesson_id)
+  def self.get_openai_system_prompt(lesson_id, objective_ids, user_id = nil)
+    lesson_plan = get_lesson_materials(lesson_id, objective_ids)
     intro = "You are an expert computer science teacher for middle and high school. You
 are writing a script for a conversational podcast between two characters, Dan and Sam.
 The audience for this podcast is students in your class, with an age range of 12-18.
@@ -58,7 +58,7 @@ Unit overview: #{lesson_plan[:unit_overview].to_json}
     prompt
   end
 
-  def self.get_lesson_materials(lesson_id)
+  def self.get_lesson_materials(lesson_id, objective_ids)
     lesson = Lesson.find(lesson_id)
     lesson_materials = lesson.summarize_for_lesson_show(current_user, true)
     @lesson_plan = {}
@@ -66,7 +66,7 @@ Unit overview: #{lesson_plan[:unit_overview].to_json}
     @lesson_plan[:overview] = lesson_materials[:overview]
     @lesson_plan[:objectives] = []
     lesson.objectives.each do |o|
-      @lesson_plan[:objectives] << o.description
+      @lesson_plan[:objectives] << o.description if objective_ids.include?(o.id)
     end
     @lesson_plan[:purpose] = lesson.purpose
     @lesson_plan[:assessment_opportunities] = lesson.assessment_opportunities

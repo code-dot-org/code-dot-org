@@ -30,6 +30,9 @@ module AiStudentPodcastsHelper
     end
   end
 
+  def self.generate_podcast_script(lesson_id, objective_ids, user_id = nil)
+  end
+
   def self.get_podcast_from_script(podcast_script)
     begin
       response = client.request_podcast(resolve_voice_ids(podcast_script))
