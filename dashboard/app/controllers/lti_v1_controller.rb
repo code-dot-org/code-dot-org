@@ -278,9 +278,7 @@ class LtiV1Controller < ApplicationController
   end
 
   def capture_sync_course_error_id(reason, message)
-    return unless Observability::Sentry.enabled? && defined?(::Sentry)
-
-    ::Sentry.capture_message(
+    Observability::Errors.capture_message(
       'LTI roster sync error',
       extra: {
         reason:,
