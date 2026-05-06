@@ -119,9 +119,12 @@ Dashboard::Application.routes.draw do
     resources :puzzle_ratings, only: [:create]
     resources :callouts
     resources :congrats, only: %i[index show], param: :course_name
-    resources :json_videos, only: [] do
+    resources :json_videos, only: [:create] do
       member do
         get 'content'
+      end
+      collection do
+        get 'search'
       end
     end
     resources :videos do
