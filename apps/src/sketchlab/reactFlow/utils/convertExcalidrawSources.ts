@@ -22,11 +22,12 @@ import {ShapeNodeData, ShapeType} from '../types';
 
 // Maps Excalidraw px font size to our small/medium/large bands. The
 // thresholds are midpoints between fontSizePx in toolbarPalettes.ts
-// (small=12, medium=16, large=22).
+// (small=12, medium=16, large=22, extra-large=30).
 function fontSizeBand(px: number): FontSizeValue {
   if (px < 14) return 'small';
   if (px < 19) return 'medium';
-  return 'large';
+  if (px < 26) return 'large';
+  return 'extra-large';
 }
 
 function shapeTypeFor(el: ExcalidrawElement): ShapeType | null {

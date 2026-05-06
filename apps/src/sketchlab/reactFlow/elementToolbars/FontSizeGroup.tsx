@@ -38,7 +38,7 @@ export default function FontSizeGroup({
                 aria-pressed={isSelected}
                 onClick={() => onSelect(option.value)}
               >
-                {option.label.charAt(0)}
+                {option.shortLabel}
               </IconButton>
             </Tooltip>
           );
