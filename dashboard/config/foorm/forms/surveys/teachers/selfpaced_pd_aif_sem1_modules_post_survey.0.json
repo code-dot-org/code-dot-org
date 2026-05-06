@@ -145,8 +145,7 @@
           "rateCount": 7,
           "rateMax": 7,
           "minRateDescription": "Strongly disagree",
-          "maxRateDescription": "Strongly agree",
-          "visibleIf": "{module} <> 'AI-Powered Threats and Defenses'"
+          "maxRateDescription": "Strongly agree"
         },
         {
           "type": "library_item",
