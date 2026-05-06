@@ -161,8 +161,8 @@ RUN curl -sSLOJ https://dl.google.com/linux/direct/google-chrome-stable_current_
         "/opt/google/chrome/google-chrome"
 
 # install chromedriver
-RUN export CHROME_STABLE_VERSION=$(curl -s https://googlechromelabs.github.io/chrome-for-testing/last-known-good-versions.json | jq -r .channels.Stable.version) && \
-    curl -sSLOJ "https://storage.googleapis.com/chrome-for-testing-public/$CHROME_STABLE_VERSION/linux64/chromedriver-linux64.zip" && \
+RUN export INSTALLED_CHROME_VERSION=$(google-chrome --version | awk '{print $NF}') && \
+    curl -sSLOJ "https://storage.googleapis.com/chrome-for-testing-public/$INSTALLED_CHROME_VERSION/linux64/chromedriver-linux64.zip" && \
     unzip chromedriver-linux64.zip && \
     mv chromedriver-linux64/chromedriver /usr/local/bin/chromedriver && \
     chmod +x /usr/local/bin/chromedriver && \
