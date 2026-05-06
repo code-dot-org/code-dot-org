@@ -109,6 +109,9 @@ export default class CustomMarshalingInterpreter extends Interpreter {
    * @return {boolean} true if property access should be blocked.
    */
   shouldBlockCustomMarshalling_(name, obj, nativeParent) {
+    if (name.startsWith('_')) {
+      return true;
+    }
     if (-1 !== this.customMarshaler.blockedProperties.indexOf(name)) {
       return true;
     }
