@@ -161,13 +161,26 @@ function ShapeNode({id, data, selected}: NodeProps<ShapeNodeType>) {
 
   const labelStyle: React.CSSProperties = useMemo(() => {
     const style: React.CSSProperties = {};
-    if (data.fontColor) {
+    if (data.fontColor && !isEditing) {
       style.color = data.fontColor;
     }
     style.fontSize = fontSizePx(data.fontSize);
     style.textAlign = data.textAlign ?? DEFAULT_TEXT_ALIGN;
+    if (shapeType === 'rectangle') {
+      style.padding = '4px 8px';
+    } else if (shapeType === 'circle') {
+      style.padding = '12%';
+    } else if (shapeType === 'triangle') {
+      // Triangle apex is at top; push text toward the wider base.
+      style.paddingTop = '30%';
+      style.paddingLeft = '20%';
+      style.paddingRight = '20%';
+      style.paddingBottom = '5%';
+    } else if (shapeType === 'diamond') {
+      style.padding = '20% 15%';
+    }
     return style;
-  }, [data.fontColor, data.fontSize, data.textAlign]);
+  }, [data.fontColor, data.fontSize, data.textAlign, isEditing, shapeType]);
 
   const rotation = data.rotation ?? DEFAULT_ROTATION;
   const rotatableStyle: React.CSSProperties = useMemo(
@@ -208,7 +221,7 @@ function ShapeNode({id, data, selected}: NodeProps<ShapeNodeType>) {
         {/* Text label: click or enter to start editing */}
         <div
           ref={labelRef}
-          className={classNames(styles.text, isEditing && 'nodrag nopan')}
+          className={classNames(styles.label, isEditing && 'nodrag nopan')}
           style={labelStyle}
           contentEditable={isEditing}
           suppressContentEditableWarning
