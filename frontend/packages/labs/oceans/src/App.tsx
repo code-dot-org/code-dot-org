@@ -49,21 +49,59 @@ export default function OceansLab({
     });
   }, [appMode, guides, textToSpeechLocale, onContinue]);
 
+  // 16:9 responsive wrapper — padding-top 56.25% creates the aspect-ratio box.
+  // Canvas JS resolution is set to 1024×576 by initAll; CSS width/height 100%
+  // scales them to fill whatever space the studio (or any other consumer) gives us.
   return (
-    <div
-      id="container-react"
-      style={{position: 'relative', width: 1024, height: 576}}
-    >
-      <canvas
-        id="background-canvas"
-        ref={backgroundCanvasRef}
-        style={{position: 'absolute', top: 0, left: 0}}
-      />
-      <canvas
-        id="activity-canvas"
-        ref={canvasRef}
-        style={{position: 'absolute', top: 0, left: 0}}
-      />
+    <div style={{width: '100%', position: 'relative', paddingTop: '56.25%'}}>
+      <div
+        style={{
+          position: 'absolute',
+          top: 0,
+          left: 0,
+          width: '100%',
+          height: '100%',
+        }}
+      >
+        <canvas
+          id="background-canvas"
+          ref={backgroundCanvasRef}
+          style={{
+            position: 'absolute',
+            top: 0,
+            left: 0,
+            width: '100%',
+            height: '100%',
+          }}
+        />
+        <canvas
+          id="activity-canvas"
+          ref={canvasRef}
+          style={{
+            position: 'absolute',
+            top: 0,
+            left: 0,
+            width: '100%',
+            height: '100%',
+          }}
+        />
+        {/*
+         * renderUI() in init.tsx mounts a second React root here via createRoot.
+         * Must be a sibling of the canvases — createRoot evicts all existing
+         * children of its container, so nesting canvases inside would remove
+         * them from the DOM on first render.
+         */}
+        <div
+          id="container-react"
+          style={{
+            position: 'absolute',
+            top: 0,
+            left: 0,
+            width: '100%',
+            height: '100%',
+          }}
+        />
+      </div>
     </div>
   );
 }
