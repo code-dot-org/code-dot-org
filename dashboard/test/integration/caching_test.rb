@@ -8,7 +8,7 @@ class CachingTest < ActionDispatch::IntegrationTest
     @other_hoc_unit = create(:unit, :with_levels, levels_count: 10)
     @other_hoc_course = create(:hoc_course, unit: @other_hoc_unit)
 
-    Unit.stubs(:should_cache?).returns(true)
+    setup_script_cache
   end
 
   test "should get /hoc/1" do

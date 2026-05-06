@@ -6,8 +6,7 @@ class DBQueryTest < ActionDispatch::IntegrationTest
     ActiveRecord::Base.connection.disable_query_cache!
     @unit = create(:unit, :with_levels)
     create(:single_unit_course, unit: @unit)
-    Unit.stubs(:should_cache?).returns(true)
-    Unit.clear_cache
+    setup_script_cache
   end
 
   test "script level show" do

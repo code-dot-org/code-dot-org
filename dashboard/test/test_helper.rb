@@ -410,6 +410,14 @@ class ActiveSupport::TestCase
     Rails.logger.info '--------------'
     ActiveRecord::Base.stubs(:connection).raises 'Database disconnected'
   end
+
+  # Units use some bespoke in-memory caches instead of the Rails cache, so when
+  # we exercise them in tests we need to manually clear them to avoid
+  # inheriting any state from previous tests.
+  def setup_script_cache
+    Unit.stubs(:should_cache?).returns true
+    Unit.clear_cache
+  end
 end
 
 # Helpers for all controller test cases
