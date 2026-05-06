@@ -1,4 +1,4 @@
-import {useCallback, useMemo, useState} from 'react';
+import {useCallback, useEffect, useMemo, useState} from 'react';
 
 import useLab2ProductTour from '@cdo/apps/lab2/hooks/useLab2ProductTour';
 import useLifecycleNotifier from '@cdo/apps/lab2/hooks/useLifecycleNotifier';
@@ -14,7 +14,6 @@ import {tryGetLocalStorage} from '@cdo/apps/utils';
 import {LevelProperties} from '../types';
 
 import {TriggerSource} from './constants';
-import {createOnboardingTourSteps} from './onboardingTourSteps';
 import {
   ProductTour,
   ProductTourConfigurations,
@@ -46,10 +45,9 @@ const onTourCancel = (flowName: string) => (stepIndex: number) =>
     triggerSource: TriggerSource.Auto,
   });
 
-const ONBOARDING_FLOW_NAME =
-  ProductTourConfigurations[ProductTour.ResourcePanelOnboarding].metricName;
 const VALIDATION_FLOW_NAME =
   ProductTourConfigurations[ProductTour.ResourcePanelValidation].metricName;
+const WEBLAB2_ONBOARDING_TOUR_SEEN = 'weblab2OnboardingTourSeen';
 
 const useResourcePanelTours = ({
   levelProperties,
@@ -67,42 +65,61 @@ const useResourcePanelTours = ({
     setIsLevelLoading(false);
   });
 
+  const onboardingTour = useMemo(
+    () =>
+      levelProperties.appName === 'weblab2'
+        ? ProductTour.Weblab2Onboarding
+        : ProductTour.ResourcePanelOnboarding,
+    [levelProperties.appName]
+  );
+
+  const onboardingFlowName =
+    ProductTourConfigurations[onboardingTour].metricName;
+  const onboardingTourSeenStorageKey =
+    onboardingTour === ProductTour.Weblab2Onboarding
+      ? WEBLAB2_ONBOARDING_TOUR_SEEN
+      : RESOURCE_PANEL_PINNED_BUTTON_ONBOARDING_TOUR_SEEN;
+
   const isOnboardingTourEnabled = useMemo(() => {
     const isEnabledOnLevel = isTourEnabledOnLevel(
-      ProductTour.ResourcePanelOnboarding,
+      onboardingTour,
       levelProperties
     );
     return isEnabledOnLevel && !isStandaloneCollapsed && !isLevelLoading;
-  }, [levelProperties, isStandaloneCollapsed, isLevelLoading]);
+  }, [levelProperties, isStandaloneCollapsed, isLevelLoading, onboardingTour]);
 
   // ONBOARDING TOUR
   const [onboardingTourSeen, setOnboardingTourSeen] = useState(
-    () =>
-      tryGetLocalStorage(
-        RESOURCE_PANEL_PINNED_BUTTON_ONBOARDING_TOUR_SEEN,
-        'no'
-      ) === 'yes'
+    () => tryGetLocalStorage(onboardingTourSeenStorageKey, 'no') === 'yes'
   );
+  useEffect(() => {
+    setOnboardingTourSeen(
+      tryGetLocalStorage(onboardingTourSeenStorageKey, 'no') === 'yes'
+    );
+  }, [onboardingTourSeenStorageKey]);
   const onOnboardingTourComplete = useCallback(() => {
-    onTourComplete(ONBOARDING_FLOW_NAME)();
+    onTourComplete(onboardingFlowName)();
     setOnboardingTourSeen(true);
-  }, []);
+  }, [onboardingFlowName]);
 
-  const onOnboardingTourCancel = useCallback((stepIndex: number) => {
-    onTourCancel(ONBOARDING_FLOW_NAME)(stepIndex);
-    setOnboardingTourSeen(true);
-  }, []);
+  const onOnboardingTourCancel = useCallback(
+    (stepIndex: number) => {
+      onTourCancel(onboardingFlowName)(stepIndex);
+      setOnboardingTourSeen(true);
+    },
+    [onboardingFlowName]
+  );
 
-  const {tour: onboardingTour} = useLab2ProductTour({
-    getSteps: createOnboardingTourSteps,
-    localStorageKey: RESOURCE_PANEL_PINNED_BUTTON_ONBOARDING_TOUR_SEEN,
+  const {tour: activeOnboardingTour} = useLab2ProductTour({
+    getSteps: ProductTourConfigurations[onboardingTour].getSteps,
+    localStorageKey: onboardingTourSeenStorageKey,
     tourAvailable: isOnboardingTourEnabled,
-    onStart: onTourStart(ONBOARDING_FLOW_NAME),
+    onStart: onTourStart(onboardingFlowName),
     onComplete: onOnboardingTourComplete,
     onCancel: onOnboardingTourCancel,
   });
 
-  useStartTourWhenAvailable(onboardingTour);
+  useStartTourWhenAvailable(activeOnboardingTour);
 
   // VALIDATION TOUR
   const showValidationTour = useMemo(
