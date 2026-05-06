@@ -118,7 +118,7 @@ export default function FontSizeGroup({
           onBlur={handleInputBlur}
           onKeyDown={handleInputKeyDown}
           size="s"
-          className={styles.fontSizeInput}
+          className={styles.smallInput}
           min={FONT_SIZE_MIN}
           max={FONT_SIZE_MAX}
         />
