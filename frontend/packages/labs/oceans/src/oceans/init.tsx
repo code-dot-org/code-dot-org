@@ -1,10 +1,10 @@
 import {createRoot, type Root} from 'react-dom/client';
 
-import constants, {Modes} from './constants';
+import constants, {Modes, OCEANS_UI_CONTAINER_ID} from './constants';
 import I18n from './i18n';
 import modeHelpers from './modeHelpers';
 import soundLibrary from './models/soundLibrary';
-import {render as renderCanvas} from './renderer';
+import {render as renderCanvas, stopRender} from './renderer';
 import {setInitialState, setSetStateCallback} from './state';
 import UI from './ui';
 
@@ -60,9 +60,21 @@ export const initAll = function (options: InitAllOptions): void {
   setSetStateCallback(renderUI);
 };
 
-/** Renders or re-renders the `<UI>` component into `#container-react`. */
+/**
+ * Tears down the canvas render loop and unmounts the React UI.
+ * Safe to call multiple times; no-ops when already torn down.
+ */
+export const teardownAll = (): void => {
+  stopRender();
+  if (uiRoot) {
+    uiRoot.unmount();
+    uiRoot = null;
+  }
+};
+
+/** Renders or re-renders the `<UI>` component into the oceans UI container div. */
 function renderUI(): void {
-  const container = document.getElementById('container-react');
+  const container = document.getElementById(OCEANS_UI_CONTAINER_ID);
   if (!container) {
     return;
   }

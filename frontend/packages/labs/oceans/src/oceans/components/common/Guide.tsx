@@ -10,6 +10,7 @@ import Typist from 'react-typist';
 import '@/oceans/styles/fade.css';
 
 import Button from '@/oceans/components/common/Button';
+import {OCEANS_UI_CONTAINER_ID} from '@/oceans/constants';
 import I18n from '@/oceans/i18n';
 import guide from '@/oceans/models/guide';
 import soundLibrary from '@/oceans/models/soundLibrary';
@@ -43,24 +44,17 @@ export const stopTypingSounds = () => {
   }
 };
 
-/** Local state for the Guide component. */
-interface GuideState {
-  /** Tracks which guide ID was last focused to avoid re-focusing on re-render. */
-  lastFocusedGuideId: string | null;
-}
-
 /** Overlay component that renders the current guide dialog, typing animation, and TTS. */
-const UnwrappedGuide = class Guide extends Component<
-  Record<string, never>,
-  GuideState
-> {
+const UnwrappedGuide = class Guide extends Component<Record<string, never>> {
   guideDialogRef = createRef<HTMLDivElement>();
   lastFocusedGuideId: string | null = null;
 
   componentDidUpdate() {
+    const state = getState();
     const currentGuide = guide.getCurrentGuide();
     const currentGuideId = currentGuide ? currentGuide.id : null;
 
+    // Focus management: push focus into the guide when it changes.
     if (
       currentGuideId !== this.lastFocusedGuideId &&
       currentGuide &&
@@ -74,11 +68,29 @@ const UnwrappedGuide = class Guide extends Component<
         // Guide just cleared — return focus to the first activity button so
         // keyboard users land inside the game instead of on the page shell.
         const firstBtn = document.querySelector<HTMLElement>(
-          '#container-react button',
+          `#${OCEANS_UI_CONTAINER_ID} button`,
         );
         firstBtn?.focus({preventScroll: true});
       }
       this.lastFocusedGuideId = null;
+    }
+
+    // Start typing-sound interval when a new guide appears (no TTS, not yet done).
+    if (
+      !state.textToSpeechLocale &&
+      !state.guideShowing &&
+      !state.guideTypingTimer &&
+      currentGuide
+    ) {
+      const guideTypingTimer = setInterval(() => {
+        soundLibrary.playSound('no', 0.5);
+      }, 1000 / 10);
+      setState({guideTypingTimer}, {skipCallback: true});
+    }
+
+    // Start TTS if needed.
+    if (this.attemptTextToSpeech(false)) {
+      setState({textToSpeechCurrentGuide: currentGuide}, {skipCallback: true});
     }
   }
 
@@ -168,22 +180,6 @@ const UnwrappedGuide = class Guide extends Component<
       }
     }
 
-    if (
-      !state.textToSpeechLocale &&
-      !state.guideShowing &&
-      !state.guideTypingTimer &&
-      currentGuide
-    ) {
-      const guideTypingTimer = setInterval(() => {
-        soundLibrary.playSound('no', 0.5);
-      }, 1000 / 10);
-      setState({guideTypingTimer}, {skipCallback: true});
-    }
-
-    if (this.attemptTextToSpeech(false)) {
-      setState({textToSpeechCurrentGuide: currentGuide}, {skipCallback: true});
-    }
-
     const renderClickToContinueReminder =
       state.guides === 'K5' &&
       state.guideShowing &&
@@ -207,11 +203,11 @@ const UnwrappedGuide = class Guide extends Component<
         )}
         {!!currentGuide && (
           <div>
-            {/* role="button" satisfies jsx-a11y; keyboard dismiss via onGuideKeyDown */}
             <div
               key={currentGuide.id}
               role="button"
               tabIndex={0}
+              ref={this.guideDialogRef}
               style={guideBgStyle as unknown as CSSProperties}
               onClick={this.onGuideClick}
               onKeyDown={this.onGuideKeyDown}
@@ -244,6 +240,7 @@ const UnwrappedGuide = class Guide extends Component<
                     </Typist>
                   </div>
 
+                  {/* Invisible final text: screen readers read this as the button label */}
                   <div
                     style={
                       currentGuide.style === 'Info'
@@ -251,15 +248,7 @@ const UnwrappedGuide = class Guide extends Component<
                         : styles.guideFinalTextContainer
                     }
                   >
-                    {/* role="button" makes tabIndex={0} valid and marks this as keyboard-dismissible */}
-                    <div
-                      role="button"
-                      ref={this.guideDialogRef}
-                      aria-live="polite"
-                      tabIndex={0}
-                      onKeyDown={this.onGuideKeyDown}
-                      style={styles.guideFinalText}
-                    >
+                    <div style={styles.guideFinalText}>
                       {currentGuide.textFn(getState())}
                     </div>
                   </div>

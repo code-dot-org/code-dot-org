@@ -1,6 +1,6 @@
 declare global {
   interface Window {
-    requestAnimFrame: (cb: () => void) => void;
+    requestAnimFrame: (cb: () => void) => number;
   }
 }
 
@@ -84,6 +84,9 @@ const polaroidFrame = new URL(
 /** Previous render state, used to detect mode changes. */
 let prevState: Partial<State> = {};
 
+/** Handle returned by the most recent requestAnimFrame call; used to cancel. */
+let rafId: number = 0;
+
 /** Timestamp of the most-recent mode transition. */
 let currentModeStartTime = $time();
 
@@ -138,8 +141,16 @@ export const initRenderer = (): Promise<void[]> => {
  * Schedules the next render frame via requestAnimFrame before doing any work so
  * that exceptions in drawing do not prevent future frames from being rendered.
  */
+/** Cancels the running canvas render loop started by `render()`. */
+export const stopRender = (): void => {
+  if (rafId) {
+    cancelAnimationFrame(rafId);
+    rafId = 0;
+  }
+};
+
 export const render = (): void => {
-  window.requestAnimFrame(render);
+  rafId = window.requestAnimFrame(render);
 
   let state = getState();
 
@@ -959,7 +970,7 @@ window.requestAnimFrame = (() => {
     (window as unknown as Record<string, unknown>)['oRequestAnimationFrame'] ||
     (window as unknown as Record<string, unknown>)['msRequestAnimationFrame'] ||
     function (/* function */ callback: () => void) {
-      window.setTimeout(callback, 1000 / 60);
+      return window.setTimeout(callback, 1000 / 60);
     }
   );
-})() as (cb: () => void) => void;
+})() as (cb: () => void) => number;

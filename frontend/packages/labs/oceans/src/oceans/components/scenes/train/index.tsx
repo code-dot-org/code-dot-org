@@ -82,18 +82,22 @@ const UnwrappedTrain = class Train extends Component<
             )}
           </span>
         </div>
-        <div style={styles.eraseButtonContainer}>
+        <button
+          style={styles.eraseButtonContainer as unknown as CSSProperties}
+          aria-label={I18n.t('erase')}
+          onClick={() => {
+            setState({
+              showConfirmationDialog: true,
+              confirmationDialogOnYes: resetTrainingFunction,
+            });
+          }}
+        >
           <FontAwesomeIcon
             icon={faTrash}
             style={styles.eraseButton}
-            onClick={() => {
-              setState({
-                showConfirmationDialog: true,
-                confirmationDialogOnYes: resetTrainingFunction,
-              });
-            }}
+            aria-hidden="true"
           />
-        </div>
+        </button>
         <div style={styles.trainButtons}>
           <Button
             style={styles.trainButtonNo}

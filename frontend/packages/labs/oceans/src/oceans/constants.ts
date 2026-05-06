@@ -47,3 +47,6 @@ export const ClassType = Object.freeze({
 
 /** Valid ClassType integer values. */
 export type ClassTypeValue = (typeof ClassType)[keyof typeof ClassType];
+
+/** DOM id of the React UI container div rendered inside OceansLab. */
+export const OCEANS_UI_CONTAINER_ID = 'container-react';

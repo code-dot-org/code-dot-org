@@ -1,7 +1,11 @@
-import {useEffect, useRef} from 'react';
+import {useCallback, useEffect, useRef} from 'react';
 
-import {AppMode, type AppModeValue} from './oceans/constants';
-import {initAll} from './oceans/init';
+import {
+  AppMode,
+  type AppModeValue,
+  OCEANS_UI_CONTAINER_ID,
+} from './oceans/constants';
+import {initAll, teardownAll} from './oceans/init';
 import Sounds from './oceans/Sounds';
 
 /** Props for the OceansLab React component. */
@@ -31,6 +35,15 @@ export default function OceansLab({
   const backgroundCanvasRef = useRef<HTMLCanvasElement>(null);
   const soundsRef = useRef<InstanceType<typeof Sounds> | null>(null);
 
+  // Stable ref so onContinue identity changes never retrigger initAll.
+  const onContinueRef = useRef(onContinue);
+  onContinueRef.current = onContinue;
+
+  // Wrapper with a stable identity for the initAll dependency array.
+  const stableOnContinue = useCallback(() => {
+    onContinueRef.current?.();
+  }, []);
+
   useEffect(() => {
     if (!soundsRef.current) {
       soundsRef.current = new Sounds();
@@ -41,13 +54,15 @@ export default function OceansLab({
       appMode,
       guides,
       textToSpeechLocale,
-      onContinue,
+      onContinue: stableOnContinue,
       canvas: canvasRef.current as HTMLCanvasElement,
       backgroundCanvas: backgroundCanvasRef.current as HTMLCanvasElement,
       playSound: sounds.play.bind(sounds),
       registerSound: sounds.register.bind(sounds),
     });
-  }, [appMode, guides, textToSpeechLocale, onContinue]);
+
+    return teardownAll;
+  }, [appMode, guides, textToSpeechLocale, stableOnContinue]);
 
   // 16:9 responsive wrapper — padding-top 56.25% creates the aspect-ratio box.
   // Canvas JS resolution is set to 1024×576 by initAll; CSS width/height 100%
@@ -94,7 +109,7 @@ export default function OceansLab({
          * them from the DOM on first render.
          */}
         <div
-          id="container-react"
+          id={OCEANS_UI_CONTAINER_ID}
           style={{
             position: 'absolute',
             top: 0,

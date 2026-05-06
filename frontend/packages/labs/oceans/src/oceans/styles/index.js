@@ -261,6 +261,7 @@ const styles = {
     color: colors.grey,
     height: '6%',
     width: '2.4%',
+    border: 'none',
     ':hover': {
       backgroundColor: colors.red,
       color: colors.white,
