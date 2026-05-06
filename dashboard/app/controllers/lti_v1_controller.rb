@@ -278,13 +278,15 @@ class LtiV1Controller < ApplicationController
   end
 
   def capture_sync_course_error_id(reason, message)
-    Observability::Errors.capture_message(
+    event = Observability::Errors.capture_message(
       'LTI roster sync error',
       extra: {
         reason:,
         details: message,
       }
     )
+
+    event&.event_id
   end
 
   # GET /lti/v1/sync_course
