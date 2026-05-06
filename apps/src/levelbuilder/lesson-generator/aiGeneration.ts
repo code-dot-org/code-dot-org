@@ -71,7 +71,15 @@ const panelsPlanSchema = Output.object({
           imagePrompt: z
             .string()
             .describe(
-              'Prompt for generating the panel illustration. Should describe a single 16:9 widescreen image with no embedded text.'
+              'Prompt for generating the panel illustration. MUST describe ' +
+                'a single 16:9 widescreen image that contains NO text, ' +
+                'letters, numbers, captions, signs, labels, watermarks, or ' +
+                'written language of any kind. The narrative text shows up ' +
+                'as a separate UI overlay on top of the panel — it is NOT ' +
+                'part of the picture. If the level subject involves text ' +
+                '(a poster, sign, screen, book, code listing, message), ' +
+                'describe the scene with those surfaces left blank, abstract, ' +
+                'or only suggested by shapes — never spell out any words.'
             ),
           layout: z
             .enum([
@@ -164,12 +172,30 @@ async function generateAndUploadPanelImage(
   levelName: string,
   panelIndex: number
 ): Promise<string> {
+  // Image models frequently bake captions, labels, signs, and watermarks
+  // into output unless the constraint is loud and concrete. State the
+  // no-text rule first, list the categories that count, and explicitly
+  // tell it what to do when the subject contains something that would
+  // normally have text on it.
   const fullPrompt = [
+    'CRITICAL CONSTRAINT — the output image MUST contain NO text of any',
+    'kind. Zero letters, words, numbers, captions, labels, signs,',
+    'watermarks, speech bubbles, code, or written language anywhere in the',
+    'picture. Any narrative text for this panel is rendered separately as a',
+    'UI overlay; it is NOT part of the artwork. If you generate ANY readable',
+    'characters in the image, the panel is unusable.',
+    '',
+    'When the subject involves things that would normally have text —',
+    'signs, posters, screens, books, papers, code listings, t-shirts,',
+    'storefronts, presentations — draw those surfaces blank, with abstract',
+    'shapes, or only suggested by shading. Never spell anything out.',
+    '',
     'Generate a single 16:9 widescreen illustration suitable for a',
-    'middle-school classroom. Do not include any embedded text or',
-    'captions in the image. Subject:',
+    'middle-school classroom.',
+    '',
+    'Subject:',
     imagePrompt,
-  ].join(' ');
+  ].join('\n');
   logPrompt(PROMPT_TAGS.PANELS_IMAGE, fullPrompt);
   const response = await generateText({
     model: getImageModel(),
