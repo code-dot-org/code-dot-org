@@ -25,7 +25,7 @@ class Api::V1::UserProductToursControllerTest < ActionDispatch::IntegrationTest
   test 'repeat completion is idempotent and returns 200' do
     teacher = create(:teacher)
     sign_in teacher
-    create(:user_product_tour, user: teacher, tour_name: UserProductTour::CREATE_CLASS_SECTION)
+    UserProductTour.create!(user: teacher, tour_name: UserProductTour::CREATE_CLASS_SECTION, completed_at: Time.now.utc)
 
     assert_no_difference 'UserProductTour.count' do
       post '/dashboardapi/v1/user_product_tours',

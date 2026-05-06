@@ -2447,10 +2447,4 @@ FactoryBot.define do
     read_at {nil}
     is_dismissed {false}
   end
-
-  factory :user_product_tour do
-    association :user
-    tour_name {UserProductTour::CREATE_CLASS_SECTION}
-    completed_at {Time.now.utc}
-  end
 end
