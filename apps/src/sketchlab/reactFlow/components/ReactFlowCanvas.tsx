@@ -627,6 +627,14 @@ export default function ReactFlowCanvas({
               disableKeyboardA11y={false}
               autoPanOnNodeFocus={false} // We manage viewport on focus manually in useFocusManagement.
               zIndexMode={'manual'}
+              defaultEdgeOptions={{
+                type: 'straight',
+                style: {
+                  stroke: 'var(--sketchlab-stroke-default)',
+                  strokeWidth: 1,
+                },
+              }}
+              defaultMarkerColor={'var(--sketchlab-stroke-default)'}
             >
               {openLineEdge && (
                 <LineEdgeToolbar
