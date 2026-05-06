@@ -24,7 +24,7 @@ export default class KNNTrainer {
   async predict(example) {
     let result = {
       predictedClassId: null,
-      confidencesByClassId: []
+      confidencesByClassId: [],
     };
 
     if (this.knn.getNumClasses() === 0) {
@@ -33,7 +33,7 @@ export default class KNNTrainer {
 
     const res = await this.knn.predictClass(
       this.converterFn(example),
-      this.TOPK
+      this.TOPK,
     );
     // The rest of this repo expects an integer in predictedClassId so cast it here
     result.predictedClassId = parseInt(res.label);
@@ -97,7 +97,7 @@ export default class KNNTrainer {
     Object.keys(tensorObj).forEach(key => {
       tensorObj[key] = tf.tensor(
         Array.from(tensorObj[key].data),
-        tensorObj[key].shape
+        tensorObj[key].shape,
       );
     });
     this.knn.setClassifierDataset(tensorObj);

@@ -1524,7 +1524,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@code-dot-org/oceans-lab@workspace:packages/labs/oceans":
+"@code-dot-org/oceans-lab@workspace:*, @code-dot-org/oceans-lab@workspace:packages/labs/oceans":
   version: 0.0.0-use.local
   resolution: "@code-dot-org/oceans-lab@workspace:packages/labs/oceans"
   dependencies:
@@ -1601,6 +1601,7 @@ __metadata:
     "@code-dot-org/fonts": "workspace:*"
     "@code-dot-org/lint-config": "workspace:*"
     "@code-dot-org/music-lab": "workspace:*"
+    "@code-dot-org/oceans-lab": "workspace:*"
     "@emotion/react": "npm:^11.14.0"
     "@emotion/styled": "npm:^11.14.1"
     "@mui/material": "npm:^7.3.4"

@@ -6,7 +6,7 @@ const constants = {
   fishFrameSize: 210,
   defaultMoveTime: 1000,
   maxPondFish: 20,
-  minLoadingTime: 1500
+  minLoadingTime: 1500,
 };
 
 export default constants;
@@ -16,7 +16,7 @@ export const AppMode = Object.freeze({
   CreaturesVTrashDemo: 'creaturesvtrashdemo',
   CreaturesVTrash: 'creaturesvtrash',
   FishShort: 'short',
-  FishLong: 'long'
+  FishLong: 'long',
 });
 
 export const Modes = Object.freeze({
@@ -26,10 +26,10 @@ export const Modes = Object.freeze({
   Predicting: 3,
   Pond: 4,
   Instructions: 5,
-  IntermediateLoading: 6
+  IntermediateLoading: 6,
 });
 
 export const ClassType = Object.freeze({
   Like: 0,
-  Dislike: 1
+  Dislike: 1,
 });

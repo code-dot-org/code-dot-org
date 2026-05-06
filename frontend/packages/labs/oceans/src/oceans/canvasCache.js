@@ -11,13 +11,13 @@ export default class CanvasCache {
     for (var i = 0; i < CACHE_SIZE; ++i) {
       this.canvases.push({
         key: null,
-        canvas: document.createElement('canvas')
+        canvas: document.createElement('canvas'),
       });
     }
   }
 
   clearCache() {
-    this.canvases.map(canvas => canvas.key = null);
+    this.canvases.map(canvas => (canvas.key = null));
   }
 
   /*

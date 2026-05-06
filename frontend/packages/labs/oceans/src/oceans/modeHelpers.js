@@ -7,5 +7,5 @@ const toMode = mode => {
 };
 
 export default {
-  toMode
+  toMode,
 };

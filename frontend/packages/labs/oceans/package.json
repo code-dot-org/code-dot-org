@@ -32,6 +32,9 @@
     "typecheck": "tsc --noEmit"
   },
   "prettier": "@code-dot-org/lint-config/prettier/index.mjs",
+  "stylelint": {
+    "extends": "@code-dot-org/lint-config/stylelint/index.mjs"
+  },
   "dependencies": {
     "@code-dot-org/redactable-markdown": "^0.4.0",
     "@code-dot-org/svm": "^0.1.1",

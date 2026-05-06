@@ -48,19 +48,19 @@ const initialState = {
   hasTextToSpeechStartedByClick: false,
   // The most recent guide, if any, being played as text
   // to speech.
-  textToSpeechCurrentGuide: undefined
+  textToSpeechCurrentGuide: undefined,
 };
 let state = {...initialState};
 
-export const getState = function() {
+export const getState = function () {
   return state;
 };
 
-export const setState = function(newState, options = null) {
+export const setState = function (newState, options = null) {
   return setStateInternal({...state, ...newState}, options);
 };
 
-export const setInitialState = function(newState) {
+export const setInitialState = function (newState) {
   return setStateInternal({...initialState, ...newState});
 };
 

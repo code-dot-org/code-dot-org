@@ -24,6 +24,7 @@
     "@code-dot-org/core": "workspace:*",
     "@code-dot-org/fonts": "workspace:*",
     "@code-dot-org/music-lab": "workspace:*",
+    "@code-dot-org/oceans-lab": "workspace:*",
     "@emotion/react": "catalog:",
     "@emotion/styled": "catalog:",
     "@mui/material": "catalog:",
