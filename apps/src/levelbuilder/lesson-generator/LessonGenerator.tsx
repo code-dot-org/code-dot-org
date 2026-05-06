@@ -980,7 +980,7 @@ const SummaryDialog: React.FC<SummaryDialogProps> = ({
           </>
         )}
         {anyCreated && (
-          <p>
+          <p className={moduleStyles.dialogNote}>
             The new levels are attached to this lesson. Open it in the editor to
             review, reorder, or tweak before publishing.
           </p>
