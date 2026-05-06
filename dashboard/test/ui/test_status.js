@@ -35,6 +35,7 @@ const API_BASEPATH = `${API_ORIGIN}/api/v1/test_logs`;
 let lastRefreshTimeLabel = document.querySelector("#last-refresh-time");
 let refreshButton = document.querySelector("#refresh-button");
 let autoRefreshButton = document.querySelector("#auto-refresh-button");
+let copyFailingRerunButton = document.querySelector("#copy-failing-rerun-button");
 
 var lastRefreshTime = RUN_START_TIME;
 
@@ -316,6 +317,12 @@ function updateProgressNow() {
   } else {
     setTabStatusIcon("pass");
   }
+
+  // Only enable "Copy Failing Rerun Commands" when there's something to copy.
+  // Otherwise a click would clobber the clipboard with an empty string and the
+  // user might not notice — leaving them to paste a stale command they had
+  // copied earlier.
+  copyFailingRerunButton.disabled = failureCount === 0;
 
   // Disable auto-refresh if the test run is done and green.
   if (pendingCount + failureCount === 0) {
