@@ -1,33 +1,35 @@
 import {useEffect, useRef} from 'react';
 
-import {AppMode} from './oceans/constants';
+import {AppMode, type AppModeValue} from './oceans/constants';
 import {initAll} from './oceans/init';
 import Sounds from './oceans/Sounds';
 
-/**
- * @typedef {Object} OceansLabProps
- * @property {string} [appMode] - One of the AppMode values (e.g. 'fishvtrash').
- * @property {string} [guides] - Guide key for the on-screen guide sequence.
- * @property {string} [textToSpeechLocale] - BCP-47 locale for TTS (e.g. 'en').
- * @property {Function} [onContinue] - Callback fired when the user advances.
- */
+/** Props for the OceansLab React component. */
+export interface OceansLabProps {
+  /** One of the AppMode values (e.g. 'fishvtrash'). Defaults to FishVTrash. */
+  appMode?: AppModeValue;
+  /** Guide key for the on-screen guide sequence (e.g. 'K5'). */
+  guides?: string;
+  /** BCP-47 locale for text-to-speech (e.g. 'en'). */
+  textToSpeechLocale?: string;
+  /** Called when the user advances past the current activity. */
+  onContinue?: () => void;
+}
 
 /**
  * OceansLab mounts the AI for Oceans activity into two canvas elements and
  * calls initAll imperatively. Consumers can pass appMode and onContinue to
  * control which activity runs and what happens when the user completes it.
- *
- * @param {OceansLabProps} props
  */
 export default function OceansLab({
   appMode = AppMode.FishVTrash,
   guides,
   textToSpeechLocale,
   onContinue,
-}) {
-  const canvasRef = useRef(null);
-  const backgroundCanvasRef = useRef(null);
-  const soundsRef = useRef(null);
+}: OceansLabProps) {
+  const canvasRef = useRef<HTMLCanvasElement>(null);
+  const backgroundCanvasRef = useRef<HTMLCanvasElement>(null);
+  const soundsRef = useRef<InstanceType<typeof Sounds> | null>(null);
 
   useEffect(() => {
     if (!soundsRef.current) {
@@ -40,8 +42,8 @@ export default function OceansLab({
       guides,
       textToSpeechLocale,
       onContinue,
-      canvas: canvasRef.current,
-      backgroundCanvas: backgroundCanvasRef.current,
+      canvas: canvasRef.current as HTMLCanvasElement,
+      backgroundCanvas: backgroundCanvasRef.current as HTMLCanvasElement,
       playSound: sounds.play.bind(sounds),
       registerSound: sounds.register.bind(sounds),
     });

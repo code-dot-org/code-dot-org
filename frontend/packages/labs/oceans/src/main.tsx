@@ -5,12 +5,12 @@ import {initializeCore} from '@code-dot-org/core';
 import {localizationPlugin} from '@code-dot-org/core/plugins/localization';
 
 import OceansLab from './App';
-import {AppMode} from './oceans/constants';
+import {AppMode, type AppModeValue} from './oceans/constants';
 
 initializeCore({plugins: [localizationPlugin]});
 
 /** All playable modes in sequence, used by the mode picker and onContinue handler. */
-const APP_MODES = [
+const APP_MODES: {id: AppModeValue; label: string}[] = [
   {id: AppMode.FishVTrash, label: 'Fish vs Trash'},
   {id: AppMode.FishShort, label: 'Fish Short'},
   {id: AppMode.FishLong, label: 'Fish Long'},
@@ -19,14 +19,14 @@ const APP_MODES = [
 ];
 
 /** Read initial mode from ?mode= URL param, fallback to FishVTrash. */
-function getInitialMode() {
+function getInitialMode(): AppModeValue {
   const params = new URLSearchParams(window.location.search);
-  return params.get('mode') || AppMode.FishVTrash;
+  return (params.get('mode') as AppModeValue) || AppMode.FishVTrash;
 }
 
 /** Dev harness: mode picker + OceansLab component. */
 function DemoShell() {
-  const [appMode, setAppMode] = useState(getInitialMode);
+  const [appMode, setAppMode] = useState<AppModeValue>(getInitialMode);
   const params = new URLSearchParams(window.location.search);
 
   /** Advance to next mode in sequence when the user completes one. */
@@ -64,4 +64,4 @@ function DemoShell() {
   );
 }
 
-createRoot(document.getElementById('root')).render(<DemoShell />);
+createRoot(document.getElementById('root')!).render(<DemoShell />);

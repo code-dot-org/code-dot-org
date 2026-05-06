@@ -36,11 +36,18 @@ export interface State {
   trainingQuestion: string | null;
   currentInstructionsPage: number;
   pondFishBounds: unknown;
-  pondClickedFish: unknown;
+  pondClickedFish: {id: unknown; x: number; y: number} | null;
   pondPanelShowing: boolean;
   pondPanelSide: string | null;
   pondFishMaxExplainValue: number;
   pondRecallFishMaxExplainValue: number;
+  /** Per-part importance summary for the general pond explanation panel. */
+  pondExplainGeneralSummary: Array<{
+    importance: number;
+    partType: string;
+  }> | null;
+  /** Per-part impact breakdown for the currently clicked fish. */
+  pondExplainFishSummary: Array<{impact: number; partType: string}> | null;
   guideDismissals: string[];
   guideShowing: boolean;
   guideTypingTimer: ReturnType<typeof setTimeout> | undefined;
@@ -48,12 +55,17 @@ export interface State {
   confirmationDialogOnYes: (() => void) | null;
   textToSpeechLocale: string | undefined;
   hasTextToSpeechStartedByClick: boolean;
-  textToSpeechCurrentGuide: string | undefined;
+  /** Stores the guide object for which TTS has been started (or undefined). */
+  textToSpeechCurrentGuide: unknown;
   /** Optional guide sequence key (e.g. 'K5') selecting which guide set to show. */
   guides: string | undefined;
   /** Word fish slots per lane index; null means the slot is unfilled. */
   wordFish: Record<number, unknown> | null;
   fishCount: number;
+  /** Whether fish are swimming in reverse (rewind mode). */
+  rewind: boolean;
+  /** Callback fired when the user advances past the current activity. */
+  onContinue: (() => void) | undefined;
   /** Whether to display the training-mode control panel. */
   displayControls: boolean | null;
   /** Whether the training confirmation header is open/expanded. */
@@ -104,6 +116,8 @@ const initialState: State = {
   pondPanelSide: null,
   pondFishMaxExplainValue: 1,
   pondRecallFishMaxExplainValue: 1,
+  pondExplainGeneralSummary: null,
+  pondExplainFishSummary: null,
   guideDismissals: [],
   guideShowing: false,
   guideTypingTimer: undefined,
@@ -115,6 +129,8 @@ const initialState: State = {
   guides: undefined,
   wordFish: null,
   fishCount: 0,
+  rewind: false,
+  onContinue: undefined,
   displayControls: null,
   headOpen: null,
   pondFishTransitionStartTime: null,

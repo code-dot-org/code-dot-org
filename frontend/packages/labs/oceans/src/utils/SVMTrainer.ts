@@ -113,14 +113,14 @@ export default class SVMTrainer<T = unknown> {
   private readonly converterFn: (input: T) => number[];
 
   /** The underlying svmjs SVM instance. Re-created on clearAll(). */
-  // @ts-expect-error — svmjs has no type declarations
-  private svm: InstanceType<typeof svmjs.SVM>;
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  private svm!: any;
 
   /** All labeled training examples accumulated since the last clearAll(). */
-  private labeledTrainingData: LabeledDatum[];
+  private labeledTrainingData!: LabeledDatum[];
 
   /** The set of distinct svmjs labels seen in the training data. */
-  private labelsSeen: Set<number>;
+  private labelsSeen!: Set<number>;
 
   /**
    * @param converterFn - Transforms an ocean object into a flat numeric feature
@@ -135,7 +135,6 @@ export default class SVMTrainer<T = unknown> {
 
   /** Resets the SVM and clears all accumulated training data. */
   private initTrainingState(): void {
-    // @ts-expect-error — svmjs has no type declarations
     this.svm = new svmjs.SVM();
     this.labeledTrainingData = [];
     this.labelsSeen = new Set();

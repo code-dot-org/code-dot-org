@@ -14,9 +14,15 @@ import styles from '@/oceans/styles';
  * choice, be sure to add the word the way it should appear in i18n/oceans.json.
  * The keys here will also appear in google analytics, so it's worth making
  * them readable in English.
- *
- * */
-export const wordSet = {
+ */
+
+interface WordSetEntry {
+  textKey: string;
+  choices: string[][];
+  style: React.CSSProperties;
+}
+
+export const wordSet: Record<string, WordSetEntry> = {
   short: {
     textKey: 'wordQuestionShort',
     choices: [
@@ -50,30 +56,35 @@ export const wordSet = {
   },
 };
 
-let UnwrappedWords = class Words extends React.Component {
-  constructor(props) {
+interface WordsLocalState {
+  choices: string[];
+}
+
+const UnwrappedWords = class Words extends React.Component<
+  Record<string, never>,
+  WordsLocalState
+> {
+  constructor(props: Record<string, never>) {
     super(props);
 
-    // Randomize word choices in each set, merge the sets, and set as state.
-    const appMode = getState().appMode;
+    const appMode = getState().appMode as string;
 
     if (!wordSet[appMode]) {
-      throw `Could not find a set of choices in wordSet for appMode '${appMode}'`;
+      throw new Error(
+        `Could not find a set of choices in wordSet for appMode '${appMode}'`,
+      );
     }
 
     const appModeWordSet = wordSet[appMode].choices;
-    let choices = [];
+    const choices: string[] = [];
     let maxSize = 0;
-    // Each subset represents a different column, so merge the subsets
-    // Start by shuffling the subsets and finding the max length
-    for (var i = 0; i < appModeWordSet.length; ++i) {
+    for (let i = 0; i < appModeWordSet.length; ++i) {
       appModeWordSet[i] = _.shuffle(appModeWordSet[i]);
       if (appModeWordSet[i].length > maxSize) {
         maxSize = appModeWordSet[i].length;
       }
     }
-    // Iterate through each subset and add those elements to choices
-    for (i = 0; i < maxSize; ++i) {
+    for (let i = 0; i < maxSize; ++i) {
       appModeWordSet.forEach(col => {
         if (col[i]) {
           choices.push(col[i]);
@@ -84,7 +95,7 @@ let UnwrappedWords = class Words extends React.Component {
     this.state = {choices};
   }
 
-  onChangeWord(itemIndex) {
+  onChangeWord(itemIndex: number) {
     const wordKey = this.state.choices[itemIndex];
     const word = I18n.t(wordKey);
     setState({
@@ -93,14 +104,17 @@ let UnwrappedWords = class Words extends React.Component {
     });
     modeHelpers.toMode(Modes.Training);
 
-    // Report an analytics event for the word chosen.
     if (window.trackEvent) {
-      const appModeToString = {
+      const appModeToString: Record<string, string> = {
         [AppMode.FishShort]: 'words-short',
         [AppMode.FishLong]: 'words-long',
       };
 
-      window.trackEvent('oceans', appModeToString[getState().appMode], wordKey);
+      window.trackEvent(
+        'oceans',
+        appModeToString[getState().appMode as string],
+        wordKey,
+      );
     }
   }
 
@@ -110,16 +124,21 @@ let UnwrappedWords = class Words extends React.Component {
     return (
       <Body>
         <Content>
-          {wordSet[state.appMode].textKey && (
+          {wordSet[state.appMode as string].textKey && (
             <div style={styles.wordsText}>
-              {I18n.t(wordSet[state.appMode].textKey)}{' '}
+              {I18n.t(wordSet[state.appMode as string].textKey)}{' '}
             </div>
           )}
           {this.state.choices.map((item, itemIndex) => (
             <Button
               key={itemIndex}
               className="words-button"
-              style={[wordSet[state.appMode].style, styles.wordButton]}
+              style={
+                [
+                  wordSet[state.appMode as string].style,
+                  styles.wordButton,
+                ] as unknown as React.CSSProperties
+              }
               onClick={() => this.onChangeWord(itemIndex)}
             >
               {I18n.t(item)}

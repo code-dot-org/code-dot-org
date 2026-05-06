@@ -13,9 +13,9 @@ export default class UI extends React.Component {
   render() {
     const state = getState();
     const currentMode = getState().currentMode;
-    const isLoading = [Modes.Loading, Modes.IntermediateLoading].includes(
-      currentMode,
-    );
+    const isLoading = (
+      [Modes.Loading, Modes.IntermediateLoading] as number[]
+    ).includes(currentMode as number);
 
     return (
       <div>
@@ -26,7 +26,7 @@ export default class UI extends React.Component {
         {currentMode === Modes.Pond && <Pond />}
         {state.showConfirmationDialog && (
           <ConfirmationDialog
-            onYesClick={state.confirmationDialogOnYes}
+            onYesClick={state.confirmationDialogOnYes as () => void}
             onNoClick={() => setState({showConfirmationDialog: false})}
           />
         )}

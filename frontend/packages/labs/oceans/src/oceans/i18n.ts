@@ -19,7 +19,7 @@ let messages: CompiledMessages | undefined;
 const initI18n = (i18n: CompiledMessages = {}): void => {
   // English pluralisation rules are used for all locales for now.
   const mf = new MessageFormat('en');
-  messages = {...(mf.compile(data) as CompiledMessages), ...i18n};
+  messages = {...(mf.compile(data) as unknown as CompiledMessages), ...i18n};
 };
 
 /**

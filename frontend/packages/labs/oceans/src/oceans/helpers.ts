@@ -155,7 +155,10 @@ export const filterFishComponents = (
   appMode: string | null,
 ): Record<string, {exclusions?: string[]}[]> => {
   if (!appMode) {
-    return fishComponents as Record<string, {exclusions?: string[]}[]>;
+    return fishComponents as unknown as Record<
+      string,
+      {exclusions?: string[]}[]
+    >;
   }
 
   const filteredCopy: Record<string, {exclusions?: string[]}[]> = {};

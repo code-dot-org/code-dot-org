@@ -21,8 +21,16 @@ const aiBotClosed = new URL(
   import.meta.url,
 ).href;
 
-function Collide(x1, y1, w1, h1, x2, y2, w2, h2) {
-  // Detect a non-collision.
+function Collide(
+  x1: number,
+  y1: number,
+  w1: number,
+  h1: number,
+  x2: number,
+  y2: number,
+  w2: number,
+  h2: number,
+): boolean {
   if (
     x1 + w1 - 1 < x2 ||
     x1 > x2 + w2 - 1 ||
@@ -31,24 +39,21 @@ function Collide(x1, y1, w1, h1, x2, y2, w2, h2) {
   ) {
     return false;
   }
-
-  // Otherwise we have a collision.
   return true;
 }
 
-let UnwrappedPond = class Pond extends React.Component {
-  constructor(props) {
-    super(props);
-  }
+interface FishBound {
+  fishId: string | number;
+  x: number;
+  y: number;
+  w: number;
+  h: number;
+}
 
-  getMatchingFishSet = (e, showMatching) => {
+const UnwrappedPond = class Pond extends React.Component {
+  getMatchingFishSet = (e: React.MouseEvent | null, showMatching: boolean) => {
     const state = getState();
 
-    // No-op if transition is already in progress or if already showing the desired fish set.
-    // Note that recallFish are fish that are not matching the word/attribute.
-    // pondFish are fish that are matching the word/attribute.
-    // showMatching true -> want matching (showRecallFish false)
-    // showMatching false -> want recalled fish (showRecallFish true).
     if (
       state.pondFishTransitionStartTime ||
       state.showRecallFish === !showMatching
@@ -67,13 +72,14 @@ let UnwrappedPond = class Pond extends React.Component {
       soundLibrary.playSound('no');
     }
 
-    // Don't call arrangeFish if fish have already been arranged.
-    if (nextFishSet.length > 0 && !nextFishSet[0].getXY()) {
+    if (
+      nextFishSet.length > 0 &&
+      !(nextFishSet as {getXY(): unknown}[])[0].getXY()
+    ) {
       arrangeFish(nextFishSet);
     }
 
     if (currentFishSet.length === 0) {
-      // Immediately transition to nextFishSet rather than waiting for empty animation.
       setState({showRecallFish: !state.showRecallFish, pondClickedFish: null});
     } else {
       setState({pondFishTransitionStartTime: $time(), pondClickedFish: null});
@@ -84,8 +90,7 @@ let UnwrappedPond = class Pond extends React.Component {
     }
   };
 
-  onPondClick = e => {
-    // Don't allow pond clicks if a Guide is currently showing.
+  onPondClick = (e: React.MouseEvent<HTMLDivElement>) => {
     if (guide.getCurrentGuide()) {
       return;
     }
@@ -94,11 +99,10 @@ let UnwrappedPond = class Pond extends React.Component {
     const clickX = e.nativeEvent.offsetX;
     const clickY = e.nativeEvent.offsetY;
 
-    const boundingRect = e.target.getBoundingClientRect();
+    const boundingRect = (e.target as HTMLElement).getBoundingClientRect();
     const pondWidth = boundingRect.width;
     const pondHeight = boundingRect.height;
 
-    // Scale the click to the pond canvas dimensions.
     const normalizedClickX = (clickX / pondWidth) * constants.canvasWidth;
     const normalizedClickY = (clickY / pondHeight) * constants.canvasHeight;
 
@@ -108,17 +112,12 @@ let UnwrappedPond = class Pond extends React.Component {
 
     if (state.pondFishBounds) {
       let fishClicked = false;
-      // Look through the array in reverse so that we click on a fish that
-      // is rendered topmost.
-      _.reverse(state.pondFishBounds).forEach(fishBound => {
-        // If we haven't already clicked on a fish in this current iteration,
-        // and we're not clicking on a fish that is already actively clicked,
-        // and we have a collision, then we have clicked on a new fish!
+      _.reverse(state.pondFishBounds as FishBound[]).forEach(fishBound => {
         if (
           !fishClicked &&
           !(
             state.pondClickedFish &&
-            fishBound.fishId === state.pondClickedFish.id
+            fishBound.fishId === state.pondClickedFish?.id
           ) &&
           Collide(
             fishBound.x,
@@ -145,11 +144,15 @@ let UnwrappedPond = class Pond extends React.Component {
             state.appMode === AppMode.FishShort ||
             state.appMode === AppMode.FishLong
           ) {
-            const clickedFish = fishCollection.find(
-              f => f.id === fishBound.fishId,
+            // eslint-disable-next-line @typescript-eslint/no-explicit-any
+            const clickedFish = (fishCollection as any[]).find(
+              (f: {id: unknown}) => f.id === fishBound.fishId,
             );
             setState({
-              pondExplainFishSummary: state.trainer.explainFish(clickedFish),
+              // eslint-disable-next-line @typescript-eslint/no-explicit-any
+              pondExplainFishSummary: (state.trainer as any).explainFish(
+                clickedFish,
+              ),
             });
             if (normalizedClickX < constants.canvasWidth / 2) {
               setState({pondPanelSide: 'right'});
@@ -167,10 +170,14 @@ let UnwrappedPond = class Pond extends React.Component {
     }
   };
 
-  onPondPanelButtonClick = e => {
+  onPondPanelButtonClick = (e: React.MouseEvent | null) => {
     const state = getState();
 
-    if ([AppMode.FishShort, AppMode.FishLong].includes(state.appMode)) {
+    if (
+      ([AppMode.FishShort, AppMode.FishLong] as string[]).includes(
+        state.appMode as string,
+      )
+    ) {
       setState({
         pondPanelShowing: !state.pondPanelShowing,
       });
@@ -191,9 +198,11 @@ let UnwrappedPond = class Pond extends React.Component {
     const state = getState();
 
     const showInfoButton =
-      [AppMode.FishShort, AppMode.FishLong].includes(state.appMode) &&
+      ([AppMode.FishShort, AppMode.FishLong] as string[]).includes(
+        state.appMode as string,
+      ) &&
       state.pondFish.length > 0 &&
-      state.recallFish.length > 0;
+      (state.recallFish as unknown[]).length > 0;
     const recallIconsStyle = showInfoButton
       ? styles.recallIcons
       : {...styles.recallIcons, right: '1.2%'};
@@ -262,12 +271,18 @@ let UnwrappedPond = class Pond extends React.Component {
                 >
                   {I18n.t('newWord')}
                 </Button>
-                <Button style={styles.finishButton} onClick={state.onContinue}>
+                <Button
+                  style={styles.finishButton}
+                  onClick={state.onContinue as () => void}
+                >
                   {I18n.t('finish')}
                 </Button>
               </div>
             ) : (
-              <Button style={styles.continueButton} onClick={state.onContinue}>
+              <Button
+                style={styles.continueButton}
+                onClick={state.onContinue as () => void}
+              >
                 {I18n.t('continue')}
               </Button>
             )}

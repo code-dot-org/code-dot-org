@@ -1,4 +1,3 @@
-import PropTypes from 'prop-types';
 import React from 'react';
 
 import Button from '@/oceans/components/common/Button';
@@ -11,12 +10,12 @@ const loadingGif = new URL(
   import.meta.url,
 ).href;
 
-class Body extends React.Component {
-  static propTypes = {
-    children: PropTypes.node,
-    onClick: PropTypes.func,
-  };
+interface BodyProps {
+  children?: React.ReactNode;
+  onClick?: (event: React.MouseEvent<HTMLDivElement>) => void;
+}
 
+class Body extends React.Component<BodyProps> {
   render() {
     const currentGuide = guide?.getCurrentGuide();
     const modalGuide = currentGuide && !currentGuide.noDimBackground;
@@ -32,10 +31,13 @@ class Body extends React.Component {
   }
 }
 
-const Content = ({children}) => <div style={styles.content}>{children}</div>;
-Content.propTypes = {
-  children: PropTypes.node,
-};
+interface ContentProps {
+  children?: React.ReactNode;
+}
+
+const Content = ({children}: ContentProps) => (
+  <div style={styles.content}>{children}</div>
+);
 
 const Loading = () => (
   <Body>

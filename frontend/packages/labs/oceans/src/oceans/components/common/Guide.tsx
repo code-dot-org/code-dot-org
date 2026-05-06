@@ -32,16 +32,24 @@ const fingerClickIcon2 = new URL(
 export const stopTypingSounds = () => {
   const state = getState();
   if (state.guideTypingTimer) {
-    clearInterval(state.guideTypingTimer);
+    clearInterval(state.guideTypingTimer as ReturnType<typeof setInterval>);
     setState({guideTypingTimer: undefined}, {skipCallback: true});
   }
 };
 
-let UnwrappedGuide = class Guide extends React.Component {
-  guideDialogRef = React.createRef();
+interface GuideState {
+  /** Tracks which guide ID was last focused to avoid re-focusing on re-render. */
+  lastFocusedGuideId: string | null;
+}
+
+const UnwrappedGuide = class Guide extends React.Component<
+  Record<string, never>,
+  GuideState
+> {
+  guideDialogRef = React.createRef<HTMLDivElement>();
+  lastFocusedGuideId: string | null = null;
 
   componentDidUpdate() {
-    // Focus the dialog only when the guide changes, not on every re-render
     const currentGuide = guide.getCurrentGuide();
     const currentGuideId = currentGuide ? currentGuide.id : null;
 
@@ -51,18 +59,21 @@ let UnwrappedGuide = class Guide extends React.Component {
       this.guideDialogRef &&
       this.guideDialogRef.current
     ) {
-      this.guideDialogRef.current.focus({focusVisible: false});
+      this.guideDialogRef.current.focus({preventScroll: false});
       this.lastFocusedGuideId = currentGuideId;
     } else if (!currentGuide) {
       this.lastFocusedGuideId = null;
     }
   }
+
   onTypingDone() {
-    clearInterval(getState().guideTypingTimer);
+    clearInterval(
+      getState().guideTypingTimer as ReturnType<typeof setInterval>,
+    );
     setState({guideShowing: true, guideTypingTimer: undefined});
   }
 
-  onGuideKeyDown = e => {
+  onGuideKeyDown = (e: React.KeyboardEvent) => {
     if (e.key === ' ' || e.key === 'Enter' || e.key === 'Spacebar') {
       e.preventDefault();
       this.onGuideClick();
@@ -73,8 +84,7 @@ let UnwrappedGuide = class Guide extends React.Component {
     const state = getState();
     const currentGuide = guide.getCurrentGuide();
 
-    if (this.attemptTextToSpeechTextToSpeech(true)) {
-      // This click started text to speech.
+    if (this.attemptTextToSpeech(true)) {
       setState(
         {
           hasTextToSpeechStartedByClick: true,
@@ -83,11 +93,7 @@ let UnwrappedGuide = class Guide extends React.Component {
         {skipCallback: true},
       );
     } else {
-      // Make sure we don't try and dismiss a guide if it's
-      // not modal.
       if (currentGuide && !currentGuide.noDimBackground) {
-        // This click did not start text to speech, so attempt
-        // to dismiss the guide.
         const dismissed = guide.dismissCurrentGuide();
         if (dismissed) {
           if (state.textToSpeechLocale) {
@@ -99,42 +105,26 @@ let UnwrappedGuide = class Guide extends React.Component {
     }
   };
 
-  // Called from both the guide click handler and the render method, and
-  // attempts to play text to speech if needed.  Returns true if it believes
-  // it started text to speech.
-  attemptTextToSpeechTextToSpeech = inClickHandler => {
+  /** Attempts to play text to speech if needed. Returns true if TTS started. */
+  attemptTextToSpeech = (inClickHandler: boolean): boolean => {
     const state = getState();
     const currentGuide = guide.getCurrentGuide();
 
-    // Do nothing if text to speech is not desired or yet available.
     if (!state.textToSpeechLocale || !hasTextToSpeechVoices()) {
       return false;
     }
 
-    // Do nothing if there is no current guide, or if we've already started
-    // text to speech for the current guide (which might have finished
-    // playing by now).
     if (!currentGuide || state.textToSpeechCurrentGuide === currentGuide) {
       return false;
     }
 
-    // In this implementation, we want to start the first play of text to
-    // speech from a click handler, but all subsequent plays when we first
-    // render a new piece of text, rather than from a click handler.
-    // Therefore:
-    // If we are in a click handler, do nothing if we've already started
-    // text to speech from a click handler.
-    // If we are not in a click handler, do nothing if we've never started
-    // from a click handler before.
     if (inClickHandler === state.hasTextToSpeechStartedByClick) {
       return false;
     }
 
-    // Make an attempt to play text to speech, and return whether we
-    // believe it has started.
     return startTextToSpeech(
       currentGuide.textFn(getState()),
-      state.textToSpeechLocale,
+      state.textToSpeechLocale as string,
     );
   };
 
@@ -142,19 +132,18 @@ let UnwrappedGuide = class Guide extends React.Component {
     const state = getState();
     const currentGuide = guide.getCurrentGuide();
 
-    let guideBgStyle = [styles.guideBackground];
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    let guideBgStyle: any[] = [styles.guideBackground];
     if (currentGuide) {
       if (currentGuide.noDimBackground) {
         guideBgStyle = [styles.guideBackgroundHidden];
       }
 
-      // Info guides should have a darker background color.
       if (currentGuide.style === 'Info') {
         guideBgStyle.push({backgroundColor: colors.transparentBlack});
       }
     }
 
-    // Start playing the typing sounds.
     if (
       !state.textToSpeechLocale &&
       !state.guideShowing &&
@@ -167,14 +156,14 @@ let UnwrappedGuide = class Guide extends React.Component {
       setState({guideTypingTimer}, {skipCallback: true});
     }
 
-    if (this.attemptTextToSpeechTextToSpeech(false)) {
-      // This call started text to speech.
+    if (this.attemptTextToSpeech(false)) {
       setState({textToSpeechCurrentGuide: currentGuide}, {skipCallback: true});
     }
 
     const renderClickToContinueReminder =
       state.guides === 'K5' &&
       state.guideShowing &&
+      currentGuide &&
       !currentGuide.noDimBackground &&
       currentGuide.style !== 'Info';
 
@@ -183,7 +172,12 @@ let UnwrappedGuide = class Guide extends React.Component {
         {currentGuide && currentGuide.image && (
           <img
             src={currentGuide.image}
-            style={[styles.guideImage, currentGuide.imageStyle || {}]}
+            style={
+              [
+                styles.guideImage,
+                currentGuide.imageStyle || {},
+              ] as unknown as React.CSSProperties
+            }
             alt=""
           />
         )}
@@ -191,7 +185,7 @@ let UnwrappedGuide = class Guide extends React.Component {
           <div>
             <div
               key={currentGuide.id}
-              style={guideBgStyle}
+              style={guideBgStyle as unknown as React.CSSProperties}
               onClick={this.onGuideClick}
               id="uitest-dismiss-guide"
             >

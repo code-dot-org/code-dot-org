@@ -1,6 +1,5 @@
 import {faEraser} from '@fortawesome/free-solid-svg-icons';
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
-import PropTypes from 'prop-types';
 import Radium from 'radium';
 import React from 'react';
 
@@ -11,12 +10,14 @@ import Button from '@/oceans/components/common/Button';
 import I18n from '@/oceans/i18n';
 import styles from '@/oceans/styles';
 
-let UnwrappedConfirmationDialog = class ConfirmationDialog extends React.Component {
-  static propTypes = {
-    onYesClick: PropTypes.func.isRequired,
-    onNoClick: PropTypes.func.isRequired,
-  };
+interface ConfirmationDialogProps {
+  /** Called when the user confirms the erase action. */
+  onYesClick: () => void;
+  /** Called when the user cancels. */
+  onNoClick: () => void;
+}
 
+const UnwrappedConfirmationDialog = class ConfirmationDialog extends React.Component<ConfirmationDialogProps> {
   render() {
     return (
       <div style={styles.confirmationDialogBackground}>

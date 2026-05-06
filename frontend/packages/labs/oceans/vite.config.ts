@@ -51,7 +51,7 @@ export default defineConfig({
   },
   build: {
     lib: {
-      entry: ['src/index.js'],
+      entry: ['src/index.ts'],
       name: 'oceans-lab',
       formats: ['es', 'cjs'],
     },

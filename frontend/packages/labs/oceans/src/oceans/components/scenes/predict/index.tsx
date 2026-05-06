@@ -24,8 +24,16 @@ const MediaControl = Object.freeze({
   FastForward: 'fast-forward',
 });
 
-let UnwrappedPredict = class Predict extends React.Component {
-  state = {
+interface PredictLocalState {
+  displayControls: boolean;
+  timeScale: number;
+}
+
+const UnwrappedPredict = class Predict extends React.Component<
+  Record<string, never>,
+  PredictLocalState
+> {
+  state: PredictLocalState = {
     displayControls: false,
     timeScale: defaultTimeScale,
   };
@@ -40,27 +48,26 @@ let UnwrappedPredict = class Predict extends React.Component {
   onContinue = () => {
     const state = getState();
     if (state.appMode === AppMode.CreaturesVTrashDemo && state.onContinue) {
-      state.onContinue();
+      (state.onContinue as () => void)();
     } else {
       setState({showRecallFish: false});
       modeHelpers.toMode(Modes.Pond);
     }
   };
 
-  finishMovement = () => {
+  finishMovementLocal = () => {
     const state = getState();
-
     const t = currentRunTime(state);
     if (state.rewind) {
-      finishMovement(state.lastPauseTime - t);
+      finishMovement((state.lastPauseTime as number) - t);
     } else {
-      finishMovement(state.lastPauseTime + t);
+      finishMovement((state.lastPauseTime as number) + t);
     }
   };
 
   onPressPlay = () => {
     const state = getState();
-    this.finishMovement();
+    this.finishMovementLocal();
     setState({
       isRunning: !state.isRunning,
       isPaused: !state.isPaused,
@@ -70,8 +77,8 @@ let UnwrappedPredict = class Predict extends React.Component {
     this.setState({timeScale: defaultTimeScale});
   };
 
-  onScaleTime = rewind => {
-    this.finishMovement();
+  onScaleTime = (rewind: boolean) => {
+    this.finishMovementLocal();
     const nextIdx = timeScales.indexOf(this.state.timeScale) + 1;
     const timeScale =
       nextIdx > timeScales.length - 1 ? timeScales[0] : timeScales[nextIdx];
@@ -87,7 +94,7 @@ let UnwrappedPredict = class Predict extends React.Component {
 
   render() {
     const state = getState();
-    let selectedControl;
+    let selectedControl: string | undefined;
     if (state.isRunning && state.rewind) {
       selectedControl = MediaControl.Rewind;
     } else if (
@@ -104,11 +111,13 @@ let UnwrappedPredict = class Predict extends React.Component {
           <div style={styles.mediaControls} id="uitest-media-ctrl">
             <span
               onClick={() => this.onScaleTime(true)}
-              style={[
-                styles.mediaControl,
-                selectedControl === MediaControl.Rewind &&
-                  styles.selectedControl,
-              ]}
+              style={
+                [
+                  styles.mediaControl,
+                  selectedControl === MediaControl.Rewind &&
+                    styles.selectedControl,
+                ] as unknown as React.CSSProperties
+              }
               key={MediaControl.Rewind}
             >
               <span style={styles.timeScale}>
@@ -127,11 +136,13 @@ let UnwrappedPredict = class Predict extends React.Component {
             </span>
             <span
               onClick={() => this.onScaleTime(false)}
-              style={[
-                styles.mediaControl,
-                selectedControl === MediaControl.FastForward &&
-                  styles.selectedControl,
-              ]}
+              style={
+                [
+                  styles.mediaControl,
+                  selectedControl === MediaControl.FastForward &&
+                    styles.selectedControl,
+                ] as unknown as React.CSSProperties
+              }
               key={MediaControl.FastForward}
             >
               <FontAwesomeIcon icon={faForward} />
