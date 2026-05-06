@@ -64,6 +64,7 @@ export default function FontSizeGroup({
 
   const handleInputKeyDown = useCallback(
     (event: React.KeyboardEvent<HTMLInputElement>) => {
+      // Remove focus from the input box on enter.
       if (event.key === 'Enter') {
         event.preventDefault();
         (event.target as HTMLInputElement).blur();
