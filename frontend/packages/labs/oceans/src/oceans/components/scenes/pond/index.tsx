@@ -50,6 +50,7 @@ interface FishBound {
   h: number;
 }
 
+/** Pond scene: displays classified fish, recall toggle, info panel, and navigation buttons. */
 const UnwrappedPond = class Pond extends Component {
   getMatchingFishSet = (e: MouseEvent | null, showMatching: boolean) => {
     const state = getState();

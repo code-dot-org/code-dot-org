@@ -19,6 +19,7 @@ interface MarkdownProps {
   markdown: string;
 }
 
+/** Renders a Markdown string to sanitized React nodes via remark → rehype. */
 export default class Markdown extends React.Component<MarkdownProps> {
   render(): ReactNode {
     return markdownProcessor.processSync(this.props.markdown)

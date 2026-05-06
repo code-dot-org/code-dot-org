@@ -17,6 +17,7 @@ interface ConfirmationDialogProps {
   onNoClick: () => void;
 }
 
+/** Modal confirmation dialog shown before erasing all training data. */
 const UnwrappedConfirmationDialog = class ConfirmationDialog extends Component<ConfirmationDialogProps> {
   render() {
     return (

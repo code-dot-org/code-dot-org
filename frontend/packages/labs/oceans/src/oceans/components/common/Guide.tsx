@@ -34,6 +34,7 @@ const fingerClickIcon2 = new URL(
   import.meta.url,
 ).href;
 
+/** Clears the guide typing-sound interval timer if one is active. */
 export const stopTypingSounds = () => {
   const state = getState();
   if (state.guideTypingTimer) {
@@ -42,11 +43,13 @@ export const stopTypingSounds = () => {
   }
 };
 
+/** Local state for the Guide component. */
 interface GuideState {
   /** Tracks which guide ID was last focused to avoid re-focusing on re-render. */
   lastFocusedGuideId: string | null;
 }
 
+/** Overlay component that renders the current guide dialog, typing animation, and TTS. */
 const UnwrappedGuide = class Guide extends Component<
   Record<string, never>,
   GuideState

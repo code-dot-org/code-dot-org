@@ -5,6 +5,7 @@ import {getState, setState} from '@/oceans/state';
 import styles from '@/oceans/styles';
 import Markdown from '@/utils/Markdown';
 
+/** Side panel showing per-part feature importance for the pond scene. */
 class PondPanel extends Component {
   onPondPanelClick = (e: MouseEvent) => {
     setState({pondPanelShowing: false});

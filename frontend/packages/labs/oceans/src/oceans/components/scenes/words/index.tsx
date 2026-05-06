@@ -16,12 +16,17 @@ import styles from '@/oceans/styles';
  * them readable in English.
  */
 
+/** Configuration for one word-selection activity mode. */
 interface WordSetEntry {
+  /** i18n key for the prompt shown above the word buttons. */
   textKey: string;
+  /** Column arrays of i18n word keys; shuffled at runtime. */
   choices: string[][];
+  /** Inline style applied to each word button in this mode. */
   style: CSSProperties;
 }
 
+/** Word-activity configuration keyed by AppMode (e.g. 'short', 'long'). */
 export const wordSet: Record<string, WordSetEntry> = {
   short: {
     textKey: 'wordQuestionShort',
@@ -56,10 +61,13 @@ export const wordSet: Record<string, WordSetEntry> = {
   },
 };
 
+/** Local React state for the Words scene. */
 interface WordsLocalState {
+  /** Shuffled, interleaved list of i18n word keys shown as buttons. */
   choices: string[];
 }
 
+/** Words scene: prompts the user to choose an adjective that defines their training target. */
 const UnwrappedWords = class Words extends Component<
   Record<string, never>,
   WordsLocalState

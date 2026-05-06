@@ -24,11 +24,15 @@ const MediaControl = Object.freeze({
   FastForward: 'fast-forward',
 });
 
+/** Local React state for the Predict scene. */
 interface PredictLocalState {
+  /** Whether to render the rewind/play/fast-forward media controls. */
   displayControls: boolean;
+  /** Current playback speed multiplier; drives `state.moveTime`. */
   timeScale: number;
 }
 
+/** Predict scene: runs the trained classifier over the fish animation with media controls. */
 const UnwrappedPredict = class Predict extends Component<
   Record<string, never>,
   PredictLocalState

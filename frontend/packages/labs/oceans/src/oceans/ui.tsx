@@ -9,6 +9,7 @@ import Words from '@/oceans/components/scenes/words';
 import {Modes} from './constants';
 import {getState, setState} from './state';
 
+/** Top-level React UI component; renders the active scene based on state.currentMode. */
 export default class UI extends React.Component {
   render() {
     const state = getState();

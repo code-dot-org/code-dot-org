@@ -25,10 +25,13 @@ const counterIcon = new URL(
   import.meta.url,
 ).href;
 
+/** Local React state for the Train scene. */
 interface TrainLocalState {
+  /** Whether the AI-bot head image is in the "open" (eating) position. */
   headOpen: boolean;
 }
 
+/** Train scene: presents one fish at a time and collects yes/no classifications. */
 const UnwrappedTrain = class Train extends Component<
   Record<string, never>,
   TrainLocalState

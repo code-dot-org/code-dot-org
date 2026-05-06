@@ -10,11 +10,13 @@ const loadingGif = new URL(
   import.meta.url,
 ).href;
 
+/** Props for the Body layout component. */
 interface BodyProps {
   children?: ReactNode;
   onClick?: (event: MouseEvent<HTMLDivElement>) => void;
 }
 
+/** Full-screen activity wrapper; inerts its children while a modal guide is showing. */
 class Body extends Component<BodyProps> {
   render() {
     const currentGuide = guide?.getCurrentGuide();
@@ -31,14 +33,17 @@ class Body extends Component<BodyProps> {
   }
 }
 
+/** Props for the Content layout component. */
 interface ContentProps {
   children?: ReactNode;
 }
 
+/** Scrollable content area inside a Body. */
 const Content = ({children}: ContentProps) => (
   <div style={styles.content}>{children}</div>
 );
 
+/** Full-screen loading spinner shown during mode transitions. */
 const Loading = () => (
   <Body>
     <img src={loadingGif} style={styles.loading} alt="Loading" />
