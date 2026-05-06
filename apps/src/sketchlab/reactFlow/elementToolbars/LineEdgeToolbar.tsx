@@ -108,7 +108,6 @@ const ARROW_HEAD_ICONS: Record<ArrowHeadValue, string> = {
   both: 'arrows-left-right',
 };
 
-// Shared edge toolbar for both plain lines and arrows.
 export default function LineEdgeToolbar({
   edge,
   anchorNodeId,

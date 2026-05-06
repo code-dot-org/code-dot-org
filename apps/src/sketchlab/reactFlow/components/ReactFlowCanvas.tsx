@@ -412,7 +412,7 @@ export default function ReactFlowCanvas({
         return addEdge(
           {
             ...connection,
-            ...defaultLineEdgeFields({arrow: true}),
+            ...defaultLineEdgeFields(),
           },
           currentEdges
         );
@@ -493,7 +493,7 @@ export default function ReactFlowCanvas({
           id: createUuid(),
           source: sourceAnchor.id,
           target: targetAnchor.id,
-          ...defaultLineEdgeFields({arrow: true}), // default to arrow styling
+          ...defaultLineEdgeFields(),
         };
 
         setNodes(currentNodes => [...currentNodes, sourceAnchor, targetAnchor]);
