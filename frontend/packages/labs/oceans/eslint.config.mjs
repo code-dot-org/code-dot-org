@@ -7,12 +7,6 @@ export default [
   ...cdoReactConfig,
   {
     rules: {
-      // TODO: re-enable after Phase 7 TS migration converts class components to
-      // named React/PropTypes imports. CJS packages lack ESM default type
-      // declarations so the rule fires as a false positive on legacy imports.
-      'import-x/default': 'off',
-      'import-x/no-named-as-default-member': 'off',
-
       // TODO: fix in a dedicated a11y pass after Phase 7 TS migration. The
       // pre-existing click handlers on divs and spans need keyboard equivalents
       // or replacement with semantic button/anchor elements.

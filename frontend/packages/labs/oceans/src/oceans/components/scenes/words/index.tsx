@@ -1,6 +1,6 @@
 import _ from 'lodash';
 import Radium from 'radium';
-import React from 'react';
+import {Component, type CSSProperties} from 'react';
 
 import {Body, Button, Content} from '@/oceans/components/common';
 import {AppMode, Modes} from '@/oceans/constants';
@@ -19,7 +19,7 @@ import styles from '@/oceans/styles';
 interface WordSetEntry {
   textKey: string;
   choices: string[][];
-  style: React.CSSProperties;
+  style: CSSProperties;
 }
 
 export const wordSet: Record<string, WordSetEntry> = {
@@ -60,7 +60,7 @@ interface WordsLocalState {
   choices: string[];
 }
 
-const UnwrappedWords = class Words extends React.Component<
+const UnwrappedWords = class Words extends Component<
   Record<string, never>,
   WordsLocalState
 > {
@@ -137,7 +137,7 @@ const UnwrappedWords = class Words extends React.Component<
                 [
                   wordSet[state.appMode as string].style,
                   styles.wordButton,
-                ] as unknown as React.CSSProperties
+                ] as unknown as CSSProperties
               }
               onClick={() => this.onChangeWord(itemIndex)}
             >

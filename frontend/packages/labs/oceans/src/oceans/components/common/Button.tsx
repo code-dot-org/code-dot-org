@@ -1,5 +1,10 @@
 import Radium from 'radium';
-import React from 'react';
+import {
+  Component,
+  type CSSProperties,
+  type MouseEvent,
+  type ReactNode,
+} from 'react';
 
 import guide from '@/oceans/models/guide';
 import soundLibrary from '@/oceans/models/soundLibrary';
@@ -7,15 +12,15 @@ import styles from '@/oceans/styles';
 
 interface ButtonProps {
   className?: string;
-  style?: React.CSSProperties | (React.CSSProperties | undefined)[];
-  children?: React.ReactNode;
-  onClick?: (event: React.MouseEvent<HTMLButtonElement>) => boolean | void;
+  style?: CSSProperties | (CSSProperties | undefined)[];
+  children?: ReactNode;
+  onClick?: (event: MouseEvent<HTMLButtonElement>) => boolean | void;
   sound?: string;
   id?: string;
 }
 
-const UnwrappedButton = class Button extends React.Component<ButtonProps> {
-  onClick = (event: React.MouseEvent<HTMLButtonElement>) => {
+const UnwrappedButton = class Button extends Component<ButtonProps> {
+  onClick = (event: MouseEvent<HTMLButtonElement>) => {
     guide.dismissCurrentGuide();
     const clickReturnValue = this.props.onClick?.(event);
 

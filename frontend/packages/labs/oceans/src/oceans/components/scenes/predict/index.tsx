@@ -6,7 +6,7 @@ import {
 } from '@fortawesome/free-solid-svg-icons';
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import Radium from 'radium';
-import React from 'react';
+import {Component, type CSSProperties} from 'react';
 
 import {Body, Button} from '@/oceans/components/common';
 import constants, {AppMode, Modes} from '@/oceans/constants';
@@ -29,7 +29,7 @@ interface PredictLocalState {
   timeScale: number;
 }
 
-const UnwrappedPredict = class Predict extends React.Component<
+const UnwrappedPredict = class Predict extends Component<
   Record<string, never>,
   PredictLocalState
 > {
@@ -116,7 +116,7 @@ const UnwrappedPredict = class Predict extends React.Component<
                   styles.mediaControl,
                   selectedControl === MediaControl.Rewind &&
                     styles.selectedControl,
-                ] as unknown as React.CSSProperties
+                ] as unknown as CSSProperties
               }
               key={MediaControl.Rewind}
             >
@@ -141,7 +141,7 @@ const UnwrappedPredict = class Predict extends React.Component<
                   styles.mediaControl,
                   selectedControl === MediaControl.FastForward &&
                     styles.selectedControl,
-                ] as unknown as React.CSSProperties
+                ] as unknown as CSSProperties
               }
               key={MediaControl.FastForward}
             >

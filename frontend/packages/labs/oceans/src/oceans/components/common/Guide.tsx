@@ -1,5 +1,10 @@
 import Radium from 'radium';
-import React from 'react';
+import {
+  Component,
+  createRef,
+  type CSSProperties,
+  type KeyboardEvent,
+} from 'react';
 import Typist from 'react-typist';
 
 import '@/oceans/styles/fade.css';
@@ -42,11 +47,11 @@ interface GuideState {
   lastFocusedGuideId: string | null;
 }
 
-const UnwrappedGuide = class Guide extends React.Component<
+const UnwrappedGuide = class Guide extends Component<
   Record<string, never>,
   GuideState
 > {
-  guideDialogRef = React.createRef<HTMLDivElement>();
+  guideDialogRef = createRef<HTMLDivElement>();
   lastFocusedGuideId: string | null = null;
 
   componentDidUpdate() {
@@ -73,7 +78,7 @@ const UnwrappedGuide = class Guide extends React.Component<
     setState({guideShowing: true, guideTypingTimer: undefined});
   }
 
-  onGuideKeyDown = (e: React.KeyboardEvent) => {
+  onGuideKeyDown = (e: KeyboardEvent) => {
     if (e.key === ' ' || e.key === 'Enter' || e.key === 'Spacebar') {
       e.preventDefault();
       this.onGuideClick();
@@ -176,7 +181,7 @@ const UnwrappedGuide = class Guide extends React.Component<
               [
                 styles.guideImage,
                 currentGuide.imageStyle || {},
-              ] as unknown as React.CSSProperties
+              ] as unknown as CSSProperties
             }
             alt=""
           />
@@ -185,7 +190,7 @@ const UnwrappedGuide = class Guide extends React.Component<
           <div>
             <div
               key={currentGuide.id}
-              style={guideBgStyle as unknown as React.CSSProperties}
+              style={guideBgStyle as unknown as CSSProperties}
               onClick={this.onGuideClick}
               id="uitest-dismiss-guide"
             >

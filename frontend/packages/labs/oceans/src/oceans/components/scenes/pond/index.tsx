@@ -2,7 +2,7 @@ import {faBan, faCheck, faInfo} from '@fortawesome/free-solid-svg-icons';
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import _ from 'lodash';
 import Radium from 'radium';
-import React from 'react';
+import {Component, type MouseEvent} from 'react';
 
 import {Body, Button} from '@/oceans/components/common';
 import PondPanel from '@/oceans/components/scenes/pond/PondPanel';
@@ -50,8 +50,8 @@ interface FishBound {
   h: number;
 }
 
-const UnwrappedPond = class Pond extends React.Component {
-  getMatchingFishSet = (e: React.MouseEvent | null, showMatching: boolean) => {
+const UnwrappedPond = class Pond extends Component {
+  getMatchingFishSet = (e: MouseEvent | null, showMatching: boolean) => {
     const state = getState();
 
     if (
@@ -90,7 +90,7 @@ const UnwrappedPond = class Pond extends React.Component {
     }
   };
 
-  onPondClick = (e: React.MouseEvent<HTMLDivElement>) => {
+  onPondClick = (e: MouseEvent<HTMLDivElement>) => {
     if (guide.getCurrentGuide()) {
       return;
     }
@@ -170,7 +170,7 @@ const UnwrappedPond = class Pond extends React.Component {
     }
   };
 
-  onPondPanelButtonClick = (e: React.MouseEvent | null) => {
+  onPondPanelButtonClick = (e: MouseEvent | null) => {
     const state = getState();
 
     if (

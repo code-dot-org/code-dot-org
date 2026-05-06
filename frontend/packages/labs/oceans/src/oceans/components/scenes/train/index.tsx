@@ -1,7 +1,7 @@
 import {faBan, faCheck, faTrash} from '@fortawesome/free-solid-svg-icons';
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import Radium from 'radium';
-import React from 'react';
+import {Component, type CSSProperties} from 'react';
 
 import {Body, Button} from '@/oceans/components/common';
 import {AppMode, Modes} from '@/oceans/constants';
@@ -29,7 +29,7 @@ interface TrainLocalState {
   headOpen: boolean;
 }
 
-const UnwrappedTrain = class Train extends React.Component<
+const UnwrappedTrain = class Train extends Component<
   Record<string, never>,
   TrainLocalState
 > {
@@ -64,7 +64,7 @@ const UnwrappedTrain = class Train extends React.Component<
               [
                 styles.trainBotHead,
                 this.state.headOpen && styles.trainBotOpen,
-              ] as unknown as React.CSSProperties
+              ] as unknown as CSSProperties
             }
             alt=""
           />

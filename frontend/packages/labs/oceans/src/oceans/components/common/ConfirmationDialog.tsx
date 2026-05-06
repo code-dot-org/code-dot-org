@@ -1,7 +1,7 @@
 import {faEraser} from '@fortawesome/free-solid-svg-icons';
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import Radium from 'radium';
-import React from 'react';
+import {Component} from 'react';
 
 const snail = new URL('../../../assets/images/snail-large.png', import.meta.url)
   .href;
@@ -17,7 +17,7 @@ interface ConfirmationDialogProps {
   onNoClick: () => void;
 }
 
-const UnwrappedConfirmationDialog = class ConfirmationDialog extends React.Component<ConfirmationDialogProps> {
+const UnwrappedConfirmationDialog = class ConfirmationDialog extends Component<ConfirmationDialogProps> {
   render() {
     return (
       <div style={styles.confirmationDialogBackground}>

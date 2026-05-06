@@ -1,4 +1,4 @@
-import React from 'react';
+import {Component, type MouseEvent, type ReactNode} from 'react';
 
 import Button from '@/oceans/components/common/Button';
 import ConfirmationDialog from '@/oceans/components/common/ConfirmationDialog';
@@ -11,11 +11,11 @@ const loadingGif = new URL(
 ).href;
 
 interface BodyProps {
-  children?: React.ReactNode;
-  onClick?: (event: React.MouseEvent<HTMLDivElement>) => void;
+  children?: ReactNode;
+  onClick?: (event: MouseEvent<HTMLDivElement>) => void;
 }
 
-class Body extends React.Component<BodyProps> {
+class Body extends Component<BodyProps> {
   render() {
     const currentGuide = guide?.getCurrentGuide();
     const modalGuide = currentGuide && !currentGuide.noDimBackground;
@@ -32,7 +32,7 @@ class Body extends React.Component<BodyProps> {
 }
 
 interface ContentProps {
-  children?: React.ReactNode;
+  children?: ReactNode;
 }
 
 const Content = ({children}: ContentProps) => (

@@ -1,12 +1,12 @@
-import React from 'react';
+import {Component, type MouseEvent} from 'react';
 
 import I18n from '@/oceans/i18n';
 import {getState, setState} from '@/oceans/state';
 import styles from '@/oceans/styles';
 import Markdown from '@/utils/Markdown';
 
-class PondPanel extends React.Component {
-  onPondPanelClick = (e: React.MouseEvent) => {
+class PondPanel extends Component {
+  onPondPanelClick = (e: MouseEvent) => {
     setState({pondPanelShowing: false});
     e.stopPropagation();
   };
