@@ -25,7 +25,7 @@ import FizzyButton from './FizzyButton';
 import InterventionBox from './InterventionBox';
 import LevelsAttemptedBox from './LevelsAttemptedBox';
 import PracticeBox from './PracticeBox';
-import ReflectionBox from './ReflectionBox';
+import ReflectionBox from './Reflection/ReflectionBox';
 import TimeSpentBox from './TimeSpentBox';
 import TutorSummaryBox from './TutorSummaryBox';
 import {LessonDeepDiveData, ReflectionData} from './types';
@@ -116,8 +116,10 @@ const LessonDeepDiveContainer: FC<LessonDeepDiveContainerProps> = ({
         return (
           <ReflectionBox
             lessonId={lessonDeepDiveData.lessonId}
+            unitLabel={lessonDeepDiveData.unitLabel}
             objectives={lessonDeepDiveData.objectives}
             onSubmitComplete={handleReflectionComplete}
+            onNext={goToNext}
             initialValues={reflectionData}
           />
         );
