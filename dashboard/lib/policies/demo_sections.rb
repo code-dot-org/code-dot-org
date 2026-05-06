@@ -117,7 +117,9 @@ class Policies::DemoSections
   end
 
   def self.curriculum_names(demo_type, preset)
-    if CDO.rack_env?(:adhoc)
+    # TODO: remove :development once demo section curriculum overrides
+    # have been verified on adhoc.
+    if CDO.rack_env?(:adhoc) || CDO.rack_env?(:development)
       unit_overrides = adhoc_curriculum_overrides(CDO.demo_section_units, :demo_section_units)
       unit_group_overrides = adhoc_curriculum_overrides(
         CDO.demo_section_unit_groups,
