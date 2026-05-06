@@ -1,16 +1,10 @@
 import {MarkerType} from '@xyflow/react';
 
-import {SketchlabReactFlowEdge} from '@cdo/apps/lab2/types';
-
 import {ARROW_MARKER_HEIGHT_PX, ARROW_MARKER_WIDTH_PX} from '../constants';
 import {
   DEFAULT_LINE_WIDTH,
   DEFAULT_STROKE_COLOR,
 } from '../elementToolbars/toolbarPalettes';
-
-export function isArrowEdge(edge: SketchlabReactFlowEdge): boolean {
-  return Boolean(edge.markerStart || edge.markerEnd);
-}
 
 // Default visual fields shared by every line edge.
 // `arrow: true` adds the end-arrow marker;`arrow: false` omits it.

@@ -473,8 +473,8 @@ export default function ReactFlowCanvas({
         y: window.innerHeight / 2 + stagger,
       });
 
-      // For lines/arrows, create two hidden anchor nodes and connect them.
-      if (type === 'line' || type === 'arrow') {
+      // For lines, create two hidden anchor nodes and connect them.
+      if (type === 'line') {
         const sourceAnchor = createLineAnchorAtHandle(
           {
             x: centerPosition.x - LINE_DEFAULT_LENGTH_PX / 2,
@@ -493,7 +493,7 @@ export default function ReactFlowCanvas({
           id: createUuid(),
           source: sourceAnchor.id,
           target: targetAnchor.id,
-          ...defaultLineEdgeFields({arrow: type === 'arrow'}),
+          ...defaultLineEdgeFields({arrow: true}), // default to arrow styling
         };
 
         setNodes(currentNodes => [...currentNodes, sourceAnchor, targetAnchor]);

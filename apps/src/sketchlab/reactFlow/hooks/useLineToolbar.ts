@@ -11,8 +11,7 @@ import {
   LineStrokeStyleValue,
   strokeDasharrayFromStyle,
 } from '../elementToolbars/toolbarPalettes';
-
-type ArrowHeadValue = 'start' | 'end' | 'both';
+import {ArrowHeadValue} from '../types';
 
 interface UseLineToolbarOptions {
   edges: SketchlabReactFlowEdge[];
