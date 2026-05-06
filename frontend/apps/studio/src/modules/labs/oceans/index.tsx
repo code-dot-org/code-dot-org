@@ -117,6 +117,10 @@ export default function OceansContainer() {
           sx={{
             width: dims.containerWidth,
             height: dims.containerHeight,
+            // flex-shrink:1 (default) allows the flex item to compress below
+            // dims.containerWidth (the 320px minimum). Lock it so the canvas
+            // overflows/scrolls rather than squishing below the minimum width.
+            flexShrink: 0,
             position: 'relative',
             fontSize: dims.fontSize,
             // CssBaseline sets box-sizing: border-box globally; Radium's
