@@ -525,6 +525,7 @@ class SectionTest < ActiveSupport::TestCase
         sync_enabled: nil,
         avatar_color: nil,
         avatar_emoji: nil,
+        demo_type: nil,
         at_risk_age_gated_date: nil,
         at_risk_age_gated_us_state: nil
       }
@@ -572,6 +573,7 @@ class SectionTest < ActiveSupport::TestCase
         sync_enabled: nil,
         avatar_color: nil,
         avatar_emoji: nil,
+        demo_type: nil,
         at_risk_age_gated_date: nil,
         at_risk_age_gated_us_state: nil
       }
@@ -625,6 +627,7 @@ class SectionTest < ActiveSupport::TestCase
         sync_enabled: nil,
         avatar_color: nil,
         avatar_emoji: nil,
+        demo_type: nil,
         at_risk_age_gated_date: nil,
         at_risk_age_gated_us_state: nil
       }
@@ -677,6 +680,7 @@ class SectionTest < ActiveSupport::TestCase
         sync_enabled: nil,
         avatar_color: nil,
         avatar_emoji: nil,
+        demo_type: nil,
         at_risk_age_gated_date: nil,
         at_risk_age_gated_us_state: nil
       }
@@ -721,6 +725,7 @@ class SectionTest < ActiveSupport::TestCase
         sync_enabled: nil,
         avatar_color: nil,
         avatar_emoji: nil,
+        demo_type: nil,
         at_risk_age_gated_date: nil,
         at_risk_age_gated_us_state: nil
       }
@@ -759,6 +764,14 @@ class SectionTest < ActiveSupport::TestCase
     assert summarized_section[:sharing_disabled]
   end
 
+  test 'summaries include demo type' do
+    section = create(:section, demo_type: 'high')
+
+    assert_equal 'high', section.concise_summarize[:demo_type]
+    assert_equal 'high', section.selected_section_summarize[:demo_type]
+    assert_equal 'high', section.summarize[:demo_type]
+  end
+
   test 'selected_section_summarize: section with no script' do
     unit_group = create(:unit_group, name: 'somecourse', version_year: '1991', family_name: 'some-family')
     CourseOffering.add_course_offering(unit_group)
@@ -784,6 +797,7 @@ class SectionTest < ActiveSupport::TestCase
         primaryInstructor: {email: section.teacher.email, name: section.teacher.name, ltiRosterSyncEnabled: nil},
         avatar_color: nil,
         avatar_emoji: nil,
+        demo_type: nil,
         assigned_ai_chat_tools_dependency: SharedConstants::AI_CHAT_TOOLS_DEPENDENCY[:NONE],
         ai_chat_access_level: "disabled",
       }
@@ -819,6 +833,7 @@ class SectionTest < ActiveSupport::TestCase
         primaryInstructor: {email: section.teacher.email, name: section.teacher.name, ltiRosterSyncEnabled: nil},
         avatar_color: nil,
         avatar_emoji: nil,
+        demo_type: nil,
         assigned_ai_chat_tools_dependency: SharedConstants::AI_CHAT_TOOLS_DEPENDENCY[:NONE],
         ai_chat_access_level: "disabled",
       }
@@ -952,6 +967,7 @@ class SectionTest < ActiveSupport::TestCase
         at_risk_age_gated_us_state: nil,
         avatar_color: nil,
         avatar_emoji: nil,
+        demo_type: nil,
         assigned_ai_chat_tools_dependency: SharedConstants::AI_CHAT_TOOLS_DEPENDENCY[:NONE],
         ai_chat_access_level: "disabled",
       }
@@ -1013,6 +1029,7 @@ class SectionTest < ActiveSupport::TestCase
         at_risk_age_gated_us_state: nil,
         avatar_color: nil,
         avatar_emoji: nil,
+        demo_type: nil,
         assigned_ai_chat_tools_dependency: SharedConstants::AI_CHAT_TOOLS_DEPENDENCY[:NONE],
         ai_chat_access_level: "disabled",
       }
@@ -1080,6 +1097,7 @@ class SectionTest < ActiveSupport::TestCase
         at_risk_age_gated_us_state: nil,
         avatar_color: nil,
         avatar_emoji: nil,
+        demo_type: nil,
         assigned_ai_chat_tools_dependency: SharedConstants::AI_CHAT_TOOLS_DEPENDENCY[:NONE],
         ai_chat_access_level: "disabled",
       }
@@ -1147,6 +1165,7 @@ class SectionTest < ActiveSupport::TestCase
         at_risk_age_gated_us_state: nil,
         avatar_color: nil,
         avatar_emoji: nil,
+        demo_type: nil,
         assigned_ai_chat_tools_dependency: SharedConstants::AI_CHAT_TOOLS_DEPENDENCY[:NONE],
         ai_chat_access_level: "disabled",
       }
@@ -1205,6 +1224,7 @@ class SectionTest < ActiveSupport::TestCase
         at_risk_age_gated_us_state: nil,
         avatar_color: nil,
         avatar_emoji: nil,
+        demo_type: nil,
         assigned_ai_chat_tools_dependency: SharedConstants::AI_CHAT_TOOLS_DEPENDENCY[:NONE],
         ai_chat_access_level: "disabled",
       }

@@ -1,6 +1,12 @@
 .nameWithChip {
   display: inline-flex;
   align-items: center;
+  line-height: normal;
+}
+
+.demoChipWrapper {
+  display: inline-flex;
+  transform: translateY(-1px);
 }
 
 .details {

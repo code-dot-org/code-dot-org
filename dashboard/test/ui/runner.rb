@@ -400,6 +400,22 @@ def test_type
   eyes? ? 'Eyes' : 'UI'
 end
 
+# Human-readable suite label used in Slack/log report headers and as
+# the status page <title> and <h1>. The provider (SauceLabs / Device
+# Farm) is no longer surfaced -- oncall sees a label that names the
+# suite by its browsers. Eyes runs are always "Eyes" (eyes only runs
+# on SauceLabs today). Non-eyes runs derive the label from their
+# active browser configs and append "UI" so it's clear the suite is
+# UI tests:
+#   -c Safari          => "Safari UI"
+#   -c Chrome,Firefox  => "Chrome + Firefox UI"
+#   -c iPhone,iPad     => "Mobile UI"
+def test_type_label
+  return test_type if eyes?
+  return 'Mobile UI' if $browsers.all? {|b| mobile_browser?(b)}
+  "#{$browsers.map {|b| b['name']}.uniq.sort.join(' + ')} UI"
+end
+
 def eyes?
   $options.run_eyes_tests
 end
@@ -419,7 +435,7 @@ def applitools_batch_url
 end
 
 def report_tests_starting
-  ChatClient.log "Starting #{browser_features.count} <b>dashboard</b> #{test_type} tests in #{$options.parallel_limit} threads..."
+  ChatClient.log "Starting #{browser_features.count} <b>dashboard</b> #{test_type_label} tests in #{$options.parallel_limit} threads..."
   if eyes?
     ChatClient.log "Batching eyes tests as <a href=\"#{applitools_batch_url}\">#{ENV.fetch('BATCH_NAME', nil)}</a>."
   end
@@ -455,16 +471,16 @@ def report_tests_finished(start_time, run_results, run_status_page_url = nil)
 
   ChatClient.log "Skipped tests tagged with: #{skipped_tags.to_a.join(', ')}"
 
-  test_report =  "\n#{test_type.upcase} TEST REPORT: #{failures.any? ? '*❌ FAILED*' : '*✅ PASSED*'}\n"
+  test_report =  "\n#{test_type_label.upcase} TEST REPORT: #{failures.any? ? '*❌ FAILED*' : '*✅ PASSED*'}\n"
   test_report += "\n#{failures.count}x failed features:\n" + failures.map {|failure| "• #{failure}\n"}.join if failures.any?
   test_report += "\n"
   test_report += "Applitools Eyes Results:\n#{applitools_batch_url}\n\n" if applitools_batch_url
-  test_report += "#{test_type} Test Status Page (permalink for this run):\n#{run_status_page_url}\n\n" if run_status_page_url
-  test_report += "#{test_type} Test Status Page (for this server, *if you're lost start here*):\n#{server_status_page_url}\n\n" unless CI::Utils.running_on_ci?
+  test_report += "#{test_type_label} Test Status Page (permalink for this run):\n#{run_status_page_url}\n\n" if run_status_page_url
+  test_report += "#{test_type_label} Test Status Page (for this server, *if you're lost start here*):\n#{server_status_page_url}\n\n" unless CI::Utils.running_on_ci?
   test_report += "\n"
   test_report += "#{suite_success_count} passed. #{failures.count} failed. Test count: #{run_results.count}. Duration: #{RakeUtils.format_duration(suite_duration)}. Total successful reruns of flaky tests: #{total_flaky_successful_reruns}.\n"
   test_report += "\n"
-  test_report += "\n*#{test_type.upcase}* TESTS #{failures.any? ? 'FAILED' : 'PASSED'}\n\n"
+  test_report += "\n*#{test_type_label.upcase}* TESTS #{failures.any? ? 'FAILED' : 'PASSED'}\n\n"
 
   ChatClient.log test_report, color: 'purple'
 end
@@ -474,24 +490,39 @@ def server_status_page_url
   CDO.studio_url('/ui_test/' + status_page_filename, scheme_for_environment, ge_region: nil)
 end
 
+# Ordered list of UI/Eyes test status pages used to render the
+# cross-page navigation row at the top of each status page. Each entry's
+# :filename must equal the value status_page_filename returns when that
+# page is being generated, so the active entry can be rendered unlinked.
+# The four entries are the four suites rake test:ui_all dispatches.
+STATUS_PAGES_NAVIGATION = [
+  {filename: 'test_status_Safari_UI.html',         display_name: 'Safari UI'},
+  {filename: 'test_status_Chrome_Firefox_UI.html', display_name: 'Chrome + Firefox UI'},
+  {filename: 'test_status_Mobile_UI.html',         display_name: 'Mobile UI'},
+  {filename: 'test_status_Eyes.html',              display_name: 'Eyes'},
+].freeze
+
+def status_pages_navigation
+  # Include the navigation row on any status pages generated during the DTT,
+  # so that the oncall engineer can quickly find all the pages they need to
+  # check for UI test failures.
+  return nil unless GIT_BRANCH == 'test'
+  STATUS_PAGES_NAVIGATION.map do |page|
+    page.merge(
+      url: CDO.studio_url("/ui_test/#{page[:filename]}", scheme_for_environment, ge_region: nil)
+    )
+  end
+end
+
+# Status page filename per suite. Eyes keeps a stable name across
+# providers (we only run eyes on SauceLabs). Other suites name their
+# page after the suite label so the four ui_all suites
+# (Safari UI, Chrome + Firefox UI, Mobile UI, Eyes) get unique pages
+# and don't overwrite each other in the shared S3 prefix or in
+# dashboard/public/ui_test/.
 def status_page_filename
-  # SauceLabs runs keep the unqualified name. Device Farm runs are
-  # split into desktop/mobile/combined buckets so a desktop and a
-  # mobile run (which use separate concurrency quotas and are
-  # typically invoked as separate runner.rb commands) don't overwrite
-  # each other's status page in the shared S3 prefix.
-  return "test_status_#{test_type}.html" unless $options.device_farm
-  any_mobile = $browsers.any? {|b| mobile_browser?(b)}
-  all_mobile = $browsers.all? {|b| mobile_browser?(b)}
-  device_farm_kind =
-    if all_mobile
-      'mobile'
-    elsif any_mobile
-      'combined'
-    else
-      'desktop'
-    end
-  "test_status_#{test_type}_device_farm_#{device_farm_kind}.html"
+  return 'test_status_Eyes.html' if eyes?
+  "test_status_#{test_type_label.tr(' +', '_').squeeze('_')}.html"
 end
 
 # Returns a permalink URL for the Test Status Page, assuming we can upload it to S3
@@ -501,10 +532,10 @@ def upload_status_page_to_s3(status_page_path = File.join(UI_TEST_DIR, status_pa
 
   return LOG_UPLOADER.upload_file(status_page_path, {content_type: 'text/html'})
 rescue Aws::Sigv4::Errors::MissingCredentialsError
-  ChatClient.log "No AWS credentials set, skipping upload of the '#{test_type} Test Status Page' to S3"
+  ChatClient.log "No AWS credentials set, skipping upload of the '#{test_type_label} Test Status Page' to S3"
   nil
 rescue Exception => exception
-  ChatClient.log "WARNING: exception raised while attempting to upload the '#{test_type} Test Status Page' to S3:\n#{exception.class}: #{exception}\n#{exception.backtrace&.first(5)&.join("\n")}"
+  ChatClient.log "WARNING: exception raised while attempting to upload the '#{test_type_label} Test Status Page' to S3:\n#{exception.class}: #{exception}\n#{exception.backtrace&.first(5)&.join("\n")}"
   nil
 end
 
@@ -525,28 +556,28 @@ def generate_status_page(suite_start_time)
         s3_bucket: S3_LOGS_BUCKET,
         s3_prefix: S3_LOGS_PREFIX,
         type: test_type,
+        type_label: test_type_label,
         git_branch: GIT_BRANCH,
         commit_hash: COMMIT_HASH,
         start_time: suite_start_time,
         browser_features: browser_features,
         device_farm: $options.device_farm,
-        force_db_access: $options.force_db_access
+        force_db_access: $options.force_db_access,
+        status_pages: status_pages_navigation,
+        current_status_page_filename: status_page_filename
       }
     )
   )
   run_status_page_url = upload_status_page_to_s3(status_page_path)
-  ChatClient.log "#{test_type} Test Status Page (permalink for this run):\n#{run_status_page_url}\n\n" if run_status_page_url
-  ChatClient.log "#{test_type} Test Status Page (for this server):\n#{server_status_page_url}\n\n" unless CI::Utils.running_on_ci?
+  ChatClient.log "#{test_type_label} Test Status Page (permalink for this run):\n#{run_status_page_url}\n\n" if run_status_page_url
+  ChatClient.log "#{test_type_label} Test Status Page (for this server):\n#{server_status_page_url}\n\n" unless CI::Utils.running_on_ci?
   return run_status_page_url
 end
 
 def test_run_identifier(browser, feature)
   feature_name = feature.gsub(/.*features\//, '').gsub('.feature', '').tr('/', '_')
   browser_name = browser_name_or_unknown(browser)
-  # _df distinguishes Device Farm output from concurrent SauceLabs runs
-  # against the same browser+feature during the migration. Drop after we
-  # cut over fully to DF (or to a SauceLabs-only/DF-only steady state).
-  "#{browser_name}_#{feature_name}" + (eyes? ? '_eyes' : '') + ($options.device_farm ? '_df' : '')
+  "#{browser_name}_#{feature_name}" + (eyes? ? '_eyes' : '')
 end
 
 def browser_name_or_unknown(browser)

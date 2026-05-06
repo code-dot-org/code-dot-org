@@ -2,7 +2,7 @@
 %html{lang: "en"}
   %head
     %meta{charset: "utf-8"}/
-    %title= "#{type} Test Status"
+    %title= "#{type_label} Test Status"
     %link{:rel => :stylesheet, :type => :"text/css", :href => "test_status.css"}
     %script{src: 'https://cdn.jsdelivr.net/lodash/4.13.1/lodash.min.js'}
     %script{src: 'https://cdn.jsdelivr.net/clipboard.js/1.5.13/clipboard.min.js'}
@@ -13,7 +13,16 @@
         %button#refresh-button Refresh
         %button#auto-refresh-button Pause Auto-Refresh
         %button#hide-succeeded-button Hide Succeeded
-      %h1= "#{type} Test Status"
+      %h1= "#{type_label} Test Status"
+      - if status_pages
+        %h2#status-pages-nav
+          - status_pages.each_with_index do |page, idx|
+            - if idx > 0
+              |
+            - if page[:filename] == current_status_page_filename
+              %span= page[:display_name]
+            - else
+              %a{href: page[:url]}= page[:display_name]
       %h2
         %a#git-branch{href: "https://github.com/code-dot-org/code-dot-org/tree/#{git_branch}", data: {branch: git_branch}}= git_branch
         |
@@ -69,7 +78,6 @@
           The UI test directory on the test machine is `~/test/dashboard/test/ui`.
 
     %input#test-type{type: 'hidden', value: type}
-    %input#device-farm{type: 'hidden', value: device_farm ? 'true' : 'false'}
     %input#api-origin{type: 'hidden', value: api_origin}
     %input#s3-bucket{type: 'hidden', value: s3_bucket}
     %input#s3-prefix{type: 'hidden', value: s3_prefix}
