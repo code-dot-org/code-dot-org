@@ -19,13 +19,13 @@ const styles = {
     left: 0,
     width: '100%',
   },
-  // Note that button fontSize and padding are currently set by surrounding HTML for
-  // responsiveness.
   button: {
     cursor: 'pointer',
     backgroundColor: colors.white,
     color: colors.grey,
     fontSize: '100%',
+    // em units so padding scales with font-size regardless of consumer context.
+    padding: '0.75em 1.5em',
     borderRadius: 8,
     minWidth: '15%',
     outline: 'none',
