@@ -32,16 +32,6 @@ export default function OceansLab({
   const soundsRef = useRef<InstanceType<typeof Sounds> | null>(null);
 
   useEffect(() => {
-    // MUI's CssBaseline (or any consumer's global reset) sets
-    // `*, *::before, *::after { box-sizing: border-box }` which collapses
-    // Radium %-based height/padding inside #container-react. Reset to
-    // content-box so inline-style percentages resolve identically to the
-    // curriculum path where Rails pages default to content-box.
-    const style = document.createElement('style');
-    style.textContent =
-      '#container-react, #container-react * { box-sizing: content-box; }';
-    document.head.appendChild(style);
-
     if (!soundsRef.current) {
       soundsRef.current = new Sounds();
     }
@@ -57,10 +47,6 @@ export default function OceansLab({
       playSound: sounds.play.bind(sounds),
       registerSound: sounds.register.bind(sounds),
     });
-
-    return () => {
-      document.head.removeChild(style);
-    };
   }, [appMode, guides, textToSpeechLocale, onContinue]);
 
   // 16:9 responsive wrapper — padding-top 56.25% creates the aspect-ratio box.

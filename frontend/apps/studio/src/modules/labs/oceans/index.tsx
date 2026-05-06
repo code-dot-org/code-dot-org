@@ -109,6 +109,12 @@ export default function OceansContainer() {
             height: dims.containerHeight,
             position: 'relative',
             fontSize: dims.fontSize,
+            // CssBaseline sets box-sizing: border-box globally; Radium's
+            // %-based height/padding inside #container-react assumes content-box
+            // (matching the curriculum path's Rails defaults). Reset locally.
+            '& #container-react, & #container-react *': {
+              boxSizing: 'content-box',
+            },
           }}
         >
           <OceansLab />
