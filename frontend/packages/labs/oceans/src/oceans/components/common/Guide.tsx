@@ -191,10 +191,14 @@ const UnwrappedGuide = class Guide extends Component<
         )}
         {!!currentGuide && (
           <div>
+            {/* role="button" satisfies jsx-a11y: keyboard dismiss is handled by onGuideKeyDown */}
             <div
               key={currentGuide.id}
+              role="button"
+              tabIndex={0}
               style={guideBgStyle as unknown as CSSProperties}
               onClick={this.onGuideClick}
+              onKeyDown={this.onGuideKeyDown}
               id="uitest-dismiss-guide"
             >
               <div
@@ -232,7 +236,9 @@ const UnwrappedGuide = class Guide extends Component<
                         : styles.guideFinalTextContainer
                     }
                   >
+                    {/* role="button" makes tabIndex={0} valid and marks this as keyboard-dismissible */}
                     <div
+                      role="button"
                       ref={this.guideDialogRef}
                       aria-live="polite"
                       tabIndex={0}

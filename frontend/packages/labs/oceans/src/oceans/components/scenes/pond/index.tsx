@@ -2,7 +2,7 @@ import {faBan, faCheck, faInfo} from '@fortawesome/free-solid-svg-icons';
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import _ from 'lodash';
 import Radium from 'radium';
-import {Component, type MouseEvent} from 'react';
+import {Component, type KeyboardEvent, type MouseEvent} from 'react';
 
 import {Body, Button} from '@/oceans/components/common';
 import PondPanel from '@/oceans/components/scenes/pond/PondPanel';
@@ -210,7 +210,19 @@ const UnwrappedPond = class Pond extends Component {
 
     return (
       <Body>
-        <div onClick={this.onPondClick} style={styles.pondSurface} />
+        {/* role="button" satisfies jsx-a11y; keyboard support is minimal for this canvas-style widget */}
+        <div
+          role="button"
+          tabIndex={0}
+          aria-label="Fish pond"
+          onClick={this.onPondClick}
+          onKeyDown={(e: KeyboardEvent<HTMLDivElement>) => {
+            if (e.key === 'Enter' || e.key === ' ') {
+              this.onPondClick(e as unknown as MouseEvent<HTMLDivElement>);
+            }
+          }}
+          style={styles.pondSurface}
+        />
         <div style={recallIconsStyle}>
           <button
             key="toggle-matching"
@@ -246,16 +258,19 @@ const UnwrappedPond = class Pond extends Component {
           </button>
         </div>
         {showInfoButton && (
-          <div
+          <button
+            type="button"
             style={{
               ...styles.infoIconContainer,
               ...(!state.pondPanelShowing ? {} : styles.bgTeal),
             }}
             onClick={this.onPondPanelButtonClick}
+            aria-label="Toggle info panel"
+            aria-pressed={!!state.pondPanelShowing}
             id="uitest-info-btn"
           >
             <FontAwesomeIcon icon={faInfo} style={styles.infoIcon} />
-          </div>
+          </button>
         )}
         <img style={styles.pondBot} src={aiBotClosed} alt="" />
         {state.canSkipPond && (

@@ -1,4 +1,4 @@
-import {Component, type MouseEvent} from 'react';
+import {Component, type KeyboardEvent, type MouseEvent} from 'react';
 
 import I18n from '@/oceans/i18n';
 import {getState, setState} from '@/oceans/state';
@@ -7,7 +7,10 @@ import Markdown from '@/utils/Markdown';
 
 /** Side panel showing per-part feature importance for the pond scene. */
 class PondPanel extends Component {
-  onPondPanelClick = (e: MouseEvent) => {
+  onPondPanelClick = (e: MouseEvent | KeyboardEvent) => {
+    if ('key' in e && e.key !== 'Enter' && e.key !== ' ') {
+      return;
+    }
     setState({pondPanelShowing: false});
     e.stopPropagation();
   };
@@ -22,7 +25,13 @@ class PondPanel extends Component {
     return (
       <div>
         {!state.pondClickedFish && (
-          <div style={styles.pondPanelLeft} onClick={this.onPondPanelClick}>
+          <div
+            role="button"
+            tabIndex={0}
+            style={styles.pondPanelLeft}
+            onClick={this.onPondPanelClick}
+            onKeyDown={this.onPondPanelClick}
+          >
             {state.pondExplainGeneralSummary && (
               <div>
                 <div style={styles.pondPanelPreText}>
@@ -62,12 +71,15 @@ class PondPanel extends Component {
         )}
         {state.pondClickedFish && (
           <div
+            role="button"
+            tabIndex={0}
             style={
               state.pondPanelSide === 'left'
                 ? styles.pondPanelLeft
                 : styles.pondPanelRight
             }
-            onClick={e => this.onPondPanelClick(e)}
+            onClick={this.onPondPanelClick}
+            onKeyDown={this.onPondPanelClick}
           >
             {state.pondExplainFishSummary && (
               <div>

@@ -113,7 +113,8 @@ const UnwrappedPredict = class Predict extends Component<
       <Body>
         {this.state.displayControls && (
           <div style={styles.mediaControls} id="uitest-media-ctrl">
-            <span
+            <button
+              type="button"
               onClick={() => this.onScaleTime(true)}
               style={
                 [
@@ -122,7 +123,7 @@ const UnwrappedPredict = class Predict extends Component<
                     styles.selectedControl,
                 ] as unknown as CSSProperties
               }
-              key={MediaControl.Rewind}
+              aria-label="Rewind"
             >
               <span style={styles.timeScale}>
                 {selectedControl === MediaControl.Rewind &&
@@ -130,15 +131,17 @@ const UnwrappedPredict = class Predict extends Component<
                   `x${this.state.timeScale}`}
               </span>
               <FontAwesomeIcon icon={faBackward} />
-            </span>
-            <span
+            </button>
+            <button
+              type="button"
               onClick={this.onPressPlay}
-              style={styles.mediaControl}
-              key={MediaControl.Play}
+              style={styles.mediaControl as unknown as CSSProperties}
+              aria-label={state.isRunning ? 'Pause' : 'Play'}
             >
               <FontAwesomeIcon icon={state.isRunning ? faPause : faPlay} />
-            </span>
-            <span
+            </button>
+            <button
+              type="button"
               onClick={() => this.onScaleTime(false)}
               style={
                 [
@@ -147,7 +150,7 @@ const UnwrappedPredict = class Predict extends Component<
                     styles.selectedControl,
                 ] as unknown as CSSProperties
               }
-              key={MediaControl.FastForward}
+              aria-label="Fast forward"
             >
               <FontAwesomeIcon icon={faForward} />
               <span style={styles.timeScale}>
@@ -155,7 +158,7 @@ const UnwrappedPredict = class Predict extends Component<
                   this.state.timeScale !== defaultTimeScale &&
                   `x${this.state.timeScale}`}
               </span>
-            </span>
+            </button>
           </div>
         )}
         {!state.isRunning && !state.isPaused && (

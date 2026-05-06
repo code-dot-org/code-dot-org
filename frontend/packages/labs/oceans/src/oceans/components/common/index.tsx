@@ -1,4 +1,4 @@
-import {Component, type MouseEvent, type ReactNode} from 'react';
+import {Component, type ReactNode} from 'react';
 
 import Button from '@/oceans/components/common/Button';
 import ConfirmationDialog from '@/oceans/components/common/ConfirmationDialog';
@@ -13,7 +13,6 @@ const loadingGif = new URL(
 /** Props for the Body layout component. */
 interface BodyProps {
   children?: ReactNode;
-  onClick?: (event: MouseEvent<HTMLDivElement>) => void;
 }
 
 /** Full-screen activity wrapper; inerts its children while a modal guide is showing. */
@@ -23,7 +22,7 @@ class Body extends Component<BodyProps> {
     const modalGuide = currentGuide && !currentGuide.noDimBackground;
 
     return (
-      <div style={styles.body} onClick={this.props.onClick}>
+      <div style={styles.body}>
         <div style={styles.bodyChildren} inert={modalGuide ? '' : undefined}>
           {this.props.children}
         </div>
