@@ -85,6 +85,14 @@ const UnwrappedGuide = class Guide extends Component<
     if (e.key === ' ' || e.key === 'Enter' || e.key === 'Spacebar') {
       e.preventDefault();
       this.onGuideClick();
+    } else if (e.key === 'Tab') {
+      // Prevent Tab from escaping the modal when a dimming guide is active.
+      // noDimBackground guides leave activity content interactive, so Tab must
+      // flow freely through the page in that case.
+      const currentGuide = guide.getCurrentGuide();
+      if (currentGuide && !currentGuide.noDimBackground) {
+        e.preventDefault();
+      }
     }
   };
 
@@ -191,7 +199,7 @@ const UnwrappedGuide = class Guide extends Component<
         )}
         {!!currentGuide && (
           <div>
-            {/* role="button" satisfies jsx-a11y: keyboard dismiss is handled by onGuideKeyDown */}
+            {/* role="button" satisfies jsx-a11y; keyboard dismiss via onGuideKeyDown */}
             <div
               key={currentGuide.id}
               role="button"
@@ -203,7 +211,6 @@ const UnwrappedGuide = class Guide extends Component<
             >
               <div
                 aria-labelledby="guide-heading"
-                tabIndex={-1}
                 className="guide-dialog"
                 style={{
                   ...styles.guide,

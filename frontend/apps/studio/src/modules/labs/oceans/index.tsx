@@ -14,6 +14,12 @@ const MAX_WIDTH_PX = 1280;
 const BASELINE_FONT_SIZE_PX = 18;
 /** Container width (px) at which the baseline font size is defined. */
 const BASELINE_WIDTH_PX = 930;
+/**
+ * Pixels reserved at the bottom of the wrapper before sizing the canvas.
+ * Mirrors FishView's reduceAppHeight=36: keeps the canvas from pressing
+ * flush against whatever is directly below the lab area.
+ */
+const REDUCE_HEIGHT_PX = 36;
 
 /** Computed canvas container dimensions and proportional base font size. */
 interface OceansDimensions {
@@ -84,7 +90,8 @@ export default function OceansContainer() {
     const availableHeight =
       el.offsetHeight -
       parseFloat(style.paddingTop) -
-      parseFloat(style.paddingBottom);
+      parseFloat(style.paddingBottom) -
+      REDUCE_HEIGHT_PX;
     setDims(computeDimensions(availableWidth, availableHeight));
   }, []);
 
@@ -92,7 +99,15 @@ export default function OceansContainer() {
     measure();
     const ro = new ResizeObserver(measure);
     if (wrapperRef.current) ro.observe(wrapperRef.current);
-    return () => ro.disconnect();
+    // visualViewport fires when the mobile browser address bar hides/shows,
+    // which changes visible height without triggering a ResizeObserver entry.
+    window.visualViewport?.addEventListener('resize', measure);
+    window.visualViewport?.addEventListener('scroll', measure);
+    return () => {
+      ro.disconnect();
+      window.visualViewport?.removeEventListener('resize', measure);
+      window.visualViewport?.removeEventListener('scroll', measure);
+    };
   }, [measure]);
 
   return (
