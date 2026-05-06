@@ -40,6 +40,12 @@ const UnwrappedTrain = class Train extends Component<
     headOpen: false,
   };
 
+  onResetTraining = () => {
+    const state = getState();
+    helpers.resetTraining(state);
+    setState({showConfirmationDialog: false});
+  };
+
   render() {
     const state = getState();
     const yesButtonText =
@@ -50,10 +56,6 @@ const UnwrappedTrain = class Train extends Component<
       state.appMode === AppMode.CreaturesVTrash
         ? I18n.t('no')
         : I18n.t('notWord', {word: state.word as string});
-    const resetTrainingFunction = () => {
-      helpers.resetTraining(state);
-      setState({showConfirmationDialog: false});
-    };
 
     return (
       <Body>
@@ -88,7 +90,7 @@ const UnwrappedTrain = class Train extends Component<
           onClick={() => {
             setState({
               showConfirmationDialog: true,
-              confirmationDialogOnYes: resetTrainingFunction,
+              confirmationDialogOnYes: this.onResetTraining,
             });
           }}
         >
