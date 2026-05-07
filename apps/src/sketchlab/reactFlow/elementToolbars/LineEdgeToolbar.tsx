@@ -14,9 +14,12 @@ import ActionsGroup from './ActionsGroup';
 import LockedNotice from './LockedNotice';
 import SwatchGroup from './SwatchGroup';
 import {
+  DEFAULT_EDGE_TYPE,
   DEFAULT_LINE_STROKE_STYLE,
   DEFAULT_LINE_WIDTH,
   DEFAULT_STROKE_COLOR,
+  EdgeTypeValue,
+  EDGE_TYPE_OPTIONS,
   LineStrokeStyleValue,
   LINE_STROKE_STYLE_OPTIONS,
   LINE_WIDTH_OPTIONS,
@@ -90,6 +93,7 @@ interface LineEdgeToolbarProps {
   onSelectColor: (value: string) => void;
   onSelectWidth: (value: number) => void;
   onSelectStrokeStyle: (value: LineStrokeStyleValue) => void;
+  onSelectEdgeType: (value: EdgeTypeValue) => void;
   onSelectArrowHeads: (value: ArrowHeadValue) => void;
   onSetLocked: (value: boolean) => void;
 }
@@ -108,12 +112,20 @@ const ARROW_HEAD_ICONS: Record<ArrowHeadValue, string> = {
   both: 'arrows-left-right',
 };
 
+const EDGE_TYPE_ICONS: Record<EdgeTypeValue, string> = {
+  straight: 'minus',
+  default: 'wave-sine',
+  smoothstep: 'corner',
+  step: 'wave-square',
+};
+
 export default function LineEdgeToolbar({
   edge,
   anchorNodeId,
   onSelectColor,
   onSelectWidth,
   onSelectStrokeStyle,
+  onSelectEdgeType,
   onSelectArrowHeads,
   onSetLocked,
 }: LineEdgeToolbarProps) {
@@ -138,6 +150,11 @@ export default function LineEdgeToolbar({
   )
     ? selectedStrokeStyle
     : DEFAULT_LINE_STROKE_STYLE;
+  const selectedEdgeTypeValue = EDGE_TYPE_OPTIONS.some(
+    option => option.value === edge.type
+  )
+    ? (edge.type as EdgeTypeValue)
+    : DEFAULT_EDGE_TYPE;
 
   const selectedArrowHeads = useMemo(() => {
     const hasStartArrow = !!edge.markerStart;
@@ -206,6 +223,18 @@ export default function LineEdgeToolbar({
             getButtonContent={option =>
               renderLinePreview(2, option.value as LinePreviewStyle)
             }
+          />
+          <LineOptionGroup
+            groupLabel="Line shape"
+            options={EDGE_TYPE_OPTIONS}
+            selectedValue={selectedEdgeTypeValue}
+            onSelect={value => onSelectEdgeType(value as EdgeTypeValue)}
+            ariaLabelPrefix="Line shape"
+            getButtonContent={option => (
+              <FontAwesomeV6Icon
+                iconName={EDGE_TYPE_ICONS[option.value as EdgeTypeValue]}
+              />
+            )}
           />
           <LineOptionGroup
             groupLabel="Arrow heads"

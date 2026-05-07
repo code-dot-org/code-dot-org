@@ -35,6 +35,7 @@ const API_BASEPATH = `${API_ORIGIN}/api/v1/test_logs`;
 let lastRefreshTimeLabel = document.querySelector("#last-refresh-time");
 let refreshButton = document.querySelector("#refresh-button");
 let autoRefreshButton = document.querySelector("#auto-refresh-button");
+let copyFailingRerunButton = document.querySelector("#copy-failing-rerun-button");
 
 var lastRefreshTime = RUN_START_TIME;
 
@@ -164,6 +165,17 @@ Test.prototype.publicLogUrl = function () {
 
 // Connect up "Copy Rerun Command" buttons
 new Clipboard("button.copy-button");
+// Each per-row rerun command already ends with `&` to background the run.
+// Join with ` \<newline>` so when the user pastes the block into a shell, the
+// shell treats it as one line-continued input — giving the user a chance to
+// review and hit Enter rather than executing each command on paste.
+new Clipboard("#copy-failing-rerun-button", {
+  text: () =>
+    Array.from(
+      document.querySelectorAll("tr.FAILED td.rerun-command button.copy-button"),
+      (btn) => btn.getAttribute("data-clipboard-text")
+    ).join(" \\\n"),
+});
 
 function keyify(str) {
   return str.replace(/\//g, "_");
@@ -306,6 +318,12 @@ function updateProgressNow() {
     setTabStatusIcon("pass");
   }
 
+  // Only enable "Copy Failing Rerun Commands" when there's something to copy.
+  // Otherwise a click leave previous clipboard contents intact and the
+  // user might not notice — leaving them to paste a stale command they had
+  // copied earlier.
+  copyFailingRerunButton.disabled = failureCount === 0;
+
   // Disable auto-refresh if the test run is done and green.
   if (pendingCount + failureCount === 0) {
     disableAutoRefresh();
@@ -412,7 +430,7 @@ async function refresh() {
   refreshButton.disabled = true;
   let lastRefreshEpochSeconds = Math.floor(lastRefreshTime.getTime() / 1000);
   let newTime = new Date();
-  
+
   try {
     const json = await fetchMetadata(lastRefreshEpochSeconds);
 
