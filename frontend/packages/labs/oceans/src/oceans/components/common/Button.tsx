@@ -1,23 +1,22 @@
-import React from 'react';
-import Radium from "radium";
-import PropTypes from "prop-types";
+import Radium from 'radium';
+import * as React from 'react';
 
-import guide from "@ml/oceans/models/guide";
-import soundLibrary from "@ml/oceans/models/soundLibrary";
-import styles from "@ml/oceans/styles";
+import guide from '@/oceans/models/guide';
+import soundLibrary from '@/oceans/models/soundLibrary';
+import styles from '@/oceans/styles';
 
-const UnwrappedButton = class Button extends React.Component {
-  static propTypes = {
-    className: PropTypes.string,
-    style: PropTypes.object,
-    children: PropTypes.node,
-    onClick: PropTypes.func,
-    sound: PropTypes.string
-  };
+interface ButtonProps {
+  className?: string;
+  style?: React.CSSProperties;
+  children?: React.ReactNode;
+  onClick?: (event: React.MouseEvent<HTMLButtonElement>) => boolean | void;
+  sound?: string;
+}
 
-  onClick = event => {
+const UnwrappedButton = class Button extends React.Component<ButtonProps> {
+  onClick = (event: React.MouseEvent<HTMLButtonElement>) => {
     guide.dismissCurrentGuide();
-    const clickReturnValue = this.props.onClick(event);
+    const clickReturnValue = this.props.onClick && this.props.onClick(event);
 
     if (clickReturnValue !== false) {
       const sound = this.props.sound || 'other';

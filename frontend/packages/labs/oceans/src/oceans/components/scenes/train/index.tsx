@@ -1,23 +1,30 @@
-import React from 'react'
-import Radium from "radium";
+import {faBan, faCheck, faTrash} from '@fortawesome/free-solid-svg-icons';
+import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
+import Radium from 'radium';
+import * as React from 'react';
 
-import {getState, setState} from "@ml/oceans/state";
-import {AppMode, Modes} from "@ml/oceans/constants";
-import I18n from "@ml/oceans/i18n";
-import helpers from "@ml/oceans/helpers";
-import {Body, Button} from "@ml/oceans/components/common";
-import styles from "@ml/oceans/styles";
-import aiBotHead from "@public/images/ai-bot/ai-bot-head.png";
-import aiBotBody from "@public/images/ai-bot/ai-bot-body.png";
-import counterIcon from "@public/images/polaroid-icon.png";
-import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
-import {faBan, faCheck, faTrash} from "@fortawesome/free-solid-svg-icons";
-import train from "@ml/oceans/models/train";
-import modeHelpers from "@ml/oceans/modeHelpers";
+import aiBotBody from '@/assets/images/ai-bot/ai-bot-body.png';
+import aiBotHead from '@/assets/images/ai-bot/ai-bot-head.png';
+import counterIcon from '@/assets/images/polaroid-icon.png';
+import {Body, Button} from '@/oceans/components/common';
+import {AppMode, Modes} from '@/oceans/constants';
+import helpers from '@/oceans/helpers';
+import I18n from '@/oceans/i18n';
+import modeHelpers from '@/oceans/modeHelpers';
+import train from '@/oceans/models/train';
+import {getState, setState} from '@/oceans/state';
+import styles from '@/oceans/styles';
 
-let UnwrappedTrain = class Train extends React.Component {
-  state = {
-    headOpen: false
+interface TrainState {
+  headOpen: boolean;
+}
+
+const UnwrappedTrain = class Train extends React.Component<
+  Record<string, never>,
+  TrainState
+> {
+  state: TrainState = {
+    headOpen: false,
   };
 
   render() {
@@ -41,14 +48,14 @@ let UnwrappedTrain = class Train extends React.Component {
             src={aiBotHead}
             style={[
               styles.trainBotHead,
-              this.state.headOpen && styles.trainBotOpen
+              this.state.headOpen && styles.trainBotOpen,
             ]}
             alt=""
           />
-          <img src={aiBotBody} style={styles.trainBotBody} alt=""/>
+          <img src={aiBotBody} style={styles.trainBotBody} alt="" />
         </div>
         <div style={styles.counter}>
-          <img src={counterIcon} style={styles.counterImg} alt=""/>
+          <img src={counterIcon} style={styles.counterImg} alt="" />
           <span style={styles.counterNum} id="uitest-train-count">
             {Math.min(999, state.yesCount + state.noCount)}
           </span>
@@ -60,7 +67,7 @@ let UnwrappedTrain = class Train extends React.Component {
             onClick={() => {
               setState({
                 showConfirmationDialog: true,
-                confirmationDialogOnYes: resetTrainingFunction
+                confirmationDialogOnYes: resetTrainingFunction,
               });
             }}
           />

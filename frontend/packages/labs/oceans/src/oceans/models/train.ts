@@ -1,33 +1,44 @@
-import 'idempotent-babel-polyfill';
-import {setState, getState} from '../state';
-import {ClassType, AppMode} from '../constants';
+import {generateOcean} from '../../utils/generateOcean';
 import KNNTrainer from '../../utils/KNNTrainer';
 import SVMTrainer from '../../utils/SVMTrainer';
-import {generateOcean} from '../../utils/generateOcean';
+import {ClassType, AppMode} from '../constants';
 import I18n from '../i18n';
+import {setState, getState} from '../state';
 
-const init = () => {
+/** Initialize the training model: set up the trainer and seed the fish pool. */
+const init = (): void => {
   const state = getState();
 
-  let trainer = state.trainer;
+  let trainer = state.trainer as KNNTrainer | SVMTrainer | null;
   if (!trainer) {
-    if ([AppMode.FishShort, AppMode.FishLong].includes(state.appMode)) {
-      trainer = new SVMTrainer(fish => fish.getKnnData());
+    if (
+      [AppMode.FishShort as string, AppMode.FishLong as string].includes(
+        state.appMode!,
+      )
+    ) {
+      trainer = new SVMTrainer(((fish: unknown) =>
+        (fish as {getKnnData: () => number[]}).getKnnData()) as (
+        input: unknown,
+      ) => number[]);
     } else {
-      trainer = new KNNTrainer(oceanObj => oceanObj.getTensor());
+      trainer = new KNNTrainer(
+        (oceanObj: unknown) =>
+          // eslint-disable-next-line @typescript-eslint/no-explicit-any
+          (oceanObj as {getTensor: () => unknown}).getTensor() as any,
+      );
     }
   }
 
   if (state.appMode === AppMode.FishVTrash) {
     setState({
       word: I18n.t('fish'),
-      trainingQuestion: I18n.t('isThisAFish')
+      trainingQuestion: I18n.t('isThisAFish'),
     });
   }
   if (state.appMode === AppMode.CreaturesVTrash) {
     setState({
       word: I18n.t('waterCreature'),
-      trainingQuestion: I18n.t('doesThisBelongInWater')
+      trainingQuestion: I18n.t('doesThisBelongInWater'),
     });
   }
 
@@ -35,11 +46,17 @@ const init = () => {
     fishData: generateOcean(100),
     trainingIndex: 0,
     trainer,
-    isRunning: true
+    isRunning: true,
   });
 };
 
-const onClassifyFish = doesLike => {
+/**
+ * Record whether the user liked or disliked the current fish and advance the queue.
+ *
+ * @param doesLike - True if the user classified the fish as liked.
+ * @returns True if the classification was recorded; false if animation is in progress.
+ */
+const onClassifyFish = (doesLike: boolean): boolean => {
   const state = getState();
 
   // No-op if animation is currently in progress.
@@ -48,10 +65,11 @@ const onClassifyFish = doesLike => {
   }
 
   const classId = doesLike ? ClassType.Like : ClassType.Dislike;
-  state.trainer.addTrainingExample(
-    state.fishData[state.trainingIndex],
-    classId
-  );
+  (
+    state.trainer as unknown as {
+      addTrainingExample: (fish: unknown, classId: number) => void;
+    }
+  ).addTrainingExample(state.fishData[state.trainingIndex], classId);
 
   let fishData = [...state.fishData];
   if (state.trainingIndex > state.fishData.length - 5) {
@@ -69,7 +87,7 @@ const onClassifyFish = doesLike => {
   setState({
     trainingIndex: state.trainingIndex + 1,
     fishData,
-    isRunning: true
+    isRunning: true,
   });
 
   return true;
@@ -77,5 +95,5 @@ const onClassifyFish = doesLike => {
 
 export default {
   init,
-  onClassifyFish
+  onClassifyFish,
 };

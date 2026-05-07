@@ -1,3 +1,5 @@
+/* eslint-disable @typescript-eslint/ban-ts-comment */
+// @ts-nocheck — PR 1 Sound module retained verbatim; modernization deferred to PR 3.
 /* eslint-disable */
 
 function isMobile() {
@@ -59,7 +61,7 @@ export default function Sound(config, audioContext) {
  * @param {function} [options.onEnded]
  * @param {function} [options.callback]
  */
-Sound.prototype.play = function(options) {
+Sound.prototype.play = function (options) {
   options = options || {};
   if (!this.audioElement && !this.reusableBuffer) {
     this.handlePlayFailed(options);
@@ -69,11 +71,11 @@ Sound.prototype.play = function(options) {
   if (this.reusableBuffer) {
     this.playableBuffer = this.newPlayableBufferSource(
       this.reusableBuffer,
-      options
+      options,
     );
 
     // Hook up on-ended callback, although browser support may be limited.
-    this.playableBuffer.onended = function() {
+    this.playableBuffer.onended = function () {
       this.isPlaying_ = false;
       if (options.onEnded) {
         options.onEnded();
@@ -102,7 +104,7 @@ Sound.prototype.play = function(options) {
       : Math.max(0, Math.min(1, options.volume));
   this.audioElement.volume = volume;
   this.audioElement.loop = !!options.loop;
-  var unregisterAndCallback = function() {
+  var unregisterAndCallback = function () {
     this.audioElement.removeEventListener('abort', unregisterAndCallback);
     this.audioElement.removeEventListener('ended', unregisterAndCallback);
     this.audioElement.removeEventListener('pause', unregisterAndCallback);
@@ -118,7 +120,7 @@ Sound.prototype.play = function(options) {
   this.handlePlayStarted(options);
 };
 
-Sound.prototype.playAfterLoad = function(options) {
+Sound.prototype.playAfterLoad = function (options) {
   if (this.isLoaded() || this.config.playAfterLoad) {
     // If this sound is already loaded, or playAfterLoad has already been
     // set on this sound, then we must fail this play request
@@ -130,13 +132,13 @@ Sound.prototype.playAfterLoad = function(options) {
   this.config.playAfterLoadOptions = options;
 };
 
-Sound.prototype.handlePlayFailed = function(options) {
+Sound.prototype.handlePlayFailed = function (options) {
   if (options.callback) {
     options.callback(false);
   }
 };
 
-Sound.prototype.handleLoadFailed = function(status) {
+Sound.prototype.handleLoadFailed = function (status) {
   this.didLoadFail_ = true;
   const {onPreloadError, playAfterLoadOptions} = this.config;
 
@@ -148,14 +150,14 @@ Sound.prototype.handleLoadFailed = function(status) {
   callback && callback(false);
 };
 
-Sound.prototype.handlePlayStarted = function(options) {
+Sound.prototype.handlePlayStarted = function (options) {
   this.isPlaying_ = true;
   if (options.callback) {
     options.callback(true);
   }
 };
 
-Sound.prototype.stop = function() {
+Sound.prototype.stop = function () {
   try {
     if (this.playableBuffer) {
       if (this.playableBuffer.stop) {
@@ -183,25 +185,25 @@ Sound.prototype.stop = function() {
 /**
  * @returns {boolean} whether the sound is currently playing.
  */
-Sound.prototype.isPlaying = function() {
+Sound.prototype.isPlaying = function () {
   return this.isPlaying_;
 };
 
 /**
  * @returns {boolean} whether the sound is currently loaded.
  */
-Sound.prototype.isLoaded = function() {
+Sound.prototype.isLoaded = function () {
   return this.isLoaded_;
 };
 
 /**
  * @returns {boolean} whether the sound failed to load.
  */
-Sound.prototype.didLoadFail = function() {
+Sound.prototype.didLoadFail = function () {
   return this.didLoadFail_;
 };
 
-Sound.prototype.newPlayableBufferSource = function(buffer, options) {
+Sound.prototype.newPlayableBufferSource = function (buffer, options) {
   var newSound = this.audioContext.createBufferSource();
 
   // Older versions of chrome call this createGainNode instead of createGain
@@ -229,7 +231,7 @@ Sound.prototype.newPlayableBufferSource = function(buffer, options) {
  * @param {number} gain - desired final gain value
  * @param {number} durationSeconds
  */
-Sound.prototype.fadeToGain = function(gain, durationSeconds) {
+Sound.prototype.fadeToGain = function (gain, durationSeconds) {
   if (this.gainNode) {
     this.fadeToGainWebAudio_(gain, durationSeconds);
   } else if (this.audioElement) {
@@ -245,7 +247,7 @@ Sound.prototype.fadeToGain = function(gain, durationSeconds) {
  * @param {number} durationSeconds
  * @private
  */
-Sound.prototype.fadeToGainWebAudio_ = function(gain, durationSeconds) {
+Sound.prototype.fadeToGainWebAudio_ = function (gain, durationSeconds) {
   if (!this.gainNode) {
     return;
   }
@@ -259,7 +261,7 @@ Sound.prototype.fadeToGainWebAudio_ = function(gain, durationSeconds) {
   this.gainNode.gain.setValueAtTime(this.gainNode.gain.value, currTime);
   this.gainNode.gain.exponentialRampToValueAtTime(
     gain,
-    currTime + durationSeconds
+    currTime + durationSeconds,
   );
 };
 
@@ -271,7 +273,7 @@ Sound.prototype.fadeToGainWebAudio_ = function(gain, durationSeconds) {
  * @param {number} durationSeconds
  * @private
  */
-Sound.prototype.fadeToGainHtml5Audio_ = function(gain, durationSeconds) {
+Sound.prototype.fadeToGainHtml5Audio_ = function (gain, durationSeconds) {
   if (!this.audioElement) {
     return;
   }
@@ -282,7 +284,7 @@ Sound.prototype.fadeToGainHtml5Audio_ = function(gain, durationSeconds) {
   var durationMillis = durationSeconds * 1000;
   var t0 = new Date().getTime();
   var fadeInterval = setInterval(
-    function() {
+    function () {
       var t = new Date().getTime() - t0;
 
       // Base condition - after duration has elapsed, snap volume to final and
@@ -305,11 +307,11 @@ Sound.prototype.fadeToGainHtml5Audio_ = function(gain, durationSeconds) {
         deltaVolume * Math.pow(t / durationMillis, 2) + startVolume;
       this.audioElement.volume = Math.max(0, Math.min(1, newVolume));
     }.bind(this),
-    100
+    100,
   );
 };
 
-Sound.prototype.getPlayableFile = function() {
+Sound.prototype.getPlayableFile = function () {
   // IE9 Running on Windows Server SKU can throw an exception on window.Audio
   try {
     if (!window.Audio) {
@@ -341,7 +343,7 @@ Sound.prototype.getPlayableFile = function() {
   return false;
 };
 
-Sound.prototype.preload = function() {
+Sound.prototype.preload = function () {
   var file = this.getPlayableFile();
   if (!file) {
     return;
@@ -349,7 +351,7 @@ Sound.prototype.preload = function() {
 
   if (!this.config.forceHTML5 && window.AudioContext && this.audioContext) {
     var self = this;
-    this.preloadViaWebAudio(file, function(buffer) {
+    this.preloadViaWebAudio(file, function (buffer) {
       self.reusableBuffer = buffer;
     });
     return;
@@ -371,7 +373,7 @@ Sound.prototype.preload = function() {
     // Fire onLoad as soon as enough of the sound is loaded to play it
     // all the way through.
     var loadEventName = 'canplaythrough';
-    var eventListener = function() {
+    var eventListener = function () {
       this.onSoundLoaded();
       audioElement.removeEventListener(loadEventName, eventListener);
     }.bind(this);
@@ -384,7 +386,7 @@ Sound.prototype.preload = function() {
   }
 };
 
-Sound.prototype.onSoundLoaded = function() {
+Sound.prototype.onSoundLoaded = function () {
   this.isLoaded_ = true;
   if (this.config.playAfterLoad) {
     this.play(this.config.playAfterLoadOptions);
@@ -394,14 +396,14 @@ Sound.prototype.onSoundLoaded = function() {
   }
 };
 
-Sound.prototype.preloadViaWebAudio = function(filename, onPreloadedCallback) {
+Sound.prototype.preloadViaWebAudio = function (filename, onPreloadedCallback) {
   var request = new XMLHttpRequest();
   request.open('GET', filename, true);
   request.responseType = 'arraybuffer';
   var self = this;
-  request.onload = function() {
+  request.onload = function () {
     if (request.status === 200) {
-      self.audioContext.decodeAudioData(request.response, function(buffer) {
+      self.audioContext.decodeAudioData(request.response, function (buffer) {
         onPreloadedCallback(buffer);
         self.onSoundLoaded();
       });
@@ -409,7 +411,7 @@ Sound.prototype.preloadViaWebAudio = function(filename, onPreloadedCallback) {
       self.handleLoadFailed(request.status);
     }
   };
-  request.onerror = function() {
+  request.onerror = function () {
     self.handleLoadFailed(request.status);
   };
   request.send();

@@ -1,30 +1,30 @@
-import Trash_6pack from '@public/images/trash/Trash_6pack.png';
-import Trash_Apple from '@public/images/trash/Trash_Apple.png';
-import Trash_Banana from '@public/images/trash/Trash_Banana.png';
-// import Trash_Battery from '@public/images/trash/Trash_Battery.png';
-import Trash_Bottle from '@public/images/trash/Trash_Bottle.png';
-import Trash_Bulb from '@public/images/trash/Trash_Bulb.png';
-import Trash_Can from '@public/images/trash/Trash_Can.png';
-import Trash_Coffee from '@public/images/trash/Trash_Coffee.png';
-import Trash_Fork from '@public/images/trash/Trash_Fork.png';
-import Trash_Laundry from '@public/images/trash/Trash_Laundry.png';
-import Trash_Sock from '@public/images/trash/Trash_Sock.png';
-import Trash_Soda from '@public/images/trash/Trash_Soda.png';
-import Trash_Tire from '@public/images/trash/Trash_Tire.png';
-import Trash_Wing from '@public/images/trash/Trash_Wing.png';
+import Crab from '@/assets/images/seaCreatures/Crab.png';
+import Dolphin from '@/assets/images/seaCreatures/Dolphin.png';
+import Jellyfish from '@/assets/images/seaCreatures/Jellyfish.png';
+import Octopus from '@/assets/images/seaCreatures/Octopus.png';
+import Otter from '@/assets/images/seaCreatures/Otter.png';
+import Seahorse from '@/assets/images/seaCreatures/Seahorse.png';
+import Snail from '@/assets/images/seaCreatures/Snail.png';
+import Starfish from '@/assets/images/seaCreatures/Starfish.png';
+import Turtle from '@/assets/images/seaCreatures/Turtle.png';
+import Whale from '@/assets/images/seaCreatures/Whale.png';
+import Trash_6pack from '@/assets/images/trash/Trash_6pack.png';
+import Trash_Apple from '@/assets/images/trash/Trash_Apple.png';
+import Trash_Banana from '@/assets/images/trash/Trash_Banana.png';
+// const Trash_Battery = new URL('../assets/images/trash/Trash_Battery.png', import.meta.url).href;
+import Trash_Bottle from '@/assets/images/trash/Trash_Bottle.png';
+import Trash_Bulb from '@/assets/images/trash/Trash_Bulb.png';
+import Trash_Can from '@/assets/images/trash/Trash_Can.png';
+import Trash_Coffee from '@/assets/images/trash/Trash_Coffee.png';
+import Trash_Fork from '@/assets/images/trash/Trash_Fork.png';
+import Trash_Laundry from '@/assets/images/trash/Trash_Laundry.png';
+import Trash_Sock from '@/assets/images/trash/Trash_Sock.png';
+import Trash_Soda from '@/assets/images/trash/Trash_Soda.png';
+import Trash_Tire from '@/assets/images/trash/Trash_Tire.png';
+import Trash_Wing from '@/assets/images/trash/Trash_Wing.png';
 
-import Crab from '@public/images/seaCreatures/Crab.png';
-import Dolphin from '@public/images/seaCreatures/Dolphin.png';
-import Jellyfish from '@public/images/seaCreatures/Jellyfish.png';
-import Octopus from '@public/images/seaCreatures/Octopus.png';
-import Otter from '@public/images/seaCreatures/Otter.png';
-import Seahorse from '@public/images/seaCreatures/Seahorse.png';
-import Snail from '@public/images/seaCreatures/Snail.png';
-import Starfish from '@public/images/seaCreatures/Starfish.png';
-import Turtle from '@public/images/seaCreatures/Turtle.png';
-import Whale from '@public/images/seaCreatures/Whale.png';
-
-export const trashImagePaths = [
+/** Absolute URLs for all trash item images, in display order. */
+export const trashImagePaths: string[] = [
   Trash_6pack,
   Trash_Apple,
   Trash_Banana,
@@ -39,10 +39,11 @@ export const trashImagePaths = [
   Trash_Sock,
   Trash_Soda,
   Trash_Tire,
-  Trash_Wing
+  Trash_Wing,
 ];
 
-export const seaCreatureImagePaths = [
+/** Absolute URLs for all sea-creature images, in display order. */
+export const seaCreatureImagePaths: string[] = [
   Crab,
   Dolphin,
   Jellyfish,
@@ -52,5 +53,5 @@ export const seaCreatureImagePaths = [
   Snail,
   Starfish,
   Turtle,
-  Whale
+  Whale,
 ];

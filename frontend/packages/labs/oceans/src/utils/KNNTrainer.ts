@@ -1,30 +1,59 @@
 import * as tf from '@tensorflow/tfjs';
 import * as knnClassifier from '@tensorflow-models/knn-classifier';
 
-export default class KNNTrainer {
-  constructor(converterFn) {
-    this.converterFn = converterFn || (input => input); // Default to returning example as-is
+type Tensor = tf.Tensor;
+type Converter<T> = (input: T) => Tensor;
+
+interface PredictionResult {
+  predictedClassId: number | null;
+  confidencesByClassId: Record<string, number> | number[];
+}
+
+/**
+ * Wraps `@tensorflow-models/knn-classifier` with the trainer interface used
+ * by the ocean lab (addTrainingExample / predict / clearAll).
+ *
+ * KNN requires no training step — examples are stored as tensors and nearest-
+ * neighbour lookup happens at predict time.
+ */
+export default class KNNTrainer<T = unknown> {
+  private readonly converterFn: Converter<T>;
+  private knn: knnClassifier.KNNClassifier;
+  private TOPK: number | undefined;
+
+  /**
+   * @param converterFn - Transforms an ocean object into a TFJS Tensor for KNN lookup.
+   *   Defaults to identity (pass-through).
+   */
+  constructor(converterFn?: Converter<T>) {
+    this.converterFn =
+      converterFn ?? ((input: T) => input as unknown as Tensor);
     this.knn = knnClassifier.create();
   }
 
   /**
-   * @param {Object} training data point
-   * @param {number} classId
+   * Adds a labelled training example to the KNN dataset.
+   *
+   * @param example - The ocean object to classify.
+   * @param classId - Class label (e.g. `ClassType.Like`).
    */
-  addTrainingExample(example, classId) {
+  addTrainingExample(example: T, classId: number): void {
     this.knn.addExample(this.converterFn(example), classId);
   }
 
-  train() {} // no training needed for KNN
+  /** No-op — KNN does not require a separate training step. */
+  train(): void {}
 
   /**
-   * @param {Tensor<number>} KNN data
-   * @returns {Promise<{confidencesByClassId: [], predictedClassId: null}>}
+   * Predicts the class for `example` using the stored KNN dataset.
+   *
+   * @param example - The ocean object to classify.
+   * @returns Prediction with `predictedClassId` and per-class confidence scores.
    */
-  async predict(example) {
-    let result = {
+  async predict(example: T): Promise<PredictionResult> {
+    const result: PredictionResult = {
       predictedClassId: null,
-      confidencesByClassId: []
+      confidencesByClassId: [],
     };
 
     if (this.knn.getNumClasses() === 0) {
@@ -33,73 +62,85 @@ export default class KNNTrainer {
 
     const res = await this.knn.predictClass(
       this.converterFn(example),
-      this.TOPK
+      this.TOPK,
     );
-    // The rest of this repo expects an integer in predictedClassId so cast it here
     result.predictedClassId = parseInt(res.label);
     result.confidencesByClassId = res.confidences;
     return result;
   }
 
-  // KNNTrainer-specific methods below
-
-  setTopK(k) {
+  /**
+   * Sets the number of nearest neighbours to use during prediction.
+   *
+   * @param k - Top-K value passed to the KNN classifier.
+   */
+  setTopK(k: number): void {
     this.TOPK = k;
   }
 
-  clearAll() {
+  /** Disposes the current KNN dataset and creates a fresh classifier. */
+  clearAll(): void {
     this.knn.dispose();
     this.knn = knnClassifier.create();
   }
 
-  dispose() {
+  /** Releases TFJS memory held by the KNN classifier. */
+  dispose(): void {
     this.knn.dispose();
   }
 
-  getNumClasses() {
+  /** Returns the number of distinct classes in the current dataset. */
+  getNumClasses(): number {
     return this.knn.getNumClasses();
   }
 
   /**
-   * @param {number} classId
-   * @returns number
+   * Returns the number of training examples for `classId`.
+   *
+   * @param classId - The class label to query.
+   * @returns Example count, or 0 if no dataset exists.
    */
-  getExampleCount(classId) {
+  getExampleCount(classId: number): number {
     return this.knn ? this.knn.getClassExampleCount()[classId] : 0;
   }
 
-  /*
-   * TFJS doesn't provide a great way to serialize a model and restore it so
-   * we have to hack one ourselves. This is largely based on the examples at
-   * https://github.com/tensorflow/tfjs/issues/633#issuecomment-456308218
-   * with some customization and updates from documentation.
-   * /
-
   /**
-   * @returns {string}
+   * Serialises the KNN dataset to a JSON string for persistence.
+   *
+   * TFJS does not provide a built-in serialisation API, so we extract the
+   * raw tensor data manually.
+   *
+   * @returns JSON string representing the classifier dataset.
    */
-  getDatasetJSON() {
-    let dataset = this.knn.getClassifierDataset();
-    var datasetObj = {};
+  getDatasetJSON(): string {
+    const dataset = this.knn.getClassifierDataset();
+    const datasetObj: Record<string, {data: number[]; shape: number[]}> = {};
     Object.keys(dataset).forEach(key => {
-      let data = dataset[key].dataSync();
+      const data = dataset[key].dataSync();
       datasetObj[key] = {data: Array.from(data), shape: dataset[key].shape};
     });
     return JSON.stringify(datasetObj);
   }
 
   /**
-   * @param {string} datasetJson
+   * Restores a KNN dataset from a previously serialised JSON string.
+   *
+   * @param datasetJson - JSON string returned by `getDatasetJSON`.
    */
-  loadDatasetJSON(datasetJson) {
+  loadDatasetJSON(datasetJson: string): void {
     this.clearAll();
-    const tensorObj = JSON.parse(datasetJson);
+    const tensorObj = JSON.parse(datasetJson) as Record<
+      string,
+      {data: number[]; shape: number[]}
+    >;
     Object.keys(tensorObj).forEach(key => {
       tensorObj[key] = tf.tensor(
         Array.from(tensorObj[key].data),
-        tensorObj[key].shape
-      );
+        tensorObj[key].shape,
+      ) as unknown as {data: number[]; shape: number[]};
     });
-    this.knn.setClassifierDataset(tensorObj);
+    this.knn.setClassifierDataset(
+      tensorObj as unknown as Record<string, tf.Tensor2D>,
+    );
   }
 }

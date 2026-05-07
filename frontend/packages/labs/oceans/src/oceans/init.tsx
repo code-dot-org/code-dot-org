@@ -1,13 +1,28 @@
-import 'idempotent-babel-polyfill';
-import ReactDOM from 'react-dom';
-import React from 'react';
-import UI from './ui';
-import constants, {Modes} from './constants';
-import {setInitialState, setSetStateCallback} from './state';
-import {render as renderCanvas} from './renderer';
+import {createRoot, type Root} from 'react-dom/client';
+
+import constants, {Modes, OCEANS_UI_CONTAINER_ID} from './constants';
+import I18n from './i18n';
 import modeHelpers from './modeHelpers';
 import soundLibrary from './models/soundLibrary';
-import I18n from './i18n';
+import {render as renderCanvas, stopRender} from './renderer';
+import {setInitialState, setSetStateCallback} from './state';
+import UI from './ui';
+
+export interface InitAllOptions {
+  canvas: HTMLCanvasElement;
+  backgroundCanvas: HTMLCanvasElement;
+  appMode: string;
+  onContinue?: () => void;
+  guides?: string;
+  textToSpeechLocale?: string;
+  playSound: (id: string, options?: {volume?: number}) => void;
+  registerSound: (descriptor: {id: string; mp3: string}) => void;
+  i18n?: Record<string, (opts?: Record<string, unknown>) => string>;
+}
+
+// Persist the React root across re-renders so we can call root.render()
+// rather than mount a fresh root on every state-set callback.
+let uiRoot: Root | null = null;
 
 //
 // Required in options:
@@ -17,7 +32,7 @@ import I18n from './i18n';
 //  onContinue
 //  guides
 //
-export const initAll = function(options) {
+export const initAll = function (options: InitAllOptions): void {
   const {canvas, backgroundCanvas} = options;
 
   canvas.width = backgroundCanvas.width = constants.canvasWidth;
@@ -33,7 +48,7 @@ export const initAll = function(options) {
   // Set initial state for UI elements.
   setInitialState({
     currentMode: Modes.Loading,
-    ...options
+    ...options,
   });
 
   // Initialize our first model.
@@ -50,8 +65,20 @@ export const initAll = function(options) {
   setSetStateCallback(renderUI);
 };
 
+// Stop the canvas RAF loop without unmounting the React UI root. The root
+// is naturally orphaned when the container DOM node is removed.
+export const stopUIRerender = (): void => {
+  stopRender();
+};
+
 // Tell React to explicitly render the UI.
-function renderUI() {
-  const renderElement = document.getElementById('container-react');
-  ReactDOM.render(<UI />, renderElement);
+function renderUI(): void {
+  const container = document.getElementById(OCEANS_UI_CONTAINER_ID);
+  if (!container) {
+    return;
+  }
+  if (!uiRoot) {
+    uiRoot = createRoot(container);
+  }
+  uiRoot.render(<UI />);
 }

@@ -1,28 +1,25 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import Radium from "radium";
+import {faEraser} from '@fortawesome/free-solid-svg-icons';
+import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
+import Radium from 'radium';
+import * as React from 'react';
 
-import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
-import {faEraser} from "@fortawesome/free-solid-svg-icons";
+import snail from '@/assets/images/snail-large.png';
+import Button from '@/oceans/components/common/Button';
+import I18n from '@/oceans/i18n';
+import styles from '@/oceans/styles';
 
-import snail from "@public/images/snail-large.png";
+interface ConfirmationDialogProps {
+  onYesClick: () => void;
+  onNoClick: () => void;
+}
 
-import styles from "@ml/oceans/styles";
-import I18n from "@ml/oceans/i18n";
-import Button from "@ml/oceans/components/common/Button";
-
-let UnwrappedConfirmationDialog = class ConfirmationDialog extends React.Component {
-  static propTypes = {
-    onYesClick: PropTypes.func.isRequired,
-    onNoClick: PropTypes.func.isRequired
-  };
-
+const UnwrappedConfirmationDialog = class ConfirmationDialog extends React.Component<ConfirmationDialogProps> {
   render() {
     return (
       <div style={styles.confirmationDialogBackground}>
         <div style={styles.confirmationDialog}>
           <div style={styles.confirmationDialogContent}>
-            <img src={snail} style={styles.confirmationDialogImg} alt=""/>
+            <img src={snail} style={styles.confirmationDialogImg} alt="" />
             <div>
               <div
                 style={styles.confirmationHeader}
@@ -41,7 +38,7 @@ let UnwrappedConfirmationDialog = class ConfirmationDialog extends React.Compone
               style={styles.confirmationYesButton}
               className="dialog-button"
             >
-              <FontAwesomeIcon icon={faEraser}/> {I18n.t('erase')}
+              <FontAwesomeIcon icon={faEraser} /> {I18n.t('erase')}
             </Button>
             <Button
               onClick={this.props.onNoClick}

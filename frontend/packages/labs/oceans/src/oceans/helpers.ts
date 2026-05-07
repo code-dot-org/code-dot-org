@@ -1,19 +1,30 @@
 import _ from 'lodash';
 import queryString from 'query-string';
-import {FishBodyPart} from '../utils/fishData';
-import {setState} from './state';
-import constants, {Modes} from './constants';
-import labBackground from '@public/images/lab-background.png';
-import waterBackground from '@public/images/water-background.png';
 
-export const $time =
+import labBackground from '@/assets/images/lab-background.png';
+import waterBackground from '@/assets/images/water-background.png';
+
+import {FishBodyPart} from '../utils/fishData';
+
+import constants, {Modes} from './constants';
+import {type State, setState} from './state';
+
+/** Returns `Date.now()` or a compatible polyfill. */
+export const $time: () => number =
   Date.now ||
-  function() {
+  function () {
     return +new Date();
   };
 
-export const backgroundPathForMode = mode => {
-  let img;
+/**
+ * Returns the background image URL for the given mode, or `null` if the mode
+ * has no background.
+ *
+ * @param mode - A `Modes` integer value.
+ * @returns Absolute image URL or `null`.
+ */
+export const backgroundPathForMode = (mode: number): string | null => {
+  let img: string | undefined;
   if (
     mode === Modes.Words ||
     mode === Modes.Pond ||
@@ -23,10 +34,20 @@ export const backgroundPathForMode = mode => {
   } else if (mode === Modes.Training) {
     img = labBackground;
   }
-  return img ? img : null;
+  return img ?? null;
 };
 
-export const bodyAnchorFromType = (body, type) => {
+/**
+ * Returns the anchor point `[x, y]` on `body` for the given `FishBodyPart` type.
+ *
+ * @param body - Fish body data object containing anchor properties.
+ * @param type - The body-part type constant.
+ * @returns Anchor coordinates as `[x, y]`.
+ */
+export const bodyAnchorFromType = (
+  body: Record<string, [number, number]>,
+  type: number,
+): [number, number] => {
   switch (type) {
     case FishBodyPart.EYE:
       return body.eyeAnchor;
@@ -49,7 +70,18 @@ export const bodyAnchorFromType = (body, type) => {
   }
 };
 
-export const colorForFishPart = (palette, part) => {
+/**
+ * Returns the palette RGB color for a given fish part, or `null` if the part
+ * has no color override.
+ *
+ * @param palette - Color palette with `finRgb`, `bodyRgb` arrays.
+ * @param part - Fish part descriptor with a `type` property.
+ * @returns RGB triple or `null`.
+ */
+export const colorForFishPart = (
+  palette: {finRgb: number[]; bodyRgb: number[]},
+  part: {type: number},
+): number[] | null => {
   switch (part.type) {
     case FishBodyPart.DORSAL_FIN:
     case FishBodyPart.PECTORAL_FIN_FRONT:
@@ -59,70 +91,95 @@ export const colorForFishPart = (palette, part) => {
     case FishBodyPart.BODY:
       return palette.bodyRgb;
     case FishBodyPart.SCALES:
-      //return palette.bodyRgb.map(c => c + 20);
       return [0, 0, 0];
     default:
       return null;
   }
 };
 
-export const randomInt = (min, max) => {
+/**
+ * Returns a random integer in the inclusive range `[min, max]`.
+ *
+ * @param min - Lower bound (inclusive).
+ * @param max - Upper bound (inclusive).
+ * @returns Random integer.
+ */
+export const randomInt = (min: number, max: number): number => {
   min = Math.ceil(min);
   max = Math.floor(max);
   return Math.floor(Math.random() * (max - min + 1)) + min;
 };
 
-export const clamp = (value, min, max) => {
+/**
+ * Clamps `value` to `[min, max]`.
+ *
+ * @param value - The value to clamp.
+ * @param min - Lower bound.
+ * @param max - Upper bound.
+ * @returns Clamped value.
+ */
+export const clamp = (value: number, min: number, max: number): number => {
   return Math.min(Math.max(value, min), max);
 };
 
-// Given a key, returns the value from the browser's current query params.
-export const queryStrFor = key => {
+/**
+ * Returns the query-string value for `key` from the current browser URL.
+ *
+ * @param key - URL parameter name.
+ * @returns Parameter value string, or `undefined` if absent.
+ */
+export const queryStrFor = (
+  key: string,
+): string | string[] | null | undefined => {
   return queryString.parse(location.search)[key];
 };
 
 /**
- * Given fishComponents and an AppMode, will filter any components that should be excluded in that AppMode.
- * Example input: {
- *   bodies: {
- *     body1: {src: 'images/body1.png'},
- *     body2: {
- *       src: 'images/body2.png',
- *       exclusions: [AppMode.FishShort]
- *     }
- *   }
- * }, AppMode.FishShort
+ * Filters fish component options that are excluded for the given `appMode`.
  *
- * Example output: {
- *   bodies: [{src: 'images/body1.png'}]
- * }
+ * Each component entry may have an `exclusions` array; entries whose
+ * `exclusions` include `appMode` are removed.
+ *
+ * @param fishComponents - Map of component-category → component-option map.
+ * @param appMode - The active app mode string.
+ * @returns New object with each category reduced to its allowed options.
  */
-export const filterFishComponents = (fishComponents, appMode) => {
+export const filterFishComponents = (
+  fishComponents: Record<string, Record<string, {exclusions?: string[]}>>,
+  appMode: string | null,
+): Record<string, {exclusions?: string[]}[]> => {
   if (!appMode) {
-    return fishComponents;
+    return fishComponents as unknown as Record<
+      string,
+      {exclusions?: string[]}[]
+    >;
   }
 
-  let filteredCopy = {...fishComponents};
-  Object.keys(filteredCopy).forEach(key => {
-    filteredCopy[key] = Object.values(filteredCopy[key]).filter(
-      option => !(option.exclusions || []).includes(appMode)
+  const filteredCopy: Record<string, {exclusions?: string[]}[]> = {};
+  Object.keys(fishComponents).forEach(key => {
+    filteredCopy[key] = Object.values(fishComponents[key]).filter(
+      option => !(option.exclusions ?? []).includes(appMode),
     );
   });
 
   return filteredCopy;
 };
 
-// Get the base appMode (e.g. "instructions") & optional variant (e.g. "fishy")
-// from the appMode string (e.g. "fishy-instructions") stored in the provided state.
-export const getAppMode = state => {
-  let appModeBase = null;
-  let appModeVariant = null;
+/**
+ * Derives the base app-mode and optional variant from the raw `appMode` string.
+ *
+ * For example, `"fishy-instructions"` → `["instructions", "fishy"]`.
+ *
+ * @param state - Current lab state.
+ * @returns `[appModeBase, appModeVariant]`.
+ */
+export const getAppMode = (state: State): [string | null, string | null] => {
+  let appModeBase: string | null = null;
+  let appModeVariant: string | null = null;
 
   if (state.appMode) {
-    appModeBase = _.last(state.appMode.toLowerCase().split('-'));
+    appModeBase = _.last(state.appMode.toLowerCase().split('-')) ?? null;
 
-    // If the mode is "fishy-instructions" then we extract "fishy" as the
-    // appModeVariant.
     if (appModeBase === 'instructions') {
       appModeVariant = state.appMode.toLowerCase().split('-')[0];
     }
@@ -131,31 +188,54 @@ export const getAppMode = state => {
   return [appModeBase, appModeVariant];
 };
 
-// Given an array of colors and an optional bodyIndex, returns an object
-// that represents a color palette.
-export const generateColorPalette = (colors, bodyIndex = null) => {
-  if (!bodyIndex) {
-    bodyIndex = randomInt(0, colors.length - 1);
-  }
+/**
+ * Builds a color palette object from `colors`, selecting a random body color
+ * (or using `bodyIndex` if provided) and a distinct random fin color.
+ *
+ * @param colors - Array of color descriptors with `rgb`, `knnData`, and `fieldInfos`.
+ * @param bodyIndex - Optional fixed index for the body color.
+ * @returns Palette object with `bodyRgb`, `finRgb`, `knnData`, and `fieldInfos`.
+ */
+export const generateColorPalette = (
+  colors: Array<{rgb: number[]; knnData: number[]; fieldInfos: unknown[]}>,
+  bodyIndex: number | null = null,
+): {
+  bodyRgb: number[];
+  finRgb: number[];
+  knnData: number[];
+  fieldInfos: unknown[];
+} => {
+  const resolvedBodyIndex = bodyIndex ?? randomInt(0, colors.length - 1);
 
-  const bodyColor = colors[bodyIndex];
-  colors = colors.filter((_, index) => index !== bodyIndex);
-  const finIndex = randomInt(0, colors.length - 1);
+  const bodyColor = colors[resolvedBodyIndex];
+  const remainingColors = colors.filter(
+    (_, index) => index !== resolvedBodyIndex,
+  );
+  const finIndex = randomInt(0, remainingColors.length - 1);
 
   return {
     bodyRgb: bodyColor.rgb,
-    finRgb: colors[finIndex].rgb,
-    knnData: [...bodyColor.knnData, ...colors[finIndex].knnData],
-    fieldInfos: [...bodyColor.fieldInfos, ...colors[finIndex].fieldInfos]
+    finRgb: remainingColors[finIndex].rgb,
+    knnData: [...bodyColor.knnData, ...remainingColors[finIndex].knnData],
+    fieldInfos: [
+      ...bodyColor.fieldInfos,
+      ...remainingColors[finIndex].fieldInfos,
+    ],
   };
 };
 
-// If the app is running, returns the amount of time that has passed since state.lastStartTime.
-// If the app is not currently running, 0 is returned.
-export const currentRunTime = (state, clampTime = false) => {
+/**
+ * Returns elapsed run time in ms since `state.lastStartTime`, clamped to
+ * `state.moveTime` if `clampTime` is true. Returns 0 when the lab is paused.
+ *
+ * @param state - Current lab state.
+ * @param clampTime - Whether to cap the returned time at `moveTime`.
+ * @returns Elapsed run time in ms.
+ */
+export const currentRunTime = (state: State, clampTime = false): number => {
   let t = 0;
   if (state.isRunning) {
-    t = $time() - state.lastStartTime;
+    t = $time() - (state.lastStartTime ?? 0);
     if (clampTime && t > state.moveTime) {
       t = state.moveTime;
     }
@@ -164,50 +244,68 @@ export const currentRunTime = (state, clampTime = false) => {
   return t;
 };
 
-// Sets the necessary state to stop fish movement at any time, t.
-// Pausing is optional, but defaults to true.
-export const finishMovement = (t, pause = true) => {
+/**
+ * Stops fish movement by updating the running/pause state fields.
+ *
+ * @param t - Current timestamp used as `lastPauseTime`.
+ * @param pause - Whether to mark the lab as paused (defaults to true).
+ */
+export const finishMovement = (t: number, pause = true): void => {
   setState({
     isRunning: false,
     isPaused: pause,
     lastPauseTime: t,
-    lastStartTime: null
+    lastStartTime: null,
   });
 };
 
-const resetTraining = state => {
-  state.trainer.clearAll();
+/** Clears all KNN/SVM training data and resets yes/no counts. */
+const resetTraining = (state: State): void => {
+  state.trainer?.clearAll();
   setState({
     yesCount: 0,
-    noCount: 0
+    noCount: 0,
   });
 };
 
-export const finishLoading = (startTime, onComplete) => {
+/**
+ * Calls `onComplete` after at least `constants.minLoadingTime` has elapsed
+ * since `startTime`.
+ *
+ * @param startTime - Timestamp when loading began.
+ * @param onComplete - Callback to invoke when the minimum load time has passed.
+ */
+export const finishLoading = (
+  startTime: number,
+  onComplete: () => void,
+): void => {
   const currentTime = $time();
   const minimumEndTime = startTime + constants.minLoadingTime;
-  let delayTime;
-  if (currentTime >= minimumEndTime) {
-    // We are already past the minimumEndTime, so don't wait any more.
-    delayTime = 0;
-  } else {
-    // We are at less than the minimumEndTime, so just wait the remainder of time.
-    delayTime = minimumEndTime - currentTime;
-  }
+  const delayTime =
+    currentTime >= minimumEndTime ? 0 : minimumEndTime - currentTime;
 
   setTimeout(onComplete, delayTime);
 };
 
-export const reportPageView = page => {
-  if (!window.ga || !page) {
+/**
+ * Fires a synthetic Google Analytics pageview for the given page name,
+ * appended to the current pathname.
+ *
+ * @param page - Page identifier appended to `window.location.pathname`.
+ */
+type GaFn = (command: string, ...args: unknown[]) => void;
+
+export const reportPageView = (page: string): void => {
+  const ga = (window as Window & {ga?: GaFn}).ga;
+  if (!ga || !page) {
     return;
   }
 
   const syntheticPagePath = window.location.pathname + '/' + page;
-  window.ga('set', 'page', syntheticPagePath);
-  window.ga('send', 'pageview');
+  ga('set', 'page', syntheticPagePath);
+  ga('send', 'pageview');
 };
 
 export default {
-  resetTraining
+  resetTraining,
 };

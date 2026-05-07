@@ -1,22 +1,21 @@
-import React from 'react';
+import * as React from 'react';
 
-import {getState, setState} from './state';
+import {Loading, ConfirmationDialog} from '@/oceans/components/common';
+import Pond from '@/oceans/components/scenes/pond';
+import Predict from '@/oceans/components/scenes/predict';
+import Train from '@/oceans/components/scenes/train';
+import Words from '@/oceans/components/scenes/words';
+
 import {Modes} from './constants';
-
-import {Loading, ConfirmationDialog} from '@ml/oceans/components/common'
-import Words from "@ml/oceans/components/scenes/words";
-import Train from "@ml/oceans/components/scenes/train";
-import Predict from "@ml/oceans/components/scenes/predict";
-import Pond from "@ml/oceans/components/scenes/pond";
-
+import {getState, setState} from './state';
 
 export default class UI extends React.Component {
   render() {
     const state = getState();
     const currentMode = getState().currentMode;
-    const isLoading = [Modes.Loading, Modes.IntermediateLoading].includes(
-      currentMode
-    );
+    const isLoading = (
+      [Modes.Loading, Modes.IntermediateLoading] as number[]
+    ).includes(currentMode as number);
 
     return (
       <div>
@@ -27,7 +26,7 @@ export default class UI extends React.Component {
         {currentMode === Modes.Pond && <Pond />}
         {state.showConfirmationDialog && (
           <ConfirmationDialog
-            onYesClick={state.confirmationDialogOnYes}
+            onYesClick={state.confirmationDialogOnYes as () => void}
             onNoClick={() => setState({showConfirmationDialog: false})}
           />
         )}

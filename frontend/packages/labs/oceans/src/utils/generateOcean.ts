@@ -1,62 +1,95 @@
-import {
-  FishOceanObject,
-  SeaCreatureOceanObject,
-  TrashOceanObject
-} from '../oceans/OceanObject';
-import {getState} from '../oceans/state';
-import {fishData} from './fishData';
-import {filterFishComponents, generateColorPalette} from '../oceans/helpers';
 import _ from 'lodash';
 
-/*
- * Generates a set of ocean objects of size numFish.
- * This function ensures an even number of bodies, eyes, mouths,
- * and color palettes over the set of FishOceanObjects.
- * If stateloadTrashImages is true it will make half of the objects
- * TrashOceanObjects.
+import {filterFishComponents, generateColorPalette} from '../oceans/helpers';
+import {
+  FishOceanObject,
+  OceanObject,
+  SeaCreatureOceanObject,
+  TrashOceanObject,
+} from '../oceans/OceanObject';
+import {getState} from '../oceans/state';
+
+import {fishData} from './fishData';
+
+/**
+ * Generate a set of OceanObjects of size numFish.
+ *
+ * Ensures an even distribution of bodies, eyes, mouths, and color palettes
+ * across the generated FishOceanObjects. When loadTrashImages or
+ * loadCreatureImages is true the set will also include TrashOceanObjects
+ * and/or SeaCreatureOceanObjects.
+ *
+ * @param numFish - Total number of objects to generate.
+ * @param idStart - Numeric ID to assign to the first generated object.
+ * @param loadFish - When true, FishOceanObjects are included in the pool.
+ * @param loadTrashImages - Override state.loadTrashImages when defined.
+ * @param loadCreatureImages - Override state.loadCreatureImages when defined.
+ * @returns Array of newly randomized OceanObject instances.
  */
 export const generateOcean = (
-  numFish,
+  numFish: number,
   idStart = 0,
   loadFish = true,
-  loadTrashImages,
-  loadCreatureImages
-) => {
+  loadTrashImages?: boolean,
+  loadCreatureImages?: boolean,
+): OceanObject[] => {
   const state = getState();
-  let ocean = [];
-  let possibleObjects = [];
+  let ocean: OceanObject[] = [];
+  const possibleObjects: Array<
+    new (id: number, ...args: unknown[]) => OceanObject
+  > = [];
   if (loadFish) {
-    possibleObjects.push(FishOceanObject);
+    possibleObjects.push(
+      FishOceanObject as unknown as new (
+        id: number,
+        ...args: unknown[]
+      ) => OceanObject,
+    );
   }
   if (
     (loadTrashImages !== undefined && loadTrashImages) ||
     (loadTrashImages === undefined && state.loadTrashImages)
   ) {
-    possibleObjects.push(TrashOceanObject);
+    possibleObjects.push(
+      TrashOceanObject as unknown as new (
+        id: number,
+        ...args: unknown[]
+      ) => OceanObject,
+    );
   }
   if (
     (loadCreatureImages !== undefined && loadCreatureImages) ||
     (loadCreatureImages === undefined && state.loadCreatureImages)
   ) {
-    possibleObjects.push(SeaCreatureOceanObject);
+    possibleObjects.push(
+      SeaCreatureOceanObject as unknown as new (
+        id: number,
+        ...args: unknown[]
+      ) => OceanObject,
+    );
   }
 
   const possibleFishComponents = filterFishComponents(
-    fishData,
-    getState().appMode
+    fishData as unknown as Record<
+      string,
+      Record<string, {exclusions?: string[]}>
+    >,
+    getState().appMode,
   );
   let bodies = _.shuffle(Object.values(possibleFishComponents.bodies));
   let eyes = _.shuffle(Object.values(possibleFishComponents.eyes));
   let mouths = _.shuffle(Object.values(possibleFishComponents.mouths));
-  let colors = _.shuffle(Object.values(possibleFishComponents.colors));
+  let colors = _.shuffle(
+    Object.values(possibleFishComponents.colors),
+  ) as Array<{rgb: number[]; knnData: number[]; fieldInfos: unknown[]}>;
 
-  for (var i = idStart; i < numFish + idStart; ++i) {
+  for (let i = idStart; i < numFish + idStart; ++i) {
     const object = new possibleObjects[i % possibleObjects.length](
       i,
-      possibleFishComponents
+      possibleFishComponents,
     );
     if (object instanceof FishOceanObject) {
-      // For each of these components, use the next variation on the list
+      // For each of these components, use the next variation on the list.
       // Reshuffle the list if we've reached the end to avoid any regularity.
       object.body = bodies[i % bodies.length];
       object.eye = eyes[i % eyes.length];
@@ -85,14 +118,24 @@ export const generateOcean = (
   return ocean;
 };
 
-export const filterOcean = async (ocean, trainer) => {
-  const predictionPromises = [];
-  ocean.forEach((fish, idx) => {
+/**
+ * Run predictions on any un-evaluated objects in the ocean array.
+ *
+ * @param ocean - Array of OceanObjects to evaluate.
+ * @param trainer - Trainer instance with a predict method.
+ * @returns The same array, with results attached to each object.
+ */
+export const filterOcean = async (
+  ocean: OceanObject[],
+  trainer: {predict: (fish: OceanObject) => Promise<unknown>},
+): Promise<OceanObject[]> => {
+  const predictionPromises: Promise<void>[] = [];
+  ocean.forEach(fish => {
     if (!fish.getResult()) {
       predictionPromises.push(
         trainer.predict(fish).then(res => {
           fish.setResult(res);
-        })
+        }),
       );
     }
   });

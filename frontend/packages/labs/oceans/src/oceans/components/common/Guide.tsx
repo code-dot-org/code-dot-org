@@ -1,35 +1,39 @@
-import React from 'react';
+/* eslint-disable jsx-a11y/click-events-have-key-events, jsx-a11y/no-static-element-interactions, jsx-a11y/no-noninteractive-tabindex */
 import Radium from 'radium';
+import * as React from 'react';
 import Typist from 'react-typist';
 
-import '@ml/oceans/styles/fade.css';
+import '@/oceans/styles/fade.css';
 
-import {getState, setState} from '@ml/oceans/state';
-import guide from '@ml/oceans/models/guide';
-import soundLibrary from '@ml/oceans/models/soundLibrary';
-import styles from '@ml/oceans/styles';
-import colors from '@ml/oceans/styles/colors';
-import I18n from '@ml/oceans/i18n';
-import {Button} from '@ml/oceans/components/common';
-import arrowDownImage from '@public/images/arrow-down.png';
+import arrowDownImage from '@/assets/images/arrow-down.png';
+import fingerClickIcon1 from '@/assets/images/finger-click-icon-1.svg';
+import fingerClickIcon2 from '@/assets/images/finger-click-icon-2.svg';
+import Button from '@/oceans/components/common/Button';
+import I18n from '@/oceans/i18n';
+import guide from '@/oceans/models/guide';
+import soundLibrary from '@/oceans/models/soundLibrary';
+import {getState, setState} from '@/oceans/state';
+import styles from '@/oceans/styles';
+import colors from '@/oceans/styles/colors';
 import {
   startTextToSpeech,
   stopTextToSpeech,
-  hasTextToSpeechVoices
-} from '@ml/utils/TextToSpeech';
-import fingerClickIcon1 from '@public/images/finger-click-icon-1.svg';
-import fingerClickIcon2 from '@public/images/finger-click-icon-2.svg';
+  hasTextToSpeechVoices,
+} from '@/utils/TextToSpeech';
 
 export const stopTypingSounds = () => {
   const state = getState();
   if (state.guideTypingTimer) {
-    clearInterval(state.guideTypingTimer);
+    clearInterval(state.guideTypingTimer as ReturnType<typeof setInterval>);
     setState({guideTypingTimer: undefined}, {skipCallback: true});
   }
 };
 
-let UnwrappedGuide = class Guide extends React.Component {
-  guideDialogRef = React.createRef();
+const UnwrappedGuide = class Guide extends React.Component<
+  Record<string, never>
+> {
+  guideDialogRef = React.createRef<HTMLDivElement>();
+  lastFocusedGuideId: string | null = null;
 
   componentDidUpdate() {
     // Focus the dialog only when the guide changes, not on every re-render
@@ -49,11 +53,13 @@ let UnwrappedGuide = class Guide extends React.Component {
     }
   }
   onTypingDone() {
-    clearInterval(getState().guideTypingTimer);
+    clearInterval(
+      getState().guideTypingTimer as ReturnType<typeof setInterval>,
+    );
     setState({guideShowing: true, guideTypingTimer: undefined});
   }
 
-  onGuideKeyDown = e => {
+  onGuideKeyDown = (e: React.KeyboardEvent) => {
     if (e.key === ' ' || e.key === 'Enter' || e.key === 'Spacebar') {
       e.preventDefault();
       this.onGuideClick();
@@ -69,9 +75,9 @@ let UnwrappedGuide = class Guide extends React.Component {
       setState(
         {
           hasTextToSpeechStartedByClick: true,
-          textToSpeechCurrentGuide: currentGuide
+          textToSpeechCurrentGuide: currentGuide,
         },
-        {skipCallback: true}
+        {skipCallback: true},
       );
     } else {
       // Make sure we don't try and dismiss a guide if it's
@@ -93,7 +99,7 @@ let UnwrappedGuide = class Guide extends React.Component {
   // Called from both the guide click handler and the render method, and
   // attempts to play text to speech if needed.  Returns true if it believes
   // it started text to speech.
-  attemptTextToSpeechTextToSpeech = inClickHandler => {
+  attemptTextToSpeechTextToSpeech = (inClickHandler: boolean): boolean => {
     const state = getState();
     const currentGuide = guide.getCurrentGuide();
 
@@ -125,7 +131,7 @@ let UnwrappedGuide = class Guide extends React.Component {
     // believe it has started.
     return startTextToSpeech(
       currentGuide.textFn(getState()),
-      state.textToSpeechLocale
+      state.textToSpeechLocale,
     );
   };
 
@@ -133,7 +139,7 @@ let UnwrappedGuide = class Guide extends React.Component {
     const state = getState();
     const currentGuide = guide.getCurrentGuide();
 
-    let guideBgStyle = [styles.guideBackground];
+    let guideBgStyle: React.CSSProperties[] = [styles.guideBackground];
     if (currentGuide) {
       if (currentGuide.noDimBackground) {
         guideBgStyle = [styles.guideBackgroundHidden];
@@ -192,7 +198,7 @@ let UnwrappedGuide = class Guide extends React.Component {
                 className="guide-dialog"
                 style={{
                   ...styles.guide,
-                  ...styles[`guide${currentGuide.style}`]
+                  ...styles[`guide${currentGuide.style}`],
                 }}
               >
                 <div>
@@ -258,7 +264,7 @@ let UnwrappedGuide = class Guide extends React.Component {
                 src={arrowDownImage}
                 style={{
                   ...styles.guideArrow,
-                  ...styles[`arrow${currentGuide.arrow}`]
+                  ...styles[`arrow${currentGuide.arrow}`],
                 }}
                 alt=""
               />

@@ -1,11 +1,13 @@
-import React from "react";
-import {getState, setState} from "@ml/oceans/state";
-import styles from "@ml/oceans/styles";
-import I18n from "@ml/oceans/i18n";
-import Markdown from "@ml/utils/Markdown";
+/* eslint-disable jsx-a11y/click-events-have-key-events, jsx-a11y/no-static-element-interactions */
+import * as React from 'react';
+
+import I18n from '@/oceans/i18n';
+import {getState, setState} from '@/oceans/state';
+import styles from '@/oceans/styles';
+import Markdown from '@/utils/Markdown';
 
 class PondPanel extends React.Component {
-  onPondPanelClick = e => {
+  onPondPanelClick = (e: React.MouseEvent) => {
     setState({pondPanelShowing: false});
     e.stopPropagation();
   };
@@ -37,8 +39,8 @@ class PondPanel extends React.Component {
                             width:
                               (Math.abs(f.importance) /
                                 state.pondExplainGeneralSummary[0].importance) *
-                              100 +
-                              '%'
+                                100 +
+                              '%',
                           }}
                         >
                           &nbsp;
@@ -70,15 +72,12 @@ class PondPanel extends React.Component {
               <div>
                 <div style={styles.pondPanelPreText} id="pondTextMarkdown">
                   <Markdown
-                    markdown={I18n.t(
-                      'mostImportantPartsDescription',
-                      {
-                        word: state.word.toLowerCase(),
-                        notWord: I18n.t('notWord', {
-                          word: state.word
-                        }).toLowerCase()
-                      }
-                    )}
+                    markdown={I18n.t('mostImportantPartsDescription', {
+                      word: state.word.toLowerCase(),
+                      notWord: I18n.t('notWord', {
+                        word: state.word,
+                      }).toLowerCase(),
+                    })}
                   />
                 </div>
                 {state.pondExplainFishSummary.slice(0, 4).map((f, i) => (
@@ -91,8 +90,8 @@ class PondPanel extends React.Component {
                             ...styles.pondPanelGreenBar,
                             width:
                               ((Math.abs(f.impact) / maxExplainValue) * 100) /
-                              2 +
-                              '%'
+                                2 +
+                              '%',
                           }}
                         >
                           &nbsp;
@@ -110,8 +109,8 @@ class PondPanel extends React.Component {
                             ...styles.pondPanelRedBar,
                             width:
                               ((Math.abs(f.impact) / maxExplainValue) * 100) /
-                              2 +
-                              '%'
+                                2 +
+                              '%',
                           }}
                         >
                           &nbsp;

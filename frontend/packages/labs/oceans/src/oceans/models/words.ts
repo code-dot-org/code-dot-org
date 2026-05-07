@@ -1,11 +1,15 @@
 import {setState} from '../state';
 
-export const init = () => {
+/**
+ * Initialize the words model: set up one fish slot per screen lane.
+ * Fish are created lazily by the renderer as each lane empties.
+ */
+export const init = (): void => {
   // There are 4 lanes on a screen and there should be one fish per lane.
   // Set all the fish to null for now. They'll be created in the renderer.
-  const wordFish = {0: null, 1: null, 2: null, 3: null};
+  const wordFish: Record<number, null> = {0: null, 1: null, 2: null, 3: null};
   setState({
     wordFish: wordFish,
-    fishCount: 0
+    fishCount: 0,
   });
 };

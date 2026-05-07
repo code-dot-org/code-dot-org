@@ -1,14 +1,30 @@
-import 'idempotent-babel-polyfill';
 import _ from 'lodash';
-import {setState, getState} from '../state';
-import constants, {ClassType, AppMode} from '../constants';
 
-export const init = async () => {
+import constants, {ClassType, AppMode} from '../constants';
+import {setState, getState} from '../state';
+import type {State} from '../state';
+
+/** Shape of a fish object as seen from the pond model. */
+interface PondFish {
+  id: unknown;
+  getResult: () => {predictedClassId: number} | null;
+  setResult: (res: unknown) => void;
+  setXY: (pos: {x: number; y: number}) => void;
+  fieldInfos?: unknown[];
+}
+
+/**
+ * Initialize the pond model: run all pending predictions, split fish into
+ * liked/disliked groups, lay them out on screen, and compute explain summaries.
+ *
+ * @returns Promise resolving when all predictions and layout are complete.
+ */
+export const init = async (): Promise<void> => {
   const state = getState();
-  let fishWithPredictions = await predictAllFish(state);
+  const fishWithPredictions = await predictAllFish(state);
   const fishByClassType = _.groupBy(
     fishWithPredictions,
-    fish => fish.getResult().predictedClassId
+    fish => fish.getResult()!.predictedClassId,
   );
 
   let pondFish = fishByClassType[ClassType.Like] || [];
@@ -16,7 +32,7 @@ export const init = async () => {
   pondFish = pondFish.splice(0, constants.maxPondFish);
   const recallFish = (fishByClassType[ClassType.Dislike] || []).splice(
     0,
-    constants.maxPondFish
+    constants.maxPondFish,
   );
   arrangeFish(pondFish);
   arrangeFish(recallFish);
@@ -26,21 +42,38 @@ export const init = async () => {
     state.appMode === AppMode.FishLong
   ) {
     if (pondFish.length > 0 && recallFish.length > 0) {
-      const firstFishFieldInfos = state.fishData[0].fieldInfos;
+      const firstFishFieldInfos = (state.fishData[0] as PondFish).fieldInfos;
+      const trainer = state.trainer as unknown as {
+        summarize: (fieldInfos: unknown) => unknown;
+        explainFish: (fish: unknown) => Array<{impact: number}>;
+      };
       setState({
-        pondExplainGeneralSummary: state.trainer.summarize(firstFishFieldInfos),
+        pondExplainGeneralSummary: trainer.summarize(
+          firstFishFieldInfos,
+        ) as State['pondExplainGeneralSummary'],
         pondFishMaxExplainValue: getMaxExplainValue(pondFish),
-        pondRecallFishMaxExplainValue: getMaxExplainValue(recallFish)
+        pondRecallFishMaxExplainValue: getMaxExplainValue(recallFish),
       });
     }
   }
 };
 
-const predictAllFish = state => {
+/**
+ * Run trainer.predict on every fish in state.fishData that does not yet have a result.
+ *
+ * @param state - Current lab state.
+ * @returns Promise resolving to the array of all fish with predictions attached.
+ */
+const predictAllFish = (
+  state: ReturnType<typeof getState>,
+): Promise<PondFish[]> => {
   return new Promise(resolve => {
-    let fishWithConfidence = [];
-    state.fishData.map((fish, index) => {
-      state.trainer.predict(fish).then(res => {
+    const trainer = state.trainer as unknown as {
+      predict: (fish: unknown) => Promise<unknown>;
+    };
+    const fishWithConfidence: PondFish[] = [];
+    (state.fishData as PondFish[]).map((fish, index) => {
+      trainer.predict(fish).then(res => {
         fish.setResult(res);
         fishWithConfidence.push(fish);
 
@@ -52,11 +85,17 @@ const predictAllFish = state => {
   });
 };
 
-export const arrangeFish = fishes => {
-  let fishPositions = formatArrangement();
+/**
+ * Lay out the given fishes at pre-computed grid positions.
+ *
+ * @param fishes - Array of fish objects with setXY methods.
+ */
+export const arrangeFish = (fishes: PondFish[]): void => {
+  const fishPositions = formatArrangement();
 
   fishes.forEach(fish => {
     const pos = fishPositions.shift();
+    if (!pos) return;
     const x = pos[0] * 140 - 50;
     const y = pos[1] * 150;
 
@@ -64,15 +103,23 @@ export const arrangeFish = fishes => {
   });
 };
 
-// For the fish in the pond, find the maximum explain value.  This will allow
-// us to show charts normalized to the highest value.
-const getMaxExplainValue = fishCollection => {
+/**
+ * Find the maximum absolute impact value across all fish in the collection.
+ * Used to normalise the pond explanation bar charts.
+ *
+ * @param fishCollection - Array of pond fish to evaluate.
+ * @returns Maximum impact value found, or 0.
+ */
+const getMaxExplainValue = (fishCollection: PondFish[]): number => {
   const state = getState();
+  const trainer = state.trainer as unknown as {
+    explainFish: (fish: unknown) => Array<{impact: number}>;
+  };
 
   let maxValue = 0;
 
   fishCollection.forEach(fish => {
-    const summary = state.trainer.explainFish(fish);
+    const summary = trainer.explainFish(fish);
     if (summary.length > 0) {
       const value = Math.abs(summary[0].impact);
       if (value > maxValue) {
@@ -84,18 +131,24 @@ const getMaxExplainValue = fishCollection => {
   return maxValue;
 };
 
-// Describes the 20 possible fish positions on the screen, where the value describes
-// that position's priority. 0 will be filled first, then 1, etc.
-const arrangement = [
+/**
+ * Describes the 20 possible fish positions on the screen.
+ * The value at each cell is the fill priority (0 = highest priority).
+ * null cells are skipped.
+ */
+const arrangement: (number | null)[][] = [
   [2, 1, 0, 0, 0, 1, 2],
   [2, 1, 0, 0, 0, 1, 2],
-  [2, 1, 0, null, 0, 1, 2]
+  [2, 1, 0, null, 0, 1, 2],
 ];
 
-// Reformats the arrangement constant into a 1-dimensional array of x-y coordinates,
-// ordered in priority order (e.g., the spots to fill first appear first in the array).
-const formatArrangement = () => {
-  let intermediateArr = [];
+/**
+ * Reformat the arrangement constant into a priority-ordered 1-D list of [col, row] positions.
+ *
+ * @returns Array of [colIdx, rowIdx] pairs, lowest priority number first.
+ */
+const formatArrangement = (): [number, number][] => {
+  const intermediateArr: [number, number][][] = [];
   arrangement.forEach((row, rowIdx) => {
     row.forEach((col, colIdx) => {
       if (typeof col !== 'number') {
@@ -110,8 +163,7 @@ const formatArrangement = () => {
     });
   });
 
-  // Flatten nested intermediateArr into a 1-dimensional array of x-y coordinates.
-  let formattedArrangement = [];
+  let formattedArrangement: [number, number][] = [];
   intermediateArr.forEach(a => {
     formattedArrangement = formattedArrangement.concat(_.shuffle(a));
   });

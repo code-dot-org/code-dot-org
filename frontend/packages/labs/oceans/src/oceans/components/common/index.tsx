@@ -1,19 +1,19 @@
-import React from 'react';
-import PropTypes from 'prop-types';
+/* eslint-disable jsx-a11y/click-events-have-key-events, jsx-a11y/no-static-element-interactions */
+import * as React from 'react';
 
-import styles from '@ml/oceans/styles';
-import guide from '@ml/oceans/models/guide';
-import Guide from '@ml/oceans/components/common/Guide';
-import Button from '@ml/oceans/components/common/Button';
-import ConfirmationDialog from '@ml/oceans/components/common/ConfirmationDialog';
-import loadingGif from '@public/images/loading.gif';
+import loadingGif from '@/assets/images/loading.gif';
+import Button from '@/oceans/components/common/Button';
+import ConfirmationDialog from '@/oceans/components/common/ConfirmationDialog';
+import Guide from '@/oceans/components/common/Guide';
+import guide from '@/oceans/models/guide';
+import styles from '@/oceans/styles';
 
-class Body extends React.Component {
-  static propTypes = {
-    children: PropTypes.node,
-    onClick: PropTypes.func
-  };
+interface BodyProps {
+  children?: React.ReactNode;
+  onClick?: (event: React.MouseEvent<HTMLDivElement>) => void;
+}
 
+class Body extends React.Component<BodyProps> {
   render() {
     const currentGuide = guide?.getCurrentGuide();
     const modalGuide = currentGuide && !currentGuide.noDimBackground;
@@ -29,10 +29,13 @@ class Body extends React.Component {
   }
 }
 
-const Content = ({children}) => <div style={styles.content}>{children}</div>;
-Content.propTypes = {
-  children: PropTypes.node
-};
+interface ContentProps {
+  children?: React.ReactNode;
+}
+
+const Content = ({children}: ContentProps) => (
+  <div style={styles.content}>{children}</div>
+);
 
 const Loading = () => (
   <Body>

@@ -1,33 +1,168 @@
-const svmjs = require('@code-dot-org/svm');
-import {ClassType} from '../oceans/constants'
+// @ts-expect-error — @code-dot-org/svm has no type declarations
+import svmjs from '@code-dot-org/svm';
 
-const SVM_PARAMS = {maxiter: 500}; // See https://github.com/karpathy/svmjs/blob/b75b71289dd81fc909a5b3fb8b1caf20fbe45121/lib/svm.js#L27
+import {ClassType} from '../oceans/constants';
 
-export default class SVMTrainer {
-  constructor(converterFn) {
-    this.converterFn = converterFn || (input => input); // Default to returning example as-is
+import type {FieldInfo} from './fishData';
+
+/** svmjs training hyper-parameters. See https://github.com/karpathy/svmjs/blob/b75b71289dd81fc909a5b3fb8b1caf20fbe45121/lib/svm.js#L27 */
+const SVM_PARAMS = {maxiter: 500};
+
+/** Internal label used by the svmjs library for the "Like" class. */
+const SVM_LABEL_LIKE = -1;
+/** Internal label used by the svmjs library for the "Dislike" class. */
+const SVM_LABEL_DISLIKE = 1;
+
+/**
+ * Mapping from ocean ClassType values (0/1) to svmjs labels (-1/1).
+ * svmjs only accepts -1 and 1 as binary class labels.
+ */
+const CLASSTYPE_TO_SVM_LABEL: Record<number, number> = {
+  [ClassType.Like]: SVM_LABEL_LIKE,
+  [ClassType.Dislike]: SVM_LABEL_DISLIKE,
+};
+
+/**
+ * Inverse mapping — converts svmjs labels back to ocean ClassType values.
+ */
+const SVM_LABEL_TO_CLASSTYPE: Record<number, number> = {
+  [SVM_LABEL_LIKE]: ClassType.Like,
+  [SVM_LABEL_DISLIKE]: ClassType.Dislike,
+};
+
+/** Result returned by {@link SVMTrainer.predict}. */
+interface PredictionResult {
+  /** The predicted ClassType value, or null when no training data exists. */
+  predictedClassId: number | null;
+  /** Per-class confidence scores keyed by ClassType value. */
+  confidencesByClassId: Record<number, number>;
+}
+
+/** A single labeled training entry stored internally. */
+interface LabeledDatum {
+  /** The converted feature vector for this example. */
+  example: number[];
+  /** The svmjs-compatible label (-1 or 1). */
+  label: number;
+}
+
+/**
+ * A fish object as consumed by {@link SVMTrainer.explainFish}.
+ * Matches the shape built by OceanObject after initFishData has run.
+ */
+interface FishLike {
+  /** Flat feature vector combining all part knnData arrays. */
+  knnData: number[];
+  /** Per-field metadata aligned with knnData by index. */
+  fieldInfos: FieldInfo[];
+}
+
+/** A single entry in the detailed weight breakdown produced by {@link SVMTrainer.detailedExplanation}. */
+interface WeightEntry {
+  /** Field metadata for this dimension. */
+  fieldInfo: FieldInfo;
+  /** Absolute value of the trained SVM weight for this dimension. */
+  absWeight: number;
+  /** Sign of the original weight: +1 means Dislike direction, -1 means Like direction. */
+  sign: number;
+}
+
+/** A single entry in the per-part importance summary produced by {@link SVMTrainer.summarize}. */
+interface PartImportance {
+  /** Anatomical part category (e.g. "bodies", "eyes"). */
+  partType: string;
+  /** Normalized importance, in [0, 1], summing to 1 across all parts. */
+  importance: number;
+}
+
+/** A single entry in the per-part impact breakdown produced by {@link SVMTrainer.explainFish}. */
+interface PartImpact {
+  /** Anatomical part category (e.g. "bodies", "eyes"). */
+  partType: string;
+  /**
+   * Signed contribution of this part to the prediction.
+   * Negative values pull toward Like; positive values pull toward Dislike.
+   */
+  impact: number;
+}
+
+/**
+ * Returns the squared Euclidean magnitude of `vector`.
+ * Used in {@link SVMTrainer.removeBiasTranslate} to normalize the weight vector.
+ *
+ * @param vector - Input numeric vector.
+ * @returns ||vector||^2
+ */
+const magnitudeSquared = (vector: number[]): number => {
+  let sum = 0;
+  for (const x of vector) {
+    sum += Math.pow(x, 2);
+  }
+  return sum;
+};
+
+/**
+ * Wraps `@code-dot-org/svm` (svmjs) with the trainer interface used
+ * by the ocean lab (addTrainingExample / train / predict / clearAll).
+ *
+ * Labels are translated between the ocean convention (Like=0, Dislike=1)
+ * and svmjs convention (Like=-1, Dislike=1) on every boundary.
+ */
+export default class SVMTrainer<T = unknown> {
+  /** Transforms an input example into a flat numeric feature vector. */
+  private readonly converterFn: (input: T) => number[];
+
+  /** The underlying svmjs SVM instance. Re-created on clearAll(). */
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  private svm!: any;
+
+  /** All labeled training examples accumulated since the last clearAll(). */
+  private labeledTrainingData!: LabeledDatum[];
+
+  /** The set of distinct svmjs labels seen in the training data. */
+  private labelsSeen!: Set<number>;
+
+  /**
+   * @param converterFn - Transforms an ocean object into a flat numeric feature
+   *   vector suitable for the SVM.  Defaults to identity (pass-through, assuming
+   *   the input is already number[]).
+   */
+  constructor(converterFn?: (input: T) => number[]) {
+    this.converterFn =
+      converterFn ?? ((input: T) => input as unknown as number[]);
     this.initTrainingState();
   }
 
-  initTrainingState() {
+  /** Resets the SVM and clears all accumulated training data. */
+  private initTrainingState(): void {
     this.svm = new svmjs.SVM();
     this.labeledTrainingData = [];
     this.labelsSeen = new Set();
   }
 
   /**
-   * @param {Array<number>} data
-   * @param {number} classId
+   * Appends a labeled example to the training buffer.
+   *
+   * The example is converted via `converterFn` and the classId is translated
+   * from the ocean scheme (0/1) to the svmjs scheme (-1/1).
+   *
+   * @param example - The ocean object to train on.
+   * @param classId - ClassType value (ClassType.Like or ClassType.Dislike).
    */
-  addTrainingExample(example, classId) {
-    // This SVM library only accepts 1 and -1 as labels; convert from our 0/1 labeling scheme
+  addTrainingExample(example: T, classId: number): void {
     const convertedExample = this.converterFn(example);
     const svmLabel = CLASSTYPE_TO_SVM_LABEL[classId];
     this.labeledTrainingData.push({example: convertedExample, label: svmLabel});
     this.labelsSeen.add(svmLabel);
   }
 
-  train() {
+  /**
+   * Fits the SVM on all buffered training examples.
+   *
+   * No-op when fewer than two examples have been added, since svmjs
+   * requires at least two data points to train.
+   */
+  train(): void {
     if (this.labeledTrainingData.length > 1) {
       const trainingData = this.labeledTrainingData.map(ld => ld.example);
       const trainingLabels = this.labeledTrainingData.map(ld => ld.label);
@@ -36,18 +171,26 @@ export default class SVMTrainer {
   }
 
   /**
-   * @param {Array<number>} data
-   * @returns {Promise<{confidencesByClassId: [], predictedClassId: null}>}
+   * Predicts the class for `example`.
+   *
+   * Returns `predictedClassId: null` when the training buffer is empty.
+   * When only one class has been seen, returns that class with confidence 1
+   * (mirroring KNNTrainer behavior for single-class datasets).
+   *
+   * @param example - The ocean object to classify.
+   * @returns Prediction result with `predictedClassId` and per-class confidence map.
    */
-  async predict(example) {
+  async predict(example: T): Promise<PredictionResult> {
     if (this.labeledTrainingData.length === 0) {
       return {
         predictedClassId: null,
-        confidencesByClassId: {}
+        confidencesByClassId: {},
       };
     }
 
-    let svmLabel, confidence;
+    let svmLabel: number;
+    let confidence: number;
+
     /* The SVM library we use doesn't work unless there's at least one training data point of each label.
      * If there's only one label among the training data, to keep behavior consistent with KNN, return that label. */
     if (this.labelsSeen.size === 1) {
@@ -55,38 +198,41 @@ export default class SVMTrainer {
       confidence = 1;
     } else {
       const inputVector = this.converterFn(example);
-      svmLabel = this.svm.predict([inputVector])[0];
-      confidence = Math.abs(this.svm.marginOne(inputVector));
+      svmLabel = (this.svm.predict([inputVector]) as number[])[0];
+      confidence = Math.abs(this.svm.marginOne(inputVector) as number);
     }
 
-    // This SVM library uses 1 and -1 as labels; convert back to our 0/1 labeling scheme
     const predictedClassId = SVM_LABEL_TO_CLASSTYPE[svmLabel];
-    const confidences = {};
-    confidences[predictedClassId] = confidence;
+    const confidencesByClassId: Record<number, number> = {};
+    confidencesByClassId[predictedClassId] = confidence;
 
     return {
-      predictedClassId: predictedClassId,
-      confidencesByClassId: confidences
+      predictedClassId,
+      confidencesByClassId,
     };
   }
 
-  clearAll() {
+  /** Discards all training data and reinitializes the SVM. */
+  clearAll(): void {
     this.initTrainingState();
   }
 
   /**
-   * @param {Array<FieldInfo>} FieldInfos object which describes each field of the data the model was trained on.
-   *  Currently this is generated by the Fish object, so each Fish object will have an identical fieldInfos field.
-   * @returns {List<{fieldInfo: FieldInfo, absWeight: number}>} The absolute value of the weight of the trained model for each field.
-   *  All absWeight values are real numbers >= 0.
+   * Returns the absolute weight the trained model assigns to each input field,
+   * sorted descending by absolute weight.
+   *
+   * @param fieldInfos - Per-field metadata aligned by index with the knnData
+   *   vector.  Typically sourced from the Fish object used during training.
+   * @returns Array of weight entries sorted by descending absWeight.
    */
-  detailedExplanation(fieldInfos) {
-    const fieldsAndValues = [];
-    for (var i = 0; i < this.svm.w.length; i++) {
+  detailedExplanation(fieldInfos: FieldInfo[]): WeightEntry[] {
+    const fieldsAndValues: WeightEntry[] = [];
+    const weights = this.svm.w as number[];
+    for (let i = 0; i < weights.length; i++) {
       fieldsAndValues.push({
         fieldInfo: fieldInfos[i],
-        absWeight: Math.abs(this.svm.w[i]),
-        sign: this.svm.w[i] >= 0 ? 1 : -1
+        absWeight: Math.abs(weights[i]),
+        sign: weights[i] >= 0 ? 1 : -1,
       });
     }
     fieldsAndValues.sort((a, b) => b.absWeight - a.absWeight);
@@ -94,30 +240,38 @@ export default class SVMTrainer {
   }
 
   /**
-   * @param {Array<FieldInfo>} FieldInfos object which describes each field of the data the model was trained on.
-   *  Currently this is generated by the Fish object, so each Fish object will have an identical fieldInfos field.
-   * @returns {List<{partType: string, importance: number}>} A summary of the importance of each part type (mouth, eyes, etc.) to the model.
-   *  All importance values are real numbers >= 0. Returns null if there is no useful summary info, which happens when there is < 2 data points,
-   *  or there was only one class among training data labels.
+   * Returns a normalized per-part importance summary for the trained model.
+   *
+   * Aggregates weights across all fields belonging to each anatomical part,
+   * treating id (one-hot) fields and attribute fields differently:
+   * - id fields: take the per-part maximum (only one can fire per input).
+   * - attribute fields: sum per part.
+   *
+   * Returns null when no nontrivial model is available (< 2 data points or
+   * only one class in training data).
+   *
+   * @param fieldInfos - Per-field metadata aligned with the knnData vector.
+   * @returns Normalized importance entries sorted descending, or null.
    */
-  summarize(fieldInfos) {
+  summarize(fieldInfos: FieldInfo[]): PartImportance[] | null {
     if (!this.hasNontrivialModel()) {
       return null;
     }
 
     const weightData = this.detailedExplanation(fieldInfos);
+
     /* separate the "id" fields, which are the fields generated by one-hot encoding the variation id for each part, with the "attribute"
      * fields, which are the hand-crafted metadata values such as number of teeth, since we need to treat the two differently in the summary. */
     const idFields = weightData.filter(d => d.fieldInfo.fieldType === 'id');
     const attributeFields = weightData.filter(
-      d => d.fieldInfo.fieldType === 'attribute'
+      d => d.fieldInfo.fieldType === 'attribute',
     );
 
     /* Aggregate all the fields generated by one-hot encoding back into one per part, since we don't want the number of variations for a part
      * to influence its weight.
      * Aggregate by picking the maximum value per part, since only one of these fields can be "used" for a particular input.
      * This is a heuristic from experimenting and seeing what "looks right", may not be ideal in all cases. - @winter */
-    const idFieldsSummary = {};
+    const idFieldsSummary: Record<string, number> = {};
     for (const fieldWithWeight of idFields) {
       const partType = fieldWithWeight.fieldInfo.partType;
       if (
@@ -129,7 +283,7 @@ export default class SVMTrainer {
     }
 
     // Sum all of the weights per part from the attribute fields and the idFieldsSummary. Result is a map of partType: totalAbsWeight.
-    const rawSummary = {};
+    const rawSummary: Record<string, number> = {};
     for (const fieldWithWeight of attributeFields) {
       const partType = fieldWithWeight.fieldInfo.partType;
       if (!Object.prototype.hasOwnProperty.call(rawSummary, partType)) {
@@ -146,31 +300,31 @@ export default class SVMTrainer {
 
     // Sort entries and convert to return format.
     const sortedSummary = Object.entries(rawSummary)
-      .map(e => {
-        return {partType: e[0], importance: e[1]};
-      })
+      .map(e => ({partType: e[0], importance: e[1]}))
       .sort((a, b) => b.importance - a.importance);
 
     // Normalize importance such that all of the importance values add up to 1. This lets us use results as percentages if we want.
-    var denominator = 0;
+    let denominator = 0;
     for (const partWithImportance of sortedSummary) {
       denominator += partWithImportance.importance;
     }
-    const sortedAndNormalizedSummary = sortedSummary.map(p => {
-      return {partType: p.partType, importance: p.importance / denominator};
-    });
-    return sortedAndNormalizedSummary;
+    return sortedSummary.map(p => ({
+      partType: p.partType,
+      importance: p.importance / denominator,
+    }));
   }
 
   /**
-   * @param {Fish} Fish object to explain the model's prediction for.
-   *  Currently this is generated by the Fish object, so each Fish object will have an identical fieldInfos field.
-   * @returns {List<{partType: string, impact: number}>} A summary of the impact of each part type (mouth, eyes, etc.) on the prediction
-   *  result for this specific fish. Impact can be a positive or negative real number - a larger absolute value means more impact. A negative
-   *  impact means it contributed to a "Like" and a positive impact means it contributed to a "Dislike". Returns null if there is no useful
-   *  summary info, which happens when there is < 2 data points, or there was only one class among training data labels.
+   * Returns the signed per-part impact of each anatomical feature on the
+   * prediction for a specific fish, after removing the bias term.
+   *
+   * A negative impact contributes toward "Like"; positive toward "Dislike".
+   * Returns null when no nontrivial model is available.
+   *
+   * @param fish - The fish object to explain, supplying knnData and fieldInfos.
+   * @returns Impact entries sorted by descending absolute impact, or null.
    */
-  explainFish(fish) {
+  explainFish(fish: FishLike): PartImpact[] | null {
     if (!this.hasNontrivialModel()) {
       return null;
     }
@@ -178,73 +332,71 @@ export default class SVMTrainer {
     /* Translate the fish's data to "remove" the bias term from the model. The relative weights for each field don't always correspond to
      * contribution to prediction with a high bias value, which will happen for skewed data sets. */
     const translatedVector = this.removeBiasTranslate(fish.knnData);
+    const weights = this.svm.w as number[];
 
-    const impactByPart = {};
-    for (var i = 0; i < this.svm.w.length; i++) {
+    const impactByPart: Record<string, number> = {};
+    for (let i = 0; i < weights.length; i++) {
       const partType = fish.fieldInfos[i].partType;
       if (!Object.prototype.hasOwnProperty.call(impactByPart, partType)) {
         impactByPart[partType] = 0;
       }
-
-      impactByPart[partType] += this.svm.w[i] * translatedVector[i];
+      impactByPart[partType] += weights[i] * translatedVector[i];
     }
 
-    const sortedImpact = Object.entries(impactByPart)
-      .map(e => {
-        return {partType: e[0], impact: e[1]};
-      })
+    return Object.entries(impactByPart)
+      .map(e => ({partType: e[0], impact: e[1]}))
       .sort((a, b) => Math.abs(b.impact) - Math.abs(a.impact));
-
-    return sortedImpact;
   }
 
-  /* Translates the given input vector such that the model would give the same prediction without its bias term.
-   * Used so we can explain the importance of each feature without the concepot of bias.
+  /**
+   * Translates `vector` so that the model gives the same prediction without
+   * its bias term.
+   *
+   * For bias b, weights a, and input x the translation adds (b / ||a||^2) * a,
+   * which moves the separating hyperplane along its normal until it passes
+   * through the origin and applies the same shift to the input.
+   *
+   * @param vector - The input feature vector to translate.
+   * @returns A new vector shifted to cancel the model's bias.
    */
-  removeBiasTranslate(vector) {
-    // For bias term b, model weights a = [a1, a2, ... ad] and input vector [x1, x2, ... xd], the translation vector we add to
-    // the original vector is (b / ||a||^2) * a. The intuition is that we are translating the separating hyperplane along its perpendicular
-    // vector until it intersects with the origin, and applying the same translation to the input vector.
-    const translationConstant = this.svm.b / magnitude_squared(this.svm.w);
-    const translationVector = this.svm.w.map(x => x * translationConstant);
+  private removeBiasTranslate(vector: number[]): number[] {
+    const weights = this.svm.w as number[];
+    const bias = this.svm.b as number;
+    const translationConstant = bias / magnitudeSquared(weights);
+    const translationVector = weights.map(x => x * translationConstant);
 
-    const result = [];
-    for (var i = 0; i < vector.length; i++) {
+    const result: number[] = [];
+    for (let i = 0; i < vector.length; i++) {
       result[i] = vector[i] + translationVector[i];
     }
     return result;
   }
 
-  // Only needed for testing / validation of removeBiasTranslate
-  translatedPredict(vector) {
+  /**
+   * Predicts `vector` after removing the bias term.  Used only for testing
+   * and validation of {@link removeBiasTranslate}.
+   *
+   * @param vector - The input feature vector.
+   * @returns 1 if the translated margin is positive, 0 otherwise.
+   */
+  translatedPredict(vector: number[]): number {
     const translatedVector = this.removeBiasTranslate(vector);
-    var margin = 0;
-    for (var i = 0; i < translatedVector.length; i++) {
-      margin += this.svm.w[i] * translatedVector[i];
+    const weights = this.svm.w as number[];
+    let margin = 0;
+    for (let i = 0; i < translatedVector.length; i++) {
+      margin += weights[i] * translatedVector[i];
     }
     return margin > 0 ? 1 : 0;
   }
 
-  hasNontrivialModel() {
-    // If we have a weight vector and it has at least one nonzero value, return true, otherwise return false
-    return this.svm.w && this.svm.w.find(weight => weight !== 0);
+  /**
+   * Returns true when the trained model has at least one nonzero weight,
+   * indicating that it can produce meaningful explanations.
+   *
+   * @returns Whether the model has a nontrivial weight vector.
+   */
+  hasNontrivialModel(): boolean {
+    const weights = this.svm.w as number[] | undefined;
+    return !!(weights && weights.find(weight => weight !== 0));
   }
 }
-
-const CLASSTYPE_TO_SVM_LABEL = {
-  [ClassType.Like]: -1,
-  [ClassType.Dislike]: 1
-};
-const SVM_LABEL_TO_CLASSTYPE = {
-  [-1]: ClassType.Like,
-  [1]: ClassType.Dislike
-};
-
-// helper function - returns ||v|||^2 for input vector v
-const magnitude_squared = vector => {
-  var sum = 0;
-  for (const x of vector) {
-    sum += Math.pow(x, 2);
-  }
-  return sum;
-};

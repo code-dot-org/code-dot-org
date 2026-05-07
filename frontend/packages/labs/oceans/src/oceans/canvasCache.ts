@@ -1,46 +1,55 @@
 const CACHE_SIZE = 25;
 
+interface CanvasEntry {
+  key: string | null;
+  canvas: HTMLCanvasElement;
+}
+
+/**
+ * LRU cache of HTMLCanvasElements, keyed by an arbitrary string.
+ *
+ * Avoids repeated `document.createElement('canvas')` calls for frequently
+ * re-drawn fish frames. The most-recently-used canvas lives at index 0;
+ * the least-recently-used is evicted when a miss occurs.
+ */
 export default class CanvasCache {
-  /*
-   * Instantiates this.canvases that holds CACHE_SIZE canvases. this.canvases
-   * is ordered by most recent use, with the canvas at spot 0 being *most*
-   * recently used.
-   */
+  private readonly canvases: CanvasEntry[];
+
   constructor() {
     this.canvases = [];
-    for (var i = 0; i < CACHE_SIZE; ++i) {
+    for (let i = 0; i < CACHE_SIZE; ++i) {
       this.canvases.push({
         key: null,
-        canvas: document.createElement('canvas')
+        canvas: document.createElement('canvas'),
       });
     }
   }
 
-  clearCache() {
-    this.canvases.map(canvas => canvas.key = null);
+  /** Invalidates all entries without releasing the underlying canvas elements. */
+  clearCache(): void {
+    this.canvases.forEach(entry => (entry.key = null));
   }
 
-  /*
-   * Takes a cache key and returns an array of [canvas, hit]
-   * canvas is a canvas reserved for the caller.
-   * hit indicates whether there was a cache hit
-   * The caller should not make assumptions about the state of the canvas if
-   * there was not a cache hit.
+  /**
+   * Returns a canvas reserved for the caller and a boolean indicating whether
+   * the canvas already contains the content for `key` (cache hit).
+   *
+   * The caller must not assume anything about the canvas state on a miss.
+   *
+   * @param key - Opaque cache key identifying the desired canvas content.
+   * @returns `[canvas, hit]` — the reserved canvas and whether it was a hit.
    */
-  getCanvas(key) {
-    var canvasObjectIdx = this.canvases.findIndex(elem => elem.key === key);
-    // If the key isn't in the cache then we want to grab the last element.
-    if (canvasObjectIdx === -1) {
-      canvasObjectIdx = this.canvases.length - 1;
+  getCanvas(key: string): [HTMLCanvasElement, boolean] {
+    let entryIdx = this.canvases.findIndex(elem => elem.key === key);
+    // On a miss, evict the least-recently-used (last) entry.
+    if (entryIdx === -1) {
+      entryIdx = this.canvases.length - 1;
     }
-    const canvasObject = this.canvases.splice(canvasObjectIdx, 1)[0];
-    var cacheHit = true;
-    if (canvasObject.key !== key) {
-      cacheHit = false;
-      canvasObject.key = key;
-    }
-    // Add this canvas to the front of the array (most recently used)
-    this.canvases.unshift(canvasObject);
-    return [canvasObject.canvas, cacheHit];
+    const entry = this.canvases.splice(entryIdx, 1)[0];
+    const cacheHit = entry.key === key;
+    entry.key = key;
+    // Promote to front (most-recently-used).
+    this.canvases.unshift(entry);
+    return [entry.canvas, cacheHit];
   }
 }

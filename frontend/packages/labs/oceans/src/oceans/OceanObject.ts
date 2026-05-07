@@ -1,30 +1,56 @@
-import * as mobilenetModule from '@tensorflow-models/mobilenet';
 import * as tf from '@tensorflow/tfjs';
+import * as mobilenetModule from '@tensorflow-models/mobilenet';
+
 import {fishData, FishBodyPart} from '../utils/fishData';
+import {trashImagePaths, seaCreatureImagePaths} from '../utils/imagePaths';
+
 import constants from './constants';
 import {
   bodyAnchorFromType,
   colorForFishPart,
-  generateColorPalette
+  generateColorPalette,
 } from './helpers';
-import {trashImagePaths, seaCreatureImagePaths} from '../utils/imagePaths';
-import model from './model.json';
 
-let fishPartImages = {};
-let trashImages = [];
-let seaCreatureImages = [];
+// Both model.json and group1-shard1of1.bin are emitted to assets/models/ by
+// the emitModelAssets Vite plugin (vite.config.ts). At runtime import.meta.url
+// resolves relative to this bundle's location so TFJS can fetch both files.
+const modelUrl = new URL('./assets/models/model.json', import.meta.url).href;
+
+/** Index of loaded fish part images, keyed by part type then variation index. */
+const fishPartImages: Record<number, Record<number, HTMLImageElement>> = {};
+
+/** Loaded trash images, ordered by index from trashImagePaths. */
+const trashImages: HTMLImageElement[] = [];
+
+/** Loaded sea-creature images, ordered by index from seaCreatureImagePaths. */
+const seaCreatureImages: HTMLImageElement[] = [];
+
 // Used to tint the fish components
-let intermediateCanvas;
+let intermediateCanvas: HTMLCanvasElement;
 // Used to draw the object in order to evaluate it when using mobilenet
-let evaluationCanvas;
-let intermediateCtx;
-let mobilenet;
+let evaluationCanvas: HTMLCanvasElement;
+let intermediateCtx: CanvasRenderingContext2D | null;
+let mobilenet: mobilenetModule.MobileNet | undefined;
+
+/** Metadata attached to each image loaded via loadImage. */
+interface ImageLoadData {
+  src: string;
+  idx?: number;
+  partIndex?: number;
+  variationIndex?: number;
+}
+
+/** Result of a loadImage call — the loaded element plus the original data. */
+interface ImageLoadResult {
+  img: HTMLImageElement;
+  data: ImageLoadData;
+}
 
 // Load a single image.
-const loadImage = data => {
+const loadImage = (data: ImageLoadData): Promise<ImageLoadResult> => {
   return new Promise((resolve, reject) => {
     const img = new Image();
-    img.addEventListener('load', e => resolve({img, data}));
+    img.addEventListener('load', () => resolve({img, data}));
     img.addEventListener('error', () => {
       reject(new Error(`failed to load image at ${data.src}`));
     });
@@ -32,79 +58,93 @@ const loadImage = data => {
   });
 };
 
-// Load all fish part images, and store them in fishPartImages.
-export const loadAllFishPartImages = () => {
+/** Load all fish part images and store them in the fishPartImages registry. */
+export const loadAllFishPartImages = (): Promise<void> => {
   intermediateCanvas = document.createElement('canvas');
   intermediateCtx = intermediateCanvas.getContext('2d');
   intermediateCanvas.width = constants.fishCanvasWidth;
   intermediateCanvas.height = constants.fishCanvasHeight;
   evaluationCanvas = document.createElement('canvas');
 
-  let fishPartImagesToLoad = [];
+  const fishPartImagesToLoad: ImageLoadData[] = [];
   Object.keys(fishData)
     .filter(partName => partName !== 'colors')
-    .forEach((partName, partIndex) => {
-      Object.keys(fishData[partName]).forEach(variationName => {
-        const partData = {
-          partIndex: fishData[partName][variationName].type,
-          variationIndex: fishData[partName][variationName].index,
-          src: fishData[partName][variationName].src
+    .forEach(partName => {
+      const part = fishData[partName as keyof typeof fishData] as Record<
+        string,
+        {type: number; index: number; src: string}
+      >;
+      Object.keys(part).forEach(variationName => {
+        const partData: ImageLoadData = {
+          partIndex: part[variationName].type,
+          variationIndex: part[variationName].index,
+          src: part[variationName].src,
         };
         fishPartImagesToLoad.push(partData);
       });
     });
   return Promise.all(fishPartImagesToLoad.map(loadImage)).then(results => {
     results.forEach(result => {
-      if (fishPartImages[result.data.partIndex] === undefined) {
-        fishPartImages[result.data.partIndex] = {};
+      if (fishPartImages[result.data.partIndex!] === undefined) {
+        fishPartImages[result.data.partIndex!] = {};
       }
-      fishPartImages[result.data.partIndex][result.data.variationIndex] =
+      fishPartImages[result.data.partIndex!][result.data.variationIndex!] =
         result.img;
     });
   });
 };
 
-export const initMobilenet = () => {
-  return mobilenetModule
-    .load({version: 1, modelUrl: model})
-    .then(res => (mobilenet = res));
+/** Initialize the mobilenet model used for logit generation. */
+export const initMobilenet = (): Promise<void> => {
+  return mobilenetModule.load({version: 1, modelUrl: modelUrl}).then(res => {
+    mobilenet = res;
+  });
 };
 
-// Load all of the trash assets and store them
-export const loadAllTrashImages = () => {
+/** Load all trash asset images and store them in the trashImages registry. */
+export const loadAllTrashImages = (): Promise<void> => {
   const loadImagePromises = trashImagePaths.map((src, idx) => {
     return loadImage({src, idx});
   });
   return Promise.all(loadImagePromises).then(results => {
     results.forEach(result => {
-      trashImages[result.data.idx] = result.img;
+      trashImages[result.data.idx!] = result.img;
     });
   });
 };
 
-// Load all of the sea creature assets and store them
-export const loadAllSeaCreatureImages = () => {
+/** Load all sea-creature asset images and store them in the seaCreatureImages registry. */
+export const loadAllSeaCreatureImages = (): Promise<void> => {
   const loadImagePromises = seaCreatureImagePaths.map((src, idx) => {
     return loadImage({src, idx});
   });
   return Promise.all(loadImagePromises).then(results => {
     results.forEach(result => {
-      seaCreatureImages[result.data.idx] = result.img;
+      seaCreatureImages[result.data.idx!] = result.img;
     });
   });
 };
 
-// Generate a single object with an even chance of being
-// any of the allowed classes
+/**
+ * Generate a single OceanObject chosen at random from the provided allowed classes.
+ *
+ * @param allowedClasses - Constructor types to pick from.
+ * @param id - Unique numeric ID for the new object.
+ * @param possibleFishComponents - Fish component options (used only for FishOceanObject).
+ * @returns A newly randomized OceanObject instance.
+ */
 export const generateRandomOceanObject = (
-  allowedClasses,
-  id,
-  possibleFishComponents = null
-) => {
+  allowedClasses: Array<new (...args: unknown[]) => OceanObject>,
+  id: number,
+  possibleFishComponents: unknown = null,
+): OceanObject => {
   const idx = Math.floor(Math.random() * allowedClasses.length);
   const OceanObjectType = allowedClasses[idx];
-  let newOceanObject;
-  if (OceanObjectType === FishOceanObject) {
+  let newOceanObject: OceanObject;
+  if (
+    OceanObjectType ===
+    (FishOceanObject as unknown as new (...args: unknown[]) => OceanObject)
+  ) {
     newOceanObject = new OceanObjectType(id, possibleFishComponents);
   } else {
     newOceanObject = new OceanObjectType(id);
@@ -114,85 +154,192 @@ export const generateRandomOceanObject = (
   return newOceanObject;
 };
 
+/** Base class for all objects that appear in the ocean scene. */
 export class OceanObject {
-  constructor(id) {
+  /** Unique identifier for this object. */
+  id: number | string;
+
+  /** Flattened numeric feature vector used by KNN classifier. */
+  knnData: number[] | null;
+
+  /** Cached mobilenet inference tensor. */
+  logits: unknown | null;
+
+  /** Classifier result attached after prediction. */
+  result: unknown | null;
+
+  /** Current screen position of the object. */
+  xy?: {x: number; y: number};
+
+  constructor(id: number | string) {
     this.id = id;
     this.knnData = null;
     this.logits = null;
     this.result = null;
   }
 
-  randomize() {
+  /** Randomize this object's visual properties. Must be overridden in subclasses. */
+  randomize(): void {
     throw 'Not yet implemented!';
   }
 
-  // Draws the object to the given canvas and
-  // generates the mobilenet data (logits) if generateLogits is true
-  drawToCanvas(canvas, generateLogits = true) {
+  /**
+   * Draw the object to the given canvas and optionally generate mobilenet logits.
+   *
+   * @param canvas - Target canvas element.
+   * @param generateLogits - When true, queue async logit generation after drawing.
+   */
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  drawToCanvas(_canvas: HTMLCanvasElement, _generateLogits = true): void {
     throw 'Not yet implemented!';
   }
-  getId() {
+
+  /** @returns The unique ID of this object. */
+  getId(): number | string {
     return this.id;
   }
-  getKnnData() {
+
+  /** @returns The KNN feature vector, or null if not yet computed. */
+  getKnnData(): number[] | null {
     return this.knnData;
   }
-  getTensor() {
+
+  /**
+   * Returns the tensor representation of this object.
+   * Uses mobilenet logits when available; falls back to knnData tensor.
+   *
+   * @returns A TensorFlow tensor or the cached mobilenet logits.
+   */
+  getTensor(): unknown {
     if (mobilenet) {
       if (!this.logits) {
         const evaluationCtx = evaluationCanvas.getContext('2d');
-        evaluationCtx.clearRect(
+        evaluationCtx!.clearRect(
           0,
           0,
           evaluationCanvas.width,
-          evaluationCanvas.height
+          evaluationCanvas.height,
         );
         this.drawToCanvas(evaluationCanvas, false);
         this.generateLogits(evaluationCanvas);
       }
       return this.logits;
     } else {
-      return tf.tensor(this.knnData);
+      return tf.tensor(this.knnData!);
     }
   }
-  setResult(result) {
+
+  /**
+   * Attach a classifier result to this object.
+   *
+   * @param result - Prediction result from the trainer.
+   */
+  setResult(result: unknown): void {
     this.result = result;
   }
-  getResult() {
+
+  /** @returns The attached classifier result, or null. */
+  getResult(): unknown {
     return this.result;
   }
-  setXY(xy) {
+
+  /**
+   * Store the screen position of this object.
+   *
+   * @param xy - Object with x and y canvas coordinates.
+   */
+  setXY(xy: {x: number; y: number}): void {
     this.xy = xy;
   }
-  getXY() {
+
+  /** @returns The current screen position, or undefined if not set. */
+  getXY(): {x: number; y: number} | undefined {
     return this.xy;
   }
 
-  async generateLogitsAsync(canvas) {
+  /**
+   * Async wrapper around generateLogits — queues logit computation without
+   * blocking the caller.
+   *
+   * @param canvas - Canvas whose pixel content drives the inference.
+   */
+  async generateLogitsAsync(canvas: HTMLCanvasElement): Promise<void> {
     this.generateLogits(canvas);
   }
 
-  // If using mobilenet, generate a tensor that represents the canvas
-  generateLogits(canvas) {
+  /**
+   * If mobilenet is loaded and logits have not been computed, run inference on
+   * the given canvas and cache the result.
+   *
+   * @param canvas - Source canvas for mobilenet inference.
+   */
+  generateLogits(canvas: HTMLCanvasElement): void {
     if (mobilenet && !this.logits) {
       const image = tf.browser.fromPixels(canvas);
-      const infer = () => mobilenet.infer(image, 'conv_preds');
+      // Pass true to get the embedding (conv_preds layer equivalent).
+      const infer = () => mobilenet!.infer(image, true);
       this.logits = infer();
     }
   }
 }
 
-/*
- * Fish object that is generated from FishData
- *
- * */
+/**
+ * Fish object composed from randomly selected parts in FishData.
+ */
 export class FishOceanObject extends OceanObject {
-  constructor(id, componentOptions = fishData) {
+  /** Available component options for this fish. */
+  componentOptions: typeof fishData;
+
+  /** Selected body part. */
+  body: unknown;
+
+  /** Selected eye part. */
+  eye: unknown;
+
+  /** Selected mouth part. */
+  mouth: unknown;
+
+  /** Selected front pectoral fin part. */
+  pectoralFinFront: unknown;
+
+  /** Selected back pectoral fin part. */
+  pectoralFinBack: unknown;
+
+  /** Selected dorsal fin part. */
+  dorsalFin: unknown;
+
+  /** Selected tail part. */
+  tail: unknown;
+
+  /** Selected scales part. */
+  scales: unknown;
+
+  /** Selected color palette. */
+  colorPalette: unknown;
+
+  /** Flattened field info arrays from each selected part. */
+  fieldInfos: unknown[];
+
+  /** When true the fish swims to the left; default is right. */
+  faceLeft?: boolean;
+
+  /** Per-frame start time for words-mode fish animation. */
+  startTime?: number;
+
+  /** Per-frame speed for words-mode fish animation (ms to cross the screen). */
+  speed?: number;
+
+  constructor(
+    id: number | string,
+    componentOptions: typeof fishData = fishData,
+  ) {
     super(id);
     this.componentOptions = componentOptions;
+    this.fieldInfos = [];
   }
 
-  randomize() {
+  /** Randomize all fish component selections and compute the knnData vector. */
+  randomize(): void {
     if (!this.body) {
       const bodies = Object.values(this.componentOptions.bodies);
       this.body = bodies[Math.floor(Math.random() * bodies.length)];
@@ -207,10 +354,10 @@ export class FishOceanObject extends OceanObject {
     }
     if (!this.pectoralFinFront) {
       const pectoralFinsFront = Object.values(
-        this.componentOptions.pectoralFinsFront
+        this.componentOptions.pectoralFinsFront,
       );
       const pectoralFinsBack = Object.values(
-        this.componentOptions.pectoralFinsBack
+        this.componentOptions.pectoralFinsBack,
       );
 
       const finIdx = Math.floor(Math.random() * pectoralFinsFront.length);
@@ -231,36 +378,60 @@ export class FishOceanObject extends OceanObject {
       this.scales = scales[Math.floor(Math.random() * scales.length)];
     }
     if (!this.colorPalette) {
-      const colors = Object.values(this.componentOptions.colors);
+      const colors = Object.values(this.componentOptions.colors) as Array<{
+        rgb: number[];
+        knnData: number[];
+        fieldInfos: unknown[];
+      }>;
       this.colorPalette = generateColorPalette(colors);
     }
+
+    type PartWithData = {knnData: number[]; fieldInfos: unknown[]};
+    const b = this.body as PartWithData;
+    const e = this.eye as PartWithData;
+    const m = this.mouth as PartWithData;
+    const d = this.dorsalFin as PartWithData;
+    const t = this.tail as PartWithData;
+    const c = this.colorPalette as PartWithData;
+
     this.knnData = [
-      ...this.body.knnData,
-      ...this.eye.knnData,
-      ...this.mouth.knnData,
-      ...this.dorsalFin.knnData,
-      ...this.tail.knnData,
-      ...this.colorPalette.knnData
+      ...b.knnData,
+      ...e.knnData,
+      ...m.knnData,
+      ...d.knnData,
+      ...t.knnData,
+      ...c.knnData,
     ];
     this.fieldInfos = [
-      ...this.body.fieldInfos,
-      ...this.eye.fieldInfos,
-      ...this.mouth.fieldInfos,
-      ...this.dorsalFin.fieldInfos,
-      ...this.tail.fieldInfos,
-      ...this.colorPalette.fieldInfos
+      ...b.fieldInfos,
+      ...e.fieldInfos,
+      ...m.fieldInfos,
+      ...d.fieldInfos,
+      ...t.fieldInfos,
+      ...c.fieldInfos,
     ];
   }
 
-  getColorPalette() {
+  /** @returns The selected color palette for this fish. */
+  getColorPalette(): unknown {
     return this.colorPalette;
   }
 
-  drawFishFace(bodyAnchor, ctx) {
-    const anchor = this.body.faceAnchor;
+  /**
+   * Draw the eye and mouth onto the fish canvas at the face anchor point.
+   *
+   * @param bodyAnchor - [x, y] origin of the body bounding box.
+   * @param ctx - Canvas 2D rendering context to draw into.
+   */
+  drawFishFace(bodyAnchor: number[], ctx: CanvasRenderingContext2D): void {
+    type PartWithAnchor = {faceAnchor: number[]};
+    type IndexedPart = {type: number; index: number};
+    const anchor = (this.body as PartWithAnchor).faceAnchor;
 
-    const eyeImg = fishPartImages[this.eye.type][this.eye.index];
-    const mouthImg = fishPartImages[this.mouth.type][this.mouth.index];
+    const eyePart = this.eye as IndexedPart;
+    const mouthPart = this.mouth as IndexedPart;
+    const eyeImg = fishPartImages[eyePart.type][eyePart.index];
+    const mouthImg = fishPartImages[mouthPart.type][mouthPart.index];
 
     const maxComponentWidth = Math.max(eyeImg.width, mouthImg.width);
     const distBetweenEyeAndMouth = 5;
@@ -268,73 +439,94 @@ export class FishOceanObject extends OceanObject {
     ctx.drawImage(
       eyeImg,
       bodyAnchor[0] + anchor[0] + (maxComponentWidth - eyeImg.width) / 2,
-      bodyAnchor[1] + anchor[1]
+      bodyAnchor[1] + anchor[1],
     );
     ctx.drawImage(
       mouthImg,
       bodyAnchor[0] + anchor[0] + (maxComponentWidth - mouthImg.width) / 2,
-      bodyAnchor[1] + anchor[1] + eyeImg.height + distBetweenEyeAndMouth
+      bodyAnchor[1] + anchor[1] + eyeImg.height + distBetweenEyeAndMouth,
     );
   }
 
-  drawFishComponent(part, bodyAnchor, ctx) {
-    intermediateCtx.clearRect(
+  /**
+   * Draw and color-tint a single fish component onto the intermediate canvas
+   * then composite the result into the target context.
+   *
+   * @param part - The fish body part data including type, index, and anchoring info.
+   * @param bodyAnchor - [x, y] origin of the body bounding box.
+   * @param ctx - Canvas 2D rendering context to draw into.
+   */
+  drawFishComponent(
+    part: unknown,
+    bodyAnchor: number[],
+    ctx: CanvasRenderingContext2D,
+  ): void {
+    type Part = {type: number; index: number; x_adjustment?: number};
+    const p = part as Part;
+
+    intermediateCtx!.clearRect(
       0,
       0,
       constants.fishCanvasWidth,
-      constants.fishCanvasHeight
+      constants.fishCanvasHeight,
     );
 
-    let anchor = [0, 0];
-    if (part.type !== FishBodyPart.BODY) {
-      const bodyAnchor = bodyAnchorFromType(this.body, part.type);
-      anchor[0] = bodyAnchor[0];
-      anchor[1] = bodyAnchor[1];
+    const anchor = [0, 0];
+    if (p.type !== FishBodyPart.BODY) {
+      const bodyAnch = bodyAnchorFromType(
+        this.body as Parameters<typeof bodyAnchorFromType>[0],
+        p.type,
+      );
+      anchor[0] = bodyAnch[0];
+      anchor[1] = bodyAnch[1];
     }
 
-    const img = fishPartImages[part.type][part.index];
+    const img = fishPartImages[p.type][p.index];
 
-    if (part.type === FishBodyPart.TAIL) {
+    if (p.type === FishBodyPart.TAIL) {
       anchor[1] -= img.height / 2;
     }
 
-    if (part.type === FishBodyPart.DORSAL_FIN) {
+    if (p.type === FishBodyPart.DORSAL_FIN) {
       anchor[1] -= img.height;
-      if (part.x_adjustment) {
-        anchor[0] += part.x_adjustment;
+      if (p.x_adjustment) {
+        anchor[0] += p.x_adjustment;
       }
     }
 
     const xPos = bodyAnchor[0] + anchor[0];
     const yPos = bodyAnchor[1] + anchor[1];
-    if (part.type === FishBodyPart.PECTORAL_FIN_BACK) {
-      intermediateCtx.translate(xPos + img.width, yPos);
-      intermediateCtx.scale(-1, 1);
-      intermediateCtx.drawImage(img, 0, 0);
-      intermediateCtx.setTransform(1, 0, 0, 1, 0, 0);
-    } else if (part.type === FishBodyPart.SCALES) {
-      intermediateCtx.globalAlpha = 0.2;
-      intermediateCtx.drawImage(img, xPos, yPos);
-      intermediateCtx.globalAlpha = 1;
+    if (p.type === FishBodyPart.PECTORAL_FIN_BACK) {
+      intermediateCtx!.translate(xPos + img.width, yPos);
+      intermediateCtx!.scale(-1, 1);
+      intermediateCtx!.drawImage(img, 0, 0);
+      intermediateCtx!.setTransform(1, 0, 0, 1, 0, 0);
+    } else if (p.type === FishBodyPart.SCALES) {
+      intermediateCtx!.globalAlpha = 0.2;
+      intermediateCtx!.drawImage(img, xPos, yPos);
+      intermediateCtx!.globalAlpha = 1;
     } else {
-      intermediateCtx.drawImage(img, xPos, yPos);
+      intermediateCtx!.drawImage(img, xPos, yPos);
     }
 
-    let rgb = colorForFishPart(this.colorPalette, part);
+    let rgb = colorForFishPart(
+      this.colorPalette as Parameters<typeof colorForFishPart>[0],
+      part as Parameters<typeof colorForFishPart>[1],
+    );
 
     if (rgb) {
       // Darken back pectoral fin by 15.
-      if (part.type === FishBodyPart.PECTORAL_FIN_BACK) {
+      if (p.type === FishBodyPart.PECTORAL_FIN_BACK) {
         rgb = rgb.map(c => (c -= 15));
       }
 
-      let imageData = intermediateCtx.getImageData(
+      const imageData = intermediateCtx!.getImageData(
         xPos,
         yPos,
         img.width,
-        img.height
+        img.height,
       );
-      let data = imageData.data;
+      const data = imageData.data;
 
       for (let i = 0; i < data.length; i += 4) {
         // Tint any visible pixels
@@ -345,24 +537,33 @@ export class FishOceanObject extends OceanObject {
         }
       }
 
-      intermediateCtx.putImageData(imageData, xPos, yPos);
+      intermediateCtx!.putImageData(imageData, xPos, yPos);
     }
     ctx.drawImage(
       intermediateCanvas,
       constants.fishCanvasWidth / 2 - intermediateCanvas.width / 2,
       constants.fishCanvasHeight / 2 - intermediateCanvas.height / 2,
       constants.fishCanvasWidth,
-      constants.fishCanvasHeight
+      constants.fishCanvasHeight,
     );
   }
 
-  drawToCanvas(fishCanvas, generateLogits = true) {
-    const ctx = fishCanvas.getContext('2d');
+  /**
+   * Render the complete fish onto the given canvas.
+   *
+   * @param fishCanvas - Canvas element to draw onto.
+   * @param generateLogits - When true, kick off async mobilenet inference.
+   */
+  drawToCanvas(fishCanvas: HTMLCanvasElement, generateLogits = true): void {
+    const ctx = fishCanvas.getContext('2d')!;
     if (!this.faceLeft) {
       ctx.translate(constants.fishCanvasWidth, 0);
       ctx.scale(-1, 1);
     }
-    const bodyAnchor = bodyAnchorFromType(this.body, this.body.type);
+    const bodyAnchor = bodyAnchorFromType(
+      this.body as Parameters<typeof bodyAnchorFromType>[0],
+      (this.body as {type: number}).type,
+    );
 
     this.drawFishComponent(this.dorsalFin, bodyAnchor, ctx);
     this.drawFishComponent(this.tail, bodyAnchor, ctx);
@@ -377,18 +578,27 @@ export class FishOceanObject extends OceanObject {
   }
 }
 
-/*
- * Trash object that uses one of the images from TrashImages
- *
- * */
+/**
+ * Trash object rendered using a randomly selected image from trashImages.
+ */
 export class TrashOceanObject extends OceanObject {
-  randomize() {
+  /** Currently selected trash image. */
+  image!: HTMLImageElement;
+
+  /** Pick a random trash image for this object. */
+  randomize(): void {
     const idx = Math.floor(Math.random() * trashImages.length);
     this.image = trashImages[idx];
   }
 
-  drawToCanvas(canvas, generateLogits = true) {
-    const ctx = canvas.getContext('2d');
+  /**
+   * Draw the trash image (rotated randomly) onto the canvas.
+   *
+   * @param canvas - Target canvas element.
+   * @param generateLogits - When true, kick off async mobilenet inference.
+   */
+  drawToCanvas(canvas: HTMLCanvasElement, generateLogits = true): void {
+    const ctx = canvas.getContext('2d')!;
     ctx.save();
     ctx.translate(canvas.width / 2, canvas.height / 2);
     ctx.rotate(Math.random() * 2 * Math.PI);
@@ -402,18 +612,27 @@ export class TrashOceanObject extends OceanObject {
   }
 }
 
-/*
- * Sea creatures that use one of the images from SeaCreatureImages
- *
- * */
+/**
+ * Sea-creature object rendered using a randomly selected image from seaCreatureImages.
+ */
 export class SeaCreatureOceanObject extends OceanObject {
-  randomize() {
+  /** Currently selected sea-creature image. */
+  image!: HTMLImageElement;
+
+  /** Pick a random sea-creature image for this object. */
+  randomize(): void {
     const idx = Math.floor(Math.random() * seaCreatureImages.length);
     this.image = seaCreatureImages[idx];
   }
 
-  drawToCanvas(canvas, generateLogits = true) {
-    const ctx = canvas.getContext('2d');
+  /**
+   * Draw the sea-creature image centred on the canvas.
+   *
+   * @param canvas - Target canvas element.
+   * @param generateLogits - When true, kick off async mobilenet inference.
+   */
+  drawToCanvas(canvas: HTMLCanvasElement, generateLogits = true): void {
+    const ctx = canvas.getContext('2d')!;
     const xpos = canvas.width / 2 - this.image.width / 2;
     const ypos = canvas.height / 2 - this.image.height / 2;
     ctx.drawImage(this.image, xpos, ypos);
