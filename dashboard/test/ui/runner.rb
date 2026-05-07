@@ -476,8 +476,7 @@ def report_tests_finished(start_time, run_results, run_status_page_url = nil)
   test_report += "\n#{failures.count}x failed features:\n" + failures.map {|failure| "• #{failure}\n"}.join if failures.any?
   test_report += "\n"
   test_report += "Applitools Eyes Results:\n#{applitools_batch_url}\n\n" if applitools_batch_url
-  test_report += "#{test_type_label} Test Status Page (permalink for this run):\n#{run_status_page_url}\n\n" if run_status_page_url
-  test_report += "#{test_type_label} Test Status Page (for this server, *if you're lost start here*):\n#{server_status_page_url}\n\n" if server_status_page_url && !CI::Utils.running_on_ci?
+  test_report += status_page_links(run_status_page_url)
   test_report += "#{suite_success_count} passed. #{failures.count} failed. Test count: #{run_results.count}. Duration: #{RakeUtils.format_duration(suite_duration)}. Total successful reruns of flaky tests: #{total_flaky_successful_reruns}.\n"
 
   ChatClient.log test_report, color: 'purple'
@@ -486,6 +485,28 @@ end
 def server_status_page_url
   return nil unless $options.with_status_page
   CDO.studio_url('/ui_test/' + status_page_filename, scheme_for_environment, ge_region: nil)
+end
+
+# Returns chat-ready text describing where to find the test status page,
+# tuned for the current environment:
+#   - non-CI with a live server: server URL first, unversioned S3 URL second
+#     as a fallback for when the server is unreachable.
+#   - CI (drone): only the unversioned S3 URL.
+# The S3 URL is *un*versioned because status pages rewrite themselves under a
+# stable key as new runs land, so a pinned versionId would freeze a snapshot
+# whose embedded sub-row links point at moving S3 keys — i.e., not actually
+# a permalink.
+def status_page_links(run_status_page_url)
+  unversioned_s3_url = run_status_page_url&.split('?', 2)&.first
+  if server_status_page_url && !CI::Utils.running_on_ci?
+    out = "#{test_type_label} Test Status Page:\n#{server_status_page_url}\n\n"
+    out += "Fallback status page (if server is unavailable):\n#{unversioned_s3_url}\n\n" if unversioned_s3_url
+    out
+  elsif unversioned_s3_url
+    "#{test_type_label} Test Status Page:\n#{unversioned_s3_url}\n\n"
+  else
+    ''
+  end
 end
 
 # Ordered list of UI/Eyes test status pages used to render the
@@ -567,8 +588,8 @@ def generate_status_page(suite_start_time)
     )
   )
   run_status_page_url = upload_status_page_to_s3(status_page_path)
-  ChatClient.log "#{test_type_label} Test Status Page (permalink for this run):\n#{run_status_page_url}\n\n" if run_status_page_url
-  ChatClient.log "#{test_type_label} Test Status Page (for this server):\n#{server_status_page_url}\n\n" unless CI::Utils.running_on_ci?
+  links = status_page_links(run_status_page_url)
+  ChatClient.log links unless links.empty?
   return run_status_page_url
 end
 
