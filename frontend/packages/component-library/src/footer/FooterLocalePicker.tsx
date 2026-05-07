@@ -1,6 +1,7 @@
-import {FormControl, InputLabel, NativeSelect, Skeleton} from '@mui/material';
+import {Skeleton} from '@mui/material';
 import {styled} from '@mui/material/styles';
-import {visuallyHidden} from '@mui/utils';
+
+import {SimpleDropdown} from '@/dropdown';
 
 import type {FooterLanguageOption} from './Footer.types';
 
@@ -14,12 +15,6 @@ const FooterLocaleSelect = styled('div', {
 })({});
 
 // ---------------------------------------------------------------------------
-// Constants
-// ---------------------------------------------------------------------------
-
-const LOCALE_SELECT_ID = 'footer-locale-select';
-
-// ---------------------------------------------------------------------------
 // FooterLocalePicker
 // ---------------------------------------------------------------------------
 
@@ -30,8 +25,10 @@ interface FooterLocalePickerProps {
 }
 
 /**
- * Language picker: renders a populated NativeSelect when languages are ready,
- * or a skeleton placeholder while they load.
+ * Language picker: renders a SimpleDropdown when languages are ready,
+ * or a skeleton placeholder while they load. SimpleDropdown is the DSCO
+ * dropdown primitive — DSCO is the design-system home for Dropdowns
+ * (no MUI replacement exists yet, per MIGRATION_STATUS.md).
  *
  * @param props - {@link FooterLocalePickerProps}
  */
@@ -56,22 +53,16 @@ const FooterLocalePicker = ({
 
   return (
     <FooterLocaleSelect>
-      <FormControl>
-        <InputLabel htmlFor={LOCALE_SELECT_ID} sx={visuallyHidden}>
-          Language
-        </InputLabel>
-        <NativeSelect
-          value={selectedLocaleCode}
-          onChange={e => onLanguageChange(e.target.value)}
-          inputProps={{id: LOCALE_SELECT_ID}}
-        >
-          {languages.map(lang => (
-            <option key={lang.value} value={lang.value}>
-              {lang.text}
-            </option>
-          ))}
-        </NativeSelect>
-      </FormControl>
+      <SimpleDropdown
+        name="footer-locale"
+        labelText="Language"
+        isLabelVisible={false}
+        items={languages}
+        selectedValue={selectedLocaleCode}
+        onChange={e => onLanguageChange(e.target.value)}
+        color="white"
+        size="s"
+      />
     </FooterLocaleSelect>
   );
 };
