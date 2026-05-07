@@ -37,6 +37,7 @@ export default function OpenLineEdgeToolbar({
     setLineEdgeWidth,
     setLineEdgeStrokeStyle,
     setLineEdgeArrowHeads,
+    setLineEdgeType,
     setLineEdgeLocked,
   } = useLineToolbar({
     edges,
@@ -105,6 +106,7 @@ export default function OpenLineEdgeToolbar({
         setLineEdgeArrowHeads(openLineEdge.id, value)
       }
       onSetLocked={value => setLineEdgeLocked(openLineEdge.id, value)}
+      onSelectEdgeType={value => setLineEdgeType(openLineEdge.id, value)}
     />
   );
 }
