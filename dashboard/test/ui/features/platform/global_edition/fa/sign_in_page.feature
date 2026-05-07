@@ -2,7 +2,8 @@
 Feature: Global Edition - Farsi MVP - Sign In page
 
   Background:
-    Given I switch to the Global Edition region "fa"
+    Given I am on "http://studio.code.org"
+    And I switch to the Global Edition region "fa"
 
   @eyes
   Scenario: I see the Farsi MVP Sign In page
