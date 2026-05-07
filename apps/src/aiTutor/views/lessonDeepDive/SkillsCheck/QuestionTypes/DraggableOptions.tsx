@@ -1,7 +1,7 @@
+import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import {useDraggable} from '@dnd-kit/core';
 import {CSS} from '@dnd-kit/utilities';
 import {Typography} from '@mui/material';
-import classNames from 'classnames';
 import React from 'react';
 
 import styles from './practice-problems.module.scss';
@@ -17,9 +17,7 @@ export const DraggableOptions: React.FunctionComponent<
   DraggableOptionProps
 > = ({id, option, correct, showAnswer}) => {
   const {attributes, listeners, setNodeRef, transform, isDragging} =
-    useDraggable({
-      id: id,
-    });
+    useDraggable({id});
   const style = {
     transform: CSS.Translate.toString(transform),
     zIndex: isDragging ? 1 : undefined,
@@ -32,18 +30,26 @@ export const DraggableOptions: React.FunctionComponent<
       ref={setNodeRef}
       style={{cursor: isDragging ? 'grabbing' : 'inherit', ...style}}
       aria-labelledby={`section-card-title-${option}`}
-      className={classNames([
+      className={[
         styles.carddraggableOption,
-        showAnswer
-          ? correct
-            ? styles.cardcorrect
-            : styles.cardincorrect
-          : null,
-      ])}
+        showAnswer ? (correct ? styles.cardcorrect : styles.cardincorrect) : '',
+      ]
+        .filter(Boolean)
+        .join(' ')}
     >
-      <Typography variant="body1" className={styles.cardLabel}>
+      <Typography variant="body1" component="span" className={styles.cardLabel}>
         {option}
       </Typography>
+      {showAnswer && correct && (
+        <span className={styles.correctIcon}>
+          <FontAwesomeV6Icon iconName="check" />
+        </span>
+      )}
+      {showAnswer && !correct && (
+        <span className={styles.incorrectIcon}>
+          <FontAwesomeV6Icon iconName="xmark" />
+        </span>
+      )}
     </div>
   );
 };
