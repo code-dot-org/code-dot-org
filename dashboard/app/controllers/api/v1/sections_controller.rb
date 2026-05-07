@@ -438,10 +438,10 @@ class Api::V1::SectionsController < Api::V1::JSONApiController
 
     lessons = unit.lessons.to_a
     next_lesson = if last_completed_lesson
-      lessons[lessons.index(last_completed_lesson) + 1]
-    else
-      lessons.first
-    end
+                    lessons[lessons.index(last_completed_lesson) + 1]
+                  else
+                    lessons.first
+                  end
     return unless next_lesson
 
     @section.update!(
