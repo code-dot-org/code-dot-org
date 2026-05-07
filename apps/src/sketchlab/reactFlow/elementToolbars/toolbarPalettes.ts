@@ -66,7 +66,6 @@ export type LineStrokeStyleValue =
 export const EDGE_TYPE_OPTIONS = [
   {value: 'straight', label: 'Straight'},
   {value: 'default', label: 'Curved'},
-  {value: 'simplebezier', label: 'Bezier'},
   {value: 'smoothstep', label: 'Rounded step'},
   {value: 'step', label: 'Step'},
 ] as const;

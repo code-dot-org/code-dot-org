@@ -114,9 +114,8 @@ const ARROW_HEAD_ICONS: Record<ArrowHeadValue, string> = {
 
 const EDGE_TYPE_ICONS: Record<EdgeTypeValue, string> = {
   straight: 'minus',
-  default: 'bezier-curve',
-  simplebezier: 'chart-line',
-  smoothstep: 'turn-down-right',
+  default: 'wave-sine',
+  smoothstep: 'corner',
   step: 'wave-square',
 };
 
