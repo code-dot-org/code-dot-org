@@ -12,13 +12,14 @@
 .menuButton {
   width: 24px;
   height: 24px;
-  background-color: rgb(0 0 0 / 0.55);
-  color: var(--text-neutral-white-fixed);
+  background-color: #{"rgb(from var(--background-neutral-primary) r g b / 0.75)"};
+  color: var(--text-neutral-primary);
 
   &:hover,
   &:focus-visible {
-    background-color: rgb(0 0 0 / 0.75);
-    color: var(--text-neutral-white-fixed);
+    background-color: var(--background-neutral-primary);
+    color: var(--text-neutral-primary);
+    box-shadow: 0 1px 4px rgb(0 0 0 / 0.4);
   }
 
   i {
