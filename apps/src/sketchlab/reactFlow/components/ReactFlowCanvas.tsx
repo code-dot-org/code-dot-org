@@ -25,6 +25,7 @@ import {
   DEFAULT_NODE_WIDTH,
   LINE_DEFAULT_LENGTH_PX,
   LINE_RECONNECT_SNAP_RADIUS_PX,
+  MIN_ZOOM,
   SAVE_DEBOUNCE_MS,
 } from '../constants';
 import {
@@ -615,6 +616,7 @@ export default function ReactFlowCanvas({
               onReconnectEnd={handleReconnectEnd}
               onNodeDragStop={handleNodeDragStop}
               isValidConnection={isValidConnection}
+              minZoom={MIN_ZOOM}
               connectionRadius={LINE_RECONNECT_SNAP_RADIUS_PX}
               nodeTypes={NODE_TYPES}
               onMoveEnd={handleMoveEnd}
