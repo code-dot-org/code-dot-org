@@ -573,6 +573,21 @@ export default function ReactFlowCanvas({
     setEdges,
   });
 
+  // Anchor the line toolbar to whichever endpoint node sits further left so
+  // that NodeToolbar's Position.Left lands the toolbar to the left of the
+  // edge as a whole. Anchoring to a fixed end (e.g. always source) puts the
+  // toolbar on top of the edge whenever source is the rightmost endpoint.
+  const lineToolbarAnchorId = useMemo(() => {
+    if (!openLineEdge) return null;
+    const sourceNode = nodes.find(node => node.id === openLineEdge.source);
+    const targetNode = nodes.find(node => node.id === openLineEdge.target);
+    if (!sourceNode) return openLineEdge.target;
+    if (!targetNode) return openLineEdge.source;
+    return sourceNode.position.x <= targetNode.position.x
+      ? sourceNode.id
+      : targetNode.id;
+  }, [openLineEdge, nodes]);
+
   return (
     <SketchLabReadOnlyProvider value={readOnly}>
       <ToolbarVisibilityProvider value={toolbarVisibility}>
@@ -640,10 +655,10 @@ export default function ReactFlowCanvas({
               }}
               defaultMarkerColor={DEFAULT_STROKE_COLOR}
             >
-              {openLineEdge && (
+              {openLineEdge && lineToolbarAnchorId && (
                 <LineEdgeToolbar
                   edge={openLineEdge}
-                  anchorNodeId={openLineEdge.source}
+                  anchorNodeId={lineToolbarAnchorId}
                   onSelectColor={value =>
                     setLineEdgeColor(openLineEdge.id, value)
                   }
