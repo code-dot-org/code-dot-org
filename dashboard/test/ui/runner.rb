@@ -478,7 +478,6 @@ def report_tests_finished(start_time, run_results, run_status_page_url = nil)
   test_report += "Applitools Eyes Results:\n#{applitools_batch_url}\n\n" if applitools_batch_url
   test_report += "#{test_type_label} Test Status Page (permalink for this run):\n#{run_status_page_url}\n\n" if run_status_page_url
   test_report += "#{test_type_label} Test Status Page (for this server, *if you're lost start here*):\n#{server_status_page_url}\n\n" if server_status_page_url && !CI::Utils.running_on_ci?
-  test_report += "\n"
   test_report += "#{suite_success_count} passed. #{failures.count} failed. Test count: #{run_results.count}. Duration: #{RakeUtils.format_duration(suite_duration)}. Total successful reruns of flaky tests: #{total_flaky_successful_reruns}.\n"
 
   ChatClient.log test_report, color: 'purple'
