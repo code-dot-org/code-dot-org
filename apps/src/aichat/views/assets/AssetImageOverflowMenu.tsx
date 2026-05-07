@@ -1,5 +1,6 @@
 import {PopUpButton} from '@codebridge/PopUpButton/PopUpButton';
 import {PopUpButtonOption} from '@codebridge/PopUpButton/PopUpButtonOption';
+import {uniqueFileName} from '@codebridge/utils';
 import React, {useCallback} from 'react';
 
 import {addChatEvent} from '@cdo/apps/aichat/redux';
@@ -70,19 +71,6 @@ const downloadToBlob = (blob: Blob, filename: string): void => {
   URL.revokeObjectURL(objectUrl);
 };
 
-// Returns "<base>.<ext>", or "<base>-2.<ext>", "<base>-3.<ext>", ... when the
-// initial name collides with an existing file.
-const dedupedName = (base: string, ext: string, existing: string[]): string => {
-  const taken = new Set(existing);
-  let candidate = `${base}.${ext}`;
-  let i = 2;
-  while (taken.has(candidate)) {
-    candidate = `${base}-${i}.${ext}`;
-    i += 1;
-  }
-  return candidate;
-};
-
 const AssetImageOverflowMenu: React.FC<AssetImageOverflowMenuProps> = ({
   url,
   filename,
@@ -136,7 +124,8 @@ const AssetImageOverflowMenu: React.FC<AssetImageOverflowMenuProps> = ({
     async (backpackApi: BackpackClientApi) => {
       try {
         const files = await backpackApi.getFileList();
-        const targetName = dedupedName(dateTimeName(), ext, files);
+        const baseName = `${dateTimeName()}.${ext}`;
+        const targetName = uniqueFileName(baseName, files, '-');
         await backpackApi.saveCodebridgeFileFromUrl(targetName, url);
       } catch {
         showBackpackError();
