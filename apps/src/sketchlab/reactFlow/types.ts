@@ -5,10 +5,7 @@ import type {
   SketchlabReactFlowSource,
 } from '@cdo/apps/lab2/types';
 
-import type {
-  FontSizeValue,
-  TextAlignValue,
-} from './elementToolbars/toolbarPalettes';
+import type {FontSize, TextAlignValue} from './elementToolbars/toolbarPalettes';
 
 export type ShapeType = 'rectangle' | 'triangle' | 'circle' | 'diamond';
 
@@ -30,14 +27,14 @@ export type ShapeNodeData = NodeDataBase & {
   backgroundColor?: string;
   strokeColor?: string;
   fontColor?: string;
-  fontSize?: FontSizeValue;
+  fontSize?: FontSize;
   textAlign?: TextAlignValue;
 };
 
 export type TextNodeData = NodeDataBase & {
   text: string;
   fontColor?: string;
-  fontSize?: FontSizeValue;
+  fontSize?: FontSize;
   textAlign?: TextAlignValue;
 };
 

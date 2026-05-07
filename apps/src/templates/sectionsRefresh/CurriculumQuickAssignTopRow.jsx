@@ -64,7 +64,10 @@ export default function CurriculumQuickAssignTopRow({
   };
 
   return (
-    <div className={moduleStyles.buttonRow}>
+    <div
+      className={moduleStyles.buttonRow}
+      id="uitest-curriculum-quick-assign-top-row"
+    >
       <div className={moduleStyles.buttonsInRow}>
         <MarketingAudienceButton
           selectedMarketingAudience={marketingAudience}

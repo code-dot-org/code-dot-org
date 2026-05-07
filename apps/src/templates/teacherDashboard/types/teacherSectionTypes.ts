@@ -26,6 +26,7 @@ export interface Section {
   courseVersionId?: number | null;
   courseVersionName?: string;
   createdAt?: string;
+  demoType?: DemoType | null;
   grades: string[];
   hidden: boolean;
   id: number;
@@ -114,6 +115,7 @@ export interface ServerSection {
   course_version_id?: number | null;
   courseVersionName?: string | null;
   createdAt?: string;
+  demo_type?: DemoType | null;
   grades?: string[];
   hidden: boolean;
   id: number;
