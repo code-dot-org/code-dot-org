@@ -11,7 +11,6 @@ import classNames from 'classnames';
 import cookies from 'js-cookie';
 import React, {useState, useEffect, useMemo} from 'react';
 
-import DCDO from '@cdo/apps/dcdo';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import {schoolInfoInvalid} from '@cdo/apps/schoolInfo/utils/schoolInfoInvalid';
@@ -107,8 +106,6 @@ const FinishTeacherAccount: React.FunctionComponent<{
   // Remove oauth user_type cookie if it exists
   cookies.remove(SIGN_UP_USER_TYPE);
 
-  const showGradeSelection = !!DCDO.get('launch-grades-in-sign-up', false);
-
   useEffect(() => {
     // If the user hasn't selected a user type or login type, redirect them back to the incomplete step of signup.
     if (
@@ -185,7 +182,7 @@ const FinishTeacherAccount: React.FunctionComponent<{
       schoolInfoInvalid(schoolInfo) ||
       !educatorRole ||
       signupSources.length < 1 ||
-      (selectedGrades.length < 1 && showGradeSelection),
+      selectedGrades.length < 1,
     [
       gdprValid,
       givenName,
@@ -195,7 +192,6 @@ const FinishTeacherAccount: React.FunctionComponent<{
       educatorRole,
       signupSources,
       selectedGrades,
-      showGradeSelection,
     ]
   );
 
@@ -458,14 +454,12 @@ const FinishTeacherAccount: React.FunctionComponent<{
             itemGroups={roleItemGroups}
             dropdownTextThickness="thin"
           />
-          {showGradeSelection && (
-            <GradeLevelChips
-              inputLabel={locale.grades_taught()}
-              values={selectedGrades}
-              setValues={(vals: string[]) => setSelectedGrades(vals)}
-              className={style.gradeSelectChips}
-            />
-          )}
+          <GradeLevelChips
+            inputLabel={locale.grades_taught()}
+            values={selectedGrades}
+            setValues={(vals: string[]) => setSelectedGrades(vals)}
+            className={style.gradeSelectChips}
+          />
           <SchoolDataInputs {...schoolInfo} includeHeaders={false} />
           {showGDPR && (
             <div>
