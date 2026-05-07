@@ -259,9 +259,11 @@ export default function ReactFlowCanvas({
   // clearing here would unmount the toolbar before the user can pick.
   const handleContainerBlur = useCallback(
     (event: React.FocusEvent) => {
+      const focusTarget = event.target as HTMLElement;
       if (
         event.currentTarget.contains(event.relatedTarget as Node) ||
-        (event.target as HTMLElement).closest('.react-flow__node-toolbar')
+        focusTarget.closest('.react-flow__node-toolbar') ||
+        focusTarget.closest('.react-flow__edge-toolbar')
       ) {
         return;
       }
