@@ -7,7 +7,6 @@ import {
   useEdgesState,
   useNodesState,
   useReactFlow,
-  useStore,
   type OnConnect,
 } from '@xyflow/react';
 import classNames from 'classnames';
@@ -34,7 +33,7 @@ import {
   ToolbarVisibilityProvider,
   type ToolbarTarget,
 } from '../context';
-import LineEdgeToolbar from '../elementToolbars/LineEdgeToolbar';
+import OpenLineEdgeToolbar from '../elementToolbars/OpenLineEdgeToolbar';
 import {
   DEFAULT_LINE_WIDTH,
   DEFAULT_STROKE_COLOR,
@@ -43,7 +42,6 @@ import {useCopyPaste} from '../hooks/useCopyPaste';
 import {useFocusManagement} from '../hooks/useFocusManagement';
 import {useKeyboardNavigation} from '../hooks/useKeyboardNavigation';
 import {useLineEdgeDrag} from '../hooks/useLineEdgeDrag';
-import {useLineToolbar} from '../hooks/useLineToolbar';
 import {useReconnect} from '../hooks/useReconnect';
 import {useTabOrder} from '../hooks/useTabOrder';
 import ImageNode from '../nodes/ImageNode';
@@ -60,10 +58,7 @@ import {
   isLineAnchorNodeId,
 } from '../utils/connectionRules';
 import {snapAnchorIfNearby} from '../utils/handleSnap';
-import {
-  createLineAnchorAtHandle,
-  endpointFlowPositionFromState,
-} from '../utils/lineAnchors';
+import {createLineAnchorAtHandle} from '../utils/lineAnchors';
 import {defaultLineEdgeFields} from '../utils/lineEdges';
 
 import Toolbar from './Toolbar';
@@ -561,64 +556,13 @@ export default function ReactFlowCanvas({
     [readOnly, openToolbar, nodes]
   );
 
-  const {
-    handleEdgeClick,
-    openLineEdge,
-    setLineEdgeColor,
-    setLineEdgeWidth,
-    setLineEdgeStrokeStyle,
-    setLineEdgeArrowHeads,
-    setLineEdgeLocked,
-  } = useLineToolbar({
-    edges,
-    readOnly,
-    openToolbarTarget,
-    openToolbar,
-    setEdges,
-  });
-
-  // Subscribe to zoom so we can scale the toolbar's right
-  // padding to match the visible handle's on-screen size as zoom changes.
-  const zoom = useStore(state => state.transform[2]);
-
-  // Anchor for line toolbars. Positioned at the leftmost endpoint, with a small
-  // amount of padding.
-  const lineToolbarAnchor = useMemo(() => {
-    if (!openLineEdge) return null;
-    const sourceNode = nodes.find(node => node.id === openLineEdge.source);
-    const targetNode = nodes.find(node => node.id === openLineEdge.target);
-    if (!sourceNode || !targetNode) return null;
-    const sourcePoint = endpointFlowPositionFromState(
-      openLineEdge,
-      'source',
-      sourceNode
-    );
-    const targetPoint = endpointFlowPositionFromState(
-      openLineEdge,
-      'target',
-      targetNode
-    );
-    const leftIsSource = sourcePoint.x <= targetPoint.x;
-    const position = leftIsSource ? sourcePoint : targetPoint;
-    const leftNode = leftIsSource ? sourceNode : targetNode;
-    const leftIsLineAnchor = leftNode.type === 'lineAnchor';
-    // How far the visible handle circle protrudes to the left of the line
-    // endpoint, measured in CSS px BEFORE zoom is applied.
-    let baseHandleOverhangLeftPx;
-    if (!leftIsLineAnchor) {
-      baseHandleOverhangLeftPx = 3;
-    } else if (leftIsSource) {
-      baseHandleOverhangLeftPx = 6;
-    } else {
-      baseHandleOverhangLeftPx = 0;
-    }
-    const visibleHandleOverhangLeftPx = baseHandleOverhangLeftPx * zoom;
-    // Constant visible gap between the handle's left edge and the toolbar
-    // at any zoom. 5 matches the gap NodeToolbar gives nodes at zoom=1.
-    const VISIBLE_GAP_PX = 5;
-    const anchorRightPaddingPx = visibleHandleOverhangLeftPx + VISIBLE_GAP_PX;
-    return {position, anchorRightPaddingPx};
-  }, [openLineEdge, nodes, zoom]);
+  const handleEdgeClick = useCallback(
+    (_event: React.MouseEvent, edge: {id: string}) => {
+      if (readOnly) return;
+      openToolbar({type: 'edge', id: edge.id}, {trapFocus: false});
+    },
+    [readOnly, openToolbar]
+  );
 
   return (
     <SketchLabReadOnlyProvider value={readOnly}>
@@ -687,28 +631,11 @@ export default function ReactFlowCanvas({
               }}
               defaultMarkerColor={DEFAULT_STROKE_COLOR}
             >
-              {openLineEdge && lineToolbarAnchor && (
-                <LineEdgeToolbar
-                  edge={openLineEdge}
-                  anchorFlowPosition={lineToolbarAnchor.position}
-                  anchorRightPaddingPx={lineToolbarAnchor.anchorRightPaddingPx}
-                  onSelectColor={value =>
-                    setLineEdgeColor(openLineEdge.id, value)
-                  }
-                  onSelectWidth={value =>
-                    setLineEdgeWidth(openLineEdge.id, value)
-                  }
-                  onSelectStrokeStyle={value =>
-                    setLineEdgeStrokeStyle(openLineEdge.id, value)
-                  }
-                  onSelectArrowHeads={value =>
-                    setLineEdgeArrowHeads(openLineEdge.id, value)
-                  }
-                  onSetLocked={value =>
-                    setLineEdgeLocked(openLineEdge.id, value)
-                  }
-                />
-              )}
+              <OpenLineEdgeToolbar
+                edges={edges}
+                nodes={nodes}
+                setEdges={setEdges}
+              />
               <Background />
               <Controls position="bottom-right" />
             </ReactFlow>
