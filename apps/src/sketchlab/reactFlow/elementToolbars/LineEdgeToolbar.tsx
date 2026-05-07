@@ -2,12 +2,12 @@ import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon
 import {IconButton, Tooltip, Typography} from '@mui/material';
 import {useReactFlow} from '@xyflow/react';
 import classNames from 'classnames';
-import React from 'react';
+import React, {useMemo} from 'react';
 
 import {SketchlabReactFlowEdge} from '@cdo/apps/lab2/types';
 
 import {useClipboard} from '../context';
-import {isArrowEdge} from '../utils/lineEdges';
+import {ArrowHeadValue} from '../types';
 import {newBackZIndex, newFrontZIndex} from '../utils/stacking';
 
 import ActionsGroup from './ActionsGroup';
@@ -94,21 +94,20 @@ interface LineEdgeToolbarProps {
   onSetLocked: (value: boolean) => void;
 }
 
-type ArrowHeadValue = 'start' | 'end' | 'both';
-
 const ARROW_HEAD_OPTIONS: readonly LineOption[] = [
+  {value: 'none', label: 'None'},
   {value: 'start', label: 'Start'},
   {value: 'end', label: 'End'},
   {value: 'both', label: 'Both'},
 ] as const;
 
 const ARROW_HEAD_ICONS: Record<ArrowHeadValue, string> = {
+  none: 'minus',
   start: 'arrow-left-long',
   end: 'arrow-right-long',
   both: 'arrows-left-right',
 };
 
-// Shared edge toolbar for both plain lines and arrows.
 export default function LineEdgeToolbar({
   edge,
   anchorNodeId,
@@ -139,14 +138,20 @@ export default function LineEdgeToolbar({
   )
     ? selectedStrokeStyle
     : DEFAULT_LINE_STROKE_STYLE;
-  const hasStartArrow = !!edge.markerStart;
-  const hasEndArrow = !!edge.markerEnd;
-  const selectedArrowHeads: ArrowHeadValue = hasStartArrow
-    ? hasEndArrow
-      ? 'both'
-      : 'start'
-    : 'end';
-  const showArrowHeadOptions = isArrowEdge(edge);
+
+  const selectedArrowHeads = useMemo(() => {
+    const hasStartArrow = !!edge.markerStart;
+    const hasEndArrow = !!edge.markerEnd;
+    if (hasStartArrow && hasEndArrow) {
+      return 'both';
+    } else if (hasStartArrow) {
+      return 'start';
+    } else if (hasEndArrow) {
+      return 'end';
+    } else {
+      return 'none';
+    }
+  }, [edge.markerStart, edge.markerEnd]);
 
   const {duplicateLine} = useClipboard();
 
@@ -202,20 +207,18 @@ export default function LineEdgeToolbar({
               renderLinePreview(2, option.value as LinePreviewStyle)
             }
           />
-          {showArrowHeadOptions && (
-            <LineOptionGroup
-              groupLabel="Arrow heads"
-              options={ARROW_HEAD_OPTIONS}
-              selectedValue={selectedArrowHeads}
-              onSelect={value => onSelectArrowHeads(value as ArrowHeadValue)}
-              ariaLabelPrefix="Arrow heads"
-              getButtonContent={option => (
-                <FontAwesomeV6Icon
-                  iconName={ARROW_HEAD_ICONS[option.value as ArrowHeadValue]}
-                />
-              )}
-            />
-          )}
+          <LineOptionGroup
+            groupLabel="Arrow heads"
+            options={ARROW_HEAD_OPTIONS}
+            selectedValue={selectedArrowHeads}
+            onSelect={value => onSelectArrowHeads(value as ArrowHeadValue)}
+            ariaLabelPrefix="Arrow heads"
+            getButtonContent={option => (
+              <FontAwesomeV6Icon
+                iconName={ARROW_HEAD_ICONS[option.value as ArrowHeadValue]}
+              />
+            )}
+          />
           <ActionsGroup
             onDelete={() => deleteElements({edges: [{id: edge.id}]})}
             onLock={() => onSetLocked(true)}

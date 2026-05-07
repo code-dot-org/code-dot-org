@@ -107,7 +107,7 @@ export function useConnectMode({
             source: connectingFrom,
             target: targetNodeId,
             ...handles,
-            ...defaultLineEdgeFields({arrow: true}),
+            ...defaultLineEdgeFields(),
           },
           currentEdges
         );
