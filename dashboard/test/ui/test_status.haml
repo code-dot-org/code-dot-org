@@ -10,9 +10,11 @@
     .centered-column
       %div#refresh-controls
         %span#last-refresh-time
-        %button#refresh-button Refresh
-        %button#auto-refresh-button Pause Auto-Refresh
-        %button#hide-succeeded-button Hide Succeeded
+        %span.button-group
+          %button#refresh-button Refresh
+          %button#auto-refresh-button Pause Auto-Refresh
+          %button#hide-succeeded-button Hide Succeeded
+          %button#copy-failing-rerun-button{disabled: true} Copy Failing Rerun Commands
       %h1= "#{type_label} Test Status"
       - if status_pages
         %h2#status-pages-nav
@@ -72,7 +74,9 @@
           To re-run a test, click the "Copy Rerun Cmd" button on the right side
           of the table to copy it do your clipboard, then navigate to the UI
           test directory on the test machine in your terminal and paste and run
-          the command.
+          the command. Or click "Copy Failing Rerun Commands" at the top of the
+          page to copy the rerun commands for every currently-failing test at
+          once.
         %p
           You can ssh to the test machine through the gateway machine.
           The UI test directory on the test machine is `~/test/dashboard/test/ui`.
