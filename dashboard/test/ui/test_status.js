@@ -180,10 +180,14 @@ new Clipboard("#copy-failing-rerun-button", {
       const { browser, feature } = row.dataset;
       (featuresByBrowser[browser] ||= []).push(feature);
     });
+    // --parallel 20 so a multi-feature rerun actually runs in parallel.
+    // runner.rb caps the worker count at the number of features, so the
+    // upper bound only kicks in past 20. We stop at 20 to avoid
+    // overwhelming Saucelabs / Device Farm.
     return Object.entries(featuresByBrowser)
       .map(
         ([browser, features]) =>
-          `${RERUN_COMMAND_PREFIX} -c ${browser} -f ${features.join(",")} &`
+          `${RERUN_COMMAND_PREFIX} --parallel 20 -c ${browser} -f ${features.join(",")} &`
       )
       .join(" \\\n");
   },
