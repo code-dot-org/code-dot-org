@@ -1,7 +1,7 @@
 <Sketchlab>
   <config><![CDATA[{
   "game_id": 75,
-  "created_at": "2026-04-29T00:49:37.000Z",
+  "created_at": "2026-04-21T21:55:18.000Z",
   "level_num": "custom",
   "user_id": 18603,
   "properties": {
@@ -87,19 +87,21 @@
             "id": "ByO9NEtVVhMjN7WzleHor",
             "type": "text",
             "position": {
-              "x": -493.5117204429925,
-              "y": 240.85153351108596
+              "x": -422.3829023819035,
+              "y": 223.0693289958137
             },
             "data": {
               "text": "Build a mini brand kit with:\n   * 3–5 color swatches\n   * A font pair \n   * 1–2 descriptive style words\n\nConnect your design choices for \nyour fictional product back to \nthe sample user persona ",
               "fontColor": "#1e1e1e",
               "fontSize": "large",
-              "showHandles": false
+              "showHandles": false,
+              "textAlign": "left"
             },
             "measured": {
               "width": 344,
               "height": 247
-            }
+            },
+            "dragging": false
           },
           {
             "id": "i_Lc_rlF4ihf6w_AxtKMr",
@@ -425,10 +427,6 @@
             "measured": {
               "width": 143,
               "height": 47
-            },
-            "selected": false,
-            "domAttributes": {
-              "tabIndex": -1
             }
           }
         ],
@@ -436,8 +434,8 @@
 
         ],
         "viewport": {
-          "x": 376.67779640442785,
-          "y": 62.15196983434748,
+          "x": 309.5312357354826,
+          "y": -76.84803016565252,
           "zoom": 0.5623599701269604
         }
       }
@@ -2464,6 +2462,6 @@
     "name_suffix": "_2026"
   },
   "published": true,
-  "audit_log": "[{\"changed_at\":\"2026-04-21T21:55:18.738+00:00\",\"changed\":[\"cloned from \\\"ai-generated-design-lesson5-level2a_2026\\\"\"],\"cloned_from\":\"ai-generated-design-lesson5-level2a_2026\"},{\"changed_at\":\"2026-04-21 21:56:38 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2026-04-21 21:57:37 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2026-05-01 07:17:25 -0400\",\"changed\":[\"start_sources\"],\"changed_by_id\":1,\"changed_by_email\":\"levelbuilder@dev.com\"}]"
+  "audit_log": "[{\"changed_at\":\"2026-04-21T21:55:18.738+00:00\",\"changed\":[\"cloned from \\\"ai-generated-design-lesson5-level2a_2026\\\"\"],\"cloned_from\":\"ai-generated-design-lesson5-level2a_2026\"},{\"changed_at\":\"2026-04-21 21:56:38 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2026-04-21 21:57:37 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2026-05-01 07:17:25 -0400\",\"changed\":[\"start_sources\"],\"changed_by_id\":1,\"changed_by_email\":\"levelbuilder@dev.com\"},{\"changed_at\":\"2026-05-06 19:55:20 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":155,\"changed_by_email\":\"dani@code.org\"}]"
 }]]></config>
 </Sketchlab>

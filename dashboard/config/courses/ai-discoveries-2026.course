@@ -22,7 +22,7 @@
     "6",
     "7a",
     "7b",
-    null
+    "10"
   ],
   "original_script_names": [
     "web-development-2026",
@@ -46,7 +46,17 @@
     "version_year": "2026"
   },
   "resources": [
-
+    {
+      "name": "AI Discoveries Syllabus",
+      "url": "https://docs.google.com/document/d/14Fgw0LLMmqzRLEfnxe6qiUv9_F-cCksUS5uX97_IIic/edit?usp=sharing",
+      "key": "ai_discoveries_syllabus",
+      "properties": {
+        "embeddability_type": "embed_and_resource_dropdown"
+      },
+      "seeding_key": {
+        "resource.key": "ai_discoveries_syllabus"
+      }
+    }
   ],
   "student_resources": [
 
