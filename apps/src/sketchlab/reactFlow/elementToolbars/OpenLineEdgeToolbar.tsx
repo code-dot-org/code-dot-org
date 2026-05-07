@@ -6,7 +6,7 @@ import {
   SketchlabReactFlowNode,
 } from '@cdo/apps/lab2/types';
 
-import {useSketchLabReadOnly, useToolbarVisibility} from '../context';
+import {useToolbarVisibility} from '../context';
 import {useLineToolbar} from '../hooks/useLineToolbar';
 import {endpointFlowPositionFromState} from '../utils/lineAnchors';
 
@@ -36,8 +36,7 @@ export default function OpenLineEdgeToolbar({
   nodes,
   setEdges,
 }: OpenLineEdgeToolbarProps) {
-  const readOnly = useSketchLabReadOnly();
-  const {openToolbarTarget, openToolbar} = useToolbarVisibility();
+  const {openToolbarTarget} = useToolbarVisibility();
   const {
     openLineEdge,
     setLineEdgeColor,
@@ -47,9 +46,7 @@ export default function OpenLineEdgeToolbar({
     setLineEdgeLocked,
   } = useLineToolbar({
     edges,
-    readOnly,
     openToolbarTarget,
-    openToolbar,
     setEdges,
   });
 
