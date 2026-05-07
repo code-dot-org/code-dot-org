@@ -576,10 +576,9 @@ export default function ReactFlowCanvas({
     setEdges,
   });
 
-  // Anchor the line toolbar at the leftmost handle of the edge so it sits
-  // immediately to the left of where the line visibly meets a node, rather
-  // than to the left of the entire bounding box of an endpoint node.
-  const lineToolbarAnchorPosition = useMemo(() => {
+  // Anchor for line toolbars. Positioned at the leftmost endpoint, with a small
+  // amount of padding.
+  const lineToolbarAnchor = useMemo(() => {
     if (!openLineEdge) return null;
     const sourceNode = nodes.find(node => node.id === openLineEdge.source);
     const targetNode = nodes.find(node => node.id === openLineEdge.target);
@@ -594,7 +593,29 @@ export default function ReactFlowCanvas({
       'target',
       targetNode
     );
-    return sourcePoint.x <= targetPoint.x ? sourcePoint : targetPoint;
+    const leftIsSource = sourcePoint.x <= targetPoint.x;
+    const position = leftIsSource ? sourcePoint : targetPoint;
+    const leftNode = leftIsSource ? sourceNode : targetNode;
+    const leftIsLineAnchor = leftNode.type === 'lineAnchor';
+    // Visible-handle extent past the line endpoint, in screen px (handle
+    // CSS is sized in screen px and doesn't scale with zoom):
+    //   - real node (default xyflow handle): 3 px (handle is 6 wide,
+    //     centered on endpoint)
+    //   - source lineAnchor (handle's right edge at endpoint): 6 px
+    //   - target lineAnchor (handle's left edge at endpoint): 0 px
+    let visibleHandleExtentPx;
+    if (!leftIsLineAnchor) {
+      visibleHandleExtentPx = 3;
+    } else if (leftIsSource) {
+      visibleHandleExtentPx = 6;
+    } else {
+      visibleHandleExtentPx = 0;
+    }
+    // Match the visible gap NodeToolbar gives nodes: NodeToolbar offset 8
+    // minus the 3px handle overhang past the node bbox = 5px.
+    const VISIBLE_GAP_PX = 5;
+    const anchorRightPaddingPx = visibleHandleExtentPx + VISIBLE_GAP_PX;
+    return {position, anchorRightPaddingPx};
   }, [openLineEdge, nodes]);
 
   return (
@@ -664,10 +685,11 @@ export default function ReactFlowCanvas({
               }}
               defaultMarkerColor={DEFAULT_STROKE_COLOR}
             >
-              {openLineEdge && lineToolbarAnchorPosition && (
+              {openLineEdge && lineToolbarAnchor && (
                 <LineEdgeToolbar
                   edge={openLineEdge}
-                  anchorFlowPosition={lineToolbarAnchorPosition}
+                  anchorFlowPosition={lineToolbarAnchor.position}
+                  anchorRightPaddingPx={lineToolbarAnchor.anchorRightPaddingPx}
                   onSelectColor={value =>
                     setLineEdgeColor(openLineEdge.id, value)
                   }

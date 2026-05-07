@@ -87,6 +87,7 @@ function LineOptionGroup({
 interface LineEdgeToolbarProps {
   edge: SketchlabReactFlowEdge;
   anchorFlowPosition: XYPosition;
+  anchorRightPaddingPx: number;
   onSelectColor: (value: string) => void;
   onSelectWidth: (value: number) => void;
   onSelectStrokeStyle: (value: LineStrokeStyleValue) => void;
@@ -111,6 +112,7 @@ const ARROW_HEAD_ICONS: Record<ArrowHeadValue, string> = {
 export default function LineEdgeToolbar({
   edge,
   anchorFlowPosition,
+  anchorRightPaddingPx,
   onSelectColor,
   onSelectWidth,
   onSelectStrokeStyle,
@@ -173,6 +175,7 @@ export default function LineEdgeToolbar({
     <ToolbarShell
       target={{type: 'edge', id: edge.id}}
       anchorFlowPosition={anchorFlowPosition}
+      anchorRightPaddingPx={anchorRightPaddingPx}
       ariaLabel="Line style"
     >
       {isLocked ? (

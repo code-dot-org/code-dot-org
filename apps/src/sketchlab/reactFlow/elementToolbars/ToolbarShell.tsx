@@ -33,9 +33,10 @@ const TOOLBAR_Z_INDEX = 2147483647;
 interface ToolbarShellProps {
   target: ToolbarTarget;
   // Required when target.type === 'edge'. Flow-coordinate point that the
-  // toolbar's right edge should align to, so it sits immediately left of
-  // the leftmost handle of the edge.
+  // toolbar's right edge should align to.
   anchorFlowPosition?: XYPosition;
+  // Optional additional padding for right edge of toolbar. Only used for edges.
+  anchorRightPaddingPx?: number;
   ariaLabel: string;
   children: React.ReactNode;
 }
@@ -43,6 +44,7 @@ interface ToolbarShellProps {
 export default function ToolbarShell({
   target,
   anchorFlowPosition,
+  anchorRightPaddingPx,
   ariaLabel,
   children,
 }: ToolbarShellProps) {
@@ -169,11 +171,9 @@ export default function ToolbarShell({
         isVisible={isVisible}
         style={{zIndex: TOOLBAR_Z_INDEX}}
       >
-        {/* Pad so the Paper's right edge sits TOOLBAR_OFFSET_PX away from
-            the leftmost handle rather than touching it. EdgeToolbar applies
-            scale(1/zoom), so children render at screen-px scale and this
-            gap stays constant regardless of zoom. */}
-        <div style={{paddingRight: TOOLBAR_OFFSET_PX}}>{toolbarBody}</div>
+        <div style={{paddingRight: anchorRightPaddingPx ?? TOOLBAR_OFFSET_PX}}>
+          {toolbarBody}
+        </div>
       </EdgeToolbar>
     );
   }
