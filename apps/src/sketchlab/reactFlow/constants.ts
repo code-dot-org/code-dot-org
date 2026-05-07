@@ -30,3 +30,5 @@ export const ASSET_PATH_PREFIX = '/v3/assets';
 
 export const ARROW_MARKER_WIDTH_PX = 14;
 export const ARROW_MARKER_HEIGHT_PX = 14;
+
+export const MIN_ZOOM = 0.1;
