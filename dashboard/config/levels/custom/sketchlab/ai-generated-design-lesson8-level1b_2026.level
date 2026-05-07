@@ -1,7 +1,7 @@
 <Sketchlab>
   <config><![CDATA[{
   "game_id": 75,
-  "created_at": "2026-03-13T19:11:55.000Z",
+  "created_at": "2026-02-24T18:11:48.000Z",
   "level_num": "custom",
   "user_id": 22366,
   "properties": {
@@ -147,10 +147,6 @@
               "height": 47
             },
             "dragging": false,
-            "selected": false,
-            "domAttributes": {
-              "tabIndex": -1
-            },
             "resizing": false
           }
         ],
@@ -197,8 +193,8 @@
           }
         ],
         "viewport": {
-          "x": -52.977745637928365,
-          "y": -106.93229540172942,
+          "x": 4.022254362071635,
+          "y": -131.93229540172942,
           "zoom": 1.418596586047479
         }
       }
@@ -876,6 +872,6 @@
     "teacher_markdown": "Since students are filling out a site map, the goal is to ensure their page titles actually reflect the user experience.\r\n\r\nHave students pretend to navigate the site as if they are a user.\r\n\r\nAsk: \"Can a user find a specific book or school supply and get back to the Home page in three clicks or less?\" This helps them identify if their sublevel pages (like Available Items or Item Details) are too buried."
   },
   "published": true,
-  "audit_log": "[{\"changed_at\":\"2026-02-24T18:11:48.873+00:00\",\"changed\":[\"cloned from \\\"ai-generated-design-lesson8-level1b_2025\\\"\"],\"cloned_from\":\"ai-generated-design-lesson8-level1b_2025\"},{\"changed_at\":\"2026-03-12 20:13:57 +0000\",\"changed\":[],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-12 20:22:21 +0000\",\"changed\":[\"exemplar_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-16 15:51:02 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2026-04-16 15:51:50 +0000\",\"changed\":[\"teacher_markdown\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2026-04-30 18:15:27 -0400\",\"changed\":[\"start_sources\"],\"changed_by_id\":1,\"changed_by_email\":\"levelbuilder@dev.com\"},{\"changed_at\":\"2026-05-01 06:25:06 -0400\",\"changed\":[\"start_sources\"],\"changed_by_id\":1,\"changed_by_email\":\"levelbuilder@dev.com\"},{\"changed_at\":\"2026-05-01 06:25:32 -0400\",\"changed\":[\"start_sources\"],\"changed_by_id\":1,\"changed_by_email\":\"levelbuilder@dev.com\"}]"
+  "audit_log": "[{\"changed_at\":\"2026-02-24T18:11:48.873+00:00\",\"changed\":[\"cloned from \\\"ai-generated-design-lesson8-level1b_2025\\\"\"],\"cloned_from\":\"ai-generated-design-lesson8-level1b_2025\"},{\"changed_at\":\"2026-03-12 20:13:57 +0000\",\"changed\":[],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-12 20:22:21 +0000\",\"changed\":[\"exemplar_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-16 15:51:02 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2026-04-16 15:51:50 +0000\",\"changed\":[\"teacher_markdown\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2026-04-30 18:15:27 -0400\",\"changed\":[\"start_sources\"],\"changed_by_id\":1,\"changed_by_email\":\"levelbuilder@dev.com\"},{\"changed_at\":\"2026-05-01 06:25:06 -0400\",\"changed\":[\"start_sources\"],\"changed_by_id\":1,\"changed_by_email\":\"levelbuilder@dev.com\"},{\"changed_at\":\"2026-05-01 06:25:32 -0400\",\"changed\":[\"start_sources\"],\"changed_by_id\":1,\"changed_by_email\":\"levelbuilder@dev.com\"},{\"changed_at\":\"2026-05-06 19:07:53 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":155,\"changed_by_email\":\"dani@code.org\"}]"
 }]]></config>
 </Sketchlab>
