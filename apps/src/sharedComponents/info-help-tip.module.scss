@@ -1,0 +1,22 @@
+.infoHelpTip {
+  margin-left: 12px;
+
+  .infoTipIcon {
+    cursor: pointer;
+    margin-left: 5px;
+    margin-right: 5px;
+    font-size: 18px;
+    vertical-align: middle;
+    color: var(--text-neutral-tertiary);
+  }
+
+  .infoToolTipBox {
+    max-width: 400px;
+    white-space: normal;
+    text-align: left;
+
+    .infoToolTipText {
+      color: var(--text-neutral-inverse);
+    }
+  }
+}

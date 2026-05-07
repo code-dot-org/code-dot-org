@@ -1,4 +1,5 @@
-import {Typography} from '@mui/material';
+import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
+import {Typography, Button as MuiButton} from '@mui/material';
 import classnames from 'classnames';
 import _ from 'lodash';
 import PropTypes from 'prop-types';
@@ -7,7 +8,6 @@ import {Provider} from 'react-redux';
 
 import {queryParams} from '@cdo/apps/code-studio/utils';
 import {showVideoDialog} from '@cdo/apps/code-studio/videos';
-import Button from '@cdo/apps/legacySharedComponents/Button';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import {getStore} from '@cdo/apps/redux';
@@ -339,18 +339,19 @@ export default function SectionsSetUpContainer({
   ) => {
     return (
       <div className={moduleStyles.withBorderBottom}>
-        <Button
+        <MuiButton
           id={sectionId}
           className={moduleStyles.advancedSettingsButton}
-          styleAsText
-          icon={caret(isOpen)}
+          variant="text"
+          color="tertiary"
+          startIcon={<FontAwesomeV6Icon iconName={caret(isOpen)} />}
           onClick={toggleIsOpen}
           type="button"
         >
           <Typography variant="h3" gutterBottom>
             {sectionTitle()}
           </Typography>
-        </Button>
+        </MuiButton>
         <div>{isOpen && sectionContent()}</div>
       </div>
     );
@@ -483,33 +484,35 @@ export default function SectionsSetUpContainer({
             )}
           >
             {isNewSection && ( // Only show 'save and add another' button when creating a new section
-              <Button
+              <MuiButton
                 className={moduleStyles.buttonLeft}
-                icon="plus"
-                text={i18n.addAnotherClassSection()}
-                color={Button.ButtonColor.neutralDark}
+                variant="outlined"
+                color="tertiary"
+                startIcon={<FontAwesomeV6Icon iconName="plus" />}
                 onClick={() => saveSection(sections[0], true, coteachersToAdd)}
                 type="button"
-              />
+              >
+                {i18n.addAnotherClassSection()}
+              </MuiButton>
             )}
-            <Button
+            <MuiButton
               className={moduleStyles.buttonRight}
               id="uitest-save-section-changes"
-              text={
-                isSaveInProgress
-                  ? i18n.saving()
-                  : isNewSection
-                  ? i18n.finishCreatingSections()
-                  : i18n.save()
-              }
-              color={Button.ButtonColor.brandSecondaryDefault}
+              variant="contained"
+              color="primary"
               disabled={isSaveInProgress}
               onClick={() => {
                 setIsSaveInProgress(true);
                 saveSection(sections[0], false, coteachersToAdd);
               }}
               type="button"
-            />
+            >
+              {isSaveInProgress
+                ? i18n.saving()
+                : isNewSection
+                ? i18n.finishCreatingSections()
+                : i18n.save()}
+            </MuiButton>
           </div>
         </>
       )}

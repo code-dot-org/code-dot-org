@@ -8,11 +8,11 @@ import {ToolbarTarget} from '../context';
 import {
   DEFAULT_LINE_WIDTH,
   DEFAULT_STROKE_COLOR,
+  EdgeTypeValue,
   LineStrokeStyleValue,
   strokeDasharrayFromStyle,
 } from '../elementToolbars/toolbarPalettes';
-
-type ArrowHeadValue = 'start' | 'end' | 'both';
+import {ArrowHeadValue} from '../types';
 
 interface UseLineToolbarOptions {
   edges: SketchlabReactFlowEdge[];
@@ -181,6 +181,13 @@ export function useLineToolbar({
     [updateLineEdgeStyle]
   );
 
+  const setLineEdgeType = useCallback(
+    (edgeId: string, edgeType: EdgeTypeValue) => {
+      updateLineEdge(edgeId, edge => ({...edge, type: edgeType}));
+    },
+    [updateLineEdge]
+  );
+
   const setLineEdgeArrowHeads = useCallback(
     (edgeId: string, arrowHeads: ArrowHeadValue) => {
       updateLineEdge(edgeId, edge => {
@@ -227,6 +234,7 @@ export function useLineToolbar({
     setLineEdgeColor,
     setLineEdgeWidth,
     setLineEdgeStrokeStyle,
+    setLineEdgeType,
     setLineEdgeArrowHeads,
     setLineEdgeLocked,
   };

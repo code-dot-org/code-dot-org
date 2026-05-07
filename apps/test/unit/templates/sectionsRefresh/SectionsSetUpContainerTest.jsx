@@ -1,3 +1,4 @@
+import {Button as MuiButton} from '@mui/material';
 import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
 import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
@@ -39,8 +40,8 @@ describe('SectionsSetUpContainer', () => {
   it('renders headers and button', () => {
     const wrapper = shallow(<SectionsSetUpContainer {...DEFAULT_PROPS} />);
 
-    expect(wrapper.find('Button').length).to.equal(4);
-    expect(wrapper.find('Button').last().props().text).to.equal(
+    expect(wrapper.find(MuiButton).length).to.equal(4);
+    expect(wrapper.find(MuiButton).last().props().children).to.equal(
       'Finish creating sections'
     );
   });
@@ -50,8 +51,8 @@ describe('SectionsSetUpContainer', () => {
       <SectionsSetUpContainer {...DEFAULT_PROPS} sectionToBeEdited={{}} />
     );
 
-    expect(wrapper.find('Button').length).to.equal(3);
-    expect(wrapper.find('Button').last().props().text).to.equal('Save');
+    expect(wrapper.find(MuiButton).length).to.equal(3);
+    expect(wrapper.find(MuiButton).last().props().children).to.equal('Save');
   });
 
   it('renders curriculum quick assign', () => {
@@ -115,19 +116,20 @@ describe('SectionsSetUpContainer', () => {
   it('updates caret direction when Add Coteachers is clicked', () => {
     const wrapper = shallow(<SectionsSetUpContainer {...DEFAULT_PROPS} />);
 
-    expect(wrapper.find('Button').at(0).props().icon).to.equal('caret-right');
+    const caretIcon = button => button.props().startIcon.props.iconName;
+    expect(caretIcon(wrapper.find(MuiButton).at(0))).to.equal('caret-right');
     wrapper
-      .find('Button')
+      .find(MuiButton)
       .at(0)
       .simulate('click', {preventDefault: () => {}});
-    expect(wrapper.find('Button').at(0).props().icon).to.equal('caret-down');
+    expect(caretIcon(wrapper.find(MuiButton).at(0))).to.equal('caret-down');
   });
 
   it('renders advanced settings', () => {
     const wrapper = shallow(<SectionsSetUpContainer {...DEFAULT_PROPS} />);
 
     wrapper
-      .find('Button')
+      .find(MuiButton)
       .at(1)
       .simulate('click', {preventDefault: () => {}});
 
@@ -137,12 +139,13 @@ describe('SectionsSetUpContainer', () => {
   it('updates caret direction when Advanced Settings is clicked', () => {
     const wrapper = shallow(<SectionsSetUpContainer {...DEFAULT_PROPS} />);
 
-    expect(wrapper.find('Button').at(0).props().icon).to.equal('caret-right');
+    const caretIcon = button => button.props().startIcon.props.iconName;
+    expect(caretIcon(wrapper.find(MuiButton).at(0))).to.equal('caret-right');
     wrapper
-      .find('Button')
+      .find(MuiButton)
       .at(1)
       .simulate('click', {preventDefault: () => {}});
-    expect(wrapper.find('Button').at(1).props().icon).to.equal('caret-down');
+    expect(caretIcon(wrapper.find(MuiButton).at(1))).to.equal('caret-down');
   });
 
   it('validates the form when save is clicked', () => {
@@ -158,7 +161,7 @@ describe('SectionsSetUpContainer', () => {
     const wrapper = shallow(<SectionsSetUpContainer {...DEFAULT_PROPS} />);
 
     wrapper
-      .find('Button')
+      .find(MuiButton)
       .last()
       .simulate('click', {preventDefault: () => {}});
 
@@ -183,7 +186,7 @@ describe('SectionsSetUpContainer', () => {
     const wrapper = shallow(<SectionsSetUpContainer {...DEFAULT_PROPS} />);
 
     wrapper
-      .find('Button')
+      .find(MuiButton)
       .last()
       .simulate('click', {preventDefault: () => {}});
 
@@ -214,7 +217,7 @@ describe('SectionsSetUpContainer', () => {
     );
 
     wrapper
-      .find('Button')
+      .find(MuiButton)
       .last()
       .simulate('click', {preventDefault: () => {}});
 
@@ -249,7 +252,7 @@ describe('SectionsSetUpContainer', () => {
     const wrapper = shallow(<SectionsSetUpContainer {...DEFAULT_PROPS} />);
 
     wrapper
-      .find('Button')
+      .find(MuiButton)
       .last()
       .simulate('click', {preventDefault: () => {}});
 
@@ -278,7 +281,7 @@ describe('SectionsSetUpContainer', () => {
 
     const wrapper = shallow(<SectionsSetUpContainer {...DEFAULT_PROPS} />);
 
-    const buttons = wrapper.find('Button');
+    const buttons = wrapper.find(MuiButton);
     buttons
       .at(buttons.length - 2)
       .simulate('click', {preventDefault: () => {}});
@@ -309,7 +312,7 @@ describe('SectionsSetUpContainer', () => {
     );
 
     wrapper
-      .find('Button')
+      .find(MuiButton)
       .last()
       .simulate('click', {preventDefault: () => {}});
 

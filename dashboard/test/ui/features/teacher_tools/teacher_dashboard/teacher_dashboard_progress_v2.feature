@@ -55,14 +55,14 @@ Scenario: Viewing student metadata
   And I wait until element "div:contains(Collapse all student rows)" is visible
 
   # Can click on more options and it responds appropriately
-  Then I click selector "#ui-test-expand-all"
+  Then I click selector "button:contains(Expand all student rows)"
   And I wait until element "div:contains(Last Updated)" is visible
   And I wait until element "div:contains(Time Spent)" is visible
   And I wait until element "#ui-test-lesson-header-44" is visible
   And I scroll to "#ui-test-lesson-header-44"
   And I wait until ".ui-test-time-spent-44" contains one or more integers
   Then I click selector "#ui-see-more-options-dropdown"
-  Then I click selector "#ui-test-collapse-all"
+  Then I click selector "button:contains(Collapse all student rows)"
   And element "div:contains(Time Spent)" does not exist
   And element "div:contains(Last Updated)" does not exist
 
