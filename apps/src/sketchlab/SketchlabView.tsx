@@ -13,7 +13,9 @@ import ReactFlowSketchLabView, {
 
 export default function SketchlabView(props: LabProps<LevelProperties>) {
   // Legacy version of Sketch Lab is behind a flag for now, so we can check on old behavior.
-  const useExcalidraw = experiments.isEnabledAllowingQueryString('excalidraw');
+  const useExcalidraw = experiments.isEnabledAllowingQueryString(
+    experiments.EXCALIDRAW
+  );
   const defaultSources = useExcalidraw
     ? DEFAULT_SOURCES
     : REACT_FLOW_DEFAULT_SOURCES;
