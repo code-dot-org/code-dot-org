@@ -1644,6 +1644,7 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
     assert_equal @csp_script.id, section.script_id
     assert_equal @csp_unit_group.id, section.course_id
     assert_equal 'high', section.demo_type
+    assert_equal 'high', returned_json['demo_type']
   end
 
   test 'create_demo: adds demo students to the section' do

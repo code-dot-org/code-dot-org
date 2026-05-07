@@ -17,7 +17,6 @@ const RUN_START_TIME = new Date(
   document.querySelector("#start-time").textContent
 );
 const TEST_TYPE = document.querySelector("#test-type").value;
-const DEVICE_FARM = document.querySelector("#device-farm").value === "true";
 const API_ORIGIN = document.querySelector("#api-origin").value;
 const S3_BUCKET = document.querySelector("#s3-bucket").value;
 const S3_PREFIX = document.querySelector("#s3-prefix").value;
@@ -28,10 +27,8 @@ const STATUS_FAILED = "FAILED";
 const STATUS_SUCCEEDED = "SUCCEEDED";
 
 // Derived constants
-// Mirrors test_run_identifier in runner.rb: <browser>_<feature>[_eyes][_df].
-// Concurrent SauceLabs and Device Farm runs of the same browser+feature
-// upload to distinct S3 keys, so this status page only matches its own.
-const S3_KEY_SUFFIX = `${/eyes/i.test(TEST_TYPE) ? "_eyes" : ""}${DEVICE_FARM ? "_df" : ""}_output.html`;
+// Mirrors test_run_identifier in runner.rb: <browser>_<feature>[_eyes].
+const S3_KEY_SUFFIX = `${/eyes/i.test(TEST_TYPE) ? "_eyes" : ""}_output.html`;
 const API_BASEPATH = `${API_ORIGIN}/api/v1/test_logs`;
 
 // Grab DOM references

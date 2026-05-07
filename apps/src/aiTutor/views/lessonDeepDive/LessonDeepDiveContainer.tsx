@@ -22,10 +22,10 @@ const darkTheme = createTheme({
 });
 
 import FizzyButton from './FizzyButton';
-import InterventionBox from './InterventionBox';
 import LevelsAttemptedBox from './LevelsAttemptedBox';
 import PreSkillsCheck from './PreSkillsCheck';
 import ReflectionBox from './ReflectionBox';
+import InterventionBox from './ReviewModalities/InterventionBox';
 import SkillsCheck from './SkillsCheck/SkillsCheck';
 import TimeSpentBox from './TimeSpentBox';
 import TutorSummaryBox from './TutorSummaryBox';
@@ -134,6 +134,7 @@ const LessonDeepDiveContainer: FC<LessonDeepDiveContainerProps> = ({
             objectives={lessonDeepDiveData.objectives}
             jsonVideos={lessonDeepDiveData.jsonVideos}
             reflectionData={reflectionData}
+            onNext={goToNext}
           />
         );
       case 'pre-skills-check':

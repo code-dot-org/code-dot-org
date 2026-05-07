@@ -31,12 +31,20 @@ export const BACKGROUND_PALETTE: ColorSwatch[] = [
 ];
 
 export const FONT_SIZE_OPTIONS = [
-  {value: 'small', label: 'Small', px: 12},
-  {value: 'medium', label: 'Medium', px: 16},
-  {value: 'large', label: 'Large', px: 22},
+  {value: 'small', label: 'Small', px: 12, shortLabel: 'S'},
+  {value: 'medium', label: 'Medium', px: 16, shortLabel: 'M'},
+  {value: 'large', label: 'Large', px: 22, shortLabel: 'L'},
+  {value: 'extra-large', label: 'Extra Large', px: 30, shortLabel: 'XL'},
 ] as const;
 
 export type FontSizeValue = (typeof FONT_SIZE_OPTIONS)[number]['value'];
+
+// fontSize on a node may be a named preset or a raw pixel number.
+export type FontSize = FontSizeValue | number;
+
+// We set a minimum font size for sanity-checking but do not set a maximum,
+// since the canvas can be zoomed out.
+export const MIN_FONT_SIZE_PX = 6;
 
 export const LINE_WIDTH_OPTIONS = [
   {value: 1, label: 'Thin'},
@@ -71,7 +79,10 @@ export const DEFAULT_TEXT_ALIGN: TextAlignValue = 'center';
 export const DEFAULT_LINE_WIDTH: LineWidthValue = 1;
 export const DEFAULT_LINE_STROKE_STYLE: LineStrokeStyleValue = 'solid';
 
-export function fontSizePx(value: string | undefined): number | undefined {
+export function fontSizePx(value: FontSize | undefined): number | undefined {
+  if (typeof value === 'number') {
+    return value;
+  }
   const match = FONT_SIZE_OPTIONS.find(option => option.value === value);
   return (
     match?.px ||
