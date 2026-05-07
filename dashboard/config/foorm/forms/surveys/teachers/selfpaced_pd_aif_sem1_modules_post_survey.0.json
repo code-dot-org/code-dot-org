@@ -39,7 +39,7 @@
           "type": "rating",
           "name": "comfort_supporting_students_learn_aif_ai_and_computing",
           "visibleIf": "{module} = 'Exploring AI & Computing'",
-          "title": "After completing this module, I am more comfortable in my ability to navigate the AI Foundations curriculum, identify foundational AI concepts, and understand best practices for managing AI in the classroom",
+          "title": "After completing this module, I am more comfortable in my ability to navigate the AI Foundations curriculum, identify foundational AI concepts, and understand best practices for managing AI in the classroom.",
           "rateCount": 7,
           "rateMax": 7,
           "minRateDescription": "Less comfortable",

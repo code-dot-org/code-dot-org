@@ -1,4 +1,5 @@
-import {Typography} from '@mui/material';
+import Dialog from '@code-dot-org/component-library/dialog';
+import {Typography, IconButton as MuiIconButton} from '@mui/material';
 import {mount, shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
 import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
@@ -117,7 +118,7 @@ describe('CoteacherSettings', () => {
     expect(addCoteacher.text()).to.equal(i18n.coteacherLtiAddInfo());
 
     const cells = wrapper.find('CoteacherTable').dive().find('td');
-    const button = cells.find('button');
+    const button = cells.find(MuiIconButton);
     expect(button).to.have.lengthOf(0);
   });
   it('clicking remove opens dialog', () => {
@@ -135,20 +136,19 @@ describe('CoteacherSettings', () => {
     const table = wrapper.find('CoteacherTable').dive();
     const cells = table.find('td');
     expect(cells).to.have.lengthOf(9);
-    const button = cells.at(2).find('button');
-    button.at(0).simulate('click', {preventDefault: () => {}});
+    const removeButton = cells.at(2).find(MuiIconButton);
+    removeButton.at(0).simulate('click', {preventDefault: () => {}});
 
     wrapper.update();
 
     dialog = wrapper.find('RemoveCoteacherDialog').dive();
 
     expect(wrapper.find('RemoveCoteacherDialog').length).to.equal(1);
-    expect(dialog.find('Button')).to.have.lengthOf(2);
-    const title = dialog
-      .find(Typography)
-      .filterWhere(node => node.props().variant === 'strong')
-      .at(0);
-    expect(title.text()).to.contain('Remove coelophysis@code.org');
+    const dscoDialog = dialog.find(Dialog);
+    expect(dscoDialog).to.have.lengthOf(1);
+    expect(dscoDialog.props().primaryButtonProps).to.exist;
+    expect(dscoDialog.props().secondaryButtonProps).to.exist;
+    expect(dscoDialog.props().title).to.contain('Remove coelophysis@code.org');
   });
   it('cancel remove does nothing', () => {
     let coteachersToAdd = ['coelophysis@code.org'];
@@ -168,8 +168,8 @@ describe('CoteacherSettings', () => {
     let table = wrapper.find('CoteacherTable').dive();
     const cells = table.find('td');
     expect(cells).to.have.lengthOf(9);
-    const button = cells.at(2).find('button');
-    button.at(0).simulate('click', {preventDefault: () => {}});
+    const removeButton = cells.at(2).find(MuiIconButton);
+    removeButton.at(0).simulate('click', {preventDefault: () => {}});
 
     wrapper.update();
 
@@ -179,9 +179,9 @@ describe('CoteacherSettings', () => {
     dialog = wrapper.find('RemoveCoteacherDialog').dive();
 
     dialog
-      .find('Button')
-      .at(0)
-      .simulate('click', {preventDefault: () => {}});
+      .find(Dialog)
+      .props()
+      .secondaryButtonProps.onClick({preventDefault: () => {}});
 
     wrapper.update();
     table = wrapper.find('CoteacherTable').dive();
@@ -206,8 +206,8 @@ describe('CoteacherSettings', () => {
     expect(dialog).to.be.empty;
     let table = wrapper.find('CoteacherTable').dive();
     const cells = table.find('td');
-    const button = cells.at(2).find('button');
-    button.at(0).simulate('click', {preventDefault: () => {}});
+    const removeButton = cells.at(2).find(MuiIconButton);
+    removeButton.at(0).simulate('click', {preventDefault: () => {}});
 
     wrapper.update();
 
@@ -217,9 +217,9 @@ describe('CoteacherSettings', () => {
     dialog = wrapper.find('RemoveCoteacherDialog').dive();
 
     dialog
-      .find('Button')
-      .at(1)
-      .simulate('click', {preventDefault: () => {}});
+      .find(Dialog)
+      .props()
+      .primaryButtonProps.onClick({preventDefault: () => {}});
 
     expect(coteachersToAdd).to.deep.equal(['diplodocus@code.org']);
     wrapper.update();
@@ -245,8 +245,8 @@ describe('CoteacherSettings', () => {
     expect(dialog).to.be.empty;
 
     const cells = wrapper.find('CoteacherTable').dive().find('td');
-    const button = cells.at(5).find('button');
-    button.at(0).simulate('click', {preventDefault: () => {}});
+    const removeButton = cells.at(5).find(MuiIconButton);
+    removeButton.at(0).simulate('click', {preventDefault: () => {}});
 
     wrapper.update();
 
@@ -257,9 +257,9 @@ describe('CoteacherSettings', () => {
     dialog = wrapper.find('RemoveCoteacherDialog').dive();
 
     dialog
-      .find('Button')
-      .at(1)
-      .simulate('click', {preventDefault: () => {}});
+      .find(Dialog)
+      .props()
+      .primaryButtonProps.onClick({preventDefault: () => {}});
 
     wrapper.update();
 

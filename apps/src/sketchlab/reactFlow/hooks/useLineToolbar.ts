@@ -1,10 +1,7 @@
 import {MarkerType} from '@xyflow/react';
 import React, {useCallback, useMemo} from 'react';
 
-import {
-  SketchlabReactFlowEdge,
-  SketchlabReactFlowNode,
-} from '@cdo/apps/lab2/types';
+import {SketchlabReactFlowEdge} from '@cdo/apps/lab2/types';
 
 import {ARROW_MARKER_HEIGHT_PX, ARROW_MARKER_WIDTH_PX} from '../constants';
 import {ToolbarTarget} from '../context';
@@ -14,13 +11,10 @@ import {
   LineStrokeStyleValue,
   strokeDasharrayFromStyle,
 } from '../elementToolbars/toolbarPalettes';
-import {isLineEdge} from '../utils/lineEdges';
-
-type ArrowHeadValue = 'start' | 'end' | 'both';
+import {ArrowHeadValue} from '../types';
 
 interface UseLineToolbarOptions {
   edges: SketchlabReactFlowEdge[];
-  nodes: SketchlabReactFlowNode[];
   readOnly: boolean;
   openToolbarTarget: ToolbarTarget | null;
   openToolbar: (target: ToolbarTarget, options?: {trapFocus?: boolean}) => void;
@@ -31,7 +25,6 @@ interface UseLineToolbarOptions {
 
 export function useLineToolbar({
   edges,
-  nodes,
   readOnly,
   openToolbarTarget,
   openToolbar,
@@ -83,25 +76,21 @@ export function useLineToolbar({
         return;
       }
       const clickedEdge = edges.find(currentEdge => currentEdge.id === edge.id);
-      if (clickedEdge && isLineEdge(clickedEdge, nodes)) {
+      if (clickedEdge) {
         openToolbar({type: 'edge', id: clickedEdge.id}, {trapFocus: false});
       }
     },
-    [readOnly, edges, nodes, openToolbar]
+    [readOnly, edges, openToolbar]
   );
 
   const openLineEdge = useMemo(() => {
     if (openToolbarTarget?.type !== 'edge') {
       return null;
     }
-    const edge = edges.find(
-      currentEdge => currentEdge.id === openToolbarTarget.id
+    return (
+      edges.find(currentEdge => currentEdge.id === openToolbarTarget.id) ?? null
     );
-    if (!edge || !isLineEdge(edge, nodes)) {
-      return null;
-    }
-    return edge;
-  }, [openToolbarTarget, edges, nodes]);
+  }, [openToolbarTarget, edges]);
 
   const updateLineEdgeStyle = useCallback(
     (
