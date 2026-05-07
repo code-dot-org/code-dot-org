@@ -161,6 +161,7 @@
 .fontSizeButtons {
   display: flex;
   flex-direction: row;
+  align-items: center;
   gap: 4px;
 }
 
@@ -196,7 +197,7 @@
 // The DSCO TextField wrapper hard-codes min-width: 18.75rem on its <label>;
 // override the wrapper and the input so the field fits 3 digits plus the
 // native number spinner.
-.rotationInput {
+.smallInput {
   flex: 0 0 auto;
   width: 68px;
   min-width: 0;

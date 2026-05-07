@@ -46,11 +46,9 @@ export const isPermanentlyReadOnlyWorkspace = (state: RootState) => {
   return !isOwner || isFrozen || isWidgetView;
 };
 
-// This may depend on more factors, such as share.
-export const isReadOnlyWorkspace = (state: RootState) => {
-  // Start with the permanently read-only check.
-  const isPermanentlyReadOnly = isPermanentlyReadOnlyWorkspace(state);
-
+// Returns true if the workspace is temporarily read-only.
+// This includes runtime and version states, but excludes permanent states like ownership.
+export const isTemporarilyReadOnlyWorkspace = (state: RootState) => {
   const isEditMode = !!getAppOptionsEditBlocks();
   const isEditingExemplar = getAppOptionsEditingExemplar();
 
@@ -70,7 +68,6 @@ export const isReadOnlyWorkspace = (state: RootState) => {
     shouldBeReadonlyWhileRunning(state);
 
   return (
-    isPermanentlyReadOnly ||
     isRunningAndReadonly ||
     hasSubmitted ||
     isViewingOldVersion ||
@@ -78,6 +75,11 @@ export const isReadOnlyWorkspace = (state: RootState) => {
     readOnlyPredictLevel
   );
 };
+
+// This may depend on more factors, such as share.
+export const isReadOnlyWorkspace = (state: RootState) =>
+  isPermanentlyReadOnlyWorkspace(state) ||
+  isTemporarilyReadOnlyWorkspace(state);
 
 // If the level should show an exemplar link, the exemplar link is the current url
 // with the query parameter exemplar=true at the end.
