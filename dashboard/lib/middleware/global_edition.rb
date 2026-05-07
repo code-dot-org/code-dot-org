@@ -199,7 +199,7 @@ module Middleware
         set_global_cookie(REGION_KEY, new_region, high_priority: true)
 
         region_locale = resolve_locale_for(new_region)
-        unless region_locale == original_region
+        unless region_locale == original_locale
           # Updates the global `language` cookie to enforce the switch to the regional language.
           ::I18n.locale = region_locale
           set_locale_cookie(region_locale)
