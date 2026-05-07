@@ -76,6 +76,7 @@ class Lesson < ApplicationRecord
     announcements
     assessment_opportunities
     generate_outline
+    generate_style
   )
 
   # A lesson has an absolute position and a relative position. The difference
@@ -476,6 +477,7 @@ class Lesson < ApplicationRecord
       lessonPath: get_uncached_show_path,
       rubric: rubric,
       generateOutline: generate_outline,
+      generateStyle: generate_style,
     }
   end
 

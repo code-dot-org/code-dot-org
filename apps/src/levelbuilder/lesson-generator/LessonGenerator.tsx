@@ -8,6 +8,7 @@ import {AiChatClientTypes} from '@cdo/generated-scripts/sharedConstants';
 import {
   generateLessonOutline,
   generatePanelsForLevel,
+  generateStyleSheet,
   generateWeblab2Level,
   Weblab2Generation,
 } from './aiGeneration';
@@ -314,6 +315,17 @@ interface LessonGeneratorProps {
   lesson: ExistingLessonData;
 }
 
+// The style + characters block is gated on ?show-style=true. It's still
+// rough enough that we don't want it visible by default, but the persisted
+// `generate_style` value is always honoured if it's already set on the
+// lesson.
+const showStyleBlock = (() => {
+  if (typeof window === 'undefined') return false;
+  return (
+    new URLSearchParams(window.location.search).get('show-style') === 'true'
+  );
+})();
+
 const LessonGenerator: React.FC<LessonGeneratorProps> = ({lesson}) => {
   // Lazy initializer: walk the lesson's existing levels to pre-populate the
   // form. This runs once per mount; the lesson prop is the snapshot the page
@@ -329,6 +341,11 @@ const LessonGenerator: React.FC<LessonGeneratorProps> = ({lesson}) => {
   const [outline, setOutline] = useState<string>(lesson.generateOutline || '');
   const [isOutlining, setIsOutlining] = useState(false);
   const [outlineError, setOutlineError] = useState<string | null>(null);
+  const [styleSheet, setStyleSheet] = useState<string>(
+    lesson.generateStyle || ''
+  );
+  const [isStyling, setIsStyling] = useState(false);
+  const [styleError, setStyleError] = useState<string | null>(null);
 
   // The AI gateway expects an AichatContext on every access-token request.
   // We're not actually inside an aichat lab here, but setting the context
@@ -396,6 +413,25 @@ const LessonGenerator: React.FC<LessonGeneratorProps> = ({lesson}) => {
   const addSpec = useCallback(() => {
     setLevelSpecs(specs => [...specs, newLevelSpec()]);
   }, []);
+
+  const handleGenerateStyle = useCallback(async () => {
+    setStyleError(null);
+    setIsStyling(true);
+    try {
+      const sheet = await generateStyleSheet(
+        outline.trim(),
+        levelSpecs
+          .filter(s => !s.unsupportedType && s.description.trim())
+          .map(s => ({labType: s.labType, description: s.description.trim()}))
+      );
+      setStyleSheet(sheet);
+    } catch (err) {
+      const message = err instanceof Error ? err.message : String(err);
+      setStyleError(message);
+    } finally {
+      setIsStyling(false);
+    }
+  }, [outline, levelSpecs]);
 
   const handleGenerateOutline = useCallback(async () => {
     if (!outline.trim()) {
@@ -585,7 +621,8 @@ const LessonGenerator: React.FC<LessonGeneratorProps> = ({lesson}) => {
                 },
               },
               lessonContext,
-              precedingLevelsText
+              precedingLevelsText,
+              styleSheet.trim() || undefined
             );
             setStage('saving-properties');
             appendLog(`Saving panel data for "${levelName}"…`);
@@ -700,9 +737,14 @@ const LessonGenerator: React.FC<LessonGeneratorProps> = ({lesson}) => {
           lesson.activities || [],
           placements
         );
-        // Persist the outline so reopening /generate restores it. Sending
-        // an empty string clears any previously-saved value.
-        await saveLessonActivities(lesson.id, newActivities, outline.trim());
+        // Persist the outline + style sheet so reopening /generate restores
+        // them. Sending an empty string clears any previously-saved value.
+        await saveLessonActivities(
+          lesson.id,
+          newActivities,
+          outline.trim(),
+          styleSheet.trim()
+        );
         appendLog('Lesson updated.');
       } catch (err) {
         const message = err instanceof Error ? err.message : String(err);
@@ -735,7 +777,15 @@ const LessonGenerator: React.FC<LessonGeneratorProps> = ({lesson}) => {
     setSummary({created, failed});
     setIsGenerating(false);
     setProgress(null);
-  }, [validationError, lesson, levelSpecs, fullName, appendLog, outline]);
+  }, [
+    validationError,
+    lesson,
+    levelSpecs,
+    fullName,
+    appendLog,
+    outline,
+    styleSheet,
+  ]);
 
   return (
     <div className={moduleStyles.container}>
@@ -778,6 +828,41 @@ const LessonGenerator: React.FC<LessonGeneratorProps> = ({lesson}) => {
           )}
         </div>
       </details>
+
+      {showStyleBlock && (
+        <details className={moduleStyles.outlineBlock}>
+          <summary>Optional: visual style &amp; recurring characters</summary>
+          <p className={moduleStyles.outlineHelp}>
+            Art direction and a character bible (zero or more) prepended to
+            every panel image prompt, so panels across the lesson share a
+            consistent look. Generate from the outline and level descriptions,
+            or write your own. Web Lab 2 levels ignore this — it only affects
+            panel illustrations.
+          </p>
+          <textarea
+            className={moduleStyles.outlineInput}
+            value={styleSheet}
+            onChange={e => setStyleSheet(e.target.value)}
+            placeholder="e.g. **Art style:** flat-shaded vector cartoon, warm pastel palette…&#10;**Characters:** - **Agatha:** 12-year-old witch with long black hair, purple cloak, green eyes."
+            disabled={isStyling || isGenerating}
+          />
+          <div className={moduleStyles.outlineActions}>
+            <button
+              type="button"
+              className={moduleStyles.secondaryButton}
+              onClick={handleGenerateStyle}
+              disabled={isStyling || isGenerating}
+            >
+              {isStyling ? 'Generating style…' : 'Generate style'}
+            </button>
+            {styleError && (
+              <span className={moduleStyles.summaryBad} role="alert">
+                {styleError}
+              </span>
+            )}
+          </div>
+        </details>
+      )}
 
       <div className={moduleStyles.fieldRow}>
         <label htmlFor="level-prefix">Level name prefix</label>

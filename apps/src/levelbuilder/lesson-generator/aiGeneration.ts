@@ -26,6 +26,7 @@ const getImageModel = () =>
 // ambiguity. Add a new tag here if you add another generateText call site.
 export const PROMPT_TAGS = {
   LESSON_OUTLINE: 'lesson-gen/lesson-outline',
+  LESSON_STYLE: 'lesson-gen/lesson-style',
   PANELS_PLAN: 'lesson-gen/panels-plan',
   PANELS_IMAGE: 'lesson-gen/panels-image',
   WEBLAB2_PLAN: 'lesson-gen/weblab2-plan',
@@ -170,7 +171,8 @@ async function planPanels(
 async function generateAndUploadPanelImage(
   imagePrompt: string,
   levelName: string,
-  panelIndex: number
+  panelIndex: number,
+  styleSheet?: string
 ): Promise<string> {
   // Image models frequently bake captions, labels, signs, and watermarks
   // into output unless the constraint is loud and concrete. State the
@@ -192,6 +194,15 @@ async function generateAndUploadPanelImage(
     '',
     'Generate a single 16:9 widescreen illustration suitable for a',
     'middle-school classroom.',
+    ...(styleSheet
+      ? [
+          '',
+          'Use the following art direction and character descriptions for',
+          'every panel in this lesson — same visual style across panels, and',
+          'recurring characters drawn the same way each time:',
+          styleSheet,
+        ]
+      : []),
     '',
     'Subject:',
     imagePrompt,
@@ -245,7 +256,8 @@ export async function generatePanelsForLevel(
   description: string,
   callbacks: PanelGenerationCallbacks = {},
   lessonContext?: string,
-  precedingLevels?: string
+  precedingLevels?: string,
+  styleSheet?: string
 ): Promise<Panel[]> {
   const plan = await planPanels(description, lessonContext, precedingLevels);
   callbacks.onPlanned?.(plan.length);
@@ -256,7 +268,8 @@ export async function generatePanelsForLevel(
     const imageUrl = await generateAndUploadPanelImage(
       plan[i].imagePrompt,
       levelName,
-      i
+      i,
+      styleSheet
     );
     panels.push({
       key: `${levelName}-${createUuid()}`,
@@ -480,4 +493,108 @@ export async function generateLessonOutline(
     throw new Error('Model returned no levels');
   }
   return levels;
+}
+
+const styleSheetSchema = Output.object({
+  schema: z.object({
+    style: z
+      .string()
+      .describe(
+        'A short paragraph (2-4 sentences) of art direction for the panel ' +
+          'illustrations: medium (e.g. flat-shaded vector cartoon, hand-drawn ' +
+          'watercolor), palette, line weight, level of detail, lighting, ' +
+          'overall mood. Concrete and consistent across panels.'
+      ),
+    characters: z
+      .array(
+        z.object({
+          name: z
+            .string()
+            .describe('Short name as it would appear in the lesson narrative.'),
+          appearance: z
+            .string()
+            .describe(
+              'Concrete, image-model-friendly visual description: species/' +
+                'age/build, hair, clothing, distinguishing features, ' +
+                'colors. The same wording every time so each panel draws ' +
+                'the character the same way.'
+            ),
+        })
+      )
+      .min(0)
+      .max(6)
+      .describe(
+        'Recurring characters that appear across panels. Empty if the ' +
+          'lesson is purely abstract / object-focused. List only characters ' +
+          'who actually recur — do not invent.'
+      ),
+  }),
+});
+
+interface StyleSheet {
+  style: string;
+  characters: {name: string; appearance: string}[];
+}
+
+// Format a structured style sheet into the markdown blob we save on the
+// lesson and prepend to every panel image prompt. Markdown is the storage
+// format because it doubles as a human-editable text in the page UI.
+export function formatStyleSheet(sheet: StyleSheet): string {
+  const lines: string[] = [];
+  if (sheet.style.trim()) {
+    lines.push(`**Art style:** ${sheet.style.trim()}`);
+  }
+  if (sheet.characters.length > 0) {
+    lines.push('');
+    lines.push('**Characters:**');
+    for (const c of sheet.characters) {
+      lines.push(`- **${c.name}:** ${c.appearance}`);
+    }
+  }
+  return lines.join('\n');
+}
+
+// Derive a single art direction + character bible for the lesson, using the
+// outline (if any) and the per-level descriptions. Run once per Generate
+// run and prepended to every panel image prompt so the panels stay
+// stylistically consistent and recurring characters are drawn the same way.
+export async function generateStyleSheet(
+  outline: string,
+  levelDescriptions: {labType: string; description: string}[]
+): Promise<string> {
+  const levelLines = levelDescriptions
+    .map((l, i) => `  Level ${i + 1} (${l.labType}): ${l.description}`)
+    .join('\n');
+  const prompt = [
+    'You are helping a curriculum author plan the visual style for the',
+    'panel illustrations in a single lesson. Output two things:',
+    '  1. A short art-direction paragraph that every panel image will share',
+    '     — medium, palette, line weight, lighting, mood. Concrete enough',
+    '     that an image model produces consistent results.',
+    '  2. A character bible: any recurring characters across panels, each',
+    '     with a concrete visual description (species/age/build, hair,',
+    '     clothing, colors). Use the SAME wording every time so each panel',
+    '     draws the character the same way. Return zero entries if the',
+    '     lesson is purely abstract or object-focused. Return more than',
+    '     one if multiple characters recur. Do not invent characters who',
+    '     are not implied by the outline or level descriptions.',
+    '',
+    'Constraints inherited by every image prompt: no text, captions,',
+    'labels, or written language inside the artwork.',
+    ...(outline ? ['', 'Lesson outline:', outline] : []),
+    ...(levelLines ? ['', 'Per-level descriptions:', levelLines] : []),
+  ].join('\n');
+
+  logPrompt(PROMPT_TAGS.LESSON_STYLE, prompt);
+  const response = await generateText({
+    model: getTextModel(),
+    prompt,
+    output: styleSheetSchema,
+  });
+  const sheet = response.output as StyleSheet;
+  logResponse(PROMPT_TAGS.LESSON_STYLE, sheet);
+  if (!sheet?.style?.trim()) {
+    throw new Error('Model returned no style description');
+  }
+  return formatStyleSheet(sheet);
 }
