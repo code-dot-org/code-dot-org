@@ -1580,6 +1580,151 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
     assert_response :bad_request
   end
 
+  # Helper: build a section with a script containing two lessons, each with one script level.
+  # Lessons belong to a lesson_group so unit.lessons (through lesson_groups) finds them.
+  # Returns [section, student, lesson1, lesson2, sl1, sl2].
+  def setup_suggested_lesson_section
+    unit = create(:script, :in_single_unit_course)
+    lesson_group = create(:lesson_group, script: unit)
+    lesson1 = create(:lesson, script: unit, lesson_group: lesson_group)
+    lesson2 = create(:lesson, script: unit, lesson_group: lesson_group)
+    sl1 = create(:script_level, lesson: lesson1, script: unit)
+    sl2 = create(:script_level, lesson: lesson2, script: unit)
+    section = create(:section, user: @teacher, script: unit)
+    student = create(:follower, section: section).student_user
+    [section, student, lesson1, lesson2, sl1, sl2]
+  end
+
+  test 'get suggested_lesson returns nil when not set and section has no script' do
+    sign_in @teacher
+    get :suggested_lesson, params: {id: @section.id}
+    assert_response :success
+    assert_nil json_response
+  end
+
+  test 'get suggested_lesson returns fresh stored data without recomputing' do
+    lesson = create(:lesson)
+    fresh_timestamp = Time.now.utc.iso8601
+    @section.update!(suggested_lesson: {'lesson_id' => lesson.id, 'timestamp' => fresh_timestamp})
+    sign_in @teacher
+    get :suggested_lesson, params: {id: @section.id}
+    assert_response :success
+    assert_equal lesson.id, json_response['lesson_id']
+    # timestamp unchanged confirms no recompute happened
+    assert_equal fresh_timestamp, json_response['timestamp']
+    assert_equal lesson.localized_title, json_response['name']
+    assert json_response['url'].present?
+  end
+
+  test 'get suggested_lesson omits name and url when lesson is not found' do
+    fresh_timestamp = Time.now.utc.iso8601
+    @section.update!(suggested_lesson: {'lesson_id' => -1, 'timestamp' => fresh_timestamp})
+    sign_in @teacher
+    get :suggested_lesson, params: {id: @section.id}
+    assert_response :success
+    assert_equal(-1, json_response['lesson_id'])
+    assert_nil json_response['name']
+    assert_nil json_response['url']
+  end
+
+  test 'get suggested_lesson computes when data is absent and section has script' do
+    section, student, _lesson1, lesson2, sl1, _sl2 = setup_suggested_lesson_section
+    progress = {student.id => {sl1.oldest_active_level.id => {status: 'perfect'}}}
+    @controller.stubs(:script_progress_for_users).returns([progress, {}])
+
+    sign_in @teacher
+    get :suggested_lesson, params: {id: section.id}
+    assert_response :success
+    assert_equal lesson2.id, json_response['lesson_id']
+    assert json_response['timestamp'].present?
+    assert json_response['name'].present?
+  end
+
+  test 'get suggested_lesson recomputes when data is stale' do
+    section, student, lesson1, lesson2, sl1, _sl2 = setup_suggested_lesson_section
+    stale_timestamp = 2.hours.ago.utc.iso8601
+    section.update!(suggested_lesson: {'lesson_id' => lesson1.id, 'timestamp' => stale_timestamp})
+
+    progress = {student.id => {sl1.oldest_active_level.id => {status: 'perfect'}}}
+    @controller.stubs(:script_progress_for_users).returns([progress, {}])
+
+    sign_in @teacher
+    get :suggested_lesson, params: {id: section.id}
+    assert_response :success
+    assert_equal lesson2.id, json_response['lesson_id']
+    refute_equal stale_timestamp, json_response['timestamp']
+  end
+
+  test 'get suggested_lesson skips compute when section has no script' do
+    # No script on @section; suggested_lesson stays nil
+    sign_in @teacher
+    get :suggested_lesson, params: {id: @section.id}
+    assert_response :success
+    assert_nil json_response
+    assert_nil @section.reload.suggested_lesson
+  end
+
+  test 'get suggested_lesson suggests first lesson when no students have completed any lesson' do
+    section, student, lesson1, _lesson2, sl1, _sl2 = setup_suggested_lesson_section
+    progress = {student.id => {sl1.oldest_active_level.id => {status: 'not_tried'}}}
+    @controller.stubs(:script_progress_for_users).returns([progress, {}])
+
+    sign_in @teacher
+    get :suggested_lesson, params: {id: section.id}
+    assert_response :success
+    assert_equal lesson1.id, json_response['lesson_id']
+  end
+
+  test 'get suggested_lesson suggests nothing when all lessons are completed' do
+    section, student, _lesson1, _lesson2, sl1, sl2 = setup_suggested_lesson_section
+    progress = {
+      student.id => {
+        sl1.oldest_active_level.id => {status: 'perfect'},
+        sl2.oldest_active_level.id => {status: 'perfect'}
+      }
+    }
+    @controller.stubs(:script_progress_for_users).returns([progress, {}])
+
+    sign_in @teacher
+    get :suggested_lesson, params: {id: section.id}
+    assert_response :success
+    assert_nil json_response
+  end
+
+  test 'get suggested_lesson uses majority threshold: half or more students must complete' do
+    unit = create(:script, :in_single_unit_course)
+    lesson_group = create(:lesson_group, script: unit)
+    lesson1 = create(:lesson, script: unit, lesson_group: lesson_group)
+    lesson2 = create(:lesson, script: unit, lesson_group: lesson_group)
+    sl1 = create(:script_level, lesson: lesson1, script: unit)
+    section = create(:section, user: @teacher, script: unit)
+    student1 = create(:follower, section: section).student_user
+    student2 = create(:follower, section: section).student_user
+
+    # 1 of 2 students (50%) completed lesson1 — meets the >= half threshold
+    progress = {
+      student1.id => {sl1.oldest_active_level.id => {status: 'perfect'}},
+      student2.id => {}
+    }
+    @controller.stubs(:script_progress_for_users).returns([progress, {}])
+
+    sign_in @teacher
+    get :suggested_lesson, params: {id: section.id}
+    assert_response :success
+    assert_equal lesson2.id, json_response['lesson_id']
+  end
+
+  test 'get suggested_lesson is forbidden for a different teacher' do
+    sign_in @following_teacher
+    get :suggested_lesson, params: {id: @section.id}
+    assert_response :forbidden
+  end
+
+  test 'get suggested_lesson returns 403 for unauthenticated user' do
+    get :suggested_lesson, params: {id: @section.id}
+    assert_response :forbidden
+  end
+
   test 'valid_course_offerings includes only published courses' do
     sign_in @teacher
     get :valid_course_offerings, params: {login_type: Section::LOGIN_TYPE_EMAIL}

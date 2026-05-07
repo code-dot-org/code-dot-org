@@ -166,7 +166,7 @@ class Section < ApplicationRecord
     participant_type != Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCE.student
   end
 
-  serialized_attrs %w(code_review_expires_at)
+  serialized_attrs %w(code_review_expires_at suggested_lesson)
 
   # This list is duplicated as SECTION_LOGIN_TYPE in shared_constants.rb and should be kept in sync.
   LOGIN_TYPES = [
