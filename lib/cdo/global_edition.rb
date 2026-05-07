@@ -190,7 +190,7 @@ module Cdo
     end
 
     def self.region_available?(region)
-      region.present? && REGIONS.include?(region.to_s)
+      (DCDO.get('global_edition_enabled_regions', REGIONS) || REGIONS).include?(region.to_s)
     end
 
     def self.region_locales(region)
@@ -217,7 +217,7 @@ module Cdo
 
     def self.locales_regions
       @locales_regions ||= REGIONS.each_with_object({}) do |region, locales_regions|
-        next unless region_available?(region) && locale_lock?(region)
+        next unless locale_lock?(region)
         region_locales(region).each do |region_locale|
           locales_regions[region_locale] ||= []
           locales_regions[region_locale] << region

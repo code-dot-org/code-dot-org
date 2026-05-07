@@ -20,7 +20,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2026-03-26 20:59:50 UTC",
+    "serialized_at": "2026-05-06 21:04:58 UTC",
     "hide_within_course": false,
     "published_state": null,
     "instruction_type": null,
@@ -4018,7 +4018,7 @@
       "key": "cafc2143-c559-4ef8-9a0d-1618bc577ea2",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this activity:** Recognize that well-meaning security measures can create barriers when they are not designed with diverse users in mind. This sets up the usability/security tradeoff and builds empathy.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Display the real-world scenarios on the next slides one at a time. Pause after each to ask the discussion questions.\n\n<i class=\"fa fa-video-camera\" aria-hidden=\"true\"></i> **Video:** Show the  \"____________\" video.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Before playing the clip, remind students to think about the questions as they watch:\n- What problem is the security feature is trying to solve?\n- What went wrong for the user?\n- What was the intended benefit and unintended consequences\n\nAfter reading the cartoon, ask for a few quick responses before moving to the next scenario.\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students should understand that while auto-logout features are designed to protect sensitive information, they can create major usability issues—especially for users who work slowly, need extra time, or pause to think. This case highlights how strict time-based security can unintentionally exclude users with legitimate needs and disrupt tasks in high-pressure situations like testing.",
+        "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this activity:** Recognize that well-meaning security measures can create barriers when they are not designed with diverse users in mind. This sets up the usability/security tradeoff and builds empathy.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Display the real-world scenarios on the next slides one at a time. Pause after each to ask the discussion questions.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Display the Auto-Logout scenario. \n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Ask students to think about the questions:\n- What problem is the security feature is trying to solve?\n- What went wrong for the user?\n- What was the intended benefit and unintended consequences\n\nAsk for a few quick responses before moving to the next scenario.\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students should understand that while auto-logout features are designed to protect sensitive information, they can create major usability issues—especially for users who work slowly, need extra time, or pause to think. This case highlights how strict time-based security can unintentionally exclude users with legitimate needs and disrupt tasks in high-pressure situations like testing.",
         "duration": "10",
         "name": "Case Study",
         "tips": [
@@ -4047,7 +4047,7 @@
       "key": "af538282-110e-4ef4-acce-ff3b1ed297b9",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-video-camera\" aria-hidden=\"true\"></i> **Video:** Show the  \"____________\" video.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Before playing the clip, remind students to think about the questions as they watch:\n- What problem is the security feature is trying to solve?\n- What went wrong for the user?\n- What was the intended benefit and unintended consequences\n\nAfter reading the cartoon, ask for a few quick responses before moving to the next scenario.\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students should understand that while account lockout policies are meant to protect against hacking or repeated guessing, they can unfairly block legitimate users — especially those dealing with hardware issues, accessibility needs, or moments of stress. This case helps students see how rigid security rules can cause harm when they don't account for real-world conditions."
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Display the Account Lockout scenario. \n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Ask students to think about the questions:\n- What problem is the security feature is trying to solve?\n- What went wrong for the user?\n- What was the intended benefit and unintended consequences\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students should understand that while account lockout policies are meant to protect against hacking or repeated guessing, they can unfairly block legitimate users — especially those dealing with hardware issues, accessibility needs, or moments of stress. This case helps students see how rigid security rules can cause harm when they don't account for real-world conditions."
       },
       "seeding_key": {
         "activity_section.key": "af538282-110e-4ef4-acce-ff3b1ed297b9",
@@ -6660,18 +6660,6 @@
       }
     },
     {
-      "name": "[KEY] Redesign Challenge",
-      "url": "https://docs.google.com/document/d/1xyByUYWzL2ze3RrOr_0tR5oF5Bk-dEkL1zPcV4cAjwE/edit?usp=sharing",
-      "key": "_key_redesign_challenge",
-      "properties": {
-        "audience": "Verified Teacher",
-        "type": "Answer Key"
-      },
-      "seeding_key": {
-        "resource.key": "_key_redesign_challenge"
-      }
-    },
-    {
       "name": "[KEY] The Day Everything Broke",
       "url": "https://docs.google.com/document/d/1_dOWTjj9yjI87rPmUYKNr977voWTQErhhA9FdWaA7b0/edit?usp=sharing",
       "key": "_key_the_day_everything_broke",
@@ -7158,46 +7146,6 @@
       }
     },
     {
-      "name": "Redesign Challenge",
-      "url": "https://docs.google.com/document/d/1IYDt1se9hSmXCsxpLw0hvmn2ygzzpqj46FqIyeQi8PU/edit?usp=sharing",
-      "key": "redesign_challenge",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Activity Guide"
-      },
-      "seeding_key": {
-        "resource.key": "redesign_challenge"
-      }
-    },
-    {
-      "name": "Security vs Usability",
-      "url": "https://docs.google.com/presentation/d/10sT4vu7JJxY-QRPENYLgDGk5_AC4Aq__zzOyZ0eTkG0/edit?usp=sharing",
-      "key": "security_vs_usability_1",
-      "properties": {
-        "audience": "Verified Teacher",
-        "curriculum_category": "curriculum",
-        "embeddability_type": "embed_and_resource_dropdown",
-        "type": "Slides"
-      },
-      "seeding_key": {
-        "resource.key": "security_vs_usability_1"
-      }
-    },
-    {
-      "name": "Security vs Usability Matrix",
-      "url": "https://docs.google.com/document/d/1nDUuhG4dGEHj1w6jz_Au4gUl3fC7L466jptnMzrn2yo/edit?usp=sharing",
-      "key": "security_vs_usability_matrix",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Handout"
-      },
-      "seeding_key": {
-        "resource.key": "security_vs_usability_matrix"
-      }
-    },
-    {
       "name": "Social Engineering",
       "url": "https://drive.google.com/file/d/1HGYmE9GX2vIeM4dcEvgSipr0LooZ849m/view?usp=drive_link",
       "key": "social_engineering",
@@ -7279,30 +7227,6 @@
       "seeding_key": {
         "lesson.key": "Lesson 10: AI in Encryption",
         "resource.key": "ai_in_encryption_2"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Lesson 11: Security vs Usability",
-        "resource.key": "_key_redesign_challenge"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Lesson 11: Security vs Usability",
-        "resource.key": "redesign_challenge"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Lesson 11: Security vs Usability",
-        "resource.key": "security_vs_usability_1"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Lesson 11: Security vs Usability",
-        "resource.key": "security_vs_usability_matrix"
       }
     },
     {
@@ -8644,6 +8568,9 @@
     }
   ],
   "lessons_opportunity_standards": [
+
+  ],
+  "jit_pl_concepts_lessons": [
 
   ],
   "rubrics": [

@@ -2,6 +2,7 @@ import {Handle, Position, useNodeConnections} from '@xyflow/react';
 import React, {memo} from 'react';
 
 import {LineAnchorNodeData} from '../types';
+import {lineAnchorHandleId} from '../utils/lineAnchors';
 
 import styles from './line-anchor-node.module.scss';
 
@@ -23,7 +24,7 @@ function LineAnchorNode({data}: LineAnchorNodeProps) {
     <div className={styles.anchorNode} aria-label="Line endpoint">
       <Handle
         type={handleType}
-        id={`line-anchor-${handleType}`}
+        id={lineAnchorHandleId(handleType)}
         position={handlePosition}
         isConnectable={isConnectable}
         className={styles.anchorHandle}

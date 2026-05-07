@@ -3,7 +3,6 @@ import {
   Background,
   Controls,
   type IsValidConnection,
-  MarkerType,
   ReactFlow,
   useEdgesState,
   useNodesState,
@@ -22,12 +21,10 @@ import {useSources} from '@cdo/apps/lab2/views/SourcesContainer';
 import {createUuid} from '@cdo/apps/utils';
 
 import {
-  ARROW_MARKER_HEIGHT_PX,
-  ARROW_MARKER_WIDTH_PX,
   DEFAULT_NODE_HEIGHT,
   DEFAULT_NODE_WIDTH,
-  LINE_ANCHOR_SIZE_PX,
   LINE_DEFAULT_LENGTH_PX,
+  LINE_RECONNECT_SNAP_RADIUS_PX,
   SAVE_DEBOUNCE_MS,
 } from '../constants';
 import {
@@ -38,6 +35,7 @@ import {
 } from '../context';
 import LineEdgeToolbar from '../elementToolbars/LineEdgeToolbar';
 import {
+  DEFAULT_EDGE_TYPE,
   DEFAULT_LINE_WIDTH,
   DEFAULT_STROKE_COLOR,
 } from '../elementToolbars/toolbarPalettes';
@@ -46,6 +44,7 @@ import {useFocusManagement} from '../hooks/useFocusManagement';
 import {useKeyboardNavigation} from '../hooks/useKeyboardNavigation';
 import {useLineEdgeDrag} from '../hooks/useLineEdgeDrag';
 import {useLineToolbar} from '../hooks/useLineToolbar';
+import {useReconnect} from '../hooks/useReconnect';
 import {useTabOrder} from '../hooks/useTabOrder';
 import ImageNode from '../nodes/ImageNode';
 import LineAnchorNode from '../nodes/LineAnchorNode';
@@ -60,7 +59,9 @@ import {
   canCreateConnection,
   isLineAnchorNodeId,
 } from '../utils/connectionRules';
-import {isLineEdge} from '../utils/lineEdges';
+import {snapAnchorIfNearby} from '../utils/handleSnap';
+import {createLineAnchorAtHandle} from '../utils/lineAnchors';
+import {defaultLineEdgeFields} from '../utils/lineEdges';
 
 import Toolbar from './Toolbar';
 
@@ -143,7 +144,10 @@ export default function ReactFlowCanvas({
     [openToolbarTarget, trapFocus, openToolbar, closeToolbar]
   );
 
-  const {screenToFlowPosition, getNode} = useReactFlow();
+  const {screenToFlowPosition, flowToScreenPosition, getEdges} = useReactFlow<
+    SketchlabReactFlowNode,
+    SketchlabReactFlowEdge
+  >();
   const addedNodeCountRef = useRef(0);
   const canvasContainerRef = useRef<HTMLDivElement>(null);
   const handlePaneClick = useCallback(() => {
@@ -181,6 +185,20 @@ export default function ReactFlowCanvas({
     setNodeOrEdgeFocused
   );
 
+  const handleNodeDragStop = useCallback(
+    (event: React.MouseEvent, node: SketchlabReactFlowNode) => {
+      if (node.type !== 'lineAnchor') return;
+      snapAnchorIfNearby({
+        anchorId: node.id,
+        screenPoint: {x: event.clientX, y: event.clientY},
+        radiusPx: LINE_RECONNECT_SNAP_RADIUS_PX,
+        edges: getEdges(),
+        setEdges,
+      });
+    },
+    [getEdges, setEdges]
+  );
+
   const {connectingFrom, connectAnnouncement, handleKeyDown} =
     useKeyboardNavigation({
       nodes,
@@ -199,7 +217,9 @@ export default function ReactFlowCanvas({
   const {handleEdgeMouseDown} = useLineEdgeDrag({
     readOnly,
     setNodes,
+    setEdges,
     screenToFlowPosition,
+    flowToScreenPosition,
   });
 
   // Close the toolbar when focus moves off the owning node/edge: to a
@@ -259,10 +279,17 @@ export default function ReactFlowCanvas({
   // Also applies connect-source styling and aria-selected via React
   // rather than direct DOM classList manipulation.
   const {displayNodes, displayEdges} = useMemo(() => {
+    // Anchor endpoints of a locked edge inherit the lock so the user can't
+    // drag them around. Real-node endpoints have their own lock state.
     const lockedLineAnchorIds = new Set<string>();
     edges.forEach(edge => {
-      if (edge.data?.locked === true && isLineEdge(edge, nodes)) {
+      if (edge.data?.locked !== true) return;
+      const sourceNode = nodes.find(node => node.id === edge.source);
+      const targetNode = nodes.find(node => node.id === edge.target);
+      if (sourceNode?.type === 'lineAnchor') {
         lockedLineAnchorIds.add(edge.source);
+      }
+      if (targetNode?.type === 'lineAnchor') {
         lockedLineAnchorIds.add(edge.target);
       }
     });
@@ -304,17 +331,16 @@ export default function ReactFlowCanvas({
       // TODO: Add meaningful ariaLabel to edges using node labels instead of
       // raw IDs (React Flow defaults to "Edge from {sourceId} to {targetId}").
       displayEdges: edges.map(edge => {
-        const lineEdge = isLineEdge(edge, nodes);
         const locked = edge.data?.locked === true;
         const {selected, domAttributes} = applyDisplayProps(edge, 'edge');
         return {
           ...edge,
           selected,
           ...(locked && {deletable: false}),
-          className: lineEdge ? styles.lineEdge : undefined,
+          className: styles.lineEdge,
           domAttributes: {
             ...domAttributes,
-            ...(lineEdge && !readOnly && !locked
+            ...(!readOnly && !locked
               ? {
                   onMouseDown: (event: React.MouseEvent) => {
                     focusEntry({type: 'edge', id: edge.id});
@@ -366,6 +392,17 @@ export default function ReactFlowCanvas({
     };
   }, [nodes, edges, viewport, updateSources]);
 
+  const {
+    isReconnecting,
+    handleReconnectStart,
+    handleReconnect,
+    handleReconnectEnd,
+  } = useReconnect({
+    setNodes,
+    setEdges,
+    screenToFlowPosition,
+  });
+
   const onConnect: OnConnect = useCallback(
     connection =>
       setEdges(currentEdges => {
@@ -378,7 +415,10 @@ export default function ReactFlowCanvas({
         }
 
         return addEdge(
-          {...connection, markerEnd: {type: MarkerType.ArrowClosed}},
+          {
+            ...connection,
+            ...defaultLineEdgeFields(),
+          },
           currentEdges
         );
       }),
@@ -391,9 +431,15 @@ export default function ReactFlowCanvas({
       if (!source || !target) {
         return false;
       }
+      // During an in-flight reconnect we relax the anchor restriction so the
+      // user can drag a line endpoint onto a real node's handle. We still
+      // block self-loops and reconnecting to another line anchor.
+      if (isReconnecting()) {
+        return source !== target && !isLineAnchorNodeId(target, nodes);
+      }
       return canCreateConnection(source, target, nodes);
     },
-    [nodes]
+    [nodes, isReconnecting]
   );
 
   const handleMoveEnd = useCallback(
@@ -403,32 +449,23 @@ export default function ReactFlowCanvas({
     []
   );
 
-  const handleEdgesDelete = useCallback(
-    (deletedEdges: SketchlabReactFlowEdge[]) => {
-      setNodes(currentNodes => {
-        const lineAnchorIdsToDelete = new Set<string>();
-
-        deletedEdges.forEach(edge => {
-          const sourceNode = getNode(edge.source);
-          const targetNode = getNode(edge.target);
-          if (
-            sourceNode?.type === 'lineAnchor' &&
-            targetNode?.type === 'lineAnchor'
-          ) {
-            lineAnchorIdsToDelete.add(edge.source);
-            lineAnchorIdsToDelete.add(edge.target);
-          }
-        });
-
-        if (lineAnchorIdsToDelete.size === 0) {
-          return currentNodes;
-        }
-
-        return currentNodes.filter(node => !lineAnchorIdsToDelete.has(node.id));
+  // Cleanup orphaned line anchors after any edge mutation. Anchors could be orphaned
+  // if a line is deleted or if it was connected to a node.
+  useEffect(() => {
+    setNodes(currentNodes => {
+      const referencedNodes = new Set<string>();
+      edges.forEach(edge => {
+        referencedNodes.add(edge.source);
+        referencedNodes.add(edge.target);
       });
-    },
-    [getNode, setNodes]
-  );
+      const activeNodes = currentNodes.filter(
+        node => node.type !== 'lineAnchor' || referencedNodes.has(node.id)
+      );
+      return activeNodes.length === currentNodes.length
+        ? currentNodes
+        : activeNodes;
+    });
+  }, [edges, setNodes]);
 
   const handleAddNode = useCallback(
     (request: AddNodeRequest) => {
@@ -441,61 +478,27 @@ export default function ReactFlowCanvas({
         y: window.innerHeight / 2 + stagger,
       });
 
-      // For lines/arrows, create two hidden anchor nodes and connect them.
-      if (type === 'line' || type === 'arrow') {
-        const sourceAnchorId = createUuid();
-        const targetAnchorId = createUuid();
-        const lineEdgeId = createUuid();
-
-        const sourceAnchor: SketchlabReactFlowNode = {
-          id: sourceAnchorId,
-          type: 'lineAnchor',
-          position: {
-            x:
-              centerPosition.x -
-              LINE_DEFAULT_LENGTH_PX / 2 -
-              LINE_ANCHOR_SIZE_PX,
-            y: centerPosition.y - LINE_ANCHOR_SIZE_PX / 2,
+      // For lines, create two hidden anchor nodes and connect them.
+      if (type === 'line') {
+        const sourceAnchor = createLineAnchorAtHandle(
+          {
+            x: centerPosition.x - LINE_DEFAULT_LENGTH_PX / 2,
+            y: centerPosition.y,
           },
-          data: {lineAnchorRole: 'source'},
-          style: {
-            width: LINE_ANCHOR_SIZE_PX,
-            height: LINE_ANCHOR_SIZE_PX,
-          },
-        };
-
-        const targetAnchor: SketchlabReactFlowNode = {
-          id: targetAnchorId,
-          type: 'lineAnchor',
-          position: {
+          'source'
+        );
+        const targetAnchor = createLineAnchorAtHandle(
+          {
             x: centerPosition.x + LINE_DEFAULT_LENGTH_PX / 2,
-            y: centerPosition.y - LINE_ANCHOR_SIZE_PX / 2,
+            y: centerPosition.y,
           },
-          data: {lineAnchorRole: 'target'},
-          style: {
-            width: LINE_ANCHOR_SIZE_PX,
-            height: LINE_ANCHOR_SIZE_PX,
-          },
-        };
-
+          'target'
+        );
         const newLine: SketchlabReactFlowEdge = {
-          id: lineEdgeId,
-          source: sourceAnchorId,
-          target: targetAnchorId,
-          type: 'straight',
-          ...(type === 'arrow' && {
-            markerEnd: {
-              type: MarkerType.ArrowClosed,
-              color: DEFAULT_STROKE_COLOR,
-              width: ARROW_MARKER_WIDTH_PX,
-              height: ARROW_MARKER_HEIGHT_PX,
-              strokeWidth: DEFAULT_LINE_WIDTH,
-            },
-          }),
-          style: {
-            stroke: DEFAULT_STROKE_COLOR,
-            strokeWidth: DEFAULT_LINE_WIDTH,
-          },
+          id: createUuid(),
+          source: sourceAnchor.id,
+          target: targetAnchor.id,
+          ...defaultLineEdgeFields(),
         };
 
         setNodes(currentNodes => [...currentNodes, sourceAnchor, targetAnchor]);
@@ -504,7 +507,7 @@ export default function ReactFlowCanvas({
         // Move focus to the new line after React Flow renders it.
         (document.activeElement as HTMLElement)?.blur();
         setTimeout(
-          () => focusEntry({type: 'edge', id: lineEdgeId}),
+          () => focusEntry({type: 'edge', id: newLine.id}),
           FOCUS_DELAY_MS
         );
         return;
@@ -561,11 +564,11 @@ export default function ReactFlowCanvas({
     setLineEdgeColor,
     setLineEdgeWidth,
     setLineEdgeStrokeStyle,
+    setLineEdgeType,
     setLineEdgeArrowHeads,
     setLineEdgeLocked,
   } = useLineToolbar({
     edges,
-    nodes,
     readOnly,
     openToolbarTarget,
     openToolbar,
@@ -603,12 +606,16 @@ export default function ReactFlowCanvas({
               edges={displayEdges}
               onNodesChange={onNodesChange}
               onEdgesChange={onEdgesChange}
-              onEdgesDelete={handleEdgesDelete}
               onNodeClick={handleNodeClick}
               onEdgeClick={handleEdgeClick}
               onPaneClick={handlePaneClick}
               onConnect={onConnect}
+              onReconnectStart={handleReconnectStart}
+              onReconnect={handleReconnect}
+              onReconnectEnd={handleReconnectEnd}
+              onNodeDragStop={handleNodeDragStop}
               isValidConnection={isValidConnection}
+              connectionRadius={LINE_RECONNECT_SNAP_RADIUS_PX}
               nodeTypes={NODE_TYPES}
               onMoveEnd={handleMoveEnd}
               defaultViewport={initialViewport}
@@ -626,6 +633,14 @@ export default function ReactFlowCanvas({
               disableKeyboardA11y={false}
               autoPanOnNodeFocus={false} // We manage viewport on focus manually in useFocusManagement.
               zIndexMode={'manual'}
+              defaultEdgeOptions={{
+                type: DEFAULT_EDGE_TYPE,
+                style: {
+                  stroke: DEFAULT_STROKE_COLOR,
+                  strokeWidth: DEFAULT_LINE_WIDTH,
+                },
+              }}
+              defaultMarkerColor={DEFAULT_STROKE_COLOR}
             >
               {openLineEdge && (
                 <LineEdgeToolbar
@@ -639,6 +654,9 @@ export default function ReactFlowCanvas({
                   }
                   onSelectStrokeStyle={value =>
                     setLineEdgeStrokeStyle(openLineEdge.id, value)
+                  }
+                  onSelectEdgeType={value =>
+                    setLineEdgeType(openLineEdge.id, value)
                   }
                   onSelectArrowHeads={value =>
                     setLineEdgeArrowHeads(openLineEdge.id, value)

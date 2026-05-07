@@ -493,7 +493,7 @@ def perform_self_check
   puts "latest staging commit is: #{GitHub.sha('staging', true)}"
 
   puts "Checking access to Slack"
-  puts "current Developer of the Day is: #{DevelopersTopic.dotd}"
+  puts "current Developer of the Day is: #{DevelopersTopic.dotd_username}"
 
   # We forego checking access to Honeybadger here; in part because Honeybadger
   # access is not required for standard Dev of the Day operations but mostly

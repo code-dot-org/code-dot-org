@@ -5,16 +5,23 @@ require 'request_store'
 require 'i18n'
 
 require 'cdo/global_edition'
-require 'cdo/honeybadger'
 require 'dynamic_config/dcdo'
 require 'helpers/cookies'
 
 module Middleware
   class GlobalEdition
-    REGION_KEY = Cdo::GlobalEdition::REGION_KEY
+    def initialize(app)
+      @app = app
+    end
+
+    def call(env)
+      RouteHandler.new(@app, env).call
+    end
 
     class RouteHandler
       include Middleware::Helpers::Cookies
+
+      REGION_KEY = Cdo::GlobalEdition::REGION_KEY
 
       # HTTP paths that to be excluded from Global Edition scope.
       EXCLUDED_PATHS = [
@@ -72,6 +79,8 @@ module Middleware
       #
       # @return [Array(Integer, Hash, #each)] the Rack response returned by `response.finish`
       def call
+        return app.call(env) unless Cdo::GlobalEdition.target_host?(request.hostname)
+
         # Allows setting the GE region via the URL parameter `?ge_region=<region_code>`.
         if request.GET.key?(REGION_KEY)
           new_region = request.GET[REGION_KEY].presence
@@ -95,7 +104,7 @@ module Middleware
             fallback_path = "#{fallback_path}?#{request.query_string}" if request.query_string.present?
             setup_redirect_to(fallback_path)
           end
-        elsif effective_region
+        elsif effective_region && Cdo::GlobalEdition.region_available?(effective_region)
           if url_region == effective_region && (url_locale.nil? || url_locale == original_locale)
             normalize_request_for_routing
           else
@@ -308,33 +317,6 @@ module Middleware
       end
     end
 
-    def initialize(app)
-      @app = app
-    end
-
-    def call(env)
-      return process_request(env) if global_edition_enabled?(env)
-      @app.call(env)
-    end
-
-    private def global_edition_enabled?(env)
-      DCDO.get('global_edition_enabled', false) && Cdo::GlobalEdition.target_host?(Rack::Request.new(env).hostname)
-    end
-
-    private def process_request(env)
-      RouteHandler.new(@app, env).call
-    rescue StandardError => exception
-      raise exception if CDO.rack_env?(:development) || CDO.rack_env?(:test)
-
-      Honeybadger.notify(
-        exception,
-        error_message: '[Middleware::GlobalEdition] Runtime error',
-        context: {
-          env: env,
-        }
-      )
-
-      @app.call(env)
-    end
+    private_constant :RouteHandler
   end
 end

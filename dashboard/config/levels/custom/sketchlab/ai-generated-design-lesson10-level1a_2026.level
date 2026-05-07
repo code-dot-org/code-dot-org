@@ -1,7 +1,7 @@
 <Sketchlab>
   <config><![CDATA[{
   "game_id": 75,
-  "created_at": "2026-03-13T19:11:55.000Z",
+  "created_at": "2026-02-24T18:12:12.000Z",
   "level_num": "custom",
   "user_id": 18602,
   "properties": {
@@ -11,42 +11,11 @@
       "source": {
         "nodes": [
           {
-            "id": "cvgsEE150Fs5fW8F92uX0",
-            "type": "shape",
-            "position": {
-              "x": -813.3380204754467,
-              "y": 1496.5074389978051
-            },
-            "style": {
-              "width": 736.4923735859911,
-              "height": 659.2377003059235
-            },
-            "data": {
-              "shapeType": "rectangle",
-              "label": "",
-              "backgroundColor": "var(--sketchlab-bg-gray)",
-              "strokeColor": "#1e1e1e",
-              "showHandles": false
-            },
-            "measured": {
-              "width": 743,
-              "height": 693
-            },
-            "dragging": false,
-            "selected": true,
-            "domAttributes": {
-              "tabIndex": 0
-            },
-            "width": 743,
-            "height": 693,
-            "resizing": false
-          },
-          {
             "id": "JgzX34mK4F_tPZqUVUzqX",
             "type": "shape",
             "position": {
-              "x": -1852.1705641590406,
-              "y": 205.62490185975275
+              "x": -793.0874772347363,
+              "y": 166.21871984428668
             },
             "style": {
               "width": 736.4923735859911,
@@ -55,21 +24,25 @@
             "data": {
               "shapeType": "rectangle",
               "label": "",
-              "backgroundColor": "#e7f5ff",
+              "backgroundColor": "var(--sketchlab-bg-blue)",
               "strokeColor": "#1e1e1e"
             },
             "measured": {
-              "width": 736,
-              "height": 1133
+              "width": 774,
+              "height": 1254
             },
-            "dragging": false
+            "dragging": false,
+            "zIndex": -1,
+            "width": 774,
+            "height": 1254,
+            "resizing": false
           },
           {
             "id": "Z7XqbIyy3wiM7mH-3yT4X",
             "type": "text",
             "position": {
-              "x": 200.74953130482118,
-              "y": -119.34203255087712
+              "x": -313.5743045772573,
+              "y": -21.278042549245143
             },
             "data": {
               "text": "Add wireframe components or pre-built sections\nto create your pages below",
@@ -80,7 +53,8 @@
             "measured": {
               "width": 497,
               "height": 75
-            }
+            },
+            "dragging": false
           },
           {
             "id": "_QHOX2XDKJzWWRKpascyU",
@@ -144,8 +118,8 @@
             "id": "TIBRtnhBQpMbqvds0h3ur",
             "type": "text",
             "position": {
-              "x": -711.3631862210409,
-              "y": 506.11560695898856
+              "x": -550.6242596391037,
+              "y": 422.71824988519353
             },
             "data": {
               "text": "Images, Videos, & Icons",
@@ -156,14 +130,15 @@
             "measured": {
               "width": 251,
               "height": 47
-            }
+            },
+            "dragging": false
           },
           {
             "id": "7rTlalsCE0rjvfT-fCasc",
             "type": "text",
             "position": {
-              "x": -706.6012918856914,
-              "y": 115.88858310382352
+              "x": -545.9389438369483,
+              "y": 110.22204345533106
             },
             "data": {
               "text": "Wireframe Components",
@@ -174,59 +149,15 @@
             "measured": {
               "width": 255,
               "height": 47
-            }
-          },
-          {
-            "id": "qnPDDvRg2J1Dm-BGMB3o7",
-            "type": "shape",
-            "position": {
-              "x": -332.7620966574972,
-              "y": 876.92801165928
             },
-            "style": {
-              "width": 207.83126053922783,
-              "height": 31.33338098789791
-            },
-            "data": {
-              "shapeType": "rectangle",
-              "label": "",
-              "backgroundColor": "transparent",
-              "strokeColor": "#495057"
-            },
-            "measured": {
-              "width": 208,
-              "height": 31
-            }
-          },
-          {
-            "id": "UBAYfUOE38-8RvbwK7bNR",
-            "type": "text",
-            "position": {
-              "x": -326.2730556837738,
-              "y": 873.0616865027068
-            },
-            "data": {
-              "text": "Input Field Text",
-              "fontColor": "#495057",
-              "fontSize": "small",
-              "showHandles": false
-            },
-            "measured": {
-              "width": 100,
-              "height": 38
-            },
-            "dragging": false,
-            "selected": false,
-            "domAttributes": {
-              "tabIndex": -1
-            }
+            "dragging": false
           },
           {
             "id": "FbgxPT6yV_KF6GFOkKfPk",
             "type": "text",
             "position": {
-              "x": -311.66099327634885,
-              "y": 1658.1580572067783
+              "x": -301.61559941787084,
+              "y": 1681.5973095432269
             },
             "data": {
               "text": "Gallery Card",
@@ -238,18 +169,14 @@
               "width": 139,
               "height": 47
             },
-            "dragging": false,
-            "selected": false,
-            "domAttributes": {
-              "tabIndex": -1
-            }
+            "dragging": false
           },
           {
             "id": "AGeQVlOHk3etO0ryuxnQB",
             "type": "text",
             "position": {
-              "x": -671.3204395880449,
-              "y": 806.1190301745545
+              "x": -517.5200456666632,
+              "y": 829.2921782454221
             },
             "data": {
               "text": "Buttons & Inputs",
@@ -258,54 +185,13 @@
               "showHandles": false
             },
             "measured": {
-              "width": 183,
-              "height": 47
-            }
-          },
-          {
-            "id": "20QMnYQC3cki4nNb1_Fmd",
-            "type": "shape",
-            "position": {
-              "x": -733.6372690825119,
-              "y": 876.6988531354482
+              "width": 191,
+              "height": 60
             },
-            "style": {
-              "width": 106.78647842008745,
-              "height": 34.104438269614796
-            },
-            "data": {
-              "shapeType": "rectangle",
-              "label": "",
-              "backgroundColor": "transparent",
-              "strokeColor": "#000"
-            },
-            "measured": {
-              "width": 107,
-              "height": 34
-            }
-          },
-          {
-            "id": "jvB_hbZiv8XP0ws4lqIeZ",
-            "type": "text",
-            "position": {
-              "x": -712.774049097631,
-              "y": 872.603922017391
-            },
-            "data": {
-              "text": "Text",
-              "fontColor": "#000",
-              "fontSize": "medium",
-              "showHandles": false
-            },
-            "measured": {
-              "width": 58,
-              "height": 39
-            },
-            "dragging": false,
-            "selected": false,
-            "domAttributes": {
-              "tabIndex": -1
-            }
+            "width": 191,
+            "height": 60,
+            "resizing": false,
+            "dragging": false
           },
           {
             "id": "7bBlsG55ju0q-Vkn5GKVw",
@@ -324,18 +210,14 @@
               "width": 148,
               "height": 47
             },
-            "dragging": false,
-            "selected": true,
-            "domAttributes": {
-              "tabIndex": 0
-            }
+            "dragging": false
           },
           {
             "id": "Nbg0dpcgyiuhohNYZrLb2",
             "type": "shape",
             "position": {
-              "x": -543.1687351706289,
-              "y": 1186.3595964407855
+              "x": -546.2047976631457,
+              "y": 1269.8513149849953
             },
             "style": {
               "width": 176.55484068627447,
@@ -350,14 +232,15 @@
             "measured": {
               "width": 177,
               "height": 26
-            }
+            },
+            "dragging": false
           },
           {
             "id": "MXpn2_CPMZ9-T2unTody_",
             "type": "shape",
             "position": {
-              "x": -543.7249928299427,
-              "y": 1229.0641001172557
+              "x": -551.3151490612345,
+              "y": 1314.0738499077238
             },
             "style": {
               "width": 310.6081495098033,
@@ -372,14 +255,15 @@
             "measured": {
               "width": 311,
               "height": 13
-            }
+            },
+            "dragging": false
           },
           {
             "id": "A7PtDhLqFIS37X-J040fd",
             "type": "shape",
             "position": {
-              "x": -543.7249928299427,
-              "y": 1251.341214087844
+              "x": -546.7610553224595,
+              "y": 1348.495213848379
             },
             "style": {
               "width": 310.6081495098033,
@@ -394,14 +278,15 @@
             "measured": {
               "width": 311,
               "height": 13
-            }
+            },
+            "dragging": false
           },
           {
             "id": "7S1vcXjhex8jr8oEsHnNQ",
             "type": "shape",
             "position": {
-              "x": -543.1428849868055,
-              "y": 1275.0697680094127
+              "x": -544.6609162330639,
+              "y": 1381.3319552474977
             },
             "style": {
               "width": 265.0773590686267,
@@ -416,14 +301,15 @@
             "measured": {
               "width": 265,
               "height": 12
-            }
+            },
+            "dragging": false
           },
           {
             "id": "GZ798EwTOo8h_zMxM6VT5",
             "type": "text",
             "position": {
-              "x": -544.2789794692931,
-              "y": 1095.2764033570897
+              "x": -690.5019336806422,
+              "y": 1269.6813265383275
             },
             "data": {
               "text": "(Title)",
@@ -434,14 +320,15 @@
             "measured": {
               "width": 60,
               "height": 39
-            }
+            },
+            "dragging": false
           },
           {
             "id": "T8EdXQDQ9JT7H1Tpx1_1t",
             "type": "text",
             "position": {
-              "x": -540.7999755630431,
-              "y": 1133.4477900758397
+              "x": -699.88402783297,
+              "y": 1343.3999449402943
             },
             "data": {
               "text": "(Body Text)",
@@ -452,14 +339,15 @@
             "measured": {
               "width": 100,
               "height": 39
-            }
+            },
+            "dragging": false
           },
           {
             "id": "Uf0tLSpxVEoNZGEg5iDxR",
             "type": "text",
             "position": {
-              "x": -620.1293047988133,
-              "y": 999.8718389228625
+              "x": -674.5957036807681,
+              "y": 1174.023756896391
             },
             "data": {
               "text": "Text Blocks",
@@ -470,14 +358,15 @@
             "measured": {
               "width": 129,
               "height": 47
-            }
+            },
+            "dragging": false
           },
           {
             "id": "lbx9w9gvgrmjWwTT4G5ur",
             "type": "text",
             "position": {
-              "x": -572.5312949652046,
-              "y": 222.84032271699422
+              "x": -539.2005019953557,
+              "y": 169.4187420301894
             },
             "data": {
               "text": "Navigation / Header",
@@ -489,11 +378,7 @@
               "width": 217,
               "height": 47
             },
-            "dragging": false,
-            "selected": false,
-            "domAttributes": {
-              "tabIndex": -1
-            }
+            "dragging": false
           },
           {
             "id": "oLvTJJQ-SYYz57A_QnOqP",
@@ -518,71 +403,11 @@
             }
           },
           {
-            "id": "qUGhrn5Hs6nroXTp5aN8g",
-            "type": "shape",
-            "position": {
-              "x": -750.3084992264853,
-              "y": 1577.5563461400745
-            },
-            "style": {
-              "width": 647.9066528041883,
-              "height": 48.28129851193073
-            },
-            "data": {
-              "shapeType": "rectangle",
-              "label": "",
-              "backgroundColor": "transparent",
-              "strokeColor": "#000000",
-              "showHandles": false
-            },
-            "measured": {
-              "width": 648,
-              "height": 48
-            },
-            "dragging": false,
-            "selected": true,
-            "domAttributes": {
-              "tabIndex": 0
-            }
-          },
-          {
-            "id": "Hwspl9M_cMXRsBsw2i5Dv",
-            "type": "shape",
-            "position": {
-              "x": -237.59453432265866,
-              "y": 1588.2302122708866
-            },
-            "style": {
-              "width": 96.40758446205523,
-              "height": 30.07325420821292
-            },
-            "data": {
-              "shapeType": "rectangle",
-              "label": "ButtonText",
-              "backgroundColor": "var(--sketchlab-bg-yellow)",
-              "strokeColor": "#495057",
-              "fontSize": "small",
-              "showHandles": false
-            },
-            "measured": {
-              "width": 121,
-              "height": 30
-            },
-            "selected": true,
-            "domAttributes": {
-              "tabIndex": 0
-            },
-            "width": 121,
-            "height": 30,
-            "resizing": false,
-            "dragging": false
-          },
-          {
             "id": "avElB5ET8dk7M2rJE1jE_",
             "type": "image",
             "position": {
-              "x": -777.7532769846123,
-              "y": 576.9236128472346
+              "x": -734.3746515228229,
+              "y": 470.3080614074572
             },
             "style": {
               "width": 163.17394229218516,
@@ -596,14 +421,15 @@
             "measured": {
               "width": 163,
               "height": 150
-            }
+            },
+            "dragging": false
           },
           {
             "id": "xv8O1sgNbTfBCWcyeoLyX",
             "type": "image",
             "position": {
-              "x": -604.455995364169,
-              "y": 575.8120414827268
+              "x": -732.4334808612379,
+              "y": 640.0428635205378
             },
             "style": {
               "width": 158.71463740195213,
@@ -617,271 +443,15 @@
             "measured": {
               "width": 159,
               "height": 151
-            }
-          },
-          {
-            "id": "YBWbB3wnWJS9ORINX64AO",
-            "type": "image",
-            "position": {
-              "x": -464.2477532116725,
-              "y": 871.8914623295293
-            },
-            "style": {
-              "width": 95.77550584504453,
-              "height": 35.395295638386024
-            },
-            "data": {
-              "src": "/level_starter_assets/ai-generated-design-lesson10-level1a_2026/uuid/ca0bf8dc76b9dc3b74a61394ccab09c4cf6d7beb.png",
-              "altText": "",
-              "showHandles": false
-            },
-            "measured": {
-              "width": 96,
-              "height": 35
-            }
-          },
-          {
-            "id": "--iJqMhrdGtreDGvrjQsN",
-            "type": "image",
-            "position": {
-              "x": -578.5136708819507,
-              "y": 379.7705738258204
-            },
-            "style": {
-              "width": 67,
-              "height": 69
-            },
-            "data": {
-              "src": "/level_starter_assets/ai-generated-design-lesson10-level1a_2026/uuid/5e5bcf0200c6011724b7f0d4b0c26142022fe376.png",
-              "altText": "",
-              "showHandles": false
-            },
-            "measured": {
-              "width": 67,
-              "height": 69
-            }
-          },
-          {
-            "id": "e-neUH_i1OhcpNRDLpYDd",
-            "type": "image",
-            "position": {
-              "x": -352.1551003130471,
-              "y": 385.21684305447604
-            },
-            "style": {
-              "width": 54,
-              "height": 60
-            },
-            "data": {
-              "src": "/level_starter_assets/ai-generated-design-lesson10-level1a_2026/uuid/0668b72bcab7192d71dee41078fed68140df4524.png",
-              "altText": "",
-              "showHandles": false
-            },
-            "measured": {
-              "width": 54,
-              "height": 60
-            }
-          },
-          {
-            "id": "I028WfQeyw0Ty9b8MOP0q",
-            "type": "image",
-            "position": {
-              "x": -762.571059886672,
-              "y": 1079.0864393938252
-            },
-            "style": {
-              "width": 182,
-              "height": 242
-            },
-            "data": {
-              "src": "/level_starter_assets/ai-generated-design-lesson10-level1a_2026/uuid/2a5da67c97c4d2b83e7fffa241d4ee149fe86a96.png",
-              "altText": "",
-              "showHandles": false
-            },
-            "measured": {
-              "width": 182,
-              "height": 242
-            }
-          },
-          {
-            "id": "d22ar-w4fuZSUKIYi2j1P",
-            "type": "shape",
-            "position": {
-              "x": -293.2949291178752,
-              "y": 1827.704417192778
-            },
-            "style": {
-              "width": 75.37989873169201,
-              "height": 10.99092619136772
-            },
-            "data": {
-              "shapeType": "rectangle",
-              "label": "",
-              "backgroundColor": "#868e96",
-              "strokeColor": "#000000"
-            },
-            "measured": {
-              "width": 75,
-              "height": 11
-            }
-          },
-          {
-            "id": "iH6fdIKLX-rODu1sDgzzj",
-            "type": "shape",
-            "position": {
-              "x": -293.3864929183385,
-              "y": 1845.8183760858562
-            },
-            "style": {
-              "width": 135.54530625744866,
-              "height": 4.791097655936557
-            },
-            "data": {
-              "shapeType": "rectangle",
-              "label": "",
-              "backgroundColor": "#c8c8c8",
-              "strokeColor": "#495057"
-            },
-            "measured": {
-              "width": 136,
-              "height": 5
-            }
-          },
-          {
-            "id": "w1y_tFxvZQ6oPo49rrKSO",
-            "type": "shape",
-            "position": {
-              "x": -292.9240603830897,
-              "y": 1863.9922403368926
-            },
-            "style": {
-              "width": 98.91470666924177,
-              "height": 6.171503838479912
-            },
-            "data": {
-              "shapeType": "rectangle",
-              "label": "",
-              "backgroundColor": "#c8c8c8",
-              "strokeColor": "#495057"
-            },
-            "measured": {
-              "width": 99,
-              "height": 6
-            }
-          },
-          {
-            "id": "ookGPDSoUSR-kmUjwMN6I",
-            "type": "shape",
-            "position": {
-              "x": -303.19301078412286,
-              "y": 1730.9889511272884
-            },
-            "style": {
-              "width": 154.85984781582522,
-              "height": 187.40904263313936
-            },
-            "data": {
-              "shapeType": "rectangle",
-              "label": "",
-              "backgroundColor": "transparent",
-              "strokeColor": "#000000"
-            },
-            "measured": {
-              "width": 155,
-              "height": 187
-            }
-          },
-          {
-            "id": "39ljVrjgNFPj6SWFBOxM9",
-            "type": "shape",
-            "position": {
-              "x": -293.3864929183385,
-              "y": 1855.113820559266
-            },
-            "style": {
-              "width": 135.54530625744866,
-              "height": 4.791097655936557
-            },
-            "data": {
-              "shapeType": "rectangle",
-              "label": "",
-              "backgroundColor": "#c8c8c8",
-              "strokeColor": "#495057"
-            },
-            "measured": {
-              "width": 136,
-              "height": 5
-            }
-          },
-          {
-            "id": "7KV6e0dQCf_AgkOfVVHtC",
-            "type": "shape",
-            "position": {
-              "x": -292.9051814125753,
-              "y": 1886.0765629310813
-            },
-            "style": {
-              "width": 80.96114182396278,
-              "height": 20.183434914143618
-            },
-            "data": {
-              "shapeType": "rectangle",
-              "label": "",
-              "backgroundColor": "transparent",
-              "strokeColor": "#495057"
-            },
-            "measured": {
-              "width": 81,
-              "height": 20
-            }
-          },
-          {
-            "id": "4vR-YkT4Ipc8pnXGAPa7g",
-            "type": "text",
-            "position": {
-              "x": -35.22997100799226,
-              "y": 1848.3579016542799
-            },
-            "data": {
-              "text": "Card text",
-              "fontColor": "#000000",
-              "fontSize": "small",
-              "showHandles": false
-            },
-            "measured": {
-              "width": 68,
-              "height": 38
             },
             "dragging": false
-          },
-          {
-            "id": "leDFPNHvHjeM5SK5CY2Oa",
-            "type": "shape",
-            "position": {
-              "x": -257.6679280802407,
-              "y": 1745.1457738758709
-            },
-            "style": {
-              "width": 63.5514104847461,
-              "height": 63.5514104847461
-            },
-            "data": {
-              "shapeType": "rectangle",
-              "label": "",
-              "backgroundColor": "transparent",
-              "strokeColor": "#000000"
-            },
-            "measured": {
-              "width": 64,
-              "height": 64
-            }
           },
           {
             "id": "VaVWwkAQLKNEMQiZ-Eroy",
             "type": "shape",
             "position": {
-              "x": -747.7601740015002,
-              "y": 300.17079032404337
+              "x": -734.4278568135607,
+              "y": 238.50882332982303
             },
             "style": {
               "width": 164.87851581501013,
@@ -889,39 +459,22 @@
             },
             "data": {
               "shapeType": "rectangle",
-              "label": "",
+              "label": "Logo",
               "backgroundColor": "transparent",
               "strokeColor": "#1e1e1e"
             },
             "measured": {
               "width": 165,
               "height": 67
-            }
-          },
-          {
-            "id": "QrGTC_H4ISRMQvoRJJEuB",
-            "type": "text",
-            "position": {
-              "x": -708.710022433567,
-              "y": 311.8652883217275
             },
-            "data": {
-              "text": "Logo",
-              "fontColor": "#1e1e1e",
-              "fontSize": "large",
-              "showHandles": false
-            },
-            "measured": {
-              "width": 68,
-              "height": 47
-            }
+            "dragging": false
           },
           {
             "id": "FehqbfiByo0chx10s6k7K",
             "type": "text",
             "position": {
-              "x": -491.76438039150435,
-              "y": 310.29492617103045
+              "x": -466.76628566411773,
+              "y": 243.63334023133274
             },
             "data": {
               "text": "Header",
@@ -932,14 +485,15 @@
             "measured": {
               "width": 90,
               "height": 47
-            }
+            },
+            "dragging": false
           },
           {
             "id": "4o8MDMWlVABcOMhLv9tCE",
             "type": "text",
             "position": {
-              "x": -520.7520468114519,
-              "y": 390.48245577251043
+              "x": -490.7543331385879,
+              "y": 325.4874094813052
             },
             "data": {
               "text": "Navigation",
@@ -950,14 +504,15 @@
             "measured": {
               "width": 125,
               "height": 47
-            }
+            },
+            "dragging": false
           },
           {
             "id": "a0THxKWmm_0ZRAedwCQo9",
             "type": "text",
             "position": {
-              "x": -245.95437332749702,
-              "y": 314.5515196782598
+              "x": -224.28935789709527,
+              "y": 242.89031479308477
             },
             "data": {
               "text": "Link",
@@ -968,14 +523,15 @@
             "measured": {
               "width": 58,
               "height": 47
-            }
+            },
+            "dragging": false
           },
           {
             "id": "QYnfJWM-pWbWnSqCvq3Cl",
             "type": "shape",
             "position": {
-              "x": -338.1451000990162,
-              "y": 1094.352296230003
+              "x": -318.41069389765755,
+              "y": 1179.362046020471
             },
             "style": {
               "width": 102.36618498818295,
@@ -990,14 +546,15 @@
             "measured": {
               "width": 102,
               "height": 102
-            }
+            },
+            "dragging": false
           },
           {
             "id": "JraPN4rzcaAhiz7t42S1_",
             "type": "text",
             "position": {
-              "x": -753.5658586132488,
-              "y": 1421.4216037133472
+              "x": -572.5925680971574,
+              "y": 1439.1693754779835
             },
             "data": {
               "text": "Pre-Built Wireframe Sections",
@@ -1008,167 +565,8 @@
             "measured": {
               "width": 303,
               "height": 47
-            }
-          },
-          {
-            "id": "ogWsb-42JzZz58HbWJsmF",
-            "type": "shape",
-            "position": {
-              "x": -757.5885860913145,
-              "y": 1742.0954630946644
             },
-            "style": {
-              "width": 390.58072173184075,
-              "height": 205.4492937847989
-            },
-            "data": {
-              "shapeType": "rectangle",
-              "label": "",
-              "backgroundColor": "transparent",
-              "strokeColor": "#000000",
-              "fontSize": "small",
-              "showHandles": false
-            },
-            "measured": {
-              "width": 391,
-              "height": 205
-            },
-            "selected": true,
-            "domAttributes": {
-              "tabIndex": 0
-            }
-          },
-          {
-            "id": "SIj6BrFF_MARzRTF8nRl4",
-            "type": "text",
-            "position": {
-              "x": -745.6475021183584,
-              "y": 1752.8136348839082
-            },
-            "data": {
-              "text": "Headline Text",
-              "fontColor": "#000000",
-              "fontSize": "large",
-              "showHandles": false
-            },
-            "measured": {
-              "width": 152,
-              "height": 47
-            },
-            "dragging": false,
-            "selected": true,
-            "domAttributes": {
-              "tabIndex": 0
-            }
-          },
-          {
-            "id": "oyjCS7ygSJ1Kw9j5NmYg8",
-            "type": "text",
-            "position": {
-              "x": -747.3929136987746,
-              "y": 1793.3843168415847
-            },
-            "data": {
-              "text": "Subtitle text can be a bit longer",
-              "fontColor": "#000000",
-              "fontSize": "small",
-              "showHandles": false
-            },
-            "measured": {
-              "width": 186,
-              "height": 38
-            },
-            "dragging": false,
-            "selected": true,
-            "domAttributes": {
-              "tabIndex": 0
-            }
-          },
-          {
-            "id": "aafRSxvZJ4ngBFYq8hctl",
-            "type": "shape",
-            "position": {
-              "x": -740.7675391081724,
-              "y": 1873.6377529207048
-            },
-            "style": {
-              "width": 47.968695817417945,
-              "height": 15.3197806462295
-            },
-            "data": {
-              "shapeType": "rectangle",
-              "label": "Button text",
-              "backgroundColor": "var(--sketchlab-bg-yellow)",
-              "strokeColor": "#495057",
-              "fontSize": "small",
-              "showHandles": false
-            },
-            "measured": {
-              "width": 134,
-              "height": 60
-            },
-            "selected": true,
-            "domAttributes": {
-              "tabIndex": 0
-            },
-            "width": 134,
-            "height": 60,
-            "resizing": false,
             "dragging": false
-          },
-          {
-            "id": "MQBamQ34HZOitK9isMo_Z",
-            "type": "text",
-            "position": {
-              "x": -742.2478229475007,
-              "y": 1829.2689328301697
-            },
-            "data": {
-              "text": "Primary",
-              "fontColor": "#000000",
-              "fontSize": "small",
-              "showHandles": false
-            },
-            "measured": {
-              "width": 58,
-              "height": 38
-            },
-            "dragging": false,
-            "selected": true,
-            "domAttributes": {
-              "tabIndex": 0
-            }
-          },
-          {
-            "id": "JkxSvzywcFVXuWyympTFN",
-            "type": "shape",
-            "position": {
-              "x": -533.3865054762665,
-              "y": 1760.234740897481
-            },
-            "style": {
-              "width": 87.79357080547821,
-              "height": 87.79357080547821
-            },
-            "data": {
-              "shapeType": "rectangle",
-              "label": "",
-              "backgroundColor": "transparent",
-              "strokeColor": "#000000",
-              "showHandles": false
-            },
-            "measured": {
-              "width": 144,
-              "height": 160
-            },
-            "dragging": false,
-            "width": 144,
-            "height": 160,
-            "resizing": false,
-            "selected": true,
-            "domAttributes": {
-              "tabIndex": 0
-            }
           },
           {
             "id": "QAEFXLh6L0nqeDCViqW-m",
@@ -1187,18 +585,14 @@
               "width": 163,
               "height": 47
             },
-            "dragging": false,
-            "selected": false,
-            "domAttributes": {
-              "tabIndex": -1
-            }
+            "dragging": false
           },
           {
             "id": "8wL8poS6eu7jWRG8Ogk_G",
             "type": "shape",
             "position": {
-              "x": 43.818065787140085,
-              "y": 1192.0365786265274
+              "x": 109.12522922771834,
+              "y": 1184.7202617620967
             },
             "style": {
               "width": 627.0448853689527,
@@ -1213,14 +607,15 @@
             "measured": {
               "width": 627,
               "height": 972
-            }
+            },
+            "dragging": false
           },
           {
             "id": "w2Y8wG77b6jvGTfmveaDD",
             "type": "shape",
             "position": {
-              "x": 785.5845245195346,
-              "y": 1185.4106456530312
+              "x": 789.4981840805675,
+              "y": 1179.7481520502772
             },
             "style": {
               "width": 627.0448853689527,
@@ -1235,48 +630,9 @@
             "measured": {
               "width": 627,
               "height": 972
-            }
-          },
-          {
-            "id": "A04PA7EjvxePN8EgjFezA",
-            "type": "shape",
-            "position": {
-              "x": -732.2526802231686,
-              "y": 2080.455065192304
             },
-            "style": {
-              "width": 647.9066528041883,
-              "height": 48.28129851193073
-            },
-            "data": {
-              "shapeType": "rectangle",
-              "label": "",
-              "backgroundColor": "transparent",
-              "strokeColor": "#000000"
-            },
-            "measured": {
-              "width": 648,
-              "height": 48
-            }
-          },
-          {
-            "id": "I9ZjbH1muOkro6sscZ539",
-            "type": "text",
-            "position": {
-              "x": -180.96542702464313,
-              "y": 2087.400798236317
-            },
-            "data": {
-              "text": "Footer text",
-              "fontColor": "#000000",
-              "fontSize": "small",
-              "showHandles": false
-            },
-            "measured": {
-              "width": 78,
-              "height": 38
-            },
-            "dragging": false
+            "dragging": false,
+            "zIndex": -2
           },
           {
             "id": "P0Y9Dt7vHaGNI67yqVyNE",
@@ -1295,11 +651,7 @@
               "width": 83,
               "height": 47
             },
-            "dragging": false,
-            "selected": true,
-            "domAttributes": {
-              "tabIndex": 0
-            }
+            "dragging": false
           },
           {
             "id": "rBZH2TySf8ighzBGSIOJ1",
@@ -1338,125 +690,11 @@
             }
           },
           {
-            "id": "d4cea133-d74b-40db-927f-9410ef5832c8",
-            "type": "lineAnchor",
-            "position": {
-              "x": -238.72957216880604,
-              "y": 1889.4809808022428
-            },
-            "style": {
-              "width": 10,
-              "height": 10
-            },
-            "data": {
-              "lineAnchorRole": "source"
-            },
-            "measured": {
-              "width": 10,
-              "height": 10
-            }
-          },
-          {
-            "id": "c74d3466-722f-4c72-8e4b-e520b1ec73c8",
-            "type": "lineAnchor",
-            "position": {
-              "x": -220.21402325206137,
-              "y": 1889.8667665132325
-            },
-            "style": {
-              "width": 10,
-              "height": 10
-            },
-            "data": {
-              "lineAnchorRole": "target"
-            },
-            "measured": {
-              "width": 10,
-              "height": 10
-            }
-          },
-          {
-            "id": "e8d96551-7213-4f32-b722-ea75d01a5ee6",
-            "type": "lineAnchor",
-            "position": {
-              "x": -266.61774306985467,
-              "y": 1803.3912015510969
-            },
-            "style": {
-              "width": 10,
-              "height": 10
-            },
-            "data": {
-              "lineAnchorRole": "source"
-            },
-            "measured": {
-              "width": 10,
-              "height": 10
-            }
-          },
-          {
-            "id": "43f48a34-a22d-4e0d-9a75-890e59bed59b",
-            "type": "lineAnchor",
-            "position": {
-              "x": -194.88146468895124,
-              "y": 1740.1440534649291
-            },
-            "style": {
-              "width": 10,
-              "height": 10
-            },
-            "data": {
-              "lineAnchorRole": "target"
-            },
-            "measured": {
-              "width": 10,
-              "height": 10
-            }
-          },
-          {
-            "id": "290105cf-41b7-4cb1-8ae2-27835a8b5456",
-            "type": "lineAnchor",
-            "position": {
-              "x": -204.94839311661076,
-              "y": 1802.6671211662836
-            },
-            "style": {
-              "width": 10,
-              "height": 10
-            },
-            "data": {
-              "lineAnchorRole": "source"
-            },
-            "measured": {
-              "width": 10,
-              "height": 10
-            }
-          },
-          {
-            "id": "0e362a3e-6555-4642-8697-c584ab7da786",
-            "type": "lineAnchor",
-            "position": {
-              "x": -257.1050383136013,
-              "y": 1740.999671969516
-            },
-            "style": {
-              "width": 10,
-              "height": 10
-            },
-            "data": {
-              "lineAnchorRole": "target"
-            },
-            "measured": {
-              "width": 10,
-              "height": 10
-            }
-          },
-          {
             "id": "91d1ddd9-2a9e-4f9d-b14c-41d183eb642a",
             "type": "lineAnchor",
             "position": {
-              "x": -318.6420349818303,
-              "y": 1120.8057712632678
+              "x": -306.4977850117635,
+              "y": 1199.7433960687026
             },
             "style": {
               "width": 10,
@@ -1474,8 +712,8 @@
             "id": "bca467f6-9f77-4d45-a8b1-e0c6831e0ca9",
             "type": "lineAnchor",
             "position": {
-              "x": -261.06530692646277,
-              "y": 1120.8057712632678
+              "x": -248.92105695639594,
+              "y": 1199.7433960687026
             },
             "style": {
               "width": 10,
@@ -1493,8 +731,8 @@
             "id": "84ca9c50-1d27-45f0-84ac-65ae4180e779",
             "type": "lineAnchor",
             "position": {
-              "x": -318.6420349818303,
-              "y": 1139.7887207385213
+              "x": -306.4977850117634,
+              "y": 1223.280439282731
             },
             "style": {
               "width": 10,
@@ -1512,8 +750,8 @@
             "id": "ba357a5a-334d-44d2-a6ec-ca4786f5337a",
             "type": "lineAnchor",
             "position": {
-              "x": -261.06530692646277,
-              "y": 1139.7887207385213
+              "x": -248.9210569563959,
+              "y": 1223.280439282731
             },
             "style": {
               "width": 10,
@@ -1531,8 +769,8 @@
             "id": "d6d786af-8807-40fe-b5d2-3fcc0adbed57",
             "type": "lineAnchor",
             "position": {
-              "x": -318.6420349818303,
-              "y": 1159.3812286707062
+              "x": -306.4977850117634,
+              "y": 1248.9450721999494
             },
             "style": {
               "width": 10,
@@ -1550,8 +788,8 @@
             "id": "6ddd9a93-a957-4fe6-a084-3925fce6024c",
             "type": "lineAnchor",
             "position": {
-              "x": -261.06530692646277,
-              "y": 1159.3812286707062
+              "x": -248.9210569563959,
+              "y": 1248.9450721999494
             },
             "style": {
               "width": 10,
@@ -1566,89 +804,969 @@
             }
           },
           {
-            "id": "ce7e69e0-17aa-4eb5-927a-43b484b12277",
-            "type": "text",
+            "id": "12e82a02-950f-4636-b103-1b13fdfe4ebd",
+            "type": "image",
             "data": {
-              "text": "Header item",
+              "src": "/level_starter_assets/ai-generated-design-lesson10-level1a_2026/uuid/1f89cc74-6da2-4338-ada4-ea27209e5b9f.png",
+              "altText": "user",
               "showHandles": false
             },
             "position": {
-              "x": -676.8753960635845,
-              "y": 1581.3011752300379
+              "x": -421.2481654195376,
+              "y": 541.2032968248441
             },
+            "width": 80,
+            "height": 60,
             "measured": {
-              "width": 106,
-              "height": 39
+              "width": 80,
+              "height": 60
             },
             "dragging": false,
-            "selected": true,
-            "domAttributes": {
-              "tabIndex": 0
-            }
+            "resizing": false
           },
           {
-            "id": "b4147263-8716-4d54-8113-54579e300017",
-            "type": "text",
+            "id": "df7d4fce-8eff-4819-9cc1-3bab1c030a5c",
+            "type": "image",
             "data": {
-              "text": "Header item",
-              "fontSize": "medium",
+              "src": "/level_starter_assets/ai-generated-design-lesson10-level1a_2026/uuid/a4106495-ac4a-4218-b4ec-26d84b930c56.png",
+              "altText": "minus",
               "showHandles": false
             },
             "position": {
-              "x": -545.6893973618377,
-              "y": 1580.1499396142835
+              "x": -321.2481654195376,
+              "y": 541.2032968248441
+            },
+            "width": 80,
+            "height": 60,
+            "measured": {
+              "width": 80,
+              "height": 60
+            },
+            "dragging": false,
+            "resizing": false
+          },
+          {
+            "id": "56b9e9d7-d993-4976-9f77-547d040428a3",
+            "type": "image",
+            "data": {
+              "src": "/level_starter_assets/ai-generated-design-lesson10-level1a_2026/uuid/987343fb-2513-4dce-b0ef-74d168e0242e.png",
+              "altText": "plus",
+              "showHandles": false
+            },
+            "position": {
+              "x": -219.2481654195376,
+              "y": 541.2032968248441
+            },
+            "width": 80,
+            "height": 60,
+            "measured": {
+              "width": 80,
+              "height": 60
+            },
+            "resizing": false,
+            "dragging": false
+          },
+          {
+            "id": "e2ca942a-eb81-4145-bee8-e5ee7099b327",
+            "type": "image",
+            "data": {
+              "src": "/level_starter_assets/ai-generated-design-lesson10-level1a_2026/uuid/6806c072-4eb3-4d9d-b732-9b4f8905a081.png",
+              "altText": "message",
+              "showHandles": false
+            },
+            "position": {
+              "x": -127.2481654195376,
+              "y": 537.2032968248441
+            },
+            "width": 80,
+            "height": 60,
+            "measured": {
+              "width": 80,
+              "height": 60
+            },
+            "resizing": false,
+            "dragging": false
+          },
+          {
+            "id": "cbdddfae-235a-4f0d-8f89-3d415df27f81",
+            "type": "image",
+            "data": {
+              "src": "/level_starter_assets/ai-generated-design-lesson10-level1a_2026/uuid/51b51fa9-66f4-4e84-bd7c-f0316c68d224.png",
+              "altText": "trash-alt",
+              "showHandles": false
+            },
+            "position": {
+              "x": -221.69439176765593,
+              "y": 601.7466118960572
+            },
+            "width": 80,
+            "height": 60,
+            "measured": {
+              "width": 80,
+              "height": 60
+            },
+            "resizing": false,
+            "dragging": false
+          },
+          {
+            "id": "c04baf4c-9cea-43d4-86cf-927f6bbdce45",
+            "type": "image",
+            "data": {
+              "src": "/level_starter_assets/ai-generated-design-lesson10-level1a_2026/uuid/be2180c7-6767-43f9-bc1b-69a09382034e.png",
+              "altText": "play",
+              "showHandles": false
+            },
+            "position": {
+              "x": -416.6102016393655,
+              "y": 603.76996907153
+            },
+            "width": 80,
+            "height": 60,
+            "measured": {
+              "width": 80,
+              "height": 60
+            },
+            "dragging": false,
+            "resizing": false
+          },
+          {
+            "id": "3da2b1d3-10d1-42fc-abfd-98934e04efee",
+            "type": "image",
+            "data": {
+              "src": "/level_starter_assets/ai-generated-design-lesson10-level1a_2026/uuid/1e9fe1b3-a4e3-43e5-90e2-ef75051f6c97.png",
+              "altText": "pause",
+              "showHandles": false
+            },
+            "position": {
+              "x": -318.09390376482884,
+              "y": 601.1356653125615
+            },
+            "width": 80,
+            "height": 60,
+            "measured": {
+              "width": 80,
+              "height": 60
+            },
+            "dragging": false,
+            "resizing": false
+          },
+          {
+            "id": "a25171da-d619-4b2b-a121-6f4c8657769a",
+            "type": "image",
+            "data": {
+              "src": "/level_starter_assets/ai-generated-design-lesson10-level1a_2026/uuid/0e09c3c5-136c-4bf5-a79f-2556599bc374.png",
+              "altText": "star",
+              "showHandles": false
+            },
+            "position": {
+              "x": -222.82285623275624,
+              "y": 676.4288500130391
+            },
+            "width": 80,
+            "height": 60,
+            "measured": {
+              "width": 80,
+              "height": 60
+            },
+            "resizing": false,
+            "dragging": false
+          },
+          {
+            "id": "c071a0e4-1bd7-42e9-a812-4e7ae8fc7cf8",
+            "type": "image",
+            "data": {
+              "src": "/level_starter_assets/ai-generated-design-lesson10-level1a_2026/uuid/58e2068a-2e1b-498f-a8a1-bc7cf7d14b51.png",
+              "altText": "thumbs-down",
+              "showHandles": false
+            },
+            "position": {
+              "x": -313.1277195209702,
+              "y": 685.2290940144526
+            },
+            "width": 80,
+            "height": 60,
+            "measured": {
+              "width": 80,
+              "height": 60
+            },
+            "dragging": false,
+            "resizing": false
+          },
+          {
+            "id": "f6acbbf7-ac45-471b-83e3-5ecaf05b8361",
+            "type": "image",
+            "data": {
+              "src": "/level_starter_assets/ai-generated-design-lesson10-level1a_2026/uuid/9b2b2391-eda7-4880-a7d1-2398c6a90204.png",
+              "altText": "heart-alt",
+              "showHandles": false
+            },
+            "position": {
+              "x": -131.81117764501985,
+              "y": 602.2653497847297
+            },
+            "width": 80,
+            "height": 60,
+            "measured": {
+              "width": 80,
+              "height": 60
+            },
+            "dragging": false,
+            "resizing": false
+          },
+          {
+            "id": "3f50c24f-adec-44b7-83e5-c8d42436e10e",
+            "type": "image",
+            "data": {
+              "src": "/level_starter_assets/ai-generated-design-lesson10-level1a_2026/uuid/23549c6b-acd8-4510-a112-a74a110998b3.png",
+              "altText": "Like",
+              "showHandles": false
+            },
+            "position": {
+              "x": -411.14985668937504,
+              "y": 673.4651057833162
+            },
+            "width": 80,
+            "height": 60,
+            "measured": {
+              "width": 80,
+              "height": 60
+            },
+            "dragging": false,
+            "resizing": false
+          },
+          {
+            "id": "92486910-46f9-40cf-b21b-aa31cfa43d2f",
+            "type": "image",
+            "data": {
+              "src": "/level_starter_assets/ai-generated-design-lesson10-level1a_2026/uuid/6f5f42bd-6be7-427d-8cdb-562372aa5703.png",
+              "altText": "Menu",
+              "showHandles": false
+            },
+            "position": {
+              "x": -128.8929277591745,
+              "y": 678.594790255484
+            },
+            "width": 80,
+            "height": 60,
+            "measured": {
+              "width": 80,
+              "height": 60
+            },
+            "dragging": false,
+            "resizing": false
+          },
+          {
+            "id": "c4dd673f-839d-473e-b94a-e0382f5f34dc",
+            "type": "image",
+            "data": {
+              "src": "/level_starter_assets/ai-generated-design-lesson10-level1a_2026/uuid/1d7c78aa-2b48-425b-8253-57b9b0d0ccb7.png",
+              "altText": "menu-hamburger",
+              "showHandles": false
+            },
+            "position": {
+              "x": -515.638273235818,
+              "y": 541.8860369063939
+            },
+            "width": 80,
+            "height": 60,
+            "measured": {
+              "width": 80,
+              "height": 60
+            },
+            "dragging": false,
+            "resizing": false
+          },
+          {
+            "id": "20e176f5-cdab-4d31-881c-59ceff259312",
+            "type": "image",
+            "data": {
+              "src": "/level_starter_assets/ai-generated-design-lesson10-level1a_2026/uuid/0d9cb486-285a-4969-beca-57f7c1dd79b6.png",
+              "altText": "arrow-right",
+              "showHandles": false
+            },
+            "position": {
+              "x": -420.6494827032069,
+              "y": 469.1774058852281
+            },
+            "width": 80,
+            "height": 60,
+            "measured": {
+              "width": 80,
+              "height": 60
+            },
+            "dragging": false,
+            "resizing": false
+          },
+          {
+            "id": "dca9f19e-dac7-4984-a73e-bd388c581ec3",
+            "type": "image",
+            "data": {
+              "src": "/level_starter_assets/ai-generated-design-lesson10-level1a_2026/uuid/c578c0c8-ec95-4c22-a0e8-b8b7672859a1.png",
+              "altText": "chevron-right",
+              "showHandles": false
+            },
+            "position": {
+              "x": -325.8511235685075,
+              "y": 472.72641789195455
+            },
+            "width": 80,
+            "height": 60,
+            "measured": {
+              "width": 80,
+              "height": 60
+            },
+            "dragging": false,
+            "resizing": false
+          },
+          {
+            "id": "ff29feb8-8a81-4fe6-b93e-781800797949",
+            "type": "image",
+            "data": {
+              "src": "/level_starter_assets/ai-generated-design-lesson10-level1a_2026/uuid/0513b3a4-1a41-442d-90c2-290a40e2bf46.png",
+              "altText": "check",
+              "showHandles": false
+            },
+            "position": {
+              "x": -127.38469492995564,
+              "y": 464.4643627618115
+            },
+            "width": 80,
+            "height": 60,
+            "measured": {
+              "width": 80,
+              "height": 60
+            },
+            "dragging": false,
+            "resizing": false
+          },
+          {
+            "id": "b3cd5b28-7b0a-4a71-a897-24f28e02e402",
+            "type": "image",
+            "data": {
+              "src": "/level_starter_assets/ai-generated-design-lesson10-level1a_2026/uuid/bc163e5f-e8d7-45ac-88d6-219fef46b87c.png",
+              "altText": "times",
+              "showHandles": false
+            },
+            "position": {
+              "x": -224.11668910347143,
+              "y": 466.3328001400897
+            },
+            "width": 80,
+            "height": 60,
+            "measured": {
+              "width": 80,
+              "height": 60
+            },
+            "dragging": false,
+            "resizing": false
+          },
+          {
+            "id": "bd6cbd50-7593-4d6f-9295-142b2f75dfcf",
+            "type": "image",
+            "data": {
+              "src": "/level_starter_assets/ai-generated-design-lesson10-level1a_2026/uuid/89f29f55-6473-4e43-bd77-27c5b14aef05.png",
+              "altText": "WIfi",
+              "showHandles": false
+            },
+            "position": {
+              "x": -507.4169957364962,
+              "y": 617.4079729929773
+            },
+            "width": 80,
+            "height": 60,
+            "measured": {
+              "width": 80,
+              "height": 60
+            },
+            "dragging": false,
+            "resizing": false
+          },
+          {
+            "id": "89b3522e-b154-4370-bc20-97e6ec482b3c",
+            "type": "image",
+            "data": {
+              "src": "/level_starter_assets/ai-generated-design-lesson10-level1a_2026/uuid/0b997273-ba85-418b-a4a2-6d00b2526b30.png",
+              "altText": "Filter",
+              "showHandles": false
+            },
+            "position": {
+              "x": -515.7580877111059,
+              "y": 479.0036771424549
+            },
+            "width": 80,
+            "height": 60,
+            "measured": {
+              "width": 80,
+              "height": 60
+            },
+            "resizing": false,
+            "dragging": false
+          },
+          {
+            "id": "bab055ff-7c17-4e3f-84fa-f9003ce5ab5d",
+            "type": "image",
+            "data": {
+              "src": "/level_starter_assets/ai-generated-design-lesson10-level1a_2026/uuid/dd5d59ce-9c5f-41bb-9c62-6666e423d343.png",
+              "altText": "Text box",
+              "showHandles": false
+            },
+            "position": {
+              "x": -730.1233133976783,
+              "y": 941.4886140032306
+            },
+            "width": 202,
+            "height": 124,
+            "measured": {
+              "width": 202,
+              "height": 124
+            },
+            "dragging": false,
+            "resizing": false
+          },
+          {
+            "id": "2fa6a373-21f6-4cff-b0ba-6e73195da1a0",
+            "type": "image",
+            "data": {
+              "src": "/level_starter_assets/ai-generated-design-lesson10-level1a_2026/uuid/aea3210a-8404-4ded-99d8-d74814cbce47.png",
+              "altText": "Search field",
+              "showHandles": false
+            },
+            "position": {
+              "x": -506.92939375640964,
+              "y": 920.9339221905185
+            },
+            "width": 196,
+            "height": 130,
+            "measured": {
+              "width": 196,
+              "height": 130
+            },
+            "dragging": false,
+            "resizing": false
+          },
+          {
+            "id": "671c6a94-3b5d-4e18-b029-e17c701267ee",
+            "type": "image",
+            "data": {
+              "src": "/level_starter_assets/ai-generated-design-lesson10-level1a_2026/uuid/d9294afe-c68a-40ee-a5ab-1a2b282e2d9e.png",
+              "altText": "Size=Small",
+              "showHandles": false
+            },
+            "position": {
+              "x": -489.3022053792934,
+              "y": 879.0290468629898
+            },
+            "width": 80,
+            "height": 60,
+            "measured": {
+              "width": 80,
+              "height": 60
+            },
+            "dragging": false,
+            "resizing": false
+          },
+          {
+            "id": "c483f34d-acc3-4c41-8b3f-20199cf83a9a",
+            "type": "image",
+            "data": {
+              "src": "/level_starter_assets/ai-generated-design-lesson10-level1a_2026/uuid/547ec745-866d-44f4-8e6f-d4ee282d86a2.png",
+              "altText": "Text field",
+              "showHandles": false
+            },
+            "position": {
+              "x": -715.1534755549445,
+              "y": 844.6504331038209
+            },
+            "width": 209,
+            "height": 130,
+            "measured": {
+              "width": 209,
+              "height": 130
+            },
+            "dragging": false,
+            "resizing": false
+          },
+          {
+            "id": "05954bb9-c602-48a7-834e-25761f531242",
+            "type": "image",
+            "data": {
+              "src": "/level_starter_assets/ai-generated-design-lesson10-level1a_2026/uuid/a552edcd-6a2b-4dbe-9227-897fd3cdefca.png",
+              "altText": "Size=Default",
+              "showHandles": false
+            },
+            "position": {
+              "x": -386.83391115382835,
+              "y": 842.5260426002712
+            },
+            "width": 210,
+            "height": 133,
+            "measured": {
+              "width": 210,
+              "height": 133
+            },
+            "dragging": false,
+            "resizing": false
+          },
+          {
+            "id": "b3654abd-1f8b-4810-9ffa-292373a82c1d",
+            "type": "image",
+            "data": {
+              "src": "/level_starter_assets/ai-generated-design-lesson10-level1a_2026/uuid/e4d6ae1d-bb4d-40ca-aa88-c9733e0f265b.png",
+              "altText": "State=On",
+              "showHandles": false
+            },
+            "position": {
+              "x": -281.7863955905654,
+              "y": 953.3800893499263
+            },
+            "width": 80,
+            "height": 60,
+            "measured": {
+              "width": 80,
+              "height": 60
+            },
+            "dragging": false,
+            "resizing": false
+          },
+          {
+            "id": "f074be0d-e8b0-4ed4-ab43-6bb85fa67b14",
+            "type": "image",
+            "data": {
+              "src": "/level_starter_assets/ai-generated-design-lesson10-level1a_2026/uuid/a3e3476a-3bc7-4a52-95d4-e3778e3097e5.png",
+              "altText": "State=Off",
+              "showHandles": false
+            },
+            "position": {
+              "x": -188.88312999736937,
+              "y": 953.417855122721
+            },
+            "width": 80,
+            "height": 60,
+            "measured": {
+              "width": 80,
+              "height": 60
+            },
+            "dragging": false,
+            "resizing": false
+          },
+          {
+            "id": "d0bb7103-f015-4b26-8d5a-103d4b8dd954",
+            "type": "image",
+            "data": {
+              "src": "/level_starter_assets/ai-generated-design-lesson10-level1a_2026/uuid/e358639e-9ad4-421d-9e82-deda5110ddcd.png",
+              "altText": "State=Checked (1)",
+              "showHandles": false
+            },
+            "position": {
+              "x": -746.6085371547836,
+              "y": 1059.089230684603
+            },
+            "width": 80,
+            "height": 60,
+            "measured": {
+              "width": 80,
+              "height": 60
+            },
+            "dragging": false,
+            "resizing": false
+          },
+          {
+            "id": "c4c2a916-d3b6-4080-be92-203260d41001",
+            "type": "image",
+            "data": {
+              "src": "/level_starter_assets/ai-generated-design-lesson10-level1a_2026/uuid/9f5f347f-57c3-4867-91bd-c4a0e7aeab0b.png",
+              "altText": "State=Unchecked",
+              "showHandles": false
+            },
+            "position": {
+              "x": -677.4326029203958,
+              "y": 1061.110195199002
+            },
+            "width": 80,
+            "height": 60,
+            "measured": {
+              "width": 80,
+              "height": 60
+            },
+            "resizing": false,
+            "dragging": false
+          },
+          {
+            "id": "24d2139b-ded7-496d-b62a-01b132621621",
+            "type": "image",
+            "data": {
+              "src": "/level_starter_assets/ai-generated-design-lesson10-level1a_2026/uuid/137c2789-b97e-47eb-a6c7-3fdb730acfa8.png",
+              "altText": "Size=Large, Type=Solid",
+              "showHandles": false
+            },
+            "position": {
+              "x": -567.2181943359033,
+              "y": 1057.1888357627179
+            },
+            "width": 80,
+            "height": 60,
+            "measured": {
+              "width": 80,
+              "height": 60
+            },
+            "dragging": false,
+            "resizing": false
+          },
+          {
+            "id": "cc205b63-81d6-4ac7-bf44-adc572f70486",
+            "type": "image",
+            "data": {
+              "src": "/level_starter_assets/ai-generated-design-lesson10-level1a_2026/uuid/4e55470e-4adb-46ef-8568-c311c6498405.png",
+              "altText": "Size=Large, Type=Outline",
+              "showHandles": false
+            },
+            "position": {
+              "x": -456.1458066717688,
+              "y": 1057.0213941948932
+            },
+            "width": 80,
+            "height": 60,
+            "measured": {
+              "width": 80,
+              "height": 60
+            },
+            "resizing": false,
+            "dragging": false
+          },
+          {
+            "id": "e05f2ebb-7294-402d-b8f8-87e06314b042",
+            "type": "image",
+            "data": {
+              "src": "/level_starter_assets/ai-generated-design-lesson10-level1a_2026/uuid/5e0540d1-95b5-4573-b1ba-bcb4b63fe185.png",
+              "altText": "Type=Solid",
+              "showHandles": false
+            },
+            "position": {
+              "x": -345.07341900763447,
+              "y": 1058.548810136022
+            },
+            "width": 80,
+            "height": 60,
+            "measured": {
+              "width": 80,
+              "height": 60
+            },
+            "dragging": false,
+            "resizing": false
+          },
+          {
+            "id": "ad47604b-90b6-4017-8c3d-67f6f2a94d90",
+            "type": "image",
+            "data": {
+              "src": "/level_starter_assets/ai-generated-design-lesson10-level1a_2026/uuid/ddcf251e-f963-43ae-a619-4b7c71c566aa.png",
+              "altText": "Type=Outline",
+              "showHandles": false
+            },
+            "position": {
+              "x": -253.3242671829321,
+              "y": 1055.7207708159192
+            },
+            "width": 80,
+            "height": 60,
+            "measured": {
+              "width": 80,
+              "height": 60
+            },
+            "resizing": false,
+            "dragging": false
+          },
+          {
+            "id": "8f127089-96f0-4bc3-b65e-2d6cd8ec6abb",
+            "type": "image",
+            "data": {
+              "src": "/level_starter_assets/ai-generated-design-lesson10-level1a_2026/uuid/74b56e6c-fdac-45b1-8ab3-21d7e53b673b.png",
+              "altText": "filter-button",
+              "showHandles": false
+            },
+            "position": {
+              "x": -157.80305619197915,
+              "y": 1049.1007913768735
+            },
+            "width": 99,
+            "height": 72,
+            "measured": {
+              "width": 99,
+              "height": 72
+            },
+            "dragging": false,
+            "resizing": false
+          },
+          {
+            "id": "8278cf7b-a956-4b55-a94b-07d0f966ea89",
+            "type": "image",
+            "data": {
+              "src": "/level_starter_assets/ai-generated-design-lesson10-level1a_2026/uuid/c578c0c8-ec95-4c22-a0e8-b8b7672859a1.png",
+              "altText": "chevron-right",
+              "showHandles": false
+            },
+            "position": {
+              "x": -370.08880914184283,
+              "y": 317.79960981003825
+            },
+            "width": 80,
+            "height": 60,
+            "measured": {
+              "width": 80,
+              "height": 60
+            },
+            "dragging": false,
+            "resizing": false
+          },
+          {
+            "id": "d4f87ee0-f644-4056-816b-82550a2c8705",
+            "type": "image",
+            "data": {
+              "src": "/level_starter_assets/ai-generated-design-lesson10-level1a_2026/uuid/c578c0c8-ec95-4c22-a0e8-b8b7672859a1.png",
+              "altText": "chevron-right",
+              "showHandles": false,
+              "rotation": 180
+            },
+            "position": {
+              "x": -565.0739480154585,
+              "y": 317.7996098100382
+            },
+            "width": 80,
+            "height": 60,
+            "measured": {
+              "width": 80,
+              "height": 60
+            },
+            "dragging": false,
+            "resizing": false
+          },
+          {
+            "id": "4dfe0997-22a1-4de9-ac57-cd4931fc3b00",
+            "type": "lineAnchor",
+            "position": {
+              "x": -797.6996723411957,
+              "y": 402.1958720540513
+            },
+            "data": {
+              "lineAnchorRole": "source"
+            },
+            "style": {
+              "width": 10,
+              "height": 10
             },
             "measured": {
-              "width": 106,
-              "height": 39
-            },
-            "selected": true,
-            "domAttributes": {
-              "tabIndex": 0
+              "width": 10,
+              "height": 10
             },
             "dragging": false
           },
           {
-            "id": "dc56a3d8-24cf-45bf-9635-65c3dfbf62e2",
-            "type": "text",
+            "id": "2f55d294-09a5-4b76-9583-b96548926e1e",
+            "type": "lineAnchor",
+            "position": {
+              "x": -25.034340788013658,
+              "y": 403.9135052554353
+            },
             "data": {
-              "text": "Header item",
+              "lineAnchorRole": "target"
+            },
+            "style": {
+              "width": 10,
+              "height": 10
+            },
+            "measured": {
+              "width": 10,
+              "height": 10
+            },
+            "dragging": false
+          },
+          {
+            "id": "cbcaa355-9557-4964-9792-f3da64246cdd",
+            "type": "lineAnchor",
+            "position": {
+              "x": -796.1999773661225,
+              "y": 828.6162522942262
+            },
+            "data": {
+              "lineAnchorRole": "source"
+            },
+            "style": {
+              "width": 10,
+              "height": 10
+            },
+            "measured": {
+              "width": 10,
+              "height": 10
+            },
+            "dragging": false
+          },
+          {
+            "id": "19d8b634-ac2b-427d-b7cb-03663764b4f7",
+            "type": "lineAnchor",
+            "position": {
+              "x": -23.53464581294054,
+              "y": 830.3338854956102
+            },
+            "data": {
+              "lineAnchorRole": "target"
+            },
+            "style": {
+              "width": 10,
+              "height": 10
+            },
+            "measured": {
+              "width": 10,
+              "height": 10
+            },
+            "dragging": false
+          },
+          {
+            "id": "67458d15-2040-465a-9bcb-94946c052a8d",
+            "type": "lineAnchor",
+            "position": {
+              "x": -792.8515127466297,
+              "y": 1141.4513723794698
+            },
+            "data": {
+              "lineAnchorRole": "source"
+            },
+            "style": {
+              "width": 10,
+              "height": 10
+            },
+            "measured": {
+              "width": 10,
+              "height": 10
+            },
+            "dragging": false
+          },
+          {
+            "id": "3a3b7997-3a48-47dc-aa2a-aed9a1dd5c3c",
+            "type": "lineAnchor",
+            "position": {
+              "x": -20.186181193447737,
+              "y": 1143.1690055808538
+            },
+            "data": {
+              "lineAnchorRole": "target"
+            },
+            "style": {
+              "width": 10,
+              "height": 10
+            },
+            "measured": {
+              "width": 10,
+              "height": 10
+            },
+            "dragging": false
+          },
+          {
+            "id": "ef1b309a-3f7f-4f68-b67b-59af26bfacc0",
+            "type": "image",
+            "data": {
+              "src": "/level_starter_assets/ai-generated-design-lesson10-level1a_2026/uuid/212ba4a7-d7ec-42f7-b308-ea1b9df33dfd.png",
+              "altText": "footer",
               "showHandles": false
             },
             "position": {
-              "x": -410.977136395922,
-              "y": 1580.9153501879532
+              "x": -741.3944918913262,
+              "y": 1908.7387386277355
             },
+            "width": 665,
+            "height": 381,
             "measured": {
-              "width": 106,
-              "height": 39
+              "width": 665,
+              "height": 381
             },
-            "selected": true,
-            "domAttributes": {
-              "tabIndex": 0
+            "dragging": false,
+            "resizing": false
+          },
+          {
+            "id": "e91d04e4-807f-4154-9218-636a1d83f6d9",
+            "type": "image",
+            "data": {
+              "src": "/level_starter_assets/ai-generated-design-lesson10-level1a_2026/uuid/b3df743b-8e5c-4fbc-9d30-cd729aaf90c0.png",
+              "altText": "Header",
+              "showHandles": false
             },
-            "dragging": false
+            "position": {
+              "x": -767.7082435602179,
+              "y": 1524.6486184675214
+            },
+            "width": 715,
+            "height": 168,
+            "measured": {
+              "width": 715,
+              "height": 168
+            },
+            "dragging": false,
+            "resizing": false,
+            "zIndex": 1
+          },
+          {
+            "id": "6881f8ba-a294-462f-b4c7-7fb46567c5f9",
+            "type": "image",
+            "data": {
+              "src": "/level_starter_assets/ai-generated-design-lesson10-level1a_2026/uuid/c43b0e4a-efcf-4a86-9831-d1931ec1d9de.png",
+              "altText": "Card",
+              "showHandles": false
+            },
+            "position": {
+              "x": -326.911180809884,
+              "y": 1726.1212486410861
+            },
+            "width": 265,
+            "height": 272,
+            "measured": {
+              "width": 265,
+              "height": 272
+            },
+            "dragging": false,
+            "resizing": false
+          },
+          {
+            "id": "dc37fb8a-3d1f-4f58-a025-ff26eeaa30de",
+            "type": "image",
+            "data": {
+              "src": "/level_starter_assets/ai-generated-design-lesson10-level1a_2026/uuid/89979b7b-ee40-4126-8b38-9f632e2a9f67.png",
+              "altText": "hero-section"
+            },
+            "position": {
+              "x": -780.5727295415263,
+              "y": 1705.5488187345416
+            },
+            "width": 450,
+            "height": 310,
+            "measured": {
+              "width": 450,
+              "height": 310
+            },
+            "dragging": false,
+            "resizing": false
+          },
+          {
+            "id": "21c12733-e92d-45ad-94f4-1c8807047b03",
+            "type": "shape",
+            "data": {
+              "shapeType": "rectangle",
+              "label": "",
+              "backgroundColor": "var(--sketchlab-bg-yellow)"
+            },
+            "position": {
+              "x": -791.8183904227012,
+              "y": 1483.0221164648501
+            },
+            "width": 777,
+            "height": 670,
+            "measured": {
+              "width": 777,
+              "height": 670
+            },
+            "dragging": false,
+            "resizing": false,
+            "zIndex": -3
           }
         ],
         "edges": [
-          {
-            "id": "17efe9f5-896f-4295-91ae-07065459010d",
-            "source": "d4cea133-d74b-40db-927f-9410ef5832c8",
-            "target": "c74d3466-722f-4c72-8e4b-e520b1ec73c8",
-            "type": "straight"
-          },
-          {
-            "id": "71f9c415-ab85-4b59-b0fc-e7ab6f0d59be",
-            "source": "e8d96551-7213-4f32-b722-ea75d01a5ee6",
-            "target": "43f48a34-a22d-4e0d-9a75-890e59bed59b",
-            "type": "straight"
-          },
-          {
-            "id": "7e33718a-b106-4c02-8ce5-bdfd3678370c",
-            "source": "290105cf-41b7-4cb1-8ae2-27835a8b5456",
-            "target": "0e362a3e-6555-4642-8697-c584ab7da786",
-            "type": "straight"
-          },
           {
             "id": "9873ab05-56b8-41d0-9d30-cb4131e953bc",
             "source": "91d1ddd9-2a9e-4f9d-b14c-41d183eb642a",
@@ -1668,30 +1786,40 @@
             "type": "straight"
           },
           {
-            "source": "Hwspl9M_cMXRsBsw2i5Dv",
-            "sourceHandle": "left-source",
-            "target": "Hwspl9M_cMXRsBsw2i5Dv",
-            "targetHandle": "left-target",
-            "markerEnd": {
-              "type": "arrowclosed"
-            },
-            "id": "xy-edge__Hwspl9M_cMXRsBsw2i5Dvleft-source-Hwspl9M_cMXRsBsw2i5Dvleft-target"
+            "id": "7810001e-6b8e-4fc3-ba86-b0e77196d518",
+            "source": "4dfe0997-22a1-4de9-ac57-cd4931fc3b00",
+            "target": "2f55d294-09a5-4b76-9583-b96548926e1e",
+            "type": "straight",
+            "style": {
+              "stroke": "var(--sketchlab-stroke-default)",
+              "strokeWidth": 5
+            }
           },
           {
-            "source": "aafRSxvZJ4ngBFYq8hctl",
-            "sourceHandle": "right-source",
-            "target": "oyjCS7ygSJ1Kw9j5NmYg8",
-            "targetHandle": "bottom-target",
-            "markerEnd": {
-              "type": "arrowclosed"
-            },
-            "id": "xy-edge__aafRSxvZJ4ngBFYq8hctlright-source-oyjCS7ygSJ1Kw9j5NmYg8bottom-target"
+            "id": "5a680297-c9a9-4bb3-a4ff-bd6f711529f5",
+            "source": "cbcaa355-9557-4964-9792-f3da64246cdd",
+            "target": "19d8b634-ac2b-427d-b7cb-03663764b4f7",
+            "type": "straight",
+            "style": {
+              "stroke": "var(--sketchlab-stroke-default)",
+              "strokeWidth": 5
+            }
+          },
+          {
+            "id": "f749738e-15c2-4a01-8c67-6f5e7b71219e",
+            "source": "67458d15-2040-465a-9bcb-94946c052a8d",
+            "target": "3a3b7997-3a48-47dc-aa2a-aed9a1dd5c3c",
+            "type": "straight",
+            "style": {
+              "stroke": "var(--sketchlab-stroke-default)",
+              "strokeWidth": 5
+            }
           }
         ],
         "viewport": {
-          "x": 1002.6240827097688,
-          "y": -365.60164841242204,
-          "zoom": 0.5
+          "x": 640.9327825925013,
+          "y": 40.62134230150093,
+          "zoom": 0.5964065917180912
         }
       }
     },
@@ -9629,6 +9757,6 @@
     "name_suffix": "_2026"
   },
   "published": true,
-  "audit_log": "[{\"changed_at\":\"2026-02-24T18:12:12.495+00:00\",\"changed\":[\"cloned from \\\"ai-generated-design-lesson10-level1a_2025\\\"\"],\"cloned_from\":\"ai-generated-design-lesson10-level1a_2025\"},{\"changed_at\":\"2026-03-17 16:55:36 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-03-17 23:51:38 +0000\",\"changed\":[\"long_instructions\",\"display_name\",\"thumbnail_url\",\"bubble_choice_description\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-17 23:54:57 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-17 23:55:50 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-17 23:56:15 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-17 23:57:42 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-17 23:58:01 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-18 00:02:12 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-18 00:36:19 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-18 00:38:06 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-18 12:14:23 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-18 12:15:51 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-18 12:24:17 +0000\",\"changed\":[\"exemplar_sources\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-18 12:26:31 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-18 12:26:44 +0000\",\"changed\":[],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-18 12:59:52 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-18 13:05:49 +0000\",\"changed\":[\"exemplar_sources\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-18 13:05:59 +0000\",\"changed\":[],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-20 19:28:04 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2026-04-20 19:33:25 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2026-04-24 15:29:54 +0000\",\"changed\":[\"display_name\",\"bubble_choice_description\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2026-05-01 07:10:11 -0400\",\"changed\":[\"start_sources\"],\"changed_by_id\":1,\"changed_by_email\":\"levelbuilder@dev.com\"},{\"changed_at\":\"2026-05-01 07:12:15 -0400\",\"changed\":[\"start_sources\"],\"changed_by_id\":1,\"changed_by_email\":\"levelbuilder@dev.com\"}]"
+  "audit_log": "[{\"changed_at\":\"2026-02-24T18:12:12.495+00:00\",\"changed\":[\"cloned from \\\"ai-generated-design-lesson10-level1a_2025\\\"\"],\"cloned_from\":\"ai-generated-design-lesson10-level1a_2025\"},{\"changed_at\":\"2026-03-17 16:55:36 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-03-17 23:51:38 +0000\",\"changed\":[\"long_instructions\",\"display_name\",\"thumbnail_url\",\"bubble_choice_description\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-17 23:54:57 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-17 23:55:50 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-17 23:56:15 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-17 23:57:42 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-17 23:58:01 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-18 00:02:12 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-18 00:36:19 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-18 00:38:06 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-18 12:14:23 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-18 12:15:51 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-18 12:24:17 +0000\",\"changed\":[\"exemplar_sources\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-18 12:26:31 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-18 12:26:44 +0000\",\"changed\":[],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-18 12:59:52 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-18 13:05:49 +0000\",\"changed\":[\"exemplar_sources\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-18 13:05:59 +0000\",\"changed\":[],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-20 19:28:04 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2026-04-20 19:33:25 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2026-04-24 15:29:54 +0000\",\"changed\":[\"display_name\",\"bubble_choice_description\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2026-05-01 07:10:11 -0400\",\"changed\":[\"start_sources\"],\"changed_by_id\":1,\"changed_by_email\":\"levelbuilder@dev.com\"},{\"changed_at\":\"2026-05-01 07:12:15 -0400\",\"changed\":[\"start_sources\"],\"changed_by_id\":1,\"changed_by_email\":\"levelbuilder@dev.com\"},{\"changed_at\":\"2026-05-06 19:22:54 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":155,\"changed_by_email\":\"dani@code.org\"},{\"changed_at\":\"2026-05-06 19:53:17 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":155,\"changed_by_email\":\"dani@code.org\"}]"
 }]]></config>
 </Sketchlab>
