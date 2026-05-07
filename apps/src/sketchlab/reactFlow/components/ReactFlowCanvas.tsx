@@ -563,6 +563,7 @@ export default function ReactFlowCanvas({
     setLineEdgeColor,
     setLineEdgeWidth,
     setLineEdgeStrokeStyle,
+    setLineEdgeType,
     setLineEdgeArrowHeads,
     setLineEdgeLocked,
   } = useLineToolbar({
@@ -652,6 +653,9 @@ export default function ReactFlowCanvas({
                   }
                   onSelectStrokeStyle={value =>
                     setLineEdgeStrokeStyle(openLineEdge.id, value)
+                  }
+                  onSelectEdgeType={value =>
+                    setLineEdgeType(openLineEdge.id, value)
                   }
                   onSelectArrowHeads={value =>
                     setLineEdgeArrowHeads(openLineEdge.id, value)

@@ -63,6 +63,16 @@ export const LINE_STROKE_STYLE_OPTIONS = [
 export type LineStrokeStyleValue =
   (typeof LINE_STROKE_STYLE_OPTIONS)[number]['value'];
 
+export const EDGE_TYPE_OPTIONS = [
+  {value: 'straight', label: 'Straight'},
+  {value: 'default', label: 'Curved'},
+  {value: 'simplebezier', label: 'Bezier'},
+  {value: 'smoothstep', label: 'Rounded step'},
+  {value: 'step', label: 'Step'},
+] as const;
+
+export type EdgeTypeValue = (typeof EDGE_TYPE_OPTIONS)[number]['value'];
+
 export const TEXT_ALIGN_OPTIONS = [
   {value: 'left', label: 'Align left', icon: 'align-left'},
   {value: 'center', label: 'Align center', icon: 'align-center'},
@@ -78,6 +88,7 @@ export const DEFAULT_FONT_SIZE: FontSizeValue = 'medium';
 export const DEFAULT_TEXT_ALIGN: TextAlignValue = 'center';
 export const DEFAULT_LINE_WIDTH: LineWidthValue = 1;
 export const DEFAULT_LINE_STROKE_STYLE: LineStrokeStyleValue = 'solid';
+export const DEFAULT_EDGE_TYPE: EdgeTypeValue = 'straight';
 
 export function fontSizePx(value: FontSize | undefined): number | undefined {
   if (typeof value === 'number') {
