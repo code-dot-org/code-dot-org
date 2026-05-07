@@ -4,6 +4,18 @@
  * actually used in this codebase are declared.
  */
 
+declare module 'radium' {
+  /**
+   * Radium HOC.  We use it for the inline-style features (array styles,
+   * `:hover` / `:focus` keys); the typing here is intentionally permissive —
+   * Radium passes the wrapped component through with no useful type
+   * narrowing of its own.
+   */
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  function Radium<T = any>(component: T): T;
+  export default Radium;
+}
+
 declare module 'react-typist' {
   import type {Component, ReactNode} from 'react';
   interface TypistProps {

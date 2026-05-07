@@ -15,6 +15,7 @@ import soundLibrary from '@/oceans/models/soundLibrary';
 import {getState, setState} from '@/oceans/state';
 import styles from '@/oceans/styles';
 import colors from '@/oceans/styles/colors';
+import {mergeStyles} from '@/oceans/styles/mergeStyles';
 import {
   startTextToSpeech,
   stopTextToSpeech,
@@ -46,7 +47,9 @@ const UnwrappedGuide = class Guide extends React.Component<
       this.guideDialogRef &&
       this.guideDialogRef.current
     ) {
-      this.guideDialogRef.current.focus({focusVisible: false});
+      // `focusVisible` is a non-standard option (Firefox extension) accepted
+      // by some browsers; cast since it isn't in lib.dom's FocusOptions.
+      this.guideDialogRef.current.focus({focusVisible: false} as FocusOptions);
       this.lastFocusedGuideId = currentGuideId;
     } else if (!currentGuide) {
       this.lastFocusedGuideId = null;
@@ -139,15 +142,18 @@ const UnwrappedGuide = class Guide extends React.Component<
     const state = getState();
     const currentGuide = guide.getCurrentGuide();
 
-    let guideBgStyle: React.CSSProperties[] = [styles.guideBackground];
+    let guideBgStyle: React.CSSProperties = styles.guideBackground;
     if (currentGuide) {
       if (currentGuide.noDimBackground) {
-        guideBgStyle = [styles.guideBackgroundHidden];
+        guideBgStyle = styles.guideBackgroundHidden;
       }
 
       // Info guides should have a darker background color.
       if (currentGuide.style === 'Info') {
-        guideBgStyle.push({backgroundColor: colors.transparentBlack});
+        guideBgStyle = {
+          ...guideBgStyle,
+          backgroundColor: colors.transparentBlack,
+        };
       }
     }
 
@@ -172,6 +178,7 @@ const UnwrappedGuide = class Guide extends React.Component<
     const renderClickToContinueReminder =
       state.guides === 'K5' &&
       state.guideShowing &&
+      currentGuide &&
       !currentGuide.noDimBackground &&
       currentGuide.style !== 'Info';
 
@@ -180,7 +187,7 @@ const UnwrappedGuide = class Guide extends React.Component<
         {currentGuide && currentGuide.image && (
           <img
             src={currentGuide.image}
-            style={[styles.guideImage, currentGuide.imageStyle || {}]}
+            style={mergeStyles(styles.guideImage, currentGuide.imageStyle)}
             alt=""
           />
         )}

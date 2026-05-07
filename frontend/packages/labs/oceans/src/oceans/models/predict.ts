@@ -44,9 +44,8 @@ export const init = (): Promise<void> => {
     };
     trainer.train();
 
-    let oceanData = getState().fishData.slice() as ReturnType<
-      typeof generateOcean
-    >;
+    let oceanData: ReturnType<typeof generateOcean> =
+      getState().fishData.slice();
     if (getState().appMode === AppMode.CreaturesVTrashDemo) {
       oceanData = ([] as ReturnType<typeof generateOcean>).concat(
         generateOcean(4, 0, true, true, false),

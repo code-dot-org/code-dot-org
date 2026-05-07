@@ -415,7 +415,7 @@ const drawMovingFish = (state: State): void => {
   const offsetX = getOffsetForTime(state, t, currentRawXOffset ?? 0);
   lastRawXOffset = getRawOffsetForTime(state, t, currentRawXOffset ?? 0);
 
-  const fishDataArr = state.fishData as OceanObject[];
+  const fishDataArr = state.fishData;
 
   const maxScreenX =
     state.currentMode === Modes.Training
@@ -727,9 +727,7 @@ const totalPondFishXOffset = 1000;
 const drawPondFishImages = (): void => {
   const state = getState();
   const ctx = (state.canvas as HTMLCanvasElement).getContext('2d')!;
-  const fishes = (
-    state.showRecallFish ? state.recallFish : state.pondFish
-  ) as OceanObject[];
+  const fishes = state.showRecallFish ? state.recallFish : state.pondFish;
 
   let transitionOffset = 0;
   if (state.pondFishTransitionStartTime) {
@@ -745,7 +743,7 @@ const drawPondFishImages = (): void => {
   }
 
   const fishBounds: Array<{
-    fishId: unknown;
+    fishId: number | string;
     x: number;
     y: number;
     w: number;

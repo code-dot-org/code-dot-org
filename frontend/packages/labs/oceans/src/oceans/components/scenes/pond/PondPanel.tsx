@@ -38,7 +38,8 @@ class PondPanel extends React.Component {
                             ...styles.pondPanelGeneralBar,
                             width:
                               (Math.abs(f.importance) /
-                                state.pondExplainGeneralSummary[0].importance) *
+                                state.pondExplainGeneralSummary![0]
+                                  .importance) *
                                 100 +
                               '%',
                           }}
@@ -73,9 +74,9 @@ class PondPanel extends React.Component {
                 <div style={styles.pondPanelPreText} id="pondTextMarkdown">
                   <Markdown
                     markdown={I18n.t('mostImportantPartsDescription', {
-                      word: state.word.toLowerCase(),
+                      word: state.word!.toLowerCase(),
                       notWord: I18n.t('notWord', {
-                        word: state.word,
+                        word: state.word!,
                       }).toLowerCase(),
                     })}
                   />

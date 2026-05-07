@@ -1,7 +1,7 @@
 import * as tf from '@tensorflow/tfjs';
 import * as mobilenetModule from '@tensorflow-models/mobilenet';
 
-import {fishData, FishBodyPart} from '../utils/fishData';
+import {fishData, FishBodyPart, type FieldInfo} from '../utils/fishData';
 import {trashImagePaths, seaCreatureImagePaths} from '../utils/imagePaths';
 
 import constants from './constants';
@@ -162,6 +162,13 @@ export class OceanObject {
   /** Flattened numeric feature vector used by KNN classifier. */
   knnData: number[] | null;
 
+  /**
+   * Per-dimension metadata aligned with `knnData`.  Only populated by
+   * subclasses that participate in word-attribute SVM training
+   * (FishOceanObject); empty for trash and creature instances.
+   */
+  fieldInfos: FieldInfo[] = [];
+
   /** Cached mobilenet inference tensor. */
   logits: unknown | null;
 
@@ -317,9 +324,6 @@ export class FishOceanObject extends OceanObject {
   /** Selected color palette. */
   colorPalette: unknown;
 
-  /** Flattened field info arrays from each selected part. */
-  fieldInfos: unknown[];
-
   /** When true the fish swims to the left; default is right. */
   faceLeft?: boolean;
 
@@ -381,12 +385,12 @@ export class FishOceanObject extends OceanObject {
       const colors = Object.values(this.componentOptions.colors) as Array<{
         rgb: number[];
         knnData: number[];
-        fieldInfos: unknown[];
+        fieldInfos: FieldInfo[];
       }>;
       this.colorPalette = generateColorPalette(colors);
     }
 
-    type PartWithData = {knnData: number[]; fieldInfos: unknown[]};
+    type PartWithData = {knnData: number[]; fieldInfos: FieldInfo[]};
     const b = this.body as PartWithData;
     const e = this.eye as PartWithData;
     const m = this.mouth as PartWithData;

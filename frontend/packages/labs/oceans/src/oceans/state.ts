@@ -1,15 +1,41 @@
-/** Mutable trainer instance (KNN or SVM), set during init. */
-export interface Trainer {
-  clearAll(): void;
+import type KNNTrainer from '../utils/KNNTrainer';
+import type SVMTrainer from '../utils/SVMTrainer';
+
+import type {GuideEntry} from './models/guideTypes';
+import type {OceanObject} from './OceanObject';
+
+/**
+ * Runtime fish object stored in pond/recall arrays.  Implemented as
+ * `FishOceanObject` at runtime; we expose the broad `OceanObject` shape
+ * here so both the model layer and the render layer can read/write
+ * without a per-call cast.
+ */
+export type PondFish = OceanObject;
+
+/**
+ * Mutable trainer instance, set during init.  KNN for pixel-classifier
+ * modes (fishvtrash, creaturesvtrash{,demo}); SVM for the word-attribute
+ * modes (short, long).  Consumers narrow with `instanceof` or type guards
+ * before calling SVM-only methods like `explainFish`.
+ */
+export type Trainer = KNNTrainer<unknown> | SVMTrainer<unknown>;
+
+/** Bounding box for a clickable fish in the pond render layer. */
+export interface PondFishBound {
+  fishId: number | string;
+  x: number;
+  y: number;
+  w: number;
+  h: number;
 }
 
 /** Top-level application state object, threaded through all lab subsystems. */
 export interface State {
   appMode: string | null;
   currentMode: number | null;
-  fishData: unknown[];
-  pondFish: unknown[];
-  recallFish: unknown[];
+  fishData: PondFish[];
+  pondFish: PondFish[];
+  recallFish: PondFish[];
   showRecallFish: boolean;
   totalPondFish: number | null;
   backgroundCanvas: HTMLCanvasElement | null;
@@ -35,8 +61,8 @@ export interface State {
   word: string | null;
   trainingQuestion: string | null;
   currentInstructionsPage: number;
-  pondFishBounds: unknown;
-  pondClickedFish: {id: unknown; x: number; y: number} | null;
+  pondFishBounds: PondFishBound[] | null;
+  pondClickedFish: {id: number | string; x: number; y: number} | null;
   pondPanelShowing: boolean;
   pondPanelSide: string | null;
   pondFishMaxExplainValue: number;
@@ -56,11 +82,11 @@ export interface State {
   textToSpeechLocale: string | undefined;
   hasTextToSpeechStartedByClick: boolean;
   /** Stores the guide object for which TTS has been started (or undefined). */
-  textToSpeechCurrentGuide: unknown;
+  textToSpeechCurrentGuide: GuideEntry | null | undefined;
   /** Optional guide sequence key (e.g. 'K5') selecting which guide set to show. */
   guides: string | undefined;
   /** Word fish slots per lane index; null means the slot is unfilled. */
-  wordFish: Record<number, unknown> | null;
+  wordFish: Record<number, PondFish | null> | null;
   fishCount: number;
   /** Whether fish are swimming in reverse (rewind mode). */
   rewind: boolean;

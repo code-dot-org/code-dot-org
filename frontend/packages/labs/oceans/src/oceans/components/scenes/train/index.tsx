@@ -46,10 +46,11 @@ const UnwrappedTrain = class Train extends React.Component<
         <div style={styles.trainBot}>
           <img
             src={aiBotHead}
-            style={[
-              styles.trainBotHead,
-              this.state.headOpen && styles.trainBotOpen,
-            ]}
+            style={
+              this.state.headOpen
+                ? {...styles.trainBotHead, ...styles.trainBotOpen}
+                : styles.trainBotHead
+            }
             alt=""
           />
           <img src={aiBotBody} style={styles.trainBotBody} alt="" />

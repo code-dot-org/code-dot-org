@@ -18,10 +18,11 @@
       "types": "./dist/index.d.ts",
       "import": "./dist/index.mjs",
       "require": "./dist/index.cjs"
-    }
+    },
+    "./styles.css": "./dist/oceans-lab.css"
   },
   "scripts": {
-    "build": "vite build && tsc --noEmit",
+    "build": "vite build",
     "dev": "vite",
     "lint": "eslint .",
     "lint:fix": "eslint --fix .",
@@ -31,7 +32,7 @@
     "test": "vitest --run",
     "test:ui": "playwright test",
     "test:ui:ci": "CI=true playwright test",
-    "typecheck": "tsc --noEmit"
+    "typecheck": "tsc -b --noEmit"
   },
   "prettier": "@code-dot-org/lint-config/prettier/index.mjs",
   "stylelint": {

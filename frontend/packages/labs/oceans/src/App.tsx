@@ -33,7 +33,10 @@ export default function OceansLab({
 }: OceansLabProps) {
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const backgroundCanvasRef = useRef<HTMLCanvasElement>(null);
-  const soundsRef = useRef<InstanceType<typeof Sounds> | null>(null);
+  // Sounds is exported from a `@ts-nocheck` module (PR 1 verbatim) so it
+  // surfaces as `any`; pin the ref through the constructable form.
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  const soundsRef = useRef<any>(null);
 
   // Stable ref so onContinue identity changes never retrigger initAll.
   const onContinueRef = useRef(onContinue);
@@ -46,7 +49,8 @@ export default function OceansLab({
 
   useEffect(() => {
     if (!soundsRef.current) {
-      soundsRef.current = new Sounds();
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
+      soundsRef.current = new (Sounds as any)();
     }
     const sounds = soundsRef.current;
 

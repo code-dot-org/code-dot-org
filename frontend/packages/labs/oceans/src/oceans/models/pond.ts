@@ -2,16 +2,17 @@ import _ from 'lodash';
 
 import constants, {ClassType, AppMode} from '../constants';
 import {setState, getState} from '../state';
-import type {State} from '../state';
+import type {PondFish, State} from '../state';
 
-/** Shape of a fish object as seen from the pond model. */
-interface PondFish {
-  id: unknown;
-  getResult: () => {predictedClassId: number} | null;
-  setResult: (res: unknown) => void;
-  setXY: (pos: {x: number; y: number}) => void;
-  fieldInfos?: unknown[];
-}
+/**
+ * Shape of a fish object as the pond model needs to call it.
+ *
+ * `PondFish` (= `OceanObject`) types `getResult()` as returning `unknown`;
+ * the model layer downcasts at the call site to the prediction-result
+ * shape that has actually been attached at this point.
+ */
+type PondPredictionResult = {predictedClassId: number};
+type ModelPondFish = PondFish;
 
 /**
  * Initialize the pond model: run all pending predictions, split fish into
@@ -24,7 +25,7 @@ export const init = async (): Promise<void> => {
   const fishWithPredictions = await predictAllFish(state);
   const fishByClassType = _.groupBy(
     fishWithPredictions,
-    fish => fish.getResult()!.predictedClassId,
+    fish => (fish.getResult() as PondPredictionResult).predictedClassId,
   );
 
   let pondFish = fishByClassType[ClassType.Like] || [];
@@ -42,7 +43,8 @@ export const init = async (): Promise<void> => {
     state.appMode === AppMode.FishLong
   ) {
     if (pondFish.length > 0 && recallFish.length > 0) {
-      const firstFishFieldInfos = (state.fishData[0] as PondFish).fieldInfos;
+      const firstFishFieldInfos = (state.fishData[0] as ModelPondFish)
+        .fieldInfos;
       const trainer = state.trainer as unknown as {
         summarize: (fieldInfos: unknown) => unknown;
         explainFish: (fish: unknown) => Array<{impact: number}>;
@@ -66,13 +68,13 @@ export const init = async (): Promise<void> => {
  */
 const predictAllFish = (
   state: ReturnType<typeof getState>,
-): Promise<PondFish[]> => {
+): Promise<ModelPondFish[]> => {
   return new Promise(resolve => {
     const trainer = state.trainer as unknown as {
       predict: (fish: unknown) => Promise<unknown>;
     };
-    const fishWithConfidence: PondFish[] = [];
-    (state.fishData as PondFish[]).map((fish, index) => {
+    const fishWithConfidence: ModelPondFish[] = [];
+    (state.fishData as ModelPondFish[]).map((fish, index) => {
       trainer.predict(fish).then(res => {
         fish.setResult(res);
         fishWithConfidence.push(fish);
@@ -90,7 +92,7 @@ const predictAllFish = (
  *
  * @param fishes - Array of fish objects with setXY methods.
  */
-export const arrangeFish = (fishes: PondFish[]): void => {
+export const arrangeFish = (fishes: ModelPondFish[]): void => {
   const fishPositions = formatArrangement();
 
   fishes.forEach(fish => {
@@ -110,7 +112,7 @@ export const arrangeFish = (fishes: PondFish[]): void => {
  * @param fishCollection - Array of pond fish to evaluate.
  * @returns Maximum impact value found, or 0.
  */
-const getMaxExplainValue = (fishCollection: PondFish[]): number => {
+const getMaxExplainValue = (fishCollection: ModelPondFish[]): number => {
   const state = getState();
   const trainer = state.trainer as unknown as {
     explainFish: (fish: unknown) => Array<{impact: number}>;

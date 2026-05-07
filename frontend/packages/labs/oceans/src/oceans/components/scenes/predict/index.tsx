@@ -16,6 +16,7 @@ import I18n from '@/oceans/i18n';
 import modeHelpers from '@/oceans/modeHelpers';
 import {getState, setState} from '@/oceans/state';
 import styles from '@/oceans/styles';
+import {mergeStyles} from '@/oceans/styles/mergeStyles';
 
 const defaultTimeScale = 1;
 const timeScales = [1, 2];
@@ -113,11 +114,11 @@ const UnwrappedPredict = class Predict extends React.Component<
           <div style={styles.mediaControls} id="uitest-media-ctrl">
             <span
               onClick={() => this.onScaleTime(true)}
-              style={[
+              style={mergeStyles(
                 styles.mediaControl,
                 selectedControl === MediaControl.Rewind &&
                   styles.selectedControl,
-              ]}
+              )}
               key={MediaControl.Rewind}
             >
               <span style={styles.timeScale}>
@@ -136,11 +137,11 @@ const UnwrappedPredict = class Predict extends React.Component<
             </span>
             <span
               onClick={() => this.onScaleTime(false)}
-              style={[
+              style={mergeStyles(
                 styles.mediaControl,
                 selectedControl === MediaControl.FastForward &&
                   styles.selectedControl,
-              ]}
+              )}
               key={MediaControl.FastForward}
             >
               <FontAwesomeIcon icon={faForward} />

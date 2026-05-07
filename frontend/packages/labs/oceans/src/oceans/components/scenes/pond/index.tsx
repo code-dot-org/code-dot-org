@@ -17,6 +17,12 @@ import {arrangeFish} from '@/oceans/models/pond';
 import soundLibrary from '@/oceans/models/soundLibrary';
 import {getState, setState} from '@/oceans/state';
 import styles from '@/oceans/styles';
+import SVMTrainer from '@/utils/SVMTrainer';
+
+/** True when the current mode trains an SVM on word-attribute fish. */
+function isFishVariantMode(appMode: string | null): boolean {
+  return appMode === AppMode.FishShort || appMode === AppMode.FishLong;
+}
 
 function Collide(
   x1: number,
@@ -74,8 +80,8 @@ const UnwrappedPond = class Pond extends React.Component {
     }
 
     // Don't call arrangeFish if fish have already been arranged.
-    if (nextFishSet.length > 0 && !nextFishSet[0].getXY()) {
-      arrangeFish(nextFishSet);
+    if (nextFishSet.length > 0 && !nextFishSet[0].getXY?.()) {
+      arrangeFish(nextFishSet as unknown as Parameters<typeof arrangeFish>[0]);
     }
 
     if (currentFishSet.length === 0) {
@@ -154,9 +160,18 @@ const UnwrappedPond = class Pond extends React.Component {
             const clickedFish = fishCollection.find(
               f => f.id === fishBound.fishId,
             );
-            setState({
-              pondExplainFishSummary: state.trainer.explainFish(clickedFish),
-            });
+            if (
+              clickedFish &&
+              clickedFish.knnData &&
+              state.trainer instanceof SVMTrainer
+            ) {
+              setState({
+                pondExplainFishSummary: state.trainer.explainFish({
+                  knnData: clickedFish.knnData,
+                  fieldInfos: clickedFish.fieldInfos,
+                }),
+              });
+            }
             if (normalizedClickX < constants.canvasWidth / 2) {
               setState({pondPanelSide: 'right'});
             } else {
@@ -176,7 +191,7 @@ const UnwrappedPond = class Pond extends React.Component {
   onPondPanelButtonClick = (e: React.MouseEvent | null) => {
     const state = getState();
 
-    if ([AppMode.FishShort, AppMode.FishLong].includes(state.appMode)) {
+    if (isFishVariantMode(state.appMode)) {
       setState({
         pondPanelShowing: !state.pondPanelShowing,
       });
@@ -197,7 +212,7 @@ const UnwrappedPond = class Pond extends React.Component {
     const state = getState();
 
     const showInfoButton =
-      [AppMode.FishShort, AppMode.FishLong].includes(state.appMode) &&
+      isFishVariantMode(state.appMode) &&
       state.pondFish.length > 0 &&
       state.recallFish.length > 0;
     const recallIconsStyle = showInfoButton
