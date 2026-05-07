@@ -1,51 +1,43 @@
-const {initFishData} = require('@ml/utils/fishData');
-import {setState, getState, resetState} from '@ml/oceans/state';
-import {TrashOceanObject} from '@ml/oceans/OceanObject';
-import {ClassType, Modes} from '@ml/oceans/constants';
-import {init} from '@ml/oceans/models/pond';
-import KNNTrainer from '@ml/utils/KNNTrainer';
-import {generateOcean} from '@ml/utils/generateOcean';
+import {describe, it, expect} from 'vitest';
 
-describe('Model quality test', () => {
-  beforeAll(() => {
-    initFishData();
-  });
+import {arrangeFish} from '../../../../src/oceans/models/pond';
 
-  beforeEach(() => {
-    resetState();
-    setState({
-      trainer: new KNNTrainer(),
-      mode: Modes.Pond,
-      fishData: generateOcean(100, 0, true, true)
+/** Creates a minimal mock fish object for arrangeFish tests. */
+function mockFish() {
+  let position = null;
+  return {
+    setXY(pos) {
+      position = pos;
+    },
+    getXY() {
+      return position;
+    },
+  };
+}
+
+describe('arrangeFish', () => {
+  it('assigns distinct x/y positions to each fish', () => {
+    const fishes = Array.from({length: 5}, () => mockFish());
+    arrangeFish(fishes);
+    const positions = fishes.map(f => f.getXY());
+    // Every fish should have been given a position object.
+    positions.forEach(pos => {
+      expect(pos).not.toBeNull();
+      expect(typeof pos.x).toBe('number');
+      expect(typeof pos.y).toBe('number');
     });
+    // All positions should be distinct.
+    const posStrings = positions.map(p => `${p.x},${p.y}`);
+    expect(new Set(posStrings).size).toBe(5);
   });
 
-  test('init state without training', async () => {
-    await init();
-    const state = getState();
-    expect(state).toBeTruthy();
-    expect(state.pondFish).toBeTruthy();
-    expect(state.pondFish.length).toBe(0);
-    expect(state.recallFish).toBeTruthy();
-    expect(state.recallFish.length).toBe(0);
+  it('handles empty fish array without throwing', () => {
+    expect(() => arrangeFish([])).not.toThrow();
   });
 
-  test('init state with predictions', async () => {
-    const trainer = new KNNTrainer();
-    trainer.predict = jest.fn(async example => {
-      if (example instanceof TrashOceanObject) {
-        return {predictedClassId: 1, confidenceByClassId: {0: 0, 1: 1}};
-      } else {
-        return {predictedClassId: 0, confidenceByClassId: {0: 1, 1: 0}};
-      }
-    });
-    setState({trainer});
-    await init();
-    const state = getState();
-    expect(state).toBeTruthy();
-    expect(state.pondFish).toBeTruthy();
-    expect(state.pondFish.length).toBeGreaterThan(0);
-    expect(state.recallFish).toBeTruthy();
-    expect(state.recallFish.length).toBeGreaterThan(0);
+  it('can arrange the maximum pond size', () => {
+    const fishes = Array.from({length: 20}, () => mockFish());
+    arrangeFish(fishes);
+    fishes.forEach(f => expect(f.getXY()).not.toBeNull());
   });
 });

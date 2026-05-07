@@ -4,7 +4,7 @@ import '@code-dot-org/component-library-styles/fontVariables.css';
 import '@code-dot-org/component-library-styles/primitiveColors.css';
 import '@code-dot-org/component-library-styles/colors.css';
 
-import {ThemeProvider} from '@mui/material';
+import {Box, ThemeProvider} from '@mui/material';
 import {createRootRoute, Outlet} from '@tanstack/react-router';
 import {TanStackRouterDevtools} from '@tanstack/react-router-devtools';
 
@@ -25,19 +25,26 @@ const SIGNED_OUT_MENU_ITEMS = [
   {label: 'About', href: '/about'},
 ];
 
+/** Root layout: flex column so the main content area fills the remaining viewport height. */
 function RootLayout() {
   return (
     <ThemeProvider theme={CdoTheme}>
-      <Bootstrap locale="en-US" />
-      <Header
-        logoImageUrl={CdoLogo}
-        brandName="Code.org"
-        menuItems={SIGNED_OUT_MENU_ITEMS}
-      />
-
-      <Outlet />
-      <StudioFooter />
-      <TanStackRouterDevtools />
+      <Box sx={{display: 'flex', flexDirection: 'column', minHeight: '100vh'}}>
+        <Bootstrap locale="en-US" />
+        <Header
+          logoImageUrl={CdoLogo}
+          brandName="Code.org"
+          menuItems={SIGNED_OUT_MENU_ITEMS}
+        />
+        <Box
+          component="main"
+          sx={{flex: 1, display: 'flex', flexDirection: 'column'}}
+        >
+          <Outlet />
+        </Box>
+        <StudioFooter />
+        <TanStackRouterDevtools />
+      </Box>
     </ThemeProvider>
   );
 }

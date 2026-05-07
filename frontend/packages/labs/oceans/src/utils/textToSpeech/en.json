@@ -9,14 +9,10 @@
       "language": "en-US",
       "multiLingual": true,
       "gender": "female",
-      "quality": [
-        "veryHigh"
-      ],
+      "quality": ["veryHigh"],
       "rate": 1,
       "pitchControl": false,
-      "browser": [
-        "Edge"
-      ],
+      "browser": ["Edge"],
       "preloaded": true
     },
     {
@@ -25,14 +21,10 @@
       "note": "This voice is pre-loaded in Edge on desktop. It can also be installed on Windows 11 but isn't currently accessible through the Web Speech API.",
       "language": "en-US",
       "gender": "female",
-      "quality": [
-        "veryHigh"
-      ],
+      "quality": ["veryHigh"],
       "rate": 1,
       "pitchControl": false,
-      "browser": [
-        "Edge"
-      ],
+      "browser": ["Edge"],
       "preloaded": true
     },
     {
@@ -41,14 +33,10 @@
       "note": "This voice is pre-loaded in Edge on desktop. It can also be installed on Windows 11 but isn't currently accessible through the Web Speech API.",
       "language": "en-US",
       "gender": "female",
-      "quality": [
-        "veryHigh"
-      ],
+      "quality": ["veryHigh"],
       "rate": 1,
       "pitchControl": false,
-      "browser": [
-        "Edge"
-      ],
+      "browser": ["Edge"],
       "preloaded": true
     },
     {
@@ -57,14 +45,10 @@
       "note": "This voice is pre-loaded in Edge on desktop. Unlike some of the other voices ranked at the top of that list, it's not available to be installed on Windows yet.",
       "language": "en-US",
       "gender": "female",
-      "quality": [
-        "veryHigh"
-      ],
+      "quality": ["veryHigh"],
       "rate": 1,
       "pitchControl": false,
-      "browser": [
-        "Edge"
-      ],
+      "browser": ["Edge"],
       "preloaded": true
     },
     {
@@ -74,14 +58,10 @@
       "language": "en-US",
       "gender": "female",
       "children": true,
-      "quality": [
-        "veryHigh"
-      ],
+      "quality": ["veryHigh"],
       "rate": 1,
       "pitchControl": false,
-      "browser": [
-        "Edge"
-      ],
+      "browser": ["Edge"],
       "preloaded": true
     },
     {
@@ -91,14 +71,10 @@
       "language": "en-US",
       "multiLingual": true,
       "gender": "male",
-      "quality": [
-        "veryHigh"
-      ],
+      "quality": ["veryHigh"],
       "rate": 1,
       "pitchControl": false,
-      "browser": [
-        "Edge"
-      ],
+      "browser": ["Edge"],
       "preloaded": true
     },
     {
@@ -108,14 +84,10 @@
       "language": "en-US",
       "multiLingual": true,
       "gender": "male",
-      "quality": [
-        "veryHigh"
-      ],
+      "quality": ["veryHigh"],
       "rate": 1,
       "pitchControl": false,
-      "browser": [
-        "Edge"
-      ],
+      "browser": ["Edge"],
       "preloaded": true
     },
     {
@@ -124,14 +96,10 @@
       "note": "This voice is pre-loaded in Edge on desktop. It can also be installed on Windows 11 but isn't currently accessible through the Web Speech API.",
       "language": "en-US",
       "gender": "male",
-      "quality": [
-        "veryHigh"
-      ],
+      "quality": ["veryHigh"],
       "rate": 1,
       "pitchControl": false,
-      "browser": [
-        "Edge"
-      ],
+      "browser": ["Edge"],
       "preloaded": true
     },
     {
@@ -140,14 +108,10 @@
       "note": "This voice is pre-loaded in Edge on desktop. Unlike some of the other voices ranked at the top of that list, it's not available to be installed on Windows yet.",
       "language": "en-US",
       "gender": "male",
-      "quality": [
-        "veryHigh"
-      ],
+      "quality": ["veryHigh"],
       "rate": 1,
       "pitchControl": false,
-      "browser": [
-        "Edge"
-      ],
+      "browser": ["Edge"],
       "preloaded": true
     },
     {
@@ -156,14 +120,10 @@
       "note": "This voice is pre-loaded in Edge on desktop. Unlike some of the other voices ranked at the top of that list, it's not available to be installed on Windows yet.",
       "language": "en-US",
       "gender": "male",
-      "quality": [
-        "veryHigh"
-      ],
+      "quality": ["veryHigh"],
       "rate": 1,
       "pitchControl": false,
-      "browser": [
-        "Edge"
-      ],
+      "browser": ["Edge"],
       "preloaded": true
     },
     {
@@ -172,14 +132,10 @@
       "note": "This voice is pre-loaded in Edge on desktop. Unlike some of the other voices ranked at the top of that list, it's not available to be installed on Windows yet.",
       "language": "en-US",
       "gender": "male",
-      "quality": [
-        "veryHigh"
-      ],
+      "quality": ["veryHigh"],
       "rate": 1,
       "pitchControl": false,
-      "browser": [
-        "Edge"
-      ],
+      "browser": ["Edge"],
       "preloaded": true
     },
     {
@@ -188,14 +144,10 @@
       "note": "This voice is pre-loaded in Edge on desktop. Unlike some of the other voices ranked at the top of that list, it's not available to be installed on Windows yet.",
       "language": "en-US",
       "gender": "male",
-      "quality": [
-        "veryHigh"
-      ],
+      "quality": ["veryHigh"],
       "rate": 1,
       "pitchControl": false,
-      "browser": [
-        "Edge"
-      ],
+      "browser": ["Edge"],
       "preloaded": true
     },
     {
@@ -204,14 +156,10 @@
       "note": "This voice is pre-loaded in Edge on desktop. It can also be installed on Windows 11 but isn't currently accessible through the Web Speech API.",
       "language": "en-GB",
       "gender": "female",
-      "quality": [
-        "veryHigh"
-      ],
+      "quality": ["veryHigh"],
       "rate": 1,
       "pitchControl": false,
-      "browser": [
-        "Edge"
-      ],
+      "browser": ["Edge"],
       "preloaded": true
     },
     {
@@ -220,14 +168,10 @@
       "note": "This voice is pre-loaded in Edge on desktop. Unlike some of the other voices ranked at the top of that list, it's not available to be installed on Windows yet.",
       "language": "en-GB",
       "gender": "female",
-      "quality": [
-        "veryHigh"
-      ],
+      "quality": ["veryHigh"],
       "rate": 1,
       "pitchControl": false,
-      "browser": [
-        "Edge"
-      ],
+      "browser": ["Edge"],
       "preloaded": true
     },
     {
@@ -237,14 +181,10 @@
       "language": "en-GB",
       "gender": "female",
       "children": true,
-      "quality": [
-        "veryHigh"
-      ],
+      "quality": ["veryHigh"],
       "rate": 1,
       "pitchControl": false,
-      "browser": [
-        "Edge"
-      ],
+      "browser": ["Edge"],
       "preloaded": true
     },
     {
@@ -253,14 +193,10 @@
       "note": "This voice is pre-loaded in Edge on desktop. It can also be installed on Windows 11 but isn't currently accessible through the Web Speech API.",
       "language": "en-GB",
       "gender": "male",
-      "quality": [
-        "veryHigh"
-      ],
+      "quality": ["veryHigh"],
       "rate": 1,
       "pitchControl": false,
-      "browser": [
-        "Edge"
-      ],
+      "browser": ["Edge"],
       "preloaded": true
     },
     {
@@ -269,14 +205,10 @@
       "note": "This voice is pre-loaded in Edge on desktop. Unlike some of the other voices ranked at the top of that list, it's not available to be installed on Windows yet.",
       "language": "en-GB",
       "gender": "male",
-      "quality": [
-        "veryHigh"
-      ],
+      "quality": ["veryHigh"],
       "rate": 1,
       "pitchControl": false,
-      "browser": [
-        "Edge"
-      ],
+      "browser": ["Edge"],
       "preloaded": true
     },
     {
@@ -285,14 +217,10 @@
       "note": "This voice is pre-loaded in Edge on desktop. Unlike some of the other voices ranked at the top of that list, it's not available to be installed on Windows yet.",
       "language": "en-AU",
       "gender": "female",
-      "quality": [
-        "veryHigh"
-      ],
+      "quality": ["veryHigh"],
       "rate": 1,
       "pitchControl": false,
-      "browser": [
-        "Edge"
-      ],
+      "browser": ["Edge"],
       "preloaded": true
     },
     {
@@ -301,14 +229,10 @@
       "note": "This voice is pre-loaded in Edge on desktop. Unlike some of the other voices ranked at the top of that list, it's not available to be installed on Windows yet.",
       "language": "en-AU",
       "gender": "male",
-      "quality": [
-        "veryHigh"
-      ],
+      "quality": ["veryHigh"],
       "rate": 1,
       "pitchControl": false,
-      "browser": [
-        "Edge"
-      ],
+      "browser": ["Edge"],
       "preloaded": true
     },
     {
@@ -317,14 +241,10 @@
       "note": "This voice is pre-loaded in Edge on desktop. Unlike some of the other voices ranked at the top of that list, it's not available to be installed on Windows yet.",
       "language": "en-CA",
       "gender": "female",
-      "quality": [
-        "veryHigh"
-      ],
+      "quality": ["veryHigh"],
       "rate": 1,
       "pitchControl": false,
-      "browser": [
-        "Edge"
-      ],
+      "browser": ["Edge"],
       "preloaded": true
     },
     {
@@ -333,14 +253,10 @@
       "note": "This voice is pre-loaded in Edge on desktop. Unlike some of the other voices ranked at the top of that list, it's not available to be installed on Windows yet.",
       "language": "en-CA",
       "gender": "male",
-      "quality": [
-        "veryHigh"
-      ],
+      "quality": ["veryHigh"],
       "rate": 1,
       "pitchControl": false,
-      "browser": [
-        "Edge"
-      ],
+      "browser": ["Edge"],
       "preloaded": true
     },
     {
@@ -378,18 +294,10 @@
       ],
       "language": "en-US",
       "gender": "female",
-      "quality": [
-        "low",
-        "normal",
-        "high"
-      ],
+      "quality": ["low", "normal", "high"],
       "rate": 1,
       "pitch": 1,
-      "os": [
-        "macOS",
-        "iOS",
-        "iPadOS"
-      ]
+      "os": ["macOS", "iOS", "iPadOS"]
     },
     {
       "label": "Zoe (US)",
@@ -426,18 +334,10 @@
       ],
       "language": "en-US",
       "gender": "female",
-      "quality": [
-        "low",
-        "normal",
-        "high"
-      ],
+      "quality": ["low", "normal", "high"],
       "rate": 1,
       "pitch": 1,
-      "os": [
-        "macOS",
-        "iOS",
-        "iPadOS"
-      ]
+      "os": ["macOS", "iOS", "iPadOS"]
     },
     {
       "label": "Allison (US)",
@@ -469,17 +369,10 @@
       ],
       "language": "en-US",
       "gender": "female",
-      "quality": [
-        "low",
-        "normal"
-      ],
+      "quality": ["low", "normal"],
       "rate": 1,
       "pitch": 1,
-      "os": [
-        "macOS",
-        "iOS",
-        "iPadOS"
-      ]
+      "os": ["macOS", "iOS", "iPadOS"]
     },
     {
       "label": "Samantha (US)",
@@ -511,16 +404,10 @@
       "overrides": "Samantha",
       "language": "en-US",
       "gender": "female",
-      "quality": [
-        "normal"
-      ],
+      "quality": ["normal"],
       "rate": 1,
       "pitch": 1,
-      "os": [
-        "macOS",
-        "iOS",
-        "iPadOS"
-      ]
+      "os": ["macOS", "iOS", "iPadOS"]
     },
     {
       "label": "Joelle (US)",
@@ -553,16 +440,10 @@
       "language": "en-US",
       "gender": "female",
       "children": true,
-      "quality": [
-        "normal"
-      ],
+      "quality": ["normal"],
       "rate": 1,
       "pitch": 1,
-      "os": [
-        "macOS",
-        "iOS",
-        "iPadOS"
-      ]
+      "os": ["macOS", "iOS", "iPadOS"]
     },
     {
       "label": "Evan (US)",
@@ -594,17 +475,10 @@
       ],
       "language": "en-US",
       "gender": "male",
-      "quality": [
-        "low",
-        "normal"
-      ],
+      "quality": ["low", "normal"],
       "rate": 1,
       "pitch": 1,
-      "os": [
-        "macOS",
-        "iOS",
-        "iPadOS"
-      ]
+      "os": ["macOS", "iOS", "iPadOS"]
     },
     {
       "label": "Nathan (US)",
@@ -636,17 +510,10 @@
       ],
       "language": "en-US",
       "gender": "male",
-      "quality": [
-        "low",
-        "normal"
-      ],
+      "quality": ["low", "normal"],
       "rate": 1,
       "pitch": 1,
-      "os": [
-        "macOS",
-        "iOS",
-        "iPadOS"
-      ]
+      "os": ["macOS", "iOS", "iPadOS"]
     },
     {
       "label": "Tom (US)",
@@ -678,17 +545,10 @@
       ],
       "language": "en-US",
       "gender": "male",
-      "quality": [
-        "low",
-        "normal"
-      ],
+      "quality": ["low", "normal"],
       "rate": 1,
       "pitch": 1,
-      "os": [
-        "macOS",
-        "iOS",
-        "iPadOS"
-      ]
+      "os": ["macOS", "iOS", "iPadOS"]
     },
     {
       "label": "Alex (US)",
@@ -709,16 +569,10 @@
       ],
       "language": "en-US",
       "gender": "male",
-      "quality": [
-        "high"
-      ],
+      "quality": ["high"],
       "rate": 1,
       "pitch": 1,
-      "os": [
-        "macOS",
-        "iOS",
-        "iPadOS"
-      ]
+      "os": ["macOS", "iOS", "iPadOS"]
     },
     {
       "label": "Kate (UK)",
@@ -751,17 +605,10 @@
       ],
       "language": "en-GB",
       "gender": "female",
-      "quality": [
-        "low",
-        "normal"
-      ],
+      "quality": ["low", "normal"],
       "rate": 1,
       "pitch": 1,
-      "os": [
-        "macOS",
-        "iOS",
-        "iPadOS"
-      ]
+      "os": ["macOS", "iOS", "iPadOS"]
     },
     {
       "label": "Stephanie (UK)",
@@ -794,17 +641,10 @@
       ],
       "language": "en-GB",
       "gender": "female",
-      "quality": [
-        "low",
-        "normal"
-      ],
+      "quality": ["low", "normal"],
       "rate": 1,
       "pitch": 1,
-      "os": [
-        "macOS",
-        "iOS",
-        "iPadOS"
-      ]
+      "os": ["macOS", "iOS", "iPadOS"]
     },
     {
       "label": "Serena (UK)",
@@ -842,18 +682,10 @@
       ],
       "language": "en-GB",
       "gender": "female",
-      "quality": [
-        "low",
-        "normal",
-        "high"
-      ],
+      "quality": ["low", "normal", "high"],
       "rate": 1,
       "pitch": 1,
-      "os": [
-        "macOS",
-        "iOS",
-        "iPadOS"
-      ]
+      "os": ["macOS", "iOS", "iPadOS"]
     },
     {
       "label": "Jamie (UK)",
@@ -891,18 +723,10 @@
       ],
       "language": "en-GB",
       "gender": "male",
-      "quality": [
-        "low",
-        "normal",
-        "high"
-      ],
+      "quality": ["low", "normal", "high"],
       "rate": 1,
       "pitch": 1,
-      "os": [
-        "macOS",
-        "iOS",
-        "iPadOS"
-      ]
+      "os": ["macOS", "iOS", "iPadOS"]
     },
     {
       "label": "Oliver (UK)",
@@ -935,17 +759,10 @@
       ],
       "language": "en-GB",
       "gender": "male",
-      "quality": [
-        "low",
-        "normal"
-      ],
+      "quality": ["low", "normal"],
       "rate": 1,
       "pitch": 1,
-      "os": [
-        "macOS",
-        "iOS",
-        "iPadOS"
-      ]
+      "os": ["macOS", "iOS", "iPadOS"]
     },
     {
       "label": "Daniel (UK)",
@@ -978,16 +795,10 @@
       "overrides": "Daniel",
       "language": "en-GB",
       "gender": "male",
-      "quality": [
-        "normal"
-      ],
+      "quality": ["normal"],
       "rate": 1,
       "pitch": 1,
-      "os": [
-        "macOS",
-        "iOS",
-        "iPadOS"
-      ],
+      "os": ["macOS", "iOS", "iPadOS"],
       "preloaded": true
     },
     {
@@ -1026,18 +837,10 @@
       ],
       "language": "en-AU",
       "gender": "female",
-      "quality": [
-        "low",
-        "normal",
-        "high"
-      ],
+      "quality": ["low", "normal", "high"],
       "rate": 1,
       "pitch": 1,
-      "os": [
-        "macOS",
-        "iOS",
-        "iPadOS"
-      ]
+      "os": ["macOS", "iOS", "iPadOS"]
     },
     {
       "label": "Karen (Australia)",
@@ -1075,17 +878,10 @@
       "overrides": "Karen",
       "language": "en-AU",
       "gender": "female",
-      "quality": [
-        "normal",
-        "high"
-      ],
+      "quality": ["normal", "high"],
       "rate": 1,
       "pitch": 1,
-      "os": [
-        "macOS",
-        "iOS",
-        "iPadOS"
-      ]
+      "os": ["macOS", "iOS", "iPadOS"]
     },
     {
       "label": "Lee (Australia)",
@@ -1123,18 +919,10 @@
       ],
       "language": "en-AU",
       "gender": "male",
-      "quality": [
-        "low",
-        "normal",
-        "high"
-      ],
+      "quality": ["low", "normal", "high"],
       "rate": 1,
       "pitch": 1,
-      "os": [
-        "macOS",
-        "iOS",
-        "iPadOS"
-      ]
+      "os": ["macOS", "iOS", "iPadOS"]
     },
     {
       "label": "Female Google voice (US)",
@@ -1142,14 +930,10 @@
       "note": "This voice is pre-loaded in Chrome on desktop. Utterances that are longer than 14 seconds long can trigger a bug with this voice, check the notes in the project's README for more information.",
       "language": "en-US",
       "gender": "female",
-      "quality": [
-        "high"
-      ],
+      "quality": ["high"],
       "rate": 1,
       "pitch": 1,
-      "browser": [
-        "ChromeDesktop"
-      ],
+      "browser": ["ChromeDesktop"],
       "preloaded": true
     },
     {
@@ -1158,14 +942,10 @@
       "note": "This voice is pre-loaded in Chrome on desktop. Utterances that are longer than 14 seconds long can trigger a bug with this voice, check the notes in the project's README for more information.",
       "language": "en-GB",
       "gender": "female",
-      "quality": [
-        "high"
-      ],
+      "quality": ["high"],
       "rate": 1,
       "pitch": 1,
-      "browser": [
-        "ChromeDesktop"
-      ],
+      "browser": ["ChromeDesktop"],
       "preloaded": true
     },
     {
@@ -1174,14 +954,10 @@
       "note": "This voice is pre-loaded in Chrome on desktop. Utterances that are longer than 14 seconds long can trigger a bug with this voice, check the notes in the project's README for more information.",
       "language": "en-GB",
       "gender": "male",
-      "quality": [
-        "high"
-      ],
+      "quality": ["high"],
       "rate": 1,
       "pitch": 1,
-      "browser": [
-        "ChromeDesktop"
-      ],
+      "browser": ["ChromeDesktop"],
       "preloaded": true
     },
     {
@@ -1190,14 +966,10 @@
       "note": "This voices is pre-loaded in Windows 10 and 11. While it's nowhere nearly as good as Microsoft's Natural Voices, it's good to have this voice listed as a fallback",
       "language": "en-US",
       "gender": "female",
-      "quality": [
-        "normal"
-      ],
+      "quality": ["normal"],
       "rate": 1,
       "pitch": 1,
-      "os": [
-        "Windows"
-      ],
+      "os": ["Windows"],
       "preloaded": true
     },
     {
@@ -1206,14 +978,10 @@
       "note": "This voices is pre-loaded in Windows 10 and 11. While it's nowhere nearly as good as Microsoft's Natural Voices, it's good to have this voice listed as a fallback",
       "language": "en-US",
       "gender": "male",
-      "quality": [
-        "normal"
-      ],
+      "quality": ["normal"],
       "rate": 1,
       "pitch": 1,
-      "os": [
-        "Windows"
-      ],
+      "os": ["Windows"],
       "preloaded": true
     },
     {
@@ -1222,14 +990,10 @@
       "note": "This voices is pre-loaded in Windows 10 and 11. While it's nowhere nearly as good as Microsoft's Natural Voices, it's good to have this voice listed as a fallback",
       "language": "en-US",
       "gender": "male",
-      "quality": [
-        "normal"
-      ],
+      "quality": ["normal"],
       "rate": 1,
       "pitch": 1,
-      "os": [
-        "Windows"
-      ],
+      "os": ["Windows"],
       "preloaded": true
     },
     {
@@ -1238,14 +1002,10 @@
       "note": "This voices is pre-loaded in Windows 10 and 11. While it's nowhere nearly as good as Microsoft's Natural Voices, it's good to have this voice listed as a fallback",
       "language": "en-GB",
       "gender": "female",
-      "quality": [
-        "normal"
-      ],
+      "quality": ["normal"],
       "rate": 1,
       "pitch": 1,
-      "os": [
-        "Windows"
-      ],
+      "os": ["Windows"],
       "preloaded": true
     },
     {
@@ -1254,14 +1014,10 @@
       "note": "This voices is pre-loaded in Windows 10 and 11. While it's nowhere nearly as good as Microsoft's Natural Voices, it's good to have this voice listed as a fallback",
       "language": "en-GB",
       "gender": "female",
-      "quality": [
-        "normal"
-      ],
+      "quality": ["normal"],
       "rate": 1,
       "pitch": 1,
-      "os": [
-        "Windows"
-      ],
+      "os": ["Windows"],
       "preloaded": true
     },
     {
@@ -1270,14 +1026,10 @@
       "note": "This voices is pre-loaded in Windows 10 and 11. While it's nowhere nearly as good as Microsoft's Natural Voices, it's good to have this voice listed as a fallback",
       "language": "en-GB",
       "gender": "male",
-      "quality": [
-        "normal"
-      ],
+      "quality": ["normal"],
       "rate": 1,
       "pitch": 1,
-      "os": [
-        "Windows"
-      ],
+      "os": ["Windows"],
       "preloaded": true
     },
     {
@@ -1286,14 +1038,10 @@
       "note": "This voices is pre-loaded in Windows 10 and 11. While it's nowhere nearly as good as Microsoft's Natural Voices, it's good to have this voice listed as a fallback",
       "language": "en-AU",
       "gender": "female",
-      "quality": [
-        "normal"
-      ],
+      "quality": ["normal"],
       "rate": 1,
       "pitch": 1,
-      "os": [
-        "Windows"
-      ],
+      "os": ["Windows"],
       "preloaded": true
     },
     {
@@ -1302,14 +1050,10 @@
       "note": "This voices is pre-loaded in Windows 10 and 11. While it's nowhere nearly as good as Microsoft's Natural Voices, it's good to have this voice listed as a fallback",
       "language": "en-AU",
       "gender": "male",
-      "quality": [
-        "normal"
-      ],
+      "quality": ["normal"],
       "rate": 1,
       "pitch": 1,
-      "os": [
-        "Windows"
-      ],
+      "os": ["Windows"],
       "preloaded": true
     },
     {
@@ -1318,14 +1062,10 @@
       "note": "This voices is pre-loaded in Windows 10 and 11. While it's nowhere nearly as good as Microsoft's Natural Voices, it's good to have this voice listed as a fallback",
       "language": "en-CA",
       "gender": "female",
-      "quality": [
-        "normal"
-      ],
+      "quality": ["normal"],
       "rate": 1,
       "pitch": 1,
-      "os": [
-        "Windows"
-      ],
+      "os": ["Windows"],
       "preloaded": true
     },
     {
@@ -1334,14 +1074,10 @@
       "note": "This voices is pre-loaded in Windows 10 and 11. While it's nowhere nearly as good as Microsoft's Natural Voices, it's good to have this voice listed as a fallback",
       "language": "en-CA",
       "gender": "male",
-      "quality": [
-        "normal"
-      ],
+      "quality": ["normal"],
       "rate": 1,
       "pitch": 1,
-      "os": [
-        "Windows"
-      ],
+      "os": ["Windows"],
       "preloaded": true
     },
     {
@@ -1350,16 +1086,10 @@
       "note": "This entry is meant to identify the pre-loaded variant of the Samantha voice, but it might not work on all browsers. In some cases, the previous entry might be the one detecting the pre-loaded variant unfortunately.",
       "language": "en-US",
       "gender": "female",
-      "quality": [
-        "low"
-      ],
+      "quality": ["low"],
       "rate": 0.9,
       "pitch": 1,
-      "os": [
-        "macOS",
-        "iOS",
-        "iPadOS"
-      ],
+      "os": ["macOS", "iOS", "iPadOS"],
       "preloaded": true
     },
     {
@@ -1380,17 +1110,10 @@
       ],
       "language": "en-US",
       "gender": "female",
-      "quality": [
-        "low",
-        "normal"
-      ],
+      "quality": ["low", "normal"],
       "rate": 1,
       "pitch": 1,
-      "os": [
-        "macOS",
-        "iOS",
-        "iPadOS"
-      ],
+      "os": ["macOS", "iOS", "iPadOS"],
       "preloaded": true
     },
     {
@@ -1399,16 +1122,10 @@
       "note": "This entry is meant to identify the pre-loaded variant of the Daniel voice, but it might not work on all browsers. In some cases, the previous entry might be the one detecting the pre-loaded variant unfortunately.",
       "language": "en-GB",
       "gender": "male",
-      "quality": [
-        "low"
-      ],
+      "quality": ["low"],
       "rate": 0.9,
       "pitch": 1,
-      "os": [
-        "macOS",
-        "iOS",
-        "iPadOS"
-      ],
+      "os": ["macOS", "iOS", "iPadOS"],
       "preloaded": true
     },
     {
@@ -1417,16 +1134,10 @@
       "note": "This entry is meant to identify the pre-loaded variant of this voice, but it might not work on all browsers. In some cases, the previous entry might be the one detecting the pre-loaded variant unfortunately.",
       "language": "en-AU",
       "gender": "male",
-      "quality": [
-        "low"
-      ],
+      "quality": ["low"],
       "rate": 1,
       "pitch": 1,
-      "os": [
-        "macOS",
-        "iOS",
-        "iPadOS"
-      ],
+      "os": ["macOS", "iOS", "iPadOS"],
       "preloaded": true
     },
     {
@@ -1439,14 +1150,10 @@
       ],
       "language": "en-US",
       "gender": "female",
-      "quality": [
-        "high"
-      ],
+      "quality": ["high"],
       "rate": 1,
       "pitch": 1,
-      "os": [
-        "ChromeOS"
-      ],
+      "os": ["ChromeOS"],
       "preloaded": true
     },
     {
@@ -1459,14 +1166,10 @@
       ],
       "language": "en-US",
       "gender": "female",
-      "quality": [
-        "high"
-      ],
+      "quality": ["high"],
       "rate": 1,
       "pitch": 1,
-      "os": [
-        "ChromeOS"
-      ],
+      "os": ["ChromeOS"],
       "preloaded": true
     },
     {
@@ -1480,14 +1183,10 @@
       ],
       "language": "en-US",
       "gender": "female",
-      "quality": [
-        "high"
-      ],
+      "quality": ["high"],
       "rate": 1,
       "pitch": 1,
-      "os": [
-        "ChromeOS"
-      ],
+      "os": ["ChromeOS"],
       "preloaded": true
     },
     {
@@ -1500,14 +1199,10 @@
       ],
       "language": "en-US",
       "gender": "female",
-      "quality": [
-        "high"
-      ],
+      "quality": ["high"],
       "rate": 1,
       "pitch": 1,
-      "os": [
-        "ChromeOS"
-      ],
+      "os": ["ChromeOS"],
       "preloaded": true
     },
     {
@@ -1519,14 +1214,10 @@
       ],
       "language": "en-US",
       "gender": "female",
-      "quality": [
-        "normal"
-      ],
+      "quality": ["normal"],
       "rate": 1,
       "pitch": 1,
-      "os": [
-        "ChromeOS"
-      ],
+      "os": ["ChromeOS"],
       "preloaded": true
     },
     {
@@ -1535,14 +1226,10 @@
       "note": "This pre-loaded voice on ChromeOS is available locally but isn't as high quality as some of the network-only voices available through the Android compatibility layer.",
       "language": "en-US",
       "gender": "female",
-      "quality": [
-        "low"
-      ],
+      "quality": ["low"],
       "rate": 1,
       "pitch": 1,
-      "os": [
-        "ChromeOS"
-      ],
+      "os": ["ChromeOS"],
       "preloaded": true
     },
     {
@@ -1551,14 +1238,10 @@
       "note": "This pre-loaded voice on ChromeOS is available locally but isn't as high quality as some of the network-only voices available through the Android compatibility layer.",
       "language": "en-US",
       "gender": "female",
-      "quality": [
-        "low"
-      ],
+      "quality": ["low"],
       "rate": 1,
       "pitch": 1,
-      "os": [
-        "ChromeOS"
-      ],
+      "os": ["ChromeOS"],
       "preloaded": true
     },
     {
@@ -1567,14 +1250,10 @@
       "note": "This pre-loaded voice on ChromeOS is available locally but isn't as high quality as some of the network-only voices available through the Android compatibility layer.",
       "language": "en-US",
       "gender": "female",
-      "quality": [
-        "low"
-      ],
+      "quality": ["low"],
       "rate": 1,
       "pitch": 1,
-      "os": [
-        "ChromeOS"
-      ],
+      "os": ["ChromeOS"],
       "preloaded": true
     },
     {
@@ -1583,14 +1262,10 @@
       "note": "This pre-loaded voice on ChromeOS is available locally but isn't as high quality as some of the network-only voices available through the Android compatibility layer.",
       "language": "en-US",
       "gender": "female",
-      "quality": [
-        "low"
-      ],
+      "quality": ["low"],
       "rate": 1,
       "pitch": 1,
-      "os": [
-        "ChromeOS"
-      ],
+      "os": ["ChromeOS"],
       "preloaded": true
     },
     {
@@ -1599,14 +1274,10 @@
       "note": "This pre-loaded voice on ChromeOS is available locally but isn't as high quality as some of the network-only voices available through the Android compatibility layer.",
       "language": "en-US",
       "gender": "female",
-      "quality": [
-        "low"
-      ],
+      "quality": ["low"],
       "rate": 1,
       "pitch": 1,
-      "os": [
-        "ChromeOS"
-      ],
+      "os": ["ChromeOS"],
       "preloaded": true
     },
     {
@@ -1619,14 +1290,10 @@
       ],
       "language": "en-US",
       "gender": "male",
-      "quality": [
-        "high"
-      ],
+      "quality": ["high"],
       "rate": 1,
       "pitch": 1,
-      "os": [
-        "ChromeOS"
-      ],
+      "os": ["ChromeOS"],
       "preloaded": true
     },
     {
@@ -1639,14 +1306,10 @@
       ],
       "language": "en-US",
       "gender": "male",
-      "quality": [
-        "high"
-      ],
+      "quality": ["high"],
       "rate": 1,
       "pitch": 1,
-      "os": [
-        "ChromeOS"
-      ],
+      "os": ["ChromeOS"],
       "preloaded": true
     },
     {
@@ -1659,14 +1322,10 @@
       ],
       "language": "en-US",
       "gender": "male",
-      "quality": [
-        "high"
-      ],
+      "quality": ["high"],
       "rate": 1,
       "pitch": 1,
-      "os": [
-        "ChromeOS"
-      ],
+      "os": ["ChromeOS"],
       "preloaded": true
     },
     {
@@ -1675,14 +1334,10 @@
       "note": "This pre-loaded voice on ChromeOS is available locally but isn't as high quality as some of the network-only voices available through the Android compatibility layer.",
       "language": "en-US",
       "gender": "male",
-      "quality": [
-        "low"
-      ],
+      "quality": ["low"],
       "rate": 1,
       "pitch": 1,
-      "os": [
-        "ChromeOS"
-      ],
+      "os": ["ChromeOS"],
       "preloaded": true
     },
     {
@@ -1691,14 +1346,10 @@
       "note": "This pre-loaded voice on ChromeOS is available locally but isn't as high quality as some of the network-only voices available through the Android compatibility layer.",
       "language": "en-US",
       "gender": "male",
-      "quality": [
-        "low"
-      ],
+      "quality": ["low"],
       "rate": 1,
       "pitch": 1,
-      "os": [
-        "ChromeOS"
-      ],
+      "os": ["ChromeOS"],
       "preloaded": true
     },
     {
@@ -1707,14 +1358,10 @@
       "note": "This pre-loaded voice on ChromeOS is available locally but isn't as high quality as some of the network-only voices available through the Android compatibility layer.",
       "language": "en-US",
       "gender": "male",
-      "quality": [
-        "low"
-      ],
+      "quality": ["low"],
       "rate": 1,
       "pitch": 1,
-      "os": [
-        "ChromeOS"
-      ],
+      "os": ["ChromeOS"],
       "preloaded": true
     },
     {
@@ -1726,14 +1373,10 @@
       ],
       "language": "en-GB",
       "gender": "female",
-      "quality": [
-        "high"
-      ],
+      "quality": ["high"],
       "rate": 1,
       "pitch": 1,
-      "os": [
-        "ChromeOS"
-      ],
+      "os": ["ChromeOS"],
       "preloaded": true
     },
     {
@@ -1745,14 +1388,10 @@
       ],
       "language": "en-GB",
       "gender": "female",
-      "quality": [
-        "high"
-      ],
+      "quality": ["high"],
       "rate": 1,
       "pitch": 1,
-      "os": [
-        "ChromeOS"
-      ],
+      "os": ["ChromeOS"],
       "preloaded": true
     },
     {
@@ -1764,14 +1403,10 @@
       ],
       "language": "en-GB",
       "gender": "female",
-      "quality": [
-        "high"
-      ],
+      "quality": ["high"],
       "rate": 1,
       "pitch": 1,
-      "os": [
-        "ChromeOS"
-      ],
+      "os": ["ChromeOS"],
       "preloaded": true
     },
     {
@@ -1779,14 +1414,10 @@
       "name": "Chrome OS UK English 1",
       "language": "en-GB",
       "gender": "female",
-      "quality": [
-        "low"
-      ],
+      "quality": ["low"],
       "rate": 1,
       "pitch": 1,
-      "os": [
-        "ChromeOS"
-      ],
+      "os": ["ChromeOS"],
       "preloaded": true
     },
     {
@@ -1794,14 +1425,10 @@
       "name": "Chrome OS UK English 3",
       "language": "en-GB",
       "gender": "female",
-      "quality": [
-        "low"
-      ],
+      "quality": ["low"],
       "rate": 1,
       "pitch": 1,
-      "os": [
-        "ChromeOS"
-      ],
+      "os": ["ChromeOS"],
       "preloaded": true
     },
     {
@@ -1809,14 +1436,10 @@
       "name": "Chrome OS UK English 5",
       "language": "en-GB",
       "gender": "female",
-      "quality": [
-        "low"
-      ],
+      "quality": ["low"],
       "rate": 1,
       "pitch": 1,
-      "os": [
-        "ChromeOS"
-      ],
+      "os": ["ChromeOS"],
       "preloaded": true
     },
     {
@@ -1824,14 +1447,10 @@
       "name": "Chrome OS UK English 7",
       "language": "en-GB",
       "gender": "female",
-      "quality": [
-        "low"
-      ],
+      "quality": ["low"],
       "rate": 1,
       "pitch": 1,
-      "os": [
-        "ChromeOS"
-      ],
+      "os": ["ChromeOS"],
       "preloaded": true
     },
     {
@@ -1843,14 +1462,10 @@
       ],
       "language": "en-GB",
       "gender": "male",
-      "quality": [
-        "high"
-      ],
+      "quality": ["high"],
       "rate": 1,
       "pitch": 1,
-      "os": [
-        "ChromeOS"
-      ],
+      "os": ["ChromeOS"],
       "preloaded": true
     },
     {
@@ -1862,14 +1477,10 @@
       ],
       "language": "en-GB",
       "gender": "male",
-      "quality": [
-        "high"
-      ],
+      "quality": ["high"],
       "rate": 1,
       "pitch": 1,
-      "os": [
-        "ChromeOS"
-      ],
+      "os": ["ChromeOS"],
       "preloaded": true
     },
     {
@@ -1881,14 +1492,10 @@
       ],
       "language": "en-GB",
       "gender": "male",
-      "quality": [
-        "high"
-      ],
+      "quality": ["high"],
       "rate": 1,
       "pitch": 1,
-      "os": [
-        "ChromeOS"
-      ],
+      "os": ["ChromeOS"],
       "preloaded": true
     },
     {
@@ -1896,14 +1503,10 @@
       "name": "Chrome OS UK English 2",
       "language": "en-GB",
       "gender": "male",
-      "quality": [
-        "low"
-      ],
+      "quality": ["low"],
       "rate": 1,
       "pitch": 1,
-      "os": [
-        "ChromeOS"
-      ],
+      "os": ["ChromeOS"],
       "preloaded": true
     },
     {
@@ -1911,14 +1514,10 @@
       "name": "Chrome OS UK English 4",
       "language": "en-GB",
       "gender": "male",
-      "quality": [
-        "low"
-      ],
+      "quality": ["low"],
       "rate": 1,
       "pitch": 1,
-      "os": [
-        "ChromeOS"
-      ],
+      "os": ["ChromeOS"],
       "preloaded": true
     },
     {
@@ -1926,14 +1525,10 @@
       "name": "Chrome OS UK English 6",
       "language": "en-GB",
       "gender": "male",
-      "quality": [
-        "low"
-      ],
+      "quality": ["low"],
       "rate": 1,
       "pitch": 1,
-      "os": [
-        "ChromeOS"
-      ],
+      "os": ["ChromeOS"],
       "preloaded": true
     },
     {
@@ -1945,14 +1540,10 @@
       ],
       "language": "en-AU",
       "gender": "female",
-      "quality": [
-        "high"
-      ],
+      "quality": ["high"],
       "rate": 1,
       "pitch": 1,
-      "os": [
-        "ChromeOS"
-      ],
+      "os": ["ChromeOS"],
       "preloaded": true
     },
     {
@@ -1964,14 +1555,10 @@
       ],
       "language": "en-AU",
       "gender": "female",
-      "quality": [
-        "high"
-      ],
+      "quality": ["high"],
       "rate": 1,
       "pitch": 1,
-      "os": [
-        "ChromeOS"
-      ],
+      "os": ["ChromeOS"],
       "preloaded": true
     },
     {
@@ -1983,14 +1570,10 @@
       ],
       "language": "en-AU",
       "gender": "female",
-      "quality": [
-        "high"
-      ],
+      "quality": ["high"],
       "rate": 1,
       "pitch": 1,
-      "os": [
-        "ChromeOS"
-      ],
+      "os": ["ChromeOS"],
       "preloaded": true
     },
     {
@@ -2002,14 +1585,10 @@
       ],
       "language": "en-AU",
       "gender": "female",
-      "quality": [
-        "high"
-      ],
+      "quality": ["high"],
       "rate": 1,
       "pitch": 1,
-      "os": [
-        "ChromeOS"
-      ],
+      "os": ["ChromeOS"],
       "preloaded": true
     },
     {
@@ -2029,14 +1608,10 @@
         "engelsk USA"
       ],
       "language": "en-US",
-      "quality": [
-        "high"
-      ],
+      "quality": ["high"],
       "rate": 1,
       "pitch": 1,
-      "os": [
-        "Android"
-      ],
+      "os": ["Android"],
       "preloaded": true
     },
     {
@@ -2057,14 +1632,10 @@
         "engelsk Storbritannia"
       ],
       "language": "en-GB",
-      "quality": [
-        "high"
-      ],
+      "quality": ["high"],
       "rate": 1,
       "pitch": 1,
-      "os": [
-        "Android"
-      ],
+      "os": ["Android"],
       "preloaded": true
     },
     {
@@ -2085,14 +1656,10 @@
         "engelsk Australia"
       ],
       "language": "en-AU",
-      "quality": [
-        "high"
-      ],
+      "quality": ["high"],
       "rate": 1,
       "pitch": 1,
-      "os": [
-        "Android"
-      ],
+      "os": ["Android"],
       "preloaded": true
     }
   ]

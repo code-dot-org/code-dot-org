@@ -1,10 +1,8 @@
-[![Build Status](https://github.com/code-dot-org/ml-activities/actions/workflows/deploy.yml/badge.svg?branch=main)](https://github.com/code-dot-org/ml-activities/actions/workflows/deploy.yml)
-
 # **AI for Oceans**
 
-This is the repo for **AI for Oceans** from Code.org.
+This is the **AI for Oceans** lab from Code.org.
 
-Like the Dance Party repo, it is a standalone repo that is published as an [NPM package](https://www.npmjs.com/package/@code-dot-org/ml-activities), and consumed by the [main repo](https://github.com/code-dot-org/code-dot-org).
+It originally lived in a standalone repo (`@code-dot-org/ml-activities`) and was consumed by the [main repo](https://github.com/code-dot-org/code-dot-org) as an npm dependency. It now lives inline in the monorepo at `frontend/packages/labs/oceans/`, published as the internal Turborepo workspace `@code-dot-org/oceans-lab`.
 
 **AI for Oceans** was produced for the Hour of Code in 2019. This module provides the student experience for the 5 interactive levels in the **AI for Oceans** script at https://studio.code.org/s/oceans.
 
@@ -94,7 +92,7 @@ In the `short` and `long` modes, the pond also has a metapanel which can show ge
 
 ## Graphics & UI
 
-The app uses three layers in the DOM. Underneath, one canvas contains the scene's background image, while another canvas contains all the sprites. On top, the app uses React to render HTML elements for the user interface, implemented [here](https://github.com/code-dot-org/ml-activities/blob/c9d24c4b7a20ea12d5dc7a094094c5ef4dfbbde3/src/oceans/ui.jsx).
+The app uses three layers in the DOM. Underneath, one canvas contains the scene's background image, while another canvas contains all the sprites. On top, the app uses React to render HTML elements for the user interface, implemented in `src/oceans/ui.tsx`.
 
 The app is fully responsive by scaling the canvases and also scaling the size of the HTML elements correspondingly. This way, the UI simply shrinks to match the underlying canvases.
 
@@ -104,9 +102,9 @@ The animation is designed to be be smooth and frame-rate independent.
 
 The prediction screen notably renders the progression based on the concept of a "current offset in time", making it possible to pause, and even reverse the animation, as well as adjust its speed.
 
-All items have simple "bobbing" animations, using offsets cycling in a sine loop, such as [here](https://github.com/code-dot-org/ml-activities/blob/f8a438628f9f5a0dba4a602f8ae0bbffb714ce35/src/oceans/renderer.js#L615-L618).
+All items have simple "bobbing" animations, using offsets cycling in a sine loop, in `src/oceans/renderer.ts`.
 
-The fish pause under the scanner using a simple S-curve adjustment to their movement, implemented [here](https://github.com/code-dot-org/ml-activities/blob/f8a438628f9f5a0dba4a602f8ae0bbffb714ce35/src/oceans/renderer.js#L258).
+The fish pause under the scanner using a simple S-curve adjustment to their movement, also in `src/oceans/renderer.ts`.
 
 ## The Guide
 
@@ -114,7 +112,7 @@ After initial playtests, we identified a need to slow the pacing of the tutorial
 
 "The Guide" is the implementation of this solution, and was designed to be a simple but flexible system that allowed us to add a variety of text for every step and situation encountered in the tutorial.
 
-Each piece of Guide text is declared, along with the app state needed for it to show (which can even include code for more expressiveness), [here](https://github.com/code-dot-org/ml-activities/blob/main/src/oceans/models/guide.js).
+Each piece of Guide text is declared, along with the app state needed for it to show (which can even include code for more expressiveness), in `src/oceans/models/guide.ts`.
 
 This simple system enabled the team to add a detailed narrative voice to the script, and allowed a variety of team members to contribute text.
 
@@ -130,11 +128,11 @@ We also use modal popups to give extra information.
 
 ## State
 
-The app's runtime state is stored in a very simple module [here](https://github.com/code-dot-org/ml-activities/blob/c9d24c4b7a20ea12d5dc7a094094c5ef4dfbbde3/src/oceans/state.js). Updates to state trigger a React render, unless deliberately skipped.
+The app's runtime state is stored in a very simple module at `src/oceans/state.ts`. Updates to state trigger a React render, unless deliberately skipped.
 
 ## Host interface
 
-The full functionality of this app is enabled when hosted by https://studio.code.org. The main repo loads this app via code [here](https://github.com/code-dot-org/code-dot-org/tree/c3325655902e82479d0a85d5adc73049810e5b66/apps/src/fish). Specific parameters passed in during initialization, [here](https://github.com/code-dot-org/code-dot-org/blob/c3325655902e82479d0a85d5adc73049810e5b66/apps/src/fish/Fish.js#L127-L136), include a foreground and background canvas, the `appMode`, a callback when the user continues to the next level, callbacks for loading & playing sound effects, and localized strings.
+The full functionality of this app is enabled when hosted by https://studio.code.org. The main repo loads this app via code at `apps/src/fish`. Specific parameters passed in during initialization (see `apps/src/fish/Fish.js`) include a foreground and background canvas, the `appMode`, a callback when the user continues to the next level, callbacks for loading & playing sound effects, and localized strings.
 
 ## Analytics
 
@@ -142,59 +140,31 @@ If Google Analytics is available on the page, the app generates a synthetic page
 
 # Additional information
 
-## Common operations
-
-The documentation for common operations for **AI Lab** is comprehensive and should apply to this project too: https://github.com/code-dot-org/ml-playground#common-operations
-
 ## Getting started
 
-Steps to get up and running:
+This package lives inside the `code-dot-org` monorepo. To work on it:
 
 ```
-git clone git@github.com:code-dot-org/ml-activities.git
-cd ml-activities
-nvm install
-nvm use
-npm install -g yarn
-yarn
-yarn start
+cd frontend/
+yarn install
+yarn turbo run dev --filter=@code-dot-org/oceans-lab
 ```
 
-At this point the app will be running at [http://localhost:8080](http://localhost:8080) with live-reloading on file changes.
+The standalone Vite dev server opens at [http://localhost:5173](http://localhost:5173) with live-reloading on file changes and a mode picker for all 5 app modes.
 
-[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/code-dot-org/ml-activities)
+### Integration with the rest of the monorepo
 
-### Integration with local [code-dot-org repo](https://github.com/code-dot-org/code-dot-org)
+`apps/` (webpack) and `frontend/apps/studio` (Vite) consume this package via `"@code-dot-org/oceans-lab": "workspace:*"`. Local edits are picked up by the next consumer build — no link/symlink step needed.
 
-Similar to https://github.com/code-dot-org/dance-party, ml-activities is built from a small repo as an app which is then used by the code.org dashboard to run individual levels in a script.
-
-If you want to make changes locally in ml-activities and have them show up in your apps build, do the following:
-
-- In the ml-activities root directory `yarn link`
-- In the code-dot-org apps/ directory `yarn link ~/ml-activities`
-  This will set up a symlink in apps/node_modules/@code-dot-org to point at your local changes. Run `yarn build` in ml-activities, and then the code-dot-org apps build should pick up the changes (generated in ml-activities' `dist/`) next time it occurs (including in already-running `yarn start` build in code-dot-org).
-  - Note that ml-activities' `yarn start` can be left running when `yarn build` is run. But a new invocation of `yarn start` will intentionally clear the `dist/` directory populated by `yarn build` to ensure we don't have outdated assets left in it.
-- If you want to go back to using the published module, in the code-dot-org apps/ directory run `yarn unlink @code-dot-org/ml-activities`. You'll be given additional instructions on how to force the module to be rebuilt after that.
-
-### Publishing a new version
-
-First, ensure you have the `main` branch checked out locally, and that it's up to date.
-
-To publish a new version, the following command should work:
+To rebuild the package's `dist/` for consumers:
 
 ```
-npm version 0.0.29
+yarn turbo run build --filter=@code-dot-org/oceans-lab
 ```
-
-With `0.0.29` replaced by the new version number that should be published. Generally try to follow MAJOR.MINOR.PATCH to determine which number to change (for instance, a bug fix increments the third digit by 1, while a non-backwards compatible major update increments the first).
-
-Note: make sure you are logged into `npm` first. If not, the command may fail with a misleading `E404` error. You can see if you're logged in with `npm whoami`, and if not logged in, can can use `npm login`.
-
-Note: this command makes a commit and pushes it to the remote branch, so it's probably good to first locally create and switch to a new branch for this task.
 
 ## Adding new fish components
 
-All fish components live in `public/images/fish` in their respective folders (eg bodies live in `body/`). Despite the fact that the fish face right in most of the tutorial, they are built as if they face left in order to simplify the math for the anchor points. This means that all components should be oriented as if the fish is facing left, which might require flopping any new assets. After adding the assets, they will need to be added to `src/utils/fishData.js`. `bin/determineKnnData.js` will output some of the lines that will be needed in `fishData`.
+All fish components live in `src/assets/images/fish` in their respective folders (eg bodies live in `body/`). Despite the fact that the fish face right in most of the tutorial, they are built as if they face left in order to simplify the math for the anchor points. This means that all components should be oriented as if the fish is facing left, which might require flopping any new assets. After adding the assets, they will need to be added to `src/utils/fishData.ts`. `bin/determineKnnData.js` will output some of the lines that will be needed in `fishData`.
 
 All components can define `exclusions`, which are modes that the component won't be used in. Components appear in all modes by default.
 
@@ -210,7 +180,7 @@ Some dorsal fins define an x-adjustment to shift the anchor point. This is usefu
 
 ## I18n
 
-By default, this tutorial is in English. The strings live at i18n/oceans.json and should not be moved without corresponding changes to the I18n pipeline in `code-dot-org`. Translations can be passed into the app using the `i18n` param. If any translations are missing, the English string will be used as a default. This also means that adding a new string is safe and does not require any further steps.
+By default, this tutorial is in English. The strings live at `src/i18n/oceans.json` and should not be moved without corresponding changes to the I18n pipeline in `code-dot-org`. Translations can be passed into the app using the `i18n` param. If any translations are missing, the English string will be used as a default. This also means that adding a new string is safe and does not require any further steps.
 
 ## Machine Learning algorithms
 

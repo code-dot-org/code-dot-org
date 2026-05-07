@@ -1,133 +1,120 @@
-const {
-  initFishData,
-  fishData,
-  fieldInfos,
-  MouthExpression,
-  BodyShape
-} = require('@ml/utils/fishData');
-const {generateOcean, filterOcean} = require('@ml/utils/generateOcean');
-import SVMTrainer from '@ml/utils/SVMTrainer';
-import {ClassType} from '@ml/oceans/constants';
+import {describe, it, expect, beforeEach} from 'vitest';
 
-const floatEquals = (a, b) => {
-  return Math.abs(a - b) <= 0.0001;
-};
+import {ClassType} from '../../../src/oceans/constants';
+import SVMTrainer from '../../../src/utils/SVMTrainer';
 
-describe('SVMTrainer edge cases test', () => {
-  beforeAll(() => {
-    initFishData();
+/** A trivial identity converter: input is already a number[]. */
+const identityConverter = x => x;
+
+/** Trains a two-class SVM on two well-separated 1-D points. */
+function trainSimple(trainer) {
+  trainer.addTrainingExample([0], ClassType.Like);
+  trainer.addTrainingExample([1], ClassType.Dislike);
+  trainer.train();
+}
+
+describe('SVMTrainer', () => {
+  let trainer;
+
+  beforeEach(() => {
+    trainer = new SVMTrainer(identityConverter);
   });
 
-  test('test no training data', async () => {
-    const trainer = new SVMTrainer(fish => fish.getKnnData());
-
-    trainer.train(); // Should do nothing instead of throwing error
-
-    const testFish = generateOcean(1)[0];
-    const result = await trainer.predict(testFish);
-    expect(result).toEqual({
-      predictedClassId: null,
-      confidencesByClassId: {}
-    });
-
-    const summary = trainer.summarize(testFish.fieldInfos);
-    expect(summary).toBeNull();
-
-    const fishSummary = trainer.explainFish(testFish);
-    expect(fishSummary).toBeNull();
-  });
-
-  test('test one "Like" training data point', async () => {
-    const label = ClassType.Like;
-    const trainer = new SVMTrainer(fish => fish.getKnnData());
-    const trainingFish = generateOcean(1)[0];
-    trainer.addTrainingExample(trainingFish, label);
-
-    trainer.train(); // Should do nothing instead of throwing error
-
-    // We should predict the same label as we originally used
-    const testFish = generateOcean(1)[0];
-    const result = await trainer.predict(testFish);
-    expect(result).toEqual({
-      predictedClassId: label,
-      confidencesByClassId: {[label]: 1}
-    });
-
-    const summary = trainer.summarize(testFish.fieldInfos);
-    expect(summary).toBeNull();
-
-    const fishSummary = trainer.explainFish(testFish);
-    expect(fishSummary).toBeNull();
-  });
-
-  test('test one "Dislike" training data point', async () => {
-    const label = ClassType.Dislike;
-    const trainer = new SVMTrainer(fish => fish.getKnnData());
-    const trainingFish = generateOcean(1)[0];
-    trainer.addTrainingExample(trainingFish, label);
-
-    trainer.train(); // Should do nothing instead of throwing error
-
-    // We should predict the same label as we originally used
-    const testFish = generateOcean(1)[0];
-    const result = await trainer.predict(testFish);
-    expect(result).toEqual({
-      predictedClassId: label,
-      confidencesByClassId: {[label]: 1}
+  describe('predict — no training data', () => {
+    it('returns null predictedClassId', async () => {
+      const result = await trainer.predict([0]);
+      expect(result.predictedClassId).toBeNull();
     });
   });
 
-  test('test only "Like" training data points', async () => {
-    const label = ClassType.Like;
-    const trainer = new SVMTrainer(fish => fish.getKnnData());
-    const trainingData = generateOcean(10);
-    for (const fish of trainingData) {
-      trainer.addTrainingExample(fish, label);
-    }
-
-    trainer.train(); // Should do nothing instead of throwing error
-
-    // We should predict the same label as we originally used
-    const testFish = generateOcean(100);
-    for (const fish of testFish) {
-      const result = await trainer.predict(fish);
-      expect(result).toEqual({
-        predictedClassId: label,
-        confidencesByClassId: {[label]: 1}
-      });
-    }
-
-    const summary = trainer.summarize(testFish[0].fieldInfos);
-    expect(summary).toBeNull();
-
-    const fishSummary = trainer.explainFish(testFish[0]);
-    expect(fishSummary).toBeNull();
+  describe('predict — single class only', () => {
+    it('returns that class with confidence 1', async () => {
+      trainer.addTrainingExample([0], ClassType.Like);
+      trainer.train();
+      const result = await trainer.predict([0]);
+      expect(result.predictedClassId).toBe(ClassType.Like);
+      expect(result.confidencesByClassId[ClassType.Like]).toBe(1);
+    });
   });
 
-  test('test only "Dislike" training data points', async () => {
-    const label = ClassType.Dislike;
-    const trainer = new SVMTrainer(fish => fish.getKnnData());
-    const trainingData = generateOcean(10);
-    for (const fish of trainingData) {
-      trainer.addTrainingExample(fish, label);
-    }
+  describe('predict — two classes', () => {
+    it('classifies like example correctly', async () => {
+      trainSimple(trainer);
+      const result = await trainer.predict([0]);
+      expect(result.predictedClassId).toBe(ClassType.Like);
+    });
 
-    trainer.train(); // Should do nothing instead of throwing error
+    it('classifies dislike example correctly', async () => {
+      trainSimple(trainer);
+      const result = await trainer.predict([1]);
+      expect(result.predictedClassId).toBe(ClassType.Dislike);
+    });
+  });
 
-    // We should predict the same label as we originally used
-    const testFish = generateOcean(100);
-    for (const fish of testFish) {
-      const result = await trainer.predict(fish);
-      expect(result).toEqual({
-        predictedClassId: label,
-        confidencesByClassId: {[label]: 1}
-      });
-    }
+  describe('clearAll', () => {
+    it('resets the model so predict returns null', async () => {
+      trainSimple(trainer);
+      trainer.clearAll();
+      const result = await trainer.predict([0]);
+      expect(result.predictedClassId).toBeNull();
+    });
+  });
 
-    const summary = trainer.summarize(testFish[0].fieldInfos);
-    expect(summary).toBeNull();
+  describe('hasNontrivialModel', () => {
+    it('is false before training', () => {
+      expect(trainer.hasNontrivialModel()).toBe(false);
+    });
 
-    const fishSummary = trainer.explainFish(testFish[0]);
-    expect(fishSummary).toBeNull();
+    it('is false with only one class', () => {
+      trainer.addTrainingExample([0], ClassType.Like);
+      trainer.train();
+      expect(trainer.hasNontrivialModel()).toBe(false);
+    });
+
+    it('is true after two-class training', () => {
+      trainSimple(trainer);
+      expect(trainer.hasNontrivialModel()).toBe(true);
+    });
+  });
+
+  describe('summarize', () => {
+    it('returns null when no nontrivial model exists', () => {
+      expect(trainer.summarize([])).toBeNull();
+    });
+
+    it('returns normalized importance entries after training', () => {
+      const fieldInfos = [{partType: 'bodies', fieldType: 'id', index: 0}];
+      trainSimple(trainer);
+      const result = trainer.summarize(fieldInfos);
+      expect(result).not.toBeNull();
+      expect(result).toHaveLength(1);
+      expect(result[0].partType).toBe('bodies');
+      // Importance values must be normalized to sum to 1.
+      const total = result.reduce((s, e) => s + e.importance, 0);
+      expect(total).toBeCloseTo(1, 5);
+    });
+  });
+
+  describe('explainFish', () => {
+    it('returns null when no nontrivial model exists', () => {
+      const fish = {
+        knnData: [0.5],
+        fieldInfos: [{partType: 'bodies', fieldType: 'id', index: 0}],
+      };
+      expect(trainer.explainFish(fish)).toBeNull();
+    });
+
+    it('returns impact entries after training', () => {
+      trainSimple(trainer);
+      const fish = {
+        knnData: [0.5],
+        fieldInfos: [{partType: 'bodies', fieldType: 'id', index: 0}],
+      };
+      const result = trainer.explainFish(fish);
+      expect(result).not.toBeNull();
+      expect(result).toHaveLength(1);
+      expect(result[0].partType).toBe('bodies');
+      expect(typeof result[0].impact).toBe('number');
+    });
   });
 });

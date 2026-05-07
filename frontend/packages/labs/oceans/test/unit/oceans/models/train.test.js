@@ -1,42 +1,74 @@
-/**
- *  @jest-environment node
- */
+import {describe, it, expect, beforeEach, vi} from 'vitest';
 
-const {initFishData} = require('@ml/utils/fishData');
-import {setState, getState, resetState} from '@ml/oceans/state';
-import {ClassType, Modes} from '@ml/oceans/constants';
-import train from '@ml/oceans/models/train.js';
+import {AppMode, ClassType} from '../../../../src/oceans/constants';
+import {resetState, setState, getState} from '../../../../src/oceans/state';
+import {initFishData} from '../../../../src/utils/fishData';
 
-describe('Model quality test', () => {
-  beforeAll(() => {
-    // TODO think about removing this assumption
-    initFishData();
-  });
+vi.mock('../../../../src/oceans/models/soundLibrary', () => ({
+  default: {playSound: vi.fn(), loadSounds: vi.fn(), injectSoundAPIs: vi.fn()},
+}));
 
-  beforeEach(() => {
+describe('train model — onClassifyFish', () => {
+  let mockTrainer;
+
+  beforeEach(async () => {
     resetState();
+    initFishData();
+    mockTrainer = {
+      addTrainingExample: vi.fn(),
+      train: vi.fn(),
+      clearAll: vi.fn(),
+      predict: vi.fn().mockResolvedValue({predictedClassId: ClassType.Like}),
+    };
     setState({
-      mode: Modes.Training
+      appMode: AppMode.FishVTrash,
+      trainer: mockTrainer,
+      trainingIndex: 0,
+      yesCount: 0,
+      noCount: 0,
+      loadTrashImages: true,
     });
+    // generateOcean will be called by onClassifyFish when the training index
+    // nears the end of the fish array — ensure a non-empty fish list is ready.
+    const {generateOcean} = await import('../../../../src/utils/generateOcean');
+    setState({fishData: generateOcean(20, 0, true, false, false)});
   });
 
-  test('init state', () => {
-    train.init();
-    const state = getState();
-    expect(state).toBeTruthy();
-    expect(state.trainer).toBeTruthy();
-    expect(state.fishData).toBeTruthy();
-    expect(state.fishData.length).toBeGreaterThan(0);
+  it('calls addTrainingExample with ClassType.Like on yes', async () => {
+    const {default: train} = await import(
+      '../../../../src/oceans/models/train'
+    );
+    train.onClassifyFish(true);
+    expect(mockTrainer.addTrainingExample).toHaveBeenCalledWith(
+      expect.anything(),
+      ClassType.Like,
+    );
   });
 
-  test('state changes on classify', () => {
-    train.init();
-    // Set isRunning to false to simulate animation ending
-    setState({isRunning: false});
-    const previousState = getState();
-    expect(train.onClassifyFish(true)).toBe(true);
-    const newState = getState();
-    expect(newState.trainingIndex).toBe(previousState.trainingIndex + 1);
-    expect(newState.yesCount).toBe(previousState.yesCount + 1);
+  it('calls addTrainingExample with ClassType.Dislike on no', async () => {
+    const {default: train} = await import(
+      '../../../../src/oceans/models/train'
+    );
+    train.onClassifyFish(false);
+    expect(mockTrainer.addTrainingExample).toHaveBeenCalledWith(
+      expect.anything(),
+      ClassType.Dislike,
+    );
+  });
+
+  it('increments yesCount on yes', async () => {
+    const {default: train} = await import(
+      '../../../../src/oceans/models/train'
+    );
+    train.onClassifyFish(true);
+    expect(getState().yesCount).toBe(1);
+  });
+
+  it('increments noCount on no', async () => {
+    const {default: train} = await import(
+      '../../../../src/oceans/models/train'
+    );
+    train.onClassifyFish(false);
+    expect(getState().noCount).toBe(1);
   });
 });
