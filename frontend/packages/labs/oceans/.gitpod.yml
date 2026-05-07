@@ -1,0 +1,11 @@
+ports:
+- port: 8080
+  onOpen: open-browser
+tasks:
+- init: >
+    nvm install &&
+    nvm use &&
+    npm install -g yarn &&
+    yarn
+  command: >
+    yarn start
