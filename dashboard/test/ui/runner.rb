@@ -479,8 +479,6 @@ def report_tests_finished(start_time, run_results, run_status_page_url = nil)
   test_report += "#{test_type_label} Test Status Page (for this server, *if you're lost start here*):\n#{server_status_page_url}\n\n" if server_status_page_url && !CI::Utils.running_on_ci?
   test_report += "\n"
   test_report += "#{suite_success_count} passed. #{failures.count} failed. Test count: #{run_results.count}. Duration: #{RakeUtils.format_duration(suite_duration)}. Total successful reruns of flaky tests: #{total_flaky_successful_reruns}.\n"
-  test_report += "\n"
-  test_report += "\n*#{test_type_label.upcase}* TESTS #{failures.any? ? 'FAILED' : 'PASSED'}\n\n"
 
   ChatClient.log test_report, color: 'purple'
 end
