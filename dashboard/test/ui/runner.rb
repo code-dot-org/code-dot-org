@@ -471,7 +471,7 @@ def report_tests_finished(start_time, run_results, run_status_page_url = nil)
 
   ChatClient.log "Skipped tests tagged with: #{skipped_tags.to_a.join(', ')}"
 
-  report_kind = $options.with_status_page ? 'TEST REPORT' : 'MANUAL RUN'
+  report_kind = $options.with_status_page ? 'TEST SUITE' : 'TEST MANUAL RUN'
   test_report =  "\n#{test_type_label.upcase} #{report_kind}: #{failures.any? ? '*❌ FAILED*' : '*✅ PASSED*'}\n"
   test_report += "\n#{failures.count}x failed features:\n" + failures.map {|failure| "• #{failure}\n"}.join if failures.any?
   test_report += "\n"
