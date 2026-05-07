@@ -61,6 +61,7 @@ import registerLogicCompareMutator from './addons/extensions/logic_compare';
 import FunctionEditor from './addons/functionEditor';
 import {filterFunctionArgVariables} from './addons/plusMinusBlocks/advancedProcedures';
 import registerIfMutator from './addons/plusMinusBlocks/if';
+import registerPredictBlock from './addons/plusMinusBlocks/predict';
 import registerTextJoinMutator from './addons/plusMinusBlocks/text_join';
 import {UNKNOWN_BLOCK} from './addons/unknownBlock';
 import {Renderers, Themes} from './constants';
@@ -163,6 +164,7 @@ function initializeBlocklyWrapper(blocklyInstance: BlocklyCoreInstance) {
   registerIfMutator();
   registerLogicCompareMutator();
   registerTextJoinMutator();
+  registerPredictBlock();
   preInjectRegistrations();
   // TODO: can we avoid using any here by converting BlocklyWrapper to a class?
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
