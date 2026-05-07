@@ -9,10 +9,18 @@ require 'helpers/cookies'
 
 module Middleware
   class GlobalEdition
-    REGION_KEY = Cdo::GlobalEdition::REGION_KEY
+    def initialize(app)
+      @app = app
+    end
+
+    def call(env)
+      RouteHandler.new(@app, env).call
+    end
 
     class RouteHandler
       include Middleware::Helpers::Cookies
+
+      REGION_KEY = Cdo::GlobalEdition::REGION_KEY
 
       # HTTP paths that to be excluded from Global Edition scope.
       EXCLUDED_PATHS = [
@@ -70,7 +78,7 @@ module Middleware
       #
       # @return [Array(Integer, Hash, #each)] the Rack response returned by `response.finish`
       def call
-        return response.finish unless Cdo::GlobalEdition.target_host?(request.hostname)
+        return app.call(env) unless Cdo::GlobalEdition.target_host?(request.hostname)
 
         # Allows setting the GE region via the URL parameter `?ge_region=<region_code>`.
         if request.params.key?(REGION_KEY)
@@ -317,25 +325,5 @@ module Middleware
     end
 
     private_constant :RouteHandler
-
-    def initialize(app)
-      @app = app
-    end
-
-    def call(env)
-      RouteHandler.new(@app, env).call
-    rescue StandardError => exception
-      raise exception if CDO.rack_env?(:development) || CDO.rack_env?(:test)
-
-      Honeybadger.notify(
-        exception,
-        error_message: '[Middleware::GlobalEdition] Runtime error',
-        context: {
-          env: env,
-        }
-      )
-
-      @app.call(env)
-    end
   end
 end
