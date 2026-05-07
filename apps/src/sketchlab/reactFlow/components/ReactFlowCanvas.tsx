@@ -35,6 +35,7 @@ import {
 } from '../context';
 import LineEdgeToolbar from '../elementToolbars/LineEdgeToolbar';
 import {
+  DEFAULT_EDGE_TYPE,
   DEFAULT_LINE_WIDTH,
   DEFAULT_STROKE_COLOR,
 } from '../elementToolbars/toolbarPalettes';
@@ -563,6 +564,7 @@ export default function ReactFlowCanvas({
     setLineEdgeColor,
     setLineEdgeWidth,
     setLineEdgeStrokeStyle,
+    setLineEdgeType,
     setLineEdgeArrowHeads,
     setLineEdgeLocked,
   } = useLineToolbar({
@@ -632,7 +634,7 @@ export default function ReactFlowCanvas({
               autoPanOnNodeFocus={false} // We manage viewport on focus manually in useFocusManagement.
               zIndexMode={'manual'}
               defaultEdgeOptions={{
-                type: 'straight',
+                type: DEFAULT_EDGE_TYPE,
                 style: {
                   stroke: DEFAULT_STROKE_COLOR,
                   strokeWidth: DEFAULT_LINE_WIDTH,
@@ -652,6 +654,9 @@ export default function ReactFlowCanvas({
                   }
                   onSelectStrokeStyle={value =>
                     setLineEdgeStrokeStyle(openLineEdge.id, value)
+                  }
+                  onSelectEdgeType={value =>
+                    setLineEdgeType(openLineEdge.id, value)
                   }
                   onSelectArrowHeads={value =>
                     setLineEdgeArrowHeads(openLineEdge.id, value)
