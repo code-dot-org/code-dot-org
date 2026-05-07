@@ -10,7 +10,6 @@ import {createUuid} from '@cdo/apps/utils';
 import {PASTE_OFFSET_PX} from '../constants';
 import type {ClipboardContents} from '../context';
 import type {TabOrderEntry} from '../utils/computeTabOrder';
-import {isLineEdge} from '../utils/lineEdges';
 
 interface UseCopyPasteOptions {
   nodes: SketchlabReactFlowNode[];
@@ -63,13 +62,19 @@ export function useCopyPaste({
 
   // A line edge is stored as two hidden lineAnchor nodes plus the edge
   // connecting them — all three must travel together in the clipboard.
+  // TODO: enable copy/paste of an edge attached to one or two real nodes.
   const buildLineEdgeClipboard = useCallback(
     (edgeId: string): ClipboardContents | null => {
       const edge = edges.find(e => e.id === edgeId);
-      if (!edge || !isLineEdge(edge, nodes)) return null;
+      if (!edge) return null;
       const sourceAnchor = nodes.find(n => n.id === edge.source);
       const targetAnchor = nodes.find(n => n.id === edge.target);
-      if (!sourceAnchor || !targetAnchor) return null;
+      if (
+        sourceAnchor?.type !== 'lineAnchor' ||
+        targetAnchor?.type !== 'lineAnchor'
+      ) {
+        return null;
+      }
       return {nodes: [sourceAnchor, targetAnchor], edges: [edge]};
     },
     [nodes, edges]
