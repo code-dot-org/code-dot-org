@@ -1,6 +1,6 @@
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import {IconButton, Tooltip, Typography} from '@mui/material';
-import {useReactFlow} from '@xyflow/react';
+import {useReactFlow, type XYPosition} from '@xyflow/react';
 import classNames from 'classnames';
 import React, {useMemo} from 'react';
 
@@ -86,7 +86,7 @@ function LineOptionGroup({
 
 interface LineEdgeToolbarProps {
   edge: SketchlabReactFlowEdge;
-  anchorNodeId: string;
+  anchorFlowPosition: XYPosition;
   onSelectColor: (value: string) => void;
   onSelectWidth: (value: number) => void;
   onSelectStrokeStyle: (value: LineStrokeStyleValue) => void;
@@ -110,7 +110,7 @@ const ARROW_HEAD_ICONS: Record<ArrowHeadValue, string> = {
 
 export default function LineEdgeToolbar({
   edge,
-  anchorNodeId,
+  anchorFlowPosition,
   onSelectColor,
   onSelectWidth,
   onSelectStrokeStyle,
@@ -172,7 +172,7 @@ export default function LineEdgeToolbar({
   return (
     <ToolbarShell
       target={{type: 'edge', id: edge.id}}
-      anchorNodeId={anchorNodeId}
+      anchorFlowPosition={anchorFlowPosition}
       ariaLabel="Line style"
     >
       {isLocked ? (

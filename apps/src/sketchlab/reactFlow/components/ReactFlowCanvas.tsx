@@ -59,7 +59,10 @@ import {
   isLineAnchorNodeId,
 } from '../utils/connectionRules';
 import {snapAnchorIfNearby} from '../utils/handleSnap';
-import {createLineAnchorAtHandle} from '../utils/lineAnchors';
+import {
+  createLineAnchorAtHandle,
+  endpointFlowPositionFromState,
+} from '../utils/lineAnchors';
 import {defaultLineEdgeFields} from '../utils/lineEdges';
 
 import Toolbar from './Toolbar';
@@ -573,19 +576,25 @@ export default function ReactFlowCanvas({
     setEdges,
   });
 
-  // Anchor the line toolbar to whichever endpoint node sits further left so
-  // that NodeToolbar's Position.Left lands the toolbar to the left of the
-  // edge as a whole. Anchoring to a fixed end (e.g. always source) puts the
-  // toolbar on top of the edge whenever source is the rightmost endpoint.
-  const lineToolbarAnchorId = useMemo(() => {
+  // Anchor the line toolbar at the leftmost handle of the edge so it sits
+  // immediately to the left of where the line visibly meets a node, rather
+  // than to the left of the entire bounding box of an endpoint node.
+  const lineToolbarAnchorPosition = useMemo(() => {
     if (!openLineEdge) return null;
     const sourceNode = nodes.find(node => node.id === openLineEdge.source);
     const targetNode = nodes.find(node => node.id === openLineEdge.target);
-    if (!sourceNode) return openLineEdge.target;
-    if (!targetNode) return openLineEdge.source;
-    return sourceNode.position.x <= targetNode.position.x
-      ? sourceNode.id
-      : targetNode.id;
+    if (!sourceNode || !targetNode) return null;
+    const sourcePoint = endpointFlowPositionFromState(
+      openLineEdge,
+      'source',
+      sourceNode
+    );
+    const targetPoint = endpointFlowPositionFromState(
+      openLineEdge,
+      'target',
+      targetNode
+    );
+    return sourcePoint.x <= targetPoint.x ? sourcePoint : targetPoint;
   }, [openLineEdge, nodes]);
 
   return (
@@ -655,10 +664,10 @@ export default function ReactFlowCanvas({
               }}
               defaultMarkerColor={DEFAULT_STROKE_COLOR}
             >
-              {openLineEdge && lineToolbarAnchorId && (
+              {openLineEdge && lineToolbarAnchorPosition && (
                 <LineEdgeToolbar
                   edge={openLineEdge}
-                  anchorNodeId={lineToolbarAnchorId}
+                  anchorFlowPosition={lineToolbarAnchorPosition}
                   onSelectColor={value =>
                     setLineEdgeColor(openLineEdge.id, value)
                   }

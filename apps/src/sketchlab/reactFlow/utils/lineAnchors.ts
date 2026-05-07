@@ -6,7 +6,11 @@ import {
 } from '@cdo/apps/lab2/types';
 import {createUuid} from '@cdo/apps/utils';
 
-import {LINE_ANCHOR_SIZE_PX} from '../constants';
+import {
+  DEFAULT_NODE_HEIGHT,
+  DEFAULT_NODE_WIDTH,
+  LINE_ANCHOR_SIZE_PX,
+} from '../constants';
 
 import {endpointPatch} from './handleSnap';
 
@@ -96,6 +100,43 @@ export function resolveEdgeEndpoint(
     screenToFlowPosition
   );
   return flowPosition ? {flowPosition, node} : null;
+}
+
+// Pure variant of resolveEdgeEndpoint: computes the flow-coordinate
+// position of an edge endpoint from React state alone, without measuring
+// the DOM. Handle ids on connection nodes follow `<side>-<role>`
+// (e.g. `right-source`, `top-target`); we parse the side to place the
+// point on the matching edge of the node's bounding box. Falls back to
+// node center when the handle id is missing or unrecognized.
+export function endpointFlowPositionFromState(
+  edge: SketchlabReactFlowEdge,
+  side: 'source' | 'target',
+  node: SketchlabReactFlowNode
+): XYPosition {
+  if (node.type === 'lineAnchor') {
+    return anchorHandleFlowPosition(node.position, side);
+  }
+  const handleId = side === 'source' ? edge.sourceHandle : edge.targetHandle;
+  const handleSide = handleId?.split('-')[0];
+  const styleWidth =
+    typeof node.style?.width === 'number' ? node.style.width : undefined;
+  const styleHeight =
+    typeof node.style?.height === 'number' ? node.style.height : undefined;
+  const width = node.width ?? styleWidth ?? DEFAULT_NODE_WIDTH;
+  const height = node.height ?? styleHeight ?? DEFAULT_NODE_HEIGHT;
+  const {x, y} = node.position;
+  switch (handleSide) {
+    case 'left':
+      return {x, y: y + height / 2};
+    case 'right':
+      return {x: x + width, y: y + height / 2};
+    case 'top':
+      return {x: x + width / 2, y};
+    case 'bottom':
+      return {x: x + width / 2, y: y + height};
+    default:
+      return {x: x + width / 2, y: y + height / 2};
+  }
 }
 
 // Resolves the on-screen position of a node's handle to canvas coordinates.
