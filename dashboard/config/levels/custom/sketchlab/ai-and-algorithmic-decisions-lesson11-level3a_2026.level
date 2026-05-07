@@ -1,7 +1,7 @@
 <Sketchlab>
   <config><![CDATA[{
   "game_id": 75,
-  "created_at": "2026-04-29T00:49:37.000Z",
+  "created_at": "2026-04-20T06:58:42.000Z",
   "level_num": "custom",
   "user_id": 18602,
   "properties": {
@@ -32,10 +32,7 @@
               "height": 624
             },
             "dragging": false,
-            "selected": false,
-            "domAttributes": {
-              "tabIndex": -1
-            }
+            "zIndex": -1
           },
           {
             "id": "2GO16Pe_IhXivVZyA4Y20",
@@ -268,8 +265,8 @@
           }
         ],
         "viewport": {
-          "x": 340.9839029329231,
-          "y": 25.988902494019953,
+          "x": 144.98390293292312,
+          "y": 15.244792386598078,
           "zoom": 0.5938062456817199
         }
       }
@@ -7334,6 +7331,6 @@
     "name_suffix": "_2026"
   },
   "published": true,
-  "audit_log": "[{\"changed_at\":\"2026-04-20T06:58:42.285+00:00\",\"changed\":[\"cloned from \\\"ai-and-algorithmic-decisions-lesson11-level1b_2026\\\"\"],\"cloned_from\":\"ai-and-algorithmic-decisions-lesson11-level1b_2026\"},{\"changed_at\":\"2026-04-20 07:00:51 +0000\",\"changed\":[\"long_instructions\",\"display_name\",\"bubble_choice_description\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-04-20 07:03:38 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-04-20 07:05:44 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-05-01 13:32:52 -0400\",\"changed\":[\"start_sources\"],\"changed_by_id\":1,\"changed_by_email\":\"levelbuilder@dev.com\"},{\"changed_at\":\"2026-05-01 13:33:16 -0400\",\"changed\":[\"start_sources\"],\"changed_by_id\":1,\"changed_by_email\":\"levelbuilder@dev.com\"}]"
+  "audit_log": "[{\"changed_at\":\"2026-04-20T06:58:42.285+00:00\",\"changed\":[\"cloned from \\\"ai-and-algorithmic-decisions-lesson11-level1b_2026\\\"\"],\"cloned_from\":\"ai-and-algorithmic-decisions-lesson11-level1b_2026\"},{\"changed_at\":\"2026-04-20 07:00:51 +0000\",\"changed\":[\"long_instructions\",\"display_name\",\"bubble_choice_description\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-04-20 07:03:38 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-04-20 07:05:44 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-05-01 13:32:52 -0400\",\"changed\":[\"start_sources\"],\"changed_by_id\":1,\"changed_by_email\":\"levelbuilder@dev.com\"},{\"changed_at\":\"2026-05-01 13:33:16 -0400\",\"changed\":[\"start_sources\"],\"changed_by_id\":1,\"changed_by_email\":\"levelbuilder@dev.com\"},{\"changed_at\":\"2026-05-06 20:26:31 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":155,\"changed_by_email\":\"dani@code.org\"}]"
 }]]></config>
 </Sketchlab>
