@@ -55,7 +55,7 @@ const dateTimeName = (now: Date = new Date()): string => {
   const hour12 = rawHour % 12 || 12;
   const hh = String(hour12).padStart(2, '0');
   const mm = String(now.getMinutes()).padStart(2, '0');
-  return `${month}-${day}-${hh}${mm}${ampm}`;
+  return `${month}-${day}-${hh}_${mm}${ampm}`;
 };
 
 // TODO: replace with a shared util.

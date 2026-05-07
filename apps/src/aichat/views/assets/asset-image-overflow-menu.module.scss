@@ -9,16 +9,20 @@
   transition: opacity 0.15s ease;
 }
 
-.menuButton {
+// element + class beats MUI component library specificity (same pattern as
+// button.button-kebab in filebrowser.module.scss)
+button.menuButton {
   width: 24px;
   height: 24px;
-  background-color: rgb(0 0 0 / 0.55);
-  color: var(--text-neutral-white-fixed);
+  background-color: rgb(255 255 255 / 0.85) !important;
+  color: var(--text-neutral-primary) !important;
+  box-shadow: 0 1px 4px rgb(0 0 0 / 0.4) !important;
 
   &:hover,
   &:focus-visible {
-    background-color: rgb(0 0 0 / 0.75);
-    color: var(--text-neutral-white-fixed);
+    background-color: rgb(255 255 255 / 1) !important;
+    color: var(--text-neutral-primary) !important;
+    box-shadow: 0 1px 4px rgb(0 0 0 / 0.4) !important;
   }
 
   i {
