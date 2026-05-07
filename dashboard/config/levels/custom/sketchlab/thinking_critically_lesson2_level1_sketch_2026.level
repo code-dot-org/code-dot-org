@@ -1,12 +1,13 @@
 <Sketchlab>
   <config><![CDATA[{
+  "published": true,
   "game_id": 75,
   "created_at": "2026-04-22T21:14:45.000Z",
   "level_num": "custom",
   "user_id": 18603,
   "properties": {
     "encrypted": "false",
-    "long_instructions": "##Digital Gallery Walk\r\n\r\n1. Use the hand tool and zoom in/out to move around the canvas.\r\n2. After you look at all nine posters, try circling some of the designs and ideas you like.\r\n3. You can type notes using the text tool. \r\n\r\n\r\n",
+    "long_instructions": "## Digital Gallery Walk\r\n\r\n1. Use the hand tool and zoom in/out to move around the canvas. As you look at each guide, ask yourself:\r\n\r\n   - What are the separate sections?\r\n   - What does each section do?\r\n   - What would be missing if one section was removed?\r\n\r\n   Use the text tool to label what you notice on two or three guides.\r\n\r\n2. After you look at all nine posters, try circling some of the designs and ideas you like.\r\n\r\n\r\n",
     "start_sources": {
       "source": {
         "type": "excalidraw",
@@ -1870,7 +1871,6 @@
     },
     "name_suffix": "_2026"
   },
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2026-04-22T21:14:45.218+00:00\",\"changed\":[\"cloned from \\\"aid-thinking-critically-lesson2-level2_2026-test_2026-pilot_2026\\\"\"],\"cloned_from\":\"aid-thinking-critically-lesson2-level2_2026-test_2026-pilot_2026\"},{\"changed_at\":\"2026-04-22 21:39:46 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-04-22 21:43:41 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-04-22 21:45:54 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-04-22 21:47:55 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-04-23 15:21:07 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2026-04-29 18:19:47 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2026-04-22T21:14:45.218+00:00\",\"changed\":[\"cloned from \\\"aid-thinking-critically-lesson2-level2_2026-test_2026-pilot_2026\\\"\"],\"cloned_from\":\"aid-thinking-critically-lesson2-level2_2026-test_2026-pilot_2026\"},{\"changed_at\":\"2026-04-22 21:39:46 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-04-22 21:43:41 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-04-22 21:45:54 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-04-22 21:47:55 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-04-23 15:21:07 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2026-04-29 18:19:47 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-05-03 18:36:57 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
 }]]></config>
 </Sketchlab>

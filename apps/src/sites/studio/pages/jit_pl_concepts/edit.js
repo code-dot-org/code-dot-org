@@ -20,6 +20,7 @@ $(document).ready(() => {
     display_name,
     text_content,
     resources,
+    json_videos,
     exemplars,
     misconceptions,
     teaching_tips,
@@ -37,6 +38,7 @@ $(document).ready(() => {
         originalExemplars={exemplars || []}
         originalMisconceptions={misconceptions || []}
         originalTeachingTips={teaching_tips || []}
+        originalJsonVideos={json_videos || []}
       />
     </Provider>,
     document.getElementById('edit-jit-pl-concept'),

@@ -1,9 +1,6 @@
 import {createTheme, ThemeProvider} from '@mui/material/styles';
 import React, {FC, useCallback, useState} from 'react';
 
-import experiments from '@cdo/apps/util/experiments';
-import {useAppSelector} from '@cdo/apps/util/reduxHooks';
-
 const darkTheme = createTheme({
   palette: {
     mode: 'dark',
@@ -21,7 +18,8 @@ const darkTheme = createTheme({
     divider: '#3a4048',
   },
 });
-
+import experiments from '@cdo/apps/util/experiments';
+import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 import {LessonObjectiveReflectionValues} from '@cdo/generated-scripts/sharedConstants';
 
 import FizzyButton from './FizzyButton';

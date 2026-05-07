@@ -78,6 +78,31 @@ class JitPlMisconceptionsControllerTest < ActionController::TestCase
     assert_equal [resource.id], @misconception.resources.map(&:id)
   end
 
+  test 'json_videos are saved when updating a misconception' do
+    sign_in @levelbuilder
+    JitPlConcept.any_instance.stubs(:write_serialization)
+    video = create(:json_video)
+
+    put :update, params: {jit_pl_concept_id: @concept.id, id: @misconception.id, json_video_ids: [video.id]}
+    assert_response :ok
+
+    @misconception.reload
+    assert_equal [video.id], @misconception.json_videos.map(&:id)
+  end
+
+  test 'json_videos are removed when updating a misconception with empty json_video_ids' do
+    sign_in @levelbuilder
+    JitPlConcept.any_instance.stubs(:write_serialization)
+    video = create(:json_video)
+    @misconception.json_videos << video
+
+    put :update, params: {jit_pl_concept_id: @concept.id, id: @misconception.id, json_video_ids: []}
+    assert_response :ok
+
+    @misconception.reload
+    assert_empty @misconception.json_videos
+  end
+
   test 'resources are removed when updating with empty resource_ids' do
     sign_in @levelbuilder
     JitPlConcept.any_instance.stubs(:write_serialization)

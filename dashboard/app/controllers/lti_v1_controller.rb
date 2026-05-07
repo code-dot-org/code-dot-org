@@ -257,32 +257,36 @@ class LtiV1Controller < ApplicationController
   end
 
   def render_sync_course_error(reason, status, error = nil, message: nil)
-    # We want to log the error to Honeybadger, as we don't expect this to happen
-    # often.
-    honeybadger_id = Honeybadger.notify(
-      'LTI roster sync error',
-      context: {
-        reason:,
-        details: message,
-      }
-    )
+    error_id = capture_sync_course_error_id(reason, message)
     Clients::LtiLogger.log_event(
       message,
       {
         reason:,
         status:,
         error:,
-        honeybadger_id:,
+        error_id:,
       }
     )
     @lti_section_sync_result = {error: error, message: message}
-    @lti_section_sync_result[:honeybadger_id] = honeybadger_id if honeybadger_id
+    @lti_section_sync_result[:error_id] = error_id if error_id
     return respond_to do |format|
       format.html do
         render lti_v1_sync_course_path, status: status
       end
       format.json {render json: @lti_section_sync_result, status: status}
     end
+  end
+
+  def capture_sync_course_error_id(reason, message)
+    event = Observability::Errors.capture_message(
+      'LTI roster sync error',
+      extra: {
+        reason:,
+        details: message,
+      }
+    )
+
+    event&.event_id
   end
 
   # GET /lti/v1/sync_course

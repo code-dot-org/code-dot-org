@@ -107,6 +107,38 @@
   cursor: pointer;
 }
 
+// JsonVideosEditor table
+.videoSearchWrapper {
+  margin-bottom: 8px;
+}
+
+.videoTable {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 8px;
+}
+
+.videoTh {
+  text-align: left;
+  padding: 4px 8px;
+  border-bottom: 1px solid #ddd;
+  background: #f5f5f5;
+}
+
+.videoThActions {
+  text-align: left;
+  padding: 4px 8px;
+  border-bottom: 1px solid #ddd;
+  background: #f5f5f5;
+  width: 8%;
+}
+
+.videoTd {
+  padding: 4px 8px;
+  border-bottom: 1px solid #eee;
+  vertical-align: middle;
+}
+
 // Top-level concept form (JitPlConceptFormEditor, NewJitPlConceptForm)
 .conceptLabel {
   margin-bottom: 20px;

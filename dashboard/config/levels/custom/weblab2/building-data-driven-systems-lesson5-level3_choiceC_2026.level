@@ -1,0 +1,52 @@
+<Weblab2>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 74,
+  "created_at": "2026-05-01T23:03:44.000Z",
+  "level_num": "custom",
+  "user_id": 22366,
+  "properties": {
+    "require_edit_to_continue": "true",
+    "encrypted": "false",
+    "display_name": "Transit Stops",
+    "long_instructions": "## Examine the Display\r\n\r\n### **Do This:**\r\n\r\n1. Run the app and look at the stops displayed.\r\n2. Compare the stops shown to the full `stops` array in the code.\r\n3. Look for patterns in what is shown.\r\n\r\n\r\n### **Reflect:**\r\n\r\n- What stops are shown in the app?\r\n- Does the app show all stops in the dataset?\r\n- How is what you see different from the full dataset?\r\n- What might a user assume based on what is shown?",
+    "bubble_choice_description": "Look at how the app displays transit stops and compare it to the full dataset.",
+    "thumbnail_url": "https://images.code.org/e448b9817fba71ea568a9072a1f6d4de-transit_stop.png",
+    "offer_browser_tts": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "false",
+    "widget_view": "false",
+    "initial_view_mode": "split",
+    "predict_settings": {
+      "isPredictLevel": false,
+      "solution": "",
+      "questionType": "freeResponse",
+      "placeholderText": "",
+      "multipleChoiceOptions": [
+        ""
+      ],
+      "freeResponseHeight": 50,
+      "codeEditableAfterSubmit": false
+    },
+    "ai_tutor_prompt_settings": {
+      "answerTypes": [
+        "buildHTML",
+        "buildCSS",
+        "ask",
+        "hint",
+        "debug",
+        "example",
+        "explainCode",
+        "documentation",
+        "pseudocode",
+        "testCase"
+      ],
+      "answerTypeCustomizations": {
+      }
+    },
+    "project_template_level_name": "template_building-data-driven-systems-lesson5-level1_choicec_2026"
+  },
+  "audit_log": "[{\"changed_at\":\"2026-05-01T23:03:44.084+00:00\",\"changed\":[\"cloned from \\\"building-data-driven-systems-lesson5-level3_choiceA_2026\\\"\"],\"cloned_from\":\"building-data-driven-systems-lesson5-level3_choiceA_2026\"},{\"changed_at\":\"2026-05-04 14:15:38 +0000\",\"changed\":[\"require_edit_to_continue\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-05-04 14:43:49 +0000\",\"changed\":[],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"}]"
+}]]></config>
+</Weblab2>

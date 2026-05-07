@@ -9,9 +9,18 @@ import styles from './element-toolbar.module.scss';
 interface ActionsGroupProps {
   onDelete?: () => void;
   onLock?: () => void;
+  onBringToFront?: () => void;
+  onSendToBack?: () => void;
+  onDuplicate?: () => void;
 }
 
-export default function ActionsGroup({onDelete, onLock}: ActionsGroupProps) {
+export default function ActionsGroup({
+  onDelete,
+  onLock,
+  onBringToFront,
+  onSendToBack,
+  onDuplicate,
+}: ActionsGroupProps) {
   const isStartMode = getIsStartMode();
 
   return (
@@ -24,6 +33,18 @@ export default function ActionsGroup({onDelete, onLock}: ActionsGroupProps) {
         Actions
       </Typography>
       <div className={styles.fontSizeButtons}>
+        {onDuplicate && (
+          <Tooltip title="Duplicate" placement="top">
+            <IconButton
+              size="small"
+              className={styles.fontSizeButton}
+              aria-label="Duplicate"
+              onClick={onDuplicate}
+            >
+              <FontAwesomeV6Icon iconName="copy" />
+            </IconButton>
+          </Tooltip>
+        )}
         {onDelete && (
           <Tooltip title="Delete" placement="top">
             <IconButton
@@ -45,6 +66,30 @@ export default function ActionsGroup({onDelete, onLock}: ActionsGroupProps) {
               onClick={onLock}
             >
               <FontAwesomeV6Icon iconName="lock" />
+            </IconButton>
+          </Tooltip>
+        )}
+        {onBringToFront && (
+          <Tooltip title="Bring to front" placement="top">
+            <IconButton
+              size="small"
+              className={styles.fontSizeButton}
+              aria-label="Bring to front"
+              onClick={onBringToFront}
+            >
+              <FontAwesomeV6Icon iconName="bring-front" />
+            </IconButton>
+          </Tooltip>
+        )}
+        {onSendToBack && (
+          <Tooltip title="Send to back" placement="top">
+            <IconButton
+              size="small"
+              className={styles.fontSizeButton}
+              aria-label="Send to back"
+              onClick={onSendToBack}
+            >
+              <FontAwesomeV6Icon iconName="send-back" />
             </IconButton>
           </Tooltip>
         )}

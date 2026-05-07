@@ -15,8 +15,15 @@ export const LINE_ANCHOR_SIZE_PX = 10;
 
 export const LINE_DEFAULT_LENGTH_PX = 220;
 
+// Magnetic snap radius (in screen pixels) used when reconnecting an edge
+// endpoint to a node handle. Applies to mouse drags.
+export const LINE_RECONNECT_SNAP_RADIUS_PX = 20;
+
 // Milliseconds to debounce project saves after canvas changes.
 export const SAVE_DEBOUNCE_MS = 300;
+
+// How far to offset pasted/duplicated elements from their original position.
+export const PASTE_OFFSET_PX = 20;
 
 // S3 asset path prefix for project files.
 export const ASSET_PATH_PREFIX = '/v3/assets';
