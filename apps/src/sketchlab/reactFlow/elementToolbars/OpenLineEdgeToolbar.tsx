@@ -23,13 +23,7 @@ interface OpenLineEdgeToolbarProps {
 /**
  * Renders the line-edge toolbar for the currently open line edge, anchored
  * at the leftmost endpoint with padding tuned to the visible handle.
- *
- * The anchor is the leftmost endpoint of the edge, so the toolbar sits on
- * the left side of the line. The padding accounts for the visible handle
- * circle, whose leftward overhang past the line endpoint differs by node
- * type and scales with zoom (handles live inside React Flow's transformed
- * pane). Holding the visible gap constant across zoom keeps the toolbar
- * the same apparent distance from the handle whatever the zoom level.
+ * Renders nothing if no line edge is open.
  */
 export default function OpenLineEdgeToolbar({
   edges,
