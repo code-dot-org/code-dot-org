@@ -18,13 +18,31 @@ You can do Code.org development using macOS, Ubuntu, or Windows (running Ubuntu 
 
 1. Install OS-specific prerequisites
     - See the appropriate section below: [macOS](#macos), [Ubuntu](#ubuntu-2004), [Windows](#windows)
+
+1. Install **Ruby**, **Node.js**, and **Python** with **mise**, and enable ***yarn****
+    1. Configure `mise` to follow [.ruby-version](.ruby-version), [.nvmrc](.nvmrc), and [.python-version](.python-version) files:
+        ```
+        mise settings set idiomatic_version_file_enable_tools '["node", "python", "ruby"]'
+        ```
+    1. Install Ruby, Node and Python:
+        ```
+        mise install
+        ```
+
+   1. Enable corepack to install **yarn**:
+        ```
+        corepack enable
+        ```
+
     - *Important*: When done, check for correct versions of these dependencies:
 
      ```sh
-     ruby --version     # --> ruby 3.1.7
-     node --version     # --> v20.18.3
-     git-lfs --version  #  >= git-lfs/3.0
-     uv --version       #  >= 0.5.8
+     ruby --version     # matches .ruby-version
+     node --version     # matches .nvmrc
+     python3 --version  # matches .python-version
+     yarn --version.    # >= 1.22
+     git-lfs --version  # >= git-lfs/3.0
+     uv --version       # >= 0.5.8
      ```
 
 1. `git lfs pull`
@@ -128,7 +146,7 @@ These steps are for Apple devices running **macOS 14.x**, including those runnin
 
 1. Install **brew packages**:
    ```
-   brew install rbenv ruby-build nvm uv mysql@8.0 redis git-lfs enscript gs imagemagick coreutils parallel tidy-html5 openssl libffi pdftk-java
+   brew install mise uv mysql@8.0 redis git-lfs enscript gs imagemagick coreutils parallel tidy-html5 openssl libffi pdftk-java
    ```
 
 1. Initialize **Git LFS**:
@@ -171,33 +189,11 @@ These steps are for Apple devices running **macOS 14.x**, including those runnin
         brew services   # should show: "started"
         ```
 
-1.  Install **Ruby**
-    1. Configure zsh to load rbenv ([other shells](https://github.com/rbenv/rbenv#basic-git-checkoutshells)): 
+1. Configure [mise](https://mise.jdx.dev/) which will later install Ruby, Python & Node
+    1. Configure zsh to load mise:
         ```
-        echo 'eval "$(rbenv init - zsh)"' >> ~/.zshrc && source ~/.zshrc
-        ```
-    2. Install ruby version specified by [.ruby-version](.ruby-version):
-        ```
-        rbenv install --skip-existing    # run from the project root directory
-        ```
-
-1.  Install **Node.js**
-    1. Install node version specified by [.nvmrc](.nvmrc):
-        ```
-        nvm install    # run from the project root directory
-        ```
-      <details>
-        <summary>If you get an error <code>nvm: command not found</code></summary>
-        Run `brew info nvm` and follow the instructions there. They will include making an `.nvm` folder and updating your shell configuration file.
-      </details>
-
-    2. Set default node version:
-        ```
-        nvm alias default $(cat ./.nvmrc)
-        ```
-    3. Enable corepack to install **yarn**:
-        ```
-        corepack enable
+            echo 'export PATH="$HOME/.local/share/mise/shims:$PATH"' >> ~/.zprofile
+            echo 'eval "$(mise activate zsh)"' >> ~/.zshrc
         ```
 
 1. Install [Google Chrome](https://www.google.com/chrome/), needed for some local app tests.
@@ -225,7 +221,7 @@ These steps are for Apple devices running **macOS 14.x**, including those runnin
 Note: Virtual Machine Users should check the [Alternative note](#alternative-use-an-ubuntu-vm) below before starting
 
 1. `sudo apt-get update`
-1. `sudo apt-get install -y git mysql-server mysql-client libmysqlclient-dev libxslt1-dev libssl-dev zlib1g-dev imagemagick libmagickcore-dev libmagickwand-dev openjdk-11-jre-headless libcairo2-dev libjpeg8-dev libpango1.0-dev libgif-dev curl pdftk enscript build-essential redis-server rbenv chromium-browser parallel python3-pip`
+1. `sudo apt-get install -y git mysql-server mysql-client libmysqlclient-dev libxslt1-dev libssl-dev zlib1g-dev imagemagick libmagickcore-dev libmagickwand-dev openjdk-11-jre-headless libcairo2-dev libjpeg8-dev libpango1.0-dev libgif-dev curl pdftk enscript build-essential redis-server chromium-browser parallel python3-pip`
     * **Hit enter and select default options for any configuration popups, leaving mysql passwords blank**
     <details> 
       <summary>Troubleshoot: <code>E: Package 'pdftk' has no installation candidate</code>.</summary>
@@ -251,27 +247,22 @@ Note: Virtual Machine Users should check the [Alternative note](#alternative-use
        - This adds a `[filter "lfs"]` section to your `~/.gitconfig`.
        - Note: the install command must be run while you are **outside** a git repo directory. If you run it from inside a git repo, it will instead try to install git hooks in that repo.
 
-1. Install Node and Nodejs
-    1. Install the latest version of [Node Version Manager (nvm)](https://github.com/nvm-sh/nvm)
-    1. Running `nvm install` or `nvm use` within the project directory will install and use the version specified in [.nvmrc](.nvmrc)
-    1. `node --version` Double check the version of node you are using. If it is wrong, then try restarting your terminal.
-1. Ensure rbenv and ruby-build are properly installed
-    1. run `rbenv init` and follow the instructions.
-    1. Install [ruby-build as a rbenv plugin](https://github.com/rbenv/ruby-build#readme)
-        1. `mkdir -p "$(rbenv root)"/plugins`
-        1. `git clone https://github.com/rbenv/ruby-build.git "$(rbenv root)"/plugins/ruby-build`
-    1. If there are any errors (they appear red), follow the [`rbenv` installation instructions] (https://github.com/rbenv/rbenv#basic-github-checkout) to properly configure `rbenv`, following steps for **Ubuntu Desktop** so that config changes go into `.bashrc`.
-    1. **Note:** Ubuntu 22.04 ships with versions of `libssl` and `openssl` that are incompatible with `ruby-build`; see https://github.com/rbenv/ruby-build/discussions/1940 for context
-        1. As a result, attempts to run `rbenv install` will fail. To resolve, compile a valid version of `openssl` locally and direct `rbenv` to configure ruby to use it as described here: https://github.com/rbenv/ruby-build/discussions/1940#discussioncomment-2663209
-1. Install Ruby with rbenv
-    1. Execute `rbenv install --skip-existing` from the root directory, which will install the version specified in ".ruby-version"
-    1. If your PATH is missing `~/.rbenv/shims`, the next two commands might not work. Edit your .bashrc to include the following line:
-       `export PATH="$HOME/.rbenv/bin:~/.rbenv/shims:$PATH"`, then run `source .bashrc` for the change to take effect (as seen in [this github issue](https://github.com/rbenv/rbenv/issues/877)).
-    1. `rbenv rehash`
-1. Install uv, which will be used later by `rake install` to install python
+1. Install [mise](https://mise.jdx.dev/) which will later install Ruby, Python & Node
+    1. Install `mise` from its official apt repository:
+        ```
+        sudo add-apt-repository -y ppa:jdxcode/mise
+        sudo apt update -y
+        sudo apt install -y mise
+        ```
+    1. Configure bash to load mise:
+        ```
+        echo 'export PATH="$HOME/.local/share/mise/shims:$PATH"' >> ~/.profile
+        echo 'eval "$(mise activate bash)"' >> ~/.bashrc
+        ```
+
+1. Install uv, which will be used later for python packages and virtualenvs
     1. `curl -LsSf https://astral.sh/uv/install.sh | sh`
         - alternatively, if you prefer pipx and have it configured path-wise: `pipx install uv`
-1. Enable **corepack** to install **yarn**: `corepack enable`
 1. Make it so that you can run apps tests locally
     1. Add the following to `~/.bashrc` or your desired shell configuration file:
         1. `export CHROME_BIN=$(which chromium-browser)`
