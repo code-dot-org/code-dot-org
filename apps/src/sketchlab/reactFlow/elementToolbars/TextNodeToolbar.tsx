@@ -14,7 +14,6 @@ import {
   DEFAULT_FONT_COLOR,
   DEFAULT_FONT_SIZE,
   DEFAULT_TEXT_ALIGN,
-  FontSizeValue,
   STROKE_FONT_PALETTE,
   TextAlignValue,
 } from './toolbarPalettes';
@@ -43,9 +42,7 @@ export default function TextNodeToolbar({nodeId}: TextNodeToolbarProps) {
         <>
           <FontSizeGroup
             selectedValue={fontSize ?? DEFAULT_FONT_SIZE}
-            onSelect={value =>
-              patchNodeData({fontSize: value as FontSizeValue})
-            }
+            onSelect={value => patchNodeData({fontSize: value})}
           />
           <TextAlignGroup
             selectedValue={textAlign ?? DEFAULT_TEXT_ALIGN}
