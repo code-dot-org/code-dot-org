@@ -2695,7 +2695,7 @@ __metadata:
     idempotent-babel-polyfill: "npm:6.26.0-1"
     identity-obj-proxy: "npm:^3.0.0"
     jest: "npm:^29.7.0"
-    jquery: "npm:1.12.1"
+    jquery: "npm:3.5.0"
     lodash: "npm:^4.17.5"
     mem: "npm:>=4.0.0"
     messageformat: "npm:2.3.0"
@@ -18941,10 +18941,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"jquery@npm:1.12.1":
-  version: 1.12.1
-  resolution: "jquery@npm:1.12.1"
-  checksum: 10c0/4a27a3c590bc39d21a27e9ea23612d21ea6bf241728fb13a3661d832ae435217d337b35bc69b92a6cc5f5606fbd11b945bdf8a62201c58b75c0de459eea98c33
+"jquery@npm:3.5.0":
+  version: 3.5.0
+  resolution: "jquery@npm:3.5.0"
+  checksum: 10c0/e36b8e417ac354c91379566888a0be70ebb565dc28c54f33d7c3710ba2c89a33085defa29ace2b1ca053f893d0f67994df52a253b57ae2b4278b75f5cf1e2547
   languageName: node
   linkType: hard
 

@@ -67,7 +67,7 @@
     "idempotent-babel-polyfill": "6.26.0-1",
     "identity-obj-proxy": "^3.0.0",
     "jest": "^29.7.0",
-    "jquery": "1.12.1",
+    "jquery": "3.5.0",
     "lodash": "^4.17.5",
     "mem": ">=4.0.0",
     "node-fetch": "^2.6.0",
