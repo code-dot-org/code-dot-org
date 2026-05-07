@@ -154,24 +154,11 @@ export default function Toolbar({onAddNode, levelName}: ToolbarProps) {
         </IconButton>
       </Tooltip>
 
-      <Tooltip title="Add line" placement="right">
-        <IconButton
-          aria-label="Add line"
-          id={`${uid}-line`}
-          onClick={() => onAddNode({type: 'line'})}
-          size="small"
-          color="tertiary"
-          variant="outlined"
-        >
-          <FontAwesomeV6Icon iconName="minus" />
-        </IconButton>
-      </Tooltip>
-
       <Tooltip title="Add arrow" placement="right">
         <IconButton
           aria-label="Add arrow"
           id={`${uid}-arrow`}
-          onClick={() => onAddNode({type: 'arrow'})}
+          onClick={() => onAddNode({type: 'line'})}
           size="small"
           color="tertiary"
           variant="outlined"

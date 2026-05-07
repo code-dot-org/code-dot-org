@@ -23,9 +23,10 @@ const darkTheme = createTheme({
 
 import FizzyButton from './FizzyButton';
 import LevelsAttemptedBox from './LevelsAttemptedBox';
-import PracticeBox from './PracticeBox';
-import ReflectionBox from './ReflectionBox';
+import PreSkillsCheck from './PreSkillsCheck';
+import ReflectionBox from './Reflection/ReflectionBox';
 import InterventionBox from './ReviewModalities/InterventionBox';
+import SkillsCheck from './SkillsCheck/SkillsCheck';
 import TimeSpentBox from './TimeSpentBox';
 import TutorSummaryBox from './TutorSummaryBox';
 import {LessonDeepDiveData, ReflectionData} from './types';
@@ -41,7 +42,8 @@ const BOX_IDS = [
   'validated-levels',
   'reflection',
   'intervention',
-  'practice',
+  'pre-skills-check',
+  'skills-check',
   'tutor-summary',
 ] as const;
 
@@ -116,8 +118,10 @@ const LessonDeepDiveContainer: FC<LessonDeepDiveContainerProps> = ({
         return (
           <ReflectionBox
             lessonId={lessonDeepDiveData.lessonId}
+            unitLabel={lessonDeepDiveData.unitLabel}
             objectives={lessonDeepDiveData.objectives}
             onSubmitComplete={handleReflectionComplete}
+            onNext={goToNext}
             initialValues={reflectionData}
           />
         );
@@ -135,15 +139,20 @@ const LessonDeepDiveContainer: FC<LessonDeepDiveContainerProps> = ({
             onNext={goToNext}
           />
         );
-      case 'practice':
+      case 'pre-skills-check':
         return (
-          <PracticeBox
+          <PreSkillsCheck onKeepPracticing={goToPrev} onTestSkills={goToNext} />
+        );
+      case 'skills-check':
+        return (
+          <SkillsCheck
             lessonId={lessonDeepDiveData.lessonId}
             lessonName={lessonDeepDiveData.lessonName}
             lessonSummary={lessonDeepDiveData.lessonSummary}
             vocabulary={lessonDeepDiveData.vocabulary}
             objectives={lessonDeepDiveData.objectives}
             reflectionData={reflectionData}
+            onComplete={goToNext}
           />
         );
       case 'tutor-summary':
@@ -182,27 +191,29 @@ const LessonDeepDiveContainer: FC<LessonDeepDiveContainerProps> = ({
 
         <div className={styles.box}>{renderBox()}</div>
 
-        {!isLast && (
-          <div className={styles.bottomNav}>
-            <FizzyButton onClick={goToNext} ariaLabel="Next">
-              <svg
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="none"
-                aria-hidden="true"
-              >
-                <path
-                  d="M7 10l5 5 5-5"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                />
-              </svg>
-            </FizzyButton>
-          </div>
-        )}
+        {!isLast &&
+          BOX_IDS[currentIndex] !== 'pre-skills-check' &&
+          BOX_IDS[currentIndex] !== 'skills-check' && (
+            <div className={styles.bottomNav}>
+              <FizzyButton onClick={goToNext} ariaLabel="Next">
+                <svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M7 10l5 5 5-5"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  />
+                </svg>
+              </FizzyButton>
+            </div>
+          )}
       </div>
     </ThemeProvider>
   );

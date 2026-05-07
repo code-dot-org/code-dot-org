@@ -1,7 +1,7 @@
 <Sketchlab>
   <config><![CDATA[{
   "game_id": 75,
-  "created_at": "2026-04-29T00:49:37.000Z",
+  "created_at": "2026-04-14T23:01:20.000Z",
   "level_num": "custom",
   "user_id": 18603,
   "properties": {
@@ -24,20 +24,21 @@
             "data": {
               "shapeType": "rectangle",
               "label": "",
-              "backgroundColor": "#e9ecef",
+              "backgroundColor": "var(--sketchlab-bg-purple)",
               "strokeColor": "#1e1e1e"
             },
             "measured": {
               "width": 821,
               "height": 816
-            }
+            },
+            "zIndex": -2
           },
           {
             "id": "Bai414pWxTjKhQUOPfvMf",
             "type": "shape",
             "position": {
-              "x": 1014.6336923023989,
-              "y": -2198.7415628281824
+              "x": 1022.6336923023989,
+              "y": -2194.7415628281824
             },
             "style": {
               "width": 405.99998474121094,
@@ -52,7 +53,9 @@
             "measured": {
               "width": 406,
               "height": 635
-            }
+            },
+            "dragging": false,
+            "zIndex": -1
           },
           {
             "id": "FtgHojQj0r-NGEdWG3qwn",
@@ -216,7 +219,7 @@
             "id": "McFE1K1B6hPIr4g31ZgHp",
             "type": "shape",
             "position": {
-              "x": 1650.8391041575326,
+              "x": 1654.2951041575325,
               "y": -423.55571572189695
             },
             "style": {
@@ -342,10 +345,6 @@
               "width": 221,
               "height": 96
             },
-            "selected": true,
-            "domAttributes": {
-              "tabIndex": 0
-            },
             "width": 221,
             "height": 96,
             "resizing": false
@@ -434,18 +433,14 @@
               "width": 164,
               "height": 47
             },
-            "dragging": false,
-            "selected": true,
-            "domAttributes": {
-              "tabIndex": 0
-            }
+            "dragging": false
           },
           {
             "id": "d084920f-9aba-40a4-a827-ef990ed84cab",
             "type": "lineAnchor",
             "position": {
-              "x": 1319.0633187672427,
-              "y": -1709.741528495907
+              "x": 1277.0633187672427,
+              "y": -1707.741528495907
             },
             "style": {
               "width": 10,
@@ -463,8 +458,8 @@
             "id": "7c9c8a44-0958-4667-8b1e-244078d144ed",
             "type": "lineAnchor",
             "position": {
-              "x": 1363.0633340260317,
-              "y": -1876.7415361253015
+              "x": 1321.0633340260317,
+              "y": -1874.7415361253015
             },
             "style": {
               "width": 10,
@@ -477,6 +472,59 @@
               "width": 10,
               "height": 10
             }
+          },
+          {
+            "id": "dea69974-1fe5-40d3-88ee-562e47f3a423",
+            "type": "text",
+            "data": {
+              "text": "Use dots on shapes to create connectors"
+            },
+            "position": {
+              "x": 1310.6336870950345,
+              "y": -1822.2884360077232
+            },
+            "measured": {
+              "width": 110,
+              "height": 123
+            },
+            "dragging": false,
+            "width": 110,
+            "height": 123,
+            "resizing": false
+          },
+          {
+            "id": "779ff79f-7aa1-46ea-9c5e-5d45bea0c584",
+            "type": "text",
+            "data": {
+              "text": "Yes",
+              "showHandles": false
+            },
+            "position": {
+              "x": 1705.2616870950344,
+              "y": -261.1084360077233
+            },
+            "measured": {
+              "width": 58,
+              "height": 39
+            },
+            "dragging": false
+          },
+          {
+            "id": "6bcb17c0-cbb8-4767-bc76-9363c8abf088",
+            "type": "text",
+            "data": {
+              "text": "No",
+              "showHandles": false
+            },
+            "position": {
+              "x": 1921.2616870950344,
+              "y": -264.3269203827233
+            },
+            "measured": {
+              "width": 58,
+              "height": 39
+            },
+            "dragging": false
           }
         ],
         "edges": [
@@ -485,16 +533,6 @@
             "source": "d084920f-9aba-40a4-a827-ef990ed84cab",
             "target": "7c9c8a44-0958-4667-8b1e-244078d144ed",
             "type": "straight",
-            "markerEnd": {
-              "type": "arrowclosed"
-            }
-          },
-          {
-            "id": "3c9a6ce4-ee23-4c79-ba0b-ad14d948732b",
-            "source": "McFE1K1B6hPIr4g31ZgHp",
-            "target": "vrco96t5fb3aOyVwob9K1",
-            "sourceHandle": "right-source",
-            "targetHandle": "left-target",
             "markerEnd": {
               "type": "arrowclosed"
             }
@@ -548,12 +586,22 @@
             "markerEnd": {
               "type": "arrowclosed"
             }
+          },
+          {
+            "source": "McFE1K1B6hPIr4g31ZgHp",
+            "sourceHandle": "bottom-source",
+            "target": "vrco96t5fb3aOyVwob9K1",
+            "targetHandle": "top-target",
+            "markerEnd": {
+              "type": "arrowclosed"
+            },
+            "id": "xy-edge__McFE1K1B6hPIr4g31ZgHpbottom-source-vrco96t5fb3aOyVwob9K1top-target"
           }
         ],
         "viewport": {
-          "x": -361.83149198501724,
-          "y": 1197.1574626327679,
-          "zoom": 0.5
+          "x": -500.84125410592287,
+          "y": 1288.4353516031385,
+          "zoom": 0.5787037037037038
         }
       }
     },
@@ -2349,6 +2397,6 @@
     "name_suffix": "_2026"
   },
   "published": true,
-  "audit_log": "[{\"changed_at\":\"2026-04-14T23:01:20.719+00:00\",\"changed\":[\"cloned from \\\"ai-and-algorithmic-decisions-lesson5-level1a_2026\\\"\"],\"cloned_from\":\"ai-and-algorithmic-decisions-lesson5-level1a_2026\"},{\"changed_at\":\"2026-04-14 23:02:03 +0000\",\"changed\":[\"long_instructions\",\"display_name\",\"bubble_choice_description\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-14 23:04:53 +0000\",\"changed\":[\"display_name\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-14 23:21:59 +0000\",\"changed\":[\"thumbnail_url\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-05-01 12:42:10 -0400\",\"changed\":[\"start_sources\"],\"changed_by_id\":1,\"changed_by_email\":\"levelbuilder@dev.com\"}]"
+  "audit_log": "[{\"changed_at\":\"2026-04-14T23:01:20.719+00:00\",\"changed\":[\"cloned from \\\"ai-and-algorithmic-decisions-lesson5-level1a_2026\\\"\"],\"cloned_from\":\"ai-and-algorithmic-decisions-lesson5-level1a_2026\"},{\"changed_at\":\"2026-04-14 23:02:03 +0000\",\"changed\":[\"long_instructions\",\"display_name\",\"bubble_choice_description\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-14 23:04:53 +0000\",\"changed\":[\"display_name\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-14 23:21:59 +0000\",\"changed\":[\"thumbnail_url\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-05-01 12:42:10 -0400\",\"changed\":[\"start_sources\"],\"changed_by_id\":1,\"changed_by_email\":\"levelbuilder@dev.com\"},{\"changed_at\":\"2026-05-06 20:15:36 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":155,\"changed_by_email\":\"dani@code.org\"}]"
 }]]></config>
 </Sketchlab>

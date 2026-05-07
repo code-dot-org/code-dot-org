@@ -1,7 +1,7 @@
 <Sketchlab>
   <config><![CDATA[{
   "game_id": 75,
-  "created_at": "2026-03-13T19:11:55.000Z",
+  "created_at": "2026-02-24T18:11:48.000Z",
   "level_num": "custom",
   "user_id": 22366,
   "properties": {
@@ -146,11 +146,7 @@
               "width": 236,
               "height": 47
             },
-            "dragging": false,
-            "selected": false,
-            "domAttributes": {
-              "tabIndex": -1
-            }
+            "dragging": false
           }
         ],
         "edges": [
@@ -196,8 +192,8 @@
           }
         ],
         "viewport": {
-          "x": -125.97774563792859,
-          "y": -197.93230303112404,
+          "x": 57.02225436207135,
+          "y": -124.93230303112404,
           "zoom": 1.418596586047479
         }
       }
@@ -873,6 +869,6 @@
     "teacher_markdown": "Since students are filling out a site map, the goal is to ensure their page titles actually reflect the user experience.\r\n\r\nHave students pretend to navigate the site as if they are a user. \r\n\r\nAsk: \"Can a user find a specific challenge, join it, and get back to the Home page in three clicks or less?\" This helps them identify if their sublevel pages are too buried."
   },
   "published": true,
-  "audit_log": "[{\"changed_at\":\"2026-02-24T18:11:48.331+00:00\",\"changed\":[\"cloned from \\\"ai-generated-design-lesson8-level1a_2025\\\"\"],\"cloned_from\":\"ai-generated-design-lesson8-level1a_2025\"},{\"changed_at\":\"2026-03-12 19:11:36 +0000\",\"changed\":[],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-12 19:12:58 +0000\",\"changed\":[\"teacher_markdown\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-12 19:13:12 +0000\",\"changed\":[\"teacher_markdown\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-16 18:35:51 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-19 19:10:03 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-04-16 15:50:44 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2026-04-16 15:51:39 +0000\",\"changed\":[\"teacher_markdown\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2026-04-30 18:13:58 -0400\",\"changed\":[\"start_sources\"],\"changed_by_id\":1,\"changed_by_email\":\"levelbuilder@dev.com\"}]"
+  "audit_log": "[{\"changed_at\":\"2026-02-24T18:11:48.331+00:00\",\"changed\":[\"cloned from \\\"ai-generated-design-lesson8-level1a_2025\\\"\"],\"cloned_from\":\"ai-generated-design-lesson8-level1a_2025\"},{\"changed_at\":\"2026-03-12 19:11:36 +0000\",\"changed\":[],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-12 19:12:58 +0000\",\"changed\":[\"teacher_markdown\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-12 19:13:12 +0000\",\"changed\":[\"teacher_markdown\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-16 18:35:51 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-19 19:10:03 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-04-16 15:50:44 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2026-04-16 15:51:39 +0000\",\"changed\":[\"teacher_markdown\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2026-04-30 18:13:58 -0400\",\"changed\":[\"start_sources\"],\"changed_by_id\":1,\"changed_by_email\":\"levelbuilder@dev.com\"},{\"changed_at\":\"2026-05-06 19:00:52 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":155,\"changed_by_email\":\"dani@code.org\"}]"
 }]]></config>
 </Sketchlab>
