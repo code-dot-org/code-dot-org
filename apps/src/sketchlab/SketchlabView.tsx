@@ -12,13 +12,14 @@ import ReactFlowSketchLabView, {
 } from './reactFlow/ReactFlowSketchLabView';
 
 export default function SketchlabView(props: LabProps<LevelProperties>) {
-  const useReactFlow = experiments.isEnabledAllowingQueryString('sketch2');
-  const defaultSources = useReactFlow
-    ? REACT_FLOW_DEFAULT_SOURCES
-    : DEFAULT_SOURCES;
-  const InnerView = useReactFlow
-    ? ReactFlowSketchLabView
-    : ExcalidrawSketchLabView;
+  // Legacy version of Sketch Lab is behind a flag for now, so we can check on old behavior.
+  const useExcalidraw = experiments.isEnabledAllowingQueryString('excalidraw');
+  const defaultSources = useExcalidraw
+    ? DEFAULT_SOURCES
+    : REACT_FLOW_DEFAULT_SOURCES;
+  const InnerView = useExcalidraw
+    ? ExcalidrawSketchLabView
+    : ReactFlowSketchLabView;
 
   return (
     <SourcesContainer
