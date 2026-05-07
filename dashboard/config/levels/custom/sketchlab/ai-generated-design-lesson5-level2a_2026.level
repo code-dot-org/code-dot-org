@@ -1,7 +1,7 @@
 <Sketchlab>
   <config><![CDATA[{
   "game_id": 75,
-  "created_at": "2026-03-13T19:11:55.000Z",
+  "created_at": "2026-02-24T18:11:10.000Z",
   "level_num": "custom",
   "user_id": 18603,
   "properties": {
@@ -56,11 +56,7 @@
               "width": 207,
               "height": 75
             },
-            "dragging": false,
-            "selected": true,
-            "domAttributes": {
-              "tabIndex": 0
-            }
+            "dragging": false
           },
           {
             "id": "1h2iRM8cSUy8RCVsRpDP3",
@@ -92,8 +88,8 @@
             "id": "xLSNY3qniAX0mpdb3XGAH",
             "type": "text",
             "position": {
-              "x": -274.9809228645785,
-              "y": -504.5114258210719
+              "x": -256.9809228645785,
+              "y": -558.511425821072
             },
             "data": {
               "text": "2. Select a sample \nuser persona",
@@ -105,11 +101,7 @@
               "width": 200,
               "height": 75
             },
-            "dragging": false,
-            "selected": false,
-            "domAttributes": {
-              "tabIndex": -1
-            }
+            "dragging": false
           },
           {
             "id": "y0liYbHku_76NH-M6FS2e",
@@ -171,24 +163,21 @@
             "id": "ByO9NEtVVhMjN7WzleHor",
             "type": "text",
             "position": {
-              "x": -483.5117204429925,
-              "y": 620.851533511086
+              "x": -395.5117204429925,
+              "y": 240.85153351108602
             },
             "data": {
-              "text": "3. Build a mini brand kit with\n* 3–5 color swatches\n   * A font pair \n   * 1–2 descriptive style words\n\nConnect your design choices for \nyour fictional product back to \nthe sample user persona ",
+              "text": "3. Build a mini brand kit with\n* 3–5 color swatches\n* A font pair \n* 1–2 descriptive style words\n\nConnect your design choices for \nyour fictional product back to \nthe sample user persona ",
               "fontColor": "#1e1e1e",
               "fontSize": "large",
-              "showHandles": false
+              "showHandles": false,
+              "textAlign": "left"
             },
             "measured": {
               "width": 344,
               "height": 247
             },
-            "dragging": false,
-            "selected": false,
-            "domAttributes": {
-              "tabIndex": -1
-            }
+            "dragging": false
           },
           {
             "id": "i_Lc_rlF4ihf6w_AxtKMr",
@@ -264,11 +253,7 @@
               "width": 199,
               "height": 191
             },
-            "dragging": false,
-            "selected": true,
-            "domAttributes": {
-              "tabIndex": 0
-            }
+            "dragging": false
           },
           {
             "id": "Ktbgh7lasjBTnnGh6DRR-",
@@ -318,11 +303,7 @@
               "width": 199,
               "height": 191
             },
-            "dragging": false,
-            "selected": true,
-            "domAttributes": {
-              "tabIndex": 0
-            }
+            "dragging": false
           },
           {
             "id": "xe7ixN-WVThMg_UzPsDJF",
@@ -437,11 +418,7 @@
               "width": 152,
               "height": 47
             },
-            "dragging": false,
-            "selected": true,
-            "domAttributes": {
-              "tabIndex": 0
-            }
+            "dragging": false
           },
           {
             "id": "KH09_Pvz3d-Ve8Yk3KqCL",
@@ -460,11 +437,7 @@
               "width": 119,
               "height": 47
             },
-            "dragging": false,
-            "selected": true,
-            "domAttributes": {
-              "tabIndex": 0
-            }
+            "dragging": false
           },
           {
             "id": "k8HhR1tdIxIvwd0wo4UK4",
@@ -483,11 +456,7 @@
               "width": 285,
               "height": 47
             },
-            "dragging": false,
-            "selected": true,
-            "domAttributes": {
-              "tabIndex": 0
-            }
+            "dragging": false
           },
           {
             "id": "QQ14kVgTK1ZQvkKVs08Ju",
@@ -506,11 +475,7 @@
               "width": 248,
               "height": 47
             },
-            "dragging": false,
-            "selected": true,
-            "domAttributes": {
-              "tabIndex": 0
-            }
+            "dragging": false
           },
           {
             "id": "S94c3ayHDXzMV9rGutqK2",
@@ -535,10 +500,6 @@
               "width": 1038,
               "height": 207
             },
-            "selected": true,
-            "domAttributes": {
-              "tabIndex": 0
-            },
             "dragging": false
           },
           {
@@ -558,18 +519,14 @@
               "width": 143,
               "height": 47
             },
-            "dragging": false,
-            "selected": false,
-            "domAttributes": {
-              "tabIndex": -1
-            }
+            "dragging": false
           },
           {
             "id": "Ys_JK_E726uD988qD8sI-",
             "type": "text",
             "position": {
-              "x": -620.7116716148676,
-              "y": -782.0188611142864
+              "x": -668.7116716148676,
+              "y": -820.0188611142864
             },
             "data": {
               "text": "Drag your product and persona\ndown into the Brand Kit workspace",
@@ -581,11 +538,7 @@
               "width": 361,
               "height": 75
             },
-            "dragging": false,
-            "selected": false,
-            "domAttributes": {
-              "tabIndex": -1
-            }
+            "dragging": false
           },
           {
             "id": "h9GduFxJZVC529uOQ3dxV",
@@ -693,11 +646,7 @@
               "width": 269,
               "height": 75
             },
-            "dragging": false,
-            "selected": true,
-            "domAttributes": {
-              "tabIndex": 0
-            }
+            "dragging": false
           },
           {
             "id": "nSU2C0BBsgZR4CoV6VS6n",
@@ -716,11 +665,7 @@
               "width": 302,
               "height": 75
             },
-            "dragging": false,
-            "selected": true,
-            "domAttributes": {
-              "tabIndex": 0
-            }
+            "dragging": false
           },
           {
             "id": "fK7ZEmm9EnxTj3og1E9J8",
@@ -739,11 +684,7 @@
               "width": 213,
               "height": 75
             },
-            "dragging": false,
-            "selected": true,
-            "domAttributes": {
-              "tabIndex": 0
-            }
+            "dragging": false
           },
           {
             "id": "Hru-tHG2zdrZgdZI0fxl6",
@@ -762,11 +703,7 @@
               "width": 253,
               "height": 75
             },
-            "dragging": false,
-            "selected": true,
-            "domAttributes": {
-              "tabIndex": 0
-            }
+            "dragging": false
           },
           {
             "id": "M66NANWMyVsSUhf2Z4Vp9",
@@ -813,10 +750,6 @@
               "width": 515,
               "height": 615
             },
-            "selected": true,
-            "domAttributes": {
-              "tabIndex": 0
-            },
             "dragging": false,
             "width": 515,
             "height": 615,
@@ -846,10 +779,6 @@
               "height": 611
             },
             "dragging": false,
-            "selected": true,
-            "domAttributes": {
-              "tabIndex": 0
-            },
             "width": 521,
             "height": 611,
             "resizing": false
@@ -876,10 +805,6 @@
             "measured": {
               "width": 507,
               "height": 611
-            },
-            "selected": true,
-            "domAttributes": {
-              "tabIndex": 0
             },
             "width": 507,
             "height": 611,
@@ -909,10 +834,6 @@
               "width": 469,
               "height": 609
             },
-            "selected": true,
-            "domAttributes": {
-              "tabIndex": 0
-            },
             "width": 469,
             "height": 609,
             "resizing": false,
@@ -923,8 +844,8 @@
 
         ],
         "viewport": {
-          "x": 326.40890691794993,
-          "y": -3.9374412861714063,
+          "x": 406.96346336992076,
+          "y": 640.3924698534133,
           "zoom": 0.5
         }
       }
@@ -2951,6 +2872,6 @@
     "name_suffix": "_2026"
   },
   "published": true,
-  "audit_log": "[{\"changed_at\":\"2026-02-24T18:11:10.008+00:00\",\"changed\":[\"cloned from \\\"ai-generated-design-lesson5-level2a_2025\\\"\"],\"cloned_from\":\"ai-generated-design-lesson5-level2a_2025\"},{\"changed_at\":\"2026-03-04 21:48:30 +0000\",\"changed\":[\"long_instructions\",\"bubble_choice_description\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-04 21:50:28 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-04 22:01:42 +0000\",\"changed\":[],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-04 22:20:44 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-04 23:16:56 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-05 00:20:28 +0000\",\"changed\":[\"bubble_choice_description\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-05 00:29:35 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-11 19:13:30 +0000\",\"changed\":[\"display_name\",\"bubble_choice_description\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-11 19:17:39 +0000\",\"changed\":[\"display_name\",\"bubble_choice_description\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-11 19:24:03 +0000\",\"changed\":[\"bubble_choice_description\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-27 15:56:54 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-27 19:40:41 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-09 19:00:15 +0000\",\"changed\":[\"project_template_level_name\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-09 19:00:38 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-15 19:10:49 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2026-04-21 21:54:09 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2026-04-24 15:25:48 +0000\",\"changed\":[\"display_name\",\"bubble_choice_description\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2026-04-30 17:59:52 -0400\",\"changed\":[\"start_sources\"],\"changed_by_id\":1,\"changed_by_email\":\"levelbuilder@dev.com\"},{\"changed_at\":\"2026-04-30 18:03:24 -0400\",\"changed\":[\"start_sources\"],\"changed_by_id\":1,\"changed_by_email\":\"levelbuilder@dev.com\"},{\"changed_at\":\"2026-04-30 18:05:14 -0400\",\"changed\":[\"start_sources\"],\"changed_by_id\":1,\"changed_by_email\":\"levelbuilder@dev.com\"}]"
+  "audit_log": "[{\"changed_at\":\"2026-02-24T18:11:10.008+00:00\",\"changed\":[\"cloned from \\\"ai-generated-design-lesson5-level2a_2025\\\"\"],\"cloned_from\":\"ai-generated-design-lesson5-level2a_2025\"},{\"changed_at\":\"2026-03-04 21:48:30 +0000\",\"changed\":[\"long_instructions\",\"bubble_choice_description\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-04 21:50:28 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-04 22:01:42 +0000\",\"changed\":[],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-04 22:20:44 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-04 23:16:56 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-05 00:20:28 +0000\",\"changed\":[\"bubble_choice_description\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-05 00:29:35 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-11 19:13:30 +0000\",\"changed\":[\"display_name\",\"bubble_choice_description\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-11 19:17:39 +0000\",\"changed\":[\"display_name\",\"bubble_choice_description\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-11 19:24:03 +0000\",\"changed\":[\"bubble_choice_description\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-27 15:56:54 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-27 19:40:41 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-09 19:00:15 +0000\",\"changed\":[\"project_template_level_name\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-09 19:00:38 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-15 19:10:49 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2026-04-21 21:54:09 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2026-04-24 15:25:48 +0000\",\"changed\":[\"display_name\",\"bubble_choice_description\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2026-04-30 17:59:52 -0400\",\"changed\":[\"start_sources\"],\"changed_by_id\":1,\"changed_by_email\":\"levelbuilder@dev.com\"},{\"changed_at\":\"2026-04-30 18:03:24 -0400\",\"changed\":[\"start_sources\"],\"changed_by_id\":1,\"changed_by_email\":\"levelbuilder@dev.com\"},{\"changed_at\":\"2026-04-30 18:05:14 -0400\",\"changed\":[\"start_sources\"],\"changed_by_id\":1,\"changed_by_email\":\"levelbuilder@dev.com\"},{\"changed_at\":\"2026-05-06 18:59:17 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":155,\"changed_by_email\":\"dani@code.org\"}]"
 }]]></config>
 </Sketchlab>

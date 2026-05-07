@@ -1,7 +1,7 @@
 <Sketchlab>
   <config><![CDATA[{
   "game_id": 75,
-  "created_at": "2026-03-13T19:11:55.000Z",
+  "created_at": "2026-02-24T18:10:59.000Z",
   "level_num": "custom",
   "user_id": 18602,
   "properties": {
@@ -27,11 +27,7 @@
               "width": 488,
               "height": 47
             },
-            "dragging": false,
-            "selected": true,
-            "domAttributes": {
-              "tabIndex": 0
-            }
+            "dragging": false
           },
           {
             "id": "VealpJoE8fsuBBvZgFLlB",
@@ -56,7 +52,8 @@
             },
             "width": 250,
             "height": 112,
-            "resizing": false
+            "resizing": false,
+            "zIndex": -1
           },
           {
             "id": "l_PuW2y5hUuQD6S3tcdYP",
@@ -113,10 +110,6 @@
             "measured": {
               "width": 33,
               "height": 33
-            },
-            "selected": false,
-            "domAttributes": {
-              "tabIndex": -1
             }
           },
           {
@@ -138,10 +131,6 @@
             "measured": {
               "width": 44,
               "height": 44
-            },
-            "selected": false,
-            "domAttributes": {
-              "tabIndex": -1
             }
           },
           {
@@ -181,10 +170,6 @@
             "measured": {
               "width": 36,
               "height": 36
-            },
-            "selected": false,
-            "domAttributes": {
-              "tabIndex": -1
             }
           },
           {
@@ -264,7 +249,8 @@
             },
             "width": 249,
             "height": 113,
-            "resizing": false
+            "resizing": false,
+            "zIndex": -2
           },
           {
             "id": "GAey0QwSCG_ChY96sXdgG",
@@ -289,7 +275,8 @@
             },
             "width": 250,
             "height": 111,
-            "resizing": false
+            "resizing": false,
+            "zIndex": -3
           },
           {
             "id": "hBAfbjf5t4TwrpWGKhKvB",
@@ -308,18 +295,14 @@
               "width": 442,
               "height": 47
             },
-            "dragging": false,
-            "selected": true,
-            "domAttributes": {
-              "tabIndex": 0
-            }
+            "dragging": false
           },
           {
             "id": "gjP3tSR6E3q0bixZ33_zQ",
             "type": "text",
             "position": {
-              "x": 1751.7821158428155,
-              "y": 31.506441052491077
+              "x": 1710.8343750805877,
+              "y": 23.316892900045552
             },
             "data": {
               "text": "FONT AND TEXT SAMPLES",
@@ -331,11 +314,7 @@
               "width": 288,
               "height": 47
             },
-            "dragging": false,
-            "selected": true,
-            "domAttributes": {
-              "tabIndex": 0
-            }
+            "dragging": false
           },
           {
             "id": "FpNEJgFlN1Xbo3L-h7aYO",
@@ -354,11 +333,7 @@
               "width": 100,
               "height": 47
             },
-            "dragging": false,
-            "selected": true,
-            "domAttributes": {
-              "tabIndex": 0
-            }
+            "dragging": false
           },
           {
             "id": "1KpUWtkgpGEN_Akira1hk",
@@ -377,11 +352,7 @@
               "width": 167,
               "height": 47
             },
-            "dragging": false,
-            "selected": true,
-            "domAttributes": {
-              "tabIndex": 0
-            }
+            "dragging": false
           },
           {
             "id": "B4FY1MfRXE-cYhASS5ZTS",
@@ -400,11 +371,7 @@
               "width": 221,
               "height": 47
             },
-            "dragging": false,
-            "selected": false,
-            "domAttributes": {
-              "tabIndex": -1
-            }
+            "dragging": false
           },
           {
             "id": "KaW5XX6c8iOregoi7i4d6",
@@ -464,8 +431,8 @@
             "id": "QSMajet4JX9pFHlsOX2D3",
             "type": "text",
             "position": {
-              "x": 1713.0155715942378,
-              "y": 70.3097981044225
+              "x": 1669.2208839349205,
+              "y": 64.89034684335681
             },
             "data": {
               "text": "Examples of typography that fit your brand’s tone\nSuch as elegant script fonts, bold sans-serifs, \nor quirky handwritten lettering.",
@@ -476,7 +443,8 @@
             "measured": {
               "width": 372,
               "height": 80
-            }
+            },
+            "dragging": false
           },
           {
             "id": "ATbh-2DYrOHc1Wa95_kXU",
@@ -501,8 +469,8 @@
 
         ],
         "viewport": {
-          "x": -221.88944590274446,
-          "y": 101.16281169483779,
+          "x": -225.42955607798217,
+          "y": 79.51102225310171,
           "zoom": 0.8547480116970423
         }
       }
@@ -1942,6 +1910,6 @@
     "project_template_level_name": "ai-generated-design-lesson4-level1-template_2026"
   },
   "published": true,
-  "audit_log": "[{\"changed_at\":\"2026-02-24T18:10:59.153+00:00\",\"changed\":[\"cloned from \\\"ai-generated-design-lesson4-level1a_2025\\\"\"],\"cloned_from\":\"ai-generated-design-lesson4-level1a_2025\"},{\"changed_at\":\"2026-03-03 22:25:29 +0000\",\"changed\":[],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-03 22:38:44 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-03 22:40:41 +0000\",\"changed\":[],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-04 18:29:30 +0000\",\"changed\":[\"long_instructions\",\"bubble_choice_description\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-27 05:53:22 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-04-15 18:40:14 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2026-04-15 18:41:35 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2026-04-16 17:20:03 +0000\",\"changed\":[],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-24 15:24:12 +0000\",\"changed\":[\"display_name\",\"bubble_choice_description\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2026-04-30 16:08:19 -0400\",\"changed\":[\"start_sources\"],\"changed_by_id\":1,\"changed_by_email\":\"levelbuilder@dev.com\"},{\"changed_at\":\"2026-04-30 16:10:59 -0400\",\"changed\":[\"start_sources\"],\"changed_by_id\":1,\"changed_by_email\":\"levelbuilder@dev.com\"},{\"changed_at\":\"2026-04-30 16:16:34 -0400\",\"changed\":[\"start_sources\"],\"changed_by_id\":1,\"changed_by_email\":\"levelbuilder@dev.com\"}]"
+  "audit_log": "[{\"changed_at\":\"2026-02-24T18:10:59.153+00:00\",\"changed\":[\"cloned from \\\"ai-generated-design-lesson4-level1a_2025\\\"\"],\"cloned_from\":\"ai-generated-design-lesson4-level1a_2025\"},{\"changed_at\":\"2026-03-03 22:25:29 +0000\",\"changed\":[],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-03 22:38:44 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-03 22:40:41 +0000\",\"changed\":[],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-04 18:29:30 +0000\",\"changed\":[\"long_instructions\",\"bubble_choice_description\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-27 05:53:22 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-04-15 18:40:14 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2026-04-15 18:41:35 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2026-04-16 17:20:03 +0000\",\"changed\":[],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-24 15:24:12 +0000\",\"changed\":[\"display_name\",\"bubble_choice_description\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2026-04-30 16:08:19 -0400\",\"changed\":[\"start_sources\"],\"changed_by_id\":1,\"changed_by_email\":\"levelbuilder@dev.com\"},{\"changed_at\":\"2026-04-30 16:10:59 -0400\",\"changed\":[\"start_sources\"],\"changed_by_id\":1,\"changed_by_email\":\"levelbuilder@dev.com\"},{\"changed_at\":\"2026-04-30 16:16:34 -0400\",\"changed\":[\"start_sources\"],\"changed_by_id\":1,\"changed_by_email\":\"levelbuilder@dev.com\"},{\"changed_at\":\"2026-05-06 09:55:51 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":155,\"changed_by_email\":\"dani@code.org\"}]"
 }]]></config>
 </Sketchlab>

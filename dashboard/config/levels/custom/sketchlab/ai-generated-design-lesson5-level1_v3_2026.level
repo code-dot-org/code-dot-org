@@ -1,7 +1,7 @@
 <Sketchlab>
   <config><![CDATA[{
   "game_id": 75,
-  "created_at": "2026-03-13T19:11:55.000Z",
+  "created_at": "2026-03-10T21:47:30.000Z",
   "level_num": "custom",
   "user_id": 18602,
   "properties": {
@@ -14,8 +14,8 @@
             "id": "FbKwV7eDGo3BzwfoYGICJ",
             "type": "shape",
             "position": {
-              "x": 1276.4336003202552,
-              "y": 92.8985142553446
+              "x": 1256.8645962499827,
+              "y": 80.63777324462654
             },
             "style": {
               "width": 990.2067988092057,
@@ -32,17 +32,14 @@
               "height": 402
             },
             "dragging": false,
-            "selected": true,
-            "domAttributes": {
-              "tabIndex": 0
-            }
+            "zIndex": -4
           },
           {
             "id": "Jjl_hBqlVCE56_xJ8TDaJ",
             "type": "image",
             "position": {
-              "x": 272.23884412977435,
-              "y": -328.3999786376953
+              "x": 246.2388441297744,
+              "y": -336.3999786376953
             },
             "style": {
               "width": 760.8888888888888,
@@ -56,7 +53,8 @@
             "measured": {
               "width": 761,
               "height": 428
-            }
+            },
+            "dragging": false
           },
           {
             "id": "8tFutogCi2IeMRMwylP9R",
@@ -125,7 +123,7 @@
             "id": "a_EOz32pq49R-ru81sxLC",
             "type": "text",
             "position": {
-              "x": 406.68328857421875,
+              "x": 354.68328857421875,
               "y": -373.59999389648436
             },
             "data": {
@@ -137,13 +135,14 @@
             "measured": {
               "width": 63,
               "height": 47
-            }
+            },
+            "dragging": false
           },
           {
             "id": "DrFl_3o70c7pRmctU9jsG",
             "type": "text",
             "position": {
-              "x": 829.7354927062988,
+              "x": 797.7354927062988,
               "y": -376.7
             },
             "data": {
@@ -155,14 +154,15 @@
             "measured": {
               "width": 85,
               "height": 47
-            }
+            },
+            "dragging": false
           },
           {
             "id": "9hXhv2Om3Btx2LYuOt7Yl",
             "type": "shape",
             "position": {
-              "x": 153.6246070492441,
-              "y": 97.89413581288301
+              "x": 138.77463423695656,
+              "y": 96.19674258823079
             },
             "style": {
               "width": 970.7782622578663,
@@ -179,63 +179,54 @@
               "height": 402
             },
             "dragging": false,
-            "selected": false,
-            "domAttributes": {
-              "tabIndex": -1
-            }
+            "zIndex": -3
           },
           {
             "id": "2dClnZpU5c5RPyx667PlV",
             "type": "text",
             "position": {
-              "x": 226.36596950822025,
-              "y": 174.92680975842114
+              "x": 174.36596950822025,
+              "y": 170.92680975842114
             },
             "data": {
               "text": "The Nike brand ... ",
               "fontColor": "#e03131",
               "fontSize": "medium",
-              "showHandles": false
+              "showHandles": false,
+              "textAlign": "left"
             },
             "measured": {
               "width": 144,
               "height": 39
             },
-            "dragging": false,
-            "selected": false,
-            "domAttributes": {
-              "tabIndex": -1
-            }
+            "dragging": false
           },
           {
             "id": "Dga-oAwEV1PL89-2JCnc1",
             "type": "text",
             "position": {
-              "x": 738.0548194057419,
-              "y": 180.7839912888954
+              "x": 678.0548194057419,
+              "y": 172.7839912888954
             },
             "data": {
               "text": "The Adidas brand ... ",
               "fontColor": "#e03131",
               "fontSize": "medium",
-              "showHandles": false
+              "showHandles": false,
+              "textAlign": "left"
             },
             "measured": {
               "width": 160,
               "height": 39
             },
-            "dragging": false,
-            "selected": true,
-            "domAttributes": {
-              "tabIndex": 0
-            }
+            "dragging": false
           },
           {
             "id": "utpPyGY-oRfyNaVx2pnZk",
             "type": "text",
             "position": {
               "x": 1293.9856313069656,
-              "y": 276.9786347888771
+              "y": 260.9786347888771
             },
             "data": {
               "text": "Who is Spotify's target audience?",
@@ -247,18 +238,14 @@
               "width": 349,
               "height": 47
             },
-            "dragging": false,
-            "selected": true,
-            "domAttributes": {
-              "tabIndex": 0
-            }
+            "dragging": false
           },
           {
             "id": "U4rrU0waivyHCgrO7eYHQ",
             "type": "text",
             "position": {
-              "x": 1760.0719807942696,
-              "y": 283.5500459216896
+              "x": 1768.9727381267944,
+              "y": 258.6279253906198
             },
             "data": {
               "text": "Who is SoundCloud's target audience?",
@@ -270,18 +257,14 @@
               "width": 399,
               "height": 47
             },
-            "dragging": false,
-            "selected": true,
-            "domAttributes": {
-              "tabIndex": 0
-            }
+            "dragging": false
           },
           {
             "id": "szzHusomO0r-RUcWOl8Fa",
             "type": "text",
             "position": {
-              "x": 1282.6299467540916,
-              "y": 106.39293794177865
+              "x": 1261.5093408880716,
+              "y": 79.44945421216391
             },
             "data": {
               "text": "What do you notice about the Spotify brand?",
@@ -293,17 +276,14 @@
               "width": 464,
               "height": 47
             },
-            "selected": true,
-            "domAttributes": {
-              "tabIndex": 0
-            }
+            "dragging": false
           },
           {
             "id": "N3F26hO-NwU2MMF8HFg8q",
             "type": "text",
             "position": {
-              "x": 1746.2714502243757,
-              "y": 106.40724109468056
+              "x": 1741.1508443583557,
+              "y": 81.46375736506583
             },
             "data": {
               "text": "What do you notice about the SoundCloud brand?",
@@ -314,30 +294,28 @@
             "measured": {
               "width": 514,
               "height": 47
-            }
+            },
+            "dragging": false
           },
           {
             "id": "xupR7oxkNQPxZgeu6llMm",
             "type": "text",
             "position": {
-              "x": 1314.797149616299,
+              "x": 1290.797149616299,
               "y": 154.43592999840607
             },
             "data": {
               "text": "The Spotify brand ... ",
               "fontColor": "#e03131",
               "fontSize": "medium",
-              "showHandles": false
+              "showHandles": false,
+              "textAlign": "left"
             },
             "measured": {
               "width": 164,
               "height": 39
             },
-            "dragging": false,
-            "selected": false,
-            "domAttributes": {
-              "tabIndex": -1
-            }
+            "dragging": false
           },
           {
             "id": "tA5-zYPotEz6czDDwnQdC",
@@ -350,40 +328,34 @@
               "text": "The SoundCloud brand ... ",
               "fontColor": "#e03131",
               "fontSize": "medium",
-              "showHandles": false
+              "showHandles": false,
+              "textAlign": "left"
             },
             "measured": {
               "width": 201,
               "height": 39
             },
-            "dragging": false,
-            "selected": true,
-            "domAttributes": {
-              "tabIndex": 0
-            }
+            "dragging": false
           },
           {
             "id": "xnp0gakObvQF02pHRVPqt",
             "type": "text",
             "position": {
-              "x": 1314.3520607512019,
-              "y": 320.843748274289
+              "x": 1290.3520607512019,
+              "y": 334.843748274289
             },
             "data": {
               "text": "It seems like Spotify's target audience is ... \nbecause ... ",
               "fontColor": "#e03131",
               "fontSize": "medium",
-              "showHandles": false
+              "showHandles": false,
+              "textAlign": "left"
             },
             "measured": {
               "width": 323,
               "height": 60
             },
-            "dragging": false,
-            "selected": false,
-            "domAttributes": {
-              "tabIndex": -1
-            }
+            "dragging": false
           },
           {
             "id": "hXi9d90xELesvTLJCPUTe",
@@ -396,17 +368,14 @@
               "text": "It seems like SoundCloud's target audience is ... \nbecause ... ",
               "fontColor": "#e03131",
               "fontSize": "medium",
-              "showHandles": false
+              "showHandles": false,
+              "textAlign": "left"
             },
             "measured": {
               "width": 359,
               "height": 60
             },
-            "dragging": false,
-            "selected": true,
-            "domAttributes": {
-              "tabIndex": 0
-            }
+            "dragging": false
           },
           {
             "id": "2F91zIG2tVAC1rl1y5tI8",
@@ -484,8 +453,8 @@
             "id": "twFBlYwDL2ADdQffOzU59",
             "type": "shape",
             "position": {
-              "x": 157.79999358731902,
-              "y": 1040.4875180210756
+              "x": 161.97442737636663,
+              "y": 1039.6185661846614
             },
             "style": {
               "width": 1002.7782099420182,
@@ -501,17 +470,15 @@
               "width": 1003,
               "height": 402
             },
-            "selected": true,
-            "domAttributes": {
-              "tabIndex": 0
-            }
+            "zIndex": -1,
+            "dragging": false
           },
           {
             "id": "Bdj3EPVvBMTENdYjfKNBa",
             "type": "text",
             "position": {
-              "x": 176.88787916309957,
-              "y": 1224.0262349446612
+              "x": 174.88787916309957,
+              "y": 1217.0262349446612
             },
             "data": {
               "text": "Who is Netflix's target audience?",
@@ -523,18 +490,14 @@
               "width": 343,
               "height": 47
             },
-            "dragging": false,
-            "selected": false,
-            "domAttributes": {
-              "tabIndex": -1
-            }
+            "dragging": false
           },
           {
             "id": "2ERs7TNekJlVz6d_qmza4",
             "type": "text",
             "position": {
               "x": 672.9742286504037,
-              "y": 1226.5976460774737
+              "y": 1213.5976460774737
             },
             "data": {
               "text": "Who is Disney's target audience?",
@@ -546,18 +509,14 @@
               "width": 343,
               "height": 47
             },
-            "selected": true,
-            "domAttributes": {
-              "tabIndex": 0
-            },
             "dragging": false
           },
           {
             "id": "uwMJLmYStbKdpIPxSH-L9",
             "type": "text",
             "position": {
-              "x": 184.38933746736836,
-              "y": 1052.5834213983444
+              "x": 171.38933746736836,
+              "y": 1035.5834213983444
             },
             "data": {
               "text": "What do you notice about the Netflix brand?",
@@ -568,14 +527,15 @@
             "measured": {
               "width": 457,
               "height": 47
-            }
+            },
+            "dragging": false
           },
           {
             "id": "rAgXh-MoErVaYWB6AfQk-",
             "type": "text",
             "position": {
-              "x": 688.0308409376527,
-              "y": 1054.8834039597282
+              "x": 676.0308409376527,
+              "y": 1039.8834039597282
             },
             "data": {
               "text": "What do you notice about the Disney brand?",
@@ -586,7 +546,8 @@
             "measured": {
               "width": 457,
               "height": 47
-            }
+            },
+            "dragging": false
           },
           {
             "id": "MnezZ2f5vbxSZteYVMdmb",
@@ -599,7 +560,8 @@
               "text": "The Netflix brand ... ",
               "fontColor": "#e03131",
               "fontSize": "medium",
-              "showHandles": false
+              "showHandles": false,
+              "textAlign": "left"
             },
             "measured": {
               "width": 159,
@@ -617,7 +579,8 @@
               "text": "The Disney brand ... ",
               "fontColor": "#e03131",
               "fontSize": "medium",
-              "showHandles": false
+              "showHandles": false,
+              "textAlign": "left"
             },
             "measured": {
               "width": 160,
@@ -635,7 +598,8 @@
               "text": "It seems like Netflix's target audience is ... \nbecause ... ",
               "fontColor": "#e03131",
               "fontSize": "medium",
-              "showHandles": false
+              "showHandles": false,
+              "textAlign": "left"
             },
             "measured": {
               "width": 318,
@@ -653,7 +617,8 @@
               "text": "It seems like Disney's target audience is ... \nbecause ... ",
               "fontColor": "#e03131",
               "fontSize": "medium",
-              "showHandles": false
+              "showHandles": false,
+              "textAlign": "left"
             },
             "measured": {
               "width": 318,
@@ -700,8 +665,8 @@
             "id": "EFW_UqI6eXjOjNt15BVrA",
             "type": "shape",
             "position": {
-              "x": 1230.5741344263115,
-              "y": 1037.5349496035728
+              "x": 1240.691557875141,
+              "y": 1042.0422415426071
             },
             "style": {
               "width": 1011.9210147690271,
@@ -717,10 +682,8 @@
               "width": 1012,
               "height": 402
             },
-            "selected": true,
-            "domAttributes": {
-              "tabIndex": 0
-            }
+            "zIndex": -2,
+            "dragging": false
           },
           {
             "id": "HkT_UR03QyzhjMgcBy4nQ",
@@ -739,11 +702,7 @@
               "width": 340,
               "height": 47
             },
-            "dragging": false,
-            "selected": true,
-            "domAttributes": {
-              "tabIndex": 0
-            }
+            "dragging": false
           },
           {
             "id": "HcKfsqWH9h9d_TQYII9rL",
@@ -762,18 +721,14 @@
               "width": 359,
               "height": 47
             },
-            "dragging": false,
-            "selected": true,
-            "domAttributes": {
-              "tabIndex": 0
-            }
+            "dragging": false
           },
           {
             "id": "pJdJJt__z0ejBIozHH6h-",
             "type": "text",
             "position": {
-              "x": 1257.3920113699771,
-              "y": 1049.6308529808416
+              "x": 1259.565481095029,
+              "y": 1045.2839135307372
             },
             "data": {
               "text": "What do you notice about the Target brand?",
@@ -784,14 +739,15 @@
             "measured": {
               "width": 454,
               "height": 47
-            }
+            },
+            "dragging": false
           },
           {
             "id": "FW_5_NYk1EXr4BbVtDn3z",
             "type": "text",
             "position": {
-              "x": 1759.8906751360205,
-              "y": 1055.3593982514885
+              "x": 1750.110061373286,
+              "y": 1046.6655193512802
             },
             "data": {
               "text": "What do you notice about the Walmart brand?",
@@ -802,7 +758,8 @@
             "measured": {
               "width": 473,
               "height": 47
-            }
+            },
+            "dragging": false
           },
           {
             "id": "_pY0UyRbqn_sUPQgTKAIx",
@@ -815,7 +772,8 @@
               "text": "The Target brand ... ",
               "fontColor": "#e03131",
               "fontSize": "medium",
-              "showHandles": false
+              "showHandles": false,
+              "textAlign": "left"
             },
             "measured": {
               "width": 157,
@@ -833,7 +791,8 @@
               "text": "The Walmart brand ... ",
               "fontColor": "#e03131",
               "fontSize": "medium",
-              "showHandles": false
+              "showHandles": false,
+              "textAlign": "left"
             },
             "measured": {
               "width": 171,
@@ -851,7 +810,8 @@
               "text": "It seems like Target's target audience is ... \nbecause ... ",
               "fontColor": "#e03131",
               "fontSize": "medium",
-              "showHandles": false
+              "showHandles": false,
+              "textAlign": "left"
             },
             "measured": {
               "width": 316,
@@ -869,7 +829,8 @@
               "text": "It seems like Walmart's target audience is ... \nbecause ... ",
               "fontColor": "#e03131",
               "fontSize": "medium",
-              "showHandles": false
+              "showHandles": false,
+              "textAlign": "left"
             },
             "measured": {
               "width": 330,
@@ -877,200 +838,10 @@
             }
           },
           {
-            "id": "e76d1122-0602-41dc-be60-978672ba0d3b",
-            "type": "lineAnchor",
-            "position": {
-              "x": 1727.4871244884666,
-              "y": 96.76429675874306
-            },
-            "style": {
-              "width": 10,
-              "height": 10
-            },
-            "data": {
-              "lineAnchorRole": "source"
-            },
-            "measured": {
-              "width": 10,
-              "height": 10
-            }
-          },
-          {
-            "id": "9ff86054-4f86-4273-b888-3b802af5f1b1",
-            "type": "lineAnchor",
-            "position": {
-              "x": 1737.4871244884666,
-              "y": 478.4785999116449
-            },
-            "style": {
-              "width": 10,
-              "height": 10
-            },
-            "data": {
-              "lineAnchorRole": "target"
-            },
-            "measured": {
-              "width": 10,
-              "height": 10
-            }
-          },
-          {
-            "id": "796890f9-0617-4cf1-8b71-3345b7ad56ae",
-            "type": "lineAnchor",
-            "position": {
-              "x": 1258.9156959170382,
-              "y": 134.47861735026095
-            },
-            "style": {
-              "width": 10,
-              "height": 10
-            },
-            "data": {
-              "lineAnchorRole": "source"
-            },
-            "measured": {
-              "width": 10,
-              "height": 10
-            }
-          },
-          {
-            "id": "a9d42900-ec3d-4cb5-a716-56818f641049",
-            "type": "lineAnchor",
-            "position": {
-              "x": 1699.772803896949,
-              "y": 134.47861735026095
-            },
-            "style": {
-              "width": 10,
-              "height": 10
-            },
-            "data": {
-              "lineAnchorRole": "target"
-            },
-            "measured": {
-              "width": 10,
-              "height": 10
-            }
-          },
-          {
-            "id": "3c9b2245-d2f2-4846-b66b-a660a1c02906",
-            "type": "lineAnchor",
-            "position": {
-              "x": 1748.2002018340631,
-              "y": 139.3335104284031
-            },
-            "style": {
-              "width": 10,
-              "height": 10
-            },
-            "data": {
-              "lineAnchorRole": "source"
-            },
-            "measured": {
-              "width": 10,
-              "height": 10
-            }
-          },
-          {
-            "id": "0c1c000b-a985-4012-a6f9-4ae8be331bb7",
-            "type": "lineAnchor",
-            "position": {
-              "x": 2214.3440755208326,
-              "y": 139.3335104284031
-            },
-            "style": {
-              "width": 10,
-              "height": 10
-            },
-            "data": {
-              "lineAnchorRole": "target"
-            },
-            "measured": {
-              "width": 10,
-              "height": 10
-            }
-          },
-          {
-            "id": "fc8eebc5-9a53-4e50-bd6a-eb11e2967825",
-            "type": "lineAnchor",
-            "position": {
-              "x": 1270.2002367112957,
-              "y": 318.1906707241619
-            },
-            "style": {
-              "width": 10,
-              "height": 10
-            },
-            "data": {
-              "lineAnchorRole": "source"
-            },
-            "measured": {
-              "width": 10,
-              "height": 10
-            }
-          },
-          {
-            "id": "34bc5107-8ef0-4612-96d2-fa600521d45b",
-            "type": "lineAnchor",
-            "position": {
-              "x": 1711.0573446912065,
-              "y": 318.1906707241619
-            },
-            "style": {
-              "width": 10,
-              "height": 10
-            },
-            "data": {
-              "lineAnchorRole": "target"
-            },
-            "measured": {
-              "width": 10,
-              "height": 10
-            }
-          },
-          {
-            "id": "2f06040d-8303-42f0-9bae-c2a781ebd77c",
-            "type": "lineAnchor",
-            "position": {
-              "x": 1757.0573621298222,
-              "y": 320.47635013264426
-            },
-            "style": {
-              "width": 10,
-              "height": 10
-            },
-            "data": {
-              "lineAnchorRole": "source"
-            },
-            "measured": {
-              "width": 10,
-              "height": 10
-            }
-          },
-          {
-            "id": "adc8e0f7-4ff9-4f4b-9abc-fa77be10cccb",
-            "type": "lineAnchor",
-            "position": {
-              "x": 2197.914470109733,
-              "y": 320.47635013264426
-            },
-            "style": {
-              "width": 10,
-              "height": 10
-            },
-            "data": {
-              "lineAnchorRole": "target"
-            },
-            "measured": {
-              "width": 10,
-              "height": 10
-            }
-          },
-          {
             "id": "481d1e61-11e5-4755-9768-3f223fcdc7e0",
             "type": "lineAnchor",
             "position": {
-              "x": 646.3893723446007,
+              "x": 644.6092208780957,
               "y": 1041.811896914527
             },
             "style": {
@@ -1089,7 +860,7 @@
             "id": "4cca2b5f-5514-44c1-b69e-3d55f8ace2e7",
             "type": "lineAnchor",
             "position": {
-              "x": 656.3893723446007,
+              "x": 654.6092208780957,
               "y": 1423.5262000674288
             },
             "style": {
@@ -1108,8 +879,8 @@
             "id": "4a4de861-77d9-40ac-bdfa-be0e8d420625",
             "type": "lineAnchor",
             "position": {
-              "x": 177.81794377317215,
-              "y": 1079.5262175060452
+              "x": 180.81794377317215,
+              "y": 1084.5262175060452
             },
             "style": {
               "width": 10,
@@ -1127,312 +898,8 @@
             "id": "20e4fc29-2eca-4719-b2b4-65b078d86b41",
             "type": "lineAnchor",
             "position": {
-              "x": 618.6750517530829,
-              "y": 1079.5262175060452
-            },
-            "style": {
-              "width": 10,
-              "height": 10
-            },
-            "data": {
-              "lineAnchorRole": "target"
-            },
-            "measured": {
-              "width": 10,
-              "height": 10
-            }
-          },
-          {
-            "id": "d536dfe4-812c-4aa3-80bc-11faa090fedd",
-            "type": "lineAnchor",
-            "position": {
-              "x": 667.1024496901972,
-              "y": 1084.3811105841874
-            },
-            "style": {
-              "width": 10,
-              "height": 10
-            },
-            "data": {
-              "lineAnchorRole": "source"
-            },
-            "measured": {
-              "width": 10,
-              "height": 10
-            }
-          },
-          {
-            "id": "6fc41f41-414d-4c11-8019-7421a1cc7214",
-            "type": "lineAnchor",
-            "position": {
-              "x": 1133.2463233769665,
-              "y": 1084.3811105841874
-            },
-            "style": {
-              "width": 10,
-              "height": 10
-            },
-            "data": {
-              "lineAnchorRole": "target"
-            },
-            "measured": {
-              "width": 10,
-              "height": 10
-            }
-          },
-          {
-            "id": "db8b340d-1dae-423b-8634-19a0d4fd6841",
-            "type": "lineAnchor",
-            "position": {
-              "x": 189.10248456742966,
-              "y": 1263.238270879946
-            },
-            "style": {
-              "width": 10,
-              "height": 10
-            },
-            "data": {
-              "lineAnchorRole": "source"
-            },
-            "measured": {
-              "width": 10,
-              "height": 10
-            }
-          },
-          {
-            "id": "370a663d-80f7-4983-bbb6-6d1f068cd969",
-            "type": "lineAnchor",
-            "position": {
-              "x": 629.9595925473404,
-              "y": 1263.238270879946
-            },
-            "style": {
-              "width": 10,
-              "height": 10
-            },
-            "data": {
-              "lineAnchorRole": "target"
-            },
-            "measured": {
-              "width": 10,
-              "height": 10
-            }
-          },
-          {
-            "id": "8eb66b87-020a-4bb4-ad21-0b357f444281",
-            "type": "lineAnchor",
-            "position": {
-              "x": 675.9596099859563,
-              "y": 1265.5239502884288
-            },
-            "style": {
-              "width": 10,
-              "height": 10
-            },
-            "data": {
-              "lineAnchorRole": "source"
-            },
-            "measured": {
-              "width": 10,
-              "height": 10
-            }
-          },
-          {
-            "id": "3a6485df-72c6-4fdc-9374-8d34e76ca7ab",
-            "type": "lineAnchor",
-            "position": {
-              "x": 1116.816717965867,
-              "y": 1265.5239502884288
-            },
-            "style": {
-              "width": 10,
-              "height": 10
-            },
-            "data": {
-              "lineAnchorRole": "target"
-            },
-            "measured": {
-              "width": 10,
-              "height": 10
-            }
-          },
-          {
-            "id": "ce6746ac-e3c1-4d9b-b647-ccc312eb9bec",
-            "type": "lineAnchor",
-            "position": {
-              "x": 1725.1062447684149,
-              "y": 1038.8593284970243
-            },
-            "style": {
-              "width": 10,
-              "height": 10
-            },
-            "data": {
-              "lineAnchorRole": "source"
-            },
-            "measured": {
-              "width": 10,
-              "height": 10
-            }
-          },
-          {
-            "id": "d1063203-cd93-4549-bb60-0dd5d4e8109e",
-            "type": "lineAnchor",
-            "position": {
-              "x": 1735.1062447684149,
-              "y": 1420.573631649926
-            },
-            "style": {
-              "width": 10,
-              "height": 10
-            },
-            "data": {
-              "lineAnchorRole": "target"
-            },
-            "measured": {
-              "width": 10,
-              "height": 10
-            }
-          },
-          {
-            "id": "f211aa24-c9bc-4338-97d2-8e1760b3f9e2",
-            "type": "lineAnchor",
-            "position": {
-              "x": 1256.5348161969864,
-              "y": 1076.5736490885424
-            },
-            "style": {
-              "width": 10,
-              "height": 10
-            },
-            "data": {
-              "lineAnchorRole": "source"
-            },
-            "measured": {
-              "width": 10,
-              "height": 10
-            }
-          },
-          {
-            "id": "4964f3b2-bef8-4067-aac2-c0a3643def79",
-            "type": "lineAnchor",
-            "position": {
-              "x": 1697.3919241768972,
-              "y": 1076.5736490885424
-            },
-            "style": {
-              "width": 10,
-              "height": 10
-            },
-            "data": {
-              "lineAnchorRole": "target"
-            },
-            "measured": {
-              "width": 10,
-              "height": 10
-            }
-          },
-          {
-            "id": "0e73b09c-9ca5-49c4-bf7e-9670467cf4db",
-            "type": "lineAnchor",
-            "position": {
-              "x": 1745.8193221140114,
-              "y": 1081.428542166684
-            },
-            "style": {
-              "width": 10,
-              "height": 10
-            },
-            "data": {
-              "lineAnchorRole": "source"
-            },
-            "measured": {
-              "width": 10,
-              "height": 10
-            }
-          },
-          {
-            "id": "42ffbd73-7202-45ef-b6d4-4f8fa73f7e1e",
-            "type": "lineAnchor",
-            "position": {
-              "x": 2211.963195800781,
-              "y": 1081.428542166684
-            },
-            "style": {
-              "width": 10,
-              "height": 10
-            },
-            "data": {
-              "lineAnchorRole": "target"
-            },
-            "measured": {
-              "width": 10,
-              "height": 10
-            }
-          },
-          {
-            "id": "6f7b76ea-0b96-4ba4-ae17-ab8c17bde7b0",
-            "type": "lineAnchor",
-            "position": {
-              "x": 1267.8193569912437,
-              "y": 1260.2857024624432
-            },
-            "style": {
-              "width": 10,
-              "height": 10
-            },
-            "data": {
-              "lineAnchorRole": "source"
-            },
-            "measured": {
-              "width": 10,
-              "height": 10
-            }
-          },
-          {
-            "id": "9db78e53-82ab-4f97-8dd7-4eef0ae3f3e0",
-            "type": "lineAnchor",
-            "position": {
-              "x": 1708.6764649711545,
-              "y": 1260.2857024624432
-            },
-            "style": {
-              "width": 10,
-              "height": 10
-            },
-            "data": {
-              "lineAnchorRole": "target"
-            },
-            "measured": {
-              "width": 10,
-              "height": 10
-            }
-          },
-          {
-            "id": "55810255-be2a-4063-99b1-1afc58f201ae",
-            "type": "lineAnchor",
-            "position": {
-              "x": 1754.6764824097704,
-              "y": 1262.571381870926
-            },
-            "style": {
-              "width": 10,
-              "height": 10
-            },
-            "data": {
-              "lineAnchorRole": "source"
-            },
-            "measured": {
-              "width": 10,
-              "height": 10
-            }
-          },
-          {
-            "id": "ff161519-d864-49e3-a6fe-c520e8100286",
-            "type": "lineAnchor",
-            "position": {
-              "x": 2195.533590389681,
-              "y": 1262.571381870926
+              "x": 621.6750517530829,
+              "y": 1084.5262175060452
             },
             "style": {
               "width": 10,
@@ -1461,11 +928,7 @@
               "width": 436,
               "height": 47
             },
-            "dragging": false,
-            "selected": false,
-            "domAttributes": {
-              "tabIndex": -1
-            }
+            "dragging": false
           },
           {
             "id": "7b097704-917a-451b-b988-44f00fdc508a",
@@ -1482,11 +945,7 @@
               "width": 458,
               "height": 47
             },
-            "dragging": false,
-            "selected": true,
-            "domAttributes": {
-              "tabIndex": 0
-            }
+            "dragging": false
           },
           {
             "id": "1508d1c9-ea40-4256-8ac8-48e3cb4a4b84",
@@ -1502,10 +961,6 @@
             "measured": {
               "width": 321,
               "height": 47
-            },
-            "selected": true,
-            "domAttributes": {
-              "tabIndex": 0
             },
             "dragging": false
           },
@@ -1524,151 +979,942 @@
               "width": 329,
               "height": 47
             },
-            "dragging": false,
-            "selected": true,
-            "domAttributes": {
-              "tabIndex": 0
-            }
+            "dragging": false
           },
           {
             "id": "2209ef31-1f86-494b-8e01-c8db13daadc8",
             "type": "text",
             "data": {
               "text": "It seems like Nike's target audience is... \nbecause ..",
-              "fontColor": "var(--sketchlab-stroke-red)"
+              "fontColor": "var(--sketchlab-stroke-red)",
+              "textAlign": "left"
             },
             "position": {
-              "x": 190.27598822666278,
-              "y": 328.0268286171597
+              "x": 172.27598822666278,
+              "y": 334.0268286171597
             },
             "measured": {
               "width": 299,
-              "height": 60
+              "height": 78
             },
             "dragging": false,
-            "selected": true,
-            "domAttributes": {
-              "tabIndex": 0
-            }
+            "width": 299,
+            "height": 78,
+            "resizing": false
           },
           {
             "id": "ee9ad83e-3112-4a58-a6ce-0492edbd1e68",
             "type": "text",
             "data": {
               "text": "It seems like Adidas' target audience is ... \nbecause ...",
-              "fontColor": "var(--sketchlab-stroke-red)"
+              "fontColor": "var(--sketchlab-stroke-red)",
+              "textAlign": "left"
             },
             "position": {
-              "x": 718.2759882266628,
-              "y": 334.0268286171597
+              "x": 680.2759882266628,
+              "y": 348.0268286171597
             },
             "measured": {
               "width": 312,
               "height": 60
             },
-            "dragging": false,
-            "selected": true,
-            "domAttributes": {
-              "tabIndex": 0
+            "dragging": false
+          },
+          {
+            "id": "3972916c-ca74-407e-998f-eb9d151711b5",
+            "type": "lineAnchor",
+            "position": {
+              "x": 675.7999903018581,
+              "y": 1082.6913793984097
+            },
+            "style": {
+              "width": 10,
+              "height": 10
+            },
+            "data": {
+              "lineAnchorRole": "source"
+            },
+            "measured": {
+              "width": 10,
+              "height": 10
+            }
+          },
+          {
+            "id": "98059258-b13a-435f-9dc4-600fa2e8092b",
+            "type": "lineAnchor",
+            "position": {
+              "x": 1116.6570982817689,
+              "y": 1082.6913793984097
+            },
+            "style": {
+              "width": 10,
+              "height": 10
+            },
+            "data": {
+              "lineAnchorRole": "target"
+            },
+            "measured": {
+              "width": 10,
+              "height": 10
+            }
+          },
+          {
+            "id": "f6593a59-1369-48d3-88a2-ec4aed55ea69",
+            "type": "lineAnchor",
+            "position": {
+              "x": 674.0499903018581,
+              "y": 1260.6913793984097
+            },
+            "style": {
+              "width": 10,
+              "height": 10
+            },
+            "data": {
+              "lineAnchorRole": "source"
+            },
+            "measured": {
+              "width": 10,
+              "height": 10
+            }
+          },
+          {
+            "id": "15b9d628-b2b5-47e2-9b16-d321a00b37fd",
+            "type": "lineAnchor",
+            "position": {
+              "x": 1114.9070982817689,
+              "y": 1260.6913793984097
+            },
+            "style": {
+              "width": 10,
+              "height": 10
+            },
+            "data": {
+              "lineAnchorRole": "target"
+            },
+            "measured": {
+              "width": 10,
+              "height": 10
+            }
+          },
+          {
+            "id": "5c27c779-6382-4c65-b322-0ec262a944b3",
+            "type": "lineAnchor",
+            "position": {
+              "x": 186.1024805362331,
+              "y": 1263.2109106484097
+            },
+            "style": {
+              "width": 10,
+              "height": 10
+            },
+            "data": {
+              "lineAnchorRole": "source"
+            },
+            "measured": {
+              "width": 10,
+              "height": 10
+            }
+          },
+          {
+            "id": "3a2d5dcc-52c7-46c4-9f00-0c0291ff0bc4",
+            "type": "lineAnchor",
+            "position": {
+              "x": 626.9595885161439,
+              "y": 1263.2109106484097
+            },
+            "style": {
+              "width": 10,
+              "height": 10
+            },
+            "data": {
+              "lineAnchorRole": "target"
+            },
+            "measured": {
+              "width": 10,
+              "height": 10
+            }
+          },
+          {
+            "id": "86183b76-c1b3-459a-816d-9d1d1d5c24e9",
+            "type": "lineAnchor",
+            "position": {
+              "x": 1258.7799767661936,
+              "y": 1088.8409309229146
+            },
+            "style": {
+              "width": 10,
+              "height": 10
+            },
+            "data": {
+              "lineAnchorRole": "source"
+            },
+            "measured": {
+              "width": 10,
+              "height": 10
+            }
+          },
+          {
+            "id": "b31c9ce6-2328-445c-ae22-a16afbc01830",
+            "type": "lineAnchor",
+            "position": {
+              "x": 1699.6370847461044,
+              "y": 1088.8409309229146
+            },
+            "style": {
+              "width": 10,
+              "height": 10
+            },
+            "data": {
+              "lineAnchorRole": "target"
+            },
+            "measured": {
+              "width": 10,
+              "height": 10
+            }
+          },
+          {
+            "id": "1aad35aa-0898-45c2-a3c8-383364b743c0",
+            "type": "lineAnchor",
+            "position": {
+              "x": 1749.9841401694966,
+              "y": 1088.0221711437139
+            },
+            "style": {
+              "width": 10,
+              "height": 10
+            },
+            "data": {
+              "lineAnchorRole": "source"
+            },
+            "measured": {
+              "width": 10,
+              "height": 10
+            }
+          },
+          {
+            "id": "b6a8bf0d-83b1-4770-b0f5-f0d865c99604",
+            "type": "lineAnchor",
+            "position": {
+              "x": 2190.8412481494074,
+              "y": 1088.0221711437139
+            },
+            "style": {
+              "width": 10,
+              "height": 10
+            },
+            "data": {
+              "lineAnchorRole": "target"
+            },
+            "measured": {
+              "width": 10,
+              "height": 10
+            }
+          },
+          {
+            "id": "fa35c846-59e1-4fe3-a90d-b8e084555069",
+            "type": "lineAnchor",
+            "position": {
+              "x": 1755.4178144821267,
+              "y": 1278.200772085774
+            },
+            "style": {
+              "width": 10,
+              "height": 10
+            },
+            "data": {
+              "lineAnchorRole": "source"
+            },
+            "measured": {
+              "width": 10,
+              "height": 10
+            }
+          },
+          {
+            "id": "77dc2e46-c6dd-4fa2-9341-637cb13a4776",
+            "type": "lineAnchor",
+            "position": {
+              "x": 2196.2749224620375,
+              "y": 1278.200772085774
+            },
+            "style": {
+              "width": 10,
+              "height": 10
+            },
+            "data": {
+              "lineAnchorRole": "target"
+            },
+            "measured": {
+              "width": 10,
+              "height": 10
+            }
+          },
+          {
+            "id": "5219ab89-3563-4dd5-817a-9d079613631b",
+            "type": "lineAnchor",
+            "position": {
+              "x": 1259.8667171702448,
+              "y": 1268.4201583230395
+            },
+            "style": {
+              "width": 10,
+              "height": 10
+            },
+            "data": {
+              "lineAnchorRole": "source"
+            },
+            "measured": {
+              "width": 10,
+              "height": 10
+            }
+          },
+          {
+            "id": "edc51deb-3669-4385-9fbd-94a70ee1e692",
+            "type": "lineAnchor",
+            "position": {
+              "x": 1700.7238251501558,
+              "y": 1268.4201583230395
+            },
+            "style": {
+              "width": 10,
+              "height": 10
+            },
+            "data": {
+              "lineAnchorRole": "target"
+            },
+            "measured": {
+              "width": 10,
+              "height": 10
+            }
+          },
+          {
+            "id": "e5d85f08-0fc7-439a-905d-668a287a7a8c",
+            "type": "lineAnchor",
+            "position": {
+              "x": 1722.1184925457019,
+              "y": 1034.5745917037968
+            },
+            "style": {
+              "width": 10,
+              "height": 10
+            },
+            "data": {
+              "lineAnchorRole": "source"
+            },
+            "measured": {
+              "width": 10,
+              "height": 10
+            }
+          },
+          {
+            "id": "627385c9-657e-47b8-b504-ec8cca82968a",
+            "type": "lineAnchor",
+            "position": {
+              "x": 1732.1184925457019,
+              "y": 1416.2888948566986
+            },
+            "style": {
+              "width": 10,
+              "height": 10
+            },
+            "data": {
+              "lineAnchorRole": "target"
+            },
+            "measured": {
+              "width": 10,
+              "height": 10
+            }
+          },
+          {
+            "id": "89121485-7805-4e30-8b41-8561b2569290",
+            "type": "lineAnchor",
+            "position": {
+              "x": 614.3547169481963,
+              "y": 100.26242013522437
+            },
+            "style": {
+              "width": 10,
+              "height": 10
+            },
+            "data": {
+              "lineAnchorRole": "source"
+            },
+            "measured": {
+              "width": 10,
+              "height": 10
+            }
+          },
+          {
+            "id": "ae1c9526-87cb-42c5-afcc-6db77d6df6ca",
+            "type": "lineAnchor",
+            "position": {
+              "x": 624.3547169481963,
+              "y": 481.9767232881261
+            },
+            "style": {
+              "width": 10,
+              "height": 10
+            },
+            "data": {
+              "lineAnchorRole": "target"
+            },
+            "measured": {
+              "width": 10,
+              "height": 10
+            }
+          },
+          {
+            "id": "ad02f185-ae2e-444a-a4a3-ff4ef5096c20",
+            "type": "lineAnchor",
+            "position": {
+              "x": 1727.3547169481963,
+              "y": 68.42648699487836
+            },
+            "style": {
+              "width": 10,
+              "height": 10
+            },
+            "data": {
+              "lineAnchorRole": "source"
+            },
+            "measured": {
+              "width": 10,
+              "height": 10
+            }
+          },
+          {
+            "id": "763b8f1e-a2b2-414d-80fc-ae8b14044676",
+            "type": "lineAnchor",
+            "position": {
+              "x": 1737.3547169481963,
+              "y": 450.1407901477801
+            },
+            "style": {
+              "width": 10,
+              "height": 10
+            },
+            "data": {
+              "lineAnchorRole": "target"
+            },
+            "measured": {
+              "width": 10,
+              "height": 10
+            }
+          },
+          {
+            "id": "8cad3ac6-10ea-42cd-a28b-37ae995c88f7",
+            "type": "lineAnchor",
+            "position": {
+              "x": 645.3547169481963,
+              "y": 150.75058367456586
+            },
+            "style": {
+              "width": 10,
+              "height": 10
+            },
+            "data": {
+              "lineAnchorRole": "source"
+            },
+            "measured": {
+              "width": 10,
+              "height": 10
+            }
+          },
+          {
+            "id": "feeffc1e-abbd-40bb-9214-fee7e29d527e",
+            "type": "lineAnchor",
+            "position": {
+              "x": 1086.211824928107,
+              "y": 150.75058367456586
+            },
+            "style": {
+              "width": 10,
+              "height": 10
+            },
+            "data": {
+              "lineAnchorRole": "target"
+            },
+            "measured": {
+              "width": 10,
+              "height": 10
+            }
+          },
+          {
+            "id": "d5bf6e16-0c15-4c88-992b-adf49902f371",
+            "type": "lineAnchor",
+            "position": {
+              "x": 641.3547169481963,
+              "y": 327.63669207300336
+            },
+            "style": {
+              "width": 10,
+              "height": 10
+            },
+            "data": {
+              "lineAnchorRole": "source"
+            },
+            "measured": {
+              "width": 10,
+              "height": 10
+            }
+          },
+          {
+            "id": "2fdba1de-6926-44af-ace7-0430f1136831",
+            "type": "lineAnchor",
+            "position": {
+              "x": 1082.211824928107,
+              "y": 327.63669207300336
+            },
+            "style": {
+              "width": 10,
+              "height": 10
+            },
+            "data": {
+              "lineAnchorRole": "target"
+            },
+            "measured": {
+              "width": 10,
+              "height": 10
+            }
+          },
+          {
+            "id": "0c9d52d8-9914-41cc-a148-cd9a4f33909d",
+            "type": "lineAnchor",
+            "position": {
+              "x": 159.35471694819626,
+              "y": 155.80075457300336
+            },
+            "style": {
+              "width": 10,
+              "height": 10
+            },
+            "data": {
+              "lineAnchorRole": "source"
+            },
+            "measured": {
+              "width": 10,
+              "height": 10
+            }
+          },
+          {
+            "id": "99ca4ef6-f70c-4b7c-8f08-2a7c190fdab0",
+            "type": "lineAnchor",
+            "position": {
+              "x": 600.211824928107,
+              "y": 155.80075457300336
+            },
+            "style": {
+              "width": 10,
+              "height": 10
+            },
+            "data": {
+              "lineAnchorRole": "target"
+            },
+            "measured": {
+              "width": 10,
+              "height": 10
+            }
+          },
+          {
+            "id": "0c22cd5c-8436-48ed-8702-ab1e2dccadcc",
+            "type": "lineAnchor",
+            "position": {
+              "x": 161.35471694819626,
+              "y": 327.80075457300336
+            },
+            "style": {
+              "width": 10,
+              "height": 10
+            },
+            "data": {
+              "lineAnchorRole": "source"
+            },
+            "measured": {
+              "width": 10,
+              "height": 10
+            }
+          },
+          {
+            "id": "b415b87e-97ee-422c-8846-58eeb6daf4ac",
+            "type": "lineAnchor",
+            "position": {
+              "x": 602.211824928107,
+              "y": 327.80075457300336
+            },
+            "style": {
+              "width": 10,
+              "height": 10
+            },
+            "data": {
+              "lineAnchorRole": "target"
+            },
+            "measured": {
+              "width": 10,
+              "height": 10
+            }
+          },
+          {
+            "id": "9d8f2139-7a4f-4eae-ba4c-424b18e320f5",
+            "type": "lineAnchor",
+            "position": {
+              "x": 1257.3547169481963,
+              "y": 315.80075457300336
+            },
+            "style": {
+              "width": 10,
+              "height": 10
+            },
+            "data": {
+              "lineAnchorRole": "source"
+            },
+            "measured": {
+              "width": 10,
+              "height": 10
+            }
+          },
+          {
+            "id": "13c27cff-2a28-43e8-bf0d-4165e0bbc98e",
+            "type": "lineAnchor",
+            "position": {
+              "x": 1698.211824928107,
+              "y": 315.80075457300336
+            },
+            "style": {
+              "width": 10,
+              "height": 10
+            },
+            "data": {
+              "lineAnchorRole": "target"
+            },
+            "measured": {
+              "width": 10,
+              "height": 10
+            }
+          },
+          {
+            "id": "3c42b385-a35c-4c57-8de8-5a9d19260234",
+            "type": "lineAnchor",
+            "position": {
+              "x": 1753.3547169481963,
+              "y": 317.80075457300336
+            },
+            "style": {
+              "width": 10,
+              "height": 10
+            },
+            "data": {
+              "lineAnchorRole": "source"
+            },
+            "measured": {
+              "width": 10,
+              "height": 10
+            }
+          },
+          {
+            "id": "f99d7ecd-9aac-4a60-9e78-3a7be72c0a50",
+            "type": "lineAnchor",
+            "position": {
+              "x": 2194.211824928107,
+              "y": 317.80075457300336
+            },
+            "style": {
+              "width": 10,
+              "height": 10
+            },
+            "data": {
+              "lineAnchorRole": "target"
+            },
+            "measured": {
+              "width": 10,
+              "height": 10
+            }
+          },
+          {
+            "id": "0c400923-fc9d-4457-a090-4990efa10c0c",
+            "type": "lineAnchor",
+            "position": {
+              "x": 1273.3547169481963,
+              "y": 137.96481707300336
+            },
+            "style": {
+              "width": 10,
+              "height": 10
+            },
+            "data": {
+              "lineAnchorRole": "source"
+            },
+            "measured": {
+              "width": 10,
+              "height": 10
+            }
+          },
+          {
+            "id": "0eb91954-2054-4ce4-898a-2ad8ad7d7590",
+            "type": "lineAnchor",
+            "position": {
+              "x": 1714.211824928107,
+              "y": 137.96481707300336
+            },
+            "style": {
+              "width": 10,
+              "height": 10
+            },
+            "data": {
+              "lineAnchorRole": "target"
+            },
+            "measured": {
+              "width": 10,
+              "height": 10
+            }
+          },
+          {
+            "id": "ed996dfa-8f7e-4a6d-9a28-4c9f5610635d",
+            "type": "lineAnchor",
+            "position": {
+              "x": 1747.3547169481963,
+              "y": 135.96481707300336
+            },
+            "style": {
+              "width": 10,
+              "height": 10
+            },
+            "data": {
+              "lineAnchorRole": "source"
+            },
+            "measured": {
+              "width": 10,
+              "height": 10
+            }
+          },
+          {
+            "id": "dc7173bf-4c2c-4d52-82ce-30d025536c76",
+            "type": "lineAnchor",
+            "position": {
+              "x": 2188.211824928107,
+              "y": 135.96481707300336
+            },
+            "style": {
+              "width": 10,
+              "height": 10
+            },
+            "data": {
+              "lineAnchorRole": "target"
+            },
+            "measured": {
+              "width": 10,
+              "height": 10
             }
           }
         ],
         "edges": [
           {
-            "id": "4e62debd-89d0-4fed-91c6-f6ce21bf10b8",
-            "source": "e76d1122-0602-41dc-be60-978672ba0d3b",
-            "target": "9ff86054-4f86-4273-b888-3b802af5f1b1",
-            "type": "straight"
-          },
-          {
-            "id": "da0bc842-9f83-48de-8ed2-4ec402677788",
-            "source": "796890f9-0617-4cf1-8b71-3345b7ad56ae",
-            "target": "a9d42900-ec3d-4cb5-a716-56818f641049",
-            "type": "straight"
-          },
-          {
-            "id": "caaa3006-6f5e-4b58-9250-a225a4fcefc9",
-            "source": "3c9b2245-d2f2-4846-b66b-a660a1c02906",
-            "target": "0c1c000b-a985-4012-a6f9-4ae8be331bb7",
-            "type": "straight"
-          },
-          {
-            "id": "56903330-1458-48e1-8660-7a829f641ec5",
-            "source": "fc8eebc5-9a53-4e50-bd6a-eb11e2967825",
-            "target": "34bc5107-8ef0-4612-96d2-fa600521d45b",
-            "type": "straight"
-          },
-          {
-            "id": "4ad4a1dd-4dee-49da-840e-87f746c4c149",
-            "source": "2f06040d-8303-42f0-9bae-c2a781ebd77c",
-            "target": "adc8e0f7-4ff9-4f4b-9abc-fa77be10cccb",
-            "type": "straight"
-          },
-          {
             "id": "15b8b855-87f8-45a5-92f7-7b176d1be90d",
             "source": "481d1e61-11e5-4755-9768-3f223fcdc7e0",
             "target": "4cca2b5f-5514-44c1-b69e-3d55f8ace2e7",
-            "type": "straight"
+            "type": "straight",
+            "style": {
+              "strokeWidth": 5,
+              "stroke": "var(--sketchlab-stroke-default)"
+            }
           },
           {
             "id": "591c1016-ef33-4d1b-8b6d-2463938ebb81",
             "source": "4a4de861-77d9-40ac-bdfa-be0e8d420625",
             "target": "20e4fc29-2eca-4719-b2b4-65b078d86b41",
-            "type": "straight"
+            "type": "straight",
+            "style": {
+              "strokeWidth": 5,
+              "stroke": "var(--sketchlab-stroke-default)"
+            }
           },
           {
-            "id": "2ce881a0-02c6-4062-942b-db8063530d56",
-            "source": "d536dfe4-812c-4aa3-80bc-11faa090fedd",
-            "target": "6fc41f41-414d-4c11-8019-7421a1cc7214",
-            "type": "straight"
+            "id": "26295204-d1a3-41ec-b820-a24964b32290",
+            "source": "3972916c-ca74-407e-998f-eb9d151711b5",
+            "target": "98059258-b13a-435f-9dc4-600fa2e8092b",
+            "type": "straight",
+            "style": {
+              "strokeWidth": 5,
+              "stroke": "var(--sketchlab-stroke-default)"
+            }
           },
           {
-            "id": "2a82fa76-435c-4b70-be56-7bfc23332edb",
-            "source": "db8b340d-1dae-423b-8634-19a0d4fd6841",
-            "target": "370a663d-80f7-4983-bbb6-6d1f068cd969",
-            "type": "straight"
+            "id": "beae1bcb-204c-4c99-b75e-f5d18cd749e7",
+            "source": "f6593a59-1369-48d3-88a2-ec4aed55ea69",
+            "target": "15b9d628-b2b5-47e2-9b16-d321a00b37fd",
+            "type": "straight",
+            "style": {
+              "strokeWidth": 5,
+              "stroke": "var(--sketchlab-stroke-default)"
+            }
           },
           {
-            "id": "73296476-47e8-47b9-a9be-78a12f5b4cf6",
-            "source": "8eb66b87-020a-4bb4-ad21-0b357f444281",
-            "target": "3a6485df-72c6-4fdc-9374-8d34e76ca7ab",
-            "type": "straight"
+            "id": "f51df389-7e0f-4361-b5e6-3cdccb146a98",
+            "source": "5c27c779-6382-4c65-b322-0ec262a944b3",
+            "target": "3a2d5dcc-52c7-46c4-9f00-0c0291ff0bc4",
+            "type": "straight",
+            "style": {
+              "strokeWidth": 5,
+              "stroke": "var(--sketchlab-stroke-default)"
+            }
           },
           {
-            "id": "27ea9960-66e9-4683-8902-4e260bfeb49e",
-            "source": "ce6746ac-e3c1-4d9b-b647-ccc312eb9bec",
-            "target": "d1063203-cd93-4549-bb60-0dd5d4e8109e",
-            "type": "straight"
+            "id": "ad250725-45b2-41ea-a6c9-bca712f46998",
+            "source": "86183b76-c1b3-459a-816d-9d1d1d5c24e9",
+            "target": "b31c9ce6-2328-445c-ae22-a16afbc01830",
+            "type": "straight",
+            "style": {
+              "strokeWidth": 5,
+              "stroke": "var(--sketchlab-stroke-default)"
+            },
+            "zIndex": 1
           },
           {
-            "id": "3df2199c-1b93-4984-9ae7-9655723c8858",
-            "source": "f211aa24-c9bc-4338-97d2-8e1760b3f9e2",
-            "target": "4964f3b2-bef8-4067-aac2-c0a3643def79",
-            "type": "straight"
+            "id": "78b47230-517f-453a-ab09-77db68755327",
+            "source": "1aad35aa-0898-45c2-a3c8-383364b743c0",
+            "target": "b6a8bf0d-83b1-4770-b0f5-f0d865c99604",
+            "type": "straight",
+            "style": {
+              "strokeWidth": 5,
+              "stroke": "var(--sketchlab-stroke-default)"
+            },
+            "zIndex": 1
           },
           {
-            "id": "73179176-4192-4e25-9182-c7911060880d",
-            "source": "0e73b09c-9ca5-49c4-bf7e-9670467cf4db",
-            "target": "42ffbd73-7202-45ef-b6d4-4f8fa73f7e1e",
-            "type": "straight"
+            "id": "2974e102-01b8-4a0f-8106-d36b7ae8a788",
+            "source": "fa35c846-59e1-4fe3-a90d-b8e084555069",
+            "target": "77dc2e46-c6dd-4fa2-9341-637cb13a4776",
+            "type": "straight",
+            "style": {
+              "strokeWidth": 5,
+              "stroke": "var(--sketchlab-stroke-default)"
+            },
+            "zIndex": 1
           },
           {
-            "id": "1bb7a464-e7ae-493e-9670-03c1305b865d",
-            "source": "6f7b76ea-0b96-4ba4-ae17-ab8c17bde7b0",
-            "target": "9db78e53-82ab-4f97-8dd7-4eef0ae3f3e0",
-            "type": "straight"
+            "id": "31a3c2c1-ca7b-4486-8a6b-8595daebd2e7",
+            "source": "5219ab89-3563-4dd5-817a-9d079613631b",
+            "target": "edc51deb-3669-4385-9fbd-94a70ee1e692",
+            "type": "straight",
+            "style": {
+              "strokeWidth": 5,
+              "stroke": "var(--sketchlab-stroke-default)"
+            },
+            "zIndex": 1
           },
           {
-            "id": "2b1c5a76-efd2-4c5d-8db8-4b7bfc0ab571",
-            "source": "55810255-be2a-4063-99b1-1afc58f201ae",
-            "target": "ff161519-d864-49e3-a6fe-c520e8100286",
-            "type": "straight"
+            "id": "275c9cb3-1337-4fe2-822b-4d590b23fca4",
+            "source": "e5d85f08-0fc7-439a-905d-668a287a7a8c",
+            "target": "627385c9-657e-47b8-b504-ec8cca82968a",
+            "type": "straight",
+            "style": {
+              "strokeWidth": 5,
+              "stroke": "var(--sketchlab-stroke-default)"
+            }
+          },
+          {
+            "id": "571c34df-411b-4edf-9ae9-ff0691ec3600",
+            "source": "89121485-7805-4e30-8b41-8561b2569290",
+            "target": "ae1c9526-87cb-42c5-afcc-6db77d6df6ca",
+            "type": "straight",
+            "style": {
+              "strokeWidth": 5,
+              "stroke": "var(--sketchlab-stroke-default)"
+            }
+          },
+          {
+            "id": "103fbac3-54e3-48be-8d0e-2e8732607c13",
+            "source": "ad02f185-ae2e-444a-a4a3-ff4ef5096c20",
+            "target": "763b8f1e-a2b2-414d-80fc-ae8b14044676",
+            "type": "straight",
+            "style": {
+              "strokeWidth": 5,
+              "stroke": "var(--sketchlab-stroke-default)"
+            }
+          },
+          {
+            "id": "4128eaa5-42d3-4f91-b04b-335bc4329e11",
+            "source": "8cad3ac6-10ea-42cd-a28b-37ae995c88f7",
+            "target": "feeffc1e-abbd-40bb-9214-fee7e29d527e",
+            "type": "straight",
+            "style": {
+              "strokeWidth": 5,
+              "stroke": "var(--sketchlab-stroke-default)"
+            }
+          },
+          {
+            "id": "f6c57929-b332-41b9-ae3e-75b7b64205be",
+            "source": "d5bf6e16-0c15-4c88-992b-adf49902f371",
+            "target": "2fdba1de-6926-44af-ace7-0430f1136831",
+            "type": "straight",
+            "style": {
+              "strokeWidth": 5,
+              "stroke": "var(--sketchlab-stroke-default)"
+            }
+          },
+          {
+            "id": "0ec1ce4f-f785-42c6-90eb-1901232ebce3",
+            "source": "0c9d52d8-9914-41cc-a148-cd9a4f33909d",
+            "target": "99ca4ef6-f70c-4b7c-8f08-2a7c190fdab0",
+            "type": "straight",
+            "style": {
+              "strokeWidth": 5,
+              "stroke": "var(--sketchlab-stroke-default)"
+            }
+          },
+          {
+            "id": "cec6bdf6-2d3a-4d26-9e2b-85d6cd5c54f0",
+            "source": "0c22cd5c-8436-48ed-8702-ab1e2dccadcc",
+            "target": "b415b87e-97ee-422c-8846-58eeb6daf4ac",
+            "type": "straight",
+            "style": {
+              "strokeWidth": 5,
+              "stroke": "var(--sketchlab-stroke-default)"
+            }
+          },
+          {
+            "id": "5679fa22-4193-4a7a-892f-1a23c9105cbc",
+            "source": "9d8f2139-7a4f-4eae-ba4c-424b18e320f5",
+            "target": "13c27cff-2a28-43e8-bf0d-4165e0bbc98e",
+            "type": "straight",
+            "style": {
+              "strokeWidth": 5,
+              "stroke": "var(--sketchlab-stroke-default)"
+            }
+          },
+          {
+            "id": "3bd15997-34dc-43d6-b5e2-7fe4a09a3810",
+            "source": "3c42b385-a35c-4c57-8de8-5a9d19260234",
+            "target": "f99d7ecd-9aac-4a60-9e78-3a7be72c0a50",
+            "type": "straight",
+            "style": {
+              "strokeWidth": 5,
+              "stroke": "var(--sketchlab-stroke-default)"
+            }
+          },
+          {
+            "id": "b663f22e-9c87-449e-bc52-589e1935c380",
+            "source": "0c400923-fc9d-4457-a090-4990efa10c0c",
+            "target": "0eb91954-2054-4ce4-898a-2ad8ad7d7590",
+            "type": "straight",
+            "style": {
+              "strokeWidth": 5,
+              "stroke": "var(--sketchlab-stroke-default)"
+            }
+          },
+          {
+            "id": "035ce6be-b946-4ca5-935a-46a5d3eec302",
+            "source": "ed996dfa-8f7e-4a6d-9a28-4c9f5610635d",
+            "target": "dc7173bf-4c2c-4d52-82ce-30d025536c76",
+            "type": "straight",
+            "style": {
+              "strokeWidth": 5,
+              "stroke": "var(--sketchlab-stroke-default)"
+            }
           }
         ],
         "viewport": {
-          "x": -115.18196356845965,
-          "y": -509.6913793984097,
-          "zoom": 1
+          "x": 0.0030469141547655454,
+          "y": 247.9750273340403,
+          "zoom": 0.5999030868804118
         }
       }
     },
@@ -4588,6 +4834,6 @@
     }
   },
   "published": true,
-  "audit_log": "[{\"changed_at\":\"2026-03-10 21:47:34 +0000\",\"changed\":[],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-10 22:24:02 +0000\",\"changed\":[],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-10 22:35:42 +0000\",\"changed\":[],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-10 22:38:13 +0000\",\"changed\":[\"exemplar_sources\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-10 22:48:37 +0000\",\"changed\":[\"exemplar_sources\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-10 22:49:35 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-10 22:51:46 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-10 22:54:31 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-15 19:00:33 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2026-04-30 16:32:20 -0400\",\"changed\":[\"start_sources\"],\"changed_by_id\":1,\"changed_by_email\":\"levelbuilder@dev.com\"},{\"changed_at\":\"2026-04-30 18:08:02 -0400\",\"changed\":[\"start_sources\"],\"changed_by_id\":1,\"changed_by_email\":\"levelbuilder@dev.com\"},{\"changed_at\":\"2026-04-30 18:08:20 -0400\",\"changed\":[\"start_sources\"],\"changed_by_id\":1,\"changed_by_email\":\"levelbuilder@dev.com\"}]"
+  "audit_log": "[{\"changed_at\":\"2026-03-10 21:47:34 +0000\",\"changed\":[],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-10 22:24:02 +0000\",\"changed\":[],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-10 22:35:42 +0000\",\"changed\":[],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-10 22:38:13 +0000\",\"changed\":[\"exemplar_sources\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-10 22:48:37 +0000\",\"changed\":[\"exemplar_sources\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-10 22:49:35 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-10 22:51:46 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-10 22:54:31 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-15 19:00:33 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2026-04-30 16:32:20 -0400\",\"changed\":[\"start_sources\"],\"changed_by_id\":1,\"changed_by_email\":\"levelbuilder@dev.com\"},{\"changed_at\":\"2026-04-30 18:08:02 -0400\",\"changed\":[\"start_sources\"],\"changed_by_id\":1,\"changed_by_email\":\"levelbuilder@dev.com\"},{\"changed_at\":\"2026-04-30 18:08:20 -0400\",\"changed\":[\"start_sources\"],\"changed_by_id\":1,\"changed_by_email\":\"levelbuilder@dev.com\"},{\"changed_at\":\"2026-05-06 10:04:25 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":155,\"changed_by_email\":\"dani@code.org\"}]"
 }]]></config>
 </Sketchlab>

@@ -24,7 +24,7 @@ const darkTheme = createTheme({
 import FizzyButton from './FizzyButton';
 import LevelsAttemptedBox from './LevelsAttemptedBox';
 import PreSkillsCheck from './PreSkillsCheck';
-import ReflectionBox from './ReflectionBox';
+import ReflectionBox from './Reflection/ReflectionBox';
 import InterventionBox from './ReviewModalities/InterventionBox';
 import SkillsCheck from './SkillsCheck/SkillsCheck';
 import TimeSpentBox from './TimeSpentBox';
@@ -118,8 +118,10 @@ const LessonDeepDiveContainer: FC<LessonDeepDiveContainerProps> = ({
         return (
           <ReflectionBox
             lessonId={lessonDeepDiveData.lessonId}
+            unitLabel={lessonDeepDiveData.unitLabel}
             objectives={lessonDeepDiveData.objectives}
             onSubmitComplete={handleReflectionComplete}
+            onNext={goToNext}
             initialValues={reflectionData}
           />
         );
