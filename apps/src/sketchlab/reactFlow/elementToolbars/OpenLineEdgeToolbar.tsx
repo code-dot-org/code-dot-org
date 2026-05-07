@@ -1,4 +1,4 @@
-import {useStore} from '@xyflow/react';
+import {useReactFlow, useStore} from '@xyflow/react';
 import React, {useMemo} from 'react';
 
 import {
@@ -8,7 +8,7 @@ import {
 
 import {useToolbarVisibility} from '../context';
 import {useLineToolbar} from '../hooks/useLineToolbar';
-import {endpointFlowPositionFromState} from '../utils/lineAnchors';
+import {resolveEdgeEndpoint} from '../utils/lineAnchors';
 
 import LineEdgeToolbar from './LineEdgeToolbar';
 
@@ -44,28 +44,32 @@ export default function OpenLineEdgeToolbar({
     setEdges,
   });
 
+  const {screenToFlowPosition} = useReactFlow();
   // Subscribe to zoom so we can scale the toolbar's right padding to
   // match the visible handle's on-screen size as zoom changes.
   const zoom = useStore(state => state.transform[2]);
 
   const anchor = useMemo(() => {
     if (!openLineEdge) return null;
-    const sourceNode = nodes.find(node => node.id === openLineEdge.source);
-    const targetNode = nodes.find(node => node.id === openLineEdge.target);
-    if (!sourceNode || !targetNode) return null;
-    const sourcePoint = endpointFlowPositionFromState(
+    const getNode = (id: string) => nodes.find(node => node.id === id);
+    const sourceEndpoint = resolveEdgeEndpoint(
       openLineEdge,
       'source',
-      sourceNode
+      getNode,
+      screenToFlowPosition
     );
-    const targetPoint = endpointFlowPositionFromState(
+    const targetEndpoint = resolveEdgeEndpoint(
       openLineEdge,
       'target',
-      targetNode
+      getNode,
+      screenToFlowPosition
     );
+    if (!sourceEndpoint || !targetEndpoint) return null;
+    const sourcePoint = sourceEndpoint.flowPosition;
+    const targetPoint = targetEndpoint.flowPosition;
     const leftIsSource = sourcePoint.x <= targetPoint.x;
     const position = leftIsSource ? sourcePoint : targetPoint;
-    const leftNode = leftIsSource ? sourceNode : targetNode;
+    const leftNode = leftIsSource ? sourceEndpoint.node : targetEndpoint.node;
     const leftIsLineAnchor = leftNode.type === 'lineAnchor';
     // How far the visible handle circle protrudes to the left of the line
     // endpoint, measured in CSS px BEFORE zoom is applied.
@@ -83,7 +87,7 @@ export default function OpenLineEdgeToolbar({
     const VISIBLE_GAP_PX = 5;
     const anchorRightPaddingPx = visibleHandleOverhangLeftPx + VISIBLE_GAP_PX;
     return {position, anchorRightPaddingPx};
-  }, [openLineEdge, nodes, zoom]);
+  }, [openLineEdge, nodes, zoom, screenToFlowPosition]);
 
   if (!openLineEdge || !anchor) return null;
 
