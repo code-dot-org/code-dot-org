@@ -33,6 +33,7 @@ class JitPlConcept < ApplicationRecord
       display_name: display_name,
       text_content: text_content,
       resources: resources.map(&:summarize_for_lesson_edit),
+      json_videos: json_videos.map(&:summarize),
       exemplars: jit_pl_exemplars.where(jit_pl_misconception: nil).map(&:serialize),
       misconceptions: jit_pl_misconceptions.map(&:serialize),
       teaching_tips: jit_pl_teaching_tips.map(&:serialize),
@@ -56,6 +57,7 @@ class JitPlConcept < ApplicationRecord
                                                  text_content: text_content,
                                                  resources: resources.map {|r| {key: r.key, name: r.name, url: r.url, properties: r.properties.sort.to_h}},
                                                  jit_pl_concepts_resources: resources.map {|r| {seeding_key: {'concept.key' => key, 'resource.key' => r.key}}},
+                                                 jit_pl_concepts_json_videos: json_videos.map {|v| {seeding_key: {'concept.key' => key, 'json_video.key' => v.key}}},
                                                  exemplars: jit_pl_exemplars.where(jit_pl_misconception: nil).map do |e|
                                                    {
                                                      name: e.name,
@@ -64,6 +66,7 @@ class JitPlConcept < ApplicationRecord
                                                      exemplar_type: e.exemplar_type,
                                                      resources: e.resources.map {|r| {key: r.key, name: r.name, url: r.url, properties: r.properties.sort.to_h}},
                                                      jit_pl_exemplars_resources: e.resources.map {|r| {seeding_key: {'concept.key' => key, 'exemplar.name' => e.name, 'resource.key' => r.key}}},
+                                                     jit_pl_exemplars_json_videos: e.json_videos.map {|v| {seeding_key: {'concept.key' => key, 'exemplar.name' => e.name, 'json_video.key' => v.key}}},
                                                    }
                                                  end,
                                                  misconceptions: jit_pl_misconceptions.map do |m|
@@ -72,6 +75,7 @@ class JitPlConcept < ApplicationRecord
                                                      text_content: m.text_content,
                                                      resources: m.resources.map {|r| {key: r.key, name: r.name, url: r.url, properties: r.properties.sort.to_h}},
                                                      jit_pl_misconceptions_resources: m.resources.map {|r| {seeding_key: {'misconception.name' => m.name, 'resource.key' => r.key}}},
+                                                     jit_pl_misconceptions_json_videos: m.json_videos.map {|v| {seeding_key: {'misconception.name' => m.name, 'json_video.key' => v.key}}},
                                                      exemplars: m.jit_pl_exemplars.map do |e|
                                                        {
                                                          name: e.name,
@@ -80,6 +84,7 @@ class JitPlConcept < ApplicationRecord
                                                          exemplar_type: e.exemplar_type,
                                                          resources: e.resources.map {|r| {key: r.key, name: r.name, url: r.url, properties: r.properties.sort.to_h}},
                                                          jit_pl_exemplars_resources: e.resources.map {|r| {seeding_key: {'misconception.name' => m.name, 'exemplar.name' => e.name, 'resource.key' => r.key}}},
+                                                         jit_pl_exemplars_json_videos: e.json_videos.map {|v| {seeding_key: {'misconception.name' => m.name, 'exemplar.name' => e.name, 'json_video.key' => v.key}}},
                                                        }
                                                      end,
                                                    }
@@ -118,6 +123,7 @@ class JitPlConcept < ApplicationRecord
       text_content: config['text_content'],
       resources: config['resources'] || [],
       jit_pl_concepts_resources: config['jit_pl_concepts_resources'] || [],
+      json_video_keys: (config['jit_pl_concepts_json_videos'] || []).map {|j| j['seeding_key']['json_video.key']},
       exemplars: config['exemplars'] || [],
       misconceptions: config['misconceptions'] || [],
       teaching_tips: config['teaching_tips'] || [],
@@ -142,6 +148,7 @@ class JitPlConcept < ApplicationRecord
 
     resource_keys = properties[:jit_pl_concepts_resources].map {|r| r['seeding_key']['resource.key']}
     concept.resources = Resource.where(key: resource_keys, course_version: jit_pl_course_version)
+    concept.json_videos = JSONVideo.where(key: properties[:json_video_keys])
 
     seeded_concept_exemplar_names = []
     (properties[:exemplars] || []).each do |e_data|
@@ -155,6 +162,8 @@ class JitPlConcept < ApplicationRecord
       end
       e_resource_keys = (e_data['jit_pl_exemplars_resources'] || []).map {|r| r['seeding_key']['resource.key']}
       exemplar.resources = Resource.where(key: e_resource_keys, course_version: jit_pl_course_version)
+      e_json_video_keys = (e_data['jit_pl_exemplars_json_videos'] || []).map {|j| j['seeding_key']['json_video.key']}
+      exemplar.json_videos = JSONVideo.where(key: e_json_video_keys)
     end
     concept.jit_pl_exemplars.where(jit_pl_misconception_id: nil).where.not(name: seeded_concept_exemplar_names).destroy_all
 
@@ -170,6 +179,8 @@ class JitPlConcept < ApplicationRecord
       end
       m_resource_keys = (m_data['jit_pl_misconceptions_resources'] || []).map {|r| r['seeding_key']['resource.key']}
       misconception.resources = Resource.where(key: m_resource_keys, course_version: jit_pl_course_version)
+      m_json_video_keys = (m_data['jit_pl_misconceptions_json_videos'] || []).map {|j| j['seeding_key']['json_video.key']}
+      misconception.json_videos = JSONVideo.where(key: m_json_video_keys)
 
       seeded_misconception_exemplar_names = []
       (m_data['exemplars'] || []).each do |e_data|
@@ -183,6 +194,8 @@ class JitPlConcept < ApplicationRecord
         end
         e_resource_keys = (e_data['jit_pl_exemplars_resources'] || []).map {|r| r['seeding_key']['resource.key']}
         exemplar.resources = Resource.where(key: e_resource_keys, course_version: jit_pl_course_version)
+        e_json_video_keys = (e_data['jit_pl_exemplars_json_videos'] || []).map {|j| j['seeding_key']['json_video.key']}
+        exemplar.json_videos = JSONVideo.where(key: e_json_video_keys)
       end
       misconception.jit_pl_exemplars.where.not(name: seeded_misconception_exemplar_names).destroy_all
     end

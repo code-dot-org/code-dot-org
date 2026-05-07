@@ -23,10 +23,12 @@ class JSONVideo < ApplicationRecord
   has_and_belongs_to_many :jit_pl_misconceptions, join_table: :jit_pl_misconceptions_json_videos
   has_and_belongs_to_many :jit_pl_exemplars, join_table: :jit_pl_exemplars_json_videos
 
+  AUDIENCES = ['Student', 'Teacher', 'Verified Teacher'].freeze
+
   validates :key, presence: true, uniqueness: true
   validates :s3_uri, presence: true
   validates :json_schema_version, presence: true
-  validates :audience, presence: true
+  validates :audience, inclusion: {in: AUDIENCES}
 
   def self.seed_all(root_dir: Rails.root, glob: "config/json_videos/*.json")
     Dir.glob(root_dir.join(glob)).each do |path|
@@ -38,6 +40,36 @@ class JSONVideo < ApplicationRecord
 
   def self.properties_from_file(content)
     JSON.parse(content).symbolize_keys
+  end
+
+  def summarize
+    {
+      id: id,
+      key: key,
+      description: description,
+      audience: audience,
+    }
+  end
+
+  def file_path
+    Rails.root.join("config/json_videos/#{key}.json")
+  end
+
+  def write_serialization
+    return unless Rails.application.config.levelbuilder_mode
+    FileUtils.mkdir_p(File.dirname(file_path))
+    File.write(
+      file_path,
+      JSON.pretty_generate(
+        key: key,
+        description: description,
+        s3_uri: s3_uri,
+        labs: labs || [],
+        json_schema_version: json_schema_version,
+        audience: audience,
+        objective_keys: objectives.map(&:key),
+      )
+    )
   end
 
   def self.seed_record(file_path)

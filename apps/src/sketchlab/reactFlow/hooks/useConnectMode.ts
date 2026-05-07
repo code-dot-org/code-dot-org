@@ -1,4 +1,4 @@
-import {addEdge, MarkerType, useReactFlow} from '@xyflow/react';
+import {addEdge, useReactFlow} from '@xyflow/react';
 import {useCallback, useEffect, useState} from 'react';
 
 import {
@@ -7,6 +7,7 @@ import {
 } from '@cdo/apps/lab2/types';
 
 import {canCreateConnection} from '../utils/connectionRules';
+import {defaultLineEdgeFields} from '../utils/lineEdges';
 import {getNodeLabel} from '../utils/nodeLabel';
 
 /**
@@ -106,7 +107,7 @@ export function useConnectMode({
             source: connectingFrom,
             target: targetNodeId,
             ...handles,
-            markerEnd: {type: MarkerType.ArrowClosed},
+            ...defaultLineEdgeFields({arrow: true}),
           },
           currentEdges
         );
