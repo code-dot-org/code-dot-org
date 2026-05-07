@@ -12,7 +12,6 @@ import React, {useCallback, useEffect, useRef} from 'react';
 
 import {
   useSketchLabReadOnly,
-  type ToolbarTarget,
   useToolbarVisibility,
 } from '@cdo/apps/sketchlab/reactFlow/context';
 import {getViewportOverflow} from '@cdo/apps/sketchlab/reactFlow/utils/viewport';
@@ -30,24 +29,33 @@ const CONTROLS_WIDTH_PX = 60;
 // 2147483647 is the max signed 32-bit integer, a commonly used CSS z-index cap.
 const TOOLBAR_Z_INDEX = 2147483647;
 
-interface ToolbarShellProps {
-  target: ToolbarTarget;
-  // Required when target.type === 'edge'. Flow-coordinate point that the
-  // toolbar's right edge should align to.
-  anchorFlowPosition?: XYPosition;
-  // Optional additional padding for right edge of toolbar. Only used for edges.
-  anchorRightPaddingPx?: number;
+interface BaseToolbarShellProps {
   ariaLabel: string;
   children: React.ReactNode;
 }
 
-export default function ToolbarShell({
-  target,
-  anchorFlowPosition,
-  anchorRightPaddingPx,
-  ariaLabel,
-  children,
-}: ToolbarShellProps) {
+interface NodeToolbarShellProps extends BaseToolbarShellProps {
+  target: {type: 'node'; id: string};
+}
+
+interface EdgeToolbarShellProps extends BaseToolbarShellProps {
+  target: {type: 'edge'; id: string};
+  // Flow-coordinate point that the toolbar's right edge should align to.
+  anchorFlowPosition: XYPosition;
+  // Screen-px gap between Paper's right edge and anchorFlowPosition.
+  anchorRightPaddingPx?: number;
+}
+
+type ToolbarShellProps = NodeToolbarShellProps | EdgeToolbarShellProps;
+
+function isEdgeShellProps(
+  props: ToolbarShellProps
+): props is EdgeToolbarShellProps {
+  return props.target.type === 'edge';
+}
+
+export default function ToolbarShell(props: ToolbarShellProps) {
+  const {target, ariaLabel, children} = props;
   const readOnly = useSketchLabReadOnly();
   const {openToolbarTarget, trapFocus, closeToolbar} = useToolbarVisibility();
   const {getViewport, setViewport} = useReactFlow();
@@ -160,18 +168,22 @@ export default function ToolbarShell({
     </FocusTrap>
   );
 
-  if (target.type === 'edge' && anchorFlowPosition) {
+  if (isEdgeShellProps(props)) {
     return (
       <EdgeToolbar
-        edgeId={target.id}
-        x={anchorFlowPosition.x}
-        y={anchorFlowPosition.y}
+        edgeId={props.target.id}
+        x={props.anchorFlowPosition.x}
+        y={props.anchorFlowPosition.y}
         alignX="right"
         alignY="center"
         isVisible={isVisible}
         style={{zIndex: TOOLBAR_Z_INDEX}}
       >
-        <div style={{paddingRight: anchorRightPaddingPx ?? TOOLBAR_OFFSET_PX}}>
+        <div
+          style={{
+            paddingRight: props.anchorRightPaddingPx ?? TOOLBAR_OFFSET_PX,
+          }}
+        >
           {toolbarBody}
         </div>
       </EdgeToolbar>
@@ -180,7 +192,7 @@ export default function ToolbarShell({
 
   return (
     <NodeToolbar
-      nodeId={target.id}
+      nodeId={props.target.id}
       position={Position.Left}
       offset={TOOLBAR_OFFSET_PX}
       isVisible={isVisible}

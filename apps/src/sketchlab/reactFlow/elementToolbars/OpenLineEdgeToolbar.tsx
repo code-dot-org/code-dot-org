@@ -74,7 +74,7 @@ export default function OpenLineEdgeToolbar({
     const leftIsLineAnchor = leftNode.type === 'lineAnchor';
     // How far the visible handle circle protrudes to the left of the line
     // endpoint before zoom is applied.
-    let baseHandleOverhangLeftPx;
+    let baseHandleOverhangLeftPx: number;
     if (!leftIsLineAnchor) {
       baseHandleOverhangLeftPx = 3;
     } else if (leftIsSource) {
