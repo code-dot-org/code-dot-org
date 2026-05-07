@@ -24,7 +24,7 @@ class Api::V1::Pd::WorkshopEnrollmentsController < ApplicationController
   # GET /api/v1/pd/workshops/1/enrollments
   def index
     enrollments = @workshop.enrollments.includes(
-      :attendances, :pre_workshop_survey, :application,
+      :attendances, :pre_workshop_survey,
       user: {school_info: [:school, :school_district]},
       school_info: [:school, :school_district]
     )
