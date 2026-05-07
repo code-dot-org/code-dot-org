@@ -34,11 +34,7 @@ export default function ShapeNodeToolbar({nodeId}: ShapeNodeToolbarProps) {
   const handlesVisible = data.showHandles !== false;
 
   return (
-    <ToolbarShell
-      target={{type: 'node', id: nodeId}}
-      anchorNodeId={nodeId}
-      ariaLabel="Shape style"
-    >
+    <ToolbarShell target={{type: 'node', id: nodeId}} ariaLabel="Shape style">
       {data.locked ? (
         <LockedNotice onUnlock={() => patchNodeData({locked: false})} />
       ) : (

@@ -31,11 +31,7 @@ export default function TextNodeToolbar({nodeId}: TextNodeToolbarProps) {
   const handlesVisible = data.showHandles !== false;
 
   return (
-    <ToolbarShell
-      target={{type: 'node', id: nodeId}}
-      anchorNodeId={nodeId}
-      ariaLabel="Text style"
-    >
+    <ToolbarShell target={{type: 'node', id: nodeId}} ariaLabel="Text style">
       {data.locked ? (
         <LockedNotice onUnlock={() => patchNodeData({locked: false})} />
       ) : (
