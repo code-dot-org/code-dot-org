@@ -50,8 +50,6 @@ class LanguageTest < ActionDispatch::IntegrationTest
 
         _ {I18n.backend.store_translations(locale, {i18n_string_key: 'locale_str'})}.
           must_change -> {I18n.t(:i18n_string_key, locale:)}, from: 'fallback_str', to: 'locale_str'
-      ensure
-        I18n.backend.reload!
       end
     end
   end
