@@ -42,6 +42,7 @@ export type LessonDeepDiveData = {
   practiceProblems: PracticeProblem[];
   progressCounts: LessonProgressCounts;
   timeSpentSeconds: number;
+  unitLabel: string | null;
 };
 
 export type MultiSolution = {

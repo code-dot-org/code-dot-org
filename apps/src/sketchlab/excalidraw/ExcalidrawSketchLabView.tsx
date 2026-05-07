@@ -343,6 +343,7 @@ const ExcalidrawSketchLabView: React.FC<LabProps<LevelProperties>> = ({
             settings={[useThemeSetting('sketchlab')]}
             versionHistoryProps={{
               startSources:
+                (levelProperties?.templateSources as ProjectSources) ||
                 (levelProperties?.startSources as ProjectSources) ||
                 DEFAULT_SOURCES,
               onLoadVersion: onLoadVersion,

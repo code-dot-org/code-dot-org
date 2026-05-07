@@ -1,3 +1,4 @@
+import SimpleDropdown from '@code-dot-org/component-library/dropdown/simpleDropdown';
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
@@ -41,19 +42,18 @@ class ManageStudentGenderCell extends Component {
           <div>{GENDERS[this.props.genderTeacherInput]}</div>
         )}
         {this.props.isEditing && (
-          <select
-            style={{width: 100, marginBottom: 0}}
-            ref={element => (this.root = element)}
+          <SimpleDropdown
             name="gender"
-            value={this.props.editedValue}
+            labelText={i18n.gender()}
+            isLabelVisible={false}
+            size="s"
+            items={Object.keys(GENDERS).map(key => ({
+              value: key,
+              text: GENDERS[key],
+            }))}
+            selectedValue={this.props.editedValue || ''}
             onChange={this.onChangeGender}
-          >
-            {Object.keys(GENDERS).map(gender => (
-              <option key={gender} value={gender}>
-                {GENDERS[gender]}
-              </option>
-            ))}
-          </select>
+          />
         )}
       </div>
     );

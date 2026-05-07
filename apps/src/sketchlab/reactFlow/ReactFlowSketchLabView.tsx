@@ -234,6 +234,7 @@ function ReactFlowSketchLabViewInner({
             settings={[useThemeSetting('sketchlab')]}
             versionHistoryProps={{
               startSources:
+                (levelProperties?.templateSources as ProjectSources) ||
                 (levelProperties?.startSources as ProjectSources) ||
                 REACT_FLOW_DEFAULT_SOURCES,
               onLoadVersion,
@@ -281,6 +282,7 @@ function ReactFlowSketchLabViewInner({
             <ReactFlowCanvas
               key={mountKey}
               updateSources={updateSources}
+              levelName={levelProperties.name}
               initialNodes={initialNodes}
               initialEdges={initialEdges}
               initialViewport={initialViewport}

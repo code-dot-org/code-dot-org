@@ -20,16 +20,22 @@
       "position": 1
     },
     {
+      "key": "javascript",
+      "name": "JavaScript",
+      "color": "#2d39e1",
+      "position": 2
+    },
+    {
       "key": "supported_content",
       "name": "Supported Content",
       "color": "#bffffc",
-      "position": 2
+      "position": 3
     },
     {
       "key": "lab_features",
       "name": "Lab Features",
       "color": "#ff8677",
-      "position": 3
+      "position": 4
     }
   ]
 }

@@ -28,9 +28,6 @@ class CongratsControllerTest < ActionController::TestCase
   test "cached query test for hoc course" do
     hoc_course = create(:hoc_course)
 
-    setup_script_cache
-    UnitGroup.clear_cache
-
     assert_cached_queries(0) do
       # Reset @view_options before each request to avoid FrozenError on retries
       @controller.instance_variable_set(:@view_options, nil)

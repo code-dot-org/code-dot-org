@@ -5,9 +5,7 @@ description 'description here'
 markdown <<MARKDOWN
 # Teaching About AI
 
-#### A lot of the content we've covered so far in this Module has focused on teaching with AI.
-
-#### 
+#### A lot of the content we've covered so far in this Module has focused on teaching **with AI**.
 
 <div style="text-align:center;">
   <img 
@@ -18,4 +16,100 @@ markdown <<MARKDOWN
 </div>
 
 *Image: TeachAI*
+
+#### Teaching with AI and teaching about AI are closely connected and often happen at the same time.
+
+#### When you use AI as part of your teaching practice, you naturally create opportunities for students to ask questions about how it works, what it produces, and whether it can be trusted.
+
+#### However, sometimes you'll want to also teach more explicitly **about AI**. For the remainder of this module we'll focus on teaching about AI.
+
+<body style="margin:0; padding:20px; background-color:#ffffff; font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;">
+<div style="max-width:980px; margin:0 auto;">
+<div style="display:flex; flex-wrap:nowrap; gap:16px;">
+
+<div style="flex:1; min-width:0; background-color:#F7F8FA; border-radius:6px; box-sizing:border-box; overflow:hidden;">
+<div style="background-color:#8C52BA; color:#ffffff; padding:10px 14px; font-weight:600; font-size:20px;">Teaching <span style="opacity:0.95;">with</span> AI</div>
+<div style="padding:14px 16px 16px 16px;">
+
+<div style="display:flex; align-items:flex-start; margin-bottom:10px;">
+<div style="width:30px; height:30px; border-radius:50%; background-color:#e0f4f7; display:flex; align-items:center; justify-content:center; font-size:16px; margin-right:10px;">👩‍🏫</div>
+<div style="font-size:16px; color:#333333;">
+<strong>Supporting teaching practice</strong> by generating lesson ideas, materials, feedback, and differentiation strategies
+</div></div>
+
+<div style="display:flex; align-items:flex-start; margin-bottom:10px;">
+<div style="width:30px; height:30px; border-radius:50%; background-color:#e0f4f7; display:flex; align-items:center; justify-content:center; font-size:16px; margin-right:10px;">💬</div>
+<div style="font-size:16px; color:#333333;">
+<strong>Supporting student learning</strong> through explanations, examples, tutoring, and guided practice
+</div></div>
+
+<div style="display:flex; align-items:flex-start; margin-bottom:10px;">
+<div style="width:30px; height:30px; border-radius:50%; background-color:#e0f4f7; display:flex; align-items:center; justify-content:center; font-size:16px; margin-right:10px;">🧩</div>
+<div style="font-size:16px; color:#333333;">
+<strong>Assisting with academic work</strong> like brainstorming, drafting, problem-solving, and studying
+</div></div>
+
+<div style="display:flex; align-items:flex-start; margin-bottom:10px;">
+<div style="width:30px; height:30px; border-radius:50%; background-color:#e0f4f7; display:flex; align-items:center; justify-content:center; font-size:16px; margin-right:10px;">🔁</div>
+<div style="font-size:16px; color:#333333;">
+<strong>Providing feedback and revision support</strong> to improve clarity, accuracy, and quality of work
+</div></div>
+
+<div style="display:flex; align-items:flex-start; margin-bottom:10px;">
+<div style="width:30px; height:30px; border-radius:50%; background-color:#e0f4f7; display:flex; align-items:center; justify-content:center; font-size:16px; margin-right:10px;">📊</div>
+<div style="font-size:16px; color:#333333;">
+<strong>Supporting assessment and monitoring</strong> through practice questions, checks for understanding, and progress insights
+</div></div>
+
+<div style="display:flex; align-items:flex-start;">
+<div style="width:30px; height:30px; border-radius:50%; background-color:#e0f4f7; display:flex; align-items:center; justify-content:center; font-size:16px; margin-right:10px;">🏫</div>
+<div style="font-size:16px; color:#333333;">
+<strong>Assisting with school operations</strong> such as communication, planning, and administrative tasks
+</div></div>
+
+</div>
+</div>
+
+
+<!-- RED OUTLINE ADDED HERE -->
+<div style="flex:1; min-width:0; background-color:#F7F8FA; border-radius:6px; box-sizing:border-box; overflow:hidden; border:3px solid #E53935;">
+<div style="background-color:#8C52BA; color:#ffffff; padding:10px 14px; font-weight:600; font-size:20px;">Teaching <span style="opacity:0.95;">about</span> AI</div>
+<div style="padding:14px 16px 16px 16px;">
+
+<div style="display:flex; align-items:flex-start; margin-bottom:10px;">
+<div style="width:30px; height:30px; border-radius:50%; background-color:#e0f4f7; display:flex; align-items:center; justify-content:center; font-size:16px; margin-right:10px;">🧠</div>
+<div style="font-size:16px; color:#333333;">
+<strong>Understanding how AI works</strong> including data, models, training processes, and prediction
+</div></div>
+
+<div style="display:flex; align-items:flex-start; margin-bottom:10px;">
+<div style="width:30px; height:30px; border-radius:50%; background-color:#e0f4f7; display:flex; align-items:center; justify-content:center; font-size:16px; margin-right:10px;">🔍</div>
+<div style="font-size:16px; color:#333333;">
+<strong>Examining AI outputs</strong> to understand accuracy, bias, limitations, and uncertainty
+</div></div>
+
+<div style="display:flex; align-items:flex-start; margin-bottom:10px;">
+<div style="width:30px; height:30px; border-radius:50%; background-color:#e0f4f7; display:flex; align-items:center; justify-content:center; font-size:16px; margin-right:10px;">🔬</div>
+<div style="font-size:16px; color:#333333;">
+<strong>Exploring how AI systems are built</strong> through models, datasets, and simple simulations
+</div></div>
+
+<div style="display:flex; align-items:flex-start; margin-bottom:10px;">
+<div style="width:30px; height:30px; border-radius:50%; background-color:#e0f4f7; display:flex; align-items:center; justify-content:center; font-size:16px; margin-right:10px;">🧑‍⚖️</div>
+<div style="font-size:16px; color:#333333;">
+<strong>Analyzing societal and ethical impacts</strong> such as bias, privacy, fairness, and misinformation
+</div></div>
+
+<div style="display:flex; align-items:flex-start;">
+<div style="width:30px; height:30px; border-radius:50%; background-color:#e0f4f7; display:flex; align-items:center; justify-content:center; font-size:16px; margin-right:10px;">🌍</div>
+<div style="font-size:16px; color:#333333;">
+<strong>Connecting AI to disciplines</strong> like computer science, data science, mathematics, science, and social studies
+</div></div>
+
+</div>
+</div>
+
+</div>
+</div>
+</body>
 MARKDOWN

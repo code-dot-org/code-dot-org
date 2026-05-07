@@ -119,9 +119,12 @@ Dashboard::Application.routes.draw do
     resources :puzzle_ratings, only: [:create]
     resources :callouts
     resources :congrats, only: %i[index show], param: :course_name
-    resources :json_videos, only: [] do
+    resources :json_videos, only: [:create] do
       member do
         get 'content'
+      end
+      collection do
+        get 'search'
       end
     end
     resources :videos do
@@ -287,7 +290,6 @@ Dashboard::Application.routes.draw do
       get '/users/cancel', to: 'registrations#cancel'
       post '/users/auth/:id/disconnect', to: 'authentication_options#disconnect'
       get '/users/migrate_to_multi_auth', to: 'registrations#migrate_to_multi_auth'
-      get '/users/demigrate_from_multi_auth', to: 'registrations#demigrate_from_multi_auth'
       get '/users/to_destroy', to: 'registrations#users_to_destroy'
       get '/reset_session', to: 'sessions#reset'
       get '/lockout', to: 'sessions#lockout'

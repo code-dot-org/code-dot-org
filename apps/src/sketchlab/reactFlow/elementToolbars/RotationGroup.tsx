@@ -132,7 +132,7 @@ export default function RotationGroup({value, onChange}: RotationGroupProps) {
           onBlur={handleInputBlur}
           onKeyDown={handleInputKeyDown}
           size="s"
-          className={styles.rotationInput}
+          className={styles.smallInput}
         />
       </div>
     </div>

@@ -148,6 +148,10 @@ class MetricsReporter {
       return;
     }
 
+    if (!DCDO.get('browser-events-enabled', true)) {
+      return;
+    }
+
     try {
       await this.metricsApi.sendLogs([payload]);
     } catch (error) {
@@ -187,6 +191,10 @@ class MetricsReporter {
   private async sendMetrics(metrics: MetricDatum[]) {
     if (!this.isReportingEnabled()) {
       this.fallbackLog(metrics);
+      return;
+    }
+
+    if (!DCDO.get('browser-events-enabled', true)) {
       return;
     }
 
