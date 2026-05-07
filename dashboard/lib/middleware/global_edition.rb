@@ -4,7 +4,6 @@ require 'omniauth'
 require 'request_store'
 
 require 'cdo/global_edition'
-require 'cdo/honeybadger'
 require 'dynamic_config/dcdo'
 require 'helpers/cookies'
 
