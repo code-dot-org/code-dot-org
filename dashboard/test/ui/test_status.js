@@ -20,6 +20,7 @@ const TEST_TYPE = document.querySelector("#test-type").value;
 const API_ORIGIN = document.querySelector("#api-origin").value;
 const S3_BUCKET = document.querySelector("#s3-bucket").value;
 const S3_PREFIX = document.querySelector("#s3-prefix").value;
+const RERUN_COMMAND_PREFIX = document.querySelector("#rerun-command-prefix").value;
 
 // Simple constants
 const STATUS_PENDING = "PENDING";
@@ -165,16 +166,27 @@ Test.prototype.publicLogUrl = function () {
 
 // Connect up "Copy Rerun Command" buttons
 new Clipboard("button.copy-button");
-// Each per-row rerun command already ends with `&` to background the run.
-// Join with ` \<newline>` so when the user pastes the block into a shell, the
-// shell treats it as one line-continued input — giving the user a chance to
-// review and hit Enter rather than executing each command on paste.
+// Build one rerun command per failing browser, folding all of that browser's
+// failing features into a single comma-joined `-f` list. runner.rb's `-c` and
+// `-f` form a Cartesian product, so we *must* keep one command per browser
+// rather than one big multi-browser command. Multiple browsers' commands are
+// joined with ` \<newline>` so the whole block pastes into the shell as one
+// line-continued input (review, then press Enter) instead of firing each
+// backgrounded command immediately on paste.
 new Clipboard("#copy-failing-rerun-button", {
-  text: () =>
-    Array.from(
-      document.querySelectorAll("tr.FAILED td.rerun-command button.copy-button"),
-      (btn) => btn.getAttribute("data-clipboard-text")
-    ).join(" \\\n"),
+  text: () => {
+    const featuresByBrowser = {};
+    document.querySelectorAll("tr.FAILED").forEach((row) => {
+      const { browser, feature } = row.dataset;
+      (featuresByBrowser[browser] ||= []).push(feature);
+    });
+    return Object.entries(featuresByBrowser)
+      .map(
+        ([browser, features]) =>
+          `${RERUN_COMMAND_PREFIX} -c ${browser} -f ${features.join(",")} &`
+      )
+      .join(" \\\n");
+  },
 });
 
 function keyify(str) {

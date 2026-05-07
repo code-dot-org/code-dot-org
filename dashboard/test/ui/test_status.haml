@@ -40,6 +40,11 @@
           %div.failure.bar
           %div.pending.bar
           %div.clear-both
+      - rerun_flags = ['--html']
+      - rerun_flags << '--eyes' if type == 'Eyes'
+      - rerun_flags << '--device-farm' if device_farm
+      - rerun_flags << '--db' if force_db_access
+      - rerun_command_prefix = "bundle exec ./runner.rb #{rerun_flags.join(' ')}"
       - browser_features.map {|browser, _| browser['name'] || 'UnknownBrowser'}.uniq.sort.map do |browser|
         %h3= browser
         %div{id: "#{browser}-progress"}
@@ -59,11 +64,7 @@
                 %td.status
                 %td.log-link
                 %td.rerun-command
-                  - rerun_flags = ['--html']
-                  - rerun_flags << '--eyes' if type == 'Eyes'
-                  - rerun_flags << '--device-farm' if device_farm
-                  - rerun_flags << '--db' if force_db_access
-                  - rerun_command = "bundle exec ./runner.rb #{rerun_flags.join(' ')} -c #{browser} -f #{feature} &"
+                  - rerun_command = "#{rerun_command_prefix} -c #{browser} -f #{feature} &"
                   %button.copy-button{'data-clipboard-text': rerun_command}= "Copy Rerun Cmd"
       %div#help-text
         %p
@@ -85,4 +86,5 @@
     %input#api-origin{type: 'hidden', value: api_origin}
     %input#s3-bucket{type: 'hidden', value: s3_bucket}
     %input#s3-prefix{type: 'hidden', value: s3_prefix}
+    %input#rerun-command-prefix{type: 'hidden', value: rerun_command_prefix}
     %script{src: 'test_status.js'}
