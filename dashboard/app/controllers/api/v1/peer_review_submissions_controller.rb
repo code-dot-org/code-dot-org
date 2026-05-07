@@ -59,7 +59,7 @@ class Api::V1::PeerReviewSubmissionsController < ApplicationController
       select('max(peer_reviews.id) id, submitter_id, level_id')
 
     # This query gets matching fully-hydrated models in the correct order.
-    real_reviews = PeerReview.includes(:script, :user_level).find(reviews.map(&:id))
+    real_reviews = PeerReview.includes(:script).find(reviews.map(&:id))
 
     real_reviews.each do |review|
       submissions[review.user_level.id] = PeerReview.get_submission_summary_for_user_level(review.user_level, review.script) unless review.script&.deprecated?
