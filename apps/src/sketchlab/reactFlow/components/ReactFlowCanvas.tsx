@@ -7,6 +7,7 @@ import {
   useEdgesState,
   useNodesState,
   useReactFlow,
+  useStore,
   type OnConnect,
 } from '@xyflow/react';
 import classNames from 'classnames';
@@ -576,6 +577,10 @@ export default function ReactFlowCanvas({
     setEdges,
   });
 
+  // Subscribe to zoom so we can scale the toolbar's right
+  // padding to match the visible handle's on-screen size as zoom changes.
+  const zoom = useStore(state => state.transform[2]);
+
   // Anchor for line toolbars. Positioned at the leftmost endpoint, with a small
   // amount of padding.
   const lineToolbarAnchor = useMemo(() => {
@@ -597,26 +602,23 @@ export default function ReactFlowCanvas({
     const position = leftIsSource ? sourcePoint : targetPoint;
     const leftNode = leftIsSource ? sourceNode : targetNode;
     const leftIsLineAnchor = leftNode.type === 'lineAnchor';
-    // Visible-handle extent past the line endpoint, in screen px (handle
-    // CSS is sized in screen px and doesn't scale with zoom):
-    //   - real node (default xyflow handle): 3 px (handle is 6 wide,
-    //     centered on endpoint)
-    //   - source lineAnchor (handle's right edge at endpoint): 6 px
-    //   - target lineAnchor (handle's left edge at endpoint): 0 px
-    let visibleHandleExtentPx;
+    // How far the visible handle circle protrudes to the left of the line
+    // endpoint, measured in CSS px BEFORE zoom is applied.
+    let baseHandleOverhangLeftPx;
     if (!leftIsLineAnchor) {
-      visibleHandleExtentPx = 3;
+      baseHandleOverhangLeftPx = 3;
     } else if (leftIsSource) {
-      visibleHandleExtentPx = 6;
+      baseHandleOverhangLeftPx = 6;
     } else {
-      visibleHandleExtentPx = 0;
+      baseHandleOverhangLeftPx = 0;
     }
-    // Match the visible gap NodeToolbar gives nodes: NodeToolbar offset 8
-    // minus the 3px handle overhang past the node bbox = 5px.
+    const visibleHandleOverhangLeftPx = baseHandleOverhangLeftPx * zoom;
+    // Constant visible gap between the handle's left edge and the toolbar
+    // at any zoom. 5 matches the gap NodeToolbar gives nodes at zoom=1.
     const VISIBLE_GAP_PX = 5;
-    const anchorRightPaddingPx = visibleHandleExtentPx + VISIBLE_GAP_PX;
+    const anchorRightPaddingPx = visibleHandleOverhangLeftPx + VISIBLE_GAP_PX;
     return {position, anchorRightPaddingPx};
-  }, [openLineEdge, nodes]);
+  }, [openLineEdge, nodes, zoom]);
 
   return (
     <SketchLabReadOnlyProvider value={readOnly}>
