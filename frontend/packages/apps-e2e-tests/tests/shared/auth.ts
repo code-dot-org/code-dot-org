@@ -269,9 +269,7 @@ export async function createTeacherAssociatedStudent(
       `create section failed: ${sectionResp.status()} — ${await sectionResp.text()}`,
     );
   }
-  const sectionCode = (
-    (await sectionResp.json()) as {code: string}
-  ).code;
+  const sectionCode = ((await sectionResp.json()) as {code: string}).code;
 
   // Create student and sign in as student.
   const studentTs = Date.now();
@@ -307,6 +305,78 @@ export async function createTeacherAssociatedStudent(
   }
 
   return {teacherEmail, teacherPassword, sectionCode};
+}
+
+/** Section identifiers returned by {@link createSection} and {@link createSectionWithCourse}. */
+export interface SectionInfo {
+  /** Teacher-shareable join code (e.g. "ABCDEF"). */
+  sectionCode: string;
+  /** Numeric section ID used in dashboard API URLs. */
+  sectionId: number;
+}
+
+/**
+ * Creates an empty student section for the currently signed-in teacher.
+ * Mirrors `I create a new student section` from section_management_steps.rb.
+ *
+ * @param page - Playwright page whose context holds the teacher session
+ * @returns section join code and numeric ID
+ */
+export async function createSection(page: Page): Promise<SectionInfo> {
+  const csrf = await page
+    .locator('meta[name="csrf-token"]')
+    .getAttribute('content');
+  const resp = await page.request.post('/dashboardapi/sections', {
+    headers: {
+      'Content-Type': 'application/json',
+      'X-CSRF-Token': csrf ?? '',
+    },
+    data: {login_type: 'email', participant_type: 'student'},
+  });
+  if (!resp.ok()) {
+    throw new Error(
+      `create section failed: ${resp.status()} — ${await resp.text()}`,
+    );
+  }
+  const json = (await resp.json()) as {code: string; id: number};
+  return {sectionCode: json.code, sectionId: json.id};
+}
+
+/**
+ * Creates a student section pre-assigned to a course unit for the currently
+ * signed-in teacher (test-only API).
+ * Mirrors `I create a new student section assigned to course X unit N`.
+ *
+ * @param page - Playwright page holding the teacher session
+ * @param courseName - e.g. "allthethingscourse"
+ * @param unitPosition - 1-based unit index
+ * @returns section join code and numeric ID
+ */
+export async function createSectionWithCourse(
+  page: Page,
+  courseName: string,
+  unitPosition: number,
+): Promise<SectionInfo> {
+  const csrf = await page
+    .locator('meta[name="csrf-token"]')
+    .getAttribute('content');
+  const resp = await page.request.post(
+    '/api/test/create_student_section_assigned_to_course_and_unit',
+    {
+      headers: {
+        'Content-Type': 'application/json',
+        'X-CSRF-Token': csrf ?? '',
+      },
+      data: {course_name: courseName, unit_position: unitPosition},
+    },
+  );
+  if (!resp.ok()) {
+    throw new Error(
+      `create section with course failed: ${resp.status()} — ${await resp.text()}`,
+    );
+  }
+  const json = (await resp.json()) as {section_code: string; id: number};
+  return {sectionCode: json.section_code, sectionId: json.id};
 }
 
 /**

@@ -1,0 +1,115 @@
+import {createStudent} from '../../shared/auth';
+import {expect, test} from '../../shared/fixtures';
+
+/**
+ * Student lesson plan page — content sections and lesson navigation.
+ *
+ * Source:
+ *   dashboard/test/ui/features/teacher_tools/student_lesson_plan.feature
+ *
+ * Tagged @no_safari @no_mobile. A link on the unit overview opens the lesson
+ * plan in a new tab; the test captures the new page via context event.
+ */
+
+test(
+  'student lesson plan: content sections and lesson navigation',
+  {tag: '@no_mobile'},
+  async ({page}) => {
+    await createStudent(page);
+    await page.goto('/courses/allthelessonplans/units/1?no_redirect=true');
+    await page
+      .locator('.ui-test-lesson-resources')
+      .waitFor({state: 'visible', timeout: 30_000});
+
+    const [lessonPlanPage] = await Promise.all([
+      page.context().waitForEvent('page'),
+      page.locator('.ui-test-lesson-resources').click(),
+    ]);
+
+    await lessonPlanPage.waitForURL(
+      /\/courses\/allthelessonplans\/units\/1\/lessons\/1\/student/,
+      {timeout: 30_000},
+    );
+    await lessonPlanPage
+      .locator('#show-container')
+      .waitFor({state: 'visible', timeout: 30_000});
+
+    // Lesson name
+    await expect(
+      lessonPlanPage.locator('h1:has-text("Lesson 1: First Lesson")'),
+    ).toBeVisible({timeout: 15_000});
+
+    // Sections: Overview, Resources, Vocabulary, Introduced Code
+    await expect(lessonPlanPage.locator('h2:has-text("Overview")')).toBeVisible(
+      {timeout: 15_000},
+    );
+    await expect(
+      lessonPlanPage.locator('p:has-text("Student overview of the lesson")'),
+    ).toBeVisible({timeout: 15_000});
+
+    await expect(
+      lessonPlanPage.locator('h2:has-text("Resources")'),
+    ).toBeVisible({timeout: 15_000});
+    await expect(
+      lessonPlanPage.locator('li a:has-text("Student Resource")'),
+    ).toBeVisible({timeout: 15_000});
+
+    await expect(
+      lessonPlanPage.locator('h2:has-text("Vocabulary")'),
+    ).toBeVisible({timeout: 15_000});
+    await expect(
+      lessonPlanPage.locator(
+        'li:has-text("Word - This is a definition of the word word")',
+      ),
+    ).toBeVisible({timeout: 15_000});
+
+    await expect(
+      lessonPlanPage.locator('h2:has-text("Introduced Code")'),
+    ).toBeVisible({timeout: 15_000});
+    await expect(
+      lessonPlanPage.locator('li a:has-text("playSound")'),
+    ).toBeVisible({timeout: 15_000});
+
+    // Announcements
+    const announcements = lessonPlanPage.locator('.announcement-notification');
+    await expect(announcements.first()).toContainText(
+      'Information for Students',
+    );
+    await expect(announcements.nth(1)).toContainText(
+      'Information for Students and Teachers',
+    );
+
+    // Navigate to Lesson 2 via dropdown nav
+    await lessonPlanPage
+      .locator('.uitest-lesson-dropdown-nav')
+      .waitFor({state: 'visible', timeout: 15_000});
+    await lessonPlanPage.locator('.uitest-lesson-dropdown-nav').click();
+
+    // The current lesson entry in the dropdown is not a link — click the second
+    // item which corresponds to "2 - Second Lesson".
+    await lessonPlanPage
+      .locator('a.navigate:has-text("2 - Second Lesson")')
+      .waitFor({state: 'visible', timeout: 15_000});
+    await lessonPlanPage.locator('a.navigate').first().click();
+
+    await lessonPlanPage.waitForURL(
+      /\/courses\/allthelessonplans\/units\/1\/lessons\/2\/student/,
+      {timeout: 30_000},
+    );
+    await expect(
+      lessonPlanPage.locator('h1:has-text("Lesson 2: Second Lesson")'),
+    ).toBeVisible({timeout: 15_000});
+
+    // Navigate back to the unit overview
+    await lessonPlanPage
+      .locator('a:has-text("All The Lesson Plans")')
+      .waitFor({state: 'visible', timeout: 15_000});
+    await Promise.all([
+      lessonPlanPage.waitForNavigation({timeout: 30_000}),
+      lessonPlanPage.locator('a:has-text("All The Lesson Plans")').click(),
+    ]);
+    await lessonPlanPage.waitForURL(/\/courses\/allthelessonplans\/units\/1/, {
+      timeout: 30_000,
+    });
+  },
+);
