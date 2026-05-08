@@ -1,12 +1,12 @@
 <Sketchlab>
   <config><![CDATA[{
   "game_id": 75,
-  "created_at": "2026-05-07T15:27:11.000Z",
+  "created_at": "2026-05-08T14:19:35.000Z",
   "level_num": "custom",
   "user_id": 18602,
   "properties": {
     "encrypted": "false",
-    "long_instructions": "# Wireframe a Web App Idea  \r\n   \r\n**Practice using Sketch Lab**, choose one of the following ideas for your website. Then, create 2 unique pages for the site:\r\n\r\n**Local Food Vendor Website**\r\n\r\n:::details [What should I include?]\r\n- **2 different pages**, e.g. Home, Menu, Order, or About Us\r\n- **Wireframe assets** such as images, placeholders, and structure (ignore styling and colors for now)\r\n:::\r\n&nbsp;\r\n\r\n**School Club Website**\r\n\r\n:::details [What should I include?]\r\n- **2 different pages**, e.g. Home, Sign Up, About, Calendar\r\n- **Wireframe assets** such as images, placeholders, and structure (ignore styling and colors for now)\r\n:::\r\n&nbsp;\r\n\r\n**Choose your own idea!**\r\n \r\n:::details [What should I include?]\r\n- **2 different pages**, e.g. Home, Menu, Contact, About Me\r\n- **Wireframe assets** such as images, placeholders, and structure (ignore styling and colors for now)\r\n:::\r\n\r\n\r\n<br>\r\n\r\n*Note: To access the assets, drag the frame off of the top of the top and then duplicate the assets you need and drag them into place.* \r\n\r\n### Save your image\r\nWhen you are done, **export your image** as a .png - it will be uploaded in the next level to help build the webpage. \r\n\r\n:::details [How to save]\r\n- Click on the stacked bars on the top left\r\n![](https://images.code.org/26fd4302afea23d437fb853b77372714-image-1761155648521.png)\r\n- Select `export image` and then `save as .png`\r\n- Name your file and move it to the location of your choice \r\n\r\n:::",
+    "long_instructions": "## From JSON to UI\r\n\r\nBefore you build your app, you need to decide how the data will look to your users. \r\n\r\n**Your Task:**\r\n*   **Review the JSON:** Read over the sample artist JSON data below.\r\n*   **Choose a Layout:** Decide if you are building a **Playlist** (vertical list) or an **Album Gallery** (grid of cards).\r\n*   **Sketch a Wireframe:** Draw a mockup for **one list row** or **one album card**. Use labels and arrows to show where specific JSON fields will go. \r\n\r\n_Note: You don't have to display all of the data._\r\n\r\n\r\n* **Save the image:** Click on export, save as png to you can use the image when you build the app. \r\n\r\n::: details [**Artist JSON data**]\r\n```\r\n{\r\n  \"track\": \"Electric Sparks\",  \r\n  \"artist\": \"Neon Echoes\",\r\n  \"popularity\": 63,\r\n  \"genres\": [\"Indie rock\", \"Dream pop\"],\r\n  \"id\": \"7FAKEechoes001\",\r\n  \"images\": [\r\n    {\r\n      \"url\": \"https://i.scdn.co/image/ab67616d00001e02echoes001\",\r\n      \"height\": 300,\r\n      \"width\": 300\r\n    }\r\n  ],\r\n  \"followers\": {\r\n    \"total\": 184230\r\n  }\r\n}\r\n\r\n```\r\n:::\r\n\r\n\r\n---\r\n::: details [**Example**]\r\n*Drag out the instructions panel to enlarge the image.*\r\n![](https://images.code.org/eed4cf6928a3c74d241e1064f6adf11f-image-1772473676278.png)\r\n\r\nNote: You can screen shot and save this image if you do not wish to create your own. \r\n:::",
     "start_sources": {
       "source": {
         "nodes": [
@@ -25,7 +25,7 @@
               "shapeType": "rectangle",
               "label": "",
               "backgroundColor": "var(--sketchlab-bg-gray)",
-              "strokeColor": "#1e1e1e"
+              "strokeColor": "var(--sketchlab-stroke-default)"
             },
             "measured": {
               "width": 774,
@@ -38,30 +38,11 @@
             "resizing": false
           },
           {
-            "id": "Z7XqbIyy3wiM7mH-3yT4X",
-            "type": "text",
-            "position": {
-              "x": -313.5743045772573,
-              "y": -21.278042549245143
-            },
-            "data": {
-              "text": "Add wireframe components or pre-built sections\nto create your pages below",
-              "fontColor": "var(--sketchlab-stroke-default)",
-              "fontSize": "large",
-              "showHandles": false
-            },
-            "measured": {
-              "width": 497,
-              "height": 75
-            },
-            "dragging": false
-          },
-          {
             "id": "_QHOX2XDKJzWWRKpascyU",
             "type": "shape",
             "position": {
               "x": 41.10692873621019,
-              "y": 93.6971859760406
+              "y": 155.59297216208063
             },
             "style": {
               "width": 627.0448853689527,
@@ -69,51 +50,58 @@
             },
             "data": {
               "shapeType": "rectangle",
-              "label": "",
+              "label": "{\n  \"track\": \"Electric Sparks\",  \n  \"artist\": \"Neon Echoes\",\n  \"popularity\": 63,\n  \"genres\": [\"Indie rock\", \"Dream pop\"],\n  \"id\": \"7FAKEechoes001\",\n  \"images\": [\n    {\n      \"url\": \n\"https://i.scdn.co/image/ab67616d00001e0\n2echoes001\",\n      \"height\": 300,\n      \"width\": 300\n    }\n  ],\n  \"followers\": {\n    \"total\": 184230\n  }\n}",
               "backgroundColor": "var(--sketchlab-bg-gray)",
-              "strokeColor": "var(--sketchlab-stroke-default)",
-              "fontColor": "var(--sketchlab-stroke-default)"
+              "strokeColor": "var(--sketchlab-stroke-purple)",
+              "textAlign": "left",
+              "fontSize": "extra-large"
             },
             "measured": {
-              "width": 627,
-              "height": 972
-            }
+              "width": 714,
+              "height": 806
+            },
+            "width": 714,
+            "height": 806,
+            "resizing": false,
+            "dragging": false
           },
           {
             "id": "FpNEJgFlN1Xbo3L-h7aYO",
             "type": "text",
             "position": {
-              "x": 258.01470306213355,
-              "y": 10.148829187469303
+              "x": 293.33786928096094,
+              "y": 93.15826980171373
             },
             "data": {
-              "text": "Page 1",
+              "text": "Artist JSON Data",
               "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": "large",
               "showHandles": false
             },
             "measured": {
-              "width": 81,
+              "width": 188,
               "height": 47
-            }
+            },
+            "dragging": false
           },
           {
             "id": "k6N3a3hmJZUnB-QaTJCVJ",
             "type": "text",
             "position": {
-              "x": 998.9634828296096,
-              "y": 8.442881909669723
+              "x": 1278.0164959583462,
+              "y": 82.6215309692073
             },
             "data": {
-              "text": "Page 2",
+              "text": "Display View",
               "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": "large",
               "showHandles": false
             },
             "measured": {
-              "width": 84,
+              "width": 144,
               "height": 47
-            }
+            },
+            "dragging": false
           },
           {
             "id": "TIBRtnhBQpMbqvds0h3ur",
@@ -227,7 +215,7 @@
             "data": {
               "shapeType": "rectangle",
               "label": "",
-              "backgroundColor": "#868e96",
+              "backgroundColor": "#d1d1d1",
               "strokeColor": "var(--sketchlab-stroke-default)"
             },
             "measured": {
@@ -251,7 +239,7 @@
               "shapeType": "rectangle",
               "label": "",
               "backgroundColor": "#c8c8c8",
-              "strokeColor": "#495057"
+              "strokeColor": "var(--sketchlab-stroke-default)"
             },
             "measured": {
               "width": 311,
@@ -274,7 +262,7 @@
               "shapeType": "rectangle",
               "label": "",
               "backgroundColor": "#c8c8c8",
-              "strokeColor": "#495057"
+              "strokeColor": "var(--sketchlab-stroke-default)"
             },
             "measured": {
               "width": 311,
@@ -297,7 +285,7 @@
               "shapeType": "rectangle",
               "label": "",
               "backgroundColor": "#c8c8c8",
-              "strokeColor": "#495057"
+              "strokeColor": "var(--sketchlab-stroke-default)"
             },
             "measured": {
               "width": 265,
@@ -385,8 +373,8 @@
             "id": "oLvTJJQ-SYYz57A_QnOqP",
             "type": "shape",
             "position": {
-              "x": 778.9443350748086,
-              "y": 91.82140507380376
+              "x": 791.3074432513984,
+              "y": 157.16926257863452
             },
             "style": {
               "width": 627.0448853689527,
@@ -399,9 +387,13 @@
               "strokeColor": "var(--sketchlab-stroke-default)"
             },
             "measured": {
-              "width": 627,
-              "height": 972
-            }
+              "width": 1149,
+              "height": 989
+            },
+            "dragging": false,
+            "width": 1149,
+            "height": 989,
+            "resizing": false
           },
           {
             "id": "avElB5ET8dk7M2rJE1jE_",
@@ -531,8 +523,8 @@
             "id": "QYnfJWM-pWbWnSqCvq3Cl",
             "type": "shape",
             "position": {
-              "x": -318.41069389765755,
-              "y": 1179.362046020471
+              "x": -318.46178106376624,
+              "y": 1173.7876949585734
             },
             "style": {
               "width": 102.36618498818295,
@@ -548,7 +540,8 @@
               "width": 102,
               "height": 102
             },
-            "dragging": false
+            "dragging": false,
+            "zIndex": 2
           },
           {
             "id": "JraPN4rzcaAhiz7t42S1_",
@@ -589,53 +582,6 @@
             "dragging": false
           },
           {
-            "id": "8wL8poS6eu7jWRG8Ogk_G",
-            "type": "shape",
-            "position": {
-              "x": 60.50068281474432,
-              "y": 1183.0435532650977
-            },
-            "style": {
-              "width": 627.0448853689527,
-              "height": 971.5592311660703
-            },
-            "data": {
-              "shapeType": "rectangle",
-              "label": "",
-              "backgroundColor": "var(--sketchlab-bg-gray)",
-              "strokeColor": "var(--sketchlab-stroke-default)"
-            },
-            "measured": {
-              "width": 627,
-              "height": 972
-            },
-            "dragging": false
-          },
-          {
-            "id": "w2Y8wG77b6jvGTfmveaDD",
-            "type": "shape",
-            "position": {
-              "x": 779.4379330985728,
-              "y": 1179.7481520502772
-            },
-            "style": {
-              "width": 627.0448853689527,
-              "height": 971.5592311660703
-            },
-            "data": {
-              "shapeType": "rectangle",
-              "label": "",
-              "backgroundColor": "var(--sketchlab-bg-gray)",
-              "strokeColor": "var(--sketchlab-stroke-default)"
-            },
-            "measured": {
-              "width": 627,
-              "height": 972
-            },
-            "dragging": false,
-            "zIndex": -2
-          },
-          {
             "id": "P0Y9Dt7vHaGNI67yqVyNE",
             "type": "text",
             "position": {
@@ -653,42 +599,6 @@
               "height": 47
             },
             "dragging": false
-          },
-          {
-            "id": "rBZH2TySf8ighzBGSIOJ1",
-            "type": "text",
-            "position": {
-              "x": 251.22939113979214,
-              "y": 1104.904697069577
-            },
-            "data": {
-              "text": "Page 3",
-              "fontColor": "var(--sketchlab-stroke-default)",
-              "fontSize": "large",
-              "showHandles": false
-            },
-            "measured": {
-              "width": 84,
-              "height": 47
-            }
-          },
-          {
-            "id": "ujlY9MuwgObgfQn1hdVWi",
-            "type": "text",
-            "position": {
-              "x": 992.1781709072682,
-              "y": 1103.1987497917776
-            },
-            "data": {
-              "text": "Page 4",
-              "fontColor": "var(--sketchlab-stroke-default)",
-              "fontSize": "large",
-              "showHandles": false
-            },
-            "measured": {
-              "width": 86,
-              "height": 47
-            }
           },
           {
             "id": "91d1ddd9-2a9e-4f9d-b14c-41d183eb642a",
@@ -1669,14 +1579,14 @@
               "showHandles": false
             },
             "position": {
-              "x": -737.70679752636,
-              "y": 1906.0965580854108
+              "x": -738.7716764037275,
+              "y": 1910.0273817910238
             },
-            "width": 665,
-            "height": 381,
+            "width": 653,
+            "height": 362,
             "measured": {
-              "width": 665,
-              "height": 381
+              "width": 653,
+              "height": 362
             },
             "dragging": false,
             "resizing": false
@@ -1690,8 +1600,8 @@
               "showHandles": false
             },
             "position": {
-              "x": -773.5537323988075,
-              "y": 1522.8804652857364
+              "x": -779.0044720801668,
+              "y": 1526.5313232208462
             },
             "width": 715,
             "height": 168,
@@ -1732,8 +1642,8 @@
               "altText": "hero-section"
             },
             "position": {
-              "x": -780.5727295415263,
-              "y": 1705.5488187345416
+              "x": -782.4554342948511,
+              "y": 1698.0179997212422
             },
             "width": 450,
             "height": 310,
@@ -1772,19 +1682,28 @@
             "id": "9873ab05-56b8-41d0-9d30-cb4131e953bc",
             "source": "91d1ddd9-2a9e-4f9d-b14c-41d183eb642a",
             "target": "bca467f6-9f77-4d45-a8b1-e0c6831e0ca9",
-            "type": "straight"
+            "type": "straight",
+            "style": {
+              "stroke": "var(--sketchlab-stroke-default)"
+            }
           },
           {
             "id": "252c5383-b02a-4576-a3ce-ac8684963e86",
             "source": "84ca9c50-1d27-45f0-84ac-65ae4180e779",
             "target": "ba357a5a-334d-44d2-a6ec-ca4786f5337a",
-            "type": "straight"
+            "type": "straight",
+            "style": {
+              "stroke": "var(--sketchlab-stroke-default)"
+            }
           },
           {
             "id": "42f3b23c-5003-4daa-a21e-503bed5b64f1",
             "source": "d6d786af-8807-40fe-b5d2-3fcc0adbed57",
             "target": "6ddd9a93-a957-4fe6-a084-3925fce6024c",
-            "type": "straight"
+            "type": "straight",
+            "style": {
+              "stroke": "var(--sketchlab-stroke-default)"
+            }
           },
           {
             "id": "7810001e-6b8e-4fc3-ba86-b0e77196d518",
@@ -1818,15 +1737,15 @@
           }
         ],
         "viewport": {
-          "x": 597.0176195748577,
-          "y": 52.84826499427527,
-          "zoom": 0.5964065917180912
+          "x": 312.72521595251015,
+          "y": 101.9736638536674,
+          "zoom": 0.5662006592529042
         }
       }
     },
-    "display_name": "Sketch Lab",
-    "thumbnail_url": "https://images.code.org/d2f6256449032ef4cee95fe915800e7c-mood-board.png",
-    "bubble_choice_description": "Use Sketch Lab to design your wireframes.",
+    "display_name": "Sketch Your Blueprint",
+    "thumbnail_url": "https://images.code.org/19179630284365a14488e1ec2e7417ca-sketch.png",
+    "bubble_choice_description": "Use Sketch Lab to help you plan out your music app.",
     "exemplar_sources": {
       "source": {
         "type": "excalidraw",
@@ -9758,6 +9677,6 @@
     "name_suffix": "_2026"
   },
   "published": true,
-  "audit_log": "[{\"changed_at\":\"2026-05-07T15:27:11.878+00:00\",\"changed\":[\"cloned from \\\"ai-generated-design-lesson10-level1a_2026\\\"\"],\"cloned_from\":\"ai-generated-design-lesson10-level1a_2026\"},{\"changed_at\":\"2026-05-07 15:27:47 +0000\",\"changed\":[\"long_instructions\",\"display_name\",\"thumbnail_url\",\"bubble_choice_description\"],\"changed_by_id\":155,\"changed_by_email\":\"dani@code.org\"},{\"changed_at\":\"2026-05-08 14:14:18 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":155,\"changed_by_email\":\"dani@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2026-05-08T14:19:35.660+00:00\",\"changed\":[\"cloned from \\\"ai-generated-design-lesson10-level1a_2026\\\"\"],\"cloned_from\":\"ai-generated-design-lesson10-level1a_2026\"},{\"changed_at\":\"2026-05-08 14:20:18 +0000\",\"changed\":[\"long_instructions\",\"display_name\",\"thumbnail_url\",\"bubble_choice_description\"],\"changed_by_id\":155,\"changed_by_email\":\"dani@code.org\"},{\"changed_at\":\"2026-05-08 14:23:23 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":155,\"changed_by_email\":\"dani@code.org\"}]"
 }]]></config>
 </Sketchlab>
