@@ -1,8 +1,9 @@
-import {createGoogleGenerativeAI} from '@ai-sdk/google';
 import {Output} from 'ai';
 import z from 'zod/v3';
 
+import {getModel} from '@cdo/apps/aichat/api/client/helpers/modelHelpers';
 import {generateText} from '@cdo/apps/aiGateway';
+import {MultiFileSource, ProjectFileType} from '@cdo/apps/lab2/types';
 import {Panel, PanelLayout} from '@cdo/apps/panels/types';
 import {createUuid} from '@cdo/apps/utils';
 import {
@@ -12,14 +13,8 @@ import {
 
 import {uploadLevelAsset} from './levelApi';
 
-// We don't import getModel from aichat/api/client/helpers/modelHelpers because
-// the surrounding aichat module graph drags in Lab2Registry, which isn't
-// initialized on a plain levelbuilder page. Wiring our own provider is cheap.
-const googleProvider = createGoogleGenerativeAI({apiKey: ''});
-
-const getTextModel = () => googleProvider(AiChatModelIds.GEMINI_2_5_FLASH);
-const getImageModel = () =>
-  googleProvider(AiChatModelIds.GEMINI_2_5_FLASH_IMAGE);
+const getTextModel = () => getModel(AiChatModelIds.GEMINI_2_5_FLASH);
+const getImageModel = () => getModel(AiChatModelIds.GEMINI_2_5_FLASH_IMAGE);
 
 // Stable identifiers for each prompt site, used as a console.log prefix so
 // debugging conversations can refer to e.g. "the panels-plan prompt" without
@@ -292,7 +287,7 @@ const weblabPlanSchema = Output.object({
 });
 
 export interface Weblab2Generation {
-  startSources: object;
+  startSources: MultiFileSource;
   longInstructions: string;
   // The raw file list as returned by the model, before it's wrapped into a
   // MultiFileSource. Exposed so callers can include it in continuity
@@ -370,7 +365,7 @@ export async function generateWeblab2Level(
   // deeper than they expect, so they render as missing. See the
   // pre-existing weblab2 levels under dashboard/config/levels/custom/weblab2
   // for the canonical shape.
-  const files: Record<string, object> = {};
+  const files: MultiFileSource['files'] = {};
   const fileIds: string[] = [];
   let activeFileId: string | null = null;
   for (const f of plan.files) {
@@ -385,7 +380,7 @@ export async function generateWeblab2Level(
       name: f.name,
       contents: f.contents,
       folderId: '0',
-      type: 'starter',
+      type: ProjectFileType.STARTER,
       active: false, // overwritten below for activeFileId
     };
   }

@@ -1,7 +1,12 @@
 import React, {useCallback, useEffect, useMemo, useState} from 'react';
 
 import AichatContextManager from '@cdo/apps/aichat/aichatContextManager';
-import {Panel} from '@cdo/apps/panels/types';
+import {
+  LevelProperties,
+  LevelPropertiesMap,
+  MultiFileSource,
+} from '@cdo/apps/lab2/types';
+import {Panel, PanelsLevelProperties} from '@cdo/apps/panels/types';
 import {createUuid} from '@cdo/apps/utils';
 import {AiChatClientTypes} from '@cdo/generated-scripts/sharedConstants';
 
@@ -106,22 +111,22 @@ interface PriorEntry {
 // lets the continuity context for skipped levels match what we'd send for
 // regenerated ones, so the AI sees a uniform record.
 function priorOutputFromLevelProperties(
-  props: Record<string, unknown> | undefined,
+  props: LevelProperties | undefined,
   labType: LabType
 ): PriorOutput | undefined {
   if (!props) return undefined;
   if (labType === 'Panels') {
-    const panels = props.panels as Panel[] | undefined;
+    const panels = (props as PanelsLevelProperties).panels;
     if (Array.isArray(panels) && panels.length > 0) {
       return {panels};
     }
     return undefined;
   }
   if (labType === 'Weblab2') {
-    const startSources = props.startSources as
-      | {files?: Record<string, {name: string; contents: string}>}
-      | undefined;
-    const longInstructions = (props.longInstructions as string) || '';
+    // Weblab2 stores starter sources as MultiFileSource (per the
+    // ProjectSources | MultiFileSource union on LevelProperties).
+    const startSources = props.startSources as MultiFileSource | undefined;
+    const longInstructions = props.longInstructions || '';
     const files = startSources?.files
       ? Object.values(startSources.files).map(f => ({
           name: f.name,
@@ -489,7 +494,7 @@ const LessonGenerator: React.FC<LessonGeneratorProps> = ({lesson}) => {
     // (panel text, weblab2 files, instructions) to the continuity context
     // for later levels. Soft-fail: if this round-trip fails, we just lose
     // the extra context and fall back to descriptions.
-    let levelPropertiesById: Record<string, Record<string, unknown>> = {};
+    let levelPropertiesById: LevelPropertiesMap = {};
     try {
       levelPropertiesById = await loadLessonLevelProperties(lesson.id);
     } catch (err) {
