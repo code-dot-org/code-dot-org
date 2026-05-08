@@ -1,8 +1,8 @@
 # Cucumber → Playwright Migration Status
 
-Source: `dashboard/test/ui/features/star_labs/`, `features/code_tools/`, and `features/student_learning/`  
+Source: `dashboard/test/ui/features/star_labs/`, `features/code_tools/`, `features/student_learning/`, and `features/teacher_tools/level_types/`  
 Target: `frontend/packages/apps-e2e-tests/tests/`  
-As of: 2026-05-05 (updated 2026-05-05 — dance age_filter + can_see_finish ported)
+As of: 2026-05-08 (updated 2026-05-08 — all teacher_tools/level_types ported)
 
 ---
 
@@ -10,9 +10,10 @@ As of: 2026-05-05 (updated 2026-05-05 — dance age_filter + can_see_finish port
 
 | Status                                 | Count                                                                             |
 | -------------------------------------- | --------------------------------------------------------------------------------- |
-| Ported                                 | 39 feature files (C+F for pythonlab + mixmoveai; C+F+W for rest)                  |
-| Covered by ported                      | 2 (maze2, jigsaw2 rolled into existing specs)                                     |
+| Ported                                 | 55 feature files (C+F for pythonlab + mixmoveai; C+F+W for rest)                  |
+| Covered by ported                      | 5 (maze2, jigsaw2, multi2/3/4 rolled into existing specs)                         |
 | Partial — @eyes (visual checkpoints)   | 5 ported up to snapshot; @eyes auth blocked 3                                     |
+| Fixme stubs — @eyes only               | 3 (curriculum_reference ×2, level_group_multi_page_dots ×1)                       |
 | Skipped — auth required                | 30+                                                                               |
 | Skipped — @skip / @eyes_mobile         | 3                                                                                 |
 | Skipped — cookie/session manipulation  | 2                                                                                 |
@@ -67,6 +68,25 @@ As of: 2026-05-05 (updated 2026-05-05 — dance age_filter + can_see_finish port
 | `dance/age_filter.feature`                                     | `tests/legacy/activities/dance/dance-age-filter.spec.ts`           | C+F+W    | student + anonymous; age dialog + ?songfilter=on     |
 | `dance/age_filter2.feature`                                    | `tests/legacy/activities/dance/dance-age-filter.spec.ts`           | C+F+W    | age-13 dialog; filter persists across levels         |
 | `can_see_finish.feature` (blockly @no_mobile)                  | `tests/legacy/can-see-finish/can-see-finish.spec.ts`               | C+F+W    | 5 labs at 1366×727; Game Lab + Minecraft omitted     |
+
+### teacher_tools/level_types
+
+| Feature file                                           | Playwright spec                                                                | Browsers | Notes                                                    |
+| ------------------------------------------------------ | ------------------------------------------------------------------------------ | -------- | -------------------------------------------------------- |
+| `level_types/bubble_choice.feature`                    | `tests/legacy/bubble-choice/bubble-choice.spec.ts`                             | C+F+W    |                                                          |
+| `level_types/curriculum_reference.feature`             | `tests/legacy/curriculum-reference/curriculum-reference.spec.ts`               | —        | 2 test.fixme stubs; all scenarios @eyes only             |
+| `level_types/free_response_contained_levels.feature`   | `tests/legacy/free-response-contained/free-response-contained.spec.ts`         | C+F+W    |                                                          |
+| `level_types/free_response_submittable.feature`        | `tests/legacy/free-response-submittable/free-response-submittable.spec.ts`     | C+F+W    | 3 scenarios; submit/unsubmit/lock cycle                  |
+| `level_types/level_group.feature`                      | `tests/legacy/level-group/level-group.spec.ts`                                 | C+F+W    |                                                          |
+| `level_types/level_group_activity_guide.feature`       | `tests/legacy/level-group-activity-guide/level-group-activity-guide.spec.ts`   | C+F+W    | 4 scenarios; submit + teacher summary + numbered bubbles |
+| `level_types/level_group_multi_page.feature`           | `tests/legacy/level-group-multi-page/level-group-multi-page.spec.ts`           | C+F+W    |                                                          |
+| `level_types/level_group_multi_page_dots.feature`      | `tests/legacy/level-group-multi-page-dots/level-group-multi-page-dots.spec.ts` | C+F+W    | 1 test.fixme (@properties_encryption_key) + 1 real       |
+| `level_types/level_swap.feature`                       | `tests/legacy/level-swap/level-swap.spec.ts`                                   | C+F+W    |                                                          |
+| `level_types/map_level.feature`                        | `tests/legacy/map-level/map-level.spec.ts`                                     | C+F+W    |                                                          |
+| `level_types/match.feature`                            | `tests/legacy/match/match.spec.ts`                                             | C+F+W    |                                                          |
+| `level_types/multi.feature` (+ multi2/3/4)             | `tests/legacy/multi/multi.spec.ts`                                             | C+F+W    | multi2/3/4 rolled in                                     |
+| `level_types/multiple_choice_contained_levels.feature` | `tests/legacy/multiple-choice-contained/multiple-choice-contained.spec.ts`     | C+F+W    |                                                          |
+| `level_types/standalone_video.feature`                 | `tests/legacy/standalone-video/standalone-video.spec.ts`                       | C+F+W    |                                                          |
 
 C = Chromium, F = Firefox, W = WebKit.
 

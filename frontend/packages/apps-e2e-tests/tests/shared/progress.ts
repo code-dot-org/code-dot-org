@@ -7,6 +7,7 @@ import {expect, type Locator, type Page} from '@playwright/test';
 const PERFECT_COLOR = 'rgb(14, 190, 14)';
 const NOT_TRIED_BG_COLOR = 'rgb(254, 254, 254)';
 const NOT_TRIED_BORDER_COLOR = 'rgb(198, 202, 205)';
+const ASSESSMENT_COLOR = 'rgb(140, 82, 186)';
 
 /**
  * Returns the progress bubble locator for level N (1-based) in the lesson
@@ -46,4 +47,30 @@ export async function expectNotTried(bubble: Locator): Promise<void> {
   await expect(bubble).toBeVisible();
   await expect(bubble).toHaveCSS('background-color', NOT_TRIED_BG_COLOR);
   await expect(bubble).toHaveCSS('border-top-color', NOT_TRIED_BORDER_COLOR);
+}
+
+/**
+ * Asserts a progress bubble displays the "perfect_assessment" state:
+ * purple background and border (assessment color).
+ *
+ * @param bubble - locator for the `.progress-bubble` element
+ */
+export async function expectPerfectAssessment(bubble: Locator): Promise<void> {
+  await expect(bubble).toBeVisible();
+  await expect(bubble).toHaveCSS('background-color', ASSESSMENT_COLOR);
+  await expect(bubble).toHaveCSS('border-top-color', ASSESSMENT_COLOR);
+}
+
+/**
+ * Asserts a progress bubble displays the "attempted_assessment" state:
+ * white background with purple border.
+ *
+ * @param bubble - locator for the `.progress-bubble` element
+ */
+export async function expectAttemptedAssessment(
+  bubble: Locator,
+): Promise<void> {
+  await expect(bubble).toBeVisible();
+  await expect(bubble).toHaveCSS('background-color', NOT_TRIED_BG_COLOR);
+  await expect(bubble).toHaveCSS('border-top-color', ASSESSMENT_COLOR);
 }
