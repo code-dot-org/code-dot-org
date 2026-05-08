@@ -126,6 +126,21 @@ class LevelsController < ApplicationController
     @levels = @levels.left_joins(:user).where(levels: {user_id: params[:owner_id]}) if params[:owner_id].present?
   end
 
+  # GET /levels/by_name?name=...&type=...
+  # Exact-name lookup. The :name index on levels makes this O(1) and
+  # avoids a LIKE %name% scan when the caller already has the full name.
+  # `:type` is optional and narrows by Rails STI class name.
+  def by_name
+    scope = @levels
+    scope = scope.where(type: params[:type]) if params[:type].present?
+    level = scope.find_by(name: params[:name])
+    if level
+      render json: level.summarize_for_edit
+    else
+      render status: :not_found, json: {}
+    end
+  end
+
   # GET /levels/1
   # GET /levels/1.json
   def show

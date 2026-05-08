@@ -55,25 +55,24 @@ export async function createOrFindLevel(
   }
 }
 
-// GET /levels/get_filtered_levels — find a level of the given type with an
-// exact name match. The endpoint does a LIKE %name% search, so we filter
-// the results client-side for the exact name we asked for.
+// GET /levels/by_name — exact-name lookup. Returns the level summary or
+// 404 if no level of the given type has that name. Avoids the LIKE
+// %name% scan that get_filtered_levels does.
 async function findLevelByName(
   type: LabType,
   name: string
 ): Promise<{id: number; name: string} | null> {
   const params = new URLSearchParams({
     name,
-    level_type: RAILS_TYPE_BY_LAB[type],
-    page: '1',
+    type: RAILS_TYPE_BY_LAB[type],
   });
   try {
-    const {value} = await HttpClient.fetchJson<{
-      levels: {id: string; name: string}[];
-    }>(`/levels/get_filtered_levels?${params}`);
-    const match = (value.levels || []).find(l => l.name === name);
-    return match ? {id: Number(match.id), name: match.name} : null;
-  } catch {
+    const {value} = await HttpClient.fetchJson<{id: string; name: string}>(
+      `/levels/by_name?${params}`
+    );
+    return value?.id ? {id: Number(value.id), name: value.name} : null;
+  } catch (err) {
+    if (isNetworkError(err) && err.response.status === 404) return null;
     return null;
   }
 }

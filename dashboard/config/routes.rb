@@ -412,6 +412,7 @@ Dashboard::Application.routes.draw do
     resources :levels do
       collection do
         get 'get_filtered_levels'
+        get 'by_name'
       end
       member do
         get 'get_rubric'
