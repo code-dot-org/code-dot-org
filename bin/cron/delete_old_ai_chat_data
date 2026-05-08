@@ -13,8 +13,7 @@ DASHBOARD_DB_LONG_TIMEOUT = Cdo::Sequel.database_connection_pool(
 )
 
 class DeleteOldAiChatData
-  EVENT_RETENTION_DAYS = 90
-  REQUEST_RETENTION_DAYS = 91
+  RETENTION_DAYS = 90
   DELETE_BATCH_SIZE = 1_000
 
   def self.main
@@ -36,13 +35,13 @@ class DeleteOldAiChatData
   end
 
   private def delete_events
-    delete_in_batches(:aichat_events, @now - EVENT_RETENTION_DAYS.days) do |ids|
+    delete_in_batches(:aichat_events, @now - RETENTION_DAYS.days) do |ids|
       @database[:aichat_events].where(id: ids).delete
     end
   end
 
   private def delete_requests
-    delete_in_batches(:aichat_requests, @now - REQUEST_RETENTION_DAYS.days) do |ids|
+    delete_in_batches(:aichat_requests, @now - RETENTION_DAYS.days) do |ids|
       deletable_ids = request_ids_without_events(ids)
       next 0 if deletable_ids.empty?
 
