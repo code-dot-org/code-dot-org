@@ -22,14 +22,32 @@ def delete_in_batches(scope)
   deleted_record_count
 end
 
+def delete_requests_in_batches(request_scope)
+  deleted_request_count = 0
+  deleted_event_retry_count = 0
+
+  request_scope.in_batches(of: BATCH_SIZE) do |batch|
+    deleted_request_count += batch.delete_all
+  rescue ActiveRecord::InvalidForeignKey
+    request_ids = batch.pluck(:id)
+    deleted_event_retry_count += AichatEvent.where(request_id: request_ids).delete_all
+    deleted_request_count += AichatRequest.where(id: request_ids).delete_all
+  end
+
+  [deleted_request_count, deleted_event_retry_count]
+end
+
 def main
   # Make sure we're deleting Events (90 days old) a day before Requests (91 days old)
   # to ensure we don't have foreign key constraint issues when deleting Requests that are still referenced by Events.
   deleted_event_count = delete_in_batches(AichatEvent.where('created_at < ?', 90.days.ago))
   ChatClient.message('cron-daily', "Deleted #{deleted_event_count} AichatEvent records")
 
-  deleted_request_count = delete_in_batches(AichatRequest.where('created_at < ?', 91.days.ago))
+  deleted_request_count, deleted_event_retry_count = delete_requests_in_batches(AichatRequest.where('created_at < ?', 91.days.ago))
   ChatClient.message('cron-daily', "Deleted #{deleted_request_count} AichatRequest records")
+  if deleted_event_retry_count > 0
+    ChatClient.message('cron-daily', "Deleted #{deleted_event_retry_count} additional AichatEvent records while retrying AichatRequest batch deletes")
+  end
 end
 
 main
