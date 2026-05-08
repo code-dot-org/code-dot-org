@@ -341,8 +341,7 @@ class LessonsController < ApplicationController
       :standards,
       :opportunity_standards,
       :jit_pl_concept_ids,
-      :generate_outline,
-      :generate_style
+      :generate_outline
     )
     lp[:announcements] = JSON.parse(lp[:announcements]) if lp[:announcements]
     lp[:resources] = JSON.parse(lp[:resources]) if lp[:resources]

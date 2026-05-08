@@ -40,10 +40,6 @@ export interface ExistingLessonData {
   // Persisted outline that drove the last "Generate outline" run (if any).
   // Stored on the lesson so reopening /generate restores it.
   generateOutline?: string;
-  // Persisted "art style + characters" preamble fed into every panel image
-  // prompt, so panels across the lesson share visual style and recurring
-  // characters. Stored on the lesson alongside the outline.
-  generateStyle?: string;
 }
 
 // The shape returned by Lesson#summarize_for_lesson_edit, narrowed to the

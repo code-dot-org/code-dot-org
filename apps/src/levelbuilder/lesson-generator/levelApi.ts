@@ -217,17 +217,13 @@ export async function loadLessonLevelProperties(
 export async function saveLessonActivities(
   lessonId: number,
   activities: SerializedActivity[],
-  generateOutline?: string,
-  generateStyle?: string
+  generateOutline?: string
 ): Promise<void> {
   const body: Record<string, string> = {
     activities: JSON.stringify(activities),
   };
   if (generateOutline !== undefined) {
     body.generate_outline = generateOutline;
-  }
-  if (generateStyle !== undefined) {
-    body.generate_style = generateStyle;
   }
   const response = await fetch(`/lessons/${lessonId}`, {
     method: 'PUT',
