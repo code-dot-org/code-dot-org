@@ -52,6 +52,20 @@ async function createTestUser(
 }
 
 /**
+ * Credentials returned by {@link createTeacher} and {@link createStudent}.
+ * Useful for tests that later sign in via the UI form or need to display-name
+ * assert after account creation.
+ */
+export interface UserCredentials {
+  /** Login email address. */
+  email: string;
+  /** Plaintext password used to create the account. */
+  password: string;
+  /** Display name shown in the dashboard header. */
+  displayName: string;
+}
+
+/**
  * Options for {@link createTeacher}.
  *
  * @property name - display name; defaults to an auto-generated unique string.
@@ -67,11 +81,13 @@ interface CreateTeacherOptions {
  * Navigates to /reset_session first to get a fresh CSRF token, then POSTs
  * from the same browser context so the resulting session cookie is stored
  * in-place. After this call the page is authenticated as the new teacher.
+ *
+ * @returns email, password, and display name for the new teacher account
  */
 export async function createTeacher(
   page: Page,
   {name}: CreateTeacherOptions = {},
-): Promise<void> {
+): Promise<UserCredentials> {
   const ts = Date.now();
   const rand = Math.random().toString(36).slice(2, 8);
   const email = `teacher_${ts}_${rand}@test.xx`;
@@ -92,6 +108,7 @@ export async function createTeacher(
     email_preference_request_ip: '127.0.0.1',
     email_preference_source: 'ACCOUNT_SIGN_UP',
   });
+  return {email, password, displayName};
 }
 
 /**
@@ -110,11 +127,13 @@ interface CreateStudentOptions {
  * Creates a student account and signs in.
  * Mirrors `I create a student named "..."` / `I create a young student named "..."`
  * from account_steps.rb: create_user(name, user_type: 'student', age:, sign_in_count: 2)
+ *
+ * @returns email, password, and display name for the new student account
  */
 export async function createStudent(
   page: Page,
   {age = 16, name}: CreateStudentOptions = {},
-): Promise<void> {
+): Promise<UserCredentials> {
   const ts = Date.now();
   const rand = Math.random().toString(36).slice(2, 8);
   const email = `student_${ts}_${rand}@test.xx`;
@@ -130,6 +149,17 @@ export async function createStudent(
     age: String(age),
     sign_in_count: 2,
   });
+  return {email, password, displayName};
+}
+
+/**
+ * Signs the browser context out by navigating to the session-clearing endpoint.
+ * Mirrors `I sign out` from account_steps.rb.
+ *
+ * @param page - Playwright page whose browser context will be signed out
+ */
+export async function signOut(page: Page): Promise<void> {
+  await page.goto('/users/sign_out');
 }
 
 /** Credentials returned by {@link createTeacherAssociatedStudent}. */
