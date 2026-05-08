@@ -1,0 +1,1531 @@
+{
+  "script": {
+    "name": "aif-advisory-council-preview",
+    "wrapup_video_id": null,
+    "login_required": false,
+    "properties": {
+      "has_unnumbered_lessons": true,
+      "is_migrated": true
+    },
+    "new_name": null,
+    "family_name": null,
+    "serialized_at": "2026-05-06 19:14:49 UTC",
+    "hide_within_course": false,
+    "published_state": "in_development",
+    "instruction_type": null,
+    "instructor_audience": null,
+    "participant_audience": null,
+    "seeding_key": {
+      "script.name": "aif-advisory-council-preview"
+    }
+  },
+  "lesson_groups": [
+    {
+      "key": "lessonGroup-2",
+      "user_facing": true,
+      "position": 1,
+      "properties": {
+        "display_name": "Unit 1"
+      },
+      "seeding_key": {
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "aif-advisory-council-preview"
+      }
+    }
+  ],
+  "lessons": [
+    {
+      "key": "Lesson 3: Build Your First Web Page with AI",
+      "name": "Lesson 3: Build Your First Web Page with AI",
+      "absolute_position": 1,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 1,
+      "properties": {
+        "overview": "**How can AI help us turn our ideas into a web page?**\n\nBefore students generate anything, they make predictions: given a prompt for a gourmet pizza restaurant website, what sections will probably appear? Then they see the AI's output and compare it to what they guessed. That prediction moment matters — it gets students thinking about AI as a pattern-matching system rather than a magic box, which is exactly the framing the lesson then formalizes. Students learn how AI uses training data to recognize patterns and generate predictions, get introduced to prompt engineering, and see for the first time that their HTML and CSS live in two separate files. The gap between a vague prompt and a specific one is made concrete through side-by-side comparisons before students try it themselves.",
+        "student_overview": "**How can AI help us turn our ideas into a web page?**\n\nBefore you build anything today, you're going to make a prediction. If you gave AI this prompt — \"Build a modern landing page for a gourmet pizza restaurant with a red and charcoal color palette\" — what do you think would show up? Make your guess, then find out if you were right. What you discover will tell you a lot about how AI actually works: not magic, not random, but pattern recognition. That's the foundation everything else in this unit is built on."
+      },
+      "seeding_key": {
+        "lesson.key": "Lesson 3: Build Your First Web Page with AI",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "aif-advisory-council-preview"
+      }
+    },
+    {
+      "key": "Lesson 9: Accessibility in Design",
+      "name": "Lesson 9: Accessibility in Design",
+      "absolute_position": 2,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 2,
+      "properties": {
+        "overview": "<i class=\"fa-solid fa-user-graduate\"></i> ***Career Journeys***\n\n**How can we make sites usable for everyone?**\n\nThe lesson opens with a before-and-after comparison of two pizza ordering websites — one confusing, one improved — and asks students to notice what changed and what could go wrong if no one fixed the first version. That \"what could go wrong\" question is the lesson's moral center: accessibility failures aren't just aesthetic problems, they're barriers that determine whether someone can participate at all. Students work as Inclusive Designers, starting with the striking statistic that nearly 95% of websites have accessibility issues, running audits on Yale School of Art, MIT Media Lab, and NASA, and then learning that AI reproduces these patterns by default because it learns from the web that already exists. The POUR framework gives students a professional evaluation tool they apply to real-world outputs.",
+        "preparation": "- Print copies of the Accessibility and Design activity guide (one for each student)",
+        "student_overview": "**How can we make sites usable for everyone?**\n\nNearly 95% of websites have accessibility issues. That's not a small problem — that's most of the internet failing a significant portion of its users. Today you're going to see that up close. You'll audit three well-known websites — Yale School of Art, MIT Media Lab, and NASA — using a professional framework called POUR, and you'll find real problems on real sites. Then you'll connect what you found to AI: where do those problems come from, and what does it mean that AI learned from websites like these?"
+      },
+      "seeding_key": {
+        "lesson.key": "Lesson 9: Accessibility in Design",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "aif-advisory-council-preview"
+      }
+    },
+    {
+      "key": "Lesson 11: From Wireframes to Layouts",
+      "name": "Lesson 11: From Wireframes to Layouts",
+      "absolute_position": 3,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 3,
+      "properties": {
+        "overview": "**How do we turn sketches into working layouts with AI?**\n\nThe lesson's warm-up poses a simple question: would you rather have a map, written directions, or both? The answer is both — and that's exactly what students give AI in this lesson: a visual wireframe and a written description, together. Students see how AI interprets wireframes by detecting spacing, labels, grouping, and alignment, and why it gets things wrong when any of those are ambiguous. The lesson's central activity is the gap between what students intended their wireframe to communicate and what AI actually produced — and what they need to change in their prompt to close that gap. That iteration loop is the lesson's most important learning moment.",
+        "preparation": "- Print copies of the From Wireframes to Layouts activity guide (one for each student)",
+        "student_overview": "**How do we turn sketches into working layouts with AI?**\n\nWould you rather navigate somewhere with a map, written directions, or both? Both, right? Today you're going to give AI both: your wireframe for the visual layout and a written prompt for the context and content. Then you'll see what it does with them — and it might not be exactly what you expected. Your job is to figure out why AI interpreted your design the way it did and what you need to change to get it closer to what you actually had in mind. The clearer your wireframe and prompt, the closer the output will be. This is where planning pays off."
+      },
+      "seeding_key": {
+        "lesson.key": "Lesson 11: From Wireframes to Layouts",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "aif-advisory-council-preview"
+      }
+    }
+  ],
+  "lesson_activities": [
+    {
+      "key": "26a13e2d-3af0-45bc-956e-9a53fcb6f14a",
+      "position": 1,
+      "properties": {
+        "duration": 5,
+        "name": "Warm Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "26a13e2d-3af0-45bc-956e-9a53fcb6f14a",
+        "lesson.key": "Lesson 3: Build Your First Web Page with AI",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "aif-advisory-council-preview"
+      }
+    },
+    {
+      "key": "fac8d9f0-eff8-4c8b-9b40-ded48a078e7e",
+      "position": 2,
+      "properties": {
+        "duration": 30,
+        "name": "Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "fac8d9f0-eff8-4c8b-9b40-ded48a078e7e",
+        "lesson.key": "Lesson 3: Build Your First Web Page with AI",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "aif-advisory-council-preview"
+      }
+    },
+    {
+      "key": "02df6333-946f-4940-b3ff-cb8063069351",
+      "position": 3,
+      "properties": {
+        "duration": 10,
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "02df6333-946f-4940-b3ff-cb8063069351",
+        "lesson.key": "Lesson 3: Build Your First Web Page with AI",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "aif-advisory-council-preview"
+      }
+    },
+    {
+      "key": "2f916a45-6a5a-45c4-a086-3fd8e6896ca9",
+      "position": 1,
+      "properties": {
+        "duration": 10,
+        "name": "Warm Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "2f916a45-6a5a-45c4-a086-3fd8e6896ca9",
+        "lesson.key": "Lesson 9: Accessibility in Design",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "aif-advisory-council-preview"
+      }
+    },
+    {
+      "key": "184411f7-8ffd-48f0-b578-3d83bfccb593",
+      "position": 2,
+      "properties": {
+        "duration": 30,
+        "name": "Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "184411f7-8ffd-48f0-b578-3d83bfccb593",
+        "lesson.key": "Lesson 9: Accessibility in Design",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "aif-advisory-council-preview"
+      }
+    },
+    {
+      "key": "ba7006af-600c-464a-ba6a-de139de1c1d9",
+      "position": 3,
+      "properties": {
+        "duration": 5,
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "ba7006af-600c-464a-ba6a-de139de1c1d9",
+        "lesson.key": "Lesson 9: Accessibility in Design",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "aif-advisory-council-preview"
+      }
+    },
+    {
+      "key": "0274cb37-9b01-452e-b21e-7380318e40e8",
+      "position": 1,
+      "properties": {
+        "duration": 5,
+        "name": "Warm Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "0274cb37-9b01-452e-b21e-7380318e40e8",
+        "lesson.key": "Lesson 11: From Wireframes to Layouts",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "aif-advisory-council-preview"
+      }
+    },
+    {
+      "key": "3f54cd61-d15d-49a7-9598-8d201017f8f8",
+      "position": 2,
+      "properties": {
+        "duration": 35,
+        "name": "Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "3f54cd61-d15d-49a7-9598-8d201017f8f8",
+        "lesson.key": "Lesson 11: From Wireframes to Layouts",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "aif-advisory-council-preview"
+      }
+    },
+    {
+      "key": "79a851be-55a0-4a2f-908d-5363c7f94460",
+      "position": 3,
+      "properties": {
+        "duration": 5,
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "79a851be-55a0-4a2f-908d-5363c7f94460",
+        "lesson.key": "Lesson 11: From Wireframes to Layouts",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "aif-advisory-council-preview"
+      }
+    }
+  ],
+  "activity_sections": [
+    {
+      "key": "69e62811-ee3a-4b7a-8169-6675b3cac24d",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this activity:** Students use their knowledge of common web page components to predict what an AI-generated webpage will include and begin to recognize that AI generates outputs based on familiar design patterns."
+      },
+      "seeding_key": {
+        "activity_section.key": "69e62811-ee3a-4b7a-8169-6675b3cac24d",
+        "lesson_activity.key": "26a13e2d-3af0-45bc-956e-9a53fcb6f14a"
+      }
+    },
+    {
+      "key": "0b39f021-d9d4-4bb6-bb61-b64b78deb8ea",
+      "position": 2,
+      "properties": {
+        "description": "This is an example of a prompt — it's what someone types into an AI tool to tell it what to create.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "0b39f021-d9d4-4bb6-bb61-b64b78deb8ea",
+        "lesson_activity.key": "26a13e2d-3af0-45bc-956e-9a53fcb6f14a"
+      }
+    },
+    {
+      "key": "f41a9cbf-c3a1-4aa9-b951-b32a83a6bb1e",
+      "position": 3,
+      "properties": {
+        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n- *What sections will likely appear?*\n- *What components do you expect?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students draw on their experience with common web page components (e.g., navigation bar, hero section, cards, footer) to predict what the AI-generated page will include. Listen for students identifying familiar structures and elements and explaining their reasoning based on patterns they've seen across websites. Students should begin to recognize that AI generates predictable layouts because it follows common design and language patterns.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students compare their predictions from the previous slide to the AI-generated web page shown. Ask a few students to share what matched their predictions, focusing on components such as navigation bars, hero sections, and content sections. Guide students to recognize that the layout and structure feel familiar because AI follows common design patterns, not because it truly understands the content. Then transition by telling students you’ll take a closer look at how AI generates these kinds of results.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Keep this moment brief and focused. The goal is not to analyze every detail, but to help students recognize that AI-generated web pages follow predictable patterns based on what they’ve seen before."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "f41a9cbf-c3a1-4aa9-b951-b32a83a6bb1e",
+        "lesson_activity.key": "26a13e2d-3af0-45bc-956e-9a53fcb6f14a"
+      }
+    },
+    {
+      "key": "b3a20051-0e95-41ce-b241-6401632f1ea3",
+      "position": 4,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "b3a20051-0e95-41ce-b241-6401632f1ea3",
+        "lesson_activity.key": "26a13e2d-3af0-45bc-956e-9a53fcb6f14a"
+      }
+    },
+    {
+      "key": "c6e5af75-8fa3-4a34-9eff-6ea65caad216",
+      "position": 5,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the lesson objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the Question of the Day."
+      },
+      "seeding_key": {
+        "activity_section.key": "c6e5af75-8fa3-4a34-9eff-6ea65caad216",
+        "lesson_activity.key": "26a13e2d-3af0-45bc-956e-9a53fcb6f14a"
+      }
+    },
+    {
+      "key": "be3705b8-4d24-491c-abfc-4dd88eb0c811",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this activity:** Students understand that AI generates responses by recognizing patterns from existing examples and that what they include in a prompt influences the result.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Explain that AI doesn't understand code the way a human does. Instead, it predicts what to generate based on patterns it has seen in many examples. Emphasize that what students include in their prompt will influence what the AI produces. This is why the same prompt often produces similar types of web pages.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Direct students' attention to the collection of web app examples feeding into the brain graphic. Explain that these represent the training data the AI learned from before anyone ever typed a prompt. Clarify that training data consists of real web apps created by humans and that the AI studied many examples to learn from them. Emphasize that the AI does not begin with built-in knowledge about restaurants or web design, it learns from large collections of human-created content.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Point to the repeated web app components shown on the slide and explain that the AI looks across many examples to identify what appears frequently. Highlight specific repeated features such as navigation bars at the top, red call-to-action buttons, large headlines, and menu sections with prices. Introduce the term \"patterns\" as structures or design choices that show up again and again across many sites. Reinforce that this step is about noticing similarities, not generating anything yet.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Direct students' attention to the brain-to-website diagram and explain that this step represents generation. Clarify that after identifying patterns, the AI produces new content by predicting what usually comes next. Connect this back to the web page students saw earlier to show how those predictions result in the final layout.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Explain how AI uses pattern recognition and that students use this same skill to analyze layouts, debug code, and spot effectiveness.",
+        "duration": "10",
+        "name": "How AI Makes Predictions"
+      },
+      "seeding_key": {
+        "activity_section.key": "be3705b8-4d24-491c-abfc-4dd88eb0c811",
+        "lesson_activity.key": "fac8d9f0-eff8-4c8b-9b40-ded48a078e7e"
+      }
+    },
+    {
+      "key": "03a4ed68-7ec8-429a-8b51-9cef001ffe5e",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this activity:** Students explore the Web Lab tool and begin using AI to generate and modify their webpage, recognizing how their prompts influence the results.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students get out their copy of the AI-Generated Design Unit Guide.",
+        "duration": "10",
+        "name": "Explore Web Lab and Prompting"
+      },
+      "seeding_key": {
+        "activity_section.key": "03a4ed68-7ec8-429a-8b51-9cef001ffe5e",
+        "lesson_activity.key": "fac8d9f0-eff8-4c8b-9b40-ded48a078e7e"
+      }
+    },
+    {
+      "key": "265d88cf-a288-4183-a54b-11fce596a601",
+      "position": 3,
+      "properties": {
+        "description": "You just saw how AI generates web pages by recognizing patterns from examples. Designers often use AI tools to quickly create and test ideas like this. Now you're going to explore a tool that can generate and change your webpage for you, and start experimenting with how it works. Play around with the tool and see what you can discover. Don't worry! You can't break anything!",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "265d88cf-a288-4183-a54b-11fce596a601",
+        "lesson_activity.key": "fac8d9f0-eff8-4c8b-9b40-ded48a078e7e"
+      }
+    },
+    {
+      "key": "12b0f8d0-32a5-45a3-b588-11e43482853c",
+      "position": 4,
+      "properties": {
+        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 3, Level 1 to explore the tool and select different tabs and buttons to see what they can discover.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Encourage students to select different tabs on the left-hand side, switch between Code and Preview, and try asking the AI to make a simple change to the page. Remind students not to worry about making mistakes — they can't break anything.",
+        "progression_name": "Explore Web Lab",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Once students begin to slow down in their exploration, move the class into the discussion to capture what they discovered."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "12b0f8d0-32a5-45a3-b588-11e43482853c",
+        "lesson_activity.key": "fac8d9f0-eff8-4c8b-9b40-ded48a078e7e"
+      }
+    },
+    {
+      "key": "10c61de9-de00-42b3-a677-92f4a43e1152",
+      "position": 5,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "10c61de9-de00-42b3-a677-92f4a43e1152",
+        "lesson_activity.key": "fac8d9f0-eff8-4c8b-9b40-ded48a078e7e"
+      }
+    },
+    {
+      "key": "497cd9a9-18c7-412c-aea2-14251783920b",
+      "position": 6,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Click the animated slide to display the prompts. Invite students to share what they discovered while exploring the tool. As students respond, briefly highlight the features they mention so all students are aware of them. If students raise questions about specific features, demonstrate them quickly without going into detail. Make sure to point out the different views, the file panel with different files and folders, and the tabs along the left-hand side which include the AI Tutor, Version History, and Backpack.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Keep this discussion focused and fast. The goal is to orient students to key features of Web Lab, not to explain how everything works."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "497cd9a9-18c7-412c-aea2-14251783920b",
+        "lesson_activity.key": "fac8d9f0-eff8-4c8b-9b40-ded48a078e7e"
+      }
+    },
+    {
+      "key": "148a2519-a695-4f80-8827-791769566ee6",
+      "position": 7,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "148a2519-a695-4f80-8827-791769566ee6",
+        "lesson_activity.key": "fac8d9f0-eff8-4c8b-9b40-ded48a078e7e"
+      }
+    },
+    {
+      "key": "64688de4-3d49-4029-bc51-c2191d1369fa",
+      "position": 8,
+      "properties": {
+        "description": "As you were exploring, you may have noticed that some AI changes affected the content of the page, while others changed the way it looked. Let’s take a closer look at that difference.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "64688de4-3d49-4029-bc51-c2191d1369fa",
+        "lesson_activity.key": "fac8d9f0-eff8-4c8b-9b40-ded48a078e7e"
+      }
+    },
+    {
+      "key": "4538897f-9aff-471b-aa71-e5f155f92d36",
+      "position": 9,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to point out that AI generates separate files for each HTML page and a CSS file.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Ask students what differences they notice between the two versions of the webpage shown. Guide them to identify what parts seem to control the structure and content versus what changes the visual appearance. Clarify that HTML provides the structure and content of a page, while CSS controls the style and visual design. Emphasize that students will work as Web Designers and use AI tools to make changes to both structure and style.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Encourage students to share a few observations before you confirm or clarify. If needed, use simple analogies such as HTML being the structure or blueprint of the page and CSS being the visual design or style. Keep the focus on noticing differences rather than explaining code."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "4538897f-9aff-471b-aa71-e5f155f92d36",
+        "lesson_activity.key": "fac8d9f0-eff8-4c8b-9b40-ded48a078e7e"
+      }
+    },
+    {
+      "key": "0ffe94c0-6a28-4617-87b5-5ff1f5c5eafe",
+      "position": 10,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "0ffe94c0-6a28-4617-87b5-5ff1f5c5eafe",
+        "lesson_activity.key": "fac8d9f0-eff8-4c8b-9b40-ded48a078e7e"
+      }
+    },
+    {
+      "key": "dc4828c5-0a81-4692-a381-5e4bf11ba323",
+      "position": 11,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define *prompt engineering*.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Explain that AI uses the words in a prompt to predict a response based on patterns it has learned. Point out that the AI pays attention to the task, context, tone, and details in a prompt, but keep the explanation high-level. Emphasize that what students include in their prompt will directly affect what the AI generates.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Ask students what they think the AI-generated webpage might look like from this prompt. Guide students to notice that the prompt is vague, so the AI has to make guesses about what to include.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Ask students how the AI-generated webpage might be different with this prompt. Invite students to compare it to the previous example and identify what would likely improve. Guide students to notice that adding context and specific details helps the AI generate a more organized and useful result."
+      },
+      "seeding_key": {
+        "activity_section.key": "dc4828c5-0a81-4692-a381-5e4bf11ba323",
+        "lesson_activity.key": "fac8d9f0-eff8-4c8b-9b40-ded48a078e7e"
+      }
+    },
+    {
+      "key": "599ae148-a1f9-4502-b943-2cc40230f838",
+      "position": 12,
+      "properties": {
+        "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this activity:** Students use prompt engineering to generate their first AI-assisted webpage, discovering that the clarity and specificity of their instructions directly shapes the quality of what AI produces.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Level 2 to complete Levels 2 and 3.\n- **Level 2:** Students complete a Check for Understanding.\n- **Level 3:** Students complete as many AI Design Challenges as they can.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Move around the room and check that students are using AI to make changes to their page rather than editing code directly. Look for students trying different prompts, reviewing the results, and refining their page over time. Ask questions like, \"What are you trying to change?\" and \"Did the AI output match what you expected?\" Encourage students to preview their page and make adjustments based on what they see.",
+        "duration": "10",
+        "name": "AI Design Challenges",
+        "progression_name": "Check for Understanding"
+      },
+      "seeding_key": {
+        "activity_section.key": "599ae148-a1f9-4502-b943-2cc40230f838",
+        "lesson_activity.key": "fac8d9f0-eff8-4c8b-9b40-ded48a078e7e"
+      }
+    },
+    {
+      "key": "73f96943-a4a8-41b1-83c4-f742a2819757",
+      "position": 13,
+      "properties": {
+        "progression_name": "AI Design Challenges",
+        "tips": [
+          {
+            "type": "assessmentOpportunity",
+            "markdown": "This level can be used as a formative assessment of the lesson objectives, including generating a web page using AI, refining prompts to improve results, and using iterative testing to make changes to HTML and CSS."
+          },
+          {
+            "type": "teachingTip",
+            "markdown": "Encourage students to keep moving between challenges rather than trying to perfect one change. If students get stuck, prompt them to try a different or more specific request to the AI instead of troubleshooting on their own."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "73f96943-a4a8-41b1-83c4-f742a2819757",
+        "lesson_activity.key": "fac8d9f0-eff8-4c8b-9b40-ded48a078e7e"
+      }
+    },
+    {
+      "key": "65db27cc-ce53-40a8-8e33-7f42547f0d60",
+      "position": 14,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "65db27cc-ce53-40a8-8e33-7f42547f0d60",
+        "lesson_activity.key": "fac8d9f0-eff8-4c8b-9b40-ded48a078e7e"
+      }
+    },
+    {
+      "key": "67fe48ae-4417-46f6-8fc4-a77e8f2aa352",
+      "position": 15,
+      "properties": {
+        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Click the animated slide to display the discussion prompts.\n- *Why might AI sometimes misunderstand what we mean?*\n- *How did you decide whether to accept or change the AI's output?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students reflect on their experience using AI and recognize that unclear or vague prompts can lead to unexpected results. Listen for students describing how they adjusted what they asked the AI to improve their webpage and how they decided whether to accept or change the output. Students should begin to understand that working with AI involves both giving clear instructions and making decisions about the results.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Validate student ideas and connect responses to their experience in the activity. Highlight that students improved their results by adjusting what they asked the AI and deciding whether to accept or revise the output. Reinforce that they are responsible for guiding and refining what the AI produces."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "67fe48ae-4417-46f6-8fc4-a77e8f2aa352",
+        "lesson_activity.key": "fac8d9f0-eff8-4c8b-9b40-ded48a078e7e"
+      }
+    },
+    {
+      "key": "6f334135-e05f-43bc-9305-6d1d349d984a",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the lesson objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day. Have students turn and talk with a partner to share their ideas. Encourage them to draw on what they noticed while prompting the AI, specifically how it generated their web page from prompts but often needed human refinement or direction. After a minute, invite a few volunteers to share highlights with the class.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n- *AI learns from web apps that already exist. What kinds of designs do you think it reproduces most often?*\n- *What kinds might it get wrong?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students should begin to notice that if AI learns from existing websites, it will reproduce the most common design patterns most confidently — and may struggle with anything underrepresented in that data, such as designs for users with accessibility needs, non-Western layout conventions, or newer design styles. Students don't need to arrive at a complete answer here. The goal is to plant the question so it has context when it resurfaces in upcoming lessons.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the Key Vocabulary."
+      },
+      "seeding_key": {
+        "activity_section.key": "6f334135-e05f-43bc-9305-6d1d349d984a",
+        "lesson_activity.key": "02df6333-946f-4940-b3ff-cb8063069351"
+      }
+    },
+    {
+      "key": "43f7493a-242c-4eb2-959a-b4853fa61c76",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this activity:** Students analyze how layout and visual organization affect a user’s ability to locate information and complete a task on a website.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n- *What would you click first to start your pizza order?*\n- *What clues on the page tell you \"this is the ordering area\"?*\n- *What’s one thing that makes it harder to locate what you need?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students should notice that the layout makes it difficult to quickly locate key actions or information. They may point out competing elements, unclear starting points, or labels that do not clearly guide the ordering process. Students should begin recognizing how visual hierarchy, grouping, and clear sections help users understand where to go next.\n\n<i class=\"fa fa-video-camera\" aria-hidden=\"true\"></i> **Video:** Show the \"Web Accessibility Perspectives: Clear Layout and Design\" video.\n\n**Questions to consider with the video:** \n- What made the first pizza site confusing?\n- What changed to make the improved version easier?\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students should recognize that clear layout and organization help users quickly understand where to start and what to do next. They should identify specific design changes—such as clearer headings and labels, navigation bar, and consistent styling—that make the improved site easier to navigate and use.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n- *Where would you go first to start an order now?*\n- *What parts of the page are easier to locate?*\n- *What design choices help guide you through the steps?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students should notice that the improved layout organizes the page into clear sections and highlights key actions. They may point out that steps like Find Store, Create Pizza, and Add Sides are grouped and labeled clearly, making it easier to understand where to begin and what to do next. Students should recognize that visual hierarchy, consistent layout, and grouping help users locate information quickly and complete tasks more easily."
+      },
+      "seeding_key": {
+        "activity_section.key": "43f7493a-242c-4eb2-959a-b4853fa61c76",
+        "lesson_activity.key": "2f916a45-6a5a-45c4-a086-3fd8e6896ca9"
+      }
+    },
+    {
+      "key": "29ac830b-7245-49fe-9b61-43c0b992289e",
+      "position": 2,
+      "properties": {
+        "description": "AI tools can generate layouts that look correct but still include usability issues. Designers need to review AI-generated designs and identify problems that could make a site harder to use.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "29ac830b-7245-49fe-9b61-43c0b992289e",
+        "lesson_activity.key": "2f916a45-6a5a-45c4-a086-3fd8e6896ca9"
+      }
+    },
+    {
+      "key": "2da8f661-fd7c-4707-bccf-d500150e0a21",
+      "position": 3,
+      "properties": {
+        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *What could go wrong if no one fixed these designs?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students should recognize that poor design can prevent users from completing tasks, cause confusion or frustration, and lead users to abandon the site. They may mention difficulty finding information, making mistakes, or being unable to use the site at all. This reinforces that accessibility issues have real consequences and that designs—whether created by humans or AI—must be reviewed and improved to ensure they are usable.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "If students focus only on aesthetics (e.g., “it looks messy”), prompt them to consider the impact on the user: Can the user complete the task? What might cause them to give up? Connect this to AI by reminding students that AI-generated designs can include these same issues, so designers need to review and improve them."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "2da8f661-fd7c-4707-bccf-d500150e0a21",
+        "lesson_activity.key": "2f916a45-6a5a-45c4-a086-3fd8e6896ca9"
+      }
+    },
+    {
+      "key": "d2aa30a9-eb64-4375-a4db-f4d42f5d01d9",
+      "position": 4,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "d2aa30a9-eb64-4375-a4db-f4d42f5d01d9",
+        "lesson_activity.key": "2f916a45-6a5a-45c4-a086-3fd8e6896ca9"
+      }
+    },
+    {
+      "key": "e666294a-bda8-4d0d-8483-5dcf8f3ab9a2",
+      "position": 5,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the lesson objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the Question of the Day."
+      },
+      "seeding_key": {
+        "activity_section.key": "e666294a-bda8-4d0d-8483-5dcf8f3ab9a2",
+        "lesson_activity.key": "2f916a45-6a5a-45c4-a086-3fd8e6896ca9"
+      }
+    },
+    {
+      "key": "f50b399e-ca77-44db-9ca2-3aee6209fcfd",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this activity:** Students are introduced to the accessibility challenges that exist across the web and learn how those issues influence AI-generated designs. They explore the real-world role of the Inclusive Designer and understand why human judgment is essential in guiding AI toward more accessible outcomes.\n\n<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the AI-Generated Design Unit Guide.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the role of Inclusive Designers.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Explain that nearly 95% of websites have accessibility issues and highlight examples of common issues (low contrast text, missing alt text, unlabeled forms, empty links/buttons).\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Explain how accessibility issues in web data can appear in AI-generated designs. Emphasize that AI learns patterns from existing websites, so issues in those sites can be reproduced in AI-generated outputs.",
+        "duration": "15",
+        "name": "How Accessible is the Web?",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Students may assume AI \"knows better\" than humans. Emphasize that AI does not judge quality—it learns patterns from existing data, including flawed or inaccessible designs."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "f50b399e-ca77-44db-9ca2-3aee6209fcfd",
+        "lesson_activity.key": "184411f7-8ffd-48f0-b578-3d83bfccb593"
+      }
+    },
+    {
+      "key": "8c342850-ef58-4de6-b3ff-6effb271052b",
+      "position": 2,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "8c342850-ef58-4de6-b3ff-6effb271052b",
+        "lesson_activity.key": "184411f7-8ffd-48f0-b578-3d83bfccb593"
+      }
+    },
+    {
+      "key": "cff14033-08f6-4194-bfa0-8568fa46c29f",
+      "position": 3,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define *accessibility*.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 9, Level 1 to complete Levels 1 and 2.\n- **Level 1:** Students read about Inclusive Designers.\n- **Level 2:** Students explore one of the provided websites and identify potential usability or accessibility issues that could make it harder for a user to locate information or complete a task.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** As students work, prompt them with questions like:\n- \"What is the main task a user might want to complete on this page?\"\n- \"Is it easy to tell where to start?\"\n- \"Is anything hard to read, interact with, or understand?\"\n\nEncourage students to be specific about what part of the design causes the issue.",
+        "progression_name": "Inclusive Designers"
+      },
+      "seeding_key": {
+        "activity_section.key": "cff14033-08f6-4194-bfa0-8568fa46c29f",
+        "lesson_activity.key": "184411f7-8ffd-48f0-b578-3d83bfccb593"
+      }
+    },
+    {
+      "key": "9b7c5647-d5d1-406a-bc9e-5a56120760c6",
+      "position": 4,
+      "properties": {
+        "progression_name": "Accessibility Audit"
+      },
+      "seeding_key": {
+        "activity_section.key": "9b7c5647-d5d1-406a-bc9e-5a56120760c6",
+        "lesson_activity.key": "184411f7-8ffd-48f0-b578-3d83bfccb593"
+      }
+    },
+    {
+      "key": "cd8fb2ce-e389-4e11-ba08-2daa3cdcc099",
+      "position": 5,
+      "properties": {
+        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n- *What accessibility issues did you find?*\n- *Were any of the issues surprising? Why?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students should surface specific, concrete issues from their audits rather than general observations — not just \"the contrast is low\" but \"this text would be unreadable for a user with low vision.\" For the second prompt, students may be surprised that well-known, prestigious institutions have accessibility failures. That surprise is worth naming: even experienced design teams miss accessibility issues. If multiple groups found the same issues across different sites, highlight that pattern — it suggests these are common, systemic failures rather than one-off mistakes.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Recall that AI reproduces patterns from its training data, which means it will also reproduce accessibility issues it's been trained on. Reinforce that it's also important for human designers to watch for these patterns.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the POUR Principles as rules for making website accessible. Explain that each letter represents a type of issue designers use to evaluate websites: Perceivable, Operable, Understandable, and Robust."
+      },
+      "seeding_key": {
+        "activity_section.key": "cd8fb2ce-e389-4e11-ba08-2daa3cdcc099",
+        "lesson_activity.key": "184411f7-8ffd-48f0-b578-3d83bfccb593"
+      }
+    },
+    {
+      "key": "eef8975a-8da8-44ab-b0ac-675a1c12e47f",
+      "position": 6,
+      "properties": {
+        "description": "This is the framework Inclusive Designers use to evaluate whether a design is actually doing its job for all users.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "eef8975a-8da8-44ab-b0ac-675a1c12e47f",
+        "lesson_activity.key": "184411f7-8ffd-48f0-b578-3d83bfccb593"
+      }
+    },
+    {
+      "key": "560fd3e0-cbed-468e-983f-a57d7ffc3eb8",
+      "position": 7,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Explain what it means for something to be Perceivable on a web app.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Explain what it means for something to be Operable on a web app.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Explain what it means for something to be Understandable on a web app.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Explain what it means for something to be Robust on a web app."
+      },
+      "seeding_key": {
+        "activity_section.key": "560fd3e0-cbed-468e-983f-a57d7ffc3eb8",
+        "lesson_activity.key": "184411f7-8ffd-48f0-b578-3d83bfccb593"
+      }
+    },
+    {
+      "key": "86a6fa2d-74e1-4410-8cdf-fc24b8061be9",
+      "position": 8,
+      "properties": {
+        "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this activity:** Students learn how to use the POUR framework (Perceivable, Operable, Understandable, Robust) to describe and organize accessibility issues they observed in AI-generated layouts.\n\n<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the Accessibility in Design activity guide.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 9, Level 3 to complete Levels 3 through 5.\n- **Level 3:** Students identify at least two to three accessibility issues on the provided web app.\n- **Level 4:** Students apply accessibility principles to their own apps from Lesson 8\n- **Level 5:** Students complete a Check for Understanding.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Observe students as they identify accessibility issues and apply the POUR principles. Prompt them with questions like: “What POUR principle does this issue relate to?” or “How might this issue affect a user with this constraint?” Encourage students to be specific in their prompts, clearly describing the issue and referencing the relevant POUR principle. Push them to connect specific design elements (e.g., contrast, labels, button size) to real user challenges. Ensure students use the Accessibility Prompt Builder to generate and refine prompts that communicate issues clearly, rather than trying to fix everything at once.",
+        "duration": "15",
+        "name": "The POUR Principle",
+        "progression_name": "Accessibility Issues and Fixes"
+      },
+      "seeding_key": {
+        "activity_section.key": "86a6fa2d-74e1-4410-8cdf-fc24b8061be9",
+        "lesson_activity.key": "184411f7-8ffd-48f0-b578-3d83bfccb593"
+      }
+    },
+    {
+      "key": "061db42c-d944-40f6-8ddb-bcb21d204d62",
+      "position": 9,
+      "properties": {
+        "progression_name": "Check for Understanding",
+        "tips": [
+          {
+            "type": "assessmentOpportunity",
+            "markdown": "Levels 3 and 5 can serve as a formative assessment. Collect student responses to gauge their understanding of applying the POUR framework and user-centered design principles.\n"
+          },
+          {
+            "type": "teachingTip",
+            "markdown": "If students were absent for the previous lesson where they created site maps/apps, make sure they are aware of the AI Prompt in the instructions that will provide a site map for them. Emphasize that the goal is not necessarily to \"solve\" every issue, but to practice identifying problems and communicating them effectively through prompts. This is a key skill for working with AI and for accessibility design in general.\n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "061db42c-d944-40f6-8ddb-bcb21d204d62",
+        "lesson_activity.key": "184411f7-8ffd-48f0-b578-3d83bfccb593"
+      }
+    },
+    {
+      "key": "54090ef9-c8db-45a1-a364-76e941d98eca",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the lesson objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students respond to the Question of the Day in their Unit Guide. Give them time to write independently, then invite a few volunteers to share.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n- *Whose needs were invisible in the AI's default output?*\n- *What does that tell us about who was — and wasn't — considered when that AI was trained?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students should connect the accessibility failures they identified in the audit to decisions made during AI training — specifically, that AI reproduces the patterns it learned from, including patterns of exclusion. For the second question, students should recognize that when accessibility needs are underrepresented in training data, the resulting AI outputs will reflect that gap by default. Push students to be specific: not just \"disabled users weren't considered\" but naming a particular need they encountered in the audit and tracing it back to what the training data would have had to include for AI to handle it correctly.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the Key Vocabulary."
+      },
+      "seeding_key": {
+        "activity_section.key": "54090ef9-c8db-45a1-a364-76e941d98eca",
+        "lesson_activity.key": "ba7006af-600c-464a-ba6a-de139de1c1d9"
+      }
+    },
+    {
+      "key": "f5a111ca-d06d-49dd-8d9c-60d76bce4020",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this activity:** Students recognize that combining structure (a map) with instructions (directions) leads to clearer results—introducing the idea that AI works best when given both a wireframe and a prompt.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students quickly vote (by raising hands or turning to a partner) for A, B, or C. After voting, briefly highlight that a map provides structure while directions explain what to do, and that using both together leads to clearer understanding.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Point to the wireframe and written description on the slide and explain how each provides different information. Emphasize that the wireframe shows the structure and layout of the page, while the written description explains what each part is for and what content should go there. Then connect this to the lesson by explaining that AI works best when it has both—structure from the wireframe and instructions from the prompt.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the lesson objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the Question of the Day."
+      },
+      "seeding_key": {
+        "activity_section.key": "f5a111ca-d06d-49dd-8d9c-60d76bce4020",
+        "lesson_activity.key": "0274cb37-9b01-452e-b21e-7380318e40e8"
+      }
+    },
+    {
+      "key": "0d1c8750-e122-43fb-a88d-665ce40d5c42",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this activity:** Students understand that AI interprets wireframes by recognizing patterns and may misinterpret unclear or ambiguous designs.\n\n<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the AI-Generated Design Unit Guide.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Point to each image from left to right and guide students through the process. Start with the wireframe and ask what they notice (such as sections, images, or navigation). Then explain that the AI scans the layout for patterns like spacing, grouping, and labels. Next, show how the AI uses those patterns to infer components and structure (such as headers, sections, or cards). Finally, explain that the AI generates code based on those predictions. Emphasize that at each step, the AI is making interpretations—not perfectly understanding the design.",
+        "duration": "10",
+        "name": "How AI Interprets Wireframes",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Students may assume AI \"understands\" their design the same way they do. Emphasize that at each step—scanning patterns, inferring structure, and generating code—the AI is making educated guesses. This is why unclear layouts or missing details can lead to unexpected results. Keep this section brief and move quickly into the activity.\n\nKeep this section brief—focus on helping students recognize that AI interprets and may misinterpret wireframes, then move quickly into the activity."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "0d1c8750-e122-43fb-a88d-665ce40d5c42",
+        "lesson_activity.key": "3f54cd61-d15d-49a7-9598-8d201017f8f8"
+      }
+    },
+    {
+      "key": "f1aa534f-8b1a-45a8-a3fe-03e4fc41ebaf",
+      "position": 2,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "f1aa534f-8b1a-45a8-a3fe-03e4fc41ebaf",
+        "lesson_activity.key": "3f54cd61-d15d-49a7-9598-8d201017f8f8"
+      }
+    },
+    {
+      "key": "564bee8d-fe86-4dcd-a62f-6cd342ab9a4d",
+      "position": 3,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Point to the wireframe example and highlight specific problem areas (unclear shapes, spacing, or overlapping elements). Explain that AI relies on recognizable patterns, so when these elements are unclear or inconsistent, the AI may interpret them incorrectly. Emphasize that when structure, grouping, or hierarchy isn’t clearly defined, the AI will make its best guess, which may not match the intended design. Connect this to prompting by noting that clearer descriptions and constraints help guide the AI toward a more accurate layout.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Students may assume AI will understand their design exactly as they do. Use this example to highlight that AI makes guesses based on patterns. Later, if students say the AI \"got it wrong,\" prompt them to ask, \"What might the AI have been confused by?\" and connect mismatches back to unclear shapes, spacing, or missing details in their wireframe or prompt."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "564bee8d-fe86-4dcd-a62f-6cd342ab9a4d",
+        "lesson_activity.key": "3f54cd61-d15d-49a7-9598-8d201017f8f8"
+      }
+    },
+    {
+      "key": "5755f4ee-a77f-45b4-856b-4d67f212e4f8",
+      "position": 4,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "5755f4ee-a77f-45b4-856b-4d67f212e4f8",
+        "lesson_activity.key": "3f54cd61-d15d-49a7-9598-8d201017f8f8"
+      }
+    },
+    {
+      "key": "33521fc1-8d56-4761-a40e-f9f4552a0cfb",
+      "position": 5,
+      "properties": {
+        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *What's one thing in this wireframe that could be interpreted in different ways?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students identify parts of the wireframe that could be interpreted in different ways and may disagree on what certain elements represent (for example, whether something is a button, logo, image, or card). Through sharing different responses, they recognize that people interpret the same visual differently. Use that moment to highlight that this same ambiguity applies to AI—it does not \"know\" the correct answer and instead makes its best guess based on patterns, which can lead to mismatches with the intended design."
+      },
+      "seeding_key": {
+        "activity_section.key": "33521fc1-8d56-4761-a40e-f9f4552a0cfb",
+        "lesson_activity.key": "3f54cd61-d15d-49a7-9598-8d201017f8f8"
+      }
+    },
+    {
+      "key": "c97623ed-9774-4d7f-af76-3d9fe5f93479",
+      "position": 6,
+      "properties": {
+        "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this activity:** Students generate a layout from a wireframe using a planned prompt, then compare the AI output to their design to identify matches and mismatches.\n\n<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the From Wireframes to Layouts activity guide.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 11, Level 1 to complete Levels 1 and 2.\n- **Level 1:** Explain that they will use their wireframe and planned prompt to generate a layout, then compare the AI output to their design to identify matches and mismatches.\n- **Level 2:** Students complete a Check for Understanding.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Observe how students reason through the comparison. Ask guiding questions such as:\n- \"What part of your layout matches your wireframe most closely?\"\n- \"What doesn't match, and how is it different from your design?\"\n- \"Why do you think the AI interpreted that part this way?\"\n- \"What could you change in your prompt to improve that?\"",
+        "duration": "20",
+        "name": "Generate Using Wireframes",
+        "progression_name": "Generate From a Wireframe"
+      },
+      "seeding_key": {
+        "activity_section.key": "c97623ed-9774-4d7f-af76-3d9fe5f93479",
+        "lesson_activity.key": "3f54cd61-d15d-49a7-9598-8d201017f8f8"
+      }
+    },
+    {
+      "key": "52bf648b-12b9-4332-9786-c9620313dcb4",
+      "position": 7,
+      "properties": {
+        "progression_name": "Check for Understanding",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "- If students didn't finish all four pages of their wireframe last class, reassure them that one completed page is enough to continue.\n- If students do not have a wireframe, have them use the Sample Wireframe provided in the level's panel files.\n- If the AI output doesn't match their design, encourage students to revise their prompt with more specific layout details or constraints."
+          },
+          {
+            "type": "assessmentOpportunity",
+            "markdown": "Use student responses in the activity guide and their work in Level 1 to formatively assess whether students can generate layouts from a wireframe, evaluate how well the AI output aligns with their design, and refine their prompts to improve that alignment."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "52bf648b-12b9-4332-9786-c9620313dcb4",
+        "lesson_activity.key": "3f54cd61-d15d-49a7-9598-8d201017f8f8"
+      }
+    },
+    {
+      "key": "a97c0582-0ae3-42b7-b6d0-a40eb43555d4",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the lesson objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students respond to the Question of the Day in their Unit Guide. Give them time to write independently, then invite 1–2 students to share. As students respond, prompt them to explain how they used their wireframe and prompt to guide the AI, and how they took responsibility for evaluating and refining the output when it didn’t match their design."
+      },
+      "seeding_key": {
+        "activity_section.key": "a97c0582-0ae3-42b7-b6d0-a40eb43555d4",
+        "lesson_activity.key": "79a851be-55a0-4a2f-908d-5363c7f94460"
+      }
+    }
+  ],
+  "script_levels": [
+    {
+      "chapter": 1,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Explore Web Lab"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ai-generated-design-lesson3-level1-explore_aif-aac-2026"
+        ],
+        "lesson.key": "Lesson 3: Build Your First Web Page with AI",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "aif-advisory-council-preview",
+        "activity_section.key": "12b0f8d0-32a5-45a3-b588-11e43482853c"
+      },
+      "level_keys": [
+        "ai-generated-design-lesson3-level1-explore_aif-aac-2026"
+      ]
+    },
+    {
+      "chapter": 2,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "progression": "Check for Understanding"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ai-generated-design-lesson3-level3-cfu_aif-aac-2026"
+        ],
+        "lesson.key": "Lesson 3: Build Your First Web Page with AI",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "aif-advisory-council-preview",
+        "activity_section.key": "599ae148-a1f9-4502-b943-2cc40230f838"
+      },
+      "level_keys": [
+        "ai-generated-design-lesson3-level3-cfu_aif-aac-2026"
+      ]
+    },
+    {
+      "chapter": 3,
+      "position": 3,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "AI Design Challenges"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ai-generated-design-lesson3-level2-challenges_aif-aac-2026"
+        ],
+        "lesson.key": "Lesson 3: Build Your First Web Page with AI",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "aif-advisory-council-preview",
+        "activity_section.key": "73f96943-a4a8-41b1-83c4-f742a2819757"
+      },
+      "level_keys": [
+        "ai-generated-design-lesson3-level2-challenges_aif-aac-2026"
+      ]
+    },
+    {
+      "chapter": 4,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Inclusive Designers"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ai-generated-design-lesson9-careerpanel_aif-aac-2026"
+        ],
+        "lesson.key": "Lesson 9: Accessibility in Design",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "aif-advisory-council-preview",
+        "activity_section.key": "cff14033-08f6-4194-bfa0-8568fa46c29f"
+      },
+      "level_keys": [
+        "ai-generated-design-lesson9-careerpanel_aif-aac-2026"
+      ]
+    },
+    {
+      "chapter": 5,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Accessibility Audit"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ai-generated-design-lesson9-level1-test_aif-aac-2026"
+        ],
+        "lesson.key": "Lesson 9: Accessibility in Design",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "aif-advisory-council-preview",
+        "activity_section.key": "9b7c5647-d5d1-406a-bc9e-5a56120760c6"
+      },
+      "level_keys": [
+        "ai-generated-design-lesson9-level1-test_aif-aac-2026"
+      ]
+    },
+    {
+      "chapter": 6,
+      "position": 3,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Accessibility Issues and Fixes"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ai-generated-design-lesson9-level3_aif-aac-2026"
+        ],
+        "lesson.key": "Lesson 9: Accessibility in Design",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "aif-advisory-council-preview",
+        "activity_section.key": "86a6fa2d-74e1-4410-8cdf-fc24b8061be9"
+      },
+      "level_keys": [
+        "ai-generated-design-lesson9-level3_aif-aac-2026"
+      ]
+    },
+    {
+      "chapter": 7,
+      "position": 4,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Accessibility Issues and Fixes"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ai-generated-design-lesson9-level4_aif-aac-2026"
+        ],
+        "lesson.key": "Lesson 9: Accessibility in Design",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "aif-advisory-council-preview",
+        "activity_section.key": "86a6fa2d-74e1-4410-8cdf-fc24b8061be9"
+      },
+      "level_keys": [
+        "ai-generated-design-lesson9-level4_aif-aac-2026"
+      ]
+    },
+    {
+      "chapter": 8,
+      "position": 5,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "progression": "Check for Understanding"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ai-generated-design-lesson9-level5_aif-aac-2026"
+        ],
+        "lesson.key": "Lesson 9: Accessibility in Design",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "aif-advisory-council-preview",
+        "activity_section.key": "061db42c-d944-40f6-8ddb-bcb21d204d62"
+      },
+      "level_keys": [
+        "ai-generated-design-lesson9-level5_aif-aac-2026"
+      ]
+    },
+    {
+      "chapter": 9,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Generate From a Wireframe"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ai-generated-design-lesson11-level1_aif-aac-2026"
+        ],
+        "lesson.key": "Lesson 11: From Wireframes to Layouts",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "aif-advisory-council-preview",
+        "activity_section.key": "c97623ed-9774-4d7f-af76-3d9fe5f93479"
+      },
+      "level_keys": [
+        "ai-generated-design-lesson11-level1_aif-aac-2026"
+      ]
+    },
+    {
+      "chapter": 10,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "progression": "Check for Understanding"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ai-generated-design-lesson11-level2-cfu_aif-aac-2026"
+        ],
+        "lesson.key": "Lesson 11: From Wireframes to Layouts",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "aif-advisory-council-preview",
+        "activity_section.key": "52bf648b-12b9-4332-9786-c9620313dcb4"
+      },
+      "level_keys": [
+        "ai-generated-design-lesson11-level2-cfu_aif-aac-2026"
+      ]
+    }
+  ],
+  "levels_script_levels": [
+    {
+      "seeding_key": {
+        "level.key": "ai-generated-design-lesson3-level1-explore_aif-aac-2026",
+        "script_level.level_keys": [
+          "ai-generated-design-lesson3-level1-explore_aif-aac-2026"
+        ],
+        "lesson.key": "Lesson 3: Build Your First Web Page with AI",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "aif-advisory-council-preview",
+        "activity_section.key": "12b0f8d0-32a5-45a3-b588-11e43482853c"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ai-generated-design-lesson3-level3-cfu_aif-aac-2026",
+        "script_level.level_keys": [
+          "ai-generated-design-lesson3-level3-cfu_aif-aac-2026"
+        ],
+        "lesson.key": "Lesson 3: Build Your First Web Page with AI",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "aif-advisory-council-preview",
+        "activity_section.key": "599ae148-a1f9-4502-b943-2cc40230f838"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ai-generated-design-lesson3-level2-challenges_aif-aac-2026",
+        "script_level.level_keys": [
+          "ai-generated-design-lesson3-level2-challenges_aif-aac-2026"
+        ],
+        "lesson.key": "Lesson 3: Build Your First Web Page with AI",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "aif-advisory-council-preview",
+        "activity_section.key": "73f96943-a4a8-41b1-83c4-f742a2819757"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ai-generated-design-lesson9-careerpanel_aif-aac-2026",
+        "script_level.level_keys": [
+          "ai-generated-design-lesson9-careerpanel_aif-aac-2026"
+        ],
+        "lesson.key": "Lesson 9: Accessibility in Design",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "aif-advisory-council-preview",
+        "activity_section.key": "cff14033-08f6-4194-bfa0-8568fa46c29f"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ai-generated-design-lesson9-level1-test_aif-aac-2026",
+        "script_level.level_keys": [
+          "ai-generated-design-lesson9-level1-test_aif-aac-2026"
+        ],
+        "lesson.key": "Lesson 9: Accessibility in Design",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "aif-advisory-council-preview",
+        "activity_section.key": "9b7c5647-d5d1-406a-bc9e-5a56120760c6"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ai-generated-design-lesson9-level3_aif-aac-2026",
+        "script_level.level_keys": [
+          "ai-generated-design-lesson9-level3_aif-aac-2026"
+        ],
+        "lesson.key": "Lesson 9: Accessibility in Design",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "aif-advisory-council-preview",
+        "activity_section.key": "86a6fa2d-74e1-4410-8cdf-fc24b8061be9"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ai-generated-design-lesson9-level4_aif-aac-2026",
+        "script_level.level_keys": [
+          "ai-generated-design-lesson9-level4_aif-aac-2026"
+        ],
+        "lesson.key": "Lesson 9: Accessibility in Design",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "aif-advisory-council-preview",
+        "activity_section.key": "86a6fa2d-74e1-4410-8cdf-fc24b8061be9"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ai-generated-design-lesson9-level5_aif-aac-2026",
+        "script_level.level_keys": [
+          "ai-generated-design-lesson9-level5_aif-aac-2026"
+        ],
+        "lesson.key": "Lesson 9: Accessibility in Design",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "aif-advisory-council-preview",
+        "activity_section.key": "061db42c-d944-40f6-8ddb-bcb21d204d62"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ai-generated-design-lesson11-level1_aif-aac-2026",
+        "script_level.level_keys": [
+          "ai-generated-design-lesson11-level1_aif-aac-2026"
+        ],
+        "lesson.key": "Lesson 11: From Wireframes to Layouts",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "aif-advisory-council-preview",
+        "activity_section.key": "c97623ed-9774-4d7f-af76-3d9fe5f93479"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ai-generated-design-lesson11-level2-cfu_aif-aac-2026",
+        "script_level.level_keys": [
+          "ai-generated-design-lesson11-level2-cfu_aif-aac-2026"
+        ],
+        "lesson.key": "Lesson 11: From Wireframes to Layouts",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "aif-advisory-council-preview",
+        "activity_section.key": "52bf648b-12b9-4332-9786-c9620313dcb4"
+      }
+    }
+  ],
+  "resources": [
+    {
+      "name": "[KEY] Accessibility in Design",
+      "url": "https://docs.google.com/document/d/1yvvdnTGJ5Zn9pWsFiN6tjU22Qyv-8e4yfHdjKk8LSHQ/edit?usp=drive_link",
+      "key": "_key_accessibility_in_design",
+      "properties": {
+        "audience": "Verified Teacher",
+        "curriculum_category": "curriculum",
+        "embeddability_type": "embed_and_resource_dropdown",
+        "type": "Answer Key"
+      },
+      "seeding_key": {
+        "resource.key": "_key_accessibility_in_design"
+      }
+    },
+    {
+      "name": "[KEY] AI-Generated Design Unit Guide",
+      "url": "https://docs.google.com/document/d/1wSc_2IjW_waULYQCyeD6XR-8azoO21FOf5BXgP4PnJc/edit?usp=sharing",
+      "key": "_key_ai-generated_design_unit_guide",
+      "properties": {
+        "audience": "Verified Teacher",
+        "curriculum_category": "curriculum",
+        "embeddability_type": "embed_and_resource_dropdown",
+        "type": "Answer Key"
+      },
+      "seeding_key": {
+        "resource.key": "_key_ai-generated_design_unit_guide"
+      }
+    },
+    {
+      "name": "[KEY] From Wireframes to Layouts",
+      "url": "https://docs.google.com/document/d/1pyn7xHmxVNhVr8jzp-HtLH47zfZEL0W6KCmIdnPFjjg/edit?usp=sharing",
+      "key": "_key_from_wireframes_to_layouts",
+      "properties": {
+        "audience": "Verified Teacher",
+        "curriculum_category": "curriculum",
+        "embeddability_type": "embed_and_resource_dropdown",
+        "type": "Answer Key"
+      },
+      "seeding_key": {
+        "resource.key": "_key_from_wireframes_to_layouts"
+      }
+    },
+    {
+      "name": "Accessibility in Design",
+      "url": "https://docs.google.com/presentation/d/17rI0I1ArAN6On_L_nDyEaxjjo2rvvEkiGB_byHUP9Gk/edit?slide=id.gca418c6afa_0_1070#slide=id.gca418c6afa_0_1070",
+      "key": "accessibility_in_design",
+      "properties": {
+        "audience": "Teacher",
+        "curriculum_category": "curriculum",
+        "embeddability_type": "embed_and_resource_dropdown",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "accessibility_in_design"
+      }
+    },
+    {
+      "name": "Accessibility in Design",
+      "url": "https://docs.google.com/document/d/1-gOT9aQKoFnJSypCHNDFXw_AmarNc_mdCKVRrtWR8e4/edit?tab=t.0#heading=h.xe9cnc3216z0",
+      "key": "accessibility_in_design_1",
+      "properties": {
+        "audience": "Student",
+        "curriculum_category": "curriculum",
+        "embeddability_type": "embed_and_resource_dropdown",
+        "include_in_pdf": true,
+        "type": "Activity Guide"
+      },
+      "seeding_key": {
+        "resource.key": "accessibility_in_design_1"
+      }
+    },
+    {
+      "name": "AI-Generated Design Unit Guide",
+      "url": "https://docs.google.com/document/d/1Znt4C-uU4F-fVcYYlwx6qD3XcGqky9nbDbV84Kzqu5g/edit?usp=sharing",
+      "key": "ai-generated_design_unit_guide",
+      "properties": {
+        "audience": "Student",
+        "curriculum_category": "curriculum",
+        "embeddability_type": "embed_and_resource_dropdown",
+        "include_in_pdf": true,
+        "type": "Activity Guide"
+      },
+      "seeding_key": {
+        "resource.key": "ai-generated_design_unit_guide"
+      }
+    },
+    {
+      "name": "Build Your First Web Page",
+      "url": "https://docs.google.com/presentation/d/1MFxOJDgJEmefZHVueUkY8FmuDaVg3KYUWal0nPAaa7E/edit?usp=sharing",
+      "key": "build_your_first_web_page",
+      "properties": {
+        "audience": "Teacher",
+        "curriculum_category": "curriculum",
+        "embeddability_type": "embed_and_resource_dropdown",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "build_your_first_web_page"
+      }
+    },
+    {
+      "name": "From Wireframes to Layouts",
+      "url": "https://docs.google.com/presentation/d/1378y5Di7pQkZS5BIlPKRt-te4On61pEfPIt-4uxWnlw/edit?usp=sharing",
+      "key": "from_wireframes_to_layouts",
+      "properties": {
+        "audience": "Teacher",
+        "curriculum_category": "curriculum",
+        "embeddability_type": "embed_and_resource_dropdown",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "from_wireframes_to_layouts"
+      }
+    },
+    {
+      "name": "From Wireframes to Layouts",
+      "url": "https://docs.google.com/document/d/1qorl-u4mY-6cb0lTlFTqzFaGGmgEkt_cCLtq6lU169A/edit?usp=sharing",
+      "key": "from_wireframes_to_layouts_1",
+      "properties": {
+        "audience": "Student",
+        "curriculum_category": "curriculum",
+        "embeddability_type": "embed_and_resource_dropdown",
+        "include_in_pdf": true,
+        "type": "Activity Guide"
+      },
+      "seeding_key": {
+        "resource.key": "from_wireframes_to_layouts_1"
+      }
+    }
+  ],
+  "lessons_resources": [
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 11: From Wireframes to Layouts",
+        "resource.key": "_key_ai-generated_design_unit_guide"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 11: From Wireframes to Layouts",
+        "resource.key": "_key_from_wireframes_to_layouts"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 11: From Wireframes to Layouts",
+        "resource.key": "ai-generated_design_unit_guide"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 11: From Wireframes to Layouts",
+        "resource.key": "from_wireframes_to_layouts"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 11: From Wireframes to Layouts",
+        "resource.key": "from_wireframes_to_layouts_1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 3: Build Your First Web Page with AI",
+        "resource.key": "_key_ai-generated_design_unit_guide"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 3: Build Your First Web Page with AI",
+        "resource.key": "ai-generated_design_unit_guide"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 3: Build Your First Web Page with AI",
+        "resource.key": "build_your_first_web_page"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 9: Accessibility in Design",
+        "resource.key": "_key_accessibility_in_design"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 9: Accessibility in Design",
+        "resource.key": "_key_ai-generated_design_unit_guide"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 9: Accessibility in Design",
+        "resource.key": "accessibility_in_design"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 9: Accessibility in Design",
+        "resource.key": "accessibility_in_design_1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 9: Accessibility in Design",
+        "resource.key": "ai-generated_design_unit_guide"
+      }
+    }
+  ],
+  "scripts_resources": [
+
+  ],
+  "scripts_student_resources": [
+
+  ],
+  "vocabularies": [
+    {
+      "key": "accessibility",
+      "word": "accessibility",
+      "definition": "the practice of designing products, websites, and spaces so that people with a wide range of abilities, disabilities, and needs can use them fully and independently",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "accessibility"
+      }
+    },
+    {
+      "key": "pour_principles",
+      "word": "POUR principles",
+      "definition": "four guidelines that define what it means for a web app to be fully accessible to all users",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "pour_principles"
+      }
+    },
+    {
+      "key": "prompt_engineering",
+      "word": "prompt engineering",
+      "definition": "writing clear, specific instructions that help AI understand exactly what you want it to make or do",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "prompt_engineering"
+      }
+    }
+  ],
+  "lessons_vocabularies": [
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 3: Build Your First Web Page with AI",
+        "vocabulary.key": "prompt_engineering"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 9: Accessibility in Design",
+        "vocabulary.key": "accessibility"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 9: Accessibility in Design",
+        "vocabulary.key": "pour_principles"
+      }
+    }
+  ],
+  "lessons_programming_expressions": [
+
+  ],
+  "objectives": [
+    {
+      "key": "4be72a16-cfef-42a3-b79b-aa10abcfb923",
+      "properties": {
+        "description": "Identify accessibility issues in AI-generated layouts."
+      },
+      "seeding_key": {
+        "lesson.key": "Lesson 9: Accessibility in Design",
+        "objective.key": "4be72a16-cfef-42a3-b79b-aa10abcfb923"
+      }
+    },
+    {
+      "key": "4fa016b0-9621-4c3e-9fea-1493d025cf0c",
+      "properties": {
+        "description": "Use iterative testing when collaborating with AI to generate HTML/CSS."
+      },
+      "seeding_key": {
+        "lesson.key": "Lesson 3: Build Your First Web Page with AI",
+        "objective.key": "4fa016b0-9621-4c3e-9fea-1493d025cf0c"
+      }
+    },
+    {
+      "key": "8ed4643c-9ef9-4921-b124-e58c0df3169f",
+      "properties": {
+        "description": "Articulate accessibility needs in prompts to fix issues."
+      },
+      "seeding_key": {
+        "lesson.key": "Lesson 9: Accessibility in Design",
+        "objective.key": "8ed4643c-9ef9-4921-b124-e58c0df3169f"
+      }
+    },
+    {
+      "key": "a23813bc-08b8-4865-9b79-231de0a10f44",
+      "properties": {
+        "description": "Generate a simple web page by prompting an AI tool for basic HTML structure and CSS style."
+      },
+      "seeding_key": {
+        "lesson.key": "Lesson 3: Build Your First Web Page with AI",
+        "objective.key": "a23813bc-08b8-4865-9b79-231de0a10f44"
+      }
+    },
+    {
+      "key": "a47e0c4c-535b-4999-a351-b22b30d1fda9",
+      "properties": {
+        "description": "Refine prompts to bring AI output closer to planned structures."
+      },
+      "seeding_key": {
+        "lesson.key": "Lesson 11: From Wireframes to Layouts",
+        "objective.key": "a47e0c4c-535b-4999-a351-b22b30d1fda9"
+      }
+    },
+    {
+      "key": "c7116947-4f68-41d1-ab31-8688d12997ff",
+      "properties": {
+        "description": "Prompt AI to generate layouts that align with their wireframes."
+      },
+      "seeding_key": {
+        "lesson.key": "Lesson 11: From Wireframes to Layouts",
+        "objective.key": "c7116947-4f68-41d1-ab31-8688d12997ff"
+      }
+    },
+    {
+      "key": "cca0f1a5-6efb-4b82-a963-2745d78bad45",
+      "properties": {
+        "description": "Debug issues that arise when translating sketches to layouts."
+      },
+      "seeding_key": {
+        "lesson.key": "Lesson 11: From Wireframes to Layouts",
+        "objective.key": "cca0f1a5-6efb-4b82-a963-2745d78bad45"
+      }
+    },
+    {
+      "key": "e4597e39-4163-4050-b3f5-0a82531fa4d9",
+      "properties": {
+        "description": "Refine an AI prompt when the output is flawed or incomplete."
+      },
+      "seeding_key": {
+        "lesson.key": "Lesson 3: Build Your First Web Page with AI",
+        "objective.key": "e4597e39-4163-4050-b3f5-0a82531fa4d9"
+      }
+    }
+  ],
+  "lessons_standards": [
+
+  ],
+  "lessons_opportunity_standards": [
+
+  ],
+  "jit_pl_concepts_lessons": [
+
+  ],
+  "rubrics": [
+
+  ],
+  "learning_goals": [
+
+  ],
+  "learning_goal_evidence_levels": [
+
+  ]
+}

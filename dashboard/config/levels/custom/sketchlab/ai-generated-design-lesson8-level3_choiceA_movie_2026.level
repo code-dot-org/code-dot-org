@@ -1,0 +1,25 @@
+<Sketchlab>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 75,
+  "created_at": "2026-05-07T20:05:27.000Z",
+  "level_num": "custom",
+  "user_id": 22366,
+  "properties": {
+    "encrypted": "false",
+    "display_name": "Comedy Filter",
+    "start_sources": {
+      "source": {
+        "nodes": [
+
+        ],
+        "edges": [
+
+        ]
+      }
+    },
+    "long_instructions": "## **Plan a Movie Filter**\r\n\r\n### Do This:\r\n\r\n1. Choose one filter to plan:\r\n\r\n   * **Comedy**\r\n   * **Recent Movies**\r\n   * **High Rated**\r\n\r\n2. Annotate one of the movie objects:\r\n\r\n   * Circle the **property** your filter will check.\r\n   * Underline the **value** your filter will compare.\r\n\r\n3. Decide: Should this movie be **Kept** or **Removed**?\r\n\r\n4. Write how your filter works in your own words.\r\n\r\n5. Complete the code condition for your filter:\r\n\r\n6. Save this sketch to your **Backpack**.\r\n\r\n"
+  },
+  "audit_log": "[{\"changed_at\":\"2026-05-07 20:05:33 +0000\",\"changed\":[],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-05-07 20:24:40 +0000\",\"changed\":[],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-05-07 20:51:09 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-05-07 21:09:52 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-05-07 21:15:40 +0000\",\"changed\":[],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-05-07 21:17:44 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-05-07 21:19:39 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-05-07 21:20:03 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"}]"
+}]]></config>
+</Sketchlab>

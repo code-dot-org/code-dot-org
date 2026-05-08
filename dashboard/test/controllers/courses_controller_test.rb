@@ -45,8 +45,7 @@ class CoursesControllerTest < ActionController::TestCase
 
   class CoursesQueryCountTests < ActionController::TestCase
     setup do
-      Unit.stubs(:should_cache?).returns true
-      Unit.clear_cache
+      setup_script_cache
       UnitGroup.clear_cache
 
       @unit_group_regular = create(:unit_group, name: 'non-plc-course', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.beta)
@@ -59,8 +58,7 @@ class CoursesControllerTest < ActionController::TestCase
 
   class CachedQueryCounts < ActionController::TestCase
     setup do
-      Unit.stubs(:should_cache?).returns true
-      Unit.clear_cache
+      setup_script_cache
       UnitGroup.clear_cache
 
       ActiveRecord::Base.connection.disable_query_cache!

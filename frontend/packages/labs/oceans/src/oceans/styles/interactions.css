@@ -1,0 +1,41 @@
+/* Pseudo-selector interaction styles for ocean components.
+ * Each class covers exactly one element's :hover/:focus/:active rules.
+ */
+
+.ocean-word-btn:hover,
+.ocean-word-btn:focus {
+  background-color: #febe40; /* colors.orange */
+  color: white;
+}
+
+.ocean-train-btn-yes:hover {
+  background-color: #56c568; /* colors.green */
+  color: white;
+}
+
+.ocean-train-btn-no:hover {
+  background-color: #eb5757; /* colors.red */
+  color: white;
+}
+
+.ocean-erase-btn:hover,
+.ocean-erase-btn:focus {
+  background-color: #eb5757; /* colors.red */
+  color: white;
+}
+
+.ocean-media-ctrl:hover,
+.ocean-media-ctrl:active {
+  color: #febe40; /* colors.orange */
+}
+
+.ocean-toggle-icon:focus {
+  position: relative;
+  z-index: 1;
+}
+
+.ocean-info-icon:hover,
+.ocean-info-icon:focus {
+  background-color: #3fbed5; /* colors.teal */
+  color: white;
+}

@@ -1,7 +1,7 @@
 <Sketchlab>
   <config><![CDATA[{
   "game_id": 75,
-  "created_at": "2026-03-13T19:11:55.000Z",
+  "created_at": "2026-02-24T18:11:10.000Z",
   "level_num": "custom",
   "user_id": 18603,
   "properties": {
@@ -17,8 +17,8 @@
             "id": "3fsTrQdsTVDVb4Yj9dkDB",
             "type": "shape",
             "position": {
-              "x": 19.182186882491123,
-              "y": 140.78396535743377
+              "x": 10.850054137310394,
+              "y": 141.62046184860637
             },
             "style": {
               "width": 1676.3295335605014,
@@ -28,7 +28,7 @@
               "shapeType": "rectangle",
               "label": "",
               "backgroundColor": "transparent",
-              "strokeColor": "#1e1e1e"
+              "strokeColor": "var(--sketchlab-stroke-default)"
             },
             "measured": {
               "width": 2064,
@@ -48,7 +48,7 @@
             },
             "data": {
               "text": "1. Select a fictional \nproduct",
-              "fontColor": "#1e1e1e",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": "large",
               "showHandles": false
             },
@@ -56,11 +56,7 @@
               "width": 207,
               "height": 75
             },
-            "dragging": false,
-            "selected": true,
-            "domAttributes": {
-              "tabIndex": 0
-            }
+            "dragging": false
           },
           {
             "id": "1h2iRM8cSUy8RCVsRpDP3",
@@ -77,7 +73,7 @@
               "shapeType": "rectangle",
               "label": "",
               "backgroundColor": "transparent",
-              "strokeColor": "#1e1e1e"
+              "strokeColor": "var(--sketchlab-stroke-default)"
             },
             "measured": {
               "width": 2124,
@@ -92,12 +88,12 @@
             "id": "xLSNY3qniAX0mpdb3XGAH",
             "type": "text",
             "position": {
-              "x": -274.9809228645785,
-              "y": -504.5114258210719
+              "x": -256.9809228645785,
+              "y": -558.511425821072
             },
             "data": {
               "text": "2. Select a sample \nuser persona",
-              "fontColor": "#1e1e1e",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": "large",
               "showHandles": false
             },
@@ -105,11 +101,7 @@
               "width": 200,
               "height": 75
             },
-            "dragging": false,
-            "selected": false,
-            "domAttributes": {
-              "tabIndex": -1
-            }
+            "dragging": false
           },
           {
             "id": "y0liYbHku_76NH-M6FS2e",
@@ -125,9 +117,9 @@
             "data": {
               "shapeType": "circle",
               "label": "My Product",
-              "backgroundColor": "#fff0f6",
-              "strokeColor": "#1e1e1e",
-              "fontColor": "#1e1e1e",
+              "backgroundColor": "var(--sketchlab-bg-red)",
+              "strokeColor": "var(--sketchlab-stroke-default)",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": "large"
             },
             "measured": {
@@ -153,9 +145,9 @@
             "data": {
               "shapeType": "rectangle",
               "label": "My Persona",
-              "backgroundColor": "#fff0f6",
-              "strokeColor": "#1e1e1e",
-              "fontColor": "#1e1e1e",
+              "backgroundColor": "var(--sketchlab-bg-red)",
+              "strokeColor": "var(--sketchlab-stroke-default)",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": "large"
             },
             "measured": {
@@ -171,24 +163,21 @@
             "id": "ByO9NEtVVhMjN7WzleHor",
             "type": "text",
             "position": {
-              "x": -483.5117204429925,
-              "y": 620.851533511086
+              "x": -395.5117204429925,
+              "y": 240.85153351108602
             },
             "data": {
-              "text": "3. Build a mini brand kit with\n* 3–5 color swatches\n   * A font pair \n   * 1–2 descriptive style words\n\nConnect your design choices for \nyour fictional product back to \nthe sample user persona ",
-              "fontColor": "#1e1e1e",
+              "text": "3. Build a mini brand kit with\n* 3–5 color swatches\n* A font pair \n* 1–2 descriptive style words\n\nConnect your design choices for \nyour fictional product back to \nthe sample user persona ",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": "large",
-              "showHandles": false
+              "showHandles": false,
+              "textAlign": "left"
             },
             "measured": {
               "width": 344,
               "height": 247
             },
-            "dragging": false,
-            "selected": false,
-            "domAttributes": {
-              "tabIndex": -1
-            }
+            "dragging": false
           },
           {
             "id": "i_Lc_rlF4ihf6w_AxtKMr",
@@ -205,8 +194,8 @@
               "shapeType": "rectangle",
               "label": "Color 1",
               "backgroundColor": "transparent",
-              "strokeColor": "#1e1e1e",
-              "fontColor": "#1e1e1e",
+              "strokeColor": "var(--sketchlab-stroke-default)",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": "large"
             },
             "measured": {
@@ -231,8 +220,8 @@
               "shapeType": "rectangle",
               "label": "Color 2",
               "backgroundColor": "transparent",
-              "strokeColor": "#1e1e1e",
-              "fontColor": "#1e1e1e",
+              "strokeColor": "var(--sketchlab-stroke-default)",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": "large"
             },
             "measured": {
@@ -256,19 +245,15 @@
               "shapeType": "rectangle",
               "label": "Color 3",
               "backgroundColor": "transparent",
-              "strokeColor": "#1e1e1e",
-              "fontColor": "#1e1e1e",
+              "strokeColor": "var(--sketchlab-stroke-default)",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": "large"
             },
             "measured": {
               "width": 199,
               "height": 191
             },
-            "dragging": false,
-            "selected": true,
-            "domAttributes": {
-              "tabIndex": 0
-            }
+            "dragging": false
           },
           {
             "id": "Ktbgh7lasjBTnnGh6DRR-",
@@ -285,8 +270,8 @@
               "shapeType": "rectangle",
               "label": "Color 4",
               "backgroundColor": "transparent",
-              "strokeColor": "#1e1e1e",
-              "fontColor": "#1e1e1e",
+              "strokeColor": "var(--sketchlab-stroke-default)",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": "large"
             },
             "measured": {
@@ -310,19 +295,15 @@
               "shapeType": "rectangle",
               "label": "Color 5",
               "backgroundColor": "transparent",
-              "strokeColor": "#1e1e1e",
-              "fontColor": "#1e1e1e",
+              "strokeColor": "var(--sketchlab-stroke-default)",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": "large"
             },
             "measured": {
               "width": 199,
               "height": 191
             },
-            "dragging": false,
-            "selected": true,
-            "domAttributes": {
-              "tabIndex": 0
-            }
+            "dragging": false
           },
           {
             "id": "xe7ixN-WVThMg_UzPsDJF",
@@ -339,7 +320,7 @@
               "shapeType": "rectangle",
               "label": "",
               "backgroundColor": "transparent",
-              "strokeColor": "#1e1e1e"
+              "strokeColor": "var(--sketchlab-stroke-default)"
             },
             "measured": {
               "width": 1038,
@@ -362,7 +343,7 @@
               "shapeType": "rectangle",
               "label": "",
               "backgroundColor": "transparent",
-              "strokeColor": "#1e1e1e"
+              "strokeColor": "var(--sketchlab-stroke-default)"
             },
             "measured": {
               "width": 1038,
@@ -385,8 +366,8 @@
               "shapeType": "rectangle",
               "label": "word 1",
               "backgroundColor": "transparent",
-              "strokeColor": "#1e1e1e",
-              "fontColor": "#1e1e1e",
+              "strokeColor": "var(--sketchlab-stroke-default)",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": "large"
             },
             "measured": {
@@ -410,8 +391,8 @@
               "shapeType": "rectangle",
               "label": "word 2",
               "backgroundColor": "transparent",
-              "strokeColor": "#1e1e1e",
-              "fontColor": "#1e1e1e",
+              "strokeColor": "var(--sketchlab-stroke-default)",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": "large"
             },
             "measured": {
@@ -429,7 +410,7 @@
             },
             "data": {
               "text": "Heading Font",
-              "fontColor": "#1e1e1e",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": "large",
               "showHandles": false
             },
@@ -437,11 +418,7 @@
               "width": 152,
               "height": 47
             },
-            "dragging": false,
-            "selected": true,
-            "domAttributes": {
-              "tabIndex": 0
-            }
+            "dragging": false
           },
           {
             "id": "KH09_Pvz3d-Ve8Yk3KqCL",
@@ -452,7 +429,7 @@
             },
             "data": {
               "text": "Body Font",
-              "fontColor": "#1e1e1e",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": "large",
               "showHandles": false
             },
@@ -460,11 +437,7 @@
               "width": 119,
               "height": 47
             },
-            "dragging": false,
-            "selected": true,
-            "domAttributes": {
-              "tabIndex": 0
-            }
+            "dragging": false
           },
           {
             "id": "k8HhR1tdIxIvwd0wo4UK4",
@@ -475,7 +448,7 @@
             },
             "data": {
               "text": " https://fonts.google.com/ ",
-              "fontColor": "#1e1e1e",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": "large",
               "showHandles": false
             },
@@ -483,11 +456,7 @@
               "width": 285,
               "height": 47
             },
-            "dragging": false,
-            "selected": true,
-            "domAttributes": {
-              "tabIndex": 0
-            }
+            "dragging": false
           },
           {
             "id": "QQ14kVgTK1ZQvkKVs08Ju",
@@ -498,7 +467,7 @@
             },
             "data": {
               "text": "Descriptive style words",
-              "fontColor": "#1e1e1e",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": "large",
               "showHandles": false
             },
@@ -506,11 +475,7 @@
               "width": 248,
               "height": 47
             },
-            "dragging": false,
-            "selected": true,
-            "domAttributes": {
-              "tabIndex": 0
-            }
+            "dragging": false
           },
           {
             "id": "S94c3ayHDXzMV9rGutqK2",
@@ -527,17 +492,13 @@
               "shapeType": "rectangle",
               "label": "My design choices for my fictional product connect to the sample user persona \nbecause...",
               "backgroundColor": "transparent",
-              "strokeColor": "#1e1e1e",
-              "fontColor": "#1e1e1e",
+              "strokeColor": "var(--sketchlab-stroke-default)",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": "large"
             },
             "measured": {
               "width": 1038,
               "height": 207
-            },
-            "selected": true,
-            "domAttributes": {
-              "tabIndex": 0
             },
             "dragging": false
           },
@@ -550,7 +511,7 @@
             },
             "data": {
               "text": "My Brand Kit",
-              "fontColor": "#1e1e1e",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": "large",
               "showHandles": false
             },
@@ -558,22 +519,18 @@
               "width": 143,
               "height": 47
             },
-            "dragging": false,
-            "selected": false,
-            "domAttributes": {
-              "tabIndex": -1
-            }
+            "dragging": false
           },
           {
             "id": "Ys_JK_E726uD988qD8sI-",
             "type": "text",
             "position": {
-              "x": -620.7116716148676,
-              "y": -782.0188611142864
+              "x": -668.7116716148676,
+              "y": -820.0188611142864
             },
             "data": {
               "text": "Drag your product and persona\ndown into the Brand Kit workspace",
-              "fontColor": "#1e1e1e",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": "large",
               "showHandles": false
             },
@@ -581,11 +538,7 @@
               "width": 361,
               "height": 75
             },
-            "dragging": false,
-            "selected": false,
-            "domAttributes": {
-              "tabIndex": -1
-            }
+            "dragging": false
           },
           {
             "id": "h9GduFxJZVC529uOQ3dxV",
@@ -601,8 +554,8 @@
             "data": {
               "shapeType": "rectangle",
               "label": "",
-              "backgroundColor": "transparent",
-              "strokeColor": "#1e1e1e"
+              "backgroundColor": "var(--sketchlab-bg-gray)",
+              "strokeColor": "var(--sketchlab-stroke-default)"
             },
             "measured": {
               "width": 1538,
@@ -685,7 +638,7 @@
             },
             "data": {
               "text": "WaveNote \n(voice-to-notes for class)",
-              "fontColor": "#1e1e1e",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": "large",
               "showHandles": false
             },
@@ -693,11 +646,7 @@
               "width": 269,
               "height": 75
             },
-            "dragging": false,
-            "selected": true,
-            "domAttributes": {
-              "tabIndex": 0
-            }
+            "dragging": false
           },
           {
             "id": "nSU2C0BBsgZR4CoV6VS6n",
@@ -708,7 +657,7 @@
             },
             "data": {
               "text": "SnapStudy \n(study timer + focus sounds)\n",
-              "fontColor": "#1e1e1e",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": "large",
               "showHandles": false
             },
@@ -716,11 +665,7 @@
               "width": 302,
               "height": 75
             },
-            "dragging": false,
-            "selected": true,
-            "domAttributes": {
-              "tabIndex": 0
-            }
+            "dragging": false
           },
           {
             "id": "fK7ZEmm9EnxTj3og1E9J8",
@@ -731,7 +676,7 @@
             },
             "data": {
               "text": "Patch & Play \n(eco sneaker brand)\n",
-              "fontColor": "#1e1e1e",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": "large",
               "showHandles": false
             },
@@ -739,11 +684,7 @@
               "width": 213,
               "height": 75
             },
-            "dragging": false,
-            "selected": true,
-            "domAttributes": {
-              "tabIndex": 0
-            }
+            "dragging": false
           },
           {
             "id": "Hru-tHG2zdrZgdZI0fxl6",
@@ -754,7 +695,7 @@
             },
             "data": {
               "text": "Spark Smoothie Bar \n(on-campus smoothies)",
-              "fontColor": "#1e1e1e",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": "large",
               "showHandles": false
             },
@@ -762,11 +703,7 @@
               "width": 253,
               "height": 75
             },
-            "dragging": false,
-            "selected": true,
-            "domAttributes": {
-              "tabIndex": 0
-            }
+            "dragging": false
           },
           {
             "id": "M66NANWMyVsSUhf2Z4Vp9",
@@ -804,18 +741,14 @@
             "data": {
               "shapeType": "rectangle",
               "label": "User Persona #1\n\nWho she is: Varsity winger \n+ part-time barista. Ten-\nminute passing periods are \nher whole window.\n\nHabits & prefs: Saves \nfavorite orders; lactose-\nsensitive; lives in Notes \nand Reminders; cracked \niPhone screen.\n\nNeeds: Speed, price \nclarity, and simple choices\nthat don’t derail her day.\n\n",
-              "backgroundColor": "#fff5f5",
-              "strokeColor": "#1e1e1e",
-              "fontColor": "#1e1e1e",
+              "backgroundColor": "var(--sketchlab-bg-red)",
+              "strokeColor": "var(--sketchlab-stroke-default)",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": "large"
             },
             "measured": {
               "width": 515,
               "height": 615
-            },
-            "selected": true,
-            "domAttributes": {
-              "tabIndex": 0
             },
             "dragging": false,
             "width": 515,
@@ -836,9 +769,9 @@
             "data": {
               "shapeType": "rectangle",
               "label": "User Persona #2\n\nWho he is: Practices late, \nstudies later. Earbuds \nalways in, notifications \nmostly off.\n\nHabits & prefs: Dark mode, \nhaptics off, hates sudden \nsounds; likes quiet status \ncues.\n\nNeeds: Low-glare UI, gentle\nfeedback, and control over \nalerts.\n",
-              "backgroundColor": "#fff5f5",
-              "strokeColor": "#1e1e1e",
-              "fontColor": "#1e1e1e",
+              "backgroundColor": "var(--sketchlab-bg-red)",
+              "strokeColor": "var(--sketchlab-stroke-default)",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": "large"
             },
             "measured": {
@@ -846,10 +779,6 @@
               "height": 611
             },
             "dragging": false,
-            "selected": true,
-            "domAttributes": {
-              "tabIndex": 0
-            },
             "width": 521,
             "height": 611,
             "resizing": false
@@ -868,18 +797,14 @@
             "data": {
               "shapeType": "rectangle",
               "label": "User Persona #3\n\nWho he is: Juggles class, \nwork, and family errands. \nBilingual \n(Spanish/English).\n\nHabits & prefs: Uses school\nChromebook + budget \nAndroid; watches how-to \nclips.\n\nNeeds: Step-by-step flows, \nbilingual support, works-\non-anything reliability.\n",
-              "backgroundColor": "#fff5f5",
-              "strokeColor": "#1e1e1e",
-              "fontColor": "#1e1e1e",
+              "backgroundColor": "var(--sketchlab-bg-red)",
+              "strokeColor": "var(--sketchlab-stroke-default)",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": "large"
             },
             "measured": {
               "width": 507,
               "height": 611
-            },
-            "selected": true,
-            "domAttributes": {
-              "tabIndex": 0
             },
             "width": 507,
             "height": 611,
@@ -900,18 +825,14 @@
             "data": {
               "shapeType": "rectangle",
               "label": "User Persona #4\n\nWho she is: Club officer, \ngroup-chat admin, event \nplanner in sneakers.\n\nHabits & prefs: Makes \nshared docs; loves \ntemplates; posts recaps, \nnot selfies.\n\nNeeds: Easy ways to \ncoordinate, share, and \ncelebrate together.\n",
-              "backgroundColor": "#fff5f5",
-              "strokeColor": "#1e1e1e",
-              "fontColor": "#1e1e1e",
+              "backgroundColor": "var(--sketchlab-bg-red)",
+              "strokeColor": "var(--sketchlab-stroke-default)",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": "large"
             },
             "measured": {
               "width": 469,
               "height": 609
-            },
-            "selected": true,
-            "domAttributes": {
-              "tabIndex": 0
             },
             "width": 469,
             "height": 609,
@@ -923,9 +844,9 @@
 
         ],
         "viewport": {
-          "x": 326.40890691794993,
-          "y": -3.9374412861714063,
-          "zoom": 0.5
+          "x": 395.5777698103097,
+          "y": 630.7664913270276,
+          "zoom": 0.499742083673121
         }
       }
     },
@@ -2951,6 +2872,6 @@
     "name_suffix": "_2026"
   },
   "published": true,
-  "audit_log": "[{\"changed_at\":\"2026-02-24T18:11:10.008+00:00\",\"changed\":[\"cloned from \\\"ai-generated-design-lesson5-level2a_2025\\\"\"],\"cloned_from\":\"ai-generated-design-lesson5-level2a_2025\"},{\"changed_at\":\"2026-03-04 21:48:30 +0000\",\"changed\":[\"long_instructions\",\"bubble_choice_description\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-04 21:50:28 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-04 22:01:42 +0000\",\"changed\":[],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-04 22:20:44 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-04 23:16:56 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-05 00:20:28 +0000\",\"changed\":[\"bubble_choice_description\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-05 00:29:35 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-11 19:13:30 +0000\",\"changed\":[\"display_name\",\"bubble_choice_description\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-11 19:17:39 +0000\",\"changed\":[\"display_name\",\"bubble_choice_description\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-11 19:24:03 +0000\",\"changed\":[\"bubble_choice_description\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-27 15:56:54 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-27 19:40:41 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-09 19:00:15 +0000\",\"changed\":[\"project_template_level_name\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-09 19:00:38 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-15 19:10:49 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2026-04-21 21:54:09 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2026-04-24 15:25:48 +0000\",\"changed\":[\"display_name\",\"bubble_choice_description\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2026-04-30 17:59:52 -0400\",\"changed\":[\"start_sources\"],\"changed_by_id\":1,\"changed_by_email\":\"levelbuilder@dev.com\"},{\"changed_at\":\"2026-04-30 18:03:24 -0400\",\"changed\":[\"start_sources\"],\"changed_by_id\":1,\"changed_by_email\":\"levelbuilder@dev.com\"},{\"changed_at\":\"2026-04-30 18:05:14 -0400\",\"changed\":[\"start_sources\"],\"changed_by_id\":1,\"changed_by_email\":\"levelbuilder@dev.com\"}]"
+  "audit_log": "[{\"changed_at\":\"2026-02-24T18:11:10.008+00:00\",\"changed\":[\"cloned from \\\"ai-generated-design-lesson5-level2a_2025\\\"\"],\"cloned_from\":\"ai-generated-design-lesson5-level2a_2025\"},{\"changed_at\":\"2026-03-04 21:48:30 +0000\",\"changed\":[\"long_instructions\",\"bubble_choice_description\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-04 21:50:28 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-04 22:01:42 +0000\",\"changed\":[],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-04 22:20:44 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-04 23:16:56 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-05 00:20:28 +0000\",\"changed\":[\"bubble_choice_description\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-05 00:29:35 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-11 19:13:30 +0000\",\"changed\":[\"display_name\",\"bubble_choice_description\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-11 19:17:39 +0000\",\"changed\":[\"display_name\",\"bubble_choice_description\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-11 19:24:03 +0000\",\"changed\":[\"bubble_choice_description\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-27 15:56:54 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-27 19:40:41 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-09 19:00:15 +0000\",\"changed\":[\"project_template_level_name\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-09 19:00:38 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-15 19:10:49 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2026-04-21 21:54:09 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2026-04-24 15:25:48 +0000\",\"changed\":[\"display_name\",\"bubble_choice_description\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2026-04-30 17:59:52 -0400\",\"changed\":[\"start_sources\"],\"changed_by_id\":1,\"changed_by_email\":\"levelbuilder@dev.com\"},{\"changed_at\":\"2026-04-30 18:03:24 -0400\",\"changed\":[\"start_sources\"],\"changed_by_id\":1,\"changed_by_email\":\"levelbuilder@dev.com\"},{\"changed_at\":\"2026-04-30 18:05:14 -0400\",\"changed\":[\"start_sources\"],\"changed_by_id\":1,\"changed_by_email\":\"levelbuilder@dev.com\"},{\"changed_at\":\"2026-05-06 18:59:17 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":155,\"changed_by_email\":\"dani@code.org\"},{\"changed_at\":\"2026-05-07 18:44:12 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":155,\"changed_by_email\":\"dani@code.org\"}]"
 }]]></config>
 </Sketchlab>

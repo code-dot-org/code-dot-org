@@ -6,7 +6,7 @@ import {
   saveUserLessonReflection,
   saveUserLessonObjectiveReflection,
 } from '@cdo/apps/aiTutor/reflectionsApi';
-import ReflectionBox from '@cdo/apps/aiTutor/views/lessonDeepDive/ReflectionBox';
+import ReflectionBox from '@cdo/apps/aiTutor/views/lessonDeepDive/Reflection/ReflectionBox';
 
 jest.mock('@cdo/apps/aiTutor/reflectionsApi', () => ({
   saveUserLessonReflection: jest.fn(),
@@ -25,9 +25,11 @@ const OBJECTIVES = [
 function renderReflectionBox(onSubmitComplete: jest.Mock = jest.fn()) {
   render(
     <ReflectionBox
+      unitLabel={'unit 1'}
       lessonId={LESSON_ID}
       objectives={OBJECTIVES}
       onSubmitComplete={onSubmitComplete}
+      onNext={jest.fn()}
     />
   );
 }
@@ -42,22 +44,19 @@ describe('ReflectionBox submit button', () => {
   it('renders the submit button', () => {
     renderReflectionBox();
     expect(
-      screen.getByRole('button', {name: /submit reflection/i})
+      screen.getByRole('button', {name: /start practicing/i})
     ).toBeInTheDocument();
   });
 
   it('calls saveUserLessonReflection with lessonId, success, and struggle on submit', async () => {
     renderReflectionBox();
 
-    fireEvent.change(screen.getByLabelText(/moment i felt successful/i), {
-      target: {value: 'I understood loops'},
-    });
-    fireEvent.change(screen.getByLabelText(/still confused/i), {
-      target: {value: 'Recursion is hard'},
-    });
+    const textboxes = screen.getAllByRole('textbox');
+    fireEvent.change(textboxes[0], {target: {value: 'I understood loops'}});
+    fireEvent.change(textboxes[1], {target: {value: 'Recursion is hard'}});
 
     await act(async () => {
-      fireEvent.click(screen.getByRole('button', {name: /submit reflection/i}));
+      fireEvent.click(screen.getByRole('button', {name: /start practicing/i}));
     });
 
     expect(saveReflectionMock).toHaveBeenCalledWith(
@@ -71,7 +70,7 @@ describe('ReflectionBox submit button', () => {
     renderReflectionBox();
 
     await act(async () => {
-      fireEvent.click(screen.getByRole('button', {name: /submit reflection/i}));
+      fireEvent.click(screen.getByRole('button', {name: /start practicing/i}));
     });
 
     expect(saveObjectiveMock).not.toHaveBeenCalled();
@@ -81,10 +80,10 @@ describe('ReflectionBox submit button', () => {
     renderReflectionBox();
 
     // Click Confident for the first objective only
-    fireEvent.click(screen.getAllByRole('button', {name: /confident/i})[0]);
+    fireEvent.click(screen.getAllByRole('button', {name: /got it/i})[0]);
 
     await act(async () => {
-      fireEvent.click(screen.getByRole('button', {name: /submit reflection/i}));
+      fireEvent.click(screen.getByRole('button', {name: /start practicing/i}));
     });
 
     expect(saveObjectiveMock).toHaveBeenCalledTimes(1);
@@ -93,11 +92,11 @@ describe('ReflectionBox submit button', () => {
   it('calls saveUserLessonObjectiveReflection for each selected objective', async () => {
     renderReflectionBox();
 
-    fireEvent.click(screen.getAllByRole('button', {name: /confident/i})[0]);
-    fireEvent.click(screen.getAllByRole('button', {name: /lost/i})[1]);
+    fireEvent.click(screen.getAllByRole('button', {name: /got it/i})[0]);
+    fireEvent.click(screen.getAllByRole('button', {name: /struggling/i})[1]);
 
     await act(async () => {
-      fireEvent.click(screen.getByRole('button', {name: /submit reflection/i}));
+      fireEvent.click(screen.getByRole('button', {name: /start practicing/i}));
     });
 
     expect(saveObjectiveMock).toHaveBeenCalledTimes(2);
@@ -114,7 +113,7 @@ describe('ReflectionBox submit button', () => {
     );
 
     renderReflectionBox();
-    const button = screen.getByRole('button', {name: /submit reflection/i});
+    const button = screen.getByRole('button', {name: /start practicing/i});
 
     await act(async () => {
       fireEvent.click(button);

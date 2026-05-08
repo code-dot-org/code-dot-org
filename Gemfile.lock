@@ -408,7 +408,7 @@ GEM
       railties (>= 4.1.0)
       responders
       warden (~> 1.2.3)
-    devise_invitable (2.0.6)
+    devise_invitable (2.0.12)
       actionmailer (>= 5.0)
       devise (>= 4.6)
     diff-lcs (1.6.0)
@@ -500,12 +500,6 @@ GEM
       google-apis-core (>= 0.9.1, < 2.a)
     google-apis-youtube_v3 (0.25.0)
       google-apis-core (>= 0.9.1, < 2.a)
-    google-protobuf (4.33.6)
-      bigdecimal
-      rake (>= 13)
-    google-protobuf (4.33.6-arm64-darwin)
-      bigdecimal
-      rake (>= 13)
     google-protobuf (4.33.6-x86_64-linux-gnu)
       bigdecimal
       rake (>= 13)
@@ -1282,7 +1276,7 @@ DEPENDENCIES
   database_cleaner-active_record (~> 2.1.0)
   delayed_job_active_record (~> 4.1)
   devise (~> 4.9.0)
-  devise_invitable (~> 2.0.2)
+  devise_invitable (~> 2.0.12)
   dotiw
   drb
   execjs

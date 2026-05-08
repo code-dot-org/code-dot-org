@@ -1,7 +1,7 @@
 <Sketchlab>
   <config><![CDATA[{
   "game_id": 75,
-  "created_at": "2026-04-29T00:49:37.000Z",
+  "created_at": "2026-04-14T17:53:45.000Z",
   "level_num": "custom",
   "user_id": 18603,
   "properties": {
@@ -24,13 +24,14 @@
             "data": {
               "shapeType": "rectangle",
               "label": "",
-              "backgroundColor": "#e9ecef",
+              "backgroundColor": "var(--sketchlab-bg-purple)",
               "strokeColor": "#1e1e1e"
             },
             "measured": {
               "width": 821,
               "height": 816
-            }
+            },
+            "zIndex": -2
           },
           {
             "id": "Bai414pWxTjKhQUOPfvMf",
@@ -52,7 +53,8 @@
             "measured": {
               "width": 406,
               "height": 635
-            }
+            },
+            "zIndex": -1
           },
           {
             "id": "FtgHojQj0r-NGEdWG3qwn",
@@ -290,11 +292,7 @@
             "width": 297,
             "height": 93,
             "resizing": false,
-            "dragging": false,
-            "selected": false,
-            "domAttributes": {
-              "tabIndex": -1
-            }
+            "dragging": false
           },
           {
             "id": "J74rgIGp6UGdmSgGjoWTH",
@@ -415,11 +413,7 @@
               "width": 202,
               "height": 97
             },
-            "dragging": false,
-            "selected": true,
-            "domAttributes": {
-              "tabIndex": 0
-            }
+            "dragging": false
           },
           {
             "id": "h__jPxufyvUf0w0Y8n84N",
@@ -438,18 +432,14 @@
               "width": 164,
               "height": 47
             },
-            "selected": true,
-            "domAttributes": {
-              "tabIndex": 0
-            },
             "dragging": false
           },
           {
             "id": "b4e47900-f6e9-4db3-bf34-3ca3674b180e",
             "type": "lineAnchor",
             "position": {
-              "x": 1319.0633187672427,
-              "y": -1709.741528495907
+              "x": 1277.0633187672427,
+              "y": -1711.741528495907
             },
             "style": {
               "width": 10,
@@ -467,8 +457,8 @@
             "id": "c98aff50-2a00-4b40-8045-354c5d3c3f21",
             "type": "lineAnchor",
             "position": {
-              "x": 1363.0633340260317,
-              "y": -1876.7415361253015
+              "x": 1321.0633340260317,
+              "y": -1878.7415361253015
             },
             "style": {
               "width": 10,
@@ -519,6 +509,60 @@
               "width": 10,
               "height": 10
             }
+          },
+          {
+            "id": "442eb1e9-47ec-4120-8440-0bb233d061fa",
+            "type": "text",
+            "data": {
+              "text": "Use dots on shapes to create connectors",
+              "showHandles": false
+            },
+            "position": {
+              "x": 1295.6629839700345,
+              "y": -1817.3531332733482
+            },
+            "measured": {
+              "width": 138,
+              "height": 125
+            },
+            "width": 138,
+            "height": 125,
+            "resizing": false,
+            "dragging": false
+          },
+          {
+            "id": "89834843-65c1-43c2-bfd4-919f133fd2ea",
+            "type": "text",
+            "data": {
+              "text": "Yes",
+              "showHandles": false
+            },
+            "position": {
+              "x": 1683.0628863137845,
+              "y": -259.41514499209825
+            },
+            "measured": {
+              "width": 58,
+              "height": 39
+            },
+            "dragging": false
+          },
+          {
+            "id": "ce95c4e5-b9fd-4b62-8912-af36d4c3944b",
+            "type": "text",
+            "data": {
+              "text": "No",
+              "showHandles": false
+            },
+            "position": {
+              "x": 1915.0628863137845,
+              "y": -255.41514499209825
+            },
+            "measured": {
+              "width": 58,
+              "height": 39
+            },
+            "dragging": false
           }
         ],
         "edges": [
@@ -527,16 +571,6 @@
             "source": "b4e47900-f6e9-4db3-bf34-3ca3674b180e",
             "target": "c98aff50-2a00-4b40-8045-354c5d3c3f21",
             "type": "straight",
-            "markerEnd": {
-              "type": "arrowclosed"
-            }
-          },
-          {
-            "id": "18ed5163-e01a-40e5-8512-c7c5075039e1",
-            "source": "McFE1K1B6hPIr4g31ZgHp",
-            "target": "vrco96t5fb3aOyVwob9K1",
-            "sourceHandle": "right-source",
-            "targetHandle": "left-target",
             "markerEnd": {
               "type": "arrowclosed"
             }
@@ -589,11 +623,21 @@
             "markerEnd": {
               "type": "arrowclosed"
             }
+          },
+          {
+            "source": "McFE1K1B6hPIr4g31ZgHp",
+            "sourceHandle": "bottom-source",
+            "target": "vrco96t5fb3aOyVwob9K1",
+            "targetHandle": "top-target",
+            "markerEnd": {
+              "type": "arrowclosed"
+            },
+            "id": "xy-edge__McFE1K1B6hPIr4g31ZgHpbottom-source-vrco96t5fb3aOyVwob9K1top-target"
           }
         ],
         "viewport": {
-          "x": -246.83149198501724,
-          "y": 1192.6765666366741,
+          "x": -417.53144315689224,
+          "y": 1144.7075724960491,
           "zoom": 0.5
         }
       }
@@ -2252,6 +2296,6 @@
     "name_suffix": "_2026"
   },
   "published": true,
-  "audit_log": "[{\"changed_at\":\"2026-04-14T17:53:45.468+00:00\",\"changed\":[\"cloned from \\\"ai-and-algorithmic-decisions-lesson5-level1c_2026\\\"\"],\"cloned_from\":\"ai-and-algorithmic-decisions-lesson5-level1c_2026\"},{\"changed_at\":\"2026-04-14 17:53:47 +0000\",\"changed\":[],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-14 17:56:37 +0000\",\"changed\":[\"display_name\",\"bubble_choice_description\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-14 18:25:42 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-14 18:37:36 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-14 18:37:40 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-14 18:37:51 +0000\",\"changed\":[\"exemplar_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-14 18:37:56 +0000\",\"changed\":[\"exemplar_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-14 18:39:08 +0000\",\"changed\":[\"exemplar_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-14 18:39:40 +0000\",\"changed\":[\"exemplar_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-14 18:39:48 +0000\",\"changed\":[\"exemplar_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-14 18:39:57 +0000\",\"changed\":[\"exemplar_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-14 23:19:11 +0000\",\"changed\":[\"thumbnail_url\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-05-01 12:39:54 -0400\",\"changed\":[\"start_sources\"],\"changed_by_id\":1,\"changed_by_email\":\"levelbuilder@dev.com\"},{\"changed_at\":\"2026-05-01 12:40:18 -0400\",\"changed\":[\"start_sources\"],\"changed_by_id\":1,\"changed_by_email\":\"levelbuilder@dev.com\"}]"
+  "audit_log": "[{\"changed_at\":\"2026-04-14T17:53:45.468+00:00\",\"changed\":[\"cloned from \\\"ai-and-algorithmic-decisions-lesson5-level1c_2026\\\"\"],\"cloned_from\":\"ai-and-algorithmic-decisions-lesson5-level1c_2026\"},{\"changed_at\":\"2026-04-14 17:53:47 +0000\",\"changed\":[],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-14 17:56:37 +0000\",\"changed\":[\"display_name\",\"bubble_choice_description\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-14 18:25:42 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-14 18:37:36 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-14 18:37:40 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-14 18:37:51 +0000\",\"changed\":[\"exemplar_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-14 18:37:56 +0000\",\"changed\":[\"exemplar_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-14 18:39:08 +0000\",\"changed\":[\"exemplar_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-14 18:39:40 +0000\",\"changed\":[\"exemplar_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-14 18:39:48 +0000\",\"changed\":[\"exemplar_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-14 18:39:57 +0000\",\"changed\":[\"exemplar_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-14 23:19:11 +0000\",\"changed\":[\"thumbnail_url\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-05-01 12:39:54 -0400\",\"changed\":[\"start_sources\"],\"changed_by_id\":1,\"changed_by_email\":\"levelbuilder@dev.com\"},{\"changed_at\":\"2026-05-01 12:40:18 -0400\",\"changed\":[\"start_sources\"],\"changed_by_id\":1,\"changed_by_email\":\"levelbuilder@dev.com\"},{\"changed_at\":\"2026-05-06 20:13:53 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":155,\"changed_by_email\":\"dani@code.org\"}]"
 }]]></config>
 </Sketchlab>

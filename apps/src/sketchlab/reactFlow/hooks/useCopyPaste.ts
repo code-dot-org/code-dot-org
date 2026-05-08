@@ -7,10 +7,18 @@ import type {
 } from '@cdo/apps/lab2/types';
 import {createUuid} from '@cdo/apps/utils';
 
-import {PASTE_OFFSET_PX} from '../constants';
+import {
+  DEFAULT_NODE_HEIGHT,
+  DEFAULT_NODE_WIDTH,
+  PASTE_OFFSET_PX,
+} from '../constants';
 import type {ClipboardContents} from '../context';
 import type {TabOrderEntry} from '../utils/computeTabOrder';
-import {isLineEdge} from '../utils/lineEdges';
+import {
+  createLineAnchorAtHandle,
+  getHandleFlowPosition,
+  lineAnchorHandleId,
+} from '../utils/lineAnchors';
 
 interface UseCopyPasteOptions {
   nodes: SketchlabReactFlowNode[];
@@ -61,18 +69,61 @@ export function useCopyPaste({
     [nodes]
   );
 
-  // A line edge is stored as two hidden lineAnchor nodes plus the edge
-  // connecting them — all three must travel together in the clipboard.
+  // A line is stored as an edge with two nodes - the nodes are either anchor nodes or real nodes.
+  // all three elements must travel together in the clipboard.
+  // When an endpoint is a real (non-anchor) node, a new anchor node is
+  // created at that node's handle position so we can duplicate the free-standing anchor node.
   const buildLineEdgeClipboard = useCallback(
     (edgeId: string): ClipboardContents | null => {
       const edge = edges.find(e => e.id === edgeId);
-      if (!edge || !isLineEdge(edge, nodes)) return null;
-      const sourceAnchor = nodes.find(n => n.id === edge.source);
-      const targetAnchor = nodes.find(n => n.id === edge.target);
+      if (!edge || edge.data?.locked) return null;
+
+      const resolveEndpointAnchor = (
+        nodeId: string,
+        handleId: string | null | undefined,
+        role: 'source' | 'target'
+      ) => {
+        const node = nodes.find(n => n.id === nodeId);
+        if (!node) return null;
+        if (node.type === 'lineAnchor') return node;
+        const handlePos = getHandleFlowPosition(
+          nodeId,
+          handleId ?? undefined,
+          screenToFlowPosition
+        );
+        const position = handlePos ?? {
+          x: node.position.x + (node.width ?? DEFAULT_NODE_WIDTH) / 2,
+          y: node.position.y + (node.height ?? DEFAULT_NODE_HEIGHT) / 2,
+        };
+        return createLineAnchorAtHandle(position, role);
+      };
+
+      const sourceAnchor = resolveEndpointAnchor(
+        edge.source,
+        edge.sourceHandle,
+        'source'
+      );
+      const targetAnchor = resolveEndpointAnchor(
+        edge.target,
+        edge.targetHandle,
+        'target'
+      );
       if (!sourceAnchor || !targetAnchor) return null;
-      return {nodes: [sourceAnchor, targetAnchor], edges: [edge]};
+
+      // Point edge endpoints at the clipboard anchor IDs.
+      const edgeWithAnchorNodes = {
+        ...edge,
+        source: sourceAnchor.id,
+        target: targetAnchor.id,
+        sourceHandle: lineAnchorHandleId('source'),
+        targetHandle: lineAnchorHandleId('target'),
+      };
+      return {
+        nodes: [sourceAnchor, targetAnchor],
+        edges: [edgeWithAnchorNodes],
+      };
     },
-    [nodes, edges]
+    [nodes, edges, screenToFlowPosition]
   );
 
   // Toolbar action: duplicate a node in-place with 'stagger' chaining, i.e., each duplicate is
@@ -102,7 +153,7 @@ export function useCopyPaste({
     [buildNodeClipboard, setNodes]
   );
 
-  // Toolbar action: duplicate a line edge (both anchor nodes + the edge).
+  // Toolbar action: duplicate a line.
   const duplicateLine = useCallback(
     (edgeId: string) => {
       const source =
@@ -165,21 +216,29 @@ export function useCopyPaste({
         const contents = buildLineEdgeClipboard(entry.id);
         if (!contents) return;
         writeClipboard(contents);
-        // Deleting the anchor nodes removes the line edge automatically.
         const lineEdge = edges.find(e => e.id === entry.id);
         if (lineEdge) {
-          deleteElements({
-            nodes: [{id: lineEdge.source}, {id: lineEdge.target}],
-          });
+          // Only delete lineAnchor endpoints — real nodes are independent objects.
+          // Deleting anchor nodes removes the edge automatically; for real-node
+          // endpoints we delete the edge directly.
+          const anchorIds = [lineEdge.source, lineEdge.target].filter(
+            id => nodes.find(n => n.id === id)?.type === 'lineAnchor'
+          );
+          if (anchorIds.length > 0) {
+            deleteElements({nodes: anchorIds.map(id => ({id}))});
+          } else {
+            deleteElements({edges: [{id: entry.id}]});
+          }
         }
       }
     },
     [
-      edges,
       buildNodeClipboard,
-      buildLineEdgeClipboard,
       writeClipboard,
       deleteElements,
+      buildLineEdgeClipboard,
+      edges,
+      nodes,
     ]
   );
 

@@ -21,7 +21,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2026-05-05 05:45:56 UTC",
+    "serialized_at": "2026-05-08 03:27:54 UTC",
     "hide_within_course": false,
     "published_state": "in_development",
     "instruction_type": null,
@@ -636,8 +636,21 @@
       }
     },
     {
-      "key": "8824978e-4781-4610-9d82-787f9855dfa4",
+      "key": "e0c2f52d-21df-4b94-80b3-3100f49973eb",
       "position": 1,
+      "properties": {
+        "name": "New Level"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "e0c2f52d-21df-4b94-80b3-3100f49973eb",
+        "lesson.key": "Lesson 7: Evaluating Fairness and Accessibility",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "building-data-driven-systems-with-ai-2026"
+      }
+    },
+    {
+      "key": "8824978e-4781-4610-9d82-787f9855dfa4",
+      "position": 2,
       "properties": {
         "duration": 10,
         "name": "Warm Up"
@@ -651,7 +664,7 @@
     },
     {
       "key": "4ebc0c28-afba-4e67-a02c-ae5f7fce48d1",
-      "position": 2,
+      "position": 3,
       "properties": {
         "duration": 30,
         "name": "Activity"
@@ -665,7 +678,7 @@
     },
     {
       "key": "9a03f06f-c7c1-4af0-a509-93c8cad35d00",
-      "position": 3,
+      "position": 4,
       "properties": {
         "duration": 5,
         "name": "Wrap Up"
@@ -678,8 +691,21 @@
       }
     },
     {
-      "key": "81b41a47-019e-4bba-9611-d4b4ffe383b5",
+      "key": "f295f454-83cb-4d21-91f9-bbe926baa9bb",
       "position": 1,
+      "properties": {
+        "name": "New Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "f295f454-83cb-4d21-91f9-bbe926baa9bb",
+        "lesson.key": "Lesson 8: Filtering",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "building-data-driven-systems-with-ai-2026"
+      }
+    },
+    {
+      "key": "81b41a47-019e-4bba-9611-d4b4ffe383b5",
+      "position": 2,
       "properties": {
         "duration": 5,
         "name": "Warm Up"
@@ -693,7 +719,7 @@
     },
     {
       "key": "2009b77f-aba7-4f62-853b-b435fbd2524e",
-      "position": 2,
+      "position": 3,
       "properties": {
         "duration": 35,
         "name": "Activity"
@@ -707,7 +733,7 @@
     },
     {
       "key": "f17050f3-4243-4bb2-8b89-47aad429ffdc",
-      "position": 3,
+      "position": 4,
       "properties": {
         "duration": 5,
         "name": "Wrap Up"
@@ -2185,6 +2211,17 @@
       }
     },
     {
+      "key": "87570595-2aa0-400b-9c0a-a607374ec048",
+      "position": 1,
+      "properties": {
+        "progression_name": "Check for Understanding"
+      },
+      "seeding_key": {
+        "activity_section.key": "87570595-2aa0-400b-9c0a-a607374ec048",
+        "lesson_activity.key": "e0c2f52d-21df-4b94-80b3-3100f49973eb"
+      }
+    },
+    {
       "key": "128a7684-893d-498c-9321-6d51830b3c75",
       "position": 1,
       "properties": {
@@ -2450,6 +2487,72 @@
       "seeding_key": {
         "activity_section.key": "50220519-399e-46dc-b418-7adb0ae8242f",
         "lesson_activity.key": "9a03f06f-c7c1-4af0-a509-93c8cad35d00"
+      }
+    },
+    {
+      "key": "6a0a9c64-e457-41b6-bdc1-06c4b7513569",
+      "position": 1,
+      "properties": {
+        "progression_name": "Explore Product Filters"
+      },
+      "seeding_key": {
+        "activity_section.key": "6a0a9c64-e457-41b6-bdc1-06c4b7513569",
+        "lesson_activity.key": "f295f454-83cb-4d21-91f9-bbe926baa9bb"
+      }
+    },
+    {
+      "key": "69e868cf-0fba-4600-ac00-5d15ac939072",
+      "position": 2,
+      "properties": {
+        "progression_name": "Filter Action Movies"
+      },
+      "seeding_key": {
+        "activity_section.key": "69e868cf-0fba-4600-ac00-5d15ac939072",
+        "lesson_activity.key": "f295f454-83cb-4d21-91f9-bbe926baa9bb"
+      }
+    },
+    {
+      "key": "225d410b-4421-47cf-9a45-1640c7e17f84",
+      "position": 3,
+      "properties": {
+        "progression_name": "Plan a Movie Filter"
+      },
+      "seeding_key": {
+        "activity_section.key": "225d410b-4421-47cf-9a45-1640c7e17f84",
+        "lesson_activity.key": "f295f454-83cb-4d21-91f9-bbe926baa9bb"
+      }
+    },
+    {
+      "key": "4802bf78-6b29-426f-a2a3-e1d7b7593d56",
+      "position": 4,
+      "properties": {
+        "progression_name": "Build a Movie Filter"
+      },
+      "seeding_key": {
+        "activity_section.key": "4802bf78-6b29-426f-a2a3-e1d7b7593d56",
+        "lesson_activity.key": "f295f454-83cb-4d21-91f9-bbe926baa9bb"
+      }
+    },
+    {
+      "key": "2d13fe6e-1dcf-4985-8e46-630f52305a72",
+      "position": 5,
+      "properties": {
+        "progression_name": "Test the Filter"
+      },
+      "seeding_key": {
+        "activity_section.key": "2d13fe6e-1dcf-4985-8e46-630f52305a72",
+        "lesson_activity.key": "f295f454-83cb-4d21-91f9-bbe926baa9bb"
+      }
+    },
+    {
+      "key": "5d023e87-523d-4f56-b7d4-13fb80072865",
+      "position": 6,
+      "properties": {
+        "progression_name": "Check For Understanding"
+      },
+      "seeding_key": {
+        "activity_section.key": "5d023e87-523d-4f56-b7d4-13fb80072865",
+        "lesson_activity.key": "f295f454-83cb-4d21-91f9-bbe926baa9bb"
       }
     },
     {
@@ -4745,6 +4848,28 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "progression": "Check for Understanding"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "building-data-driven-systems-lesson7-level1-v2-2026"
+        ],
+        "lesson.key": "Lesson 7: Evaluating Fairness and Accessibility",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "building-data-driven-systems-with-ai-2026",
+        "activity_section.key": "87570595-2aa0-400b-9c0a-a607374ec048"
+      },
+      "level_keys": [
+        "building-data-driven-systems-lesson7-level1-v2-2026"
+      ]
+    },
+    {
+      "chapter": 61,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
         "progression": "PAIR Accessibility Reviewer"
       },
       "bonus": false,
@@ -4762,8 +4887,8 @@
       ]
     },
     {
-      "chapter": 61,
-      "position": 2,
+      "chapter": 62,
+      "position": 3,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -4784,8 +4909,8 @@
       ]
     },
     {
-      "chapter": 62,
-      "position": 3,
+      "chapter": 63,
+      "position": 4,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -4806,8 +4931,8 @@
       ]
     },
     {
-      "chapter": 63,
-      "position": 4,
+      "chapter": 64,
+      "position": 5,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
@@ -4828,51 +4953,139 @@
       ]
     },
     {
-      "chapter": 64,
+      "chapter": 65,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "ECHO Framework: Explore and Own Filter Logic Patterns"
+        "progression": "Explore Product Filters"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "building-data-driven-systems-lesson8-level1-test_2025-pilot_2026"
+          "ai-generated-design-lesson8-level1_predict_2026"
         ],
         "lesson.key": "Lesson 8: Filtering",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "building-data-driven-systems-with-ai-2026",
-        "activity_section.key": "20d2761c-6243-4267-8bd2-4fc68a36ad85"
+        "activity_section.key": "6a0a9c64-e457-41b6-bdc1-06c4b7513569"
       },
       "level_keys": [
-        "building-data-driven-systems-lesson8-level1-test_2025-pilot_2026"
-      ]
-    },
-    {
-      "chapter": 65,
-      "position": 2,
-      "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
-        "progression": "Filter Choice Levels"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "building-data-driven-systems-lesson8-level2-test_2025-pilot_2026"
-        ],
-        "lesson.key": "Lesson 8: Filtering",
-        "lesson_group.key": "lessonGroup-2",
-        "script.name": "building-data-driven-systems-with-ai-2026",
-        "activity_section.key": "a0ab6d18-c792-4bd5-8fec-64c623a3ac0d"
-      },
-      "level_keys": [
-        "building-data-driven-systems-lesson8-level2-test_2025-pilot_2026"
+        "ai-generated-design-lesson8-level1_predict_2026"
       ]
     },
     {
       "chapter": 66,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Filter Action Movies"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ai-generated-design-lesson8-level2_movie_2026"
+        ],
+        "lesson.key": "Lesson 8: Filtering",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "building-data-driven-systems-with-ai-2026",
+        "activity_section.key": "69e868cf-0fba-4600-ac00-5d15ac939072"
+      },
+      "level_keys": [
+        "ai-generated-design-lesson8-level2_movie_2026"
+      ]
+    },
+    {
+      "chapter": 67,
+      "position": 3,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Plan a Movie Filter"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ai-generated-design-lesson8-level3_choiceA_movie_2026"
+        ],
+        "lesson.key": "Lesson 8: Filtering",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "building-data-driven-systems-with-ai-2026",
+        "activity_section.key": "225d410b-4421-47cf-9a45-1640c7e17f84"
+      },
+      "level_keys": [
+        "ai-generated-design-lesson8-level3_choiceA_movie_2026"
+      ]
+    },
+    {
+      "chapter": 68,
+      "position": 4,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Build a Movie Filter"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ai-generated-design-lesson8-choicelvl-2026"
+        ],
+        "lesson.key": "Lesson 8: Filtering",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "building-data-driven-systems-with-ai-2026",
+        "activity_section.key": "4802bf78-6b29-426f-a2a3-e1d7b7593d56"
+      },
+      "level_keys": [
+        "ai-generated-design-lesson8-choicelvl-2026"
+      ]
+    },
+    {
+      "chapter": 69,
+      "position": 5,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Test the Filter"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ai-generated-design-lesson8-level5-test-2026"
+        ],
+        "lesson.key": "Lesson 8: Filtering",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "building-data-driven-systems-with-ai-2026",
+        "activity_section.key": "2d13fe6e-1dcf-4985-8e46-630f52305a72"
+      },
+      "level_keys": [
+        "ai-generated-design-lesson8-level5-test-2026"
+      ]
+    },
+    {
+      "chapter": 70,
+      "position": 6,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Check For Understanding"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ai-generated-design-lesson8-level6-cfu-2026"
+        ],
+        "lesson.key": "Lesson 8: Filtering",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "building-data-driven-systems-with-ai-2026",
+        "activity_section.key": "5d023e87-523d-4f56-b7d4-13fb80072865"
+      },
+      "level_keys": [
+        "ai-generated-design-lesson8-level6-cfu-2026"
+      ]
+    },
+    {
+      "chapter": 71,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -4894,7 +5107,7 @@
       ]
     },
     {
-      "chapter": 67,
+      "chapter": 72,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -4916,7 +5129,29 @@
       ]
     },
     {
-      "chapter": 68,
+      "chapter": 73,
+      "position": 3,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Co-Build a Search"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "building-data-driven-systems-lesson9-level3-test_2025-pilot_2026"
+        ],
+        "lesson.key": "Lesson 9: Searching",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "building-data-driven-systems-with-ai-2026",
+        "activity_section.key": "cf4b40c8-345c-4d72-bd01-a50447b56d30"
+      },
+      "level_keys": [
+        "building-data-driven-systems-lesson9-level3-test_2025-pilot_2026"
+      ]
+    },
+    {
+      "chapter": 74,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -4938,7 +5173,7 @@
       ]
     },
     {
-      "chapter": 69,
+      "chapter": 75,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -4960,7 +5195,7 @@
       ]
     },
     {
-      "chapter": 70,
+      "chapter": 76,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -4982,7 +5217,7 @@
       ]
     },
     {
-      "chapter": 71,
+      "chapter": 77,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -5004,7 +5239,7 @@
       ]
     },
     {
-      "chapter": 72,
+      "chapter": 78,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -5026,7 +5261,7 @@
       ]
     },
     {
-      "chapter": 73,
+      "chapter": 79,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -5048,7 +5283,7 @@
       ]
     },
     {
-      "chapter": 74,
+      "chapter": 80,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -5070,7 +5305,7 @@
       ]
     },
     {
-      "chapter": 75,
+      "chapter": 81,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
@@ -5092,7 +5327,7 @@
       ]
     },
     {
-      "chapter": 76,
+      "chapter": 82,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -5825,6 +6060,18 @@
     },
     {
       "seeding_key": {
+        "level.key": "building-data-driven-systems-lesson7-level1-v2-2026",
+        "script_level.level_keys": [
+          "building-data-driven-systems-lesson7-level1-v2-2026"
+        ],
+        "lesson.key": "Lesson 7: Evaluating Fairness and Accessibility",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "building-data-driven-systems-with-ai-2026",
+        "activity_section.key": "87570595-2aa0-400b-9c0a-a607374ec048"
+      }
+    },
+    {
+      "seeding_key": {
         "level.key": "building-data-driven-systems-lesson7-level1-test_2025-pilot_2026",
         "script_level.level_keys": [
           "building-data-driven-systems-lesson7-level1-test_2025-pilot_2026"
@@ -5873,26 +6120,74 @@
     },
     {
       "seeding_key": {
-        "level.key": "building-data-driven-systems-lesson8-level1-test_2025-pilot_2026",
+        "level.key": "ai-generated-design-lesson8-level1_predict_2026",
         "script_level.level_keys": [
-          "building-data-driven-systems-lesson8-level1-test_2025-pilot_2026"
+          "ai-generated-design-lesson8-level1_predict_2026"
         ],
         "lesson.key": "Lesson 8: Filtering",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "building-data-driven-systems-with-ai-2026",
-        "activity_section.key": "20d2761c-6243-4267-8bd2-4fc68a36ad85"
+        "activity_section.key": "6a0a9c64-e457-41b6-bdc1-06c4b7513569"
       }
     },
     {
       "seeding_key": {
-        "level.key": "building-data-driven-systems-lesson8-level2-test_2025-pilot_2026",
+        "level.key": "ai-generated-design-lesson8-level2_movie_2026",
         "script_level.level_keys": [
-          "building-data-driven-systems-lesson8-level2-test_2025-pilot_2026"
+          "ai-generated-design-lesson8-level2_movie_2026"
         ],
         "lesson.key": "Lesson 8: Filtering",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "building-data-driven-systems-with-ai-2026",
-        "activity_section.key": "a0ab6d18-c792-4bd5-8fec-64c623a3ac0d"
+        "activity_section.key": "69e868cf-0fba-4600-ac00-5d15ac939072"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ai-generated-design-lesson8-level3_choiceA_movie_2026",
+        "script_level.level_keys": [
+          "ai-generated-design-lesson8-level3_choiceA_movie_2026"
+        ],
+        "lesson.key": "Lesson 8: Filtering",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "building-data-driven-systems-with-ai-2026",
+        "activity_section.key": "225d410b-4421-47cf-9a45-1640c7e17f84"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ai-generated-design-lesson8-choicelvl-2026",
+        "script_level.level_keys": [
+          "ai-generated-design-lesson8-choicelvl-2026"
+        ],
+        "lesson.key": "Lesson 8: Filtering",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "building-data-driven-systems-with-ai-2026",
+        "activity_section.key": "4802bf78-6b29-426f-a2a3-e1d7b7593d56"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ai-generated-design-lesson8-level5-test-2026",
+        "script_level.level_keys": [
+          "ai-generated-design-lesson8-level5-test-2026"
+        ],
+        "lesson.key": "Lesson 8: Filtering",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "building-data-driven-systems-with-ai-2026",
+        "activity_section.key": "2d13fe6e-1dcf-4985-8e46-630f52305a72"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ai-generated-design-lesson8-level6-cfu-2026",
+        "script_level.level_keys": [
+          "ai-generated-design-lesson8-level6-cfu-2026"
+        ],
+        "lesson.key": "Lesson 8: Filtering",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "building-data-driven-systems-with-ai-2026",
+        "activity_section.key": "5d023e87-523d-4f56-b7d4-13fb80072865"
       }
     },
     {
@@ -5912,6 +6207,18 @@
         "level.key": "building-data-driven-systems-lesson9-level2-test_2025-pilot_2026",
         "script_level.level_keys": [
           "building-data-driven-systems-lesson9-level2-test_2025-pilot_2026"
+        ],
+        "lesson.key": "Lesson 9: Searching",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "building-data-driven-systems-with-ai-2026",
+        "activity_section.key": "cf4b40c8-345c-4d72-bd01-a50447b56d30"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "building-data-driven-systems-lesson9-level3-test_2025-pilot_2026",
+        "script_level.level_keys": [
+          "building-data-driven-systems-lesson9-level3-test_2025-pilot_2026"
         ],
         "lesson.key": "Lesson 9: Searching",
         "lesson_group.key": "lessonGroup-2",

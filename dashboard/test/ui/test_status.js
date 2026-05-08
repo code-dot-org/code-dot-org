@@ -20,6 +20,7 @@ const TEST_TYPE = document.querySelector("#test-type").value;
 const API_ORIGIN = document.querySelector("#api-origin").value;
 const S3_BUCKET = document.querySelector("#s3-bucket").value;
 const S3_PREFIX = document.querySelector("#s3-prefix").value;
+const RERUN_COMMAND_PREFIX = document.querySelector("#rerun-command-prefix").value;
 
 // Simple constants
 const STATUS_PENDING = "PENDING";
@@ -35,6 +36,7 @@ const API_BASEPATH = `${API_ORIGIN}/api/v1/test_logs`;
 let lastRefreshTimeLabel = document.querySelector("#last-refresh-time");
 let refreshButton = document.querySelector("#refresh-button");
 let autoRefreshButton = document.querySelector("#auto-refresh-button");
+let copyFailingRerunButton = document.querySelector("#copy-failing-rerun-button");
 
 var lastRefreshTime = RUN_START_TIME;
 
@@ -164,6 +166,32 @@ Test.prototype.publicLogUrl = function () {
 
 // Connect up "Copy Rerun Command" buttons
 new Clipboard("button.copy-button");
+// Build one rerun command per failing browser, folding all of that browser's
+// failing features into a single comma-joined `-f` list. runner.rb's `-c` and
+// `-f` form a Cartesian product, so we *must* keep one command per browser
+// rather than one big multi-browser command. Multiple browsers' commands are
+// joined with ` \<newline>` so the whole block pastes into the shell as one
+// line-continued input (review, then press Enter) instead of firing each
+// backgrounded command immediately on paste.
+new Clipboard("#copy-failing-rerun-button", {
+  text: () => {
+    const featuresByBrowser = {};
+    document.querySelectorAll("tr.FAILED").forEach((row) => {
+      const { browser, feature } = row.dataset;
+      (featuresByBrowser[browser] ||= []).push(feature);
+    });
+    // --parallel 20 so a multi-feature rerun actually runs in parallel.
+    // runner.rb caps the worker count at the number of features, so the
+    // upper bound only kicks in past 20. We stop at 20 to avoid
+    // overwhelming Saucelabs / Device Farm.
+    return Object.entries(featuresByBrowser)
+      .map(
+        ([browser, features]) =>
+          `${RERUN_COMMAND_PREFIX} --parallel 20 -c ${browser} -f ${features.join(",")} &`
+      )
+      .join(" \\\n");
+  },
+});
 
 function keyify(str) {
   return str.replace(/\//g, "_");
@@ -306,6 +334,12 @@ function updateProgressNow() {
     setTabStatusIcon("pass");
   }
 
+  // Only enable "Copy Failing Rerun Commands" when there's something to copy.
+  // Otherwise a click leave previous clipboard contents intact and the
+  // user might not notice — leaving them to paste a stale command they had
+  // copied earlier.
+  copyFailingRerunButton.disabled = failureCount === 0;
+
   // Disable auto-refresh if the test run is done and green.
   if (pendingCount + failureCount === 0) {
     disableAutoRefresh();
@@ -412,7 +446,7 @@ async function refresh() {
   refreshButton.disabled = true;
   let lastRefreshEpochSeconds = Math.floor(lastRefreshTime.getTime() / 1000);
   let newTime = new Date();
-  
+
   try {
     const json = await fetchMetadata(lastRefreshEpochSeconds);
 
