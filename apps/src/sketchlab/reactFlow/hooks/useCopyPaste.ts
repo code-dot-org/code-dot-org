@@ -15,6 +15,7 @@ import {
 import type {ClipboardContents} from '../context';
 import type {TabOrderEntry} from '../utils/computeTabOrder';
 import {
+  anchorHandleFlowPosition,
   createLineAnchorAtHandle,
   getHandleFlowPosition,
   lineAnchorHandleId,
@@ -161,9 +162,13 @@ export function useCopyPaste({
           : buildLineEdgeClipboard(edgeId);
       if (!source) return;
 
-      const xPositions = source.nodes.map(n => n.position.x);
+      const handleXs = source.nodes.map(n =>
+        n.type === 'lineAnchor'
+          ? anchorHandleFlowPosition(n.position, n.data.lineAnchorRole).x
+          : n.position.x
+      );
       const lineHorizontalDisplacement =
-        Math.max(...xPositions) - Math.min(...xPositions);
+        Math.max(...handleXs) - Math.min(...handleXs);
       // For lines, we want to offset the pasted line by the horizontal displacement of the original line.
       // If the line's horizontal displacement is less than the default offset, use the default offset so that lines
       // that are vertical or almost vertical aren't too close to each other.
@@ -269,8 +274,12 @@ export function useCopyPaste({
     } else {
       const isLine = contents.edges.length > 0;
       if (isLine) {
-        const xs = contents.nodes.map(n => n.position.x);
-        const lineWidth = Math.max(...xs) - Math.min(...xs);
+        const handleXs = contents.nodes.map(n =>
+          n.type === 'lineAnchor'
+            ? anchorHandleFlowPosition(n.position, n.data.lineAnchorRole).x
+            : n.position.x
+        );
+        const lineWidth = Math.max(...handleXs) - Math.min(...handleXs);
         deltaX = Math.max(lineWidth, DEFAULT_PASTE_OFFSET_PX);
       } else {
         deltaX = anchorNode
