@@ -1,6 +1,6 @@
 import {expect, test} from 'playwright/test';
 
-import {FishVTrashPage} from './FishVTrashPage';
+import {FishVTrashPage} from './poms/FishVTrashPage';
 
 test.describe('Accessibility', () => {
   test('erase button has descriptive aria-label', async ({page}) => {

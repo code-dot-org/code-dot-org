@@ -1,6 +1,6 @@
 import {expect, test} from 'playwright/test';
 
-import {OceansPage} from './OceansPage';
+import {OceansPage} from './poms/OceansPage';
 
 test.describe('DemoShell mode picker', () => {
   test('renders all five modes', async ({page}) => {

@@ -1,7 +1,7 @@
 import {expect, test} from 'playwright/test';
 
-import {FishVTrashPage} from './FishVTrashPage';
-import {OceansPage} from './OceansPage';
+import {FishVTrashPage} from './poms/FishVTrashPage';
+import {OceansPage} from './poms/OceansPage';
 
 // ─────────────────────────────────────────────────────────────────────────────
 // FishVTrash — Training scene

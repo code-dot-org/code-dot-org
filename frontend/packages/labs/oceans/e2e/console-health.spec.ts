@@ -1,7 +1,7 @@
 import {expect, test} from 'playwright/test';
 
-import {FishVTrashPage} from './FishVTrashPage';
-import {OceansPage} from './OceansPage';
+import {FishVTrashPage} from './poms/FishVTrashPage';
+import {OceansPage} from './poms/OceansPage';
 
 test.describe('Console health', () => {
   test('no model-loading errors on startup', async ({page}) => {

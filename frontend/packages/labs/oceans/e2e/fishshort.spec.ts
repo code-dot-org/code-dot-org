@@ -1,7 +1,7 @@
 import {expect, test} from 'playwright/test';
 
-import {FishShortPage} from './FishShortPage';
-import {AppMode, OceansPage} from './OceansPage';
+import {FishShortPage} from './poms/FishShortPage';
+import {AppMode, OceansPage} from './poms/OceansPage';
 
 // ─────────────────────────────────────────────────────────────────────────────
 // FishShort — Words scene
