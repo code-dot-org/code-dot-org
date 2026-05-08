@@ -32,6 +32,7 @@ class Ailab < Level
     is_project_level
     mode
     dynamic_instructions
+    uses_lab2
   )
 
   def self.create_from_level_builder(params, level_params)
@@ -43,6 +44,10 @@ class Ailab < Level
         properties: {}
       )
     )
+  end
+
+  def uses_lab2?
+    uses_lab2
   end
 
   def localized_dynamic_instructions

@@ -1,0 +1,30 @@
+.container {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  user-select: none;
+}
+
+.resourcePanel {
+  flex: 0;
+  min-width: 25%;
+}
+
+.divider {
+  width: 1px;
+  height: 100%;
+  background-color: var(--background-neutral-quaternary);
+}
+
+.workspace {
+  position: relative;
+  flex: 1;
+}
+
+.root {
+  position: absolute;
+  inset: 0;
+  overflow: auto;
+}
