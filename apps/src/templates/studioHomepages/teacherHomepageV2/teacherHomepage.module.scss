@@ -117,6 +117,27 @@
   display: flex;
   align-items: center;
   gap: 8px;
+  min-width: 0;
+
+  h5 {
+    min-width: 0;
+  }
+}
+
+.sectionCardTitle {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.sectionCardTitleText {
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.sectionCardDemoChip {
+  margin-left: 0;
 }
 
 .sectionCardHeaderRight {
@@ -455,6 +476,22 @@
   min-height: 50px;
   height: fit-content;
   margin-inline-start: 8px;
+}
+
+.gradientIcon {
+  background: linear-gradient(
+    to right,
+    #15c5f9,
+    #2b72ff,
+    #8f20ec,
+    #c710c2,
+    #e50976
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-flex;
+  padding-right: 4px;
 }
 
 .onboardingChecklistOuter {

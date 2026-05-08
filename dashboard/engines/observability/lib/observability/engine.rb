@@ -2,6 +2,7 @@
 
 require_relative 'opentelemetry'
 require_relative 'sentry'
+require_relative 'errors'
 
 module Observability
   class Engine < ::Rails::Engine

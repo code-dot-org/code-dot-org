@@ -73,6 +73,7 @@ export class JsonVideo extends HTMLElement {
                     </div>
                     <div style="flex-grow: 1;"></div>
                     <button id="cc-btn" class="control-btn"></button>
+                    <button id="fullscreen-btn" class="control-btn"></button>
                 </div>
                 <div id="progress-container">
                     <input type="range" id="progress-bar" min="0" max="100" value="0" step="0.1">
@@ -96,6 +97,7 @@ export class JsonVideo extends HTMLElement {
       totTime: this.shadowRoot.querySelector('#tot-time'),
       volume: this.shadowRoot.querySelector('#volume-slider'),
       ccBtn: this.shadowRoot.querySelector('#cc-btn'),
+      fullscreenBtn: this.shadowRoot.querySelector('#fullscreen-btn'),
     };
 
     this._bindEvents();
@@ -140,6 +142,20 @@ export class JsonVideo extends HTMLElement {
       this.ui.ccBtn.classList.toggle('disabled', !this._showCaptions);
       this._renderCurrentScene();
     };
+
+    this.ui.fullscreenBtn.onclick = () => this._toggleFullscreen();
+
+    this._onFullscreenChange = () => {
+      const isFs =
+        document.fullscreenElement === this ||
+        document.webkitFullscreenElement === this;
+      this.ui.fullscreenBtn.classList.toggle('fullscreen-active', isFs);
+    };
+    document.addEventListener('fullscreenchange', this._onFullscreenChange);
+    document.addEventListener(
+      'webkitfullscreenchange',
+      this._onFullscreenChange
+    );
 
     this.shadowRoot.querySelector('#video-container').onclick = e => {
       if (
@@ -355,6 +371,25 @@ export class JsonVideo extends HTMLElement {
       m = Math.floor(s / 60),
       sec = s % 60;
     return `${m}:${String(sec).padStart(2, '0')}`;
+  }
+
+  _toggleFullscreen() {
+    if (
+      document.fullscreenElement === this ||
+      document.webkitFullscreenElement === this
+    ) {
+      (document.exitFullscreen || document.webkitExitFullscreen).call(document);
+    } else {
+      (this.requestFullscreen || this.webkitRequestFullscreen).call(this);
+    }
+  }
+
+  disconnectedCallback() {
+    document.removeEventListener('fullscreenchange', this._onFullscreenChange);
+    document.removeEventListener(
+      'webkitfullscreenchange',
+      this._onFullscreenChange
+    );
   }
 
   _calculateDurations() {

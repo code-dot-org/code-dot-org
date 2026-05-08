@@ -103,6 +103,7 @@ export const Header: React.FC<HeaderProps> = ({
         />
         <div className={styles.headerButtonRowRight}>
           <MuiButton
+            id="create-section-button"
             variant="contained"
             color="primary"
             size="small"

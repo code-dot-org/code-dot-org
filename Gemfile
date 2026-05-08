@@ -188,7 +188,7 @@ gem 'gemoji'
 # Authentication and permissions.
 gem 'cancancan', '~> 3.5.0'
 gem 'devise', '~> 4.9.0'
-gem 'devise_invitable', '~> 2.0.2'
+gem 'devise_invitable', '~> 2.0.12'
 
 gem 'omniauth-classlink', '~> 0.3.1'
 gem 'omniauth-clever', '~> 3.0.0', github: 'code-dot-org/omniauth-clever', tag: 'v3.0.0'

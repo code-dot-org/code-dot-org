@@ -228,6 +228,60 @@ class JitPlConceptTest < ActiveSupport::TestCase
     assert_equal 'Try this.', concept.jit_pl_teaching_tips.first.text_content
   end
 
+  test "serialize includes json_videos" do
+    concept = create(:jit_pl_concept)
+    video = create(:json_video)
+    concept.json_videos << video
+
+    serialized = concept.serialize
+    assert_equal 1, serialized[:json_videos].length
+    assert_equal video.id, serialized[:json_videos].first[:id]
+    assert_equal video.key, serialized[:json_videos].first[:key]
+  end
+
+  test "seed_record associates json_videos from file" do
+    concept = create(:jit_pl_concept, name: 'loops')
+    video = create(:json_video, key: 'loops-intro-video')
+    data = {
+      name: 'loops',
+      display_name: 'Loops',
+      text_content: 'Repeating.',
+      resources: [],
+      jit_pl_concepts_resources: [],
+      jit_pl_concepts_json_videos: [{seeding_key: {'concept.key' => 'loops', 'json_video.key' => video.key}}],
+      misconceptions: [],
+      teaching_tips: [],
+    }
+
+    File.stubs(:read).returns(data.to_json)
+    JitPlConcept.seed_record('config/jit_pl_concepts/loops.json')
+
+    concept.reload
+    assert_equal 1, concept.json_videos.count
+    assert_includes concept.json_videos, video
+  end
+
+  test "seed_record clears json_videos when absent from file" do
+    concept = create(:jit_pl_concept, name: 'loops')
+    video = create(:json_video)
+    concept.json_videos << video
+    data = {
+      name: 'loops',
+      display_name: 'Loops',
+      text_content: 'Repeating.',
+      resources: [],
+      jit_pl_concepts_resources: [],
+      misconceptions: [],
+      teaching_tips: [],
+    }
+
+    File.stubs(:read).returns(data.to_json)
+    JitPlConcept.seed_record('config/jit_pl_concepts/loops.json')
+
+    concept.reload
+    assert_empty concept.json_videos
+  end
+
   test "seed_record removes teaching tips absent from file" do
     concept = create(:jit_pl_concept, name: 'loops')
     _to_remove = create(:jit_pl_teaching_tip, jit_pl_concept: concept, name: 'old-tip')

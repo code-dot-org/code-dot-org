@@ -9,11 +9,13 @@ import LockedNotice from './LockedNotice';
 import NodeActionsGroup from './NodeActionsGroup';
 import RotationGroup from './RotationGroup';
 import SwatchGroup from './SwatchGroup';
+import TextAlignGroup from './TextAlignGroup';
 import {
   DEFAULT_FONT_COLOR,
   DEFAULT_FONT_SIZE,
-  FontSizeValue,
+  DEFAULT_TEXT_ALIGN,
   STROKE_FONT_PALETTE,
+  TextAlignValue,
 } from './toolbarPalettes';
 import ToolbarShell from './ToolbarShell';
 import {useNodeToolbarData} from './useNodeToolbarData';
@@ -25,23 +27,23 @@ interface TextNodeToolbarProps {
 export default function TextNodeToolbar({nodeId}: TextNodeToolbarProps) {
   const {data, patchNodeData} = useNodeToolbarData<TextNodeType>(nodeId);
 
-  const {fontSize, fontColor} = data;
+  const {fontSize, fontColor, textAlign} = data;
   const handlesVisible = data.showHandles !== false;
 
   return (
-    <ToolbarShell
-      target={{type: 'node', id: nodeId}}
-      anchorNodeId={nodeId}
-      ariaLabel="Text style"
-    >
+    <ToolbarShell target={{type: 'node', id: nodeId}} ariaLabel="Text style">
       {data.locked ? (
         <LockedNotice onUnlock={() => patchNodeData({locked: false})} />
       ) : (
         <>
           <FontSizeGroup
             selectedValue={fontSize ?? DEFAULT_FONT_SIZE}
+            onSelect={value => patchNodeData({fontSize: value})}
+          />
+          <TextAlignGroup
+            selectedValue={textAlign ?? DEFAULT_TEXT_ALIGN}
             onSelect={value =>
-              patchNodeData({fontSize: value as FontSizeValue})
+              patchNodeData({textAlign: value as TextAlignValue})
             }
           />
           <SwatchGroup

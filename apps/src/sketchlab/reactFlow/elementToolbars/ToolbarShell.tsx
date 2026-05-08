@@ -1,12 +1,17 @@
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import {IconButton, Paper, Tooltip} from '@mui/material';
-import {NodeToolbar, Position, useReactFlow} from '@xyflow/react';
+import {
+  EdgeToolbar,
+  NodeToolbar,
+  Position,
+  useReactFlow,
+  type XYPosition,
+} from '@xyflow/react';
 import FocusTrap from 'focus-trap-react';
 import React, {useCallback, useEffect, useRef} from 'react';
 
 import {
   useSketchLabReadOnly,
-  type ToolbarTarget,
   useToolbarVisibility,
 } from '@cdo/apps/sketchlab/reactFlow/context';
 import {getViewportOverflow} from '@cdo/apps/sketchlab/reactFlow/utils/viewport';
@@ -24,19 +29,33 @@ const CONTROLS_WIDTH_PX = 60;
 // 2147483647 is the max signed 32-bit integer, a commonly used CSS z-index cap.
 const TOOLBAR_Z_INDEX = 2147483647;
 
-interface ToolbarShellProps {
-  target: ToolbarTarget;
-  anchorNodeId: string;
+interface BaseToolbarShellProps {
   ariaLabel: string;
   children: React.ReactNode;
 }
 
-export default function ToolbarShell({
-  target,
-  anchorNodeId,
-  ariaLabel,
-  children,
-}: ToolbarShellProps) {
+interface NodeToolbarShellProps extends BaseToolbarShellProps {
+  target: {type: 'node'; id: string};
+}
+
+interface EdgeToolbarShellProps extends BaseToolbarShellProps {
+  target: {type: 'edge'; id: string};
+  // Flow-coordinate point that the toolbar's right edge should align to.
+  anchorFlowPosition: XYPosition;
+  // Screen-px gap between Paper's right edge and anchorFlowPosition.
+  anchorRightPaddingPx?: number;
+}
+
+type ToolbarShellProps = NodeToolbarShellProps | EdgeToolbarShellProps;
+
+function isEdgeShellProps(
+  props: ToolbarShellProps
+): props is EdgeToolbarShellProps {
+  return props.target.type === 'edge';
+}
+
+export default function ToolbarShell(props: ToolbarShellProps) {
+  const {target, ariaLabel, children} = props;
   const readOnly = useSketchLabReadOnly();
   const {openToolbarTarget, trapFocus, closeToolbar} = useToolbarVisibility();
   const {getViewport, setViewport} = useReactFlow();
@@ -52,11 +71,9 @@ export default function ToolbarShell({
       // Defer until after React Flow positions the toolbar in the DOM
       // so getBoundingClientRect reflects the final placement.
       requestAnimationFrame(() => {
-        const nodeToolbarEl = containerRef.current?.closest<HTMLElement>(
-          '.react-flow__node-toolbar'
-        );
-        if (!nodeToolbarEl) return;
-        const overflow = getViewportOverflow(nodeToolbarEl, {
+        const toolbarEl = containerRef.current;
+        if (!toolbarEl) return;
+        const overflow = getViewportOverflow(toolbarEl, {
           left: CONTROLS_WIDTH_PX,
         });
         if (!overflow) return;
@@ -91,70 +108,97 @@ export default function ToolbarShell({
   if (readOnly) {
     return null;
   }
+
+  const toolbarBody = (
+    <FocusTrap
+      active={isVisible && trapFocus}
+      focusTrapOptions={{
+        // Route Escape through handleClose. Return false so the trap
+        // stays active; the subsequent isVisible=false flip is what
+        // actually deactivates it. We don't use onDeactivate because it
+        // also fires when another node's toolbar takes over, and we
+        // don't want to move focus in that case.
+        escapeDeactivates: event => {
+          event.preventDefault();
+          event.stopPropagation();
+          handleClose();
+          return false;
+        },
+        // If the user clicked on another node we don't want to return
+        // focus to the previous node. handleClose handles the
+        // user-initiated close cases.
+        returnFocusOnDeactivate: false,
+        clickOutsideDeactivates: true,
+      }}
+    >
+      <Paper
+        ref={containerRef}
+        className={styles.toolbar}
+        elevation={3}
+        role="toolbar"
+        aria-label={ariaLabel}
+        // The toolbar is a DOM portal but React events still bubble
+        // through the component tree to the owning node, whose
+        // onDoubleClick starts inline label/text editing. Stop double clicks
+        // here so double-clicking inside the toolbar (e.g. on the rotation input)
+        // does not enter edit mode.
+        onDoubleClick={event => event.stopPropagation()}
+      >
+        <div className={styles.header}>
+          <Tooltip title="Close toolbar" placement="top">
+            <IconButton
+              size="small"
+              className={styles['close-button']}
+              aria-label="Close toolbar"
+              onClick={event => {
+                event.stopPropagation();
+                handleClose();
+              }}
+            >
+              <FontAwesomeV6Icon
+                iconName="xmark"
+                iconStyle="solid"
+                aria-hidden="true"
+              />
+            </IconButton>
+          </Tooltip>
+        </div>
+        {children}
+      </Paper>
+    </FocusTrap>
+  );
+
+  if (isEdgeShellProps(props)) {
+    return (
+      <EdgeToolbar
+        edgeId={props.target.id}
+        x={props.anchorFlowPosition.x}
+        y={props.anchorFlowPosition.y}
+        alignX="right"
+        alignY="center"
+        isVisible={isVisible}
+        style={{zIndex: TOOLBAR_Z_INDEX}}
+      >
+        <div
+          style={{
+            paddingRight: props.anchorRightPaddingPx ?? TOOLBAR_OFFSET_PX,
+          }}
+        >
+          {toolbarBody}
+        </div>
+      </EdgeToolbar>
+    );
+  }
+
   return (
     <NodeToolbar
-      nodeId={anchorNodeId}
+      nodeId={props.target.id}
       position={Position.Left}
       offset={TOOLBAR_OFFSET_PX}
       isVisible={isVisible}
       style={{zIndex: TOOLBAR_Z_INDEX}}
     >
-      <FocusTrap
-        active={isVisible && trapFocus}
-        focusTrapOptions={{
-          // Route Escape through handleClose. Return false so the trap
-          // stays active; the subsequent isVisible=false flip is what
-          // actually deactivates it. We don't use onDeactivate because it
-          // also fires when another node's toolbar takes over, and we
-          // don't want to move focus in that case.
-          escapeDeactivates: event => {
-            event.preventDefault();
-            event.stopPropagation();
-            handleClose();
-            return false;
-          },
-          // If the user clicked on another node we don't want to return
-          // focus to the previous node. handleClose handles the
-          // user-initiated close cases.
-          returnFocusOnDeactivate: false,
-          clickOutsideDeactivates: true,
-        }}
-      >
-        <Paper
-          ref={containerRef}
-          className={styles.toolbar}
-          elevation={3}
-          role="toolbar"
-          aria-label={ariaLabel}
-          // The toolbar is a DOM portal but React events still bubble
-          // through the component tree to the owning node, whose
-          // onDoubleClick starts inline label/text editing. Stop double clicks
-          // here so double-clicking inside the toolbar (e.g. on the rotation input)
-          // does not enter edit mode.
-          onDoubleClick={event => event.stopPropagation()}
-        >
-          <div className={styles.header}>
-            <Tooltip title="Close toolbar" placement="top">
-              <IconButton
-                size="small"
-                className={styles['close-button']}
-                aria-label="Close toolbar"
-                onClick={event => {
-                  event.stopPropagation();
-                  handleClose();
-                }}
-              >
-                <FontAwesomeV6Icon
-                  iconName="xmark"
-                  iconStyle="solid"
-                  aria-hidden="true"
-                />
-              </IconButton>
-            </Tooltip>
-          </div>
-          {children}
-        </Paper>
-      </FocusTrap>
+      {toolbarBody}
     </NodeToolbar>
   );
 }

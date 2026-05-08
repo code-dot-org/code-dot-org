@@ -53,7 +53,7 @@ class UnitTest < ActiveSupport::TestCase
   end
 
   def populate_cache_and_disconnect_db
-    Unit.stubs(:should_cache?).returns true
+    setup_script_cache
     # Only need to populate cache once per test-suite run
     @@script_cached ||= Unit.unit_cache_to_cache
     Unit.script_cache
@@ -431,7 +431,7 @@ class UnitTest < ActiveSupport::TestCase
   end
 
   test 'has_other_versions? makes no queries when there is one other unit group version' do
-    Unit.stubs(:should_cache?).returns true
+    setup_script_cache
 
     csp_2017 = create(:unit_group, name: 'csp-2017', family_name: 'csp', version_year: '2017')
     csp1_2017 = create(:script, name: 'csp1-2017')
@@ -450,7 +450,7 @@ class UnitTest < ActiveSupport::TestCase
   end
 
   test 'has_other_versions? makes no queries when there are no other unit group versions' do
-    Unit.stubs(:should_cache?).returns true
+    setup_script_cache
 
     csp_2017 = create(:unit_group, name: 'csp-2017', family_name: 'csp', version_year: '2017')
     csp1_2017 = create(:script, name: 'csp1-2017')

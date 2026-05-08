@@ -36,10 +36,13 @@ markdown <<MARKDOWN
   </p>
 </div>
 
+---
+
+## 🔍 Check for Understanding
+> #### Look at the parallel arrays shown above. What three pieces of information belong together at index 1?
+> - ####List the player’s name, goals, and wcWinner value.
+<details> <summary style="cursor:pointer;display:inline-block;background:#8148B2;color:white;padding:14px 22px;font-size:18px;font-weight:600;border-radius:999px;list-style:none;"> Check your thinking </summary> <div style="margin-top:16px; background:#f7f8fa;"> <p style = "font-size: 14pt;">At <b>index 1</b>, the values belong to the second player in each array.</p> <p style = "font-size: 14pt;"><b>name:</b> "Ronaldo"</p> <p style = "font-size: 14pt;"><b>goals:</b> 954</p> <p style = "font-size: 14pt;"><b>wcWinner:</b> false</p> </div> </details>
 
 
-## Next up
-
-#### In the next level, you will practice creating an object out of three parallel arrays. 
 
 MARKDOWN

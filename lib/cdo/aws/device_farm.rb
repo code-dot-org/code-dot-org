@@ -95,7 +95,7 @@ module Cdo
       #
       # @param device_arns [Array<String>] candidate device ARNs. One is
       #   picked client-side based on current availability.
-      # @return [Hash] { url: String, session_arn: String }
+      # @return [Hash] { url: String, session_arn: String, device: Aws::DeviceFarm::Types::Device }
       def self.create_mobile_session(device_arns:)
         raise "Device Farm: no candidate device ARNs provided" if device_arns.blank?
         project_arn = project_arn_for(mobile: true)
@@ -122,7 +122,7 @@ module Cdo
           raise
         end
 
-        {url: endpoint, session_arn: session_arn}
+        {url: endpoint, session_arn: session_arn, device: device}
       end
 
       # AWS console URL for a mobile remote access session's files/logs view.
@@ -264,7 +264,20 @@ module Cdo
         # Aws module (unrelated to our Cdo::AWS namespace). Our module's
         # case-different name already protects against collision, but the
         # `::` prefix makes intent unambiguous at the call site.
-        @client ||= ::Aws::DeviceFarm::Client.new(region: REGION)
+        #
+        # retry_mode: 'adaptive' + retry_limit: 20 absorbs DF's per-account
+        # API TPS throttling (separate from the session-concurrency quota)
+        # when many workers burst create_test_grid_url at once. The token
+        # bucket is per-process (post-fork), so this softens each worker's
+        # response to ThrottlingException rather than coordinating workers.
+        # 20 retries gives a worst-case backoff window of ~350s (full
+        # jitter, capped at 20s/attempt) -- enough to ride out a multi-
+        # minute sustained throttle without giving up.
+        @client ||= ::Aws::DeviceFarm::Client.new(
+          region: REGION,
+          retry_mode: 'adaptive',
+          retry_limit: 20
+        )
       end
 
       private_class_method :lookup_devices, :pick_best_device, :project_arn_for,
