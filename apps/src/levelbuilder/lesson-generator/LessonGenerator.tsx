@@ -11,12 +11,9 @@ import {Panel, PanelsLevelProperties} from '@cdo/apps/panels/types';
 import {createUuid} from '@cdo/apps/utils';
 import {AiChatClientTypes} from '@cdo/generated-scripts/sharedConstants';
 
-import {
-  generateLessonOutline,
-  generatePanelsForLevel,
-  generateWeblab2Level,
-  Weblab2Generation,
-} from './aiGeneration';
+import {generateLessonOutline} from './ai/outline';
+import {generatePanelsForLevel} from './ai/panels';
+import {generateWeblab2Level, Weblab2Generation} from './ai/weblab2';
 import {
   createOrFindLevel,
   loadLessonLevelProperties,
