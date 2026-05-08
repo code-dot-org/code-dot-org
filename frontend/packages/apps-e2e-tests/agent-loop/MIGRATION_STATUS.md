@@ -1,27 +1,27 @@
 # Cucumber → Playwright Migration Status
 
-Source: `dashboard/test/ui/features/star_labs/`, `features/code_tools/`, `features/student_learning/`, and `features/teacher_tools/level_types/`  
+Source: `dashboard/test/ui/features/` (all sub-directories)  
 Target: `frontend/packages/apps-e2e-tests/tests/`  
-As of: 2026-05-08 (updated 2026-05-08 — all teacher_tools/level_types ported)
+As of: 2026-05-08 (updated 2026-05-08 — teacher_tools, foundations, platform features ported and verified)
 
 ---
 
 ## Summary
 
-| Status                                 | Count                                                                             |
-| -------------------------------------- | --------------------------------------------------------------------------------- |
-| Ported                                 | 55 feature files (C+F for pythonlab + mixmoveai; C+F+W for rest)                  |
-| Covered by ported                      | 5 (maze2, jigsaw2, multi2/3/4 rolled into existing specs)                         |
-| Partial — @eyes (visual checkpoints)   | 5 ported up to snapshot; @eyes auth blocked 3                                     |
-| Fixme stubs — @eyes only               | 3 (curriculum_reference ×2, level_group_multi_page_dots ×1)                       |
-| Skipped — auth required                | 30+                                                                               |
-| Skipped — @skip / @eyes_mobile         | 3                                                                                 |
-| Skipped — cookie/session manipulation  | 2                                                                                 |
-| Out of scope — non-CSF labs            | 5 labs, ~15 feature files (spritelab + craft hero_logged_out now ported)          |
-| Out of scope — lab2 cross-origin       | WebLab full tests (Bramble cross-origin iframe); weblab/too_young ported          |
-| Out of scope — platform/infrastructure | 3                                                                                 |
-| Out of scope — standalone tools        | 0 (netsim/pixelation/pkc/studio/sharepage/modal-fn-editor/mix-move-ai all ported) |
-| Porteable, not yet done                | 0                                                                                 |
+| Status                                         | Count                                                                             |
+| ---------------------------------------------- | --------------------------------------------------------------------------------- |
+| Ported                                         | 79 feature files (C+F for pythonlab + mixmoveai; C+F+W for rest)                  |
+| Covered by ported (rolled in)                  | 5 (maze2, jigsaw2, multi2/3/4 rolled into existing specs)                         |
+| Partial — @eyes (visual checkpoints annotated) | 5 ported up to snapshot; @eyes auth blocked 3                                     |
+| Fixme stubs — @eyes / auth only                | 3 (curriculum_reference ×2, level_group_multi_page_dots ×1)                       |
+| Skipped — auth required                        | 40+                                                                               |
+| Skipped — @skip / @eyes_mobile                 | 3                                                                                 |
+| Skipped — cookie/session manipulation          | 2                                                                                 |
+| Out of scope — non-CSF labs                    | 5 labs, ~15 feature files (spritelab + craft hero_logged_out now ported)          |
+| Out of scope — lab2 cross-origin               | WebLab full tests (Bramble cross-origin iframe); weblab/too_young ported          |
+| Out of scope — other areas                     | javalab, weblab2, pd/pl, xteam, levelbuilder, global_edition, policy_compliance   |
+| Out of scope — standalone tools                | 0 (netsim/pixelation/pkc/studio/sharepage/modal-fn-editor/mix-move-ai all ported) |
+| Porteable, not yet done                        | 0                                                                                 |
 
 ---
 
@@ -63,6 +63,7 @@ As of: 2026-05-08 (updated 2026-05-08 — all teacher_tools/level_types ported)
 | `mix_move_ai.feature`                                          | `tests/lab2/mixmoveai/mixmoveai.spec.ts`                           | C+F      | @no_safari; full 3-phase AI generation flow          |
 | `student_learning/hour_of_code/hour_of_code.feature`           | `tests/legacy/hoc/hoc.spec.ts`                                     | C+F      | anonymous; 4 scenarios; progress bubbles + hoc/reset |
 | `student_learning/hour_of_code/hoc_reset.feature`              | `tests/legacy/hoc/hoc.spec.ts`                                     | C+F      | hoc/reset re-triggers video + callout state          |
+| `student_learning/hour_of_code/hour_of_code_signed_in.feature` | `tests/legacy/hoc/hoc-signed-in.spec.ts`                           | C+F+W    | server-side progress; hoc/reset preserves saves      |
 | `acquisition_products/curriculum_catalog.feature` (scenario 1) | `tests/catalog/catalog.spec.ts`                                    | C+F+W    | signed-out redirect; other scenarios auth-blocked    |
 | `teacher_tools/challenge_level.feature`                        | `tests/legacy/challenge-level/challenge-level.spec.ts`             | C+F+W    | 2 scenarios; JS click bypasses viz overlay           |
 | `dance/age_filter.feature`                                     | `tests/legacy/activities/dance/dance-age-filter.spec.ts`           | C+F+W    | student + anonymous; age dialog + ?songfilter=on     |
@@ -87,6 +88,39 @@ As of: 2026-05-08 (updated 2026-05-08 — all teacher_tools/level_types ported)
 | `level_types/multi.feature` (+ multi2/3/4)             | `tests/legacy/multi/multi.spec.ts`                                             | C+F+W    | multi2/3/4 rolled in                                     |
 | `level_types/multiple_choice_contained_levels.feature` | `tests/legacy/multiple-choice-contained/multiple-choice-contained.spec.ts`     | C+F+W    |                                                          |
 | `level_types/standalone_video.feature`                 | `tests/legacy/standalone-video/standalone-video.spec.ts`                       | C+F+W    |                                                          |
+
+### teacher_tools (non-level_types)
+
+| Feature file                                                       | Playwright spec                                                                | Browsers | Notes                                                                                                      |
+| ------------------------------------------------------------------ | ------------------------------------------------------------------------------ | -------- | ---------------------------------------------------------------------------------------------------------- |
+| `teacher_tools/authored_hints.feature`                             | `tests/legacy/authored-hints/authored-hints.spec.ts`                           | C+F+W    | 1 scenario; hint cycling + display count                                                                   |
+| `teacher_tools/callouts.feature`                                   | `tests/legacy/callouts/callouts.spec.ts`                                       | C+F+W    | 6 scenarios; target-element + x-button dismiss; session persistence                                        |
+| `teacher_tools/contextual_hints.feature`                           | `tests/legacy/contextual-hints/contextual-hints.spec.ts`                       | C+F+W    | 2 scenarios; blocks-in-hints + level-without-authored-hints                                                |
+| `teacher_tools/course_overview.feature`                            | `tests/legacy/course-overview/course-overview.spec.ts`                         | C+F+W    | 4 scenarios; signed-out/student/teacher views; 1 fixme (section auth)                                      |
+| `teacher_tools/teacher_dashboard/demo_section_card.feature`        | `tests/legacy/demo-section-card/demo-section-card.spec.ts`                     | C+F+W    | 1 scenario; teacher with zero sections navigates demo section                                              |
+| `teacher_tools/documentation_landing_page.feature`                 | `tests/legacy/documentation-landing-page/documentation-landing-page.spec.ts`   | C+F+W    | 2 scenarios; /docs/ and /docs/ide/applab/ content checks                                                   |
+| `teacher_tools/join_section_signup.feature`                        | `tests/legacy/join-section-signup/join-section-signup.spec.ts`                 | C+F+W    | 2 scenarios; signed-out /join link + signed-in redirect chain                                              |
+| `teacher_tools/lesson_extras_teacher_panel.feature`                | `tests/legacy/lesson-extras-teacher-panel/lesson-extras-teacher-panel.spec.ts` | C+F+W    | 1 scenario; teacher panel on lesson extras page + sublevel card                                            |
+| `teacher_tools/level_navigation.feature`                           | `tests/legacy/level-navigation/level-navigation.spec.ts`                       | C+F+W    | 3 scenarios; continue button on video/markdown/auto-success levels                                         |
+| `teacher_tools/multi_submittable.feature`                          | `tests/legacy/multi-submittable/multi-submittable.spec.ts`                     | C+F+W    | 2 scenarios; submit/unsubmit/resubmit cycle                                                                |
+| `teacher_tools/projects/public_project_gallery_signed_out.feature` | `tests/legacy/public-project-gallery/public-project-gallery.spec.ts`           | C+F+W    | 2 scenarios; signed-out /projects/public gallery                                                           |
+| `teacher_tools/report_abuse.feature`                               | `tests/legacy/report-abuse/report-abuse.spec.ts`                               | C+F+W    | 3 scenarios; anonymous/student/teacher; CAPTCHA bypass via test env                                        |
+| `teacher_tools/script_overview.feature`                            | `tests/legacy/script-overview/script-overview.spec.ts`                         | C+F+W    | 5 scenarios; end-of-lesson header, lesson/student tabs, version pick; 2 fixme (@properties_encryption_key) |
+| `teacher_tools/send_lesson.feature`                                | `tests/legacy/send-lesson/send-lesson.spec.ts`                                 | C+F+W    | 2 scenarios; modal opens, copy link; 1 fixme (modal renders properly)                                      |
+| `teacher_tools/student_lesson_plan.feature`                        | `tests/legacy/student-lesson-plan/student-lesson-plan.spec.ts`                 | C+F+W    | 1 scenario; lesson plan sections, dropdown nav, overview link                                              |
+| `teacher_tools/text_to_speech.feature`                             | `tests/legacy/text-to-speech/text-to-speech.spec.ts`                           | C+F+W    | 5 scenarios; inline-audio visibility, TTS button states                                                    |
+| `teacher_tools/unnumbered_lessons.feature`                         | `tests/legacy/unnumbered-lessons/unnumbered-lessons.spec.ts`                   | C+F+W    | 1 scenario; lesson names without numbers in progress + header popup                                        |
+| `teacher_tools/video/fallback_player_caption_dialog_link.feature`  | `tests/legacy/video-fallback-player/video-fallback-player.spec.ts`             | C+F+W    | 1 scenario; fallback VideoJS player caption link (?force_youtube_fallback)                                 |
+
+### foundations / platform
+
+| Feature file                          | Playwright spec                                        | Browsers | Notes                                                                     |
+| ------------------------------------- | ------------------------------------------------------ | -------- | ------------------------------------------------------------------------- |
+| `foundations/create_dropdown.feature` | `tests/legacy/create-dropdown/create-dropdown.spec.ts` | C+F+W    | 5 scenarios; level page exclusion, teacher/student/young-student menus    |
+| `foundations/user_menu.feature`       | `tests/legacy/user-menu/user-menu.spec.ts`             | C+F+W    | 4 scenarios; signed-out button, teacher/student display name + menu links |
+| `platform/header.feature`             | `tests/legacy/header/header.spec.ts`                   | C+F+W    | 2 scenarios; student + teacher link counts; 2 fixme (Spanish i18n)        |
+| `platform/login_redirect.feature`     | `tests/legacy/login-redirect/login-redirect.spec.ts`   | C+F+W    | 2 scenarios; ?login_required=true cached-level redirect                   |
+| `platform/signing_in.feature`         | `tests/legacy/signing-in/signing-in.spec.ts`           | C+F+W    | 2 scenarios; student + teacher sign-in via form; 2 fixme (EU/non-picture) |
 
 C = Chromium, F = Firefox, W = WebKit.
 
@@ -177,7 +211,6 @@ session fixture.
 | `aichat/view_student_chat_history.feature`                        | teacher auth (AI chat feature)     |
 | `ai_tutor/chat.feature`                                           | student auth (AI tutor feature)    |
 | `manage_assets.feature`                                           | asset upload state                 |
-| `student_learning/hour_of_code/hour_of_code_signed_in.feature`    | @as_student                        |
 | `acquisition_products/curriculum_catalog.feature` (scenarios 2–3) | student/teacher auth               |
 | `acquisition_products/curriculum_catalog_assign_unassign.feature` | teacher-with-sections auth         |
 | `acquisition_products/curriculum_catalog_filters.feature`         | @eyes                              |
@@ -280,6 +313,84 @@ These lab2 feature files remain blocked or out of scope.
 | `weblab/weblab.feature`                       | Cross-origin Bramble iframe — not porteable in Playwright                     |
 | `weblab/versions.feature`                     | @skip + @as_student                                                           |
 | `weblab/weblab_submittable.feature`           | @skip + @as_taught_student                                                    |
+
+---
+
+## Skipped — teacher_tools auth-blocked / @eyes
+
+These teacher_tools feature files were evaluated and will not be ported.
+All require teacher + section setup, multi-session state, @eyes visual
+comparison, or @properties_encryption_key; none have anonymous-accessible
+scenarios worth porting independently.
+
+| Feature file                                                               | Blocker                                                   |
+| -------------------------------------------------------------------------- | --------------------------------------------------------- |
+| `teacher_tools/assign_modular_course.feature`                              | teacher + section auth                                    |
+| `teacher_tools/below_visualization.feature`                                | @eyes only                                                |
+| `teacher_tools/cached_level_page.feature`                                  | teacher + section setup                                   |
+| `teacher_tools/certificates/*.feature`                                     | auth + email delivery                                     |
+| `teacher_tools/course_versions.feature`                                    | @as_student + assigned-course state                       |
+| `teacher_tools/disallowedsharing.feature`                                  | @as_student sharing flow                                  |
+| `teacher_tools/encrypted_level.feature`                                    | @properties_encryption_key                                |
+| `teacher_tools/feedback.feature`                                           | teacher feedback on student work (auth)                   |
+| `teacher_tools/fun_o_meter.feature`                                        | @as_taught_student feedback rating                        |
+| `teacher_tools/hidden_scripts_eyes.feature`                                | @eyes                                                     |
+| `teacher_tools/hidden_stages_eyes.feature`                                 | @eyes                                                     |
+| `teacher_tools/hour_of_code/hoc_batch_certificates.feature`                | teacher + section auth                                    |
+| `teacher_tools/instructions/feedback_tab.feature`                          | @as_taught_student                                        |
+| `teacher_tools/instructions/feedback_tab_eyes.feature`                     | @eyes                                                     |
+| `teacher_tools/instructions/csp_top_instructions_eyes.feature`             | @eyes                                                     |
+| `teacher_tools/instructions/help_and_tips.feature`                         | @as_student                                               |
+| `teacher_tools/instructions/hoc_top_instructions.feature`                  | @as_student                                               |
+| `teacher_tools/instructions/teacher_only_markdown.feature`                 | @as_taught_student                                        |
+| `teacher_tools/instructions/top_instructions.feature`                      | @as_student                                               |
+| `teacher_tools/instructor_in_training/*.feature`                           | verified/unverified teacher auth states                   |
+| `teacher_tools/lesson_lock.feature`                                        | teacher + section + lock flow                             |
+| `teacher_tools/lesson_lock_retake.feature`                                 | same                                                      |
+| `teacher_tools/lesson_show.feature`                                        | @as_teacher                                               |
+| `teacher_tools/level_completion.feature`                                   | teacher view of student completion                        |
+| `teacher_tools/level_summary.feature`                                      | @as_taught_student                                        |
+| `teacher_tools/level_video.feature`                                        | @as_taught_student                                        |
+| `teacher_tools/modular_courses.feature`                                    | teacher auth + modular course state                       |
+| `teacher_tools/pairing.feature`                                            | two-session pairing flow                                  |
+| `teacher_tools/plc_course_unit_navigation.feature`                         | PLC auth                                                  |
+| `teacher_tools/pl_sections.feature`                                        | PL auth                                                   |
+| `teacher_tools/progress.feature`                                           | teacher view of student progress (auth)                   |
+| `teacher_tools/projects/*.feature` (all except gallery_signed_out)         | auth or @eyes                                             |
+| `teacher_tools/rubrics/*.feature`                                          | auth (teacher + student code submission)                  |
+| `teacher_tools/student_not_started_level_warning.feature`                  | @as_taught_student                                        |
+| `teacher_tools/submittable_eyes.feature`                                   | @eyes                                                     |
+| `teacher_tools/teacher_dashboard/*.feature` (all except demo_section_card) | auth, @eyes, section data                                 |
+| `teacher_tools/teacher_homepage.feature`                                   | teacher auth                                              |
+| `teacher_tools/teacher_lesson_plan.feature`                                | teacher auth                                              |
+| `teacher_tools/teacher_student_toggle.feature`                             | @as_taught_student                                        |
+| `teacher_tools/version_history.feature`                                    | @as_student + project version state                       |
+| `teacher_tools/ai_diff/*.feature`                                          | student auth (AI differentiation feature)                 |
+| `teacher_tools/levelbuilder/*.feature`                                     | levelbuilder auth; curriculum-authoring tool out of scope |
+
+---
+
+## Out of scope — additional feature areas
+
+Feature directories outside the original CSF/teacher-tools scope. None have
+non-auth, non-@eyes scenarios worth porting on their own.
+
+| Area                              | Feature files                                                                                                                          | Reason                                                        |
+| --------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------- |
+| Java Lab                          | `javalab/*.feature` (10 files)                                                                                                         | Separate Java runtime; different lab entirely                 |
+| WebLab 2 (student_learning)       | `student_learning/weblab2/*.feature`                                                                                                   | cross-origin iframe + auth; matches star_labs/weblab blockers |
+| PD / PL tools                     | `acquisition_products/pd/**`, `acquisition_products/pl_landing_page.feature`, `acquisition_products/regional_workshop_catalog.feature` | professional-development tools, out of scope                  |
+| Sign-up / school info             | `acquisition_products/school_info_confirmation_dialog.feature`, `acquisition_products/sign_up.feature`                                 | onboarding flows, auth-gated                                  |
+| Global Edition                    | `platform/global_edition/**`                                                                                                           | i18n/regional features; test environment not configured       |
+| Policy compliance                 | `platform/policy_compliance/**`                                                                                                        | COPPA/parental-permission flows; needs special account state  |
+| Cookie consent                    | `platform/one_trust.feature`, `xteam/cookie_banner.feature`, `xteam/gdpr_dialog.feature`                                               | consent tooling, environment-specific                         |
+| Race interstitial                 | `xteam/race_interstitial.feature`                                                                                                      | demographic data dialog; separate scope                       |
+| User settings                     | `platform/user_settings.feature`                                                                                                       | auth + settings state                                         |
+| Teacher dashboard manage-students | `platform/teacher_dashboard/manage_students_tab.feature`                                                                               | auth; mirrors teacher_tools/teacher_dashboard                 |
+| Initial page views                | `initial_page_views*.feature` (4 files)                                                                                                | generic signed-out smoke tests; low test value                |
+| DCDO feature flags                | `dcdo_mocking.feature`                                                                                                                 | infrastructure; feature-flag mocking via cookie               |
+| Applitools top-level              | `eyes.feature`                                                                                                                         | @eyes; replaced by toHaveScreenshot                           |
+| Blockly / SpriteLab @eyes         | `code_tools/blockly/modal_function_editor_eyes.feature`, `code_tools/blockly/spritelab_eyes.feature`                                   | @eyes; non-eyes spec already ported                           |
 
 ---
 
