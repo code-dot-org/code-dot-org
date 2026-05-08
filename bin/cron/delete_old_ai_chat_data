@@ -5,25 +5,30 @@ abort 'Script already running' unless only_one_running?(__FILE__)
 require_relative '../../dashboard/config/environment'
 require 'cdo/chat_client'
 
-# Use five minute timeout to allow long delete queries to complete.
-DASHBOARD_DB_LONG_TIMEOUT = Cdo::Sequel.database_connection_pool(
-  CDO.dashboard_db_writer,
-  CDO.dashboard_db_reader,
-  query_timeout: 300
-)
+BATCH_SIZE = 1000
 
 # We want to avoid storing student chat messages any longer than
 # is necessary for analysis to prevent storing excess student PII.
 #
 # Log the number of records deleted for each table to #cron-daily Slack channel
 # so we can easily monitor the deletion process.
+def delete_in_batches(scope)
+  deleted_record_count = 0
+
+  scope.in_batches(of: BATCH_SIZE) do |batch|
+    deleted_record_count += batch.delete_all
+  end
+
+  deleted_record_count
+end
+
 def main
   # Make sure we're deleting Events (90 days old) a day before Requests (91 days old)
   # to ensure we don't have foreign key constraint issues when deleting Requests that are still referenced by Events.
-  deleted_event_count = DASHBOARD_DB_LONG_TIMEOUT[:aichat_events].where {created_at < Time.now - 90.days}.delete
+  deleted_event_count = delete_in_batches(AichatEvent.where('created_at < ?', 90.days.ago))
   ChatClient.message('cron-daily', "Deleted #{deleted_event_count} AichatEvent records")
 
-  deleted_request_count = DASHBOARD_DB_LONG_TIMEOUT[:aichat_requests].where {created_at < Time.now - 91.days}.delete
+  deleted_request_count = delete_in_batches(AichatRequest.where('created_at < ?', 91.days.ago))
   ChatClient.message('cron-daily', "Deleted #{deleted_request_count} AichatRequest records")
 end
 
