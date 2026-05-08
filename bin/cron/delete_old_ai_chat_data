@@ -18,14 +18,22 @@ DELETE_BATCH_SIZE = 1_000
 # Scan by id so each delete operates on a bounded set of rows. The number of
 # qualifying rows is finite even when the database cannot infer that from
 # `created_at < cutoff` alone.
-def old_record_ids(table_name, cutoff, last_id)
+def old_record_ids(table_name, last_id, max_id)
   with_read_only_server do
     DASHBOARD_DB_LONG_TIMEOUT[table_name].
-      where {created_at < cutoff}.
       where {id > last_id}.
+      where {id <= max_id}.
       order(:id).
       limit(DELETE_BATCH_SIZE).
       select_map(:id)
+  end
+end
+
+def max_eligible_id(table_name, cutoff)
+  with_read_only_server do
+    DASHBOARD_DB_LONG_TIMEOUT[table_name].
+      where {created_at < cutoff}.
+      max(:id)
   end
 end
 
@@ -45,9 +53,11 @@ end
 def delete_in_batches(table_name, cutoff)
   deleted_count = 0
   last_id = 0
+  max_id = max_eligible_id(table_name, cutoff)
+  return deleted_count unless max_id
 
   loop do
-    ids = old_record_ids(table_name, cutoff, last_id)
+    ids = old_record_ids(table_name, last_id, max_id)
     break if ids.empty?
 
     deleted_count += yield(ids)
