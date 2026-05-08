@@ -793,8 +793,8 @@
             "id": "2Oe4plcHxRnfa7jPvFMac",
             "type": "shape",
             "position": {
-              "x": -179.92987032299231,
-              "y": -737.7981770833328
+              "x": -340.8389860306535,
+              "y": -778.1158376041572
             },
             "style": {
               "width": 893.1562499999998,
@@ -809,14 +809,15 @@
             "measured": {
               "width": 893,
               "height": 1702
-            }
+            },
+            "dragging": false
           },
           {
             "id": "LOOcBqcY3p9ZDSF-k_Mqk",
             "type": "text",
             "position": {
-              "x": 209.27325467700769,
-              "y": -712.1138020833328
+              "x": 23.273254677007685,
+              "y": -752.1138020833328
             },
             "data": {
               "text": "Schema",
@@ -827,7 +828,8 @@
             "measured": {
               "width": 98,
               "height": 47
-            }
+            },
+            "dragging": false
           },
           {
             "id": "b8LHea__wFi2276SlPq71",
@@ -1505,34 +1507,15 @@
               "y": -849.7304687499991
             },
             "data": {
-              "text": "Do This\n1. Read the schema scenario.\n2. Brainstorm and fill out as many possible fields for this schema\n3. Add the fields to the schema\n3. Mark the fields you think might be sensitive with a yellow diamond",
+              "text": "\n",
               "fontColor": "#1971c2",
               "fontSize": "large",
               "showHandles": false,
               "textAlign": "left"
             },
             "measured": {
-              "width": 690,
-              "height": 161
-            },
-            "dragging": false
-          },
-          {
-            "id": "zMhOGa3O77yJ6W6YFWuM9",
-            "type": "text",
-            "position": {
-              "x": -1281.261901572992,
-              "y": -979.9121093749991
-            },
-            "data": {
-              "text": "You’re designing a Food Allergy Tracker app that helps users record foods, their ingredients, and whether they’re safe to eat based on allergy information. \nYour goal is to decide what data the app should store, what type each piece of data should be, and which fields might include private or sensitive information.",
-              "fontColor": "#1e1e1e",
-              "fontSize": "large",
-              "showHandles": false
-            },
-            "measured": {
-              "width": 1563,
-              "height": 75
+              "width": 58,
+              "height": 47
             },
             "dragging": false
           },
@@ -1540,8 +1523,8 @@
             "id": "ihlohgFmJ81Famr1iSrHy",
             "type": "text",
             "position": {
-              "x": -1242.6720578229924,
-              "y": -1045.527343749999
+              "x": -1225.9943464383568,
+              "y": -1083.007249080988
             },
             "data": {
               "text": "Scenario",
@@ -2583,8 +2566,8 @@
               "showHandles": false
             },
             "position": {
-              "x": -1520.718281781326,
-              "y": 674.342651367188
+              "x": -1478.718281781326,
+              "y": -347.65734863281205
             },
             "width": 80,
             "height": 62,
@@ -2607,8 +2590,8 @@
               "showHandles": false
             },
             "position": {
-              "x": -1356.718281781326,
-              "y": 700.342651367188
+              "x": -1390.718281781326,
+              "y": -357.65734863281205
             },
             "width": 80,
             "height": 62,
@@ -2631,8 +2614,8 @@
               "showHandles": false
             },
             "position": {
-              "x": -1246.718281781326,
-              "y": 700.342651367188
+              "x": -1276.718281781326,
+              "y": -341.65734863281205
             },
             "width": 80,
             "height": 62,
@@ -2655,8 +2638,8 @@
               "showHandles": false
             },
             "position": {
-              "x": -1114.718281781326,
-              "y": 670.342651367188
+              "x": -1180.718281781326,
+              "y": -347.65734863281205
             },
             "width": 80,
             "height": 62,
@@ -2679,8 +2662,8 @@
               "showHandles": false
             },
             "position": {
-              "x": -954.7182817813259,
-              "y": 702.342651367188
+              "x": -1082.718281781326,
+              "y": -345.65734863281205
             },
             "width": 80,
             "height": 62,
@@ -2703,8 +2686,8 @@
               "showHandles": false
             },
             "position": {
-              "x": -868.7182817813259,
-              "y": 656.342651367188
+              "x": -982.7182817813259,
+              "y": -347.65734863281205
             },
             "width": 80,
             "height": 62,
@@ -2727,8 +2710,8 @@
               "showHandles": false
             },
             "position": {
-              "x": -734.7182817813259,
-              "y": 700.342651367188
+              "x": -860.7182817813259,
+              "y": -341.65734863281205
             },
             "width": 80,
             "height": 62,
@@ -2738,6 +2721,51 @@
             },
             "dragging": false,
             "resizing": false
+          },
+          {
+            "id": "ea47edda-5def-469d-b484-f237bc42d0aa",
+            "type": "shape",
+            "data": {
+              "shapeType": "rectangle",
+              "label": "You’re designing a Food Allergy Tracker app that helps users record foods, their ingredients, and whether they’re safe to eat based on allergy information. \nYour goal is to decide what data the app should store, what type each piece of data should be, and which fields might include private or sensitive information."
+            },
+            "position": {
+              "x": -1260.105200898689,
+              "y": -1018.6318860293403
+            },
+            "width": 1210,
+            "height": 115,
+            "measured": {
+              "width": 1210,
+              "height": 115
+            },
+            "dragging": false,
+            "resizing": false,
+            "zIndex": -1
+          },
+          {
+            "id": "1c21b9b4-3689-49f3-9ab8-a319d24ce7e3",
+            "type": "shape",
+            "data": {
+              "shapeType": "rectangle",
+              "label": "Do This\n1. Read the schema scenario.\n2. Brainstorm and fill out as many possible fields for this schema\n3. Add the fields to the schema\n3. Mark the fields you think might be sensitive with a yellow diamond",
+              "textAlign": "left",
+              "fontSize": "large",
+              "backgroundColor": "var(--sketchlab-bg-pink)"
+            },
+            "position": {
+              "x": -1713.4921200160522,
+              "y": -866.8904246326364
+            },
+            "width": 738,
+            "height": 202,
+            "measured": {
+              "width": 738,
+              "height": 202
+            },
+            "resizing": false,
+            "dragging": false,
+            "zIndex": -2
           }
         ],
         "edges": [
@@ -2927,9 +2955,9 @@
           }
         ],
         "viewport": {
-          "x": 1045.359140890663,
-          "y": 546.828674316406,
-          "zoom": 0.5
+          "x": 1154.3579221937955,
+          "y": 677.3789062499997,
+          "zoom": 0.6
         }
       }
     },
@@ -2940,6 +2968,6 @@
     "name_suffix": "_2026"
   },
   "published": true,
-  "audit_log": "[{\"changed_at\":\"2026-04-01T21:37:40.272+00:00\",\"changed\":[\"cloned from \\\"building-data-driven-systems-lesson2-level1a-test_2025-pilot\\\"\"],\"cloned_from\":\"building-data-driven-systems-lesson2-level1a-test_2025-pilot\"},{\"changed_at\":\"2026-05-06 20:33:57 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":155,\"changed_by_email\":\"dani@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2026-04-01T21:37:40.272+00:00\",\"changed\":[\"cloned from \\\"building-data-driven-systems-lesson2-level1a-test_2025-pilot\\\"\"],\"cloned_from\":\"building-data-driven-systems-lesson2-level1a-test_2025-pilot\"},{\"changed_at\":\"2026-05-06 20:33:57 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":155,\"changed_by_email\":\"dani@code.org\"},{\"changed_at\":\"2026-05-07 13:52:25 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":155,\"changed_by_email\":\"dani@code.org\"}]"
 }]]></config>
 </Sketchlab>

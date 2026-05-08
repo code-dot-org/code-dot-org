@@ -19,7 +19,7 @@
             },
             "data": {
               "text": "Add elements below to create your mood board",
-              "fontColor": "#1e1e1e",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": "large",
               "showHandles": false
             },
@@ -43,8 +43,8 @@
             "data": {
               "shapeType": "rectangle",
               "label": "",
-              "backgroundColor": "transparent",
-              "strokeColor": "#1e1e1e"
+              "backgroundColor": "var(--sketchlab-bg-gray)",
+              "strokeColor": "var(--sketchlab-stroke-default)"
             },
             "measured": {
               "width": 250,
@@ -64,7 +64,7 @@
             },
             "data": {
               "text": "Student Cafe",
-              "fontColor": "#1e1e1e",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": "large",
               "showHandles": false
             },
@@ -82,7 +82,7 @@
             },
             "data": {
               "text": "Art Festival",
-              "fontColor": "#1e1e1e",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": "large",
               "showHandles": false
             },
@@ -142,7 +142,7 @@
             },
             "data": {
               "text": "Eco-Friendly\nStore",
-              "fontColor": "#1e1e1e",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": "large",
               "showHandles": false
             },
@@ -181,7 +181,7 @@
             },
             "data": {
               "text": "Warm, creative hangout",
-              "fontColor": "#1e1e1e",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": "medium",
               "showHandles": false
             },
@@ -199,7 +199,7 @@
             },
             "data": {
               "text": "Vibrant, expressive showcase",
-              "fontColor": "#1e1e1e",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": "medium",
               "showHandles": false
             },
@@ -217,7 +217,7 @@
             },
             "data": {
               "text": "Sustainable lifestyle brand",
-              "fontColor": "#1e1e1e",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": "medium",
               "showHandles": false
             },
@@ -230,7 +230,7 @@
             "id": "_QHOX2XDKJzWWRKpascyU",
             "type": "shape",
             "position": {
-              "x": 338.9583168029785,
+              "x": 341.2981877036773,
               "y": 249.22291564941406
             },
             "style": {
@@ -240,8 +240,8 @@
             "data": {
               "shapeType": "rectangle",
               "label": "",
-              "backgroundColor": "transparent",
-              "strokeColor": "#1e1e1e"
+              "backgroundColor": "var(--sketchlab-bg-gray)",
+              "strokeColor": "var(--sketchlab-stroke-default)"
             },
             "measured": {
               "width": 249,
@@ -250,7 +250,8 @@
             "width": 249,
             "height": 113,
             "resizing": false,
-            "zIndex": -2
+            "zIndex": -2,
+            "dragging": false
           },
           {
             "id": "GAey0QwSCG_ChY96sXdgG",
@@ -266,8 +267,8 @@
             "data": {
               "shapeType": "rectangle",
               "label": "",
-              "backgroundColor": "transparent",
-              "strokeColor": "#1e1e1e"
+              "backgroundColor": "var(--sketchlab-bg-gray)",
+              "strokeColor": "var(--sketchlab-stroke-default)"
             },
             "measured": {
               "width": 250,
@@ -287,7 +288,7 @@
             },
             "data": {
               "text": "COLOR SWATCHES AND BACKGROUNDS",
-              "fontColor": "#1e1e1e",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": "large",
               "showHandles": false
             },
@@ -306,7 +307,7 @@
             },
             "data": {
               "text": "FONT AND TEXT SAMPLES",
-              "fontColor": "#1e1e1e",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": "large",
               "showHandles": false
             },
@@ -325,7 +326,7 @@
             },
             "data": {
               "text": "IMAGES",
-              "fontColor": "#1e1e1e",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": "large",
               "showHandles": false
             },
@@ -339,12 +340,12 @@
             "id": "1KpUWtkgpGEN_Akira1hk",
             "type": "text",
             "position": {
-              "x": 1642.5912763275996,
-              "y": 654.1776214210302
+              "x": 1636.3704763275996,
+              "y": 633.0269014210302
             },
             "data": {
               "text": "STYLE WORDS",
-              "fontColor": "#1e1e1e",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": "large",
               "showHandles": false
             },
@@ -363,7 +364,7 @@
             },
             "data": {
               "text": "LOGOS AND ICONS",
-              "fontColor": "#1e1e1e",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": "large",
               "showHandles": false
             },
@@ -382,7 +383,7 @@
             },
             "data": {
               "text": "Blocks or samples of color that show your palette.",
-              "fontColor": "#1e1e1e",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": "medium",
               "showHandles": false
             },
@@ -400,7 +401,7 @@
             },
             "data": {
               "text": "Photos or visuals that represent your brand’s world. \nThis could be product photos, lifestyle shots, or \nanything that captures the feeling or story of your idea",
-              "fontColor": "#1e1e1e",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": "medium",
               "showHandles": false
             },
@@ -418,7 +419,7 @@
             },
             "data": {
               "text": "Symbols or simple graphics that could represent your brand identity\nThey help visualize personality and consistency",
-              "fontColor": "#1e1e1e",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": "medium",
               "showHandles": false
             },
@@ -436,7 +437,7 @@
             },
             "data": {
               "text": "Examples of typography that fit your brand’s tone\nSuch as elegant script fonts, bold sans-serifs, \nor quirky handwritten lettering.",
-              "fontColor": "#1e1e1e",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": "medium",
               "showHandles": false
             },
@@ -450,28 +451,29 @@
             "id": "ATbh-2DYrOHc1Wa95_kXU",
             "type": "text",
             "position": {
-              "x": 1539.2846320016038,
-              "y": 693.7385312761579
+              "x": 1534.3079920016037,
+              "y": 670.099491276158
             },
             "data": {
               "text": "Descriptive words that express your brand’s mood \n(e.g., bold, calm, vintage, playful).",
-              "fontColor": "#1e1e1e",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": "medium",
               "showHandles": false
             },
             "measured": {
               "width": 378,
               "height": 60
-            }
+            },
+            "dragging": false
           }
         ],
         "edges": [
 
         ],
         "viewport": {
-          "x": -225.42955607798217,
-          "y": 79.51102225310171,
-          "zoom": 0.8547480116970423
+          "x": -168.3416470043785,
+          "y": 111.36682477575818,
+          "zoom": 0.803755144032922
         }
       }
     },
@@ -1910,6 +1912,6 @@
     "project_template_level_name": "ai-generated-design-lesson4-level1-template_2026"
   },
   "published": true,
-  "audit_log": "[{\"changed_at\":\"2026-02-24T18:10:59.153+00:00\",\"changed\":[\"cloned from \\\"ai-generated-design-lesson4-level1a_2025\\\"\"],\"cloned_from\":\"ai-generated-design-lesson4-level1a_2025\"},{\"changed_at\":\"2026-03-03 22:25:29 +0000\",\"changed\":[],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-03 22:38:44 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-03 22:40:41 +0000\",\"changed\":[],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-04 18:29:30 +0000\",\"changed\":[\"long_instructions\",\"bubble_choice_description\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-27 05:53:22 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-04-15 18:40:14 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2026-04-15 18:41:35 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2026-04-16 17:20:03 +0000\",\"changed\":[],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-24 15:24:12 +0000\",\"changed\":[\"display_name\",\"bubble_choice_description\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2026-04-30 16:08:19 -0400\",\"changed\":[\"start_sources\"],\"changed_by_id\":1,\"changed_by_email\":\"levelbuilder@dev.com\"},{\"changed_at\":\"2026-04-30 16:10:59 -0400\",\"changed\":[\"start_sources\"],\"changed_by_id\":1,\"changed_by_email\":\"levelbuilder@dev.com\"},{\"changed_at\":\"2026-04-30 16:16:34 -0400\",\"changed\":[\"start_sources\"],\"changed_by_id\":1,\"changed_by_email\":\"levelbuilder@dev.com\"},{\"changed_at\":\"2026-05-06 09:55:51 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":155,\"changed_by_email\":\"dani@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2026-02-24T18:10:59.153+00:00\",\"changed\":[\"cloned from \\\"ai-generated-design-lesson4-level1a_2025\\\"\"],\"cloned_from\":\"ai-generated-design-lesson4-level1a_2025\"},{\"changed_at\":\"2026-03-03 22:25:29 +0000\",\"changed\":[],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-03 22:38:44 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-03 22:40:41 +0000\",\"changed\":[],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-04 18:29:30 +0000\",\"changed\":[\"long_instructions\",\"bubble_choice_description\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-27 05:53:22 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-04-15 18:40:14 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2026-04-15 18:41:35 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2026-04-16 17:20:03 +0000\",\"changed\":[],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-24 15:24:12 +0000\",\"changed\":[\"display_name\",\"bubble_choice_description\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2026-04-30 16:08:19 -0400\",\"changed\":[\"start_sources\"],\"changed_by_id\":1,\"changed_by_email\":\"levelbuilder@dev.com\"},{\"changed_at\":\"2026-04-30 16:10:59 -0400\",\"changed\":[\"start_sources\"],\"changed_by_id\":1,\"changed_by_email\":\"levelbuilder@dev.com\"},{\"changed_at\":\"2026-04-30 16:16:34 -0400\",\"changed\":[\"start_sources\"],\"changed_by_id\":1,\"changed_by_email\":\"levelbuilder@dev.com\"},{\"changed_at\":\"2026-05-06 09:55:51 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":155,\"changed_by_email\":\"dani@code.org\"},{\"changed_at\":\"2026-05-07 18:30:42 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":155,\"changed_by_email\":\"dani@code.org\"}]"
 }]]></config>
 </Sketchlab>

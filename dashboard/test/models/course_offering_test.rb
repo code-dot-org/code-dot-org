@@ -730,7 +730,7 @@ class CourseOfferingTest < ActiveSupport::TestCase
   end
 
   test 'query count for assignable_course_offerings' do
-    Unit.stubs(:should_cache?).returns true
+    setup_script_cache
 
     assert_cached_queries(0) do
       CourseOffering.assignable_course_offerings_info(@teacher)
@@ -739,8 +739,6 @@ class CourseOfferingTest < ActiveSupport::TestCase
     assert_cached_queries(0) do
       CourseOffering.assignable_course_offerings_info(@facilitator)
     end
-
-    Unit.clear_cache
   end
 
   test 'missing_required_device_compatibility? returns false for pl course offerings' do
