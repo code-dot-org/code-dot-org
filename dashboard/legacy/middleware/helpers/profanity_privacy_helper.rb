@@ -19,7 +19,7 @@ BLOCKLY_SOURCE_FILENAME = 'main.json'.freeze unless defined? BLOCKLY_SOURCE_FILE
 def profanity_privacy_violation?(filename, body, project_type)
   return false unless filename == BLOCKLY_SOURCE_FILENAME
   share_failure = share_failure_from_body body, request.locale, project_type
-  !!share_failure
+  share_failure && share_failure.type != ShareFiltering::FailureType::ADDRESS
 end
 
 def channel_policy_violation?(channel_id)
