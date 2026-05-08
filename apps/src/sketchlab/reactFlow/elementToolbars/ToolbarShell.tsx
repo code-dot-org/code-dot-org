@@ -78,6 +78,21 @@ export default function ToolbarShell({
         // double clicks here so double-clicking inside the toolbar
         // (e.g. on the rotation input) does not enter edit mode.
         onDoubleClick={event => event.stopPropagation()}
+        // When the user clicks a non-interactive area of the toolbar
+        // (background padding, group spacing, labels), keep focus on
+        // the selected node/edge.
+        onMouseDown={event => {
+          const target = event.target;
+          if (!(target instanceof HTMLElement)) return;
+          if (
+            target.closest(
+              'button, input, textarea, select, a, [contenteditable="true"]'
+            )
+          ) {
+            return;
+          }
+          event.preventDefault();
+        }}
       >
         <div className={styles.header}>
           <Tooltip title="Close toolbar" placement="top">
