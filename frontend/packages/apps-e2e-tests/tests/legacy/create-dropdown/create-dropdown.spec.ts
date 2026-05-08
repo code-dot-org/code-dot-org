@@ -1,3 +1,5 @@
+import {type Page} from '@playwright/test';
+
 import {createTeacher, createStudent, createSection} from '../../shared/auth';
 import {expect, test} from '../../shared/fixtures';
 
@@ -10,6 +12,26 @@ import {expect, test} from '../../shared/fixtures';
  * Tagged @no_mobile. @single_session tag is irrelevant in Playwright (each test
  * is isolated); scenarios do not share state across tests.
  */
+
+/**
+ * Dismisses the "Finish creating your account" school-info interstitial if
+ * present.  The modal has no close button; selecting a state and submitting is
+ * the only way to clear it.  Young students created without a `us_state` hit
+ * this on first visit to /home; Cucumber bypassed it because Selenium does not
+ * enforce actionability (overlapping-element) checks.
+ */
+async function dismissSchoolInfoInterstitialIfPresent(
+  page: Page,
+): Promise<void> {
+  const stateSelect = page.locator('.modal select');
+  const visible = await stateSelect
+    .isVisible({timeout: 3_000})
+    .catch(() => false);
+  if (!visible) return;
+  await stateSelect.selectOption('WA');
+  await page.locator('.modal').getByRole('button', {name: 'Submit'}).click();
+  await page.locator('.modal').waitFor({state: 'hidden', timeout: 10_000});
+}
 
 test.describe('Create dropdown in header', () => {
   test(
@@ -81,6 +103,7 @@ test.describe('Create dropdown in header', () => {
     async ({page}) => {
       await createStudent(page, {age: 10});
       await page.goto('/home');
+      await dismissSchoolInfoInterstitialIfPresent(page);
       await page
         .locator('.create_menu')
         .waitFor({state: 'visible', timeout: 30_000});
@@ -124,6 +147,7 @@ test.describe('Create dropdown in header', () => {
       }
 
       await page.goto('/home');
+      await dismissSchoolInfoInterstitialIfPresent(page);
       await page
         .locator('.create_menu')
         .waitFor({state: 'visible', timeout: 30_000});

@@ -38,25 +38,25 @@ const TARGET_DISMISS_CASES = [
   {
     url: '/courses/allthethingscourse/units/1/lessons/2/levels/7?noautoplay=true&show_callouts=1',
     calloutId: 1,
-    text: 'Click here to see the code for the program you’re making',
+    text: "Click here to see the code for the program you're making",
     closeTarget: '#show-code-header',
   },
   {
     url: '/hoc/1?noautoplay=true',
     calloutId: 1,
-    text: 'Hit “Run” to try your program',
+    text: 'Hit "Run" to try your program',
     closeTarget: '#runButton',
   },
   {
     url: '/hoc/1?noautoplay=true',
     calloutId: 0,
-    text: 'Drag a “move” block and snap it below the other block',
+    text: 'Drag a "move" block and snap it below the other block',
     closeTarget: "[data-id='moveForward']",
   },
   {
     url: '/hoc/14?noautoplay=true',
     calloutId: 0,
-    text: 'Click here to see the code for the program you’re making',
+    text: "Click here to see the code for the program you're making",
     closeTarget: '#show-code-header',
   },
 ] as const;
@@ -75,7 +75,8 @@ test.describe('Callouts — target-element dismissal', () => {
       await expect(callout(page, calloutId)).toBeVisible();
       await expect(callout(page, calloutId)).toContainText(text);
 
-      await page.locator(closeTarget).click();
+      // Cucumber uses jQuery click (bypasses actionability); match with dispatchEvent.
+      await page.locator(closeTarget).dispatchEvent('click');
       await callout(page, calloutId).waitFor({state: 'hidden'});
     });
   }
@@ -182,7 +183,8 @@ test(
       .waitFor({state: 'visible', timeout: 30_000});
     await dismissLoginReminder(page);
 
-    await page.locator('#show-code-header').click();
+    // Cucumber uses `I press "show-code-header"` (jQuery click); callout may overlap.
+    await page.locator('#show-code-header').dispatchEvent('click');
     await page.locator('.modal-backdrop').waitFor({state: 'visible'});
 
     const backdropZ = await page

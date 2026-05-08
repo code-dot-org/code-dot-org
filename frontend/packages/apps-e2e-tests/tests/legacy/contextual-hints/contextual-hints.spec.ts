@@ -31,14 +31,17 @@ test.describe('Contextual hints', () => {
       .locator('#runButton')
       .waitFor({state: 'visible', timeout: 30_000});
 
-    await page.locator('#runButton').click();
+    // The instructions overlay (#overlay) covers the run button; dispatch the
+    // click event directly (mirrors Cucumber's `I press "runButton"` step which
+    // uses jQuery click and bypasses the overlay).
+    await page.locator('#runButton').dispatchEvent('click');
     await page
       .locator('.uitest-topInstructions-inline-feedback')
       .waitFor({state: 'visible'});
 
     await expect(
       page.locator('.uitest-topInstructions-inline-feedback'),
-    ).toContainText("Not quite. Try using a block you aren't using yet.");
+    ).toContainText('Not quite. Try using a block you aren’t using yet.');
     await expectHintCount(page, 4);
 
     // View the next hint — a Blockly block-space renders inside the panel.
@@ -60,7 +63,7 @@ test.describe('Contextual hints', () => {
     // Lightbulb is absent before running.
     await expect(page.locator('#lightbulb')).not.toBeAttached();
 
-    await page.locator('#runButton').click();
+    await page.locator('#runButton').dispatchEvent('click');
     await page
       .locator('.uitest-topInstructions-inline-feedback')
       .waitFor({state: 'visible'});

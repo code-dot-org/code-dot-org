@@ -51,7 +51,9 @@ test.describe('Text-to-speech', () => {
         page.locator('.csf-top-instructions .inline-audio'),
       ).not.toBeAttached();
 
-      await page.locator('#runButton').click();
+      // #overlay covers the run button; dispatch the click event directly
+      // (mirrors Cucumber's `I press "runButton"` which uses jQuery click).
+      await page.locator('#runButton').dispatchEvent('click');
       await page
         .locator('.uitest-topInstructions-inline-feedback')
         .waitFor({state: 'visible'});

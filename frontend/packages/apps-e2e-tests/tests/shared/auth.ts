@@ -17,6 +17,10 @@ interface CreateUserPayload {
   email_preference_form_kind?: string;
   email_preference_request_ip?: string;
   email_preference_source?: string;
+  /** US state code (e.g. 'CO').  Suppresses the school-info interstitial. */
+  us_state?: string;
+  user_provided_us_state?: boolean;
+  country_code?: string;
 }
 
 /**

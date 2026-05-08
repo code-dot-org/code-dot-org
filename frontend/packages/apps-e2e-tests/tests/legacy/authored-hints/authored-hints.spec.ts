@@ -40,12 +40,13 @@ test.describe('Authored hints', () => {
     await expect(hintPanel(page)).toContainText(
       'This is the second hint. It has a hint video.',
     );
-    await expect(hintPanel(page).locator('img')).toBeVisible();
+    await expect(hintPanel(page).locator('a img')).toBeVisible();
     await expectHintCount(page, 1);
 
     // Wait for the hint image to fully decode before advancing.
+    // Use 'a img' to avoid strict-mode violation (Immersive Reader also adds an img).
     await hintPanel(page)
-      .locator('img')
+      .locator('a img')
       .evaluate(
         img =>
           new Promise<void>(resolve => {

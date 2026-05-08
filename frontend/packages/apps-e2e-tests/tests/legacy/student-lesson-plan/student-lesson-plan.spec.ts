@@ -29,7 +29,7 @@ test(
 
     await lessonPlanPage.waitForURL(
       /\/courses\/allthelessonplans\/units\/1\/lessons\/1\/student/,
-      {timeout: 30_000},
+      {timeout: 30_000, waitUntil: 'domcontentloaded'},
     );
     await lessonPlanPage
       .locator('#show-container')
@@ -80,36 +80,50 @@ test(
       'Information for Students and Teachers',
     );
 
-    // Navigate to Lesson 2 via dropdown nav
+    // Navigate to Lesson 2 via dropdown nav.
+    // The dropdown groups lessons by lesson group.  On entry the current group
+    // (Lesson Group 1, containing Lesson 1) is expanded; its section header and
+    // Lesson 1 link are shown.  Lesson Group 2 header is shown but collapsed —
+    // click it first to expand the group and reveal the Lesson 2 link.
     await lessonPlanPage
       .locator('.uitest-lesson-dropdown-nav')
       .waitFor({state: 'visible', timeout: 15_000});
     await lessonPlanPage.locator('.uitest-lesson-dropdown-nav').click();
 
-    // The current lesson is not selectable; the second lesson appears as a button.
+    // Wait for dropdown to open (section headers appear).
     await lessonPlanPage
-      .getByRole('button', {name: /Lesson 2/})
+      .locator('a.no-navigation')
+      .nth(1)
       .waitFor({state: 'visible', timeout: 15_000});
-    await lessonPlanPage.getByRole('button', {name: /Lesson 2/}).click();
+    // Click the second section header (Lesson Group 2) to expand it.
+    await lessonPlanPage.locator('a.no-navigation').nth(1).click();
 
-    await lessonPlanPage.waitForURL(
-      /\/courses\/allthelessonplans\/units\/1\/lessons\/2\/student/,
-      {timeout: 30_000},
-    );
+    // Lesson 2 is now the first a.navigate in the dropdown.
+    await lessonPlanPage
+      .locator('a.navigate')
+      .first()
+      .waitFor({state: 'visible', timeout: 15_000});
+    await Promise.all([
+      lessonPlanPage.waitForURL(
+        /\/courses\/allthelessonplans\/units\/1\/lessons\/2\/student/,
+        {timeout: 30_000, waitUntil: 'domcontentloaded'},
+      ),
+      lessonPlanPage.locator('a.navigate').first().click(),
+    ]);
     await expect(
       lessonPlanPage.locator('h1:has-text("Lesson 2: Second Lesson")'),
     ).toBeVisible({timeout: 15_000});
 
-    // Navigate back to the unit overview
+    // Navigate back to the unit overview.
     await lessonPlanPage
       .locator('a:has-text("All The Lesson Plans")')
       .waitFor({state: 'visible', timeout: 15_000});
     await Promise.all([
-      lessonPlanPage.waitForNavigation({timeout: 30_000}),
+      lessonPlanPage.waitForURL(/\/courses\/allthelessonplans\/units\/1/, {
+        timeout: 30_000,
+        waitUntil: 'domcontentloaded',
+      }),
       lessonPlanPage.locator('a:has-text("All The Lesson Plans")').click(),
     ]);
-    await lessonPlanPage.waitForURL(/\/courses\/allthelessonplans\/units\/1/, {
-      timeout: 30_000,
-    });
   },
 );
