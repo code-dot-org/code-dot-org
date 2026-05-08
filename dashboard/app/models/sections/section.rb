@@ -168,6 +168,72 @@ class Section < ApplicationRecord
 
   serialized_attrs %w(code_review_expires_at suggested_lesson)
 
+  SUGGESTED_LESSON_TTL = 1.hour
+  SUGGESTED_LESSON_PASSING_THRESHOLD = ActivityConstants::MINIMUM_PASS_RESULT
+
+  def suggested_lesson_stale?
+    data = suggested_lesson
+    return true if data.nil?
+    timestamp = data['timestamp']
+    return true if timestamp.blank?
+    Time.parse(timestamp.to_s) < SUGGESTED_LESSON_TTL.ago
+  rescue ArgumentError
+    true
+  end
+
+  def compute_suggested_lesson
+    unit = script
+    section_students = students.to_a
+    return if section_students.empty? || unit.nil?
+
+    passing_level_ids_by_student = UserLevel
+      .where(user: section_students, script: unit)
+      .where('best_result >= ? OR submitted = ?', SUGGESTED_LESSON_PASSING_THRESHOLD, true)
+      .group_by(&:user_id)
+      .transform_values {|uls| uls.map(&:level_id).to_set}
+
+    last_completed_lesson = nil
+    finished_unit = true
+    unit.lessons.each do |lesson|
+      required_sls = lesson.script_levels.reject(&:bonus)
+      next if required_sls.empty?
+
+      completed_count = section_students.count do |student|
+        passing_ids = passing_level_ids_by_student[student.id] || Set.new
+        required_sls.all? do |sl|
+          level = sl.oldest_active_level
+          if level.is_a?(BubbleChoice)
+            level.sublevels.any? {|sub| passing_ids.include?(sub.id)}
+          else
+            passing_ids.include?(level.id)
+          end
+        end
+      end
+
+      if completed_count >= section_students.size / 2.0
+        last_completed_lesson = lesson
+        finished_unit = true
+      else
+        finished_unit = false
+      end
+    end
+
+    lessons = unit.lessons.to_a
+    next_lesson = if last_completed_lesson
+                    lessons[lessons.index(last_completed_lesson) + 1]
+                  else
+                    lessons.first
+                  end
+
+    update!(
+      suggested_lesson: if finished_unit
+                          {'completed_unit' => true, 'timestamp' => Time.now.utc.iso8601}
+                        else
+                          {'lesson_id' => next_lesson.id, 'timestamp' => Time.now.utc.iso8601}
+                        end
+    )
+  end
+
   # This list is duplicated as SECTION_LOGIN_TYPE in shared_constants.rb and should be kept in sync.
   LOGIN_TYPES = [
     LOGIN_TYPE_EMAIL = 'email'.freeze,

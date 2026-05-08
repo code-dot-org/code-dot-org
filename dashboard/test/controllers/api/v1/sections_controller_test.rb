@@ -1629,8 +1629,7 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
 
   test 'get suggested_lesson computes when data is absent and section has script' do
     section, student, _lesson1, lesson2, sl1, _sl2 = setup_suggested_lesson_section
-    progress = {student.id => {sl1.oldest_active_level.id => {status: 'perfect'}}}
-    @controller.stubs(:script_progress_for_users).returns([progress, {}])
+    create(:user_level, user: student, level: sl1.oldest_active_level, script_id: section.script.id, best_result: ActivityConstants::MINIMUM_PASS_RESULT)
 
     sign_in @teacher
     get :suggested_lesson, params: {id: section.id}
@@ -1644,9 +1643,7 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
     section, student, lesson1, lesson2, sl1, _sl2 = setup_suggested_lesson_section
     stale_timestamp = 2.hours.ago.utc.iso8601
     section.update!(suggested_lesson: {'lesson_id' => lesson1.id, 'timestamp' => stale_timestamp})
-
-    progress = {student.id => {sl1.oldest_active_level.id => {status: 'perfect'}}}
-    @controller.stubs(:script_progress_for_users).returns([progress, {}])
+    create(:user_level, user: student, level: sl1.oldest_active_level, script_id: section.script.id, best_result: ActivityConstants::MINIMUM_PASS_RESULT)
 
     sign_in @teacher
     get :suggested_lesson, params: {id: section.id}
@@ -1656,7 +1653,6 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
   end
 
   test 'get suggested_lesson skips compute when section has no script' do
-    # No script on @section; suggested_lesson stays nil
     sign_in @teacher
     get :suggested_lesson, params: {id: @section.id}
     assert_response :success
@@ -1665,9 +1661,7 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
   end
 
   test 'get suggested_lesson suggests first lesson when no students have completed any lesson' do
-    section, student, lesson1, _lesson2, sl1, _sl2 = setup_suggested_lesson_section
-    progress = {student.id => {sl1.oldest_active_level.id => {status: 'not_tried'}}}
-    @controller.stubs(:script_progress_for_users).returns([progress, {}])
+    section, _student, lesson1, _lesson2, _sl1, _sl2 = setup_suggested_lesson_section
 
     sign_in @teacher
     get :suggested_lesson, params: {id: section.id}
@@ -1675,20 +1669,17 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
     assert_equal lesson1.id, json_response['lesson_id']
   end
 
-  test 'get suggested_lesson suggests nothing when all lessons are completed' do
+  test 'get suggested_lesson returns completed_unit when all lessons are completed' do
     section, student, _lesson1, _lesson2, sl1, sl2 = setup_suggested_lesson_section
-    progress = {
-      student.id => {
-        sl1.oldest_active_level.id => {status: 'perfect'},
-        sl2.oldest_active_level.id => {status: 'perfect'}
-      }
-    }
-    @controller.stubs(:script_progress_for_users).returns([progress, {}])
+    create(:user_level, user: student, level: sl1.oldest_active_level, script_id: section.script.id, best_result: ActivityConstants::MINIMUM_PASS_RESULT)
+    create(:user_level, user: student, level: sl2.oldest_active_level, script_id: section.script.id, best_result: ActivityConstants::MINIMUM_PASS_RESULT)
 
     sign_in @teacher
     get :suggested_lesson, params: {id: section.id}
     assert_response :success
-    assert_nil json_response
+    assert json_response['completed_unit']
+    assert json_response['timestamp'].present?
+    assert_nil json_response['lesson_id']
   end
 
   test 'get suggested_lesson uses majority threshold: half or more students must complete' do
@@ -1697,16 +1688,13 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
     lesson1 = create(:lesson, script: unit, lesson_group: lesson_group)
     lesson2 = create(:lesson, script: unit, lesson_group: lesson_group)
     sl1 = create(:script_level, lesson: lesson1, script: unit)
+    create(:script_level, lesson: lesson2, script: unit)
     section = create(:section, user: @teacher, script: unit)
     student1 = create(:follower, section: section).student_user
-    student2 = create(:follower, section: section).student_user
+    create(:follower, section: section)
 
     # 1 of 2 students (50%) completed lesson1 — meets the >= half threshold
-    progress = {
-      student1.id => {sl1.oldest_active_level.id => {status: 'perfect'}},
-      student2.id => {}
-    }
-    @controller.stubs(:script_progress_for_users).returns([progress, {}])
+    create(:user_level, user: student1, level: sl1.oldest_active_level, script_id: unit.id, best_result: ActivityConstants::MINIMUM_PASS_RESULT)
 
     sign_in @teacher
     get :suggested_lesson, params: {id: section.id}

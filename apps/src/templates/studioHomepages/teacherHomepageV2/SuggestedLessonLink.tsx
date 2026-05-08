@@ -8,10 +8,11 @@ import i18n from '@cdo/locale';
 import styles from './teacherHomepage.module.scss';
 
 interface SuggestedLesson {
-  lesson_id: number;
+  lesson_id?: number;
   timestamp: string;
-  name: string;
-  url: string;
+  name?: string;
+  url?: string;
+  completed_unit?: boolean;
 }
 
 interface SuggestedLessonLinkProps {
@@ -32,6 +33,23 @@ const SuggestedLessonLink: React.FC<SuggestedLessonLinkProps> = ({
   }, [sectionId]);
 
   if (!lesson) return null;
+
+  if (lesson.completed_unit) {
+    return (
+      <div className={styles.studentsAddedAlert}>
+        <div className={styles.taskButtonLeft}>
+          <FontAwesomeV6Icon
+            className={styles.studentAddedAlertIcon}
+            iconName={'check-circle'}
+            iconStyle={'solid'}
+          />
+          <Typography variant="body3" gutterBottom>
+            {i18n.studentsCompletedUnit()}
+          </Typography>
+        </div>
+      </div>
+    );
+  }
 
   return (
     <a

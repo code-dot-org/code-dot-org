@@ -1,10 +1,6 @@
 require 'metrics/events'
 
 class Api::V1::SectionsController < Api::V1::JSONApiController
-  include UsersHelper
-
-  SUGGESTED_LESSON_PASSING_STATUSES = %w(passed perfect submitted free_play_complete completed_assessment).freeze
-  SUGGESTED_LESSON_TTL = 1.hour
   load_resource :section, find_by: :code, only: [:join, :leave]
   before_action :find_follower, only: :leave
   load_and_authorize_resource except: [:join, :leave, :membership, :valid_course_offerings, :create, :create_demo, :presets, :update, :require_captcha, :assigned_essential_ai_dependency]
@@ -384,8 +380,8 @@ class Api::V1::SectionsController < Api::V1::JSONApiController
 
   # GET /api/v1/sections/<id>/suggested_lesson
   def suggested_lesson
-    if suggested_lesson_stale? && @section.script.present?
-      compute_suggested_lesson
+    if @section.suggested_lesson_stale? && @section.script.present?
+      @section.compute_suggested_lesson
       @section.reload
     end
 
@@ -397,59 +393,6 @@ class Api::V1::SectionsController < Api::V1::JSONApiController
       )
     end
     render json: data
-  end
-
-  private def suggested_lesson_stale?
-    data = @section.suggested_lesson
-    return true if data.nil?
-    timestamp = data['timestamp']
-    return true if timestamp.blank?
-    Time.parse(timestamp.to_s) < SUGGESTED_LESSON_TTL.ago
-  rescue ArgumentError
-    true
-  end
-
-  private def compute_suggested_lesson
-    unit = @section.script
-    students = @section.students.to_a
-    return if students.empty?
-
-    progress_by_user = script_progress_for_users(students, unit)[0]
-
-    last_completed_lesson = nil
-    unit.lessons.each do |lesson|
-      required_sls = lesson.script_levels.reject {|sl| sl.bonus || sl.assessment?}
-      next if required_sls.empty?
-
-      completed_count = students.count do |student|
-        student_progress = progress_by_user[student.id] || {}
-        required_sls.all? do |sl|
-          level = sl.oldest_active_level
-          if level.is_a?(BubbleChoice)
-            level.sublevels.any? {|sub| SUGGESTED_LESSON_PASSING_STATUSES.include?(student_progress.dig(sub.id, :status))}
-          else
-            SUGGESTED_LESSON_PASSING_STATUSES.include?(student_progress.dig(level.id, :status))
-          end
-        end
-      end
-
-      last_completed_lesson = lesson if completed_count >= students.size / 2.0
-    end
-
-    lessons = unit.lessons.to_a
-    next_lesson = if last_completed_lesson
-                    lessons[lessons.index(last_completed_lesson) + 1]
-                  else
-                    lessons.first
-                  end
-    return unless next_lesson
-
-    @section.update!(
-      suggested_lesson: {
-        'lesson_id' => next_lesson.id,
-        'timestamp' => Time.now.utc.iso8601
-      }
-    )
   end
 
   private def find_follower

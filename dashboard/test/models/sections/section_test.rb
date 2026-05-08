@@ -1713,4 +1713,75 @@ class SectionTest < ActiveSupport::TestCase
 
     create(:section, teacher: @teacher, course_id: unit_group.id)
   end
+
+  # suggested_lesson
+
+  test 'suggested_lesson_stale? returns true when suggested_lesson is nil' do
+    assert @section.suggested_lesson_stale?
+  end
+
+  test 'suggested_lesson_stale? returns true when timestamp is missing' do
+    @section.update!(suggested_lesson: {'lesson_id' => 1})
+    assert @section.suggested_lesson_stale?
+  end
+
+  test 'suggested_lesson_stale? returns false for a fresh timestamp' do
+    @section.update!(suggested_lesson: {'lesson_id' => 1, 'timestamp' => Time.now.utc.iso8601})
+    refute @section.suggested_lesson_stale?
+  end
+
+  test 'suggested_lesson_stale? returns true for a stale timestamp' do
+    @section.update!(suggested_lesson: {'lesson_id' => 1, 'timestamp' => 2.hours.ago.utc.iso8601})
+    assert @section.suggested_lesson_stale?
+  end
+
+  test 'compute_suggested_lesson does nothing when section has no students' do
+    unit = create(:script, :in_single_unit_course)
+    section = create(:section, teacher: @teacher, script: unit)
+    section.compute_suggested_lesson
+    assert_nil section.reload.suggested_lesson
+  end
+
+  test 'compute_suggested_lesson suggests first lesson when no students have passed any level' do
+    unit, lesson1, _lesson2, _sl1, _sl2, section, _student = build_suggested_lesson_section
+    section.compute_suggested_lesson
+    assert_equal lesson1.id, section.reload.suggested_lesson['lesson_id']
+  end
+
+  test 'compute_suggested_lesson suggests next lesson after majority completes one' do
+    unit, _lesson1, lesson2, sl1, _sl2, section, student = build_suggested_lesson_section
+    create(:user_level, user: student, level: sl1.oldest_active_level, script_id: unit.id, best_result: ActivityConstants::MINIMUM_PASS_RESULT)
+
+    section.compute_suggested_lesson
+    assert_equal lesson2.id, section.reload.suggested_lesson['lesson_id']
+  end
+
+  test 'compute_suggested_lesson sets completed_unit when all lessons are completed' do
+    unit, _lesson1, _lesson2, sl1, sl2, section, student = build_suggested_lesson_section
+    create(:user_level, user: student, level: sl1.oldest_active_level, script_id: unit.id, best_result: ActivityConstants::MINIMUM_PASS_RESULT)
+    create(:user_level, user: student, level: sl2.oldest_active_level, script_id: unit.id, best_result: ActivityConstants::MINIMUM_PASS_RESULT)
+
+    section.compute_suggested_lesson
+    data = section.reload.suggested_lesson
+    assert data['completed_unit']
+    assert_nil data['lesson_id']
+  end
+
+  test 'compute_suggested_lesson writes a timestamp' do
+    unit, _lesson1, _lesson2, _sl1, _sl2, section, _student = build_suggested_lesson_section
+    section.compute_suggested_lesson
+    assert section.reload.suggested_lesson['timestamp'].present?
+  end
+
+  private def build_suggested_lesson_section
+    unit = create(:script, :in_single_unit_course)
+    lesson_group = create(:lesson_group, script: unit)
+    lesson1 = create(:lesson, script: unit, lesson_group: lesson_group)
+    lesson2 = create(:lesson, script: unit, lesson_group: lesson_group)
+    sl1 = create(:script_level, lesson: lesson1, script: unit)
+    sl2 = create(:script_level, lesson: lesson2, script: unit)
+    section = create(:section, teacher: @teacher, script: unit)
+    student = create(:follower, section: section).student_user
+    [unit, lesson1, lesson2, sl1, sl2, section, student]
+  end
 end

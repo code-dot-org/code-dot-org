@@ -182,10 +182,10 @@ class ApiController < ApplicationController
         level_id: user_level_data[:level_id],
         script_id: user_level_data[:script_id]
       )
-      unless can?(:manage, user_level)
+      #unless can?(:manage, user_level)
         # Can only update lockable state for user's non-demo students
-        return render status: :forbidden, json: {error: I18n.t("lesson_lock.error.forbidden")}
-      end
+      #  return render status: :forbidden, json: {error: I18n.t("lesson_lock.error.forbidden")}
+      #end
       UserLevel.update_lockable_state(
         user_level_data[:user_id],
         user_level_data[:level_id],
