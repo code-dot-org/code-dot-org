@@ -21,7 +21,7 @@ jobs:
         uses: ./.github/actions/frontend/setup
 
       - name: Build, Lint, Typecheck, Test
-        run: yarn turbo run build lint typecheck test --filter=@code-dot-org/oceans-lab
+        run: yarn turbo run release:dryrun --filter=@code-dot-org/oceans-lab
         working-directory: ./frontend
 
   e2e:
