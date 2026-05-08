@@ -1,3 +1,4 @@
+import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import React, {useCallback, useEffect, useMemo, useState} from 'react';
 
 import AichatContextManager from '@cdo/apps/aichat/aichatContextManager';
@@ -916,7 +917,7 @@ const LevelCard: React.FC<LevelCardProps> = ({
           aria-label="Move up"
           title="Move up"
         >
-          ↑
+          <FontAwesomeV6Icon iconName="arrow-up" />
         </button>
         <button
           type="button"
@@ -926,7 +927,7 @@ const LevelCard: React.FC<LevelCardProps> = ({
           aria-label="Move down"
           title="Move down"
         >
-          ↓
+          <FontAwesomeV6Icon iconName="arrow-down" />
         </button>
         <button
           type="button"
@@ -940,7 +941,7 @@ const LevelCard: React.FC<LevelCardProps> = ({
               : 'Remove level'
           }
         >
-          🗑
+          <FontAwesomeV6Icon iconName="trash" />
         </button>
       </div>
       <div className={moduleStyles.cardBody}>
