@@ -13,113 +13,142 @@ export const AppMode = {
 export type AppModeValue = (typeof AppMode)[keyof typeof AppMode];
 
 /**
- * Page Object for the AI for Oceans standalone dev server.
+ * Base Page Object for the AI for Oceans standalone dev server.
  *
- * Wraps all scene-specific locators and common navigation/interaction helpers.
- * All `goto` calls append `?guide=off` so that guide overlays never block
- * test interactions; tests that explicitly exercise guide behaviour should
- * construct the URL manually via `page.goto`.
+ * Contains shared locators and navigation helpers for all modes. Mode-specific
+ * training interactions (yes/no buttons, classifyOne, train, fullFlow) live in
+ * the concrete subclasses {@link FishVTrashPage} and {@link FishShortPage}.
+ *
+ * All `goto` calls append `?guide=off` to suppress guide overlays.
  */
 export class OceansPage {
-  readonly page: Page;
+  constructor(readonly page: Page) {}
+
+  /**
+   * Locate any button by its accessible name.
+   *
+   * @param label - Exact string or regex matched against the button's accessible name.
+   */
+  getButton(label: string | RegExp): Locator {
+    return this.page.getByRole('button', {name: label});
+  }
 
   // ── Training scene ──────────────────────────────────────────────────
-  /** Yes / "Fish" / word-label button. */
-  readonly yesButton: Locator;
-  /** No / "Not Fish" / "Not [word]" button. */
-  readonly noButton: Locator;
+
   /** Counter span showing total classifications so far. */
-  readonly trainCount: Locator;
-  /** Erase (reset) button — opens the confirmation dialog. */
-  readonly eraseButton: Locator;
-  /** "Continue" button that advances Training → Predicting. */
-  readonly trainingContinueButton: Locator;
+  get trainCount(): Locator {
+    return this.page.locator('#uitest-train-count');
+  }
+
+  /** Erase button — also the sentinel for "training scene is visible". */
+  get eraseButton(): Locator {
+    return this.getButton('Erase');
+  }
+
+  /** Continue button that advances Training → Predicting. */
+  get trainingContinueButton(): Locator {
+    return this.page.getByRole('button', {name: 'Continue'});
+  }
 
   // ── Words scene (FishShort / FishLong) ──────────────────────────────
+
   /** All word-choice buttons rendered in the Words scene. */
-  readonly wordButtons: Locator;
+  get wordButtons(): Locator {
+    return this.page.locator('.words-button');
+  }
 
   // ── Predict scene ───────────────────────────────────────────────────
-  /** "Run" button that starts prediction. */
-  readonly runButton: Locator;
+
+  /** Run button that starts prediction. */
+  get runButton(): Locator {
+    return this.page.locator('#uitest-run-btn');
+  }
+
   /** Container div holding the three media-control buttons. */
-  readonly mediaControlsContainer: Locator;
+  get mediaControlsContainer(): Locator {
+    return this.page.locator('#uitest-media-ctrl');
+  }
+
   /** Rewind media control. */
-  readonly rewindButton: Locator;
+  get rewindButton(): Locator {
+    return this.getButton('Rewind');
+  }
+
   /**
    * Play / Pause media control.
    * Label alternates between "Pause" (while running) and "Play" (while paused).
    */
-  readonly playPauseButton: Locator;
+  get playPauseButton(): Locator {
+    return this.page.getByRole('button', {name: /^(Pause|Play)$/});
+  }
+
   /** Fast-forward media control. */
-  readonly fastForwardButton: Locator;
-  /** "Continue" button that appears in Predict scene after canSkipPredict. */
-  readonly predictContinueButton: Locator;
+  get fastForwardButton(): Locator {
+    return this.getButton('Fast forward');
+  }
+
+  /** Continue button in Predict scene (appears after canSkipPredict). */
+  get predictContinueButton(): Locator {
+    return this.page.locator('#uitest-continue-btn');
+  }
 
   // ── Pond scene ──────────────────────────────────────────────────────
+
   /** Clickable fish-pond surface (role=button). */
-  readonly pondSurface: Locator;
-  /** Toggle icon that switches to the matching (classified) fish set. */
-  readonly toggleMatchingButton: Locator;
-  /** Toggle icon that switches to the non-matching fish set. */
-  readonly toggleNonMatchingButton: Locator;
+  get pondSurface(): Locator {
+    return this.page.getByRole('button', {name: 'Fish pond'});
+  }
+
+  /** Toggle button that switches to the matching (classified) fish set. */
+  get toggleMatchingButton(): Locator {
+    return this.page.getByRole('button', {name: 'Switch to Matching Items'});
+  }
+
+  /** Toggle button that switches to the non-matching fish set. */
+  get toggleNonMatchingButton(): Locator {
+    return this.page.getByRole('button', {
+      name: 'Switch to Non-Matching Items',
+    });
+  }
+
   /**
    * Info-panel toggle button (FishShort / FishLong only).
    * Has `aria-pressed` reflecting open/closed state.
    */
-  readonly infoButton: Locator;
-  /** "Train More" button that returns to the Training scene. */
-  readonly trainMoreButton: Locator;
-  /** "Continue" button inside the pond nav-buttons container. */
-  readonly pondContinueButton: Locator;
+  get infoButton(): Locator {
+    return this.page.locator('#uitest-info-btn');
+  }
 
-  // ── Confirmation dialog ─────────────────────────────────────────────
-  /** Header text of the erase-confirmation dialog ("Are you sure?"). */
-  readonly confirmationHeader: Locator;
-  /** "Erase" confirm button inside the dialog. */
-  readonly confirmationEraseButton: Locator;
-  /** "Cancel" button inside the dialog. */
-  readonly confirmationCancelButton: Locator;
+  /** Train More button that returns to the Training scene. */
+  get trainMoreButton(): Locator {
+    return this.page.getByRole('button', {name: 'Train More'});
+  }
 
-  constructor(page: Page) {
-    this.page = page;
-
-    this.yesButton = page.locator('.ocean-train-btn-yes');
-    this.noButton = page.locator('.ocean-train-btn-no');
-    this.trainCount = page.locator('#uitest-train-count');
-    this.eraseButton = page.locator('.ocean-erase-btn');
-    this.trainingContinueButton = page.getByRole('button', {name: 'Continue'});
-
-    this.wordButtons = page.locator('.ocean-word-btn');
-
-    this.runButton = page.locator('#uitest-run-btn');
-    this.mediaControlsContainer = page.locator('#uitest-media-ctrl');
-    this.rewindButton = page.getByRole('button', {name: 'Rewind'});
-    this.playPauseButton = page.getByRole('button', {name: /^(Pause|Play)$/});
-    this.fastForwardButton = page.getByRole('button', {name: 'Fast forward'});
-    this.predictContinueButton = page.locator('#uitest-continue-btn');
-
-    this.pondSurface = page.getByRole('button', {name: 'Fish pond'});
-    this.toggleMatchingButton = page.getByRole('button', {
-      name: 'Switch to Matching Items',
-    });
-    this.toggleNonMatchingButton = page.getByRole('button', {
-      name: 'Switch to Non-Matching Items',
-    });
-    this.infoButton = page.locator('#uitest-info-btn');
-    this.trainMoreButton = page.getByRole('button', {name: 'Train More'});
-    this.pondContinueButton = page
+  /** Continue button inside the pond nav-buttons container. */
+  get pondContinueButton(): Locator {
+    return this.page
       .locator('#uitest-nav-btns')
       .getByRole('button', {name: 'Continue'});
-
-    this.confirmationHeader = page.locator('.confirmation-text');
-    this.confirmationEraseButton = page.locator('.dialog-button', {
-      hasText: 'Erase',
-    });
-    this.confirmationCancelButton = page.locator('.dialog-button', {
-      hasText: 'Cancel',
-    });
   }
+
+  // ── Confirmation dialog ─────────────────────────────────────────────
+
+  /** Header text of the erase-confirmation dialog ("Are you sure?"). */
+  get confirmationHeader(): Locator {
+    return this.page.locator('.confirmation-text');
+  }
+
+  /** Erase confirm button inside the confirmation dialog. */
+  get confirmationEraseButton(): Locator {
+    return this.page.locator('.dialog-button', {hasText: 'Erase'});
+  }
+
+  /** Cancel button inside the confirmation dialog. */
+  get confirmationCancelButton(): Locator {
+    return this.page.locator('.dialog-button', {hasText: 'Cancel'});
+  }
+
+  // ── Navigation ──────────────────────────────────────────────────────
 
   /**
    * Navigate to the standalone dev server for the given app mode.
@@ -135,16 +164,14 @@ export class OceansPage {
   }
 
   /**
-   * Wait until the Training scene is fully visible (loading screen gone,
-   * Yes/No buttons rendered and not obscured).
+   * Wait until the Training scene is fully visible.
+   * Uses the Erase button as the sentinel — it is only rendered in the training scene.
    */
   async waitForTrainingScene(): Promise<void> {
-    await this.yesButton.waitFor({state: 'visible', timeout: 10_000});
+    await this.eraseButton.waitFor({state: 'visible', timeout: 10_000});
   }
 
-  /**
-   * Wait until the Words scene is visible (FishShort / FishLong modes).
-   */
+  /** Wait until the Words scene is visible (FishShort / FishLong modes). */
   async waitForWordsScene(): Promise<void> {
     await this.wordButtons.first().waitFor({state: 'visible', timeout: 10_000});
   }
@@ -159,18 +186,50 @@ export class OceansPage {
     await this.runButton.waitFor({state: 'visible', timeout});
   }
 
-  /**
-   * Wait until the Pond scene is visible (fish-pond surface rendered).
-   */
+  /** Wait until the Pond scene is visible (fish-pond surface rendered). */
   async waitForPondScene(): Promise<void> {
     await this.pondSurface.waitFor({state: 'visible', timeout: 10_000});
   }
 
   /**
+   * Advance from Training to Predicting by clicking Continue,
+   * then wait for the Run button to appear.
+   */
+  async advanceToPredictScene(): Promise<void> {
+    await this.trainingContinueButton.click();
+    await this.waitForPredictScene();
+  }
+
+  /**
+   * Start prediction and wait until the Continue button is available
+   * (canSkipPredict becomes true after the prediction animation runs).
+   *
+   * @param timeout - Max ms to wait for the Continue button; defaults to 15 s.
+   */
+  async runPrediction(timeout = 15_000): Promise<void> {
+    await this.runButton.click();
+    await this.predictContinueButton.waitFor({state: 'visible', timeout});
+  }
+}
+
+/**
+ * Base for modes that include the Training scene.
+ *
+ * Subclasses supply the mode-specific yes/no button locators; this class
+ * provides `classifyOne`, `train`, and `fullFlow` built on top of them.
+ */
+export abstract class TrainingPage extends OceansPage {
+  /** Positive-answer training button (label depends on mode / selected word). */
+  abstract get yesButton(): Locator;
+
+  /** Negative-answer training button (label depends on mode / selected word). */
+  abstract get noButton(): Locator;
+
+  /**
    * Click Yes (or No) once and wait until the training counter increments.
    *
-   * `onClassifyFish` increments `yesCount`/`noCount` synchronously but also
-   * sets `isRunning: true`. While `isRunning` is true (~1 s fish-eat animation)
+   * `onClassifyFish` increments the count synchronously but also sets
+   * `isRunning: true`. While `isRunning` is true (~1 s fish-eat animation)
    * subsequent clicks are silently ignored. This method retries the click until
    * the counter advances, so callers never need to manage animation timing.
    *
@@ -181,9 +240,6 @@ export class OceansPage {
     const count = parseInt(currentText.trim(), 10);
     const next = Math.min(999, count + 1);
 
-    // Retry: click the button, then assert count reached `next` within 1.2 s
-    // (one animation cycle). If the click was a no-op (isRunning still true),
-    // toPass retries automatically until the 5 s outer timeout.
     await expect(async () => {
       if (isYes) {
         await this.yesButton.click();
@@ -210,30 +266,10 @@ export class OceansPage {
   }
 
   /**
-   * Advance from Training to Predicting by clicking the Continue button,
-   * then wait for the Run button to appear.
-   */
-  async advanceToPredictScene(): Promise<void> {
-    await this.trainingContinueButton.click();
-    await this.waitForPredictScene();
-  }
-
-  /**
-   * Start prediction and wait until the Continue button is available
-   * (canSkipPredict becomes true after ~5 s).
+   * Complete the Training → Predicting → Pond flow.
    *
-   * @param timeout - Maximum ms to wait for the Continue button; defaults to 15 s.
-   */
-  async runPrediction(timeout = 15_000): Promise<void> {
-    await this.runButton.click();
-    await this.predictContinueButton.waitFor({state: 'visible', timeout});
-  }
-
-  /**
-   * Complete the full Training → Predicting → Pond flow.
-   *
-   * Trains `yesCount` yes + `noCount` no examples, then runs prediction and
-   * advances to the Pond scene.
+   * Trains `yesCount` yes + `noCount` no examples (default: 0 each), then
+   * runs prediction and advances to the Pond scene.
    *
    * @param yesCount - Yes classifications to submit before advancing.
    * @param noCount  - No classifications to submit before advancing.
@@ -244,5 +280,76 @@ export class OceansPage {
     await this.runPrediction();
     await this.predictContinueButton.click();
     await this.waitForPondScene();
+  }
+}
+
+/**
+ * Page object for FishVTrash mode.
+ *
+ * Yes button label: "Fish". No button label: "Not Fish".
+ */
+export class FishVTrashPage extends TrainingPage {
+  /** "Fish" button — exact match so it doesn't also resolve "Not Fish". */
+  get yesButton(): Locator {
+    return this.page.getByRole('button', {name: 'Fish', exact: true});
+  }
+
+  get noButton(): Locator {
+    return this.getButton('Not Fish');
+  }
+
+  /**
+   * Navigate to FishVTrash and wait for the training scene.
+   *
+   * @param page - Playwright Page fixture.
+   */
+  static async load(page: Page): Promise<FishVTrashPage> {
+    const p = new FishVTrashPage(page);
+    await p.goto(AppMode.FishVTrash);
+    await p.waitForTrainingScene();
+    return p;
+  }
+}
+
+/**
+ * Page object for FishShort (and FishLong) mode after a word has been selected.
+ *
+ * Yes button label: the selected word. No button label: "Not <word>".
+ */
+export class FishShortPage extends TrainingPage {
+  /**
+   * @param page - Playwright Page fixture.
+   * @param word - The word selected in the Words scene (e.g. "Blue").
+   */
+  constructor(
+    page: Page,
+    readonly word: string,
+  ) {
+    super(page);
+  }
+
+  /** Yes button — exact match so it doesn't also resolve "Not <word>". */
+  get yesButton(): Locator {
+    return this.page.getByRole('button', {name: this.word, exact: true});
+  }
+
+  get noButton(): Locator {
+    return this.getButton(`Not ${this.word}`);
+  }
+
+  /**
+   * Navigate to FishShort, wait for the Words scene, click the given word,
+   * then wait for the Training scene.
+   *
+   * @param page - Playwright Page fixture.
+   * @param word - Word label to select (e.g. "Blue").
+   */
+  static async load(page: Page, word: string): Promise<FishShortPage> {
+    const p = new FishShortPage(page, word);
+    await p.goto(AppMode.FishShort);
+    await p.waitForWordsScene();
+    await p.getButton(word).click();
+    await p.waitForTrainingScene();
+    return p;
   }
 }

@@ -1,4 +1,4 @@
-/* eslint-disable jsx-a11y/click-events-have-key-events, jsx-a11y/no-static-element-interactions */
+/* eslint-disable jsx-a11y/click-events-have-key-events */
 import {
   faBackward,
   faForward,
@@ -113,6 +113,9 @@ const UnwrappedPredict = class Predict extends React.Component<
         {this.state.displayControls && (
           <div style={styles.mediaControls} id="uitest-media-ctrl">
             <span
+              role="button"
+              tabIndex={0}
+              aria-label="Rewind"
               onClick={() => this.onScaleTime(true)}
               style={mergeStyles(
                 styles.mediaControl,
@@ -126,16 +129,25 @@ const UnwrappedPredict = class Predict extends React.Component<
                   this.state.timeScale !== defaultTimeScale &&
                   `x${this.state.timeScale}`}
               </span>
-              <FontAwesomeIcon icon={faBackward} />
+              <FontAwesomeIcon icon={faBackward} aria-hidden />
             </span>
             <span
+              role="button"
+              tabIndex={0}
+              aria-label={state.isRunning ? 'Pause' : 'Play'}
               onClick={this.onPressPlay}
               style={styles.mediaControl}
               key={MediaControl.Play}
             >
-              <FontAwesomeIcon icon={state.isRunning ? faPause : faPlay} />
+              <FontAwesomeIcon
+                icon={state.isRunning ? faPause : faPlay}
+                aria-hidden
+              />
             </span>
             <span
+              role="button"
+              tabIndex={0}
+              aria-label="Fast forward"
               onClick={() => this.onScaleTime(false)}
               style={mergeStyles(
                 styles.mediaControl,
@@ -144,7 +156,7 @@ const UnwrappedPredict = class Predict extends React.Component<
               )}
               key={MediaControl.FastForward}
             >
-              <FontAwesomeIcon icon={faForward} />
+              <FontAwesomeIcon icon={faForward} aria-hidden />
               <span style={styles.timeScale}>
                 {selectedControl === MediaControl.FastForward &&
                   this.state.timeScale !== defaultTimeScale &&

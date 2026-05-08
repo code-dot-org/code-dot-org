@@ -1,0 +1,65 @@
+# Common workflow for execution of continuous integration for the oceans lab.
+# Two jobs: build (turbo build + lint + typecheck + unit test) and e2e (Playwright).
+name: Oceans-CI
+
+on:
+  workflow_call:
+
+jobs:
+  build:
+    runs-on: ubuntu-24.04
+
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          sparse-checkout: |
+            frontend
+            .github
+          lfs: true
+
+      - name: Setup Frontend
+        uses: ./.github/actions/frontend/setup
+
+      - name: Build, Lint, Typecheck, Test
+        run: yarn turbo run build lint typecheck test --filter=@code-dot-org/oceans-lab
+        working-directory: ./frontend
+
+  e2e:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    container:
+      # Pin matches the `playwright` package resolved in frontend/yarn.lock.
+      # When upgrading Playwright, update both this image tag and the lockfile together.
+      image: mcr.microsoft.com/playwright:v1.57.0-noble
+
+    steps:
+      - name: Install LFS
+        run: apt-get update && apt-get install -y git-lfs
+
+      - uses: actions/checkout@v4
+        with:
+          sparse-checkout: |
+            frontend
+            .github
+          lfs: true
+
+      - name: Setup Frontend
+        uses: ./.github/actions/frontend/setup
+
+      - name: Build
+        run: yarn turbo run build --filter=@code-dot-org/oceans-lab
+        working-directory: ./frontend
+
+      - name: E2E Tests
+        run: yarn turbo run test:ui:ci --filter=@code-dot-org/oceans-lab
+        working-directory: ./frontend
+
+      - name: Upload Playwright Report
+        if: failure()
+        uses: actions/upload-artifact@v4
+        with:
+          name: playwright-report
+          path: |
+            frontend/packages/labs/oceans/playwright-report/
+            frontend/packages/labs/oceans/test-results/
+          retention-days: 7

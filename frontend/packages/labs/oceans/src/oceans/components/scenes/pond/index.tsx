@@ -1,4 +1,4 @@
-/* eslint-disable jsx-a11y/click-events-have-key-events, jsx-a11y/no-static-element-interactions */
+/* eslint-disable jsx-a11y/click-events-have-key-events */
 import {faBan, faCheck, faInfo} from '@fortawesome/free-solid-svg-icons';
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import _ from 'lodash';
@@ -221,7 +221,13 @@ const UnwrappedPond = class Pond extends React.Component {
 
     return (
       <Body>
-        <div onClick={this.onPondClick} style={styles.pondSurface} />
+        <div
+          role="button"
+          aria-label="Fish pond"
+          tabIndex={0}
+          onClick={this.onPondClick}
+          style={styles.pondSurface}
+        />
         <div style={recallIconsStyle}>
           <button
             key="toggle-matching"
@@ -257,16 +263,18 @@ const UnwrappedPond = class Pond extends React.Component {
           </button>
         </div>
         {showInfoButton && (
-          <div
+          <button
+            type="button"
+            id="uitest-info-btn"
+            aria-pressed={state.pondPanelShowing ? 'true' : 'false'}
             style={{
               ...styles.infoIconContainer,
               ...(!state.pondPanelShowing ? {} : styles.bgTeal),
             }}
             onClick={this.onPondPanelButtonClick}
-            id="uitest-info-btn"
           >
             <FontAwesomeIcon icon={faInfo} style={styles.infoIcon} />
-          </div>
+          </button>
         )}
         <img style={styles.pondBot} src={aiBotClosed} alt="" />
         {state.canSkipPond && (
