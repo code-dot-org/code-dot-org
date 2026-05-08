@@ -140,8 +140,8 @@ export function useCopyPaste({
         ...node,
         id: createUuid(),
         position: {
-          x: node.position.x + PASTE_OFFSET_PX,
-          y: node.position.y + PASTE_OFFSET_PX,
+          x: node.position.x + (node.width ?? DEFAULT_NODE_WIDTH),
+          y: node.position.y,
         },
       }));
 
