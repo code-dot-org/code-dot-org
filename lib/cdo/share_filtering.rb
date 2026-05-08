@@ -182,6 +182,7 @@ module ShareFiltering
     phone_number = RegexpUtils.find_potential_phone_number(text)
     share_failure = ShareFailure.new(FailureType::PHONE, phone_number) if phone_number
     raise PIIFilterException.new("Phone Number PII Filter Violation", share_failure) if share_failure && exceptions
+    return share_failure if share_failure
 
     # TODO: Address filtering is disabled for now because the geocoder-based detector
     # has too many false positives on student project text.
