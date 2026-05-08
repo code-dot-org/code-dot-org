@@ -90,7 +90,7 @@ const panelsPlanSchema = Output.object({
         })
       )
       .min(1)
-      .max(8),
+      .max(12),
   }),
 });
 
@@ -113,11 +113,12 @@ async function planPanels(
   const prompt = [
     'You are helping a curriculum author build a "Panels" level: a short,',
     'comic-strip-style sequence of full-width panels with overlay text.',
-    'The level description follows. Plan a sequence of 3 to 6 panels that,',
-    'in order, conveys the intent of the description for a middle-school',
-    'classroom. Each panel needs short overlay text (1-3 sentences,',
-    'markdown allowed) and an image prompt for a single 16:9 illustration',
-    'with no embedded text.',
+    'The level description follows. Plan a sequence of panels (3 to 6 by',
+    'default; if the description names a specific count or range, honor',
+    'that) that, in order, conveys the intent of the description for a',
+    'middle-school classroom. Each panel needs short overlay text (1-3',
+    'sentences, markdown allowed) and an image prompt for a single 16:9',
+    'illustration with no embedded text.',
     ...(lessonContext
       ? [
           '',
@@ -277,13 +278,18 @@ const weblabPlanSchema = Output.object({
           name: z
             .string()
             .describe(
-              'Filename including extension (e.g. "index.html", "style.css", "script.js").'
+              'Filename including extension. May contain forward-slash ' +
+                'separators to place the file in a subfolder, e.g. ' +
+                '"index.html", "css/style.css", "js/lib/util.js". Use a ' +
+                'flat layout by default; only nest folders if the level ' +
+                'description asks for them or the project genuinely needs ' +
+                'organisation.'
             ),
           contents: z.string().describe('Full file contents.'),
         })
       )
       .min(1)
-      .max(6),
+      .max(20),
   }),
 });
 
@@ -318,7 +324,11 @@ export async function generateWeblab2Level(
     '  2. Starter files (HTML / CSS / JS) the student will edit. Always',
     '     include an index.html. Keep total content under a few kilobytes',
     '     per file. Do not include external script or stylesheet links —',
-    '     everything should be local.',
+    '     everything should be local. Use a flat layout (one root folder)',
+    '     by default; introduce subfolders only if the description asks',
+    '     for them. Express subfolders as a `/` in the file name (e.g.',
+    '     "css/style.css"). Honor any explicit file count or layout the',
+    '     description specifies.',
     ...(lessonContext
       ? [
           '',
@@ -359,28 +369,55 @@ export async function generateWeblab2Level(
     throw new Error('Model returned no instructions');
   }
 
-  // Weblab2 expects files to live directly in the implicit root folder "0"
-  // — `folders` stays empty and every file's `folderId` is "0". A nested
-  // folder with parentId "0" is technically valid, but the editor and
-  // preview parent-by-id walks don't surface files that are one level
-  // deeper than they expect, so they render as missing. See the
-  // pre-existing weblab2 levels under dashboard/config/levels/custom/weblab2
-  // for the canonical shape.
+  // The implicit root folder has id "0". Subfolders sit under it via
+  // `parentId: "0"`; their own ids are uuids referenced by files in them.
+  // See dashboard/config/levels/custom/weblab2 for the canonical shape.
+  const folders: MultiFileSource['folders'] = {};
+  const folderIdByPath = new Map<string, string>();
+  folderIdByPath.set('', '0');
+
   const files: MultiFileSource['files'] = {};
   const fileIds: string[] = [];
   let activeFileId: string | null = null;
+
   for (const f of plan.files) {
+    const segments = f.name.split('/').filter(Boolean);
+    const baseName = segments.pop() || f.name;
+    // Walk the folder path, creating any missing folder entries.
+    let parentId = '0';
+    let pathSoFar = '';
+    for (const segment of segments) {
+      pathSoFar = pathSoFar ? `${pathSoFar}/${segment}` : segment;
+      const cached = folderIdByPath.get(pathSoFar);
+      if (cached !== undefined) {
+        parentId = cached;
+        continue;
+      }
+      const folderId = createUuid();
+      folders[folderId] = {
+        id: folderId,
+        name: segment,
+        parentId,
+        open: true,
+      };
+      folderIdByPath.set(pathSoFar, folderId);
+      parentId = folderId;
+    }
+
     const id = createUuid();
     fileIds.push(id);
-    // Activate index.html if present, otherwise the first file we saw.
-    if (!activeFileId || /^index\.html?$/i.test(f.name)) {
+    // Prefer top-level index.html for the active file, else the first file.
+    if (
+      !activeFileId ||
+      (segments.length === 0 && /^index\.html?$/i.test(baseName))
+    ) {
       activeFileId = id;
     }
     files[id] = {
       id,
-      name: f.name,
+      name: baseName,
       contents: f.contents,
-      folderId: '0',
+      folderId: parentId,
       type: ProjectFileType.STARTER,
       active: false, // overwritten below for activeFileId
     };
@@ -391,7 +428,7 @@ export async function generateWeblab2Level(
 
   return {
     startSources: {
-      folders: {},
+      folders,
       files,
       openFiles: fileIds,
     },
