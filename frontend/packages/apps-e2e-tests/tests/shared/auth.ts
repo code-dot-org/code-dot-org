@@ -4,14 +4,17 @@ import {type Page} from '@playwright/test';
  * Shared payload fields for {@link createTestUser}.
  * All keys map directly to the /api/test/create_user `user:` JSON body.
  */
-interface CreateUserPayload {
+export interface CreateUserPayload {
   user_type: 'teacher' | 'student';
-  email: string;
-  password: string;
-  password_confirmation: string;
+  /** Omitted for sponsored and SSO-only accounts. */
+  email?: string;
+  /** Omitted for SSO and sponsored accounts. */
+  password?: string;
+  /** Omitted for SSO and sponsored accounts. */
+  password_confirmation?: string;
   name: string;
   age: string;
-  sign_in_count: number;
+  sign_in_count?: number;
   terms_of_service_version?: string;
   email_preference_opt_in?: string;
   email_preference_form_kind?: string;
@@ -21,6 +24,22 @@ interface CreateUserPayload {
   us_state?: string;
   user_provided_us_state?: boolean;
   country_code?: string;
+  /** ISO-8601 string; backdates the account for CAP policy testing. */
+  created_at?: string;
+  /** 'sponsored' for teacher-section accounts with no local credentials. */
+  provider?: string;
+  /**
+   * SSO provider name ('clever', 'google_oauth2').  When set, the controller
+   * routes through initialize_new_oauth_user instead of User.create!.
+   */
+  sso?: string;
+  /** OAuth UID companion to {@link sso}. */
+  uid?: string;
+  parent_email_preference_email?: string;
+  parent_email_preference_opt_in_required?: string;
+  parent_email_preference_opt_in?: string;
+  parent_email_preference_request_ip?: string;
+  parent_email_preference_source?: string;
 }
 
 /**
@@ -31,7 +50,7 @@ interface CreateUserPayload {
  * @param page - Playwright page whose browser context will receive the session
  * @param payload - /api/test/create_user `user:` fields
  */
-async function createTestUser(
+export async function createTestUser(
   page: Page,
   payload: CreateUserPayload,
 ): Promise<void> {

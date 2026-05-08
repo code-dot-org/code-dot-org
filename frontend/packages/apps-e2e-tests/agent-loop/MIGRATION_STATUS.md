@@ -2,7 +2,7 @@
 
 Source: `dashboard/test/ui/features/` (all sub-directories)  
 Target: `frontend/packages/apps-e2e-tests/tests/`  
-As of: 2026-05-08 (updated 2026-05-08 — teacher_tools, foundations, platform, and javalab partial port)
+As of: 2026-05-08 (updated 2026-05-08 — dcdo_mocking, one_trust full, cookie_banner, region_select, region_switch_confirm, policy_compliance ×3)
 
 ---
 
@@ -10,7 +10,7 @@ As of: 2026-05-08 (updated 2026-05-08 — teacher_tools, foundations, platform, 
 
 | Status                                         | Count                                                                                                           |
 | ---------------------------------------------- | --------------------------------------------------------------------------------------------------------------- |
-| Ported                                         | 82 feature files (C+F for pythonlab + mixmoveai; C+F+W for rest)                                                |
+| Ported                                         | 91 feature files (C+F for pythonlab + mixmoveai; C+F+W for rest)                                                |
 | Covered by ported (rolled in)                  | 5 (maze2, jigsaw2, multi2/3/4 rolled into existing specs)                                                       |
 | Partial — @eyes (visual checkpoints annotated) | 5 ported up to snapshot; @eyes auth blocked 3                                                                   |
 | Fixme stubs — @eyes / auth only                | 3 (curriculum_reference ×2, level_group_multi_page_dots ×1)                                                     |
@@ -114,13 +114,21 @@ As of: 2026-05-08 (updated 2026-05-08 — teacher_tools, foundations, platform, 
 
 ### foundations / platform
 
-| Feature file                          | Playwright spec                                        | Browsers | Notes                                                                     |
-| ------------------------------------- | ------------------------------------------------------ | -------- | ------------------------------------------------------------------------- |
-| `foundations/create_dropdown.feature` | `tests/legacy/create-dropdown/create-dropdown.spec.ts` | C+F+W    | 5 scenarios; level page exclusion, teacher/student/young-student menus    |
-| `foundations/user_menu.feature`       | `tests/legacy/user-menu/user-menu.spec.ts`             | C+F+W    | 4 scenarios; signed-out button, teacher/student display name + menu links |
-| `platform/header.feature`             | `tests/legacy/header/header.spec.ts`                   | C+F+W    | 2 scenarios; student + teacher link counts; 2 fixme (Spanish i18n)        |
-| `platform/login_redirect.feature`     | `tests/legacy/login-redirect/login-redirect.spec.ts`   | C+F+W    | 2 scenarios; ?login_required=true cached-level redirect                   |
-| `platform/signing_in.feature`         | `tests/legacy/signing-in/signing-in.spec.ts`           | C+F+W    | 2 scenarios; student + teacher sign-in via form; 2 fixme (EU/non-picture) |
+| Feature file                                             | Playwright spec                                                    | Browsers | Notes                                                                                                                   |
+| -------------------------------------------------------- | ------------------------------------------------------------------ | -------- | ----------------------------------------------------------------------------------------------------------------------- |
+| `foundations/create_dropdown.feature`                    | `tests/legacy/create-dropdown/create-dropdown.spec.ts`             | C+F+W    | 5 scenarios; level page exclusion, teacher/student/young-student menus                                                  |
+| `foundations/user_menu.feature`                          | `tests/legacy/user-menu/user-menu.spec.ts`                         | C+F+W    | 4 scenarios; signed-out button, teacher/student display name + menu links                                               |
+| `platform/header.feature`                                | `tests/legacy/header/header.spec.ts`                               | C+F+W    | 2 scenarios; student + teacher link counts; 2 fixme (Spanish i18n)                                                      |
+| `platform/login_redirect.feature`                        | `tests/legacy/login-redirect/login-redirect.spec.ts`               | C+F+W    | 2 scenarios; ?login_required=true cached-level redirect                                                                 |
+| `platform/one_trust.feature`                             | `tests/legacy/one-trust/one-trust.spec.ts`                         | C+F+W    | 15 scenarios; popup, self-hosted/prod/test/off, JS categorization, 9 embedded-project suppression checks; @eyes skipped |
+| `xteam/cookie_banner.feature`                            | `tests/legacy/cookie-banner/cookie-banner.spec.ts`                 | C+F+W    | 1 scenario; accept/dismiss cycle + persistence across reload; @eyes checkpoints stripped                                |
+| `platform/global_edition/region_select.feature`          | `tests/legacy/region-select/region-select.spec.ts`                 | C+F+W    | 2 scenarios; Studio page + lab page locale dropdown switching                                                           |
+| `platform/global_edition/region_switch_confirm.feature`  | `tests/legacy/region-switch-confirm/region-switch-confirm.spec.ts` | C+F+W    | 1 scenario; modal shown for Iranian visitors with DCDO flag                                                             |
+| `platform/signing_in.feature`                            | `tests/legacy/signing-in/signing-in.spec.ts`                       | C+F+W    | 2 scenarios; student + teacher sign-in via form; 2 fixme (EU/non-picture)                                               |
+| `dcdo_mocking.feature`                                   | `tests/legacy/dcdo-mocking/dcdo-mocking.spec.ts`                   | C+F+W    | 1 scenario; DCDO cookie mock/re-mock/delete lifecycle                                                                   |
+| `platform/policy_compliance/policy_compliance.feature`   | `tests/legacy/policy-compliance/policy-compliance.spec.ts`         | C+F+W    | 7 scenarios; CAP lockout/home redirect, connect-button lock, sponsored student personal-login                           |
+| `platform/policy_compliance/lockout_phase.feature`       | `tests/legacy/policy-compliance/lockout-phase.spec.ts`             | C+F+W    | 10 scenarios; age/state field editability for SSO + timing combinations                                                 |
+| `platform/policy_compliance/parental_permission.feature` | `tests/legacy/policy-compliance/parental-permission.spec.ts`       | C+F+W    | 6 scenarios; submit/resend/update/own-email/parent-created flows                                                        |
 
 ### javalab
 
@@ -388,22 +396,22 @@ scenarios worth porting independently.
 Feature directories outside the original CSF/teacher-tools scope. None have
 non-auth, non-@eyes scenarios worth porting on their own.
 
-| Area                              | Feature files                                                                                                                          | Reason                                                                    |
-| --------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------- |
-| Java Lab (remaining 7)            | `javalab/code_review_*.feature` (×2), `console_only`, `javalab_demo_mode`, `neighborhood`, `prompter`, `theater`                       | All @no_ci + @eyes; visual or WebSocket-only steps; no portable scenarios |
-| WebLab 2 (student_learning)       | `student_learning/weblab2/*.feature`                                                                                                   | cross-origin iframe + auth; matches star_labs/weblab blockers             |
-| PD / PL tools                     | `acquisition_products/pd/**`, `acquisition_products/pl_landing_page.feature`, `acquisition_products/regional_workshop_catalog.feature` | professional-development tools, out of scope                              |
-| Sign-up / school info             | `acquisition_products/school_info_confirmation_dialog.feature`, `acquisition_products/sign_up.feature`                                 | onboarding flows, auth-gated                                              |
-| Global Edition                    | `platform/global_edition/**`                                                                                                           | i18n/regional features; test environment not configured                   |
-| Policy compliance                 | `platform/policy_compliance/**`                                                                                                        | COPPA/parental-permission flows; needs special account state              |
-| Cookie consent                    | `platform/one_trust.feature`, `xteam/cookie_banner.feature`, `xteam/gdpr_dialog.feature`                                               | consent tooling, environment-specific                                     |
-| Race interstitial                 | `xteam/race_interstitial.feature`                                                                                                      | demographic data dialog; separate scope                                   |
-| User settings                     | `platform/user_settings.feature`                                                                                                       | auth + settings state                                                     |
-| Teacher dashboard manage-students | `platform/teacher_dashboard/manage_students_tab.feature`                                                                               | auth; mirrors teacher_tools/teacher_dashboard                             |
-| Initial page views                | `initial_page_views*.feature` (4 files)                                                                                                | generic signed-out smoke tests; low test value                            |
-| DCDO feature flags                | `dcdo_mocking.feature`                                                                                                                 | infrastructure; feature-flag mocking via cookie                           |
-| Applitools top-level              | `eyes.feature`                                                                                                                         | @eyes; replaced by toHaveScreenshot                                       |
-| Blockly / SpriteLab @eyes         | `code_tools/blockly/modal_function_editor_eyes.feature`, `code_tools/blockly/spritelab_eyes.feature`                                   | @eyes; non-eyes spec already ported                                       |
+| Area                              | Feature files                                                                                                                                                                         | Reason                                                                    |
+| --------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------- |
+| Java Lab (remaining 7)            | `javalab/code_review_*.feature` (×2), `console_only`, `javalab_demo_mode`, `neighborhood`, `prompter`, `theater`                                                                      | All @no_ci + @eyes; visual or WebSocket-only steps; no portable scenarios |
+| WebLab 2 (student_learning)       | `student_learning/weblab2/*.feature`                                                                                                                                                  | cross-origin iframe + auth; matches star_labs/weblab blockers             |
+| PD / PL tools                     | `acquisition_products/pd/**`, `acquisition_products/pl_landing_page.feature`, `acquisition_products/regional_workshop_catalog.feature`                                                | professional-development tools, out of scope                              |
+| Sign-up / school info             | `acquisition_products/school_info_confirmation_dialog.feature`, `acquisition_products/sign_up.feature`                                                                                | onboarding flows, auth-gated                                              |
+| Global Edition (remaining)        | `platform/global_edition/fa/**` (all @eyes or complex auth), `personal_project_gallery.feature`, `pl_landing_page.feature`, `signed_out.feature` (@skip), `teacher_dashboard.feature` | auth-gated or @eyes; not portable                                         |
+| Policy compliance                 | ~~`platform/policy_compliance/**`~~ → **ported** `tests/legacy/policy-compliance/` (3 specs, 23 scenarios)                                                                            | CAP/COPPA flows; `cap.ts` helper + `dismissParentalPermissionModal`       |
+| Cookie consent                    | `xteam/gdpr_dialog.feature`                                                                                                                                                           | separate scope                                                            |
+| Race interstitial                 | `xteam/race_interstitial.feature`                                                                                                                                                     | demographic data dialog; separate scope                                   |
+| User settings                     | `platform/user_settings.feature`                                                                                                                                                      | auth + settings state                                                     |
+| Teacher dashboard manage-students | `platform/teacher_dashboard/manage_students_tab.feature`                                                                                                                              | auth; mirrors teacher_tools/teacher_dashboard                             |
+| Initial page views                | `initial_page_views*.feature` (4 files)                                                                                                                                               | generic signed-out smoke tests; low test value                            |
+| DCDO feature flags                | ~~`dcdo_mocking.feature`~~ → **ported** `tests/legacy/dcdo-mocking/dcdo-mocking.spec.ts`                                                                                              | 1 scenario; cookie mock/unmock lifecycle                                  |
+| Applitools top-level              | `eyes.feature`                                                                                                                                                                        | @eyes; replaced by toHaveScreenshot                                       |
+| Blockly / SpriteLab @eyes         | `code_tools/blockly/modal_function_editor_eyes.feature`, `code_tools/blockly/spritelab_eyes.feature`                                                                                  | @eyes; non-eyes spec already ported                                       |
 
 ---
 
