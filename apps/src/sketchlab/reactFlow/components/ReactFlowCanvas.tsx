@@ -514,7 +514,7 @@ export default function ReactFlowCanvas({
         (document.activeElement as HTMLElement)?.blur();
         setTimeout(() => {
           focusEntry({type: 'edge', id: newLine.id});
-          openToolbar({type: 'edge', id: newLine.id}, {trapFocus: true});
+          openToolbar({type: 'edge', id: newLine.id}, {trapFocus: false});
         }, FOCUS_DELAY_MS);
         return;
       }
@@ -550,7 +550,7 @@ export default function ReactFlowCanvas({
       (document.activeElement as HTMLElement)?.blur();
       setTimeout(() => {
         focusEntry({type: 'node', id: newNodeId});
-        openToolbar({type: 'node', id: newNodeId}, {trapFocus: true});
+        openToolbar({type: 'node', id: newNodeId}, {trapFocus: false});
       }, FOCUS_DELAY_MS);
     },
     [focusEntry, openToolbar, screenToFlowPosition, setNodes, setEdges]

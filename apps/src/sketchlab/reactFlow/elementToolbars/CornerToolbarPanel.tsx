@@ -1,5 +1,4 @@
 import {Panel} from '@xyflow/react';
-import classNames from 'classnames';
 import React from 'react';
 
 import {
@@ -14,8 +13,6 @@ import ImageNodeToolbar from './ImageNodeToolbar';
 import LineEdgeToolbar from './LineEdgeToolbar';
 import ShapeNodeToolbar from './ShapeNodeToolbar';
 import TextNodeToolbar from './TextNodeToolbar';
-
-import styles from './element-toolbar.module.scss';
 
 // Stable class used by focus and pointer-down handlers.
 export const SKETCHLAB_TOOLBAR_PANEL_CLASS = 'sketchlab-toolbar-panel';
