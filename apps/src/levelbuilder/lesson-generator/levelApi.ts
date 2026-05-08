@@ -3,7 +3,7 @@ import {LevelPropertiesMap, MultiFileSource} from '@cdo/apps/lab2/types';
 import {Panel} from '@cdo/apps/panels/types';
 import HttpClient, {isNetworkError} from '@cdo/apps/util/HttpClient';
 
-import {LabType, SerializedActivity} from './types';
+import {LabType, RAILS_TYPE_BY_LAB, SerializedActivity} from './types';
 
 export interface CreatedLevel {
   id: number;
@@ -29,7 +29,11 @@ export async function createOrFindLevel(
   try {
     const response = await HttpClient.post(
       '/levels?do_not_redirect=true',
-      JSON.stringify({type, name, published: true}),
+      JSON.stringify({
+        type: RAILS_TYPE_BY_LAB[type],
+        name,
+        published: true,
+      }),
       true,
       {
         'Content-Type': 'application/json;charset=UTF-8',
@@ -58,7 +62,11 @@ async function findLevelByName(
   type: LabType,
   name: string
 ): Promise<{id: number; name: string} | null> {
-  const params = new URLSearchParams({name, level_type: type, page: '1'});
+  const params = new URLSearchParams({
+    name,
+    level_type: RAILS_TYPE_BY_LAB[type],
+    page: '1',
+  });
   try {
     const {value} = await HttpClient.fetchJson<{
       levels: {id: string; name: string}[];

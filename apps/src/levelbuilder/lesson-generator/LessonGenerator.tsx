@@ -29,29 +29,36 @@ import {
   ExistingLessonData,
   GenerationSummary,
   LabType,
+  labTypeFromRailsType,
   LevelSpec,
   ProgressUpdate,
   SerializedActivity,
   SerializedLevel,
   SerializedScriptLevel,
+  SUPPORTED_LAB_TYPES,
 } from './types';
 
 import moduleStyles from './lesson-generator.module.scss';
 
-const LAB_OPTIONS: {value: LabType; label: string}[] = [
-  {value: 'Panels', label: 'Panels'},
-  {value: 'Weblab2', label: 'Web Lab 2'},
-];
+// Display labels for the per-card Lab dropdown. Keys must be in
+// SUPPORTED_LAB_TYPES; the order here is the dropdown order. Add a label
+// when adding a new supported lab.
+const LAB_LABELS: Record<LabType, string> = {
+  panels: 'Panels',
+  weblab2: 'Web Lab 2',
+};
+
+const LAB_OPTIONS: {value: LabType; label: string}[] = SUPPORTED_LAB_TYPES.map(
+  v => ({value: v, label: LAB_LABELS[v]})
+);
 
 const newLevelSpec = (): LevelSpec => ({
   key: createUuid(),
   id: '',
-  labType: 'Panels',
+  labType: SUPPORTED_LAB_TYPES[0],
   description: '',
   generate: true,
 });
-
-const SUPPORTED_TYPES: ReadonlySet<string> = new Set(['Panels', 'Weblab2']);
 
 interface Placement {
   scriptLevel: SerializedScriptLevel;
@@ -115,14 +122,14 @@ function priorOutputFromLevelProperties(
   labType: LabType
 ): PriorOutput | undefined {
   if (!props) return undefined;
-  if (labType === 'Panels') {
+  if (labType === 'panels') {
     const panels = (props as PanelsLevelProperties).panels;
     if (Array.isArray(panels) && panels.length > 0) {
       return {panels};
     }
     return undefined;
   }
-  if (labType === 'Weblab2') {
+  if (labType === 'weblab2') {
     // Weblab2 stores starter sources as MultiFileSource (per the
     // ProjectSources | MultiFileSource union on LevelProperties).
     const startSources = props.startSources as MultiFileSource | undefined;
@@ -285,7 +292,7 @@ function buildInitialState(lesson: ExistingLessonData): InitialState {
   // with the supported ones) and would otherwise erode the inferred
   // prefix to the empty string.
   const supportedNames = entries
-    .filter(e => e.level.type && SUPPORTED_TYPES.has(e.level.type))
+    .filter(e => labTypeFromRailsType(e.level.type) !== undefined)
     .map(e => e.level.name);
   const prefix = inferPrefix(supportedNames);
   const stripPrefix = (name: string) =>
@@ -294,21 +301,20 @@ function buildInitialState(lesson: ExistingLessonData): InitialState {
       : name;
   const specs = entries.map(
     ({level, scriptLevel, activityIndex, sectionIndex}) => {
-      const supported = !!(level.type && SUPPORTED_TYPES.has(level.type));
+      const labType = labTypeFromRailsType(level.type);
       const description = level.generatePrompt || '';
       return {
         key: createUuid(),
         id: stripPrefix(level.name),
-        // Pick a valid LabType for the dropdown; if the level isn't
-        // generator-supported, the dropdown is hidden anyway.
-        labType: supported ? (level.type as LabType) : 'Panels',
+        // Filler value when unsupported; the dropdown is hidden then.
+        labType: labType ?? SUPPORTED_LAB_TYPES[0],
         description,
         lastGeneratedDescription: level.generatePrompt
           ? level.generatePrompt
           : undefined,
-        generate: supported && !level.generatePrompt,
+        generate: labType !== undefined && !level.generatePrompt,
         existing: {activityIndex, sectionIndex, scriptLevel},
-        unsupportedType: supported ? undefined : level.type,
+        unsupportedType: labType === undefined ? level.type : undefined,
       };
     }
   );
@@ -575,7 +581,7 @@ const LessonGenerator: React.FC<LessonGeneratorProps> = ({lesson}) => {
           // same lesson-wide framing, so panels + weblab2 levels in the same
           // lesson stay tonally coherent.
           const lessonContext = outline.trim() || undefined;
-          if (spec.labType === 'Panels') {
+          if (spec.labType === 'panels') {
             const panels = await generatePanelsForLevel(
               levelName,
               spec.description.trim(),
@@ -596,7 +602,7 @@ const LessonGenerator: React.FC<LessonGeneratorProps> = ({lesson}) => {
             appendLog(`Saving panel data for "${levelName}"…`);
             await updatePanelsLevel(level.id, panels);
             generatedOutput = {panels};
-          } else if (spec.labType === 'Weblab2') {
+          } else if (spec.labType === 'weblab2') {
             const result = await generateWeblab2Level(
               spec.description.trim(),
               lessonContext,

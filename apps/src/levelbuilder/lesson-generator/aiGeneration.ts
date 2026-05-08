@@ -12,6 +12,7 @@ import {
 } from '@cdo/generated-scripts/sharedConstants';
 
 import {uploadLevelAsset} from './levelApi';
+import {LabType, SUPPORTED_LAB_TYPES} from './types';
 
 const getTextModel = () => getModel(AiChatModelIds.GEMINI_2_5_FLASH);
 const getImageModel = () => getModel(AiChatModelIds.GEMINI_2_5_FLASH_IMAGE);
@@ -399,6 +400,13 @@ export async function generateWeblab2Level(
   };
 }
 
+// Build the labType enum from SUPPORTED_LAB_TYPES so adding a new lab is
+// a single-line change. zod's z.enum requires a non-empty tuple, so we
+// cast through the canonical list.
+const supportedLabTypeEnum = z.enum(
+  SUPPORTED_LAB_TYPES as unknown as [LabType, ...LabType[]]
+);
+
 const lessonOutlineSchema = Output.object({
   schema: z.object({
     levels: z
@@ -409,11 +417,9 @@ const lessonOutlineSchema = Output.object({
             .describe(
               'Short kebab-case identifier unique within the lesson, e.g. "intro-1" or "build-form". No prefix; that is added separately.'
             ),
-          labType: z
-            .enum(['Panels', 'Weblab2'])
-            .describe(
-              '"Panels" for narrative / explanation panels with overlay text on illustrations. "Weblab2" for hands-on HTML/CSS/JS coding levels.'
-            ),
+          labType: supportedLabTypeEnum.describe(
+            '"panels" for narrative / explanation panels with overlay text on illustrations. "weblab2" for hands-on HTML/CSS/JS coding levels.'
+          ),
           description: z
             .string()
             .describe(
@@ -428,7 +434,7 @@ const lessonOutlineSchema = Output.object({
 
 export interface OutlineLevel {
   id: string;
-  labType: 'Panels' | 'Weblab2';
+  labType: LabType;
   description: string;
 }
 
