@@ -31,11 +31,6 @@ jobs:
       # Must match the `playwright` catalog version in frontend/.yarnrc.yml.
       # When upgrading Playwright, bump both the catalog semver and this image tag together.
       image: mcr.microsoft.com/playwright:v1.59.1-noble
-    env:
-      # GHA docker exec sets HOME=/github/home, so Playwright's $HOME/.cache fallback
-      # misses the pre-installed browsers. Re-declare the image's ENV explicitly.
-      PLAYWRIGHT_BROWSERS_PATH: /ms-playwright
-
     steps:
       - name: Install LFS
         run: apt-get update && apt-get install -y git-lfs
@@ -55,7 +50,13 @@ jobs:
         working-directory: ./frontend
 
       - name: E2E Tests
-        run: yarn turbo run test:ui:ci --filter=@code-dot-org/oceans-lab
+        # Step-level env so GHA passes PLAYWRIGHT_BROWSERS_PATH directly to this
+        # shell process. Job-level env is not reliably forwarded through turbo to
+        # the playwright subprocess; step-level env is. Use yarn workspace (not
+        # turbo) to match the pattern in marketing-sites/storybook-test.
+        env:
+          PLAYWRIGHT_BROWSERS_PATH: /ms-playwright
+        run: yarn workspace @code-dot-org/oceans-lab test:ui:ci
         working-directory: ./frontend
 
       - name: Upload Playwright Report
