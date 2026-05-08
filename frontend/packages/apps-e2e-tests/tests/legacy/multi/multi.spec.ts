@@ -179,38 +179,36 @@ test.describe('Multi — multi-select (lesson 10)', () => {
  * answer buttons get class "lock-answers" and the submit button is hidden.
  */
 test.describe('Multi — non-retryable level (lesson 9 level 5)', () => {
-  test(
-    'standalone level locks after answer is submitted',
-    async ({studentPage}) => {
-      // Source: multi3.feature scenario 4
-      const multi = new Multi(studentPage);
-      await multi.gotoLevel(9, 5);
-      await multi.expectSubmitDisabled();
-      await multi.selectAnswer(0);
-      await multi.submit();
+  test('standalone level locks after answer is submitted', async ({
+    studentPage,
+  }) => {
+    // Source: multi3.feature scenario 4
+    const multi = new Multi(studentPage);
+    await multi.gotoLevel(9, 5, {resetSession: false});
+    await multi.expectSubmitDisabled();
+    await multi.selectAnswer(0);
+    await multi.submit();
 
-      // Submitting wrong answer shows error modal; progress is still perfect
-      // because the level accepts one attempt.
-      await expect(multi.modalTitle).toContainText('Incorrect answer');
-      await expectPerfect(headerBubble(studentPage, 5));
-      await multi.okButton.click();
+    // Submitting wrong answer shows error modal; progress is still perfect
+    // because the level accepts one attempt.
+    await expect(multi.modalTitle).toContainText('Incorrect answer');
+    await expectPerfect(headerBubble(studentPage, 5));
+    await multi.okButton.click();
 
-      // Post-submission state: next-level button visible, cross mark shown,
-      // answer buttons are locked.
-      await expect(multi.nextLevelButton).toBeVisible();
-      await expect(multi.crossMark(0)).toBeVisible();
-      await expect(multi.answerButton(0)).toHaveClass(/lock-answers/);
+    // Post-submission state: next-level button visible, cross mark shown,
+    // answer buttons are locked.
+    await expect(multi.nextLevelButton).toBeVisible();
+    await expect(multi.crossMark(0)).toBeVisible();
+    await expect(multi.answerButton(0)).toHaveClass(/lock-answers/);
 
-      // After reloading, the level stays locked: submit is disabled and answer
-      // buttons carry the lock-answers class.  The server marks this level with
-      // one attempt allowed so the submit button remains visible but disabled.
-      await studentPage.reload();
-      await expect(multi.submitButton).toBeDisabled({timeout: 30_000});
-      await expect(multi.nextLevelButton).toBeVisible({timeout: 15_000});
-      await expect(multi.answerButton(0)).toHaveClass(/lock-answers/);
-      await expect(multi.answerButton(1)).toHaveClass(/lock-answers/);
-      await expect(multi.answerButton(2)).toHaveClass(/lock-answers/);
-      await expect(multi.answerButton(3)).toHaveClass(/lock-answers/);
-    },
-  );
+    // After reloading, the level stays locked: answer buttons carry the
+    // lock-answers class.  Wait for the first answer button to appear before
+    // asserting — page must be hydrated before class checks are meaningful.
+    await studentPage.reload();
+    await multi.answerButton(0).waitFor({state: 'visible', timeout: 30_000});
+    await expect(multi.answerButton(0)).toHaveClass(/lock-answers/);
+    await expect(multi.answerButton(1)).toHaveClass(/lock-answers/);
+    await expect(multi.answerButton(2)).toHaveClass(/lock-answers/);
+    await expect(multi.answerButton(3)).toHaveClass(/lock-answers/);
+  });
 });

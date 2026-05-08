@@ -50,9 +50,14 @@ export class Match {
    * Dismisses the instructions modal (`.dash_modal`) if present.
    *
    * @param level - level number within lesson 11
+   * @param resetSession - clear any existing session first; pass false when
+   *   the caller has already signed in as a specific user and must stay signed in
    */
-  async gotoLevel(level: number): Promise<void> {
-    await this.page.goto('/reset_session');
+  async gotoLevel(
+    level: number,
+    {resetSession = true}: {resetSession?: boolean} = {},
+  ): Promise<void> {
+    if (resetSession) await this.page.goto('/reset_session');
     await this.page.goto(labLevelUrl(11, level));
     await this.dismissInstructionsIfPresent();
     await expect(this.submitButton).toBeVisible();

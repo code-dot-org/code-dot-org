@@ -56,14 +56,11 @@ test.describe('Match — incorrect solution persists', () => {
     async ({studentPage}) => {
       // Source: match.feature "Submitting an incorrect solution"
       const match = new Match(studentPage);
-      await match.gotoLevel(1);
+      await match.gotoLevel(1, {resetSession: false});
 
       // Verify 4 empty slots before starting.
       await expect(
-        studentPage
-          .locator('.match')
-          .nth(0)
-          .locator('.match_slots .emptyslot'),
+        studentPage.locator('.match').nth(0).locator('.match_slots .emptyslot'),
       ).toHaveCount(4);
 
       // Drag answers in reverse order (incorrect solution).
@@ -74,10 +71,7 @@ test.describe('Match — incorrect solution persists', () => {
 
       // All slots filled; no empty slots remain.
       await expect(
-        studentPage
-          .locator('.match')
-          .nth(0)
-          .locator('.match_slots .emptyslot'),
+        studentPage.locator('.match').nth(0).locator('.match_slots .emptyslot'),
       ).toHaveCount(0);
 
       // Submit via the bottom (review) button and wait for modal.

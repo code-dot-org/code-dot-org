@@ -1,5 +1,5 @@
-import {expect, test} from '../../shared/fixtures';
 import {createTeacherAssociatedStudent, signIn} from '../../shared/auth';
+import {expect, test} from '../../shared/fixtures';
 
 /**
  * Level Group level type — lesson 33 of allthethingscourse unit 1.
@@ -47,7 +47,10 @@ test.describe('Level group — submit multi answers', () => {
         .locator('.submitButton')
         .waitFor({state: 'visible', timeout: 30_000});
       await expect(
-        studentPage.locator('.level-group-content').nth(1).locator('.multi-question'),
+        studentPage
+          .locator('.level-group-content')
+          .nth(1)
+          .locator('.multi-question'),
       ).toContainText('The standard QWERTY keyboard has');
 
       // Select one answer in each of the three multi sub-levels.
@@ -101,16 +104,28 @@ test.describe('Level group — submit multi answers', () => {
       // Reload the level; previously selected answers should still be checked.
       await studentPage.goto(LEVEL_URL);
       await expect(
-        studentPage.locator('.level-group-content').nth(0).locator('#checked_2'),
+        studentPage
+          .locator('.level-group-content')
+          .nth(0)
+          .locator('#checked_2'),
       ).toBeVisible();
       await expect(
-        studentPage.locator('.level-group-content').nth(1).locator('#checked_1'),
+        studentPage
+          .locator('.level-group-content')
+          .nth(1)
+          .locator('#checked_1'),
       ).toBeVisible();
       await expect(
-        studentPage.locator('.level-group-content').nth(2).locator('#checked_2'),
+        studentPage
+          .locator('.level-group-content')
+          .nth(2)
+          .locator('#checked_2'),
       ).toBeVisible();
       await expect(
-        studentPage.locator('.level-group-content').nth(2).locator('#checked_0'),
+        studentPage
+          .locator('.level-group-content')
+          .nth(2)
+          .locator('#checked_0'),
       ).toBeVisible();
     },
   );
@@ -173,9 +188,9 @@ test.describe('Level group — match levels', () => {
         page.locator('.match').nth(1).locator('.match_slots .emptyslot'),
       ).toHaveCount(4);
       // Verify no xmark indicators are visible (multiple .xmark exist in DOM).
-      await expect(
-        page.locator('.xmark').filter({visible: true}),
-      ).toHaveCount(0);
+      await expect(page.locator('.xmark').filter({visible: true})).toHaveCount(
+        0,
+      );
 
       // Submit and confirm.
       await page.locator('.submitButton').first().click();
@@ -210,14 +225,19 @@ test.describe('Level group — match levels', () => {
         page.locator('.match').nth(1).locator('.match_slots .emptyslot'),
       ).toHaveCount(4);
       // Verify no xmark indicators are visible (multiple .xmark exist in DOM).
-      await expect(
-        page.locator('.xmark').filter({visible: true}),
-      ).toHaveCount(0);
+      await expect(page.locator('.xmark').filter({visible: true})).toHaveCount(
+        0,
+      );
 
       // Sign in as teacher, open teacher panel, click student row.
       await signIn(page, teacherEmail, teacherPassword);
       await page.goto(LEVEL_URL.replace('?noautoplay=true', ''));
-      await page.locator('.show-handle .fa-chevron-left').click();
+      // The show-handle chevron is position:fixed with no layout dimensions;
+      // use a raw JS click (mirrors Cucumber's "click selector" which fires a
+      // synthetic event that bypasses visibility requirements).
+      await page
+        .locator('.show-handle .fa-chevron-left')
+        .evaluate((el: HTMLElement) => el.click());
       await page
         .locator('.student-table')
         .waitFor({state: 'visible', timeout: 15_000});
@@ -240,9 +260,9 @@ test.describe('Level group — match levels', () => {
         page.locator('.match').nth(1).locator('.match_slots .emptyslot'),
       ).toHaveCount(4);
       // Verify no xmark indicators are visible (multiple .xmark exist in DOM).
-      await expect(
-        page.locator('.xmark').filter({visible: true}),
-      ).toHaveCount(0);
+      await expect(page.locator('.xmark').filter({visible: true})).toHaveCount(
+        0,
+      );
 
       // In teacher view nothing is draggable.
       await expect(page.locator('.ui-draggable')).not.toBeVisible();
@@ -289,7 +309,10 @@ test.describe('Level group — submit all answers', () => {
         .click();
 
       // Scroll to match level 0 and fill all four of its slots.
-      await page.locator('.level-group-content').nth(3).scrollIntoViewIfNeeded();
+      await page
+        .locator('.level-group-content')
+        .nth(3)
+        .scrollIntoViewIfNeeded();
       for (let i = 0; i < 4; i++) {
         await dragFirstUnplacedToFirstSlot(page, 0);
       }
@@ -298,7 +321,10 @@ test.describe('Level group — submit all answers', () => {
       ).toHaveCount(0);
 
       // Scroll to match level 1 and fill all five of its slots.
-      await page.locator('.level-group-content').nth(4).scrollIntoViewIfNeeded();
+      await page
+        .locator('.level-group-content')
+        .nth(4)
+        .scrollIntoViewIfNeeded();
       for (let i = 0; i < 5; i++) {
         await dragFirstUnplacedToFirstSlot(page, 1);
       }
@@ -308,9 +334,7 @@ test.describe('Level group — submit all answers', () => {
 
       // Submit — all questions answered, so no "incomplete" warning.
       await page.locator('.submitButton').first().click();
-      await page
-        .locator('.modal')
-        .waitFor({state: 'visible', timeout: 15_000});
+      await page.locator('.modal').waitFor({state: 'visible', timeout: 15_000});
       await expect(page.locator('.modal-body')).toContainText(
         'You cannot edit your assessment after submitting it.',
       );

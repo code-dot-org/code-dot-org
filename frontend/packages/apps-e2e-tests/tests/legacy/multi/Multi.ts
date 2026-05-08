@@ -51,9 +51,15 @@ export class Multi {
    *
    * @param lesson - lesson number within allthethingscourse unit 1
    * @param level - level number within that lesson
+   * @param resetSession - clear any existing session first; pass false when
+   *   the caller has already signed in as a specific user and must stay signed in
    */
-  async gotoLevel(lesson: number, level: number): Promise<void> {
-    await this.page.goto('/reset_session');
+  async gotoLevel(
+    lesson: number,
+    level: number,
+    {resetSession = true}: {resetSession?: boolean} = {},
+  ): Promise<void> {
+    if (resetSession) await this.page.goto('/reset_session');
     await this.page.goto(labLevelUrl(lesson, level));
     await expect(this.submitButton).toBeVisible();
   }
