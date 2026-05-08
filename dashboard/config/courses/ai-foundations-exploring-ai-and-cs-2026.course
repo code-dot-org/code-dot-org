@@ -27,7 +27,17 @@
     "version_year": "2026"
   },
   "resources": [
-
+    {
+      "name": "AIF Exploring AI and CS Syllabus",
+      "url": "https://docs.google.com/document/d/1U57jXFu9WKZw1vCP0MnGl-28ku39QuOr8QOSnDrOAFw/edit?usp=sharing",
+      "key": "aif_exploring_ai_and_cs_syllabus",
+      "properties": {
+        "embeddability_type": "embed_and_resource_dropdown"
+      },
+      "seeding_key": {
+        "resource.key": "aif_exploring_ai_and_cs_syllabus"
+      }
+    }
   ],
   "student_resources": [
 

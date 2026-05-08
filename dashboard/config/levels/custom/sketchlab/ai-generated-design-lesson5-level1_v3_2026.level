@@ -123,12 +123,12 @@
             "id": "a_EOz32pq49R-ru81sxLC",
             "type": "text",
             "position": {
-              "x": 354.68328857421875,
-              "y": -373.59999389648436
+              "x": 381.35426318647234,
+              "y": -380.26773754954775
             },
             "data": {
               "text": "Nike",
-              "fontColor": "#1e1e1e",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": "large",
               "showHandles": false
             },
@@ -147,7 +147,7 @@
             },
             "data": {
               "text": "Adidas",
-              "fontColor": "#1e1e1e",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": "large",
               "showHandles": false
             },
@@ -190,7 +190,7 @@
             },
             "data": {
               "text": "The Nike brand ... ",
-              "fontColor": "#e03131",
+              "fontColor": "var(--sketchlab-stroke-red)",
               "fontSize": "medium",
               "showHandles": false,
               "textAlign": "left"
@@ -210,7 +210,7 @@
             },
             "data": {
               "text": "The Adidas brand ... ",
-              "fontColor": "#e03131",
+              "fontColor": "var(--sketchlab-stroke-red)",
               "fontSize": "medium",
               "showHandles": false,
               "textAlign": "left"
@@ -230,7 +230,7 @@
             },
             "data": {
               "text": "Who is Spotify's target audience?",
-              "fontColor": "#1e1e1e",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": "large",
               "showHandles": false
             },
@@ -249,7 +249,7 @@
             },
             "data": {
               "text": "Who is SoundCloud's target audience?",
-              "fontColor": "#1e1e1e",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": "large",
               "showHandles": false
             },
@@ -268,7 +268,7 @@
             },
             "data": {
               "text": "What do you notice about the Spotify brand?",
-              "fontColor": "#1e1e1e",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": "large",
               "showHandles": false
             },
@@ -287,7 +287,7 @@
             },
             "data": {
               "text": "What do you notice about the SoundCloud brand?",
-              "fontColor": "#1e1e1e",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": "large",
               "showHandles": false
             },
@@ -306,7 +306,7 @@
             },
             "data": {
               "text": "The Spotify brand ... ",
-              "fontColor": "#e03131",
+              "fontColor": "var(--sketchlab-stroke-red)",
               "fontSize": "medium",
               "showHandles": false,
               "textAlign": "left"
@@ -326,7 +326,7 @@
             },
             "data": {
               "text": "The SoundCloud brand ... ",
-              "fontColor": "#e03131",
+              "fontColor": "var(--sketchlab-stroke-red)",
               "fontSize": "medium",
               "showHandles": false,
               "textAlign": "left"
@@ -346,7 +346,7 @@
             },
             "data": {
               "text": "It seems like Spotify's target audience is ... \nbecause ... ",
-              "fontColor": "#e03131",
+              "fontColor": "var(--sketchlab-stroke-red)",
               "fontSize": "medium",
               "showHandles": false,
               "textAlign": "left"
@@ -366,7 +366,7 @@
             },
             "data": {
               "text": "It seems like SoundCloud's target audience is ... \nbecause ... ",
-              "fontColor": "#e03131",
+              "fontColor": "var(--sketchlab-stroke-red)",
               "fontSize": "medium",
               "showHandles": false,
               "textAlign": "left"
@@ -386,7 +386,7 @@
             },
             "data": {
               "text": "Spotify",
-              "fontColor": "#1e1e1e",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": "large",
               "showHandles": false
             },
@@ -404,7 +404,7 @@
             },
             "data": {
               "text": "SoundCloud",
-              "fontColor": "#1e1e1e",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": "large",
               "showHandles": false
             },
@@ -422,7 +422,7 @@
             },
             "data": {
               "text": "Netflix",
-              "fontColor": "#1e1e1e",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": "large",
               "showHandles": false
             },
@@ -440,7 +440,7 @@
             },
             "data": {
               "text": "Disney",
-              "fontColor": "#1e1e1e",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": "large",
               "showHandles": false
             },
@@ -482,7 +482,7 @@
             },
             "data": {
               "text": "Who is Netflix's target audience?",
-              "fontColor": "#1e1e1e",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": "large",
               "showHandles": false
             },
@@ -501,7 +501,7 @@
             },
             "data": {
               "text": "Who is Disney's target audience?",
-              "fontColor": "#1e1e1e",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": "large",
               "showHandles": false
             },
@@ -520,7 +520,7 @@
             },
             "data": {
               "text": "What do you notice about the Netflix brand?",
-              "fontColor": "#1e1e1e",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": "large",
               "showHandles": false
             },
@@ -539,7 +539,7 @@
             },
             "data": {
               "text": "What do you notice about the Disney brand?",
-              "fontColor": "#1e1e1e",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": "large",
               "showHandles": false
             },
@@ -558,7 +558,7 @@
             },
             "data": {
               "text": "The Netflix brand ... ",
-              "fontColor": "#e03131",
+              "fontColor": "var(--sketchlab-stroke-red)",
               "fontSize": "medium",
               "showHandles": false,
               "textAlign": "left"
@@ -577,7 +577,7 @@
             },
             "data": {
               "text": "The Disney brand ... ",
-              "fontColor": "#e03131",
+              "fontColor": "var(--sketchlab-stroke-red)",
               "fontSize": "medium",
               "showHandles": false,
               "textAlign": "left"
@@ -596,7 +596,7 @@
             },
             "data": {
               "text": "It seems like Netflix's target audience is ... \nbecause ... ",
-              "fontColor": "#e03131",
+              "fontColor": "var(--sketchlab-stroke-red)",
               "fontSize": "medium",
               "showHandles": false,
               "textAlign": "left"
@@ -615,7 +615,7 @@
             },
             "data": {
               "text": "It seems like Disney's target audience is ... \nbecause ... ",
-              "fontColor": "#e03131",
+              "fontColor": "var(--sketchlab-stroke-red)",
               "fontSize": "medium",
               "showHandles": false,
               "textAlign": "left"
@@ -634,7 +634,7 @@
             },
             "data": {
               "text": "Walmart",
-              "fontColor": "#1e1e1e",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": "large",
               "showHandles": false
             },
@@ -652,7 +652,7 @@
             },
             "data": {
               "text": "Target",
-              "fontColor": "#1e1e1e",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": "large",
               "showHandles": false
             },
@@ -694,7 +694,7 @@
             },
             "data": {
               "text": "Who is Target's target audience?",
-              "fontColor": "#1e1e1e",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": "large",
               "showHandles": false
             },
@@ -713,7 +713,7 @@
             },
             "data": {
               "text": "Who is Walmart's target audience?",
-              "fontColor": "#1e1e1e",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": "large",
               "showHandles": false
             },
@@ -732,7 +732,7 @@
             },
             "data": {
               "text": "What do you notice about the Target brand?",
-              "fontColor": "#1e1e1e",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": "large",
               "showHandles": false
             },
@@ -751,7 +751,7 @@
             },
             "data": {
               "text": "What do you notice about the Walmart brand?",
-              "fontColor": "#1e1e1e",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": "large",
               "showHandles": false
             },
@@ -770,7 +770,7 @@
             },
             "data": {
               "text": "The Target brand ... ",
-              "fontColor": "#e03131",
+              "fontColor": "var(--sketchlab-stroke-red)",
               "fontSize": "medium",
               "showHandles": false,
               "textAlign": "left"
@@ -789,7 +789,7 @@
             },
             "data": {
               "text": "The Walmart brand ... ",
-              "fontColor": "#e03131",
+              "fontColor": "var(--sketchlab-stroke-red)",
               "fontSize": "medium",
               "showHandles": false,
               "textAlign": "left"
@@ -808,7 +808,7 @@
             },
             "data": {
               "text": "It seems like Target's target audience is ... \nbecause ... ",
-              "fontColor": "#e03131",
+              "fontColor": "var(--sketchlab-stroke-red)",
               "fontSize": "medium",
               "showHandles": false,
               "textAlign": "left"
@@ -827,7 +827,7 @@
             },
             "data": {
               "text": "It seems like Walmart's target audience is ... \nbecause ... ",
-              "fontColor": "#e03131",
+              "fontColor": "var(--sketchlab-stroke-red)",
               "fontSize": "medium",
               "showHandles": false,
               "textAlign": "left"
@@ -1912,8 +1912,8 @@
           }
         ],
         "viewport": {
-          "x": 0.0030469141547655454,
-          "y": 247.9750273340403,
+          "x": 53.38279239755309,
+          "y": 267.06056810552474,
           "zoom": 0.5999030868804118
         }
       }
@@ -4834,6 +4834,6 @@
     }
   },
   "published": true,
-  "audit_log": "[{\"changed_at\":\"2026-03-10 21:47:34 +0000\",\"changed\":[],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-10 22:24:02 +0000\",\"changed\":[],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-10 22:35:42 +0000\",\"changed\":[],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-10 22:38:13 +0000\",\"changed\":[\"exemplar_sources\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-10 22:48:37 +0000\",\"changed\":[\"exemplar_sources\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-10 22:49:35 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-10 22:51:46 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-10 22:54:31 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-15 19:00:33 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2026-04-30 16:32:20 -0400\",\"changed\":[\"start_sources\"],\"changed_by_id\":1,\"changed_by_email\":\"levelbuilder@dev.com\"},{\"changed_at\":\"2026-04-30 18:08:02 -0400\",\"changed\":[\"start_sources\"],\"changed_by_id\":1,\"changed_by_email\":\"levelbuilder@dev.com\"},{\"changed_at\":\"2026-04-30 18:08:20 -0400\",\"changed\":[\"start_sources\"],\"changed_by_id\":1,\"changed_by_email\":\"levelbuilder@dev.com\"},{\"changed_at\":\"2026-05-06 10:04:25 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":155,\"changed_by_email\":\"dani@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2026-03-10 21:47:34 +0000\",\"changed\":[],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-10 22:24:02 +0000\",\"changed\":[],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-10 22:35:42 +0000\",\"changed\":[],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-10 22:38:13 +0000\",\"changed\":[\"exemplar_sources\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-10 22:48:37 +0000\",\"changed\":[\"exemplar_sources\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-10 22:49:35 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-10 22:51:46 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-10 22:54:31 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-15 19:00:33 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2026-04-30 16:32:20 -0400\",\"changed\":[\"start_sources\"],\"changed_by_id\":1,\"changed_by_email\":\"levelbuilder@dev.com\"},{\"changed_at\":\"2026-04-30 18:08:02 -0400\",\"changed\":[\"start_sources\"],\"changed_by_id\":1,\"changed_by_email\":\"levelbuilder@dev.com\"},{\"changed_at\":\"2026-04-30 18:08:20 -0400\",\"changed\":[\"start_sources\"],\"changed_by_id\":1,\"changed_by_email\":\"levelbuilder@dev.com\"},{\"changed_at\":\"2026-05-06 10:04:25 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":155,\"changed_by_email\":\"dani@code.org\"},{\"changed_at\":\"2026-05-07 18:37:50 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":155,\"changed_by_email\":\"dani@code.org\"}]"
 }]]></config>
 </Sketchlab>

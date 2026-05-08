@@ -52,5 +52,15 @@ markdown <<MARKDOWN
   <h4>It also connects their work to real apps they recognize and gives them practice keeping data aligned across arrays.</h4>
 </div>
 
+<div style="clear:both;"></div>
 
+---
+
+
+## 🔍 Check for Understandng
+> #### Before moving on, define the following term in your own words: **parallel arrays**.
+> - #### What does it mean for parallel arrays to stay “in sync” by index?
+
+
+<details> <summary style="cursor:pointer;display:inline-block;background:#8148B2;color:white;padding:14px 22px;font-size:18px;font-weight:600;border-radius:999px;list-style:none;"> Check your thinking </summary> <div style="margin-top:16px; background:#f7f8fa;"> <p style = "font-size: 14pt;"><b>Parallel arrays</b> are multiple arrays that store related data separately but correspond to each other.</p> <p style = "font-size: 14pt;">Staying “in sync” means that values at the same index across all arrays refer to the same item or record.</p> <p style = "font-size: 14pt;">Each index acts like a row of data, connecting information across the arrays.</p> </div> </details>
 MARKDOWN
