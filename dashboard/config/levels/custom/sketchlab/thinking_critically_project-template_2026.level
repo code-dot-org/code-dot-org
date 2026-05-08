@@ -25,7 +25,7 @@
               "shapeType": "rectangle",
               "label": "",
               "backgroundColor": "transparent",
-              "strokeColor": "#c92a2a",
+              "strokeColor": "var(--sketchlab-stroke-red)",
               "showHandles": false
             },
             "measured": {
@@ -44,7 +44,7 @@
             },
             "data": {
               "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. \nSed facilisis odio ac dui feugiat, ut molestie ipsum sodales.",
-              "fontColor": "#c92a2a",
+              "fontColor": "var(--sketchlab-stroke-red)",
               "fontSize": "large",
               "showHandles": false
             },
@@ -63,7 +63,7 @@
             },
             "data": {
               "text": "Try to avoid ",
-              "fontColor": "#c92a2a",
+              "fontColor": "var(--sketchlab-stroke-red)",
               "fontSize": "large",
               "showHandles": false
             },
@@ -87,9 +87,10 @@
             "data": {
               "shapeType": "circle",
               "label": "",
-              "backgroundColor": "#fa5252",
-              "strokeColor": "#c92a2a",
-              "showHandles": false
+              "backgroundColor": "var(--sketchlab-bg-red)",
+              "strokeColor": "var(--sketchlab-stroke-red)",
+              "showHandles": false,
+              "fontColor": "var(--sketchlab-stroke-red)"
             },
             "measured": {
               "width": 35,
@@ -113,7 +114,7 @@
               "shapeType": "rectangle",
               "label": "",
               "backgroundColor": "transparent",
-              "strokeColor": "#2b8a3e",
+              "strokeColor": "var(--sketchlab-stroke-green)",
               "showHandles": false
             },
             "measured": {
@@ -132,7 +133,7 @@
             },
             "data": {
               "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. \nSed facilisis odio ac dui feugiat, ut molestie ipsum sodales.",
-              "fontColor": "#2b8a3e",
+              "fontColor": "var(--sketchlab-stroke-green)",
               "fontSize": "large",
               "showHandles": false,
               "textAlign": "left"
@@ -152,7 +153,7 @@
             },
             "data": {
               "text": "Great use of AI",
-              "fontColor": "#2b8a3e",
+              "fontColor": "var(--sketchlab-stroke-green)",
               "fontSize": "large",
               "showHandles": false
             },
@@ -176,9 +177,10 @@
             "data": {
               "shapeType": "circle",
               "label": "",
-              "backgroundColor": "#40c057",
-              "strokeColor": "#2b8a3e",
-              "showHandles": false
+              "backgroundColor": "var(--sketchlab-bg-green)",
+              "strokeColor": "var(--sketchlab-stroke-green)",
+              "showHandles": false,
+              "fontColor": "var(--sketchlab-stroke-green)"
             },
             "measured": {
               "width": 35,
@@ -201,8 +203,9 @@
               "shapeType": "rectangle",
               "label": "",
               "backgroundColor": "transparent",
-              "strokeColor": "#1864ab",
-              "showHandles": false
+              "strokeColor": "var(--sketchlab-stroke-blue)",
+              "showHandles": false,
+              "fontColor": "var(--sketchlab-stroke-blue)"
             },
             "measured": {
               "width": 717,
@@ -224,9 +227,10 @@
             "data": {
               "shapeType": "diamond",
               "label": "",
-              "backgroundColor": "#15aabf",
-              "strokeColor": "#1864ab",
-              "showHandles": false
+              "backgroundColor": "var(--sketchlab-bg-blue)",
+              "strokeColor": "var(--sketchlab-stroke-blue)",
+              "showHandles": false,
+              "fontColor": "var(--sketchlab-stroke-blue)"
             },
             "measured": {
               "width": 37,
@@ -243,7 +247,7 @@
             },
             "data": {
               "text": "Important to know!",
-              "fontColor": "#1864ab",
+              "fontColor": "var(--sketchlab-stroke-blue)",
               "fontSize": "large",
               "showHandles": false
             },
@@ -262,7 +266,7 @@
             },
             "data": {
               "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. \nSed facilisis odio ac dui feugiat, ut molestie ipsum sodales.",
-              "fontColor": "#1864ab",
+              "fontColor": "var(--sketchlab-stroke-blue)",
               "fontSize": "large",
               "showHandles": false,
               "textAlign": "left"
@@ -288,7 +292,7 @@
               "shapeType": "rectangle",
               "label": "",
               "backgroundColor": "transparent",
-              "strokeColor": "#e67700",
+              "strokeColor": "var(--sketchlab-stroke-yellow)",
               "showHandles": false
             },
             "measured": {
@@ -311,8 +315,8 @@
             "data": {
               "shapeType": "diamond",
               "label": "",
-              "backgroundColor": "#fd7e14",
-              "strokeColor": "#e67700",
+              "backgroundColor": "var(--sketchlab-bg-yellow)",
+              "strokeColor": "var(--sketchlab-stroke-yellow)",
               "showHandles": false
             },
             "measured": {
@@ -349,7 +353,7 @@
             },
             "data": {
               "text": "Attention needed",
-              "fontColor": "#e67700",
+              "fontColor": "var(--sketchlab-stroke-yellow)",
               "fontSize": "large",
               "showHandles": false
             },
@@ -368,7 +372,7 @@
             },
             "data": {
               "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. \nSed facilisis odio ac dui feugiat, ut molestie ipsum sodales.",
-              "fontColor": "#e67700",
+              "fontColor": "var(--sketchlab-stroke-yellow)",
               "fontSize": "large",
               "showHandles": false,
               "textAlign": "left"
@@ -388,7 +392,7 @@
             },
             "data": {
               "text": "Templates & Shapes Library",
-              "fontColor": "#1e1e1e",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": "large",
               "showHandles": false
             },
@@ -407,7 +411,7 @@
             },
             "data": {
               "text": "- Use any of these samples in your own project! \n- Just select the object completely, and move it over. \n- Copy and paste if you want more than one.",
-              "fontColor": "#1e1e1e",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": "large",
               "showHandles": false,
               "textAlign": "left"
@@ -427,7 +431,7 @@
             },
             "data": {
               "text": "Your Guide to using AI ",
-              "fontColor": "#1e1e1e",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": "large",
               "showHandles": false
             },
@@ -441,12 +445,12 @@
             "id": "GaVSWIG7E3xabfcqcc0Ir",
             "type": "text",
             "position": {
-              "x": -1971.1750707568717,
-              "y": -842.9173747694822
+              "x": -1994.6142444370553,
+              "y": -851.4407106531854
             },
             "data": {
               "text": "- Design a guide for an audience related to a theme you're interested in. \n- Add examples of AI use, AI tips, and guidance based on evidence.\n- Use the roadmap above - move your marker as you go\n- You can use templates and shapes in the library to the right or make your own.\n- Be creative!\n",
-              "fontColor": "#1e1e1e",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": "large",
               "showHandles": false,
               "textAlign": "left"
@@ -471,9 +475,9 @@
             "data": {
               "shapeType": "rectangle",
               "label": "A topic I'm \ninterested in is...\n\n--->     ",
-              "backgroundColor": "#a5d8ff",
-              "strokeColor": "#1971c2",
-              "fontColor": "#1971c2",
+              "backgroundColor": "var(--sketchlab-bg-blue)",
+              "strokeColor": "var(--sketchlab-stroke-blue)",
+              "fontColor": "var(--sketchlab-stroke-blue)",
               "fontSize": "large"
             },
             "measured": {
@@ -496,9 +500,9 @@
             "data": {
               "shapeType": "rectangle",
               "label": "This guide is \ndesigned for...\n\n--->     ",
-              "backgroundColor": "#a5d8ff",
-              "strokeColor": "#1971c2",
-              "fontColor": "#1971c2",
+              "backgroundColor": "var(--sketchlab-bg-blue)",
+              "strokeColor": "var(--sketchlab-stroke-blue)",
+              "fontColor": "var(--sketchlab-stroke-blue)",
               "fontSize": "large"
             },
             "measured": {
@@ -521,9 +525,9 @@
             "data": {
               "shapeType": "rectangle",
               "label": "This audience \ncould use AI to...\n\n--->    ",
-              "backgroundColor": "#a5d8ff",
-              "strokeColor": "#1971c2",
-              "fontColor": "#1971c2",
+              "backgroundColor": "var(--sketchlab-bg-blue)",
+              "strokeColor": "var(--sketchlab-stroke-blue)",
+              "fontColor": "var(--sketchlab-stroke-blue)",
               "fontSize": "large"
             },
             "measured": {
@@ -541,7 +545,7 @@
             },
             "data": {
               "text": "Your theme:",
-              "fontColor": "#1e1e1e",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": "large",
               "showHandles": false
             },
@@ -560,7 +564,7 @@
             },
             "data": {
               "text": "Your Audience:",
-              "fontColor": "#1e1e1e",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": "large",
               "showHandles": false
             },
@@ -579,7 +583,7 @@
             },
             "data": {
               "text": "The Purpose:",
-              "fontColor": "#1e1e1e",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": "large",
               "showHandles": false
             },
@@ -598,7 +602,7 @@
             },
             "data": {
               "text": "Add examples of AI Generated content below",
-              "fontColor": "#ced4da",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": "large",
               "showHandles": false
             },
@@ -617,7 +621,7 @@
             },
             "data": {
               "text": "Add AI Usage Tips and Guidance below",
-              "fontColor": "#ced4da",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": "large",
               "showHandles": false
             },
@@ -641,8 +645,9 @@
             "data": {
               "shapeType": "rectangle",
               "label": "",
-              "backgroundColor": "#e7f5ff",
-              "strokeColor": "#ced4da"
+              "backgroundColor": "var(--sketchlab-bg-gray)",
+              "strokeColor": "var(--sketchlab-stroke-default)",
+              "fontColor": "var(--sketchlab-stroke-default)"
             },
             "measured": {
               "width": 2785,
@@ -660,7 +665,7 @@
             },
             "data": {
               "text": "Project Roadmap",
-              "fontColor": "#1e1e1e",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": "large",
               "showHandles": false
             },
@@ -678,7 +683,7 @@
             },
             "data": {
               "text": "Choose a \nmarker to \nmove along \nyour roadmap\nand track\nyour progress",
-              "fontColor": "#343a40",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": "large",
               "showHandles": false
             },
@@ -696,7 +701,7 @@
             },
             "data": {
               "text": "Project \nLaunch",
-              "fontColor": "#343a40",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": "large",
               "showHandles": false
             },
@@ -714,7 +719,7 @@
             },
             "data": {
               "text": "Define your theme, \naudience, & purpose",
-              "fontColor": "#343a40",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": "large",
               "showHandles": false
             },
@@ -732,7 +737,7 @@
             },
             "data": {
               "text": "Add examples of \ngood & poor AI outputs",
-              "fontColor": "#343a40",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": "large",
               "showHandles": false
             },
@@ -750,7 +755,7 @@
             },
             "data": {
               "text": "Add an AI \ngenerated image",
-              "fontColor": "#343a40",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": "large",
               "showHandles": false
             },
@@ -768,7 +773,7 @@
             },
             "data": {
               "text": "Write a tip for \nwriting good prompts",
-              "fontColor": "#343a40",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": "large",
               "showHandles": false
             },
@@ -786,7 +791,7 @@
             },
             "data": {
               "text": "Write a tip for \nsafe AI use",
-              "fontColor": "#343a40",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": "large",
               "showHandles": false
             },
@@ -804,7 +809,7 @@
             },
             "data": {
               "text": "Write your \nfinal statement",
-              "fontColor": "#343a40",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": "large",
               "showHandles": false
             },
@@ -990,7 +995,7 @@
             },
             "data": {
               "text": "Lesson 2",
-              "fontColor": "#000000",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": "large",
               "showHandles": false
             },
@@ -1008,7 +1013,7 @@
             },
             "data": {
               "text": "Lesson 2 & 3",
-              "fontColor": "#000000",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": "large",
               "showHandles": false
             },
@@ -1026,7 +1031,7 @@
             },
             "data": {
               "text": "Lesson 3",
-              "fontColor": "#000000",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": "large",
               "showHandles": false
             },
@@ -1044,7 +1049,7 @@
             },
             "data": {
               "text": "Lesson 4",
-              "fontColor": "#000000",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": "large",
               "showHandles": false
             },
@@ -1062,7 +1067,7 @@
             },
             "data": {
               "text": "Lesson 6",
-              "fontColor": "#000000",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": "large",
               "showHandles": false
             },
@@ -1080,7 +1085,7 @@
             },
             "data": {
               "text": "Lesson 7",
-              "fontColor": "#000000",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": "large",
               "showHandles": false
             },
@@ -1098,7 +1103,7 @@
             },
             "data": {
               "text": "Lesson 9",
-              "fontColor": "#000000",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": "large",
               "showHandles": false
             },
@@ -1743,7 +1748,8 @@
             "target": "e25b4421-7112-4f0d-9116-b25e04418912",
             "type": "straight",
             "style": {
-              "strokeWidth": 5
+              "strokeWidth": 5,
+              "stroke": "var(--sketchlab-stroke-default)"
             },
             "sourceHandle": "bottom-source"
           },
@@ -1778,9 +1784,9 @@
           }
         ],
         "viewport": {
-          "x": 1005.277586153966,
-          "y": 727.1001473088776,
-          "zoom": 0.5
+          "x": 981.4713042116098,
+          "y": 700.1961035415184,
+          "zoom": 0.46929982046678637
         }
       }
     },
@@ -1790,6 +1796,6 @@
     "name_suffix": "_2026"
   },
   "published": true,
-  "audit_log": "[{\"changed_at\":\"2026-04-20T18:48:40.715+00:00\",\"changed\":[\"cloned from \\\"aid-thinking-critically-lesson4-project-template_2026-test_2026-p_2026\\\"\"],\"cloned_from\":\"aid-thinking-critically-lesson4-project-template_2026-test_2026-p_2026\"},{\"changed_at\":\"2026-04-20 18:48:47 +0000\",\"changed\":[],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-24 01:11:59 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-04-24 01:12:32 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-04-28 17:04:48 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-04-29 14:50:46 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-04-29 14:54:03 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-04-29 14:58:48 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-04-29 15:02:32 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-04-29 15:11:49 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-04-29 15:12:24 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-04-29 15:20:46 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-04-29 15:27:15 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-04-29 15:36:51 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-04-29 15:39:55 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-04-29 15:40:06 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-04-29 15:41:19 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-04-29 16:55:22 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-04-29 17:07:46 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-04-29 17:10:09 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-04-29 17:12:13 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-04-29 17:20:16 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-04-29 17:28:44 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-04-29 17:53:53 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-04-29 17:54:43 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-04-29 17:54:59 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-04-29 17:58:53 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-05-01 18:23:31 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-05-07 15:07:07 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":155,\"changed_by_email\":\"dani@code.org\"},{\"changed_at\":\"2026-05-07 15:07:49 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":155,\"changed_by_email\":\"dani@code.org\"},{\"changed_at\":\"2026-05-07 15:12:11 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":155,\"changed_by_email\":\"dani@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2026-04-20T18:48:40.715+00:00\",\"changed\":[\"cloned from \\\"aid-thinking-critically-lesson4-project-template_2026-test_2026-p_2026\\\"\"],\"cloned_from\":\"aid-thinking-critically-lesson4-project-template_2026-test_2026-p_2026\"},{\"changed_at\":\"2026-04-20 18:48:47 +0000\",\"changed\":[],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-24 01:11:59 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-04-24 01:12:32 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-04-28 17:04:48 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-04-29 14:50:46 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-04-29 14:54:03 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-04-29 14:58:48 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-04-29 15:02:32 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-04-29 15:11:49 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-04-29 15:12:24 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-04-29 15:20:46 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-04-29 15:27:15 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-04-29 15:36:51 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-04-29 15:39:55 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-04-29 15:40:06 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-04-29 15:41:19 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-04-29 16:55:22 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-04-29 17:07:46 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-04-29 17:10:09 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-04-29 17:12:13 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-04-29 17:20:16 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-04-29 17:28:44 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-04-29 17:53:53 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-04-29 17:54:43 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-04-29 17:54:59 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-04-29 17:58:53 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-05-01 18:23:31 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-05-07 15:07:07 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":155,\"changed_by_email\":\"dani@code.org\"},{\"changed_at\":\"2026-05-07 15:07:49 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":155,\"changed_by_email\":\"dani@code.org\"},{\"changed_at\":\"2026-05-07 15:12:11 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":155,\"changed_by_email\":\"dani@code.org\"},{\"changed_at\":\"2026-05-08 14:11:29 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":155,\"changed_by_email\":\"dani@code.org\"}]"
 }]]></config>
 </Sketchlab>
