@@ -40,10 +40,10 @@ end
 def main
   # Make sure we're deleting Events (90 days old) a day before Requests (91 days old)
   # to ensure we don't have foreign key constraint issues when deleting Requests that are still referenced by Events.
-  deleted_event_count = delete_in_batches(AichatEvent.where('created_at < ?', 90.days.ago))
+  deleted_event_count = delete_in_batches(AichatEvent.where(created_at: ...90.days.ago))
   ChatClient.message('cron-daily', "Deleted #{deleted_event_count} AichatEvent records")
 
-  deleted_request_count, deleted_event_retry_count = delete_requests_in_batches(AichatRequest.where('created_at < ?', 91.days.ago))
+  deleted_request_count, deleted_event_retry_count = delete_requests_in_batches(AichatRequest.where(created_at: ...91.days.ago))
   ChatClient.message('cron-daily', "Deleted #{deleted_request_count} AichatRequest records")
   if deleted_event_retry_count > 0
     ChatClient.message('cron-daily', "Deleted #{deleted_event_retry_count} additional AichatEvent records while retrying AichatRequest batch deletes")
