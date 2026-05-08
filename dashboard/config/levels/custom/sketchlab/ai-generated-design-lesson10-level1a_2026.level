@@ -24,8 +24,8 @@
             "data": {
               "shapeType": "rectangle",
               "label": "",
-              "backgroundColor": "var(--sketchlab-bg-blue)",
-              "strokeColor": "#1e1e1e"
+              "backgroundColor": "var(--sketchlab-bg-gray)",
+              "strokeColor": "var(--sketchlab-stroke-default)"
             },
             "measured": {
               "width": 774,
@@ -46,7 +46,7 @@
             },
             "data": {
               "text": "Add wireframe components or pre-built sections\nto create your pages below",
-              "fontColor": "#1e1e1e",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": "large",
               "showHandles": false
             },
@@ -71,7 +71,7 @@
               "shapeType": "rectangle",
               "label": "",
               "backgroundColor": "transparent",
-              "strokeColor": "#1e1e1e"
+              "strokeColor": "var(--sketchlab-stroke-default)"
             },
             "measured": {
               "width": 627,
@@ -87,7 +87,7 @@
             },
             "data": {
               "text": "Page 1",
-              "fontColor": "#1e1e1e",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": "large",
               "showHandles": false
             },
@@ -105,7 +105,7 @@
             },
             "data": {
               "text": "Page 2",
-              "fontColor": "#1e1e1e",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": "large",
               "showHandles": false
             },
@@ -123,7 +123,7 @@
             },
             "data": {
               "text": "Images, Videos, & Icons",
-              "fontColor": "#000",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": "large",
               "showHandles": false
             },
@@ -142,7 +142,7 @@
             },
             "data": {
               "text": "Wireframe Components",
-              "fontColor": "#1e1e1e",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": "large",
               "showHandles": false
             },
@@ -161,7 +161,7 @@
             },
             "data": {
               "text": "Gallery Card",
-              "fontColor": "#000000",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": "large",
               "showHandles": false
             },
@@ -180,7 +180,7 @@
             },
             "data": {
               "text": "Buttons & Inputs",
-              "fontColor": "#000",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": "large",
               "showHandles": false
             },
@@ -202,7 +202,7 @@
             },
             "data": {
               "text": "Hero Section",
-              "fontColor": "#000000",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": "large",
               "showHandles": false
             },
@@ -226,8 +226,8 @@
             "data": {
               "shapeType": "rectangle",
               "label": "",
-              "backgroundColor": "#868e96",
-              "strokeColor": "#000000"
+              "backgroundColor": "#d1d1d1",
+              "strokeColor": "var(--sketchlab-stroke-default)"
             },
             "measured": {
               "width": 177,
@@ -250,7 +250,7 @@
               "shapeType": "rectangle",
               "label": "",
               "backgroundColor": "#c8c8c8",
-              "strokeColor": "#495057"
+              "strokeColor": "var(--sketchlab-stroke-default)"
             },
             "measured": {
               "width": 311,
@@ -273,7 +273,7 @@
               "shapeType": "rectangle",
               "label": "",
               "backgroundColor": "#c8c8c8",
-              "strokeColor": "#495057"
+              "strokeColor": "var(--sketchlab-stroke-default)"
             },
             "measured": {
               "width": 311,
@@ -296,7 +296,7 @@
               "shapeType": "rectangle",
               "label": "",
               "backgroundColor": "#c8c8c8",
-              "strokeColor": "#495057"
+              "strokeColor": "var(--sketchlab-stroke-default)"
             },
             "measured": {
               "width": 265,
@@ -313,7 +313,7 @@
             },
             "data": {
               "text": "(Title)",
-              "fontColor": "#000000",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": "medium",
               "showHandles": false
             },
@@ -332,7 +332,7 @@
             },
             "data": {
               "text": "(Body Text)",
-              "fontColor": "#000000",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": "medium",
               "showHandles": false
             },
@@ -351,7 +351,7 @@
             },
             "data": {
               "text": "Text Blocks",
-              "fontColor": "#000000",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": "large",
               "showHandles": false
             },
@@ -370,7 +370,7 @@
             },
             "data": {
               "text": "Navigation / Header",
-              "fontColor": "#000000",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": "large",
               "showHandles": false
             },
@@ -395,7 +395,7 @@
               "shapeType": "rectangle",
               "label": "",
               "backgroundColor": "transparent",
-              "strokeColor": "#1e1e1e"
+              "strokeColor": "var(--sketchlab-stroke-default)"
             },
             "measured": {
               "width": 627,
@@ -461,7 +461,7 @@
               "shapeType": "rectangle",
               "label": "Logo",
               "backgroundColor": "transparent",
-              "strokeColor": "#1e1e1e"
+              "strokeColor": "var(--sketchlab-stroke-default)"
             },
             "measured": {
               "width": 165,
@@ -478,7 +478,7 @@
             },
             "data": {
               "text": "Header",
-              "fontColor": "#1e1e1e",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": "large",
               "showHandles": false
             },
@@ -497,7 +497,7 @@
             },
             "data": {
               "text": "Navigation",
-              "fontColor": "#1e1e1e",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": "large",
               "showHandles": false
             },
@@ -516,7 +516,7 @@
             },
             "data": {
               "text": "Link",
-              "fontColor": "#1e1e1e",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": "large",
               "showHandles": false
             },
@@ -530,8 +530,8 @@
             "id": "QYnfJWM-pWbWnSqCvq3Cl",
             "type": "shape",
             "position": {
-              "x": -318.41069389765755,
-              "y": 1179.362046020471
+              "x": -318.46178106376624,
+              "y": 1173.7876949585734
             },
             "style": {
               "width": 102.36618498818295,
@@ -541,13 +541,14 @@
               "shapeType": "rectangle",
               "label": "",
               "backgroundColor": "transparent",
-              "strokeColor": "#000000"
+              "strokeColor": "var(--sketchlab-stroke-default)"
             },
             "measured": {
               "width": 102,
               "height": 102
             },
-            "dragging": false
+            "dragging": false,
+            "zIndex": 2
           },
           {
             "id": "JraPN4rzcaAhiz7t42S1_",
@@ -558,7 +559,7 @@
             },
             "data": {
               "text": "Pre-Built Wireframe Sections",
-              "fontColor": "#1e1e1e",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": "large",
               "showHandles": false
             },
@@ -577,7 +578,7 @@
             },
             "data": {
               "text": "Navigation Bar",
-              "fontColor": "#000000",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": "large",
               "showHandles": false
             },
@@ -602,7 +603,7 @@
               "shapeType": "rectangle",
               "label": "",
               "backgroundColor": "transparent",
-              "strokeColor": "#1e1e1e"
+              "strokeColor": "var(--sketchlab-stroke-default)"
             },
             "measured": {
               "width": 627,
@@ -625,7 +626,7 @@
               "shapeType": "rectangle",
               "label": "",
               "backgroundColor": "transparent",
-              "strokeColor": "#1e1e1e"
+              "strokeColor": "var(--sketchlab-stroke-default)"
             },
             "measured": {
               "width": 627,
@@ -643,7 +644,7 @@
             },
             "data": {
               "text": "Footer",
-              "fontColor": "#000000",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": "large",
               "showHandles": false
             },
@@ -662,7 +663,7 @@
             },
             "data": {
               "text": "Page 3",
-              "fontColor": "#1e1e1e",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": "large",
               "showHandles": false
             },
@@ -680,7 +681,7 @@
             },
             "data": {
               "text": "Page 4",
-              "fontColor": "#1e1e1e",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": "large",
               "showHandles": false
             },
@@ -1668,14 +1669,14 @@
               "showHandles": false
             },
             "position": {
-              "x": -741.3944918913262,
-              "y": 1908.7387386277355
+              "x": -738.7716764037275,
+              "y": 1910.0273817910238
             },
-            "width": 665,
-            "height": 381,
+            "width": 653,
+            "height": 362,
             "measured": {
-              "width": 665,
-              "height": 381
+              "width": 653,
+              "height": 362
             },
             "dragging": false,
             "resizing": false
@@ -1689,8 +1690,8 @@
               "showHandles": false
             },
             "position": {
-              "x": -767.7082435602179,
-              "y": 1524.6486184675214
+              "x": -779.0044720801668,
+              "y": 1526.5313232208462
             },
             "width": 715,
             "height": 168,
@@ -1731,8 +1732,8 @@
               "altText": "hero-section"
             },
             "position": {
-              "x": -780.5727295415263,
-              "y": 1705.5488187345416
+              "x": -782.4554342948511,
+              "y": 1698.0179997212422
             },
             "width": 450,
             "height": 310,
@@ -1771,19 +1772,28 @@
             "id": "9873ab05-56b8-41d0-9d30-cb4131e953bc",
             "source": "91d1ddd9-2a9e-4f9d-b14c-41d183eb642a",
             "target": "bca467f6-9f77-4d45-a8b1-e0c6831e0ca9",
-            "type": "straight"
+            "type": "straight",
+            "style": {
+              "stroke": "var(--sketchlab-stroke-default)"
+            }
           },
           {
             "id": "252c5383-b02a-4576-a3ce-ac8684963e86",
             "source": "84ca9c50-1d27-45f0-84ac-65ae4180e779",
             "target": "ba357a5a-334d-44d2-a6ec-ca4786f5337a",
-            "type": "straight"
+            "type": "straight",
+            "style": {
+              "stroke": "var(--sketchlab-stroke-default)"
+            }
           },
           {
             "id": "42f3b23c-5003-4daa-a21e-503bed5b64f1",
             "source": "d6d786af-8807-40fe-b5d2-3fcc0adbed57",
             "target": "6ddd9a93-a957-4fe6-a084-3925fce6024c",
-            "type": "straight"
+            "type": "straight",
+            "style": {
+              "stroke": "var(--sketchlab-stroke-default)"
+            }
           },
           {
             "id": "7810001e-6b8e-4fc3-ba86-b0e77196d518",
@@ -1817,9 +1827,9 @@
           }
         ],
         "viewport": {
-          "x": 640.9327825925013,
-          "y": 40.62134230150093,
-          "zoom": 0.5964065917180912
+          "x": 635.7145679786422,
+          "y": 66.86147687287462,
+          "zoom": 0.7779525159769103
         }
       }
     },
@@ -9757,6 +9767,6 @@
     "name_suffix": "_2026"
   },
   "published": true,
-  "audit_log": "[{\"changed_at\":\"2026-02-24T18:12:12.495+00:00\",\"changed\":[\"cloned from \\\"ai-generated-design-lesson10-level1a_2025\\\"\"],\"cloned_from\":\"ai-generated-design-lesson10-level1a_2025\"},{\"changed_at\":\"2026-03-17 16:55:36 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-03-17 23:51:38 +0000\",\"changed\":[\"long_instructions\",\"display_name\",\"thumbnail_url\",\"bubble_choice_description\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-17 23:54:57 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-17 23:55:50 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-17 23:56:15 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-17 23:57:42 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-17 23:58:01 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-18 00:02:12 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-18 00:36:19 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-18 00:38:06 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-18 12:14:23 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-18 12:15:51 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-18 12:24:17 +0000\",\"changed\":[\"exemplar_sources\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-18 12:26:31 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-18 12:26:44 +0000\",\"changed\":[],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-18 12:59:52 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-18 13:05:49 +0000\",\"changed\":[\"exemplar_sources\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-18 13:05:59 +0000\",\"changed\":[],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-20 19:28:04 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2026-04-20 19:33:25 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2026-04-24 15:29:54 +0000\",\"changed\":[\"display_name\",\"bubble_choice_description\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2026-05-01 07:10:11 -0400\",\"changed\":[\"start_sources\"],\"changed_by_id\":1,\"changed_by_email\":\"levelbuilder@dev.com\"},{\"changed_at\":\"2026-05-01 07:12:15 -0400\",\"changed\":[\"start_sources\"],\"changed_by_id\":1,\"changed_by_email\":\"levelbuilder@dev.com\"},{\"changed_at\":\"2026-05-06 19:22:54 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":155,\"changed_by_email\":\"dani@code.org\"},{\"changed_at\":\"2026-05-06 19:53:17 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":155,\"changed_by_email\":\"dani@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2026-02-24T18:12:12.495+00:00\",\"changed\":[\"cloned from \\\"ai-generated-design-lesson10-level1a_2025\\\"\"],\"cloned_from\":\"ai-generated-design-lesson10-level1a_2025\"},{\"changed_at\":\"2026-03-17 16:55:36 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-03-17 23:51:38 +0000\",\"changed\":[\"long_instructions\",\"display_name\",\"thumbnail_url\",\"bubble_choice_description\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-17 23:54:57 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-17 23:55:50 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-17 23:56:15 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-17 23:57:42 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-17 23:58:01 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-18 00:02:12 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-18 00:36:19 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-18 00:38:06 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-18 12:14:23 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-18 12:15:51 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-18 12:24:17 +0000\",\"changed\":[\"exemplar_sources\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-18 12:26:31 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-18 12:26:44 +0000\",\"changed\":[],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-18 12:59:52 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-18 13:05:49 +0000\",\"changed\":[\"exemplar_sources\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-18 13:05:59 +0000\",\"changed\":[],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-20 19:28:04 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2026-04-20 19:33:25 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2026-04-24 15:29:54 +0000\",\"changed\":[\"display_name\",\"bubble_choice_description\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2026-05-01 07:10:11 -0400\",\"changed\":[\"start_sources\"],\"changed_by_id\":1,\"changed_by_email\":\"levelbuilder@dev.com\"},{\"changed_at\":\"2026-05-01 07:12:15 -0400\",\"changed\":[\"start_sources\"],\"changed_by_id\":1,\"changed_by_email\":\"levelbuilder@dev.com\"},{\"changed_at\":\"2026-05-06 19:22:54 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":155,\"changed_by_email\":\"dani@code.org\"},{\"changed_at\":\"2026-05-06 19:53:17 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":155,\"changed_by_email\":\"dani@code.org\"},{\"changed_at\":\"2026-05-07 20:41:28 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":155,\"changed_by_email\":\"dani@code.org\"}]"
 }]]></config>
 </Sketchlab>

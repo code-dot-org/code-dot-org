@@ -61,7 +61,7 @@
             },
             "data": {
               "text": "SCENARIO 1:\nDesign an app to help new students make friends at school.",
-              "fontColor": "#1e1e1e",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": "large",
               "showHandles": false
             },
@@ -85,8 +85,8 @@
             "data": {
               "shapeType": "rectangle",
               "label": "",
-              "backgroundColor": "#a5d8ff",
-              "strokeColor": "#1e1e1e"
+              "backgroundColor": "var(--sketchlab-bg-blue)",
+              "strokeColor": "var(--sketchlab-stroke-default)"
             },
             "measured": {
               "width": 634,
@@ -102,7 +102,7 @@
             },
             "data": {
               "text": "Name(s):\n\n\nAge/Grade: \n\n\nNew to the school because ... ",
-              "fontColor": "#1e1e1e",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": "large",
               "showHandles": false,
               "textAlign": "left"
@@ -127,8 +127,8 @@
             "data": {
               "shapeType": "rectangle",
               "label": "",
-              "backgroundColor": "#a5d8ff",
-              "strokeColor": "#1e1e1e"
+              "backgroundColor": "var(--sketchlab-bg-blue)",
+              "strokeColor": "var(--sketchlab-stroke-default)"
             },
             "measured": {
               "width": 914,
@@ -144,7 +144,7 @@
             },
             "data": {
               "text": "A specific frustration:\n\n\n\n\nA meaningful goal:\n\n",
-              "fontColor": "#1e1e1e",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": "large",
               "showHandles": false,
               "textAlign": "left"
@@ -168,8 +168,8 @@
             "data": {
               "shapeType": "rectangle",
               "label": "",
-              "backgroundColor": "#a5d8ff",
-              "strokeColor": "#1e1e1e"
+              "backgroundColor": "var(--sketchlab-bg-blue)",
+              "strokeColor": "var(--sketchlab-stroke-default)"
             },
             "measured": {
               "width": 928,
@@ -186,7 +186,7 @@
             },
             "data": {
               "text": "Says:\n\n- ",
-              "fontColor": "#1e1e1e",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": "large",
               "showHandles": false
             },
@@ -204,7 +204,7 @@
             },
             "data": {
               "text": "Thinks:\n\n- ",
-              "fontColor": "#1e1e1e",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": "large",
               "showHandles": false
             },
@@ -223,7 +223,7 @@
             },
             "data": {
               "text": "Feels:\n\n- ",
-              "fontColor": "#1e1e1e",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": "large",
               "showHandles": false
             },
@@ -237,12 +237,12 @@
             "id": "5Awk-22VvhKPNGnQd7wvT",
             "type": "text",
             "position": {
-              "x": -142.88520240783714,
+              "x": -122.62960227023268,
               "y": 779.7310093470982
             },
             "data": {
               "text": "Does:\n\n- ",
-              "fontColor": "#1e1e1e",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": "large",
               "showHandles": false
             },
@@ -266,8 +266,8 @@
             "data": {
               "shapeType": "rectangle",
               "label": "",
-              "backgroundColor": "#a5d8ff",
-              "strokeColor": "#1e1e1e"
+              "backgroundColor": "var(--sketchlab-bg-blue)",
+              "strokeColor": "var(--sketchlab-stroke-default)"
             },
             "measured": {
               "width": 696,
@@ -283,7 +283,7 @@
             },
             "data": {
               "text": "Problem Statement:\n\n[User] needs a way to [need] because [reason/insight]",
-              "fontColor": "#1e1e1e",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": "large",
               "showHandles": false,
               "textAlign": "left"
@@ -299,18 +299,19 @@
             "type": "text",
             "position": {
               "x": -626.2748413085936,
-              "y": -19.76899065290172
+              "y": 8.588849539744523
             },
             "data": {
               "text": "#1",
-              "fontColor": "#1e1e1e",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": "large",
               "showHandles": false
             },
             "measured": {
               "width": 58,
               "height": 47
-            }
+            },
+            "dragging": false
           },
           {
             "id": "JgSTWkFLPzo6STXWP4p-G",
@@ -321,7 +322,7 @@
             },
             "data": {
               "text": "#2",
-              "fontColor": "#1e1e1e",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": "large",
               "showHandles": false
             },
@@ -339,7 +340,7 @@
             },
             "data": {
               "text": "#3",
-              "fontColor": "#1e1e1e",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": "large",
               "showHandles": false
             },
@@ -357,7 +358,7 @@
             },
             "data": {
               "text": "#4",
-              "fontColor": "#1e1e1e",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": "large",
               "showHandles": false
             },
@@ -375,7 +376,7 @@
             },
             "data": {
               "text": "Remember to focus on a need, not a specific solution \n(no apps, websites, or features)",
-              "fontColor": "#1e1e1e",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": "medium",
               "showHandles": false
             },
@@ -393,7 +394,7 @@
             },
             "data": {
               "text": "SCENARIO 3: \nRedesign the school cafeteria lunch line to be faster and less chaotic",
-              "fontColor": "#1e1e1e",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": "large",
               "showHandles": false
             },
@@ -417,8 +418,8 @@
             "data": {
               "shapeType": "rectangle",
               "label": "",
-              "backgroundColor": "#a5d8ff",
-              "strokeColor": "#1e1e1e"
+              "backgroundColor": "var(--sketchlab-bg-blue)",
+              "strokeColor": "var(--sketchlab-stroke-default)"
             },
             "measured": {
               "width": 632,
@@ -434,7 +435,7 @@
             },
             "data": {
               "text": "Name(s):\n\n\nRole in this situation:\n\n\nWhy this situation is difficult:\n ",
-              "fontColor": "#1e1e1e",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": "large",
               "showHandles": false,
               "textAlign": "left"
@@ -459,8 +460,8 @@
             "data": {
               "shapeType": "rectangle",
               "label": "",
-              "backgroundColor": "#a5d8ff",
-              "strokeColor": "#1e1e1e"
+              "backgroundColor": "var(--sketchlab-bg-blue)",
+              "strokeColor": "var(--sketchlab-stroke-default)"
             },
             "measured": {
               "width": 946,
@@ -476,7 +477,7 @@
             },
             "data": {
               "text": "A specific frustration:\n\n\n\n\nA meaningful goal:\n\n",
-              "fontColor": "#1e1e1e",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": "large",
               "showHandles": false,
               "textAlign": "left"
@@ -501,8 +502,8 @@
             "data": {
               "shapeType": "rectangle",
               "label": "",
-              "backgroundColor": "#a5d8ff",
-              "strokeColor": "#1e1e1e"
+              "backgroundColor": "var(--sketchlab-bg-blue)",
+              "strokeColor": "var(--sketchlab-stroke-default)"
             },
             "measured": {
               "width": 810,
@@ -519,7 +520,7 @@
             },
             "data": {
               "text": "Says:\n\n- ",
-              "fontColor": "#1e1e1e",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": "large",
               "showHandles": false
             },
@@ -538,7 +539,7 @@
             },
             "data": {
               "text": "Thinks:\n\n- ",
-              "fontColor": "#1e1e1e",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": "large",
               "showHandles": false
             },
@@ -557,7 +558,7 @@
             },
             "data": {
               "text": "Feels:\n\n- ",
-              "fontColor": "#1e1e1e",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": "large",
               "showHandles": false
             },
@@ -575,7 +576,7 @@
             },
             "data": {
               "text": "Does:\n\n- ",
-              "fontColor": "#1e1e1e",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": "large",
               "showHandles": false
             },
@@ -599,8 +600,8 @@
             "data": {
               "shapeType": "rectangle",
               "label": "",
-              "backgroundColor": "#a5d8ff",
-              "strokeColor": "#1e1e1e"
+              "backgroundColor": "var(--sketchlab-bg-blue)",
+              "strokeColor": "var(--sketchlab-stroke-default)"
             },
             "measured": {
               "width": 848,
@@ -616,7 +617,7 @@
             },
             "data": {
               "text": "Problem Statement:\n\n[User] needs a way to [need] because [reason/insight]",
-              "fontColor": "#1e1e1e",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": "large",
               "showHandles": false,
               "textAlign": "left"
@@ -636,7 +637,7 @@
             },
             "data": {
               "text": "#1",
-              "fontColor": "#1e1e1e",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": "large",
               "showHandles": false
             },
@@ -654,7 +655,7 @@
             },
             "data": {
               "text": "#2",
-              "fontColor": "#1e1e1e",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": "large",
               "showHandles": false
             },
@@ -672,7 +673,7 @@
             },
             "data": {
               "text": "#3",
-              "fontColor": "#1e1e1e",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": "large",
               "showHandles": false
             },
@@ -690,7 +691,7 @@
             },
             "data": {
               "text": "#4",
-              "fontColor": "#1e1e1e",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": "large",
               "showHandles": false
             },
@@ -708,7 +709,7 @@
             },
             "data": {
               "text": "Remember to focus on a need, not a specific solution \n(no apps, websites, or features)",
-              "fontColor": "#1e1e1e",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": "medium",
               "showHandles": false
             },
@@ -726,7 +727,7 @@
             },
             "data": {
               "text": "SCENARIO 2:\nDesign a product to help elderly relatives video call their families more easily",
-              "fontColor": "#1e1e1e",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": "large",
               "showHandles": false
             },
@@ -750,8 +751,8 @@
             "data": {
               "shapeType": "rectangle",
               "label": "",
-              "backgroundColor": "#a5d8ff",
-              "strokeColor": "#1e1e1e"
+              "backgroundColor": "var(--sketchlab-bg-blue)",
+              "strokeColor": "var(--sketchlab-stroke-default)"
             },
             "measured": {
               "width": 624,
@@ -767,7 +768,7 @@
             },
             "data": {
               "text": "Name(s):\n\n\nLives with / Context: \n\n\nStruggles with technology because ... ",
-              "fontColor": "#1e1e1e",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": "large",
               "showHandles": false,
               "textAlign": "left"
@@ -792,8 +793,8 @@
             "data": {
               "shapeType": "rectangle",
               "label": "",
-              "backgroundColor": "#a5d8ff",
-              "strokeColor": "#1e1e1e"
+              "backgroundColor": "var(--sketchlab-bg-blue)",
+              "strokeColor": "var(--sketchlab-stroke-default)"
             },
             "measured": {
               "width": 734,
@@ -809,7 +810,7 @@
             },
             "data": {
               "text": "A specific frustration:\n\n\n\n\nA meaningful goal:\n\n",
-              "fontColor": "#1e1e1e",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": "large",
               "showHandles": false,
               "textAlign": "left"
@@ -824,8 +825,8 @@
             "id": "iP1fOL3IGkIBxwn0YXWHc",
             "type": "shape",
             "position": {
-              "x": 1808.3084490992428,
-              "y": 597.0652287818693
+              "x": 1816.3084490992428,
+              "y": 567.0652287818693
             },
             "style": {
               "width": 807.978274464897,
@@ -834,8 +835,8 @@
             "data": {
               "shapeType": "rectangle",
               "label": "",
-              "backgroundColor": "#a5d8ff",
-              "strokeColor": "#1e1e1e"
+              "backgroundColor": "var(--sketchlab-bg-blue)",
+              "strokeColor": "var(--sketchlab-stroke-default)"
             },
             "measured": {
               "width": 808,
@@ -852,7 +853,7 @@
             },
             "data": {
               "text": "Says:\n\n- ",
-              "fontColor": "#1e1e1e",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": "large",
               "showHandles": false
             },
@@ -870,7 +871,7 @@
             },
             "data": {
               "text": "Thinks:\n\n- ",
-              "fontColor": "#1e1e1e",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": "large",
               "showHandles": false
             },
@@ -888,7 +889,7 @@
             },
             "data": {
               "text": "Feels:\n\n- ",
-              "fontColor": "#1e1e1e",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": "large",
               "showHandles": false
             },
@@ -906,7 +907,7 @@
             },
             "data": {
               "text": "Does:\n\n- ",
-              "fontColor": "#1e1e1e",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": "large",
               "showHandles": false
             },
@@ -929,8 +930,8 @@
             "data": {
               "shapeType": "rectangle",
               "label": "",
-              "backgroundColor": "#a5d8ff",
-              "strokeColor": "#1e1e1e"
+              "backgroundColor": "var(--sketchlab-bg-blue)",
+              "strokeColor": "var(--sketchlab-stroke-default)"
             },
             "measured": {
               "width": 700,
@@ -946,7 +947,7 @@
             },
             "data": {
               "text": "Problem Statement:\n\n[User] needs a way to [need] because [reason/insight]",
-              "fontColor": "#1e1e1e",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": "large",
               "showHandles": false,
               "textAlign": "left"
@@ -966,7 +967,7 @@
             },
             "data": {
               "text": "#1",
-              "fontColor": "#1e1e1e",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": "large",
               "showHandles": false
             },
@@ -980,18 +981,19 @@
             "type": "text",
             "position": {
               "x": 1814.5262142814047,
-              "y": 538.460815212291
+              "y": 518.460815212291
             },
             "data": {
               "text": "#2",
-              "fontColor": "#1e1e1e",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": "large",
               "showHandles": false
             },
             "measured": {
               "width": 58,
               "height": 47
-            }
+            },
+            "dragging": false
           },
           {
             "id": "KPZsgpFnXAHDDsUpDlRxq",
@@ -1002,7 +1004,7 @@
             },
             "data": {
               "text": "#3",
-              "fontColor": "#1e1e1e",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": "large",
               "showHandles": false
             },
@@ -1020,7 +1022,7 @@
             },
             "data": {
               "text": "#4",
-              "fontColor": "#1e1e1e",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": "large",
               "showHandles": false
             },
@@ -1033,19 +1035,20 @@
             "id": "g2bVWTgONcosOvhPzWQGQ",
             "type": "text",
             "position": {
-              "x": 3411.272775540675,
-              "y": 338.65676527536095
+              "x": 3261.381334522402,
+              "y": 332.5800852340796
             },
             "data": {
               "text": "Remember to focus on a need, not a specific solution \n(no apps, websites, or features)",
-              "fontColor": "#1e1e1e",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": "medium",
               "showHandles": false
             },
             "measured": {
               "width": 403,
               "height": 60
-            }
+            },
+            "dragging": false
           },
           {
             "id": "6xpGv5xzI7XdwJCZcrKmE",
@@ -1056,7 +1059,7 @@
             },
             "data": {
               "text": "Choose ONE scenario below to focus on. \nUse the boxes to build a user persona and write a clear problem statement.",
-              "fontColor": "#1e1e1e",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": "large",
               "showHandles": false
             },
@@ -1081,7 +1084,7 @@
               "shapeType": "rectangle",
               "label": "",
               "backgroundColor": "transparent",
-              "strokeColor": "#1e1e1e"
+              "strokeColor": "var(--sketchlab-stroke-default)"
             },
             "measured": {
               "width": 2176,
@@ -1093,8 +1096,8 @@
             "id": "X4S9bOKSWa5RxEJ1FoiPe",
             "type": "shape",
             "position": {
-              "x": 535.8421353078948,
-              "y": 1163.0381596473223
+              "x": 509.9259048848528,
+              "y": 1103.126425822562
             },
             "style": {
               "width": 2450.666809082029,
@@ -1104,7 +1107,7 @@
               "shapeType": "rectangle",
               "label": "",
               "backgroundColor": "transparent",
-              "strokeColor": "#1e1e1e"
+              "strokeColor": "var(--sketchlab-stroke-default)"
             },
             "measured": {
               "width": 2451,
@@ -1128,7 +1131,7 @@
               "shapeType": "rectangle",
               "label": "",
               "backgroundColor": "transparent",
-              "strokeColor": "#1e1e1e"
+              "strokeColor": "var(--sketchlab-stroke-default)"
             },
             "measured": {
               "width": 2176,
@@ -1146,7 +1149,7 @@
             },
             "data": {
               "text": "What feels stressful or inefficient here?",
-              "fontColor": "#1e1e1e",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": "large",
               "showHandles": false
             },
@@ -1165,7 +1168,7 @@
             },
             "data": {
               "text": "What might be confusing or frustrating here?",
-              "fontColor": "#1e1e1e",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": "large",
               "showHandles": false
             },
@@ -1178,12 +1181,12 @@
             "id": "I-gfGMo2NBWkXux8kFsF0",
             "type": "text",
             "position": {
-              "x": 125.90728759765648,
-              "y": 498.7231358119427
+              "x": 97.90728759765648,
+              "y": 478.7231358119427
             },
             "data": {
               "text": "What might these students be feeling in this moment?",
-              "fontColor": "#1e1e1e",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": "large",
               "showHandles": false
             },
@@ -1212,82 +1215,6 @@
             "measured": {
               "width": 374,
               "height": 330
-            }
-          },
-          {
-            "id": "8f3239ef-47ee-4058-b67c-6e0c67ba39b5",
-            "type": "lineAnchor",
-            "position": {
-              "x": -195.4748229980471,
-              "y": 616.8310764857699
-            },
-            "style": {
-              "width": 10,
-              "height": 10
-            },
-            "data": {
-              "lineAnchorRole": "source"
-            },
-            "measured": {
-              "width": 10,
-              "height": 10
-            }
-          },
-          {
-            "id": "50584bd0-2092-4ad5-8536-bd862601b91e",
-            "type": "lineAnchor",
-            "position": {
-              "x": -180.6748962402346,
-              "y": 896.8311985560825
-            },
-            "style": {
-              "width": 10,
-              "height": 10
-            },
-            "data": {
-              "lineAnchorRole": "target"
-            },
-            "measured": {
-              "width": 10,
-              "height": 10
-            }
-          },
-          {
-            "id": "6410f3a3-cfab-40ef-b884-c1aefc9bb663",
-            "type": "lineAnchor",
-            "position": {
-              "x": -591.7072296142579,
-              "y": 739.6310642787388
-            },
-            "style": {
-              "width": 10,
-              "height": 10
-            },
-            "data": {
-              "lineAnchorRole": "source"
-            },
-            "measured": {
-              "width": 10,
-              "height": 10
-            }
-          },
-          {
-            "id": "0d90c4b8-668c-4b60-bfb3-3edc972c8490",
-            "type": "lineAnchor",
-            "position": {
-              "x": 291.3254394531248,
-              "y": 739.6310642787388
-            },
-            "style": {
-              "width": 10,
-              "height": 10
-            },
-            "data": {
-              "lineAnchorRole": "target"
-            },
-            "measured": {
-              "width": 10,
-              "height": 10
             }
           },
           {
@@ -1391,82 +1318,6 @@
             "position": {
               "x": 1541.2973523635933,
               "y": 2073.7255789780907
-            },
-            "style": {
-              "width": 10,
-              "height": 10
-            },
-            "data": {
-              "lineAnchorRole": "target"
-            },
-            "measured": {
-              "width": 10,
-              "height": 10
-            }
-          },
-          {
-            "id": "3127517b-d0c3-4e4e-a4fb-2daeac794b49",
-            "type": "lineAnchor",
-            "position": {
-              "x": 2186.4975680211437,
-              "y": 633.7609586449084
-            },
-            "style": {
-              "width": 10,
-              "height": 10
-            },
-            "data": {
-              "lineAnchorRole": "source"
-            },
-            "measured": {
-              "width": 10,
-              "height": 10
-            }
-          },
-          {
-            "id": "b1b2a17f-6975-43e4-8a46-0ed30c4d497e",
-            "type": "lineAnchor",
-            "position": {
-              "x": 2201.297494778956,
-              "y": 913.761080715221
-            },
-            "style": {
-              "width": 10,
-              "height": 10
-            },
-            "data": {
-              "lineAnchorRole": "target"
-            },
-            "measured": {
-              "width": 10,
-              "height": 10
-            }
-          },
-          {
-            "id": "c47ea0ea-a155-4973-b490-21bbf1a5f84b",
-            "type": "lineAnchor",
-            "position": {
-              "x": 1836.29280090332,
-              "y": 754.5609769554553
-            },
-            "style": {
-              "width": 10,
-              "height": 10
-            },
-            "data": {
-              "lineAnchorRole": "source"
-            },
-            "measured": {
-              "width": 10,
-              "height": 10
-            }
-          },
-          {
-            "id": "8eda2a13-422d-434f-aba0-49b8cbbb59ae",
-            "type": "lineAnchor",
-            "position": {
-              "x": 2599.2977389195817,
-              "y": 754.5609769554553
             },
             "style": {
               "width": 10,
@@ -1797,7 +1648,7 @@
             "type": "lineAnchor",
             "position": {
               "x": 504.2591798120857,
-              "y": 315.02869550659716
+              "y": 317.05425552035763
             },
             "style": {
               "width": 10,
@@ -1811,25 +1662,6 @@
               "height": 10
             },
             "dragging": false
-          },
-          {
-            "id": "c54ce524-1ab7-4631-91e1-58c508df51bf",
-            "type": "lineAnchor",
-            "position": {
-              "x": 770.6632725453337,
-              "y": 223.24699876843738
-            },
-            "style": {
-              "width": 10,
-              "height": 10
-            },
-            "data": {
-              "lineAnchorRole": "target"
-            },
-            "measured": {
-              "width": 10,
-              "height": 10
-            }
           },
           {
             "id": "392acd51-de38-4b68-b377-33884918f49d",
@@ -1913,23 +1745,29 @@
         "edges": [
           {
             "id": "de761ed6-d0a0-413a-b47d-b041dbb0fe20",
-            "source": "8f3239ef-47ee-4058-b67c-6e0c67ba39b5",
-            "target": "50584bd0-2092-4ad5-8536-bd862601b91e",
+            "source": "_IsGCevb1snJeM4LXOWoO",
+            "target": "_IsGCevb1snJeM4LXOWoO",
             "type": "straight",
             "style": {
-              "strokeWidth": 5
+              "strokeWidth": 5,
+              "stroke": "var(--sketchlab-stroke-default)"
             },
-            "zIndex": 5
+            "zIndex": 5,
+            "sourceHandle": "top-source",
+            "targetHandle": "bottom-target"
           },
           {
             "id": "dddd273a-44e9-4497-b0b3-dd1275b892c1",
-            "source": "6410f3a3-cfab-40ef-b884-c1aefc9bb663",
-            "target": "0d90c4b8-668c-4b60-bfb3-3edc972c8490",
+            "source": "_IsGCevb1snJeM4LXOWoO",
+            "target": "_IsGCevb1snJeM4LXOWoO",
             "type": "straight",
             "style": {
-              "strokeWidth": 5
+              "strokeWidth": 5,
+              "stroke": "var(--sketchlab-stroke-default)"
             },
-            "zIndex": 6
+            "zIndex": 6,
+            "sourceHandle": "left-source",
+            "targetHandle": "right-target"
           },
           {
             "id": "d1f773e1-f2f4-4450-8d85-cfb2ab29bac0",
@@ -1953,7 +1791,8 @@
             "target": "55433559-ebd2-4767-bba0-235d7192ce42",
             "type": "straight",
             "style": {
-              "strokeWidth": 5
+              "strokeWidth": 5,
+              "stroke": "var(--sketchlab-stroke-default)"
             },
             "zIndex": 1
           },
@@ -1964,28 +1803,35 @@
             "type": "straight",
             "zIndex": 2,
             "style": {
-              "strokeWidth": 5
+              "strokeWidth": 5,
+              "stroke": "var(--sketchlab-stroke-default)"
             }
           },
           {
             "id": "0b3b2bf4-ca38-4396-80b1-bdfabf87e84f",
-            "source": "3127517b-d0c3-4e4e-a4fb-2daeac794b49",
-            "target": "b1b2a17f-6975-43e4-8a46-0ed30c4d497e",
+            "source": "iP1fOL3IGkIBxwn0YXWHc",
+            "target": "iP1fOL3IGkIBxwn0YXWHc",
             "type": "straight",
             "zIndex": 3,
             "style": {
-              "strokeWidth": 5
-            }
+              "strokeWidth": 5,
+              "stroke": "var(--sketchlab-stroke-default)"
+            },
+            "sourceHandle": "top-source",
+            "targetHandle": "bottom-target"
           },
           {
             "id": "e4dffdb1-e2ef-4730-8270-0eaf90a79124",
-            "source": "c47ea0ea-a155-4973-b490-21bbf1a5f84b",
-            "target": "8eda2a13-422d-434f-aba0-49b8cbbb59ae",
+            "source": "iP1fOL3IGkIBxwn0YXWHc",
+            "target": "iP1fOL3IGkIBxwn0YXWHc",
             "type": "straight",
             "style": {
-              "strokeWidth": 5
+              "strokeWidth": 5,
+              "stroke": "var(--sketchlab-stroke-default)"
             },
-            "zIndex": 4
+            "zIndex": 4,
+            "sourceHandle": "left-source",
+            "targetHandle": "right-target"
           },
           {
             "id": "f02c7760-133d-4195-9c6a-a55b3ccf9aaf",
@@ -2118,7 +1964,7 @@
           {
             "id": "f128e5f1-e528-4198-aa6d-bc515993feae",
             "source": "4b92940b-ac12-4a05-8286-8ccb3da835d3",
-            "target": "c54ce524-1ab7-4631-91e1-58c508df51bf",
+            "target": "B6XwTUV_LM8C6oIW7pfW3",
             "type": "straight",
             "markerEnd": {
               "type": "arrowclosed",
@@ -2129,7 +1975,8 @@
             },
             "style": {
               "strokeWidth": 5
-            }
+            },
+            "targetHandle": "left-target"
           },
           {
             "id": "a9aa48d6-0651-4227-b62b-83096a6512a1",
@@ -2162,11 +2009,30 @@
             "style": {
               "strokeWidth": 5
             }
+          },
+          {
+            "source": "KPZsgpFnXAHDDsUpDlRxq",
+            "sourceHandle": "right-source",
+            "target": "KPZsgpFnXAHDDsUpDlRxq",
+            "targetHandle": "right-target",
+            "type": "straight",
+            "style": {
+              "stroke": "var(--sketchlab-stroke-default)",
+              "strokeWidth": 1
+            },
+            "markerEnd": {
+              "type": "arrowclosed",
+              "color": "var(--sketchlab-stroke-default)",
+              "width": 14,
+              "height": 14,
+              "strokeWidth": 1
+            },
+            "id": "xy-edge__KPZsgpFnXAHDDsUpDlRxqright-source-KPZsgpFnXAHDDsUpDlRxqright-target"
           }
         ],
         "viewport": {
-          "x": 78.58192518360693,
-          "y": 183.43234194742354,
+          "x": 262.7370661919862,
+          "y": 192.23369280453267,
           "zoom": 0.5
         }
       }
@@ -5609,6 +5475,6 @@
     "teacher_markdown": "* Students often jump straight to solutions (“They need an app that sends reminders”). Redirect them to focus on the need behind the solution. Ask: “What is the person struggling with underneath that?” or “Why does that matter to them?”\r\n\r\n* If personas feel generic (“a student who is busy”), push for specificity. Encourage details that make the person real — schedule constraints, emotional reactions, or situational barriers. Strong problem statements come from specific people, not vague users."
   },
   "published": true,
-  "audit_log": "[{\"changed_at\":\"2026-03-11T17:51:10.333+00:00\",\"changed\":[\"cloned from \\\"ai-generated-design-lesson5-level1_v3_2026\\\"\"],\"cloned_from\":\"ai-generated-design-lesson5-level1_v3_2026\"},{\"changed_at\":\"2026-03-11 17:53:15 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-11 18:19:28 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-11 18:24:18 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-11 18:31:58 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-11 18:40:35 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-11 18:46:35 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-11 18:47:36 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-11 18:52:21 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-11 18:52:55 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-11 18:53:20 +0000\",\"changed\":[\"exemplar_sources\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-11 18:58:51 +0000\",\"changed\":[\"exemplar_sources\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-11 19:00:03 +0000\",\"changed\":[\"exemplar_sources\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-11 19:08:51 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-11 19:09:50 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-11 19:25:00 +0000\",\"changed\":[],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-11 19:25:15 +0000\",\"changed\":[],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-11 19:28:23 +0000\",\"changed\":[],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-12 22:50:04 +0000\",\"changed\":[\"long_instructions\",\"thumbnail_url\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-12 22:57:04 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-16 15:16:17 +0000\",\"changed\":[\"long_instructions\",\"display_name\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2026-05-06 09:52:36 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":155,\"changed_by_email\":\"dani@code.org\"},{\"changed_at\":\"2026-05-06 09:52:42 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":155,\"changed_by_email\":\"dani@code.org\"},{\"changed_at\":\"2026-05-06 19:00:04 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":155,\"changed_by_email\":\"dani@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2026-03-11T17:51:10.333+00:00\",\"changed\":[\"cloned from \\\"ai-generated-design-lesson5-level1_v3_2026\\\"\"],\"cloned_from\":\"ai-generated-design-lesson5-level1_v3_2026\"},{\"changed_at\":\"2026-03-11 17:53:15 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-11 18:19:28 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-11 18:24:18 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-11 18:31:58 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-11 18:40:35 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-11 18:46:35 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-11 18:47:36 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-11 18:52:21 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-11 18:52:55 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-11 18:53:20 +0000\",\"changed\":[\"exemplar_sources\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-11 18:58:51 +0000\",\"changed\":[\"exemplar_sources\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-11 19:00:03 +0000\",\"changed\":[\"exemplar_sources\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-11 19:08:51 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-11 19:09:50 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-11 19:25:00 +0000\",\"changed\":[],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-11 19:25:15 +0000\",\"changed\":[],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-11 19:28:23 +0000\",\"changed\":[],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-12 22:50:04 +0000\",\"changed\":[\"long_instructions\",\"thumbnail_url\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-12 22:57:04 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-16 15:16:17 +0000\",\"changed\":[\"long_instructions\",\"display_name\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2026-05-06 09:52:36 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":155,\"changed_by_email\":\"dani@code.org\"},{\"changed_at\":\"2026-05-06 09:52:42 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":155,\"changed_by_email\":\"dani@code.org\"},{\"changed_at\":\"2026-05-06 19:00:04 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":155,\"changed_by_email\":\"dani@code.org\"},{\"changed_at\":\"2026-05-07 18:47:03 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":155,\"changed_by_email\":\"dani@code.org\"},{\"changed_at\":\"2026-05-07 18:57:21 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":155,\"changed_by_email\":\"dani@code.org\"}]"
 }]]></config>
 </Sketchlab>
