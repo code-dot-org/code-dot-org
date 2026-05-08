@@ -34,7 +34,7 @@ import {
   ToolbarVisibilityProvider,
   type ToolbarTarget,
 } from '../context';
-import OpenLineEdgeToolbar from '../elementToolbars/OpenLineEdgeToolbar';
+import CornerToolbarPanel from '../elementToolbars/CornerToolbarPanel';
 import {
   DEFAULT_EDGE_TYPE,
   DEFAULT_LINE_WIDTH,
@@ -636,9 +636,9 @@ export default function ReactFlowCanvas({
               }}
               defaultMarkerColor={DEFAULT_STROKE_COLOR}
             >
-              <OpenLineEdgeToolbar
-                edges={edges}
+              <CornerToolbarPanel
                 nodes={nodes}
+                edges={edges}
                 setEdges={setEdges}
               />
               <Background />

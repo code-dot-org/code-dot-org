@@ -4,7 +4,6 @@ import React, {memo, useCallback, useMemo, useRef, useState} from 'react';
 
 import {DEFAULT_ROTATION, MIN_NODE_HEIGHT, MIN_NODE_WIDTH} from '../constants';
 import {useSketchLabReadOnly} from '../context';
-import TextNodeToolbar from '../elementToolbars/TextNodeToolbar';
 import {
   fontSizePx,
   DEFAULT_TEXT_ALIGN,
@@ -97,8 +96,6 @@ function TextNode({id, data, selected}: NodeProps<TextNodeType>) {
         minWidth={MIN_NODE_WIDTH}
         minHeight={MIN_NODE_HEIGHT}
       />
-
-      <TextNodeToolbar nodeId={id} />
 
       <div className={styles.rotatable} style={rotatableStyle}>
         <div
