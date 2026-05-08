@@ -15,7 +15,7 @@ DASHBOARD_DB_LONG_TIMEOUT = Cdo::Sequel.database_connection_pool(
 class DeleteOldAiChatData
   EVENT_RETENTION_DAYS = 90
   REQUEST_RETENTION_DAYS = 91
-  DELETE_BATCH_SIZE = 10_000
+  DELETE_BATCH_SIZE = 1_000
 
   def self.main
     new.main
