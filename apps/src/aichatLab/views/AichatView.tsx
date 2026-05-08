@@ -55,6 +55,7 @@ import {tryGetLocalStorage, trySetLocalStorage} from '@cdo/apps/utils';
 import {AiChatClientTypes} from '@cdo/generated-scripts/sharedConstants';
 
 import {LevelPropertiesContext} from '../levelPropertiesContext';
+import {setChatMessageSent} from '../redux/slice';
 import {AichatLevelProperties, ModalTypes, ViewMode} from '../types';
 
 import {isDisabled} from './modelCustomization/utils';
@@ -113,6 +114,9 @@ const AichatView: React.FunctionComponent<LabProps<AichatLevelProperties>> = ({
 
   const hasSetInitialCustomizations = useAppSelector(
     state => state.aichatLab.hasSetInitialCustomizations
+  );
+  const saveInProgress = useAppSelector(
+    state => state.aichatLab.saveInProgress
   );
 
   const chatWorkspaceInitialized = hasSetInitialCustomizations;
@@ -269,6 +273,11 @@ const AichatView: React.FunctionComponent<LabProps<AichatLevelProperties>> = ({
       });
     }
   }, [dialogControl, resetProject]);
+
+  const onMessageSent = useCallback(() => {
+    logLevelActivity();
+    dispatch(setChatMessageSent(true));
+  }, [dispatch, logLevelActivity]);
 
   // Only recreate modelParameters when relevant customizations are updated.
   const modelParameters: ModelParameters = useMemo(() => {
@@ -452,8 +461,9 @@ const AichatView: React.FunctionComponent<LabProps<AichatLevelProperties>> = ({
                       starterAssets && Object.keys(starterAssets).length > 0
                     }
                     multimodalEnabled={levelAichatSettings?.multimodalEnabled}
-                    logLevelActivity={logLevelActivity}
                     disabledState={disabledState}
+                    sendDisabled={saveInProgress}
+                    onMessageSent={onMessageSent}
                     ref={chatWorkspaceRef}
                   />
                 )}
