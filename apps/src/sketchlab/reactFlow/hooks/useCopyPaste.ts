@@ -32,6 +32,20 @@ interface UseCopyPasteOptions {
   ) => void;
 }
 
+// Returns the handle-to-handle horizontal span of a line clipboard's anchor
+// nodes. Uses anchorHandleFlowPosition rather than raw position.x because
+// source and target anchors offset their top-left corners differently.
+function lineHorizontalSpanFromClipboardNodes(
+  clipboardNodes: SketchlabReactFlowNode[]
+): number {
+  const handleXs = clipboardNodes.map(n =>
+    n.type === 'lineAnchor'
+      ? anchorHandleFlowPosition(n.position, n.data.lineAnchorRole).x
+      : n.position.x
+  );
+  return Math.max(...handleXs) - Math.min(...handleXs);
+}
+
 export function useCopyPaste({
   nodes,
   edges,
@@ -162,20 +176,13 @@ export function useCopyPaste({
           : buildLineEdgeClipboard(edgeId);
       if (!source) return;
 
-      const handleXs = source.nodes.map(n =>
-        n.type === 'lineAnchor'
-          ? anchorHandleFlowPosition(n.position, n.data.lineAnchorRole).x
-          : n.position.x
+      const lineHorizontalSpan = lineHorizontalSpanFromClipboardNodes(
+        source.nodes
       );
-      const lineHorizontalDisplacement =
-        Math.max(...handleXs) - Math.min(...handleXs);
       // For lines, we want to offset the pasted line by the horizontal displacement of the original line.
       // If the line's horizontal displacement is less than the default offset, use the default offset so that lines
       // that are vertical or almost vertical aren't too close to each other.
-      const offsetX = Math.max(
-        lineHorizontalDisplacement,
-        DEFAULT_PASTE_OFFSET_PX
-      );
+      const offsetX = Math.max(lineHorizontalSpan, DEFAULT_PASTE_OFFSET_PX);
 
       const idMap = new Map<string, string>();
       const newNodes = source.nodes.map(node => {
@@ -274,13 +281,10 @@ export function useCopyPaste({
     } else {
       const isLine = contents.edges.length > 0;
       if (isLine) {
-        const handleXs = contents.nodes.map(n =>
-          n.type === 'lineAnchor'
-            ? anchorHandleFlowPosition(n.position, n.data.lineAnchorRole).x
-            : n.position.x
+        const lineHorizontalSpan = lineHorizontalSpanFromClipboardNodes(
+          contents.nodes
         );
-        const lineWidth = Math.max(...handleXs) - Math.min(...handleXs);
-        deltaX = Math.max(lineWidth, DEFAULT_PASTE_OFFSET_PX);
+        deltaX = Math.max(lineHorizontalSpan, DEFAULT_PASTE_OFFSET_PX);
       } else {
         deltaX = anchorNode
           ? anchorNode.width ?? DEFAULT_NODE_WIDTH
