@@ -135,6 +135,82 @@ _No fixme or skip entries._
 
 ---
 
+## Batch N — Auth-unblocking pass (craft, share_buttons, applab)
+
+**Features ported:**
+
+- `craft/hero_logged_in.feature` → `tests/legacy/activities/craft/craft.spec.ts`
+- `share_buttons.feature` → `tests/legacy/share-buttons/share-buttons.spec.ts`
+- `applab/clipping.feature` → `tests/applab/applab.spec.ts`
+- `applab/sharing_from_script_level.feature` → `tests/applab/applab.spec.ts`
+- `applab/scenarios.feature` (scenario 1) → `tests/applab/applab.spec.ts`
+
+All pass C+F+W.
+
+### applab_submittable — submit/unsubmit/resubmit cycle
+
+- **Source:** `dashboard/test/ui/features/star_labs/applab_submittable.feature` —
+  "Submit anything, unsubmit, be able to resubmit."
+- **Test file:** `tests/applab/applab.spec.ts`
+- **Status:** fixme
+- **Reason:** `page.goto(levelUrl)` gets `net::ERR_ABORTED` after clicking `#confirm-button`
+  on the submit modal. Three approaches tried: (1) direct goto after click,
+  (2) `Promise.all([waitForLoadState('load'), click])`, (3) wait for `.modal` hidden
+  then goto — all fail identically. Root cause: the confirm triggers a server-side
+  multi-step redirect chain; the browser is still mid-navigation when goto fires.
+  Page snapshot after modal closes shows empty `<main>` at an unexpected URL, not
+  the level URL — a JS or meta redirect on the landing page likely fires a second
+  navigation before goto can settle.
+
+---
+
+## Batch N+1 — Auth-unblocking pass 2 (sharepage_logo, share_remix, maker, gamelab, spritelab, catalog)
+
+**Features ported (passing):**
+
+- `star_labs/sharepage_logo.feature` → `tests/legacy/sharepage-logo/sharepage-logo.spec.ts` (4 tests)
+- `star_labs/legacy_share_remix.feature` → `tests/legacy/share-remix/share-remix.spec.ts` (1 test)
+- `star_labs/maker_projects.feature` → `tests/legacy/maker/maker.spec.ts` (3 tests)
+- `gamelab/level_options.feature` → `tests/legacy/activities/gamelab/gamelab.spec.ts` (4 tests)
+- `spritelab/loading_costumes.feature` → `tests/legacy/activities/spritelab/spritelab.spec.ts` (1 test)
+- `acquisition_products/curriculum_catalog.feature` (scenarios 2–3) → `tests/catalog/catalog.spec.ts`
+
+All pass C+F+W (maker Chromium-only per @chrome tag).
+
+**Key techniques learned:**
+
+- `#overlay` CSS-module div blocks pointer events on project pages; use `page.evaluate(() => document.querySelector('#overlay')?.click())` to dismiss.
+- Game Lab and App Lab share pages autoplay on load — `#runButton` stays hidden; wait for `#logo-img img` instead.
+- Congrats dialog backdrop blocks `.project_share` header button; `page.evaluate()` JS click bypasses hit-testing.
+
+### gamelab_submittable — submit/unsubmit/resubmit cycle
+
+- **Source:** `dashboard/test/ui/features/star_labs/gamelab_submittable.feature` —
+  "Submit anything, unsubmit, be able to resubmit."
+- **Test file:** `tests/legacy/activities/gamelab/gamelab.spec.ts`
+- **Status:** fixme
+- **Reason:** Submit and unsubmit steps pass consistently; the final
+  `#submitButton visible` assertion times out after reload + rerun.
+  Server-side submission state does not reset cleanly within the test window.
+  Likely cause: unsubmit AJAX completes but submit-button visibility is tied
+  to server-session state that a subsequent fresh `page.goto()` does not yet
+  reflect. 3 attempts exhausted.
+
+### curriculum_catalog_assign_unassign — assign/unassign teacher flow
+
+- **Source:** `dashboard/test/ui/features/acquisition_products/curriculum_catalog_assign_unassign.feature`
+- **Test file:** `tests/catalog/catalog.spec.ts`
+- **Status:** fixme
+- **Reason:** Test passes in isolation (12/12) but fails under parallel server
+  load. Four PATCH `/dashboardapi/sections/:id` calls interleave with page
+  navigations; `waitForResponse` timing races under heavy parallelism cause the
+  first assignment PATCH to time out. No reliable completion signal for
+  unassignment (no success message); the Section 1 assignment success message
+  can falsely satisfy the Section 2 `toBeVisible` assertion. 6+ iterations
+  exhausted.
+
+---
+
 <!-- Agent: append new entries here as fixme/skip placeholders are created.
 
 Format:
