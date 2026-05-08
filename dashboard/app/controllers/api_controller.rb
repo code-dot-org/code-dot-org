@@ -177,7 +177,7 @@ class ApiController < ApplicationController
         return render status: :bad_request, json: {error: I18n.t("lesson_lock.error.cannot_view_locked_answers")}
       end
 
-      UserLevel.find_or_initialize_by(
+      user_level = UserLevel.find_or_initialize_by(
         user_id: user_level_data[:user_id],
         level_id: user_level_data[:level_id],
         script_id: user_level_data[:script_id]
