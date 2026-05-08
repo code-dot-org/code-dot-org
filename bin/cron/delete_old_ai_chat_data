@@ -15,9 +15,6 @@ DASHBOARD_DB_LONG_TIMEOUT = Cdo::Sequel.database_connection_pool(
 RETENTION_DAYS = 90
 DELETE_BATCH_SIZE = 1_000
 
-# Scan by id so each delete operates on a bounded set of rows. The number of
-# qualifying rows is finite even when the database cannot infer that from
-# `created_at < cutoff` alone.
 def read_only_replica_configured?
   configured_servers = DASHBOARD_DB_LONG_TIMEOUT.opts.fetch(:servers, {})
   configured_servers.key?(:read_only)
@@ -57,6 +54,9 @@ def largest_eligible_id(table_name, retention_cutoff)
   end
 end
 
+# First find the largest id that is old enough to delete. Then batch only
+# within that fixed id range so we stop at the retention boundary instead of
+# probing into newer rows.
 def delete_in_batches(table_name, cutoff)
   total_deleted_rows = 0
   last_processed_id = 0
