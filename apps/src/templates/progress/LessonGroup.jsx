@@ -1,5 +1,4 @@
 import PropTypes from 'prop-types';
-import Radium from 'radium'; // eslint-disable-line no-restricted-imports
 import React from 'react';
 import {connect} from 'react-redux';
 
@@ -80,11 +79,11 @@ class LessonGroup extends React.Component {
     return (
       <div style={styles.main} className="lesson-group">
         <div
-          style={[
-            styles.header,
-            isPlc && styles.headerBlue,
-            this.state.collapsed && styles.bottom,
-          ]}
+          style={{
+            ...styles.header,
+            ...(isPlc && styles.headerBlue),
+            ...(this.state.collapsed && styles.bottom),
+          }}
           onClick={this.toggleCollapsed}
         >
           <FontAwesome
@@ -116,11 +115,11 @@ class LessonGroup extends React.Component {
         </div>
         {!this.state.collapsed && (
           <div
-            style={[
-              styles.contents,
-              isPlc && styles.contentsBlue,
-              styles.bottom,
-            ]}
+            style={{
+              ...styles.contents,
+              ...(isPlc && styles.contentsBlue),
+              ...styles.bottom,
+            }}
           >
             <TableType
               groupedLesson={this.props.groupedLesson}
@@ -181,4 +180,4 @@ export default connect((state, ownProps) => ({
   hasVisibleLesson: ownProps.groupedLesson.lessons.some(lesson =>
     lessonIsVisible(lesson, state, state.viewAs)
   ),
-}))(Radium(LessonGroup));
+}))(LessonGroup);
