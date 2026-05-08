@@ -1,0 +1,112 @@
+import {useReactFlow, useStore} from '@xyflow/react';
+import React, {useMemo} from 'react';
+
+import {
+  SketchlabReactFlowEdge,
+  SketchlabReactFlowNode,
+} from '@cdo/apps/lab2/types';
+
+import {useToolbarVisibility} from '../context';
+import {useLineToolbar} from '../hooks/useLineToolbar';
+import {resolveEdgeEndpoint} from '../utils/lineAnchors';
+
+import LineEdgeToolbar from './LineEdgeToolbar';
+
+interface OpenLineEdgeToolbarProps {
+  edges: SketchlabReactFlowEdge[];
+  nodes: SketchlabReactFlowNode[];
+  setEdges: (
+    updater: (edges: SketchlabReactFlowEdge[]) => SketchlabReactFlowEdge[]
+  ) => void;
+}
+
+/**
+ * Renders the line-edge toolbar for the currently open line edge, anchored
+ * at the leftmost endpoint with padding tuned to the visible handle.
+ * Renders nothing if no line edge is open.
+ */
+export default function OpenLineEdgeToolbar({
+  edges,
+  nodes,
+  setEdges,
+}: OpenLineEdgeToolbarProps) {
+  const {openToolbarTarget} = useToolbarVisibility();
+  const {
+    openLineEdge,
+    setLineEdgeColor,
+    setLineEdgeWidth,
+    setLineEdgeStrokeStyle,
+    setLineEdgeArrowHeads,
+    setLineEdgeType,
+    setLineEdgeLocked,
+  } = useLineToolbar({
+    edges,
+    openToolbarTarget,
+    setEdges,
+  });
+
+  const {screenToFlowPosition} = useReactFlow();
+  // Subscribe to zoom so we can scale the toolbar's right padding to
+  // match the visible handle's on-screen size as zoom changes.
+  const zoom = useStore(state => state.transform[2]);
+
+  const anchor = useMemo(() => {
+    if (!openLineEdge) return null;
+    const getNode = (id: string) => nodes.find(node => node.id === id);
+    const sourceEndpoint = resolveEdgeEndpoint(
+      openLineEdge,
+      'source',
+      getNode,
+      screenToFlowPosition
+    );
+    const targetEndpoint = resolveEdgeEndpoint(
+      openLineEdge,
+      'target',
+      getNode,
+      screenToFlowPosition
+    );
+    if (!sourceEndpoint || !targetEndpoint) return null;
+    const sourcePoint = sourceEndpoint.flowPosition;
+    const targetPoint = targetEndpoint.flowPosition;
+    const leftIsSource = sourcePoint.x <= targetPoint.x;
+    const position = leftIsSource ? sourcePoint : targetPoint;
+    const leftNode = leftIsSource ? sourceEndpoint.node : targetEndpoint.node;
+    const leftIsLineAnchor = leftNode.type === 'lineAnchor';
+    // How far the visible handle circle protrudes to the left of the line
+    // endpoint before zoom is applied.
+    let baseHandleOverhangLeftPx: number;
+    if (!leftIsLineAnchor) {
+      baseHandleOverhangLeftPx = 3;
+    } else if (leftIsSource) {
+      baseHandleOverhangLeftPx = 6;
+    } else {
+      baseHandleOverhangLeftPx = 0;
+    }
+    const visibleHandleOverhangLeftPx = baseHandleOverhangLeftPx * zoom;
+    // Constant visible gap between the handle's left edge and the toolbar
+    // at any zoom. 5 matches the gap NodeToolbar gives nodes at zoom=1.
+    const VISIBLE_GAP_PX = 5;
+    const anchorRightPaddingPx = visibleHandleOverhangLeftPx + VISIBLE_GAP_PX;
+    return {position, anchorRightPaddingPx};
+  }, [openLineEdge, nodes, zoom, screenToFlowPosition]);
+
+  if (!openLineEdge || !anchor) return null;
+
+  return (
+    <LineEdgeToolbar
+      edge={openLineEdge}
+      anchorFlowPosition={anchor.position}
+      anchorRightPaddingPx={anchor.anchorRightPaddingPx}
+      onSelectColor={value => setLineEdgeColor(openLineEdge.id, value)}
+      onSelectWidth={value => setLineEdgeWidth(openLineEdge.id, value)}
+      onSelectStrokeStyle={value =>
+        setLineEdgeStrokeStyle(openLineEdge.id, value)
+      }
+      onSelectArrowHeads={value =>
+        setLineEdgeArrowHeads(openLineEdge.id, value)
+      }
+      onSetLocked={value => setLineEdgeLocked(openLineEdge.id, value)}
+      onSelectEdgeType={value => setLineEdgeType(openLineEdge.id, value)}
+    />
+  );
+}

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2026_04_29_120000) do
+ActiveRecord::Schema[7.0].define(version: 2026_05_06_120000) do
   create_table "activities", id: :integer, charset: "utf8mb3", collation: "utf8mb3_unicode_ci", force: :cascade do |t|
     t.integer "user_id"
     t.integer "level_id"
@@ -61,11 +61,17 @@ ActiveRecord::Schema[7.0].define(version: 2026_04_29_120000) do
     t.text "script"
   end
 
-  create_table "ai_student_podcast_fragments", charset: "utf8mb4", collation: "utf8mb4_unicode_ci", force: :cascade do |t|
+  create_table "ai_student_podcast_objectives", charset: "utf8mb4", collation: "utf8mb4_unicode_ci", force: :cascade do |t|
+    t.bigint "ai_student_podcast_id", null: false
+    t.integer "objective_id", null: false
+    t.index ["ai_student_podcast_id", "objective_id"], name: "index_ai_student_podcast_objectives_unique", unique: true
+    t.index ["ai_student_podcast_id"], name: "index_ai_student_podcast_objectives_on_ai_student_podcast_id"
+    t.index ["objective_id"], name: "index_ai_student_podcast_objectives_on_objective_id"
+  end
+
+  create_table "ai_student_podcasts", charset: "utf8mb4", collation: "utf8mb4_unicode_ci", force: :cascade do |t|
     t.bigint "user_id"
     t.integer "lesson_id"
-    t.string "fragment_type"
-    t.integer "objective_id"
     t.text "podcast_script"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
