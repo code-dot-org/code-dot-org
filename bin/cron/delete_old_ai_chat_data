@@ -37,19 +37,6 @@ def max_eligible_id(table_name, cutoff)
   end
 end
 
-# Some requests pick up child events after the request row is created. Skip any
-# request that still has event children instead of letting one FK miss fail the
-# whole batch.
-def request_ids_without_events(ids)
-  requests = ::Sequel[:aichat_requests]
-  events = ::Sequel[:aichat_events]
-
-  DASHBOARD_DB_LONG_TIMEOUT[:aichat_requests].
-    left_join(:aichat_events, request_id: requests[:id]).
-    where(requests[:id] => ids, events[:id] => nil).
-    select_map(requests[:id])
-end
-
 def delete_in_batches(table_name, cutoff)
   deleted_count = 0
   last_id = 0
@@ -90,10 +77,7 @@ def main
   ChatClient.message('cron-daily', "Deleted #{deleted_event_count} AichatEvent records")
 
   deleted_request_count = delete_in_batches(:aichat_requests, retention_cutoff) do |ids|
-    deletable_ids = request_ids_without_events(ids)
-    next 0 if deletable_ids.empty?
-
-    DASHBOARD_DB_LONG_TIMEOUT[:aichat_requests].where(id: deletable_ids).delete
+    DASHBOARD_DB_LONG_TIMEOUT[:aichat_requests].where(id: ids).delete
   end
   ChatClient.message('cron-daily', "Deleted #{deleted_request_count} AichatRequest records")
 end
