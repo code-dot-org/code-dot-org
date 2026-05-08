@@ -5,3 +5,7 @@ packages
 
 # Generator templates use Handlebars syntax that prettier cannot parse correctly
 turbo/generators/templates/
+
+# Playwright artefacts
+test-results/
+playwright-report/
