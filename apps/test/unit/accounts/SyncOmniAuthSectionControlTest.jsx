@@ -251,7 +251,7 @@ describe('SyncOmniAuthSectionControl', () => {
     });
   });
 
-  it('shows plain-text responseText for Clever 404', () => {
+  it('shows friendly message and error details for Clever 404', () => {
     const wrapper = shallow(
       <SyncOmniAuthSectionControl
         {...defaultProps}
@@ -261,16 +261,16 @@ describe('SyncOmniAuthSectionControl', () => {
       />
     );
     wrapper.find(SyncOmniAuthSectionButton).simulate('click');
-    const error = Object.assign(
-      new Error('url: /sections/12345/users, status: 404 Not Found'),
-      {responseText: 'Section not found in Clever'}
+    const error = new Error(
+      'url: /sections/12345/users, status: 404 Not Found'
     );
     return expect(testSyncFails(error)).to.be.rejected.then(() => {
       expect(wrapper.find(BaseDialog).prop('isOpen')).to.equal(true);
       expect(wrapper.find(ReauthorizeClever)).to.have.lengthOf(0);
-      expect(wrapper.find('code').text()).to.equal(
+      expect(wrapper.find('p').last().text()).to.include(
         'Section not found in Clever'
       );
+      expect(wrapper.find('code').text()).to.include('status: 404');
     });
   });
 });

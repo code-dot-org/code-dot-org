@@ -157,6 +157,37 @@ describe('RosterDialog', () => {
       });
   });
 
+  it('displays Clever 404 message when Clever classrooms returns 404', () => {
+    const wrapper = shallow(
+      <RosterDialog
+        handleImport={() => {}}
+        handleCancel={() => {}}
+        isOpen={true}
+        classrooms={[]}
+        loadError={{status: 404, message: 'Not Found'}}
+        rosterProvider={OAuthSectionTypes.clever}
+      />
+    );
+    expect(wrapper.html()).contains(locale.cleverClassroomsNotFound());
+  });
+
+  it('displays generic error for non-404 Clever failures', () => {
+    const wrapper = shallow(
+      <RosterDialog
+        handleImport={() => {}}
+        handleCancel={() => {}}
+        isOpen={true}
+        classrooms={[]}
+        loadError={{status: 500, message: 'Internal Server Error'}}
+        rosterProvider={OAuthSectionTypes.clever}
+      />
+    );
+    expect(wrapper.html()).not.contains(locale.cleverClassroomsNotFound());
+    expect(wrapper.html()).contains(
+      locale.errorLoadingRosteredSections({type: locale.loginTypeClever()})
+    );
+  });
+
   it('should label archived sections as archived ', () => {
     const wrapper = mount(
       <RosterDialog

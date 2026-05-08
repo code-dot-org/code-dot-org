@@ -105,7 +105,7 @@ const GOOGLE_CLASSROOMS_SYNC_SUPPORT_URL =
 const ROSTERED_SECTIONS_SUPPORT_URL =
   'https://support.code.org/hc/en-us/articles/6496495212557';
 
-const LoadError = ({rosterProvider, loginType}) => {
+const LoadError = ({rosterProvider, loginType, loadError}) => {
   switch (rosterProvider) {
     case OAuthSectionTypes.google_classroom:
       return (
@@ -122,6 +122,33 @@ const LoadError = ({rosterProvider, loginType}) => {
             </a>
           </p>
         </div>
+      );
+    case OAuthSectionTypes.clever:
+      if (loadError && loadError.status === 404) {
+        return (
+          <p>
+            {locale.cleverClassroomsNotFound()}{' '}
+            <a
+              href={ROSTERED_SECTIONS_SUPPORT_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              {locale.errorLoadingRosteredSectionsSupport()}
+            </a>
+          </p>
+        );
+      }
+      return (
+        <p>
+          {locale.errorLoadingRosteredSections({type: loginType})}{' '}
+          <a
+            href={ROSTERED_SECTIONS_SUPPORT_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            {locale.errorLoadingRosteredSectionsSupport()}
+          </a>
+        </p>
       );
     default:
       return (
@@ -141,6 +168,7 @@ const LoadError = ({rosterProvider, loginType}) => {
 LoadError.propTypes = {
   rosterProvider: PropTypes.string,
   loginType: PropTypes.string,
+  loadError: loadErrorShape,
 };
 
 class RosterDialog extends React.Component {
@@ -257,6 +285,7 @@ class RosterDialog extends React.Component {
             <LoadError
               rosterProvider={this.props.rosterProvider}
               loginType={loginType}
+              loadError={this.props.loadError}
             />
           ) : this.props.classrooms ? (
             <ClassroomList

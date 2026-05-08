@@ -69,6 +69,7 @@ class SyncOmniAuthSectionControl extends React.Component {
     isLtiDialogOpen: false,
     needsGoogleReauth: false,
     needsCleverReauth: false,
+    cleverSectionNotFound: false,
   };
 
   onClick = () => {
@@ -107,20 +108,13 @@ class SyncOmniAuthSectionControl extends React.Component {
           this.props.sectionProvider === OAuthSectionTypes.clever;
         const needsGoogleReauth = isGoogle && /status:\s*403\b/.test(errorText);
         const needsCleverReauth = isClever && /status:\s*401\b/.test(errorText);
-        // In some cases, Clever returns a 404 when trying to access a section that no longer exists in Clever.
-        // In that case, we want to show the user friendly the message about the section not being found.
-        const shouldUseResponseText =
-          isClever &&
-          /status:\s*404\b/.test(errorText) &&
-          typeof sync_error.responseText === 'string' &&
-          sync_error.responseText.trim().length > 0;
-        const userMessage = shouldUseResponseText
-          ? sync_error.responseText
-          : errorText;
+        const cleverSectionNotFound =
+          isClever && /status:\s*404\b/.test(errorText);
         this.setState({
-          syncFailErrorLog: userMessage,
+          syncFailErrorLog: errorText,
           needsGoogleReauth,
           needsCleverReauth,
+          cleverSectionNotFound,
         });
         this.openDialog();
       });
@@ -196,11 +190,16 @@ class SyncOmniAuthSectionControl extends React.Component {
             </div>
           )}
           {!this.state.needsGoogleReauth && !this.state.needsCleverReauth && (
-            <div style={styles.scroll}>
-              <pre>
-                <code>{this.state.syncFailErrorLog}</code>
-              </pre>
-            </div>
+            <>
+              {this.state.cleverSectionNotFound && (
+                <p>{i18n.cleverSectionNotFound()}</p>
+              )}
+              <div style={styles.scroll}>
+                <pre>
+                  <code>{this.state.syncFailErrorLog}</code>
+                </pre>
+              </div>
+            </>
           )}
           <div style={styles.needHelpMessage}>
             <SafeMarkdown

@@ -334,7 +334,6 @@ en:
     code_with_teacher: '%{section_code} with %{teacher_name}'
     confirm:
       remove: 'Are you sure you want to leave this section?'
-    clever_section_not_found: 'Section not found in Clever. Please remove this section and re-import it from Clever.'
     default_name: 'Untitled Section'
     remove: '(remove section)'
     type:

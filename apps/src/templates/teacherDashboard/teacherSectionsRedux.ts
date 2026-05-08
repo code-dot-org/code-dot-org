@@ -1055,20 +1055,14 @@ function fetchJSON(url: string, params?: object) {
     $.getJSON(url, params)
       .done(resolve)
       .fail(jqxhr => {
-        const responseText = jqxhr.responseText as string;
-        const statusText = jqxhr.statusText as string;
-        const err = Object.assign(
-          new Error(
-            `url: ${url}, status: ${jqxhr.status}, statusText: ${statusText}${
-              responseText ? `, responseText: ${responseText}` : ''
-            }`
-          ),
-          {
-            statusText,
-            responseText,
-          }
+        reject(
+          new Error(`
+        url: ${url}
+        status: ${jqxhr.status}
+        statusText: ${jqxhr.statusText}
+        responseText: ${jqxhr.responseText}
+      `)
         );
-        reject(err);
       });
   });
 }

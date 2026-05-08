@@ -106,9 +106,6 @@ class ApiController < ApplicationController
       section = CleverSection.from_service(course_id, current_user.id, students, course_name)
       render json: section.summarize
     end
-  rescue RestClient::ExceptionWithResponse => exception
-    raise unless exception.http_code == 404
-    render status: :not_found, plain: I18n.t('section.clever_section_not_found')
   end
 
   def google_classrooms
@@ -629,6 +626,7 @@ class ApiController < ApplicationController
     tokens = current_user.oauth_tokens_for_provider(AuthenticationOption::CLEVER)
     clever_client = Clients::CleverRest.new(oauth_token: tokens[:oauth_token])
     begin
+      raise RestClient::Unauthorized.new(OpenStruct.new(code: 401, body: 'Unrecognized token string')) # TODO: remove, temporary test stub
       yield clever_client.get(endpoint)['data']
     rescue RestClient::ExceptionWithResponse => exception
       if exception.http_code == 401 && exception.response.body.include?('Unrecognized token string')
