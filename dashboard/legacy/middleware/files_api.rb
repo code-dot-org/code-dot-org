@@ -461,10 +461,7 @@ class FilesApi < Sinatra::Base
         details = exception.message.empty? ? nil : exception.message
         return json_bad_request(details)
       end
-      # TODO(JillianK): we are temporarily ignoring address share failures because our address detection is very broken.
-      # Once we have a better geocoding solution in H1, we should start filtering for addresses again.
-      # Additional context: https://codedotorg.atlassian.net/browse/STAR-1361
-      if share_failure && share_failure[:type] != ShareFiltering::FailureType::ADDRESS
+      if share_failure
         details_key = share_failure.type == ShareFiltering::FailureType::PROFANITY ? "profaneWords" : "pIIWords"
         details = {details_key => [share_failure.content]}
         return json_bad_request(details)

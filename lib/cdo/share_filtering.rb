@@ -184,10 +184,14 @@ module ShareFiltering
     raise PIIFilterException.new("Phone Number PII Filter Violation", share_failure) if share_failure && exceptions
     return share_failure if share_failure
 
-    street_address = Geocoder.find_potential_street_address(text)
-    share_failure = ShareFailure.new(FailureType::ADDRESS, street_address) if street_address
-    raise PIIFilterException.new("Address PII Filter Violation", share_failure) if share_failure && exceptions
-    return share_failure if share_failure
+    # Address filtering is disabled for now because the geocoder-based detector
+    # has too many false positives on student project text.
+    # See https://codedotorg.atlassian.net/browse/SL-1698.
+    #
+    # street_address = Geocoder.find_potential_street_address(text)
+    # share_failure = ShareFailure.new(FailureType::ADDRESS, street_address) if street_address
+    # raise PIIFilterException.new("Address PII Filter Violation", share_failure) if share_failure && exceptions
+    # return share_failure if share_failure
 
     nil
   end

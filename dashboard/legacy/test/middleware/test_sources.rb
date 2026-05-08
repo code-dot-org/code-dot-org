@@ -296,14 +296,8 @@ class SourcesTest < FilesApiTestBase
 
     get "/v3/channels/#{@channel}/share-failure"
     assert successful?
-    expected_response = {
-      'share_failure' => {
-        'message' => "It looks like there is a street address in it. Try changing the text.",
-        'contents' => address,
-        'type' => 'address'
-      }
-    }
-    assert_equal_expected_keys expected_response, JSON.parse(last_response.body)
+    response = JSON.parse(last_response.body)
+    assert_nil response['share_failure']
 
     assert_newrelic_metrics []
 
