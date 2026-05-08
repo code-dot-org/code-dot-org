@@ -1,15 +1,15 @@
 //Slider colors for use in JSX/TSX
 $slider-black-track-fill-color: var(--background-neutral-primary-inverse);
-$slider-black-track-empty-color: var(--background-neutral-quinary);
+$slider-black-track-empty-color: var(--neutral-gray-70);
 $slider-black-track-disabled-color: var(--background-neutral-disabled);
 $slider-brand-track-fill-color: var(--background-brand-teal-primary);
-$slider-brand-track-empty-color: var(--background-neutral-quinary);
+$slider-brand-track-empty-color: var(--neutral-gray-70);
 $slider-brand-track-disabled-color: var(--background-neutral-disabled);
 $slider-white-track-fill-color: var(--background-neutral-primary);
 $slider-white-track-empty-color: var(--neutral-gray-60);
 $slider-white-track-disabled-color: var(--neutral-gray-80);
 $slider-aqua-track-fill-color: var(--background-brand-aqua-primary);
-$slider-aqua-track-empty-color: var(--background-neutral-quinary);
+$slider-aqua-track-empty-color: var(--neutral-gray-70);
 $slider-aqua-track-disabled-color: var(--background-neutral-disabled);
 
 :export {
