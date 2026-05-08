@@ -257,18 +257,28 @@ export function useCopyPaste({
     if (!contents) return;
 
     // When the mouse is over the canvas, paste with the first node at the
-    // cursor. When the mouse is outside (keyboard-only path), fall back to
-    // a fixed offset so pasted elements don't stack on originals.
+    // cursor. When the mouse is outside (keyboard-only path), offset to the
+    // right by the element's width (node) or horizontal span (line).
     const mousePos = mousePositionRef.current;
     const anchorNode = contents.nodes[0];
-    const deltaX =
-      mousePos && anchorNode
-        ? mousePos.x - anchorNode.position.x
-        : DEFAULT_PASTE_OFFSET_PX;
-    const deltaY =
-      mousePos && anchorNode
-        ? mousePos.y - anchorNode.position.y
-        : DEFAULT_PASTE_OFFSET_PX;
+    let deltaX: number;
+    let deltaY: number;
+    if (mousePos && anchorNode) {
+      deltaX = mousePos.x - anchorNode.position.x;
+      deltaY = mousePos.y - anchorNode.position.y;
+    } else {
+      const isLine = contents.edges.length > 0;
+      if (isLine) {
+        const xs = contents.nodes.map(n => n.position.x);
+        const lineWidth = Math.max(...xs) - Math.min(...xs);
+        deltaX = Math.max(lineWidth, DEFAULT_PASTE_OFFSET_PX);
+      } else {
+        deltaX = anchorNode
+          ? anchorNode.width ?? DEFAULT_NODE_WIDTH
+          : DEFAULT_PASTE_OFFSET_PX;
+      }
+      deltaY = 0;
+    }
 
     const idMap = new Map<string, string>();
     const newNodes = contents.nodes.map(node => {
