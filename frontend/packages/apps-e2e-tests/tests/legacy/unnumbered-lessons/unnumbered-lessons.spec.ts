@@ -26,19 +26,20 @@ test.describe('Unnumbered lessons', () => {
     await page.goto(UNIT_URL);
     await page
       .locator('.uitest-progress-lesson')
+      .first()
       .waitFor({state: 'visible', timeout: 30_000});
-    await expect(page.locator('.uitest-progress-lesson')).toContainText(
+    await expect(page.locator('.uitest-progress-lesson').nth(0)).toContainText(
       'Lesson One',
     );
-    await expect(page.locator('.uitest-progress-lesson')).not.toContainText(
-      'Lesson 1',
-    );
-    await expect(page.locator('.uitest-progress-lesson')).toContainText(
+    await expect(
+      page.locator('.uitest-progress-lesson').nth(0),
+    ).not.toContainText('Lesson 1');
+    await expect(page.locator('.uitest-progress-lesson').nth(1)).toContainText(
       'Lesson Two',
     );
-    await expect(page.locator('.uitest-progress-lesson')).not.toContainText(
-      'Lesson 2',
-    );
+    await expect(
+      page.locator('.uitest-progress-lesson').nth(1),
+    ).not.toContainText('Lesson 2');
 
     // Lesson overview page.
     await page.goto(LESSON1_URL);
@@ -57,21 +58,26 @@ test.describe('Unnumbered lessons', () => {
     await page
       .locator('button.header_popup_link')
       .waitFor({state: 'visible', timeout: 30_000});
-    await expect(page.locator('.uitest-progress-lesson')).not.toBeVisible();
+    await expect(
+      page.locator('.uitest-progress-lesson').first(),
+    ).not.toBeVisible();
 
     await page.locator('button.header_popup_link').click();
-    await page.locator('.uitest-progress-lesson').waitFor({state: 'visible'});
-    await expect(page.locator('.uitest-progress-lesson')).toContainText(
+    await page
+      .locator('.uitest-progress-lesson')
+      .first()
+      .waitFor({state: 'visible'});
+    await expect(page.locator('.uitest-progress-lesson').nth(0)).toContainText(
       'Lesson One',
     );
-    await expect(page.locator('.uitest-progress-lesson')).not.toContainText(
-      'Lesson 1',
-    );
-    await expect(page.locator('.uitest-progress-lesson')).toContainText(
+    await expect(
+      page.locator('.uitest-progress-lesson').nth(0),
+    ).not.toContainText('Lesson 1');
+    await expect(page.locator('.uitest-progress-lesson').nth(1)).toContainText(
       'Lesson Two',
     );
-    await expect(page.locator('.uitest-progress-lesson')).not.toContainText(
-      'Lesson 2',
-    );
+    await expect(
+      page.locator('.uitest-progress-lesson').nth(1),
+    ).not.toContainText('Lesson 2');
   });
 });

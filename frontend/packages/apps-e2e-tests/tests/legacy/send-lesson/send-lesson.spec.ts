@@ -28,9 +28,9 @@ test.describe('Send lesson dialog', () => {
   test('dialog opens and closes', {tag: '@no_mobile'}, async ({page}) => {
     await sendLesson.openDialog(4);
 
-    await expect(page.locator('span').filter({hasText: 'Google'})).toBeVisible({
-      timeout: 15_000,
-    });
+    await expect(
+      page.locator('span').filter({hasText: 'Google'}).first(),
+    ).toBeVisible({timeout: 15_000});
 
     await sendLesson.doneButton.click();
     await expect(sendLesson.modal).not.toBeVisible();

@@ -19,11 +19,12 @@ test(
     await page.goto('/courses/allthelessonplans/units/1?no_redirect=true');
     await page
       .locator('.ui-test-lesson-resources')
+      .first()
       .waitFor({state: 'visible', timeout: 30_000});
 
     const [lessonPlanPage] = await Promise.all([
       page.context().waitForEvent('page'),
-      page.locator('.ui-test-lesson-resources').click(),
+      page.locator('.ui-test-lesson-resources').first().click(),
     ]);
 
     await lessonPlanPage.waitForURL(
@@ -85,12 +86,11 @@ test(
       .waitFor({state: 'visible', timeout: 15_000});
     await lessonPlanPage.locator('.uitest-lesson-dropdown-nav').click();
 
-    // The current lesson entry in the dropdown is not a link — click the second
-    // item which corresponds to "2 - Second Lesson".
+    // The current lesson is not selectable; the second lesson appears as a button.
     await lessonPlanPage
-      .locator('a.navigate:has-text("2 - Second Lesson")')
+      .getByRole('button', {name: /Lesson 2/})
       .waitFor({state: 'visible', timeout: 15_000});
-    await lessonPlanPage.locator('a.navigate').first().click();
+    await lessonPlanPage.getByRole('button', {name: /Lesson 2/}).click();
 
     await lessonPlanPage.waitForURL(
       /\/courses\/allthelessonplans\/units\/1\/lessons\/2\/student/,

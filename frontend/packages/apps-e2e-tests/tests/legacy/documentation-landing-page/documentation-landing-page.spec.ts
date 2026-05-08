@@ -16,10 +16,10 @@ test.describe('Documentation landing page', () => {
     async ({page}) => {
       await page.goto('/docs/');
       await page
-        .locator('.container')
+        .locator('.container.main')
         .waitFor({state: 'visible', timeout: 30_000});
-      await expect(page.locator('.container')).toContainText('IDEs');
-      await expect(page.locator('.container')).toContainText('Sprite Lab');
+      await expect(page.locator('.container.main')).toContainText('IDEs');
+      await expect(page.locator('.container.main')).toContainText('Sprite Lab');
     },
   );
 
@@ -29,7 +29,7 @@ test.describe('Documentation landing page', () => {
     async ({page}) => {
       await page.goto('/docs/ide/applab/');
       await page
-        .locator('.container')
+        .locator('.container.main')
         .waitFor({state: 'visible', timeout: 30_000});
       await expect(page.locator('h1').first()).toContainText(
         'App Lab Documentation',

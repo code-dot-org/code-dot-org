@@ -38,7 +38,15 @@ test.describe('Join section signup', () => {
       // Switch to a new student session on the same page.
       await createStudent(page);
 
+      // Navigate to join page, submit form, wait for redirect chain through root to course.
       await page.goto(`/join/${sectionCode}`);
+      await page
+        .locator('#join_new_section')
+        .waitFor({state: 'visible', timeout: 15_000});
+      await Promise.all([
+        page.waitForNavigation({timeout: 30_000}),
+        page.locator('#join_new_section').click(),
+      ]);
       await page.waitForURL(/\/courses\/allthethingscourse\/units\/1/, {
         timeout: 30_000,
       });

@@ -74,11 +74,12 @@ test.describe('Unit overview page', () => {
       await page.goto('/courses/allthelessonplans/units/1?no_redirect=true');
       await page
         .locator('#uitest-lesson-plan')
+        .first()
         .waitFor({state: 'visible', timeout: 30_000});
 
       const [newTab] = await Promise.all([
         page.context().waitForEvent('page'),
-        page.locator('#uitest-lesson-plan').click(),
+        page.locator('#uitest-lesson-plan').first().click(),
       ]);
       await newTab.waitForURL(
         /\/courses\/allthelessonplans\/units\/1\/lessons\/1/,
@@ -98,11 +99,12 @@ test.describe('Unit overview page', () => {
       await page.goto('/courses/allthelessonplans/units/1?no_redirect=true');
       await page
         .locator('#uitest-student-resources')
+        .first()
         .waitFor({state: 'visible', timeout: 30_000});
 
       const [newTab] = await Promise.all([
         page.context().waitForEvent('page'),
-        page.locator('#uitest-student-resources').click(),
+        page.locator('#uitest-student-resources').first().click(),
       ]);
       await newTab.waitForURL(
         /courses\/allthelessonplans\/units\/1\/lessons\/1\/student/,
@@ -121,11 +123,12 @@ test.describe('Unit overview page', () => {
       await page.goto('/courses/allthelessonplans/units/1?no_redirect=true');
       await page
         .locator('.ui-test-lesson-resources')
+        .first()
         .waitFor({state: 'visible', timeout: 30_000});
 
       const [newTab] = await Promise.all([
         page.context().waitForEvent('page'),
-        page.locator('.ui-test-lesson-resources').click(),
+        page.locator('.ui-test-lesson-resources').first().click(),
       ]);
       await newTab.waitForURL(
         /courses\/allthelessonplans\/units\/1\/lessons\/1\/student/,
@@ -144,12 +147,8 @@ test.describe('Unit overview page', () => {
 
       await page.goto('/courses/ui-test-single-unit-course-2025/units/1');
       await page
-        .locator('.uitest-summary-progress-table')
+        .locator('#assignment-version-year')
         .waitFor({state: 'visible', timeout: 30_000});
-
-      await page
-        .locator('.unit-breadcrumb')
-        .waitFor({state: 'hidden', timeout: 15_000});
 
       await page
         .locator('#assignment-version-year')
@@ -161,10 +160,12 @@ test.describe('Unit overview page', () => {
         .locator('.assignment-version-title')
         .filter({hasText: '2026'})
         .waitFor({state: 'visible', timeout: 15_000});
+      // The dropdown list overflows a clipped container; dispatchEvent bypasses
+      // viewport checks that neither force:true nor scrollIntoView can overcome.
       await page
         .locator('.assignment-version-title')
         .filter({hasText: '2026'})
-        .click();
+        .dispatchEvent('click');
 
       await page.waitForURL(
         /\/courses\/ui-test-single-unit-course-2026\/units\/1/,

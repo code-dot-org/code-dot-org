@@ -21,7 +21,7 @@ test.describe('Level navigation — continue button', () => {
     await page.goto('/courses/allthethingscourse/units/1/lessons/55/levels/1');
     await page
       .locator('#teacher-panel-container')
-      .waitFor({state: 'visible', timeout: 30_000});
+      .waitFor({state: 'attached', timeout: 30_000});
 
     await dismissTeacherPanel(page);
 

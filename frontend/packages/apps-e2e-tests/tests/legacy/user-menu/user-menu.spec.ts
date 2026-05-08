@@ -19,6 +19,7 @@ test.describe('User menu in header', () => {
       await page.goto('/catalog');
       await page
         .locator('#create_account_button')
+        .first()
         .waitFor({state: 'visible', timeout: 30_000});
       await expect(page.locator('.display_name')).not.toBeVisible();
     },

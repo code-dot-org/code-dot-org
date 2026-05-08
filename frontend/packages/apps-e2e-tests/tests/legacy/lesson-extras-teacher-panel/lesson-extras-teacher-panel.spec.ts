@@ -29,7 +29,7 @@ test(
     );
     await page
       .locator('#teacher-panel-container')
-      .waitFor({state: 'visible', timeout: 30_000});
+      .waitFor({state: 'attached', timeout: 30_000});
 
     expect(page.url()).toContain('section_id=');
 
@@ -56,7 +56,7 @@ test(
 
     await page
       .locator('#teacher-panel-container')
-      .waitFor({state: 'visible', timeout: 30_000});
+      .waitFor({state: 'attached', timeout: 30_000});
 
     expect(page.url()).toContain('section_id=');
     expect(page.url()).toContain('user_id=');

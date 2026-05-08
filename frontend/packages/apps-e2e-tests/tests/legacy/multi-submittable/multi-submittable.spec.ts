@@ -67,7 +67,13 @@ test.describe('Submittable multi-choice — lesson 9 level 3', () => {
       // Unsubmit and confirm.
       await page.locator('.unsubmitButton').first().click();
       await page.locator('.modal').waitFor({state: 'visible'});
-      await page.locator('#continue-button').click();
+      // The unsubmit confirmation dialog renders OK/Cancel via a legacy React
+      // root.  The button has no stable ID at runtime; target by role + name.
+      await page
+        .locator('.modal')
+        .getByRole('button', {name: /^ok/i})
+        .waitFor({state: 'visible', timeout: 15_000});
+      await page.locator('.modal').getByRole('button', {name: /^ok/i}).click();
 
       // After unsubmit both submit buttons are enabled again.
       await page

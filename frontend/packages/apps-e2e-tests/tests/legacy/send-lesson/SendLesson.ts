@@ -53,7 +53,7 @@ export class SendLessonPage {
 
   /** The "Done" button inside the modal. */
   get doneButton() {
-    return this.page.locator('button:text("Done")');
+    return this.page.getByRole('button', {name: 'Done'});
   }
 
   /** The copy-link button inside the modal. */
@@ -61,8 +61,8 @@ export class SendLessonPage {
     return this.page.locator('#uitest-copy-button');
   }
 
-  /** "Link copied!" confirmation text. */
+  /** "Link copied!" confirmation text (span label next to the copy button). */
   get copiedConfirmation() {
-    return this.page.locator('div:has-text("Link copied!")');
+    return this.page.locator('span').filter({hasText: 'Link copied!'});
   }
 }

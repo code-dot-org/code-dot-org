@@ -18,6 +18,7 @@ test.describe('Course overview', () => {
     await page.goto(COURSE_URL);
     await page
       .locator('.uitest-CourseScript')
+      .first()
       .waitFor({state: 'visible', timeout: 30_000});
   });
 
@@ -26,6 +27,7 @@ test.describe('Course overview', () => {
     await page.goto(COURSE_URL);
     await page
       .locator('.uitest-CourseScript')
+      .first()
       .waitFor({state: 'visible', timeout: 30_000});
   });
 
@@ -34,6 +36,7 @@ test.describe('Course overview', () => {
     await page.goto(COURSE_URL);
     await page
       .locator('.uitest-CourseScript')
+      .first()
       .waitFor({state: 'visible', timeout: 30_000});
   });
 

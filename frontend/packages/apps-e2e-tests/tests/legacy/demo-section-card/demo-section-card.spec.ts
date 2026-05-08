@@ -25,7 +25,7 @@ test(
     await card.getByText('High School Practice Section').waitFor({
       state: 'visible',
     });
-    await card.getByText('Demo').waitFor({state: 'visible'});
+    await card.getByText('Demo', {exact: true}).waitFor({state: 'visible'});
 
     await page.locator('#go-to-lesson-dropdown-button').click();
     await page
