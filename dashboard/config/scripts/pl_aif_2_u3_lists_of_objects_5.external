@@ -31,6 +31,27 @@ markdown <<MARKDOWN
 
 ---
 
+## 🔍 Check for Understanding
+
+> #### Before moving on, pause and define the following terms in your own words: **array, object, and property**.
+> - #### How do these three concepts work together when organizing data? 
+
+<details>
+<summary style="cursor:pointer;display:inline-block;background:#8148B2;color:white;padding:14px 22px;font-size:18px;font-weight:600;border-radius:999px;list-style:none;">
+Check your thinking
+</summary>
+
+<div style="margin-top:16px; background:#f7f8fa;">
+<p style = "font-size: 14pt;">An <b>array</b> is a collection or list that holds multiple items.</p>
+<p style = "font-size: 14pt;">An <b>object</b> is a single item in that list that stores related information.</p>
+<p style = "font-size: 14pt;">A <b>property</b> is a specific piece of information (a key-value pair) inside an object.</p>
+<p style = "font-size: 14pt;">They work together because an array stores multiple objects, and each object uses properties to describe its data.</p>
+</div>
+</details>
+
+
+---
+
 ## Next up
 
 #### We will use AI to generate an array with 5 objects and practice updating an app. 

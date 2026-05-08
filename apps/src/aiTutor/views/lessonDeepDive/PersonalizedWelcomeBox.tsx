@@ -26,7 +26,7 @@ const PersonalizedWelcomeBox: FC<PersonalizedWelcomeBoxProps> = ({
       <p className={styles.body}>
         {"Let's look at how "}
         <strong>{lessonName}</strong>
-        {' went — then you can choose how to go deeper.'}
+        {' went — then you can choose how to go deeper.'}
       </p>
     </div>
   );

@@ -44,6 +44,7 @@ export type LessonDeepDiveData = {
   timeSpentSeconds: number;
   nextLessonUrl: string | null;
   unitLabel: string | null;
+  nextLessonUrl: string | null;
 };
 
 export type MultiSolution = {

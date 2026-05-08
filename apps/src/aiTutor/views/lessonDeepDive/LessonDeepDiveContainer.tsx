@@ -24,7 +24,7 @@ import {LessonObjectiveReflectionValues} from '@cdo/generated-scripts/sharedCons
 
 import FizzyButton from './FizzyButton';
 import PersonalizedWelcomeBox from './PersonalizedWelcomeBox';
-import PrePracticeBox from './PreReviewBox';
+import PreReviewBox from './PreReviewBox';
 import PreSkillsCheck from './PreSkillsCheck';
 import ReflectionBox from './Reflection/ReflectionBox';
 import InterventionBox from './ReviewModalities/InterventionBox';
@@ -45,7 +45,7 @@ const BOX_IDS = [
   'time-spent',
   'validated-levels',
   'reflection',
-  'pre-practice',
+  'pre-review',
   'intervention',
   'pre-skills-check',
   'skills-check',
@@ -80,7 +80,7 @@ const LessonDeepDiveContainer: FC<LessonDeepDiveContainerProps> = ({
   }, []);
 
   // Returns the description of the first objective the student is struggling
-  // with or still working on, used as the focus topic in PrePracticeBox.
+  // with or still working on, used as the focus topic in PreReviewBox.
   const getFocusTopic = useCallback(
     (data: ReflectionData | null): string | undefined => {
       if (!data) return undefined;
@@ -161,9 +161,9 @@ const LessonDeepDiveContainer: FC<LessonDeepDiveContainerProps> = ({
             initialValues={reflectionData}
           />
         );
-      case 'pre-practice':
+      case 'pre-review':
         return (
-          <PrePracticeBox
+          <PreReviewBox
             focusTopic={getFocusTopic(reflectionData)}
             onNext={goToNext}
           />

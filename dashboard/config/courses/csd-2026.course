@@ -3,14 +3,14 @@
   "script_names": [
     "csd1-2026",
     "csd2-2026",
+    "csd3a-2026",
     "csd3-2026",
-    "programming-with-music-lab-2026",
     "csd4-2026",
     "csd5-2026",
     "csd6a-2026",
     "csd6b-2026",
     "csd7-2026",
-    "csd3a-2026"
+    "programming-with-music-lab-2026"
   ],
   "unit_prefixes": [
     "1",
@@ -22,7 +22,7 @@
     "6a",
     "6b",
     "7",
-    null
+    ""
   ],
   "original_script_names": [
     "csd1-2026",
