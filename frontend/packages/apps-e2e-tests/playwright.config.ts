@@ -14,6 +14,10 @@ export default defineConfig({
   fullyParallel: true,
   forbidOnly: !!process.env.CI,
   retries: process.env.CI ? 2 : 0,
+  // Tests tagged @no_ci require infra not available in automated runs
+  // (e.g. Javabuilder WebSocket).  Skip them in CI; run manually against
+  // test-studio.
+  grepInvert: process.env.CI ? /@no_ci/ : undefined,
   workers: undefined,
   reporter: [['html', {outputFolder: 'playwright-report'}]],
 

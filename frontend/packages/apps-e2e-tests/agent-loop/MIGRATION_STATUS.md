@@ -2,26 +2,26 @@
 
 Source: `dashboard/test/ui/features/` (all sub-directories)  
 Target: `frontend/packages/apps-e2e-tests/tests/`  
-As of: 2026-05-08 (updated 2026-05-08 — teacher_tools, foundations, platform features ported and verified)
+As of: 2026-05-08 (updated 2026-05-08 — teacher_tools, foundations, platform, and javalab partial port)
 
 ---
 
 ## Summary
 
-| Status                                         | Count                                                                             |
-| ---------------------------------------------- | --------------------------------------------------------------------------------- |
-| Ported                                         | 79 feature files (C+F for pythonlab + mixmoveai; C+F+W for rest)                  |
-| Covered by ported (rolled in)                  | 5 (maze2, jigsaw2, multi2/3/4 rolled into existing specs)                         |
-| Partial — @eyes (visual checkpoints annotated) | 5 ported up to snapshot; @eyes auth blocked 3                                     |
-| Fixme stubs — @eyes / auth only                | 3 (curriculum_reference ×2, level_group_multi_page_dots ×1)                       |
-| Skipped — auth required                        | 40+                                                                               |
-| Skipped — @skip / @eyes_mobile                 | 3                                                                                 |
-| Skipped — cookie/session manipulation          | 2                                                                                 |
-| Out of scope — non-CSF labs                    | 5 labs, ~15 feature files (spritelab + craft hero_logged_out now ported)          |
-| Out of scope — lab2 cross-origin               | WebLab full tests (Bramble cross-origin iframe); weblab/too_young ported          |
-| Out of scope — other areas                     | javalab, weblab2, pd/pl, xteam, levelbuilder, global_edition, policy_compliance   |
-| Out of scope — standalone tools                | 0 (netsim/pixelation/pkc/studio/sharepage/modal-fn-editor/mix-move-ai all ported) |
-| Porteable, not yet done                        | 0                                                                                 |
+| Status                                         | Count                                                                                                           |
+| ---------------------------------------------- | --------------------------------------------------------------------------------------------------------------- |
+| Ported                                         | 82 feature files (C+F for pythonlab + mixmoveai; C+F+W for rest)                                                |
+| Covered by ported (rolled in)                  | 5 (maze2, jigsaw2, multi2/3/4 rolled into existing specs)                                                       |
+| Partial — @eyes (visual checkpoints annotated) | 5 ported up to snapshot; @eyes auth blocked 3                                                                   |
+| Fixme stubs — @eyes / auth only                | 3 (curriculum_reference ×2, level_group_multi_page_dots ×1)                                                     |
+| Skipped — auth required                        | 40+                                                                                                             |
+| Skipped — @skip / @eyes_mobile                 | 3                                                                                                               |
+| Skipped — cookie/session manipulation          | 2                                                                                                               |
+| Out of scope — non-CSF labs                    | 5 labs, ~15 feature files (spritelab + craft hero_logged_out now ported)                                        |
+| Out of scope — lab2 cross-origin               | WebLab full tests (Bramble cross-origin iframe); weblab/too_young ported                                        |
+| Out of scope — other areas                     | javalab (3/10 ported; 7 @no_ci + @eyes), weblab2, pd/pl, xteam, levelbuilder, global_edition, policy_compliance |
+| Out of scope — standalone tools                | 0 (netsim/pixelation/pkc/studio/sharepage/modal-fn-editor/mix-move-ai all ported)                               |
+| Porteable, not yet done                        | 0                                                                                                               |
 
 ---
 
@@ -121,6 +121,19 @@ As of: 2026-05-08 (updated 2026-05-08 — teacher_tools, foundations, platform f
 | `platform/header.feature`             | `tests/legacy/header/header.spec.ts`                   | C+F+W    | 2 scenarios; student + teacher link counts; 2 fixme (Spanish i18n)        |
 | `platform/login_redirect.feature`     | `tests/legacy/login-redirect/login-redirect.spec.ts`   | C+F+W    | 2 scenarios; ?login_required=true cached-level redirect                   |
 | `platform/signing_in.feature`         | `tests/legacy/signing-in/signing-in.spec.ts`           | C+F+W    | 2 scenarios; student + teacher sign-in via form; 2 fixme (EU/non-picture) |
+
+### javalab
+
+3 of 10 feature files ported. Remaining 7 are all-`@eyes` / all-`@no_ci`
+with no portable non-visual or non-WebSocket steps (see "Out of scope" table).
+The `@no_ci` finish-button tests require a live Javabuilder WebSocket; they are
+excluded from automated CI runs via `grepInvert: /@no_ci/` in playwright.config.ts.
+
+| Feature file                          | Playwright spec                        | Browsers | Notes                                                  |
+| ------------------------------------- | -------------------------------------- | -------- | ------------------------------------------------------ |
+| `javalab/commit_code.feature`         | `tests/legacy/javalab/javalab.spec.ts` | Chromium | 2 scenarios; commit with/without notes                 |
+| `javalab/finish_button.feature`       | `tests/legacy/javalab/javalab.spec.ts` | Chromium | 3 scenarios; all `@no_ci` — manual against test-studio |
+| `javalab/javalab_submittable.feature` | `tests/legacy/javalab/javalab.spec.ts` | Chromium | 1 scenario; submit/unsubmit/resubmit cycle             |
 
 C = Chromium, F = Firefox, W = WebKit.
 
@@ -375,22 +388,22 @@ scenarios worth porting independently.
 Feature directories outside the original CSF/teacher-tools scope. None have
 non-auth, non-@eyes scenarios worth porting on their own.
 
-| Area                              | Feature files                                                                                                                          | Reason                                                        |
-| --------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------- |
-| Java Lab                          | `javalab/*.feature` (10 files)                                                                                                         | Separate Java runtime; different lab entirely                 |
-| WebLab 2 (student_learning)       | `student_learning/weblab2/*.feature`                                                                                                   | cross-origin iframe + auth; matches star_labs/weblab blockers |
-| PD / PL tools                     | `acquisition_products/pd/**`, `acquisition_products/pl_landing_page.feature`, `acquisition_products/regional_workshop_catalog.feature` | professional-development tools, out of scope                  |
-| Sign-up / school info             | `acquisition_products/school_info_confirmation_dialog.feature`, `acquisition_products/sign_up.feature`                                 | onboarding flows, auth-gated                                  |
-| Global Edition                    | `platform/global_edition/**`                                                                                                           | i18n/regional features; test environment not configured       |
-| Policy compliance                 | `platform/policy_compliance/**`                                                                                                        | COPPA/parental-permission flows; needs special account state  |
-| Cookie consent                    | `platform/one_trust.feature`, `xteam/cookie_banner.feature`, `xteam/gdpr_dialog.feature`                                               | consent tooling, environment-specific                         |
-| Race interstitial                 | `xteam/race_interstitial.feature`                                                                                                      | demographic data dialog; separate scope                       |
-| User settings                     | `platform/user_settings.feature`                                                                                                       | auth + settings state                                         |
-| Teacher dashboard manage-students | `platform/teacher_dashboard/manage_students_tab.feature`                                                                               | auth; mirrors teacher_tools/teacher_dashboard                 |
-| Initial page views                | `initial_page_views*.feature` (4 files)                                                                                                | generic signed-out smoke tests; low test value                |
-| DCDO feature flags                | `dcdo_mocking.feature`                                                                                                                 | infrastructure; feature-flag mocking via cookie               |
-| Applitools top-level              | `eyes.feature`                                                                                                                         | @eyes; replaced by toHaveScreenshot                           |
-| Blockly / SpriteLab @eyes         | `code_tools/blockly/modal_function_editor_eyes.feature`, `code_tools/blockly/spritelab_eyes.feature`                                   | @eyes; non-eyes spec already ported                           |
+| Area                              | Feature files                                                                                                                          | Reason                                                                    |
+| --------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------- |
+| Java Lab (remaining 7)            | `javalab/code_review_*.feature` (×2), `console_only`, `javalab_demo_mode`, `neighborhood`, `prompter`, `theater`                       | All @no_ci + @eyes; visual or WebSocket-only steps; no portable scenarios |
+| WebLab 2 (student_learning)       | `student_learning/weblab2/*.feature`                                                                                                   | cross-origin iframe + auth; matches star_labs/weblab blockers             |
+| PD / PL tools                     | `acquisition_products/pd/**`, `acquisition_products/pl_landing_page.feature`, `acquisition_products/regional_workshop_catalog.feature` | professional-development tools, out of scope                              |
+| Sign-up / school info             | `acquisition_products/school_info_confirmation_dialog.feature`, `acquisition_products/sign_up.feature`                                 | onboarding flows, auth-gated                                              |
+| Global Edition                    | `platform/global_edition/**`                                                                                                           | i18n/regional features; test environment not configured                   |
+| Policy compliance                 | `platform/policy_compliance/**`                                                                                                        | COPPA/parental-permission flows; needs special account state              |
+| Cookie consent                    | `platform/one_trust.feature`, `xteam/cookie_banner.feature`, `xteam/gdpr_dialog.feature`                                               | consent tooling, environment-specific                                     |
+| Race interstitial                 | `xteam/race_interstitial.feature`                                                                                                      | demographic data dialog; separate scope                                   |
+| User settings                     | `platform/user_settings.feature`                                                                                                       | auth + settings state                                                     |
+| Teacher dashboard manage-students | `platform/teacher_dashboard/manage_students_tab.feature`                                                                               | auth; mirrors teacher_tools/teacher_dashboard                             |
+| Initial page views                | `initial_page_views*.feature` (4 files)                                                                                                | generic signed-out smoke tests; low test value                            |
+| DCDO feature flags                | `dcdo_mocking.feature`                                                                                                                 | infrastructure; feature-flag mocking via cookie                           |
+| Applitools top-level              | `eyes.feature`                                                                                                                         | @eyes; replaced by toHaveScreenshot                                       |
+| Blockly / SpriteLab @eyes         | `code_tools/blockly/modal_function_editor_eyes.feature`, `code_tools/blockly/spritelab_eyes.feature`                                   | @eyes; non-eyes spec already ported                                       |
 
 ---
 
