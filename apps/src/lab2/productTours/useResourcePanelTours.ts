@@ -74,10 +74,7 @@ const useResourcePanelTours = ({
       levelProperties
     );
     return (
-      isWeblab2 &&
-      isEnabledOnLevel &&
-      !isStandaloneCollapsed &&
-      !isLevelLoading
+      isWeblab2 && isEnabledOnLevel && !isStandaloneCollapsed && !isLevelLoading
     );
   }, [isWeblab2, levelProperties, isStandaloneCollapsed, isLevelLoading]);
 
@@ -138,13 +135,17 @@ const useResourcePanelTours = ({
   const [resourcePanelOnboardingTourSeen, setResourcePanelOnboardingTourSeen] =
     useState(
       () =>
-        tryGetLocalStorage(RESOURCE_PANEL_PINNED_BUTTON_ONBOARDING_TOUR_SEEN, 'no') ===
-        'yes'
+        tryGetLocalStorage(
+          RESOURCE_PANEL_PINNED_BUTTON_ONBOARDING_TOUR_SEEN,
+          'no'
+        ) === 'yes'
     );
   useEffect(() => {
     setResourcePanelOnboardingTourSeen(
-      tryGetLocalStorage(RESOURCE_PANEL_PINNED_BUTTON_ONBOARDING_TOUR_SEEN, 'no') ===
-        'yes'
+      tryGetLocalStorage(
+        RESOURCE_PANEL_PINNED_BUTTON_ONBOARDING_TOUR_SEEN,
+        'no'
+      ) === 'yes'
     );
   }, []);
   const onResourcePanelOnboardingTourComplete = useCallback(() => {
@@ -187,7 +188,8 @@ const useResourcePanelTours = ({
           ProductTour.ResourcePanelValidation,
           levelProperties
         ) &&
-        (!showResourcePanelOnboardingTour || resourcePanelOnboardingTourSeen)) ||
+        (!showResourcePanelOnboardingTour ||
+          resourcePanelOnboardingTourSeen)) ||
       false,
     [
       isLevelLoading,
