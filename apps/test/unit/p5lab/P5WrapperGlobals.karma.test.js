@@ -18,4 +18,12 @@ describe('P5Wrapper globals', function () {
     expect(propList).not.to.have.property('_draw');
     expect(propList).to.have.property('rect');
   });
+
+  it('blocks underscore-prefixed p5 internals from custom marshalling', function () {
+    const blockedProps = p5Wrapper.getCustomMarshalBlockedProperties();
+
+    expect(blockedProps).to.include('_setProperty');
+    expect(blockedProps).to.include('_isGlobal');
+    expect(blockedProps).to.include('_draw');
+  });
 });

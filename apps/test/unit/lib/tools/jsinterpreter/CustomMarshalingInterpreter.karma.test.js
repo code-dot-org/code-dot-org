@@ -79,16 +79,6 @@ describe('The CustomMarshalingInterpreter', () => {
         value.assert(`assert(value.whatsMyName() === "hello world")`);
         value.assert(`assert(value.add("!").whatsMyName() === "hello world!")`);
       });
-
-      it('will block underscore-prefixed properties and methods', () => {
-        value.nativeValue._secret = 'nope';
-        value.nativeValue._getSecret = function () {
-          return this._secret;
-        };
-
-        value.assert(`assert(value._secret === undefined)`);
-        value.assert(`assert(value._getSecret === undefined)`);
-      });
     });
   });
 
