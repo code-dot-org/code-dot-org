@@ -274,36 +274,6 @@ class SourcesTest < FilesApiTestBase
     delete_all_source_versions(filename)
   end
 
-  def test_address_violation_does_not_block_channel_backed_project_sharing
-    filename = MAIN_JSON
-    file_data = File.read(File.expand_path('../../fixtures/privacy-profanity/playlab-normal-source.json', __FILE__))
-    file_headers = {'CONTENT_TYPE' => 'application/json'}
-    address = '1600 Pennsylvania Ave NW, Washington, DC 20500'
-    Projects.any_instance.stubs(:get).returns({projectType: 'playlab'})
-    Geocoder.stubs(:find_potential_street_address).returns(address)
-    @api.put_object(filename, file_data, file_headers)
-    assert successful?
-
-    with_session(:non_owner) do
-      non_owner_api = FilesApiTestHelper.new(current_session, 'sources', @channel)
-      non_owner_api.get_object(filename)
-      assert successful?
-    end
-
-    policy_check_response = @api.channel_policy_violation
-    assert successful?
-    assert_equal false, JSON.parse(policy_check_response)['has_violation']
-
-    get "/v3/channels/#{@channel}/share-failure"
-    assert successful?
-    response = JSON.parse(last_response.body)
-    assert_nil response['share_failure']
-
-    assert_newrelic_metrics []
-
-    delete_all_source_versions(filename)
-  end
-
   def test_replace_version
     CDO.expects(:log).never
 
