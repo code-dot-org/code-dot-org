@@ -17,10 +17,7 @@ import TextNodeToolbar from './TextNodeToolbar';
 
 import styles from './element-toolbar.module.scss';
 
-// Stable, non-CSS-module class used by focus and pointer-down handlers
-// to recognize that an interaction landed inside the toolbar (and so
-// should not dismiss it). Selector-based lookups can't use the CSS
-// module class because it's mangled at build time.
+// Stable class used by focus and pointer-down handlers.
 export const SKETCHLAB_TOOLBAR_PANEL_CLASS = 'sketchlab-toolbar-panel';
 
 interface CornerToolbarPanelProps {
@@ -32,7 +29,7 @@ interface CornerToolbarPanelProps {
 }
 
 /**
- * Renders the toolbar for the currently open node or edge pinned to the
+ * Renders the toolbar for the currently open node or edge, pinned to the
  * top-right corner of the canvas. Only one toolbar is visible at once,
  * driven by openToolbarTarget. Renders nothing when no element is open.
  */
@@ -84,10 +81,7 @@ export default function CornerToolbarPanel({
   if (!body) return null;
 
   return (
-    <Panel
-      position="top-right"
-      className={classNames(styles.cornerPanel, SKETCHLAB_TOOLBAR_PANEL_CLASS)}
-    >
+    <Panel position="top-right" className={SKETCHLAB_TOOLBAR_PANEL_CLASS}>
       {body}
     </Panel>
   );

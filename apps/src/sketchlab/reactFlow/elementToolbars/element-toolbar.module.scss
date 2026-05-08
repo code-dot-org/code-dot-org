@@ -44,19 +44,6 @@
   pointer-events: all;
 }
 
-// React Flow Panel wrapper that pins the toolbar to the canvas top-right.
-// Panel sets its own absolute positioning; the rules here only adjust the
-// inset and ensure pointer events fall through where the panel has no
-// content so the canvas behind it stays interactive.
-.cornerPanel {
-  margin: 8px;
-  pointer-events: none;
-
-  > * {
-    pointer-events: auto;
-  }
-}
-
 .header {
   display: flex;
   justify-content: flex-end;
