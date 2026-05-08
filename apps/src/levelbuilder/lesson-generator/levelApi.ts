@@ -114,29 +114,19 @@ export async function updateStartSources(
   );
 }
 
-// PATCH /levels/:id — write the student-facing markdown instructions into
-// the level's long_instructions property. The levels controller's level_params
-// allow-list pulls in any serialized_attrs from the level subclass via
-// Level.permitted_params, which includes long_instructions.
-export async function updateLongInstructions(
+// PATCH /levels/:id — write a single string-valued serialized property on
+// the level. The levels controller's level_params allow-list pulls in
+// every serialized_attrs entry from the level subclass via
+// Level.permitted_params, so any name accepted there works here. Goes
+// over PUT because Rails routes both PATCH and PUT to :update and
+// HttpClient lacks a patch helper.
+export async function updateLevelProperty(
   levelId: number,
-  longInstructions: string
+  property: string,
+  value: string
 ): Promise<void> {
   const form = new FormData();
-  form.append('level[long_instructions]', longInstructions);
-  await HttpClient.put(`/levels/${levelId}`, form, true);
-}
-
-// PATCH /levels/:id — record the prompt the levelbuilder typed into the
-// /generate page on the level itself, so reopening /generate later can
-// pre-populate it. Stored in the level's generate_prompt serialized
-// property.
-export async function updateGeneratePrompt(
-  levelId: number,
-  prompt: string
-): Promise<void> {
-  const form = new FormData();
-  form.append('level[generate_prompt]', prompt);
+  form.append(`level[${property}]`, value);
   await HttpClient.put(`/levels/${levelId}`, form, true);
 }
 

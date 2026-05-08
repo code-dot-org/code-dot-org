@@ -21,8 +21,7 @@ import {
   createOrFindLevel,
   loadLessonLevelProperties,
   saveLessonActivities,
-  updateGeneratePrompt,
-  updateLongInstructions,
+  updateLevelProperty,
   updatePanelsLevel,
   updateStartSources,
 } from './levelApi';
@@ -613,7 +612,11 @@ const LessonGenerator: React.FC<LessonGeneratorProps> = ({lesson}) => {
             appendLog(`Saving start sources for "${levelName}"…`);
             await updateStartSources(level.id, result.startSources);
             appendLog(`Saving instructions for "${levelName}"…`);
-            await updateLongInstructions(level.id, result.longInstructions);
+            await updateLevelProperty(
+              level.id,
+              'long_instructions',
+              result.longInstructions
+            );
             generatedOutput = {weblab2: result};
           }
         }
@@ -623,7 +626,11 @@ const LessonGenerator: React.FC<LessonGeneratorProps> = ({lesson}) => {
         // prompt still persists. Failures here are non-fatal: the level
         // content is already saved.
         try {
-          await updateGeneratePrompt(level.id, spec.description.trim());
+          await updateLevelProperty(
+            level.id,
+            'generate_prompt',
+            spec.description.trim()
+          );
         } catch (err) {
           const message = err instanceof Error ? err.message : String(err);
           appendLog(
