@@ -31,6 +31,10 @@ jobs:
       # Must match the `playwright` catalog version in frontend/.yarnrc.yml.
       # When upgrading Playwright, bump both the catalog semver and this image tag together.
       image: mcr.microsoft.com/playwright:v1.59.1-noble
+    env:
+      # GHA docker exec sets HOME=/github/home, so Playwright's $HOME/.cache fallback
+      # misses the pre-installed browsers. Re-declare the image's ENV explicitly.
+      PLAYWRIGHT_BROWSERS_PATH: /ms-playwright
 
     steps:
       - name: Install LFS
