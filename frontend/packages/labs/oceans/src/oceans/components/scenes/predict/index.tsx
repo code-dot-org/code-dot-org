@@ -111,17 +111,10 @@ const UnwrappedPredict = class Predict extends React.Component<
       <Body>
         {this.state.displayControls && (
           <div style={styles.mediaControls} id="uitest-media-ctrl">
-            <span
-              role="button"
-              tabIndex={0}
+            <button
+              type="button"
               aria-label="Rewind"
               onClick={() => this.onScaleTime(true)}
-              onKeyDown={e => {
-                if (e.key === 'Enter' || e.key === ' ') {
-                  e.preventDefault();
-                  this.onScaleTime(true);
-                }
-              }}
               style={mergeStyles(
                 styles.mediaControl,
                 selectedControl === MediaControl.Rewind &&
@@ -135,18 +128,11 @@ const UnwrappedPredict = class Predict extends React.Component<
                   `x${this.state.timeScale}`}
               </span>
               <FontAwesomeIcon icon={faBackward} aria-hidden />
-            </span>
-            <span
-              role="button"
-              tabIndex={0}
+            </button>
+            <button
+              type="button"
               aria-label={state.isRunning ? 'Pause' : 'Play'}
               onClick={this.onPressPlay}
-              onKeyDown={e => {
-                if (e.key === 'Enter' || e.key === ' ') {
-                  e.preventDefault();
-                  this.onPressPlay();
-                }
-              }}
               style={styles.mediaControl}
               key={MediaControl.Play}
             >
@@ -154,18 +140,11 @@ const UnwrappedPredict = class Predict extends React.Component<
                 icon={state.isRunning ? faPause : faPlay}
                 aria-hidden
               />
-            </span>
-            <span
-              role="button"
-              tabIndex={0}
+            </button>
+            <button
+              type="button"
               aria-label="Fast forward"
               onClick={() => this.onScaleTime(false)}
-              onKeyDown={e => {
-                if (e.key === 'Enter' || e.key === ' ') {
-                  e.preventDefault();
-                  this.onScaleTime(false);
-                }
-              }}
               style={mergeStyles(
                 styles.mediaControl,
                 selectedControl === MediaControl.FastForward &&
@@ -179,7 +158,7 @@ const UnwrappedPredict = class Predict extends React.Component<
                   this.state.timeScale !== defaultTimeScale &&
                   `x${this.state.timeScale}`}
               </span>
-            </span>
+            </button>
           </div>
         )}
         {!state.isRunning && !state.isPaused && (
