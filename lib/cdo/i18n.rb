@@ -9,6 +9,9 @@ module Cdo
   module I18n
     DEFAULT_LOCALE = 'en-US'
 
+    LOCALE_COOKIE_KEY = 'language_'
+    LOCALE_PARAM_KEY = 'set_locale'
+
     LANGUAGES = CSV.read(CDO.dir('config/i18n/cdo-languages.csv'), headers: true, header_converters: :symbol).freeze
 
     LOCALE_CONFIGS = YAML.load_file(CDO.dir('config/i18n/locales.yml')).each do |_locale, data|

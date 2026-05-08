@@ -2,11 +2,11 @@
 
 require 'uri'
 require 'cdo/i18n'
-require 'helpers/cookies'
 
 module Middleware
   class I18n
-    LOCALE_PARAM_KEY = 'set_locale'
+    LOCALE_COOKIE_KEY = Cdo::I18n::LOCALE_COOKIE_KEY
+    LOCALE_PARAM_KEY = Cdo::I18n::LOCALE_PARAM_KEY
 
     def initialize(app)
       @app = app
@@ -17,8 +17,6 @@ module Middleware
     end
 
     class RequestLocalizer
-      include Middleware::Helpers::Cookies
-
       attr_reader :app, :env, :request, :response
 
       def initialize(app, env)
@@ -37,7 +35,7 @@ module Middleware
           response.redirect redirect_uri.to_s
           response.do_not_cache!
 
-          set_locale_cookie(param_locale)
+          set_cookies(param_locale)
 
           response.finish
         else
@@ -45,11 +43,16 @@ module Middleware
             response.status, headers, response.body = app.call(env)
             response.headers.merge!(headers)
 
-            set_locale_cookie(locale) unless cookie_locale == locale
+            set_cookies(locale) unless cookie_locale == locale
 
             response.finish
           end
         end
+      end
+
+      private def set_cookies(locale)
+        request.cookies[LOCALE_COOKIE_KEY] = locale
+        response.set_cdo_cookie(LOCALE_COOKIE_KEY, locale)
       end
 
       private def resolve_locale(locale)
@@ -71,7 +74,7 @@ module Middleware
 
       private def cookie_locale
         return @cookie_locale if defined?(@cookie_locale)
-        @cookie_locale = resolve_locale(request.cookies[LOCALE_KEY])
+        @cookie_locale = resolve_locale(request.cookies[LOCALE_COOKIE_KEY])
       end
 
       # Resolves the preferred locale from the `HTTP_ACCEPT_LANGUAGE` header.

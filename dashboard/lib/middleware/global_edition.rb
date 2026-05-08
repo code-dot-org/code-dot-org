@@ -5,8 +5,8 @@ require 'request_store'
 require 'i18n'
 
 require 'cdo/global_edition'
+require 'cdo/i18n'
 require 'dynamic_config/dcdo'
-require 'helpers/cookies'
 
 module Middleware
   class GlobalEdition
@@ -15,13 +15,12 @@ module Middleware
     end
 
     def call(env)
-      RouteHandler.new(@app, env).call
+      RequestGlobalizer.new(@app, env).call
     end
 
-    class RouteHandler
-      include Middleware::Helpers::Cookies
-
+    class RequestGlobalizer
       REGION_KEY = Cdo::GlobalEdition::REGION_KEY
+      LOCALE_KEY = Cdo::I18n::LOCALE_COOKIE_KEY
 
       # HTTP paths that to be excluded from Global Edition scope.
       EXCLUDED_PATHS = [
@@ -196,13 +195,14 @@ module Middleware
 
         # Updates the global `ge_region` cookie to lock the platform to the regional version.
         request.cookies[REGION_KEY] = new_region
-        set_global_cookie(REGION_KEY, new_region, high_priority: true)
+        response.set_cdo_cookie(REGION_KEY, new_region, priority: :high)
 
         region_locale = resolve_locale_for(new_region)
         unless region_locale == original_locale
           # Updates the global `language` cookie to enforce the switch to the regional language.
           ::I18n.locale = region_locale
-          set_locale_cookie(region_locale)
+          request.cookies[LOCALE_KEY] = region_locale
+          response.set_cdo_cookie(LOCALE_KEY, region_locale)
         end
 
         Metrics::Events.log_event(
@@ -317,6 +317,6 @@ module Middleware
       end
     end
 
-    private_constant :RouteHandler
+    private_constant :RequestGlobalizer
   end
 end
