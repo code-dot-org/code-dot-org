@@ -10,7 +10,7 @@ import {createUuid} from '@cdo/apps/utils';
 import {
   DEFAULT_NODE_HEIGHT,
   DEFAULT_NODE_WIDTH,
-  PASTE_OFFSET_PX,
+  DEFAULT_PASTE_OFFSET_PX,
 } from '../constants';
 import type {ClipboardContents} from '../context';
 import type {TabOrderEntry} from '../utils/computeTabOrder';
@@ -126,8 +126,7 @@ export function useCopyPaste({
     [nodes, edges, screenToFlowPosition]
   );
 
-  // Toolbar action: duplicate a node in-place with 'stagger' chaining, i.e., each duplicate is
-  // offset by PASTE_OFFSET_PX in both dimensions.
+  // Toolbar action: duplicate a node in-place but each duplicate is offset by the width of the node horizontally.
   const duplicateNode = useCallback(
     (nodeId: string) => {
       const source =
@@ -162,6 +161,17 @@ export function useCopyPaste({
           : buildLineEdgeClipboard(edgeId);
       if (!source) return;
 
+      const xPositions = source.nodes.map(n => n.position.x);
+      const lineHorizontalDisplacement =
+        Math.max(...xPositions) - Math.min(...xPositions);
+      // For lines, we want to offset the pasted line by the horizontal displacement of the original line.
+      // If the line's horizontal displacement is less than the default offset, use the default offset so that lines
+      // that are vertical or almost vertical aren't too close to each other.
+      const offsetX = Math.max(
+        lineHorizontalDisplacement,
+        DEFAULT_PASTE_OFFSET_PX
+      );
+
       const idMap = new Map<string, string>();
       const newNodes = source.nodes.map(node => {
         const newId = createUuid();
@@ -170,8 +180,8 @@ export function useCopyPaste({
           ...node,
           id: newId,
           position: {
-            x: node.position.x + PASTE_OFFSET_PX,
-            y: node.position.y + PASTE_OFFSET_PX,
+            x: node.position.x + offsetX,
+            y: node.position.y,
           },
         };
       });
@@ -254,11 +264,11 @@ export function useCopyPaste({
     const deltaX =
       mousePos && anchorNode
         ? mousePos.x - anchorNode.position.x
-        : PASTE_OFFSET_PX;
+        : DEFAULT_PASTE_OFFSET_PX;
     const deltaY =
       mousePos && anchorNode
         ? mousePos.y - anchorNode.position.y
-        : PASTE_OFFSET_PX;
+        : DEFAULT_PASTE_OFFSET_PX;
 
     const idMap = new Map<string, string>();
     const newNodes = contents.nodes.map(node => {
