@@ -12,19 +12,94 @@ DASHBOARD_DB_LONG_TIMEOUT = Cdo::Sequel.database_connection_pool(
   query_timeout: 300
 )
 
-# We want to avoid storing student chat messages any longer than
-# is necessary for analysis to prevent storing excess student PII.
-#
-# Log the number of records deleted for each table to #cron-daily Slack channel
-# so we can easily monitor the deletion process.
-def main
-  # Make sure we're deleting Events (90 days old) a day before Requests (91 days old)
-  # to ensure we don't have foreign key constraint issues when deleting Requests that are still referenced by Events.
-  deleted_event_count = DASHBOARD_DB_LONG_TIMEOUT[:aichat_events].where {created_at < Time.now - 90.days}.delete
-  ChatClient.message('cron-daily', "Deleted #{deleted_event_count} AichatEvent records")
+class DeleteOldAiChatData
+  EVENT_RETENTION_DAYS = 90
+  REQUEST_RETENTION_DAYS = 91
+  DELETE_BATCH_SIZE = 10_000
 
-  deleted_request_count = DASHBOARD_DB_LONG_TIMEOUT[:aichat_requests].where {created_at < Time.now - 91.days}.delete
-  ChatClient.message('cron-daily', "Deleted #{deleted_request_count} AichatRequest records")
+  def self.main
+    new.main
+  end
+
+  def initialize(database: DASHBOARD_DB_LONG_TIMEOUT, chat_client: ChatClient, now: Time.now)
+    @database = database
+    @chat_client = chat_client
+    @now = now
+  end
+
+  def main
+    deleted_event_count = delete_events
+    @chat_client.message('cron-daily', "Deleted #{deleted_event_count} AichatEvent records")
+
+    deleted_request_count = delete_requests
+    @chat_client.message('cron-daily', "Deleted #{deleted_request_count} AichatRequest records")
+  end
+
+  private def delete_events
+    delete_in_batches(:aichat_events, @now - EVENT_RETENTION_DAYS.days) do |ids|
+      @database[:aichat_events].where(id: ids).delete
+    end
+  end
+
+  private def delete_requests
+    delete_in_batches(:aichat_requests, @now - REQUEST_RETENTION_DAYS.days) do |ids|
+      deletable_ids = request_ids_without_events(ids)
+      next 0 if deletable_ids.empty?
+
+      @database[:aichat_requests].where(id: deletable_ids).delete
+    end
+  end
+
+  private def delete_in_batches(table_name, cutoff)
+    deleted_count = 0
+    last_id = 0
+
+    loop do
+      ids = old_record_ids(table_name, cutoff, last_id)
+      break if ids.empty?
+
+      deleted_count += yield(ids)
+      last_id = ids.last
+    end
+
+    deleted_count
+  end
+
+  # Scan by id so each delete operates on a bounded set of rows. The number of
+  # qualifying rows is finite even when the database cannot infer that from
+  # `created_at < cutoff` alone.
+  private def old_record_ids(table_name, cutoff, last_id)
+    with_read_only_server do
+      @database[table_name].
+        where {created_at < cutoff}.
+        where {id > last_id}.
+        order(:id).
+        limit(DELETE_BATCH_SIZE).
+        select_map(:id)
+    end
+  end
+
+  # Some requests pick up child events after the request row is created. Skip
+  # any request that still has event children instead of letting one FK miss
+  # fail the whole batch.
+  private def request_ids_without_events(ids)
+    requests = ::Sequel[:aichat_requests]
+    events = ::Sequel[:aichat_events]
+
+    @database[:aichat_requests].
+      left_join(:aichat_events, request_id: requests[:id]).
+      where(requests[:id] => ids, events[:id] => nil).
+      select_map(requests[:id])
+  end
+
+  private def with_read_only_server
+    servers = @database.opts.fetch(:servers, {})
+    return yield unless servers.key?(:read_only)
+
+    @database.with_server(:read_only) do
+      yield
+    end
+  end
 end
 
-main
+DeleteOldAiChatData.main
