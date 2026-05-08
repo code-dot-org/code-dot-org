@@ -1,7 +1,7 @@
 <Sketchlab>
   <config><![CDATA[{
   "game_id": 75,
-  "created_at": "2026-04-14T11:09:54.000Z",
+  "created_at": "2026-04-01T21:44:21.000Z",
   "level_num": "custom",
   "user_id": 18762,
   "properties": {
@@ -14,8 +14,8 @@
             "id": "V29L9wujj4e7u_7C34J3A",
             "type": "shape",
             "position": {
-              "x": -1910.3305547250043,
-              "y": -1175.1535254333592
+              "x": -1939.944378421029,
+              "y": -1163.6396752911385
             },
             "style": {
               "width": 1152.421771383269,
@@ -68,18 +68,14 @@
             "data": {
               "text": "Message: What will the user see?",
               "fontColor": "#000",
-              "fontSize": "large",
+              "fontSize": "medium",
               "showHandles": false
             },
             "measured": {
-              "width": 343,
-              "height": 47
+              "width": 254,
+              "height": 39
             },
-            "dragging": false,
-            "selected": true,
-            "domAttributes": {
-              "tabIndex": 0
-            }
+            "dragging": false
           },
           {
             "id": "tJAZKd_1uGRvY3P0KQP8T",
@@ -91,12 +87,12 @@
             "data": {
               "text": "Action: What should the user do next?",
               "fontColor": "#000000",
-              "fontSize": "large",
+              "fontSize": "medium",
               "showHandles": false
             },
             "measured": {
-              "width": 394,
-              "height": 47
+              "width": 291,
+              "height": 39
             }
           },
           {
@@ -116,11 +112,7 @@
               "width": 182,
               "height": 47
             },
-            "dragging": false,
-            "selected": true,
-            "domAttributes": {
-              "tabIndex": 0
-            }
+            "dragging": false
           },
           {
             "id": "fBy4xyYgrrqcZ-APMfeKb",
@@ -139,11 +131,7 @@
               "width": 133,
               "height": 47
             },
-            "dragging": false,
-            "selected": true,
-            "domAttributes": {
-              "tabIndex": 0
-            }
+            "dragging": false
           },
           {
             "id": "-kslNR-1WviAOdfBvO4IM",
@@ -159,16 +147,12 @@
             "data": {
               "shapeType": "rectangle",
               "label": "",
-              "backgroundColor": "var(--sketchlab-bg-gray)",
+              "backgroundColor": "var(--sketchlab-bg-green)",
               "strokeColor": "#1e1e1e"
             },
             "measured": {
               "width": 615,
               "height": 281
-            },
-            "selected": true,
-            "domAttributes": {
-              "tabIndex": 0
             }
           },
           {
@@ -185,16 +169,12 @@
             "data": {
               "shapeType": "rectangle",
               "label": "",
-              "backgroundColor": "var(--sketchlab-bg-gray)",
+              "backgroundColor": "var(--sketchlab-bg-blue)",
               "strokeColor": "#1e1e1e"
             },
             "measured": {
               "width": 615,
               "height": 281
-            },
-            "selected": true,
-            "domAttributes": {
-              "tabIndex": 0
             }
           }
         ],
@@ -202,9 +182,9 @@
 
         ],
         "viewport": {
-          "x": 1697.0831734156272,
-          "y": 692.7993923780884,
-          "zoom": 0.5388489208633094
+          "x": 2232.2789491363983,
+          "y": 929.8168072757571,
+          "zoom": 0.7800863309352518
         }
       }
     },
@@ -251,6 +231,6 @@
     "name_suffix": "_2026"
   },
   "published": true,
-  "audit_log": "[{\"changed_at\":\"2026-04-01T21:44:21.317+00:00\",\"changed\":[\"cloned from \\\"designing-reliable-apps-lesson7-sketchlab-choiceC-2025-pilo_2025-pilot\\\"\"],\"cloned_from\":\"designing-reliable-apps-lesson7-sketchlab-choiceC-2025-pilo_2025-pilot\"},{\"changed_at\":\"2026-05-01 15:35:49 -0400\",\"changed\":[\"start_sources\"],\"changed_by_id\":1,\"changed_by_email\":\"levelbuilder@dev.com\"},{\"changed_at\":\"2026-05-01 15:35:52 -0400\",\"changed\":[\"start_sources\"],\"changed_by_id\":1,\"changed_by_email\":\"levelbuilder@dev.com\"}]"
+  "audit_log": "[{\"changed_at\":\"2026-04-01T21:44:21.317+00:00\",\"changed\":[\"cloned from \\\"designing-reliable-apps-lesson7-sketchlab-choiceC-2025-pilo_2025-pilot\\\"\"],\"cloned_from\":\"designing-reliable-apps-lesson7-sketchlab-choiceC-2025-pilo_2025-pilot\"},{\"changed_at\":\"2026-05-01 15:35:49 -0400\",\"changed\":[\"start_sources\"],\"changed_by_id\":1,\"changed_by_email\":\"levelbuilder@dev.com\"},{\"changed_at\":\"2026-05-01 15:35:52 -0400\",\"changed\":[\"start_sources\"],\"changed_by_id\":1,\"changed_by_email\":\"levelbuilder@dev.com\"},{\"changed_at\":\"2026-05-07 13:36:14 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":155,\"changed_by_email\":\"dani@code.org\"}]"
 }]]></config>
 </Sketchlab>

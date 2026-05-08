@@ -11,7 +11,9 @@ markdown <<MARKDOWN
 
 #### We’ll start with a simple list, use `.map()` to transform it, and then connect that idea to rendering data into the DOM.
 
+---
 
+## 🔍 Check for Understanding 
 
 <div
   style="
@@ -23,12 +25,8 @@ markdown <<MARKDOWN
     background: #f7f8fa;
   "
 >
-  <img 
-    src="https://images.code.org/59c9b8a356ff4e56ec8c802ba5718b37-image-1684269154206.png" 
-    alt="A clipboard labeled TO DO" 
-    width="40px"
-    style="margin-right: 14px;"
-  >
+
+
 
   <div style="font-size: 14px;">
     <strong>
@@ -85,12 +83,12 @@ markdown <<MARKDOWN
 
 <br>
 
-<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
-    <summary style="font-size: 1.5em; font-weight: bold;">💡 Check your answers </summary>
-<div style="margin-top: 20px; margin-left: 20px; margin-right: 20px; margin-bottom:75px;">
-    <p style ="font-size: 14pt;">
-- Each item in the list is multiplied by 2, so every number is doubled. <br>
-- The final output is a new array with all the same positions as the original array, but each value is twice as large.<br>
+<details >
+    <summary style="cursor:pointer;display:inline-block;background:#8148B2;color:white;padding:14px 22px;font-size:18px;font-weight:600;border-radius:999px;list-style:none;">💡 Check your thinking </summary>
+<div style="margin-top:16px; background:#f7f8fa;">
+    <p style ="font-size: 14pt; ">
+Each item in the list is multiplied by 2, so every number is doubled. <br><br>
+The final output is a new array with all the same positions as the original array, but each value is twice as large.<br>
 
 
 </p>
