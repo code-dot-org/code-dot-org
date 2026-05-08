@@ -18,51 +18,62 @@ DELETE_BATCH_SIZE = 1_000
 # Scan by id so each delete operates on a bounded set of rows. The number of
 # qualifying rows is finite even when the database cannot infer that from
 # `created_at < cutoff` alone.
-def old_record_ids(table_name, last_id, max_id)
-  with_read_only_server do
+def read_only_replica_configured?
+  configured_servers = DASHBOARD_DB_LONG_TIMEOUT.opts.fetch(:servers, {})
+  configured_servers.key?(:read_only)
+end
+
+def old_record_ids(table_name, last_processed_id, largest_eligible_id)
+  if read_only_replica_configured?
+    DASHBOARD_DB_LONG_TIMEOUT.with_server(:read_only) do
+      DASHBOARD_DB_LONG_TIMEOUT[table_name].
+        where {id > last_processed_id}.
+        where {id <= largest_eligible_id}.
+        order(:id).
+        limit(DELETE_BATCH_SIZE).
+        select_map(:id)
+    end
+  else
     DASHBOARD_DB_LONG_TIMEOUT[table_name].
-      where {id > last_id}.
-      where {id <= max_id}.
+      where {id > last_processed_id}.
+      where {id <= largest_eligible_id}.
       order(:id).
       limit(DELETE_BATCH_SIZE).
       select_map(:id)
   end
 end
 
-def max_eligible_id(table_name, cutoff)
-  with_read_only_server do
+def largest_eligible_id(table_name, retention_cutoff)
+  if read_only_replica_configured?
+    DASHBOARD_DB_LONG_TIMEOUT.with_server(:read_only) do
+      DASHBOARD_DB_LONG_TIMEOUT[table_name].
+        where {created_at < retention_cutoff}.
+        max(:id)
+    end
+  else
     DASHBOARD_DB_LONG_TIMEOUT[table_name].
-      where {created_at < cutoff}.
+      where {created_at < retention_cutoff}.
       max(:id)
   end
 end
 
 def delete_in_batches(table_name, cutoff)
-  deleted_count = 0
-  last_id = 0
-  max_id = max_eligible_id(table_name, cutoff)
-  if max_id.nil?
-    return deleted_count
+  total_deleted_rows = 0
+  last_processed_id = 0
+  largest_id_to_delete = largest_eligible_id(table_name, cutoff)
+  if largest_id_to_delete.nil?
+    return total_deleted_rows
   end
 
   loop do
-    ids = old_record_ids(table_name, last_id, max_id)
-    break if ids.empty?
+    batch_record_ids = old_record_ids(table_name, last_processed_id, largest_id_to_delete)
+    break if batch_record_ids.empty?
 
-    deleted_count += yield(ids)
-    last_id = ids.last
+    total_deleted_rows += yield(batch_record_ids)
+    last_processed_id = batch_record_ids.last
   end
 
-  deleted_count
-end
-
-def with_read_only_server
-  servers = DASHBOARD_DB_LONG_TIMEOUT.opts.fetch(:servers, {})
-  return yield unless servers.key?(:read_only)
-
-  DASHBOARD_DB_LONG_TIMEOUT.with_server(:read_only) do
-    yield
-  end
+  total_deleted_rows
 end
 
 # We want to avoid storing student chat messages any longer than
