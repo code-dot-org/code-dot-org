@@ -1,4 +1,3 @@
-/* eslint-disable jsx-a11y/click-events-have-key-events */
 import {
   faBackward,
   faForward,
@@ -117,6 +116,12 @@ const UnwrappedPredict = class Predict extends React.Component<
               tabIndex={0}
               aria-label="Rewind"
               onClick={() => this.onScaleTime(true)}
+              onKeyDown={e => {
+                if (e.key === 'Enter' || e.key === ' ') {
+                  e.preventDefault();
+                  this.onScaleTime(true);
+                }
+              }}
               style={mergeStyles(
                 styles.mediaControl,
                 selectedControl === MediaControl.Rewind &&
@@ -136,6 +141,12 @@ const UnwrappedPredict = class Predict extends React.Component<
               tabIndex={0}
               aria-label={state.isRunning ? 'Pause' : 'Play'}
               onClick={this.onPressPlay}
+              onKeyDown={e => {
+                if (e.key === 'Enter' || e.key === ' ') {
+                  e.preventDefault();
+                  this.onPressPlay();
+                }
+              }}
               style={styles.mediaControl}
               key={MediaControl.Play}
             >
@@ -149,6 +160,12 @@ const UnwrappedPredict = class Predict extends React.Component<
               tabIndex={0}
               aria-label="Fast forward"
               onClick={() => this.onScaleTime(false)}
+              onKeyDown={e => {
+                if (e.key === 'Enter' || e.key === ' ') {
+                  e.preventDefault();
+                  this.onScaleTime(false);
+                }
+              }}
               style={mergeStyles(
                 styles.mediaControl,
                 selectedControl === MediaControl.FastForward &&
