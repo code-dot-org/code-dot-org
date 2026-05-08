@@ -32,3 +32,6 @@ export const ARROW_MARKER_WIDTH_PX = 14;
 export const ARROW_MARKER_HEIGHT_PX = 14;
 
 export const MIN_ZOOM = 0.1;
+
+// Stable class used by focus and pointer-down handlers.
+export const SKETCHLAB_TOOLBAR_PANEL_CLASS = 'sketchlab-toolbar-panel';

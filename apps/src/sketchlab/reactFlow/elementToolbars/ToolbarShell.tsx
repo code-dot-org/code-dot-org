@@ -72,21 +72,21 @@ export default function ToolbarShell({
         elevation={3}
         role="toolbar"
         aria-label={ariaLabel}
-        // The toolbar is mounted in a sibling Panel but React events
-        // still bubble through the component tree to the owning node,
-        // whose onDoubleClick starts inline label/text editing. Stop
-        // double clicks here so double-clicking inside the toolbar
-        // (e.g. on the rotation input) does not enter edit mode.
-        onDoubleClick={event => event.stopPropagation()}
         // When the user clicks a non-interactive area of the toolbar
         // (background padding, group spacing, labels), keep focus on
         // the selected node/edge.
         onMouseDown={event => {
           const target = event.target;
           if (!(target instanceof HTMLElement)) return;
+          // Skip preventDefault for any focusable / interactive control
+          // so MUI widgets (Slider thumb, IconButton, TextField input,
+          // etc.) get their native focus on click. The tabindex check
+          // also catches custom widgets that aren't covered by tag or
+          // role.
           if (
             target.closest(
-              'button, input, textarea, select, a, [contenteditable="true"]'
+              'button, input, textarea, select, a, [contenteditable="true"], ' +
+                '[tabindex]:not([tabindex="-1"]), [role="slider"], [role="button"]'
             )
           ) {
             return;

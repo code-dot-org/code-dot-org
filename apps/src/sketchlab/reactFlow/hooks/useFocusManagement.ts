@@ -3,7 +3,7 @@ import React, {useCallback, useEffect} from 'react';
 
 import {SketchlabReactFlowEdge} from '@cdo/apps/lab2/types';
 
-import {SKETCHLAB_TOOLBAR_PANEL_CLASS} from '../elementToolbars/CornerToolbarPanel';
+import {SKETCHLAB_TOOLBAR_PANEL_CLASS} from '../constants';
 import {
   entriesMatch,
   getElementForEntry,

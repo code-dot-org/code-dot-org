@@ -27,6 +27,7 @@ import {
   LINE_RECONNECT_SNAP_RADIUS_PX,
   MIN_ZOOM,
   SAVE_DEBOUNCE_MS,
+  SKETCHLAB_TOOLBAR_PANEL_CLASS,
 } from '../constants';
 import {
   ClipboardProvider,
@@ -34,9 +35,7 @@ import {
   ToolbarVisibilityProvider,
   type ToolbarTarget,
 } from '../context';
-import CornerToolbarPanel, {
-  SKETCHLAB_TOOLBAR_PANEL_CLASS,
-} from '../elementToolbars/CornerToolbarPanel';
+import CornerToolbarPanel from '../elementToolbars/CornerToolbarPanel';
 import {
   DEFAULT_EDGE_TYPE,
   DEFAULT_LINE_WIDTH,
