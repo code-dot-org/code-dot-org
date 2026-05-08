@@ -24,6 +24,7 @@ import ParentalPermissionBanner from '@cdo/apps/templates/policy_compliance/Pare
 import googlePlatformApi, {
   loadGooglePlatformApi,
 } from '@cdo/apps/templates/progress/googlePlatformApiRedux';
+import {resumeReviewSyllabusOnboardingTour} from '@cdo/apps/templates/studioHomepages/teacherHomepageV2/useReviewSyllabusTour';
 import {
   selectSection,
   setSections,
@@ -160,6 +161,7 @@ function initPage() {
     }
   );
 
+  resumeReviewSyllabusOnboardingTour();
   tooltipifyVocabulary();
   displayDifferentiationChat(scriptData);
 }

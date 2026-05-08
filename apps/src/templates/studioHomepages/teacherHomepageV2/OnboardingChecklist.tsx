@@ -13,16 +13,20 @@ const CHECKLIST_ITEMS = [
 
 interface OnboardingChecklistProps {
   createSectionTour: Tour | null;
+  reviewSyllabusTour: Tour | null;
 }
 
 const OnboardingChecklist: React.FC<OnboardingChecklistProps> = ({
   createSectionTour,
+  reviewSyllabusTour,
 }) => {
   const [isHidden, setIsHidden] = React.useState(false);
 
   const handleButtonClick = (id: string) => {
     if (id === 'create-section') {
       createSectionTour?.start();
+    } else if (id === 'review-syllabus') {
+      reviewSyllabusTour?.start();
     }
   };
 

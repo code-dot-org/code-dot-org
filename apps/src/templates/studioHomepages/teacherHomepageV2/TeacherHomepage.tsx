@@ -30,6 +30,7 @@ import {SectionList} from './SectionList';
 import TeacherHomepagePopups from './TeacherHomepagePopups';
 import TeacherPromotions from './TeacherPromotions';
 import useCreateSectionTour from './useCreateSectionTour';
+import useReviewSyllabusTour from './useReviewSyllabusTour';
 
 import styles from './teacherHomepage.module.scss';
 
@@ -51,6 +52,7 @@ const TeacherHomepage: React.FC<TeacherHomepageProps> = ({studioUrlPrefix}) => {
   // TODO: replace with real data once teacher grade level is stored on the platform
   const isElementaryTeacher = true;
   const tour = useCreateSectionTour(isElementaryTeacher);
+  const reviewSyllabusTour = useReviewSyllabusTour();
   const isDemoSectionEnabled = experiments.isEnabled('demo-section');
 
   const teacherName = useAppSelector(state => state.currentUser.displayName);
@@ -282,7 +284,10 @@ const TeacherHomepage: React.FC<TeacherHomepageProps> = ({studioUrlPrefix}) => {
               destructiveLoad={true}
             />
             {!!isMiniTutorialEnabled && (
-              <OnboardingChecklist createSectionTour={tour} />
+              <OnboardingChecklist
+                createSectionTour={tour}
+                reviewSyllabusTour={reviewSyllabusTour}
+              />
             )}
             {!isDemoSectionEnabled ? (
               numSections === 0 ? (
