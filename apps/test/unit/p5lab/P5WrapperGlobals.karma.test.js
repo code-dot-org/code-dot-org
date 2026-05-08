@@ -1,3 +1,6 @@
+import CustomMarshaler from '@cdo/apps/lib/tools/jsinterpreter/CustomMarshaler';
+import CustomMarshalingInterpreter from '@cdo/apps/lib/tools/jsinterpreter/CustomMarshalingInterpreter';
+
 import createP5Wrapper from '../../util/gamelab/TestableP5Wrapper';
 import {expect} from '../../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports
 import {sandboxDocumentBody} from '../../util/testUtils';
@@ -19,11 +22,22 @@ describe('P5Wrapper globals', function () {
     expect(propList).to.have.property('rect');
   });
 
-  it('blocks underscore-prefixed p5 internals from custom marshalling', function () {
-    const blockedProps = p5Wrapper.getCustomMarshalBlockedProperties();
+  it('blocks underscore-prefixed p5 internals on custom-marshaled objects', function () {
+    const interpreter = new CustomMarshalingInterpreter(
+      '',
+      new CustomMarshaler({
+        blockedProperties: p5Wrapper.getCustomMarshalBlockedProperties(),
+        objectList: p5Wrapper.getCustomMarshalObjectList(),
+      })
+    );
+    const sprite = p5Wrapper.p5.createSprite(10, 20);
+    const marshaledSprite = interpreter.marshalNativeToInterpreter(sprite);
 
-    expect(blockedProps).to.include('_setProperty');
-    expect(blockedProps).to.include('_isGlobal');
-    expect(blockedProps).to.include('_draw');
+    expect(interpreter.hasProperty(marshaledSprite, 'isTouching')).to.be.true;
+    expect(interpreter.hasProperty(marshaledSprite, '_collideWith')).to.be
+      .false;
+    expect(interpreter.getProperty(marshaledSprite, '_collideWith')).to.equal(
+      interpreter.UNDEFINED
+    );
   });
 });
