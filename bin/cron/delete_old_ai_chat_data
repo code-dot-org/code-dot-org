@@ -41,7 +41,9 @@ def delete_in_batches(table_name, cutoff)
   deleted_count = 0
   last_id = 0
   max_id = max_eligible_id(table_name, cutoff)
-  return deleted_count unless max_id
+  if max_id.nil?
+    return deleted_count
+  end
 
   loop do
     ids = old_record_ids(table_name, last_id, max_id)
