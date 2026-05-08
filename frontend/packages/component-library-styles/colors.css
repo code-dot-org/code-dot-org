@@ -123,8 +123,8 @@
   --text-success-primary: var(--sentiment-success-50);
   --text-success-primary-fixed: var(--sentiment-success-50);
   --text-success-secondary: var(--sentiment-success-70);
-  --text-warning-primary: var(--sentiment-warning-71);
-  --text-warning-primary-fixed: var(--sentiment-warning-71);
+  --text-warning-primary: var(--sentiment-warning-70);
+  --text-warning-primary-fixed: var(--sentiment-warning-70);
   --text-warning-secondary: var(--sentiment-warning-70);
 }
 
