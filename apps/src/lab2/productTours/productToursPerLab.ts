@@ -96,7 +96,7 @@ export function isTourAvailableOnLevel(
   if (!isAvailableForLab) {
     return false;
   }
-  // The Sketch Lab intro tour is only currently available for excalidraw-based
+  // The Sketch Lab tour(s) are only currently available for excalidraw-based
   // Sketch lab.
   // TODO: remove excalidraw tour https://codedotorg.atlassian.net/browse/AFL-641
   if (
