@@ -1,4 +1,5 @@
 import {Panel} from '@xyflow/react';
+import classNames from 'classnames';
 import React from 'react';
 
 import {
@@ -15,6 +16,12 @@ import ShapeNodeToolbar from './ShapeNodeToolbar';
 import TextNodeToolbar from './TextNodeToolbar';
 
 import styles from './element-toolbar.module.scss';
+
+// Stable, non-CSS-module class used by focus and pointer-down handlers
+// to recognize that an interaction landed inside the toolbar (and so
+// should not dismiss it). Selector-based lookups can't use the CSS
+// module class because it's mangled at build time.
+export const SKETCHLAB_TOOLBAR_PANEL_CLASS = 'sketchlab-toolbar-panel';
 
 interface CornerToolbarPanelProps {
   nodes: SketchlabReactFlowNode[];
@@ -77,7 +84,10 @@ export default function CornerToolbarPanel({
   if (!body) return null;
 
   return (
-    <Panel position="top-right" className={styles.cornerPanel}>
+    <Panel
+      position="top-right"
+      className={classNames(styles.cornerPanel, SKETCHLAB_TOOLBAR_PANEL_CLASS)}
+    >
       {body}
     </Panel>
   );

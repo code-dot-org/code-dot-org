@@ -34,7 +34,9 @@ import {
   ToolbarVisibilityProvider,
   type ToolbarTarget,
 } from '../context';
-import CornerToolbarPanel from '../elementToolbars/CornerToolbarPanel';
+import CornerToolbarPanel, {
+  SKETCHLAB_TOOLBAR_PANEL_CLASS,
+} from '../elementToolbars/CornerToolbarPanel';
 import {
   DEFAULT_EDGE_TYPE,
   DEFAULT_LINE_WIDTH,
@@ -264,8 +266,7 @@ export default function ReactFlowCanvas({
       const focusTarget = event.target as HTMLElement;
       if (
         event.currentTarget.contains(event.relatedTarget as Node) ||
-        focusTarget.closest('.react-flow__node-toolbar') ||
-        focusTarget.closest('.react-flow__edge-toolbar')
+        focusTarget.closest(`.${SKETCHLAB_TOOLBAR_PANEL_CLASS}`)
       ) {
         return;
       }
