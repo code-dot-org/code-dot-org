@@ -121,6 +121,49 @@ class LevelsControllerTest < ActionController::TestCase
     assert_response :forbidden
   end
 
+  test "by_name returns the matching level summary" do
+    level = create(:panels, name: 'unique-panel-level')
+    get :by_name, params: {name: level.name}
+    assert_response :success
+    body = JSON.parse(@response.body)
+    assert_equal level.id.to_s, body['id']
+    assert_equal level.name, body['name']
+    assert_equal 'Panels', body['type']
+  end
+
+  test "by_name narrows by Rails STI type" do
+    create(:panels, name: 'collision-name')
+    weblab = create(:weblab2, name: 'collision-name-2')
+    # type filter excludes the Panels level
+    get :by_name, params: {name: weblab.name, type: 'Weblab2'}
+    assert_response :success
+    assert_equal 'Weblab2', JSON.parse(@response.body)['type']
+  end
+
+  test "by_name 404s on a name with no level" do
+    get :by_name, params: {name: 'no-such-level-exists'}
+    assert_response :not_found
+  end
+
+  test "by_name 404s when a level exists but the type filter excludes it" do
+    panels = create(:panels, name: 'panels-by-name')
+    get :by_name, params: {name: panels.name, type: 'Weblab2'}
+    assert_response :not_found
+  end
+
+  test "by_name forbids non-levelbuilders" do
+    sign_out @levelbuilder
+    sign_in create(:teacher)
+    get :by_name, params: {name: 'anything'}
+    assert_response :forbidden
+  end
+
+  test "by_name redirects signed-out users" do
+    sign_out @levelbuilder
+    get :by_name, params: {name: 'anything'}
+    assert_response :redirect
+  end
+
   test "should get index" do
     get :index, params: {game_id: @level.game}
     assert_response :success
