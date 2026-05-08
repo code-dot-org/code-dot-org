@@ -186,11 +186,11 @@ class Section < ApplicationRecord
     section_students = students.to_a
     return if section_students.empty? || unit.nil?
 
-    passing_level_ids_by_student = UserLevel
-      .where(user: section_students, script: unit)
-      .where('best_result >= ? OR submitted = ?', SUGGESTED_LESSON_PASSING_THRESHOLD, true)
-      .group_by(&:user_id)
-      .transform_values {|uls| uls.map(&:level_id).to_set}
+    passing_level_ids_by_student = UserLevel.
+      where(user: section_students, script: unit).
+      where('best_result >= ? OR submitted = ?', SUGGESTED_LESSON_PASSING_THRESHOLD, true).
+      group_by(&:user_id).
+      transform_values {|uls| uls.to_set(&:level_id)}
 
     last_completed_lesson = nil
     finished_unit = true

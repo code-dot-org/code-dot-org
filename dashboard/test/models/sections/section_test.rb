@@ -1743,7 +1743,7 @@ class SectionTest < ActiveSupport::TestCase
   end
 
   test 'compute_suggested_lesson suggests first lesson when no students have passed any level' do
-    unit, lesson1, _lesson2, _sl1, _sl2, section, _student = build_suggested_lesson_section
+    _, lesson1, _lesson2, _sl1, _sl2, section, _student = build_suggested_lesson_section
     section.compute_suggested_lesson
     assert_equal lesson1.id, section.reload.suggested_lesson['lesson_id']
   end
@@ -1768,7 +1768,7 @@ class SectionTest < ActiveSupport::TestCase
   end
 
   test 'compute_suggested_lesson writes a timestamp' do
-    unit, _lesson1, _lesson2, _sl1, _sl2, section, _student = build_suggested_lesson_section
+    _, _lesson1, _lesson2, _sl1, _sl2, section, _student = build_suggested_lesson_section
     section.compute_suggested_lesson
     assert section.reload.suggested_lesson['timestamp'].present?
   end

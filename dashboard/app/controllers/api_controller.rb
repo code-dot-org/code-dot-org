@@ -177,13 +177,13 @@ class ApiController < ApplicationController
         return render status: :bad_request, json: {error: I18n.t("lesson_lock.error.cannot_view_locked_answers")}
       end
 
-      user_level = UserLevel.find_or_initialize_by(
+      UserLevel.find_or_initialize_by(
         user_id: user_level_data[:user_id],
         level_id: user_level_data[:level_id],
         script_id: user_level_data[:script_id]
       )
       #unless can?(:manage, user_level)
-        # Can only update lockable state for user's non-demo students
+      # Can only update lockable state for user's non-demo students
       #  return render status: :forbidden, json: {error: I18n.t("lesson_lock.error.forbidden")}
       #end
       UserLevel.update_lockable_state(
