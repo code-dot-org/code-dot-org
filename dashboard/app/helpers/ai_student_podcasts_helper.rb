@@ -5,17 +5,17 @@ module AiStudentPodcastsHelper
   VOICE_ID_DAN = "0sqkv877qKv8jUXFfsXj"
   VOICE_ID_SAM = "w7LY6CndrQObaTsPvYeB"
 
-  def self.create_and_save_to_s3(fragment)
-    filename = s3_filename(fragment.id)
+  def self.create_and_save_to_s3(student_podcast_data)
+    filename = s3_filename(student_podcast_data.id)
 
     unless AWS::S3.exists_in_bucket(PODCAST_BUCKET, filename)
-      podcast = get_podcast_from_script(fragment.podcast_script)
+      podcast = get_podcast_from_script(student_podcast_data.podcast_script)
       AWS::S3.upload_to_bucket(PODCAST_BUCKET, filename, podcast, no_random: true)
     end
   end
 
-  def self.retrieve_podcast_from_s3(fragment_id)
-    AWS::S3.download_from_bucket(PODCAST_BUCKET, s3_filename(fragment_id))
+  def self.retrieve_podcast_from_s3(student_podcast_id)
+    AWS::S3.download_from_bucket(PODCAST_BUCKET, s3_filename(student_podcast_id))
   end
 
   VOICE_ID_MAP = {
@@ -84,7 +84,7 @@ module AiStudentPodcastsHelper
     Client.new(CDO.elevenlabs_api_key, MODEL)
   end
 
-  def self.s3_filename(fragment_id)
-    PODCAST_FOLDER + 'fragment_' + fragment_id.to_s + '.mp3'
+  def self.s3_filename(student_podcast_id)
+    PODCAST_FOLDER + 'student_podcast_' + student_podcast_id.to_s + '.mp3'
   end
 end
