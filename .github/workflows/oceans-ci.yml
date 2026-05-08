@@ -28,9 +28,9 @@ jobs:
     runs-on: ubuntu-24.04
     timeout-minutes: 30
     container:
-      # Pin matches the `playwright` package resolved in frontend/yarn.lock.
-      # When upgrading Playwright, update both this image tag and the lockfile together.
-      image: mcr.microsoft.com/playwright:v1.57.0-noble
+      # Must match the `playwright` catalog version in frontend/.yarnrc.yml.
+      # When upgrading Playwright, bump both the catalog semver and this image tag together.
+      image: mcr.microsoft.com/playwright:v1.59.1-noble
 
     steps:
       - name: Install LFS
