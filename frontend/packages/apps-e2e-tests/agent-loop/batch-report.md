@@ -453,6 +453,33 @@ All 8 tests pass C+F+W.
   through React's synthetic event system reliably. Fixed by switching from `.click()` to
   `.dispatchEvent('click')` on the xmark icon in both dismiss interactions.
 
+---
+
+## Batch N+10 — Auth-unblocking pass 12 (help_and_tips, disallowedsharing)
+
+**Features ported (passing):**
+
+- `teacher_tools/instructions/help_and_tips.feature` → `tests/legacy/help-and-tips/help-and-tips.spec.ts` (1 scenario)
+- `teacher_tools/disallowedsharing.feature` → `tests/legacy/disallowed-sharing/disallowed-sharing.spec.ts` (2 scenarios; 1 fixme)
+
+All 3 active tests pass C+F+W.
+
+**Key fixes:**
+
+- `help_and_tips`: `.editor-column` resolves to 2 elements (instructions panel + code editor).
+  Pinned to `.first()` — the instructions panel is always the first editor column.
+
+- `disallowedsharing`: `#overlay` intercepts pointer events on `#runButton`, same as fun-o-meter.
+  Added inline `dismissOverlay()` helper that JS-clicks `#overlay` and waits for `state: 'hidden'`.
+
+- `disallowedsharing` scenario 1 (`@webpurify`): marked `test.fixme` — requires the WebPurify
+  external API to be configured in the test environment. Phone/email validation (scenarios 2+3)
+  uses server-side regex and works without WebPurify.
+
+- `.share` in PlayLab: `#finishButton` with `className="share"` in `#share-cell`. Becomes visible
+  (share-cell-enabled) when `level.freePlay` is true after the program runs. Clicking it triggers
+  `sendPuzzleReport` which validates sprite-say text server-side.
+
 <!-- Agent: append new entries here as fixme/skip placeholders are created.
 
 Format:

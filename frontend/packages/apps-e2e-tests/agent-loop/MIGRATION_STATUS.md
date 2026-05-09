@@ -2,7 +2,7 @@
 
 Source: `dashboard/test/ui/features/` (all sub-directories)  
 Target: `frontend/packages/apps-e2e-tests/tests/`  
-As of: 2026-05-09 (updated 2026-05-09 — auth-unblocking pass 11: fun_o_meter, project_sharing, course_versions)
+As of: 2026-05-09 (updated 2026-05-09 — auth-unblocking pass 12: help_and_tips, disallowedsharing)
 
 ---
 
@@ -10,8 +10,8 @@ As of: 2026-05-09 (updated 2026-05-09 — auth-unblocking pass 11: fun_o_meter, 
 
 | Status                                         | Count                                                                                                                                             |
 | ---------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Ported                                         | 121 feature files (C+F for pythonlab + mixmoveai; Chromium-only for maker; @no_ci for ai_tutor; C+F+W for rest)                                   |
-| Fixme stubs — test infra                       | 1 (applab asset upload — needs test fixture file)                                                                                                 |
+| Ported                                         | 123 feature files (C+F for pythonlab + mixmoveai; Chromium-only for maker; @no_ci for ai_tutor; C+F+W for rest)                                   |
+| Fixme stubs — test infra                       | 2 (applab asset upload — needs test fixture file; disallowedsharing profanity — @webpurify API not configured in test env)                        |
 | Covered by ported (rolled in)                  | 5 (maze2, jigsaw2, multi2/3/4 rolled into existing specs)                                                                                         |
 | Partial — @eyes (visual checkpoints annotated) | 5 ported up to snapshot; @eyes auth blocked 3                                                                                                     |
 | Fixme stubs — @eyes / auth only                | 6 (curriculum_reference ×2, level_group_multi_page_dots ×1, applab_submittable ×1, gamelab_submittable ×1, curriculum_catalog_assign_unassign ×1) |
@@ -142,6 +142,8 @@ As of: 2026-05-09 (updated 2026-05-09 — auth-unblocking pass 11: fun_o_meter, 
 | `teacher_tools/course_versions.feature`                            | `tests/legacy/course-versions/course-versions.spec.ts`                         | C+F+W    | 3 scenarios; version warning + dismiss persistence + dropdown selector; dispatchEvent for xmark dismiss    |
 | `teacher_tools/fun_o_meter.feature`                                | `tests/legacy/fun-o-meter/fun-o-meter.spec.ts`                                 | C+F+W    | 1 scenario; rating buttons on solve, persist on reload, gone after rating + continue                       |
 | `teacher_tools/projects/project_sharing.feature`                   | `tests/legacy/project-sharing/project-sharing.spec.ts`                         | C+F+W    | 4 scenarios; young student (age 10); dance share enabled, spritelab disabled, applab redirect to /home     |
+| `teacher_tools/instructions/help_and_tips.feature`                 | `tests/legacy/help-and-tips/help-and-tips.spec.ts`                             | C+F+W    | 1 scenario; help tab + Circuit Playground doc link + frameLocator into instructions iframe                 |
+| `teacher_tools/disallowedsharing.feature`                          | `tests/legacy/disallowed-sharing/disallowed-sharing.spec.ts`                   | C+F+W    | 2 scenarios (phone+email); 1 fixme (@webpurify); dismissOverlay before run; .share = #finishButton         |
 
 ### foundations / platform
 
@@ -371,7 +373,6 @@ scenarios worth porting independently.
 | `teacher_tools/below_visualization.feature`                                          | @eyes only                                                |
 | `teacher_tools/cached_level_page.feature`                                            | teacher + section setup                                   |
 | `teacher_tools/certificates/*.feature`                                               | auth + email delivery                                     |
-| `teacher_tools/disallowedsharing.feature`                                            | @as_student sharing flow                                  |
 | `teacher_tools/encrypted_level.feature`                                              | @properties_encryption_key                                |
 | `teacher_tools/feedback.feature`                                                     | teacher feedback on student work (auth)                   |
 | `teacher_tools/hidden_scripts_eyes.feature`                                          | @eyes                                                     |
@@ -380,7 +381,6 @@ scenarios worth porting independently.
 | `teacher_tools/instructions/feedback_tab.feature`                                    | @as_taught_student                                        |
 | `teacher_tools/instructions/feedback_tab_eyes.feature`                               | @eyes                                                     |
 | `teacher_tools/instructions/csp_top_instructions_eyes.feature`                       | @eyes                                                     |
-| `teacher_tools/instructions/help_and_tips.feature`                                   | @as_student                                               |
 | `teacher_tools/instructions/hoc_top_instructions.feature`                            | @as_student                                               |
 | `teacher_tools/instructions/teacher_only_markdown.feature`                           | @as_taught_student                                        |
 | `teacher_tools/instructions/top_instructions.feature`                                | @as_student                                               |
