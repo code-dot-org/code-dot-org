@@ -210,6 +210,17 @@ export class AppLab {
   }
 
   /**
+   * Return the current Droplet editor text content via __TestInterface.
+   * Mirrors `the Droplet ACE text is "..."` from droplet_steps.rb.
+   */
+  async getDropletContents(): Promise<string> {
+    return this.page.evaluate(
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
+      () => (window as any).__TestInterface.getDropletContents() as string,
+    );
+  }
+
+  /**
    * Return App Lab's current level HTML (Applab.levelHtml).
    * Reflects the design-mode-authored HTML for the running app.
    */
