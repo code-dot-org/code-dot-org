@@ -2,7 +2,7 @@
 
 Source: `dashboard/test/ui/features/` (all sub-directories)  
 Target: `frontend/packages/apps-e2e-tests/tests/`  
-As of: 2026-05-09 (updated 2026-05-09 — auth-unblocking pass 13: sharepage scenario 2)
+As of: 2026-05-09 (updated 2026-05-09 — auth-unblocking pass 14: pixelation scenarios 1–4)
 
 ---
 
@@ -10,7 +10,7 @@ As of: 2026-05-09 (updated 2026-05-09 — auth-unblocking pass 13: sharepage sce
 
 | Status                                         | Count                                                                                                                                             |
 | ---------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Ported                                         | 124 feature files (C+F for pythonlab + mixmoveai; Chromium-only for maker; @no_ci for ai_tutor; C+F+W for rest)                                   |
+| Ported                                         | 125 feature files (C+F for pythonlab + mixmoveai; Chromium-only for maker; @no_ci for ai_tutor; C+F+W for rest)                                   |
 | Fixme stubs — test infra                       | 2 (applab asset upload — needs test fixture file; disallowedsharing profanity — @webpurify API not configured in test env)                        |
 | Covered by ported (rolled in)                  | 5 (maze2, jigsaw2, multi2/3/4 rolled into existing specs)                                                                                         |
 | Partial — @eyes (visual checkpoints annotated) | 5 ported up to snapshot; @eyes auth blocked 3                                                                                                     |
@@ -76,6 +76,7 @@ As of: 2026-05-09 (updated 2026-05-09 — auth-unblocking pass 13: sharepage sce
 | `weblab/too_young.feature` (scenario 1)                        | `tests/lab2/weblab/weblab.spec.ts`                                 | C+F+W    | young student redirect; scenario 2 skipped                                                          |
 | `netsim_lobby.feature`                                         | `tests/legacy/netsim/netsim.spec.ts`                               | C+F+W    | 3 scenarios; anonymous; real-time lobby                                                             |
 | `pixelation.feature` (scenarios 5 & 6)                         | `tests/legacy/pixelation/pixelation.spec.ts`                       | C+F+W    | non-auth scenarios; levels 4 & 5; UI state checks                                                   |
+| `pixelation.feature` (scenarios 1–4)                           | `tests/legacy/pixelation/pixelation-auth.spec.ts`                  | C+F+W    | @as_student; binary v2/v3 + hex-start; finish+reload persist; slider keyboard; save+reload convert  |
 | `public_key_cryptography/continue_button.feature`              | `tests/legacy/pkc/pkc.spec.ts`                                     | C+F+W    | continue button regression; lesson 31                                                               |
 | `studio.feature`                                               | `tests/legacy/studio/studio.spec.ts`                               | C+F+W    | PlayLab sprite height before/after run                                                              |
 | `sharepage.feature` (scenario 1)                               | `tests/legacy/sharepage/sharepage.spec.ts`                         | C+F+W    | Flappy share URL; game states; "View Code" redirect                                                 |
@@ -323,13 +324,13 @@ These feature files test shared CSF platform code, not any particular lab.
 These are interactive CS Principles tools or simulations, not Blockly-based coding
 environments.
 
-| Tool / simulator             | Feature files                                      | Status                                                                               |
-| ---------------------------- | -------------------------------------------------- | ------------------------------------------------------------------------------------ |
-| Internet Simulator (NetSim)  | `netsim_lobby.feature`                             | **Ported** — `tests/legacy/netsim/netsim.spec.ts`                                    |
-| Pixelation widget            | `pixelation.feature`                               | **Ported** (scenarios 5 & 6) — `tests/legacy/pixelation/`; scenarios 1–4 @as_student |
-| Public Key Cryptography tool | `public_key_cryptography/continue_button.feature`  | **Ported** — `tests/legacy/pkc/pkc.spec.ts`                                          |
-| Modal Function Editor        | `code_tools/blockly/modal_function_editor.feature` | **Ported** — `tests/legacy/modal-function-editor/`                                   |
-| Mix & Move AI                | `mix_move_ai.feature`                              | **Ported** — `tests/lab2/mixmoveai/mixmoveai.spec.ts` (@no_safari)                   |
+| Tool / simulator             | Feature files                                      | Status                                                             |
+| ---------------------------- | -------------------------------------------------- | ------------------------------------------------------------------ |
+| Internet Simulator (NetSim)  | `netsim_lobby.feature`                             | **Ported** — `tests/legacy/netsim/netsim.spec.ts`                  |
+| Pixelation widget            | `pixelation.feature`                               | **Fully ported** — `tests/legacy/pixelation/`; all 6 scenarios     |
+| Public Key Cryptography tool | `public_key_cryptography/continue_button.feature`  | **Ported** — `tests/legacy/pkc/pkc.spec.ts`                        |
+| Modal Function Editor        | `code_tools/blockly/modal_function_editor.feature` | **Ported** — `tests/legacy/modal-function-editor/`                 |
+| Mix & Move AI                | `mix_move_ai.feature`                              | **Ported** — `tests/lab2/mixmoveai/mixmoveai.spec.ts` (@no_safari) |
 
 ---
 

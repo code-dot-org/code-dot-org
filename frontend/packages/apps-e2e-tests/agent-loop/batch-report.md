@@ -500,6 +500,31 @@ All 3 browsers green C+F+W.
 - Includes `reopen congrats` fallback: if `#sharing-dialog-copy-button` is absent after the first
   finish click, the test presses again-button, re-runs, and clicks finish again.
 
+---
+
+## Batch N+12 — Auth-unblocking pass 14 (pixelation scenarios 1–4)
+
+**Features ported (passing):**
+
+- `star_labs/pixelation.feature` scenarios 1–4 → `tests/legacy/pixelation/pixelation-auth.spec.ts` (4 scenarios)
+
+All 3 browsers expected C+F+W.
+
+**Key notes:**
+
+- Extended `Pixelation.ts` POM with `gotoLevelWithAuth(level)`, `waitForPixelData()`,
+  `pixelDataNormalized()`, `saveAndReload()`, `finishAndReload()`, `typeInPixelData(chars)`,
+  `selectEndOfPixelData()`, and `pressKey(locator, key)` — mirrors all Cucumber step
+  definitions in `step_definitions/pixelation.rb`.
+- Fixed bug: `waitForURL(url => url !== currentUrl)` compared `URL` object to `string`;
+  changed to `url.href !== currentUrl`.
+- `waitForPixelData(page, expected)` helper polls until normalized value equals `expected` —
+  needed after encoding-mode switches (hex↔binary) which are async React state updates.
+- Exact normalized string comparisons match the Cucumber `gsub(/[ \n]/, '')` idiom.
+- `selectEndOfPixelData()` sets caret to end via `setSelectionRange(9999,9999)` — required
+  as Safari workaround per source comment in feature file.
+- No fixme or skip entries; all 4 scenarios are fully functional.
+
 <!-- Agent: append new entries here as fixme/skip placeholders are created.
 
 Format:

@@ -1,5 +1,7 @@
+import {type Page} from '@playwright/test';
+
 import {createStudent} from '../../shared/auth';
-import {type Page, expect, test} from '../../shared/fixtures';
+import {expect, test} from '../../shared/fixtures';
 
 /**
  * Project Sharing — Young Students.
