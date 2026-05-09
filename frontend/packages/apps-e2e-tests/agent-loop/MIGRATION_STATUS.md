@@ -2,27 +2,27 @@
 
 Source: `dashboard/test/ui/features/` (all sub-directories)  
 Target: `frontend/packages/apps-e2e-tests/tests/`  
-As of: 2026-05-09 (updated 2026-05-09 — pass 18: tt auth wave 1: feedback + level_summary + feedback_tab)
+As of: 2026-05-09 (updated 2026-05-09 — pass 19: tt auth wave 2: pairing + version_history + assign_modular_course)
 
 ---
 
 ## Summary
 
-| Status                                         | Count                                                                                                                                                         |
-| ---------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Ported                                         | 126 feature files (C+F for pythonlab + mixmoveai; Chromium-only for maker; @no_ci for ai_tutor; C+F+W for rest)                                               |
-| Fixme stubs — test infra                       | 3 (applab asset upload — needs test fixture file; disallowedsharing profanity — @webpurify API not configured; gamelab export — animation picker CDN blocked) |
-| Covered by ported (rolled in)                  | 5 (maze2, jigsaw2, multi2/3/4 rolled into existing specs)                                                                                                     |
-| Partial — @eyes (visual checkpoints annotated) | 5 ported up to snapshot; @eyes auth blocked 3                                                                                                                 |
-| Fixme stubs — @eyes / auth only                | 6 (curriculum_reference ×2, level_group_multi_page_dots ×1, applab_submittable ×1, gamelab_submittable ×1, curriculum_catalog_assign_unassign ×1)             |
-| Skipped — auth required                        | ~35                                                                                                                                                           |
-| Skipped — @skip / @eyes_mobile                 | 3                                                                                                                                                             |
-| Skipped — cookie/session manipulation          | 2                                                                                                                                                             |
-| Out of scope — non-CSF labs                    | 5 labs, ~15 feature files (spritelab + craft hero_logged_out now ported)                                                                                      |
-| Out of scope — lab2 cross-origin               | WebLab full tests (Bramble cross-origin iframe); weblab/too_young ported                                                                                      |
-| Out of scope — other areas                     | javalab (3/10 ported; 7 @no_ci + @eyes), weblab2, pd/pl, xteam, levelbuilder, global_edition, policy_compliance                                               |
-| Out of scope — standalone tools                | 0 (netsim/pixelation/pkc/studio/sharepage/modal-fn-editor/mix-move-ai all ported)                                                                             |
-| Porteable, not yet done                        | 0                                                                                                                                                             |
+| Status                                         | Count                                                                                                                                                                             |
+| ---------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Ported                                         | 129 feature files (C+F for pythonlab + mixmoveai; Chromium-only for maker; @no_ci for ai_tutor; @no_mobile for pairing + version_history + assign_modular_course; C+F+W for rest) |
+| Fixme stubs — test infra                       | 3 (applab asset upload — needs test fixture file; disallowedsharing profanity — @webpurify API not configured; gamelab export — animation picker CDN blocked)                     |
+| Covered by ported (rolled in)                  | 5 (maze2, jigsaw2, multi2/3/4 rolled into existing specs)                                                                                                                         |
+| Partial — @eyes (visual checkpoints annotated) | 5 ported up to snapshot; @eyes auth blocked 3                                                                                                                                     |
+| Fixme stubs — @eyes / auth only                | 6 (curriculum_reference ×2, level_group_multi_page_dots ×1, applab_submittable ×1, gamelab_submittable ×1, curriculum_catalog_assign_unassign ×1)                                 |
+| Skipped — auth required                        | ~35                                                                                                                                                                               |
+| Skipped — @skip / @eyes_mobile                 | 3                                                                                                                                                                                 |
+| Skipped — cookie/session manipulation          | 2                                                                                                                                                                                 |
+| Out of scope — non-CSF labs                    | 5 labs, ~15 feature files (spritelab + craft hero_logged_out now ported)                                                                                                          |
+| Out of scope — lab2 cross-origin               | WebLab full tests (Bramble cross-origin iframe); weblab/too_young ported                                                                                                          |
+| Out of scope — other areas                     | javalab (3/10 ported; 7 @no_ci + @eyes), weblab2, pd/pl, xteam, levelbuilder, global_edition, policy_compliance                                                                   |
+| Out of scope — standalone tools                | 0 (netsim/pixelation/pkc/studio/sharepage/modal-fn-editor/mix-move-ai all ported)                                                                                                 |
+| Porteable, not yet done                        | 0                                                                                                                                                                                 |
 
 ---
 
@@ -104,6 +104,9 @@ As of: 2026-05-09 (updated 2026-05-09 — pass 18: tt auth wave 1: feedback + le
 | `teacher_tools/feedback.feature`                               | `tests/legacy/teacher-tools/recommended-blocks-feedback.spec.ts`   | C+F+W    | @as_student; recommended bee blocks feedback + hint-request cycle                                                |
 | `teacher_tools/level_summary.feature` (non-@eyes)              | `tests/legacy/teacher-tools/level-summary.spec.ts`                 | C+F+W    | check for understanding: submit response → teacher show/hide names → hide response                               |
 | `teacher_tools/instructions/feedback_tab.feature`              | `tests/legacy/teacher-tools/feedback-tab.spec.ts`                  | C+F+W    | student sees Rubric tab (no submit); teacher submits rubric feedback; student sees result                        |
+| `teacher_tools/pairing.feature`                                | `tests/legacy/teacher-tools/pairing.spec.ts`                       | C+F+W    | @no_mobile; 3 scenarios: pair-submit both complete, pair-attempt both attempted, pairing persists on reload      |
+| `teacher_tools/version_history.feature`                        | `tests/legacy/teacher-tools/version-history.spec.ts`               | C+F+W    | @no_mobile; 2 scenarios: teacher sees student versions without Restore; teacher sees own versions with Restore   |
+| `teacher_tools/assign_modular_course.feature`                  | `tests/legacy/teacher-tools/assign-modular-course.spec.ts`         | C+F+W    | @no_mobile; 2 scenarios: assign from unit page, assign from course page; API-poll post-toast for PATCH gate      |
 
 ### teacher_tools/level_types
 
@@ -374,46 +377,46 @@ All require teacher + section setup, multi-session state, @eyes visual
 comparison, or @properties_encryption_key; none have anonymous-accessible
 scenarios worth porting independently.
 
-| Feature file                                                                         | Blocker                                                   |
-| ------------------------------------------------------------------------------------ | --------------------------------------------------------- |
-| `teacher_tools/assign_modular_course.feature`                                        | teacher + section auth                                    |
-| `teacher_tools/below_visualization.feature`                                          | @eyes only                                                |
-| `teacher_tools/cached_level_page.feature`                                            | teacher + section setup                                   |
-| `teacher_tools/certificates/*.feature`                                               | auth + email delivery                                     |
-| `teacher_tools/encrypted_level.feature`                                              | @properties_encryption_key                                |
-| `teacher_tools/feedback.feature`                                                     | ~~auth~~ → **ported** (no auth needed; `@as_student`)     |
-| `teacher_tools/hidden_scripts_eyes.feature`                                          | @eyes                                                     |
-| `teacher_tools/hidden_stages_eyes.feature`                                           | @eyes                                                     |
-| `teacher_tools/hour_of_code/hoc_batch_certificates.feature`                          | teacher + section auth                                    |
-| `teacher_tools/instructions/feedback_tab.feature`                                    | ~~@as_taught_student~~ → **ported** C+F+W                 |
-| `teacher_tools/instructions/feedback_tab_eyes.feature`                               | @eyes                                                     |
-| `teacher_tools/instructions/csp_top_instructions_eyes.feature`                       | @eyes                                                     |
-| `teacher_tools/instructions/hoc_top_instructions.feature`                            | @as_student                                               |
-| `teacher_tools/instructions/teacher_only_markdown.feature`                           | @as_taught_student                                        |
-| `teacher_tools/instructions/top_instructions.feature`                                | @as_student                                               |
-| `teacher_tools/instructor_in_training/*.feature`                                     | verified/unverified teacher auth states                   |
-| `teacher_tools/lesson_lock.feature`                                                  | teacher + section + lock flow                             |
-| `teacher_tools/lesson_lock_retake.feature`                                           | same                                                      |
-| `teacher_tools/lesson_show.feature`                                                  | @as_teacher                                               |
-| `teacher_tools/level_completion.feature`                                             | teacher view of student completion                        |
-| `teacher_tools/level_summary.feature`                                                | ~~@as_taught_student~~ → **ported** (non-@eyes scenario)  |
-| `teacher_tools/level_video.feature`                                                  | @as_taught_student                                        |
-| `teacher_tools/modular_courses.feature`                                              | teacher auth + modular course state                       |
-| `teacher_tools/pairing.feature`                                                      | two-session pairing flow                                  |
-| `teacher_tools/plc_course_unit_navigation.feature`                                   | PLC auth                                                  |
-| `teacher_tools/pl_sections.feature`                                                  | PL auth                                                   |
-| `teacher_tools/progress.feature`                                                     | teacher view of student progress (auth)                   |
-| `teacher_tools/projects/*.feature` (all except gallery_signed_out + project_sharing) | auth or @eyes                                             |
-| `teacher_tools/rubrics/*.feature`                                                    | auth (teacher + student code submission)                  |
-| `teacher_tools/student_not_started_level_warning.feature`                            | @as_taught_student                                        |
-| `teacher_tools/submittable_eyes.feature`                                             | @eyes                                                     |
-| `teacher_tools/teacher_dashboard/*.feature` (all except demo_section_card)           | auth, @eyes, section data                                 |
-| `teacher_tools/teacher_homepage.feature`                                             | teacher auth                                              |
-| `teacher_tools/teacher_lesson_plan.feature`                                          | teacher auth                                              |
-| `teacher_tools/teacher_student_toggle.feature`                                       | @as_taught_student                                        |
-| `teacher_tools/version_history.feature`                                              | @as_student + project version state                       |
-| `teacher_tools/ai_diff/*.feature`                                                    | student auth (AI differentiation feature)                 |
-| `teacher_tools/levelbuilder/*.feature`                                               | levelbuilder auth; curriculum-authoring tool out of scope |
+| Feature file                                                                         | Blocker                                                               |
+| ------------------------------------------------------------------------------------ | --------------------------------------------------------------------- |
+| `teacher_tools/assign_modular_course.feature`                                        | ~~teacher + section auth~~ → **ported** C+F+W @no_mobile              |
+| `teacher_tools/below_visualization.feature`                                          | @eyes only                                                            |
+| `teacher_tools/cached_level_page.feature`                                            | teacher + section setup                                               |
+| `teacher_tools/certificates/*.feature`                                               | auth + email delivery                                                 |
+| `teacher_tools/encrypted_level.feature`                                              | @properties_encryption_key                                            |
+| `teacher_tools/feedback.feature`                                                     | ~~auth~~ → **ported** (no auth needed; `@as_student`)                 |
+| `teacher_tools/hidden_scripts_eyes.feature`                                          | @eyes                                                                 |
+| `teacher_tools/hidden_stages_eyes.feature`                                           | @eyes                                                                 |
+| `teacher_tools/hour_of_code/hoc_batch_certificates.feature`                          | teacher + section auth                                                |
+| `teacher_tools/instructions/feedback_tab.feature`                                    | ~~@as_taught_student~~ → **ported** C+F+W                             |
+| `teacher_tools/instructions/feedback_tab_eyes.feature`                               | @eyes                                                                 |
+| `teacher_tools/instructions/csp_top_instructions_eyes.feature`                       | @eyes                                                                 |
+| `teacher_tools/instructions/hoc_top_instructions.feature`                            | @as_student                                                           |
+| `teacher_tools/instructions/teacher_only_markdown.feature`                           | @as_taught_student                                                    |
+| `teacher_tools/instructions/top_instructions.feature`                                | @as_student                                                           |
+| `teacher_tools/instructor_in_training/*.feature`                                     | verified/unverified teacher auth states                               |
+| `teacher_tools/lesson_lock.feature`                                                  | teacher + section + lock flow                                         |
+| `teacher_tools/lesson_lock_retake.feature`                                           | same                                                                  |
+| `teacher_tools/lesson_show.feature`                                                  | @as_teacher                                                           |
+| `teacher_tools/level_completion.feature`                                             | teacher view of student completion                                    |
+| `teacher_tools/level_summary.feature`                                                | ~~@as_taught_student~~ → **ported** (non-@eyes scenario)              |
+| `teacher_tools/level_video.feature`                                                  | @as_taught_student                                                    |
+| `teacher_tools/modular_courses.feature`                                              | teacher auth + modular course state                                   |
+| `teacher_tools/pairing.feature`                                                      | ~~two-session pairing flow~~ → **ported** C+F+W @no_mobile            |
+| `teacher_tools/plc_course_unit_navigation.feature`                                   | PLC auth                                                              |
+| `teacher_tools/pl_sections.feature`                                                  | PL auth                                                               |
+| `teacher_tools/progress.feature`                                                     | teacher view of student progress (auth)                               |
+| `teacher_tools/projects/*.feature` (all except gallery_signed_out + project_sharing) | auth or @eyes                                                         |
+| `teacher_tools/rubrics/*.feature`                                                    | auth (teacher + student code submission)                              |
+| `teacher_tools/student_not_started_level_warning.feature`                            | @as_taught_student                                                    |
+| `teacher_tools/submittable_eyes.feature`                                             | @eyes                                                                 |
+| `teacher_tools/teacher_dashboard/*.feature` (all except demo_section_card)           | auth, @eyes, section data                                             |
+| `teacher_tools/teacher_homepage.feature`                                             | teacher auth                                                          |
+| `teacher_tools/teacher_lesson_plan.feature`                                          | teacher auth                                                          |
+| `teacher_tools/teacher_student_toggle.feature`                                       | @as_taught_student                                                    |
+| `teacher_tools/version_history.feature`                                              | ~~@as_student + project version state~~ → **ported** C+F+W @no_mobile |
+| `teacher_tools/ai_diff/*.feature`                                                    | student auth (AI differentiation feature)                             |
+| `teacher_tools/levelbuilder/*.feature`                                               | levelbuilder auth; curriculum-authoring tool out of scope             |
 
 ---
 

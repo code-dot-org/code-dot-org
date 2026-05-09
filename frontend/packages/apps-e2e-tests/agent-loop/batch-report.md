@@ -658,3 +658,47 @@ helpers to capture student credentials for the final sign-in step.
 ### Fixme decisions
 
 None — all ported scenarios ran cleanly with no fixme stubs.
+
+---
+
+## Batch N+17 — teacher_tools auth wave 2 (pairing, version_history, assign_modular_course)
+
+**Feature files:** `teacher_tools/pairing.feature`, `teacher_tools/version_history.feature`, `teacher_tools/assign_modular_course.feature`  
+**Playwright specs:** `tests/legacy/teacher-tools/{pairing,version-history,assign-modular-course}.spec.ts`  
+**Result:** 7/7 C+F+W (all @no_mobile)
+
+### Patterns resolved
+
+**`pairing.feature` — single-session multi-user flow:** the Cucumber feature uses three
+separate `@javascript` sessions (teacher, Thing_One, Thing_Two). Playwright runs all
+accounts sequentially in a single page: createTeacher → createSection →
+createStudent (Thing_One) → joinSection → createStudent (Thing_Two) → joinSection,
+then drives Thing_Two for the pairing + submit/run step, then signOut + signIn as
+Thing_One to verify propagated progress. `waitForTimeout(5_000)` after `.addPartners`
+click allows the server-side pairing registration to complete — matches Cucumber's
+implicit wait.
+
+**`version_history.feature` — teacher-panel overlay blocking clicks:** the teacher panel
+renders as `position: fixed` over the level; `document.querySelector('#versions-header')?.click()`
+via `page.evaluate()` bypasses hit-testing. `dismissTeacherPanel()` helper guards the
+`.show-handle .fa-chevron-left` → `.hide-handle .fa-chevron-right` transition.
+
+**`assign_modular_course.feature` — toast fires before PATCH completes:** `reassignConfirm()`
+in `MultipleSectionsAssigner` fires synchronously, closing the dialog and showing the
+"Success! Assignment updated!" toast, before the jQuery AJAX PATCH to
+`/dashboardapi/sections/:id` resolves. `waitForResponse` with
+`/\/dashboardapi\/sections\/\d+$/` timed out on the unit-overview page (test 1)
+because the predicate silently returned false — the URL carries a trailing query
+string (`?section_id=…`) that the `$` anchor rejects, and `resp.request()` can throw.
+Fix: replace `waitForResponse` with an `expect(async () => { … }).toPass()` loop that
+GETs `/dashboardapi/sections` and asserts `course_id` non-null for Section 1.
+This is race-condition-immune and confirms server-side persistence rather than
+intercepting the in-flight request.
+
+**`createNamedSections` — CSRF extraction:** uses `page.locator('meta[name="csrf-token"]').getAttribute('content')`
+after `page.goto('/home')` to obtain a valid session-bound CSRF token before
+posting to `/api/test/create_student_section_with_name`.
+
+### Fixme decisions
+
+None — all 7 scenarios ran cleanly with no fixme stubs.
