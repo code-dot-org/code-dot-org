@@ -234,6 +234,24 @@ All pass C+F+W (ai_tutor @no_ci; excluded from CI by grepInvert).
 
 ---
 
+## Batch N+3 — Auth-unblocking pass 4 (App Lab scenarios2 + embed)
+
+**Features ported (passing):**
+
+- `applab/scenarios2.feature` (scenarios 1–2) → `tests/applab/applab.spec.ts` (change event on text input blur+enter; change event on text area)
+- `applab/embed.feature` → `tests/applab/applab.spec.ts` (embed player runs + "How it Works" new tab; hide-source hides that link)
+
+All pass C+F+W.
+
+**Key techniques:**
+
+- Embed URL extraction: open share dialog → expand advanced options → click Embed tab → `textarea.inputValue()` yields iframe HTML → parse `src=` → strip protocol+host for baseURL-relative path.
+- Multi-tab detection: `page.context().waitForEvent('page')` (not `page.waitForEvent('popup')`) for `<a target="_blank">` links.
+- Debug console output format: App Lab wraps `console.log` strings in double-quotes in `#debug-output` (`"text"` not `text`).
+- Contenteditable TEXT_AREA change event: `locator.focus()` → `evaluate(el => el.textContent = 'abc')` → `evaluate(el => el.blur())` replicates jQuery `.text()` + blur contract that App Lab's change-event handler compares.
+
+---
+
 <!-- Agent: append new entries here as fixme/skip placeholders are created.
 
 Format:

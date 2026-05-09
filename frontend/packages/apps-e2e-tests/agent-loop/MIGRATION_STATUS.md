@@ -2,7 +2,7 @@
 
 Source: `dashboard/test/ui/features/` (all sub-directories)  
 Target: `frontend/packages/apps-e2e-tests/tests/`  
-As of: 2026-05-08 (updated 2026-05-08 — auth-unblocking pass 4: applab/scenarios2 scenarios 1-2; asset upload fixme)
+As of: 2026-05-08 (updated 2026-05-08 — auth-unblocking pass 5: applab/embed.feature — embed player + hide-source)
 
 ---
 
@@ -10,7 +10,7 @@ As of: 2026-05-08 (updated 2026-05-08 — auth-unblocking pass 4: applab/scenari
 
 | Status                                         | Count                                                                                                                                             |
 | ---------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Ported                                         | 107 feature files (C+F for pythonlab + mixmoveai; Chromium-only for maker; @no_ci for ai_tutor; C+F+W for rest)                                   |
+| Ported                                         | 108 feature files (C+F for pythonlab + mixmoveai; Chromium-only for maker; @no_ci for ai_tutor; C+F+W for rest)                                   |
 | Fixme stubs — test infra                       | 1 (applab asset upload — needs test fixture file)                                                                                                 |
 | Covered by ported (rolled in)                  | 5 (maze2, jigsaw2, multi2/3/4 rolled into existing specs)                                                                                         |
 | Partial — @eyes (visual checkpoints annotated) | 5 ported up to snapshot; @eyes auth blocked 3                                                                                                     |
@@ -58,6 +58,7 @@ As of: 2026-05-08 (updated 2026-05-08 — auth-unblocking pass 4: applab/scenari
 | `applab/sharing_from_script_level.feature`                     | `tests/applab/applab.spec.ts`                                      | C+F+W    | share URL must point to /projects/applab/                                              |
 | `applab/scenarios.feature` (all 3 scenarios)                   | `tests/applab/applab.spec.ts`                                      | C+F+W    | free-project icon + setText/getText + textarea newline preservation                    |
 | `applab/scenarios2.feature` (scenarios 1-2)                    | `tests/applab/applab.spec.ts`                                      | C+F+W    | change event on blur + enter (text input + text area); asset upload → test.fixme       |
+| `applab/embed.feature`                                         | `tests/applab/applab.spec.ts`                                      | C+F+W    | embed player play + "How it Works" new tab; hide-source hides that link                |
 | `applab/scenarios3.feature`                                    | `tests/applab/applab.spec.ts`                                      | C+F+W    | HTTP image proxy + clear-puzzle restore                                                |
 | `applab/html_sanitization.feature`                             | `tests/applab/applab.spec.ts`                                      | C+F+W    | design elements maintain correct parent-child DOM hierarchy                            |
 | `code_tools/pythonlab/pythonlab_run.feature`                   | `tests/lab2/pythonlab/pythonlab.spec.ts`                           | C+F      | student auth; progress bubble CSS checks                                               |
