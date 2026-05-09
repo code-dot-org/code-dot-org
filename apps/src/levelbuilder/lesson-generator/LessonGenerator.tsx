@@ -334,6 +334,7 @@ const LessonGenerator: React.FC<LessonGeneratorProps> = ({lesson}) => {
             generatedOutput = {panels};
           } else if (spec.labType === 'weblab2') {
             const result = await generateWeblab2Level(
+              levelName,
               spec.description.trim(),
               lessonContext,
               precedingLevelsText

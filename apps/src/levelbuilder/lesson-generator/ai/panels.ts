@@ -77,6 +77,7 @@ interface PanelPlan {
 // give the model the outline that frames the whole lesson, so the panels
 // for this level stay coherent with the surrounding levels.
 async function planPanels(
+  levelName: string,
   description: string,
   lessonContext?: string,
   precedingLevels?: string
@@ -113,13 +114,14 @@ async function planPanels(
     `Description: ${description}`,
   ].join('\n');
 
-  logPrompt(PROMPT_TAGS.PANELS_PLAN, prompt);
+  const planContext = {level: levelName, subtask: 'plan'};
+  logPrompt(PROMPT_TAGS.PANELS_PLAN, prompt, planContext);
   const response = await generateText({
     model: getTextModel(),
     prompt,
     output: panelsPlanSchema,
   });
-  logResponse(PROMPT_TAGS.PANELS_PLAN, response.output);
+  logResponse(PROMPT_TAGS.PANELS_PLAN, response.output, planContext);
   const plan = (response.output as {panels: PanelPlan[]}).panels;
   if (!plan?.length) {
     throw new Error('Model returned no panels');
@@ -164,7 +166,11 @@ async function generateAndUploadPanelImage(
     'Subject:',
     imagePrompt,
   ].join('\n');
-  logPrompt(PROMPT_TAGS.PANELS_IMAGE, fullPrompt);
+  const imageContext = {
+    level: levelName,
+    subtask: `panel-${panelIndex + 1}`,
+  };
+  logPrompt(PROMPT_TAGS.PANELS_IMAGE, fullPrompt, imageContext);
   const response = await generateText({
     model: getImageModel(),
     prompt: fullPrompt,
@@ -175,7 +181,8 @@ async function generateAndUploadPanelImage(
     (response.files || []).map(f => ({
       mediaType: f.mediaType,
       bytes: f.uint8Array.length,
-    }))
+    })),
+    imageContext
   );
   const imageFile = (response.files || []).find(f =>
     f.mediaType.startsWith('image/')
@@ -215,7 +222,12 @@ export async function generatePanelsForLevel(
   lessonContext?: string,
   precedingLevels?: string
 ): Promise<Panel[]> {
-  const plan = await planPanels(description, lessonContext, precedingLevels);
+  const plan = await planPanels(
+    levelName,
+    description,
+    lessonContext,
+    precedingLevels
+  );
   callbacks.onPlanned?.(plan.length);
 
   const panels: Panel[] = [];

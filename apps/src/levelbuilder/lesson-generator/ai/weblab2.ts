@@ -52,6 +52,7 @@ export interface Weblab2Generation {
 // level, so the starter code and instructions stay coherent with
 // surrounding panels.
 export async function generateWeblab2Level(
+  levelName: string,
   description: string,
   lessonContext?: string,
   precedingLevels?: string
@@ -93,7 +94,8 @@ export async function generateWeblab2Level(
     `Description: ${description}`,
   ].join('\n');
 
-  logPrompt(PROMPT_TAGS.WEBLAB2_PLAN, prompt);
+  const planContext = {level: levelName, subtask: 'plan'};
+  logPrompt(PROMPT_TAGS.WEBLAB2_PLAN, prompt, planContext);
   const response = await generateText({
     model: getTextModel(),
     prompt,
@@ -103,7 +105,7 @@ export async function generateWeblab2Level(
     longInstructions: string;
     files: {name: string; contents: string}[];
   };
-  logResponse(PROMPT_TAGS.WEBLAB2_PLAN, plan);
+  logResponse(PROMPT_TAGS.WEBLAB2_PLAN, plan, planContext);
   if (!plan.files?.length) {
     throw new Error('Model returned no files');
   }
