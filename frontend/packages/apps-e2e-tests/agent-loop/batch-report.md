@@ -252,6 +252,24 @@ All pass C+F+W.
 
 ---
 
+## Batch N+4 — Auth-unblocking pass 5 (custom_blocks + droplet)
+
+**Features ported (passing):**
+
+- `custom_blocks.feature` → `tests/legacy/custom-blocks/custom-blocks.spec.ts` (Poetry + Dancelab block pools)
+- `droplet.feature` → `tests/legacy/droplet/droplet.spec.ts` (ACE autocomplete navigation + param completion)
+
+All pass C+F+W.
+
+**Key techniques:**
+
+- Blockly pool check: `waitForFunction(() => window.Blockly?.Workspace.getAll().length > 0)` then evaluate `getAllBlocks().some(b => !!b.unknownBlock)` across all workspaces.
+- ACE autocomplete: click `.ace_editor` to focus, then `page.keyboard.type()` + `page.keyboard.press('ArrowDown')` + `page.keyboard.press('Enter')`.
+- Critical ACE timing: `waitForFunction` that waits for `.ace_autocomplete` to appear (debounce fired), then press ArrowDown × N + Enter **consecutively with no assertions in between**. Any Playwright DOM query between key presses (tooltip checks, `page.evaluate()`) can steal focus in headless Chromium, closing the autocomplete popup. Firefox/WebKit do not exhibit this behaviour.
+- `getDropletContents()` added to AppLab POM: `__TestInterface.getDropletContents()`.
+
+---
+
 <!-- Agent: append new entries here as fixme/skip placeholders are created.
 
 Format:
