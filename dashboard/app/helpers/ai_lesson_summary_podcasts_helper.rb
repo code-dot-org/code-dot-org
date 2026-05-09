@@ -4,10 +4,15 @@ module AiLessonSummaryPodcastsHelper
   PODCAST_FOLDER = 'podcasts/'
 
   def self.create_and_save_to_s3(lesson_id, user_id)
-    script = AiLessonSummariesHelper.retrieve_and_save_ai_lesson_summary(lesson_id, user_id, true)[:script]
+    credits_available = client.available_credits
+    lesson_summary_data = AiLessonSummariesHelper.retrieve_and_save_ai_lesson_summary(lesson_id, user_id, true, credits_available)
+    script = nil
+    if lesson_summary_data && lesson_summary_data[:script]
+      script = lesson_summary_data[:script]
+    end
     filename = PODCAST_FOLDER + 'lesson_' + lesson_id.to_s + '_podcast.mp3'
 
-    if !AWS::S3.exists_in_bucket(PODCAST_BUCKET, filename) && client.available_credits
+    if credits_available && !AWS::S3.exists_in_bucket(PODCAST_BUCKET, filename)
       podcast = get_podcast_from_script(script)
       AWS::S3.upload_to_bucket(PODCAST_BUCKET, filename, podcast, no_random: true)
     end
@@ -60,8 +65,11 @@ module AiLessonSummaryPodcastsHelper
       )
 
       subscription_info = JSON.parse(user_response.body)
-
-      subscription_info['character_count'] < subscription_info['character_limit'] * 0.95
+      if subscription_info && subscription_info['character_limit']
+        return subscription_info['character_count'] < subscription_info['character_limit'] * 0.95
+      else
+        return false
+      end
     end
 
     def request_podcast(prompt)
