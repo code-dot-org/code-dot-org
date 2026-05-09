@@ -41,7 +41,7 @@ export function logPrompt(
   prompt: string,
   context?: LogContext
 ): void {
-  console.groupCollapsed(`[${tag}]${formatContext(context)} prompt sent`);
+  console.groupCollapsed(`[${tag}]${formatContext(context)} :: prompt sent`);
   console.log(prompt);
   console.groupEnd();
 }
@@ -51,7 +51,9 @@ export function logResponse(
   response: unknown,
   context?: LogContext
 ): void {
-  console.groupCollapsed(`[${tag}]${formatContext(context)} response received`);
+  console.groupCollapsed(
+    `[${tag}]${formatContext(context)} :: response received`
+  );
   console.log(response);
   console.groupEnd();
 }
