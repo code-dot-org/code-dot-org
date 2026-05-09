@@ -111,14 +111,15 @@ test.describe('Curriculum Catalog — assign and unassign', () => {
    * Section 1 and UI Test CSP to Section 2, verifies on /home, then
    * unassigns both and verifies again.
    */
+  // 6+ iterations exhausted. Test passes in isolation (12/12) but is
+  // sensitive to parallel server load: four PATCH /dashboardapi/sections/:id
+  // calls interleave with page navigations; waitForResponse timing races
+  // under heavy parallelism cause the first assignment PATCH to time out.
+  // Root cause: no reliable completion signal for unassignment (no success
+  // message), and the assignment success message from Section 1 can
+  // falsely satisfy the Section 2 assertion.
   test.fixme(
     'teacher assigns and unassigns courses to named sections',
-    // 6+ iterations exhausted. Test passes in isolation (12/12) but is
-    // sensitive to parallel server load: four PATCH /dashboardapi/sections/:id
-    // calls interleave with page navigations; waitForResponse timing races
-    // under heavy parallelism cause the first assignment PATCH to time out.
-    // Root cause: no reliable completion signal for unassignment (no success
-    // message), and the assignment success message from Section 1 can
-    // falsely satisfy the Section 2 assertion.
+    async () => {},
   );
 });

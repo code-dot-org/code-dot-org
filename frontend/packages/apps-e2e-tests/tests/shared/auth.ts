@@ -433,6 +433,32 @@ export async function createSectionWithCourse(
 }
 
 /**
+ * Creates a teacher with authorized-teacher access and signs in.
+ * Mirrors `I create a teacher named "..." + I give user "..." authorized teacher permission`
+ * from account_steps.rb: create_user(teacher) + POST /api/test/authorized_teacher_access.
+ */
+export async function createAuthorizedTeacher(page: Page): Promise<void> {
+  await createTeacher(page);
+
+  const csrf = await page
+    .locator('meta[name="csrf-token"]')
+    .getAttribute('content');
+
+  const resp = await page.request.post('/api/test/authorized_teacher_access', {
+    headers: {
+      'Content-Type': 'application/json',
+      'X-CSRF-Token': csrf ?? '',
+    },
+  });
+
+  if (!resp.ok()) {
+    throw new Error(
+      `authorized_teacher_access failed: ${resp.status()} — ${await resp.text()}`,
+    );
+  }
+}
+
+/**
  * Creates a levelbuilder account and signs in.
  * Mirrors `I create a levelbuilder named "..."` from levelbuilder_steps.rb:
  *   I create a teacher named "..." + I get levelbuilder access

@@ -211,6 +211,29 @@ All pass C+F+W (maker Chromium-only per @chrome tag).
 
 ---
 
+## Batch N+2 — Auth-unblocking pass 3 (App Lab + Game Lab loading + AI chat + AI tutor)
+
+**Features ported (passing):**
+
+- `applab/scenarios.feature` (scenarios 2–3) → `tests/applab/applab.spec.ts` (setText/getText + textarea newline preservation)
+- `applab/scenarios3.feature` → `tests/applab/applab.spec.ts` (HTTP image proxy + clear-puzzle reset)
+- `applab/html_sanitization.feature` → `tests/applab/applab.spec.ts` (design-mode DOM hierarchy)
+- `gamelab/loading_animations.feature` → `tests/legacy/activities/gamelab/gamelab.spec.ts` (blank + bear animations; Piskel iframe pen)
+- `aichat/chat.feature` → `tests/lab2/aichat/aichat.spec.ts` (bot reply color; system prompt save; publish model)
+- `ai_tutor/chat.feature` → `tests/lab2/ai-tutor/ai-tutor.spec.ts` (@no_ci; App Lab + Python Lab + Weblab2)
+
+All pass C+F+W (ai_tutor @no_ci; excluded from CI by grepInvert).
+
+**Key techniques:**
+
+- Droplet ACE editor injection: `window.__TestInterface.getDroplet().aceEditor.onTextInput(c)` after `navigateFileEnd()`.
+- Design-mode element drag: jQuery `mousedown` on `[data-element-type='X']` + `mousemove`/`mouseup` on `#visualization` offset.
+- React controlled-input clearing: `Object.getOwnPropertyDescriptor(HTMLInputElement.prototype, 'value')?.set` + `dispatchEvent(new Event('input', {bubbles:true}))`.
+- Game Lab animation picker: JS `.click()` on `#newListItem` → `.uitest-animation-picker-list>div>div>div>button[0]` (blank) or `img[src*='/category_animals.png'][1]` + bear thumbnail + `.ui-test-selector-done-button`.
+- AI chat teacher panel dismiss: `.teacher-panel > .hide-handle > .fa-chevron-right`, then wait for `.fa-chevron-left`.
+
+---
+
 <!-- Agent: append new entries here as fixme/skip placeholders are created.
 
 Format:

@@ -1,6 +1,11 @@
 import {test as base, type Page} from '@playwright/test';
 
-import {createLevelbuilder, createStudent, createTeacher} from './auth';
+import {
+  createAuthorizedTeacher,
+  createLevelbuilder,
+  createStudent,
+  createTeacher,
+} from './auth';
 
 /**
  * Option controlling the age of the student account created by studentPage.
@@ -17,6 +22,8 @@ interface AuthFixtures {
   teacherPage: Page;
   /** Authenticated levelbuilder page (teacher + levelbuilder access). */
   levelbuilderPage: Page;
+  /** Authenticated teacher page with authorized-teacher permission. */
+  authorizedTeacherPage: Page;
 }
 
 export const test = base.extend<StudentOptions & AuthFixtures>({
@@ -34,6 +41,11 @@ export const test = base.extend<StudentOptions & AuthFixtures>({
 
   levelbuilderPage: async ({page}, use) => {
     await createLevelbuilder(page);
+    await use(page);
+  },
+
+  authorizedTeacherPage: async ({page}, use) => {
+    await createAuthorizedTeacher(page);
     await use(page);
   },
 });

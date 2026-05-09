@@ -4,12 +4,16 @@ import {expect, test} from '../shared/fixtures';
 import {AppLab} from './AppLab';
 
 /**
- * App Lab smoke tests — data storage, design mode, and data browser.
+ * App Lab smoke tests — data storage, design mode, data browser, code entry,
+ * design element drag, and HTML sanitization.
  *
  * Sources:
  *   dashboard/test/ui/features/star_labs/applab/data_blocks.feature
  *   dashboard/test/ui/features/star_labs/applab/clipping.feature
  *   dashboard/test/ui/features/star_labs/applab/level_options.feature (scenario 1)
+ *   dashboard/test/ui/features/star_labs/applab/scenarios.feature (scenarios 2-3)
+ *   dashboard/test/ui/features/star_labs/applab/scenarios3.feature
+ *   dashboard/test/ui/features/star_labs/applab/html_sanitization.feature
  *
  * All scenarios run as an authenticated student (@as_student).
  * Complex Droplet-manipulation scenarios (code entry, drag-and-drop) and
@@ -209,6 +213,216 @@ test.describe('App Lab — submittable level', () => {
       await expect(page.locator('#submitButton')).toBeVisible({
         timeout: 30_000,
       });
+    },
+  );
+});
+
+test.describe('App Lab — button text read/write', () => {
+  /**
+   * Source: scenarios.feature — "Can read and set button text"
+   * @as_student @no_mobile
+   *
+   * Creates two buttons in code mode and uses setText/getText to copy one
+   * label to the other; verifies both DOM buttons show "Jelly".
+   */
+  test(
+    'setText and getText transfer button labels correctly',
+    {tag: '@no_mobile'},
+    async ({studentPage}) => {
+      await studentPage.goto('/projects/applab/new');
+      const applab = new AppLab(studentPage);
+      await applab.waitForReady();
+
+      await applab.ensureTextMode();
+      await applab.appendCode("button('testButton1', 'Peanut Butter');\n");
+      await applab.appendCode("button('testButton2', 'Jelly');\n");
+      await applab.appendCode(
+        "setText('testButton1', getText('testButton2'));\n",
+      );
+      await applab.run();
+
+      await studentPage
+        .locator('#divApplab > .screen > button#testButton2')
+        .waitFor({state: 'visible', timeout: 15_000});
+      await expect(studentPage.locator('#testButton1')).toHaveText('Jelly');
+      await expect(studentPage.locator('#testButton2')).toHaveText('Jelly');
+    },
+  );
+});
+
+test.describe('App Lab — textarea newline preservation', () => {
+  /**
+   * Source: scenarios.feature — "Text is preserved when reading and setting newlines in textarea"
+   * @as_student @no_mobile
+   *
+   * Drags a TEXT_AREA into design mode, runs getText/setText 100 times with
+   * newline-containing text, and verifies the resulting innerHTML structure.
+   */
+  test(
+    'getText/setText preserves newlines in textarea HTML',
+    {tag: '@no_mobile'},
+    async ({studentPage}) => {
+      await studentPage.goto('/projects/applab/new');
+      const applab = new AppLab(studentPage);
+      await applab.waitForReady();
+
+      await applab.switchToDesignMode();
+      await applab.dragElementToApp('TEXT_AREA');
+      await applab.switchToCodeMode();
+
+      await applab.ensureTextMode();
+      await applab.appendCode(
+        "setText('text_area1', 'Line 1\\nLine 2\\n\\nLine3');\n",
+      );
+      await applab.appendCode(
+        "for (var i = 0; i < 100; i++) { setText('text_area1', getText('text_area1')); }",
+      );
+      await applab.run();
+
+      await studentPage
+        .locator('#divApplab > .screen > div#text_area1')
+        .waitFor({state: 'visible', timeout: 15_000});
+      const html = await studentPage.locator('div#text_area1').innerHTML();
+      expect(html).toBe(
+        'Line 1<div>Line 2</div><div><br></div><div>Line3</div>',
+      );
+    },
+  );
+});
+
+test.describe('App Lab — HTTP image proxy', () => {
+  /**
+   * Source: scenarios3.feature — "App Lab Http Image"
+   * @as_student @no_mobile
+   *
+   * An image created with an HTTP src must be proxied through the
+   * studio.code.org/media endpoint to avoid mixed-content warnings.
+   */
+  test(
+    'HTTP image src is rewritten through /media proxy endpoint',
+    {tag: '@no_mobile'},
+    async ({studentPage}) => {
+      await studentPage.goto('/projects/applab/new');
+      const applab = new AppLab(studentPage);
+      await applab.waitForReady();
+
+      await applab.ensureTextMode();
+      await applab.appendCode("image('test123', 'http://example.com')");
+      await applab.run();
+
+      const img = studentPage.locator('#divApplab > .screen > img#test123');
+      await img.waitFor({state: 'visible', timeout: 15_000});
+      expect(await img.getAttribute('src')).toBe(
+        '//studio.code.org/media?u=http%3A%2F%2Fexample.com',
+      );
+    },
+  );
+});
+
+test.describe('App Lab — clear puzzle restores initial HTML', () => {
+  /**
+   * Source: scenarios3.feature — "App Lab Clear Puzzle and Design Mode"
+   * @as_student @no_mobile
+   *
+   * A BUTTON dragged into design mode must disappear after resetting the
+   * project to its starting version via the Version History dialog.
+   */
+  test(
+    'dragged button is absent after reset to starting version',
+    {tag: '@no_mobile'},
+    async ({studentPage}) => {
+      await studentPage.goto('/projects/applab/new');
+      const applab = new AppLab(studentPage);
+      await applab.waitForReady();
+
+      await applab.switchToDesignMode();
+      await applab.dragElementToApp('BUTTON');
+      await applab.switchToCodeMode();
+
+      expect(await applab.getLevelHtml()).toMatch(/button/);
+
+      await applab.resetToStartingVersion();
+      await studentPage.locator('#divApplab').waitFor({state: 'visible'});
+
+      expect(await applab.getLevelHtml()).not.toMatch(/button/);
+    },
+  );
+});
+
+test.describe('App Lab — HTML sanitization', () => {
+  /**
+   * Source: html_sanitization.feature — "Elements do not become nested"
+   * @as_student @no_mobile
+   *
+   * Drags SCREEN ×2, LABEL, TEXT_AREA, BUTTON into design mode and verifies
+   * the resulting DOM hierarchy: screens are direct children of #divApplab,
+   * inner elements are children of the correct screen.  Regression guard
+   * against empty elements collapsing into each other.
+   */
+  test(
+    'design elements maintain correct parent-child DOM hierarchy',
+    {tag: '@no_mobile'},
+    async ({studentPage}) => {
+      await studentPage.goto('/projects/applab/new');
+      const applab = new AppLab(studentPage);
+      await applab.waitForReady();
+
+      await applab.switchToDesignMode();
+      await applab.dragElementToApp('SCREEN');
+      await applab.dragElementToApp('SCREEN');
+      await applab.dragElementToApp('LABEL');
+      // Clear label text so empty-element nesting is exercised (Cucumber comment:
+      // "labels are only in danger of collapsing when they are empty").
+      await studentPage.evaluate(() => {
+        const label = document.querySelector(
+          '#design_label1',
+        ) as HTMLInputElement | null;
+        if (label) {
+          const setter = Object.getOwnPropertyDescriptor(
+            window.HTMLInputElement.prototype,
+            'value',
+          )?.set;
+          if (setter) {
+            setter.call(label, '');
+            label.dispatchEvent(new Event('input', {bubbles: true}));
+          }
+        }
+      });
+      await applab.dragElementToApp('TEXT_AREA');
+      await applab.dragElementToApp('BUTTON');
+
+      await applab.run();
+      await studentPage
+        .locator('#screen2')
+        .waitFor({state: 'visible', timeout: 15_000});
+
+      // Empty elements must not have collapsed.
+      await expect(studentPage.locator('#label1')).toHaveText('');
+      await expect(studentPage.locator('#text_area1')).toHaveText('');
+
+      // Screens are direct children of #divApplab.
+      for (const id of ['screen2', 'screen3']) {
+        const isDirectChild = await studentPage.evaluate((elId: string) => {
+          const parent = document.querySelector('#divApplab');
+          const child = document.querySelector(`#${elId}`);
+          return child?.parentElement === parent;
+        }, id);
+        expect(isDirectChild, `#${id} must be direct child of #divApplab`).toBe(
+          true,
+        );
+      }
+
+      // Inner elements are direct children of screen3.
+      for (const id of ['text_area1', 'button1']) {
+        const isDirectChild = await studentPage.evaluate((elId: string) => {
+          const parent = document.querySelector('#screen3');
+          const child = document.querySelector(`#${elId}`);
+          return child?.parentElement === parent;
+        }, id);
+        expect(isDirectChild, `#${id} must be direct child of #screen3`).toBe(
+          true,
+        );
+      }
     },
   );
 });
