@@ -55,9 +55,10 @@ export async function createOrFindLevel(
   }
 }
 
-// GET /levels/by_name — exact-name lookup. Returns the level summary or
-// 404 if no level of the given type has that name. Avoids the LIKE
-// %name% scan that get_filtered_levels does.
+// GET /levels/by_name — exact-name lookup. Returns the level summary, or
+// an empty body if no level of the given type has that name (200, not
+// 404, since "doesn't exist yet" is an expected probe result). Avoids the
+// LIKE %name% scan that get_filtered_levels does.
 async function findLevelByName(
   type: LabType,
   name: string
@@ -66,15 +67,12 @@ async function findLevelByName(
     name,
     type: RAILS_TYPE_BY_LAB[type],
   });
-  try {
-    const {value} = await HttpClient.fetchJson<{id: string; name: string}>(
-      `/levels/by_name?${params}`
-    );
-    return value?.id ? {id: Number(value.id), name: value.name} : null;
-  } catch (err) {
-    if (isNetworkError(err) && err.response.status === 404) return null;
-    return null;
-  }
+  const {value} = await HttpClient.fetchJson<{id?: string; name?: string}>(
+    `/levels/by_name?${params}`
+  );
+  return value?.id && value.name
+    ? {id: Number(value.id), name: value.name}
+    : null;
 }
 
 // PATCH /levels/:id — write panel data into a Panels level. We post as

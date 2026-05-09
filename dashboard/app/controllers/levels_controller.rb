@@ -129,16 +129,14 @@ class LevelsController < ApplicationController
   # GET /levels/by_name?name=...&type=...
   # Exact-name lookup. The :name index on levels makes this O(1) and
   # avoids a LIKE %name% scan when the caller already has the full name.
-  # `:type` is optional and narrows by Rails STI class name.
+  # `:type` is optional and narrows by Rails STI class name. Returns 200
+  # with an empty body on miss rather than 404, since "not yet created" is
+  # an expected path for callers that probe before POSTing.
   def by_name
     scope = @levels
     scope = scope.where(type: params[:type]) if params[:type].present?
     level = scope.find_by(name: params[:name])
-    if level
-      render json: level.summarize_for_edit
-    else
-      render status: :not_found, json: {}
-    end
+    render json: level ? level.summarize_for_edit : {}
   end
 
   # GET /levels/1

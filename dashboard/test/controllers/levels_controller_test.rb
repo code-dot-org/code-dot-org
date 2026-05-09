@@ -140,15 +140,17 @@ class LevelsControllerTest < ActionController::TestCase
     assert_equal 'Weblab2', JSON.parse(@response.body)['type']
   end
 
-  test "by_name 404s on a name with no level" do
+  test "by_name returns 200 with empty body on a name with no level" do
     get :by_name, params: {name: 'no-such-level-exists'}
-    assert_response :not_found
+    assert_response :success
+    assert_equal({}, JSON.parse(@response.body))
   end
 
-  test "by_name 404s when a level exists but the type filter excludes it" do
+  test "by_name returns 200 with empty body when type filter excludes the match" do
     panels = create(:panels, name: 'panels-by-name')
     get :by_name, params: {name: panels.name, type: 'Weblab2'}
-    assert_response :not_found
+    assert_response :success
+    assert_equal({}, JSON.parse(@response.body))
   end
 
   test "by_name forbids non-levelbuilders" do
