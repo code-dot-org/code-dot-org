@@ -40,6 +40,16 @@ export interface CreateUserPayload {
   parent_email_preference_opt_in?: string;
   parent_email_preference_request_ip?: string;
   parent_email_preference_source?: string;
+  /** EU data-transfer-agreement fields; set to suppress the GDPR dialog. */
+  data_transfer_agreement_accepted?: boolean;
+  /** @see data_transfer_agreement_accepted */
+  data_transfer_agreement_request_ip?: string;
+  /** @see data_transfer_agreement_accepted */
+  data_transfer_agreement_kind?: string;
+  /** @see data_transfer_agreement_accepted */
+  data_transfer_agreement_source?: string;
+  /** ISO-8601 string companion to {@link data_transfer_agreement_accepted}. */
+  data_transfer_agreement_at?: string;
 }
 
 /**
@@ -573,4 +583,194 @@ export async function createLevelbuilder(page: Page): Promise<void> {
       `levelbuilder_access failed: ${response.status()} — ${await response.text()}`,
     );
   }
+}
+
+/**
+ * Grants levelbuilder access to the currently signed-in user without creating
+ * a new account.  Mirrors `I get levelbuilder access` from
+ * levelbuilder_steps.rb (POST /api/test/levelbuilder_access) when an existing
+ * teacher session is already active.
+ *
+ * @param page - Playwright page holding an active teacher session
+ */
+export async function getLevelbuilderAccess(page: Page): Promise<void> {
+  const csrf = await page
+    .locator('meta[name="csrf-token"]')
+    .getAttribute('content');
+  const resp = await page.request.post('/api/test/levelbuilder_access', {
+    headers: {
+      'Content-Type': 'application/json',
+      'X-CSRF-Token': csrf ?? '',
+    },
+  });
+  if (!resp.ok()) {
+    throw new Error(
+      `levelbuilder_access failed: ${resp.status()} — ${await resp.text()}`,
+    );
+  }
+}
+
+/**
+ * Adds the currently signed-in user to a named single-user experiment.
+ * Mirrors `I add the current user to "X" single user experiment` from
+ * experiment_steps.rb (POST /api/test/set_single_user_experiment).
+ *
+ * @param page - Playwright page holding an active session
+ * @param experimentName - name of the experiment to enroll in
+ */
+export async function addUserToExperiment(
+  page: Page,
+  experimentName: string,
+): Promise<void> {
+  const csrf = await page
+    .locator('meta[name="csrf-token"]')
+    .getAttribute('content');
+  const resp = await page.request.post('/api/test/set_single_user_experiment', {
+    headers: {
+      'Content-Type': 'application/json',
+      'X-CSRF-Token': csrf ?? '',
+    },
+    data: {experiment_name: experimentName},
+  });
+  if (!resp.ok()) {
+    throw new Error(
+      `set_single_user_experiment failed: ${resp.status()} — ${await resp.text()}`,
+    );
+  }
+}
+
+/**
+ * Options for {@link assignCourseAsStudent}.
+ *
+ * @property teacherEmail - email of the teacher whose section to create under.
+ *   If omitted the endpoint creates a throwaway teacher account.
+ * @property sectionName - name for the new section.  Defaults to "New Section".
+ */
+export interface AssignCourseAsStudentOptions {
+  teacherEmail?: string;
+  sectionName?: string;
+}
+
+/**
+ * Creates a section under the given teacher and enrolls the currently
+ * signed-in student in it.
+ * Mirrors `I am assigned to course "X" with teacher "Y" in a section named "Z"`
+ * from steps.rb (POST /api/test/assign_course_as_student).
+ *
+ * @param page - Playwright page holding an active student session
+ * @param courseName - slug of the course to assign (e.g. "allthethingscourse")
+ * @param options - optional teacher email and section name
+ */
+export async function assignCourseAsStudent(
+  page: Page,
+  courseName: string,
+  {teacherEmail, sectionName}: AssignCourseAsStudentOptions = {},
+): Promise<void> {
+  const csrf = await page
+    .locator('meta[name="csrf-token"]')
+    .getAttribute('content');
+  const resp = await page.request.post('/api/test/assign_course_as_student', {
+    headers: {
+      'Content-Type': 'application/json',
+      'X-CSRF-Token': csrf ?? '',
+    },
+    data: {
+      course_name: courseName,
+      ...(teacherEmail ? {teacher_email: teacherEmail} : {}),
+      ...(sectionName ? {section_name: sectionName} : {}),
+    },
+  });
+  if (!resp.ok()) {
+    throw new Error(
+      `assign_course_as_student failed: ${resp.status()} — ${await resp.text()}`,
+    );
+  }
+}
+
+/**
+ * Assigns the currently signed-in teacher's section (0-based index) to a
+ * course and unit via /api/test/assign_section_to_course_and_unit.
+ * Mirrors `I assign my section in row N to course "X" unit Y` from steps.rb.
+ *
+ * The controller indexes into teacher.sections via `section_position - 1`, so
+ * passing 0 here selects `sections[-1]` (last/only section in Ruby semantics).
+ * For teachers with exactly one section, 0 is always the right value.
+ *
+ * @param page - Playwright page holding an active teacher session
+ * @param sectionPosition - 0-based index (0 = first/only section)
+ * @param courseName - slug of the course to assign
+ * @param unitPosition - 1-based unit number within the course
+ */
+export async function assignSectionToCourseAndUnit(
+  page: Page,
+  sectionPosition: number,
+  courseName: string,
+  unitPosition: number,
+): Promise<void> {
+  const csrf = await page
+    .locator('meta[name="csrf-token"]')
+    .getAttribute('content');
+  const resp = await page.request.post(
+    '/api/test/assign_section_to_course_and_unit',
+    {
+      headers: {
+        'Content-Type': 'application/json',
+        'X-CSRF-Token': csrf ?? '',
+      },
+      data: {
+        section_position: sectionPosition,
+        course_name: courseName,
+        unit_position: unitPosition,
+      },
+    },
+  );
+  if (!resp.ok()) {
+    throw new Error(
+      `assign_section_to_course_and_unit failed: ${resp.status()} — ${await resp.text()}`,
+    );
+  }
+}
+
+/**
+ * Options for {@link createEuStudent}.
+ *
+ * @property name - display name; auto-generated if omitted.
+ */
+interface CreateEuStudentOptions {
+  name?: string;
+}
+
+/**
+ * Creates a student account pre-populated with EU data-transfer-agreement
+ * fields accepted at sign-up.  This suppresses the GDPR dialog on all
+ * subsequent page visits for that account.
+ * Mirrors `I create a student in the eu named "..."` from account_steps.rb.
+ *
+ * @returns email, password, and display name for the new student account
+ */
+export async function createEuStudent(
+  page: Page,
+  {name}: CreateEuStudentOptions = {},
+): Promise<UserCredentials> {
+  const ts = Date.now();
+  const rand = Math.random().toString(36).slice(2, 8);
+  const email = `eu_student_${ts}_${rand}@test.xx`;
+  const password = `StudentPass${ts}`;
+  const displayName = name ?? `TestEuStudent${ts}`;
+
+  await createTestUser(page, {
+    user_type: 'student',
+    email,
+    password,
+    password_confirmation: password,
+    name: displayName,
+    age: '16',
+    sign_in_count: 2,
+    data_transfer_agreement_accepted: true,
+    data_transfer_agreement_request_ip: '127.0.0.1',
+    data_transfer_agreement_kind: '0',
+    data_transfer_agreement_source: 'ACCOUNT_SIGN_UP',
+    data_transfer_agreement_at: new Date().toISOString(),
+  });
+  return {email, password, displayName};
 }

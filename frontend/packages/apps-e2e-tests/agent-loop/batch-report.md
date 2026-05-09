@@ -702,3 +702,92 @@ posting to `/api/test/create_student_section_with_name`.
 ### Fixme decisions
 
 None — all 7 scenarios ran cleanly with no fixme stubs.
+
+---
+
+## Batch N+18 — teacher_tools auth wave 3 (11 new spec files)
+
+**Feature files ported:**
+
+- `xteam/gdpr_dialog.feature`
+- `teacher_tools/cached_level_page.feature`
+- `teacher_tools/modular_courses.feature` (scenario 1; scenario 2 @eyes skipped)
+- `teacher_tools/teacher_dashboard/teacher_homepage_v2.feature` (6 scenarios; @eyes skipped)
+- `teacher_tools/teacher_dashboard/teacher_dashboard_local_nav_v2.feature` (2 scenarios)
+- `teacher_tools/teacher_dashboard/teacher_dashboard_assessments1.feature` (1 scenario)
+- `teacher_tools/rubrics/ai_assessments_announcement.feature` (2 scenarios)
+- `teacher_tools/rubrics/student_completes_rubric_level.feature` (2 scenarios)
+- `teacher_tools/rubrics/teacher_view_of_rubric.feature` (2 scenarios; @eyes skipped)
+- `teacher_tools/rubrics/ai_evaluate_student_code.feature` (4 scenarios; @chrome validate-AI-config skipped)
+- `teacher_tools/ai_diff/ai_differentiation_chat.feature` (2 scenarios; @skip+@eyes+@chrome and @properties_encryption_key skipped)
+
+**Playwright specs:**
+
+- `tests/legacy/gdpr-dialog/gdpr-dialog.spec.ts`
+- `tests/legacy/teacher-tools/cached-level-page.spec.ts`
+- `tests/legacy/teacher-tools/modular-courses.spec.ts`
+- `tests/legacy/teacher-tools/teacher-homepage-v2.spec.ts`
+- `tests/legacy/teacher-tools/teacher-dashboard-local-nav-v2.spec.ts`
+- `tests/legacy/teacher-tools/teacher-dashboard-assessments.spec.ts`
+- `tests/legacy/teacher-tools/rubrics/ai-assessments-announcement.spec.ts`
+- `tests/legacy/teacher-tools/rubrics/student-completes-rubric-level.spec.ts`
+- `tests/legacy/teacher-tools/rubrics/teacher-view-of-rubric.spec.ts`
+- `tests/legacy/teacher-tools/rubrics/ai-evaluate-student-code.spec.ts`
+- `tests/legacy/teacher-tools/ai-diff/ai-differentiation-chat.spec.ts`
+
+**New auth helpers added to `tests/shared/auth.ts`:**
+
+- `getLevelbuilderAccess(page)` — POST `/api/test/levelbuilder_access` for existing session
+- `addUserToExperiment(page, name)` — POST `/api/test/set_single_user_experiment`
+- `assignCourseAsStudent(page, course, opts)` — POST `/api/test/assign_course_as_student`; creates named section under teacher and enrolls student
+- `assignSectionToCourseAndUnit(page, pos, course, unit)` — POST `/api/test/assign_section_to_course_and_unit`; assigns teacher's section by 0-based index
+- `createEuStudent(page, opts)` — student with `data_transfer_agreement_accepted: true` and companion fields
+
+### Patterns resolved
+
+**GDPR dialog — EU geolocation cookie:** `mockGeolocation(page, '150.214.39.255')` (Spain)
+already existed in `cookies.ts`. The `<script data-gdpr>` element stores
+`{show_gdpr_dialog: boolean, ...}` JSON; `waitForGdprScriptDataField(page, 'false')` polls
+it via `page.evaluate()` + `expect(...).toPass()` to wait for the server to persist
+the opt-in before navigating away.
+
+**`teacher_dashboard_local_nav_v2` — DCDO mock before user creation:**
+DCDO cookie is set via `mockDcdo(page, key, value)` after `page.goto('/home')` (to
+establish hostname) but before `createTeacherAssociatedStudent`. The cookie persists
+across `page.goto('/reset_session')` calls inside `createTestUser` because it is a
+browser-context cookie, not a Rails session cookie.
+
+**`assign_course_as_student` — teacher name lookup:** Cucumber uses `@users[teacher_name][:email]`
+to look up the teacher's email by display name. Playwright passes the email directly
+since we hold it as a return value from `createTeacherAssociatedStudent`. The Rails
+controller accepts `teacher_email` directly and creates or finds the user.
+
+**`assignSectionToCourseAndUnit` — controller double-subtract:** the Ruby step sends
+`section_position: N - 1` (0-based), and the controller does `.to_i - 1` again,
+giving -1 (last/only section) for N=1. Playwright replicates by passing 0 for the
+first section; `sections[-1]` in Ruby resolves to the same record.
+
+**Product tour in teacher_view_of_rubric:** 7-step IntroJS tour with Next Tip / Back /
+Done / Skip buttons. Teacher can restart via `#ui-restart-product-tour`. After Done
+the rubric is restored; reload confirms tour doesn't reappear. The full navigation
+sequence (Back through all 6 prior steps) is driven by iterating `stepTitles`.
+
+**`teacher-view-of-rubric` feedback test — student credential access:** unlike Cucumber
+(which tracks named sessions), Playwright must hold the student email/password
+explicitly. Solved by using `createAuthorizedTeacher` + `createSection` + `createStudent`
+
+- `joinSection` directly instead of `createTeacherAssociatedStudent`, so both
+  teacher and student credentials are available in scope.
+
+**AI evaluate — `waitFor({state: 'enabled'})` is invalid:** Playwright's `waitFor`
+only accepts `'attached' | 'detached' | 'visible' | 'hidden'`. Use
+`expect(locator).toBeEnabled({timeout})` instead.
+
+### Fixme decisions
+
+- Scenario 1 of `teacher_view_of_rubric.feature` ("@eyes") — skipped; no functional assertions
+- Scenario 4 of `teacher_view_of_rubric.feature` ("@eyes @skip") — skipped
+- Scenario 1 of `ai_evaluate_student_code.feature` ("@chrome Validate Rubric AI Config") — skipped; S3 access only
+- Scenarios 1–2 of `ai_differentiation_chat.feature` — skipped (@skip+@eyes, @properties_encryption_key)
+- `modular_courses.feature` scenario 2 — skipped (@eyes)
+- `teacher_homepage_v2.feature` @eyes scenario — skipped
