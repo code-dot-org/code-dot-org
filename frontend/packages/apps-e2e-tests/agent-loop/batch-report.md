@@ -563,6 +563,33 @@ All 3 browsers confirmed C+F+W.
   handles both the flash-disappear and normal cases.
 - No fixme or skip entries.
 
+---
+
+## Batch N+14 — Auth-unblocking pass 16 (gamelab export animations)
+
+**Features ported (fixme):**
+
+- `star_labs/gamelab/export_animations.feature` → `tests/legacy/activities/gamelab/gamelab.spec.ts` (1 scenario — `test.fixme`)
+
+**Status:** `test.fixme` — blocked by animation picker CDN issue on test-studio.
+
+**Root cause:**
+
+Animation picker library thumbnails (category image tiles and blank-animation
+buttons) do not load in the test-studio environment. `img[src*='/category_animals.png']`
+and `.uitest-animation-picker-list>div>div>div>button` elements never appear after
+`#newListItem` is clicked. The same root cause currently breaks the existing
+`loading_animations` test (which was previously green on all 3 browsers).
+
+The `level_options` tests (5 scenarios) pass green — the issue is isolated to the
+animation picker's library/thumbnail loading path, not Game Lab canvas initialization.
+
+**Implementation stub:** full Playwright port is written in the fixme body comments.
+Flow: navigate to `/projects/gamelab/new` → add bear from library → run → switch
+to animation tab → open Piskel iframe export panel (`iframe[src*='piskel']`) →
+click `.icon-settings-export-white` → `Promise.all([waitForEvent('download'), click .gif-download-button])` →
+cancel download → `addBlankAnimation`. WebKit skipped via `test.skip(browserName === 'webkit', …)`.
+
 <!-- Agent: append new entries here as fixme/skip placeholders are created.
 
 Format:

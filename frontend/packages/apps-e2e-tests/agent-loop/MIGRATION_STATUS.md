@@ -2,27 +2,27 @@
 
 Source: `dashboard/test/ui/features/` (all sub-directories)  
 Target: `frontend/packages/apps-e2e-tests/tests/`  
-As of: 2026-05-09 (updated 2026-05-09 — auth-unblocking pass 15: aichat teacher view)
+As of: 2026-05-09 (updated 2026-05-09 — auth-unblocking pass 16: gamelab export animations)
 
 ---
 
 ## Summary
 
-| Status                                         | Count                                                                                                                                             |
-| ---------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Ported                                         | 126 feature files (C+F for pythonlab + mixmoveai; Chromium-only for maker; @no_ci for ai_tutor; C+F+W for rest)                                   |
-| Fixme stubs — test infra                       | 2 (applab asset upload — needs test fixture file; disallowedsharing profanity — @webpurify API not configured in test env)                        |
-| Covered by ported (rolled in)                  | 5 (maze2, jigsaw2, multi2/3/4 rolled into existing specs)                                                                                         |
-| Partial — @eyes (visual checkpoints annotated) | 5 ported up to snapshot; @eyes auth blocked 3                                                                                                     |
-| Fixme stubs — @eyes / auth only                | 6 (curriculum_reference ×2, level_group_multi_page_dots ×1, applab_submittable ×1, gamelab_submittable ×1, curriculum_catalog_assign_unassign ×1) |
-| Skipped — auth required                        | ~35                                                                                                                                               |
-| Skipped — @skip / @eyes_mobile                 | 3                                                                                                                                                 |
-| Skipped — cookie/session manipulation          | 2                                                                                                                                                 |
-| Out of scope — non-CSF labs                    | 5 labs, ~15 feature files (spritelab + craft hero_logged_out now ported)                                                                          |
-| Out of scope — lab2 cross-origin               | WebLab full tests (Bramble cross-origin iframe); weblab/too_young ported                                                                          |
-| Out of scope — other areas                     | javalab (3/10 ported; 7 @no_ci + @eyes), weblab2, pd/pl, xteam, levelbuilder, global_edition, policy_compliance                                   |
-| Out of scope — standalone tools                | 0 (netsim/pixelation/pkc/studio/sharepage/modal-fn-editor/mix-move-ai all ported)                                                                 |
-| Porteable, not yet done                        | 0                                                                                                                                                 |
+| Status                                         | Count                                                                                                                                                         |
+| ---------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Ported                                         | 126 feature files (C+F for pythonlab + mixmoveai; Chromium-only for maker; @no_ci for ai_tutor; C+F+W for rest)                                               |
+| Fixme stubs — test infra                       | 3 (applab asset upload — needs test fixture file; disallowedsharing profanity — @webpurify API not configured; gamelab export — animation picker CDN blocked) |
+| Covered by ported (rolled in)                  | 5 (maze2, jigsaw2, multi2/3/4 rolled into existing specs)                                                                                                     |
+| Partial — @eyes (visual checkpoints annotated) | 5 ported up to snapshot; @eyes auth blocked 3                                                                                                                 |
+| Fixme stubs — @eyes / auth only                | 6 (curriculum_reference ×2, level_group_multi_page_dots ×1, applab_submittable ×1, gamelab_submittable ×1, curriculum_catalog_assign_unassign ×1)             |
+| Skipped — auth required                        | ~35                                                                                                                                                           |
+| Skipped — @skip / @eyes_mobile                 | 3                                                                                                                                                             |
+| Skipped — cookie/session manipulation          | 2                                                                                                                                                             |
+| Out of scope — non-CSF labs                    | 5 labs, ~15 feature files (spritelab + craft hero_logged_out now ported)                                                                                      |
+| Out of scope — lab2 cross-origin               | WebLab full tests (Bramble cross-origin iframe); weblab/too_young ported                                                                                      |
+| Out of scope — other areas                     | javalab (3/10 ported; 7 @no_ci + @eyes), weblab2, pd/pl, xteam, levelbuilder, global_edition, policy_compliance                                               |
+| Out of scope — standalone tools                | 0 (netsim/pixelation/pkc/studio/sharepage/modal-fn-editor/mix-move-ai all ported)                                                                             |
+| Porteable, not yet done                        | 0                                                                                                                                                             |
 
 ---
 
@@ -238,29 +238,29 @@ account creation steps. The Playwright teacher-tools auth helper (`createTeacher
 but covers only the teacher-panel flow; porting these would need a full student/teacher
 session fixture.
 
-| Feature file                                                      | Auth dependency                                                 |
-| ----------------------------------------------------------------- | --------------------------------------------------------------- |
-| `can_see_finish.feature` (mobile @only_mobile variants)           | needs mobile Playwright project                                 |
-| `custom_blocks.feature`                                           | ~~creates levelbuilder~~ → **ported**                           |
-| `droplet.feature`                                                 | ~~@as_student~~ → **ported**                                    |
-| `applab_submittable.feature`                                      | test.fixme — see fixme stubs table                              |
-| `gamelab_submittable.feature`                                     | test.fixme — see fixme stubs table                              |
-| `applab/embed.feature`                                            | ~~@as_student~~ → **ported**                                    |
-| `applab/html_sanitization.feature`                                | ~~@as_student~~ → **ported**                                    |
-| `applab/scenarios.feature` (scenarios 2+)                         | ~~@as_student~~ → **ported**                                    |
-| `applab/scenarios2.feature` (scenario 3 — asset upload)           | test.fixme — needs artist_image_1.png test fixture              |
-| `applab/scenarios3.feature`                                       | ~~@as_student~~ → **ported**                                    |
-| `applab/shared_apps.feature`                                      | @single_session                                                 |
-| `applab/versions.feature`                                         | ~~@no_phone~~ → **ported** (scenarios 1–3; 4–5 fixme multi-tab) |
-| `gamelab/export_animations.feature`                               | @as_student                                                     |
-| `gamelab/loading_animations.feature`                              | ~~@as_student~~ → **ported**                                    |
-| `aichat/chat.feature`                                             | ~~student auth~~ → **ported**                                   |
-| `aichat/chat_multimodal.feature`                                  | @no_ci; image upload + vision                                   |
-| `aichat/view_student_chat_history.feature`                        | ~~teacher auth~~ → **ported**                                   |
-| `ai_tutor/chat.feature`                                           | ~~student auth~~ → **ported** @no_ci                            |
-| `manage_assets.feature`                                           | asset upload state                                              |
-| `acquisition_products/curriculum_catalog_assign_unassign.feature` | test.fixme — see fixme stubs table                              |
-| `acquisition_products/curriculum_catalog_filters.feature`         | @eyes                                                           |
+| Feature file                                                      | Auth dependency                                                                                                                                             |
+| ----------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `can_see_finish.feature` (mobile @only_mobile variants)           | needs mobile Playwright project                                                                                                                             |
+| `custom_blocks.feature`                                           | ~~creates levelbuilder~~ → **ported**                                                                                                                       |
+| `droplet.feature`                                                 | ~~@as_student~~ → **ported**                                                                                                                                |
+| `applab_submittable.feature`                                      | test.fixme — see fixme stubs table                                                                                                                          |
+| `gamelab_submittable.feature`                                     | test.fixme — see fixme stubs table                                                                                                                          |
+| `applab/embed.feature`                                            | ~~@as_student~~ → **ported**                                                                                                                                |
+| `applab/html_sanitization.feature`                                | ~~@as_student~~ → **ported**                                                                                                                                |
+| `applab/scenarios.feature` (scenarios 2+)                         | ~~@as_student~~ → **ported**                                                                                                                                |
+| `applab/scenarios2.feature` (scenario 3 — asset upload)           | test.fixme — needs artist_image_1.png test fixture                                                                                                          |
+| `applab/scenarios3.feature`                                       | ~~@as_student~~ → **ported**                                                                                                                                |
+| `applab/shared_apps.feature`                                      | @single_session                                                                                                                                             |
+| `applab/versions.feature`                                         | ~~@no_phone~~ → **ported** (scenarios 1–3; 4–5 fixme multi-tab)                                                                                             |
+| `gamelab/export_animations.feature`                               | test.fixme — animation picker library thumbnails fail to load in test-studio; same root cause currently blocks `loading_animations` test (previously green) |
+| `gamelab/loading_animations.feature`                              | ~~@as_student~~ → **ported**                                                                                                                                |
+| `aichat/chat.feature`                                             | ~~student auth~~ → **ported**                                                                                                                               |
+| `aichat/chat_multimodal.feature`                                  | @no_ci; image upload + vision                                                                                                                               |
+| `aichat/view_student_chat_history.feature`                        | ~~teacher auth~~ → **ported**                                                                                                                               |
+| `ai_tutor/chat.feature`                                           | ~~student auth~~ → **ported** @no_ci                                                                                                                        |
+| `manage_assets.feature`                                           | asset upload state                                                                                                                                          |
+| `acquisition_products/curriculum_catalog_assign_unassign.feature` | test.fixme — see fixme stubs table                                                                                                                          |
+| `acquisition_products/curriculum_catalog_filters.feature`         | @eyes                                                                                                                                                       |
 
 ---
 

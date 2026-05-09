@@ -145,6 +145,24 @@ test.describe('Game Lab — loading animations', () => {
   );
 });
 
+test.describe('Game Lab — export animations', () => {
+  /**
+   * Source: export_animations.feature — "Export library animation"
+   * @as_student @no_mobile @no_safari
+   *
+   * Full flow: add bear from library → run → switch to animation tab →
+   * open Piskel export panel → trigger GIF download → add blank animation.
+   *
+   * Blocked: animation picker library thumbnails (category images and blank-
+   * animation tiles) fail to load on test-studio.  Same root cause blocks
+   * the `loading_animations` test that was previously green.  The Piskel
+   * iframe itself loads fine; the network requests for the animation library
+   * image tiles stall / 404 in the test environment.  Re-enable once the
+   * animation CDN is restored on test-studio.
+   */
+  test.fixme('export bear animation as GIF from Piskel editor', async () => {});
+});
+
 test.describe('Game Lab — submittable level', () => {
   /**
    * Source: gamelab_submittable.feature — "Submit anything, unsubmit, be able to resubmit."
