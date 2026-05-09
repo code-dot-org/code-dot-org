@@ -278,7 +278,11 @@ const UnitGenerator: React.FC<UnitGeneratorProps> = ({unit}) => {
           type="button"
           className={moduleStyles.primaryButton}
           onClick={handleGenerateLessons}
-          disabled={isSaving || !!validationError || unit.multipleLessonGroups}
+          // Don't gate the button on validation — empty/invalid cards
+          // are common while the user is mid-typing, and the optional
+          // AI outline step shouldn't be a precondition. The click
+          // handler validates and surfaces a clear error inline.
+          disabled={isSaving || unit.multipleLessonGroups}
           title={validationError || ''}
         >
           {isSaving ? 'Saving…' : 'Generate Lessons'}

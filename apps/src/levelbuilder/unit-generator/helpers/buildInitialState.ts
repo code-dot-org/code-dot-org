@@ -3,7 +3,7 @@ import {createUuid} from '@cdo/apps/utils';
 import {ExistingUnitData, LessonSpec} from '../types';
 
 export function buildInitialState(unit: ExistingUnitData): LessonSpec[] {
-  return unit.lessons.map(l => ({
+  const fromUnit = unit.lessons.map(l => ({
     reactKey: createUuid(),
     id: l.id,
     key: l.key,
@@ -17,6 +17,9 @@ export function buildInitialState(unit: ExistingUnitData): LessonSpec[] {
     // the user doesn't think it's a forgotten draft of theirs.
     createdSeparately: !l.generateOutline,
   }));
+  // For a brand-new unit with no lessons yet, seed one blank card so the
+  // user has somewhere to type without first hunting for "+ Add lesson".
+  return fromUnit.length > 0 ? fromUnit : [newLessonSpec()];
 }
 
 export function newLessonSpec(): LessonSpec {
