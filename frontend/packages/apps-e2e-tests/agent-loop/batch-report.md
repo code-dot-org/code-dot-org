@@ -480,6 +480,26 @@ All 3 active tests pass C+F+W.
   (share-cell-enabled) when `level.freePlay` is true after the program runs. Clicking it triggers
   `sendPuzzleReport` which validates sprite-say text server-side.
 
+---
+
+## Batch N+11 — Auth-unblocking pass 13 (sharepage scenario 2)
+
+**Features ported (passing):**
+
+- `star_labs/sharepage.feature` scenario 2 → `tests/legacy/sharepage/sharepage-project-gallery.spec.ts` (1 scenario)
+
+All 3 browsers green C+F+W.
+
+**Key notes:**
+
+- `gotoLevel()` calls `/reset_session` which logs out the student; bypassed by navigating to
+  `labLevelUrl(3, 10)` directly and calling `artist.waitForLabPage()` instead.
+- Congrats dialog uses `.congrats` element (not `.modal-body .dialog-title`). Source: the
+  `I wait to see a congrats dialog with title containing` step definition calls
+  `I wait to see a ".congrats"` and checks `.congrats` text.
+- Includes `reopen congrats` fallback: if `#sharing-dialog-copy-button` is absent after the first
+  finish click, the test presses again-button, re-runs, and clicks finish again.
+
 <!-- Agent: append new entries here as fixme/skip placeholders are created.
 
 Format:

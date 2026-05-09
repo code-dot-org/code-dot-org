@@ -2,7 +2,7 @@
 
 Source: `dashboard/test/ui/features/` (all sub-directories)  
 Target: `frontend/packages/apps-e2e-tests/tests/`  
-As of: 2026-05-09 (updated 2026-05-09 — auth-unblocking pass 12: help_and_tips, disallowedsharing)
+As of: 2026-05-09 (updated 2026-05-09 — auth-unblocking pass 13: sharepage scenario 2)
 
 ---
 
@@ -10,7 +10,7 @@ As of: 2026-05-09 (updated 2026-05-09 — auth-unblocking pass 12: help_and_tips
 
 | Status                                         | Count                                                                                                                                             |
 | ---------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Ported                                         | 123 feature files (C+F for pythonlab + mixmoveai; Chromium-only for maker; @no_ci for ai_tutor; C+F+W for rest)                                   |
+| Ported                                         | 124 feature files (C+F for pythonlab + mixmoveai; Chromium-only for maker; @no_ci for ai_tutor; C+F+W for rest)                                   |
 | Fixme stubs — test infra                       | 2 (applab asset upload — needs test fixture file; disallowedsharing profanity — @webpurify API not configured in test env)                        |
 | Covered by ported (rolled in)                  | 5 (maze2, jigsaw2, multi2/3/4 rolled into existing specs)                                                                                         |
 | Partial — @eyes (visual checkpoints annotated) | 5 ported up to snapshot; @eyes auth blocked 3                                                                                                     |
@@ -79,6 +79,7 @@ As of: 2026-05-09 (updated 2026-05-09 — auth-unblocking pass 12: help_and_tips
 | `public_key_cryptography/continue_button.feature`              | `tests/legacy/pkc/pkc.spec.ts`                                     | C+F+W    | continue button regression; lesson 31                                                               |
 | `studio.feature`                                               | `tests/legacy/studio/studio.spec.ts`                               | C+F+W    | PlayLab sprite height before/after run                                                              |
 | `sharepage.feature` (scenario 1)                               | `tests/legacy/sharepage/sharepage.spec.ts`                         | C+F+W    | Flappy share URL; game states; "View Code" redirect                                                 |
+| `sharepage.feature` (scenario 2)                               | `tests/legacy/sharepage/sharepage-project-gallery.spec.ts`         | C+F+W    | @as_student; Artist level 10; save to gallery; check /projects/ row count + name                    |
 | `code_tools/blockly/modal_function_editor.feature`             | `tests/legacy/modal-function-editor/modal-function-editor.spec.ts` | C+F+W    | 3 scenarios; SpriteLab level; flyout/drag/ESC                                                       |
 | `mix_move_ai.feature`                                          | `tests/lab2/mixmoveai/mixmoveai.spec.ts`                           | C+F      | @no_safari; full 3-phase AI generation flow                                                         |
 | `student_learning/hour_of_code/hour_of_code.feature`           | `tests/legacy/hoc/hoc.spec.ts`                                     | C+F      | anonymous; 4 scenarios; progress bubbles + hoc/reset                                                |
@@ -309,11 +310,11 @@ or have no non-auth scenarios.
 
 These feature files test shared CSF platform code, not any particular lab.
 
-| Feature file            | What it tests                                                       | Status                                                                      |
-| ----------------------- | ------------------------------------------------------------------- | --------------------------------------------------------------------------- |
-| `studio.feature`        | Sprite image resize after run on a PlayLab level (custom DOM check) | **Ported** — `tests/legacy/studio/studio.spec.ts`                           |
-| `sharepage.feature`     | Share URL generation, "View Code" redirect, embedded workspace      | **Ported** (scenario 1) — `tests/legacy/sharepage/`; scenario 2 @as_student |
-| `manage_assets.feature` | Asset upload dialog, audio record button visibility                 | Auth (asset upload state) — skipped                                         |
+| Feature file            | What it tests                                                       | Status                                                  |
+| ----------------------- | ------------------------------------------------------------------- | ------------------------------------------------------- |
+| `studio.feature`        | Sprite image resize after run on a PlayLab level (custom DOM check) | **Ported** — `tests/legacy/studio/studio.spec.ts`       |
+| `sharepage.feature`     | Share URL generation, "View Code" redirect, embedded workspace      | **Ported** (both scenarios) — `tests/legacy/sharepage/` |
+| `manage_assets.feature` | Asset upload dialog, audio record button visibility                 | Auth (asset upload state) — skipped                     |
 
 ---
 
