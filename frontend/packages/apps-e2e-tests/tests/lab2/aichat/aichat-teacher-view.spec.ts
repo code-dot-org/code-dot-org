@@ -32,19 +32,26 @@ import {expect, test} from '../../shared/fixtures';
 const AICHAT_URL = '/courses/customizing-llms-2024/units/1/lessons/2/levels/9';
 
 /**
- * Dismiss the `#ui-close-dialog` interstitial if it is visible.
- * No-op when the dialog is already gone.
+ * Dismiss the `#ui-close-dialog` button produced by AccessibleDialog.
+ *
+ * For students: ChatWarningModal ("Remember to chat responsibly!") renders via
+ * AccessibleDialog and fires from a useEffect once `isUserTeacher` resolves —
+ * it may appear several seconds after navigation.  `waitFor({state:'visible'})`
+ * is required; `isVisible({timeout})` returns false immediately when the element
+ * is not yet attached to DOM.
+ *
+ * No-op if no dialog appears within 15 s.
  *
  * @param page - Playwright page with the AI Chat level loaded
  */
 async function dismissCloseDialog(page: Page): Promise<void> {
   const closeDialog = page.locator('#ui-close-dialog');
-  const visible = await closeDialog
-    .isVisible({timeout: 10_000})
-    .catch(() => false);
-  if (visible) {
+  try {
+    await closeDialog.waitFor({state: 'visible', timeout: 15_000});
     await closeDialog.click();
     await closeDialog.waitFor({state: 'hidden', timeout: 10_000});
+  } catch {
+    // no close dialog appeared within 15 s — proceed without dismissal
   }
 }
 
@@ -115,10 +122,16 @@ test.describe(
       await textarea.fill('Damn');
       await expect(submit).toBeEnabled({timeout: 10_000});
       await submit.click();
-      await expect(page.locator('.uitest-chat-message')).toContainText(
-        'This message has been flagged by our content moderation policy.',
-        {timeout: 30_000},
-      );
+      // Multiple .uitest-chat-message elements exist (Hello reply + Damn bubble);
+      // filter to the one containing the moderation notice.
+      await expect(
+        page
+          .locator('.uitest-chat-message')
+          .filter({
+            hasText:
+              'This message has been flagged by our content moderation policy.',
+          }),
+      ).toBeVisible({timeout: 30_000});
 
       // Decrease temperature once (default → 0.7) and save.
       await page.locator("[aria-label='Decrease']").click();
@@ -137,14 +150,15 @@ test.describe(
       await page.goto(AICHAT_URL);
       await dismissCloseDialog(page);
 
-      // Teacher panel loads collapsed; expand it to see the student table.
-      await page
-        .locator('.show-handle')
-        .waitFor({state: 'visible', timeout: 15_000});
-      await page.locator('.show-handle .fa-chevron-left').click();
-      await expect(page.locator('.student-table')).toBeVisible({
-        timeout: 15_000,
-      });
+      // Teacher panel loads expanded by default on this level; wait for
+      // the student table to confirm the panel is ready.  If for some reason
+      // it loaded collapsed, expand it first.
+      const showHandle = page.locator('.show-handle .fa-chevron-left');
+      const studentTable = page.locator('.student-table');
+      if (await showHandle.isVisible({timeout: 5_000}).catch(() => false)) {
+        await showHandle.click();
+      }
+      await expect(studentTable).toBeVisible({timeout: 15_000});
 
       // Click first data row (tr index 0 = header, index 1 = first student).
       await page.locator('#teacher-panel-container tr').nth(1).click();
@@ -161,20 +175,27 @@ test.describe(
         .locator('.uitest-is-loading-overlay')
         .waitFor({state: 'hidden', timeout: 30_000});
 
-      // Flag the "Damn" message (shown as "clean" — still visible, unflagged).
-      const flagBtn = page.locator(
-        '.uitest-clean-feedback-footer button[aria-label="flag"]',
-      );
+      // Flag the student's first clean message at teacher level.
+      // Multiple clean messages exist (student "Hello" + bot reply); target first.
+      const flagBtn = page
+        .locator('.uitest-clean-feedback-footer button[aria-label="flag"]')
+        .first();
       await flagBtn.waitFor({state: 'visible', timeout: 30_000});
       await flagBtn.click();
       await expect(
-        page.locator(
-          '.uitest-clean-feedback-footer button[aria-label="unflag"]',
-        ),
+        page
+          .locator('.uitest-clean-feedback-footer button[aria-label="unflag"]')
+          .first(),
       ).toBeVisible({timeout: 15_000});
-      await expect(page.locator('.uitest-chat-message')).toContainText(
-        'This message has been flagged by our content moderation policy.',
-      );
+      // The "Damn" message already carries the content moderation notice.
+      await expect(
+        page
+          .locator('.uitest-chat-message')
+          .filter({
+            hasText:
+              'This message has been flagged by our content moderation policy.',
+          }),
+      ).toBeVisible();
 
       // Reveal the flagged message content and provide thumbs-up feedback.
       await page.locator("[aria-label='show message']").click();
@@ -199,10 +220,10 @@ test.describe(
       await expect(submit).toBeEnabled({timeout: 10_000});
       await submit.click();
       await expect(
-        page.locator("[aria-label='AI bot chat message']"),
+        page.locator("[aria-label='AI bot chat message']").last(),
       ).toBeVisible({timeout: 30_000});
       await expect(
-        page.locator("[aria-label='AI bot chat message']"),
+        page.locator("[aria-label='AI bot chat message']").last(),
       ).toHaveCSS('background-color', 'rgb(235, 255, 254)');
     });
   },

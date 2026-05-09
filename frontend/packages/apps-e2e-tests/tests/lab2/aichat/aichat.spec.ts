@@ -47,9 +47,12 @@ async function gotoAichat(
 ): Promise<void> {
   await page.goto(AICHAT_URL);
   const closeDialog = page.locator('#ui-close-dialog');
-  if (await closeDialog.isVisible({timeout: 10_000}).catch(() => false)) {
+  try {
+    await closeDialog.waitFor({state: 'visible', timeout: 15_000});
     await closeDialog.click();
     await closeDialog.waitFor({state: 'hidden', timeout: 10_000});
+  } catch {
+    // no dialog within 15 s
   }
   await dismissTeacherPanel(page);
 }

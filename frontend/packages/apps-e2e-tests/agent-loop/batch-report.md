@@ -533,7 +533,7 @@ All 3 browsers expected C+F+W.
 
 - `star_labs/aichat/view_student_chat_history.feature` → `tests/lab2/aichat/aichat-teacher-view.spec.ts` (1 scenario)
 
-All 3 browsers expected C+F+W.
+All 3 browsers confirmed C+F+W.
 
 **Key notes:**
 
@@ -546,9 +546,18 @@ All 3 browsers expected C+F+W.
   - New `joinSection(page, sectionCode)` helper — direct POST to `/join/${sectionCode}`.
 - Single-page session-switching pattern: teacher (authorized) → student (create + join +
   interact) → teacher again via `signIn(page, teacher.email, teacher.password)`.
-- Teacher panel interaction: wait for `.show-handle` (collapsed), click
-  `.show-handle .fa-chevron-left` to expand, click `#teacher-panel-container tr:nth(1)`
-  (tr[0] = header, tr[1] = first data row), then `dismissTeacherPanel`.
+- Teacher panel loads **expanded** by default on `customizing-llms-2024` unit 1. Wait for
+  `.student-table` directly; expand only if the `.show-handle` chevron is unexpectedly
+  visible. Click `#teacher-panel-container tr:nth(1)` (tr[0] = header, tr[1] = first
+  student), then `dismissTeacherPanel`.
+- Content-moderated messages ("Damn") already show `.uitest-profane-feedback-footer` in
+  teacher view; the flag step targets `.uitest-clean-feedback-footer button[aria-label="flag"]
+.first()` (student "Hello" message). Thumbs-up feedback is on the profane footer.
+- Strict-mode violations fixed: use `.first()` / `.last()` / `.filter({hasText:…})` on
+  all multi-element locators (chat messages, flag buttons, bot reply assertions).
+- `dismissCloseDialog` must use `waitFor({state:'visible'})` not `isVisible({timeout})` —
+  ChatWarningModal fires asynchronously from `useEffect([isUserTeacher])` and is not
+  attached to DOM immediately after navigation.
 - Loading overlay: `.uitest-is-loading-overlay` appears briefly after panel close;
   first `waitFor({state: 'visible'}).catch(() => {})` then `waitFor({state: 'hidden'})`
   handles both the flash-disappear and normal cases.
