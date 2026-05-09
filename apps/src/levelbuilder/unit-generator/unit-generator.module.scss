@@ -109,13 +109,15 @@
 
 .tagExisting,
 .tagNew {
-  font-size: 11px;
+  display: inline-block;
+  font-size: 10px;
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.04em;
-  padding: 2px 6px;
+  padding: 1px 5px;
   border-radius: 3px;
   margin-left: 4px;
+  vertical-align: middle;
 }
 
 .tagExisting {
@@ -277,21 +279,21 @@
 .dialog {
   background: #fff;
   border-radius: 6px;
-  padding: 20px 24px;
+  padding: 18px 22px;
   min-width: 440px;
   max-width: 640px;
   max-height: 80vh;
   overflow: auto;
   display: flex;
   flex-direction: column;
-  gap: 8px;
-  font-size: 14px;
+  gap: 6px;
+  font-size: 13px;
   line-height: 1.4;
 }
 
 .dialog h2 {
-  margin: 0 0 4px;
-  font-size: 18px;
+  margin: 0 0 2px;
+  font-size: 17px;
   font-weight: 600;
 }
 
@@ -306,6 +308,29 @@
 
 .dialog li + li {
   margin-top: 2px;
+}
+
+// Compact list for the success dialog. Distinct from .lessonList (the
+// main page's card list, which is a 16px-gap flex column); here we want
+// dense text rows with tight inline tags.
+.summaryList {
+  margin: 0;
+  padding-left: 20px;
+  list-style: disc;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.summaryList li {
+  margin: 0;
+}
+
+.summaryList li + li {
+  margin-top: 2px;
+}
+
+.summaryList a {
+  text-decoration: underline;
 }
 
 .summaryBad {

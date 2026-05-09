@@ -53,19 +53,16 @@ const UnitGenerateDialog: React.FC<UnitGenerateDialogProps> = ({
               Open each one's <code>/generate</code> page to flesh out its
               content.
             </p>
-            <ul className={moduleStyles.lessonList}>
+            <ul className={moduleStyles.summaryList}>
               {summary.lessons.map((l, i) => (
                 <li key={i}>
                   <a href={l.lessonGeneratePath}>{l.name}</a>
-                  {l.isNew && <span className={moduleStyles.tagNew}> new</span>}
+                  {l.isNew && <span className={moduleStyles.tagNew}>new</span>}
                   {l.createdSeparately && (
-                    <span className={moduleStyles.muted}>
-                      {' '}
-                      — created separately
-                    </span>
+                    <span className={moduleStyles.muted}> no prompt</span>
                   )}{' '}
                   <a className={moduleStyles.muted} href={l.lessonEditPath}>
-                    (edit)
+                    edit
                   </a>
                 </li>
               ))}
