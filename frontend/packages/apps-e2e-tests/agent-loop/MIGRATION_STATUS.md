@@ -2,7 +2,7 @@
 
 Source: `dashboard/test/ui/features/` (all sub-directories)  
 Target: `frontend/packages/apps-e2e-tests/tests/`  
-As of: 2026-05-08 (updated 2026-05-08 — auth-unblocking pass 3: applab scenarios 2-3 + scenarios3 + html_sanitization, gamelab/loading_animations, ai_tutor/chat, aichat/chat)
+As of: 2026-05-08 (updated 2026-05-08 — auth-unblocking pass 4: applab/scenarios2 scenarios 1-2; asset upload fixme)
 
 ---
 
@@ -10,7 +10,8 @@ As of: 2026-05-08 (updated 2026-05-08 — auth-unblocking pass 3: applab scenari
 
 | Status                                         | Count                                                                                                                                             |
 | ---------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Ported                                         | 106 feature files (C+F for pythonlab + mixmoveai; Chromium-only for maker; @no_ci for ai_tutor; C+F+W for rest)                                   |
+| Ported                                         | 107 feature files (C+F for pythonlab + mixmoveai; Chromium-only for maker; @no_ci for ai_tutor; C+F+W for rest)                                   |
+| Fixme stubs — test infra                       | 1 (applab asset upload — needs test fixture file)                                                                                                 |
 | Covered by ported (rolled in)                  | 5 (maze2, jigsaw2, multi2/3/4 rolled into existing specs)                                                                                         |
 | Partial — @eyes (visual checkpoints annotated) | 5 ported up to snapshot; @eyes auth blocked 3                                                                                                     |
 | Fixme stubs — @eyes / auth only                | 6 (curriculum_reference ×2, level_group_multi_page_dots ×1, applab_submittable ×1, gamelab_submittable ×1, curriculum_catalog_assign_unassign ×1) |
@@ -56,6 +57,7 @@ As of: 2026-05-08 (updated 2026-05-08 — auth-unblocking pass 3: applab scenari
 | `applab/clipping.feature`                                      | `tests/applab/applab.spec.ts`                                      | C+F+W    | design mode canvas clip-content CSS class                                              |
 | `applab/sharing_from_script_level.feature`                     | `tests/applab/applab.spec.ts`                                      | C+F+W    | share URL must point to /projects/applab/                                              |
 | `applab/scenarios.feature` (all 3 scenarios)                   | `tests/applab/applab.spec.ts`                                      | C+F+W    | free-project icon + setText/getText + textarea newline preservation                    |
+| `applab/scenarios2.feature` (scenarios 1-2)                    | `tests/applab/applab.spec.ts`                                      | C+F+W    | change event on blur + enter (text input + text area); asset upload → test.fixme       |
 | `applab/scenarios3.feature`                                    | `tests/applab/applab.spec.ts`                                      | C+F+W    | HTTP image proxy + clear-puzzle restore                                                |
 | `applab/html_sanitization.feature`                             | `tests/applab/applab.spec.ts`                                      | C+F+W    | design elements maintain correct parent-child DOM hierarchy                            |
 | `code_tools/pythonlab/pythonlab_run.feature`                   | `tests/lab2/pythonlab/pythonlab.spec.ts`                           | C+F      | student auth; progress bubble CSS checks                                               |
@@ -217,29 +219,29 @@ account creation steps. The Playwright teacher-tools auth helper (`createTeacher
 but covers only the teacher-panel flow; porting these would need a full student/teacher
 session fixture.
 
-| Feature file                                                      | Auth dependency                            |
-| ----------------------------------------------------------------- | ------------------------------------------ |
-| `can_see_finish.feature` (mobile @only_mobile variants)           | needs mobile Playwright project            |
-| `custom_blocks.feature`                                           | creates levelbuilder                       |
-| `droplet.feature`                                                 | @as_student                                |
-| `applab_submittable.feature`                                      | test.fixme — see fixme stubs table         |
-| `gamelab_submittable.feature`                                     | test.fixme — see fixme stubs table         |
-| `applab/embed.feature`                                            | @as_student                                |
-| `applab/html_sanitization.feature`                                | ~~@as_student~~ → **ported**               |
-| `applab/scenarios.feature` (scenarios 2+)                         | ~~@as_student~~ → **ported**               |
-| `applab/scenarios2.feature`                                       | @as_student (change events + asset upload) |
-| `applab/scenarios3.feature`                                       | ~~@as_student~~ → **ported**               |
-| `applab/shared_apps.feature`                                      | @single_session                            |
-| `applab/versions.feature`                                         | @no_phone (session state)                  |
-| `gamelab/export_animations.feature`                               | @as_student                                |
-| `gamelab/loading_animations.feature`                              | ~~@as_student~~ → **ported**               |
-| `aichat/chat.feature`                                             | ~~student auth~~ → **ported**              |
-| `aichat/chat_multimodal.feature`                                  | @no_ci; image upload + vision              |
-| `aichat/view_student_chat_history.feature`                        | teacher auth (AI chat feature)             |
-| `ai_tutor/chat.feature`                                           | ~~student auth~~ → **ported** @no_ci       |
-| `manage_assets.feature`                                           | asset upload state                         |
-| `acquisition_products/curriculum_catalog_assign_unassign.feature` | test.fixme — see fixme stubs table         |
-| `acquisition_products/curriculum_catalog_filters.feature`         | @eyes                                      |
+| Feature file                                                      | Auth dependency                                    |
+| ----------------------------------------------------------------- | -------------------------------------------------- |
+| `can_see_finish.feature` (mobile @only_mobile variants)           | needs mobile Playwright project                    |
+| `custom_blocks.feature`                                           | creates levelbuilder                               |
+| `droplet.feature`                                                 | @as_student                                        |
+| `applab_submittable.feature`                                      | test.fixme — see fixme stubs table                 |
+| `gamelab_submittable.feature`                                     | test.fixme — see fixme stubs table                 |
+| `applab/embed.feature`                                            | @as_student                                        |
+| `applab/html_sanitization.feature`                                | ~~@as_student~~ → **ported**                       |
+| `applab/scenarios.feature` (scenarios 2+)                         | ~~@as_student~~ → **ported**                       |
+| `applab/scenarios2.feature` (scenario 3 — asset upload)           | test.fixme — needs artist_image_1.png test fixture |
+| `applab/scenarios3.feature`                                       | ~~@as_student~~ → **ported**                       |
+| `applab/shared_apps.feature`                                      | @single_session                                    |
+| `applab/versions.feature`                                         | @no_phone (session state)                          |
+| `gamelab/export_animations.feature`                               | @as_student                                        |
+| `gamelab/loading_animations.feature`                              | ~~@as_student~~ → **ported**                       |
+| `aichat/chat.feature`                                             | ~~student auth~~ → **ported**                      |
+| `aichat/chat_multimodal.feature`                                  | @no_ci; image upload + vision                      |
+| `aichat/view_student_chat_history.feature`                        | teacher auth (AI chat feature)                     |
+| `ai_tutor/chat.feature`                                           | ~~student auth~~ → **ported** @no_ci               |
+| `manage_assets.feature`                                           | asset upload state                                 |
+| `acquisition_products/curriculum_catalog_assign_unassign.feature` | test.fixme — see fixme stubs table                 |
+| `acquisition_products/curriculum_catalog_filters.feature`         | @eyes                                              |
 
 ---
 

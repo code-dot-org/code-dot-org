@@ -5,7 +5,7 @@ import {AppLab} from './AppLab';
 
 /**
  * App Lab smoke tests — data storage, design mode, data browser, code entry,
- * design element drag, and HTML sanitization.
+ * design element drag, HTML sanitization, and change events.
  *
  * Sources:
  *   dashboard/test/ui/features/star_labs/applab/data_blocks.feature
@@ -14,6 +14,7 @@ import {AppLab} from './AppLab';
  *   dashboard/test/ui/features/star_labs/applab/scenarios.feature (scenarios 2-3)
  *   dashboard/test/ui/features/star_labs/applab/scenarios3.feature
  *   dashboard/test/ui/features/star_labs/applab/html_sanitization.feature
+ *   dashboard/test/ui/features/star_labs/applab/scenarios2.feature (scenarios 1-2)
  *
  * All scenarios run as an authenticated student (@as_student).
  * Complex Droplet-manipulation scenarios (code entry, drag-and-drop) and
@@ -424,5 +425,136 @@ test.describe('App Lab — HTML sanitization', () => {
         );
       }
     },
+  );
+});
+
+test.describe('App Lab — change event on text input', () => {
+  /**
+   * Source: scenarios2.feature — "Change event works in text input"
+   * @as_student @no_mobile
+   *
+   * Drags a TEXT_INPUT into design mode, registers an onEvent 'change' handler
+   * that logs the value, then verifies:
+   *   1. Blur fires a change event → debug shows "text_input1: 123"
+   *   2. Enter fires a change event → debug shows "text_input1: 123456"
+   *   3. A subsequent blur does NOT fire a second change event.
+   *
+   * App Lab's debug console wraps each console.log string value in double quotes.
+   */
+  test(
+    'blur and enter trigger change event; second blur does not',
+    {tag: '@no_mobile'},
+    async ({studentPage}) => {
+      await studentPage.goto('/projects/applab/new');
+      const applab = new AppLab(studentPage);
+      await applab.waitForReady();
+
+      await applab.switchToDesignMode();
+      await applab.dragElementToApp('TEXT_INPUT');
+      await applab.switchToCodeMode();
+      await applab.ensureTextMode();
+
+      await applab.appendCode(
+        "onEvent('text_input1', 'change', function(event) {\n",
+      );
+      await applab.appendCode(
+        "  console.log(event.targetId + ': ' + getText('text_input1'));\n",
+      );
+      await applab.appendCode('});');
+      await applab.run();
+
+      const input = studentPage.locator('#text_input1');
+      await input.waitFor({state: 'visible', timeout: 15_000});
+
+      // Blur after typing → change fires.
+      await input.pressSequentially('123');
+      await input.evaluate((el: HTMLElement) => el.blur());
+      await expect(applab.consoleOutput).toContainText('"text_input1: 123"', {
+        timeout: 10_000,
+      });
+
+      // Enter after more typing → change fires.
+      await input.pressSequentially('456');
+      await input.press('Enter');
+      await expect(applab.consoleOutput).toContainText(
+        '"text_input1: 123456"',
+        {timeout: 10_000},
+      );
+
+      // Second blur → no new change event; "123456" appears only once.
+      await input.evaluate((el: HTMLElement) => el.blur());
+      await studentPage.waitForTimeout(500);
+      const debugText = (await applab.consoleOutput.textContent()) ?? '';
+      expect((debugText.match(/"text_input1: 123456"/g) ?? []).length).toBe(1);
+    },
+  );
+});
+
+test.describe('App Lab — change event on text area', () => {
+  /**
+   * Source: scenarios2.feature — "Change event works in text area"
+   * @as_student @no_mobile
+   *
+   * Drags a TEXT_AREA into design mode, registers an onEvent 'change' handler,
+   * then sets the element's textContent directly (mirroring the Cucumber
+   * `I set selector text to` step which uses jQuery .text()) and blurs.
+   * The blur must fire the change event with the new text value.
+   */
+  test(
+    'blur fires change event after setting text area content',
+    {tag: '@no_mobile'},
+    async ({studentPage}) => {
+      await studentPage.goto('/projects/applab/new');
+      const applab = new AppLab(studentPage);
+      await applab.waitForReady();
+
+      await applab.switchToDesignMode();
+      await applab.dragElementToApp('TEXT_AREA');
+      await applab.switchToCodeMode();
+      await applab.ensureTextMode();
+
+      await applab.appendCode(
+        "onEvent('text_area1', 'change', function(event) {\n",
+      );
+      await applab.appendCode(
+        "  console.log(event.targetId + ': ' + getText('text_area1'));\n",
+      );
+      await applab.appendCode('});');
+      await applab.run();
+
+      const textarea = studentPage.locator('#text_area1');
+      await textarea.waitFor({state: 'visible', timeout: 15_000});
+
+      // Focus first so App Lab records the initial value, then set textContent
+      // directly (mirrors Cucumber's jQuery .text("abc") step), then blur.
+      await textarea.focus();
+      await studentPage.evaluate(() => {
+        const el = document.querySelector('#text_area1') as HTMLElement | null;
+        if (el) el.textContent = 'abc';
+      });
+      await textarea.evaluate((el: HTMLElement) => el.blur());
+
+      await expect(applab.consoleOutput).toContainText('"text_area1: abc"', {
+        timeout: 10_000,
+      });
+    },
+  );
+});
+
+test.describe('App Lab — asset management', () => {
+  /**
+   * Source: scenarios2.feature — "Upload Image Asset"
+   * @as_student @no_mobile
+   *
+   * FIXME: requires a physical test fixture file ("artist_image_1.png") and
+   * native file-input handling via Playwright's setInputFiles().  The Manage
+   * Assets dialog uses a hidden <input type="file"> injected by the uploader;
+   * mapping its path is non-trivial without a pre-built asset fixture in the
+   * test package.  Deferring until test assets are available.
+   */
+
+  test.fixme(
+    'upload and delete image asset via Manage Assets dialog',
+    async () => {},
   );
 });

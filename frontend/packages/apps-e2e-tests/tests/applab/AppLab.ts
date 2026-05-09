@@ -52,6 +52,9 @@ export class AppLab {
   /** Data table grid — #dataTable — visible after selecting a table. */
   readonly dataTable: Locator;
 
+  /** Debug console output — #debug-output — accumulates console.log lines. */
+  readonly consoleOutput: Locator;
+
   constructor(page: Page) {
     this.page = page;
     this.runButton = page.locator('#runButton');
@@ -67,6 +70,7 @@ export class AppLab {
     this.recordLabel = page.locator('#divApplab #recordLabel');
     this.dataLibraryContainer = page.locator('#data-library-container');
     this.dataTable = page.locator('#dataTable');
+    this.consoleOutput = page.locator('#debug-output');
   }
 
   /**
