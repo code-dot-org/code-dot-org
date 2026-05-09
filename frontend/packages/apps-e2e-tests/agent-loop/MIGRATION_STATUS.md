@@ -2,7 +2,7 @@
 
 Source: `dashboard/test/ui/features/` (all sub-directories)  
 Target: `frontend/packages/apps-e2e-tests/tests/`  
-As of: 2026-05-09 (updated 2026-05-09 — auth-unblocking pass 14: pixelation scenarios 1–4)
+As of: 2026-05-09 (updated 2026-05-09 — auth-unblocking pass 15: aichat teacher view)
 
 ---
 
@@ -10,7 +10,7 @@ As of: 2026-05-09 (updated 2026-05-09 — auth-unblocking pass 14: pixelation sc
 
 | Status                                         | Count                                                                                                                                             |
 | ---------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Ported                                         | 125 feature files (C+F for pythonlab + mixmoveai; Chromium-only for maker; @no_ci for ai_tutor; C+F+W for rest)                                   |
+| Ported                                         | 126 feature files (C+F for pythonlab + mixmoveai; Chromium-only for maker; @no_ci for ai_tutor; C+F+W for rest)                                   |
 | Fixme stubs — test infra                       | 2 (applab asset upload — needs test fixture file; disallowedsharing profanity — @webpurify API not configured in test env)                        |
 | Covered by ported (rolled in)                  | 5 (maze2, jigsaw2, multi2/3/4 rolled into existing specs)                                                                                         |
 | Partial — @eyes (visual checkpoints annotated) | 5 ported up to snapshot; @eyes auth blocked 3                                                                                                     |
@@ -98,6 +98,7 @@ As of: 2026-05-09 (updated 2026-05-09 — auth-unblocking pass 14: pixelation sc
 | `spritelab/loading_costumes.feature`                           | `tests/legacy/activities/spritelab/spritelab.spec.ts`              | C+F+W    | Piskel editor loads in animation tab; code/anim tab switch                                          |
 | `gamelab/loading_animations.feature`                           | `tests/legacy/activities/gamelab/gamelab.spec.ts`                  | C+F+W    | blank + bear animations load without error after reload; Piskel iframe pen visible                  |
 | `aichat/chat.feature`                                          | `tests/lab2/aichat/aichat.spec.ts`                                 | C+F+W    | chat bot reply color; system prompt save+persist; publish model card info                           |
+| `aichat/view_student_chat_history.feature`                     | `tests/lab2/aichat/aichat-teacher-view.spec.ts`                    | C+F+W    | authorized teacher + student; flag/unflag + thumbs-up feedback; test student model                  |
 | `ai_tutor/chat.feature`                                        | `tests/lab2/ai-tutor/ai-tutor.spec.ts`                             | @no_ci   | App Lab + Python Lab + Weblab2 AI Tutor chat; bot reply background color                            |
 
 ### teacher_tools/level_types
@@ -244,7 +245,7 @@ session fixture.
 | `droplet.feature`                                                 | ~~@as_student~~ → **ported**                                    |
 | `applab_submittable.feature`                                      | test.fixme — see fixme stubs table                              |
 | `gamelab_submittable.feature`                                     | test.fixme — see fixme stubs table                              |
-| `applab/embed.feature`                                            | @as_student                                                     |
+| `applab/embed.feature`                                            | ~~@as_student~~ → **ported**                                    |
 | `applab/html_sanitization.feature`                                | ~~@as_student~~ → **ported**                                    |
 | `applab/scenarios.feature` (scenarios 2+)                         | ~~@as_student~~ → **ported**                                    |
 | `applab/scenarios2.feature` (scenario 3 — asset upload)           | test.fixme — needs artist_image_1.png test fixture              |
@@ -255,7 +256,7 @@ session fixture.
 | `gamelab/loading_animations.feature`                              | ~~@as_student~~ → **ported**                                    |
 | `aichat/chat.feature`                                             | ~~student auth~~ → **ported**                                   |
 | `aichat/chat_multimodal.feature`                                  | @no_ci; image upload + vision                                   |
-| `aichat/view_student_chat_history.feature`                        | teacher auth (AI chat feature)                                  |
+| `aichat/view_student_chat_history.feature`                        | ~~teacher auth~~ → **ported**                                   |
 | `ai_tutor/chat.feature`                                           | ~~student auth~~ → **ported** @no_ci                            |
 | `manage_assets.feature`                                           | asset upload state                                              |
 | `acquisition_products/curriculum_catalog_assign_unassign.feature` | test.fixme — see fixme stubs table                              |

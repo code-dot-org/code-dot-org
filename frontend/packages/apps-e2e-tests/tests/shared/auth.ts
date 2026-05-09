@@ -402,6 +402,16 @@ export async function createSection(page: Page): Promise<SectionInfo> {
 }
 
 /**
+ * Options for {@link createSectionWithCourse}.
+ *
+ * @property aiChatEnabled - when true, sets ai_chat_access_level: 'essential_only'
+ *   on the section.  Mirrors `with AI chat enabled` in section_management_steps.rb.
+ */
+interface CreateSectionWithCourseOptions {
+  aiChatEnabled?: boolean;
+}
+
+/**
  * Creates a student section pre-assigned to a course unit for the currently
  * signed-in teacher (test-only API).
  * Mirrors `I create a new student section assigned to course X unit N`.
@@ -409,12 +419,14 @@ export async function createSection(page: Page): Promise<SectionInfo> {
  * @param page - Playwright page holding the teacher session
  * @param courseName - e.g. "allthethingscourse"
  * @param unitPosition - 1-based unit index
+ * @param options - optional flags; pass `{aiChatEnabled: true}` to enable AI chat
  * @returns section join code and numeric ID
  */
 export async function createSectionWithCourse(
   page: Page,
   courseName: string,
   unitPosition: number,
+  {aiChatEnabled = false}: CreateSectionWithCourseOptions = {},
 ): Promise<SectionInfo> {
   const csrf = await page
     .locator('meta[name="csrf-token"]')
@@ -426,7 +438,11 @@ export async function createSectionWithCourse(
         'Content-Type': 'application/json',
         'X-CSRF-Token': csrf ?? '',
       },
-      data: {course_name: courseName, unit_position: unitPosition},
+      data: {
+        course_name: courseName,
+        unit_position: unitPosition,
+        ...(aiChatEnabled ? {ai_chat_access_level: 'essential_only'} : {}),
+      },
     },
   );
   if (!resp.ok()) {
@@ -442,9 +458,13 @@ export async function createSectionWithCourse(
  * Creates a teacher with authorized-teacher access and signs in.
  * Mirrors `I create a teacher named "..." + I give user "..." authorized teacher permission`
  * from account_steps.rb: create_user(teacher) + POST /api/test/authorized_teacher_access.
+ *
+ * @returns email, password, and display name for the new teacher account
  */
-export async function createAuthorizedTeacher(page: Page): Promise<void> {
-  await createTeacher(page);
+export async function createAuthorizedTeacher(
+  page: Page,
+): Promise<UserCredentials> {
+  const credentials = await createTeacher(page);
 
   const csrf = await page
     .locator('meta[name="csrf-token"]')
@@ -460,6 +480,36 @@ export async function createAuthorizedTeacher(page: Page): Promise<void> {
   if (!resp.ok()) {
     throw new Error(
       `authorized_teacher_access failed: ${resp.status()} — ${await resp.text()}`,
+    );
+  }
+
+  return credentials;
+}
+
+/**
+ * Enrolls the currently signed-in student into a section by join code.
+ * Mirrors `I join the section` from section_management_steps.rb
+ * (uses direct POST rather than navigating the join UI).
+ *
+ * @param page - Playwright page holding the student session
+ * @param sectionCode - section join code returned by {@link createSectionWithCourse}
+ */
+export async function joinSection(
+  page: Page,
+  sectionCode: string,
+): Promise<void> {
+  const csrf = await page
+    .locator('meta[name="csrf-token"]')
+    .getAttribute('content');
+  const resp = await page.request.post(`/join/${sectionCode}`, {
+    headers: {
+      'Content-Type': 'application/json',
+      'X-CSRF-Token': csrf ?? '',
+    },
+  });
+  if (!resp.ok()) {
+    throw new Error(
+      `join section failed: ${resp.status()} — ${await resp.text()}`,
     );
   }
 }

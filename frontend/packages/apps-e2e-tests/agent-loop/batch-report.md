@@ -525,6 +525,35 @@ All 3 browsers expected C+F+W.
   as Safari workaround per source comment in feature file.
 - No fixme or skip entries; all 4 scenarios are fully functional.
 
+---
+
+## Batch N+13 — Auth-unblocking pass 15 (aichat teacher view)
+
+**Features ported (passing):**
+
+- `star_labs/aichat/view_student_chat_history.feature` → `tests/lab2/aichat/aichat-teacher-view.spec.ts` (1 scenario)
+
+All 3 browsers expected C+F+W.
+
+**Key notes:**
+
+- Extended `auth.ts` with three additions:
+  - `createAuthorizedTeacher` now returns `UserCredentials` (previously `void`) —
+    backwards-compatible; lets callers retrieve email+password for later `signIn`.
+  - `createSectionWithCourse` gains `{aiChatEnabled?: boolean}` option that appends
+    `ai_chat_access_level: 'essential_only'` to the section creation body. Mirrors
+    `with AI chat enabled` in section_management_steps.rb.
+  - New `joinSection(page, sectionCode)` helper — direct POST to `/join/${sectionCode}`.
+- Single-page session-switching pattern: teacher (authorized) → student (create + join +
+  interact) → teacher again via `signIn(page, teacher.email, teacher.password)`.
+- Teacher panel interaction: wait for `.show-handle` (collapsed), click
+  `.show-handle .fa-chevron-left` to expand, click `#teacher-panel-container tr:nth(1)`
+  (tr[0] = header, tr[1] = first data row), then `dismissTeacherPanel`.
+- Loading overlay: `.uitest-is-loading-overlay` appears briefly after panel close;
+  first `waitFor({state: 'visible'}).catch(() => {})` then `waitFor({state: 'hidden'})`
+  handles both the flash-disappear and normal cases.
+- No fixme or skip entries.
+
 <!-- Agent: append new entries here as fixme/skip placeholders are created.
 
 Format:
