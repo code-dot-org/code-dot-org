@@ -2,7 +2,7 @@
 
 Source: `dashboard/test/ui/features/` (all sub-directories)  
 Target: `frontend/packages/apps-e2e-tests/tests/`  
-As of: 2026-05-09 (updated 2026-05-09 — pass 17: manage_assets ported)
+As of: 2026-05-09 (updated 2026-05-09 — pass 18: tt auth wave 1: feedback + level_summary + feedback_tab)
 
 ---
 
@@ -101,6 +101,9 @@ As of: 2026-05-09 (updated 2026-05-09 — pass 17: manage_assets ported)
 | `aichat/view_student_chat_history.feature`                     | `tests/lab2/aichat/aichat-teacher-view.spec.ts`                    | C+F+W    | authorized teacher + student; flag/unflag + thumbs-up feedback; test student model                               |
 | `ai_tutor/chat.feature`                                        | `tests/lab2/ai-tutor/ai-tutor.spec.ts`                             | @no_ci   | App Lab + Python Lab + Weblab2 AI Tutor chat; bot reply background color                                         |
 | `star_labs/manage_assets.feature`                              | `tests/legacy/manage-assets/manage-assets.spec.ts`                 | C+F+W    | 4 scenarios: record-audio (Chrome/skip Firefox), audio upload+preview, image thumbnail new-tab, WebLab no-record |
+| `teacher_tools/feedback.feature`                               | `tests/legacy/teacher-tools/recommended-blocks-feedback.spec.ts`   | C+F+W    | @as_student; recommended bee blocks feedback + hint-request cycle                                                |
+| `teacher_tools/level_summary.feature` (non-@eyes)              | `tests/legacy/teacher-tools/level-summary.spec.ts`                 | C+F+W    | check for understanding: submit response → teacher show/hide names → hide response                               |
+| `teacher_tools/instructions/feedback_tab.feature`              | `tests/legacy/teacher-tools/feedback-tab.spec.ts`                  | C+F+W    | student sees Rubric tab (no submit); teacher submits rubric feedback; student sees result                        |
 
 ### teacher_tools/level_types
 
@@ -378,11 +381,11 @@ scenarios worth porting independently.
 | `teacher_tools/cached_level_page.feature`                                            | teacher + section setup                                   |
 | `teacher_tools/certificates/*.feature`                                               | auth + email delivery                                     |
 | `teacher_tools/encrypted_level.feature`                                              | @properties_encryption_key                                |
-| `teacher_tools/feedback.feature`                                                     | teacher feedback on student work (auth)                   |
+| `teacher_tools/feedback.feature`                                                     | ~~auth~~ → **ported** (no auth needed; `@as_student`)     |
 | `teacher_tools/hidden_scripts_eyes.feature`                                          | @eyes                                                     |
 | `teacher_tools/hidden_stages_eyes.feature`                                           | @eyes                                                     |
 | `teacher_tools/hour_of_code/hoc_batch_certificates.feature`                          | teacher + section auth                                    |
-| `teacher_tools/instructions/feedback_tab.feature`                                    | @as_taught_student                                        |
+| `teacher_tools/instructions/feedback_tab.feature`                                    | ~~@as_taught_student~~ → **ported** C+F+W                 |
 | `teacher_tools/instructions/feedback_tab_eyes.feature`                               | @eyes                                                     |
 | `teacher_tools/instructions/csp_top_instructions_eyes.feature`                       | @eyes                                                     |
 | `teacher_tools/instructions/hoc_top_instructions.feature`                            | @as_student                                               |
@@ -393,7 +396,7 @@ scenarios worth porting independently.
 | `teacher_tools/lesson_lock_retake.feature`                                           | same                                                      |
 | `teacher_tools/lesson_show.feature`                                                  | @as_teacher                                               |
 | `teacher_tools/level_completion.feature`                                             | teacher view of student completion                        |
-| `teacher_tools/level_summary.feature`                                                | @as_taught_student                                        |
+| `teacher_tools/level_summary.feature`                                                | ~~@as_taught_student~~ → **ported** (non-@eyes scenario)  |
 | `teacher_tools/level_video.feature`                                                  | @as_taught_student                                        |
 | `teacher_tools/modular_courses.feature`                                              | teacher auth + modular course state                       |
 | `teacher_tools/pairing.feature`                                                      | two-session pairing flow                                  |

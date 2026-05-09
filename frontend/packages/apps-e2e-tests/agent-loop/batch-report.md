@@ -630,3 +630,31 @@ directly — no need to `show()` the input element first as Selenium did.
 **Firefox `record-audio` skip:** the `#record-asset` button is absent in Firefox
 (microphone API not exposed). Marked with `test.skip(browserName === 'firefox', …)`
 rather than `@no_firefox` tag to keep the skip explicit in source.
+
+## Batch N+16 — teacher_tools auth wave 1
+
+**Feature files:** `teacher_tools/feedback.feature`, `teacher_tools/level_summary.feature`, `teacher_tools/instructions/feedback_tab.feature`  
+**Playwright specs:** `tests/legacy/teacher-tools/{recommended-blocks-feedback,level-summary,feedback-tab}.spec.ts`  
+**Result:** 4/4 C+F+W (all 3 browsers)
+
+### Patterns resolved
+
+**`#overlay` (Bee levels):** Game-intro overlay intercepts `#runButton` click on
+`noautoplay=true` levels. Dismissed via `page.evaluate(() => document.querySelector('#overlay')?.click())`.
+App Lab levels (lesson 38) do not have this overlay.
+
+**`.editor-column` strict mode:** App Lab levels render two `.editor-column`
+elements — the left instructions/rubric panel and the toolbox column. Used
+`.first()` throughout for the instructions panel.
+
+**`label:text(...)` invalid:** Playwright does not support `:text()` as a CSS
+pseudo-class. Used `page.locator('label').filter({hasText: ...})` instead.
+
+**`createTeacherAssociatedStudent` + student re-login:** For `feedback_tab`
+scenario 2 (teacher submits, student reads back), used individual
+`createAuthorizedTeacher` + `createSection` + `createStudent` + `joinSection`
+helpers to capture student credentials for the final sign-in step.
+
+### Fixme decisions
+
+None — all ported scenarios ran cleanly with no fixme stubs.
