@@ -2577,19 +2577,28 @@ class UnitTest < ActiveSupport::TestCase
 
   test 'update_lesson_outlines destroys missing lessons before creating new ones (key reuse)' do
     # Repro: a user deletes lesson "x" from the UI, then re-runs the AI
-    # outline which happens to suggest a new lesson with the same key "x".
-    # If we created the new one before destroying the old, the unique
-    # (script_id, key) index would 422 the save.
+    # outline which happens to suggest a new lesson with the same key "x"
+    # and a fresh prompt. If we created the new one before destroying the
+    # old, the unique (script_id, key) index would 422 the save.
     unit = create(:script)
     Rails.application.config.stubs(:levelbuilder_mode).returns false
     group = create(:lesson_group, script: unit, user_facing: true)
-    create(:lesson, script: unit, lesson_group: group, name: 'Old', key: 'x')
+    old = create(:lesson, script: unit, lesson_group: group, name: 'Old', key: 'x')
+    old.update!(properties: old.properties.merge('generate_outline' => 'old prompt'))
 
-    unit.update_lesson_outlines([{'key' => 'x', 'name' => 'New'}])
+    unit.update_lesson_outlines([
+                                  {'key' => 'x', 'name' => 'New', 'generateOutline' => 'new prompt'}
+                                ]
+)
 
     unit.reload
     assert_equal 1, unit.lessons.count
-    assert_equal 'New', unit.lessons.first.name
+    fresh = unit.lessons.first
+    assert_equal 'New', fresh.name
+    # The new prompt lands on the freshly-created lesson — the old row
+    # (and its old prompt) is gone.
+    assert_equal 'new prompt', fresh.generate_outline
+    refute_equal old.id, fresh.id
   end
 
   test 'update_lesson_outlines requires key and name on new lesson entries' do
