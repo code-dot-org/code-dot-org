@@ -55,9 +55,13 @@ export class AppLab {
   /** Debug console output — #debug-output — accumulates console.log lines. */
   readonly consoleOutput: Locator;
 
+  /** Reset button — stops the running program and restores initial state. */
+  readonly resetButton: Locator;
+
   constructor(page: Page) {
     this.page = page;
     this.runButton = page.locator('#runButton');
+    this.resetButton = page.locator('#resetButton');
     this.designModeButton = page.locator('#designModeButton');
     this.dataModeButton = page.locator('#dataModeButton');
     this.codeModeButton = page.locator('#codeModeButton');
@@ -269,5 +273,59 @@ export class AppLab {
     await this.page
       .locator('#showVersionsModal')
       .waitFor({state: 'hidden', timeout: 15_000});
+  }
+
+  /**
+   * Open the project share dialog, navigate to the Embed tab, and return the
+   * embed page URL as a relative path (e.g. `/projects/applab/<id>/embed`).
+   *
+   * Mirrors the Cucumber `I navigate to the embedded version of my project`
+   * flow from applab.rb: click .project_share → Show advanced options → Embed
+   * → read the <iframe src="..."> value from the textarea.
+   *
+   * @param hideSource - when true, also ticks "Hide ability to view code"
+   *   (mirrors `I navigate to the embedded version of my project with source hidden`)
+   * @returns relative URL path suitable for page.goto()
+   */
+  async getEmbedUrl(hideSource = false): Promise<string> {
+    await this.page.locator('.project_share').first().click();
+    await this.page
+      .locator('#project-share')
+      .waitFor({state: 'visible', timeout: 15_000});
+
+    // Expand advanced options to reveal the Embed tab.
+    await this.page
+      .locator('#project-share a', {hasText: 'Show advanced options'})
+      .click();
+    await this.page
+      .locator('#project-share li', {hasText: 'Embed'})
+      .waitFor({state: 'visible', timeout: 10_000});
+    await this.page.locator('#project-share li', {hasText: 'Embed'}).click();
+
+    if (hideSource) {
+      // Tick the "Hide ability to view code" checkbox via its label.
+      await this.page
+        .locator('#project-share label', {hasText: 'Hide ability to view code'})
+        .click();
+    }
+
+    // Read the <iframe src="..."> HTML from the embed textarea.
+    const textarea = this.page.locator('#project-share textarea');
+    await textarea.waitFor({state: 'visible', timeout: 10_000});
+    const iframeHtml = await textarea.inputValue();
+
+    // Close dialog.
+    await this.page.keyboard.press('Escape');
+    await this.page
+      .locator('#project-share')
+      .waitFor({state: 'hidden', timeout: 10_000});
+
+    // Parse src attribute and strip origin so the path works against the test baseURL.
+    const srcMatch = iframeHtml.match(/src="([^"]+)"/);
+    if (!srcMatch) {
+      throw new Error(`No src found in embed HTML: ${iframeHtml}`);
+    }
+    // Strip protocol + host (handles both "//host/path" and "https://host/path").
+    return srcMatch[1].replace(/^(?:https?:)?\/\/[^/]+/, '');
   }
 }

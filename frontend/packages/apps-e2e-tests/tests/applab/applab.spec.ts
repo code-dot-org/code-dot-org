@@ -558,3 +558,121 @@ test.describe('App Lab — asset management', () => {
     async () => {},
   );
 });
+
+/**
+ * Helper: create a new App Lab project, write a button, run it, reset.
+ * Returns after the project is in a clean non-running state.
+ *
+ * @param studentPage - authenticated student Playwright page
+ * @returns AppLab POM instance
+ */
+async function createApplabWithButton(
+  studentPage: import('@playwright/test').Page,
+): Promise<AppLab> {
+  await studentPage.goto('/projects/applab/new');
+  const applab = new AppLab(studentPage);
+  await applab.waitForReady();
+
+  await applab.ensureTextMode();
+  await applab.appendCode("button('hello', 'world');");
+  await applab.run();
+
+  await studentPage
+    .locator('#divApplab > .screen > button#hello')
+    .waitFor({state: 'visible', timeout: 15_000});
+  await expect(
+    studentPage.locator('#divApplab > .screen > button#hello'),
+  ).toContainText('world');
+
+  await applab.resetButton.click();
+  return applab;
+}
+
+test.describe('App Lab — embed player', () => {
+  /**
+   * Source: embed.feature — "App Lab Embed"
+   * @as_student @no_mobile
+   *
+   * Creates a project, navigates to its embed URL, verifies the player runs
+   * the app, then follows "How it Works (View Code)" from the footer more-menu
+   * into a new tab and confirms the full editor loads there.
+   */
+  test(
+    'embed player runs app and How it Works link opens editor in new tab',
+    {tag: '@no_mobile'},
+    async ({studentPage}) => {
+      const applab = await createApplabWithButton(studentPage);
+      const embedPath = await applab.getEmbedUrl();
+      await studentPage.goto(embedPath);
+
+      // Embedded player shows a play button; click to run the app.
+      await studentPage
+        .locator('.fa-play')
+        .waitFor({state: 'visible', timeout: 30_000});
+      await studentPage.locator('.fa-play').click();
+      await studentPage
+        .locator('#divApplab > .screen > button#hello')
+        .waitFor({state: 'visible', timeout: 15_000});
+
+      // Open the footer more-menu.
+      await studentPage
+        .locator('button.more-link')
+        .waitFor({state: 'visible', timeout: 10_000});
+      await studentPage.locator('button.more-link').click();
+
+      // "How it Works (View Code)" link opens editor in a new tab.
+      const howItWorksLink = studentPage.locator('a', {
+        hasText: 'How it Works (View Code)',
+      });
+      await howItWorksLink.waitFor({state: 'visible', timeout: 10_000});
+
+      const newTabPromise = studentPage.context().waitForEvent('page');
+      await howItWorksLink.click();
+      const newTab = await newTabPromise;
+
+      await newTab
+        .locator('#codeWorkspaceWrapper')
+        .waitFor({state: 'visible', timeout: 30_000});
+      await newTab.close();
+    },
+  );
+});
+
+test.describe('App Lab — embed player without source', () => {
+  /**
+   * Source: embed.feature — "App Lab Embed without Source"
+   * @as_student @no_mobile
+   *
+   * Creates a project and navigates to its source-hidden embed URL.
+   * The app must run inside the embedded player, and the footer more-menu
+   * must be present but must NOT contain a "How it Works (View Code)" link
+   * (source is intentionally hidden from viewers).
+   */
+  test(
+    'embed player without source hides How it Works link',
+    {tag: '@no_mobile'},
+    async ({studentPage}) => {
+      const applab = await createApplabWithButton(studentPage);
+      const embedPath = await applab.getEmbedUrl(true);
+      await studentPage.goto(embedPath);
+
+      await studentPage
+        .locator('.fa-play')
+        .waitFor({state: 'visible', timeout: 30_000});
+      await studentPage.locator('.fa-play').click();
+      await studentPage
+        .locator('#divApplab > .screen > button#hello')
+        .waitFor({state: 'visible', timeout: 15_000});
+
+      await studentPage
+        .locator('button.more-link')
+        .waitFor({state: 'visible', timeout: 10_000});
+      await studentPage.locator('button.more-link').click();
+
+      // Source is hidden — "How it Works (View Code)" must not appear.
+      await expect(
+        studentPage.locator('a', {hasText: 'How it Works (View Code)'}),
+      ).not.toBeVisible();
+    },
+  );
+});
