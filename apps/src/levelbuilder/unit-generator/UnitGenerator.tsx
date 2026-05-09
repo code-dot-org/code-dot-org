@@ -25,7 +25,7 @@ interface UnitGeneratorProps {
 const UnitGenerator: React.FC<UnitGeneratorProps> = ({unit}) => {
   const initial = useMemo(() => buildInitialState(unit), [unit]);
   const [lessonSpecs, setLessonSpecs] = useState<LessonSpec[]>(initial);
-  const [outline, setOutline] = useState<string>('');
+  const [outline, setOutline] = useState<string>(unit.generateOutline || '');
   const [isOutlining, setIsOutlining] = useState(false);
   const [outlineError, setOutlineError] = useState<string | null>(null);
   const [isSaving, setIsSaving] = useState(false);
@@ -183,7 +183,15 @@ const UnitGenerator: React.FC<UnitGeneratorProps> = ({unit}) => {
     });
 
     try {
-      const result = await saveLessonOutlines(unit.editUnitUrl, payload);
+      // Always send the outline alongside lessons so a cleared-then-saved
+      // outline actually clears on the server. The empty string is the
+      // signal for "no outline"; the server treats anything (including '')
+      // as an explicit overwrite.
+      const result = await saveLessonOutlines(
+        unit.editUnitUrl,
+        payload,
+        outline.trim()
+      );
       // Pair the server's freshly-saved Lesson rows back to the spec list
       // by key, so the success dialog can show paths even for newly-created
       // lessons (whose ids we didn't have before this round-trip).
@@ -204,7 +212,7 @@ const UnitGenerator: React.FC<UnitGeneratorProps> = ({unit}) => {
     } finally {
       setIsSaving(false);
     }
-  }, [validationError, lessonSpecs, unit]);
+  }, [validationError, lessonSpecs, unit, outline]);
 
   const dialogOpen = isSaving || summary !== null || saveError !== null;
   const totalToSave = lessonSpecs.length;
@@ -236,6 +244,7 @@ const UnitGenerator: React.FC<UnitGeneratorProps> = ({unit}) => {
         isOutlining={isOutlining}
         disabled={isSaving}
         error={outlineError}
+        defaultOpen={!!(unit.generateOutline || '').trim()}
       />
 
       <div className={moduleStyles.lessonList}>

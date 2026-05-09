@@ -9,6 +9,10 @@ interface UnitOutlineBlockProps {
   isOutlining: boolean;
   disabled: boolean;
   error: string | null;
+  // Controls only the initial render — the user can still toggle the
+  // <details> open/closed afterward and React won't fight them, since
+  // this prop is computed once at mount from the loaded unit.
+  defaultOpen: boolean;
 }
 
 const UnitOutlineBlock: React.FC<UnitOutlineBlockProps> = ({
@@ -18,8 +22,9 @@ const UnitOutlineBlock: React.FC<UnitOutlineBlockProps> = ({
   isOutlining,
   disabled,
   error,
+  defaultOpen,
 }) => (
-  <details className={moduleStyles.outlineBlock} open>
+  <details className={moduleStyles.outlineBlock} open={defaultOpen}>
     <summary>Optional: generate the lessons below from a unit outline</summary>
     <p className={moduleStyles.outlineHelp}>
       Describe the unit as a whole — what it teaches, who it's for, what the

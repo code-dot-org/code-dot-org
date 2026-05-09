@@ -20,12 +20,19 @@ export interface LessonOutlinePayload {
 // `editUnitUrl` is the page's edit-page URL (already passed in from the
 // server); we swap the trailing /edit for /lesson_outlines, which sits
 // at the same route family in unit_routes for both URL forms.
+//
+// `generateOutline` (when supplied) is persisted on the Unit so reloads
+// of the /generate page restore the unit-level prompt. Pass undefined to
+// leave the persisted value alone; pass '' to clear it.
 export async function saveLessonOutlines(
   editUnitUrl: string,
-  lessons: LessonOutlinePayload[]
+  lessons: LessonOutlinePayload[],
+  generateOutline?: string
 ): Promise<{lessons: SerializedLesson[]}> {
   const url = editUnitUrl.replace(/\/edit$/, '/lesson_outlines');
-  const response = await HttpClient.put(url, JSON.stringify({lessons}), true, {
+  const body: Record<string, unknown> = {lessons};
+  if (generateOutline !== undefined) body.generateOutline = generateOutline;
+  const response = await HttpClient.put(url, JSON.stringify(body), true, {
     'Content-Type': 'application/json;charset=UTF-8',
     Accept: 'application/json',
   });

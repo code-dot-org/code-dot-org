@@ -19,6 +19,9 @@ export interface ExistingUnitData {
   // read-only banner.
   multipleLessonGroups: boolean;
   editUnitUrl: string;
+  // Persisted unit-level outline prompt. The page restores it on reload
+  // so the levelbuilder doesn't have to retype it.
+  generateOutline?: string | null;
 }
 
 // One row in the editable card list. Pre-existing lessons round-trip via
