@@ -270,6 +270,114 @@ All pass C+F+W.
 
 ---
 
+---
+
+## Batch N+5 — Auth-unblocking pass 7 (App Lab versions)
+
+**Features ported (passing):**
+
+- `applab/versions.feature` (scenarios 1–3) → `tests/applab/applab-versions.spec.ts` (script level restore; project load/reload checkpoint; version interval checkpoint)
+
+All 3 pass C+F+W.
+
+**New AppLab POM methods:**
+
+- `insertCodeAtCursor(code)` — inserts at current cursor position without `navigateFileEnd()`. Mirrors Cucumber `I add code "..." to ace editor` from `droplet_steps.rb` (`onTextInput()` at cursor position 0 after reload → prepends to existing content).
+- `getAceEditorCode()` — returns `aceEditor.getValue().trim()`, matching the Cucumber `ace editor code is equal to "..."` assertion step. Distinct from `getDropletContents()`, which does not trim and can include a trailing newline on saved levels.
+
+**Key techniques:**
+
+- `isInitialSaveComplete()` / `isInitialCaptureComplete()` via `window.dashboard.project.__TestInterface` — poll with `page.waitForFunction()` to confirm project save/thumbnail-capture before proceeding.
+- `setSourceVersionInterval(1)` reduces checkpoint interval to 1 second; `waitForTimeout(1500)` lets it elapse before the next run.
+- Version history `button.btn-info` is a `<button>` nested inside `<a target="_blank" href="...">`. Changing the anchor's target to `_parent` (via `makeLinksCurrentTab`) causes a click on the button to navigate in the current tab. `Promise.all([waitForNavigation(), button.click()])` captures the navigation.
+- View-only mode assertion: `#workspace-header-span` contains text "View only" on a restored-version URL.
+- Opened dialog close: `page.keyboard.press('Escape')` closes the jQuery UI `#showVersionsModal`.
+
+### versions.feature scenarios 4–5 — multi-tab conflict resolution
+
+- **Source:** `applab/versions.feature` — "Project page refreshes when other client adds a newer version" / "…replaces current version"
+- **Test file:** `tests/applab/applab-versions.spec.ts`
+- **Status:** fixme
+- **Reason:** Both scenarios require two coordinated browser contexts (tab 0 + tab 1). Playwright supports this via `browser.newContext()` + `newPage()`, but the scenarios also require simulating a page-level navigation event triggered by the server detecting a version conflict. The server-side conflict detection depends on specific version IDs that are created during the test run, making coordination across two contexts fragile. 2 fixme stubs added.
+
+---
+
+## Batch N+6 — Auth-unblocking pass 8 (App Lab data)
+
+**Features ported (passing):**
+
+- `applab/data_blocks.feature` → `tests/applab/applab-data.spec.ts` (data storage API labels)
+- `applab/level_options.feature` (scenario 1) → `tests/applab/applab-data.spec.ts` (pre-populated table data)
+- `applab/data_tab.feature` → `tests/applab/applab-data.spec.ts` (dataset import + table create/add/edit + key-value add/edit)
+
+All pass C+F+W.
+
+**Root cause of data tables tab failure — ColumnHeader focus-steal:**
+
+`DataTable.render()` always ensures at least one user column: when `tableColumns.length === 1` (only `id`),
+it pushes `column1` and sets the local `editingColumn = 'column1'`. `ColumnHeader` for `column1` receives
+`isEditing={true}`, which causes `componentDidMount` and `componentDidUpdate` to call `this.input.select()`
+(select + focus the rename input) on every React render while `!hasEnteredText`.
+
+Playwright's `pressSequentially` dispatches keyboard events to the **currently focused element** (via
+`page.keyboard`). After the first keystroke, React re-renders → `componentDidUpdate` steals focus back to
+the rename input → subsequent key events name the column instead of filling the add-row input.
+
+Cucumber's `send_keys` dispatches events **directly to the target element**, immune to focus changes, so
+the Cucumber test passes cleanly.
+
+**Fix (two-part):**
+
+1. Before touching `AddTableRow`, confirm the default column name by pressing Enter on the rename input:
+   `th.uitest-data-table-column:nth(1) input` → `press('Enter')` → `waitFor({state: 'hidden'})`.
+   After the async rename completes, `tableColumns = ['id', 'column1']` (length 2) → `ColumnHeader`
+   exits edit mode → no more focus-stealing.
+
+2. Use `fill('2')` (atomic, sets native value + fires one input event) instead of `pressSequentially('2')`.
+   `fill()` is unaffected by inter-keystroke focus changes.
+
+Also switched `#addDataTableRow button` first → `#addTableRowButton` (explicit ID) and scoped the
+final edit assertion to `.uitest-data-table-row` (not the whole `.uitest-data-table-content` table)
+to avoid multi-element locator ambiguity.
+
+### level_options.feature scenario 2 — teacher/student mode switch
+
+- **Source:** `applab/level_options.feature` — "Level defaults to design mode, students see design mode and teachers see code mode when viewing student work"
+- **Test file:** `tests/applab/applab-data.spec.ts`
+- **Status:** fixme
+- **Reason:** Requires a teacher account with an associated student; needs the full teacher/taught-student session pair. Deferred with an empty test.fixme stub.
+
+---
+
+## Batch N+7 — Auth-unblocking pass 9 (template_backed + csp_instructions + libraries)
+
+**Features ported (passing):**
+
+- `applab/template_backed.feature` → `tests/applab/applab-template.spec.ts`
+- `teacher_tools/instructions/csp_instructions.feature` → `tests/legacy/csp-instructions/csp-instructions.spec.ts`
+- `applab/libraries.feature` (scenario 1) → `tests/applab/applab-libraries.spec.ts`
+
+All pass C+F+W.
+
+**Bugs fixed in first run:**
+
+1. `AppLab.resetToStartingVersion()` strict-mode: `locator('button', {hasText: 'Start over'})` matched both `#clear-puzzle-header` (hidden toolbar) and `button.btn-danger` (modal). Fix: scope to `#showVersionsModal`.
+
+2. `csp-instructions.spec.ts` `.editor-column` strict-mode: two elements match (instructions panel + code editor). Fix: `.first()` on all 8 occurrences.
+
+3. `applab-libraries.spec.ts` unpublish path missing click: the second `openLibraryDialog` call was missing the "Share as library" button click that dispatches `showLibraryCreationDialog()`. Without it `LibraryCreationDialog` never opens, so `#ui-test-unpublish-library` never renders. Fix: extracted `openLibraryDialog(page)` helper used in both publish and unpublish paths.
+
+4. `applab-template.spec.ts` `.projectTemplateWorkspaceIcon` strict-mode: icon rendered in both code-mode header and design-mode header. Fix: `.first()` on all 3 occurrences.
+
+### libraries.feature scenarios 2–3 — multi-user scenarios
+
+- **Source:** `applab/libraries.feature` — "Adding and removing a library from a project" / "Assigning a library to a section as a teacher"
+- **Test file:** `tests/applab/applab-libraries.spec.ts`
+- **Status:** fixme
+- **Reason:** Scenario 2 requires two coordinated student accounts; scenario 3 requires a teacher + student pair. Both deferred with empty test.fixme stubs.
+
+---
+
 <!-- Agent: append new entries here as fixme/skip placeholders are created.
 
 Format:

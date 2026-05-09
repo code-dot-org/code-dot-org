@@ -210,6 +210,23 @@ export class AppLab {
   }
 
   /**
+   * Insert code at the current ACE cursor position. Must call ensureTextMode() first.
+   * Mirrors `I add code "..." to ace editor` from droplet_steps.rb, which does
+   * NOT navigate to file end — it inserts at the current cursor position.  After
+   * a page reload the cursor defaults to position 0, so this effectively prepends.
+   *
+   * @param code - source text to insert at the current cursor position
+   */
+  async insertCodeAtCursor(code: string): Promise<void> {
+    await this.page.evaluate((c: string) => {
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
+      const ace = (window as any).__TestInterface.getDroplet().aceEditor;
+      ace.textInput.focus();
+      ace.onTextInput(c);
+    }, code);
+  }
+
+  /**
    * Return the current Droplet editor text content via __TestInterface.
    * Mirrors `the Droplet ACE text is "..."` from droplet_steps.rb.
    */
@@ -217,6 +234,37 @@ export class AppLab {
     return this.page.evaluate(
       // eslint-disable-next-line @typescript-eslint/no-explicit-any
       () => (window as any).__TestInterface.getDropletContents() as string,
+    );
+  }
+
+  /**
+   * Return the current App Lab code via `Applab.getCode()`.
+   * Mirrors `the droplet code is "..."` from applab.rb, which uses
+   * `Applab.getCode()` — the canonical code getter regardless of block/text mode.
+   * Unlike getDropletContents() or getAceEditorCode(), this includes the trailing
+   * newline that App Lab appends to saved code.
+   */
+  async getCode(): Promise<string> {
+    return this.page.evaluate(
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
+      () => (window as any).Applab.getCode() as string,
+    );
+  }
+
+  /**
+   * Return the ACE editor text trimmed of leading/trailing whitespace.
+   * Mirrors `ace editor code is equal to "..."` from droplet_steps.rb, which
+   * calls `aceEditor.getValue().trim()` rather than `getDropletContents()`.
+   */
+  async getAceEditorCode(): Promise<string> {
+    return this.page.evaluate(
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
+      () =>
+        (
+          (window as any).__TestInterface
+            .getDroplet()
+            .aceEditor.getValue() as string
+        ).trim(),
     );
   }
 
@@ -274,7 +322,11 @@ export class AppLab {
     await this.page
       .locator('#showVersionsModal')
       .waitFor({state: 'visible', timeout: 15_000});
-    const startOver = this.page.locator('button', {hasText: 'Start over'});
+    // Scope to the modal — the main toolbar also has a "Start over" button
+    // (#clear-puzzle-header) which would cause a strict-mode violation.
+    const startOver = this.page
+      .locator('#showVersionsModal')
+      .locator('button', {hasText: 'Start over'});
     await startOver.waitFor({state: 'visible', timeout: 15_000});
     await startOver.click();
     await this.page
