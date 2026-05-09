@@ -210,7 +210,22 @@ class ScriptsController < ApplicationController
     return head :bad_request, json: {message: 'cannot update unmigrated unit'} unless @script.is_migrated
     raw = params[:lessons]
     return head :bad_request, json: {message: 'lessons param required'} unless raw
-    lessons = raw.is_a?(String) ? JSON.parse(raw) : raw
+    # Rails wraps a JSON body's array entries in ActionController::Parameters,
+    # which the model layer can't symbolize-key directly. String body (legacy
+    # callers) goes through JSON.parse; Parameters get explicitly permitted +
+    # converted to plain hashes here so the model just sees Hash<String, _>.
+    lessons =
+      if raw.is_a?(String)
+        JSON.parse(raw)
+      else
+        Array(raw).map do |entry|
+          if entry.respond_to?(:permit)
+            entry.permit(:id, :key, :name, :generateOutline).to_h
+          else
+            entry
+          end
+        end
+      end
     @script.update_lesson_outlines(lessons)
     render json: @script.summarize_for_unit_generate
   rescue StandardError => exception
