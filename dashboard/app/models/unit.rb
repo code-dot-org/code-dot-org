@@ -1133,47 +1133,61 @@ class Unit < ApplicationRecord
       lg.properties = {display_name: 'Lessons'}
     end
 
-    counters = LessonGroup::Counters.new(0, 0, 0, 0)
-    new_lessons = raw_lessons.map do |raw|
-      raw = raw.deep_symbolize_keys
-      lesson =
-        if raw[:id]
-          Lesson.find_by!(script: self, id: raw[:id])
-        else
-          raise 'Lesson key required for new lesson' if raw[:key].blank?
-          raise 'Lesson name required for new lesson' if raw[:name].blank?
-          Lesson.create!(
-            key: raw[:key],
-            script: self,
-            name: raw[:name],
-            relative_position: 0,
-            has_lesson_plan: true
-          )
-        end
-
-      lesson.assign_attributes(
-        lesson_group: target_group,
-        absolute_position: (counters.lesson_position += 1),
-        relative_position: lesson.numbered_lesson? ?
-          (counters.numbered_lesson_count += 1) :
-          (counters.unnumbered_lesson_count += 1)
-      )
-      # Only overwrite generate_outline when the caller supplies a value;
-      # callers that just want to reorder shouldn't accidentally clear an
-      # existing outline by sending nil.
-      if raw.key?(:generateOutline)
-        lesson.generate_outline = raw[:generateOutline]
+    transaction do
+      # Destroy lessons missing from the payload BEFORE creating new ones.
+      # If we did it after, a fresh entry whose key collides with a
+      # just-deleted-in-UI lesson (common when the AI re-suggests an outline
+      # after the user trims the list) would 422 on Lesson.create! because
+      # the soon-to-be-destroyed row still holds the unique (script_id, key)
+      # slot.
+      kept_ids = raw_lessons.filter_map do |raw|
+        raw_sym = raw.respond_to?(:deep_symbolize_keys) ? raw.deep_symbolize_keys : raw.symbolize_keys
+        raw_sym[:id]&.to_i
       end
-      lesson.save! if lesson.changed?
-      lesson
-    end
+      lessons.where.not(id: kept_ids).destroy_all
 
-    target_group.lessons = new_lessons
-    target_group.save!
+      counters = LessonGroup::Counters.new(0, 0, 0, 0)
+      new_lessons = raw_lessons.map do |raw|
+        raw = raw.deep_symbolize_keys
+        lesson =
+          if raw[:id]
+            Lesson.find_by!(script: self, id: raw[:id])
+          else
+            raise 'Lesson key required for new lesson' if raw[:key].blank?
+            raise 'Lesson name required for new lesson' if raw[:name].blank?
+            Lesson.create!(
+              key: raw[:key],
+              script: self,
+              name: raw[:name],
+              relative_position: 0,
+              has_lesson_plan: true
+            )
+          end
 
-    unless unit_generate_outline.nil?
-      self.generate_outline = unit_generate_outline
-      save! if changed?
+        lesson.assign_attributes(
+          lesson_group: target_group,
+          absolute_position: (counters.lesson_position += 1),
+          relative_position: lesson.numbered_lesson? ?
+            (counters.numbered_lesson_count += 1) :
+            (counters.unnumbered_lesson_count += 1)
+        )
+        # Only overwrite generate_outline when the caller supplies a value;
+        # callers that just want to reorder shouldn't accidentally clear an
+        # existing outline by sending nil.
+        if raw.key?(:generateOutline)
+          lesson.generate_outline = raw[:generateOutline]
+        end
+        lesson.save! if lesson.changed?
+        lesson
+      end
+
+      target_group.lessons = new_lessons
+      target_group.save!
+
+      unless unit_generate_outline.nil?
+        self.generate_outline = unit_generate_outline
+        save! if changed?
+      end
     end
 
     if Rails.application.config.levelbuilder_mode
