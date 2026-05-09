@@ -604,3 +604,29 @@ Format:
 - **Status:** fixme | skip
 - **Reason:** <what failed or user decision>
 -->
+
+## Batch N+15 — manage_assets port
+
+**Labs:** Game Lab / WebLab asset management dialog  
+**Source:** `dashboard/test/ui/features/star_labs/manage_assets.feature`  
+**Playwright spec:** `tests/legacy/manage-assets/manage-assets.spec.ts`  
+**Result:** 4/4 C+F+W (1 skipped — Firefox `record-audio` skip as expected)
+
+### Summary
+
+4 scenarios ported without auth requirement. All use anonymous student project
+creation via `/projects/gamelab/new` and `/projects/weblab/new`.
+
+**`.settings-cog` strict mode:** the Game Lab page renders two `.settings-cog`
+elements (one in the toolbar, one in `#show-toolbox-header`). Used `.first()`
+to target the toolbar cog consistently across browsers.
+
+**File upload:** Playwright `setInputFiles` works on `.uitest-hidden-uploader`
+directly — no need to `show()` the input element first as Selenium did.
+
+**New tab (image thumbnail):** `page.context().waitForEvent('page')` in a
+`Promise.all` with the click captures the new tab reliably.
+
+**Firefox `record-audio` skip:** the `#record-asset` button is absent in Firefox
+(microphone API not exposed). Marked with `test.skip(browserName === 'firefox', …)`
+rather than `@no_firefox` tag to keep the skip explicit in source.
