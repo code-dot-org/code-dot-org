@@ -135,14 +135,17 @@ const UnitGenerator: React.FC<UnitGeneratorProps> = ({unit}) => {
 
   const validationError = useMemo(() => {
     if (lessonSpecs.length === 0) return 'Add at least one lesson.';
+    // Match what the server actually requires: non-blank name + key, and
+    // unique keys within the unit (the Lesson model enforces a uniqueness
+    // index on (script_id, key)). No format constraint — legacy lessons
+    // routinely have spaces or arbitrary characters in their keys, and
+    // imposing a kebab-case rule here blocks saves on units that include
+    // them even though the user can't edit those keys from this page.
     const seenKeys = new Set<string>();
     for (const spec of lessonSpecs) {
       if (!spec.name.trim()) return 'Every lesson needs a name.';
       if (!spec.key.trim()) return 'Every lesson needs a key.';
       const k = spec.key.trim();
-      if (!/^[a-z0-9][a-z0-9-]*$/i.test(k)) {
-        return `Lesson keys must be alphanumeric with hyphens: "${k}"`;
-      }
       if (seenKeys.has(k)) return `Duplicate lesson key: ${k}`;
       seenKeys.add(k);
     }
