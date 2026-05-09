@@ -378,6 +378,49 @@ All pass C+F+W.
 
 ---
 
+## Batch N+8 — Auth-unblocking pass 10 (App Lab shared apps)
+
+**Features ported (passing):**
+
+- `applab/shared_apps.feature` → `tests/applab/applab-shared-apps.spec.ts` (7 scenarios: interactive share page behavior)
+
+All 7 pass C+F+W.
+
+**Save mechanism investigation:**
+
+App Lab's autosave fires every 30 s (`AUTOSAVE_INTERVAL`), far too slow for tests.
+Cucumber passes by accident — Selenium's key-by-key input gives the 30 s timer time to
+fire before the share dialog is opened.
+
+Two reliable save flush paths:
+
+- **Code scenarios**: `waitForSaveComplete()` (watches for PUT `/v3/sources/`) set up BEFORE
+  `run()`. `runButtonClickWrapper → serializeAndSave → appModeChanged event →
+saveIfSourcesChanged → PUT` fires synchronously on the run-button click. Await the
+  promise after `resetButton.click()`.
+- **Design scenarios**: set up `waitForSaveComplete()` BEFORE `switchToCodeMode()`.
+  `onInterfaceModeChange(CODE) → serializeAndSave → saveIfSourcesChanged → PUT` fires on
+  the mode-switch click.
+
+`dashboard.project.save()` via `page.evaluate()` is NOT used — `saveSourceAndHtml_()`
+calls `utils.reload()` on 401/409 responses, destroying Playwright's execution context.
+
+**Bug fixed in first run:**
+
+- Textarea scenario: `toHaveValue` fails with "Not an input element" because App Lab
+  wraps `<textarea>` in a `<div id="text_area1">`. `.screen > #text_area1` selects
+  the outer div; `.fill()` reaches the inner textarea (Playwright contenteditable path)
+  but `toHaveValue` rejects non-input elements. Fix: `toContainText` checks the div's
+  text content instead.
+
+**New AppLab POM additions (used here):**
+
+- `waitForSaveComplete(timeout)` — returns `page.waitForResponse()` filtering PUT to
+  `/v3/sources/`. Must be called BEFORE the save-triggering action.
+- `getShareUrlFromDialog()` — opens `.project_share`, reads URL from
+  `#sharing-dialog-copy-button` via `getAttribute('value')` (MuiButton, not `<input>`),
+  closes dialog, strips origin.
+
 <!-- Agent: append new entries here as fixme/skip placeholders are created.
 
 Format:

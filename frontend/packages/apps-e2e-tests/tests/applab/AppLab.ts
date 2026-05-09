@@ -227,6 +227,59 @@ export class AppLab {
   }
 
   /**
+   * Return a Promise that resolves when the next PUT to /v3/sources/ completes.
+   * Must be called BEFORE the action that triggers the save (run-button click
+   * or code-mode switch) so the watcher is in place before the request fires.
+   * Mirrors the mechanism that runButtonClickWrapper → serializeAndSave →
+   * appModeChanged → saveIfSourcesChanged uses to persist code.
+   */
+  waitForSaveComplete(
+    timeout = 30_000,
+  ): Promise<import('@playwright/test').Response> {
+    return this.page.waitForResponse(
+      resp =>
+        /\/v3\/sources\//.test(resp.url()) && resp.request().method() === 'PUT',
+      {timeout},
+    );
+  }
+
+  /**
+   * Open the project share dialog, read the share URL from
+   * #sharing-dialog-copy-button (mirrors `I save the share URL` from
+   * project_steps.rb), close the dialog, and return the URL as a relative
+   * path suitable for page.goto().
+   *
+   * Forces a save first via dashboard.project.save() so the share page
+   * reflects the current code/design — autosave debounce is not reliable
+   * enough to guarantee this without the explicit flush.
+   */
+  async getShareUrlFromDialog(): Promise<string> {
+    // Open the share dialog (mirrors "I open the project share dialog"
+    // from project_steps.rb: click .project_share, wait for dialog).
+    await this.page.locator('.project_share').first().click();
+    await this.page
+      .locator('#project-share')
+      .waitFor({state: 'visible', timeout: 15_000});
+
+    // Read the share URL from the copy button's value attribute.
+    // #sharing-dialog-copy-button is a MuiButton (<button> element) with the
+    // URL in its value= attribute.  inputValue() only works for input/select,
+    // so use getAttribute() instead — mirrors Cucumber's .value JS access.
+    const copyButton = this.page.locator('#sharing-dialog-copy-button');
+    await copyButton.waitFor({state: 'visible', timeout: 10_000});
+    const fullUrl = await copyButton.getAttribute('value');
+
+    // Close dialog.
+    await this.page.keyboard.press('Escape');
+    await this.page
+      .locator('#project-share')
+      .waitFor({state: 'hidden', timeout: 10_000});
+
+    // Strip origin so the path works against the test baseURL.
+    return fullUrl.replace(/^(?:https?:)?\/\/[^/]+/, '');
+  }
+
+  /**
    * Return the current Droplet editor text content via __TestInterface.
    * Mirrors `the Droplet ACE text is "..."` from droplet_steps.rb.
    */
@@ -257,15 +310,11 @@ export class AppLab {
    * calls `aceEditor.getValue().trim()` rather than `getDropletContents()`.
    */
   async getAceEditorCode(): Promise<string> {
-    return this.page.evaluate(
+    return this.page.evaluate(() => {
       // eslint-disable-next-line @typescript-eslint/no-explicit-any
-      () =>
-        (
-          (window as any).__TestInterface
-            .getDroplet()
-            .aceEditor.getValue() as string
-        ).trim(),
-    );
+      const iface = (window as any).__TestInterface;
+      return (iface.getDroplet().aceEditor.getValue() as string).trim();
+    });
   }
 
   /**

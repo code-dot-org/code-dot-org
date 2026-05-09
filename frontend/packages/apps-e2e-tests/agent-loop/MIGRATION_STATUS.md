@@ -2,7 +2,7 @@
 
 Source: `dashboard/test/ui/features/` (all sub-directories)  
 Target: `frontend/packages/apps-e2e-tests/tests/`  
-As of: 2026-05-09 (updated 2026-05-09 — auth-unblocking pass 9: applab/template + csp_instructions + applab/libraries)
+As of: 2026-05-09 (updated 2026-05-09 — auth-unblocking pass 10: applab/shared_apps)
 
 ---
 
@@ -10,7 +10,7 @@ As of: 2026-05-09 (updated 2026-05-09 — auth-unblocking pass 9: applab/templat
 
 | Status                                         | Count                                                                                                                                             |
 | ---------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Ported                                         | 117 feature files (C+F for pythonlab + mixmoveai; Chromium-only for maker; @no_ci for ai_tutor; C+F+W for rest)                                   |
+| Ported                                         | 118 feature files (C+F for pythonlab + mixmoveai; Chromium-only for maker; @no_ci for ai_tutor; C+F+W for rest)                                   |
 | Fixme stubs — test infra                       | 1 (applab asset upload — needs test fixture file)                                                                                                 |
 | Covered by ported (rolled in)                  | 5 (maze2, jigsaw2, multi2/3/4 rolled into existing specs)                                                                                         |
 | Partial — @eyes (visual checkpoints annotated) | 5 ported up to snapshot; @eyes auth blocked 3                                                                                                     |
@@ -67,6 +67,7 @@ As of: 2026-05-09 (updated 2026-05-09 — auth-unblocking pass 9: applab/templat
 | `applab/data_tab.feature`                                      | `tests/applab/applab-data.spec.ts`                                 | C+F+W    | dataset import + table create/add/edit + key-value add/edit; ColumnHeader focus-steal fix           |
 | `applab/template_backed.feature`                               | `tests/applab/applab-template.spec.ts`                             | C+F+W    | code persists across levels sharing the same template; `.projectTemplateWorkspaceIcon` → `.first()` |
 | `applab/libraries.feature` (scenario 1)                        | `tests/applab/applab-libraries.spec.ts`                            | C+F+W    | publish + unpublish library; 2 fixme stubs (multi-user scenarios)                                   |
+| `applab/shared_apps.feature`                                   | `tests/applab/applab-shared-apps.spec.ts`                          | C+F+W    | 7 scenarios: share page no-editor, button click, dropdown, radio, checkbox, text input, textarea    |
 | `teacher_tools/instructions/csp_instructions.feature`          | `tests/legacy/csp-instructions/csp-instructions.spec.ts`           | C+F+W    | 9 scenarios: help/tips tab, instructions tab, collapse/expand, resizer, contained levels            |
 | `applab/scenarios3.feature`                                    | `tests/applab/applab.spec.ts`                                      | C+F+W    | HTTP image proxy + clear-puzzle restore                                                             |
 | `applab/html_sanitization.feature`                             | `tests/applab/applab.spec.ts`                                      | C+F+W    | design elements maintain correct parent-child DOM hierarchy                                         |
