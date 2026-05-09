@@ -436,6 +436,25 @@ class Lesson < ApplicationRecord
     }
   end
 
+  # Compact payload for the unit /generate page. Each lesson card needs
+  # its identity, current outline prompt (so the user can edit or skip
+  # regeneration), and direct links to the per-lesson /edit and /generate
+  # pages so the generated set can be opened straight after creation.
+  def summarize_for_unit_generate
+    {
+      id: id,
+      name: name,
+      key: key,
+      generateOutline: generate_outline,
+      lessonEditPath: get_uncached_edit_path,
+      lessonGeneratePath: lesson_generate_path,
+    }
+  end
+
+  def lesson_generate_path
+    get_uncached_edit_path&.sub(%r{/edit\z}, '/generate')
+  end
+
   # Provides all the editable data related to this lesson and its activities for
   # display on the lesson edit page, excluding any lesson attributes which can
   # be edited on the unit edit page (e.g. name and key).

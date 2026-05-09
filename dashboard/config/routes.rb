@@ -472,6 +472,8 @@ Dashboard::Application.routes.draw do
         get 'standards'
         get 'instructions'
         get 'get_rollup_resources'
+        get 'generate', to: 'scripts#generate'
+        put 'lesson_outlines', to: 'scripts#update_lesson_outlines'
       end
 
       resources :lessons, only: [:show, :index], param: 'position', format: false do

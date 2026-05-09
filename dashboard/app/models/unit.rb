@@ -1108,6 +1108,71 @@ class Unit < ApplicationRecord
     end
   end
 
+  # Replace the unit's lessons with `raw_lessons` (an ordered array). Used
+  # by the unit /generate page. Each entry is {id?, key, name,
+  # generateOutline?}: entries with an id reuse the existing Lesson row;
+  # entries without an id create a fresh one. Lessons present in the unit
+  # but missing from `raw_lessons` are destroyed via reassignment of the
+  # group's `lessons` collection. New lessons are placed in the first
+  # user-facing lesson group; if the unit has none, one is created. Refuses
+  # to operate on units with more than one user-facing lesson group, since
+  # cross-group reordering is out of scope for this page.
+  def update_lesson_outlines(raw_lessons)
+    user_facing_groups = lesson_groups.select(&:user_facing)
+    if user_facing_groups.length > 1
+      raise 'Cannot bulk-edit lessons on a unit with multiple user-facing lesson groups.'
+    end
+    target_group = user_facing_groups.first || LessonGroup.find_or_create_by!(
+      key: 'outlines', script: self, user_facing: true, position: 1
+    ) do |lg|
+      lg.properties = {display_name: 'Lessons'}
+    end
+
+    counters = LessonGroup::Counters.new(0, 0, 0, 0)
+    new_lessons = raw_lessons.map do |raw|
+      raw = raw.deep_symbolize_keys
+      lesson =
+        if raw[:id]
+          Lesson.find_by!(script: self, id: raw[:id])
+        else
+          raise 'Lesson key required for new lesson' if raw[:key].blank?
+          raise 'Lesson name required for new lesson' if raw[:name].blank?
+          Lesson.create!(
+            key: raw[:key],
+            script: self,
+            name: raw[:name],
+            relative_position: 0,
+            has_lesson_plan: true
+          )
+        end
+
+      lesson.assign_attributes(
+        lesson_group: target_group,
+        absolute_position: (counters.lesson_position += 1),
+        relative_position: lesson.numbered_lesson? ?
+          (counters.numbered_lesson_count += 1) :
+          (counters.unnumbered_lesson_count += 1)
+      )
+      # Only overwrite generate_outline when the caller supplies a value;
+      # callers that just want to reorder shouldn't accidentally clear an
+      # existing outline by sending nil.
+      if raw.key?(:generateOutline)
+        lesson.generate_outline = raw[:generateOutline]
+      end
+      lesson.save! if lesson.changed?
+      lesson
+    end
+
+    target_group.lessons = new_lessons
+    target_group.save!
+
+    if Rails.application.config.levelbuilder_mode
+      reload
+      write_script_json
+    end
+    reload
+  end
+
   def write_script_json
     # make sure we only write script json in the levelbuilder environment.
     return unless Rails.application.config.levelbuilder_mode
@@ -1403,6 +1468,26 @@ class Unit < ApplicationRecord
     summary[:isCSDCourseOffering] = get_original_unit_group&.course_version&.course_offering&.csd?
     summary[:allowMajorCurriculumChanges] = allow_major_curriculum_changes?
     summary
+  end
+
+  # Compact payload for the /generate page. We deliberately do NOT reuse
+  # summarize_for_unit_edit because that page renders the full editor and
+  # ships hundreds of fields the generator doesn't use. The generator just
+  # needs the unit's identity, the lesson list (each with its existing
+  # generate_outline prompt and a /generate URL), and a flag indicating
+  # whether the page can safely write back changes.
+  def summarize_for_unit_generate
+    user_facing_groups = lesson_groups.select(&:user_facing)
+    {
+      id: id,
+      name: name,
+      title: localized_title,
+      lessons: lessons.map(&:summarize_for_unit_generate),
+      # Only single-lesson-group units are safe targets for the /generate
+      # page's bulk-write path. The page degrades to "edit prompts only"
+      # when multiple user-facing lesson groups are present.
+      multipleLessonGroups: user_facing_groups.length > 1,
+    }
   end
 
   def allow_major_curriculum_changes?
