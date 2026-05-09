@@ -2,7 +2,7 @@
 
 Source: `dashboard/test/ui/features/` (all sub-directories)  
 Target: `frontend/packages/apps-e2e-tests/tests/`  
-As of: 2026-05-09 (updated 2026-05-09 — auth-unblocking pass 10: applab/shared_apps)
+As of: 2026-05-09 (updated 2026-05-09 — auth-unblocking pass 11: fun_o_meter, project_sharing, course_versions)
 
 ---
 
@@ -10,7 +10,7 @@ As of: 2026-05-09 (updated 2026-05-09 — auth-unblocking pass 10: applab/shared
 
 | Status                                         | Count                                                                                                                                             |
 | ---------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Ported                                         | 118 feature files (C+F for pythonlab + mixmoveai; Chromium-only for maker; @no_ci for ai_tutor; C+F+W for rest)                                   |
+| Ported                                         | 121 feature files (C+F for pythonlab + mixmoveai; Chromium-only for maker; @no_ci for ai_tutor; C+F+W for rest)                                   |
 | Fixme stubs — test infra                       | 1 (applab asset upload — needs test fixture file)                                                                                                 |
 | Covered by ported (rolled in)                  | 5 (maze2, jigsaw2, multi2/3/4 rolled into existing specs)                                                                                         |
 | Partial — @eyes (visual checkpoints annotated) | 5 ported up to snapshot; @eyes auth blocked 3                                                                                                     |
@@ -139,6 +139,9 @@ As of: 2026-05-09 (updated 2026-05-09 — auth-unblocking pass 10: applab/shared
 | `teacher_tools/text_to_speech.feature`                             | `tests/legacy/text-to-speech/text-to-speech.spec.ts`                           | C+F+W    | 5 scenarios; inline-audio visibility, TTS button states                                                    |
 | `teacher_tools/unnumbered_lessons.feature`                         | `tests/legacy/unnumbered-lessons/unnumbered-lessons.spec.ts`                   | C+F+W    | 1 scenario; lesson names without numbers in progress + header popup                                        |
 | `teacher_tools/video/fallback_player_caption_dialog_link.feature`  | `tests/legacy/video-fallback-player/video-fallback-player.spec.ts`             | C+F+W    | 1 scenario; fallback VideoJS player caption link (?force_youtube_fallback)                                 |
+| `teacher_tools/course_versions.feature`                            | `tests/legacy/course-versions/course-versions.spec.ts`                         | C+F+W    | 3 scenarios; version warning + dismiss persistence + dropdown selector; dispatchEvent for xmark dismiss    |
+| `teacher_tools/fun_o_meter.feature`                                | `tests/legacy/fun-o-meter/fun-o-meter.spec.ts`                                 | C+F+W    | 1 scenario; rating buttons on solve, persist on reload, gone after rating + continue                       |
+| `teacher_tools/projects/project_sharing.feature`                   | `tests/legacy/project-sharing/project-sharing.spec.ts`                         | C+F+W    | 4 scenarios; young student (age 10); dance share enabled, spritelab disabled, applab redirect to /home     |
 
 ### foundations / platform
 
@@ -362,50 +365,48 @@ All require teacher + section setup, multi-session state, @eyes visual
 comparison, or @properties_encryption_key; none have anonymous-accessible
 scenarios worth porting independently.
 
-| Feature file                                                               | Blocker                                                   |
-| -------------------------------------------------------------------------- | --------------------------------------------------------- |
-| `teacher_tools/assign_modular_course.feature`                              | teacher + section auth                                    |
-| `teacher_tools/below_visualization.feature`                                | @eyes only                                                |
-| `teacher_tools/cached_level_page.feature`                                  | teacher + section setup                                   |
-| `teacher_tools/certificates/*.feature`                                     | auth + email delivery                                     |
-| `teacher_tools/course_versions.feature`                                    | @as_student + assigned-course state                       |
-| `teacher_tools/disallowedsharing.feature`                                  | @as_student sharing flow                                  |
-| `teacher_tools/encrypted_level.feature`                                    | @properties_encryption_key                                |
-| `teacher_tools/feedback.feature`                                           | teacher feedback on student work (auth)                   |
-| `teacher_tools/fun_o_meter.feature`                                        | @as_taught_student feedback rating                        |
-| `teacher_tools/hidden_scripts_eyes.feature`                                | @eyes                                                     |
-| `teacher_tools/hidden_stages_eyes.feature`                                 | @eyes                                                     |
-| `teacher_tools/hour_of_code/hoc_batch_certificates.feature`                | teacher + section auth                                    |
-| `teacher_tools/instructions/feedback_tab.feature`                          | @as_taught_student                                        |
-| `teacher_tools/instructions/feedback_tab_eyes.feature`                     | @eyes                                                     |
-| `teacher_tools/instructions/csp_top_instructions_eyes.feature`             | @eyes                                                     |
-| `teacher_tools/instructions/help_and_tips.feature`                         | @as_student                                               |
-| `teacher_tools/instructions/hoc_top_instructions.feature`                  | @as_student                                               |
-| `teacher_tools/instructions/teacher_only_markdown.feature`                 | @as_taught_student                                        |
-| `teacher_tools/instructions/top_instructions.feature`                      | @as_student                                               |
-| `teacher_tools/instructor_in_training/*.feature`                           | verified/unverified teacher auth states                   |
-| `teacher_tools/lesson_lock.feature`                                        | teacher + section + lock flow                             |
-| `teacher_tools/lesson_lock_retake.feature`                                 | same                                                      |
-| `teacher_tools/lesson_show.feature`                                        | @as_teacher                                               |
-| `teacher_tools/level_completion.feature`                                   | teacher view of student completion                        |
-| `teacher_tools/level_summary.feature`                                      | @as_taught_student                                        |
-| `teacher_tools/level_video.feature`                                        | @as_taught_student                                        |
-| `teacher_tools/modular_courses.feature`                                    | teacher auth + modular course state                       |
-| `teacher_tools/pairing.feature`                                            | two-session pairing flow                                  |
-| `teacher_tools/plc_course_unit_navigation.feature`                         | PLC auth                                                  |
-| `teacher_tools/pl_sections.feature`                                        | PL auth                                                   |
-| `teacher_tools/progress.feature`                                           | teacher view of student progress (auth)                   |
-| `teacher_tools/projects/*.feature` (all except gallery_signed_out)         | auth or @eyes                                             |
-| `teacher_tools/rubrics/*.feature`                                          | auth (teacher + student code submission)                  |
-| `teacher_tools/student_not_started_level_warning.feature`                  | @as_taught_student                                        |
-| `teacher_tools/submittable_eyes.feature`                                   | @eyes                                                     |
-| `teacher_tools/teacher_dashboard/*.feature` (all except demo_section_card) | auth, @eyes, section data                                 |
-| `teacher_tools/teacher_homepage.feature`                                   | teacher auth                                              |
-| `teacher_tools/teacher_lesson_plan.feature`                                | teacher auth                                              |
-| `teacher_tools/teacher_student_toggle.feature`                             | @as_taught_student                                        |
-| `teacher_tools/version_history.feature`                                    | @as_student + project version state                       |
-| `teacher_tools/ai_diff/*.feature`                                          | student auth (AI differentiation feature)                 |
-| `teacher_tools/levelbuilder/*.feature`                                     | levelbuilder auth; curriculum-authoring tool out of scope |
+| Feature file                                                                         | Blocker                                                   |
+| ------------------------------------------------------------------------------------ | --------------------------------------------------------- |
+| `teacher_tools/assign_modular_course.feature`                                        | teacher + section auth                                    |
+| `teacher_tools/below_visualization.feature`                                          | @eyes only                                                |
+| `teacher_tools/cached_level_page.feature`                                            | teacher + section setup                                   |
+| `teacher_tools/certificates/*.feature`                                               | auth + email delivery                                     |
+| `teacher_tools/disallowedsharing.feature`                                            | @as_student sharing flow                                  |
+| `teacher_tools/encrypted_level.feature`                                              | @properties_encryption_key                                |
+| `teacher_tools/feedback.feature`                                                     | teacher feedback on student work (auth)                   |
+| `teacher_tools/hidden_scripts_eyes.feature`                                          | @eyes                                                     |
+| `teacher_tools/hidden_stages_eyes.feature`                                           | @eyes                                                     |
+| `teacher_tools/hour_of_code/hoc_batch_certificates.feature`                          | teacher + section auth                                    |
+| `teacher_tools/instructions/feedback_tab.feature`                                    | @as_taught_student                                        |
+| `teacher_tools/instructions/feedback_tab_eyes.feature`                               | @eyes                                                     |
+| `teacher_tools/instructions/csp_top_instructions_eyes.feature`                       | @eyes                                                     |
+| `teacher_tools/instructions/help_and_tips.feature`                                   | @as_student                                               |
+| `teacher_tools/instructions/hoc_top_instructions.feature`                            | @as_student                                               |
+| `teacher_tools/instructions/teacher_only_markdown.feature`                           | @as_taught_student                                        |
+| `teacher_tools/instructions/top_instructions.feature`                                | @as_student                                               |
+| `teacher_tools/instructor_in_training/*.feature`                                     | verified/unverified teacher auth states                   |
+| `teacher_tools/lesson_lock.feature`                                                  | teacher + section + lock flow                             |
+| `teacher_tools/lesson_lock_retake.feature`                                           | same                                                      |
+| `teacher_tools/lesson_show.feature`                                                  | @as_teacher                                               |
+| `teacher_tools/level_completion.feature`                                             | teacher view of student completion                        |
+| `teacher_tools/level_summary.feature`                                                | @as_taught_student                                        |
+| `teacher_tools/level_video.feature`                                                  | @as_taught_student                                        |
+| `teacher_tools/modular_courses.feature`                                              | teacher auth + modular course state                       |
+| `teacher_tools/pairing.feature`                                                      | two-session pairing flow                                  |
+| `teacher_tools/plc_course_unit_navigation.feature`                                   | PLC auth                                                  |
+| `teacher_tools/pl_sections.feature`                                                  | PL auth                                                   |
+| `teacher_tools/progress.feature`                                                     | teacher view of student progress (auth)                   |
+| `teacher_tools/projects/*.feature` (all except gallery_signed_out + project_sharing) | auth or @eyes                                             |
+| `teacher_tools/rubrics/*.feature`                                                    | auth (teacher + student code submission)                  |
+| `teacher_tools/student_not_started_level_warning.feature`                            | @as_taught_student                                        |
+| `teacher_tools/submittable_eyes.feature`                                             | @eyes                                                     |
+| `teacher_tools/teacher_dashboard/*.feature` (all except demo_section_card)           | auth, @eyes, section data                                 |
+| `teacher_tools/teacher_homepage.feature`                                             | teacher auth                                              |
+| `teacher_tools/teacher_lesson_plan.feature`                                          | teacher auth                                              |
+| `teacher_tools/teacher_student_toggle.feature`                                       | @as_taught_student                                        |
+| `teacher_tools/version_history.feature`                                              | @as_student + project version state                       |
+| `teacher_tools/ai_diff/*.feature`                                                    | student auth (AI differentiation feature)                 |
+| `teacher_tools/levelbuilder/*.feature`                                               | levelbuilder auth; curriculum-authoring tool out of scope |
 
 ---
 

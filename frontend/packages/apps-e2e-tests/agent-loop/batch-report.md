@@ -421,6 +421,38 @@ calls `utils.reload()` on 401/409 responses, destroying Playwright's execution c
   `#sharing-dialog-copy-button` via `getAttribute('value')` (MuiButton, not `<input>`),
   closes dialog, strips origin.
 
+---
+
+## Batch N+9 — Auth-unblocking pass 11 (fun_o_meter, project_sharing, course_versions)
+
+**Features ported (passing):**
+
+- `teacher_tools/fun_o_meter.feature` → `tests/legacy/fun-o-meter/fun-o-meter.spec.ts` (1 scenario)
+- `teacher_tools/projects/project_sharing.feature` → `tests/legacy/project-sharing/project-sharing.spec.ts` (4 scenarios)
+- `teacher_tools/course_versions.feature` → `tests/legacy/course-versions/course-versions.spec.ts` (3 scenarios)
+
+All 8 tests pass C+F+W.
+
+**Key fixes:**
+
+- `fun_o_meter`: used `Bee` POM subclass (concrete) instead of abstract `LegacyBlocklyLab`; used
+  `waitForLabPage()` (includes `dismissOptionalOverlays()`) instead of `waitForReady()` to dismiss
+  the full-screen `#overlay` + InstructionsCsfMiddleCol callout before clicking runButton.
+
+- `project_sharing`: young student (age 10) triggers "Finish creating your account" school-info
+  interstitial without a state. Added `us_state?: string` to `CreateStudentOptions` in `auth.ts`;
+  passing `{age: 10, us_state: 'CO'}` supplies `user_provided_us_state: true` to the test API,
+  suppressing the modal.
+
+- `course_versions` test 1 / test 3: strict-mode violation on `.uitest-CourseScript` (3 elements
+  on multi-unit course page) — added `.first()` to all four locators. Version selector dropdown
+  items render outside viewport — used `.evaluate(el => (el as HTMLElement).click())` to bypass
+  Playwright viewport checking.
+
+- `course_versions` tests 1+2 (Firefox + WebKit): dismiss click on `.fa-xmark` did not propagate
+  through React's synthetic event system reliably. Fixed by switching from `.click()` to
+  `.dispatchEvent('click')` on the xmark icon in both dismiss interactions.
+
 <!-- Agent: append new entries here as fixme/skip placeholders are created.
 
 Format:

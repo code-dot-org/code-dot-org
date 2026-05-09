@@ -140,10 +140,15 @@ export async function createTeacher(
  * @property age - student age; defaults to 16. Pass a value < 13 for
  *   under-13 behaviour (age-restriction redirects, song-filter enforcement).
  * @property name - display name; defaults to an auto-generated unique string.
+ * @property us_state - US state code (e.g. 'CO'). Suppresses the
+ *   school-info interstitial modal on first navigation. Required for young
+ *   students (age < 13) that visit project-creation or other pages that
+ *   trigger the "Finish creating your account" modal.
  */
 interface CreateStudentOptions {
   age?: number;
   name?: string;
+  us_state?: string;
 }
 
 /**
@@ -155,7 +160,7 @@ interface CreateStudentOptions {
  */
 export async function createStudent(
   page: Page,
-  {age = 16, name}: CreateStudentOptions = {},
+  {age = 16, name, us_state}: CreateStudentOptions = {},
 ): Promise<UserCredentials> {
   const ts = Date.now();
   const rand = Math.random().toString(36).slice(2, 8);
@@ -171,6 +176,7 @@ export async function createStudent(
     name: displayName,
     age: String(age),
     sign_in_count: 2,
+    ...(us_state ? {us_state, user_provided_us_state: true} : {}),
   });
   return {email, password, displayName};
 }
@@ -454,6 +460,40 @@ export async function createAuthorizedTeacher(page: Page): Promise<void> {
   if (!resp.ok()) {
     throw new Error(
       `authorized_teacher_access failed: ${resp.status()} — ${await resp.text()}`,
+    );
+  }
+}
+
+/**
+ * Assigns the currently signed-in student to a course unit via the test-only
+ * /api/test/assign_course_and_unit_as_student endpoint.
+ * Mirrors `I am assigned to course "X" unit N` from steps.rb.
+ *
+ * @param page - Playwright page holding the student session
+ * @param courseName - e.g. "ui-test-versioned-script-2017"
+ * @param unitPosition - 1-based unit index
+ */
+export async function assignCourseAndUnit(
+  page: Page,
+  courseName: string,
+  unitPosition: number,
+): Promise<void> {
+  const csrf = await page
+    .locator('meta[name="csrf-token"]')
+    .getAttribute('content');
+  const resp = await page.request.post(
+    '/api/test/assign_course_and_unit_as_student',
+    {
+      headers: {
+        'Content-Type': 'application/json',
+        'X-CSRF-Token': csrf ?? '',
+      },
+      data: {course_name: courseName, unit_position: unitPosition},
+    },
+  );
+  if (!resp.ok()) {
+    throw new Error(
+      `assign_course_and_unit_as_student failed: ${resp.status()} — ${await resp.text()}`,
     );
   }
 }
