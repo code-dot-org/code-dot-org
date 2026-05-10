@@ -33,14 +33,23 @@ $pinned-width-vw: 29;
 // Pins the preview at top-left while the slot above scrolls offscreen.
 // --pinned-scale is written from JS; CSS length-division would work too but
 // has only recently landed across browsers.
+// Set width AND height explicitly. We can't use `height: auto;
+// aspect-ratio: 16 / 9` here: aspect-ratio is only a preferred size and
+// is overridden by min-content sizing, and our child `.fullSizeContainer`
+// keeps its 1920x1080 layout box (transform: scale() doesn't shrink
+// layout). Without an explicit height the pinned box ends up ~1080px
+// tall in layout — visually it paints only the small scaled corner, but
+// the fixed-position box still covers the rest of the screen and blocks
+// clicks. `overflow: hidden` keeps the scaled-but-still-large layout of
+// .fullSizeContainer from poking out beyond the visible box.
 .panelsContainerPinned {
   position: fixed;
   top: 0;
   left: 0;
   z-index: 10;
   width: #{$pinned-width-vw}vw;
-  height: auto;
-  aspect-ratio: 16 / 9;
+  height: calc(#{$pinned-width-vw}vw * 9 / 16);
+  overflow: hidden;
 
   .fullSizeContainer {
     transform: scale(var(--pinned-scale, 0.5));
