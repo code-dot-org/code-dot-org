@@ -125,6 +125,74 @@ export class AppLab {
   }
 
   /**
+   * Wait for App Lab's visible save status after a save-triggering action.
+   * This observes the same readiness a user sees: catch "Saving..." when the
+   * transition is visible, then require "Saved".  If the save is too quick to
+   * catch, a changed saved timestamp is equivalent readiness.
+   *
+   * @param action - user action that triggers an App Lab source save
+   * @param options - set expectSave false when the action may be a no-op
+   */
+  async waitForUiSaveAfter(
+    action: () => Promise<void>,
+    {expectSave = true}: {expectSave?: boolean} = {},
+  ): Promise<void> {
+    const previousTimestamp = await this.currentSavedTimestamp();
+
+    await action();
+
+    const saveStatus = this.page.locator('.project_updated_at');
+    const saveError = this.page.locator('.project-save-error');
+    const savingIndicator = saveStatus.filter({hasText: 'Saving'});
+
+    if (expectSave) {
+      const transition = await Promise.race([
+        savingIndicator
+          .waitFor({state: 'visible', timeout: 60_000})
+          .then(() => 'saving' as const),
+        expect
+          .poll(() => this.currentSavedTimestamp(), {timeout: 60_000})
+          .not.toBe(previousTimestamp)
+          .then(() => 'saved' as const),
+        saveError
+          .waitFor({state: 'visible', timeout: 60_000})
+          .then(() => 'error' as const),
+      ]);
+
+      if (transition === 'error') {
+        throw new Error('App Lab reported a visible save error');
+      }
+    } else {
+      await savingIndicator
+        .waitFor({state: 'visible', timeout: 5_000})
+        .catch(() => undefined);
+    }
+
+    const result = await Promise.race([
+      expect(saveStatus)
+        .toContainText('Saved', {timeout: 60_000})
+        .then(() => 'saved' as const),
+      saveError
+        .waitFor({state: 'visible', timeout: 60_000})
+        .then(() => 'error' as const),
+    ]);
+
+    if (result === 'error') {
+      throw new Error('App Lab reported a visible save error');
+    }
+  }
+
+  /**
+   * Return the dateTime value displayed by the App Lab save indicator.
+   */
+  private async currentSavedTimestamp(): Promise<string | null> {
+    return this.page
+      .locator('.project_updated_at time')
+      .getAttribute('datetime', {timeout: 1_000})
+      .catch(() => null);
+  }
+
+  /**
    * Wait for the key-value output label to become visible.
    * Level 18/8: getKeyValue/setKeyValue blocks print to #keyValueLabel on success.
    */
@@ -253,23 +321,6 @@ export class AppLab {
       ace.textInput.focus();
       ace.onTextInput(c);
     }, code);
-  }
-
-  /**
-   * Return a Promise that resolves when the next PUT to /v3/sources/ completes.
-   * Must be called BEFORE the action that triggers the save (run-button click
-   * or code-mode switch) so the watcher is in place before the request fires.
-   * Mirrors the mechanism that runButtonClickWrapper → serializeAndSave →
-   * appModeChanged → saveIfSourcesChanged uses to persist code.
-   */
-  waitForSaveComplete(
-    timeout = 30_000,
-  ): Promise<import('@playwright/test').Response> {
-    return this.page.waitForResponse(
-      resp =>
-        /\/v3\/sources\//.test(resp.url()) && resp.request().method() === 'PUT',
-      {timeout},
-    );
   }
 
   /**
@@ -413,7 +464,19 @@ export class AppLab {
     await this.page
       .locator('#start-over-button')
       .waitFor({state: 'visible', timeout: 10_000});
+
+    const navigationDone = this.page.waitForEvent('framenavigated', {
+      predicate: frame => frame === this.page.mainFrame(),
+      timeout: 60_000,
+    });
     await this.page.locator('#start-over-button').click();
+    await navigationDone;
+    await this.page.waitForLoadState('domcontentloaded');
+    await this.waitForReady();
+    await expect(this.page.locator('.project_updated_at')).toContainText(
+      'Saved',
+      {timeout: 60_000},
+    );
     await this.page
       .locator('#showVersionsModal')
       .waitFor({state: 'hidden', timeout: 15_000});

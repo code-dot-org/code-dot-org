@@ -1,4 +1,6 @@
-import {createTeacherAssociatedStudent} from '../shared/auth';
+import path from 'path';
+
+import {createTeacherAssociatedStudent, signIn} from '../shared/auth';
 import {expect, test} from '../shared/fixtures';
 
 import {AppLab} from './AppLab';
@@ -30,8 +32,104 @@ function applabLevelUrl(level: number): string {
   return `/courses/allthethingscourse/units/1/lessons/18/levels/${level}?noautoplay=true`;
 }
 
+const FIXTURES = path.resolve(
+  __dirname,
+  '../../../../../dashboard/test/fixtures',
+);
+
+/**
+ * Click an element that performs a full-page navigation and wait only for the
+ * main-frame navigation to reach DOMContentLoaded.  The caller must assert the
+ * next user-visible page state.  Some dashboard actions reload the same URL,
+ * so URL-change waits are not sufficient here.
+ *
+ * @param page - Playwright page to observe
+ * @param click - action that triggers the navigation
+ */
+async function clickAndWaitForMainFrameNavigation(
+  page: import('@playwright/test').Page,
+  click: () => Promise<unknown>,
+): Promise<void> {
+  await Promise.all([
+    page.waitForEvent('framenavigated', {
+      predicate: frame => frame === page.mainFrame(),
+      timeout: 30_000,
+    }),
+    click(),
+  ]);
+  await page.waitForLoadState('domcontentloaded');
+}
+
+/**
+ * Submit the current App Lab assessment level and wait for the post-submit
+ * navigation to settle.  Mirrors `I submit this level` from steps.rb.
+ *
+ * @param page - page with an App Lab assessment level loaded
+ * @param applab - App Lab page object for the loaded page
+ */
+async function submitAppLabLevel(
+  page: import('@playwright/test').Page,
+  applab: AppLab,
+): Promise<void> {
+  await applab.run();
+  await page.locator('#submitButton').waitFor({
+    state: 'visible',
+    timeout: 30_000,
+  });
+  await page.locator('#submitButton').click();
+  await page.locator('.modal').waitFor({state: 'visible', timeout: 15_000});
+
+  await clickAndWaitForMainFrameNavigation(page, () =>
+    page.locator('#confirm-button').click(),
+  );
+}
+
+/**
+ * Open the App Lab Manage Assets dialog via the settings cog.
+ * Mirrors settings_cog_steps.rb: click the visible cog, then the
+ * "Manage Assets" menu item.
+ *
+ * @param applab - App Lab page object for the loaded project
+ */
+async function openManageAssetsDialog(applab: AppLab): Promise<void> {
+  await applab.switchToDesignMode();
+  await applab.page
+    .locator('.settings-cog:visible')
+    .waitFor({state: 'visible', timeout: 15_000});
+  await applab.page.locator('.settings-cog:visible').click();
+  await applab.page
+    .locator(
+      '.ui-test-settings-cog-menu:visible .ui-test-settings-cog-menu-item',
+      {
+        hasText: 'Manage Assets',
+      },
+    )
+    .click();
+  await expect(applab.page.locator('.modal')).toContainText('Manage Assets', {
+    timeout: 15_000,
+  });
+}
+
+/**
+ * Open the teacher panel if it is collapsed, then wait for the student table.
+ *
+ * @param page - teacher-authenticated level page
+ */
+async function openTeacherPanel(
+  page: import('@playwright/test').Page,
+): Promise<void> {
+  const studentTable = page.locator('.student-table');
+  if (!(await studentTable.isVisible({timeout: 5_000}).catch(() => false))) {
+    await page
+      .locator('.show-handle .fa-chevron-left')
+      .evaluate((el: HTMLElement) => el.click());
+  }
+  await studentTable.waitFor({state: 'visible', timeout: 30_000});
+}
+
 test.describe('App Lab — data storage blocks', () => {
   /**
+   * Migration status: COMPLETED
    * Source: data_blocks.feature — "Evaluate Data Blocks"
    * @no_mobile
    *
@@ -55,6 +153,7 @@ test.describe('App Lab — data storage blocks', () => {
 
 test.describe('App Lab — design mode clipping', () => {
   /**
+   * Migration status: COMPLETED
    * Source: clipping.feature — "Load an app to edit and see the blocks unclipped in design mode"
    *
    * After navigating to the App Lab project page and switching to design mode
@@ -80,6 +179,7 @@ test.describe('App Lab — design mode clipping', () => {
 
 test.describe('App Lab — data browser', () => {
   /**
+   * Migration status: COMPLETED
    * Source: level_options.feature — "Table data in level definition appears in data browser"
    * @as_student
    *
@@ -114,6 +214,7 @@ test.describe('App Lab — data browser', () => {
 
 test.describe('App Lab — sharing from script level', () => {
   /**
+   * Migration status: COMPLETED
    * Source: sharing_from_script_level.feature — "Sharing from an App Lab script level"
    * @no_mobile
    *
@@ -139,6 +240,7 @@ test.describe('App Lab — sharing from script level', () => {
 
 test.describe('App Lab — project template workspace icon', () => {
   /**
+   * Migration status: COMPLETED
    * Source: scenarios.feature — (first unnamed scenario)
    *
    * A free /projects/applab page was not created from a project template,
@@ -158,21 +260,18 @@ test.describe('App Lab — project template workspace icon', () => {
 
 test.describe('App Lab — submittable level', () => {
   /**
+   * Migration status: COMPLETED
    * Source: applab_submittable.feature — "Submit anything, unsubmit, be able to resubmit."
    * @no_mobile @as_taught_student
    *
    * Level 18/7 submit → unsubmit → resubmit cycle.  Requires a teacher-section
    * enrolment so the submit/unsubmit buttons render.
    *
-   * FIXME: #confirm-button triggers a multi-step server redirect that leaves
-   * the browser mid-navigation; every subsequent page.goto() gets
-   * net::ERR_ABORTED regardless of which load/navigation signal we await
-   * first.  Three approaches (waitForLoadState, modal-hidden, both) all
-   * reproduce the same failure.  Needs investigation into what URL the
-   * confirm redirect chain lands on and whether that page itself triggers a
-   * further JS navigation before goto() can safely fire.
+   * The confirm buttons trigger full-page navigation.  The readiness signal is
+   * the subsequent level page exposing #unsubmitButton or #submitButton,
+   * matching the legacy scenario's user-visible checks.
    */
-  test.fixme(
+  test(
     'submit, unsubmit, and resubmit cycle restores submit button',
     {tag: '@no_mobile'},
     async ({page}) => {
@@ -185,15 +284,7 @@ test.describe('App Lab — submittable level', () => {
       await page.goto(levelUrl);
       await applab.waitForReady();
 
-      // Submit: run the level, wait for submit button, confirm modal.
-      await applab.run();
-      await page
-        .locator('#submitButton')
-        .waitFor({state: 'visible', timeout: 30_000});
-      await page.locator('#submitButton').click();
-      await page.locator('.modal').waitFor({state: 'visible'});
-      await page.locator('#confirm-button').click();
-      await page.locator('.modal').waitFor({state: 'hidden', timeout: 30_000});
+      await submitAppLabLevel(page, applab);
 
       // Reload to see the unsubmit button.
       await page.goto(levelUrl);
@@ -204,8 +295,9 @@ test.describe('App Lab — submittable level', () => {
       // Unsubmit and confirm.
       await page.locator('#unsubmitButton').click();
       await page.locator('.modal').waitFor({state: 'visible'});
-      await page.locator('#confirm-button').click();
-      await page.locator('.modal').waitFor({state: 'hidden', timeout: 30_000});
+      await clickAndWaitForMainFrameNavigation(page, () =>
+        page.locator('#confirm-button').click(),
+      );
 
       // Reload: running the level again should expose the submit button.
       await page.goto(levelUrl);
@@ -216,10 +308,58 @@ test.describe('App Lab — submittable level', () => {
       });
     },
   );
+
+  /**
+   * Migration status: COMPLETED
+   * Source: applab_submittable.feature — "Submit anything, teacher is able to unsubmit"
+   * @no_mobile @as_taught_student
+   *
+   * The teacher panel row is the visible readiness signal for viewing student
+   * work.  The teacher-side unsubmit button then disables after the reset.
+   */
+  test(
+    'teacher can unsubmit student work',
+    {tag: '@no_mobile'},
+    async ({page}) => {
+      const studentName = `AppLabStudent${Date.now()}${Math.random()
+        .toString(36)
+        .slice(2, 8)}`;
+      const {teacherEmail, teacherPassword} =
+        await createTeacherAssociatedStudent(page, {studentName});
+      const applab = new AppLab(page);
+      const levelUrl =
+        '/courses/allthethingscourse/units/1/lessons/18/levels/7?noautoplay=true';
+
+      await page.goto(levelUrl, {waitUntil: 'domcontentloaded'});
+      await applab.waitForReady();
+      await submitAppLabLevel(page, applab);
+
+      await page.goto(levelUrl, {waitUntil: 'domcontentloaded'});
+      await page
+        .locator('#unsubmitButton')
+        .waitFor({state: 'visible', timeout: 30_000});
+
+      await signIn(page, teacherEmail, teacherPassword);
+      await page.goto(levelUrl, {waitUntil: 'domcontentloaded'});
+      await openTeacherPanel(page);
+
+      const studentRow = page
+        .locator('#teacher-panel-container tr', {hasText: studentName})
+        .first();
+      await expect(studentRow).toBeVisible({timeout: 30_000});
+      await studentRow.click();
+
+      const unsubmitButton = page.locator('#unsubmit-button-uitest');
+      await expect(unsubmitButton).toBeEnabled({timeout: 30_000});
+      await unsubmitButton.click();
+      await expect(unsubmitButton).toBeDisabled({timeout: 30_000});
+    },
+  );
 });
 
 test.describe('App Lab — button text read/write', () => {
   /**
+   * Migration status: COMPLETED
    * Source: scenarios.feature — "Can read and set button text"
    * @as_student @no_mobile
    *
@@ -253,6 +393,7 @@ test.describe('App Lab — button text read/write', () => {
 
 test.describe('App Lab — textarea newline preservation', () => {
   /**
+   * Migration status: COMPLETED
    * Source: scenarios.feature — "Text is preserved when reading and setting newlines in textarea"
    * @as_student @no_mobile
    *
@@ -293,6 +434,7 @@ test.describe('App Lab — textarea newline preservation', () => {
 
 test.describe('App Lab — HTTP image proxy', () => {
   /**
+   * Migration status: COMPLETED
    * Source: scenarios3.feature — "App Lab Http Image"
    * @as_student @no_mobile
    *
@@ -325,21 +467,20 @@ test.describe('App Lab — HTTP image proxy', () => {
 
 test.describe('App Lab — clear puzzle restores initial HTML', () => {
   /**
+   * Migration status: COMPLETED
    * Source: scenarios3.feature — "App Lab Clear Puzzle and Design Mode"
    * @as_student @no_mobile
    *
    * A BUTTON dragged into design mode must disappear after resetting the
    * project to its starting version via the Version History dialog.
+   *
+   * Uses the reset button and attached #divApplab as the post-run readiness
+   * signal, then resets via Version History Start over.
    */
   test(
     'dragged button is absent after reset to starting version',
     {tag: '@no_mobile'},
     async ({studentPage}) => {
-      // Chromium/Firefox: reset-to-starting-version flaky under parallel run; passes alone.
-      test.fixme(
-        true,
-        'TODO: clear puzzle reset to starting version flaky on chromium/firefox under parallel run; version history dialog or design mode timing issue',
-      );
       await studentPage.goto('/projects/applab/new');
       const applab = new AppLab(studentPage);
       await applab.waitForReady();
@@ -360,6 +501,7 @@ test.describe('App Lab — clear puzzle restores initial HTML', () => {
 
 test.describe('App Lab — HTML sanitization', () => {
   /**
+   * Migration status: COMPLETED
    * Source: html_sanitization.feature — "Elements do not become nested"
    * @as_student @no_mobile
    *
@@ -367,16 +509,15 @@ test.describe('App Lab — HTML sanitization', () => {
    * the resulting DOM hierarchy: screens are direct children of #divApplab,
    * inner elements are children of the correct screen.  Regression guard
    * against empty elements collapsing into each other.
+   *
+   * Cucumber's `I wait to see "#screen2"` only waits for the element to exist.
+   * The current product keeps non-active screens hidden, so this port waits for
+   * the visible Reset button and attached screen nodes before checking parents.
    */
   test(
     'design elements maintain correct parent-child DOM hierarchy',
     {tag: '@no_mobile'},
-    async ({studentPage, browserName}) => {
-      // All browsers: #screen2 never becomes visible after applab.run(); screen navigation or default screen change.
-      test.fixme(
-        true,
-        `TODO: #screen2 never becomes visible after run on ${browserName}; possible product change in screen ordering or default-screen behavior`,
-      );
+    async ({studentPage}) => {
       await studentPage.goto('/projects/applab/new');
       const applab = new AppLab(studentPage);
       await applab.waitForReady();
@@ -388,28 +529,20 @@ test.describe('App Lab — HTML sanitization', () => {
       // Clear label text so empty-element nesting is exercised (Cucumber comment:
       // "labels are only in danger of collapsing when they are empty").
       await studentPage.evaluate(() => {
-        // design_label1 is a <label> element in applab, not an <input>.
-        // Guard with instanceof so the native setter is only called on actual
-        // HTMLInputElement instances — calling it on a <label> throws
-        // "Illegal invocation" / "not an instance of HTMLInputElement" across
-        // all browsers.
         const label = document.querySelector('#design_label1');
-        if (label instanceof HTMLInputElement) {
-          const setter = Object.getOwnPropertyDescriptor(
-            HTMLInputElement.prototype,
-            'value',
-          )?.set;
-          setter?.call(label, '');
-          label.dispatchEvent(new Event('input', {bubbles: true}));
-        }
+        if (!label) return;
+        // Applab.updateProperty is the product path used by the property
+        // editor; mutating the label DOM alone does not update serialized HTML.
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
+        (window as any).Applab.updateProperty(label, 'text', '');
       });
       await applab.dragElementToApp('TEXT_AREA');
       await applab.dragElementToApp('BUTTON');
 
       await applab.run();
-      await studentPage
-        .locator('#screen2')
-        .waitFor({state: 'visible', timeout: 15_000});
+      await expect(applab.resetButton).toBeVisible({timeout: 15_000});
+      await studentPage.locator('#screen2').waitFor({state: 'attached'});
+      await studentPage.locator('#screen3').waitFor({state: 'attached'});
 
       // Empty elements must not have collapsed.
       await expect(studentPage.locator('#label1')).toHaveText('');
@@ -477,25 +610,20 @@ test.describe('App Lab — change event on text input', () => {
       );
       await applab.appendCode('});');
       await applab.run();
+      await expect(applab.resetButton).toBeVisible({timeout: 15_000});
 
       const input = studentPage.locator('#text_input1');
       await input.waitFor({state: 'visible', timeout: 15_000});
 
       // Blur after typing → change fires.
-      await input.pressSequentially('123');
+      await input.fill('123');
       await input.evaluate((el: HTMLElement) => el.blur());
       await expect(applab.consoleOutput).toContainText('"text_input1: 123"', {
         timeout: 10_000,
       });
 
-      // Enter after more typing → change fires.
-      await input.fill('123');
-      await expect(input).toHaveValue('123');
-      await input.evaluate((el: HTMLInputElement) => {
-        el.focus();
-        el.setSelectionRange(el.value.length, el.value.length);
-      });
-      await input.pressSequentially('456');
+      // Enter after changing the visible value → change fires.
+      await input.fill('123456');
       await expect(input).toHaveValue('123456');
       await input.press('Enter');
       await expect(applab.consoleOutput).toContainText(
@@ -505,8 +633,12 @@ test.describe('App Lab — change event on text input', () => {
 
       // Second blur → no new change event; "123456" appears only once.
       await input.evaluate((el: HTMLElement) => el.blur());
-      const debugText = (await applab.consoleOutput.textContent()) ?? '';
-      expect((debugText.match(/"text_input1: 123456"/g) ?? []).length).toBe(1);
+      await expect
+        .poll(async () => {
+          const debugText = (await applab.consoleOutput.textContent()) ?? '';
+          return (debugText.match(/"text_input1: 123456"/g) ?? []).length;
+        })
+        .toBe(1);
     },
   );
 });
@@ -565,19 +697,44 @@ test.describe('App Lab — change event on text area', () => {
 
 test.describe('App Lab — asset management', () => {
   /**
+   * Migration status: COMPLETED
    * Source: scenarios2.feature — "Upload Image Asset"
    * @as_student @no_mobile
    *
-   * FIXME: requires a physical test fixture file ("artist_image_1.png") and
-   * native file-input handling via Playwright's setInputFiles().  The Manage
-   * Assets dialog uses a hidden <input type="file"> injected by the uploader;
-   * mapping its path is non-trivial without a pre-built asset fixture in the
-   * test package.  Deferring until test assets are available.
+   * Uploads artist_image_1.png through the hidden uploader and deletes it.
+   * The file fixture lives at dashboard/test/fixtures, matching the Cucumber
+   * upload step's fixture directory.
    */
-
-  test.fixme(
+  test(
     'upload and delete image asset via Manage Assets dialog',
-    async () => {},
+    {tag: '@no_mobile'},
+    async ({studentPage}) => {
+      await studentPage.goto('/projects/applab/new');
+      const applab = new AppLab(studentPage);
+      await applab.waitForReady();
+
+      await openManageAssetsDialog(applab);
+      await expect(studentPage.locator('#upload-asset')).toBeVisible({
+        timeout: 10_000,
+      });
+
+      await studentPage
+        .locator('.uitest-hidden-uploader')
+        .setInputFiles(path.join(FIXTURES, 'artist_image_1.png'));
+
+      await expect(
+        studentPage
+          .locator('.assetRow td')
+          .filter({hasText: 'artist_image_1.png'}),
+      ).toBeVisible({timeout: 20_000});
+
+      await studentPage.locator('.btn-danger').first().click();
+      await studentPage.locator('.btn-danger').first().click();
+      await expect(studentPage.locator('#manage-asset-status')).toContainText(
+        'successfully deleted!',
+        {timeout: 20_000},
+      );
+    },
   );
 });
 
@@ -612,21 +769,21 @@ async function createApplabWithButton(
 
 test.describe('App Lab — embed player', () => {
   /**
+   * Migration status: COMPLETED
    * Source: embed.feature — "App Lab Embed"
    * @as_student @no_mobile
    *
    * Creates a project, navigates to its embed URL, verifies the player runs
    * the app, then follows "How it Works (View Code)" from the footer more-menu
    * into a new tab and confirms the full editor loads there.
+   *
+   * Uses the embedded player's visible play button and footer more-menu as
+   * readiness signals before opening the View Code tab.
    */
   test(
     'embed player runs app and How it Works link opens editor in new tab',
     {tag: '@no_mobile'},
     async ({studentPage}) => {
-      test.fixme(
-        true,
-        'TODO: embed player test flaky on webkit/chromium under parallel run; timeout initializing embedded applab player',
-      );
       const applab = await createApplabWithButton(studentPage);
       const embedPath = await applab.getEmbedUrl();
       await studentPage.goto(embedPath);
@@ -666,6 +823,7 @@ test.describe('App Lab — embed player', () => {
 
 test.describe('App Lab — embed player without source', () => {
   /**
+   * Migration status: COMPLETED
    * Source: embed.feature — "App Lab Embed without Source"
    * @as_student @no_mobile
    *

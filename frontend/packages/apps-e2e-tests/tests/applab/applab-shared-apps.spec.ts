@@ -28,6 +28,7 @@ async function waitForInitialProjectSave(
  * App Lab — Shared Apps: interactive share page behavior.
  *
  * Source: dashboard/test/ui/features/star_labs/applab/shared_apps.feature
+ * Migration status: see per-scenario comments.
  *
  * Each scenario creates a fresh project, optionally adds code or design
  * elements, then navigates to the share URL (read from the project share
@@ -39,29 +40,27 @@ async function waitForInitialProjectSave(
  * runButton press is required.
  *
  * Save mechanism: App Lab autosaves every 30 s, which is too slow for
- * tests.  Code scenarios trigger an explicit save by calling run() while
- * holding a waitForSaveComplete() promise (runButtonClickWrapper →
- * serializeAndSave → appModeChanged event → saveIfSourcesChanged → PUT
- * /v3/sources/).  Design scenarios trigger save by switching back to code
- * mode (onInterfaceModeChange(CODE) → same chain).
+ * tests.  Code scenarios trigger an explicit save by calling run() and waiting
+ * for the visible project save indicator to advance to Saved.  Design
+ * scenarios trigger save by switching back to code mode and waiting for the
+ * same UI readiness signal.
  */
 
 test.describe('App Lab — Shared Apps', () => {
   /**
+   * Migration status: COMPLETED
    * Source: "App Lab Share"
    *
    * Verifies the share page runs code, renders app elements, does NOT load
    * the ACE/Droplet editor, and hides all toolbar mode buttons.
+   *
+   * Uses the rendered share-page app element as the readiness signal before
+   * checking that editor globals and toolbar mode buttons are absent.
    */
   test(
     'share page runs code and hides toolbar',
     {tag: '@no_mobile'},
     async ({studentPage}) => {
-      // Webkit: share page toolbar hide flaky under parallelism; passes alone.
-      test.fixme(
-        true,
-        'TODO: share page runs code and hides toolbar flaky on webkit under parallel test run; timing issue',
-      );
       const applab = new AppLab(studentPage);
 
       await studentPage.goto('/projects/applab/new');
@@ -71,11 +70,8 @@ test.describe('App Lab — Shared Apps', () => {
       await applab.ensureTextMode();
       await applab.appendCode("button('hello', 'world');");
 
-      // Set up save watcher BEFORE run() so the PUT is captured.
-      const saveDone = applab.waitForSaveComplete();
-
       // Run to confirm element renders in edit mode, then reset.
-      await applab.run();
+      await applab.waitForUiSaveAfter(() => applab.run());
       await expect(
         studentPage.locator('#divApplab > .screen > button#hello'),
       ).toBeVisible({timeout: 15_000});
@@ -84,10 +80,8 @@ test.describe('App Lab — Shared Apps', () => {
       ).toContainText('world');
       await applab.resetButton.click();
 
-      await saveDone;
-
       const shareUrl = await applab.getShareUrlFromDialog();
-      await studentPage.goto(shareUrl);
+      await studentPage.goto(shareUrl, {waitUntil: 'domcontentloaded'});
 
       // Share page auto-runs the code.
       await expect(
@@ -120,12 +114,15 @@ test.describe('App Lab — Shared Apps', () => {
   );
 
   /**
+   * Migration status: COMPLETED
    * Source: "Can click a button in shared app"
    */
   test('button click event fires on share page', async ({studentPage}) => {
     const applab = new AppLab(studentPage);
 
-    await studentPage.goto('/projects/applab/new');
+    await studentPage.goto('/projects/applab/new', {
+      waitUntil: 'domcontentloaded',
+    });
     await applab.waitForReady();
     await waitForInitialProjectSave(studentPage);
 
@@ -134,13 +131,11 @@ test.describe('App Lab — Shared Apps', () => {
       "button('testButton1', 'Click me');\nonEvent('testButton1', 'click', function() { setText('testButton1', 'Clicked'); });",
     );
 
-    const saveDone = applab.waitForSaveComplete();
-    await applab.run();
+    await applab.waitForUiSaveAfter(() => applab.run());
     await applab.resetButton.click();
-    await saveDone;
 
     const shareUrl = await applab.getShareUrlFromDialog();
-    await studentPage.goto(shareUrl);
+    await studentPage.goto(shareUrl, {waitUntil: 'domcontentloaded'});
 
     await expect(
       studentPage.locator('#divApplab > .screen > button#testButton1'),
@@ -154,12 +149,15 @@ test.describe('App Lab — Shared Apps', () => {
   });
 
   /**
+   * Migration status: COMPLETED
    * Source: "Can change a dropdown value in shared app"
    */
   test('dropdown value changes on share page', async ({studentPage}) => {
     const applab = new AppLab(studentPage);
 
-    await studentPage.goto('/projects/applab/new');
+    await studentPage.goto('/projects/applab/new', {
+      waitUntil: 'domcontentloaded',
+    });
     await applab.waitForReady();
     await waitForInitialProjectSave(studentPage);
 
@@ -168,13 +166,11 @@ test.describe('App Lab — Shared Apps', () => {
       "dropdown('testDropdown', 'Option A', 'Option B', 'Option C');",
     );
 
-    const saveDone = applab.waitForSaveComplete();
-    await applab.run();
+    await applab.waitForUiSaveAfter(() => applab.run());
     await applab.resetButton.click();
-    await saveDone;
 
     const shareUrl = await applab.getShareUrlFromDialog();
-    await studentPage.goto(shareUrl);
+    await studentPage.goto(shareUrl, {waitUntil: 'domcontentloaded'});
 
     await expect(studentPage.locator('.screen > #testDropdown')).toBeVisible({
       timeout: 30_000,
@@ -186,6 +182,7 @@ test.describe('App Lab — Shared Apps', () => {
   });
 
   /**
+   * Migration status: COMPLETED
    * Source: "Can change a radio button value in shared app"
    */
   test('radio button selection works on share page', async ({studentPage}) => {
@@ -200,13 +197,11 @@ test.describe('App Lab — Shared Apps', () => {
       "radioButton('radio1', false, 'testGroup');\nradioButton('radio2', false, 'testGroup');",
     );
 
-    const saveDone = applab.waitForSaveComplete();
-    await applab.run();
+    await applab.waitForUiSaveAfter(() => applab.run());
     await applab.resetButton.click();
-    await saveDone;
 
     const shareUrl = await applab.getShareUrlFromDialog();
-    await studentPage.goto(shareUrl);
+    await studentPage.goto(shareUrl, {waitUntil: 'domcontentloaded'});
 
     await expect(studentPage.locator('.screen > #radio2')).toBeVisible({
       timeout: 30_000,
@@ -224,6 +219,7 @@ test.describe('App Lab — Shared Apps', () => {
   });
 
   /**
+   * Migration status: COMPLETED
    * Source: "Can change a checkbox value in shared app"
    */
   test('checkbox selection works on share page', async ({studentPage}) => {
@@ -238,13 +234,11 @@ test.describe('App Lab — Shared Apps', () => {
       "checkbox('checkbox1', false, 'testGroup');\ncheckbox('checkbox2', false, 'testGroup');",
     );
 
-    const saveDone = applab.waitForSaveComplete();
-    await applab.run();
+    await applab.waitForUiSaveAfter(() => applab.run());
     await applab.resetButton.click();
-    await saveDone;
 
     const shareUrl = await applab.getShareUrlFromDialog();
-    await studentPage.goto(shareUrl);
+    await studentPage.goto(shareUrl, {waitUntil: 'domcontentloaded'});
 
     await expect(studentPage.locator('.screen > #checkbox2')).toBeVisible({
       timeout: 30_000,
@@ -262,6 +256,7 @@ test.describe('App Lab — Shared Apps', () => {
   });
 
   /**
+   * Migration status: COMPLETED
    * Source: "Can type in text input on share page"
    */
   test('text input accepts keyboard input on share page', async ({
@@ -276,15 +271,11 @@ test.describe('App Lab — Shared Apps', () => {
     await applab.switchToDesignMode();
     await applab.dragElementToApp('TEXT_INPUT');
 
-    // Switching back to code mode triggers onInterfaceModeChange(CODE) →
-    // serializeAndSave → PUT /v3/sources/ — the reliable save flush for
-    // design-mode-only scenarios.
-    const saveDone = applab.waitForSaveComplete();
-    await applab.switchToCodeMode();
-    await saveDone;
+    // Switching back to code mode is the design-edit save trigger.
+    await applab.waitForUiSaveAfter(() => applab.switchToCodeMode());
 
     const shareUrl = await applab.getShareUrlFromDialog();
-    await studentPage.goto(shareUrl);
+    await studentPage.goto(shareUrl, {waitUntil: 'domcontentloaded'});
 
     await expect(studentPage.locator('.screen > input').first()).toBeVisible({
       timeout: 30_000,
@@ -301,17 +292,16 @@ test.describe('App Lab — Shared Apps', () => {
   });
 
   /**
+   * Migration status: COMPLETED
    * Source: "Can type in textarea on share page"
+   *
+   * Mirrors the Cucumber jQuery text set on the contenteditable text area and
+   * checks text content after the share page renders the element.
    */
   test(
     'textarea accepts input on share page',
     {tag: '@no_mobile'},
     async ({studentPage}) => {
-      // Webkit: textarea share page input flaky under parallel run; passes alone.
-      test.fixme(
-        true,
-        'TODO: textarea accepts input on share page flaky on webkit under parallel run; timing issue with share page init or textarea focus',
-      );
       const applab = new AppLab(studentPage);
 
       await studentPage.goto('/projects/applab/new');
@@ -321,12 +311,10 @@ test.describe('App Lab — Shared Apps', () => {
       await applab.switchToDesignMode();
       await applab.dragElementToApp('TEXT_AREA');
 
-      const saveDone = applab.waitForSaveComplete();
-      await applab.switchToCodeMode();
-      await saveDone;
+      await applab.waitForUiSaveAfter(() => applab.switchToCodeMode());
 
       const shareUrl = await applab.getShareUrlFromDialog();
-      await studentPage.goto(shareUrl);
+      await studentPage.goto(shareUrl, {waitUntil: 'domcontentloaded'});
 
       await expect(studentPage.locator('.screen > #text_area1')).toBeVisible({
         timeout: 30_000,

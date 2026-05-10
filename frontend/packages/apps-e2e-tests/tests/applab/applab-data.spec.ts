@@ -1,6 +1,30 @@
+import {createTeacherAssociatedStudent, signIn} from '../shared/auth';
 import {expect, test} from '../shared/fixtures';
 
 import {AppLab} from './AppLab';
+
+/**
+ * Click an element that performs a full-page navigation and wait only for the
+ * main-frame navigation to reach DOMContentLoaded.  The caller must assert the
+ * next user-visible page state.  Some dashboard actions reload the same URL,
+ * so URL-change waits are not sufficient here.
+ *
+ * @param page - Playwright page to observe
+ * @param click - action that triggers the navigation
+ */
+async function clickAndWaitForMainFrameNavigation(
+  page: import('@playwright/test').Page,
+  click: () => Promise<unknown>,
+): Promise<void> {
+  await Promise.all([
+    page.waitForEvent('framenavigated', {
+      predicate: frame => frame === page.mainFrame(),
+      timeout: 30_000,
+    }),
+    click(),
+  ]);
+  await page.waitForLoadState('domcontentloaded');
+}
 
 /**
  * App Lab — Data blocks, data browser, and data tab UI.
@@ -83,15 +107,63 @@ test.describe('App Lab — Level Options', () => {
    * Source: level_options.feature — "Level defaults to design mode, students
    * see design mode and teachers see code mode when viewing student work"
    *
-   * Requires a teacher-associated student account pair; deferred.
+   * Creates a teacher-associated student, verifies that the student lands in
+   * design mode, then signs in as the teacher and opens that student's work
+   * from the teacher panel.  The code workspace is the visible readiness
+   * signal for teacher review mode.
    *
-   * Migration status: PENDING.
+   * Migration status: COMPLETED.
    */
-  test.fixme(
+  test(
     'teacher views student work in code mode; student sees design mode',
-    async () => {},
+    {tag: '@no_mobile'},
+    async ({page}) => {
+      const {teacherEmail, teacherPassword} =
+        await createTeacherAssociatedStudent(page, {studentName: 'Lillian'});
+      const levelUrl =
+        '/courses/allthethingscourse/units/1/lessons/18/levels/21';
+
+      await page.goto(levelUrl);
+      const studentApplab = new AppLab(page);
+      await studentApplab.waitForReady();
+      await expect(studentApplab.designWorkspace).toBeVisible({
+        timeout: 30_000,
+      });
+      await expect(studentApplab.runButton).toBeVisible();
+
+      await signIn(page, teacherEmail, teacherPassword);
+      await page.goto(levelUrl);
+      await openTeacherPanel(page);
+
+      await clickAndWaitForMainFrameNavigation(page, () =>
+        page.locator('#teacher-panel-container tr').nth(1).click(),
+      );
+
+      const teacherApplab = new AppLab(page);
+      await teacherApplab.waitForReady();
+      await expect(teacherApplab.codeWorkspaceWrapper).toBeVisible({
+        timeout: 30_000,
+      });
+    },
   );
 });
+
+/**
+ * Open the teacher panel if it is collapsed, then wait for the student table.
+ *
+ * @param page - teacher-authenticated level page
+ */
+async function openTeacherPanel(
+  page: import('@playwright/test').Page,
+): Promise<void> {
+  const studentTable = page.locator('.student-table');
+  if (!(await studentTable.isVisible({timeout: 5_000}).catch(() => false))) {
+    await page
+      .locator('.show-handle .fa-chevron-left')
+      .evaluate((el: HTMLElement) => el.click());
+  }
+  await studentTable.waitFor({state: 'visible', timeout: 30_000});
+}
 
 // ---------------------------------------------------------------------------
 // data_tab.feature

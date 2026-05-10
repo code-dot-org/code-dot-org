@@ -150,17 +150,13 @@ All pass C+F+W.
 ### applab_submittable — submit/unsubmit/resubmit cycle
 
 - **Source:** `dashboard/test/ui/features/star_labs/applab_submittable.feature` —
-  "Submit anything, unsubmit, be able to resubmit."
+  both submittable App Lab scenarios
 - **Test file:** `tests/applab/applab.spec.ts`
-- **Status:** fixme
-- **Reason:** `page.goto(levelUrl)` gets `net::ERR_ABORTED` after clicking `#confirm-button`
-  on the submit modal. Three approaches tried: (1) direct goto after click,
-  (2) `Promise.all([waitForLoadState('load'), click])`, (3) wait for `.modal` hidden
-  then goto — all fail identically. Root cause: the confirm triggers a server-side
-  multi-step redirect chain; the browser is still mid-navigation when goto fires.
-  Page snapshot after modal closes shows empty `<main>` at an unexpected URL, not
-  the level URL — a JS or meta redirect on the landing page likely fires a second
-  navigation before goto can settle.
+- **Status:** completed
+- **Notes:** The fix is to treat `#confirm-button` as a navigation trigger and
+  wait for the navigation before reloading the level. The teacher-unsubmit
+  scenario uses a raw chevron click for the teacher panel, matching the
+  Cucumber synthetic-click behavior.
 
 ---
 
@@ -238,10 +234,10 @@ All pass C+F+W (ai_tutor @no_ci; excluded from CI by grepInvert).
 
 **Features ported (passing):**
 
-- `applab/scenarios2.feature` (scenarios 1–2) → `tests/applab/applab.spec.ts` (change event on text input blur+enter; change event on text area)
-- `applab/embed.feature` → `tests/applab/applab.spec.ts` (embed player runs + "How it Works" new tab; hide-source hides that link)
+- `applab/scenarios2.feature` → `tests/applab/applab.spec.ts` (text input change, text area change, asset upload/delete)
+- `applab/embed.feature` → `tests/applab/applab.spec.ts` (full "How it Works" embed flow + hide-source embed)
 
-All pass C+F+W.
+Confirmed Chromium.
 
 **Key techniques:**
 
@@ -289,7 +285,7 @@ All 3 pass C+F+W.
 
 - `isInitialSaveComplete()` / `isInitialCaptureComplete()` via `window.dashboard.project.__TestInterface` — poll with `page.waitForFunction()` to confirm project save/thumbnail-capture before proceeding.
 - `setSourceVersionInterval(1)` reduces checkpoint interval to 1 second; `waitForTimeout(1500)` lets it elapse before the next run.
-- Version history `button.btn-info` is a `<button>` nested inside `<a target="_blank" href="...">`. Changing the anchor's target to `_parent` (via `makeLinksCurrentTab`) causes a click on the button to navigate in the current tab. `Promise.all([waitForNavigation(), button.click()])` captures the navigation.
+- Version history View buttons are `button.btn-info` nested inside `<a target="_blank" href="...">`. Restore can also use `btn-info` on a selected historical row, so the Playwright port reads the View link `href` from `#showVersionsModal a` and navigates there directly.
 - View-only mode assertion: `#workspace-header-span` contains text "View only" on a restored-version URL.
 - Opened dialog close: `page.keyboard.press('Escape')` closes the jQuery UI `#showVersionsModal`.
 
@@ -297,8 +293,8 @@ All 3 pass C+F+W.
 
 - **Source:** `applab/versions.feature` — "Project page refreshes when other client adds a newer version" / "…replaces current version"
 - **Test file:** `tests/applab/applab-versions.spec.ts`
-- **Status:** fixme
-- **Reason:** Both scenarios require two coordinated browser contexts (tab 0 + tab 1). Playwright supports this via `browser.newContext()` + `newPage()`, but the scenarios also require simulating a page-level navigation event triggered by the server detecting a version conflict. The server-side conflict detection depends on specific version IDs that are created during the test run, making coordination across two contexts fragile. 2 fixme stubs added.
+- **Status:** completed
+- **Notes:** Uses two pages in the same authenticated context, matching Cucumber tabs. The stale tab clicks Run and waits for the user-visible ACE contents to reload to the latest version instead of waiting directly on the 409 response. Version-history tests run serially within the file to avoid self-racing source-version state.
 
 ---
 
@@ -344,8 +340,10 @@ to avoid multi-element locator ambiguity.
 
 - **Source:** `applab/level_options.feature` — "Level defaults to design mode, students see design mode and teachers see code mode when viewing student work"
 - **Test file:** `tests/applab/applab-data.spec.ts`
-- **Status:** fixme
-- **Reason:** Requires a teacher account with an associated student; needs the full teacher/taught-student session pair. Deferred with an empty test.fixme stub.
+- **Status:** completed
+- **Notes:** Uses `createTeacherAssociatedStudent`, signs in as the teacher,
+  opens the teacher panel with a synthetic chevron click, and verifies the
+  teacher view lands in code mode.
 
 ---
 
@@ -373,8 +371,11 @@ All pass C+F+W.
 
 - **Source:** `applab/libraries.feature` — "Adding and removing a library from a project" / "Assigning a library to a section as a teacher"
 - **Test file:** `tests/applab/applab-libraries.spec.ts`
-- **Status:** fixme
-- **Reason:** Scenario 2 requires two coordinated student accounts; scenario 3 requires a teacher + student pair. Both deferred with empty test.fixme stubs.
+- **Status:** completed
+- **Notes:** Scenario 2 creates two student sessions in sequence and imports the
+  first student's library by channel id. Scenario 3 creates a teacher section,
+  waits for the `/v3/channels/:id` POST after assignment, then verifies the
+  joined student sees the class library and author.
 
 ---
 
@@ -384,7 +385,8 @@ All pass C+F+W.
 
 - `applab/shared_apps.feature` → `tests/applab/applab-shared-apps.spec.ts` (7 scenarios: interactive share page behavior)
 
-All 7 pass C+F+W.
+All 7 scenarios pass in Chromium, including the no-editor toolbar check and
+textarea input scenario.
 
 **Save mechanism investigation:**
 
