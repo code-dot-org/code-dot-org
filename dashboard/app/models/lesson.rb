@@ -550,7 +550,7 @@ class Lesson < ApplicationRecord
     }
   end
 
-  # Compact payload for the /generate-slides page. Includes the saved
+  # Compact payload for the /slides/generate page. Includes the saved
   # outline prompt (generate_slides_outline) and the persisted slides JSON
   # so the page can restore both on reload. Keeps the AI's lesson-context
   # gathering as a separate client-side fetch (loadLessonLevelProperties),

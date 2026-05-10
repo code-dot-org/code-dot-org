@@ -33,7 +33,7 @@ export async function saveSlidesData(
 // Save just the panels — used by the /slides/edit page after the user
 // edits panels in EditPanels. We round-trip through saveSlidesData but
 // preserve any descriptions already in the file so that the
-// /generate-slides page still shows them when the user goes back. The
+// /slides/generate page still shows them when the user goes back. The
 // caller passes the existing slides list (descriptions and all) plus an
 // updated panels array; we zip them back together by index, since
 // EditPanels doesn't know about descriptions.
@@ -51,7 +51,7 @@ export async function saveEditedPanels(
     const matched = byKey.get(panel.key);
     if (matched) return {...matched, panel};
     // Brand-new panel inserted via the editor; we have no description
-    // for it. Leave the field blank so the /generate-slides page can
+    // for it. Leave the field blank so the /slides/generate page can
     // round-trip without losing data.
     return {key: panel.key, description: '', panel};
   });

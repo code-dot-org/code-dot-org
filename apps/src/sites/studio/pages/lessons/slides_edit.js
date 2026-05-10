@@ -12,7 +12,7 @@ $(document).ready(function () {
   // threading more fields through the controller.
   const here = window.location.pathname;
   const slidesUrl = here.replace(/\/edit$/, '');
-  const generateSlidesUrl = here.replace(/\/slides\/edit$/, '/generate-slides');
+  const generateSlidesUrl = here.replace(/\/slides\/edit$/, '/slides/generate');
 
   createReactRoot(
     <SlidesEditor

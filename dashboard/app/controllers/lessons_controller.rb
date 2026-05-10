@@ -159,7 +159,7 @@ class LessonsController < ApplicationController
     render :generate
   end
 
-  # GET /lessons/:id/generate-slides
+  # GET /lessons/:id/slides/generate
   # Levelbuilder UI for AI-generating a deck of intro slides for this
   # lesson. Slides are panels-app panels stored in a per-lesson JSON file
   # (see Lesson#slides_file_path), distinct from the lesson's level set.
@@ -167,7 +167,7 @@ class LessonsController < ApplicationController
     setup_generate_slides
   end
 
-  # GET /s/:script/lessons/:position/generate-slides (and the course-path
+  # GET /s/:script/lessons/:position/slides/generate (and the course-path
   # twin). Mirrors generate_with_lesson_position.
   def generate_slides_with_lesson_position
     @lesson = lookup_by_position
@@ -413,18 +413,21 @@ class LessonsController < ApplicationController
     lesson
   end
 
-  # Shared data prep for the /generate-slides page. Mirrors setup_generate
+  # Shared data prep for the /slides/generate page. Mirrors setup_generate
   # — same edit-URL-swap trick — but the payload is the slim
   # summarize_for_slides_generate (saved prompt + persisted slides JSON
   # contents) since the slides page doesn't need the full lesson editor
   # surface.
   private def setup_generate_slides
-    edit_url = request.path.sub(%r{/generate-slides\z}, '/edit')
-    edit_url = edit_lesson_path(id: @lesson.id) if edit_url == request.path
+    # Two slashes back from /slides/generate gets us to the lesson root,
+    # from there we re-attach /edit and /slides for the surrounding pages.
+    lesson_root = request.path.delete_suffix('/slides/generate')
+    edit_url = "#{lesson_root}/edit"
+    edit_url = edit_lesson_path(id: @lesson.id) if lesson_root == request.path
     @lesson_data = @lesson.summarize_for_slides_generate.merge(
       lessonPath: @lesson.get_uncached_show_path,
       editLessonUrl: edit_url,
-      slidesUrl: request.path.sub(%r{/generate-slides\z}, '/slides'),
+      slidesUrl: "#{lesson_root}/slides",
     )
     view_options(full_width: true)
   end
