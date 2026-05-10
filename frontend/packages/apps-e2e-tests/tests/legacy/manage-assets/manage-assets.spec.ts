@@ -1,3 +1,4 @@
+import {type Page} from '@playwright/test';
 import path from 'path';
 
 import {expect, test} from '../../shared/fixtures';
@@ -24,9 +25,7 @@ const FIXTURES = path.resolve(
  *
  * @param page - Playwright page with a Game Lab level loaded
  */
-async function openManageAssetsDialog(
-  page: import('@playwright/test').Page,
-): Promise<void> {
+async function openManageAssetsDialog(page: Page): Promise<void> {
   await page
     .locator('.settings-cog')
     .first()
@@ -41,6 +40,7 @@ async function openManageAssetsDialog(
 
 test.describe('Manage Assets', {tag: '@no_mobile'}, () => {
   /**
+   * Migration status: COMPLETED
    * Source: manage_assets.feature — @no_firefox scenario
    * "The manage assets dialog contains the option to record audio on Chrome"
    *
@@ -49,6 +49,7 @@ test.describe('Manage Assets', {tag: '@no_mobile'}, () => {
    */
   test('manage assets dialog has record audio button on Chrome', async ({
     studentPage,
+    browserName,
   }) => {
     test.skip(
       browserName === 'firefox',
@@ -68,6 +69,7 @@ test.describe('Manage Assets', {tag: '@no_mobile'}, () => {
   });
 
   /**
+   * Migration status: COMPLETED
    * Source: manage_assets.feature
    * "The manage assets dialog displays the audio preview, and toggles between
    *  play and pause button."
@@ -101,6 +103,7 @@ test.describe('Manage Assets', {tag: '@no_mobile'}, () => {
   });
 
   /**
+   * Migration status: COMPLETED
    * Source: manage_assets.feature
    * "The manage assets dialog displays an image thumbnail and opens in a new
    *  tab when clicked"
@@ -142,6 +145,7 @@ test.describe('Manage Assets', {tag: '@no_mobile'}, () => {
   });
 
   /**
+   * Migration status: COMPLETED
    * Source: manage_assets.feature
    * "From WebLab, the manage assets dialog does not contain the option to
    *  record audio."

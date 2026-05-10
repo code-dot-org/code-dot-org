@@ -1,5 +1,4 @@
-import {expect, test} from '@playwright/test';
-
+import {expect, test} from '../../shared/fixtures';
 import {SpriteLab} from '../activities/spritelab/SpriteLab';
 
 /**
@@ -33,6 +32,11 @@ test.describe('Modal Function Editor', () => {
     await expect(lab.resetButton).toBeHidden();
   });
 
+  /**
+   * Migration status: COMPLETED
+   * Source: dashboard/test/ui/features/code_tools/blockly/modal_function_editor.feature
+   * Scenario: Can create a function
+   */
   test('can create a function', async ({page}) => {
     const functionsCategory = page
       .getByRole('treeitem', {name: 'Functions'})
@@ -52,6 +56,11 @@ test.describe('Modal Function Editor', () => {
     expect(await lab.getFlyoutFunctionCount()).toBe(2);
   });
 
+  /**
+   * Migration status: COMPLETED
+   * Source: dashboard/test/ui/features/code_tools/blockly/modal_function_editor.feature
+   * Scenario: Can edit a function
+   */
   test('can edit a function', async () => {
     await lab.openFunctionEditorFromBlock(1);
 
@@ -79,7 +88,12 @@ test.describe('Modal Function Editor', () => {
     expect(await lab.getFunctionEditorBlockCount()).toBe(4);
   });
 
-  test('can close the editor using the ESC key', async () => {
+  /**
+   * Migration status: COMPLETED
+   * Source: dashboard/test/ui/features/code_tools/blockly/modal_function_editor.feature
+   * Scenario: Can close the editor using the ESC key
+   */
+  test('can close the editor using the ESC key', async ({browserName}) => {
     // @chrome only in the Cucumber suite.
     test.skip(
       browserName !== 'chromium',

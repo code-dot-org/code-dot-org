@@ -46,7 +46,9 @@ export class PythonLab extends Lab2Lab {
     this.validateButton = page.locator('#instructions-validate-button');
     this.validationTab = page.locator('#resource-panel-tab-validation');
     this.projectUpdatedAt = page.locator('.project_updated_at');
-    this.extraLinksButton = page.locator('#uitest-extra-links-button');
+    this.extraLinksButton = page.locator(
+      '#uitest-resource-panel-extra-links-button',
+    );
   }
 
   protected buildLevelUrl(level: number): string {

@@ -15,7 +15,7 @@ const skipSafari = ({browserName}: {browserName: string}) =>
 test.describe('Python Lab — level 1 — run output', () => {
   let lab: PythonLab;
 
-  test.beforeEach(async ({page}) => {
+  test.beforeEach(async ({page, browserName}) => {
     test.skip(
       browserName === 'firefox',
       'TODO: pythonlab run button never enabled on Firefox; Pyodide may not initialize in Firefox test environment',
@@ -26,6 +26,11 @@ test.describe('Python Lab — level 1 — run output', () => {
     await expect(lab.runButton).toBeEnabled();
   });
 
+  /**
+   * Migration status: PENDING
+   * Source: dashboard/test/ui/features/code_tools/pythonlab/pythonlab_run_eyes.feature
+   * Scenario: Can run and see output of Python program
+   */
   test(
     'running prints Hello from the start! to the console',
     {tag: '@visual'},
@@ -52,7 +57,7 @@ test.describe('Python Lab — level 1 — run output', () => {
 test.describe('Python Lab — level 10 — Neighborhood', () => {
   let lab: PythonLab;
 
-  test.beforeEach(async ({page}) => {
+  test.beforeEach(async ({page, browserName}) => {
     test.skip(
       browserName === 'firefox',
       'TODO: pythonlab run button never enabled on Firefox; Pyodide may not initialize in Firefox test environment',
@@ -63,6 +68,11 @@ test.describe('Python Lab — level 10 — Neighborhood', () => {
     await expect(lab.runButton).toBeEnabled();
   });
 
+  /**
+   * Migration status: COMPLETED
+   * Source: dashboard/test/ui/features/code_tools/pythonlab/pythonlab_neighborhood.feature
+   * Scenario: Can run and see output of Python program
+   */
   test(
     'running Neighborhood program outputs 10 to the console',
     {tag: '@visual'},
@@ -84,12 +94,17 @@ test.describe('Python Lab — level 10 — Neighborhood', () => {
 test.describe('Python Lab — level 1 — file management', () => {
   let lab: PythonLab;
 
-  test.beforeEach(async ({page}) => {
+  test.beforeEach(async ({page, browserName}) => {
     skipSafari({browserName});
     lab = new PythonLab(page);
     await lab.gotoLevel(1);
   });
 
+  /**
+   * Migration status: COMPLETED
+   * Source: dashboard/test/ui/features/code_tools/pythonlab/pythonlab_files.feature
+   * Scenario: Can add a new, unlocked file
+   */
   test('can add a new unlocked file', async () => {
     await lab.filesPlus.click();
     await expect(lab.page.locator('#uitest-new-file')).toBeVisible();
@@ -109,6 +124,11 @@ test.describe('Python Lab — level 1 — file management', () => {
     await expect(lab.filePopup(3)).toContainText('Delete');
   });
 
+  /**
+   * Migration status: COMPLETED
+   * Source: dashboard/test/ui/features/code_tools/pythonlab/pythonlab_files.feature
+   * Scenario: main.py is locked
+   */
   test('main.py is locked — no rename option', async () => {
     await lab.openFileDropdown(0);
     await expect(lab.filePopup(0)).toContainText('Download');
@@ -125,7 +145,7 @@ test.describe('Python Lab — level 1 — file management', () => {
 test.describe('Python Lab — run as student', () => {
   let lab: PythonLab;
 
-  test.beforeEach(async ({studentPage}) => {
+  test.beforeEach(async ({studentPage, browserName}) => {
     test.skip(
       browserName === 'firefox',
       'TODO: pythonlab run button never enabled on Firefox; Pyodide may not initialize in Firefox test environment',
@@ -136,11 +156,21 @@ test.describe('Python Lab — run as student', () => {
     await expect(lab.runButton).toBeEnabled();
   });
 
+  /**
+   * Migration status: COMPLETED
+   * Source: dashboard/test/ui/features/code_tools/pythonlab/pythonlab_run.feature
+   * Scenario: Can run and see output of Python program
+   */
   test('running prints Hello from the start! to the console', async () => {
     await lab.run();
     await expect(lab.console).toContainText('Hello from the start!');
   });
 
+  /**
+   * Migration status: PENDING
+   * Source: dashboard/test/ui/features/code_tools/pythonlab/pythonlab_run.feature
+   * Scenario: Continue button and progress status shows up correctly
+   */
   test('continue button and progress status update correctly', async () => {
     // Chromium: progress update flaky under parallel run; passes alone.
     test.fixme(
@@ -187,20 +217,20 @@ test.describe('Python Lab — run as student', () => {
  * @no_mobile @no_safari — webkit skipped. Requires levelbuilder auth.
  */
 test.describe('Python Lab — start mode (levelbuilder)', () => {
-  // #uitest-extra-links-button not visible on test-studio — pre-existing failure
-  // confirmed against the old beforeEach pattern; likely a levelbuilder_access
-  // endpoint issue on the test environment.
-  test.fixme();
-
   let lab: PythonLab;
 
-  test.beforeEach(async ({levelbuilderPage}) => {
+  test.beforeEach(async ({levelbuilderPage, browserName}) => {
     skipSafari({browserName});
     lab = new PythonLab(levelbuilderPage);
     await lab.reloadLevel(1);
     await lab.navigateToStartMode();
   });
 
+  /**
+   * Migration status: COMPLETED
+   * Source: dashboard/test/ui/features/code_tools/pythonlab/pythonlab_start_mode.feature
+   * Scenario: Correct file types are in the dropdown
+   */
   test('file type dropdown shows correct options per file type', async () => {
     // File 0 is type LOCKED_STARTER — shows validation/starter/support options
     await lab.openFileDropdown(0);
