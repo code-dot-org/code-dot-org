@@ -14,14 +14,30 @@ test.describe('Jigsaw — level 1', () => {
     await expect(jigsaw.blankImage).toBeVisible();
   });
 
-  test.fixme(
-    'block cannot be deleted or dragged outside the workspace',
-    async () => {
-      // Porting "Can't delete blocks or lose them outside the workspace":
-      // requires dragging jigsaw_2A to each edge and verifying it stays in
-      // the workspace. Complex viewport-relative coordinate math; deferred.
-    },
-  );
+  /**
+   * Source: jigsaw.feature "Can't delete blocks or lose them outside the workspace"
+   * Moves jigsaw_2A to each edge via the Blockly JS API and verifies the block
+   * remains in the workspace (not deleted, visible within view bounds).
+   */
+  test('block cannot be deleted or dragged outside the workspace', async () => {
+    const startPos = await jigsaw.getBlockPosition('jigsaw_2A');
+
+    await jigsaw.moveBlockToEdge('jigsaw_2A', 'right');
+    expect(await jigsaw.isBlockVisibleInWorkspace('jigsaw_2A')).toBe(true);
+    const rightPos = await jigsaw.getBlockPosition('jigsaw_2A');
+    expect(`${rightPos.x},${rightPos.y}`).not.toBe(
+      `${startPos.x},${startPos.y}`,
+    );
+
+    await jigsaw.moveBlockToEdge('jigsaw_2A', 'bottom');
+    expect(await jigsaw.isBlockVisibleInWorkspace('jigsaw_2A')).toBe(true);
+
+    await jigsaw.moveBlockToEdge('jigsaw_2A', 'left');
+    expect(await jigsaw.isBlockVisibleInWorkspace('jigsaw_2A')).toBe(true);
+
+    await jigsaw.moveBlockToEdge('jigsaw_2A', 'top');
+    expect(await jigsaw.isBlockVisibleInWorkspace('jigsaw_2A')).toBe(true);
+  });
 
   test('solving puzzle completes level 1', async () => {
     await jigsaw.moveToGhost('jigsaw_2A');
