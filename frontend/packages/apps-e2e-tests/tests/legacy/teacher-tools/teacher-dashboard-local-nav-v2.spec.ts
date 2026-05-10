@@ -59,19 +59,18 @@ test.describe(
         .locator('#ui-test-teacher-sidebar')
         .waitFor({state: 'visible', timeout: 15_000});
       await page
-        .locator('#ui-test-teacher-sidebar')
-        .getByRole('link', {name: 'Settings'})
+        .locator('#ui-test-teacher-sidebar a[href$="/settings"]')
         .click();
       await page
         .locator('#uitest-spinner')
+        .first()
         .waitFor({state: 'hidden', timeout: 15_000});
       await page
         .locator('h1')
         .filter({hasText: 'Settings'})
         .waitFor({state: 'visible', timeout: 15_000});
       await page
-        .locator('h2')
-        .filter({hasText: 'Class Section'})
+        .getByRole('heading', {name: 'Class Section', exact: true})
         .waitFor({state: 'visible', timeout: 10_000});
 
       // Toggle grade level and select a course.
@@ -87,7 +86,8 @@ test.describe(
       await page
         .locator('input[name="UI Test CSF"]')
         .waitFor({state: 'visible', timeout: 10_000});
-      await page.locator('input[name="UI Test CSF"]').click();
+      // MUI radio is visually overlaid; force click to bypass intercept check.
+      await page.locator('input[name="UI Test CSF"]').click({force: true});
 
       // Rename the section.
       await page.locator('#uitest-section-name-setup').clear();
@@ -107,9 +107,12 @@ test.describe(
       await page
         .locator('#ui-test-progress-table-v2')
         .waitFor({state: 'visible', timeout: 15_000});
-      await page
-        .locator('#ui-test-skeleton-progress-column')
-        .waitFor({state: 'hidden', timeout: 30_000});
+      // page.waitForSelector avoids a Playwright internal selector-generation
+      // TypeError that occurs with locator().waitFor({state:'hidden'}) on this element.
+      await page.waitForSelector('#ui-test-skeleton-progress-column', {
+        state: 'hidden',
+        timeout: 60_000,
+      });
       await expect(page.locator('#unit-selector-v2')).toContainText(
         'UI Test CSF',
         {timeout: 30_000},

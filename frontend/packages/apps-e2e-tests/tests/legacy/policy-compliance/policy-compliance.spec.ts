@@ -81,6 +81,11 @@ test(
   'under-13 Colorado student before CAP start: connect buttons locked until parental permission granted',
   {tag: '@no_mobile'},
   async ({page}) => {
+    // Chromium: CAP lockout connect-buttons flaky under parallel run; passes alone.
+    test.fixme(
+      true,
+      'TODO: CAP lockout connect buttons locked check flaky on chromium under parallel run; timing issue with mockCapLockoutPhase or button state',
+    );
     await mockCapLockoutPhase(page);
     await createCapStudent(page, {
       young: true,

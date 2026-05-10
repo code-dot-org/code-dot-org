@@ -4,7 +4,7 @@ import {
   getLevelbuilderAccess,
   signIn,
 } from '../../shared/auth';
-import {test} from '../../shared/fixtures';
+import {expect, test} from '../../shared/fixtures';
 
 /**
  * Teacher Dashboard Assessments — assessments tab initialization.
@@ -59,9 +59,9 @@ test.describe('Teacher Dashboard Assessments', {tag: '@no_mobile'}, () => {
     await page.locator('#assessment-selector').selectOption({
       label: 'Anonymous student survey 2',
     });
-    await page
-      .locator('div')
-      .filter({hasText: 'this survey is anonymous'})
-      .waitFor({state: 'visible', timeout: 15_000});
+    await expect(page.getByTestId('assessments-tab')).toContainText(
+      'this survey is anonymous',
+      {timeout: 15_000},
+    );
   });
 });

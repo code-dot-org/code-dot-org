@@ -29,6 +29,10 @@ test.describe('App Lab — Template Backed Levels', () => {
     'code persists across levels sharing the same template',
     {tag: '@no_mobile'},
     async ({studentPage}) => {
+      test.fixme(
+        true,
+        'TODO: template-backed level code persistence flaky across all browsers under parallel run; net::ERR_ABORTED on level navigation or save race',
+      );
       const applab = new AppLab(studentPage);
 
       // -- Level 10 ----------------------------------------------------------

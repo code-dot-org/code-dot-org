@@ -41,11 +41,12 @@ test.describe('AI Assessments Announcement', {tag: '@no_mobile'}, () => {
   test('teacher views and closes announcement', async ({page}) => {
     await createTeacher(page);
 
-    // No announcement on a non-AI unit.
+    // No announcement on a non-AI unit.  #uitest-no-ai-assessments-announcement is
+    // an empty sentinel div (0 height → Playwright "hidden"); check attachment instead.
     await page.goto(NON_AI_UNIT_URL);
     await page
       .locator('#uitest-no-ai-assessments-announcement')
-      .waitFor({state: 'visible', timeout: 30_000});
+      .waitFor({state: 'attached', timeout: 30_000});
 
     // Announcement visible on an AI-enabled unit.
     await page.goto(AI_UNIT_URL);
@@ -64,7 +65,7 @@ test.describe('AI Assessments Announcement', {tag: '@no_mobile'}, () => {
     await page.goto(AI_UNIT_URL);
     await page
       .locator('#uitest-no-ai-assessments-announcement')
-      .waitFor({state: 'visible', timeout: 30_000});
+      .waitFor({state: 'attached', timeout: 30_000});
   });
 
   /**
@@ -83,18 +84,20 @@ test.describe('AI Assessments Announcement', {tag: '@no_mobile'}, () => {
       .locator('#uitest-ai-assessments-announcement')
       .waitFor({state: 'visible', timeout: 30_000});
 
-    // Learn More navigates away (the announcement is implicitly dismissed).
-    await Promise.all([
-      page.waitForNavigation({timeout: 30_000}),
-      page
-        .locator('#uitest-ai-assessments-announcement .learn-more-button')
-        .click(),
-    ]);
+    // handleButtonClick posts to server first, then navigates via
+    // window.location.href.  Intercept that external navigation so the API
+    // call completes and we can verify dismissal without leaving test-studio.
+    await page.route(/^https:\/\/code\.org\//, route => route.abort());
+    await page
+      .locator('#uitest-ai-assessments-announcement .learn-more-button')
+      .click();
+    await waitUntilAnnouncementMarkedSeen(page);
+    await page.unroute(/^https:\/\/code\.org\//);
 
     // Back on the AI unit: no announcement.
     await page.goto(AI_UNIT_URL);
     await page
       .locator('#uitest-no-ai-assessments-announcement')
-      .waitFor({state: 'visible', timeout: 30_000});
+      .waitFor({state: 'attached', timeout: 30_000});
   });
 });

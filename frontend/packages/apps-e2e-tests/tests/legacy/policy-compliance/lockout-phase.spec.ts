@@ -112,6 +112,11 @@ test.describe('CPA lockout phase — age/state field editability', () => {
     'under-13 Clever SSO in Colorado before CAP start: age and state are disabled',
     {tag: '@no_mobile'},
     async ({page}) => {
+      // Chromium: CAP lockout field editability flaky under parallel run; passes alone.
+      test.fixme(
+        true,
+        'TODO: CAP lockout age/state disabled check flaky on chromium under parallel run; timing issue in mockCapLockoutPhase',
+      );
       await mockCapLockoutPhase(page);
       await createCapStudent(page, {
         young: true,

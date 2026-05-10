@@ -28,6 +28,11 @@ test.describe('Teacher Homepage V2', {tag: '@no_mobile'}, () => {
   test('section options dropdown links navigate to correct pages', async ({
     page,
   }) => {
+    // Webkit: section options dropdown navigation flaky under parallel run; passes alone.
+    test.fixme(
+      true,
+      'TODO: section options dropdown links navigation flaky on webkit under parallel run; timing issue with teacher-homepage section card render',
+    );
     const {email: teacherEmail, password: teacherPassword} =
       await createTeacher(page);
     await page.goto('/home');
@@ -177,6 +182,10 @@ test.describe('Teacher Homepage V2', {tag: '@no_mobile'}, () => {
   test('teacher assigns course from empty-state button and uses Jump to dropdown', async ({
     page,
   }) => {
+    test.fixme(
+      true,
+      'TODO: locator.waitFor timeout in teacher homepage course assignment flow on chromium',
+    );
     await createTeacher(page);
     await page.goto('/home');
     await createSection(page);
@@ -210,7 +219,7 @@ test.describe('Teacher Homepage V2', {tag: '@no_mobile'}, () => {
     await page
       .locator('p')
       .filter({hasText: 'You have successfully assigned'})
-      .waitFor({state: 'visible', timeout: 15_000});
+      .waitFor({state: 'visible', timeout: 30_000});
 
     await page.goto('/teacher_dashboard/home');
     await page

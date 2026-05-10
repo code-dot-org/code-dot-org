@@ -49,7 +49,6 @@ test.describe('Manage Assets', {tag: '@no_mobile'}, () => {
    */
   test('manage assets dialog has record audio button on Chrome', async ({
     studentPage,
-    browserName,
   }) => {
     test.skip(
       browserName === 'firefox',

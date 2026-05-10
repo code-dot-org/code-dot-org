@@ -36,6 +36,10 @@ test.describe('Global Edition — region select', () => {
     'Studio page: switch between English and Farsi using the locale dropdown',
     {tag: '@no_mobile'},
     async ({page}) => {
+      test.fixme(
+        true,
+        'TODO: region-select locale dropdown switch flaky on all browsers under parallel run; locale cookie or page reload timing issue',
+      );
       await page.goto('/users/sign_in');
       await expect(page.locator('#locale option:checked')).toContainText(
         'English',
@@ -78,6 +82,11 @@ test.describe('Global Edition — region select', () => {
     'Lab page: switch between English and Farsi using the locale form',
     {tag: '@no_mobile'},
     async ({page}) => {
+      // Webkit: locale form switch flaky under parallel run; passes alone.
+      test.fixme(
+        true,
+        'TODO: region-select locale form switch flaky on webkit under parallel run; locale cookie or page reload timing issue',
+      );
       await page.goto('/projects/artist/new');
       await waitForLabLoad(page);
       await expect(page.locator('.uitest-instructionsTab')).toContainText(

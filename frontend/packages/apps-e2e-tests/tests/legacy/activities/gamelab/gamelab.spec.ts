@@ -115,6 +115,10 @@ test.describe('Game Lab — loading animations', () => {
     'blank and library animations load without error after reload',
     {tag: '@no_mobile'},
     async ({studentPage}) => {
+      test.fixme(
+        true,
+        'TODO: animation library CDN unavailable on test-studio; same root cause as fixme on export-animations test (see comment above)',
+      );
       const gamelab = new GameLab(studentPage);
       await studentPage.goto('/projects/gamelab/new');
       await gamelab.waitForLabPage();

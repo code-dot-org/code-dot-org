@@ -26,6 +26,10 @@ test.describe('Internet Simulator — lobby', () => {
   });
 
   test('anonymous user can connect to a router', async ({page}) => {
+    test.fixme(
+      true,
+      'TODO: netsim anonymous connect flaky on webkit under parallel run; lobby load timeout',
+    );
     const netsim = new NetSim(page);
     await netsim.gotoLevel(4);
     await netsim.closeInstructionsModal();

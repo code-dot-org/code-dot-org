@@ -79,7 +79,7 @@ test.describe('Modal Function Editor', () => {
     expect(await lab.getFunctionEditorBlockCount()).toBe(4);
   });
 
-  test('can close the editor using the ESC key', async ({browserName}) => {
+  test('can close the editor using the ESC key', async () => {
     // @chrome only in the Cucumber suite.
     test.skip(
       browserName !== 'chromium',

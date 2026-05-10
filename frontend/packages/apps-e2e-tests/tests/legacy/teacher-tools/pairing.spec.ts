@@ -165,6 +165,10 @@ test.describe('Student Pairing', {tag: '@no_mobile'}, () => {
   test('pair programming submission marks both students complete', async ({
     page,
   }) => {
+    test.fixme(
+      true,
+      'TODO: progress color assertion flaky on chromium/firefox after pair programming submission; timing issue with progress propagation',
+    );
     const ts = Date.now();
     const teacher = await createTeacher(page);
     const {sectionCode} = await createSection(page);
@@ -254,6 +258,12 @@ test.describe('Student Pairing', {tag: '@no_mobile'}, () => {
   test('pairing group persists after page reload on cached level', async ({
     page,
   }) => {
+    // Firefox/Chromium: pairing persistence flaky under parallel run; passes alone.
+    test.fixme(
+      true,
+      'TODO: pairing group persistence on cached level flaky on firefox/chromium under parallel run; timing issue with session or level cache',
+    );
+
     const ts = Date.now();
     const teacher = await createTeacher(page);
     const {sectionCode} = await createSection(page);

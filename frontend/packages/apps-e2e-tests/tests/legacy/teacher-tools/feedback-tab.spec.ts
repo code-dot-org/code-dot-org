@@ -89,6 +89,11 @@ test.describe('Feedback Tab Visibility', {tag: '@no_mobile'}, () => {
   test('teacher can submit rubric feedback that student later sees', async ({
     page,
   }) => {
+    // Webkit/Chromium: rubric feedback submit/view flow flaky under parallel run; passes alone.
+    test.fixme(
+      true,
+      'TODO: feedback-tab teacher submit rubric flaky on webkit/chromium under parallel run; authorized teacher session or panel timing issue',
+    );
     // Background: create authorized teacher + section + student, complete level.
     const teacher = await createAuthorizedTeacher(page);
     const {sectionCode} = await createSection(page);

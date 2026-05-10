@@ -125,14 +125,20 @@ export async function createTeacher(
   const rand = Math.random().toString(36).slice(2, 8);
   const email = `teacher_${ts}_${rand}@test.xx`;
   const password = `TeacherPass${ts}`;
-  const displayName = name ?? `TestTeacher${ts}`;
+  // Space-separated, matching Cucumber's "TestTeacher " + SecureRandom.base64 pattern.
+  // The server derives the username from the first word only ("TestTeacher"), keeping
+  // it short enough to avoid generate_username column-width overflow.
+  // The header (short_name) shows only the first word, so displayName returned here
+  // is the first word — what the UI actually renders.
+  const fullName = name ?? `TestTeacher ${rand}`;
+  const displayName = fullName.split(' ')[0];
 
   await createTestUser(page, {
     user_type: 'teacher',
     email,
     password,
     password_confirmation: password,
-    name: displayName,
+    name: fullName,
     age: '21+',
     sign_in_count: 2,
     terms_of_service_version: '1',
@@ -176,14 +182,18 @@ export async function createStudent(
   const rand = Math.random().toString(36).slice(2, 8);
   const email = `student_${ts}_${rand}@test.xx`;
   const password = `StudentPass${ts}`;
-  const displayName = name ?? `TestStudent${ts}`;
+  // Space-separated, matching Cucumber's "TestStudent " + SecureRandom.base64 pattern.
+  // Server derives username from first word only; returned displayName is the short_name
+  // (first word) that the UI header actually renders.
+  const fullName = name ?? `TestStudent ${rand}`;
+  const displayName = fullName.split(' ')[0];
 
   await createTestUser(page, {
     user_type: 'student',
     email,
     password,
     password_confirmation: password,
-    name: displayName,
+    name: fullName,
     age: String(age),
     sign_in_count: 2,
     ...(us_state ? {us_state, user_provided_us_state: true} : {}),
@@ -283,7 +293,8 @@ export async function createTeacherAssociatedStudent(
   const rand = Math.random().toString(36).slice(2, 8);
   const teacherEmail = `teacher_${ts}_${rand}@test.xx`;
   const teacherPassword = `TeacherPass${ts}`;
-  const teacherDisplayName = `TestTeacher${ts}`;
+  // Space-separated, matching Cucumber's pattern; server uses first word for username.
+  const teacherDisplayName = `TestTeacher ${rand}`;
 
   // Create teacher and sign in as teacher.
   await createTestUser(page, {
@@ -345,7 +356,8 @@ export async function createTeacherAssociatedStudent(
   const studentRand = Math.random().toString(36).slice(2, 8);
   const studentEmail = `student_${studentTs}_${studentRand}@test.xx`;
   const studentPassword = `StudentPass${studentTs}`;
-  const studentDisplayName = studentName ?? `TestStudent${studentTs}`;
+  // Space-separated, matching Cucumber's pattern; server uses first word for username.
+  const studentDisplayName = studentName ?? `TestStudent ${studentRand}`;
 
   await createTestUser(page, {
     user_type: 'student',
@@ -756,14 +768,17 @@ export async function createEuStudent(
   const rand = Math.random().toString(36).slice(2, 8);
   const email = `eu_student_${ts}_${rand}@test.xx`;
   const password = `StudentPass${ts}`;
-  const displayName = name ?? `TestEuStudent${ts}`;
+  // Space-separated, matching Cucumber's pattern; returned displayName is first word
+  // (the short_name the UI header renders).
+  const fullName = name ?? `TestEuStudent ${rand}`;
+  const displayName = fullName.split(' ')[0];
 
   await createTestUser(page, {
     user_type: 'student',
     email,
     password,
     password_confirmation: password,
-    name: displayName,
+    name: fullName,
     age: '16',
     sign_in_count: 2,
     data_transfer_agreement_accepted: true,

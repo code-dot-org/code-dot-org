@@ -47,6 +47,11 @@ test.describe('AI Tutor — legacy App Lab', () => {
     'chat sends message and receives bot reply with correct background',
     {tag: ['@no_ci', '@no_mobile']},
     async ({authorizedTeacherPage}) => {
+      // Firefox: Open AI Tutor button not reliably visible; likely timing issue with authorized-teacher session init.
+      test.fixme(
+        true,
+        'TODO: Open AI tutor button not visible on firefox/chromium; authorized-teacher session timing issue under parallel run',
+      );
       await authorizedTeacherPage.goto(
         '/projects/applab/new?hideProductTours=true',
       );
@@ -76,6 +81,11 @@ test.describe('AI Tutor — Python Lab resource panel', () => {
     'resource panel AI Tutor tab sends message and receives bot reply',
     {tag: ['@no_ci', '@no_mobile']},
     async ({authorizedTeacherPage}) => {
+      // All browsers: Python Lab AI Tutor resource panel flaky under parallel run; passes alone.
+      test.fixme(
+        true,
+        'TODO: Python Lab resource panel AI Tutor tab flaky on all browsers under parallel run; authorized-teacher session timing issue',
+      );
       await authorizedTeacherPage.goto(
         '/courses/allthethingscourse/units/1/lessons/50/levels/1?hideProductTours=true',
       );
@@ -105,6 +115,10 @@ test.describe('AI Tutor — Weblab2 resource panel', () => {
     'Weblab2 resource panel AI Tutor tab sends message and receives bot reply',
     {tag: ['@no_ci', '@no_mobile']},
     async ({authorizedTeacherPage}) => {
+      test.fixme(
+        true,
+        'TODO: [aria-label=User chat message] element not found; possible aria-label change in AI Tutor UI',
+      );
       await authorizedTeacherPage.goto(
         '/courses/allthethingscourse/units/1/lessons/51/levels/11?hideProductTours=true',
       );

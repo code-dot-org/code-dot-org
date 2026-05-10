@@ -32,13 +32,13 @@ test.describe('Cached Level Page', {tag: '@no_mobile'}, () => {
     await page.goto(
       `/courses/dance/units/1/lessons/1/levels/13?section_id=${sectionId}&noautoplay=true`,
     );
+    // #teacher-panel-container has no height (its only child has position:fixed).
+    // Wait for the inner .teacher-panel to be visible instead.
     await page
-      .locator('#teacher-panel-container')
+      .locator('.teacher-panel')
       .waitFor({state: 'visible', timeout: 30_000});
     await expect(
-      page
-        .locator('#teacher-panel-container td')
-        .filter({hasText: studentName}),
+      page.locator('.teacher-panel td').filter({hasText: studentName}),
     ).toBeVisible({timeout: 30_000});
   });
 });
