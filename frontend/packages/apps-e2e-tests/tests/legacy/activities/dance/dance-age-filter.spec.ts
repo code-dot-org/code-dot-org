@@ -91,11 +91,6 @@ test.describe('Dance Party age filter — anonymous user, age dialog', () => {
     'selecting age 13 keeps PG-13 songs and setting persists to the next dance level',
     {tag: '@no_mobile'},
     async ({page}) => {
-      // Webkit: age dialog setting persistence flaky under parallel run; passes alone.
-      test.fixme(
-        true,
-        'TODO: dance age dialog persistence to next level flaky on webkit under parallel run; song filter cookie or level navigate timing issue',
-      );
       const dance = new Dance(page);
       await dance.gotoLevelAnonymous(1);
       await dance.selectAgeInDialog(13);
@@ -109,6 +104,10 @@ test.describe('Dance Party age filter — anonymous user, age dialog', () => {
         '/courses/dance/units/1/lessons/1/levels/9?noautoplay=true',
       );
       await dance.waitForDancePage();
+      // Wait for the song selector value before checking options. Under
+      // parallel load the options may not be populated yet even after
+      // waitForDancePage (Cucumber: "I wait for the song selector to load").
+      await dance.waitForSongSelector();
       await expect(dance.ageDialog).toBeHidden();
       await expect(dance.runButton).toBeVisible();
       await expect(dance.songSelector).toBeVisible();
@@ -131,11 +130,6 @@ test.describe('Dance Party age filter — anonymous user, age dialog', () => {
     '?songfilter=on persists through level completion to the next level',
     {tag: '@no_mobile'},
     async ({page}) => {
-      // Webkit: song filter persistence through level completion flaky under parallel run; passes alone.
-      test.fixme(
-        true,
-        'TODO: dance song filter persistence flaky on webkit under parallel run; level run or continue navigation timing issue',
-      );
       const dance = new Dance(page);
       await dance.gotoAnonymousSongFilter(1);
       await expect(dance.ageDialog).toBeHidden();
@@ -143,7 +137,9 @@ test.describe('Dance Party age filter — anonymous user, age dialog', () => {
 
       // Run until level success, then follow the continue link.
       await dance.run();
-      await expect(dance.congratsMessage).toBeVisible();
+      // Cucumber uses a generous wait (~60 s) for .congrats; increase from the
+      // 15 s default to avoid webkit parallel-load timeouts.
+      await expect(dance.congratsMessage).toBeVisible({timeout: 30_000});
       await dance.continueButton.click();
       await dance.waitForLevel(2);
       await dance.waitForDancePage();
