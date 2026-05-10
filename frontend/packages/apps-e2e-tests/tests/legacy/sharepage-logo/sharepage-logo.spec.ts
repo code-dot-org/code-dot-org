@@ -87,11 +87,6 @@ test.describe('Share page — logo navigates to /home', () => {
     'PlayLab share page logo navigates to /home',
     {tag: '@no_mobile'},
     async ({studentPage}) => {
-      // Webkit: PlayLab share page logo navigation flaky under parallel run; passes alone.
-      test.fixme(
-        true,
-        'TODO: PlayLab share page logo navigation flaky on webkit under parallel run; project load or share URL timing issue',
-      );
       await testSharePageLogo(studentPage, '/projects/playlab');
     },
   );
@@ -108,10 +103,6 @@ test.describe('Share page — logo navigates to /home', () => {
     'Artist share page logo navigates to /home',
     {tag: '@no_mobile'},
     async ({studentPage}) => {
-      test.fixme(
-        true,
-        'TODO: Artist share page logo navigation flaky on webkit under parallel run; project load or share URL timing issue',
-      );
       await testSharePageLogo(studentPage, '/projects/artist');
     },
   );

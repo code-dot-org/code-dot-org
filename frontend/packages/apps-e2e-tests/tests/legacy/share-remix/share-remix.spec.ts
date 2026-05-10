@@ -19,11 +19,6 @@ test.describe('Legacy share remix — Artist', () => {
     'remixing a legacy share link lands on /projects/artist/.../edit',
     {tag: '@no_mobile'},
     async ({studentPage}) => {
-      // Webkit: share remix navigation flaky under parallel run; passes alone.
-      test.fixme(
-        true,
-        'TODO: legacy share remix artist link navigation flaky on webkit under parallel run; timing issue with share page or project creation',
-      );
       const artist = new Artist(studentPage);
       await studentPage.goto(
         '/courses/allthethingscourse/units/1/lessons/3/levels/10?noautoplay=true',
