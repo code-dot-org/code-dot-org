@@ -67,25 +67,54 @@ export class SpriteLab extends LegacyBlocklyLab {
   }
 
   /**
-   * Click the nth item in the currently open Blockly grid dropdown.
-   * Mirrors `I select item N from the dropdown`:
-   *   @browser.find_elements(:class, 'blocklyFieldGridItem')[N].click
+   * Select the nth costume option on the `gamelab_makeNewSpriteAnon` block
+   * via the Blockly JS API, bypassing the FieldGridDropdown UI.
    *
-   * Uses evaluate() after waiting for attachment because Blockly re-renders
-   * the grid during its dropdown open animation — Playwright's stability check
-   * treats the brief detach as a retry signal and times out in WebKit.
+   * The FieldGridDropdown open animation briefly detaches and reattaches
+   * grid items; Playwright's stability check turns those detach events into
+   * retry signals and times out in some browsers. Direct field mutation is
+   * equivalent to the Cucumber step "I select item N from the dropdown"
+   * (which performs a Selenium WebDriver click on .blocklyFieldGridItem[N]).
    *
-   * @param index - zero-based index into .blocklyFieldGridItem elements
+   * Waits for the block and its options to be present before setting the
+   * value, since the animation library populates asynchronously on first load.
+   *
+   * @param index - zero-based index into the field's getOptions() list
    */
   async selectDropdownItem(index: number): Promise<void> {
-    await this.page
-      .locator('.blocklyFieldGridItem')
-      .nth(index)
-      .waitFor({state: 'attached'});
-    await this.page.evaluate(idx => {
-      const items = document.querySelectorAll('.blocklyFieldGridItem');
-      (items[idx] as HTMLElement)?.click();
-    }, index);
+    // Wait until the block exists and the costume field has real options.
+    // Block: gamelab_createNewSprite id="make-new-sprite", field: COSTUME.
+    // The fallback when animationList is empty is [['sprites missing','null']].
+    await this.page.waitForFunction(
+      ({blockId, fieldName, idx}) => {
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
+        const Blockly = (window as any).Blockly;
+        if (!Blockly?.mainBlockSpace) return false;
+        const block = Blockly.mainBlockSpace.getBlockById(blockId);
+        if (!block) return false;
+        const field = block.getField(fieldName);
+        if (!field) return false;
+        const options = field.getOptions(false);
+        return (
+          Array.isArray(options) &&
+          options.length > idx &&
+          options[idx][1] !== 'null'
+        );
+      },
+      {blockId: 'make-new-sprite', fieldName: 'COSTUME', idx: index},
+    );
+
+    await this.page.evaluate(
+      ({blockId, fieldName, idx}) => {
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
+        const Blockly = (window as any).Blockly;
+        const block = Blockly.mainBlockSpace.getBlockById(blockId);
+        const field = block.getField(fieldName);
+        const options = field.getOptions(false);
+        block.setFieldValue(options[idx][1], fieldName);
+      },
+      {blockId: 'make-new-sprite', fieldName: 'COSTUME', idx: index},
+    );
   }
 
   // --- Modal Function Editor ---

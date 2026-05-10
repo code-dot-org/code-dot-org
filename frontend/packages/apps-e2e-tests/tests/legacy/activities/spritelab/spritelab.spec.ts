@@ -88,18 +88,16 @@ test.describe('Sprite Lab — lesson 36 — level 1', () => {
     'winning the first level shows congrats',
     {tag: '@no_mobile'},
     async () => {
-      // Chromium/Firefox: spritelab congrats flaky under parallel run; passes alone.
-      test.fixme(
-        true,
-        'TODO: spritelab winning first level congrats flaky on all browsers under parallel run; timing issue with sprite block or congrats display',
-      );
-      await spritelab.clickBlockFieldAt(
-        "[data-id='make-new-sprite'] > .blocklyEditableField",
-        1,
-      );
+      // Cucumber: "I click block field → dropdown visible → select item 0 →
+      // dropdown hidden → run". Using the Blockly JS API instead of the
+      // FieldGridDropdown UI because the grid open animation briefly detaches
+      // and reattaches items — Playwright's retry logic treats those as
+      // instability signals and times out in some browsers.
       await spritelab.selectDropdownItem(0);
       await spritelab.run();
-      await expect(spritelab.congratsMessage).toBeVisible();
+      // Cucumber uses a generous wait (~60 s) for .congrats; increase from
+      // the 15 s default to handle parallel-load timing.
+      await expect(spritelab.congratsMessage).toBeVisible({timeout: 30_000});
     },
   );
 });
