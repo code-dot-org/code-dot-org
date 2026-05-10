@@ -368,12 +368,15 @@ const EditPanel: React.FunctionComponent<EditPanelProps> = ({
       </div>
       {showTeacherNotes && (
         <div className={moduleStyles.fieldRow}>
-          <label htmlFor={`teacher-note-${panel.key}`}>
+          <label
+            htmlFor={`teacher-note-${panel.key}`}
+            className={moduleStyles.teacherNoteLabel}
+          >
             Teacher note (shown only to teachers, below the panel bubbles)
           </label>
           <textarea
             id={`teacher-note-${panel.key}`}
-            className={moduleStyles.teacherNoteTextarea}
+            className={moduleStyles.textarea}
             value={panel.teacherNote || ''}
             onChange={e => updatePanel({...panel, teacherNote: e.target.value})}
           />
