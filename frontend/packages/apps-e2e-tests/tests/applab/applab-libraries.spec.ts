@@ -1,6 +1,16 @@
-import {expect, test, type Page} from '../shared/fixtures';
+import {type Page} from '@playwright/test';
+
+import {expect, test} from '../shared/fixtures';
 
 import {AppLab} from './AppLab';
+
+type ProjectTestWindow = Window & {
+  dashboard?: {
+    project?: {
+      __TestInterface?: {isInitialSaveComplete?: () => boolean};
+    };
+  };
+};
 
 /**
  * App Lab — Libraries: publish/unpublish, import/remove, teacher assignment.
@@ -68,11 +78,10 @@ test.describe('App Lab — Libraries', () => {
 
       // Wait for initial project save before touching the editor.
       await studentPage.waitForFunction(
-        // eslint-disable-next-line @typescript-eslint/no-explicit-any
-        () =>
-          (
-            window as any
-          ).dashboard?.project?.__TestInterface?.isInitialSaveComplete(),
+        () => {
+          const pageWindow = window as ProjectTestWindow;
+          return pageWindow.dashboard?.project?.__TestInterface?.isInitialSaveComplete?.();
+        },
         {timeout: 60_000},
       );
 

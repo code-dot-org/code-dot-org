@@ -2,6 +2,18 @@ import {expect, test} from '../shared/fixtures';
 
 import {AppLab} from './AppLab';
 
+type ProjectTestWindow = Window & {
+  dashboard?: {
+    project?: {
+      __TestInterface?: {
+        isInitialSaveComplete?: () => boolean;
+        isInitialCaptureComplete?: () => boolean;
+        setSourceVersionInterval?: (seconds: number) => void;
+      };
+    };
+  };
+};
+
 /**
  * App Lab — Version History.
  *
@@ -57,11 +69,10 @@ async function waitForSaved(applab: AppLab): Promise<void> {
  */
 async function waitForInitialSave(applab: AppLab): Promise<void> {
   await applab.page.waitForFunction(
-    () =>
-      // eslint-disable-next-line @typescript-eslint/no-explicit-any
-      (
-        window as any
-      ).dashboard?.project?.__TestInterface?.isInitialSaveComplete(),
+    () => {
+      const pageWindow = window as ProjectTestWindow;
+      return pageWindow.dashboard?.project?.__TestInterface?.isInitialSaveComplete?.();
+    },
     {timeout: 60_000},
   );
 }
@@ -72,11 +83,10 @@ async function waitForInitialSave(applab: AppLab): Promise<void> {
  */
 async function waitForInitialCapture(applab: AppLab): Promise<void> {
   await applab.page.waitForFunction(
-    () =>
-      // eslint-disable-next-line @typescript-eslint/no-explicit-any
-      (
-        window as any
-      ).dashboard?.project?.__TestInterface?.isInitialCaptureComplete(),
+    () => {
+      const pageWindow = window as ProjectTestWindow;
+      return pageWindow.dashboard?.project?.__TestInterface?.isInitialCaptureComplete?.();
+    },
     {timeout: 60_000},
   );
 }
@@ -252,14 +262,13 @@ test.describe('App Lab — Version History', () => {
         .textContent({timeout: 10_000});
       await closeVersionHistory(applab);
 
-      // Shorten the checkpoint interval so the next run creates one immediately.
-      await studentPage.evaluate(() =>
-        // eslint-disable-next-line @typescript-eslint/no-explicit-any
-        (
-          window as any
-        ).dashboard.project.__TestInterface.setSourceVersionInterval(1),
-      );
-      await studentPage.waitForTimeout(1_500);
+      // Force the next save to create a checkpoint immediately.
+      await studentPage.evaluate(() => {
+        const pageWindow = window as ProjectTestWindow;
+        pageWindow.dashboard?.project?.__TestInterface?.setSourceVersionInterval?.(
+          0,
+        );
+      });
 
       await applab.ensureTextMode();
       await applab.insertCodeAtCursor('// comment B');

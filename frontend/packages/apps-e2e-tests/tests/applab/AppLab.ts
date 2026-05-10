@@ -268,6 +268,9 @@ export class AppLab {
     const copyButton = this.page.locator('#sharing-dialog-copy-button');
     await copyButton.waitFor({state: 'visible', timeout: 10_000});
     const fullUrl = await copyButton.getAttribute('value');
+    if (!fullUrl) {
+      throw new Error('share dialog copy button did not expose a URL value');
+    }
 
     // Close dialog.
     await this.page.keyboard.press('Escape');

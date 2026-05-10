@@ -2,6 +2,28 @@ import {expect, test} from '../shared/fixtures';
 
 import {AppLab} from './AppLab';
 
+type ProjectTestWindow = Window & {
+  dashboard?: {
+    project?: {
+      __TestInterface?: {
+        isInitialSaveComplete?: () => boolean;
+      };
+    };
+  };
+};
+
+async function waitForInitialProjectSave(
+  page: import('@playwright/test').Page,
+): Promise<void> {
+  await page.waitForFunction(
+    () => {
+      const pageWindow = window as ProjectTestWindow;
+      return pageWindow.dashboard?.project?.__TestInterface?.isInitialSaveComplete?.();
+    },
+    {timeout: 60_000},
+  );
+}
+
 /**
  * App Lab — Shared Apps: interactive share page behavior.
  *
@@ -44,14 +66,7 @@ test.describe('App Lab — Shared Apps', () => {
 
       await studentPage.goto('/projects/applab/new');
       await applab.waitForReady();
-      await studentPage.waitForFunction(
-        () =>
-          // eslint-disable-next-line @typescript-eslint/no-explicit-any
-          (
-            window as any
-          ).dashboard?.project?.__TestInterface?.isInitialSaveComplete(),
-        {timeout: 60_000},
-      );
+      await waitForInitialProjectSave(studentPage);
 
       await applab.ensureTextMode();
       await applab.appendCode("button('hello', 'world');");
@@ -82,14 +97,14 @@ test.describe('App Lab — Shared Apps', () => {
       // ACE and Droplet must not be loaded on the share page.
       expect(
         await studentPage.evaluate(
-          // eslint-disable-next-line @typescript-eslint/no-explicit-any
-          () => typeof (window as any).ace === 'undefined',
+          () => typeof (window as Window & {ace?: unknown}).ace === 'undefined',
         ),
       ).toBe(true);
       expect(
         await studentPage.evaluate(
-          // eslint-disable-next-line @typescript-eslint/no-explicit-any
-          () => typeof (window as any).droplet === 'undefined',
+          () =>
+            typeof (window as Window & {droplet?: unknown}).droplet ===
+            'undefined',
         ),
       ).toBe(true);
 
@@ -112,14 +127,7 @@ test.describe('App Lab — Shared Apps', () => {
 
     await studentPage.goto('/projects/applab/new');
     await applab.waitForReady();
-    await studentPage.waitForFunction(
-      () =>
-        // eslint-disable-next-line @typescript-eslint/no-explicit-any
-        (
-          window as any
-        ).dashboard?.project?.__TestInterface?.isInitialSaveComplete(),
-      {timeout: 60_000},
-    );
+    await waitForInitialProjectSave(studentPage);
 
     await applab.ensureTextMode();
     await applab.appendCode(
@@ -153,14 +161,7 @@ test.describe('App Lab — Shared Apps', () => {
 
     await studentPage.goto('/projects/applab/new');
     await applab.waitForReady();
-    await studentPage.waitForFunction(
-      () =>
-        // eslint-disable-next-line @typescript-eslint/no-explicit-any
-        (
-          window as any
-        ).dashboard?.project?.__TestInterface?.isInitialSaveComplete(),
-      {timeout: 60_000},
-    );
+    await waitForInitialProjectSave(studentPage);
 
     await applab.ensureTextMode();
     await applab.appendCode(
@@ -192,14 +193,7 @@ test.describe('App Lab — Shared Apps', () => {
 
     await studentPage.goto('/projects/applab/new');
     await applab.waitForReady();
-    await studentPage.waitForFunction(
-      () =>
-        // eslint-disable-next-line @typescript-eslint/no-explicit-any
-        (
-          window as any
-        ).dashboard?.project?.__TestInterface?.isInitialSaveComplete(),
-      {timeout: 60_000},
-    );
+    await waitForInitialProjectSave(studentPage);
 
     await applab.ensureTextMode();
     await applab.appendCode(
@@ -237,14 +231,7 @@ test.describe('App Lab — Shared Apps', () => {
 
     await studentPage.goto('/projects/applab/new');
     await applab.waitForReady();
-    await studentPage.waitForFunction(
-      () =>
-        // eslint-disable-next-line @typescript-eslint/no-explicit-any
-        (
-          window as any
-        ).dashboard?.project?.__TestInterface?.isInitialSaveComplete(),
-      {timeout: 60_000},
-    );
+    await waitForInitialProjectSave(studentPage);
 
     await applab.ensureTextMode();
     await applab.appendCode(
@@ -284,14 +271,7 @@ test.describe('App Lab — Shared Apps', () => {
 
     await studentPage.goto('/projects/applab/new');
     await applab.waitForReady();
-    await studentPage.waitForFunction(
-      () =>
-        // eslint-disable-next-line @typescript-eslint/no-explicit-any
-        (
-          window as any
-        ).dashboard?.project?.__TestInterface?.isInitialSaveComplete(),
-      {timeout: 60_000},
-    );
+    await waitForInitialProjectSave(studentPage);
 
     await applab.switchToDesignMode();
     await applab.dragElementToApp('TEXT_INPUT');
@@ -336,14 +316,7 @@ test.describe('App Lab — Shared Apps', () => {
 
       await studentPage.goto('/projects/applab/new');
       await applab.waitForReady();
-      await studentPage.waitForFunction(
-        () =>
-          // eslint-disable-next-line @typescript-eslint/no-explicit-any
-          (
-            window as any
-          ).dashboard?.project?.__TestInterface?.isInitialSaveComplete(),
-        {timeout: 60_000},
-      );
+      await waitForInitialProjectSave(studentPage);
 
       await applab.switchToDesignMode();
       await applab.dragElementToApp('TEXT_AREA');

@@ -21,7 +21,15 @@ const skipSafari = ({browserName}: {browserName: string}) =>
 const LESSON_NAME = 'Mix & Move with AI';
 
 test.describe('Mix & Move with AI', () => {
-  test('dancer, music, dance AI generation flow', async ({page}) => {
+  /**
+   * Migration status: COMPLETED
+   * Source: dashboard/test/ui/features/star_labs/mix_move_ai.feature
+   * Scenario: Dancer, music, dance
+   */
+  test('dancer, music, dance AI generation flow', async ({
+    page,
+    browserName,
+  }) => {
     // Nine sequential AI generation calls; 90s global is insufficient.
     test.setTimeout(300_000);
     skipSafari({browserName});

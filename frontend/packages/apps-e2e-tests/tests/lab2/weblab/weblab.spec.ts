@@ -44,7 +44,7 @@ test.describe('Web Lab 2 — editor and instructions load', () => {
   test(
     'instructions drawer, file list, and code editor are all visible',
     {tag: '@no_mobile'},
-    async ({studentPage}) => {
+    async ({studentPage, browserName}) => {
       skipSafari({browserName});
       // hideProductTours suppresses first-visit tour overlays.
       await studentPage.goto(

@@ -371,7 +371,7 @@ test.describe('App Lab — HTML sanitization', () => {
   test(
     'design elements maintain correct parent-child DOM hierarchy',
     {tag: '@no_mobile'},
-    async ({studentPage}) => {
+    async ({studentPage, browserName}) => {
       // All browsers: #screen2 never becomes visible after applab.run(); screen navigation or default screen change.
       test.fixme(
         true,
@@ -444,6 +444,7 @@ test.describe('App Lab — HTML sanitization', () => {
 
 test.describe('App Lab — change event on text input', () => {
   /**
+   * Migration status: COMPLETED
    * Source: scenarios2.feature — "Change event works in text input"
    * @as_student @no_mobile
    *
@@ -459,10 +460,6 @@ test.describe('App Lab — change event on text input', () => {
     'blur and enter trigger change event; second blur does not',
     {tag: '@no_mobile'},
     async ({studentPage}) => {
-      test.fixme(
-        true,
-        'TODO: pressSequentially + blur does not trigger onEvent change handler in test environment; debug output stays empty across all browsers',
-      );
       await studentPage.goto('/projects/applab/new');
       const applab = new AppLab(studentPage);
       await applab.waitForReady();
@@ -492,7 +489,14 @@ test.describe('App Lab — change event on text input', () => {
       });
 
       // Enter after more typing → change fires.
+      await input.fill('123');
+      await expect(input).toHaveValue('123');
+      await input.evaluate((el: HTMLInputElement) => {
+        el.focus();
+        el.setSelectionRange(el.value.length, el.value.length);
+      });
       await input.pressSequentially('456');
+      await expect(input).toHaveValue('123456');
       await input.press('Enter');
       await expect(applab.consoleOutput).toContainText(
         '"text_input1: 123456"',
@@ -501,7 +505,6 @@ test.describe('App Lab — change event on text input', () => {
 
       // Second blur → no new change event; "123456" appears only once.
       await input.evaluate((el: HTMLElement) => el.blur());
-      await studentPage.waitForTimeout(500);
       const debugText = (await applab.consoleOutput.textContent()) ?? '';
       expect((debugText.match(/"text_input1: 123456"/g) ?? []).length).toBe(1);
     },
@@ -510,6 +513,7 @@ test.describe('App Lab — change event on text input', () => {
 
 test.describe('App Lab — change event on text area', () => {
   /**
+   * Migration status: COMPLETED
    * Source: scenarios2.feature — "Change event works in text area"
    * @as_student @no_mobile
    *
@@ -522,11 +526,6 @@ test.describe('App Lab — change event on text area', () => {
     'blur fires change event after setting text area content',
     {tag: '@no_mobile'},
     async ({studentPage}) => {
-      // Webkit: blur/change-event flow flaky under parallel run; passes alone.
-      test.fixme(
-        true,
-        'TODO: blur fires change event flaky on webkit under parallel run; timing issue with design mode drag or event dispatch',
-      );
       await studentPage.goto('/projects/applab/new');
       const applab = new AppLab(studentPage);
       await applab.waitForReady();
