@@ -56,13 +56,14 @@ async function testSharePageLogo(
 
   const shareUrl = await getShareUrl(page);
   await page.goto(shareUrl);
-  // Share pages for some labs (Game Lab, App Lab) autoplay on load so
-  // #runButton may remain hidden. Wait for the logo instead, which is always
-  // present on a fully-rendered share page.
+  // Cucumber "I wait to see '#runButton'" checks DOM presence (find_elements
+  // non-empty), not visibility. App Lab / Game Lab share pages autoplay and
+  // hide #runButton while PlayLab / Artist keep it visible — but it is always
+  // attached once the lab has initialized. Use 'attached' to match the
+  // Cucumber semantics; 'visible' times out on autoplay labs.
   await page
-    .locator('#logo-img img')
-    .first()
-    .waitFor({state: 'visible', timeout: 30_000});
+    .locator('#runButton')
+    .waitFor({state: 'attached', timeout: 60_000});
 
   // The share page should not show the full Code Studio header banner.
   await expect(
@@ -87,11 +88,6 @@ test.describe('Share page — logo navigates to /home', () => {
     'PlayLab share page logo navigates to /home',
     {tag: '@no_mobile'},
     async ({studentPage}) => {
-      // Webkit: PlayLab share page logo navigation flaky under parallel run; passes alone.
-      test.fixme(
-        true,
-        'TODO: PlayLab share page logo navigation flaky on webkit under parallel run; project load or share URL timing issue',
-      );
       await testSharePageLogo(studentPage, '/projects/playlab');
     },
   );
@@ -108,10 +104,6 @@ test.describe('Share page — logo navigates to /home', () => {
     'Artist share page logo navigates to /home',
     {tag: '@no_mobile'},
     async ({studentPage}) => {
-      test.fixme(
-        true,
-        'TODO: Artist share page logo navigation flaky on webkit under parallel run; project load or share URL timing issue',
-      );
       await testSharePageLogo(studentPage, '/projects/artist');
     },
   );
