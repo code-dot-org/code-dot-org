@@ -183,6 +183,14 @@ $pinned-width-vw: 29;
   width: 100%;
   height: 100%;
   display: flex;
+  // The overlay is just a positioning wrapper for the fade-in/out toast
+  // — there are no interactive controls inside it. When the preview is
+  // pinned, transform: scale() on .fullSizeContainer doesn't shrink its
+  // layout box, so this overlay can end up taller than the visible
+  // pinned rectangle and block clicks on whatever sits underneath.
+  // Make the overlay click-through; the toast itself reasserts pointer
+  // events for its own region.
+  pointer-events: none;
 }
 
 .toast {
@@ -193,6 +201,11 @@ $pinned-width-vw: 29;
   border: 2px $brand_primary_light solid;
   border-radius: 4px;
   padding: 10px;
+  // Re-enable pointer events on the toast itself in case future content
+  // ever wants to be clickable (e.g. a "Dismiss" button). Mostly here so
+  // the parent overlay's `pointer-events: none` doesn't quietly disable
+  // such interactions if they're added later.
+  pointer-events: auto;
 
   &Show {
     animation: fade-out-toast 3s;
