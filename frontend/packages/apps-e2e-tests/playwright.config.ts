@@ -19,7 +19,10 @@ export default defineConfig({
   // test-studio.
   grepInvert: process.env.CI ? /@no_ci/ : undefined,
   workers: undefined,
-  reporter: [['html', {outputFolder: 'playwright-report'}]],
+  reporter: [
+    ['html', {outputFolder: 'playwright-report'}],
+    ['junit', {outputFile: 'test-results/junit.xml'}],
+  ],
 
   timeout: 90_000,
   expect: {timeout: 15_000},

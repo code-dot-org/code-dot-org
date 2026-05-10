@@ -141,6 +141,35 @@ export class AppLab {
   }
 
   /**
+   * Enter Data mode and wait until a data-table link is visible.
+   * App Lab can render Data mode before level-defined tables reach the Data
+   * Browser.  Agent Browser verified that the empty Data Tables list does not
+   * update in place; switching back to Code and re-entering Data exposes the
+   * table once App Lab is ready.  The visible table link is the readiness
+   * signal replacing Cucumber's fixed delay.
+   *
+   * @param name - exact table name text as shown in the Data Tables list
+   */
+  async switchToDataModeWithTable(name: string): Promise<void> {
+    await expect(async () => {
+      if (await this.dataWorkspace.isVisible()) {
+        await this.switchToCodeMode();
+      }
+
+      await this.switchToDataMode();
+      await this.waitForDataLibrary();
+      await expect(
+        this.page.locator('#dataTablesBody a', {hasText: name}),
+      ).toBeVisible({
+        timeout: 2_000,
+      });
+    }).toPass({
+      intervals: [250, 500, 1_000],
+      timeout: 30_000,
+    });
+  }
+
+  /**
    * Click a table name link in the data library and wait for the data grid.
    * Call waitForDataLibrary() before this to ensure the library is loaded.
    *

@@ -21,6 +21,8 @@ test.describe('App Lab — Data Blocks', () => {
    *
    * Navigates to the data-blocks evaluation level, runs it, and confirms
    * both the key-value and record output labels appear inside #divApplab.
+   *
+   * Migration status: COMPLETED.
    */
   test(
     'data storage API labels visible after run',
@@ -56,26 +58,23 @@ test.describe('App Lab — Level Options', () => {
    *
    * Navigates to a level that ships pre-populated table data, opens data
    * mode, and confirms the table and one of its rows are visible.
+   *
+   * Migration status: COMPLETED.
    */
   test('pre-populated table data visible in data browser', async ({
     studentPage,
   }) => {
     const applab = new AppLab(studentPage);
+
     await studentPage.goto(
       '/courses/allthethingscourse/units/1/lessons/18/levels/16',
     );
     await applab.waitForReady();
 
-    // Give async table load extra time before switching mode.
-    await studentPage.waitForTimeout(2_000);
-
-    await applab.switchToDataMode();
-    await applab.waitForDataLibrary();
-
-    await expect(
-      studentPage.locator('a', {hasText: 'table_name2'}),
-    ).toBeVisible({timeout: 15_000});
-
+    // Readiness signal: the target table link is visible in the Data Tables
+    // list.  Agent Browser showed that an early Data-mode render can stay
+    // empty; re-entering Data mode exposes the table after App Lab is ready.
+    await applab.switchToDataModeWithTable('table_name2');
     await applab.selectDataTable('table_name2');
     await applab.expectDataTableCell('Seattle');
   });
@@ -85,6 +84,8 @@ test.describe('App Lab — Level Options', () => {
    * see design mode and teachers see code mode when viewing student work"
    *
    * Requires a teacher-associated student account pair; deferred.
+   *
+   * Migration status: PENDING.
    */
   test.fixme(
     'teacher views student work in code mode; student sees design mode',
@@ -115,6 +116,8 @@ test.describe('App Lab — Data Tab', () => {
    *
    * Imports a public dataset via the library picker modal and verifies
    * the dataset name appears in the tables list.
+   *
+   * Migration status: COMPLETED.
    */
   test(
     'datasets panel — import a public dataset',
@@ -149,6 +152,8 @@ test.describe('App Lab — Data Tab', () => {
    * Creates a new table, adds a row, and edits the row value.
    * Column rename is omitted: the Bootstrap dropdown-toggle button is
    * clipped by the narrow th and cannot be actioned in headless Playwright.
+   *
+   * Migration status: COMPLETED.
    */
   test(
     'data tables tab — create table, add and edit row',
@@ -232,6 +237,8 @@ test.describe('App Lab — Data Tab', () => {
    *
    * Opens the key-value tab, adds a pair, edits the value, and verifies
    * both changes are reflected.
+   *
+   * Migration status: COMPLETED.
    */
   test(
     'key-value pairs tab — add and edit a pair',
