@@ -48,20 +48,32 @@ export async function generateSlidesOutline(
   const lessonContext = JSON.stringify(levelPropertiesById, null, 2);
   const prompt = [
     'You are helping a curriculum author plan a sequence of intro slides',
-    'shown to a middle-school CS student BEFORE they begin a lesson. The',
-    'slides set up context — what the lesson is about, why it matters,',
-    'and what concept or technique they are about to practice. They must',
-    'NOT walk through the solution to any level; they should leave the',
-    'student with curiosity and just enough framing to engage productively.',
+    'shown to students BEFORE they begin a CS lesson. The slides set up',
+    'context — what the lesson is about, why it matters, and what concept',
+    'or technique the students are about to practice. They must NOT walk',
+    'through the solution to any level; they should leave students with',
+    'curiosity and enough framing to engage productively.',
     '',
     'Each slide will be implemented as a single Panels-app panel (one',
-    '16:9 illustration + short text overlay). Plan 1 to 20 slides; default',
+    '16:9 illustration + text overlay). Plan 1 to 20 slides; default',
     'to 3-6 unless the outline below asks for more.',
+    '',
+    'Audience and tone: the unit may be aimed at any grade range, from',
+    'elementary to high school or beyond. Read the outline below for',
+    "the levelbuilder's intent and match it. If no outline is provided,",
+    'infer the level from the lesson content; do not assume any',
+    'specific grade.',
     '',
     `Lesson: ${lessonName}`,
     '',
     ...(outline?.trim()
-      ? ['Outline (the levelbuilder typed this; honor it):', outline.trim(), '']
+      ? [
+          'Outline (the levelbuilder typed this; match its audience,',
+          'depth, vocabulary, and tone — do not soften technical content',
+          'if the outline asks for it):',
+          outline.trim(),
+          '',
+        ]
       : []),
     'Lesson level content (the existing generated levels of this lesson,',
     'in order). Use these to understand what the student is about to do',
@@ -69,9 +81,10 @@ export async function generateSlidesOutline(
     lessonContext,
     '',
     'For each slide, return a 2-5 sentence description of what the slide',
-    'should show. Describe intent — topic, mood, what concept lands here',
-    '— not panel-specific things like exact wording or image composition;',
-    'a downstream AI call will turn each description into the actual',
+    'should show. Describe intent — topic, mood, what concept lands here,',
+    'and any specific syntax/terminology to name explicitly — not',
+    'panel-specific things like exact wording or image composition; a',
+    'downstream AI call will turn each description into the actual',
     'panel text + image.',
   ].join('\n');
 

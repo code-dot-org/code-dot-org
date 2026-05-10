@@ -198,7 +198,12 @@ const LessonSlidesGenerator: React.FC<LessonSlidesGeneratorProps> = ({
           phase: 'generating-image',
         });
         appendLog(`Slide ${i + 1}: generating image…`);
-        const panel = await generateSlide(lesson.name, i, description);
+        const panel = await generateSlide(
+          lesson.name,
+          i,
+          description,
+          outline.trim() || undefined
+        );
         finalSpecs[i] = {
           ...spec,
           panel,
