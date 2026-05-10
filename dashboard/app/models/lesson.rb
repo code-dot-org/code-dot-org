@@ -76,6 +76,7 @@ class Lesson < ApplicationRecord
     announcements
     assessment_opportunities
     generate_outline
+    generate_slides_outline
   )
 
   # A lesson has an absolute position and a relative position. The difference
@@ -446,6 +447,52 @@ class Lesson < ApplicationRecord
   #
   # Key names are converted to camelCase here so they can easily be consumed by
   # the client.
+  # ---- Slides storage ----
+  # Slides are persisted on disk in a per-lesson JSON file outside the
+  # script_json seed system, since they aren't part of the lesson's
+  # canonical curriculum-graph identity. The file lives at
+  # config/slides/lesson-<id>/slides.json relative to the dashboard
+  # root. Shape:
+  #
+  #   {
+  #     "lessonId": <int>,
+  #     "slides": [
+  #       {"key": "<uuid>", "description": "<prompt>", "panel": <Panel|null>},
+  #       ...
+  #     ]
+  #   }
+  #
+  # `panel` is the panels-app Panel record (text + imageUrl + layout +
+  # key). `description` is the prompt the user typed (or that the AI
+  # produced) for the slide; we keep it alongside the panel so the user
+  # can tell why a slide was generated and can decide whether to
+  # regenerate. `null` panel means the slide hasn't been generated yet.
+
+  SLIDES_FILENAME = 'slides.json'.freeze
+
+  def slides_file_path
+    Rails.root.join('config', 'slides', "lesson-#{id}", SLIDES_FILENAME)
+  end
+
+  # Returns the parsed slides.json contents, or an empty {slides: []} skeleton
+  # if no file exists yet. The file is the source of truth — we deliberately
+  # don't seed any DB table for slides.
+  def read_slides
+    path = slides_file_path
+    return {'lessonId' => id, 'slides' => []} unless File.exist?(path)
+    JSON.parse(File.read(path))
+  end
+
+  # Overwrites slides.json on disk. Creates the per-lesson directory if
+  # needed. Always writes a `lessonId` field so the file can be matched
+  # back to a lesson if the directory is moved or copied.
+  def write_slides(slides)
+    path = slides_file_path
+    FileUtils.mkdir_p(File.dirname(path))
+    payload = {'lessonId' => id, 'slides' => slides}
+    File.write(path, JSON.pretty_generate(payload))
+  end
+
   def summarize_for_lesson_edit
     lesson_standards = standards.sort_by {|s| [s.framework.name, s.shortcode]}
     {
@@ -476,6 +523,20 @@ class Lesson < ApplicationRecord
       lessonPath: get_uncached_show_path,
       rubric: rubric,
       generateOutline: generate_outline,
+    }
+  end
+
+  # Compact payload for the /generate-slides page. Includes the saved
+  # outline prompt (generate_slides_outline) and the persisted slides JSON
+  # so the page can restore both on reload. Keeps the AI's lesson-context
+  # gathering as a separate client-side fetch (loadLessonLevelProperties),
+  # since that data is already exposed for the per-level /generate page.
+  def summarize_for_slides_generate
+    {
+      id: id,
+      name: name,
+      generateSlidesOutline: generate_slides_outline,
+      slides: read_slides['slides'] || [],
     }
   end
 

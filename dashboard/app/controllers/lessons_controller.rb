@@ -159,6 +159,96 @@ class LessonsController < ApplicationController
     render :generate
   end
 
+  # GET /lessons/:id/generate-slides
+  # Levelbuilder UI for AI-generating a deck of intro slides for this
+  # lesson. Slides are panels-app panels stored in a per-lesson JSON file
+  # (see Lesson#slides_file_path), distinct from the lesson's level set.
+  def generate_slides
+    setup_generate_slides
+  end
+
+  # GET /s/:script/lessons/:position/generate-slides (and the course-path
+  # twin). Mirrors generate_with_lesson_position.
+  def generate_slides_with_lesson_position
+    @lesson = lookup_by_position
+    disallow_legacy_script_levels
+    setup_generate_slides
+    render :generate_slides
+  end
+
+  # GET /lessons/:id/slides — student-facing slide viewer. Loads the
+  # persisted slides.json and hands the panels array straight to the
+  # panels-app viewer.
+  def slides
+    setup_slides_view
+  end
+
+  def slides_with_lesson_position
+    @lesson = lookup_by_position
+    setup_slides_view
+    render :slides
+  end
+
+  # GET /lessons/:id/slides/edit — levelbuilder-only panels editor for
+  # the persisted slides. Same shape as the student viewer's payload, but
+  # the page mounts EditPanels instead of PanelsLabView and a Save button
+  # PUTs back to slides_data.
+  def slides_edit
+    require_levelbuilder_mode
+    setup_slides_view
+  end
+
+  def slides_edit_with_lesson_position
+    require_levelbuilder_mode
+    @lesson = lookup_by_position
+    setup_slides_view
+    render :slides_edit
+  end
+
+  # PUT /lessons/:id/slides_data — write the slides.json on disk. Body:
+  #   {
+  #     slides: [{key, description, panel?}, ...],
+  #     generateSlidesOutline?: "<page-level prompt>"
+  #   }
+  # `slides` is required and replaces the file wholesale (the page sends
+  # its full ordered array on every save). `generateSlidesOutline`, when
+  # supplied, is persisted on the Lesson; nil leaves the existing value
+  # alone.
+  def update_slides_data
+    require_levelbuilder_mode
+    raw = params[:slides]
+    return head :bad_request, json: {message: 'slides param required'} unless raw
+    slides =
+      if raw.is_a?(String)
+        JSON.parse(raw)
+      else
+        # Rails wraps each entry of an array body in ActionController::Parameters;
+        # the model layer wants plain Hashes for File.write to JSON-encode.
+        Array(raw).map do |entry|
+          if entry.respond_to?(:permit)
+            entry.permit(:key, :description, panel: {}).to_h.tap do |h|
+              # `panel` keys are open-ended (the panels-app Panel record
+              # has many fields and grows over time), so we keep it as the
+              # raw nested structure rather than enumerating fields here.
+              h['panel'] = entry[:panel].to_unsafe_h if entry[:panel].respond_to?(:to_unsafe_h)
+            end
+          else
+            entry
+          end
+        end
+      end
+    @lesson.write_slides(slides)
+
+    if params.key?(:generateSlidesOutline)
+      @lesson.generate_slides_outline = params[:generateSlidesOutline].to_s
+      @lesson.save! if @lesson.changed?
+    end
+
+    render json: @lesson.summarize_for_slides_generate
+  rescue StandardError => exception
+    render status: :unprocessable_entity, json: {message: exception.message}
+  end
+
   # PATCH/PUT /lessons/:id
   def update
     if params[:originalLessonData]
@@ -307,6 +397,50 @@ class LessonsController < ApplicationController
       lessonPath: @lesson.get_uncached_show_path,
       editLessonUrl: edit_url,
     )
+    view_options(full_width: true)
+  end
+
+  # Look up @lesson when the URL identifies a lesson by (script,
+  # relative_position) instead of by id. Shared by every *_with_lesson_position
+  # action to avoid copy-pasting the script-context dance.
+  private def lookup_by_position
+    unit_context = get_unit_context(params)
+    script = unit_context[:unit]
+    lesson = script.lessons.find do |l|
+      l.has_lesson_plan && l.relative_position == params[:lesson_position].to_i
+    end
+    raise ActiveRecord::RecordNotFound unless lesson
+    lesson
+  end
+
+  # Shared data prep for the /generate-slides page. Mirrors setup_generate
+  # — same edit-URL-swap trick — but the payload is the slim
+  # summarize_for_slides_generate (saved prompt + persisted slides JSON
+  # contents) since the slides page doesn't need the full lesson editor
+  # surface.
+  private def setup_generate_slides
+    edit_url = request.path.sub(%r{/generate-slides\z}, '/edit')
+    edit_url = edit_lesson_path(id: @lesson.id) if edit_url == request.path
+    @lesson_data = @lesson.summarize_for_slides_generate.merge(
+      lessonPath: @lesson.get_uncached_show_path,
+      editLessonUrl: edit_url,
+      slidesUrl: request.path.sub(%r{/generate-slides\z}, '/slides'),
+    )
+    view_options(full_width: true)
+  end
+
+  # Shared data prep for both the /slides viewer and the /slides/edit
+  # editor. Both pages need the persisted panels array; we just hand it
+  # over straight from the JSON file.
+  private def setup_slides_view
+    saved = @lesson.read_slides
+    panels = (saved['slides'] || []).map {|s| s['panel']}.compact
+    @slides_data = {
+      lessonId: @lesson.id,
+      lessonName: @lesson.name,
+      panels: panels,
+      slides: saved['slides'] || [],
+    }
     view_options(full_width: true)
   end
 

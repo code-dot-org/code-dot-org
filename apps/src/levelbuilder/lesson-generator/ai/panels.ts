@@ -137,7 +137,10 @@ async function planPanels(
 // Generates a single panel image, uploads it as a level asset, and returns
 // the public asset URL. We feed the image prompt to gemini-2.5-flash-image
 // and grab the first image file the model emits.
-async function generateAndUploadPanelImage(
+//
+// Exported so the slides generator can reuse the no-text constraint
+// prose and the asset-upload plumbing without copy-pasting.
+export async function generateAndUploadPanelImage(
   imagePrompt: string,
   levelName: string,
   panelIndex: number

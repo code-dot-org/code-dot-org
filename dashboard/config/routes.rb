@@ -480,6 +480,9 @@ Dashboard::Application.routes.draw do
         get 'summary_for_lesson_plans', to: 'script_levels#summary_for_lesson_plans', format: false
         get 'edit', to: 'lessons#edit_with_lesson_position'
         get 'generate', to: 'lessons#generate_with_lesson_position'
+        get 'generate-slides', to: 'lessons#generate_slides_with_lesson_position'
+        get 'slides', to: 'lessons#slides_with_lesson_position'
+        get 'slides/edit', to: 'lessons#slides_edit_with_lesson_position'
         get 'level_properties', to: 'lessons#level_properties', format: false
         get 'tutor', to: 'lessons#tutor', format: false
 
@@ -580,6 +583,10 @@ Dashboard::Application.routes.draw do
         get :show, to: 'lessons#show_by_id'
         get :level_properties, to: 'lessons#level_properties_by_id', format: false
         get :generate
+        get 'generate-slides', to: 'lessons#generate_slides', as: 'generate_slides'
+        get :slides
+        get 'slides/edit', to: 'lessons#slides_edit', as: 'slides_edit'
+        put :slides_data
         post :clone
       end
     end
