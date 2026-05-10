@@ -26,10 +26,6 @@ test.describe('Internet Simulator — lobby', () => {
   });
 
   test('anonymous user can connect to a router', async ({page}) => {
-    test.fixme(
-      true,
-      'TODO: netsim anonymous connect flaky on webkit under parallel run; lobby load timeout',
-    );
     const netsim = new NetSim(page);
     await netsim.gotoLevel(4);
     await netsim.closeInstructionsModal();
@@ -41,8 +37,10 @@ test.describe('Internet Simulator — lobby', () => {
     await expect(netsim.shardSelect).toBeHidden();
 
     await netsim.enterName('Fred');
-    await netsim.lobbyPanel.waitFor({state: 'visible'});
-    await netsim.joinButton.waitFor({state: 'visible'});
+    // Webkit under parallel load can be slow to establish the netsim WS
+    // connection; 30 s matches the Cucumber implicit wait ceiling.
+    await netsim.lobbyPanel.waitFor({state: 'visible', timeout: 30_000});
+    await netsim.joinButton.waitFor({state: 'visible', timeout: 30_000});
 
     await expect(netsim.shardSelectionPanel).toBeHidden();
     // "there is a router in the lobby" — lobby panel shows "Nobody connected yet"
