@@ -45,18 +45,15 @@ test.describe('Artist — level 2', () => {
     'winning solution completes the puzzle and advances to level 3',
     {tag: '@no_mobile'},
     async () => {
-      // Webkit: artist winning solution flaky under parallel run; passes alone.
-      test.fixme(
-        true,
-        'TODO: artist winning solution congrats/advance flaky on webkit under parallel run; timing issue with block load or run completion',
-      );
       await expect(artist.runButton).toBeVisible();
       await expect(artist.resetButton).toBeHidden();
 
       await artist.loadBlocks(WINNING_ARTIST_BLOCKS);
       await artist.run();
 
-      await expect(artist.congratsMessage).toBeVisible();
+      // Cucumber uses a 60 s wait for .congrats; the default expect timeout
+      // (15 s) is too short on webkit under parallel load.
+      await expect(artist.congratsMessage).toBeVisible({timeout: 30_000});
       await expect(artist.congratsMessage).toHaveText(
         'Congratulations! You completed Puzzle 2.',
       );
