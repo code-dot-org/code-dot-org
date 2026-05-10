@@ -491,10 +491,20 @@ class Lesson < ApplicationRecord
   # Returns the parsed slides.json contents, or an empty {slides: []} skeleton
   # if no file exists yet. The file is the source of truth — we deliberately
   # don't seed any DB table for slides.
-  def read_slides
+  #
+  # Pass `include_teacher_notes: false` (the default for student-facing
+  # callers) to strip every panel's teacherNote field before returning.
+  # Notes never reach a student's browser that way, even via DevTools on
+  # the page payload.
+  def read_slides(include_teacher_notes: true)
     path = slides_file_path
     return {'lessonId' => id, 'slides' => []} unless File.exist?(path)
-    JSON.parse(File.read(path))
+    parsed = JSON.parse(File.read(path))
+    return parsed if include_teacher_notes
+    (parsed['slides'] || []).each do |slide|
+      slide['panel']&.delete('teacherNote')
+    end
+    parsed
   end
 
   # Overwrites slides.json on disk. Creates the per-lesson directory if

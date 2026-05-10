@@ -44,6 +44,11 @@ const slidePlanSchema = Output.object({
         'text-bottom-right',
       ])
       .describe('Where the text overlay sits on the image.'),
+    teacherNote: z
+      .string()
+      .describe(
+        'Short note for the teacher only — shown below the slide in the viewer when the active user is a teacher, never to students. Use it for prep tips: callouts to make before showing the slide, common student misconceptions, suggested classroom prompts, or links to think about. 1-3 sentences. Keep it concrete; do not repeat the slide text.'
+      ),
   }),
 });
 
@@ -51,6 +56,7 @@ interface SlidePlan {
   text: string;
   imagePrompt: string;
   layout: PanelLayout;
+  teacherNote: string;
 }
 
 // Generate a single slide-as-panel from a free-text description. The
@@ -76,6 +82,9 @@ export async function generateSlide(
     '    embedded text. The narrative text is the overlay; the image is',
     '    the picture.',
     '  - layout: where the text overlay sits.',
+    '  - teacherNote: 1-3 sentences for the teacher only — prep tips,',
+    '    misconceptions to anticipate, classroom prompts, or what to',
+    '    emphasise before showing this slide. Never shown to students.',
     '',
     `Slide description: ${description}`,
   ].join('\n');
@@ -106,5 +115,6 @@ export async function generateSlide(
     text: plan.text,
     imageUrl,
     layout,
+    teacherNote: plan.teacherNote,
   };
 }

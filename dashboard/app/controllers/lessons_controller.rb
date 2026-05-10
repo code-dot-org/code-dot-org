@@ -3,7 +3,7 @@ class LessonsController < ApplicationController
 
   skip_authorize_resource only: :level_properties_by_id
 
-  before_action :require_levelbuilder_mode_or_test_env, except: [:index, :show, :student_lesson_plan, :level_properties, :level_properties_by_id, :tutor]
+  before_action :require_levelbuilder_mode_or_test_env, except: [:index, :show, :student_lesson_plan, :level_properties, :level_properties_by_id, :tutor, :slides, :slides_with_lesson_position]
   before_action :authenticate_user!, only: [:tutor]
   before_action :disallow_legacy_script_levels, only: [:edit, :update]
   before_action :disable_session_for_cached_pages, only: [:show]
@@ -433,7 +433,11 @@ class LessonsController < ApplicationController
   # editor. Both pages need the persisted panels array; we just hand it
   # over straight from the JSON file.
   private def setup_slides_view
-    saved = @lesson.read_slides
+    # Teacher notes are stripped from the payload entirely for non-teacher
+    # users so the field never lands in a student's DOM. Levelbuilders and
+    # teachers (whether on the viewer or the editor) see them.
+    show_teacher_notes = !!(current_user&.teacher? || current_user&.levelbuilder?)
+    saved = @lesson.read_slides(include_teacher_notes: show_teacher_notes)
     panels = (saved['slides'] || []).map {|s| s['panel']}.compact
     @slides_data = {
       lessonId: @lesson.id,
@@ -441,6 +445,7 @@ class LessonsController < ApplicationController
       panels: panels,
       slides: saved['slides'] || [],
       slidesFilePath: @lesson.slides_relative_path,
+      showTeacherNotes: show_teacher_notes,
     }
     view_options(full_width: true)
   end

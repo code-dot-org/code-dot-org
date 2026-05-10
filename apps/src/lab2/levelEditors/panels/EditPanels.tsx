@@ -238,6 +238,16 @@ const EditPanels: React.FunctionComponent<EditPanelsProps> = ({
             movePanel={movePanel}
             deletePanel={deletePanel}
             last={index === panels.length - 1}
+            // Slides feature: only surface the teacher-note input when at
+            // least one panel already carries a note. That keeps regular
+            // panels-level edit pages visually unchanged while still
+            // letting the slides editor (whose AI fills teacherNote on
+            // every panel) edit them in place. New panels appended
+            // afterward pick up the field too, since they share the same
+            // panels[] state.
+            showTeacherNotes={panels.some(
+              p => p.teacherNote && p.teacherNote.trim()
+            )}
           />
         ))}
       </div>
@@ -263,6 +273,11 @@ interface EditPanelProps {
   movePanel: (key: string, direction: 'up' | 'down') => void;
   deletePanel: (key: string) => void;
   last?: boolean;
+  // True when any panel in this set has a teacherNote. The textarea
+  // renders for every panel in that case (even ones with empty notes,
+  // so the user can fill them in); false hides it everywhere so regular
+  // panels levels don't grow a new field.
+  showTeacherNotes?: boolean;
 }
 
 const EditPanel: React.FunctionComponent<EditPanelProps> = ({
@@ -274,6 +289,7 @@ const EditPanel: React.FunctionComponent<EditPanelProps> = ({
   movePanel,
   deletePanel,
   last = false,
+  showTeacherNotes = false,
 }) => {
   return (
     <div className={moduleStyles.panelEditor}>
@@ -350,6 +366,19 @@ const EditPanel: React.FunctionComponent<EditPanelProps> = ({
           fileTypes={['GIF', 'JPG', 'PNG']}
         />
       </div>
+      {showTeacherNotes && (
+        <div className={moduleStyles.fieldRow}>
+          <label htmlFor={`teacher-note-${panel.key}`}>
+            Teacher note (shown only to teachers, below the panel bubbles)
+          </label>
+          <textarea
+            id={`teacher-note-${panel.key}`}
+            className={moduleStyles.textarea}
+            value={panel.teacherNote || ''}
+            onChange={e => updatePanel({...panel, teacherNote: e.target.value})}
+          />
+        </div>
+      )}
       <div className={moduleStyles.fieldRow}>
         <Checkbox
           checked={!!panel.typing}
