@@ -141,6 +141,18 @@
   font-weight: 600;
   user-select: none;
   cursor: pointer;
+  // The checkbox is a 24px-tall design-system icon while "Generate" is
+  // a 13px-line-height label; align-items: center alone leaves the text
+  // sitting slightly low because the label's line-height pushes its
+  // visual center below the cap line. Match the line-height to the
+  // checkbox so the two centers really do coincide, and zero out the
+  // input's default margins for good measure.
+  line-height: 24px;
+
+  input[type='checkbox'] {
+    margin: 0;
+    flex-shrink: 0;
+  }
 }
 
 .thumb {
