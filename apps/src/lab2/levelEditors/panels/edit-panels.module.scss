@@ -82,6 +82,15 @@ $pinned-width-vw: 29;
   flex: 1;
 }
 
+// Teacher note shouldn't dominate the page-wide editor row the way the
+// main `.textarea` does (it's prep notes, not a primary text overlay).
+// Cap at 30% of the row width and a sensible min so very narrow editor
+// panes still leave it readable.
+.teacherNoteTextarea {
+  flex: 0 0 30%;
+  min-width: 240px;
+}
+
 .imageUrlInput {
   width: 700px;
 }

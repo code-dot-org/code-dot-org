@@ -373,7 +373,7 @@ const EditPanel: React.FunctionComponent<EditPanelProps> = ({
           </label>
           <textarea
             id={`teacher-note-${panel.key}`}
-            className={moduleStyles.textarea}
+            className={moduleStyles.teacherNoteTextarea}
             value={panel.teacherNote || ''}
             onChange={e => updatePanel({...panel, teacherNote: e.target.value})}
           />
