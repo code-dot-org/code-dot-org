@@ -9,7 +9,6 @@ interface SlidesOutlineBlockProps {
   isOutlining: boolean;
   disabled: boolean;
   error: string | null;
-  defaultOpen: boolean;
 }
 
 const SlidesOutlineBlock: React.FC<SlidesOutlineBlockProps> = ({
@@ -19,10 +18,11 @@ const SlidesOutlineBlock: React.FC<SlidesOutlineBlockProps> = ({
   isOutlining,
   disabled,
   error,
-  defaultOpen,
 }) => (
-  <details className={moduleStyles.outlineBlock} open={defaultOpen}>
-    <summary>Optional: describe what these intro slides should cover</summary>
+  <div className={moduleStyles.outlineBlock}>
+    <div className={moduleStyles.outlineHeading}>
+      Optional: describe what these intro slides should cover
+    </div>
     <p className={moduleStyles.outlineHelp}>
       These slides play before the lesson, to set context for the student.
       Describe what you want them to cover — themes, mood, concepts to set up —
@@ -52,7 +52,7 @@ const SlidesOutlineBlock: React.FC<SlidesOutlineBlockProps> = ({
         </span>
       )}
     </div>
-  </details>
+  </div>
 );
 
 export default SlidesOutlineBlock;

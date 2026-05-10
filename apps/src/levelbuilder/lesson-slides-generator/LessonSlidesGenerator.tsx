@@ -264,7 +264,6 @@ const LessonSlidesGenerator: React.FC<LessonSlidesGeneratorProps> = ({
         isOutlining={isOutlining}
         disabled={isGenerating}
         error={outlineError}
-        defaultOpen={!!(lesson.generateSlidesOutline || '').trim()}
       />
 
       <div className={moduleStyles.slideList}>
