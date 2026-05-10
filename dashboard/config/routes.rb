@@ -586,7 +586,7 @@ Dashboard::Application.routes.draw do
         get 'generate-slides', to: 'lessons#generate_slides', as: 'generate_slides'
         get :slides
         get 'slides/edit', to: 'lessons#slides_edit', as: 'slides_edit'
-        put :slides_data
+        put 'slides_data', to: 'lessons#update_slides_data'
         post :clone
       end
     end
