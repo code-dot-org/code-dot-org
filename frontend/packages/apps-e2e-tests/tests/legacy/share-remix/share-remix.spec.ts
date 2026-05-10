@@ -19,11 +19,11 @@ test.describe('Legacy share remix — Artist', () => {
     'remixing a legacy share link lands on /projects/artist/.../edit',
     {tag: '@no_mobile'},
     async ({studentPage}) => {
-      // Webkit: share remix navigation flaky under parallel run; passes alone.
-      test.fixme(
-        true,
-        'TODO: legacy share remix artist link navigation flaky on webkit under parallel run; timing issue with share page or project creation',
-      );
+      // Total flow: level load → run → share URL → share page → footer →
+      // edit page → remix (server copy + navigate). Exceeds the 90s global
+      // limit under webkit parallel load; override to 3 minutes.
+      test.setTimeout(180_000);
+
       const artist = new Artist(studentPage);
       await studentPage.goto(
         '/courses/allthethingscourse/units/1/lessons/3/levels/10?noautoplay=true',
@@ -41,28 +41,34 @@ test.describe('Legacy share remix — Artist', () => {
         (document.querySelector('.project_share') as HTMLElement)?.click(),
       );
       const copyButton = studentPage.locator('#sharing-dialog-copy-button');
-      await expect(copyButton).toBeVisible({timeout: 15_000});
+      await expect(copyButton).toBeVisible({timeout: 30_000});
       const shareUrl = await copyButton.getAttribute('value');
       if (!shareUrl)
         throw new Error('share URL not found in #sharing-dialog-copy-button');
 
-      // Navigate to the share page.
+      // Navigate to the share page and wait for Artist to fully initialize.
+      // Artist is not an autoplay lab so #runButton is visible when ready.
       await studentPage.goto(shareUrl);
       await studentPage
         .locator('#runButton')
-        .waitFor({state: 'visible', timeout: 30_000});
+        .waitFor({state: 'visible', timeout: 60_000});
 
-      // Open the small-footer "more" menu and click "How it Works (View Code)".
-      await studentPage
-        .locator('div.small-footer-base button.more-link')
-        .click();
+      // Open the small-footer "more" menu.
+      // Cucumber: "I wait until element ... is visible" before clicking.
+      const moreLink = studentPage.locator(
+        'div.small-footer-base button.more-link',
+      );
+      await moreLink.waitFor({state: 'visible', timeout: 15_000});
+      await moreLink.click();
+
+      // Click "How it Works (View Code)" from the expanded menu.
       await studentPage
         .locator('ul#more-menu')
         .getByText('How it Works (View Code)')
         .click();
 
-      // Wait for the workspace page (contains /edit in URL).
-      await studentPage.waitForURL('**/edit**', {timeout: 30_000});
+      // Wait for the workspace/edit page to load.
+      await studentPage.waitForURL('**/edit**', {timeout: 60_000});
 
       // Remix button appears in the workspace view.
       await studentPage
@@ -70,10 +76,12 @@ test.describe('Legacy share remix — Artist', () => {
         .first()
         .waitFor({state: 'visible', timeout: 30_000});
 
-      // Click Remix — navigates to a new forked project.
+      // Click Remix — triggers dashboard.project.copy() (async server call)
+      // then navigates to the new forked project URL. Under parallel load the
+      // server copy can take well over 30 s on webkit.
       await studentPage.locator('.project_remix').first().click();
       await studentPage.waitForURL(/\/projects\/artist\/.+\/edit/, {
-        timeout: 30_000,
+        timeout: 60_000,
       });
       expect(studentPage.url()).toContain('/projects/artist/');
       expect(studentPage.url()).toContain('/edit');
