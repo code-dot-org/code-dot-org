@@ -451,8 +451,9 @@ class Lesson < ApplicationRecord
   # Slides are persisted on disk in a per-lesson JSON file outside the
   # script_json seed system, since they aren't part of the lesson's
   # canonical curriculum-graph identity. The file lives at
-  # config/slides/lesson-<id>/slides.json relative to the dashboard
-  # root. Shape:
+  # config/slides/<unit-name>/<lesson-key>/slides.json relative to the
+  # dashboard root, mirroring the unit/lesson hierarchy so the directory
+  # tree reads like the curriculum it describes. Shape:
   #
   #   {
   #     "lessonId": <int>,
@@ -470,8 +471,21 @@ class Lesson < ApplicationRecord
 
   SLIDES_FILENAME = 'slides.json'.freeze
 
+  # Relative path under config/slides/, suitable both for the on-disk
+  # file (joined with Rails.root) and for displaying back to the user
+  # as a stable label. Sanitizes the unit name + lesson key against the
+  # path separator since both come from user-supplied identifiers and
+  # legacy data has been seen with unusual characters in keys (e.g. the
+  # space in "Web Design"). Falls back to numeric ids if the lesson is
+  # somehow detached from a script.
+  def slides_relative_path
+    unit_part = script&.name&.gsub('/', '_').presence || "unit-#{script_id || 'orphan'}"
+    lesson_part = key&.gsub('/', '_').presence || "lesson-#{id}"
+    File.join('config', 'slides', unit_part, lesson_part, SLIDES_FILENAME)
+  end
+
   def slides_file_path
-    Rails.root.join('config', 'slides', "lesson-#{id}", SLIDES_FILENAME)
+    Rails.root.join(slides_relative_path)
   end
 
   # Returns the parsed slides.json contents, or an empty {slides: []} skeleton
@@ -537,6 +551,7 @@ class Lesson < ApplicationRecord
       name: name,
       generateSlidesOutline: generate_slides_outline,
       slides: read_slides['slides'] || [],
+      slidesFilePath: slides_relative_path,
     }
   end
 

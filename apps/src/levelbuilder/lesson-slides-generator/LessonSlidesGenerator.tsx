@@ -253,8 +253,7 @@ const LessonSlidesGenerator: React.FC<LessonSlidesGeneratorProps> = ({
         Plan a sequence of intro slides shown to students before they start this
         lesson. Each card describes what should be on a slide; clicking Generate
         Slides turns each one into a Panels-app panel (image + overlay text) and
-        writes them all to{' '}
-        <code>config/slides/lesson-{lesson.id}/slides.json</code>.
+        writes them all to <code>{lesson.slidesFilePath}</code>.
       </p>
 
       <SlidesOutlineBlock

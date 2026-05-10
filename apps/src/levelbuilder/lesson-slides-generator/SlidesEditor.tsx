@@ -19,6 +19,9 @@ interface SlidesEditorProps {
   existingSlides: PersistedSlide[];
   slidesUrl: string;
   generateSlidesUrl: string;
+  // Path of the slides JSON file relative to the dashboard repo root,
+  // for the editor's "where this saves" prose.
+  slidesFilePath: string;
 }
 
 const SlidesEditor: React.FC<SlidesEditorProps> = ({
@@ -28,6 +31,7 @@ const SlidesEditor: React.FC<SlidesEditorProps> = ({
   existingSlides,
   slidesUrl,
   generateSlidesUrl,
+  slidesFilePath,
 }) => {
   const [isSaving, setIsSaving] = useState(false);
   const [error, setError] = useState<string | null>(null);
@@ -62,8 +66,7 @@ const SlidesEditor: React.FC<SlidesEditorProps> = ({
       <h1 className={moduleStyles.heading}>Edit slides for "{lessonName}"</h1>
       <p className={moduleStyles.subheading}>
         Tweak the generated panels in place. The save button writes back to{' '}
-        <code>config/slides/lesson-{lessonId}/slides.json</code>; the per-slide
-        descriptions visible on the{' '}
+        <code>{slidesFilePath}</code>; the per-slide descriptions visible on the{' '}
         <a href={generateSlidesUrl}>generate page</a> are preserved by matching
         panels back to slides on key.
       </p>

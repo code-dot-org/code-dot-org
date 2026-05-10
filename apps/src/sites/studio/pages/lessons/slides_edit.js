@@ -22,6 +22,7 @@ $(document).ready(function () {
       existingSlides={data.slides}
       slidesUrl={slidesUrl}
       generateSlidesUrl={generateSlidesUrl}
+      slidesFilePath={data.slidesFilePath}
     />,
     document.getElementById('slides-edit-container'),
     {

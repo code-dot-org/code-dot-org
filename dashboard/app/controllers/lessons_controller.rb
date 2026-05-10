@@ -440,6 +440,7 @@ class LessonsController < ApplicationController
       lessonName: @lesson.name,
       panels: panels,
       slides: saved['slides'] || [],
+      slidesFilePath: @lesson.slides_relative_path,
     }
     view_options(full_width: true)
   end

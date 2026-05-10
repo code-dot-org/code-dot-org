@@ -13,6 +13,10 @@ export interface ExistingLessonData {
   // Convenient deep-link to the student-facing /slides viewer for this
   // same lesson, in the URL family the user came in on.
   slidesUrl: string;
+  // Path of the slides JSON file relative to the dashboard repo root,
+  // for display purposes (the page tells the user where the source of
+  // truth lives so they can find and version-control it).
+  slidesFilePath: string;
 }
 
 // One row inside slides.json. `panel` is null until the levelbuilder has
