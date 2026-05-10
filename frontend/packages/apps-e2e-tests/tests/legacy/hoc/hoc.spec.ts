@@ -101,25 +101,22 @@ test.describe('Hour of Code — anonymous progress tracking', () => {
     'video at puzzle 10 not re-shown after first viewing',
     {tag: '@no_mobile'},
     async ({page}) => {
-      test.fixme(
-        true,
-        'TODO: hoc video replay test flaky on webkit under parallel run; timeout navigating to /hoc/11',
-      );
       const hoc = new HocLevel(page);
 
       // Level 10 has an intro video — load without noautoplay so it fires.
       await page.goto('/hoc/10');
-      await hoc.videoModal.waitFor({state: 'visible'});
+      // Webkit under parallel load can be slow to load the video modal.
+      await hoc.videoModal.waitFor({state: 'visible', timeout: 30_000});
       await hoc.closeVideoModal();
 
       // Navigate away and return.
       await page.goto('/hoc/11');
       await page.waitForURL(/\/hoc\/11/);
-      await hoc.runButton.waitFor({state: 'visible'});
+      await hoc.runButton.waitFor({state: 'visible', timeout: 30_000});
 
       await page.goto('/hoc/10');
       await page.waitForURL(/\/hoc\/10/);
-      await hoc.runButton.waitFor({state: 'visible'});
+      await hoc.runButton.waitFor({state: 'visible', timeout: 30_000});
 
       // Video must NOT reappear.
       await expect(hoc.videoModal).toBeHidden();
@@ -161,18 +158,14 @@ test.describe('Hour of Code — hoc/reset', () => {
   test('hoc/reset clears videos, callouts, and level progress', async ({
     page,
   }) => {
-    // Webkit: hoc/reset state clearing flaky under parallel run; passes alone.
-    test.fixme(
-      true,
-      'TODO: hoc/reset clear videos/callouts/progress flaky on webkit under parallel run; timing issue with video modal or callout visibility',
-    );
     const hoc = new HocLevel(page);
 
     // First visit to hoc/reset: intro video and callout appear.
     await page.goto('/hoc/reset');
-    await hoc.videoModal.waitFor({state: 'visible'});
+    // Webkit under parallel load can be slow; 30s matches Cucumber implicit wait.
+    await hoc.videoModal.waitFor({state: 'visible', timeout: 30_000});
     await hoc.closeVideoModal();
-    await expect(hoc.callouts.first()).toBeVisible();
+    await expect(hoc.callouts.first()).toBeVisible({timeout: 30_000});
 
     // Simulate some mid-course navigation.
     await page.goto('/hoc/2');
@@ -182,8 +175,8 @@ test.describe('Hour of Code — hoc/reset', () => {
 
     // Second hoc/reset: video and callout must reappear (state fully cleared).
     await page.goto('/hoc/reset');
-    await hoc.videoModal.waitFor({state: 'visible'});
+    await hoc.videoModal.waitFor({state: 'visible', timeout: 30_000});
     await hoc.closeVideoModal();
-    await expect(hoc.callouts.first()).toBeVisible();
+    await expect(hoc.callouts.first()).toBeVisible({timeout: 30_000});
   });
 });
