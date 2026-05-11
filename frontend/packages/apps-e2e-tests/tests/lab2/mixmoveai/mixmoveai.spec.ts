@@ -22,9 +22,13 @@ const LESSON_NAME = 'Mix & Move with AI';
 
 test.describe('Mix & Move with AI', () => {
   /**
-   * Migration status: COMPLETED
+   * Migration status: PENDING
    * Source: dashboard/test/ui/features/star_labs/mix_move_ai.feature
    * Scenario: Dancer, music, dance
+   *
+   * Pending because the full nine-call AI generation path is unstable under
+   * the current Playwright lane; WebKit remains excluded by the source
+   * @no_safari tag.
    */
   test('dancer, music, dance AI generation flow', async ({
     page,
@@ -33,10 +37,9 @@ test.describe('Mix & Move with AI', () => {
     // Nine sequential AI generation calls; 90s global is insufficient.
     test.setTimeout(300_000);
     skipSafari({browserName});
-    // Firefox: AI generation flow flaky under parallel run; passes alone.
     test.fixme(
       true,
-      'TODO: Mix&Move AI generation flow flaky on firefox under parallel run; AI endpoint timeout or session timing issue',
+      'Pending migration: full AI generation path is unstable under the current Playwright lane.',
     );
 
     const lab = new MixMoveAI(page);

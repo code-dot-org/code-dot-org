@@ -11,11 +11,21 @@ test.describe('Farmer — level 1', () => {
     await farmer.gotoLevel(1);
   });
 
+  /**
+   * Migration status: COMPLETED
+   * Source: dashboard/test/ui/features/star_labs/farmer.feature
+   * Scenario: Loading the first level
+   */
   test('level renders the farmer avatar and pegman', async () => {
     await expect(farmer.farmerAvatar).toBeVisible();
     await expect(farmer.pegman).toBeVisible();
   });
 
+  /**
+   * Migration status: COMPLETED
+   * Source: dashboard/test/ui/features/star_labs/farmer.feature
+   * Scenario: Winning the first level
+   */
   test('winning solution completes the puzzle and clears the dirt', async () => {
     await expect(farmer.runButton).toBeVisible();
     await expect(farmer.resetButton).toBeHidden();
@@ -36,6 +46,11 @@ test.describe('Farmer — level 1', () => {
     await farmer.waitForLevel(2);
   });
 
+  /**
+   * Migration status: COMPLETED
+   * Source: dashboard/test/ui/features/star_labs/farmer.feature
+   * Scenario: Losing the first level
+   */
   test(
     'losing solution shows inline feedback',
     {tag: '@no_mobile'},

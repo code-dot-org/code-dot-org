@@ -79,8 +79,9 @@ test.describe(
   {tag: '@no_mobile'},
   () => {
     /**
-     * Source: view_student_chat_history.feature
-     * "Teacher views student chat history and interacts with student model"
+     * Migration status: PENDING
+     * Source: dashboard/test/ui/features/star_labs/aichat/view_student_chat_history.feature
+     * Scenario: Teacher views student chat history and interacts with student model
      *
      * 1. Authorized teacher creates section with AI chat enabled.
      * 2. Student joins section, sends "Hello" + "Damn", decreases temperature.
@@ -89,10 +90,9 @@ test.describe(
      * 4. Teacher verifies student's temperature setting and tests the model.
      */
     test('teacher flags messages and tests student model', async ({page}) => {
-      // Chromium: teacher flag+test flow flaky under parallel run; passes alone.
       test.fixme(
         true,
-        'TODO: aichat teacher view flag/test-model flow flaky on chromium under parallel run; session or AI chat state timing issue',
+        'Pending migration: depends on deterministic AI chat moderation behavior and teacher-view state across sessions.',
       );
       // --- Background: authorized teacher + AI-chat-enabled section ---
       const teacher = await createAuthorizedTeacher(page);

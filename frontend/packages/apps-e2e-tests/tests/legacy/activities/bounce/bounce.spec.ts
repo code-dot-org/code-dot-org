@@ -17,6 +17,11 @@ test.describe('Bounce — level 1', () => {
     await expect(bounce.resetButton).toBeHidden();
   });
 
+  /**
+   * Migration status: COMPLETED
+   * Source: dashboard/test/ui/features/star_labs/bounce.feature
+   * Scenario: Complete Level 1
+   */
   test('winning solution with left-key hold completes the puzzle', async () => {
     await bounce.loadBlocks(LEVEL_1_BOUNCE_BLOCKS);
     await bounce.run();
@@ -41,6 +46,11 @@ test.describe('Bounce — level 3', () => {
     await expect(bounce.resetButton).toBeHidden();
   });
 
+  /**
+   * Migration status: COMPLETED
+   * Source: dashboard/test/ui/features/star_labs/bounce.feature
+   * Scenario: Complete Level 3
+   */
   test('winning solution with up-key hold completes the puzzle', async () => {
     await bounce.loadBlocks(LEVEL_3_BOUNCE_BLOCKS);
     await bounce.run();
@@ -65,6 +75,11 @@ test.describe('Bounce — level 5', () => {
     await expect(bounce.resetButton).toBeHidden();
   });
 
+  /**
+   * Migration status: COMPLETED
+   * Source: dashboard/test/ui/features/star_labs/bounce.feature
+   * Scenario: Incomplete Level 5
+   */
   test(
     'run with no blocks shows inline feedback',
     {tag: '@no_mobile'},
@@ -80,6 +95,11 @@ test.describe('Bounce — level 5', () => {
     },
   );
 
+  /**
+   * Migration status: COMPLETED
+   * Source: dashboard/test/ui/features/star_labs/bounce.feature
+   * Scenario: Complete Level 5
+   */
   test('winning solution completes the puzzle', async () => {
     await bounce.loadBlocks(LEVEL_5_BOUNCE_BLOCKS);
     await bounce.run();
@@ -101,6 +121,11 @@ test.describe('Bounce — freeplay level 10', () => {
     await expect(bounce.finishButton).toBeHidden();
   });
 
+  /**
+   * Migration status: COMPLETED
+   * Source: dashboard/test/ui/features/star_labs/bounce.feature
+   * Scenario: Complete Bounce freeplay level
+   */
   test('finish button appears after run and completes freeplay', async () => {
     await bounce.run();
 

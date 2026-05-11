@@ -13,6 +13,11 @@ test.describe('Flappy — level 1', () => {
     await expect(flappy.resetButton).toBeHidden();
   });
 
+  /**
+   * Migration status: COMPLETED
+   * Source: dashboard/test/ui/features/star_labs/flappy.feature
+   * Scenario: Solving puzzle 1
+   */
   test('winning solution with inverted gravity completes the puzzle', async () => {
     await flappy.loadBlocks(LEVEL_1_FLAPPY_BLOCKS);
     await flappy.run();
@@ -37,6 +42,11 @@ test.describe('Flappy — level 2', () => {
     await expect(flappy.resetButton).toBeHidden();
   });
 
+  /**
+   * Migration status: COMPLETED
+   * Source: dashboard/test/ui/features/star_labs/flappy.feature
+   * Scenario: Solving puzzle 2
+   */
   test('winning solution completes the puzzle', async () => {
     await flappy.loadBlocks(LEVEL_2_FLAPPY_BLOCKS);
     await flappy.run();
@@ -48,6 +58,11 @@ test.describe('Flappy — level 2', () => {
     );
   });
 
+  /**
+   * Migration status: COMPLETED
+   * Source: dashboard/test/ui/features/star_labs/flappy.feature
+   * Scenario: Failing puzzle 2
+   */
   test(
     'run with no blocks shows inline feedback',
     {tag: '@no_mobile'},

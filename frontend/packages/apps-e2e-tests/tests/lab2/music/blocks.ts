@@ -20,6 +20,7 @@ export const WINNING_MUSIC_LEVEL_2_BLOCKS = {
         y: 34,
         next: {
           block: {
+            id: 'play_sound_at_current_location_simple2',
             type: 'play_sound_at_current_location_simple2',
             fields: {
               sound: 'disco_beat',

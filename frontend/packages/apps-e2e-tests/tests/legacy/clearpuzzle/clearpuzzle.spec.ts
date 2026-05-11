@@ -13,6 +13,11 @@ test.describe('Clear Puzzle — HOC level 1', () => {
     await expect(clear.resetButton).toBeHidden();
   });
 
+  /**
+   * Migration status: COMPLETED
+   * Source: dashboard/test/ui/features/star_labs/clearpuzzle.feature
+   * Scenario: Deleting start blocks then clearing the puzzle
+   */
   test('clearing after deleting a block restores the original workspace', async () => {
     await clear.disposeBlock('startBlock');
     await clear.clearPuzzle();
@@ -21,6 +26,11 @@ test.describe('Clear Puzzle — HOC level 1', () => {
     await clear.expectBlockIsChildOf('startBlock', 'topBlock');
   });
 
+  /**
+   * Migration status: COMPLETED
+   * Source: dashboard/test/ui/features/star_labs/clearpuzzle.feature
+   * Scenario: Adding blocks then clearing the puzzle
+   */
   test('clearing after adding blocks removes the added blocks', async () => {
     await clear.loadBlocks(HOC_BLOCKS_TO_CLEAR);
     await clear.clearPuzzle();

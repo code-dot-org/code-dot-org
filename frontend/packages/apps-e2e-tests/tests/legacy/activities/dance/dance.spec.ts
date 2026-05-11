@@ -23,6 +23,11 @@ test.describe('Dance Party — lesson 37 — run/reset toggle (level 2)', () => 
     await dance.gotoLevel(2);
   });
 
+  /**
+   * Migration status: COMPLETED
+   * Source: dashboard/test/ui/features/star_labs/dance/dance_party.feature
+   * Scenario: Can toggle run/reset in Dance Party
+   */
   test(
     'run/reset buttons and song selector toggle state on run and reset',
     {tag: '@no_mobile'},
@@ -58,6 +63,11 @@ test.describe('Dance Party — lesson 37 — level success (level 1)', () => {
     await dance.gotoLevel(1);
   });
 
+  /**
+   * Migration status: COMPLETED
+   * Source: dashboard/test/ui/features/star_labs/dance/dance_party.feature
+   * Scenario: Can get to level success in Dance Party
+   */
   test(
     'running the default program completes the level',
     {tag: '@no_mobile'},
@@ -82,6 +92,11 @@ test.describe('Dance Party — dance course — level 12 loads', () => {
     await dance.gotoDanceCourseLevel(12);
   });
 
+  /**
+   * Migration status: COMPLETED
+   * Source: dashboard/test/ui/features/star_labs/dance/dance_party.feature
+   * Scenario: Dance Party 12 loads
+   */
   test(
     'level 12 loads and shows the run button',
     {tag: '@no_mobile'},
@@ -105,6 +120,11 @@ test.describe('Dance Party — dance course — set tint block (level 8)', () =>
     await dance.gotoDanceCourseLevel(8);
   });
 
+  /**
+   * Migration status: COMPLETED
+   * Source: dashboard/test/ui/features/star_labs/dance/dance_party.feature
+   * Scenario: Dance Party 8 runs new set tint block
+   */
   test('winning blocks with set tint pass the level', async () => {
     await dance.loadBlocks(WINNING_DANCE_LEVEL_8_BLOCKS);
     await dance.run();
@@ -129,6 +149,11 @@ test.describe('Dance Party — lesson 37 — AI Modal (level 3)', () => {
     await dance.gotoLevel(3);
   });
 
+  /**
+   * Migration status: COMPLETED
+   * Source: dashboard/test/ui/features/star_labs/dance/dance_ai_modal.feature
+   * Scenario: Dance AI Modal
+   */
   test('AI modal generates, toggles, explains, regenerates, and converts to blocks', async () => {
     await dance.appendBlock('Dancelab_ai', 'dance_ai');
     await dance.connectBlockInside('dance_ai', 'setup');
@@ -159,9 +184,7 @@ test.describe('Dance Party — lesson 37 — AI Modal (level 3)', () => {
     await dance.useAiEffects();
 
     // Run and reset.
-    await dance.run();
-    await dance.reset();
-    await expect(dance.runButton).toBeVisible();
+    await dance.pressRunAndReset();
 
     // Reopen modal — after useAiEffects() the block stores generated effects;
     // effects view (Use button visible) is shown, not the empty emoji picker.
@@ -176,8 +199,7 @@ test.describe('Dance Party — lesson 37 — AI Modal (level 3)', () => {
     ).toBeVisible();
 
     // Final run and reset.
-    await dance.run();
-    await dance.reset();
+    await dance.pressRunAndReset();
   });
 });
 
@@ -197,6 +219,11 @@ test.describe('Dance Party — lesson 37 — AI Modal eyes (level 4)', () => {
     await dance.gotoLevel(4);
   });
 
+  /**
+   * Migration status: COMPLETED
+   * Source: dashboard/test/ui/features/star_labs/dance/dance_ai_modal_eyes.feature
+   * Scenario: Dance AI Modal Eyes
+   */
   test(
     'AI modal code toggle and emoji picker render in LTR and RTL',
     {tag: ['@no_mobile', '@visual']},
@@ -260,6 +287,11 @@ test.describe('Dance Party — dance course — free play save (level 13)', () =
     await dance.disposeBlock('5');
   });
 
+  /**
+   * Migration status: COMPLETED
+   * Source: dashboard/test/ui/features/star_labs/dance/save_for_share.feature
+   * Scenario: Free play level saves when Share is clicked
+   */
   test('saves when Share is clicked', {tag: '@no_mobile'}, async () => {
     const memorizedCode = stripVarIds(await dance.getBlockXML());
     await dance.projectShareButton.click();
@@ -269,6 +301,11 @@ test.describe('Dance Party — dance course — free play save (level 13)', () =
     expect(stripVarIds(await dance.getBlockXML())).toBe(memorizedCode);
   });
 
+  /**
+   * Migration status: COMPLETED
+   * Source: dashboard/test/ui/features/star_labs/dance/save_for_share.feature
+   * Scenario: Free play level saves when Finish is clicked
+   */
   test('saves when Finish is clicked', {tag: '@no_mobile'}, async () => {
     const memorizedCode = stripVarIds(await dance.getBlockXML());
     await dance.finishButton.click();

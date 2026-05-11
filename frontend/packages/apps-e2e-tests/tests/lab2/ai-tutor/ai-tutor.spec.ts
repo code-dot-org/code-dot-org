@@ -37,20 +37,23 @@ async function sendHelloAndWaitForBotReply(
 
 test.describe('AI Tutor — legacy App Lab', () => {
   /**
-   * Source: chat.feature — "Chat works in the legacy labs AI Tutor"
+   * Migration status: PENDING
+   * Source: dashboard/test/ui/features/star_labs/ai_tutor/chat.feature
+   * Scenario: Chat works in the legacy labs AI Tutor
    * @no_ci @no_mobile @as_authorized_teacher
    *
    * Opens /projects/applab/new, waits for the AI Tutor button, sends "Hello",
-   * and verifies the bot reply has the legacy-lab background color.
+   * and verifies the bot reply has the legacy-lab background color. Pending
+   * because the authorized-teacher AI Tutor button is not deterministic in the
+   * current Playwright lane.
    */
   test(
     'chat sends message and receives bot reply with correct background',
     {tag: ['@no_ci', '@no_mobile']},
     async ({authorizedTeacherPage}) => {
-      // Firefox: Open AI Tutor button not reliably visible; likely timing issue with authorized-teacher session init.
       test.fixme(
         true,
-        'TODO: Open AI tutor button not visible on firefox/chromium; authorized-teacher session timing issue under parallel run',
+        'Pending migration: authorized-teacher AI Tutor button is not deterministic in this lane.',
       );
       await authorizedTeacherPage.goto(
         '/projects/applab/new?hideProductTours=true',
@@ -71,20 +74,23 @@ test.describe('AI Tutor — legacy App Lab', () => {
 
 test.describe('AI Tutor — Python Lab resource panel', () => {
   /**
-   * Source: chat.feature — "Chat works in the resource panel AI Tutor tab in Python Lab"
+   * Migration status: PENDING
+   * Source: dashboard/test/ui/features/star_labs/ai_tutor/chat.feature
+   * Scenario: Chat works in the resource panel AI Tutor tab in Python Lab
    * @no_ci @no_mobile @as_authorized_teacher
    *
    * Navigates to lesson 50 level 1, opens the AI Tutor tab in the resource
    * panel, sends "Hello", and verifies the Lab2 bot reply background color.
+   * Pending because the authorized-teacher resource-panel AI Tutor state is
+   * not deterministic in the current Playwright lane.
    */
   test(
     'resource panel AI Tutor tab sends message and receives bot reply',
     {tag: ['@no_ci', '@no_mobile']},
     async ({authorizedTeacherPage}) => {
-      // All browsers: Python Lab AI Tutor resource panel flaky under parallel run; passes alone.
       test.fixme(
         true,
-        'TODO: Python Lab resource panel AI Tutor tab flaky on all browsers under parallel run; authorized-teacher session timing issue',
+        'Pending migration: authorized-teacher resource-panel AI Tutor state is not deterministic in this lane.',
       );
       await authorizedTeacherPage.goto(
         '/courses/allthethingscourse/units/1/lessons/50/levels/1?hideProductTours=true',
@@ -105,11 +111,15 @@ test.describe('AI Tutor — Python Lab resource panel', () => {
 
 test.describe('AI Tutor — Weblab2 resource panel', () => {
   /**
-   * Source: chat.feature — "Chat works in the resource panel AI Tutor tab in Weblab2"
+   * Migration status: PENDING
+   * Source: dashboard/test/ui/features/star_labs/ai_tutor/chat.feature
+   * Scenario: Chat works in the resource panel AI Tutor tab in Weblab2
    * @no_ci @no_mobile @as_authorized_teacher
    *
    * Navigates to lesson 51 level 11, waits for the instructions drawer,
    * opens the AI Tutor resource panel tab, and verifies the bot reply.
+   * Pending because the AI Tutor chat message aria contract is not stable in
+   * this lane.
    */
   test(
     'Weblab2 resource panel AI Tutor tab sends message and receives bot reply',
@@ -117,7 +127,7 @@ test.describe('AI Tutor — Weblab2 resource panel', () => {
     async ({authorizedTeacherPage}) => {
       test.fixme(
         true,
-        'TODO: [aria-label=User chat message] element not found; possible aria-label change in AI Tutor UI',
+        'Pending migration: [aria-label=User chat message] is not stable in this lane.',
       );
       await authorizedTeacherPage.goto(
         '/courses/allthethingscourse/units/1/lessons/51/levels/11?hideProductTours=true',

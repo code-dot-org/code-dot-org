@@ -4,45 +4,76 @@ import {WINNING_MUSIC_LEVEL_2_BLOCKS} from './blocks';
 import {MusicLab} from './MusicLab';
 
 /**
- * Music Lab — lesson 46, level 2 ("Music Level 1": play one sound).
+ * Music Lab — drag play-sound block and change sound.
  *
  * Source: dashboard/test/ui/features/star_labs/musiclab/musiclab_drag_block.feature
- * The feature is tagged @skip in the Cucumber suite; these tests port its intent.
+ * Scenario Outline: Dragging play sound block
+ *
+ * The source feature is tagged @skip, @no_mobile, and @no_safari. The
+ * Playwright port uses Blockly workspace serialization for the drag step and
+ * still verifies the user-visible outcomes: no timeline before the block is
+ * attached, timeline after attach, sounds panel opens, sound can be changed,
+ * and the panel closes.
  */
-test.describe('Music Lab — level 2', () => {
+test.describe('Music Lab — play-sound block', () => {
   let music: MusicLab;
 
-  test.beforeEach(async ({page}) => {
-    music = new MusicLab(page);
-    await music.gotoLevel(2);
-  });
-
-  test('workspace loads with when-run block and no timeline entries', async () => {
+  async function expectPlaySoundBlockCanChangeSound(): Promise<void> {
     await expect(music.whenRunBlock).toBeVisible();
     await expect(music.timelineElement).not.toBeVisible();
-  });
 
-  test('attaching a play-sound block auto-previews in the timeline', async () => {
-    await expect(music.timelineElement).not.toBeVisible();
     await music.loadBlocks(WINNING_MUSIC_LEVEL_2_BLOCKS);
     await expect(music.timelineElement).toBeVisible();
-  });
 
-  test('running with one sound plays and shows Nice work. feedback', async () => {
-    await music.loadBlocks(WINNING_MUSIC_LEVEL_2_BLOCKS);
+    await music.clickBlockField(
+      "[data-id='when-run-block'] > [data-id='play_sound_at_current_location_simple2'] > .blocklyEditableField",
+    );
+    await music.selectSound(1, 1);
+    await music.dismissSoundsPanel();
+
     await expect(music.timelineElement).toBeVisible();
-    await music.run();
-    // #instructions-feedback-message contains the feedback text and the continue
-    // button label; use toContainText to match the message portion only.
-    await expect(music.feedbackMessage).toContainText('Nice work.');
-  });
+  }
+
+  /**
+   * Migration status: COMPLETED
+   * Source: dashboard/test/ui/features/star_labs/musiclab/musiclab_drag_block.feature
+   * Scenario Outline: Dragging play sound block
+   * Example: <url> = http://studio.code.org/courses/allthethingscourse/units/1/lessons/46/levels/4
+   */
+  test(
+    'script level: attaching play-sound block opens timeline and allows sound change',
+    {tag: ['@no_mobile', '@no_safari']},
+    async ({page, browserName}) => {
+      test.skip(browserName === 'webkit', '@no_safari');
+      music = new MusicLab(page);
+      await music.gotoLevel(4);
+      await expectPlaySoundBlockCanChangeSound();
+    },
+  );
+
+  /**
+   * Migration status: COMPLETED
+   * Source: dashboard/test/ui/features/star_labs/musiclab/musiclab_drag_block.feature
+   * Scenario Outline: Dragging play sound block
+   * Example: <url> = http://studio.code.org/projects/music/new
+   */
+  test(
+    'new project: attaching play-sound block opens timeline and allows sound change',
+    {tag: ['@no_mobile', '@no_safari']},
+    async ({page, browserName}) => {
+      test.skip(browserName === 'webkit', '@no_safari');
+      music = new MusicLab(page);
+      await music.gotoNewProject();
+      await expectPlaySoundBlockCanChangeSound();
+    },
+  );
 });
 
 /**
  * Music Lab — lesson 46, levels 4 → 5 (level switching).
  *
  * Source: dashboard/test/ui/features/star_labs/musiclab/musiclab_switching_levels.feature
- * @eyes steps annotated as visual checkpoints.
+ * Scenario: Load a level and load the next
  */
 test.describe('Music Lab — level switching', () => {
   let music: MusicLab;
@@ -52,15 +83,15 @@ test.describe('Music Lab — level switching', () => {
     await music.gotoLevel(4);
   });
 
+  /**
+   * Migration status: COMPLETED
+   * Source: dashboard/test/ui/features/star_labs/musiclab/musiclab_switching_levels.feature
+   * Scenario: Load a level and load the next
+   */
   test(
     'clicking level 5 bubble loads level 5 workspace',
     {tag: '@visual'},
     async () => {
-      // Webkit: level bubble click flaky under parallel run; passes alone.
-      test.fixme(
-        true,
-        'TODO: Music Lab level switching flaky on webkit under parallel run; level load or workspace timing issue',
-      );
       await music.page.locator("[title='Level 5 Lesson Music']").click();
       await expect(music.runButton).toBeVisible();
       // visual checkpoint: "new level loading"
@@ -72,7 +103,7 @@ test.describe('Music Lab — level switching', () => {
  * Music Lab — lesson 46, level 6 (timeline keyboard navigation).
  *
  * Source: dashboard/test/ui/features/star_labs/musiclab/musiclab_timeline_nav.feature
- * Tagged @no_safari in the Cucumber suite — skipped on webkit.
+ * Scenario: Ensure users can navigate into and out of timeline, and between elements with arrows
  */
 test.describe('Music Lab — level 6 — timeline keyboard navigation', () => {
   let music: MusicLab;
@@ -82,6 +113,11 @@ test.describe('Music Lab — level 6 — timeline keyboard navigation', () => {
     await music.gotoLevel(6);
   });
 
+  /**
+   * Migration status: COMPLETED
+   * Source: dashboard/test/ui/features/star_labs/musiclab/musiclab_timeline_nav.feature
+   * Scenario: Ensure users can navigate into and out of timeline, and between elements with arrows
+   */
   test('Enter enters timeline, ArrowRight moves focus, Escape exits to container', async ({
     browserName,
   }) => {

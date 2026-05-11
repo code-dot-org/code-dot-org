@@ -10,8 +10,9 @@ import {SpriteLab} from './SpriteLab';
  */
 test.describe('Sprite Lab — loading costumes', () => {
   /**
-   * Source: spritelab/loading_costumes.feature — "Load the project with default
-   * animations and load Piskel"
+   * Migration status: COMPLETED
+   * Source: dashboard/test/ui/features/star_labs/spritelab/loading_costumes.feature
+   * Scenario: Load the project with default animations and load Piskel
    * @as_student @no_mobile
    *
    * Navigates to a new Sprite Lab project, opens the animation tab, and
@@ -57,7 +58,9 @@ test.describe('Sprite Lab — lesson 36 — level 1', () => {
   });
 
   /**
-   * Source: spritelab.feature "Loading the first level"
+   * Migration status: COMPLETED
+   * Source: dashboard/test/ui/features/star_labs/spritelab/spritelab.feature
+   * Scenario: Loading the first level
    * Verifies the sprite avatar image is present on page load.
    */
   test('loading the first level shows the sprite avatar', async () => {
@@ -65,7 +68,9 @@ test.describe('Sprite Lab — lesson 36 — level 1', () => {
   });
 
   /**
-   * Source: spritelab.feature "Losing the first level"
+   * Migration status: COMPLETED
+   * Source: dashboard/test/ui/features/star_labs/spritelab/spritelab.feature
+   * Scenario: Losing the first level
    * Runs without changes, expects inline feedback, then resets.
    */
   test('losing the first level shows inline feedback', async () => {
@@ -81,7 +86,10 @@ test.describe('Sprite Lab — lesson 36 — level 1', () => {
   });
 
   /**
-   * Source: spritelab.feature "Winning the first level" @no_mobile
+   * Migration status: COMPLETED
+   * Source: dashboard/test/ui/features/star_labs/spritelab/spritelab.feature
+   * Scenario: Winning the first level
+   * @no_mobile
    * Selects a sprite type from the make-new-sprite block dropdown, then runs.
    */
   test(

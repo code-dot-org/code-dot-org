@@ -22,6 +22,9 @@ export class MusicLab extends Lab2Lab {
   /** The `#timeline` container — keyboard entry point for timeline navigation. */
   readonly timeline: Locator;
 
+  /** Sounds picker panel opened from a play-sound Blockly field. */
+  readonly soundsPanel: Locator;
+
   /**
    * The `when_run_simple2` block in the workspace, identified by the
    * explicit `id="when-run-block"` set in the level startSources.
@@ -34,10 +37,18 @@ export class MusicLab extends Lab2Lab {
     this.timelineElement = page.locator('.timeline-element').first();
     this.whenRunBlock = page.locator("[data-id='when-run-block']");
     this.timeline = page.locator('#timeline');
+    this.soundsPanel = page.locator('#sounds-panel');
   }
 
   protected buildLevelUrl(level: number): string {
     return labLevelUrl(46, level) + '&library=intro2024';
+  }
+
+  /** Navigate to a new Music Lab project with the unrestricted intro library. */
+  async gotoNewProject(): Promise<void> {
+    await this.page.goto('/reset_session');
+    await this.page.goto('/projects/music/new?library=intro2024');
+    await this.waitForReady();
   }
 
   /**
@@ -71,6 +82,41 @@ export class MusicLab extends Lab2Lab {
         (window as any).Blockly.getMainWorkspace(),
       );
     }, json);
+  }
+
+  /**
+   * Dispatch pointer events on a Blockly editable field.
+   *
+   * @param selector - CSS selector for the editable field
+   */
+  async clickBlockField(selector: string): Promise<void> {
+    const field = this.page.locator(selector).first();
+    await field.dispatchEvent('pointerdown', {bubbles: true});
+    await field.dispatchEvent('pointerup', {bubbles: true});
+  }
+
+  /**
+   * Select a sound from the open sounds panel by folder and sound row index.
+   *
+   * @param folderIndex - zero-based folder row index
+   * @param soundIndex - zero-based sound row index
+   */
+  async selectSound(folderIndex: number, soundIndex: number): Promise<void> {
+    await this.soundsPanel.waitFor({state: 'visible'});
+    await this.page
+      .locator('#sounds-panel .sounds-panel-folder-row')
+      .nth(folderIndex)
+      .click();
+    await this.page
+      .locator('#sounds-panel .sounds-panel-sound-row')
+      .nth(soundIndex)
+      .click();
+  }
+
+  /** Press Escape and wait for the sounds panel to close. */
+  async dismissSoundsPanel(): Promise<void> {
+    await this.page.keyboard.press('Escape');
+    await this.soundsPanel.waitFor({state: 'hidden'});
   }
 
   /** Clicks the run/stop button. */

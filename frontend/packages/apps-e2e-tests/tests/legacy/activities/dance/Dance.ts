@@ -260,6 +260,20 @@ export class Dance extends LegacyBlocklyLab {
   }
 
   /**
+   * Press Run and Reset for the Dance AI source scenario. AI modal updates
+   * can leave Run visible but disabled for a short interval; wait for the
+   * source step's press target to be actionable before clicking it.
+   */
+  async pressRunAndReset(): Promise<void> {
+    await expect(this.runButton).toBeVisible();
+    await expect(this.runButton).toBeEnabled();
+    await this.runButton.click();
+    await expect(this.resetButton).toBeVisible();
+    await this.resetButton.click();
+    await expect(this.runButton).toBeVisible();
+  }
+
+  /**
    * Return the current workspace block XML via __TestInterface.
    * Mirrors `current_block_xml` helper from blockly.rb.
    */

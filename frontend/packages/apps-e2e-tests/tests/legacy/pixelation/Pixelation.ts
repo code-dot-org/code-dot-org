@@ -120,13 +120,22 @@ export class Pixelation {
   }
 
   /**
-   * Click the save button, wait for all in-flight network requests to settle,
+   * Click the save button, wait for jQuery Ajax requests to settle,
    * reload, dismiss the instruction dialog, and wait for pixel data to reload.
    * Mirrors `I save pixelation data and reload`.
    */
   async saveAndReload(): Promise<void> {
     await this.saveButton.click();
-    await this.page.waitForLoadState('networkidle');
+    await this.page.waitForFunction(
+      () => {
+        const win = window as typeof window & {
+          jQuery?: {active?: number};
+        };
+        return (win.jQuery?.active ?? 0) === 0;
+      },
+      undefined,
+      {timeout: 30_000},
+    );
     await this.page.reload();
     await this.closeButton.waitFor({state: 'visible'});
     await this.closeButton.click();

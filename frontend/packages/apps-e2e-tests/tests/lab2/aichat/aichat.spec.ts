@@ -59,12 +59,15 @@ async function gotoAichat(
 
 test.describe('AI Chat Lab — making a chat request', () => {
   /**
-   * Source: chat.feature — "Making chat request gets appropriate response"
+   * Migration status: PENDING
+   * Source: dashboard/test/ui/features/star_labs/aichat/chat.feature
+   * Scenario: Making chat request gets appropriate response
    * @no_mobile @as_levelbuilder
    *
    * Sends "Hello" and verifies bot reply color; then sends "Damn" and verifies
-   * the content-moderation message appears (stubbed moderation flags this word
-   * in Drone).
+   * the content-moderation message appears. This remains pending because
+   * test-studio does not use Drone's stubbed moderation service that flags
+   * "Damn" in the Cucumber run.
    */
   test(
     'chat request gets bot reply; blocked message shows moderation notice',
@@ -72,7 +75,7 @@ test.describe('AI Chat Lab — making a chat request', () => {
     async ({levelbuilderPage}) => {
       test.fixme(
         true,
-        'TODO: content moderation message not appearing after sending flagged word; possible stub API change or AI Chat moderation flow update',
+        'Pending migration: requires deterministic moderation stub equivalent to the Cucumber Drone stub.',
       );
       await gotoAichat(levelbuilderPage);
 
@@ -106,7 +109,9 @@ test.describe('AI Chat Lab — making a chat request', () => {
 
 test.describe('AI Chat Lab — editing system prompt', () => {
   /**
-   * Source: chat.feature — "Editing system prompt produces success notification and saves"
+   * Migration status: COMPLETED
+   * Source: dashboard/test/ui/features/star_labs/aichat/chat.feature
+   * Scenario: Editing system prompt produces success notification and saves
    * @no_mobile @as_levelbuilder
    *
    * Types a new system prompt, saves, verifies success alert, reloads, and
@@ -145,21 +150,24 @@ test.describe('AI Chat Lab — editing system prompt', () => {
 
 test.describe('AI Chat Lab — publishing model', () => {
   /**
-   * Source: chat.feature — "Publishing model enables published view and saves"
+   * Migration status: PENDING
+   * Source: dashboard/test/ui/features/star_labs/aichat/chat.feature
+   * Scenario: Publishing model enables published view and saves
    * @no_mobile @as_levelbuilder
    *
    * Fills the model card info tab (bot name, description, …), saves, publishes,
-   * verifies the view-mode toggle and presentation container appear, reloads
-   * and confirms the published state is preserved.
+   * verifies the view-mode toggle and presentation container appear, reloads,
+   * and confirms the published state is preserved. This remains pending because
+   * the publish state is not persisted after reload on test-studio in this
+   * Playwright lane.
    */
   test(
     'model card info saves and published view appears after publish',
     {tag: '@no_mobile'},
     async ({levelbuilderPage}) => {
-      // All browsers: #uitest-presentation-view-header not found after publish; possible product change in publish flow or modal state.
       test.fixme(
         true,
-        'TODO: #uitest-presentation-view-header not visible after publish; product change in AI Chat Lab publish flow or presentation view render',
+        'Pending migration: published model card view appears before reload but is not persisted after reload on test-studio.',
       );
       await gotoAichat(levelbuilderPage);
 
@@ -214,6 +222,7 @@ test.describe('AI Chat Lab — publishing model', () => {
       await expect(
         levelbuilderPage.locator('#uitest-view-mode-toggle-container'),
       ).toBeVisible({timeout: 15_000});
+      await levelbuilderPage.locator('#uitest-user-view-button').click();
       await expect(
         levelbuilderPage.locator('#uitest-presentation-view-container'),
       ).toBeVisible({timeout: 15_000});
@@ -224,10 +233,10 @@ test.describe('AI Chat Lab — publishing model', () => {
       // Reload and switch to user view to confirm published state persists.
       await levelbuilderPage.reload();
       await dismissTeacherPanel(levelbuilderPage);
-      const userViewBtn = levelbuilderPage.locator('#uitest-user-view-button');
-      if (await userViewBtn.isVisible({timeout: 10_000}).catch(() => false)) {
-        await userViewBtn.click();
-      }
+      await levelbuilderPage.locator('#uitest-user-view-button').click();
+      await expect(
+        levelbuilderPage.locator('#uitest-presentation-view-container'),
+      ).toBeVisible({timeout: 15_000});
       await expect(
         levelbuilderPage.locator('#uitest-presentation-view-header'),
       ).toContainText('Jeeves', {timeout: 30_000});

@@ -25,6 +25,11 @@ const DANCE_LEVEL_1 =
 test.describe('Dance Party age filter — young student (age 10)', () => {
   test.use({studentAge: 10});
 
+  /**
+   * Migration status: COMPLETED
+   * Source: dashboard/test/ui/features/star_labs/dance/age_filter.feature
+   * Scenario: Song selector is visible and doesn't display pg13 songs for age < 13
+   */
   test(
     'song selector omits PG-13 songs for age-10 student',
     {tag: '@no_mobile'},
@@ -42,6 +47,11 @@ test.describe('Dance Party age filter — young student (age 10)', () => {
 });
 
 test.describe('Dance Party age filter — adult student (age 16) + teacher flag', () => {
+  /**
+   * Migration status: COMPLETED
+   * Source: dashboard/test/ui/features/star_labs/dance/age_filter.feature
+   * Scenario: Song selector is visible and displays all songs for age > 13 and teacher flag turns filter on
+   */
   test(
     'PG-13 songs visible for age-16 student; ?songfilter=on page loads without crash',
     {tag: '@no_mobile'},
@@ -73,6 +83,11 @@ test.describe('Dance Party age filter — anonymous user, age dialog', () => {
   // Scenario 3 of age_filter.feature and scenarios 1–3 of age_filter2.feature
   // all navigate as anonymous, relying on the age-gate dialog or ?songfilter=on.
 
+  /**
+   * Migration status: COMPLETED
+   * Source: dashboard/test/ui/features/star_labs/dance/age_filter.feature
+   * Scenario: Selecting <13 in age dialog turns filter on
+   */
   test(
     'selecting age 10 in dialog filters PG-13 songs',
     {tag: '@no_mobile'},
@@ -87,6 +102,11 @@ test.describe('Dance Party age filter — anonymous user, age dialog', () => {
     },
   );
 
+  /**
+   * Migration status: COMPLETED
+   * Source: dashboard/test/ui/features/star_labs/dance/age_filter2.feature
+   * Scenario: Selecting 13 in age dialog turns filter off
+   */
   test(
     'selecting age 13 keeps PG-13 songs and setting persists to the next dance level',
     {tag: '@no_mobile'},
@@ -115,6 +135,11 @@ test.describe('Dance Party age filter — anonymous user, age dialog', () => {
     },
   );
 
+  /**
+   * Migration status: COMPLETED
+   * Source: dashboard/test/ui/features/star_labs/dance/age_filter2.feature
+   * Scenario: Song selector is hidden when initializing with teacher flag on for signed in student
+   */
   test(
     '?songfilter=on suppresses PG-13 songs without showing the age dialog',
     {tag: '@no_mobile'},
@@ -126,6 +151,11 @@ test.describe('Dance Party age filter — anonymous user, age dialog', () => {
     },
   );
 
+  /**
+   * Migration status: COMPLETED
+   * Source: dashboard/test/ui/features/star_labs/dance/age_filter2.feature
+   * Scenario: Song selector is hidden when initializing with teacher flag on and teacher flag stays on after level complete
+   */
   test(
     '?songfilter=on persists through level completion to the next level',
     {tag: '@no_mobile'},

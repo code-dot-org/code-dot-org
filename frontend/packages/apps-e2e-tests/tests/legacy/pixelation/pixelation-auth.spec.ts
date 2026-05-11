@@ -45,7 +45,9 @@ async function waitForPixelData(page: Page, expected: string): Promise<void> {
 
 test.describe('Pixelation — auth scenarios', {tag: '@no_mobile'}, () => {
   /**
-   * Source: "Pixelation version 2 in black and white with no sliders"
+   * Migration status: COMPLETED
+   * Source: dashboard/test/ui/features/star_labs/pixelation.feature
+   * Scenario: Pixelation version 2 in black and white with no sliders
    *
    * Level 1 starts in binary mode.  After typing a bit, finishing and
    * reloading persists the added bit.  Switching to hex and typing a hex
@@ -55,10 +57,6 @@ test.describe('Pixelation — auth scenarios', {tag: '@no_mobile'}, () => {
   test('v2 b/w: finish persists bits; hex append save+reload expands', async ({
     studentPage,
   }) => {
-    test.fixme(
-      true,
-      'TODO: page.waitForLoadState networkidle times out on chromium for pixelation auth levels',
-    );
     const pix = new Pixelation(studentPage);
     await pix.gotoLevelWithAuth(1);
 
@@ -91,7 +89,9 @@ test.describe('Pixelation — auth scenarios', {tag: '@no_mobile'}, () => {
   });
 
   /**
-   * Source: "Pixelation version 3 in color with sliders"
+   * Migration status: COMPLETED
+   * Source: dashboard/test/ui/features/star_labs/pixelation.feature
+   * Scenario: Pixelation version 3 in color with sliders
    *
    * Level 2 is color (3-channel) binary.  After typing 3 bits,
    * finish+reload persists them.  Switching to hex, typing 2 hex chars,
@@ -100,10 +100,6 @@ test.describe('Pixelation — auth scenarios', {tag: '@no_mobile'}, () => {
   test('v3 color: finish persists bits; hex append save+reload expands', async ({
     studentPage,
   }) => {
-    test.fixme(
-      true,
-      'TODO: page.waitForLoadState networkidle times out on chromium for pixelation auth levels',
-    );
     const pix = new Pixelation(studentPage);
     await pix.gotoLevelWithAuth(2);
 
@@ -141,7 +137,9 @@ test.describe('Pixelation — auth scenarios', {tag: '@no_mobile'}, () => {
   });
 
   /**
-   * Source: "Pixelation slider input fields are accessible via keyboard keys"
+   * Migration status: COMPLETED
+   * Source: dashboard/test/ui/features/star_labs/pixelation.feature
+   * Scenario: Pixelation slider input fields are accessible via keyboard keys
    *
    * Level 2.  Arrow keys on #width/#height update pixel data header bytes.
    * Backspace + digit directly edits the dimension number input.
@@ -195,7 +193,9 @@ test.describe('Pixelation — auth scenarios', {tag: '@no_mobile'}, () => {
   });
 
   /**
-   * Source: "Pixelation version 3 in color with sliders starting in hex mode"
+   * Migration status: COMPLETED
+   * Source: dashboard/test/ui/features/star_labs/pixelation.feature
+   * Scenario: Pixelation version 3 in color with sliders starting in hex mode
    *
    * Level 3 starts in hex mode.  Typing a 6-char hex color, finishing and
    * reloading persists it.  Switching to binary, moving caret to end,
@@ -205,10 +205,6 @@ test.describe('Pixelation — auth scenarios', {tag: '@no_mobile'}, () => {
   test('v3 hex-start: finish persists hex; binary append save+reload converts', async ({
     studentPage,
   }) => {
-    test.fixme(
-      true,
-      'TODO: page.waitForLoadState networkidle times out on chromium/webkit for pixelation auth levels',
-    );
     const pix = new Pixelation(studentPage);
     await pix.gotoLevelWithAuth(3);
 

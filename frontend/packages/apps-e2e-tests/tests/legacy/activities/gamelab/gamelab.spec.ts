@@ -14,8 +14,9 @@ import {GameLab} from './GameLab';
 
 test.describe('Game Lab — level options', () => {
   /**
-   * Source: level_options.feature — "A level with the animation tab disabled hides the mode toggle"
    * Migration status: COMPLETED
+   * Source: dashboard/test/ui/features/star_labs/gamelab/level_options.feature
+   * Scenario: A level with the animation tab disabled hides the mode toggle
    * @as_student
    */
   test(
@@ -31,8 +32,9 @@ test.describe('Game Lab — level options', () => {
   );
 
   /**
-   * Source: level_options.feature — "A level with the animation tab enabled shows the mode toggle"
    * Migration status: COMPLETED
+   * Source: dashboard/test/ui/features/star_labs/gamelab/level_options.feature
+   * Scenario: A level with the animation tab enabled shows the mode toggle
    * @as_student
    */
   test(
@@ -48,8 +50,9 @@ test.describe('Game Lab — level options', () => {
   );
 
   /**
-   * Source: level_options.feature — "A new project should always provide the animation tab"
    * Migration status: COMPLETED
+   * Source: dashboard/test/ui/features/star_labs/gamelab/level_options.feature
+   * Scenario: A new project should always provide the animation tab
    * @as_student
    */
   test(
@@ -66,8 +69,9 @@ test.describe('Game Lab — level options', () => {
   );
 
   /**
-   * Source: level_options.feature — "Initial animations are usable with no animation tab"
    * Migration status: COMPLETED
+   * Source: dashboard/test/ui/features/star_labs/gamelab/level_options.feature
+   * Scenario: Initial animations are usable with no animation tab
    * @as_student
    *
    * Runs the level (which has pre-seeded sprites) and confirms no
@@ -90,8 +94,9 @@ test.describe('Game Lab — level options', () => {
   );
 
   /**
-   * Source: level_options.feature — "Initial animations show up in the animation tab"
    * Migration status: COMPLETED
+   * Source: dashboard/test/ui/features/star_labs/gamelab/level_options.feature
+   * Scenario: Initial animations show up in the animation tab
    * @as_student
    */
   test(
@@ -109,8 +114,9 @@ test.describe('Game Lab — level options', () => {
 
 test.describe('Game Lab — loading animations', () => {
   /**
-   * Source: loading_animations.feature — "Check Piskel loads and reload the project with a blank animation"
    * Migration status: COMPLETED
+   * Source: dashboard/test/ui/features/star_labs/gamelab/loading_animations.feature
+   * Scenario: Check Piskel loads and reload the project with a blank animation
    * @as_student @no_mobile
    *
    * Opens the animation picker, adds a blank tile, adds the bear from the library,
@@ -149,8 +155,9 @@ test.describe('Game Lab — loading animations', () => {
 
 test.describe('Game Lab — export animations', () => {
   /**
-   * Source: export_animations.feature — "Export library animation"
    * Migration status: COMPLETED
+   * Source: dashboard/test/ui/features/star_labs/gamelab/export_animations.feature
+   * Scenario: Export library animation
    * @as_student @no_mobile @no_safari
    *
    * Full flow: add bear from library → run → switch to animation tab →
@@ -188,8 +195,9 @@ test.describe('Game Lab — export animations', () => {
 
 test.describe('Game Lab — submittable level', () => {
   /**
-   * Source: gamelab_submittable.feature — "Submit anything, unsubmit, be able to resubmit."
    * Migration status: COMPLETED
+   * Source: dashboard/test/ui/features/star_labs/gamelab_submittable.feature
+   * Scenario: Submit anything, unsubmit, be able to resubmit.
    * @no_mobile @as_taught_student
    *
    * Lesson 19 / level 1 submit → unsubmit → resubmit cycle.  Requires a

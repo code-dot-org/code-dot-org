@@ -11,6 +11,11 @@ test.describe('Bee — level 4', () => {
     await bee.gotoLevel(4);
   });
 
+  /**
+   * Migration status: COMPLETED
+   * Source: dashboard/test/ui/features/star_labs/bee.feature
+   * Scenario: Complete Bee Conditions 4-5 Level 3
+   */
   test('winning solution completes the puzzle', async () => {
     await expect(bee.runButton).toBeVisible();
     await expect(bee.resetButton).toBeHidden();

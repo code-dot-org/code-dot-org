@@ -36,11 +36,21 @@ test.describe('Artist — level 2', () => {
     await artist.gotoLevel(2);
   });
 
+  /**
+   * Migration status: COMPLETED
+   * Source: dashboard/test/ui/features/star_labs/artist.feature
+   * Scenario: Loading the first level
+   */
   test('level renders the artist avatar and video thumbnail', async () => {
     await expect(artist.artistAvatar).toBeVisible();
     await expect(artist.videoThumbnail).toBeVisible();
   });
 
+  /**
+   * Migration status: COMPLETED
+   * Source: dashboard/test/ui/features/star_labs/artist.feature
+   * Scenario: Winning the first level
+   */
   test(
     'winning solution completes the puzzle and advances to level 3',
     {tag: '@no_mobile'},
@@ -63,6 +73,11 @@ test.describe('Artist — level 2', () => {
     },
   );
 
+  /**
+   * Migration status: COMPLETED
+   * Source: dashboard/test/ui/features/star_labs/artist.feature
+   * Scenario: Losing the first level
+   */
   test(
     'losing solution shows inline feedback',
     {tag: '@no_mobile'},

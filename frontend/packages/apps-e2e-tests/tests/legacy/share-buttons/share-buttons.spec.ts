@@ -24,23 +24,18 @@ async function openShareDialogAndGetUrl(page: Page): Promise<string> {
 /**
  * Share-page "How it Works (View Code)" button visibility.
  *
- * Source:
- *   dashboard/test/ui/features/star_labs/share_buttons.feature
- *
- * Scenarios 1–2 are ported.  Scenarios 3–4 (@only_phone DPad) are skipped —
- * no phone Playwright project configuration exists.
+ * Source: dashboard/test/ui/features/star_labs/share_buttons.feature
  */
 test.describe('Share Buttons — "How it Works" button presence', () => {
+  /**
+   * Migration status: COMPLETED
+   * Source: dashboard/test/ui/features/star_labs/share_buttons.feature
+   * Scenario: How It Works Button appears for Sprite Lab share page
+   */
   test(
     '"How it Works" button present on Sprite Lab share page',
     {tag: '@no_mobile'},
     async ({studentPage}) => {
-      // Webkit: share page How it Works button flaky under parallel run; passes alone.
-      test.fixme(
-        true,
-        'TODO: Sprite Lab share page How it Works button flaky on webkit under parallel run; share URL generation or load timing issue',
-      );
-      // Source: "How It Works Button appears for Sprite Lab share page"
       await studentPage.goto('/projects/spritelab');
       await studentPage
         .locator('#runButton')
@@ -56,11 +51,15 @@ test.describe('Share Buttons — "How it Works" button presence', () => {
     },
   );
 
+  /**
+   * Migration status: COMPLETED
+   * Source: dashboard/test/ui/features/star_labs/share_buttons.feature
+   * Scenario: How It Works Button does not appear for Game Lab share page
+   */
   test(
     '"How it Works" button absent on Game Lab share page',
     {tag: '@no_mobile'},
     async ({studentPage}) => {
-      // Source: "How It Works Button does not appear for Game Lab share page"
       await studentPage.goto('/projects/gamelab');
       await studentPage
         .locator('#runButton')
