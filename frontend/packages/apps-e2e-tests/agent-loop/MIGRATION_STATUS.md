@@ -2,7 +2,7 @@
 
 Source: `dashboard/test/ui/features/` (all sub-directories)  
 Target: `frontend/packages/apps-e2e-tests/tests/`  
-As of: 2026-05-11 (updated 2026-05-11 — Starlab pass: AI Chat multimodal)
+As of: 2026-05-11 (updated 2026-05-11 — Starlab pass: blocklayout)
 
 ---
 
@@ -10,7 +10,7 @@ As of: 2026-05-11 (updated 2026-05-11 — Starlab pass: AI Chat multimodal)
 
 | Status                                         | Count                                                                                                                                                                                                                             |
 | ---------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Ported                                         | 144 feature files (C+F for pythonlab + mixmoveai; Chromium-only for maker; @no_ci for ai_tutor + AI Chat multimodal; @no_mobile for pairing + version_history + assign_modular_course; @no_firefox for rubric AI; C+F+W for rest) |
+| Ported                                         | 145 feature files (C+F for pythonlab + mixmoveai; Chromium-only for maker; @no_ci for ai_tutor + AI Chat multimodal; @no_mobile for pairing + version_history + assign_modular_course; @no_firefox for rubric AI; C+F+W for rest) |
 | Fixme stubs — test infra                       | 3 (applab asset upload — needs test fixture file; disallowedsharing profanity — @webpurify API not configured; gamelab export — animation picker CDN blocked)                                                                     |
 | Covered by ported (rolled in)                  | 5 (maze2, jigsaw2, multi2/3/4 rolled into existing specs)                                                                                                                                                                         |
 | Partial — @eyes (visual checkpoints annotated) | 6 ported up to snapshot; @eyes auth blocked 3                                                                                                                                                                                     |
@@ -41,6 +41,7 @@ As of: 2026-05-11 (updated 2026-05-11 — Starlab pass: AI Chat multimodal)
 | `jigsaw2.feature`                                                        | `tests/legacy/jigsaw/jigsaw.spec.ts`                                        | C+F+W    | Rolled into level 2/3 describes                                                                                                                    |
 | `step_mode.feature`                                                      | `tests/legacy/step/step-mode.spec.ts`                                       | C+F+W    | All 5 scenarios ported                                                                                                                             |
 | `clearpuzzle.feature`                                                    | `tests/legacy/clearpuzzle/clearpuzzle.spec.ts`                              | C+F+W    | All 2 scenarios ported                                                                                                                             |
+| `blocklayout.feature`                                                    | `tests/legacy/blocklayout/blocklayout.spec.ts`                              | C+F+W    | All 3 scenarios ported; arranged XML block coordinates within Cucumber +/-3px tolerance                                                            |
 | `musiclab/musiclab_timeline_nav.feature`                                 | `tests/lab2/music/music.spec.ts`                                            | C+F+W    | @no_safari; webkit skipped                                                                                                                         |
 | `code_tools/pythonlab/pythonlab_files.feature`                           | `tests/lab2/pythonlab/pythonlab.spec.ts`                                    | C+F      | @no_safari; webkit skipped                                                                                                                         |
 | `musiclab/musiclab_switching_levels.feature` (@eyes)                     | `tests/lab2/music/music.spec.ts`                                            | C+F+W    | visual checkpoints annotated                                                                                                                       |
@@ -296,13 +297,8 @@ cookie and session storage from the page context.
 
 ## Skipped — coordinate math / block position assertions
 
-These use pixel-coordinate `near offset` assertions (± tolerance). The Cucumber steps
-calculate absolute element positions via JS and compare to stored coordinates. Replicating
-this in Playwright is possible but brittle and high-maintenance.
-
-| Feature file          | Blocker                     |
-| --------------------- | --------------------------- |
-| `blocklayout.feature` | block position pixel checks |
+None. `blocklayout.feature` now mirrors the Cucumber SVG translate checks with
+the original +/-3px tolerance.
 
 ---
 
