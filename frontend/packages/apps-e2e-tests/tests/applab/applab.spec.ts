@@ -111,20 +111,19 @@ async function openManageAssetsDialog(applab: AppLab): Promise<void> {
 }
 
 /**
- * Open the teacher panel if it is collapsed, then wait for the student table.
+ * Wait for the teacher panel shell and student rows to render.
  *
  * @param page - teacher-authenticated level page
  */
 async function openTeacherPanel(
   page: import('@playwright/test').Page,
 ): Promise<void> {
-  const studentTable = page.locator('.student-table');
-  if (!(await studentTable.isVisible({timeout: 5_000}).catch(() => false))) {
-    await page
-      .locator('.show-handle .fa-chevron-left')
-      .evaluate((el: HTMLElement) => el.click());
-  }
-  await studentTable.waitFor({state: 'visible', timeout: 30_000});
+  await expect(
+    page.locator('#teacher-panel-container .teacher-panel'),
+  ).toBeVisible({timeout: 30_000});
+  await expect(page.locator('#teacher-panel-container tr').nth(1)).toBeAttached(
+    {timeout: 30_000},
+  );
 }
 
 test.describe('App Lab — data storage blocks', () => {
@@ -261,7 +260,8 @@ test.describe('App Lab — project template workspace icon', () => {
 test.describe('App Lab — submittable level', () => {
   /**
    * Migration status: COMPLETED
-   * Source: applab_submittable.feature — "Submit anything, unsubmit, be able to resubmit."
+   * Source: dashboard/test/ui/features/star_labs/applab_submittable.feature
+   * Scenario: Submit anything, unsubmit, be able to resubmit.
    * @no_mobile @as_taught_student
    *
    * Level 18/7 submit → unsubmit → resubmit cycle.  Requires a teacher-section
@@ -311,7 +311,8 @@ test.describe('App Lab — submittable level', () => {
 
   /**
    * Migration status: COMPLETED
-   * Source: applab_submittable.feature — "Submit anything, teacher is able to unsubmit"
+   * Source: dashboard/test/ui/features/star_labs/applab_submittable.feature
+   * Scenario: Submit anything, teacher is able to unsubmit
    * @no_mobile @as_taught_student
    *
    * The teacher panel row is the visible readiness signal for viewing student
