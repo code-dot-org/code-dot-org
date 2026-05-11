@@ -217,6 +217,7 @@ or equivalent assertion is deferred until visual regression infrastructure exist
 | `code_tools/pythonlab/pythonlab_run_eyes.feature`     | run → console text assertion                |
 | `code_tools/pythonlab/pythonlab_neighborhood.feature` | run → console text assertion                |
 | `dance/dance_ai_modal_eyes.feature`                   | AI modal code toggle + emoji picker LTR+RTL |
+| `applab/tooltips.feature`                             | Eyes steps stubbed; tooltip text asserted   |
 
 ### Blocked — auth required
 

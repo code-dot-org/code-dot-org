@@ -445,6 +445,108 @@ export class AppLab {
   }
 
   /**
+   * Move a design-mode element to an exact app-space position.
+   * Mirrors the App Lab property editor by calling Applab.updateProperty()
+   * with the internal left/top property names.
+   *
+   * @param elementId - Design element id, e.g. `design_button1`
+   * @param x - Left coordinate in app-space pixels
+   * @param y - Top coordinate in app-space pixels
+   */
+  async setDesignElementPosition(
+    elementId: string,
+    x: number,
+    y: number,
+  ): Promise<void> {
+    await this.page.evaluate(
+      ({elementId, x, y}: {elementId: string; x: number; y: number}) => {
+        const element = document.getElementById(elementId);
+        if (!element) {
+          throw new Error(
+            `Could not find App Lab design element #${elementId}`,
+          );
+        }
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
+        const applab = (window as any).Applab;
+        applab.updateProperty(element, 'left', x);
+        applab.updateProperty(element, 'top', y);
+      },
+      {elementId, x, y},
+    );
+  }
+
+  /**
+   * Save the current App Lab project through the same product API used by the
+   * Cucumber `I save the project` step.
+   */
+  async saveProject(): Promise<void> {
+    await this.waitForUiSaveAfter(() =>
+      this.page.evaluate(() => {
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
+        (window as any).Applab.serializeAndSave();
+      }),
+    );
+  }
+
+  /**
+   * Dispatch a mousemove over an App Lab element so VisualizationOverlay
+   * renders the user-visible coordinate/id tooltip.
+   *
+   * @param elementId - Element id to hover, without `#`
+   */
+  async hoverAppElement(elementId: string): Promise<void> {
+    await this.page.evaluate((id: string) => {
+      const element = document.getElementById(id);
+      if (!element) {
+        throw new Error(`Could not find App Lab element #${id}`);
+      }
+      const rect = element.getBoundingClientRect();
+      const scale = rect.width / (element as HTMLElement).offsetWidth || 1;
+      element.dispatchEvent(
+        new MouseEvent('mousemove', {
+          bubbles: true,
+          cancelable: false,
+          view: window,
+          clientX: rect.left + 5 * scale,
+          clientY: rect.top + 5 * scale,
+        }),
+      );
+    }, elementId);
+  }
+
+  /**
+   * Dispatch a mousemove over the App Lab visualization at app-space
+   * coordinates, matching the Cucumber blank-screen hover step.
+   *
+   * @param x - App-space x coordinate
+   * @param y - App-space y coordinate
+   */
+  async hoverVisualizationAt(x: number, y: number): Promise<void> {
+    await this.page.evaluate(
+      ({x, y}: {x: number; y: number}) => {
+        const visualization = document.getElementById('visualizationOverlay');
+        if (!visualization) {
+          throw new Error('Could not find App Lab visualization overlay');
+        }
+        const rect = visualization.getBoundingClientRect();
+        const scale =
+          rect.width / (visualization as unknown as SVGElement).clientWidth ||
+          1;
+        visualization.dispatchEvent(
+          new MouseEvent('mousemove', {
+            bubbles: true,
+            cancelable: false,
+            view: window,
+            clientX: rect.left + x * scale,
+            clientY: rect.top + y * scale,
+          }),
+        );
+      },
+      {x, y},
+    );
+  }
+
+  /**
    * Reset the project to its starting (initial) version via the Version History dialog.
    * Mirrors `I reset the puzzle to the starting version` from steps.rb.
    * Opens #versions-header, clicks "Start over", then confirms with #start-over-button.
