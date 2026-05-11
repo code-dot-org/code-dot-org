@@ -6,7 +6,9 @@ import {
 import HttpClient from '../util/HttpClient';
 
 import {GatewayTranscribeResponseV1Schema} from './gatewaySchemas';
+import {getErrorLogData} from './logHelper';
 import {AI_GATEWAY_URL, fetchAccessToken, getModelString} from './shared';
+import {fetchTurnstileTokenIfEnabled, turnstileHeaders} from './turnstile';
 
 type TranscribeOptions = Parameters<typeof transcribe>[0];
 
@@ -16,33 +18,44 @@ type TranscribeOptions = Parameters<typeof transcribe>[0];
 async function transcribeThroughGateway(
   options: TranscribeOptions
 ): Promise<TranscriptionResult> {
-  const {model, audio, ...restOptions} = options;
+  try {
+    const {model, audio, ...restOptions} = options;
 
-  const token = await fetchAccessToken();
+    const [token, turnstileToken] = await Promise.all([
+      fetchAccessToken(),
+      fetchTurnstileTokenIfEnabled(),
+    ]);
 
-  const formData = new FormData();
-  formData.append('token', token);
-  const audioBlob = await audioToBlob(audio);
-  formData.append('audio', audioBlob, 'audio');
-  formData.append('model', getModelString(model));
+    const formData = new FormData();
+    formData.append('token', token);
+    const audioBlob = await audioToBlob(audio);
+    formData.append('audio', audioBlob, 'audio');
+    formData.append('model', getModelString(model));
 
-  for (const [key, value] of Object.entries(restOptions)) {
-    formData.append(key, String(value));
+    for (const [key, value] of Object.entries(restOptions)) {
+      formData.append(key, String(value));
+    }
+
+    const response = await HttpClient.post(
+      `${AI_GATEWAY_URL}/transcribe`,
+      formData,
+      false,
+      turnstileHeaders(turnstileToken)
+    );
+
+    const wire = GatewayTranscribeResponseV1Schema.parse(await response.json());
+
+    // The SDK's TranscriptionResult requires `warnings` to be an array;
+    // default to empty if the gateway omits it.
+    return {
+      ...wire,
+      warnings: (wire.warnings ?? []) as TranscriptionResult['warnings'],
+    } as unknown as TranscriptionResult;
+  } catch (error) {
+    const logData = getErrorLogData(error);
+    console.error('Fetch error in transcribeThroughGateway:', logData);
+    throw error;
   }
-
-  const response = await HttpClient.post(
-    `${AI_GATEWAY_URL}/transcribe`,
-    formData
-  );
-
-  const wire = GatewayTranscribeResponseV1Schema.parse(await response.json());
-
-  // The SDK's TranscriptionResult requires `warnings` to be an array;
-  // default to empty if the gateway omits it.
-  return {
-    ...wire,
-    warnings: (wire.warnings ?? []) as TranscriptionResult['warnings'],
-  } as unknown as TranscriptionResult;
 }
 
 async function audioToBlob(audio: TranscribeOptions['audio']): Promise<Blob> {

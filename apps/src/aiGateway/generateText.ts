@@ -6,7 +6,9 @@ import {
   GatewayGenerateTextResponseV1Schema,
   type GatewayGenerateTextResponseV1,
 } from './gatewaySchemas';
+import {getErrorLogData} from './logHelper';
 import {AI_GATEWAY_URL, fetchAccessToken, getModelString} from './shared';
+import {fetchTurnstileTokenIfEnabled, turnstileHeaders} from './turnstile';
 
 type SDKOptions = Parameters<typeof generateText>[0];
 type SDKTools = NonNullable<SDKOptions['tools']>;
@@ -82,7 +84,10 @@ const generateTextThroughGateway = async <
 
     const serializedOutput = await serializeOutputSchema(options.output);
 
-    const token = await fetchAccessToken();
+    const [token, turnstileToken] = await Promise.all([
+      fetchAccessToken(),
+      fetchTurnstileTokenIfEnabled(),
+    ]);
 
     const httpResponse = await HttpClient.post(
       AI_GATEWAY_URL,
@@ -93,7 +98,7 @@ const generateTextThroughGateway = async <
         token,
       }),
       false,
-      {'Content-Type': 'application/json'}
+      {'Content-Type': 'application/json', ...turnstileHeaders(turnstileToken)}
     );
 
     const wire = GatewayGenerateTextResponseV1Schema.parse(
@@ -102,7 +107,8 @@ const generateTextThroughGateway = async <
 
     return rehydrateAIResponse<TOOLS, OUTPUT>(wire);
   } catch (error) {
-    console.error('Fetch error:', error);
+    const logData = getErrorLogData(error);
+    console.error('Fetch error in generateTextThroughGateway:', logData);
     throw error;
   }
 };
