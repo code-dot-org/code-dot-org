@@ -378,6 +378,23 @@ class Api::V1::SectionsController < Api::V1::JSONApiController
     render json: {result: 'invalid ai_chat_access_level'}, status: :bad_request
   end
 
+  # GET /api/v1/sections/<id>/suggested_lesson
+  def suggested_lesson
+    if @section.suggested_lesson_stale? && @section.script.present?
+      @section.compute_suggested_lesson
+      @section.reload
+    end
+
+    data = @section.suggested_lesson
+    if data && (lesson = Lesson.find_by(id: data['lesson_id']))
+      data = data.merge(
+        'name' => lesson.localized_title,
+        'url' => script_lesson_path(lesson.script, lesson)
+      )
+    end
+    render json: data
+  end
+
   private def find_follower
     unless current_user
       render_404
