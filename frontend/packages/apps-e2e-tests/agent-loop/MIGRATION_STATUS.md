@@ -2,7 +2,7 @@
 
 Source: `dashboard/test/ui/features/` (all sub-directories)  
 Target: `frontend/packages/apps-e2e-tests/tests/`  
-As of: 2026-05-11 (updated 2026-05-11 — Starlab pass: Game Lab status cleanup)
+As of: 2026-05-11 (updated 2026-05-11 — Starlab pass: Artist angle helper deflake)
 
 ---
 
@@ -10,7 +10,7 @@ As of: 2026-05-11 (updated 2026-05-11 — Starlab pass: Game Lab status cleanup)
 
 | Status                                         | Count                                                                                                                                                                                                                                                                                |
 | ---------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| Ported                                         | 150 feature files (C+F for pythonlab + mixmoveai; Chromium-only for maker + Game Lab export; C+W for Game Lab Piskel loading; @no_ci for ai_tutor + AI Chat multimodal; @no_mobile for pairing + version_history + assign_modular_course; @no_firefox for rubric AI; C+F+W for rest) |
+| Ported                                         | 151 feature files (C+F for pythonlab + mixmoveai; Chromium-only for maker + Game Lab export; C+W for Game Lab Piskel loading; @no_ci for ai_tutor + AI Chat multimodal; @no_mobile for pairing + version_history + assign_modular_course; @no_firefox for rubric AI; C+F+W for rest) |
 | Fixme stubs — test infra                       | 2 (applab asset upload — needs test fixture file; disallowedsharing profanity — @webpurify API not configured)                                                                                                                                                                       |
 | Covered by ported (rolled in)                  | 5 (maze2, jigsaw2, multi2/3/4 rolled into existing specs)                                                                                                                                                                                                                            |
 | Partial — @eyes (visual checkpoints annotated) | 6 ported up to snapshot; @eyes auth blocked 3                                                                                                                                                                                                                                        |
@@ -42,6 +42,7 @@ As of: 2026-05-11 (updated 2026-05-11 — Starlab pass: Game Lab status cleanup)
 | `step_mode.feature`                                                      | `tests/legacy/step/step-mode.spec.ts`                                       | C+F+W    | All 5 scenarios ported                                                                                                                             |
 | `clearpuzzle.feature`                                                    | `tests/legacy/clearpuzzle/clearpuzzle.spec.ts`                              | C+F+W    | All 2 scenarios ported                                                                                                                             |
 | `blocklayout.feature`                                                    | `tests/legacy/blocklayout/blocklayout.spec.ts`                              | C+F+W    | All 3 scenarios ported; arranged XML block coordinates within Cucumber +/-3px tolerance                                                            |
+| `angle_helper.feature` (@skip in Cucumber, non-@eyes scenarios)          | `tests/legacy/activities/artist/artist-angle-helper.spec.ts`                | C+F+W    | 3 scenarios: free text, dropdown, and value input angle helper; @eyes scenario remains visual-only                                                 |
 | `musiclab/musiclab_timeline_nav.feature`                                 | `tests/lab2/music/music.spec.ts`                                            | C+F+W    | @no_safari; webkit skipped                                                                                                                         |
 | `code_tools/pythonlab/pythonlab_files.feature`                           | `tests/lab2/pythonlab/pythonlab.spec.ts`                                    | C+F      | @no_safari; webkit skipped                                                                                                                         |
 | `musiclab/musiclab_switching_levels.feature` (@eyes)                     | `tests/lab2/music/music.spec.ts`                                            | C+F+W    | visual checkpoints annotated                                                                                                                       |
@@ -237,12 +238,12 @@ or equivalent assertion is deferred until visual regression infrastructure exist
 
 ### Blocked — also @skip or too few non-visual steps to port
 
-| Feature file                                   | Reason                            |
-| ---------------------------------------------- | --------------------------------- |
-| `angle_helper.feature`                         | @skip wins                        |
-| `artist_autorun.feature`                       | legacy lab; all assertions visual |
-| `applab/eyes1.feature` through `eyes4.feature` | auth-required (App Lab)           |
-| `public_key_cryptography/eyes.feature`         | heavy custom step definitions     |
+| Feature file                                   | Reason                                                       |
+| ---------------------------------------------- | ------------------------------------------------------------ |
+| `angle_helper.feature` (eyes scenario)         | @skip + legacy visual checkpoint; non-@eyes scenarios ported |
+| `artist_autorun.feature`                       | legacy lab; all assertions visual                            |
+| `applab/eyes1.feature` through `eyes4.feature` | auth-required (App Lab)                                      |
+| `public_key_cryptography/eyes.feature`         | heavy custom step definitions                                |
 
 ---
 

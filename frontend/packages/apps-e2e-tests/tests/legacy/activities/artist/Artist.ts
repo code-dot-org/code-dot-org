@@ -1,4 +1,4 @@
-import {type Locator, type Page} from '@playwright/test';
+import {expect, type Locator, type Page} from '@playwright/test';
 
 import {labLevelUrl} from '../../../shared/urls';
 import {LegacyBlocklyLab} from '../../shared/LegacyBlocklyLab';
@@ -28,5 +28,28 @@ export class Artist extends LegacyBlocklyLab {
 
   protected buildLevelUrl(level: number): string {
     return labLevelUrl(3, level);
+  }
+
+  /**
+   * Artist levels can occasionally hit the dashboard slow-load recovery page
+   * before Blockly finishes booting. If that visible recovery state appears,
+   * use its own reload link once, then wait for the normal lab control.
+   */
+  protected override async waitForInitialLoad(): Promise<void> {
+    try {
+      await expect(this.runButton).toBeVisible({timeout: 30_000});
+    } catch (error) {
+      const slowLoadMessage = this.page.getByText(
+        'This is taking longer than usual',
+      );
+      if (!(await slowLoadMessage.isVisible().catch(() => false))) {
+        throw error;
+      }
+
+      await this.page
+        .getByRole('link', {name: 'Try reloading the page'})
+        .click();
+      await expect(this.runButton).toBeVisible({timeout: 30_000});
+    }
   }
 }
