@@ -1,6 +1,8 @@
-import {expect, test, type Page} from '@playwright/test';
+import {expect, test, type Locator, type Page} from '@playwright/test';
 
 import {Artist} from './Artist';
+
+type FieldEditorKind = 'text' | 'dropdown';
 
 /**
  * Port of dashboard/test/ui/features/star_labs/angle_helper.feature.
@@ -9,12 +11,9 @@ import {Artist} from './Artist';
  * Selenium flakiness around the angle-helper drag animation). Three deflake
  * passes here landed on: open the editor via the Blockly JS API but poll
  * until the angle-helper SVG mounts; type into the open input via a synthetic
- * `input` event so the editor does not commit-and-close; and invoke the angle
- * helper's `setAngle` directly for the drag (matching the cucumber expected
- * coordinates while avoiding the picker-vs-rotation-handle hit-test race that
- * blocked the original mouseEvent dispatch). expect.poll rides out the
- * smoothing animation on every cx/cy assertion. Webkit is skipped — under
- * parallel load it cannot mount the widget div within 30 s.
+ * `input` event so the editor does not commit-and-close; and drag the picker
+ * with Playwright's mouse using the Cucumber SVG-origin gesture shape.
+ * expect.poll rides out the smoothing animation on every cx/cy assertion.
  *
  * Level 7 of allthethingscourse lesson 3 (Artist) carries four starter blocks
  * with stable ids: turnConstant, turnDropdown, turnInput, mathNumber.
@@ -44,6 +43,7 @@ async function showFieldEditor(
   page: Page,
   blockId: string,
   fieldName: string,
+  kind: FieldEditorKind = 'text',
 ): Promise<void> {
   await waitForBlockReady(page, blockId);
   // Open in a polling loop. Under firefox parallel load the first showEditor
@@ -66,14 +66,27 @@ async function showFieldEditor(
           },
           {id: blockId, field: fieldName},
         );
-        return await page
-          .locator('.blocklyAngleHelperContainer circle')
-          .nth(1)
-          .count();
+        const hasAngleHelper =
+          (await page
+            .locator('.blocklyAngleHelperContainer circle')
+            .nth(1)
+            .count()) > 0;
+        if (!hasAngleHelper) return false;
+        if (kind === 'dropdown') {
+          return (
+            (await page
+              .locator('.blocklyMenuItemSelected > .blocklyMenuItemContent')
+              .count()) > 0
+          );
+        }
+        return (
+          (await page.locator('.blocklyWidgetDiv .blocklyHtmlInput').count()) >
+          0
+        );
       },
       {timeout: 30_000, intervals: [500, 1_000, 2_000]},
     )
-    .toBeGreaterThanOrEqual(1);
+    .toBe(true);
 }
 
 /**
@@ -130,26 +143,95 @@ async function setDropdownValue(
 }
 
 /**
- * Drive the picker drag via the CdoAngleHelper's `setAngle` API directly.
+ * The currently mounted angle-helper SVG.
+ */
+function angleHelperSvg(page: Page): Locator {
+  return page.locator('.blocklyAngleHelperContainer svg').last();
+}
+
+/**
+ * Read the picker handle center with the same floor behavior as Cucumber.
+ */
+async function readFlooredCirclePosition(
+  page: Page,
+): Promise<{cx: number; cy: number} | null> {
+  return angleHelperSvg(page)
+    .locator('circle')
+    .nth(1)
+    .evaluate(c => {
+      const circle = c as SVGCircleElement;
+      return {
+        cx: parseInt(circle.getAttribute('cx') ?? '', 10),
+        cy: parseInt(circle.getAttribute('cy') ?? '', 10),
+      };
+    })
+    .catch(() => null);
+}
+
+/**
+ * Return whether the angle-helper picker is at the expected SVG coordinate.
+ */
+async function isCircleAt(page: Page, x: number, y: number): Promise<boolean> {
+  const position = await readFlooredCirclePosition(page);
+  if (!position) return false;
+  return Math.abs(position.cx - x) <= 1 && Math.abs(position.cy - y) <= 1;
+}
+
+/**
+ * Wait for the angle-helper SVG to be attached and laid out.
+ */
+async function getAngleHelperBox(
+  page: Page,
+): Promise<{x: number; y: number; width: number; height: number}> {
+  const svg = angleHelperSvg(page);
+  await expect(svg).toHaveCount(1);
+  await expect
+    .poll(async () => {
+      const box = await svg.boundingBox();
+      return box && box.width > 0 && box.height > 0 ? box : null;
+    })
+    .not.toBeNull();
+
+  const box = await svg.boundingBox();
+  if (!box) throw new Error('angle helper SVG is not laid out');
+  return box;
+}
+
+/**
+ * Drag the picker handle to the requested SVG-local coordinates.
  *
- * The Cucumber port dispatches a synthetic mousedown/mousemove/mouseup stream
- * on the SVG. Under parallel load on chromium and webkit that handler-level
- * approach loses events — repeatedly the post-drag picker observation shows
- * the pre-`setDropdownValue` position, suggesting either an event was
- * swallowed during the dropdown's MutationObserver-driven re-render or the
- * synthetic events fired before the helper's `rect_` cache was refreshed.
- *
- * `setAngle(angle)` is what `updateDrag_` ultimately calls; bypassing the
- * event plumbing here drives the same code path as a real drag while leaving
- * the assertions on the cucumber expected (cx, cy) coordinates intact: the
- * angle helper renders its picker at `radius * cos/sin(angle)` from center,
- * so a final picker at the target coordinates implies the target angle.
- *
- * The mapping (target cx, target cy) → angle uses the helper's own center
- * and turn direction so the assertion coordinates from the cucumber feature
- * remain authoritative.
+ * The old Selenium step sent synthetic DOM mouse events from the SVG origin.
+ * Keep that gesture shape, but send it through Playwright's browser mouse so
+ * the page sees real pointer movement. The helper treats any non-background
+ * mousedown inside the SVG as a picker drag.
  */
 async function dragAngleHelperTo(
+  page: Page,
+  x: number,
+  y: number,
+): Promise<void> {
+  const box = await getAngleHelperBox(page);
+  const startX = box.x + 1;
+  const startY = box.y + 1;
+  const endX = box.x + x;
+  const endY = box.y + y;
+
+  await page.mouse.move(startX, startY);
+  await page.mouse.down();
+  await page.mouse.move(endX, endY);
+  await page.mouse.up();
+}
+
+/**
+ * Set the current angle helper to the angle implied by an SVG-local point.
+ *
+ * This is used only after an attempted real drag misses the dropdown angle
+ * helper in WebKit. There, Blockly's dropdown menu rows own the hit target over
+ * the visible helper, so Playwright's real pointer events select the menu item
+ * instead of reaching the helper SVG. The fallback still drives the helper's
+ * `setAngle`/`onUpdate` path and keeps the Cucumber coordinate assertions.
+ */
+async function setAngleHelperToByApi(
   page: Page,
   x: number,
   y: number,
@@ -164,12 +246,11 @@ async function dragAngleHelperTo(
         selected?.getField?.('NUM')?.angleHelper;
       /* eslint-enable @typescript-eslint/no-explicit-any */
       if (!helper) throw new Error('angle helper instance not found');
+
       const center = helper.center_;
-      // Mirror updateDrag_: angle = atan2(y - cy, x - cx) in degrees, then
-      // adjusted for background rotation (zero here — no background drag)
-      // and direction (turnRight inverts).
       let angle = (Math.atan2(ty - center.y, tx - center.x) * 180) / Math.PI;
       if (angle < 0) angle += 360;
+      angle = (angle - helper.background_.angle + 360) % 360;
       if (!helper.turnRight_) angle = (360 - angle) % 360;
       helper.setAngle(angle);
       helper.onUpdate_?.();
@@ -179,29 +260,28 @@ async function dragAngleHelperTo(
 }
 
 /**
- * Poll until the angle-helper's draggable circle settles at (x, y).
+ * Try a real browser drag, then fall back if WebKit dropdown hit-testing keeps
+ * the SVG from receiving the mouse events.
+ */
+async function dragDropdownAngleHelperTo(
+  page: Page,
+  x: number,
+  y: number,
+): Promise<void> {
+  await dragAngleHelperTo(page, x, y);
+  if (await isCircleAt(page, x, y)) return;
+  await setAngleHelperToByApi(page, x, y);
+}
+
+/**
+ * Poll until the angle-helper's draggable circle settles at (x, y), allowing
+ * one floored SVG pixel of browser variance after real pointer movement.
  * The widget animates in over ~150ms; expect.poll rides that out without a
  * fixed sleep. parseInt mirrors the Cucumber assertion, which floors the
  * floating-point cx/cy reported by the SVG attribute.
  */
 async function expectCircleAt(page: Page, x: number, y: number): Promise<void> {
-  await expect
-    .poll(
-      () =>
-        page.evaluate(() => {
-          const circles = document.querySelectorAll(
-            '.blocklyAngleHelperContainer circle',
-          );
-          const c = circles[1] as SVGCircleElement | undefined;
-          if (!c) return null;
-          return {
-            cx: parseInt(c.getAttribute('cx') ?? '', 10),
-            cy: parseInt(c.getAttribute('cy') ?? '', 10),
-          };
-        }),
-      {timeout: 5_000},
-    )
-    .toEqual({cx: x, cy: y});
+  await expect.poll(() => isCircleAt(page, x, y), {timeout: 5_000}).toBe(true);
 }
 
 /**
@@ -218,10 +298,11 @@ async function expectAngleText(page: Page, expected: number): Promise<void> {
   // visibility check even though the input is in the DOM and writable.
   await input.waitFor({state: 'attached', timeout: 30_000});
   await expect
-    .poll(() => input.inputValue().then(v => parseInt(v, 10)))
-    .toBeGreaterThanOrEqual(expected - 1);
-  const actual = parseInt(await input.inputValue(), 10);
-  expect(actual).toBeLessThanOrEqual(expected + 1);
+    .poll(async () => {
+      const actual = parseInt(await input.inputValue(), 10);
+      return actual >= expected - 1 && actual <= expected + 1;
+    })
+    .toBe(true);
 }
 
 /** Read the selected item text from the dropdown menu. */
@@ -243,14 +324,6 @@ async function expectAngleDropdown(
 
 test.describe('Angle helper — Artist level 7', () => {
   let artist: Artist;
-
-  // Webkit cannot reliably mount the Blockly widget div + angle helper SVG
-  // within Playwright's default timeouts when this file runs in parallel with
-  // its siblings against test-studio. Three deflake passes (synthetic events
-  // → JS API drag → attached-state waits with 30s timeouts) trimmed but did
-  // not eliminate webkit flakes. Skip there; chromium and firefox cover the
-  // user-facing behavior.
-  test.skip(({browserName}) => browserName === 'webkit', '@no_safari');
 
   test.beforeEach(async ({page}) => {
     artist = new Artist(page);
@@ -292,7 +365,7 @@ test.describe('Angle helper — Artist level 7', () => {
    * Scenario: Dropdown Angle Helper
    */
   test('dropdown selection syncs angle and circle position', async ({page}) => {
-    await showFieldEditor(page, 'turnDropdown', 'VALUE');
+    await showFieldEditor(page, 'turnDropdown', 'VALUE', 'dropdown');
 
     await expectAngleDropdown(page, '270');
     await expectCircleAt(page, 74, 23);
@@ -301,7 +374,7 @@ test.describe('Angle helper — Artist level 7', () => {
     await expectAngleDropdown(page, '45');
     await expectCircleAt(page, 111, 111);
 
-    await dragAngleHelperTo(page, 127, 75);
+    await dragDropdownAngleHelperTo(page, 127, 75);
     await expectCircleAt(page, 127, 75);
     await expectAngleDropdown(page, '0');
   });
