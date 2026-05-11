@@ -48,6 +48,7 @@ dashboard/public/**/README.md !text !filter !merge !diff
 dashboard/test/fixtures/**/*.tsv !text !filter !merge !diff
 dashboard/test/fixtures/**/*.csv !text !filter !merge !diff
 dashboard/test/fixtures/**/*.json !text !filter !merge !diff
+lib/test/fixtures/**/*.json !text !filter !merge !diff
 dashboard/test/fixtures/**/*.course !text !filter !merge !diff
 dashboard/test/fixtures/**/*.script_json !text !filter !merge !diff
 dashboard/test/fixtures/**/*.level !text !filter !merge !diff
