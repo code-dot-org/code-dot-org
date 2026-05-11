@@ -19,7 +19,7 @@
             },
             "data": {
               "text": "Step One: Filter",
-              "fontColor": "#1e1e1e",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": "large",
               "showHandles": false
             },
@@ -82,7 +82,7 @@
             },
             "data": {
               "text": "Step Two: Sort",
-              "fontColor": "#1e1e1e",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": "large",
               "showHandles": false
             },
@@ -102,7 +102,7 @@
             },
             "data": {
               "text": "Keep only results whose interest chips contain",
-              "fontColor": "#1e1e1e",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": "large",
               "showHandles": false
             },
@@ -143,7 +143,7 @@
             },
             "data": {
               "text": "Sort the remaining results from Highest to Lowest using\nthe following algorithm:     ",
-              "fontColor": "#1e1e1e",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": "large",
               "showHandles": false,
               "textAlign": "left"
@@ -168,8 +168,8 @@
             "data": {
               "shapeType": "rectangle",
               "label": "",
-              "backgroundColor": "#e9ecef",
-              "strokeColor": "#1971c2"
+              "backgroundColor": "var(--sketchlab-bg-gray)",
+              "strokeColor": "var(--sketchlab-stroke-default)"
             },
             "measured": {
               "width": 1378,
@@ -186,7 +186,7 @@
             },
             "data": {
               "text": "Likes - Dislikes + Subscribed",
-              "fontColor": "#1971c2",
+              "fontColor": "var(--sketchlab-stroke-blue)",
               "fontSize": "large",
               "showHandles": false
             },
@@ -210,8 +210,8 @@
             "data": {
               "shapeType": "rectangle",
               "label": "",
-              "backgroundColor": "#e9ecef",
-              "strokeColor": "#1971c2"
+              "backgroundColor": "var(--sketchlab-bg-gray)",
+              "strokeColor": "var(--sketchlab-stroke-default)"
             },
             "measured": {
               "width": 1376,
@@ -231,7 +231,7 @@
             },
             "data": {
               "text": "What got filtered out? Was this filter accurate-- why or why not?",
-              "fontColor": "#1e1e1e",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": "large",
               "showHandles": false
             },
@@ -250,7 +250,7 @@
             },
             "data": {
               "text": "Drag the remaining sorted results from the video feed \nin the order they appear:",
-              "fontColor": "#1e1e1e",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": "large",
               "showHandles": false
             },
@@ -275,7 +275,7 @@
               "shapeType": "rectangle",
               "label": "",
               "backgroundColor": "#ffffff",
-              "strokeColor": "#1e1e1e"
+              "strokeColor": "var(--sketchlab-stroke-default)"
             },
             "measured": {
               "width": 453,
@@ -298,7 +298,7 @@
               "shapeType": "rectangle",
               "label": "",
               "backgroundColor": "#ffffff",
-              "strokeColor": "#1e1e1e"
+              "strokeColor": "var(--sketchlab-stroke-default)"
             },
             "measured": {
               "width": 453,
@@ -353,7 +353,7 @@
             },
             "data": {
               "text": "type response here...",
-              "fontColor": "#1e1e1e",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": "large",
               "showHandles": false
             },
@@ -394,7 +394,7 @@
             },
             "data": {
               "text": "Step Three: Flip the Order!",
-              "fontColor": "#1e1e1e",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": "large",
               "showHandles": false
             },
@@ -435,7 +435,7 @@
             },
             "data": {
               "text": "1. Sort by the algorithm   ",
-              "fontColor": "#1e1e1e",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": "large",
               "showHandles": false
             },
@@ -454,7 +454,7 @@
             },
             "data": {
               "text": "Likes - Dislikes + Subscribed",
-              "fontColor": "#1971c2",
+              "fontColor": "var(--sketchlab-stroke-blue)",
               "fontSize": "large",
               "showHandles": false
             },
@@ -473,7 +473,7 @@
             },
             "data": {
               "text": "2. Keep only results whose interest chips contain",
-              "fontColor": "#1e1e1e",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": "large",
               "showHandles": false
             },
@@ -519,8 +519,9 @@
             "data": {
               "shapeType": "rectangle",
               "label": "",
-              "backgroundColor": "#e9ecef",
-              "strokeColor": "#1971c2"
+              "backgroundColor": "var(--sketchlab-bg-gray)",
+              "strokeColor": "var(--sketchlab-stroke-default)",
+              "fontColor": "var(--sketchlab-stroke-default)"
             },
             "measured": {
               "width": 1374,
@@ -540,7 +541,7 @@
             },
             "data": {
               "text": "Was this order more efficient? Why or why not?",
-              "fontColor": "#1e1e1e",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": "large",
               "showHandles": false
             },
@@ -559,7 +560,7 @@
             },
             "data": {
               "text": "type response here...",
-              "fontColor": "#1e1e1e",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": "large",
               "showHandles": false
             },
@@ -583,8 +584,8 @@
             "data": {
               "shapeType": "rectangle",
               "label": "",
-              "backgroundColor": "transparent",
-              "strokeColor": "#1e1e1e"
+              "backgroundColor": "var(--sketchlab-bg-gray)",
+              "strokeColor": "var(--sketchlab-stroke-default)"
             },
             "measured": {
               "width": 1951,
@@ -599,20 +600,23 @@
             "id": "fPg867G6ignC5CydXKVz5",
             "type": "text",
             "position": {
-              "x": -104.87411650273373,
-              "y": -648.1323806665147
+              "x": -196.25288252949315,
+              "y": -650.2379671048509
             },
             "data": {
               "text": "MyTube Video Feed",
-              "fontColor": "#1971c2",
-              "fontSize": "large",
+              "fontColor": "var(--sketchlab-stroke-default)",
+              "fontSize": 32,
               "showHandles": false
             },
             "measured": {
-              "width": 214,
-              "height": 47
+              "width": 317,
+              "height": 65
             },
-            "dragging": false
+            "dragging": false,
+            "width": 317,
+            "height": 65,
+            "resizing": false
           },
           {
             "id": "FWDQ6TgJiPZwJXKrGo-n1",
@@ -795,7 +799,9 @@
             "type": "shape",
             "data": {
               "shapeType": "rectangle",
-              "label": ""
+              "label": "",
+              "strokeColor": "var(--sketchlab-stroke-default)",
+              "fontColor": "var(--sketchlab-stroke-default)"
             },
             "position": {
               "x": 1049.429295343372,
@@ -858,15 +864,15 @@
 
         ],
         "viewport": {
-          "x": 495.31846167765,
-          "y": 469.9286875294129,
-          "zoom": 0.4818164777758574
+          "x": 296.23546538429264,
+          "y": 484.4011735989203,
+          "zoom": 0.5159517565630714
         }
       }
     },
     "name_suffix": "_2026"
   },
   "published": true,
-  "audit_log": "[{\"changed_at\":\"2026-04-01T21:38:28.340+00:00\",\"changed\":[\"cloned from \\\"building-data-driven-systems-lesson10-level1-test_2025-pilot\\\"\"],\"cloned_from\":\"building-data-driven-systems-lesson10-level1-test_2025-pilot\"},{\"changed_at\":\"2026-05-01 14:07:02 -0400\",\"changed\":[\"start_sources\"],\"changed_by_id\":1,\"changed_by_email\":\"levelbuilder@dev.com\"},{\"changed_at\":\"2026-05-06 20:36:49 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":155,\"changed_by_email\":\"dani@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2026-04-01T21:38:28.340+00:00\",\"changed\":[\"cloned from \\\"building-data-driven-systems-lesson10-level1-test_2025-pilot\\\"\"],\"cloned_from\":\"building-data-driven-systems-lesson10-level1-test_2025-pilot\"},{\"changed_at\":\"2026-05-01 14:07:02 -0400\",\"changed\":[\"start_sources\"],\"changed_by_id\":1,\"changed_by_email\":\"levelbuilder@dev.com\"},{\"changed_at\":\"2026-05-06 20:36:49 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":155,\"changed_by_email\":\"dani@code.org\"},{\"changed_at\":\"2026-05-08 13:51:58 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":155,\"changed_by_email\":\"dani@code.org\"}]"
 }]]></config>
 </Sketchlab>

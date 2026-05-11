@@ -70,7 +70,7 @@
             "data": {
               "shapeType": "rectangle",
               "label": "",
-              "backgroundColor": "transparent",
+              "backgroundColor": "var(--sketchlab-bg-gray)",
               "strokeColor": "var(--sketchlab-stroke-default)"
             },
             "measured": {
@@ -93,7 +93,7 @@
             },
             "measured": {
               "width": 81,
-              "height": 46
+              "height": 47
             }
           },
           {
@@ -111,7 +111,7 @@
             },
             "measured": {
               "width": 84,
-              "height": 46
+              "height": 47
             }
           },
           {
@@ -129,7 +129,7 @@
             },
             "measured": {
               "width": 251,
-              "height": 46
+              "height": 47
             },
             "dragging": false
           },
@@ -147,8 +147,8 @@
               "showHandles": false
             },
             "measured": {
-              "width": 254,
-              "height": 46
+              "width": 255,
+              "height": 47
             },
             "dragging": false
           },
@@ -167,7 +167,7 @@
             },
             "measured": {
               "width": 139,
-              "height": 46
+              "height": 47
             },
             "dragging": false
           },
@@ -208,7 +208,7 @@
             },
             "measured": {
               "width": 148,
-              "height": 46
+              "height": 47
             },
             "dragging": false
           },
@@ -319,7 +319,7 @@
             },
             "measured": {
               "width": 60,
-              "height": 38
+              "height": 39
             },
             "dragging": false
           },
@@ -338,7 +338,7 @@
             },
             "measured": {
               "width": 100,
-              "height": 38
+              "height": 39
             },
             "dragging": false
           },
@@ -356,8 +356,8 @@
               "showHandles": false
             },
             "measured": {
-              "width": 128,
-              "height": 46
+              "width": 129,
+              "height": 47
             },
             "dragging": false
           },
@@ -375,8 +375,8 @@
               "showHandles": false
             },
             "measured": {
-              "width": 216,
-              "height": 46
+              "width": 217,
+              "height": 47
             },
             "dragging": false
           },
@@ -394,7 +394,7 @@
             "data": {
               "shapeType": "rectangle",
               "label": "",
-              "backgroundColor": "transparent",
+              "backgroundColor": "var(--sketchlab-bg-gray)",
               "strokeColor": "var(--sketchlab-stroke-default)"
             },
             "measured": {
@@ -484,7 +484,7 @@
             },
             "measured": {
               "width": 90,
-              "height": 46
+              "height": 47
             },
             "dragging": false
           },
@@ -503,7 +503,7 @@
             },
             "measured": {
               "width": 125,
-              "height": 46
+              "height": 47
             },
             "dragging": false
           },
@@ -522,7 +522,7 @@
             },
             "measured": {
               "width": 58,
-              "height": 46
+              "height": 47
             },
             "dragging": false
           },
@@ -565,7 +565,7 @@
             },
             "measured": {
               "width": 303,
-              "height": 46
+              "height": 47
             },
             "dragging": false
           },
@@ -583,8 +583,8 @@
               "showHandles": false
             },
             "measured": {
-              "width": 162,
-              "height": 46
+              "width": 163,
+              "height": 47
             },
             "dragging": false
           },
@@ -592,8 +592,8 @@
             "id": "8wL8poS6eu7jWRG8Ogk_G",
             "type": "shape",
             "position": {
-              "x": 109.12522922771834,
-              "y": 1184.7202617620967
+              "x": 55.98506957507857,
+              "y": 1184.0146224810167
             },
             "style": {
               "width": 627.0448853689527,
@@ -602,7 +602,7 @@
             "data": {
               "shapeType": "rectangle",
               "label": "",
-              "backgroundColor": "transparent",
+              "backgroundColor": "var(--sketchlab-bg-gray)",
               "strokeColor": "var(--sketchlab-stroke-default)"
             },
             "measured": {
@@ -625,7 +625,7 @@
             "data": {
               "shapeType": "rectangle",
               "label": "",
-              "backgroundColor": "transparent",
+              "backgroundColor": "var(--sketchlab-bg-gray)",
               "strokeColor": "var(--sketchlab-stroke-default)"
             },
             "measured": {
@@ -650,7 +650,7 @@
             },
             "measured": {
               "width": 83,
-              "height": 46
+              "height": 47
             },
             "dragging": false
           },
@@ -669,7 +669,7 @@
             },
             "measured": {
               "width": 84,
-              "height": 46
+              "height": 47
             }
           },
           {
@@ -686,8 +686,8 @@
               "showHandles": false
             },
             "measured": {
-              "width": 85,
-              "height": 46
+              "width": 86,
+              "height": 47
             }
           },
           {
@@ -1827,8 +1827,8 @@
           }
         ],
         "viewport": {
-          "x": 481.1313287589612,
-          "y": 72.84961150922024,
+          "x": 519.2734063660538,
+          "y": 39.603228792907316,
           "zoom": 0.5565843621399176
         }
       }
@@ -9767,6 +9767,6 @@
     "name_suffix": "_2026"
   },
   "published": true,
-  "audit_log": "[{\"changed_at\":\"2026-05-07T20:43:08.302+00:00\",\"changed\":[\"cloned from \\\"ai-generated-design-lesson10-level1a_2026\\\"\"],\"cloned_from\":\"ai-generated-design-lesson10-level1a_2026\"},{\"changed_at\":\"2026-05-07 20:43:34 +0000\",\"changed\":[\"long_instructions\",\"display_name\",\"thumbnail_url\",\"bubble_choice_description\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2026-05-07 20:44:53 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2026-05-07T20:43:08.302+00:00\",\"changed\":[\"cloned from \\\"ai-generated-design-lesson10-level1a_2026\\\"\"],\"cloned_from\":\"ai-generated-design-lesson10-level1a_2026\"},{\"changed_at\":\"2026-05-07 20:43:34 +0000\",\"changed\":[\"long_instructions\",\"display_name\",\"thumbnail_url\",\"bubble_choice_description\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2026-05-07 20:44:53 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2026-05-08 13:29:12 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":155,\"changed_by_email\":\"dani@code.org\"}]"
 }]]></config>
 </Sketchlab>
