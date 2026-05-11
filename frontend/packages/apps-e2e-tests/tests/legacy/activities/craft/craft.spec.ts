@@ -37,6 +37,64 @@ test.describe('Craft — lesson 25 — aquatic completion (level 3)', () => {
 });
 
 /**
+ * Minecraft dialog levels — Minecraft Hour of Code course, level 1.
+ *
+ * Source: dashboard/test/ui/features/star_labs/craft/dialogs.feature
+ * Scenario: Playing level 1, seeing character select dialog and re-playing.
+ */
+test.describe('Craft — Minecraft Hour of Code dialogs', () => {
+  let craft: Craft;
+
+  test.beforeEach(async ({page}) => {
+    craft = new Craft(page);
+  });
+
+  /**
+   * Source: dashboard/test/ui/features/star_labs/craft/dialogs.feature
+   * Scenario: Playing level 1, seeing character select dialog and re-playing
+   * Migration status: COMPLETED
+   *
+   * The source feature is tagged @skip for Selenium CI instability. This port
+   * keeps the functional checks and omits the commented Eyes checkpoints.
+   */
+  test('level 1 shows character dialog, feedback, congrats, and replay flow', async () => {
+    await craft.gotoMinecraftHourOfCodeDialogLevel(1);
+    await expect(craft.gettingStartedHeader).toBeVisible();
+
+    await craft.characterSelectCloseButton.click();
+    await craft.instructionsOkButton.click();
+    await expect(craft.runButton).toBeVisible();
+    await craft.waitForMinecraftLoaded();
+
+    await craft.run();
+    await expect(craft.inlineFeedback).toHaveText(
+      'Try using more commands to walk to the sheep.',
+    );
+    await expect(craft.resetButton).toBeVisible();
+
+    await craft.reset();
+    await expect(craft.runButton).toBeVisible();
+
+    await craft.dragFlyoutBlockToWorkspaceBlock(
+      'craft_moveForward',
+      'craft_moveForward',
+      {expectedWorkspaceText: /Workspace\s*:\s*3\s*\/\s*3 blocks/},
+    );
+    await craft.run();
+    await expect(craft.congratsMessage).toContainText('Congratulations', {
+      timeout: 30_000,
+    });
+
+    await craft.againButton.click();
+    await expect(craft.congratsMessage).toBeHidden();
+    await expect(craft.resetButton).toBeVisible();
+
+    await craft.reset();
+    await expect(craft.runButton).toBeVisible();
+  });
+});
+
+/**
  * Minecraft: Hero's Journey — lesson 25 of allthethingscourse, level 4.
  *
  * Source: dashboard/test/ui/features/star_labs/craft/hero_logged_out.feature
