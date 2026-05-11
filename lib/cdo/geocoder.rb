@@ -81,8 +81,11 @@ module Geocoder
   end
 
   MIN_ADDRESS_LENGTH = 10
+  STREET_TYPES = /\b(st|street|ave|avenue|blvd|boulevard|rd|road|dr|drive|ln|lane|way|ct|court|pl|place|cir|circle|ter|terrace|hwy|highway|pkwy|parkway)\b/i
 
   def self.find_potential_street_address(text)
+    puts "find_potential_street_address"
+    puts "text: #{text}"
     return nil unless text
 
     # Starting from the first number in the string, try parsing with Geocoder
@@ -91,22 +94,37 @@ module Geocoder
 
     first_number_to_end = number_to_end_search.first.first
 
+    # words = number_to_end_search.first.first.split
     begin
       return nil if Float(first_number_to_end)
+      # return nil if Float(words.first)
     rescue
       false # is a number
     end
     return nil if first_number_to_end.length < MIN_ADDRESS_LENGTH # too short to be an address
     return nil if first_number_to_end.count(' ') < 2 # too few words to be an address
 
-    results = Geocoder.search(first_number_to_end)
+    # Truncate to the first street type word — gives Geocoder a clean candidate
+    # like "123 Oak Avenue" rather than trailing sentence fragments.
+    # street_type_idx = words.index {|w| w.match?(STREET_TYPES)}
+    # return nil unless street_type_idx
+    # candidate = words.first(street_type_idx + 1).join(' ')
+
+    # return nil if candidate.length < MIN_ADDRESS_LENGTH
+    # return nil if candidate.count(' ') < 2
+
+    # results = Geocoder.search(candidate)
     return nil if results.empty?
 
-    # Return nil if none of the results returned from Geocoder matched on a
-    # street address with relevance >= 0.8
-    return nil if results.none? {|r| r.relevance >= 0.8 && r.address}
-
+    # Return nil unless a result is a street-level address (place_type 'address') with relevance >= 0.8.
+    # Mapbox returns high relevance scores for city/region matches too, so place_type guards against those.
+    return nil if results.none? do |r|
+      puts r.relevance
+      puts r.address
+      r.relevance >= 0.8 && r.address && r.data['place_type']&.include?('address')
+    end
     first_number_to_end
+    # candidate
   end
 
   # Temporarily, for a given block, configure Geocoder to raise all errors.
