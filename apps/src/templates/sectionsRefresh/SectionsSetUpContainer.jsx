@@ -423,11 +423,9 @@ export default function SectionsSetUpContainer({
           >
             {i18n.setUpClassSectionsSubheader()}
           </Typography>
-          <Typography variant="body2" gutterBottom>
-            <a onClick={onURLClick} className={moduleStyles.textPopUp}>
-              {i18n.setUpClassSectionsSubheaderLink()}
-            </a>
-          </Typography>
+          <MuiButton color="primary" variant="text" onClick={onURLClick}>
+            {i18n.setUpClassSectionsSubheaderLink()}
+          </MuiButton>
         </>
       )}
       {renderChildAccountPolicyNotification()}
