@@ -1,46 +1,52 @@
 import {createTheme, ThemeProvider} from '@mui/material/styles';
 import React, {FC, useCallback, useState} from 'react';
 
-import experiments from '@cdo/apps/util/experiments';
-
 const darkTheme = createTheme({
   palette: {
     mode: 'dark',
     background: {
-      default: '#121212',
-      paper: '#1c1c1c',
+      default: '#292f36',
+      paper: '#343b44',
     },
     text: {
-      primary: '#e8e8f2',
-      secondary: '#9898b8',
+      primary: '#ffffff',
+      secondary: 'rgba(255,255,255,0.6)',
     },
     primary: {
-      main: '#6b9fd4',
+      main: '#a374d6',
     },
-    divider: '#242424',
+    divider: '#3a4048',
   },
 });
 
+import experiments from '@cdo/apps/util/experiments';
+import {useAppSelector} from '@cdo/apps/util/reduxHooks';
+import {LessonObjectiveReflectionValues} from '@cdo/generated-scripts/sharedConstants';
+
 import FizzyButton from './FizzyButton';
-import LevelsAttemptedBox from './LevelsAttemptedBox';
+import PersonalizedWelcomeBox from './PersonalizedWelcomeBox';
+import PreReviewBox from './PreReviewBox';
 import PreSkillsCheck from './PreSkillsCheck';
 import ReflectionBox from './Reflection/ReflectionBox';
 import InterventionBox from './ReviewModalities/InterventionBox';
 import SkillsCheck from './SkillsCheck/SkillsCheck';
-import TimeSpentBox from './TimeSpentBox';
+import LevelsAttemptedBox from './StudentLessonStats/LevelsAttemptedBox';
+import TimeSpentBox from './StudentLessonStats/TimeSpentBox';
+import ValidatedLevelsBox from './StudentLessonStats/ValidatedLevelsBox';
 import TutorSummaryBox from './TutorSummaryBox';
-import {LessonDeepDiveData, ReflectionData} from './types';
-import ValidatedLevelsBox from './ValidatedLevelsBox';
+import {LessonDeepDiveData, ReflectionData, ReflectionValue} from './types';
 import WelcomeBox from './WelcomeBox';
 
 import styles from './lesson-deep-dive-container.module.scss';
 
 const BOX_IDS = [
   'welcome',
+  'personalized-welcome',
   'levels-attempted',
   'time-spent',
   'validated-levels',
   'reflection',
+  'pre-review',
   'intervention',
   'pre-skills-check',
   'skills-check',
@@ -58,6 +64,9 @@ const LessonDeepDiveContainer: FC<LessonDeepDiveContainerProps> = ({
   const [reflectionData, setReflectionData] = useState<ReflectionData | null>(
     null
   );
+  const displayName = useAppSelector(
+    state => state.currentUser.displayName as string | undefined
+  );
 
   const goToNext = useCallback(() => {
     setCurrentIndex(i => Math.min(i + 1, BOX_IDS.length - 1));
@@ -71,6 +80,26 @@ const LessonDeepDiveContainer: FC<LessonDeepDiveContainerProps> = ({
     setReflectionData(data);
   }, []);
 
+  // Returns the description of the first objective the student is struggling
+  // with or still working on, used as the focus topic in PreReviewBox.
+  const getFocusTopic = useCallback(
+    (data: ReflectionData | null): string | undefined => {
+      if (!data) return undefined;
+      const priority: ReflectionValue[] = [
+        LessonObjectiveReflectionValues.LOST,
+        LessonObjectiveReflectionValues.UNSURE,
+      ];
+      for (const level of priority) {
+        const match = lessonDeepDiveData.objectives.find(
+          o => data.objectiveReflections[o.id] === level
+        );
+        if (match) return match.description;
+      }
+      return undefined;
+    },
+    [lessonDeepDiveData.objectives]
+  );
+
   if (!experiments.isEnabledAllowingQueryString(experiments.LESSON_TUTOR)) {
     return null;
   }
@@ -81,7 +110,15 @@ const LessonDeepDiveContainer: FC<LessonDeepDiveContainerProps> = ({
   const renderBox = () => {
     switch (BOX_IDS[currentIndex]) {
       case 'welcome':
-        return <WelcomeBox />;
+        return <WelcomeBox onNext={goToNext} />;
+      case 'personalized-welcome':
+        return (
+          <PersonalizedWelcomeBox
+            lessonName={lessonDeepDiveData.lessonName}
+            unitLabel={lessonDeepDiveData.unitLabel}
+            displayName={displayName}
+          />
+        );
       case 'levels-attempted':
         return (
           <LevelsAttemptedBox
@@ -125,6 +162,13 @@ const LessonDeepDiveContainer: FC<LessonDeepDiveContainerProps> = ({
             initialValues={reflectionData}
           />
         );
+      case 'pre-review':
+        return (
+          <PreReviewBox
+            focusTopic={getFocusTopic(reflectionData)}
+            onNext={goToNext}
+          />
+        );
       case 'intervention':
         return (
           <InterventionBox
@@ -156,14 +200,26 @@ const LessonDeepDiveContainer: FC<LessonDeepDiveContainerProps> = ({
           />
         );
       case 'tutor-summary':
-        return <TutorSummaryBox />;
+        return (
+          <TutorSummaryBox nextLessonUrl={lessonDeepDiveData.nextLessonUrl} />
+        );
     }
   };
+
   return (
     <ThemeProvider theme={darkTheme}>
       <div className={styles.container} data-theme={'Dark'}>
-        {!isFirst && (
-          <div className={styles.topNav}>
+        <div className={styles.progressBar} aria-hidden="true">
+          <div
+            className={styles.progressFill}
+            style={{
+              width: `${(currentIndex / (BOX_IDS.length - 1)) * 100}%`,
+            }}
+          />
+        </div>
+        <div className={styles.topNav}>
+          <span className={styles.tutorWordmark}>Tutor+</span>
+          {!isFirst && (
             <button
               type="button"
               className={styles.arrowButton}
@@ -171,8 +227,8 @@ const LessonDeepDiveContainer: FC<LessonDeepDiveContainerProps> = ({
               aria-label="Previous"
             >
               <svg
-                width="24"
-                height="24"
+                width="20"
+                height="20"
                 viewBox="0 0 24 24"
                 fill="none"
                 aria-hidden="true"
@@ -186,19 +242,37 @@ const LessonDeepDiveContainer: FC<LessonDeepDiveContainerProps> = ({
                 />
               </svg>
             </button>
-          </div>
-        )}
+          )}
+        </div>
 
-        <div className={styles.box}>{renderBox()}</div>
+        <div className={styles.box}>
+          {renderBox()}
+          <div className={styles.dotsNav} aria-hidden="true">
+            {BOX_IDS.map((_, i) => (
+              <div
+                key={i}
+                className={`${styles.dot} ${
+                  i === currentIndex ? styles.dotActive : ''
+                }`}
+              />
+            ))}
+          </div>
+        </div>
 
         {!isLast &&
+          BOX_IDS[currentIndex] !== 'intervention' &&
           BOX_IDS[currentIndex] !== 'pre-skills-check' &&
           BOX_IDS[currentIndex] !== 'skills-check' && (
             <div className={styles.bottomNav}>
-              <FizzyButton onClick={goToNext} ariaLabel="Next">
+              <FizzyButton
+                onClick={goToNext}
+                ariaLabel="Next"
+                className={styles.scrollCue}
+              >
+                Continue
                 <svg
-                  width="24"
-                  height="24"
+                  width="14"
+                  height="14"
                   viewBox="0 0 24 24"
                   fill="none"
                   aria-hidden="true"
