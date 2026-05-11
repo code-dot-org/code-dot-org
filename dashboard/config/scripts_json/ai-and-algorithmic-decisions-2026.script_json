@@ -21,7 +21,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2026-05-07 11:09:43 UTC",
+    "serialized_at": "2026-05-09 18:14:19 UTC",
     "hide_within_course": false,
     "published_state": "in_development",
     "instruction_type": null,
@@ -1327,7 +1327,7 @@
       "position": 14,
       "properties": {
         "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to complete Lesson 2, Level 1 to complete Levels 1 through 4.\n- **Level 1:** Predict and trace what the code will do when a button is clicked\n- **Level 2:** Use AI to generate code for one button interaction\n- **Level 3:** Write code yourself to add a second button interaction\n- **Level 4:** Build a full interactive app based on a chosen scenario\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** In Level 1, focus on helping students connect the code to the event handling model. Check that they can identify where the code selects an element, listens for an event, and responds. Ask questions like, “What event is this listening for?” and “What actually changes on the page when you click?” In Levels 2 and 3, support students in working with AI-generated code. Watch for common issues like nothing happening on click or the wrong element responding. Prompt students with, “Which element is this code targeting?” and “How can you tell if it’s the right one?” In Level 4, push students toward fully working interactions. Encourage them to test each button and verify that every interaction works as expected.\n",
-        "progression_name": "Predict & Trace: What Happens When You Click?",
+        "progression_name": "Adding Interactivity",
         "tips": [
           {
             "type": "teachingTip",
@@ -3414,7 +3414,7 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Predict & Trace: What Happens When You Click?"
+        "progression": "Adding Interactivity"
       },
       "bonus": false,
       "seeding_key": {
@@ -3436,7 +3436,7 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "progression": "Predict & Trace: What Happens When You Click?"
+        "progression": "Adding Interactivity"
       },
       "bonus": false,
       "seeding_key": {
@@ -3458,7 +3458,7 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "progression": "Predict & Trace: What Happens When You Click?"
+        "progression": "Adding Interactivity"
       },
       "bonus": false,
       "seeding_key": {
@@ -3480,7 +3480,7 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
-        "progression": "Predict & Trace: What Happens When You Click?"
+        "progression": "Adding Interactivity"
       },
       "bonus": false,
       "seeding_key": {
