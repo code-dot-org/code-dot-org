@@ -40,6 +40,9 @@ export class GameLab extends LegacyBlocklyLab {
   /** Piskel editor iframe. */
   readonly piskelFrame: FrameLocator;
 
+  /** Droplet block/text mode toggle. */
+  readonly showCodeHeader: Locator;
+
   constructor(page: Page) {
     super(page);
     this.codeMode = page.locator('#codeMode');
@@ -50,6 +53,7 @@ export class GameLab extends LegacyBlocklyLab {
     this.unsubmitButton = page.locator('#unsubmitButton');
     this.confirmButton = page.locator('#confirm-button');
     this.piskelFrame = page.frameLocator('iframe[src*="piskel"]');
+    this.showCodeHeader = page.locator('#show-code-header');
   }
 
   /** Lesson 19 of allthethingscourse — used by reloadLevel(). */
@@ -137,6 +141,243 @@ export class GameLab extends LegacyBlocklyLab {
           requestAnimationFrame(() => requestAnimationFrame(() => resolve())),
         ),
     );
+  }
+
+  /**
+   * Wait until the new project has completed its first save.
+   */
+  async waitForInitialProjectSave(): Promise<void> {
+    await this.page.waitForFunction(
+      () => {
+        const pageWindow = window as typeof window & {
+          dashboard?: {
+            project?: {
+              __TestInterface?: {isInitialSaveComplete?: () => boolean};
+            };
+          };
+        };
+        return pageWindow.dashboard?.project?.__TestInterface?.isInitialSaveComplete?.();
+      },
+      undefined,
+      {timeout: 60_000},
+    );
+  }
+
+  /**
+   * Ensure the Game Lab editor is in text mode.
+   * Mirrors the shared Cucumber `I switch to text mode` step.
+   */
+  async ensureTextMode(): Promise<void> {
+    await this.showCodeHeader.waitFor({state: 'visible', timeout: 15_000});
+    const text = await this.showCodeHeader.textContent();
+    if (text?.trim() === 'Show Text') {
+      await this.showCodeHeader.click();
+      await this.page.waitForFunction(
+        () => {
+          const el = document.querySelector(
+            '.droplet-gutter > div',
+          ) as HTMLElement | null;
+          return !el || getComputedStyle(el).display === 'none';
+        },
+        undefined,
+        {timeout: 10_000},
+      );
+    }
+  }
+
+  /**
+   * Insert code into the current Droplet ACE cursor position.
+   *
+   * @param code - source text to insert
+   */
+  async insertCodeAtCursor(code: string): Promise<void> {
+    await this.page.evaluate((c: string) => {
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
+      const ace = (window as any).__TestInterface.getDroplet().aceEditor;
+      ace.textInput.focus();
+      ace.onTextInput(c);
+    }, code);
+  }
+
+  /**
+   * Open the Game Lab library publish dialog.
+   * Mirrors `I open the library publish dialog`.
+   */
+  async openLibraryDialog(): Promise<void> {
+    await this.page.locator('.project_share').first().click();
+    await this.page
+      .locator('#project-share')
+      .waitFor({state: 'visible', timeout: 15_000});
+
+    const advancedLink = this.page.locator('#project-share a', {
+      hasText: 'Show advanced options',
+    });
+    if (await advancedLink.isVisible()) {
+      await advancedLink.click();
+    }
+
+    await this.page
+      .locator('#project-share li', {hasText: 'Share as library'})
+      .waitFor({state: 'visible', timeout: 10_000});
+    await this.page
+      .locator('#project-share li', {hasText: 'Share as library'})
+      .click();
+
+    await this.page
+      .locator('#project-share button', {hasText: 'Share as library'})
+      .waitFor({state: 'visible', timeout: 10_000});
+    await this.page
+      .locator('#project-share button', {hasText: 'Share as library'})
+      .click();
+  }
+
+  /**
+   * Open the Manage Libraries dialog from the settings cog.
+   * Mirrors `I open the Manage Libraries dialog`.
+   */
+  async openManageLibrariesDialog(): Promise<void> {
+    await this.page
+      .locator('.settings-cog:visible')
+      .waitFor({state: 'visible', timeout: 15_000});
+    await this.page.locator('.settings-cog:visible').click();
+    await this.page
+      .locator(
+        '.ui-test-settings-cog-menu:visible .ui-test-settings-cog-menu-item',
+        {hasText: 'Manage Libraries'},
+      )
+      .click();
+    await expect(this.page.locator('.modal')).toContainText(
+      'Manage libraries in this project',
+      {timeout: 15_000},
+    );
+  }
+
+  /**
+   * Create a new Game Lab project and publish a basic library from it.
+   * Mirrors `I publish a basic library in Game Lab`.
+   */
+  async publishBasicLibrary(): Promise<{
+    libraryUrl: string;
+    channelId: string;
+  }> {
+    await this.gotoNewProject();
+    await this.waitForInitialProjectSave();
+    await this.ensureTextMode();
+    await this.insertCodeAtCursor(
+      '// my library function\nfunction myLibrary() {}',
+    );
+
+    await this.openLibraryDialog();
+    await this.page
+      .locator('#ui-test-library-description')
+      .waitFor({state: 'visible', timeout: 30_000});
+    await this.page.locator('#ui-test-library-description').fill('My library');
+    await this.page.locator('label', {hasText: 'Select all functions'}).click();
+    await this.page.locator('#ui-test-publish-library').click();
+    await expect(
+      this.page.locator('b', {
+        hasText: 'Successfully published your library:',
+      }),
+    ).toBeVisible({timeout: 15_000});
+
+    const libraryUrl = this.page.url();
+    const channelId = libraryUrl.match(/\/projects\/gamelab\/([^/]+)/)?.[1];
+    if (!channelId) {
+      throw new Error(`Could not read Game Lab channel id from ${libraryUrl}`);
+    }
+
+    await this.closeOpenDialog();
+    return {libraryUrl, channelId};
+  }
+
+  /**
+   * Close the currently visible modal/dialog with Escape.
+   */
+  async closeOpenDialog(): Promise<void> {
+    await this.page.keyboard.press('Escape');
+    await this.page
+      .locator('.modal')
+      .waitFor({state: 'hidden', timeout: 10_000});
+  }
+
+  /**
+   * Click an element that triggers a main-frame navigation.
+   *
+   * @param click - action that triggers the navigation
+   */
+  async clickAndWaitForMainFrameNavigation(
+    click: () => Promise<unknown>,
+  ): Promise<void> {
+    await Promise.all([
+      this.page.waitForEvent('framenavigated', {
+        predicate: frame => frame === this.page.mainFrame(),
+        timeout: 30_000,
+      }),
+      click(),
+    ]);
+    await this.page.waitForLoadState('domcontentloaded');
+  }
+
+  /**
+   * Import a library by channel id from the Manage Libraries dialog.
+   *
+   * @param channelId - source library channel id
+   */
+  async importLibraryByChannelId(channelId: string): Promise<void> {
+    await this.openManageLibrariesDialog();
+    await expect(
+      this.page.locator('h2', {hasText: 'Import library from ID'}),
+    ).toBeVisible();
+    await this.page.locator('#ui-test-import-library > input').fill(channelId);
+    await this.clickAndWaitForMainFrameNavigation(() =>
+      this.page.locator('#ui-test-import-library > button').click(),
+    );
+    await this.waitForLabPage();
+  }
+
+  /**
+   * Remove the first library listed in the Manage Libraries dialog.
+   */
+  async removeFirstLibrary(): Promise<void> {
+    await this.clickAndWaitForMainFrameNavigation(() =>
+      this.page.locator('.ui-test-remove-library').first().click(),
+    );
+    await this.waitForLabPage();
+  }
+
+  /**
+   * Assign this published library to the first available section.
+   */
+  async assignLibraryToFirstSection(): Promise<void> {
+    await this.openLibraryDialog();
+    await this.page
+      .locator('#ui-test-manage-libraries')
+      .waitFor({state: 'visible', timeout: 30_000});
+    await this.page.locator('#ui-test-manage-libraries').click();
+    await this.page
+      .locator('.ui-test-sortable-table-select')
+      .waitFor({state: 'visible', timeout: 30_000});
+
+    await this.page.locator('select[name="selectOption"]').selectOption({
+      index: 1,
+    });
+    await this.page
+      .locator('.ui-test-sortable-table-select table input')
+      .first()
+      .click();
+    const assignDone = this.page.waitForResponse(
+      response =>
+        /\/v3\/channels\//.test(response.url()) &&
+        response.request().method() === 'POST',
+      {timeout: 30_000},
+    );
+    await this.page.locator('div', {hasText: 'Assign library'}).last().click();
+    await assignDone;
+    await expect(
+      this.page.locator('p', {
+        hasText: 'This library is assigned to the following sections:',
+      }),
+    ).toBeVisible({timeout: 30_000});
   }
 
   /**

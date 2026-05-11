@@ -2,7 +2,7 @@
 
 Source: `dashboard/test/ui/features/` (all sub-directories)  
 Target: `frontend/packages/apps-e2e-tests/tests/`  
-As of: 2026-05-10 (updated 2026-05-10 — Starlab pass: signin_callout + can_see_finish gaps)
+As of: 2026-05-11 (updated 2026-05-11 — Starlab pass: Game Lab libraries)
 
 ---
 
@@ -10,10 +10,10 @@ As of: 2026-05-10 (updated 2026-05-10 — Starlab pass: signin_callout + can_see
 
 | Status                                         | Count                                                                                                                                                                                                        |
 | ---------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| Ported                                         | 142 feature files (C+F for pythonlab + mixmoveai; Chromium-only for maker; @no_ci for ai_tutor; @no_mobile for pairing + version_history + assign_modular_course; @no_firefox for rubric AI; C+F+W for rest) |
+| Ported                                         | 143 feature files (C+F for pythonlab + mixmoveai; Chromium-only for maker; @no_ci for ai_tutor; @no_mobile for pairing + version_history + assign_modular_course; @no_firefox for rubric AI; C+F+W for rest) |
 | Fixme stubs — test infra                       | 3 (applab asset upload — needs test fixture file; disallowedsharing profanity — @webpurify API not configured; gamelab export — animation picker CDN blocked)                                                |
 | Covered by ported (rolled in)                  | 5 (maze2, jigsaw2, multi2/3/4 rolled into existing specs)                                                                                                                                                    |
-| Partial — @eyes (visual checkpoints annotated) | 5 ported up to snapshot; @eyes auth blocked 3                                                                                                                                                                |
+| Partial — @eyes (visual checkpoints annotated) | 6 ported up to snapshot; @eyes auth blocked 3                                                                                                                                                                |
 | Fixme stubs — @eyes / auth only                | 6 (curriculum_reference ×2, level_group_multi_page_dots ×1, applab_submittable ×1, gamelab_submittable ×1, curriculum_catalog_assign_unassign ×1)                                                            |
 | Skipped — auth required                        | ~35                                                                                                                                                                                                          |
 | Skipped — @skip / @eyes_mobile                 | 3                                                                                                                                                                                                            |
@@ -97,6 +97,7 @@ As of: 2026-05-10 (updated 2026-05-10 — Starlab pass: signin_callout + can_see
 | `star_labs/signin_callout.feature`                                       | `tests/legacy/signin-callout/signin-callout.spec.ts`                        | C+F+W    | Scenarios: "Should be able to clear cookies and session storage to see callout again"; "Should not see callout on CSF coursea lesson if logged in" |
 | `star_labs/signin_callout2.feature`                                      | `tests/legacy/signin-callout/signin-callout.spec.ts`                        | C+F+W    | Scenarios: close callout leaves instructions/run; Hour of Code age callout; reload persistence; top instructions; sign-in button routing           |
 | `gamelab/level_options.feature`                                          | `tests/legacy/activities/gamelab/gamelab.spec.ts`                           | C+F+W    | 4 passing: mode toggle on/off, new project, initial animations                                                                                     |
+| `gamelab/libraries.feature`                                              | `tests/legacy/activities/gamelab/gamelab-libraries.spec.ts`                 | C+F+W    | 3 scenarios: publish/unpublish, import/remove by id, teacher assigns section library                                                               |
 | `spritelab/loading_costumes.feature`                                     | `tests/legacy/activities/spritelab/spritelab.spec.ts`                       | C+F+W    | Piskel editor loads in animation tab; code/anim tab switch                                                                                         |
 | `gamelab/loading_animations.feature`                                     | `tests/legacy/activities/gamelab/gamelab.spec.ts`                           | C+F+W    | blank + bear animations load without error after reload; Piskel iframe pen visible                                                                 |
 | `aichat/chat.feature`                                                    | `tests/lab2/aichat/aichat.spec.ts`                                          | C+F+W    | chat bot reply color; system prompt save+persist; publish model card info                                                                          |
@@ -310,13 +311,13 @@ These are student coding environments with their own editors or execution engine
 the CSF Blockly runtime targeted by this porting effort. Each needs a fresh POM.
 
 Sprite Lab (p5lab) shares the CSF `#runButton`/`#resetButton`/`.congrats` UI layer
-and has been ported. Dance Party has been ported. Remaining labs below are auth-blocked
-or have no non-auth scenarios.
+and has been ported. Dance Party and Game Lab libraries have been ported. Remaining
+labs below are auth-blocked or have no non-auth scenarios.
 
 | Lab        | Editor / runtime   | Feature files                                                                                                            | Status                                                                                                                            |
 | ---------- | ------------------ | ------------------------------------------------------------------------------------------------------------------------ | --------------------------------------------------------------------------------------------------------------------------------- |
-| App Lab    | Droplet / ACE JS   | `applab/tooltips.feature`                                                                                                | All scenarios require auth; data_blocks/data_tab/level_options/libraries/template_backed all ported                               |
-| Game Lab   | p5.js              | `gamelab/libraries.feature`                                                                                              | All scenarios require auth                                                                                                        |
+| App Lab    | Droplet / ACE JS   | `applab/tooltips.feature`                                                                                                | **Ported**; data_blocks/data_tab/level_options/libraries/template_backed all ported                                               |
+| Game Lab   | p5.js              | `gamelab/libraries.feature`                                                                                              | **Ported** — C+F+W                                                                                                                |
 | Sprite Lab | Blockly + p5.js    | `spritelab/spritelab.feature`                                                                                            | **Ported** — C+F+W                                                                                                                |
 | Web Lab    | HTML/CSS/JS files  | `weblab/too_young.feature`, `weblab/weblab.feature`, `weblab/weblab_submittable.feature`, `weblab/versions.feature`      | All require auth or @skip                                                                                                         |
 | Minecraft  | Custom interpreter | `craft/dialogs.feature`, `craft/hero_logged_out.feature`, `craft/hero_logged_in.feature`, `craft/can_see_finish.feature` | hero_logged_out + hero_logged_in **Ported** — C+F+W; dialogs @skip; craft/can_see_finish requires mobile Safari landscape project |
