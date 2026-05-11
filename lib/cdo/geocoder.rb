@@ -92,30 +92,20 @@ module Geocoder
     number_to_end_search = text.scan /([0-9]+.*)/
     return nil if number_to_end_search.empty?
 
-    first_number_to_end = number_to_end_search.first.first
-
-    # words = number_to_end_search.first.first.split
-    begin
-      return nil if Float(first_number_to_end)
-      # return nil if Float(words.first)
-    rescue
-      false # is a number
-    end
-    return nil if first_number_to_end.length < MIN_ADDRESS_LENGTH # too short to be an address
-    return nil if first_number_to_end.count(' ') < 2 # too few words to be an address
-    results = Geocoder.search(first_number_to_end)
-    return nil if results.empty?
+    words = number_to_end_search.first.first.split
 
     # Truncate to the first street type word — gives Geocoder a clean candidate
     # like "123 Oak Avenue" rather than trailing sentence fragments.
-    # street_type_idx = words.index {|w| w.match?(STREET_TYPES)}
-    # return nil unless street_type_idx
-    # candidate = words.first(street_type_idx + 1).join(' ')
+    street_type_idx = words.index {|w| w.match?(STREET_TYPES)}
+    puts "street_type_idx: #{street_type_idx}"
+    return nil unless street_type_idx
+    candidate = words.first(street_type_idx + 1).join(' ')
+    puts "candidate: #{candidate}"
 
-    # return nil if candidate.length < MIN_ADDRESS_LENGTH
-    # return nil if candidate.count(' ') < 2
+    return nil if candidate.length < MIN_ADDRESS_LENGTH
+    return nil if candidate.count(' ') < 2
 
-    # results = Geocoder.search(candidate)
+    results = Geocoder.search(candidate)
 
     # Return nil unless a result is a street-level address (place_type 'address') with relevance >= 0.8.
     # Mapbox returns high relevance scores for city/region matches too, so place_type guards against those.
@@ -123,11 +113,10 @@ module Geocoder
       puts r.relevance
       puts r.address
       puts r.data['place_type']
-      r.relevance >= 0.8 && r.address
-      # r.relevance >= 0.8 && r.address && r.data['place_type']&.include?('address')
+      r.relevance >= 0.8 && r.address && r.data['place_type']&.include?('address')
     end
-    first_number_to_end
-    # candidate
+
+    candidate
   end
 
   # Temporarily, for a given block, configure Geocoder to raise all errors.
