@@ -121,6 +121,8 @@ interface UseKeyboardNavigationOptions {
   copyEntry: (entry: TabOrderEntry) => void;
   cutEntry: (entry: TabOrderEntry) => void;
   paste: () => void;
+  undo: () => void;
+  pushSnapshot: () => void;
   // Fallback for Ctrl/Cmd shortcuts: DOM focus may be inside a NodeToolbar
   // (which renders outside .react-flow__node), so getEntryFromDOM returns
   // null. lastFocusedEntry gives us the last known node/edge target.
@@ -166,6 +168,8 @@ export function useKeyboardNavigation({
   copyEntry,
   cutEntry,
   paste,
+  undo,
+  pushSnapshot,
   lastFocusedEntry,
 }: UseKeyboardNavigationOptions) {
   const {
@@ -178,7 +182,7 @@ export function useKeyboardNavigation({
   } = useReactFlow<SketchlabReactFlowNode, SketchlabReactFlowEdge>();
   const {announcement: connectAnnouncement, announce} = useAriaAnnouncer();
   const {connectingFrom, startConnect, cancelConnect, completeConnect} =
-    useConnectMode({nodes, setEdges, announce});
+    useConnectMode({nodes, setEdges, announce, pushSnapshot});
 
   // Remembers the edge most recently translated by an arrow keypress so
   // that subsequent presses can keep moving the same edge even if the
@@ -278,6 +282,18 @@ export function useKeyboardNavigation({
       return true;
     },
     [paste]
+  );
+
+  const handleUndo = useCallback(
+    (keyContext: KeyContext): boolean => {
+      const {event} = keyContext;
+      if (event.key !== 'z' || !(event.ctrlKey || event.metaKey)) return false;
+      undo();
+      event.preventDefault();
+      event.stopPropagation();
+      return true;
+    },
+    [undo]
   );
 
   const handleOpenToolbar = useCallback(
@@ -619,6 +635,7 @@ export function useKeyboardNavigation({
       if (handleCopy(keyContext)) return;
       if (handleCut(keyContext)) return;
       if (handlePaste(keyContext)) return;
+      if (handleUndo(keyContext)) return;
 
       if (handleOpenToolbar(keyContext)) return;
       if (handleConnectToggle(keyContext)) return;
@@ -651,6 +668,7 @@ export function useKeyboardNavigation({
       handleCopy,
       handleCut,
       handlePaste,
+      handleUndo,
       handleOpenToolbar,
       handleConnectToggle,
       handleConnectComplete,

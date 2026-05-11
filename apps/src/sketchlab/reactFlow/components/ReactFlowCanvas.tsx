@@ -3,6 +3,8 @@ import {
   Background,
   Controls,
   type IsValidConnection,
+  type OnEdgesChange,
+  type OnNodesChange,
   ReactFlow,
   useEdgesState,
   useNodesState,
@@ -46,6 +48,7 @@ import {useKeyboardNavigation} from '../hooks/useKeyboardNavigation';
 import {useLineEdgeDrag} from '../hooks/useLineEdgeDrag';
 import {useReconnect} from '../hooks/useReconnect';
 import {useTabOrder} from '../hooks/useTabOrder';
+import {useUndoHistory} from '../hooks/useUndoHistory';
 import ImageNode from '../nodes/ImageNode';
 import LineAnchorNode from '../nodes/LineAnchorNode';
 import ShapeNode from '../nodes/ShapeNode';
@@ -112,6 +115,21 @@ export default function ReactFlowCanvas({
   const [nodes, setNodes, onNodesChange] =
     useNodesState<SketchLabNode>(initialNodes);
   const [edges, setEdges, onEdgesChange] = useEdgesState(initialEdges);
+
+  const {syncRefs, pushSnapshot, undo, canUndo} = useUndoHistory();
+
+  // Keep undo history refs in sync with current canvas state.
+  useEffect(() => {
+    syncRefs(nodes, edges);
+  }, [nodes, edges, syncRefs]);
+
+  const handleUndo = useCallback(() => {
+    const snapshot = undo();
+    if (!snapshot) return;
+    setNodes(snapshot.nodes);
+    setEdges(snapshot.edges);
+  }, [undo, setNodes, setEdges]);
+
   const [viewport, setViewport] =
     useState<SketchlabReactFlowSource['viewport']>(initialViewport);
   const [openToolbarInfo, setOpenToolbarInfo] = useState<{
@@ -162,6 +180,32 @@ export default function ReactFlowCanvas({
     setNodeOrEdgeFocused,
   } = useTabOrder(nodes, edges);
 
+  // Intercept React Flow's change callbacks to push undo snapshots before
+  // commits (drag-stop, resize-stop, delete). Adds without going through
+  // onNodesChange (e.g. setNodes calls) are handled at their call sites.
+  const handleNodesChange: OnNodesChange<SketchLabNode> = useCallback(
+    changes => {
+      const commitsDrag = changes.some(
+        change => change.type === 'position' && change.dragging === false
+      );
+      const commitsResize = changes.some(
+        change => change.type === 'dimensions' && change.resizing === false
+      );
+      const hasDelete = changes.some(change => change.type === 'remove');
+      if (commitsDrag || commitsResize || hasDelete) pushSnapshot();
+      onNodesChange(changes);
+    },
+    [onNodesChange, pushSnapshot]
+  );
+
+  const handleEdgesChange: OnEdgesChange<SketchlabReactFlowEdge> = useCallback(
+    changes => {
+      if (changes.some(change => change.type === 'remove')) pushSnapshot();
+      onEdgesChange(changes);
+    },
+    [onEdgesChange, pushSnapshot]
+  );
+
   const {
     duplicateNode,
     duplicateLine,
@@ -170,7 +214,7 @@ export default function ReactFlowCanvas({
     paste,
     handleMouseMove,
     handleMouseLeave,
-  } = useCopyPaste({nodes, edges, setNodes, setEdges});
+  } = useCopyPaste({nodes, edges, setNodes, setEdges, pushSnapshot});
 
   const clipboardContextValue = useMemo(
     () => ({duplicateNode, duplicateLine}),
@@ -211,6 +255,8 @@ export default function ReactFlowCanvas({
       copyEntry,
       cutEntry,
       paste,
+      undo: handleUndo,
+      pushSnapshot,
       lastFocusedEntry,
     });
 
@@ -406,25 +452,17 @@ export default function ReactFlowCanvas({
   });
 
   const onConnect: OnConnect = useCallback(
-    connection =>
-      setEdges(currentEdges => {
-        const {source, target} = connection;
-        if (!source || !target) {
-          return currentEdges;
-        }
-        if (!canCreateConnection(source, target, nodes)) {
-          return currentEdges;
-        }
-
-        return addEdge(
-          {
-            ...connection,
-            ...defaultLineEdgeFields(),
-          },
-          currentEdges
-        );
-      }),
-    [nodes, setEdges]
+    connection => {
+      const {source, target} = connection;
+      if (!source || !target || !canCreateConnection(source, target, nodes)) {
+        return;
+      }
+      pushSnapshot();
+      setEdges(currentEdges =>
+        addEdge({...connection, ...defaultLineEdgeFields()}, currentEdges)
+      );
+    },
+    [nodes, pushSnapshot, setEdges]
   );
 
   const isValidConnection: IsValidConnection = useCallback(
@@ -471,6 +509,7 @@ export default function ReactFlowCanvas({
 
   const handleAddNode = useCallback(
     (request: AddNodeRequest) => {
+      pushSnapshot();
       const {type} = request;
       const stagger = addedNodeCountRef.current * NEW_NODE_STAGGER_PX;
       addedNodeCountRef.current += 1;
@@ -546,7 +585,7 @@ export default function ReactFlowCanvas({
         FOCUS_DELAY_MS
       );
     },
-    [focusEntry, screenToFlowPosition, setNodes, setEdges]
+    [focusEntry, pushSnapshot, screenToFlowPosition, setNodes, setEdges]
   );
 
   const handleNodeClick = useCallback(
@@ -589,7 +628,12 @@ export default function ReactFlowCanvas({
             onMouseLeave={handleMouseLeave}
           >
             {!readOnly && (
-              <Toolbar onAddNode={handleAddNode} levelName={levelName} />
+              <Toolbar
+                onAddNode={handleAddNode}
+                levelName={levelName}
+                onUndo={handleUndo}
+                canUndo={canUndo}
+              />
             )}
             <div aria-live="assertive" className={styles.srOnly}>
               {connectAnnouncement}
@@ -597,8 +641,8 @@ export default function ReactFlowCanvas({
             <ReactFlow
               nodes={displayNodes}
               edges={displayEdges}
-              onNodesChange={onNodesChange}
-              onEdgesChange={onEdgesChange}
+              onNodesChange={handleNodesChange}
+              onEdgesChange={handleEdgesChange}
               onNodeClick={handleNodeClick}
               onEdgeClick={handleEdgeClick}
               onPaneClick={handlePaneClick}
