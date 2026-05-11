@@ -1,0 +1,82 @@
+$purple: hsl(271deg 58% 65%);
+
+@property --validated-count {
+  syntax: '<integer>';
+  inherits: false;
+  initial-value: 0;
+}
+
+@keyframes count-up {
+  from {
+    --validated-count: 0;
+  }
+  to {
+    --validated-count: var(--target-count);
+  }
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+  color: #fff;
+}
+
+.label {
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: rgba(255 255 255 / 0.5);
+  margin-bottom: 16px;
+}
+
+.statBlock {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+// "X /Y" row — X in purple, /Y dimmed
+.fractionRow {
+  display: flex;
+  align-items: baseline;
+  line-height: 0.9;
+}
+
+.bigNumber {
+  font-family: var(--font-family-barlow-semi-condensed-semibold);
+  font-size: clamp(7rem, 20vw, 14rem);
+  font-weight: 800;
+  color: $purple;
+  counter-reset: validated-count var(--validated-count);
+  animation: count-up 1.2s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+
+  &::after {
+    content: counter(validated-count);
+  }
+}
+
+.denominator {
+  font-family: var(--font-family-barlow-semi-condensed-semibold);
+  font-size: clamp(3.5rem, 10vw, 7rem);
+  font-weight: 800;
+  color: rgba(255 255 255 / 0.3);
+  margin-left: 4px;
+}
+
+.statHeading {
+  font-family: var(--font-family-barlow-semi-condensed-semibold);
+  font-size: clamp(2rem, 6vw, 3.5rem);
+  font-weight: 800;
+  color: #fff;
+  line-height: 1;
+  margin: 0;
+}
+
+.statSubtitle {
+  font-size: 1rem;
+  color: rgba(255 255 255 / 0.55);
+  margin-top: 8px;
+}
