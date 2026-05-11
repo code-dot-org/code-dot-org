@@ -1,3 +1,4 @@
+import {createTeacherAssociatedStudent} from '../../../shared/auth';
 import {expect, test} from '../../../shared/fixtures';
 
 import {GameLab} from './GameLab';
@@ -14,6 +15,7 @@ import {GameLab} from './GameLab';
 test.describe('Game Lab — level options', () => {
   /**
    * Source: level_options.feature — "A level with the animation tab disabled hides the mode toggle"
+   * Migration status: COMPLETED
    * @as_student
    */
   test(
@@ -30,6 +32,7 @@ test.describe('Game Lab — level options', () => {
 
   /**
    * Source: level_options.feature — "A level with the animation tab enabled shows the mode toggle"
+   * Migration status: COMPLETED
    * @as_student
    */
   test(
@@ -46,6 +49,7 @@ test.describe('Game Lab — level options', () => {
 
   /**
    * Source: level_options.feature — "A new project should always provide the animation tab"
+   * Migration status: COMPLETED
    * @as_student
    */
   test(
@@ -63,10 +67,12 @@ test.describe('Game Lab — level options', () => {
 
   /**
    * Source: level_options.feature — "Initial animations are usable with no animation tab"
+   * Migration status: COMPLETED
    * @as_student
    *
    * Runs the level (which has pre-seeded sprites) and confirms no
-   * "Unable to find an animation" error appears in the console.
+   * "Unable to find an animation" error appears in the console.  The readiness
+   * signal is the draw loop frame counter, not Cucumber's fixed sleep.
    */
   test(
     'initial animations are usable on level with no animation tab',
@@ -76,8 +82,7 @@ test.describe('Game Lab — level options', () => {
       await gamelab.reloadLevel(1);
 
       await gamelab.run();
-      // Wait a tick so any animation-load errors have time to surface.
-      await studentPage.waitForTimeout(2000);
+      await gamelab.waitForDrawLoop();
       await expect(gamelab.consoleOutput).not.toContainText(
         'Unable to find an animation',
       );
@@ -86,6 +91,7 @@ test.describe('Game Lab — level options', () => {
 
   /**
    * Source: level_options.feature — "Initial animations show up in the animation tab"
+   * Migration status: COMPLETED
    * @as_student
    */
   test(
@@ -104,6 +110,7 @@ test.describe('Game Lab — level options', () => {
 test.describe('Game Lab — loading animations', () => {
   /**
    * Source: loading_animations.feature — "Check Piskel loads and reload the project with a blank animation"
+   * Migration status: COMPLETED
    * @as_student @no_mobile
    *
    * Opens the animation picker, adds a blank tile, adds the bear from the library,
@@ -111,53 +118,102 @@ test.describe('Game Lab — loading animations', () => {
    * back to code mode, runs, reloads, and confirms no "Sorry, we couldn't load
    * animation" error in the modal body.
    */
-  // Root cause: AnimationPickerBody.componentDidMount calls searchAssets() with
-  // libraryManifest before P5LabView.setState({libraryManifest}) has propagated,
-  // crashing the React tree (Object.keys(undefined) on empty manifest {}). The
-  // gotoNewProject() fix waits for the manifest network response and flushes
-  // microtasks, but the setState→componentDidMount ordering is not guaranteed
-  // across the CDP boundary on test-studio. Fix requires either a server-side
-  // guard in searchAssets.js (deployed to test-studio) or a reliable DOM
-  // readiness signal that manifest state has reached AnimationPickerBody.
-  test.fixme(
+  test(
     'blank and library animations load without error after reload',
-    async () => {},
+    {tag: '@no_mobile'},
+    async ({browserName, studentPage}) => {
+      test.skip(
+        browserName === 'firefox',
+        'Playwright Firefox headless SIGSEGVs after Game Lab embeds Piskel; the same flow passes in Firefox under Xvfb.',
+      );
+
+      const gamelab = new GameLab(studentPage);
+      await gamelab.gotoNewProject();
+
+      await gamelab.switchToAnimationTab();
+      await gamelab.addBlankAnimation();
+      await gamelab.addBearAnimation();
+      await gamelab.waitForPiskelEditor();
+      await gamelab.switchToCodeTab();
+      await gamelab.run();
+      await gamelab.waitForDrawLoop();
+
+      await studentPage.reload();
+      await gamelab.waitForLabPage();
+      await expect(
+        studentPage.getByText("Sorry, we couldn't load animation"),
+      ).not.toBeAttached();
+    },
   );
 });
 
 test.describe('Game Lab — export animations', () => {
   /**
    * Source: export_animations.feature — "Export library animation"
+   * Migration status: COMPLETED
    * @as_student @no_mobile @no_safari
    *
    * Full flow: add bear from library → run → switch to animation tab →
-   * open Piskel export panel → trigger GIF download → add blank animation.
-   *
-   * Blocked: animation picker library thumbnails (category images and blank-
-   * animation tiles) fail to load on test-studio.  Same root cause blocks
-   * the `loading_animations` test that was previously green.  The Piskel
-   * iframe itself loads fine; the network requests for the animation library
-   * image tiles stall / 404 in the test environment.  Re-enable once the
-   * animation CDN is restored on test-studio.
+   * open Piskel export panel → trigger GIF download → add blank animation.  The
+   * download event and then the visible blank-animation tile are the completion
+   * signals.
    */
-  test.fixme('export bear animation as GIF from Piskel editor', async () => {});
+  test(
+    'export bear animation as GIF from Piskel editor',
+    {tag: ['@no_mobile', '@no_safari']},
+    async ({browserName, studentPage}) => {
+      test.skip(
+        browserName === 'webkit' || browserName === 'firefox',
+        browserName === 'webkit'
+          ? 'Source scenario is tagged @no_safari because Safari does not allow downloads in this environment.'
+          : 'Playwright Firefox headless SIGSEGVs after Game Lab embeds Piskel; the same flow passes in Firefox under Xvfb.',
+      );
+
+      const gamelab = new GameLab(studentPage);
+      await gamelab.gotoNewProject();
+
+      await gamelab.switchToAnimationTab();
+      await gamelab.addBearAnimation();
+      await gamelab.switchToCodeTab();
+      await gamelab.run();
+      await gamelab.waitForDrawLoop();
+
+      await gamelab.switchToAnimationTab();
+      await gamelab.exportGif();
+      await gamelab.addBlankAnimation();
+      await gamelab.waitForPiskelEditor();
+    },
+  );
 });
 
 test.describe('Game Lab — submittable level', () => {
   /**
    * Source: gamelab_submittable.feature — "Submit anything, unsubmit, be able to resubmit."
+   * Migration status: COMPLETED
    * @no_mobile @as_taught_student
    *
-   * Lesson 19 / level 1 submit → unsubmit → resubmit cycle.
+   * Lesson 19 / level 1 submit → unsubmit → resubmit cycle.  Requires a
+   * teacher-associated student so submit/unsubmit controls render.
    */
-  // 3 attempts exhausted. Submit and unsubmit steps pass consistently;
-  // the final assertion (#submitButton visible after reloading post-unsubmit
-  // and re-running) times out — server-side submission state does not reset
-  // cleanly within the test window. Underlying cause likely: unsubmit AJAX
-  // completes but the submit-button visibility flag is tied to server-session
-  // state that the subsequent fresh page.goto() does not yet reflect.
-  test.fixme(
+  test(
     'submit, unsubmit, and resubmit cycle restores submit button',
-    async () => {},
+    {tag: '@no_mobile'},
+    async ({page}) => {
+      await createTeacherAssociatedStudent(page);
+      const gamelab = new GameLab(page);
+
+      await gamelab.reloadLevel(1);
+      await gamelab.submitAssessment();
+
+      await gamelab.reloadLevel(1);
+      await expect(gamelab.unsubmitButton).toBeVisible({timeout: 30_000});
+
+      await gamelab.unsubmitAssessment();
+
+      await gamelab.reloadLevel(1);
+      await gamelab.run();
+      await gamelab.waitForDrawLoop();
+      await expect(gamelab.submitButton).toBeVisible({timeout: 30_000});
+    },
   );
 });

@@ -1,4 +1,9 @@
-import {type Locator, type Page} from '@playwright/test';
+import {
+  expect,
+  type FrameLocator,
+  type Locator,
+  type Page,
+} from '@playwright/test';
 
 import {labLevelUrl} from '../../../shared/urls';
 import {LegacyBlocklyLab} from '../../shared/LegacyBlocklyLab';
@@ -23,12 +28,28 @@ export class GameLab extends LegacyBlocklyLab {
   /** Debug/console output div — `#debug-output`. */
   readonly consoleOutput: Locator;
 
+  /** Assessment submit button, present after running a submittable level. */
+  readonly submitButton: Locator;
+
+  /** Assessment unsubmit button, present after submitted work reloads. */
+  readonly unsubmitButton: Locator;
+
+  /** Confirmation button in the unsubmit modal. */
+  readonly confirmButton: Locator;
+
+  /** Piskel editor iframe. */
+  readonly piskelFrame: FrameLocator;
+
   constructor(page: Page) {
     super(page);
     this.codeMode = page.locator('#codeMode');
     this.animationMode = page.locator('#animationMode');
     this.animationListNewItem = page.locator('#newListItem');
     this.consoleOutput = page.locator('#debug-output');
+    this.submitButton = page.locator('#submitButton');
+    this.unsubmitButton = page.locator('#unsubmitButton');
+    this.confirmButton = page.locator('#confirm-button');
+    this.piskelFrame = page.frameLocator('iframe[src*="piskel"]');
   }
 
   /** Lesson 19 of allthethingscourse — used by reloadLevel(). */
@@ -38,19 +59,57 @@ export class GameLab extends LegacyBlocklyLab {
 
   /**
    * Navigate to a new Game Lab project and wait for the animation library
-   * manifest to be loaded before returning.
+   * manifest to be parsed and rendered before returning.
    *
    * Must be used instead of `goto('/projects/gamelab/new') + waitForLabPage()`
-   * when the test will interact with the animation picker. The manifest wait
-   * must be set up BEFORE the navigation so it captures the fetch that
-   * P5LabView fires in componentDidMount.
+   * when the test will interact with the animation picker. The fetch probe must
+   * be installed BEFORE navigation so it can wrap the manifest response's
+   * json() method. Waiting for the response alone is too early; that only means
+   * the headers arrived, not that P5LabView has parsed JSON and set React state.
    *
-   * Without this wait, AnimationPickerBody.componentDidMount calls
+   * Without this readiness signal, AnimationPickerBody.componentDidMount calls
    * searchAssets() with the initial empty manifest ({}) and crashes:
    *   Object.keys({}.aliases) → TypeError: Cannot convert undefined or null
    * That error unmounts the entire lab React tree (blank page).
    */
   async gotoNewProject(): Promise<void> {
+    await this.page.addInitScript(() => {
+      const win = window as typeof window & {
+        __gamelabManifestProbeInstalled?: boolean;
+        __gamelabManifestReady?: boolean;
+      };
+      if (win.__gamelabManifestProbeInstalled) {
+        return;
+      }
+      win.__gamelabManifestProbeInstalled = true;
+
+      const originalFetch = win.fetch.bind(win);
+      win.fetch = async (...args) => {
+        const response = await originalFetch(...args);
+        const request = args[0];
+        const url =
+          typeof request === 'string'
+            ? request
+            : request instanceof Request
+              ? request.url
+              : request instanceof URL
+                ? request.href
+                : '';
+
+        if (url.includes('/api/v1/animation-library/manifest/gamelab')) {
+          const originalJson = response.json.bind(response);
+          response.json = async () => {
+            const manifest = await originalJson();
+            win.__gamelabManifestReady = Boolean(
+              manifest?.aliases && manifest?.categories && manifest?.metadata,
+            );
+            return manifest;
+          };
+        }
+        return response;
+      };
+    });
+
     const manifestReady = this.page.waitForResponse(
       r =>
         r.url().includes('/api/v1/animation-library/manifest/gamelab') &&
@@ -60,12 +119,23 @@ export class GameLab extends LegacyBlocklyLab {
     await this.page.goto('/projects/gamelab/new');
     await this.waitForLabPage();
     await manifestReady;
-    // Flush pending microtasks so the manifest .then() callbacks complete
-    // and setState({libraryManifest}) propagates before the picker opens.
-    // fetch().then(r=>r.json()).then(manifest=>setState) needs two microtask
-    // flushes; a setTimeout(0) macrotask drains all preceding microtasks.
+    await this.page.waitForFunction(
+      () =>
+        Boolean(
+          (
+            window as typeof window & {
+              __gamelabManifestReady?: boolean;
+            }
+          ).__gamelabManifestReady,
+        ),
+      undefined,
+      {timeout: 30_000},
+    );
     await this.page.evaluate(
-      () => new Promise<void>(resolve => setTimeout(resolve, 0)),
+      () =>
+        new Promise<void>(resolve =>
+          requestAnimationFrame(() => requestAnimationFrame(() => resolve())),
+        ),
     );
   }
 
@@ -110,6 +180,27 @@ export class GameLab extends LegacyBlocklyLab {
   }
 
   /**
+   * Wait until user code has entered the Game Lab draw loop.
+   *
+   * This replaces the Cucumber step's fixed two-second sleep.  The user-visible
+   * control state is #resetButton; tickCount confirms the Game Lab runtime
+   * has drawn frames, which is when missing-animation console errors surface.
+   */
+  async waitForDrawLoop(): Promise<void> {
+    await expect(this.resetButton).toBeVisible({timeout: 15_000});
+    await this.page.waitForFunction(
+      () => {
+        const win = window as typeof window & {
+          __mostRecentGameLabInstance?: {tickCount?: number};
+        };
+        return (win.__mostRecentGameLabInstance?.tickCount ?? 0) > 1;
+      },
+      undefined,
+      {timeout: 15_000},
+    );
+  }
+
+  /**
    * Open the animation picker by clicking #newListItem via JS.
    * Mirrors `I open the animation picker` from gamelab.rb:
    *   execute_script("$(\"#newListItem\")[0].click();")
@@ -118,6 +209,10 @@ export class GameLab extends LegacyBlocklyLab {
     await this.page.evaluate(() => {
       (document.querySelector('#newListItem') as HTMLElement)?.click();
     });
+    await this.page
+      .locator('.modal .uitest-animation-picker-list')
+      .last()
+      .waitFor({state: 'visible', timeout: 30_000});
   }
 
   /**
@@ -126,18 +221,11 @@ export class GameLab extends LegacyBlocklyLab {
    *   $(".uitest-animation-picker-list>div>div>div>button")[0].click()
    */
   async selectBlankAnimation(): Promise<void> {
-    await this.page.waitForFunction(() => {
-      const btns = document.querySelectorAll(
-        '.uitest-animation-picker-list>div>div>div>button',
-      );
-      return btns.length > 0;
-    });
-    await this.page.evaluate(() => {
-      const btns = document.querySelectorAll<HTMLElement>(
-        '.uitest-animation-picker-list>div>div>div>button',
-      );
-      btns[0]?.click();
-    });
+    const blankAnimations = this.page.locator(
+      '.modal .uitest-animation-picker-list>div>div>div>button',
+    );
+    await expect(blankAnimations.last()).toBeVisible({timeout: 30_000});
+    await blankAnimations.last().click();
   }
 
   /**
@@ -146,18 +234,10 @@ export class GameLab extends LegacyBlocklyLab {
    *   waits for img[src*='/category_animals.png'] then clicks index [1]
    */
   async selectAnimalCategory(): Promise<void> {
-    await this.page.waitForFunction(() => {
-      return (
-        document.querySelectorAll("img[src*='/category_animals.png']").length >
-        0
-      );
-    });
-    await this.page.evaluate(() => {
-      const imgs = document.querySelectorAll<HTMLElement>(
-        "img[src*='/category_animals.png']",
-      );
-      imgs[1]?.click();
-    });
+    await expect(
+      this.page.locator("img[src*='/category_animals.png']").last(),
+    ).toBeVisible({timeout: 30_000});
+    await this.page.locator("img[src*='/category_animals.png']").last().click();
   }
 
   /**
@@ -166,19 +246,15 @@ export class GameLab extends LegacyBlocklyLab {
    *   waits for img[src*='/category_animals/animalhead_bear.png'] then clicks [0]
    */
   async selectBearAnimation(): Promise<void> {
-    await this.page.waitForFunction(() => {
-      return (
-        document.querySelectorAll(
-          "img[src*='/category_animals/animalhead_bear.png']",
-        ).length > 0
-      );
-    });
-    await this.page.evaluate(() => {
-      const imgs = document.querySelectorAll<HTMLElement>(
-        "img[src*='/category_animals/animalhead_bear.png']",
-      );
-      imgs[0]?.click();
-    });
+    await expect(
+      this.page
+        .locator(".modal img[src*='/category_animals/animalhead_bear.png']")
+        .last(),
+    ).toBeVisible({timeout: 30_000});
+    await this.page
+      .locator(".modal img[src*='/category_animals/animalhead_bear.png']")
+      .last()
+      .click();
   }
 
   /**
@@ -188,9 +264,13 @@ export class GameLab extends LegacyBlocklyLab {
    */
   async clickAnimationPickerDone(): Promise<void> {
     await this.page
-      .locator('.ui-test-selector-done-button')
+      .locator('.modal .ui-test-selector-done-button')
+      .last()
       .waitFor({state: 'visible', timeout: 10_000});
-    await this.page.locator('.ui-test-selector-done-button').click();
+    await this.page
+      .locator('.modal .ui-test-selector-done-button')
+      .last()
+      .click();
   }
 
   /**
@@ -211,5 +291,80 @@ export class GameLab extends LegacyBlocklyLab {
     await this.selectAnimalCategory();
     await this.selectBearAnimation();
     await this.clickAnimationPickerDone();
+  }
+
+  /**
+   * Wait for Piskel to render the editor toolbar in its same-origin iframe.
+   */
+  async waitForPiskelEditor(): Promise<void> {
+    await expect(this.piskelFrame.locator('.icon-tool-pen')).toBeVisible({
+      timeout: 30_000,
+    });
+  }
+
+  /**
+   * Download the current Piskel animation as a GIF from the export panel.
+   */
+  async exportGif(): Promise<void> {
+    await expect(
+      this.piskelFrame.locator('.icon-settings-export-white').first(),
+    ).toBeVisible({timeout: 30_000});
+    await expect(this.piskelFrame.locator('#loadingMask')).not.toBeVisible({
+      timeout: 30_000,
+    });
+
+    const unsupportedDialogClose = this.piskelFrame.locator(
+      '.unsupported-browser .dialog-close',
+    );
+    if (await unsupportedDialogClose.isVisible().catch(() => false)) {
+      await unsupportedDialogClose.click();
+    }
+
+    await this.piskelFrame
+      .locator('.icon-settings-export-white')
+      .first()
+      .click();
+    await expect(
+      this.piskelFrame.locator('.gif-download-button').first(),
+    ).toBeVisible({timeout: 15_000});
+    const download = this.page.waitForEvent('download', {timeout: 30_000});
+    await this.piskelFrame.locator('.gif-download-button').first().click();
+    await download;
+  }
+
+  /**
+   * Submit the current Game Lab assessment level.  The legacy Cucumber step
+   * clicks submit directly; unlike App Lab, this path does not show a confirm
+   * modal before the page navigates.
+   */
+  async submitAssessment(): Promise<void> {
+    await this.run();
+    await expect(this.submitButton).toBeVisible({timeout: 30_000});
+    await Promise.all([
+      this.page.waitForEvent('framenavigated', {
+        predicate: frame => frame === this.page.mainFrame(),
+        timeout: 30_000,
+      }),
+      this.submitButton.click(),
+    ]);
+    await this.page.waitForLoadState('domcontentloaded');
+  }
+
+  /**
+   * Unsubmit the current Game Lab assessment and wait for the full-page reload
+   * kicked off by the modal confirmation button.
+   */
+  async unsubmitAssessment(): Promise<void> {
+    await expect(this.unsubmitButton).toBeVisible({timeout: 30_000});
+    await this.unsubmitButton.click();
+    await expect(this.page.locator('.modal')).toBeVisible({timeout: 15_000});
+    await Promise.all([
+      this.page.waitForEvent('framenavigated', {
+        predicate: frame => frame === this.page.mainFrame(),
+        timeout: 30_000,
+      }),
+      this.confirmButton.click(),
+    ]);
+    await this.page.waitForLoadState('domcontentloaded');
   }
 }
