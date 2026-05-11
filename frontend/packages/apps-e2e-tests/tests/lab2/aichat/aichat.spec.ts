@@ -1,9 +1,13 @@
 import {expect, test} from '../../shared/fixtures';
 
+import {Aichat} from './Aichat';
+
 /**
  * AI Chat Lab — model customization and chat interactions.
  *
- * Source: dashboard/test/ui/features/star_labs/aichat/chat.feature
+ * Sources:
+ *   dashboard/test/ui/features/star_labs/aichat/chat.feature
+ *   dashboard/test/ui/features/star_labs/aichat/chat_multimodal.feature
  *
  * @no_mobile — all scenarios run as a levelbuilder.
  *
@@ -11,8 +15,14 @@ import {expect, test} from '../../shared/fixtures';
  * dismiss the teacher panel.
  */
 
-/** Lesson 47 / level 2 in allthethingscourse — the AI Chat Lab level. */
-const AICHAT_URL = '/courses/allthethingscourse/units/1/lessons/47/levels/2';
+/**
+ * AI Chat Lab level URL in allthethingscourse lesson 47.
+ *
+ * @param level - lesson 47 level number
+ */
+function aichatUrl(level: number): string {
+  return `/courses/allthethingscourse/units/1/lessons/47/levels/${level}`;
+}
 
 /**
  * Dismiss the teacher panel by clicking the hide-handle chevron.
@@ -44,8 +54,9 @@ async function dismissTeacherPanel(
  */
 async function gotoAichat(
   page: import('@playwright/test').Page,
+  level = 2,
 ): Promise<void> {
-  await page.goto(AICHAT_URL);
+  await page.goto(aichatUrl(level));
   const closeDialog = page.locator('#ui-close-dialog');
   try {
     await closeDialog.waitFor({state: 'visible', timeout: 15_000});
@@ -240,6 +251,71 @@ test.describe('AI Chat Lab — publishing model', () => {
       await expect(
         levelbuilderPage.locator('#uitest-presentation-view-header'),
       ).toContainText('Jeeves', {timeout: 30_000});
+    },
+  );
+});
+
+test.describe('AI Chat Lab — multimodal chat', () => {
+  /**
+   * Migration status: COMPLETED
+   * Source: dashboard/test/ui/features/star_labs/aichat/chat_multimodal.feature
+   * Scenario: Making text chat request gets appropriate response
+   * @no_mobile @no_ci
+   *
+   * Level 47/6 uses gpt-4o-mini as the base model. The source scenario only
+   * checks the bot message bubble color, not the text content.
+   */
+  test(
+    'text prompt gets bot response',
+    {tag: ['@no_mobile', '@no_ci']},
+    async ({levelbuilderPage}) => {
+      const aichat = new Aichat(levelbuilderPage);
+      await aichat.gotoLevel(6);
+
+      const botMsg = await aichat.sendPrompt('Hello');
+      await expect(botMsg).toHaveCSS('background-color', 'rgb(235, 255, 254)');
+    },
+  );
+
+  /**
+   * Migration status: COMPLETED
+   * Source: dashboard/test/ui/features/star_labs/aichat/chat_multimodal.feature
+   * Scenario: Making PDF chat request gets appropriate response
+   * @no_mobile @no_ci
+   */
+  test(
+    'PDF prompt gets answer from attached document',
+    {tag: ['@no_mobile', '@no_ci']},
+    async ({levelbuilderPage}) => {
+      const aichat = new Aichat(levelbuilderPage);
+      await aichat.gotoLevel(6);
+      await aichat.attachFileFromLibrary('Test PDF.pdf');
+
+      const botMsg = await aichat.sendPrompt(
+        'What animal is described in the PDF? Please respond in all lowercase.',
+      );
+      await expect(botMsg).toContainText('calf', {timeout: 60_000});
+    },
+  );
+
+  /**
+   * Migration status: COMPLETED
+   * Source: dashboard/test/ui/features/star_labs/aichat/chat_multimodal.feature
+   * Scenario: Making image chat request gets appropriate response
+   * @no_mobile @no_ci
+   */
+  test(
+    'image prompt gets answer from attached image',
+    {tag: ['@no_mobile', '@no_ci']},
+    async ({levelbuilderPage}) => {
+      const aichat = new Aichat(levelbuilderPage);
+      await aichat.gotoLevel(6);
+      await aichat.attachFileFromLibrary('Test Image.jpg');
+
+      const botMsg = await aichat.sendPrompt(
+        'What animal do you see in this image? Please respond in all lowercase.',
+      );
+      await expect(botMsg).toContainText('cat', {timeout: 60_000});
     },
   );
 });
