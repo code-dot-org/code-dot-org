@@ -37,6 +37,39 @@ export class GameLab extends LegacyBlocklyLab {
   }
 
   /**
+   * Navigate to a new Game Lab project and wait for the animation library
+   * manifest to be loaded before returning.
+   *
+   * Must be used instead of `goto('/projects/gamelab/new') + waitForLabPage()`
+   * when the test will interact with the animation picker. The manifest wait
+   * must be set up BEFORE the navigation so it captures the fetch that
+   * P5LabView fires in componentDidMount.
+   *
+   * Without this wait, AnimationPickerBody.componentDidMount calls
+   * searchAssets() with the initial empty manifest ({}) and crashes:
+   *   Object.keys({}.aliases) → TypeError: Cannot convert undefined or null
+   * That error unmounts the entire lab React tree (blank page).
+   */
+  async gotoNewProject(): Promise<void> {
+    const manifestReady = this.page.waitForResponse(
+      r =>
+        r.url().includes('/api/v1/animation-library/manifest/gamelab') &&
+        r.status() === 200,
+      {timeout: 30_000},
+    );
+    await this.page.goto('/projects/gamelab/new');
+    await this.waitForLabPage();
+    await manifestReady;
+    // Flush pending microtasks so the manifest .then() callbacks complete
+    // and setState({libraryManifest}) propagates before the picker opens.
+    // fetch().then(r=>r.json()).then(manifest=>setState) needs two microtask
+    // flushes; a setTimeout(0) macrotask drains all preceding microtasks.
+    await this.page.evaluate(
+      () => new Promise<void>(resolve => setTimeout(resolve, 0)),
+    );
+  }
+
+  /**
    * Switch to the animation tab.
    * Clicks #animationMode and waits for the #newListItem ("+") button.
    * Mirrors `When I switch to the animation tab` from gamelab.rb.
