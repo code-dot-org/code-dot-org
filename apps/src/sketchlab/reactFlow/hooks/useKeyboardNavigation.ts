@@ -122,6 +122,7 @@ interface UseKeyboardNavigationOptions {
   cutEntry: (entry: TabOrderEntry) => void;
   paste: () => void;
   undo: () => void;
+  redo: () => void;
   pushSnapshot: () => void;
   // Fallback for Ctrl/Cmd shortcuts: DOM focus may be inside a NodeToolbar
   // (which renders outside .react-flow__node), so getEntryFromDOM returns
@@ -169,6 +170,7 @@ export function useKeyboardNavigation({
   cutEntry,
   paste,
   undo,
+  redo,
   pushSnapshot,
   lastFocusedEntry,
 }: UseKeyboardNavigationOptions) {
@@ -294,6 +296,22 @@ export function useKeyboardNavigation({
       return true;
     },
     [undo]
+  );
+
+  // Redo: Ctrl/Cmd+Y, or Ctrl/Cmd+Shift+Z (event.key is 'Z' when shift is held).
+  const handleRedo = useCallback(
+    (keyContext: KeyContext): boolean => {
+      const {event} = keyContext;
+      if (!(event.ctrlKey || event.metaKey)) return false;
+      if (event.key !== 'y' && event.key !== 'Y' && event.key !== 'Z') {
+        return false;
+      }
+      redo();
+      event.preventDefault();
+      event.stopPropagation();
+      return true;
+    },
+    [redo]
   );
 
   const handleOpenToolbar = useCallback(
@@ -636,6 +654,7 @@ export function useKeyboardNavigation({
       if (handleCut(keyContext)) return;
       if (handlePaste(keyContext)) return;
       if (handleUndo(keyContext)) return;
+      if (handleRedo(keyContext)) return;
 
       if (handleOpenToolbar(keyContext)) return;
       if (handleConnectToggle(keyContext)) return;
@@ -669,6 +688,7 @@ export function useKeyboardNavigation({
       handleCut,
       handlePaste,
       handleUndo,
+      handleRedo,
       handleOpenToolbar,
       handleConnectToggle,
       handleConnectComplete,

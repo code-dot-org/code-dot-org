@@ -116,7 +116,8 @@ export default function ReactFlowCanvas({
     useNodesState<SketchLabNode>(initialNodes);
   const [edges, setEdges, onEdgesChange] = useEdgesState(initialEdges);
 
-  const {syncRefs, pushSnapshot, undo, canUndo} = useUndoHistory();
+  const {syncRefs, pushSnapshot, undo, redo, canUndo, canRedo} =
+    useUndoHistory();
 
   // Keep undo history refs in sync with current canvas state.
   useEffect(() => {
@@ -129,6 +130,13 @@ export default function ReactFlowCanvas({
     setNodes(snapshot.nodes);
     setEdges(snapshot.edges);
   }, [undo, setNodes, setEdges]);
+
+  const handleRedo = useCallback(() => {
+    const snapshot = redo();
+    if (!snapshot) return;
+    setNodes(snapshot.nodes);
+    setEdges(snapshot.edges);
+  }, [redo, setNodes, setEdges]);
 
   const [viewport, setViewport] =
     useState<SketchlabReactFlowSource['viewport']>(initialViewport);
@@ -256,6 +264,7 @@ export default function ReactFlowCanvas({
       cutEntry,
       paste,
       undo: handleUndo,
+      redo: handleRedo,
       pushSnapshot,
       lastFocusedEntry,
     });
@@ -633,6 +642,8 @@ export default function ReactFlowCanvas({
                 levelName={levelName}
                 onUndo={handleUndo}
                 canUndo={canUndo}
+                onRedo={handleRedo}
+                canRedo={canRedo}
               />
             )}
             <div aria-live="assertive" className={styles.srOnly}>

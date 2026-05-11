@@ -21,6 +21,8 @@ interface ToolbarProps {
   levelName: string;
   onUndo: () => void;
   canUndo: boolean;
+  onRedo: () => void;
+  canRedo: boolean;
 }
 
 export default function Toolbar({
@@ -28,6 +30,8 @@ export default function Toolbar({
   levelName,
   onUndo,
   canUndo,
+  onRedo,
+  canRedo,
 }: ToolbarProps) {
   const channelId = useAppSelector(state => state.lab.channel?.id) ?? '';
   // Use a stable ID prefix for accessibility.
@@ -108,6 +112,20 @@ export default function Toolbar({
             variant="outlined"
           >
             <FontAwesomeV6Icon iconName="rotate-left" />
+          </IconButton>
+        </span>
+      </Tooltip>
+      <Tooltip title="Redo (Ctrl+Y)" placement="right">
+        <span>
+          <IconButton
+            aria-label="Redo"
+            onClick={onRedo}
+            disabled={!canRedo}
+            size="small"
+            color="tertiary"
+            variant="outlined"
+          >
+            <FontAwesomeV6Icon iconName="rotate-right" />
           </IconButton>
         </span>
       </Tooltip>
