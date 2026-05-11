@@ -2,7 +2,7 @@
 
 Source: `dashboard/test/ui/features/` (all sub-directories)  
 Target: `frontend/packages/apps-e2e-tests/tests/`  
-As of: 2026-05-11 (updated 2026-05-11 — Starlab pass: blocklayout)
+As of: 2026-05-11 (updated 2026-05-11 — Starlab pass: Minecraft aquatic)
 
 ---
 
@@ -10,7 +10,7 @@ As of: 2026-05-11 (updated 2026-05-11 — Starlab pass: blocklayout)
 
 | Status                                         | Count                                                                                                                                                                                                                             |
 | ---------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Ported                                         | 145 feature files (C+F for pythonlab + mixmoveai; Chromium-only for maker; @no_ci for ai_tutor + AI Chat multimodal; @no_mobile for pairing + version_history + assign_modular_course; @no_firefox for rubric AI; C+F+W for rest) |
+| Ported                                         | 146 feature files (C+F for pythonlab + mixmoveai; Chromium-only for maker; @no_ci for ai_tutor + AI Chat multimodal; @no_mobile for pairing + version_history + assign_modular_course; @no_firefox for rubric AI; C+F+W for rest) |
 | Fixme stubs — test infra                       | 3 (applab asset upload — needs test fixture file; disallowedsharing profanity — @webpurify API not configured; gamelab export — animation picker CDN blocked)                                                                     |
 | Covered by ported (rolled in)                  | 5 (maze2, jigsaw2, multi2/3/4 rolled into existing specs)                                                                                                                                                                         |
 | Partial — @eyes (visual checkpoints annotated) | 6 ported up to snapshot; @eyes auth blocked 3                                                                                                                                                                                     |
@@ -52,6 +52,7 @@ As of: 2026-05-11 (updated 2026-05-11 — Starlab pass: blocklayout)
 | `dance/dance_ai_modal_eyes.feature` (@eyes)                              | `tests/legacy/activities/dance/dance.spec.ts`                               | C+F+W    | @visual; visual checkpoints LTR+RTL                                                                                                                |
 | `dance/save_for_share.feature`                                           | `tests/legacy/activities/dance/dance.spec.ts`                               | C+F+W    | non-@as_student scenarios only                                                                                                                     |
 | `spritelab/spritelab.feature`                                            | `tests/legacy/activities/spritelab/spritelab.spec.ts`                       | C+F+W    | 3 scenarios; p5 barrier; grid dropdown                                                                                                             |
+| `craft/aquatic.feature` (@skip in Cucumber)                              | `tests/legacy/activities/craft/craft.spec.ts`                               | C+F+W    | Phaser ready signal; signed-out level 3 run/reset/congrats                                                                                         |
 | `craft/hero_logged_out.feature`                                          | `tests/legacy/activities/craft/craft.spec.ts`                               | C+F+W    | Phaser ready signal; signed-out UI check                                                                                                           |
 | `craft/hero_logged_in.feature`                                           | `tests/legacy/activities/craft/craft.spec.ts`                               | C+F+W    | signed-in student sees continue + save-to-gallery                                                                                                  |
 | `share_buttons.feature`                                                  | `tests/legacy/share-buttons/share-buttons.spec.ts`                          | C+F+W    | 2 scenarios: Sprite Lab "How it Works" present; Game Lab absent                                                                                    |
@@ -248,7 +249,6 @@ Already disabled upstream; no porting action needed.
 | Feature file                                                  | Reason                                                                  |
 | ------------------------------------------------------------- | ----------------------------------------------------------------------- |
 | `musiclab/musiclab_drag_block.feature`                        | @skip                                                                   |
-| `craft/aquatic.feature`                                       | @skip (CI instability)                                                  |
 | `mobile_portait.feature`                                      | @skip + @eyes_mobile                                                    |
 | `student_learning/hour_of_code/minecraft_codebuilder.feature` | @skip                                                                   |
 | `foundations/markdown_rendering.feature` (scenario 1)         | @properties_encryption_key — level content stays hidden without CDO key |
@@ -311,13 +311,13 @@ Sprite Lab (p5lab) shares the CSF `#runButton`/`#resetButton`/`.congrats` UI lay
 and has been ported. Dance Party and Game Lab libraries have been ported. Remaining
 labs below are auth-blocked or have no non-auth scenarios.
 
-| Lab        | Editor / runtime   | Feature files                                                                                                            | Status                                                                                                                            |
-| ---------- | ------------------ | ------------------------------------------------------------------------------------------------------------------------ | --------------------------------------------------------------------------------------------------------------------------------- |
-| App Lab    | Droplet / ACE JS   | `applab/tooltips.feature`                                                                                                | **Ported**; data_blocks/data_tab/level_options/libraries/template_backed all ported                                               |
-| Game Lab   | p5.js              | `gamelab/libraries.feature`                                                                                              | **Ported** — C+F+W                                                                                                                |
-| Sprite Lab | Blockly + p5.js    | `spritelab/spritelab.feature`                                                                                            | **Ported** — C+F+W                                                                                                                |
-| Web Lab    | HTML/CSS/JS files  | `weblab/too_young.feature`, `weblab/weblab.feature`, `weblab/weblab_submittable.feature`, `weblab/versions.feature`      | All require auth or @skip                                                                                                         |
-| Minecraft  | Custom interpreter | `craft/dialogs.feature`, `craft/hero_logged_out.feature`, `craft/hero_logged_in.feature`, `craft/can_see_finish.feature` | hero_logged_out + hero_logged_in **Ported** — C+F+W; dialogs @skip; craft/can_see_finish requires mobile Safari landscape project |
+| Lab        | Editor / runtime   | Feature files                                                                                                            | Status                                                                                                                                      |
+| ---------- | ------------------ | ------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------- |
+| App Lab    | Droplet / ACE JS   | `applab/tooltips.feature`                                                                                                | **Ported**; data_blocks/data_tab/level_options/libraries/template_backed all ported                                                         |
+| Game Lab   | p5.js              | `gamelab/libraries.feature`                                                                                              | **Ported** — C+F+W                                                                                                                          |
+| Sprite Lab | Blockly + p5.js    | `spritelab/spritelab.feature`                                                                                            | **Ported** — C+F+W                                                                                                                          |
+| Web Lab    | HTML/CSS/JS files  | `weblab/too_young.feature`, `weblab/weblab.feature`, `weblab/weblab_submittable.feature`, `weblab/versions.feature`      | All require auth or @skip                                                                                                                   |
+| Minecraft  | Custom interpreter | `craft/dialogs.feature`, `craft/hero_logged_out.feature`, `craft/hero_logged_in.feature`, `craft/can_see_finish.feature` | aquatic + hero_logged_out + hero_logged_in **Ported** — C+F+W; dialogs @skip; craft/can_see_finish requires mobile Safari landscape project |
 
 ---
 

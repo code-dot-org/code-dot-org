@@ -3,6 +3,40 @@ import {expect, test} from '../../../shared/fixtures';
 import {Craft} from './Craft';
 
 /**
+ * Minecraft: Aquatic — lesson 25 of allthethingscourse, level 3.
+ *
+ * Source: dashboard/test/ui/features/star_labs/craft/aquatic.feature
+ * Scenario: Winning the first level.
+ */
+test.describe('Craft — lesson 25 — aquatic completion (level 3)', () => {
+  let craft: Craft;
+
+  test.beforeEach(async ({page}) => {
+    craft = new Craft(page);
+    await craft.gotoLevel(3);
+  });
+
+  /**
+   * Source: dashboard/test/ui/features/star_labs/craft/aquatic.feature
+   * Scenario: Winning the first level
+   * Migration status: COMPLETED
+   *
+   * The Cucumber source is tagged @skip for an old Selenium CI instability.
+   * Playwright waits for Craft.phaserLoaded(), then relies on the run/reset
+   * button state and congrats dialog as the visible readiness signals.
+   */
+  test('signed-out user can win the first aquatic level', async () => {
+    await expect(craft.runButton).toBeVisible();
+    await expect(craft.resetButton).toBeHidden();
+
+    await craft.run();
+
+    await expect(craft.resetButton).toBeVisible();
+    await expect(craft.congratsMessage).toBeVisible({timeout: 30_000});
+  });
+});
+
+/**
  * Minecraft: Hero's Journey — lesson 25 of allthethingscourse, level 4.
  *
  * Source: dashboard/test/ui/features/star_labs/craft/hero_logged_out.feature
