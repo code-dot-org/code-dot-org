@@ -1,8 +1,10 @@
 import {expect, test} from '../../shared/fixtures';
 import {Artist} from '../activities/artist/Artist';
 import {Bounce} from '../activities/bounce/Bounce';
+import {Craft} from '../activities/craft/Craft';
 import {Dance} from '../activities/dance/Dance';
 import {Flappy} from '../activities/flappy/Flappy';
+import {GameLab} from '../activities/gamelab/GameLab';
 import {SpriteLab} from '../activities/spritelab/SpriteLab';
 
 /**
@@ -13,8 +15,8 @@ import {SpriteLab} from '../activities/spritelab/SpriteLab';
  * Background: I create a student named "Sally" — uses studentPage fixture.
  * @no_mobile — resize tests; mobile variants need a separate Playwright project.
  *
- * Game Lab (Droplet POM not implemented) and Minecraft (heavy load / cross-runner issues)
- * are omitted. Bounce mobile variant omitted (known issue: not in-viewport on iPhone).
+ * Mobile variants need a separate Playwright project. Bounce mobile variant
+ * omitted (known issue: not in-viewport on iPhone).
  */
 
 /** Small-screen viewport matching "1366 by 727" step in the Cucumber suite. */
@@ -35,9 +37,18 @@ const FREE_PLAY_URLS = {
     '/courses/allthethingscourse/units/1/lessons/7/levels/2?noautoplay=true&no_redirect=true',
   spritelab:
     '/courses/allthethingscourse/units/1/lessons/36/levels/4?noautoplay=true&no_redirect=true',
+  gamelab:
+    '/courses/allthethingscourse/units/1/lessons/19/levels/4?noautoplay=true&no_redirect=true',
+  minecraftAdventurer:
+    '/courses/allthethingscourse/units/1/lessons/25/levels/5?noautoplay=true&no_redirect=true',
 } as const;
 
 test.describe('can see finish button — small screen', () => {
+  /**
+   * Source: dashboard/test/ui/features/star_labs/can_see_finish.feature
+   * Scenario: can see finish button on "Dance Party"
+   * Migration status: COMPLETED
+   */
   test(
     'Dance Party free-play level shows finish button at 1366×727',
     {tag: '@no_mobile'},
@@ -51,6 +62,11 @@ test.describe('can see finish button — small screen', () => {
     },
   );
 
+  /**
+   * Source: dashboard/test/ui/features/star_labs/can_see_finish.feature
+   * Scenario: can see finish button on "Artist"
+   * Migration status: COMPLETED
+   */
   test(
     'Artist free-play level shows finish button at 1366×727',
     {tag: '@no_mobile'},
@@ -64,6 +80,11 @@ test.describe('can see finish button — small screen', () => {
     },
   );
 
+  /**
+   * Source: dashboard/test/ui/features/star_labs/can_see_finish.feature
+   * Scenario: can see finish button on "Bounce"
+   * Migration status: COMPLETED
+   */
   test(
     'Bounce free-play level shows finish button at 1366×727',
     {tag: '@no_mobile'},
@@ -77,6 +98,11 @@ test.describe('can see finish button — small screen', () => {
     },
   );
 
+  /**
+   * Source: dashboard/test/ui/features/star_labs/can_see_finish.feature
+   * Scenario: can see finish button on "Flappy"
+   * Migration status: COMPLETED
+   */
   test(
     'Flappy free-play level shows finish button at 1366×727',
     {tag: '@no_mobile'},
@@ -92,6 +118,11 @@ test.describe('can see finish button — small screen', () => {
     },
   );
 
+  /**
+   * Source: dashboard/test/ui/features/star_labs/can_see_finish.feature
+   * Scenario: can see finish button on "Sprite Lab"
+   * Migration status: COMPLETED
+   */
   test(
     'Sprite Lab free-play level shows finish button at 1366×727',
     {tag: '@no_mobile'},
@@ -102,6 +133,44 @@ test.describe('can see finish button — small screen', () => {
       await studentPage.setViewportSize(SMALL_SCREEN);
       await spritelab.run();
       await expect(spritelab.finishButton).toBeInViewport();
+    },
+  );
+
+  /**
+   * Source: dashboard/test/ui/features/star_labs/can_see_finish.feature
+   * Scenario: can see finish button on "Game Lab"
+   * Migration status: COMPLETED
+   */
+  test(
+    'Game Lab free-play level shows finish button at 1366×727',
+    {tag: '@no_mobile'},
+    async ({studentPage}) => {
+      const gamelab = new GameLab(studentPage);
+      await studentPage.goto(FREE_PLAY_URLS.gamelab);
+      await gamelab.waitForLabPage();
+      await studentPage.setViewportSize(SMALL_SCREEN);
+      await gamelab.run();
+      await expect(
+        studentPage.getByRole('button', {name: 'Finish'}),
+      ).toBeInViewport();
+    },
+  );
+
+  /**
+   * Source: dashboard/test/ui/features/star_labs/can_see_finish.feature
+   * Scenario: can see finish button on "Minecraft Adventurer"
+   * Migration status: COMPLETED
+   */
+  test(
+    'Minecraft Adventurer free-play level shows finish button at 1366×727',
+    {tag: '@no_mobile'},
+    async ({studentPage}) => {
+      const craft = new Craft(studentPage);
+      await studentPage.goto(FREE_PLAY_URLS.minecraftAdventurer);
+      await craft.waitForLabPage();
+      await studentPage.setViewportSize(SMALL_SCREEN);
+      await craft.run();
+      await expect(craft.finishButton).toBeInViewport();
     },
   );
 });

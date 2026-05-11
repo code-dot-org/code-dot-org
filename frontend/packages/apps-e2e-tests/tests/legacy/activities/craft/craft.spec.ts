@@ -17,7 +17,10 @@ test.describe('Craft — lesson 25 — signed-out finish dialog (level 4)', () =
   });
 
   /**
-   * Source: hero_logged_out.feature "Signed out finish dialog"
+   * Source: dashboard/test/ui/features/star_labs/craft/hero_logged_out.feature
+   * Scenario: Signed out finish dialog
+   * Migration status: COMPLETED
+   *
    * Verifies that signed-out users see the continue button but not the
    * publish-to-gallery or save-to-gallery buttons after completing the level.
    */
@@ -38,6 +41,10 @@ test.describe('Craft — lesson 25 — signed-out finish dialog (level 4)', () =
  */
 test.describe('Craft — lesson 25 — signed-in finish dialog (level 4)', () => {
   /**
+   * Source: dashboard/test/ui/features/star_labs/craft/hero_logged_in.feature
+   * Scenario: Signed in finish dialog
+   * Migration status: COMPLETED
+   *
    * A signed-in student who completes the level sees both the continue button
    * and the save-to-project-gallery button in the finish dialog.  The gallery
    * save button is only rendered for authenticated users.

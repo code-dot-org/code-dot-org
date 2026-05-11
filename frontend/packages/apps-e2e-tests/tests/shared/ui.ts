@@ -8,11 +8,11 @@ import {type Page} from '@playwright/test';
  * @param page - Playwright page
  */
 export async function dismissLoginReminder(page: Page): Promise<void> {
-  const closeBtn = page.locator('[aria-label="Close"]');
+  const closeBtn = page.locator('.uitest-signincallout [aria-label="Close"]');
   if (await closeBtn.isVisible()) await closeBtn.click();
   await page
     .locator('.uitest-signincallout')
-    .waitFor({state: 'hidden'})
+    .waitFor({state: 'detached'})
     .catch(() => {
       // Not present — nothing to dismiss.
     });
