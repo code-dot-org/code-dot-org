@@ -2,7 +2,7 @@
 
 Source: `dashboard/test/ui/features/` (all sub-directories)  
 Target: `frontend/packages/apps-e2e-tests/tests/`  
-As of: 2026-05-11 (updated 2026-05-11 — Starlab pass: App Lab submittable)
+As of: 2026-05-11 (updated 2026-05-11 — Starlab pass: catalog assign/unassign)
 
 ---
 
@@ -10,11 +10,11 @@ As of: 2026-05-11 (updated 2026-05-11 — Starlab pass: App Lab submittable)
 
 | Status                                         | Count                                                                                                                                                                                                                                                                                |
 | ---------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| Ported                                         | 152 feature files (C+F for pythonlab + mixmoveai; Chromium-only for maker + Game Lab export; C+W for Game Lab Piskel loading; @no_ci for ai_tutor + AI Chat multimodal; @no_mobile for pairing + version_history + assign_modular_course; @no_firefox for rubric AI; C+F+W for rest) |
+| Ported                                         | 153 feature files (C+F for pythonlab + mixmoveai; Chromium-only for maker + Game Lab export; C+W for Game Lab Piskel loading; @no_ci for ai_tutor + AI Chat multimodal; @no_mobile for pairing + version_history + assign_modular_course; @no_firefox for rubric AI; C+F+W for rest) |
 | Fixme stubs — test infra                       | 2 (applab asset upload — needs test fixture file; disallowedsharing profanity — @webpurify API not configured)                                                                                                                                                                       |
 | Covered by ported (rolled in)                  | 5 (maze2, jigsaw2, multi2/3/4 rolled into existing specs)                                                                                                                                                                                                                            |
 | Partial — @eyes (visual checkpoints annotated) | 6 ported up to snapshot; @eyes auth blocked 3                                                                                                                                                                                                                                        |
-| Fixme stubs — @eyes / auth only                | 4 (curriculum_reference ×2, level_group_multi_page_dots ×1, curriculum_catalog_assign_unassign ×1)                                                                                                                                                                                   |
+| Fixme stubs — @eyes / auth only                | 3 (curriculum_reference ×2, level_group_multi_page_dots ×1)                                                                                                                                                                                                                          |
 | Skipped — auth required                        | ~35                                                                                                                                                                                                                                                                                  |
 | Skipped — @skip / @eyes_mobile                 | 3                                                                                                                                                                                                                                                                                    |
 | Skipped — cookie/session manipulation          | 0                                                                                                                                                                                                                                                                                    |
@@ -93,6 +93,7 @@ As of: 2026-05-11 (updated 2026-05-11 — Starlab pass: App Lab submittable)
 | `student_learning/hour_of_code/hoc_reset.feature`                        | `tests/legacy/hoc/hoc.spec.ts`                                              | C+F      | hoc/reset re-triggers video + callout state                                                                                                        |
 | `student_learning/hour_of_code/hour_of_code_signed_in.feature`           | `tests/legacy/hoc/hoc-signed-in.spec.ts`                                    | C+F+W    | server-side progress; hoc/reset preserves saves                                                                                                    |
 | `acquisition_products/curriculum_catalog.feature`                        | `tests/catalog/catalog.spec.ts`                                             | C+F+W    | all 3 scenarios: signed-out redirect, student no-assign, teacher create-section prompt                                                             |
+| `acquisition_products/curriculum_catalog_assign_unassign.feature`        | `tests/catalog/catalog.spec.ts`                                             | C+F+W    | direct and expanded-card assign/unassign for AI for Oceans and UI Test CSP                                                                         |
 | `teacher_tools/challenge_level.feature`                                  | `tests/legacy/challenge-level/challenge-level.spec.ts`                      | C+F+W    | 2 scenarios; JS click bypasses viz overlay                                                                                                         |
 | `dance/age_filter.feature`                                               | `tests/legacy/activities/dance/dance-age-filter.spec.ts`                    | C+F+W    | student + anonymous; age dialog + ?songfilter=on                                                                                                   |
 | `dance/age_filter2.feature`                                              | `tests/legacy/activities/dance/dance-age-filter.spec.ts`                    | C+F+W    | age-13 dialog; filter persists across levels                                                                                                       |
@@ -288,7 +289,7 @@ session fixture.
 | `aichat/view_student_chat_history.feature`                        | ~~teacher auth~~ → **ported**                                                              |
 | `ai_tutor/chat.feature`                                           | ~~student auth~~ → **ported** @no_ci                                                       |
 | `manage_assets.feature`                                           | ~~asset upload state~~ → **ported** (no-auth; student project + file upload)               |
-| `acquisition_products/curriculum_catalog_assign_unassign.feature` | test.fixme — see fixme stubs table                                                         |
+| `acquisition_products/curriculum_catalog_assign_unassign.feature` | ~~test.fixme — see fixme stubs table~~ → **ported** C+F+W                                  |
 | `acquisition_products/curriculum_catalog_filters.feature`         | @eyes                                                                                      |
 
 ---
