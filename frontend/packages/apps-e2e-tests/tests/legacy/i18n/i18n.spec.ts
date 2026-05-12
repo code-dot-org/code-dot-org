@@ -6,7 +6,7 @@ import {
   type Page,
 } from '@playwright/test';
 
-type Locale = 'es-MX' | 'pt-BR';
+type Locale = 'es-MX' | 'pt-BR' | 'ar-SA';
 
 const SPANISH = {
   locale: 'es-MX' as const,
@@ -16,6 +16,11 @@ const SPANISH = {
 const PORTUGUESE = {
   locale: 'pt-BR' as const,
   routeLocale: 'pt-br',
+};
+
+const ARABIC = {
+  locale: 'ar-SA' as const,
+  routeLocale: 'ar-sa',
 };
 
 const TOOLBOX_CATEGORY_KEYS = [
@@ -30,6 +35,12 @@ const TOOLBOX_CATEGORY_KEYS = [
 
 const BEE_FUNCTION_KEY =
   'data.function_definitions.2-3 Bee Functions 2.get 5.name';
+
+const PIXELATION_LONG_INSTRUCTIONS_KEY =
+  'data.long_instructions.AllTheThings: Pixelation - Lesson 15 - Complete 3-bit color';
+
+const PIXELATION_SHORT_INSTRUCTIONS_KEY =
+  'data.short_instructions.AllTheThings: Pixelation - Lesson 15 - Complete 3-bit color';
 
 /**
  * Page object for localized legacy Blockly levels.
@@ -60,8 +71,25 @@ class I18nLevel {
    * @param url - localized Code.org level URL, relative to Playwright baseURL
    */
   async goto(url: string): Promise<void> {
-    await this.page.goto(url);
+    await this.page.goto(url, {waitUntil: 'domcontentloaded'});
     await expect(this.runButton).toBeVisible({timeout: 60_000});
+    await this.dismissOptionalOverlays();
+  }
+
+  /**
+   * Navigate to a localized non-runnable level and wait for a visible control.
+   *
+   * @param url - localized Code.org level URL, relative to Playwright baseURL
+   * @param readySelector - visible selector that marks the level ready for use
+   */
+  async gotoNonRunnableLevel(
+    url: string,
+    readySelector: string,
+  ): Promise<void> {
+    await this.page.goto(url, {waitUntil: 'domcontentloaded'});
+    await expect(this.page.locator(readySelector)).toBeVisible({
+      timeout: 60_000,
+    });
     await this.dismissOptionalOverlays();
   }
 
@@ -157,12 +185,19 @@ async function expectI18nText(
   selector: string,
   locale: Locale,
   key: string,
+  options: {rtl?: boolean} = {},
 ): Promise<void> {
   const expectedText = await getI18nText(request, locale, key);
   await expect(level.page.locator(selector)).toBeVisible({timeout: 30_000});
-  await expect
-    .poll(async () => await level.normalizedText(selector), {timeout: 30_000})
-    .toBe(expectedText);
+  const actualText = expect.poll(
+    async () => await level.normalizedText(selector),
+    {timeout: 30_000},
+  );
+  if (options.rtl) {
+    await actualText.toContain(expectedText);
+  } else {
+    await actualText.toBe(expectedText);
+  }
 }
 
 /**
@@ -315,6 +350,7 @@ async function expectLocalizedFunctionNames(
   request: APIRequestContext,
   locale: Locale,
   routeLocale: string,
+  options: {rtl?: boolean} = {},
 ): Promise<void> {
   const level = new I18nLevel(page);
   await level.goto(
@@ -327,6 +363,7 @@ async function expectLocalizedFunctionNames(
     "[data-id='toolboxCallBlock'] .blocklyText",
     locale,
     BEE_FUNCTION_KEY,
+    options,
   );
   await expectI18nText(
     level,
@@ -334,6 +371,7 @@ async function expectLocalizedFunctionNames(
     "[data-id='workspaceCallBlock'] .blocklyText",
     locale,
     BEE_FUNCTION_KEY,
+    options,
   );
   await expectI18nText(
     level,
@@ -341,6 +379,77 @@ async function expectLocalizedFunctionNames(
     "[data-id='definitionBlock'] > .blocklyNonEditableField > .blocklyText",
     locale,
     BEE_FUNCTION_KEY,
+    options,
+  );
+}
+
+/**
+ * Convert the simple localized markdown in the pixelation fixture to text.
+ *
+ * @param markdown - markdown returned by the test i18n endpoint
+ * @returns rendered-text equivalent with markdown syntax removed
+ */
+function textFromPixelationMarkdown(markdown: string): string {
+  return markdown
+    .replace(/^#+\s*/gm, '')
+    .replace(/^\s*-\s*/gm, '')
+    .replace(/\*\*/g, '')
+    .replace(/\s+/g, ' ')
+    .trim();
+}
+
+/**
+ * Return normalized visible text from a locator.
+ *
+ * @param locator - Playwright locator to read
+ * @returns text with collapsed whitespace
+ */
+async function normalizedLocatorText(locator: Locator): Promise<string> {
+  return locator.evaluate(element =>
+    (element.textContent ?? '').replace(/\s+/g, ' ').trim(),
+  );
+}
+
+/**
+ * Run the Pixelation localized markdown scenario.
+ *
+ * @param page - Playwright page
+ * @param request - Playwright request context
+ */
+async function expectLocalizedPixelationInstructions(
+  page: Page,
+  request: APIRequestContext,
+): Promise<void> {
+  const level = new I18nLevel(page);
+  await level.gotoNonRunnableLevel(
+    '/courses/allthethingscourse/units/1/lessons/17/levels/2/lang/es-MX',
+    '#below_viz_instructions',
+  );
+
+  const belowInstructions = page.locator('#below_viz_instructions');
+  await belowInstructions.click();
+  const markdownContainer = page.locator(
+    '.markdown-instructions-container .instructions-markdown > div',
+  );
+  await expect(markdownContainer).toBeVisible({timeout: 30_000});
+
+  const expectedMarkdown = await getI18nText(
+    request,
+    SPANISH.locale,
+    PIXELATION_LONG_INSTRUCTIONS_KEY,
+  );
+  await expect
+    .poll(async () => normalizedLocatorText(markdownContainer), {
+      timeout: 30_000,
+    })
+    .toBe(textFromPixelationMarkdown(expectedMarkdown));
+
+  await expectI18nText(
+    level,
+    request,
+    '#below_viz_instructions',
+    SPANISH.locale,
+    PIXELATION_SHORT_INSTRUCTIONS_KEY,
   );
 }
 
@@ -474,5 +583,78 @@ test.describe('Legacy i18n localized tutorials', () => {
       PORTUGUESE.locale,
       'pt-BR',
     );
+  });
+
+  /**
+   * Source: dashboard/test/ui/features/foundations/i18n.feature
+   * Scenario: HoC tutorial in Arabic (RTL)
+   */
+  test('HoC tutorial in Arabic (RTL)', async ({page, request}) => {
+    await expectLocalizedHocTutorial(
+      page,
+      request,
+      ARABIC.locale,
+      ARABIC.routeLocale,
+    );
+  });
+
+  /**
+   * Source: dashboard/test/ui/features/foundations/i18n.feature
+   * Scenario: Frozen tutorial in Arabic (RTL)
+   */
+  test('Frozen tutorial in Arabic (RTL)', async ({page, request}) => {
+    await expectLocalizedFrozenTutorial(
+      page,
+      request,
+      ARABIC.locale,
+      ARABIC.routeLocale,
+    );
+  });
+
+  /**
+   * Source: dashboard/test/ui/features/foundations/i18n.feature
+   * Scenario: Minecraft:Agent tutorial in Arabic (RTL)
+   */
+  test('Minecraft:Agent tutorial in Arabic (RTL)', async ({page, request}) => {
+    await expectLocalizedMinecraftAgentTutorial(
+      page,
+      request,
+      ARABIC.locale,
+      ARABIC.routeLocale,
+    );
+  });
+
+  /**
+   * Source: dashboard/test/ui/features/foundations/i18n.feature
+   * Scenario: Translated function names in Arabic
+   */
+  test('Translated function names in Arabic', async ({page, request}) => {
+    await expectLocalizedFunctionNames(page, request, ARABIC.locale, 'ar-SA', {
+      rtl: true,
+    });
+  });
+
+  /**
+   * Source: dashboard/test/ui/features/foundations/i18n.feature
+   * Scenario: Toolbox Categories in Arabic (RTL)
+   */
+  test('Toolbox Categories in Arabic (RTL)', async ({page, request}) => {
+    await expectLocalizedToolboxCategories(
+      page,
+      request,
+      ARABIC.locale,
+      ARABIC.routeLocale,
+    );
+  });
+
+  /**
+   * Source: dashboard/test/ui/features/foundations/i18n.feature
+   * Scenario: Pixelation Widget long and short instructions in Spanish
+   */
+  test('Pixelation Widget long and short instructions in Spanish', async ({
+    page,
+    request,
+  }) => {
+    await expectLocalizedPixelationInstructions(page, request);
   });
 });

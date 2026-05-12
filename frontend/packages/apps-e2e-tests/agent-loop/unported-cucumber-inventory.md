@@ -12,8 +12,8 @@ This inventory ignores `Migration Status` markers. A Cucumber feature is treated
 | Playwright spec files                                       |   125 |
 | Feature files referenced by Playwright                      |   164 |
 | Feature files with no Playwright source-path reference      |   107 |
-| Referenced feature files with all scenario titles traceable |    56 |
-| Referenced feature files with some untraced scenario titles |    86 |
+| Referenced feature files with all scenario titles traceable |    58 |
+| Referenced feature files with some untraced scenario titles |    84 |
 | Referenced feature files needing scenario-level audit       |    22 |
 | Playwright specs with no Cucumber source-path reference     |     1 |
 
@@ -203,27 +203,6 @@ These feature files have at least one Playwright source-path reference, but not 
 Traced 0 of 1 scenario titles.
 
 - Using a cookie to mock DCDO
-
-### `dashboard/test/ui/features/foundations/create_dropdown.feature`
-
-Traced 0 of 5 scenario titles.
-
-- Create Dropdown does NOT show on level pages
-- Teacher - Correct Create Links
-- Student, Age 13+ - Correct Create Links
-- Young Student, Not in Section - Correct Create Links
-- Young Student, In Section - Correct Create Links
-
-### `dashboard/test/ui/features/foundations/i18n.feature`
-
-Traced 10 of 16 scenario titles.
-
-- HoC tutorial in Arabic (RTL)
-- Frozen tutorial in Arabic (RTL)
-- Minecraft:Agent tutorial in Arabic (RTL)
-- Translated function names in Arabic
-- Toolbox Categories in Arabic (RTL)
-- Pixelation Widget long and short instructions in Spanish
 
 ### `dashboard/test/ui/features/foundations/markdown_rendering.feature`
 

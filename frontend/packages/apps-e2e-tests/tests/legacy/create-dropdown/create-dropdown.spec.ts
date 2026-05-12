@@ -19,6 +19,8 @@ import {expect, test} from '../../shared/fixtures';
  * the only way to clear it.  Young students created without a `us_state` hit
  * this on first visit to /home; Cucumber bypassed it because Selenium does not
  * enforce actionability (overlapping-element) checks.
+ *
+ * @param page - Playwright page
  */
 async function dismissSchoolInfoInterstitialIfPresent(
   page: Page,
@@ -34,6 +36,10 @@ async function dismissSchoolInfoInterstitialIfPresent(
 }
 
 test.describe('Create dropdown in header', () => {
+  /**
+   * Source: dashboard/test/ui/features/foundations/create_dropdown.feature
+   * Scenario: Create Dropdown does NOT show on level pages
+   */
   test(
     'create_menu does not show on level pages',
     {tag: '@no_mobile'},
@@ -51,6 +57,10 @@ test.describe('Create dropdown in header', () => {
     },
   );
 
+  /**
+   * Source: dashboard/test/ui/features/foundations/create_dropdown.feature
+   * Scenario: Teacher - Correct Create Links
+   */
   test(
     'teacher: create dropdown shows expected project types',
     {tag: '@no_mobile'},
@@ -74,6 +84,10 @@ test.describe('Create dropdown in header', () => {
     },
   );
 
+  /**
+   * Source: dashboard/test/ui/features/foundations/create_dropdown.feature
+   * Scenario: Student, Age 13+ - Correct Create Links
+   */
   test(
     'student age 13+: create dropdown shows expected project types',
     {tag: '@no_mobile'},
@@ -97,6 +111,10 @@ test.describe('Create dropdown in header', () => {
     },
   );
 
+  /**
+   * Source: dashboard/test/ui/features/foundations/create_dropdown.feature
+   * Scenario: Young Student, Not in Section - Correct Create Links
+   */
   test(
     'young student not in section: restricted project types',
     {tag: '@no_mobile'},
@@ -119,6 +137,10 @@ test.describe('Create dropdown in header', () => {
     },
   );
 
+  /**
+   * Source: dashboard/test/ui/features/foundations/create_dropdown.feature
+   * Scenario: Young Student, In Section - Correct Create Links
+   */
   test(
     'young student in section: unlocked project types match teacher/13+ set',
     {tag: '@no_mobile'},
