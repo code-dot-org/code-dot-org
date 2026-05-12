@@ -12,8 +12,8 @@ This inventory ignores `Migration Status` markers. A Cucumber feature is treated
 | Playwright spec files                                       |   125 |
 | Feature files referenced by Playwright                      |   164 |
 | Feature files with no Playwright source-path reference      |   107 |
-| Referenced feature files with all scenario titles traceable |    66 |
-| Referenced feature files with some untraced scenario titles |    76 |
+| Referenced feature files with all scenario titles traceable |    67 |
+| Referenced feature files with some untraced scenario titles |    75 |
 | Referenced feature files needing scenario-level audit       |    22 |
 | Playwright specs with no Cucumber source-path reference     |     1 |
 
@@ -198,25 +198,10 @@ This inventory ignores `Migration Status` markers. A Cucumber feature is treated
 
 These feature files have at least one Playwright source-path reference, but not every Cucumber scenario title was found in Playwright comments or single-source spec test titles. Some may be ported under renamed test titles; inspect before porting.
 
-### `dashboard/test/ui/features/platform/policy_compliance/parental_permission.feature`
-
-Traced 0 of 6 scenario titles.
-
-- New under 13 account should be able to send a parental request.
-- New under 13 account should be able to provide state and see lockout page to send parental request.
-- New under 13 account should be able to resend the email
-- New under 13 account should be able to send a different email
-- Student should not be able to enter their own email as their parent's email
-- Student should be able to enter their parent's email if their parent created their account
-
 ### `dashboard/test/ui/features/platform/policy_compliance/policy_compliance.feature`
 
-Traced 0 of 7 scenario titles.
+Traced 4 of 7 scenario titles.
 
-- New under 13 account should be able to elect to sign out at the lockout.
-- Existing under 13 account in Colorado should not be locked out.
-- Teacher should be able to connect a third-party account even without a state specified
-- Student should not be able to connect a third-party account until their account is unlocked
 - Sponsored student should not be able to add a personal email on an account until providing a state
 - Sponsored student should not be able to add a personal email when they supply a policy state
 - Sponsored student is able to add a personal email on an unlocked account

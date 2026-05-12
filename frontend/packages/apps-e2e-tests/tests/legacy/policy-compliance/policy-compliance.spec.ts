@@ -17,6 +17,10 @@ import {expect, test} from '../../shared/fixtures';
  * Anonymous; no authentication required — accounts are created fresh per test.
  */
 
+/**
+ * Source: dashboard/test/ui/features/platform/policy_compliance/policy_compliance.feature
+ * Scenario: New under 13 account should be able to elect to sign out at the lockout.
+ */
 test(
   'new under-13 Colorado student after CAP start is redirected to /lockout',
   {tag: '@no_mobile'},
@@ -41,6 +45,10 @@ test(
   },
 );
 
+/**
+ * Source: dashboard/test/ui/features/platform/policy_compliance/policy_compliance.feature
+ * Scenario: Existing under 13 account in Colorado should not be locked out.
+ */
 test(
   'existing under-13 Colorado student before CAP start can access /home',
   {tag: '@no_mobile'},
@@ -58,6 +66,10 @@ test(
   },
 );
 
+/**
+ * Source: dashboard/test/ui/features/platform/policy_compliance/policy_compliance.feature
+ * Scenario: Teacher should be able to connect a third-party account even without a state specified
+ */
 test(
   'teacher after CAP start can connect a third-party account',
   {tag: '@no_mobile'},
@@ -77,15 +89,14 @@ test(
   },
 );
 
+/**
+ * Source: dashboard/test/ui/features/platform/policy_compliance/policy_compliance.feature
+ * Scenario: Student should not be able to connect a third-party account until their account is unlocked
+ */
 test(
   'under-13 Colorado student before CAP start: connect buttons locked until parental permission granted',
   {tag: '@no_mobile'},
   async ({page}) => {
-    // Chromium: CAP lockout connect-buttons flaky under parallel run; passes alone.
-    test.fixme(
-      true,
-      'TODO: CAP lockout connect buttons locked check flaky on chromium under parallel run; timing issue with mockCapLockoutPhase or button state',
-    );
     await mockCapLockoutPhase(page);
     await createCapStudent(page, {
       young: true,

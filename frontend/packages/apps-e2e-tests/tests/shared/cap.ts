@@ -77,7 +77,7 @@ export async function createCapStudent(
   const rand = Math.random().toString(36).slice(2, 8);
   const email = `cap_student_${ts}_${rand}@test.xx`;
   const password = sso ? undefined : `CapPass${ts}`;
-  const displayName = `CapStudent${ts}`;
+  const displayName = `CapStudent${ts}${rand}`;
 
   const payload: CreateUserPayload = {
     user_type: 'student',
@@ -142,7 +142,7 @@ export async function createCapTeacher(
   const rand = Math.random().toString(36).slice(2, 8);
   const email = `cap_teacher_${ts}_${rand}@test.xx`;
   const password = `CapTeacherPass${ts}`;
-  const displayName = `CapTeacher${ts}`;
+  const displayName = `CapTeacher${ts}${rand}`;
 
   const payload: CreateUserPayload = {
     user_type: 'teacher',
@@ -214,7 +214,7 @@ export async function createCapSponsoredStudent(
     email: teacherEmail,
     password: teacherPassword,
     password_confirmation: teacherPassword,
-    name: `CapTeacher${ts}`,
+    name: `CapTeacher${ts}${rand}`,
     age: '21+',
     sign_in_count: 2,
     terms_of_service_version: '1',
@@ -263,7 +263,7 @@ export async function createCapSponsoredStudent(
   // Build sponsored student payload (no email/password).
   const studentTs = Date.now();
   const studentRand = Math.random().toString(36).slice(2, 8);
-  const displayName = `CapSponsored${studentTs}`;
+  const displayName = `CapSponsored${studentTs}${studentRand}`;
 
   const studentPayload: CreateUserPayload = {
     user_type: 'student',
@@ -304,7 +304,6 @@ export async function createCapSponsoredStudent(
     );
   }
 
-  void studentRand; // suppress unused-var lint
   return {displayName};
 }
 

@@ -9,6 +9,10 @@ import {expect, test} from '../../shared/fixtures';
  */
 
 test.describe('Parental permission — /lockout page flow', () => {
+  /**
+   * Source: dashboard/test/ui/features/platform/policy_compliance/parental_permission.feature
+   * Scenario: New under 13 account should be able to send a parental request.
+   */
   test(
     'new under-13 Colorado student can submit a parental permission request',
     {tag: '@no_mobile'},
@@ -67,6 +71,10 @@ test.describe('Parental permission — /lockout page flow', () => {
     },
   );
 
+  /**
+   * Source: dashboard/test/ui/features/platform/policy_compliance/parental_permission.feature
+   * Scenario: New under 13 account should be able to provide state and see lockout page to send parental request.
+   */
   test(
     'student without state sees interstitial, picks Colorado, then sees lockout',
     {tag: '@no_mobile'},
@@ -113,6 +121,10 @@ test.describe('Parental permission — /lockout page flow', () => {
     },
   );
 
+  /**
+   * Source: dashboard/test/ui/features/platform/policy_compliance/parental_permission.feature
+   * Scenario: New under 13 account should be able to resend the email
+   */
   test(
     'student can resend the parental permission email',
     {tag: '@no_mobile'},
@@ -148,6 +160,10 @@ test.describe('Parental permission — /lockout page flow', () => {
     },
   );
 
+  /**
+   * Source: dashboard/test/ui/features/platform/policy_compliance/parental_permission.feature
+   * Scenario: New under 13 account should be able to send a different email
+   */
   test(
     'student can update the parent email address',
     {tag: '@no_mobile'},
@@ -196,6 +212,10 @@ test.describe('Parental permission — /lockout page flow', () => {
     },
   );
 
+  /**
+   * Source: dashboard/test/ui/features/platform/policy_compliance/parental_permission.feature
+   * Scenario: Student should not be able to enter their own email as their parent's email
+   */
   test(
     'student cannot enter their own email as the parent email',
     {tag: '@no_mobile'},
@@ -220,6 +240,10 @@ test.describe('Parental permission — /lockout page flow', () => {
     },
   );
 
+  /**
+   * Source: dashboard/test/ui/features/platform/policy_compliance/parental_permission.feature
+   * Scenario: Student should be able to enter their parent's email if their parent created their account
+   */
   test(
     'student whose account was parent-created can enter parent email (same as own)',
     {tag: '@no_mobile'},
