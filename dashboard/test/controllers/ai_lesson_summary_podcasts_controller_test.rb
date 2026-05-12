@@ -61,6 +61,16 @@ class AiLessonSummaryPodcastsControllerTest < ActionController::TestCase
   # Helper integration tests
   # *****
 
+  test 'generate_podcasts_by_unit returns not_found for missing unit_id' do
+    sign_in @teacher
+
+    DCDO.stubs(:get).with('ai-lesson-summary-podcasts', false).returns(true)
+
+    post :generate_podcasts_by_unit, params: {unit_id: 0}
+
+    assert_response :not_found
+  end
+
   test 'generate_podcasts_by_unit returns forbidden for non-AIF units' do
     sign_in @teacher
 
@@ -83,7 +93,7 @@ class AiLessonSummaryPodcastsControllerTest < ActionController::TestCase
 
     # Create a unit with lessons that have and don't have lesson plans
     unit_with_mixed_lessons = create(:script)
-    unit_with_mixed_lessons.curriculum_umbrella = 'AIF'
+    unit_with_mixed_lessons.curriculum_umbrella = Curriculum::SharedCourseConstants::CURRICULUM_UMBRELLA.foundations_of_cs
     unit_with_mixed_lessons.save!
 
     lesson_group = create(:lesson_group, script: unit_with_mixed_lessons)

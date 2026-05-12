@@ -12,7 +12,7 @@ module AiLessonSummaryPodcastsHelper
     end
     filename = PODCAST_FOLDER + 'lesson_' + lesson_id.to_s + '_podcast.mp3'
 
-    if credits_available && !AWS::S3.exists_in_bucket(PODCAST_BUCKET, filename)
+    if script && credits_available && !AWS::S3.exists_in_bucket(PODCAST_BUCKET, filename)
       podcast = get_podcast_from_script(script)
       AWS::S3.upload_to_bucket(PODCAST_BUCKET, filename, podcast, no_random: true)
     end

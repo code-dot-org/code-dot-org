@@ -13,29 +13,21 @@ class AiLessonSummaryPodcastsController < ApplicationController
   end
 
   def generate_podcasts_by_unit
-    if current_user && DCDO.get('ai-lesson-summary-podcasts', false)
-      unit = Unit.find(params[:unit_id])
+    return head :forbidden unless DCDO.get('ai-lesson-summary-podcasts', false)
 
-      # AI Podcasts are currently only available in AIF sections
-      if unit.curriculum_umbrella == 'AIF'
-        lesson_ids = []
-        unit.lessons.each do |lesson|
-          if lesson.has_lesson_plan
-            lesson_ids << lesson.id
-          end
-        end
-        request = {
-          user_id: current_user.id,
-          lesson_ids: lesson_ids,
-          unit_id: unit.id
-        }
-        AiLessonSummaryPodcastsJob.perform_later(request: request)
-      else
-        head :forbidden
-      end
-    else
-      head :forbidden
-    end
+    unit = Unit.find_by(id: podcast_params[:unit_id])
+    return head :not_found unless unit
+
+    # AI Podcasts are currently only available in AIF sections
+    return head :forbidden unless unit.foundations_of_cs?
+
+    lesson_ids = unit.lessons.select(&:has_lesson_plan).map(&:id)
+    request = {
+      user_id: current_user.id,
+      lesson_ids: lesson_ids,
+      unit_id: unit.id
+    }
+    AiLessonSummaryPodcastsJob.perform_later(request: request)
   end
 
   private def podcast_params

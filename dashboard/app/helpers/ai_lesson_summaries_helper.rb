@@ -47,13 +47,10 @@ module AiLessonSummariesHelper
       ).where.not(script: nil)&.first
       new_script = if existing_script
                      existing_script.script
-                   else
-                     if credits_available
-                       JSON.parse(generate_lesson_summary(lesson_id, user_id, AiSystemPrompts::LessonSummariesSystemPromptHelper::RESPONSE_FORMATS[:PODCAST_SCRIPT])[:json])['podcast_script']
-                     end
+                   elsif credits_available
+                     JSON.parse(generate_lesson_summary(lesson_id, user_id, AiSystemPrompts::LessonSummariesSystemPromptHelper::RESPONSE_FORMATS[:PODCAST_SCRIPT])[:json])['podcast_script']
                    end
     end
-
     summary_record.update!(lesson_summary: new_lesson_summary, script: new_script)
     return summary_record
   end

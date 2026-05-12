@@ -462,6 +462,18 @@ class AiLessonSummaryPodcastsHelperTest < ActionView::TestCase
     AiLessonSummaryPodcastsHelper.create_and_save_to_s3(42, 1)
   end
 
+  test "create_and_save_to_s3 skips upload when script is nil" do
+    mock_client = mock('client')
+    mock_client.stubs(:available_credits).returns(true)
+    AiLessonSummaryPodcastsHelper.stubs(:client).returns(mock_client)
+
+    AiLessonSummariesHelper.stubs(:retrieve_and_save_ai_lesson_summary).with(42, 1, true, true).
+      returns({script: nil})
+    AWS::S3.expects(:upload_to_bucket).never
+
+    AiLessonSummaryPodcastsHelper.create_and_save_to_s3(42, 1)
+  end
+
   test "create_and_save_to_s3 skips upload when file already exists in S3" do
     mock_client = mock('client')
     mock_client.stubs(:available_credits).returns(true)
