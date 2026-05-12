@@ -24,6 +24,7 @@ import {
 import {getStore} from '@cdo/apps/code-studio/redux';
 import initResponsive from '@cdo/apps/code-studio/responsive';
 import {initHamburger} from '@cdo/apps/hamburger/hamburger.js';
+import SectionMessageListener from '@cdo/apps/sectionMessages/SectionMessageListener';
 import GDPRDialog from '@cdo/apps/templates/GDPRDialog';
 import {createReactRoot} from '@cdo/apps/util/createReactRoot';
 // disable import/order rule to import consoleShim after setting store.
@@ -146,3 +147,17 @@ initHamburger();
 initSigninState(userType, under13);
 initResponsive();
 injectFontAwesome();
+
+// Mount the SectionMessageListener for signed-in students so they receive
+// realtime broadcast messages from their teacher on any dashboard page.
+if (userType === 'student') {
+  $(document).ready(function () {
+    let host = document.getElementById('section-message-listener-root');
+    if (!host) {
+      host = document.createElement('div');
+      host.id = 'section-message-listener-root';
+      document.body.appendChild(host);
+    }
+    createReactRoot(<SectionMessageListener />, host);
+  });
+}

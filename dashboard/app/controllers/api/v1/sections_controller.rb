@@ -378,6 +378,44 @@ class Api::V1::SectionsController < Api::V1::JSONApiController
     render json: {result: 'invalid ai_chat_access_level'}, status: :bad_request
   end
 
+  # POST /api/v1/sections/<id>/broadcast_message
+  # Send a realtime message to every student in the section, optionally with
+  # a URL the student can click to open in a new tab. Fire-and-forget: nothing
+  # is persisted; students who are not currently subscribed will not see it.
+  MESSAGE_MAX_LEN = 500
+  def broadcast_message
+    message = params[:message].to_s.strip
+    link = params[:link].to_s.strip.presence
+
+    return render json: {result: 'message_required'}, status: :bad_request if message.empty?
+    return render json: {result: 'message_too_long'}, status: :bad_request if message.length > MESSAGE_MAX_LEN
+    return render json: {result: 'invalid_link'}, status: :bad_request if link && !valid_broadcast_link?(link)
+
+    SectionMessageChannel.broadcast(
+      @section.id,
+      {
+        type: 'section_message',
+        section_id: @section.id,
+        section_name: @section.name,
+        teacher_name: current_user.name,
+        message: message,
+        link: link,
+        sent_at: Time.now.iso8601,
+      }
+    )
+
+    render json: {result: 'success'}
+  end
+
+  # Permit only http(s) URLs for broadcast links so a teacher cannot push
+  # javascript: or data: URLs into a student's browser.
+  private def valid_broadcast_link?(link)
+    uri = URI.parse(link)
+    uri.is_a?(URI::HTTP) || uri.is_a?(URI::HTTPS)
+  rescue URI::InvalidURIError
+    false
+  end
+
   private def find_follower
     unless current_user
       render_404

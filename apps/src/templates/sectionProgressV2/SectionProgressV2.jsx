@@ -1,4 +1,5 @@
-import {Typography} from '@mui/material';
+import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
+import {Button as MuiButton, Typography} from '@mui/material';
 import PropTypes from 'prop-types';
 import React from 'react';
 import {connect} from 'react-redux';
@@ -24,6 +25,7 @@ import {
   getCurrentUnitData,
   loadExpandedLessonsFromLocalStorage,
 } from './sectionProgressRedux';
+import SendSectionMessageDialog from './SendSectionMessageDialog';
 
 import styles from './progress-table-v2.module.scss';
 
@@ -41,6 +43,7 @@ function SectionProgressV2({
   loadExpandedLessonsFromLocalStorage,
 }) {
   const params = useParams();
+  const [isMessageDialogOpen, setIsMessageDialogOpen] = React.useState(false);
   React.useEffect(() => {
     loadExpandedLessonsFromLocalStorage(scriptId, sectionId);
     analyticsReporter.sendEvent(EVENTS.PROGRESS_V2_VIEW, {
@@ -143,10 +146,29 @@ function SectionProgressV2({
 
           <UnitSelectorV2 className={styles.titleUnitSelectorDropdown} />
           <DownloadProgressCsv isLoading={isLoading} />
+          <MuiButton
+            variant="outlined"
+            color="primary"
+            size="small"
+            disabled={!sectionId}
+            onClick={() => setIsMessageDialogOpen(true)}
+            startIcon={
+              <FontAwesomeV6Icon iconName="bullhorn" iconStyle="solid" />
+            }
+            sx={{marginLeft: 1, marginRight: 0.5, textTransform: 'none'}}
+          >
+            Message students
+          </MuiButton>
           <MoreOptionsDropdown />
         </Typography>
       </div>
       <ProgressTableV2 isSkeleton={isLoading} />
+      {isMessageDialogOpen && sectionId && (
+        <SendSectionMessageDialog
+          sectionId={sectionId}
+          onClose={() => setIsMessageDialogOpen(false)}
+        />
+      )}
     </div>
   );
 }

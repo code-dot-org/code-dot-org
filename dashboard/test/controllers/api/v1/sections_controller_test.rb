@@ -1580,6 +1580,72 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
     assert_response :bad_request
   end
 
+  test 'broadcast_message: teacher can broadcast a message to their section' do
+    sign_in @teacher
+    SectionMessageChannel.expects(:broadcast).with(
+      @section.id,
+      has_entries(
+        type: 'section_message',
+        section_id: @section.id,
+        message: 'Stop and look at the board',
+        link: nil
+      )
+    )
+    post :broadcast_message, params: {id: @section.id, message: 'Stop and look at the board'}
+    assert_response :success
+  end
+
+  test 'broadcast_message: teacher can include an optional https link' do
+    sign_in @teacher
+    SectionMessageChannel.expects(:broadcast).with(
+      @section.id,
+      has_entries(link: 'https://example.com/detour')
+    )
+    post :broadcast_message, params: {id: @section.id, message: 'Quick detour', link: 'https://example.com/detour'}
+    assert_response :success
+  end
+
+  test 'broadcast_message: rejects javascript: links' do
+    sign_in @teacher
+    SectionMessageChannel.expects(:broadcast).never
+    post :broadcast_message, params: {id: @section.id, message: 'm', link: 'javascript:alert(1)'}
+    assert_response :bad_request
+  end
+
+  test 'broadcast_message: rejects empty messages' do
+    sign_in @teacher
+    SectionMessageChannel.expects(:broadcast).never
+    post :broadcast_message, params: {id: @section.id, message: '   '}
+    assert_response :bad_request
+  end
+
+  test 'broadcast_message: rejects overly long messages' do
+    sign_in @teacher
+    SectionMessageChannel.expects(:broadcast).never
+    post :broadcast_message, params: {id: @section.id, message: 'x' * 501}
+    assert_response :bad_request
+  end
+
+  test 'broadcast_message: a different teacher cannot broadcast to the section' do
+    sign_in @following_teacher
+    SectionMessageChannel.expects(:broadcast).never
+    post :broadcast_message, params: {id: @section.id, message: 'hi'}
+    assert_response :forbidden
+  end
+
+  test 'broadcast_message: a student cannot broadcast to the section' do
+    sign_in @student
+    SectionMessageChannel.expects(:broadcast).never
+    post :broadcast_message, params: {id: @section.id, message: 'hi'}
+    assert_response :forbidden
+  end
+
+  test 'broadcast_message: unauthenticated callers get forbidden' do
+    SectionMessageChannel.expects(:broadcast).never
+    post :broadcast_message, params: {id: @section.id, message: 'hi'}
+    assert_response :forbidden
+  end
+
   test 'valid_course_offerings includes only published courses' do
     sign_in @teacher
     get :valid_course_offerings, params: {login_type: Section::LOGIN_TYPE_EMAIL}

@@ -1,0 +1,55 @@
+@import '@code-dot-org/component-library-styles/colors.css';
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-top: 8px;
+  text-align: left;
+
+  // Override MUI TextField defaults — the field text was rendering at the
+  // h2-ish size inherited from the Dialog theme, which dwarfs the form.
+  :global(.MuiInputBase-input),
+  :global(.MuiInputBase-inputMultiline) {
+    font-size: 14px;
+    line-height: 1.4;
+  }
+
+  :global(.MuiInputBase-input)::placeholder,
+  :global(.MuiInputBase-inputMultiline)::placeholder {
+    font-size: 14px;
+    opacity: 0.6;
+  }
+}
+
+.fieldLabel {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 6px;
+  color: var(--text-neutral-primary);
+}
+
+.optionalNote {
+  font-weight: 400;
+  color: var(--text-neutral-secondary);
+  margin-left: 4px;
+}
+
+.counter {
+  margin-top: 4px;
+  font-size: 12px;
+  color: var(--text-neutral-secondary);
+  text-align: right;
+}
+
+.helper {
+  margin-top: 4px;
+  font-size: 12px;
+  color: var(--text-neutral-secondary);
+}
+
+.error {
+  margin-top: 8px;
+  font-size: 13px;
+  color: var(--text-status-error);
+}

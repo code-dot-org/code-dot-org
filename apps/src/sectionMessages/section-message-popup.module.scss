@@ -1,0 +1,43 @@
+@import '@code-dot-org/component-library-styles/colors.css';
+
+.body {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  text-align: left;
+  margin-top: 4px;
+}
+
+.message {
+  white-space: pre-wrap;
+  word-break: break-word;
+  font-size: 16px;
+  line-height: 1.4;
+  color: var(--text-neutral-primary);
+}
+
+.linkBox {
+  border: 1px solid var(--border-neutral-default);
+  background: var(--background-neutral-subdued);
+  border-radius: 6px;
+  padding: 8px 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.linkCaption {
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--text-neutral-secondary);
+}
+
+.linkUrl {
+  font-family: var(--font-family-mono, monospace);
+  font-size: 13px;
+  color: var(--text-link, #0072cd);
+  word-break: break-all;
+  text-decoration: underline;
+}
