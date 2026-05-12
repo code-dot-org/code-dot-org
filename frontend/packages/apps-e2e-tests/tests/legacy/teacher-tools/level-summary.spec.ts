@@ -82,6 +82,21 @@ async function showStudentNames(page: Page): Promise<void> {
   await expect(checkbox).toBeChecked({timeout: 10_000});
 }
 
+/**
+ * Enable AI insights using the visible switch label.
+ * The styled switch covers the checkbox input, matching the student-name
+ * switch behavior.
+ *
+ * @param page - Playwright page on a level summary
+ */
+async function showAiInsights(page: Page): Promise<void> {
+  const checkbox = page.getByRole('checkbox', {name: /Show AI Insights/});
+  if (!(await checkbox.isChecked())) {
+    await page.getByText('Show AI Insights', {exact: true}).click();
+  }
+  await expect(checkbox).toBeChecked({timeout: 10_000});
+}
+
 test.describe(
   'Level Summary — Check for Understanding summaries',
   {tag: '@no_mobile'},
@@ -235,11 +250,53 @@ test.describe(
      * Source: dashboard/test/ui/features/teacher_tools/level_summary.feature
      * Scenario: Check free response AI
      */
-    test.fixme('free response AI summary analysis', async () => {
-      test.fixme(
-        true,
-        'Source scenario is tagged @skip for flakiness. Source: dashboard/test/ui/features/teacher_tools/level_summary.feature Scenario: Check free response AI',
+    test('free response AI summary analysis', async ({page}) => {
+      const {teacherEmail, teacherPassword} =
+        await createTeacherAssociatedStudent(page, {
+          authorized: true,
+          studentName: 'Sally',
+        });
+
+      await submitFreeResponse(page, 'sample response');
+
+      await signIn(page, teacherEmail, teacherPassword);
+      await page.goto(
+        '/courses/allthethingscourse/units/1/lessons/27/levels/1/summary',
       );
+      await page
+        .locator('#summary-container')
+        .waitFor({state: 'visible', timeout: 30_000});
+      await dismissTeacherPanel(page);
+
+      await showAiInsights(page);
+      const evaluateResponses = page.getByRole('button', {
+        name: 'Evaluate student responses',
+      });
+      await expect(evaluateResponses).toBeEnabled({timeout: 15_000});
+      await evaluateResponses.click();
+
+      await expect(
+        page.locator('#summary-container').locator('p', {
+          hasText: 'Proficient: 1',
+        }),
+      ).toBeVisible({timeout: 30_000});
+
+      await page.getByText('View detailed analysis', {exact: true}).click();
+      await expect(
+        page.locator('#summary-container').locator('p', {
+          hasText: 'Dummy data returned for testing purposes.',
+        }),
+      ).toBeVisible({timeout: 10_000});
+
+      await page.goto(
+        '/courses/allthethingscourse/units/1/lessons/27/levels/2/summary',
+      );
+      await page
+        .locator('#summary-container')
+        .waitFor({state: 'visible', timeout: 30_000});
+      await expect(
+        page.getByRole('checkbox', {name: /Show AI Insights/}),
+      ).not.toBeAttached();
     });
 
     /**
