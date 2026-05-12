@@ -12,8 +12,8 @@ This inventory ignores `Migration Status` markers. A Cucumber feature is treated
 | Playwright spec files                                       |   125 |
 | Feature files referenced by Playwright                      |   164 |
 | Feature files with no Playwright source-path reference      |   107 |
-| Referenced feature files with all scenario titles traceable |   109 |
-| Referenced feature files with some untraced scenario titles |    33 |
+| Referenced feature files with all scenario titles traceable |   111 |
+| Referenced feature files with some untraced scenario titles |    31 |
 | Referenced feature files needing scenario-level audit       |    22 |
 | Playwright specs with no Cucumber source-path reference     |     1 |
 
@@ -198,30 +198,10 @@ This inventory ignores `Migration Status` markers. A Cucumber feature is treated
 
 These feature files have at least one Playwright source-path reference, but not every Cucumber scenario title was found in Playwright comments or single-source spec test titles. Some may be ported under renamed test titles; inspect before porting.
 
-### `dashboard/test/ui/features/teacher_tools/level_summary.feature`
-
-Traced 1 of 8 scenario titles.
-
-- Free Response level 1
-- Free Response level 2
-- Free Response level 3
-- Multi level 1
-- Multi level 2
-- Check free response AI
-- Check for Understanding summaries eyes
-
-### `dashboard/test/ui/features/teacher_tools/level_types/curriculum_reference.feature`
-
-Traced 0 of 1 scenario titles.
-
-- Load iframe then take screenshot
-
 ### `dashboard/test/ui/features/teacher_tools/level_types/free_response_contained_levels.feature`
 
-Traced 2 of 6 scenario titles.
+Traced 4 of 6 scenario titles.
 
-- Applab with free response contained level
-- Javalab with free response contained level
 - Authorized Teacher on Maze with free response contained level
 - Authorized Teacher on App Lab with free response contained level
 
