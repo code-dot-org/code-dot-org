@@ -1,0 +1,28 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 52,
+  "created_at": "2026-05-10T07:32:37.000Z",
+  "level_num": "custom",
+  "user_id": 18603,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "> Use 4–6 sentences to answer all three questions. Be specific to the scenario you chose.\r\n>  \r\n> 1. Briefly describe the **filter → sort → map** pipeline you built today (For You Page, Moderator Bot, or Ad Transparency). What did each step do?  \r\n> 2. Give one concrete example of how a choice you made in your **sort** or **map** step could affect who gets seen or how users feel about the results.\r\n> 3. If this pipeline were used in a real app, what would you need to check before deploying it?",
+    "stay_on_level_after_submit": "false",
+    "allow_user_uploads": "false",
+    "submittable": "false",
+    "peer_reviewable": "false",
+    "optional": "false",
+    "allow_multiple_attempts": "true",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "title": "Reflection: Pipeline Fairness",
+    "height": "100",
+    "placeholder": "enter response here...",
+    "name_suffix": "_2026"
+  },
+  "audit_log": "[{\"changed_at\":\"2026-05-10T07:32:37.565+00:00\",\"changed\":[\"cloned from \\\"building-data-driven-systems-lesson10-level3-frq-test_2025-pilot_2026\\\"\"],\"cloned_from\":\"building-data-driven-systems-lesson10-level3-frq-test_2025-pilot_2026\"},{\"changed_at\":\"2026-05-10 07:34:18 +0000\",\"changed\":[\"long_instructions\",\"teacher_markdown\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</FreeResponse>
