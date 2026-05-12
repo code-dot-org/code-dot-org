@@ -1,0 +1,16 @@
+{
+  "hooks": {
+    "PostToolUse": [
+      {
+        "matcher": "Write|Edit|MultiEdit",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "f=$(grep -oE '\"file_path\":\"[^\"]+\"' | head -1 | sed 's/.*\"file_path\":\"//; s/\"$//'); if echo \"$f\" | grep -qE '/(apps|frontend)/.*\\.(tsx|jsx|ts|js)$'; then printf '%s' '{\"hookSpecificOutput\": {\"hookEventName\": \"PostToolUse\", \"additionalContext\": \"Frontend file edited under apps/ or frontend/. If this file is a React component or component-related code, invoke the accessibility-audit skill (WCAG AA, keyboard nav, screen reader) and the security-audit skill (XSS, FERPA leaks to third-party services, hardcoded secrets) against it before completing your turn. Skip only if the file is clearly not a component (pure types, build config, etc.).\"}}'; elif echo \"$f\" | grep -qE '/(dashboard|lib)/.*\\.rb$'; then printf '%s' '{\"hookSpecificOutput\": {\"hookEventName\": \"PostToolUse\", \"additionalContext\": \"Ruby file edited under dashboard/ or lib/. Invoke the security-audit skill against it before completing your turn: check for SQL injection, missing CanCanCan authorization, FERPA data leaks to third-party services (OpenAI/Gemini/Statsig/Sentry), sensitive data in logs, and path traversal.\"}}'; fi",
+            "timeout": 5
+          }
+        ]
+      }
+    ]
+  }
+}
