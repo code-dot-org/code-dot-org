@@ -89,7 +89,7 @@ class RouterTest < Minitest::Test
   end
 
   def test_localized_markdown
-    env 'cdo.locale', 'fr-FR'
+    I18n.locale = 'fr-FR'
     path = '/test_md'
     resp = get(path)
     assert_equal 200, resp.status, path
@@ -97,7 +97,7 @@ class RouterTest < Minitest::Test
   end
 
   def test_localized_markdown_fallback
-    env 'cdo.locale', 'es-ES'
+    I18n.locale = 'es-ES'
     path = '/test_md'
     resp = get(path)
     assert_equal 200, resp.status, path
