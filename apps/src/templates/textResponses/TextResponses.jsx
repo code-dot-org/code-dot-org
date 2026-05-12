@@ -1,10 +1,10 @@
+import {Button as MuiButton, Typography} from '@mui/material';
 import {uniq, map, filter} from 'lodash';
 import PropTypes from 'prop-types';
 import React, {useState, useEffect, useRef, useCallback} from 'react';
 import {CSVLink} from 'react-csv';
 import {connect} from 'react-redux';
 
-import Button from '@cdo/apps/legacySharedComponents/Button';
 import {
   getSelectedCourseName,
   getSelectedUnitPosition,
@@ -13,9 +13,6 @@ import UnitSelectorV2 from '@cdo/apps/templates/teacherDashboardShared/UnitSelec
 import {loadTextResponsesFromServer} from '@cdo/apps/templates/textResponses/textReponsesDataApi';
 import TextResponsesLessonSelector from '@cdo/apps/templates/textResponses/TextResponsesLessonSelector';
 import i18n from '@cdo/locale';
-
-import {h3Style} from '../../legacySharedComponents/Headings';
-import color from '../../util/color';
 
 import TextResponsesTable from './TextResponsesTable';
 
@@ -92,7 +89,9 @@ function TextResponses({sectionId, scriptId, courseVersionName, unitPosition}) {
   return (
     <div>
       <div style={styles.unitSelection}>
-        <div style={{...h3Style, ...styles.header}}>{i18n.selectACourse()}</div>
+        <Typography variant="h3" sx={styles.header}>
+          {i18n.selectACourse()}
+        </Typography>
         <UnitSelectorV2 v1Styles />
       </div>
       {filteredResponses.length > 0 && (
@@ -108,11 +107,14 @@ function TextResponses({sectionId, scriptId, courseVersionName, unitPosition}) {
             headers={CSV_HEADERS}
           >
             {/* onClick functionality for Button handled by CSVLink */}
-            <Button
-              text={i18n.downloadCSV()}
+            <MuiButton
+              variant="outlined"
               onClick={() => {}}
-              color={Button.ButtonColor.white}
-            />
+              color="secondary"
+              size="small"
+            >
+              {i18n.downloadCSV()}
+            </MuiButton>
           </CSVLink>
         </div>
       )}
@@ -138,9 +140,6 @@ TextResponses.propTypes = {
 };
 
 const styles = {
-  header: {
-    marginBottom: 0,
-  },
   unitSelection: {
     marginTop: 0,
   },
@@ -148,7 +147,7 @@ const styles = {
     height: 47,
     padding: PADDING,
     marginTop: 10,
-    backgroundColor: color.table_header,
+    backgroundColor: 'var(--background-neutral-tertiary)',
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'space-between',

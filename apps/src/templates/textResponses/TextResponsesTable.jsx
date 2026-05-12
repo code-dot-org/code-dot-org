@@ -1,10 +1,11 @@
+import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
+import Link from '@code-dot-org/component-library/link';
 import orderBy from 'lodash/orderBy';
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 import * as Table from 'reactabular-table';
 import * as sort from 'sortabular';
 
-import FontAwesome from '@cdo/apps/legacySharedComponents/FontAwesome';
 import {nestedUnitUrlForStudent} from '@cdo/apps/templates/teacherDashboard/urlHelpers';
 import i18n from '@cdo/locale';
 
@@ -45,15 +46,15 @@ class TextResponsesTable extends Component {
 
     if (studentUrl) {
       return (
-        <a
+        <Link
           className="uitest-name-cell"
-          style={tableLayoutStyles.link}
+          size="s"
           href={studentUrl}
-          target="_blank"
-          rel="noopener noreferrer"
+          openInNewTab
+          external
         >
           {name}
-        </a>
+        </Link>
       );
     } else {
       return <span className="uitest-name-cell">{name}</span>;
@@ -70,14 +71,9 @@ class TextResponsesTable extends Component {
     return (
       <div>
         {clippedResponse}
-        <a
-          style={tableLayoutStyles.link}
-          href={url}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
+        <Link href={url} size="s" openInNewTab external>
           {i18n.seeFullResponse()}
-        </a>
+        </Link>
       </div>
     );
   };
@@ -214,10 +210,12 @@ class TextResponsesTable extends Component {
 
     if (isLoading) {
       return (
-        <FontAwesome
+        <FontAwesomeV6Icon
           id="uitest-spinner"
-          icon="spinner"
-          className="fa-pulse fa-3x"
+          iconName="spinner"
+          iconStyle="solid"
+          animationType="spin-pulse"
+          className="fa-3x"
         />
       );
     }
