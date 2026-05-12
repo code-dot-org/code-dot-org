@@ -1,5 +1,10 @@
-import {createTeacher, createStudent} from '../../shared/auth';
-import {test} from '../../shared/fixtures';
+import {
+  createSectionWithCourse,
+  createStudent,
+  createTeacher,
+  joinSection,
+} from '../../shared/auth';
+import {expect, test} from '../../shared/fixtures';
 
 /**
  * Course overview page — signed-out, student, teacher, and single-unit redirect paths.
@@ -7,8 +12,6 @@ import {test} from '../../shared/fixtures';
  * Source:
  *   dashboard/test/ui/features/teacher_tools/course_overview.feature
  *
- * The "student in section" scenario is skipped: it requires complex section
- * setup with course assignment and a second sign-in as the student.
  */
 
 const COURSE_URL = '/courses/ui-test-csp-2019';
@@ -40,12 +43,34 @@ test.describe('Course overview', () => {
       .waitFor({state: 'visible', timeout: 30_000});
   });
 
-  // Requires teacher to create a section with course assignment, then sign in
-  // as the student — multi-step auth flow not covered by a single-user helper.
-  test.fixme(
-    'student in section: overview page reflects section assignment',
-    async () => {},
-  );
+  /**
+   * Migration status: COMPLETED
+   * Source: course_overview.feature
+   * Scenario: Viewing course overview as a student in a section
+   *
+   * The Cucumber scenario assigns UI Test CSP to the teacher's section through
+   * the section settings UI, then signs in as the student and verifies the
+   * course overview loads. Section editor assignment is covered elsewhere, so
+   * this port uses the shared course-assigned section setup helper and keeps
+   * the assertion focused on the enrolled student's course overview.
+   */
+  test('student in section: overview page reflects section assignment', async ({
+    page,
+  }) => {
+    await createTeacher(page);
+    const {sectionCode} = await createSectionWithCourse(
+      page,
+      'ui-test-csp-2019',
+      1,
+    );
+    await createStudent(page);
+    await joinSection(page, sectionCode);
+
+    await page.goto(COURSE_URL);
+    await expect(page.locator('.uitest-CourseScript').first()).toBeVisible({
+      timeout: 30_000,
+    });
+  });
 
   test('single-unit course: /courses/<name> redirects to /units/1', async ({
     page,
