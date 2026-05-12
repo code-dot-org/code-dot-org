@@ -41,21 +41,15 @@ async function openManageAssetsDialog(page: Page): Promise<void> {
 test.describe('Manage Assets', {tag: '@no_mobile'}, () => {
   /**
    * Migration status: COMPLETED
-   * Source: manage_assets.feature — @no_firefox scenario
-   * "The manage assets dialog contains the option to record audio on Chrome"
+   * Source: dashboard/test/ui/features/star_labs/manage_assets.feature
+   * Scenario: The manage assets dialog contains the option to record audio on Chrome
    *
-   * Chrome (and Safari) expose the record-audio button; Firefox does not.
-   * Skip on Firefox rather than marking the whole describe.
+   * The source Cucumber scenario remains @no_firefox, but this Playwright
+   * assertion only checks that the record-audio entry point is visible.
    */
-  test('manage assets dialog has record audio button on Chrome', async ({
+  test('manage assets dialog has record audio button', async ({
     studentPage,
-    browserName,
   }) => {
-    test.skip(
-      browserName === 'firefox',
-      'record-audio button absent in Firefox',
-    );
-
     await studentPage.goto('/projects/gamelab/new');
     await studentPage
       .locator('#runButton')
@@ -70,9 +64,8 @@ test.describe('Manage Assets', {tag: '@no_mobile'}, () => {
 
   /**
    * Migration status: COMPLETED
-   * Source: manage_assets.feature
-   * "The manage assets dialog displays the audio preview, and toggles between
-   *  play and pause button."
+   * Source: dashboard/test/ui/features/star_labs/manage_assets.feature
+   * Scenario: The manage assets dialog displays the audio preview, and toggles between play and pause button.
    *
    * Upload test_audio.mp3 → row with filename visible → thumbnail visible →
    * play icon visible.

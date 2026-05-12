@@ -12,8 +12,8 @@ This inventory ignores `Migration Status` markers. A Cucumber feature is treated
 | Playwright spec files                                       |   125 |
 | Feature files referenced by Playwright                      |   164 |
 | Feature files with no Playwright source-path reference      |   107 |
-| Referenced feature files with all scenario titles traceable |    79 |
-| Referenced feature files with some untraced scenario titles |    63 |
+| Referenced feature files with all scenario titles traceable |    82 |
+| Referenced feature files with some untraced scenario titles |    60 |
 | Referenced feature files needing scenario-level audit       |    22 |
 | Playwright specs with no Cucumber source-path reference     |     1 |
 
@@ -198,35 +198,10 @@ This inventory ignores `Migration Status` markers. A Cucumber feature is treated
 
 These feature files have at least one Playwright source-path reference, but not every Cucumber scenario title was found in Playwright comments or single-source spec test titles. Some may be ported under renamed test titles; inspect before porting.
 
-### `dashboard/test/ui/features/star_labs/dance/save_for_share.feature`
-
-Traced 2 of 5 scenario titles.
-
-- Free play level saves when Remix is clicked
-- Project level saves when Share is clicked
-- Project level saves when Remix is clicked
-
-### `dashboard/test/ui/features/star_labs/droplet.feature`
-
-Traced 0 of 2 scenario titles.
-
-- Open editcode level and write some autocompleted, tooltipped code
-- Open editcode level and verify parameter autocomplete replaces quoted text
-
-### `dashboard/test/ui/features/star_labs/maker_projects.feature`
-
-Traced 0 of 3 scenario titles.
-
-- /projects/makerlab enables maker toolkit categories
-- /projects/makerlab/new enables maker toolkit categories
-- /projects/applab does not enable maker toolkit categories
-
 ### `dashboard/test/ui/features/star_labs/manage_assets.feature`
 
-Traced 0 of 4 scenario titles.
+Traced 2 of 4 scenario titles.
 
-- The manage assets dialog contains the option to record audio on Chrome
-- The manage assets dialog displays the audio preview, and toggles between play and pause button.
 - The manage assets dialog displays an image thumbnail and opens in a new tab when clicked
 - From WebLab, the manage assets dialog does not contain the option to record audio.
 

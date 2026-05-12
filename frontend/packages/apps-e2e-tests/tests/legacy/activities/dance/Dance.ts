@@ -27,6 +27,9 @@ export class Dance extends LegacyBlocklyLab {
   /** Project share button — `.project_share`. */
   readonly projectShareButton: Locator;
 
+  /** Project remix button — `.project_remix`. */
+  readonly projectRemixButton: Locator;
+
   /** Saved-state indicator — `.project_updated_at`. */
   readonly projectUpdatedAt: Locator;
 
@@ -45,6 +48,7 @@ export class Dance extends LegacyBlocklyLab {
     this.finishButton = page.locator('#finishButton');
     this.clearPuzzleHeader = page.locator('#clear-puzzle-header');
     this.projectShareButton = page.locator('.project_share');
+    this.projectRemixButton = page.locator('.project_remix');
     this.projectUpdatedAt = page.locator('.project_updated_at');
     this.aiModalHeader = page.locator('#ai-modal-header-area');
     this.aiUseButton = page.locator('#use-button');

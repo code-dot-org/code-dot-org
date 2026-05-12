@@ -90,8 +90,8 @@ test.describe('Droplet — ACE autocomplete', () => {
   /**
    * Migration status: COMPLETED
    *
-   * Source: droplet.feature — "Open editcode level and write some
-   * autocompleted, tooltipped code"
+   * Source: dashboard/test/ui/features/star_labs/droplet.feature
+   * Scenario: Open editcode level and write some autocompleted, tooltipped code
    *
    * Types "butto" to open the autocomplete popup, then uses ArrowDown
    * twice to navigate to "radioButton" and Enter to insert it.  The
@@ -137,8 +137,8 @@ test.describe('Droplet — ACE autocomplete', () => {
   /**
    * Migration status: COMPLETED
    *
-   * Source: droplet.feature — "Open editcode level and verify parameter
-   * autocomplete replaces quoted text"
+   * Source: dashboard/test/ui/features/star_labs/droplet.feature
+   * Scenario: Open editcode level and verify parameter autocomplete replaces quoted text
    *
    * Types `setProperty(` then a double-quote; ACE autocomplete fills in
    * `"screen1"` when Enter is pressed inside the string argument.

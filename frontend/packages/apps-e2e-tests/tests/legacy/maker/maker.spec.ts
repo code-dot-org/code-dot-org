@@ -16,7 +16,9 @@ import {expect, test} from '../../shared/fixtures';
  */
 test.describe('Maker projects — palette group', () => {
   /**
-   * Source: maker_projects.feature — "/projects/makerlab enables maker toolkit categories"
+   * Migration status: COMPLETED
+   * Source: dashboard/test/ui/features/star_labs/maker_projects.feature
+   * Scenario: /projects/makerlab enables maker toolkit categories
    */
   test(
     '/projects/makerlab shows Maker palette group',
@@ -40,7 +42,9 @@ test.describe('Maker projects — palette group', () => {
   );
 
   /**
-   * Source: maker_projects.feature — "/projects/makerlab/new enables maker toolkit categories"
+   * Migration status: COMPLETED
+   * Source: dashboard/test/ui/features/star_labs/maker_projects.feature
+   * Scenario: /projects/makerlab/new enables maker toolkit categories
    */
   test(
     '/projects/makerlab/new shows Maker palette group',
@@ -63,7 +67,9 @@ test.describe('Maker projects — palette group', () => {
   );
 
   /**
-   * Source: maker_projects.feature — "/projects/applab does not enable maker toolkit categories"
+   * Migration status: COMPLETED
+   * Source: dashboard/test/ui/features/star_labs/maker_projects.feature
+   * Scenario: /projects/applab does not enable maker toolkit categories
    */
   test(
     '/projects/applab does not show Maker palette group',

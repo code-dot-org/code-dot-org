@@ -9,6 +9,61 @@ import {Dance} from './Dance';
  */
 const stripVarIds = (xml: string) => xml.replace(/ id="[^"]+"/g, '');
 
+const DANCE_PROJECT_EDIT_URL = /\/projects\/dance\/[^/]+\/edit/;
+
+/**
+ * Remove the default "make a new cat" block from Dance Party level 13.
+ *
+ * @param dance - Dance Party page object on a free-play or project level
+ */
+async function resetAndDeleteDefaultCatBlock(dance: Dance): Promise<void> {
+  await expect(dance.clearPuzzleHeader).toBeVisible();
+  await dance.clearPuzzleHeader.click();
+  await dance.confirmStartOver();
+  // Remove block "5" (make a new cat) to create a non-default code state.
+  await dance.disposeBlock('5');
+}
+
+/**
+ * Navigate to a new Dance Party project and wait for the edit workspace.
+ *
+ * @param dance - Dance Party page object for the signed-in student page
+ */
+async function gotoNewDanceProject(dance: Dance): Promise<void> {
+  await dance.page.goto('/projects/dance/new');
+  await dance.page.waitForURL(DANCE_PROJECT_EDIT_URL, {timeout: 60_000});
+  await dance.waitForDancePage();
+}
+
+/**
+ * Navigate to the Dance Party free-play level without clearing the session.
+ *
+ * @param dance - Dance Party page object for the signed-in student page
+ */
+async function gotoDanceFreePlayLevelInCurrentSession(
+  dance: Dance,
+): Promise<void> {
+  await dance.page.goto(
+    '/courses/dance/units/1/lessons/1/levels/13?noautoplay=true',
+  );
+  await dance.waitForDancePage();
+}
+
+/**
+ * Reload the current Dance Party page and assert the workspace still matches.
+ *
+ * @param dance - Dance Party page object on the page to reload
+ * @param memorizedCode - normalized XML captured before the save trigger
+ */
+async function expectDanceCodeAfterReload(
+  dance: Dance,
+  memorizedCode: string,
+): Promise<void> {
+  await dance.page.reload();
+  await expect(dance.runButton).toBeVisible();
+  expect(stripVarIds(await dance.getBlockXML())).toBe(memorizedCode);
+}
+
 /**
  * Open the Dance Party share dialog and return the copied share URL.
  *
@@ -454,41 +509,97 @@ test.describe('Dance Party — lesson 37 — AI Modal eyes (level 4)', () => {
 test.describe('Dance Party — dance course — free play save (level 13)', () => {
   let dance: Dance;
 
-  test.beforeEach(async ({page}) => {
-    dance = new Dance(page);
-    await dance.gotoDanceCourseLevel(13);
-    await expect(dance.clearPuzzleHeader).toBeVisible();
-    await dance.clearPuzzleHeader.click();
-    await dance.confirmStartOver();
-    // Remove block "5" (make a new cat) to create a code state distinct from default.
-    await dance.disposeBlock('5');
-  });
-
   /**
    * Migration status: COMPLETED
    * Source: dashboard/test/ui/features/star_labs/dance/save_for_share.feature
    * Scenario: Free play level saves when Share is clicked
    */
-  test('saves when Share is clicked', {tag: '@no_mobile'}, async () => {
+  test('saves when Share is clicked', {tag: '@no_mobile'}, async ({page}) => {
+    dance = new Dance(page);
+    await dance.gotoDanceCourseLevel(13);
+    await resetAndDeleteDefaultCatBlock(dance);
+
     const memorizedCode = stripVarIds(await dance.getBlockXML());
     await dance.projectShareButton.click();
     await dance.waitForProjectSave();
-    await dance.page.reload();
-    await expect(dance.runButton).toBeVisible();
-    expect(stripVarIds(await dance.getBlockXML())).toBe(memorizedCode);
+    await expectDanceCodeAfterReload(dance, memorizedCode);
   });
+
+  /**
+   * Migration status: COMPLETED
+   * Source: dashboard/test/ui/features/star_labs/dance/save_for_share.feature
+   * Scenario: Free play level saves when Remix is clicked
+   */
+  test(
+    'saves when Remix is clicked',
+    {tag: '@no_mobile'},
+    async ({studentPage}) => {
+      dance = new Dance(studentPage);
+      await gotoDanceFreePlayLevelInCurrentSession(dance);
+      await resetAndDeleteDefaultCatBlock(dance);
+
+      const memorizedCode = stripVarIds(await dance.getBlockXML());
+      await dance.projectRemixButton.click();
+      await dance.page.waitForURL(DANCE_PROJECT_EDIT_URL, {timeout: 60_000});
+      await dance.waitForDancePage();
+      expect(stripVarIds(await dance.getBlockXML())).toBe(memorizedCode);
+    },
+  );
+
+  /**
+   * Migration status: COMPLETED
+   * Source: dashboard/test/ui/features/star_labs/dance/save_for_share.feature
+   * Scenario: Project level saves when Share is clicked
+   */
+  test(
+    'project level saves when Share is clicked',
+    {tag: '@no_mobile'},
+    async ({studentPage}) => {
+      dance = new Dance(studentPage);
+      await gotoNewDanceProject(dance);
+      await resetAndDeleteDefaultCatBlock(dance);
+
+      const memorizedCode = stripVarIds(await dance.getBlockXML());
+      await dance.projectShareButton.click();
+      await dance.waitForProjectSave();
+      await expectDanceCodeAfterReload(dance, memorizedCode);
+    },
+  );
+
+  /**
+   * Migration status: COMPLETED
+   * Source: dashboard/test/ui/features/star_labs/dance/save_for_share.feature
+   * Scenario: Project level saves when Remix is clicked
+   */
+  test(
+    'project level saves when Remix is clicked',
+    {tag: '@no_mobile'},
+    async ({studentPage}) => {
+      dance = new Dance(studentPage);
+      await gotoNewDanceProject(dance);
+      await resetAndDeleteDefaultCatBlock(dance);
+
+      const memorizedCode = stripVarIds(await dance.getBlockXML());
+      await dance.projectRemixButton.click();
+      await dance.page.waitForURL(DANCE_PROJECT_EDIT_URL, {timeout: 60_000});
+      await dance.waitForDancePage();
+      expect(stripVarIds(await dance.getBlockXML())).toBe(memorizedCode);
+    },
+  );
 
   /**
    * Migration status: COMPLETED
    * Source: dashboard/test/ui/features/star_labs/dance/save_for_share.feature
    * Scenario: Free play level saves when Finish is clicked
    */
-  test('saves when Finish is clicked', {tag: '@no_mobile'}, async () => {
+  test('saves when Finish is clicked', {tag: '@no_mobile'}, async ({page}) => {
+    dance = new Dance(page);
+    await dance.gotoDanceCourseLevel(13);
+    await resetAndDeleteDefaultCatBlock(dance);
+
     const memorizedCode = stripVarIds(await dance.getBlockXML());
     await dance.finishButton.click();
     await expect(dance.projectUpdatedAt).toContainText('Saved');
-    await dance.page.reload();
-    await expect(dance.runButton).toBeVisible();
-    expect(stripVarIds(await dance.getBlockXML())).toBe(memorizedCode);
+    await expectDanceCodeAfterReload(dance, memorizedCode);
   });
 });
