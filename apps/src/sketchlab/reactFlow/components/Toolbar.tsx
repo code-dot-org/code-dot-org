@@ -100,7 +100,7 @@ export default function Toolbar({
       aria-label="Canvas tools"
       aria-orientation="vertical"
     >
-      <Tooltip title="Undo (Ctrl+Z)" placement="right">
+      <Tooltip title="Undo" placement="right">
         {/* span wrapper required so Tooltip receives pointer events when button is disabled */}
         <span>
           <IconButton
@@ -115,7 +115,7 @@ export default function Toolbar({
           </IconButton>
         </span>
       </Tooltip>
-      <Tooltip title="Redo (Ctrl+Y)" placement="right">
+      <Tooltip title="Redo" placement="right">
         <span>
           <IconButton
             aria-label="Redo"
