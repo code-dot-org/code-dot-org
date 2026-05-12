@@ -2,6 +2,7 @@
 
 require 'uri'
 require 'cdo/i18n'
+require 'cdo/rack/response'
 
 module Middleware
   class I18n

@@ -6,6 +6,7 @@ require 'i18n'
 
 require 'cdo/global_edition'
 require 'cdo/i18n'
+require 'cdo/rack/response'
 require 'dynamic_config/dcdo'
 
 module Middleware
