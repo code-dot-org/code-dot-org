@@ -8,9 +8,9 @@ class SessionsControllerTest < ActionController::TestCase
     @request.env["devise.mapping"] = Devise.mappings[:user]
   end
 
-  test 'login error derives locale from I18n.locale' do
+  test 'login error derives locale from cdo.locale' do
     locale = 'es-ES'
-    I18n.locale = locale
+    @request.env['cdo.locale'] = locale
     post :create
     assert_select '.alert', I18n.t('devise.failure.not_found_in_database', locale: locale)
   end

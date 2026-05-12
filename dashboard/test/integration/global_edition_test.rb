@@ -210,9 +210,6 @@ class GlobalEditionTest < ActionDispatch::IntegrationTest
         let(:new_locale) {'en-US'}
 
         before do
-          cookies[:ge_region] = ge_region
-          cookies[:language_] = ge_region_locale
-
           params.merge!(extra_params)
         end
 
@@ -227,7 +224,7 @@ class GlobalEditionTest < ActionDispatch::IntegrationTest
               new_region: nil,
               new_locale:,
             }
-          )
+          ).once
 
           get_regional_page
 
@@ -244,7 +241,7 @@ class GlobalEditionTest < ActionDispatch::IntegrationTest
           must_respond_with 200
           _(request.fullpath).must_equal "#{international_page_path}?#{extra_params.to_query}"
 
-          _(ge_region_html_data).must_be_nil
+          _(request.locale).must_equal new_locale
           _(cookies[:language_]).must_equal new_locale
           _(page_lang).must_equal new_locale
         end
