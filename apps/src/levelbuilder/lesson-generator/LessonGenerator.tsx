@@ -147,6 +147,39 @@ const LessonGenerator: React.FC<LessonGeneratorProps> = ({lesson}) => {
     setLevelSpecs(specs => [...specs, newLevelSpec()]);
   }, []);
 
+  // Fetch + format the target project's source for the current channel
+  // id. Returns the formatted "=== path ===\n..." string suitable for a
+  // prompt, or undefined when the field is blank, the fetch fails, or
+  // the channel doesn't carry a MultiFileSource. Both the outline AI
+  // call and the per-level AI calls use this; we don't memoize because
+  // a fetch per click is cheap and avoids stale data after the user
+  // changes the channel id mid-session.
+  const loadTargetProject = useCallback(
+    async (onLog: (line: string) => void): Promise<string | undefined> => {
+      const id = projectChannelId.trim();
+      if (!id) return undefined;
+      try {
+        const raw = await loadProjectSources(id);
+        const formatted = formatTargetProject(raw);
+        if (formatted) {
+          onLog(`Loaded target project source from channel ${id}.`);
+          return formatted;
+        }
+        onLog(
+          `Channel ${id} returned no MultiFileSource; continuing without target context.`
+        );
+        return undefined;
+      } catch (err) {
+        const message = err instanceof Error ? err.message : String(err);
+        onLog(
+          `Warning: couldn't load target project ${id}: ${message}. Continuing.`
+        );
+        return undefined;
+      }
+    },
+    [projectChannelId]
+  );
+
   const handleGenerateOutline = useCallback(async () => {
     if (!outline.trim()) {
       setOutlineError('Type an outline first.');
@@ -155,7 +188,19 @@ const LessonGenerator: React.FC<LessonGeneratorProps> = ({lesson}) => {
     setOutlineError(null);
     setIsOutlining(true);
     try {
-      const planned = await generateLessonOutline(outline.trim());
+      // Outline-phase fetch errors surface in outlineError too, since the
+      // user is right there watching the outline button. Pass-through to
+      // setOutlineError keeps the wording consistent; non-fatal results
+      // just produce no target context for this run.
+      const targetProject = await loadTargetProject(line => {
+        if (line.startsWith('Warning:')) {
+          setOutlineError(line);
+        }
+      });
+      const planned = await generateLessonOutline(
+        outline.trim(),
+        targetProject
+      );
       const newSpecs: LevelSpec[] = planned.map(level => ({
         key: createUuid(),
         id: level.id,
@@ -179,7 +224,7 @@ const LessonGenerator: React.FC<LessonGeneratorProps> = ({lesson}) => {
     } finally {
       setIsOutlining(false);
     }
-  }, [outline]);
+  }, [outline, loadTargetProject]);
 
   const validationError = useMemo(() => {
     if (!prefix.trim()) return 'Set a level name prefix before generating.';
@@ -254,28 +299,7 @@ const LessonGenerator: React.FC<LessonGeneratorProps> = ({lesson}) => {
     // call as "final goal" context. Soft-fail: if the fetch or format
     // doesn't yield anything usable, every level just runs without the
     // extra context — same as if the field were blank.
-    let targetProject: string | undefined;
-    if (projectChannelId.trim()) {
-      try {
-        const raw = await loadProjectSources(projectChannelId.trim());
-        const formatted = formatTargetProject(raw);
-        if (formatted) {
-          targetProject = formatted;
-          appendLog(
-            `Loaded target project source from channel ${projectChannelId.trim()}.`
-          );
-        } else {
-          appendLog(
-            `Channel ${projectChannelId.trim()} returned no MultiFileSource; continuing without target context.`
-          );
-        }
-      } catch (err) {
-        const message = err instanceof Error ? err.message : String(err);
-        appendLog(
-          `Warning: couldn't load target project ${projectChannelId.trim()}: ${message}. Continuing.`
-        );
-      }
-    }
+    const targetProject = await loadTargetProject(appendLog);
 
     for (let i = 0; i < levelSpecs.length; i++) {
       const spec = levelSpecs[i];
@@ -538,6 +562,7 @@ const LessonGenerator: React.FC<LessonGeneratorProps> = ({lesson}) => {
     appendLog,
     outline,
     projectChannelId,
+    loadTargetProject,
   ]);
 
   return (
