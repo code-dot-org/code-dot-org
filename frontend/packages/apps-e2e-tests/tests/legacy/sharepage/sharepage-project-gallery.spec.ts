@@ -45,7 +45,9 @@ test.describe(
   {tag: '@no_mobile'},
   () => {
     /**
-     * Source: "Share and save an artist level to the project gallery"
+     * Migration status: COMPLETED
+     * Source: dashboard/test/ui/features/star_labs/sharepage.feature
+     * Scenario: Share and save an artist level to the project gallery
      *
      * 1. Student runs Artist lesson 3 / level 10 and clicks Finish.
      * 2. Clicks "Save to Project Gallery" in the congrats dialog.

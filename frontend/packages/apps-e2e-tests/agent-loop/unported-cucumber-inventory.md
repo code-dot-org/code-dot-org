@@ -12,8 +12,8 @@ This inventory ignores `Migration Status` markers. A Cucumber feature is treated
 | Playwright spec files                                       |   125 |
 | Feature files referenced by Playwright                      |   164 |
 | Feature files with no Playwright source-path reference      |   107 |
-| Referenced feature files with all scenario titles traceable |    82 |
-| Referenced feature files with some untraced scenario titles |    60 |
+| Referenced feature files with all scenario titles traceable |    87 |
+| Referenced feature files with some untraced scenario titles |    55 |
 | Referenced feature files needing scenario-level audit       |    22 |
 | Playwright specs with no Cucumber source-path reference     |     1 |
 
@@ -198,45 +198,10 @@ This inventory ignores `Migration Status` markers. A Cucumber feature is treated
 
 These feature files have at least one Playwright source-path reference, but not every Cucumber scenario title was found in Playwright comments or single-source spec test titles. Some may be ported under renamed test titles; inspect before porting.
 
-### `dashboard/test/ui/features/star_labs/manage_assets.feature`
-
-Traced 2 of 4 scenario titles.
-
-- The manage assets dialog displays an image thumbnail and opens in a new tab when clicked
-- From WebLab, the manage assets dialog does not contain the option to record audio.
-
-### `dashboard/test/ui/features/star_labs/netsim_lobby.feature`
-
-Traced 1 of 3 scenario titles.
-
-- When not logged in, can connect to a router
-- NetSim uses the instructions dialog
-
-### `dashboard/test/ui/features/star_labs/pixelation.feature`
-
-Traced 4 of 6 scenario titles.
-
-- Pixelation version 1 with encoding controls hidden but sliders visible
-- Pixelation version 1 with sliders hidden but encoding controls visible
-
-### `dashboard/test/ui/features/star_labs/share_buttons.feature`
-
-Traced 2 of 4 scenario titles.
-
-- Dpad does not appear for Sprite Lab Share
-- Dpad appears for Game Lab Share
-
-### `dashboard/test/ui/features/star_labs/sharepage.feature`
-
-Traced 1 of 2 scenario titles.
-
-- Share and save an artist level to the project gallery
-
 ### `dashboard/test/ui/features/star_labs/sharepage_logo.feature`
 
-Traced 0 of 6 scenario titles.
+Traced 1 of 6 scenario titles.
 
-- Select the logo on an applab share page while logged in and visit the homepage
 - Select the logo on a playlab share page while logged in and visit the homepage
 - Select the logo on a gamelab share page while logged in and visit the homepage
 - Select the logo on an artist share page while logged in and visit the homepage

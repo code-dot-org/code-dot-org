@@ -76,6 +76,11 @@ async function testSharePageLogo(
 }
 
 test.describe('Share page — logo navigates to /home', () => {
+  /**
+   * Migration status: COMPLETED
+   * Source: dashboard/test/ui/features/star_labs/sharepage_logo.feature
+   * Scenario: Select the logo on an applab share page while logged in and visit the homepage
+   */
   test(
     'App Lab share page logo navigates to /home',
     {tag: '@no_mobile'},

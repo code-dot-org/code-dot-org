@@ -15,6 +15,11 @@ import {NetSim} from './NetSim';
  */
 
 test.describe('Internet Simulator — lobby', () => {
+  /**
+   * Migration status: COMPLETED
+   * Source: dashboard/test/ui/features/star_labs/netsim_lobby.feature
+   * Scenario: First user in bit-sending mode can reach lobby
+   */
   test('first user in bit-sending mode can reach lobby', async ({page}) => {
     const netsim = new NetSim(page);
     await netsim.gotoLevel(1);
@@ -25,6 +30,11 @@ test.describe('Internet Simulator — lobby', () => {
     await expect(netsim.lobbyPanel).toContainText('Erin');
   });
 
+  /**
+   * Migration status: COMPLETED
+   * Source: dashboard/test/ui/features/star_labs/netsim_lobby.feature
+   * Scenario: When not logged in, can connect to a router
+   */
   test('anonymous user can connect to a router', async ({page}) => {
     const netsim = new NetSim(page);
     await netsim.gotoLevel(4);
@@ -59,6 +69,11 @@ test.describe('Internet Simulator — lobby', () => {
     );
   });
 
+  /**
+   * Migration status: COMPLETED
+   * Source: dashboard/test/ui/features/star_labs/netsim_lobby.feature
+   * Scenario: NetSim uses the instructions dialog
+   */
   test('instructions dialog can be closed and re-opened from side panel', async ({
     page,
   }) => {

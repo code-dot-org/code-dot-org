@@ -97,9 +97,8 @@ test.describe('Manage Assets', {tag: '@no_mobile'}, () => {
 
   /**
    * Migration status: COMPLETED
-   * Source: manage_assets.feature
-   * "The manage assets dialog displays an image thumbnail and opens in a new
-   *  tab when clicked"
+   * Source: dashboard/test/ui/features/star_labs/manage_assets.feature
+   * Scenario: The manage assets dialog displays an image thumbnail and opens in a new tab when clicked
    *
    * Upload artist_image_1.png → row with filename visible → click the image
    * thumbnail → new tab URL matches /v3/assets/.* /artist_image_1.png.
@@ -139,9 +138,8 @@ test.describe('Manage Assets', {tag: '@no_mobile'}, () => {
 
   /**
    * Migration status: COMPLETED
-   * Source: manage_assets.feature
-   * "From WebLab, the manage assets dialog does not contain the option to
-   *  record audio."
+   * Source: dashboard/test/ui/features/star_labs/manage_assets.feature
+   * Scenario: From WebLab, the manage assets dialog does not contain the option to record audio.
    *
    * WebLab's add-image button opens the asset manager without the record-audio
    * option (which requires a microphone API available only in Chrome/Safari).

@@ -14,6 +14,11 @@ import {Pixelation} from './Pixelation';
  */
 
 test.describe('Pixelation — level 4 (encoding controls hidden, sliders visible)', () => {
+  /**
+   * Migration status: COMPLETED
+   * Source: dashboard/test/ui/features/star_labs/pixelation.feature
+   * Scenario: Pixelation version 1 with encoding controls hidden but sliders visible
+   */
   test('encoding controls are hidden; sliders are visible and editable', async ({
     page,
   }) => {
@@ -30,6 +35,11 @@ test.describe('Pixelation — level 4 (encoding controls hidden, sliders visible
 });
 
 test.describe('Pixelation — level 5 (sliders hidden, encoding controls visible)', () => {
+  /**
+   * Migration status: COMPLETED
+   * Source: dashboard/test/ui/features/star_labs/pixelation.feature
+   * Scenario: Pixelation version 1 with sliders hidden but encoding controls visible
+   */
   test('sliders are hidden; encoding controls are visible; dimensions are read-only', async ({
     page,
   }) => {
