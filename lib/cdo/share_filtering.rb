@@ -59,7 +59,34 @@ module ShareFiltering
     texts = extract_text_blockly(program)
     program_text = texts.join(" ")
 
-    find_failure(program_text, locale, exceptions: exceptions)
+    # Email and phone: check joined text — these patterns can't be created by concatenation.
+    email = RegexpUtils.find_potential_email(program_text)
+    if email
+      failure = ShareFailure.new(FailureType::EMAIL, email)
+      raise PIIFilterException.new("Email PII Filter Violation", failure) if exceptions
+      return failure
+    end
+
+    phone = RegexpUtils.find_potential_phone_number(program_text)
+    if phone
+      failure = ShareFailure.new(FailureType::PHONE, phone)
+      raise PIIFilterException.new("Phone Number PII Filter Violation", failure) if exceptions
+      return failure
+    end
+
+    # Address: check each block element individually to avoid false positives from
+    # concatenation (e.g. "level 3" joined with "game over" → "level 3 game over").
+    # Only check elements that contain a digit since addresses require one.
+    texts.grep(/\d/).each do |text|
+      address = Geocoder.find_potential_street_address(text)
+      if address
+        failure = ShareFailure.new(FailureType::ADDRESS, address)
+        raise PIIFilterException.new("Address PII Filter Violation", failure) if exceptions
+        return failure
+      end
+    end
+
+    find_profanity_failure(program_text, locale, {}, exceptions: exceptions)
   end
 
   # Parses a Blockly program (XML or JSON) and returns an array of text entries.
