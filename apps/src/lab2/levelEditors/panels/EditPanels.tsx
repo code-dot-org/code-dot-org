@@ -9,7 +9,7 @@ import React, {useCallback, useEffect, useRef, useState} from 'react';
 import Button from '@cdo/apps/legacySharedComponents/Button';
 import ImageInput from '@cdo/apps/levelbuilder/ImageInput';
 import PanelsView from '@cdo/apps/panels/PanelsView';
-import {Panel, PanelLayout} from '@cdo/apps/panels/types';
+import {Panel, PanelLayout, PanelLayoutTemplate} from '@cdo/apps/panels/types';
 import {createUuid} from '@cdo/apps/utils';
 
 import EditPanelsLinks from './EditPanelsLinks';
@@ -320,6 +320,27 @@ const EditPanel: React.FunctionComponent<EditPanelProps> = ({
           onChange={e => updatePanel({...panel, text: e.target.value})}
         />
         <SimpleDropdown
+          labelText="Layout"
+          name="layoutTemplate"
+          size="s"
+          onChange={e =>
+            updatePanel({
+              ...panel,
+              layoutTemplate: e.target.value as PanelLayoutTemplate,
+            })
+          }
+          selectedValue={panel.layoutTemplate || 'full-background'}
+          items={[
+            {value: 'full-background', text: 'Full background'},
+            {value: 'split-image-left', text: 'Split — image left, text right'},
+            {
+              value: 'split-image-right',
+              text: 'Split — image right, text left',
+            },
+            {value: 'text-only', text: 'Text only'},
+          ]}
+        />
+        <SimpleDropdown
           labelText="Position"
           name="position"
           size="s"
@@ -330,6 +351,10 @@ const EditPanel: React.FunctionComponent<EditPanelProps> = ({
             })
           }
           selectedValue={panel.layout || 'text-top-right'}
+          // Text position only matters for the overlay in full-background.
+          disabled={
+            !!panel.layoutTemplate && panel.layoutTemplate !== 'full-background'
+          }
           items={[
             {value: 'text-top-left', text: 'Top Left'},
             {value: 'text-top-center', text: 'Top Center'},
@@ -340,16 +365,18 @@ const EditPanel: React.FunctionComponent<EditPanelProps> = ({
           ]}
         />
       </div>
-      <div className={moduleStyles.fieldRow}>
-        <ImageInput
-          initialImageUrl={panel.imageUrl}
-          updateImageUrl={(imageUrl: string) => {
-            updatePanel({...panel, imageUrl: imageUrl});
-          }}
-          dimensions={{width: PANEL_WIDTH, height: PANEL_HEIGHT}}
-          fileTypes={['GIF', 'JPG', 'PNG']}
-        />
-      </div>
+      {panel.layoutTemplate !== 'text-only' && (
+        <div className={moduleStyles.fieldRow}>
+          <ImageInput
+            initialImageUrl={panel.imageUrl}
+            updateImageUrl={(imageUrl: string) => {
+              updatePanel({...panel, imageUrl: imageUrl});
+            }}
+            dimensions={{width: PANEL_WIDTH, height: PANEL_HEIGHT}}
+            fileTypes={['GIF', 'JPG', 'PNG']}
+          />
+        </div>
+      )}
       <div className={moduleStyles.fieldRow}>
         <Checkbox
           checked={!!panel.typing}

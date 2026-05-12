@@ -1,0 +1,31 @@
+<Panels>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 73,
+  "created_at": "2026-05-12T23:12:32.000Z",
+  "level_num": "custom",
+  "user_id": 1,
+  "properties": {
+    "encrypted": "false",
+    "background": "music-black",
+    "skipUrl": "/projects/music/new",
+    "panels": [
+      {
+        "imageUrl": "https://images.code.org/1891447a0221fa59f5eff47d6cb79c9e-dog.jpg",
+        "text": "Here's a sample panels level!\n\nProject Beats lets you mix, remix, and even perform music using code. Don’t worry if you don’t know much about code, or even music! All you need is a little time and some curiosity to start making your own creations.",
+        "key": "musiclab_intro_panels_start-421d64b2-c4db-42cb-ac1f-de66a4d22fa7",
+        "layoutTemplate": "split-image-left"
+      },
+      {
+        "text": "Here's another sample!",
+        "imageUrl": "",
+        "key": "Panels Lab2 Showcase 2-40a6fa2d-8bb0-403f-8de0-4b1bb17cca95",
+        "layoutTemplate": "text-only"
+      }
+    ],
+    "offer_browser_tts": "false",
+    "use_links": "false"
+  },
+  "audit_log": "[{\"changed_at\":\"2026-05-12T16:12:32.342-07:00\",\"changed\":[\"cloned from \\\"Panels Lab2 Showcase\\\"\"],\"cloned_from\":\"Panels Lab2 Showcase\"},{\"changed_at\":\"2026-05-12 16:13:56 -0700\",\"changed\":[\"level_data\",\"panels\"],\"changed_by_id\":2,\"changed_by_email\":\"molly+levelbuilder@code.org\"}]"
+}]]></config>
+</Panels>

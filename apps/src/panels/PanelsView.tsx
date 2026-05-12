@@ -233,6 +233,18 @@ const PanelsView: React.FunctionComponent<PanelsProps> = ({
     ? layoutClassMap[panel.layout]
     : styles.textTopRight;
 
+  // Modifier class on .panel for non-default layout templates. Absent class
+  // = full-background (original behavior).
+  const templateClassMap = {
+    'full-background': undefined,
+    'split-image-left': styles.splitImageLeft,
+    'split-image-right': styles.splitImageRight,
+    'text-only': styles.textOnly,
+  };
+  const templateClass = panel.layoutTemplate
+    ? templateClassMap[panel.layoutTemplate]
+    : undefined;
+
   const buttonText =
     !useLinks && currentPanelIndex < panels.length - 1
       ? commonI18n.next()
@@ -246,7 +258,10 @@ const PanelsView: React.FunctionComponent<PanelsProps> = ({
       className={styles.panelsContainer}
       key={`${levelId || 'default'}-${currentPanelIndex}`}
     >
-      <div className={styles.panel} style={{width, height}}>
+      <div
+        className={classNames(styles.panel, templateClass)}
+        style={{width, height}}
+      >
         {previousPanel && (
           <div
             className={styles.image}

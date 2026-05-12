@@ -227,6 +227,83 @@ $text-horizontal-padding: 2.6cqw;
         margin: 0;
       }
     }
+
+    // Layout template modifiers. Default (no class) = full-background, which
+    // matches every panel authored before this feature shipped.
+    &.splitImageLeft,
+    &.splitImageRight {
+      .image {
+        width: 50%;
+      }
+
+      .text {
+        width: 50%;
+        height: 100%;
+        top: 0;
+        bottom: 0;
+        border-radius: 0;
+        // Override corner-positioning transforms from textTopCenter /
+        // textBottomCenter (they apply translateX(-50%) which would yank
+        // a 50%-wide block off-screen).
+        transform: none;
+        // Vertically center the text within the half panel.
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        // The default rule animates margins via slide-in, which causes a
+        // visible jitter on a full-height block. Use fade-in only.
+        animation: 0.5s ease 0.5s fade-in;
+      }
+    }
+
+    &.splitImageLeft {
+      .image {
+        left: 0;
+        right: auto;
+      }
+
+      .text {
+        right: 0;
+        left: auto;
+      }
+    }
+
+    &.splitImageRight {
+      .image {
+        right: 0;
+        left: auto;
+      }
+
+      .text {
+        left: 0;
+        right: auto;
+      }
+    }
+
+    &.textOnly {
+      // Flex the panel itself so the text block centers without absolute
+      // positioning.
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      .image {
+        display: none;
+      }
+
+      .text {
+        position: relative;
+        width: 60%;
+        max-width: 60cqw;
+        // Override corner-positioning offsets.
+        top: auto;
+        left: auto;
+        right: auto;
+        bottom: auto;
+        transform: none;
+        animation: 0.5s ease 0.5s fade-in;
+      }
+    }
   }
 
   .childrenArea {

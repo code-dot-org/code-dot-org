@@ -13,12 +13,22 @@ export type PanelLayout =
   | 'text-bottom-center'
   | 'text-bottom-right';
 
+// Page composition for a panel. `full-background` reproduces the legacy
+// behavior: image fills the panel, text is a small overlay placed by `layout`.
+// Other templates ignore `layout`.
+export type PanelLayoutTemplate =
+  | 'full-background'
+  | 'split-image-left'
+  | 'split-image-right'
+  | 'text-only';
+
 export interface Panel {
   imageUrl: string;
   text: string;
   key: string;
   nextUrl?: string;
   layout?: PanelLayout;
+  layoutTemplate?: PanelLayoutTemplate;
   links?: PanelLink[];
   // Honored only when useLinks is set on the level.
   showContinueButton?: boolean;
