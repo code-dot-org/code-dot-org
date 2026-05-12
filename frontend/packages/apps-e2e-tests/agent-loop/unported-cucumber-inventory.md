@@ -9,11 +9,11 @@ This inventory ignores `Migration Status` markers. A Cucumber feature is treated
 | Metric                                                      | Count |
 | ----------------------------------------------------------- | ----: |
 | Cucumber feature files                                      |   271 |
-| Playwright spec files                                       |   124 |
-| Feature files referenced by Playwright                      |   163 |
-| Feature files with no Playwright source-path reference      |   108 |
+| Playwright spec files                                       |   125 |
+| Feature files referenced by Playwright                      |   164 |
+| Feature files with no Playwright source-path reference      |   107 |
 | Referenced feature files with all scenario titles traceable |    56 |
-| Referenced feature files with some untraced scenario titles |    85 |
+| Referenced feature files with some untraced scenario titles |    86 |
 | Referenced feature files needing scenario-level audit       |    22 |
 | Playwright specs with no Cucumber source-path reference     |     1 |
 
@@ -41,7 +41,6 @@ This inventory ignores `Migration Status` markers. A Cucumber feature is treated
 | `code_tools/pythonlab`                                         |     1 |         1 |              1 |
 | `eyes.feature`                                                 |     1 |         0 |              1 |
 | `foundations/footer.feature`                                   |     1 |         8 |              1 |
-| `foundations/i18n.feature`                                     |     1 |        16 |              0 |
 | `initial_page_views.feature`                                   |     1 |         1 |              1 |
 | `initial_page_views2.feature`                                  |     1 |         1 |              1 |
 | `initial_page_views3.feature`                                  |     1 |         2 |              1 |
@@ -105,7 +104,6 @@ This inventory ignores `Migration Status` markers. A Cucumber feature is treated
 | `dashboard/test/ui/features/code_tools/pythonlab/pythonlab_start_mode_eyes.feature`                                   |         1 | eyes, no_mobile        |
 | `dashboard/test/ui/features/eyes.feature`                                                                             |         0 | eyes                   |
 | `dashboard/test/ui/features/foundations/footer.feature`                                                               |         8 | eyes, skip             |
-| `dashboard/test/ui/features/foundations/i18n.feature`                                                                 |        16 | no_ci                  |
 | `dashboard/test/ui/features/initial_page_views.feature`                                                               |         1 | eyes                   |
 | `dashboard/test/ui/features/initial_page_views2.feature`                                                              |         1 | eyes                   |
 | `dashboard/test/ui/features/initial_page_views3.feature`                                                              |         2 | eyes, no_ci            |
@@ -215,6 +213,17 @@ Traced 0 of 5 scenario titles.
 - Student, Age 13+ - Correct Create Links
 - Young Student, Not in Section - Correct Create Links
 - Young Student, In Section - Correct Create Links
+
+### `dashboard/test/ui/features/foundations/i18n.feature`
+
+Traced 10 of 16 scenario titles.
+
+- HoC tutorial in Arabic (RTL)
+- Frozen tutorial in Arabic (RTL)
+- Minecraft:Agent tutorial in Arabic (RTL)
+- Translated function names in Arabic
+- Toolbox Categories in Arabic (RTL)
+- Pixelation Widget long and short instructions in Spanish
 
 ### `dashboard/test/ui/features/foundations/markdown_rendering.feature`
 
