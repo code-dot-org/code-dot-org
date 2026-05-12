@@ -20,9 +20,11 @@ import {
   priorOutputFromLevelProperties,
 } from './helpers/precedingLevels';
 import {Placement, rebuildActivities} from './helpers/rebuildActivities';
+import {formatTargetProject} from './helpers/targetProject';
 import {
   createOrFindLevel,
   loadLessonLevelProperties,
+  loadProjectSources,
   saveLessonActivities,
   updateLevelProperty,
   updatePanelsLevel,
@@ -70,6 +72,13 @@ const LessonGenerator: React.FC<LessonGeneratorProps> = ({lesson}) => {
   const [outline, setOutline] = useState<string>(lesson.generateOutline || '');
   const [isOutlining, setIsOutlining] = useState(false);
   const [outlineError, setOutlineError] = useState<string | null>(null);
+  // Optional Weblab2 channel id. When set, the lesson is generated as
+  // progressing toward the app stored at that channel; the source files
+  // (MultiFileSource) get fetched once and fed to the per-level AI
+  // prompts as "final goal" context.
+  const [projectChannelId, setProjectChannelId] = useState<string>(
+    lesson.generateProjectChannelId || ''
+  );
 
   // The AI gateway expects an AichatContext on every access-token request.
   // We're not actually inside an aichat lab here, but setting the context
@@ -240,6 +249,34 @@ const LessonGenerator: React.FC<LessonGeneratorProps> = ({lesson}) => {
       );
     }
 
+    // Fetch the target project's source files (if a channel id was given)
+    // once for this run and pass the formatted text to each per-level AI
+    // call as "final goal" context. Soft-fail: if the fetch or format
+    // doesn't yield anything usable, every level just runs without the
+    // extra context — same as if the field were blank.
+    let targetProject: string | undefined;
+    if (projectChannelId.trim()) {
+      try {
+        const raw = await loadProjectSources(projectChannelId.trim());
+        const formatted = formatTargetProject(raw);
+        if (formatted) {
+          targetProject = formatted;
+          appendLog(
+            `Loaded target project source from channel ${projectChannelId.trim()}.`
+          );
+        } else {
+          appendLog(
+            `Channel ${projectChannelId.trim()} returned no MultiFileSource; continuing without target context.`
+          );
+        }
+      } catch (err) {
+        const message = err instanceof Error ? err.message : String(err);
+        appendLog(
+          `Warning: couldn't load target project ${projectChannelId.trim()}: ${message}. Continuing.`
+        );
+      }
+    }
+
     for (let i = 0; i < levelSpecs.length; i++) {
       const spec = levelSpecs[i];
       const levelName = fullName(spec.id.trim());
@@ -326,7 +363,8 @@ const LessonGenerator: React.FC<LessonGeneratorProps> = ({lesson}) => {
                 },
               },
               lessonContext,
-              precedingLevelsText
+              precedingLevelsText,
+              targetProject
             );
             setStage('saving-properties');
             appendLog(`Saving panel data for "${levelName}"…`);
@@ -337,7 +375,8 @@ const LessonGenerator: React.FC<LessonGeneratorProps> = ({lesson}) => {
               levelName,
               spec.description.trim(),
               lessonContext,
-              precedingLevelsText
+              precedingLevelsText,
+              targetProject
             );
             setStage('saving-properties');
             appendLog(`Saving start sources for "${levelName}"…`);
@@ -450,9 +489,15 @@ const LessonGenerator: React.FC<LessonGeneratorProps> = ({lesson}) => {
           lesson.activities || [],
           placements
         );
-        // Persist the outline so reopening /generate restores it. Sending
-        // an empty string clears any previously-saved value.
-        await saveLessonActivities(lesson.id, newActivities, outline.trim());
+        // Persist the outline + target-project channel id so reopening
+        // /generate restores them. Sending '' for either clears the
+        // previously-saved value.
+        await saveLessonActivities(
+          lesson.id,
+          newActivities,
+          outline.trim(),
+          projectChannelId.trim()
+        );
         appendLog('Lesson updated.');
       } catch (err) {
         const message = err instanceof Error ? err.message : String(err);
@@ -485,7 +530,15 @@ const LessonGenerator: React.FC<LessonGeneratorProps> = ({lesson}) => {
     setSummary({created, failed});
     setIsGenerating(false);
     setProgress(null);
-  }, [validationError, lesson, levelSpecs, fullName, appendLog, outline]);
+  }, [
+    validationError,
+    lesson,
+    levelSpecs,
+    fullName,
+    appendLog,
+    outline,
+    projectChannelId,
+  ]);
 
   return (
     <div className={moduleStyles.container}>
@@ -505,6 +558,26 @@ const LessonGenerator: React.FC<LessonGeneratorProps> = ({lesson}) => {
         disabled={isGenerating}
         error={outlineError}
       />
+
+      <div className={moduleStyles.fieldRow}>
+        <label htmlFor="project-channel-id">
+          Optional: target Web Lab 2 project (channel id)
+        </label>
+        <input
+          id="project-channel-id"
+          className={moduleStyles.prefixInput}
+          value={projectChannelId}
+          onChange={e => setProjectChannelId(e.target.value)}
+          placeholder="e.g. abc123 — leave blank to skip"
+          disabled={isGenerating}
+        />
+        <small className={moduleStyles.outlineHelp}>
+          When set, the lesson is generated as a progression that builds toward
+          the app stored at this channel. The student never sees the target
+          code; the AI uses it as the final goal so each level moves a step
+          closer to it.
+        </small>
+      </div>
 
       <div className={moduleStyles.fieldRow}>
         <label htmlFor="level-prefix">Level name prefix</label>

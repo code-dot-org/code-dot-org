@@ -55,7 +55,13 @@ export async function generateWeblab2Level(
   levelName: string,
   description: string,
   lessonContext?: string,
-  precedingLevels?: string
+  precedingLevels?: string,
+  // Optional "final goal" snapshot of the app the lesson is building
+  // toward, formatted as `=== path ===\n<contents>` blocks. When
+  // supplied, the model uses it as the destination state and plans
+  // this level as a step on the path — without copying the final
+  // code verbatim.
+  targetProject?: string
 ): Promise<Weblab2Generation> {
   const prompt = [
     'You are helping a curriculum author build a "Web Lab 2" level: a',
@@ -88,6 +94,20 @@ export async function generateWeblab2Level(
           '— building on the same code, reusing characters or examples — but',
           'do NOT restate them; only build the level described last:',
           precedingLevels,
+        ]
+      : []),
+    ...(targetProject
+      ? [
+          '',
+          'Target project — the final state the lesson is building toward.',
+          'The student will reach something like this by the last weblab2',
+          'level. Use it as a destination: pick file structure, library',
+          'choices, naming, and idiom from it so the lesson reads as one',
+          'coherent build. But DO NOT just emit this verbatim — this level',
+          'should be a step along the way, partial relative to the final',
+          'goal. Where the description and target disagree, the description',
+          'wins (it scopes this specific level).',
+          targetProject,
         ]
       : []),
     '',

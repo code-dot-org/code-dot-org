@@ -80,7 +80,12 @@ async function planPanels(
   levelName: string,
   description: string,
   lessonContext?: string,
-  precedingLevels?: string
+  precedingLevels?: string,
+  // Optional "final goal" code snapshot — same shape as in
+  // generateWeblab2Level. Panels are narrative so they mostly use it
+  // as inspiration for what to introduce or motivate; the actual code
+  // appears only in adjacent weblab2 levels.
+  targetProject?: string
 ): Promise<PanelPlan[]> {
   const prompt = [
     'You are helping a curriculum author build a "Panels" level: a short,',
@@ -108,6 +113,18 @@ async function planPanels(
           'but do NOT regenerate or summarize them; only build the level',
           'described last:',
           precedingLevels,
+        ]
+      : []),
+    ...(targetProject
+      ? [
+          '',
+          'Target project — the final app the lesson builds toward.',
+          'Adjacent Web Lab 2 levels work toward this code, so these panels',
+          'should motivate, foreshadow, or recap concepts that show up in',
+          'it. The student never sees the code itself; use it as background',
+          'so your story lands on relevant ideas. Do not paste code into',
+          'panel text.',
+          targetProject,
         ]
       : []),
     '',
@@ -220,13 +237,15 @@ export async function generatePanelsForLevel(
   description: string,
   callbacks: PanelGenerationCallbacks = {},
   lessonContext?: string,
-  precedingLevels?: string
+  precedingLevels?: string,
+  targetProject?: string
 ): Promise<Panel[]> {
   const plan = await planPanels(
     levelName,
     description,
     lessonContext,
-    precedingLevels
+    precedingLevels,
+    targetProject
   );
   callbacks.onPlanned?.(plan.length);
 

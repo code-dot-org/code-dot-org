@@ -171,7 +171,8 @@ export async function loadLessonLevelProperties(
 export async function saveLessonActivities(
   lessonId: number,
   activities: SerializedActivity[],
-  generateOutline?: string
+  generateOutline?: string,
+  generateProjectChannelId?: string
 ): Promise<void> {
   const body: Record<string, string> = {
     activities: JSON.stringify(activities),
@@ -179,8 +180,29 @@ export async function saveLessonActivities(
   if (generateOutline !== undefined) {
     body.generate_outline = generateOutline;
   }
+  if (generateProjectChannelId !== undefined) {
+    // Sent on every save when the field is present in state; '' clears
+    // the persisted value, so a user can blank out the input and have
+    // it stick.
+    body.generate_project_channel_id = generateProjectChannelId;
+  }
   await HttpClient.put(`/lessons/${lessonId}`, JSON.stringify(body), true, {
     'Content-Type': 'application/json;charset=UTF-8',
     Accept: 'application/json',
   });
+}
+
+// GET /v3/sources/<channel-id>/main.json — the Lab2 project source for
+// a given channel. Unauthenticated; the endpoint is open and just checks
+// abuse-score gates. Returns ProjectSources: {source, labConfig?}. For
+// a Weblab2 project, `source` is a MultiFileSource (folders + files).
+//
+// This page uses the response as additional context for the AI, not as
+// state we round-trip. We accept any shape the server returns and only
+// look at MultiFileSource files in the caller.
+export async function loadProjectSources(channelId: string): Promise<unknown> {
+  const {value} = await HttpClient.fetchJson<unknown>(
+    `/v3/sources/${encodeURIComponent(channelId)}/main.json`
+  );
+  return value;
 }
