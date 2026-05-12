@@ -1,13 +1,10 @@
-import {Typography} from '@mui/material';
+import Dialog from '@code-dot-org/component-library/dialog';
 import PropTypes from 'prop-types';
 import React, {useCallback} from 'react';
 
-import Button from '@cdo/apps/legacySharedComponents/Button';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import i18n from '@cdo/locale';
-
-import AccessibleDialog from '../../../sharedComponents/AccessibleDialog';
 
 import styles from './coteacher-settings.module.scss';
 
@@ -51,33 +48,25 @@ export default function RemoveCoteacherDialog({
 
   return (
     !!coteacherToRemove && (
-      <AccessibleDialog
-        onClose={closeRemoveDialog}
+      <Dialog
         className={styles.removeDialog}
-      >
-        <Typography className={styles.removeDialogTitle} variant="strong">
-          {i18n.coteacherRemoveDialogHeader({
-            email: coteacherToRemove.instructorEmail,
-          })}
-        </Typography>
-        <div className={styles.removeDialogDescription}>
-          {i18n.coteacherRemoveDialogDescription()}
-        </div>
-        <div className={styles.removeDialogButtons}>
-          <Button
-            onClick={closeRemoveDialog}
-            text={i18n.dialogCancel()}
-            color={Button.ButtonColor.white}
-            id="remove-coteacher-cancel"
-          />
-          <Button
-            onClick={removeCoteacher(coteacherToRemove)}
-            text={i18n.dialogRemove()}
-            color={Button.ButtonColor.red}
-            className={styles.removeDialogRemove}
-          />
-        </div>
-      </AccessibleDialog>
+        title={i18n.coteacherRemoveDialogHeader({
+          email: coteacherToRemove.instructorEmail,
+        })}
+        description={i18n.coteacherRemoveDialogDescription()}
+        onClose={closeRemoveDialog}
+        primaryButtonProps={{
+          onClick: removeCoteacher(coteacherToRemove),
+          color: 'error',
+          children: i18n.dialogRemove(),
+        }}
+        secondaryButtonProps={{
+          id: 'remove-coteacher-cancel',
+          onClick: closeRemoveDialog,
+          color: 'tertiary',
+          children: i18n.dialogCancel(),
+        }}
+      />
     )
   );
 }

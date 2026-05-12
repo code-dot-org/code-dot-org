@@ -3,6 +3,7 @@ Feature: Using the V2 progress page
   Background:
     Given I am on "http://studio.code.org"
 
+@no_device_farm
 Scenario: Teacher can open and close Icon Key and details
   Given I create an authorized teacher-associated student named "Sally"
   Given I am assigned to course "allthethingscourse" with teacher "Teacher_Sally" in a section named "Test Section"
@@ -54,14 +55,14 @@ Scenario: Viewing student metadata
   And I wait until element "div:contains(Collapse all student rows)" is visible
 
   # Can click on more options and it responds appropriately
-  Then I click selector "#ui-test-expand-all"
+  Then I click selector "button:contains(Expand all student rows)"
   And I wait until element "div:contains(Last Updated)" is visible
   And I wait until element "div:contains(Time Spent)" is visible
   And I wait until element "#ui-test-lesson-header-44" is visible
   And I scroll to "#ui-test-lesson-header-44"
   And I wait until ".ui-test-time-spent-44" contains one or more integers
   Then I click selector "#ui-see-more-options-dropdown"
-  Then I click selector "#ui-test-collapse-all"
+  Then I click selector "button:contains(Collapse all student rows)"
   And element "div:contains(Time Spent)" does not exist
   And element "div:contains(Last Updated)" does not exist
 

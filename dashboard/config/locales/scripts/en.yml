@@ -27542,7 +27542,7 @@ en:
               display_name: Content
             lessonGroup-4:
               display_name: Post-Assessment
-          title: Thinking Critically About AI
+          title: 'Thinking Critically About AI '
           description: |-
             In this unit, students develop the conceptual foundation and habits of mind they'll need to engage with AI thoughtfully. Students examine how AI systems work at a high level, why they can fail, and how human choices shape both their risks and benefits. They investigate real examples of bias, misinformation, and misuse alongside AI's genuine potential to support learning and creativity. Rather than treating AI as magic or as a threat, students develop a balanced, questioning stance: learning to evaluate AI outputs critically, make intentional decisions about when and how to use AI, and articulate shared norms for responsible use. By the end of the unit, students have a durable lens for thinking about AI.
 
@@ -28481,6 +28481,111 @@ en:
           lesson_groups: {}
           name: code-connect-2026
           title: Code Connect 2026
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        problem-solving-and-computing-2026:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Chapter 1: The Problem Solving Process'
+            lessonGroup-3:
+              display_name: 'Chapter 2: Computers and Problem Solving'
+            lessonGroup-6:
+              display_name: End of Unit Survey
+            lessonGroup-4:
+              display_name: Alternate Lessons
+          title: 'Problem Solving and Computing '
+          description: "Problem Solving and Computing is a highly interactive and collaborative introduction to the field of computer science, as framed within the broader pursuit of solving problems. You’ll practice using a problem solving process to address a series of puzzles, challenges, and real world scenarios. Next, you’ll learn how computers input, output, store, and process information to help humans solve problems.  The unit concludes with a project in which you design an application that helps solve a problem of your choosing. \n\n::: details [**Chapter 1 Overview**]\n**Description:** This chapter guides students to develop and adopt a more formal structured problem solving process by reflecting on problems they have problems they have encountered, both in the classroom and everyday life. By working through a diverse set of problems, such as logic puzzles, engineering challenges, and planning a trip, students learn to identify different classes of problems, decompose large problems, and develop their personal problem solving skills.\n\n**Goals:**\n* Learn how to use a structured problem solving process and apply it to address various problems.\n* Create a collaborative classroom environment where students view computer science as relevant, fun, and empowering.\n\n\n**Big Questions:** \n* What strategies and processes can I use to become a more effective problem solver?\n:::\n\n::: details [**Chapter 2 Overview**]\n**Description:** This chapter presents computers as machines that solve information problems. Students begin by building a common definition for a computer that focuses on functionality instead of specific hardware. They then explore the ways that computers approach problems. For their final project, students propose an app that could be used to solve a problem of their choosing.\n\n**Goals:**\n* Identify the defined characteristics of a computer and how it is used to solve information problems. \n* Use a structured problem solving process to design solutions that use computing technology. \n* Create a collaborative classroom environment where students view computer science as relevant, fun, and empowering. \n\n**Big Questions:** \n* How do computers help people to solve problems?\n* How do people and computers approach problems differently?\n* What does a computer need from people in order to solve problems effectively?\n:::\n\n::: details [**Implementation Guidance for Problem Solving and Computing**]\n- The first chapter of this unit should be completed before any other unit in CS Discoveries\n- Alternate lessons are provided for some lessons in this unit, depending on your classroom context\n- Additional resources are available within the Teacher Resources dropdown of the unit\n:::\n\n::: details [**Professional Development**]\nIf you are interested in teaching this course, we recommend completing the free [Problem Solving and Computing Self-Paced Professional Development Module](https://studio.code.org/courses/teaching-csd-unit1-2025/). The module is designed to take 2 hours to complete. No previous experience with coding is required.\n:::\n\n\n## Finished Teaching This Unit?\nAnswer this [**short survey**](https://studio.code.org/form/teacher_csd_unit_survey?survey_data%5Bunit_number%5D=1) to let the Code.org curriculum team know how the unit went."
+          student_description: 'Problem Solving and Computing is a highly interactive and collaborative introduction to the field of computer science, as framed within the broader pursuit of solving problems. You’ll practice using a problem solving process to address a series of puzzles, challenges, and real world scenarios. Next, you’ll learn how computers input, output, store, and process information to help humans solve problems.  The unit concludes with a project in which you design an application that helps solve a problem of your choosing.
+
+            '
+          description_short: Learn how humans work with computers to solve problems.
+          description_audience: ''
+        csd3a-2026:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Pre-Assessment
+            lessonGroup-3:
+              display_name: Programming with Music Lab
+            lessonGroup-4:
+              display_name: End of Unit Assessment and Survey
+          title: Programming with Music Lab
+          description: |-
+            This unit is an engaging, hands-on dive into the worlds of computer science, music, and problem solving. Students are introduced to foundational programming concepts through music, using code to build, remix, and perform original songs. The unit gradually moves students from exposure to mastery to creativity, as they apply the Problem Solving Process and practice Computational Thinking like pattern recognition, algorithmic thinking, and debugging to design, test, and refine their musical ideas. Through sequencing, loops, and functions, students learn to think like programmers and create like musicians. The unit culminates in a genre mash-up project that brings together all their skills in code, creativity, and musical expression.
+
+            ::: details [**Implementation Guidance for Programming with Music Lab**]
+            You can view the [Implementation Guide](https://docs.google.com/document/d/1Tcgo0xYq4kCWXm5gOjARltvSR3xBH7nWVGMHamnvWC8/edit?usp=sharing)for more information about this unit.
+            :::
+            ::: details [**Professional Development**]
+            If you are interested in teaching this course, we recommend completing the free [Teaching Programming with Music Lab](https://studio.code.org/courses/self-paced-pl-teaching-computer-science-discoveries-music-lab/units/1?section_id=5963300). The module is designed to take 2 hours to complete. No previous experience with coding or music is assumed.
+            :::
+
+            ## Finished Teaching This Unit?
+            Answer this [**short survey**](https://studio.code.org/form/teacher_csd_unit_survey?survey_data[unit_number]=3b) to let the Code.org curriculum team know how the unit went.
+          student_description: Learn how to program by creating music!
+          description_short: This unit uses music to introduce core programming concepts, guiding students through creative coding projects that build problem-solving skills, computational thinking, and creativity in musical expression.
+          description_audience: ''
+        foundations-of-ai-programming-2026:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Pre-Assessment
+            lessonGroup-3:
+              display_name: Content
+            lessonGroup-4:
+              display_name: End of Unit Project
+            lessonGroup-5:
+              display_name: End of Unit Assessment and Survey
+            lessonGroup-6:
+              display_name: Alternate Level Progressions (Console Only)
+          title: Foundations of AI Programming
+          description: |-
+            This unit introduces you to programming, algorithms, and ethical computing, exploring how Python programs are designed, debugged, and influenced by societal considerations. Through hands-on activities, you write, test, and refine programs using sequence, selection, iteration, and modular functions while applying human-centered design for inclusivity. You analyze the ethical implications of computing, including privacy, fairness, and accessibility, and propose risk mitigation strategies. Career-focused discussions connect programming skills to real-world pathways. Grounded in ethics, inclusivity, and computational thinking, this unit fosters persistence, critical thinking, and curiosity, empowering you to use technology for real-world problem-solving.
+
+            ::: details [<i class="fa-solid fa-badge-check"></i> **By the end of this unit, students will be able to . . .**]
+            - Define and explain the purpose of algorithms and their applications.
+            - Design algorithms using sequence, selection, and iteration.
+            - Analyze the functionality of algorithms and propose improvements.
+            - Write Python programs using variables, conditional statements, loops, and functions.
+            - Debug and test Python programs systematically to ensure correctness and reliability.
+            - Use modular design principles to write reusable functions with parameters and return values.
+            - Use AI tools to support problem-solving, algorithm design, and debugging, while recognizing their limitations and biases
+            - Evaluate the ethical implications of using AI in programming and implement strategies for ethical and fair implementation.
+            - Identify career pathways in computing and connect programming skills to real-world opportunities.
+            - Use computational thinking principles to design, analyze, and troubleshoot programs.
+            - Apply abstraction, decomposition, and pattern recognition to solve problems effectively.
+            :::
+
+            &nbsp;
+            ## Finished Teaching This Unit?
+            Answer this [**short survey**](https://studio.code.org/form/aif_post_unit_survey?survey_data[unit_number]=unit_2) to let the Code.org curriculum team know how the unit went.
+          student_description: |-
+            This unit introduces students to programming, algorithms, and ethical computing, exploring how Python programs are designed, debugged, and influenced by societal considerations. Through hands-on activities, students write, test, and refine programs using sequence, selection, iteration, and modular functions while applying human-centered design for inclusivity. They analyze the ethical implications of computing, including privacy, fairness, and accessibility, and propose risk mitigation strategies. Career-focused discussions connect programming skills to real-world pathways. Grounded in ethics, inclusivity, and computational thinking, this unit fosters persistence, critical thinking, and curiosity, empowering students to use technology for real-world problem-solving.
+
+            ::: details [<i class="fa-solid fa-badge-check"></i> **By the end of this unit, you will be able to . . .**]
+            - Define and explain the purpose of algorithms and their applications.
+            - Design algorithms using sequence, selection, and iteration.
+            - Analyze the functionality of algorithms and propose improvements.
+            - Write Python programs using variables, conditional statements, loops, and functions.
+            - Debug and test Python programs systematically to ensure correctness and reliability.
+            - Use modular design principles to write reusable functions with parameters and return values.
+            - Use AI tools to support problem-solving, algorithm design, and debugging, while recognizing their limitations and biases
+            - Evaluate the ethical implications of using AI in programming and implement strategies for ethical and fair implementation.
+            - Identify career pathways in computing and connect programming skills to real-world opportunities.
+            - Use computational thinking principles to design, analyze, and troubleshoot programs.
+            - Apply abstraction, decomposition, and pattern recognition to solve problems effectively.
+            :::
+
+            &nbsp;
+          description_short: ''
+          description_audience: ''
+        aif-advisory-council-preview:
+          lessons: {}
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Unit 1
+          name: aif-advisory-council-preview
+          title: AIF Advisory Council Preview
           description_audience: ''
           description_short: ''
           description: ''

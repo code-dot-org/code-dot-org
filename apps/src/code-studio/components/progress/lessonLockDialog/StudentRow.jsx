@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 import React from 'react';
 
 import {LockStatus} from '@cdo/apps/code-studio/components/progress/lessonLockDialog/LessonLockDataApi';
-import DemoStudentChip from '@cdo/apps/templates/DemoStudentChip';
+import DemoChip from '@cdo/apps/templates/DemoChip';
 import color from '@cdo/apps/util/color';
 
 const StudentRow = ({
@@ -22,7 +22,7 @@ const StudentRow = ({
     <tr>
       <td style={styles.tableCell}>
         {name}
-        {isDemoStudent && <DemoStudentChip />}
+        {isDemoStudent && <DemoChip />}
       </td>
       <td
         style={{

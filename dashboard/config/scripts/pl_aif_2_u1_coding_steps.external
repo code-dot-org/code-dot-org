@@ -1,0 +1,71 @@
+name 'pl-aif-2-U1-coding-steps'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Guiding Students through Coding Levels 
+
+<img src="https://images.code.org/3abf2a9a46efcd69ac3580278084bf2a-image-1778182629350.png" alt="icon of a student with question marks" width="150px" style="border-radius:10px; float:right; margin: 0 80px 0px 20px;">
+
+#### Students can feel overwhelmed when they see a lot of HTML and CSS at once. Some common struggles are: 
+- #### Not knowing where to start
+- #### Feeling like they need to understand every line of code
+- #### Jumping straight to AI without first describing what they want
+- #### Focusing on small details before understanding the big picture
+
+## Steps for success
+
+#### This protocol helps students understand the page structure, communicate their ideas clearly, and use AI as a support tool while building with HTML and CSS.
+
+<div style="width: 100%; max-width: 760px; margin: 20px 0px;">
+
+  <div style="margin-bottom: 14px;">
+    <div style="background-color: #B7E0E5; color: #000000; padding: 8px 12px; border-radius: 10px;">
+      <p style="font-size: 18pt; font-weight: bold; margin: 0;">🔍 Understand the Starter Code</p>
+    </div>
+    <p style="font-size: 14pt; line-height: 1.3; margin: 8px 8px 0px 8px;">Help students first notice the big parts of the webpage: the header, navigation, main content, images, links, buttons, and footer.</p>
+    <p style="font-size: 14pt; line-height: 1.3; margin: 8px 8px 0px 8px;">Students do not need to understand every line right away. Encourage them to ask, “What part of the page does this code control?”</p>
+  </div>
+
+  <div style="margin-bottom: 14px;">
+    <div style="background-color: #B7E0E5; color: #000000; padding: 8px 12px; border-radius: 10px;">
+      <p style="font-size: 18pt; font-weight: bold; margin: 0;">📌 Locate the TODO task</p>  
+    </div>
+    <p style="font-size: 14pt; line-height: 1.3; margin: 8px 8px 0px 8px;">Direct students to the TODO sections, which show where they should add or change HTML or CSS.</p>
+    <p style="font-size: 14pt; line-height: 1.3; margin: 8px 8px 0px 8px;">Guide students to point to the exact place where their new content or style change belongs before they begin editing.</p>
+  </div>
+
+  <div style="margin-bottom: 14px;">
+    <div style="background-color: #B7E0E5; color: #000000; padding: 8px 12px; border-radius: 10px;">
+      <p style="font-size: 18pt; font-weight: bold; margin: 0;">🧠 Plan the Behavior (in words)</p>
+    </div>
+    <p style="font-size: 14pt; line-height: 1.3; margin: 8px 8px 0px 8px;">Before writing code, have students describe what they want the webpage to include or how they want it to look in plain language.</p>
+    <p style="font-size: 14pt; line-height: 1.3; margin: 8px 8px 0px 8px;">For example: “I want my homepage to have a title, a short paragraph, three cards, and a blue footer.”</p>
+  </div>
+
+  <div style="margin-bottom: 14px;">
+    <div style="background-color: #B7E0E5; color: #000000; padding: 8px 12px; border-radius: 10px;">
+      <p style="font-size: 18pt; font-weight: bold; margin: 0;">🤖 Prompt the AI</p>
+    </div>
+    <p style="font-size: 14pt; line-height: 1.3; margin: 8px 8px 0px 8px;">Support students in writing a clear prompt that explains the context, goal, constraints, and output expectations.</p>
+    <p style="font-size: 14pt; line-height: 1.3; margin: 8px 8px 0px 8px;">Students can focus on communicating what they want the webpage to do or look like instead of trying to memorize every HTML tag or CSS property.</p>
+  </div>
+
+  <div style="margin-bottom: 14px;">
+    <div style="background-color: #B7E0E5; color: #000000; padding: 8px 12px; border-radius: 10px;">
+      <p style="font-size: 18pt; font-weight: bold; margin: 0;">🔁 Test and Refine</p>
+    </div>
+    <p style="font-size: 14pt; line-height: 1.3; margin: 8px 8px 0px 8px;">Encourage students to preview their webpage, check what changed, and decide what still needs improvement.</p>
+    <p style="font-size: 14pt; line-height: 1.3; margin: 8px 8px 0px 8px;">Iteration is key. Students should expect to adjust both their code and their prompts as they improve the structure and design of their site.</p>
+  </div>
+
+</div>
+
+> #### As you work through these HTML and CSS levels, practice using these steps yourself. Notice how clear planning and prompting can make AI responses more useful, less overwhelming, and easier to edit.
+
+## Next up
+
+#### Let’s get started with CSS!
+
+
+MARKDOWN

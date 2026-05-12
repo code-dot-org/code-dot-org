@@ -1,20 +1,21 @@
-import {useReactFlow} from '@xyflow/react';
 import React from 'react';
 
 import {DEFAULT_ROTATION} from '../constants';
 import {TextNodeType} from '../types';
 
-import ActionsGroup from './ActionsGroup';
 import FontSizeGroup from './FontSizeGroup';
 import HandleVisibilityToggle from './HandleVisibilityToggle';
 import LockedNotice from './LockedNotice';
+import NodeActionsGroup from './NodeActionsGroup';
 import RotationGroup from './RotationGroup';
 import SwatchGroup from './SwatchGroup';
+import TextAlignGroup from './TextAlignGroup';
 import {
   DEFAULT_FONT_COLOR,
   DEFAULT_FONT_SIZE,
-  FontSizeValue,
+  DEFAULT_TEXT_ALIGN,
   STROKE_FONT_PALETTE,
+  TextAlignValue,
 } from './toolbarPalettes';
 import ToolbarShell from './ToolbarShell';
 import {useNodeToolbarData} from './useNodeToolbarData';
@@ -24,26 +25,25 @@ interface TextNodeToolbarProps {
 }
 
 export default function TextNodeToolbar({nodeId}: TextNodeToolbarProps) {
-  const {deleteElements} = useReactFlow();
   const {data, patchNodeData} = useNodeToolbarData<TextNodeType>(nodeId);
 
-  const {fontSize, fontColor} = data;
+  const {fontSize, fontColor, textAlign} = data;
   const handlesVisible = data.showHandles !== false;
 
   return (
-    <ToolbarShell
-      target={{type: 'node', id: nodeId}}
-      anchorNodeId={nodeId}
-      ariaLabel="Text style"
-    >
+    <ToolbarShell target={{type: 'node', id: nodeId}} ariaLabel="Text style">
       {data.locked ? (
-        <LockedNotice nodeId={nodeId} />
+        <LockedNotice onUnlock={() => patchNodeData({locked: false})} />
       ) : (
         <>
           <FontSizeGroup
             selectedValue={fontSize ?? DEFAULT_FONT_SIZE}
+            onSelect={value => patchNodeData({fontSize: value})}
+          />
+          <TextAlignGroup
+            selectedValue={textAlign ?? DEFAULT_TEXT_ALIGN}
             onSelect={value =>
-              patchNodeData({fontSize: value as FontSizeValue})
+              patchNodeData({textAlign: value as TextAlignValue})
             }
           />
           <SwatchGroup
@@ -56,10 +56,7 @@ export default function TextNodeToolbar({nodeId}: TextNodeToolbarProps) {
             value={data.rotation ?? DEFAULT_ROTATION}
             onChange={degrees => patchNodeData({rotation: degrees})}
           />
-          <ActionsGroup
-            onDelete={() => deleteElements({nodes: [{id: nodeId}]})}
-            onLock={() => patchNodeData({locked: true})}
-          />
+          <NodeActionsGroup nodeId={nodeId} />
           <HandleVisibilityToggle
             visible={handlesVisible}
             onToggle={() => patchNodeData({showHandles: !handlesVisible})}

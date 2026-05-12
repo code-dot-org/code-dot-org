@@ -9,1584 +9,512 @@
     "long_instructions": "## Tryout Eligibility\r\n\r\n1. Choose one rule:\r\n   - A student can join the team only if they meet the grade requirement **AND** meet the attendance requirement.\r\n   - A student can join the team if they meet the grade requirement **OR** meet the attendance requirement.\r\n2. Complete the truth table using the rule you chose.\r\n3. Use the table to build your flowchart.\r\n4. Include all 4 outcomes—one for each case in your table.\r\n5. Save your flowchart to your Backpack.\r\n",
     "start_sources": {
       "source": {
-        "type": "excalidraw",
-        "version": 2,
-        "source": "https://levelbuilder-studio.code.org",
-        "elements": [
+        "nodes": [
           {
-            "type": "diamond",
-            "version": 554,
-            "versionNonce": 1298491696,
-            "isDeleted": false,
             "id": "Ghxgm81As0vAUJb9gu2LP",
-            "fillStyle": "solid",
-            "strokeWidth": 2,
-            "strokeStyle": "solid",
-            "roughness": 1,
-            "opacity": 100,
-            "angle": 0,
-            "x": 1148.3784974428713,
-            "y": 83.28845608141285,
-            "strokeColor": "#1e1e1e",
-            "backgroundColor": "transparent",
-            "width": 275.1771240234375,
+            "type": "shape",
+            "position": {
+              "x": 1126.7845048067622,
+              "y": 18.677972305229744
+            },
+            "style": {
+              "width": 275.1771240234375,
+              "height": 220
+            },
+            "data": {
+              "shapeType": "diamond",
+              "label": "Meets \nGrade \nRequirement?",
+              "backgroundColor": "var(--sketchlab-bg-yellow)",
+              "strokeColor": "var(--sketchlab-stroke-default)",
+              "fontColor": "var(--sketchlab-stroke-default)",
+              "fontSize": "large"
+            },
+            "measured": {
+              "width": 302,
+              "height": 220
+            },
+            "dragging": false,
+            "width": 302,
             "height": 220,
-            "seed": 481859536,
-            "groupIds": [
-
-            ],
-            "frameId": null,
-            "roundness": {
-              "type": 2
-            },
-            "boundElements": [
-              {
-                "type": "text",
-                "id": "sYTxdxbn6ck-iGVS2hl80"
-              },
-              {
-                "id": "CzOnCKOx8dR6NVZoEP651",
-                "type": "arrow"
-              },
-              {
-                "id": "HMevbqe5qv208-h0aYOlm",
-                "type": "arrow"
-              }
-            ],
-            "updated": 1776305404726,
-            "link": null,
-            "locked": false
+            "resizing": false
           },
           {
-            "type": "text",
-            "version": 659,
-            "versionNonce": 2123148240,
-            "isDeleted": false,
-            "id": "sYTxdxbn6ck-iGVS2hl80",
-            "fillStyle": "solid",
-            "strokeWidth": 2,
-            "strokeStyle": "solid",
-            "roughness": 1,
-            "opacity": 100,
-            "angle": 0,
-            "x": 1224.0581963869631,
-            "y": 155.78845608141285,
-            "strokeColor": "#1e1e1e",
-            "backgroundColor": "transparent",
-            "width": 124.22916412353516,
-            "height": 75,
-            "seed": 527769040,
-            "groupIds": [
-
-            ],
-            "frameId": null,
-            "roundness": null,
-            "boundElements": [
-
-            ],
-            "updated": 1776305591589,
-            "link": null,
-            "locked": false,
-            "fontSize": 20,
-            "fontFamily": 1,
-            "text": "Meets \nGrade \nRequirement?",
-            "textAlign": "center",
-            "verticalAlign": "middle",
-            "containerId": "Ghxgm81As0vAUJb9gu2LP",
-            "originalText": "Meets Grade Requirement?",
-            "lineHeight": 1.25,
-            "baseline": 68
-          },
-          {
-            "type": "arrow",
-            "version": 1150,
-            "versionNonce": 1750379984,
-            "isDeleted": false,
-            "id": "CzOnCKOx8dR6NVZoEP651",
-            "fillStyle": "solid",
-            "strokeWidth": 1,
-            "strokeStyle": "dashed",
-            "roughness": 0,
-            "opacity": 100,
-            "angle": 0,
-            "x": 1198.8945160061182,
-            "y": 235.3248837429324,
-            "strokeColor": "#1e1e1e",
-            "backgroundColor": "transparent",
-            "width": 61.70876949888816,
-            "height": 133.6748293217446,
-            "seed": 1689314256,
-            "groupIds": [
-
-            ],
-            "frameId": null,
-            "roundness": {
-              "type": 2
-            },
-            "boundElements": [
-
-            ],
-            "updated": 1776305626053,
-            "link": null,
-            "locked": false,
-            "startBinding": {
-              "elementId": "Ghxgm81As0vAUJb9gu2LP",
-              "focus": 0.49180776598844117,
-              "gap": 1.288464638194668
-            },
-            "endBinding": {
-              "elementId": "pAvjXAfvFfW26-WPTXdhs",
-              "focus": 0.16373767311911944,
-              "gap": 3.1502781317051074
-            },
-            "lastCommittedPoint": null,
-            "startArrowhead": null,
-            "endArrowhead": "arrow",
-            "points": [
-              [
-                0,
-                0
-              ],
-              [
-                -61.70876949888816,
-                133.6748293217446
-              ]
-            ]
-          },
-          {
-            "type": "arrow",
-            "version": 2069,
-            "versionNonce": 1464611632,
-            "isDeleted": false,
-            "id": "HMevbqe5qv208-h0aYOlm",
-            "fillStyle": "solid",
-            "strokeWidth": 1,
-            "strokeStyle": "dashed",
-            "roughness": 0,
-            "opacity": 100,
-            "angle": 0,
-            "x": 1367.5045667488955,
-            "y": 238.87840288664125,
-            "strokeColor": "#1e1e1e",
-            "backgroundColor": "transparent",
-            "width": 112.68269089136516,
-            "height": 124.40355986300915,
-            "seed": 1518594512,
-            "groupIds": [
-
-            ],
-            "frameId": null,
-            "roundness": {
-              "type": 2
-            },
-            "boundElements": [
-
-            ],
-            "updated": 1776305651471,
-            "link": null,
-            "locked": false,
-            "startBinding": {
-              "elementId": "Ghxgm81As0vAUJb9gu2LP",
-              "focus": -0.2924871477739183,
-              "gap": 1
-            },
-            "endBinding": {
-              "elementId": "g8C1ptutyVZkxAeeMiUA2",
-              "focus": 0.2513444889999371,
-              "gap": 1
-            },
-            "lastCommittedPoint": null,
-            "startArrowhead": null,
-            "endArrowhead": "arrow",
-            "points": [
-              [
-                0,
-                0
-              ],
-              [
-                112.68269089136516,
-                124.40355986300915
-              ]
-            ]
-          },
-          {
-            "type": "diamond",
-            "version": 708,
-            "versionNonce": 1637218768,
-            "isDeleted": false,
             "id": "pAvjXAfvFfW26-WPTXdhs",
-            "fillStyle": "solid",
-            "strokeWidth": 2,
-            "strokeStyle": "solid",
-            "roughness": 1,
-            "opacity": 100,
-            "angle": 0,
-            "x": 941.6924778130337,
-            "y": 314.4739850362145,
-            "strokeColor": "#1e1e1e",
-            "backgroundColor": "transparent",
-            "width": 272.1294642857143,
-            "height": 270,
-            "seed": 1812344784,
-            "groupIds": [
-
-            ],
-            "frameId": null,
-            "roundness": {
-              "type": 2
+            "type": "shape",
+            "position": {
+              "x": 905.6924778130337,
+              "y": 314.4739850362145
             },
-            "boundElements": [
-              {
-                "type": "text",
-                "id": "e3klWK_ft5eA9WUVDWdEp"
-              },
-              {
-                "id": "z4vuAcWWLiYDSa1hn_rDU",
-                "type": "arrow"
-              },
-              {
-                "id": "aa2zxJlBqmzhwGCoJ0DUK",
-                "type": "arrow"
-              },
-              {
-                "id": "CzOnCKOx8dR6NVZoEP651",
-                "type": "arrow"
-              }
-            ],
-            "updated": 1776305620470,
-            "link": null,
-            "locked": false
+            "style": {
+              "width": 272.1294642857143,
+              "height": 270
+            },
+            "data": {
+              "shapeType": "diamond",
+              "label": "Meets \nAttendance \nRequirement?",
+              "backgroundColor": "var(--sketchlab-bg-yellow)",
+              "strokeColor": "var(--sketchlab-stroke-default)",
+              "fontColor": "var(--sketchlab-stroke-default)",
+              "fontSize": "large"
+            },
+            "measured": {
+              "width": 308,
+              "height": 270
+            },
+            "width": 308,
+            "height": 270,
+            "resizing": false
           },
           {
-            "type": "text",
-            "version": 790,
-            "versionNonce": 1716928464,
-            "isDeleted": false,
-            "id": "e3klWK_ft5eA9WUVDWdEp",
-            "fillStyle": "solid",
-            "strokeWidth": 2,
-            "strokeStyle": "solid",
-            "roughness": 1,
-            "opacity": 100,
-            "angle": 0,
-            "x": 1015.6102618226948,
-            "y": 411.9739850362145,
-            "strokeColor": "#1e1e1e",
-            "backgroundColor": "transparent",
-            "width": 124.22916412353516,
-            "height": 75,
-            "seed": 1632613840,
-            "groupIds": [
-
-            ],
-            "frameId": null,
-            "roundness": null,
-            "boundElements": [
-
-            ],
-            "updated": 1776305620470,
-            "link": null,
-            "locked": false,
-            "fontSize": 20,
-            "fontFamily": 1,
-            "text": "Meets \nAttendance \nRequirement?",
-            "textAlign": "center",
-            "verticalAlign": "middle",
-            "containerId": "pAvjXAfvFfW26-WPTXdhs",
-            "originalText": "Meets Attendance Requirement?",
-            "lineHeight": 1.25,
-            "baseline": 68
-          },
-          {
-            "type": "diamond",
-            "version": 1038,
-            "versionNonce": 1900799952,
-            "isDeleted": false,
             "id": "g8C1ptutyVZkxAeeMiUA2",
-            "fillStyle": "solid",
-            "strokeWidth": 2,
-            "strokeStyle": "solid",
-            "roughness": 1,
-            "opacity": 100,
-            "angle": 0,
-            "x": 1391.51861683793,
-            "y": 317.5750709618139,
-            "strokeColor": "#1e1e1e",
-            "backgroundColor": "transparent",
-            "width": 270.9867117745537,
-            "height": 270,
-            "seed": 1064860624,
-            "groupIds": [
-
-            ],
-            "frameId": null,
-            "roundness": {
-              "type": 2
+            "type": "shape",
+            "position": {
+              "x": 1391.51861683793,
+              "y": 317.5750709618139
             },
-            "boundElements": [
-              {
-                "type": "text",
-                "id": "gxo-RE_2FQCNBxfSrHQEa"
-              },
-              {
-                "id": "cvP0SydQnJn78oj-GBut6",
-                "type": "arrow"
-              },
-              {
-                "id": "z5zUVN05g6DJxX6lB6d5t",
-                "type": "arrow"
-              },
-              {
-                "id": "HMevbqe5qv208-h0aYOlm",
-                "type": "arrow"
-              }
-            ],
-            "updated": 1776305647167,
-            "link": null,
-            "locked": false
+            "style": {
+              "width": 270.9867117745537,
+              "height": 270
+            },
+            "data": {
+              "shapeType": "diamond",
+              "label": "Meets \nAttendance \nRequirement?",
+              "backgroundColor": "var(--sketchlab-bg-yellow)",
+              "strokeColor": "var(--sketchlab-stroke-default)",
+              "fontColor": "var(--sketchlab-stroke-default)",
+              "fontSize": "large"
+            },
+            "measured": {
+              "width": 315,
+              "height": 272
+            },
+            "width": 315,
+            "height": 272,
+            "resizing": false
           },
           {
-            "type": "text",
-            "version": 1120,
-            "versionNonce": 622751184,
-            "isDeleted": false,
-            "id": "gxo-RE_2FQCNBxfSrHQEa",
-            "fillStyle": "solid",
-            "strokeWidth": 2,
-            "strokeStyle": "solid",
-            "roughness": 1,
-            "opacity": 100,
-            "angle": 0,
-            "x": 1464.6507127198008,
-            "y": 415.0750709618139,
-            "strokeColor": "#1e1e1e",
-            "backgroundColor": "transparent",
-            "width": 124.22916412353516,
-            "height": 75,
-            "seed": 681083344,
-            "groupIds": [
-
-            ],
-            "frameId": null,
-            "roundness": null,
-            "boundElements": [
-
-            ],
-            "updated": 1776305647167,
-            "link": null,
-            "locked": false,
-            "fontSize": 20,
-            "fontFamily": 1,
-            "text": "Meets \nAttendance \nRequirement?",
-            "textAlign": "center",
-            "verticalAlign": "middle",
-            "containerId": "g8C1ptutyVZkxAeeMiUA2",
-            "originalText": "Meets Attendance Requirement?",
-            "lineHeight": 1.25,
-            "baseline": 68
-          },
-          {
-            "type": "arrow",
-            "version": 1653,
-            "versionNonce": 1359252432,
-            "isDeleted": false,
-            "id": "z4vuAcWWLiYDSa1hn_rDU",
-            "fillStyle": "solid",
-            "strokeWidth": 1,
-            "strokeStyle": "dashed",
-            "roughness": 0,
-            "opacity": 100,
-            "angle": 0,
-            "x": 1022.6789110331299,
-            "y": 535.8588519149991,
-            "strokeColor": "#1e1e1e",
-            "backgroundColor": "transparent",
-            "width": 74.35337921243263,
-            "height": 112.99690950351135,
-            "seed": 1002948560,
-            "groupIds": [
-
-            ],
-            "frameId": null,
-            "roundness": {
-              "type": 2
-            },
-            "boundElements": [
-
-            ],
-            "updated": 1776305620470,
-            "link": null,
-            "locked": false,
-            "startBinding": {
-              "elementId": "pAvjXAfvFfW26-WPTXdhs",
-              "gap": 4.282107962866917,
-              "focus": -0.011493826275921049
-            },
-            "endBinding": {
-              "elementId": "PuHJp-kJaUHx13K0p719z",
-              "gap": 15.112026360443906,
-              "focus": -0.7320706348166354
-            },
-            "lastCommittedPoint": null,
-            "startArrowhead": null,
-            "endArrowhead": "arrow",
-            "points": [
-              [
-                0,
-                0
-              ],
-              [
-                -74.35337921243263,
-                112.99690950351135
-              ]
-            ]
-          },
-          {
-            "type": "arrow",
-            "version": 2104,
-            "versionNonce": 1167054800,
-            "isDeleted": false,
-            "id": "aa2zxJlBqmzhwGCoJ0DUK",
-            "fillStyle": "solid",
-            "strokeWidth": 1,
-            "strokeStyle": "dashed",
-            "roughness": 0,
-            "opacity": 100,
-            "angle": 0,
-            "x": 1131.364102082864,
-            "y": 539.308752919708,
-            "strokeColor": "#1e1e1e",
-            "backgroundColor": "transparent",
-            "width": 55.837536739206826,
-            "height": 126.8681001790859,
-            "seed": 1964920272,
-            "groupIds": [
-
-            ],
-            "frameId": null,
-            "roundness": {
-              "type": 2
-            },
-            "boundElements": [
-
-            ],
-            "updated": 1776305620470,
-            "link": null,
-            "locked": false,
-            "startBinding": {
-              "elementId": "pAvjXAfvFfW26-WPTXdhs",
-              "gap": 5.694772615051619,
-              "focus": -0.10208019375894314
-            },
-            "endBinding": {
-              "elementId": "XhzhTU_WJfGe6nsSBebNg",
-              "gap": 1.5728848600814587,
-              "focus": 0.5210593502229298
-            },
-            "lastCommittedPoint": null,
-            "startArrowhead": null,
-            "endArrowhead": "arrow",
-            "points": [
-              [
-                0,
-                0
-              ],
-              [
-                55.837536739206826,
-                126.8681001790859
-              ]
-            ]
-          },
-          {
-            "type": "arrow",
-            "version": 3181,
-            "versionNonce": 1607534032,
-            "isDeleted": false,
-            "id": "z5zUVN05g6DJxX6lB6d5t",
-            "fillStyle": "solid",
-            "strokeWidth": 1,
-            "strokeStyle": "dashed",
-            "roughness": 0,
-            "opacity": 100,
-            "angle": 0,
-            "x": 1451.6901655952224,
-            "y": 516.0509452885012,
-            "strokeColor": "#1e1e1e",
-            "backgroundColor": "transparent",
-            "width": 40.114973974367786,
-            "height": 143.56357108865973,
-            "seed": 229905360,
-            "groupIds": [
-
-            ],
-            "frameId": null,
-            "roundness": {
-              "type": 2
-            },
-            "boundElements": [
-
-            ],
-            "updated": 1776305647167,
-            "link": null,
-            "locked": false,
-            "startBinding": {
-              "elementId": "g8C1ptutyVZkxAeeMiUA2",
-              "gap": 2.4959749529441524,
-              "focus": 0.424023037512642
-            },
-            "endBinding": {
-              "elementId": "YPHaZZDlPYgfhkZEAWMbN",
-              "gap": 2.2821591728333885,
-              "focus": -0.21359225737366896
-            },
-            "lastCommittedPoint": null,
-            "startArrowhead": null,
-            "endArrowhead": "arrow",
-            "points": [
-              [
-                0,
-                0
-              ],
-              [
-                -40.114973974367786,
-                143.56357108865973
-              ]
-            ]
-          },
-          {
-            "type": "arrow",
-            "version": 3171,
-            "versionNonce": 1645820368,
-            "isDeleted": false,
-            "id": "cvP0SydQnJn78oj-GBut6",
-            "fillStyle": "solid",
-            "strokeWidth": 1,
-            "strokeStyle": "dashed",
-            "roughness": 0,
-            "opacity": 100,
-            "angle": 0,
-            "x": 1594.4953524437078,
-            "y": 524.7696364880363,
-            "strokeColor": "#1e1e1e",
-            "backgroundColor": "transparent",
-            "width": 59.76873389140928,
-            "height": 129.4253492176896,
-            "seed": 1537284560,
-            "groupIds": [
-
-            ],
-            "frameId": null,
-            "roundness": {
-              "type": 2
-            },
-            "boundElements": [
-
-            ],
-            "updated": 1776305647167,
-            "link": null,
-            "locked": false,
-            "startBinding": {
-              "elementId": "g8C1ptutyVZkxAeeMiUA2",
-              "gap": 3.139768092499395,
-              "focus": -0.25313811555798665
-            },
-            "endBinding": {
-              "elementId": "0NUoFbEHYzn81O7B0Coq1",
-              "gap": 9.375190480063225,
-              "focus": 0.6103710125838041
-            },
-            "lastCommittedPoint": null,
-            "startArrowhead": null,
-            "endArrowhead": "arrow",
-            "points": [
-              [
-                0,
-                0
-              ],
-              [
-                59.76873389140928,
-                129.4253492176896
-              ]
-            ]
-          },
-          {
-            "type": "ellipse",
-            "version": 458,
-            "versionNonce": 1258379056,
-            "isDeleted": false,
             "id": "PuHJp-kJaUHx13K0p719z",
-            "fillStyle": "solid",
-            "strokeWidth": 2,
-            "strokeStyle": "solid",
-            "roughness": 1,
-            "opacity": 100,
-            "angle": 0,
-            "x": 880.465992424963,
-            "y": 663.9268593067329,
-            "strokeColor": "#1e1e1e",
-            "backgroundColor": "transparent",
-            "width": 140.7890625,
-            "height": 156,
-            "seed": 838688720,
-            "groupIds": [
-
-            ],
-            "frameId": null,
-            "roundness": {
-              "type": 2
+            "type": "shape",
+            "position": {
+              "x": 840.465992424963,
+              "y": 663.9268593067329
             },
-            "boundElements": [
-              {
-                "id": "z4vuAcWWLiYDSa1hn_rDU",
-                "type": "arrow"
-              },
-              {
-                "type": "text",
-                "id": "xpWpEq_BnDH6QoCGbtxof"
-              }
-            ],
-            "updated": 1776305404726,
-            "link": null,
-            "locked": false
+            "style": {
+              "width": 140.7890625,
+              "height": 156
+            },
+            "data": {
+              "shapeType": "circle",
+              "label": "Fill in \noutcome \nfrom \ntable",
+              "backgroundColor": "var(--sketchlab-bg-green)",
+              "strokeColor": "var(--sketchlab-stroke-default)",
+              "fontColor": "var(--sketchlab-stroke-default)",
+              "fontSize": "large"
+            },
+            "measured": {
+              "width": 181,
+              "height": 158
+            },
+            "width": 181,
+            "height": 158,
+            "resizing": false
           },
           {
-            "type": "text",
-            "version": 368,
-            "versionNonce": 959377712,
-            "isDeleted": false,
-            "id": "xpWpEq_BnDH6QoCGbtxof",
-            "fillStyle": "solid",
-            "strokeWidth": 2,
-            "strokeStyle": "solid",
-            "roughness": 1,
-            "opacity": 100,
-            "angle": 0,
-            "x": 906.8549053314072,
-            "y": 691.7725303741822,
-            "strokeColor": "#e03131",
-            "backgroundColor": "transparent",
-            "width": 88.45833587646484,
-            "height": 100,
-            "seed": 1088480720,
-            "groupIds": [
-
-            ],
-            "frameId": null,
-            "roundness": null,
-            "boundElements": [
-
-            ],
-            "updated": 1776305404726,
-            "link": null,
-            "locked": false,
-            "fontSize": 20,
-            "fontFamily": 1,
-            "text": "Fill in \noutcome \nfrom \ntable",
-            "textAlign": "center",
-            "verticalAlign": "middle",
-            "containerId": "PuHJp-kJaUHx13K0p719z",
-            "originalText": "Fill in outcome from table",
-            "lineHeight": 1.25,
-            "baseline": 93
-          },
-          {
-            "type": "ellipse",
-            "version": 703,
-            "versionNonce": 564684080,
-            "isDeleted": false,
             "id": "XhzhTU_WJfGe6nsSBebNg",
-            "fillStyle": "solid",
-            "strokeWidth": 2,
-            "strokeStyle": "solid",
-            "roughness": 1,
-            "opacity": 100,
-            "angle": 0,
-            "x": 1110.901851489784,
-            "y": 667.4814052392719,
-            "strokeColor": "#1e1e1e",
-            "backgroundColor": "transparent",
-            "width": 140.7890625,
-            "height": 156,
-            "seed": 1969466320,
-            "groupIds": [
-
-            ],
-            "frameId": null,
-            "roundness": {
-              "type": 2
+            "type": "shape",
+            "position": {
+              "x": 1110.901851489784,
+              "y": 667.4814052392719
             },
-            "boundElements": [
-              {
-                "type": "text",
-                "id": "EeBcIatgGc8CYLGX0CNMF"
-              },
-              {
-                "id": "aa2zxJlBqmzhwGCoJ0DUK",
-                "type": "arrow"
-              }
-            ],
-            "updated": 1776305404726,
-            "link": null,
-            "locked": false
+            "style": {
+              "width": 140.7890625,
+              "height": 156
+            },
+            "data": {
+              "shapeType": "circle",
+              "label": "Fill in \noutcome \nfrom \ntable",
+              "backgroundColor": "var(--sketchlab-bg-green)",
+              "strokeColor": "var(--sketchlab-stroke-default)",
+              "fontColor": "var(--sketchlab-stroke-default)",
+              "fontSize": "large"
+            },
+            "measured": {
+              "width": 191,
+              "height": 152
+            },
+            "width": 191,
+            "height": 152,
+            "resizing": false
           },
           {
-            "type": "text",
-            "version": 610,
-            "versionNonce": 63192880,
-            "isDeleted": false,
-            "id": "EeBcIatgGc8CYLGX0CNMF",
-            "fillStyle": "solid",
-            "strokeWidth": 2,
-            "strokeStyle": "solid",
-            "roughness": 1,
-            "opacity": 100,
-            "angle": 0,
-            "x": 1137.290764396228,
-            "y": 695.3270763067212,
-            "strokeColor": "#e03131",
-            "backgroundColor": "transparent",
-            "width": 88.45833587646484,
-            "height": 100,
-            "seed": 1503506896,
-            "groupIds": [
-
-            ],
-            "frameId": null,
-            "roundness": null,
-            "boundElements": [
-
-            ],
-            "updated": 1776305404726,
-            "link": null,
-            "locked": false,
-            "fontSize": 20,
-            "fontFamily": 1,
-            "text": "Fill in \noutcome \nfrom \ntable",
-            "textAlign": "center",
-            "verticalAlign": "middle",
-            "containerId": "XhzhTU_WJfGe6nsSBebNg",
-            "originalText": "Fill in outcome from table",
-            "lineHeight": 1.25,
-            "baseline": 93
-          },
-          {
-            "type": "ellipse",
-            "version": 812,
-            "versionNonce": 1170354992,
-            "isDeleted": false,
             "id": "0NUoFbEHYzn81O7B0Coq1",
-            "fillStyle": "solid",
-            "strokeWidth": 2,
-            "strokeStyle": "solid",
-            "roughness": 1,
-            "opacity": 100,
-            "angle": 0,
-            "x": 1575.7445163190923,
-            "y": 663.115749639536,
-            "strokeColor": "#1e1e1e",
-            "backgroundColor": "transparent",
-            "width": 140.7890625,
-            "height": 156,
-            "seed": 1957099472,
-            "groupIds": [
-
-            ],
-            "frameId": null,
-            "roundness": {
-              "type": 2
+            "type": "shape",
+            "position": {
+              "x": 1575.7445163190923,
+              "y": 663.115749639536
             },
-            "boundElements": [
-              {
-                "type": "text",
-                "id": "IUdk4sgz7FP_-AgTOF5vB"
-              },
-              {
-                "id": "cvP0SydQnJn78oj-GBut6",
-                "type": "arrow"
-              }
-            ],
-            "updated": 1776305404726,
-            "link": null,
-            "locked": false
+            "style": {
+              "width": 140.7890625,
+              "height": 156
+            },
+            "data": {
+              "shapeType": "circle",
+              "label": "Fill in \noutcome \nfrom \ntable",
+              "backgroundColor": "var(--sketchlab-bg-green)",
+              "strokeColor": "var(--sketchlab-stroke-default)",
+              "fontColor": "var(--sketchlab-stroke-default)",
+              "fontSize": "large"
+            },
+            "measured": {
+              "width": 203,
+              "height": 153
+            },
+            "width": 203,
+            "height": 153,
+            "resizing": false
           },
           {
-            "type": "text",
-            "version": 728,
-            "versionNonce": 1601457456,
-            "isDeleted": false,
-            "id": "IUdk4sgz7FP_-AgTOF5vB",
-            "fillStyle": "solid",
-            "strokeWidth": 2,
-            "strokeStyle": "solid",
-            "roughness": 1,
-            "opacity": 100,
-            "angle": 0,
-            "x": 1602.1334292255365,
-            "y": 690.9614207069853,
-            "strokeColor": "#e03131",
-            "backgroundColor": "transparent",
-            "width": 88.45833587646484,
-            "height": 100,
-            "seed": 714571216,
-            "groupIds": [
-
-            ],
-            "frameId": null,
-            "roundness": null,
-            "boundElements": [
-
-            ],
-            "updated": 1776305404726,
-            "link": null,
-            "locked": false,
-            "fontSize": 20,
-            "fontFamily": 1,
-            "text": "Fill in \noutcome \nfrom \ntable",
-            "textAlign": "center",
-            "verticalAlign": "middle",
-            "containerId": "0NUoFbEHYzn81O7B0Coq1",
-            "originalText": "Fill in outcome from table",
-            "lineHeight": 1.25,
-            "baseline": 93
-          },
-          {
-            "type": "ellipse",
-            "version": 922,
-            "versionNonce": 54968624,
-            "isDeleted": false,
             "id": "YPHaZZDlPYgfhkZEAWMbN",
-            "fillStyle": "solid",
-            "strokeWidth": 2,
-            "strokeStyle": "solid",
-            "roughness": 1,
-            "opacity": 100,
-            "angle": 0,
-            "x": 1334.5805659718358,
-            "y": 661.5649359806946,
-            "strokeColor": "#1e1e1e",
-            "backgroundColor": "transparent",
-            "width": 140.7890625,
-            "height": 156,
-            "seed": 478626768,
-            "groupIds": [
-
-            ],
-            "frameId": null,
-            "roundness": {
-              "type": 2
+            "type": "shape",
+            "position": {
+              "x": 1334.5805659718358,
+              "y": 661.5649359806946
             },
-            "boundElements": [
-              {
-                "type": "text",
-                "id": "ynO-Fr2aj-ondDW-VeuMo"
-              },
-              {
-                "id": "z5zUVN05g6DJxX6lB6d5t",
-                "type": "arrow"
-              }
-            ],
-            "updated": 1776305404726,
-            "link": null,
-            "locked": false
+            "style": {
+              "width": 140.7890625,
+              "height": 156
+            },
+            "data": {
+              "shapeType": "circle",
+              "label": "Fill in \noutcome \nfrom \ntable",
+              "backgroundColor": "var(--sketchlab-bg-green)",
+              "strokeColor": "var(--sketchlab-stroke-default)",
+              "fontColor": "var(--sketchlab-stroke-default)",
+              "fontSize": "large"
+            },
+            "measured": {
+              "width": 192,
+              "height": 152
+            },
+            "width": 192,
+            "height": 152,
+            "resizing": false
           },
           {
-            "type": "text",
-            "version": 833,
-            "versionNonce": 1496783664,
-            "isDeleted": false,
-            "id": "ynO-Fr2aj-ondDW-VeuMo",
-            "fillStyle": "solid",
-            "strokeWidth": 2,
-            "strokeStyle": "solid",
-            "roughness": 1,
-            "opacity": 100,
-            "angle": 0,
-            "x": 1360.96947887828,
-            "y": 689.4106070481439,
-            "strokeColor": "#e03131",
-            "backgroundColor": "transparent",
-            "width": 88.45833587646484,
-            "height": 100,
-            "seed": 143542736,
-            "groupIds": [
-
-            ],
-            "frameId": null,
-            "roundness": null,
-            "boundElements": [
-
-            ],
-            "updated": 1776305404726,
-            "link": null,
-            "locked": false,
-            "fontSize": 20,
-            "fontFamily": 1,
-            "text": "Fill in \noutcome \nfrom \ntable",
-            "textAlign": "center",
-            "verticalAlign": "middle",
-            "containerId": "YPHaZZDlPYgfhkZEAWMbN",
-            "originalText": "Fill in outcome from table",
-            "lineHeight": 1.25,
-            "baseline": 93
-          },
-          {
-            "type": "rectangle",
-            "version": 4159,
-            "versionNonce": 154013488,
-            "isDeleted": false,
             "id": "mSuzAvT0q8T6X4OlUSf8V",
-            "fillStyle": "solid",
-            "strokeWidth": 4,
-            "strokeStyle": "solid",
-            "roughness": 1,
-            "opacity": 30,
-            "angle": 0,
-            "x": 38.3237295951875,
-            "y": 109.87693509132453,
-            "strokeColor": "#1e1e1e",
-            "backgroundColor": "#ffffff",
-            "width": 821.3898617260127,
-            "height": 474.2331138608705,
-            "seed": 700747728,
-            "groupIds": [
-
-            ],
-            "frameId": null,
-            "roundness": null,
-            "boundElements": [
-
-            ],
-            "updated": 1776305404726,
-            "link": null,
-            "locked": false
+            "type": "shape",
+            "position": {
+              "x": 39.45703194949124,
+              "y": 109.87693509132453
+            },
+            "style": {
+              "width": 821.3898617260127,
+              "height": 474.2331138608705
+            },
+            "data": {
+              "shapeType": "rectangle",
+              "label": "",
+              "backgroundColor": "#ffffff",
+              "strokeColor": "#1e1e1e"
+            },
+            "measured": {
+              "width": 821,
+              "height": 474
+            },
+            "dragging": false
           },
           {
-            "type": "text",
-            "version": 1404,
-            "versionNonce": 17082672,
-            "isDeleted": false,
             "id": "bsP1hId1qL7vLjfSIygSp",
-            "fillStyle": "solid",
-            "strokeWidth": 2,
-            "strokeStyle": "solid",
-            "roughness": 1,
-            "opacity": 100,
-            "angle": 0,
-            "x": 59.63567449259591,
-            "y": 132.8873152102704,
-            "strokeColor": "#1e1e1e",
-            "backgroundColor": "transparent",
-            "width": 669.4791870117188,
-            "height": 35.82631666748765,
-            "seed": 406984144,
-            "groupIds": [
-
-            ],
-            "frameId": null,
-            "roundness": null,
-            "boundElements": [
-
-            ],
-            "updated": 1776305404726,
-            "link": null,
-            "locked": false,
-            "fontSize": 28.66105333399012,
-            "fontFamily": 1,
-            "text": "Truth Table - Use this to plan your flowchart",
-            "textAlign": "left",
-            "verticalAlign": "top",
-            "containerId": null,
-            "originalText": "Truth Table - Use this to plan your flowchart",
-            "lineHeight": 1.25,
-            "baseline": 26
+            "type": "text",
+            "position": {
+              "x": 218.29800409512575,
+              "y": 126.0875010844477
+            },
+            "data": {
+              "text": "Truth Table - Use this to plan your flowchart",
+              "fontColor": "#1e1e1e",
+              "fontSize": "large",
+              "showHandles": false
+            },
+            "measured": {
+              "width": 447,
+              "height": 47
+            },
+            "dragging": false
           },
           {
-            "type": "image",
-            "version": 1215,
-            "versionNonce": 922223408,
-            "isDeleted": false,
             "id": "cuUghB9_k36BuDG5pB94p",
-            "fillStyle": "solid",
-            "strokeWidth": 2,
-            "strokeStyle": "solid",
-            "roughness": 1,
-            "opacity": 100,
-            "angle": 0,
-            "x": 44.18545093863992,
-            "y": 177.03953923103387,
-            "strokeColor": "transparent",
-            "backgroundColor": "transparent",
-            "width": 812.4053816867607,
-            "height": 322.70547105890773,
-            "seed": 689888208,
-            "groupIds": [
-              "X_XpkUsnyehMGeHa30ICx"
-            ],
-            "frameId": null,
-            "roundness": null,
-            "boundElements": [
-
-            ],
-            "updated": 1776305404726,
-            "link": null,
-            "locked": false,
-            "status": "pending",
-            "fileId": "a13ed1267843dc283f398b597f146c3869429cc8",
-            "scale": [
-              1,
-              1
-            ]
+            "type": "image",
+            "position": {
+              "x": 43.05214858433607,
+              "y": 178.17284158533755
+            },
+            "style": {
+              "width": 812.4053816867607,
+              "height": 322.70547105890773
+            },
+            "data": {
+              "src": "/level_starter_assets/ai-and-algorithmic-decisions-lesson9-level9c_2026/uuid/a13ed1267843dc283f398b597f146c3869429cc8.png",
+              "altText": "",
+              "showHandles": false
+            },
+            "measured": {
+              "width": 812,
+              "height": 323
+            },
+            "dragging": false
           },
           {
-            "type": "text",
-            "version": 2274,
-            "versionNonce": 517190096,
-            "isDeleted": false,
             "id": "v1NnsRxdAlV_xaSmOkQfA",
-            "fillStyle": "solid",
-            "strokeWidth": 2,
-            "strokeStyle": "solid",
-            "roughness": 1,
-            "opacity": 100,
-            "angle": 0,
-            "x": 62.66826641076187,
-            "y": 198.75824283129379,
-            "strokeColor": "#ffffff",
-            "backgroundColor": "transparent",
-            "width": 170.6458282470703,
-            "height": 22.113501476774324,
-            "seed": 1316151760,
-            "groupIds": [
-              "X_XpkUsnyehMGeHa30ICx"
-            ],
-            "frameId": null,
-            "roundness": null,
-            "boundElements": [
-
-            ],
-            "updated": 1776305505488,
-            "link": null,
-            "locked": false,
-            "fontSize": 17.69080118141946,
-            "fontFamily": 1,
-            "text": "meetsGrades (T/F>",
-            "textAlign": "center",
-            "verticalAlign": "top",
-            "containerId": null,
-            "originalText": "meetsGrades (T/F>",
-            "lineHeight": 1.25,
-            "baseline": 16
+            "type": "text",
+            "position": {
+              "x": 62.66826641076187,
+              "y": 188.55852164255973
+            },
+            "data": {
+              "text": "meetsGrades (T/F)",
+              "fontColor": "#ffffff",
+              "fontSize": "medium",
+              "showHandles": false
+            },
+            "measured": {
+              "width": 153,
+              "height": 39
+            },
+            "dragging": false
           },
           {
-            "type": "text",
-            "version": 2153,
-            "versionNonce": 190497254,
-            "isDeleted": false,
             "id": "484FKFeoy82R498SiwdAH",
-            "fillStyle": "solid",
-            "strokeWidth": 2,
-            "strokeStyle": "solid",
-            "roughness": 1,
-            "opacity": 100,
-            "angle": 0,
-            "x": 247.1096431050421,
-            "y": 197.93610279900562,
-            "strokeColor": "#ffffff",
-            "backgroundColor": "transparent",
-            "width": 205.1666717529297,
-            "height": 22.28572300502234,
-            "seed": 2002134992,
-            "groupIds": [
-              "X_XpkUsnyehMGeHa30ICx"
-            ],
-            "frameId": null,
-            "roundness": null,
-            "boundElements": [
-
-            ],
-            "updated": 1776305762234,
-            "link": null,
-            "locked": false,
-            "fontSize": 17.828578404017872,
-            "fontFamily": 1,
-            "text": "meetsAttendance (T/F)",
-            "textAlign": "left",
-            "verticalAlign": "top",
-            "containerId": null,
-            "originalText": "meetsAttendance (T/F)",
-            "lineHeight": 1.25,
-            "baseline": 16
+            "type": "text",
+            "position": {
+              "x": 252.776154876561,
+              "y": 187.73638161027156
+            },
+            "data": {
+              "text": "meetsAttendance (T/F)",
+              "fontColor": "#ffffff",
+              "fontSize": "medium",
+              "showHandles": false
+            },
+            "measured": {
+              "width": 186,
+              "height": 39
+            },
+            "dragging": false
           },
           {
-            "type": "text",
-            "version": 2034,
-            "versionNonce": 2115450746,
-            "isDeleted": false,
             "id": "Nck3yZKR3yZD5KrcF_ozg",
-            "fillStyle": "solid",
-            "strokeWidth": 2,
-            "strokeStyle": "solid",
-            "roughness": 1,
-            "opacity": 100,
-            "angle": 0,
-            "x": 472.2353675928314,
-            "y": 193.92333271568765,
-            "strokeColor": "#ffffff",
-            "backgroundColor": "transparent",
-            "width": 370.4166564941406,
-            "height": 28.42860630580356,
-            "seed": 1876995536,
-            "groupIds": [
-              "X_XpkUsnyehMGeHa30ICx"
-            ],
-            "frameId": null,
-            "roundness": null,
-            "boundElements": [
-
-            ],
-            "updated": 1776305762234,
-            "link": null,
-            "locked": false,
-            "fontSize": 22.742885044642847,
-            "fontFamily": 1,
-            "text": "Outcome (Eligible for the Team?)",
-            "textAlign": "left",
-            "verticalAlign": "top",
-            "containerId": null,
-            "originalText": "Outcome (Eligible for the Team?)",
-            "lineHeight": 1.25,
-            "baseline": 20
-          },
-          {
-            "type": "rectangle",
-            "version": 1751,
-            "versionNonce": 1493494576,
-            "isDeleted": false,
-            "id": "SBnxOfyUW-lccaHyvaqC5",
-            "fillStyle": "solid",
-            "strokeWidth": 1,
-            "strokeStyle": "solid",
-            "roughness": 1,
-            "opacity": 100,
-            "angle": 0,
-            "x": 459.5758257478267,
-            "y": 226.70731203271163,
-            "strokeColor": "#1e1e1e",
-            "backgroundColor": "transparent",
-            "width": 388.8281366716147,
-            "height": 63.61862179464932,
-            "seed": 1093301200,
-            "groupIds": [
-              "X_XpkUsnyehMGeHa30ICx"
-            ],
-            "frameId": null,
-            "roundness": null,
-            "boundElements": [
-
-            ],
-            "updated": 1776305404726,
-            "link": null,
-            "locked": false
-          },
-          {
-            "type": "rectangle",
-            "version": 1820,
-            "versionNonce": 1772094768,
-            "isDeleted": false,
-            "id": "7uZdim7lEcQnh0iqiZLx3",
-            "fillStyle": "solid",
-            "strokeWidth": 1,
-            "strokeStyle": "solid",
-            "roughness": 1,
-            "opacity": 100,
-            "angle": 0,
-            "x": 459.1787329878787,
-            "y": 291.1392601865835,
-            "strokeColor": "#1e1e1e",
-            "backgroundColor": "transparent",
-            "width": 388.8281366716147,
-            "height": 63.61862179464932,
-            "seed": 290159056,
-            "groupIds": [
-              "X_XpkUsnyehMGeHa30ICx"
-            ],
-            "frameId": null,
-            "roundness": null,
-            "boundElements": [
-
-            ],
-            "updated": 1776305404726,
-            "link": null,
-            "locked": false
-          },
-          {
-            "type": "rectangle",
-            "version": 1858,
-            "versionNonce": 734519088,
-            "isDeleted": false,
-            "id": "MbnAWp_BFOyp-LBLVwizx",
-            "fillStyle": "solid",
-            "strokeWidth": 1,
-            "strokeStyle": "solid",
-            "roughness": 1,
-            "opacity": 100,
-            "angle": 0,
-            "x": 458.8876186758489,
-            "y": 356.63998039327686,
-            "strokeColor": "#1e1e1e",
-            "backgroundColor": "transparent",
-            "width": 388.8281366716147,
-            "height": 63.10165090125174,
-            "seed": 56344528,
-            "groupIds": [
-              "X_XpkUsnyehMGeHa30ICx"
-            ],
-            "frameId": null,
-            "roundness": null,
-            "boundElements": [
-
-            ],
-            "updated": 1776305404726,
-            "link": null,
-            "locked": false
-          },
-          {
-            "type": "rectangle",
-            "version": 1924,
-            "versionNonce": 1340373296,
-            "isDeleted": false,
-            "id": "BOy9qAUcWfRNGfRDzx-lM",
-            "fillStyle": "solid",
-            "strokeWidth": 1,
-            "strokeStyle": "solid",
-            "roughness": 1,
-            "opacity": 100,
-            "angle": 0,
-            "x": 458.8156155766126,
-            "y": 419.4112627822288,
-            "strokeColor": "#1e1e1e",
-            "backgroundColor": "transparent",
-            "width": 388.6108590497522,
-            "height": 69.48511758494332,
-            "seed": 393430480,
-            "groupIds": [
-              "X_XpkUsnyehMGeHa30ICx"
-            ],
-            "frameId": null,
-            "roundness": null,
-            "boundElements": [
-
-            ],
-            "updated": 1776305404726,
-            "link": null,
-            "locked": false
-          },
-          {
             "type": "text",
-            "version": 500,
-            "versionNonce": 962450224,
-            "isDeleted": false,
+            "position": {
+              "x": 471.10206523852764,
+              "y": 181.457006818346
+            },
+            "data": {
+              "text": "Outcome (Eligible for the Team?)",
+              "fontColor": "#ffffff",
+              "fontSize": "large",
+              "showHandles": false
+            },
+            "measured": {
+              "width": 344,
+              "height": 47
+            },
+            "dragging": false
+          },
+          {
             "id": "UVtDv3rtzLM3zIoQLttsi",
-            "fillStyle": "solid",
-            "strokeWidth": 2,
-            "strokeStyle": "solid",
-            "roughness": 1,
-            "opacity": 100,
-            "angle": 0,
-            "x": 1129.071257789995,
-            "y": 285.0321990464566,
-            "strokeColor": "#1971c2",
-            "backgroundColor": "transparent",
-            "width": 66.0625,
-            "height": 35,
-            "seed": 178916304,
-            "groupIds": [
-
-            ],
-            "frameId": null,
-            "roundness": null,
-            "boundElements": [
-
-            ],
-            "updated": 1776305404726,
-            "link": null,
-            "locked": false,
-            "fontSize": 28,
-            "fontFamily": 1,
-            "text": "True",
-            "textAlign": "left",
-            "verticalAlign": "top",
-            "containerId": null,
-            "originalText": "True",
-            "lineHeight": 1.25,
-            "baseline": 25
+            "type": "text",
+            "position": {
+              "x": 1129.071257789995,
+              "y": 285.0321990464566
+            },
+            "data": {
+              "text": "True",
+              "fontColor": "var(--sketchlab-stroke-default)",
+              "fontSize": "large",
+              "showHandles": false
+            },
+            "measured": {
+              "width": 61,
+              "height": 47
+            }
           },
           {
-            "type": "text",
-            "version": 577,
-            "versionNonce": 513535280,
-            "isDeleted": false,
             "id": "WOw9whltdKmffnrF__pak",
-            "fillStyle": "solid",
-            "strokeWidth": 2,
-            "strokeStyle": "solid",
-            "roughness": 1,
-            "opacity": 100,
-            "angle": 0,
-            "x": 968.3731783629114,
-            "y": 560.5322295640347,
-            "strokeColor": "#1971c2",
-            "backgroundColor": "transparent",
-            "width": 66.0625,
-            "height": 35,
-            "seed": 924324304,
-            "groupIds": [
-
-            ],
-            "frameId": null,
-            "roundness": null,
-            "boundElements": [
-
-            ],
-            "updated": 1776305404726,
-            "link": null,
-            "locked": false,
-            "fontSize": 28,
-            "fontFamily": 1,
-            "text": "True",
-            "textAlign": "left",
-            "verticalAlign": "top",
-            "containerId": null,
-            "originalText": "True",
-            "lineHeight": 1.25,
-            "baseline": 25
+            "type": "text",
+            "position": {
+              "x": 968.3731783629114,
+              "y": 560.5322295640347
+            },
+            "data": {
+              "text": "True",
+              "fontColor": "var(--sketchlab-stroke-default)",
+              "fontSize": "large",
+              "showHandles": false
+            },
+            "measured": {
+              "width": 61,
+              "height": 47
+            }
           },
           {
-            "type": "text",
-            "version": 628,
-            "versionNonce": 688310064,
-            "isDeleted": false,
             "id": "4Uq2Gu_CV5yVSTnBTg4Mr",
-            "fillStyle": "solid",
-            "strokeWidth": 2,
-            "strokeStyle": "solid",
-            "roughness": 1,
-            "opacity": 100,
-            "angle": 0,
-            "x": 1375.373300433224,
-            "y": 292.1988962307017,
-            "strokeColor": "#1971c2",
-            "backgroundColor": "transparent",
-            "width": 72.9375,
-            "height": 35,
-            "seed": 1943361488,
-            "groupIds": [
-
-            ],
-            "frameId": null,
-            "roundness": null,
-            "boundElements": [
-
-            ],
-            "updated": 1776305404726,
-            "link": null,
-            "locked": false,
-            "fontSize": 28,
-            "fontFamily": 1,
-            "text": "False",
-            "textAlign": "left",
-            "verticalAlign": "top",
-            "containerId": null,
-            "originalText": "False",
-            "lineHeight": 1.25,
-            "baseline": 25
+            "type": "text",
+            "position": {
+              "x": 1375.373300433224,
+              "y": 292.1988962307017
+            },
+            "data": {
+              "text": "False",
+              "fontColor": "var(--sketchlab-stroke-default)",
+              "fontSize": "large",
+              "showHandles": false
+            },
+            "measured": {
+              "width": 68,
+              "height": 47
+            }
           },
           {
-            "type": "text",
-            "version": 754,
-            "versionNonce": 202426160,
-            "isDeleted": false,
             "id": "UzvRLoLWa_qBH7hbrC8Wc",
-            "fillStyle": "solid",
-            "strokeWidth": 2,
-            "strokeStyle": "solid",
-            "roughness": 1,
-            "opacity": 100,
-            "angle": 0,
-            "x": 1587.316659808224,
-            "y": 570.86556871024,
-            "strokeColor": "#1971c2",
-            "backgroundColor": "transparent",
-            "width": 72.9375,
-            "height": 35,
-            "seed": 1962532304,
-            "groupIds": [
-
-            ],
-            "frameId": null,
-            "roundness": null,
-            "boundElements": [
-
-            ],
-            "updated": 1776305655917,
-            "link": null,
-            "locked": false,
-            "fontSize": 28,
-            "fontFamily": 1,
-            "text": "False",
-            "textAlign": "left",
-            "verticalAlign": "top",
-            "containerId": null,
-            "originalText": "False",
-            "lineHeight": 1.25,
-            "baseline": 25
+            "type": "text",
+            "position": {
+              "x": 1587.316659808224,
+              "y": 570.86556871024
+            },
+            "data": {
+              "text": "False",
+              "fontColor": "var(--sketchlab-stroke-default)",
+              "fontSize": "large",
+              "showHandles": false
+            },
+            "measured": {
+              "width": 68,
+              "height": 47
+            }
           },
           {
-            "type": "text",
-            "version": 688,
-            "versionNonce": 1375910704,
-            "isDeleted": false,
             "id": "stsXyxIlXzkEyheQ8UjDX",
-            "fillStyle": "solid",
-            "strokeWidth": 2,
-            "strokeStyle": "solid",
-            "roughness": 1,
-            "opacity": 100,
-            "angle": 0,
-            "x": 1114.6022229592654,
-            "y": 565.86553237979,
-            "strokeColor": "#1971c2",
-            "backgroundColor": "transparent",
-            "width": 72.9375,
-            "height": 35,
-            "seed": 731751376,
-            "groupIds": [
-
-            ],
-            "frameId": null,
-            "roundness": null,
-            "boundElements": [
-
-            ],
-            "updated": 1776305404726,
-            "link": null,
-            "locked": false,
-            "fontSize": 28,
-            "fontFamily": 1,
-            "text": "False",
-            "textAlign": "left",
-            "verticalAlign": "top",
-            "containerId": null,
-            "originalText": "False",
-            "lineHeight": 1.25,
-            "baseline": 25
+            "type": "text",
+            "position": {
+              "x": 1114.6022229592654,
+              "y": 565.86553237979
+            },
+            "data": {
+              "text": "False",
+              "fontColor": "var(--sketchlab-stroke-default)",
+              "fontSize": "large",
+              "showHandles": false
+            },
+            "measured": {
+              "width": 68,
+              "height": 47
+            }
           },
           {
-            "type": "text",
-            "version": 587,
-            "versionNonce": 576967984,
-            "isDeleted": false,
             "id": "D4nmB1mXtnCbDexY59ffn",
-            "fillStyle": "solid",
-            "strokeWidth": 2,
-            "strokeStyle": "solid",
-            "roughness": 1,
-            "opacity": 100,
-            "angle": 0,
-            "x": 1394.706389625932,
-            "y": 571.5321380113003,
-            "strokeColor": "#1971c2",
-            "backgroundColor": "transparent",
-            "width": 66.0625,
-            "height": 35,
-            "seed": 634956240,
-            "groupIds": [
-
-            ],
-            "frameId": null,
-            "roundness": null,
-            "boundElements": [
-
-            ],
-            "updated": 1776305404726,
-            "link": null,
-            "locked": false,
-            "fontSize": 28,
-            "fontFamily": 1,
-            "text": "True",
-            "textAlign": "left",
-            "verticalAlign": "top",
-            "containerId": null,
-            "originalText": "True",
-            "lineHeight": 1.25,
-            "baseline": 25
+            "type": "text",
+            "position": {
+              "x": 1394.706389625932,
+              "y": 571.5321380113003
+            },
+            "data": {
+              "text": "True",
+              "fontColor": "var(--sketchlab-stroke-default)",
+              "fontSize": "large",
+              "showHandles": false
+            },
+            "measured": {
+              "width": 61,
+              "height": 47
+            }
           },
           {
-            "type": "text",
-            "version": 598,
-            "versionNonce": 999403312,
-            "isDeleted": false,
             "id": "jz-WFos7kIZ1igWQ0YIdg",
-            "fillStyle": "solid",
-            "strokeWidth": 1,
-            "strokeStyle": "dashed",
-            "roughness": 0,
-            "opacity": 100,
-            "angle": 0,
-            "x": 71.73788376655745,
-            "y": 508.69878433291507,
-            "strokeColor": "#1e1e1e",
-            "backgroundColor": "transparent",
-            "width": 780.4375,
-            "height": 60.666707356770864,
-            "seed": 1858269136,
-            "groupIds": [
-
-            ],
-            "frameId": null,
-            "roundness": null,
-            "boundElements": [
-
-            ],
-            "updated": 1776305404726,
-            "link": null,
-            "locked": false,
-            "fontSize": 24.266682942708346,
-            "fontFamily": 1,
-            "text": "Each row in your table should match one path and one outcome \nin your flowchart.",
-            "textAlign": "center",
-            "verticalAlign": "top",
-            "containerId": null,
-            "originalText": "Each row in your table should match one path and one outcome \nin your flowchart.",
-            "lineHeight": 1.25,
-            "baseline": 52
+            "type": "text",
+            "position": {
+              "x": 129.53630383605048,
+              "y": 500.76566785278857
+            },
+            "data": {
+              "text": "Each row in your table should match one path and one outcome \nin your flowchart.",
+              "fontColor": "#1e1e1e",
+              "fontSize": "large",
+              "showHandles": false
+            },
+            "measured": {
+              "width": 651,
+              "height": 75
+            },
+            "dragging": false
           }
         ],
-        "appState": {
-          "gridSize": null,
-          "viewBackgroundColor": "#ffffff",
-          "scrollX": 44.221542413256145,
-          "scrollY": 284.2696334251184,
-          "zoom": {
-            "value": 0.6000000000000001
+        "edges": [
+          {
+            "id": "1fccfb18-7064-4edf-a247-6e86bbce363d",
+            "source": "Ghxgm81As0vAUJb9gu2LP",
+            "target": "pAvjXAfvFfW26-WPTXdhs",
+            "sourceHandle": "bottom-source",
+            "targetHandle": "top-target",
+            "markerEnd": {
+              "type": "arrowclosed"
+            }
+          },
+          {
+            "id": "76e27f45-6f60-4f96-8450-455c2710d21a",
+            "source": "Ghxgm81As0vAUJb9gu2LP",
+            "target": "g8C1ptutyVZkxAeeMiUA2",
+            "sourceHandle": "bottom-source",
+            "targetHandle": "top-target",
+            "markerEnd": {
+              "type": "arrowclosed"
+            }
+          },
+          {
+            "id": "8c06995d-26e5-41cb-9e95-bb1920ba55a4",
+            "source": "pAvjXAfvFfW26-WPTXdhs",
+            "target": "PuHJp-kJaUHx13K0p719z",
+            "sourceHandle": "bottom-source",
+            "targetHandle": "top-target",
+            "markerEnd": {
+              "type": "arrowclosed"
+            }
+          },
+          {
+            "id": "42539f85-1480-4abb-a07e-958d8bf4f71b",
+            "source": "pAvjXAfvFfW26-WPTXdhs",
+            "target": "XhzhTU_WJfGe6nsSBebNg",
+            "sourceHandle": "bottom-source",
+            "targetHandle": "top-target",
+            "markerEnd": {
+              "type": "arrowclosed"
+            }
+          },
+          {
+            "id": "9c2fcbdf-0a6d-4984-83c5-1cc95a506b80",
+            "source": "g8C1ptutyVZkxAeeMiUA2",
+            "target": "YPHaZZDlPYgfhkZEAWMbN",
+            "sourceHandle": "bottom-source",
+            "targetHandle": "top-target",
+            "markerEnd": {
+              "type": "arrowclosed"
+            }
+          },
+          {
+            "id": "1b8ab1ef-9187-43de-bc38-db58808246ed",
+            "source": "g8C1ptutyVZkxAeeMiUA2",
+            "target": "0NUoFbEHYzn81O7B0Coq1",
+            "sourceHandle": "bottom-source",
+            "targetHandle": "top-target",
+            "markerEnd": {
+              "type": "arrowclosed"
+            }
           }
-        },
-        "files": {
-          "a13ed1267843dc283f398b597f146c3869429cc8": {
-            "mimeType": "image/png",
-            "id": "a13ed1267843dc283f398b597f146c3869429cc8",
-            "created": 1775758271703,
-            "lastRetrieved": 1775758271703
-          }
-        },
-        "externalFiles": {
-          "a13ed1267843dc283f398b597f146c3869429cc8": {
-            "id": "a13ed1267843dc283f398b597f146c3869429cc8",
-            "url": "/level_starter_assets/ai-and-algorithmic-decisions-lesson9-level9c_2026/uuid/a13ed1267843dc283f398b597f146c3869429cc8.png",
-            "starterAsset": true,
-            "filenameWithExtension": "a13ed1267843dc283f398b597f146c3869429cc8.png",
-            "uploaded": true
-          }
+        ],
+        "viewport": {
+          "x": 55.390275011136964,
+          "y": 34.14585458302963,
+          "zoom": 0.8013695570032512
         }
       }
     },
@@ -3657,6 +2585,6 @@
     "bubble_choice_description": "Decide if a student can join a team based on grade and attendance requirements."
   },
   "published": true,
-  "audit_log": "[{\"changed_at\":\"2026-03-20T23:46:26.277+00:00\",\"changed\":[\"cloned from \\\"ai-and-algorithmic-decisions-lesson9-level9c_2025\\\"\"],\"cloned_from\":\"ai-and-algorithmic-decisions-lesson9-level9c_2025\"},{\"changed_at\":\"2026-04-16 02:14:21 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-16 02:15:43 +0000\",\"changed\":[\"long_instructions\",\"bubble_choice_description\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-16 02:16:08 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-16 02:19:32 +0000\",\"changed\":[\"exemplar_sources\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-16 02:19:44 +0000\",\"changed\":[],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-16 02:30:57 +0000\",\"changed\":[],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2026-03-20T23:46:26.277+00:00\",\"changed\":[\"cloned from \\\"ai-and-algorithmic-decisions-lesson9-level9c_2025\\\"\"],\"cloned_from\":\"ai-and-algorithmic-decisions-lesson9-level9c_2025\"},{\"changed_at\":\"2026-04-16 02:14:21 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-16 02:15:43 +0000\",\"changed\":[\"long_instructions\",\"bubble_choice_description\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-16 02:16:08 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-16 02:19:32 +0000\",\"changed\":[\"exemplar_sources\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-16 02:19:44 +0000\",\"changed\":[],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-16 02:30:57 +0000\",\"changed\":[],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-05-01 13:17:58 -0400\",\"changed\":[\"start_sources\"],\"changed_by_id\":1,\"changed_by_email\":\"levelbuilder@dev.com\"},{\"changed_at\":\"2026-05-08 13:16:39 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":155,\"changed_by_email\":\"dani@code.org\"}]"
 }]]></config>
 </Sketchlab>

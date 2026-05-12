@@ -1,7 +1,7 @@
 import React, {useCallback} from 'react';
 import {useSelector} from 'react-redux';
 
-import {setAiCustomizationProperty} from '@cdo/apps/aichat/redux';
+import {setAiCustomizationProperty} from '@cdo/apps/aichatLab/redux';
 import {isReadOnlyWorkspace} from '@cdo/apps/lab2/redux/lab2ReduxSelectors';
 import {useAppSelector, useAppDispatch} from '@cdo/apps/util/reduxHooks';
 
@@ -15,10 +15,10 @@ import modelCustomizationStyles from '../model-customization-workspace.module.sc
 const RetrievalCustomization: React.FunctionComponent = () => {
   const dispatch = useAppDispatch();
   const visibility = useAppSelector(
-    state => state.aichat.fieldVisibilities.retrievalContexts
+    state => state.aichatLab.fieldVisibilities.retrievalContexts
   );
   const {retrievalContexts} = useAppSelector(
-    state => state.aichat.currentAiCustomizations
+    state => state.aichatLab.currentAiCustomizations
   );
 
   const isReadOnly = useSelector(isReadOnlyWorkspace) || isDisabled(visibility);
