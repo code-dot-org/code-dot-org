@@ -194,7 +194,7 @@ module Cdo
     end
 
     def self.region_locales(region)
-      configuration_for(region)[:locales] || []
+      configuration_for(region)[:locales]
     end
 
     # @return [NilClass, Array<String>] List of project types available in the given region.
