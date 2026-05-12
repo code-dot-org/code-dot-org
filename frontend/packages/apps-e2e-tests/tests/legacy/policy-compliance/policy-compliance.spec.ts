@@ -145,6 +145,10 @@ test(
   },
 );
 
+/**
+ * Source: dashboard/test/ui/features/platform/policy_compliance/policy_compliance.feature
+ * Scenario: Sponsored student should not be able to add a personal email on an account until providing a state
+ */
 test(
   'sponsored under-13 student without state cannot create personal login until state provided (non-CO state unlocks)',
   {tag: '@no_mobile'},
@@ -193,6 +197,10 @@ test(
   },
 );
 
+/**
+ * Source: dashboard/test/ui/features/platform/policy_compliance/policy_compliance.feature
+ * Scenario: Sponsored student should not be able to add a personal email when they supply a policy state
+ */
 test(
   'sponsored under-13 student selecting Colorado state keeps personal login locked with parental-permission message',
   {tag: '@no_mobile'},
@@ -246,6 +254,10 @@ test(
   },
 );
 
+/**
+ * Source: dashboard/test/ui/features/platform/policy_compliance/policy_compliance.feature
+ * Scenario: Sponsored student is able to add a personal email on an unlocked account
+ */
 test(
   'sponsored under-13 Colorado student with parental permission can create personal login',
   {tag: '@no_mobile'},

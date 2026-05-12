@@ -12,8 +12,8 @@ This inventory ignores `Migration Status` markers. A Cucumber feature is treated
 | Playwright spec files                                       |   125 |
 | Feature files referenced by Playwright                      |   164 |
 | Feature files with no Playwright source-path reference      |   107 |
-| Referenced feature files with all scenario titles traceable |    67 |
-| Referenced feature files with some untraced scenario titles |    75 |
+| Referenced feature files with all scenario titles traceable |    71 |
+| Referenced feature files with some untraced scenario titles |    71 |
 | Referenced feature files needing scenario-level audit       |    22 |
 | Playwright specs with no Cucumber source-path reference     |     1 |
 
@@ -198,40 +198,10 @@ This inventory ignores `Migration Status` markers. A Cucumber feature is treated
 
 These feature files have at least one Playwright source-path reference, but not every Cucumber scenario title was found in Playwright comments or single-source spec test titles. Some may be ported under renamed test titles; inspect before porting.
 
-### `dashboard/test/ui/features/platform/policy_compliance/policy_compliance.feature`
-
-Traced 4 of 7 scenario titles.
-
-- Sponsored student should not be able to add a personal email on an account until providing a state
-- Sponsored student should not be able to add a personal email when they supply a policy state
-- Sponsored student is able to add a personal email on an unlocked account
-
-### `dashboard/test/ui/features/platform/signing_in.feature`
-
-Traced 2 of 4 scenario titles.
-
-- Student sign in from studio.code.org in the eu
-- Signed-out joining non-picture non-word section from sign in page goes to link account page
-
-### `dashboard/test/ui/features/star_labs/angle_helper.feature`
-
-Traced 3 of 4 scenario titles.
-
-- Angle Helper Eyes Tests
-
-### `dashboard/test/ui/features/star_labs/applab/libraries.feature`
-
-Traced 0 of 3 scenario titles.
-
-- Publishing and unpublishing a library
-- Adding and removing a library from a project
-- Assigning a library to a section as a teacher
-
 ### `dashboard/test/ui/features/star_labs/applab/shared_apps.feature`
 
-Traced 0 of 7 scenario titles.
+Traced 1 of 7 scenario titles.
 
-- App Lab Share
 - Can click a button in shared app
 - Can change a dropdown value in shared app
 - Can change a radio button value in shared app

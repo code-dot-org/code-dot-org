@@ -165,6 +165,8 @@ interface CreateStudentOptions {
   age?: number;
   name?: string;
   us_state?: string;
+  country_code?: string;
+  data_transfer_agreement_accepted?: boolean;
 }
 
 /**
@@ -176,7 +178,13 @@ interface CreateStudentOptions {
  */
 export async function createStudent(
   page: Page,
-  {age = 16, name, us_state}: CreateStudentOptions = {},
+  {
+    age = 16,
+    name,
+    us_state,
+    country_code,
+    data_transfer_agreement_accepted,
+  }: CreateStudentOptions = {},
 ): Promise<UserCredentials> {
   const ts = Date.now();
   const rand = Math.random().toString(36).slice(2, 8);
@@ -197,6 +205,16 @@ export async function createStudent(
     age: String(age),
     sign_in_count: 2,
     ...(us_state ? {us_state, user_provided_us_state: true} : {}),
+    ...(country_code ? {country_code} : {}),
+    ...(data_transfer_agreement_accepted
+      ? {
+          data_transfer_agreement_accepted: true,
+          data_transfer_agreement_request_ip: '127.0.0.1',
+          data_transfer_agreement_kind: '0',
+          data_transfer_agreement_source: 'ACCOUNT_SIGN_UP',
+          data_transfer_agreement_at: new Date().toISOString(),
+        }
+      : {}),
   });
   return {email, password, displayName};
 }

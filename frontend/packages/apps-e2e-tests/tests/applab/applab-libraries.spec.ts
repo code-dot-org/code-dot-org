@@ -176,7 +176,8 @@ async function publishBasicLibrary(
 test.describe('App Lab — Libraries', () => {
   /**
    * Migration status: COMPLETED
-   * Source: libraries.feature — "Publishing and unpublishing a library"
+   * Source: dashboard/test/ui/features/star_labs/applab/libraries.feature
+   * Scenario: Publishing and unpublishing a library
    *
    * Creates a new App Lab project, adds a minimal library function, publishes
    * it via the share dialog, verifies it appears on /projects/libraries, then
@@ -224,7 +225,8 @@ test.describe('App Lab — Libraries', () => {
 
   /**
    * Migration status: COMPLETED
-   * Source: libraries.feature — "Adding and removing a library from a project"
+   * Source: dashboard/test/ui/features/star_labs/applab/libraries.feature
+   * Scenario: Adding and removing a library from a project
    *
    * Student1 publishes a library. Student2 imports it by channel id, sees it
    * in the current project library list, removes it, then sees the empty-state
@@ -274,7 +276,8 @@ test.describe('App Lab — Libraries', () => {
 
   /**
    * Migration status: COMPLETED
-   * Source: libraries.feature — "Assigning a library to a section as a teacher"
+   * Source: dashboard/test/ui/features/star_labs/applab/libraries.feature
+   * Scenario: Assigning a library to a section as a teacher
    *
    * A teacher publishes a library and assigns it to a section. A student joins
    * that section and sees the assigned class library in App Lab's Manage

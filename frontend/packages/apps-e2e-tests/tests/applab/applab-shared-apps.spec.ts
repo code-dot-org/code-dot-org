@@ -49,7 +49,8 @@ async function waitForInitialProjectSave(
 test.describe('App Lab — Shared Apps', () => {
   /**
    * Migration status: COMPLETED
-   * Source: "App Lab Share"
+   * Source: dashboard/test/ui/features/star_labs/applab/shared_apps.feature
+   * Scenario: App Lab Share
    *
    * Verifies the share page runs code, renders app elements, does NOT load
    * the ACE/Droplet editor, and hides all toolbar mode buttons.

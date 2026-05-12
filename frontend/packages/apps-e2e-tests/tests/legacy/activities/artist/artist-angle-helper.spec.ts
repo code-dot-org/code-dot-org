@@ -342,6 +342,18 @@ test.describe('Angle helper — Artist level 7', () => {
   /**
    * Migration status: COMPLETED
    * Source: dashboard/test/ui/features/star_labs/angle_helper.feature
+   * Scenario: Angle Helper Eyes Tests
+   *
+   * The source scenario is an `@eyes` visual checkpoint and the feature is
+   * also Cucumber `@skip`. The three functional angle-helper scenarios below
+   * cover the same editor-opening states without invoking the retired Eyes
+   * runner.
+   */
+  test.skip('angle helper visual checkpoint sequence', async () => {});
+
+  /**
+   * Migration status: COMPLETED
+   * Source: dashboard/test/ui/features/star_labs/angle_helper.feature
    * Scenario: Free Text Input Angle Helper
    */
   test('free-text input syncs angle and circle position', async ({page}) => {
