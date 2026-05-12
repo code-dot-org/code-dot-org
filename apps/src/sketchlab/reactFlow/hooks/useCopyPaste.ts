@@ -7,9 +7,19 @@ import type {
 } from '@cdo/apps/lab2/types';
 import {createUuid} from '@cdo/apps/utils';
 
-import {PASTE_OFFSET_PX} from '../constants';
+import {
+  DEFAULT_NODE_HEIGHT,
+  DEFAULT_NODE_WIDTH,
+  DEFAULT_PASTE_OFFSET_PX,
+} from '../constants';
 import type {ClipboardContents} from '../context';
 import type {TabOrderEntry} from '../utils/computeTabOrder';
+import {
+  anchorHandleFlowPosition,
+  createLineAnchorAtHandle,
+  getHandleFlowPosition,
+  lineAnchorHandleId,
+} from '../utils/lineAnchors';
 
 interface UseCopyPasteOptions {
   nodes: SketchlabReactFlowNode[];
@@ -20,6 +30,20 @@ interface UseCopyPasteOptions {
   setEdges: (
     updater: (edges: SketchlabReactFlowEdge[]) => SketchlabReactFlowEdge[]
   ) => void;
+}
+
+// Returns the handle-to-handle horizontal span of a line clipboard's anchor
+// nodes. Uses anchorHandleFlowPosition rather than raw position.x because
+// source and target anchors offset their top-left corners differently.
+function lineHorizontalSpanFromClipboardNodes(
+  clipboardNodes: SketchlabReactFlowNode[]
+): number {
+  const handleXs = clipboardNodes.map(n =>
+    n.type === 'lineAnchor'
+      ? anchorHandleFlowPosition(n.position, n.data.lineAnchorRole).x
+      : n.position.x
+  );
+  return Math.max(...handleXs) - Math.min(...handleXs);
 }
 
 export function useCopyPaste({
@@ -60,28 +84,64 @@ export function useCopyPaste({
     [nodes]
   );
 
-  // A line edge is stored as two hidden lineAnchor nodes plus the edge
-  // connecting them — all three must travel together in the clipboard.
-  // TODO: enable copy/paste of an edge attached to one or two real nodes.
+  // A line is stored as an edge with two nodes - the nodes are either anchor nodes or real nodes.
+  // all three elements must travel together in the clipboard.
+  // When an endpoint is a real (non-anchor) node, a new anchor node is
+  // created at that node's handle position so we can duplicate the free-standing anchor node.
   const buildLineEdgeClipboard = useCallback(
     (edgeId: string): ClipboardContents | null => {
       const edge = edges.find(e => e.id === edgeId);
-      if (!edge) return null;
-      const sourceAnchor = nodes.find(n => n.id === edge.source);
-      const targetAnchor = nodes.find(n => n.id === edge.target);
-      if (
-        sourceAnchor?.type !== 'lineAnchor' ||
-        targetAnchor?.type !== 'lineAnchor'
-      ) {
-        return null;
-      }
-      return {nodes: [sourceAnchor, targetAnchor], edges: [edge]};
+      if (!edge || edge.data?.locked) return null;
+
+      const resolveEndpointAnchor = (
+        nodeId: string,
+        handleId: string | null | undefined,
+        role: 'source' | 'target'
+      ) => {
+        const node = nodes.find(n => n.id === nodeId);
+        if (!node) return null;
+        if (node.type === 'lineAnchor') return node;
+        const handlePos = getHandleFlowPosition(
+          nodeId,
+          handleId ?? undefined,
+          screenToFlowPosition
+        );
+        const position = handlePos ?? {
+          x: node.position.x + (node.width ?? DEFAULT_NODE_WIDTH) / 2,
+          y: node.position.y + (node.height ?? DEFAULT_NODE_HEIGHT) / 2,
+        };
+        return createLineAnchorAtHandle(position, role);
+      };
+
+      const sourceAnchor = resolveEndpointAnchor(
+        edge.source,
+        edge.sourceHandle,
+        'source'
+      );
+      const targetAnchor = resolveEndpointAnchor(
+        edge.target,
+        edge.targetHandle,
+        'target'
+      );
+      if (!sourceAnchor || !targetAnchor) return null;
+
+      // Point edge endpoints at the clipboard anchor IDs.
+      const edgeWithAnchorNodes = {
+        ...edge,
+        source: sourceAnchor.id,
+        target: targetAnchor.id,
+        sourceHandle: lineAnchorHandleId('source'),
+        targetHandle: lineAnchorHandleId('target'),
+      };
+      return {
+        nodes: [sourceAnchor, targetAnchor],
+        edges: [edgeWithAnchorNodes],
+      };
     },
-    [nodes, edges]
+    [nodes, edges, screenToFlowPosition]
   );
 
-  // Toolbar action: duplicate a node in-place with 'stagger' chaining, i.e., each duplicate is
-  // offset by PASTE_OFFSET_PX in both dimensions.
+  // Toolbar action: duplicate a node in-place but each duplicate is offset by the width of the node horizontally.
   const duplicateNode = useCallback(
     (nodeId: string) => {
       const source =
@@ -94,8 +154,8 @@ export function useCopyPaste({
         ...node,
         id: createUuid(),
         position: {
-          x: node.position.x + PASTE_OFFSET_PX,
-          y: node.position.y + PASTE_OFFSET_PX,
+          x: node.position.x + (node.width ?? DEFAULT_NODE_WIDTH),
+          y: node.position.y,
         },
       }));
 
@@ -107,7 +167,7 @@ export function useCopyPaste({
     [buildNodeClipboard, setNodes]
   );
 
-  // Toolbar action: duplicate a line edge (both anchor nodes + the edge).
+  // Toolbar action: duplicate a line.
   const duplicateLine = useCallback(
     (edgeId: string) => {
       const source =
@@ -115,6 +175,14 @@ export function useCopyPaste({
           ? lastDuplicateRef.current
           : buildLineEdgeClipboard(edgeId);
       if (!source) return;
+
+      const lineHorizontalSpan = lineHorizontalSpanFromClipboardNodes(
+        source.nodes
+      );
+      // For lines, we want to offset the pasted line by the horizontal displacement of the original line.
+      // If the line's horizontal displacement is less than the default offset, use the default offset so that lines
+      // that are vertical or almost vertical aren't too close to each other.
+      const offsetX = Math.max(lineHorizontalSpan, DEFAULT_PASTE_OFFSET_PX);
 
       const idMap = new Map<string, string>();
       const newNodes = source.nodes.map(node => {
@@ -124,8 +192,8 @@ export function useCopyPaste({
           ...node,
           id: newId,
           position: {
-            x: node.position.x + PASTE_OFFSET_PX,
-            y: node.position.y + PASTE_OFFSET_PX,
+            x: node.position.x + offsetX,
+            y: node.position.y,
           },
         };
       });
@@ -170,21 +238,29 @@ export function useCopyPaste({
         const contents = buildLineEdgeClipboard(entry.id);
         if (!contents) return;
         writeClipboard(contents);
-        // Deleting the anchor nodes removes the line edge automatically.
         const lineEdge = edges.find(e => e.id === entry.id);
         if (lineEdge) {
-          deleteElements({
-            nodes: [{id: lineEdge.source}, {id: lineEdge.target}],
-          });
+          // Only delete lineAnchor endpoints — real nodes are independent objects.
+          // Deleting anchor nodes removes the edge automatically; for real-node
+          // endpoints we delete the edge directly.
+          const anchorIds = [lineEdge.source, lineEdge.target].filter(
+            id => nodes.find(n => n.id === id)?.type === 'lineAnchor'
+          );
+          if (anchorIds.length > 0) {
+            deleteElements({nodes: anchorIds.map(id => ({id}))});
+          } else {
+            deleteElements({edges: [{id: entry.id}]});
+          }
         }
       }
     },
     [
-      edges,
       buildNodeClipboard,
-      buildLineEdgeClipboard,
       writeClipboard,
       deleteElements,
+      buildLineEdgeClipboard,
+      edges,
+      nodes,
     ]
   );
 
@@ -193,18 +269,29 @@ export function useCopyPaste({
     if (!contents) return;
 
     // When the mouse is over the canvas, paste with the first node at the
-    // cursor. When the mouse is outside (keyboard-only path), fall back to
-    // a fixed offset so pasted elements don't stack on originals.
+    // cursor. When the mouse is outside (keyboard-only path), offset to the
+    // right by the element's width (node) or horizontal span (line).
     const mousePos = mousePositionRef.current;
     const anchorNode = contents.nodes[0];
-    const deltaX =
-      mousePos && anchorNode
-        ? mousePos.x - anchorNode.position.x
-        : PASTE_OFFSET_PX;
-    const deltaY =
-      mousePos && anchorNode
-        ? mousePos.y - anchorNode.position.y
-        : PASTE_OFFSET_PX;
+    let deltaX: number;
+    let deltaY: number;
+    if (mousePos && anchorNode) {
+      deltaX = mousePos.x - anchorNode.position.x;
+      deltaY = mousePos.y - anchorNode.position.y;
+    } else {
+      const isLine = contents.edges.length > 0;
+      if (isLine) {
+        const lineHorizontalSpan = lineHorizontalSpanFromClipboardNodes(
+          contents.nodes
+        );
+        deltaX = Math.max(lineHorizontalSpan, DEFAULT_PASTE_OFFSET_PX);
+      } else {
+        deltaX = anchorNode
+          ? anchorNode.width ?? DEFAULT_NODE_WIDTH
+          : DEFAULT_PASTE_OFFSET_PX;
+      }
+      deltaY = 0;
+    }
 
     const idMap = new Map<string, string>();
     const newNodes = contents.nodes.map(node => {

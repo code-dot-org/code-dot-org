@@ -12,6 +12,11 @@ export default defineConfig(({mode}) => {
     build: {
       outDir: 'dist',
     },
+    // Radium (used by oceans-lab) references `global` in its CSS vendor-prefix
+    // plugin; shim it to globalThis so the browser context doesn't throw.
+    define: {
+      global: 'globalThis',
+    },
     server: {
       allowedHosts: isDev ? ['localhost-studio.code.org'] : undefined,
       fs: {

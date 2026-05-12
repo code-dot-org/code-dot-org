@@ -1,7 +1,7 @@
 <Sketchlab>
   <config><![CDATA[{
   "game_id": 75,
-  "created_at": "2026-04-14T11:09:54.000Z",
+  "created_at": "2026-04-08T06:21:19.000Z",
   "level_num": "custom",
   "user_id": 18603,
   "properties": {
@@ -48,8 +48,9 @@
             "data": {
               "shapeType": "circle",
               "label": "",
-              "backgroundColor": "#ffc9c9",
-              "strokeColor": "#1e1e1e"
+              "backgroundColor": "var(--sketchlab-bg-pink)",
+              "strokeColor": "#1e1e1e",
+              "showHandles": false
             },
             "measured": {
               "width": 209,
@@ -58,11 +59,7 @@
             "dragging": false,
             "width": 209,
             "height": 191,
-            "resizing": false,
-            "selected": false,
-            "domAttributes": {
-              "tabIndex": -1
-            }
+            "resizing": false
           },
           {
             "id": "F0M7bJmFZKBrLLcDPbBN3",
@@ -78,8 +75,9 @@
             "data": {
               "shapeType": "circle",
               "label": "",
-              "backgroundColor": "#b2f2bb",
-              "strokeColor": "#1e1e1e"
+              "backgroundColor": "var(--sketchlab-bg-green)",
+              "strokeColor": "#1e1e1e",
+              "showHandles": false
             },
             "measured": {
               "width": 209,
@@ -104,8 +102,9 @@
             "data": {
               "shapeType": "circle",
               "label": "",
-              "backgroundColor": "#a5d8ff",
-              "strokeColor": "#1e1e1e"
+              "backgroundColor": "var(--sketchlab-bg-blue)",
+              "strokeColor": "#1e1e1e",
+              "showHandles": false
             },
             "measured": {
               "width": 209,
@@ -130,8 +129,9 @@
             "data": {
               "shapeType": "circle",
               "label": "",
-              "backgroundColor": "#ffec99",
-              "strokeColor": "#1e1e1e"
+              "backgroundColor": "var(--sketchlab-bg-yellow)",
+              "strokeColor": "#1e1e1e",
+              "showHandles": false
             },
             "measured": {
               "width": 191,
@@ -140,11 +140,7 @@
             "width": 191,
             "height": 185,
             "resizing": false,
-            "dragging": false,
-            "selected": false,
-            "domAttributes": {
-              "tabIndex": -1
-            }
+            "dragging": false
           },
           {
             "id": "4S7FgUeiboK9ICX3o5FZ1",
@@ -160,8 +156,9 @@
             "data": {
               "shapeType": "rectangle",
               "label": "",
-              "backgroundColor": "#ffc9c9",
-              "strokeColor": "#1e1e1e"
+              "backgroundColor": "var(--sketchlab-bg-pink)",
+              "strokeColor": "#1e1e1e",
+              "showHandles": false
             },
             "measured": {
               "width": 1152,
@@ -181,7 +178,7 @@
             },
             "data": {
               "text": "The value right now is ...\n\nIt might change when the user ...\n\nThe value might change to ....",
-              "fontColor": "#1e1e1e",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": "large",
               "showHandles": false
             },
@@ -189,11 +186,7 @@
               "width": 337,
               "height": 161
             },
-            "dragging": false,
-            "selected": true,
-            "domAttributes": {
-              "tabIndex": 0
-            }
+            "dragging": false
           },
           {
             "id": "4hA6fdVImHawpGlUqPfx3",
@@ -209,8 +202,9 @@
             "data": {
               "shapeType": "rectangle",
               "label": "",
-              "backgroundColor": "#b2f2bb",
-              "strokeColor": "#1e1e1e"
+              "backgroundColor": "var(--sketchlab-bg-green)",
+              "strokeColor": "#1e1e1e",
+              "showHandles": false
             },
             "measured": {
               "width": 1144,
@@ -235,8 +229,9 @@
             "data": {
               "shapeType": "rectangle",
               "label": "",
-              "backgroundColor": "#a5d8ff",
-              "strokeColor": "#1e1e1e"
+              "backgroundColor": "var(--sketchlab-bg-blue)",
+              "strokeColor": "#1e1e1e",
+              "showHandles": false
             },
             "measured": {
               "width": 1138,
@@ -261,8 +256,9 @@
             "data": {
               "shapeType": "rectangle",
               "label": "",
-              "backgroundColor": "#ffec99",
-              "strokeColor": "#1e1e1e"
+              "backgroundColor": "var(--sketchlab-bg-yellow)",
+              "strokeColor": "#1e1e1e",
+              "showHandles": false
             },
             "measured": {
               "width": 1130,
@@ -282,7 +278,7 @@
             },
             "data": {
               "text": "The value right now is ...\n\nIt might change when the user ...\n\nThe value might change to ....",
-              "fontColor": "#1e1e1e",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": "large",
               "showHandles": false
             },
@@ -290,11 +286,7 @@
               "width": 337,
               "height": 161
             },
-            "dragging": false,
-            "selected": false,
-            "domAttributes": {
-              "tabIndex": -1
-            }
+            "dragging": false
           },
           {
             "id": "QL-9IpyFkSuFimSjdbCFK",
@@ -305,7 +297,7 @@
             },
             "data": {
               "text": "The value right now is ...\n\nIt might change when the user ...\n\nThe value might change to ....",
-              "fontColor": "#1e1e1e",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": "large",
               "showHandles": false
             },
@@ -313,11 +305,7 @@
               "width": 337,
               "height": 161
             },
-            "dragging": false,
-            "selected": true,
-            "domAttributes": {
-              "tabIndex": 0
-            }
+            "dragging": false
           },
           {
             "id": "UgefCEtDcFO25EKvuGLJg",
@@ -328,17 +316,13 @@
             },
             "data": {
               "text": "The value right now is ...\n\nIt might change when the user ...\n\nThe value might change to ....",
-              "fontColor": "#1e1e1e",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": "large",
               "showHandles": false
             },
             "measured": {
               "width": 337,
               "height": 161
-            },
-            "selected": true,
-            "domAttributes": {
-              "tabIndex": 0
             },
             "dragging": false
           }
@@ -347,8 +331,8 @@
 
         ],
         "viewport": {
-          "x": -1132.4292971294453,
-          "y": -138.110083489099,
+          "x": -1104.4292971294453,
+          "y": -130.21316423861072,
           "zoom": 0.5
         }
       }
@@ -854,6 +838,6 @@
     "long_instructions": "# Exploring Conditionals\r\n\r\n### **Do This:**\r\n\r\n1. Explore the gaming dashboard and find values that can change, like health or username.\r\n2. Place a circle by each variable and match it to one of the colored prompts on the right. Fill in the prompts by describing:\r\n    - What the value is right now\r\n    - What user action could change it\r\n    - What it might change to"
   },
   "published": true,
-  "audit_log": "[{\"changed_at\":\"2026-04-08T06:21:19.133+00:00\",\"changed\":[\"cloned from \\\"ai-and-algorithmic-decisions-lesson5-level1a_2026\\\"\"],\"cloned_from\":\"ai-and-algorithmic-decisions-lesson5-level1a_2026\"},{\"changed_at\":\"2026-04-08 06:21:35 +0000\",\"changed\":[\"long_instructions\",\"display_name\",\"bubble_choice_description\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-04-08 06:21:55 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-04-09 16:48:37 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-04-17 01:25:50 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-17 01:26:20 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-17 01:28:23 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-17 01:33:32 +0000\",\"changed\":[],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-21 04:44:59 +0000\",\"changed\":[\"exemplar_sources\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-05-01 07:23:50 -0400\",\"changed\":[\"start_sources\"],\"changed_by_id\":1,\"changed_by_email\":\"levelbuilder@dev.com\"}]"
+  "audit_log": "[{\"changed_at\":\"2026-04-08T06:21:19.133+00:00\",\"changed\":[\"cloned from \\\"ai-and-algorithmic-decisions-lesson5-level1a_2026\\\"\"],\"cloned_from\":\"ai-and-algorithmic-decisions-lesson5-level1a_2026\"},{\"changed_at\":\"2026-04-08 06:21:35 +0000\",\"changed\":[\"long_instructions\",\"display_name\",\"bubble_choice_description\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-04-08 06:21:55 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-04-09 16:48:37 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-04-17 01:25:50 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-17 01:26:20 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-17 01:28:23 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-17 01:33:32 +0000\",\"changed\":[],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-21 04:44:59 +0000\",\"changed\":[\"exemplar_sources\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-05-01 07:23:50 -0400\",\"changed\":[\"start_sources\"],\"changed_by_id\":1,\"changed_by_email\":\"levelbuilder@dev.com\"},{\"changed_at\":\"2026-05-08 12:55:57 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":155,\"changed_by_email\":\"dani@code.org\"}]"
 }]]></config>
 </Sketchlab>

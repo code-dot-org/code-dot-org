@@ -1,7 +1,7 @@
 <Sketchlab>
   <config><![CDATA[{
   "game_id": 75,
-  "created_at": "2026-04-29T00:49:37.000Z",
+  "created_at": "2026-04-24T06:10:42.000Z",
   "level_num": "custom",
   "user_id": 18603,
   "properties": {
@@ -93,8 +93,8 @@
             "data": {
               "shapeType": "circle",
               "label": "",
-              "backgroundColor": "#ffc9c9",
-              "strokeColor": "#1e1e1e"
+              "backgroundColor": "var(--sketchlab-bg-pink)",
+              "strokeColor": "var(--sketchlab-stroke-default)"
             },
             "measured": {
               "width": 175,
@@ -115,8 +115,8 @@
             "data": {
               "shapeType": "circle",
               "label": "",
-              "backgroundColor": "#a5d8ff",
-              "strokeColor": "#1e1e1e"
+              "backgroundColor": "var(--sketchlab-bg-blue)",
+              "strokeColor": "var(--sketchlab-stroke-default)"
             },
             "measured": {
               "width": 175,
@@ -137,8 +137,8 @@
             "data": {
               "shapeType": "circle",
               "label": "",
-              "backgroundColor": "#a5d8ff",
-              "strokeColor": "#1e1e1e"
+              "backgroundColor": "var(--sketchlab-bg-blue)",
+              "strokeColor": "var(--sketchlab-stroke-default)"
             },
             "measured": {
               "width": 175,
@@ -159,8 +159,8 @@
             "data": {
               "shapeType": "circle",
               "label": "",
-              "backgroundColor": "#a5d8ff",
-              "strokeColor": "#1e1e1e"
+              "backgroundColor": "var(--sketchlab-bg-blue)",
+              "strokeColor": "var(--sketchlab-stroke-default)"
             },
             "measured": {
               "width": 175,
@@ -181,8 +181,8 @@
             "data": {
               "shapeType": "circle",
               "label": "",
-              "backgroundColor": "#a5d8ff",
-              "strokeColor": "#1e1e1e"
+              "backgroundColor": "var(--sketchlab-bg-blue)",
+              "strokeColor": "var(--sketchlab-stroke-default)"
             },
             "measured": {
               "width": 175,
@@ -203,8 +203,8 @@
             "data": {
               "shapeType": "circle",
               "label": "",
-              "backgroundColor": "#ffc9c9",
-              "strokeColor": "#1e1e1e"
+              "backgroundColor": "var(--sketchlab-bg-pink)",
+              "strokeColor": "var(--sketchlab-stroke-default)"
             },
             "measured": {
               "width": 175,
@@ -225,8 +225,8 @@
             "data": {
               "shapeType": "circle",
               "label": "",
-              "backgroundColor": "#ffc9c9",
-              "strokeColor": "#1e1e1e"
+              "backgroundColor": "var(--sketchlab-bg-pink)",
+              "strokeColor": "var(--sketchlab-stroke-default)"
             },
             "measured": {
               "width": 175,
@@ -247,8 +247,8 @@
             "data": {
               "shapeType": "circle",
               "label": "",
-              "backgroundColor": "#ffc9c9",
-              "strokeColor": "#1e1e1e"
+              "backgroundColor": "var(--sketchlab-bg-pink)",
+              "strokeColor": "var(--sketchlab-stroke-default)"
             },
             "measured": {
               "width": 175,
@@ -948,6 +948,6 @@
     "thumbnail_url": "https://images.code.org/36df340675efd7016d812cb2d4d89a18-hero.jpg"
   },
   "published": true,
-  "audit_log": "[{\"changed_at\":\"2026-04-24T06:10:42.297+00:00\",\"changed\":[\"cloned from \\\"ai-and-algorithmic-decisions-lesson6-level4a-revised-v3_2026\\\"\"],\"cloned_from\":\"ai-and-algorithmic-decisions-lesson6-level4a-revised-v3_2026\"},{\"changed_at\":\"2026-04-24 06:14:14 +0000\",\"changed\":[\"long_instructions\",\"display_name\",\"bubble_choice_description\",\"thumbnail_url\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-04-24 06:43:29 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-04-24 06:49:09 +0000\",\"changed\":[\"exemplar_sources\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-04-24 06:49:49 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-05-01 12:44:47 -0400\",\"changed\":[\"start_sources\"],\"changed_by_id\":1,\"changed_by_email\":\"levelbuilder@dev.com\"}]"
+  "audit_log": "[{\"changed_at\":\"2026-04-24T06:10:42.297+00:00\",\"changed\":[\"cloned from \\\"ai-and-algorithmic-decisions-lesson6-level4a-revised-v3_2026\\\"\"],\"cloned_from\":\"ai-and-algorithmic-decisions-lesson6-level4a-revised-v3_2026\"},{\"changed_at\":\"2026-04-24 06:14:14 +0000\",\"changed\":[\"long_instructions\",\"display_name\",\"bubble_choice_description\",\"thumbnail_url\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-04-24 06:43:29 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-04-24 06:49:09 +0000\",\"changed\":[\"exemplar_sources\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-04-24 06:49:49 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-05-01 12:44:47 -0400\",\"changed\":[\"start_sources\"],\"changed_by_id\":1,\"changed_by_email\":\"levelbuilder@dev.com\"},{\"changed_at\":\"2026-05-08 13:03:49 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":155,\"changed_by_email\":\"dani@code.org\"}]"
 }]]></config>
 </Sketchlab>

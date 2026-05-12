@@ -16,9 +16,7 @@ import {ArrowHeadValue} from '../types';
 
 interface UseLineToolbarOptions {
   edges: SketchlabReactFlowEdge[];
-  readOnly: boolean;
   openToolbarTarget: ToolbarTarget | null;
-  openToolbar: (target: ToolbarTarget, options?: {trapFocus?: boolean}) => void;
   setEdges: (
     updater: (edges: SketchlabReactFlowEdge[]) => SketchlabReactFlowEdge[]
   ) => void;
@@ -26,9 +24,7 @@ interface UseLineToolbarOptions {
 
 export function useLineToolbar({
   edges,
-  readOnly,
   openToolbarTarget,
-  openToolbar,
   setEdges,
 }: UseLineToolbarOptions) {
   const updateLineEdge = useCallback(
@@ -69,19 +65,6 @@ export function useLineToolbar({
       );
     },
     [setEdges]
-  );
-
-  const handleEdgeClick = useCallback(
-    (_event: React.MouseEvent, edge: {id: string}) => {
-      if (readOnly) {
-        return;
-      }
-      const clickedEdge = edges.find(currentEdge => currentEdge.id === edge.id);
-      if (clickedEdge) {
-        openToolbar({type: 'edge', id: clickedEdge.id}, {trapFocus: false});
-      }
-    },
-    [readOnly, edges, openToolbar]
   );
 
   const openLineEdge = useMemo(() => {
@@ -229,7 +212,6 @@ export function useLineToolbar({
   );
 
   return {
-    handleEdgeClick,
     openLineEdge,
     setLineEdgeColor,
     setLineEdgeWidth,
