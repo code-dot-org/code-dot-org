@@ -40,7 +40,7 @@ describe('SectionsSetUpContainer', () => {
   it('renders headers and button', () => {
     const wrapper = shallow(<SectionsSetUpContainer {...DEFAULT_PROPS} />);
 
-    expect(wrapper.find(MuiButton).length).to.equal(4);
+    expect(wrapper.find(MuiButton).length).to.equal(5);
     expect(wrapper.find(MuiButton).last().props().children).to.equal(
       'Finish creating sections'
     );
@@ -116,13 +116,15 @@ describe('SectionsSetUpContainer', () => {
   it('updates caret direction when Add Coteachers is clicked', () => {
     const wrapper = shallow(<SectionsSetUpContainer {...DEFAULT_PROPS} />);
 
+    // at(0) is the subheader help link (no startIcon); the expandable section
+    // toggles start at at(1): Add Coteachers, then at(2) Advanced Settings.
     const caretIcon = button => button.props().startIcon.props.iconName;
-    expect(caretIcon(wrapper.find(MuiButton).at(0))).to.equal('caret-right');
+    expect(caretIcon(wrapper.find(MuiButton).at(1))).to.equal('caret-right');
     wrapper
       .find(MuiButton)
-      .at(0)
+      .at(1)
       .simulate('click', {preventDefault: () => {}});
-    expect(caretIcon(wrapper.find(MuiButton).at(0))).to.equal('caret-down');
+    expect(caretIcon(wrapper.find(MuiButton).at(1))).to.equal('caret-down');
   });
 
   it('renders advanced settings', () => {
@@ -130,7 +132,7 @@ describe('SectionsSetUpContainer', () => {
 
     wrapper
       .find(MuiButton)
-      .at(1)
+      .at(2)
       .simulate('click', {preventDefault: () => {}});
 
     expect(wrapper.find('AdvancedSettingToggles').length).to.equal(1);
@@ -140,12 +142,12 @@ describe('SectionsSetUpContainer', () => {
     const wrapper = shallow(<SectionsSetUpContainer {...DEFAULT_PROPS} />);
 
     const caretIcon = button => button.props().startIcon.props.iconName;
-    expect(caretIcon(wrapper.find(MuiButton).at(0))).to.equal('caret-right');
+    expect(caretIcon(wrapper.find(MuiButton).at(1))).to.equal('caret-right');
     wrapper
       .find(MuiButton)
-      .at(1)
+      .at(2)
       .simulate('click', {preventDefault: () => {}});
-    expect(caretIcon(wrapper.find(MuiButton).at(1))).to.equal('caret-down');
+    expect(caretIcon(wrapper.find(MuiButton).at(2))).to.equal('caret-down');
   });
 
   it('validates the form when save is clicked', () => {
