@@ -92,6 +92,84 @@ async function renameProject(page: Page, name: string): Promise<void> {
   await expect(page.locator('.project_edit')).toBeVisible({timeout: 15_000});
 }
 
+/**
+ * Create, rename, run, and save a project so it appears in the personal gallery.
+ * Mirrors Cucumber's `I make a "<type>" project named "<name>"`.
+ *
+ * @param page - Playwright page
+ * @param type - project type slug, e.g. 'playlab'
+ * @param name - project title to save
+ */
+async function makeNamedProject(
+  page: Page,
+  type: string,
+  name: string,
+): Promise<void> {
+  await makeProject(page, type);
+  await renameProject(page, name);
+  await page.locator('#runButton').click();
+  await expect(page.locator('.project_updated_at')).toContainText('Saved', {
+    timeout: 60_000,
+  });
+}
+
+/**
+ * Navigate to the personal project gallery and wait for its project table.
+ *
+ * @param page - authenticated Playwright page
+ */
+async function gotoPersonalGallery(page: Page): Promise<void> {
+  await page.goto('/projects');
+  await expect(page.locator('#uitest-personal-projects')).toBeVisible({
+    timeout: 30_000,
+  });
+  await expect(page.locator('.ui-personal-projects-table')).toBeVisible({
+    timeout: 30_000,
+  });
+}
+
+/**
+ * Assert the number of personal project table rows.
+ * Mirrors `the project table contains N rows`.
+ *
+ * @param page - Playwright page on the personal project gallery
+ * @param count - expected row count
+ */
+async function expectProjectRowCount(page: Page, count: number): Promise<void> {
+  await expect(page.locator('.ui-personal-projects-row')).toHaveCount(count, {
+    timeout: 15_000,
+  });
+}
+
+/**
+ * Assert the first personal gallery project name.
+ * Mirrors `the first project in the table is named "<name>"`.
+ *
+ * @param page - Playwright page on the personal project gallery
+ * @param name - expected visible project title
+ */
+async function expectFirstProjectName(page: Page, name: string): Promise<void> {
+  await expect(
+    page.locator('.ui-projects-table-project-name').first(),
+  ).toContainText(name, {timeout: 15_000});
+}
+
+/**
+ * Open the first project's action menu in the personal gallery.
+ *
+ * @param page - Playwright page on the personal project gallery
+ */
+async function openFirstProjectMenu(page: Page): Promise<void> {
+  await page
+    .locator('.ui-projects-table-dropdown')
+    .first()
+    .scrollIntoViewIfNeeded();
+  await page.locator('.ui-projects-table-dropdown').first().click();
+  await expect(page.locator('.pop-up-menu-item').first()).toBeVisible({
+    timeout: 10_000,
+  });
+}
+
 test.describe('Project Sharing — Young Students', {tag: '@no_mobile'}, () => {
   /**
    * Source: "Share dialog can be opened and closed"
@@ -161,6 +239,103 @@ test.describe('Project Sharing — Young Students', {tag: '@no_mobile'}, () => {
   });
 });
 
+test.describe('Personal Project Gallery', {tag: '@no_mobile'}, () => {
+  /**
+   * Source: dashboard/test/ui/features/teacher_tools/projects/personal_project_gallery.feature
+   * Scenario: Can Toggle to the Public Project Gallery
+   */
+  test('can toggle to the public project gallery', async ({page}) => {
+    await createStudent(page);
+    await page.goto('/projects');
+    await expect(page.locator('#uitest-personal-projects')).toBeVisible({
+      timeout: 30_000,
+    });
+    await expect(page.locator('#uitest-public-projects')).not.toBeVisible();
+
+    await page
+      .locator('#uitest-gallery-switcher')
+      .getByText('Featured Projects')
+      .click();
+    await page.waitForURL(/\/projects\/public/);
+    await expect(page.locator('#uitest-public-projects')).toBeVisible({
+      timeout: 30_000,
+    });
+    await expect(page.locator('#uitest-personal-projects')).not.toBeVisible();
+  });
+
+  /**
+   * Source: dashboard/test/ui/features/teacher_tools/projects/personal_project_gallery.feature
+   * Scenario: Can Rename a Project
+   */
+  test('can rename a project from the personal gallery', async ({page}) => {
+    await createStudent(page);
+    await makeNamedProject(page, 'playlab', 'Old Name');
+    await gotoPersonalGallery(page);
+    await expectProjectRowCount(page, 1);
+    await expectFirstProjectName(page, 'Old Name');
+
+    await openFirstProjectMenu(page);
+    await page.locator('.pop-up-menu-item').nth(0).click();
+    await expect(page.locator('#ui-project-rename-input')).toBeVisible({
+      timeout: 10_000,
+    });
+    await page.locator('#ui-project-rename-input').fill('New Name');
+    await page.locator('#ui-projects-rename-save').click();
+    await expect(page.locator('#ui-projects-rename-save')).not.toBeVisible({
+      timeout: 10_000,
+    });
+    await expectFirstProjectName(page, 'New Name');
+  });
+
+  /**
+   * Source: dashboard/test/ui/features/teacher_tools/projects/personal_project_gallery.feature
+   * Scenario: Can Remix a Project
+   * @no_safari
+   */
+  test('can remix a project from the personal gallery', async ({
+    browserName,
+    page,
+  }) => {
+    test.skip(
+      browserName === 'webkit',
+      'Source scenario is tagged @no_safari.',
+    );
+    await createStudent(page);
+    await makeNamedProject(page, 'playlab', 'Remix Template');
+    await gotoPersonalGallery(page);
+    await expectProjectRowCount(page, 1);
+    await expectFirstProjectName(page, 'Remix Template');
+
+    await openFirstProjectMenu(page);
+    await page.locator('.pop-up-menu-item').nth(1).click();
+    await page.waitForURL(/\/edit/, {timeout: 30_000});
+    await expect(page.locator('#runButton')).toBeVisible({timeout: 30_000});
+  });
+
+  /**
+   * Source: dashboard/test/ui/features/teacher_tools/projects/personal_project_gallery.feature
+   * Scenario: Can Delete a Project
+   */
+  test('can delete a project from the personal gallery', async ({page}) => {
+    await createStudent(page);
+    await makeNamedProject(page, 'playlab', 'To Be Deleted');
+    await gotoPersonalGallery(page);
+    await expectProjectRowCount(page, 1);
+    await expectFirstProjectName(page, 'To Be Deleted');
+
+    await openFirstProjectMenu(page);
+    await page.locator('.pop-up-menu-item').nth(2).click();
+    await expect(page.locator('.ui-confirm-project-delete-button')).toBeVisible(
+      {timeout: 10_000},
+    );
+    await page.locator('.ui-confirm-project-delete-button').click();
+    await expect(
+      page.locator('.ui-confirm-project-delete-button'),
+    ).not.toBeVisible({timeout: 10_000});
+    await expectProjectRowCount(page, 0);
+  });
+});
+
 test.describe('Project Sharing — Blockly projects', {tag: '@no_mobile'}, () => {
   /**
    * Source: dashboard/test/ui/features/teacher_tools/projects/blockly_project.feature
@@ -214,5 +389,30 @@ test.describe('Project Sharing — Blockly projects', {tag: '@no_mobile'}, () =>
       /Code Ninja III: Revenge of the Semicolon - Play Lab - Code\.org/,
     );
     await expect(page.locator('#codeWorkspace')).toBeHidden();
+  });
+});
+
+test.describe('Game Lab Projects', {tag: '@no_mobile'}, () => {
+  /**
+   * Source: dashboard/test/ui/features/teacher_tools/projects/gamelab_project.feature
+   * Scenario: Remix project creates and redirects to new channel
+   */
+  test('remix project creates and redirects to a new channel', async ({
+    page,
+  }) => {
+    await createStudent(page);
+    await makeProjectFromFamilyRoute(page, 'gamelab');
+    await page.evaluate(() => localStorage.setItem('is13Plus', 'true'));
+    await renameProject(page, 'Code Ninja');
+    await expect(page).toHaveTitle(/Code Ninja - Game Lab - Code\.org/);
+    const originalUrl = page.url();
+
+    await page.locator('.project_remix').click();
+    await expect(page.locator('#runButton')).toBeVisible({timeout: 60_000});
+    await expect(page).toHaveTitle(/Remix: Code Ninja - Game Lab - Code\.org/);
+    expect(page.url()).toContain('/projects/gamelab');
+    expect(page.url()).toContain('/edit');
+    expect(page.url()).not.toBe(originalUrl);
+    await page.locator('#runButton').click();
   });
 });

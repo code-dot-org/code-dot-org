@@ -10,10 +10,10 @@ This inventory ignores `Migration Status` markers. A Cucumber feature is treated
 | ----------------------------------------------------------- | ----: |
 | Cucumber feature files                                      |   271 |
 | Playwright spec files                                       |   124 |
-| Feature files referenced by Playwright                      |   161 |
-| Feature files with no Playwright source-path reference      |   110 |
-| Referenced feature files with all scenario titles traceable |    55 |
-| Referenced feature files with some untraced scenario titles |    84 |
+| Feature files referenced by Playwright                      |   163 |
+| Feature files with no Playwright source-path reference      |   108 |
+| Referenced feature files with all scenario titles traceable |    56 |
+| Referenced feature files with some untraced scenario titles |    85 |
 | Referenced feature files needing scenario-level audit       |    22 |
 | Playwright specs with no Cucumber source-path reference     |     1 |
 
@@ -25,9 +25,9 @@ This inventory ignores `Migration Status` markers. A Cucumber feature is treated
 | `acquisition_products/pd`                                      |     8 |        18 |              5 |
 | `platform/global_edition`                                      |     6 |        11 |              3 |
 | `teacher_tools/levelbuilder`                                   |     6 |        12 |              0 |
-| `teacher_tools/projects`                                       |     6 |        20 |              1 |
 | `teacher_tools/instructions`                                   |     5 |         8 |              5 |
 | `star_labs/applab`                                             |     4 |        11 |              4 |
+| `teacher_tools/projects`                                       |     4 |        14 |              1 |
 | `star_labs/weblab`                                             |     3 |         3 |              0 |
 | `student_learning/hour_of_code`                                |     3 |        16 |              0 |
 | `teacher_tools/certificates`                                   |     3 |         9 |              3 |
@@ -173,8 +173,6 @@ This inventory ignores `Migration Status` markers. A Cucumber feature is treated
 | `dashboard/test/ui/features/teacher_tools/plc_course_unit_navigation.feature`                                         |         1 | -                      |
 | `dashboard/test/ui/features/teacher_tools/progress.feature`                                                           |         2 | no_mobile              |
 | `dashboard/test/ui/features/teacher_tools/projects/applab_project.feature`                                            |         4 | skip, no_mobile        |
-| `dashboard/test/ui/features/teacher_tools/projects/gamelab_project.feature`                                           |         2 | no_mobile              |
-| `dashboard/test/ui/features/teacher_tools/projects/personal_project_gallery.feature`                                  |         4 | no_mobile              |
 | `dashboard/test/ui/features/teacher_tools/projects/prevent_report_abuse_spam.feature`                                 |         6 | no_mobile              |
 | `dashboard/test/ui/features/teacher_tools/projects/projects.feature`                                                  |         2 | eyes                   |
 | `dashboard/test/ui/features/teacher_tools/projects/public_project_gallery_project_validator.feature`                  |         2 | no_mobile              |
@@ -726,6 +724,12 @@ Traced 0 of 3 scenario titles.
 - Pair Programming submits levels for both students
 - Pair Programming attempts levels for both students
 - Pairing group is correctly displayed in user menu on cached levels
+
+### `dashboard/test/ui/features/teacher_tools/projects/gamelab_project.feature`
+
+Traced 1 of 2 scenario titles.
+
+- Gamelab Flow
 
 ### `dashboard/test/ui/features/teacher_tools/projects/public_project_gallery_signed_out.feature`
 
