@@ -30,7 +30,7 @@ class Languages
   end
 
   cached def self.get_hoc_unique_language_by_locale(locale)
-    table.select(:unique_language_s, :locale_s).where("locale_s = '#{locale}'").first[:unique_language_s]
+    table.select(:unique_language_s, :locale_s).where(locale_s: locale).first&.[](:unique_language_s)
   end
 
   cached def self.get_native_name_by_locale(locale)
