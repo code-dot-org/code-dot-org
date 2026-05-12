@@ -46,6 +46,11 @@ const OutlineBlock: React.FC<OutlineBlockProps> = ({
       <label htmlFor="project-channel-id">
         Optional: target Web Lab 2 project (channel id)
       </label>
+      <p className={moduleStyles.outlineHelp}>
+        When set, the lesson is generated as a progression toward the app stored
+        at this channel. The student never sees the target code; the AI uses it
+        as the final goal so each level moves closer to it.
+      </p>
       <input
         id="project-channel-id"
         className={moduleStyles.outlineProjectInput}
@@ -54,11 +59,6 @@ const OutlineBlock: React.FC<OutlineBlockProps> = ({
         placeholder="e.g. abc123 — leave blank to skip"
         disabled={isOutlining || disabled}
       />
-      <small className={moduleStyles.outlineHelp}>
-        When set, the lesson is generated as a progression toward the app stored
-        at this channel. The student never sees the target code; the AI uses it
-        as the final goal so each level moves closer to it.
-      </small>
     </div>
     <div className={moduleStyles.outlineActions}>
       <button
