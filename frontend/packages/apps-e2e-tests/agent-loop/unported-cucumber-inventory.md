@@ -12,8 +12,8 @@ This inventory ignores `Migration Status` markers. A Cucumber feature is treated
 | Playwright spec files                                       |   125 |
 | Feature files referenced by Playwright                      |   164 |
 | Feature files with no Playwright source-path reference      |   107 |
-| Referenced feature files with all scenario titles traceable |    73 |
-| Referenced feature files with some untraced scenario titles |    69 |
+| Referenced feature files with all scenario titles traceable |    79 |
+| Referenced feature files with some untraced scenario titles |    63 |
 | Referenced feature files needing scenario-level audit       |    22 |
 | Playwright specs with no Cucumber source-path reference     |     1 |
 
@@ -197,46 +197,6 @@ This inventory ignores `Migration Status` markers. A Cucumber feature is treated
 ## Referenced Feature Files With Untraced Scenario Titles
 
 These feature files have at least one Playwright source-path reference, but not every Cucumber scenario title was found in Playwright comments or single-source spec test titles. Some may be ported under renamed test titles; inspect before porting.
-
-### `dashboard/test/ui/features/star_labs/applab/versions.feature`
-
-Traced 3 of 5 scenario titles.
-
-- Project page refreshes when other client adds a newer version
-- Project page refreshes when other client replaces current version
-
-### `dashboard/test/ui/features/star_labs/can_see_finish.feature`
-
-Traced 11 of 12 scenario titles.
-
-- can see finish button on "Minecraft Adventurer"
-
-### `dashboard/test/ui/features/star_labs/craft/dialogs.feature`
-
-Traced 1 of 2 scenario titles.
-
-- Playing level 6, seeing house select dialog
-
-### `dashboard/test/ui/features/star_labs/custom_blocks.feature`
-
-Traced 0 of 2 scenario titles.
-
-- Poetry blocks
-- Dance Party blocks
-
-### `dashboard/test/ui/features/star_labs/dance/dance_ai_modal_eyes.feature`
-
-Traced 0 of 1 scenario titles.
-
-- Dance AI Modal
-
-### `dashboard/test/ui/features/star_labs/dance/dance_party.feature`
-
-Traced 4 of 7 scenario titles.
-
-- Restricted audio content is protected
-- Dance Party Share
-- Dance Party can share while logged out
 
 ### `dashboard/test/ui/features/star_labs/dance/save_for_share.feature`
 

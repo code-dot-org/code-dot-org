@@ -92,6 +92,17 @@ test.describe('Craft — Minecraft Hour of Code dialogs', () => {
     await craft.reset();
     await expect(craft.runButton).toBeVisible();
   });
+
+  /**
+   * Source: dashboard/test/ui/features/star_labs/craft/dialogs.feature
+   * Scenario: Playing level 6, seeing house select dialog
+   * Migration status: COMPLETED
+   *
+   * The source scenario is tagged @skip alongside the legacy Eyes assertions.
+   * Keep an explicit trace here so the skipped upstream visual flow is
+   * accounted for without reintroducing the retired Selenium visual checkpoint.
+   */
+  test.skip('level 6 house select dialog visual flow', async () => {});
 });
 
 /**

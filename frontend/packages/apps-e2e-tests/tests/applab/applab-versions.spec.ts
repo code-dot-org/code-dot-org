@@ -332,8 +332,8 @@ test.describe('App Lab — Version History', () => {
 
   /**
    * Migration status: COMPLETED
-   * Source: versions.feature — "Project page refreshes when other client adds
-   * a newer version"
+   * Source: dashboard/test/ui/features/star_labs/applab/versions.feature
+   * Scenario: Project page refreshes when other client adds a newer version
    *
    * Two tabs edit the same project.  Tab 1 creates version Y after tab 0 has
    * version X.  Tab 0's stale attempt to write Z gets a 409 and reloads to Y.
@@ -379,8 +379,8 @@ test.describe('App Lab — Version History', () => {
 
   /**
    * Migration status: COMPLETED
-   * Source: versions.feature — "Project page refreshes when other client
-   * replaces current version"
+   * Source: dashboard/test/ui/features/star_labs/applab/versions.feature
+   * Scenario: Project page refreshes when other client replaces current version
    *
    * Tab 1 loads Alpha.  Tab 0 replaces that current version with Bravo.  Tab
    * 1's stale attempt to write Charlie gets a 409 and reloads to Alpha+Bravo.

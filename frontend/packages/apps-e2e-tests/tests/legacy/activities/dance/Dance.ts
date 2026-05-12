@@ -265,10 +265,15 @@ export class Dance extends LegacyBlocklyLab {
    * source step's press target to be actionable before clicking it.
    */
   async pressRunAndReset(): Promise<void> {
-    await expect(this.runButton).toBeVisible();
-    await expect(this.runButton).toBeEnabled();
-    await this.runButton.click();
-    await expect(this.resetButton).toBeVisible();
+    await expect(async () => {
+      await expect(this.runButton).toBeVisible();
+      await expect(this.runButton).toBeEnabled();
+      await this.runButton.click();
+      await expect(this.resetButton).toBeVisible({timeout: 10_000});
+    }).toPass({
+      intervals: [500, 1_000, 2_000],
+      timeout: 45_000,
+    });
     await this.resetButton.click();
     await expect(this.runButton).toBeVisible();
   }

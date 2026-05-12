@@ -26,7 +26,8 @@ test.describe('Custom Blocks — pool rendering', () => {
 
   /**
    * Migration status: COMPLETED
-   * Source: custom_blocks.feature — "Poetry blocks"
+   * Source: dashboard/test/ui/features/star_labs/custom_blocks.feature
+   * Scenario: Poetry blocks
    * Navigates to the Poetry block pool page and asserts all blocks
    * render without triggering the "unknownBlock" fallback.
    */
@@ -61,7 +62,8 @@ test.describe('Custom Blocks — pool rendering', () => {
 
   /**
    * Migration status: COMPLETED
-   * Source: custom_blocks.feature — "Dance Party blocks"
+   * Source: dashboard/test/ui/features/star_labs/custom_blocks.feature
+   * Scenario: Dance Party blocks
    */
   test('Dance Party blocks render with no unknown blocks', async ({
     levelbuilderPage,
