@@ -68,8 +68,7 @@ module Middleware
       end
 
       private def param_locale
-        return @param_locale if defined?(@param_locale)
-        @param_locale = resolve_locale(request.GET[LOCALE_PARAM_KEY])
+        @param_locale ||= resolve_locale(request.GET[LOCALE_PARAM_KEY])
       end
 
       private def cookie_locale
@@ -82,8 +81,6 @@ module Middleware
       #
       # @return [String, nil] the first supported locale or nil if none matches
       private def http_locale
-        return @http_locale if defined?(@http_locale)
-
         http_locales_qualities = env['HTTP_ACCEPT_LANGUAGE'].to_s.gsub(/\s+/, '').split(',').each_with_object({}) do |language, hash|
           locale, quality = language.split(';q=')
 
@@ -93,9 +90,9 @@ module Middleware
           hash[locale] = quality ? quality.to_f : 1.0
         end
 
-        @http_locale = http_locales_qualities.sort_by {|_l, q| -q}.lazy.map {|l, _q| resolve_locale(l)}.find(&:itself)
+        http_locales_qualities.sort_by {|_l, q| -q}.lazy.map {|l, _q| resolve_locale(l)}.find(&:itself)
       rescue ArgumentError
-        @http_locale = nil
+        nil
       end
     end
 
