@@ -39,6 +39,56 @@ async function waitForDanceSharePage(dance: Dance): Promise<void> {
 }
 
 /**
+ * Return the number of Dance Party sprites currently rendered by the runtime.
+ *
+ * @param dance - Dance Party page object on a share page
+ * @returns current sprite count exposed by Dance Party's test interface
+ */
+async function getDanceSpriteCount(dance: Dance): Promise<number> {
+  return dance.page.evaluate(
+    () =>
+      (
+        window as Window & {
+          __DanceTestInterface?: {getSprites: () => unknown[]};
+        }
+      ).__DanceTestInterface?.getSprites().length ?? 0,
+  );
+}
+
+/**
+ * Run a Dance Party share page until the preview runtime reports sprites.
+ *
+ * Shared Dance Party projects run in preview mode, where the first run can
+ * race against runtime setup in WebKit. Retry from a reset state so each
+ * attempt starts with the same visible controls a user would use.
+ *
+ * @param dance - Dance Party page object on a share page
+ * @param expectedSpriteCount - expected number of sprites after run starts
+ */
+async function runDanceShareUntilSpriteCount(
+  dance: Dance,
+  expectedSpriteCount: number,
+): Promise<void> {
+  await expect(async () => {
+    if (await dance.resetButton.isVisible()) {
+      await dance.reset();
+      await expect(dance.runButton).toBeVisible();
+    }
+
+    await expect(dance.runButton).toBeVisible();
+    await expect(dance.runButton).toBeEnabled();
+    await dance.run();
+    await expect(dance.resetButton).toBeVisible({timeout: 10_000});
+    await expect
+      .poll(() => getDanceSpriteCount(dance), {timeout: 30_000})
+      .toBe(expectedSpriteCount);
+  }).toPass({
+    intervals: [500, 1_000, 2_000],
+    timeout: 45_000,
+  });
+}
+
+/**
  * Dance Party — lesson 37, level 2 (run/reset toggle).
  *
  * Source: dashboard/test/ui/features/star_labs/dance/dance_party.feature
@@ -196,10 +246,8 @@ test.describe('Dance Party — restricted media and sharing', () => {
    */
   test(
     'signed-in student share page runs and links back to workspace',
-    {tag: ['@no_mobile', '@no_safari']},
-    async ({browserName, studentPage}) => {
-      test.skip(browserName === 'webkit', '@no_safari');
-
+    {tag: '@no_mobile'},
+    async ({studentPage}) => {
       const dance = new Dance(studentPage);
       await dance.gotoDanceCourseLevel(13);
       await expect(dance.songSelector).toHaveValue('cheapthrills_sia', {
@@ -211,27 +259,14 @@ test.describe('Dance Party — restricted media and sharing', () => {
       await expect(studentPage.locator('.signInOrAgeDialog')).toBeHidden();
       await waitForDanceSharePage(dance);
 
-      await dance.run();
-      await expect(dance.resetButton).toBeVisible({timeout: 30_000});
-      await dance.reset();
+      await dance.pressRunAndReset();
       await expect(dance.runButton).toBeVisible();
       await expect(dance.resetButton).toBeHidden();
 
-      await dance.run();
-      await expect
-        .poll(
-          () =>
-            studentPage.evaluate(
-              () =>
-                (
-                  window as Window & {
-                    __DanceTestInterface?: {getSprites: () => unknown[]};
-                  }
-                ).__DanceTestInterface?.getSprites().length ?? 0,
-            ),
-          {timeout: 30_000},
-        )
-        .toBe(10);
+      await runDanceShareUntilSpriteCount(dance, 10);
+      await dance.reset();
+      await expect(dance.runButton).toBeVisible();
+      await expect(dance.resetButton).toBeHidden();
 
       await studentPage.locator('button.more-link').click();
       await studentPage
