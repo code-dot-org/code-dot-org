@@ -28,6 +28,18 @@ jest.mock('@cdo/apps/levelbuilder/ImageInput', () => {
   return {__esModule: true, default: ImageInput};
 });
 
+const createDataTransfer = () => {
+  const data: {[key: string]: string} = {};
+  return {
+    dropEffect: '',
+    effectAllowed: '',
+    getData: (key: string) => data[key] || '',
+    setData: (key: string, value: string) => {
+      data[key] = value;
+    },
+  };
+};
+
 describe('EditPanelsImages', () => {
   const panel: Panel = {
     key: 'panel-1',
@@ -122,6 +134,59 @@ describe('EditPanelsImages', () => {
     expect(updatePanel).toHaveBeenCalledWith({
       ...panelWithImage,
       images: undefined,
+    });
+  });
+
+  it('reorders images by dragging the handle', () => {
+    const updatePanel = jest.fn();
+    const firstImage = {imageUrl: 'first.png', x: 10, y: 20, width: 30};
+    const secondImage = {imageUrl: 'second.png', x: 40, y: 50, width: 60};
+    const panelWithImages: Panel = {
+      ...panel,
+      images: [firstImage, secondImage],
+    };
+    render(
+      <EditPanelsImages panel={panelWithImages} updatePanel={updatePanel} />
+    );
+
+    const dataTransfer = createDataTransfer();
+    fireEvent.dragStart(
+      screen.getByRole('button', {name: 'Drag image 1 to reorder'}),
+      {dataTransfer}
+    );
+    fireEvent.dragOver(screen.getByRole('group', {name: 'Image 2 settings'}), {
+      dataTransfer,
+    });
+    fireEvent.drop(screen.getByRole('group', {name: 'Image 2 settings'}), {
+      dataTransfer,
+    });
+
+    expect(updatePanel).toHaveBeenCalledWith({
+      ...panelWithImages,
+      images: [secondImage, firstImage],
+    });
+  });
+
+  it('reorders images with arrow keys on the handle', () => {
+    const updatePanel = jest.fn();
+    const firstImage = {imageUrl: 'first.png', x: 10, y: 20, width: 30};
+    const secondImage = {imageUrl: 'second.png', x: 40, y: 50, width: 60};
+    const panelWithImages: Panel = {
+      ...panel,
+      images: [firstImage, secondImage],
+    };
+    render(
+      <EditPanelsImages panel={panelWithImages} updatePanel={updatePanel} />
+    );
+
+    fireEvent.keyDown(
+      screen.getByRole('button', {name: 'Drag image 2 to reorder'}),
+      {key: 'ArrowUp'}
+    );
+
+    expect(updatePanel).toHaveBeenCalledWith({
+      ...panelWithImages,
+      images: [secondImage, firstImage],
     });
   });
 });

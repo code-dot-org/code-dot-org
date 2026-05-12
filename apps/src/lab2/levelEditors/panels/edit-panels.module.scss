@@ -140,6 +140,32 @@ $pinned-width-vw: 29;
     flex-direction: column;
     font-size: 13px;
   }
+
+  &Dragging {
+    opacity: 0.55;
+  }
+}
+
+.imageDragHandle {
+  @extend %button;
+  @include focus-styles;
+
+  align-self: stretch;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 24px;
+  padding: 4px;
+  color: $neutral_dark;
+  cursor: grab;
+
+  &:hover {
+    color: $neutral_dark40;
+  }
+
+  &:active {
+    cursor: grabbing;
+  }
 }
 
 .imageHeader {
