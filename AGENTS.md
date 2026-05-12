@@ -71,6 +71,9 @@ and architecture.
 - Our design system lives in `frontend/packages/component-library/` with shared styles in `frontend/packages/component-library-styles/`.
 - **Always prefer design system components** over custom or legacy alternatives. Only create custom UI components when no design system equivalent exists.
 
+## Accessibility
+- When reviewing or writing React UI components, refer to the `accessibility-audit` agent skill for WCAG AA compliance, screen reader compatibility, and keyboard navigation guidance.
+
 ## Levelbuilder
 - An important part of dashboard conceptually is "levelbuilder", which is used by curriculum authors to, well, write curriculum also called "levels".
 - Levelbuilder is mostly implemented in rails, but with some react views
