@@ -18,12 +18,22 @@ const LEVEL_1_URL =
 const LEVEL_4_URL =
   '/courses/allthethingscourse/units/1/lessons/27/levels/4?noautoplay=true';
 
+async function clickAndWaitForNavigation(
+  page: import('@playwright/test').Page,
+  selector: string,
+): Promise<void> {
+  await Promise.all([
+    page.waitForNavigation({waitUntil: 'load', timeout: 30_000}),
+    page.locator(selector).first().click(),
+  ]);
+}
+
 test.describe('Free response submittable — lesson 27', () => {
   test(
     'loading the level shows the question heading',
     {tag: '@no_mobile'},
     async ({page}) => {
-      // Source: "Loading the level"
+      // Scenario: Loading the level
       await createTeacherAssociatedStudent(page);
       await page.goto(LEVEL_1_URL);
       await page
@@ -39,12 +49,7 @@ test.describe('Free response submittable — lesson 27', () => {
     'submit, unsubmit, and resubmit cycle restores editable state',
     {tag: '@no_mobile'},
     async ({page}) => {
-      // Webkit: submit/unsubmit/resubmit cycle flaky under parallel run; passes alone.
-      test.fixme(
-        true,
-        'TODO: free-response submit/unsubmit/resubmit flaky on webkit under parallel run; createTeacherAssociatedStudent session or button timing issue',
-      );
-      // Source: "Submit anything, unsubmit, be able to resubmit."
+      // Scenario: Submit anything, unsubmit, be able to resubmit.
       await createTeacherAssociatedStudent(page);
       await page.goto(LEVEL_1_URL);
       await page
@@ -53,10 +58,7 @@ test.describe('Free response submittable — lesson 27', () => {
 
       // Submit a response; navigates away.
       await page.locator('.free-response > textarea').fill('sample response');
-      await Promise.all([
-        page.waitForNavigation(),
-        page.locator('.submitButton').click(),
-      ]);
+      await clickAndWaitForNavigation(page, '.submitButton');
 
       // Reload — unsubmit button visible, submit hidden, text preserved.
       await page.goto(LEVEL_1_URL);
@@ -72,10 +74,7 @@ test.describe('Free response submittable — lesson 27', () => {
       // Unsubmit — confirmation modal; confirm navigates back.
       await page.locator('.unsubmitButton').click();
       await page.locator('.modal').waitFor({state: 'visible', timeout: 15_000});
-      await Promise.all([
-        page.waitForNavigation(),
-        page.locator('.modal #ok-button').first().click(),
-      ]);
+      await clickAndWaitForNavigation(page, '.modal #ok-button');
 
       // After unsubmit: submit button is visible and enabled.
       await page
@@ -90,7 +89,7 @@ test.describe('Free response submittable — lesson 27', () => {
     'level without multiple attempts locks after submit',
     {tag: '@no_mobile'},
     async ({page}) => {
-      // Source: "Level without multiple attempts allowed is locked after submit"
+      // Scenario: Level without multiple attempts allowed is locked after submit
       await createTeacherAssociatedStudent(page);
       await page.goto(LEVEL_4_URL);
       await page
@@ -99,10 +98,7 @@ test.describe('Free response submittable — lesson 27', () => {
 
       // Submit a response; navigates away.
       await page.locator('.free-response > textarea').fill('sample response');
-      await Promise.all([
-        page.waitForNavigation(),
-        page.locator('.submitButton').click(),
-      ]);
+      await clickAndWaitForNavigation(page, '.submitButton');
 
       // Reload — next-level button visible, textarea readonly, submit gone.
       await page.goto(LEVEL_4_URL);

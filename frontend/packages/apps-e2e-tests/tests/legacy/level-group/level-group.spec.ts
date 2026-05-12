@@ -1,3 +1,5 @@
+import {type Page} from '@playwright/test';
+
 import {createTeacherAssociatedStudent, signIn} from '../../shared/auth';
 import {expect, test} from '../../shared/fixtures';
 
@@ -25,13 +27,31 @@ const LEVEL_URL =
  * @param matchIndex - 0-based index of the `.match` container
  */
 async function dragFirstUnplacedToFirstSlot(
-  page: import('@playwright/test').Page,
+  page: Page,
   matchIndex: number,
 ): Promise<void> {
   const match = page.locator('.match').nth(matchIndex);
   const answer = match.locator('.match_answers .answer').first();
   const slot = match.locator('.match_slots .emptyslot').first();
-  await answer.dragTo(slot);
+  await answer.scrollIntoViewIfNeeded();
+  await slot.scrollIntoViewIfNeeded();
+
+  for (let attempt = 1; attempt <= 3; attempt++) {
+    const remainingSlots = await match
+      .locator('.match_slots .emptyslot')
+      .count();
+    await answer.dragTo(slot, {force: true});
+
+    try {
+      await expect(match.locator('.match_slots .emptyslot')).toHaveCount(
+        remainingSlots - 1,
+        {timeout: 3000},
+      );
+      return;
+    } catch (error) {
+      if (attempt === 3) throw error;
+    }
+  }
 }
 
 // ─── Scenario 1 — @as_student: submit three multi answers ────────────────────
@@ -41,7 +61,7 @@ test.describe('Level group — submit multi answers', () => {
     'submit three answers shows incomplete warning; reload restores selections',
     {tag: '@no_mobile'},
     async ({studentPage}) => {
-      // Source: level_group.feature "Submit three answers."
+      // Scenario: Submit three answers.
       await studentPage.goto(LEVEL_URL);
       await studentPage
         .locator('.submitButton')
@@ -138,12 +158,7 @@ test.describe('Level group — match levels', () => {
     'match levels within level group: drag, submit, reload, teacher view',
     {tag: '@no_mobile'},
     async ({page}) => {
-      // Chromium: drag-and-drop or bubble assertion flaky under parallel run; passes alone.
-      test.fixme(
-        true,
-        'TODO: match levels drag/submit/teacher-view flaky on chromium under parallel test run; timing issue',
-      );
-      // Source: level_group.feature "Match levels within level group"
+      // Scenario: Match levels within level group
       const {teacherEmail, teacherPassword} =
         await createTeacherAssociatedStudent(page);
 
@@ -282,7 +297,7 @@ test.describe('Level group — submit all answers', () => {
     'submit all answers including match levels shows no incomplete warning',
     {tag: '@no_mobile'},
     async ({page}) => {
-      // Source: level_group.feature "Submit all answers, including match levels"
+      // Scenario: Submit all answers, including match levels
       await page.goto(LEVEL_URL);
       await page
         .locator('.submitButton')

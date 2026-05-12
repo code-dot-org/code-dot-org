@@ -48,6 +48,39 @@ async function runAndWaitForMilestone(page: Page): Promise<void> {
   await milestonePost;
 }
 
+async function verifyAuthorizedTeacherContainedLevel(
+  page: Page,
+  levelPath: string,
+): Promise<void> {
+  const {teacherEmail, teacherPassword} = await createTeacherAssociatedStudent(
+    page,
+    {authorized: true},
+  );
+
+  await signIn(page, teacherEmail, teacherPassword);
+  await page.goto(levelPath);
+  await page.locator('#runButton').waitFor({state: 'visible', timeout: 60_000});
+  await page.locator('.response').waitFor({state: 'visible', timeout: 60_000});
+  // Applitools snapshot stub: "initial load".
+
+  await page.locator('.response').fill('This is my answer');
+  await expect(page.locator('.response')).toHaveValue('This is my answer');
+  await expect(page.locator('#runButton')).toBeEnabled({timeout: 15_000});
+  // Applitools snapshot stub: "answer entered".
+
+  await page.locator('.uitest-teacherOnlyTab').first().click();
+  await expect(
+    page.locator('.editor-column').filter({
+      hasText: /For Teachers Only|Solo para docentes/,
+    }),
+  ).toBeVisible({timeout: 15_000});
+  // Applitools snapshot stub: "free response answer for teacher".
+
+  await runAndWaitForMilestone(page);
+  await expect(page.locator('#resetButton')).toBeVisible({timeout: 15_000});
+  // Applitools snapshot stub: "level run".
+}
+
 test.describe('Free response contained levels', () => {
   /**
    * Migration status: COMPLETED
@@ -133,11 +166,38 @@ test.describe('Free response contained levels', () => {
     // Applitools snapshot stub: "finished level with contained level".
   });
 
+  /**
+   * Migration status: COMPLETED
+   * Source: dashboard/test/ui/features/teacher_tools/level_types/free_response_contained_levels.feature
+   * Scenario: Authorized Teacher on Maze with free response contained level
+   */
+  test('authorized teacher on maze free response contained level reaches visual checkpoints', async ({
+    page,
+  }) => {
+    await verifyAuthorizedTeacherContainedLevel(
+      page,
+      '/courses/allthethingscourse/units/1/lessons/41/levels/6',
+    );
+  });
+
+  /**
+   * Migration status: COMPLETED
+   * Source: dashboard/test/ui/features/teacher_tools/level_types/free_response_contained_levels.feature
+   * Scenario: Authorized Teacher on App Lab with free response contained level
+   */
+  test('authorized teacher on app lab free response contained level reaches visual checkpoints', async ({
+    page,
+  }) => {
+    await verifyAuthorizedTeacherContainedLevel(
+      page,
+      '/courses/allthethingscourse/units/1/lessons/41/levels/3',
+    );
+  });
+
   test('teacher can reset progress on free response contained level', async ({
     page,
   }) => {
-    // Source: free_response_contained_levels.feature
-    // "Teacher can reset progress on free response contained level"
+    // Scenario: Teacher can reset progress on free response contained level
     const {teacherEmail, teacherPassword} =
       await createTeacherAssociatedStudent(page, {authorized: true});
 
@@ -175,8 +235,7 @@ test.describe('Free response contained levels', () => {
   test('student can attempt retriable free response contained level multiple times', async ({
     page,
   }) => {
-    // Source: free_response_contained_levels.feature
-    // "Student can attempt retriable free response contained level multiple times"
+    // Scenario: Student can attempt retriable free response contained level multiple times
     await createTeacherAssociatedStudent(page, {authorized: true});
 
     // Student (currently signed in) navigates to the retriable level.

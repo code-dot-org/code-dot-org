@@ -1,3 +1,5 @@
+import {type Page} from '@playwright/test';
+
 import {createTeacherAssociatedStudent, signIn} from '../../shared/auth';
 import {expect, test} from '../../shared/fixtures';
 
@@ -19,7 +21,7 @@ test.describe('Level group activity guide — submit and advance', () => {
   test('submit activity guide navigates to next level', async ({
     studentPage,
   }) => {
-    // Source: "Submit activity guide and go to next level."
+    // Scenario: Submit activity guide and go to next level.
     await studentPage.goto(LESSON_53_L1);
     await studentPage
       .locator('.submitButton')
@@ -38,7 +40,7 @@ test.describe('Level group activity guide — submit and advance', () => {
 
 test.describe('Level group activity guide — teacher views summary', () => {
   async function studentSubmitAndTeacherViewSummary(
-    page: import('@playwright/test').Page,
+    page: Page,
     levelUrl: string,
   ): Promise<void> {
     const {teacherEmail, teacherPassword} =
@@ -63,18 +65,21 @@ test.describe('Level group activity guide — teacher views summary', () => {
     await page
       .locator('a', {hasText: 'View student responses'})
       .waitFor({state: 'visible', timeout: 30_000});
-    await page.locator('a', {hasText: 'View student responses'}).click();
-    await expect(page).toHaveURL(/\/summary/, {timeout: 15_000});
+    await Promise.all([
+      page.waitForURL(/\/summary/, {timeout: 30_000}),
+      page.locator('a', {hasText: 'View student responses'}).click(),
+    ]);
     await page
       .locator('#summary-container')
-      .waitFor({state: 'visible', timeout: 15_000});
+      .waitFor({state: 'visible', timeout: 30_000});
   }
 
   test(
     'teacher can view student summary of responses on standard level',
     {tag: '@no_mobile'},
     async ({page}) => {
-      // Source: "Teacher can view student summary of responses."
+      test.slow();
+      // Scenario: Teacher can view student summary of responses.
       await studentSubmitAndTeacherViewSummary(page, LESSON_53_L1);
     },
   );
@@ -83,7 +88,8 @@ test.describe('Level group activity guide — teacher views summary', () => {
     'teacher can view student summary of responses on assessment-marked level',
     {tag: '@no_mobile'},
     async ({page}) => {
-      // Source: "Teacher can view student summary of responses on level marked as assessment"
+      test.slow();
+      // Scenario: Teacher can view student summary of responses on level marked as assessment
       await studentSubmitAndTeacherViewSummary(page, LESSON_53_L2);
     },
   );
@@ -95,7 +101,7 @@ test.describe('Level group activity guide — numbered header bubbles', () => {
   test('student sees level numbers for activity guide levels in header', async ({
     page,
   }) => {
-    // Source: "Student can see level numbers for level group levels in header."
+    // Scenario: Student can see level numbers for level group levels in header.
     await createTeacherAssociatedStudent(page);
 
     await page.goto(LESSON_53_L1);
