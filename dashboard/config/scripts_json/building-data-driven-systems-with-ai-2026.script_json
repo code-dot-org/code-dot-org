@@ -21,7 +21,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2026-05-08 03:27:54 UTC",
+    "serialized_at": "2026-05-10 07:39:58 UTC",
     "hide_within_course": false,
     "published_state": "in_development",
     "instruction_type": null,
@@ -788,8 +788,21 @@
       }
     },
     {
-      "key": "a4f59a91-34c1-484f-a6e1-667471deb9cd",
+      "key": "d8bf636f-1c1a-42e5-a22f-4b82c5b4987d",
       "position": 1,
+      "properties": {
+        "name": "Revised Level Progression"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "d8bf636f-1c1a-42e5-a22f-4b82c5b4987d",
+        "lesson.key": "Lesson 10: Sorting and Chaining",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "building-data-driven-systems-with-ai-2026"
+      }
+    },
+    {
+      "key": "a4f59a91-34c1-484f-a6e1-667471deb9cd",
+      "position": 2,
       "properties": {
         "duration": 5,
         "name": "Warm Up"
@@ -803,7 +816,7 @@
     },
     {
       "key": "1cb26648-c7df-4932-85e5-8233fce4c7bd",
-      "position": 2,
+      "position": 3,
       "properties": {
         "duration": 30,
         "name": "Activity"
@@ -817,7 +830,7 @@
     },
     {
       "key": "36668a05-f190-4c6e-879f-99846a75a1f1",
-      "position": 3,
+      "position": 4,
       "properties": {
         "duration": 10,
         "name": "Wrap Up"
@@ -3020,6 +3033,16 @@
       }
     },
     {
+      "key": "7c92d253-b996-45ae-9d85-3cc3be6cbfd0",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "7c92d253-b996-45ae-9d85-3cc3be6cbfd0",
+        "lesson_activity.key": "d8bf636f-1c1a-42e5-a22f-4b82c5b4987d"
+      }
+    },
+    {
       "key": "03c455fb-da80-4a46-b6a7-41e882935f32",
       "position": 1,
       "properties": {
@@ -5156,6 +5179,90 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "building-data-driven-systems-lesson10-level1-v1-2026"
+        ],
+        "lesson.key": "Lesson 10: Sorting and Chaining",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "building-data-driven-systems-with-ai-2026",
+        "activity_section.key": "7c92d253-b996-45ae-9d85-3cc3be6cbfd0"
+      },
+      "level_keys": [
+        "building-data-driven-systems-lesson10-level1-v1-2026"
+      ]
+    },
+    {
+      "chapter": 75,
+      "position": 2,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "building-data-driven-systems-lesson10-level2-v1-2026"
+        ],
+        "lesson.key": "Lesson 10: Sorting and Chaining",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "building-data-driven-systems-with-ai-2026",
+        "activity_section.key": "7c92d253-b996-45ae-9d85-3cc3be6cbfd0"
+      },
+      "level_keys": [
+        "building-data-driven-systems-lesson10-level2-v1-2026"
+      ]
+    },
+    {
+      "chapter": 76,
+      "position": 3,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "building-data-driven-systems-lesson10-level3-v2-2026"
+        ],
+        "lesson.key": "Lesson 10: Sorting and Chaining",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "building-data-driven-systems-with-ai-2026",
+        "activity_section.key": "7c92d253-b996-45ae-9d85-3cc3be6cbfd0"
+      },
+      "level_keys": [
+        "building-data-driven-systems-lesson10-level3-v2-2026"
+      ]
+    },
+    {
+      "chapter": 77,
+      "position": 4,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "building-data-driven-systems-lesson10-level4-v1-2026"
+        ],
+        "lesson.key": "Lesson 10: Sorting and Chaining",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "building-data-driven-systems-with-ai-2026",
+        "activity_section.key": "7c92d253-b996-45ae-9d85-3cc3be6cbfd0"
+      },
+      "level_keys": [
+        "building-data-driven-systems-lesson10-level4-v1-2026"
+      ]
+    },
+    {
+      "chapter": 78,
+      "position": 5,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
         "progression": "Introduction to a Filter & Sort Pipeline"
       },
       "bonus": false,
@@ -5173,8 +5280,8 @@
       ]
     },
     {
-      "chapter": 75,
-      "position": 2,
+      "chapter": 79,
+      "position": 6,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -5195,8 +5302,8 @@
       ]
     },
     {
-      "chapter": 76,
-      "position": 3,
+      "chapter": 80,
+      "position": 7,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -5217,7 +5324,7 @@
       ]
     },
     {
-      "chapter": 77,
+      "chapter": 81,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -5239,7 +5346,7 @@
       ]
     },
     {
-      "chapter": 78,
+      "chapter": 82,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -5261,7 +5368,7 @@
       ]
     },
     {
-      "chapter": 79,
+      "chapter": 83,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -5283,7 +5390,7 @@
       ]
     },
     {
-      "chapter": 80,
+      "chapter": 84,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -5305,7 +5412,7 @@
       ]
     },
     {
-      "chapter": 81,
+      "chapter": 85,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
@@ -5327,7 +5434,7 @@
       ]
     },
     {
-      "chapter": 82,
+      "chapter": 86,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -6224,6 +6331,54 @@
         "lesson_group.key": "lessonGroup-2",
         "script.name": "building-data-driven-systems-with-ai-2026",
         "activity_section.key": "cf4b40c8-345c-4d72-bd01-a50447b56d30"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "building-data-driven-systems-lesson10-level1-v1-2026",
+        "script_level.level_keys": [
+          "building-data-driven-systems-lesson10-level1-v1-2026"
+        ],
+        "lesson.key": "Lesson 10: Sorting and Chaining",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "building-data-driven-systems-with-ai-2026",
+        "activity_section.key": "7c92d253-b996-45ae-9d85-3cc3be6cbfd0"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "building-data-driven-systems-lesson10-level2-v1-2026",
+        "script_level.level_keys": [
+          "building-data-driven-systems-lesson10-level2-v1-2026"
+        ],
+        "lesson.key": "Lesson 10: Sorting and Chaining",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "building-data-driven-systems-with-ai-2026",
+        "activity_section.key": "7c92d253-b996-45ae-9d85-3cc3be6cbfd0"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "building-data-driven-systems-lesson10-level3-v2-2026",
+        "script_level.level_keys": [
+          "building-data-driven-systems-lesson10-level3-v2-2026"
+        ],
+        "lesson.key": "Lesson 10: Sorting and Chaining",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "building-data-driven-systems-with-ai-2026",
+        "activity_section.key": "7c92d253-b996-45ae-9d85-3cc3be6cbfd0"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "building-data-driven-systems-lesson10-level4-v1-2026",
+        "script_level.level_keys": [
+          "building-data-driven-systems-lesson10-level4-v1-2026"
+        ],
+        "lesson.key": "Lesson 10: Sorting and Chaining",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "building-data-driven-systems-with-ai-2026",
+        "activity_section.key": "7c92d253-b996-45ae-9d85-3cc3be6cbfd0"
       }
     },
     {
