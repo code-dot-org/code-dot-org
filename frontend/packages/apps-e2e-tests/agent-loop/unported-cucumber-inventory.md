@@ -12,8 +12,8 @@ This inventory ignores `Migration Status` markers. A Cucumber feature is treated
 | Playwright spec files                                       |   125 |
 | Feature files referenced by Playwright                      |   164 |
 | Feature files with no Playwright source-path reference      |   107 |
-| Referenced feature files with all scenario titles traceable |    60 |
-| Referenced feature files with some untraced scenario titles |    82 |
+| Referenced feature files with all scenario titles traceable |    65 |
+| Referenced feature files with some untraced scenario titles |    77 |
 | Referenced feature files needing scenario-level audit       |    22 |
 | Playwright specs with no Cucumber source-path reference     |     1 |
 
@@ -197,41 +197,6 @@ This inventory ignores `Migration Status` markers. A Cucumber feature is treated
 ## Referenced Feature Files With Untraced Scenario Titles
 
 These feature files have at least one Playwright source-path reference, but not every Cucumber scenario title was found in Playwright comments or single-source spec test titles. Some may be ported under renamed test titles; inspect before porting.
-
-### `dashboard/test/ui/features/foundations/markdown_rendering.feature`
-
-Traced 0 of 2 scenario titles.
-
-- Visiting an external markdown level with details tag
-- Viewing a level with blockly embedded in instructions
-
-### `dashboard/test/ui/features/platform/global_edition/region_select.feature`
-
-Traced 0 of 2 scenario titles.
-
-- User can switch between the international and regional versions using the language selector on a Studio page
-- User can switch to regional versions using the language selector on a Lab page
-
-### `dashboard/test/ui/features/platform/global_edition/region_switch_confirm.feature`
-
-Traced 0 of 1 scenario titles.
-
-- The modal is shown on studio.code.org (Studio) domain
-
-### `dashboard/test/ui/features/platform/header.feature`
-
-Traced 4 of 6 scenario titles.
-
-- Teacher can click on the header links
-- Student can click on the header links
-
-### `dashboard/test/ui/features/platform/one_trust.feature`
-
-Traced 5 of 8 scenario titles.
-
-- User sees OneTrust cookie pop-up when self-hosting OneTrust libraries on code.org
-- Critical Javascript files are appropriately categorized by OneTrust on dashboard
-- Embedded projects do not display the OneTrust banner
 
 ### `dashboard/test/ui/features/platform/policy_compliance/lockout_phase.feature`
 

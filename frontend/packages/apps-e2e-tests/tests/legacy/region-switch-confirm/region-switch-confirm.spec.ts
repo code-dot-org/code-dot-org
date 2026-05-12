@@ -12,6 +12,10 @@ import {expect, test} from '../../shared/fixtures';
  * request IP is detected as Iranian via the GeolocationOverride cookie.
  */
 
+/**
+ * Source: dashboard/test/ui/features/platform/global_edition/region_switch_confirm.feature
+ * Scenario: The modal is shown on studio.code.org (Studio) domain
+ */
 test(
   'region-switch confirm modal shown for Iranian visitors when DCDO flag is set',
   {tag: '@no_mobile'},

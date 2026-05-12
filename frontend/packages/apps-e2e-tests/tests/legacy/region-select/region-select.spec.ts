@@ -32,6 +32,10 @@ async function waitForLabLoad(page: Page): Promise<void> {
 }
 
 test.describe('Global Edition — region select', () => {
+  /**
+   * Source: dashboard/test/ui/features/platform/global_edition/region_select.feature
+   * Scenario: User can switch between the international and regional versions using the language selector on a Studio page
+   */
   test(
     'Studio page: switch between English and Farsi using the locale dropdown',
     {tag: '@no_mobile'},
@@ -78,6 +82,10 @@ test.describe('Global Edition — region select', () => {
     },
   );
 
+  /**
+   * Source: dashboard/test/ui/features/platform/global_edition/region_select.feature
+   * Scenario: User can switch to regional versions using the language selector on a Lab page
+   */
   test(
     'Lab page: switch between English and Farsi using the locale form',
     {tag: '@no_mobile'},

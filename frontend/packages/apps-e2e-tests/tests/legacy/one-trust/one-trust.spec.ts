@@ -38,6 +38,15 @@ async function assertNotCategorizedByOneTrust(
 
 /**
  * Source: dashboard/test/ui/features/platform/one_trust.feature
+ * Scenario: User sees OneTrust cookie pop-up when self-hosting OneTrust libraries on code.org
+ */
+test.skip('visual OneTrust cookie pop-up check is covered by the Eyes lane', () => {
+  // The Cucumber scenario is tagged @eyes and asserts an Applitools visual
+  // diff for the same banner covered by the nonvisual popup test below.
+});
+
+/**
+ * Source: dashboard/test/ui/features/platform/one_trust.feature
  * Scenario: OneTrust cookie pop-up shows when self-hosting OneTrust libraries on code.org
  */
 test(
@@ -152,6 +161,10 @@ test(
 
 // ─── Critical JS files are not categorized by OneTrust ───────────────────────
 
+/**
+ * Source: dashboard/test/ui/features/platform/one_trust.feature
+ * Scenario: Critical Javascript files are appropriately categorized by OneTrust on dashboard
+ */
 test(
   'critical JS bundles on sign-in page are not categorized by OneTrust',
   {tag: '@no_mobile'},
@@ -190,6 +203,10 @@ const EMBEDDED_PROJECT_URLS = [
   '/projects/frozen/new',
 ] as const;
 
+/**
+ * Source: dashboard/test/ui/features/platform/one_trust.feature
+ * Scenario: Embedded projects do not display the OneTrust banner
+ */
 test.describe('Embedded projects — OneTrust banner suppressed', () => {
   for (const projectUrl of EMBEDDED_PROJECT_URLS) {
     test(

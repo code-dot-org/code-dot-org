@@ -24,6 +24,37 @@ async function waitForHeaderLinks(page: Page): Promise<void> {
 }
 
 /**
+ * Set cookies used by the Cucumber click-through scenarios to pin English and
+ * suppress the localization notice.
+ *
+ * @param page - Playwright page
+ */
+async function setHeaderClickCookies(page: Page): Promise<void> {
+  const {hostname} = new URL(page.url());
+  await page.context().addCookies([
+    {name: '_language', value: 'en', domain: hostname, path: '/'},
+    {name: '_loc_notice', value: '1', domain: hostname, path: '/'},
+  ]);
+}
+
+/**
+ * Click a header link and assert the resulting route.
+ *
+ * @param page - Playwright page
+ * @param selector - header link selector
+ * @param expectedUrl - expected URL pattern after navigation
+ */
+async function clickHeaderLinkAndExpectUrl(
+  page: Page,
+  selector: string,
+  expectedUrl: RegExp,
+): Promise<void> {
+  await page.locator(selector).click();
+  await expect(page).toHaveURL(expectedUrl, {timeout: 30_000});
+  await waitForHeaderLinks(page);
+}
+
+/**
  * Assert a localized header link contains the expected text.
  *
  * The Cucumber step compares against Rails i18n keys.  Test-studio may resolve
@@ -178,4 +209,55 @@ test.describe('Header navigation', () => {
       );
     },
   );
+
+  /**
+   * Source: dashboard/test/ui/features/platform/header.feature
+   * Scenario: Teacher can click on the header links
+   */
+  test(
+    'teacher can click on the header links',
+    {tag: '@no_mobile'},
+    async ({page}) => {
+      await createTeacher(page, {name: 'Sir Clicks-A-Lot Teacher'});
+      await setHeaderClickCookies(page);
+      await page.goto('/teacher_dashboard/home');
+      await waitForHeaderLinks(page);
+
+      await clickHeaderLinkAndExpectUrl(
+        page,
+        '#header-teacher-home',
+        /\/teacher_dashboard\/home$/,
+      );
+      await clickHeaderLinkAndExpectUrl(
+        page,
+        '#header-teacher-courses',
+        /\/catalog$/,
+      );
+      await clickHeaderLinkAndExpectUrl(
+        page,
+        '#header-teacher-projects',
+        /\/projects$/,
+      );
+      await clickHeaderLinkAndExpectUrl(
+        page,
+        '#header-teacher-professional-learning',
+        /\/my-professional-learning$/,
+      );
+      await clickHeaderLinkAndExpectUrl(
+        page,
+        '#logo_home_link',
+        /\/teacher_dashboard\/home$/,
+      );
+    },
+  );
+
+  /**
+   * Source: dashboard/test/ui/features/platform/header.feature
+   * Scenario: Student can click on the header links
+   */
+  test.skip('student can click on the header links', () => {
+    // Source Cucumber scenario is tagged @skip. It includes a cross-site
+    // hop through code.org/students, so keep the trace explicit without
+    // introducing a new always-skipped browser journey.
+  });
 });
