@@ -1,4 +1,4 @@
-import {type Page} from '@playwright/test';
+import {type Locator, type Page} from '@playwright/test';
 
 import {expect, test} from '../../shared/fixtures';
 import {dismissLoginReminder} from '../../shared/ui';
@@ -21,12 +21,14 @@ const LESSON2_L7 =
 /**
  * Returns the locator for the Nth callout container (0-based).
  * Callouts render as `.cdo-qtips` elements in document order.
+ *
+ * @param page - Playwright page with callouts rendered
+ * @param index - zero-based callout index
+ * @returns locator for the requested callout
  */
-function callout(page: Page, index: number) {
+function callout(page: Page, index: number): Locator {
   return page.locator('.cdo-qtips').nth(index);
 }
-
-// ─── Scenario Outline: correct content, dismissable via target element ────────
 
 const TARGET_DISMISS_CASES = [
   {
@@ -54,6 +56,12 @@ const TARGET_DISMISS_CASES = [
     closeTarget: "[data-id='moveForward']",
   },
   {
+    url: '/hoc/9?noautoplay=true',
+    calloutId: 0,
+    text: "Blocks that are grey can't be deleted. Can you solve the puzzle anyway?",
+    closeTarget: "[data-id='undeletableRepeat']",
+  },
+  {
     url: '/hoc/14?noautoplay=true',
     calloutId: 0,
     text: "Click here to see the code for the program you're making",
@@ -61,6 +69,11 @@ const TARGET_DISMISS_CASES = [
   },
 ] as const;
 
+/**
+ * Migration status: COMPLETED
+ * Source: dashboard/test/ui/features/teacher_tools/callouts.feature
+ * Scenario: Callouts having correct content and being dismissable via the target element
+ */
 test.describe('Callouts — target-element dismissal', () => {
   for (const {url, calloutId, text, closeTarget} of TARGET_DISMISS_CASES) {
     test(`callout ${calloutId} on ${new URL(url, 'http://x').pathname} has correct text and is dismissed by target`, async ({
@@ -82,9 +95,12 @@ test.describe('Callouts — target-element dismissal', () => {
   }
 });
 
-// ─── Scenario Outline: dismissable via x-button ───────────────────────────────
-
 const X_BUTTON_CASES = [
+  {
+    url: '/hoc/6?noautoplay=true',
+    calloutId: 0,
+    text: 'Click here to watch the video again',
+  },
   {
     url: '/courses/allthethingscourse/units/1/lessons/3/levels/7?noautoplay=true&show_callouts=1',
     calloutId: 0,
@@ -92,6 +108,11 @@ const X_BUTTON_CASES = [
   },
 ] as const;
 
+/**
+ * Migration status: COMPLETED
+ * Source: dashboard/test/ui/features/teacher_tools/callouts.feature
+ * Scenario: Callouts having correct content and being dismissable via the x-button
+ */
 test.describe('Callouts — x-button dismissal', () => {
   for (const {url, calloutId, text} of X_BUTTON_CASES) {
     test(
@@ -108,33 +129,33 @@ test.describe('Callouts — x-button dismissal', () => {
         await expect(callout(page, calloutId)).toBeVisible();
         await expect(callout(page, calloutId)).toContainText(text);
 
-        // Close via the x-button inside the callout container.
-        await callout(page, calloutId).locator('> div').nth(2).click();
+        await callout(page, calloutId).locator('.tooltip-x-close').click();
         await callout(page, calloutId).waitFor({state: 'hidden'});
       },
     );
   }
 });
 
-// ─── Modal ordering ───────────────────────────────────────────────────────────
-
+/**
+ * Migration status: COMPLETED
+ * Source: dashboard/test/ui/features/teacher_tools/callouts.feature
+ * Scenario: Modal ordering
+ */
 test('callout 0 is visible on initial load', async ({page}) => {
   await page.goto(LESSON2_L7);
   await page.locator('#runButton').waitFor({state: 'visible', timeout: 30_000});
   await expect(callout(page, 0)).toBeVisible();
 });
 
-// ─── Closing multiple callouts using the x-button ────────────────────────────
-
+/**
+ * Migration status: COMPLETED
+ * Source: dashboard/test/ui/features/teacher_tools/callouts.feature
+ * Scenario: Closing using "x" button
+ */
 test(
   'closing callout 1 leaves callout 0 visible; closing callout 0 hides it',
   {tag: '@no_mobile'},
   async ({page}) => {
-    // Firefox: callout dismiss sequence flaky under parallel run; passes alone.
-    test.fixme(
-      true,
-      'TODO: multiple callout close sequence flaky on firefox under parallel run; callout visibility timing issue',
-    );
     await page.goto(LESSON2_L7);
     await page
       .locator('#runButton')
@@ -146,18 +167,21 @@ test(
     await expect(callout(page, 1)).toBeVisible();
 
     // Close callout 1 — callout 0 stays.
-    await callout(page, 1).locator('> div').nth(2).click();
+    await callout(page, 1).locator('.tooltip-x-close').click();
     await callout(page, 1).waitFor({state: 'hidden'});
     await expect(callout(page, 0)).toBeVisible();
 
     // Close callout 0.
-    await callout(page, 0).locator('> div').nth(2).click();
+    await callout(page, 0).locator('.tooltip-x-close').click();
     await callout(page, 0).waitFor({state: 'hidden'});
   },
 );
 
-// ─── Only show a callout once after it has been seen ─────────────────────────
-
+/**
+ * Migration status: COMPLETED
+ * Source: dashboard/test/ui/features/teacher_tools/callouts.feature
+ * Scenario: Only showing seen callouts once
+ */
 test('callout shown on first visit is absent on second visit (same session)', async ({
   page,
 }) => {
@@ -176,8 +200,11 @@ test('callout shown on first visit is absent on second visit (same session)', as
   await expect(callout(page, 0)).not.toBeAttached();
 });
 
-// ─── Show Code dialog is in front of callout (z-index ordering) ──────────────
-
+/**
+ * Migration status: COMPLETED
+ * Source: dashboard/test/ui/features/teacher_tools/callouts.feature
+ * Scenario: Opening the Show Code dialog
+ */
 test(
   'Show Code dialog modal is rendered in front of callout',
   {tag: '@no_mobile'},

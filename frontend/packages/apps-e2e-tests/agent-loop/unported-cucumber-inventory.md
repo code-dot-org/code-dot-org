@@ -12,8 +12,8 @@ This inventory ignores `Migration Status` markers. A Cucumber feature is treated
 | Playwright spec files                                       |   125 |
 | Feature files referenced by Playwright                      |   164 |
 | Feature files with no Playwright source-path reference      |   107 |
-| Referenced feature files with all scenario titles traceable |    93 |
-| Referenced feature files with some untraced scenario titles |    49 |
+| Referenced feature files with all scenario titles traceable |    97 |
+| Referenced feature files with some untraced scenario titles |    45 |
 | Referenced feature files needing scenario-level audit       |    22 |
 | Playwright specs with no Cucumber source-path reference     |     1 |
 
@@ -197,36 +197,6 @@ This inventory ignores `Migration Status` markers. A Cucumber feature is treated
 ## Referenced Feature Files With Untraced Scenario Titles
 
 These feature files have at least one Playwright source-path reference, but not every Cucumber scenario title was found in Playwright comments or single-source spec test titles. Some may be ported under renamed test titles; inspect before porting.
-
-### `dashboard/test/ui/features/teacher_tools/authored_hints.feature`
-
-Traced 0 of 1 scenario titles.
-
-- View Authored Hints
-
-### `dashboard/test/ui/features/teacher_tools/cached_level_page.feature`
-
-Traced 0 of 1 scenario titles.
-
-- View cached level page as teacher
-
-### `dashboard/test/ui/features/teacher_tools/callouts.feature`
-
-Traced 0 of 6 scenario titles.
-
-- Callouts having correct content and being dismissable via the target element
-- Callouts having correct content and being dismissable via the x-button
-- Modal ordering
-- Closing using "x" button
-- Only showing seen callouts once
-- Opening the Show Code dialog
-
-### `dashboard/test/ui/features/teacher_tools/challenge_level.feature`
-
-Traced 0 of 2 scenario titles.
-
-- Submit passing and perfect solutions
-- Press the skip button
 
 ### `dashboard/test/ui/features/teacher_tools/contextual_hints.feature`
 

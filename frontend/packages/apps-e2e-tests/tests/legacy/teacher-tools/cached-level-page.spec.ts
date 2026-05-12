@@ -15,10 +15,9 @@ import {expect, test} from '../../shared/fixtures';
 
 test.describe('Cached Level Page', {tag: '@no_mobile'}, () => {
   /**
-   * Source: cached_level_page.feature — "View cached level page as teacher"
-   *
-   * Authorized teacher opens a cached Dance level with ?section_id; the
-   * teacher panel loads and shows the enrolled student's name.
+   * Migration status: COMPLETED
+   * Source: dashboard/test/ui/features/teacher_tools/cached_level_page.feature
+   * Scenario: View cached level page as teacher
    */
   test('teacher panel shows student on cached level page', async ({page}) => {
     const {email: teacherEmail, password: teacherPassword} =

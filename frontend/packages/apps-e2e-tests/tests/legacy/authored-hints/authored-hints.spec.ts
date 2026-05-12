@@ -20,12 +20,12 @@ const LEVEL_URL =
   '/courses/allthethingscourse/units/1/lessons/6/levels/2?noautoplay=true';
 
 test.describe('Authored hints', () => {
+  /**
+   * Migration status: COMPLETED
+   * Source: dashboard/test/ui/features/teacher_tools/authored_hints.feature
+   * Scenario: View Authored Hints
+   */
   test('cycling through all three authored hints', async ({page}) => {
-    // Webkit: hint cycling flaky under parallel run; passes alone.
-    test.fixme(
-      true,
-      'TODO: authored hints cycling flaky on webkit under parallel run; timing issue with hint lightbulb or hint display',
-    );
     await page.goto(LEVEL_URL);
     await page
       .locator('#lightbulb')

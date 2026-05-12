@@ -20,6 +20,11 @@ test.describe('Challenge level — Maze level 6', () => {
     await maze.gotoLevel(6);
   });
 
+  /**
+   * Migration status: COMPLETED
+   * Source: dashboard/test/ui/features/teacher_tools/challenge_level.feature
+   * Scenario: Submit passing and perfect solutions
+   */
   test('submit passing then perfect solution shows correct dialogs', async () => {
     // On load the challenge panel appears with the initial prompt.
     await maze.expectChallengeTitle('Challenge Puzzle!');
@@ -45,6 +50,11 @@ test.describe('Challenge level — Maze level 6', () => {
     await maze.expectChallengeTitle('Challenge Complete!');
   });
 
+  /**
+   * Migration status: COMPLETED
+   * Source: dashboard/test/ui/features/teacher_tools/challenge_level.feature
+   * Scenario: Press the skip button
+   */
   test('skip button navigates to the next level', async () => {
     await maze.challengePrimaryButton.click();
     await maze.clickSkipButton();
