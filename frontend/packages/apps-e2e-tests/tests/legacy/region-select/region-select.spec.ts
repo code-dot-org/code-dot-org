@@ -31,6 +31,35 @@ async function waitForLabLoad(page: Page): Promise<void> {
   }
 }
 
+/**
+ * Select a locale and submit the containing locale form deterministically.
+ * The dashboard locale selector posts a form and redirects; submitting the
+ * form directly avoids racing the page's change handler during parallel runs.
+ *
+ * @param page - Playwright page
+ * @param selector - CSS selector for the locale select
+ * @param value - locale value to submit
+ * @param expectedUrl - expected URL after the locale redirect
+ */
+async function selectLocaleAndWaitForRedirect(
+  page: Page,
+  selector: string,
+  value: string,
+  expectedUrl: RegExp,
+): Promise<void> {
+  await Promise.all([
+    page.waitForURL(expectedUrl, {
+      waitUntil: 'domcontentloaded',
+      timeout: 30_000,
+    }),
+    page.locator(selector).evaluate((selectElement, localeValue) => {
+      const select = selectElement as HTMLSelectElement;
+      select.value = localeValue as string;
+      select.form?.submit();
+    }, value),
+  ]);
+}
+
 test.describe('Global Edition — region select', () => {
   /**
    * Source: dashboard/test/ui/features/platform/global_edition/region_select.feature
@@ -40,24 +69,20 @@ test.describe('Global Edition — region select', () => {
     'Studio page: switch between English and Farsi using the locale dropdown',
     {tag: '@no_mobile'},
     async ({page}) => {
-      test.fixme(
-        true,
-        'TODO: region-select locale dropdown switch flaky on all browsers under parallel run; locale cookie or page reload timing issue',
-      );
-      await page.goto('/users/sign_in');
+      await page.goto('/reset_session');
+      await page.goto('/users/sign_in?lang=en-US');
       await expect(page.locator('#locale option:checked')).toContainText(
         'English',
         {timeout: 10_000},
       );
 
       // Switch to Farsi — triggers a full-page navigation.
-      await Promise.all([
-        page.waitForURL(/\/fa\/users\/sign_in/, {
-          waitUntil: 'domcontentloaded',
-          timeout: 30_000,
-        }),
-        page.locator('#locale').selectOption({label: 'فارسی'}),
-      ]);
+      await selectLocaleAndWaitForRedirect(
+        page,
+        '#locale',
+        'fa-IR',
+        /\/fa\/users\/sign_in\?lang=fa-IR/,
+      );
       await expect(page).toHaveURL(/\/fa\/users\/sign_in\?lang=fa-IR/);
       await expect(page.locator('#locale option:checked')).toContainText(
         'فارسی',
@@ -68,13 +93,12 @@ test.describe('Global Edition — region select', () => {
       await expect(page).toHaveURL(/\/fa\/users\/sign_in/, {timeout: 15_000});
 
       // Switch back to English.
-      await Promise.all([
-        page.waitForURL(/\/users\/sign_in\?lang=en-US/, {
-          waitUntil: 'domcontentloaded',
-          timeout: 30_000,
-        }),
-        page.locator('#locale').selectOption({label: 'English'}),
-      ]);
+      await selectLocaleAndWaitForRedirect(
+        page,
+        '#locale',
+        'en-US',
+        /\/users\/sign_in\?lang=en-US/,
+      );
       await expect(page).toHaveURL(/\/users\/sign_in\?lang=en-US/);
       await expect(page.locator('#locale option:checked')).toContainText(
         'English',
@@ -90,12 +114,8 @@ test.describe('Global Edition — region select', () => {
     'Lab page: switch between English and Farsi using the locale form',
     {tag: '@no_mobile'},
     async ({page}) => {
-      // Webkit: locale form switch flaky under parallel run; passes alone.
-      test.fixme(
-        true,
-        'TODO: region-select locale form switch flaky on webkit under parallel run; locale cookie or page reload timing issue',
-      );
-      await page.goto('/projects/artist/new');
+      await page.goto('/reset_session');
+      await page.goto('/projects/artist/new?lang=en-US');
       await waitForLabLoad(page);
       await expect(page.locator('.uitest-instructionsTab')).toContainText(
         'Instructions',
@@ -106,15 +126,12 @@ test.describe('Global Edition — region select', () => {
       );
 
       // Switch to Farsi.
-      await Promise.all([
-        page.waitForURL(/\/fa\/projects\/artist\/.*\/edit\?lang=fa-IR/, {
-          waitUntil: 'domcontentloaded',
-          timeout: 30_000,
-        }),
-        page
-          .locator('#localeForm select[name="locale"]')
-          .selectOption({label: 'فارسی'}),
-      ]);
+      await selectLocaleAndWaitForRedirect(
+        page,
+        '#localeForm select[name="locale"]',
+        'fa-IR',
+        /\/fa\/projects\/artist\/.*\/edit\?lang=fa-IR/,
+      );
       await waitForLabLoad(page);
       await expect(page.locator('.uitest-instructionsTab')).toContainText(
         'دستورالعمل',
@@ -125,15 +142,12 @@ test.describe('Global Edition — region select', () => {
       );
 
       // Switch back to English.
-      await Promise.all([
-        page.waitForURL(/\/projects\/artist\/.*\/edit\?lang=en-US/, {
-          waitUntil: 'domcontentloaded',
-          timeout: 30_000,
-        }),
-        page
-          .locator('#localeForm select[name="locale"]')
-          .selectOption({label: 'English'}),
-      ]);
+      await selectLocaleAndWaitForRedirect(
+        page,
+        '#localeForm select[name="locale"]',
+        'en-US',
+        /\/projects\/artist\/.*\/edit\?lang=en-US/,
+      );
       await waitForLabLoad(page);
       await expect(page.locator('.uitest-instructionsTab')).toContainText(
         'Instructions',

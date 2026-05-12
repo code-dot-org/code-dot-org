@@ -20,11 +20,6 @@ test(
   'region-switch confirm modal shown for Iranian visitors when DCDO flag is set',
   {tag: '@no_mobile'},
   async ({page}) => {
-    // Webkit: region-switch confirm modal flaky under parallel run; cookie/reload timing.
-    test.fixme(
-      true,
-      'TODO: region-switch confirm modal flaky on webkit under parallel run; DCDO/geolocation cookie timing issue',
-    );
     await page.goto('/');
     await page.evaluate(() => {
       sessionStorage.clear();
