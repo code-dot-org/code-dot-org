@@ -24,8 +24,9 @@ const LEVEL_URL = '/courses/allthethingscourse/units/1/lessons/38/levels/1';
 
 test.describe('Feedback Tab Visibility', {tag: '@no_mobile'}, () => {
   /**
-   * Source: feedback_tab.feature — Scenario 1
-   * "As student 'Feedback' tab is not visible if no feedback"
+   * Migration status: COMPLETED
+   * Source: dashboard/test/ui/features/teacher_tools/instructions/feedback_tab.feature
+   * Scenario: As student 'Feedback' tab is not visible if no feedback
    *
    * Student sees the Rubric tab on a mini-rubric level; the submit-feedback
    * and rubric-input controls are absent when no teacher feedback exists.
@@ -78,9 +79,9 @@ test.describe('Feedback Tab Visibility', {tag: '@no_mobile'}, () => {
   });
 
   /**
-   * Source: feedback_tab.feature — Scenario 2
-   * "As teacher, when viewing a level with student work, feedback can be
-   *  submitted and displayed."
+   * Migration status: COMPLETED
+   * Source: dashboard/test/ui/features/teacher_tools/instructions/feedback_tab.feature
+   * Scenario: As teacher, when viewing a level with student work,
    *
    * Teacher confirms feedback tab absent on non-rubric levels → visible on
    * rubric level → selects student from panel → submits rubric feedback →
@@ -89,11 +90,6 @@ test.describe('Feedback Tab Visibility', {tag: '@no_mobile'}, () => {
   test('teacher can submit rubric feedback that student later sees', async ({
     page,
   }) => {
-    // Webkit/Chromium: rubric feedback submit/view flow flaky under parallel run; passes alone.
-    test.fixme(
-      true,
-      'TODO: feedback-tab teacher submit rubric flaky on webkit/chromium under parallel run; authorized teacher session or panel timing issue',
-    );
     // Background: create authorized teacher + section + student, complete level.
     const teacher = await createAuthorizedTeacher(page);
     const {sectionCode} = await createSection(page);

@@ -13,8 +13,9 @@ import {expect, test} from '../../shared/fixtures';
 
 test.describe('Help and Tips', {tag: '@no_mobile'}, () => {
   /**
-   * Source: "'Help & Tips' and 'Instruction' tabs are visible if the level
-   * has a map reference"
+   * Migration status: COMPLETED
+   * Source: dashboard/test/ui/features/teacher_tools/instructions/help_and_tips.feature
+   * Scenario: 'Help & Tips' and 'Instruction' tabs are visible if the level has a map reference
    *
    * Verifies:
    *   - `.uitest-helpTab` is present and clickable.

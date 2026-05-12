@@ -13,6 +13,11 @@ import {expect, test} from '../../shared/fixtures';
  */
 
 test.describe('Join section signup', () => {
+  /**
+   * Migration status: COMPLETED
+   * Source: dashboard/test/ui/features/teacher_tools/join_section_signup.feature
+   * Scenario: Attempt to join section while signed out
+   */
   test('signed-out user: /join shows sign-up link', async ({page}) => {
     await page.goto('/join');
     await page
@@ -24,6 +29,11 @@ test.describe('Join section signup', () => {
     expect(page.url()).toContain('user_return_to=%2Fjoin');
   });
 
+  /**
+   * Migration status: COMPLETED
+   * Source: dashboard/test/ui/features/teacher_tools/join_section_signup.feature
+   * Scenario: Attempt to join section while signed in
+   */
   test(
     'signed-in student: /join redirects to assigned course',
     {tag: '@no_mobile'},

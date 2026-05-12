@@ -188,8 +188,9 @@ test.describe('CSP Instructions', () => {
   });
 
   /**
-   * Source: "Resources tab is clickable and displays correct text for
-   * contained levels"
+   * Migration status: COMPLETED
+   * Source: dashboard/test/ui/features/teacher_tools/instructions/csp_instructions.feature
+   * Scenario: Resources tab is clickable and displays correct text for contained levels
    */
   test('resources tab for contained levels shows correct content', async ({
     studentPage,

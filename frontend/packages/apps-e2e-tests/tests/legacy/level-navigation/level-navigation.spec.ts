@@ -14,6 +14,11 @@ import {dismissTeacherPanel} from '../../shared/ui';
  */
 
 test.describe('Level navigation — continue button', () => {
+  /**
+   * Migration status: COMPLETED
+   * Source: dashboard/test/ui/features/teacher_tools/level_navigation.feature
+   * Scenario: External Video Level
+   */
   test('external video level: submit navigates to unit overview', async ({
     page,
   }) => {
@@ -36,6 +41,11 @@ test.describe('Level navigation — continue button', () => {
     expect(page.url()).not.toMatch(/\/lessons\//);
   });
 
+  /**
+   * Migration status: COMPLETED
+   * Source: dashboard/test/ui/features/teacher_tools/level_navigation.feature
+   * Scenario: External Markdown Level
+   */
   test('external markdown level: submit advances to next level', async ({
     page,
   }) => {
@@ -51,6 +61,11 @@ test.describe('Level navigation — continue button', () => {
     expect(page.url()).toContain('/lessons/21/levels/2');
   });
 
+  /**
+   * Migration status: COMPLETED
+   * Source: dashboard/test/ui/features/teacher_tools/level_navigation.feature
+   * Scenario: Complete an auto-success level signed-out, continue, the auto-success level should show up as completed
+   */
   test('auto-success level: submit advances and level 14 shows as perfect', async ({
     page,
   }) => {

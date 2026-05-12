@@ -12,8 +12,8 @@ This inventory ignores `Migration Status` markers. A Cucumber feature is treated
 | Playwright spec files                                       |   125 |
 | Feature files referenced by Playwright                      |   164 |
 | Feature files with no Playwright source-path reference      |   107 |
-| Referenced feature files with all scenario titles traceable |   103 |
-| Referenced feature files with some untraced scenario titles |    39 |
+| Referenced feature files with all scenario titles traceable |   109 |
+| Referenced feature files with some untraced scenario titles |    33 |
 | Referenced feature files needing scenario-level audit       |    22 |
 | Playwright specs with no Cucumber source-path reference     |     1 |
 
@@ -197,46 +197,6 @@ This inventory ignores `Migration Status` markers. A Cucumber feature is treated
 ## Referenced Feature Files With Untraced Scenario Titles
 
 These feature files have at least one Playwright source-path reference, but not every Cucumber scenario title was found in Playwright comments or single-source spec test titles. Some may be ported under renamed test titles; inspect before porting.
-
-### `dashboard/test/ui/features/teacher_tools/instructions/csp_instructions.feature`
-
-Traced 8 of 9 scenario titles.
-
-- Resources tab is clickable and displays correct text for contained levels
-
-### `dashboard/test/ui/features/teacher_tools/instructions/feedback_tab.feature`
-
-Traced 0 of 2 scenario titles.
-
-- As student 'Feedback' tab is not visible if no feedback
-- As teacher, when viewing a level with student work,
-
-### `dashboard/test/ui/features/teacher_tools/instructions/help_and_tips.feature`
-
-Traced 0 of 1 scenario titles.
-
-- 'Help & Tips' and 'Instruction' tabs are visible if the level has a map reference
-
-### `dashboard/test/ui/features/teacher_tools/join_section_signup.feature`
-
-Traced 0 of 2 scenario titles.
-
-- Attempt to join section while signed out
-- Attempt to join section while signed in
-
-### `dashboard/test/ui/features/teacher_tools/lesson_extras_teacher_panel.feature`
-
-Traced 0 of 1 scenario titles.
-
-- View student lesson extras progress
-
-### `dashboard/test/ui/features/teacher_tools/level_navigation.feature`
-
-Traced 0 of 3 scenario titles.
-
-- External Video Level
-- External Markdown Level
-- Complete an auto-success level signed-out, continue, the auto-success level should show up as completed
 
 ### `dashboard/test/ui/features/teacher_tools/level_summary.feature`
 
