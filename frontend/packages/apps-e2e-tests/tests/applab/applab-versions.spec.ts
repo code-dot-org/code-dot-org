@@ -125,7 +125,8 @@ async function waitForInitialCapture(applab: AppLab): Promise<void> {
 test.describe('App Lab — Version History', () => {
   /**
    * Migration status: COMPLETED
-   * Source: versions.feature — "Script Level Versions"
+   * Source: dashboard/test/ui/features/star_labs/applab/versions.feature
+   * Scenario: Script Level Versions
    *
    * Adds code across two page loads so reload creates a prior-version
    * checkpoint, then restores that version and verifies the working copy
@@ -210,7 +211,8 @@ test.describe('App Lab — Version History', () => {
 
   /**
    * Migration status: COMPLETED
-   * Source: versions.feature — "Project Load and Reload"
+   * Source: dashboard/test/ui/features/star_labs/applab/versions.feature
+   * Scenario: Project Load and Reload
    *
    * Verifies that running and resetting a new project creates a checkpoint
    * visible in Version History as the second row.
@@ -272,7 +274,8 @@ test.describe('App Lab — Version History', () => {
 
   /**
    * Migration status: COMPLETED
-   * Source: versions.feature — "Project Version Checkpoints"
+   * Source: dashboard/test/ui/features/star_labs/applab/versions.feature
+   * Scenario: Project Version Checkpoints
    *
    * Sets the version interval to 1 second, waits for it to elapse, adds a
    * second code change, and verifies the first change was saved as a checkpoint.

@@ -12,8 +12,8 @@ This inventory ignores `Migration Status` markers. A Cucumber feature is treated
 | Playwright spec files                                       |   125 |
 | Feature files referenced by Playwright                      |   164 |
 | Feature files with no Playwright source-path reference      |   107 |
-| Referenced feature files with all scenario titles traceable |    71 |
-| Referenced feature files with some untraced scenario titles |    71 |
+| Referenced feature files with all scenario titles traceable |    73 |
+| Referenced feature files with some untraced scenario titles |    69 |
 | Referenced feature files needing scenario-level audit       |    22 |
 | Playwright specs with no Cucumber source-path reference     |     1 |
 
@@ -198,30 +198,10 @@ This inventory ignores `Migration Status` markers. A Cucumber feature is treated
 
 These feature files have at least one Playwright source-path reference, but not every Cucumber scenario title was found in Playwright comments or single-source spec test titles. Some may be ported under renamed test titles; inspect before porting.
 
-### `dashboard/test/ui/features/star_labs/applab/shared_apps.feature`
-
-Traced 1 of 7 scenario titles.
-
-- Can click a button in shared app
-- Can change a dropdown value in shared app
-- Can change a radio button value in shared app
-- Can change a checkbox value in shared app
-- Can type in text input on share page
-- Can type in textarea on share page
-
-### `dashboard/test/ui/features/star_labs/applab/template_backed.feature`
-
-Traced 0 of 1 scenario titles.
-
-- Template backed level
-
 ### `dashboard/test/ui/features/star_labs/applab/versions.feature`
 
-Traced 0 of 5 scenario titles.
+Traced 3 of 5 scenario titles.
 
-- Script Level Versions
-- Project Load and Reload
-- Project Version Checkpoints
 - Project page refreshes when other client adds a newer version
 - Project page refreshes when other client replaces current version
 

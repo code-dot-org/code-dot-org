@@ -24,7 +24,8 @@ const SHARED_TEMPLATE_CODE = 'turnRight(90);\nturnLeft(90);\nturnRight(10);\n';
 test.describe('App Lab — Template Backed Levels', () => {
   /**
    * Migration status: COMPLETED
-   * Source: template_backed.feature — "Template backed level"
+   * Source: dashboard/test/ui/features/star_labs/applab/template_backed.feature
+   * Scenario: Template backed level
    *
    * Starts from a fresh test student, appends two code lines across level 10
    * and 11, then returns to level 10 and verifies all three lines (the

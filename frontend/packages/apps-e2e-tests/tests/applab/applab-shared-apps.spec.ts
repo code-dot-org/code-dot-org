@@ -116,7 +116,8 @@ test.describe('App Lab — Shared Apps', () => {
 
   /**
    * Migration status: COMPLETED
-   * Source: "Can click a button in shared app"
+   * Source: dashboard/test/ui/features/star_labs/applab/shared_apps.feature
+   * Scenario: Can click a button in shared app
    */
   test('button click event fires on share page', async ({studentPage}) => {
     const applab = new AppLab(studentPage);
@@ -151,7 +152,8 @@ test.describe('App Lab — Shared Apps', () => {
 
   /**
    * Migration status: COMPLETED
-   * Source: "Can change a dropdown value in shared app"
+   * Source: dashboard/test/ui/features/star_labs/applab/shared_apps.feature
+   * Scenario: Can change a dropdown value in shared app
    */
   test('dropdown value changes on share page', async ({studentPage}) => {
     const applab = new AppLab(studentPage);
@@ -184,7 +186,8 @@ test.describe('App Lab — Shared Apps', () => {
 
   /**
    * Migration status: COMPLETED
-   * Source: "Can change a radio button value in shared app"
+   * Source: dashboard/test/ui/features/star_labs/applab/shared_apps.feature
+   * Scenario: Can change a radio button value in shared app
    */
   test('radio button selection works on share page', async ({studentPage}) => {
     const applab = new AppLab(studentPage);
@@ -221,7 +224,8 @@ test.describe('App Lab — Shared Apps', () => {
 
   /**
    * Migration status: COMPLETED
-   * Source: "Can change a checkbox value in shared app"
+   * Source: dashboard/test/ui/features/star_labs/applab/shared_apps.feature
+   * Scenario: Can change a checkbox value in shared app
    */
   test('checkbox selection works on share page', async ({studentPage}) => {
     const applab = new AppLab(studentPage);
@@ -258,7 +262,8 @@ test.describe('App Lab — Shared Apps', () => {
 
   /**
    * Migration status: COMPLETED
-   * Source: "Can type in text input on share page"
+   * Source: dashboard/test/ui/features/star_labs/applab/shared_apps.feature
+   * Scenario: Can type in text input on share page
    */
   test('text input accepts keyboard input on share page', async ({
     studentPage,
@@ -294,7 +299,8 @@ test.describe('App Lab — Shared Apps', () => {
 
   /**
    * Migration status: COMPLETED
-   * Source: "Can type in textarea on share page"
+   * Source: dashboard/test/ui/features/star_labs/applab/shared_apps.feature
+   * Scenario: Can type in textarea on share page
    *
    * Mirrors the Cucumber jQuery text set on the contenteditable text area and
    * checks text content after the share page renders the element.
