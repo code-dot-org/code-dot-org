@@ -87,7 +87,7 @@ test.describe('Sign-in callout', () => {
 
   /**
    * Source: dashboard/test/ui/features/star_labs/signin_callout2.feature
-   * Scenario: Should close callout and still see instructions and run button
+   * Scenario: Clicking anywhere should dismiss the login reminder
    * Migration status: COMPLETED
    */
   test('dismissing the callout leaves instructions and run button usable', async ({
@@ -126,7 +126,7 @@ test.describe('Sign-in callout', () => {
 
   /**
    * Source: dashboard/test/ui/features/star_labs/signin_callout2.feature
-   * Scenario: Should not see callout again on refresh after dismissing
+   * Scenario: After dismissing the callout, it should not reappear upon refresh
    * Migration status: COMPLETED
    */
   test('dismissed callout stays hidden after reload', async ({page}) => {
@@ -142,7 +142,7 @@ test.describe('Sign-in callout', () => {
 
   /**
    * Source: dashboard/test/ui/features/star_labs/signin_callout2.feature
-   * Scenario: Should not obscure top instructions after dismissing
+   * Scenario: Nested callouts should work as expected
    * Migration status: COMPLETED
    */
   test('dismissing the callout reveals top instructions', async ({page}) => {
@@ -156,7 +156,7 @@ test.describe('Sign-in callout', () => {
 
   /**
    * Source: dashboard/test/ui/features/star_labs/signin_callout2.feature
-   * Scenario: Sign in button should go to sign in, not create account
+   * Scenario: Should be immediately redirected to sign in if pressing sign in button
    * Migration status: COMPLETED
    */
   test('sign-in link still navigates to the sign-in page while callout is visible', async ({

@@ -8,7 +8,7 @@ const skipSafari = ({browserName}: {browserName: string}) =>
  * Web Lab — age restriction redirect.
  *
  * Source: dashboard/test/ui/features/star_labs/weblab/too_young.feature
- * Scenario: Weblab Redirected (@as_young_student)
+ * Scenario: Weblab Redirected
  *
  * An under-13 student navigating to /projects/weblab/new must be redirected
  * to /home with an age-restriction alert. The Bramble editor (cross-origin

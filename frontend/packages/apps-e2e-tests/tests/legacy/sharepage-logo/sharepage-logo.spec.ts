@@ -1,6 +1,11 @@
-import {type Page} from '@playwright/test';
+import {devices, type Page} from '@playwright/test';
 
+import {createStudent} from '../../shared/auth';
 import {expect, test} from '../../shared/fixtures';
+
+const {defaultBrowserType: _defaultBrowserType, ...IPHONE_12_CONTEXT_OPTIONS} =
+  devices['iPhone 12'];
+void _defaultBrowserType;
 
 /**
  * Share-page logo click navigates to /home.
@@ -75,6 +80,53 @@ async function testSharePageLogo(
   await page.waitForURL('**/home', {timeout: 15_000});
 }
 
+/**
+ * Return the public share URL for a project edit URL.
+ *
+ * Code.org project share URLs are the project edit URLs without the trailing
+ * `/edit` segment. This avoids mobile toolbar overlays during setup.
+ *
+ * @param editUrl - absolute project edit URL
+ * @returns absolute project share URL
+ */
+function deriveShareUrlFromEditUrl(editUrl: string): string {
+  const url = new URL(editUrl);
+  if (!url.pathname.endsWith('/edit')) {
+    throw new Error(`project edit URL not found: ${editUrl}`);
+  }
+  url.pathname = url.pathname.replace(/\/edit$/, '');
+  url.search = '';
+  url.hash = '';
+  return url.toString();
+}
+
+/**
+ * Create a signed-in project, sign out, then open the project's mobile share page.
+ *
+ * The source Cucumber scenario names this a logged-out mobile share page check.
+ * The visible readiness signal on the share page is the attached `#runButton`.
+ *
+ * @param page - Playwright page using a phone context
+ * @param projectUrl - relative project family URL, e.g. `/projects/gamelab`
+ */
+async function openLoggedOutMobileSharePage(
+  page: Page,
+  projectUrl: string,
+): Promise<void> {
+  await createStudent(page);
+  await page.goto(projectUrl);
+  await page.waitForURL(/\/projects\/(?:applab|gamelab)\/[^/]+\/edit/, {
+    timeout: 60_000,
+  });
+
+  const shareUrl = deriveShareUrlFromEditUrl(page.url());
+  await page.goto('/reset_session');
+  await page.goto(shareUrl);
+  await page
+    .locator('#runButton')
+    .waitFor({state: 'attached', timeout: 60_000});
+}
+
 test.describe('Share page — logo navigates to /home', () => {
   /**
    * Migration status: COMPLETED
@@ -89,6 +141,11 @@ test.describe('Share page — logo navigates to /home', () => {
     },
   );
 
+  /**
+   * Migration status: COMPLETED
+   * Source: dashboard/test/ui/features/star_labs/sharepage_logo.feature
+   * Scenario: Select the logo on a playlab share page while logged in and visit the homepage
+   */
   test(
     'PlayLab share page logo navigates to /home',
     {tag: '@no_mobile'},
@@ -97,6 +154,11 @@ test.describe('Share page — logo navigates to /home', () => {
     },
   );
 
+  /**
+   * Migration status: COMPLETED
+   * Source: dashboard/test/ui/features/star_labs/sharepage_logo.feature
+   * Scenario: Select the logo on a gamelab share page while logged in and visit the homepage
+   */
   test(
     'Game Lab share page logo navigates to /home',
     {tag: '@no_mobile'},
@@ -105,6 +167,11 @@ test.describe('Share page — logo navigates to /home', () => {
     },
   );
 
+  /**
+   * Migration status: COMPLETED
+   * Source: dashboard/test/ui/features/star_labs/sharepage_logo.feature
+   * Scenario: Select the logo on an artist share page while logged in and visit the homepage
+   */
   test(
     'Artist share page logo navigates to /home',
     {tag: '@no_mobile'},
@@ -112,4 +179,36 @@ test.describe('Share page — logo navigates to /home', () => {
       await testSharePageLogo(studentPage, '/projects/artist');
     },
   );
+});
+
+test.describe('Share page — mobile logged-out logo absence', () => {
+  test.skip(
+    ({browserName}) => browserName === 'firefox',
+    'Playwright Firefox does not support isMobile contexts. Source: dashboard/test/ui/features/star_labs/sharepage_logo.feature @only_mobile logo scenarios.',
+  );
+  test.use(IPHONE_12_CONTEXT_OPTIONS);
+
+  /**
+   * Migration status: COMPLETED
+   * Source: dashboard/test/ui/features/star_labs/sharepage_logo.feature
+   * Scenario: When on an applab share page while logged out on mobile, there is no logo.
+   */
+  test('App Lab mobile share page has no logo when logged out', async ({
+    page,
+  }) => {
+    await openLoggedOutMobileSharePage(page, '/projects/applab');
+    await expect(page.locator('#main_logo')).not.toBeAttached();
+  });
+
+  /**
+   * Migration status: COMPLETED
+   * Source: dashboard/test/ui/features/star_labs/sharepage_logo.feature
+   * Scenario: When on a gamelab share page while logged out on mobile, there is no logo.
+   */
+  test('Game Lab mobile share page has no logo when logged out', async ({
+    page,
+  }) => {
+    await openLoggedOutMobileSharePage(page, '/projects/gamelab');
+    await expect(page.locator('#main_logo')).not.toBeAttached();
+  });
 });

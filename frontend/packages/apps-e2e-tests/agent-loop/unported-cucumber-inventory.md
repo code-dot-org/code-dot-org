@@ -12,8 +12,8 @@ This inventory ignores `Migration Status` markers. A Cucumber feature is treated
 | Playwright spec files                                       |   125 |
 | Feature files referenced by Playwright                      |   164 |
 | Feature files with no Playwright source-path reference      |   107 |
-| Referenced feature files with all scenario titles traceable |    87 |
-| Referenced feature files with some untraced scenario titles |    55 |
+| Referenced feature files with all scenario titles traceable |    89 |
+| Referenced feature files with some untraced scenario titles |    53 |
 | Referenced feature files needing scenario-level audit       |    22 |
 | Playwright specs with no Cucumber source-path reference     |     1 |
 
@@ -198,30 +198,10 @@ This inventory ignores `Migration Status` markers. A Cucumber feature is treated
 
 These feature files have at least one Playwright source-path reference, but not every Cucumber scenario title was found in Playwright comments or single-source spec test titles. Some may be ported under renamed test titles; inspect before porting.
 
-### `dashboard/test/ui/features/star_labs/sharepage_logo.feature`
-
-Traced 1 of 6 scenario titles.
-
-- Select the logo on a playlab share page while logged in and visit the homepage
-- Select the logo on a gamelab share page while logged in and visit the homepage
-- Select the logo on an artist share page while logged in and visit the homepage
-- When on an applab share page while logged out on mobile, there is no logo.
-- When on a gamelab share page while logged out on mobile, there is no logo.
-
-### `dashboard/test/ui/features/star_labs/signin_callout2.feature`
-
-Traced 1 of 5 scenario titles.
-
-- Clicking anywhere should dismiss the login reminder
-- After dismissing the callout, it should not reappear upon refresh
-- Nested callouts should work as expected
-- Should be immediately redirected to sign in if pressing sign in button
-
 ### `dashboard/test/ui/features/star_labs/weblab/too_young.feature`
 
-Traced 0 of 2 scenario titles.
+Traced 1 of 2 scenario titles.
 
-- Weblab Redirected
 - Weblab Allowed for Student in Teacher's Section
 
 ### `dashboard/test/ui/features/student_learning/hour_of_code/hour_of_code_signed_in.feature`
