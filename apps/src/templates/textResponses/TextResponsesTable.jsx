@@ -51,7 +51,6 @@ class TextResponsesTable extends Component {
           size="s"
           href={studentUrl}
           openInNewTab
-          external
         >
           {name}
         </Link>
@@ -71,7 +70,7 @@ class TextResponsesTable extends Component {
     return (
       <div>
         {clippedResponse}
-        <Link href={url} size="s" openInNewTab external>
+        <Link href={url} size="s" openInNewTab>
           {i18n.seeFullResponse()}
         </Link>
       </div>
