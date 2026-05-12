@@ -16,6 +16,7 @@ class LanguageTest < ActionDispatch::IntegrationTest
         follow_redirect! while response.status == 302
         must_respond_with :success
 
+        _(request.locale).must_equal expected_locale
         must_select "html[lang='#{expected_locale}']"
       end
     end
@@ -35,6 +36,7 @@ class LanguageTest < ActionDispatch::IntegrationTest
 
         get new_user_session_path
 
+        _(request.locale).must_equal normalized_locale
         must_select "html[lang='#{normalized_locale}']"
       end
     end

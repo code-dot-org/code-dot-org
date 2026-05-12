@@ -181,7 +181,7 @@ class TestController < ApplicationController
   end
 
   def get_i18n_t
-    locale = params[:locale] || I18n.locale.to_s
+    locale = params[:locale] || request.env['cdo.locale']
     render plain: I18n.t(params.require(:key), locale: locale)
   end
 
