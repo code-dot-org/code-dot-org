@@ -124,6 +124,40 @@ $pinned-width-vw: 29;
   margin-bottom: 10px;
 }
 
+.imagesSection {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 10px;
+}
+
+.imageRow {
+  flex-wrap: wrap;
+  align-items: flex-start;
+
+  label {
+    display: flex;
+    flex-direction: column;
+    font-size: 13px;
+  }
+}
+
+.imageHeader {
+  min-width: 70px;
+}
+
+.imageAltText {
+  input {
+    width: 180px;
+  }
+}
+
+.imageSlider {
+  input[type='range'] {
+    width: 140px;
+  }
+}
+
 .linkRow {
   flex-wrap: wrap;
   align-items: flex-start;

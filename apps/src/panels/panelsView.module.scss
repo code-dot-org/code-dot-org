@@ -76,6 +76,15 @@ $text-horizontal-padding: 2.6cqw;
       }
     }
 
+    .panelImage {
+      position: absolute;
+      transform: translate(-50%, -50%);
+      height: auto;
+      max-width: 100%;
+      pointer-events: none;
+      user-select: none;
+    }
+
     .text {
       background-color: $neutral_light;
       color: $neutral_dark;

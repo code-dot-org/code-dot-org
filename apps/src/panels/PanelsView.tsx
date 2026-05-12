@@ -20,7 +20,14 @@ import {useBrowserTextToSpeech} from '../sharedComponents/BrowserTextToSpeechWra
 import EnhancedSafeMarkdown from '../templates/EnhancedSafeMarkdown';
 import {commonI18n} from '../types/locale';
 
-import {DEFAULT_PANEL_LINK_WIDTH, Panel, PanelLink} from './types';
+import {
+  DEFAULT_PANEL_IMAGE_WIDTH,
+  DEFAULT_PANEL_IMAGE_X,
+  DEFAULT_PANEL_IMAGE_Y,
+  DEFAULT_PANEL_LINK_WIDTH,
+  Panel,
+  PanelLink,
+} from './types';
 
 import styles from './panelsView.module.scss';
 
@@ -277,6 +284,27 @@ const PanelsView: React.FunctionComponent<PanelsProps> = ({
             }}
           />
         )}
+        {useLinks &&
+          panel.images?.map((image, index) => {
+            if (!image.imageUrl) {
+              return null;
+            }
+
+            return (
+              <img
+                key={`image-${index}`}
+                className={classNames(styles.panelImage, styles.imageCurrent)}
+                src={localization.translate(image.imageUrl, ['lz-image'])}
+                alt={image.altText || ''}
+                aria-hidden={image.altText ? undefined : true}
+                style={{
+                  left: `${image.x ?? DEFAULT_PANEL_IMAGE_X}%`,
+                  top: `${image.y ?? DEFAULT_PANEL_IMAGE_Y}%`,
+                  width: `${image.width ?? DEFAULT_PANEL_IMAGE_WIDTH}%`,
+                }}
+              />
+            );
+          })}
         {useLinks &&
           panel.links?.map((link, index) => (
             <button
