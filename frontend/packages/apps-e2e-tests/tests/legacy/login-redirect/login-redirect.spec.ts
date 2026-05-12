@@ -14,6 +14,10 @@ import {expect, test} from '../../shared/fixtures';
 const MC_LEVEL_URL = '/courses/mc/units/1/lessons/1/levels/1';
 
 test.describe('Login redirect', () => {
+  /**
+   * Source: dashboard/test/ui/features/platform/login_redirect.feature
+   * Scenario: Student navigates to provided cached level link with a login_required parameter
+   */
   test('signed-out student is redirected to sign-in then back to level', async ({
     page,
   }) => {
@@ -37,6 +41,10 @@ test.describe('Login redirect', () => {
     });
   });
 
+  /**
+   * Source: dashboard/test/ui/features/platform/login_redirect.feature
+   * Scenario: Student already logged in navigates to provided cached level link with a login_required parameter
+   */
   test('already-signed-in student accesses level directly with login_required', async ({
     page,
   }) => {

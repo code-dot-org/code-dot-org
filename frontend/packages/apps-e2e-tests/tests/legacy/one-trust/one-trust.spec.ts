@@ -36,6 +36,10 @@ async function assertNotCategorizedByOneTrust(
 
 // ─── OneTrust popup ───────────────────────────────────────────────────────────
 
+/**
+ * Source: dashboard/test/ui/features/platform/one_trust.feature
+ * Scenario: OneTrust cookie pop-up shows when self-hosting OneTrust libraries on code.org
+ */
 test(
   'OneTrust cookie pop-up shows for European users',
   {tag: '@no_mobile'},
@@ -53,6 +57,10 @@ test(
 
 // ─── Script loading — self-hosted (default) ───────────────────────────────────
 
+/**
+ * Source: dashboard/test/ui/features/platform/one_trust.feature
+ * Scenario: The dashboard pages load the self hosted OneTrust libraries.
+ */
 test(
   'dashboard pages load the self-hosted OneTrust libraries',
   {tag: '@no_mobile'},
@@ -72,6 +80,10 @@ test(
 
 // ─── Script loading — prod libraries via DCDO mock ───────────────────────────
 
+/**
+ * Source: dashboard/test/ui/features/platform/one_trust.feature
+ * Scenario: The dashboard pages load the Onetrust prod libraries.
+ */
 test(
   'dashboard pages load the OneTrust prod libraries when DCDO=prod',
   {tag: '@no_mobile'},
@@ -96,6 +108,10 @@ test(
 
 // ─── Script loading — test libraries via query param ─────────────────────────
 
+/**
+ * Source: dashboard/test/ui/features/platform/one_trust.feature
+ * Scenario: The dashboard pages load the test OneTrust libraries.
+ */
 test(
   'dashboard pages load the test OneTrust libraries when ?onetrust_cookie_scripts=test',
   {tag: '@no_mobile'},
@@ -115,6 +131,10 @@ test(
 
 // ─── Script loading — disabled via query param ───────────────────────────────
 
+/**
+ * Source: dashboard/test/ui/features/platform/one_trust.feature
+ * Scenario: The dashboard pages do not load the OneTrust libraries.
+ */
 test(
   'dashboard pages do not load OneTrust libraries when ?onetrust_cookie_scripts=off',
   {tag: '@no_mobile'},

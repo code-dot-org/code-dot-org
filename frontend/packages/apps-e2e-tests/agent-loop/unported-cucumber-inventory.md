@@ -12,8 +12,8 @@ This inventory ignores `Migration Status` markers. A Cucumber feature is treated
 | Playwright spec files                                       |   125 |
 | Feature files referenced by Playwright                      |   164 |
 | Feature files with no Playwright source-path reference      |   107 |
-| Referenced feature files with all scenario titles traceable |    58 |
-| Referenced feature files with some untraced scenario titles |    84 |
+| Referenced feature files with all scenario titles traceable |    60 |
+| Referenced feature files with some untraced scenario titles |    82 |
 | Referenced feature files needing scenario-level audit       |    22 |
 | Playwright specs with no Cucumber source-path reference     |     1 |
 
@@ -198,12 +198,6 @@ This inventory ignores `Migration Status` markers. A Cucumber feature is treated
 
 These feature files have at least one Playwright source-path reference, but not every Cucumber scenario title was found in Playwright comments or single-source spec test titles. Some may be ported under renamed test titles; inspect before porting.
 
-### `dashboard/test/ui/features/dcdo_mocking.feature`
-
-Traced 0 of 1 scenario titles.
-
-- Using a cookie to mock DCDO
-
 ### `dashboard/test/ui/features/foundations/markdown_rendering.feature`
 
 Traced 0 of 2 scenario titles.
@@ -226,30 +220,16 @@ Traced 0 of 1 scenario titles.
 
 ### `dashboard/test/ui/features/platform/header.feature`
 
-Traced 2 of 6 scenario titles.
+Traced 4 of 6 scenario titles.
 
-- Student in English should see 4 header links
-- Teacher in English should see 5 header links
 - Teacher can click on the header links
 - Student can click on the header links
 
-### `dashboard/test/ui/features/platform/login_redirect.feature`
-
-Traced 0 of 2 scenario titles.
-
-- Student navigates to provided cached level link with a login_required parameter
-- Student already logged in navigates to provided cached level link with a login_required parameter
-
 ### `dashboard/test/ui/features/platform/one_trust.feature`
 
-Traced 0 of 8 scenario titles.
+Traced 5 of 8 scenario titles.
 
 - User sees OneTrust cookie pop-up when self-hosting OneTrust libraries on code.org
-- OneTrust cookie pop-up shows when self-hosting OneTrust libraries on code.org
-- The dashboard pages load the self hosted OneTrust libraries.
-- The dashboard pages load the Onetrust prod libraries.
-- The dashboard pages load the test OneTrust libraries.
-- The dashboard pages do not load the OneTrust libraries.
 - Critical Javascript files are appropriately categorized by OneTrust on dashboard
 - Embedded projects do not display the OneTrust banner
 

@@ -13,8 +13,10 @@ import {expect, test} from '../../shared/fixtures';
  * The endpoint returns {fetched, stored}: fetched is the value read from the
  * cookie-layer DCDO; stored is the server-side datastore value (always null in
  * a fresh test run).
+ *
+ * Source: dashboard/test/ui/features/dcdo_mocking.feature
+ * Scenario: Using a cookie to mock DCDO
  */
-
 test('DCDO cookie mock and unmock via API endpoint', async ({page}) => {
   // Navigate to establish domain context for subsequent cookie operations.
   await page.goto('/users/sign_in');

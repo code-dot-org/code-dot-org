@@ -45,6 +45,10 @@ async function expectSpanishHeaderLink(
 }
 
 test.describe('Header navigation', () => {
+  /**
+   * Source: dashboard/test/ui/features/platform/header.feature
+   * Scenario: Student in English should see 4 header links
+   */
   test(
     'student in English sees 4 header links',
     {tag: '@no_mobile'},
@@ -68,6 +72,10 @@ test.describe('Header navigation', () => {
     },
   );
 
+  /**
+   * Source: dashboard/test/ui/features/platform/header.feature
+   * Scenario: Teacher in English should see 5 header links
+   */
   test(
     'teacher in English sees 5 header links',
     {tag: '@no_mobile'},
