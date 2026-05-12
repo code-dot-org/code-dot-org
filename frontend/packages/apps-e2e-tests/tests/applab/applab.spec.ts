@@ -214,7 +214,8 @@ test.describe('App Lab — data browser', () => {
 test.describe('App Lab — sharing from script level', () => {
   /**
    * Migration status: COMPLETED
-   * Source: sharing_from_script_level.feature — "Sharing from an App Lab script level"
+   * Source: dashboard/test/ui/features/star_labs/applab/sharing_from_script_level.feature
+   * Scenario: Sharing from an App Lab script level
    * @no_mobile
    *
    * Share links generated from a course level must point to /projects/applab/<id>
@@ -771,7 +772,8 @@ async function createApplabWithButton(
 test.describe('App Lab — embed player', () => {
   /**
    * Migration status: COMPLETED
-   * Source: embed.feature — "App Lab Embed"
+   * Source: dashboard/test/ui/features/star_labs/applab/embed.feature
+   * Scenario: App Lab Embed
    * @as_student @no_mobile
    *
    * Creates a project, navigates to its embed URL, verifies the player runs
@@ -825,7 +827,8 @@ test.describe('App Lab — embed player', () => {
 test.describe('App Lab — embed player without source', () => {
   /**
    * Migration status: COMPLETED
-   * Source: embed.feature — "App Lab Embed without Source"
+   * Source: dashboard/test/ui/features/star_labs/applab/embed.feature
+   * Scenario: App Lab Embed without Source
    * @as_student @no_mobile
    *
    * Creates a project and navigates to its source-hidden embed URL.

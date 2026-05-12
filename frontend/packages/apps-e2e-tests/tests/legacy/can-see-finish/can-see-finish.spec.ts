@@ -157,7 +157,7 @@ test.describe('can see finish button — small screen', () => {
   );
 
   /**
-   * Source: dashboard/test/ui/features/star_labs/can_see_finish.feature
+   * Source: dashboard/test/ui/features/star_labs/craft/can_see_finish.feature
    * Scenario: can see finish button on "Minecraft Adventurer"
    * Migration status: COMPLETED
    */

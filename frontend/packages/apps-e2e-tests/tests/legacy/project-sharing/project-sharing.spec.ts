@@ -2,6 +2,7 @@ import {type Page} from '@playwright/test';
 
 import {createStudent} from '../../shared/auth';
 import {expect, test} from '../../shared/fixtures';
+import {Dance} from '../activities/dance/Dance';
 
 /**
  * Project Sharing — Young Students.
@@ -34,6 +35,61 @@ async function makeProject(page: Page, type: string): Promise<void> {
   await expect(page.locator('.project_updated_at')).toContainText('Saved', {
     timeout: 60_000,
   });
+}
+
+/**
+ * Create a new project from the project-family route, mirroring Cucumber steps
+ * that navigate to /projects/<type> and wait for the dashboard redirect.
+ *
+ * @param page - Playwright page
+ * @param type - project type slug, e.g. 'dance', 'starwars'
+ */
+async function makeProjectFromFamilyRoute(
+  page: Page,
+  type: string,
+): Promise<void> {
+  await page.goto(`/projects/${type}`);
+  await page.waitForURL(new RegExp(`/projects/${type}/[^/]+/edit`), {
+    timeout: 60_000,
+  });
+  await expect(page.locator('#runButton')).toBeVisible({timeout: 60_000});
+  await expect(page.locator('.project_updated_at')).toContainText('Saved', {
+    timeout: 60_000,
+  });
+}
+
+/**
+ * Open the project share dialog and return the URL from its copy control.
+ * Mirrors Cucumber's `I open the project share dialog` and
+ * `I save the share URL`.
+ *
+ * @param page - Playwright page on a project edit page
+ * @returns absolute share URL copied from the share dialog
+ */
+async function openShareDialogAndReadUrl(page: Page): Promise<string> {
+  await page.locator('.project_share').first().click();
+  await expect(page.locator('#project-share')).toBeVisible({timeout: 15_000});
+  const copyButton = page.locator('#sharing-dialog-copy-button');
+  await expect(copyButton).toBeVisible({timeout: 15_000});
+  const shareUrl = await copyButton.getAttribute('value');
+  if (!shareUrl) {
+    throw new Error('share URL not found in #sharing-dialog-copy-button');
+  }
+  return shareUrl;
+}
+
+/**
+ * Rename the current project through the project title edit control.
+ * Mirrors the `.project_edit`, `input.project_name`, `.project_save` steps.
+ *
+ * @param page - Playwright page on a project edit page
+ * @param name - project title to save
+ */
+async function renameProject(page: Page, name: string): Promise<void> {
+  await page.locator('.project_edit').click();
+  await page.locator('input.project_name').fill(name);
+  await page.locator('.project_save').click();
+  await expect(page.locator('.project_edit')).toBeVisible({timeout: 15_000});
 }
 
 test.describe('Project Sharing — Young Students', {tag: '@no_mobile'}, () => {
@@ -102,5 +158,61 @@ test.describe('Project Sharing — Young Students', {tag: '@no_mobile'}, () => {
     await page.goto('/projects/applab/new');
     await page.waitForURL(/\/home/, {timeout: 30_000});
     await expect(page.locator('.alert')).toBeVisible({timeout: 15_000});
+  });
+});
+
+test.describe('Project Sharing — Blockly projects', {tag: '@no_mobile'}, () => {
+  /**
+   * Source: dashboard/test/ui/features/teacher_tools/projects/blockly_project.feature
+   * Scenario: Save Blockly Project
+   */
+  test('anonymous Dance project saves block state and shows it on the share page', async ({
+    page,
+  }) => {
+    await page.goto('/reset_session');
+    await makeProjectFromFamilyRoute(page, 'dance');
+
+    const dance = new Dance(page);
+    await dance.waitForLabPage();
+    await dance.appendBlock(
+      'Dancelab_makeNewDanceSpriteGroup',
+      'studentSpriteGroup',
+    );
+    await dance.connectBlockInside('studentSpriteGroup', 'setup');
+
+    const shareUrl = await openShareDialogAndReadUrl(page);
+    await page.goto(shareUrl);
+    await expect(page.locator('#visualization')).toBeVisible({timeout: 30_000});
+
+    await expect(
+      page.locator(
+        '.blocklySvg g[data-id="setup"] > g[data-id="studentSpriteGroup"]',
+      ),
+    ).toBeAttached();
+  });
+
+  /**
+   * Source: dashboard/test/ui/features/teacher_tools/projects/starwars_project.feature
+   * Scenario: Starwars Flow
+   */
+  test('student Star Wars project can be named and opened from its share URL', async ({
+    page,
+  }) => {
+    await createStudent(page);
+    await makeProjectFromFamilyRoute(page, 'starwars');
+    await renameProject(page, 'Code Ninja III: Revenge of the Semicolon');
+    await expect(page).toHaveTitle(
+      /Code Ninja III: Revenge of the Semicolon - Play Lab - Code\.org/,
+    );
+
+    const shareUrl = await openShareDialogAndReadUrl(page);
+    await page.goto(shareUrl);
+    await expect(page.getByRole('button', {name: 'How It Works'})).toBeVisible({
+      timeout: 30_000,
+    });
+    await expect(page).toHaveTitle(
+      /Code Ninja III: Revenge of the Semicolon - Play Lab - Code\.org/,
+    );
+    await expect(page.locator('#codeWorkspace')).toBeHidden();
   });
 });
