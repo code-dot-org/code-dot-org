@@ -29,25 +29,23 @@ module Middleware
 
       def call
         if param_locale
+          locale = param_locale
+
           redirect_uri = URI(request.path)
           redirect_uri.query = request.GET.except(LOCALE_PARAM_KEY).to_query.presence
 
           response.redirect redirect_uri.to_s
           response.do_not_cache!
-
-          set_cookies(param_locale)
-
-          response.finish
         else
           ::I18n.with_locale(locale = cookie_locale || http_locale) do
             response.status, headers, response.body = app.call(env)
             response.headers.merge!(headers)
-
-            set_cookies(locale) unless cookie_locale == locale
-
-            response.finish
           end
         end
+
+        set_cookies(locale) unless cookie_locale == locale
+
+        response.finish
       end
 
       private def set_cookies(locale)
