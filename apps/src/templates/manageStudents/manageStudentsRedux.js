@@ -119,6 +119,13 @@ const blankNewStudentRow = {
   usState: null,
 };
 
+const sharingDisabledForAge = age => {
+  if (age === '21+') {
+    return false;
+  }
+  return age === '' || Number(age) < 13;
+};
+
 /** Initial state for the manageStudents redux store.
  * loginType - a SectionLoginType for the active section.
  * sectionId - the sectionId number for the active section.
@@ -422,14 +429,16 @@ export const addMultipleAddRows = studentDataArray => {
       .filter(data => data.name)
       .reduce((accumulator, data) => {
         const newId = addRowIdCounter--;
+        const age = data.age || '';
         return {
           ...accumulator,
           [newId]: {
             ...blankNewStudentRow,
             name: data.name,
             familyName: data.familyName || '',
-            age: data.age || '',
+            age,
             genderTeacherInput: data.gender || '',
+            sharingDisabled: sharingDisabledForAge(age),
             usState: data.usState || null,
             id: newId,
           },
@@ -706,7 +715,7 @@ export default function manageStudents(state = initialState, action) {
   if (action.type === SET_SHARING_DEFAULT) {
     const editedAge = state.editingData[action.studentId].age;
     // For privacy reasons, we disable sharing by default if the student is under the age of 13.
-    const sharingDisabled = editedAge < 13;
+    const sharingDisabled = sharingDisabledForAge(editedAge);
     return {
       ...state,
       editingData: {

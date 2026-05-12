@@ -153,6 +153,16 @@ describe('addMultipleAddRows', () => {
         gender: 'f',
         usState: 'CA',
       },
+      {
+        name: 'Lin',
+        familyName: 'Torvalds',
+        age: '12',
+      },
+      {
+        name: 'Katherine',
+        familyName: 'Johnson',
+        age: '21+',
+      },
       {name: 'Grace'},
     ])(dispatch);
 
@@ -160,26 +170,38 @@ describe('addMultipleAddRows', () => {
 
     const action = dispatch.firstCall.args[0];
     const rows = Object.values(action.studentData);
-    assert.strictEqual(rows.length, 2);
+    assert.strictEqual(rows.length, 4);
 
     const adaRow = rows.find(row => row.name === 'Ada');
+    const linRow = rows.find(row => row.name === 'Lin');
+    const katherineRow = rows.find(row => row.name === 'Katherine');
     const graceRow = rows.find(row => row.name === 'Grace');
 
     assert.strictEqual(adaRow.familyName, 'Lovelace');
     assert.strictEqual(adaRow.age, '14');
     assert.strictEqual(adaRow.genderTeacherInput, 'f');
+    assert.strictEqual(adaRow.sharingDisabled, false);
     assert.strictEqual(adaRow.usState, 'CA');
     assert.strictEqual(adaRow.isEditing, true);
     assert.strictEqual(adaRow.rowType, RowType.NEW_STUDENT);
 
+    assert.strictEqual(linRow.age, '12');
+    assert.strictEqual(linRow.sharingDisabled, true);
+
+    assert.strictEqual(katherineRow.age, '21+');
+    assert.strictEqual(katherineRow.sharingDisabled, false);
+
     assert.strictEqual(graceRow.familyName, '');
     assert.strictEqual(graceRow.age, '');
     assert.strictEqual(graceRow.genderTeacherInput, '');
+    assert.strictEqual(graceRow.sharingDisabled, true);
     assert.strictEqual(graceRow.usState, null);
     assert.strictEqual(graceRow.isEditing, true);
     assert.strictEqual(graceRow.rowType, RowType.NEW_STUDENT);
 
     assert.isBelow(adaRow.id, 0);
+    assert.isBelow(linRow.id, 0);
+    assert.isBelow(katherineRow.id, 0);
     assert.isBelow(graceRow.id, 0);
     assert.notStrictEqual(adaRow.id, graceRow.id);
   });
