@@ -12,8 +12,8 @@ This inventory ignores `Migration Status` markers. A Cucumber feature is treated
 | Playwright spec files                                       |   125 |
 | Feature files referenced by Playwright                      |   164 |
 | Feature files with no Playwright source-path reference      |   107 |
-| Referenced feature files with all scenario titles traceable |    65 |
-| Referenced feature files with some untraced scenario titles |    77 |
+| Referenced feature files with all scenario titles traceable |    66 |
+| Referenced feature files with some untraced scenario titles |    76 |
 | Referenced feature files needing scenario-level audit       |    22 |
 | Playwright specs with no Cucumber source-path reference     |     1 |
 
@@ -197,21 +197,6 @@ This inventory ignores `Migration Status` markers. A Cucumber feature is treated
 ## Referenced Feature Files With Untraced Scenario Titles
 
 These feature files have at least one Playwright source-path reference, but not every Cucumber scenario title was found in Playwright comments or single-source spec test titles. Some may be ported under renamed test titles; inspect before porting.
-
-### `dashboard/test/ui/features/platform/policy_compliance/lockout_phase.feature`
-
-Traced 0 of 10 scenario titles.
-
-- Student account Under-13 in Colorado created before CAP start cannot change age and state
-- Student account Under-13 not in Colorado created after CAP start can change their age and state
-- Student account Under-13 not in Colorado created before CAP start can change their age and state
-- Student account Over-13 and in Colorado created after CAP start can change their age and state
-- Student account Over-13 and in Colorado created before CAP start can change their age and state
-- Student account under-13 and in Colorado created after CAP start using only clever cannot change their age and state
-- Student account under-13 and in Colorado created before CAP start using only clever cannot change their age and state
-- Student account under-13 and in Colorado created before CAP start using google cannot change their age and state
-- Student account under-13 not in Colorado created after CAP start using clever cannot change their age and state
-- Student account under-13 not in Colorado created before CAP start using clever cannot change their age and state
 
 ### `dashboard/test/ui/features/platform/policy_compliance/parental_permission.feature`
 

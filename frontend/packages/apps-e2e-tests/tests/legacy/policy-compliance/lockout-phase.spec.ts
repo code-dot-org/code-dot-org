@@ -27,6 +27,10 @@ test.describe('CPA lockout phase — age/state field editability', () => {
     });
   }
 
+  /**
+   * Source: dashboard/test/ui/features/platform/policy_compliance/lockout_phase.feature
+   * Scenario: Student account Under-13 in Colorado created before CAP start cannot change age and state
+   */
   test(
     'under-13 in Colorado before CAP start: age and state are disabled',
     {tag: '@no_mobile'},
@@ -43,6 +47,10 @@ test.describe('CPA lockout phase — age/state field editability', () => {
     },
   );
 
+  /**
+   * Source: dashboard/test/ui/features/platform/policy_compliance/lockout_phase.feature
+   * Scenario: Student account Under-13 not in Colorado created after CAP start can change their age and state
+   */
   test(
     'under-13 not in Colorado after CAP start: age and state are enabled',
     {tag: '@no_mobile'},
@@ -55,6 +63,10 @@ test.describe('CPA lockout phase — age/state field editability', () => {
     },
   );
 
+  /**
+   * Source: dashboard/test/ui/features/platform/policy_compliance/lockout_phase.feature
+   * Scenario: Student account Under-13 not in Colorado created before CAP start can change their age and state
+   */
   test(
     'under-13 not in Colorado before CAP start: age and state are enabled',
     {tag: '@no_mobile'},
@@ -67,6 +79,10 @@ test.describe('CPA lockout phase — age/state field editability', () => {
     },
   );
 
+  /**
+   * Source: dashboard/test/ui/features/platform/policy_compliance/lockout_phase.feature
+   * Scenario: Student account Over-13 and in Colorado created after CAP start can change their age and state
+   */
   test(
     'over-13 in Colorado after CAP start: age and state are enabled',
     {tag: '@no_mobile'},
@@ -79,6 +95,10 @@ test.describe('CPA lockout phase — age/state field editability', () => {
     },
   );
 
+  /**
+   * Source: dashboard/test/ui/features/platform/policy_compliance/lockout_phase.feature
+   * Scenario: Student account Over-13 and in Colorado created before CAP start can change their age and state
+   */
   test(
     'over-13 in Colorado before CAP start: age and state are enabled',
     {tag: '@no_mobile'},
@@ -91,6 +111,10 @@ test.describe('CPA lockout phase — age/state field editability', () => {
     },
   );
 
+  /**
+   * Source: dashboard/test/ui/features/platform/policy_compliance/lockout_phase.feature
+   * Scenario: Student account under-13 and in Colorado created after CAP start using only clever cannot change their age and state
+   */
   test(
     'under-13 Clever SSO in Colorado after CAP start: age and state are disabled',
     {tag: '@no_mobile'},
@@ -108,15 +132,14 @@ test.describe('CPA lockout phase — age/state field editability', () => {
     },
   );
 
+  /**
+   * Source: dashboard/test/ui/features/platform/policy_compliance/lockout_phase.feature
+   * Scenario: Student account under-13 and in Colorado created before CAP start using only clever cannot change their age and state
+   */
   test(
     'under-13 Clever SSO in Colorado before CAP start: age and state are disabled',
     {tag: '@no_mobile'},
     async ({page}) => {
-      // Chromium: CAP lockout field editability flaky under parallel run; passes alone.
-      test.fixme(
-        true,
-        'TODO: CAP lockout age/state disabled check flaky on chromium under parallel run; timing issue in mockCapLockoutPhase',
-      );
       await mockCapLockoutPhase(page);
       await createCapStudent(page, {
         young: true,
@@ -130,6 +153,10 @@ test.describe('CPA lockout phase — age/state field editability', () => {
     },
   );
 
+  /**
+   * Source: dashboard/test/ui/features/platform/policy_compliance/lockout_phase.feature
+   * Scenario: Student account under-13 and in Colorado created before CAP start using google cannot change their age and state
+   */
   test(
     'under-13 Google SSO in Colorado before CAP start: age and state are disabled',
     {tag: '@no_mobile'},
@@ -147,6 +174,10 @@ test.describe('CPA lockout phase — age/state field editability', () => {
     },
   );
 
+  /**
+   * Source: dashboard/test/ui/features/platform/policy_compliance/lockout_phase.feature
+   * Scenario: Student account under-13 not in Colorado created after CAP start using clever cannot change their age and state
+   */
   test(
     'under-13 Clever SSO not in Colorado after CAP start: age and state are enabled',
     {tag: '@no_mobile'},
@@ -163,6 +194,10 @@ test.describe('CPA lockout phase — age/state field editability', () => {
     },
   );
 
+  /**
+   * Source: dashboard/test/ui/features/platform/policy_compliance/lockout_phase.feature
+   * Scenario: Student account under-13 not in Colorado created before CAP start using clever cannot change their age and state
+   */
   test(
     'under-13 Clever SSO not in Colorado before CAP start: age and state are enabled',
     {tag: '@no_mobile'},
