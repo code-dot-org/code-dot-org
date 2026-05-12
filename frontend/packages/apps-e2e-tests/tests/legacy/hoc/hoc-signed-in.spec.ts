@@ -60,14 +60,14 @@ test.describe('Hour of Code — signed-in student progress', () => {
     await hoc.expectBlockIsChildOf('moveForward', 'startBlock');
   });
 
+  /**
+   * Migration status: COMPLETED
+   * Source: dashboard/test/ui/features/student_learning/hour_of_code/hour_of_code_signed_in.feature
+   * Scenario: Failing at puzzle 6, refreshing puzzle 6, bubble should show up as attempted
+   */
   test('failing puzzle 6 then refreshing shows attempted progress bubble', async ({
     studentPage,
   }) => {
-    // Webkit: attempted progress bubble flaky under parallel run; passes alone.
-    test.fixme(
-      true,
-      'TODO: hoc signed-in failing puzzle 6 attempted progress bubble flaky on webkit under parallel run; timing issue with progress save or bubble render',
-    );
     const hoc = new HocLevel(studentPage);
 
     await hoc.loadLevel(6);
@@ -80,6 +80,11 @@ test.describe('Hour of Code — signed-in student progress', () => {
     await hoc.expectProgressInHeader(6, 'attempted');
   });
 
+  /**
+   * Migration status: COMPLETED
+   * Source: dashboard/test/ui/features/student_learning/hour_of_code/hour_of_code_signed_in.feature
+   * Scenario: Progress on the server that is not on the client
+   */
   test('server-side attempted progress survives hoc/reset of localStorage', async ({
     studentPage,
   }) => {
@@ -102,6 +107,11 @@ test.describe('Hour of Code — signed-in student progress', () => {
     await hoc.expectProgressOnOverview(1, 20, 'attempted');
   });
 
+  /**
+   * Migration status: COMPLETED
+   * Source: dashboard/test/ui/features/student_learning/hour_of_code/hour_of_code_signed_in.feature
+   * Scenario: Go to puzzle 10, see video, go somewhere else, return to puzzle 10, should not see video
+   */
   test(
     'video at puzzle 10 not re-shown after first viewing',
     {tag: '@no_mobile'},
@@ -126,6 +136,11 @@ test.describe('Hour of Code — signed-in student progress', () => {
     },
   );
 
+  /**
+   * Migration status: COMPLETED
+   * Source: dashboard/test/ui/features/student_learning/hour_of_code/hour_of_code_signed_in.feature
+   * Scenario: Go to puzzle 9, see callouts, go somewhere else, return to puzzle 9, should not see callouts
+   */
   test('callouts at puzzle 9 not re-shown after first viewing', async ({
     studentPage,
   }) => {

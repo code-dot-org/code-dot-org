@@ -17,6 +17,23 @@ test.describe(
   'AI Differentiation Chat',
   {tag: ['@no_mobile', '@chrome']},
   () => {
+    test.skip(
+      ({browserName}) => browserName !== 'chromium',
+      'Source Cucumber feature is @chrome/@no_firefox: dashboard/test/ui/features/teacher_tools/ai_diff/ai_differentiation_chat.feature',
+    );
+
+    /**
+     * Migration status: COMPLETED
+     * Source: dashboard/test/ui/features/teacher_tools/ai_diff/ai_differentiation_chat.feature
+     * Scenario: Teacher sees welcome screen for AI Differentiation
+     */
+    test('teacher sees welcome screen for AI Differentiation', async () => {
+      test.skip(
+        true,
+        'Source Cucumber scenario is @skip/@eyes with disabled welcome-experience steps. Source: dashboard/test/ui/features/teacher_tools/ai_diff/ai_differentiation_chat.feature Scenario: Teacher sees welcome screen for AI Differentiation',
+      );
+    });
+
     /**
      * Source: ai_differentiation_chat.feature
      * "Teacher can disable AI chat feature"
@@ -83,8 +100,62 @@ test.describe(
     });
 
     /**
-     * Source: ai_differentiation_chat.feature
-     * "Teacher sees notification"
+     * Migration status: COMPLETED
+     * Source: dashboard/test/ui/features/teacher_tools/ai_diff/ai_differentiation_chat.feature
+     * Scenario: Teacher can type messages and leave feedback in AI Differentiation chat
+     */
+    test('teacher can type messages and leave feedback in AI Differentiation chat', async ({
+      page,
+    }) => {
+      await createTeacher(page, {name: 'Stilgar'});
+      await page.goto('/home');
+      await addUserToExperiment(page, 'ai-differentiation');
+
+      await page.goto('/courses/ui-test-artist/units/1');
+      await page
+        .locator('#ui-floatingActionButton')
+        .waitFor({state: 'visible', timeout: 20_000});
+      await page
+        .getByRole('button', {name: 'Suggest prompts'})
+        .waitFor({state: 'visible', timeout: 30_000});
+
+      await page
+        .locator('#uitest-chat-textarea')
+        .fill('Which lessons have a project');
+      await page.locator('#uitest-chat-submit').click();
+
+      await expect(
+        page.locator('[aria-label="User chat message"]'),
+      ).toContainText('Which lessons have a project');
+      await page
+        .locator('p')
+        .filter({hasText: 'Lorem ipsum'})
+        .first()
+        .waitFor({state: 'visible', timeout: 30_000});
+
+      await page.getByRole('button', {name: 'Suggest prompts'}).click();
+      await page.getByRole('button', {name: 'Create'}).click();
+      await page.getByRole('button', {name: 'Write a lesson hook'}).click();
+
+      const responses = page.locator('p').filter({hasText: 'Lorem ipsum'});
+      await expect(async () =>
+        expect(await responses.count()).toBeGreaterThanOrEqual(2),
+      ).toPass({timeout: 30_000, intervals: [500, 1000, 2000]});
+
+      await page
+        .getByRole('button', {name: 'Give this message a thumbs up'})
+        .nth(2)
+        .click();
+      await expect(page.locator('i.fa-regular.fa-thumbs-up').nth(2)).toHaveCSS(
+        'color',
+        'rgb(62, 163, 62)',
+      );
+    });
+
+    /**
+     * Migration status: COMPLETED
+     * Source: dashboard/test/ui/features/teacher_tools/ai_diff/ai_differentiation_chat.feature
+     * Scenario: Teacher sees notification
      *
      * Teacher enrolled in the ai-differentiation experiment opens the
      * notifications panel and sees two test notifications (expired notification

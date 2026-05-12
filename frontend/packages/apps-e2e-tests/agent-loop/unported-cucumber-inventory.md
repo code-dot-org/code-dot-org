@@ -12,8 +12,8 @@ This inventory ignores `Migration Status` markers. A Cucumber feature is treated
 | Playwright spec files                                       |   125 |
 | Feature files referenced by Playwright                      |   164 |
 | Feature files with no Playwright source-path reference      |   107 |
-| Referenced feature files with all scenario titles traceable |    89 |
-| Referenced feature files with some untraced scenario titles |    53 |
+| Referenced feature files with all scenario titles traceable |    93 |
+| Referenced feature files with some untraced scenario titles |    49 |
 | Referenced feature files needing scenario-level audit       |    22 |
 | Playwright specs with no Cucumber source-path reference     |     1 |
 
@@ -197,36 +197,6 @@ This inventory ignores `Migration Status` markers. A Cucumber feature is treated
 ## Referenced Feature Files With Untraced Scenario Titles
 
 These feature files have at least one Playwright source-path reference, but not every Cucumber scenario title was found in Playwright comments or single-source spec test titles. Some may be ported under renamed test titles; inspect before porting.
-
-### `dashboard/test/ui/features/star_labs/weblab/too_young.feature`
-
-Traced 1 of 2 scenario titles.
-
-- Weblab Allowed for Student in Teacher's Section
-
-### `dashboard/test/ui/features/student_learning/hour_of_code/hour_of_code_signed_in.feature`
-
-Traced 0 of 4 scenario titles.
-
-- Failing at puzzle 6, refreshing puzzle 6, bubble should show up as attempted
-- Progress on the server that is not on the client
-- Go to puzzle 10, see video, go somewhere else, return to puzzle 10, should not see video
-- Go to puzzle 9, see callouts, go somewhere else, return to puzzle 9, should not see callouts
-
-### `dashboard/test/ui/features/teacher_tools/ai_diff/ai_differentiation_chat.feature`
-
-Traced 1 of 4 scenario titles.
-
-- Teacher sees welcome screen for AI Differentiation
-- Teacher can type messages and leave feedback in AI Differentiation chat
-- Teacher sees notification
-
-### `dashboard/test/ui/features/teacher_tools/assign_modular_course.feature`
-
-Traced 0 of 2 scenario titles.
-
-- Assign unit in modular course from unit overview page
-- Assign unit in modular course from course overview page
 
 ### `dashboard/test/ui/features/teacher_tools/authored_hints.feature`
 

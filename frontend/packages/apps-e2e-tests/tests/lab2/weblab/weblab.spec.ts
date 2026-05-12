@@ -1,3 +1,4 @@
+import {createTeacherAssociatedStudent} from '../../shared/auth';
 import {expect, test} from '../../shared/fixtures';
 
 /** Skip webkit — @no_safari (Safari 16 regex incompatibility in WebLab2). */
@@ -27,6 +28,24 @@ test.describe('Web Lab — age restriction', () => {
       'This content has age restrictions in place',
     );
   });
+});
+
+/**
+ * Migration status: COMPLETED
+ * Source: dashboard/test/ui/features/star_labs/weblab/too_young.feature
+ * Scenario: Weblab Allowed for Student in Teacher's Section
+ */
+test('teacher-associated under-13 student can open Web Lab', async ({page}) => {
+  await createTeacherAssociatedStudent(page, {
+    studentAge: 10,
+    studentName: 'Luna',
+  });
+
+  await page.goto('/projects/weblab/new');
+  await page
+    .locator('#workspace-header')
+    .waitFor({state: 'visible', timeout: 60_000});
+  await expect(page).toHaveURL(/\/projects\/weblab\/[^/]+\/edit/);
 });
 
 /**
