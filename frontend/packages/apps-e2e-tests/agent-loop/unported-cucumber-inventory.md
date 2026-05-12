@@ -12,8 +12,8 @@ This inventory ignores `Migration Status` markers. A Cucumber feature is treated
 | Playwright spec files                                       |   125 |
 | Feature files referenced by Playwright                      |   164 |
 | Feature files with no Playwright source-path reference      |   107 |
-| Referenced feature files with all scenario titles traceable |   100 |
-| Referenced feature files with some untraced scenario titles |    42 |
+| Referenced feature files with all scenario titles traceable |   103 |
+| Referenced feature files with some untraced scenario titles |    39 |
 | Referenced feature files needing scenario-level audit       |    22 |
 | Playwright specs with no Cucumber source-path reference     |     1 |
 
@@ -198,35 +198,10 @@ This inventory ignores `Migration Status` markers. A Cucumber feature is treated
 
 These feature files have at least one Playwright source-path reference, but not every Cucumber scenario title was found in Playwright comments or single-source spec test titles. Some may be ported under renamed test titles; inspect before porting.
 
-### `dashboard/test/ui/features/teacher_tools/disallowedsharing.feature`
-
-Traced 1 of 3 scenario titles.
-
-- Sharing a phone number studio game
-- Sharing an email studio game
-
-### `dashboard/test/ui/features/teacher_tools/documentation_landing_page.feature`
-
-Traced 0 of 2 scenario titles.
-
-- Documentation landing page displays
-- Applab Documentation landing page displays
-
-### `dashboard/test/ui/features/teacher_tools/fun_o_meter.feature`
-
-Traced 0 of 1 scenario titles.
-
-- Rate a Puzzle
-
 ### `dashboard/test/ui/features/teacher_tools/instructions/csp_instructions.feature`
 
-Traced 3 of 9 scenario titles.
+Traced 8 of 9 scenario titles.
 
-- 'Help & Tips' and 'Instruction' tabs are visible if level has videos
-- 'Help & Tips' and 'Instruction' tabs are visible if the level has a map reference
-- 'Help & Tips' and 'Instruction' tabs are visible if the level has reference links
-- Do not display resources tab when there are no videos, map references, or reference links
-- Resources tab displays videos, map references, and reference links with correct text and link
 - Resources tab is clickable and displays correct text for contained levels
 
 ### `dashboard/test/ui/features/teacher_tools/instructions/feedback_tab.feature`

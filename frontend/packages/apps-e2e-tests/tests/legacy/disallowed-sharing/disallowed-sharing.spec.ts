@@ -89,7 +89,9 @@ test.describe('Disallowed Sharing', {tag: '@no_mobile'}, () => {
   });
 
   /**
-   * Source: "Sharing a phone number studio game"
+   * Migration status: COMPLETED
+   * Source: dashboard/test/ui/features/teacher_tools/disallowedsharing.feature
+   * Scenario: Sharing a phone number studio game
    */
   test('sharing a game with a phone number shows share-fail-explanation', async ({
     studentPage,
@@ -114,7 +116,9 @@ test.describe('Disallowed Sharing', {tag: '@no_mobile'}, () => {
   });
 
   /**
-   * Source: "Sharing an email studio game"
+   * Migration status: COMPLETED
+   * Source: dashboard/test/ui/features/teacher_tools/disallowedsharing.feature
+   * Scenario: Sharing an email studio game
    */
   test('sharing a game with an email address shows share-fail-explanation', async ({
     studentPage,

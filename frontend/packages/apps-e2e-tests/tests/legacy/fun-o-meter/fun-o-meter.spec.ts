@@ -56,6 +56,11 @@ const BEE_CONDITIONAL_BLOCKS = {
 };
 
 test.describe('Fun-O-Meter', () => {
+  /**
+   * Migration status: COMPLETED
+   * Source: dashboard/test/ui/features/teacher_tools/fun_o_meter.feature
+   * Scenario: Rate a Puzzle
+   */
   test(
     'rating buttons appear on solve, persist on reload, clear after rating',
     {tag: '@no_mobile'},

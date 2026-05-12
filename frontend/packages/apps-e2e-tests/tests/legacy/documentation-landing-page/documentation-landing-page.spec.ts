@@ -10,6 +10,11 @@ import {expect, test} from '../../shared/fixtures';
  */
 
 test.describe('Documentation landing page', () => {
+  /**
+   * Migration status: COMPLETED
+   * Source: dashboard/test/ui/features/teacher_tools/documentation_landing_page.feature
+   * Scenario: Documentation landing page displays
+   */
   test(
     '/docs/ displays IDE and Sprite Lab sections',
     {tag: '@no_mobile'},
@@ -23,6 +28,11 @@ test.describe('Documentation landing page', () => {
     },
   );
 
+  /**
+   * Migration status: COMPLETED
+   * Source: dashboard/test/ui/features/teacher_tools/documentation_landing_page.feature
+   * Scenario: Applab Documentation landing page displays
+   */
   test(
     '/docs/ide/applab/ displays App Lab documentation',
     {tag: '@no_mobile'},

@@ -18,7 +18,9 @@ const BASE = '/courses/allthethingscourse/units/1/lessons/18/levels';
 
 test.describe('CSP Instructions', () => {
   /**
-   * Source: "Help & Tips and Instruction tabs are visible if level has videos"
+   * Migration status: COMPLETED
+   * Source: dashboard/test/ui/features/teacher_tools/instructions/csp_instructions.feature
+   * Scenario: 'Help & Tips' and 'Instruction' tabs are visible if level has videos
    */
   test('help and tips tab visible when level has videos', async ({
     studentPage,
@@ -42,8 +44,9 @@ test.describe('CSP Instructions', () => {
   });
 
   /**
-   * Source: "Help & Tips and Instruction tabs are visible if the level has
-   * a map reference"
+   * Migration status: COMPLETED
+   * Source: dashboard/test/ui/features/teacher_tools/instructions/csp_instructions.feature
+   * Scenario: 'Help & Tips' and 'Instruction' tabs are visible if the level has a map reference
    */
   test('help and tips tab visible when level has map reference', async ({
     studentPage,
@@ -67,8 +70,9 @@ test.describe('CSP Instructions', () => {
   });
 
   /**
-   * Source: "Help & Tips and Instruction tabs are visible if the level has
-   * reference links"
+   * Migration status: COMPLETED
+   * Source: dashboard/test/ui/features/teacher_tools/instructions/csp_instructions.feature
+   * Scenario: 'Help & Tips' and 'Instruction' tabs are visible if the level has reference links
    */
   test('help and tips tab visible when level has reference links', async ({
     studentPage,
@@ -92,8 +96,9 @@ test.describe('CSP Instructions', () => {
   });
 
   /**
-   * Source: "Do not display resources tab when there are no videos, map
-   * references, or reference links"
+   * Migration status: COMPLETED
+   * Source: dashboard/test/ui/features/teacher_tools/instructions/csp_instructions.feature
+   * Scenario: Do not display resources tab when there are no videos, map references, or reference links
    */
   test('resources tab absent when level has no videos, map references, or reference links', async ({
     studentPage,
@@ -107,8 +112,9 @@ test.describe('CSP Instructions', () => {
   });
 
   /**
-   * Source: "Resources tab displays videos, map references, and reference
-   * links with correct text and link"
+   * Migration status: COMPLETED
+   * Source: dashboard/test/ui/features/teacher_tools/instructions/csp_instructions.feature
+   * Scenario: Resources tab displays videos, map references, and reference links with correct text and link
    */
   test('resources tab shows all resource types with correct content', async ({
     studentPage,
