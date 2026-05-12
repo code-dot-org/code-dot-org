@@ -210,15 +210,23 @@ class GlobalEditionTest < ActionDispatch::IntegrationTest
         let(:new_locale) {'en-US'}
 
         before do
+          cookies[:ge_region] = ge_region
+          cookies[:language_] = ge_region_locale
+
           params.merge!(extra_params)
         end
 
         it 'redirects to international page with extra params and selected locale' do
-          expect(Metrics::Events).not_to receive(:log_event).with(
+          expect(Metrics::Events).to receive(:log_event).with(
             event_name: 'Global Edition Region Changed',
-            user: anything,
+            user: nil,
             session: anything,
-            metadata: anything,
+            metadata: {
+              old_region: ge_region,
+              old_locale: new_locale,
+              new_region: nil,
+              new_locale:,
+            }
           )
 
           get_regional_page

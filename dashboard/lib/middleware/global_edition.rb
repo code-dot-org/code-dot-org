@@ -232,6 +232,8 @@ module Middleware
       # @return [String, nil] The resolved locale for the region,
       #   or `nil` if no locale should be preserved during a region reset.
       private def resolve_locale_for(region)
+        return original_locale unless region
+
         return original_locale if Cdo::GlobalEdition.locale_available?(region, original_locale)
         return url_locale      if Cdo::GlobalEdition.locale_available?(region, url_locale)
 
