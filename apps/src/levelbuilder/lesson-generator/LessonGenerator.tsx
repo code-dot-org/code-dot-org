@@ -582,27 +582,9 @@ const LessonGenerator: React.FC<LessonGeneratorProps> = ({lesson}) => {
         isOutlining={isOutlining}
         disabled={isGenerating}
         error={outlineError}
+        projectChannelId={projectChannelId}
+        onProjectChannelIdChange={setProjectChannelId}
       />
-
-      <div className={moduleStyles.fieldRow}>
-        <label htmlFor="project-channel-id">
-          Optional: target Web Lab 2 project (channel id)
-        </label>
-        <input
-          id="project-channel-id"
-          className={moduleStyles.prefixInput}
-          value={projectChannelId}
-          onChange={e => setProjectChannelId(e.target.value)}
-          placeholder="e.g. abc123 — leave blank to skip"
-          disabled={isGenerating}
-        />
-        <small className={moduleStyles.outlineHelp}>
-          When set, the lesson is generated as a progression that builds toward
-          the app stored at this channel. The student never sees the target
-          code; the AI uses it as the final goal so each level moves a step
-          closer to it.
-        </small>
-      </div>
 
       <div className={moduleStyles.fieldRow}>
         <label htmlFor="level-prefix">Level name prefix</label>
