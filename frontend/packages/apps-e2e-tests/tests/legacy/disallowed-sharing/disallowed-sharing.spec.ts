@@ -60,29 +60,33 @@ async function dismissOverlay(page: Page): Promise<void> {
 
 test.describe('Disallowed Sharing', {tag: '@no_mobile'}, () => {
   /**
-   * Source: "Sharing a profane studio game"
-   * Skipped — requires @webpurify external API key (not configured in test env).
+   * Migration status: COMPLETED
+   * Source: dashboard/test/ui/features/teacher_tools/disallowedsharing.feature
+   * Scenario: Sharing a profane studio game
    */
-  test.fixme(
-    'sharing a profane studio game shows share-fail-explanation',
-    async ({studentPage}) => {
-      await studentPage.goto(LEVEL_URL);
-      await expect(studentPage.locator('#runButton')).toBeVisible({
-        timeout: 30_000,
-      });
-      await dismissOverlay(studentPage);
-      await studentPage.evaluate(
-        // eslint-disable-next-line @typescript-eslint/no-explicit-any
-        xml => (window as any).__TestInterface.loadBlocks(xml),
-        studioSayXml('shit'),
-      );
-      await studentPage.locator('#runButton').click();
-      await studentPage.locator('.share').click();
-      await expect(studentPage.locator('#share-fail-explanation')).toBeVisible({
-        timeout: 15_000,
-      });
-    },
-  );
+  test('sharing a profane studio game shows share-fail-explanation', async ({
+    studentPage,
+  }) => {
+    test.fixme(
+      true,
+      'Requires source @webpurify external API key, which is not configured in this Playwright environment. Source: dashboard/test/ui/features/teacher_tools/disallowedsharing.feature Scenario: Sharing a profane studio game',
+    );
+    await studentPage.goto(LEVEL_URL);
+    await expect(studentPage.locator('#runButton')).toBeVisible({
+      timeout: 30_000,
+    });
+    await dismissOverlay(studentPage);
+    await studentPage.evaluate(
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
+      xml => (window as any).__TestInterface.loadBlocks(xml),
+      studioSayXml('shit'),
+    );
+    await studentPage.locator('#runButton').click();
+    await studentPage.locator('.share').click();
+    await expect(studentPage.locator('#share-fail-explanation')).toBeVisible({
+      timeout: 15_000,
+    });
+  });
 
   /**
    * Source: "Sharing a phone number studio game"

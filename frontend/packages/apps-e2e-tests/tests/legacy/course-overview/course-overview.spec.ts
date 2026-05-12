@@ -17,6 +17,11 @@ import {expect, test} from '../../shared/fixtures';
 const COURSE_URL = '/courses/ui-test-csp-2019';
 
 test.describe('Course overview', () => {
+  /**
+   * Migration status: COMPLETED
+   * Source: dashboard/test/ui/features/teacher_tools/course_overview.feature
+   * Scenario: Viewing course overview signed out
+   */
   test('signed-out: overview page loads', async ({page}) => {
     await page.goto(COURSE_URL);
     await page
@@ -25,6 +30,11 @@ test.describe('Course overview', () => {
       .waitFor({state: 'visible', timeout: 30_000});
   });
 
+  /**
+   * Migration status: COMPLETED
+   * Source: dashboard/test/ui/features/teacher_tools/course_overview.feature
+   * Scenario: Viewing course overview as a student not in a section
+   */
   test('student not in section: overview page loads', async ({page}) => {
     await createStudent(page);
     await page.goto(COURSE_URL);
@@ -34,6 +44,11 @@ test.describe('Course overview', () => {
       .waitFor({state: 'visible', timeout: 30_000});
   });
 
+  /**
+   * Migration status: COMPLETED
+   * Source: dashboard/test/ui/features/teacher_tools/course_overview.feature
+   * Scenario: Viewing course overview as a teacher with no sections
+   */
   test('teacher with no sections: overview page loads', async ({page}) => {
     await createTeacher(page);
     await page.goto(COURSE_URL);
@@ -45,7 +60,7 @@ test.describe('Course overview', () => {
 
   /**
    * Migration status: COMPLETED
-   * Source: course_overview.feature
+   * Source: dashboard/test/ui/features/teacher_tools/course_overview.feature
    * Scenario: Viewing course overview as a student in a section
    *
    * The Cucumber scenario assigns UI Test CSP to the teacher's section through
@@ -72,6 +87,11 @@ test.describe('Course overview', () => {
     });
   });
 
+  /**
+   * Migration status: COMPLETED
+   * Source: dashboard/test/ui/features/teacher_tools/course_overview.feature
+   * Scenario: Viewing course overview for a single-unit course
+   */
   test('single-unit course: /courses/<name> redirects to /units/1', async ({
     page,
   }) => {

@@ -9,10 +9,20 @@ import {expect, type Locator, type Page} from '@playwright/test';
  */
 export async function viewNextHint(page: Page): Promise<void> {
   await page.locator('#lightbulb').click();
-  await page
-    .locator('.csf-top-instructions button:text("Yes")')
-    .waitFor({state: 'visible'});
-  await page.locator('.csf-top-instructions button:text("Yes")').click();
+  const yesButton = page.getByRole('button', {name: 'Yes', exact: true});
+  await expect(yesButton).toBeVisible();
+
+  for (let attempt = 0; attempt < 3; attempt++) {
+    await yesButton.click();
+    try {
+      await expect(yesButton).not.toBeVisible({timeout: 2_000});
+      return;
+    } catch (error) {
+      if (attempt === 2) {
+        throw error;
+      }
+    }
+  }
 }
 
 /**

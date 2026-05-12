@@ -12,8 +12,8 @@ This inventory ignores `Migration Status` markers. A Cucumber feature is treated
 | Playwright spec files                                       |   125 |
 | Feature files referenced by Playwright                      |   164 |
 | Feature files with no Playwright source-path reference      |   107 |
-| Referenced feature files with all scenario titles traceable |    97 |
-| Referenced feature files with some untraced scenario titles |    45 |
+| Referenced feature files with all scenario titles traceable |   100 |
+| Referenced feature files with some untraced scenario titles |    42 |
 | Referenced feature files needing scenario-level audit       |    22 |
 | Playwright specs with no Cucumber source-path reference     |     1 |
 
@@ -198,35 +198,10 @@ This inventory ignores `Migration Status` markers. A Cucumber feature is treated
 
 These feature files have at least one Playwright source-path reference, but not every Cucumber scenario title was found in Playwright comments or single-source spec test titles. Some may be ported under renamed test titles; inspect before porting.
 
-### `dashboard/test/ui/features/teacher_tools/contextual_hints.feature`
-
-Traced 0 of 2 scenario titles.
-
-- Blocks render in contextual hints
-- Contextual hints in level without Authored Hints
-
-### `dashboard/test/ui/features/teacher_tools/course_overview.feature`
-
-Traced 1 of 5 scenario titles.
-
-- Viewing course overview signed out
-- Viewing course overview as a student not in a section
-- Viewing course overview as a teacher with no sections
-- Viewing course overview for a single-unit course
-
-### `dashboard/test/ui/features/teacher_tools/course_versions.feature`
-
-Traced 0 of 3 scenario titles.
-
-- Version warning announcement on course and script overview pages
-- Versions warning announcement on script overview page
-- Switch versions using dropdown on script overview page
-
 ### `dashboard/test/ui/features/teacher_tools/disallowedsharing.feature`
 
-Traced 0 of 3 scenario titles.
+Traced 1 of 3 scenario titles.
 
-- Sharing a profane studio game
 - Sharing a phone number studio game
 - Sharing an email studio game
 

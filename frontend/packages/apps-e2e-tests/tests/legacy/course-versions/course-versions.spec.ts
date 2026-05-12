@@ -1,3 +1,5 @@
+import {type Page} from '@playwright/test';
+
 import {assignCourseAndUnit, createStudent} from '../../shared/auth';
 import {expect, test} from '../../shared/fixtures';
 
@@ -15,9 +17,38 @@ import {expect, test} from '../../shared/fixtures';
  *   ui-test-versioned-script-2017 / -2019      — single-unit versioned course
  */
 
+/**
+ * Dismiss a newer-version warning and wait for its persisted user_script PATCH.
+ * The UI hides the banner immediately, but the Cucumber reload assertion only
+ * holds after the fire-and-forget persistence request completes.
+ *
+ * @param page - Playwright page showing the newer-version warning
+ */
+async function dismissNewerVersionWarning(page: Page): Promise<void> {
+  const patch = page.waitForResponse(response => {
+    return (
+      response.url().includes('/api/v1/user_scripts/course/') &&
+      response.request().method() === 'PATCH'
+    );
+  });
+
+  await page
+    .locator('.announcement-notification', {hasText: 'newer version'})
+    .locator('.fa-xmark')
+    .evaluate(el => (el as HTMLElement).click());
+
+  const response = await patch;
+  expect(response.ok()).toBe(true);
+  await expect(
+    page.locator('.announcement-notification', {hasText: 'newer version'}),
+  ).not.toBeVisible({timeout: 10_000});
+}
+
 test.describe('Course Versions', {tag: '@no_mobile'}, () => {
   /**
-   * Source: "Version warning announcement on course and script overview pages"
+   * Migration status: COMPLETED
+   * Source: dashboard/test/ui/features/teacher_tools/course_versions.feature
+   * Scenario: Version warning announcement on course and script overview pages
    *
    * Without assignment: no version selector or warning on course-2019.
    * After assignment to course-2017 unit 1: version selector and warning appear.
@@ -27,10 +58,6 @@ test.describe('Course Versions', {tag: '@no_mobile'}, () => {
   test('version warning appears after assignment and dismisses persistently', async ({
     page,
   }) => {
-    test.fixme(
-      true,
-      'TODO: version banner flaky on all browsers under parallel run; dismissal persistence timing issue',
-    );
     await createStudent(page);
 
     // Without assignment: no version selector, no newer-version warning.
@@ -96,16 +123,7 @@ test.describe('Course Versions', {tag: '@no_mobile'}, () => {
       }),
     ).toBeVisible();
 
-    // Dismiss the unit-level banner. Use dispatchEvent so React's synthetic
-    // handler fires in all browsers (WebKit pointer-events on <i> can block
-    // native Playwright click from reaching the handler).
-    await page
-      .locator('.announcement-notification', {hasText: 'newer version'})
-      .locator('.fa-xmark')
-      .dispatchEvent('click');
-    await expect(
-      page.locator('.announcement-notification', {hasText: 'newer version'}),
-    ).not.toBeVisible({timeout: 10_000});
+    await dismissNewerVersionWarning(page);
 
     // Dismissed state persists after reload.
     await page.reload();
@@ -130,7 +148,9 @@ test.describe('Course Versions', {tag: '@no_mobile'}, () => {
   });
 
   /**
-   * Source: "Versions warning announcement on script overview page"
+   * Migration status: COMPLETED
+   * Source: dashboard/test/ui/features/teacher_tools/course_versions.feature
+   * Scenario: Versions warning announcement on script overview page
    *
    * Without assignment to the 2017 version: no selector on the 2019 unit page.
    * After assignment + progress: warning appears on the 2019 page.
@@ -170,16 +190,7 @@ test.describe('Course Versions', {tag: '@no_mobile'}, () => {
       page.locator('.announcement-notification', {hasText: 'newer version'}),
     ).toBeVisible();
 
-    // Dismiss the banner. Use dispatchEvent to ensure React's synthetic event
-    // handler fires in all browsers including Firefox, where pointer-events on
-    // the <i> icon can cause the native Playwright click to miss the handler.
-    await page
-      .locator('.announcement-notification', {hasText: 'newer version'})
-      .locator('.fa-xmark')
-      .dispatchEvent('click');
-    await expect(
-      page.locator('.announcement-notification', {hasText: 'newer version'}),
-    ).not.toBeVisible({timeout: 10_000});
+    await dismissNewerVersionWarning(page);
 
     // Dismissed state persists after reload.
     await expect(page.locator('#script-title')).toBeVisible({
@@ -192,7 +203,9 @@ test.describe('Course Versions', {tag: '@no_mobile'}, () => {
   });
 
   /**
-   * Source: "Switch versions using dropdown on script overview page"
+   * Migration status: COMPLETED
+   * Source: dashboard/test/ui/features/teacher_tools/course_versions.feature
+   * Scenario: Switch versions using dropdown on script overview page
    *
    * Without assignment, navigating to the 2017 unit redirects to 2019.
    * After assignment to 2017: the version selector dropdown lets the student
