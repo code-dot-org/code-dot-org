@@ -1,0 +1,29 @@
+.overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  cursor: crosshair;
+  background: rgba(0 0 0 / 0.15);
+}
+
+.selection {
+  position: fixed;
+  border: 2px dashed #fff;
+  background: rgba(255 255 255 / 0.05);
+  box-shadow: 0 0 0 1px rgba(0 0 0 / 0.6);
+  pointer-events: none;
+}
+
+.instructions {
+  position: fixed;
+  top: 16px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 8px 16px;
+  background: rgba(0 0 0 / 0.7);
+  color: #fff;
+  border-radius: 4px;
+  font-size: 14px;
+  pointer-events: none;
+  user-select: none;
+}

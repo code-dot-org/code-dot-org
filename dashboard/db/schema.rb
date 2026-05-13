@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2026_05_06_120000) do
+ActiveRecord::Schema[7.0].define(version: 2026_05_13_130000) do
   create_table "activities", id: :integer, charset: "utf8mb3", collation: "utf8mb3_unicode_ci", force: :cascade do |t|
     t.integer "user_id"
     t.integer "level_id"
@@ -93,6 +93,7 @@ ActiveRecord::Schema[7.0].define(version: 2026_05_06_120000) do
     t.index ["user_id", "level_id", "script_id"], name: "index_ace_user_level_script"
     t.index ["user_id", "project_id", "id"], name: "index_ace_user_project_id"
     t.index ["user_id", "project_id"], name: "index_ace_user_project"
+    t.index ["user_id"], name: "index_aichat_events_on_user_id_and_lesson_id"
   end
 
   create_table "aichat_requests", charset: "utf8mb4", collation: "utf8mb4_bin", force: :cascade do |t|
@@ -1857,6 +1858,21 @@ ActiveRecord::Schema[7.0].define(version: 2026_05_06_120000) do
     t.index ["user_id", "plc_course_id"], name: "index_plc_user_course_enrollments_on_user_id_and_plc_course_id", unique: true
   end
 
+  create_table "portfolio_entries", charset: "utf8mb4", collation: "utf8mb4_unicode_ci", force: :cascade do |t|
+    t.integer "user_id", null: false
+    t.integer "script_id", null: false
+    t.integer "level_id", null: false
+    t.text "before_asset_url", size: :medium
+    t.text "after_asset_url", size: :medium
+    t.text "at_first_text"
+    t.text "but_then_text"
+    t.text "and_now_text"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["user_id", "script_id", "level_id"], name: "index_portfolio_entries_on_user_id_and_script_id_and_level_id", unique: true
+    t.index ["user_id"], name: "index_portfolio_entries_on_user_id"
+  end
+
   create_table "potential_teachers", charset: "utf8mb3", collation: "utf8mb3_unicode_ci", force: :cascade do |t|
     t.string "name", null: false
     t.string "email", null: false
@@ -2548,7 +2564,7 @@ ActiveRecord::Schema[7.0].define(version: 2026_05_06_120000) do
     t.index ["unit_group_id", "resource_id"], name: "index_ug_student_resources_on_unit_group_id_and_resource_id", unique: true
   end
 
-  create_table "user_data_retention_statuses", charset: "utf8mb3", collation: "utf8mb3_unicode_ci", force: :cascade do |t|
+  create_table "user_data_retention_statuses", charset: "utf8mb4", collation: "utf8mb4_unicode_ci", force: :cascade do |t|
     t.integer "user_id", null: false
     t.datetime "pii_scrubbed_at", precision: nil
     t.datetime "anonymized_at", precision: nil
@@ -2911,6 +2927,7 @@ ActiveRecord::Schema[7.0].define(version: 2026_05_06_120000) do
   add_foreign_key "peer_reviews", "users", column: "submitter_id"
   add_foreign_key "plc_course_units", "scripts"
   add_foreign_key "plc_learning_modules", "stages"
+  add_foreign_key "portfolio_entries", "users"
   add_foreign_key "queued_account_purges", "users"
   add_foreign_key "rubric_ai_evaluations", "rubrics"
   add_foreign_key "rubric_ai_evaluations", "users"

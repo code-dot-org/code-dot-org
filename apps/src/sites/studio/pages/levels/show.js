@@ -4,6 +4,7 @@ import {Provider} from 'react-redux';
 
 import AiDiffFloatingActionButton from '@cdo/apps/aiDifferentiation/AiDiffFloatingActionButton';
 import ScriptLevelRedirectDialog from '@cdo/apps/code-studio/components/ScriptLevelRedirectDialog';
+import PortfolioButton from '@cdo/apps/portfolio/PortfolioButton';
 import {setIsMiniView} from '@cdo/apps/code-studio/progressRedux';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
@@ -89,6 +90,21 @@ function initPage() {
       );
     }
   };
+
+  const portfolioMountPoint = document.getElementById(
+    'portfolio-button-mount-point'
+  );
+  if (portfolioMountPoint) {
+    createReactRoot(
+      <Provider store={getStore()}>
+        <PortfolioButton />
+      </Provider>,
+      portfolioMountPoint,
+      {
+        legacyReactDomRender: true,
+      }
+    );
+  }
 
   if (hasScriptData('script[data-rubricdata]')) {
     const rubricData = getScriptData('rubricdata');
