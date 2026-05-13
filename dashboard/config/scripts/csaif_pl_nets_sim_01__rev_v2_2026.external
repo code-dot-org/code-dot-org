@@ -5,14 +5,14 @@ description 'description here'
 markdown <<MARKDOWN
 # Welcome to the Internet Simulator
 
-#### The **Internet Simulator** is used in four lessons throughout this unit to help students learn how the Internet works in an interactive manner.
+The **Internet Simulator** is used in four lessons throughout this unit to help students learn how the Internet works in an interactive manner.
 
-* #### Lesson 1: Introduction to the Internet
-* #### Lesson 4: Routers and Redundancy
-* #### Lesson 5: Packets
-* #### Lesson 6: HTTP and DNS
+* Lesson 1: Introduction to the Internet
+* Lesson 4: Routers and Redundancy
+* Lesson 5: Packets
+* Lesson 6: HTTP and DNS
 
-#### Students must be part of a **class section** to use the Internet Simulator. In the next few levels we’ll preview some key features of the Internet Simulator so you have a chance to see how they work.
+Students must be part of a **class section** to use the Internet Simulator. In the next few levels we’ll preview some key features of the Internet Simulator so you have a chance to see how they work.
 
 
 <p style="font-size: 18px; font-weight: bold; background-color: #F5F7F8; padding: 10px; border-left: 5px solid #8148B2; display: inline-block;">

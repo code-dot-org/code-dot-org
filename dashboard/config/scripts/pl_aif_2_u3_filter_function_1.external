@@ -5,7 +5,7 @@ description 'description here'
 markdown <<MARKDOWN
 # Filtering
 
-#### Imagine opening a music app and seeing a playlist labeled “Top 10 Songs Right Now.” Only ten songs appear even though thousands of songs exist on the platform.
+Imagine opening a music app and seeing a playlist labeled “Top 10 Songs Right Now.” Only ten songs appear even though thousands of songs exist on the platform.
 
 <br>
 
@@ -13,26 +13,26 @@ markdown <<MARKDOWN
 
 <img src="https://images.code.org/59c9b8a356ff4e56ec8c802ba5718b37-image-1684269154206.png" alt="A clipboard with the words TO DO on it. This icon is used to signal an action item for participants." width="30px" style="border-radius:10px; float:left; margin: 0px 10px 10px 0px;">
 
-#### **Pause & Reflect**
+**Pause & Reflect**
 
-- #### If an app only shows songs from the Top 10, what happens to everyone else?
+- If an app only shows songs from the Top 10, what happens to everyone else?
 
-- #### What rule do you think the app uses to decide which songs appear?
+- What rule do you think the app uses to decide which songs appear?
 
-- #### What is one change you could make to that rule to make the playlist feel more fair or inclusive?
+- What is one change you could make to that rule to make the playlist feel more fair or inclusive?
 
 <br>
 
 > #### You may have considered things like: someone decided this rule, some data is included, some is excluded, newer, older, or less mainstream artists may be left out. 
 
-#### 👉 This playlist didn’t happen by accident. It was created using a **filtering algorithm**.
+👉 This playlist didn’t happen by accident. It was created using a **filtering algorithm**.
 ---
 
 ## What is a filter algorithm? 
 
-#### A **filter algorithm** is a rule a program uses to look through a list of data and keep only the items that meet certain conditions.
+A **filter algorithm** is a rule a program uses to look through a list of data and keep only the items that meet certain conditions.
 
-#### In JavaScript, filtering is often used with arrays of objects to narrow a large list into a smaller, more relevant one like deciding which songs, messages, or results appear in a web app.
+In JavaScript, filtering is often used with arrays of objects to narrow a large list into a smaller, more relevant one like deciding which songs, messages, or results appear in a web app.
 
 <br>
 
@@ -56,5 +56,5 @@ markdown <<MARKDOWN
 ---
 ## Next up
 
-#### Let's take a look at how this algorithm looks in JavaScript. 
+Let's take a look at how this algorithm looks in JavaScript. 
 MARKDOWN

@@ -8,14 +8,14 @@ markdown <<MARKDOWN
 
 
 ## 🔎You might have noticed:
-- #### The `min()` function is used to identify the lowest sea level.
-- #### The code locates the specific row associated with the minimum value to display the corresponding date.
+- The `min()` function is used to identify the lowest sea level.
+- The code locates the specific row associated with the minimum value to display the corresponding date.
 
 
 ## 💡You might Wonder: 
-- #### How does the `min()` function interact with the DataFrame to find the lowest value?
-- #### How could similar functions, like `max()`, be used to explore other aspects of the dataset?
-- #### What might the results of these functions indicate about the overall event being analyzed?
+- How does the `min()` function interact with the DataFrame to find the lowest value?
+- How could similar functions, like `max()`, be used to explore other aspects of the dataset?
+- What might the results of these functions indicate about the overall event being analyzed?
 
 <br>
 

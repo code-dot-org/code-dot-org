@@ -8,9 +8,9 @@ markdown <<MARKDOWN
 <img src="https://images.code.org/98110267b6c3ee2f93700b03b95d940b-image-1741026340788.png" alt="bargraph and data icon" style="border-radius:10px; float: left; ; height: 100px; margin: 0px 20px 0px 10px; ">
 
 
-#### In this activity, students engage with core computational thinking concepts as they navigate the Painter through the maze and write pseudocode.
+In this activity, students engage with core computational thinking concepts as they navigate the Painter through the maze and write pseudocode.
 
-#### Here’s how each concept applies:
+Here’s how each concept applies:
 
 <div style="clear:both;"></div>
 
@@ -26,7 +26,7 @@ markdown <<MARKDOWN
 
 ## Prioritizing Understanding
 
-#### By working through the unplugged activity first, students develop a deeper understanding of computational thinking before applying these concepts in Python.
+By working through the unplugged activity first, students develop a deeper understanding of computational thinking before applying these concepts in Python.
 
 
 
