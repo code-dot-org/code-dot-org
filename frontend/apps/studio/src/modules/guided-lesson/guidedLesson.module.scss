@@ -1,0 +1,378 @@
+.layout {
+  display: grid;
+  grid-template-columns: minmax(360px, 5fr) minmax(420px, 7fr);
+  gap: 16px;
+  height: calc(100vh - 88px);
+  padding: 16px;
+  box-sizing: border-box;
+  background: #f4f3f7;
+}
+
+.panel {
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.04), 0 1px 6px rgba(0, 0, 0, 0.04);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.panelHeader {
+  padding: 16px 20px 12px;
+  border-bottom: 1px solid #eceaf2;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.headerCenter {
+  flex: 1;
+  min-width: 0;
+}
+
+.backButton {
+  padding: 6px 10px;
+  border: 1px solid #d9d6e3;
+  background: #ffffff;
+  border-radius: 8px;
+  font-size: 13px;
+  color: #1c1b1f;
+  cursor: pointer;
+  white-space: nowrap;
+  flex-shrink: 0;
+  transition: border-color 0.12s ease, background 0.12s ease, color 0.12s ease;
+}
+
+.backButton:hover:not(:disabled) {
+  border-color: #6a5acd;
+  color: #4f46e5;
+}
+
+.backButton:disabled {
+  cursor: default;
+  opacity: 0.4;
+}
+
+.lessonTitle {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 600;
+  color: #1c1b1f;
+}
+
+.lessonSubtitle {
+  margin: 4px 0 0;
+  font-size: 13px;
+  color: #5b5868;
+}
+
+.progressPill {
+  font-size: 12px;
+  color: #5b5868;
+  background: #f4f3f7;
+  padding: 4px 10px;
+  border-radius: 999px;
+  white-space: nowrap;
+}
+
+/* Chat */
+.chat {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  overflow: hidden;
+}
+
+.chatScroll {
+  flex: 1;
+  overflow-y: auto;
+  padding: 20px 20px 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.tutorTurn,
+.studentTurn {
+  display: flex;
+  gap: 10px;
+  max-width: 92%;
+}
+
+.tutorTurn {
+  align-self: flex-start;
+}
+
+.studentTurn {
+  align-self: flex-end;
+  flex-direction: row-reverse;
+}
+
+.avatar {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.tutorAvatar {
+  background: linear-gradient(135deg, #6a5acd 0%, #4f46e5 100%);
+  color: white;
+}
+
+.studentAvatar {
+  background: #1c1b1f;
+  color: white;
+}
+
+.bubble {
+  padding: 10px 14px;
+  border-radius: 14px;
+  font-size: 14px;
+  line-height: 1.5;
+  color: #1c1b1f;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+
+.tutorBubble {
+  background: #f0eefb;
+  border-top-left-radius: 4px;
+}
+
+.studentBubble {
+  background: #1c1b1f;
+  color: white;
+  border-top-right-radius: 4px;
+}
+
+/* Input area for active step */
+.inputArea {
+  border-top: 1px solid #eceaf2;
+  padding: 14px 20px 16px;
+  background: #fafafd;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.inputLabel {
+  font-size: 12px;
+  font-weight: 600;
+  color: #5b5868;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.optionList {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.optionButton {
+  text-align: left;
+  padding: 10px 14px;
+  border: 1px solid #d9d6e3;
+  background: #ffffff;
+  border-radius: 10px;
+  font-size: 14px;
+  color: #1c1b1f;
+  cursor: pointer;
+  transition: border-color 0.12s ease, background 0.12s ease;
+}
+
+.optionButton:hover:not(:disabled) {
+  border-color: #6a5acd;
+  background: #f7f5ff;
+}
+
+.optionButton:disabled {
+  cursor: default;
+  opacity: 0.7;
+}
+
+.optionCorrect {
+  border-color: #2e7d32;
+  background: #e8f5e9;
+}
+
+.optionWrong {
+  border-color: #c62828;
+  background: #fdecea;
+}
+
+.freeResponseRow {
+  display: flex;
+  gap: 8px;
+  align-items: stretch;
+}
+
+.freeResponseInput {
+  flex: 1;
+  padding: 10px 12px;
+  border: 1px solid #d9d6e3;
+  border-radius: 10px;
+  font-size: 14px;
+  font-family: inherit;
+  resize: none;
+  min-height: 60px;
+}
+
+.freeResponseInput:focus {
+  outline: none;
+  border-color: #6a5acd;
+}
+
+.buttonRow {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.primaryButton {
+  padding: 10px 18px;
+  background: #4f46e5;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  margin-left: auto;
+}
+
+.primaryButton:hover:not(:disabled) {
+  background: #3b32c0;
+}
+
+.primaryButton:disabled {
+  opacity: 0.5;
+  cursor: default;
+}
+
+.summaryList {
+  margin: 0;
+  padding-left: 18px;
+  font-size: 14px;
+  color: #1c1b1f;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+/* Stage */
+.stage {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  overflow: hidden;
+}
+
+.stageBody {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  overflow-y: auto;
+}
+
+/* When the stage is hosting a full lab (e.g., the Music Lab), drop the
+   chrome so the lab's own UI can fill the panel edge-to-edge. */
+.stageBodyLab {
+  padding: 0;
+  overflow: hidden;
+}
+
+.musicLabHost {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+
+  /* The music lab uses fixed-position elements and 100% height children —
+     give it a positioned host so anything absolute resolves correctly. */
+  position: relative;
+
+  > * {
+    flex: 1;
+    min-height: 0;
+  }
+}
+
+.stageEmpty {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #8a87a0;
+  font-style: italic;
+}
+
+.noteCard {
+  background: linear-gradient(180deg, #faf9ff 0%, #f4f1ff 100%);
+  border: 1px solid #e5e0fa;
+  border-radius: 12px;
+  padding: 24px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.noteTitle {
+  margin: 0;
+  font-size: 22px;
+  font-weight: 700;
+  color: #2d2a47;
+}
+
+.noteBody {
+  margin: 0;
+  font-size: 15px;
+  line-height: 1.6;
+  color: #4a4760;
+  white-space: pre-wrap;
+}
+
+/* Lesson chooser (index route helper) */
+.lessonList {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 16px;
+}
+
+.lessonCard {
+  display: block;
+  padding: 16px 20px;
+  border-radius: 12px;
+  background: white;
+  border: 1px solid #e5e0fa;
+  text-decoration: none;
+  color: inherit;
+}
+
+.lessonCard:hover {
+  border-color: #4f46e5;
+}
+
+.lessonCardTitle {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 600;
+  color: #2d2a47;
+}
+
+.lessonCardSubtitle {
+  margin: 4px 0 0;
+  font-size: 13px;
+  color: #5b5868;
+}

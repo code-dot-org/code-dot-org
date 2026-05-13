@@ -1,2 +1,2 @@
-/** Represents the different types of labs available in the application. */
-export const AVAILABLE_LABS = ['maze', 'music', 'oceans', 'standalone-video'] as const;
+// Represents the different types of labs available in the application.
+export const AVAILABLE_LABS = ['maze', 'music', 'oceans', 'standalone-video', 'datasci', 'ai-trainer'] as const;

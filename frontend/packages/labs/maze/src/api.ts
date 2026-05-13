@@ -228,3 +228,30 @@ export function notFinished(this: APIGlobals): boolean {
     return ~checkSuccess.bind(this)();
   });
 }
+
+/**
+ * Is the tile ahead of pegman a path? (Used by the `maze_if` / `maze_ifElse`
+ * / `maze_untilBlockedOrNotClear` conditional blocks — see blocks.ts.)
+ */
+export function isPathForward(this: APIGlobals, id: string): boolean {
+  const {MoveDirection} = this.tiles;
+  return !!API_FUNCTION.bind(this)(() =>
+    isPath.bind(this)(MoveDirection.FORWARD, id),
+  );
+}
+
+/** Is the tile to pegman's right a path? */
+export function isPathRight(this: APIGlobals, id: string): boolean {
+  const {MoveDirection} = this.tiles;
+  return !!API_FUNCTION.bind(this)(() =>
+    isPath.bind(this)(MoveDirection.RIGHT, id),
+  );
+}
+
+/** Is the tile to pegman's left a path? */
+export function isPathLeft(this: APIGlobals, id: string): boolean {
+  const {MoveDirection} = this.tiles;
+  return !!API_FUNCTION.bind(this)(() =>
+    isPath.bind(this)(MoveDirection.LEFT, id),
+  );
+}

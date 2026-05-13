@@ -20,6 +20,8 @@ export const AppNames = [
   'weblab',
   'weblab2',
   'maze',
+  'datasci',
+  'ai_trainer',
 ] as const;
 
 export const StandaloneAppNames = [

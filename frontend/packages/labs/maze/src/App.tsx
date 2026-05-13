@@ -17,18 +17,31 @@ import styles from './app.module.scss';
 
 registerLevelKindSchema('maze', LevelKindSchema);
 
-function App() {
-  // Just use the channelId to pretend to be the level id
-  const channelId = window.location.pathname.match(
-    /^\/app\/projects\/maze\/([^/]+)\/edit$/,
-  )?.[1];
+interface AppProps {
+  /**
+   * Optional levelId. When provided, the App uses it directly and skips the
+   * URL parsing — used by hosts that embed Maze Lab inline (e.g. the studio
+   * guided-lesson stage) where the URL belongs to a parent route and must
+   * not be touched.
+   */
+  levelId?: string;
+}
+
+function App({levelId}: AppProps = {}) {
+  // Fall back to the legacy URL-based extraction when the host doesn't pass
+  // a levelId prop, so standalone deployments keep working.
+  const resolvedLevelId =
+    levelId ??
+    window.location.pathname.match(
+      /^\/app\/projects\/maze\/([^/]+)\/edit$/,
+    )?.[1];
 
   return (
     <>
       <div className={styles.app}>
         <BlocklyLab<MazeLevelProperties>
           isLoading={false}
-          levelId={channelId}
+          levelId={resolvedLevelId}
           blocklyProps={(levelProperties: MazeLevelProperties) => ({
             renderer: ThrasosRenderer,
             blocks: blocks(skinFor(skins, levelProperties?.skin || 'birds')),

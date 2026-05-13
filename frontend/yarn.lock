@@ -12,6 +12,41 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@ai-sdk/gateway@npm:3.0.114":
+  version: 3.0.114
+  resolution: "@ai-sdk/gateway@npm:3.0.114"
+  dependencies:
+    "@ai-sdk/provider": "npm:3.0.10"
+    "@ai-sdk/provider-utils": "npm:4.0.27"
+    "@vercel/oidc": "npm:3.2.0"
+  peerDependencies:
+    zod: ^3.25.76 || ^4.1.8
+  checksum: 10c0/8a3f426c458c4a5eb8121e0f4a9814765dda29a25dc3efb458aea05abd94ff34fedb3987ab1d97e8f457156222f4149cd116f96cc03382ce2ff215106b6da70d
+  languageName: node
+  linkType: hard
+
+"@ai-sdk/provider-utils@npm:4.0.27":
+  version: 4.0.27
+  resolution: "@ai-sdk/provider-utils@npm:4.0.27"
+  dependencies:
+    "@ai-sdk/provider": "npm:3.0.10"
+    "@standard-schema/spec": "npm:^1.1.0"
+    eventsource-parser: "npm:^3.0.8"
+  peerDependencies:
+    zod: ^3.25.76 || ^4.1.8
+  checksum: 10c0/2202dedcbe8f58883ef37425111392c6b5b5c2f85dfbbd11b13173e9d349da3d977ba610586c4b5412720e07b09f63ba0e88dbc6e21f043441a67f6d51225020
+  languageName: node
+  linkType: hard
+
+"@ai-sdk/provider@npm:3.0.10":
+  version: 3.0.10
+  resolution: "@ai-sdk/provider@npm:3.0.10"
+  dependencies:
+    json-schema: "npm:^0.4.0"
+  checksum: 10c0/c9b162165c3fd4684e4f7a1c041db3ad75785c841d904bac577006b7b2299d1b465557b1d32e3f59b6d8536a0ef5741b195aad86fc3e0e1d2a39f077062a83c4
+  languageName: node
+  linkType: hard
+
 "@ampproject/remapping@npm:^2.2.0":
   version: 2.3.0
   resolution: "@ampproject/remapping@npm:2.3.0"
@@ -1521,6 +1556,64 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@code-dot-org/ai-trainer-lab@workspace:*, @code-dot-org/ai-trainer-lab@workspace:packages/labs/ai-trainer":
+  version: 0.0.0-use.local
+  resolution: "@code-dot-org/ai-trainer-lab@workspace:packages/labs/ai-trainer"
+  dependencies:
+    "@code-dot-org/blockly-workspace": "workspace:*"
+    "@code-dot-org/core": "workspace:*"
+    "@code-dot-org/lab": "workspace:*"
+    "@code-dot-org/lint-config": "workspace:*"
+    "@testing-library/react": "catalog:"
+    "@types/node": "catalog:"
+    "@types/react": "npm:^19.2.5"
+    "@types/react-dom": "npm:^19.2.3"
+    "@vitejs/plugin-react": "catalog:"
+    eslint: "catalog:"
+    jsdom: "npm:^26.0.0"
+    prettier: "catalog:"
+    react: "npm:^19.2.0"
+    react-dom: "npm:^19.2.0"
+    typescript: "catalog:"
+    vite: "catalog:"
+    vite-plugin-css-injected-by-js: "npm:^3.5.2"
+    vite-plugin-dts: "catalog:"
+    vite-plugin-externalize-deps: "catalog:"
+    vitest: "npm:^4.0.17"
+    zod: "npm:^4.3.6"
+  peerDependencies:
+    react: ^17.0.0 || ^18.0.0 || ^19.0.0
+    react-dom: ^17.0.0 || ^18.0.0 || ^19.0.0
+  languageName: unknown
+  linkType: soft
+
+"@code-dot-org/ai-tutor@workspace:*, @code-dot-org/ai-tutor@workspace:packages/ai-tutor":
+  version: 0.0.0-use.local
+  resolution: "@code-dot-org/ai-tutor@workspace:packages/ai-tutor"
+  dependencies:
+    "@code-dot-org/lint-config": "workspace:*"
+    "@types/node": "catalog:"
+    "@types/react": "npm:^19.2.5"
+    "@types/react-dom": "npm:^19.2.3"
+    "@vitejs/plugin-react": "catalog:"
+    ai: "npm:^6.0.73"
+    eslint: "catalog:"
+    markdown-to-jsx: "npm:^7.4.7"
+    prettier: "catalog:"
+    react: "npm:^19.2.0"
+    react-dom: "npm:^19.2.0"
+    typescript: "catalog:"
+    vite: "catalog:"
+    vite-plugin-css-injected-by-js: "npm:^3.5.2"
+    vite-plugin-dts: "catalog:"
+    vite-plugin-externalize-deps: "catalog:"
+    vitest: "npm:^4.0.17"
+  peerDependencies:
+    react: ^17.0.0 || ^18.0.0 || ^19.0.0
+    react-dom: ^17.0.0 || ^18.0.0 || ^19.0.0
+  languageName: unknown
+  linkType: soft
+
 "@code-dot-org/blockly-workspace@workspace:*, @code-dot-org/blockly-workspace@workspace:packages/blockly-workspace":
   version: 0.0.0-use.local
   resolution: "@code-dot-org/blockly-workspace@workspace:packages/blockly-workspace"
@@ -1714,6 +1807,37 @@ __metadata:
     ky: ^1.14.3
     react: ^18.0.0 || ^19.0.0
     uuid: ">=8.3.2"
+  languageName: unknown
+  linkType: soft
+
+"@code-dot-org/datasci-lab@workspace:*, @code-dot-org/datasci-lab@workspace:packages/labs/datasci":
+  version: 0.0.0-use.local
+  resolution: "@code-dot-org/datasci-lab@workspace:packages/labs/datasci"
+  dependencies:
+    "@code-dot-org/blockly-workspace": "workspace:*"
+    "@code-dot-org/core": "workspace:*"
+    "@code-dot-org/lab": "workspace:*"
+    "@code-dot-org/lint-config": "workspace:*"
+    "@testing-library/react": "catalog:"
+    "@types/node": "catalog:"
+    "@types/react": "npm:^19.2.5"
+    "@types/react-dom": "npm:^19.2.3"
+    "@vitejs/plugin-react": "catalog:"
+    eslint: "catalog:"
+    jsdom: "npm:^26.0.0"
+    prettier: "catalog:"
+    react: "npm:^19.2.0"
+    react-dom: "npm:^19.2.0"
+    typescript: "catalog:"
+    vite: "catalog:"
+    vite-plugin-css-injected-by-js: "npm:^3.5.2"
+    vite-plugin-dts: "catalog:"
+    vite-plugin-externalize-deps: "catalog:"
+    vitest: "npm:^4.0.17"
+    zod: "npm:^4.3.6"
+  peerDependencies:
+    react: ^17.0.0 || ^18.0.0 || ^19.0.0
+    react-dom: ^17.0.0 || ^18.0.0 || ^19.0.0
   languageName: unknown
   linkType: soft
 
@@ -2152,9 +2276,12 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@code-dot-org/studio@workspace:apps/studio"
   dependencies:
+    "@code-dot-org/ai-trainer-lab": "workspace:*"
+    "@code-dot-org/ai-tutor": "workspace:*"
     "@code-dot-org/component-library": "workspace:*"
     "@code-dot-org/component-library-styles": "workspace:*"
     "@code-dot-org/core": "workspace:*"
+    "@code-dot-org/datasci-lab": "workspace:*"
     "@code-dot-org/fonts": "workspace:*"
     "@code-dot-org/lab": "workspace:*"
     "@code-dot-org/lint-config": "workspace:*"
@@ -5051,6 +5178,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@opentelemetry/api@npm:^1.9.0":
+  version: 1.9.1
+  resolution: "@opentelemetry/api@npm:1.9.1"
+  checksum: 10c0/c608485fc8b5a91e1f7e05e843b45b509307456b31cd2ad365933d90813e40ebfedf179f1451c762037e82d7c76aa8500e95d2da3609f640a1206cde5322cd14
+  languageName: node
+  linkType: hard
+
 "@parcel/watcher-android-arm64@npm:2.5.0":
   version: 2.5.0
   resolution: "@parcel/watcher-android-arm64@npm:2.5.0"
@@ -5936,7 +6070,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@standard-schema/spec@npm:^1.0.0":
+"@standard-schema/spec@npm:^1.0.0, @standard-schema/spec@npm:^1.1.0":
   version: 1.1.0
   resolution: "@standard-schema/spec@npm:1.1.0"
   checksum: 10c0/d90f55acde4b2deb983529c87e8025fa693de1a5e8b49ecc6eb84d1fd96328add0e03d7d551442156c7432fd78165b2c26ff561b970a9a881f046abb78d6a526
@@ -8542,6 +8676,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@vercel/oidc@npm:3.2.0":
+  version: 3.2.0
+  resolution: "@vercel/oidc@npm:3.2.0"
+  checksum: 10c0/98318d3236f58c296616c8c2e1655b268c7bf58525bcd985adac7af6d900e05fc610f6f03ce2ff4bdcd3df7885a40c0ca44fdc761f122dcfe15a78c2756b0243
+  languageName: node
+  linkType: hard
+
 "@vimeo/player@npm:2.29.0":
   version: 2.29.0
   resolution: "@vimeo/player@npm:2.29.0"
@@ -9265,6 +9406,20 @@ __metadata:
   languageName: node
   linkType: hard
 
+"ai@npm:^6.0.73":
+  version: 6.0.180
+  resolution: "ai@npm:6.0.180"
+  dependencies:
+    "@ai-sdk/gateway": "npm:3.0.114"
+    "@ai-sdk/provider": "npm:3.0.10"
+    "@ai-sdk/provider-utils": "npm:4.0.27"
+    "@opentelemetry/api": "npm:^1.9.0"
+  peerDependencies:
+    zod: ^3.25.76 || ^4.1.8
+  checksum: 10c0/78dbd27926fb350dd393bb8310a7f694452d0b35ad107ea193887095a46bb310e29bd7980468411460fbd8d5d8a2ad39556c6f03857d0d54ac7ba24f1ac78874
+  languageName: node
+  linkType: hard
+
 "ajv-draft-04@npm:~1.0.0":
   version: 1.0.0
   resolution: "ajv-draft-04@npm:1.0.0"
@@ -9325,7 +9480,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"ajv@npm:^6.12.4, ajv@npm:^6.12.5":
+"ajv@npm:^6.12.4":
   version: 6.12.6
   resolution: "ajv@npm:6.12.6"
   dependencies:
@@ -9337,7 +9492,19 @@ __metadata:
   languageName: node
   linkType: hard
 
-"ajv@npm:^8.0.0, ajv@npm:^8.0.1, ajv@npm:^8.10.0, ajv@npm:^8.11.0, ajv@npm:^8.9.0":
+"ajv@npm:^6.12.5":
+  version: 6.15.0
+  resolution: "ajv@npm:6.15.0"
+  dependencies:
+    fast-deep-equal: "npm:^3.1.1"
+    fast-json-stable-stringify: "npm:^2.0.0"
+    json-schema-traverse: "npm:^0.4.1"
+    uri-js: "npm:^4.2.2"
+  checksum: 10c0/67966499dd272ecde1c2e467084411132891523d057487587879d39ac04207f4351b7b2324c83198013967fbfa632c1612adc960114a30770fbe07a0773b32c2
+  languageName: node
+  linkType: hard
+
+"ajv@npm:^8.0.0, ajv@npm:^8.0.1, ajv@npm:^8.10.0, ajv@npm:^8.11.0":
   version: 8.17.1
   resolution: "ajv@npm:8.17.1"
   dependencies:
@@ -9346,6 +9513,18 @@ __metadata:
     json-schema-traverse: "npm:^1.0.0"
     require-from-string: "npm:^2.0.2"
   checksum: 10c0/ec3ba10a573c6b60f94639ffc53526275917a2df6810e4ab5a6b959d87459f9ef3f00d5e7865b82677cb7d21590355b34da14d1d0b9c32d75f95a187e76fff35
+  languageName: node
+  linkType: hard
+
+"ajv@npm:^8.9.0":
+  version: 8.20.0
+  resolution: "ajv@npm:8.20.0"
+  dependencies:
+    fast-deep-equal: "npm:^3.1.3"
+    fast-uri: "npm:^3.0.1"
+    json-schema-traverse: "npm:^1.0.0"
+    require-from-string: "npm:^2.0.2"
+  checksum: 10c0/5df9a1c8f83863cde1bd3a9ddb426f599718f88e3dc9153616c79fb28e0be455335830d7f21d745576519f057b371352daa31047b6a33d7036fe08777d60cf2a
   languageName: node
   linkType: hard
 
@@ -13473,6 +13652,13 @@ __metadata:
   version: 3.3.0
   resolution: "events@npm:3.3.0"
   checksum: 10c0/d6b6f2adbccbcda74ddbab52ed07db727ef52e31a61ed26db9feb7dc62af7fc8e060defa65e5f8af9449b86b52cc1a1f6a79f2eafcf4e62add2b7a1fa4a432f6
+  languageName: node
+  linkType: hard
+
+"eventsource-parser@npm:^3.0.8":
+  version: 3.0.8
+  resolution: "eventsource-parser@npm:3.0.8"
+  checksum: 10c0/3a73eee85311f33b12fa558381a477c1bdcf8c024a429a9d48f87b043e328c26d24ed280fd7ca92e2fdd4c8c37f749b758420c1533778aaca2beabf895024efa
   languageName: node
   linkType: hard
 
@@ -17764,6 +17950,13 @@ __metadata:
   version: 1.0.0
   resolution: "json-schema-traverse@npm:1.0.0"
   checksum: 10c0/71e30015d7f3d6dc1c316d6298047c8ef98a06d31ad064919976583eb61e1018a60a0067338f0f79cabc00d84af3fcc489bd48ce8a46ea165d9541ba17fb30c6
+  languageName: node
+  linkType: hard
+
+"json-schema@npm:^0.4.0":
+  version: 0.4.0
+  resolution: "json-schema@npm:0.4.0"
+  checksum: 10c0/d4a637ec1d83544857c1c163232f3da46912e971d5bf054ba44fdb88f07d8d359a462b4aec46f2745efbc57053365608d88bc1d7b1729f7b4fc3369765639ed3
   languageName: node
   linkType: hard
 
@@ -22488,14 +22681,14 @@ __metadata:
   linkType: hard
 
 "schema-utils@npm:^4.0.0":
-  version: 4.2.0
-  resolution: "schema-utils@npm:4.2.0"
+  version: 4.3.3
+  resolution: "schema-utils@npm:4.3.3"
   dependencies:
     "@types/json-schema": "npm:^7.0.9"
     ajv: "npm:^8.9.0"
     ajv-formats: "npm:^2.1.1"
     ajv-keywords: "npm:^5.1.0"
-  checksum: 10c0/8dab7e7800316387fd8569870b4b668cfcecf95ac551e369ea799bbcbfb63fb0365366d4b59f64822c9f7904d8c5afcfaf5a6124a4b08783e558cd25f299a6b4
+  checksum: 10c0/1c8d2c480a026d7c02ab2ecbe5919133a096d6a721a3f201fa50663e4f30f6d6ba020dfddd93cb828b66b922e76b342e103edd19a62c95c8f60e9079cc403202
   languageName: node
   linkType: hard
 

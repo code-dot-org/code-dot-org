@@ -20,8 +20,12 @@ import {
 
 import CdoLogo from '@/config/brand/assets/cdo-logo-inverse.webp';
 import Bootstrap from '@/modules/bootstrap';
+import {createRootStubApiClient} from '@/modules/labs/router/rootLabApiClient';
 
-const api = bootstrapApiClient();
+// Wrap the real api with a fallback stub for `level_properties` + `app_options`
+// on lab edit routes. Lets the prototype run standalone (no live Rails) — see
+// rootLabApiClient.ts for the URL detection logic.
+const api = createRootStubApiClient(bootstrapApiClient());
 
 const SIGNED_OUT_MENU_ITEMS = [
   {label: 'Learn', href: '/students'},

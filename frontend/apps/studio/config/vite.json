@@ -5,7 +5,7 @@
     "watchAdditionalPaths": [],
     "autoBuild": false,
     "publicDir": "dist",
-    "publicOutputDir": "frontend-studio"
+    "publicOutputDir": "app"
   },
   "development": {
     "host": "0.0.0.0",

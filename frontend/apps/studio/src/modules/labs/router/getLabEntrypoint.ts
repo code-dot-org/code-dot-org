@@ -16,6 +16,8 @@ const LabEntrypoints: LabEntrypointMap = {
   ['standalone-video']: lazy(
     () => import('@code-dot-org/standalone-video-lab'),
   ),
+  ['datasci']: lazy(() => import('@code-dot-org/datasci-lab')),
+  ['ai-trainer']: lazy(() => import('@code-dot-org/ai-trainer-lab')),
 };
 
 /**

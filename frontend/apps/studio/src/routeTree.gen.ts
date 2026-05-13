@@ -10,11 +10,17 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as GuidedLessonLessonIdRouteImport } from './routes/guided-lesson/$lessonId'
 import { Route as ProjectsLabTypeChannelIdEditRouteImport } from './routes/projects/$labType/$channelId/edit'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const GuidedLessonLessonIdRoute = GuidedLessonLessonIdRouteImport.update({
+  id: '/guided-lesson/$lessonId',
+  path: '/guided-lesson/$lessonId',
   getParentRoute: () => rootRouteImport,
 } as any)
 const ProjectsLabTypeChannelIdEditRoute =
@@ -26,27 +32,38 @@ const ProjectsLabTypeChannelIdEditRoute =
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/guided-lesson/$lessonId': typeof GuidedLessonLessonIdRoute
   '/projects/$labType/$channelId/edit': typeof ProjectsLabTypeChannelIdEditRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/guided-lesson/$lessonId': typeof GuidedLessonLessonIdRoute
   '/projects/$labType/$channelId/edit': typeof ProjectsLabTypeChannelIdEditRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/guided-lesson/$lessonId': typeof GuidedLessonLessonIdRoute
   '/projects/$labType/$channelId/edit': typeof ProjectsLabTypeChannelIdEditRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/projects/$labType/$channelId/edit'
+  fullPaths:
+    | '/'
+    | '/guided-lesson/$lessonId'
+    | '/projects/$labType/$channelId/edit'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/projects/$labType/$channelId/edit'
-  id: '__root__' | '/' | '/projects/$labType/$channelId/edit'
+  to: '/' | '/guided-lesson/$lessonId' | '/projects/$labType/$channelId/edit'
+  id:
+    | '__root__'
+    | '/'
+    | '/guided-lesson/$lessonId'
+    | '/projects/$labType/$channelId/edit'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  GuidedLessonLessonIdRoute: typeof GuidedLessonLessonIdRoute
   ProjectsLabTypeChannelIdEditRoute: typeof ProjectsLabTypeChannelIdEditRoute
 }
 
@@ -57,6 +74,13 @@ declare module '@tanstack/react-router' {
       path: '/'
       fullPath: '/'
       preLoaderRoute: typeof IndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/guided-lesson/$lessonId': {
+      id: '/guided-lesson/$lessonId'
+      path: '/guided-lesson/$lessonId'
+      fullPath: '/guided-lesson/$lessonId'
+      preLoaderRoute: typeof GuidedLessonLessonIdRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/projects/$labType/$channelId/edit': {
@@ -71,6 +95,7 @@ declare module '@tanstack/react-router' {
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  GuidedLessonLessonIdRoute: GuidedLessonLessonIdRoute,
   ProjectsLabTypeChannelIdEditRoute: ProjectsLabTypeChannelIdEditRoute,
 }
 export const routeTree = rootRouteImport
