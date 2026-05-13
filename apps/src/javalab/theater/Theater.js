@@ -85,10 +85,18 @@ export default class Theater {
   }
 
   resetAudioAndVideo() {
+    // Under lab2 the theater visualization DOM may already be unmounted by
+    // the time onStop() fires (e.g., navigating from a theater level to a
+    // console level). Guard against that.
     const audioElement = this.getAudioElement();
-    audioElement.pause();
-    audioElement.src = '';
-    this.getImgElement().src = '';
+    if (audioElement) {
+      audioElement.pause();
+      audioElement.src = '';
+    }
+    const imgElement = this.getImgElement();
+    if (imgElement) {
+      imgElement.src = '';
+    }
     this.hasAudio = false;
   }
 
