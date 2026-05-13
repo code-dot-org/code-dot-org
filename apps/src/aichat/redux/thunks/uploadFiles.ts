@@ -11,21 +11,30 @@ import {
   clearStagedFilesAlert,
   stagedFilesLimitExceeded,
   stagedFileUploadFinished,
+  updateStagedFileAsset,
 } from '../slice';
 
 import {sendAnalytics} from './sendAnalytics';
+
+interface LevelAssetUploadResponse {
+  uuidFilename?: string;
+}
 
 export const uploadFiles = createAppAsyncThunk<
   void,
   {
     files: File[];
     buildAssetUrl: (asset: ChatAsset) => string;
+    inlineOnly?: boolean;
     /** Callback invoked when an upload finishes. If provided, the in-chat alert UI will be hidden for non-successful uploads. */
     onUploadFinished?: (status: UploadStatus) => void;
   }
 >(
   'aichat/uploadFiles',
-  async ({files, buildAssetUrl, onUploadFinished}, {dispatch, getState}) => {
+  async (
+    {files, buildAssetUrl, inlineOnly, onUploadFinished},
+    {dispatch, getState}
+  ) => {
     const notifyUploadFinished = (key: string, status: UploadStatus) => {
       dispatch(
         stagedFileUploadFinished({key, status, hideAlert: !!onUploadFinished})
@@ -51,6 +60,63 @@ export const uploadFiles = createAppAsyncThunk<
         {filename: file.name, source: AssetSource.PROJECT},
         file,
       ]);
+
+    if (inlineOnly) {
+      let uploadSuccessCount = 0;
+      let sizeLimitExceededCount = 0;
+      let imageFlaggedCount = 0;
+      let fileCountPdf = 0;
+      let fileCountImage = 0;
+
+      for (const [key, asset, file] of allowedFiles) {
+        if (file.size > MAX_FILE_SIZE_MB * 1024 * 1024) {
+          sizeLimitExceededCount += 1;
+          notifyUploadFinished(key, 'sizeLimitExceeded');
+          continue;
+        }
+
+        if (file.name.endsWith('.pdf')) {
+          fileCountPdf += 1;
+        } else {
+          const moderationResult = await moderateImage(file, 'aichat', {});
+          if (moderationResult === 'flagged') {
+            imageFlaggedCount += 1;
+            notifyUploadFinished(key, 'imageFileFlagged');
+            continue;
+          }
+          fileCountImage += 1;
+        }
+
+        const inlineDataBase64 = await fileToBase64(file);
+        dispatch(
+          addStagedFile({
+            key,
+            asset: {
+              ...asset,
+              inlineDataBase64,
+              mimeType: file.type,
+            },
+            loaded: true,
+          })
+        );
+        uploadSuccessCount += 1;
+        notifyUploadFinished(key, 'uploaded');
+      }
+
+      dispatch(
+        sendAnalytics(EVENTS.AICHAT_MULTIMODAL_UPLOAD_STAGED, {
+          source: AssetSource.PROJECT,
+          fileCountSuccess: uploadSuccessCount,
+          fileCountFailureSizeLimitExceeded: sizeLimitExceededCount,
+          fileCountFailureUnknownCause: 0,
+          fileCountFailureNumberExceeded: Math.max(excessFileCount, 0),
+          imageFlaggedNotStagedCount: imageFlaggedCount,
+          fileCountImage,
+          fileCountPdf,
+        })
+      );
+      return;
+    }
 
     for (const [key, asset] of allowedFiles) {
       dispatch(addStagedFile({key, asset}));
@@ -82,7 +148,31 @@ export const uploadFiles = createAppAsyncThunk<
       }
 
       try {
-        await HttpClient.put(buildAssetUrl(asset), file);
+        const uploadUrl = buildAssetUrl(asset);
+        if (uploadUrl.includes('/level_starter_assets/')) {
+          const bodyData = new FormData();
+          bodyData.append('files[]', file);
+          const response = await HttpClient.post(uploadUrl, bodyData, true);
+          let uploadResponse: LevelAssetUploadResponse | undefined;
+          try {
+            uploadResponse = (await response.json()) as LevelAssetUploadResponse;
+          } catch {
+            uploadResponse = undefined;
+          }
+          dispatch(
+            updateStagedFileAsset({
+              key,
+              asset: {
+                filename: uploadResponse?.uuidFilename || file.name,
+                source: uploadResponse?.uuidFilename
+                  ? AssetSource.LEVEL_UUID
+                  : AssetSource.LEVEL,
+              },
+            })
+          );
+        } else {
+          await HttpClient.put(uploadUrl, file);
+        }
         uploadSuccessCount += 1;
         notifyUploadFinished(key, 'uploaded');
       } catch (error) {
@@ -118,3 +208,24 @@ export const uploadFiles = createAppAsyncThunk<
     );
   }
 );
+
+const fileToBase64 = async (file: File): Promise<string> => {
+  return await new Promise<string>((resolve, reject) => {
+    const reader = new FileReader();
+    reader.onload = () => {
+      const result = reader.result;
+      if (typeof result !== 'string') {
+        reject(new Error('Failed to read file as data URL.'));
+        return;
+      }
+      const base64 = result.split(',')[1];
+      if (!base64) {
+        reject(new Error('Failed to parse base64 data from data URL.'));
+        return;
+      }
+      resolve(base64);
+    };
+    reader.onerror = () => reject(new Error('Failed to read file.'));
+    reader.readAsDataURL(file);
+  });
+};

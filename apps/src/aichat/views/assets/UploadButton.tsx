@@ -20,6 +20,7 @@ export interface UploadButtonProps {
   acceptedFileTypes: string[];
   hasStarterAssets?: boolean;
   showLabel?: boolean;
+  inlineOnly?: boolean;
 }
 
 const UploadButton: React.FC<UploadButtonProps> = ({
@@ -29,6 +30,7 @@ const UploadButton: React.FC<UploadButtonProps> = ({
   acceptedFileTypes,
   hasStarterAssets = false,
   showLabel = true,
+  inlineOnly = false,
 }) => {
   const dispatch = useAppDispatch();
   const numStagedFiles = useAppSelector(
@@ -42,7 +44,9 @@ const UploadButton: React.FC<UploadButtonProps> = ({
     if (!files) {
       return;
     }
-    dispatch(uploadFiles({files: Array.from(files), buildAssetUrl}));
+    dispatch(
+      uploadFiles({files: Array.from(files), buildAssetUrl, inlineOnly})
+    );
   };
 
   const onSelectStarterAssets = (assets: AssetData[]) => {

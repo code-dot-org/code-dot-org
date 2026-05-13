@@ -179,6 +179,16 @@ const aichatSlice = createSlice({
         }
       }
     },
+    updateStagedFileAsset(
+      state,
+      action: PayloadAction<{key: string; asset: ChatAsset}>
+    ) {
+      const {key, asset} = action.payload;
+      const fileIndex = state.stagedFiles.findIndex(file => file.key === key);
+      if (fileIndex !== -1) {
+        state.stagedFiles[fileIndex].asset = asset;
+      }
+    },
     stagedFilesLimitExceeded(state) {
       state.stagedFilesAlert = 'fileLimitExceeded';
     },
@@ -262,6 +272,7 @@ export const {
   setClientType,
   addStagedFile,
   stagedFileUploadFinished,
+  updateStagedFileAsset,
   removeStagedFile,
   clearStagedFiles,
   stagedFilesLimitExceeded,

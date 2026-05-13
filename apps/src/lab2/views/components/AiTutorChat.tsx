@@ -37,6 +37,7 @@ interface AiTutorChatProps {
   aiTutorChatButtonData?: ChatButtonData[];
   aiTutorSystemPrompt?: string;
   aiTutorResponseSchemaSettings?: ResponseSchemaSettings;
+  hasStarterAssets?: boolean;
   hasInstructionsDrawer?: boolean;
   tutorVideos?: JsonVideoFileMetadata[];
   isLessonDeepDive?: boolean;
@@ -53,6 +54,7 @@ const AiTutorChat: React.FunctionComponent<AiTutorChatProps> = ({
   aiTutorChatButtonData,
   aiTutorSystemPrompt,
   aiTutorResponseSchemaSettings,
+  hasStarterAssets,
   hasInstructionsDrawer,
   tutorVideos,
   isLessonDeepDive = false,
@@ -149,6 +151,7 @@ const AiTutorChat: React.FunctionComponent<AiTutorChatProps> = ({
         channelId={channelId}
         hideModelChangeMessage={true}
         responseCallback={aiTutorResponseSchemaSettings?.responseCallback}
+        hasStarterAssets={hasStarterAssets}
         hasInstructionsDrawer={hasInstructionsDrawer}
         lessonId={lessonId}
         disabledState={disabledState}

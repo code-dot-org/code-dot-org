@@ -2,6 +2,8 @@
 export interface ChatAsset {
   filename: string;
   source: AssetSource;
+  inlineDataBase64?: string;
+  mimeType?: string;
 }
 
 export enum AssetSource {

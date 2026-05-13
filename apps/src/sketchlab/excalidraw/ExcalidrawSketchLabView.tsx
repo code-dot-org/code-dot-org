@@ -19,6 +19,7 @@ import React, {useEffect, useCallback, useRef, useState, useMemo} from 'react';
 import DCDO from '@cdo/apps/dcdo';
 import useLevelEditMode from '@cdo/apps/lab2/hooks/useLevelEditMode';
 import useThemeSetting from '@cdo/apps/lab2/hooks/useThemeSetting';
+import {getIsStartMode} from '@cdo/apps/lab2/projects/utils';
 import {useVerticalLayout} from '@cdo/apps/lab2/hooks/useVerticalLayout';
 import {isReadOnlyWorkspace} from '@cdo/apps/lab2/redux/lab2ReduxSelectors';
 import {setHasRun} from '@cdo/apps/lab2/redux/systemRedux';
@@ -40,6 +41,9 @@ import {commonI18n} from '@cdo/apps/types/locale';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 import useSketchlabTour from './introTour/useSketchlabTour';
+import {AiTutorSketchLabContextHelper} from '../helpers/aiTutorContextHelper';
+import {useAiTutorResponseSchemaSettings} from '../hooks/useAiTutorResponseSchemaSettings';
+import {sketchLabStarterSourceSystemPrompt} from '../prompts/starterSourceSystemPrompt';
 import {
   handleSaveToBackpack,
   generateNewExternalFiles,
@@ -60,6 +64,7 @@ const MIN_WORKSPACE_WIDTH = 400;
 const INITIAL_WORKSPACE_WIDTH = 800;
 
 const DEBOUNCED_WORKSPACE_SERIALIZATION_MS = 200;
+const aiTutorHelper = new AiTutorSketchLabContextHelper();
 
 export const DEFAULT_SOURCES = {source: {}};
 
@@ -88,6 +93,11 @@ const ExcalidrawSketchLabView: React.FC<LabProps<LevelProperties>> = ({
   >({});
 
   const readonlyWorkspace = useAppSelector(isReadOnlyWorkspace);
+  const isLevelbuilder = useAppSelector(state => state.currentUser.isLevelbuilder);
+  const enableStartSourceGeneration = isLevelbuilder && getIsStartMode();
+  const resourcePanelLevelProperties = enableStartSourceGeneration
+    ? {...levelProperties, aiTutorAvailable: true}
+    : levelProperties;
 
   const onClickStartOver = useCallback(() => {
     showStartOverDialog('custom', commonI18n.startOverGeneric());
@@ -325,6 +335,21 @@ const ExcalidrawSketchLabView: React.FC<LabProps<LevelProperties>> = ({
     };
   }, [dispatch]);
 
+  useEffect(() => {
+    aiTutorHelper.setAiTutorContext({
+      sources: currentSources,
+      longInstructions: levelProperties.longInstructions,
+      hasRun,
+    });
+  }, [currentSources, hasRun, levelProperties.longInstructions]);
+
+  const aiTutorResponseSchemaSettings = useAiTutorResponseSchemaSettings({
+    currentSources,
+    updateSources,
+    enableStartSourceGeneration,
+    onApplyStartSource: reinitializationHandler,
+  });
+
   useSketchlabTour({levelProperties});
 
   const teacherViewingStudent = Boolean(
@@ -336,11 +361,19 @@ const ExcalidrawSketchLabView: React.FC<LabProps<LevelProperties>> = ({
       <div className={moduleStyles.sketchlabContainer}>
         <div style={{width: leftPanelWidth}} className={panelClassName}>
           <ResourcePanel
-            levelProperties={levelProperties}
+            levelProperties={resourcePanelLevelProperties}
             isRunning={false}
             hasRun={hasRun}
             hasEdited={false}
             settings={[useThemeSetting('sketchlab')]}
+            hiddenContextCallback={aiTutorHelper.getHiddenContextCallback()}
+            aiTutorMultimodalEnabled={true}
+            aiTutorSystemPrompt={
+              enableStartSourceGeneration
+                ? sketchLabStarterSourceSystemPrompt
+                : undefined
+            }
+            aiTutorResponseSchemaSettings={aiTutorResponseSchemaSettings}
             versionHistoryProps={{
               startSources:
                 (levelProperties?.templateSources as ProjectSources) ||

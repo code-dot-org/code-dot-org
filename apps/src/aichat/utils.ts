@@ -25,15 +25,15 @@ export function getAssetUrl(
   }
 
   if (asset.source === 'level' && levelName) {
-    return `/level_starter_assets/${levelName}/${encodeURIComponent(
-      asset.filename
-    )}`;
+    return `/level_starter_assets/${encodeURIComponent(
+      levelName
+    )}/${encodeURIComponent(asset.filename)}`;
   }
 
   if (asset.source === 'level_uuid' && levelName) {
-    return `/level_starter_assets/${levelName}/uuid/${encodeURIComponent(
-      asset.filename
-    )}`;
+    return `/level_starter_assets/${encodeURIComponent(
+      levelName
+    )}/uuid/${encodeURIComponent(asset.filename)}`;
   }
 
   throw new Error(

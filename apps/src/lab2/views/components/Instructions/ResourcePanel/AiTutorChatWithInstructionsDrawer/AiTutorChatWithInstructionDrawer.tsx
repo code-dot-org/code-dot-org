@@ -21,6 +21,7 @@ interface AiTutorChatWithInstructionDrawerProps {
   aiTutorMultimodalEnabled?: boolean;
   levelName?: string;
   channelId?: string;
+  hasStarterAssets?: boolean;
   aiTutorChatButtonData?: ChatButtonData[];
   aiTutorSystemPrompt?: string;
   aiTutorResponseSchemaSettings?: ResponseSchemaSettings;
@@ -38,6 +39,7 @@ const AiTutorChatWithInstructionDrawer: React.FunctionComponent<
   aiTutorMultimodalEnabled,
   levelName,
   channelId,
+  hasStarterAssets,
   aiTutorChatButtonData,
   aiTutorSystemPrompt,
   aiTutorResponseSchemaSettings,
@@ -119,6 +121,7 @@ const AiTutorChatWithInstructionDrawer: React.FunctionComponent<
             aiTutorMultimodalEnabled={aiTutorMultimodalEnabled}
             levelName={levelName}
             channelId={channelId}
+            hasStarterAssets={hasStarterAssets}
             aiTutorChatButtonData={aiTutorChatButtonData}
             aiTutorSystemPrompt={aiTutorSystemPrompt}
             aiTutorResponseSchemaSettings={aiTutorResponseSchemaSettings}

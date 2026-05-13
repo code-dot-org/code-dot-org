@@ -8,6 +8,7 @@ import React, {useCallback, useEffect, useMemo, useState} from 'react';
 import useLevelEditMode from '@cdo/apps/lab2/hooks/useLevelEditMode';
 import useThemeSetting from '@cdo/apps/lab2/hooks/useThemeSetting';
 import {useVerticalLayout} from '@cdo/apps/lab2/hooks/useVerticalLayout';
+import {getIsStartMode} from '@cdo/apps/lab2/projects/utils';
 import {isReadOnlyWorkspace} from '@cdo/apps/lab2/redux/lab2ReduxSelectors';
 import {setHasRun} from '@cdo/apps/lab2/redux/systemRedux';
 import {
@@ -30,6 +31,9 @@ import {commonI18n} from '@cdo/apps/types/locale';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 import ReactFlowCanvas from './components/ReactFlowCanvas';
+import {AiTutorSketchLabContextHelper} from '../helpers/aiTutorContextHelper';
+import {useAiTutorResponseSchemaSettings} from '../hooks/useAiTutorResponseSchemaSettings';
+import {sketchLabStarterSourceSystemPrompt} from '../prompts/starterSourceSystemPrompt';
 import {ReactFlowSketchLabSources} from './types';
 import {
   convertExcalidrawToReactFlow,
@@ -42,6 +46,7 @@ import styles from './react-flow-sketch-lab-view.module.scss';
 export const REACT_FLOW_DEFAULT_SOURCES: ReactFlowSketchLabSources = {
   source: {nodes: [], edges: []},
 };
+const aiTutorHelper = new AiTutorSketchLabContextHelper();
 
 const MIN_INFO_PANEL_WIDTH = 250;
 const INITIAL_INFO_PANEL_WIDTH = 290;
@@ -59,6 +64,11 @@ function ReactFlowSketchLabViewInner({
   } = useSources<ReactFlowSketchLabSources>();
 
   const readonlyWorkspace = useAppSelector(isReadOnlyWorkspace);
+  const isLevelbuilder = useAppSelector(state => state.currentUser.isLevelbuilder);
+  const enableStartSourceGeneration = isLevelbuilder && getIsStartMode();
+  const resourcePanelLevelProperties = enableStartSourceGeneration
+    ? {...levelProperties, aiTutorAvailable: true}
+    : levelProperties;
 
   const hasRun = useAppSelector(state => state.lab2System.hasRun);
   const {theme} = useTheme();
@@ -108,6 +118,21 @@ function ReactFlowSketchLabViewInner({
       dispatch(setHasRun(false));
     };
   }, [dispatch]);
+
+  useEffect(() => {
+    aiTutorHelper.setAiTutorContext({
+      sources: currentSources,
+      longInstructions: levelProperties.longInstructions,
+      hasRun,
+    });
+  }, [currentSources, hasRun, levelProperties.longInstructions]);
+
+  const aiTutorResponseSchemaSettings = useAiTutorResponseSchemaSettings({
+    currentSources,
+    updateSources,
+    enableStartSourceGeneration,
+    onApplyStartSource: reinitializationHandler,
+  });
 
   const onClickStartOver = useCallback(() => {
     showStartOverDialog('custom', commonI18n.startOverGeneric());
@@ -227,11 +252,19 @@ function ReactFlowSketchLabViewInner({
       <div className={styles.sketchlabContainer}>
         <div style={{width: leftPanelWidth}} className={panelClassName}>
           <ResourcePanel
-            levelProperties={levelProperties}
+            levelProperties={resourcePanelLevelProperties}
             isRunning={false}
             hasRun={hasRun}
             hasEdited={false}
             settings={[useThemeSetting('sketchlab')]}
+            hiddenContextCallback={aiTutorHelper.getHiddenContextCallback()}
+            aiTutorMultimodalEnabled={true}
+            aiTutorSystemPrompt={
+              enableStartSourceGeneration
+                ? sketchLabStarterSourceSystemPrompt
+                : undefined
+            }
+            aiTutorResponseSchemaSettings={aiTutorResponseSchemaSettings}
             versionHistoryProps={{
               startSources:
                 (levelProperties?.templateSources as ProjectSources) ||

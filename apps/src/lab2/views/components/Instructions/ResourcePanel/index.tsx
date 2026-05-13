@@ -301,6 +301,9 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
         aiTutorMultimodalEnabled,
         levelName,
         channelId,
+        hasStarterAssets:
+          !!levelProperties.starterAssets &&
+          Object.keys(levelProperties.starterAssets).length > 0,
         aiTutorChatButtonData,
         aiTutorSystemPrompt,
         aiTutorResponseSchemaSettings,

@@ -46,6 +46,7 @@ interface UserChatMessageEditorProps {
   levelName?: UploadButtonProps['levelName'];
   buildAssetUrl?: UploadButtonProps['buildAssetUrl'];
   hasStarterAssets?: UploadButtonProps['hasStarterAssets'];
+  inlineOnly?: UploadButtonProps['inlineOnly'];
   chatDisabled?: boolean;
 }
 
@@ -67,6 +68,7 @@ const UserChatMessageEditor: React.FunctionComponent<
   lessonId,
   levelName,
   hasStarterAssets,
+  inlineOnly,
   buildAssetUrl,
   uploadDisabled,
   chatDisabled,
@@ -185,9 +187,9 @@ const UserChatMessageEditor: React.FunctionComponent<
         )
         .map(item => item.getAsFile())
         .filter(item => item !== null);
-      dispatch(uploadFiles({files, buildAssetUrl}));
+      dispatch(uploadFiles({files, buildAssetUrl, inlineOnly}));
     },
-    [canUploadFiles, buildAssetUrl, dispatch, acceptedFileTypes]
+    [canUploadFiles, buildAssetUrl, dispatch, acceptedFileTypes, inlineOnly]
   );
 
   const onSpeechToTextFinished = useCallback(
@@ -225,6 +227,7 @@ const UserChatMessageEditor: React.FunctionComponent<
               isDisabled={!!uploadDisabled || disabled}
               levelName={levelName}
               hasStarterAssets={hasStarterAssets}
+              inlineOnly={inlineOnly}
               buildAssetUrl={buildAssetUrl}
               acceptedFileTypes={acceptedFileTypes}
             />

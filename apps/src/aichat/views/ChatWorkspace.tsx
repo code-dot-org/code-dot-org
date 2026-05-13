@@ -122,10 +122,14 @@ const ChatWorkspace = forwardRef<ChatWorkspaceHandle, ChatWorkspaceProps>(
     const disabledMessage = disabledState?.disabledMessage;
     const disabledLink = disabledState?.disabledLink;
 
-    const canDisplayAssets = !!levelName && !!channelId;
+    const canDisplayAssets =
+      !!levelName &&
+      (!!channelId ||
+        hasStarterAssets ||
+        clientType === AiChatClientTypes.AI_TUTOR);
     if (multimodalEnabled && !canDisplayAssets) {
       console.warn(
-        'Multimodal support requires level name and channel ID. Asset uploads will not be available.'
+        'Multimodal support requires level name and either channel ID or starter assets. Asset uploads will not be available.'
       );
       multimodalEnabled = false;
     }
@@ -169,12 +173,23 @@ const ChatWorkspace = forwardRef<ChatWorkspaceHandle, ChatWorkspaceProps>(
 
     const canUploadAssets =
       supportsMultimodalInput && multimodalEnabled && canDisplayAssets;
+    // Upload assets first, then preview. Inline-only uploads are disabled.
+    const inlineAssetUploads = false;
 
     const buildAssetUrl = useCallback(
       (asset: ChatAsset) => {
+        if (
+          asset.source === 'project' &&
+          !channelId &&
+          levelName
+        ) {
+          // In start mode there may be no project channel. Route uploads to
+          // the canonical starter-assets upload endpoint.
+          return `/level_starter_assets/${encodeURIComponent(levelName)}`;
+        }
         return getAssetUrl(asset, channelId, levelName);
       },
-      [channelId, levelName]
+      [channelId, levelName, hasStarterAssets]
     );
 
     const dispatch = useAppDispatch();
@@ -358,11 +373,18 @@ const ChatWorkspace = forwardRef<ChatWorkspaceHandle, ChatWorkspaceProps>(
       () => ({
         addFiles: (files, onUploadFinished) => {
           if (canUploadAssets) {
-            dispatch(uploadFiles({files, buildAssetUrl, onUploadFinished}));
+            dispatch(
+              uploadFiles({
+                files,
+                buildAssetUrl,
+                inlineOnly: inlineAssetUploads,
+                onUploadFinished,
+              })
+            );
           }
         },
       }),
-      [canUploadAssets, dispatch, buildAssetUrl]
+      [canUploadAssets, dispatch, buildAssetUrl, inlineAssetUploads]
     );
 
     return (
@@ -407,6 +429,7 @@ const ChatWorkspace = forwardRef<ChatWorkspaceHandle, ChatWorkspaceProps>(
               responseCallback={responseCallback}
               levelName={levelName}
               hasStarterAssets={hasStarterAssets}
+              inlineOnly={inlineAssetUploads}
               buildAssetUrl={buildAssetUrlValue}
               logLevelActivity={logLevelActivity}
               uploadDisabled={uploadDisabled}
