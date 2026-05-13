@@ -1,4 +1,5 @@
 import Markdown from 'markdown-to-jsx';
+import {memo} from 'react';
 
 import {MARKDOWN_OPTIONS} from '@code-dot-org/ai-tutor';
 
@@ -154,4 +155,11 @@ function renderVisual(visual: StageVisual) {
   }
 }
 
-export default LessonStage;
+// Memoize so unrelated parent re-renders (e.g. `isChecking` flipping in
+// GuidedLesson while a lab solution check is in flight) don't cascade into
+// the lab subtree. `BlocklyWorkspace` reloads the workspace from
+// `startBlocks` on every ref change, and MusicLab builds that prop as an
+// inline `currentSources?.source || … || DefaultStartBlocks` — a new
+// reference each render. Without memo, a single `setIsChecking(true/false)`
+// pair wipes the student's blocks (when_run included).
+export default memo(LessonStage);
