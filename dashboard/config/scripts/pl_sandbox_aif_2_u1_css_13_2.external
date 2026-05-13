@@ -5,7 +5,7 @@ description 'description here'
 markdown <<MARKDOWN
 # Common CSS Properties
 
-####  CSS properties tell the computer how each HTML element should look and behave, including color, spacing, and layout that bring the page’s structure to life.
+CSS properties tell the computer how each HTML element should look and behave, including color, spacing, and layout that bring the page’s structure to life.
 
 <table style="width:100%; border-collapse:collapse; margin-bottom:24px; font-size:14pt;">
   <tr style="background:#f2f2f2;">
@@ -112,11 +112,11 @@ markdown <<MARKDOWN
 
 ## Remember you are just getting started.
 
-#### These are just a few properties to give you context. 
+These are just a few properties to give you context. 
 
-#### It’s not important yet to know how every line of code works, but to see the big picture and communicate clearly with the AI about what you want your page to do.
+It’s not important yet to know how every line of code works, but to see the big picture and communicate clearly with the AI about what you want your page to do.
 
-#### As you move into the next level, focus on **prompting the AI to produce the outcome you desire.** 
+As you move into the next level, focus on **prompting the AI to produce the outcome you desire.** 
 
 <div style="background-color: #B7E0E5; border-radius: 40px; color: #000000; width: 95%; padding: 1px 20px 1px 20px;">
 

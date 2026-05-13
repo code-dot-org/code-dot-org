@@ -5,9 +5,9 @@ description 'description here'
 markdown <<MARKDOWN
 # Teaching about Bias
 
-#### Discussing bias in AI can be complex and, at times, sensitive for students. These conversations are an important part of helping students think critically about technology and its impact, but they require thoughtful facilitation.
+Discussing bias in AI can be complex and, at times, sensitive for students. These conversations are an important part of helping students think critically about technology and its impact, but they require thoughtful facilitation.
 
-#### The following strategies can help guide these discussions in a way that is productive, inclusive, and grounded in learning.
+The following strategies can help guide these discussions in a way that is productive, inclusive, and grounded in learning.
 
 <div style="max-width:900px; margin:20px auto; font-family:ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial; color:#292F36;">
 
@@ -48,5 +48,5 @@ Support students in thinking about how AI tools are built and used. Reinforce ev
 </div>
 </div>
 
-#### Addressing questions or concerns about AI bias—from students, families, or colleagues—can be challenging. Using structured prompts or discussion supports can help guide these conversations, clarify key ideas, and create a shared understanding.
+Addressing questions or concerns about AI bias—from students, families, or colleagues—can be challenging. Using structured prompts or discussion supports can help guide these conversations, clarify key ideas, and create a shared understanding.
 MARKDOWN

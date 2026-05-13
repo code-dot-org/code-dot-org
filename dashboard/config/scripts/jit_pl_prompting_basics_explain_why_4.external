@@ -6,7 +6,7 @@ markdown <<MARKDOWN
 # "Explain why this is not working" 
 
 
-#### Take a look at the response to the full prompt:
+Take a look at the response to the full prompt:
 
 > #### *Explain why this code is not working in JavaScript, and walk me through the fix step by step.* 
 
@@ -26,11 +26,11 @@ markdown <<MARKDOWN
      
 ## Thinking critically
 
-#### It may take a little longer to phrase and read through, but asking AI to explain the error helps shift the focus from simply getting the answer to actually **understanding the problem.**
+It may take a little longer to phrase and read through, but asking AI to explain the error helps shift the focus from simply getting the answer to actually **understanding the problem.**
 
-#### With this prompt, AI walks through the reasoning **step by step**, showing what went wrong and how to fix it. This encourages students to slow down, think critically, and build the debugging habits they’ll need when AI isn’t available.
+With this prompt, AI walks through the reasoning **step by step**, showing what went wrong and how to fix it. This encourages students to slow down, think critically, and build the debugging habits they’ll need when AI isn’t available.
 
-#### In addition, it leaves room for the human to make the correction themselves to fully grasp the changes needed. 
+In addition, it leaves room for the human to make the correction themselves to fully grasp the changes needed. 
 
 
 <div style="background-color: #f3e5f5; padding: 10px; border-left: 5px solid #9c27b0; margin-bottom: 20px; font-size: 16px">
