@@ -9,7 +9,7 @@ RUN apt-get update && export DEBIAN_FRONTEND=noninteractive \
     && apt-get -y install --no-install-recommends libpq-dev \
         ffmpeg mupdf mupdf-tools libvips-dev poppler-utils \
         libxml2-dev sqlite3 imagemagick \
-        libmagickcore-dev python3-pip git-lfs mariadb-client
+        libmagickcore-dev pipx git-lfs mariadb-client
 
 RUN chown -R vscode:vscode /usr/local/rvm
 
@@ -39,8 +39,10 @@ RUN cd /tmp/rails \
     && bundle install \
     && rm -rf /tmp/rails
 
-# Install PDM
-RUN pip install --user pdm
+# Install PDM via pipx (Debian trixie's system Python is PEP 668-managed,
+# so a plain `pip install` is refused; pipx installs into a per-app venv
+# and links binaries into ~/.local/bin).
+RUN pipx install pdm
 
 # Instantiate Git LFS
 WORKDIR /workspaces
