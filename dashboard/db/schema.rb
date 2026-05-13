@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2026_05_13_121000) do
+ActiveRecord::Schema[7.0].define(version: 2026_05_13_123000) do
   create_table "activities", id: :integer, charset: "utf8mb3", collation: "utf8mb3_unicode_ci", force: :cascade do |t|
     t.integer "user_id"
     t.integer "level_id"
@@ -2450,6 +2450,18 @@ ActiveRecord::Schema[7.0].define(version: 2026_05_13_121000) do
     t.index ["user_id"], name: "index_survey_results_on_user_id"
   end
 
+  create_table "teacher_dashboard_note_layouts", charset: "utf8mb4", collation: "utf8mb4_unicode_ci", force: :cascade do |t|
+    t.bigint "teacher_dashboard_note_id", null: false
+    t.integer "teacher_id", null: false
+    t.integer "note_layout_column", default: 0, null: false
+    t.integer "note_position", default: 0, null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["teacher_dashboard_note_id", "teacher_id"], name: "index_teacher_note_layouts_unique", unique: true
+    t.index ["teacher_dashboard_note_id"], name: "index_teacher_note_layouts_on_note_id"
+    t.index ["teacher_id"], name: "index_teacher_note_layouts_on_teacher_id"
+  end
+
   create_table "teacher_dashboard_note_shared_sections", charset: "utf8mb4", collation: "utf8mb4_unicode_ci", force: :cascade do |t|
     t.bigint "teacher_dashboard_note_id", null: false
     t.integer "section_id", null: false
@@ -2475,6 +2487,8 @@ ActiveRecord::Schema[7.0].define(version: 2026_05_13_121000) do
     t.datetime "updated_at", null: false
     t.string "title"
     t.string "note_color", default: "white", null: false
+    t.integer "note_layout_column", default: 0, null: false
+    t.integer "note_position", default: 0, null: false
     t.index ["lesson_id"], name: "index_teacher_dashboard_notes_on_lesson_id"
     t.index ["section_id", "shared_with_section"], name: "idx_tdn_section_shared"
     t.index ["shareable_globally"], name: "idx_tdn_shareable_global"
@@ -2963,6 +2977,8 @@ ActiveRecord::Schema[7.0].define(version: 2026_05_13_121000) do
   add_foreign_key "student_work_evaluation_summaries", "student_work_evaluations"
   add_foreign_key "student_work_evaluation_summaries", "student_work_evaluations", column: "student_work_evaluation_summary_id"
   add_foreign_key "survey_results", "users"
+  add_foreign_key "teacher_dashboard_note_layouts", "teacher_dashboard_notes"
+  add_foreign_key "teacher_dashboard_note_layouts", "users", column: "teacher_id"
   add_foreign_key "teacher_dashboard_note_shared_sections", "sections"
   add_foreign_key "teacher_dashboard_note_shared_sections", "teacher_dashboard_notes"
   add_foreign_key "teacher_dashboard_notes", "scripts", column: "unit_id"

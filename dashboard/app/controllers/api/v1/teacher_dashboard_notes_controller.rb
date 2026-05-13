@@ -12,7 +12,7 @@ class Api::V1::TeacherDashboardNotesController < Api::V1::JSONApiController
       unit_id: unit_id,
       unit_group_id: params[:unit_group_id],
       lesson_id: params[:lesson_id]
-    )
+    ).includes(:teacher_dashboard_note_layouts)
 
     render json: {
       contexts: {
@@ -48,7 +48,7 @@ class Api::V1::TeacherDashboardNotesController < Api::V1::JSONApiController
     return head :not_found unless note
     return head :forbidden unless note.owner?(current_user)
 
-    attrs = normalized_note_params
+    attrs = normalized_note_params.except(:note_layout_column, :note_position)
     shared_section_ids = attrs.delete(:shared_section_ids)
     requested_lock_version = attrs[:lock_version]
     return head :bad_request if requested_lock_version.nil?
@@ -63,6 +63,29 @@ class Api::V1::TeacherDashboardNotesController < Api::V1::JSONApiController
       render json: serialize_note(note.reload)
     else
       render_bad_request(note)
+    end
+  end
+
+  def update_layout
+    note = TeacherDashboardNote.find_by(id: params[:id])
+    return head :not_found unless note
+    return head :forbidden unless note.visible_to?(current_user)
+
+    attrs = normalized_layout_params
+    unless attrs.key?(:note_layout_column) && attrs.key?(:note_position)
+      return head :bad_request
+    end
+
+    layout = TeacherDashboardNoteLayout.find_or_initialize_by(
+      teacher_dashboard_note: note,
+      teacher: current_user
+    )
+    layout.assign_attributes(attrs)
+
+    if layout.save
+      render json: serialize_note(note.reload)
+    else
+      render_bad_request(layout)
     end
   end
 
@@ -97,6 +120,10 @@ class Api::V1::TeacherDashboardNotesController < Api::V1::JSONApiController
       :body,
       :noteColor,
       :note_color,
+      :noteLayoutColumn,
+      :note_layout_column,
+      :notePosition,
+      :note_position,
       :contextType,
       :context_type,
       :unitGroupId,
@@ -118,12 +145,30 @@ class Api::V1::TeacherDashboardNotesController < Api::V1::JSONApiController
     )
   end
 
+  private def layout_params
+    root = params[:teacherDashboardNoteLayout] ||
+      params[:teacher_dashboard_note_layout] ||
+      params[:teacherDashboardNote] ||
+      params[:teacher_dashboard_note]
+    layout_parameters = root.respond_to?(:permit) ?
+      root :
+      ActionController::Parameters.new(root || {})
+    layout_parameters.permit(
+      :noteLayoutColumn,
+      :note_layout_column,
+      :notePosition,
+      :note_position
+    )
+  end
+
   private def normalized_note_params
     permitted = note_params
     {
       title: permitted[:title],
       body: permitted[:body],
       note_color: param_value(permitted, :noteColor, :note_color),
+      note_layout_column: optional_integer(param_value(permitted, :noteLayoutColumn, :note_layout_column)),
+      note_position: optional_integer(param_value(permitted, :notePosition, :note_position)),
       context_type: param_value(permitted, :contextType, :context_type),
       unit_group_id: optional_integer(param_value(permitted, :unitGroupId, :unit_group_id)),
       unit_id: optional_integer(param_value(permitted, :unitId, :unit_id)),
@@ -137,6 +182,14 @@ class Api::V1::TeacherDashboardNotesController < Api::V1::JSONApiController
       ),
       lock_version: param_value(permitted, :lockVersion, :lock_version),
       shared_section_ids: shared_section_ids_param(permitted),
+    }.compact
+  end
+
+  private def normalized_layout_params
+    permitted = layout_params
+    {
+      note_layout_column: optional_integer(param_value(permitted, :noteLayoutColumn, :note_layout_column)),
+      note_position: optional_integer(param_value(permitted, :notePosition, :note_position)),
     }.compact
   end
 

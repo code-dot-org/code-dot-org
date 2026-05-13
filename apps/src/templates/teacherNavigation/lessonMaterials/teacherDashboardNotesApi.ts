@@ -6,6 +6,7 @@ import HttpClient from '@cdo/apps/util/HttpClient';
 
 import {
   TeacherDashboardNote,
+  TeacherDashboardNoteLayoutPayload,
   TeacherDashboardNotePayload,
   TeacherDashboardNotesContexts,
   TeacherDashboardNotesResponse,
@@ -20,6 +21,9 @@ const jsonHeaders = async () => ({
 
 const noteBody = (payload: TeacherDashboardNotePayload) =>
   JSON.stringify({teacherDashboardNote: payload});
+
+const layoutBody = (payload: TeacherDashboardNoteLayoutPayload) =>
+  JSON.stringify({teacherDashboardNoteLayout: payload});
 
 export async function fetchTeacherDashboardNotes(
   contexts: TeacherDashboardNotesContexts
@@ -64,6 +68,21 @@ export async function updateTeacherDashboardNote(
       method: 'PATCH',
       headers: await jsonHeaders(),
       body: noteBody(payload),
+    }
+  );
+  return response.value;
+}
+
+export async function updateTeacherDashboardNoteLayout(
+  noteId: number,
+  payload: TeacherDashboardNoteLayoutPayload
+) {
+  const response = await HttpClient.fetchJson<TeacherDashboardNote>(
+    `${API_PATH}/${noteId}/layout`,
+    {
+      method: 'PATCH',
+      headers: await jsonHeaders(),
+      body: layoutBody(payload),
     }
   );
   return response.value;

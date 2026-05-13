@@ -97,4 +97,18 @@ class TeacherDashboardNoteTest < ActiveSupport::TestCase
 
     assert_empty TeacherDashboardNote.visible_on_page_for(unrelated_teacher, section: unrelated_section, unit_id: @unit.id)
   end
+
+  test 'note layout belongs to a teacher who can view the note' do
+    coteacher = create(:teacher)
+    @section.add_instructor(coteacher)
+    shared_note = create(:teacher_dashboard_note, :shared_with_section, teacher: @teacher, unit: @unit, section: @section)
+
+    assert build(:teacher_dashboard_note_layout, teacher_dashboard_note: shared_note, teacher: coteacher).valid?
+
+    unrelated_teacher = create(:teacher)
+    layout = build(:teacher_dashboard_note_layout, teacher_dashboard_note: shared_note, teacher: unrelated_teacher)
+
+    refute layout.valid?
+    assert_includes layout.errors[:teacher_dashboard_note_id], 'must be visible to the teacher'
+  end
 end

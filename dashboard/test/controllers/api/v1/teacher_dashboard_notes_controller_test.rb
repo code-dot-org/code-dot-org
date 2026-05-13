@@ -119,6 +119,53 @@ class Api::V1::TeacherDashboardNotesControllerTest < ActionDispatch::Integration
     assert_response :forbidden
   end
 
+  test 'coteacher can reorder a shared note with a personal layout' do
+    coteacher = create(:teacher)
+    @section.add_instructor(coteacher)
+    note = create(:teacher_dashboard_note, :shared_with_section, teacher: @teacher, unit: @unit, section: @section)
+    sign_in coteacher
+
+    assert_difference('TeacherDashboardNoteLayout.count') do
+      patch "#{API}/#{note.id}/layout", params: {teacherDashboardNoteLayout: {
+        noteLayoutColumn: 1,
+        notePosition: 3,
+      }}, as: :json
+    end
+    assert_response :success
+    assert_equal 1, parsed_response['noteLayoutColumn']
+    assert_equal 3, parsed_response['notePosition']
+
+    note.reload
+    assert_equal 0, note.note_layout_column
+    assert_equal 0, note.note_position
+
+    sign_in @teacher
+    get API, params: {section_id: @section.id, unit_id: @unit.id}
+    assert_response :success
+    assert_equal 0, parsed_response['notes'].first['noteLayoutColumn']
+    assert_equal 0, parsed_response['notes'].first['notePosition']
+
+    sign_in coteacher
+    get API, params: {section_id: @section.id, unit_id: @unit.id}
+    assert_response :success
+    assert_equal 1, parsed_response['notes'].first['noteLayoutColumn']
+    assert_equal 3, parsed_response['notes'].first['notePosition']
+  end
+
+  test 'unrelated teacher cannot reorder an invisible note' do
+    note = create(:teacher_dashboard_note, teacher: @teacher, unit: @unit)
+    other_teacher = create(:teacher)
+    sign_in other_teacher
+
+    patch "#{API}/#{note.id}/layout", params: {teacherDashboardNoteLayout: {
+      noteLayoutColumn: 1,
+      notePosition: 0,
+    }}, as: :json
+
+    assert_response :forbidden
+    assert_empty TeacherDashboardNoteLayout.where(teacher_dashboard_note: note, teacher: other_teacher)
+  end
+
   test 'owner can share an all-sections note with selected sections' do
     coteacher = create(:teacher)
     @section.add_instructor(coteacher)

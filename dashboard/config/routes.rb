@@ -1259,6 +1259,7 @@ Dashboard::Application.routes.draw do
 
     get '/dashboardapi/v1/teacher_dashboard_notes', to: 'api/v1/teacher_dashboard_notes#index', defaults: {format: 'json'}
     post '/dashboardapi/v1/teacher_dashboard_notes', to: 'api/v1/teacher_dashboard_notes#create', defaults: {format: 'json'}
+    patch '/dashboardapi/v1/teacher_dashboard_notes/:id/layout', to: 'api/v1/teacher_dashboard_notes#update_layout', defaults: {format: 'json'}
     patch '/dashboardapi/v1/teacher_dashboard_notes/:id', to: 'api/v1/teacher_dashboard_notes#update', defaults: {format: 'json'}
     delete '/dashboardapi/v1/teacher_dashboard_notes/:id', to: 'api/v1/teacher_dashboard_notes#destroy', defaults: {format: 'json'}
 

@@ -24,6 +24,8 @@ export interface TeacherDashboardNote {
   title?: string | null;
   body: string;
   noteColor: TeacherDashboardNoteColor;
+  noteLayoutColumn: number;
+  notePosition: number;
   contextType: TeacherDashboardNoteContextType;
   unitGroupId?: number | null;
   unitId?: number | null;
@@ -60,6 +62,8 @@ export interface TeacherDashboardNotePayload {
   title?: string | null;
   body: string;
   noteColor: TeacherDashboardNoteColor;
+  noteLayoutColumn: number;
+  notePosition: number;
   contextType: TeacherDashboardNoteContextType;
   unitGroupId?: number | null;
   unitId?: number | null;
@@ -69,6 +73,11 @@ export interface TeacherDashboardNotePayload {
   sharedSectionIds: number[];
   shareableGlobally: boolean;
   lockVersion?: number;
+}
+
+export interface TeacherDashboardNoteLayoutPayload {
+  noteLayoutColumn: number;
+  notePosition: number;
 }
 
 export interface TeacherDashboardNoteConflict {

@@ -2069,6 +2069,8 @@ FactoryBot.define do
     title {'Planning note'}
     body {'Remember to preview the unplugged option.'}
     note_color {'white'}
+    note_layout_column {0}
+    note_position {0}
     context_type {TeacherDashboardNote::UNIT}
     unit
 
@@ -2104,6 +2106,13 @@ FactoryBot.define do
     trait :shareable_globally do
       shareable_globally {true}
     end
+  end
+
+  factory :teacher_dashboard_note_layout do
+    association :teacher_dashboard_note
+    association :teacher
+    note_layout_column {0}
+    note_position {0}
   end
 
   factory :contact_rollups_raw do

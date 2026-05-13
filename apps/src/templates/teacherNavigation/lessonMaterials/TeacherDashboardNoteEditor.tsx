@@ -39,6 +39,8 @@ interface TeacherDashboardNoteEditorProps {
   sections: TeacherDashboardNoteSection[];
   lessonId?: number | null;
   lessonName?: string;
+  noteLayoutColumn?: number;
+  notePosition?: number;
   onSave: (payload: TeacherDashboardNotePayload) => Promise<void>;
   onCancel: () => void;
 }
@@ -63,6 +65,8 @@ const TeacherDashboardNoteEditor: React.FC<TeacherDashboardNoteEditorProps> = ({
   sections,
   lessonId,
   lessonName,
+  noteLayoutColumn = 0,
+  notePosition = 0,
   onSave,
   onCancel,
 }) => {
@@ -85,6 +89,7 @@ const TeacherDashboardNoteEditor: React.FC<TeacherDashboardNoteEditorProps> = ({
   );
   const [showPreview, setShowPreview] = useState(false);
   const [isSaving, setIsSaving] = useState(false);
+  const noteBodyId = React.useId();
   const trimmedBody = body.trim();
 
   React.useEffect(() => {
@@ -191,6 +196,8 @@ const TeacherDashboardNoteEditor: React.FC<TeacherDashboardNoteEditorProps> = ({
       title: title.trim() || null,
       body,
       noteColor,
+      noteLayoutColumn: note?.noteLayoutColumn ?? noteLayoutColumn,
+      notePosition: note?.notePosition ?? notePosition,
       contextType,
       ...contextPayload(contextType, unitGroupId, unitId, lessonId),
       sectionId: targetSectionId,
@@ -217,23 +224,34 @@ const TeacherDashboardNoteEditor: React.FC<TeacherDashboardNoteEditorProps> = ({
           maxLength={MAX_TITLE_LENGTH + 1}
         />
       </label>
-      <label className={styles.teacherNoteTextAreaLabel}>
-        <span className={styles.teacherNoteFieldLabel}>
-          <Typography variant="body3">Note</Typography>
-          <Typography
-            variant="body4"
-            className={styles.teacherNoteMarkdownAllowed}
+      <div className={styles.teacherNoteTextAreaLabel}>
+        <span className={styles.teacherNoteLabelHeader}>
+          <label htmlFor={noteBodyId} className={styles.teacherNoteFieldLabel}>
+            <Typography variant="body3">Note</Typography>
+            <Typography
+              variant="body4"
+              className={styles.teacherNoteMarkdownAllowed}
+            >
+              Markdown allowed
+            </Typography>
+          </label>
+          <MuiButton
+            type="button"
+            size="small"
+            variant="text"
+            onClick={() => setShowPreview(!showPreview)}
           >
-            Markdown allowed
-          </Typography>
+            {showPreview ? 'Hide preview' : 'Preview'}
+          </MuiButton>
         </span>
         <textarea
+          id={noteBodyId}
           className={styles.teacherNoteTextArea}
           value={body}
           onChange={event => setBody(event.target.value)}
           maxLength={MAX_NOTE_LENGTH + 1}
         />
-      </label>
+      </div>
       <div className={styles.teacherNoteEditorControls}>
         <label>
           <span className={styles.teacherNoteFieldLabel}>
@@ -371,14 +389,6 @@ const TeacherDashboardNoteEditor: React.FC<TeacherDashboardNoteEditorProps> = ({
         </Typography>
       )}
       <div className={styles.teacherNoteEditorActions}>
-        <MuiButton
-          type="button"
-          size="small"
-          variant="text"
-          onClick={() => setShowPreview(!showPreview)}
-        >
-          {showPreview ? 'Hide preview' : 'Preview'}
-        </MuiButton>
         <MuiButton
           type="button"
           size="small"

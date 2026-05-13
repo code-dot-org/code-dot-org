@@ -32,6 +32,8 @@ const baseNote: TeacherDashboardNote = {
   title: 'Activity setup',
   body: 'Use pairs for the unplugged activity.',
   noteColor: 'white',
+  noteLayoutColumn: 0,
+  notePosition: 0,
   contextType: 'unit',
   unitGroupId: null,
   unitId: 10,
@@ -111,6 +113,7 @@ describe('TeacherDashboardNotes', () => {
     await screen.findByText('Add course note');
     screen.getByText('Add unit note');
     screen.getByText('Add lesson note');
+    expect(screen.getAllByText('No notes yet.')).toHaveLength(3);
   });
 
   it('creates a section-scoped shared note and global-share candidate', async () => {
@@ -148,6 +151,8 @@ describe('TeacherDashboardNotes', () => {
       expect.objectContaining({
         body: 'New lesson note',
         noteColor: 'white',
+        noteLayoutColumn: 0,
+        notePosition: 0,
         contextType: 'lesson',
         lessonId: 20,
         sectionId: 5,
@@ -200,6 +205,7 @@ describe('TeacherDashboardNotes', () => {
 
     await screen.findByText('Shared by Ms. Rivera', {exact: false});
     screen.getByText('Read only');
+    screen.getByLabelText('Drag note');
     expect(screen.queryByLabelText('Edit note')).toBeNull();
     expect(screen.queryByLabelText('Delete note')).toBeNull();
   });

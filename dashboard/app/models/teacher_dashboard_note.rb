@@ -13,6 +13,8 @@
 #  lesson_id          :integer
 #  title              :string(255)
 #  note_color         :string(255)      default("white"), not null
+#  note_layout_column :integer          default(0), not null
+#  note_position      :integer          default(0), not null
 #  body               :text(65535)      not null
 #  lock_version       :integer          default(0), not null
 #  created_at         :datetime         not null
@@ -47,10 +49,13 @@ class TeacherDashboardNote < ApplicationRecord
   belongs_to :lesson, optional: true
   has_many :teacher_dashboard_note_shared_sections, dependent: :destroy
   has_many :shared_sections, through: :teacher_dashboard_note_shared_sections, source: :section
+  has_many :teacher_dashboard_note_layouts, dependent: :destroy
 
   validates :context_type, :body, presence: true
   validates :context_type, inclusion: {in: CONTEXT_TYPES}
   validates :note_color, inclusion: {in: NOTE_COLORS}
+  validates :note_layout_column, inclusion: {in: [0, 1]}
+  validates :note_position, numericality: {only_integer: true, greater_than_or_equal_to: 0}
   validates :title, length: {maximum: 255}
   validates :body, length: {maximum: MAX_BODY_LENGTH}
   validate :body_is_not_blank
@@ -78,7 +83,9 @@ class TeacherDashboardNote < ApplicationRecord
         matching_page_contexts(unit_group_id: unit_group_id, unit_id: unit_id, lesson_id: lesson_id)
     end
 
-    where(id: owned.select(:id)).or(where(id: shared.select(:id))).order(:context_type, :created_at)
+    where(id: owned.select(:id)).
+      or(where(id: shared.select(:id))).
+      order(:context_type, :note_layout_column, :note_position, :created_at)
   end
 
   def self.matching_page_contexts(unit_group_id:, unit_id:, lesson_id:)
