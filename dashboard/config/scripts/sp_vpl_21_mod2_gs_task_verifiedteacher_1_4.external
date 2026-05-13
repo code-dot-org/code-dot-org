@@ -53,7 +53,7 @@ markdown <<MARKDOWN
 
 
 
-___
+<hr aria-hidden="true">
 
 #### **Note:** We try to process requests for teacher verification as quickly as possible but because it is a manual process, it may take up to 7 business days to complete. <a href="https://support.code.org/hc/en-us/articles/115001550131-How-to-Become-a-Verified-Teacher" target="blank" rel="noopener noreferrer" >Click here</a> for more information, including a list of frequently asked questions.
 
