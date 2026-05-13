@@ -4,6 +4,7 @@
 // lab2 they only reach the page if this lab pulls them in itself.
 import '../../../style/RotateContainer.scss';
 import '../../../style/javalab/style.scss';
+import './javalab-lab2.scss';
 
 // Top-level Java Lab view under Lab2.
 //
@@ -47,6 +48,7 @@ import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import Neighborhood from '@cdo/apps/miniApps/neighborhood/Neighborhood';
 import {getStore, registerReducers} from '@cdo/apps/redux';
+import authoredHints from '@cdo/apps/redux/authoredHints';
 import instructions, {
   setInstructionsConstants,
 } from '@cdo/apps/redux/instructions';
@@ -112,6 +114,7 @@ function registerJavalabReducersOnce() {
     instructions,
     runState,
     currentUser,
+    authoredHints,
   });
   reducersRegistered = true;
 }
@@ -126,6 +129,19 @@ function publishPageConstantsOnce(
   if (pageConstantsPublished) return;
   getStore().dispatch(setPageConstants(props));
   pageConstantsPublished = true;
+}
+
+// The instructions reducer throws on a second SET_CONSTANTS once long or
+// short instructions are populated. React strict mode runs effects twice in
+// dev, so guard with a module-scoped flag the same way we do for
+// pageConstants. setInstructionsConstants is JS-typed and its parameter
+// resolves to `never` via Parameters<>, so we accept an unknown record.
+let instructionsConstantsPublished = false;
+function publishInstructionsConstantsOnce(props: Record<string, unknown>) {
+  if (instructionsConstantsPublished) return;
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  getStore().dispatch(setInstructionsConstants(props as any));
+  instructionsConstantsPublished = true;
 }
 
 // Build an assetUrl function compatible with the legacy skinsBase contract:
@@ -230,36 +246,28 @@ const JavaLab2View: React.FunctionComponent<
   // `hasInstructions` check (and the consequent left-panel sizing in
   // JavalabPanels) reads from state.instructions.longInstructions, which
   // lab2 doesn't populate on its own.
-  useEffect(() => {
-    dispatch(
-      setInstructionsConstants({
-        noInstructionsWhenCollapsed: undefined,
-        shortInstructions: undefined,
-        shortInstructions2: undefined,
-        longInstructions: levelProperties.longInstructions,
-        dynamicInstructions: undefined,
-        hasContainedLevels:
-          !!levelProperties.containedLevelNames &&
-          levelProperties.containedLevelNames.length > 0,
-        overlayVisible: undefined,
-        teacherMarkdown: levelProperties.teacherMarkdown,
-        levelVideos: levelProperties.helpVideos,
-        mapReference: levelProperties.mapReference,
-        referenceLinks: levelProperties.referenceLinks,
-        muteBackgroundMusic: undefined,
-        unmuteBackgroundMusic: undefined,
-        programmingEnvironment: undefined,
-      })
-    );
-  }, [
-    dispatch,
-    levelProperties.longInstructions,
-    levelProperties.containedLevelNames,
-    levelProperties.teacherMarkdown,
-    levelProperties.mapReference,
-    levelProperties.referenceLinks,
-    levelProperties.helpVideos,
-  ]);
+  publishInstructionsConstantsOnce({
+    // Java Lab uses CSP/CSD-style panel rendering (full-width markdown box,
+    // not the CSF speech bubble). Mirrors `config.noInstructionsWhenCollapsed
+    // = true` in legacy Javalab.js. TopInstructions reads this to switch
+    // its render path.
+    noInstructionsWhenCollapsed: true,
+    shortInstructions: undefined,
+    shortInstructions2: undefined,
+    longInstructions: levelProperties.longInstructions,
+    dynamicInstructions: undefined,
+    hasContainedLevels:
+      !!levelProperties.containedLevelNames &&
+      levelProperties.containedLevelNames.length > 0,
+    overlayVisible: undefined,
+    teacherMarkdown: levelProperties.teacherMarkdown,
+    levelVideos: levelProperties.helpVideos,
+    mapReference: levelProperties.mapReference,
+    referenceLinks: levelProperties.referenceLinks,
+    muteBackgroundMusic: undefined,
+    unmuteBackgroundMusic: undefined,
+    programmingEnvironment: undefined,
+  });
 
   // Sources, validation, level metadata.
   useJavalabSources({
@@ -401,6 +409,15 @@ const JavaLab2View: React.FunctionComponent<
       );
     }
     miniAppRef.current = miniApp;
+    // JavalabPanels.updateLayout runs once on initial mount, BEFORE the
+    // maze SVG content exists (MazeController.createDrawer is called inside
+    // afterInject just above). Fire a resize event so the panel re-runs
+    // updateLayout against the now-populated SVG; without this the maze
+    // ends up in the wrong place because the initial transform was applied
+    // to an empty element. Defer one rAF so React has committed.
+    if (miniApp) {
+      requestAnimationFrame(() => window.dispatchEvent(new Event('resize')));
+    }
     return () => {
       miniApp?.onStop?.();
       miniAppRef.current = null;

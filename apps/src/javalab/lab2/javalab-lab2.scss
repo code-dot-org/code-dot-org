@@ -1,0 +1,21 @@
+// Styles required to make the legacy Java Lab UI render correctly under
+// Lab2. These rules live in apps/style/common.scss (and therefore
+// javalab.css under the legacy build) but are not part of lab2.css, so we
+// pull them into the javalab-lab2 chunk via JavaLab2View.
+
+// Match `#visualization.responsive > *` from common.scss. ProtectedVisualizationDiv
+// renders <div id="visualization" class="responsive"> when state.pageConstants
+// .isResponsive is true; without explicit `transform-origin: 0 0`, the
+// `transform: scale(N)` JavalabPanels applies to #svgMaze pivots around the
+// SVG's center, leaving the maze positioned half outside its parent.
+#visualization.responsive > * {
+  -webkit-transform-origin: 0 0;
+  -ms-transform-origin: 0 0;
+  transform-origin: 0 0;
+
+  html[dir='RTL'] & {
+    -webkit-transform-origin: 100% 0;
+    -ms-transform-origin: 100% 0;
+    transform-origin: 100% 0;
+  }
+}
