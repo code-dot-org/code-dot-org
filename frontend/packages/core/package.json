@@ -33,6 +33,11 @@
       "import": "./dist/api/mocks/index.mjs",
       "require": "./dist/api/mocks/index.cjs"
     },
+    "./api/mocks/server": {
+      "types": "./dist/api/mocks/server.d.ts",
+      "import": "./dist/api/mocks/server.mjs",
+      "require": "./dist/api/mocks/server.cjs"
+    },
     "./plugins/localization": {
       "types": "./dist/plugins/localization/index.d.ts",
       "import": "./dist/plugins/localization/index.mjs",

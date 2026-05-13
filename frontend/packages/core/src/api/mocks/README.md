@@ -59,6 +59,27 @@ under the lab key and `setActiveScenario` picks the active one from the URL.
 4. For writes, persist via `scenarioStore`'s `writeResource(name, value)`;
    reads layer `readResource()` over the fixture for the latest state.
 
+## Vitest
+
+The same handler library runs in tests via an MSW node server. From a
+package's vitest `setupFiles`:
+
+```ts
+import {afterAll, afterEach, beforeAll} from 'vitest';
+import {mockServer} from '@code-dot-org/core/api/mocks/server';
+
+beforeAll(() => mockServer.listen({onUnhandledRequest: 'error'}));
+afterEach(() => mockServer.resetHandlers());
+afterAll(() => mockServer.close());
+```
+
+Reference the file from `vitest.config.ts` (`test.setupFiles`). Tests then
+exercise the real `DashboardApiClient` end to end — no per-test transport
+stubs needed. Per-test overrides go through `mockServer.use(...)`.
+
+The `./server` subpath is separate from `./api/mocks` so `msw/node` doesn't
+end up in browser bundles.
+
 ## Write-through and reset
 
 Writes (POST/PUT to channels, sources, thumbnails, etc.) persist to
@@ -83,3 +104,4 @@ from the URL so subsequent reloads don't reset again.
 | `sources.handlers.ts`     | `*/v3/sources/:channelId/...` GET/PUT, versions, restore             |
 | `projects.handlers.ts`    | `*/projects/...` channel-for-level, commits, extra_links, thumbnail  |
 | `scenarioStore.ts`        | sessionStorage write-through, namespaced by lab + tag                |
+| `server.ts`               | `mockServer` for vitest (msw/node) — separate `./server` subpath     |

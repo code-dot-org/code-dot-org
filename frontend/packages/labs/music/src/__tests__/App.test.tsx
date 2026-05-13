@@ -15,28 +15,9 @@ vi.mock('@code-dot-org/core/plugins/observability', () => ({
   metrics: {count: vi.fn()},
 }));
 
-// Replace the DashboardApiClient singleton with stub methods that resolve to
-// the minimum shape App.tsx consumes. Other exports pass through untouched.
-vi.mock('@code-dot-org/core/api', async () => {
-  const actual = await vi.importActual<typeof import('@code-dot-org/core/api')>(
-    '@code-dot-org/core/api',
-  );
-
-  return {
-    ...actual,
-    DashboardApiClient: {
-      ...actual.DashboardApiClient,
-      levels: {
-        ...actual.DashboardApiClient.levels,
-        getLevelProperties: async () => ({}),
-      },
-      preferences: {
-        ...actual.DashboardApiClient.preferences,
-        getThemeSettings: async () => ({}),
-      },
-    },
-  };
-});
+// The MSW node server (configured in `setup.ts`) intercepts the App's calls
+// to `/levels/.../level_properties` and `/user_preference/theme`, so the
+// real `DashboardApiClient` singleton runs end to end here.
 
 it('renders without crashing', async () => {
   const {container} = render(<App />);
