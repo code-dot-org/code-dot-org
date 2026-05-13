@@ -9,27 +9,27 @@
  */
 
 :root {
-  --font-family-main: 'Figtree', 'Noto Sans', 'Noto Sans Math',
-    'Noto Sans Arabic', 'Noto Sans Armenian', 'Noto Sans Bengali',
+  --font-family-main: 'Figtree', 'Noto Sans', 'Noto Sans Arabic',
+    'Noto Sans Armenian', 'Noto Sans Bengali', 'Noto Sans SC', 'Noto Sans TC',
+    'Noto Sans Devanagari', 'Noto Sans Georgian', 'Noto Sans Hebrew',
+    'Noto Sans JP', 'Noto Sans Kannada', 'Noto Sans Khmer', 'Noto Sans KR',
+    'Noto Sans Myanmar', 'Noto Sans Sinhala', 'Noto Sans Tamil',
+    'Noto Sans Telugu', 'Noto Sans Thai', 'Noto Sans Thaana', 'Noto Sans Math',
+    sans-serif;
+  --font-family-barlow-semi-condensed-semibold: 'Barlow Semi Condensed Semibold',
+    'Noto Sans', 'Noto Sans Arabic', 'Noto Sans Armenian', 'Noto Sans Bengali',
     'Noto Sans SC', 'Noto Sans TC', 'Noto Sans Devanagari',
     'Noto Sans Georgian', 'Noto Sans Hebrew', 'Noto Sans JP',
     'Noto Sans Kannada', 'Noto Sans Khmer', 'Noto Sans KR', 'Noto Sans Myanmar',
     'Noto Sans Sinhala', 'Noto Sans Tamil', 'Noto Sans Telugu',
-    'Noto Sans Thai', 'Noto Sans Thaana', sans-serif;
-  --font-family-barlow-semi-condensed-semibold: 'Barlow Semi Condensed Semibold',
-    'Noto Sans', 'Noto Sans Math', 'Noto Sans Arabic', 'Noto Sans Armenian',
-    'Noto Sans Bengali', 'Noto Sans SC', 'Noto Sans TC', 'Noto Sans Devanagari',
-    'Noto Sans Georgian', 'Noto Sans Hebrew', 'Noto Sans JP',
-    'Noto Sans Kannada', 'Noto Sans Khmer', 'Noto Sans KR', 'Noto Sans Myanmar',
-    'Noto Sans Sinhala', 'Noto Sans Tamil', 'Noto Sans Telugu',
-    'Noto Sans Thai', 'Noto Sans Thaana', sans-serif;
+    'Noto Sans Thai', 'Noto Sans Thaana', 'Noto Sans Math', sans-serif;
   --font-family-barlow-semi-condensed-medium: 'Barlow Semi Condensed Medium',
-    'Noto Sans', 'Noto Sans Math', 'Noto Sans Arabic', 'Noto Sans Armenian',
-    'Noto Sans Bengali', 'Noto Sans SC', 'Noto Sans TC', 'Noto Sans Devanagari',
+    'Noto Sans', 'Noto Sans Arabic', 'Noto Sans Armenian', 'Noto Sans Bengali',
+    'Noto Sans SC', 'Noto Sans TC', 'Noto Sans Devanagari',
     'Noto Sans Georgian', 'Noto Sans Hebrew', 'Noto Sans JP',
     'Noto Sans Kannada', 'Noto Sans Khmer', 'Noto Sans KR', 'Noto Sans Myanmar',
     'Noto Sans Sinhala', 'Noto Sans Tamil', 'Noto Sans Telugu',
-    'Noto Sans Thai', 'Noto Sans Thaana', sans-serif;
+    'Noto Sans Thai', 'Noto Sans Thaana', 'Noto Sans Math', sans-serif;
   --font-weight-thin: 100;
   --font-weight-extra-light: 200;
   --font-weight-light: 300;

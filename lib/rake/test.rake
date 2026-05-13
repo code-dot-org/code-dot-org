@@ -31,36 +31,40 @@ namespace :test do
     TestRunUtils.run_local_ui_test
   end
 
-  timed_task_with_logging :regular_ui do
-    ChatClient.log 'Running <b>dashboard</b> UI tests...'
+  timed_task_with_logging :saucelabs_ui do
+    ChatClient.log 'Running <b>dashboard</b> Safari UI tests...'
     failed_browser_count = RakeUtils.system_with_chat_logging(
       "cd #{dashboard_dir('test/ui')} &&",
       'bundle', 'exec', './runner.rb',
+      '-c', 'Safari',
       '-d', CDO.site_host('studio.code.org'),
       '-p', CDO.site_host('code.org'),
       '--db', # Ensure features that require database access are run even if the server name isn't "test"
-      '--parallel', '120',
+      '--parallel', '20', # The total saucelabs concurrency budget is 65
       '--magic_retry',
       '--with-status-page',
       '--fail_fast',
       '--saucelabs-priority 0'
     )
     if failed_browser_count == 0
-      message = '┬──┬ ﻿ノ( ゜-゜ノ) UI tests for <b>dashboard</b> succeeded.'
+      message = '┬──┬ ﻿ノ( ゜-゜ノ) Safari UI tests for <b>dashboard</b> succeeded.'
       ChatClient.log message
       ChatClient.message 'server operations', message, color: 'green'
     else
-      message = "(╯°□°）╯︵ ┻━┻ UI tests for <b>dashboard</b> failed on #{failed_browser_count} browser(s)."
+      message = "(╯°□°）╯︵ ┻━┻ Safari UI tests for <b>dashboard</b> failed on #{failed_browser_count} browser(s)."
       ChatClient.log message, color: 'red'
       ChatClient.message 'server operations', message, color: 'red', notify: 1
-      raise "UI tests failed"
+      raise "Safari UI tests failed"
     end
   end
 
   # Runs a single group of UI tests against AWS Device Farm. Shared body
-  # between :devicefarm_desktop_ui and :devicefarm_mobile_ui.
+  # between :devicefarm_desktop_ui and :devicefarm_mobile_ui. The label
+  # carries through to Slack messages and status page headings; "Device
+  # Farm" is no longer surfaced to oncall (provider is an implementation
+  # detail).
   def run_devicefarm_ui(config:, parallel:, label:)
-    ChatClient.log "Running <b>dashboard</b> UI tests on AWS Device Farm (#{label})..."
+    ChatClient.log "Running <b>dashboard</b> #{label} UI tests..."
     failed_browser_count = RakeUtils.system_with_chat_logging(
       "cd #{dashboard_dir('test/ui')} &&",
       'bundle', 'exec', './runner.rb',
@@ -70,45 +74,34 @@ namespace :test do
       '-p', CDO.site_host('code.org'),
       '--db', # Ensure features that require database access are run even if the server name isn't "test"
       '--parallel', parallel.to_s,
-      '--magic_retry',
+      '--retry_count', '2',
       '--with-status-page',
       '--fail_fast'
     )
     if failed_browser_count == 0
-      message = "┬──┬ ﻿ノ( ゜-゜ノ) Device Farm UI tests for <b>dashboard</b> (#{label}) succeeded."
+      message = "┬──┬ ﻿ノ( ゜-゜ノ) #{label} UI tests for <b>dashboard</b> succeeded."
       ChatClient.log message
       ChatClient.message 'server operations', message, color: 'green'
     else
-      message = "(╯°□°）╯︵ ┻━┻ Device Farm UI tests for <b>dashboard</b> (#{label}) failed on #{failed_browser_count} browser(s)."
+      message = "(╯°□°）╯︵ ┻━┻ #{label} UI tests for <b>dashboard</b> failed on #{failed_browser_count} browser(s)."
       ChatClient.log message, color: 'red'
       ChatClient.message 'server operations', message, color: 'red', notify: 1
-      raise "Device Farm UI (#{label}) tests failed"
+      raise "#{label} UI tests failed"
     end
   end
 
   timed_task_with_logging :devicefarm_desktop_ui do
-    # The default per-AWS-account concurrency limit for desktop browser sessions
-    # in Device Farm is 50.
-    run_devicefarm_ui(config: 'Chrome,Firefox', parallel: 50, label: 'desktop')
+    # As of April 2026, our concurrency limit for desktop browser sessions in
+    # Device Farm within our prod AWS account is 150.
+    run_devicefarm_ui(config: 'Chrome,Firefox', parallel: 50, label: 'Chrome + Firefox')
   end
 
   timed_task_with_logging :devicefarm_mobile_ui do
     # As of April 2026, our concurrency limit for remote access sessions on real
-    # mobile devices in Device Farm within our prod AWS account is 40. However,
+    # mobile devices in Device Farm within our prod AWS account is 80. However,
     # the devices take so long to spin up and shut down that we can saturate our
     # Device Farm concurrency by setting parallelism equal to half of that limit.
-    run_devicefarm_ui(config: 'iPhone,iPad', parallel: 20, label: 'mobile')
-  end
-
-  # Runs desktop and mobile Device Farm UI suites in parallel threads so
-  # they use their independent concurrency quotas. Kept separate from
-  # regular_ui and intentionally not wired into ui_all -- currently used
-  # for manual trial runs against the test machine
-  # (bundle exec rake test:devicefarm_ui).
-  timed_task_with_logging :devicefarm_ui do
-    Parallel.each([:devicefarm_desktop_ui, :devicefarm_mobile_ui], in_threads: 2) do |target|
-      Rake::Task["test:#{target}"].invoke
-    end
+    run_devicefarm_ui(config: 'iPhone,iPad', parallel: 40, label: 'Mobile')
   end
 
   timed_task_with_logging :eyes_ui do
@@ -125,7 +118,7 @@ namespace :test do
       '--magic_retry',
       '--with-status-page',
       '-f', eyes_features.join(","),
-      '--parallel', '20'
+      '--parallel', '20' # The total saucelabs concurrency budget is 65
     )
     if failed_browser_count == 0
       message = '⊙‿⊙ Eyes tests for <b>dashboard</b> succeeded, no changes detected.'
@@ -139,15 +132,49 @@ namespace :test do
     end
   end
 
+  timed_task_with_logging :devicefarm_eyes_ui do
+    ChatClient.log 'Running <b>dashboard</b> UI visual tests on AWS Device Farm...'
+    eyes_features = `cd #{dashboard_dir('test/ui')} && find features/ -name "*.feature" | xargs grep -lr '@eyes'`.split("\n")
+    failed_browser_count = RakeUtils.system_with_chat_logging(
+      "cd #{dashboard_dir('test/ui')} &&",
+      'bundle', 'exec', './runner.rb',
+      '--device-farm',
+      '-c', 'Chrome',
+      '-d', CDO.site_host('studio.code.org'),
+      '-p', CDO.site_host('code.org'),
+      '--db', # Ensure features that require database access are run even if the server name isn't "test"
+      '--eyes',
+      '--magic_retry',
+      '--with-status-page',
+      '-f', eyes_features.join(","),
+      '--parallel', '25'
+    )
+    if failed_browser_count == 0
+      message = '⊙‿⊙ Device Farm Eyes tests for <b>dashboard</b> succeeded, no changes detected.'
+      ChatClient.log message
+      ChatClient.message 'server operations', message, color: 'green'
+    else
+      message = 'ಠ_ಠ Device Farm Eyes tests for <b>dashboard</b> failed. See <a href="https://eyes.applitools.com/app/sessions/">the console</a> for results or to modify baselines.'
+      ChatClient.log message, color: 'red'
+      ChatClient.message 'server operations', message, color: 'red', notify: 1
+      raise "Device Farm Eyes tests failed"
+    end
+  end
+
   desc 'Run Lighthouse audits against key pages (currently Code Studio homepage).'
   timed_task_with_logging :lighthouse do
     Lighthouse.report CDO.studio_url('', CDO.default_scheme)
   end
 
-  # Run the eyes tests and ui test suites in parallel. If one of these suites
-  # raises, allow the other suite to complete, then make sure this task raises.
+  # Run the four deploy-time UI suites in parallel: SauceLabs Safari and
+  # Eyes alongside the Device Farm desktop (Chrome+Firefox) and mobile
+  # (iPhone+iPad) suites. If one suite raises, allow the others to
+  # complete, then make sure this task raises.
   timed_task_with_logging :ui_all do
-    Parallel.each([:eyes_ui, :regular_ui], in_threads: 3) do |target|
+    Parallel.each(
+      [:eyes_ui, :saucelabs_ui, :devicefarm_desktop_ui, :devicefarm_mobile_ui],
+      in_threads: 4,
+    ) do |target|
       Rake::Task["test:#{target}"].invoke
     end
   end

@@ -69,6 +69,10 @@ experiments.LESSON_TUTOR = 'lesson-tutor';
 experiments.ONBOARDING = 'onboarding';
 // Enable AI Diff Chat Drawer
 experiments.AI_DIFF_DRAWER = 'ai-diff-drawer';
+// Route all Gemini model traffic through the AI gateway instead of the Rails backend
+experiments.USE_AI_GATEWAY = 'useAiGateway';
+// Legacy version of Sketch Lab. This should be removed once the new version is fully stable.
+experiments.EXCALIDRAW = 'excalidraw';
 
 /**
  * This was a gamified version of the finish dialog, built in 2018,

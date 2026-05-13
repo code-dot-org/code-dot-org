@@ -2,6 +2,7 @@ require 'selenium/webdriver'
 require 'cgi'
 require 'httparty'
 require_relative '../../../../../deployment'
+require 'cdo/ci_utils'
 require_relative '../../../../../lib/cdo/aws/device_farm'
 require 'active_support/core_ext/object/blank'
 require_relative '../../utils/selenium_browser'
@@ -116,6 +117,7 @@ def device_farm_mobile_browser(http_client: nil)
       device_arns: $device_farm_browser_config['device_arns']
     )
     $device_farm_mobile_session_arn = session[:session_arn]
+    $device_farm_mobile_device = session[:device]
 
     capabilities = Selenium::WebDriver::Remote::Capabilities.new(
       $device_farm_browser_config.except(*Cdo::AWS::DeviceFarm::INTERNAL_KEYS)
@@ -196,7 +198,14 @@ def get_device_farm_browser
     else
       Cdo::AWS::DeviceFarm.desktop_session_url(browser.session_id)
     end
-  puts "visual log on device farm: <a href='#{console_url}'>#{console_url}</a>" if console_url
+  if console_url
+    account_suffix = CI::Utils.running_on_ci? ? ' (codeorg-dev AWS account)' : ''
+    puts "visual log on device farm#{account_suffix}: <a href='#{console_url}'>#{console_url}</a>"
+  end
+  if is_mobile && $device_farm_mobile_device
+    d = $device_farm_mobile_device
+    puts "mobile device on device farm: #{d.name} (#{d.platform} #{d.os}) #{d.arn}"
+  end
   browser
 end
 
@@ -224,14 +233,13 @@ def get_browser(test_run_name)
   # IE11 requires this to be explicitly set.
   browser.manage.timeouts.script_timeout = 30.seconds
 
-  # Maximize the window on desktop, as some tests require 1280px width.
-  # TODO: ENV['MOBILE'] is always a non-empty string ("true"/"false"), so this
-  # condition is always truthy and maximize never runs for remote browsers.
-  # SauceLabs works around this via sauce:options screenResolution. If Device
-  # Farm desktop sessions need 1280px, change to: ENV['MOBILE'] == 'true'
-  unless ENV['MOBILE']
-    max_width, max_height = browser.execute_script('return [window.screen.availWidth, window.screen.availHeight];')
-    browser.manage.window.resize_to(max_width, max_height)
+  # Resize the desktop browser window to 1280x1024, the minimum supported
+  # screen size. SauceLabs' Chrome config also requests this via
+  # sauce:options.screenResolution; this resize covers the other SauceLabs
+  # browsers (Firefox, Safari) and all Device Farm desktop sessions, where
+  # no equivalent capability exists.
+  unless ENV['MOBILE'] == 'true'
+    browser.manage.window.resize_to(1280, 1024)
   end
   browser
 end

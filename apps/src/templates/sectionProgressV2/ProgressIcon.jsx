@@ -1,7 +1,6 @@
+import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import classNames from 'classnames';
 import React from 'react';
-
-import FontAwesome from '../../legacySharedComponents/FontAwesome';
 
 import {ITEM_TYPE, ITEM_TYPE_SHAPE} from './ItemType';
 
@@ -32,10 +31,10 @@ export default function ProgressIcon({itemType}) {
     // eslint-disable-next-line react/forbid-dom-props
     <div data-testid="progress-icon">
       {itemType['icon'] !== undefined && (
-        <FontAwesome
+        <FontAwesomeV6Icon
           id={'uitest-' + itemType['icon']}
-          icon={itemType['icon']}
-          iconStyle={itemType['iconStyle'] && itemType['iconStyle']}
+          iconName={itemType['icon']}
+          iconStyle={itemType['iconStyle'] || 'solid'}
           className={classNames(
             styles.fontAwesomeIcon,
             styles[`icon-${itemType['color']}`]

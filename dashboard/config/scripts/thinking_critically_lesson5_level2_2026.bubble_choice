@@ -1,0 +1,11 @@
+name 'thinking_critically_lesson5_level2_2026'
+display_name 'Image Generation'
+description 'Choose one of the explorations below:'
+
+sublevels
+level 'thinking_critically_lesson5_level2a_2026'
+level 'thinking_critically_lesson5_level2b_2026'
+level 'thinking_critically_lesson5_level2c_2026'
+level 'thinking_critically_lesson5_level2d_2026'
+
+uses_lab2

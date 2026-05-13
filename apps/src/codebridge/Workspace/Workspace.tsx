@@ -19,7 +19,8 @@ import {
 import {getAppOptionsEditBlocks} from '@cdo/apps/lab2/projects/utils';
 import {
   isProjectTemplateLevel,
-  isReadOnlyWorkspace,
+  isPermanentlyReadOnlyWorkspace,
+  isTemporarilyReadOnlyWorkspace,
 } from '@cdo/apps/lab2/redux/lab2ReduxSelectors';
 import TeacherViewingStudentProjectAlert from '@cdo/apps/lab2/views/alerts/teacherViewingStudentProject';
 import PanelContainer from '@cdo/apps/lab2/views/components/PanelContainer';
@@ -53,7 +54,8 @@ const Workspace: React.FunctionComponent<WorkspaceProps> = ({
   const teacherViewingStudent = Boolean(
     useAppSelector(state => state.progress.viewAsUserId)
   );
-  const isReadOnly = useAppSelector(isReadOnlyWorkspace);
+  const isPermanentlyReadOnly = useAppSelector(isPermanentlyReadOnlyWorkspace);
+  const isTemporarilyReadOnly = useAppSelector(isTemporarilyReadOnlyWorkspace);
 
   const showLockedFilesBanner = useAppSelector(
     state => state.codebridgeWorkspace.showLockedFilesBanner
@@ -137,13 +139,16 @@ const Workspace: React.FunctionComponent<WorkspaceProps> = ({
               <Typography
                 className={moduleStyles.fileBrowserHeaderText}
                 variant="body4"
+                component="h2"
               >
                 {codebridgeI18n.filesHeader()}
               </Typography>
             )}
             <div className={moduleStyles.fileBrowserHeaderButtons}>
-              {showFileBrowser && !isReadOnly && (
-                <FileBrowserHeaderPopUpButton />
+              {showFileBrowser && !isPermanentlyReadOnly && (
+                <FileBrowserHeaderPopUpButton
+                  disabled={isTemporarilyReadOnly}
+                />
               )}
               <ToggleFileBrowserButton />
             </div>

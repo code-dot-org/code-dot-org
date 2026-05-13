@@ -5,6 +5,7 @@ import {SketchlabReactFlowEdge} from '@cdo/apps/lab2/types';
 
 import {
   entriesMatch,
+  getElementForEntry,
   getEntryFromDOM,
   type TabOrderEntry,
 } from '../utils/computeTabOrder';
@@ -29,7 +30,7 @@ export function useFocusManagement(
 ) {
   const {fitView, getZoom} = useReactFlow();
 
-  // Close the node toolbar on clicks outside nodes, edges, and the
+  // Close the toolbar on clicks outside nodes, edges, and the
   // toolbar itself. Clicking on non-focusable areas (e.g. the canvas
   // pane background) does not move DOM focus, so blur-based detection
   // alone misses this case. Scoped to when a node/edge is focused so
@@ -42,7 +43,8 @@ export function useFocusManagement(
       if (
         target.closest('.react-flow__node') ||
         target.closest('.react-flow__edge') ||
-        target.closest('.react-flow__node-toolbar')
+        target.closest('.react-flow__node-toolbar') ||
+        target.closest('.react-flow__edge-toolbar')
       ) {
         return;
       }
@@ -82,11 +84,7 @@ export function useFocusManagement(
 
   const focusEntry = useCallback(
     (entry: TabOrderEntry) => {
-      const selector =
-        entry.type === 'node'
-          ? `.react-flow__node[data-id="${entry.id}"]`
-          : `.react-flow__edge[data-id="${entry.id}"]`;
-      const element = document.querySelector<HTMLElement>(selector);
+      const element = getElementForEntry(entry);
       if (!element) return;
       setLastFocusedEntry(entry);
       setNodeOrEdgeFocused(true);
@@ -106,25 +104,27 @@ export function useFocusManagement(
         // Deferred so it runs after React Flow finishes processing the
         // focus event internally; calling fitView synchronously here
         // gets overridden by React Flow's state reconciliation.
+        // The lookup must stay inside the rAF — it has to outlast that
+        // synchronous reconciliation.
         requestAnimationFrame(() => {
-          const selector =
-            entry.type === 'node'
-              ? `.react-flow__node[data-id="${entry.id}"]`
-              : `.react-flow__edge[data-id="${entry.id}"]`;
-          const element = document.querySelector<HTMLElement>(selector);
+          const element = getElementForEntry(entry);
           if (element) {
             panToEntryIfNeeded(entry, element);
           }
         });
-      } else if (
-        !(event.target as HTMLElement).closest('.react-flow__node-toolbar')
-      ) {
-        // Focus moved to a non-node/edge element (e.g. Controls buttons).
-        // Clear visual selection but preserve lastFocusedEntry so the
-        // roving tabindex target stays correct for shift-tab.
-        // We skip this when focus moves into a NodeToolbar
-        // so the toolbar stays mounted while the user interacts with it.
-        setNodeOrEdgeFocused(false);
+      } else {
+        const focusTarget = event.target as HTMLElement;
+        const inToolbar =
+          focusTarget.closest('.react-flow__node-toolbar') ||
+          focusTarget.closest('.react-flow__edge-toolbar');
+        if (!inToolbar) {
+          // Focus moved to a non-node/edge element (e.g. Controls buttons).
+          // Clear visual selection but preserve lastFocusedEntry so the
+          // roving tabindex target stays correct for shift-tab.
+          // We skip this when focus moves into a node or edge toolbar
+          // so the toolbar stays mounted while the user interacts with it.
+          setNodeOrEdgeFocused(false);
+        }
       }
     },
     [tabOrder, setLastFocusedEntry, setNodeOrEdgeFocused, panToEntryIfNeeded]

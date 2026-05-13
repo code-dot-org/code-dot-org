@@ -18,6 +18,12 @@ services:
     image: redis
     ports:
       - 6379
+  - name: ci-tests-mysql
+    image: mysql:8.0
+    ports:
+      - 3306
+    environment:
+      MYSQL_ROOT_PASSWORD: 'not-a-secret'
 
 steps:
   - name: bin/drone/shell
@@ -90,7 +96,7 @@ steps:
 
   - name: unit-tests
     # see: docker/ci/Dockerfile
-    image: codedotorg/cdo-ci:1.19
+    image: codedotorg/cdo-ci:1.23
     pull: always
     environment:
       CI_JOB: 'unit_tests'
@@ -134,6 +140,12 @@ services:
     image: redis
     ports:
       - 6379
+  - name: ci-tests-mysql
+    image: mysql:8.0
+    ports:
+      - 3306
+    environment:
+      MYSQL_ROOT_PASSWORD: 'not-a-secret'
 
 steps:
   - name: bin/drone/shell
@@ -158,11 +170,6 @@ steps:
   # Restore the staging build we created in the `cache-staging-build` pipeline
   - name: get-cached-staging-build
     image: plugins/s3-cache
-    volumes:
-      # Even files cached with absolute paths will be restored into the
-      # workdir; so for this step, we mount the relevant volumes there, too.
-      - name: mysql
-        path: /drone/src/var/lib/mysql
     settings:
       filename: cache-staging-ci-build.tar.gz
       endpoint: s3://cdo-drone
@@ -212,11 +219,8 @@ steps:
 
   - name: ui-tests
     # see: docker/ci/Dockerfile
-    image: codedotorg/cdo-ci:1.19
+    image: codedotorg/cdo-ci:1.23
     pull: always
-    volumes:
-      - name: mysql
-        path: /var/lib/mysql
     environment:
       CI_JOB: 'ui_tests'
       # Each Drone secret below must be explicitly written to locals.yml in /docker/ci/scripts/prepare_ci_env.sh
@@ -238,7 +242,8 @@ steps:
     commands:
       # Cached data gets restored by the root user, so we need to reassign
       - sudo chown -R ci:ci .
-      - sudo chown -R mysql:mysql /var/lib/mysql
+      # Restore cached database
+      - mysql --user=root --password=not-a-secret --host=ci-tests-mysql < mysql_databases.sql
       # Depended on by CI: https://github.com/code-dot-org/code-dot-org/blob/048e4ddffd52e62fd6a13566ea6ccd38a6701d89/lib/cdo/ci.rb/#L16
       - export GIT_COMMIT=$DRONE_COMMIT
       - export CI_BASE_BRANCH=$DRONE_TARGET_BRANCH
@@ -248,10 +253,6 @@ steps:
       - /entrypoint.sh docker/ci/scripts/ui_tests.sh || EXIT_CODE=$?
       - while pgrep bash >/dev/null; do echo "found bash process; keeping container alive"; sleep 20; done
       - exit $EXIT_CODE
-
-volumes:
-  - name: mysql
-    temp: {}
 
 trigger:
   branch:
@@ -279,6 +280,14 @@ name: cache-staging-build
 clone:
   disable: true
 
+services:
+  - name: ci-tests-mysql
+    image: mysql:8.0
+    ports:
+      - 3306
+    environment:
+      MYSQL_ROOT_PASSWORD: 'not-a-secret'
+
 steps:
   - name: clone
     image: bitnamilegacy/git
@@ -297,7 +306,7 @@ steps:
   # snapshot of the fully-built project and resulting database, but don't
   # actually run the tests.
   - name: prepare-cacheable-build
-    image: codedotorg/cdo-ci:1.19
+    image: codedotorg/cdo-ci:1.23
     pull: always
     environment:
       CI_JOB: 'prepare_cacheable_build'
@@ -305,12 +314,10 @@ steps:
         from_secret: CONTENTFUL_CS_FOR_ALL_ACCESS_TOKEN
       PROPERTIES_ENCRYPTION_KEY:
         from_secret: PROPERTIES_ENCRYPTION_KEY
-    volumes:
-      - name: mysql
-        path: /var/lib/mysql
     commands:
       - sudo chown -R ci:ci .
       - /entrypoint.sh docker/ci/scripts/prepare_cacheable_build.sh
+      - mysqldump --user=root --password=not-a-secret --host=ci-tests-mysql --all-databases > mysql_databases.sql
       # Generate baseline file count for validation
       - touch .cached-staging-build-file-count
       - "find . -type f -not -path './.git/*' | wc -l > .cached-staging-build-file-count"
@@ -318,9 +325,6 @@ steps:
 
   - name: cache-staging-ci-build
     image: plugins/s3-cache
-    volumes:
-      - name: mysql
-        path: /var/lib/mysql
     settings:
       filename: cache-staging-ci-build.tar.gz
       endpoint: s3://cdo-drone
@@ -329,11 +333,6 @@ steps:
       pull: true
       mount:
         - .
-        - /var/lib/mysql
-
-volumes:
-  - name: mysql
-    temp: {}
 
 trigger:
   branch:
@@ -344,6 +343,6 @@ trigger:
 
 ---
 kind: signature
-hmac: 94099b2e7d920d508596699178953a73f541da4646b72e0703b27d82a8084940
+hmac: 8ce0696793d089921698e95d95e86db7a96597b52547e86c5f0553bcd7c66df0
 
 ...

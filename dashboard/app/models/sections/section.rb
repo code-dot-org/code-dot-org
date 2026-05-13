@@ -24,7 +24,6 @@
 #  properties           :text(65535)
 #  participant_type     :string(255)      default("student"), not null
 #  lti_integration_id   :bigint
-#  ai_tutor_enabled     :boolean          default(FALSE)
 #  avatar_color         :integer
 #  avatar_emoji         :integer
 #  ai_chat_access_level :string(255)      default("disabled")
@@ -167,7 +166,73 @@ class Section < ApplicationRecord
     participant_type != Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCE.student
   end
 
-  serialized_attrs %w(code_review_expires_at)
+  serialized_attrs %w(code_review_expires_at suggested_lesson)
+
+  SUGGESTED_LESSON_TTL = 1.hour
+  SUGGESTED_LESSON_PASSING_THRESHOLD = ActivityConstants::MINIMUM_PASS_RESULT
+
+  def suggested_lesson_stale?
+    data = suggested_lesson
+    return true if data.nil?
+    timestamp = data['timestamp']
+    return true if timestamp.blank?
+    Time.parse(timestamp.to_s) < SUGGESTED_LESSON_TTL.ago
+  rescue ArgumentError
+    true
+  end
+
+  def compute_suggested_lesson
+    unit = script
+    section_students = students.to_a
+    return if section_students.empty? || unit.nil?
+
+    passing_level_ids_by_student = UserLevel.
+      where(user: section_students, script: unit).
+      where('best_result >= ? OR submitted = ?', SUGGESTED_LESSON_PASSING_THRESHOLD, true).
+      group_by(&:user_id).
+      transform_values {|uls| uls.to_set(&:level_id)}
+
+    last_completed_lesson = nil
+    finished_unit = true
+    unit.lessons.each do |lesson|
+      required_sls = lesson.script_levels.reject(&:bonus)
+      next if required_sls.empty?
+
+      completed_count = section_students.count do |student|
+        passing_ids = passing_level_ids_by_student[student.id] || Set.new
+        required_sls.all? do |sl|
+          level = sl.oldest_active_level
+          if level.is_a?(BubbleChoice)
+            level.sublevels.any? {|sub| passing_ids.include?(sub.id)}
+          else
+            passing_ids.include?(level.id)
+          end
+        end
+      end
+
+      if completed_count >= section_students.size / 2.0
+        last_completed_lesson = lesson
+        finished_unit = true
+      else
+        finished_unit = false
+      end
+    end
+
+    lessons = unit.lessons.to_a
+    next_lesson = if last_completed_lesson
+                    lessons[lessons.index(last_completed_lesson) + 1]
+                  else
+                    lessons.first
+                  end
+
+    update!(
+      suggested_lesson: if finished_unit
+                          {'completed_unit' => true, 'timestamp' => Time.now.utc.iso8601}
+                        else
+                          {'lesson_id' => next_lesson.id, 'timestamp' => Time.now.utc.iso8601}
+                        end
+    )
+  end
 
   # This list is duplicated as SECTION_LOGIN_TYPE in shared_constants.rb and should be kept in sync.
   LOGIN_TYPES = [
@@ -258,7 +323,7 @@ class Section < ApplicationRecord
 
   after_save :ensure_owner_is_active_instructor
   def ensure_owner_is_active_instructor
-    return if user.blank?
+    return if user.blank? || user.deleted?
 
     add_instructor(user)
   end
@@ -442,6 +507,7 @@ class Section < ApplicationRecord
         sync_enabled: Policies::Lti.roster_sync_enabled?(teacher),
         avatar_color: avatar_color,
         avatar_emoji: avatar_emoji,
+        demo_type: demo_type,
         at_risk_age_gated_date: at_risk_age_gated_student&.at_risk_age_gated_date,
         at_risk_age_gated_us_state: at_risk_age_gated_student&.us_state,
       }
@@ -489,6 +555,7 @@ class Section < ApplicationRecord
         primaryInstructor: primary_instructor,
         avatar_color: avatar_color,
         avatar_emoji: avatar_emoji,
+        demo_type: demo_type,
         assigned_ai_chat_tools_dependency: assigned_ai_chat_tools_dependency,
         ai_chat_access_level: ai_chat_access_level,
       }
@@ -576,6 +643,7 @@ class Section < ApplicationRecord
           at_risk_age_gated_us_state: at_risk_student&.us_state,
           avatar_color: avatar_color,
           avatar_emoji: avatar_emoji,
+          demo_type: demo_type,
           assigned_ai_chat_tools_dependency: assigned_ai_chat_tools_dependency,
           ai_chat_access_level: ai_chat_access_level,
         }

@@ -1,0 +1,163 @@
+.modal {
+  width: 800px;
+  max-width: calc(100vw - 2rem);
+}
+
+.textarea {
+  width: 75%;
+  border: 1px solid var(--borders-neutral-primary);
+  border-radius: 0.25rem;
+  padding: 0.5rem;
+  color: var(--text-neutral-primary);
+  background-color: var(--background-neutral-primary);
+  font-family: inherit;
+  margin: 5px;
+
+  &:focus {
+    outline: 2px solid var(--borders-brand-teal-primary);
+    outline-offset: 2px;
+  }
+}
+
+.label {
+  display: block;
+  color: var(--text-neutral-primary);
+}
+
+.hiddenFileInput {
+  display: none;
+}
+
+.inputRow {
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  gap: 0.625rem;
+  padding-top: 0.625rem;
+}
+
+.textareaSection {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  max-width: 80%;
+  min-width: 0;
+}
+
+.csvTextarea {
+  box-sizing: border-box;
+  flex: 1;
+  width: 100%;
+  max-width: 100%;
+  margin-top: 0.25rem;
+  margin-bottom: 0;
+}
+
+.textareaDisabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+.dividerSection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.verticalDivider {
+  flex: 1;
+  width: 1px;
+  background-color: var(--borders-neutral-primary);
+}
+
+.orLabel {
+  color: var(--text-neutral-secondary);
+  font-size: 0.75rem;
+  text-transform: uppercase;
+}
+
+.dropSection {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+}
+
+.dropZone {
+  display: flex;
+  flex: 1;
+  align-items: center;
+  justify-content: center;
+  min-height: 8rem;
+  margin-top: 0.25rem;
+  padding: 0.625rem;
+  border: 2px dashed var(--borders-neutral-primary);
+  border-radius: 0.25rem;
+}
+
+.dropZoneHasFile {
+  border-color: var(--text-neutral-primary);
+  border-style: solid;
+}
+
+.dropZoneActive {
+  border-color: var(--borders-brand-teal-primary);
+  background-color: var(--background-brand-teal-extra-light, #e9f6f6);
+}
+
+.dropZoneButton {
+  display: flex;
+  flex: 1;
+  align-items: center;
+  align-self: stretch;
+  justify-content: center;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  color: var(--text-neutral-secondary);
+  font: inherit;
+  text-align: center;
+  cursor: pointer;
+  background: none;
+  border: none;
+}
+
+.fileSelected {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  min-width: 0;
+}
+
+.fileNameButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 0;
+  margin: 0;
+  padding: 0;
+  cursor: pointer;
+  background: none;
+  border: none;
+}
+
+.fileName {
+  display: block;
+  color: var(--text-neutral-primary);
+  text-align: center;
+  word-break: break-all;
+}
+
+.removeFile {
+  margin: 0;
+  padding: 0;
+  color: var(--text-neutral-secondary);
+  font: inherit;
+  font-size: 1.5rem;
+  line-height: 1;
+  cursor: pointer;
+  background: none;
+  border: none;
+}

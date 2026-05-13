@@ -2,18 +2,26 @@
 
 require 'omniauth'
 require 'request_store'
+require 'i18n'
 
 require 'cdo/global_edition'
-require 'cdo/honeybadger'
+require 'cdo/i18n'
+require 'cdo/rack/response'
 require 'dynamic_config/dcdo'
-require 'helpers/cookies'
 
 module Middleware
   class GlobalEdition
-    REGION_KEY = Cdo::GlobalEdition::REGION_KEY
+    def initialize(app)
+      @app = app
+    end
 
-    class RouteHandler
-      include Middleware::Helpers::Cookies
+    def call(env)
+      RequestGlobalizer.new(@app, env).call
+    end
+
+    class RequestGlobalizer
+      REGION_KEY = Cdo::GlobalEdition::REGION_KEY
+      LOCALE_KEY = Cdo::I18n::LOCALE_COOKIE_KEY
 
       # HTTP paths that to be excluded from Global Edition scope.
       EXCLUDED_PATHS = [
@@ -38,7 +46,7 @@ module Middleware
         @original_path_info   = @request.path_info
         @original_path        = @request.path
         @original_region      = @request.cookies[REGION_KEY].presence
-        @original_locale      = @request.locale
+        @original_locale      = ::I18n.locale.to_s
       end
 
       # Processes the current request within the Global Edition routing context.
@@ -71,15 +79,17 @@ module Middleware
       #
       # @return [Array(Integer, Hash, #each)] the Rack response returned by `response.finish`
       def call
+        return app.call(env) unless Cdo::GlobalEdition.target_host?(request.hostname)
+
         # Allows setting the GE region via the URL parameter `?ge_region=<region_code>`.
-        if request.params.key?(REGION_KEY)
-          new_region = request.params[REGION_KEY].presence
+        if request.GET.key?(REGION_KEY)
+          new_region = request.GET[REGION_KEY].presence
 
           redirect_path = ::File.join('/', main_path)
           redirect_path = regional_path_for(new_region, redirect_path) if Cdo::GlobalEdition.region_available?(new_region)
 
           redirect_uri = URI(redirect_path)
-          redirect_uri.query = URI.encode_www_form(request.params.except(REGION_KEY)).presence
+          redirect_uri.query = URI.encode_www_form(request.GET.except(REGION_KEY)).presence
           redirect_path = redirect_uri.to_s
 
           setup_region(new_region)
@@ -94,8 +104,8 @@ module Middleware
             fallback_path = "#{fallback_path}?#{request.query_string}" if request.query_string.present?
             setup_redirect_to(fallback_path)
           end
-        elsif effective_region
-          if effective_region == url_region
+        elsif effective_region && Cdo::GlobalEdition.region_available?(effective_region)
+          if url_region == effective_region && (url_locale.nil? || url_locale == original_locale)
             normalize_request_for_routing
           else
             redirect_request_to_region(effective_region)
@@ -112,10 +122,10 @@ module Middleware
 
         response.finish
       ensure
-        # Restore the original `script_name` and `path_info` so that upstream middlewares
-        # (e.g., VarnishEnvironment's after filter) see a consistent `request.path`.
-        # Without this, downstream processing may partially restore `path_info` while
-        # leaving `script_name` modified, causing a doubled GE prefix in `request.path`.
+        Cdo::GlobalEdition.current_region = nil
+        # GE may rewrite Rack routing state (`script_name`, `path_info`) to route `/<region>/...` as root paths.
+        # Rack computes `request.path` from both fields (`script_name + path_info`), so we must restore both values.
+        # If only one side is reverted, upstream middleware can observe an invalid path (for example, a duplicated GE prefix).
         request.script_name = original_script_name
         request.path_info   = original_path_info
       end
@@ -125,14 +135,20 @@ module Middleware
         @response ||= Rack::Response[*app.call(env)]
       end
 
-      private def url_data
-        return @url_data if defined?(@url_data)
-        @url_data = Cdo::GlobalEdition::PATH_PATTERN.match(original_path)
+      private def path_match
+        return @path_match if defined?(@path_match)
+        @path_match = Cdo::GlobalEdition.match_path(original_path)
       end
 
       private def url_region
         return @url_region if defined?(@url_region)
-        @url_region = url_data.try(:[], :ge_region).presence
+        @url_region = path_match.try(:[], :region).presence
+      end
+
+      private def url_locale
+        return @url_locale if defined?(@url_locale)
+        url_locale_segment = path_match.try(:[], :locale).presence
+        @url_locale = url_locale_segment && Cdo::GlobalEdition.resolve_region_locale(url_region, url_locale_segment)
       end
 
       # Returns the request path with the Global Edition (GE) prefix removed.
@@ -141,7 +157,7 @@ module Middleware
       #
       # @return [String] path without GE prefix, or the original path if no prefix is present
       private def main_path
-        @main_path ||= url_data.try(:[], :main_path) || original_path
+        @main_path ||= path_match.try(:[], :main_path) || original_path
       end
 
       private def main_fullpath
@@ -172,19 +188,23 @@ module Middleware
       end
 
       private def setup_region(new_region)
-        return if new_region == original_region
-
         # Resets the region if it's `nil` or sets it only if it's available.
         return unless new_region.nil? || Cdo::GlobalEdition.region_available?(new_region)
 
-        # Sets the request cookies to apply changes immediately without needing to reload the page.
-        request.cookies[REGION_KEY] = Cdo::GlobalEdition.current_region = new_region
-        request.cookies[LOCALE_KEY] = request.locale = new_locale = site_locale(new_region)
+        Cdo::GlobalEdition.current_region = new_region
+        return if new_region == original_region
 
         # Updates the global `ge_region` cookie to lock the platform to the regional version.
-        set_global_cookie(REGION_KEY, new_region, high_priority: true)
-        # Updates the global `language` cookie to enforce the switch to the regional language.
-        set_locale_cookie(new_locale)
+        request.cookies[REGION_KEY] = new_region
+        response.set_cdo_cookie(REGION_KEY, new_region, priority: :high)
+
+        region_locale = resolve_locale_for(new_region)
+        unless region_locale == original_locale
+          # Updates the global `language` cookie to enforce the switch to the regional language.
+          ::I18n.locale = region_locale
+          request.cookies[LOCALE_KEY] = region_locale
+          response.set_cdo_cookie(LOCALE_KEY, region_locale)
+        end
 
         Metrics::Events.log_event(
           event_name: 'Global Edition Region Changed',
@@ -194,11 +214,9 @@ module Middleware
             old_region: original_region,
             old_locale: original_locale,
             new_region:,
-            new_locale:,
+            new_locale: region_locale,
           },
         )
-      ensure
-        Cdo::GlobalEdition.current_region = request.cookies[REGION_KEY].presence
       end
 
       private def existing_route?(path = original_path_info)
@@ -209,19 +227,18 @@ module Middleware
         false
       end
 
-      private def site_locale(region)
-        site_locale = original_locale
+      # Resolves the most appropriate locale for the given region.
+      #
+      # @param region [String, nil] The target Global Edition region code.
+      # @return [String, nil] The resolved locale for the region,
+      #   or `nil` if no locale should be preserved during a region reset.
+      private def resolve_locale_for(region)
+        return original_locale unless region
 
-        if Cdo::GlobalEdition.region_available?(region)
-          unless Cdo::GlobalEdition.locale_available?(region, site_locale)
-            site_locale = Cdo::GlobalEdition.main_region_locale(region)
-          end
-        else
-          # Locales locked to a specific region should not be set during a region reset.
-          site_locale = nil if Cdo::GlobalEdition.locales_regions[site_locale].present?
-        end
+        return original_locale if Cdo::GlobalEdition.locale_available?(region, original_locale)
+        return url_locale      if Cdo::GlobalEdition.locale_available?(region, url_locale)
 
-        site_locale
+        Cdo::GlobalEdition.main_region_locale(region)
       end
 
       private def excluded_path?(path)
@@ -231,7 +248,7 @@ module Middleware
       # Determines if the request is eligible for redirection.
       # To improve efficiency, the redirection should only affect the browser's address bar,
       # avoiding redirection for non-visible to user requests such as AJAX, non-GET, or asset requests.
-      private def redirectable?(path = original_path)
+      private def redirectable?(path = main_path)
         return false unless request.get? # only GET request can be redirected
         return false if request.xhr? # only non-AJAX requests should be redirected
 
@@ -239,7 +256,7 @@ module Middleware
       end
 
       private def regional_path_for(region, main_path)
-        Cdo::GlobalEdition.path(region, main_path.to_s)
+        Cdo::GlobalEdition.path(region, main_path.to_s, locale: resolve_locale_for(region))
       end
 
       private def setup_redirect_to(redirect_path)
@@ -303,33 +320,6 @@ module Middleware
       end
     end
 
-    def initialize(app)
-      @app = app
-    end
-
-    def call(env)
-      return process_request(env) if global_edition_enabled?(env)
-      @app.call(env)
-    end
-
-    private def global_edition_enabled?(env)
-      DCDO.get('global_edition_enabled', false) && Cdo::GlobalEdition.target_host?(Rack::Request.new(env).hostname)
-    end
-
-    private def process_request(env)
-      RouteHandler.new(@app, env).call
-    rescue StandardError => exception
-      raise exception if CDO.rack_env?(:development) || CDO.rack_env?(:test)
-
-      Honeybadger.notify(
-        exception,
-        error_message: '[Middleware::GlobalEdition] Runtime error',
-        context: {
-          env: env,
-        }
-      )
-
-      @app.call(env)
-    end
+    private_constant :RequestGlobalizer
   end
 end

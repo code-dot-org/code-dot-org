@@ -1,0 +1,53 @@
+<Aichat>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 71,
+  "created_at": "2026-04-23T19:39:32.000Z",
+  "level_num": "custom",
+  "user_id": 18754,
+  "properties": {
+    "display_name": "Explore different visual styles ",
+    "bubble_choice_description": "Like a **Concept Artist** who designs how characters and worlds look before they're built.",
+    "thumbnail_url": "https://images.code.org/abd61f322fe0e9a2d45cd6e69f94e83a-5.2.a.png",
+    "encrypted": "false",
+    "long_instructions": "## Create an Image for Your Guide\r\n\r\nYou're going to use an AI image tool to create one image for your responsible AI guide. The AI will ask you two quick questions about your guide, then it will generate an image based on your answers. Give the AI feedback so it can keep refining until you have something you want to use.\r\n\r\nBefore you start, think about:\r\n\r\n- What idea or message from your guide do you want the image to show?\r\n\r\n- Who is your audience?\r\n\r\nWhen you're done,\r\n\r\n1. Save your final image to your **Backpack**.\r\n\r\n2. Complete your Field Notes for this exploration. What assumptions did the AI make? What does that tell you about how image-generation AI behaves in general?",
+    "offer_browser_tts": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "aichat_settings": {
+      "initialCustomizations": {
+        "selectedModelId": "gemini-2.5-flash-image",
+        "temperature": 0.5,
+        "systemPrompt": "",
+        "retrievalContexts": [
+
+        ],
+        "modelCardInfo": {
+          "botName": "",
+          "description": "",
+          "intendedUse": "",
+          "limitationsAndWarnings": "",
+          "testingAndEvaluation": "",
+          "exampleTopics": [
+
+          ],
+          "isPublished": false
+        }
+      },
+      "visibilities": {
+        "selectedModelId": "hidden",
+        "temperature": "hidden",
+        "systemPrompt": "hidden",
+        "retrievalContexts": "hidden",
+        "modelCardInfo": "hidden"
+      },
+      "levelSystemPrompt": "You are an AI Image Assistant helping a middle school student create images for their guide to responsible AI use.\n\nStart with two quick questions — ask them together:\n1. What idea, message, or moment from your guide do you want this image to show?\n2. Who is the audience for your guide?\n\nGenerate one image based on their answers. Then refine it by asking one question at a time until the student is happy with it. All images must be appropriate for a middle school audience.\n\nInteraction Guidelines\n- Tone: High-energy and helpful. Use simple, direct language.\n- Reading Level: Keep text around the 850L Lexile range.\n- Clarity: Use literal wording. Avoid hard idioms or complex jargon.\n- Brevity: Keep sentences short. Be succinct.",
+      "hidePresentationPanel": false,
+      "availableModelIds": [
+        "gemini-2.5-flash-image"
+      ]
+    }
+  },
+  "audit_log": "[{\"changed_at\":\"2026-04-23 19:41:30 +0000\",\"changed\":[],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-04-23 19:46:40 +0000\",\"changed\":[\"bubble_choice_description\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-04-23 20:45:20 +0000\",\"changed\":[],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-04-23 21:19:43 +0000\",\"changed\":[],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-04-23 21:21:41 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-04-23 21:22:45 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-04-23 21:57:04 +0000\",\"changed\":[\"aichat_settings\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-04-29 22:39:59 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-04-29 22:42:54 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-04-29 22:43:22 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-04-29 22:44:32 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-04-29 23:04:00 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-04-29 23:06:20 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-05-02 17:34:16 +0000\",\"changed\":[\"long_instructions\",\"aichat_settings\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2026-05-04 01:34:52 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
+}]]></config>
+</Aichat>

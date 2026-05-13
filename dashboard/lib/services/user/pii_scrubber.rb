@@ -161,7 +161,7 @@ module Services
 
       private def scrub_sections
         if user.teacher?
-          user.sections.with_deleted.find_each do |section|
+          user.sections_owned.with_deleted.find_each do |section|
             section.update!(name: REDACTED_STRING)
           end
         end

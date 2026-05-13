@@ -90,7 +90,7 @@ def main
 rescue Exception => exception
   ChatClient.message(
     'levelbuilder',
-    "<@#{DevelopersTopic.dotd}> EXCEPTION: #{exception.message}",
+    "#{DevelopersTopic.dotd_mention} EXCEPTION: #{exception.message}",
     color: 'red'
   )
   DevelopersTopic.set_dtl TOPIC_DTL_FAILED

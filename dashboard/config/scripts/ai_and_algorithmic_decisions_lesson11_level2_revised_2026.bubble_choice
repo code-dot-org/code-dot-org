@@ -3,7 +3,7 @@ display_name 'Design Your App Layout'
 description 'Design your app layout using Sketch Lab or the chatbot. Identify key elements, user inputs, and outputs before building your app.'
 
 sublevels
-level 'ai-and-algorithmic-decisions-lesson11-level2a_2026'
+level 'ai-and-algorithmic-decisions-lesson11-level2a_v2_2026'
 level 'ai-and-algorithmic-decisions-lesson11-level2b_2026'
 
 uses_lab2

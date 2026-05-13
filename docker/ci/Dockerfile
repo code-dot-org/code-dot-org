@@ -72,7 +72,8 @@ FROM base AS primary-layer
 #########################################################
 
 # MAINLINE UBUNTU PACKAGE DEPS SHOULD BE ADDED HERE
-RUN apt-get install -y --no-install-recommends \
+RUN apt-get update && \
+    apt-get install -y --no-install-recommends \
     apt-transport-https \
     ca-certificates \
     enscript \
@@ -80,6 +81,7 @@ RUN apt-get install -y --no-install-recommends \
     gnupg \
     gzip \
     imagemagick \
+    libjemalloc2 \
     jq \
     libicu-dev \
     libmagickwand-dev \
@@ -87,10 +89,10 @@ RUN apt-get install -y --no-install-recommends \
     moreutils \
     openssh-client \
     parallel \
+    psmisc \
     python \
     python-dev \
     python3-pip \
-    software-properties-common \
     sudo \
     tar \
     tzdata \
@@ -107,38 +109,9 @@ WORKDIR /tmp
 # en_US.UTF-8 locale not available by default
 RUN locale-gen en_US.UTF-8
 
-# Install MySQL; implicitly targeting MySQL 8.0
+# Install MySQL client; implicitly targeting MySQL 8.0
 RUN apt-get update && \
-    apt-get install --yes libmysqlclient-dev mysql-client mysql-server
-
-# disable auth for local dashboard mysql db
-RUN service mysql start && \
-    echo "ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY '';" | mysql && \
-    echo "CREATE USER 'readonly'@'localhost' IDENTIFIED WITH mysql_native_password BY '';" | mysql && \
-    echo "GRANT SELECT ON dashboard_test.* TO 'readonly'@'localhost';" | mysql && \
-    service mysql stop
-
-# For some reason, MySQL 8 on Ubuntu 20 does not have a home directory by
-# default, so we explicity specify one to avoid the error:
-#
-#   su: warning: cannot change directory to /nonexistent: No such file or directory
-#
-# For more, see:
-#  https://serverfault.com/questions/755763/mysql-nonexistent-home-vs-no-directory-logging-in-with-home/942422
-#  https://stackoverflow.com/a/63040661/1810460
-RUN usermod -d /var/lib/mysql/ mysql
-
-# Also for some reason, MySQL 8 on Ubuntu 20 only grants read permissions to
-# the mysqld directory to the mysql user, but we need to be able to connect as
-# ci, so we explicitly grant permissions to avoid the error:
-#
-#  ERROR 2002 (HY000): Can't connect to local MySQL server through socket '/run/mysqld/mysqld.sock' (13) 
-RUN sudo chmod -R 755 /run/mysqld
-
-# we need git >= 2.15 to use git rev-parse --is-shallow-clone feature
-RUN add-apt-repository ppa:git-core/ppa && \
-    apt-get update && \
-    apt-get install -y git>=2.15
+    apt-get install --yes libmysqlclient-dev mysql-client
 
 # we need git-lfs >= 3.0 to use SSH authentication with git-lfs
 RUN curl -sS https://packagecloud.io/install/repositories/github/git-lfs/script.deb.sh | bash && \
@@ -165,8 +138,8 @@ RUN curl -sSLOJ https://dl.google.com/linux/direct/google-chrome-stable_current_
         "/opt/google/chrome/google-chrome"
 
 # install chromedriver
-RUN export CHROME_STABLE_VERSION=$(curl -s https://googlechromelabs.github.io/chrome-for-testing/last-known-good-versions.json | jq -r .channels.Stable.version) && \
-    curl -sSLOJ "https://storage.googleapis.com/chrome-for-testing-public/$CHROME_STABLE_VERSION/linux64/chromedriver-linux64.zip" && \
+RUN export INSTALLED_CHROME_VERSION=$(google-chrome --version | awk '{print $NF}') && \
+    curl -sSLOJ "https://storage.googleapis.com/chrome-for-testing-public/$INSTALLED_CHROME_VERSION/linux64/chromedriver-linux64.zip" && \
     unzip chromedriver-linux64.zip && \
     mv chromedriver-linux64/chromedriver /usr/local/bin/chromedriver && \
     chmod +x /usr/local/bin/chromedriver && \

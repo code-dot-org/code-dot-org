@@ -1,0 +1,226 @@
+name 'pl-aif-2-U6-CFU-scenario'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Scenario Check: Guiding the AIF Capstone
+
+#### **Directions:** The following scenarios represent common situations you may encounter while teaching the AIF Capstone Project. For each scenario, select the facilitation move that best aligns with the capstone’s focus on intentional decision-making, team collaboration, and a process-oriented workflow
+.
+
+## Question 1: Managing Team Dynamics and the Project Leader
+
+<!-- Right-aligned image -->
+<img src="https://images.code.org/aab2d3dad6eef0006ea58f334307da53-image-1777390945235.png"  
+     alt="a controlling student is directing the roles for everyone in a group project"  
+     style="width: 40%; border-radius: 10px; margin: 0px 0px 10px 10px; float: right;">
+
+#### **Scenario:**  
+#### During Day 4 of the project, you notice that David, the current Project Leader for his team, is directing his teammates on exactly what code to write and taking over the keyboard when they get stuck.  
+
+#### When you check in, David explains he is acting as the manager to ensure they finish all their features on time.  
+
+#### Based on the capstone’s design, what is the best facilitation move?
+
+<div style="clear:both;"></div>
+
+---
+
+<!-- Answer 1 -->
+<details>
+<summary style="cursor:pointer;display:inline-block;background:#8148B2;color:white;padding:14px 22px;font-size:18px;font-weight:600;border-radius:999px;list-style:none;">
+A) Redirect David to the Kanban board and ask what it suggests next
+</summary>
+
+<div style="margin-top:16px;font-size: 12pt;">
+<strong>Correct Answer:</strong> Redirect David to the Kanban board and ask, “What does the board tell us to work on next?” Remind him that the Project Leader is a temporary facilitator role meant to support coordination and keep work visible, not a manager who dictates decisions or does all the work.
+</div>
+</details>
+
+<br>
+
+<!-- Answer 2 -->
+<details>
+<summary style="cursor:pointer;display:inline-block;background:#8148B2;color:white;padding:14px 22px;font-size:18px;font-weight:600;border-radius:999px;list-style:none;">
+B) Praise David but suggest he dictate code verbally
+</summary>
+
+<div style="margin-top:16px;font-size: 12pt;">
+<strong>Incorrect Answer</strong> 
+</div>
+</details>
+
+<br>
+
+<!-- Answer 3 -->
+<details>
+<summary style="cursor:pointer;display:inline-block;background:#8148B2;color:white;padding:14px 22px;font-size:18px;font-weight:600;border-radius:999px;list-style:none;">
+C) Let David act as manager with a permanent lead role
+</summary>
+
+<div style="margin-top:16px;font-size: 12pt;">
+<strong>Incorrect Answer</strong> 
+</div>
+</details>
+
+<br>
+
+<!-- Answer 4 -->
+<details>
+<summary style="cursor:pointer;display:inline-block;background:#8148B2;color:white;padding:14px 22px;font-size:18px;font-weight:600;border-radius:999px;list-style:none;">
+D) Remove David from coding entirely
+</summary>
+
+<div style="margin-top:16px;font-size: 12pt;">
+<strong>Incorrect Answer</strong> 
+</div>
+</details>
+
+---
+---
+
+## Question 2: Pacing and Preventing the "Rush to Code"
+
+<!-- Right-aligned image -->
+<img src="https://images.code.org/8b9bab7fee33aaf2131ca7da193949c3-image-1777390444952.png"  
+     alt="students rush into coding before fully planning their app design"  
+     style="width: 40%; border-radius: 10px; margin: 0px 0px 10px 10px; float: right;">
+
+#### **Scenario:**  
+#### It is Day 2. A team has quickly written a one-sentence problem statement for Milestone 1 and immediately opened their coding environment.  
+
+#### They tell you they want to skip the rest of the planning because they already have the whole app pictured in their heads" and want to get a head start on building.  
+
+#### What should you do?
+
+<div style="clear:both;"></div>
+
+---
+
+
+
+
+<!-- Answer 1 -->
+<details>
+<summary style="cursor:pointer;display:inline-block;background:#8148B2;color:white;padding:14px 22px;font-size:18px;font-weight:600;border-radius:999px;list-style:none;">
+A) Let them start coding if they promise to finish planning later
+</summary>
+
+<div style="margin-top:16px;font-size: 12pt;">
+<strong>Incorrect Answer</strong>
+</div>
+</details>
+
+<br>
+
+<!-- Answer 2 -->
+<details>
+<summary style="cursor:pointer;display:inline-block;background:#8148B2;color:white;padding:14px 22px;font-size:18px;font-weight:600;border-radius:999px;list-style:none;">
+B) Block coding until they design every feature the final app will ever have
+</summary>
+
+<div style="margin-top:16px;font-size: 12pt;">
+<strong>Incorrect Answer</strong>
+</div>
+</details>
+
+<br>
+
+<!-- Answer 3 -->
+
+<details>
+<summary style="cursor:pointer;display:inline-block;background:#8148B2;color:white;padding:14px 22px;font-size:18px;font-weight:600;border-radius:999px;list-style:none;">
+C) Pause the team and direct them to Milestone 2 before building
+</summary>
+
+<div style="margin-top:16px;font-size: 12pt;">
+<strong>Correct Answer:</strong> Pause the team and direct them to Milestone 2 (System Explanation). Require them to clearly explain the flow of at least one interaction (user action → app decision → user sees) before they begin building.
+</div>
+</details>
+
+<br>
+
+<!-- Answer 4 -->
+<details>
+<summary style="cursor:pointer;display:inline-block;background:#8148B2;color:white;padding:14px 22px;font-size:18px;font-weight:600;border-radius:999px;list-style:none;">
+D) Encourage them to skip planning because backtracking is part of iteration
+</summary>
+
+<div style="margin-top:16px;font-size: 12pt;">
+<strong>Incorrect Answer</strong>
+</div>
+</details>
+
+---
+---
+
+## Question 3: Evaluating Feedback and Student Judgment
+
+<!-- Right-aligned image -->
+<img src="https://images.code.org/df45dc2495a93dccf4b159e252e7e517-image-1777390529152.png"  
+     alt="students reviewing peer feedback and making thoughtful decisions about what to revise in their app"  
+     style="width: 40%; border-radius: 10px; margin: 0px 0px 10px 10px; float: right;">
+
+#### **Scenario:**  
+#### Following a TAG feedback session during Milestone 4, a team receives feedback suggesting they add a complex user profile system.  
+
+#### The team decides not to build it, noting in their Project Guide that adding profiles would distract from making their core interaction work reliably.  
+
+#### As a teacher, how should you handle this when assessing the team?
+
+<div style="clear:both;"></div>
+
+---
+
+<!-- Answer 1 -->
+<details>
+<summary style="cursor:pointer;display:inline-block;background:#8148B2;color:white;padding:14px 22px;font-size:18px;font-weight:600;border-radius:999px;list-style:none;">
+A) Deduct points because they did not implement peer feedback
+</summary>
+
+<div style="margin-top:16px;font-size: 12pt;">
+<strong>Incorrect Answer</strong>
+</div>
+</details>
+
+<br>
+
+<!-- Answer 2 -->
+<details>
+<summary style="cursor:pointer;display:inline-block;background:#8148B2;color:white;padding:14px 22px;font-size:18px;font-weight:600;border-radius:999px;list-style:none;">
+B) Require them to add the profile system for a more complex final app
+</summary>
+
+<div style="margin-top:16px;font-size: 12pt;">
+<strong>Incorrect Answer</strong>
+</div>
+</details>
+
+<br>
+
+<!-- Answer 3 -->
+<details>
+<summary style="cursor:pointer;display:inline-block;background:#8148B2;color:white;padding:14px 22px;font-size:18px;font-weight:600;border-radius:999px;list-style:none;">
+C) Ignore the decision because the Project Guide only matters for initial planning
+</summary>
+
+<div style="margin-top:16px;font-size: 12pt;">
+<strong>Incorrect Answer</strong>
+</div>
+</details>
+
+<br>
+
+<!-- Answer 4 -->
+<details>
+<summary style="cursor:pointer;display:inline-block;background:#8148B2;color:white;padding:14px 22px;font-size:18px;font-weight:600;border-radius:999px;list-style:none;">
+D) Recognize the documented decision as strong professional judgment
+</summary>
+
+<div style="margin-top:16px;font-size: 12pt;">
+<strong>Correct Answer:</strong> Recognize this as a strong demonstration of professional judgment. Documenting intentional reasons for rejecting or deferring feedback is an expected part of the iteration process and provides concrete evidence for the project rubric.
+</div>
+</details>
+
+![]()
+MARKDOWN

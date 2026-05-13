@@ -3,7 +3,6 @@ require 'cdo/poste'
 require 'rails/all'
 
 require 'cdo/geocoder'
-require 'varnish_environment'
 require_relative '../legacy/middleware/files_api'
 require_relative '../legacy/middleware/channels_api'
 require 'shared_resources'
@@ -99,9 +98,9 @@ module Dashboard
       config.middleware.insert_before ActionDispatch::Static, ::Rack::Optimize
     end
 
-    config.middleware.insert_after Rails::Rack::Logger, VarnishEnvironment
-    config.middleware.insert_after VarnishEnvironment, Middleware::GlobalEdition
-    config.middleware.insert_after VarnishEnvironment, FilesApi
+    config.middleware.insert_after Rails::Rack::Logger, Middleware::I18n
+    config.middleware.insert_after Middleware::I18n, Middleware::GlobalEdition
+    config.middleware.insert_after Middleware::I18n, FilesApi
 
     config.middleware.insert_after FilesApi, ChannelsApi
     config.middleware.insert_after ChannelsApi, SharedResources
@@ -140,23 +139,19 @@ module Dashboard
     config.i18n.enforce_available_locales = false
     config.i18n.available_locales = [Cdo::I18n::DEFAULT_LOCALE]
     config.i18n.fallbacks[:defaults] = [Cdo::I18n::DEFAULT_LOCALE]
+    config.i18n.fallbacks[:map] ||= {}
     config.i18n.default_locale = Cdo::I18n::DEFAULT_LOCALE
     LOCALES = Cdo::I18n::LOCALE_CONFIGS
     Cdo::I18n.available_languages.each do |language|
       locale = language[:locale_s]
-      fallback_locale = Cdo::I18n::LOCALE_CONFIGS.dig(locale, :fallback)
+      fallback_locale = Cdo::I18n::LOCALE_FALLBACKS[locale]
 
       config.i18n.available_locales << locale
-      config.i18n.fallbacks[locale] = fallback_locale if fallback_locale
+      config.i18n.fallbacks[:map][locale] = fallback_locale if fallback_locale
     end
 
-    config.after_initialize do
-      # For some reason custom fallbacks need to be set on the I18n module
-      # itself and can't be configured using config.i18n.fallbacks.
-      # Following examples from: https://github.com/ruby-i18n/i18n/wiki/Fallbacks
-      # and http://pawelgoscicki.com/archives/2015/02/enabling-i18n-locale-fallbacks-in-rails/
-      I18n.fallbacks.map(es: :'es-MX')
-      I18n.fallbacks.map(pt: :'pt-BR')
+    Cdo::I18n::LOCALE_ALIASES.each do |short_locale, normalized_locale|
+      config.i18n.fallbacks[:map][short_locale] = normalized_locale
     end
 
     config.assets.gzip = false # cloudfront gzips everything for us on the fly.

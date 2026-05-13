@@ -22,6 +22,7 @@ import {
 } from '../types';
 import {UserAddedSelectionContextItem} from '../types/userAddedSelectionContext';
 
+import AssetImageOverflowMenu from './assets/AssetImageOverflowMenu';
 import FilePreview from './assets/FilePreview';
 import FlagResponseButton from './FlagResponseButton';
 import CleanFeedbackFooter from './teacherFeedback/CleanFeedbackFooter';
@@ -35,7 +36,7 @@ interface ChatMessageViewProps {
   clientType?: string;
   modelParameters?: ModelParameters;
   postText?: React.ReactNode;
-  teacherFlaggedHidden: boolean;
+  teacherFlagged: boolean;
 }
 
 const ChatMessageView: React.FunctionComponent<ChatMessageViewProps> = ({
@@ -45,9 +46,10 @@ const ChatMessageView: React.FunctionComponent<ChatMessageViewProps> = ({
   clientType,
   modelParameters,
   postText,
-  teacherFlaggedHidden,
+  teacherFlagged,
 }) => {
   const user = useAppSelector(state => state.currentUser);
+  const isTeacherFlaggedHidden = teacherFlagged && !isTeacherView;
 
   const [showProfaneUserMessage, setShowProfaneUserMessage] = useState(false);
   const {
@@ -73,7 +75,7 @@ const ChatMessageView: React.FunctionComponent<ChatMessageViewProps> = ({
     role,
     intendedDisplayText,
     showProfaneUserMessage,
-    teacherFlaggedHidden
+    isTeacherFlaggedHidden
   );
 
   // If the chat message's display text is what is displayed (i.e. no error or violation)
@@ -94,19 +96,29 @@ const ChatMessageView: React.FunctionComponent<ChatMessageViewProps> = ({
     return null;
   }
 
+  const isFlaggedInTeacherView = teacherFlagged && isTeacherView;
+
   return (
     <ChatMessage
       text={displayText}
       postText={postText}
       role={role}
-      messageStyle={getMessageStyle(status, role, teacherFlaggedHidden)}
+      messageStyle={getMessageStyle(status, role, teacherFlagged)}
+      customStyles={
+        isFlaggedInTeacherView
+          ? {
+              [`message-${role}`]: styles.teacherFlaggedMessage,
+            }
+          : undefined
+      }
       header={
         <MessageHeader
           isAssistant={isAssistant}
           assets={assets}
           buildAssetUrl={buildAssetUrl}
           userAddedSelectionContext={userAddedSelectionContext}
-          teacherFlaggedHidden={teacherFlaggedHidden}
+          teacherFlaggedHidden={isTeacherFlaggedHidden}
+          isFlaggedInTeacherView={isFlaggedInTeacherView}
         />
       }
       footer={
@@ -174,6 +186,7 @@ interface MessageHeaderProps {
   buildAssetUrl: ((asset: ChatAsset) => string) | undefined;
   userAddedSelectionContext: UserAddedSelectionContextItem[] | undefined;
   teacherFlaggedHidden: boolean;
+  isFlaggedInTeacherView: boolean;
 }
 
 const MessageHeader: React.FC<MessageHeaderProps> = ({
@@ -182,8 +195,9 @@ const MessageHeader: React.FC<MessageHeaderProps> = ({
   buildAssetUrl,
   userAddedSelectionContext,
   teacherFlaggedHidden,
+  isFlaggedInTeacherView,
 }) => {
-  const hasAssets = assets && buildAssetUrl;
+  const hasAssets = !!assets && !!buildAssetUrl;
   const hasUserAddedSelectionContext = !!userAddedSelectionContext?.length;
 
   if ((!hasAssets && !hasUserAddedSelectionContext) || teacherFlaggedHidden) {
@@ -198,26 +212,37 @@ const MessageHeader: React.FC<MessageHeaderProps> = ({
         assets.map(asset => {
           const filename = asset.filename;
           const url = buildAssetUrl(asset);
+          const isPdf = filename.endsWith('.pdf');
           return (
-            <button
-              key={filename}
-              type="button"
-              className={styles.assetButton}
-              onClick={() => window.open(url, '_blank')}
-            >
-              {filename.endsWith('.pdf') ? (
-                <FilePreview type="pdf" filename={filename} url={url} />
-              ) : (
-                <img
-                  alt=""
-                  className={classNames(
-                    styles.imagePreview,
-                    isAssistant && styles.assistant
-                  )}
-                  src={url}
+            <div key={filename} className={styles.assetImageWrapper}>
+              <button
+                type="button"
+                className={styles.assetButton}
+                onClick={() => window.open(url, '_blank')}
+              >
+                {isPdf ? (
+                  <FilePreview type="pdf" filename={filename} url={url} />
+                ) : (
+                  <img
+                    alt=""
+                    className={classNames(
+                      styles.imagePreview,
+                      isAssistant && styles.assistant,
+                      isFlaggedInTeacherView &&
+                        styles.teacherFlaggedImagePreview
+                    )}
+                    src={url}
+                  />
+                )}
+              </button>
+              {!isPdf && (
+                <AssetImageOverflowMenu
+                  url={url}
+                  filename={filename}
+                  id={`asset-image-options-${filename}`}
                 />
               )}
-            </button>
+            </div>
           );
         })}
       {hasUserAddedSelectionContext &&

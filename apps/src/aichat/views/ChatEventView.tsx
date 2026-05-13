@@ -1,5 +1,6 @@
 import Alert from '@code-dot-org/component-library/alert';
 import classNames from 'classnames';
+import moment from 'moment';
 import React, {forwardRef, memo} from 'react';
 
 import AiTutorVersionActionNotification from '@cdo/apps/aiComponentLibrary/aiTutorVersionActionNotification/AiTutorVersionActionNotification';
@@ -8,7 +9,6 @@ import {AiChatTeacherFeedback as TeacherFeedback} from '@cdo/generated-scripts/s
 
 import {modelDescriptions, MODEL_PARAMETER_LABELS} from '../constants';
 import {removeUpdateMessage} from '../redux';
-import {timestampToLocalTime} from '../redux/utils';
 import {
   AI_TUTOR_VERSION_ACTION_ACCEPT,
   AI_TUTOR_VERSION_ACTION_REJECT,
@@ -26,6 +26,9 @@ import {
 import ChatMessageView, {getChatMessageDisplayText} from './ChatMessageView';
 
 import styles from './chatWorkspace.module.scss';
+
+const timestampToLocalTime = (timestamp: number) =>
+  moment(timestamp).format('LT');
 
 const chatEventDescriptionsOwner = {
   CLEAR_CHAT: 'You cleared the chat workspace.',
@@ -97,7 +100,6 @@ const ChatEventView = forwardRef<HTMLDivElement, ChatEventViewProps>(
       const teacherFlagged =
         isCompletedChatMessage(event) &&
         event.teacherFeedback === TeacherFeedback.CLEAN_DISAGREE;
-      const teacherFlaggedHidden = teacherFlagged && !isTeacherView;
       return (
         <div
           ref={ref}
@@ -108,7 +110,7 @@ const ChatEventView = forwardRef<HTMLDivElement, ChatEventViewProps>(
             event.role,
             event.chatMessageText,
             false, // Profane messages are never shown in the aria-label context to prevent screen readers from reading inappropriate content.
-            teacherFlaggedHidden
+            teacherFlagged
           )}
           className={styles.chatMessageOutline}
         >
@@ -119,7 +121,7 @@ const ChatEventView = forwardRef<HTMLDivElement, ChatEventViewProps>(
             clientType={clientType}
             modelParameters={modelParameters}
             postText={postText}
-            teacherFlaggedHidden={teacherFlaggedHidden}
+            teacherFlagged={teacherFlagged}
           />
         </div>
       );

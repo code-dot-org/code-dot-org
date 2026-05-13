@@ -1,0 +1,39 @@
+name 'pl-ai-101-V2-mod5-data-00'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Data Privacy and AI in Education
+
+#### AI tools raise important questions about data privacy. Many AI systems rely on user input to generate responses, which means they may collect, store, or process information in ways that are not always visible to the user.
+
+<div style="background-color: #B7E0E5; border-radius: 10px; padding: 15px; margin: 20px auto; max-width: 85%; box-sizing: border-box; word-wrap: break-word; overflow-wrap: break-word;">
+<p style="font-size: 14pt; margin-top: 12px; line-height: 120%;">📖 <strong>Data Privacy:</strong> the protection of personal and sensitive information, including how it is collected, stored, used, and shared.</p>
+</div>
+
+
+#### In an educational setting, this is especially important. Teachers and students often work with sensitive information, including student work, personal details, and classroom data. Understanding how AI tools handle this information is a key part of using them responsibly.
+
+
+## Why Data Privacy Matters
+
+#### Unlike other ethical considerations, data privacy is not just about how AI behaves, it’s about what happens to the information you share.
+
+#### When using AI tools, it’s important to consider:
+* #### What data is being entered into the system
+* #### How that data is stored and used
+* #### Who has access to that information
+
+#### Even tools that seem simple, like writing assistants or chat-based tools, may process and retain user input. Without careful use, this can create risks for student privacy.
+
+## Your Role as an Educator
+
+#### As an educator, you play a key role in protecting student information and modeling responsible technology use.
+
+#### This includes:
+* #### Being aware of what information is shared with AI tools
+* #### Choosing tools that align with school and district policies
+* #### Reviewing how tools handle data before using them
+
+#### You don’t need to be an expert in data privacy, but you do need to approach AI use with awareness and intention.
+MARKDOWN

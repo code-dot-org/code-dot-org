@@ -191,6 +191,84 @@ describe('BackpackClientApi (jest)', () => {
       expect(successCallback).not.toHaveBeenCalled();
     });
 
+    it('saveCodebridgeFileFromUrl resolves without callbacks', async () => {
+      (HttpClient.get as jest.Mock).mockResolvedValueOnce({
+        ok: true,
+        blob: jest
+          .fn()
+          .mockResolvedValueOnce(new Blob(['data'], {type: 'text/plain'})),
+      });
+      setPutResolveOnce();
+
+      await expect(
+        backpackClientApi.saveCodebridgeFileFromUrl(
+          'fromUrl.txt',
+          'https://example.com/file.txt'
+        )
+      ).resolves.toBeUndefined();
+
+      expect(HttpClient.put).toHaveBeenCalledTimes(1);
+    });
+
+    it('saveCodebridgeFileFromUrl throws error if no error callback and GET fails', async () => {
+      (HttpClient.get as jest.Mock).mockRejectedValueOnce(new Error('network'));
+
+      await expect(
+        backpackClientApi.saveCodebridgeFileFromUrl(
+          'fromUrl.txt',
+          'https://example.com/file.txt'
+        )
+      ).rejects.toThrow('network');
+      expect(HttpClient.put).not.toHaveBeenCalled();
+    });
+
+    it('getFileList returns with filenames', async () => {
+      (HttpClient.fetchJson as jest.Mock).mockResolvedValueOnce({
+        value: [
+          {filename: 'a.png', size: 1, timestamp: 't'},
+          {filename: 'b.png', size: 1, timestamp: 't'},
+        ],
+      });
+
+      const filenames = await backpackClientApi.getFileList();
+
+      expect(filenames).toEqual(['a.png', 'b.png']);
+    });
+
+    it('getFileList calls onSuccess with filenames', async () => {
+      (HttpClient.fetchJson as jest.Mock).mockResolvedValueOnce({
+        value: [{filename: 'a.png', size: 1, timestamp: 't'}],
+      });
+
+      await backpackClientApi.getFileList(errorCallback, successCallback);
+
+      expect(successCallback).toHaveBeenCalledWith(['a.png']);
+      expect(errorCallback).not.toHaveBeenCalled();
+    });
+
+    it('getFileList resolves to [] and calls onError when fetch fails', async () => {
+      (HttpClient.fetchJson as jest.Mock).mockRejectedValueOnce(
+        new Error('boom')
+      );
+
+      const filenames = await backpackClientApi.getFileList(
+        errorCallback,
+        successCallback
+      );
+
+      expect(filenames).toEqual([]);
+      expect(errorCallback).toHaveBeenCalledTimes(1);
+      expect(successCallback).not.toHaveBeenCalled();
+    });
+
+    it('getFileList rejects when no error callback and fetch fails', async () => {
+      (HttpClient.fetchJson as jest.Mock).mockRejectedValueOnce(
+        new Error('boom')
+      );
+
+      await expect(backpackClientApi.getFileList()).rejects.toThrow('boom');
+    });
+
     it('fetch file calls success callback on successful fetch', async () => {
       setGetResolveOnce('file contents');
 
@@ -227,9 +305,9 @@ describe('BackpackClientApi (jest)', () => {
     it('save fetches channel id', async () => {
       const fetchChannelIdSpy = jest
         .spyOn(backpackClientApi, 'fetchChannelId')
-        .mockImplementation((cb: () => void) => {
+        .mockImplementation(async (cb?: () => void) => {
           backpackClientApi.channelId = channelId;
-          cb();
+          cb?.();
         });
 
       setPutResolveOnce();
@@ -249,10 +327,38 @@ describe('BackpackClientApi (jest)', () => {
       fetchChannelIdSpy.mockRestore();
     });
 
-    it('get files calls error callback', () => {
-      backpackClientApi.getFileList(errorCallback, successCallback);
+    it('getFileList calls error callback for javalab without channel id', async () => {
+      await backpackClientApi.getFileList(errorCallback, successCallback);
       expect(errorCallback).toHaveBeenCalledTimes(1);
       expect(successCallback).not.toHaveBeenCalled();
+    });
+
+    it('getFileList rejects for javalab without channel id and no error callback', async () => {
+      await expect(backpackClientApi.getFileList()).rejects.toThrow(
+        'Missing backpack channel id for javalab'
+      );
+    });
+
+    it('saveCodebridgeFileFromUrl calls error callback when channel id missing', async () => {
+      await backpackClientApi.saveCodebridgeFileFromUrl(
+        'a.txt',
+        'https://example.com/a.txt',
+        errorCallback,
+        successCallback
+      );
+      expect(errorCallback).toHaveBeenCalledTimes(1);
+      expect(successCallback).not.toHaveBeenCalled();
+      expect(HttpClient.get).not.toHaveBeenCalled();
+      expect(HttpClient.put).not.toHaveBeenCalled();
+    });
+
+    it('saveCodebridgeFileFromUrl rejects when channel id missing and no error callback', async () => {
+      await expect(
+        backpackClientApi.saveCodebridgeFileFromUrl(
+          'a.txt',
+          'https://example.com/a.txt'
+        )
+      ).rejects.toThrow('Missing channel id for backpack');
     });
 
     it('fetch file calls error callback', async () => {
@@ -260,6 +366,29 @@ describe('BackpackClientApi (jest)', () => {
       await Promise.resolve();
       expect(errorCallback).toHaveBeenCalledTimes(1);
       expect(successCallback).not.toHaveBeenCalled();
+    });
+  });
+
+  describe('without provided channel id (non-javalab)', () => {
+    beforeEach(() => {
+      backpackClientApi = new BackpackClientApi('pythonlab', null);
+    });
+
+    it('getFileList auto-fetches channel id and resolves with filenames', async () => {
+      const fetchChannelIdSpy = jest
+        .spyOn(backpackClientApi, 'fetchChannelId')
+        .mockImplementation(async () => {
+          backpackClientApi.channelId = channelId;
+        });
+      (HttpClient.fetchJson as jest.Mock).mockResolvedValueOnce({
+        value: [{filename: 'a.png', size: 1, timestamp: 't'}],
+      });
+
+      const filenames = await backpackClientApi.getFileList();
+
+      expect(fetchChannelIdSpy).toHaveBeenCalledTimes(1);
+      expect(filenames).toEqual(['a.png']);
+      fetchChannelIdSpy.mockRestore();
     });
   });
 });

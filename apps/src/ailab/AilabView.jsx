@@ -36,7 +36,7 @@ class AilabView extends React.Component {
         <Overlay />
         <InstructionsWithWorkspace>
           <CodeWorkspaceContainer>
-            <div style={styles.container}>
+            <div style={styles.container} data-notranslate>
               <div id="root" style={styles.containerReact} />
             </div>
           </CodeWorkspaceContainer>

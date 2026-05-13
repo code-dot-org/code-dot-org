@@ -12,6 +12,7 @@ de,de,de,de-DE,de,Deutsch,German,TRUE,TRUE,de,German,TRUE,TRUE,TRUE,TRUE,FALSE
 dv,dv,dv,dv-MV,,ދިވެހި,Dhivehi,TRUE,FALSE,dv,Dhivehi,FALSE,FALSE,FALSE,FALSE,FALSE
 el,el,el,el-GR,,Ελληνικά,Greek,TRUE,TRUE,el,Greek,FALSE,FALSE,FALSE,FALSE,FALSE
 en-GB,gb,en,en-GB,,English (UK),English (UK),FALSE,TRUE,en-GB,"English, United Kingdom",FALSE,TRUE,TRUE,TRUE,FALSE
+en-IN,in,en,en-IN,en-IN,English (India),English (India),TRUE,FALSE,en-IN,"English, India",FALSE,FALSE,FALSE,FALSE,FALSE
 en,en,en,en-US,en,English,English,TRUE,TRUE,en,English,TRUE,TRUE,TRUE,TRUE,FALSE
 es,es,es,es-ES,es,Español (España),Spanish (Spain),TRUE,TRUE,es-ES,Spanish,TRUE,TRUE,TRUE,TRUE,TRUE
 es-MX,la,es,es-MX,es-LA,Español (LATAM),Spanish (LATAM),TRUE,TRUE,es-MX,"Spanish, Mexico",TRUE,TRUE,TRUE,TRUE,TRUE
