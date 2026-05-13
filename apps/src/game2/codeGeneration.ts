@@ -1,6 +1,6 @@
 import {postAichatCompletionMessage} from '@cdo/apps/aichat/aichatApi';
 import {PendingChatMessage, AichatContext} from '@cdo/apps/aichat/types';
-import {EMPTY_AI_CUSTOMIZATIONS} from '@cdo/apps/aichat/views/modelCustomization/constants';
+import {EMPTY_AI_CUSTOMIZATIONS} from '@cdo/apps/aichatLab/views/modelCustomization/constants';
 import {Role} from '@cdo/apps/aiComponentLibrary/chatMessage/types';
 import {
   AiChatModelIds,

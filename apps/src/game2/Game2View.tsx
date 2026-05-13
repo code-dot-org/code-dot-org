@@ -1,8 +1,10 @@
 import React, {useCallback, useEffect, useRef, useState} from 'react';
 
+import AichatContextManager from '@cdo/apps/aichat/aichatContextManager';
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
 import {LabProps} from '@cdo/apps/lab2/types';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
+import {AiChatClientTypes} from '@cdo/generated-scripts/sharedConstants';
 
 import CodePanel, {CodePanelHandle} from './CodePanel';
 import {createEmptyGrid} from './gridConstants';
@@ -42,6 +44,20 @@ const Game2View: React.FunctionComponent<LabProps> = ({initialSources}) => {
   const channelId = useAppSelector(state => state.lab.channel?.id) as
     | string
     | undefined;
+  const currentLevelId = useAppSelector(state => state.progress.currentLevelId);
+  const scriptId = useAppSelector(state => state.progress.scriptId);
+
+  // aiGateway (used for item/world generation) reads context from a
+  // process-wide AichatContextManager rather than accepting it as a
+  // parameter. Populate it here so those calls don't throw.
+  useEffect(() => {
+    AichatContextManager.setContext({
+      clientType: AiChatClientTypes.FLOW_LAB,
+      currentLevelId: currentLevelId ? parseInt(currentLevelId) : null,
+      scriptId: scriptId ?? null,
+      channelId,
+    });
+  }, [currentLevelId, scriptId, channelId]);
 
   // Parse initial sources once.
   const parsedInitial = useRef<Game2Source>({});
