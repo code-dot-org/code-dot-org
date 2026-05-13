@@ -261,6 +261,8 @@ export interface TeacherStudentPair {
   teacherPassword: string;
   /** Section join code. */
   sectionCode: string;
+  /** Numeric section ID used in dashboard URLs and APIs. */
+  sectionId: number;
 }
 
 /**
@@ -367,19 +369,30 @@ export async function createTeacherAssociatedStudent(
     const csrfForAuth = await page
       .locator('meta[name="csrf-token"]')
       .getAttribute('content');
-    const authResp = await page.request.post(
-      '/api/test/authorized_teacher_access',
-      {
-        headers: {
-          'Content-Type': 'application/json',
-          'X-CSRF-Token': csrfForAuth ?? '',
+    let lastAuthFailure = '';
+    let authorizedTeacher = false;
+    for (let attempt = 1; attempt <= 3; attempt++) {
+      const authResp = await page.request.post(
+        '/api/test/authorized_teacher_access',
+        {
+          headers: {
+            'Content-Type': 'application/json',
+            'X-CSRF-Token': csrfForAuth ?? '',
+          },
         },
-      },
-    );
-    if (!authResp.ok()) {
-      throw new Error(
-        `authorized_teacher_access failed: ${authResp.status()} — ${await authResp.text()}`,
       );
+      if (authResp.ok()) {
+        authorizedTeacher = true;
+        break;
+      }
+
+      lastAuthFailure = `${authResp.status()} — ${await authResp.text()}`;
+      if (authResp.status() < 500 || attempt === 3) {
+        break;
+      }
+    }
+    if (!authorizedTeacher) {
+      throw new Error(`authorized_teacher_access failed: ${lastAuthFailure}`);
     }
   }
 
@@ -387,19 +400,35 @@ export async function createTeacherAssociatedStudent(
   const csrfForSection = await page
     .locator('meta[name="csrf-token"]')
     .getAttribute('content');
-  const sectionResp = await page.request.post('/dashboardapi/sections', {
-    headers: {
-      'Content-Type': 'application/json',
-      'X-CSRF-Token': csrfForSection ?? '',
-    },
-    data: {login_type: 'email', participant_type: 'student'},
-  });
-  if (!sectionResp.ok()) {
-    throw new Error(
-      `create section failed: ${sectionResp.status()} — ${await sectionResp.text()}`,
-    );
+  let sectionCode = '';
+  let sectionId = 0;
+  let lastSectionFailure = '';
+  for (let attempt = 1; attempt <= 3; attempt++) {
+    const sectionResp = await page.request.post('/dashboardapi/sections', {
+      headers: {
+        'Content-Type': 'application/json',
+        'X-CSRF-Token': csrfForSection ?? '',
+      },
+      data: {login_type: 'email', participant_type: 'student'},
+    });
+    if (sectionResp.ok()) {
+      const sectionJson = (await sectionResp.json()) as {
+        code: string;
+        id: number;
+      };
+      sectionCode = sectionJson.code;
+      sectionId = sectionJson.id;
+      break;
+    }
+
+    lastSectionFailure = `${sectionResp.status()} — ${await sectionResp.text()}`;
+    if (sectionResp.status() < 500 || attempt === 3) {
+      break;
+    }
   }
-  const sectionCode = ((await sectionResp.json()) as {code: string}).code;
+  if (!sectionCode || !sectionId) {
+    throw new Error(`create section failed: ${lastSectionFailure}`);
+  }
 
   // Create student and sign in as student.
   const studentTs = Date.now();
@@ -423,19 +452,30 @@ export async function createTeacherAssociatedStudent(
   const csrfForJoin = await page
     .locator('meta[name="csrf-token"]')
     .getAttribute('content');
-  const joinResp = await page.request.post(`/join/${sectionCode}`, {
-    headers: {
-      'Content-Type': 'application/json',
-      'X-CSRF-Token': csrfForJoin ?? '',
-    },
-  });
-  if (!joinResp.ok()) {
-    throw new Error(
-      `join section failed: ${joinResp.status()} — ${await joinResp.text()}`,
-    );
+  let lastJoinFailure = '';
+  let joinedSection = false;
+  for (let attempt = 1; attempt <= 3; attempt++) {
+    const joinResp = await page.request.post(`/join/${sectionCode}`, {
+      headers: {
+        'Content-Type': 'application/json',
+        'X-CSRF-Token': csrfForJoin ?? '',
+      },
+    });
+    if (joinResp.ok()) {
+      joinedSection = true;
+      break;
+    }
+
+    lastJoinFailure = `${joinResp.status()} — ${await joinResp.text()}`;
+    if (joinResp.status() < 500 || attempt === 3) {
+      break;
+    }
+  }
+  if (!joinedSection) {
+    throw new Error(`join section failed: ${lastJoinFailure}`);
   }
 
-  return {teacherEmail, teacherPassword, sectionCode};
+  return {teacherEmail, teacherPassword, sectionCode, sectionId};
 }
 
 /** Section identifiers returned by {@link createSection} and {@link createSectionWithCourse}. */
