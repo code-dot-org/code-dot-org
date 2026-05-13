@@ -18,6 +18,8 @@ USER vscode
 
 # Pin Ruby to match .ruby-version
 ENV PATH="/home/vscode/.rbenv/shims:$PATH"
+# Refresh ruby-build's known versions so recent Ruby patch releases resolve
+RUN git -C ~/.rbenv/plugins/ruby-build pull
 RUN rbenv install 3.2.11
 RUN rbenv global 3.2.11
 
