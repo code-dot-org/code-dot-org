@@ -3,10 +3,9 @@ import React from 'react';
 import {connect} from 'react-redux';
 
 import {queryParams} from '@cdo/apps/code-studio/utils';
+import Lab2TopInstructions from '@cdo/apps/javalab/lab2/Lab2TopInstructions';
 import {VIEWING_CODE_REVIEW_URL_PARAM} from '@cdo/apps/templates/instructions/CommitsAndReviewTab';
-import TopInstructions, {
-  TabType,
-} from '@cdo/apps/templates/instructions/TopInstructions';
+import {TabType} from '@cdo/apps/templates/instructions/TopInstructions';
 import {hasInstructions} from '@cdo/apps/templates/instructions/utils';
 import StudioAppWrapper from '@cdo/apps/templates/StudioAppWrapper';
 import color from '@cdo/apps/util/color';
@@ -227,7 +226,7 @@ class JavalabView extends React.Component {
             viewMode={viewMode}
             visualization={visualization}
             topLeftPanel={height => (
-              <TopInstructions
+              <Lab2TopInstructions
                 mainStyle={styles.instructions}
                 isOldPurpleColorHeader
                 standalone

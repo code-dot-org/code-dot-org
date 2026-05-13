@@ -23,12 +23,12 @@ import './javalab-lab2.scss';
 //   JavalabEditorHeader, JavalabCaptchaDialog, TheaterVisualizationColumn),
 //   so this dispatch now carries only page-stable values that don't change
 //   between levels.
-// - state.instructions has the same "set-once" throw. We dispatch it once
-//   on first mount; TopInstructions therefore still shows the FIRST level's
-//   long instructions text even after a no-reload navigation. JavalabView's
-//   `longInstructions` prop (used for the hasInstructions/layout check) DOES
-//   update from state.lab.levelProperties. Refactoring TopInstructions to
-//   read from state.lab is the remaining piece.
+// - JavalabView renders Lab2TopInstructions (a wrapper around
+//   UnconnectedTopInstructions) instead of the default TopInstructions, so
+//   long-instruction content reads from state.lab.levelProperties and
+//   updates on no-reload nav. state.instructions only holds layout state
+//   (rendered height, collapsed) — which is set by user interaction and is
+//   correctly persistent across level changes.
 // - No backpack support yet; BackpackAPIContext is set to null. If a
 //   level relies on the backpack, follow-up is required.
 // - Code-review / commit-code flow currently no-ops; the lab2 project
@@ -55,9 +55,7 @@ import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import Neighborhood from '@cdo/apps/miniApps/neighborhood/Neighborhood';
 import {getStore, registerReducers} from '@cdo/apps/redux';
 import authoredHints from '@cdo/apps/redux/authoredHints';
-import instructions, {
-  setInstructionsConstants,
-} from '@cdo/apps/redux/instructions';
+import instructions from '@cdo/apps/redux/instructions';
 import pageConstants, {setPageConstants} from '@cdo/apps/redux/pageConstants';
 import runState from '@cdo/apps/redux/runState';
 import {BackpackAPIContext} from '@cdo/apps/sharedComponents/backpack/BackpackAPIContext';
@@ -135,19 +133,6 @@ function publishPageConstantsOnce(
   if (pageConstantsPublished) return;
   getStore().dispatch(setPageConstants(props));
   pageConstantsPublished = true;
-}
-
-// The instructions reducer throws on a second SET_CONSTANTS once long or
-// short instructions are populated. React strict mode runs effects twice in
-// dev, so guard with a module-scoped flag the same way we do for
-// pageConstants. setInstructionsConstants is JS-typed and its parameter
-// resolves to `never` via Parameters<>, so we accept an unknown record.
-let instructionsConstantsPublished = false;
-function publishInstructionsConstantsOnce(props: Record<string, unknown>) {
-  if (instructionsConstantsPublished) return;
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  getStore().dispatch(setInstructionsConstants(props as any));
-  instructionsConstantsPublished = true;
 }
 
 // Build an assetUrl function compatible with the legacy skinsBase contract:
@@ -243,35 +228,6 @@ const JavaLab2View: React.FunctionComponent<
       cancelled = true;
     };
   }, []);
-
-  // Populate state.instructions from levelProperties on first mount only.
-  // TopInstructions reads its content from state.instructions, and the
-  // reducer throws on a second dispatch — so this captures the first level's
-  // instructions and TopInstructions won't update on no-reload navigation.
-  // JavalabView's `longInstructions` prop (and the hasInstructions/layout
-  // check) DOES update because it now reads from state.lab.levelProperties.
-  publishInstructionsConstantsOnce({
-    // Java Lab uses CSP/CSD-style panel rendering (full-width markdown box,
-    // not the CSF speech bubble). Mirrors `config.noInstructionsWhenCollapsed
-    // = true` in legacy Javalab.js. TopInstructions reads this to switch
-    // its render path.
-    noInstructionsWhenCollapsed: true,
-    shortInstructions: undefined,
-    shortInstructions2: undefined,
-    longInstructions: levelProperties.longInstructions,
-    dynamicInstructions: undefined,
-    hasContainedLevels:
-      !!levelProperties.containedLevelNames &&
-      levelProperties.containedLevelNames.length > 0,
-    overlayVisible: undefined,
-    teacherMarkdown: levelProperties.teacherMarkdown,
-    levelVideos: levelProperties.helpVideos,
-    mapReference: levelProperties.mapReference,
-    referenceLinks: levelProperties.referenceLinks,
-    muteBackgroundMusic: undefined,
-    unmuteBackgroundMusic: undefined,
-    programmingEnvironment: undefined,
-  });
 
   // Sources, validation, level metadata.
   useJavalabSources({
