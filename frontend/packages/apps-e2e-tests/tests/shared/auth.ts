@@ -500,6 +500,70 @@ export interface SectionInfo {
   sectionId: number;
 }
 
+type TestRoleEndpoint =
+  | 'universal_instructor_access'
+  | 'plc_reviewer_access'
+  | 'facilitator_access';
+
+/**
+ * POSTs a current-user role endpoint from TestController.
+ *
+ * @param page - Playwright page holding the signed-in teacher session
+ * @param endpoint - test-only role endpoint name
+ */
+async function grantTestRole(
+  page: Page,
+  endpoint: TestRoleEndpoint,
+): Promise<void> {
+  await page.goto('/');
+  const csrf = await page
+    .locator('meta[name="csrf-token"]')
+    .getAttribute('content');
+  const resp = await page.request.post(`/api/test/${endpoint}`, {
+    headers: {
+      'Content-Type': 'application/json',
+      'X-CSRF-Token': csrf ?? '',
+    },
+  });
+  if (!resp.ok()) {
+    throw new Error(
+      `${endpoint} failed: ${resp.status()} — ${await resp.text()}`,
+    );
+  }
+}
+
+/**
+ * Grants universal instructor access to the current user.
+ * Mirrors `I get universal instructor access` from account_steps.rb.
+ *
+ * @param page - Playwright page holding the signed-in teacher session
+ */
+export async function grantUniversalInstructorAccess(
+  page: Page,
+): Promise<void> {
+  await grantTestRole(page, 'universal_instructor_access');
+}
+
+/**
+ * Grants PLC reviewer access to the current user.
+ * Mirrors `I get plc reviewer access` from account_steps.rb.
+ *
+ * @param page - Playwright page holding the signed-in teacher session
+ */
+export async function grantPlcReviewerAccess(page: Page): Promise<void> {
+  await grantTestRole(page, 'plc_reviewer_access');
+}
+
+/**
+ * Grants facilitator access to the current user.
+ * Mirrors `I get facilitator access` from pd.rb.
+ *
+ * @param page - Playwright page holding the signed-in teacher session
+ */
+export async function grantFacilitatorAccess(page: Page): Promise<void> {
+  await grantTestRole(page, 'facilitator_access');
+}
+
 /**
  * Creates an empty student section for the currently signed-in teacher.
  * Mirrors `I create a new student section` from section_management_steps.rb.
@@ -521,6 +585,38 @@ export async function createSection(page: Page): Promise<SectionInfo> {
   if (!resp.ok()) {
     throw new Error(
       `create section failed: ${resp.status()} — ${await resp.text()}`,
+    );
+  }
+  const json = (await resp.json()) as {code: string; id: number};
+  return {sectionCode: json.code, sectionId: json.id};
+}
+
+/**
+ * Creates a professional-learning section for the currently signed-in teacher.
+ * Mirrors `I create a new teacher/facilitator section and go home` from
+ * section_management_steps.rb.
+ *
+ * @param page - Playwright page holding the teacher session
+ * @param participantType - permitted participant audience for the section
+ * @returns section join code and numeric ID
+ */
+export async function createProfessionalLearningSection(
+  page: Page,
+  participantType: 'teacher' | 'facilitator',
+): Promise<SectionInfo> {
+  const csrf = await page
+    .locator('meta[name="csrf-token"]')
+    .getAttribute('content');
+  const resp = await page.request.post('/dashboardapi/sections', {
+    headers: {
+      'Content-Type': 'application/json',
+      'X-CSRF-Token': csrf ?? '',
+    },
+    data: {login_type: 'email', participant_type: participantType, grade: 'pl'},
+  });
+  if (!resp.ok()) {
+    throw new Error(
+      `create professional learning section failed: ${resp.status()} — ${await resp.text()}`,
     );
   }
   const json = (await resp.json()) as {code: string; id: number};
