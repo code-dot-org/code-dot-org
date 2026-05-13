@@ -23,3 +23,27 @@
     transform-origin: 100% 0;
   }
 }
+
+// Paint-bucket counter labels in the neighborhood maze (the "28" on each
+// bucket). MazeController emits SVG <text class="karel-counter-text [paint]">
+// inside #svgMaze; without these rules the text defaults to black-on-black
+// and is invisible.
+.karel-counter-text {
+  text-anchor: end;
+  font-size: 16px;
+  font-family: Verdana, Geneva, sans-serif;
+  font-weight: bold;
+  fill: white;
+  stroke: black;
+  stroke-width: 1;
+  cursor: default;
+
+  html[dir='RTL'] & {
+    text-anchor: start;
+  }
+}
+
+.karel-counter-text.paint {
+  font-size: 33px;
+  stroke-width: 2;
+}
