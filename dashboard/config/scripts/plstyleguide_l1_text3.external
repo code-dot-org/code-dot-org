@@ -5,11 +5,11 @@ description 'description here'
 markdown <<MARKDOWN
 # Links
 
-#### Links are naturally set in a different color in Level Builder. Do not change these settings.
+Links are naturally set in a different color in Level Builder. Do not change these settings.
 
 ## Link Settings
 
-#### The standard in professional learning is to open all links in a new tab. This is achieved by including the text `target="blank"` in link HTML code.
+The standard in professional learning is to open all links in a new tab. This is achieved by including the text `target="blank"` in link HTML code.
 
 ## Link Text
 
@@ -25,7 +25,7 @@ markdown <<MARKDOWN
 
 ### **Examples of Link Text**
 
-* #### ✅ **Good example:** You can find more information at the <a href="https://docs.google.com/document/d/1_l6i_uCScy9Cfom8oqeaN9VM0TS9ELDXd1MLH8i4HzU/edit?usp=drive_link" target="blank" rel="noopener noreferrer">CSD Guide to Debugging.</a>
+* ✅ **Good example:** You can find more information at the <a href="https://docs.google.com/document/d/1_l6i_uCScy9Cfom8oqeaN9VM0TS9ELDXd1MLH8i4HzU/edit?usp=drive_link" target="blank" rel="noopener noreferrer">CSD Guide to Debugging.</a>
 
-* #### ❌ **Bad example:** Learn more about debugging in CSD at <a href="https://docs.google.com/document/d/1_l6i_uCScy9Cfom8oqeaN9VM0TS9ELDXd1MLH8i4HzU/edit?usp=drive_link" target="blank" rel="noopener noreferrer">this link</a>.
+* ❌ **Bad example:** Learn more about debugging in CSD at <a href="https://docs.google.com/document/d/1_l6i_uCScy9Cfom8oqeaN9VM0TS9ELDXd1MLH8i4HzU/edit?usp=drive_link" target="blank" rel="noopener noreferrer">this link</a>.
 MARKDOWN

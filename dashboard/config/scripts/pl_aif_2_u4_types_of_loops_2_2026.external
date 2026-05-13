@@ -5,11 +5,11 @@ description 'description here'
 markdown <<MARKDOWN
 # Why Iteration Matters
 
-#### Many programs don’t just run one step and stop. They repeat actions over and over—checking for new input, updating a screen, or responding to a user. 
+Many programs don’t just run one step and stop. They repeat actions over and over—checking for new input, updating a screen, or responding to a user. 
 
-#### This repeated execution of instructions is called **iteration**, and it’s a core idea behind how web apps and programs work.
+This repeated execution of instructions is called **iteration**, and it’s a core idea behind how web apps and programs work.
 
-#### Before we look at how iteration appears in code, let’s ground the idea in a familiar situation.
+Before we look at how iteration appears in code, let’s ground the idea in a familiar situation.
 
 ---
 
@@ -19,15 +19,15 @@ markdown <<MARKDOWN
 ## Hoop, there it is! 
 
 
-#### Imagine you are practicing your free throw shot.
+Imagine you are practicing your free throw shot.
 
-#### **Round 1:**
-#### You take exactly five free throws.
+**Round 1:**
+You take exactly five free throws.
 
-#### **Round 2:**
-#### You keep tossing the basketball until you make one shot, no matter how many tries it takes.
+**Round 2:**
+You keep tossing the basketball until you make one shot, no matter how many tries it takes.
 
-#### 👉**Which round do you think would take longer and why?**
+👉**Which round do you think would take longer and why?**
 
 <div style="clear:both;"></div>
 
@@ -51,7 +51,7 @@ markdown <<MARKDOWN
 
 ## What is Iteration?
 
-#### Instead of writing the same instructions over and over, programmers use loops to tell the computer how and when to repeat steps.
+Instead of writing the same instructions over and over, programmers use loops to tell the computer how and when to repeat steps.
 
 <div style="background-color: #B7E0E5; border-radius: 10px; padding: 15px; margin: 20px auto; max-width: 85%; box-sizing: border-box; word-wrap: break-word; overflow-wrap: break-word;">
 <p style="font-size: 14pt; margin-top: 12px; line-height: 120%;">📖 <strong>Iteration</strong> is the process of repeating a set of steps in a program.
@@ -60,15 +60,15 @@ markdown <<MARKDOWN
 
 <img src="https://images.code.org/585b2b4ff38f158bed045f89829c9864-image-1768429776424.png" alt="icon of looping arrows" width="210px" style="border-radius:10px; float:left; margin: 0px 30px 30px 40px;">
 
-#### **In web apps and other programs, iteration is used to:**
+**In web apps and other programs, iteration is used to:**
 
-- #### Check for user input repeatedly
+- Check for user input repeatedly
 
-- #### Update information on the screen
+- Update information on the screen
 
-- #### Process lists of data
+- Process lists of data
 
-- #### Keep a program running until something changes
+- Keep a program running until something changes
 
 
 
@@ -78,5 +78,5 @@ markdown <<MARKDOWN
 
 ## Next up
 
-#### Let's dive deeper into the two types of loops.
+Let's dive deeper into the two types of loops.
 MARKDOWN

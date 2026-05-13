@@ -5,7 +5,7 @@ title 'Check for Understanding'
 markdown <<MARKDOWN
 # Cleaning Data
 
-#### In this check for understanding level, students will practice **cleaning data** in Google Sheets.
+In this check for understanding level, students will practice **cleaning data** in Google Sheets.
 
 <div style="background-color: #F5F7F8; color: #000000; padding: 15px; border-radius: 10px; width: 90%; margin: 20px auto;">
 <p style = "font-size:14pt;"><strong>How to Clean Data:</strong></p>
@@ -18,15 +18,15 @@ markdown <<MARKDOWN
 
 ## 📝 To Do
 
-#### Try out cleaning data in Google Sheets.
+Try out cleaning data in Google Sheets.
 
-#### 1. Open the <a href="https://docs.google.com/spreadsheets/d/1MMsZwVwDaGNSol6RMsQk9NklsYBtgQyiEIxuSwmykIA/edit?usp=drive_link">Pizza Choice - Google Sheets</a>.
-#### 2. For each response, decide if you want to:
-- #### Keep it the same
-- #### Delete it
-- #### Change it
+1. Open the <a href="https://docs.google.com/spreadsheets/d/1MMsZwVwDaGNSol6RMsQk9NklsYBtgQyiEIxuSwmykIA/edit?usp=drive_link">Pizza Choice - Google Sheets</a>.
+2. For each response, decide if you want to:
+- Keep it the same
+- Delete it
+- Change it
 
-#### 3. Put your cleaned data in the second column--and graph it! See the sample below:
+3. Put your cleaned data in the second column--and graph it! See the sample below:
 
 <br>
 

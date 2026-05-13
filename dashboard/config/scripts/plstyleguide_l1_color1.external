@@ -5,7 +5,7 @@ description 'description here'
 markdown <<MARKDOWN
 # Code.org Color Branding
 
-#### The branding of professional learning should mirror the branding of Code.org in general. This is true both in terms of which colors we use and *how* they are used.
+The branding of professional learning should mirror the branding of Code.org in general. This is true both in terms of which colors we use and *how* they are used.
 
 <div style="background-color: #B7E0E5; border-radius: 10px; padding: 15px; margin: 20px auto; max-width: 100%; box-sizing: border-box; word-wrap: break-word; overflow-wrap: break-word;">
 	<p style="font-size: 14pt; font-weight: bold; margin: 0;">💡 Design Tip</p>
@@ -22,7 +22,7 @@ markdown <<MARKDOWN
 
 ## Color Usage
 
-#### Resist the urge to decorate your pages with excess color. The breakdown should roughly approximate the following percentages. 
+Resist the urge to decorate your pages with excess color. The breakdown should roughly approximate the following percentages. 
 
 <div style="display: flex; justify-content: center;">
   <img src="https://images.code.org/e5d30e5f31525f8184ecabee100d4843-image-1739218312583.07.40 PM.png" 
@@ -30,7 +30,7 @@ markdown <<MARKDOWN
        style="max-width: 500px; width: 100%; height: auto;">
 </div>
 
-#### Level Builder's white backgrounds help to naturally achieve 60% neutrals. If you would like to add color, ensure that they mostly come from the 30% primary color(s) to draw attention to a portion of the page. The use of accent colors should be sparing and align with semantic meaning.
+Level Builder's white backgrounds help to naturally achieve 60% neutrals. If you would like to add color, ensure that they mostly come from the 30% primary color(s) to draw attention to a portion of the page. The use of accent colors should be sparing and align with semantic meaning.
 
-#### You also do not *need* to have primary and accent colors on a page. Black and white are fine!
+You also do not *need* to have primary and accent colors on a page. Black and white are fine!
 MARKDOWN
