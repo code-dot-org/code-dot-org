@@ -29,6 +29,9 @@ RUN rbenv global 3.2.11
 # during build instead of on start. When a fork or branch has different gems, we still have an
 # advantage due to caching of the other gems.
 RUN gem install bundler
+# Skip gem groups external contributors don't need; also avoids building
+# mini_racer / libv8-node, which fails on aarch64 with the trixie-default Python 3.13.
+RUN bundle config --global without 'staging test production levelbuilder'
 RUN mkdir -p /tmp/rails
 COPY --chown=vscode:vscode Gemfile Gemfile.lock /tmp/rails/
 
