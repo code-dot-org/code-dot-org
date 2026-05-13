@@ -57,6 +57,7 @@ export const activitySectionShape = PropTypes.shape({
   scriptLevels: PropTypes.arrayOf(scriptLevelShape).isRequired,
   text: PropTypes.string.isRequired,
   tips: PropTypes.arrayOf(tipShape).isRequired,
+  editable: PropTypes.object,
 });
 
 export const activityShape = PropTypes.shape({
@@ -66,6 +67,7 @@ export const activityShape = PropTypes.shape({
   duration: PropTypes.oneOfType([PropTypes.number, PropTypes.oneOf([''])])
     .isRequired,
   activitySections: PropTypes.arrayOf(activitySectionShape),
+  editable: PropTypes.object,
 });
 
 export const lessonShape = PropTypes.shape({
@@ -102,6 +104,8 @@ export const lessonShape = PropTypes.shape({
   assessmentOpportunities: PropTypes.string,
   lessonPlanPdfUrl: PropTypes.string,
   courseVersionStandardsUrl: PropTypes.string,
+  inline_editing_enabled: PropTypes.bool,
+  editable: PropTypes.object,
 });
 
 export const studentLessonShape = PropTypes.shape({

@@ -16,7 +16,9 @@ export default class Activity extends Component {
     return (
       <div>
         <h2 style={styles.activityHeader} id={`activity-${activity.key}`}>
-          {activity.displayName}
+          <span data-editable-field={activity.editable?.name}>
+            {activity.displayName}
+          </span>
           {activity.duration > 0 && (
             <span>
               {i18n.activityHeaderTime({

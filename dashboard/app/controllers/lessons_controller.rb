@@ -1,7 +1,7 @@
 class LessonsController < ApplicationController
   load_and_authorize_resource
 
-  skip_authorize_resource only: :level_properties_by_id
+  skip_authorize_resource only: [:level_properties_by_id, :inline_field, :update_inline_field]
 
   before_action :require_levelbuilder_mode_or_test_env, except: [:index, :show, :student_lesson_plan, :level_properties, :level_properties_by_id, :tutor]
   before_action :authenticate_user!, only: [:tutor]
@@ -58,7 +58,8 @@ class LessonsController < ApplicationController
     end
     raise ActiveRecord::RecordNotFound unless @lesson
     return render :forbidden unless can?(:read, @lesson, unit_group)
-    lesson_data = @lesson.summarize_for_lesson_show(@current_user, Policies::InlineAnswer.visible_for_unit?(@current_user, @script), unit_group_unit: unit_group_unit)
+    inline_editing_enabled = Rails.application.config.levelbuilder_mode && can?(:update, @lesson)
+    lesson_data = @lesson.summarize_for_lesson_show(@current_user, Policies::InlineAnswer.visible_for_unit?(@current_user, @script), unit_group_unit: unit_group_unit, inline_editing_enabled: inline_editing_enabled)
 
     @page_title = "#{t('lesson_plan')}: #{lesson_data[:displayName]}"
     @page_description = lesson_data[:overview].truncate(200, separator: '.', omission: '.')
@@ -215,6 +216,47 @@ class LessonsController < ApplicationController
     render(status: :not_acceptable, plain: exception.message)
   end
 
+  # GET /lessons/:id/inline_field?model=...&record_id=...&field=...
+  # Returns the field's current raw stored source so the in-page editor can
+  # load it on click. See openspec/changes/easy-lesson-editor/.
+  def inline_field
+    authorize! :update, @lesson
+    record, field = resolve_inline_field_target
+    return unless record
+    render json: {value: record.send(field).to_s}
+  end
+
+  # PATCH /lessons/:id/inline_field
+  # Body: { model, record_id, field, value }
+  # Updates a single (model, record_id, field) on the lesson tree. Mirrors
+  # `LessonsController#update` for authorization, the levelbuilder env gate,
+  # and the post-save `script.write_script_json` rewrite, but scopes the write
+  # to one field on one record.
+  def update_inline_field
+    authorize! :update, @lesson
+    record, field = resolve_inline_field_target
+    return unless record
+
+    record.assign_attributes(field => params[:value].to_s)
+    unless record.save
+      render json: {error: record.errors.full_messages.join('; ')}, status: :unprocessable_entity
+      return
+    end
+
+    if Rails.application.config.levelbuilder_mode
+      @lesson.script.reload
+      @lesson.script.write_script_json
+    end
+
+    saved = record.send(field)
+    render json: {
+      value: saved,
+      rendered_source: Services::LessonInlineEditing.render_source(record.class.name, field, saved),
+    }
+  rescue ActiveRecord::RecordInvalid, ActiveRecord::RecordNotSaved => exception
+    render json: {error: exception.message}, status: :unprocessable_entity
+  end
+
   # POST /lessons/:id/clone
   def clone
     destination_script = Unit.find_by_name(params[:destinationUnitName])
@@ -262,6 +304,47 @@ class LessonsController < ApplicationController
     # which should be moved to a different user-specific API, after which we can remove this parameter.
     unit_group_unit = unit_context[:unit_group_unit]
     render json: @lesson.summarize_for_lab2_properties(@current_user, unit_group_unit: unit_group_unit)
+  end
+
+  private def resolve_inline_field_target
+    model_name = params[:model].to_s
+    field = params[:field].to_s
+    record_id = begin
+      Integer(params[:record_id].to_s, 10)
+    rescue ArgumentError, TypeError
+      nil
+    end
+
+    unless Services::LessonInlineEditing.allowed?(model_name, field)
+      render json: {error: "field not editable in-page"}, status: :unprocessable_entity
+      return nil
+    end
+
+    klass = Services::LessonInlineEditing.model_class(model_name)
+    record = record_id && klass&.find_by(id: record_id)
+    unless record && inline_field_record_belongs_to_lesson?(record)
+      head :not_found
+      return nil
+    end
+
+    [record, field]
+  end
+
+  # The (model, record_id) triple comes from the request body. The lesson id
+  # in the URL is the only id we trust without verification — every other id
+  # must be checked against the lesson's association graph before we read or
+  # write to it.
+  private def inline_field_record_belongs_to_lesson?(record)
+    case record
+    when Lesson
+      record.id == @lesson.id
+    when LessonActivity
+      record.lesson_id == @lesson.id
+    when ActivitySection
+      record.lesson_activity&.lesson_id == @lesson.id
+    else
+      false
+    end
   end
 
   # We have two urls you can use to edit a lesson with a lesson plan. This does the
