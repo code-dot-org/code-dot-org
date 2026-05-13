@@ -58,6 +58,16 @@ describe('PanelsView', () => {
     expect(secondImage).toHaveStyle({left: '60%', top: '20%', width: '15%'});
   });
 
+  it('renders the first image as the forward-most image', () => {
+    render(
+      <PanelsView {...DEFAULT_PROPS} panels={[panelWithImages]} useLinks />
+    );
+
+    expect(
+      screen.getAllByRole('img').map(image => image.getAttribute('alt'))
+    ).toEqual(['Overlay two', 'Overlay one']);
+  });
+
   it('does not render image overlays outside link mode', () => {
     render(<PanelsView {...DEFAULT_PROPS} panels={[panelWithImages]} />);
 

@@ -284,27 +284,31 @@ const PanelsView: React.FunctionComponent<PanelsProps> = ({
             }}
           />
         )}
+        {/* Paint images back-to-front so the first editor row is forward-most. */}
         {useLinks &&
-          panel.images?.map((image, index) => {
-            if (!image.imageUrl) {
-              return null;
-            }
+          panel.images
+            ?.slice()
+            .reverse()
+            .map((image, index) => {
+              if (!image.imageUrl) {
+                return null;
+              }
 
-            return (
-              <img
-                key={`image-${index}`}
-                className={classNames(styles.panelImage, styles.imageCurrent)}
-                src={localization.translate(image.imageUrl, ['lz-image'])}
-                alt={image.altText || ''}
-                aria-hidden={image.altText ? undefined : true}
-                style={{
-                  left: `${image.x ?? DEFAULT_PANEL_IMAGE_X}%`,
-                  top: `${image.y ?? DEFAULT_PANEL_IMAGE_Y}%`,
-                  width: `${image.width ?? DEFAULT_PANEL_IMAGE_WIDTH}%`,
-                }}
-              />
-            );
-          })}
+              return (
+                <img
+                  key={`image-${index}`}
+                  className={classNames(styles.panelImage, styles.imageCurrent)}
+                  src={localization.translate(image.imageUrl, ['lz-image'])}
+                  alt={image.altText || ''}
+                  aria-hidden={image.altText ? undefined : true}
+                  style={{
+                    left: `${image.x ?? DEFAULT_PANEL_IMAGE_X}%`,
+                    top: `${image.y ?? DEFAULT_PANEL_IMAGE_Y}%`,
+                    width: `${image.width ?? DEFAULT_PANEL_IMAGE_WIDTH}%`,
+                  }}
+                />
+              );
+            })}
         {useLinks &&
           panel.links?.map((link, index) => (
             <button
