@@ -18,14 +18,17 @@
 // In both cases the converter emits a MultiFileSource with a single 'src'
 // folder, types every file as STARTER, and opens the first file (or the
 // lowest-tabOrder file in shape 2).
+import {DEFAULT_FOLDER_ID, MAZE_FILE_NAME} from '@codebridge/constants';
+
 import {
+  MazeCell,
   MultiFileSource,
   ProjectFileType,
   ProjectSources,
   Source,
 } from '@cdo/apps/lab2/types';
 
-const ROOT_FOLDER_ID = '0';
+const ROOT_FOLDER_ID = DEFAULT_FOLDER_ID;
 
 type NestedFileEntry = {
   text?: string;
@@ -119,17 +122,81 @@ const convertNestedHash = (
   );
 };
 
+// When labConfig is absent on the saved server source, fall back to the
+// labConfig implied by the current level. Old Java Lab saves predate the
+// labConfig concept, so a returning user on a neighborhood level otherwise
+// has no `miniApp` flag in their loaded sources and the mini-app preview
+// stays hidden.
+const withLabConfigFallback = (
+  sources: ProjectSources,
+  miniApp: string | undefined
+): ProjectSources => {
+  if (sources.labConfig?.miniApp || !miniApp) return sources;
+  return {
+    ...sources,
+    labConfig: {
+      ...(sources.labConfig ?? {}),
+      miniApp: {name: miniApp},
+    },
+  };
+};
+
+// `useInitialSources` injects the serialized maze as a SYSTEM_SUPPORT file
+// only when it derives sources from level start_sources; it does not patch
+// the maze into a pre-existing channel-saved source. Old Java Lab saves
+// never wrote the maze file, so returning users on neighborhood levels need
+// the maze stitched back in. `NeighborhoodPreview` reads the file by name +
+// folder id from project sources.
+const withMazeFile = (
+  sources: ProjectSources,
+  serializedMaze: MazeCell[][] | undefined
+): ProjectSources => {
+  if (!serializedMaze || !serializedMaze.length) return sources;
+  const source = sources.source;
+  if (typeof source !== 'object' || source === null) return sources;
+  const multi = source as MultiFileSource;
+  if (!multi.files) return sources;
+  const existing = Object.values(multi.files).find(
+    f => f.name === MAZE_FILE_NAME && f.folderId === ROOT_FOLDER_ID
+  );
+  if (existing) return sources;
+  const mazeId = `maze-${Date.now()}`;
+  return {
+    ...sources,
+    source: {
+      ...multi,
+      files: {
+        ...multi.files,
+        [mazeId]: {
+          id: mazeId,
+          name: MAZE_FILE_NAME,
+          contents: JSON.stringify(serializedMaze),
+          folderId: ROOT_FOLDER_ID,
+          type: ProjectFileType.SYSTEM_SUPPORT,
+        },
+      },
+    } as Source,
+  };
+};
+
 export const migrateLegacyJavalabSources = (
-  initial: ProjectSources | undefined
+  initial: ProjectSources | undefined,
+  miniApp: string | undefined,
+  serializedMaze: MazeCell[][] | undefined
 ): ProjectSources | undefined => {
   if (!initial) return initial;
   const source = initial.source as unknown;
-  if (isMultiFileShape(source)) return initial;
-  if (isLegacyNestedHash(source)) {
-    return {...initial, source: convertNestedHash(source) as Source};
+  let migrated: ProjectSources;
+  if (isMultiFileShape(source)) {
+    migrated = initial;
+  } else if (isLegacyNestedHash(source)) {
+    migrated = {...initial, source: convertNestedHash(source) as Source};
+  } else if (isLegacyFlatHash(source)) {
+    migrated = {...initial, source: convertFlatHash(source) as Source};
+  } else {
+    migrated = initial;
   }
-  if (isLegacyFlatHash(source)) {
-    return {...initial, source: convertFlatHash(source) as Source};
-  }
-  return initial;
+  migrated = withLabConfigFallback(migrated, miniApp);
+  migrated = withMazeFile(migrated, serializedMaze);
+  return migrated;
 };

@@ -7,7 +7,12 @@ import {LanguageSupport} from '@codemirror/language';
 import React, {useEffect, useMemo, useState} from 'react';
 
 import {setLoadedCodeEnvironment} from '@cdo/apps/lab2/redux/systemRedux';
-import {LabProps, MultiFileSource, ProjectSources} from '@cdo/apps/lab2/types';
+import {
+  LabProps,
+  MazeCell,
+  MultiFileSource,
+  ProjectSources,
+} from '@cdo/apps/lab2/types';
 import {
   AppDispatch,
   useAppDispatch,
@@ -53,12 +58,26 @@ const Javalab2View: React.FunctionComponent<
   LabProps<CodebridgeLevelProperties, ProjectSources>
 > = ({levelProperties, initialSources}) => {
   const [config, setConfig] = useState<ConfigType>(defaultConfig);
+  const extendedLevelProps = levelProperties as CodebridgeLevelProperties & {
+    miniApp?: string;
+    serializedMaze?: MazeCell[][];
+  };
+  const levelMiniApp = extendedLevelProps.miniApp;
+  const levelSerializedMaze = extendedLevelProps.serializedMaze;
   // Old Java Lab wrote channel sources as a flat {filename: code} hash; the
   // codebridge code path requires MultiFileSource. Normalize here so returning
-  // users with legacy projects do not crash on load.
+  // users with legacy projects do not crash on load. Also patch in the
+  // labConfig (with miniApp) and the system_support maze file when they are
+  // missing, so the mini-app preview activates and the painter has a grid
+  // for returning users on neighborhood/theater levels.
   const migratedInitialSources = useMemo(
-    () => migrateLegacyJavalabSources(initialSources),
-    [initialSources]
+    () =>
+      migrateLegacyJavalabSources(
+        initialSources,
+        levelMiniApp,
+        levelSerializedMaze
+      ),
+    [initialSources, levelMiniApp, levelSerializedMaze]
   );
   const {startSources} = useSource(
     DEFAULT_PROJECT,

@@ -17,6 +17,15 @@ import {
 import {handleException} from '@cdo/apps/javalab/javabuilderExceptionHandler';
 import {onTestResult} from '@cdo/apps/javalab/testResultHandler';
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
+import {setIsRunning} from '@cdo/apps/lab2/redux/systemRedux';
+import {
+  ConsoleSignalType,
+  NeighborhoodSignalType,
+} from '@cdo/apps/miniApps/neighborhood/constants';
+import {
+  ConsoleSignal,
+  NeighborhoodSignal,
+} from '@cdo/apps/miniApps/neighborhood/types';
 import {getStore} from '@cdo/apps/redux';
 import {RunType} from '@cdo/apps/codebridge';
 import {MultiFileSource} from '@cdo/apps/lab2/types';
@@ -84,6 +93,15 @@ export async function handleRunClick(
     return;
   }
 
+  const isNeighborhood = csaViewMode === CsaViewMode.NEIGHBORHOOD;
+  const neighborhood = isNeighborhood
+    ? CodebridgeRegistry.getInstance().getNeighborhood()
+    : null;
+  if (isNeighborhood) {
+    neighborhood?.reset();
+    neighborhood?.onRun();
+  }
+
   cm?.writeConsoleMessage(
     getTimestampMessage(runTests ? RunType.TEST : RunType.RUN)
   );
@@ -117,6 +135,14 @@ export async function handleRunClick(
   }
 
   await new Promise<void>(resolve => {
+    let socketDone = false;
+    const maybeResolve = () => {
+      if (!socketDone) return;
+      if (isNeighborhood && neighborhood?.isRunning()) return;
+      activeClient = null;
+      resolve();
+    };
+
     activeClient = new JavabuilderClient(
       {
         levelId,
@@ -152,13 +178,29 @@ export async function handleRunClick(
           console.error('[javalab2] Javabuilder error:', err);
         },
         onDone: () => {
-          activeClient = null;
-          resolve();
+          socketDone = true;
+          if (isNeighborhood && neighborhood) {
+            // The neighborhood animation outlives the WebSocket: Javabuilder
+            // sends all signals up front, then closes. Wait for the DONE
+            // signal to drain before resolving — otherwise the run finishes
+            // before the painter finishes moving.
+            neighborhood.waitUntilDone().then(maybeResolve);
+          } else {
+            maybeResolve();
+          }
         },
       }
     );
     activeClient.run();
   });
+
+  if (isNeighborhood) {
+    // Neighborhood owns the isRunning lifecycle (codebridge's ControlButtons
+    // skips its own flip for neighborhood). Make sure we leave the redux
+    // state consistent if the run resolves before the DONE signal.
+    getStore().dispatch(setIsRunning(false));
+    neighborhood?.onClose();
+  }
 }
 
 export function stopJavaCode(): void {
@@ -174,19 +216,49 @@ function handleJavabuilderMessage(
   levelId: number,
   csaViewMode: string | undefined
 ): void {
+  const isNeighborhood = csaViewMode === CsaViewMode.NEIGHBORHOOD;
+  const neighborhood = isNeighborhood
+    ? CodebridgeRegistry.getInstance().getNeighborhood()
+    : null;
+
   switch (data.type) {
     case WebSocketMessageType.STATUS: {
       const key = data.value as StatusMessageType;
-      const message = STATUS_MESSAGES[key];
       if (key === StatusMessageType.EXITED) {
-        writeStatus('Program complete.');
+        if (isNeighborhood && neighborhood) {
+          // Tell the neighborhood signal queue this is the last command;
+          // the queue will flip isRunning off after it drains.
+          neighborhood.handleSignal({
+            value: NeighborhoodSignalType.DONE,
+          } as NeighborhoodSignal);
+        } else {
+          writeStatus('Program complete.');
+        }
         return;
       }
+      const message = STATUS_MESSAGES[key];
       if (message) writeStatus(message);
       return;
     }
     case WebSocketMessageType.SYSTEM_OUT:
-      if (typeof data.value === 'string') writeRaw(data.value);
+      if (typeof data.value !== 'string') return;
+      if (isNeighborhood && neighborhood?.isRunning()) {
+        // Queue the log line behind any pending movements so output
+        // appears in sync with the painter.
+        neighborhood.handleSignal({
+          value: ConsoleSignalType.CONSOLE_LOG,
+          detail: data.value,
+        } as ConsoleSignal);
+      } else {
+        writeRaw(data.value);
+      }
+      return;
+    case WebSocketMessageType.NEIGHBORHOOD:
+      if (isNeighborhood && neighborhood) {
+        neighborhood.handleSignal(
+          data as unknown as NeighborhoodSignal | ConsoleSignal
+        );
+      }
       return;
     case WebSocketMessageType.TEST_RESULT:
       onTestResult(data, writeRaw, csaViewMode, levelId);
@@ -202,7 +274,7 @@ function handleJavabuilderMessage(
         writeRaw(`[debug] ${data.value}`);
       }
       return;
-    // NEIGHBORHOOD, THEATER, AUTHORIZER are handled in later phases.
+    // THEATER and AUTHORIZER handled in later phases.
     default:
       return;
   }
