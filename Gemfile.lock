@@ -332,7 +332,7 @@ GEM
     bindex (0.8.1)
     bootsnap (1.16.0)
       msgpack (~> 1.2)
-    bootstrap-sass (2.3.2.2)
+    bootstrap-sass (3.0.3.0)
       sass (~> 3.2)
     brakeman (4.5.0)
     builder (3.2.4)
@@ -1264,7 +1264,7 @@ DEPENDENCIES
   benchmark-ips
   better_errors (>= 2.7.0)
   bootsnap (>= 1.14.0)
-  bootstrap-sass (~> 2.3.2.2)
+  bootstrap-sass (~> 3.0.0)
   brakeman
   cancancan (~> 3.5.0)
   cdo_contentful!

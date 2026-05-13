@@ -50,6 +50,11 @@ $selectUserTypeButtonTextColorHover: #000;
 $selectUserTypeButtonBackgroundColorSelected: #0093a4;
 $selectUserTypeButtonTextColorSelected: #fff;
 
+// Redefine some variables from Bootstrap v2.3.22 which were removed in v3.x
+// but which we still rely on
+// https://github.com/twbs/bootstrap-sass/blob/v2.3.2.2/templates/project/_variables.scss
+$blue: #049cdb;
+
 $contrastTealHeader: #00818f;
 
 @import "bootstrap";
