@@ -1,7 +1,7 @@
 # See here for image contents: https://github.com/microsoft/vscode-dev-containers/tree/v0.191.1/containers/ruby/.devcontainer/base.Dockerfile
 
 # [Choice] Ruby version: 3, 3.3, 3.2, 3.1, 3.0, 2, 2.7, 2.6
-ARG VARIANT="3.0"
+ARG VARIANT="3.2"
 FROM mcr.microsoft.com/devcontainers/ruby:${VARIANT}
 
 # Install packages required for Code.org
@@ -16,13 +16,10 @@ RUN chown -R vscode:vscode /usr/local/rvm
 # Rootless user command execution
 USER vscode
 
-############################
-# Force Ruby to 3.0.5      #
-# Remove after 3.3 upgrade #
-############################
+# Pin Ruby to match .ruby-version
 ENV PATH="/home/vscode/.rbenv/shims:$PATH"
-RUN rbenv install 3.0.5
-RUN rbenv global 3.0.5
+RUN rbenv install 3.2.11
+RUN rbenv global 3.2.11
 
 # Add the Rails main Gemfile and install the gems. This means the gem install can be done
 # during build instead of on start. When a fork or branch has different gems, we still have an
