@@ -219,6 +219,9 @@ Dashboard::Application.routes.draw do
           post 'code_review_enabled', to: 'sections#set_code_review_enabled'
           post 'ai_chat_access_level', to: 'sections#set_ai_chat_access_level'
           get 'suggested_lesson'
+          get 'calendar_plan', to: 'section_calendar_plans#show'
+          put 'calendar_plan', to: 'section_calendar_plans#update'
+          delete 'calendar_plan', to: 'section_calendar_plans#destroy'
         end
         collection do
           get 'membership'

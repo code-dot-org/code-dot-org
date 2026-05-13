@@ -207,7 +207,7 @@
     });
 
 
-    if (typeof dashboard !== 'undefined') {
+    if (typeof dashboard !== 'undefined' && dashboard.pairing) {
       dashboard.pairing.init('#{CDO.studio_url('pairing')}', hideUserOptions, #{show_pairing_dialog});
     }
   })();

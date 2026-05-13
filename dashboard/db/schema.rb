@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2026_05_12_120000) do
+ActiveRecord::Schema[7.0].define(version: 2026_05_13_123000) do
   create_table "activities", id: :integer, charset: "utf8mb3", collation: "utf8mb3_unicode_ci", force: :cascade do |t|
     t.integer "user_id"
     t.integer "level_id"
@@ -2250,6 +2250,82 @@ ActiveRecord::Schema[7.0].define(version: 2026_05_12_120000) do
     t.index ["word"], name: "index_secret_words_on_word", unique: true
   end
 
+  create_table "section_calendar_cancellations", charset: "utf8mb4", collation: "utf8mb4_unicode_ci", force: :cascade do |t|
+    t.integer "section_calendar_plan_id", null: false
+    t.integer "section_calendar_session_id"
+    t.integer "section_calendar_one_off_session_id"
+    t.date "session_date", null: false
+    t.string "reason"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["section_calendar_one_off_session_id"], name: "idx_section_calendar_cancellations_one_off"
+    t.index ["section_calendar_plan_id", "session_date"], name: "idx_section_calendar_cancellations_date"
+    t.index ["section_calendar_session_id"], name: "idx_section_calendar_cancellations_session"
+  end
+
+  create_table "section_calendar_items", charset: "utf8mb4", collation: "utf8mb4_unicode_ci", force: :cascade do |t|
+    t.integer "section_calendar_plan_id", null: false
+    t.string "client_id", null: false
+    t.string "item_type", null: false
+    t.integer "lesson_id"
+    t.string "placeholder_title"
+    t.integer "planned_minutes"
+    t.date "session_date"
+    t.string "session_client_id"
+    t.integer "session_sort"
+    t.boolean "removed", default: false, null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["lesson_id"], name: "index_section_calendar_items_on_lesson_id"
+    t.index ["section_calendar_plan_id", "client_id"], name: "idx_section_calendar_items_client", unique: true
+    t.index ["section_calendar_plan_id", "session_client_id", "session_sort"], name: "idx_section_calendar_items_session_client"
+    t.index ["section_calendar_plan_id", "session_date", "session_sort"], name: "idx_section_calendar_items_session"
+  end
+
+  create_table "section_calendar_one_off_sessions", charset: "utf8mb4", collation: "utf8mb4_unicode_ci", force: :cascade do |t|
+    t.integer "section_calendar_plan_id", null: false
+    t.string "client_id", null: false
+    t.date "session_date", null: false
+    t.string "start_time", null: false
+    t.integer "duration_minutes", null: false
+    t.integer "position", default: 0, null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["section_calendar_plan_id", "client_id"], name: "idx_section_calendar_one_offs_client", unique: true
+    t.index ["section_calendar_plan_id", "session_date", "position"], name: "idx_section_calendar_one_offs_order"
+  end
+
+  create_table "section_calendar_plans", charset: "utf8mb4", collation: "utf8mb4_unicode_ci", force: :cascade do |t|
+    t.integer "section_id", null: false
+    t.integer "unit_id", null: false
+    t.string "course_name", null: false
+    t.integer "unit_position", null: false
+    t.date "start_date"
+    t.string "mode", default: "weekly_minutes", null: false
+    t.integer "weekly_instructional_minutes", default: 225, null: false
+    t.integer "created_by_user_id"
+    t.integer "updated_by_user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["section_id", "course_name", "unit_position"], name: "idx_section_calendar_plans_section_unit", unique: true
+    t.index ["section_id"], name: "index_section_calendar_plans_on_section_id"
+    t.index ["unit_id"], name: "index_section_calendar_plans_on_unit_id"
+  end
+
+  create_table "section_calendar_sessions", charset: "utf8mb4", collation: "utf8mb4_unicode_ci", force: :cascade do |t|
+    t.integer "section_calendar_plan_id", null: false
+    t.string "client_id", null: false
+    t.integer "weekday", null: false
+    t.string "start_time", null: false
+    t.integer "duration_minutes", null: false
+    t.integer "position", default: 0, null: false
+    t.boolean "active", default: true, null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["section_calendar_plan_id", "client_id"], name: "idx_section_calendar_sessions_client", unique: true
+    t.index ["section_calendar_plan_id", "weekday", "position"], name: "idx_section_calendar_sessions_order"
+  end
+
   create_table "section_hidden_scripts", id: :integer, charset: "utf8mb3", collation: "utf8mb3_unicode_ci", force: :cascade do |t|
     t.integer "section_id", null: false
     t.integer "script_id", null: false
@@ -2448,6 +2524,55 @@ ActiveRecord::Schema[7.0].define(version: 2026_05_12_120000) do
     t.datetime "updated_at", precision: nil, null: false
     t.index ["kind"], name: "index_survey_results_on_kind"
     t.index ["user_id"], name: "index_survey_results_on_user_id"
+  end
+
+  create_table "teacher_dashboard_note_layouts", charset: "utf8mb4", collation: "utf8mb4_unicode_ci", force: :cascade do |t|
+    t.bigint "teacher_dashboard_note_id", null: false
+    t.integer "teacher_id", null: false
+    t.integer "note_layout_column", default: 0, null: false
+    t.integer "note_position", default: 0, null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["teacher_dashboard_note_id", "teacher_id"], name: "index_teacher_note_layouts_unique", unique: true
+    t.index ["teacher_dashboard_note_id"], name: "index_teacher_note_layouts_on_note_id"
+    t.index ["teacher_id"], name: "index_teacher_note_layouts_on_teacher_id"
+  end
+
+  create_table "teacher_dashboard_note_shared_sections", charset: "utf8mb4", collation: "utf8mb4_unicode_ci", force: :cascade do |t|
+    t.bigint "teacher_dashboard_note_id", null: false
+    t.integer "section_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["section_id"], name: "index_teacher_note_shared_sections_on_section_id"
+    t.index ["teacher_dashboard_note_id", "section_id"], name: "index_teacher_note_shared_sections_unique", unique: true
+    t.index ["teacher_dashboard_note_id"], name: "index_teacher_note_shared_sections_on_note_id"
+  end
+
+  create_table "teacher_dashboard_notes", charset: "utf8mb4", collation: "utf8mb4_unicode_ci", force: :cascade do |t|
+    t.integer "teacher_id", null: false
+    t.integer "section_id"
+    t.boolean "shared_with_section", default: false, null: false
+    t.boolean "shareable_globally", default: false, null: false
+    t.string "context_type", null: false
+    t.integer "unit_group_id"
+    t.integer "unit_id"
+    t.integer "lesson_id"
+    t.text "body", null: false
+    t.integer "lock_version", default: 0, null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string "title"
+    t.string "note_color", default: "white", null: false
+    t.integer "note_layout_column", default: 0, null: false
+    t.integer "note_position", default: 0, null: false
+    t.index ["lesson_id"], name: "index_teacher_dashboard_notes_on_lesson_id"
+    t.index ["section_id", "shared_with_section"], name: "idx_tdn_section_shared"
+    t.index ["shareable_globally"], name: "idx_tdn_shareable_global"
+    t.index ["teacher_id", "context_type", "lesson_id"], name: "idx_tdn_teacher_lesson"
+    t.index ["teacher_id", "context_type", "unit_group_id"], name: "idx_tdn_teacher_course"
+    t.index ["teacher_id", "context_type", "unit_id"], name: "idx_tdn_teacher_unit"
+    t.index ["unit_group_id"], name: "index_teacher_dashboard_notes_on_unit_group_id"
+    t.index ["unit_id"], name: "index_teacher_dashboard_notes_on_unit_id"
   end
 
   create_table "teacher_feedbacks", id: :integer, charset: "utf8mb3", collation: "utf8mb3_unicode_ci", force: :cascade do |t|
@@ -2928,6 +3053,15 @@ ActiveRecord::Schema[7.0].define(version: 2026_05_12_120000) do
   add_foreign_key "student_work_evaluation_summaries", "student_work_evaluations"
   add_foreign_key "student_work_evaluation_summaries", "student_work_evaluations", column: "student_work_evaluation_summary_id"
   add_foreign_key "survey_results", "users"
+  add_foreign_key "teacher_dashboard_note_layouts", "teacher_dashboard_notes"
+  add_foreign_key "teacher_dashboard_note_layouts", "users", column: "teacher_id"
+  add_foreign_key "teacher_dashboard_note_shared_sections", "sections"
+  add_foreign_key "teacher_dashboard_note_shared_sections", "teacher_dashboard_notes"
+  add_foreign_key "teacher_dashboard_notes", "scripts", column: "unit_id"
+  add_foreign_key "teacher_dashboard_notes", "sections"
+  add_foreign_key "teacher_dashboard_notes", "stages", column: "lesson_id"
+  add_foreign_key "teacher_dashboard_notes", "unit_groups"
+  add_foreign_key "teacher_dashboard_notes", "users", column: "teacher_id"
   add_foreign_key "teacher_notifications", "users"
   add_foreign_key "teaching_profile_data", "users"
   add_foreign_key "user_data_retention_statuses", "users"

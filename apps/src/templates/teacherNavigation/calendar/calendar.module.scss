@@ -1,0 +1,124 @@
+.scheduleSettings {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.settingsHeader {
+  align-items: center;
+  display: flex;
+  gap: 12px;
+  justify-content: space-between;
+}
+
+.sessionSection {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.sessionRow {
+  align-items: end;
+  display: grid;
+  gap: 12px;
+  grid-template-columns: minmax(140px, 1fr) minmax(140px, 1fr) minmax(140px, 1fr) auto;
+}
+
+.dateTimeField {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.timeInput {
+  border: 1px solid var(--borders-neutral-primary);
+  border-radius: 4px;
+  min-height: 34px;
+  padding: 6px 8px;
+}
+
+.calendarDisplay {
+  min-height: 520px;
+}
+
+.lessonDrawer {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 24px;
+}
+
+.placeholderControls {
+  align-items: end;
+  display: grid;
+  gap: 12px;
+  grid-template-columns: minmax(220px, 1fr) auto;
+}
+
+.lessonList {
+  display: grid;
+  gap: 8px;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+}
+
+.lessonListItem {
+  align-items: center;
+  border: 1px solid var(--borders-neutral-primary);
+  border-radius: 4px;
+  display: flex;
+  gap: 8px;
+  justify-content: space-between;
+  min-width: 0;
+  padding: 8px;
+}
+
+.sessionEvent {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  min-width: 0;
+  white-space: normal;
+}
+
+.sessionEventHeader {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+}
+
+.lessonCalendarItem,
+.placeholderCalendarItem {
+  align-items: center;
+  display: flex;
+  gap: 4px;
+  min-width: 0;
+}
+
+.calendarItemActions {
+  align-items: center;
+  display: flex;
+  gap: 2px;
+  margin-left: auto;
+}
+
+.placeholderCalendarItem {
+  font-style: italic;
+}
+
+.canceledSessionEvent {
+  opacity: 0.65;
+  text-decoration: line-through;
+}
+
+@media (max-width: 900px) {
+  .sessionRow {
+    align-items: stretch;
+    grid-template-columns: 1fr;
+  }
+
+  .placeholderControls {
+    align-items: stretch;
+    grid-template-columns: 1fr;
+  }
+}

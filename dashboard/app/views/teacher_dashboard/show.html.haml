@@ -20,7 +20,7 @@
 
 = render partial: 'shared/emulate_print_media'
 
-%script{src: webpack_asset_path('js/teacher_dashboard/show.js'), data: {dashboard: teacher_dashboard_data.to_json}}
+%script{src: webpack_asset_path('js/teacher_dashboard/show.js'), data: {dashboard: teacher_dashboard_data.to_json}, 'data-ot-ignore' => ''}
 
 - if current_user
   - if current_user.admin

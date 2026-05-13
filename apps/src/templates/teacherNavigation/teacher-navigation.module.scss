@@ -176,6 +176,16 @@ h2.skeletonHeaderSectionName {
   width: fit-content;
 }
 
+.calendarStatusMessage {
+  color: var(--text-neutral-secondary);
+  margin-bottom: 12px;
+}
+
+.calendarErrorMessage {
+  color: var(--text-error-primary);
+  margin-bottom: 12px;
+}
+
 .calendarDropdowns {
   display: flex;
   flex-direction: row;

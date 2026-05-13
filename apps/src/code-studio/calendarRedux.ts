@@ -1,5 +1,7 @@
 import {PayloadAction, createSlice} from '@reduxjs/toolkit';
 
+import type {SectionCalendarPlan} from '@cdo/apps/templates/teacherNavigation/calendar/calendarPlanTypes';
+
 interface CalendarLesson {
   id: number;
   lessonNumber: number;
@@ -17,6 +19,9 @@ export interface CalendarState {
   showCalendar: boolean;
   calendarLessons: CalendarLesson[] | null;
   versionYear: number | null;
+  savedPlan: SectionCalendarPlan | null;
+  savedPlanLoadStatus: 'idle' | 'loading' | 'succeeded' | 'failed';
+  savedPlanError: string | null;
 }
 
 interface CalendarDataPayload {
@@ -35,6 +40,9 @@ const initialState: CalendarState = {
   showCalendar: false,
   calendarLessons: null,
   versionYear: null,
+  savedPlan: null,
+  savedPlanLoadStatus: 'idle',
+  savedPlanError: null,
 };
 
 const calendarReduxSlice = createSlice({
@@ -42,15 +50,52 @@ const calendarReduxSlice = createSlice({
   initialState,
   reducers: {
     setCalendarData(state, action: PayloadAction<CalendarDataPayload>) {
+      const contextChanged =
+        state.courseName !== action.payload.courseName ||
+        state.unitPosition !== action.payload.unitPosition;
+
       state.unitName = action.payload.unitName;
       state.unitPosition = action.payload.unitPosition;
       state.courseName = action.payload.courseName;
       state.showCalendar = action.payload.showCalendar;
       state.calendarLessons = action.payload.calendarLessons;
       state.versionYear = action.payload.versionYear;
+
+      if (contextChanged) {
+        state.savedPlan = null;
+        state.savedPlanLoadStatus = 'idle';
+        state.savedPlanError = null;
+      }
+    },
+    setCalendarPlanLoading(state) {
+      state.savedPlanLoadStatus = 'loading';
+      state.savedPlanError = null;
+    },
+    setCalendarPlanData(
+      state,
+      action: PayloadAction<SectionCalendarPlan | null>
+    ) {
+      state.savedPlan = action.payload;
+      state.savedPlanLoadStatus = 'succeeded';
+      state.savedPlanError = null;
+    },
+    setCalendarPlanError(state, action: PayloadAction<string>) {
+      state.savedPlanLoadStatus = 'failed';
+      state.savedPlanError = action.payload;
+    },
+    clearCalendarPlan(state) {
+      state.savedPlan = null;
+      state.savedPlanLoadStatus = 'idle';
+      state.savedPlanError = null;
     },
   },
 });
 
-export const {setCalendarData} = calendarReduxSlice.actions;
+export const {
+  clearCalendarPlan,
+  setCalendarData,
+  setCalendarPlanData,
+  setCalendarPlanError,
+  setCalendarPlanLoading,
+} = calendarReduxSlice.actions;
 export default calendarReduxSlice.reducer;

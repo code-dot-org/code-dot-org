@@ -4,6 +4,7 @@ import {Provider} from 'react-redux';
 
 import {displayDifferentiationChat} from '@cdo/apps/aiDifferentiation/aiDiffUtils';
 import announcementReducer from '@cdo/apps/code-studio/announcementsRedux';
+import calendar from '@cdo/apps/code-studio/calendarRedux';
 import hiddenLesson from '@cdo/apps/code-studio/hiddenLessonRedux';
 import isRtl from '@cdo/apps/code-studio/isRtlRedux';
 import progressRedux from '@cdo/apps/code-studio/progressRedux';
@@ -68,6 +69,7 @@ $(document).ready(function () {
     announcementReducer,
     progressRedux,
     isRtl,
+    calendar,
   });
 
   const store = getStore();

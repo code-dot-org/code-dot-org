@@ -2447,4 +2447,61 @@ FactoryBot.define do
     read_at {nil}
     is_dismissed {false}
   end
+
+  factory :section_calendar_plan do
+    association :section
+    association :unit
+    course_name {'csp-2026'}
+    unit_position {1}
+    start_date {Time.zone.today}
+    mode {'detailed_sessions'}
+    weekly_instructional_minutes {225}
+    association :created_by_user, factory: :teacher
+    association :updated_by_user, factory: :teacher
+  end
+
+  factory :section_calendar_session do
+    association :section_calendar_plan
+    client_id {SecureRandom.uuid}
+    weekday {2}
+    start_time {'11:00'}
+    duration_minutes {45}
+    position {0}
+    active {true}
+  end
+
+  factory :section_calendar_one_off_session do
+    association :section_calendar_plan
+    client_id {SecureRandom.uuid}
+    session_date {Time.zone.today}
+    start_time {'09:30'}
+    duration_minutes {30}
+    position {0}
+  end
+
+  factory :section_calendar_cancellation do
+    association :section_calendar_plan
+    recurring_session do
+      association(:section_calendar_session, section_calendar_plan: section_calendar_plan)
+    end
+    session_date {Time.zone.today}
+    reason {'assembly'}
+  end
+
+  factory :section_calendar_item do
+    association :section_calendar_plan
+    client_id {SecureRandom.uuid}
+    item_type {'lesson'}
+    association :lesson
+    planned_minutes {45}
+    session_date {Time.zone.today}
+    session_sort {0}
+    removed {false}
+
+    trait :placeholder do
+      item_type {'placeholder'}
+      lesson {nil}
+      placeholder_title {'paper plane experiment'}
+    end
+  end
 end

@@ -5176,6 +5176,65 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@fullcalendar/core@npm:^6.1.20":
+  version: 6.1.20
+  resolution: "@fullcalendar/core@npm:6.1.20"
+  dependencies:
+    preact: "npm:~10.12.1"
+  checksum: 10/e9450570864145a2b00bb8cedf24b6ae54317f0ce79f97b37fc57851d128ed47682795e15c2092a4c5d526e001ed058b5589c71a849837baa42ec1e2fb780246
+  languageName: node
+  linkType: hard
+
+"@fullcalendar/daygrid@npm:^6.1.20, @fullcalendar/daygrid@npm:~6.1.20":
+  version: 6.1.20
+  resolution: "@fullcalendar/daygrid@npm:6.1.20"
+  peerDependencies:
+    "@fullcalendar/core": ~6.1.20
+  checksum: 10/349a47c31e9c3629185fc4f0c88230081210fdd0beddaa7215e9aeefb2ba218fe3aa4d2ebc5a397d304555567a4ad59b429ec237a895b662b6b854510a495400
+  languageName: node
+  linkType: hard
+
+"@fullcalendar/interaction@npm:^6.1.20":
+  version: 6.1.20
+  resolution: "@fullcalendar/interaction@npm:6.1.20"
+  peerDependencies:
+    "@fullcalendar/core": ~6.1.20
+  checksum: 10/a87e9f82d0db539eca857a623e2bf43301400204c2886e8a3897cfa5ec1e179624778c08b0d858c2693380dfe6a42e5a123eedee0929e3281ac566f632720580
+  languageName: node
+  linkType: hard
+
+"@fullcalendar/react@npm:^6.1.20":
+  version: 6.1.20
+  resolution: "@fullcalendar/react@npm:6.1.20"
+  peerDependencies:
+    "@fullcalendar/core": ~6.1.20
+    react: ^16.7.0 || ^17 || ^18 || ^19
+    react-dom: ^16.7.0 || ^17 || ^18 || ^19
+  checksum: 10/f525f1102f007781483ffcc7b2694c0425026a809792690669884a784fd144a4e3df63401a317a495cda11be9a8c723c012faea6c7f41c3a41e1e7b60b5f6d2c
+  languageName: node
+  linkType: hard
+
+"@fullcalendar/rrule@npm:^6.1.20":
+  version: 6.1.20
+  resolution: "@fullcalendar/rrule@npm:6.1.20"
+  peerDependencies:
+    "@fullcalendar/core": ~6.1.20
+    rrule: ^2.6.0
+  checksum: 10/ef6a90d8d261828ad1a15a901fedadde0b7dc617bef26b8704b6037349bf267a3ddd0970767d31cd7c271f7fc0a3fb322b037bcaa730632a2d5408ebb82f3b9d
+  languageName: node
+  linkType: hard
+
+"@fullcalendar/timegrid@npm:^6.1.20":
+  version: 6.1.20
+  resolution: "@fullcalendar/timegrid@npm:6.1.20"
+  dependencies:
+    "@fullcalendar/daygrid": "npm:~6.1.20"
+  peerDependencies:
+    "@fullcalendar/core": ~6.1.20
+  checksum: 10/63f1b533a761775be8ba8832a2062513471c91c3c95647fea75ca6b45b3117b722afc2c78bdceb2e0fa21ebba95c201282d477409bc41292dbfc71affd904fb4
+  languageName: node
+  linkType: hard
+
 "@humanwhocodes/config-array@npm:^0.11.13":
   version: 0.11.14
   resolution: "@humanwhocodes/config-array@npm:0.11.14"
@@ -11414,6 +11473,12 @@ __metadata:
     "@emotion/styled": "npm:^11.14.0"
     "@eslint/js": "npm:^9.31.0"
     "@excalidraw/excalidraw": "npm:^0.17.6"
+    "@fullcalendar/core": "npm:^6.1.20"
+    "@fullcalendar/daygrid": "npm:^6.1.20"
+    "@fullcalendar/interaction": "npm:^6.1.20"
+    "@fullcalendar/react": "npm:^6.1.20"
+    "@fullcalendar/rrule": "npm:^6.1.20"
+    "@fullcalendar/timegrid": "npm:^6.1.20"
     "@lezer/highlight": "npm:^1.2.0"
     "@magenta/music": "npm:^1.23.1"
     "@mapbox/search-js-react": "npm:^1.0.0"
@@ -11655,6 +11720,7 @@ __metadata:
     remark-rehype: "npm:8.1.0"
     rgbcolor: "npm:0.0.4"
     rosie: "npm:^2.0.1"
+    rrule: "npm:^2.8.1"
     sanitize-html: "npm:^1.11.3"
     sass: "npm:^1.51.0"
     sass-loader: "npm:^12.1.0"
@@ -24622,6 +24688,13 @@ canvg@gabelerner/canvg:
   languageName: node
   linkType: hard
 
+"preact@npm:~10.12.1":
+  version: 10.12.1
+  resolution: "preact@npm:10.12.1"
+  checksum: 10/412bbe8eae0c73e8b30f4992a1bfe965460ea724b5bce1ebfb2dabf2d1a8dee2894b893ecd4e7cb2039f43d8a63d06af4508a606ca3baac17a01ac38e263efd4
+  languageName: node
+  linkType: hard
+
 "prelude-ls@npm:^1.2.1":
   version: 1.2.1
   resolution: "prelude-ls@npm:1.2.1"
@@ -27408,6 +27481,15 @@ canvg@gabelerner/canvg:
   dependencies:
     rrweb-snapshot: "npm:^2.0.0-alpha.18"
   checksum: 10/4b02e60a6828dd29893b2a003e7611f8db275bb21b24a0b8db97ecbfd75020b6d4be26e90ada0cae4a9b28fdc75fa258dd174d21e33d30c33aded797cc23b9bc
+  languageName: node
+  linkType: hard
+
+"rrule@npm:^2.8.1":
+  version: 2.8.1
+  resolution: "rrule@npm:2.8.1"
+  dependencies:
+    tslib: "npm:^2.4.0"
+  checksum: 10/5df8cd2fa08f54ecce704750beb80420a3b15009961c77bd1447c1ccbb3abc1f23929228b13532992c89b813b52430ef0fefb8c9aa0b4ffbc50c51edc514731e
   languageName: node
   linkType: hard
 
