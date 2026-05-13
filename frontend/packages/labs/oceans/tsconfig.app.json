@@ -3,7 +3,8 @@
   "compilerOptions": {
     "baseUrl": ".",
     "composite": true,
+    "resolveJsonModule": true,
     "paths": {"@/*": ["src/*"]}
   },
-  "include": ["src", "i18n"]
+  "include": ["src", "src/**/*.json", "i18n", "i18n/**/*.json"]
 }

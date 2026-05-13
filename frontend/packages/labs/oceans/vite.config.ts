@@ -79,7 +79,6 @@ export default defineConfig({
     lib: {
       entry: ['src/index.ts'],
       name: 'oceans-lab',
-      formats: ['es', 'cjs'],
     },
     rollupOptions: {
       output: [
