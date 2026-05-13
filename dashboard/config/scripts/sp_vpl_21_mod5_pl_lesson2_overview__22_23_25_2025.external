@@ -5,15 +5,15 @@ description 'description here'
 markdown <<MARKDOWN
 # Train a Machine Learning Model
 
-#### In the next section of this professional learning module, you will be introduced to AI Lab and have the opportunity to practice training your first machine learning model.
+In the next section of this professional learning module, you will be introduced to AI Lab and have the opportunity to practice training your first machine learning model.
 </p></div>
 
 ### **You will:**
 
-* #### Train a machine learning model using AI Lab.
+* Train a machine learning model using AI Lab.
 <br>
 
-#### **Suggested time:** 30 minutes
+**Suggested time:** 30 minutes
 
 
 MARKDOWN

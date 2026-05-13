@@ -5,12 +5,12 @@ description 'description here'
 markdown <<MARKDOWN
 # Designing Secure Systems Project Overview
 
-#### In the final project, students analyze a real-world digital system from multiple user perspectives to identify two key issues, such as weak input validation or insecure data storage.
+In the final project, students analyze a real-world digital system from multiple user perspectives to identify two key issues, such as weak input validation or insecure data storage.
 
-#### They propose defense mechanism solutions, creating “Before” artifacts to show the problems and “After” artifacts to illustrate the fixes—featuring a personified defense mechanism.
+They propose defense mechanism solutions, creating “Before” artifacts to show the problems and “After” artifacts to illustrate the fixes—featuring a personified defense mechanism.
 
 
-#### Students also explain how each fix works, its trade-offs, and how it protects users.
+Students also explain how each fix works, its trade-offs, and how it protects users.
 
 
 
@@ -18,7 +18,7 @@ markdown <<MARKDOWN
 <div style="display: flex; align-items: center; justify-content: space-between; background: #f7f8fa; padding: 20px; border-radius: 10px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); font-size: 14pt; line-height: 1.6; max-width: 800px; margin: 20px auto;">
 
   <div>
-    <h4 style="margin-top: 0; font-weight: bold;">In this project, students will:</h4>
+    In this project, students will:
     <ul style="list-style-type: disc; padding-left: 10px; font-size: 14pt">
       <li>Identify security and usability issues in a digital system by analyzing user needs and risks
 </li> <br>
@@ -52,8 +52,8 @@ markdown <<MARKDOWN
     <p>
 
 
-- #### Clearly identifies security shortcomings based on a specific user's needs and concerns.
-- #### Reasoning is thoughtful and specific.
+- Clearly identifies security shortcomings based on a specific user's needs and concerns.
+- Reasoning is thoughtful and specific.
 
 
 </p></div>
@@ -65,8 +65,8 @@ markdown <<MARKDOWN
     <p>
 
 
-- #### Security features effectively address the issues raised in user empathy maps.
-- #### Feature explanations include discussion of any tradeoffs made between security and usability.
+- Security features effectively address the issues raised in user empathy maps.
+- Feature explanations include discussion of any tradeoffs made between security and usability.
 
 
 </p></div>
@@ -78,7 +78,7 @@ markdown <<MARKDOWN
     <p>
 
 
-- #### Artifact clearly shows at least two different types of security issues present in the current app design.
+- Artifact clearly shows at least two different types of security issues present in the current app design.
 
 
 </p></div>
@@ -90,7 +90,7 @@ markdown <<MARKDOWN
     <p>
 
 
-- #### Artifact presents two different personified security solutions, demonstrating how they reduce risk, protect users, and/or prevent human error.
+- Artifact presents two different personified security solutions, demonstrating how they reduce risk, protect users, and/or prevent human error.
 
 
 
@@ -105,8 +105,8 @@ markdown <<MARKDOWN
     <p>
 
 
-- #### Overall, the project communicates ideas clearly through different media. 
-- #### Artifacts are creative, thoughtful, and support understanding of issues and solutions.
+- Overall, the project communicates ideas clearly through different media. 
+- Artifacts are creative, thoughtful, and support understanding of issues and solutions.
 
 
 </p></div>
@@ -119,7 +119,7 @@ markdown <<MARKDOWN
 
 <img src="https://images.code.org/fa1b730d7a258ed991e06fd1fc48fb22-Screenshot 2025-12-12 at 2.11.21 PM.png" alt="comic showing one row with the character frustrated with privacy issues. The second row shows ways the issues will be addressed" width="850px" style="display: block; margin-left: auto; margin-right: auto;">
 
-#### This project example suggests privacy fixes for the ride share app. 
+This project example suggests privacy fixes for the ride share app. 
 
 <p style="font-size: 18px; font-weight: bold; background-color: #F5F7F8; padding: 10px; border-left: 5px solid #8148B2; display: inline-block;">
     ➡️ Check out the full <a href="https://docs.google.com/document/d/1T3wQ5pdFj8ou59eEiK4UZXWla6t7Ejc-_mOA8RWeb_E/edit?tab=t.0#heading=h.xe9cnc3216z0">Exemplar Project Planning Guide</a>.

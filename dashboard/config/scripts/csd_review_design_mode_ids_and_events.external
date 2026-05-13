@@ -55,11 +55,11 @@ Whatever you choose is up to you.  It's your style.  It just helps to be consist
 MARKDOWN
 
 teacher_markdown <<MARKDOWN
-#### Developing Good Programming Habits
+Developing Good Programming Habits
 
 Following clear and consistent naming conventions is an important habit to develop, but the benefits are rarely immediately obvious to students. It really pays off in the long term to be a stickler for well named IDs, particularly because it will save your own sanity when it comes time to read your students' programs.
 
-#### Events 
+Events 
 
 The essentials:
 
@@ -69,7 +69,7 @@ The essentials:
     * code that should be run when the event occurs (this code is technically an anonymous callback function, represented by the green block)
 * Code inside `onEvent()` blocks runs any time the specified event occurs
 
-#### Compared to Game Lab
+Compared to Game Lab
 
 In Game Lab, we might use the following code to check if a sprite named "button" was clicked and do something about it:
 

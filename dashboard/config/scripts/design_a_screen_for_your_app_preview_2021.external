@@ -19,11 +19,11 @@ This helps differentiate the elements on your screen from the elements on everyo
 MARKDOWN
 
 teacher_markdown <<MARKDOWN
-#### Naming Your Elements
+Naming Your Elements
 
 Ensuring that all students are both creating unique IDs for all elements and properly namespacing them will go a long way towards avoiding issues in the next lesson, so it pays to be a stickler here. You can provide students with the optional Screen Design Activity Guide to keep track of their element IDs.
 
-#### Working together, apart
+Working together, apart
 
 Even more so than the the paper prototyping activity, it is easy for students in this lesson to forget that they need to consider how their choices affect their team. Encourage active discussion among teams as they design screens to ensure that they are all working towards a common goal.
 MARKDOWN

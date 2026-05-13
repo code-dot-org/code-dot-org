@@ -5,9 +5,9 @@ description 'description here'
 markdown <<MARKDOWN
 # Types of Loops
 
-#### Not all loops repeat in the same way. What makes loops different is how the repetition is controlled.
+Not all loops repeat in the same way. What makes loops different is how the repetition is controlled.
 
-#### In most programs, iteration falls into one of two common categories.
+In most programs, iteration falls into one of two common categories.
 
 <div style="
   display: flex;
@@ -90,8 +90,8 @@ markdown <<MARKDOWN
 </div>
 
 ## Let's look at the flow charts
-#### Below are two flowcharts that show iteration in action.
-#### Before labeling them, take a moment to study how each one repeats.
+Below are two flowcharts that show iteration in action.
+Before labeling them, take a moment to study how each one repeats.
 ---
 
 
@@ -99,15 +99,15 @@ markdown <<MARKDOWN
 
 <img src="https://images.code.org/d80a0b774a89fa285465c1a50a654d79-image-1768419690819.png" alt="flowchart for a for loop" width="350px" style="border-radius:10px; float:left; margin: 0px 30px 30px 40px;">
 
-#### **Think about:**
+**Think about:**
 
-- #### What causes the steps to repeat?
+- What causes the steps to repeat?
 
-- #### Is the number of repetitions fixed?
+- Is the number of repetitions fixed?
 
-- #### What makes the loop stop?
+- What makes the loop stop?
 
- #### 👉 **Which type of loop do you think this represents?**
+ 👉 **Which type of loop do you think this represents?**
 
 
 
@@ -131,15 +131,15 @@ markdown <<MARKDOWN
 
 <img src="https://images.code.org/4afcb2bde4184c0c4735dcfb18d4a4a2-image-1768418982827.png" alt="flowchart for a while" width="350px" style="border-radius:10px; float:left; margin: 0px 30px 30px 40px;">
 
-#### **Think about:**
+**Think about:**
 
-- #### Does the loop repeat a known number of times?
+- Does the loop repeat a known number of times?
 
-- #### Is the number of repetitions fixed?
+- Is the number of repetitions fixed?
 
-- #### Or does it continue until a condition changes?
+- Or does it continue until a condition changes?
 
- #### 👉 **Which type of loop do you think this represents?**
+ 👉 **Which type of loop do you think this represents?**
 
 
 
@@ -159,7 +159,7 @@ markdown <<MARKDOWN
 
 ## Next up
 
-#### Let's see what this looks like in code starting with for loops. 
+Let's see what this looks like in code starting with for loops. 
 
 
 

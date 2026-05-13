@@ -10,7 +10,7 @@ markdown <<MARKDOWN
 <p style="line-height: 1.5; margin-left: 10px; margin-right: 10px; margin-top: 20px; margin-bottom: 20px; font-size: 18px; ">Abstraction is a major theme in Chapter 2 of the Interactive Animations and Games unit. Students will learn that complex behavior can be represented in simpler ways to make it easier to write and reason about code. 
 </p></div>
 
-#### **Abstraction** - a simplified representation of something more complex. Abstractions allow you to hide details to help you manage complexity, focus on relevant concepts, and reason about problems at a higher level.
+**Abstraction** - a simplified representation of something more complex. Abstractions allow you to hide details to help you manage complexity, focus on relevant concepts, and reason about problems at a higher level.
 
 ## Velocity
 

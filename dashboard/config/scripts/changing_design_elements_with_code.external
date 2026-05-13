@@ -48,7 +48,7 @@ In the following levels you’ll learn how to use code to change lots of differe
 MARKDOWN
 
 teacher_markdown <<MARKDOWN
-#### This is Not a Programming Unit
+This is Not a Programming Unit
 
 We are presenting a small amount of programming instruction here primarily to satisfy the students' desire to make an app that feels "real," but it's essential to note that this is _not_ intended to be a programming unit, and you shouldn't assess apps with the assumption that students have mastered any of these concepts. Students will be able to apply many of the programming fundamentals they learned in Unit 3, but they won't really dig into new concepts, particularly those central to App Lab's event-driven model until Unit 6. Let this be fun.
 MARKDOWN

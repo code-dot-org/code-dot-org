@@ -5,11 +5,11 @@ description 'description here'
 markdown <<MARKDOWN
 # Color Guide
 
-#### The following colors should be used when changing elements' colors on a Level Builder page. They come from the <a href="https://drive.google.com/file/d/1CBAcOfamf7HchJWsALzBIcxZmN_yHhOR/view?usp=sharing" target="blank" rel="noopener noreferrer">Branding Guidelines and Style Guide</a>.
+The following colors should be used when changing elements' colors on a Level Builder page. They come from the <a href="https://drive.google.com/file/d/1CBAcOfamf7HchJWsALzBIcxZmN_yHhOR/view?usp=sharing" target="blank" rel="noopener noreferrer">Branding Guidelines and Style Guide</a>.
 
 ## Main Colors
 
-#### The main color palette will cover the majority of your needs. It’s intentionally small in variety so as to not dilute the brand visuals, which adds confusion.
+The main color palette will cover the majority of your needs. It’s intentionally small in variety so as to not dilute the brand visuals, which adds confusion.
 
 ### **Primary Brand Colors**
 <div style="background-color: #0093A4; border-radius: 40px; color: #FFFFFF; width: 95%; padding: 10px 10px 10px 10px;"> <p style="line-height: 1.5; margin-left: 10px; margin-right: 10px; margin-top: 10px; margin-bottom: 10px; font-size: 18px; ">
