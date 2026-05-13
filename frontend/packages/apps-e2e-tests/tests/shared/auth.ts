@@ -259,6 +259,12 @@ export interface TeacherStudentPair {
   teacherEmail: string;
   /** Teacher's password. */
   teacherPassword: string;
+  /** Student's email address, used with {@link signIn} to switch sessions. */
+  studentEmail: string;
+  /** Student's password. */
+  studentPassword: string;
+  /** Display name shown for the student in dashboard UI. */
+  studentDisplayName: string;
   /** Section join code. */
   sectionCode: string;
   /** Numeric section ID used in dashboard URLs and APIs. */
@@ -475,7 +481,15 @@ export async function createTeacherAssociatedStudent(
     throw new Error(`join section failed: ${lastJoinFailure}`);
   }
 
-  return {teacherEmail, teacherPassword, sectionCode, sectionId};
+  return {
+    teacherEmail,
+    teacherPassword,
+    studentEmail,
+    studentPassword,
+    studentDisplayName,
+    sectionCode,
+    sectionId,
+  };
 }
 
 /** Section identifiers returned by {@link createSection} and {@link createSectionWithCourse}. */
@@ -830,25 +844,33 @@ export async function assignSectionToCourseAndUnit(
   const csrf = await page
     .locator('meta[name="csrf-token"]')
     .getAttribute('content');
-  const resp = await page.request.post(
-    '/api/test/assign_section_to_course_and_unit',
-    {
-      headers: {
-        'Content-Type': 'application/json',
-        'X-CSRF-Token': csrf ?? '',
+  let lastFailure = '';
+  for (let attempt = 1; attempt <= 3; attempt++) {
+    const resp = await page.request.post(
+      '/api/test/assign_section_to_course_and_unit',
+      {
+        headers: {
+          'Content-Type': 'application/json',
+          'X-CSRF-Token': csrf ?? '',
+        },
+        data: {
+          section_position: sectionPosition,
+          course_name: courseName,
+          unit_position: unitPosition,
+        },
       },
-      data: {
-        section_position: sectionPosition,
-        course_name: courseName,
-        unit_position: unitPosition,
-      },
-    },
-  );
-  if (!resp.ok()) {
-    throw new Error(
-      `assign_section_to_course_and_unit failed: ${resp.status()} — ${await resp.text()}`,
     );
+    if (resp.ok()) {
+      return;
+    }
+
+    lastFailure = `${resp.status()} — ${await resp.text()}`;
+    if (resp.status() < 500 || attempt === 3) {
+      break;
+    }
   }
+
+  throw new Error(`assign_section_to_course_and_unit failed: ${lastFailure}`);
 }
 
 /**

@@ -1,92 +1,123 @@
 import {
-  createTeacherAssociatedStudent,
+  assignSectionToCourseAndUnit,
   createStudent,
+  createTeacherAssociatedStudent,
   signIn,
 } from '../../shared/auth';
 import {test} from '../../shared/fixtures';
+import {WINNING_ARTIST_BLOCKS} from '../activities/artist/blocks';
+
+import {ScriptOverviewPage} from './ScriptOverviewPage';
 
 /**
- * Unit overview page — end-of-lesson header, lesson plan links, student
- * resources, and version picker.
+ * Unit overview page.
  *
- * Source:
- *   dashboard/test/ui/features/teacher_tools/script_overview.feature
+ * Source: dashboard/test/ui/features/teacher_tools/script_overview.feature
  *
- * Tagged @no_safari @no_mobile (tab-switching fails on Safari 14+).
- * Two @properties_encryption_key scenarios are skipped.
+ * Source feature is tagged @no_safari @no_mobile.
  */
 
-// @properties_encryption_key — requires encryption key configuration.
-test.fixme(
-  'unit overview: student progress saved and visible to teacher',
-  async () => {},
-);
-test.fixme(
-  'unit overview: summary vs detail view toggle and lesson name formats',
-  async () => {},
-);
+test.describe('Unit overview page', {tag: ['@no_mobile', '@no_safari']}, () => {
+  test.beforeEach(({browserName}) => {
+    test.skip(
+      browserName === 'webkit',
+      'Source Cucumber feature is @no_safari: dashboard/test/ui/features/teacher_tools/script_overview.feature',
+    );
+  });
 
-test.describe('Unit overview page', () => {
-  test(
-    'end-of-lesson header appears then clears on reload',
-    {tag: '@no_mobile'},
-    async ({page}) => {
-      await createStudent(page);
-      await page.goto('/courses/ui-test-csp-2019/units/1/lessons/1/levels/1');
-      await page
-        .locator('#runButton')
-        .waitFor({state: 'visible', timeout: 30_000});
+  /**
+   * Migration status: COMPLETED
+   * Source: dashboard/test/ui/features/teacher_tools/script_overview.feature
+   * Scenario: Viewing student progress
+   */
+  test('student progress is visible to student and teacher', async ({page}) => {
+    test.slow();
+    const pair = await createTeacherAssociatedStudent(page, {
+      authorized: true,
+      studentName: 'Sally',
+    });
+    const scriptOverview = new ScriptOverviewPage(page);
 
-      await page.locator('#runButton').click();
-      await page
-        .locator('button:has-text("Finish")')
-        .waitFor({state: 'visible', timeout: 15_000});
-      await page.locator('button:has-text("Finish")').click();
-      await page
-        .locator('#continue-button')
-        .waitFor({state: 'visible', timeout: 15_000});
+    await signIn(page, pair.teacherEmail, pair.teacherPassword);
+    await page.goto('/home', {waitUntil: 'domcontentloaded'});
+    await assignSectionToCourseAndUnit(page, 0, 'allthethingscourse', 1);
+    await signIn(page, pair.studentEmail, pair.studentPassword);
+    await scriptOverview.completeK1MazeLevel();
 
-      await Promise.all([
-        page.waitForNavigation({timeout: 30_000}),
-        page.locator('#continue-button').click(),
-      ]);
+    await scriptOverview.gotoUnitOverview(
+      '/courses/allthethingscourse/units/1',
+    );
+    await scriptOverview.expectLessonCell('Maze');
+    await scriptOverview.expectTeacherPanelHidden();
+    await scriptOverview.expectSummaryProgressAfterReloads(2, 1, 'perfect');
+    await scriptOverview.expectSummaryProgress(2, 2, 'not_tried');
 
-      await page
-        .locator('.uitest-end-of-lesson-header')
-        .filter({hasText: 'You finished Lesson 1!'})
-        .waitFor({state: 'visible', timeout: 30_000});
+    await signIn(page, pair.teacherEmail, pair.teacherPassword);
+    await scriptOverview.completeArtistLevel(WINNING_ARTIST_BLOCKS);
+    await scriptOverview.gotoUnitOverview(
+      '/courses/allthethingscourse/units/1',
+    );
+    await scriptOverview.expectDetailProgress(29, 4, 'perfect');
+    await scriptOverview.selectViewAsStudent('Sally');
+    await scriptOverview.expectLessonCell('Maze');
+    await scriptOverview.expectSummaryLessonText('2. Maze');
+    await scriptOverview.expectSummaryProgressAfterReloads(2, 1, 'perfect');
+    await scriptOverview.expectSummaryProgress(2, 2, 'not_tried');
 
-      await page.reload();
-      await page
-        .locator('.uitest-end-of-lesson-header')
-        .waitFor({state: 'hidden', timeout: 15_000});
-    },
-  );
+    await page.reload({waitUntil: 'domcontentloaded'});
+    await scriptOverview.expectSummaryProgress(29, 4, 'not_tried');
+  });
 
-  test(
-    'new lesson plan link opens in a new tab',
-    {tag: '@no_mobile'},
-    async ({page}) => {
-      const {teacherEmail, teacherPassword} =
-        await createTeacherAssociatedStudent(page, {authorized: true});
-      await signIn(page, teacherEmail, teacherPassword);
+  /**
+   * Migration status: COMPLETED
+   * Source: dashboard/test/ui/features/teacher_tools/script_overview.feature
+   * Scenario: Unit overview contents
+   */
+  test('unit overview toggles summary and detail lesson formats', async ({
+    page,
+  }) => {
+    const scriptOverview = new ScriptOverviewPage(page);
+    await createStudent(page, {name: 'Jean'});
 
-      await page.goto('/courses/allthelessonplans/units/1?no_redirect=true');
-      await page
-        .locator('#uitest-lesson-plan')
-        .first()
-        .waitFor({state: 'visible', timeout: 30_000});
+    await scriptOverview.gotoUnitOverview(
+      '/courses/allthethingscourse/units/1',
+    );
+    await scriptOverview.expectLessonCell('Maze');
+    await scriptOverview.expectSummaryLessonText('2. Maze');
+    await scriptOverview.openDetailView();
+    await scriptOverview.expectDetailLessonText('Lesson 2: Maze');
 
-      const [newTab] = await Promise.all([
-        page.context().waitForEvent('page'),
-        page.locator('#uitest-lesson-plan').first().click(),
-      ]);
-      await newTab.waitForURL(
-        /\/courses\/allthelessonplans\/units\/1\/lessons\/1/,
-        {timeout: 30_000},
-      );
-    },
-  );
+    await scriptOverview.gotoUnitOverview('/courses/mc/units/1');
+    await scriptOverview.expectLessonCell('Minecraft');
+    await scriptOverview.expectSummaryLessonText('1. Minecraft Hour of Code');
+  });
+
+  /**
+   * Migration status: COMPLETED
+   * Source: dashboard/test/ui/features/teacher_tools/script_overview.feature
+   * Scenario: Unit overview end-of-lesson
+   */
+  test('end-of-lesson header appears then clears on reload', async ({page}) => {
+    const scriptOverview = new ScriptOverviewPage(page);
+    await createStudent(page, {name: 'Jean'});
+
+    await scriptOverview.completeSingleAppLabLesson();
+    await scriptOverview.expectEndOfLessonBannerClearsAfterReload();
+  });
+
+  /**
+   * Migration status: COMPLETED
+   * Source: dashboard/test/ui/features/teacher_tools/script_overview.feature
+   * Scenario: Unit overview new lesson plan
+   */
+  test('new lesson plan link opens in a new tab', async ({page}) => {
+    const {teacherEmail, teacherPassword} =
+      await createTeacherAssociatedStudent(page, {authorized: true});
+    await signIn(page, teacherEmail, teacherPassword);
+
+    const scriptOverview = new ScriptOverviewPage(page);
+    await scriptOverview.openLessonPlanInNewTab();
+  });
 
   test(
     'student resources link (as teacher) opens in a new tab',
@@ -117,7 +148,6 @@ test.describe('Unit overview page', () => {
     'student resources link (as student) opens in a new tab',
     {tag: '@no_mobile'},
     async ({page}) => {
-      // createTeacherAssociatedStudent ends with the student signed in.
       await createTeacherAssociatedStudent(page, {authorized: true});
 
       await page.goto('/courses/allthelessonplans/units/1?no_redirect=true');
@@ -160,8 +190,6 @@ test.describe('Unit overview page', () => {
         .locator('.assignment-version-title')
         .filter({hasText: '2026'})
         .waitFor({state: 'visible', timeout: 15_000});
-      // The dropdown list overflows a clipped container; dispatchEvent bypasses
-      // viewport checks that neither force:true nor scrollIntoView can overcome.
       await page
         .locator('.assignment-version-title')
         .filter({hasText: '2026'})
