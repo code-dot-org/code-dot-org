@@ -178,4 +178,97 @@ class Javalab < Level
   def get_starter_code
     properties["start_sources"]
   end
+
+  def uses_lab2?
+    true
+  end
+
+  # Lab2 calls this to decide whether the Finish button gates on validation.
+  # Mirrors Pythonlab#get_validations: one PASSED_ALL_TESTS condition if the
+  # level ships validation, otherwise nil.
+  def get_validations
+    return nil if properties['encrypted_validation'].blank?
+    [{
+      conditions: [{name: 'PASSED_ALL_TESTS', value: 'true'}],
+      message: '',
+      next: true,
+    }]
+  end
+
+  # Convert legacy flat-hash start_sources ({filename => contents}) plus the
+  # legacy flat validation hash into the codebridge MultiFileSource shape.
+  # Idempotent: if input is already a MultiFileSource (has a 'files' key), it
+  # is returned unchanged. Empty/nil input returns a single empty file.
+  def self.convert_legacy_start_sources(flat_sources, validation_hash)
+    return flat_sources if flat_sources.is_a?(Hash) && flat_sources.key?('files')
+    folder_id = 'root'
+    files = {}
+    open_files = []
+    (flat_sources || {}).each_with_index do |(name, contents), i|
+      fid = "f#{i}"
+      files[fid] = {
+        'id' => fid, 'name' => name, 'language' => 'java',
+        'contents' => contents.to_s, 'folderId' => folder_id,
+        'type' => 'starter', 'open' => i.zero?, 'active' => i.zero?,
+      }
+      open_files << fid if i.zero?
+    end
+    (validation_hash || {}).each_with_index do |(name, contents), i|
+      fid = "v#{i}"
+      files[fid] = {
+        'id' => fid, 'name' => name, 'language' => 'java',
+        'contents' => contents.to_s, 'folderId' => folder_id,
+        'type' => 'validation', 'open' => false, 'active' => false,
+      }
+    end
+    {
+      'folders' => {folder_id => {'id' => folder_id, 'name' => 'src', 'parentId' => '0'}},
+      'files' => files,
+      'openFiles' => open_files,
+    }
+  end
+
+  def summarize_for_lab2_properties(script, script_level = nil, current_user = nil, unit_group_unit: nil)
+    properties_camelized = super
+
+    # Replace flat-hash sources with MultiFileSource for codebridge.
+    properties_camelized[:startSources] = Javalab.convert_legacy_start_sources(start_sources, nil)
+    if properties_camelized[:templateSources]
+      properties_camelized[:templateSources] = Javalab.convert_legacy_start_sources(properties_camelized[:templateSources], nil)
+    end
+    if properties_camelized[:exemplarSources]
+      properties_camelized[:exemplarSources] = Javalab.convert_legacy_start_sources(properties_camelized[:exemplarSources], nil)
+    end
+
+    # Encrypted blobs must never leak to the client.
+    properties_camelized.delete(:encryptedValidation)
+    properties_camelized.delete(:encryptedExemplarSources)
+    properties_camelized.delete(:encryptedExamples)
+
+    # Neighborhood mode pulls maze + start direction from template fallback.
+    if csa_view_mode == 'neighborhood'
+      properties_camelized[:serializedMaze] = get_serialized_maze
+      properties_camelized[:startDirection] = start_direction || project_template_level&.try(:start_direction)
+    end
+
+    # Send validation filenames (no code) so the file tree can render entries
+    # without leaking solution code. In start_sources edit mode, the actual
+    # validation code is fetched separately via the levelbuilder edit path.
+    if validation
+      properties_camelized[:validation] = validation.transform_values {|_| ''}
+    end
+
+    # Re-signed every call; do not cache.
+    properties_camelized[:recaptchaSiteKey] = CDO.recaptcha_site_key
+    if starter_assets.present? || project_template_level&.try(:starter_assets).present?
+      assets_source = project_template_level&.try(:starter_assets) || starter_assets
+      properties_camelized[:starterAssets] = assets_source.each_with_object({}) do |(friendly_name, _uuid), h|
+        h[friendly_name] = JavalabFilesHelper.generate_starter_asset_url(friendly_name, self)
+      end
+    end
+
+    properties_camelized[:csaViewMode] = csa_view_mode if csa_view_mode
+
+    properties_camelized
+  end
 end
