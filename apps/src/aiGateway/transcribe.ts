@@ -5,6 +5,7 @@ import {
 
 import HttpClient from '@cdo/apps/util/HttpClient';
 
+import {GatewayTranscribeResponseV1Schema} from './gatewaySchemas';
 import {getErrorLogData} from './logHelper';
 import {AI_GATEWAY_URL, fetchAccessToken, getModelString} from './shared';
 import {fetchTurnstileTokenIfEnabled, turnstileHeaders} from './turnstile';
@@ -42,7 +43,12 @@ async function transcribeThroughGateway(
       turnstileHeaders(turnstileToken)
     );
 
-    return await response.json();
+    const wire = GatewayTranscribeResponseV1Schema.parse(await response.json());
+
+    return {
+      ...wire,
+      warnings: (wire.warnings ?? []) as TranscriptionResult['warnings'],
+    } as unknown as TranscriptionResult;
   } catch (error) {
     const logData = getErrorLogData(error);
     console.error('Fetch error in transcribeThroughGateway:', logData);

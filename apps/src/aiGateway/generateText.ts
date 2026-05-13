@@ -2,6 +2,10 @@ import {generateText, type GenerateTextResult} from 'ai';
 
 import HttpClient from '@cdo/apps/util/HttpClient';
 
+import {
+  GatewayGenerateTextResponseV1Schema,
+  type GatewayGenerateTextResponseV1,
+} from './gatewaySchemas';
 import {getErrorLogData} from './logHelper';
 import {AI_GATEWAY_URL, fetchAccessToken, getModelString} from './shared';
 import {fetchTurnstileTokenIfEnabled, turnstileHeaders} from './turnstile';
@@ -9,14 +13,6 @@ import {fetchTurnstileTokenIfEnabled, turnstileHeaders} from './turnstile';
 type SDKOptions = Parameters<typeof generateText>[0];
 type SDKTools = NonNullable<SDKOptions['tools']>;
 type SDKOutput = NonNullable<SDKOptions['output']>;
-
-type SerializableAIResponse<
-  TOOLS extends SDKTools = SDKTools,
-  OUTPUT extends SDKOutput = SDKOutput
-> = Omit<GenerateTextResult<TOOLS, OUTPUT>, 'text' | 'files'> & {
-  text?: string;
-  files?: {mediaType: string; base64: string}[];
-};
 
 const base64ToUint8Array = (base64: string): Uint8Array => {
   const binaryString = atob(base64);
@@ -50,19 +46,22 @@ const serializeOutputSchema = async (output?: SDKOptions['output']) => {
 };
 
 const rehydrateAIResponse = <TOOLS extends SDKTools, OUTPUT extends SDKOutput>(
-  serialized: SerializableAIResponse<TOOLS, OUTPUT>
+  wire: GatewayGenerateTextResponseV1
 ): GenerateTextResult<TOOLS, OUTPUT> => {
   return {
-    ...serialized,
-    toolCalls: serialized.toolCalls ?? [],
-    toolResults: serialized.toolResults ?? [],
-    warnings: serialized.warnings ?? [],
-    files: serialized.files?.map(file => ({
+    ...wire,
+    text: wire.text ?? '',
+    files: wire.files?.map(file => ({
       mediaType: file.mediaType,
       base64: file.base64,
       uint8Array: base64ToUint8Array(file.base64),
     })),
-  } as GenerateTextResult<TOOLS, OUTPUT>;
+    warnings: wire.warnings ?? [],
+    output: wire.output as OUTPUT,
+    response: wire.response
+      ? {...wire.response, timestamp: new Date(wire.response.timestamp)}
+      : (undefined as unknown as GenerateTextResult<TOOLS, OUTPUT>['response']),
+  } as unknown as GenerateTextResult<TOOLS, OUTPUT>;
 };
 
 /**
@@ -104,11 +103,11 @@ const generateTextThroughGateway = async <
       headers
     );
 
-    const data = await (response.json() as Promise<
-      SerializableAIResponse<TOOLS, OUTPUT>
-    >);
+    const wire = GatewayGenerateTextResponseV1Schema.parse(
+      await response.json()
+    );
 
-    return rehydrateAIResponse<TOOLS, OUTPUT>(data);
+    return rehydrateAIResponse<TOOLS, OUTPUT>(wire);
   } catch (error) {
     const logData = await getErrorLogData(error);
     console.error('Fetch error in generateTextThroughGateway:', logData);
