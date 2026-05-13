@@ -2154,9 +2154,9 @@ __metadata:
     "@fortawesome/fontawesome-svg-core": "npm:^1.2.25"
     "@fortawesome/free-solid-svg-icons": "npm:^5.11.2"
     "@fortawesome/react-fontawesome": "npm:^0.1.7"
-    "@tensorflow-models/knn-classifier": "npm:~1.1.0"
+    "@tensorflow-models/knn-classifier": "npm:~1.2.4"
     "@tensorflow-models/mobilenet": "npm:^2.0.4"
-    "@tensorflow/tfjs": "npm:^1.3.1"
+    "@tensorflow/tfjs": "npm:^2.7.0"
     "@testing-library/dom": "catalog:"
     "@testing-library/react": "catalog:"
     "@types/node": "catalog:"
@@ -7274,12 +7274,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@tensorflow-models/knn-classifier@npm:~1.1.0":
-  version: 1.1.0
-  resolution: "@tensorflow-models/knn-classifier@npm:1.1.0"
+"@tensorflow-models/knn-classifier@npm:~1.2.4":
+  version: 1.2.6
+  resolution: "@tensorflow-models/knn-classifier@npm:1.2.6"
   peerDependencies:
-    "@tensorflow/tfjs": ^1.1.0
-  checksum: 10c0/fa61cb3ef9ae11013f4134bb84e66be5ca0feff072469c1171b63676738419eec25e48e84a03be77253f4829ab56f8bb0fb5f83d1fe431c7f7cf1185a24bc02b
+    "@tensorflow/tfjs-backend-cpu": ^4.10.0
+    "@tensorflow/tfjs-core": ^4.10.0
+  checksum: 10c0/8d92e2026955a44f9ff0c4451a8ac5f14a73da4eb801b81ab721367cd4a8fdac75b8140c8779163d8592aa2900b80af0ec60d5d06b493ea81a3be3391b257e4e
   languageName: node
   linkType: hard
 
@@ -7321,35 +7322,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@tensorflow/tfjs-converter@npm:1.7.4":
-  version: 1.7.4
-  resolution: "@tensorflow/tfjs-converter@npm:1.7.4"
-  peerDependencies:
-    "@tensorflow/tfjs-core": 1.7.4
-  checksum: 10c0/5cee60378a2466b8c85fb093ddf70061da7274c032437f28cc41372f8648e755a23bc931729ddfe9d70184be43f6b3363adbb37f64bc2f4547d31352f3dbf5ff
-  languageName: node
-  linkType: hard
-
 "@tensorflow/tfjs-converter@npm:2.8.6":
   version: 2.8.6
   resolution: "@tensorflow/tfjs-converter@npm:2.8.6"
   peerDependencies:
     "@tensorflow/tfjs-core": 2.8.6
   checksum: 10c0/a23050e8dbd946ef9ebd731d608cce92634afaffebe4ded2b8cbc7fd94c2819c01d570d4a94a23c6158211c6803a512a7b14910a9c02dd07c83d1aee032f4f36
-  languageName: node
-  linkType: hard
-
-"@tensorflow/tfjs-core@npm:1.7.4":
-  version: 1.7.4
-  resolution: "@tensorflow/tfjs-core@npm:1.7.4"
-  dependencies:
-    "@types/offscreencanvas": "npm:~2019.3.0"
-    "@types/seedrandom": "npm:2.4.27"
-    "@types/webgl-ext": "npm:0.0.30"
-    "@types/webgl2": "npm:0.0.4"
-    node-fetch: "npm:~2.1.2"
-    seedrandom: "npm:2.4.3"
-  checksum: 10c0/44d6da210335a348d6e73face67b486b25261893728f459fda6cc08b08c9540de481de2055aa2cced131392183ea67404d6d044c7254f39ddc3bc84ef05cc995
   languageName: node
   linkType: hard
 
@@ -7366,19 +7344,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@tensorflow/tfjs-data@npm:1.7.4":
-  version: 1.7.4
-  resolution: "@tensorflow/tfjs-data@npm:1.7.4"
-  dependencies:
-    "@types/node-fetch": "npm:^2.1.2"
-    node-fetch: "npm:~2.1.2"
-  peerDependencies:
-    "@tensorflow/tfjs-core": 1.7.4
-    seedrandom: ~2.4.3
-  checksum: 10c0/a45de3f1662f62fcd457964525d053f41f208e2786c595298aa0a4ce7710099b8f61315806f345d967c964c5d19f168bc90c468f4ece7ddc552a04b4a70da0cb
-  languageName: node
-  linkType: hard
-
 "@tensorflow/tfjs-data@npm:2.8.6":
   version: 2.8.6
   resolution: "@tensorflow/tfjs-data@npm:2.8.6"
@@ -7392,33 +7357,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@tensorflow/tfjs-layers@npm:1.7.4":
-  version: 1.7.4
-  resolution: "@tensorflow/tfjs-layers@npm:1.7.4"
-  peerDependencies:
-    "@tensorflow/tfjs-core": 1.7.4
-  checksum: 10c0/3408e09cf1614d8777bd331868cf26c951c25a35b10a9b1192eea8cdfca77437ea638086e2ffa7ee03445f9629dd6a880a395d66f5fa080a958f73e81c260651
-  languageName: node
-  linkType: hard
-
 "@tensorflow/tfjs-layers@npm:2.8.6":
   version: 2.8.6
   resolution: "@tensorflow/tfjs-layers@npm:2.8.6"
   peerDependencies:
     "@tensorflow/tfjs-core": 2.8.6
   checksum: 10c0/b0c7f13cad0affb3e9fb14adb08c2f27229f2b444ca1fdb4c9f10cae315dcb983e2807c4d53e2a71d26e421540969927d8453c8aa222452de9075c552485a12c
-  languageName: node
-  linkType: hard
-
-"@tensorflow/tfjs@npm:^1.3.1":
-  version: 1.7.4
-  resolution: "@tensorflow/tfjs@npm:1.7.4"
-  dependencies:
-    "@tensorflow/tfjs-converter": "npm:1.7.4"
-    "@tensorflow/tfjs-core": "npm:1.7.4"
-    "@tensorflow/tfjs-data": "npm:1.7.4"
-    "@tensorflow/tfjs-layers": "npm:1.7.4"
-  checksum: 10c0/f59c8d02b32d1da1ce178595b4ec842cb0eef85fcbe680a7aa173612c0d045ca7046da3f5949b55fbd8bb7a8b5189187a7c0e6aca1e7501c719a6c9fb725371d
   languageName: node
   linkType: hard
 
@@ -7987,10 +7931,19 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/prop-types@npm:^15.7.15":
+"@types/prop-types@npm:*, @types/prop-types@npm:^15.7.15":
   version: 15.7.15
   resolution: "@types/prop-types@npm:15.7.15"
   checksum: 10c0/b59aad1ad19bf1733cf524fd4e618196c6c7690f48ee70a327eb450a42aab8e8a063fbe59ca0a5701aebe2d92d582292c0fb845ea57474f6a15f6994b0e260b2
+  languageName: node
+  linkType: hard
+
+"@types/react-dom@npm:^18.3.1":
+  version: 18.3.7
+  resolution: "@types/react-dom@npm:18.3.7"
+  peerDependencies:
+    "@types/react": ^18.0.0
+  checksum: 10c0/8bd309e2c3d1604a28a736a24f96cbadf6c05d5288cfef8883b74f4054c961b6b3a5e997fd5686e492be903c8f3380dba5ec017eff3906b1256529cd2d39603e
   languageName: node
   linkType: hard
 
@@ -8009,6 +7962,16 @@ __metadata:
   peerDependencies:
     "@types/react": "*"
   checksum: 10c0/0441b8b47c69312c89ec0760ba477ba1a0808a10ceef8dc1c64b1013ed78517332c30f18681b0ec0b53542731f1ed015169fed1d127cc91222638ed955478ec7
+  languageName: node
+  linkType: hard
+
+"@types/react@npm:^18.3.12":
+  version: 18.3.28
+  resolution: "@types/react@npm:18.3.28"
+  dependencies:
+    "@types/prop-types": "npm:*"
+    csstype: "npm:^3.2.2"
+  checksum: 10c0/683e19cd12b5c691215529af2e32b5ffbaccae3bf0ba93bfafa0e460e8dfee18423afed568be2b8eadf4b837c3749dd296a4f64e2d79f68fa66962c05f5af661
   languageName: node
   linkType: hard
 
@@ -8141,13 +8104,6 @@ __metadata:
   version: 0.0.30
   resolution: "@types/webgl-ext@npm:0.0.30"
   checksum: 10c0/7d61cc4b95d7619d64831614238c848d73821ff686be0b609ad43883c2e2410b1ff74e3e519d604173c112511302b76465cea93dffc1398bf84cafe0237ed334
-  languageName: node
-  linkType: hard
-
-"@types/webgl2@npm:0.0.4":
-  version: 0.0.4
-  resolution: "@types/webgl2@npm:0.0.4"
-  checksum: 10c0/f379b862e0b7e435570a55404011d570583a0783586e7bc6e3fc463bfea966da0aa647596e7ad8956f6439a5f12fb8b10d39083debf1434fb776c1a46a9274a3
   languageName: node
   linkType: hard
 
@@ -18477,7 +18433,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"loose-envify@npm:^1.4.0":
+"loose-envify@npm:^1.1.0, loose-envify@npm:^1.4.0":
   version: 1.4.0
   resolution: "loose-envify@npm:1.4.0"
   dependencies:
@@ -19464,13 +19420,6 @@ __metadata:
     encoding:
       optional: true
   checksum: 10c0/b55786b6028208e6fbe594ccccc213cab67a72899c9234eb59dba51062a299ea853210fcf526998eaa2867b0963ad72338824450905679ff0fa304b8c5093ae8
-  languageName: node
-  linkType: hard
-
-"node-fetch@npm:~2.1.2":
-  version: 2.1.2
-  resolution: "node-fetch@npm:2.1.2"
-  checksum: 10c0/5f5694c8c752f6b6e5471e9af658f22cf2bf3722398acec2604fbc215af9efefff162147270d613689b2c85e970e4bdb87a8a6dd2a2e4f710d358a611b856a15
   languageName: node
   linkType: hard
 
@@ -21369,6 +21318,29 @@ __metadata:
   languageName: node
   linkType: hard
 
+"react-dom@npm:^16.8.0 || ^17.0.0 || ^18.0.0 || ^19.0.0":
+  version: 19.2.6
+  resolution: "react-dom@npm:19.2.6"
+  dependencies:
+    scheduler: "npm:^0.27.0"
+  peerDependencies:
+    react: ^19.2.6
+  checksum: 10c0/dbf2aef67857c03a612bc9316a4562e5066f43fa04bf28f7f0734963fc1350da2c9f8eb973930655453281079f30cc8222bab383dbec4b5097084e2c081e3334
+  languageName: node
+  linkType: hard
+
+"react-dom@npm:^18.3.1":
+  version: 18.3.1
+  resolution: "react-dom@npm:18.3.1"
+  dependencies:
+    loose-envify: "npm:^1.1.0"
+    scheduler: "npm:^0.23.2"
+  peerDependencies:
+    react: ^18.3.1
+  checksum: 10c0/a752496c1941f958f2e8ac56239172296fcddce1365ce45222d04a1947e0cc5547df3e8447f855a81d6d39f008d7c32eab43db3712077f09e3f67c4874973e85
+  languageName: node
+  linkType: hard
+
 "react-dom@npm:^19.2.0":
   version: 19.2.1
   resolution: "react-dom@npm:19.2.1"
@@ -21589,6 +21561,22 @@ __metadata:
     react: ^0.14 || ^15.0 || ^16.0
     react-dom: "*"
   checksum: 10c0/1c105a87d324e3d296f8013a2a0529857224c55aedf3c6dc179027eeb86a97b5a970c250143cb469b4911eb4a6ef6c6aef8cd5dc87b6fdedf3943557686e78f6
+  languageName: node
+  linkType: hard
+
+"react@npm:^16.8.0 || ^17.0.0 || ^18.0.0 || ^19.0.0":
+  version: 19.2.6
+  resolution: "react@npm:19.2.6"
+  checksum: 10c0/66afde33b9a9ee87b1e1cae39d8e7e040d1262e719524fd70660c4d4ce79929c532ac19fc3df5a911edaf02768fdf2c49de4ede1ba99bc6aad72796e0e26e798
+  languageName: node
+  linkType: hard
+
+"react@npm:^18.3.1":
+  version: 18.3.1
+  resolution: "react@npm:18.3.1"
+  dependencies:
+    loose-envify: "npm:^1.1.0"
+  checksum: 10c0/283e8c5efcf37802c9d1ce767f302dd569dd97a70d9bb8c7be79a789b9902451e0d16334b05d73299b20f048cbc3c7d288bbbde10b701fa194e2089c237dbea3
   languageName: node
   linkType: hard
 
@@ -22652,6 +22640,15 @@ __metadata:
   dependencies:
     xmlchars: "npm:^2.2.0"
   checksum: 10c0/3847b839f060ef3476eb8623d099aa502ad658f5c40fd60c105ebce86d244389b0d76fcae30f4d0c728d7705ceb2f7e9b34bb54717b6a7dbedaf5dad2d9a4b74
+  languageName: node
+  linkType: hard
+
+"scheduler@npm:^0.23.2":
+  version: 0.23.2
+  resolution: "scheduler@npm:0.23.2"
+  dependencies:
+    loose-envify: "npm:^1.1.0"
+  checksum: 10c0/26383305e249651d4c58e6705d5f8425f153211aef95f15161c151f7b8de885f24751b377e4a0b3dd42cce09aad3f87a61dab7636859c0d89b7daf1a1e2a5c78
   languageName: node
   linkType: hard
 

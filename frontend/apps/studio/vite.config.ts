@@ -43,8 +43,15 @@ export default defineConfig(({mode}) => {
           'node_modules/react-dom',
         ),
       },
-      // Dedupe blockly to ensure only one instance across all workspace packages.
-      // Combined with optimizeDeps.include, this ensures proper deduplication.
+      // Dedupe libraries that hold module-scoped singletons. Without this
+      // vite resolves them per-package: blockly's main workspace, redux's
+      // store, and tfjs's backend registry all stop seeing each other.
+      //
+      // @tensorflow/tfjs in particular: the backend (tfjs-backend-webgl)
+      // registers ops on tfjs-core's singleton. Magenta (music-lab dep)
+      // ships its own copy of @tensorflow/tfjs, so without dedupe oceans-lab
+      // ends up running model ops against a core instance that has no
+      // backend → `runKernel` throws "t is not a function".
       dedupe: [
         'blockly',
         'react',
@@ -56,11 +63,18 @@ export default defineConfig(({mode}) => {
         '@code-dot-org/core',
         '@code-dot-org/core/api',
         '@code-dot-org/redux',
+        '@tensorflow/tfjs',
+        '@tensorflow/tfjs-core',
+        '@tensorflow/tfjs-backend-cpu',
+        '@tensorflow/tfjs-backend-webgl',
+        '@tensorflow/tfjs-layers',
+        '@tensorflow/tfjs-converter',
+        '@tensorflow/tfjs-data',
       ],
     },
     optimizeDeps: {
-      // Include blockly and its subpaths in pre-bundling to handle CJS-to-ESM conversion.
-      // Combined with resolve.dedupe, this ensures a single instance.
+      // Pre-bundle deps with CJS exports or sub-paths so the dedupe above
+      // sees one resolved module per package across all workspace consumers.
       include: [
         'blockly',
         'blockly/core',
@@ -68,6 +82,12 @@ export default defineConfig(({mode}) => {
         'blockly/javascript',
         'react',
         'react-dom',
+        '@tensorflow/tfjs',
+        '@tensorflow/tfjs-core',
+        '@tensorflow/tfjs-backend-cpu',
+        '@tensorflow/tfjs-backend-webgl',
+        '@tensorflow/tfjs-layers',
+        '@tensorflow/tfjs-converter',
       ],
     },
     plugins: [

@@ -872,6 +872,300 @@ LESSONS['intro-to-classifiers'] = {
   ],
 };
 
+// ════════════════════════════════════════════════════════════════════════
+//  Lesson #3: AI for Oceans — middle school (grades 6–8).
+//  Standalone lesson using the AI for Oceans lab. Teaches: labels, training
+//  data, accuracy, bias, retraining, real-world ML labor. Two reviewers
+//  agreed: `you-are-data` (step 4) is the load-bearing moment, `bias-reveal`
+//  (step 10) is the gut-punch. Teacher's animation slot: `DataDietPlate`
+//  runs *after* the bias-trap lab, *before* the MC — so the MC asks
+//  "whose fault?" with the answer already visualized.
+// ════════════════════════════════════════════════════════════════════════
+LESSONS['ai-for-oceans'] = {
+  id: 'ai-for-oceans',
+  title: 'Teaching a Computer to Clean the Ocean',
+  subtitle: 'Train an AI to spot fish vs trash — and watch what it learns from you.',
+  steps: [
+    {
+      id: 'welcome',
+      kind: 'concept',
+      tutorMessage:
+        "Hi! Today you'll teach a computer to tell **fish** from **trash** — " +
+        'then send it out to clean a pond. Press **Continue**.',
+      stage: {
+        kind: 'note',
+        title: "Today's job",
+        body:
+          '- Label some examples — *that is training data*.\n' +
+          '- Watch the AI guess on new ones.\n' +
+          '- Find out what tricks it. (Spoiler: **you** do.)',
+      },
+      continueLabel: "Let's go",
+    },
+
+    {
+      id: 'human-sort',
+      kind: 'multiple-choice',
+      tutorMessage:
+        'Before the computer tries, imagine **you** are sorting. Which one is a **label**? →',
+      stage: {kind: 'multiple-choice-stage-slot'},
+      options: [
+        {
+          id: 'a',
+          label: '*"Fish"* or *"Not fish"* stuck on each picture.',
+          isCorrect: true,
+          feedback:
+            'Yes! A **label** is the answer we attach to an example.',
+        },
+        {
+          id: 'b',
+          label: 'The color of the fish.',
+          isCorrect: false,
+          feedback:
+            "That's a **feature** — a fact about it. A *label* is the answer.",
+        },
+        {
+          id: 'c',
+          label: 'How fast it swims.',
+          isCorrect: false,
+          feedback:
+            'Another feature, not a label. Labels are the **answer** we want to teach.',
+        },
+      ],
+      allowRetry: true,
+    },
+
+    {
+      id: 'train-fishvtrash',
+      kind: 'lab',
+      tutorMessage:
+        'Open the lab. A creature will pop up. Click **Fish** or **Not fish**. ' +
+        'Do it about **15 times**, then press **Continue** in the lab.',
+      stage: {kind: 'oceans-lab', appMode: 'fishvtrash'},
+      continueLabel: 'I labeled my fish',
+      successMessage:
+        'Nice. Every click became a piece of **training data** — an example with a label attached.',
+    },
+
+    // Load-bearing: forces self-recognition as the source of the model.
+    {
+      id: 'you-are-data',
+      kind: 'free-response',
+      tutorMessage:
+        'Stop. Where did the computer get its "knowledge" of fish? Type one sentence.',
+      stage: {
+        kind: 'reflection-invitation',
+        prompt: 'The computer learned about fish from…',
+      },
+      placeholder: 'The computer learned about fish from…',
+      acknowledgement:
+        'Exactly — **from you**. Your clicks ARE the model’s whole world. ' +
+        'If you had clicked differently, it would think differently.',
+    },
+
+    // Vocab AFTER the doing — stage shows the LabelBucket animation so the
+    // word "training data" lands on the motion the student just lived.
+    {
+      id: 'label-vocab',
+      kind: 'multiple-choice',
+      tutorMessage: 'What do we call the whole set of examples you just made? →',
+      stage: {kind: 'label-bucket'},
+      options: [
+        {
+          id: 'a',
+          label: 'The **training data**.',
+          isCorrect: true,
+          feedback:
+            'Yes! **Training data = labeled examples we teach with.**',
+        },
+        {
+          id: 'b',
+          label: 'The computer code.',
+          isCorrect: false,
+          feedback: 'No code here — just your labels. Try again.',
+        },
+        {
+          id: 'c',
+          label: 'The answers.',
+          isCorrect: false,
+          feedback:
+            'Each click *was* an answer — but the whole set has a specific name.',
+        },
+      ],
+      allowRetry: true,
+    },
+
+    {
+      id: 'pond-predict',
+      kind: 'lab',
+      tutorMessage:
+        'Now send your AI to the **pond**. It will judge fish it has **never seen** ' +
+        'using only what you taught it. Watch the score.',
+      stage: {kind: 'oceans-lab', appMode: 'fishvtrash'},
+      continueLabel: 'I watched the pond',
+      successMessage:
+        'That number is **accuracy** — how often it was right. It probably ' +
+        'missed some. That is the interesting part.',
+    },
+
+    {
+      id: 'accuracy-notice',
+      kind: 'multiple-choice',
+      tutorMessage: 'Why did the AI miss some pond fish? →',
+      stage: {kind: 'multiple-choice-stage-slot'},
+      options: [
+        {
+          id: 'a',
+          label: 'Those fish looked **different** from the ones I trained it on.',
+          isCorrect: true,
+          feedback:
+            'Yes. The pond has fish your training set never showed it. ' +
+            'AI is only as smart as the examples it saw.',
+        },
+        {
+          id: 'b',
+          label: 'The computer is broken.',
+          isCorrect: false,
+          feedback:
+            'Not broken — just **uninformed**. It only knows what you showed it.',
+        },
+        {
+          id: 'c',
+          label: 'Trash is hard.',
+          isCorrect: false,
+          feedback:
+            'Trash is easy IF you trained on lots of kinds. Did you?',
+        },
+      ],
+      allowRetry: true,
+    },
+
+    // Real-world tie-in. FeedMirror animation does the load-bearing work
+    // here; a static note would land flat with middle schoolers.
+    {
+      id: 'real-world',
+      kind: 'concept',
+      tutorMessage:
+        'Same trick runs your phone. **TikTok’s For You feed** is a classifier: ' +
+        'every video you swipe past or watch is a **label** that trains it. ' +
+        '**You** are its training data — every day.',
+      stage: {kind: 'feed-mirror'},
+    },
+
+    // Bias trap. The instruction is the experiment: only label silver fish.
+    {
+      id: 'train-creatures',
+      kind: 'lab',
+      tutorMessage:
+        'Round 2. New creatures — fish come in **lots of colors and shapes** now. ' +
+        'Train it again — but **try only labeling the normal silver fish as "Fish."** ' +
+        "We're running an experiment.",
+      stage: {kind: 'oceans-lab', appMode: 'creaturesvtrash'},
+      continueLabel: 'I trained on silver fish',
+      successMessage:
+        'Now look at the pond. Pay attention to the **neon, spotted, and weird** fish.',
+    },
+
+    // Teacher reorder: DataDietPlate runs *before* the MC, so the diagnosis
+    // is visible when the MC asks "whose fault?". Recognition, not guessing.
+    {
+      id: 'bias-reveal',
+      kind: 'multiple-choice',
+      tutorMessage:
+        'The AI called many real fish **trash** — neon ones, spotted ones. ' +
+        'Whose fault is that? →',
+      stage: {kind: 'data-diet-plate'},
+      options: [
+        {
+          id: 'a',
+          label: 'Mine — I only showed it **one kind** of fish.',
+          isCorrect: true,
+          feedback:
+            'Yes. The AI learned *"fish = silver and normal"* because that is ' +
+            '**all you showed it**. That is called **bias**.',
+        },
+        {
+          id: 'b',
+          label: "The AI's — it should know better.",
+          isCorrect: false,
+          feedback:
+            'It can only know what you taught. You never showed it a neon fish.',
+        },
+        {
+          id: 'c',
+          label: 'The fish — they look weird.',
+          isCorrect: false,
+          feedback:
+            'Real fish DO look weird. The AI just never learned that.',
+        },
+      ],
+      allowRetry: true,
+    },
+
+    {
+      id: 'bias-vocab',
+      kind: 'concept',
+      tutorMessage:
+        '**Bias** is when training data leaves things out, so the AI gets a ' +
+        '**lopsided** view of the world. Real AIs do this too — face apps that ' +
+        'work better on some skin tones, voice apps that miss some accents. ' +
+        'Same root cause: **the training data was not fair.**',
+      stage: {
+        kind: 'note',
+        title: 'Bias',
+        body:
+          'Bias happens when training data **leaves people or things out**.\n\n' +
+          'Fix: train on **all the kinds** you want the AI to handle.',
+      },
+    },
+
+    {
+      id: 'retrain-fix',
+      kind: 'lab',
+      tutorMessage:
+        'Your turn to fix it. Go back and label **every kind** of fish as Fish — ' +
+        'neon, spotted, weird shapes, all of them. Then check the pond again.',
+      stage: {kind: 'oceans-lab', appMode: 'creaturesvtrash'},
+      continueLabel: 'I trained on all kinds',
+      successMessage:
+        'Better, right? **More variety in → fairer AI out.** ' +
+        'That is the whole trick. (Also the whole job of a lot of real AI workers.)',
+    },
+
+    {
+      id: 'jobs-reflect',
+      kind: 'free-response',
+      tutorMessage:
+        'Real fact: a huge part of AI work is **people labeling examples** — ' +
+        'millions of them. Why do you think companies pay for that?',
+      stage: {
+        kind: 'reflection-invitation',
+        prompt: 'Companies pay people to label data because…',
+      },
+      placeholder: 'Companies pay people to label data because…',
+      acknowledgement:
+        'Right. **No labels, no learning.** Better labels → better AI. ' +
+        'Models don’t magically know things — people teach them, one example at a time.',
+    },
+
+    {
+      id: 'wrap',
+      kind: 'celebrate',
+      tutorMessage:
+        'You trained an AI, broke it, and fixed it. That is real ML.',
+      stage: {kind: 'lesson-celebrate'},
+      summary: [
+        'Labeled fish vs trash — that is **training data**.',
+        'Saw the model run on a **pond** it had never seen. That is **testing**.',
+        'Measured **accuracy** — right answers out of total.',
+        'Trained on only silver fish, watched the model **fail on neon ones** — **bias**.',
+        'Fixed it by adding more variety. Fair data → fairer AI.',
+        'Connected it to TikTok, photo apps, spam filters — same idea, everywhere.',
+      ],
+    },
+  ],
+};
+
 export function getLesson(id: string): Lesson | undefined {
   return LESSONS[id];
 }

@@ -65,10 +65,19 @@ export const initAll = function (options: InitAllOptions): void {
   setSetStateCallback(renderUI);
 };
 
-// Stop the canvas RAF loop without unmounting the React UI root. The root
-// is naturally orphaned when the container DOM node is removed.
+// Stop the canvas RAF loop AND drop the cached React root. The root is
+// naturally orphaned when the container DOM node is removed, but the
+// module-scoped reference must be cleared too — otherwise a second mount
+// reuses the stale root, which is bound to the now-detached container,
+// and the new UI container in the DOM stays empty.
+//
+// We don't formally `root.unmount()` because calling it synchronously
+// during a React render trips a "synchronously unmount during render"
+// warning in StrictMode's double-invoke cycle. The detached root is GC-
+// reachable after we null it.
 export const stopUIRerender = (): void => {
   stopRender();
+  uiRoot = null;
 };
 
 // Tell React to explicitly render the UI.

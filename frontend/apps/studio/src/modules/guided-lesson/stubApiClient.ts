@@ -66,9 +66,13 @@ const STUB_CHANNEL = {
 };
 
 /**
- * Sentinel `source` value that JSON.parses to `null`. Makes
- * `currentSources?.source` falsy in MusicLab so it falls through to its own
- * `DefaultStartBlocks` (the "when run" block) instead of anything we provide.
+ * Sentinel `source` value that JSON.parses to `null`. BlocklyLabWithSources
+ * applies a `transform` that JSON.parses the string into the Source object,
+ * so `'null'` becomes `null`, which is falsy, which trips MusicLab's
+ * `currentSources?.source || ... || DefaultStartBlocks` fallthrough to the
+ * bare `when_run_simple2` block.
+ *
+ * Empty string would crash the parse with "Unexpected end of JSON input".
  */
 const STUB_EMPTY_SOURCES = {source: 'null'};
 

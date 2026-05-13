@@ -51,11 +51,23 @@ export type StageVisual =
   // Author-facing marker that says "render this step's MC on the stage."
   // GuidedLesson swaps it for the resolved `multiple-choice-stage` above.
   | {kind: 'multiple-choice-stage-slot'}
+  // AI for Oceans visual primitives.
+  | {kind: 'label-bucket'}
+  | {kind: 'data-diet-plate'}
+  | {kind: 'feed-mirror'}
   // Labs — leave alone; they own the canvas when shown.
   | {kind: 'music-lab'}
   | {kind: 'maze-lab'; config: MazeStageConfig}
   | {kind: 'datasci-lab'; config: DatasciStageConfig}
-  | {kind: 'ai-trainer-lab'; config: AiTrainerStageConfig};
+  | {kind: 'ai-trainer-lab'; config: AiTrainerStageConfig}
+  | {
+      kind: 'oceans-lab';
+      /**
+       * Activity mode. `fishvtrash` is the entry-level binary classifier;
+       * `creaturesvtrash` is the bias-trap variant with varied creatures.
+       */
+      appMode: 'fishvtrash' | 'creaturesvtrashdemo' | 'creaturesvtrash';
+    };
 
 export interface MultipleChoiceOption {
   id: string;

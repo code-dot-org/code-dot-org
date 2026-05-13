@@ -682,3 +682,144 @@ $inkSoft: #4a4760;
     transform: translateY(0);
   }
 }
+
+// === LabelBucket — fish drop + chip stick + wire pulse =====================
+.lbStage {
+  max-width: 560px;
+}
+
+// Fish 1 falls into teal bucket; chip rides along.
+.lbFish1 {
+  animation: lbDropTeal 3.6s ease-in-out infinite;
+  transform-origin: center;
+}
+
+.lbFish2 {
+  animation: lbDropTeal2 3.6s ease-in-out infinite;
+  transform-origin: center;
+  animation-delay: 0.6s;
+}
+
+.lbTrash1 {
+  animation: lbDropOrange 3.6s ease-in-out infinite;
+  transform-origin: center;
+  animation-delay: 1.2s;
+}
+
+// The chip rotates with the fish — gives the "label stays attached" feel.
+.lbChip {
+  transform-origin: center;
+}
+
+.lbWire {
+  animation: lbWireMarch 1.4s linear infinite;
+}
+
+@keyframes lbDropTeal {
+  0% {
+    transform: translate(80px, 60px) rotate(0deg);
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  45% {
+    transform: translate(140px, 240px) rotate(8deg);
+  }
+  55% {
+    transform: translate(140px, 260px) rotate(-5deg);
+  }
+  100% {
+    transform: translate(140px, 270px) rotate(0deg);
+    opacity: 1;
+  }
+}
+
+@keyframes lbDropTeal2 {
+  0%, 25% {
+    transform: translate(180px, 40px) rotate(-10deg);
+    opacity: 0;
+  }
+  35% {
+    opacity: 1;
+  }
+  70% {
+    transform: translate(140px, 264px) rotate(6deg);
+  }
+  100% {
+    transform: translate(140px, 270px) rotate(0deg);
+    opacity: 1;
+  }
+}
+
+@keyframes lbDropOrange {
+  0%, 45% {
+    transform: translate(440px, 40px) rotate(20deg);
+    opacity: 0;
+  }
+  55% {
+    opacity: 1;
+  }
+  90% {
+    transform: translate(380px, 264px) rotate(-8deg);
+  }
+  100% {
+    transform: translate(380px, 270px) rotate(0deg);
+    opacity: 1;
+  }
+}
+
+@keyframes lbWireMarch {
+  to {
+    stroke-dashoffset: -24;
+  }
+}
+
+// === DataDietPlate — gentle pulse to traverse the gap ====================
+.ddStage {
+  max-width: 560px;
+}
+
+.ddLens {
+  animation: ddLensPulse 2.4s ease-in-out infinite;
+  transform-origin: center;
+  transform-box: fill-box;
+}
+
+@keyframes ddLensPulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.08);
+  }
+}
+
+// === FeedMirror — scrolling feed + beam march ============================
+.fmStage {
+  max-width: 560px;
+}
+
+.fmScroll {
+  animation: fmScrollUp 8s linear infinite;
+}
+
+@keyframes fmScrollUp {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    // 8 thumbnails × 80px = 640px; loop point keeps the parade unbroken.
+    transform: translateY(-640px);
+  }
+}
+
+.fmBeam {
+  animation: fmBeamMarch 1.2s linear infinite;
+}
+
+@keyframes fmBeamMarch {
+  to {
+    stroke-dashoffset: -16;
+  }
+}

@@ -6,7 +6,11 @@ import AiTrainerLabStage from './AiTrainerLabStage';
 import DatasciLabStage from './DatasciLabStage';
 import MazeLabStage from './MazeLabStage';
 import MusicLabStage from './MusicLabStage';
+import OceansLabStage from './OceansLabStage';
 import ConditionFork from './stage-primitives/ConditionFork';
+import DataDietPlate from './stage-primitives/DataDietPlate';
+import FeedMirror from './stage-primitives/FeedMirror';
+import LabelBucket from './stage-primitives/LabelBucket';
 import LessonCelebration from './stage-primitives/LessonCelebration';
 import MultipleChoiceStage from './stage-primitives/MultipleChoiceStage';
 import QuestionVsAction from './stage-primitives/QuestionVsAction';
@@ -135,6 +139,18 @@ function renderVisual(visual: StageVisual) {
 
     case 'ai-trainer-lab':
       return <AiTrainerLabStage config={visual.config} />;
+
+    case 'oceans-lab':
+      return <OceansLabStage appMode={visual.appMode} />;
+
+    case 'label-bucket':
+      return <LabelBucket />;
+
+    case 'data-diet-plate':
+      return <DataDietPlate />;
+
+    case 'feed-mirror':
+      return <FeedMirror />;
   }
 }
 

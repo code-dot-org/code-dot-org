@@ -82,25 +82,29 @@ const rehydrateAIResponse = <TOOLS extends SDKTools, OUTPUT extends SDKOutput>(
 };
 
 /**
- * Fetch a short-lived gateway access token. Same-origin GET to the Rails
+ * Fetch a short-lived gateway access token. Same-origin POST to the Rails
  * `/ai_gateway/access_token` endpoint.
  *
- * The Rails controller does an authorization check that reads
- * `params[:aichatContext][:clientType]` — unconditionally — to decide
- * whether the current user is allowed to use the AI Tutor (vs. the aichat
- * lab). It crashes with `NoMethodError: undefined method [] for nil` if
- * `aichatContext` is absent, so we always pass `aichatContext[clientType]`
- * as a query param (default `AI_TUTOR`).
+ * The Rails controller's authorization check reads
+ * `params[:aichatContext][:clientType]` unconditionally and crashes with
+ * `NoMethodError` if `aichatContext` is absent, so we always include it
+ * in the JSON body. The controller skips CSRF verification, so no
+ * `X-CSRF-Token` header is required.
+ *
+ * `clientType` defaults to `flow-lab` because Rails's `User#trust_chat_client?`
+ * trusts that value for any signed-in user; `ai-tutor` is no longer in the
+ * trusted list, so using it would require teacher / levelbuilder / enabled-
+ * section permissions on the user record.
  */
 export async function fetchAccessToken(
-  clientType: string = 'ai-tutor',
+  clientType: string = 'flow-lab',
   accessTokenPath: string = ACCESS_TOKEN_PATH,
 ): Promise<string> {
-  const url = `${accessTokenPath}?aichatContext[clientType]=${encodeURIComponent(clientType)}`;
-  const res = await fetch(url, {
-    method: 'GET',
+  const res = await fetch(accessTokenPath, {
+    method: 'POST',
     credentials: 'same-origin',
-    headers: {'Content-Type': 'application/json'},
+    headers: {'Content-Type': 'application/json; charset=UTF-8'},
+    body: JSON.stringify({aichatContext: {clientType}}),
   });
   if (!res.ok) {
     throw new Error(`AI Gateway access-token fetch failed (${res.status})`);

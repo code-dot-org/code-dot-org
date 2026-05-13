@@ -5,6 +5,12 @@ class AiGatewayAuthController < ApplicationController
   PRIVATE_KEY = CDO.ai_gateway_auth_key
   PASSPHRASE = CDO.ai_gateway_auth_key_passphrase
 
+  # SPA clients fetch this token via fetch() without an embedded Rails CSRF
+  # meta tag (the studio's index.html is served by Vite, not via the haml).
+  # Authentication still gates the action via `current_user`, so the token
+  # is scoped to the signed-in session.
+  skip_before_action :verify_authenticity_token
+
   rescue_from CanCan::AccessDenied do
     render status: :forbidden, json: {user_type: current_user&.user_type || 'signed_out'}
   end

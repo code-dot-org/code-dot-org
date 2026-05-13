@@ -126,10 +126,10 @@ const GuidedLesson = ({lesson}: GuidedLessonProps) => {
       setInjectedTurns(prev => [...prev, studentTurn, tutorTurn]);
       if (authored.isCorrect) {
         if (advanceTimerRef.current) clearTimeout(advanceTimerRef.current);
-        // 3.5s — long enough that a kid mid-sentence in the feedback bubble
-        // isn't yanked to the next step. The MC stage also shows a "Read
-        // the chat for what comes next" cue once a correct answer lands.
-        advanceTimerRef.current = setTimeout(advanceImmediate, 3500);
+        // 1.4s — short enough to keep the lesson flowing, long enough to
+        // read the green feedback bubble. The next tutor message lands in
+        // the same chat thread, so context isn't lost on advance.
+        advanceTimerRef.current = setTimeout(advanceImmediate, 1400);
       }
     },
     [step, advanceImmediate],
