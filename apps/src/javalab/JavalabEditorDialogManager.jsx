@@ -3,12 +3,12 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import {connect} from 'react-redux';
 
-import VersionHistoryWithCommitsDialog from '@cdo/apps/templates/VersionHistoryWithCommitsDialog';
 import javalabMsg from '@cdo/javalab/locale';
 
 import CommitDialog from './CommitDialog';
 import {DisplayTheme} from './DisplayTheme';
 import JavalabDialog from './JavalabDialog';
+import Lab2VersionHistoryDialog from './lab2/Lab2VersionHistoryDialog';
 import NameFileDialog from './NameFileDialog';
 import {
   clearNewFileError,
@@ -88,7 +88,7 @@ export function UnconnectedJavalabEditorDialogManager({
         handleCommit={onCommitCode}
       />
       {editorOpenDialogName === JavalabEditorDialog.VERSION_HISTORY && (
-        <VersionHistoryWithCommitsDialog
+        <Lab2VersionHistoryDialog
           handleClearPuzzle={handleClearPuzzle}
           isProjectTemplateLevel={isProjectTemplateLevel}
           onClose={closeEditorDialog}

@@ -21,6 +21,18 @@ export default class VersionHistoryWithCommitsDialog extends React.Component {
     isProjectTemplateLevel: PropTypes.bool.isRequired,
     onClose: PropTypes.func.isRequired,
     isOpen: PropTypes.bool.isRequired,
+    // Optional overrides for lab2. When provided, the dialog uses these to
+    // talk to the lab2 ProjectManager instead of the legacy clientApi +
+    // `project` singleton. Defaults preserve legacy behavior.
+    //
+    // fetchVersions: () => Promise<Version[]>
+    // restoreVersion: (versionId) => Promise<void>     -- caller-side
+    //   updates editor state; defaults to legacy restore + page reload
+    // onClearAndSave: () => Promise<void>              -- runs after
+    //   handleClearPuzzle; defaults to legacy project.save(true) + reload
+    fetchVersions: PropTypes.func,
+    restoreVersion: PropTypes.func,
+    onClearAndSave: PropTypes.func,
   };
 
   /**
@@ -48,23 +60,30 @@ export default class VersionHistoryWithCommitsDialog extends React.Component {
       isOpen: true,
     };
 
-    sourcesApi.ajax(
-      'GET',
-      `${DEFAULT_FILE_NAME}/versions`,
-      this.onVersionListReceived,
-      this.onAjaxFailure,
-      null,
-      ['with_comments=true']
-    );
+    if (props.fetchVersions) {
+      props
+        .fetchVersions()
+        .then(versions => this.onVersionListReceived(versions))
+        .catch(() => this.onAjaxFailure());
+    } else {
+      sourcesApi.ajax(
+        'GET',
+        `${DEFAULT_FILE_NAME}/versions`,
+        xhr => this.onVersionListReceived(JSON.parse(xhr.responseText)),
+        this.onAjaxFailure,
+        null,
+        ['with_comments=true']
+      );
+    }
   }
 
   /**
-   * Called after the component mounts, when the server responds with the
-   * current list of versions.
-   * @param xhr
+   * Called after the component mounts, once the version list has been
+   * resolved by either the legacy clientApi or the injected fetchVersions.
+   * @param versions Array of version descriptors.
    */
-  onVersionListReceived = xhr => {
-    this.setState({versions: JSON.parse(xhr.responseText), showSpinner: false});
+  onVersionListReceived = versions => {
+    this.setState({versions, showSpinner: false});
   };
 
   /**
@@ -86,15 +105,24 @@ export default class VersionHistoryWithCommitsDialog extends React.Component {
    * @param versionId
    */
   onChooseVersion = versionId => {
-    sourcesApi.restorePreviousFileVersion(
-      DEFAULT_FILE_NAME,
-      versionId,
-      this.onRestoreSuccess,
-      this.onAjaxFailure
-    );
-
-    // Show the spinner.
     this.setState({showSpinner: true});
+
+    if (this.props.restoreVersion) {
+      // Lab2 path: the caller updates editor state itself, no reload.
+      this.props
+        .restoreVersion(versionId)
+        .then(() => {
+          this.props.onClose();
+        })
+        .catch(() => this.onAjaxFailure());
+    } else {
+      sourcesApi.restorePreviousFileVersion(
+        DEFAULT_FILE_NAME,
+        versionId,
+        this.onRestoreSuccess,
+        this.onAjaxFailure
+      );
+    }
   };
 
   onConfirmClearPuzzle = () => {
@@ -108,10 +136,18 @@ export default class VersionHistoryWithCommitsDialog extends React.Component {
   onClearPuzzle = () => {
     this.setState({showSpinner: true});
 
-    this.props
-      .handleClearPuzzle()
-      .then(() => project.save(true))
-      .then(() => utils.reload());
+    if (this.props.onClearAndSave) {
+      // Lab2 path: caller handles the post-clear save and any UI refresh.
+      Promise.resolve(this.props.handleClearPuzzle())
+        .then(() => this.props.onClearAndSave())
+        .then(() => this.props.onClose())
+        .catch(() => this.onAjaxFailure());
+    } else {
+      this.props
+        .handleClearPuzzle()
+        .then(() => project.save(true))
+        .then(() => utils.reload());
+    }
   };
 
   render() {
