@@ -28,11 +28,19 @@ In production, Vite build output is served as static files from `public/frontend
 `entrypoints/application.tsx` must call `initializeCore()` before rendering the router.
 
 ```
-initializeCore()   ← must be first
+initializeCore()        ← must be first
+await enableMocks()     ← if VITE_API_MODE=msw, starts the MSW worker
 createRoot(...).render(
   <RouterProvider router={router} />   ← labs mount inside here
 )
 ```
+
+`enableMocks` is a no-op unless `VITE_API_MODE=msw`. When active, the service
+worker (`public/mockServiceWorker.js`) must be running before any fetch
+fires, so the await is load-bearing. Per-lab fixtures register lazily from
+the route loader (`getLabFixtures` + `registerLabFixtures` +
+`setActiveScenario`) using the URL's `channelId` slot as the fixture tag to
+select what kind of level data should be mocked.
 
 ## Routing
 
