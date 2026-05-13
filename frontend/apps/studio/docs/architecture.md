@@ -86,6 +86,7 @@ This prevents multiple React instances when a lab chunk is loaded, which would b
 | ---------------------------------------------------------- | ------------------------------------------------------- |
 | `routeTree.gen.ts` not edited by hand                      | Hand edits overwritten by next build                    |
 | Lab registered in both `labs.ts` and `getLabEntrypoint.ts` | Route throws `notFound()`                               |
+| Lab registered in `getLabFixtures.ts` (MSW mode only)      | Fixture tag is ignored; MSW handlers use defaults       |
 | React/React-DOM aliases pinned to workspace root           | Multiple React instances; hooks throw                   |
 | `entrypoints/application.tsx` mounts to `#vite-root`       | Rails template provides this div; mismatch = blank page |
 

@@ -50,10 +50,11 @@ Route definitions use canonical paths (e.g. `/projects/$labType/$channelId/edit`
 
 ## Adding a lab
 
-See `frontend/docs/conventions/packages.md` (the `## Labs` section) for the full scaffolding steps. The short version — two Studio files must be updated:
+See `frontend/docs/conventions/packages.md` (the `## Labs` section) for the full scaffolding steps. The short version — two Studio files must be updated, and a third is optional:
 
 - `src/modules/labs/config/labs.ts` — add the lab key to `AVAILABLE_LABS`
 - `src/modules/labs/router/getLabEntrypoint.ts` — add the lazy import to `LabEntrypoints`
+- `src/modules/labs/router/getLabFixtures.ts` — _(optional, MSW mode)_ add a loader entry if the lab ships a `./mocks` subpath. Without an entry the lab still works against Rails and the MSW handlers' built-in defaults; the entry only matters if you want per-tag fixtures (`simple`, `complex`, …) at `/projects/<lab>/<tag>/edit`.
 
 ## Architecture
 

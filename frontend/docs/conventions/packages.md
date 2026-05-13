@@ -112,6 +112,59 @@ Studio (updates `labs.ts`, `getLabEntrypoint.ts`, and `apps/studio/package.json`
 
 The lab is then reachable at `/app/projects/<name>/:channelId/edit`.
 
+### Mock fixtures (optional, MSW mode)
+
+When Studio runs with `VITE_API_MODE=msw` (no Rails), `:channelId` doubles as
+the _fixture tag_ — `/app/projects/<lab>/simple/edit`,
+`/app/projects/<lab>/complex/edit`, and so on. A lab opts into per-tag
+scenarios in three steps:
+
+1. **Author fixtures.** `packages/labs/<lab>/src/fixtures/{simple,complex,error}.ts`
+   each export a `LabFixture` (channel, sources, levelProperties, theme — all
+   optional). The barrel `src/fixtures/index.ts` exposes them as a named
+   record:
+
+   ```ts
+   import type {LabFixtures} from '@code-dot-org/core/api/mocks';
+   import simple from './simple';
+   import complex from './complex';
+
+   export const MyLabFixtures: LabFixtures = {simple, complex};
+   ```
+
+2. **Expose a `./mocks` subpath.** In the lab's `package.json`:
+
+   ```jsonc
+   "exports": {
+     ".":        { /* … main entry … */ },
+     "./mocks":  {
+       "types":  "./dist/fixtures/index.d.ts",
+       "import": "./dist/fixtures/index.mjs",
+       "require":"./dist/fixtures/index.cjs"
+     }
+   }
+   ```
+
+   …and add `'fixtures/index': 'src/fixtures/index.ts'` to the lab's
+   `vite.config.ts` `lib.entry` (object form so the chunk emits under
+   `dist/fixtures/`).
+
+3. **Register a loader.** In `apps/studio/src/modules/labs/router/getLabFixtures.ts`:
+
+   ```ts
+   const LabFixturesLoaders: Partial<Record<Lab, LabFixturesLoader>> = {
+     music: () => import('@code-dot-org/music-lab/mocks'),
+     mylab: () => import('@code-dot-org/my-lab/mocks'),
+   };
+   ```
+
+Skip any of these and MSW mode still works — handlers fall back to a generic
+default channel, empty sources, an empty levelProperties map, and so on. The
+fixtures are only needed when a scenario needs lab-specific content.
+
+See `packages/core/src/api/mocks/README.md` for the handler/registry model
+and the `scenarioStore` write-through behavior.
+
 ### Standalone dev server
 
 Each lab has an `index.html` + `src/main.tsx` for running outside Studio. `main.tsx` shall call `initializeCore({plugins: [...]})` before mounting, mirroring what Studio's entrypoint does:
