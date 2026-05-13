@@ -1,3 +1,9 @@
+// Side-effect import: webpack folds RotateContainer's display-rules into the
+// javalab-lab2 chunk so the "rotate your device" overlay stays hidden outside
+// portrait mobile. Lab2's base CSS doesn't include this rule, and the overlay
+// is rendered unconditionally by StudioAppWrapper.
+import '../../../style/RotateContainer.scss';
+
 // Top-level Java Lab view under Lab2.
 //
 // Replaces the orchestration role of Javalab.js + loadJavalab.js. The legacy
@@ -34,15 +40,24 @@ import {
 } from '@cdo/apps/lab2/projects/utils';
 import {LabProps, ProjectSources} from '@cdo/apps/lab2/types';
 import {LifecycleEvent} from '@cdo/apps/lab2/utils/LifecycleNotifier';
+import mazeSkins from '@cdo/apps/maze/skins';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import Neighborhood from '@cdo/apps/miniApps/neighborhood/Neighborhood';
 import {getStore, registerReducers} from '@cdo/apps/redux';
-import {setPageConstants} from '@cdo/apps/redux/pageConstants';
+import instructions from '@cdo/apps/redux/instructions';
+import pageConstants, {setPageConstants} from '@cdo/apps/redux/pageConstants';
+import runState from '@cdo/apps/redux/runState';
 import {BackpackAPIContext} from '@cdo/apps/sharedComponents/backpack/BackpackAPIContext';
+import currentUser from '@cdo/apps/templates/currentUserRedux';
 import {logUserLevelInteraction} from '@cdo/apps/userLevelInteractionsLogger/userLevelInteractionsApi';
+import getScriptData, {hasScriptData} from '@cdo/apps/util/getScriptData';
 import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
 import {UserLevelInteractions} from '@cdo/generated-scripts/sharedConstants';
+
+// Legacy code-studio reducers the JavalabView leaf components read from.
+// Lab2's store does not register these on its own (it uses state.lab); we
+// register them here so the connected children see the slices they expect.
 
 import {CsaViewMode, ExecutionType, InputMessageType} from '../constants';
 import JavabuilderConnection from '../JavabuilderConnection';
@@ -79,7 +94,21 @@ import useJavalabSources from './useJavalabSources';
 let reducersRegistered = false;
 function registerJavalabReducersOnce() {
   if (reducersRegistered) return;
-  registerReducers({javalab, javalabConsole, javalabView, javalabEditor});
+  registerReducers({
+    // Java Lab's own slices.
+    javalab,
+    javalabConsole,
+    javalabView,
+    javalabEditor,
+    // Legacy code-studio slices the connected JavalabView/JavalabEditor/
+    // JavalabPanels/JavalabCaptchaDialog/TheaterVisualizationColumn leaf
+    // components still read from. Lab2's store does not include these by
+    // default; register them here so `state.pageConstants` etc. resolve.
+    pageConstants,
+    instructions,
+    runState,
+    currentUser,
+  });
   reducersRegistered = true;
 }
 
@@ -93,6 +122,21 @@ function publishPageConstantsOnce(
   if (pageConstantsPublished) return;
   getStore().dispatch(setPageConstants(props));
   pageConstantsPublished = true;
+}
+
+// Build an assetUrl function compatible with the legacy skinsBase contract:
+// `(path) => baseUrl + path`. baseUrl is set server-side to Blockly.base_url
+// (see app_options[:baseUrl] in dashboard/app/helpers/levels_helper.rb) and
+// reaches the client via the appoptions script data block on _lab2.html.haml.
+function buildAssetUrl(): (path: string) => string {
+  let baseUrl = '/blockly/';
+  if (hasScriptData('script[data-appoptions]')) {
+    const appOptions = getScriptData('appoptions') as {baseUrl?: string};
+    if (appOptions.baseUrl) {
+      baseUrl = appOptions.baseUrl;
+    }
+  }
+  return (path: string) => baseUrl + path;
 }
 
 // Translate lab2's Theme context into the legacy DisplayTheme string used by
@@ -270,10 +314,14 @@ const JavaLab2View: React.FunctionComponent<
       const noop = () => {
         /* no audio in Java Lab */
       };
+      // Maze skin assets (tiles, pegman sprites, sounds) are served under
+      // the dashboard /blockly/ tree; loading them via the skins module
+      // shapes the data the way MazeController expects.
+      const skin = mazeSkins.load(buildAssetUrl(), 'neighborhood');
       neighborhood.afterInject(
         levelProperties,
-        {},
-        {skinId: 'neighborhood', level: levelProperties, skin: {}},
+        skin,
+        {skinId: 'neighborhood', level: levelProperties, skin},
         noop,
         noop,
         noop,
