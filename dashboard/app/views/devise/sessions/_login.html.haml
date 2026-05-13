@@ -15,12 +15,12 @@
       .field
         = label_tag t('signin_form.login_username')
         - email = @email || ''
-        = f.text_field :login, value: email, autofocus: email == ''
+        = f.text_field :login, class: 'form-control', value: email, autofocus: email == ''
 
       / Password
       .field#password_field
         = f.label :password
-        = f.password_field :password, autofocus: email != ''
+        = f.password_field :password, class: 'form-control', autofocus: email != ''
 
         / Forgot password?
       - if devise_mapping.recoverable?
