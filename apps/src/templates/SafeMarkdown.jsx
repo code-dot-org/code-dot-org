@@ -58,11 +58,16 @@ class SafeMarkdown extends React.Component {
     // that we do so; this is absolutely not something we want to do as a
     // general practice, but unfortunately there are some situations in which
     // it is currently a requirement.
-    const getProcessor = this.props.allowEmbeds
-      ? markdownToReactWithEmbeds
-      : this.props.openExternalLinksInNewTab
-      ? markdownToReactExternalLinks
-      : markdownToReact;
+    let getProcessor;
+    if (this.props.allowEmbeds && this.props.openExternalLinksInNewTab) {
+      getProcessor = markdownToReactWithEmbedsAndExternalLinks;
+    } else if (this.props.allowEmbeds) {
+      getProcessor = markdownToReactWithEmbeds;
+    } else if (this.props.openExternalLinksInNewTab) {
+      getProcessor = markdownToReactExternalLinks;
+    } else {
+      getProcessor = markdownToReact;
+    }
     const processor = getProcessor(this.props.rehypeMap);
 
     const rendered = Object(processor.processSync(this.props.markdown).result);
@@ -255,6 +260,22 @@ const markdownToReactExternalLinks = rehypeMap => {
     markdownProcessorExternalLinksCache.set(rehypeMap, processor);
   }
   return markdownProcessorExternalLinksCache.get(rehypeMap);
+};
+
+/* Map to cache processors with both iframe embeds and external-links-in-new-tab. */
+const markdownProcessorWithEmbedsAndExternalLinksCache = new WeakMapPlus();
+
+const markdownToReactWithEmbedsAndExternalLinks = rehypeMap => {
+  if (!markdownProcessorWithEmbedsAndExternalLinksCache.has(rehypeMap)) {
+    const processor = markdownToReactWithEmbeds(rehypeMap)().use(
+      externalLinks,
+      {
+        links: 'all',
+      }
+    );
+    markdownProcessorWithEmbedsAndExternalLinksCache.set(rehypeMap, processor);
+  }
+  return markdownProcessorWithEmbedsAndExternalLinksCache.get(rehypeMap);
 };
 
 export default SafeMarkdown;

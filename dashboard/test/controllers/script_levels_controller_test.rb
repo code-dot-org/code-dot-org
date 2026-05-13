@@ -2634,7 +2634,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     }
 
     assert_response :success
-    refute_includes @response.body, 'data-allow-embeds="true"'
+    refute_includes @response.body, "data-allow-embeds='true'"
   end
 
   test 'sets allow_embeds for teacher-audience (PL) course' do
@@ -2655,6 +2655,6 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     }
 
     assert_response :success
-    assert_includes @response.body, 'data-allow-embeds="true"'
+    assert_includes @response.body, "data-allow-embeds='true'"
   end
 end
