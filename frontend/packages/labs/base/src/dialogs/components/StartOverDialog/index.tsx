@@ -54,11 +54,11 @@ const StartOverDialog = ({
         iconStyle: 'solid',
       }}
       primaryButtonProps={{
-        text: 'Start Over',
+        children: 'Start Over',
         onClick: onConfirm,
       }}
       secondaryButtonProps={{
-        text: 'Cancel',
+        children: 'Cancel',
         onClick: onCancel,
       }}
     />

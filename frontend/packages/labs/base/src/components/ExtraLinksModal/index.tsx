@@ -158,7 +158,7 @@ const ExtraLinksModal: FunctionComponent<ExtraLinksModalProps> = ({
         </>
       }
       primaryButtonProps={{
-        text: 'foo',
+        children: 'foo',
         style: {display: 'none'},
         onClick: () => {},
       }}

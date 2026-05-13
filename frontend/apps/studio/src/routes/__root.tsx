@@ -5,6 +5,7 @@ import '@code-dot-org/component-library-styles/primitiveColors.css';
 import '@code-dot-org/component-library-styles/colors.css';
 
 import {Box, ThemeProvider} from '@mui/material';
+import {TanStackDevtools} from '@tanstack/react-devtools';
 import {ReactQueryDevtoolsPanel} from '@tanstack/react-query-devtools';
 import {createRootRoute, Outlet} from '@tanstack/react-router';
 import {TanStackRouterDevtoolsPanel} from '@tanstack/react-router-devtools';
@@ -17,7 +18,6 @@ import {
   QueryClientProvider,
 } from '@code-dot-org/core/api';
 
-import StudioFooter from '@/components/footer';
 import CdoLogo from '@/config/brand/assets/cdo-logo-inverse.webp';
 import Bootstrap from '@/modules/bootstrap';
 
@@ -66,7 +66,6 @@ function RootLayout() {
             />
           </QueryClientProvider>
         </Box>
-        <StudioFooter />
       </Box>
     </ThemeProvider>
   );

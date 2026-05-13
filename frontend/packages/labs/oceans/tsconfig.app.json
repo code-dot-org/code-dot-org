@@ -5,5 +5,5 @@
     "composite": true,
     "paths": {"@/*": ["src/*"]}
   },
-  "include": ["src"]
+  "include": ["src", "i18n"]
 }

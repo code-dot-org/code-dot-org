@@ -25,14 +25,12 @@ const DisclaimerButton: FunctionComponent<DisclaimerProps> = ({theme}) => {
           description="Our new AI Tutor can help you think through new ideas, debug your code, and learn along the way! You can ask it questions about your project or the concepts you’re exploring.\n\nJust remember, AI isn’t human and not perfect. Sometimes it might make mistakes or give answers that don’t quite make sense. Always make sure to use your own judgment, double-check any AI advice, and don’t be afraid to experiment."
           className={moduleStyles.respectNewLines}
           primaryButtonProps={{
-            text: 'Back to project',
+            children: 'Back to project',
             onClick: () => setIsDisclaimerOpen(false),
           }}
           secondaryButtonProps={{
-            text: 'Learn more',
-            useAsLink: true,
+            children: 'Learn more',
             href: LEARN_MORE_URL,
-            target: '_blank',
           }}
           onClose={() => setIsDisclaimerOpen(false)}
         />

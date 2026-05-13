@@ -20,7 +20,7 @@ class Body extends React.Component<BodyProps> {
 
     return (
       <div style={styles.body} onClick={this.props.onClick}>
-        <div style={styles.bodyChildren} inert={modalGuide ? '' : undefined}>
+        <div style={styles.bodyChildren} inert={modalGuide ? false : undefined}>
           {this.props.children}
         </div>
         <Guide />

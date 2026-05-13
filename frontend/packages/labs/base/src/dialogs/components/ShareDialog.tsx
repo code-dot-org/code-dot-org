@@ -192,7 +192,7 @@ const ShareDialog: FunctionComponent<ShareDialogProps> = ({
       mode={theme === 'Light' ? 'light' : 'dark'}
       primaryButtonProps={{
         onClick: () => hideShareDialog(),
-        text: 'OK',
+        children: 'OK',
       }}
     />
   ) : (

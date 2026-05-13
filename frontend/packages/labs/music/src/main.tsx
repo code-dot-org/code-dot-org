@@ -19,6 +19,7 @@ import '@code-dot-org/component-library-styles/colors.css';
 // Load Font Awesome Pro 6 icons from CDN
 import {injectFontAwesome} from '@code-dot-org/fonts';
 
+initializeCore({plugins: [observabilityPlugin, localizationPlugin]});
 injectFontAwesome();
 
 // Import lab CSS variables (borders, z-indices, etc.)

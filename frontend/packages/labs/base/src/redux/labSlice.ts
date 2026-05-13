@@ -27,7 +27,7 @@ import {
 import {
   projectActions,
   ProjectManagerFactory,
-  ProjectManager,
+  type ProjectManager,
 } from '@code-dot-org/platform/projects';
 import {CourseRoles, currentUserActions} from '@code-dot-org/platform/user';
 
@@ -410,13 +410,13 @@ async function setUpAndLoadProject(
   projectManager.addSaveStartListener(() =>
     dispatch(projectActions.setProjectUpdatedSaving()),
   );
-  projectManager.addSaveSuccessListener(channel => {
+  projectManager.addSaveSuccessListener((channel: Channel) => {
     dispatch(projectActions.setProjectUpdatedAt(channel.updatedAt));
     dispatch(setChannel(channel));
     // If we had a successful save, we know the project is not too large.
     dispatch(setProjectTooLarge(false));
   });
-  projectManager.addSaveNoopListener(channel => {
+  projectManager.addSaveNoopListener((channel?: Channel) => {
     if (channel) {
       dispatch(projectActions.setProjectUpdatedAt(channel.updatedAt));
       dispatch(setChannel(channel));
@@ -424,7 +424,7 @@ async function setUpAndLoadProject(
       dispatch(projectActions.setProjectUpdatedSaved());
     }
   });
-  projectManager.addSaveFailListener(error => {
+  projectManager.addSaveFailListener((error: Error) => {
     dispatch(projectActions.setProjectUpdatedError());
     if (error.message?.includes('413')) {
       // The user's project is too large to save. Mark it as too large.

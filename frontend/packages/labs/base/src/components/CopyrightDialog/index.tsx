@@ -49,7 +49,7 @@ const CopyrightDialog: FunctionComponent<CopyrightDialogProps> = ({
       mode={theme === 'Light' ? 'light' : 'dark'}
       primaryButtonProps={{
         onClick: closeModal,
-        text: 'OK',
+        children: 'OK',
       }}
       customContent={
         <div>

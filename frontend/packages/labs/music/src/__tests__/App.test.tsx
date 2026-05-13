@@ -23,6 +23,6 @@ vi.mock('@code-dot-org/core/plugins/observability', () => ({
 }));
 
 it('renders without crashing', () => {
-  const {container} = render(<App />);
+  const {container} = render(<App isLoading={false} />);
   expect(container).toBeTruthy();
 });

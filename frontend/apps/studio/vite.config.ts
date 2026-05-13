@@ -34,8 +34,14 @@ export default defineConfig(({mode}) => {
           __dirname,
           './src/stubs/react-dom-server.ts',
         ),
-        react: path.resolve(workspaceRoot, 'node_modules/react'),
-        'react-dom': path.resolve(workspaceRoot, 'node_modules/react-dom'),
+        react: path.resolve(
+          searchForWorkspaceRoot(process.cwd()),
+          'node_modules/react',
+        ),
+        'react-dom': path.resolve(
+          searchForWorkspaceRoot(process.cwd()),
+          'node_modules/react-dom',
+        ),
       },
       // Dedupe blockly to ensure only one instance across all workspace packages.
       // Combined with optimizeDeps.include, this ensures proper deduplication.

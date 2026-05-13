@@ -282,10 +282,10 @@ export class OceanObject {
    */
   generateLogits(canvas: HTMLCanvasElement): void {
     if (mobilenet && !this.logits) {
-      const image = tf.browser.fromPixels(canvas);
       // Pass true to get the embedding (conv_preds layer equivalent).
-      const infer = () => mobilenet!.infer(image, true);
-      this.logits = infer();
+      // mobilenet bundles its own tfjs-core, so let it convert the canvas
+      // rather than crossing tensor types between tfjs versions.
+      this.logits = mobilenet.infer(canvas, true);
     }
   }
 }
