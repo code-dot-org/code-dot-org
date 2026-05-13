@@ -2905,6 +2905,26 @@ a.download-video {
   &-full-width {
     width: unset;
   }
+
+  p, label, li {
+    font-size: 16px;
+  }
+
+  h1 {
+    font-size: 37px;
+  }
+
+  h2 {
+    font-size: 25px;
+  }
+
+  h3 {
+    font-size: 21px;
+  }
+
+  h4 {
+    font-size: 21px;
+  }
 }
 
 .multi #markdown.teacher {
