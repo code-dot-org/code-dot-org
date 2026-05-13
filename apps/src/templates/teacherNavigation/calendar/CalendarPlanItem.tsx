@@ -14,22 +14,43 @@ import styles from './calendar.module.scss';
 interface CalendarPlanItemProps {
   item: CalendarPlanItemData;
   lesson?: CalendarPlanLesson;
-  onMovePrevious?: () => void;
-  onMoveNext?: () => void;
+  draggable?: boolean;
+  dragHandlePosition?: 'left' | 'right';
+  onDragEnd?: (event: React.DragEvent) => void;
+  onDragStart?: (event: React.DragEvent) => void;
   onRemove?: () => void;
+  showDragHandle?: boolean;
+  showDuration?: boolean;
+  showRemoveButton?: boolean;
+  showTypeIcon?: boolean;
 }
 
 const CalendarPlanItem: React.FC<CalendarPlanItemProps> = ({
   item,
   lesson,
-  onMovePrevious,
-  onMoveNext,
+  draggable,
+  dragHandlePosition = 'left',
+  onDragEnd,
+  onDragStart,
   onRemove,
+  showDragHandle = draggable,
+  showDuration = true,
+  showRemoveButton = !!onRemove,
+  showTypeIcon = true,
 }) => {
   const isPlaceholder = item.itemType === 'placeholder';
   const title = isPlaceholder
     ? item.placeholderTitle
-    : lesson?.title || `Lesson ${item.lessonId}`;
+    : lesson?.title.replace(/^Lesson\s+\d+:\s*/, '') ||
+      `Lesson ${item.lessonId}`;
+  const plannedMinutes = item.plannedMinutes || lesson?.duration;
+  const dragHandle = showDragHandle && (
+    <FontAwesomeV6Icon
+      className={styles.dragHandleIcon}
+      iconName="grip-vertical"
+      iconStyle="solid"
+    />
+  );
 
   return (
     <div
@@ -38,34 +59,48 @@ const CalendarPlanItem: React.FC<CalendarPlanItemProps> = ({
           ? styles.placeholderCalendarItem
           : styles.lessonCalendarItem
       }
+      draggable={draggable}
+      onDragEnd={onDragEnd}
+      onDragStart={onDragStart}
     >
-      <FontAwesomeV6Icon
-        iconName={isPlaceholder ? 'note-sticky' : 'book-open'}
-        iconStyle="solid"
-      />
-      <MuiTypography variant="body4" component="span">
-        {title}
-      </MuiTypography>
+      {dragHandlePosition === 'left' && dragHandle}
+      {showTypeIcon && (
+        <FontAwesomeV6Icon
+          iconName={isPlaceholder ? 'note-sticky' : 'book-open'}
+          iconStyle="solid"
+        />
+      )}
+      <div className={styles.calendarItemContent}>
+        {lesson?.url ? (
+          <MuiTypography
+            className={styles.calendarItemTitle}
+            variant="body4"
+            component="a"
+            href={lesson.url}
+          >
+            {title}
+          </MuiTypography>
+        ) : (
+          <MuiTypography
+            className={styles.calendarItemTitle}
+            variant="body4"
+            component="span"
+          >
+            {title}
+          </MuiTypography>
+        )}
+        {showDuration && plannedMinutes && (
+          <MuiTypography
+            className={styles.calendarItemDuration}
+            variant="body4"
+            component="span"
+          >
+            {plannedMinutes} min
+          </MuiTypography>
+        )}
+      </div>
       <div className={styles.calendarItemActions}>
-        {onMovePrevious && (
-          <IconButton
-            size="small"
-            aria-label={i18n.moveEarlier()}
-            onClick={onMovePrevious}
-          >
-            <FontAwesomeV6Icon iconName="arrow-left" />
-          </IconButton>
-        )}
-        {onMoveNext && (
-          <IconButton
-            size="small"
-            aria-label={i18n.moveLater()}
-            onClick={onMoveNext}
-          >
-            <FontAwesomeV6Icon iconName="arrow-right" />
-          </IconButton>
-        )}
-        {onRemove && (
+        {showRemoveButton && onRemove && (
           <IconButton
             size="small"
             aria-label={i18n.remove()}
@@ -75,6 +110,7 @@ const CalendarPlanItem: React.FC<CalendarPlanItemProps> = ({
           </IconButton>
         )}
       </div>
+      {dragHandlePosition === 'right' && dragHandle}
     </div>
   );
 };

@@ -173,7 +173,7 @@ h2.skeletonHeaderSectionName {
 }
 
 .calendarContentContainer {
-  width: fit-content;
+  width: 100%;
 }
 
 .calendarStatusMessage {
@@ -190,7 +190,7 @@ h2.skeletonHeaderSectionName {
   display: flex;
   flex-direction: row;
   gap: 24px;
-  margin-bottom: 10px;
+  margin-bottom: 16px;
 }
 
 .calendarUnitDropdown {
@@ -204,6 +204,29 @@ h2.skeletonHeaderSectionName {
 
 .calendarMinutesPerWeekDropdown {
   > div {
+    width: 100%;
+  }
+}
+
+.calendarPlannerLayout {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 100%;
+}
+
+.calendarPlannerMain {
+  flex: 1 1 auto;
+  min-width: 0;
+}
+
+@media (max-width: 900px) {
+  .calendarPlannerLayout {
+    flex-direction: column;
+  }
+
+  .calendarPlannerMain {
     width: 100%;
   }
 }

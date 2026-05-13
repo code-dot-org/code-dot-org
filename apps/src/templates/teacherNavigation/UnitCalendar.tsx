@@ -1,8 +1,6 @@
-import {SimpleDropdown} from '@code-dot-org/component-library/dropdown';
 import React, {useState, useEffect, useMemo} from 'react';
 import {useSelector} from 'react-redux';
 
-import UnitCalendarGrid from '@cdo/apps//code-studio/components/progress/UnitCalendarGrid';
 import {
   setCalendarData,
   clearCalendarPlan,
@@ -30,15 +28,20 @@ import i18n from '@cdo/locale';
 
 import UnitSelectorV2 from '../teacherDashboardShared/UnitSelectorV2';
 
+import {CalendarPlanCalendar} from './calendar';
 import CalendarDateTimeProvider from './calendar/CalendarDateTimeProvider';
+import {CalendarDragPayload} from './calendar/calendarDragUtils';
 import CalendarLessonDrawer from './calendar/CalendarLessonDrawer';
 import {
   fetchSectionCalendarPlan,
   resetSectionCalendarPlan,
   saveSectionCalendarPlan,
 } from './calendar/calendarPlanApi';
-import CalendarPlanCalendar from './calendar/CalendarPlanCalendar';
-import {placeCalendarItemsIntoSessions} from './calendar/calendarPlannerUtils';
+import {
+  placeCalendarItemsIntoSessions,
+  placeItemInSession,
+  removeMatchingPlanItems,
+} from './calendar/calendarPlannerUtils';
 import {
   CalendarPlanItem,
   CalendarPlanSession,
@@ -54,7 +57,6 @@ const WEEKLY_INSTRUCTIONAL_MINUTES_OPTIONS = [
 ];
 const DEFAULT_WEEKLY_INSTRUCTIONAL_MINUTES =
   WEEKLY_INSTRUCTIONAL_MINUTES_OPTIONS[4];
-export const WEEK_WIDTH = 800;
 
 function buildDefaultPlan(
   sectionId: number,
@@ -82,9 +84,7 @@ const UnitCalendar: React.FC = () => {
   const [hasInitialLoad, setHasInitialLoad] = useState(false);
   const [draftPlan, setDraftPlan] = useState<SectionCalendarPlan | null>(null);
   const [isSavingPlan, setIsSavingPlan] = useState(false);
-
-  const [weeklyInstructionalMinutes, setWeeklyInstructionalMinutes] =
-    useState<string>(DEFAULT_WEEKLY_INSTRUCTIONAL_MINUTES.toString());
+  const [isDraggingCalendarBlock, setIsDraggingCalendarBlock] = useState(false);
 
   const selectedSection = useAppSelector(selectedSectionSelector);
 
@@ -193,31 +193,6 @@ const UnitCalendar: React.FC = () => {
     calendarUnitPosition,
   ]);
 
-  const weeklyMinutesOptions = WEEKLY_INSTRUCTIONAL_MINUTES_OPTIONS.map(
-    value => ({
-      value: value.toString(),
-      text: i18n.minutesLabel({number: value}),
-    })
-  );
-
-  const handleDropdownChange = (value: string) => {
-    setWeeklyInstructionalMinutes(value);
-    setDraftPlan(plan =>
-      plan
-        ? {
-            ...plan,
-            mode: 'weekly_minutes',
-            weeklyInstructionalMinutes: parseInt(value),
-          }
-        : plan
-    );
-
-    analyticsReporter.sendEvent(EVENTS.CHANGED_CALENDAR_MINUTES, {
-      unitName,
-      minutes: value,
-    });
-  };
-
   const needsReload = useAppSelector(
     state => state.teacherSections.needsReload
   );
@@ -268,9 +243,6 @@ const UnitCalendar: React.FC = () => {
         DEFAULT_WEEKLY_INSTRUCTIONAL_MINUTES
       );
     setDraftPlan(nextPlan);
-    setWeeklyInstructionalMinutes(
-      nextPlan.weeklyInstructionalMinutes.toString()
-    );
   }, [courseName, hasCalendar, savedPlan, selectedSection.id, unitPosition]);
 
   const detailedCalendarSessions = useMemo(() => {
@@ -280,12 +252,6 @@ const UnitCalendar: React.FC = () => {
 
     return placeCalendarItemsIntoSessions(draftPlan, calendarLessons);
   }, [calendarLessons, draftPlan]);
-
-  const hasDetailedSessions =
-    draftPlan?.mode === 'detailed_sessions' &&
-    !!draftPlan.startDate &&
-    (draftPlan.recurringSessions.length > 0 ||
-      draftPlan.oneOffSessions.length > 0);
 
   const hasUnsavedPlanChanges = useMemo(() => {
     if (!draftPlan || !courseName || !unitPosition || !selectedSection.id) {
@@ -298,17 +264,11 @@ const UnitCalendar: React.FC = () => {
         selectedSection.id,
         courseName,
         unitPosition,
-        parseInt(weeklyInstructionalMinutes)
+        draftPlan.weeklyInstructionalMinutes ||
+          DEFAULT_WEEKLY_INSTRUCTIONAL_MINUTES
       );
     return JSON.stringify(draftPlan) !== JSON.stringify(savedOrDefaultPlan);
-  }, [
-    courseName,
-    draftPlan,
-    savedPlan,
-    selectedSection.id,
-    unitPosition,
-    weeklyInstructionalMinutes,
-  ]);
+  }, [courseName, draftPlan, savedPlan, selectedSection.id, unitPosition]);
 
   const handleSavePlan = async () => {
     if (!draftPlan) {
@@ -348,7 +308,7 @@ const UnitCalendar: React.FC = () => {
           selectedSection.id,
           courseName,
           unitPosition,
-          parseInt(weeklyInstructionalMinutes)
+          DEFAULT_WEEKLY_INSTRUCTIONAL_MINUTES
         )
       );
     } catch (error) {
@@ -357,89 +317,38 @@ const UnitCalendar: React.FC = () => {
     }
   };
 
-  const handleToggleCancellation = (session: CalendarPlanSession) => {
-    setDraftPlan(plan => {
-      if (!plan) {
-        return plan;
-      }
+  const calendarItemFromPayload = (
+    payload: CalendarDragPayload
+  ): CalendarPlanItem | null => {
+    if (payload.item) {
+      return payload.item;
+    }
 
-      const existingCancellation = plan.cancellations.find(
-        cancellation =>
-          cancellation.sessionDate === session.date &&
-          (cancellation.recurringSessionClientId === session.sourceClientId ||
-            cancellation.oneOffSessionClientId === session.sourceClientId)
-      );
+    if (!payload.lesson) {
+      return null;
+    }
 
-      if (existingCancellation) {
-        return {
-          ...plan,
-          cancellations: plan.cancellations.filter(
-            cancellation => cancellation !== existingCancellation
-          ),
-        };
-      }
-
-      return {
-        ...plan,
-        cancellations: [
-          ...plan.cancellations,
-          {
-            sessionDate: session.date,
-            recurringSessionClientId:
-              session.source === 'recurring'
-                ? session.sourceClientId
-                : undefined,
-            oneOffSessionClientId:
-              session.source === 'one_off' ? session.sourceClientId : undefined,
-          },
-        ],
-      };
-    });
+    return {
+      clientId: `lesson-${payload.lesson.id}`,
+      itemType: 'lesson',
+      lessonId: payload.lesson.id,
+      plannedMinutes: payload.lesson.duration,
+      removed: false,
+    };
   };
 
-  const removeMatchingPlanItems = (
-    items: CalendarPlanItem[],
-    itemToReplace: CalendarPlanItem
-  ) =>
-    items.filter(item =>
-      itemToReplace.lessonId
-        ? item.lessonId !== itemToReplace.lessonId
-        : item.clientId !== itemToReplace.clientId
-    );
-
-  const handleMoveItem = (
-    item: CalendarPlanItem,
-    currentSession: CalendarPlanSession,
-    direction: -1 | 1
+  const handleDropItem = (
+    payload: CalendarDragPayload,
+    targetSession: CalendarPlanSession,
+    targetIndex: number
   ) => {
-    const openSessions = detailedCalendarSessions.filter(
-      session => !session.canceled
-    );
-    const currentIndex = openSessions.findIndex(
-      session => session.id === currentSession.id
-    );
-    const targetSession = openSessions[currentIndex + direction];
-    if (!targetSession) {
+    const item = calendarItemFromPayload(payload);
+    if (!item) {
       return;
     }
 
     setDraftPlan(plan =>
-      plan
-        ? {
-            ...plan,
-            mode: 'detailed_sessions',
-            items: [
-              ...removeMatchingPlanItems(plan.items, item),
-              {
-                ...item,
-                sessionDate: targetSession.date,
-                sessionClientId: targetSession.sourceClientId,
-                sessionSort: targetSession.items.length,
-                removed: false,
-              },
-            ],
-          }
-        : plan
+      plan ? placeItemInSession(plan, item, targetSession, targetIndex) : plan
     );
   };
 
@@ -475,6 +384,13 @@ const UnitCalendar: React.FC = () => {
     });
   };
 
+  const handleDropToTrash = (payload: CalendarDragPayload) => {
+    const item = calendarItemFromPayload(payload);
+    if (item) {
+      handleRemoveItem(item);
+    }
+  };
+
   if (
     !hasInitialLoad ||
     isLoading ||
@@ -497,19 +413,6 @@ const UnitCalendar: React.FC = () => {
                   filterToSelectedCourse={true}
                   labelText={i18n.lessonsFor()}
                   isLabelVisible
-                />
-              </div>
-              <div className={styles.calendarDropdown}>
-                <SimpleDropdown
-                  name="minutesPerWeek"
-                  className={styles.calendarMinutesPerWeekDropdown}
-                  onChange={event => handleDropdownChange(event.target.value)}
-                  items={weeklyMinutesOptions}
-                  selectedValue={weeklyInstructionalMinutes}
-                  size="s"
-                  dropdownTextThickness="thin"
-                  labelText={i18n.instructionalMinutesPerWeek()}
-                  color="gray"
                 />
               </div>
             </div>
@@ -535,28 +438,24 @@ const UnitCalendar: React.FC = () => {
               </div>
             )}
             {draftPlan && calendarLessons && (
-              <CalendarLessonDrawer
-                plan={draftPlan}
-                lessons={calendarLessons}
-                onPlanChange={setDraftPlan}
-              />
-            )}
-            {hasDetailedSessions ? (
-              <CalendarPlanCalendar
-                sessions={detailedCalendarSessions}
-                lessons={calendarLessons || []}
-                onToggleCancellation={handleToggleCancellation}
-                onMoveItem={handleMoveItem}
-                onRemoveItem={handleRemoveItem}
-              />
-            ) : (
-              <UnitCalendarGrid
-                lessons={calendarLessons || []}
-                weeklyInstructionalMinutes={parseInt(
-                  weeklyInstructionalMinutes
-                )}
-                weekWidth={WEEK_WIDTH}
-              />
+              <div className={styles.calendarPlannerLayout}>
+                <CalendarLessonDrawer
+                  isDragging={isDraggingCalendarBlock}
+                  plan={draftPlan}
+                  lessons={calendarLessons}
+                  onPlanChange={setDraftPlan}
+                  onDropToTrash={handleDropToTrash}
+                  onDragStateChange={setIsDraggingCalendarBlock}
+                />
+                <div className={styles.calendarPlannerMain}>
+                  <CalendarPlanCalendar
+                    sessions={detailedCalendarSessions}
+                    lessons={calendarLessons}
+                    onDropItem={handleDropItem}
+                    onDragStateChange={setIsDraggingCalendarBlock}
+                  />
+                </div>
+              </div>
             )}
           </div>
         )}

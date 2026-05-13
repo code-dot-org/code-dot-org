@@ -1,138 +1,142 @@
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
-import {IconButton, Typography as MuiTypography} from '@mui/material';
-import React, {useEffect, useMemo, useState} from 'react';
+import {
+  Button as MuiButton,
+  IconButton,
+  Typography as MuiTypography,
+} from '@mui/material';
+import classNames from 'classnames';
+import moment from 'moment';
+import React, {useMemo, useState} from 'react';
 
 import i18n from '@cdo/locale';
 
-import CalendarPlanItem from './CalendarPlanItem';
 import {
-  CalendarPlanItem as CalendarPlanItemData,
-  CalendarPlanLesson,
-  CalendarPlanSession,
-} from './calendarPlanTypes';
+  CalendarDragPayload,
+  getCalendarDragPayload,
+  setCalendarDragPayload,
+} from './calendarDragUtils';
+import CalendarPlanItem from './CalendarPlanItem';
+import {CalendarPlanLesson, CalendarPlanSession} from './calendarPlanTypes';
 
 import styles from './calendar.module.scss';
+
+type CalendarViewMode = 'week' | 'month';
 
 interface CalendarPlanCalendarProps {
   sessions: CalendarPlanSession[];
   lessons: CalendarPlanLesson[];
   onToggleCancellation?: (session: CalendarPlanSession) => void;
-  onMoveItem?: (
-    item: CalendarPlanItemData,
+  onDropItem?: (
+    payload: CalendarDragPayload,
     session: CalendarPlanSession,
-    direction: -1 | 1
+    index: number
   ) => void;
-  onRemoveItem?: (item: CalendarPlanItemData) => void;
+  onDragStateChange?: (isDragging: boolean) => void;
 }
 
-interface CalendarEventContent {
-  event: {
-    extendedProps: {
-      session: CalendarPlanSession;
-    };
-  };
-  timeText: string;
+interface CalendarDay {
+  date: moment.Moment;
+  sessions: CalendarPlanSession[];
 }
 
-interface FullCalendarComponentProps {
-  plugins: unknown[];
-  initialView: string;
-  headerToolbar: {
-    left: string;
-    center: string;
-    right: string;
-  };
-  allDaySlot: boolean;
-  events: {
-    id: string;
-    start: string;
-    end: string;
-    classNames: string[];
-    extendedProps: {session: CalendarPlanSession};
-  }[];
-  eventContent: (eventContent: CalendarEventContent) => React.ReactNode;
-  height: string;
-  nowIndicator: boolean;
+function formatSessionTime(session: CalendarPlanSession) {
+  return moment(session.startTime, 'HH:mm').format('h:mma');
 }
 
-interface FullCalendarModules {
-  FullCalendar: React.ComponentType<FullCalendarComponentProps>;
-  plugins: unknown[];
+function totalSessionMinutes(session: CalendarPlanSession) {
+  return session.items.reduce(
+    (total, item) => total + (item.plannedMinutes || 0),
+    0
+  );
 }
 
-function eventEnd(date: string, startTime: string, durationMinutes: number) {
-  const start = new Date(`${date}T${startTime}:00`);
-  return new Date(start.getTime() + durationMinutes * 60 * 1000).toISOString();
+function calendarRange(cursorDate: moment.Moment, viewMode: CalendarViewMode) {
+  const start =
+    viewMode === 'month'
+      ? cursorDate.clone().startOf('month').startOf('week')
+      : cursorDate.clone().startOf('week');
+  const days = viewMode === 'month' ? 42 : 7;
+
+  return Array.from({length: days}, (_, index) =>
+    start.clone().add(index, 'days')
+  );
 }
 
 const CalendarPlanCalendar: React.FC<CalendarPlanCalendarProps> = ({
   sessions,
   lessons,
   onToggleCancellation,
-  onMoveItem,
-  onRemoveItem,
+  onDropItem,
+  onDragStateChange,
 }) => {
-  const [calendarModules, setCalendarModules] =
-    useState<FullCalendarModules | null>(null);
-
-  useEffect(() => {
-    let isMounted = true;
-
-    Promise.all([
-      import('@fullcalendar/react'),
-      import('@fullcalendar/timegrid'),
-      import('@fullcalendar/daygrid'),
-      import('@fullcalendar/interaction'),
-    ]).then(
-      ([
-        fullCalendarModule,
-        timeGridModule,
-        dayGridModule,
-        interactionModule,
-      ]) => {
-        if (!isMounted) {
-          return;
-        }
-
-        setCalendarModules({
-          FullCalendar:
-            fullCalendarModule.default as unknown as React.ComponentType<FullCalendarComponentProps>,
-          plugins: [
-            timeGridModule.default,
-            dayGridModule.default,
-            interactionModule.default,
-          ],
-        });
-      }
-    );
-
-    return () => {
-      isMounted = false;
-    };
-  }, []);
+  const [viewMode, setViewMode] = useState<CalendarViewMode>('month');
+  const [cursorDate, setCursorDate] = useState(() => moment());
 
   const lessonsById = useMemo(
     () => new Map(lessons.map(lesson => [lesson.id, lesson])),
     [lessons]
   );
-  const events = sessions.map(session => ({
-    id: session.id,
-    start: `${session.date}T${session.startTime}:00`,
-    end: eventEnd(session.date, session.startTime, session.durationMinutes),
-    classNames: session.canceled ? [styles.canceledSessionEvent] : [],
-    extendedProps: {session},
+  const sessionsByDate = useMemo(() => {
+    const sessionMap = new Map<string, CalendarPlanSession[]>();
+    sessions.forEach(session => {
+      const sessionsForDate = sessionMap.get(session.date) || [];
+      sessionsForDate.push(session);
+      sessionMap.set(session.date, sessionsForDate);
+    });
+    return sessionMap;
+  }, [sessions]);
+  const days: CalendarDay[] = calendarRange(cursorDate, viewMode).map(date => ({
+    date,
+    sessions: sessionsByDate.get(date.format('YYYY-MM-DD')) || [],
   }));
+  const title =
+    viewMode === 'month'
+      ? cursorDate.format('MMMM YYYY')
+      : `${days[0].date.format('MMM D')} - ${days[6].date.format(
+          'MMM D, YYYY'
+        )}`;
 
-  const renderEventContent = (eventContent: CalendarEventContent) => {
-    const session = eventContent.event.extendedProps.session;
+  const handleDrop = (
+    event: React.DragEvent,
+    session: CalendarPlanSession,
+    index: number
+  ) => {
+    event.preventDefault();
+    event.stopPropagation();
+    const payload = getCalendarDragPayload(event);
+    if (payload) {
+      onDropItem?.(payload, session, index);
+    }
+    onDragStateChange?.(false);
+  };
+
+  const renderSession = (session: CalendarPlanSession) => {
+    const plannedMinutes = totalSessionMinutes(session);
+    const isOverScheduled =
+      !session.canceled && plannedMinutes > session.durationMinutes;
 
     return (
-      <div className={styles.sessionEvent}>
-        <div className={styles.sessionEventHeader}>
-          <MuiTypography variant="body4" component="div">
-            {eventContent.timeText}
-            {session.canceled ? ` - ${i18n.canceled()}` : ''}
-          </MuiTypography>
+      <div
+        className={classNames(
+          styles.sessionCard,
+          viewMode === 'month' && styles.monthSessionCard,
+          viewMode === 'week' && styles.weekSessionCard,
+          session.canceled && styles.canceledSessionCard,
+          isOverScheduled && styles.overScheduledSessionCard
+        )}
+        key={session.id}
+        onDragOver={event => event.preventDefault()}
+        onDrop={event => handleDrop(event, session, session.items.length)}
+      >
+        <div className={styles.sessionCardHeader}>
+          <div>
+            <MuiTypography variant="body4" component="div">
+              {formatSessionTime(session)}
+            </MuiTypography>
+            <MuiTypography variant="body4" component="div">
+              {plannedMinutes}/{session.durationMinutes} min
+            </MuiTypography>
+          </div>
           {onToggleCancellation && (
             <IconButton
               size="small"
@@ -145,46 +149,132 @@ const CalendarPlanCalendar: React.FC<CalendarPlanCalendarProps> = ({
             </IconButton>
           )}
         </div>
-        {session.items.map(item => (
-          <CalendarPlanItem
-            key={item.clientId}
-            item={item}
-            lesson={item.lessonId ? lessonsById.get(item.lessonId) : undefined}
-            onMovePrevious={
-              onMoveItem ? () => onMoveItem(item, session, -1) : undefined
-            }
-            onMoveNext={
-              onMoveItem ? () => onMoveItem(item, session, 1) : undefined
-            }
-            onRemove={onRemoveItem ? () => onRemoveItem(item) : undefined}
-          />
-        ))}
+        {session.canceled ? (
+          <MuiTypography variant="body4" component="div">
+            {i18n.canceled()}
+          </MuiTypography>
+        ) : (
+          <div className={styles.sessionItemList}>
+            {session.items.map((item, index) => (
+              <div
+                className={styles.sessionDropTarget}
+                key={item.clientId}
+                onDragOver={event => event.preventDefault()}
+                onDrop={event => handleDrop(event, session, index)}
+              >
+                <CalendarPlanItem
+                  item={item}
+                  lesson={
+                    item.lessonId ? lessonsById.get(item.lessonId) : undefined
+                  }
+                  draggable
+                  dragHandlePosition="right"
+                  onDragEnd={() => onDragStateChange?.(false)}
+                  onDragStart={event => {
+                    setCalendarDragPayload(event, {item});
+                    onDragStateChange?.(true);
+                  }}
+                  showDragHandle
+                  showDuration={viewMode === 'week'}
+                  showRemoveButton={false}
+                  showTypeIcon={false}
+                />
+              </div>
+            ))}
+          </div>
+        )}
       </div>
     );
   };
 
-  if (!calendarModules) {
-    return <div className={styles.calendarDisplay} />;
-  }
-
-  const FullCalendar = calendarModules.FullCalendar;
-
   return (
     <div className={styles.calendarDisplay}>
-      <FullCalendar
-        plugins={calendarModules.plugins}
-        initialView="timeGridWeek"
-        headerToolbar={{
-          left: 'prev,next today',
-          center: 'title',
-          right: 'timeGridWeek,dayGridMonth',
-        }}
-        allDaySlot={false}
-        events={events}
-        eventContent={renderEventContent}
-        height="auto"
-        nowIndicator
-      />
+      <div className={styles.calendarToolbar}>
+        <div className={styles.calendarNavButtons}>
+          <IconButton
+            aria-label="Previous"
+            onClick={() =>
+              setCursorDate(date =>
+                date
+                  .clone()
+                  .subtract(1, viewMode === 'month' ? 'month' : 'week')
+              )
+            }
+          >
+            <FontAwesomeV6Icon iconName="chevron-left" />
+          </IconButton>
+          <IconButton
+            aria-label="Next"
+            onClick={() =>
+              setCursorDate(date =>
+                date.clone().add(1, viewMode === 'month' ? 'month' : 'week')
+              )
+            }
+          >
+            <FontAwesomeV6Icon iconName="chevron-right" />
+          </IconButton>
+          <MuiButton
+            size="small"
+            variant="outlined"
+            onClick={() => setCursorDate(moment())}
+          >
+            {i18n.today()}
+          </MuiButton>
+        </div>
+        <MuiTypography variant="h3" component="h2">
+          {title}
+        </MuiTypography>
+        <div className={styles.calendarViewButtons}>
+          <MuiButton
+            size="small"
+            variant={viewMode === 'week' ? 'contained' : 'outlined'}
+            onClick={() => setViewMode('week')}
+          >
+            {i18n.week()}
+          </MuiButton>
+          <MuiButton
+            size="small"
+            variant={viewMode === 'month' ? 'contained' : 'outlined'}
+            onClick={() => setViewMode('month')}
+          >
+            {i18n.month()}
+          </MuiButton>
+        </div>
+      </div>
+      <div className={styles.calendarGridHeader}>
+        {days.slice(0, 7).map(day => (
+          <div className={styles.calendarDayHeading} key={day.date.format('d')}>
+            {day.date.format('ddd')}
+          </div>
+        ))}
+      </div>
+      <div
+        className={classNames(
+          styles.calendarGrid,
+          viewMode === 'month' && styles.monthCalendarGrid,
+          viewMode === 'week' && styles.weekCalendarGrid
+        )}
+      >
+        {days.map(day => {
+          const isOutsideMonth =
+            viewMode === 'month' && !day.date.isSame(cursorDate, 'month');
+          return (
+            <div
+              className={classNames(
+                styles.calendarDayCell,
+                isOutsideMonth && styles.outsideMonthDayCell,
+                day.date.isSame(moment(), 'day') && styles.todayDayCell
+              )}
+              key={day.date.format('YYYY-MM-DD')}
+            >
+              <div className={styles.dayNumber}>{day.date.format('D')}</div>
+              <div className={styles.daySessions}>
+                {day.sessions.map(renderSession)}
+              </div>
+            </div>
+          );
+        })}
+      </div>
     </div>
   );
 };

@@ -44,12 +44,12 @@ function newClientId(prefix: string) {
   return `${prefix}-${Date.now()}-${Math.random().toString(36).slice(2)}`;
 }
 
-function formatDate(value: Date | null) {
-  return value ? moment(value).format('YYYY-MM-DD') : null;
+function formatDate(value: moment.Moment | null) {
+  return value ? value.format('YYYY-MM-DD') : null;
 }
 
-function toDate(value: string | null) {
-  return value ? moment(value, 'YYYY-MM-DD').toDate() : null;
+function toMoment(value: string | null) {
+  return value ? moment(value, 'YYYY-MM-DD') : null;
 }
 
 const CalendarScheduleSettings: React.FC<CalendarScheduleSettingsProps> = ({
@@ -106,9 +106,9 @@ const CalendarScheduleSettings: React.FC<CalendarScheduleSettingsProps> = ({
           {i18n.unitStartDate()}
         </MuiTypography>
         <DatePicker
-          date={toDate(plan.startDate)}
+          date={toMoment(plan.startDate)}
           clearable
-          onChange={(value: Date | null) =>
+          onChange={(value: moment.Moment | null) =>
             onPlanChange({
               ...plan,
               mode: 'detailed_sessions',
@@ -245,8 +245,8 @@ const CalendarScheduleSettings: React.FC<CalendarScheduleSettingsProps> = ({
                 {i18n.date()}
               </MuiTypography>
               <DatePicker
-                date={toDate(session.sessionDate)}
-                onChange={(value: Date | null) =>
+                date={toMoment(session.sessionDate)}
+                onChange={(value: moment.Moment | null) =>
                   updateOneOffSession(index, {
                     sessionDate: formatDate(value) || session.sessionDate,
                   })

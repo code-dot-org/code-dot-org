@@ -104,6 +104,111 @@ export function buildDefaultLessonItems(
     }));
 }
 
+export function removeMatchingPlanItems(
+  items: CalendarPlanItem[],
+  itemToReplace: CalendarPlanItem
+) {
+  return items.filter(item => !isMatchingPlanItem(item, itemToReplace));
+}
+
+function isMatchingPlanItem(
+  item: CalendarPlanItem,
+  itemToReplace: CalendarPlanItem
+) {
+  return itemToReplace.lessonId
+    ? item.lessonId === itemToReplace.lessonId
+    : item.clientId === itemToReplace.clientId;
+}
+
+function placedSessionKey(item: CalendarPlanItem) {
+  return item.sessionDate && item.sessionClientId
+    ? `${item.sessionDate}:${item.sessionClientId}`
+    : null;
+}
+
+function sessionMinutesUsed(session: CalendarPlanSession) {
+  return session.items.reduce(
+    (total, item) => total + (item.plannedMinutes || 0),
+    0
+  );
+}
+
+function resequencePlacedItems(items: CalendarPlanItem[]) {
+  const orderedSessionItems = new Map<string, CalendarPlanItem[]>();
+  items.forEach(item => {
+    const key = placedSessionKey(item);
+    if (!key || item.removed) {
+      return;
+    }
+
+    const sessionItems = orderedSessionItems.get(key) || [];
+    sessionItems.push(item);
+    orderedSessionItems.set(key, sessionItems);
+  });
+
+  const sortByClientId = new Map<string, number>();
+  orderedSessionItems.forEach(sessionItems => {
+    sessionItems
+      .slice()
+      .sort((a, b) => (a.sessionSort || 0) - (b.sessionSort || 0))
+      .forEach((item, index) => sortByClientId.set(item.clientId, index));
+  });
+
+  return items.map(item =>
+    sortByClientId.has(item.clientId)
+      ? {...item, sessionSort: sortByClientId.get(item.clientId)}
+      : item
+  );
+}
+
+export function placeItemInSession(
+  plan: SectionCalendarPlan,
+  item: CalendarPlanItem,
+  targetSession: CalendarPlanSession,
+  targetIndex: number
+): SectionCalendarPlan {
+  if (targetSession.canceled) {
+    return plan;
+  }
+
+  const currentSessionItems = targetSession.items.filter(
+    sessionItem => !isMatchingPlanItem(sessionItem, item)
+  );
+  const boundedTargetIndex = Math.max(
+    0,
+    Math.min(targetIndex, currentSessionItems.length)
+  );
+  const targetSessionItems = [
+    ...currentSessionItems.slice(0, boundedTargetIndex),
+    item,
+    ...currentSessionItems.slice(boundedTargetIndex),
+  ];
+  const itemsOutsideTargetSession = plan.items.filter(
+    planItem =>
+      !targetSessionItems.some(sessionItem =>
+        isMatchingPlanItem(planItem, sessionItem)
+      )
+  );
+  const placedTargetSessionItems = targetSessionItems.map(
+    (sessionItem, index) => ({
+      ...sessionItem,
+      sessionDate: targetSession.date,
+      sessionClientId: targetSession.sourceClientId,
+      sessionSort: index,
+      removed: false,
+    })
+  );
+
+  return {
+    ...plan,
+    mode: 'detailed_sessions',
+    items: resequencePlacedItems([
+      ...itemsOutsideTargetSession,
+      ...placedTargetSessionItems,
+    ]),
+  };
+}
+
 export function placeCalendarItemsIntoSessions(
   plan: SectionCalendarPlan,
   lessons: CalendarPlanLesson[],
@@ -157,12 +262,17 @@ export function placeCalendarItemsIntoSessions(
 
   const unplacedItems = pendingItems.filter(item => !item.sessionDate);
   let sessionIndex = 0;
-  let remainingMinutes = openSessions[0]?.durationMinutes || 0;
+  let remainingMinutes = openSessions[0]
+    ? openSessions[0].durationMinutes - sessionMinutesUsed(openSessions[0])
+    : 0;
 
   unplacedItems.forEach(item => {
     while (openSessions[sessionIndex] && remainingMinutes <= 0) {
       sessionIndex += 1;
-      remainingMinutes = openSessions[sessionIndex]?.durationMinutes || 0;
+      remainingMinutes = openSessions[sessionIndex]
+        ? openSessions[sessionIndex].durationMinutes -
+          sessionMinutesUsed(openSessions[sessionIndex])
+        : 0;
     }
 
     const session = openSessions[sessionIndex];

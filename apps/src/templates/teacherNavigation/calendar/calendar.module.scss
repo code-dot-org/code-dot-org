@@ -1,124 +1,529 @@
 .scheduleSettings {
+  border: 1px solid var(--borders-neutral-primary);
+  border-radius: 6px;
   display: flex;
   flex-direction: column;
   gap: 16px;
-  margin-bottom: 24px;
+  margin-bottom: 16px;
+  padding: 16px;
 }
 
 .settingsHeader {
   align-items: center;
   display: flex;
-  gap: 12px;
-  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 8px;
+  justify-content: flex-start;
+
+  > button {
+    margin-left: 0;
+  }
+}
+
+.settingsHeader > button:first-of-type {
+  margin-left: auto;
 }
 
 .sessionSection {
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 10px;
 }
 
 .sessionRow {
-  align-items: end;
+  align-items: start;
+  background: var(--background-neutral-secondary);
+  border: 1px solid var(--borders-neutral-primary);
+  border-radius: 6px;
   display: grid;
-  gap: 12px;
-  grid-template-columns: minmax(140px, 1fr) minmax(140px, 1fr) minmax(140px, 1fr) auto;
+  gap: 16px;
+  grid-template-columns: repeat(3, minmax(180px, 220px)) 44px;
+  padding: 14px;
+  width: fit-content;
+}
+
+.sessionRow > div {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  width: 220px;
+}
+
+.sessionRow > button {
+  align-self: end;
+  justify-self: center;
+  min-height: 44px;
 }
 
 .dateTimeField {
   display: flex;
   flex-direction: column;
   gap: 4px;
+  width: 220px;
+}
+
+.dateTimeField > span {
+  line-height: 20px;
+}
+
+.dateTimeField :global(.react-datepicker-wrapper),
+.dateTimeField :global(.react-datepicker__input-container),
+.dateTimeField :global(.input-group) {
+  width: 100%;
+}
+
+.dateTimeField :global(.input-group) {
+  align-items: stretch;
+  display: flex;
+}
+
+.dateTimeField :global(.form-group) {
+  flex: 1 1 auto;
+  margin-bottom: 0;
+}
+
+.dateTimeField :global(.form-control) {
+  border-color: var(--borders-neutral-primary);
+  border-radius: 4px 0 0 4px;
+  box-shadow: none;
+  font-family: inherit;
+  font-size: 16px;
+  font-weight: 600;
+  height: 44px;
+  line-height: 20px;
+  padding: 10px 12px;
+}
+
+.dateTimeField :global(.input-group-addon) {
+  align-items: center;
+  background: var(--background-neutral-primary);
+  border-color: var(--borders-neutral-primary);
+  border-radius: 0 4px 4px 0;
+  display: flex;
+  flex: 0 0 44px;
+  justify-content: center;
 }
 
 .timeInput {
+  background: var(--background-neutral-primary);
   border: 1px solid var(--borders-neutral-primary);
   border-radius: 4px;
-  min-height: 34px;
-  padding: 6px 8px;
+  box-sizing: border-box;
+  color: var(--text-neutral-primary);
+  font-family: inherit;
+  font-size: 16px;
+  font-weight: 600;
+  height: 44px;
+  line-height: 20px;
+  padding: 10px 12px;
+  width: 100%;
+}
+
+.sessionRow select {
+  box-sizing: border-box;
+  font-size: 16px;
+  font-weight: 600;
+  height: 44px;
+  line-height: 20px;
+  min-height: 44px;
 }
 
 .calendarDisplay {
   min-height: 520px;
+  min-width: 0;
+  width: 100%;
+}
+
+.calendarToolbar {
+  align-items: center;
+  display: grid;
+  gap: 16px;
+  grid-template-columns: minmax(220px, 1fr) minmax(0, auto) minmax(220px, 1fr);
+  margin-bottom: 12px;
+}
+
+.calendarNavButtons,
+.calendarViewButtons {
+  align-items: center;
+  display: flex;
+  gap: 6px;
+}
+
+.calendarViewButtons {
+  justify-content: flex-end;
+}
+
+.calendarGridHeader,
+.calendarGrid {
+  display: grid;
+  grid-template-columns: repeat(7, minmax(0, 1fr));
+}
+
+.calendarDayHeading {
+  background: var(--background-neutral-quaternary);
+  border: 1px solid var(--borders-neutral-primary);
+  color: var(--text-neutral-primary);
+  font-weight: 700;
+  min-width: 0;
+  padding: 6px;
+  text-align: center;
+}
+
+.calendarGrid {
+  border-bottom: 1px solid var(--borders-neutral-primary);
+  border-right: 1px solid var(--borders-neutral-primary);
+}
+
+.monthCalendarGrid {
+  grid-auto-rows: minmax(150px, auto);
+}
+
+.weekCalendarGrid {
+  grid-auto-rows: minmax(560px, auto);
+}
+
+.calendarDayCell {
+  background: var(--background-neutral-primary);
+  border-left: 1px solid var(--borders-neutral-primary);
+  border-top: 1px solid var(--borders-neutral-primary);
+  min-width: 0;
+  overflow: visible;
+  padding: 6px;
+}
+
+.weekCalendarGrid .calendarDayCell {
+  overflow-y: auto;
+}
+
+.outsideMonthDayCell {
+  background: var(--background-neutral-secondary);
+}
+
+.todayDayCell {
+  background: var(--background-warning-extra-light);
+}
+
+.dayNumber {
+  color: var(--text-brand-teal-primary);
+  font-weight: 700;
+  line-height: 18px;
+  margin-bottom: 4px;
+  text-align: right;
+}
+
+.daySessions {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  min-width: 0;
+}
+
+.sessionCard {
+  background: var(--background-neutral-primary);
+  border: 1px solid var(--borders-neutral-primary);
+  border-left: 4px solid var(--borders-brand-teal-primary);
+  border-radius: 6px;
+  box-shadow: 0 1px 2px rgb(0 0 0 / 8%);
+  min-width: 0;
+  overflow: hidden;
+  padding: 6px;
+}
+
+.monthSessionCard {
+  padding: 5px;
+}
+
+.weekSessionCard {
+  margin-bottom: 8px;
+}
+
+.overScheduledSessionCard {
+  border-color: var(--borders-error-primary);
+  border-left-color: var(--borders-error-primary);
+}
+
+.canceledSessionCard {
+  opacity: 0.65;
+}
+
+.sessionCardHeader {
+  align-items: center;
+  display: flex;
+  gap: 6px;
+  justify-content: space-between;
+  margin-bottom: 4px;
+}
+
+.sessionCardHeader > div {
+  min-width: 0;
+}
+
+.sessionCardHeader button {
+  flex: 0 0 auto;
+}
+
+.monthSessionCard .sessionCardHeader {
+  margin-bottom: 3px;
+}
+
+.monthSessionCard .sessionCardHeader > div {
+  align-items: baseline;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2px 5px;
+}
+
+.sessionItemList {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  min-width: 0;
+}
+
+.sessionDropTarget {
+  min-width: 0;
+}
+
+.monthCalendarGrid .sessionDropTarget {
+  min-height: 0;
+}
+
+.emptySessionDropTarget {
+  border: 1px dashed var(--borders-neutral-primary);
+  border-radius: 4px;
+  color: var(--text-neutral-quaternary);
+  font-size: 12px;
+  min-height: 24px;
+  padding: 3px 4px;
+  text-align: center;
+}
+
+.monthCalendarGrid .emptySessionDropTarget {
+  min-height: 12px;
+  overflow: hidden;
+  padding: 0;
+  text-indent: -9999px;
 }
 
 .lessonDrawer {
+  border: 1px solid var(--borders-neutral-primary);
+  border-radius: 6px;
   display: flex;
   flex-direction: column;
   gap: 12px;
-  margin-bottom: 24px;
+  min-width: 0;
+  padding: 12px;
+  width: 100%;
+}
+
+.lessonDrawerCollapsed {
+  align-items: center;
+  overflow: hidden;
+  padding: 8px 12px;
+}
+
+.lessonDrawerHeader {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+}
+
+.collapsedLessonDrawerLabel {
+  display: none;
+}
+
+.lessonDrawerControls {
+  align-items: end;
+  display: grid;
+  gap: 12px;
+  grid-template-columns: 1fr;
 }
 
 .placeholderControls {
   align-items: end;
   display: grid;
-  gap: 12px;
-  grid-template-columns: minmax(220px, 1fr) auto;
+  gap: 8px;
+  grid-template-columns: minmax(260px, 1fr) minmax(160px, 180px) minmax(150px, auto);
+}
+
+.placeholderControls > div {
+  min-width: 0;
+}
+
+.placeholderControls button {
+  min-width: 150px;
+  white-space: normal;
+}
+
+.trashDropZone {
+  align-items: center;
+  background: var(--background-neutral-primary);
+  border: 1px dashed var(--borders-neutral-primary);
+  border-radius: 6px;
+  bottom: 24px;
+  box-shadow: 0 4px 16px rgb(0 0 0 / 18%);
+  color: var(--text-neutral-secondary);
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+  min-height: 40px;
+  padding: 8px 12px;
+  position: fixed;
+  right: 50%;
+  transform: translateX(50%);
+  width: min(520px, calc(100vw - 48px));
+  z-index: 1000;
 }
 
 .lessonList {
   display: grid;
   gap: 8px;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  max-height: 220px;
+  min-width: 0;
+  overflow-y: auto;
 }
 
 .lessonListItem {
   align-items: center;
   border: 1px solid var(--borders-neutral-primary);
   border-radius: 4px;
+  cursor: grab;
   display: flex;
-  gap: 8px;
+  gap: 6px;
   justify-content: space-between;
   min-width: 0;
-  padding: 8px;
+  padding: 6px;
 }
 
-.sessionEvent {
-  display: flex;
-  flex-direction: column;
-  gap: 4px;
+.lessonListItem:active,
+.lessonCalendarItem:active,
+.placeholderCalendarItem:active {
+  cursor: grabbing;
+}
+
+.lessonListItem > span {
+  flex: 1 1 auto;
   min-width: 0;
-  white-space: normal;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
-.sessionEventHeader {
-  align-items: center;
-  display: flex;
-  justify-content: space-between;
+.removedLessonListItem {
+  opacity: 0.55;
 }
 
 .lessonCalendarItem,
 .placeholderCalendarItem {
-  align-items: center;
+  align-items: flex-start;
+  background: var(--background-neutral-secondary);
+  border-radius: 4px;
+  cursor: grab;
   display: flex;
   gap: 4px;
   min-width: 0;
+  padding: 3px 4px;
 }
 
-.calendarItemActions {
-  align-items: center;
+.calendarItemContent {
   display: flex;
-  gap: 2px;
-  margin-left: auto;
+  flex: 1 1 auto;
+  flex-direction: column;
+  gap: 1px;
+  min-width: 0;
+}
+
+.calendarItemTitle {
+  color: var(--text-neutral-primary);
+  overflow-wrap: anywhere;
+  text-decoration: none;
+  white-space: normal;
+}
+
+.calendarItemTitle:hover {
+  color: var(--text-brand-teal-primary);
+  text-decoration: underline;
+}
+
+.calendarItemDuration {
+  color: var(--text-neutral-secondary);
+  white-space: nowrap;
+}
+
+.lessonList .calendarItemTitle {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.monthCalendarGrid .lessonCalendarItem,
+.monthCalendarGrid .placeholderCalendarItem {
+  background: var(--background-neutral-secondary);
+  cursor: grab;
+  padding: 2px 4px;
 }
 
 .placeholderCalendarItem {
   font-style: italic;
 }
 
-.canceledSessionEvent {
-  opacity: 0.65;
-  text-decoration: line-through;
+.dragHandleIcon {
+  color: var(--text-neutral-quaternary);
+  flex: 0 0 auto;
+  margin-top: 2px;
+}
+
+.calendarItemActions {
+  align-items: center;
+  display: flex;
+  flex: 0 0 auto;
+  gap: 2px;
+  margin-left: auto;
+}
+
+.monthCalendarGrid .calendarItemActions {
+  display: none;
 }
 
 @media (max-width: 900px) {
+  .scheduleSettings {
+    padding: 12px;
+  }
+
+  .settingsHeader > button:first-of-type {
+    margin-left: 0;
+  }
+
   .sessionRow {
     align-items: stretch;
     grid-template-columns: 1fr;
+    width: auto;
+  }
+
+  .dateTimeField {
+    width: 100%;
+  }
+
+  .calendarToolbar {
+    grid-template-columns: 1fr;
+  }
+
+  .calendarViewButtons {
+    justify-content: flex-start;
+  }
+
+  .lessonDrawer,
+  .lessonDrawerCollapsed {
+    max-height: none;
+    width: 100%;
   }
 
   .placeholderControls {
-    align-items: stretch;
     grid-template-columns: 1fr;
+  }
+
+  .placeholderControls button {
+    width: 100%;
   }
 }
