@@ -1,18 +1,20 @@
+import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
+import Link from '@code-dot-org/component-library/link';
+import {Typography} from '@mui/material';
 import orderBy from 'lodash/orderBy';
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 import * as Table from 'reactabular-table';
 import * as sort from 'sortabular';
 
-import fontConstants from '@cdo/apps/fontConstants';
-import FontAwesome from '@cdo/apps/legacySharedComponents/FontAwesome';
-import color from '@cdo/apps/util/color';
 import i18n from '@cdo/locale';
 
 import {tableLayoutStyles, sortableOptions} from '../tables/tableConstants';
 import wrappedSortable from '../tables/wrapped_sortable';
 
 import {studentOverviewDataPropType} from './assessmentDataShapes';
+
+import moduleStyles from './submission-status-table.module.scss';
 
 const TABLE_WIDTH = tableLayoutStyles.table.width;
 const TABLE_COLUMN_WIDTHS = {
@@ -78,12 +80,18 @@ class SubmissionStatusAssessmentsTable extends Component {
   nameCellFormatter = (name, {rowData}) => {
     if (rowData.url) {
       return (
-        <a href={rowData.url} style={styles.studentNameColumn}>
+        <Link size="s" href={rowData.url}>
           {name}
-        </a>
+        </Link>
       );
     } else {
-      return name;
+      return (
+        <Typography variant="body3">
+          <Typography variant="strong" component="strong">
+            {name}
+          </Typography>
+        </Typography>
+      );
     }
   };
 
@@ -116,12 +124,18 @@ class SubmissionStatusAssessmentsTable extends Component {
     }
 
     return (
-      <div style={styles.main} className="timestampCell">
-        <div style={styles.text}>{submissionTimeStampContent}</div>
+      // `timestampCell` is kept as a global class hook for the test suite,
+      // which selects by `.timestampCell` to verify sort order.
+      <div className={`timestampCell ${moduleStyles.timestampCell}`}>
+        <Typography variant="body3" className={moduleStyles.timestampText}>
+          {submissionTimeStampContent}
+        </Typography>
         {isSubmitted && (
-          <div style={styles.icon}>
-            <FontAwesome id="checkmark" icon="check-circle" />
-          </div>
+          <FontAwesomeV6Icon
+            id="checkmark"
+            iconName="check-circle"
+            className={moduleStyles.submittedIcon}
+          />
         )}
       </div>
     );
@@ -146,7 +160,6 @@ class SubmissionStatusAssessmentsTable extends Component {
           props: {
             style: {
               ...tableLayoutStyles.cell,
-              ...styles.studentNameColumn,
             },
           },
         },
@@ -261,30 +274,5 @@ class SubmissionStatusAssessmentsTable extends Component {
     );
   }
 }
-
-const styles = {
-  main: {
-    border: 'none',
-    display: 'flex',
-    justifyContent: 'space-between',
-    flexDirection: 'row',
-    alignItems: 'center',
-  },
-  icon: {
-    color: color.purple,
-    fontSize: 16,
-  },
-  text: {
-    marginRight: 5,
-  },
-  headerLabels: {
-    color: color.charcoal,
-    ...fontConstants['main-font-semi-bold'],
-  },
-  studentNameColumn: {
-    color: color.teal,
-    ...fontConstants['main-font-semi-bold'],
-  },
-};
 
 export default SubmissionStatusAssessmentsTable;
