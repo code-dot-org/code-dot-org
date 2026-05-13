@@ -23,7 +23,8 @@ import './javalab-lab2.scss';
 // This PR represents about 4 hours of Claude Code work. I haven't read any of the code,
 // I've only tested it. I verified level switching, running code, editing code. Version
 // history list loads, but "previewing" an old version currently will just show your current
-// code. Backpack hasn't been re-implemented yet, another point for using the resource panel.
+// code.
+// Backpack hasn't been re-implemented yet, another point for using the resource panel.
 
 // Top-level Java Lab view under Lab2.
 //
