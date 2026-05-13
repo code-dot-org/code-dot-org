@@ -2612,4 +2612,49 @@ class ScriptLevelsControllerTest < ActionController::TestCase
                                   name: 'pilot teacher can view pilot modular course'
     end
   end
+
+  # iframe embed gating: data-allow-embeds is set based on participant_audience
+  IFRAME_MARKDOWN = '<iframe src="https://padlet.com/embed/test123" title="Padlet"></iframe>'.freeze
+
+  test 'does not set allow_embeds for student-audience course' do
+    unit = create(:script, :in_single_unit_course, participant_audience: 'student', instructor_audience: 'teacher')
+    lesson_group = create(:lesson_group, script: unit)
+    lesson = create(:lesson, script: unit, lesson_group: lesson_group, absolute_position: 1, relative_position: '1')
+    level = create(:external)
+    level.properties['markdown'] = IFRAME_MARKDOWN
+    level.save!
+    script_level = create(:script_level, script: unit, lesson: lesson, levels: [level])
+
+    sign_in @teacher
+    get :show, params: {
+      course_course_name: unit.reload.original_unit_group.name,
+      unit_position: 1,
+      lesson_position: 1,
+      id: script_level.position
+    }
+
+    assert_response :success
+    refute_includes @response.body, 'data-allow-embeds="true"'
+  end
+
+  test 'sets allow_embeds for teacher-audience (PL) course' do
+    unit = create(:script, :in_single_unit_course, participant_audience: 'teacher', instructor_audience: 'facilitator')
+    lesson_group = create(:lesson_group, script: unit)
+    lesson = create(:lesson, script: unit, lesson_group: lesson_group, absolute_position: 1, relative_position: '1')
+    level = create(:external)
+    level.properties['markdown'] = IFRAME_MARKDOWN
+    level.save!
+    script_level = create(:script_level, script: unit, lesson: lesson, levels: [level])
+
+    sign_in @teacher
+    get :show, params: {
+      course_course_name: unit.reload.original_unit_group.name,
+      unit_position: 1,
+      lesson_position: 1,
+      id: script_level.position
+    }
+
+    assert_response :success
+    assert_includes @response.body, 'data-allow-embeds="true"'
+  end
 end
