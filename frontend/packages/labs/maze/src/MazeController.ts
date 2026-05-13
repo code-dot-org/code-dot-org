@@ -158,7 +158,12 @@ class MazeController {
     config: Configuration,
     options: Options = {},
   ) {
-    this.stepSpeed = 100;
+    // Default animation step duration in ms. The legacy maze used 100;
+    // the guided lesson context wants snappier playback so pegman doesn't
+    // feel sluggish between moves. Compound delays (`stepSpeed * 2/3/4`)
+    // in AnimationsController scale off this — keeping the base small
+    // keeps look-and-move sequences fast.
+    this.stepSpeed = 20;
 
     this.level = level;
     this.skin = skin;

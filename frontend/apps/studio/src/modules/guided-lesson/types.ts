@@ -11,14 +11,47 @@
  */
 
 import type {AiTrainerStageConfig} from './AiTrainerLabStage';
+import type {SolutionCheck} from './checkLabSolution';
 import type {DatasciStageConfig} from './DatasciLabStage';
 import type {MazeStageConfig} from './MazeLabStage';
 
+/**
+ * Each step's stage owns the right-hand canvas. The labs (music/maze/datasci/
+ * ai-trainer) speak for themselves. The other kinds are *concept-teaching*
+ * visualizations built into the studio, deliberately tailored to the
+ * misconceptions K-5 students hit on loops + conditions.
+ */
 export type StageVisual =
   | {kind: 'none'}
   | {kind: 'note'; title: string; body: string}
   | {kind: 'youtube'; youTubeId: string; title?: string}
   | {kind: 'image'; src: string; alt: string}
+  // Concept primitives. See `stage-primitives/` for implementations.
+  | {kind: 'loop-collapse'}
+  | {kind: 'unroll-tape'}
+  | {kind: 'question-vs-action'}
+  | {kind: 'condition-fork'}
+  | {kind: 'pegman-step-trace'; mazeConfig: MazeStageConfig}
+  | {kind: 'reflection-invitation'; prompt: string}
+  | {kind: 'lesson-celebrate'; summary?: string[]}
+  // MC owned by the stage — GuidedLesson injects this at render time with
+  // the active step's question + options + click handler. Authors never set
+  // this directly in `data.ts`; they set `stage.kind: 'multiple-choice-stage'`
+  // as a marker and the host fills the rest.
+  | {
+      kind: 'multiple-choice-stage';
+      question: string;
+      options: {id: string; label: string; isCorrect?: boolean}[];
+      onChoose: (option: {
+        id: string;
+        label: string;
+        isCorrect?: boolean;
+      }) => void;
+    }
+  // Author-facing marker that says "render this step's MC on the stage."
+  // GuidedLesson swaps it for the resolved `multiple-choice-stage` above.
+  | {kind: 'multiple-choice-stage-slot'}
+  // Labs — leave alone; they own the canvas when shown.
   | {kind: 'music-lab'}
   | {kind: 'maze-lab'; config: MazeStageConfig}
   | {kind: 'datasci-lab'; config: DatasciStageConfig}
@@ -64,6 +97,15 @@ export type LessonStep =
       continueLabel?: string;
       /** Tutor's response when the lab task is considered complete. */
       successMessage: string;
+      /**
+       * Optional deterministic code-check that gates advancement. Walks
+       * the live Blockly workspace and evaluates authored rules (required
+       * block types, forbidden block types, minimum counts). If any rule
+       * fails, the first failure's hint is appended to the chat as a tutor
+       * turn and the student stays on the same step. If all rules pass,
+       * the lesson advances. See `./checkLabSolution.ts`.
+       */
+      solutionCheck?: SolutionCheck;
     })
   | (BaseStep & {
       kind: 'celebrate';

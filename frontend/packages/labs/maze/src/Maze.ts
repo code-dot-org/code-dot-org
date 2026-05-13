@@ -20,6 +20,18 @@ import type {API, MazeEnvironment} from './types';
 import Validator from './Validator';
 
 /**
+ * Milliseconds between scheduled pegman *actions* (move / turn / look).
+ * The legacy maze used 1100 — way too slow for the guided lesson context.
+ * 300ms keeps each step visible (a kid can still track what pegman did)
+ * without grinding to a 7-second total for a 7-step maze.
+ *
+ * Note: this is independent of `MazeController.stepSpeed`, which controls
+ * the *sub-step* tween animation. Lowering only one of them leaves the
+ * other dominating the perceived slowness — both knobs needed tuning.
+ */
+const MAZE_STEP_INTERVAL_MS = 300;
+
+/**
  * Controls the maze level.
  */
 class Maze extends EventTarget {
@@ -186,7 +198,7 @@ class Maze extends EventTarget {
       if (this.executionInfo) {
         const actions = this.executionInfo.getActions(true);
         this.dispatchEvent(new CustomEvent('running'));
-        this.schedule(0, actions, true, 1100);
+        this.schedule(0, actions, true, MAZE_STEP_INTERVAL_MS);
       }
     }
   }
@@ -295,7 +307,7 @@ class Maze extends EventTarget {
     }
 
     const actions = this.executionInfo.getActions(step);
-    this.schedule(0, actions, step, 1100);
+    this.schedule(0, actions, step, MAZE_STEP_INTERVAL_MS);
   }
 
   /**

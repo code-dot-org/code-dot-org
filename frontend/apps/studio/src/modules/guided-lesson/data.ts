@@ -80,352 +80,796 @@ const LESSONS: Record<string, Lesson> = {
     title: 'Loops and Conditions',
     subtitle:
       'Two of programming’s biggest ideas — discovered across four labs.',
+    // Teaching pattern: feel the pain → name it → use it → reflect → transfer.
+    // Vocab MCs (loop-vocab, cond-vocab) come AFTER the lab where the concept
+    // was lived, not before. Hints inside `solutionCheck.rules` come in two
+    // tiers: a Socratic notice/question first, a concrete nudge second.
+    // After two misses the host invites the student to ask the tutor in chat.
     steps: [
-      // ── Section 1: Welcome — set the goal and the arc. ───────────────────
+      // ── Welcome — short, friendly. Names the journey, not the concepts. ──
       {
         id: 'welcome',
         kind: 'concept',
         tutorMessage:
-          "Welcome! I'm your AI Tutor for today. Over the next few minutes we'll work " +
-          'through two of the most powerful ideas in programming: **loops** and ' +
-          '**conditions**.\n\n' +
-          "Here's how we'll do it:\n\n" +
-          '1. **Music Lab** — discover the *repeat* block.\n' +
-          '2. **Maze Lab** — use repeat + `if path ahead` to navigate.\n' +
-          '3. **Data + AI labs** — see the same ideas in totally different settings.\n\n' +
-          "Ready? Hit **Continue** when you're set.",
-        stage: {
-          kind: 'note',
-          title: 'Today’s lesson',
-          body:
-            "We'll learn two ideas you'll use in **every** programming language:\n\n" +
-            '- **Loop** — a chunk of code that *repeats*.\n' +
-            '- **Condition** — a yes/no question your code asks before doing something.\n\n' +
-            'The labs change. The ideas stay the same.',
-        },
+          "Hi! I'm your tutor. We're going to make music, walk a maze, " +
+          'and even train a little AI. Ready? Press **Continue**.',
+        stage: {kind: 'unroll-tape'},
       },
 
-      // ── Section 2: Feel the pain. No loop, just repetition. ──────────────
+      // ── Music Lab #1 — feel the pain. Four blocks, by hand. ──────────────
       {
         id: 'music-no-loop',
         kind: 'lab',
         tutorMessage:
-          "Let's start with the **Music Lab**.\n\n" +
-          "Your first task is on purpose a little tedious. I want you to drag **four** " +
-          "sound blocks under `when run`. (Same sound, same beat — just four of them.)\n\n" +
-          'Press **Run** when you have them. Then come back here.',
+          'Open **Music Lab**. Make a sound play **4 times**. ' +
+          "Drag blocks under the green **`when run`** hat block (the one already there). " +
+          'Press **Run** to hear it.',
         stage: {kind: 'music-lab'},
-        continueLabel: 'Done — four sound blocks',
+        continueLabel: 'I pressed Run and heard it',
         successMessage:
-          "Nice work. Now stop and notice something:\n\n" +
-          "You wrote **four blocks** to play the same sound four times. What if I asked " +
-          'for **40**? **400**?\n\n' +
-          "Hold that thought.",
+          "Nice — 4 blocks, 4 sounds.\n\n" +
+          'Now imagine I asked for **40**. Or **100**. *Hmm.*',
+        solutionCheck: {
+          rules: [
+            {
+              kind: 'forbids-block',
+              type: 'repeat_simple2',
+              hint: 'I see a **repeat** block in there already. Try this *without* it first — what does it feel like the long way?',
+              hintNudge:
+                'Take the repeat block out for now. Just drag **4** sound blocks under `when run`.',
+            },
+            {
+              kind: 'min-count',
+              types: [
+                'play_sound_at_current_location_simple2',
+                'play_pattern_at_current_location_simple2',
+                'play_chord_at_current_location_simple2',
+                'play_tune_at_current_location_simple2',
+              ],
+              count: 4,
+              hint: 'Count your sound blocks under `when run`. How many should there be?',
+              hintNudge:
+                'You need **4** sound blocks under `when run`. Drag a few more in.',
+            },
+          ],
+        },
       },
 
-      // ── Section 3: Vocab check. Lock in the definition. ──────────────────
+      // ── Name the pain. Student must put a feeling-word on the cost. ──────
+      {
+        id: 'music-pain-elicit',
+        kind: 'free-response',
+        tutorMessage:
+          'Be honest — how did dragging those **4** blocks feel? ' +
+          'Now picture dragging **40**. Type one word for that feeling.',
+        stage: {
+          kind: 'reflection-invitation',
+          prompt: 'Dragging 40 blocks would feel…',
+        },
+        placeholder: 'Dragging 40 blocks would feel…',
+        acknowledgement:
+          'Right? **Tedious. Slow. Boring.** Real programmers feel that too — ' +
+          'and when they feel it, they get an idea.',
+      },
+
+      // ── Propose the fix. Student invents the abstraction before we name it.
+      {
+        id: 'music-fix-propose',
+        kind: 'multiple-choice',
+        tutorMessage:
+          'Pretend you are the computer’s **boss**. You want the *same* sound 40 times. ' +
+          'What is the **smartest** order to give? →',
+        stage: {kind: 'multiple-choice-stage-slot'},
+        options: [
+          {
+            id: 'a',
+            label: '"Play the sound. Play the sound. Play the sound…" — 40 times.',
+            isCorrect: false,
+            feedback:
+              'That works — but **you** are doing all the work. Your mouth gets tired and so do your fingers. Is there a shorter order?',
+          },
+          {
+            id: 'b',
+            label: '"Play the sound, **40 times**." — one order, with a number.',
+            isCorrect: true,
+            feedback:
+              'Yes! **One order plus a number.** That is the idea programmers had too. Now let’s see if the toolbox has a block that takes orders like that.',
+          },
+          {
+            id: 'c',
+            label: '"Play 40 sounds at the same moment." — all at once.',
+            isCorrect: false,
+            feedback:
+              'Whoa — that would be one giant noise, not 40 sounds in a row. We want them **one after another**, just with less typing.',
+          },
+        ],
+        allowRetry: true,
+      },
+
+      // ── Music Lab #2 — discover the repeat block. The student already
+      //    proposed "one order with a number"; we just confirm it exists.
+      {
+        id: 'music-loop',
+        kind: 'lab',
+        tutorMessage:
+          'You just invented the idea: **one order plus a number**. ' +
+          'Programmers built a block that does exactly that.\n\n' +
+          'Open **Music Lab** and hunt for it in the toolbox. ' +
+          'When you think you found it, press **Run**.',
+        stage: {kind: 'music-lab'},
+        continueLabel: 'I pressed Run',
+        successMessage:
+          'One block. Four sounds. **Same result, half the work.**\n\n' +
+          'Change `4` to `40` and your program still fits on one line.',
+        solutionCheck: {
+          rules: [
+            {
+              kind: 'requires-block',
+              type: 'repeat_simple2',
+              hint: 'Look for a block whose name starts with **repeat**. What do you think it might do?',
+              hintNudge:
+                'Drag the **repeat** block from the toolbox and put it under `when run`.',
+            },
+            {
+              kind: 'min-count',
+              types: [
+                'play_sound_at_current_location_simple2',
+                'play_pattern_at_current_location_simple2',
+                'play_chord_at_current_location_simple2',
+                'play_tune_at_current_location_simple2',
+              ],
+              count: 1,
+              hint: 'Your repeat block is empty. What do you want it to repeat?',
+              hintNudge:
+                'Drop **one** sound block *inside* the mouth of the repeat block.',
+            },
+          ],
+        },
+      },
+
+      // ── Loop vocab — NAME the thing the student just discovered. ─────────
       {
         id: 'loop-vocab',
         kind: 'multiple-choice',
         tutorMessage:
-          "Quick check before we make your code shorter. Which of these best " +
-          'describes a **loop**?',
-        stage: {
-          kind: 'note',
-          title: 'Vocabulary check',
-          body:
-            'A **loop** is one of the two big ideas of today. Pick the answer that ' +
-            'matches.',
-        },
+          'The block you just used has a name. Tap the answer that matches what it does →',
+        stage: {kind: 'multiple-choice-stage-slot'},
         options: [
           {
             id: 'a',
-            label: 'A chunk of code that the computer repeats.',
+            label: 'A **loop** — code the computer repeats.',
             isCorrect: true,
             feedback:
-              'Exactly. **Write once, repeat many times.** That’s the whole idea — and ' +
-              "you'll see it everywhere from games to websites to AI models.",
+              "Yes! That's a **loop**. Write once, repeat many times.",
           },
           {
             id: 'b',
-            label: 'A line of code that runs one time.',
+            label: 'Code that runs **one time** only.',
             isCorrect: false,
             feedback:
-              "That's just a regular instruction. A loop is different — it's the part " +
-              'that *repeats*.',
+              "Look back at your music — your one block played the sound **four** times. Try again.",
           },
           {
             id: 'c',
             label: 'A block that plays a sound.',
             isCorrect: false,
             feedback:
-              'A sound block does *one thing*. A loop is the wrapper that can repeat ' +
-              'any block — including a sound block — over and over.',
+              'The *sound* block plays a sound. The block we just learned **wraps** the sound block to play it over and over.',
           },
         ],
         allowRetry: true,
       },
 
-      // ── Section 4: Discover the loop. Shorter code, same result. ─────────
-      {
-        id: 'music-loop',
-        kind: 'lab',
-        tutorMessage:
-          "Now the payoff. Look in the toolbox for a **`repeat`** block.\n\n" +
-          "Try this:\n\n" +
-          '1. Delete the four sound blocks.\n' +
-          '2. Drag a **`repeat 4`** block under `when run`.\n' +
-          '3. Drop **one** sound block *inside* it.\n' +
-          '4. Press **Run**.\n\n' +
-          "Same four sounds — but now your program is **half the size**.",
-        stage: {kind: 'music-lab'},
-        continueLabel: 'It works!',
-        successMessage:
-          "That’s a loop. One block (the `repeat`) does the work of however many copies " +
-          "you would have written by hand.\n\n" +
-          "Change `4` to `40` and the program still fits on one line.",
-      },
-
-      // ── Section 5: Reflect to anchor the concept. ────────────────────────
+      // ── Reflect on the loop. Stage = inviting prompt card. ───────────────
       {
         id: 'loop-reflect',
         kind: 'free-response',
         tutorMessage:
-          'Quick reflection: in your own words, what did the **repeat** block save you ' +
-          'from doing? A sentence is plenty.',
+          'Quick think: what did the **repeat** block save you from doing? Type a sentence.',
         stage: {
-          kind: 'note',
-          title: 'Reflect',
-          body:
-            'Writing it in your own words helps it stick. There’s no wrong answer.',
+          kind: 'reflection-invitation',
+          prompt: 'The repeat block saved me from…',
         },
         placeholder: 'The repeat block saved me from…',
         acknowledgement:
-          "Yes — it saved you from **repeating yourself**. Programmers say *“don’t " +
-          'repeat yourself.”* Loops are the main way you follow that rule.',
+          'Yes — it saved you from **repeating yourself**. ' +
+          "Programmers even have a rule for it: *“don't repeat yourself.”* Loops are how we follow it.",
       },
 
-      // ── Section 6: Set up the maze problem. Why loops alone aren't enough.
+      // ── Unplugged analogy for conditions. Sky → umbrella. ────────────────
       {
         id: 'cond-intro',
         kind: 'concept',
         tutorMessage:
-          "Now imagine a different problem. You're guiding a character through " +
-          'a maze — but the maze has **a turn in the middle**.\n\n' +
-          'You *could* write out every step:\n\n' +
-          '```\n' +
-          'move forward, move forward, move forward, move forward,\n' +
-          'turn right,\n' +
-          'move forward, move forward, move forward\n' +
-          '```\n\n' +
-          'But the second you change the maze — different lengths, different ' +
-          'turn — this code breaks. We need something smarter.\n\n' +
-          'That smarter thing is a **condition**: a yes/no question your code ' +
-          'asks before deciding what to do.\n\n' +
-          '- *“Is it raining?”* → take an umbrella.\n' +
-          '- *“Is there a path ahead?”* → move forward, otherwise turn.\n\n' +
-          'Pattern: **`if (question) { do this } else { do that }`**.',
-        stage: {
-          kind: 'note',
-          title: 'A new tool: conditions',
-          body:
-            'A **condition** asks a yes/no question and chooses what to do.\n\n' +
-            'Pair it with a loop and your code stops being a script for **one** ' +
-            'situation — it becomes a **strategy** for many.',
+          'Before school, how do you decide to bring an umbrella?\n\n' +
+          "You don't bring it every day. You **check** the sky first.\n\n" +
+          'That check has a name in code: a **condition**.',
+        stage: {kind: 'condition-fork'},
+      },
+
+      // ── The maze. The student USES the idea before we name the blocks. ───
+      {
+        id: 'maze',
+        kind: 'lab',
+        tutorMessage:
+          'Open **Maze Lab**. Get your character to the red flag.\n\n' +
+          'This maze has a **turn**. You could count steps — but a count breaks if the maze changes.\n\n' +
+          'Use a **plan** instead. Stuck? Ask me in chat.',
+        stage: {kind: 'maze-lab', config: MAZE_LEVEL},
+        continueLabel: 'I pressed Run and made it',
+        successMessage:
+          'Beautiful — 4 blocks, no counting!\n\n' +
+          'And here is the cool part: those same 4 blocks would solve a **spiral** maze, ' +
+          'or a **zig-zag** maze. Your code is a **plan**, not a list.',
+        solutionCheck: {
+          // If pegman actually reached the flag, accept any solution —
+          // even hard-coded counting. The canonical loop+condition shape
+          // is what we *teach*, but solving the maze by any means is a win
+          // and the success message will still nudge them toward the
+          // general "plan" idea on continue.
+          acceptIf: 'maze-flag-caught',
+          rules: [
+            {
+              kind: 'requires-block',
+              type: 'maze_moveForward',
+              hint: 'Your character has to **move** somehow. What block could you start with?',
+              hintNudge:
+                'Drag a **`move forward`** block under `when run` and press Run.',
+            },
+            {
+              kind: 'requires-block',
+              type: 'maze_untilBlockedOrNotClear',
+              hint: "Pegman didn't reach the flag. What block tells him to keep going **until the flag**?",
+              hintNudge:
+                'Try wrapping your blocks in **`repeat until finished`** so pegman keeps going.',
+            },
+            {
+              kind: 'requires-block',
+              type: 'maze_ifElse',
+              hint: 'The maze has a turn. How will pegman **decide** when to move and when to turn?',
+              hintNudge:
+                'You need an **`if path ahead / else`** block. Drop it inside the repeat.',
+            },
+            {
+              kind: 'requires-block',
+              type: 'maze_turn',
+              hint: 'When the path is *blocked*, what should happen?',
+              hintNudge:
+                'Put **`turn right`** in the *else* branch (the bottom mouth).',
+            },
+          ],
         },
       },
 
-      // ── Section 7: Vocab check — find the condition. ─────────────────────
+      // ── Condition vocab — NAME the block they just used. ─────────────────
       {
         id: 'cond-vocab',
         kind: 'multiple-choice',
         tutorMessage:
-          'Quick check: which of these blocks is a **condition** (asks a ' +
-          'question), not just an action (does something)?',
-        stage: {
-          kind: 'note',
-          title: 'Which one is a condition?',
-          body: 'Looking for the block that *asks*, not the one that *does*.',
-        },
+          'You just used a block that **asked a question** every step. Which one was the **condition**? →',
+        stage: {kind: 'multiple-choice-stage-slot'},
         options: [
           {
             id: 'a',
             label: '`if path ahead`',
             isCorrect: true,
             feedback:
-              'Yes! `if path ahead` asks *“is there a path in front of me?”* ' +
-              "and decides what to do based on the answer. That's a condition.",
+              "Yes! `if path ahead` **asks** *“is there a path?”* every step. That's a **condition**.",
           },
           {
             id: 'b',
             label: '`move forward`',
             isCorrect: false,
             feedback:
-              '`move forward` is an **action** — it just does it. No question ' +
-              'first.',
+              '`move forward` **does** something. A condition **asks** something. Try again.',
           },
           {
             id: 'c',
             label: '`turn right`',
             isCorrect: false,
             feedback:
-              'Also an action. Conditions ask; actions do.',
+              "Also a *doing* block. Look for the one that *asks*. **Conditions ask. Actions do.**",
           },
         ],
         allowRetry: true,
       },
 
-      // ── Section 8: The maze. Loop + condition applied. ───────────────────
+      // ── Big idea — student articulates, tutor mirrors back. ──────────────
       {
-        id: 'maze',
-        kind: 'lab',
+        id: 'big-idea-elicit',
+        kind: 'free-response',
         tutorMessage:
-          "Open the **Maze Lab** on the right. Your character (the pegman) " +
-          'needs to reach the red flag.\n\n' +
-          "Notice: the maze has an **L shape** — a turn in the middle. " +
-          "Hardcoding `move forward × 4, turn right, move forward × 3` would " +
-          'work, but the second you change the maze, the code breaks.\n\n' +
-          "Instead, build the **strategy** we just talked about:\n\n" +
-          '> *“Keep going until you finish. If there’s a path ahead, move ' +
-          'forward. Otherwise, turn right.”*\n\n' +
-          'In blocks:\n\n' +
-          '1. Drag **`repeat until finished`** under `when run`.\n' +
-          '2. Inside it, drop **`if path ahead / else`**.\n' +
-          '3. Put **`move forward`** in the *if* branch.\n' +
-          '4. Put **`turn right`** in the *else* branch.\n\n' +
-          'Four blocks total. Press **Run**. Ask me if you get stuck.',
-        stage: {kind: 'maze-lab', config: MAZE_LEVEL},
-        continueLabel: 'It worked!',
-        successMessage:
-          'Beautiful. Four blocks just solved that maze **without you telling ' +
-          'the pegman how many squares to move**.\n\n' +
-          "Here's the cool part: those same four blocks would solve a *spiral* " +
-          'maze, a *zig-zag* maze, any maze with the same shape — because your ' +
-          "code doesn't describe *this maze*, it describes a **strategy**.",
-      },
-
-      // ── Section 9: Big idea concept. Anchor generalization. ──────────────
-      {
-        id: 'big-idea',
-        kind: 'concept',
-        tutorMessage:
-          'Take a beat to notice what just happened.\n\n' +
-          "You wrote **one** program, and it solved **multiple** mazes — even ones " +
-          "you hadn’t seen yet. That’s the real power of these two ideas:\n\n" +
-          "- **Loops** repeat the work, so you don't have to.\n" +
-          "- **Conditions** decide what to do, so your code adapts.\n\n" +
-          'Together: code that describes a *strategy*, not a specific situation.\n\n' +
-          'Same ideas show up in **data**, **AI**, **games**, **websites** — ' +
-          'everywhere. Let’s see two of those next.',
+          'Stop. **Tell me** in your own words: what made those 4 maze blocks so powerful? One sentence.',
         stage: {
-          kind: 'note',
-          title: 'Big idea',
-          body:
-            '**Code that describes a strategy generalizes.**\n\n' +
-            'Loops + conditions turn “solve this exact problem” into “solve any ' +
-            'problem like this.”',
+          kind: 'reflection-invitation',
+          prompt: 'Those 4 blocks were powerful because…',
         },
+        placeholder: 'Those 4 blocks were powerful because…',
+        acknowledgement:
+          "That's it. Your code wasn't a **list** of moves — it was a **plan**: " +
+          '*“keep going if you can, turn if you can’t.”* Plans work in many mazes. Lists only work in one.',
       },
 
-      // ── Section 13: Cross-domain — data. Filter is a condition on rows. ──
+      // ── Datasci lab. ─────────────────────────────────────────────────────
       {
         id: 'datasci-lab',
         kind: 'lab',
         tutorMessage:
-          'Same Blockly workspace, brand new domain: the **Data Science Lab**.\n\n' +
-          "You'll see a small dataset of students (grade + test score). Your goal: " +
-          '**find the average score for grade-3 students**.\n\n' +
-          'Strategy in English:\n\n' +
-          '> *“Keep only the rows where grade = 3, then average their scores.”*\n\n' +
-          'In blocks under `when run`:\n\n' +
-          '1. Drop **`filter_grade(3)`** — that’s a **condition** on each row.\n' +
-          '2. Then **`average(score)`** — like a loop that adds them all up.\n\n' +
-          'Notice: **filter is a condition. Average is a loop.** Same ideas, new ' +
-          'words.',
+          "Same blocks idea, new world: the **Data Science Lab** has rows of student scores.\n\n" +
+          'Find the **average score for grade-3 students**.\n\n' +
+          'You already know both moves — one is a **condition** (pick the right rows), one is a **loop** (average them all). Press **Run**.',
         stage: {kind: 'datasci-lab', config: DATASCI_INTRO},
-        continueLabel: 'Got the average!',
+        continueLabel: 'I pressed Run',
         successMessage:
-          'See it? **Filter = condition. Average = loop.** Different words, same ' +
-          'two ideas you learned with the pegman.',
+          'See it? **Filter = condition. Average = loop.** Same two ideas, new words.',
+        solutionCheck: {
+          rules: [
+            {
+              kind: 'requires-block',
+              type: 'datasci_filter_grade',
+              hint: 'We only care about **grade 3**. How can you tell the program to ignore every other row?',
+              hintNudge:
+                'Drag **`filter_grade(3)`** under `when run`. That is the **condition** step.',
+            },
+            {
+              kind: 'requires-block',
+              type: 'datasci_average',
+              hint: 'After filtering, you still need *one number*. What block turns many scores into one?',
+              hintNudge:
+                'Add **`average(score)`** below your filter.',
+            },
+          ],
+        },
       },
 
-      // ── Section 14: Cross-domain — AI. Train, evaluate, compare. ─────────
+      // ── AI lab. ──────────────────────────────────────────────────────────
       {
         id: 'ai-trainer-lab',
         kind: 'lab',
         tutorMessage:
-          "Last lab. The **AI Trainer**.\n\n" +
-          'A *classifier* is a recipe a computer uses to guess a label (like “friend” ' +
-          'or “foe”) for something it hasn’t seen before. You get four to try:\n\n' +
-          '- **majority** — always pick whichever label is more common.\n' +
-          '- **nearest neighbor** — look at the most similar training example and ' +
-          'copy its label.\n' +
-          '- **eyes rule** — *“if 3 eyes → foe, else friend.”*\n' +
-          '- **size rule** — *“if large → foe, else friend.”*\n\n' +
-          'Try each `predict using …` block. Then drag a `compare` block to pit two ' +
-          'against each other.\n\n' +
-          'Notice anything? Every classifier is just **conditions** (rules) being ' +
-          '**looped** over rows of data.',
+          'Last lab — the **AI Trainer**. A **sorter** decides what something is (like *friend* or *foe*).\n\n' +
+          'Four to try:\n\n' +
+          '- **majority** — guess the most common label.\n' +
+          '- **copycat** — copy the closest example you’ve seen.\n' +
+          '- **eyes rule** — *3 eyes? foe. else friend.*\n' +
+          '- **size rule** — *big? foe. else friend.*\n\n' +
+          'Pick one. Which sounds smartest? Try it and press **Run**.',
         stage: {kind: 'ai-trainer-lab', config: AI_TRAINER_INTRO},
-        continueLabel: 'Tried them all',
+        continueLabel: 'I tried it',
         successMessage:
-          "That's the loop of machine learning: **pick a model → evaluate it → " +
-          'compare to alternatives**. And underneath every model? Loops and ' +
-          'conditions. All the way down.',
+          'Notice: every sorter is just a **condition** (its rule) being **looped** over rows. ' +
+          'All the way down — same two ideas, every time.',
+        solutionCheck: {
+          rules: [
+            {
+              kind: 'min-count',
+              types: ['aitrainer_predict', 'aitrainer_compare'],
+              count: 1,
+              hint: 'Which sorter do you think will guess best? Pick one and try it.',
+              hintNudge:
+                'Drag a **`predict using …`** block under `when run` and press Run.',
+            },
+          ],
+        },
       },
 
-      // ── Section 15: Final reflection — anchor the abstraction. ───────────
+      // ── Final reflect — student does the synthesis. ──────────────────────
       {
         id: 'final-reflect',
         kind: 'free-response',
         tutorMessage:
-          'Last reflection. In your own words: **why** would the same four ' +
-          'blocks you wrote also solve a *spiral* maze you’ve never seen?\n\n' +
-          'One of the biggest ideas in programming is hiding in your answer — ' +
-          'put it your way first.',
+          'One last think. Which idea felt **hardest** today — **loops** or **conditions**? Tell me why.',
         stage: {
-          kind: 'note',
-          title: 'Reflect on the big idea',
-          body:
-            'Hint to yourself: think about what your code was really *saying*. ' +
-            'Was it saying “go through *this* maze” — or something more general?',
+          kind: 'reflection-invitation',
+          prompt: 'The hardest idea was… because…',
         },
-        placeholder: 'My code would work on other mazes because…',
+        placeholder: 'The hardest idea was… because…',
         acknowledgement:
-          'Here’s the punchline: your code didn’t describe *this maze*. It ' +
-          'described a **strategy** — *“keep going if you can, turn right if ' +
-          'you can’t.”* That strategy works on any maze with the same shape. ' +
-          '**Generalization** is what makes one program useful in many ' +
-          'situations.',
+          'Thank you for telling me. Tough ideas now → easy code later. ' +
+          "You just learned the **two ideas that show up everywhere** in programming.",
       },
 
-      // ── Section 16: Celebrate. Summarize what they actually did. ─────────
+      // ── Celebrate. ───────────────────────────────────────────────────────
       {
         id: 'wrap',
         kind: 'celebrate',
         tutorMessage:
-          'That’s the lesson. **Loops** repeat. **Conditions** decide. Together, ' +
-          'they turn code from instructions for one situation into strategies for ' +
-          'many.\n\nHere’s what you did today:',
-        stage: {
-          kind: 'note',
-          title: 'Lesson complete',
-          body:
-            'You moved through **four labs** in **one conversation** — no separate ' +
-            'level pages, no leaving the chat. Same ideas, four domains.',
-        },
+          "That's the lesson. **Loops** repeat. **Conditions** decide. Together they make code that works in lots of places.",
+        stage: {kind: 'lesson-celebrate'},
         summary: [
-          'Discovered the **repeat block** in the Music Lab — code got shorter.',
-          'Reflected on what loops save you from: repeating yourself.',
-          'Solved a maze with **`repeat until finished` + `if path ahead / else turn right`** — four blocks, no counting.',
-          'Saw that the same code would generalize to *any* maze with the same shape.',
-          'Saw the same ideas in **data**: filter = condition, average = loop.',
-          'Saw them again in **AI**: every classifier is conditions looped over rows.',
-          'Put the big idea in your own words — that’s what makes it stick.',
+          'Made a sound play **4 times** — first the long way, then with a **loop**.',
+          'Said what a **loop** is, in your own words.',
+          'Solved a maze using a **plan**: `repeat until finished + if path ahead / else turn right`.',
+          'Spotted the same code would solve any maze with the same shape.',
+          'Found an average in the **Data** lab — filter + average = condition + loop.',
+          'Tried an **AI** sorter — built from conditions and loops too.',
+          'Picked which idea felt hardest. That is how it sticks.',
         ],
       },
     ],
   },
+};
+
+// ════════════════════════════════════════════════════════════════════════
+//  Lesson #2: Intro to Classifiers — middle school (grades 6–8).
+//  Standalone AI lesson using only the AI Trainer lab. Designed with two
+//  reviewers' input (curriculum writer + practicing 7th-grade CS teacher).
+//  Load-bearing moment: `compare-eyes-vs-size` — the side-by-side accuracy
+//  numbers are where "features matter, some are distractors" lands.
+//
+//  Reviewer reorders applied:
+//   - `accuracy-name` lands *before* the first lab run, so the word
+//     "accuracy" is in the student's head when the first score appears.
+//   - `compare-eyes-vs-size` comes *before* `size-trap-debrief` — show
+//     the 100% vs 50% gap, then name the cherry-pick trap.
+// ════════════════════════════════════════════════════════════════════════
+LESSONS['intro-to-classifiers'] = {
+  id: 'intro-to-classifiers',
+  title: 'Teaching a Computer to Spot Friends and Foes',
+  subtitle: 'Train, test, and compare four AI classifiers.',
+  steps: [
+    // ── Frame the journey. ────────────────────────────────────────────────
+    {
+      id: 'welcome',
+      kind: 'concept',
+      tutorMessage:
+        "Hi! Today you'll teach a computer to tell **friends** from **foes**. " +
+        "We'll try four different ways and pick the smartest one. Press **Continue**.",
+      stage: {
+        kind: 'note',
+        title: "Today's lesson",
+        body:
+          'You will:\n\n' +
+          '- Meet a tiny dataset of 12 creatures.\n' +
+          '- Try **four classifiers** and score each one.\n' +
+          '- Spot which **feature** the computer should actually pay attention to.',
+      },
+      continueLabel: "Let's go",
+    },
+
+    // ── Hook from lived experience. ───────────────────────────────────────
+    {
+      id: 'humans-classify',
+      kind: 'multiple-choice',
+      tutorMessage:
+        'Your brain does this all day. Which question is a **classify** question? →',
+      stage: {kind: 'multiple-choice-stage-slot'},
+      options: [
+        {
+          id: 'a',
+          label: '*Is that dog friendly or scary?*',
+          isCorrect: true,
+          feedback:
+            "Yes! Two buckets, one guess. That's **classifying** — picking which group something belongs in.",
+        },
+        {
+          id: 'b',
+          label: '*How tall is that tree?*',
+          isCorrect: false,
+          feedback:
+            "That's measuring a number, not picking a bucket. Classifying is bucket-picking.",
+        },
+        {
+          id: 'c',
+          label: '*What is 7 × 8?*',
+          isCorrect: false,
+          feedback:
+            'Math problem — one right number, not a group pick. Try again.',
+        },
+      ],
+      allowRetry: true,
+    },
+
+    // ── Introduce the dataset + the split. ────────────────────────────────
+    {
+      id: 'meet-creatures',
+      kind: 'concept',
+      tutorMessage:
+        'Meet **12 creatures**. Each one has **eyes** (1 or 3) and a **size** ' +
+        '(small or large).\n\n' +
+        "We already know the labels for **6** of them — that's the " +
+        '**training set**. The other 6 are the **test set**: we hid their ' +
+        'labels on purpose.',
+      stage: {
+        kind: 'note',
+        title: 'Training vs Test',
+        body:
+          '**Training set (6):** labels visible. We use these to **teach** the model.\n\n' +
+          '**Test set (6):** labels hidden. We use these to **grade** the model.\n\n' +
+          'The split is how we know the model **actually learned** — instead of just memorizing.',
+      },
+    },
+
+    // ── Why hide test labels? (ELL-friendly phrasing.) ───────────────────
+    {
+      id: 'why-hide-test',
+      kind: 'multiple-choice',
+      tutorMessage: 'Why do we **hide** the test labels? →',
+      stage: {kind: 'multiple-choice-stage-slot'},
+      options: [
+        {
+          id: 'a',
+          label: "So the computer can't peek and just **memorize** the answers.",
+          isCorrect: true,
+          feedback:
+            "Exactly. If it sees the answers, we can't tell if it actually **learned** anything new.",
+        },
+        {
+          id: 'b',
+          label: 'Because labels are a secret.',
+          isCorrect: false,
+          feedback:
+            "We know the labels — we just hide them from the model. It's about being **fair**, not secret.",
+        },
+        {
+          id: 'c',
+          label: 'To make the game harder.',
+          isCorrect: false,
+          feedback:
+            "Close — but it's not about *hard*, it's about **fair**. Hidden answers = a real test.",
+        },
+      ],
+      allowRetry: true,
+    },
+
+    // ── Name "accuracy" BEFORE they see a score (teacher reorder #1). ─────
+    {
+      id: 'accuracy-name',
+      kind: 'multiple-choice',
+      tutorMessage:
+        "We're about to grade the model. What do we call **how often it gets the answer right**? →",
+      stage: {kind: 'multiple-choice-stage-slot'},
+      options: [
+        {
+          id: 'a',
+          label: '**Accuracy**',
+          isCorrect: true,
+          feedback:
+            'Yes! **Accuracy = right answers ÷ total.** Higher is better. Now let’s measure some.',
+        },
+        {
+          id: 'b',
+          label: 'Speed',
+          isCorrect: false,
+          feedback: 'Speed is *how fast*. We care about *how often right*.',
+        },
+        {
+          id: 'c',
+          label: 'Memory',
+          isCorrect: false,
+          feedback:
+            "Memory is how much it stores. Accuracy is *how often it's right*.",
+        },
+      ],
+      allowRetry: true,
+    },
+
+    // ── Lab 1: dumb baseline. Productive failure. ─────────────────────────
+    {
+      id: 'first-run-majority',
+      kind: 'lab',
+      tutorMessage:
+        'Open the **AI Trainer**. Drag a **`predict`** block, pick **majority** ' +
+        "from its dropdown, and press **Run**.\n\n*Majority* is a dumb baseline — " +
+        "it just guesses the most common label, every time. Let's see how it does.",
+      stage: {kind: 'ai-trainer-lab', config: AI_TRAINER_INTRO},
+      continueLabel: 'I ran majority',
+      successMessage:
+        'See its score? It got some right by **luck**, not skill. ' +
+        "Half-right on a 50/50 guess isn't learning. We can do *way* better.",
+      solutionCheck: {
+        rules: [
+          {
+            kind: 'min-count',
+            types: ['aitrainer_predict', 'aitrainer_compare'],
+            count: 1,
+            hint: "I don't see a `predict` block under `when run` yet. What block lets the computer guess?",
+            hintNudge:
+              'Drag a **`predict`** block under `when run`, set its dropdown to **majority**, and press Run.',
+          },
+        ],
+      },
+    },
+
+    // ── Lab 2: nearest-neighbor. The animation does the teaching. ─────────
+    {
+      id: 'try-nearest-neighbor',
+      kind: 'lab',
+      tutorMessage:
+        'Now change your `predict` block to **nearest-neighbor**. Press **Run** ' +
+        "and watch the **'How it works'** panel — it draws a **line** from each " +
+        'test creature to the training creature it copied the label from.',
+      stage: {kind: 'ai-trainer-lab', config: AI_TRAINER_INTRO},
+      continueLabel: 'I watched the lines',
+      successMessage:
+        'Whoa — nearest-neighbor got way more right. It copies the **closest** ' +
+        'known creature.\n\nLook at where the lines point. Notice anything about ' +
+        'the *eyes*?',
+      solutionCheck: {
+        rules: [
+          {
+            kind: 'min-count',
+            types: ['aitrainer_predict', 'aitrainer_compare'],
+            count: 1,
+            hint: 'Is there a `predict` block under `when run`? Which algorithm did you pick?',
+            hintNudge:
+              "Make sure a `predict` block is under `when run` with the dropdown on **nearest-neighbor**, then press Run.",
+          },
+        ],
+      },
+    },
+
+    // ── Articulate what the visualization showed. ─────────────────────────
+    {
+      id: 'nn-noticing',
+      kind: 'free-response',
+      tutorMessage:
+        'Look at the lines nearest-neighbor drew. What do **most of them** have in common? Type one sentence.',
+      stage: {
+        kind: 'reflection-invitation',
+        prompt: 'Most of the lines connect creatures that…',
+      },
+      placeholder: 'Most of the lines connect creatures that…',
+      acknowledgement:
+        'Right — **same number of eyes**. Nearest-neighbor didn’t *know* the ' +
+        'rule. It **accidentally found it** by copying close neighbors. Pretty cool.',
+    },
+
+    // ── Lab 3: size-rule. Productive failure: a rule that looks okay. ────
+    {
+      id: 'size-trap',
+      kind: 'lab',
+      tutorMessage:
+        'Now try **size-rule**. The rule: *if large → foe, if small → friend.* ' +
+        'Run it and see what accuracy you get.',
+      stage: {kind: 'ai-trainer-lab', config: AI_TRAINER_INTRO},
+      continueLabel: 'I ran size-rule',
+      successMessage:
+        'Notice the score: about **half right**. Look at *which ones* it got ' +
+        'wrong — small foes and large friends. Size was tricking us.',
+      solutionCheck: {
+        rules: [
+          {
+            kind: 'min-count',
+            types: ['aitrainer_predict', 'aitrainer_compare'],
+            count: 1,
+            hint: 'Did you set the `predict` block to **size-rule** before pressing Run?',
+            hintNudge:
+              'Click the dropdown on `predict`, choose **size-rule**, then press Run.',
+          },
+        ],
+      },
+    },
+
+    // ── Lab 4: the side-by-side. THE LOAD-BEARING MOMENT. ────────────────
+    //  (teacher reorder #2: compare BEFORE the debrief)
+    {
+      id: 'compare-eyes-vs-size',
+      kind: 'lab',
+      tutorMessage:
+        'Time for a fair fight. Drag a **`compare`** block. Set A to ' +
+        '**eyes-rule** and B to **size-rule**. Press **Run**.',
+      stage: {kind: 'ai-trainer-lab', config: AI_TRAINER_INTRO},
+      continueLabel: 'I compared them',
+      successMessage:
+        'Look at the accuracies side-by-side. **Eyes wins, every time.** ' +
+        'Eyes is the *real* signal in the data — size was a **distractor**, ' +
+        'a feature that *looked* useful but really wasn’t.',
+      solutionCheck: {
+        rules: [
+          {
+            kind: 'requires-block',
+            type: 'aitrainer_compare',
+            hint: 'You need a different block this time — one that runs TWO algorithms side-by-side. What might it be called?',
+            hintNudge:
+              'Drag the **`compare`** block in. Set A = **eyes-rule**, B = **size-rule**, then press Run.',
+          },
+        ],
+      },
+    },
+
+    // ── Debrief AFTER the compare shows the gap. ─────────────────────────
+    {
+      id: 'size-trap-debrief',
+      kind: 'multiple-choice',
+      tutorMessage:
+        'Size-rule got *some* right. Does that make size a **good** rule for friend-vs-foe? →',
+      stage: {kind: 'multiple-choice-stage-slot'},
+      options: [
+        {
+          id: 'a',
+          label: 'No — it got the **right answer for the wrong reason** sometimes.',
+          isCorrect: true,
+          feedback:
+            "Exactly! That's called **cherry-picking** — only counting the wins. " +
+            'Real classifiers check **every** test creature — and eyes-rule beat size every time.',
+        },
+        {
+          id: 'b',
+          label: 'Yes — any right answer means the rule works.',
+          isCorrect: false,
+          feedback:
+            "A broken clock is right twice a day. We want a rule that's right *most* of the time, for the *right reason*.",
+        },
+        {
+          id: 'c',
+          label: 'Yes — large things really are scarier.',
+          isCorrect: false,
+          feedback:
+            "Look at the data again. Plenty of *small* creatures are foes too. Size isn't the real signal.",
+        },
+      ],
+      allowRetry: true,
+    },
+
+    // ── Name the feature concept. ─────────────────────────────────────────
+    {
+      id: 'name-the-feature',
+      kind: 'multiple-choice',
+      tutorMessage:
+        'Eyes and size are both **features** — facts the model can see about each creature. ' +
+        'Which feature actually decides the label? →',
+      stage: {kind: 'multiple-choice-stage-slot'},
+      options: [
+        {
+          id: 'a',
+          label: '**Eyes** — 3 eyes means foe, 1 eye means friend.',
+          isCorrect: true,
+          feedback:
+            'Yes! Eyes is the **real feature**. Size was a **distractor** — it looked useful but wasn’t.',
+        },
+        {
+          id: 'b',
+          label: 'Size — large means foe.',
+          isCorrect: false,
+          feedback:
+            'Your `compare` block just showed size got more wrong than eyes. Look again.',
+        },
+        {
+          id: 'c',
+          label: 'Both equally.',
+          isCorrect: false,
+          feedback:
+            "The scores weren't tied — eyes-rule scored higher. Try again.",
+        },
+      ],
+      allowRetry: true,
+    },
+
+    // ── Stretch: generalization. ──────────────────────────────────────────
+    {
+      id: 'generalization',
+      kind: 'free-response',
+      tutorMessage:
+        'Imagine **100 new creatures** show up tomorrow. Would your eyes-rule still work? Why or why not?',
+      stage: {
+        kind: 'reflection-invitation',
+        prompt: 'If 100 new creatures showed up…',
+      },
+      placeholder: 'If 100 new creatures showed up…',
+      acknowledgement:
+        'Great thinking. We *hope* it would — that’s called **generalization**. ' +
+        'But our training set was tiny (only 6!). A rule learned from a small ' +
+        'group can be **biased** — it might fail on creatures we’ve never seen.',
+    },
+
+    // ── Wrap. ─────────────────────────────────────────────────────────────
+    {
+      id: 'wrap',
+      kind: 'celebrate',
+      tutorMessage:
+        'You just did real AI work — **trained**, **tested**, and **judged** four classifiers.',
+      stage: {kind: 'lesson-celebrate'},
+      summary: [
+        'Split the data: **training** to teach, **test** to grade.',
+        'Measured **accuracy** — right answers out of total.',
+        'Watched **nearest-neighbor** quietly discover the eyes rule.',
+        'Spotted the **cherry-pick trap**: size *looked* okay but wasn’t.',
+        'Named the real **feature** (eyes) vs the **distractor** (size).',
+        'Asked the big question: would my rule **generalize** to 100 new creatures?',
+      ],
+    },
+  ],
 };
 
 export function getLesson(id: string): Lesson | undefined {

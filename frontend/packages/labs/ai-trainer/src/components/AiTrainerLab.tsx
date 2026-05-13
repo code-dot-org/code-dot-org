@@ -10,6 +10,7 @@ import {runOn, type RunResult} from '../classifiers';
 import {ALGORITHM_LABELS, TEST_SET, TRAINING_SET} from '../dataset';
 import type {AlgorithmId, Creature, Label} from '../dataset';
 import type {AiTrainerLevelProperties} from '../types';
+import ClassifierVisualizer from './ClassifierVisualizer';
 
 import styles from './aiTrainerLab.module.scss';
 
@@ -137,7 +138,7 @@ const AiTrainerLab = () => {
           highlightId={currentFrame?.highlightTestId}
         />
 
-        {currentFrame && (
+        {currentFrame && lastRun && (
           <>
             <header className={styles.panelHeader}>
               <h3>{isAnimating ? 'Animating…' : 'How it works'}</h3>
@@ -156,6 +157,18 @@ const AiTrainerLab = () => {
                 </button>
               </div>
             </header>
+            <ClassifierVisualizer
+              algorithm={lastRun.algorithm}
+              predictions={perCreaturePredictions(lastRun, revealedSet)}
+              highlight={{
+                testId: currentFrame.highlightTestId,
+                trainingId: currentFrame.highlightTrainingId,
+              }}
+              revealed={
+                revealedSet ?? new Set(lastRun.predictions.map(p => p.creature.id))
+              }
+              majorityWinner={majorityWinner(lastRun)}
+            />
             <AnimationPanel frame={currentFrame} />
           </>
         )}
@@ -344,6 +357,16 @@ function generateFrames(run: RunResult): AnimFrame[] {
       return frames;
     }
   }
+}
+
+/**
+ * For the majority classifier, extract the winning label so the visualizer
+ * can tint the canvas. Other algorithms return null.
+ */
+function majorityWinner(run: RunResult): Label | null {
+  if (run.algorithm !== 'majority') return null;
+  // All predictions are the same for majority — pick the first.
+  return run.predictions[0]?.predicted ?? null;
 }
 
 function perCreaturePredictions(

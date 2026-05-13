@@ -307,6 +307,17 @@
   cursor: default;
 }
 
+.inputDisabledHint {
+  background: #f6f3ff;
+  border: 2px dashed #b9a8e4;
+  border-radius: 12px;
+  padding: 14px 16px;
+  color: #4a4760;
+  font-size: 14px;
+  text-align: center;
+  font-weight: 500;
+}
+
 .summaryList {
   margin: 0;
   padding-left: 18px;

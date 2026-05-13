@@ -1,0 +1,128 @@
+.host {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: 100%;
+}
+
+.plot {
+  display: block;
+  max-width: 100%;
+  border-radius: 12px;
+  background: white;
+  border: 1px solid #e5e7eb;
+}
+
+.canvas {
+  fill: #fafafa;
+}
+
+.axis {
+  stroke: #cbd5e1;
+  stroke-width: 1;
+  stroke-dasharray: 4 4;
+}
+
+.axisLabel {
+  font-size: 11px;
+  font-weight: 600;
+  fill: #64748b;
+  font-family: system-ui, sans-serif;
+}
+
+.dot {
+  transition: filter 220ms ease, transform 220ms ease;
+}
+
+.dotHighlighted {
+  filter: drop-shadow(0 0 6px rgba(254, 168, 55, 0.95))
+    drop-shadow(0 0 12px rgba(254, 168, 55, 0.45));
+}
+
+.dotHighlighted circle {
+  stroke: #fea837;
+  stroke-width: 3.5;
+}
+
+.dotTraining circle {
+  // Training nodes get a darker outline to read as "knowns."
+}
+
+.dotTest circle {
+  // Test nodes get a dashed border to read as "unknowns" (only matters when
+  // the dot hasn't been revealed yet — we override stroke style here).
+  stroke-dasharray: 3 2;
+}
+
+.dot:hover circle {
+  filter: brightness(1.05);
+}
+
+.idLabel {
+  font-size: 10px;
+  font-weight: 700;
+  fill: #475569;
+  font-family: system-ui, sans-serif;
+}
+
+.wrongMark {
+  font-size: 14px;
+  font-weight: 700;
+  fill: #b91c1c;
+  font-family: system-ui, sans-serif;
+}
+
+.nnLine {
+  stroke: #fea837;
+  stroke-width: 3.5;
+  stroke-dasharray: 6 4;
+  stroke-linecap: round;
+  // Subtle dash march while the highlight frame is active.
+  animation: nnMarch 1.2s linear infinite;
+}
+
+@keyframes nnMarch {
+  to {
+    stroke-dashoffset: -20;
+  }
+}
+
+.legend {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px 14px;
+  font-size: 12px;
+  color: #475569;
+  font-family: system-ui, sans-serif;
+}
+
+.legendItem {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.legendDot {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  border: 1.5px solid #1f2937;
+}
+
+.legendNote {
+  font-size: 11px;
+  color: #64748b;
+}
+
+.legendTrainingMark {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: white;
+  border: 2.5px solid #1f2937;
+  margin-right: 4px;
+  vertical-align: -2px;
+}

@@ -167,7 +167,9 @@ class AnimationsController {
         this.scheduleDance(false, danceTime);
       }
       timeoutList.setTimeout(() => {
-        this.maze.stepSpeed = 100;
+        // Restore step speed after the dance-on-load animation. Matches
+        // the constructor default in MazeController.
+        this.maze.stepSpeed = 50;
         this.scheduleTurn(this.maze.startDirection || 0);
       }, danceTime + 150);
     } else {

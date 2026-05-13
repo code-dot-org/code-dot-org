@@ -2,6 +2,7 @@ import Markdown from 'markdown-to-jsx';
 import {useCallback, useEffect, useRef, useState} from 'react';
 
 import {generateTextThroughGateway} from './aiGateway';
+import {MARKDOWN_OPTIONS as TUTOR_MARKDOWN_OPTIONS} from './markdown';
 import type {AiTutorSuggestedPrompt, ChatTurn} from './types';
 
 import styles from './aiTutor.module.scss';
@@ -13,6 +14,13 @@ export interface AiTutorInjectedMessage {
    * so callers don't need to memoize.
    */
   id: string;
+  body: string;
+}
+
+export interface AiTutorInjectedTurn {
+  /** Stable id; the same id across renders is a no-op (won't re-append). */
+  id: string;
+  role: 'tutor' | 'student';
   body: string;
 }
 
@@ -77,6 +85,25 @@ export interface AiTutorChatProps {
    */
   injectedMessage?: AiTutorInjectedMessage;
   /**
+   * Append any number of turns (tutor *or* student) from outside the
+   * component. Each turn's `id` is the dedupe key. Useful when the host
+   * owns an off-chat interaction (e.g., MC on the stage) and wants both
+   * the student's selection and the scripted feedback to land in the chat
+   * log atomically.
+   */
+  injectedTurns?: AiTutorInjectedTurn[];
+  /**
+   * When true, disables the textarea + Send button. Use during step types
+   * that own their input elsewhere (e.g., MC on the stage) — the chat still
+   * shows the conversation but the student answers via the stage.
+   */
+  inputDisabled?: boolean;
+  /**
+   * Hint text displayed in place of the input when `inputDisabled` is true.
+   * Keeps the chat panel useful (rather than dead) during off-chat steps.
+   */
+  inputDisabledHint?: string;
+  /**
    * If set, the chat shows back / continue controls (and a Step X of N pill).
    * Clicking either control appends a student turn into the log so the
    * advancement reads conversationally — the parent owns the actual step
@@ -122,10 +149,14 @@ const AiTutorChat = ({
   placeholder = 'Ask the tutor anything…',
   emptyHint = 'Ask a question to get started.',
   injectedMessage,
+  injectedTurns,
+  inputDisabled = false,
+  inputDisabledHint,
   stepControls,
   stepChoices,
   onTurn,
 }: AiTutorChatProps) => {
+  const seenInjectedTurnIdsRef = useRef<Set<string>>(new Set());
   const [pickedChoiceIds, setPickedChoiceIds] = useState<Set<string>>(
     () => new Set(),
   );
@@ -159,6 +190,19 @@ const AiTutorChat = ({
     lastInjectedIdRef.current = injectedMessage.id;
     appendTurn({role: 'tutor', body: injectedMessage.body});
   }, [injectedMessage, appendTurn]);
+
+  // Append any external turns whose id we haven't seen. Lets the host push
+  // both a student turn and the tutor's reply in one go (e.g., MC choices
+  // owned by the stage). Order is preserved by the input array.
+  useEffect(() => {
+    if (!injectedTurns || injectedTurns.length === 0) return;
+    const seen = seenInjectedTurnIdsRef.current;
+    for (const turn of injectedTurns) {
+      if (seen.has(turn.id)) continue;
+      seen.add(turn.id);
+      appendTurn({role: turn.role, body: turn.body});
+    }
+  }, [injectedTurns, appendTurn]);
 
   // Reset chip state whenever the *identity* of the choices array changes —
   // i.e. when the lesson advances to a different step. The parent shouldn't
@@ -312,7 +356,9 @@ const AiTutorChat = ({
                   disabled={picked || isThinking}
                   onClick={() => handleChoiceClick(choice)}
                 >
-                  {choice.label}
+                  <Markdown options={MARKDOWN_OPTIONS}>
+                    {choice.label}
+                  </Markdown>
                 </button>
               );
             })}
@@ -333,36 +379,44 @@ const AiTutorChat = ({
             ))}
           </div>
         )}
-        <form
-          className={styles.freeResponseRow}
-          onSubmit={e => {
-            e.preventDefault();
-            send(pendingText);
-            setPendingText('');
-          }}
-        >
-          <textarea
-            className={styles.freeResponseInput}
-            placeholder={placeholder}
-            value={pendingText}
-            onChange={e => setPendingText(e.target.value)}
-            onKeyDown={e => {
-              if (e.key === 'Enter' && !e.shiftKey) {
-                e.preventDefault();
-                send(pendingText);
-                setPendingText('');
-              }
+        {inputDisabled ? (
+          <div className={styles.inputDisabledHint}>
+            {inputDisabledHint ?? 'Answer on the right →'}
+          </div>
+        ) : (
+          <form
+            className={styles.freeResponseRow}
+            onSubmit={e => {
+              e.preventDefault();
+              send(pendingText);
+              setPendingText('');
             }}
-            rows={2}
-            disabled={isThinking}
-          />
-        </form>
+          >
+            <textarea
+              className={styles.freeResponseInput}
+              placeholder={placeholder}
+              value={pendingText}
+              onChange={e => setPendingText(e.target.value)}
+              onKeyDown={e => {
+                if (e.key === 'Enter' && !e.shiftKey) {
+                  e.preventDefault();
+                  send(pendingText);
+                  setPendingText('');
+                }
+              }}
+              rows={2}
+              disabled={isThinking}
+            />
+          </form>
+        )}
         {(() => {
           // One contextual primary action:
           //   - typing text → "Send"
           //   - empty input + a next step waiting → "Continue →"
           //   - empty input + no next step → "Send" disabled
           // Enter on the textarea always sends; the button stays in sync.
+          // When input is disabled (e.g., MC owned by stage), only the
+          // navigation controls show — the primary action is hidden.
           const hasText = !!pendingText.trim();
           const mode: 'send' | 'continue' =
             !hasText && canNext ? 'continue' : 'send';
@@ -391,18 +445,20 @@ const AiTutorChat = ({
                   ← {stepControls.backLabel ?? 'Go back'}
                 </button>
               )}
-              <button
-                type="button"
-                className={styles.primaryButton}
-                disabled={primaryDisabled}
-                onClick={onPrimary}
-              >
-                {isThinking
-                  ? 'Thinking…'
-                  : mode === 'continue'
-                    ? `${stepControls?.nextLabel ?? 'Continue'} →`
-                    : 'Send'}
-              </button>
+              {!inputDisabled && (
+                <button
+                  type="button"
+                  className={styles.primaryButton}
+                  disabled={primaryDisabled}
+                  onClick={onPrimary}
+                >
+                  {isThinking
+                    ? 'Thinking…'
+                    : mode === 'continue'
+                      ? `${stepControls?.nextLabel ?? 'Continue'} →`
+                      : 'Send'}
+                </button>
+              )}
             </div>
           );
         })()}
@@ -411,16 +467,11 @@ const AiTutorChat = ({
   );
 };
 
-// Markdown options: tutor messages and authored lesson content lean on **bold**,
-// `code`, and bullet lists. Force paragraphs into `<span>` so block bubble
-// styling (which already wraps the content) doesn't get nested-paragraph
-// margins. Keep the renderer minimal — no raw HTML pass-through.
-const MARKDOWN_OPTIONS = {
-  overrides: {
-    p: {component: 'span', props: {style: {display: 'block'}}},
-  },
-  disableParsingRawHTML: true,
-} as const;
+// Markdown options used inside chat bubbles. Re-exported for callers that
+// need to render authored lesson content (MC chip labels, stage note bodies,
+// celebrate summary bullets) with the *same* rules — see `MARKDOWN_OPTIONS`
+// in `./index.ts`.
+const MARKDOWN_OPTIONS = TUTOR_MARKDOWN_OPTIONS;
 
 const ChatBubble = ({turn}: {turn: ChatTurn}) => {
   if (turn.role === 'tutor') {

@@ -18,6 +18,7 @@ export {default as AiTutorChat} from './AiTutorChat';
 export type {
   AiTutorChatProps,
   AiTutorInjectedMessage,
+  AiTutorInjectedTurn,
   AiTutorStepChoice,
   AiTutorStepControls,
 } from './AiTutorChat';
@@ -49,6 +50,8 @@ export {
   MAX_CONSOLE_LINES,
   type BuildContextStringOptions,
 } from './aiTutorContext';
+
+export {MARKDOWN_OPTIONS} from './markdown';
 
 export {
   defaultPrompts,

@@ -1,0 +1,684 @@
+// Shared design tokens for stage primitives. Aligns with Code.org's brand
+// palette and CSF-friendly visual style — round, big, bright.
+
+$teal: rgb(0, 173, 184);
+$tealSoft: rgba(0, 173, 184, 0.15);
+$orange: rgb(254, 168, 55);
+$orangeSoft: rgba(254, 168, 55, 0.18);
+$purple: rgb(92, 33, 193);
+$purpleSoft: rgba(92, 33, 193, 0.12);
+$cream: #fff9f0;
+$ink: #1c1b1f;
+$inkSoft: #4a4760;
+
+.host {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  height: 100%;
+  padding: 20px;
+  gap: 16px;
+  overflow: auto;
+}
+
+.headline {
+  font-size: 24px;
+  font-weight: 700;
+  color: $ink;
+  margin: 0;
+  text-align: center;
+}
+
+.subhead {
+  font-size: 16px;
+  color: $inkSoft;
+  margin: 0;
+  text-align: center;
+  max-width: 480px;
+}
+
+.canvas {
+  position: relative;
+  width: 100%;
+  max-width: 520px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.controlRow {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  margin-top: 12px;
+}
+
+.ctrlButton {
+  background: white;
+  color: $ink;
+  border: 2px solid $purple;
+  border-radius: 999px;
+  padding: 8px 16px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.12s ease, color 0.12s ease;
+}
+
+.ctrlButton:hover:not(:disabled) {
+  background: $purple;
+  color: white;
+}
+
+.ctrlButton:disabled {
+  opacity: 0.4;
+  cursor: default;
+}
+
+.ctrlButtonPrimary {
+  background: $purple;
+  color: white;
+}
+
+.ctrlButtonPrimary:hover:not(:disabled) {
+  background: darken($purple, 8%);
+  color: white;
+}
+
+.chipGroup {
+  display: inline-flex;
+  border: 2px solid $purple;
+  border-radius: 999px;
+  overflow: hidden;
+}
+
+.chipBtn {
+  background: white;
+  color: $ink;
+  border: none;
+  padding: 6px 12px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.chipBtn[aria-pressed='true'] {
+  background: $purple;
+  color: white;
+}
+
+// === MultipleChoiceStage ===
+.mcQuestionCard {
+  background: white;
+  border: 3px solid $purple;
+  border-radius: 22px;
+  padding: 20px 24px;
+  width: 100%;
+  max-width: 560px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+}
+
+.mcEyebrow {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: $purple;
+}
+
+.mcQuestion {
+  margin: 0;
+  font-size: 22px;
+  font-weight: 700;
+  color: $ink;
+  line-height: 1.3;
+}
+
+.mcOptionList {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  width: 100%;
+  max-width: 560px;
+}
+
+.mcOption {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 16px 18px;
+  border: 3px solid $purple;
+  background: white;
+  border-radius: 16px;
+  font-size: 17px;
+  font-weight: 500;
+  color: $ink;
+  cursor: pointer;
+  text-align: left;
+  transition: background 0.15s ease, border-color 0.15s ease, transform 0.1s ease;
+}
+
+.mcOption:hover:not(:disabled) {
+  background: $purpleSoft;
+  transform: translateY(-1px);
+}
+
+.mcOption:disabled {
+  cursor: default;
+}
+
+.mcOptionMarker {
+  background: $purple;
+  color: white;
+  border-radius: 999px;
+  width: 32px;
+  height: 32px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  font-weight: 700;
+  font-size: 15px;
+}
+
+.mcOptionLabel {
+  flex: 1;
+  line-height: 1.35;
+}
+
+.mcOptionLabel code {
+  background: #f1ecff;
+  padding: 1px 6px;
+  border-radius: 6px;
+  font-size: 15px;
+}
+
+.mcOptionCorrect {
+  border-color: #2e7d32;
+  background: #e8f5e9;
+}
+
+.mcOptionCorrect .mcOptionMarker {
+  background: #2e7d32;
+}
+
+.mcOptionWrong {
+  border-color: #c62828;
+  background: #fdecea;
+  opacity: 0.65;
+}
+
+.mcOptionWrong .mcOptionMarker {
+  background: #c62828;
+}
+
+.mcResolvedHint {
+  margin: 4px 0 0;
+  font-size: 14px;
+  color: $inkSoft;
+  font-style: italic;
+}
+
+// === LoopCollapse ===
+.lcStage {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+// === UnrollTape ===
+.utRibbon {
+  display: grid;
+  gap: 6px;
+  width: 100%;
+  margin-top: 14px;
+}
+
+.utSlot {
+  background: $tealSoft;
+  border: 2px dashed $teal;
+  border-radius: 12px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 14px;
+  color: $ink;
+  font-weight: 600;
+  font-size: 15px;
+  transition:
+    background 0.25s ease,
+    border-color 0.25s ease,
+    transform 0.25s ease;
+}
+
+.utSlotFilled {
+  background: $teal;
+  border-style: solid;
+  color: white;
+}
+
+.utSlotActive {
+  box-shadow: 0 0 0 3px rgba(0, 173, 184, 0.35);
+}
+
+.utSlotNum {
+  display: inline-block;
+  background: white;
+  color: $purple;
+  font-weight: 700;
+  border-radius: 999px;
+  min-width: 24px;
+  padding: 1px 8px;
+  text-align: center;
+  font-size: 13px;
+}
+
+.utSlotFilled .utSlotNum {
+  background: rgba(255, 255, 255, 0.95);
+}
+
+// === QuestionVsAction ===
+.qaRow {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 36px;
+  width: 100%;
+}
+
+.qaBlock {
+  position: relative;
+  width: 200px;
+  padding: 18px 16px;
+  border-radius: 16px;
+  font-weight: 700;
+  font-size: 16px;
+  text-align: center;
+  color: white;
+  transition:
+    transform 0.25s ease,
+    opacity 0.25s ease;
+}
+
+.qaAsk {
+  background: $orange;
+  // Bubble shape: tail on bottom-left.
+  clip-path: polygon(
+    0% 0%,
+    100% 0%,
+    100% 78%,
+    32% 78%,
+    20% 100%,
+    20% 78%,
+    0% 78%
+  );
+}
+
+.qaDo {
+  background: $teal;
+  // Arrow shape: pointed right.
+  clip-path: polygon(0% 12%, 80% 12%, 100% 50%, 80% 88%, 0% 88%);
+}
+
+.qaBlockMuted {
+  opacity: 0.4;
+}
+
+.qaBlockTilt {
+  transform: rotate(-4deg);
+}
+
+.qaBlockBoot {
+  transform: translateX(20px);
+}
+
+.qaBubble {
+  position: absolute;
+  top: -40px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: white;
+  color: $orange;
+  border: 3px solid $orange;
+  border-radius: 999px;
+  padding: 4px 12px;
+  font-size: 14px;
+  font-weight: 700;
+  opacity: 0;
+  transition: opacity 0.25s ease, transform 0.25s ease;
+}
+
+.qaBubbleVisible {
+  opacity: 1;
+  transform: translateX(-50%) translateY(-4px);
+}
+
+.qaLabel {
+  margin-top: 12px;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: $inkSoft;
+  text-align: center;
+}
+
+// === ConditionFork ===
+.cfBoard {
+  position: relative;
+  width: 100%;
+  max-width: 460px;
+  aspect-ratio: 4 / 3;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 0;
+}
+
+.cfDiamond {
+  width: 140px;
+  height: 140px;
+  background: $purple;
+  color: white;
+  border-radius: 24px;
+  transform: rotate(45deg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cfDiamondLabel {
+  transform: rotate(-45deg);
+  text-align: center;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.2;
+  max-width: 100px;
+}
+
+.cfBranches {
+  display: flex;
+  gap: 48px;
+  justify-content: center;
+  width: 100%;
+}
+
+.cfBranch {
+  width: 180px;
+  height: 64px;
+  border-radius: 14px;
+  background: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 16px;
+  color: $inkSoft;
+  border: 3px solid transparent;
+  transition: color 0.25s ease, border-color 0.25s ease,
+    background 0.25s ease;
+}
+
+.cfBranchYes {
+  border-color: $teal;
+}
+
+.cfBranchNo {
+  border-color: $orange;
+}
+
+.cfBranchActiveYes {
+  background: $teal;
+  color: white;
+}
+
+.cfBranchActiveNo {
+  background: $orange;
+  color: white;
+}
+
+.cfConnector {
+  position: absolute;
+  pointer-events: none;
+  inset: 0;
+}
+
+// === PegmanStepTrace ===
+.pstGrid {
+  display: grid;
+  background: $purpleSoft;
+  border-radius: 14px;
+  padding: 8px;
+  gap: 4px;
+  width: 100%;
+  max-width: 420px;
+  aspect-ratio: 1 / 1;
+}
+
+.pstCell {
+  border-radius: 6px;
+  position: relative;
+  transition: outline-color 0.2s ease, outline-width 0.2s ease;
+  outline: 0 solid transparent;
+}
+
+.pstCellWall {
+  background: rgba(28, 27, 31, 0.06);
+}
+
+.pstCellOpen {
+  background: white;
+}
+
+.pstCellStart {
+  background: $orangeSoft;
+}
+
+.pstCellFinish {
+  background: $tealSoft;
+}
+
+.pstCellOpenAhead {
+  outline: 3px solid $teal;
+}
+
+.pstCellWallAhead {
+  outline: 3px solid $orange;
+}
+
+.pstPegman {
+  width: 70%;
+  height: 70%;
+  margin: 15%;
+  background: $purple;
+  border-radius: 50%;
+  position: relative;
+  transition: outline 0.2s ease;
+}
+
+.pstPegman::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 10px;
+  height: 10px;
+  background: white;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.pstPegmanArrow {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 16px;
+  height: 16px;
+  margin-top: -8px;
+  margin-left: -8px;
+  transform-origin: center;
+}
+
+.pstPegmanArrow::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  margin-left: -4px;
+  width: 0;
+  height: 0;
+  border-left: 4px solid transparent;
+  border-right: 4px solid transparent;
+  border-bottom: 8px solid white;
+}
+
+.pstPegmanPulse {
+  outline: 4px solid rgba(254, 168, 55, 0.5);
+}
+
+.pstLedger {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 6px;
+  margin-top: 12px;
+}
+
+.pstLedgerItem {
+  border-radius: 999px;
+  padding: 4px 10px;
+  font-size: 13px;
+  font-weight: 700;
+  color: white;
+}
+
+.pstLedgerYes {
+  background: $teal;
+}
+
+.pstLedgerNo {
+  background: $orange;
+}
+
+// === ReflectionInvitation ===
+.riCard {
+  background: $cream;
+  border: 3px solid $purple;
+  border-radius: 28px;
+  padding: 28px 32px;
+  width: 100%;
+  max-width: 440px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+}
+
+.riDots {
+  display: flex;
+  gap: 10px;
+  margin: 8px 0;
+}
+
+.riDot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: $orange;
+  opacity: 0.7;
+}
+
+.riPrompt {
+  font-size: 18px;
+  color: $ink;
+  font-weight: 600;
+  line-height: 1.35;
+}
+
+// === LessonCelebration ===
+.lcGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+  width: 100%;
+  max-width: 440px;
+}
+
+.lcTile {
+  aspect-ratio: 1;
+  border-radius: 22px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 32px;
+  color: white;
+  font-weight: 700;
+  transform: scale(0.6);
+  opacity: 0;
+  animation: lcTileLand 480ms cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+}
+
+@keyframes lcTileLand {
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.lcMedallion {
+  background: $purple;
+  color: white;
+  border-radius: 20px;
+  padding: 16px 24px;
+  font-size: 20px;
+  font-weight: 700;
+  text-align: center;
+  margin-top: 18px;
+  transform: scale(0);
+  animation: lcMedallion 600ms cubic-bezier(0.34, 1.56, 0.64, 1) 1.3s forwards;
+}
+
+@keyframes lcMedallion {
+  to {
+    transform: scale(1);
+  }
+}
+
+.lcSummary {
+  list-style: none;
+  padding: 0;
+  margin: 18px 0 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: 100%;
+  max-width: 440px;
+}
+
+.lcSummaryItem {
+  background: white;
+  border: 2px solid $purple;
+  border-radius: 14px;
+  padding: 10px 14px;
+  font-size: 15px;
+  color: $ink;
+  opacity: 0;
+  transform: translateY(8px);
+  animation: lcRow 500ms ease-out forwards;
+}
+
+@keyframes lcRow {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
