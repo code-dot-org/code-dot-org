@@ -1,8 +1,9 @@
-// Side-effect import: webpack folds RotateContainer's display-rules into the
-// javalab-lab2 chunk so the "rotate your device" overlay stays hidden outside
-// portrait mobile. Lab2's base CSS doesn't include this rule, and the overlay
-// is rendered unconditionally by StudioAppWrapper.
+// Side-effect imports: webpack folds the legacy Java Lab and rotate-overlay
+// stylesheets into the javalab-lab2 chunk. The legacy javalab.css used to
+// load these into the page via the dashboard's legacy show.html.haml; under
+// lab2 they only reach the page if this lab pulls them in itself.
 import '../../../style/RotateContainer.scss';
+import '../../../style/javalab/style.scss';
 
 // Top-level Java Lab view under Lab2.
 //
@@ -40,12 +41,15 @@ import {
 } from '@cdo/apps/lab2/projects/utils';
 import {LabProps, ProjectSources} from '@cdo/apps/lab2/types';
 import {LifecycleEvent} from '@cdo/apps/lab2/utils/LifecycleNotifier';
+import UserPreferences from '@cdo/apps/lib/util/UserPreferences';
 import mazeSkins from '@cdo/apps/maze/skins';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import Neighborhood from '@cdo/apps/miniApps/neighborhood/Neighborhood';
 import {getStore, registerReducers} from '@cdo/apps/redux';
-import instructions from '@cdo/apps/redux/instructions';
+import instructions, {
+  setInstructionsConstants,
+} from '@cdo/apps/redux/instructions';
 import pageConstants, {setPageConstants} from '@cdo/apps/redux/pageConstants';
 import runState from '@cdo/apps/redux/runState';
 import {BackpackAPIContext} from '@cdo/apps/sharedComponents/backpack/BackpackAPIContext';
@@ -140,11 +144,14 @@ function buildAssetUrl(): (path: string) => string {
 }
 
 // Translate lab2's Theme context into the legacy DisplayTheme string used by
-// JavalabView's CodeMirror styling. DisplayTheme is a plain JS object whose
-// values are typed as `string`; viewRedux's setDisplayTheme expects the
-// narrower `'light' | 'dark'` literal union, so we narrow here.
+// JavalabView's CodeMirror styling. Default to dark when the lab2 theme is
+// unset — matches DEFAULT_DISPLAY_THEME in DisplayTheme.js and the historical
+// Java Lab look. The async UserPreferences.getDisplayTheme() lookup happens
+// in an effect below so we can update the redux store once it resolves.
 function themeToDisplayTheme(theme: Theme | undefined): 'light' | 'dark' {
-  return theme === 'Dark' ? 'dark' : 'light';
+  if (theme === 'Dark') return 'dark';
+  if (theme === 'Light') return 'light';
+  return 'dark';
 }
 
 interface MiniAppHandle {
@@ -199,6 +206,60 @@ const JavaLab2View: React.FunctionComponent<
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     getStore().dispatch(setDisplayTheme(themeToDisplayTheme(theme)) as any);
   }, [theme]);
+
+  // Async-restore the user's persisted DisplayTheme preference. The legacy
+  // server-render shipped this in config.displayTheme; under lab2 we fetch it
+  // once over the API and update redux if it differs from the default.
+  useEffect(() => {
+    let cancelled = false;
+    new UserPreferences()
+      .getDisplayTheme()
+      .then((saved: string | undefined) => {
+        if (cancelled) return;
+        if (saved === 'light' || saved === 'dark') {
+          // eslint-disable-next-line @typescript-eslint/no-explicit-any
+          getStore().dispatch(setDisplayTheme(saved) as any);
+        }
+      });
+    return () => {
+      cancelled = true;
+    };
+  }, []);
+
+  // Populate state.instructions from levelProperties. JavalabView's
+  // `hasInstructions` check (and the consequent left-panel sizing in
+  // JavalabPanels) reads from state.instructions.longInstructions, which
+  // lab2 doesn't populate on its own.
+  useEffect(() => {
+    dispatch(
+      setInstructionsConstants({
+        noInstructionsWhenCollapsed: undefined,
+        shortInstructions: undefined,
+        shortInstructions2: undefined,
+        longInstructions: levelProperties.longInstructions,
+        dynamicInstructions: undefined,
+        hasContainedLevels:
+          !!levelProperties.containedLevelNames &&
+          levelProperties.containedLevelNames.length > 0,
+        overlayVisible: undefined,
+        teacherMarkdown: levelProperties.teacherMarkdown,
+        levelVideos: levelProperties.helpVideos,
+        mapReference: levelProperties.mapReference,
+        referenceLinks: levelProperties.referenceLinks,
+        muteBackgroundMusic: undefined,
+        unmuteBackgroundMusic: undefined,
+        programmingEnvironment: undefined,
+      })
+    );
+  }, [
+    dispatch,
+    levelProperties.longInstructions,
+    levelProperties.containedLevelNames,
+    levelProperties.teacherMarkdown,
+    levelProperties.mapReference,
+    levelProperties.referenceLinks,
+    levelProperties.helpVideos,
+  ]);
 
   // Sources, validation, level metadata.
   useJavalabSources({
