@@ -5,10 +5,10 @@ description 'description here'
 markdown <<MARKDOWN
 # Unit 1 Scenario Quiz 
 
-#### **Directions:**  
-#### The following scenarios represent common situations you may encounter while supporting students using AI to build websites with HTML and CSS.
+**Directions:**  
+The following scenarios represent common situations you may encounter while supporting students using AI to build websites with HTML and CSS.
 
-#### For each scenario, select the facilitation move that best supports strong prompting, student understanding, and an iterative coding process.
+For each scenario, select the facilitation move that best supports strong prompting, student understanding, and an iterative coding process.
 
 ---
 
@@ -18,12 +18,12 @@ markdown <<MARKDOWN
      alt="student overwhelmed by lots of code"  
      style="width: 40%; border-radius: 10px; margin: 0px 0px 10px 10px; float: right;">
 
-#### **Scenario:**  
-#### A student opens the starter code for an HTML page and immediately says, “There’s too much code. I don’t understand any of this.”
+**Scenario:**  
+A student opens the starter code for an HTML page and immediately says, “There’s too much code. I don’t understand any of this.”
 
-#### They seem overwhelmed and are unsure where to begin.
+They seem overwhelmed and are unsure where to begin.
 
-#### What is the best facilitation move?
+What is the best facilitation move?
 
 <div style="clear:both;"></div>
 
@@ -83,12 +83,12 @@ D) Tell them to ask AI to explain all of the code at once
      alt="student typing vague prompt into AI"  
      style="width: 40%; border-radius: 10px; margin: 0px 0px 10px 10px; float: right;">
 
-#### **Scenario:**  
-#### A student wants to use AI to build part of their website and types, “Make my website better.”
+**Scenario:**  
+A student wants to use AI to build part of their website and types, “Make my website better.”
 
-#### The AI gives them a response, but it does not match what they wanted.
+The AI gives them a response, but it does not match what they wanted.
 
-#### What should you do?
+What should you do?
 
 <div style="clear:both;"></div>
 
@@ -148,12 +148,12 @@ D) Tell them to keep submitting the same prompt until they get a better answer
      alt="student unsure where to place code"  
      style="width: 40%; border-radius: 10px; margin: 0px 0px 10px 10px; float: right;">
 
-#### **Scenario:**  
-#### A student wants to add a new section to their homepage, but they start typing code into a random part of the HTML file.
+**Scenario:**  
+A student wants to add a new section to their homepage, but they start typing code into a random part of the HTML file.
 
-#### When you ask where the new section belongs, they are not sure.
+When you ask where the new section belongs, they are not sure.
 
-#### What is the best facilitation move?
+What is the best facilitation move?
 
 <div style="clear:both;"></div>
 
@@ -214,12 +214,12 @@ D) Ask AI to decide where the code should go without reading the starter code
      alt="student not testing webpage"  
      style="width: 40%; border-radius: 10px; margin: 0px 0px 10px 10px; float: right;">
 
-#### **Scenario:**  
-#### A student uses AI to generate CSS for their website. They paste the code in, but they do not preview the page or check whether the design matches their goal.
+**Scenario:**  
+A student uses AI to generate CSS for their website. They paste the code in, but they do not preview the page or check whether the design matches their goal.
 
-#### They say, “The AI gave it to me, so it should be right.”
+They say, “The AI gave it to me, so it should be right.”
 
-#### What should you do?
+What should you do?
 
 <div style="clear:both;"></div>
 

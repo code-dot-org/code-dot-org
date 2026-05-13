@@ -13,7 +13,7 @@
     "parent_level_id": 28494,
     "name_suffix": "_2023",
     "encrypted": "false",
-    "long_instructions": "#Bug Talks Code-Along Video (Placeholder)\r\n\r\n\r\n\r\n##Great job! You just debugged a program!\r\n#### Watch the video below to learn more about debugging. "
+    "long_instructions": "#Bug Talks Code-Along Video (Placeholder)\r\n\r\n\r\n\r\n##Great job! You just debugged a program!\r\nWatch the video below to learn more about debugging. "
   },
   "notes": "",
   "audit_log": "[{\"changed_at\":\"2024-08-29T21:58:12.748+00:00\",\"changed\":[\"cloned from \\\"reflective debugging codealong\\\"\"],\"cloned_from\":\"reflective debugging codealong\"},{\"changed_at\":\"2024-08-29 21:58:32 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18981,\"changed_by_email\":\"melissa.toohey@code.org\"}]",

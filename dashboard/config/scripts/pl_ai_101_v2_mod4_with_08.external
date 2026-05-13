@@ -5,19 +5,19 @@ description 'description here'
 markdown <<MARKDOWN
 # Practice
 
-#### Before allowing students to jump into using AI, it’s important to recognize that simply letting them “chat” with an LLM often leads to shallow or unproductive interactions. Without structure, students may ask vague questions, accept answers at face value, or miss opportunities for deeper thinking.
+Before allowing students to jump into using AI, it’s important to recognize that simply letting them “chat” with an LLM often leads to shallow or unproductive interactions. Without structure, students may ask vague questions, accept answers at face value, or miss opportunities for deeper thinking.
 
-#### As educators, we can add that structure in multiple ways—through worksheets, discussion protocols, or guided activities. Another powerful approach is to build the structure directly into the prompt itself. Well-designed prompts can guide students to think critically, reflect, revise, and engage more deeply with content.
+As educators, we can add that structure in multiple ways—through worksheets, discussion protocols, or guided activities. Another powerful approach is to build the structure directly into the prompt itself. Well-designed prompts can guide students to think critically, reflect, revise, and engage more deeply with content.
 
-#### Let's try out some prompts that can be used with students.
+Let's try out some prompts that can be used with students.
 
 ## Educator’s Choice
 
-#### 1. Choose an LLM, such as <a href="https://chat.openai.com/" target="_blank">ChatGPT</a>, <a href="https://www.bing.com/chat" target="_blank">Copilot</a>, or <a href="https://gemini.google.com/" target="_blank">Gemini</a>, to prompt.
-#### 2. Select one of the prompts from the prompt library below.
-#### 3. 👉 Click on the prompt title to reveal the entire prompt. Copy and paste it into the LLM of your choice. 
-#### *Prompts may have [ ] for you to fill in with additional context from your classroom.*
-#### 4. Interact with the prompt! We recommended that you take on the role of a student while prompting to see how the LLM responds.
+1. Choose an LLM, such as <a href="https://chat.openai.com/" target="_blank">ChatGPT</a>, <a href="https://www.bing.com/chat" target="_blank">Copilot</a>, or <a href="https://gemini.google.com/" target="_blank">Gemini</a>, to prompt.
+2. Select one of the prompts from the prompt library below.
+3. 👉 Click on the prompt title to reveal the entire prompt. Copy and paste it into the LLM of your choice. 
+*Prompts may have [ ] for you to fill in with additional context from your classroom.*
+4. Interact with the prompt! We recommended that you take on the role of a student while prompting to see how the LLM responds.
 
 ## Prompt Library
 

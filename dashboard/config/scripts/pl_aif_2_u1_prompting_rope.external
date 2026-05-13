@@ -5,11 +5,11 @@ description 'description here'
 markdown <<MARKDOWN
 # Prompting Basics
 
-#### Now that you have set up your first website with HTML, let's talk about prompting. 
+Now that you have set up your first website with HTML, let's talk about prompting. 
 
-#### Strong prompting skills help them clearly describe the webpage they want to create, ask for useful code, and improve the design of their site.
+Strong prompting skills help them clearly describe the webpage they want to create, ask for useful code, and improve the design of their site.
 
-#### AI tools can give very different results depending on how a prompt is written. A strong prompt gives the AI enough information to understand the goal, the audience, the structure of the page, and any design requirements.
+AI tools can give very different results depending on how a prompt is written. A strong prompt gives the AI enough information to understand the goal, the audience, the structure of the page, and any design requirements.
 
 ## Strong Prompt Checklist
 
@@ -46,17 +46,17 @@ markdown <<MARKDOWN
 
 ## Example Prompts 
 
-#### **Example 1: Setting up an HTML page**
+**Example 1: Setting up an HTML page**
 
-#### I am building a beginner HTML website for a school club. Generate HTML for a page with a header, navigation bar, main content area, and footer. The navigation bar should include Home, Events, Photos, and Contact. Keep the code simple and use semantic HTML tags.
+I am building a beginner HTML website for a school club. Generate HTML for a page with a header, navigation bar, main content area, and footer. The navigation bar should include Home, Events, Photos, and Contact. Keep the code simple and use semantic HTML tags.
 
-#### **Example 2: Adding content for a real audience**
+**Example 2: Adding content for a real audience**
 
-#### I am creating a homepage for middle school students joining a robotics club. Write HTML for a welcoming homepage that includes a title, short introduction paragraph, three reasons to join, and a footer with contact information. Use clear text that a student would understand.
+I am creating a homepage for middle school students joining a robotics club. Write HTML for a welcoming homepage that includes a title, short introduction paragraph, three reasons to join, and a footer with contact information. Use clear text that a student would understand.
 
-#### **Example 3: Layering in CSS design**
+**Example 3: Layering in CSS design**
 
-#### I already have a basic HTML page for a personal portfolio. Write beginner-friendly CSS to make the page look more polished. Add styling for the header, navigation bar, main content cards, and footer. Use readable fonts, spacing, borders, and a simple color palette.
+I already have a basic HTML page for a personal portfolio. Write beginner-friendly CSS to make the page look more polished. Add styling for the header, navigation bar, main content cards, and footer. Use readable fonts, spacing, borders, and a simple color palette.
 
 ---
 
@@ -67,5 +67,5 @@ markdown <<MARKDOWN
 
 ## Reminder
 
-#### As you work through this module, remember: the clearer your prompt, the more useful and accurate the code the AI will generate.
+As you work through this module, remember: the clearer your prompt, the more useful and accurate the code the AI will generate.
 MARKDOWN

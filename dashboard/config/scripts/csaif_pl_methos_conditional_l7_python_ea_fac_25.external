@@ -5,11 +5,11 @@ description 'description here'
 markdown <<MARKDOWN
 # Methods Used with Conditional Statements 
 
-#### The following methods can be used in conditional statements to check the Painter’s surroundings in the Neighborhood IDE.
+The following methods can be used in conditional statements to check the Painter’s surroundings in the Neighborhood IDE.
 
-#### These methods help determine movement, paint status, and direction, allowing the Painter to make decisions before taking action.
+These methods help determine movement, paint status, and direction, allowing the Painter to make decisions before taking action.
 
-#### Notice these boolean statements can be evaluated as **true** or **false**.
+Notice these boolean statements can be evaluated as **true** or **false**.
 
 <table border="1" cellspacing="0" cellpadding="5">
     <tr>

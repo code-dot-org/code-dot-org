@@ -5,9 +5,9 @@ description 'description here'
 markdown <<MARKDOWN
 # The PRIMM Method
 
-####  The **PRIMM** method is a well-researched, structured approach to teaching programming that helps students effectively understand and engage with code.
+The **PRIMM** method is a well-researched, structured approach to teaching programming that helps students effectively understand and engage with code.
 
-#### It stands for Predict, Run, Investigate, Modify, and Make. As you work through the lessons, you will notice that they follow a modified version of this approach.
+It stands for Predict, Run, Investigate, Modify, and Make. As you work through the lessons, you will notice that they follow a modified version of this approach.
 
 
 ## Here is a breakdown of each step: 
@@ -59,7 +59,7 @@ Students change the existing code by altering variables, adding functionality, o
 
 ---
 
-#### The **PRIMM** method is effective because it combines prediction and active experimentation with reflection and creation, promoting a deeper understanding of programming concepts and problem-solving skills.
+The **PRIMM** method is effective because it combines prediction and active experimentation with reflection and creation, promoting a deeper understanding of programming concepts and problem-solving skills.
 
 
 
