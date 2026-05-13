@@ -1,20 +1,29 @@
 import {Codebridge} from '@codebridge/Codebridge';
-import CodebridgeRegistry from '@codebridge/CodebridgeRegistry';
 import {useSource} from '@codebridge/hooks/useSource';
 import {CodebridgeLevelProperties, ConfigType} from '@codebridge/types';
 import {java} from '@codemirror/lang-java';
 import {json} from '@codemirror/lang-json';
 import {LanguageSupport} from '@codemirror/language';
-import React, {useMemo, useState} from 'react';
+import React, {useEffect, useMemo, useState} from 'react';
 
+import {setLoadedCodeEnvironment} from '@cdo/apps/lab2/redux/systemRedux';
 import {LabProps, MultiFileSource, ProjectSources} from '@cdo/apps/lab2/types';
-import {AppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
+import {
+  AppDispatch,
+  useAppDispatch,
+  useAppSelector,
+} from '@cdo/apps/util/reduxHooks';
 
 import {
   DEFAULT_PROJECT,
   JAVALAB_EDITABLE_FILE_TYPES,
   JAVALAB_SUPPORTED_FILE_TYPES,
 } from './constants';
+import {
+  handleRunClick,
+  sendStdin,
+  stopJavaCode,
+} from './javabuilderRunner';
 import HorizontalLayout from './layout/HorizontalLayout';
 import ShareView from './layout/ShareView';
 import VerticalLayout from './layout/VerticalLayout';
@@ -65,22 +74,27 @@ const Javalab2View: React.FunctionComponent<
   );
 
   const hasSource = !!source;
+  const csaViewMode = (
+    levelProperties as CodebridgeLevelProperties & {csaViewMode?: string}
+  ).csaViewMode;
 
-  // Stub run handler — Phase 3 swaps this for the Javabuilder adapter.
+  // Java Lab runs against Javabuilder; there is no in-browser environment
+  // to bootstrap (unlike pythonlab's Pyodide). Mark the environment loaded
+  // at mount so the Run button is enabled immediately.
+  const dispatch = useAppDispatch();
+  useEffect(() => {
+    dispatch(setLoadedCodeEnvironment(true));
+    return () => {
+      dispatch(setLoadedCodeEnvironment(false));
+    };
+  }, [dispatch]);
+
   const onRun = async (
-    _runTests: boolean,
+    runTests: boolean,
     _dispatch: AppDispatch,
-    _source: MultiFileSource | undefined
+    runSource: MultiFileSource | undefined
   ) => {
-    const consoleManager =
-      CodebridgeRegistry.getInstance().getConsoleManager();
-    consoleManager?.writeConsoleMessage(
-      'Java execution not yet wired up. Phase 3 will connect this to Javabuilder.'
-    );
-  };
-
-  const onStop = () => {
-    // Phase 3 wires this to JavabuilderClient.disconnect().
+    await handleRunClick(runTests, runSource, levelProperties.id, csaViewMode);
   };
 
   return (
@@ -91,7 +105,8 @@ const Javalab2View: React.FunctionComponent<
           setConfig={setConfig}
           startSources={startSources}
           onRun={onRun}
-          onStop={onStop}
+          onStop={stopJavaCode}
+          sendConsoleInput={sendStdin}
           levelProperties={levelProperties}
         />
       )}
