@@ -6,6 +6,25 @@ import '../../../style/RotateContainer.scss';
 import '../../../style/javalab/style.scss';
 import './javalab-lab2.scss';
 
+// Molly's notes:
+// - It would be best when migrating to lab2 to be able to use the resource panel
+// because it handles so much of the generic lab code--instructions, version history
+// backpack, ai tutor, etc. I got a lot working here using all the old components.
+// A sticking point for me is version history--the old version history loads in a new
+// tab which is not a great user experience. That is convincing me we *should* just
+// use the new components if/when we migrate a lab to lab2. It also would help with
+// a unified experience.
+
+// For Java Lab specifically, I think the correct path is a migration to codebridge,
+// since all the components are basically there thanks to Python lab. Just plugging in
+// the resource panel would cause us to have to move the neighborhood and theater.
+// We also could benefit in java lab from the new console.
+
+// This PR represents about 4 hours of Claude Code work. I haven't read any of the code,
+// I've only tested it. I verified level switching, running code, editing code. Version
+// history list loads, but "previewing" an old version currently will just show your current
+// code. Backpack hasn't been re-implemented yet, another point for using the resource panel.
+
 // Top-level Java Lab view under Lab2.
 //
 // Replaces the orchestration role of Javalab.js + loadJavalab.js. The legacy
