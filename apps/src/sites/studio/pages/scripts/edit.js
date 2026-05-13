@@ -95,6 +95,7 @@ export default function initPage(unitEditorData) {
         initialEnableBlocklyKeyboardNavigation={
           scriptData.enableBlocklyKeyboardNavigation
         }
+        unitGroupNames={unitEditorData.unit_group_names || []}
       />
     </Provider>,
     document.querySelector('.edit_container'),

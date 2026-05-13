@@ -1,0 +1,12 @@
+%p
+  Hi #{@user.name},
+%p
+  The unit copy you requested is complete. The new unit is named
+  %strong= @new_unit_name
+  and is ready to edit.
+%p
+  = link_to 'Open the new unit', @edit_url
+%p
+  Thanks,
+%p
+  The Code.org Team

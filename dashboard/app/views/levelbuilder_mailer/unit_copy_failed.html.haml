@@ -1,0 +1,13 @@
+%p
+  Hi #{@user.name},
+%p
+  The copy of unit
+  %strong= @source_unit_name
+  failed with the following error:
+%blockquote= @error_message
+%p
+  Please try again, or contact engineering if the problem persists.
+%p
+  Thanks,
+%p
+  The Code.org Team

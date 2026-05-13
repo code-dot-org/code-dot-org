@@ -474,6 +474,7 @@ Dashboard::Application.routes.draw do
         get 'standards'
         get 'instructions'
         get 'get_rollup_resources'
+        post 'copy'
       end
 
       resources :lessons, only: [:show, :index], param: 'position', format: false do

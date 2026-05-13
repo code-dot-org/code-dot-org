@@ -8,7 +8,7 @@ class ScriptsController < ApplicationController
   before_action :require_levelbuilder_mode_or_test_env, only: [:edit, :update, :new, :create]
   before_action :authenticate_user!, except: [:show, :vocab, :resources, :code, :standards]
   check_authorization
-  before_action :set_unit, only: [:show, :vocab, :resources, :code, :get_rollup_resources, :standards, :edit, :destroy]
+  before_action :set_unit, only: [:show, :vocab, :resources, :code, :get_rollup_resources, :standards, :edit, :destroy, :copy]
   before_action :render_no_access, only: [:show]
   before_action :set_redirect_override, only: [:show]
   before_action :redirect_to_canonical_path, only: [:show, :vocab, :resources, :code, :standards]
@@ -170,6 +170,34 @@ class ScriptsController < ApplicationController
     redirect_to scripts_path, notice: I18n.t('crud.destroyed', model: Unit.model_name.human)
   end
 
+  def copy
+    new_unit_name = params[:new_unit_name].to_s.strip
+    destination_unit_group_name = params[:destination_unit_group_name].to_s.strip
+    new_level_suffix = params[:new_level_suffix].to_s.strip
+
+    if new_unit_name.blank? || destination_unit_group_name.blank? || new_level_suffix.blank?
+      return render status: :unprocessable_entity, json: {error: 'New unit name, destination unit group, and level name suffix are all required.'}
+    end
+
+    if Unit.find_by_name(new_unit_name)
+      return render status: :unprocessable_entity, json: {error: "Unit name '#{new_unit_name}' is already taken."}
+    end
+
+    unless UnitGroup.find_by_name(destination_unit_group_name)
+      return render status: :unprocessable_entity, json: {error: "Destination unit group '#{destination_unit_group_name}' not found."}
+    end
+
+    CopyUnitJob.perform_later(
+      source_unit_id: @script.id,
+      new_unit_name: new_unit_name,
+      destination_unit_group_name: destination_unit_group_name,
+      new_level_suffix: new_level_suffix,
+      user_id: current_user.id,
+    )
+
+    render json: {notice: "Copying unit '#{@script.name}' to '#{new_unit_name}'. You'll receive an email when the copy is complete."}
+  end
+
   def edit
     # Deprecated scripts should not be edited.
     if @script.is_deprecated
@@ -182,7 +210,8 @@ class ScriptsController < ApplicationController
       has_course: @script&.unit_groups&.any?,
       i18n: @script ? @script.summarize_i18n_for_edit : {},
       locales: Cdo::I18n.locale_options,
-      is_levelbuilder: current_user.levelbuilder?
+      is_levelbuilder: current_user.levelbuilder?,
+      unit_group_names: UnitGroup.order(:name).pluck(:name),
     }
   end
 

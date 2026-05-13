@@ -1898,4 +1898,105 @@ class ScriptsControllerTest < ActionController::TestCase
                                   name: 'pilot teacher can view pilot modular course'
     end
   end
+
+  class CopyActionTest < ScriptsControllerTest
+    include ActiveJob::TestHelper
+
+    setup do
+      Rails.application.config.stubs(:levelbuilder_mode).returns true
+      @source_unit = create(:script)
+      @destination_unit_group = create(:unit_group)
+      @valid_params = {
+        id: @source_unit.name,
+        new_unit_name: 'new-unit-2026',
+        destination_unit_group_name: @destination_unit_group.name,
+        new_level_suffix: '2026',
+      }
+    end
+
+    test 'enqueues CopyUnitJob and returns notice on success' do
+      sign_in(create(:levelbuilder))
+
+      assert_enqueued_with(job: CopyUnitJob) do
+        post :copy, params: @valid_params
+      end
+
+      assert_response :success
+      assert_match(/Copying unit/, JSON.parse(response.body)['notice'])
+    end
+
+    test 'returns 422 when new unit name is already taken' do
+      create(:script, name: 'new-unit-2026')
+      sign_in(create(:levelbuilder))
+
+      assert_no_enqueued_jobs do
+        post :copy, params: @valid_params
+      end
+
+      assert_response :unprocessable_entity
+      assert_match(/already taken/, JSON.parse(response.body)['error'])
+    end
+
+    test 'returns 422 when destination unit group does not exist' do
+      sign_in(create(:levelbuilder))
+
+      assert_no_enqueued_jobs do
+        post :copy, params: @valid_params.merge(destination_unit_group_name: 'does-not-exist')
+      end
+
+      assert_response :unprocessable_entity
+      assert_match(/not found/, JSON.parse(response.body)['error'])
+    end
+
+    test 'returns 422 when new_unit_name is blank' do
+      sign_in(create(:levelbuilder))
+
+      assert_no_enqueued_jobs do
+        post :copy, params: @valid_params.merge(new_unit_name: '')
+      end
+
+      assert_response :unprocessable_entity
+    end
+
+    test 'returns 422 when destination_unit_group_name is blank' do
+      sign_in(create(:levelbuilder))
+
+      assert_no_enqueued_jobs do
+        post :copy, params: @valid_params.merge(destination_unit_group_name: '')
+      end
+
+      assert_response :unprocessable_entity
+    end
+
+    test 'returns 422 when new_level_suffix is blank' do
+      sign_in(create(:levelbuilder))
+
+      assert_no_enqueued_jobs do
+        post :copy, params: @valid_params.merge(new_level_suffix: '')
+      end
+
+      assert_response :unprocessable_entity
+    end
+
+    test 'returns 403 when not in levelbuilder mode' do
+      Rails.application.config.stubs(:levelbuilder_mode).returns false
+      sign_in(create(:levelbuilder))
+
+      assert_no_enqueued_jobs do
+        post :copy, params: @valid_params
+      end
+
+      assert_response :forbidden
+    end
+
+    test 'denies access for user without levelbuilder permission' do
+      sign_in(create(:teacher))
+
+      assert_no_enqueued_jobs do
+        post :copy, params: @valid_params
+      end
+
+      assert_response :forbidden
+    end
+  end
 end
