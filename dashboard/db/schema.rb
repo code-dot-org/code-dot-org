@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2026_05_12_120000) do
+ActiveRecord::Schema[7.0].define(version: 2026_05_13_121000) do
   create_table "activities", id: :integer, charset: "utf8mb3", collation: "utf8mb3_unicode_ci", force: :cascade do |t|
     t.integer "user_id"
     t.integer "level_id"
@@ -2450,6 +2450,41 @@ ActiveRecord::Schema[7.0].define(version: 2026_05_12_120000) do
     t.index ["user_id"], name: "index_survey_results_on_user_id"
   end
 
+  create_table "teacher_dashboard_note_shared_sections", charset: "utf8mb4", collation: "utf8mb4_unicode_ci", force: :cascade do |t|
+    t.bigint "teacher_dashboard_note_id", null: false
+    t.integer "section_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["section_id"], name: "index_teacher_note_shared_sections_on_section_id"
+    t.index ["teacher_dashboard_note_id", "section_id"], name: "index_teacher_note_shared_sections_unique", unique: true
+    t.index ["teacher_dashboard_note_id"], name: "index_teacher_note_shared_sections_on_note_id"
+  end
+
+  create_table "teacher_dashboard_notes", charset: "utf8mb4", collation: "utf8mb4_unicode_ci", force: :cascade do |t|
+    t.integer "teacher_id", null: false
+    t.integer "section_id"
+    t.boolean "shared_with_section", default: false, null: false
+    t.boolean "shareable_globally", default: false, null: false
+    t.string "context_type", null: false
+    t.integer "unit_group_id"
+    t.integer "unit_id"
+    t.integer "lesson_id"
+    t.text "body", null: false
+    t.integer "lock_version", default: 0, null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string "title"
+    t.string "note_color", default: "white", null: false
+    t.index ["lesson_id"], name: "index_teacher_dashboard_notes_on_lesson_id"
+    t.index ["section_id", "shared_with_section"], name: "idx_tdn_section_shared"
+    t.index ["shareable_globally"], name: "idx_tdn_shareable_global"
+    t.index ["teacher_id", "context_type", "lesson_id"], name: "idx_tdn_teacher_lesson"
+    t.index ["teacher_id", "context_type", "unit_group_id"], name: "idx_tdn_teacher_course"
+    t.index ["teacher_id", "context_type", "unit_id"], name: "idx_tdn_teacher_unit"
+    t.index ["unit_group_id"], name: "index_teacher_dashboard_notes_on_unit_group_id"
+    t.index ["unit_id"], name: "index_teacher_dashboard_notes_on_unit_id"
+  end
+
   create_table "teacher_feedbacks", id: :integer, charset: "utf8mb3", collation: "utf8mb3_unicode_ci", force: :cascade do |t|
     t.text "comment"
     t.integer "student_id"
@@ -2928,6 +2963,13 @@ ActiveRecord::Schema[7.0].define(version: 2026_05_12_120000) do
   add_foreign_key "student_work_evaluation_summaries", "student_work_evaluations"
   add_foreign_key "student_work_evaluation_summaries", "student_work_evaluations", column: "student_work_evaluation_summary_id"
   add_foreign_key "survey_results", "users"
+  add_foreign_key "teacher_dashboard_note_shared_sections", "sections"
+  add_foreign_key "teacher_dashboard_note_shared_sections", "teacher_dashboard_notes"
+  add_foreign_key "teacher_dashboard_notes", "scripts", column: "unit_id"
+  add_foreign_key "teacher_dashboard_notes", "sections"
+  add_foreign_key "teacher_dashboard_notes", "stages", column: "lesson_id"
+  add_foreign_key "teacher_dashboard_notes", "unit_groups"
+  add_foreign_key "teacher_dashboard_notes", "users", column: "teacher_id"
   add_foreign_key "teacher_notifications", "users"
   add_foreign_key "teaching_profile_data", "users"
   add_foreign_key "user_data_retention_statuses", "users"

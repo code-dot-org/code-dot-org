@@ -2064,6 +2064,48 @@ FactoryBot.define do
     association :teacher
   end
 
+  factory :teacher_dashboard_note do
+    teacher
+    title {'Planning note'}
+    body {'Remember to preview the unplugged option.'}
+    note_color {'white'}
+    context_type {TeacherDashboardNote::UNIT}
+    unit
+
+    trait :course_context do
+      context_type {TeacherDashboardNote::COURSE}
+      unit {nil}
+      unit_group
+    end
+
+    trait :lesson_context do
+      context_type {TeacherDashboardNote::LESSON}
+      unit {nil}
+      lesson
+    end
+
+    trait :section_specific do
+      section
+
+      after(:build) do |note|
+        note.section.user = note.teacher
+      end
+    end
+
+    trait :shared_with_section do
+      section_specific
+      shared_with_section {true}
+
+      after(:create) do |note|
+        note.shared_sections << note.section
+      end
+    end
+
+    trait :shareable_globally do
+      shareable_globally {true}
+    end
+  end
+
   factory :contact_rollups_raw do
     sequence(:email) {|n| "contact_#{n}@example.domain"}
     sequence(:sources) {|n| "dashboard.table_#{n}"}

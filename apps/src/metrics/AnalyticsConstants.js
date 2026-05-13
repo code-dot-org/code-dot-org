@@ -291,6 +291,12 @@ const EVENTS = {
   TA_PODCAST_PLAYED: 'TA podcast played',
   TA_PODCAST_STOPPED: 'TA podcast stopped',
   TA_PODCAST_PLAYBACK_SPEED_CHANGED: 'TA podcast playback speed changed',
+  TEACHER_DASHBOARD_NOTE_CREATED: 'Teacher Dashboard Note Created',
+  TEACHER_DASHBOARD_NOTE_UPDATED: 'Teacher Dashboard Note Updated',
+  TEACHER_DASHBOARD_NOTE_DELETED: 'Teacher Dashboard Note Deleted',
+  TEACHER_DASHBOARD_NOTE_SHARE_TOGGLED: 'Teacher Dashboard Note Share Toggled',
+  TEACHER_DASHBOARD_NOTE_GLOBAL_SHARE_TOGGLED:
+    'Teacher Dashboard Note Global Share Candidate Toggled',
 
   //AI Differentiation
   AI_DIFF_CHAT_OPENED: 'AI Differentiation Chat Opened',

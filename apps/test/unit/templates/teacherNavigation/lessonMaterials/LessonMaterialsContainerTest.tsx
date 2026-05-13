@@ -28,6 +28,28 @@ import HttpClient from '@cdo/apps/util/HttpClient';
 import * as utils from '@cdo/apps/utils';
 import i18n from '@cdo/locale';
 
+jest.mock(
+  '@cdo/apps/templates/teacherNavigation/lessonMaterials/TeacherDashboardNotes',
+  () => {
+    const ReactForMock = require('react');
+    return (props: {
+      sectionId: number;
+      unitId: number;
+      unitGroupId?: number;
+      lessonId?: number;
+      lessonName?: string;
+    }) =>
+      ReactForMock.createElement('div', {
+        'data-testid': 'teacher-dashboard-notes',
+        'data-section-id': props.sectionId,
+        'data-unit-id': props.unitId,
+        'data-unit-group-id': props.unitGroupId,
+        'data-lesson-id': props.lessonId,
+        'data-lesson-name': props.lessonName,
+      });
+  }
+);
+
 const SECTIONS = [
   {
     id: 1,
@@ -156,6 +178,7 @@ describe('LessonMaterialsContainer', () => {
     hasNumberedUnits: true,
     versionYear: 2023,
     unitId: 1,
+    unitGroupId: 1000,
     lessons: [
       {
         name: 'First lesson',
@@ -384,6 +407,18 @@ describe('LessonMaterialsContainer', () => {
     // eslint-disable-next-line no-restricted-properties
     screen.getByTestId('resource-icon-' + RESOURCE_ICONS.VIDEO.icon);
     screen.getByText('Video: my linked video');
+  });
+
+  it('passes section and curriculum context to teacher dashboard notes', async () => {
+    await renderDefault();
+
+    // eslint-disable-next-line no-restricted-properties
+    const notes = await screen.findByTestId('teacher-dashboard-notes');
+    expect(notes.getAttribute('data-section-id')).toBe('1');
+    expect(notes.getAttribute('data-unit-id')).toBe('1');
+    expect(notes.getAttribute('data-unit-group-id')).toBe('1000');
+    expect(notes.getAttribute('data-lesson-id')).toBe('1');
+    expect(notes.getAttribute('data-lesson-name')).toBe('First lesson');
   });
 
   it('renders "Unit Standards" and "Unit Vocabulary" when hasNumberedUnits is false', async () => {

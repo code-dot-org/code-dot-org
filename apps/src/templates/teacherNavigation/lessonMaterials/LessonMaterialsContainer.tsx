@@ -18,6 +18,7 @@ import {
 } from '@cdo/apps/redux/unitSelectionRedux';
 import Spinner from '@cdo/apps/sharedComponents/Spinner';
 import {selectedSectionSelector} from '@cdo/apps/templates/teacherDashboard/teacherSectionsReduxSelectors';
+import {Section} from '@cdo/apps/templates/teacherDashboard/types/teacherSectionTypes';
 import experiments from '@cdo/apps/util/experiments';
 import HttpClient from '@cdo/apps/util/HttpClient';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
@@ -32,12 +33,14 @@ import CustomLessonResources from './CustomLessonResources';
 import {LessonMaterialsEmptyState} from './LessonMaterialsEmptyState';
 import {Lesson} from './LessonMaterialTypes';
 import LessonResources from './LessonResources';
+import TeacherDashboardNotes from './TeacherDashboardNotes';
 import UnitResourcesDropdown from './UnitResourcesDropdown';
 
 import styles from './lesson-materials.module.scss';
 
 interface LessonMaterialsData {
   unitId: number;
+  unitGroupId?: number;
   unitName?: string;
   title: string;
   unitNumber: number;
@@ -64,6 +67,25 @@ interface LessonSummaryInfoResponse {
 interface AIFStatus {
   aif: boolean;
 }
+
+const courseKey = (section: Section) =>
+  section.courseOfferingId || section.courseId || section.courseVersionId;
+
+const isAssignedSameCourse = (
+  section: Section,
+  selectedSection: Section | null
+) => {
+  if (!selectedSection) {
+    return false;
+  }
+
+  const selectedCourseKey = courseKey(selectedSection);
+  const sectionCourseKey = courseKey(section);
+  return (
+    section.id === selectedSection.id ||
+    (!!selectedCourseKey && selectedCourseKey === sectionCourseKey)
+  );
+};
 
 const lessonMaterialsApiCall = (unitId: number) =>
   HttpClient.fetchJson<LessonMaterialsData>(
@@ -94,6 +116,15 @@ const LessonMaterialsContainer: React.FC<LessonMaterialsContainerProps> = ({
   const userId = useAppSelector(state => state.currentUser.userId);
 
   const selectedSection = useAppSelector(selectedSectionSelector);
+  const assignedSections = useAppSelector(state =>
+    state.teacherSections.sectionIds
+      .map((sectionId: number) => state.teacherSections.sections[sectionId])
+      .filter((section: Section | undefined): section is Section =>
+        Boolean(section && !section.hidden)
+      )
+      .filter(section => isAssignedSameCourse(section, selectedSection))
+      .map(section => ({id: section.id, name: section.name}))
+  );
 
   const needsReload = useAppSelector(
     state => state.teacherSections.needsReload
@@ -384,6 +415,27 @@ const LessonMaterialsContainer: React.FC<LessonMaterialsContainerProps> = ({
     }
   };
 
+  const renderTeacherNotes = () => {
+    if (!lessonMaterials || !selectedSection.id) {
+      return null;
+    }
+
+    return (
+      <TeacherDashboardNotes
+        sectionId={selectedSection.id}
+        unitId={lessonMaterials.unitId}
+        unitGroupId={lessonMaterials.unitGroupId}
+        courseName={
+          selectedSection.courseDisplayName || selectedSection.courseVersionName
+        }
+        unitName={lessonMaterials.unitName}
+        lessonId={selectedLesson?.id}
+        lessonName={selectedLesson?.name}
+        sections={assignedSections}
+      />
+    );
+  };
+
   const renderLessonSummaryContainer = () => {
     return (
       <>
@@ -578,6 +630,7 @@ const LessonMaterialsContainer: React.FC<LessonMaterialsContainerProps> = ({
             {renderTeacherResources()}
             {renderStudentResources()}
             {renderCustomResources()}
+            {renderTeacherNotes()}
           </>
         )}
       </div>

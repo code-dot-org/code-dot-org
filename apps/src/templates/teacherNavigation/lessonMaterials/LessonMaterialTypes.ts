@@ -3,6 +3,7 @@ import {isGDocsUrl} from '@cdo/apps/templates/lessonOverview/googleDocsUtils';
 export type Lesson = {
   name: string;
   id: number;
+  unitGroupId?: number;
   position: number;
   lessonPlanHtmlUrl: string;
   lessonPlanPdfUrl: string;
