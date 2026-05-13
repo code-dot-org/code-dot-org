@@ -25,7 +25,7 @@ import moduleStyles from './lab-views-renderer.module.scss';
 
 const queryHideExtraLinks = queryParams('hide-extra-links') === 'true';
 
-const ExtraLinksButtonContext = createContext<{
+export const ExtraLinksButtonContext = createContext<{
   setShowExtraLinksButton: (show: boolean) => void;
 } | null>(null);
 

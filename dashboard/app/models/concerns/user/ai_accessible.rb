@@ -11,6 +11,7 @@ module User::AiAccessible
   def trust_chat_client?(client_type)
     return true if client_type == AI_CHAT_CLIENT_TYPES[:FLOW_LAB]
     return true if client_type == AI_CHAT_CLIENT_TYPES[:LESSON_DEEP_DIVE]
+    return true if client_type == AI_CHAT_CLIENT_TYPES[:AI_LESSONS_HACKATHON]
     false
   end
 

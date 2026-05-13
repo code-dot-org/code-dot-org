@@ -1288,6 +1288,17 @@ Dashboard::Application.routes.draw do
 
     post '/ai_gateway/access_token', to: 'ai_gateway_auth#get_access_token'
 
+    # Hackathon: AI-authored lessons backed by simple filesystem JSON storage,
+    # deliberately not tied to Level/Lesson/Script models.
+    get '/ai_lessons', to: 'ai_lessons#index', as: :ai_lessons
+    get '/ai_lessons/new', to: 'ai_lessons#new', as: :new_ai_lesson
+    post '/ai_lessons', to: 'ai_lessons#create'
+    get '/ai_lessons/:id', to: 'ai_lessons#show', as: :ai_lesson
+    get '/ai_lessons/:id/edit', to: 'ai_lessons#edit', as: :edit_ai_lesson
+    get '/ai_lessons/:id.json', to: 'ai_lessons#read', defaults: {format: 'json'}
+    patch '/ai_lessons/:id', to: 'ai_lessons#update'
+    put '/ai_lessons/:id', to: 'ai_lessons#update'
+
     resources :sprites, only: [:index], controller: 'sprite_management' do
       collection do
         get 'sprite_upload'

@@ -1,0 +1,444 @@
+// Hackathon AI Lessons styles.
+// Uses semantic design-system color tokens from
+// @code-dot-org/component-library-styles/colors.css.  The page sets
+// data-theme="Light" on document.documentElement when it mounts.
+
+// Note: we don't hide the lab2 ResourcePanel via CSS — instead, EmbeddedLab
+// dispatches setIsStandaloneCollapsed(true) on every lab mount so the panel
+// renders in its existing collapsed-sidebar state.  The student can still
+// expand it manually if they want the lab's settings/version-history UI.
+
+%button-base {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 6px;
+  padding: 8px 14px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  border: 1px solid transparent;
+  text-decoration: none;
+  line-height: 1.2;
+
+  &:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+}
+
+.primaryButton {
+  @extend %button-base;
+  background: var(--background-brand-teal-primary);
+  color: var(--text-neutral-white-fixed);
+
+  &:hover:not(:disabled) {
+    background: var(--background-brand-teal-strong);
+  }
+}
+
+.secondaryButton {
+  @extend %button-base;
+  background: var(--background-neutral-primary);
+  color: var(--text-neutral-primary);
+  border-color: var(--borders-neutral-primary);
+
+  &:hover:not(:disabled) {
+    background: var(--background-neutral-tertiary);
+  }
+}
+
+.linkButton {
+  background: none;
+  border: none;
+  color: var(--text-brand-teal-primary);
+  cursor: pointer;
+  padding: 4px 6px;
+  font-size: 14px;
+  text-decoration: underline;
+
+  &:disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+  }
+}
+
+.muted {
+  color: var(--text-neutral-tertiary);
+}
+
+.error {
+  color: var(--text-error-primary);
+  background: var(--background-error-extra-light);
+  padding: 8px 10px;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+// ---- Author / list page ----
+
+%page-base {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 32px 24px;
+  color: var(--text-neutral-primary);
+  background: var(--background-neutral-primary);
+  min-height: 100vh;
+  font-family:
+    -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+.authorPage {
+  @extend %page-base;
+}
+
+.listPage {
+  @extend %page-base;
+}
+
+.authorHeader {
+  margin-bottom: 24px;
+
+  h1 {
+    margin: 0 0 8px;
+    font-size: 28px;
+  }
+}
+
+.formSection {
+  background: var(--background-neutral-secondary);
+  padding: 20px;
+  border-radius: 8px;
+  margin-bottom: 24px;
+  border: 1px solid var(--borders-neutral-light);
+
+  h2 {
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--text-neutral-tertiary);
+    margin: 24px 0 8px;
+  }
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+
+  span {
+    font-weight: 600;
+  }
+
+  textarea,
+  input {
+    width: 100%;
+  }
+}
+
+textarea,
+input[type='text'],
+select {
+  background: var(--background-neutral-primary);
+  color: var(--text-neutral-primary);
+  border: 1px solid var(--borders-neutral-primary);
+  border-radius: 4px;
+  padding: 8px 10px;
+  font-size: 14px;
+  font-family: inherit;
+  resize: vertical;
+
+  &:focus {
+    outline: none;
+    border-color: var(--borders-brand-teal-primary);
+  }
+}
+
+.checkpointList {
+  list-style: decimal inside;
+  padding: 0;
+  margin: 0 0 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.checkpointInput {
+  background: var(--background-neutral-primary);
+  padding: 12px;
+  border-radius: 6px;
+  border: 1px solid var(--borders-neutral-primary);
+  list-style-position: outside;
+  margin-left: 24px;
+
+  textarea {
+    margin-top: 8px;
+  }
+}
+
+.checkpointRow {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.actions {
+  margin-top: 16px;
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.previewSection {
+  background: var(--background-neutral-secondary);
+  padding: 20px;
+  border-radius: 8px;
+  border: 1px solid var(--borders-neutral-light);
+}
+
+.previewSummary {
+  h3 {
+    margin: 0 0 8px;
+  }
+  ol {
+    padding-left: 24px;
+    li {
+      margin-bottom: 16px;
+    }
+  }
+}
+
+.codeBlock {
+  background: var(--background-neutral-octonary);
+  color: var(--text-neutral-white-fixed);
+  padding: 12px;
+  border-radius: 4px;
+  font-size: 12px;
+  overflow: auto;
+  max-height: 360px;
+}
+
+// ---- List page ----
+
+.lessonList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.lessonRow {
+  background: var(--background-neutral-primary);
+  padding: 16px;
+  border-radius: 6px;
+  border: 1px solid var(--borders-neutral-primary);
+
+  a {
+    color: var(--text-brand-teal-primary);
+    text-decoration: none;
+  }
+}
+
+.lessonRowActions {
+  margin-top: 8px;
+  font-size: 13px;
+  color: var(--text-neutral-tertiary);
+
+  a {
+    color: var(--text-brand-teal-primary);
+  }
+}
+
+// ---- Student page ----
+
+.studentPage {
+  display: grid;
+  grid-template-columns: minmax(320px, 420px) 1fr;
+  height: 100vh;
+  width: 100vw;
+  background: var(--background-neutral-primary);
+  color: var(--text-neutral-primary);
+  font-family:
+    -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+.tutorPanel {
+  display: flex;
+  flex-direction: column;
+  background: var(--background-neutral-secondary);
+  border-right: 1px solid var(--borders-neutral-primary);
+  overflow: hidden;
+}
+
+.tutorHeader {
+  padding: 16px 18px;
+  border-bottom: 1px solid var(--borders-neutral-primary);
+}
+
+.lessonTitle {
+  font-weight: 700;
+  font-size: 16px;
+}
+
+.checkpointMeta {
+  font-size: 13px;
+  color: var(--text-neutral-tertiary);
+  margin-top: 4px;
+}
+
+.transcript {
+  flex: 1;
+  overflow-y: auto;
+  padding: 16px 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.bubble {
+  padding: 10px 12px;
+  border-radius: 10px;
+  max-width: 90%;
+  white-space: pre-wrap;
+  font-size: 14px;
+  line-height: 1.45;
+}
+
+.tutorBubble {
+  background: var(--background-neutral-primary);
+  color: var(--text-neutral-primary);
+  align-self: flex-start;
+  border: 1px solid var(--borders-neutral-primary);
+}
+
+.studentBubble {
+  background: var(--background-brand-teal-primary);
+  color: var(--text-neutral-white-fixed);
+  align-self: flex-end;
+}
+
+.thinking {
+  color: var(--text-neutral-tertiary);
+  font-style: italic;
+  font-size: 13px;
+}
+
+.composer {
+  padding: 12px 16px 16px;
+  border-top: 1px solid var(--borders-neutral-primary);
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  background: var(--background-neutral-primary);
+}
+
+.composerActions {
+  display: flex;
+  gap: 8px;
+  justify-content: flex-end;
+}
+
+.workShare {
+  background: var(--background-neutral-secondary);
+  border-radius: 6px;
+  padding: 6px 10px;
+  border: 1px solid var(--borders-neutral-primary);
+  font-size: 13px;
+
+  summary {
+    cursor: pointer;
+    color: var(--text-neutral-tertiary);
+  }
+
+  textarea {
+    width: 100%;
+    margin-top: 6px;
+  }
+}
+
+.labArea {
+  position: relative;
+  background: var(--background-neutral-primary);
+  overflow: hidden;
+}
+
+.labMessage {
+  padding: 32px;
+  color: var(--text-neutral-primary);
+  background: var(--background-neutral-secondary);
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.panelsView {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  background: var(--background-neutral-secondary);
+}
+
+.panelStage {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 48px;
+}
+
+.panelCaption {
+  font-size: 28px;
+  line-height: 1.4;
+  max-width: 760px;
+  text-align: center;
+  color: var(--text-neutral-primary);
+}
+
+.panelControls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  padding: 20px;
+  border-top: 1px solid var(--borders-neutral-primary);
+  background: var(--background-neutral-primary);
+
+  button {
+    @extend %button-base;
+    background: var(--background-neutral-secondary);
+    color: var(--text-neutral-primary);
+    border: 1px solid var(--borders-neutral-primary);
+  }
+}
+
+.panelCounter {
+  color: var(--text-neutral-tertiary);
+  font-size: 13px;
+}
+
+.celebrate {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background: var(--background-neutral-primary);
+  color: var(--text-neutral-primary);
+  padding: 24px;
+
+  h1 {
+    font-size: 48px;
+    margin: 0 0 16px;
+  }
+
+  a {
+    color: var(--text-brand-teal-primary);
+  }
+}

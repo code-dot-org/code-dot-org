@@ -851,6 +851,8 @@ module SharedConstants
     AI_TUTOR: "ai-tutor",
     FLOW_LAB: "flow-lab",
     LESSON_DEEP_DIVE: "lesson-deep-dive",
+    # Hackathon: AI-authored lessons not tied to a level.
+    AI_LESSONS_HACKATHON: "ai-lessons-hackathon",
   }
 
   AI_CHAT_READ_TIMEOUTS = {
@@ -858,6 +860,7 @@ module SharedConstants
     AI_CHAT_CLIENT_TYPES[:AI_TUTOR] => 30,
     AI_CHAT_CLIENT_TYPES[:FLOW_LAB] => 60,
     AI_CHAT_CLIENT_TYPES[:LESSON_DEEP_DIVE] => 60,
+    AI_CHAT_CLIENT_TYPES[:AI_LESSONS_HACKATHON] => 60,
   }
 
   AICHAT_METRICS_NAMESPACE = 'GenAICurriculum'.freeze
