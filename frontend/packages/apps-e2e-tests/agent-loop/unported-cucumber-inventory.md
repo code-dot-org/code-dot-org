@@ -12,8 +12,8 @@ This inventory ignores `Migration Status` markers. A Cucumber feature is treated
 | Playwright spec files                                       |   125 |
 | Feature files referenced by Playwright                      |   164 |
 | Feature files with no Playwright source-path reference      |   107 |
-| Referenced feature files with all scenario titles traceable |   115 |
-| Referenced feature files with some untraced scenario titles |    27 |
+| Referenced feature files with all scenario titles traceable |   119 |
+| Referenced feature files with some untraced scenario titles |    23 |
 | Referenced feature files needing scenario-level audit       |    22 |
 | Playwright specs with no Cucumber source-path reference     |     1 |
 
@@ -198,40 +198,10 @@ This inventory ignores `Migration Status` markers. A Cucumber feature is treated
 
 These feature files have at least one Playwright source-path reference, but not every Cucumber scenario title was found in Playwright comments or single-source spec test titles. Some may be ported under renamed test titles; inspect before porting.
 
-### `dashboard/test/ui/features/teacher_tools/level_types/level_group_multi_page.feature`
-
-Traced 0 of 2 scenario titles.
-
-- multi page level numbering
-- Submit three pages.
-
-### `dashboard/test/ui/features/teacher_tools/level_types/level_group_multi_page_dots.feature`
-
-Traced 0 of 2 scenario titles.
-
-- Submit three pages as... 1. all, 2. none, 3. some questions answered.
-- optional free play level
-
-### `dashboard/test/ui/features/teacher_tools/level_types/map_level.feature`
-
-Traced 0 of 1 scenario titles.
-
-- Map level displays content
-
-### `dashboard/test/ui/features/teacher_tools/level_types/match.feature`
-
-Traced 0 of 3 scenario titles.
-
-- Loading the level
-- Solving puzzle
-- Submitting an incorrect solution
-
 ### `dashboard/test/ui/features/teacher_tools/level_types/multiple_choice_contained_levels.feature`
 
-Traced 2 of 5 scenario titles.
+Traced 4 of 5 scenario titles.
 
-- GameLab with a submittable contained level
-- Gamelab with multiple choice contained level
 - Unauthorized Teacher on CSF Maze with multiple choice contained level
 
 ### `dashboard/test/ui/features/teacher_tools/modular_courses.feature`

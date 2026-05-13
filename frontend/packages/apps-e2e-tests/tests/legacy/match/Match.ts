@@ -128,9 +128,22 @@ export class Match {
    * @param originalIndex - `originalindex` attribute of the answer tile
    */
   async dragAnswerToFirstSlot(originalIndex: number): Promise<void> {
-    await this.answer(originalIndex).dragTo(
-      this.page.locator('.emptyslot').first(),
-    );
+    const answer = this.answer(originalIndex);
+    const slots = this.page.locator('.emptyslot');
+    await answer.scrollIntoViewIfNeeded();
+    await slots.first().scrollIntoViewIfNeeded();
+
+    for (let attempt = 1; attempt <= 3; attempt++) {
+      const remainingSlots = await slots.count();
+      await answer.dragTo(slots.first(), {force: true});
+
+      try {
+        await expect(slots).toHaveCount(remainingSlots - 1, {timeout: 3000});
+        return;
+      } catch (error) {
+        if (attempt === 3) throw error;
+      }
+    }
   }
 
   /** Clicks the submit button and waits for the result modal to appear. */

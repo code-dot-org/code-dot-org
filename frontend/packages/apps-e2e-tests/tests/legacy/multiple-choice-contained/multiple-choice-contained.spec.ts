@@ -1,3 +1,5 @@
+import {type Page} from '@playwright/test';
+
 import {createTeacherAssociatedStudent, signIn} from '../../shared/auth';
 import {expect, test} from '../../shared/fixtures';
 import {
@@ -12,8 +14,9 @@ import {
  * Source:
  *   dashboard/test/ui/features/teacher_tools/level_types/multiple_choice_contained_levels.feature
  *
- * @eyes scenarios are skipped (Applitools not available).  Two non-@eyes
- * scenarios are ported:
+ * @eyes scenarios execute through the interaction points where Cucumber takes
+ * Applitools snapshots; the visual assertions are stubbed with comments.
+ * Two non-@eyes scenarios are also ported:
  *
  * 1. "Teacher can reset progress on multiple choice contained level" — teacher
  *    selects an answer, runs, verifies progress, then deletes the answer and
@@ -27,17 +30,116 @@ import {
  * student after setup.
  */
 
+/**
+ * Selects a contained multiple-choice answer and waits for the checked state.
+ *
+ * @param page - Playwright page on a contained multiple-choice level
+ * @param index - answer index from the Cucumber selector
+ */
+async function selectAnswer(page: Page, index: number): Promise<void> {
+  await page.locator(`#unchecked_${index}`).click();
+  await expect(page.locator(`#checked_${index}`)).toBeVisible({
+    timeout: 5_000,
+  });
+}
+
+/**
+ * Clicks Run and waits for the milestone POST that persists contained answers.
+ * The visible run state can arrive before server persistence; reload checks
+ * depend on the write being complete.
+ *
+ * @param page - Playwright page on a contained multiple-choice level
+ */
+async function runAndWaitForMilestone(page: Page): Promise<void> {
+  const milestonePost = page.waitForResponse(
+    response =>
+      response.request().method() === 'POST' &&
+      response.url().includes('/milestone/') &&
+      response.ok(),
+    {timeout: 30_000},
+  );
+  await page.locator('#runButton').click();
+  await milestonePost;
+  await expect(page.locator('#resetButton')).toBeVisible({timeout: 15_000});
+}
+
 test.describe('Multiple choice contained levels', () => {
+  /**
+   * Migration status: COMPLETED
+   * Source: dashboard/test/ui/features/teacher_tools/level_types/multiple_choice_contained_levels.feature
+   * Scenario: GameLab with a submittable contained level
+   */
+  test('gamelab with submittable contained level reaches visual checkpoints', async ({
+    page,
+  }) => {
+    await createTeacherAssociatedStudent(page, {authorized: true});
+
+    await page.goto('/courses/allthethingscourse/units/1/lessons/41/levels/7');
+    await page
+      .locator('#runButton')
+      .waitFor({state: 'visible', timeout: 60_000});
+    // Applitools snapshot stub: "initial load".
+
+    await selectAnswer(page, 0);
+    await expect(page.locator('#runButton')).toBeEnabled({timeout: 15_000});
+    // Applitools snapshot stub: "answer entered".
+
+    await runAndWaitForMilestone(page);
+    // Applitools snapshot stub: "level run".
+
+    await Promise.all([
+      page.waitForURL(/\/lessons\/41\/levels\/8/, {timeout: 30_000}),
+      page.locator('#submitButton, .submitButton').first().click(),
+    ]);
+  });
+
+  /**
+   * Migration status: COMPLETED
+   * Source: dashboard/test/ui/features/teacher_tools/level_types/multiple_choice_contained_levels.feature
+   * Scenario: Gamelab with multiple choice contained level
+   */
+  test('gamelab with multiple choice contained level reaches visual checkpoints', async ({
+    page,
+  }) => {
+    await createTeacherAssociatedStudent(page, {authorized: true});
+
+    await page.goto('/courses/allthethingscourse/units/1/lessons/41/levels/2');
+    await page
+      .locator('#runButton')
+      .waitFor({state: 'visible', timeout: 60_000});
+    // Applitools snapshot stub: "initial load".
+
+    await selectAnswer(page, 0);
+    await expect(page.locator('#runButton')).toBeEnabled({timeout: 15_000});
+    // Applitools snapshot stub: "answer entered".
+
+    await runAndWaitForMilestone(page);
+    // Applitools snapshot stub: "level run".
+
+    await page.goto('/courses/allthethingscourse/units/1/lessons/41/levels/2');
+    await page
+      .locator('#runButton')
+      .waitFor({state: 'visible', timeout: 60_000});
+    await expect(page.locator('#checked_0')).toBeVisible({timeout: 5_000});
+    // Applitools snapshot stub: "reloaded with contained level answered".
+
+    await runAndWaitForMilestone(page);
+    await page
+      .locator('#finishButton')
+      .waitFor({state: 'visible', timeout: 15_000});
+    await page.locator('#finishButton').click();
+    // Applitools snapshot stub: "finished level with contained level".
+
+    await Promise.all([
+      page.waitForURL(/\/lessons\/41\/levels\/3/, {timeout: 30_000}),
+      page.locator('#continue-button').click(),
+    ]);
+  });
+
   test('teacher can reset progress on multiple choice contained level', async ({
     page,
   }) => {
-    // Firefox: teacher reset progress flow flaky under parallel run; passes alone.
-    test.fixme(
-      true,
-      'TODO: teacher reset MC contained level progress flaky on firefox under parallel run; createTeacherAssociatedStudent or teacher panel timing issue',
-    );
-    // Source: multiple_choice_contained_levels.feature
-    // "Teacher can reset progress on multiple choice contained level"
+    // Scenario: Teacher can reset progress on multiple choice contained level
     const {teacherEmail, teacherPassword} =
       await createTeacherAssociatedStudent(page, {authorized: true});
 
@@ -49,21 +151,22 @@ test.describe('Multiple choice contained levels', () => {
       .waitFor({state: 'visible', timeout: 60_000});
 
     // Select first answer option and run.
-    await page.locator('#unchecked_0').click();
-    await expect(page.locator('#checked_0')).toBeVisible({timeout: 5_000});
-    await page.locator('#runButton').click();
+    await selectAnswer(page, 0);
+    await runAndWaitForMilestone(page);
     await expectPerfect(headerBubble(page, 2));
 
     // Reset and delete answer — progress should revert to not-tried.
     await page.locator('#resetButton').click();
-    await page.locator('button', {hasText: 'Delete Answer'}).click();
+    await page
+      .locator('button')
+      .filter({hasText: /Delete Answer|Borrar respuesta/})
+      .click();
     await expect(page.locator('#unchecked_0')).toBeVisible({timeout: 10_000});
     await expectNotTried(headerBubble(page, 2));
 
     // Re-select a different option and resubmit.
-    await page.locator('#unchecked_1').click();
-    await expect(page.locator('#checked_1')).toBeVisible({timeout: 5_000});
-    await page.locator('#runButton').click();
+    await selectAnswer(page, 1);
+    await runAndWaitForMilestone(page);
     await page.locator('#resetButton').click();
     await expectPerfect(headerBubble(page, 2));
   });
@@ -71,13 +174,7 @@ test.describe('Multiple choice contained levels', () => {
   test('student can retry multiple choice contained level that allows multiple attempts', async ({
     page,
   }) => {
-    // Chromium: retry multiple-attempts level flaky under parallel run; passes alone.
-    test.fixme(
-      true,
-      'TODO: student retry multiple-attempts MC contained level flaky on all browsers under parallel run; timing issue with attempt state',
-    );
-    // Source: multiple_choice_contained_levels.feature
-    // "Student can retry multiple choice contained level that allows multiple attempts"
+    // Scenario: Student can retry multiple choice contained level that allows multiple attempts
     await createTeacherAssociatedStudent(page, {authorized: true});
 
     // Student (currently signed in) navigates to the retriable level.
@@ -87,16 +184,14 @@ test.describe('Multiple choice contained levels', () => {
       .waitFor({state: 'visible', timeout: 60_000});
 
     // First submission.
-    await page.locator('#unchecked_0').click();
-    await expect(page.locator('#checked_0')).toBeVisible({timeout: 5_000});
-    await page.locator('#runButton').click();
+    await selectAnswer(page, 0);
+    await runAndWaitForMilestone(page);
     await page.locator('#resetButton').click();
     await expectPerfect(headerBubble(page, 10));
 
     // Second submission — select a different option (retriable allows this).
-    await page.locator('#unchecked_1').click();
-    await expect(page.locator('#checked_1')).toBeVisible({timeout: 5_000});
-    await page.locator('#runButton').click();
+    await selectAnswer(page, 1);
+    await runAndWaitForMilestone(page);
     await page.locator('#resetButton').click();
     await expectPerfect(headerBubble(page, 10));
 

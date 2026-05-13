@@ -15,7 +15,7 @@ test.describe('Map level', () => {
     'map level displays content inside the iframe',
     {tag: '@no_mobile'},
     async ({studentPage}) => {
-      // Source: map_level.feature "Map level displays content"
+      // Scenario: Map level displays content
       await studentPage.goto(
         '/courses/allthethingscourse/units/1/lessons/35/levels/1?noautoplay=true',
       );

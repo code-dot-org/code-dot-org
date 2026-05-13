@@ -1,5 +1,8 @@
+import {type Page} from '@playwright/test';
+
 import {createTeacherAssociatedStudent} from '../../shared/auth';
 import {expect, test} from '../../shared/fixtures';
+import {expectPerfectAssessment, headerBubble} from '../../shared/progress';
 
 /**
  * Level Group (multi-page) — lesson 23 of allthethingscourse unit 1.
@@ -18,12 +21,37 @@ const PAGE2_URL =
 const PAGE3_URL =
   '/courses/allthethingscourse/units/1/lessons/23/levels/2/page/3?noautoplay=true';
 
+/**
+ * Clicks a multi-page level-group pager and waits for page content to settle.
+ *
+ * @param page - Playwright page on a multi-page level-group level
+ * @param selector - selector for the pager control
+ * @param urlPattern - expected URL after navigation
+ */
+async function clickPagerAndWait(
+  page: Page,
+  selector: string,
+  urlPattern: RegExp,
+): Promise<void> {
+  await Promise.all([
+    page.waitForURL(urlPattern, {
+      timeout: 30_000,
+      waitUntil: 'domcontentloaded',
+    }),
+    page.locator(selector).click(),
+  ]);
+  await page
+    .locator('.level-group-content')
+    .first()
+    .waitFor({state: 'visible', timeout: 30_000});
+}
+
 test.describe('Level group multi-page', () => {
   test(
     'multi-page level numbering is correct across all pages',
     {tag: '@no_mobile'},
     async ({page}) => {
-      // Source: level_group_multi_page.feature "multi page level numbering"
+      // Scenario: multi page level numbering
       await createTeacherAssociatedStudent(page);
 
       await page.goto(PAGE1_URL);
@@ -47,11 +75,7 @@ test.describe('Level group multi-page', () => {
       ).toContainText('The standard QWERTY keyboard has');
 
       // Navigate to page 2.
-      await Promise.all([
-        page.waitForNavigation(),
-        page.locator('.nextPageButton').click(),
-      ]);
-      await expect(page).toHaveURL(/\/page\/2/);
+      await clickPagerAndWait(page, '.nextPageButton', /\/page\/2/);
 
       // Page 2 — numbering continues from where page 1 left off.
       await expect(page.locator('.level-group-number').nth(0)).toContainText(
@@ -86,12 +110,11 @@ test.describe('Level group multi-page', () => {
     'submit three pages persists all answers across reloads',
     {tag: '@no_mobile'},
     async ({page}) => {
-      // Webkit: multi-page submission answer persistence flaky under parallel run; passes alone.
+      // Scenario: Submit three pages.
       test.fixme(
         true,
-        'TODO: submit three pages persists answers flaky on webkit under parallel run; timing issue with multi-page level-group reload or answer state',
+        'Flaky after 3 deflake attempts: level-group page answer persistence is not stable across browser engines when porting dashboard/test/ui/features/teacher_tools/level_types/level_group_multi_page.feature "Submit three pages."',
       );
-      // Source: level_group_multi_page.feature "Submit three pages."
       await createTeacherAssociatedStudent(page);
 
       await page.goto(PAGE1_URL);
@@ -129,16 +152,15 @@ test.describe('Level group multi-page', () => {
         .nth(2)
         .locator('.answerbutton[index="0"]')
         .click();
+      await expect(
+        page.locator('.level-group-content').nth(2).locator('#checked_2'),
+      ).toBeVisible();
+      await expect(
+        page.locator('.level-group-content').nth(2).locator('#checked_0'),
+      ).toBeVisible();
+      await expectPerfectAssessment(headerBubble(page, 2));
 
-      await Promise.all([
-        page.waitForNavigation(),
-        page.locator('.nextPageButton').click(),
-      ]);
-      await expect(page).toHaveURL(/\/page\/2/);
-      await page
-        .locator('.level-group-content')
-        .first()
-        .waitFor({state: 'visible'});
+      await clickPagerAndWait(page, '.nextPageButton', /\/page\/2/);
       await expect(
         page.locator('.level-group-content').nth(0).locator('.multi-question'),
       ).toContainText('Which step should go');
@@ -159,23 +181,29 @@ test.describe('Level group multi-page', () => {
         .nth(2)
         .locator('.answerbutton[index="1"]')
         .click();
+      await expect(
+        page.locator('.level-group-content').nth(0).locator('#checked_2'),
+      ).toBeVisible();
+      await expect(
+        page.locator('.level-group-content').nth(1).locator('#checked_0'),
+      ).toBeVisible();
+      await expect(
+        page.locator('.level-group-content').nth(2).locator('#checked_1'),
+      ).toBeVisible();
 
       // Text with escape sequences — TypeScript \n resolves to actual newline.
       const textA = "First line \nsecond 'line'\n!@#$%^&*()_+-=~`\n\\ \\n \\t";
       const textB =
         'Another first line \nsecond "line"\n!@#$%^&*()_+-=~`\n\\ \\n \\t';
-      await page.locator('textarea').nth(0).fill(textA);
-      await page.locator('textarea').nth(1).fill(textB);
+      await page.locator('textarea').nth(0).fill('');
+      await page.locator('textarea').nth(0).pressSequentially(textA);
+      await page.locator('textarea').nth(1).fill('');
+      await page.locator('textarea').nth(1).pressSequentially(textB);
+      await expect(page.locator('textarea').nth(0)).toHaveValue(textA);
+      await expect(page.locator('textarea').nth(1)).toHaveValue(textB);
+      await expectPerfectAssessment(headerBubble(page, 3));
 
-      await Promise.all([
-        page.waitForNavigation(),
-        page.locator('.nextPageButton').click(),
-      ]);
-      await expect(page).toHaveURL(/\/page\/3/);
-      await page
-        .locator('.level-group-content')
-        .first()
-        .waitFor({state: 'visible'});
+      await clickPagerAndWait(page, '.nextPageButton', /\/page\/3/);
       await expect(
         page.locator('.level-group-content').nth(0).locator('.multi-question'),
       ).toContainText('Which repeat block');
@@ -191,12 +219,19 @@ test.describe('Level group multi-page', () => {
         .nth(1)
         .locator('.answerbutton[index="1"]')
         .click();
+      await expect(
+        page.locator('.level-group-content').nth(0).locator('#checked_2'),
+      ).toBeVisible();
+      await expect(
+        page.locator('.level-group-content').nth(1).locator('#checked_1'),
+      ).toBeVisible();
+      await expectPerfectAssessment(headerBubble(page, 4));
 
       // Submit the long assessment.
       await page.locator('.submitButton').first().click();
       await page.locator('.modal').waitFor({state: 'visible', timeout: 15_000});
       await Promise.all([
-        page.waitForNavigation(),
+        page.waitForNavigation({waitUntil: 'load', timeout: 30_000}),
         page.locator('#ok-button').click(),
       ]);
 

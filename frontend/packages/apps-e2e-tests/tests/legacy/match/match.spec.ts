@@ -3,18 +3,33 @@ import {expect, test} from '../../shared/fixtures';
 import {Match} from './Match';
 
 /**
+ * Waits for the milestone POST that persists a match submission.
+ *
+ * @param page - Playwright page on a match level
+ */
+async function waitForMilestonePost(
+  page: import('@playwright/test').Page,
+): Promise<void> {
+  await page.waitForResponse(
+    response =>
+      response.request().method() === 'POST' &&
+      response.url().includes('/milestone/') &&
+      response.ok(),
+    {timeout: 30_000},
+  );
+}
+
+/**
  * Match level type — lesson 11 of allthethingscourse.
  *
  * Sources:
  *   dashboard/test/ui/features/teacher_tools/level_types/match.feature
  *
- * Scenarios 1 (loading) and 2 (solving) are anonymous.
- * Scenario 3 (submitting incorrect solution) requires @as_student auth — skipped.
  * All scenarios tagged @no_mobile per the source feature.
  */
 test.describe('Match — lesson 11', () => {
   test('loading the level shows question text', async ({page}) => {
-    // Source: match.feature "Loading the level"
+    // Scenario: Loading the level
     const match = new Match(page);
     await match.gotoLevel(1);
     await expect(match.questionText).toHaveText('Match the puzzles and blocks');
@@ -24,7 +39,7 @@ test.describe('Match — lesson 11', () => {
     'solving all four answers shows correct modal',
     {tag: '@no_mobile'},
     async ({page}) => {
-      // Source: match.feature "Solving puzzle"
+      // Scenario: Solving puzzle
       // Dismiss the login reminder (sign-in callout) before dragging.
       const match = new Match(page);
       await match.gotoLevel(1);
@@ -44,7 +59,7 @@ test.describe('Match — lesson 11', () => {
 // ─── Match — signed-in student, incorrect solution persisted on reload ────────
 
 /**
- * Source: match.feature "Submitting an incorrect solution".
+ * Scenario: Submitting an incorrect solution
  * Requires a signed-in student (@as_student @no_mobile).
  * Drags answers in reverse order (wrong solution), submits, verifies the
  * xmark indicator, then reloads and confirms the server remembered the answers.
@@ -54,11 +69,7 @@ test.describe('Match — incorrect solution persists', () => {
     'submitting incorrect solution shows xmark; answers reload from server',
     {tag: '@no_mobile'},
     async ({studentPage}) => {
-      test.fixme(
-        true,
-        'TODO: xmark element count assertion flaky on all browsers under parallel run; drag-and-drop timing issue with match level submission',
-      );
-      // Source: match.feature "Submitting an incorrect solution"
+      // Scenario: Submitting an incorrect solution
       const match = new Match(studentPage);
       await match.gotoLevel(1, {resetSession: false});
 
@@ -79,7 +90,9 @@ test.describe('Match — incorrect solution persists', () => {
       ).toHaveCount(0);
 
       // Submit via the bottom (review) button and wait for modal.
+      const submitPost = waitForMilestonePost(studentPage);
       await match.reviewButton.click();
+      await submitPost;
       await expect(match.modal).toBeVisible();
       await expect(match.modalTitle).toContainText('Incorrect');
       await match.okButton.click();
