@@ -1,13 +1,15 @@
 #!/usr/bin/env ruby
 # Replaces h4 usage in .external DSL level files:
-#   - #### text  →  text  (strips markdown h4 prefix)
+#   - #### text      →  text       (strips markdown h4 prefix)
+#   - * #### text    →  * text     (strips h4 prefix after bullet marker)
 #   - <h4...>text</h4>  →  <p>text</p>
 #   - <a...><h4>text</h4></a>  →  <a...>text</a>  (unwrap only, <p> inside <a> is invalid)
 #
 # Only transforms content inside markdown <<MARKDOWN ... MARKDOWN heredoc blocks.
-# Run from repo root: ruby bin/replace_h4_in_external_levels.rb
+# Run from repo root: ruby bin/replace_h4_in_external_levels.rb [--dry-run]
 
-files = Dir.glob(File.join(__dir__, '../dashboard/config/scripts/*.external')).sort
+dry_run = ARGV.include?('--dry-run')
+files = Dir.glob(File.join(__dir__, '../dashboard/config/scripts/**/*.external')).sort
 
 changed = 0
 files.each do |file|
@@ -19,7 +21,8 @@ files.each do |file|
     markdown = Regexp.last_match(2)
     suffix   = Regexp.last_match(3)
 
-    # Strip exactly 4 leading # (not 5+), followed by optional whitespace.
+    # Strip exactly 4 leading # (not 5+) after optional bullet marker and whitespace.
+    markdown.gsub!(/^(\s*[-*]\s*)####(?!#) */, '\1')
     markdown.gsub!(/^####(?!#) */, '')
 
     # Unwrap <h4> nested directly inside <a> — replacing with <p> would be invalid HTML.
@@ -33,9 +36,21 @@ files.each do |file|
 
   next if content == original
 
-  File.write(file, content)
   changed += 1
-  puts "updated: #{File.basename(file)}"
+  if dry_run
+    puts "=== #{File.basename(file)} ==="
+    original.lines.zip(content.lines).each_with_index do |(orig, updated), i|
+      next if orig == updated
+      puts "  line #{i + 1}:"
+      puts "    before: #{orig.rstrip}"
+      puts "    after:  #{updated.rstrip}"
+    end
+    puts
+  else
+    File.write(file, content)
+    puts "updated: #{File.basename(file)}"
+  end
 end
 
-puts "\n#{changed} files updated."
+action = dry_run ? 'Would update' : 'Updated'
+puts "\n#{action} #{changed} files."
