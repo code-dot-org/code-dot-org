@@ -7,5 +7,5 @@ markdown <<MARKDOWN
 
 ## Answer: D
 
-#### A weather forecasting model that predicts rain more accurately in urban areas than in rural areas due to higher sensor density in cities. This is more a case of data availability and sensor placement than an instance of algorithmic bias affecting social or ethical outcomes.
+A weather forecasting model that predicts rain more accurately in urban areas than in rural areas due to higher sensor density in cities. This is more a case of data availability and sensor placement than an instance of algorithmic bias affecting social or ethical outcomes.
 MARKDOWN

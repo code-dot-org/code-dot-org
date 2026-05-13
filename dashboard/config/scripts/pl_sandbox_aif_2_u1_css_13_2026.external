@@ -5,14 +5,14 @@ description 'description here'
 markdown <<MARKDOWN
 # Introducing CSS 
 
-####  Now that we have the structure of a website, let’s add some style!
+Now that we have the structure of a website, let’s add some style!
 
 <div style="background-color: #B7E0E5; border-radius: 10px; padding: 15px; margin: 20px auto; max-width: 85%; box-sizing: border-box; word-wrap: break-word; overflow-wrap: break-word;">
 <p style="font-size: 14pt; margin-top: 12px; line-height: 120%;">📖 <b>CSS</b> (Cascading Style Sheets) is the language that controls the look and feel of a webpage.
 </p>
 </div>
 
-#### If HTML is the structure, CSS is the design—it handles colors, fonts, spacing, and layout.
+If HTML is the structure, CSS is the design—it handles colors, fonts, spacing, and layout.
 
 <div style="text-align: center; width: 80%; margin: 0 auto;">
   <p style="
@@ -27,32 +27,32 @@ markdown <<MARKDOWN
   </p>
 </div>
 
-#### With CSS you can...
-- #### Changes colors, fonts, and text sizes
-- #### Controls spacing (margins, padding, alignment)
-- #### Adds borders, backgrounds, and styles
-- #### Defines layout (how sections of a page are arranged)
+With CSS you can...
+- Changes colors, fonts, and text sizes
+- Controls spacing (margins, padding, alignment)
+- Adds borders, backgrounds, and styles
+- Defines layout (how sections of a page are arranged)
 
 <div style="clear:both;"></div>
 
 ---
 
 ## How it Works 
-#### To apply CSS to a webpage, you link a CSS file inside the `<head>` section of your HTML: 
+To apply CSS to a webpage, you link a CSS file inside the `<head>` section of your HTML: 
 
 <img src="https://images.code.org/25a94e1abb5764272bb756bd05e472bf-image-1763399640046.png" alt="link code to connect html to css file" width="450px" style="display: block;  float:left ;border-radius:10px; ">
 
 <div style="clear:both;"></div>
 
-#### That line tells the computer: *“Use the style rules in this file to decorate and arrange my HTML content.”*
+That line tells the computer: *“Use the style rules in this file to decorate and arrange my HTML content.”*
 
-####  Once the file is linked, the browser looks at each CSS rule and applies it to the matching HTML elements.
+Once the file is linked, the browser looks at each CSS rule and applies it to the matching HTML elements.
 
 ---
 
 ## CSS Selectors and Properties
 
-#### Each CSS rule has three parts:
+Each CSS rule has three parts:
 
 <div style="display: flex; flex-wrap: wrap; gap: 20px; justify-content: center; font-family: Arial, sans-serif; font-size: 14pt; margin: 20px 0;">
 

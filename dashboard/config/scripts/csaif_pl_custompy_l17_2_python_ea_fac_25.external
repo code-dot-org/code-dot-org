@@ -5,19 +5,19 @@ description 'description here'
 markdown <<MARKDOWN
 # Functions and Parameters 
 
-#### Let's review. In the previous level, you explored using two files: `custom.py` and `main.py`.
+Let's review. In the previous level, you explored using two files: `custom.py` and `main.py`.
 
-#### This setup is common when working with objects in code and will be used by your students when programming in the Neighborhood. 
+This setup is common when working with objects in code and will be used by your students when programming in the Neighborhood. 
 
-#### Remember,`custom.py` is where you define the functions you create, and `main.py` is where you run your main program and call the functions. 
+Remember,`custom.py` is where you define the functions you create, and `main.py` is where you run your main program and call the functions. 
 
 > #### Using multiple files helps new programmers build clean, organized code and develop good coding habits.
 
 ## Functions with Parameters 
 
-#### In this example, a function, `paint_line()`, is created to paint two consecutive squares (or a line) a certain color in the neighborhood. 
+In this example, a function, `paint_line()`, is created to paint two consecutive squares (or a line) a certain color in the neighborhood. 
 
-#### The function is also called, or used, to paint the line blue.
+The function is also called, or used, to paint the line blue.
 
 <details><summary style="font-size: 18px;"><strong>💡 Why would a coder code it this way? </strong></summary> <p style = "font-size: 16px;"><br> Defining a function like this means you can run the function multiple times and just change the color each time by putting in a different value.</p>
 </details>
@@ -52,9 +52,9 @@ markdown <<MARKDOWN
 
 ## Using Parameters in Custom.py 
 
-#### When defining a function in the `custom.py` file, the `painter` object is added inside the parentheses, or as a **parameter.** 
+When defining a function in the `custom.py` file, the `painter` object is added inside the parentheses, or as a **parameter.** 
 
-#### Here, painter is added as a parameter. This makes the code usable for any painter object you later create.
+Here, painter is added as a parameter. This makes the code usable for any painter object you later create.
 
 <div style="clear:both;"></div>
 
@@ -86,5 +86,5 @@ markdown <<MARKDOWN
 </p>
 
 ## Next up!
-#### Explore the backpack feature to see how to transfer your custom code to different levels. 
+Explore the backpack feature to see how to transfer your custom code to different levels. 
 MARKDOWN

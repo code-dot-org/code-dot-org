@@ -5,11 +5,11 @@ description 'description here'
 markdown <<MARKDOWN
 # JuiceMind 
 
-#### Code.org has partnered with JuiceMind to create engaging, interactive assessments for this course. **JuiceMind** is an educational platform offering fun coding quizzes and projects for CS teachers and students.
+Code.org has partnered with JuiceMind to create engaging, interactive assessments for this course. **JuiceMind** is an educational platform offering fun coding quizzes and projects for CS teachers and students.
 
 ## Assigning OPTIONAL JuiceMind Assessments
 
-#### Nested in the lesson plans, you will notice optional assessment activities from JuiceMind like in this image below.
+Nested in the lesson plans, you will notice optional assessment activities from JuiceMind like in this image below.
 
  <table width="100%" height="100%">
         <tr>
@@ -37,8 +37,8 @@ markdown <<MARKDOWN
 
 
 ## Tutorial Videos 
-#### Click on the video images below to learn more about the features of JuiceMind. 
-#### *The videos open in a different tab.*
+Click on the video images below to learn more about the features of JuiceMind. 
+*The videos open in a different tab.*
 <br>
 
 <table  border="0" width="850px">

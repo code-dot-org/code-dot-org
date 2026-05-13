@@ -5,13 +5,13 @@ description 'description here'
 markdown <<MARKDOWN
 # Data Science Course Overview
  
-#### While the Data Science Units are part of the **Computer Science and AI Foundations** course, they can also serve as a standalone unit for 9-12 students that can be integrated seamlessly into existing curriculum, including computer science, math, or science, offering teachers the flexibility to introduce it according to their schedule and educational needs.
+While the Data Science Units are part of the **Computer Science and AI Foundations** course, they can also serve as a standalone unit for 9-12 students that can be integrated seamlessly into existing curriculum, including computer science, math, or science, offering teachers the flexibility to introduce it according to their schedule and educational needs.
 
-#### This course consists of two units. You can choose to teach one or both units, whichever works for your class and schedule.
+This course consists of two units. You can choose to teach one or both units, whichever works for your class and schedule.
 
 
 ## Unit l: Foundations of Data Science
-#### This unit consists of 13 lessons and takes about three weeks to complete and does not have Python programming.
+This unit consists of 13 lessons and takes about three weeks to complete and does not have Python programming.
 
 <div style="display: flex; align-items: center; justify-content: space-between; background: #f7f8fa; padding: 20px; border-radius: 10px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); font-family: Arial, sans-serif; font-size: 14pt; line-height: 1.6; max-width: 800px; margin: 20px auto;">
 
@@ -33,14 +33,14 @@ markdown <<MARKDOWN
 
 
 
-#### <b> Explore Unit One <a href = "https://studio.code.org/s/intro-to-data-science-2024" target = "blank" rel = "noopener noreferrer"> here </a></b>
+<b> Explore Unit One <a href = "https://studio.code.org/s/intro-to-data-science-2024" target = "blank" rel = "noopener noreferrer"> here </a></b>
 
 
 <div style="clear:both;"></div>
 
 ## Unit 2: Data Science with Python
 
-#### This unit consists of 13 lessons and takes about 3 weeks to complete and features Python and Pandas in the new Python Lab.
+This unit consists of 13 lessons and takes about 3 weeks to complete and features Python and Pandas in the new Python Lab.
 
 <div style="display: flex; align-items: center; justify-content: space-between; background: #f7f8fa; padding: 10px; border-radius: 10px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); font-family: Arial, sans-serif; font-size: 14pt; line-height: 1.6; max-width: 800px; margin: 20px auto;">
   <div style="flex: 1; padding-right: 10px;">
@@ -60,7 +60,7 @@ markdown <<MARKDOWN
 </div>
 
 
-#### <b>Explore Unit Two <a href = "https://studio.code.org/s/data-science-with-python-2024" target = "blank" rel = "noopener noreferrer"> here </a>
+<b>Explore Unit Two <a href = "https://studio.code.org/s/data-science-with-python-2024" target = "blank" rel = "noopener noreferrer"> here </a>
 
 <div style="clear:both;"></div>
 

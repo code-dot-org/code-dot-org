@@ -5,9 +5,9 @@ description 'description here'
 markdown <<MARKDOWN
 # Arrays in Objects
 
-#### Now that you’ve looked at how objects group related information under a single name, it can be useful to examine how that same information can be organized using parallel arrays.
+Now that you’ve looked at how objects group related information under a single name, it can be useful to examine how that same information can be organized using parallel arrays.
 
-#### This provides a clear contrast between managing multiple separate data lists and the cleaner structure that objects offer.
+This provides a clear contrast between managing multiple separate data lists and the cleaner structure that objects offer.
 
 ---
 
@@ -17,9 +17,9 @@ markdown <<MARKDOWN
 
 ## Example
 
-#### With parallel arrays, each array represents one property, and the values at the same index correspond to the same real-world item.
+With parallel arrays, each array represents one property, and the values at the same index correspond to the same real-world item.
 
-#### In the example above, index 0 in a **names** array, a **goals** array, and a **wcWin** array each provide a different detail about the same object.
+In the example above, index 0 in a **names** array, a **goals** array, and a **wcWin** array each provide a different detail about the same object.
 
 
 

@@ -5,11 +5,11 @@ description 'description here'
 markdown <<MARKDOWN
 # Lesson 2: Computational Thinking
  
-#### This lesson explores key computational thinking concepts and how they connect to coding instruction.
+This lesson explores key computational thinking concepts and how they connect to coding instruction.
 
-#### By understanding these concepts, you will build a **strong foundation for teaching programming** and discover strategies to help students develop problem-solving skills. 
+By understanding these concepts, you will build a **strong foundation for teaching programming** and discover strategies to help students develop problem-solving skills. 
 
-#### These concepts are weaved throughout all of the **AI Foundations** courses. You will see plugged and unplugged lessons on topics like decomposition, pattern recognition, abstraction, and algorithms.
+These concepts are weaved throughout all of the **AI Foundations** courses. You will see plugged and unplugged lessons on topics like decomposition, pattern recognition, abstraction, and algorithms.
 
 
 
@@ -33,7 +33,7 @@ markdown <<MARKDOWN
 </div>
 
 
-#### **Suggested Time:** 20 minutes
+**Suggested Time:** 20 minutes
 
 
 MARKDOWN

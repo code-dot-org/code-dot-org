@@ -5,9 +5,9 @@ description 'description here'
 markdown <<MARKDOWN
 # Curriculum Structure
 
-#### The Programming with Music Lab curriculum begins with an introductory lesson, <a href="https://studio.code.org/courses/programming-with-music-lab-2025/units/1/lessons/1" target="blank" rel="noopener noreferrer">Introduction to Music Lab</a>, which introduces the Problem-Solving Process and primes students to create music.
+The Programming with Music Lab curriculum begins with an introductory lesson, <a href="https://studio.code.org/courses/programming-with-music-lab-2025/units/1/lessons/1" target="blank" rel="noopener noreferrer">Introduction to Music Lab</a>, which introduces the Problem-Solving Process and primes students to create music.
 
-#### The rest of the curriculum is divided into three chunks, each covering one of the major computer science concepts: **sequencing**, **loops**, and **functions**.
+The rest of the curriculum is divided into three chunks, each covering one of the major computer science concepts: **sequencing**, **loops**, and **functions**.
 
 <div style="display: flex; justify-content: space-between; width: 90%; margin: 20px auto;">
   <div style="background: #B7E0E5; width: 23%; padding: 15px; box-sizing: border-box; border-radius: 5px">
@@ -34,10 +34,10 @@ markdown <<MARKDOWN
 
 ## Curriculum Chunks
 
-#### Each chunk of the curriculum follows a predictable four-lesson format. This sequence allows for a gradual release of responsibility from the teacher to the student.
+Each chunk of the curriculum follows a predictable four-lesson format. This sequence allows for a gradual release of responsibility from the teacher to the student.
 
 
-#### **Explore-Practice-Synthesize-Project** is a structure that gradually moves students from exposure to mastery to creativity. This progression is designed to support all learners, especially those new to computer science, and allows students to build confidence before applying concepts independently.
+**Explore-Practice-Synthesize-Project** is a structure that gradually moves students from exposure to mastery to creativity. This progression is designed to support all learners, especially those new to computer science, and allows students to build confidence before applying concepts independently.
 
 ##### Click on the arrows below to expand each section.
 
@@ -45,28 +45,28 @@ markdown <<MARKDOWN
 <summary style="font-size: 18px; font-weight: bold;">🔍 Explore</summary>
 <div style="margin-top: 20px; margin-left: 20px; margin-right: 20px;">
 
-#### Explore lessons help students investigate existing code before creating their own. These levels use structured scaffolding guide students step-by-step to feel confident in the coding skill.
+Explore lessons help students investigate existing code before creating their own. These levels use structured scaffolding guide students step-by-step to feel confident in the coding skill.
 </div></details>
 
 <details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
 <summary style="font-size: 18px; font-weight: bold;">🛠️ Practice</summary>
 <div style="margin-top: 20px; margin-left: 20px; margin-right: 20px;">
 
-#### Practice lessons introduce new strategies or tools students might not discover on their own.
+Practice lessons introduce new strategies or tools students might not discover on their own.
 </div></details>
 
 <details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
 <summary style="font-size: 18px; font-weight: bold;">🧠 Synthesize</summary>
 <div style="margin-top: 20px; margin-left: 20px; margin-right: 20px;">
 
-#### Synthesize lessons help students review past concepts, learn a new technique or context related to a featured career in music, and apply their skills through creative tasks.
+Synthesize lessons help students review past concepts, learn a new technique or context related to a featured career in music, and apply their skills through creative tasks.
 </div></details>
 
 <details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
 <summary style="font-size: 18px; font-weight: bold;">🎼 Project</summary>
 <div style="margin-top: 20px; margin-left: 20px; margin-right: 20px;">
 
-#### The sequencing and loops chunks end with a mini-project, while the functions chunk ends with an end-of-unit project.
+The sequencing and loops chunks end with a mini-project, while the functions chunk ends with an end-of-unit project.
 </div></details>
 
 ## Projects
@@ -75,13 +75,13 @@ markdown <<MARKDOWN
 <summary style="font-size: 18px; font-weight: bold;">🎶 Mini-Projects</summary>
 <div style="margin-top: 20px; margin-left: 20px; margin-right: 20px;">
 
-#### **Mini-Projects** are opportunities for students to apply what they have learned by creating something new in a more open-ended setting. They are opportunities for students to practice open-ended application of a small set of new skills. 
+**Mini-Projects** are opportunities for students to apply what they have learned by creating something new in a more open-ended setting. They are opportunities for students to practice open-ended application of a small set of new skills. 
 </div></details>
 
 <details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
 <summary style="font-size: 18px; font-weight: bold;">🎼 End-of-Unit Projects</summary>
 <div style="margin-top: 20px; margin-left: 20px; margin-right: 20px;">
 
-#### **End-of Unit Projects** are multi-day, open-ended lessons. They challenge students to create using skills developed throughout the unit with opportunities for planning, creation, and reflection.
+**End-of Unit Projects** are multi-day, open-ended lessons. They challenge students to create using skills developed throughout the unit with opportunities for planning, creation, and reflection.
 </div></details>
 MARKDOWN

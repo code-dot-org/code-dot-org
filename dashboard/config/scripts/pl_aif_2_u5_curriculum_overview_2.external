@@ -7,14 +7,14 @@ markdown <<MARKDOWN
 
 ## What is Designing Reliable Apps with AI and APIs all about?
 
-#### In Designing Reliable Apps with AI and APIs, students learn how web apps use external APIs to fetch data and integrate AI-powered services into their programs.
+In Designing Reliable Apps with AI and APIs, students learn how web apps use external APIs to fetch data and integrate AI-powered services into their programs.
 
-#### Building on their earlier work with asynchronous JavaScript, arrays, and objects, they design apps that respond gracefully to loading delays, errors, and missing data, while considering how reliance on external systems affects reliability, user trust, and app behavior.
+Building on their earlier work with asynchronous JavaScript, arrays, and objects, they design apps that respond gracefully to loading delays, errors, and missing data, while considering how reliance on external systems affects reliability, user trust, and app behavior.
 
 
 ---
 
-#### ***Note: Unlike the first semester, the second semester of AI Foundations is a continuous sequence and must be taught in order. Designing Reliable App unit in the course.***
+***Note: Unlike the first semester, the second semester of AI Foundations is a continuous sequence and must be taught in order. Designing Reliable App unit in the course.***
 
 
 

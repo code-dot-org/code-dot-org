@@ -5,9 +5,9 @@ description 'description here'
 markdown <<MARKDOWN
 # Preparing for the Final Project
  
-#### This project focuses on analyzing a real-world app to identify **two security or usability issues** that affect different users. 
+This project focuses on analyzing a real-world app to identify **two security or usability issues** that affect different users. 
 
-#### The final product includes a **before-and-after artifact** that shows a redesigned solution, along with a personified security feature that explains how it helps.
+The final product includes a **before-and-after artifact** that shows a redesigned solution, along with a personified security feature that explains how it helps.
  
 
 
@@ -38,5 +38,5 @@ markdown <<MARKDOWN
 
 <img src="https://images.code.org/fe1eba356fd109ee663bbff4e376cab7-image-1755268159411.png" alt="example comic of person struggling with ride share app. This is an example of the before artifact" width="850px" style="display: block; margin-left: auto; margin-right: auto;">
 
-#### In this example, the character is expressing their concerns with the ride share app. 
+In this example, the character is expressing their concerns with the ride share app. 
 MARKDOWN

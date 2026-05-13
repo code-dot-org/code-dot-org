@@ -5,11 +5,11 @@ description 'description here'
 markdown <<MARKDOWN
 # Rendering Lists of Objects
 
-#### Before we start rendering content on the page, we need a way to transform data into something we can display.
+Before we start rendering content on the page, we need a way to transform data into something we can display.
 
-#### JavaScript gives us a powerful tool for this: `.map()`.
+JavaScript gives us a powerful tool for this: `.map()`.
 
-#### We’ll start with a simple list, use `.map()` to transform it, and then connect that idea to rendering data into the DOM.
+We’ll start with a simple list, use `.map()` to transform it, and then connect that idea to rendering data into the DOM.
 
 
 
@@ -100,16 +100,16 @@ markdown <<MARKDOWN
 ---
 ## Rendering Data into the DOM with .map()
 
-#### When we render data on a web page, we often start with an array of objects. EX: users, products, or messages.
-#### `.map()` allows us to loop through that data and turn each object into a piece of HTML, which we can then display on the page.
+When we render data on a web page, we often start with an array of objects. EX: users, products, or messages.
+`.map()` allows us to loop through that data and turn each object into a piece of HTML, which we can then display on the page.
 
-#### **In other words:**
+**In other words:**
 
-- #### Each item in the data becomes one visual element
+- Each item in the data becomes one visual element
 
-- #### `.map()` helps us create those elements consistently and efficiently
+- `.map()` helps us create those elements consistently and efficiently
 
-- #### This pattern shows up constantly in real-world web development.
+- This pattern shows up constantly in real-world web development.
 
 <div
   style="

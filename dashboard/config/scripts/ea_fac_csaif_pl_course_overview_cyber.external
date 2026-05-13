@@ -5,7 +5,7 @@ description 'description here'
 markdown <<MARKDOWN
 # Cybersecurity and Global Impacts Unit Overview
  
-#### While the Cybersecurity and Global Impacts Unit is part of the **Computer Science and AI Foundations** course, it can also serve as a standalone unit for 9-12 students that can be integrated seamlessly into existing curriculum, including computer science, math, or science, offering teachers the flexibility to introduce it according to their schedule and educational needs.
+While the Cybersecurity and Global Impacts Unit is part of the **Computer Science and AI Foundations** course, it can also serve as a standalone unit for 9-12 students that can be integrated seamlessly into existing curriculum, including computer science, math, or science, offering teachers the flexibility to introduce it according to their schedule and educational needs.
 
 <div style="display: flex; align-items: center; justify-content: space-between; background: #f7f8fa; padding: 20px; border-radius: 10px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); font-family: Arial, sans-serif; font-size: 14pt; line-height: 1.6; max-width: 800px; margin: 20px auto;">
 
@@ -25,7 +25,7 @@ markdown <<MARKDOWN
 </div>
 
 
-#### This unit consists of 11 lessons, takes about three weeks to complete, and does not have Python programming.
+This unit consists of 11 lessons, takes about three weeks to complete, and does not have Python programming.
 
 <div style="clear:both;"></div>
 

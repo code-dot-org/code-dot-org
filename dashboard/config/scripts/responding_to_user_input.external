@@ -58,7 +58,7 @@ Notice that this function, unlike others we’ve seen, does not have a name. It 
 MARKDOWN
 
 teacher_markdown <<MARKDOWN
-#### Just the Facts
+Just the Facts
 
 There's a lot to consume here and many of the details about how events work in App Lab are not totally necessary to understand for our needs in this unit. If students are struggling with how programming works in App Lab, focus on these essentials:
 
@@ -69,7 +69,7 @@ There's a lot to consume here and many of the details about how events work in A
     * code that should be run when the event occurs (this code is technically an anonymous callback function, represented by the green block)
 * Code inside `onEvent()` blocks runs any time the specified event occurs
 
-#### Compared to Game Lab
+Compared to Game Lab
 
 In Game Lab, we might use the following code to check if a sprite named "button" was clicked and do something about it:
 

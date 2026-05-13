@@ -5,11 +5,11 @@ description 'description here'
 markdown <<MARKDOWN
 # Practice
 
-#### Let's start by activating your current understanding of AI.
+Let's start by activating your current understanding of AI.
 
-#### Below are examples of various technologies. Mentally classify each ones as something that does use or do not use AI. 
+Below are examples of various technologies. Mentally classify each ones as something that does use or do not use AI. 
 
-#### 👉 Click on the box to get the answer and explanation. It’s okay if you don’t get them all on the first try!
+👉 Click on the box to get the answer and explanation. It’s okay if you don’t get them all on the first try!
 
 <br>
 
@@ -24,7 +24,7 @@ markdown <<MARKDOWN
 <div>
 <p>
 
-#### Self-driving cars use artificial intelligence to interpret sensor data, recognize objects, predict the behavior of other road users, and make driving decisions in real time. These systems rely on machine learning models trained on large amounts of driving data to operate safely in changing environments.
+Self-driving cars use artificial intelligence to interpret sensor data, recognize objects, predict the behavior of other road users, and make driving decisions in real time. These systems rely on machine learning models trained on large amounts of driving data to operate safely in changing environments.
 
 </p>
 </div>
@@ -44,7 +44,7 @@ markdown <<MARKDOWN
 <div>
 <p>
 
-#### 3D printing is a process of creating three-dimensional objects from a digital file, using additive processes where material is laid down in layers. This technology is revolutionary but does not inherently use AI, as it operates based on predefined models and settings.
+3D printing is a process of creating three-dimensional objects from a digital file, using additive processes where material is laid down in layers. This technology is revolutionary but does not inherently use AI, as it operates based on predefined models and settings.
 
 </p></div>
 </div>
@@ -62,7 +62,7 @@ markdown <<MARKDOWN
 <div>
 <p>
 
-#### Music recommendation systems use AI to analyze listening history, preferences, and patterns across many users. By learning from data, these systems predict which songs or artists a user is likely to enjoy and continuously improve their recommendations over time.
+Music recommendation systems use AI to analyze listening history, preferences, and patterns across many users. By learning from data, these systems predict which songs or artists a user is likely to enjoy and continuously improve their recommendations over time.
 </p></div>
 </div>
 </div>
@@ -79,7 +79,7 @@ markdown <<MARKDOWN
 <div>
 <p>
 
-#### Some smart home devices use simple rules (for example, turning lights on when motion is detected), which is not AI. Others use AI to learn routines, adapt to user behavior, or recognize voices. Whether a smart home device uses AI depends on how it works internally.
+Some smart home devices use simple rules (for example, turning lights on when motion is detected), which is not AI. Others use AI to learn routines, adapt to user behavior, or recognize voices. Whether a smart home device uses AI depends on how it works internally.
 
 </p></div>
 </div>
@@ -96,7 +96,7 @@ markdown <<MARKDOWN
 <div>
 <p>
 
-#### Digital cameras capture images using sensors and electronics, not artificial intelligence. While modern cameras may include AI-powered features like face detection or image enhancement, the core function of taking a photo does not rely on AI.
+Digital cameras capture images using sensors and electronics, not artificial intelligence. While modern cameras may include AI-powered features like face detection or image enhancement, the core function of taking a photo does not rely on AI.
 
 </p></div>
 </div>

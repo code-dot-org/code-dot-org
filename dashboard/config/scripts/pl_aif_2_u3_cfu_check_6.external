@@ -5,23 +5,23 @@ description 'description here'
 markdown <<MARKDOWN
 # Objects for Real-world Data
 
-#### Now that you have explored organizing and updating lists with array methods, it's time for the next step: representing more complex things in their programs. 
+Now that you have explored organizing and updating lists with array methods, it's time for the next step: representing more complex things in their programs. 
 
-#### Real-world items usually aren’t just one piece of information—they have many details. That’s where **objects** come in.
+Real-world items usually aren’t just one piece of information—they have many details. That’s where **objects** come in.
 
 <img src="https://images.code.org/125d7ab017a32085476933e0821b04f1-image-1765988268219.png" alt="backpack labeled as object with properties of type color size" width="200px" style="border-radius:10px; float:right; margin: 40px 40px 40px 40px;">
 
 ## What is an object?
 
-#### An object is a set of related information grouped under one name.
+An object is a set of related information grouped under one name.
 
-#### It lets you represent a real-world thing (like a backpack or dessert) in code.
+It lets you represent a real-world thing (like a backpack or dessert) in code.
 
-#### We can explain the backpack with descriptive properties.
+We can explain the backpack with descriptive properties.
 
-- #### **type**
-- #### **color**
-- #### **size**
+- **type**
+- **color**
+- **size**
 
 
 <div style="clear:both;"></div>
@@ -73,14 +73,14 @@ markdown <<MARKDOWN
 
 ## Next Up
 
-#### In the next level you will create an object. Think of an object with three properties like the backpack from above. 
+In the next level you will create an object. Think of an object with three properties like the backpack from above. 
 
-#### Example: 
-- #### **dessert:** type,flavor, temperature 
-- #### **pizza:** size, toppings, crust
-- #### **car:** make, color, year 
+Example: 
+- **dessert:** type,flavor, temperature 
+- **pizza:** size, toppings, crust
+- **car:** make, color, year 
 
-#### You will use your object idea in the next level. 
+You will use your object idea in the next level. 
 
 
 MARKDOWN

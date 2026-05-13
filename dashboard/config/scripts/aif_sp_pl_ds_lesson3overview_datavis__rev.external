@@ -5,7 +5,7 @@ description 'description here'
 markdown <<MARKDOWN
 <h1>Introduction to Data Science</h1>
 
-#### Now that you've explored how to ask and investigate data questions, let’s turn to data visualizations—tools that help students deepen their understanding by making data easier to see, interpret, and explain.
+Now that you've explored how to ask and investigate data questions, let’s turn to data visualizations—tools that help students deepen their understanding by making data easier to see, interpret, and explain.
 
 <div style="display: flex; align-items: center; justify-content: space-between; background: #f7f8fa; padding: 20px; border-radius: 10px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); font-size: 14pt; line-height: 1.6; max-width: 800px; margin: 20px auto;">
 
@@ -30,7 +30,7 @@ markdown <<MARKDOWN
   </div>
 </div>
 
-#### **Suggested Time:** 30 minutes
+**Suggested Time:** 30 minutes
 
 
 MARKDOWN

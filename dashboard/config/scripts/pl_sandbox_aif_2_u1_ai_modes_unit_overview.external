@@ -5,11 +5,11 @@ description 'description here'
 markdown <<MARKDOWN
 # AI Course Progression
 
-#### In Unit1, the AI tutor operates in **designer mode**.
+In Unit1, the AI tutor operates in **designer mode**.
 
-#### Students define goals and plan the layout or behavior of their website, while the AI suggests options and offers feedback. Students remain in control of what to build and why.
+Students define goals and plan the layout or behavior of their website, while the AI suggests options and offers feedback. Students remain in control of what to build and why.
 
-#### **Students do not need to write HTML or CSS themselves**. Instead, they focus on creativity and design. The AI supports this process by suggesting ideas, generating code, and helping debug. 
+**Students do not need to write HTML or CSS themselves**. Instead, they focus on creativity and design. The AI supports this process by suggesting ideas, generating code, and helping debug. 
 
 <div style="text-align: center; width: 80%; margin: 0 auto;">
   <p style="
@@ -27,10 +27,10 @@ markdown <<MARKDOWN
 
 ## Unit by unit AI Modes
 
-#### Unit 2 introduces JavaScript, bringing interactivity to web apps. During this unit, the AI tutor shifts into engineering mode. Students begin implementing and adapting code in HTML, CSS, and JavaScript, while the AI provides scaffolds, pseudocode, and debugging support. Students are responsible for ensuring their code works correctly and aligns with their design goals.
+Unit 2 introduces JavaScript, bringing interactivity to web apps. During this unit, the AI tutor shifts into engineering mode. Students begin implementing and adapting code in HTML, CSS, and JavaScript, while the AI provides scaffolds, pseudocode, and debugging support. Students are responsible for ensuring their code works correctly and aligns with their design goals.
 
 
-#### In Unit 3, the QA (quality assurance) role is introduced. Students test and reflect on how their systems behave. The AI may suggest test cases or flag potential issues, but students interpret the results and decide what to revise.
+In Unit 3, the QA (quality assurance) role is introduced. Students test and reflect on how their systems behave. The AI may suggest test cases or flag potential issues, but students interpret the results and decide what to revise.
 
 
 <img src="https://images.code.org/c983eb6de1b54f311563cdbeea6cfa25-image-1776098318089.png" alt="unit progression of AI tutor roles. going from designer, adding engineer, and finally Quality assurance as the units progress." width="750px" style="display: block; margin-left: auto; margin-right: auto;border-radius:10px; ">

@@ -5,13 +5,13 @@ description 'description here'
 markdown <<MARKDOWN
 # Color Bank
 
-#### Each of the following colors align with Code.org branding. Use them in accordance with the breakdown on the previous page.
+Each of the following colors align with Code.org branding. Use them in accordance with the breakdown on the previous page.
 
-#### **Note**: The text color (black or white) on top of the colored circles in the following tables represent the text color that should be overlaid the brand color. These pairings pass WCAG contrast standards.
+**Note**: The text color (black or white) on top of the colored circles in the following tables represent the text color that should be overlaid the brand color. These pairings pass WCAG contrast standards.
 
 ## Neutrals
 
-#### These colors should comprise at least 60% of the page, which is achieved through Level Builder's background.
+These colors should comprise at least 60% of the page, which is achieved through Level Builder's background.
 
 <br>
 <div style="display:flex;flex-direction:column;border-top:1px solid #000000;border-bottom:1px solid #000000;width:500px;font-size:14pt;margin:auto;">
@@ -51,7 +51,7 @@ markdown <<MARKDOWN
 
 ## Primary
 
-#### Primary brand color. Should be dominant throughout Code.org branding.
+Primary brand color. Should be dominant throughout Code.org branding.
 <br>
 <div style="display:flex;flex-direction:column;border-top:1px solid #000000;border-bottom:1px solid #000000;width:500px;font-size:14pt; margin: auto;">
 
@@ -90,7 +90,7 @@ markdown <<MARKDOWN
 
 ## Secondary
 
-#### Accent color. Used to emphasize actions (like a button a user can click) and highlighted information.
+Accent color. Used to emphasize actions (like a button a user can click) and highlighted information.
 
 <br>
 <div style="display:flex;flex-direction:column;border-top:1px solid #000000;border-bottom:1px solid #000000;width:500px;font-size:14pt;margin:auto;">

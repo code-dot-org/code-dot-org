@@ -6,7 +6,7 @@ markdown <<MARKDOWN
 # Cleaning and Interpreting Data 
 
 
-#### In the next lessons, students will learn how to clean raw data to make it useful and explore how different visualizations can change our understanding of that data. They'll practice making decisions, discuss the challenges and biases that can arise, and work together to critically analyze and present data.
+In the next lessons, students will learn how to clean raw data to make it useful and explore how different visualizations can change our understanding of that data. They'll practice making decisions, discuss the challenges and biases that can arise, and work together to critically analyze and present data.
 
 ---
 
@@ -80,7 +80,7 @@ markdown <<MARKDOWN
 
 ## What's Next?
 
-####Let’s take a look at a cleaning data activity from **Lesson 9!** 
+Let’s take a look at a cleaning data activity from **Lesson 9!** 
 
 
 MARKDOWN

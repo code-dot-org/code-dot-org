@@ -5,15 +5,15 @@ description 'description here'
 markdown <<MARKDOWN
 # Setting Clear Expectations for AI Use
 
-#### Having an AI Classroom Use Policy is a good start; however, teachers need to define appropriate and inappropriate uses of AI for different tasks and communicate these expectations to students.
+Having an AI Classroom Use Policy is a good start; however, teachers need to define appropriate and inappropriate uses of AI for different tasks and communicate these expectations to students.
 
 ## Planning for AI Use
 
-#### Not all assignments should allow AI in the same way. Being intentional about its use helps maintain both learning goals and academic integrity.
+Not all assignments should allow AI in the same way. Being intentional about its use helps maintain both learning goals and academic integrity.
 
-#### Before assigning work, it’s important for teachers to reflect on the learning goals for the assignment and think about what type of AI use will best support students in meeting those goals.
+Before assigning work, it’s important for teachers to reflect on the learning goals for the assignment and think about what type of AI use will best support students in meeting those goals.
 
-#### Here is one way to frame AI use across assignments for yourself and for your students:
+Here is one way to frame AI use across assignments for yourself and for your students:
 
 <div style="font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; max-width: 900px; margin: 0 auto; padding: 12px 18px; position: relative;">
 
@@ -66,11 +66,11 @@ AI-Integrated (Part of the Task)
 
 ## Communicating Expectations
 
-#### Once you’ve made your decisions, clearly communicate expectations to students:
-* #### When AI is allowed and when it is not
-* #### What specific types of use are appropriate for this task
-* #### What work must reflect the student’s own thinking
-* #### Whether students need to explain or reflect on their AI use
+Once you’ve made your decisions, clearly communicate expectations to students:
+* When AI is allowed and when it is not
+* What specific types of use are appropriate for this task
+* What work must reflect the student’s own thinking
+* Whether students need to explain or reflect on their AI use
 
-#### Provide expectations in clear, task-specific language. When students understand both the purpose and the boundaries of AI use, they are more likely to use it responsibly and effectively.
+Provide expectations in clear, task-specific language. When students understand both the purpose and the boundaries of AI use, they are more likely to use it responsibly and effectively.
 MARKDOWN

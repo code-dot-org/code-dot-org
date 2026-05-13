@@ -5,9 +5,9 @@ description 'description here'
 markdown <<MARKDOWN
 # Lesson 3: Python Basics
  
-#### This lesson introduces foundational coding concepts using Code.org’s Python Lab and Neighborhood IDE, or programming platform. 
+This lesson introduces foundational coding concepts using Code.org’s Python Lab and Neighborhood IDE, or programming platform. 
 
-#### You will explore key programming elements such as variables, print statements, objects, and functions. This lesson aligns with **Lessons 4-7 in the Programming Fundamentals** curriculum.
+You will explore key programming elements such as variables, print statements, objects, and functions. This lesson aligns with **Lessons 4-7 in the Programming Fundamentals** curriculum.
 
 
 
@@ -33,5 +33,5 @@ markdown <<MARKDOWN
   </div>
 </div>
 
-#### **Suggested Time:** 25 Minutes
+**Suggested Time:** 25 Minutes
 MARKDOWN
