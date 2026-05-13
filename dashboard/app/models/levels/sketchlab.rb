@@ -28,6 +28,7 @@ class Sketchlab < Level
   serialized_attrs %w(
     start_sources
     exemplar_sources
+    starter_assets
   )
 
   def self.create_from_level_builder(params, level_params)
@@ -44,7 +45,17 @@ class Sketchlab < Level
     true
   end
 
-  def add_starter_asset!(_, _)
-    true
+  # Add a starter asset mapping from friendly filename to UUID filename.
+  def add_starter_asset!(friendly_name, uuid_name)
+    self.starter_assets ||= {}
+    self.starter_assets[friendly_name] = uuid_name
+    save!
+  end
+
+  # Remove a starter asset mapping by friendly filename.
+  def remove_starter_asset!(friendly_name)
+    return true unless starter_assets
+    starter_assets.delete(friendly_name)
+    save!
   end
 end

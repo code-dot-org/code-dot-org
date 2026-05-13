@@ -40,7 +40,12 @@ module AichatAssetHelper
       end
     when 'level'
       level = Level.find_by(name: level_name)
-      uuid_name = (level&.starter_assets || level&.project_template_level&.starter_assets || {})&.dig(filename)
+      template_assets =
+        if level&.project_template_level&.respond_to?(:starter_assets)
+          level.project_template_level.starter_assets
+        end
+      level_assets = level.starter_assets if level&.respond_to?(:starter_assets)
+      uuid_name = (level_assets || template_assets || {})&.dig(filename)
 
       if uuid_name
         asset_body = fetch_s3_asset(uuid_name, call_details)

@@ -27,6 +27,7 @@ module LevelStarterAssetsHelper
     else
       {
         filename: friendly_name,
+        uuidFilename: uuid_name,
         category: file_mime_type(File.extname(uuid_name)),
         size: file_obj.size,
         timestamp: file_obj.last_modified

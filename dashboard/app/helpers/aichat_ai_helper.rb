@@ -26,14 +26,15 @@ module AichatAiHelper
     message['assets']&.each do |asset|
       filename = asset["filename"]
       source = asset["source"]
-
-      base64_string = AichatAssetHelper.get_asset_base64_string(filename, source, encrypted_channel_id, level_name)
+      base64_string = asset["inlineDataBase64"] ||
+        AichatAssetHelper.get_asset_base64_string(filename, source, encrypted_channel_id, level_name)
+      mime_type = asset["mimeType"] || Rack::Mime.mime_type(File.extname(filename))
 
       parts << AichatAiClientTypes::FileMessagePart.new(
         type: 'file',
         content: AichatAiClientTypes::FileMessagePartContent.new(
           name: filename,
-          mimeType: Rack::Mime.mime_type(File.extname(filename)),
+          mimeType: mime_type,
           data: base64_string
         )
       )

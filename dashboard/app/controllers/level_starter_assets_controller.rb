@@ -11,7 +11,7 @@ class LevelStarterAssetsController < ApplicationController
 
   # GET /level_starter_assets/:level_name
   def show
-    starter_assets = (@level&.project_template_level&.starter_assets || @level.starter_assets || []).filter_map do |friendly_name, uuid_name|
+    starter_assets = (starter_assets_for(@level&.project_template_level) || starter_assets_for(@level) || {}).filter_map do |friendly_name, uuid_name|
       file_obj = LevelStarterAssetsHelper.get_object(uuid_name)
       LevelStarterAssetsHelper.summarize(file_obj, friendly_name, uuid_name)
     end
@@ -23,7 +23,7 @@ class LevelStarterAssetsController < ApplicationController
   # Returns requested file body as an IO stream.
   def file
     friendly_name = "#{params[:filename]}.#{params[:format]}"
-    starter_assets = @level&.project_template_level&.starter_assets || @level&.starter_assets
+    starter_assets = starter_assets_for(@level&.project_template_level) || starter_assets_for(@level)
     return head :not_found if starter_assets.nil_or_empty?
 
     uuid_name = starter_assets[friendly_name]
@@ -143,5 +143,13 @@ class LevelStarterAssetsController < ApplicationController
     else
       return head :unprocessable_entity
     end
+  end
+
+  private def starter_assets_for(level)
+    return {} unless level
+
+    return level.starter_assets if level.respond_to?(:starter_assets) && level.starter_assets.present?
+
+    level.properties&.dig('starter_assets') || level.properties&.dig(:starter_assets) || {}
   end
 end
