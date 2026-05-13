@@ -16,13 +16,19 @@ import './javalab-lab2.scss';
 // components (JavalabView, JavalabEditor, etc., which are unchanged).
 //
 // Caveats:
-// - state.pageConstants is "set-once": dispatching setPageConstants a second
-//   time with a *different* value throws. For first-page-load this is fine.
-//   No-reload navigation between Java Lab levels that DIFFER in any of the
-//   page-constants fields (e.g., isSubmittable, recaptchaSiteKey, channelId)
-//   will throw and surface a page error. Follow-up: refactor legacy
-//   connected components to read these fields from state.lab.levelProperties
-//   / state.lab.channel instead.
+// - state.pageConstants is "set-once": the reducer throws on a second
+//   dispatch with a different value. Per-level fields (channelId,
+//   isProjectLevel, recaptchaSiteKey, etc.) have been moved to state.lab
+//   reads in the affected connected components (JavalabView, JavalabEditor,
+//   JavalabEditorHeader, JavalabCaptchaDialog, TheaterVisualizationColumn),
+//   so this dispatch now carries only page-stable values that don't change
+//   between levels.
+// - state.instructions has the same "set-once" throw. We dispatch it once
+//   on first mount; TopInstructions therefore still shows the FIRST level's
+//   long instructions text even after a no-reload navigation. JavalabView's
+//   `longInstructions` prop (used for the hasInstructions/layout check) DOES
+//   update from state.lab.levelProperties. Refactoring TopInstructions to
+//   read from state.lab is the remaining piece.
 // - No backpack support yet; BackpackAPIContext is set to null. If a
 //   level relies on the backpack, follow-up is required.
 // - Code-review / commit-code flow currently no-ops; the lab2 project
@@ -195,23 +201,19 @@ const JavaLab2View: React.FunctionComponent<
   const levelId = levelProperties.id;
 
   // Register reducers and seed pageConstants before child components mount.
+  // Only page-stable fields are dispatched here. Per-level fields (channelId,
+  // isProjectLevel, isSubmittable, recaptchaSiteKey, serverLevelId,
+  // hasContainedLevels, isProjectTemplateLevel) are read directly from
+  // state.lab.levelProperties / state.lab.channel in the legacy connect()s,
+  // which avoids the pageConstants set-once throw on no-reload nav.
   registerJavalabReducersOnce();
   publishPageConstantsOnce({
-    channelId: channel?.id,
-    isProjectLevel: !!levelProperties.isProjectLevel,
     isEditingStartSources: isStartMode,
     isCodeReviewing: false,
     isViewingOwnProject: true,
     isResponsive: true,
-    isSubmittable: !!levelProperties.submittable,
     isSubmitted: false,
-    recaptchaSiteKey: levelProperties.recaptchaSiteKey,
-    serverLevelId: levelId,
-    hasContainedLevels:
-      !!levelProperties.containedLevelNames &&
-      levelProperties.containedLevelNames.length > 0,
     isReadOnlyWorkspace: false,
-    isProjectTemplateLevel: !!levelProperties.isProjectTemplateLevel,
   });
 
   // Mirror the lab2 theme into the legacy viewRedux so JavalabView/
@@ -242,10 +244,12 @@ const JavaLab2View: React.FunctionComponent<
     };
   }, []);
 
-  // Populate state.instructions from levelProperties. JavalabView's
-  // `hasInstructions` check (and the consequent left-panel sizing in
-  // JavalabPanels) reads from state.instructions.longInstructions, which
-  // lab2 doesn't populate on its own.
+  // Populate state.instructions from levelProperties on first mount only.
+  // TopInstructions reads its content from state.instructions, and the
+  // reducer throws on a second dispatch — so this captures the first level's
+  // instructions and TopInstructions won't update on no-reload navigation.
+  // JavalabView's `longInstructions` prop (and the hasInstructions/layout
+  // check) DOES update because it now reads from state.lab.levelProperties.
   publishInstructionsConstantsOnce({
     // Java Lab uses CSP/CSD-style panel rendering (full-width markdown box,
     // not the CSF speech bubble). Mirrors `config.noInstructionsWhenCollapsed
@@ -360,7 +364,12 @@ const JavaLab2View: React.FunctionComponent<
       case CsaViewMode.NEIGHBORHOOD:
         return {
           instance: null,
-          visualization: <NeighborhoodVisualizationColumn />,
+          // useProtectedDiv={false}: under lab2 the visualization column can
+          // unmount when navigating to a non-neighborhood level, which the
+          // default ProtectedStatefulDiv wrapper would reject.
+          visualization: (
+            <NeighborhoodVisualizationColumn useProtectedDiv={false} />
+          ),
         };
       case CsaViewMode.THEATER:
         return {instance: null, visualization: <TheaterVisualizationColumn />};

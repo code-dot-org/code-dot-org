@@ -108,7 +108,8 @@ export default connect(
     backpackEnabled: state.javalab.backpackEnabled,
     displayTheme: state.javalabView.displayTheme,
     showProjectTemplateWorkspaceIcon:
-      !!state.pageConstants.isProjectTemplateLevel &&
+      (state.lab?.levelProperties?.isProjectTemplateLevel ??
+        !!state.pageConstants?.isProjectTemplateLevel) &&
       state.javalab.isReadOnlyWorkspace,
   }),
   dispatch => ({

@@ -100,7 +100,12 @@ const styles = {
 
 export default connect(
   state => ({
-    isReadOnlyWorkspace: state.pageConstants.isReadOnlyWorkspace,
+    // Java Lab tracks read-only state in its own slice (driven by
+    // useJavalabSources). Prefer that over the page-stable pageConstants
+    // copy so it updates on no-reload level navigation.
+    isReadOnlyWorkspace:
+      state.javalab?.isReadOnlyWorkspace ??
+      !!state.pageConstants?.isReadOnlyWorkspace,
     isCollapsed: state.javalabView.isVisualizationCollapsed,
     responsive: isResponsiveFromState(state),
     showOverlay: showOverlayFromState(state),

@@ -16,6 +16,11 @@ class NeighborhoodVisualizationColumn extends React.Component {
     displayTheme: PropTypes.oneOf(Object.values(DisplayTheme)),
     isCollapsed: PropTypes.bool,
     toggleVisualizationCollapsed: PropTypes.func,
+    // Pass through to MazeVisualization. Set to false from lab2 callers so
+    // ProtectedStatefulDiv doesn't throw "unmounting is not allowed" when
+    // navigating from a neighborhood level to a non-neighborhood level
+    // without a page reload.
+    useProtectedDiv: PropTypes.bool,
   };
 
   state = {
@@ -23,8 +28,12 @@ class NeighborhoodVisualizationColumn extends React.Component {
   };
 
   render() {
-    const {displayTheme, isCollapsed, toggleVisualizationCollapsed} =
-      this.props;
+    const {
+      displayTheme,
+      isCollapsed,
+      toggleVisualizationCollapsed,
+      useProtectedDiv = true,
+    } = this.props;
     const {isFullscreen} = this.state;
 
     const visualizationClassName = isCollapsed
@@ -44,6 +53,7 @@ class NeighborhoodVisualizationColumn extends React.Component {
         <NeighborhoodVisualization
           isDarkMode={displayTheme === DisplayTheme.DARK}
           className={visualizationClassName}
+          useProtectedDiv={useProtectedDiv}
         />
       </div>
     );

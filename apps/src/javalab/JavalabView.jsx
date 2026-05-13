@@ -1,8 +1,3 @@
-// TODO(javalab-lab2): delete after migration completes.
-// This connected class component was the legacy top-level view, mounted by
-// Javalab.js. Under lab2, apps/src/javalab/lab2/JavaLab2View.tsx renders
-// JavalabView as a leaf for compatibility; once that path is removed in a
-// follow-up cleanup, this file can be deleted too.
 import PropTypes from 'prop-types';
 import React from 'react';
 import {connect} from 'react-redux';
@@ -347,21 +342,35 @@ export const UnconnectedJavalabView = JavalabView;
 
 export default connect(
   state => ({
-    isProjectLevel: state.pageConstants.isProjectLevel,
-    channelId: state.pageConstants.channelId,
+    // Per-level fields: read from state.lab (updated on no-reload nav under
+    // lab2), with state.pageConstants as a fallback for any legacy mount
+    // path that doesn't populate state.lab.
+    isProjectLevel:
+      state.lab?.levelProperties?.isProjectLevel ??
+      !!state.pageConstants?.isProjectLevel,
+    channelId: state.lab?.channel?.id ?? state.pageConstants?.channelId,
+    longInstructions:
+      state.lab?.levelProperties?.longInstructions ??
+      state.instructions?.longInstructions,
+    hasContainedLevels:
+      (state.lab?.levelProperties?.containedLevelNames?.length ?? 0) > 0 ||
+      !!state.pageConstants?.hasContainedLevels,
+    isSubmittable:
+      state.lab?.levelProperties?.submittable ??
+      !!state.pageConstants?.isSubmittable,
+    // Page-stable fields stay in pageConstants. isEditingStartSources is
+    // driven by the editBlocks query param and never changes within a page.
+    isEditingStartSources: !!state.pageConstants?.isEditingStartSources,
+    isCodeReviewing: !!state.pageConstants?.isCodeReviewing,
+    isSubmitted: !!state.pageConstants?.isSubmitted,
+    awaitingContainedResponse: !!state.runState?.awaitingContainedResponse,
+    // Java Lab redux slices: unchanged.
     displayTheme: state.javalabView.displayTheme,
-    isEditingStartSources: state.pageConstants.isEditingStartSources,
     isRunning: state.javalab.isRunning,
     isTesting: state.javalab.isTesting,
     canRun: !state.javalab.isTesting,
     canTest: !state.javalab.isRunning,
     editorColumnHeight: state.javalabView.editorColumnHeight,
-    longInstructions: state.instructions.longInstructions,
-    hasContainedLevels: state.pageConstants.hasContainedLevels,
-    awaitingContainedResponse: state.runState.awaitingContainedResponse,
-    isSubmittable: state.pageConstants.isSubmittable,
-    isSubmitted: state.pageConstants.isSubmitted,
-    isCodeReviewing: state.pageConstants.isCodeReviewing,
     validationPassed: state.javalab.validationPassed,
     hasRunOrTestedCode: state.javalab.hasRunOrTestedCode,
     hasOpenCodeReview: state.javalab.hasOpenCodeReview,

@@ -75,7 +75,9 @@ UnconnectedJavalabCaptchaDialog.propTypes = {
 
 export default connect(
   state => ({
-    recaptchaSiteKey: state.pageConstants.recaptchaSiteKey,
+    recaptchaSiteKey:
+      state.lab?.levelProperties?.recaptchaSiteKey ??
+      state.pageConstants?.recaptchaSiteKey,
     isCaptchaDialogOpen: state.javalab.isCaptchaDialogOpen,
   }),
   dispatch => ({
