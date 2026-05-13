@@ -18,7 +18,7 @@ markdown <<MARKDOWN
 
 ##User Profiles
 
-#### Look through Ethan's social media posts for important information that might be used for a phishing attack.
+Look through Ethan's social media posts for important information that might be used for a phishing attack.
 
 <table style="width:100%; border-collapse:collapse; border:none;">
   <!-- Row 1: Top image row -->
@@ -87,7 +87,7 @@ markdown <<MARKDOWN
 
 ##Phishing Attacks
 
-#### Look through Ethan's emails below and see which ones might be legit and which might be phishing attacks.
+Look through Ethan's emails below and see which ones might be legit and which might be phishing attacks.
 
 <div style="font-family: sans-serif; font-size: 16px; line-height: 1.6;">
 
@@ -129,9 +129,9 @@ markdown <<MARKDOWN
 
 
 ##Breach Reports
-#### A data breach is a security incident where sensitive, confidential, or private information is accessed, disclosed, or stolen by unauthorized individuals.
+A data breach is a security incident where sensitive, confidential, or private information is accessed, disclosed, or stolen by unauthorized individuals.
 
-#### Look through Ethan's breach report to try to determine what happened and what type of password attack your user was vulnerable to.
+Look through Ethan's breach report to try to determine what happened and what type of password attack your user was vulnerable to.
 
 <div style="font-family: sans-serif; font-size: 16px; line-height: 1.6;">
 

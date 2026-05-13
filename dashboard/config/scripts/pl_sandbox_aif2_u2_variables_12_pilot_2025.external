@@ -5,9 +5,9 @@ description 'description here'
 markdown <<MARKDOWN
 # Variables
 
-#### Have you ever noticed how a game keeps track of your score or how an app shows your number of likes? 
+Have you ever noticed how a game keeps track of your score or how an app shows your number of likes? 
 
-#### Programs do this using **variables!** Just like we use names to keep track of things in real life, programs use **variables** to keep track of changing information.
+Programs do this using **variables!** Just like we use names to keep track of things in real life, programs use **variables** to keep track of changing information.
 
 ## What is a variable?
 
@@ -71,9 +71,9 @@ markdown <<MARKDOWN
 
 ## Let's see what this looks like in code:
 
-#### This code defines the variables using the keyword `let`.
+This code defines the variables using the keyword `let`.
 
-#### In JavaScript, a variable must be declared, or defined, before it can be used. 
+In JavaScript, a variable must be declared, or defined, before it can be used. 
 
 <p style="text-align:center;">
   <img src="https://images.code.org/3fc90531df0a250a6d4d032641296c12-image-1762197748560.png" 
@@ -93,14 +93,14 @@ markdown <<MARKDOWN
 
 ## Remember:
 
-#### There are always two steps when working with variables:
+There are always two steps when working with variables:
 
-- #### 1. Define the variable (give it a name and a starting value).
+- 1. Define the variable (give it a name and a starting value).
 
-- #### 2. Use or update the variable within the program’s actions or logic.
+- 2. Use or update the variable within the program’s actions or logic.
 
 
 ## Let's practice! 
 
-#### In the next level, you will use AI to help debug a program with variables. 
+In the next level, you will use AI to help debug a program with variables. 
 MARKDOWN

@@ -91,7 +91,7 @@ Select the ID of the screen you want to change to. In this case, when smiley fac
 MARKDOWN
 
 teacher_markdown <<MARKDOWN
-#### Cards to Screens
+Cards to Screens
 
 To simplify the prototyping process, teams can think of each card that they created in the Paper Prototyping as a separate screen in the App Lab iteration of their app. In reality, screens that are very similar can often be developed as a single screen with content that changes based on user interaction. In the next lesson students will see some examples of how that could work, but it's not expected that they incorporated that kind of functionality in this project.
 MARKDOWN

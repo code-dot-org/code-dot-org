@@ -5,9 +5,9 @@ description 'description here'
 markdown <<MARKDOWN
 # Wrapping up Lesson 4
 
-#### In this lesson on advanced algorithms with Python, we explored key concepts like sequencing, selection, and iteration, applied them to real-world scenarios, and examined the ethical implications of algorithmic decision-making. 
+In this lesson on advanced algorithms with Python, we explored key concepts like sequencing, selection, and iteration, applied them to real-world scenarios, and examined the ethical implications of algorithmic decision-making. 
 
-#### By understanding how algorithms shape technology and practicing ways to improve them, students gain both technical skills and critical thinking abilities essential for responsible computing.
+By understanding how algorithms shape technology and practicing ways to improve them, students gain both technical skills and critical thinking abilities essential for responsible computing.
 
 
 <div style="background-color: #026C7A; color: #FFFFFF; padding: 15px; border-radius: 10px; width: 90%; margin: 20px auto;">

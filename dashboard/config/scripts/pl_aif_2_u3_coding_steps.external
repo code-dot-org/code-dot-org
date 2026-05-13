@@ -7,16 +7,16 @@ markdown <<MARKDOWN
 
 <img src="https://images.code.org/53796bf2dca42a298321692071188a94-image-1777991333557.png" alt="icon of a student with question marks" width="150px" style="border-radius:10px; float:right; margin: 0 80px 0px 20px;">
 
-#### Students sometimes need support when coding with AI. Some common struggles are: 
-- #### Skip reading the existing code
-- #### Don’t understand the context
-- #### Jump straight to asking AI
+Students sometimes need support when coding with AI. Some common struggles are: 
+- Skip reading the existing code
+- Don’t understand the context
+- Jump straight to asking AI
 
 
 
 ## Steps for success
 
-#### This protocol helps set up students to uderstand, modify, and improve their code. 
+This protocol helps set up students to uderstand, modify, and improve their code. 
 
 <div style="width: 100%; max-width: 760px; margin: 20px 0px;">
 
@@ -62,5 +62,5 @@ markdown <<MARKDOWN
 
 ## Next up
 
-#### Let's get started with Arrays! 
+Let's get started with Arrays! 
 MARKDOWN

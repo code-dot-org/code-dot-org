@@ -5,17 +5,17 @@ description 'description here'
 markdown <<MARKDOWN
 # ✅ Lesson Recap: Introduction to Generative AI
 
-#### After this lesson, you can 
+After this lesson, you can 
 
-* #### Identify and explain the four key components that make up a computer system.
-* #### Evaluate the potential impact of generative AI on society and discuss its capabilities and limitations.
-* #### Distinguish between different types of AI, including machine learning, deep learning, and generative AI.
+* Identify and explain the four key components that make up a computer system.
+* Evaluate the potential impact of generative AI on society and discuss its capabilities and limitations.
+* Distinguish between different types of AI, including machine learning, deep learning, and generative AI.
 
 ## **Key Terms**
 
-* #### **Artificial Intelligence** - A technology that mimics human intelligence, performing tasks such as understanding language, recognizing patterns, and making decisions
-* #### **Large Language Model** - A computer program that analyzes large amounts of raw human-created data to the point where it can represent and recreate new data to perform a variety of tasks
-* #### **Model** - A computer program designed to make a decision
+* **Artificial Intelligence** - A technology that mimics human intelligence, performing tasks such as understanding language, recognizing patterns, and making decisions
+* **Large Language Model** - A computer program that analyzes large amounts of raw human-created data to the point where it can represent and recreate new data to perform a variety of tasks
+* **Model** - A computer program designed to make a decision
 
 ## Resources
 

@@ -5,9 +5,9 @@ description 'description here'
 markdown <<MARKDOWN
 # Introducing Functions in JavaScript
 
-#### When building web apps, you often want the same action to happen in multiple places, such as updating a score when different buttons are clicked.
+When building web apps, you often want the same action to happen in multiple places, such as updating a score when different buttons are clicked.
 
-#### Instead of rewriting the same code each time, we can use a function.
+Instead of rewriting the same code each time, we can use a function.
 
 <div style="background-color: #B7E0E5; border-radius: 10px; padding: 15px; margin: 20px auto; max-width: 85%; box-sizing: border-box;">
 <p style="font-size: 14pt; margin-top: 12px; line-height: 120%;">📖 <strong>Function</strong> is a named set of reusable instructions that tells your program what to do.</p>
@@ -19,13 +19,13 @@ markdown <<MARKDOWN
 
 ## Before: Repeating Code
 
-#### This code works. But look closely.
+This code works. But look closely.
 
-#### In both button actions, we:
-- ####  Change the value of `score`
-- #### Update the display
+In both button actions, we:
+- Change the value of `score`
+- Update the display
 
-#### The same steps appear more than once. If we wanted to change how the total is shown, we would need to update it in multiple places.
+The same steps appear more than once. If we wanted to change how the total is shown, we would need to update it in multiple places.
 
 <div style="clear:both;"></div>
 
@@ -36,16 +36,16 @@ markdown <<MARKDOWN
 
 ## After: Using a Function
 
-#### We moved the repeated steps into a function called `addPoints()`.
+We moved the repeated steps into a function called `addPoints()`.
 
-#### Now each button simply calls the function.
+Now each button simply calls the function.
 
-#### The shared logic lives in one place, which makes the code:
-- #### Shorter
-- #### Easier to read
-- #### Easier to update
+The shared logic lives in one place, which makes the code:
+- Shorter
+- Easier to read
+- Easier to update
 
-#### If we change how the total is displayed, we only edit the function.
+If we change how the total is displayed, we only edit the function.
 
 <div style="clear:both;"></div>
 
@@ -72,5 +72,5 @@ If you wanted to change how the total is displayed, where would you make the cha
 
 ## Next Up
 
-#### Let’s create our own functions.
+Let’s create our own functions.
 MARKDOWN

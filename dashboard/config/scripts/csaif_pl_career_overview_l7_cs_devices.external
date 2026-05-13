@@ -5,18 +5,18 @@ description 'description here'
 markdown <<MARKDOWN
 # Career Connections Overview
 
-#### The <a href="https://courseinfo.code.org/csaif/" target="blank" rel="noopener noreferrer">AI Foundations Curriculum</a> integrates career exploration and emerging technologies as students develop foundational skills in computing.
+The <a href="https://courseinfo.code.org/csaif/" target="blank" rel="noopener noreferrer">AI Foundations Curriculum</a> integrates career exploration and emerging technologies as students develop foundational skills in computing.
 
-#### Throughout the course, students engage with real-world case studies, hands-on projects, and industry-relevant tools to see how computer systems apply across various fields. 
+Throughout the course, students engage with real-world case studies, hands-on projects, and industry-relevant tools to see how computer systems apply across various fields. 
 
 
 ---
 
 ## Career Journeys
 
-<h4>
+
 In <b>AI and the Systems that Power It, </b> several lessons are labeled with a <span style="background-color: lightgray; padding: 2px; border-radius: 5px;"><b> 🧑‍🎓 Career Journeys</b></span>  tag on the unit plan indicating that the lesson connects to real-world careers.  
-</h4> 
+ 
 
 <div style="display: flex; justify-content: center; gap: 15px; padding: 20px;">
     <img src="https://images.code.org/bb0c4bc6d2a7b7c7c38889fd03541372-image-1742223629607.png" 

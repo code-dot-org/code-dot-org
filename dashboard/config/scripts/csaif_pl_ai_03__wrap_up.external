@@ -8,7 +8,7 @@ markdown <<MARKDOWN
 <div style="display: flex; align-items: center; justify-content: space-between; background: #f7f8fa; padding: 20px; border-radius: 10px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); font-size: 14pt; line-height: 1.6; max-width: 800px; margin: 20px auto;">
 
   <div>
-    <h4 style="margin-top: 0; font-weight: bold;">In this professional learning module, you learned how to:</h4>
+    In this professional learning module, you learned how to:
     <ul style="list-style-type: disc; padding-left: 10px; font-size: 14pt">
       <li>Prepare to teach how AI generates responses by modeling the iterative cycle of prompting, testing, analyzing, and refining AI-generated outputs.</li><br>
       <li>Guide students in developing strong prompting and evaluation skills to critically assess and improve AI-generated content.</li><br>
@@ -24,11 +24,11 @@ markdown <<MARKDOWN
   </div>
 </div>
 
-#### Below is some additional information, resources, and practice which you may choose to explore before continuing.
+Below is some additional information, resources, and practice which you may choose to explore before continuing.
 
 ## Tips from Teachers
 
-#### Here are some insights into teaching the **AI and the Systems that Power It** unit. 
+Here are some insights into teaching the **AI and the Systems that Power It** unit. 
 
 <!-- Flexbox Section 1 -->
 <div style="display: flex; align-items: center; gap: 5px; width: 100%; margin: 20px auto;">
@@ -80,7 +80,7 @@ The activities were so approachable, even for my students who had never taken a 
 
 ## Additional Practice
 
-#### Need some additional practice? Try out the following optional activities.
+Need some additional practice? Try out the following optional activities.
   <!-- Dropdown 1 -->
 <details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
 

@@ -5,7 +5,7 @@ description 'description here'
 markdown <<MARKDOWN
 # Module Overview
 
-#### This professional learning module is made up of **two units:**
+This professional learning module is made up of **two units:**
 
 
 <div style="display: flex; flex-direction: column; gap: 20px; max-width: 900px; margin: auto;">
@@ -39,9 +39,9 @@ markdown <<MARKDOWN
 
 ## Engaging with This Module
 
-#### Feel free to complete as much or as little of this module as is useful for you! **Stop, start, and revisit** content as you see fit. 
+Feel free to complete as much or as little of this module as is useful for you! **Stop, start, and revisit** content as you see fit. 
 
-#### You'll be able to give Code.org your feedback on the last level of this module.
+You'll be able to give Code.org your feedback on the last level of this module.
 
 
 MARKDOWN

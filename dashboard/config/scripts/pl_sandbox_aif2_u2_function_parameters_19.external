@@ -5,19 +5,19 @@ description 'description here'
 markdown <<MARKDOWN
 # Functions and Parameters 
 
-#### Let's review. In the previous level, you explored using two files: `custom.py` and `main.py`.
+Let's review. In the previous level, you explored using two files: `custom.py` and `main.py`.
 
-#### This setup is common when working with objects in code and will be used by your students when programming in the Neighborhood. 
+This setup is common when working with objects in code and will be used by your students when programming in the Neighborhood. 
 
-#### Remember,`custom.py` is where you define the functions you create, and `main.py` is where you run your main program and call the functions. 
+Remember,`custom.py` is where you define the functions you create, and `main.py` is where you run your main program and call the functions. 
 
 > #### Using multiple files helps new programmers build clean, organized code and develop good coding habits.
 
 ## Functions with Parameters 
 
-#### In this example, a function, `paint_line()`, is created to paint two consecutive squares (or a line) a certain color in the neighborhood. 
+In this example, a function, `paint_line()`, is created to paint two consecutive squares (or a line) a certain color in the neighborhood. 
 
-#### The function is also called, or used, to paint the line blue.
+The function is also called, or used, to paint the line blue.
 
 <details><summary style="font-size: 18px;"><strong>💡 Why would a coder code it this way? </strong></summary> <p style = "font-size: 16px;"><br> Defining a function like this means you can run the function multiple times and just change the color each time by putting in a different value.</p>
 </details>
@@ -31,13 +31,13 @@ markdown <<MARKDOWN
 <div style="display: flex; gap: 20px; justify-content: center; padding: 20px;">
   <!-- Card 1 -->
 <div style="background-color: #dccbea; border-radius: 12px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); padding: 20px; width: 300px; text-align: center;">
-    <h4>A <strong>parameter</strong> is a placeholder in the function definition that specifies what kind of input the function will take.</h4>
+    A <strong>parameter</strong> is a placeholder in the function definition that specifies what kind of input the function will take.
     <img src="https://images.code.org/cef8de0e45ec496d2696600ba93392fc-image-1743188151596.png" alt="Parameter Example" style="max-width: 100%; border-radius: 8px;">
   </div>
 
   <!-- Card 2 -->
 <div style="background-color: #dccbea; border-radius: 12px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); padding: 20px; width: 300px; text-align: center;">
-    <h4>An <strong>argument</strong> is the actual value passed into a function when you call it.</h4>
+    An <strong>argument</strong> is the actual value passed into a function when you call it.
     <img src="https://images.code.org/991ed4197aad9aa27024e43f5ed14527-image-1743188217927.png" alt="Argument Example" style="max-width: 100%; border-radius: 8px;">
   </div>
 </div>
@@ -52,9 +52,9 @@ markdown <<MARKDOWN
 
 ## Using Parameters in Custom.py 
 
-#### When defining a function in the `custom.py` file, the `painter` object is added inside the parentheses, or as a **parameter.** 
+When defining a function in the `custom.py` file, the `painter` object is added inside the parentheses, or as a **parameter.** 
 
-#### Here, painter is added as a parameter. This makes the code usable for any painter object you later create.
+Here, painter is added as a parameter. This makes the code usable for any painter object you later create.
 
 <div style="clear:both;"></div>
 
@@ -66,19 +66,19 @@ markdown <<MARKDOWN
   <!-- Image floats right, text wraps on the left -->
   <img src="https://images.code.org/6c182df596a72e252d544132ef733a43-image-1743183092580.png" alt="Step 1 Image" style="float: right; margin-left: 20px; max-width: 300px; border-radius: 8px;margin: 0px 0 20px 0px">
 
-<h4><strong>Step 1: Import the file</strong> <br>(Line 2)</h4>
-  <h4>In <code>main.py</code>, you'll see that <code>custom.py</code> is imported on line 2.</h4>
-  <h4>This allows you to use the functions that were created in the <code>custom.py</code> file.</h4>
+<strong>Step 1: Import the file</strong> <br>(Line 2)
+  In <code>main.py</code>, you'll see that <code>custom.py</code> is imported on line 2.
+  This allows you to use the functions that were created in the <code>custom.py</code> file.
 
-<h4><strong>Step 2: Call the function with the file name</strong><br> (Line 7,9, and 10)</h4>
-  <h4>When you use a function from another file, the format is a little different.</h4>
-  <h4>You need to tell Python where the function is coming from by using the file name (<code>custom</code>) followed by a dot (.), then the function name: <code>custom.move_fast(luna)</code></h4>
+<strong>Step 2: Call the function with the file name</strong><br> (Line 7,9, and 10)
+  When you use a function from another file, the format is a little different.
+  You need to tell Python where the function is coming from by using the file name (<code>custom</code>) followed by a dot (.), then the function name: <code>custom.move_fast(luna)</code>
  
 
-<h4><strong>Step 3: Pass in the object (like your painter)</strong><br> (Line 7,9, and 10)</h4>
-  <h4>If the function needs a painter, you pass it in by putting the painter's name in the parentheses: <code>custom.move_fast(luna)</code></h4>
+<strong>Step 3: Pass in the object (like your painter)</strong><br> (Line 7,9, and 10)
+  If the function needs a painter, you pass it in by putting the painter's name in the parentheses: <code>custom.move_fast(luna)</code>
 
-  <h4>This tells the function which painter to use when it runs.</h4>
+  This tells the function which painter to use when it runs.
 </div>
 
 <p style="font-size: 18px; font-weight: bold; background-color: #F5F7F8; padding: 10px; border-left: 5px solid #8148B2; display: inline-block;">
@@ -86,5 +86,5 @@ markdown <<MARKDOWN
 </p>
 
 ## Next up!
-#### Explore the backpack feature to see how to transfer your custom code to different levels. 
+Explore the backpack feature to see how to transfer your custom code to different levels. 
 MARKDOWN

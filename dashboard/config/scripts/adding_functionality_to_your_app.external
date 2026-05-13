@@ -16,7 +16,7 @@ Once your team has come up with a list of potential functionality, choose one or
 MARKDOWN
 
 teacher_markdown <<MARKDOWN
-#### It's Okay to Break Things
+It's Okay to Break Things
 
 Introducing new features or functionality always brings with it the risk of introducing new bugs, or breaking things entirely. Running into these problems is a natural part of software development, but it can be scary for students who have a deeply seeded fear of failure. As the lead learner you are in a position to model a healthy attitude towards these challenges. When students run into problems trying to add new functionality, encourage them to:
 
@@ -25,7 +25,7 @@ Introducing new features or functionality always brings with it the risk of intr
 * If there is a remix from the last working copy, open and compare
 * If necessary, use version history to roll back to a previous working copy
 
-#### Setting Limits
+Setting Limits
 
 This lesson (like most programming project lessons) has the potential to take up as much time as you allow it to. If you have the time (and students have the interest) you can certainly make this a multi day lesson, but regardless of how much time you choose to give students to work on their apps, it's good to keep them focused on implementing small, discrete changes one at a time.
 

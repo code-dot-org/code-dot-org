@@ -1,10 +1,12 @@
 #!/usr/bin/env python3
 """
-Strip #### (exactly 4 hashes) body-text prefixes from .external files.
+Strip #### markdown and <h4> HTML body-text prefixes from .external files.
 Handles:
   - Plain paragraphs: "#### text" -> "text"
   - Bullet items:     "* #### text" -> "* text"
   - No-space:         "####text" -> "text"
+  - HTML inline:      "<h4>text</h4>" -> "text"
+  - HTML in lists:    "<li><h4>text</h4></li>" -> "<li>text</li>"
 Does NOT touch ##### (5+ hashes).
 """
 import re
@@ -20,6 +22,9 @@ dry_run = '--dry-run' in sys.argv
 # Group 2: content after ####  (with optional leading space stripped)
 bullet_re = re.compile(r'^(\s*[-*]\s*)####(?!#)\s*(.*)')
 plain_re  = re.compile(r'^(\s*)####(?!#)\s*(.*)')
+
+# Strip <h4 ...> and </h4> tags anywhere on a line
+h4_tag_re = re.compile(r'<h4[^>]*>|</h4>')
 
 files = glob.glob(f'{scripts_dir}/**/*.external', recursive=True)
 files += glob.glob(f'{scripts_dir}/*.external')
@@ -55,7 +60,11 @@ for filepath in files:
                 lines_modified += 1
             continue
 
-        new_lines.append(line)
+        new_line = h4_tag_re.sub('', line)
+        new_lines.append(new_line)
+        if new_line != line:
+            changed = True
+            lines_modified += 1
 
     if changed:
         files_modified += 1
