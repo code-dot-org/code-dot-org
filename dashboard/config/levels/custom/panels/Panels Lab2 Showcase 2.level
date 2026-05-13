@@ -11,21 +11,27 @@
     "skipUrl": "/projects/music/new",
     "panels": [
       {
-        "imageUrl": "https://images.code.org/1891447a0221fa59f5eff47d6cb79c9e-dog.jpg",
-        "text": "Here's a sample panels level!\n\nProject Beats lets you mix, remix, and even perform music using code. Don’t worry if you don’t know much about code, or even music! All you need is a little time and some curiosity to start making your own creations.",
+        "imageUrl": "https://images.code.org/aa3b76890ef00faf5fac7f138c65f505-PXL_20260118_181600752_compressed.jpg",
+        "text": "Here's a sample panels level!",
         "key": "musiclab_intro_panels_start-421d64b2-c4db-42cb-ac1f-de66a4d22fa7",
         "layoutTemplate": "split-image-left"
       },
       {
         "text": "Here's another sample!",
-        "imageUrl": "",
+        "imageUrl": "https://images.code.org/1dc808d4f9b39b9d1ccf4a94dabe9efb-PXL_20251214_233307380_compressed.jpg",
         "key": "Panels Lab2 Showcase 2-40a6fa2d-8bb0-403f-8de0-4b1bb17cca95",
-        "layoutTemplate": "text-only"
+        "layoutTemplate": "full-background"
+      },
+      {
+        "text": "Isn't my dog cute?",
+        "imageUrl": "https://images.code.org/8f271df9ad8989b4dc2656f42d5423ed-PXL_20260505_020140506_compressed.jpg",
+        "key": "Panels Lab2 Showcase 2-fbde1c4e-d0e0-4ca8-9853-ab34f81a8f4d",
+        "layoutTemplate": "split-image-right"
       }
     ],
     "offer_browser_tts": "false",
     "use_links": "false"
   },
-  "audit_log": "[{\"changed_at\":\"2026-05-12T16:12:32.342-07:00\",\"changed\":[\"cloned from \\\"Panels Lab2 Showcase\\\"\"],\"cloned_from\":\"Panels Lab2 Showcase\"},{\"changed_at\":\"2026-05-12 16:13:56 -0700\",\"changed\":[\"level_data\",\"panels\"],\"changed_by_id\":2,\"changed_by_email\":\"molly+levelbuilder@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2026-05-12T16:12:32.342-07:00\",\"changed\":[\"cloned from \\\"Panels Lab2 Showcase\\\"\"],\"cloned_from\":\"Panels Lab2 Showcase\"},{\"changed_at\":\"2026-05-12 16:13:56 -0700\",\"changed\":[\"level_data\",\"panels\"],\"changed_by_id\":2,\"changed_by_email\":\"molly+levelbuilder@code.org\"},{\"changed_at\":\"2026-05-12 16:36:19 -0700\",\"changed\":[\"panels\"],\"changed_by_id\":2,\"changed_by_email\":\"molly+levelbuilder@code.org\"}]"
 }]]></config>
 </Panels>
