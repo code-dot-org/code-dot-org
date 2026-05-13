@@ -1,4 +1,6 @@
-import {expect, test} from '../../shared/fixtures';
+import {test} from '../../shared/fixtures';
+
+import {PublicProjectGalleryPage} from './PublicProjectGalleryPage';
 
 /**
  * Public project gallery — signed-out view at /projects/public.
@@ -11,28 +13,16 @@ import {expect, test} from '../../shared/fixtures';
 
 test.describe('Public project gallery — signed out', () => {
   test.beforeEach(async ({page}) => {
-    await page.goto('/projects/public');
+    await new PublicProjectGalleryPage(page).goto();
   });
 
   test('gallery shows expected elements', async ({page}) => {
-    await expect(page.locator('h1')).toContainText('Projects', {
-      timeout: 30_000,
-    });
-    await expect(page.locator('#uitest-public-projects')).toBeVisible();
+    // Scenario: Public Gallery Shows Expected Elements
+    await new PublicProjectGalleryPage(page).expectExpectedElements();
   });
 
   test('gallery shows expected project types', async ({page}) => {
-    await page
-      .locator('#uitest-public-projects')
-      .waitFor({state: 'visible', timeout: 30_000});
-    await page
-      .locator('.ui-project-app-type-area')
-      .first()
-      .waitFor({state: 'attached'});
-    // At least one project type area exists.
-    await expect(page.locator('.ui-project-app-type-area')).not.toHaveCount(0);
-    await expect(page.locator('.ui-featured')).toContainText(
-      'Featured Projects',
-    );
+    // Scenario: Public Gallery Shows Expected Project Types
+    await new PublicProjectGalleryPage(page).expectProjectTypes();
   });
 });

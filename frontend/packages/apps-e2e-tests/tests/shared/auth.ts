@@ -69,19 +69,27 @@ export async function createTestUser(
     .locator('meta[name="csrf-token"]')
     .getAttribute('content');
 
-  const response = await page.request.post('/api/test/create_user', {
-    headers: {
-      'Content-Type': 'application/json',
-      'X-CSRF-Token': csrf ?? '',
-    },
-    data: {user: payload},
-  });
+  let lastFailure = '';
+  for (let attempt = 1; attempt <= 3; attempt++) {
+    const response = await page.request.post('/api/test/create_user', {
+      headers: {
+        'Content-Type': 'application/json',
+        'X-CSRF-Token': csrf ?? '',
+      },
+      data: {user: payload},
+    });
 
-  if (!response.ok()) {
-    throw new Error(
-      `create_user failed: ${response.status()} — ${await response.text()}`,
-    );
+    if (response.ok()) {
+      return;
+    }
+
+    lastFailure = `${response.status()} — ${await response.text()}`;
+    if (response.status() < 500 || attempt === 3) {
+      break;
+    }
   }
+
+  throw new Error(`create_user failed: ${lastFailure}`);
 }
 
 /**
@@ -226,7 +234,23 @@ export async function createStudent(
  * @param page - Playwright page whose browser context will be signed out
  */
 export async function signOut(page: Page): Promise<void> {
-  await page.goto('/users/sign_out');
+  let lastFailure = '';
+
+  for (let attempt = 1; attempt <= 3; attempt++) {
+    const response = await page.request.get('/users/sign_out', {
+      timeout: 30_000,
+    });
+    if (response.ok()) {
+      return;
+    }
+
+    lastFailure = `${response.status()} — ${await response.text()}`;
+    if (response.status() < 500 || attempt === 3) {
+      break;
+    }
+  }
+
+  throw new Error(`sign out failed: ${lastFailure}`);
 }
 
 /** Credentials returned by {@link createTeacherAssociatedStudent}. */
@@ -258,19 +282,27 @@ export async function signIn(
     .locator('meta[name="csrf-token"]')
     .getAttribute('content');
 
-  const response = await page.request.post('/users/sign_in', {
-    headers: {
-      'Content-Type': 'application/json',
-      'X-CSRF-Token': csrf ?? '',
-    },
-    data: {user: {login: email, password}},
-  });
+  let lastFailure = '';
+  for (let attempt = 1; attempt <= 3; attempt++) {
+    const response = await page.request.post('/users/sign_in', {
+      headers: {
+        'Content-Type': 'application/json',
+        'X-CSRF-Token': csrf ?? '',
+      },
+      data: {user: {login: email, password}},
+    });
 
-  if (!response.ok()) {
-    throw new Error(
-      `sign_in failed: ${response.status()} — ${await response.text()}`,
-    );
+    if (response.ok()) {
+      return;
+    }
+
+    lastFailure = `${response.status()} — ${await response.text()}`;
+    if (response.status() < 500 || attempt === 3) {
+      break;
+    }
   }
+
+  throw new Error(`sign_in failed: ${lastFailure}`);
 }
 
 /**
@@ -541,17 +573,26 @@ export async function joinSection(
   const csrf = await page
     .locator('meta[name="csrf-token"]')
     .getAttribute('content');
-  const resp = await page.request.post(`/join/${sectionCode}`, {
-    headers: {
-      'Content-Type': 'application/json',
-      'X-CSRF-Token': csrf ?? '',
-    },
-  });
-  if (!resp.ok()) {
-    throw new Error(
-      `join section failed: ${resp.status()} — ${await resp.text()}`,
-    );
+
+  let lastFailure = '';
+  for (let attempt = 1; attempt <= 3; attempt++) {
+    const resp = await page.request.post(`/join/${sectionCode}`, {
+      headers: {
+        'Content-Type': 'application/json',
+        'X-CSRF-Token': csrf ?? '',
+      },
+    });
+    if (resp.ok()) {
+      return;
+    }
+
+    lastFailure = `${resp.status()} — ${await resp.text()}`;
+    if (resp.status() < 500 || attempt === 3) {
+      break;
+    }
   }
+
+  throw new Error(`join section failed: ${lastFailure}`);
 }
 
 /**
@@ -699,22 +740,31 @@ export async function assignCourseAsStudent(
   const csrf = await page
     .locator('meta[name="csrf-token"]')
     .getAttribute('content');
-  const resp = await page.request.post('/api/test/assign_course_as_student', {
-    headers: {
-      'Content-Type': 'application/json',
-      'X-CSRF-Token': csrf ?? '',
-    },
-    data: {
-      course_name: courseName,
-      ...(teacherEmail ? {teacher_email: teacherEmail} : {}),
-      ...(sectionName ? {section_name: sectionName} : {}),
-    },
-  });
-  if (!resp.ok()) {
-    throw new Error(
-      `assign_course_as_student failed: ${resp.status()} — ${await resp.text()}`,
-    );
+
+  let lastFailure = '';
+  for (let attempt = 1; attempt <= 3; attempt++) {
+    const resp = await page.request.post('/api/test/assign_course_as_student', {
+      headers: {
+        'Content-Type': 'application/json',
+        'X-CSRF-Token': csrf ?? '',
+      },
+      data: {
+        course_name: courseName,
+        ...(teacherEmail ? {teacher_email: teacherEmail} : {}),
+        ...(sectionName ? {section_name: sectionName} : {}),
+      },
+    });
+    if (resp.ok()) {
+      return;
+    }
+
+    lastFailure = `${resp.status()} — ${await resp.text()}`;
+    if (resp.status() < 500 || attempt === 3) {
+      break;
+    }
   }
+
+  throw new Error(`assign_course_as_student failed: ${lastFailure}`);
 }
 
 /**

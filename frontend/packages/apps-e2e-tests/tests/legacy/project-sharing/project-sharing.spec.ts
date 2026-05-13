@@ -1,8 +1,10 @@
 import {type Page} from '@playwright/test';
 
-import {createStudent} from '../../shared/auth';
+import {createStudent, createTeacher, signOut} from '../../shared/auth';
 import {expect, test} from '../../shared/fixtures';
 import {Dance} from '../activities/dance/Dance';
+
+import {ProjectSharingPage} from './ProjectSharingPage';
 
 /**
  * Project Sharing — Young Students.
@@ -393,6 +395,80 @@ test.describe('Project Sharing — Blockly projects', {tag: '@no_mobile'}, () =>
 });
 
 test.describe('Game Lab Projects', {tag: '@no_mobile'}, () => {
+  /**
+   * Source: dashboard/test/ui/features/teacher_tools/projects/gamelab_project.feature
+   * Scenario: Gamelab Flow
+   */
+  test('student Game Lab project routes view-code links by ownership', async ({
+    page,
+  }) => {
+    test.slow();
+
+    await createStudent(page);
+    const projectSharing = new ProjectSharingPage(page);
+    const gamelab = await projectSharing.makeGameLabProject();
+    await page.evaluate(() => localStorage.setItem('is13Plus', 'true'));
+    await projectSharing.renameProject('Code Ninja II: Uncaught Exception');
+    await expect(page).toHaveTitle(
+      /Code Ninja II: Uncaught Exception - Game Lab - Code\.org/,
+    );
+
+    await gamelab.ensureTextMode();
+    await gamelab.insertCodeAtCursor(
+      '\nfunction draw() {\n  background("white");\n}\n',
+    );
+    await expect(page.locator('.project_updated_at')).toContainText('Saved', {
+      timeout: 60_000,
+    });
+
+    const shareUrl = await projectSharing.openShareDialogAndReadUrl();
+
+    // Owner: View code opens the editable project.
+    await projectSharing.gotoSharePage(shareUrl);
+    await expect(page).toHaveTitle(
+      /Code Ninja II: Uncaught Exception - Game Lab - Code\.org/,
+    );
+    await expect(page.locator('#codeWorkspace')).toBeHidden();
+    await projectSharing.clickViewCode();
+    await expect(page).toHaveURL(/\/projects\/gamelab\/[^/]+\/edit/, {
+      timeout: 60_000,
+    });
+    await projectSharing.expectEditableCodeWorkspace();
+
+    // Owner: footer "How it Works" also opens the editable project.
+    await projectSharing.gotoSharePage(shareUrl);
+    await projectSharing.openHowItWorksFromFooter();
+    await expect(page).toHaveURL(/\/projects\/gamelab\/[^/]+\/edit/, {
+      timeout: 60_000,
+    });
+    await projectSharing.expectEditableCodeWorkspace();
+
+    // Anonymous: View code opens read-only view.
+    await signOut(page);
+    await projectSharing.gotoSharePage(shareUrl);
+    await projectSharing.clickViewCode();
+    await expect(page).toHaveURL(/\/projects\/gamelab\/[^/]+\/view/, {
+      timeout: 60_000,
+    });
+    await projectSharing.expectReadonlyCodeWorkspace();
+
+    // Anonymous: footer "How it Works" asks the user to sign in.
+    await projectSharing.gotoSharePage(shareUrl);
+    await projectSharing.openHowItWorksFromFooter();
+    await expect(page).toHaveURL(/\/users\/sign_in/, {timeout: 60_000});
+
+    // Non-owner: direct edit URL redirects to read-only view.
+    await createTeacher(page, {name: 'Non-Owner'});
+    await page.goto(`${shareUrl}/edit`, {
+      timeout: 60_000,
+      waitUntil: 'domcontentloaded',
+    });
+    await expect(page).toHaveURL(/\/projects\/gamelab\/[^/]+\/view/, {
+      timeout: 60_000,
+    });
+    await projectSharing.expectReadonlyCodeWorkspace();
+  });
+
   /**
    * Source: dashboard/test/ui/features/teacher_tools/projects/gamelab_project.feature
    * Scenario: Remix project creates and redirects to new channel

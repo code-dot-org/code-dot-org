@@ -1,0 +1,48 @@
+import {expect, type Page} from '@playwright/test';
+
+/**
+ * Page object for the signed-out public project gallery.
+ */
+export class PublicProjectGalleryPage {
+  private readonly page: Page;
+
+  constructor(page: Page) {
+    this.page = page;
+  }
+
+  /**
+   * Opens the public project gallery.
+   */
+  async goto(): Promise<void> {
+    await this.page.goto('/projects/public');
+  }
+
+  /**
+   * Verifies the gallery shell is visible.
+   */
+  async expectExpectedElements(): Promise<void> {
+    await expect(this.page.locator('h1')).toContainText('Projects', {
+      timeout: 30_000,
+    });
+    await expect(this.page.locator('#uitest-public-projects')).toBeVisible();
+  }
+
+  /**
+   * Verifies project type and featured project sections render.
+   */
+  async expectProjectTypes(): Promise<void> {
+    await this.page
+      .locator('#uitest-public-projects')
+      .waitFor({state: 'visible', timeout: 30_000});
+    await this.page
+      .locator('.ui-project-app-type-area')
+      .first()
+      .waitFor({state: 'attached'});
+    await expect(
+      this.page.locator('.ui-project-app-type-area'),
+    ).not.toHaveCount(0);
+    await expect(this.page.locator('.ui-featured')).toContainText(
+      'Featured Projects',
+    );
+  }
+}
