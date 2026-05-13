@@ -2701,7 +2701,22 @@ a.download-video {
   }
 }
 
-.text-match, .free-response, .peer-review {
+.text-match, .peer-review {
+  p, label {
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  #markdown {
+    // By default, nothing in the page body is selectable.
+    // On text-match levels there may be a reason to paste part of the
+    // level markdown (the question) into the answer box, so we want it
+    // to be selectable.
+    @include selectable;
+  }
+}
+
+.free-response {
   p, label, li {
     font-size: 16px;
     line-height: 24px;
@@ -2718,6 +2733,7 @@ a.download-video {
   h3 {
     font-size: 21px;
   }
+
   #markdown {
     // By default, nothing in the page body is selectable.
     // On text-match levels there may be a reason to paste part of the
@@ -2726,6 +2742,7 @@ a.download-video {
     @include selectable;
   }
 }
+
 
 .external .content-level {
   overflow: hidden;
