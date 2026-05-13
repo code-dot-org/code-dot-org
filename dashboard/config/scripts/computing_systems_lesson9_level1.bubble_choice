@@ -1,0 +1,13 @@
+name 'computing-systems-lesson9-level1'
+display_name 'Processing Library Data'
+description 'Below are several library scenarios where data needs to be processed to solve problems and make decisions. Choose a scenario to analyze and create a computer system solution.'
+
+sublevels
+level 'computing-systems-lesson9-scenario-A'
+level 'computing-systems-lesson9-scenario-B'
+level 'computing-systems-lesson9-scenario-C'
+level 'computing-systems-lesson9-scenario-D'
+level 'computing-systems-lesson9-scenario-E'
+level 'computing-systems-lesson9-scenario-F'
+level 'computing-systems-lesson9-scenario-G'
+level 'computing-systems-lesson9-scenario-H'

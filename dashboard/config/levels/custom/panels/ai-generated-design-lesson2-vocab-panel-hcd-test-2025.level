@@ -1,0 +1,22 @@
+<Panels>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 73,
+  "created_at": "2025-10-21T15:27:37.000Z",
+  "level_num": "custom",
+  "user_id": 22366,
+  "properties": {
+    "encrypted": "false",
+    "offer_browser_tts": "false",
+    "panels": [
+      {
+        "text": "# Human-Centered Design (HCD)\n\n**Human-Centered Design (HCD)** is the idea that design should start with understanding the needs of the end-user.",
+        "imageUrl": "https://images.code.org/ec82a367a00eea33405ba6fc3a571d58-clipboard-image-1761140133.png",
+        "key": "ai-generated-design-lesson2-vocab-panel-hcd-test-2025-6b0dc460-e408-4898-938f-0d91e197b55d",
+        "layout": "text-bottom-left"
+      }
+    ]
+  },
+  "audit_log": "[{\"changed_at\":\"2025-10-21 15:33:43 +0000\",\"changed\":[],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2025-10-22 13:25:16 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2025-10-22 13:36:52 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"}]"
+}]]></config>
+</Panels>

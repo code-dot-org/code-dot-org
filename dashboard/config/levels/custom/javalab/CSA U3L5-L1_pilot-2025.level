@@ -44,7 +44,7 @@
       }
     },
     "name_suffix": "_pilot-2025",
-    "ai_tutor_available": true
+    "ai_tutor_available": "false"
   },
   "published": true,
   "audit_log": "[{\"changed_at\":\"2024-08-02T15:22:27.472+00:00\",\"changed\":[\"cloned from \\\"CSA U3L5-L1_2025\\\"\"],\"cloned_from\":\"CSA U3L5-L1_2025\"}]"

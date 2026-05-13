@@ -1,0 +1,30 @@
+name 'sp-pl-DS_ThreeReadsexlemplar_-rev_v2'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Making Sense of Data: Three Reads Strategy
+
+#### There is not a correct answer for the response to the **Context Read** from the previous level. The important thing is to get your students thinking critically about data.
+
+## Read 1: Context 
+
+<img src="https://images.code.org/ec50df7f593a0b42a051016e9c923b50-image-1721233031201.16.52 PM.png" alt="spreadsheet of dataset with pizza preferences" alt="diagram of software: system software, application software, and utlity software with examples of icons of each" alt="chatbot lab level" width="30%" style="border: 2px solid black; border-radius: 8px; float:left; margin: 0 20px 20px 20px;">
+
+#### **What is this data about?**
+#### *Sample Response*
+
+#### This data is from a survey that gathered information on the number of pizza slices people can eat and their favorite types of pizza. 
+
+#### I know that pizza preferences vary widely and that the amount of pizza someone can eat may depend on factors like personal preference, hunger, or even the type of pizza itself. The data shows how these preferences might connect to the number of slices.
+
+<br><br><br><br><br><br><br><br>
+
+<div style="background-color: #a6e3e8; border-radius: 40px; color: #000000; width: 95%; padding: 1px 20px 1px 20px;">
+
+<p style="line-height: 1.5; margin-left: 10px; margin-right: 10px; margin-top: 10px; margin-bottom: 10px; font-size: 18px; "><b>Teacher Tip:</b> Consider pausing for a discussion between each read. This helps keep the conversation flowing and encourages moving through the reads without getting stuck on any single one. <i>Remember to utilize the <b>view student response </b> feature.</i> 
+</p>
+</div>
+
+
+MARKDOWN

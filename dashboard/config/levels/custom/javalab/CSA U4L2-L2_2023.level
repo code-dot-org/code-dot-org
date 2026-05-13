@@ -20,7 +20,7 @@
     },
     "project_template_level_name": "CSA U4L2-Static PBT_2023",
     "teacher_markdown": "When students add this line of code to the program, they should see the value `3` printed to the console. This is the same result as the call to the `getNumMembers()` method.\r\n\r\nStudents should realize that the `numMembers` variable is keeping track of the number of `ArtClubMember` objects that have been created. The value is shared by all objects of the class, which is why we get the same result if we access the variable using the class or an object.",
-    "ai_tutor_available": true
+    "ai_tutor_available": "false"
   },
   "published": true,
   "audit_log": "[{\"changed_at\":\"2023-02-17T18:24:04.788+00:00\",\"changed\":[\"cloned from \\\"CSA U4L4-L3_2023\\\"\"],\"cloned_from\":\"CSA U4L4-L3_2023\"},{\"changed_at\":\"2023-02-17 18:24:06 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-03-01 21:08:38 +0000\",\"changed\":[\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-03-01 21:11:03 +0000\",\"changed\":[\"long_instructions\",\"encrypted_examples\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-03-01 21:22:59 +0000\",\"changed\":[\"long_instructions\",\"encrypted_examples\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-03-09 16:51:15 +0000\",\"changed\":[\"long_instructions\",\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"

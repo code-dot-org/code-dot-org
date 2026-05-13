@@ -1,0 +1,24 @@
+name 'self-paced-equity-U1L1-features'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Course Features
+
+<div style="display: flex; align-items: left;">
+
+<img src="https://images.code.org/86fb480e433c7feca6d9e6df4a73a062-image-1731961341605.png" style="width: auto; height: 100px;"  alt="An illuminated lightbulb with a brain inside of it.">
+
+<div style="background-color: #F7F8FA; border-radius: 20px 20px 20px 20px; color: #000000; width: 80%; margin-left: 5%; margin-right: 5%; padding: 10px 10px 5px 10px;">
+
+<p style="color: black; line-height: 1.5; margin-left: 10px; margin-right: 10px; font-size: 18px"><b>Curriculum Connection</b></p>
+
+<p style="color: black; line-height: 1.5; margin-left: 10px; margin-right: 10px; font-size: 16px">Guess what? This is linked to the curriculum.
+
+<a href="https://studio.code.org/courses/csd-2024" target="_blank" rel="noopener noreferrer"><p style="color: black; line-height: 1.5; margin-left: 10px; margin-right: 10px; font-size: 16px">This is a link to the curriculum.</a>
+
+</p>
+
+</div>
+</div>
+MARKDOWN

@@ -1,8 +1,14 @@
 import _ from 'lodash';
 import React from 'react';
 import {useSelector} from 'react-redux';
-import {generatePath, useNavigate, useParams} from 'react-router-dom';
+import {
+  generatePath,
+  useNavigate,
+  useParams,
+  useSearchParams,
+} from 'react-router-dom';
 
+import {AiChatToolsDependencyValue} from '@cdo/apps/aichat/types';
 import {
   addAnnouncement,
   VisibilityType,
@@ -14,10 +20,12 @@ import {
   setVerifiedResources,
 } from '@cdo/apps/code-studio/verifiedInstructorRedux';
 import {setViewType, ViewType} from '@cdo/apps/code-studio/viewAsRedux';
+import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
+import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import {NotificationType} from '@cdo/apps/sharedComponents/Notification';
 import Spinner from '@cdo/apps/sharedComponents/Spinner';
 import HttpClient from '@cdo/apps/util/HttpClient';
-import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
+import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 import {UserTypes} from '@cdo/generated-scripts/sharedConstants';
 
 import {
@@ -26,6 +34,7 @@ import {
   setUserSignedIn,
 } from '../currentUserRedux';
 import {pageTypes, setPageType} from '../teacherDashboard/teacherSectionsRedux';
+import {selectedSectionSelector} from '../teacherDashboard/teacherSectionsReduxSelectors';
 import {TEACHER_NAVIGATION_PATHS} from '../teacherNavigation/TeacherNavigationPaths';
 
 import CourseOverview from './CourseOverview';
@@ -39,7 +48,7 @@ interface Resource {
   isRollup: boolean;
 }
 
-interface Version {
+export interface Version {
   id: number;
   key: string;
   version_year: string;
@@ -70,12 +79,15 @@ interface CourseSummary {
   course_versions: {[id: string]: Version};
   announcements: Announcement[];
   has_verified_resources: boolean;
+  ai_chat_tools_dependency: AiChatToolsDependencyValue;
 }
 
 interface Response {
-  unit_group: CourseSummary;
+  course_summary: CourseSummary;
   is_verified_instructor: boolean;
   hidden_scripts: string[];
+  show_version_warning: boolean;
+  redirect_to_course_url: string | null;
 }
 
 interface Announcement {
@@ -87,14 +99,6 @@ interface Announcement {
   visibility: keyof typeof VisibilityType;
   dismissible: boolean;
   buttonText: string | null;
-}
-
-interface Section {
-  id: number;
-  name: string;
-  courseId: number | null;
-  unitName: string | null;
-  courseVersionName: string | null;
 }
 
 const courseSummaryCachedLoader = _.memoize(async courseVersionName =>
@@ -111,34 +115,30 @@ const TeacherCourseOverview: React.FC = () => {
   const [hiddenScripts, setHiddenScripts] = React.useState<string[] | null>(
     null
   );
+  const [redirectToCourseUrl, setRedirectToCourseUrl] =
+    React.useState<string>('');
+  const [showVersionWarning, setShowVersionWarning] =
+    React.useState<boolean>(false);
 
   const navigate = useNavigate();
 
   const params = useParams();
+  const [searchParams] = useSearchParams();
 
-  const sections = useSelector(
-    (state: {
-      teacherSections: {
-        sections: {[id: number]: Section};
-      };
-    }) => state.teacherSections.sections
-  );
-
-  const selectedSection = useSelector(
-    (state: {
-      teacherSections: {
-        sections: {[id: number]: Section};
-        selectedSectionId: number;
-      };
-    }) =>
-      state.teacherSections.sections[state.teacherSections.selectedSectionId]
-  );
+  const selectedSection = useAppSelector(selectedSectionSelector);
 
   React.useEffect(() => {
-    if (!selectedSection || !selectedSection?.courseVersionName) {
+    if (
+      !selectedSection ||
+      !selectedSection?.courseVersionName ||
+      parseInt(params.sectionId || '-1') !== selectedSection.id
+    ) {
       return;
     }
-    if (!selectedSection.courseId && selectedSection.unitName) {
+    if (
+      selectedSection.unitName &&
+      (!selectedSection.courseId || selectedSection.isAssignedSingleUnitCourse)
+    ) {
       navigate(
         generatePath('../' + TEACHER_NAVIGATION_PATHS.unitOverview, {
           unitName: selectedSection.unitName,
@@ -158,15 +158,30 @@ const TeacherCourseOverview: React.FC = () => {
       return;
     }
 
-    courseSummaryCachedLoader(selectedSection.courseVersionName).then(
-      response => {
+    courseSummaryCachedLoader(selectedSection.courseVersionName)
+      .then(response => {
         if (response) {
-          setCourseSummary(response.unit_group as CourseSummary);
+          setCourseSummary(response.course_summary as CourseSummary);
           setIsVerifiedInstructor(response.is_verified_instructor);
           setHiddenScripts(response.hidden_scripts as string[]);
+          setShowVersionWarning(response.show_version_warning);
+          setRedirectToCourseUrl(response.redirect_to_course_url || '');
+
+          analyticsReporter.sendEvent(
+            EVENTS.TEACHER_NAV_COURSE_OVERVIEW_PAGE_VIEWED,
+            {
+              courseVersionName: selectedSection.courseVersionName,
+            }
+          );
         }
-      }
-    );
+      })
+      .catch(error => {
+        console.error('Error loading course overview', error);
+
+        analyticsReporter.sendEvent(EVENTS.TEACHER_NAV_COURSE_OVERVIEW_FAILED, {
+          courseVersionName: selectedSection.courseVersionName,
+        });
+      });
   }, [
     navigate,
     selectedSection,
@@ -174,6 +189,7 @@ const TeacherCourseOverview: React.FC = () => {
     setCourseSummary,
     setIsVerifiedInstructor,
     setHiddenScripts,
+    params.sectionId,
   ]);
 
   const userId = useSelector(
@@ -228,20 +244,21 @@ const TeacherCourseOverview: React.FC = () => {
       title={courseSummary.title}
       assignmentFamilyTitle={courseSummary.assignment_family_title}
       id={courseSummary.id}
+      aiChatToolsDependency={courseSummary.ai_chat_tools_dependency}
       courseOfferingId={courseSummary.course_offering_id}
       courseVersionId={courseSummary.course_version_id}
       descriptionStudent={courseSummary.description_student}
       descriptionTeacher={courseSummary.description_teacher}
-      sectionsInfo={Object.values(sections)}
       teacherResources={courseSummary.teacher_resources}
       studentResources={courseSummary.student_resources}
       scripts={courseSummary.scripts}
       versions={courseSummary.course_versions}
       showVersionWarning={
-        !!false && Object.values(courseSummary.course_versions).length > 1
+        showVersionWarning &&
+        Object.values(courseSummary.course_versions).length > 1
       }
-      showRedirectWarning={false} // TODO: https://codedotorg.atlassian.net/browse/TEACH-1374
-      redirectToCourseUrl={''}
+      showRedirectWarning={searchParams.get('redirect_warning') === 'true'}
+      redirectToCourseUrl={redirectToCourseUrl}
       showAssignButton={courseSummary.show_assign_button}
       userId={userId}
       userType={UserTypes.TEACHER}

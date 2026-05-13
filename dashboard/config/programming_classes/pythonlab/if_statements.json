@@ -1,0 +1,14 @@
+{
+  "category_key": "control_structures",
+  "content": "Sometimes you want your code to *make decisions* — like doing one thing if a condition is true, and something else if it's not.\n\nThat's where `if` statements come in. They let your program ask questions and act based on the answers.\n\nThink of `if` like saying:\n\n> \"If this is true, do that.\"\n\nFor example:\n\n```\ntemperature = 75\n\nif temperature > 70:\n    print(\"It's warm outside!\")\n```\n\nOutput:\n\n```\nIt's warm outside!\n```\n\nThe code inside the `if` only runs if the condition is true.\n\n## The Structure\n\n```\nif CONDITION:\n    # Code that runs if the condition is true\n```\n\n* Make sure you use a **colon** (`:`) at the end of the `if` line\n* The code under the `if` needs to be indented\n\n## Examples\n\n### Example 1: Checking a number\n\n```\nscore = 92\n\nif score >= 90:\n    print(\"You got an A!\")\n```\n\n### Example 2: Using `else`\n\n```\nis_raining = True\n\nif is_raining:\n    print(\"Bring an umbrella.\")\nelse:\n    print(\"No umbrella needed!\")\n```\n\nOutput if `is_raining = False`:\n\n```\nNo umbrella needed!\n```\n\n## Using `elif`\n\nSometimes there are *multiple* possibilities. Use `elif` (short for **else if**) to check more than one condition:\n\n```\ngrade = 85\n\nif grade >= 90:\n    print(\"A\")\nelif grade >= 80:\n    print(\"B\")\nelse:\n    print(\"C or lower\")\n```\n\nOnly **one** block will run — the first one where the condition is true.\n\n## Comparison Operators\n\nHere are some useful comparison operators for `if` statements:\n\n| Symbol   | Meaning |  Example  |\n| -------- | ------- | ------- |\n| `==`  | equals    |  `score == 100`  |\n| `!=` | not equal to     |  `day != \"Monday\"`  |\n| `>`    | greater than    |  `age > 13`  |\n| `<`    | less than    |  `speed < 60`  |\n| `>=`    | greater than or equal to    |  `grade >= 90`  |\n| `<=`    | less than or equal to  |  `hours <= 8`  |",
+  "examples": "[]",
+  "external_documentation": "",
+  "fields": "[]",
+  "key": "if_statements",
+  "name": "if_statements",
+  "syntax": "",
+  "tips": "",
+  "methods": [
+
+  ]
+}

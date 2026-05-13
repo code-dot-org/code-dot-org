@@ -1,0 +1,28 @@
+<Panels>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 73,
+  "created_at": "2024-10-24T20:15:29.000Z",
+  "level_num": "custom",
+  "user_id": 18602,
+  "properties": {
+    "encrypted": "false",
+    "offer_browser_tts": "false",
+    "panels": [
+      {
+        "text": "",
+        "imageUrl": "https://images.code.org/36f6523e2b299aff988b4546ee593eca-IPP_SampleProgression_UMC_Panel_5.png",
+        "key": "undefined-9362864e-f150-49de-90d0-961c051b1003",
+        "layout": "text-top-center"
+      },
+      {
+        "text": "",
+        "imageUrl": "https://images.code.org/0e257c89998e317ec0adf27c883690ff-IPP_SampleProgression_UMC_Panel_6.png",
+        "key": "undefined-52be7377-7129-4357-8de9-84d9e4e25d21",
+        "layout": "text-top-center"
+      }
+    ]
+  },
+  "audit_log": "[{\"changed_at\":\"2024-10-24 20:15:34 +0000\",\"changed\":[],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
+}]]></config>
+</Panels>

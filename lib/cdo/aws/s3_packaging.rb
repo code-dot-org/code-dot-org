@@ -15,12 +15,14 @@ class S3Packaging
   attr_reader :commit_hash
 
   # @param package_name [String] Friendly name of the package, used as part of our S3 key
-  # @param source_location [String] Path to the location on the filesystem where the build input lives
-  # @param target_location [String] Path to the location on the file system where the unzipped packaged contents should lvie
-  def initialize(package_name, source_location, target_location)
-    throw "Missing argument" if package_name.nil? || source_location.nil? || target_location.nil?
+  # @param application_location [String] Path to the location on the filesystem where the application build input lives
+  # @param source_locations [Array<String>] Path to the locations on the filesystem that should be used to calculate the source commit
+  # @param target_location [String] Path to the location on the file system where the unzipped packaged contents should live
+  def initialize(package_name, application_location, source_locations, target_location)
+    throw "Missing argument" if package_name.nil? || application_location.nil? || source_locations.nil? || target_location.nil?
     @package_name = package_name
-    @source_location = source_location
+    @application_location = application_location
+    @source_locations = source_locations
     @target_location = target_location
     @logger = Logger.new($stdout)
     regenerate_commit_hash
@@ -32,7 +34,7 @@ class S3Packaging
 
   # Recreates our commit hash (for cases where we may have updated our git tree)
   def regenerate_commit_hash
-    @commit_hash = RakeUtils.git_folder_hash @source_location
+    @commit_hash = RakeUtils.git_folder_hash @source_locations
   end
 
   # Tries to get an up to date package without building
@@ -53,7 +55,7 @@ class S3Packaging
   # Uploads the created package to s3
   # @return package
   def upload_package_to_s3(package)
-    raise "Generated different package for same contents" unless package_matches_download(package)
+    raise "Generated different package for same contents, see diff in logs" unless package_matches_download(package, log_if_different: true)
     upload_package(package)
     package
   end
@@ -71,7 +73,7 @@ class S3Packaging
   end
 
   # Creates a zipped package of the provided assets folder
-  # @param sub_path [String] Path to built assets, relative to source_location
+  # @param sub_path [String] Path to built assets, relative to application_location
   # @param expected_commit_hash [String] optional, when specified an error will be raised
   #        whenever the current commit hash doesn't match the expected one.
   #        Use this to detect file system changes during the build and fail package creation.
@@ -87,7 +89,7 @@ class S3Packaging
 
     package = Tempfile.new(@commit_hash)
     @logger.info "Creating #{package.path}"
-    Dir.chdir(@source_location + '/' + sub_path) do
+    Dir.chdir(@application_location + '/' + sub_path) do
       # add a commit_hash file whose contents represent the key for this package
       File.write('commit_hash', @commit_hash)
       RakeUtils.system "tar -cz --exclude='*.cache.json' --file #{package.path} *"
@@ -97,7 +99,7 @@ class S3Packaging
   end
 
   def log_bundle_size
-    stats = JSON.parse(File.read(@source_location + '/build/package/js/stats.json'))
+    stats = JSON.parse(File.read(@application_location + '/build/package/js/stats.json'))
     @logger.info(
       stats['assets'].filter_map do |asset|
         next nil unless asset['name'].end_with? '.js'
@@ -151,7 +153,7 @@ class S3Packaging
   # its own). This validates that the one we created is identical to the one
   # that was uploaded.
   # @return [Boolean] True unless we have an existing package and it's different
-  private def package_matches_download(package)
+  private def package_matches_download(package, log_if_different: false)
     begin
       old_package = download_package
     rescue Aws::S3::Errors::NoSuchKey
@@ -160,19 +162,44 @@ class S3Packaging
     end
 
     @logger.info 'Existing package on s3. Validating equivalence'
-    packages_equivalent(old_package, package)
+    packages_equivalent(old_package, package, log_if_different: log_if_different)
+  end
+
+  private def delete_oldest_file_until_smaller_than(glob, max_size_gb:)
+    max_size_bytes = max_size_gb * 1024 * 1024 * 1024
+    FileUtils.rm_f(
+      Dir[glob].min_by {|f| File.mtime(f)}
+    ) while Dir[glob].sum {|f| File.size(f)} > max_size_bytes
+  end
+
+  private def warn_packages_differ(diff_output, dir1, dir2, max_size_gb: 20, diff_dir: File.join(Dir.home, 'generated-different-packages'))
+    FileUtils.mkdir_p(diff_dir)
+
+    delete_oldest_file_until_smaller_than("#{diff_dir}/*.diff", max_size_gb: max_size_gb)
+
+    timestamp = Time.now.utc.strftime('%Y%m%dT%H%M%SZ')
+    diff_path = "#{diff_dir}/s3-vs-local-#{timestamp}.diff"
+    RakeUtils.system__("diff -ruN #{dir1} #{dir2} > #{diff_path}")
+
+    @logger.warn <<~TEXT
+      Packages differed:
+      #{diff_output}
+
+      For a unified diff, see: #{diff_path}
+    TEXT
   end
 
   # Checks to see if two packages are equivalent by unpacking them into tempfiles
   # and comparing the results. Simply comparing the packages themselves is not
   # sufficient, because they can contain metadata.
-  private def packages_equivalent(package1, package2)
+  private def packages_equivalent(package1, package2, log_if_different: false)
     diff = Dir.mktmpdir do |dir1|
       RakeUtils.system "tar -zxf #{package1.path} -C #{dir1}"
       Dir.mktmpdir do |dir2|
         RakeUtils.system "tar -zxf #{package2.path} -C #{dir2}"
-        _, output = RakeUtils.system__ "diff -rq #{dir1} #{dir2}"
-        output
+        _, diff_output = RakeUtils.system__ "diff -rq #{dir1} #{dir2}"
+        warn_packages_differ(diff_output, dir1, dir2) if !diff_output.empty? && log_if_different
+        diff_output
       end
     end
     diff.empty?

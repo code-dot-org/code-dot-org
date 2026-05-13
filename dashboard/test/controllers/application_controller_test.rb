@@ -4,14 +4,12 @@ class ApplicationControllerTest < ActionDispatch::IntegrationTest
   describe 'CAP lockout' do
     let(:user) {create(:student)}
 
-    let(:cpa_experience_phase) {Cpa::ALL_USER_LOCKOUT}
     let(:user_is_locked_out?) {true}
 
     let(:expect_grace_period_handler_call) {Services::ChildAccount::GracePeriodHandler.expects(:call).with(user: user)}
     let(:expect_lockout_handler_call) {Services::ChildAccount::LockoutHandler.expects(:call).with(user: user)}
 
     before do
-      Cpa.stubs(:cpa_experience).returns(cpa_experience_phase)
       Services::ChildAccount::LockoutHandler.stubs(:call).with(user: user).returns(user_is_locked_out?)
 
       sign_in user
@@ -100,25 +98,6 @@ class ApplicationControllerTest < ActionDispatch::IntegrationTest
       end
     end
 
-    context 'when no CPA experience' do
-      let(:cpa_experience_phase) {nil}
-
-      it 'does not call CAP grace period handler' do
-        expect_grace_period_handler_call.never
-        get root_path
-      end
-
-      it 'does not call CAP lockout handler' do
-        expect_lockout_handler_call.never
-        get root_path
-      end
-
-      it 'does not redirect to lockout page' do
-        get root_path
-        refute_redirect_to lockout_path
-      end
-    end
-
     context 'when error is raised during grace period handling' do
       let(:error) {StandardError.new('expected_error')}
 
@@ -184,8 +163,52 @@ class ApplicationControllerTest < ActionDispatch::IntegrationTest
       it 'should NOT redirect to landing path for allow listed paths' do
         get destroy_user_session_path
 
-        assert_redirected_to '//test.code.org'
+        assert_redirected_to root_path
       end
+    end
+  end
+
+  describe 'persist_brand_params' do
+    let(:cookie_key) {environment_specific_cookie_name(Cdo::Brand::BRAND_COOKIE_NAME)}
+
+    before do
+      DCDO.stubs(:get)
+      DCDO.stubs(:get).with('brand-router-enabled', false).returns(true)
+    end
+
+    it 'does nothing when brand router is disabled' do
+      DCDO.stubs(:get).with('brand-router-enabled', false).returns(false)
+      get root_path, params: {brand: 'codeai'}
+      assert_nil cookies[cookie_key]
+    end
+
+    it 'sets brand cookie from URL param' do
+      get root_path, params: {brand: 'codeai'}
+      assert_equal 'codeai', response.cookies[cookie_key]
+    end
+
+    it 'ignores unknown brand codes' do
+      get root_path, params: {brand: 'unknown'}
+      assert_nil cookies[cookie_key]
+    end
+
+    it 'clears brand cookie on brand-reset' do
+      cookies[cookie_key] = 'codeai'
+      get root_path, params: {'brand-reset' => '1'}
+      assert_nil response.cookies[cookie_key]
+    end
+
+    it 'does not set cookie when no brand param present' do
+      get root_path
+      assert_nil cookies[cookie_key]
+    end
+  end
+
+  describe 'exception handling' do
+    it 'gracefully handles UnsafeRedirectErrors' do
+      Rails.logger.expects(:warn).once
+      get home_set_locale_path, params: {locale: 'ar-SA', user_return_to: '../invalid/path'}
+      assert_response :not_found
     end
   end
 

@@ -1,5 +1,6 @@
 import {shallow, mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
+import {act} from 'react-dom/test-utils';
 import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
 
 import {OAuthSectionTypes} from '@cdo/apps/accounts/constants';
@@ -19,6 +20,14 @@ const fakeClassroom = {
   name: 'myClassroom',
   section: '1st Pd',
   enrollment_code: '12345',
+};
+
+const archivedClassroom = {
+  id: '3',
+  name: 'archivedClassroom',
+  section: '1st Pd',
+  enrollment_code: '12345',
+  course_state: 'ARCHIVED',
 };
 
 describe('RosterDialog', () => {
@@ -52,12 +61,9 @@ describe('RosterDialog', () => {
     wrapper.find('button[id="cancel-button"]').simulate('click');
     assert(analyticsSpy.calledOnce);
     assert.equal(analyticsSpy.getCall(0).firstArg, 'Section Setup Cancelled');
-    assert.deepEqual(
-      analyticsSpy.getCall(0).args[analyticsSpy.getCall(0).args.length - 2],
-      {
-        oauthSource: OAuthSectionTypes.google_classroom,
-      }
-    );
+    assert.deepEqual(analyticsSpy.getCall(0).args[1], {
+      oauthSource: OAuthSectionTypes.google_classroom,
+    });
 
     analyticsSpy.restore();
   });
@@ -75,9 +81,10 @@ describe('RosterDialog', () => {
     );
     expect(wrapper.text()).contains('myClassroom');
     expect(wrapper.text()).contains('12345');
+    expect(wrapper.text()).not.contains('ARCHIVED');
   });
 
-  it('sends section set up completed analytics event when import is called', () => {
+  it('sends section set up completed analytics event when import is called', async () => {
     const rosterDialog = mount(
       <RosterDialog
         handleImport={() => {}}
@@ -90,16 +97,18 @@ describe('RosterDialog', () => {
     );
     const analyticsSpy = sinon.spy(analyticsReporter, 'sendEvent');
 
-    rosterDialog.instance().setState({selectedId: '2'});
-    rosterDialog.instance().importClassroom();
+    await act(async () => {
+      rosterDialog.instance().setState({selectedId: '2'});
+    });
+    rosterDialog.update();
+    await act(async () => {
+      rosterDialog.instance().importClassroom();
+    });
     assert(analyticsSpy.calledOnce);
     assert.equal(analyticsSpy.getCall(0).firstArg, 'Section Setup Completed');
-    assert.deepEqual(
-      analyticsSpy.getCall(0).args[analyticsSpy.getCall(0).args.length - 2],
-      {
-        oauthSource: OAuthSectionTypes.google_classroom,
-      }
-    );
+    assert.deepEqual(analyticsSpy.getCall(0).args[1], {
+      oauthSource: OAuthSectionTypes.google_classroom,
+    });
 
     analyticsSpy.restore();
   });
@@ -146,5 +155,20 @@ describe('RosterDialog', () => {
       .catch(error => {
         expect(handleImportFailureMock.mock.calls.length).to.equal(1);
       });
+  });
+
+  it('should label archived sections as archived ', () => {
+    const wrapper = mount(
+      <RosterDialog
+        handleImport={() => {}}
+        handleCancel={() => {}}
+        isOpen={true}
+        classrooms={[archivedClassroom]}
+        loadError={null}
+        rosterProvider={OAuthSectionTypes.google_classroom}
+        userId={90}
+      />
+    );
+    expect(wrapper.text()).contains('ARCHIVED');
   });
 });

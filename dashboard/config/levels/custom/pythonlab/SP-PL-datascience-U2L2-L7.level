@@ -1,12 +1,13 @@
 <Pythonlab>
   <config><![CDATA[{
+  "published": true,
   "game_id": 72,
   "created_at": "2024-09-19T19:03:10.000Z",
   "level_num": "custom",
   "user_id": 18602,
   "properties": {
     "encrypted": "false",
-    "long_instructions": "# List Index\r\n\r\n\r\n::: details [**✅ Step 1**]\r\n* What happens when you change the `index` variable to a number between 0 to 3?\r\n:::\r\n\r\n::: details [**✅ Step 2**]\r\nDiscuss with your partner what is happening?\r\n:::\r\n\r\n\r\n",
+    "long_instructions": "# List Index\r\n\r\nIn this level, you will **modify** the code to try to understand what is happening. \r\n\r\nFirst, **run** the code and observe the outcome, then proceed with the steps. \r\n\r\n::: details [**✅ Step 1**]\r\n* Change the `index` variable to a number between 0 to 3. What happens when you run the code?\r\n:::\r\n\r\n::: details [**✅ Step 2**]\r\nIn this step, your students will discuss why this happened.\r\n:::\r\n\r\n\r\n::: details [**🔎 Show me how**]\r\n![](https://images.code.org/e31b7675e65c44974e5fc2ab9f89f331-image-1732032673293.png)\r\n:::\r\n\r\nAfter you complete the steps, click `continue` to move on. ",
     "ai_tutor_available": "false",
     "submittable": "false",
     "hide_share_and_remix": "false",
@@ -33,7 +34,6 @@
     },
     "project_template_level_name": "datascience-U2L2-L7-8templ_2024-pilot"
   },
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2024-09-19T19:03:10.415+00:00\",\"changed\":[\"cloned from \\\"datascience-U2L2-L7_2024-pilot\\\"\"],\"cloned_from\":\"datascience-U2L2-L7_2024-pilot\"}]"
+  "audit_log": "[{\"changed_at\":\"2024-09-19T19:03:10.415+00:00\",\"changed\":[\"cloned from \\\"datascience-U2L2-L7_2024-pilot\\\"\"],\"cloned_from\":\"datascience-U2L2-L7_2024-pilot\"},{\"changed_at\":\"2024-11-19 16:07:09 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"},{\"changed_at\":\"2024-11-19 16:14:15 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"}]"
 }]]></config>
 </Pythonlab>

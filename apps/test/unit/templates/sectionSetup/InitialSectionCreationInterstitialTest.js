@@ -34,9 +34,13 @@ describe('InitialSectionCreationInterstitial', () => {
     );
     wrapper.find('button#uitest-accept-section-creation').simulate('click');
 
-    expect(analyticsSpy).toHaveBeenCalledTimes(1);
+    expect(analyticsSpy).toHaveBeenCalledTimes(2);
     expect(analyticsSpy.mock.calls[0]).toEqual([
       EVENTS.SECTION_SETUP_SIGN_IN_EVENT,
+    ]);
+    expect(analyticsSpy.mock.calls[1]).toEqual([
+      EVENTS.SECTION_SETUP_STARTED,
+      {},
     ]);
 
     analyticsSpy.mockRestore();

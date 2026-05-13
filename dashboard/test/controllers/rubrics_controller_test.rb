@@ -5,17 +5,18 @@ class RubricsControllerTest < ActionController::TestCase
   include SharedConstants
 
   setup do
-    @levelbuilder = create :levelbuilder
-    @lesson = create(:lesson, :with_lesson_group)
+    @levelbuilder = create(:levelbuilder)
+    @script = create(:script, :in_single_unit_course)
+    @lesson = create(:lesson, :with_lesson_group, script: @script)
     @level = create(:level)
-    @script_level = create :script_level, script: @lesson.script, lesson: @lesson, levels: [@level]
+    @script_level = create(:script_level, script: @lesson.script, lesson: @lesson, levels: [@level])
 
     # set up a section containing 6 students: 1 @student and 5 other_students.
 
-    @teacher = create :authorized_teacher
-    @student = create :student
-    @follower = create :follower, student_user: @student, user: @teacher
-    @rubric = create :rubric, lesson: @lesson, level: @level
+    @teacher = create(:authorized_teacher)
+    @student = create(:student)
+    @follower = create(:follower, student_user: @student, user: @teacher)
+    @rubric = create(:rubric, lesson: @lesson, level: @level)
 
     other_followers = []
     other_students = []
@@ -25,9 +26,9 @@ class RubricsControllerTest < ActionController::TestCase
       other_followers << create(:follower, section: @follower.section, student_user: other_students[-1], user: @teacher)
     end
 
-    @unauth_teacher = create :teacher
-    @unauth_student = create :student
-    @unauth_follower = create :follower, student_user: @unauth_student, user: @unauth_teacher
+    @unauth_teacher = create(:teacher)
+    @unauth_student = create(:student)
+    @unauth_follower = create(:follower, student_user: @unauth_student, user: @unauth_teacher)
 
     other_unauth_followers = []
     other_unauth_students = []
@@ -46,7 +47,7 @@ class RubricsControllerTest < ActionController::TestCase
     # Don't actually talk to S3 when running SourceBucket.new
     AWS::S3.stubs :create_client
     stub_project_source_data(@channel_id)
-    _, @project_id = storage_decrypt_channel_id(@channel_id)
+    _, @project_id = get_storage_id_and_project_id(@channel_id)
     @version_id = "fake-version-id"
   end
 
@@ -72,6 +73,7 @@ class RubricsControllerTest < ActionController::TestCase
       post :create, params: {
         level_id: @level.id,
         lesson_id: @lesson.id,
+        s3_config_dir: 'fake-lesson-s3-name',
         learning_goals_attributes: [
           {learning_goal: 'ai-configured learning goal 1', ai_enabled: true, position: 1},
           {learning_goal: 'ai-configured learning goal 2', ai_enabled: false, position: 2}
@@ -103,6 +105,7 @@ class RubricsControllerTest < ActionController::TestCase
       post :create, params: {
         level_id: @level.id,
         lesson_id: @lesson.id,
+        s3_config_dir: 'fake-lesson-s3-name',
         learning_goals_attributes: [
           {learning_goal: 'non-ai learning goal', ai_enabled: true, position: 1},
         ]
@@ -110,17 +113,17 @@ class RubricsControllerTest < ActionController::TestCase
     end
     assert_response :bad_request
     errors = JSON.parse(response.body)
-    assert_equal "no valid AI config in S3 for ai-enabled learning goal 'non-ai learning goal'", errors['learning_goals.learning_goal'].first
+    assert_equal 'Missing AI config in S3 for lesson fake-lesson-s3-name learning goals: ["non-ai learning goal"]', errors['base'].first
   end
 
   test 'updates rubric and learning goals with valid params' do
     sign_in @levelbuilder
 
-    lesson = create :lesson, :with_lesson_group
-    level = create :level
-    create :script_level, script: lesson.script, lesson: lesson, levels: [level]
-    rubric = create :rubric, lesson: lesson, level: level
-    learning_goal = create :learning_goal, rubric: rubric, learning_goal: 'original learning goal', ai_enabled: false, position: 0
+    lesson = create(:lesson, :with_lesson_group)
+    level = create(:level)
+    create(:script_level, script: lesson.script, lesson: lesson, levels: [level])
+    rubric = create(:rubric, lesson: lesson, level: level)
+    learning_goal = create(:learning_goal, rubric: rubric, learning_goal: 'original learning goal', ai_enabled: false, position: 0)
     unit_name = rubric.lesson.script.name
     File.stubs(:write).with do |filename, contents|
       filename == "#{Rails.root}/config/scripts_json/#{unit_name}.script_json" && contents.include?(learning_goal.key)
@@ -146,11 +149,11 @@ class RubricsControllerTest < ActionController::TestCase
     AiRubricConfig.stubs(:get_lesson_s3_name).returns('fake-lesson-s3-name')
     stub_lesson_s3_data
 
-    lesson = create :lesson, :with_lesson_group
-    level = create :level
-    create :script_level, script: lesson.script, lesson: lesson, levels: [level]
-    rubric = create :rubric, lesson: lesson, level: level
-    learning_goal = create :learning_goal, rubric: rubric, learning_goal: 'ai-configured learning goal 1', ai_enabled: true, position: 0
+    lesson = create(:lesson, :with_lesson_group)
+    level = create(:level)
+    create(:script_level, script: lesson.script, lesson: lesson, levels: [level])
+    rubric = create(:rubric, lesson: lesson, level: level, s3_config_dir: 'fake-lesson-s3-name')
+    learning_goal = create(:learning_goal, rubric: rubric, learning_goal: 'ai-configured learning goal 1', ai_enabled: true, position: 0)
     File.stubs(:write).never
     Rails.application.config.stubs(:levelbuilder_mode).returns true
 
@@ -171,11 +174,11 @@ class RubricsControllerTest < ActionController::TestCase
     AiRubricConfig.stubs(:get_lesson_s3_name).returns('fake-lesson-s3-name')
     stub_lesson_s3_data
 
-    lesson = create :lesson, :with_lesson_group
-    level = create :level
-    create :script_level, script: lesson.script, lesson: lesson, levels: [level]
-    rubric = create :rubric, lesson: lesson, level: level
-    learning_goal = create :learning_goal, rubric: rubric, learning_goal: 'non-ai learning goal', ai_enabled: false, position: 0
+    lesson = create(:lesson, :with_lesson_group)
+    level = create(:level)
+    create(:script_level, script: lesson.script, lesson: lesson, levels: [level])
+    rubric = create(:rubric, lesson: lesson, level: level, s3_config_dir: 'fake-lesson-s3-name')
+    learning_goal = create(:learning_goal, rubric: rubric, learning_goal: 'non-ai learning goal', ai_enabled: false, position: 0)
     File.stubs(:write).never
     Rails.application.config.stubs(:levelbuilder_mode).returns true
 
@@ -192,7 +195,7 @@ class RubricsControllerTest < ActionController::TestCase
 
   test 'submits rubric evaluations of a student' do
     @rubric.destroy
-    rubric = create :rubric, :with_teacher_evaluations, lesson: @lesson, level: @level, num_evaluations_per_goal: 2, teacher: @teacher, student: @student
+    rubric = create(:rubric, :with_teacher_evaluations, lesson: @lesson, level: @level, num_evaluations_per_goal: 2, teacher: @teacher, student: @student)
 
     sign_in @teacher
     post :submit_evaluations, params: {id: rubric.id, student_id: @student.id}
@@ -201,9 +204,9 @@ class RubricsControllerTest < ActionController::TestCase
   end
 
   test 'can only submit evaluations with same teacher_id as current_user' do
-    another_teacher = create :teacher
-    create :learning_goal, :with_teacher_evaluations, rubric: @rubric, teacher: @teacher, student: @student
-    create :learning_goal, :with_teacher_evaluations, rubric: @rubric, teacher: another_teacher, student: @student
+    another_teacher = create(:teacher)
+    create(:learning_goal, :with_teacher_evaluations, rubric: @rubric, teacher: @teacher, student: @student)
+    create(:learning_goal, :with_teacher_evaluations, rubric: @rubric, teacher: another_teacher, student: @student)
 
     sign_in @teacher
     post :submit_evaluations, params: {id: @rubric.id, student_id: @student.id}
@@ -214,13 +217,13 @@ class RubricsControllerTest < ActionController::TestCase
   end
 
   test "gets ai evaluations for student and learning goal" do
-    student = create :student
-    classmate = create :student
-    create :follower, student_user: student, user: @teacher
+    student = create(:student)
+    classmate = create(:student)
+    create(:follower, student_user: student, user: @teacher)
     sign_in @teacher
 
-    learning_goal1 = create :learning_goal, rubric: @rubric
-    learning_goal2 = create :learning_goal, rubric: @rubric
+    learning_goal1 = create(:learning_goal, rubric: @rubric)
+    learning_goal2 = create(:learning_goal, rubric: @rubric)
 
     rubric_ai_evaluation = create(
       :rubric_ai_evaluation,
@@ -282,10 +285,10 @@ class RubricsControllerTest < ActionController::TestCase
   end
 
   test "cannot get ai evaluations for student if not teacher of student" do
-    student = create :student
+    student = create(:student)
     sign_in @teacher
 
-    learning_goal = create :learning_goal
+    learning_goal = create(:learning_goal)
     rubric_ai_evaluation = create(
       :rubric_ai_evaluation,
       rubric: learning_goal.rubric,
@@ -309,11 +312,11 @@ class RubricsControllerTest < ActionController::TestCase
   end
 
   test "only returns the most recent ai evaluation for student" do
-    student = create :student
-    create :follower, student_user: student, user: @teacher
+    student = create(:student)
+    create(:follower, student_user: student, user: @teacher)
     sign_in @teacher
 
-    learning_goal = create :learning_goal
+    learning_goal = create(:learning_goal)
 
     rubric_ai_evaluation1 = create(
       :rubric_ai_evaluation,
@@ -355,11 +358,11 @@ class RubricsControllerTest < ActionController::TestCase
   end
 
   test "returns no ai evaluations if evaluation has not been run" do
-    student = create :student
-    create :follower, student_user: student, user: @teacher
+    student = create(:student)
+    create(:follower, student_user: student, user: @teacher)
     sign_in @teacher
 
-    learning_goal = create :learning_goal
+    learning_goal = create(:learning_goal)
     assert 0, RubricAiEvaluation.where(user: student).count
 
     get :get_ai_evaluations, params: {
@@ -396,8 +399,8 @@ class RubricsControllerTest < ActionController::TestCase
   end
 
   test "returns ok and not attempted count when getting aggregate status if no work is attempted" do
-    student = create :student
-    follower = create :follower, student_user: student, user: @teacher
+    student = create(:student)
+    follower = create(:follower, student_user: student, user: @teacher)
     followers = []
     students = []
     5.times do
@@ -504,8 +507,8 @@ class RubricsControllerTest < ActionController::TestCase
   end
 
   test "returns ok and mixed attempted/evaluated count when getting aggregate status" do
-    student = create :student
-    follower = create :follower, student_user: student, user: @teacher
+    student = create(:student)
+    follower = create(:follower, student_user: student, user: @teacher)
     followers = []
     students = []
 
@@ -530,7 +533,7 @@ class RubricsControllerTest < ActionController::TestCase
       Timecop.travel 1.minute
       students.each do |s|
         # create an AI evaluation for each student
-        learning_goal = create :learning_goal, rubric: @rubric
+        learning_goal = create(:learning_goal, rubric: @rubric)
         rubric_ai_evaluation = create(
           :rubric_ai_evaluation,
           rubric: @rubric,
@@ -593,8 +596,8 @@ class RubricsControllerTest < ActionController::TestCase
   end
 
   test "returns ok but no evaluation jobs are queued if no work is attempted" do
-    student = create :student
-    follower = create :follower, student_user: student, user: @teacher
+    student = create(:student)
+    follower = create(:follower, student_user: student, user: @teacher)
     followers = []
     students = []
     5.times do
@@ -617,8 +620,8 @@ class RubricsControllerTest < ActionController::TestCase
   end
 
   test "returns ok and queues 1 eval job when only 1 student has work that is unevaluated when getting aggregate status" do
-    student = create :student
-    follower = create :follower, student_user: student, user: @teacher
+    student = create(:student)
+    follower = create(:follower, student_user: student, user: @teacher)
     followers = []
     students = []
     5.times do
@@ -643,7 +646,7 @@ class RubricsControllerTest < ActionController::TestCase
       Timecop.travel 1.minute
       students.each do |s|
         # create an AI evaluation for each student
-        learning_goal = create :learning_goal, rubric: @rubric
+        learning_goal = create(:learning_goal, rubric: @rubric)
         rubric_ai_evaluation = create(
           :rubric_ai_evaluation,
           rubric: @rubric,
@@ -675,8 +678,8 @@ class RubricsControllerTest < ActionController::TestCase
   end
 
   test "returns ok and queues 5 jobs when running ai eval for all" do
-    student = create :student
-    follower = create :follower, student_user: student, user: @teacher
+    student = create(:student)
+    follower = create(:follower, student_user: student, user: @teacher)
     followers = []
     students = []
     5.times do
@@ -687,7 +690,7 @@ class RubricsControllerTest < ActionController::TestCase
     Timecop.freeze do
       students.each do |s|
         # create an AI evaluation for each student
-        learning_goal = create :learning_goal, rubric: @rubric
+        learning_goal = create(:learning_goal, rubric: @rubric)
         rubric_ai_evaluation = create(
           :rubric_ai_evaluation,
           rubric: @rubric,
@@ -740,13 +743,13 @@ class RubricsControllerTest < ActionController::TestCase
   end
 
   test "gets teacher evaluations for current user" do
-    student = create :student
+    student = create(:student)
     sign_in student
 
-    learning_goal1 = create :learning_goal, rubric: @rubric
-    learning_goal2 = create :learning_goal, rubric: @rubric
-    teacher_evaluation1 = create :learning_goal_teacher_evaluation, learning_goal: learning_goal1, user: student, submitted_at: Time.now, feedback: 'feedback1'
-    teacher_evaluation2 = create :learning_goal_teacher_evaluation, learning_goal: learning_goal2, user: student, submitted_at: Time.now, feedback: 'feedback2'
+    learning_goal1 = create(:learning_goal, rubric: @rubric)
+    learning_goal2 = create(:learning_goal, rubric: @rubric)
+    teacher_evaluation1 = create(:learning_goal_teacher_evaluation, learning_goal: learning_goal1, user: student, submitted_at: Time.now, feedback: 'feedback1')
+    teacher_evaluation2 = create(:learning_goal_teacher_evaluation, learning_goal: learning_goal2, user: student, submitted_at: Time.now, feedback: 'feedback2')
 
     get :get_teacher_evaluations, params: {
       id: @rubric.id,
@@ -759,13 +762,13 @@ class RubricsControllerTest < ActionController::TestCase
   end
 
   test "does not get unsubmmitted teacher evaluations for current user" do
-    student = create :student
+    student = create(:student)
     sign_in student
 
-    learning_goal1 = create :learning_goal, rubric: @rubric
-    learning_goal2 = create :learning_goal, rubric: @rubric
-    create :learning_goal_teacher_evaluation, learning_goal: learning_goal1, user: student, submitted_at: nil, feedback: 'feedback1'
-    submitted_teacher_evaluation = create :learning_goal_teacher_evaluation, learning_goal: learning_goal2, user: student, submitted_at: Time.now, feedback: 'feedback2'
+    learning_goal1 = create(:learning_goal, rubric: @rubric)
+    learning_goal2 = create(:learning_goal, rubric: @rubric)
+    create(:learning_goal_teacher_evaluation, learning_goal: learning_goal1, user: student, submitted_at: nil, feedback: 'feedback1')
+    submitted_teacher_evaluation = create(:learning_goal_teacher_evaluation, learning_goal: learning_goal2, user: student, submitted_at: Time.now, feedback: 'feedback2')
 
     get :get_teacher_evaluations, params: {
       id: @rubric.id,
@@ -777,8 +780,8 @@ class RubricsControllerTest < ActionController::TestCase
   end
 
   test "does not get teacher evaluations for students in section if not logged in" do
-    student = create :student
-    follower = create :follower, student_user: student, user: @teacher
+    student = create(:student)
+    follower = create(:follower, student_user: student, user: @teacher)
 
     get :get_teacher_evaluations_for_all, params: {
       id: @rubric.id,
@@ -789,8 +792,8 @@ class RubricsControllerTest < ActionController::TestCase
   end
 
   test "gets empty teacher evaluations for students when no student has evaualuations" do
-    student = create :student
-    follower = create :follower, student_user: student, user: @teacher
+    student = create(:student)
+    follower = create(:follower, student_user: student, user: @teacher)
     followers = []
     students = []
     2.times do
@@ -799,8 +802,8 @@ class RubricsControllerTest < ActionController::TestCase
     end
     sign_in @teacher
 
-    create :learning_goal, rubric: @rubric
-    create :learning_goal, rubric: @rubric
+    create(:learning_goal, rubric: @rubric)
+    create(:learning_goal, rubric: @rubric)
 
     get :get_teacher_evaluations_for_all, params: {
       id: @rubric.id,
@@ -815,8 +818,8 @@ class RubricsControllerTest < ActionController::TestCase
   end
 
   test "gets teacher evaluations for students in section when 1 student has evaluations" do
-    student = create :student
-    follower = create :follower, student_user: student, user: @teacher
+    student = create(:student)
+    follower = create(:follower, student_user: student, user: @teacher)
     followers = []
     students = []
     2.times do
@@ -825,10 +828,10 @@ class RubricsControllerTest < ActionController::TestCase
     end
     sign_in @teacher
 
-    learning_goal1 = create :learning_goal, rubric: @rubric
-    learning_goal2 = create :learning_goal, rubric: @rubric
-    teacher_evaluation1 = create :learning_goal_teacher_evaluation, learning_goal: learning_goal1, user: student, submitted_at: Time.now, feedback: 'feedback1'
-    teacher_evaluation2 = create :learning_goal_teacher_evaluation, learning_goal: learning_goal2, user: student, submitted_at: Time.now, feedback: 'feedback2'
+    learning_goal1 = create(:learning_goal, rubric: @rubric)
+    learning_goal2 = create(:learning_goal, rubric: @rubric)
+    teacher_evaluation1 = create(:learning_goal_teacher_evaluation, learning_goal: learning_goal1, user: student, submitted_at: Time.now, feedback: 'feedback1')
+    teacher_evaluation2 = create(:learning_goal_teacher_evaluation, learning_goal: learning_goal2, user: student, submitted_at: Time.now, feedback: 'feedback2')
 
     get :get_teacher_evaluations_for_all, params: {
       id: @rubric.id,
@@ -875,8 +878,8 @@ class RubricsControllerTest < ActionController::TestCase
   test 'run ai evaluations for user succeeds if user attempted but did not submit project' do
     sign_in @teacher
 
-    new_student = create :student
-    create :follower, student_user: new_student, user: @teacher
+    new_student = create(:student)
+    create(:follower, student_user: new_student, user: @teacher)
     new_storage_id = create_storage_id_for_user(new_student.id)
 
     channel_token = ChannelToken.find_or_create_channel_token(@script_level.level, @fake_ip, new_storage_id, @script_level.script_id)
@@ -906,8 +909,8 @@ class RubricsControllerTest < ActionController::TestCase
   test "run ai evaluations returns bad request if level not attempted" do
     sign_in @teacher
 
-    new_student = create :student
-    create :follower, student_user: new_student, user: @teacher
+    new_student = create(:student)
+    create(:follower, student_user: new_student, user: @teacher)
     create_storage_id_for_user(new_student.id)
 
     AiRubricConfig.stubs(:ai_enabled?).returns(true)
@@ -931,7 +934,7 @@ class RubricsControllerTest < ActionController::TestCase
 
   test "run ai evaluations returns bad request if attempt already evaluated" do
     Timecop.freeze do
-      learning_goal = create :learning_goal, rubric: @rubric
+      learning_goal = create(:learning_goal, rubric: @rubric)
       # add an earlier evaluation to make sure we're covering the logic which tries to find the most recent evaluation
       rubric_ai_evaluation = create(
         :rubric_ai_evaluation,
@@ -948,7 +951,7 @@ class RubricsControllerTest < ActionController::TestCase
         requester: @teacher
       )
       Timecop.travel 1.minute
-      create :user_level, user: @student, script: @script_level.script, level: @level
+      create(:user_level, user: @student, script: @script_level.script, level: @level)
       Timecop.travel 1.minute
       rubric_ai_evaluation2 = create(
         :rubric_ai_evaluation,
@@ -989,7 +992,7 @@ class RubricsControllerTest < ActionController::TestCase
 
   test "run ai evaluations succeeds if attempt is more recent than evaluation" do
     Timecop.freeze do
-      learning_goal = create :learning_goal, rubric: @rubric
+      learning_goal = create(:learning_goal, rubric: @rubric)
       rubric_ai_evaluation = create(
         :rubric_ai_evaluation,
         rubric: @rubric,
@@ -1005,7 +1008,7 @@ class RubricsControllerTest < ActionController::TestCase
         requester: @teacher
       )
       Timecop.travel 1.minute
-      create :user_level, user: @student, script: @script_level.script, level: @level
+      create(:user_level, user: @student, script: @script_level.script, level: @level)
       sign_in @teacher
 
       AiRubricConfig.stubs(:ai_enabled?).returns(true)
@@ -1041,7 +1044,7 @@ class RubricsControllerTest < ActionController::TestCase
   end
 
   test "cannot run ai evaluations for user if not teacher of student" do
-    teacher = create :teacher
+    teacher = create(:teacher)
     sign_in teacher
 
     post :run_ai_evaluations_for_user, params: {
@@ -1076,6 +1079,8 @@ class RubricsControllerTest < ActionController::TestCase
     path_prefix = AiRubricConfig::S3_AI_RELEASE_PATH
     bucket = {
       "#{path_prefix}fake-lesson-s3-name/standard_rubric.csv" => fake_rubric_csv,
+      "#{path_prefix}fake-lesson-s3-name/params.json" => '{"response-type": "tsv"}',
+      "#{path_prefix}fake-lesson-s3-name/system_prompt.txt" => 'fake system prompt',
     }
 
     s3_client.stub_responses(
@@ -1087,5 +1092,7 @@ class RubricsControllerTest < ActionController::TestCase
         {body: StringIO.new(obj)}
       end
     )
+
+    s3_client.stub_responses(:list_objects_v2, {contents: []})
   end
 end

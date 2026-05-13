@@ -19,7 +19,7 @@ const getRenameFolderMock = (): [ProjectFolder, RenameFolderFunction] => {
 
 describe('openRenameFolderPrompt', function () {
   it('can successfully rename a folder', async function () {
-    const [analyticsData, sendCodebridgeAnalyticsEvent] = getAnalyticsMock();
+    const [analyticsData, sendLab2AnalyticsEvent] = getAnalyticsMock();
     const folderId = '1';
     const newFolderName = 'valid_folder_name';
 
@@ -30,7 +30,7 @@ describe('openRenameFolderPrompt', function () {
       dialogControl: getDialogControlMock(newFolderName),
       renameFolder: renameFolderDataMock,
       projectFolders: testProject.folders,
-      sendCodebridgeAnalyticsEvent,
+      sendLab2AnalyticsEvent,
     });
 
     expect(renameFolderData.id).toEqual(folderId);
@@ -39,7 +39,7 @@ describe('openRenameFolderPrompt', function () {
   });
 
   it('can rename a folder to itself', async function () {
-    const [analyticsData, sendCodebridgeAnalyticsEvent] = getAnalyticsMock();
+    const [analyticsData, sendLab2AnalyticsEvent] = getAnalyticsMock();
     const folderId = '1';
     const newFolderName = testProject.folders[folderId].name;
 
@@ -50,7 +50,7 @@ describe('openRenameFolderPrompt', function () {
       dialogControl: getDialogControlMock(newFolderName),
       renameFolder: renameFolderDataMock,
       projectFolders: testProject.folders,
-      sendCodebridgeAnalyticsEvent,
+      sendLab2AnalyticsEvent,
     });
 
     expect(renameFolderData.id).toEqual(folderId);
@@ -59,7 +59,7 @@ describe('openRenameFolderPrompt', function () {
   });
 
   it('can rename a folder to nothing', async function () {
-    const [analyticsData, sendCodebridgeAnalyticsEvent] = getAnalyticsMock();
+    const [analyticsData, sendLab2AnalyticsEvent] = getAnalyticsMock();
     const folderId = '1';
     const newFolderName = '';
 
@@ -70,7 +70,7 @@ describe('openRenameFolderPrompt', function () {
       dialogControl: getDialogControlMock(newFolderName),
       renameFolder: renameFolderDataMock,
       projectFolders: testProject.folders,
-      sendCodebridgeAnalyticsEvent,
+      sendLab2AnalyticsEvent,
     });
 
     expect(renameFolderData.id).toEqual(folderId);
@@ -79,7 +79,7 @@ describe('openRenameFolderPrompt', function () {
   });
 
   it('can refuse to rename a folder to a duplicate name', async function () {
-    const [analyticsData, sendCodebridgeAnalyticsEvent] = getAnalyticsMock();
+    const [analyticsData, sendLab2AnalyticsEvent] = getAnalyticsMock();
     const folderId = '1';
     const newFolderName = 'testfolder2';
 
@@ -90,7 +90,7 @@ describe('openRenameFolderPrompt', function () {
       dialogControl: getDialogControlMock(newFolderName),
       renameFolder: renameFolderDataMock,
       projectFolders: testProject.folders,
-      sendCodebridgeAnalyticsEvent,
+      sendLab2AnalyticsEvent,
     });
 
     expect(Object.keys(renameFolderData).length).toEqual(0);
@@ -98,7 +98,7 @@ describe('openRenameFolderPrompt', function () {
   });
 
   it('can refuse to rename a folder to an invalid name', async function () {
-    const [analyticsData, sendCodebridgeAnalyticsEvent] = getAnalyticsMock();
+    const [analyticsData, sendLab2AnalyticsEvent] = getAnalyticsMock();
     const folderId = '1';
     const newFolderName = 'testfolder!';
 
@@ -109,7 +109,7 @@ describe('openRenameFolderPrompt', function () {
       dialogControl: getDialogControlMock(newFolderName),
       renameFolder: renameFolderDataMock,
       projectFolders: testProject.folders,
-      sendCodebridgeAnalyticsEvent,
+      sendLab2AnalyticsEvent,
     });
 
     expect(Object.keys(renameFolderData).length).toEqual(0);

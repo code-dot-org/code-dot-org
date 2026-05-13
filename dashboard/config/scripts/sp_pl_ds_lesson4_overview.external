@@ -1,0 +1,36 @@
+name 'sp-pl-DS-lesson4_Overview'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Advanced 
+
+#### In Part One, you explored the basics of Python, Pandas, and Matplotlib.
+
+#### In Part 2, we build on the foundations of Python, Pandas, and Matplotlib by diving into advanced techniques such as grouping, cleaning, and querying data, as well as creating visualizations and conducting deeper data analysis. 
+
+
+
+---
+
+
+
+<img src="https://images.code.org/d413739658a53d9c68d3bfa3e0ac25ae-image-1724770105942.png" alt="pixel grid of an X" style="border-radius:40px; float: right; padding-right: 10px; height: 180px; clear: both; margin: 10px 50px 20px 0;">
+
+## In this lesson, you will:
+
+- #### Review the content of the second half of **Data Science with Python** lessons
+- #### Preview activities in the lessons
+- #### Manipulate data using the Python, Pandas, and Matplotlib
+
+
+
+
+
+### **Suggested time:** 35 minutes
+
+
+## Let's get started!
+
+
+MARKDOWN

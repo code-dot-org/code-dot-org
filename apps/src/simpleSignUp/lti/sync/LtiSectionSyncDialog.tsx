@@ -1,11 +1,10 @@
+import {SimpleDropdown} from '@code-dot-org/component-library/dropdown';
+import {Typography} from '@mui/material';
 import $ from 'jquery';
 import PropTypes from 'prop-types';
 import React, {CSSProperties, useState} from 'react';
 
-import {SimpleDropdown} from '@cdo/apps/componentLibrary/dropdown';
-import {BodyFourText} from '@cdo/apps/componentLibrary/typography';
 import Button from '@cdo/apps/legacySharedComponents/Button';
-import {PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import Spinner from '@cdo/apps/sharedComponents/Spinner';
 import BaseDialog from '@cdo/apps/templates/BaseDialog';
@@ -83,12 +82,12 @@ export default function LtiSectionSyncDialog({
             markdown={errorMessage}
           />
         ))}
-        {syncResult.honeybadger_id && (
-          <BodyFourText>
+        {syncResult.error_id && (
+          <Typography variant="body4" gutterBottom>
             {i18n.ltiSectionSyncDialogErrorCode({
-              code: syncResult.honeybadger_id,
+              code: syncResult.error_id,
             })}
-          </BodyFourText>
+          </Typography>
         )}
       </div>
     );
@@ -98,12 +97,9 @@ export default function LtiSectionSyncDialog({
     const eventPayload = {
       lms_name: lmsName,
     };
-    analyticsReporter.sendEvent(
-      'lti_opt_out_click',
-      eventPayload,
-      PLATFORMS.STATSIG
-    );
+    analyticsReporter.sendEvent('lti_opt_out_click', eventPayload);
     return (
+      // eslint-disable-next-line react/forbid-dom-props
       <div data-testid={'disable-roster-sync'}>
         <div>
           <h2 style={styles.dialogHeader}>
@@ -130,11 +126,7 @@ export default function LtiSectionSyncDialog({
         const eventPayload = {
           lms_name: lmsName,
         };
-        analyticsReporter.sendEvent(
-          'lti_opt_out_confirm',
-          eventPayload,
-          PLATFORMS.STATSIG
-        );
+        analyticsReporter.sendEvent('lti_opt_out_confirm', eventPayload);
         handleClose();
       },
     });
@@ -144,11 +136,7 @@ export default function LtiSectionSyncDialog({
     const eventPayload = {
       lms_name: lmsName,
     };
-    analyticsReporter.sendEvent(
-      'lti_opt_out_documentation',
-      eventPayload,
-      PLATFORMS.STATSIG
-    );
+    analyticsReporter.sendEvent('lti_opt_out_documentation', eventPayload);
   };
 
   const handleUpdateSectionOwners = () => {

@@ -1,0 +1,50 @@
+<Aichat>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 71,
+  "created_at": "2025-03-25T13:56:28.000Z",
+  "level_num": "custom",
+  "user_id": 18602,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "## Task\r\n\r\nUse AI Chat to plan a trip to Disney World. \r\n\r\n### Do This:\r\n\r\n1. **Copy and paste** the prompt below into AI Chat. Press **Send** and read AI Chat's response. \r\n\r\n>You’re a travel agent, give me information about Disney World.\r\n\r\n2. Check out this list of **tasks** AI can help with:\r\n    - Summarizing notes\r\n    - Planning an itinerary\r\n    - Drafting an email\r\n3. Revise your prompt to AI Chat by adding in a specific **Task**. Press **Send** and read AI Chat's response. \r\n4. Find and complete the section in your Unit Guide called \"Task\". \r\n\r\n**Try it out!**\r\n\r\n---\r\n\r\n::: details [**Not sure what task to add?**]\r\nTry copy and pasting the following revised prompt into AI Chat: \r\n>You’re a travel agent helping me plan a 5-day trip to Disney World for a family with two young kids. Give me an itinerary for the first day.\r\n:::\r\n\r\n",
+    "aichat_settings": {
+      "initialCustomizations": {
+        "selectedModelId": "gpt-4o-mini",
+        "temperature": 0.3,
+        "systemPrompt": "",
+        "retrievalContexts": [
+
+        ],
+        "modelCardInfo": {
+          "botName": "",
+          "description": "",
+          "intendedUse": "",
+          "limitationsAndWarnings": "",
+          "testingAndEvaluation": "",
+          "exampleTopics": [
+
+          ],
+          "isPublished": false
+        }
+      },
+      "visibilities": {
+        "selectedModelId": "hidden",
+        "temperature": "hidden",
+        "systemPrompt": "hidden",
+        "retrievalContexts": "hidden",
+        "modelCardInfo": "hidden"
+      },
+      "levelSystemPrompt": "Limit your response to one paragraph.",
+      "hidePresentationPanel": true,
+      "availableModelIds": [
+        "gpt-4o-mini"
+      ]
+    },
+    "bubble_choice_description": "Use AI Chat to help you decide which two patients to assist first.",
+    "display_name": "Hospital Triage Nurse",
+    "thumbnail_url": "https://images.code.org/249b43f221aed22f6ebc602a3084c4bf-medical-clipboard.png"
+  },
+  "audit_log": "[{\"changed_at\":\"2025-03-25T13:56:28.882+00:00\",\"changed\":[\"cloned from \\\"test-problem-solving-with-ai-lesson8-level1\\\"\"],\"cloned_from\":\"test-problem-solving-with-ai-lesson8-level1\"},{\"changed_at\":\"2025-03-25 14:00:03 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2025-03-25 14:00:19 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
+}]]></config>
+</Aichat>

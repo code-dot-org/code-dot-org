@@ -1,15 +1,17 @@
+import {
+  TooltipProps,
+  WithTooltip,
+} from '@code-dot-org/component-library/tooltip';
 import classNames from 'classnames';
 import React from 'react';
-
-import {TooltipProps, WithTooltip} from '@cdo/apps/componentLibrary/tooltip';
 
 interface WithConditionalTooltipProps {
   children: React.ReactNode;
   tooltipOverlayClassName?: string;
   tooltipProps: TooltipProps;
   showTooltip: boolean;
-  iconName: string;
-  iconClassName: string;
+  iconName?: string;
+  iconClassName?: string;
 }
 
 // Component that wraps children with a tooltip is showTooltip is true,
@@ -31,10 +33,12 @@ const WithConditionalTooltip: React.FunctionComponent<
     >
       <div>
         {children}
-        <i
-          className={classNames('fa', iconName, iconClassName)}
-          aria-describedby={tooltipProps.tooltipId}
-        />
+        {iconName && (
+          <i
+            className={classNames('fa', iconName, iconClassName)}
+            aria-describedby={tooltipProps.tooltipId}
+          />
+        )}
       </div>
     </WithTooltip>
   ) : (

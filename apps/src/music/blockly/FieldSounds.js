@@ -1,8 +1,8 @@
-import * as GoogleBlockly from 'blockly/core';
+import * as BlocklyCore from 'blockly/core';
 import React from 'react';
-import ReactDOM from 'react-dom';
 
 import color from '@cdo/apps/util/color';
+import {createReactRoot} from '@cdo/apps/util/createReactRoot';
 import experiments from '@cdo/apps/util/experiments';
 
 import MusicRegistry from '../MusicRegistry';
@@ -17,10 +17,10 @@ const FIELD_PADDING = 2;
  * A custom field that renders the sample previewing and choosing UI, used in
  * various "play_sound"-related blocks. The UI is rendered by {@link SoundsPanel}.
  */
-class FieldSounds extends GoogleBlockly.Field {
+class FieldSounds extends BlocklyCore.Field {
   constructor(options) {
     const currentValue =
-      options.currentValue || MusicLibrary.getInstance().getDefaultSound();
+      options.currentValue || MusicLibrary.getInstance()?.getDefaultSound();
 
     super(currentValue);
 
@@ -52,7 +52,7 @@ class FieldSounds extends GoogleBlockly.Field {
       this.borderRect_.classList.add('blocklyDropdownRect');
     }
 
-    this.backgroundElement = GoogleBlockly.utils.dom.createSvgElement(
+    this.backgroundElement = BlocklyCore.utils.dom.createSvgElement(
       'g',
       {
         transform: 'translate(1,1)',
@@ -66,6 +66,34 @@ class FieldSounds extends GoogleBlockly.Field {
     if (this.borderRect_) {
       this.borderRect_.setAttribute('stroke', style.colourTertiary);
       this.borderRect_.setAttribute('fill', 'transparent');
+    }
+
+    if (Blockly.isDarkTheme) {
+      // Darken the field rectangle and text for shadow blocks.
+      const blockIsShadow = this.getSourceBlock()?.isShadow();
+      if (this.rect) {
+        if (blockIsShadow) {
+          Blockly.utils.dom.addClass(this.rect, 'blocklyShadowMusicFieldRect');
+        } else {
+          Blockly.utils.dom.removeClass(
+            this.rect,
+            'blocklyShadowMusicFieldRect'
+          );
+        }
+      }
+      if (this.textElement) {
+        if (blockIsShadow) {
+          Blockly.utils.dom.addClass(
+            this.textElement,
+            'blocklyShadowFieldText'
+          );
+        } else {
+          Blockly.utils.dom.removeClass(
+            this.textElement,
+            'blocklyShadowFieldText'
+          );
+        }
+      }
     }
     if (this.textElement_) {
       if (experiments.isEnabled('zelos')) {
@@ -115,12 +143,24 @@ class FieldSounds extends GoogleBlockly.Field {
       return;
     }
 
-    ReactDOM.render(
+    const defaultMode = MusicRegistry.showSoundsPanelInSoundsMode
+      ? 'sounds'
+      : 'packs';
+    const sortUnrestrictedPacksByType =
+      MusicRegistry.sortUnrestrictedPacksByType;
+
+    createReactRoot(
       <SoundsPanel
         library={MusicLibrary.getInstance()}
         currentValue={this.getValue()}
         playingPreview={this.playingPreview}
         showSoundFilters={MusicRegistry.showSoundFilters}
+        defaultMode={defaultMode}
+        sortUnrestrictedPacksByType={sortUnrestrictedPacksByType}
+        onClose={() => {
+          this.dropdownDispose_();
+          this.hide_();
+        }}
         onPreview={value => {
           this.playingPreview = value;
           this.renderContent();
@@ -140,7 +180,10 @@ class FieldSounds extends GoogleBlockly.Field {
         }}
         onSelect={value => this.setValue(value)}
       />,
-      this.newDiv_
+      this.newDiv_,
+      {
+        legacyReactDomRender: true,
+      }
     );
   }
 
@@ -166,7 +209,7 @@ class FieldSounds extends GoogleBlockly.Field {
     const constants = this.getConstants();
 
     // Create the text element so we can measure it.
-    const textElement = GoogleBlockly.utils.dom.createSvgElement('text', {
+    this.textElement = BlocklyCore.utils.dom.createSvgElement('text', {
       fill: color.neutral_light,
       x: 27,
       y: 16,
@@ -174,23 +217,23 @@ class FieldSounds extends GoogleBlockly.Field {
       height: 20,
     });
 
-    const soundType = MusicLibrary.getInstance().getSoundForId(
+    const soundType = MusicLibrary.getInstance()?.getSoundForId(
       this.getValue()
     )?.type;
 
     if (soundType === 'vocal') {
-      textElement.setAttribute('font-style', 'italic');
+      this.textElement.setAttribute('font-style', 'italic');
     }
 
     // Attach the actual text.
-    textElement.appendChild(document.createTextNode(fieldText));
+    this.textElement.appendChild(document.createTextNode(fieldText));
 
     // Convert our 13px font size to 9.75pt for the measurement.
     const fontSize = 9.75;
 
     // Measure the rendered text.
-    const textWidth = GoogleBlockly.utils.dom.getFastTextWidth(
-      textElement,
+    const textWidth = BlocklyCore.utils.dom.getFastTextWidth(
+      this.textElement,
       fontSize,
       constants.FIELD_TEXT_FONTWEIGHT,
       constants.FIELD_TEXT_FONTFAMILY
@@ -202,7 +245,7 @@ class FieldSounds extends GoogleBlockly.Field {
 
     // Create the background rectangle and attach it to the background
     // parent.
-    GoogleBlockly.utils.dom.createSvgElement(
+    this.rect = BlocklyCore.utils.dom.createSvgElement(
       'rect',
       {
         fill: color.neutral_dark90,
@@ -219,7 +262,7 @@ class FieldSounds extends GoogleBlockly.Field {
 
     // Add an icon for the sound type.
     if (soundType) {
-      iconElement = GoogleBlockly.utils.dom.createSvgElement('text', {
+      iconElement = BlocklyCore.utils.dom.createSvgElement('text', {
         fill: color.neutral_light,
         x: 5 + SoundStyle[soundType].marginLeft,
         y: 16,
@@ -238,7 +281,7 @@ class FieldSounds extends GoogleBlockly.Field {
 
     // Now attach the text element to the background parent.  It will
     // render on top of the background rectangle.
-    this.backgroundElement.appendChild(textElement);
+    this.backgroundElement.appendChild(this.textElement);
 
     // Similarly, add the icon text element to the background parent.
     if (iconElement) {
@@ -248,13 +291,16 @@ class FieldSounds extends GoogleBlockly.Field {
     // Update the field size.
     this.updateSize_();
 
+    // Update the colour of the field and its text.
+    this.applyColour();
+
     // Possibly render the panel contents.
     this.renderContent();
   }
 
   getText() {
     return (
-      MusicLibrary.getInstance().getSoundForId(this.getValue())?.name || ''
+      MusicLibrary.getInstance()?.getSoundForId(this.getValue())?.name || ''
     );
   }
 

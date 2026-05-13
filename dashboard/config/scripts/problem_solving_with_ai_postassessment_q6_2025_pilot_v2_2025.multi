@@ -1,0 +1,14 @@
+name 'problem-solving-with-ai-postassessment-q6_2025-pilot_v2-2025'
+
+question 'Which scenario best illustrates when an AI contradiction might be harmless?'
+
+wrong 'Two AI chatbots in a legal setting each interpret laws differently for a court trial.'
+wrong 'An AI that provides contradictory medical advice to someone experiencing severe pain.'
+wrong 'An AI giving opposing weather predictions to a local government\'s response team.'
+right 'An AI recommending conflicting movie suggestions to a user looking for weekend entertainment.'
+
+allow_multiple_attempts true
+
+teacher_markdown <<MARKDOWN
+Lesson 5: Uncovering Contradictions
+MARKDOWN

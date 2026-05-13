@@ -1,3 +1,5 @@
+import Checkbox from '@code-dot-org/component-library/checkbox';
+import {Typography} from '@mui/material';
 import React, {useCallback, useState} from 'react';
 
 import {modelDescriptions} from '@cdo/apps/aichat/constants';
@@ -6,7 +8,7 @@ import {
   LevelAichatSettings,
   ModelCardInfo,
   Visibility,
-} from '@cdo/apps/aichat/types';
+} from '@cdo/apps/aichatLab/types';
 import {
   DEFAULT_LEVEL_AICHAT_SETTINGS,
   DEFAULT_VISIBILITIES,
@@ -16,13 +18,7 @@ import {
   MAX_TEMPERATURE,
   MIN_TEMPERATURE,
   SET_TEMPERATURE_STEP,
-} from '@cdo/apps/aichat/views/modelCustomization/constants';
-import Checkbox from '@cdo/apps/componentLibrary/checkbox/Checkbox';
-import {
-  BodyFourText,
-  BodyThreeText,
-  BodyTwoText,
-} from '@cdo/apps/componentLibrary/typography';
+} from '@cdo/apps/aichatLab/views/modelCustomization/constants';
 import CollapsibleSection from '@cdo/apps/templates/CollapsibleSection';
 import MultiItemInput from '@cdo/apps/templates/MultiItemInput';
 import {getTypedKeys, ValueOf} from '@cdo/apps/types/utils';
@@ -37,7 +33,7 @@ import VisibilityDropdown from './VisibilityDropdown';
 
 import moduleStyles from './edit-aichat-settings.module.scss';
 
-function sanitizeSettings(settings: LevelAichatSettings) {
+function sanitizeSettings(settings: LevelAichatSettings): LevelAichatSettings {
   const sanitizedModelCardInfo = sanitizeField(
     settings.initialCustomizations.modelCardInfo,
     EMPTY_MODEL_CARD_INFO
@@ -56,6 +52,10 @@ function sanitizeSettings(settings: LevelAichatSettings) {
     modelDescriptions.some(model => model.id === id)
   );
 
+  const multimodalIncluded = (settings.availableModelIds || []).some(
+    id => modelDescriptions.find(model => model.id === id)?.multimodal
+  );
+
   return {
     ...settings,
     availableModelIds: filteredModelIds,
@@ -64,15 +64,17 @@ function sanitizeSettings(settings: LevelAichatSettings) {
       modelCardInfo: sanitizedModelCardInfo,
     },
     visibilities: sanitizedVisibilities,
+    // Disable multimodal if no multimodal models are available
+    multimodalEnabled: !multimodalIncluded ? false : settings.multimodalEnabled,
   };
 }
 
-function sanitizeField<F extends object>(field: F, defaults: F) {
+function sanitizeField<F extends object>(field: F, defaults: F): F {
   // Iterate over default keys, keeping the value from the field if present, and otherwise using the default.
   // This removes any extraneous keys and retains only expected keys.
   return getTypedKeys<keyof F>(defaults).reduce(
     (newField, key) => ({...newField, [key]: field[key] ?? defaults[key]}),
-    {}
+    {} as F
   );
 }
 
@@ -157,6 +159,16 @@ const EditAichatSettings: React.FunctionComponent<{
     [aichatSettings, setAichatSettings]
   );
 
+  const setMultimodalEnabled = useCallback(
+    (value: boolean) => {
+      setAichatSettings({
+        ...aichatSettings,
+        multimodalEnabled: value,
+      });
+    },
+    [aichatSettings, setAichatSettings]
+  );
+
   return (
     <UpdateContext.Provider
       value={{
@@ -165,6 +177,7 @@ const EditAichatSettings: React.FunctionComponent<{
         setPropertyValue,
         setModelCardPropertyValue,
         setModelSelectionValues,
+        setMultimodalEnabled,
       }}
     >
       <div>
@@ -174,7 +187,7 @@ const EditAichatSettings: React.FunctionComponent<{
           name="level[aichat_settings]"
           value={JSON.stringify(sanitizeSettings(aichatSettings))}
         />
-        <BodyThreeText>
+        <Typography variant="body3" gutterBottom>
           Set the initial values and visibility for AI model customizations.
           <br />
           <br />
@@ -183,7 +196,7 @@ const EditAichatSettings: React.FunctionComponent<{
           <b>Read Only:</b> students can see the value but cannot change it.
           <br />
           <b>Hidden:</b> the field is not shown on the customization panel.
-        </BodyThreeText>
+        </Typography>
         <ModelSelectionFields />
         <CollapsibleFieldSection
           fieldName="temperature"
@@ -198,8 +211,10 @@ const EditAichatSettings: React.FunctionComponent<{
           <hr />
           <CollapsibleSection headerContent="System Prompt">
             <div>
-              <BodyTwoText>Level System Prompt</BodyTwoText>
-              <BodyFourText>
+              <Typography variant="body2" gutterBottom>
+                Level System Prompt
+              </Typography>
+              <Typography variant="body4" gutterBottom>
                 <i>
                   This system prompt is hidden from students and is prepended to
                   their student system prompt. It can be used to add additional
@@ -207,7 +222,7 @@ const EditAichatSettings: React.FunctionComponent<{
                   won't see. It does not go through a PII/Profanity filter,
                   giving you more freedom for setting the prompt.
                 </i>
-              </BodyFourText>
+              </Typography>
               <div className={moduleStyles.fieldRow}>
                 <label
                   htmlFor="levelSystemPrompt"
@@ -230,7 +245,9 @@ const EditAichatSettings: React.FunctionComponent<{
             </div>
             <hr />
             <div>
-              <BodyTwoText>Student System Prompt</BodyTwoText>
+              <Typography variant="body2" gutterBottom>
+                Student System Prompt
+              </Typography>
               <FieldSection
                 fieldName="systemPrompt"
                 inputType="textarea"
@@ -286,7 +303,7 @@ const EditAichatSettings: React.FunctionComponent<{
         <div className={moduleStyles.collapsibleFieldSection}>
           <hr />
           <CollapsibleSection headerContent="Additional Configuration">
-            <BodyFourText>
+            <Typography variant="body4" gutterBottom>
               <i>
                 Students always have access to the Edit View, where they can
                 customize their chatbot. Published chatbots are able to be
@@ -297,7 +314,7 @@ const EditAichatSettings: React.FunctionComponent<{
                 publish their work when this setting is enabled. Use the setting
                 below to hide the option to enter presentation view in a level.
               </i>
-            </BodyFourText>
+            </Typography>
             <div className={moduleStyles.fieldRow}>
               <label
                 htmlFor="hidePresentationPanel"

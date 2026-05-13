@@ -1,15 +1,16 @@
+import Toggle from '@code-dot-org/component-library/toggle';
 import PropTypes from 'prop-types';
 import React, {useState} from 'react';
 import {connect} from 'react-redux';
 
-import Toggle from '@cdo/apps/componentLibrary/toggle/Toggle';
 import Spinner from '@cdo/apps/sharedComponents/Spinner';
 import {setSectionCodeReviewExpiresAt} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
-import {selectedSection} from '@cdo/apps/templates/teacherDashboard/teacherSectionsReduxSelectors';
-import color from '@cdo/apps/util/color';
+import {selectedSectionSelector} from '@cdo/apps/templates/teacherDashboard/teacherSectionsReduxSelectors';
 import i18n from '@cdo/locale';
 
 import CodeReviewGroupsDataApi from './CodeReviewGroupsDataApi';
+
+import moduleStyles from './codeReviewGroupsStatusToggle.module.scss';
 
 function CodeReviewGroupsStatusToggle({
   codeReviewExpiresAt,
@@ -48,7 +49,7 @@ function CodeReviewGroupsStatusToggle({
 
   return (
     <div>
-      <div style={styles.toggleAndError}>
+      <div className={moduleStyles.toggleAndError}>
         <Toggle
           id="uitest-code-review-groups-toggle"
           name="enableCodeReviewToggle"
@@ -56,9 +57,13 @@ function CodeReviewGroupsStatusToggle({
           onChange={toggleEnableCodeReview}
           label={i18n.enableCodeReview()}
         />
-        {saveInProgress && <Spinner style={styles.spinner} size="medium" />}
+        {saveInProgress && (
+          <span className={moduleStyles.spinner}>
+            <Spinner size="medium" />
+          </span>
+        )}
         {saveError && (
-          <p style={styles.saveError}>
+          <p className={moduleStyles.saveError}>
             {isToggledOn
               ? i18n.codeReviewToggleDisableError()
               : i18n.codeReviewToggleEnableError()}
@@ -68,7 +73,7 @@ function CodeReviewGroupsStatusToggle({
 
       {isToggledOn && (
         <p
-          style={styles.enabledMessage}
+          className={moduleStyles.enabledMessage}
           name="enabledCodeReviewMessage"
           id="uitest-code-review-groups-status-message"
         >
@@ -90,29 +95,11 @@ export const UnconnectedCodeReviewGroupsStatusToggle =
 
 export default connect(
   state => ({
-    codeReviewExpiresAt: selectedSection(state).codeReviewExpiresAt,
-    sectionId: selectedSection(state).id,
+    codeReviewExpiresAt: selectedSectionSelector(state).codeReviewExpiresAt,
+    sectionId: selectedSectionSelector(state).id,
   }),
   dispatch => ({
     setCodeReviewExpiration: (sectionId, expiration) =>
       dispatch(setSectionCodeReviewExpiresAt(sectionId, expiration)),
   })
 )(CodeReviewGroupsStatusToggle);
-
-const styles = {
-  enabledMessage: {
-    fontStyle: 'italic',
-    color: color.dark_charcoal,
-    width: 360,
-  },
-  saveError: {
-    color: color.red,
-    margin: 8,
-  },
-  toggleAndError: {
-    display: 'flex',
-  },
-  spinner: {
-    marginLeft: 8,
-  },
-};

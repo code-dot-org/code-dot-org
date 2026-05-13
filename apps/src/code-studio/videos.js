@@ -1,11 +1,9 @@
 import $ from 'jquery';
 import _ from 'lodash';
 import React from 'react';
-import ReactDOM from 'react-dom';
 import videojs from 'video.js';
 
-import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
-import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
+import {createReactRoot} from '@cdo/apps/util/createReactRoot';
 import i18n from '@cdo/locale';
 
 import FallbackPlayerCaptionDialogLink from '../templates/FallbackPlayerCaptionDialogLink';
@@ -61,39 +59,15 @@ var currentVideoOptions;
 // This is a good candidate to circle back to and refactor.
 window.onYouTubeIframeAPIReady = function () {
   // requires there be an iframe#video present on the page
-  const player = new YT.Player('video', {
+  new YT.Player('video', {
     events: {
-      onReady: function (event) {
-        analyticsReporter.sendEvent(EVENTS.VIDEO_LOADED, {
-          url: location.href,
-          video: player.getVideoUrl(),
-        });
-      },
       onStateChange: function (state) {
-        const amplitudeEventMap = {
-          [YT.PlayerState.PLAYING]: EVENTS.VIDEO_STARTED,
-          [YT.PlayerState.PAUSED]: EVENTS.VIDEO_PAUSED,
-          [YT.PlayerState.ENDED]: EVENTS.VIDEO_ENDED,
-        };
-
-        const amplitudeEvent = amplitudeEventMap[state.data];
-        if (amplitudeEvent) {
-          analyticsReporter.sendEvent(amplitudeEvent, {
-            url: location.href,
-            video: player.getVideoUrl(),
-          });
-        }
-
         if (state.data === YT.PlayerState.ENDED) {
           onVideoEnded();
         }
       },
       onError: function (error) {
         if (currentVideoOptions) {
-          analyticsReporter.sendEvent(EVENTS.VIDEO_FALLBACK_LOADED, {
-            url: location.href,
-            video: player.getVideoUrl(),
-          });
           var size = error.target.f.getBoundingClientRect();
           addFallbackVideoPlayer(currentVideoOptions, size.width, size.height);
         }
@@ -106,7 +80,6 @@ function createVideo(options) {
   const videoDiv = $('<iframe id="video"/>').addClass('video-player').attr({
     src: options.src,
     allowfullscreen: 'true',
-    scrolling: 'no',
   });
 
   const videoTabContainerDiv = $("<div id='videoTabContainer'></div>").append(
@@ -169,6 +142,17 @@ videos.showVideoDialog = function (options, forceShowVideo) {
     options.key,
     function (data) {
       notesDiv.children('#notes').html(data);
+      // Ensure all <img> elements inside #notes default to empty alt text,
+      // but do not overwrite any existing descriptive alt text.
+      notesDiv
+        .children('#notes')
+        .find('img')
+        .each(function () {
+          var $img = $(this);
+          if (!$img.is('[alt]')) {
+            $img.attr('alt', '');
+          }
+        });
     },
     function () {
       openVideoTab();
@@ -225,8 +209,9 @@ videos.showVideoDialog = function (options, forceShowVideo) {
   });
 
   var download = $('<a/>')
-    .append($('<i class="fa fa-download" />'))
+    .append($('<i class="fa-solid fa-download" />'))
     .addClass('download-video btn')
+    .attr('aria-label', 'Download Video')
     .css('float', 'left')
     .attr('href', options.download);
   if (document.dir === 'rtl') {
@@ -495,24 +480,7 @@ function addFallbackVideoPlayer(videoInfo, playerWidth, playerHeight) {
     }
   );
 
-  const analyticsData = {
-    url: location.href,
-    video: videoInfo.download,
-    fallback: 'code.org',
-  };
-
-  videoPlayer.on('ready', () =>
-    analyticsReporter.sendEvent(EVENTS.VIDEO_LOADED, analyticsData)
-  );
-  videoPlayer.on('play', () =>
-    analyticsReporter.sendEvent(EVENTS.VIDEO_STARTED, analyticsData)
-  );
-  videoPlayer.on('pause', () =>
-    analyticsReporter.sendEvent(EVENTS.VIDEO_PAUSED, analyticsData)
-  );
-
   videoPlayer.on('ended', () => {
-    analyticsReporter.sendEvent(EVENTS.VIDEO_ENDED, analyticsData);
     onVideoEnded();
   });
   showFallbackPlayerCaptionLink(videoInfo.inDialog);
@@ -565,9 +533,12 @@ function showFallbackPlayerCaptionLink(inDialog) {
     'fallback-player-caption-dialog-link'
   );
   if (mountPoint) {
-    ReactDOM.render(
+    createReactRoot(
       <FallbackPlayerCaptionDialogLink inDialog={inDialog} />,
-      mountPoint
+      mountPoint,
+      {
+        legacyReactDomRender: true,
+      }
     );
   }
 }

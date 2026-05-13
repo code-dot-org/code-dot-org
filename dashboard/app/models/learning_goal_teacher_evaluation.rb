@@ -17,6 +17,7 @@
 # Indexes
 #
 #  index_learning_goal_teacher_evaluations_on_learning_goal_id     (learning_goal_id)
+#  index_learning_goal_teacher_evaluations_on_teacher_id           (teacher_id)
 #  index_learning_goal_teacher_evaluations_on_user_and_teacher_id  (user_id,teacher_id)
 #
 class LearningGoalTeacherEvaluation < ApplicationRecord

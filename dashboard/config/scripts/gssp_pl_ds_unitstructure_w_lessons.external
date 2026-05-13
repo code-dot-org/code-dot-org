@@ -1,0 +1,24 @@
+name 'GSSP-PL-DS-UnitStructure-w-lessons'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Next Steps
+
+##What Do I Do Next? 
+
+
+### <b>Never Coded before? </b>
+####<a href="https://studio.code.org/courses/self-paced-pl-k5-2024" target="_blank">CS Basics</a> is Code.org's free self-paced online learning for educators to get familiar with Computer Science Basics! After completing this professional learning experience, you'll be comfortable with basic K-5 grade coding concepts.
+
+
+
+### <b>Ready to Teach?</b> 
+#### Browse the <a href="https://studio.code.org/catalog" target="_blank">course catalog</a>
+
+### <b>Need Course Specific Support?</b>  
+#### Start a <a href="https://code.org/professional-learning/self-paced" target="_blank">self-paced professional learning module</a>
+
+
+
+MARKDOWN

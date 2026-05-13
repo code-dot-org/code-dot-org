@@ -1,0 +1,62 @@
+name 'pl-sandbox-aif2-U1-Pour-principles-24'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# POUR Principles 
+
+#### In addition to considering user profiles, students also analyze the user experience, ensuring their sites are accessible to all users.
+
+#### The POUR principles provide a framework for designing digital content and experiences that are accessible to everyone, including people with disabilities.
+
+ 
+
+<br>
+<div style="display: flex; flex-direction: column; gap: 20px; max-width: 900px; margin: auto;">
+
+  <div style="display: flex; align-items: center; gap: 15px;">
+        <img src="https://images.code.org/a2c560fd2a07ecc6ea24f4e2c0665273-image-1761148347416.png" alt="eye icon representing perception" style="width: 20%; max-width: 120px; height: auto; border-radius: 12px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15)">
+        <div style="flex: 1; background: #f7f8fa; padding: 15px; border-radius: 10px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); font-size: 14pt;">
+            <h2><b>Perceivable</b></h2>
+            <p style="font-size: 14pt;">Users can <b>perceive</b> (meaning they can sense) the information being presented. 
+            For example, providing <b>text alternatives</b> (like alt text) for images allows users who are blind or have low vision to understand the image content.</p>
+        </div>
+  </div>
+
+  <div style="display: flex; align-items: center; gap: 15px;">
+        <img src="https://images.code.org/709d697dc497eaddf6d391cbc7db26c1-image-1761148407958.png" alt="keyboard and mouse icon representing operation" style="width: 20%; max-width: 120px; height: auto; border-radius: 12px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15)">
+        <div style="flex: 1; background: #f7f8fa; padding: 15px; border-radius: 10px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
+            <h3><b>Operable</b></h3>
+            <p style="font-size: 14pt;">Users can <b>operate</b> the interface. The design must allow interaction. 
+            For example, users should be able to <b>navigate using a keyboard alone</b>, and controls should be large enough to be easily clicked or tapped.</p>
+        </div>
+  </div>
+
+  <div style="display: flex; align-items: center; gap: 15px;">
+        <img src="https://images.code.org/e9c7d726424d70c8b695e41dca8dbd0d-image-1761148548130.png" alt="open book with question marks symbolizing understanding" style="width: 20%; max-width: 120px; height: auto; border-radius: 12px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15)">
+        <div style="flex: 1; background: #f7f8fa; padding: 15px; border-radius: 10px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
+            <h2><b>Understandable</b></h2>
+            <p style="font-size: 14pt;">Users must be able to <b>understand</b> both the information and how to use the interface. 
+            Instructions should be <b>clear and easy to follow</b>, and the language should be straightforward.</p>
+        </div>
+  </div>
+
+  <div style="display: flex; align-items: center; gap: 15px;">
+        <img src="https://images.code.org/ad550fa35a8d563cb3d1c7fbf0287295-image-1761148635066.png" alt="strong link chain representing robustness" style="width: 20%; max-width: 120px; height: auto; border-radius: 12px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15)">
+        <div style="flex: 1; background: #f7f8fa; padding: 15px; border-radius: 10px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
+            <h2><b>Robust</b></h2>
+            <p style="font-size: 14pt;">Content must be <b>robust</b> enough to work with a wide range of technologies, including assistive ones. 
+            For example, a website should be <b>compatible with screen readers</b> and other assistive technologies so users with disabilities can access the content.</p>
+        </div>
+  </div>
+
+</div>
+
+---
+## Up Next
+#### As you explore sitemaps and wireframes keep these principles in mind. 
+
+
+
+
+MARKDOWN

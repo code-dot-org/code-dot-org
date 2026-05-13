@@ -7,19 +7,12 @@
 - location = Geocoder.search(request.ip).try(:first)
 -# geocoder sometimes shows localhost's country as RD/Reserved
 - us_ip = location.nil? || ['US', 'RD'].include?(location.country_code.to_s.upcase)
-- current_user_user_school_info = Queries::UserSchoolInfo.last_complete(current_user)
-- current_user_school_info = current_user_user_school_info ? current_user_user_school_info.school_info : nil
+- school_info = Queries::SchoolInfo.current_school(current_user)
 
 - script_data = {}
 - script_data[:existingSchoolInfo] = {}
-- if current_user_school_info
-  - script_data[:existingSchoolInfo] = current_user_school_info.slice(:country, :school_id, :school_name, :school_type)
-- if current_user_user_school_info
-  - script_data[:existingSchoolInfo][:user_school_info_id] = current_user_user_school_info.id
-- script_data[:existingSchoolInfo][:country] ||= 'US' if us_ip
-- script_data[:existingSchoolInfo][:school_name] ||= current_user_school_info&.school&.name
-- script_data[:existingSchoolInfo][:school_zip] ||= current_user_school_info&.school&.zip || current_user_school_info&.zip&.to_s&.rjust(5, '0')
-- script_data[:existingSchoolInfo][:school_type] ||= current_user_school_info&.school&.school_type
+- if school_info
+  - script_data[:existingSchoolInfo] = school_info
 - script_data[:usIp] = us_ip
 
 - content_for(:head) do

@@ -1,0 +1,10 @@
+name 'test-problem-solving-with-ai-lesson5-level3'
+display_name 'Prompt Framing'
+description 'Choose one area to explore how context and framing affect AI responses.'
+
+sublevels
+level 'test-problem-solving-with-ai-lesson5-level3-choice1'
+level 'test-problem-solving-with-ai-lesson5-level3-choice2'
+level 'test-problem-solving-with-ai-lesson5-level3-choice3'
+level 'test-problem-solving-with-ai-lesson5-level3-choice4'
+level 'test-problem-solving-with-ai-lesson5-level3-choice5'

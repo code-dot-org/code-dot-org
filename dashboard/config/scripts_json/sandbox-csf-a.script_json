@@ -4,11 +4,13 @@
     "wrapup_video_id": null,
     "login_required": false,
     "properties": {
+      "content_area": "other",
+      "curriculum_umbrella": "Other",
       "is_migrated": true
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2024-08-02 16:45:35 UTC",
+    "serialized_at": "2024-11-19 01:19:27 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -1643,6 +1645,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "bb8_skinOverview_K-1_video2022_1"
+        ],
         "progression": "Video: Programming with Rey and BB-8"
       },
       "bonus": false,
@@ -1665,6 +1670,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseB_starWars_prog12022_1"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -1687,6 +1695,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseB_starWars_prog22022_1"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -1709,6 +1720,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseB_starWars_prog32022_1"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -1731,6 +1745,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseB_starWars_prog42022_1"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -1753,6 +1770,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseB_starWars_prog52022_1"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -1775,6 +1795,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseB_starWars_prog62022_1"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -1797,6 +1820,9 @@
       "activity_section_position": 7,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseB_starWars_prog72022_1"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -1820,6 +1846,9 @@
       "assessment": false,
       "properties": {
         "challenge": true,
+        "level_keys": [
+          "courseB_starWars_prog82022_1"
+        ],
         "progression": "Challenge"
       },
       "bonus": false,
@@ -1842,6 +1871,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseB_starWars_prog92022_1"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -1864,6 +1896,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseB_starWars_prog102022_1"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -1886,6 +1921,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseB_starWars_prog112022_1"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -1908,6 +1946,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseB_video_ArtistIntro_1"
+        ],
         "progression": "Video: The Artist in Code Studio"
       },
       "bonus": false,
@@ -1930,6 +1971,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseA_artist_loops12022_1"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -1952,6 +1996,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseA_artist_loops22022_1"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -1974,6 +2021,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseA_artist_loops32022_1"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -1996,6 +2046,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseA_video_loops12022_1"
+        ],
         "progression": "Video: Loops in Artist"
       },
       "bonus": false,
@@ -2018,6 +2071,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseA_artist_loops42022_1"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -2040,6 +2096,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseA_artist_loops52022_1"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -2062,6 +2121,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseA_artist_loops62022_1"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -2084,6 +2146,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseA_artist_loops72022_1"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -2106,6 +2171,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseA_artist_loops82022_1"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -2129,6 +2197,9 @@
       "assessment": false,
       "properties": {
         "challenge": true,
+        "level_keys": [
+          "courseA_artist_loops92022_1"
+        ],
         "progression": "Challenge"
       },
       "bonus": false,
@@ -2151,6 +2222,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseA_artist_loops102022_1"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -2173,6 +2247,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseA_artist_loops112022_1"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -2195,6 +2272,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseA_artist_loops122022_1"
+        ],
         "progression": "Free Play"
       },
       "bonus": false,
@@ -2217,6 +2297,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseA_artist_loops_challenge2a2022_1"
+        ],
         "progression": "Lesson Extras"
       },
       "bonus": true,
@@ -2239,6 +2322,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseA_artist_loops_challenge12022_1"
+        ],
         "progression": "Lesson Extras"
       },
       "bonus": true,
@@ -2261,6 +2347,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseA_video_events_1"
+        ],
         "progression": "Video: Introduction to Play Lab"
       },
       "bonus": false,
@@ -2283,6 +2372,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseA_playLab_events12022_1"
+        ],
         "progression": "Free Play"
       },
       "bonus": false,
@@ -2305,6 +2397,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseA_playLab_events22022_1"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -2327,6 +2422,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseA_playLab_events32022_1"
+        ],
         "progression": "Mini-project: Jorge the Dog"
       },
       "bonus": false,
@@ -2349,6 +2447,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseA_playLab_events42022_1"
+        ],
         "progression": "Mini-project: Jorge the Dog"
       },
       "bonus": false,
@@ -2371,6 +2472,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseA_playLab_events52022_1"
+        ],
         "progression": "Mini-project: Jorge the Dog"
       },
       "bonus": false,
@@ -2393,6 +2497,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseA_playLab_events62022_1"
+        ],
         "progression": "Mini-project: Jorge the Dog"
       },
       "bonus": false,
@@ -2415,6 +2522,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseA_playLab_events72022_1"
+        ],
         "progression": "Mini-project: Jorge the Dog"
       },
       "bonus": false,
@@ -2437,6 +2547,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseA_playlab_events_challenge22022_1"
+        ],
         "progression": "Lesson Extras"
       },
       "bonus": true,
@@ -2459,6 +2572,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseA_playlab_events_challenge12022_1"
+        ],
         "progression": "Lesson Extras"
       },
       "bonus": true,
@@ -2481,6 +2597,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseAB_EOC2022_1"
+        ],
         "progression": "Project"
       },
       "bonus": false,

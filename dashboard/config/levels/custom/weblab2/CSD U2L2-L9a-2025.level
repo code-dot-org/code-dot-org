@@ -1,0 +1,52 @@
+<Weblab2>
+  <config><![CDATA[{
+  "game_id": 74,
+  "created_at": "2026-01-01T01:27:28.000Z",
+  "level_num": "custom",
+  "user_id": 19378,
+  "properties": {
+    "encrypted": "false",
+    "display_name": "Debugging: Fix Typos",
+    "long_instructions": "# Debug: Fix the Typos\r\n\r\nSometimes mistakes appear in our code because we mis-type or misspell something. Try to fix the errors in the code below by fixing the spelling mistakes\r\n\r\n# Do This\r\n\r\n1) Fix the broken code so that the web page displays correctly. Hint: there are 3 errors in the code below.\r\n* Compare the problems you fixed with a neighbor",
+    "bubble_choice_description": "Sometimes mistakes appear in our code because we mis-type or misspell something. Try to fix the errors in the code below by fixing the spelling mistakes",
+    "thumbnail_url": "https://images.code.org/c7eb7c89b50c7eb062a5e962d38256a0-debug2.png",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "true",
+    "widget_view": "false",
+    "initial_view_mode": "split",
+    "ai_tutor_mode": "engineer",
+    "predict_settings": {
+      "isPredictLevel": false,
+      "solution": "",
+      "questionType": "freeResponse",
+      "placeholderText": "",
+      "multipleChoiceOptions": [
+        ""
+      ],
+      "freeResponseHeight": 50,
+      "codeEditableAfterSubmit": false
+    },
+    "start_sources": {
+      "folders": {
+      },
+      "files": {
+        "1": {
+          "id": "1",
+          "name": "index.html",
+          "language": "html",
+          "contents": "<!DOCTYPE html>\n<hmtl>\n\t<head>\n    \n\t</head>\n\t<bod>\n    <p> Welcome to my website! </p>\n    \n    <q> These are paragraph tags! </p>\n    \n\t</body>\n</html>",
+          "active": true,
+          "folderId": "0"
+        }
+      },
+      "openFiles": [
+        "1"
+      ]
+    },
+    "encrypted_exemplar_sources": "Dn7HQlwz0pFFO6c3d2DdXB/55clGnnwQzLWAr3sovMrWt2HFvH/UaEd1Aw6m\nH7NPCh2Lr52063tDqEoStRSedn5LQYmzKopHnMdxEddzMa1ry9pfnBII8zb7\nMD3Gw+QxEX86iJuKhBFDqXvjC26WIR0dnDES221G1n9EocbLnjZk4kxzs1v+\nM3gSArEQxk7gN5wynZbVQJaO4Kt4GSXzNpr98R+iY/tff9EAB5HYPJ03FA8o\nq6ferVACyfboF69lK0WRU0w9hXw2M6CWWhIroczhmFC679RiQLENVY4j25Yb\nWNx1ajfQc9jl0TZSi9PuVS3gnb0x2x9v5HhVOZwGR46p+VkrdGMx+ocgmSra\nLd7sEh2v/MESNkU1JQupudfpZdA2/Y+FhMFKzHufk7eYlq4jkNfG4pPmvETM\nysTnRkDGKX+1nyi+aAIHJKvN15olrJSkiAYfkyLTIueEaLFz57eS5khPELvh\n4pGSyMANIbw=\n"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-01-01 01:28:05 +0000\",\"changed\":[],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-01-01 01:28:12 +0000\",\"changed\":[],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-01-01 01:28:35 +0000\",\"changed\":[\"name\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-01-01 01:28:38 +0000\",\"changed\":[],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"}]"
+}]]></config>
+</Weblab2>

@@ -1,5 +1,9 @@
 <Gamelab>
   <config><![CDATA[{
+  "game_id": 50,
+  "created_at": "2022-09-19T22:56:20.000Z",
+  "level_num": "custom",
+  "user_id": 106,
   "properties": {
     "skin": "gamelab",
     "code_functions": {
@@ -70,7 +74,7 @@
     "disable_if_else_editing": "false",
     "expand_debugger": "false",
     "watchers_prepopulated": "[\"pan.rotation\"]",
-    "start_animations": "{\r\n  \"orderedKeys\": [\r\n    \"001671d5-7f72-4645-8f6d-7cc948f7fe11\"\r\n  ],\r\n  \"propsByKey\": {\r\n    \"001671d5-7f72-4645-8f6d-7cc948f7fe11\": {\r\n      \"name\": \"pan\",\r\n      \"sourceUrl\": \"https://studio.code.org/api/v1/animation-library/R2MK5WwBxF.EZ9RymYu6G23tmFie5ZFg/category_generic_items/pan.png\",\r\n      \"frameSize\": {\r\n        \"x\": 95,\r\n        \"y\": 152\r\n      },\r\n      \"frameCount\": 1,\r\n      \"looping\": true,\r\n      \"frameDelay\": 2,\r\n      \"version\": \"R2MK5WwBxF.EZ9RymYu6G23tmFie5ZFg\"\r\n    }\r\n  }\r\n}",
+    "start_animations": "{\n  \"orderedKeys\": [\n    \"001671d5-7f72-4645-8f6d-7cc948f7fe11\"\n  ],\n  \"propsByKey\": {\n    \"001671d5-7f72-4645-8f6d-7cc948f7fe11\": {\n      \"name\": \"pan\",\n      \"sourceUrl\": \"/api/v1/animation-library/R2MK5WwBxF.EZ9RymYu6G23tmFie5ZFg/category_generic_items/pan.png\",\n      \"frameSize\": {\n        \"x\": 95,\n        \"y\": 152\n      },\n      \"frameCount\": 1,\n      \"looping\": true,\n      \"frameDelay\": 2,\n      \"version\": \"R2MK5WwBxF.EZ9RymYu6G23tmFie5ZFg\"\n    }\n  }\n}",
     "parent_level_id": 20730,
     "name_suffix": "_2023",
     "encrypted": "false",
@@ -97,11 +101,7 @@
     "validation_enabled": "false",
     "preload_asset_list": null
   },
-  "game_id": 50,
   "published": true,
-  "created_at": "2022-09-19T22:56:20.000Z",
-  "level_num": "custom",
-  "user_id": 106,
   "notes": "",
   "audit_log": "[{\"changed_at\":\"2022-09-19T22:56:20.836+00:00\",\"changed\":[\"cloned from \\\"CSD U3 Watcher Predict_2022\\\"\"],\"cloned_from\":\"CSD U3 Watcher Predict_2022\"},{\"changed_at\":\"2023-01-11 19:45:22 +0000\",\"changed\":[\"code_functions\",\"start_blocks\",\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2023-05-03 23:36:40 +0000\",\"changed\":[\"code_functions\",\"all_animations_single_frame\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
 }]]></config>

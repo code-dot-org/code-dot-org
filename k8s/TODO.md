@@ -1,0 +1,111 @@
+# TODO
+
+## Performance improvements
+
+### Use jemalloc
+
+Use `jemalloc` in k8s workloads where it helps reduce allocator fragmentation / RSS growth.
+
+### Reduce repo size
+
+With our regular "giant repo with lots of files" it takes `skaffold dev` about **3 minutes to start**
+(on an M2) even if there aren't any modified files: this is time docker+skaffold are just spending
+checksumming everything to verify they didn't change. This makes k8s development miserable.
+
+A build option to not include pegasus files from the build would help substantially.
+
+Additionally, this one is particularly important because docker builds chew through hundreds of GB
+of disk space quite quickly when the base image is so large.
+
+## Snapshot seeded DB in GH actions, download in dev
+
+Have GH action snapshot the seeded DB, and re-use that seed in dev. Ideally, have GH actions compute
+a hash of all files that could have changed the seed, and only re-seed when that is broken. I believe
+we have existing (broken?) code that does this, and it could be repurposed.
+
+## Prod-like improvements
+
+### Prometheus
+
+Figure out how to most cleanly inject prometheus into clusters, including dev clusters. Maybe
+include prometheus as a helm chart dependency??
+
+## Kargo
+
+- Create one `github_organization_webhook` in tofu (for both push and package), publish as an AWS secret, synced down to Kargo, and use in new ProjectConfig, then a warehouse with both subscriptions will be nearly instant (+ clone time lol :-P)
+- set `org.opencontainers.image.source=https://github.com/code-dot-org/code-dot-org` and `org.opencontainers.image.revision=<git sha>` OCI tags in `k8s.yml` GH action so Kargo links Freight to source code in the UX, see: <https://docs.kargo.io/user-guide/how-to-guides/working-with-freight#oci-image-annotations>
+- Install `cert-manager` as a platform Argo app, then enable Kargo admission
+  webhooks. Kargo admission webhooks for resource validation/defaulting are
+  currently disabled because they require TLS and CA wiring for the internal
+  webhook server. Once `cert-manager` is installed and healthy, enable
+  `webhooks.register` and `webhooksServer.enabled`. This is separate from
+  `externalWebhooksServer.enabled`, which is already on for external
+  GitHub/package/push webhooks.
+
+## Tofu EKS Cluster
+
+See `k8s-gitops/bootstrap/codeai-k8s/TODO.argocd.diskfill.bug.md` for the Argo CD
+repo-server disk-fill investigation notes.
+
+Manage AWS Load Balancer Controller CRDs explicitly in `k8s-gitops/bootstrap/codeai-k8s/cluster/`.
+Helm install creates them, but Helm upgrade does not update them, and we already hit stale
+live CRDs missing newer `IngressClassParams` fields like `certificateArn`, `targetType`,
+and `sslRedirectPort`.
+
+In `k8s-gitops/bootstrap/codeai-k8s/cluster-infra-argocd/`, Dex and ArgoCD are still exposed through ALB
+`Ingress` resources. Migrate them to Gateway API so the public entry path is consistent with
+the Gateway-based direction.
+
+### Argo CD / Dex first-boot SSO
+
+After a fresh `k8s-gitops/bootstrap/codeai-k8s/cluster-infra-argocd/` deploy, Dex SSO to
+`https://argocd.k8s.code.org` came up broken until we manually ran:
+
+`kubectl rollout restart deployment/argocd-server -n argocd`
+
+Symptom:
+
+`failed to query provider "": Get "/.well-known/openid-configuration": unsupported protocol scheme ""`
+
+What happened:
+
+- Module/chart: `k8s-gitops/bootstrap/codeai-k8s/cluster-infra-argocd/infra/argocd`
+- Argo CD now gets `dex.argocd.clientSecret` by ESO merging into `argocd-secret`
+  from `templates/argocd-secret-external-secret.yaml`
+- Pre-reorg, the same key was present at first boot via Argo chart
+  `configs.secret.extra`
+- On first boot, `argocd-server` started once with empty SSO config, then later
+  noticed `oidc.config` and restarted, but `/auth/login` still kept using an
+  empty issuer until a clean pod restart
+
+Observed live objects:
+
+- `ConfigMap/argocd-cm`: correct `oidc.config`
+- `Secret/argocd-secret`: correct `dex.argocd.clientSecret`
+- `Deployment/argocd-server`: login still broken until restarted
+
+Most likely fix:
+
+- Restore pre-reorg ownership for `dex.argocd.clientSecret` in the Argo chart
+  itself, likely via `configs.secret.extra`, and remove the ESO merge into
+  `argocd-secret`
+
+If we keep the ESO merge design, verify whether Argo CD has a bug in the late
+OIDC-config reload path and whether there is a chart-level way to block
+`argocd-server` startup until `argocd-secret` already has the Dex client secret.
+
+### Argo CD controller sizing
+
+In `k8s-gitops/bootstrap/codeai-k8s/cluster-infra-argocd/infra/argocd/values.yaml`,
+evaluate proper CPU and memory request for `controller`. The current proposed `controller.resources` block was copied over after
+Fargate OOMs, but `argocd-application-controller` is a different workload and
+needs its own CPU / RAM profiling before we lock in requests / limits.
+
+### Dex
+
+In `k8s-gitops/bootstrap/codeai-k8s-dex/tofu.tfvars`, update `google_email_with_groups_readonly_scope`
+to a non-personal email.
+
+## Helm / Kustomize parity
+
+- Allow `verify-helm-parity` to still check parity when `k8s-gitops` / kustomize + helm charts are modified locally, so we can verify them before we commit.

@@ -1,0 +1,14 @@
+name 'problem-solving-with-ai-preassessment-q1_2025-pilot_v2-2025'
+
+question 'What is the best way to improve the accuracy of an AI\'s response?'
+
+wrong 'Ask the same question multiple times until you get the answer you want'
+wrong 'Keep the prompt as short as possible to avoid confusion'
+wrong 'Change the AI settings to \"high accuracy mode\"'
+right 'Provide a more detailed and specific prompt'
+
+allow_multiple_attempts true
+
+teacher_markdown <<MARKDOWN
+Lesson 1: Talking to Machines
+MARKDOWN

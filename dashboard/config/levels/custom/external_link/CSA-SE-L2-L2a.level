@@ -12,7 +12,7 @@
     "display_name": "ByteBud",
     "bubble_choice_description": "Welcome to ByteBud - your friendly, text-based sidekick! Forget scrolling through boring FAQs, just ask your questions directly to ByteBud, and experience a fun and engaging conversation about your favorite topic.",
     "thumbnail_url": "https://images.code.org/707e993f13db906599793cf2d2dc982e-bytebud.gif",
-    "ai_tutor_available": true
+    "ai_tutor_available": "false"
   },
   "published": true,
   "audit_log": "[{\"changed_at\":\"2023-08-02T16:09:02.189+00:00\",\"changed\":[\"cloned from \\\"CSA-SE-L2-L1d\\\"\"],\"cloned_from\":\"CSA-SE-L2-L1d\"},{\"changed_at\":\"2023-08-02 16:10:28 +0000\",\"changed\":[\"link_title\",\"url\",\"long_instructions\",\"display_name\",\"bubble_choice_description\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-08-02 16:13:26 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-08-16 17:02:04 +0000\",\"changed\":[\"url\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-09-07 16:42:44 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"

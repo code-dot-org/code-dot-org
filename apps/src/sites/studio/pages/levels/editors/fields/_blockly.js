@@ -1,14 +1,14 @@
 import {installCustomBlocks} from '@cdo/apps/block_utils';
 import commonBlocks from '@cdo/apps/blocksCommon';
 import initializeBlockPreview from '@cdo/apps/code-studio/initializeBlockPreview';
-import initializeCodeMirror from '@cdo/apps/code-studio/initializeCodeMirror';
+import initializeCodeMirror6 from '@cdo/apps/code-studio/initializeCodeMirror6';
 import getScriptData from '@cdo/apps/util/getScriptData';
 
 const data = getScriptData('pageOptions');
 // TODO: stop pulling Blockly off of the window object.
 if (Blockly && !data.uses_droplet) {
   Blockly.assetUrl = path => `/assets/${path}`;
-  Blockly.cdoUtils.injectCss(document);
+  Blockly.Css.inject(true, 'media');
   let blocksLocation = data.app;
   if (data.app === 'spritelab' || data.app === 'poetry') {
     blocksLocation = 'p5lab/spritelab';
@@ -30,7 +30,7 @@ if (Blockly && !data.uses_droplet) {
   }
   const skinsModule = require('@cdo/apps/' + skinsLocation + 'skins');
   const options = {
-    skin: skinsModule.load(function () {}, data.skin_id),
+    skin: skinsModule.load(Blockly.assetUrl || function () {}, data.skin_id),
     isK1: data.isK1,
   };
   commonBlocks.install(window.Blockly, options);
@@ -89,7 +89,7 @@ Object.keys(fieldConfig).forEach(key => {
   if (!element) {
     return;
   }
-  config.editor = initializeCodeMirror(config.codemirror, mode);
+  config.editor = initializeCodeMirror6(config.codemirror, mode);
   if (config.blockPreview && !data.uses_droplet) {
     initializeBlockPreview(
       config.editor,

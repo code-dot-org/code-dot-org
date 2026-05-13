@@ -1,6 +1,8 @@
+import LottieDancerRenderer from '@cdo/apps/dance/lottie/LottieDancerRenderer';
 import LabMetricsReporter from '@cdo/apps/lab2/Lab2MetricsReporter';
 import CustomMarshalingInterpreter from '@cdo/apps/lib/tools/jsinterpreter/CustomMarshalingInterpreter';
 import {commands as audioCommands} from '@cdo/apps/lib/util/audioApi';
+import localization from '@cdo/apps/localization';
 
 import {ASSET_BASE} from '../constants';
 import * as danceMsg from '../locale';
@@ -23,6 +25,25 @@ const allEvents: {[name in HookName]: Handler} = {
   getCueList: {code: 'return getCueList();'},
 };
 
+interface ProgramExecutorOptions {
+  container: string;
+  metricsReporter: LabMetricsReporter;
+  isReadOnlyWorkspace?: boolean;
+  onPuzzleComplete?: (result: boolean, message: string) => void;
+  onEventsChanged?: () => void;
+  customHelperLibrary?: string;
+  validationCode?: string;
+  readonlyCode?: string;
+  playSound?: (
+    url: string,
+    callback: (playSuccess: boolean) => void,
+    onEnded: () => void
+  ) => void;
+  stopSound?: () => void;
+  onSoundEnded?: () => void;
+  externalRendererFactory?: () => LottieDancerRenderer;
+}
+
 /**
  * Handles program execution for Dance Party and wraps the native Dance Party API.
  *
@@ -34,44 +55,62 @@ export default class ProgramExecutor {
   private hooks: {[name in HookName]?: (args?: unknown[]) => unknown};
   private validationCode?: string;
   private onEventsChanged?: () => void;
+  private stopSound?: () => void;
+  private onSoundEnded?: () => void;
 
   private livePreviewActive = false;
   private currentlyPlayingSong: string | null = null;
 
-  constructor(
-    container: string,
-    onPuzzleComplete: (result: boolean, message: string) => void,
-    isReadOnlyWorkspace: boolean,
-    recordReplayLog: boolean,
-    metricsReporter: LabMetricsReporter,
-    customHelperLibrary?: string,
-    validationCode?: string,
-    onEventsChanged?: () => void,
-    readonlyCode?: string, // Allows us to supply the student code early if we're in a read-only workspace.
-    nativeAPI: typeof DanceParty = undefined // For testing
-  ) {
+  constructor(options: ProgramExecutorOptions, nativeAPI?: typeof DanceParty) {
     this.hooks = {};
-    this.validationCode = validationCode;
-    this.onEventsChanged = onEventsChanged;
+    this.validationCode = options.validationCode;
+    this.onEventsChanged = options.onEventsChanged;
+    this.stopSound = options.stopSound;
+    this.onSoundEnded = options.onSoundEnded;
+
+    // Localize
+    const msg = Object.entries(
+      danceMsg as {
+        [key: string]: (...args: string[]) => string;
+      }
+    ).reduce(
+      (acc, [key, msgFunction]) => {
+        acc[key] = (...args: string[]) =>
+          localization.translate(msgFunction(...args));
+        return acc;
+      },
+      {} as {
+        [key: string]: (...args: string[]) => string;
+      }
+    );
+
     this.nativeAPI =
       nativeAPI ||
       new DanceParty({
-        onPuzzleComplete,
-        playSound: this.playSong,
-        recordReplayLog,
-        showMeasureLabel: !isReadOnlyWorkspace,
+        onPuzzleComplete: options.onPuzzleComplete || (() => undefined),
+        playSound:
+          options.playSound ||
+          ((...args: Parameters<typeof this.playSong>) =>
+            this.playSong(...args)),
+        showMeasureLabel: !options.isReadOnlyWorkspace,
         onHandleEvents: (currentFrameEvents: object[]) =>
           this.handleEvents(currentFrameEvents),
         onInit: async (nativeAPI: typeof DanceParty) => {
-          this.init(nativeAPI, isReadOnlyWorkspace, readonlyCode);
+          this.init(
+            nativeAPI,
+            options.isReadOnlyWorkspace || false,
+            options.readonlyCode
+          );
         },
-        spriteConfig: new Function('World', customHelperLibrary || ''),
-        container,
-        i18n: danceMsg,
+        spriteConfig: new Function('World', options.customHelperLibrary || ''),
+        container: options.container,
+        i18n: msg,
         resourceLoader: new ResourceLoader(ASSET_BASE),
-        logger: metricsReporter,
+        logger: options.metricsReporter,
+        externalRendererFactory: options.externalRendererFactory,
       });
-    this.metricsReporter = metricsReporter;
+    this.nativeAPI.reset();
+    this.metricsReporter = options.metricsReporter;
   }
 
   /**
@@ -115,7 +154,15 @@ export default class ProgramExecutor {
       return;
     }
 
-    const previewDraw = () => {
+    const previewDraw = async () => {
+      if (this.nativeAPI.generatedDancer) {
+        await this.ensureAllMovesPrecached();
+        // Wait an extra animation frame to ensure any async Lottie work inside the generated dancer has
+        // finished before drawing.
+        await new Promise(resolve =>
+          requestAnimationFrame(() => requestAnimationFrame(resolve))
+        );
+      }
       this.nativeAPI.setEffectsInPreviewMode(true);
 
       // the user setup hook initializes effects,
@@ -186,6 +233,7 @@ export default class ProgramExecutor {
       audioCommands.stopSound({url: this.currentlyPlayingSong});
       this.currentlyPlayingSong = null;
     }
+    this.stopSound?.();
     this.nativeAPI.reset();
     this.livePreviewActive = false;
   }
@@ -291,6 +339,7 @@ export default class ProgramExecutor {
     const onEndedWrapper = () => {
       this.currentlyPlayingSong = null;
       onEnded();
+      this.onSoundEnded?.();
     };
 
     audioCommands.playSound({
@@ -304,5 +353,25 @@ export default class ProgramExecutor {
     this.metricsReporter.logWarning(
       `Missing required hooks in compiled code: ${hooks.join(', ')}`
     );
+  }
+
+  private async ensureAllMovesPrecached() {
+    if (!this.nativeAPI.generatedDancer) {
+      return;
+    }
+    await this.nativeAPI.generatedDancer.renderer.precacheMoves([
+      'rest',
+      'clap_high',
+      'clown',
+      'dab',
+      'double_jam',
+      'drop',
+      'floss',
+      'fresh',
+      'kick',
+      'roll',
+      'this_or_that',
+      'thriller',
+    ]);
   }
 }

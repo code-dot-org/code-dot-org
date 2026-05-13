@@ -21,16 +21,25 @@ You can do Code.org development using macOS, Ubuntu, or Windows (running Ubuntu 
     - *Important*: When done, check for correct versions of these dependencies:
 
      ```sh
-     ruby --version     # --> ruby 3.0.5
-     node --version     # --> v18.16.0
+     ruby --version     # --> ruby 3.1.7
+     node --version     # --> v20.18.3
      git-lfs --version  #  >= git-lfs/3.0
-     pdm --version    #  >= 2.17
+     uv --version       #  >= 0.5.8
      ```
 
 1. `git lfs pull`
 
+1. `bundle config --local without staging test production levelbuilder`
+    - This step prevents installation of gems that are not needed for local development, some of which can break during the next step.
+    
 1. `bundle install`
     - This step often fails to due environment-specific issues. Look in the [Bundle Install Tips](#bundle-install-tips) section below for steps to resolve many common issues.
+
+1. `cp locals.yml.default locals.yml`
+    - This step is necessary to enable javascript builds. It also provides further options for customizing your local environment.
+
+1. `bundle exec rake package:apps:symlink`
+    - Another step necessary to enable javascript builds.
 
 1. `bundle exec rake install:hooks`
     <details>
@@ -68,10 +77,11 @@ You can do Code.org development using macOS, Ubuntu, or Windows (running Ubuntu 
         <code>bundle exec rake install</code> must always be called from the local project's root directory, or it won't work.
     </details>
 
-1. fix your database charset and collation to match our servers
+1. fix your database timezone to match our servers
     - `bin/mysql-client-admin`
-    - `ALTER DATABASE dashboard_development CHARACTER SET utf8 COLLATE utf8_unicode_ci;`
-    - `ALTER DATABASE dashboard_test CHARACTER SET utf8 COLLATE utf8_unicode_ci;`
+    - `SET GLOBAL time_zone = '+00:00';` Set time zone for all new database connections
+    - `SET PERSIST time_zone = '+00:00';` Save the setting to the mysqld-auto.cnf file which is read on restart
+    - `SELECT @@global.time_zone;` Verify the setting
 
 1. `bundle exec rake build`
     - This may fail for external contributors who don't have permissions to access Code.org AWS Secrets. Assign placeholder values to any configuration settings that are [ordinarily populated in Development environments from AWS Secrets](https://github.com/code-dot-org/code-dot-org/blob/staging/config/development.yml.erb) as indicated in this example: https://github.com/code-dot-org/code-dot-org/blob/5b3baed4a9c2e7226441ca4492a3bca23a4d7226/locals.yml.default#L136-L139
@@ -80,7 +90,7 @@ You can do Code.org development using macOS, Ubuntu, or Windows (running Ubuntu 
 
 1. **Open <http://localhost-studio.code.org:3000/>** to verify its running.
 
-After setup, [configure your editor](#editor-configuration), read about our [code styleguide](./STYLEGUIDE.md), our [test suites](./TESTING.md), or find more docs on [the wiki](https://github.com/code-dot-org/code-dot-org/wiki/For-Developers).
+After setup, [configure your editor](#editor-configuration), read about our [code styleguide](./STYLEGUIDE.md), our [test suites](./TESTING.md), our [apps build](./apps/README.md), or find more docs on [the wiki](https://github.com/code-dot-org/code-dot-org/wiki/For-Developers).
 
 ## Configure AWS Access or Secrets
 
@@ -118,7 +128,7 @@ These steps are for Apple devices running **macOS 14.x**, including those runnin
 
 1. Install **brew packages**:
    ```
-   brew install rbenv ruby-build nvm pdm mysql@8.0 redis git-lfs enscript gs imagemagick coreutils parallel tidy-html5 openssl libffi pdftk-java
+   brew install rbenv ruby-build nvm uv mysql@8.0 redis git-lfs enscript gs imagemagick coreutils parallel tidy-html5 openssl libffi pdftk-java
    ```
 
 1. Initialize **Git LFS**:
@@ -146,18 +156,18 @@ These steps are for Apple devices running **macOS 14.x**, including those runnin
         ```
    3. Start mysql server:
         ```
-        brew services start mysql # Should notify you that MySQL server has been added to Login Items
+        brew services start mysql@8.0 # Should notify you that MySQL server has been added to Login Items
         ```
-   2. Confirm that MySQL has started by running:
+   4. Confirm that MySQL has started by running:
         ```
         brew services    # should show: "started"
         ```
 
       If the status is instead "stopped", you may need initialize your mysql database:
         ```
-        brew services stop mysql
+        brew services stop mysql@8.0
         mysqld --initialize-insecure  # this will leave the root password blank, which is required
-        brew services start mysql
+        brew services start mysql@8.0
         brew services   # should show: "started"
         ```
 
@@ -191,6 +201,14 @@ These steps are for Apple devices running **macOS 14.x**, including those runnin
         ```
 
 1. Install [Google Chrome](https://www.google.com/chrome/), needed for some local app tests.
+
+1. If you are on an M-series Mac, you will need to install Rosetta if you have not done so already, otherwise the apps build may fail:
+    ```sh
+    softwareupdate --install-rosetta
+    ```
+    ```sh
+    arch -x86_64 /bin/bash -c 'echo "Rosetta is working!"'
+    ```
 
 1. *(Optional)* Install **pdftk.rb**. Skipping this will cause some PDF related tests to fail.
     ```
@@ -250,9 +268,9 @@ Note: Virtual Machine Users should check the [Alternative note](#alternative-use
     1. If your PATH is missing `~/.rbenv/shims`, the next two commands might not work. Edit your .bashrc to include the following line:
        `export PATH="$HOME/.rbenv/bin:~/.rbenv/shims:$PATH"`, then run `source .bashrc` for the change to take effect (as seen in [this github issue](https://github.com/rbenv/rbenv/issues/877)).
     1. `rbenv rehash`
-1. Install pdm, which will be used later by `rake install` to install python
-    1. `sudo pip3 install --prefix=/usr/local --upgrade pdm`
-        - alternatively, if you prefer pipx and have it configured path-wise: `pipx install pdm`
+1. Install uv, which will be used later by `rake install` to install python
+    1. `curl -LsSf https://astral.sh/uv/install.sh | sh`
+        - alternatively, if you prefer pipx and have it configured path-wise: `pipx install uv`
 1. Enable **corepack** to install **yarn**: `corepack enable`
 1. Make it so that you can run apps tests locally
     1. Add the following to `~/.bashrc` or your desired shell configuration file:
@@ -312,16 +330,17 @@ It is worthwhile to make sure that you are using WSL 2. Attempting to use WSL 1 
 * Option C: Use an Amazon EC2 instance:
   1. Request AWS access from [accounts@code.org](mailto:accounts@code.org) if you haven't already done so.
   1. From the [EC2 Homepage](https://console.aws.amazon.com/ec2), click on "Launch Instance" and follow the wizard:
-     * **Step 1: Choose AMI**: Select Ubuntu Server 20.04
-     * **Step 2: Choose instance type**: Choose at least 16 GiB memory (e.g. `t2.xlarge`)
+     * **Step 1: Choose AMI**: Select Ubuntu Server 22.04
+     * **Step 2: Choose instance type**: Choose at least 32 GiB memory (e.g. `t3.2xlarge`)
      * **Step 3: Configure Instance**: 
        * Set IAM Instance Profile to `DeveloperEC2`
        * Set VPC to `vpc-a48462c3`
-     * **Step 4: Storage**: Increase storage to 100GiB
+     * **Step 4: Storage**: Increase storage to 100GiB of type `gp3`
   1. Launch the instance. When asked for a key pair, you can create a new key pair (be sure to download and save the .pem file) or use an existing key pair that you have the .pem file for.
   1. Connect to the instance by selecting the instance in the AWS EC2 dashboard and clicking "Connect". Follow the provided instructions in order to connect via ssh or PuTTY. Upon completing this step, you should be able to connect to your instance via a command like `ssh -i <keyname>.pem <public-dns-name>`.
   1. Optionally, update your ssh config so that you can connect using a shorter command:
      * move your private key to `~/.ssh/<keyname>.pem`
+     * fix key permissions with `chmod 600 ~/.ssh/<keyname>.pem`
      * add the following lines to ~/.ssh/config:     
        ```
        Host yourname-ec2
@@ -373,13 +392,6 @@ If you want to make JavaScript changes and have them take effect locally, you'll
 
 This configures dashboard to rebuild apps whenever you run `bundle exec rake build` and to use the version that you built yourself.  See the documentation in that directory for faster ways to build and iterate.
 
-## Enabling internationalization(i18n) / translations
-If you want to enable the ability to switch Code.org to display different languages:
-1. Edit `locals.yml` and enable the following options:
-   ```
-   # code-dot-org/locals.yml
-   load_locales: true
-   ```
 ## Editor configuration
 
 We enforce linting rules for all our code, and we recommend you set up your editor to integrate with that linting.
@@ -522,9 +534,16 @@ Where [VERSION] is the current version of eventmachine in Gemfile.lock. For exam
 
 - `gem install eventmachine -v 1.2.7 -- --with-openssl-dir=$(brew --prefix libressl)`
 
+#### mini_racer and libv8-node
+
+If `bundle install` fails while installing `mini_racer` or `libv8-node`, try running this first:
+```
+bundle config --local without staging test production levelbuilder
+```
+
 #### Xcode Set Up
 
-OS X: when running `bundle install`, you may need to also run `xcode-select --install`. See [stackoverflow](http://stackoverflow.com/a/39730475/3991031). If this doesn't work, step 9 in the overview will not run correctly. In that case run the following command in the Terminal (found from
+OS X: when running `bundle install`, you may need to also run `xcode-select --install`. See [stackoverflow](http://stackoverflow.com/a/39730475/3991031). If this doesn't work, `rake build` will not run correctly. In that case run the following command in the Terminal (found from
   <https://github.com/nodejs/node-gyp/issues/569>): `sudo xcode-select -s /Applications/Xcode.app/Contents/Developer`
 
 ### Recommended hardware

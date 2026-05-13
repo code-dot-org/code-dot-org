@@ -1,7 +1,6 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 
-import Button from '@cdo/apps/legacySharedComponents/Button';
 import FontAwesome from '@cdo/apps/legacySharedComponents/FontAwesome';
 import BaseDialog from '@cdo/apps/templates/BaseDialog';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
@@ -81,7 +80,7 @@ export default class DeleteAccountDialog extends React.Component {
         <div style={styles.container}>
           <Header text={i18n.deleteAccountDialog_header()} />
           <div style={styles.bodyContainer}>
-            <FontAwesome icon="exclamation-triangle" style={styles.icon} />
+            <FontAwesome icon="triangle-exclamation" style={styles.icon} />
             <div style={styles.text}>
               <SafeMarkdown markdown={renderedMarkdown(isTeacher)} />
               {warnAboutDeletingStudents && (
@@ -147,11 +146,10 @@ export default class DeleteAccountDialog extends React.Component {
                 ? i18n.deleteAccountDialog_button_studentWarning()
                 : i18n.deleteAccountDialog_button()
             }
-            confirmColor={Button.ButtonColor.red}
+            confirmColor="error"
             onConfirm={deleteUser}
             onCancel={onCancel}
             disableConfirm={disableConfirm}
-            tabIndex="1"
           >
             <span
               id="uitest-delete-error"

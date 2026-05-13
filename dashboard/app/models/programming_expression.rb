@@ -161,6 +161,7 @@ class ProgrammingExpression < ApplicationRecord
   def summarize_for_lesson_edit
     {
       id: id,
+      blockName: block_name,
       category: category,
       color: get_color,
       key: key,
@@ -334,7 +335,6 @@ class ProgrammingExpression < ApplicationRecord
   end
 
   def get_blocks
-    return unless block_name
     return unless programming_environment.block_pool_name
     Block.for(programming_environment.block_pool_name)
   end
@@ -412,7 +412,7 @@ class ProgrammingExpression < ApplicationRecord
   def self.get_from_cache(programming_environment_name, key)
     Rails.cache.fetch("programming_expression/#{programming_environment_name}/#{key}", force: !Unit.should_cache?) do
       env = ProgrammingEnvironment.find_by_name(programming_environment_name)
-      ProgrammingExpression.includes([:programming_environment, :programming_environment_category]).find_by(programming_environment_id: env.id, key: key)
+      ProgrammingExpression.includes(:programming_environment, :programming_environment_category).find_by(programming_environment_id: env.id, key: key)
     end
   end
 end

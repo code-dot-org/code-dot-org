@@ -1,0 +1,8 @@
+name 'VersionB q3'
+question 'I can explain my code to someone who has never coded before.'
+right '😍 Yes, definitely!'
+right '👍 Yes.'
+right '🫤 Not really.'
+right '👎 No.'
+right '🤔 I do not know.'
+allow_multiple_attempts true

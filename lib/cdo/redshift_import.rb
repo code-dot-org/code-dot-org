@@ -131,6 +131,7 @@ class RedshiftImport
         schema,
         current_table_name,
         primary_key[:name],
+        # AWS Database Migration Service uses the all caps suffix `_PRIMARY` when creating constraints on the _import_ tables it creates.
         new_table_name + '_primary',
         primary_key[:columns]
       )
@@ -158,8 +159,10 @@ class RedshiftImport
     query = <<~SQL
       SET search_path TO #{schema};
       BEGIN;
-      ALTER TABLE #{table} DROP CONSTRAINT #{current_index_name}; -- Does not fail if constraint doesn't exist.
-      ALTER TABLE #{table} ADD CONSTRAINT #{new_index_name} PRIMARY KEY (#{columns.join(',')});
+      -- Use double quotes around constraint name due to issues with the case-sensitive `_PRIMARY` suffix that
+      -- Database Migration Service uses when creating primaries keys on tables it creates.
+      ALTER TABLE #{table} DROP CONSTRAINT "#{current_index_name}";
+      ALTER TABLE #{table} ADD CONSTRAINT "#{new_index_name}" PRIMARY KEY (#{columns.join(',')});
       COMMIT;
     SQL
     redshift_client.exec(query)

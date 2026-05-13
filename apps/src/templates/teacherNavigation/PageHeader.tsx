@@ -1,46 +1,65 @@
+import {Typography} from '@mui/material';
 import classNames from 'classnames';
 import _ from 'lodash';
-import React from 'react';
-import {useSelector} from 'react-redux';
+import React, {useCallback, useEffect, useState} from 'react';
 import {matchPath, useLocation} from 'react-router-dom';
 
-import {Heading1} from '@cdo/apps/componentLibrary/typography';
+import DemoChip from '@cdo/apps/templates/DemoChip';
+import {
+  convertStudentDataToArray,
+  filterAgeGatedStudents,
+  loadSectionStudentData,
+} from '@cdo/apps/templates/manageStudents/manageStudentsRedux';
+import {AgeGatedStudentsBanner} from '@cdo/apps/templates/policy_compliance/AgeGatedStudentsModal/AgeGatedStudentsBanner';
+import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
+
+import {selectedSectionSelector} from '../teacherDashboard/teacherSectionsReduxSelectors';
 
 import {LABELED_TEACHER_NAVIGATION_PATHS} from './TeacherNavigationPaths';
-import {Section} from './TeacherNavigationRouter';
 
 import styles from './teacher-navigation.module.scss';
 import skeletonizeContent from '@cdo/apps/sharedComponents/skeletonize-content.module.scss';
 
 const skeletonSectionName = (
-  <span
+  <Typography
     className={classNames(
       skeletonizeContent.skeletonizeContent,
       styles.skeletonHeaderSectionName
     )}
+    component="h2"
+    variant="overline2"
+    gutterBottom
   >
     SKELETON SECTION NAME
-  </span>
+  </Typography>
 );
 
-const PageHeader: React.FC = () => {
-  const isLoadingSectionData = useSelector(
-    (state: {teacherSections: {isLoadingSectionData: boolean}}) =>
-      state.teacherSections.isLoadingSectionData
+const PageHeader: React.FC<{urlSectionId: string}> = ({urlSectionId}) => {
+  const isLoadingSectionData = useAppSelector(
+    state => state.teacherSections.isLoadingSectionData
   );
-  const selectedSection = useSelector(
-    (state: {
-      teacherSections: {
-        selectedSectionId: number | null;
-        sections: {[id: number]: Section};
-      };
-    }) =>
-      state.teacherSections.selectedSectionId
-        ? state.teacherSections.sections[
-            state.teacherSections.selectedSectionId
-          ]
-        : null
+  const [ageGatedModalOpen, setAgeGatedModalOpen] = useState(false);
+  const toggleAgeGatedModal = useCallback(() => {
+    setAgeGatedModalOpen(!ageGatedModalOpen);
+  }, [ageGatedModalOpen]);
+  const selectedSection = useAppSelector(selectedSectionSelector);
+
+  const dispatch = useAppDispatch();
+  useEffect(() => {
+    if (urlSectionId) {
+      dispatch(loadSectionStudentData(urlSectionId));
+    }
+  }, [dispatch, urlSectionId]);
+
+  const studentData = useAppSelector(
+    state => state.manageStudents?.studentData
   );
+  const ageGatedStudents = filterAgeGatedStudents(
+    convertStudentDataToArray(studentData)
+  );
+  const ageGatedStudentsUsState =
+    ageGatedStudents?.length > 0 ? ageGatedStudents[0].usState : undefined;
+  const showAgeGatedStudentsBanner = ageGatedStudents?.length > 0;
 
   const location = useLocation();
   const pathName = React.useMemo(
@@ -52,14 +71,39 @@ const PageHeader: React.FC = () => {
     [location]
   );
 
-  const sectionName = selectedSection ? selectedSection.name : '';
+  const sectionNameText = selectedSection ? selectedSection.name : '';
+
+  const sectionName = (
+    <div className={styles.headerSectionNameRow}>
+      <Typography
+        className={styles.headerSectionName}
+        component="h2"
+        variant="overline2"
+      >
+        {sectionNameText}
+      </Typography>
+      {selectedSection?.demoType && (
+        <Typography component="span" variant="overline2">
+          <DemoChip />
+        </Typography>
+      )}
+    </div>
+  );
 
   return (
     <div className={styles.header}>
-      <span className={styles.headerSectionName}>
-        {isLoadingSectionData ? skeletonSectionName : sectionName}
-      </span>
-      <Heading1>{pathName}</Heading1>
+      {isLoadingSectionData ? skeletonSectionName : sectionName}
+      <Typography variant="h1" gutterBottom>
+        {pathName}
+      </Typography>
+      {showAgeGatedStudentsBanner && (
+        <AgeGatedStudentsBanner
+          toggleModal={toggleAgeGatedModal}
+          modalOpen={ageGatedModalOpen}
+          ageGatedStudentsUsState={ageGatedStudentsUsState}
+          ageGatedStudentsCount={ageGatedStudents?.length}
+        />
+      )}
     </div>
   );
 };

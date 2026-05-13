@@ -21,7 +21,7 @@
     "project_template_level_name": "CSA U2L4-this Keyword PBT_alt-2025",
     "teacher_markdown": "The code segment achieves the same result as the previous code segment. The `this` keyword refers to the current object, so using `this` tells Java to assign the value passed to the parameter to *this* object's instance variable.",
     "name_suffix": "_alt-2025",
-    "ai_tutor_available": true
+    "ai_tutor_available": "false"
   },
   "published": true,
   "audit_log": "[{\"changed_at\":\"2024-08-02T22:32:26.307+00:00\",\"changed\":[\"cloned from \\\"CSA U2L4-L3_pilot-2025\\\"\"],\"cloned_from\":\"CSA U2L4-L3_pilot-2025\"}]"

@@ -1,0 +1,19 @@
+.dropdownItem {
+  display: flex;
+  padding-block: 0.25rem;
+  padding-inline: 0.5rem 0.625rem;
+  align-items: center;
+  gap: 0.375rem;
+  align-self: stretch;
+  transition: background-color 0.2s ease-in-out;
+
+  &:hover {
+    background-color: var(--background-neutral-tertiary);
+  }
+
+  i {
+    color: var(--text-neutral-primary);
+    text-align: center;
+    width: 1rem;
+  }
+}

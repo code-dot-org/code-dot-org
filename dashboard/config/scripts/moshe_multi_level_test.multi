@@ -1,0 +1,12 @@
+name 'Moshe Multi Level Test'
+title 'My Test Multi Level'
+question 'What is a multi level?'
+wrong 'wrong answer 1'
+wrong 'wrong answer 2'
+wrong 'wrong answer 3'
+right 'right answer 1'
+allow_multiple_attempts false
+
+teacher_markdown <<MARKDOWN
+Markdown test!
+MARKDOWN

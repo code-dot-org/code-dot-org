@@ -1,0 +1,87 @@
+name 'csaif_pl_teacher_Lesson1_L9-cs-devices_2025'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Voices from the Classroom
+
+#### Computer systems and devices are the building blocks of how technology functions in the real world. Understanding how hardware, software, and networks work together is essential for building digital literacy and systems thinking.
+
+#### Code.org’s **AI and the Systems that Power It** unit helps students explore how information flows through digital systems—connecting components like input/output devices, memory, and the internet. Through interactive models and hands-on investigations, students see how devices are designed, how systems communicate, and how these technologies shape our everyday experiences.
+
+
+#### See what educators are saying about teaching the **AI and the Systems that Power It** unit. 
+
+<!-- Flexbox Section 1 -->
+<div style="display: flex; align-items: center; gap: 5px; width: 80%; margin: 20px auto;">
+  <!-- Image -->
+  <div style="flex: 1; text-align: center;">
+   
+  </div>
+  <!-- Text Box -->
+  <div style="flex: 3; background-color: #b2dee3; border-radius: 40px 40px 5px 40px; padding: 20px; color: #000000; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
+    <p style="font-size: 50px; margin: 0px 0 0 0; opacity: 0.5;">&ldquo;</p>
+    <p style="line-height: 1.5; font-size: 16px; margin: 0 0 10px 0;"> 
+      This unit helped my students go beyond naming computer parts—they started to understand how those parts actually work together to process data.
+    </p>
+    <p style="font-size: 50px; text-align: right; opacity: 0.5; margin: 0;">&rdquo;</p>
+  </div>
+</div>
+
+<!-- Flexbox Section 2 -->
+<div style="display: flex; align-items: center; gap: 5px; flex-direction: row-reverse; width: 80%; margin: 20px auto;">
+  <!-- Image -->
+  <div style="flex: 1; text-align: center;">
+   
+  </div>
+  <!-- Text Box -->
+  <div style="flex: 3; background-color: #ffd199; border-radius: 40px 40px 5px 40px; padding: 20px; color: #000000; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
+    <p style="font-size: 50px; margin: 0px 0 0 0; opacity: 0.5;">&ldquo;</p>
+    <p style="line-height: 1.5; font-size: 16px; margin: 0 0 10px 0;"> 
+     The activities were so approachable, even for my students who had never taken a tech class before. They loved figuring out how systems talk to each other.
+    </p>
+    <p style="font-size: 50px; text-align: right; opacity: 0.5; margin: 0;">&rdquo;</p>
+  </div>
+</div>
+
+<!-- Flexbox Section 3 -->
+<div style="display: flex; align-items: center; gap: 5px; width: 80%; margin: 20px auto;">
+  <!-- Image -->
+  <div style="flex: 1; text-align: center;">
+
+  </div>
+  <!-- Text Box -->
+  <div style="flex: 3; background-color: #f6a6a6; border-radius: 40px 40px 5px 40px; padding: 20px; color: #000000; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
+    <p style="font-size: 50px; margin: 0px 0 0 0; opacity: 0.5;">&ldquo;</p>
+    <p style="line-height: 1.5; font-size: 16px; margin: 0 0 10px 0;"> 
+      This unit helped students connect data flow and storage to real-world tech, including how systems power AI tools like voice assistants.
+    </p>
+    <p style="font-size: 50px; text-align: right; opacity: 0.5; margin: 0;">&rdquo;</p>
+  </div>
+</div>
+
+---
+
+<div style="background-color: #026C7A; color: #FFFFFF; padding: 15px; border-radius: 10px; width: 90%; margin: 20px auto;">
+    
+<p style="font-size: 44pt; font-weight: bold; margin: 0; text-align: center;margin-top: 15px;">🎉🎉🎉</p><br>
+<p style="font-size: 24pt; font-weight: bold; margin: 0; text-align: center; margin-top: 15px;">Congratulations!</p>
+
+<p style="font-size: 14pt; line-height: 1.2; margin-top: 10px;text-align: center;">
+You've finished the first lesson in this professional learning module! <br><br><b>Hardware, Software, and Operating Systems</b> is up next! 
+    </p>
+</div>
+
+
+<table width="100%" cellspacing="0" cellpadding="15">
+    <tr>
+        <td style="background-color: #b2dee3; text-align: center;"><b>Lesson One</b><br>Teaching AI and the<br>Systems that Power It</td>
+        <td style="background-color: #f7f8fa; text-align: center;"><b>Lesson Two</b><br>Hardware, Software  <br> & Operating Systems</td>
+        <td style="background-color: #f7f8fa; text-align: center;"><b>Lesson Three</b><br>Data in<br> Computer Systems</td>
+          <td style="background-color: #f7f8fa; text-align: center;"><b>Lesson Four</b><br>Preparing for<br>the Final Project</td>
+</table>
+
+
+
+
+MARKDOWN

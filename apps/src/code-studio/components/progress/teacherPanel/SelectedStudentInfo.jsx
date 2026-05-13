@@ -1,5 +1,4 @@
 import PropTypes from 'prop-types';
-import Radium from 'radium'; // eslint-disable-line no-restricted-imports
 import React from 'react';
 
 import SelectedStudentPairing from '@cdo/apps/code-studio/components/progress/teacherPanel/SelectedStudentPairing';
@@ -7,12 +6,11 @@ import fontConstants from '@cdo/apps/fontConstants';
 import Button from '@cdo/apps/legacySharedComponents/Button';
 import FontAwesome from '@cdo/apps/legacySharedComponents/FontAwesome';
 import ProgressBubble from '@cdo/apps/templates/progress/ProgressBubble';
+import stringKeyComparator from '@cdo/apps/util/stringKeyComparator';
 import {LevelStatus} from '@cdo/generated-scripts/sharedConstants';
 import i18n from '@cdo/locale';
 
 import {studentShape, levelWithProgress} from './types';
-
-const RadiumFontAwesome = Radium(FontAwesome);
 
 export default class SelectedStudentInfo extends React.Component {
   static propTypes = {
@@ -21,6 +19,7 @@ export default class SelectedStudentInfo extends React.Component {
     selectedUserId: PropTypes.number,
     teacherId: PropTypes.number,
     levelsWithProgress: PropTypes.arrayOf(levelWithProgress),
+    isSortedByFamilyName: PropTypes.bool,
   };
 
   onUnsubmit = userLevelId => {
@@ -41,8 +40,16 @@ export default class SelectedStudentInfo extends React.Component {
       .fail(err => console.error(err));
   };
 
+  sortStudents = () => {
+    const {students, isSortedByFamilyName} = this.props;
+    return isSortedByFamilyName
+      ? [...students].sort(stringKeyComparator(['familyName', 'name']))
+      : [...students].sort(stringKeyComparator(['name', 'familyName']));
+  };
+
   nextStudent = () => {
-    const {students, selectedUserId, onSelectUser} = this.props;
+    const {selectedUserId, onSelectUser} = this.props;
+    const students = this.sortStudents();
 
     const currentStudentIndex = students.findIndex(
       student => student.id === selectedUserId
@@ -55,7 +62,8 @@ export default class SelectedStudentInfo extends React.Component {
   };
 
   previousStudent = () => {
-    const {students, selectedUserId, onSelectUser} = this.props;
+    const {selectedUserId, onSelectUser} = this.props;
+    const students = this.sortStudents();
 
     const currentStudentIndex = students.findIndex(
       student => student.id === selectedUserId
@@ -107,7 +115,7 @@ export default class SelectedStudentInfo extends React.Component {
     if (!levelWithProgress) {
       return (
         <div style={styles.main}>
-          <RadiumFontAwesome
+          <FontAwesome
             icon="caret-left"
             onClick={this.previousStudent}
             style={styles.arrow}
@@ -115,7 +123,7 @@ export default class SelectedStudentInfo extends React.Component {
           <div style={styles.studentInfo}>
             <div style={styles.name}>{selectedStudent.name}</div>
           </div>
-          <RadiumFontAwesome
+          <FontAwesome
             icon="caret-right"
             onClick={this.nextStudent}
             style={styles.arrow}
@@ -129,7 +137,7 @@ export default class SelectedStudentInfo extends React.Component {
 
     return (
       <div style={styles.main}>
-        <RadiumFontAwesome
+        <FontAwesome
           icon="caret-left"
           onClick={this.previousStudent}
           style={styles.arrow}
@@ -178,7 +186,7 @@ export default class SelectedStudentInfo extends React.Component {
             </div>
           )}
         </div>
-        <RadiumFontAwesome
+        <FontAwesome
           icon="caret-right"
           onClick={this.nextStudent}
           style={styles.arrow}

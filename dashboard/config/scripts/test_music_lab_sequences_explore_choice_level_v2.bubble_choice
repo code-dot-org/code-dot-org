@@ -1,0 +1,11 @@
+name 'test-music-lab-sequences-explore-choice-level_v2'
+display_name 'Practice'
+description 'Try at least 2 practice levels!'
+
+sublevels
+level 'test-music-lab-sequences-explore-choice-level-a_v2'
+level 'test-music-lab-sequences-explore-choice-level-b_v2'
+level 'test-music-lab-sequences-explore-choice-level-d_v2'
+level 'test-music-lab-sequences-explore-choice-level-e_v2'
+level 'test-music-lab-sequences-explore-choice-level-f_v2'
+uses_lab2

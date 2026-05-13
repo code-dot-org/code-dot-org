@@ -1,62 +1,77 @@
 class LevelStarterAssetsController < ApplicationController
-  authorize_resource class: false, except: [:show, :file]
-  before_action :require_levelbuilder_mode, except: [:show, :file]
+  authorize_resource class: false, except: [:show, :file, :file_by_uuid]
+  before_action :require_levelbuilder_mode, except: [:show, :file, :file_by_uuid]
   before_action :set_level
   skip_before_action :verify_authenticity_token, only: [:destroy]
 
-  S3_BUCKET = 'cdo-v3-assets'.freeze
-  S3_PREFIX = 'starter_assets/'.freeze
-  VALID_FILE_EXTENSIONS = %w(.jpg .jpeg .gif .png .mp3 .wav)
+  VALID_FILE_EXTENSIONS = %w(.jpg .jpeg .gif .png .mp3 .wav .pdf)
+
+  MAX_FILE_SIZE_AI_CHAT = 5_000_000 # 5 MB
+  MAX_DIMENSION_PIXELS_AI_CHAT = 2048
 
   # GET /level_starter_assets/:level_name
   def show
     starter_assets = (@level&.project_template_level&.starter_assets || @level.starter_assets || []).filter_map do |friendly_name, uuid_name|
-      file_obj = get_object(uuid_name)
-      summarize(file_obj, friendly_name, uuid_name)
+      file_obj = LevelStarterAssetsHelper.get_object(uuid_name)
+      LevelStarterAssetsHelper.summarize(file_obj, friendly_name, uuid_name)
     end
 
     render json: {starter_assets: starter_assets}
   end
 
-  # GET /level_starter_assets/:level_name/:filename
+  # GET /level_starter_assets/:level_name/:filename.:format
   # Returns requested file body as an IO stream.
   def file
     friendly_name = "#{params[:filename]}.#{params[:format]}"
     starter_assets = @level&.project_template_level&.starter_assets || @level&.starter_assets
     return head :not_found if starter_assets.nil_or_empty?
-    uuid_name = starter_assets[friendly_name]
-    file_obj = get_object(uuid_name)
-    content_type = file_content_type(File.extname(uuid_name))
 
-    expires_in 1.hour, public: true
-    send_data read_file(file_obj), type: content_type, disposition: 'inline'
+    uuid_name = starter_assets[friendly_name]
+    get_file_and_send(uuid_name)
+  end
+
+  # GET /level_starter_assets/:level_name/uuid/:uuid.:format
+  # Returns requested file body as an IO stream.
+  # Client specifies the UUID of the file rather than the user-friendly name,
+  # and the level's start_sources manages the mapping between friendly names
+  # and UUIDs.
+  def file_by_uuid
+    uuid_name = "#{params[:uuid]}.#{params[:format]}"
+
+    preview_host = CDO.preview_codeprojects_hostname
+    # Allow any subdomain of codeprojects preview (with optional port) to fetch level starter assets.
+    if preview_host.present?
+      preview_regex = %r{\Ahttps?://[^/]+\.#{Regexp.escape(preview_host)}(:\d+)?\z}
+      # If the request's origin matches the preview host, set CORS header to allow it.
+      if request.origin&.match?(preview_regex)
+        response.headers['Access-Control-Allow-Origin'] = request.origin
+      end
+    end
+
+    get_file_and_send(uuid_name)
   end
 
   # POST /level_starter_assets/:level_name
   def upload
-    # Client expects a single file upload, so raise an error if params[:files] contains more than one file.
-    if params[:files].length > 1
-      raise "One file upload expected. Actual: #{params[:files].length}"
-    end
-
-    upload = params[:files]&.first
-    friendly_name = upload.original_filename
-    file_ext = File.extname(friendly_name)
-
-    unless VALID_FILE_EXTENSIONS.include?(file_ext)
-      return head :unprocessable_entity
-    end
+    # upload_data sets an appropriate header and returns nil in error cases.
+    upload_data = validate_upload
+    return unless upload_data
 
     # Replace the friendly file name with a UUID for storage in S3 to avoid naming conflicts.
-    uuid_name = SecureRandom.uuid + file_ext
-    file_obj = get_object(uuid_name)
-    success = file_obj&.upload_file(upload.tempfile.path)
+    uuid_name = SecureRandom.uuid + upload_data[:extension]
 
-    if success && @level.add_starter_asset!(friendly_name, uuid_name)
-      render json: summarize(file_obj, friendly_name, uuid_name)
-    else
-      return head :unprocessable_entity
-    end
+    upload_and_respond(uuid_name, upload_data)
+  end
+
+  # POST /level_starter_assets/:level_name/uuid/:uuid
+  def upload_by_uuid
+    # upload_data sets an appropriate header and returns nil in error cases.
+    upload_data = validate_upload
+    return unless upload_data
+
+    uuid_name = params[:uuid] + upload_data[:extension]
+
+    upload_and_respond(uuid_name, upload_data)
   end
 
   # DELETE /level_starter_assets/:level_name/:filename
@@ -64,56 +79,69 @@ class LevelStarterAssetsController < ApplicationController
   # but does not delete the asset from S3 as other levels may still be
   # using it.
   def destroy
-    if @level.remove_starter_asset!(params[:filename])
+    if @level.remove_starter_asset!("#{params[:filename]}.#{params[:format]}")
       return head :no_content
     else
       return head :unprocessable_entity
     end
   end
 
-  #
-  # HELPERS
-  #
-
-  def summarize(file_obj, friendly_name, uuid_name)
-    if file_obj.blank?
-      nil
-    else
-      {
-        filename: friendly_name,
-        category: file_mime_type(File.extname(uuid_name)),
-        size: file_obj.size,
-        timestamp: file_obj.last_modified
-      }
-    end
-  end
-
-  def read_file(file_obj)
-    file_obj.get.body.read
-  end
-
-  def get_object(s3_filename)
-    path = prefix(s3_filename)
-    bucket.object(path)
-  end
-
   private def set_level
     @level = Level.cache_find(params[:level_name])
   end
 
-  private def file_mime_type(extension)
-    MIME::Types.type_for(extension)&.first&.raw_media_type
+  private def validate_upload
+    # Client expects a single file upload, so raise an error if params[:files] contains more than one file.
+    if params[:files].length > 1
+      raise "One file upload expected. Actual: #{params[:files].length}"
+    end
+
+    upload = params[:files]&.first
+    upload_tempfile = upload.tempfile
+    friendly_name = upload.original_filename
+    file_ext = File.extname(friendly_name)
+
+    unless VALID_FILE_EXTENSIONS.include?(file_ext)
+      head :unprocessable_entity
+      return nil
+    end
+
+    # For AI Chat levels, we attempt to resize assets that are greater than 5 MB
+    # to improve performance when used as input to OpenAI.
+    if @level.is_a?(Aichat)
+      if upload_tempfile.size > MAX_FILE_SIZE_AI_CHAT
+        upload_tempfile = LevelStarterAssetsHelper.try_resize_file(upload.tempfile, file_ext, MAX_DIMENSION_PIXELS_AI_CHAT)
+      end
+
+      if upload_tempfile.size > MAX_FILE_SIZE_AI_CHAT
+        head :payload_too_large
+        return nil
+      end
+    end
+
+    {
+      friendly_name: friendly_name,
+      extension: file_ext,
+      tempfile: upload_tempfile
+    }
   end
 
-  private def file_content_type(extension)
-    MIME::Types.type_for(extension)&.first&.content_type
+  private def get_file_and_send(uuid_name)
+    file_obj = LevelStarterAssetsHelper.get_object(uuid_name)
+    content_type = LevelStarterAssetsHelper.file_content_type(File.extname(uuid_name))
+
+    expires_in 1.hour, public: true
+    send_data LevelStarterAssetsHelper.read_file(file_obj), type: content_type, disposition: 'inline'
   end
 
-  private def prefix(key)
-    S3_PREFIX + key
-  end
+  private def upload_and_respond(uuid_name, upload_data)
+    file_obj = LevelStarterAssetsHelper.get_object(uuid_name)
+    success = file_obj&.upload_file(upload_data[:tempfile].path)
 
-  private def bucket
-    Aws::S3::Bucket.new(S3_BUCKET)
+    if success && @level.add_starter_asset!(upload_data[:friendly_name], uuid_name)
+      render json: LevelStarterAssetsHelper.summarize(file_obj, upload_data[:friendly_name], uuid_name)
+    else
+      return head :unprocessable_entity
+    end
   end
 end

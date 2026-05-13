@@ -1,8 +1,9 @@
+import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
+import {Button as MuiButton} from '@mui/material';
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
-import React, {memo, useCallback} from 'react';
+import React from 'react';
 
-import Button from '@cdo/apps/legacySharedComponents/Button';
 import i18n from '@cdo/locale';
 
 import moduleStyles from './sections-refresh.module.scss';
@@ -12,37 +13,36 @@ export const MARKETING_AUDIENCE = {
   MIDDLE: 'middle',
   HIGH: 'high',
   HOC: 'hoc',
+  HOAI: 'hoai',
   PL: 'pl',
 };
 
-const MarketingAudienceButton = memo(
-  ({selectedMarketingAudience, audience, determineMarketingAudience, text}) => {
-    const isActive = selectedMarketingAudience === audience;
-    const icon = isActive ? 'caret-down' : 'caret-right';
+function MarketingAudienceButton({
+  selectedMarketingAudience,
+  audience,
+  determineMarketingAudience,
+  text,
+}) {
+  const isActive = selectedMarketingAudience === audience;
+  const iconName = isActive ? 'caret-down' : 'caret-right';
 
-    const onClick = useCallback(
-      e => {
-        e.preventDefault();
-        determineMarketingAudience(audience);
-      },
-      [determineMarketingAudience, audience]
-    );
-
-    return (
-      <Button
-        id={`uitest-${audience}-button`}
-        className={classnames(
-          moduleStyles.buttonStyle,
-          isActive && moduleStyles.activeMarketingAudienceButton
-        )}
-        text={text}
-        size={Button.ButtonSize.large}
-        icon={icon}
-        onClick={onClick}
-      />
-    );
-  }
-);
+  return (
+    <MuiButton
+      id={`uitest-${audience}-button`}
+      className={classnames(
+        moduleStyles.buttonStyle,
+        isActive && moduleStyles.activeMarketingAudienceButton
+      )}
+      variant="text"
+      size="large"
+      startIcon={<FontAwesomeV6Icon iconName={iconName} />}
+      onClick={() => determineMarketingAudience(audience)}
+      type="button"
+    >
+      {text}
+    </MuiButton>
+  );
+}
 
 MarketingAudienceButton.propTypes = {
   selectedMarketingAudience: PropTypes.string.isRequired,
@@ -51,8 +51,6 @@ MarketingAudienceButton.propTypes = {
   text: PropTypes.string.isRequired,
 };
 
-MarketingAudienceButton.displayName = 'MarketingAudienceButton';
-
 export default function CurriculumQuickAssignTopRow({
   showPlOfferings,
   marketingAudience,
@@ -60,19 +58,19 @@ export default function CurriculumQuickAssignTopRow({
 }) {
   // If the given audience is already selected, deselect it.
   // Otherwise, set to this audience
-  const determineMarketingAudience = useCallback(
-    newAudience => {
-      if (newAudience === marketingAudience) {
-        updateMarketingAudience('');
-      } else {
-        updateMarketingAudience(newAudience);
-      }
-    },
-    [marketingAudience, updateMarketingAudience]
-  );
+  const determineMarketingAudience = newAudience => {
+    if (newAudience === marketingAudience) {
+      updateMarketingAudience('');
+    } else {
+      updateMarketingAudience(newAudience);
+    }
+  };
 
   return (
-    <div className={moduleStyles.buttonRow}>
+    <div
+      className={moduleStyles.buttonRow}
+      id="uitest-curriculum-quick-assign-top-row"
+    >
       <div className={moduleStyles.buttonsInRow}>
         <MarketingAudienceButton
           selectedMarketingAudience={marketingAudience}
@@ -98,7 +96,12 @@ export default function CurriculumQuickAssignTopRow({
           determineMarketingAudience={determineMarketingAudience}
           text={i18n.teacherCourseHoc()}
         />
-
+        <MarketingAudienceButton
+          selectedMarketingAudience={marketingAudience}
+          audience={MARKETING_AUDIENCE.HOAI}
+          determineMarketingAudience={determineMarketingAudience}
+          text={i18n.marketingInitiativeHOAI()}
+        />
         {showPlOfferings && (
           <MarketingAudienceButton
             selectedMarketingAudience={marketingAudience}

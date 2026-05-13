@@ -1,0 +1,35 @@
+name 'self-paced-pl-ai-districts-transforming_07_2024'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Education Specific AI Tools
+
+#### Educational technology companies have taken to developing education-specific tools to support educators in their roles. These tools are not only more specialized but often have additional features such as:
+* #### Guardrails in place for what you can and cannot prompt about
+* #### Stricter privacy policies that may be more appropriate for school settings
+* #### Prompting input and output designed specifically for educator tasks
+
+<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
+    <summary style="font-size: 1.5em; font-weight: bold;">🚀 Want to Learn More?</summary>
+<div style="margin-top: 20px; margin-left: 20px; margin-right: 20px; padding-bottom:20px;">
+    <p>
+
+#### Check out <a href="https://youtu.be/MbsAmE7Gmtw" target="_blank">this video</a> on educational guardrails and data privacy with AI. 
+</p></div>
+</details>
+
+## To Do
+
+#### Explore some additional AI tools that can support your schools and teachers.
+
+#### Choose an education-focused AI tool from the list below or take this time to explore another one you’ve heard about. Make an account as needed and try out some of the features.
+* #### <a href="https://www.magicschool.ai/" target="_blank">MagicSchool AI</a>
+* #### <a href="https://schoolai.com/" target="_blank">SchoolAI</a>
+* #### <a href="https://web.diffit.me/" target="_blank">Diffit</a>
+* #### <a href="https://www.khanmigo.ai/" target="_blank">Khanmigo</a>
+
+<br>
+
+#### **Note:** Some of these tools are free and available to everyone, some require a login, and some are paid.
+MARKDOWN

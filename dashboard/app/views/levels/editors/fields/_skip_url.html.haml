@@ -1,0 +1,9 @@
+%h1.control-legend{data: {toggle: "collapse", target: "#skip_url"}}
+  Skip to Project
+#skip_url.in.collapse
+  = f.label :skip_url, 'Add a skip to project button'
+  %li Enter the new project URL: /projects/lab_type/new (Do NOT use quotes around the URL).<br>
+  %li Example: <b>/projects/pythonlab/new</b>
+  %li The lab types that currently support this feature are: <b>music</b>, <b>pythonlab</b>.
+  %li The 'Skip to project' header button will be displayed so that a user can skip to a new project with the same lab type as that of the level.
+  = f.text_field :skip_url, placeholder: 'New project URL'

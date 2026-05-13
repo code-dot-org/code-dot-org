@@ -1,11 +1,11 @@
 # Brad investigating (2018-04-25)
 @skip
-@no_circle
+@no_ci
 @as_student
 Feature: Weblab Versions
 
 Background:
-  Given I am on "http://studio.code.org/s/allthethings/lessons/32/levels/1?noautoplay=true"
+  Given I am on "http://studio.code.org/courses/allthethingscourse/units/1/lessons/32/levels/1?noautoplay=true"
   Then I debug channel id
   And I wait until element "#submitButton" is visible
 

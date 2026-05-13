@@ -1,0 +1,26 @@
+name 'self-paced-CSDMusicLab-L1-assessment2'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Assessing Projects
+
+#### On the previous page, you learned how you might use levels within a lesson progression to guide your instruction.
+
+#### To help facilitate this process, the Programming with Music Lab curriculum provides **in-level rubric grading** for **assessment levels** and **projects**.
+
+## How to Use In-Level Rubric Grading
+
+#### For a demonstration of how to utilize the in-level rubric grading feature, please watch the video below.
+
+<div style="text-align: center; margin: 20px auto;">
+  <a href="https://www.loom.com/share/9891fc58c7674817ad07b74ea02c2e6b" target="blank">
+    <img 
+      src="https://images.code.org/a29a52d690862a1196df63d8e8731d0d-image-1761943105276.37.27 PM.png" 
+      alt="Rubric grading video thumbnail" 
+      style="width: 75%; border-radius: 10px;">
+  </a>
+  <p style="font-size: 12pt; margin-top: 5px; text-align: center;">Click to open this video on a new page.</p>
+</div>
+
+MARKDOWN

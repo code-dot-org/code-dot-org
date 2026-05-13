@@ -1,28 +1,30 @@
 import $ from 'jquery';
 
-import {EVENTS, PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants';
+import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
-import statsigReporter from '@cdo/apps/metrics/StatsigReporter';
+import {USER_RETURN_TO_SESSION_KEY} from '@cdo/apps/signUpFlow/signUpFlowConstants';
+import getScriptData from '@cdo/apps/util/getScriptData';
 
 $(document).ready(() => {
-  analyticsReporter.sendEvent(EVENTS.LOGIN_PAGE_VISITED, {}, PLATFORMS.STATSIG);
+  const userReturnTo = getScriptData('userReturnTo');
 
-  const isInSignupExperiment = statsigReporter.getIsInExperiment(
-    'new_sign_up_v1',
-    'showNewFlow',
-    false
-  );
-  const signupLink = document.getElementById('signup-link');
-
-  if (isInSignupExperiment) {
-    signupLink.href = './new_sign_up/account_type';
+  if (userReturnTo) {
+    sessionStorage.setItem(USER_RETURN_TO_SESSION_KEY, userReturnTo);
   }
 
   document.getElementById('user_signup').addEventListener('click', () => {
-    analyticsReporter.sendEvent(
-      EVENTS.LOGIN_PAGE_CREATE_ACCOUNT_CLICKED,
-      {},
-      PLATFORMS.STATSIG
-    );
+    analyticsReporter.sendEvent(EVENTS.LOGIN_PAGE_CREATE_ACCOUNT_CLICKED, {});
+  });
+
+  const courseBlocks = document.querySelectorAll('.courseblock-tall');
+  courseBlocks.forEach(courseBlock => {
+    const courseTitle = courseBlock.querySelector('h3').textContent;
+    const courseUrl = courseBlock.querySelector('a').href;
+    courseBlock.addEventListener('click', () => {
+      analyticsReporter.sendEvent(EVENTS.LOGIN_PAGE_COURSE_BLOCK_CLICKED, {
+        courseTitle,
+        courseUrl,
+      });
+    });
   });
 });

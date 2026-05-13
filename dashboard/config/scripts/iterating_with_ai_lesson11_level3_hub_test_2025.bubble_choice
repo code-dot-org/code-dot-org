@@ -1,0 +1,10 @@
+name 'iterating-with-ai-lesson11-level3-hub-test-2025'
+display_name 'Milestone Three Hub'
+description 'Your goal: Use these levels in whatever way helps you move your project forward — whether that is planning your filter logic, building interactive features, debugging with AI, or evaluating how transparent and fair your dashboard is. You are in control of how and when to use these levels to meet the project goals.'
+uses_lab2
+
+sublevels
+level 'iterating-with-ai-lesson11-milestone3-sketch-lab-test-2025'
+level 'iterating-with-ai-lesson11-level4-test-2025'
+level 'iterating-with-ai-lesson11-milestone3-frq-test-2025'
+

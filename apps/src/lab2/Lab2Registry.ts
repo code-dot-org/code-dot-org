@@ -1,8 +1,10 @@
 // Registry for Lab singletons
 
+import {Theme} from '@code-dot-org/component-library/common/contexts';
+
 import LabMetricsReporter from './Lab2MetricsReporter';
 import ProjectManager from './projects/ProjectManager';
-import {AppName} from './types';
+import {AppName, LevelNavigationConfirmation} from './types';
 import LifecycleNotifier from './utils/LifecycleNotifier';
 
 export default class Lab2Registry {
@@ -10,6 +12,8 @@ export default class Lab2Registry {
   private metricsReporter: LabMetricsReporter;
   private lifecycleNotifier: LifecycleNotifier;
   private appName: AppName | null;
+  private theme: Theme | undefined;
+  private levelNavigationConfirmation: LevelNavigationConfirmation | undefined;
 
   private static _instance: Lab2Registry;
 
@@ -18,6 +22,8 @@ export default class Lab2Registry {
     this.metricsReporter = new LabMetricsReporter();
     this.lifecycleNotifier = new LifecycleNotifier();
     this.appName = null;
+    this.theme = undefined;
+    this.levelNavigationConfirmation = undefined;
   }
 
   public static getInstance(): Lab2Registry {
@@ -64,5 +70,23 @@ export default class Lab2Registry {
 
   public getAppName() {
     return this.appName;
+  }
+
+  public setTheme(theme: Theme) {
+    this.theme = theme;
+  }
+
+  public getTheme() {
+    return this.theme;
+  }
+
+  public getLevelNavigationConfirmation() {
+    return this.levelNavigationConfirmation;
+  }
+
+  public setLevelNavigationConfirmation(
+    confirmation: LevelNavigationConfirmation | undefined
+  ) {
+    this.levelNavigationConfirmation = confirmation;
   }
 }

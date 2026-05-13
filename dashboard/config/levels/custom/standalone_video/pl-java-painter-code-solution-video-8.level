@@ -1,0 +1,22 @@
+<StandaloneVideo>
+  <config><![CDATA[{
+  "game_id": 54,
+  "created_at": "2025-05-13T17:15:57.000Z",
+  "level_num": "custom",
+  "user_id": 63,
+  "properties": {
+    "video_key": "csa-example-solution-1",
+    "instructions_important": "false",
+    "display_name": "How to Make a Sprite",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "parent_level_id": 27335,
+    "name_suffix": "_2025",
+    "encrypted": "false",
+    "long_instructions": "#### In this video you will see one of many possible solutions to the previous level.  Feel free to pause the video to make sense of the code as it is written or re-watch it to see how the different pieces connect together. \r\n<hr>\r\n\r\n#### **Up next:** You will be able to choose one or more other practice problems to try."
+  },
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2025-05-13T17:15:57.852+00:00\",\"changed\":[\"cloned from \\\"csa-prework-example-solution-video_2025\\\"\"],\"cloned_from\":\"csa-prework-example-solution-video_2025\"}]"
+}]]></config>
+</StandaloneVideo>

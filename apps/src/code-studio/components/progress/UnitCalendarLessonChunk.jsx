@@ -1,11 +1,10 @@
+import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
+import {Typography} from '@mui/material';
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 import ReactTooltip from 'react-tooltip';
 
-import fontConstants from '@cdo/apps/fontConstants';
-import FontAwesome from '@cdo/apps/legacySharedComponents/FontAwesome';
 import {unitCalendarLessonChunk} from '@cdo/apps/templates/progress/unitCalendarLessonShapes';
-import color from '@cdo/apps/util/color';
 
 class UnitCalendarLessonChunk extends Component {
   static propTypes = {
@@ -19,7 +18,7 @@ class UnitCalendarLessonChunk extends Component {
     this.props.handleHover(this.props.lessonChunk.id);
   };
 
-  handleMouseOut = () => {
+  handleMouseLeave = () => {
     this.props.handleHover('');
   };
 
@@ -66,47 +65,38 @@ class UnitCalendarLessonChunk extends Component {
         data-tip
         href={url}
         onMouseEnter={this.handleMouseEnter}
-        onMouseOut={this.handleMouseOut}
+        onMouseLeave={this.handleMouseLeave}
+        onFocus={this.handleMouseEnter}
+        onBlur={this.handleMouseLeave}
       >
         {isMajority && (
-          <div
-            style={styles.boxContent}
-            onMouseEnter={this.handleMouseEnter}
-            onMouseOut={this.handleMouseOut}
-          >
+          <div style={styles.boxContent}>
             {(assessment || unplugged) && (
-              <div
-                key={`lesson-${id}`}
-                style={styles.iconSection}
-                onMouseEnter={this.handleMouseEnter}
-                onMouseOut={this.handleMouseOut}
-              >
-                <FontAwesome
-                  icon="check-circle"
+              <div key={`lesson-${id}`} style={styles.iconSection}>
+                <FontAwesomeV6Icon
+                  iconName="check-circle"
                   style={{
-                    color: isHover ? color.white : color.purple,
+                    color: isHover
+                      ? 'var(--text-neutral-white-fixed)'
+                      : 'var(--text-brand-purple-primary)',
                     visibility: assessment ? 'visible' : 'hidden',
                   }}
-                  onMouseEnter={this.handleMouseEnter}
-                  onMouseOut={this.handleMouseOut}
                 />
-                <FontAwesome
-                  icon="scissors"
+                <FontAwesomeV6Icon
+                  iconName="scissors"
                   style={{
                     visibility: unplugged ? 'visible' : 'hidden',
                   }}
-                  onMouseEnter={this.handleMouseEnter}
-                  onMouseOut={this.handleMouseOut}
                 />
               </div>
             )}
-            <div
-              style={styles.titleText}
-              onMouseEnter={this.handleMouseEnter}
-              onMouseOut={this.handleMouseOut}
+            <Typography
+              variant="body3"
+              component="div"
+              sx={{color: 'inherit', ...styles.titleText}}
             >
               {displayTitle}
-            </div>
+            </Typography>
           </div>
         )}
         {smallChunk && (
@@ -115,7 +105,9 @@ class UnitCalendarLessonChunk extends Component {
             role="tooltip"
             effect="solid"
           >
-            <div>{title}</div>
+            <Typography variant="body3" component="div">
+              {title}
+            </Typography>
           </ReactTooltip>
         )}
       </a>
@@ -126,7 +118,7 @@ class UnitCalendarLessonChunk extends Component {
 const styles = {
   box: {
     margin: 5,
-    color: '#333',
+    color: 'var(--text-neutral-primary)',
     textDecorationLine: 'none',
     boxSizing: 'border-box',
   },
@@ -135,24 +127,23 @@ const styles = {
     alignItems: 'center',
     justifyContent: 'center',
     textAlign: 'center',
-    ...fontConstants['main-font-regular'],
     height: '100%',
   },
   assessment: {
-    border: '2px solid ' + color.purple,
+    border: '2px solid var(--borders-brand-purple-primary)',
   },
   assessmentHover: {
-    border: '2px solid ' + color.purple,
-    backgroundColor: color.purple,
-    color: 'white',
+    border: '2px solid var(--borders-brand-purple-primary)',
+    backgroundColor: 'var(--background-brand-purple-primary)',
+    color: 'var(--text-neutral-white-fixed)',
   },
   instructional: {
-    border: '2px solid ' + color.teal,
+    border: '2px solid var(--borders-brand-teal-primary)',
   },
   instructionalHover: {
-    border: '2px solid ' + color.teal,
-    backgroundColor: color.teal,
-    color: color.white,
+    border: '2px solid var(--borders-brand-teal-primary)',
+    backgroundColor: 'var(--background-brand-teal-primary)',
+    color: 'var(--text-neutral-white-fixed)',
   },
   isNotStart: {
     borderLeftStyle: 'dashed',

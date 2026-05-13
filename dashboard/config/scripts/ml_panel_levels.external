@@ -1,0 +1,27 @@
+name 'ML-Panel Levels'
+skip_dialog true
+markdown <<MARKDOWN
+# Panel Levels
+
+
+![](https://images.code.org/007b184208b716a525b201adad71ad49-image-1738883132928.05.28 PM.png)
+
+
+## What Are Panel Levels? 
+
+#### Panel levels frontload concepts and information before students practice. Like a slidedeck, there are images and descriptions to help students. 
+
+## How to use Panel Levels: 
+#### **Teacher Tip:** You can model how to use panels so that students can use them as learning tools independently through the remainder of the module. 
+
+
+##Accessibility
+
+![](https://images.code.org/20a566323f34020b0ed245acdadae9fe-image-1738883899105.18.12 PM.png)
+#### Clicking on the speaker icon in the bottom corner of the text box will enable text-to-speech.
+ 
+
+
+
+
+MARKDOWN

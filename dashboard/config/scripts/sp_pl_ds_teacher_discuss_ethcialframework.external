@@ -11,18 +11,19 @@ markdown <<MARKDOWN
 
 #### When students compare their work, they have an opportunity to both communicate the choices they made and to see the choices made by another student. 
 
-#### When they connect back to the source of information - whether it be a primary source or a data set - students are pushed to consider what information is represented in their work, and what information is not.
+> #### **Classroom Scenario:** 
+> - #### **Student A** cleaned the data by excluding records with blank fields, but didn't consider including a column for dietary restrictions, like vegetarian or vegan options, which was in the original survey data.
+> - #### **Student B** also cleaned the data, but specifically preserved the dietary restriction information, categorizing students as "vegetarian," "vegan," or "no restrictions." 
+
 
 ## Consider the Ethical Framework 
 
 #### **Discuss:** Which do you think should be prioritized when deciding how to clean data?
 
-![](https://images.code.org/9145933afbe673b1f8165dab633a1ed2-image-1724339822547.png)
-
 #### For **Accuracy and Bias**, students may bring up things like:
 
-- #### Changing the format allows the cleaners bias to enter the picture
-- #### Cleaned data is not accurately what the person wanted
+- #### Changing the format allows the data scientist's bias to enter the picture
+- #### Cleaned data may not accurately portray what the person wanted
 - #### Cleaned Data helps form a more accurate picture -- someone who misspelled pepperoni still wants pepperoni pizza
 
 #### For **Privacy**, students may bring up things like:
@@ -33,8 +34,21 @@ markdown <<MARKDOWN
 
 - #### It’s possible that people have not consented to their data being used in this altered, cleaned, format
 
+---
+
+## Cleaning Data with AI 
+
+<div style="background-color: #dccbea; border-radius: 20px; box-shadow: 2px 2px 10px rgba(0,0,0,0.2); padding: 20px; display: flex; align-items: center; font-size: 16pt;">
+  <img src="https://images.code.org/1cd0ec71458414495502b9598efd2028-image-1639773441510.37.01 PM.png" 
+       alt="Image of AI bot and a model card" 
+       style="border-radius: 20px; height: 75px; margin-right: 20px;">
+  <div>
+     In this lesson, students will have a chance to compare how AI cleans and analyzes messy data with the AI Chatbot.
+  </div>
+</div>
 
 
+<div style="clear:both;"></div>
 
 ## Let's continue to more data visualization! 
 

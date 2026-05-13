@@ -1,0 +1,185 @@
+{
+  "script": {
+    "name": "aif5-v2-2025",
+    "wrapup_video_id": null,
+    "login_required": true,
+    "properties": {
+      "content_area": "curriculum_9_12",
+      "curriculum_umbrella": "AIF",
+      "has_unnumbered_lessons": true,
+      "has_verified_resources": true,
+      "hideable_lessons": true,
+      "include_student_lesson_plans": true,
+      "is_migrated": true,
+      "project_sharing": true,
+      "show_calendar": true,
+      "student_detail_progress_view": true,
+      "topic_tags": [
+        "ai"
+      ],
+      "version_year": "2025",
+      "weekly_instructional_minutes": 225
+    },
+    "new_name": null,
+    "family_name": null,
+    "serialized_at": "2025-12-20 02:08:52 UTC",
+    "hide_within_course": false,
+    "published_state": null,
+    "instruction_type": null,
+    "instructor_audience": null,
+    "participant_audience": null,
+    "seeding_key": {
+      "script.name": "aif5-v2-2025"
+    }
+  },
+  "lesson_groups": [
+    {
+      "key": "lessonGroup-2",
+      "user_facing": true,
+      "position": 1,
+      "properties": {
+        "display_name": "Content"
+      },
+      "seeding_key": {
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "aif5-v2-2025"
+      }
+    },
+    {
+      "key": "lessonGroup-3",
+      "user_facing": true,
+      "position": 2,
+      "properties": {
+        "display_name": "End of Unit Survey"
+      },
+      "seeding_key": {
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "aif5-v2-2025"
+      }
+    }
+  ],
+  "lessons": [
+    {
+      "key": "End of Unit Survey",
+      "name": "End of Unit Survey",
+      "absolute_position": 1,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "End of Unit Survey",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "aif5-v2-2025"
+      }
+    }
+  ],
+  "lesson_activities": [
+    {
+      "key": "6176f201-05b0-4db7-a77f-19a32139a461",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "6176f201-05b0-4db7-a77f-19a32139a461",
+        "lesson.key": "End of Unit Survey",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "aif5-v2-2025"
+      }
+    }
+  ],
+  "activity_sections": [
+    {
+      "key": "0b601e2b-18fc-4be4-b747-122ba61225a7",
+      "position": 1,
+      "properties": {
+        "progression_name": "End of Unit Survey"
+      },
+      "seeding_key": {
+        "activity_section.key": "0b601e2b-18fc-4be4-b747-122ba61225a7",
+        "lesson_activity.key": "6176f201-05b0-4db7-a77f-19a32139a461"
+      }
+    }
+  ],
+  "script_levels": [
+    {
+      "chapter": 18,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "student-eou-survey_-cyber_v2-2025"
+        ],
+        "progression": "End of Unit Survey"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "student-eou-survey_-cyber_v2-2025"
+        ],
+        "lesson.key": "End of Unit Survey",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "aif5-v2-2025",
+        "activity_section.key": "0b601e2b-18fc-4be4-b747-122ba61225a7"
+      },
+      "level_keys": [
+        "student-eou-survey_-cyber_v2-2025"
+      ]
+    }
+  ],
+  "levels_script_levels": [
+    {
+      "seeding_key": {
+        "level.key": "student-eou-survey_-cyber_v2-2025",
+        "script_level.level_keys": [
+          "student-eou-survey_-cyber_v2-2025"
+        ],
+        "lesson.key": "End of Unit Survey",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "aif5-v2-2025",
+        "activity_section.key": "0b601e2b-18fc-4be4-b747-122ba61225a7"
+      }
+    }
+  ],
+  "resources": [
+
+  ],
+  "lessons_resources": [
+
+  ],
+  "scripts_resources": [
+
+  ],
+  "scripts_student_resources": [
+
+  ],
+  "vocabularies": [
+
+  ],
+  "lessons_vocabularies": [
+
+  ],
+  "lessons_programming_expressions": [
+
+  ],
+  "objectives": [
+
+  ],
+  "lessons_standards": [
+
+  ],
+  "lessons_opportunity_standards": [
+
+  ],
+  "rubrics": [
+
+  ],
+  "learning_goals": [
+
+  ],
+  "learning_goal_evidence_levels": [
+
+  ]
+}

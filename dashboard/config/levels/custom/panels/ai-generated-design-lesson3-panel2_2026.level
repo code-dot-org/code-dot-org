@@ -1,0 +1,59 @@
+<Panels>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 73,
+  "created_at": "2026-03-04T23:31:52.000Z",
+  "level_num": "custom",
+  "user_id": 18602,
+  "properties": {
+    "encrypted": "false",
+    "offer_browser_tts": "false",
+    "panels": [
+      {
+        "text": "# How To: Add Images to Your Site\n\nImages make your webpage more engaging and visually clear. Adding photos, graphics, or illustrations helps users understand your content faster and strengthens your design.",
+        "imageUrl": "https://images.code.org/41a84d3ffd2a38785562ac41aec9b410-ai-curriculum-societal-impacts.png",
+        "key": "ai-generated-design-lesson3-panel2_2026-d565249d-470f-4c33-807a-101296eac88a",
+        "layout": "text-top-left"
+      },
+      {
+        "text": "# Upload a File\n\nTo upload an image, navigate to the **Files** panel and select the **+** sign. \n\nThen, select **Upload**.",
+        "imageUrl": "https://images.code.org/f14278949b3e72fdc78a60c2ae5d76e3-upload.gif",
+        "key": "ai-generated-design-lesson3-panel2_2026-66f7378c-2577-4044-98f2-99e16a4feb5a"
+      },
+      {
+        "text": "# Select Your Images\n\nSelect the images you want to feature on your website. \n\nMake sure they are saved as a `.png` or `.jpg` file.",
+        "imageUrl": "https://images.code.org/7d2e23c0040cf71cc4e6b8870ff5b979-upload_plant.gif",
+        "key": "ai-generated-design-lesson3-panel2_2026-011d6f4b-2601-4708-8c3f-9ec93a6dfaa8"
+      },
+      {
+        "text": "# Option A: Use AI to Add Your Images\n\nYou can use AI Tutor to add your images. Make sure to reference the specific file names, for example:\n\n> In `index.html`, replace the two placeholder images with `plant1.png` and `plant2.png`.",
+        "imageUrl": "https://images.code.org/85216c5233be842a28dbe5fa89ade9be-useAI.gif",
+        "key": "ai-generated-design-lesson3-panel2_2026-a097e32a-f777-47b8-ae45-74194e5d867a"
+      },
+      {
+        "text": "# Option B: Rename the Placeholders Yourself\n\nFind where the placeholder images are in `index.html` file and replace them with your own images.\n\nMake sure to type out the image name exactly as it appears in your files, for example `plant1.png`.",
+        "imageUrl": "https://images.code.org/d751f1c9981f16842ff5fcabce02ea00-typing.gif",
+        "key": "ai-generated-design-lesson3-panel2_2026-d348c297-0284-4908-9559-036a73170e4a"
+      },
+      {
+        "text": "# Preview Your Work\n\nSelect the **Preview** tab to view your webpage.",
+        "imageUrl": "https://images.code.org/641988f78cba77414510a4dc5ba37f54-preview.gif",
+        "key": "ai-generated-design-lesson3-panel2_2026-f47bf11c-df05-4532-86e0-54bd5b55c4de"
+      },
+      {
+        "text": "# How To: Rollback Changes\n\nIf you decide you want to revert back to a previous saved version of your webpage, you can do so at any time.",
+        "imageUrl": "https://images.code.org/41a84d3ffd2a38785562ac41aec9b410-ai-curriculum-societal-impacts.png",
+        "key": "ai-generated-design-lesson3-panel2_2026-3a6e751a-5742-4691-a550-0506507af47c",
+        "layout": "text-top-left"
+      },
+      {
+        "text": "# Versioning Your Code\n\nTo restore a previous version of your webpage, navigate to the **Version History** tab. \n\nSelect the version you want to restore and click **Restore**.",
+        "imageUrl": "https://images.code.org/a95a774bee9a473fd18bc45a163a143d-revert.gif",
+        "key": "ai-generated-design-lesson3-level1-panels-test-2025-649bd13d-64f8-4b90-bede-e0ef37621fe0"
+      }
+    ],
+    "name_suffix": "_2026"
+  },
+  "audit_log": "[{\"changed_at\":\"2026-03-04T23:31:52.539+00:00\",\"changed\":[\"cloned from \\\"ai-generated-design-lesson3-level1_2026\\\"\"],\"cloned_from\":\"ai-generated-design-lesson3-level1_2026\"},{\"changed_at\":\"2026-03-04 23:31:58 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-05 19:15:13 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-10 20:38:26 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-10 20:44:46 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-10 20:55:15 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-12 16:51:38 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-12 16:54:13 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-12 16:54:57 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"}]"
+}]]></config>
+</Panels>

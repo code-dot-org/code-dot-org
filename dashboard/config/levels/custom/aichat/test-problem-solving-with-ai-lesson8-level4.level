@@ -1,0 +1,50 @@
+<Aichat>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 71,
+  "created_at": "2025-03-20T17:18:28.000Z",
+  "level_num": "custom",
+  "user_id": 18602,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "## Reference\r\n\r\nUse AI Chat to help design a new building. \r\n\r\n### Do This:\r\n\r\n1. **Copy and paste** the prompt below into AI Chat. Press **Send** and read AI Chat's response. \r\n\r\n>You are an architect planning a building downtown. Figure out how many shops can fit on the ground floor of the new building, which is the size of a football field.\r\n\r\n2. Here are some ideas for **reference** you can add to your prompt:\r\n    - Upload a blueprint of the building\r\n    - Upload a design of the future store fronts\r\n    - Give dimensions (in square feet) for the different stores\r\n3. Revise your prompt to AI Chat by adding in **Reference**. Press **Send** and read AI Chat's response. \r\n4. Find and complete the section in your Unit Guide called \"Reference\". \r\n\r\n**Try it out!**\r\n\r\n---\r\n\r\n::: details [**Not sure what reference to add?**]\r\nTry copy and pasting the following revised prompt into AI Chat: \r\n>You are an architect planning a building downtown. Look at the blueprint attached and figure out how many shops can fit on the ground floor of the new building, which is the size of a football field.\r\n:::",
+    "aichat_settings": {
+      "initialCustomizations": {
+        "selectedModelId": "gpt-4o-mini",
+        "temperature": 0.3,
+        "systemPrompt": "",
+        "retrievalContexts": [
+
+        ],
+        "modelCardInfo": {
+          "botName": "",
+          "description": "",
+          "intendedUse": "",
+          "limitationsAndWarnings": "",
+          "testingAndEvaluation": "",
+          "exampleTopics": [
+
+          ],
+          "isPublished": false
+        }
+      },
+      "visibilities": {
+        "selectedModelId": "hidden",
+        "temperature": "hidden",
+        "systemPrompt": "hidden",
+        "retrievalContexts": "hidden",
+        "modelCardInfo": "hidden"
+      },
+      "levelSystemPrompt": "Limit your response to one paragraph.",
+      "hidePresentationPanel": true,
+      "availableModelIds": [
+        "gpt-4o-mini"
+      ]
+    },
+    "bubble_choice_description": "Use AI Chat to help you decide which two patients to assist first.",
+    "display_name": "Hospital Triage Nurse",
+    "thumbnail_url": "https://images.code.org/249b43f221aed22f6ebc602a3084c4bf-medical-clipboard.png"
+  },
+  "audit_log": "[{\"changed_at\":\"2025-03-20T17:18:28.854+00:00\",\"changed\":[\"cloned from \\\"test-problem-solving-with-ai-lesson8-level3\\\"\"],\"cloned_from\":\"test-problem-solving-with-ai-lesson8-level3\"},{\"changed_at\":\"2025-03-20 17:24:01 +0000\",\"changed\":[],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-03-20 17:26:12 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-03-20 17:36:17 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-03-20 20:16:51 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"}]"
+}]]></config>
+</Aichat>

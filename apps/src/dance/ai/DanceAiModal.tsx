@@ -1,4 +1,4 @@
-import * as GoogleBlockly from 'blockly/core';
+import * as BlocklyCore from 'blockly/core';
 import classNames from 'classnames';
 import React, {useCallback, useEffect, useMemo, useRef, useState} from 'react';
 import {useSelector} from 'react-redux';
@@ -271,17 +271,17 @@ const DanceAiModal: React.FunctionComponent<DanceAiModalProps> = ({
   }, [currentAiModalField, mode, calculateMinMax]);
 
   const labels = useMemo(() => {
-    const tempWorkspace = new GoogleBlockly.Workspace();
+    const tempWorkspace = new BlocklyCore.Workspace();
     const blocksSvg = generateAiEffectBlocks(tempWorkspace);
 
     const foregroundLabels = getLabelMap(
-      blocksSvg[0].getField('EFFECT') as GoogleBlockly.FieldDropdown
+      blocksSvg[0].getField('EFFECT') as BlocklyCore.FieldDropdown
     );
     const backgroundLabels = getLabelMap(
-      blocksSvg[1].getField('EFFECT') as GoogleBlockly.FieldDropdown
+      blocksSvg[1].getField('EFFECT') as BlocklyCore.FieldDropdown
     );
     const paletteLabels = getLabelMap(
-      blocksSvg[1].getField('PALETTE') as GoogleBlockly.FieldDropdown
+      blocksSvg[1].getField('PALETTE') as BlocklyCore.FieldDropdown
     );
 
     tempWorkspace.dispose();
@@ -339,12 +339,8 @@ const DanceAiModal: React.FunctionComponent<DanceAiModalProps> = ({
   }, [startAi]);
 
   const handleGenerateClick = useCallback(() => {
-    analyticsReporter.sendEvent(EVENTS.DANCE_PARTY_AI_BACKGROUND_GENERATED, {
-      emojis: inputs,
-    });
-
     startGenerating();
-  }, [startGenerating, inputs]);
+  }, [startGenerating]);
 
   const onClose = useCallback(() => dispatch(closeAiModal()), [dispatch]);
 
@@ -555,15 +551,8 @@ const DanceAiModal: React.FunctionComponent<DanceAiModalProps> = ({
   }, [currentAiModalField, onClose, inputs]);
 
   const handleOnClose = useCallback(() => {
-    analyticsReporter.sendEvent(EVENTS.DANCE_PARTY_AI_MODAL_CLOSED, {
-      emojis: inputs,
-      mode,
-      currentToggle,
-      generatingStep: generatingProgress.step,
-    });
-
     onClose();
-  }, [inputs, mode, currentToggle, generatingProgress.step, onClose]);
+  }, [onClose]);
 
   const showUseButton =
     mode === DanceAiModalMode.RESULTS &&
@@ -751,7 +740,7 @@ const DanceAiModal: React.FunctionComponent<DanceAiModalProps> = ({
 
         {mode === DanceAiModalMode.GENERATED && (
           <div id="check-area" className={moduleStyles.checkArea}>
-            <i className="fa fa-check-circle" />
+            <i className="fa-solid fa-circle-check" />
           </div>
         )}
 
@@ -840,7 +829,7 @@ const DanceAiModal: React.FunctionComponent<DanceAiModalProps> = ({
               iconClassName={moduleStyles.buttonIcon}
               aria-label={i18n.danceAiModalStartOverButton()}
               title={i18n.danceAiModalStartOverButton()}
-              icon="fast-backward"
+              icon="backward-fast"
             />
           </div>
           <div id="buttons-area-top-right">

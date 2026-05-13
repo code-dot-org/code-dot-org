@@ -1,107 +1,131 @@
 import classNames from 'classnames';
-import React, {useMemo, useState} from 'react';
+import React from 'react';
 
-import Button from '@cdo/apps/componentLibrary/button/Button';
+import {sendAnalytics} from '@cdo/apps/aichat/redux';
+import {jsonVideoRehypeMap} from '@cdo/apps/jsonVideo/jsonVideoRehypeMap';
+import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
+import {getStore} from '@cdo/apps/redux';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 import {commonI18n} from '@cdo/apps/types/locale';
-import {AiInteractionStatus as Status} from '@cdo/generated-scripts/sharedConstants';
-import aiBotIcon from '@cdo/static/aichat/ai-bot-icon.svg';
+import aiBotOutlineIcon from '@cdo/static/ai-bot-outline.png';
+
+import CopyableCodeBlock from '../copyableCodeBlock/CopyableCodeBlock';
 
 import {Role} from './types';
 
 import moduleStyles from './chat-message.module.scss';
-
 interface ChatMessageProps {
-  chatMessageText: string;
+  text: string;
+  postText?: React.ReactNode;
   role: Role;
-  status: string;
-  showProfaneUserMessageToggle?: boolean;
+  customStyles?: {[label: string]: string};
+  header?: React.ReactNode;
+  footer?: React.ReactNode;
+  isTA?: boolean;
+  messageStyle?: 'default' | 'warning' | 'danger';
 }
 
+const codeCopiedAnalytics = (isTA: boolean) => () =>
+  getStore().dispatch(sendAnalytics(EVENTS.CODE_COPIED, {isTA: isTA}));
+
+const taRehypeMap = {
+  pre: (props: React.ComponentPropsWithoutRef<'pre'>) => (
+    <CopyableCodeBlock {...props} onCopy={codeCopiedAnalytics(true)} />
+  ),
+  ...jsonVideoRehypeMap,
+};
+
+const nonTaRehypeMap = {
+  pre: (props: React.ComponentPropsWithoutRef<'pre'>) => (
+    <CopyableCodeBlock {...props} onCopy={codeCopiedAnalytics(false)} />
+  ),
+  ...jsonVideoRehypeMap,
+};
+
 const ChatMessage: React.FunctionComponent<ChatMessageProps> = ({
-  chatMessageText,
+  text,
+  postText,
   role,
-  status,
-  showProfaneUserMessageToggle,
+  customStyles,
+  header,
+  footer,
+  isTA,
+  messageStyle = 'default',
 }) => {
-  const [showProfaneUserMessage, setShowProfaneUserMessage] = useState(false);
+  const rehypeMap = isTA ? taRehypeMap : nonTaRehypeMap;
 
-  const hasDangerStyle =
-    status === Status.PROFANITY_VIOLATION ||
-    status === Status.USER_INPUT_TOO_LARGE ||
-    (role === Role.ASSISTANT && status === Status.ERROR);
-
-  const hasWarningStyle = status === Status.PII_VIOLATION;
-
-  const getDisplayText: string = useMemo(() => {
-    switch (status) {
-      case Status.OK:
-      case Status.UNKNOWN:
-        return chatMessageText;
-      case Status.PROFANITY_VIOLATION:
-        if (role === Role.ASSISTANT) {
-          return commonI18n.aiChatInappropriateModelMessage();
-        }
-
-        return role === Role.USER && showProfaneUserMessage
-          ? chatMessageText
-          : commonI18n.aiChatInappropriateUserMessage();
-      case Status.PII_VIOLATION:
-        return commonI18n.aiChatTooPersonalUserMessage();
-      case Status.USER_INPUT_TOO_LARGE:
-        return role === Role.ASSISTANT
-          ? commonI18n.aiChatUserInputTooLargeMessage()
-          : chatMessageText;
-      case Status.ERROR:
-        return role === Role.ASSISTANT
-          ? commonI18n.aiChatResponseError()
-          : chatMessageText;
-      default:
-        return '';
-    }
-  }, [chatMessageText, role, status, showProfaneUserMessage]);
+  const isAssistant = role === Role.ASSISTANT;
 
   return (
-    <>
-      <div className={moduleStyles[`container-${role}`]}>
-        {role === Role.ASSISTANT && (
-          <div className={moduleStyles.botIconContainer}>
-            <img
-              src={aiBotIcon}
-              alt={commonI18n.aiChatBotIconAlt()}
-              className={moduleStyles.botIcon}
-            />
+    <div
+      className={classNames(
+        moduleStyles[`message-container-${role}`],
+        customStyles && customStyles[`message-container-${role}`],
+        'uitest-chat-message'
+      )}
+    >
+      <div className={moduleStyles.grid}>
+        {isAssistant && isTA && (
+          <div className={moduleStyles.botIconTAOverlayContainer}>
+            <div className={classNames(moduleStyles.botIconContainer)}>
+              <img
+                src={aiBotOutlineIcon}
+                alt={commonI18n.aiChatBotIconAlt()}
+                className={moduleStyles.botIcon}
+              />
+            </div>
+            {isTA && (
+              <div className={moduleStyles.botOverlay}>
+                <span>{'TA'}</span>
+              </div>
+            )}
           </div>
         )}
-        <div
-          className={classNames(
-            moduleStyles[`message-${role}`],
-            hasDangerStyle && moduleStyles.danger,
-            hasWarningStyle && moduleStyles.warning
+        <div className={moduleStyles[`message-and-header-${role}`]}>
+          {header && <div className={moduleStyles.header}>{header}</div>}
+          {(text || postText) && (
+            <div
+              className={classNames(
+                moduleStyles[`message-${role}`],
+                customStyles && customStyles[`message-${role}`],
+                messageStyle === 'danger' && moduleStyles.danger,
+                messageStyle === 'warning' && moduleStyles.warning
+              )}
+              aria-label={
+                role === Role.ASSISTANT
+                  ? commonI18n.aiChatMessageBot()
+                  : commonI18n.aiChatMessageUser()
+              }
+            >
+              {role === Role.ASSISTANT ? (
+                <div className={moduleStyles.assistantMessageContent}>
+                  <SafeMarkdown
+                    markdown={text}
+                    rehypeMap={rehypeMap}
+                    openExternalLinksInNewTab
+                  />
+                  {postText}
+                </div>
+              ) : (
+                <p>{text}</p>
+              )}
+            </div>
           )}
-          aria-label={
-            role === Role.ASSISTANT ? 'AI bot' : 'User' + ' chat message'
-          }
-        >
-          <SafeMarkdown markdown={getDisplayText} />
         </div>
-      </div>
-      {showProfaneUserMessageToggle &&
-        role === Role.USER &&
-        status === Status.PROFANITY_VIOLATION && (
-          <div className={moduleStyles[`container-user`]}>
-            <Button
-              onClick={() => {
-                setShowProfaneUserMessage(!showProfaneUserMessage);
-              }}
-              text={showProfaneUserMessage ? 'Hide message' : 'Show message'}
-              size="xs"
-              type="tertiary"
-              className={moduleStyles.userProfaneMessageButton}
-            />
+        {footer && (
+          <div
+            className={classNames(
+              isAssistant &&
+                (isTA
+                  ? moduleStyles.assistantFooterBotIcon
+                  : moduleStyles.assistantFooterNoBotIcon)
+            )}
+          >
+            {footer}
           </div>
         )}
-    </>
+      </div>
+    </div>
   );
 };
 

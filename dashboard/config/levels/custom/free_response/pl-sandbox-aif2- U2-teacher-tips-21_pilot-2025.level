@@ -1,0 +1,28 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "game_id": 52,
+  "created_at": "2025-11-07T15:29:28.000Z",
+  "level_num": "custom",
+  "user_id": 0,
+  "properties": {
+    "long_instructions": "# Teaching with AI\r\n\r\n#### As your students start using AI to help them learn and write code, it’s normal to feel a mix of excitement and uncertainty. The goal isn’t to have every student produce the same answer — it’s to help them think, explore, and build confidence with coding in new ways.\r\n\r\n#### Here are some tips to help you guide students as they use AI in your classroom:\r\n---\r\n<!-- Container -->\r\n<div style=\"max-width:800px; margin:auto; font-size:14px; display:flex; flex-direction:column; gap:12px;\">\r\n\r\n  <!-- Tip 1 -->\r\n  <details style=\"border:2px solid #0093A4; border-radius:10px; background:#ffffff; box-shadow:2px 4px 8px rgba(0,0,0,0.2); padding:10px;\">\r\n    <summary style=\"cursor:pointer; font-weight:bold; color:#0093A4;font-size:16px;\">💡 1. Embrace Different Solutions</summary>\r\n    <p style=\"margin-top:8px; font-size:16px;\">Students’ answers will look different — and that’s a good thing! AI encourages creativity and multiple approaches. Focus on how students reason through their code, not whether it looks identical.</p>\r\n  </details>\r\n\r\n  <!-- Tip 2 -->\r\n  <details style=\"border:2px solid #0093A4; border-radius:10px; background:#ffffff; box-shadow:2px 4px 8px rgba(0,0,0,0.2); padding:10px;\">\r\n    <summary style=\"cursor:pointer; font-weight:bold; color:#0093A4; font-size:16px;\">⏳ 2. Model Patience</summary>\r\n    <p style=\"margin-top:8px ;font-size:16px;\">AI responses can take time. Encourage students to review their code or discuss ideas while waiting. This helps them stay engaged and reflective.</p>\r\n  </details>\r\n\r\n  <!-- Tip 3 -->\r\n  <details style=\"border:2px solid #0093A4; border-radius:10px; background:#ffffff; box-shadow:2px 4px 8px rgba(0,0,0,0.2); padding:10px; font-size:16px;\">\r\n    <summary style=\"cursor:pointer; font-weight:bold; color:#0093A4; font-size:16px;\">🧩 3. Debug in Small Steps</summary>\r\n    <p style=\"margin-top:8px;font-size:16px;\">When debugging with AI, share only a small snippet of code at a time. Step-by-step fixes make it easier for students to understand what’s changing and why.</p>\r\n  </details>\r\n\r\n  <!-- Tip 4 -->\r\n  <details style=\"border:2px solid #0093A4; border-radius:10px; background:#ffffff; box-shadow:2px 4px 8px rgba(0,0,0,0.2); padding:10px;\">\r\n    <summary style=\"cursor:pointer; font-weight:bold; color:#0093A4;font-size:16px;\">🗣️ 4. Be Specific in Prompts</summary>\r\n    <p style=\"margin-top:8px; font-size:16px;\">Encourage students to clearly state what they want AI to do — for example, “create an event listener,” “add a variable,” or “debug this section.” Specific prompts lead to focused and useful answers.</p>\r\n  </details>\r\n\r\n  <!-- Tip 5 -->\r\n  <details style=\"border:2px solid #0093A4; border-radius:10px; background:#ffffff; box-shadow:2px 4px 8px rgba(0,0,0,0.2); padding:10px;\">\r\n    <summary style=\"cursor:pointer; font-weight:bold; color:#0093A4;font-size:16px;\">📘 5. Use the Teacher Panel </summary>\r\n    <p style=\"margin-top:8px; font-size:16px;\">When logged in, you can view an example solution — but remember, it’s just one approach. Use it as a reference, not a template. The variety in student solutions is where real learning happens.</p>\r\n    <img src=\"https://images.code.org/51d463872fd3b48e6b7eb7475967dfa9-image-1762375891002.1510457.gif\" alt=\"gif showing teacher panel on right side of screen\" width=\"350px\" style=\"display: block; margin-left: auto; margin-right: auto;\">\r\n  </details>\r\n\r\n  <!-- Tip 6 -->\r\n  <details style=\"border:2px solid #0093A4; border-radius:10px; background:#ffffff; box-shadow:2px 4px 8px rgba(0,0,0,0.2); padding:10px; \">\r\n    <summary style=\"cursor:pointer; font-weight:bold; color:#0093A4;font-size:16px;\">🤝 6. Encourage Reflection</summary>\r\n    <p style=\"margin-top:8px; font-size:16px;\">Ask students to explain why AI’s suggestion works and how it connects to what they’ve already learned. Reflection builds deeper understanding and confidence.</p>\r\n  </details>\r\n\r\n  <!-- Tip 7 -->\r\n  <details style=\"border:2px solid #0093A4; border-radius:10px; background:#ffffff; box-shadow:2px 4px 8px rgba(0,0,0,0.2); padding:10px;\">\r\n    <summary style=\"cursor:pointer; font-weight:bold; color:#0093A4; font-size:16px;\">🧠 7. Keep the Focus on Thinking</summary>\r\n    <p style=\"margin-top:8px; font-size:16px;\">AI is a tool for amplifying student thinking — not replacing it. Encourage curiosity, creativity, and reasoning as students code with AI support.</p>\r\n  </details>\r\n\r\n</div>\r\n\r\n\r\n\r\n---\r\n\r\n## Discussion\r\n\r\n>- #### What excites you most about how AI could help your students grow as coders?\r\n> - #### How might AI open up new ways for students to think creatively and independently when solving problems?\r\n\r\n\r\n",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "parent_level_id": 19018,
+    "name_suffix": "_pilot-2025",
+    "encrypted": "false",
+    "instructions_important": "false",
+    "allow_user_uploads": "false",
+    "submittable": "false",
+    "peer_reviewable": "false",
+    "optional": "false",
+    "allow_multiple_attempts": "true",
+    "stay_on_level_after_submit": "false"
+  },
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2025-11-07T15:29:28.465+00:00\",\"changed\":[\"cloned from \\\"pl-sandbox-aif2- U2-teacher-tips-21\\\"\"],\"cloned_from\":\"pl-sandbox-aif2- U2-teacher-tips-21\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</FreeResponse>

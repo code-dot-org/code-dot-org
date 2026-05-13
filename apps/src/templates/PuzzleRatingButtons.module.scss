@@ -1,0 +1,65 @@
+.container {
+  display: inline-block;
+}
+
+.question {
+  font-size: 16px;
+  color: #949ca2;
+  margin-right: 10px;
+}
+
+.button {
+  fill: #949ca2;
+  cursor: pointer;
+  display: inline-block;
+  background-color: #e7e8ea;
+  border: 1px solid #949ca2;
+  padding: 5px 5px 0;
+  vertical-align: middle;
+}
+
+.button:active {
+  background-color: #c6cacd;
+}
+
+.button svg {
+  pointer-events: none;
+}
+
+.like {
+  border-radius: 2px 0 0 2px;
+}
+
+.dislike {
+  border-radius: 0 2px 2px 0;
+}
+
+.likeEnabled {
+  fill: #c00;
+  background-color: #c6cacd;
+}
+
+.likeEnabled:hover {
+  fill: #d62911;
+}
+
+.likeDisabled:hover {
+  fill: #333;
+}
+
+.dislikeEnabled {
+  fill: #0094ca;
+  background-color: #c6cacd;
+}
+
+.dislikeEnabled:hover {
+  fill: #00647f;
+}
+
+.dislikeDisabled:hover {
+  fill: #2d3139;
+}
+
+.legacyButton {
+  vertical-align: middle;
+}

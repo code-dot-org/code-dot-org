@@ -1,0 +1,9 @@
+name 'programming-fundamentals-lesson3-level2_2025_launch'
+display_name 'Algorithm Scenario Choices'
+description 'Pick one of the scenarios below and design an algorithm to address it.'
+
+sublevels
+level 'programming-fundamentals-lesson1-level1a_2025'
+level 'programming-fundamentals-lesson1-level1b_2025'
+level 'programming-fundamentals-lesson1-level1c_2025'
+level 'programming-fundamentals-lesson1-level1d_2025'

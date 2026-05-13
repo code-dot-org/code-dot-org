@@ -1,0 +1,23 @@
+{
+  "name": "virtual-holding-place",
+  "script_names": [
+    "virtual-holding-place"
+  ],
+  "original_script_names": [
+    "virtual-holding-place"
+  ],
+  "published_state": "beta",
+  "instruction_type": "teacher_led",
+  "participant_audience": "student",
+  "instructor_audience": "teacher",
+  "properties": {
+    "family_name": "virtual-holding-place",
+    "version_year": "unversioned"
+  },
+  "resources": [
+
+  ],
+  "student_resources": [
+
+  ]
+}

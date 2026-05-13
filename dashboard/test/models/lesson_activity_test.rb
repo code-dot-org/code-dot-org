@@ -2,17 +2,17 @@ require 'test_helper'
 
 class LessonActivityTest < ActiveSupport::TestCase
   test "lesson can contain activities" do
-    lesson = create :lesson
-    activity1 = create :lesson_activity, lesson: lesson
-    activity2 = create :lesson_activity, lesson: lesson
+    lesson = create(:lesson)
+    activity1 = create(:lesson_activity, lesson: lesson)
+    activity2 = create(:lesson_activity, lesson: lesson)
     assert_equal [activity1, activity2], lesson.lesson_activities
   end
 
   test 'seeding_key' do
-    lesson_group = create :lesson_group
+    lesson_group = create(:lesson_group)
     script = lesson_group.script
-    lesson = create :lesson, lesson_group: lesson_group, script: script
-    lesson_activity = create :lesson_activity, lesson: lesson
+    lesson = create(:lesson, lesson_group: lesson_group, script: script)
+    lesson_activity = create(:lesson_activity, lesson: lesson)
     seed_context = Services::ScriptSeed::SeedContext.new(
       script: script,
       lesson_groups: script.lesson_groups.to_a,

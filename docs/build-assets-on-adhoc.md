@@ -7,7 +7,7 @@
   - Run `aws/ci_build` every minute on daemon environments.
 
 - `aws/ci_build`
-  - Fetch and pull git changes. Run bundle install. Run `bundle exec rake ci`
+  - Fetch and pull git changes. Run bundle install. Run `bundle exec rake infra:ci`
   - `lib/cdo/rake_utils.rb` contains git, npm, rake helper functions
 
 - `lib/rake/ci.rake`

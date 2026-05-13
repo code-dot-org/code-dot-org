@@ -1,13 +1,13 @@
-import * as GoogleBlockly from 'blockly/core';
+import * as BlocklyCore from 'blockly/core';
 
 import {BLOCK_TYPES} from '../constants';
 import {BlocklyWrapperType, XmlBlockConfig} from '../types';
+import {shouldSkipHiddenWorkspace} from '../utils/workspace/serialization';
 import {
   FALSEY_DEFAULT,
   TRUTHY_DEFAULT,
   readBooleanAttribute,
-  shouldSkipHiddenWorkspace,
-} from '../utils';
+} from '../utils/xml/booleanAttributes';
 
 // The user created attribute needs to be read from XML start blocks as 'usercreated'.
 // Once this has been done, all subsequent steps in the serialization use userCreated.
@@ -16,7 +16,7 @@ const USER_CREATED_XML_ATTRIBUTE = 'usercreated';
 export default function initializeBlocklyXml(
   blocklyWrapper: BlocklyWrapperType
 ) {
-  // Clear xml namespace. This property is readonly in Google Blockly.
+  // Clear xml namespace. This property is readonly in Blockly.
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   (blocklyWrapper.utils.xml as any).NAME_SPACE = '';
 
@@ -26,7 +26,7 @@ export default function initializeBlocklyXml(
   // Override domToBlock so that we can gracefully handle unknown blocks.
   blocklyWrapper.Xml.domToBlock = function (
     xmlBlock: Element,
-    workspace: GoogleBlockly.Workspace
+    workspace: BlocklyCore.Workspace
   ) {
     let block;
     try {
@@ -66,7 +66,7 @@ export default function initializeBlocklyXml(
       addNameToBlockFunctionDefinitionBlock(xmlChild);
       addMutationToProcedureDefBlocks(xmlChild);
       addMutationToMiniToolboxBlocks(xmlChild);
-      makeWhenRunUndeletable(xmlChild);
+      lockWhenRunBlock(xmlChild);
 
       const blockly_block = Blockly.Xml.domToBlock(xmlChild, workspace);
       const x = parseInt(xmlChild.getAttribute('x') || '0', 10);
@@ -91,7 +91,7 @@ export default function initializeBlocklyXml(
  * @returns {string} The XML representation of the project.
  *
  */
-export function getProjectXml(workspace: GoogleBlockly.WorkspaceSvg) {
+export function getProjectXml(workspace: BlocklyCore.WorkspaceSvg) {
   // Start by getting the XML for all blocks on the workspace.
   const workspaceXml = Blockly.Xml.blockSpaceToDom(workspace);
 
@@ -177,11 +177,12 @@ export function addMutationToMiniToolboxBlocks(blockElement: Element) {
  *
  * @param {Element} blockElement - The XML element for a single block.
  */
-export function makeWhenRunUndeletable(blockElement: Element) {
+function lockWhenRunBlock(blockElement: Element) {
   if (blockElement.getAttribute('type') !== BLOCK_TYPES.whenRun) {
     return;
   }
   blockElement.setAttribute('deletable', 'false');
+  blockElement.setAttribute('movable', 'false');
 }
 
 /**
@@ -193,7 +194,7 @@ export function makeWhenRunUndeletable(blockElement: Element) {
  *
  * @param {Element} blockElement - The XML element for a single block.
  */
-export function addMutationToBehaviorBlocks(blockElement: Element) {
+function addMutationToBehaviorBlocks(blockElement: Element) {
   const blockType = blockElement.getAttribute('type');
   const behaviorTypes: string[] = [
     BLOCK_TYPES.behaviorDefinition,
@@ -211,7 +212,7 @@ export function addMutationToBehaviorBlocks(blockElement: Element) {
   // We need to keep track of whether the user created the behavior or not.
   // If not, it needs a static behavior id in order to be translatable
   // (e.g. shared behaviors).
-  // In CDO Blockly, the 'usercreated' flag was set on the block. Google Blockly
+  // In legacy projects, the 'usercreated' flag was set on the block. Today Blockly
   // expects this kind of extra state in a mutator.
   const userCreated = readBooleanAttribute(
     blockElement,
@@ -220,7 +221,7 @@ export function addMutationToBehaviorBlocks(blockElement: Element) {
   );
   mutationElement.setAttribute('userCreated', `${userCreated}`);
 
-  // In CDO Blockly, behavior ids were stored on the field. Google Blockly
+  // In legacy projects, behavior ids were stored on the field. Today Blockly
   // expects this kind of extra state in a mutator.
   const nameField =
     getFieldOrTitle(blockElement, 'VAR') ||
@@ -240,7 +241,7 @@ export function addMutationToBehaviorBlocks(blockElement: Element) {
  *
  * @param {Element} blockElement - The XML element for a single block.
  */
-export function addMutationToProcedureDefBlocks(blockElement: Element) {
+function addMutationToProcedureDefBlocks(blockElement: Element) {
   if (blockElement.getAttribute('type') !== BLOCK_TYPES.procedureDefinition) {
     return;
   }
@@ -251,7 +252,7 @@ export function addMutationToProcedureDefBlocks(blockElement: Element) {
   blockElement.insertBefore(mutationElement, blockElement.firstChild);
 
   // We need to keep track of whether the user created the procedure definition.
-  // In CDO Blockly, the 'usercreated' flag was set on the block. Google Blockly
+  // In legacy projects, the 'usercreated' flag was set on the block. Today Blockly
   // expects this kind of extra state in a mutator.
   const userCreated = readBooleanAttribute(
     blockElement,
@@ -267,7 +268,7 @@ export function addMutationToProcedureDefBlocks(blockElement: Element) {
  *
  * @param {Element} blockElement - The XML element for a single block.
  */
-export function addMutationToInvisibleBlocks(blockElement: Element) {
+function addMutationToInvisibleBlocks(blockElement: Element) {
   const invisible = !readBooleanAttribute(
     blockElement,
     'uservisible',
@@ -290,7 +291,7 @@ export function addMutationToInvisibleBlocks(blockElement: Element) {
  * to the definition block's NAME field.
  * @param {Element} blockElement - The XML element for a single block.
  */
-export function addNameToBlockFunctionDefinitionBlock(blockElement: Element) {
+function addNameToBlockFunctionDefinitionBlock(blockElement: Element) {
   const blockType = blockElement.getAttribute('type');
   if (blockType !== BLOCK_TYPES.procedureDefinition) {
     return;
@@ -311,7 +312,7 @@ export function addNameToBlockFunctionDefinitionBlock(blockElement: Element) {
  *
  * @param {Element} blockElement - The XML element for a single block.
  */
-export function addNameToBlockFunctionCallBlock(blockElement: Element) {
+function addNameToBlockFunctionCallBlock(blockElement: Element) {
   const blockType = blockElement.getAttribute('type');
   if (blockType !== BLOCK_TYPES.procedureCall) {
     return;
@@ -336,9 +337,9 @@ function addMissingBehaviorId(blockElement: Element) {
   const blockType = blockElement.getAttribute('type');
   if (blockType === BLOCK_TYPES.behaviorGet) {
     const behaviorNameField =
-      // CDO Blockly projects used a VAR field to store the behavior name.
+      // Legacy projects used a VAR field to store the behavior name.
       getFieldOrTitle(blockElement, 'VAR') ||
-      // Google Blockly projects use a NAME field to store the behavior name.
+      // Today Blockly uses a NAME field to store the behavior name.
       getFieldOrTitle(blockElement, 'NAME');
     setIdFromTextContent(behaviorNameField);
   } else if (blockType === BLOCK_TYPES.behaviorDefinition) {
@@ -369,7 +370,7 @@ function setIdFromTextContent(element: Element | null) {
  *
  * @param {Element} blockElement - The XML element for a single block.
  */
-export function addMutationToTextJoinBlock(blockElement: Element) {
+function addMutationToTextJoinBlock(blockElement: Element) {
   const blockType = blockElement.getAttribute('type');
   if (blockType && !['text_join', 'text_join_simple'].includes(blockType)) {
     return;
@@ -381,8 +382,10 @@ export function addMutationToTextJoinBlock(blockElement: Element) {
   blockElement.insertBefore(mutationElement, blockElement.firstChild);
 
   // We need to keep track of the expected number of inputs in order to create them all.
-  // Google Blockly expects this kind of extra state to be in a mutator.
-  const inputCount = blockElement.getAttribute('inputcount');
+  // Blockly expects this kind of extra state to be in a mutator.
+  const inputCount =
+    mutationElement.getAttribute('items') ||
+    blockElement.getAttribute('inputcount');
   mutationElement.setAttribute('items', `${inputCount}`);
 }
 
@@ -450,7 +453,7 @@ function makeLockedBlockImmovable(block: Element) {
  * @param {Element} xml - The XML element containing block elements.
  * @returns {Element[]} An array of block elements or an empty array if no blocks are present.
  */
-export function getBlockElements(xml: Element) {
+function getBlockElements(xml: Element) {
   // Convert XML to an array of block elements
   return Array.from(xml.querySelectorAll('xml > block'));
 }

@@ -1,0 +1,11 @@
+name 'testB-elem-career-journeys-explore-projects_b_csf-e_standalone'
+display_name 'Future Me Project Examples'
+description '###Explore these project examples to get ideas for your own Career Journey project! <br> Base level projects are labeled  with a seedling <i class="fa-solid fa-seedling"></i><br> If you are ready for more complex code check out the examples with a shooting star <i class="fa-solid fa-star-shooting"></i></i>'
+
+sublevels
+level 'test-elem-career-journeys-example1_b_csf-e_standalone'
+level 'test-elem-career-journeys-example2_b_csf-e_standalone'
+level 'test-elem-career-journeys-example3_b_csf-e_standalone'
+level 'test-elem-career-journeys-example4_b_csf-e_standalone'
+level 'test-elem-career-journeys-example5_b_csf-e_standalone'
+level 'test-elem-career-journeys-example6_b_csf-e_standalone'

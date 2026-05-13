@@ -2,6 +2,7 @@
 @as_student
 Feature: App Lab Eyes - Part 2
 
+@skip
 Scenario: Applab visualization scaling
   When I open my eyes to test "Applab visualization scaling"
   And I am on "http://studio.code.org/projects/applab/new"
@@ -17,46 +18,46 @@ Scenario: Applab visualization scaling
   And I press "show-code-header"
   And I add code for a canvas and a button
   And I press "runButton"
-  And I see no difference for "medium scaling" using stitch mode "none"
+  And I see no difference for "medium scaling"
 
   Then I drag the visualization grippy by 100 pixels
-  And I see no difference for "large scaling" using stitch mode "none"
+  And I see no difference for "large scaling"
 
   Then I drag the visualization grippy by -400 pixels
-  And I see no difference for "small scaling" using stitch mode "none"
+  And I see no difference for "small scaling"
 
   Then I close my eyes
 
 Scenario: Applab embedded level
   When I open my eyes to test "Applab embedded level"
-  And I am on "http://studio.code.org/s/allthethings/lessons/18/levels/12"
+  And I am on "http://studio.code.org/courses/allthethingscourse/units/1/lessons/18/levels/12"
   And I see no difference for "embedded level"
   Then I close my eyes
 
 Scenario: Applab widget mode
   When I open my eyes to test "Applab widget mode"
-  And I am on "http://studio.code.org/s/allthethings/lessons/18/levels/22"
+  And I am on "http://studio.code.org/courses/allthethingscourse/units/1/lessons/18/levels/22"
   And I wait until element "#start_over_button" is visible
   And I see no difference for "widget mode level"
   Then I close my eyes
 
 Scenario: Applab Instructions in Top Pane
   When I open my eyes to test "Applab Instructions in top pane"
-  And I am on "http://studio.code.org/s/allthethings/lessons/18/levels/9"
+  And I am on "http://studio.code.org/courses/allthethingscourse/units/1/lessons/18/levels/9"
   And I wait for the lab page to fully load
   And I see no difference for "top instructions enabled on standard level"
-  Then I click selector ".fa-chevron-circle-up"
+  Then I click selector ".fa-circle-chevron-up"
   And I see no difference for "top instructions collapsed"
-  Then I click selector ".fa-chevron-circle-down"
+  Then I click selector ".fa-circle-chevron-down"
   And I see no difference for "top instructions uncollapsed"
   Then I press "hide-toolbox-icon"
   And I see no difference for "toolbox collapsed"
 
-  When I am on "http://studio.code.org/s/allthethings/lessons/18/levels/10"
+  When I am on "http://studio.code.org/courses/allthethingscourse/units/1/lessons/18/levels/10"
   And I wait for the lab page to fully load
   And I see no difference for "top instructions enabled on instructionless level"
 
-  When I am on "http://studio.code.org/s/allthethings/lessons/18/levels/12"
+  When I am on "http://studio.code.org/courses/allthethingscourse/units/1/lessons/18/levels/12"
   And I wait for the lab page to fully load
   And I see no difference for "top instructions enabled on embed level"
   Then I close my eyes

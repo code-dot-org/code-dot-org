@@ -17,30 +17,11 @@ Dashboard::Application.configure do
   config.public_file_server.enabled = true
   config.public_file_server.headers = {'Cache-Control' => "public, max-age=3600, s-maxage=1800"}
 
-  is_ci = !!ENV.fetch('CI', nil)
-
-  # test environment should use precompiled, minified, digested assets like production,
-  # unless it's being used for unit tests.
-  ci_test = !!(ENV['UNIT_TEST'] || is_ci)
-
-  unless ci_test
-    # Compress JavaScripts and CSS.
-    # webpack handles js compression for us
-    # config.assets.js_compressor = :uglifier
-    # config.assets.css_compressor = :sass
-
-    # Version of your assets, change this if you want to expire all your assets.
-    config.assets.version = '1.0'
-
-    # Avoid loading all i18n files up front, which can significantly slow down initialization.
-    # Instead, it only loads i18n files that belong to the current locale.
-    config.i18n.backend = Cdo::I18n::LazyLoadableBackend.new(lazy_load: true)
-  end
-
-  # In CI environments (ie, Drone), stub relevant AWS services (currently just SageMaker)
+  # In CI environments (ie, Drone), stub relevant third-party services
+  # (currently SageMaker, our safety check via OpenAI, and currently unused AWS Comprehend safety check)
   # so we can run UI tests for our AI Chat (ie, Generative AI) lab.
-  if is_ci
-    config.stub_aichat_aws_services = true
+  if CI::Utils.ci_job_ui_tests?
+    config.stub_aichat_external_services = true
   end
 
   config.assets.quiet = true
@@ -48,9 +29,6 @@ Dashboard::Application.configure do
   # Show full error reports and disable caching.
   config.consider_all_requests_local = true
   config.action_controller.perform_caching = false
-
-  # Disable Rails.cache when running unit tests.
-  config.cache_store = :memory_store, {size: 64.megabytes} if ci_test
 
   # config.action_mailer.raise_delivery_errors = true
   # config.action_mailer.delivery_method = :smtp
@@ -62,8 +40,9 @@ Dashboard::Application.configure do
   # Raise exceptions instead of rendering exception templates.
   config.action_dispatch.show_exceptions = true
 
-  # Disable request forgery protection in test environment.
-  config.action_controller.allow_forgery_protection = false
+  # Enable request forgery protection in the test environment. Unit tests
+  # disable it at the runtime layer in test_helper.rb.
+  config.action_controller.allow_forgery_protection = true
 
   # Tell Action Mailer not to deliver emails to the real world.
   # The :test delivery method accumulates sent emails in the
@@ -87,7 +66,7 @@ Dashboard::Application.configure do
   # Set to :debug to see everything in the log.
   config.log_level = :info
 
-  if CDO.running_web_application?
+  if CDO.test_system? && !ENV['UNIT_TEST']
     # Use default logging formatter so that PID and timestamp are not suppressed.
     config.log_formatter = Logger::Formatter.new
 
@@ -99,4 +78,9 @@ Dashboard::Application.configure do
   end
 
   config.experiment_cache_time_seconds = 0
+
+  # Prevent merge conflicts on schema.rb by skipping regeneration of schema.rb
+  # on the test machine. this is necessary because as of April 2025 the test DB
+  # schema differs from other environments due to utf8mb3 vs utf8mb4 issues.
+  config.active_record.dump_schema_after_migration = !CDO.test_system?
 end

@@ -1,32 +1,50 @@
+import {Typography} from '@mui/material';
 import React from 'react';
 
-import {Heading1, Heading2, Heading3} from './Headings';
-
 export default {
-  // The component and subcomponents properties are somewhat invalid since all headings hold the
-  // same weight here, but Storybook requires us to set the component property.
-  component: Heading1,
-  subcomponents: {Heading2, Heading3},
+  // The component property is required by Storybook; we use MUI Typography
+  // here since all stories render Typography variants directly.
+  component: Typography,
 };
 
 //
 // STORIES
 //
 
-export const Heading_1 = args => <Heading1>The quick brown fox</Heading1>;
+export const Heading_1 = args => (
+  <Typography variant="h1" gutterBottom>
+    The quick brown fox
+  </Typography>
+);
 
-export const Heading_2 = args => <Heading2>The quick brown fox</Heading2>;
+export const Heading_2 = args => (
+  <Typography variant="h2" gutterBottom>
+    The quick brown fox
+  </Typography>
+);
 
-export const Heading_3 = args => <Heading3>The quick brown fox</Heading3>;
+export const Heading_3 = args => (
+  <Typography variant="h3" gutterBottom>
+    The quick brown fox
+  </Typography>
+);
 
 export const Stacked = args => (
   <div>
-    <Heading1>The quick brown fox</Heading1>
-    <Heading2>The quick brown fox</Heading2>
-    <Heading3>The quick brown fox</Heading3>
+    <Typography variant="h1" gutterBottom>
+      The quick brown fox
+    </Typography>
+    <Typography variant="h2" gutterBottom>
+      The quick brown fox
+    </Typography>
+    <Typography variant="h3" gutterBottom>
+      The quick brown fox
+    </Typography>
   </div>
 );
 
 export const WithPassThroughProps = args => (
-  <Heading1 style={{color: 'red'}}>The quick brown fox</Heading1>
+  <Typography style={{color: 'red'}} variant="h1" gutterBottom>
+    The quick brown fox
+  </Typography>
 );

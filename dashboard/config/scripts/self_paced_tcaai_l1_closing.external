@@ -1,0 +1,53 @@
+name 'self-paced-TCaAI-L1-Closing'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Great Job! 🎉
+
+#### So far, you can:
+
+* #### Describe how Project-Based Learning (PBL) structures - such as driving questions, milestones, critique, and public product - shape the flow of the unit
+* #### Identify the purpose and expectations of the culminating unit project
+* #### Explore the digital lab environments students will use throughout the unit
+
+## Up Next
+
+#### In the next section of this professional learning module, you will learn more about Milestone 1: AI In My World.
+
+___
+
+<table width="100%" cellspacing="0" cellpadding="0" style="border-collapse: collapse; margin-bottom: 20px;">
+  <tr>
+    <td style="width: 16.6%; vertical-align: top; background-color: #026C7A; color: #ffffff; padding: 20px; text-align: center; font-size: 13pt; font-weight: bold; border-top-left-radius: 10px; border-bottom-left-radius: 10px;">
+      ⭐<br>
+      Introduction to Thinking Critically About AI
+    </td>
+    <td style="width: 16.6%; vertical-align: top; background-color: #F7F8FA; color: #000000; padding: 20px; text-align: center; font-size: 13pt;">
+      🌏<br>
+      <strong>Milestone 1:</strong><br>
+      AI in My World
+    </td>
+    <td style="width: 16.6%; vertical-align: top; background-color: #F7F8FA; color: #000000; padding: 20px; text-align: center; font-size: 13pt;">
+      🔨<br>
+      <strong>Milestone 2:</strong><br>
+      Responsible Creation &amp; Impact
+    </td>
+    <td style="width: 16.6%; vertical-align: top; background-color: #F7F8FA; color: #000000; padding: 20px; text-align: center; font-size: 13pt;">
+      💻<br>
+      <strong>Milestone 3:</strong><br>
+      Truth &amp; Credibility
+    </td>
+    <td style="width: 16.6%; vertical-align: top; background-color: #F7F8FA; color: #000000; padding: 20px; text-align: center; font-size: 13pt;">
+      🦺<br>
+      <strong>Milestone 4:</strong><br>
+      Safety &amp; Privacy
+    </td>
+    <td style="width: 16.6%; vertical-align: top; background-color: #F7F8FA; color: #000000; padding: 20px; text-align: center; font-size: 13pt; border-top-right-radius: 10px; border-bottom-right-radius: 10px;">
+      🗣️<br>
+      <strong>Milestone 5:</strong><br>
+      Synthesis &amp; Sharing
+    </td>
+  </tr>
+</table>
+MARKDOWN

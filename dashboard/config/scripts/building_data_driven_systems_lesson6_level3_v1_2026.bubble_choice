@@ -1,0 +1,10 @@
+name 'building-data-driven-systems-lesson6-level3-v1-2026'
+display_name 'Choose an App and Plan Its Data'
+description '### Choose an app to design. Label the data each part of the interface needs so you can build it in the next levels.'
+
+sublevels
+level 'building-data-driven-systems-lesson6-level3a-v1-2026'
+level 'building-data-driven-systems-lesson6-level3b-v1-2026'
+level 'building-data-driven-systems-lesson6-level3c-v1-2026'
+
+uses_lab2

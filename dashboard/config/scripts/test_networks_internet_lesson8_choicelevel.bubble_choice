@@ -1,0 +1,9 @@
+name 'test-networks-internet-lesson8-choiceLevel'
+display_name 'Different Experiences using the Internet'
+description 'Pick one of the personas below. Interact with one of the chatbots below and record what challenges they face in your handout.'
+
+sublevels
+level 'test-networks-internet-lesson8-persona1'
+level 'test-networks-internet-lesson8-persona2'
+level 'test-networks-internet-lesson8-persona3'
+level 'test-networks-internet-lesson8-persona4'

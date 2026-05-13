@@ -3,14 +3,15 @@ import DanceParty from '@code-dot-org/dance-party/src/p5.dance';
 import danceCode from '@code-dot-org/dance-party/src/p5.dance.interpreted.js';
 import ResourceLoader from '@code-dot-org/dance-party/src/ResourceLoader';
 import React from 'react';
-import ReactDOM from 'react-dom';
 import {Provider} from 'react-redux';
 
+import {getCode} from '@cdo/apps/blockly/utils';
 import ErrorBoundary from '@cdo/apps/lab2/ErrorBoundary';
 import {ErrorFallbackPage} from '@cdo/apps/lab2/views/ErrorFallbackPage';
-import firehoseClient from '@cdo/apps/metrics/firehose';
+import localization from '@cdo/apps/localization';
 import {showArrowButtons} from '@cdo/apps/templates/arrowDisplayRedux';
 import {SignInState} from '@cdo/apps/templates/currentUserRedux';
+import {createReactRoot} from '@cdo/apps/util/createReactRoot';
 
 import {saveReplayLog} from '../code-studio/components/shareDialogRedux';
 import {SongTitlesToArtistTwitterHandle} from '../code-studio/dancePartySongArtistTags';
@@ -191,7 +192,7 @@ Dance.prototype.init = function (config) {
     userId: state.currentUser.userId,
   });
 
-  ReactDOM.render(
+  createReactRoot(
     <Provider store={getStore()}>
       <ErrorBoundary
         // this is actually the Lab2 Error Fallback page. We may want to refactor this after Hour of Code.
@@ -215,7 +216,10 @@ Dance.prototype.init = function (config) {
         />
       </ErrorBoundary>
     </Provider>,
-    document.getElementById(config.containerId)
+    document.getElementById(config.containerId),
+    {
+      legacyReactDomRender: true,
+    }
   );
 };
 
@@ -241,16 +245,12 @@ Dance.prototype.initSongs = async function (config) {
       useRestrictedSongs: config.useRestrictedSongs,
       selectSongOptions: config.level,
       onAuthError: () => {
-        firehoseClient.putRecord(
+        analyticsReporter.sendEvent(
+          EVENTS.DANCE_PARTY_RESTRICTED_SONG_AUTH_ERROR,
           {
-            study: 'restricted-song-auth',
-            event: 'initial-auth-error',
-            data_json: JSON.stringify({
-              currentUrl: window.location.href,
-              channelId: config.channel,
-            }),
-          },
-          {includeUserId: true}
+            currentUrl: window.location.href,
+            channelId: config.channel,
+          }
         );
       },
       onSongSelected: songId => {
@@ -286,19 +286,6 @@ Dance.prototype.setSongCallback = function (songId) {
   getStore().dispatch(
     setSong({
       songId,
-      onAuthError: () => {
-        firehoseClient.putRecord(
-          {
-            study: 'restricted-song-auth',
-            event: 'repeated-auth-error',
-            data_json: JSON.stringify({
-              currentUrl: window.location.href,
-              channelId: getStore().getState().pageConstants.channelId,
-            }),
-          },
-          {includeUserId: true}
-        );
-      },
       onSongSelected: songId => {
         this.updateSongMetadata(songId);
         if (this.songUnavailableAlert) {
@@ -419,6 +406,12 @@ Dance.prototype.afterInject_ = function () {
     Blockly.JavaScript.addReservedWords(DancelabReservedWords.join(','));
   }
 
+  // Localize
+  const msg = Object.entries(danceMsg).reduce((acc, [key, msgFunction]) => {
+    acc[key] = (...args) => localization.translate(msgFunction(...args));
+    return acc;
+  }, {});
+
   // record a replay log (and generate a video) for both project levels and any
   // course levels that have sharing enabled
   const recordReplayLog = this.shouldShowSharing() || this.level.isProjectLevel;
@@ -454,10 +447,19 @@ Dance.prototype.afterInject_ = function () {
     },
     spriteConfig: new Function('World', this.level.customHelperLibrary),
     container: 'divDance',
-    i18n: danceMsg,
+    i18n: msg,
     resourceLoader: new ResourceLoader(ASSET_BASE),
     logger: danceMetricsReporter,
+    externalRendererFactory: undefined,
   });
+
+  // Add command names from the Dance Party API to the Blockly generator's
+  // reservered words. This prevents students from overriding commands
+  // with functions.
+  const reservedWords = Object.getOwnPropertyNames(
+    Object.getPrototypeOf(this.nativeAPI)
+  );
+  Blockly.JavaScript.addReservedWords(reservedWords.join());
 
   // Expose an interface for testing
   // Composes the nativeAPI getPerformanceData with our own performance data.
@@ -591,24 +593,13 @@ Dance.prototype.onPuzzleComplete = function (result, message) {
   // If we know they succeeded, mark `levelComplete` true.
   const levelComplete = result;
 
-  let program = encodeURIComponent(
-    Blockly.cdoUtils.getCode(Blockly.mainBlockSpace)
-  );
+  let program = encodeURIComponent(getCode(Blockly.mainBlockSpace));
 
   if (this.testResults >= TestResults.FREE_PLAY) {
     this.studioApp_.playAudio('win');
   } else {
     this.studioApp_.playAudio('failure');
   }
-  const state = getStore().getState();
-  const validationResult = result ? 'PASSED' : 'FAILED';
-  analyticsReporter.sendEvent(EVENTS.DANCE_PARTY_VALIDATION, {
-    levelPath: state.pageConstants.currentScriptLevelUrl,
-    result: validationResult,
-    message, // feedback message key
-    userId: state.currentUser.userId,
-  });
-
   const sendReport = () => {
     this.studioApp_.report({
       app: 'dance',
@@ -676,7 +667,6 @@ Dance.prototype.runButtonClick = async function () {
     value: getStore().getState().dance.selectedSong,
   });
 
-  Blockly.mainBlockSpace.traceOn(true);
   this.studioApp_.attempts++;
 
   try {

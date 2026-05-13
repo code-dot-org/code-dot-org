@@ -1,0 +1,30 @@
+name 'gen-ai-student-level-L9'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# ✅ Lesson Recap: Who's Making the Choices?
+
+#### After this lesson, you can 
+
+* #### Analyze how language affects the choices an AI system makes when generating output
+
+## Resources
+
+### **Activity Guides**
+
+<!-- Unified container for the grid of cards -->
+<div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; width: 90%; margin: 20px auto;">
+<div style="background-color: #F5F7F8; color: #000000; padding: 20px; border-radius: 10px; box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1); text-align: center;">
+  <img src="https://drive.google.com/thumbnail?sz=w640&id=1B5gl9KOOadsiHj0y6IsswjtEkohPxJ1lrbCbuXcm8zg" alt="Document thumbnail" style="width: 150px; height: auto; margin-right: 15px; border-radius: 5px;">
+  <p style="font-size: 14pt; line-height: 1.25;">
+    <a href="https://docs.google.com/document/d/1B5gl9KOOadsiHj0y6IsswjtEkohPxJ1lrbCbuXcm8zg/template/preview" target="_blank" style="font-weight: bold; text-decoration: none;">Prompt Comparisons</a><br>
+  </p>
+</div>
+
+</div>
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+
+MARKDOWN

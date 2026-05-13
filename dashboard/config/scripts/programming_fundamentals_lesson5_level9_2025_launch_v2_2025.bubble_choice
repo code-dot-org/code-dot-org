@@ -1,0 +1,9 @@
+name 'programming-fundamentals-lesson5-level9_2025-launch_v2-2025'
+display_name 'Moving and Turning'
+description 'Choose **ONE** scenario and practice creating `Painter` objects and moving and turning through The Neighborhood.'
+
+sublevels
+level 'programming-fundamentals-lesson5-level9a_2025-launch_v2-2025'
+level 'programming-fundamentals-lesson5-level9b_2025-launch_v2-2025'
+level 'programming-fundamentals-lesson5-level9c_2025-launch_v2-2025'
+level 'programming-fundamentals-lesson5-level9d_2025-launch_v2-2025'

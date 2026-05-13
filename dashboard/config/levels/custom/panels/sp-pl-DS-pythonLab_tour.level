@@ -1,0 +1,32 @@
+<Panels>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 73,
+  "created_at": "2024-12-17T17:47:16.000Z",
+  "level_num": "custom",
+  "user_id": 18605,
+  "properties": {
+    "encrypted": "false",
+    "panels": [
+      {
+        "text": "Your students will be using **Python Lab**, a browser-based editor for programming in Python.\n \nClick through the panels to get acquainted with the features of Python Lab. ",
+        "imageUrl": "https://images.code.org/6bf1a5f608347bd2c9985ba978e9349f-pythonLab.png",
+        "key": "sp-pl-DS-SpreadsheetVocab-23803e7b-4230-4c32-ac36-59aaf29309ce"
+      },
+      {
+        "text": "",
+        "imageUrl": "https://images.code.org/4b878c2ee640ba68e66e01f68a036106-pythonLab (1).png",
+        "key": "sp-pl-DS-pythonLab_tour-e31a5299-fb7b-4695-ac1f-5a80498a9378"
+      },
+      {
+        "text": "## What's Next?\nThe next level is a **Predict & Run** level. Spend a few minutes exploring the features of Python Lab, then take a look at the code and try to guess what it does!",
+        "imageUrl": "https://images.code.org/072285125a5a48c88c4f86189a738439-pythonLab.jpg",
+        "key": "sp-pl-DS-pythonLab_tour-62a7ff61-8b6a-4901-8cb3-26fcd990f873"
+      }
+    ],
+    "name_suffix": "_2024",
+    "offer_browser_tts": "false"
+  },
+  "audit_log": "[{\"changed_at\":\"2024-12-17T17:47:16.791+00:00\",\"changed\":[\"cloned from \\\"sp-pl-DS-SpreadsheetVocab\\\"\"],\"cloned_from\":\"sp-pl-DS-SpreadsheetVocab\"},{\"changed_at\":\"2024-12-18 15:45:08 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"},{\"changed_at\":\"2024-12-18 16:03:14 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"},{\"changed_at\":\"2024-12-18 16:09:01 +0000\",\"changed\":[],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"},{\"changed_at\":\"2024-12-18 16:10:22 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"}]"
+}]]></config>
+</Panels>

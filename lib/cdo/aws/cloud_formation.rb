@@ -337,7 +337,7 @@ module AWS
         nil
       end
       begin
-        cfn.wait_until("stack_#{action}_complete".to_sym, stack_name: @stack_id) do |w|
+        cfn.wait_until(:"stack_#{action}_complete", stack_name: @stack_id) do |w|
           w.delay = 5 # seconds
           # TODO: lower this back to 1.5 hours once we're no longer building
           # Node.js from source as part of adhoc creation, which right now is

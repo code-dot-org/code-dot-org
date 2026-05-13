@@ -1,0 +1,8 @@
+.chatButtonsContainer {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  row-gap: 8px;
+  column-gap: 5px;
+  align-items: center;
+}

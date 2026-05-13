@@ -1,0 +1,149 @@
+// Pill height: 60px font × 1.2 line-height + 8px top + 16px bottom padding ≈ 96px.
+// Must match .word height exactly so the clip window hides the seam.
+$word-h: 6rem;
+$slot: $word-h; // no gap between word items in the track
+
+// 5 words, 14s loop. Each word visible for 17% (~2.4s), slide takes 3% (~0.4s)
+// with a smooth cubic-bezier. Last word gets 19.99% before instant snap back.
+@keyframes word-flip {
+  0% {
+    margin-top: 0;
+  }
+  17% {
+    margin-top: 0;
+    animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  20% {
+    margin-top: -#{$slot};
+  }
+  37% {
+    margin-top: -#{$slot};
+    animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  40% {
+    margin-top: calc(#{$slot} * -2);
+  }
+  57% {
+    margin-top: calc(#{$slot} * -2);
+    animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  60% {
+    margin-top: calc(#{$slot} * -3);
+  }
+  77% {
+    margin-top: calc(#{$slot} * -3);
+    animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  80% {
+    margin-top: calc(#{$slot} * -4);
+  }
+  99.99% {
+    margin-top: calc(#{$slot} * -4);
+  }
+  100% {
+    margin-top: 0;
+  }
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  height: 100%;
+}
+
+.headline {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  font-family: var(--font-family-barlow-semi-condensed-semibold);
+  font-size: 3.75rem;
+  font-weight: 800;
+  color: #fff;
+  white-space: nowrap;
+}
+
+// Clip window — shows exactly one word pill at a time.
+.wordWindow {
+  display: block;
+  height: $word-h;
+  overflow: hidden;
+  margin-top: 10px;
+}
+
+// Animated track — all pills stacked, slides up via margin-top.
+.wordTrack {
+  display: block;
+  animation: word-flip 14s linear infinite;
+}
+
+.word {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  height: $word-h;
+  padding: 8px 32px 16px;
+  border-radius: 8px;
+  color: #fff;
+  white-space: nowrap;
+}
+
+.todayLine {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.wordCoded {
+  background: var(--background-brand-teal-primary, #00818f);
+}
+
+.wordPrompted {
+  background: var(--accent-orange-60, #ffa400);
+}
+
+.wordDebugged {
+  background: var(--background-success-primary, #3ea33e);
+}
+
+.wordCreated {
+  background-color: var(--background-brand-purple-primary, #9657c7);
+}
+
+.wordPersisted {
+  background-color: var(--background-brand-red-primary, #e84b3a);
+}
+
+.letsGoButton {
+  display: inline-flex;
+  min-width: 48px;
+  padding: 10px 16px;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  margin-top: 25px;
+  background: var(--background-brand-purple-primary, #9657c7);
+  border: none;
+  border-radius: 4px;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.12s ease;
+
+  &:hover:not(:disabled) {
+    background: var(--background-brand-purple-hover, #7d42ad);
+  }
+
+  &:disabled {
+    opacity: 0.5;
+    cursor: default;
+  }
+
+  &:focus-visible {
+    outline: 2px solid var(--background-brand-purple-focus, #a374d6);
+    outline-offset: 2px;
+  }
+}

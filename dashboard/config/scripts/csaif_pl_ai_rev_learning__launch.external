@@ -1,0 +1,24 @@
+name 'csaif_pl_ai_rev_learning_-launch'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Learning Foundations
+
+#### The AI Foundations curriculum is built upon three core foundations, guiding student practice.
+
+<img src="https://images.code.org/7479360e2d350345b2156ad0a54ca15b-image-1760467409776.png" alt="pie chart divided into thirds labeled: AI literacy, human-centered design, and computational thinking" width="450px" style="display: block; margin-left: auto; margin-right: auto;">
+
+<div style="background-color: #F5F7F8; padding: 10px; border-left: 5px solid #5d9dad; margin-bottom: 20px; font-size: 18px">
+      <strong>Computational Thinking</strong> teaches students to solve complex problems by using algorithmic thinking and techniques like decomposition and abstraction. This foundation helps students understand how AI systems are designed and used to solve real-world problems. <br><br> <i>You'll learn more about computational thinking in Unit 2 - Foundations of AI Programming.</i>
+</div>
+
+<div style="background-color: #F5F7F8; padding: 10px; border-left: 5px solid #c1dde1; margin-bottom: 20px; font-size: 18px">
+      <strong>Human-centered Design</strong> focuses on solving problems with empathy, ensuring solutions are designed around the end-user's needs. Students learn to evaluate AI solutions for usability, accessibility, fairness, and ethics to create inclusive and beneficial systems. <br><br> <i>You'll learn more about human centered design in Unit 2 - Foundations of AI Programming and Unit 3 - AI and the Systems That Power It.</i>
+</div>
+
+<div style="background-color: #F5F7F8; padding: 10px; border-left: 5px solid #325661; margin-bottom: 20px; font-size: 18px">
+      <strong>AI Literacy</strong> gives students the knowledge to understand, evaluate, and responsibly interact with AI. Students learn how AI works, recognize its strengths and limits, and critically analyze AI-generated outputs, moving them from passive users to informed participants.<br><br> <i>Click <strong>Continue</strong> to learn more about AI literacy.</i>
+</div>
+
+MARKDOWN

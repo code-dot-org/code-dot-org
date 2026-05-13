@@ -1,7 +1,8 @@
 <Weblab>
   <config><![CDATA[{
+  "published": true,
   "game_id": 58,
-  "created_at": "2024-05-15T21:04:06.000Z",
+  "created_at": "2024-05-16T09:29:48.000Z",
   "level_num": "custom",
   "user_id": 18602,
   "properties": {
@@ -31,9 +32,9 @@
       "/courses/csd-2024/guides/debugging-html"
     ],
     "map_reference": "/courses/csd-2024/guides/flex-children",
-    "name_suffix": "_2024"
+    "name_suffix": "_2024",
+    "encrypted_examples": "na6/15sxHd78lVDQMMKr5jJdSBGTEsCV8vCTNZN3+2P2Pmc4kdTKwUmAwSWN\njXW5ka6vQm84aqOs185QTbMpVA==\n"
   },
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2024-05-15T21:04:06.195+00:00\",\"changed\":[\"cloned from \\\"CSD U2L13 flex-grow_1\\\"\"],\"cloned_from\":\"CSD U2L13 flex-grow_1\"}]"
+  "audit_log": "[{\"changed_at\":\"2024-05-15T21:04:06.195+00:00\",\"changed\":[\"cloned from \\\"CSD U2L13 flex-grow_1\\\"\"],\"cloned_from\":\"CSD U2L13 flex-grow_1\"},{\"changed_at\":\"2025-03-11 22:01:50 +0000\",\"changed\":[],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
 }]]></config>
 </Weblab>

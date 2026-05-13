@@ -4,6 +4,11 @@
 Feature: Evaluate student code against rubrics using AI
   # Make sure AI config files in S3 are parseable. Do this in a UI test because
   # we do not allow S3 access in unit tests. Only needs to be run in 1 browser.
+  #
+  # Note that this only covers units which we are seeding in our ui tests, no
+  # longer includes all production courses. Full validation of production
+  # courses is done by the `rake seed:validate_ai_rubrics` task during the
+  # deploy to staging.
   @chrome
   Scenario: Validate Rubric AI Config
     Given I validate rubric ai config for all lessons
@@ -13,7 +18,7 @@ Feature: Evaluate student code against rubrics using AI
     And I get debug info for the current user
     And I am on "http://studio.code.org/home"
     And I wait until element "#homepage-container" is visible
-    And I am on "http://studio.code.org/s/allthethings/lessons/48/levels/2"
+    And I am on "http://studio.code.org/courses/allthethingscourse/units/1/lessons/48/levels/2"
     And I wait for the lab page to fully load
     And I verify progress in the header of the current page is "not_tried" for level 2
 
@@ -24,10 +29,10 @@ Feature: Evaluate student code against rubrics using AI
 
     # Teacher views student progress and floating action button
     When I sign in as "Teacher_Aiden"
-    And I am on "http://studio.code.org/home"
-    And I wait until element "#homepage-container" is visible
+    And I am on "http://studio.code.org/teacher_dashboard/home"
+    And I wait until element "#ui-test-section-list" is visible
     And element "#sign_in_or_user" contains text "Teacher_Aiden"
-    And I am on "http://studio.code.org/s/allthethings/lessons/48/levels/2"
+    And I am on "http://studio.code.org/courses/allthethingscourse/units/1/lessons/48/levels/2"
     And I wait for the lab page to fully load
     And element ".teacher-panel td:eq(1)" contains text "Aiden"
     And I click selector ".teacher-panel td:eq(1)" to load a new page
@@ -50,13 +55,14 @@ Feature: Evaluate student code against rubrics using AI
     Then element ".uitest-learning-goal-title" contains text "Sprites"
     And I wait until element ".uitest-ai-assessment" is visible
     Then element ".uitest-ai-assessment" contains text "Aiden has achieved Extensive or Convincing Evidence"
+    And element ".uitest-student-progress-status" contains text "Ready to review"
 
   Scenario: Student code is evaluated by AI when teacher requests individual evaluation
     Given I create an authorized teacher-associated student named "Aiden"
     And I get debug info for the current user
     And I am on "http://studio.code.org/home"
     And I wait until element "#homepage-container" is visible
-    And I am on "http://studio.code.org/s/allthethings/lessons/48/levels/2"
+    And I am on "http://studio.code.org/courses/allthethingscourse/units/1/lessons/48/levels/2"
     And I wait for the lab page to fully load
     And I verify progress in the header of the current page is "not_tried" for level 2
 
@@ -69,10 +75,10 @@ Feature: Evaluate student code against rubrics using AI
     # Teacher views student progress and floating action button
     When I sign in as "Teacher_Aiden"
     And I get debug info for the current user
-    And I am on "http://studio.code.org/home"
-    And I wait until element "#homepage-container" is visible
+    And I am on "http://studio.code.org/teacher_dashboard/home"
+    And I wait until element "#ui-test-section-list" is visible
     And element "#sign_in_or_user" contains text "Teacher_Aiden"
-    And I am on "http://studio.code.org/s/allthethings/lessons/48/levels/2"
+    And I am on "http://studio.code.org/courses/allthethingscourse/units/1/lessons/48/levels/2"
     And I wait for the lab page to fully load
     And element ".teacher-panel td:eq(1)" contains text "Aiden"
     And I click selector ".teacher-panel td:eq(1)" to load a new page
@@ -84,29 +90,31 @@ Feature: Evaluate student code against rubrics using AI
     #Then I verify progress in the header of the current page is "attempted_assessment" for level 2
     And element "#ui-floatingActionButton" is visible
 
-    # Teacher views AI evaluation status in settings tab
+    # Teacher views AI evaluation status
     When I click selector "#ui-floatingActionButton"
     And I wait until element "#uitest-rubric-content" is visible
     And I wait until element ".uitest-run-ai-assessment" is enabled
+    And element ".uitest-student-progress-status" contains text "In progress"
 
     # Teacher runs AI evaluation
     When I click selector ".uitest-run-ai-assessment"
     Then I wait until element ".uitest-rubric-tab-buttons .__react_component_tooltip" contains text "AI analysis complete."
 
-    # Teacher views AI evaluation results in rubric tab
+    # Teacher views AI evaluation results
     And I wait until element "#uitest-next-goal" is visible
     And I click selector "#uitest-next-goal"
     And I wait until element ".uitest-learning-goal-title" is visible
     Then element ".uitest-learning-goal-title" contains text "Sprites"
     And I wait until element ".uitest-ai-assessment" is visible
     Then element ".uitest-ai-assessment" contains text "Aiden has achieved Extensive or Convincing Evidence"
+    And element ".uitest-student-progress-status" contains text "Ready to review"
 
   Scenario: Student code is evaluated by AI when teacher requests evaluation for entire class
     Given I create an authorized teacher-associated student named "Aiden"
     And I get debug info for the current user
     And I am on "http://studio.code.org/home"
     And I wait until element "#homepage-container" is visible
-    And I am on "http://studio.code.org/s/allthethings/lessons/48/levels/2"
+    And I am on "http://studio.code.org/courses/allthethingscourse/units/1/lessons/48/levels/2"
     And I wait for the lab page to fully load
     And I verify progress in the header of the current page is "not_tried" for level 2
 
@@ -118,11 +126,11 @@ Feature: Evaluate student code against rubrics using AI
 
     # Teacher views student progress and floating action button
     When I sign in as "Teacher_Aiden"
-    And I am on "http://studio.code.org/home"
-    And I wait until element "#homepage-container" is visible
+    And I am on "http://studio.code.org/teacher_dashboard/home"
+    And I wait until element "#ui-test-section-list" is visible
     And element "#sign_in_or_user" contains text "Teacher_Aiden"
     And I get debug info for the current user
-    And I am on "http://studio.code.org/s/allthethings/lessons/48/levels/2"
+    And I am on "http://studio.code.org/courses/allthethingscourse/units/1/lessons/48/levels/2"
     And I wait for the lab page to fully load
     And element ".teacher-panel td:eq(1)" contains text "Aiden"
     And I click selector ".teacher-panel td:eq(1)" to load a new page
@@ -134,10 +142,11 @@ Feature: Evaluate student code against rubrics using AI
     #Then I verify progress in the header of the current page is "attempted_assessment" for level 2
     And element "#ui-floatingActionButton" is visible
 
-    # Teacher views AI evaluation status in settings tab
+    # Teacher views AI evaluation status
     When I click selector "#ui-floatingActionButton"
     And I wait until element "#uitest-rubric-content" is visible
     And I wait until element ".uitest-run-ai-assessment" is enabled
+    And element ".uitest-student-progress-status" contains text "In progress"
 
     # Teacher switches to Class Management tab
     When I click selector "button:contains('Class Data')"
@@ -157,3 +166,77 @@ Feature: Evaluate student code against rubrics using AI
     Then I wait until element ".uitest-learning-goal-title" contains text "Sprites"
     And I wait until element ".uitest-ai-assessment" is visible
     Then element ".uitest-ai-assessment" contains text "Aiden has achieved Extensive or Convincing Evidence"
+    And element ".uitest-student-progress-status" contains text "Ready to review"
+
+  Scenario: Alerts are shown when AI scores are available to review
+    Given I create an authorized teacher-associated student named "Aiden"
+    And I get debug info for the current user
+    And I am on "http://studio.code.org/home"
+    And I wait until element "#homepage-container" is visible
+    And I am on "http://studio.code.org/courses/allthethingscourse/units/1/lessons/48/levels/2"
+    And I wait for the lab page to fully load
+    And I verify progress in the header of the current page is "not_tried" for level 2
+
+    # Student submits code
+    When I ensure droplet is in text mode
+    And I append text to droplet "// the quick brown fox jumped over the lazy dog.\n"
+    And I submit this gamelab level
+
+    # Teacher views floating action button on assessment level
+    When I sign in as "Teacher_Aiden"
+    And I am on "http://studio.code.org/teacher_dashboard/home"
+    And I wait until element "#ui-test-section-list" is visible
+    And element "#sign_in_or_user" contains text "Teacher_Aiden"
+    And I am on "http://studio.code.org/courses/allthethingscourse/units/1/lessons/48/levels/2"
+    And I wait for the lab page to fully load
+    And element ".teacher-panel td:eq(1)" contains text "Aiden"
+    And I click selector ".teacher-panel td:eq(1)" to load a new page
+    And I wait for the lab page to fully load
+    And I wait until element "#ui-floatingActionButton" is visible
+    And I click selector ".introjs-skipbutton" once I see it
+    And element "#ui-floatingActionButton" is visible
+    And I wait until element ".uitest-count-bubble" is visible
+    And element ".uitest-dismissible-alert" is visible
+
+    # Teacher dismisses alert
+    When I click selector ".uitest-dismissible-alert .fa-xmark"
+    And I wait until element ".uitest-dismiss-confirmed" is visible
+    And element ".uitest-dismissible-alert" is not visible
+
+    # dismissed alert does not come back on page reload
+    When I reload the page
+    And I wait until element "#ui-floatingActionButton" is visible
+    And I wait until element ".uitest-count-bubble" is visible
+    And element ".uitest-dismissible-alert" is not visible
+
+  @eyes
+  Scenario: Alerts are shown when AI scores are available to review
+    Given I create an authorized teacher-associated student named "Aiden"
+    And I get debug info for the current user
+    And I am on "http://studio.code.org/home"
+    And I wait until element "#homepage-container" is visible
+    And I am on "http://studio.code.org/courses/allthethingscourse/units/1/lessons/48/levels/2"
+    And I wait for the lab page to fully load
+    And I verify progress in the header of the current page is "not_tried" for level 2
+
+    # Student submits code
+    When I ensure droplet is in text mode
+    And I append text to droplet "// the quick brown fox jumped over the lazy dog.\n"
+    And I submit this gamelab level
+
+    # Teacher views floating action button on assessment level
+    When I sign in as "Teacher_Aiden"
+    And I am on "http://studio.code.org/teacher_dashboard/home"
+    And I wait until element "#ui-test-section-list" is visible
+    And element "#sign_in_or_user" contains text "Teacher_Aiden"
+    And I am on "http://studio.code.org/courses/allthethingscourse/units/1/lessons/48/levels/2"
+    And I wait for the lab page to fully load
+    And I click selector ".teacher-panel td:eq(1)" to load a new page
+    And I wait for the lab page to fully load
+    And I wait until element "#ui-floatingActionButton" is visible
+    And I click selector ".introjs-skipbutton" once I see it
+    And I wait until element ".uitest-count-bubble" is visible
+    And element ".uitest-dismissible-alert" is visible
+    And I open my eyes to test "AI enabled rubrics"
+    And I see no difference for "Ai alerts on rubrics"
+    And I close my eyes

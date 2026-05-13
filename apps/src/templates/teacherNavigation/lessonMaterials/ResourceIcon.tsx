@@ -1,7 +1,6 @@
+import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import classNames from 'classnames';
 import React from 'react';
-
-import FontAwesomeV6Icon from '@cdo/apps/componentLibrary/fontAwesomeV6Icon/FontAwesomeV6Icon';
 
 import {computeMaterialType} from './LessonMaterialTypes';
 import {RESOURCE_ICONS} from './ResourceIconType';
@@ -26,6 +25,7 @@ const ResourceIcon: React.FC<ResourceIconProps> = ({
 
   return (
     <div
+      // eslint-disable-next-line react/forbid-dom-props
       data-testid={'resource-icon-' + iconType.icon}
       className={classNames(styles.resourceIconContainer, iconType.class)}
     >

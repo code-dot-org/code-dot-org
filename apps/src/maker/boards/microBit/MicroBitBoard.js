@@ -2,9 +2,6 @@
 
 import {EventEmitter} from 'events'; // provided by webpack's node-libs-browser
 
-import {MAKER_TOOLKIT} from '@cdo/apps/maker/util/makerConstants';
-import firehoseClient from '@cdo/apps/metrics/firehose';
-
 import {delayPromise} from '../../util/boardUtils';
 
 import CapacitiveTouchSensor from './CapacitiveTouchSensor';
@@ -19,9 +16,7 @@ import {
   componentConstructors,
 } from './MicroBitComponents';
 import {
-  MICROBIT,
   MICROBIT_FIRMWARE_VERSION,
-  FIRMWARE_VERSION_TIMEOUT,
   SQUARE_LEDS,
   CHECKMARK_LEDS,
   ALL_LEDS,
@@ -94,12 +89,6 @@ export default class MicroBitBoard extends EventEmitter {
           return Promise.resolve();
         } else {
           if (this.boardClient_.firmwareVersion === '') {
-            // Log if we were not able to determine the firmware version in time.
-            firehoseClient.putRecord({
-              study: MAKER_TOOLKIT,
-              study_group: MICROBIT,
-              event: FIRMWARE_VERSION_TIMEOUT,
-            });
             console.warn(
               'Firmware version not detected in time. Try refreshing the page.'
             );

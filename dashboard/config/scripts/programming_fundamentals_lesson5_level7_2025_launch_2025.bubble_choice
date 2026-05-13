@@ -1,0 +1,9 @@
+name 'programming-fundamentals-lesson5-level7_2025-launch_2025'
+display_name 'level display_name here'
+description 'debug code with an error'
+
+sublevels
+level 'programming-fundamentals-lesson5-level7a_2025-launch_2025'
+level 'programming-fundamentals-lesson5-level7b_2025-launch_2025'
+level 'programming-fundamentals-lesson5-level7c_2025-launch_2025'
+level 'programming-fundamentals-lesson5-level7d_2025-launch_2025'

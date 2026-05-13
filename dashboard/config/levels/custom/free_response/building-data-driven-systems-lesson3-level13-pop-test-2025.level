@@ -1,0 +1,28 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 52,
+  "created_at": "2025-11-20T03:03:07.000Z",
+  "level_num": "custom",
+  "user_id": 18603,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "Define the term in your own words. Use examples from the lesson to explain your thinking and take notes on anything that helps you remember how it works.",
+    "stay_on_level_after_submit": "false",
+    "allow_user_uploads": "false",
+    "submittable": "false",
+    "peer_reviewable": "false",
+    "optional": "false",
+    "allow_multiple_attempts": "true",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "title": "Pop",
+    "bubble_choice_description": "Students correctly describe `pop` as removing the last item from an array and can provide a reasonable example, such as removing the most recent post or last move in a game.",
+    "height": "200",
+    "placeholder": "enter response here..."
+  },
+  "audit_log": "[{\"changed_at\":\"2025-11-20T03:03:07.121+00:00\",\"changed\":[\"cloned from \\\"building-data-driven-systems-lesson3-level11-push-test-2025\\\"\"],\"cloned_from\":\"building-data-driven-systems-lesson3-level11-push-test-2025\"},{\"changed_at\":\"2025-11-20 03:03:34 +0000\",\"changed\":[\"title\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2025-11-20 03:25:14 +0000\",\"changed\":[\"bubble_choice_description\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</FreeResponse>

@@ -4,12 +4,14 @@
     "wrapup_video_id": null,
     "login_required": true,
     "properties": {
+      "content_area": "skills_focused_self_paced_pl",
+      "curriculum_umbrella": "Self-paced PL - Pedagogy special topics",
       "is_migrated": true,
       "professional_learning_course": "Equity Support"
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-11-22 19:56:51 UTC",
+    "serialized_at": "2025-01-13 23:54:06 UTC",
     "published_state": "beta",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -505,6 +507,15 @@
 
   ],
   "lessons_opportunity_standards": [
+
+  ],
+  "rubrics": [
+
+  ],
+  "learning_goals": [
+
+  ],
+  "learning_goal_evidence_levels": [
 
   ]
 }

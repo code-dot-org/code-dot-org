@@ -11,15 +11,16 @@ import {connect} from 'react-redux';
 import {queryParams} from '@cdo/apps/code-studio/utils';
 import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
 import Button from '@cdo/apps/legacySharedComponents/Button';
-import firehoseClient from '@cdo/apps/metrics/firehose';
 import TeacherFeedbackTab from '@cdo/apps/templates/instructions/teacherFeedback/TeacherFeedbackTab';
 import {rubricShape} from '@cdo/apps/templates/rubrics/rubricShapes';
 import StudentRubricView from '@cdo/apps/templates/rubrics/StudentRubricView';
+import {logUserLevelInteraction} from '@cdo/apps/userLevelInteractionsLogger/userLevelInteractionsApi';
+import {UserLevelInteractions} from '@cdo/generated-scripts/sharedConstants';
 import i18n from '@cdo/locale';
 
 import commonStyles from '../../commonStyles';
 import {
-  toggleInstructionsCollapsed,
+  setInstructionsRenderedHeightAndCollapsed,
   setInstructionsMaxHeightNeeded,
   setInstructionsRenderedHeight,
   setAllowInstructionsResize,
@@ -89,7 +90,7 @@ class TopInstructions extends Component {
     ttsLongInstructionsUrl: PropTypes.string,
     isCollapsed: PropTypes.bool.isRequired,
     noVisualization: PropTypes.bool.isRequired,
-    toggleInstructionsCollapsed: PropTypes.func,
+    setInstructionsRenderedHeightAndCollapsed: PropTypes.func,
     setInstructionsRenderedHeight: PropTypes.func.isRequired,
     setInstructionsMaxHeightNeeded: PropTypes.func.isRequired,
     documentationUrl: PropTypes.string,
@@ -414,31 +415,19 @@ class TopInstructions extends Component {
    */
   handleClickCollapser = () => {
     const {
-      toggleInstructionsCollapsed,
+      setInstructionsRenderedHeightAndCollapsed,
       isCollapsed,
       noInstructionsWhenCollapsed,
       expandedHeight,
     } = this.props;
 
-    toggleInstructionsCollapsed();
-
-    // record event
-    const eventName = isCollapsed
-      ? 'expand-instructions'
-      : 'collapse-instructions';
-
-    this.recordEvent(eventName, {
-      data_json: JSON.stringify({
-        csfStyleInstructions: !noInstructionsWhenCollapsed,
-      }),
-    });
-
-    // adjust rendered height based on next collapsed state
-    const height =
-      !isCollapsed && noInstructionsWhenCollapsed
+    const nextIsCollapsed = !isCollapsed;
+    const nextHeight =
+      nextIsCollapsed && noInstructionsWhenCollapsed
         ? HEADER_HEIGHT
         : expandedHeight;
-    this.props.setInstructionsRenderedHeight(height);
+
+    setInstructionsRenderedHeightAndCollapsed(nextHeight, nextIsCollapsed);
   };
 
   /**
@@ -453,15 +442,6 @@ class TopInstructions extends Component {
     win.focus();
   };
 
-  recordEvent(eventName, additionalData = {}) {
-    const record = {
-      study: 'top-instructions',
-      event: eventName,
-      ...additionalData,
-    };
-    firehoseClient.putRecord(record);
-  }
-
   handleTabClick = newTab => {
     this.scrollToTopOfTab();
     this.setState({tabSelected: newTab}, () => {
@@ -472,7 +452,11 @@ class TopInstructions extends Component {
 
   handleHelpTabClick = () => {
     this.handleTabClick(TabType.RESOURCES);
-    this.recordEvent('click-help-and-tips-tab');
+    logUserLevelInteraction({
+      levelId: this.props.serverLevelId,
+      scriptId: this.props.serverScriptId,
+      interaction: UserLevelInteractions.click_help_and_tips,
+    });
   };
 
   handleCommentTabClick = () => {
@@ -482,7 +466,6 @@ class TopInstructions extends Component {
     if (this.state.tabSelected !== TabType.COMMENTS) {
       this.incrementFeedbackVisitCount();
     }
-    this.recordEvent('click-feedback-tab');
 
     this.setState({tabSelected: TabType.COMMENTS}, () => {
       this.forceTabResizeToMaxHeight();
@@ -492,7 +475,6 @@ class TopInstructions extends Component {
 
   handleTeacherOnlyTabClick = () => {
     this.handleTabClick(TabType.TEACHER_ONLY);
-    this.recordEvent('click-teacher-only-tab');
   };
 
   scrollToTopOfTab = () => {
@@ -646,11 +628,11 @@ class TopInstructions extends Component {
 
     const topInstructionsStyle = [
       isRtl ? styles.mainRtl : styles.main,
+      noVisualization && styles.noViz,
       mainStyle,
       {
         height: explicitHeight ? explicitHeight : height - RESIZER_HEIGHT,
       },
-      noVisualization && styles.noViz,
       isEmbedView && styles.embedView,
       dynamicInstructions &&
         overlayVisible &&
@@ -674,10 +656,9 @@ class TopInstructions extends Component {
       (levelVideos && levelVideos.length > 0) || !!levelResourcesAvailable;
 
     const displayFeedbackTab =
-      !taRubric &&
-      (!!miniRubric ||
-        (teacherViewingStudentWork && teacherCanLeaveFeedback) ||
-        (this.isViewingAsStudent && !!latestFeedback));
+      !!miniRubric ||
+      (teacherViewingStudentWork && teacherCanLeaveFeedback) ||
+      (this.isViewingAsStudent && !!latestFeedback);
 
     const displayTaRubricTab =
       !!taRubric && !teacherViewingStudentWork && this.isViewingAsStudent;
@@ -961,8 +942,8 @@ export default connect(
     taRubric: state.instructions.taRubric,
   }),
   dispatch => ({
-    toggleInstructionsCollapsed() {
-      dispatch(toggleInstructionsCollapsed());
+    setInstructionsRenderedHeightAndCollapsed(height, isCollapsed) {
+      dispatch(setInstructionsRenderedHeightAndCollapsed(height, isCollapsed));
     },
     setInstructionsRenderedHeight(height) {
       dispatch(setInstructionsRenderedHeight(height));

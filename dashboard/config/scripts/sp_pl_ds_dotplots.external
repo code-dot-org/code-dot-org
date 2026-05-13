@@ -3,10 +3,51 @@ title 'Dot Plot'
 
 
 markdown <<MARKDOWN
-#Dot Plots
-###Navigate to the CODAP link and create a dot plot with the following steps:
-###1. Click on the Graph icon to create a new graph.
-###2. Drag an attribute into the graph to see a dot plot.
+#Graphs in Google Sheets
 
-###[School Party Survey Data - CODAP](https://codap.concord.org/app/static/dg/en/cert/index.html#shared=https%3A%2F%2Fcfm-shared.concord.org%2FbmRtgGWIm4yEfQjEOp9c%2Ffile.json)
+> #### Practice building graphs in Google Sheets. Create at least one. If you have time and want to explore, try creating a bar chart and pie chart.
+
+## Data Link
+
+#### Use this link to access the school party survey data from previous lessons.
+
+<p style = "font-size: 16pt"> <a href="https://docs.google.com/spreadsheets/d/1AlVNpxzypX82fNlPDxDEa5ww72J_G2kyfZ2sFJedBJA/edit?usp=sharing" target="blank" rel="noopener noreferrer">School Party Survey Data - Google Sheets</a></p>
+
+<img src="https://images.code.org/59c9b8a356ff4e56ec8c802ba5718b37-image-1684269154206.png" alt="A clipboard with the words TO DO on it. This icon is used to signal an action item for participants." width="50px" style="border-radius:10px; float:left; margin: 0px 10px 20px 0px;">
+
+#### 1. Create a Copy of the dataset before creating a data visualization.
+#### 2. Go to the "Bar Chart Workspace Tab"
+#### 3. Practice creating and customizing a bar chart.
+---
+
+<img src="https://images.code.org/fc0d828145861e665d2b0f0eabfc1dc1-image-1744901010152.png" alt="bar chart created in Google Sheets" width="250px" style="border-radius:10px; float:right; margin: 0 0 40px 40px;">
+
+## Bar Chart
+#### Using the pizza party data, create a bar chart by:
+#### 1. Highlight the column of data you want to use.
+#### 2. Select 'insert' graph from the drop down menu.
+#### 3. Select 'bar chart' from the side menu.
+
+<details><summary style="font-size: 18px;"><strong>🔎 Show Me How 🔎</strong></summary> <img src="https://images.code.org/b6042703403f38487c31c55e8e9f238b-makechart.gif">
+</details>
+
+<div style="clear:both;"></div>
+
+---
+
+<img src="https://images.code.org/1614544f27bed480f32d75c583ac4b19-image-1744901246487.png" alt="pie chart created in Google Sheets" width="250px" style="border-radius:10px; float:right; margin: 0 0 40px 40px;">
+
+## Pie Chart
+
+#### Using the pizza party data, create a bar chart by:
+#### 1. Highlight the column of data you want to use.
+#### 2. Select 'insert' graph from the drop down menu.
+#### 3. Select 'pie chart' from the side menu.
+
+<details><summary style="font-size: 18px;"><strong>🔎 Show Me How 🔎</strong></summary> <img src="https://images.code.org/b6042703403f38487c31c55e8e9f238b-makechart.gif">
+</details>
+
+<div style="clear:both;"></div>
+
+
 MARKDOWN

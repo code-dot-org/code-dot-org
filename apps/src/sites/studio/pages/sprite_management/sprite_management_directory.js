@@ -1,11 +1,14 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 
 import SpriteManagementDirectory from '@cdo/apps/code-studio/assets/SpriteManagementDirectory';
+import {createReactRoot} from '@cdo/apps/util/createReactRoot';
 
 $(document).ready(function () {
-  ReactDOM.render(
+  createReactRoot(
     <SpriteManagementDirectory />,
-    document.getElementById('sprite-management-directory-container')
+    document.getElementById('sprite-management-directory-container'),
+    {
+      legacyReactDomRender: true,
+    }
   );
 });

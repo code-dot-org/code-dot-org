@@ -28,10 +28,7 @@ for (String[] row : textArray) {
         int index = text.indexOf(target);
         while (index != -1) {
             totalCount++;
-            index = text.substring(index + 1).indexOf(target);
-            if (index != -1) {
-                index += target.length();
-            }
+            index = text.indexOf(target, index + 1); 
         }
     }
 }

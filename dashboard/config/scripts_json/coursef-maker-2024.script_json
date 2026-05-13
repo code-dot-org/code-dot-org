@@ -4,17 +4,20 @@
     "wrapup_video_id": null,
     "login_required": false,
     "properties": {
-      "is_course": true,
+      "content_area": "curriculum_k_5",
+      "curriculum_umbrella": "CSF",
       "is_migrated": true,
-      "version_year": "2024"
+      "topic_tags": [
+        "maker"
+      ]
     },
     "new_name": null,
-    "family_name": "coursef-maker",
-    "serialized_at": "2024-05-03 15:13:53 UTC",
-    "published_state": "in_development",
-    "instruction_type": "teacher_led",
-    "instructor_audience": "teacher",
-    "participant_audience": "student",
+    "family_name": null,
+    "serialized_at": "2025-04-03 01:06:32 UTC",
+    "published_state": null,
+    "instruction_type": null,
+    "instructor_audience": null,
+    "participant_audience": null,
     "seeding_key": {
       "script.name": "coursef-maker-2024"
     }
@@ -3070,6 +3073,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "course_f_maker_step_counter"
+        ],
         "progression": "Step Counter Coding with micro:bit"
       },
       "bonus": false,
@@ -3768,6 +3774,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "course_f_maker_microbit_pet"
+        ],
         "progression": "Micro:bit pet"
       },
       "bonus": false,
@@ -4215,6 +4224,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "course_f_maker_max_min_thermometer"
+        ],
         "progression": "Max-min thermometer"
       },
       "bonus": false,

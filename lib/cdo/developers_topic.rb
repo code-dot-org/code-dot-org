@@ -4,13 +4,11 @@ require 'cdo/slack'
 module DevelopersTopic
   BRANCH_PREFIXES = {
     staging: 'DTS: ',
-    'staging-next': 'DTSN: ',
     test: 'DTT: ',
     production: 'DTP: ',
     levelbuilder: 'DTL: '
   }.freeze
   STAGING = 'staging'.freeze
-  STAGING_NEXT = 'staging-next'.freeze
   TEST = 'test'.freeze
   PRODUCTION = 'production'.freeze
   LEVELBUILDER = 'levelbuilder'.freeze
@@ -18,22 +16,41 @@ module DevelopersTopic
   DEVELOPERS_ROOM = 'developers'.freeze
   DEPLOY_STATUS_ROOM = 'deploy-status'.freeze
 
-  # @return [String] The DOTD (without the '@' symbol), as per the Slack#developers topic.
-  def self.dotd
-    current_topic = Slack.get_topic 'developers'
-    dotd = /DOTD: @?([^;]+);/i.match(current_topic)
-    raise 'developers topic not propertly formatted' unless dotd
-    dotd[1]
+  # @return [String] The Slack user ID (e.g. 'U12345') of the DOTD, extracted
+  #   from the user mention in the developers room topic.
+  # @raise [RuntimeError] If the topic does not contain a DOTD mention.
+  def self.dotd_id
+    current_topic = Slack.get_topic('developers', raw: true)
+    match = /DOTD: <@([A-Z0-9]+)>/.match(current_topic)
+    raise 'developers topic missing DOTD mention' unless match
+    match[1]
+  end
+
+  # @return [String] A Slack mention tag '<@U12345>' for the DOTD, suitable for
+  #   pinging the user from a chat message.
+  # @raise [RuntimeError] If the topic does not contain a DOTD mention.
+  def self.dotd_mention
+    "<@#{dotd_id}>"
+  end
+
+  # @return [String] A human-friendly username for the DOTD. Resolves the user
+  #   mention to a display name when present; falls back to the literal text
+  #   after 'DOTD:' for hand-edited topics that omit the mention.
+  # @raise [RuntimeError] If the topic does not specify a DOTD field.
+  def self.dotd_username
+    current_topic = Slack.get_topic('developers', raw: true)
+    if (match = /DOTD: <@([A-Z0-9]+)>/.match(current_topic))
+      Slack.get_display_name(match[1])
+    elsif (match = /DOTD: @?([^;]+);/.match(current_topic))
+      match[1]
+    else
+      raise 'developers topic not properly formatted'
+    end
   end
 
   # @return [Boolean] Whether DTS is yes.
   def self.dts?
     branch_open_for_merge? STAGING
-  end
-
-  # @return [Boolean] Whether DTSN is yes.
-  def self.dtsn?
-    branch_open_for_merge? STAGING_NEXT
   end
 
   # @return [Boolean] Whether DTT is yes.
@@ -55,12 +72,6 @@ module DevelopersTopic
   # @raise [RuntimeError] If the existing DTS topic does not specify a message.
   def self.dts
     branch_message STAGING
-  end
-
-  # @return [String] The DTSN portion of the room topic.
-  # @raise [RuntimeError] If the existing DTS topic does not specify a message.
-  def self.dtsn
-    branch_message STAGING_NEXT
   end
 
   # @return [String] The DTT portion of the room topic.
@@ -87,12 +98,6 @@ module DevelopersTopic
     set_branch_message STAGING, message
   end
 
-  # @param new_subtopic [String] The string to which DTSN should be set.
-  # @raise [RuntimeError] If the existing DTSN topic does not specify a message.
-  def self.set_dtsn(message)
-    set_branch_message STAGING_NEXT, message
-  end
-
   # @param message [String] The string to which DTT should be set.
   # @raise [RuntimeError] If the existing DTT topic does not specify a message.
   def self.set_dtt(message)
@@ -111,9 +116,23 @@ module DevelopersTopic
     set_branch_message LEVELBUILDER, message
   end
 
+  # Replace the DOTD field in the developers room topic.
+  # @param mention_tag [String] The new value, typically a Slack mention tag
+  #   like '<@U12345>' produced by Slack.user_mention_tag.
+  def self.set_dotd_mention(mention_tag)
+    current_topic = Slack.get_topic('developers', raw: true)
+    # Match the DOTD field wherever it appears in the topic: the literal
+    # "DOTD:" followed by any non-';' characters and a closing ';'.
+    # `[^;]+` keeps the match scoped to a single field; `sub` (not `gsub`)
+    # only touches the first DOTD field, leaving sibling fields like
+    # "DTS: no (build pipeline issues); ..." untouched.
+    new_topic = current_topic.sub(/DOTD:[^;]+;/i, "DOTD: #{mention_tag};")
+    Slack.update_topic 'developers', new_topic unless new_topic == current_topic
+  end
+
   private_class_method def self.get_room_for_branch(branch)
     case branch
-    when STAGING, STAGING_NEXT
+    when STAGING
       DEVELOPERS_ROOM
     when TEST, PRODUCTION, LEVELBUILDER
       DEPLOY_STATUS_ROOM

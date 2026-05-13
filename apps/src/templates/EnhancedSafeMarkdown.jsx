@@ -39,11 +39,12 @@ export class UnconnectedExpandableImagesWrapper extends React.Component {
 }
 
 export const ExpandableImagesWrapper = connect(null, dispatch => ({
-  showImageDialog(imgUrl) {
+  showImageDialog(imgUrl, imgAlt) {
     dispatch(
       openDialog({
         imgOnly: true,
         imgUrl,
+        imgAlt,
       })
     );
   },
@@ -93,7 +94,14 @@ export class ClickableTextWrapper extends React.Component {
       if (!clickableText.className.includes(extraClass)) {
         clickableText.className += extraClass;
       }
+      clickableText.setAttribute('role', 'button');
+      clickableText.setAttribute('tabIndex', '0');
       clickableText.onclick = () => this.props.handleInstructionsTextClick(id);
+      clickableText.onkeydown = event => {
+        if (event.key === 'Enter') {
+          clickableText.click();
+        }
+      };
     });
   }
 

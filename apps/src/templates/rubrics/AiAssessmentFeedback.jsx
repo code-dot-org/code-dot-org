@@ -1,12 +1,8 @@
+import Checkbox from '@code-dot-org/component-library/checkbox';
+import {Typography} from '@mui/material';
 import PropTypes from 'prop-types';
 import React, {useContext, useState} from 'react';
 
-import Checkbox from '@cdo/apps/componentLibrary/checkbox/Checkbox';
-import {
-  BodyFourText,
-  StrongText,
-  EmText,
-} from '@cdo/apps/componentLibrary/typography';
 import Button from '@cdo/apps/legacySharedComponents/Button';
 import FontAwesome from '@cdo/apps/legacySharedComponents/FontAwesome';
 import HttpClient from '@cdo/apps/util/HttpClient';
@@ -75,16 +71,18 @@ export default function AiAssessmentFeedback({aiEvalInfo, aiFeedbackId}) {
   return (
     <div>
       {aiFeedbackReceived && (
-        <EmText className={style.aiFeedbackReceived}>
+        <Typography className={style.aiFeedbackReceived} variant="em">
           <FontAwesome icon="circle-check" />
           {i18n.aiFeedbackReceived()}
-        </EmText>
+        </Typography>
       )}
       {!aiSubmitted && aiFeedback === THUMBS_DOWN && aiFeedbackId && (
         <div className={style.aiAssessmentFeedback}>
-          <BodyFourText>
-            <StrongText>{i18n.aiFeedbackNegativeWhy()}</StrongText>
-          </BodyFourText>
+          <Typography variant="body4" gutterBottom>
+            <Typography variant="strong">
+              {i18n.aiFeedbackNegativeWhy()}
+            </Typography>
+          </Typography>
           <Checkbox
             label={i18n.aiFeedbackFalsePos()}
             size="xs"
@@ -123,13 +121,16 @@ export default function AiAssessmentFeedback({aiEvalInfo, aiFeedbackId}) {
           />
           {aiFeedbackOther && (
             <div className={style.aiFeedbackOther}>
-              <StrongText>{i18n.aiFeedbackOtherDetails()} </StrongText>
+              <Typography variant="strong">
+                {i18n.aiFeedbackOtherDetails()}{' '}
+              </Typography>
               <textarea
                 className={style.aiFeedbackTextbox}
                 onChange={e => {
                   setAIOtherContent(e.target.value);
                 }}
                 type="text"
+                // eslint-disable-next-line react/forbid-dom-props
                 data-testid="ai-assessment-feedback-textarea"
               />
             </div>

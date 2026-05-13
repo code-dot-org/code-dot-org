@@ -1,0 +1,50 @@
+<Aichat>
+  <config><![CDATA[{
+  "game_id": 71,
+  "created_at": "2025-09-25T19:59:29.000Z",
+  "level_num": "custom",
+  "user_id": 22366,
+  "properties": {
+    "encrypted": "false",
+    "display_name": "Marketing Specialist",
+    "long_instructions": "## Leo Tanaka, E-Commerce & Digital Marketing Specialist\r\n\r\n**Location:** Tokyo, Japan\r\n\r\n**Workplace:** Online Fashion Retailer\r\n\r\n**Expertise:** Digital marketing, data analytics, online shopping experience\r\n\r\n**How I Use AI:** \"AR Mirrors bridge the gap between online and in-store shopping. Customers can preview outfits digitally before buying, leading to fewer returns and a better online experience.\"\r\n\r\n\r\n---\r\n\r\n### Do This:\r\n\r\n1. Use AI Chat to conduct the interview and take notes on their responses. Ask questions about their work, including:\r\n   * Key roles and responsibilities\r\n   * Key challenges\r\n   * How computing supports their work\r\n   * How your chosen innovation helps their job\r\n2. Summarize key insights in your activity guide.",
+    "aichat_settings": {
+      "initialCustomizations": {
+        "selectedModelId": "gpt-4o-mini",
+        "temperature": 0.3,
+        "systemPrompt": "",
+        "retrievalContexts": [
+
+        ],
+        "modelCardInfo": {
+          "botName": "",
+          "description": "",
+          "intendedUse": "",
+          "limitationsAndWarnings": "",
+          "testingAndEvaluation": "",
+          "exampleTopics": [
+
+          ],
+          "isPublished": false
+        }
+      },
+      "visibilities": {
+        "selectedModelId": "hidden",
+        "temperature": "hidden",
+        "systemPrompt": "hidden",
+        "retrievalContexts": "hidden",
+        "modelCardInfo": "hidden"
+      },
+      "levelSystemPrompt": "You are an industry professional assigned a specific role based on the student’s selection. Your task is to role-play as this professional, providing insights into your daily responsibilities, challenges, and how computing systems support your work.\n\nYour responses should be clear, engaging, and appropriate for high school students—explain concepts simply and connect them to real-world applications. Stay in character and answer as if you were speaking to a curious student who wants to understand your profession.\n\nYou are Leo Tanaka, a digital marketing specialist for an online fashion retailer in Tokyo, Japan. Your role focuses on using technology to improve online shopping experiences and customer engagement.\n\nYou use AR Mirrors to:\n\nAllow online shoppers to virtually try on outfits before purchasing.\nReduce return rates by helping customers make informed decisions.\nEnhance digital marketing campaigns, using AI-driven data insights.\nWhen asked, explain how AI helps you:\n\nImprove customer confidence in online shopping.\nIncrease sales and reduce unnecessary returns.\nPersonalize digital shopping experiences.\nYou may also discuss challenges like ensuring AR works across different devices, maintaining a seamless customer experience, and adapting to evolving fashion trends.",
+      "hidePresentationPanel": false,
+      "availableModelIds": [
+        "gpt-4o-mini"
+      ]
+    },
+    "thumbnail_url": "https://images.code.org/9175edb1e377f075c9c77fb7bb13fddc-Pasted Graphic 31.png",
+    "name_suffix": "_v2-2025"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-09-25T19:59:29.686+00:00\",\"changed\":[\"cloned from \\\"computer-systems-lesson1-level4c_2025\\\"\"],\"cloned_from\":\"computer-systems-lesson1-level4c_2025\"}]"
+}]]></config>
+</Aichat>

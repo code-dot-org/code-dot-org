@@ -1,3 +1,4 @@
+import {Typography} from '@mui/material';
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
 import React, {
@@ -8,11 +9,6 @@ import React, {
   useRef,
 } from 'react';
 
-import {
-  BodyThreeText,
-  BodyFourText,
-  StrongText,
-} from '@cdo/apps/componentLibrary/typography';
 import {RubricUnderstandingLevels} from '@cdo/generated-scripts/sharedConstants';
 import i18n from '@cdo/locale';
 
@@ -110,10 +106,14 @@ export default function EvidenceLevelsForTeachersV2({
   if (canProvideFeedback) {
     return (
       <div id="tour-evidence-levels">
-        <BodyThreeText className={style.evidenceLevelHeaderText}>
-          <StrongText>{i18n.assignARubricScore()}</StrongText>
-        </BodyThreeText>
-        <div className={style.evidenceLevelSetHorizontal} ref={ref}>
+        <Typography
+          className={style.evidenceLevelHeaderText}
+          variant="body3"
+          gutterBottom
+        >
+          <Typography variant="strong">{i18n.assignARubricScore()}</Typography>
+        </Typography>
+        <div className={style.evidenceLevelSetHorizontalV2} ref={ref}>
           {evidenceLevels.map(evidenceLevel => (
             <button
               data-ai-suggested={
@@ -125,8 +125,10 @@ export default function EvidenceLevelsForTeachersV2({
               type="button"
               key={evidenceLevel.id}
               onClick={() => radioButtonCallback(evidenceLevel.understanding)}
+              onFocus={() => handleMouseOver(evidenceLevel.understanding)}
+              onBlur={handleMouseOut}
               onMouseOver={() => handleMouseOver(evidenceLevel.understanding)}
-              onMouseOut={() => handleMouseOut()}
+              onMouseOut={handleMouseOut}
               className={classnames(
                 style.evidenceLevel,
                 [
@@ -148,32 +150,34 @@ export default function EvidenceLevelsForTeachersV2({
               {UNDERSTANDING_LEVEL_STRINGS_V2[evidenceLevel.understanding]}
             </button>
           ))}
-          <BodyFourText>
+          <Typography variant="body4" gutterBottom>
             {showDescription !== INVALID_UNDERSTANDING
               ? evidenceLevels.find(e => e.understanding === showDescription)
                   ?.teacherDescription
               : understanding >= 0 &&
                 evidenceLevels.find(e => e.understanding === understanding)
                   ?.teacherDescription}
-          </BodyFourText>
+          </Typography>
         </div>
       </div>
     );
   } else {
     return (
       <div className={style.evidenceLevelSet}>
-        <BodyThreeText>
-          <StrongText>{i18n.rubricScores()}</StrongText>
-        </BodyThreeText>
+        <Typography variant="body3" gutterBottom>
+          <Typography variant="strong">{i18n.rubricScores()}</Typography>
+        </Typography>
         {evidenceLevels.map(evidenceLevel => (
           <div key={evidenceLevel.id} className={style.evidenceLevelOption}>
             {/*TODO: [DES-321] Label-two styles here*/}
-            <BodyThreeText>
-              <StrongText>
+            <Typography variant="body3" gutterBottom>
+              <Typography variant="strong">
                 {UNDERSTANDING_LEVEL_STRINGS[evidenceLevel.understanding]}
-              </StrongText>
-            </BodyThreeText>
-            <BodyThreeText>{evidenceLevel.teacherDescription}</BodyThreeText>
+              </Typography>
+            </Typography>
+            <Typography variant="body3" gutterBottom>
+              {evidenceLevel.teacherDescription}
+            </Typography>
           </div>
         ))}
       </div>

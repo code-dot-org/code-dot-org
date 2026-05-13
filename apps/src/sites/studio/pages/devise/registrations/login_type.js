@@ -1,12 +1,21 @@
 import $ from 'jquery';
 import React from 'react';
-import ReactDOM from 'react-dom';
 
 import LoginTypeSelection from '@cdo/apps/signUpFlow/LoginTypeSelection';
+import {createReactRoot} from '@cdo/apps/util/createReactRoot';
+import getScriptData from '@cdo/apps/util/getScriptData';
 
 $(document).ready(() => {
-  ReactDOM.render(
-    <LoginTypeSelection />,
-    document.getElementById('login-type-selection')
+  const isSignedOut = getScriptData('isSignedOut');
+  const passwordMinLength = getScriptData('passwordMinLength');
+  createReactRoot(
+    <LoginTypeSelection
+      isSignedOut={isSignedOut}
+      passwordMinLength={passwordMinLength}
+    />,
+    document.getElementById('login-type-selection'),
+    {
+      legacyReactDomRender: true,
+    }
   );
 });

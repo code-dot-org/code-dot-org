@@ -1,42 +1,44 @@
-@import 'color.scss';
 @import 'font.scss';
-@import '@cdo/apps/componentLibrary/common/styles/mixins';
-
-.containerWithMarginTop {
-  margin-top: 40px;
-}
+@import '@code-dot-org/component-library-styles/mixins';
 
 .withBorderTop {
-  border-top: 1px solid $neutral_dark20;
+  border-top: 1px solid var(--borders-neutral-primary);
 }
 
 .withBorderBottom {
-  border-bottom: 1px solid $neutral_dark20;
+  border-bottom: 1px solid var(--borders-neutral-primary);
+}
+
+.sectionHeader {
+  margin-bottom: 16px;
+  display: flex;
+  align-items: center;
 }
 
 p.noMarginBottomParagraph {
   margin-bottom: 0;
 }
 
-input.classNameTextField {
+.skeletonTextField {
   width: 100%;
   box-sizing: border-box;
-  height: unset;
-  border: 1px solid $neutral_dark;
-
-  @include main-font-regular;
-  line-height: 1.5;
-  font-size: 1em;
-
-  &:invalid:focus {
-    border-color: $neutral_dark;
-    box-shadow: unset;
-    color: $neutral_dark;
-  }
+  height: 31px;
+  border-radius: 4px;
+  margin-bottom: 4px;
 }
 
-label.typographyLabelTwo {
+.typographyLabelTwo {
   @include label-two;
+  display: block;
+}
+
+.sectionNameTextField {
+  width: 100%;
+  margin-bottom: 1rem;
+
+  input {
+    width: 100%;
+  }
 }
 
 .buttonsContainer {
@@ -50,6 +52,7 @@ label.typographyLabelTwo {
 
 .splitButtonsContainer {
   justify-content: flex-end;
+  padding: 5px;
 
   button {
     font-size: 16px;
@@ -76,56 +79,59 @@ label.typographyLabelTwo {
 }
 
 .buttonsInRow .buttonStyle {
-  background-color: $white;
+  background-color: var(--background-neutral-primary);
   padding: 10px;
-  color: inherit;
+  color: var(--text-neutral-primary);
   border: none;
   font-size: 14px;
+  margin: 2px;
 
   &:active {
     // !important to overwrite button:active styles in app/assets/stylesheets/application.scss
     border: none !important;
   }
+
+  &:focus-visible {
+    outline: 2px solid var(--borders-brand-teal-primary);
+    color: var(--text-brand-teal-primary);
+    outline-offset: 2px;
+    border-radius: 2px;
+  }
 }
 
 .buttonsInRow .buttonStyle.activeMarketingAudienceButton {
-  color: $brand_primary_default;
-  border-bottom: 2px solid $brand_primary_default;
+  color: var(--text-brand-teal-primary);
+  border-bottom: 2px solid var(--borders-brand-teal-primary);
   border-radius: 0;
+
+  &:focus-visible {
+    border-radius: 2px;
+  }
 }
 
 .buttonsInRow .buttonStyle:hover {
-  color: $brand_primary_default;
+  background-color: var(--background-neutral-primary);
+  color: var(--text-brand-teal-primary);
 }
 
 .flexDisplay {
   display: flex;
 }
 
-.input .inputBox {
-  float: right;
-  margin-top: 15px;
-}
-
-.withBrandAccentColor {
-  accent-color: $brand_primary_default;
-}
-
-.decideLater {
+.decideLaterCheckbox {
   float: right;
   margin: 10px 5px 0 5px;
-  font-size: 16px;
 }
 
 .table {
-  background-color: $neutral_dark10;
+  background-color: var(--background-neutral-secondary);
   margin: 4px;
   flex: 1 1 0px;
 }
 
 .headerRow {
-  background-color: $brand_primary_default;
-  color: $white;
+  background-color: var(--background-brand-teal-primary);
+  color: var(--text-neutral-inverse);
   height: 47px;
 }
 
@@ -133,7 +139,7 @@ label.typographyLabelTwo {
   padding: 12px;
 
   h4 {
-    color: $neutral_white;
+    color: var(--text-neutral-inverse);
     margin-bottom: 0;
     margin-left: 10px;
   }
@@ -160,14 +166,6 @@ label.typographyLabelTwo {
   align-items: center;
 }
 
-.flexDisplay .radio {
-  margin: -2px 0 0 0;
-}
-
-.courseOptionLabel {
-  margin: 0 0 0 5px;
-}
-
 .unitDropdown {
   @include main-font-semi-bold;
   font-size: 16px;
@@ -175,12 +173,16 @@ label.typographyLabelTwo {
   padding: 0.3em;
 }
 
+.unitDropdownLabel {
+  margin-bottom: 7px;
+}
+
 button.advancedSettingsButton {
   margin: 5px;
   font-size: unset;
 
   i {
-    color: $neutral_dark;
+    color: var(--text-neutral-primary);
     margin-right: 10px;
   }
 
@@ -188,11 +190,17 @@ button.advancedSettingsButton {
     display: inline-block;
     margin-top: 0.5em;
   }
+
+  &:focus-visible {
+    outline: 2px solid var(--borders-brand-teal-primary);
+    outline-offset: 2px;
+    border-radius: 2px;
+  }
 }
 
 .celebrationDialogBody {
   padding: 36px;
-  font: $barlowSemiCondensed-medium;
+  font-family: var(--font-family-barlow-semi-condensed-medium);
 
   h1 {
     margin-bottom: 0;
@@ -231,4 +239,8 @@ button.advancedSettingsButton {
 .taImage {
   margin-left: 5px;
   margin-top: -5px;
+}
+
+.loadingSpinner {
+  margin-bottom: 16px;
 }

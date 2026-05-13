@@ -1,5 +1,6 @@
 <StandaloneVideo>
   <config><![CDATA[{
+  "published": true,
   "game_id": 54,
   "created_at": "2022-10-21T19:01:52.000Z",
   "level_num": "custom",
@@ -12,11 +13,10 @@
     "parent_level_id": 28813,
     "name_suffix": "_2023",
     "encrypted": "false",
-    "long_instructions": "You may have seen this video in lesson 4 when we learned about for loops.  This time, when watching the video, pay attention to how we can use for loops to traverse an array. \r\n\r\n## Vocabulary\r\n* **traverse:** to access elements in a data structure one by one\r\n\r\n\r\n## Additional resources\r\nLooking for more practice and resource understanding for loops in Java? Consider using the following resources:\r\n\r\n*  <a href=\"https://runestone.academy/ns/books/published/csawesome/Unit6-Arrays/topic-6-2-traversing-arrays.html\" target=\"_blank\">CS Awesome’s chapter on traversing arrays</a>\r\n\r\n* <a href=\"https://codehs.com/textbook/apcsa_textbook/6.2\" target=\"_blank\">CodeHS's chapter on for traversing arrays</a>\r\n\r\n**Up next:** In the next level, we will practice writing code to traverse an array. \r\n"
+    "long_instructions": "#### You may have seen this video in lesson 4 when we learned about for loops. This time, when watching the video, pay attention to how we can use for loops to traverse an array. \r\n\r\n## Vocabulary\r\n- #### **traverse:** to access elements in a data structure one by one\r\n\r\n\r\n## Additional resources\r\n#### Looking for more practice and resource understanding for loops in Java? Consider using the following resources:\r\n\r\n*  <a href=\"https://runestone.academy/ns/books/published/csawesome/Unit6-Arrays/topic-6-2-traversing-arrays.html\" target=\"_blank\" style = \"font-size:14pt\">CS Awesome’s chapter on traversing arrays</a>\r\n\r\n* <a href=\"https://codehs.com/textbook/apcsa_textbook/6.2\" target=\"_blank\" style = \"font-size:14pt\">CodeHS's chapter on for traversing arrays</a>\r\n\r\n#### **Up next:** In the next level, we will practice writing code to traverse an array. \r\n"
   },
-  "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-10-21T19:01:52.566+00:00\",\"changed\":[\"cloned from \\\"SP-VPL-CSA-22-L5-array-traverse-video-1\\\"\"],\"cloned_from\":\"SP-VPL-CSA-22-L5-array-traverse-video-1\"}]",
+  "audit_log": "[{\"changed_at\":\"2022-10-21T19:01:52.566+00:00\",\"changed\":[\"cloned from \\\"SP-VPL-CSA-22-L5-array-traverse-video-1\\\"\"],\"cloned_from\":\"SP-VPL-CSA-22-L5-array-traverse-video-1\"},{\"changed_at\":\"2024-10-24 19:00:43 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"},{\"changed_at\":\"2024-10-31 15:05:55 +0000\",\"changed\":[],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

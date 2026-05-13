@@ -1,1 +1,1 @@
-default['cdo-nodejs']['version'] = '18.x'
+default['cdo-nodejs']['version'] = '20.x'

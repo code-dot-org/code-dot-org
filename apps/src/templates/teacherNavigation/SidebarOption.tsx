@@ -1,9 +1,11 @@
+import {
+  default as FontAwesomeV6Icon,
+  kitIcons,
+} from '@code-dot-org/component-library/fontAwesomeV6Icon';
+import {Typography} from '@mui/material';
 import classNames from 'classnames';
 import React from 'react';
 import {NavLink, generatePath} from 'react-router-dom';
-
-import FontAwesomeV6Icon from '@cdo/apps/componentLibrary/fontAwesomeV6Icon/FontAwesomeV6Icon';
-import {BodyTwoText} from '@cdo/apps/componentLibrary/typography';
 
 import {LABELED_TEACHER_NAVIGATION_PATHS} from './TeacherNavigationPaths';
 
@@ -11,18 +13,22 @@ import styles from './teacher-navigation.module.scss';
 
 interface SidebarOptionProps {
   isSelected: boolean;
-  sectionId: number;
-  courseVersionName: string | null;
+  sectionId?: number;
+  courseVersionName?: string;
+  unitPosition?: number;
+  unitName: string | null;
   pathKey: keyof typeof LABELED_TEACHER_NAVIGATION_PATHS;
-  onClick: () => void;
+  showErrorIcon: boolean;
 }
 
 const SidebarOption: React.FC<SidebarOptionProps> = ({
   isSelected,
   sectionId,
   courseVersionName,
+  unitPosition,
+  unitName,
   pathKey,
-  onClick,
+  showErrorIcon,
 }) => {
   return (
     <NavLink
@@ -30,25 +36,40 @@ const SidebarOption: React.FC<SidebarOptionProps> = ({
       to={generatePath(LABELED_TEACHER_NAVIGATION_PATHS[pathKey].absoluteUrl, {
         sectionId: sectionId,
         courseVersionName: courseVersionName,
+        unitPosition: unitPosition,
+        unitName: unitName,
       })}
       className={classNames(styles.sidebarOption, {
         [styles.selected]: isSelected,
       })}
-      onClick={onClick}
     >
       <div className={styles.iconContainer}>
         <FontAwesomeV6Icon
           className={styles.optionIcon}
           iconName={LABELED_TEACHER_NAVIGATION_PATHS[pathKey].icon || ''}
+          iconFamily={
+            kitIcons.has(LABELED_TEACHER_NAVIGATION_PATHS[pathKey].icon || '')
+              ? 'kit'
+              : undefined
+          }
         />
       </div>
-      <BodyTwoText
+      <Typography
         className={classNames(styles.linkText, {
           [styles.selected]: isSelected,
         })}
+        variant="body2"
+        gutterBottom
       >
         {LABELED_TEACHER_NAVIGATION_PATHS[pathKey].label}
-      </BodyTwoText>
+      </Typography>
+      {showErrorIcon && (
+        <FontAwesomeV6Icon
+          iconName="triangle-exclamation"
+          iconStyle="solid"
+          className={styles.errorIcon}
+        />
+      )}
     </NavLink>
   );
 };

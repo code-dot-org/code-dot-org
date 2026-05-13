@@ -1,0 +1,196 @@
+@use '@code-dot-org/component-library-styles/mixins.scss' as mixins;
+@use '@code-dot-org/component-library-styles/typography.module.scss' as
+  typography;
+
+// Chips common styles
+.chips {
+  fieldset {
+    padding: 0;
+    border: 0;
+    margin: 0;
+
+    > label {
+      display: block;
+    }
+
+    .chipsContainer {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+
+    .chip {
+      display: inline-block;
+      background-color: var(--background-neutral-primary);
+      border: 1px solid var(--borders-neutral-solid);
+      color: var(--text-neutral-primary);
+      min-width: 30px;
+      text-align: center;
+      border-radius: 100px;
+      white-space: nowrap;
+      margin: 0;
+      cursor: pointer;
+      -webkit-touch-callout: none;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+      -webkit-tap-highlight-color: transparent;
+
+      input[type='checkbox'] {
+        position: absolute;
+        opacity: 0;
+      }
+
+      // Checked styles
+      &:has(input[type='checkbox']:checked) {
+        border: 1px solid var(--borders-brand-teal-primary);
+        background-color: var(--background-brand-teal-primary);
+        color: var(--text-neutral-white-fixed);
+      }
+
+      // Hover styles
+      &:hover {
+        background-color: var(--background-neutral-tertiary);
+
+        &:has(input[type='checkbox']:checked) {
+          background-color: var(--background-brand-teal-strong);
+        }
+      }
+
+      // Pressed styles
+      &:active {
+        background-color: var(--background-neutral-tertiary);
+        outline: var(--borders-brand-teal-primary) solid 2px;
+        outline-offset: -2px;
+
+        &:has(input[type='checkbox']:checked) {
+          background-color: var(--background-brand-teal-strong);
+          outline: var(--borders-brand-teal-primary) solid 2px;
+          outline-offset: -2px;
+        }
+      }
+
+      // Focus styles
+      &:has(input[type='checkbox']:focus-visible) {
+        outline: 2px solid var(--borders-brand-teal-primary);
+        outline-offset: 2px;
+      }
+
+      //Disabled styles
+      &:has(input[type='checkbox']:disabled) {
+        color: var(--text-neutral-disabled);
+        border-color: var(--borders-neutral-disabled);
+
+        &:hover {
+          cursor: not-allowed;
+          background-color: var(--background-neutral-primary);
+        }
+
+        &:active {
+          background-color: var(--background-neutral-primary);
+          outline: none;
+        }
+      }
+
+      &:has(input[type='checkbox']:disabled:checked) {
+        background-color: var(--background-neutral-disabled);
+        color: var(--text-neutral-white-fixed);
+      }
+    }
+  }
+
+  fieldset div:nth-of-type(1) {
+    margin-inline-start: 0;
+  }
+}
+
+// Chips Colors
+.chips-black {
+  fieldset {
+    .chip {
+      border-color: var(--borders-neutral-solid);
+    }
+  }
+}
+
+.chips-gray {
+  fieldset {
+    .chip {
+      border-color: var(--borders-neutral-strong);
+    }
+  }
+}
+
+// Chips sizes
+.chips-l {
+  .groupLabel {
+    @include mixins.label-one;
+  }
+
+  .chip {
+    padding: calc(0.62rem + 2px) 1.25rem 0.62rem;
+
+    &.chip-thick {
+      @include mixins.button-one-text;
+    }
+
+    &.chip-thin {
+      @include typography.body-one;
+    }
+  }
+}
+
+.chips-m {
+  .groupLabel {
+    @include mixins.label-two;
+  }
+
+  .chip {
+    padding: calc(0.5rem + 2px) 1rem 0.5rem;
+
+    &.chip-thick {
+      @include mixins.button-two-text;
+    }
+
+    &.chip-thin {
+      @include typography.body-two;
+    }
+  }
+}
+
+.chips-s {
+  .groupLabel {
+    @include mixins.label-three;
+  }
+
+  .chip {
+    padding: calc(0.31rem + 1px) 0.75rem 0.31rem;
+
+    &.chip-thick {
+      @include mixins.button-three-text;
+    }
+
+    &.chip-thin {
+      @include typography.body-three;
+    }
+  }
+}
+
+.chips-xs {
+  .groupLabel {
+    @include mixins.label-four;
+  }
+
+  .chip {
+    padding: calc(0.12rem + 1px) 0.5rem 0.12rem;
+
+    &.chip-thick {
+      @include mixins.button-four-text;
+    }
+
+    &.chip-thin {
+      @include typography.body-four;
+    }
+  }
+}

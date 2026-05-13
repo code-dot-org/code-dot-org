@@ -4,13 +4,15 @@
     "wrapup_video_id": null,
     "login_required": true,
     "properties": {
+      "content_area": "pl_workshop_activities",
+      "curriculum_umbrella": "PD for Facilitators",
       "is_migrated": true,
       "peer_reviews_to_complete": 6,
       "professional_learning_course": "2022 CS Principles Deeper Learning"
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-10-19 14:53:24 UTC",
+    "serialized_at": "2024-11-19 01:17:27 UTC",
     "published_state": "beta",
     "instruction_type": "teacher_led",
     "instructor_audience": "plc_reviewer",
@@ -331,6 +333,15 @@
 
   ],
   "lessons_opportunity_standards": [
+
+  ],
+  "rubrics": [
+
+  ],
+  "learning_goals": [
+
+  ],
+  "learning_goal_evidence_levels": [
 
   ]
 }

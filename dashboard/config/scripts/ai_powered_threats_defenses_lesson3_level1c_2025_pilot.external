@@ -1,0 +1,77 @@
+name 'ai-powered-threats-defenses-lesson3-level1c_2025-pilot'
+title 'Jordan P. - User Profile'
+
+display_name 'Sofia Hernandez'
+bubble_choice_description 'Sofia is a 14 year old student from Miami, FL'
+thumbnail_url 'https://images.code.org/feb6217203ec38832b5976b7e43173c1-image-1755184977472.png'
+
+markdown <<MARKDOWN
+#Sofia Hernandez
+
+Look through Sofia's social media posts and record important information in your activity guide.
+
+<table style="width:100%; border-collapse:collapse; border:none;">
+  <!-- Row 1: Top image row -->
+  <tr>
+    <td style="width:48%; vertical-align:top;">
+      <img src="https://images.code.org/1bdc76a688fdcf98b7503ddd9e2db568-image-1755120435689.png" alt="Social media image 1" style="width:100%; height:auto;">
+    </td>
+    <td style="width:4%;"></td> <!-- blank spacer column -->
+    <td style="width:48%; vertical-align:top;">
+      <img src="https://images.code.org/26e3548ec2a4cdcca4b4f1174ed6fc39-image-1755120442548.png" alt="Social media image 2" style="width:100%; height:auto;">
+    </td>
+  </tr>
+
+  <!-- Row 2: Captions for first set -->
+  <tr>
+    <td style="background-color:black; color:white; padding:8px; font-family:sans-serif; width: 220px; height: 100px; vertical-align: top;">
+    <h3>@SofiMoves_15</h3>
+    Day 47 of waiting for the concert… at least the living room tour is free 
+    <br>
+    #BTSARMY #DanceChallenge #BTSConcert #FandomLife
+    </td>
+    <td></td> <!-- spacer -->
+    <td style="background-color:black; color:white; padding:8px; font-family:sans-serif; width: 220px; height: 100px; vertical-align: top;">
+    <h3>@SofiHndz</h3>
+    Family business, fresh every day! Stop by for some sunshine in a cup!
+    <br>
+    #MiamiEats #SupportLocal #JuiceBarLove #MangoMadness
+    </td>
+  </tr>
+
+  <!-- Row 3: Vertical spacer row -->
+  <tr>
+    <td style="height:24px;"></td>
+    <td></td>
+    <td></td>
+  </tr>
+
+  <!-- Row 4: Second image row -->
+  <tr>
+    <td style="vertical-align:top;">
+      <img src="https://images.code.org/e9268b7813d9aaaf65859e7d3a4a9b3c-image-1755120448471.png" alt="Social media image 3" style="width:100%; height:auto;">
+    </td>
+    <td></td> <!-- spacer -->
+    <td style="vertical-align:top;">
+      <img src="https://images.code.org/919c1bc5cf142bfc53a2ad352aba1e8b-image-1755120452779.png" alt="Social media image 4" style="width:100%; height:auto;">
+    </td>
+  </tr>
+
+  <!-- Row 5: Captions for second set -->
+  <tr>
+    <td style="background-color:black; color:white; padding:8px; font-family:sans-serif; width: 220px; height: 100px; vertical-align: top;">
+     <h3>@SofiBeachBeats</h3> 
+     Miami weather = main character energy 
+     <br>
+     #BeachDay #MiamiLife #SmoothieVibes #SunAndSand
+    </td>
+    <td></td> <!-- spacer -->
+    <td style="background-color:black; color:white; padding:8px; font-family:sans-serif; width: 220px; height: 100px; vertical-align: top;">
+    <h3>@SofiBeachBeats</h3>
+    Not that I’m counting or anything…
+    <br>
+    #BTSCountdown #FandomFeels
+    </td>
+  </tr>
+</table>
+MARKDOWN

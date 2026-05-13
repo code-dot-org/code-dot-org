@@ -1,0 +1,17 @@
+name 'programming-fundamentals-preassessment-question7_pilot-2025'
+title 'Programming Fundamentals Pre-Assessment: Question 7'
+
+wrong 'To store a single value'
+wrong 'To define an object\’s properties'
+right 'To perform an action associated with an object'
+wrong 'To delete an object'
+
+allow_multiple_attempts true
+
+teacher_markdown <<MARKDOWN
+Lesson 5: Working with Objects
+MARKDOWN
+
+markdown <<MARKDOWN
+What is the purpose of a **method**?
+MARKDOWN

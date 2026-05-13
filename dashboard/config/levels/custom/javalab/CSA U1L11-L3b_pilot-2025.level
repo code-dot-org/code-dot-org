@@ -1,6 +1,5 @@
 <Javalab>
   <config><![CDATA[{
-  "published": true,
   "game_id": 68,
   "created_at": "2024-08-01T20:49:32.000Z",
   "level_num": "custom",
@@ -1044,11 +1043,9 @@
     "bubble_choice_description": "The Neighborhood is planning to host an event to showcase the local birds in the community, and the `Painter` needs help painting a mural of a bird in the street.",
     "thumbnail_url": "https://images.code.org/0c21865709407dae3d5ee4791bf97ce7-U1L11-L3b.png",
     "name_suffix": "_pilot-2025",
-    "ai_tutor_available": "true",
-    "encrypted_examples": [
-
-    ]
+    "ai_tutor_available": "false"
   },
+  "published": true,
   "audit_log": "[{\"changed_at\":\"2024-08-01T20:49:32.520+00:00\",\"changed\":[\"cloned from \\\"CSA U1L11-L3b_2025\\\"\"],\"cloned_from\":\"CSA U1L11-L3b_2025\"},{\"changed_at\":\"2024-09-13 14:21:47 +0000\",\"changed\":[\"long_instructions\",\"serialized_maze\",\"ai_tutor_available\",\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
 }]]></config>
 </Javalab>

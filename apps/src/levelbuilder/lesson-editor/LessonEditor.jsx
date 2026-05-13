@@ -11,6 +11,7 @@ import {
   mapActivityDataForEditor,
   initActivities,
 } from '@cdo/apps/levelbuilder/lesson-editor/activitiesEditorRedux';
+import JitPlConceptsEditor from '@cdo/apps/levelbuilder/lesson-editor/JitPlConceptsEditor';
 import ObjectivesEditor from '@cdo/apps/levelbuilder/lesson-editor/ObjectivesEditor';
 import ProgrammingExpressionsEditor from '@cdo/apps/levelbuilder/lesson-editor/ProgrammingExpressionsEditor';
 import ResourcesEditor from '@cdo/apps/levelbuilder/lesson-editor/ResourcesEditor';
@@ -39,6 +40,7 @@ class LessonEditor extends Component {
     initialLessonData: PropTypes.object,
     unitInfo: PropTypes.object,
     rubricId: PropTypes.number,
+    rubricLevelId: PropTypes.number,
 
     // from redux
     activities: PropTypes.arrayOf(activityShape).isRequired,
@@ -58,6 +60,9 @@ class LessonEditor extends Component {
       isSaving: false,
       error: null,
       lastSaved: null,
+      jitPlConceptIds: (this.props.initialLessonData.jitPlConcepts || []).map(
+        c => c.id
+      ),
       displayName: this.props.initialLessonData.name,
       overview: this.props.initialLessonData.overview || '',
       studentOverview: this.props.initialLessonData.studentOverview || '',
@@ -68,6 +73,7 @@ class LessonEditor extends Component {
       hasLessonPlan: this.props.initialLessonData.hasLessonPlan,
       creativeCommonsLicense:
         this.props.initialLessonData.creativeCommonsLicense || '',
+      background: this.props.initialLessonData.background || '',
       assessment: this.props.initialLessonData.assessment,
       purpose: this.props.initialLessonData.purpose || '',
       preparation: this.props.initialLessonData.preparation || '',
@@ -92,6 +98,7 @@ class LessonEditor extends Component {
         lockable: this.state.lockable,
         hasLessonPlan: this.state.hasLessonPlan,
         creativeCommonsLicense: this.state.creativeCommonsLicense,
+        background: this.state.background,
         assessment: this.state.assessment,
         unplugged: this.state.unplugged,
         overview: this.state.overview,
@@ -108,6 +115,7 @@ class LessonEditor extends Component {
         ),
         standards: JSON.stringify(this.props.standards),
         opportunityStandards: JSON.stringify(this.props.opportunityStandards),
+        jitPlConceptIds: JSON.stringify(this.state.jitPlConceptIds),
         announcements: JSON.stringify(this.state.announcements),
         originalLessonData: JSON.stringify(this.state.originalLessonData),
       }),
@@ -163,6 +171,7 @@ class LessonEditor extends Component {
       lockable,
       hasLessonPlan,
       creativeCommonsLicense,
+      background,
       assessment,
       purpose,
       preparation,
@@ -269,6 +278,24 @@ class LessonEditor extends Component {
             <HelpTip>
               <p>
                 Check this box if the lesson does not require use of a device.
+              </p>
+            </HelpTip>
+          </label>
+          <label>
+            Background
+            <select
+              style={styles.dropdown}
+              value={background}
+              onChange={e => this.setState({background: e.target.value})}
+            >
+              <option value="">(none)</option>
+              <option value="light">light</option>
+              <option value="dark">dark</option>
+            </select>
+            <HelpTip>
+              <p>
+                Choose a light or dark background for a lesson containing Lab2
+                levels.
               </p>
             </HelpTip>
           </label>
@@ -383,9 +410,7 @@ class LessonEditor extends Component {
                 />
               ) : (
                 <h4>
-                  A unit must be in a course version, i.e. a unit must belong to
-                  a course or have 'Is a Standalone Course' checked, in order to
-                  add resources.
+                  A unit must belong to a course in order to add resources.
                 </h4>
               )}
             </CollapsibleEditorSection>
@@ -401,9 +426,7 @@ class LessonEditor extends Component {
                 />
               ) : (
                 <h4>
-                  A unit must be in a course version, i.e. a unit must belong to
-                  a course or have 'Is a Standalone Course' checked, in order to
-                  add vocabulary.
+                  A unit must belong to a course in order to add vocabulary.
                 </h4>
               )}
             </CollapsibleEditorSection>
@@ -467,10 +490,18 @@ class LessonEditor extends Component {
             </CollapsibleEditorSection>
           </div>
         )}
+        <CollapsibleEditorSection title="JIT PL Concepts" collapsed={true}>
+          <JitPlConceptsEditor
+            allConcepts={this.props.initialLessonData.allJitPlConcepts || []}
+            selectedConceptIds={this.state.jitPlConceptIds}
+            onChange={ids => this.setState({jitPlConceptIds: ids})}
+          />
+        </CollapsibleEditorSection>
         <CollapsibleEditorSection title="Activities & Levels" fullWidth={true}>
           <ActivitiesEditor
             hasLessonPlan={hasLessonPlan}
             allowMajorCurriculumChanges={allowMajorCurriculumChanges}
+            rubricLevelId={this.props.rubricLevelId}
           />
         </CollapsibleEditorSection>
         {!this.hasRubric() && (
@@ -479,7 +510,7 @@ class LessonEditor extends Component {
             style={styles.addRubric}
             href={'/rubrics/new?lessonId=' + this.getLessonId()}
           >
-            <i style={styles.buttonText} className="fa fa-plus-circle" />
+            <i style={styles.buttonText} className="fa-solid fa-circle-plus" />
             Add Rubric
           </a>
         )}
@@ -489,7 +520,7 @@ class LessonEditor extends Component {
             style={styles.addRubric}
             href={'/rubrics/' + rubricId + '/edit'}
           >
-            <i style={styles.buttonText} className="fa fa-plus-circle" />
+            <i style={styles.buttonText} className="fa-solid fa-circle-plus" />
             Edit Rubric
           </a>
         )}
@@ -522,6 +553,10 @@ const styles = {
     border: '1px solid #ccc',
     borderRadius: 4,
     margin: 0,
+  },
+  shortInput: {
+    width: 200,
+    marginLeft: 7,
   },
   checkbox: {
     margin: '0 0 0 7px',

@@ -1,0 +1,87 @@
+name 'csaif_pl_teacher_Lesson1_python'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Voices from the Classroom
+
+#### Programming is the foundation of computer science and problem-solving. Understanding core coding concepts is essential for building computational thinking skills. Code.org's **Foundations of AI Programming** introduces key concepts like variables, loops, conditionals, and functions through hands-on coding in the Neighborhood IDE, making programming accessible and engaging for all learners.
+
+
+#### See what educators are saying about teaching the **Foundations of AI Programming** unit. 
+
+
+<!-- Flexbox Section 1 -->
+<div style="display: flex; align-items: center; gap: 5px; width: 80%; margin: 20px auto;">
+  <!-- Image -->
+  <div style="flex: 1; text-align: center;">
+   
+  </div>
+  <!-- Text Box -->
+  <div style="flex: 3; background-color: #b2dee3; border-radius: 40px 40px 5px 40px; padding: 20px; color: #000000; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
+    <p style="font-size: 50px; margin: 0px 0 0 0; opacity: 0.5;">&ldquo;</p>
+    <p style="line-height: 1.5; font-size: 16px; margin: 0 0 10px 0;"> 
+      The detailed lesson plans and slides are fantastic. They take the stress out of teaching new concepts, making the whole process seamless and enjoyable.
+    </p>
+    <p style="font-size: 50px; text-align: right; opacity: 0.5; margin: 0;">&rdquo;</p>
+  </div>
+</div>
+
+<!-- Flexbox Section 2 -->
+<div style="display: flex; align-items: center; gap: 5px; flex-direction: row-reverse; width: 80%; margin: 20px auto;">
+  <!-- Image -->
+  <div style="flex: 1; text-align: center;">
+   
+  </div>
+  <!-- Text Box -->
+  <div style="flex: 3; background-color: #ffd199; border-radius: 40px 40px 5px 40px; padding: 20px; color: #000000; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
+    <p style="font-size: 50px; margin: 0px 0 0 0; opacity: 0.5;">&ldquo;</p>
+    <p style="line-height: 1.5; font-size: 16px; margin: 0 0 10px 0;"> 
+      The AI integration is a game-changer. It not only helps students troubleshoot their code but also opens up conversations about the ethical implications of AI in society.
+    </p>
+    <p style="font-size: 50px; text-align: right; opacity: 0.5; margin: 0;">&rdquo;</p>
+  </div>
+</div>
+
+<!-- Flexbox Section 3 -->
+<div style="display: flex; align-items: center; gap: 5px; width: 80%; margin: 20px auto;">
+  <!-- Image -->
+  <div style="flex: 1; text-align: center;">
+
+  </div>
+  <!-- Text Box -->
+  <div style="flex: 3; background-color: #f6a6a6; border-radius: 40px 40px 5px 40px; padding: 20px; color: #000000; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
+    <p style="font-size: 50px; margin: 0px 0 0 0; opacity: 0.5;">&ldquo;</p>
+    <p style="line-height: 1.5; font-size: 16px; margin: 0 0 10px 0;"> 
+      This curriculum takes the intimidation out of coding. My students, even those who had never coded before, quickly saw how they could use Python to solve problems.
+    </p>
+    <p style="font-size: 50px; text-align: right; opacity: 0.5; margin: 0;">&rdquo;</p>
+  </div>
+</div>
+
+---
+
+<div style="background-color: #026C7A; color: #FFFFFF; padding: 15px; border-radius: 10px; width: 90%; margin: 20px auto;">
+    
+<p style="font-size: 44pt; font-weight: bold; margin: 0; text-align: center;margin-top: 15px;">🎉🎉🎉</p><br>
+<p style="font-size: 24pt; font-weight: bold; margin: 0; text-align: center; margin-top: 15px;">Congratulations!</p>
+
+<p style="font-size: 14pt; line-height: 1.2; margin-top: 10px;text-align: center;">
+You've finished the first lesson in this professional learning module! <br><br><b> Computational Thinking</b> is up next! 
+    </p>
+</div>
+
+
+<table width="100%" cellspacing="0" cellpadding="15">
+    <tr>
+        <td style="background-color: #b2dee3; text-align: center;"><b>Lesson One</b><br>Teaching Foundations of <br>AI Programming</td>
+        <td style="background-color: #f7f8fa; text-align: center;"><b>Lesson Two</b><br>Computational <br> Thinking</td>
+        <td style="background-color: #f7f8fa; text-align: center;"><b>Lesson Three</b><br>Python<br> Basics</td>
+        <td style="background-color: #f7f8fa; text-align: center;"><b>Lesson Four</b><br>Advanced<br>Algorithms</td>
+        <td style="background-color: #f7f8fa; text-align: center;"><b>Lesson Five</b><br>Preparing for the<br>Final Project</tr>
+</table>
+
+
+
+
+MARKDOWN

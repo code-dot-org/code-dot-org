@@ -4,6 +4,7 @@
     "wrapup_video_id": null,
     "login_required": true,
     "properties": {
+      "content_area": "curriculum_9_12",
       "curriculum_umbrella": "CSA",
       "has_verified_resources": true,
       "hideable_lessons": true,
@@ -15,7 +16,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-08-23 20:22:48 UTC",
+    "serialized_at": "2024-11-19 01:14:49 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -5695,6 +5696,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "csp-pre-survey-levelgroup_21_222022_csa_pilot-2022"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -5716,6 +5720,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U1L2-L1_pilot-2022"
+        ],
         "progression": "Investigate: Java Basics"
       },
       "bonus": false,
@@ -5738,6 +5745,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U1L2-L2_pilot-2022"
+        ],
         "progression": "Investigate: Java Basics"
       },
       "bonus": false,
@@ -5760,6 +5770,9 @@
       "activity_section_position": 3,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U1L2-L3_pilot-2022"
+        ],
         "progression": "Investigate: Java Basics"
       },
       "bonus": false,
@@ -5782,6 +5795,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U1L2-L4_pilot-2022"
+        ],
         "progression": "Investigate: Java Basics"
       },
       "bonus": false,
@@ -5804,6 +5820,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U1L2-L5_pilot-2022"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -5826,6 +5845,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U1L3-L0_pilot-2022"
+        ],
         "progression": "Investigate: The Painter"
       },
       "bonus": false,
@@ -5848,6 +5870,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U1L3-L1_pilot-2022"
+        ],
         "progression": "Instantiate a Painter Object"
       },
       "bonus": false,
@@ -5870,6 +5895,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U1L3-L2_pilot-2022"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -5892,6 +5920,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U1L4-L1_pilot-2022"
+        ],
         "progression": "Predict: Painter Class Methods"
       },
       "bonus": false,
@@ -5914,6 +5945,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U1L4-L2_pilot-2022"
+        ],
         "progression": "Moving and Painting"
       },
       "bonus": false,
@@ -5936,6 +5970,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U1L4-L3_pilot-2022"
+        ],
         "progression": "Moving and Painting"
       },
       "bonus": false,
@@ -5958,6 +5995,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U1L4-L4_pilot-2022"
+        ],
         "progression": "Moving and Painting"
       },
       "bonus": false,
@@ -5980,6 +6020,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U1L4-L5_pilot-2022"
+        ],
         "progression": "Moving and Painting"
       },
       "bonus": false,
@@ -6002,6 +6045,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U1L4-L6_pilot-2022"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -6024,6 +6070,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U1L5-L1_pilot-2022"
+        ],
         "progression": "Predict: Conditionals and More Methods"
       },
       "bonus": false,
@@ -6046,6 +6095,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U1L5-L2_pilot-2022"
+        ],
         "progression": "Conditional Moving and Painting"
       },
       "bonus": false,
@@ -6068,6 +6120,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U1L5-L3_pilot-2022"
+        ],
         "progression": "Conditional Moving and Painting"
       },
       "bonus": false,
@@ -6090,6 +6145,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U1L5-L4_pilot-2022"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -6112,6 +6170,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U1L6-L1_pilot-2022"
+        ],
         "progression": "Creating PainterPlus"
       },
       "bonus": false,
@@ -6134,6 +6195,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U1L6-L2_pilot-2022"
+        ],
         "progression": "Creating PainterPlus"
       },
       "bonus": false,
@@ -6156,6 +6220,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U1L6-L3_pilot-2022"
+        ],
         "progression": "Creating PainterPlus"
       },
       "bonus": false,
@@ -6178,6 +6245,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U1L6-L4_pilot-2022"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -6200,6 +6270,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U1L7-L1_pilot-2022"
+        ],
         "progression": "Writing and Using a New Method"
       },
       "bonus": false,
@@ -6222,6 +6295,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U1L7-L2_pilot-2022"
+        ],
         "progression": "Writing and Using a New Method"
       },
       "bonus": false,
@@ -6244,6 +6320,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U1L7-L3_pilot-2022"
+        ],
         "progression": "Writing and Using a New Method"
       },
       "bonus": false,
@@ -6266,6 +6345,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U1L7-L4_pilot-2022"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -6288,6 +6370,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U1L8-L1_pilot-2022"
+        ],
         "progression": "Programming Style, Commits, and the Backpack"
       },
       "bonus": false,
@@ -6310,6 +6395,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U1L8-L2_pilot-2022"
+        ],
         "progression": "Programming Style, Commits, and the Backpack"
       },
       "bonus": false,
@@ -6332,6 +6420,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U1L8-L3_pilot-2022"
+        ],
         "progression": "Programming Style, Commits, and the Backpack"
       },
       "bonus": false,
@@ -6354,6 +6445,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U1L8-L4_pilot-2022"
+        ],
         "progression": "Programming Style, Commits, and the Backpack"
       },
       "bonus": false,
@@ -6376,6 +6470,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U1L8-L5_pilot-2022"
+        ],
         "progression": "Conducting a Code Review"
       },
       "bonus": false,
@@ -6398,6 +6495,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U1L8-L6_pilot-2022"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -6420,6 +6520,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U1L9-L1_pilot-2022"
+        ],
         "progression": "Predict: More Boolean Methods"
       },
       "bonus": false,
@@ -6442,6 +6545,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U1L9-L2_pilot-2022"
+        ],
         "progression": "Using Loops and Boolean Methods"
       },
       "bonus": false,
@@ -6464,6 +6570,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U1L9-L3v2_pilot-2022"
+        ],
         "progression": "Using Loops and Boolean Methods"
       },
       "bonus": false,
@@ -6486,6 +6595,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U1L9-L4v2_pilot-2022"
+        ],
         "progression": "Using Loops and Boolean Methods"
       },
       "bonus": false,
@@ -6508,6 +6620,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U1L9-L5 CR_pilot-2022"
+        ],
         "progression": "Code Review: New PainterPlus Methods"
       },
       "bonus": false,
@@ -6530,6 +6645,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U1L9-L6_pilot-2022"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -6552,6 +6670,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U1L10-L1_pilot-2022"
+        ],
         "progression": "Investigate: Selection and Logic"
       },
       "bonus": false,
@@ -6574,6 +6695,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U1L10-L2_pilot-2022"
+        ],
         "progression": "Using Two-Way Selection and NOT"
       },
       "bonus": false,
@@ -6596,6 +6720,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U1L10-L3v2_pilot-2022"
+        ],
         "progression": "Using Two-Way Selection and NOT"
       },
       "bonus": false,
@@ -6618,6 +6745,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U1L10-L4v2_pilot-2022"
+        ],
         "progression": "Using Two-Way Selection and NOT"
       },
       "bonus": false,
@@ -6640,6 +6770,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U1L10-L5 CR_pilot-2022"
+        ],
         "progression": "Code Review: New PainterPlus Methods"
       },
       "bonus": false,
@@ -6662,6 +6795,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U1L10-L6_pilot-2022"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -6684,6 +6820,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U1L11-L1_pilot-2022"
+        ],
         "progression": "Debugging with PainterPlus"
       },
       "bonus": false,
@@ -6706,6 +6845,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U1L11-L2_pilot-2022"
+        ],
         "progression": "Debugging with PainterPlus"
       },
       "bonus": false,
@@ -6728,6 +6870,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U1L11-L3_pilot-2022"
+        ],
         "progression": "Debugging with PainterPlus"
       },
       "bonus": false,
@@ -6750,6 +6895,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U1L11-L4_pilot-2022"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -6772,6 +6920,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U1L12-L3_pilot-2022"
+        ],
         "progression": "More PainterPlus Methods"
       },
       "bonus": false,
@@ -6794,6 +6945,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U1L12-L4 CR_pilot-2022"
+        ],
         "progression": "Code Review: More PainterPlus Methods"
       },
       "bonus": false,
@@ -6816,6 +6970,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U1L12-L5_pilot-2022"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -6838,6 +6995,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U1L13-L1_pilot-2022"
+        ],
         "progression": "PatternPainter"
       },
       "bonus": false,
@@ -6860,6 +7020,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U1L13-L2_pilot-2022"
+        ],
         "progression": "PatternPainter"
       },
       "bonus": false,
@@ -6882,6 +7045,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U1L13-L3_pilot-2022"
+        ],
         "progression": "PatternPainter"
       },
       "bonus": false,
@@ -6904,6 +7070,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U1L13-L4_pilot-2022"
+        ],
         "progression": "Code Review: PatternPainter"
       },
       "bonus": false,
@@ -6926,6 +7095,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U1L13-L5_pilot-2022"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -6948,6 +7120,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U1L14-L1_pilot-2022"
+        ],
         "progression": "BackgroundPainter"
       },
       "bonus": false,
@@ -6970,6 +7145,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U1L14-L2_pilot-2022"
+        ],
         "progression": "BackgroundPainter"
       },
       "bonus": false,
@@ -6992,6 +7170,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U1L14-L3_pilot-2022"
+        ],
         "progression": "BackgroundPainter"
       },
       "bonus": false,
@@ -7014,6 +7195,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U1L14-L4_pilot-2022"
+        ],
         "progression": "Code Review: BackgroundPainter"
       },
       "bonus": false,
@@ -7036,6 +7220,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U1L14-L5_pilot-2022"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -7058,6 +7245,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U1L15-L1_pilot-2022"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -7080,6 +7270,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U1L16-L1_pilot-2022"
+        ],
         "progression": "Asphalt Art Project"
       },
       "bonus": false,
@@ -7102,6 +7295,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U1L17-L1_pilot-2022"
+        ],
         "progression": "Asphalt Art Project"
       },
       "bonus": false,
@@ -7124,6 +7320,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U1L17-L2_pilot-2022"
+        ],
         "progression": "Code Review: Asphalt Art Project"
       },
       "bonus": false,
@@ -7146,6 +7345,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U1L18-L1_pilot-2022"
+        ],
         "progression": "Asphalt Art Project"
       },
       "bonus": false,
@@ -7168,6 +7370,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "Student End of Unit Survey_csa1_pilot-2022"
+        ],
         "progression": "Unit 1 Survey"
       },
       "bonus": false,
@@ -7190,6 +7395,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA Unit 1 Assessment 2022_pilot-2022"
+        ],
         "progression": "Unit 1 Assessment"
       },
       "bonus": false,
@@ -7212,6 +7420,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA 2022 Console Sandbox_pilot-2022"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -7233,6 +7444,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA 2022 Neighborhood Sandbox_pilot-2022"
+        ],
         "progression": "With Paint Bucket"
       },
       "bonus": false,
@@ -7255,6 +7469,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA 2022 Neighborhood - No Bucket Sandbox_pilot-2022"
+        ],
         "progression": "No Paint Bucket"
       },
       "bonus": false,
@@ -11535,6 +11752,15 @@
     }
   ],
   "lessons_opportunity_standards": [
+
+  ],
+  "rubrics": [
+
+  ],
+  "learning_goals": [
+
+  ],
+  "learning_goal_evidence_levels": [
 
   ]
 }

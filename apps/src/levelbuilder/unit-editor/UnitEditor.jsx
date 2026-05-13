@@ -1,15 +1,13 @@
+import {Chips} from '@code-dot-org/component-library/chips';
+import Link from '@code-dot-org/component-library/link';
 import $ from 'jquery';
 import PropTypes from 'prop-types';
 import React from 'react';
 import {connect} from 'react-redux';
 
 import {announcementShape} from '@cdo/apps/code-studio/announcementsRedux';
-import {Chips} from '@cdo/apps/componentLibrary/chips';
 import {
-  InstructionType,
   PublishedState,
-  InstructorAudience,
-  ParticipantAudience,
   CurriculumUmbrella,
   CurriculumTopicTags,
   CurriculumContentArea,
@@ -18,9 +16,7 @@ import Button from '@cdo/apps/legacySharedComponents/Button';
 import Dialog from '@cdo/apps/legacySharedComponents/Dialog';
 import AnnouncementsEditor from '@cdo/apps/levelbuilder/announcementsEditor/AnnouncementsEditor';
 import CollapsibleEditorSection from '@cdo/apps/levelbuilder/CollapsibleEditorSection';
-import CourseTypeEditor from '@cdo/apps/levelbuilder/course-editor/CourseTypeEditor';
 import ResourcesEditor from '@cdo/apps/levelbuilder/course-editor/ResourcesEditor';
-import CourseVersionPublishingEditor from '@cdo/apps/levelbuilder/CourseVersionPublishingEditor';
 import SaveBar from '@cdo/apps/levelbuilder/SaveBar';
 import {resourceShape} from '@cdo/apps/levelbuilder/shapes';
 import TextareaWithMarkdownPreview from '@cdo/apps/levelbuilder/TextareaWithMarkdownPreview';
@@ -38,7 +34,7 @@ import {linkWithQueryParams, navigateToHref} from '@cdo/apps/utils';
 import {lessonGroupShape} from './shapes';
 
 /**
- * Component for editing units in unit_groups or stand alone courses
+ * Component for editing units
  */
 class UnitEditor extends React.Component {
   static propTypes = {
@@ -47,17 +43,7 @@ class UnitEditor extends React.Component {
     i18nData: PropTypes.object.isRequired,
     initialPublishedState: PropTypes.oneOf(Object.values(PublishedState))
       .isRequired,
-    //Published state of units in a course can be set to be different than the course overall.
-    //We only use this field for units in a course
-    initialUnitPublishedState: PropTypes.oneOf(Object.values(PublishedState)),
-    initialInstructionType: PropTypes.oneOf(Object.values(InstructionType))
-      .isRequired,
-    initialInstructorAudience: PropTypes.oneOf(
-      Object.values(InstructorAudience)
-    ).isRequired,
-    initialParticipantAudience: PropTypes.oneOf(
-      Object.values(ParticipantAudience)
-    ).isRequired,
+    initialHideWithinCourse: PropTypes.bool,
     initialDeprecated: PropTypes.bool,
     initialLoginRequired: PropTypes.bool,
     initialHideableLessons: PropTypes.bool,
@@ -70,9 +56,9 @@ class UnitEditor extends React.Component {
     initialProjectWidgetTypes: PropTypes.arrayOf(PropTypes.string),
     initialLastUpdatedAt: PropTypes.string,
     initialLessonExtrasAvailable: PropTypes.bool,
+    initialHasUnnumberedLessons: PropTypes.bool,
     initialHasVerifiedResources: PropTypes.bool,
     initialCurriculumPath: PropTypes.string,
-    initialPilotExperiment: PropTypes.string,
     initialEditorExperiment: PropTypes.string,
     initialAnnouncements: PropTypes.arrayOf(announcementShape).isRequired,
     initialSupportedLocales: PropTypes.arrayOf(PropTypes.string),
@@ -90,14 +76,9 @@ class UnitEditor extends React.Component {
       ...Object.keys(CurriculumContentArea),
       '',
     ]),
-    initialFamilyName: PropTypes.string,
-    initialVersionYear: PropTypes.string,
-    unitFamilies: PropTypes.arrayOf(PropTypes.string).isRequired,
-    versionYearOptions: PropTypes.arrayOf(PropTypes.string).isRequired,
     isLevelbuilder: PropTypes.bool,
     initialTts: PropTypes.bool,
     hasCourse: PropTypes.bool,
-    initialIsCourse: PropTypes.bool,
     initialShowCalendar: PropTypes.bool,
     initialWeeklyInstructionalMinutes: PropTypes.number,
     isMigrated: PropTypes.bool,
@@ -108,6 +89,8 @@ class UnitEditor extends React.Component {
     courseOfferingEditorLink: PropTypes.string,
     isCSDCourseOffering: PropTypes.bool,
     isMissingRequiredDeviceCompatibilities: PropTypes.bool,
+    allowMajorCurriculumChanges: PropTypes.bool,
+    initialEnableBlocklyKeyboardNavigation: PropTypes.bool,
 
     // from redux
     lessonGroups: PropTypes.arrayOf(lessonGroupShape).isRequired,
@@ -124,9 +107,6 @@ class UnitEditor extends React.Component {
       error: null,
       lastSaved: null,
       ttsDialogOpen: false,
-      familyName: this.props.initialFamilyName,
-      savedFamilyName: this.props.initialFamilyName,
-      isCourse: this.props.initialIsCourse,
       showCalendar: this.props.initialShowCalendar,
       weeklyInstructionalMinutes:
         this.props.initialWeeklyInstructionalMinutes || '',
@@ -145,9 +125,9 @@ class UnitEditor extends React.Component {
       projectWidgetTypes: this.props.initialProjectWidgetTypes,
       lastUpdatedAt: this.props.initialLastUpdatedAt,
       lessonExtrasAvailable: this.props.initialLessonExtrasAvailable,
+      hasUnnumberedLessons: this.props.initialHasUnnumberedLessons,
       hasVerifiedResources: this.props.initialHasVerifiedResources,
       curriculumPath: this.props.initialCurriculumPath,
-      pilotExperiment: this.props.initialPilotExperiment,
       editorExperiment: this.props.initialEditorExperiment,
       supportedLocales: this.props.initialSupportedLocales,
       locales: this.props.initialLocales,
@@ -155,19 +135,15 @@ class UnitEditor extends React.Component {
       curriculumUmbrella: this.props.initialCurriculumUmbrella,
       topicTags: this.props.initialTopicTags,
       contentArea: this.props.initialContentArea,
-      versionYear: this.props.initialVersionYear,
-      savedVersionYear: this.props.initialVersionYear,
       tts: this.props.initialTts,
       title: this.props.i18nData.title || '',
       descriptionAudience: this.props.i18nData.descriptionAudience || '',
       descriptionShort: this.props.i18nData.descriptionShort || '',
       includeStudentLessonPlans: this.props.initialIncludeStudentLessonPlans,
       useLegacyLessonPlans: this.props.initialUseLegacyLessonPlans,
-      publishedState: this.props.initialPublishedState,
-      unitPublishedState: this.props.initialUnitPublishedState,
-      instructionType: this.props.initialInstructionType,
-      instructorAudience: this.props.initialInstructorAudience,
-      participantAudience: this.props.initialParticipantAudience,
+      hideWithinCourse: !!this.props.initialHideWithinCourse,
+      enableBlocklyKeyboardNavigation:
+        this.props.initialEnableBlocklyKeyboardNavigation || false,
     };
   }
 
@@ -181,18 +157,6 @@ class UnitEditor extends React.Component {
 
   handleChangeSupportedLocales = selectedOptions => {
     this.setState({supportedLocales: selectedOptions});
-  };
-
-  handleFamilyNameChange = event => {
-    this.setState({familyName: event.target.value});
-  };
-
-  handleStandaloneUnitChange = () => {
-    this.setState({
-      isCourse: !this.state.isCourse,
-      familyName: null,
-      versionYear: null,
-    });
   };
 
   handleShowCalendarChange = () => {
@@ -229,94 +193,16 @@ class UnitEditor extends React.Component {
           'Please provide a positive number of instructional minutes per week in Unit Calendar Settings.',
       });
       return;
-    } else if (
-      this.state.publishedState === PublishedState.pilot &&
-      this.state.pilotExperiment === ''
-    ) {
-      this.setState({
-        isSaving: false,
-        error:
-          'Please provide a pilot experiment in order to save with published state as pilot.',
-      });
-      return;
-    } else if (
-      !this.props.hasCourse &&
-      this.state.deeperLearningCourse === '' &&
-      this.state.publishedState !== PublishedState.in_development &&
-      (!this.state.isCourse ||
-        this.state.versionYear === '' ||
-        this.state.familyName === '')
-    ) {
-      this.setState({
-        isSaving: false,
-        error:
-          'Standalone units that are not in development must be a standalone unit with family name and version year.',
-      });
-      return;
-    } else if (
-      this.state.isCourse &&
-      ((this.state.versionYear !== '' && this.state.familyName === '') ||
-        (this.state.versionYear === '' && this.state.familyName !== ''))
-    ) {
-      this.setState({
-        isSaving: false,
-        error: 'Please set both version year and family name.',
-      });
-      return;
-    } else if (
-      [PublishedState.preview, PublishedState.stable].includes(
-        this.state.publishedState
-      ) &&
-      this.props.isMissingRequiredDeviceCompatibilities
-    ) {
-      this.setState({
-        isSaving: false,
-        error:
-          'Please set all device compatibilities in order to save with published state as preview or stable.',
-      });
-      return;
-    }
-
-    if (this.state.publishedState !== this.props.initialPublishedState) {
-      const msg =
-        'It looks like you are updating the published state. ' +
-        'Are you sure you want to update the published state? ' +
-        'Once you update the published state you can not go back to this published state. ' +
-        'For example once you set the published state to beta you can not go back to in development. ' +
-        'Also once a course as a published state of pilot it can not be fully launched (marked as preview or stable).';
-      if (!window.confirm(msg)) {
-        this.setState({
-          isSaving: false,
-          error: 'Saving cancelled.',
-        });
-        return;
-      }
     }
 
     if (
-      this.state.unitPublishedState !== this.props.initialUnitPublishedState
+      this.state.hideWithinCourse &&
+      this.state.hideWithinCourse !== this.props.initialHideWithinCourse
     ) {
       const msg =
-        'It looks like you are hiding this unit. ' +
-        'Are you sure you want to hide this unit? ';
-      if (!window.confirm(msg)) {
-        this.setState({
-          isSaving: false,
-          error: 'Saving cancelled.',
-        });
-        return;
-      }
-    }
-
-    if (
-      this.state.unitPublishedState === PublishedState.in_development &&
-      this.state.unitPublishedState === this.props.initialUnitPublishedState
-    ) {
-      const msg =
-        'This unit is hidden within the course, meaning it is not ' +
-        'visible on the Course Overview page, Section Dialog, or Teacher ' +
-        'Dashboard. It is still visible to Levelbuilders. Would you ' +
-        'like to continue with saving?';
+        'Hiding this unit means it will not be visible on the Course Overview ' +
+        'page, Section Dialog, or Teacher Dashboard. It will still visible to ' +
+        'Levelbuilders. Would you like to continue with saving?';
       if (!window.confirm(msg)) {
         this.setState({
           isSaving: false,
@@ -328,8 +214,6 @@ class UnitEditor extends React.Component {
 
     let dataToSave = {
       name: this.props.name,
-      family_name: this.state.familyName,
-      is_course: this.state.isCourse,
       show_calendar: this.state.showCalendar,
       weekly_instructional_minutes: parseInt(
         this.state.weeklyInstructionalMinutes
@@ -337,12 +221,7 @@ class UnitEditor extends React.Component {
       description: this.state.description,
       student_description: this.state.studentDescription,
       announcements: JSON.stringify(this.state.announcements),
-      published_state: this.props.hasCourse
-        ? this.state.unitPublishedState
-        : this.state.publishedState,
-      instruction_type: this.state.instructionType,
-      instructor_audience: this.state.instructorAudience,
-      participant_audience: this.state.participantAudience,
+      hide_within_course: this.state.hideWithinCourse,
       login_required: this.state.loginRequired,
       hideable_lessons: this.state.hideableLessons,
       student_detail_progress_view: this.state.studentDetailProgressView,
@@ -356,9 +235,9 @@ class UnitEditor extends React.Component {
       lesson_groups:
         this.props.isMigrated && JSON.stringify(this.props.lessonGroups),
       last_updated_at: this.state.lastUpdatedAt,
+      has_unnumbered_lessons: this.state.hasUnnumberedLessons,
       has_verified_resources: this.state.hasVerifiedResources,
       curriculum_path: this.state.curriculumPath,
-      pilot_experiment: this.state.pilotExperiment,
       editor_experiment: this.state.editorExperiment,
       supported_locales: this.state.supportedLocales,
       locales: this.state.locales,
@@ -366,7 +245,6 @@ class UnitEditor extends React.Component {
       curriculum_umbrella: this.state.curriculumUmbrella,
       topic_tags: this.state.topicTags,
       content_area: this.state.contentArea,
-      version_year: this.state.versionYear,
       tts: this.state.tts,
       title: this.state.title,
       description_audience: this.state.descriptionAudience,
@@ -378,6 +256,8 @@ class UnitEditor extends React.Component {
       is_migrated: this.props.isMigrated,
       include_student_lesson_plans: this.state.includeStudentLessonPlans,
       use_legacy_lesson_plans: this.state.useLegacyLessonPlans,
+      enable_blockly_keyboard_navigation:
+        this.state.enableBlocklyKeyboardNavigation,
     };
 
     $.ajax({
@@ -398,8 +278,6 @@ class UnitEditor extends React.Component {
             lastSaved: Date.now(),
             isSaving: false,
             lastUpdatedAt: data.updated_at,
-            savedFamilyName: data.family_name,
-            savedVersionYear: data.version_year,
           });
         }
       })
@@ -417,18 +295,12 @@ class UnitEditor extends React.Component {
   };
 
   toggleHiddenCourseUnit = () => {
-    const unitPublishedState =
-      this.state.unitPublishedState === PublishedState.in_development
-        ? null
-        : PublishedState.in_development;
-    this.setState({unitPublishedState});
+    const hideWithinCourse = !this.state.hideWithinCourse;
+    this.setState({hideWithinCourse});
   };
 
   render() {
-    const allowMajorCurriculumChanges =
-      this.props.initialUnitPublishedState === PublishedState.in_development ||
-      this.props.initialPublishedState === PublishedState.in_development ||
-      this.props.initialPublishedState === PublishedState.pilot;
+    const {allowMajorCurriculumChanges} = this.props;
 
     return (
       <div>
@@ -630,6 +502,26 @@ class UnitEditor extends React.Component {
               onChange={e => this.setState({wrapupVideo: e.target.value})}
             />
           </label>
+          <label>
+            Enable Keyboard Navigation in Blockly (Experimental)
+            <input
+              type="checkbox"
+              checked={this.state.enableBlocklyKeyboardNavigation}
+              style={styles.checkbox}
+              onChange={() =>
+                this.setState({
+                  enableBlocklyKeyboardNavigation:
+                    !this.state.enableBlocklyKeyboardNavigation,
+                })
+              }
+            />
+            <HelpTip>
+              <p>
+                Experimental: Enables keyboard-based navigation in Blockly
+                workspaces. May not be fully stable.
+              </p>
+            </HelpTip>
+          </label>
         </CollapsibleEditorSection>
         <CollapsibleEditorSection title="Supported locales" collapsed={true}>
           <p>
@@ -656,33 +548,6 @@ class UnitEditor extends React.Component {
             <LocaleItemComponent />
           </MultiCheckboxSelector>
         </CollapsibleEditorSection>
-
-        {this.props.hasCourse && (
-          <CollapsibleEditorSection title="Course Type Settings">
-            <p>
-              Settings in this section change depending on whether this unit is
-              grouped with other units in a course. If this does not look as
-              expected, please add or remove this unit from a course.
-            </p>
-          </CollapsibleEditorSection>
-        )}
-        {!this.props.hasCourse && (
-          <CourseTypeEditor
-            instructorAudience={this.state.instructorAudience}
-            participantAudience={this.state.participantAudience}
-            instructionType={this.state.instructionType}
-            handleInstructionTypeChange={e =>
-              this.setState({instructionType: e.target.value})
-            }
-            handleInstructorAudienceChange={e =>
-              this.setState({instructorAudience: e.target.value})
-            }
-            handleParticipantAudienceChange={e =>
-              this.setState({participantAudience: e.target.value})
-            }
-            allowMajorCurriculumChanges={allowMajorCurriculumChanges}
-          />
-        )}
 
         <CollapsibleEditorSection title="Publishing Settings">
           {this.props.isLevelbuilder && (
@@ -719,6 +584,12 @@ class UnitEditor extends React.Component {
                     blocks and there will be information about CSTA Standards.
                   </p>
                 </HelpTip>
+                <Link
+                  href="https://github.com/code-dot-org/code-dot-org/wiki/Updating-Publish-State-of-Scripts-or-Courses"
+                  openInNewTab={true}
+                >
+                  More info
+                </Link>
               </label>
               <label>
                 Content Area
@@ -735,7 +606,7 @@ class UnitEditor extends React.Component {
                   ))}
                 </select>
               </label>
-              <label>
+              <div style={styles.marginBottom}>
                 Topic tags
                 <Chips
                   name="unit-editor-topic-tags"
@@ -749,9 +620,10 @@ class UnitEditor extends React.Component {
                   values={this.state.topicTags}
                   setValues={vals => this.setState({topicTags: vals})}
                 />
-              </label>
+              </div>
               {this.props.hasCourse &&
-                this.state.publishedState !== PublishedState.in_development && (
+                this.props.initialPublishedState !==
+                  PublishedState.in_development && (
                   <div>
                     <p>
                       Settings in this section change depending on whether this
@@ -759,25 +631,12 @@ class UnitEditor extends React.Component {
                       not look as expected, please add or remove this unit from
                       a course.
                     </p>
-                    {/*
-                   Just use a checkbox instead of a dropdown to set the
-                   published state for now, because (1) units in unit groups
-                   really only need 2 of the 6 possible states at the moment,
-                   but (2) we haven't nailed down how many of these states we
-                   will need in the long term, and (3) we need these 2 states
-                   working now in order to launch the AP CSA pilot. The work to
-                   clean this up is tracked in:
-                   https://codedotorg.atlassian.net/browse/PLAT-1170
-                   */}
                     <label>
                       Hide this unit within this course
                       <input
                         className="unit-test-hide-unit-in-course"
                         type="checkbox"
-                        checked={
-                          this.state.unitPublishedState ===
-                          PublishedState.in_development
-                        }
+                        checked={this.state.hideWithinCourse}
                         style={styles.checkbox}
                         onChange={this.toggleHiddenCourseUnit}
                       />
@@ -794,39 +653,6 @@ class UnitEditor extends React.Component {
                     </label>
                   </div>
                 )}
-              {!this.props.hasCourse && (
-                <div data-testid="course-version-publishing-editor">
-                  <CourseVersionPublishingEditor
-                    pilotExperiment={this.state.pilotExperiment}
-                    versionYear={this.state.versionYear}
-                    familyName={this.state.familyName}
-                    updatePilotExperiment={pilotExperiment =>
-                      this.setState({pilotExperiment})
-                    }
-                    updateFamilyName={familyName => this.setState({familyName})}
-                    updateVersionYear={versionYear =>
-                      this.setState({versionYear})
-                    }
-                    families={this.props.unitFamilies}
-                    versionYearOptions={this.props.versionYearOptions}
-                    isCourse={this.state.isCourse}
-                    updateIsCourse={this.handleStandaloneUnitChange}
-                    showIsCourseSelector
-                    initialPublishedState={this.props.initialPublishedState}
-                    publishedState={this.state.publishedState}
-                    updatePublishedState={publishedState =>
-                      this.setState({publishedState})
-                    }
-                    preventCourseVersionChange={
-                      this.state.savedVersionYear !== '' ||
-                      this.state.savedFamilyName !== ''
-                    }
-                    courseOfferingEditorLink={
-                      this.props.courseOfferingEditorLink
-                    }
-                  />
-                </div>
-              )}
             </div>
           )}
         </CollapsibleEditorSection>
@@ -841,7 +667,7 @@ class UnitEditor extends React.Component {
 
         <CollapsibleEditorSection title="Lesson Settings">
           {this.props.isMigrated && this.props.initialUseLegacyLessonPlans && (
-            <label>
+            <div style={styles.marginBottom}>
               <Button
                 text={'Use Code Studio Lesson Plans'}
                 size={Button.ButtonSize.narrow}
@@ -868,7 +694,7 @@ class UnitEditor extends React.Component {
                   lessons in this unit.
                 </p>
               </HelpTip>
-            </label>
+            </div>
           )}
           {(!this.props.isMigrated || this.state.useLegacyLessonPlans) && (
             <label>
@@ -950,6 +776,25 @@ class UnitEditor extends React.Component {
               </HelpTip>
             </label>
           )}
+          <label>
+            Lesson Numbering
+            <HelpTip>
+              <p>
+                Automatically provide numbers in lesson names in the order
+                listed below.
+              </p>
+            </HelpTip>
+            <input
+              type="checkbox"
+              defaultChecked={!this.state.hasUnnumberedLessons}
+              style={styles.checkbox}
+              onChange={() =>
+                this.setState({
+                  hasUnnumberedLessons: !this.state.hasUnnumberedLessons,
+                })
+              }
+            />
+          </label>
         </CollapsibleEditorSection>
 
         <CollapsibleEditorSection title="Resources Dropdowns">
@@ -1170,6 +1015,9 @@ const styles = {
     marginBottom: 10,
     border: '1px solid ' + color.light_gray,
     padding: 10,
+  },
+  marginBottom: {
+    marginBottom: 5,
   },
 };
 

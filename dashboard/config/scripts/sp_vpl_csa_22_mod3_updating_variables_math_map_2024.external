@@ -5,22 +5,22 @@ description 'description here'
 markdown <<MARKDOWN
 # Updating variables
 
-In addition to declaring and initializing variables, we also want to update the value stored in a variable.  To update the values stored in a variable, we use the name of the variable, the assignment operator (=), and the new value we want to store in the variable.
+#### In addition to declaring and initializing variables, we also want to update the value stored in a variable.  To update the values stored in a variable, we use the name of the variable, the assignment operator (=), and the new value we want to store in the variable.
 
 ## Example
 
 ```
-1. // declare and initialize a String bestDate
-2. String bestDate = “April 25th”;
-3. 
-4. // update the variable bestDate
-5. bestDate = “May 4th”;
+ 1. // declare and initialize a String bestDate
+ 2. String bestDate = “April 25th”;
+ 3. 
+ 4. // update the variable bestDate
+# 5. bestDate = “May 4th”;
 ```
 
-**Explanation:** In the example above, we would read line 5 as “bestDate gets May 4th”.  `“May 4th”` is now stored in `bestDate` and the old value is essentially "forgotten" by the computer.
+#### **Explanation:** In the example above, we would read line 5 as “bestDate gets May 4th”.  `“May 4th”` is now stored in `bestDate` and the old value is essentially "forgotten" by the computer.
 
 ## Using mathematical operators
-We can also use **mathematical operators** to update `int` and `double` values stored inside variables.  The mathematical operators Java uses are in the table below:
+#### We can also use **mathematical operators** to update `int` and `double` values stored inside variables.  The mathematical operators Java uses are in the table below:
 
 | Operation      | Java Operator | Example  |
 | :---        		|    :----:   | :--- |
@@ -34,7 +34,7 @@ We can also use **mathematical operators** to update `int` and `double` values s
 <br><br>
 
 ## Example
-Let's look at an example:
+#### Let's look at an example:
 
 ```
 1. // declare and initialize an int of numberOfPets
@@ -44,18 +44,19 @@ Let's look at an example:
 5. numberOfPets = numberOfPets + 2;
 ```
 
-**Explanation:** In the example above, `numberOfPets` holds the value `3` when it is initialized.  On line, 5 we get the value of `numberOfPets` and add `2` to the value stored in `numberOfPets`.  We then store the new value of `5` now in `numberOfPets`.
+#### **Explanation:** In the example above, `numberOfPets` holds the value `3` when it is initialized.  On line, 5 we get the value of `numberOfPets` and add `2` to the value stored in `numberOfPets`.  We then store the new value of `5` now in `numberOfPets`.
 
 ## Additional resources
-Looking for more practice and resource understanding variables in Java? Consider using the following resources:
+#### Looking for more practice and resource understanding variables in Java? Consider using the following resources:
 
-*  <a href="https://runestone.academy/ns/books/published/csawesome/Unit1-Getting-Started/topic-1-3-variables.html" target="_blank">CS Awesome’s chapter on variables</a>
+*  <a href="https://runestone.academy/ns/books/published/csawesome/Unit1-Getting-Started/topic-1-3-variables.html" target="_blank" style= "font-size: 14pt">CS Awesome’s chapter on variables</a>
 
-* <a href="https://codehs.com/textbook/apcsa_textbook/1.4" target="_blank">CodeHS's chapter on variables</a>
+* <a href="https://codehs.com/textbook/apcsa_textbook/1.4" target="_blank" style= "font-size: 14pt">CodeHS's chapter on variables</a>
 
 --- 
 
-**Up next:** We will do a Check for Understanding of the material we have seen so far and then practice writing some code using these concepts. 
+#### **Up next:** We will do a Check for Understanding of the material we have seen so far and then practice writing some code using these concepts. 
+
 
 
 

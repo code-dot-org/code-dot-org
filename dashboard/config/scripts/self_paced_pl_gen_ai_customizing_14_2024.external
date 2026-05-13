@@ -5,12 +5,12 @@ description 'description here'
 markdown <<MARKDOWN
 # Lessons 5-7: Retrieval
 
-#### Lessons 5 through 7 help students develop an understanding of **retrieval**. Take some time to review these lesson plans.
+#### Students continue to develop an understanding of **retrieval** in Lessons 5-7. Take some time to review these lesson plans.
 
 ## Lesson Overviews
 
 <details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
-    <summary style="font-size: 1.5em; font-weight: bold;">🔎 Lesson 5: Retrieval - Exploration</summary>
+    <summary style="font-size: 1.5em; font-weight: bold;">🔎 Lesson 5: Exploration</summary>
 <div style="margin-top: 20px; margin-left: 20px; margin-right: 20px;">
     <p>
 <img src="https://images.code.org/ed33d52d1e8715c0cdc2e3ea53048e2d-Screenshot 2024-08-30 at 2.46.04 PM.png" alt="system prompt, retrieval, tempreature model" width="300px" style="float:left; margin: 20px 20px 20px 20px;">
@@ -31,7 +31,7 @@ markdown <<MARKDOWN
 </details>
 
 <details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
-    <summary style="font-size: 1.5em; font-weight: bold;">🔎 Lesson 6: Retrieval - Practice</summary>
+    <summary style="font-size: 1.5em; font-weight: bold;">🔎 Lesson 6: Practice</summary>
 <div style="margin-top: 20px; margin-left: 20px; margin-right: 20px;">
     <p>
 <img src="https://images.code.org/d6d370b326a34bdf8918ac33c69c6ef7-Screenshot 2024-10-04 at 2.57.09 PM.png" alt="movie recommendation activity from lesson" width="300px" style="float:left; margin: 20px 20px 20px 20px;">
@@ -51,7 +51,7 @@ markdown <<MARKDOWN
 </details>
 
 <details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
-    <summary style="font-size: 1.5em; font-weight: bold;">🔎 Lesson 7: Retrieval - Synthesis</summary>
+    <summary style="font-size: 1.5em; font-weight: bold;">🔎 Lesson 7: Synthesis</summary>
 <div style="margin-top: 20px; margin-left: 20px; margin-right: 20px;">
     <p>
 <img src="https://images.code.org/dab35d579550056c346647f067ca351c-Screenshot 2024-10-04 at 2.59.43 PM.png" alt="discussion from lesson" width="300px" style="float:left; margin: 20px 20px 20px 20px;">

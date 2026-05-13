@@ -1,0 +1,6 @@
+{
+  "key": "musiclab-functions-basic",
+  "concept": "musiclab_functions",
+  "description": "define and call a function",
+  "evaluation_criteria": "{\"all_complete_correct\":\"The workspace contains at least 2 functions and they are both called under the `when run` block\",\"partial_complete_correct\":\"The workspace contains exactly one function and it is called under the `when run` block\",\"incomplete_incorrect\":\"The workspace contains a function definition but it is not called under the `when run` block, or the workspace contains a function definition but the function itself is empty}"
+}

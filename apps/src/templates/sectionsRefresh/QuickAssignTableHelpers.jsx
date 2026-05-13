@@ -1,7 +1,8 @@
+import RadioButton from '@code-dot-org/component-library/radioButton';
+import {Typography} from '@mui/material';
 import classnames from 'classnames';
 import React from 'react';
 
-import {Heading5} from '@cdo/apps/componentLibrary/typography';
 import taImage from '@cdo/apps/templates/rubrics/images/ai-teaching-assistant-assign.png';
 
 import moduleStyles from './sections-refresh.module.scss';
@@ -26,7 +27,9 @@ export function renderRows(
   return headers.map(header => (
     <tr key={header} className={moduleStyles.courseTableRow}>
       <td className={moduleStyles.courseHeaders}>
-        <Heading5>{header}</Heading5>
+        <Typography variant="h5" gutterBottom>
+          {header}
+        </Typography>
         {renderOfferings(
           courseData[header],
           sectionCourse,
@@ -58,14 +61,9 @@ function renderOfferings(
       )}
       key={course.display_name}
     >
-      <input
-        id={course.display_name}
-        className={classnames(
-          moduleStyles.radio,
-          moduleStyles.withBrandAccentColor
-        )}
-        type="radio"
+      <RadioButton
         name={course.display_name}
+        label={course.display_name}
         value={course.display_name}
         checked={sectionCourse?.courseOfferingId === course.id}
         onChange={() => {
@@ -73,12 +71,6 @@ function renderOfferings(
           setSelectedCourseOffering(course);
         }}
       />
-      <label
-        className={moduleStyles.courseOptionLabel}
-        htmlFor={course.display_name}
-      >
-        {course.display_name}
-      </label>
       {course.ai_teaching_assistant_available && (
         <img
           src={taImage}
@@ -115,24 +107,18 @@ function updateSectionCourse(updateCourse, course) {
   }
 
   const courseVersion = courseVersions[courseVersionId];
-  const isStandaloneUnit = courseVersion.type === 'Unit';
 
-  let hasLessonExtras;
-  let hasTextToSpeech;
-
-  if (isStandaloneUnit) {
-    hasLessonExtras = Object.values(courseVersion.units)[0]
-      .lesson_extras_available;
-    hasTextToSpeech = Object.values(courseVersion.units)[0]
-      .text_to_speech_enabled;
-  }
+  const hasLessonExtras = Object.values(courseVersion.units)[0]
+    .lesson_extras_available;
+  const hasTextToSpeech = Object.values(courseVersion.units)[0]
+    .text_to_speech_enabled;
 
   updateCourse({
     displayName: course.display_name,
     courseOfferingId: course.id,
     versionId: courseVersionId,
     unitId: null,
-    hasLessonExtras: hasLessonExtras,
-    hasTextToSpeech: hasTextToSpeech,
+    lessonExtrasAvailable: hasLessonExtras,
+    textToSpeechEnabled: hasTextToSpeech,
   });
 }

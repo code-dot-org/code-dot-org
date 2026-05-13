@@ -772,7 +772,7 @@
     "bubble_choice_description": "Paint dashed lines between the lanes of traffic.",
     "thumbnail_url": "https://images.code.org/0dea0fc4a774b3884e7ed5808b834046-image-1646323157893.gif",
     "name_suffix": "_pilot-2022",
-    "ai_tutor_available": true
+    "ai_tutor_available": "false"
   },
   "published": true,
   "audit_log": "[{\"changed_at\":\"2022-08-23T20:21:51.095+00:00\",\"changed\":[\"cloned from \\\"CSA U1L12-L4b_2022\\\"\"],\"cloned_from\":\"CSA U1L12-L4b_2022\"}]"

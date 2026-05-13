@@ -1,0 +1,16 @@
+name 'sp-pl-DS_L7B_-rev'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Filters
+
+#### Another important tool is the **filter**, which lets you focus on a specific portion of your data. Instead of scrolling through everything, you can quickly narrow it down to just what you need.
+
+<div style="background-color: #B7E0E5; border-radius: 10px; padding: 15px; margin: 20px auto; max-width: 85%; box-sizing: border-box; word-wrap: break-word; overflow-wrap: break-word;">
+<p style="font-size: 14pt; margin-top: 12px; line-height: 120%;"><strong>📖 Filter </strong> a tool or process used to select specific data points from a larger set based on certain criteria or conditions.</p>
+</div>
+
+## Let's try it out
+
+MARKDOWN

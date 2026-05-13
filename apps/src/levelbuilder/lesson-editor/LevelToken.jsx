@@ -26,14 +26,19 @@ export class UnconnectedLevelToken extends Component {
     handleDragStart: PropTypes.func,
     removeLevel: PropTypes.func.isRequired,
     allowMajorCurriculumChanges: PropTypes.bool.isRequired,
+    rubricLevelId: PropTypes.number,
 
     // from redux
     toggleExpand: PropTypes.func,
   };
 
   render() {
-    const {draggedLevelPos, scriptLevel, allowMajorCurriculumChanges} =
-      this.props;
+    const {
+      draggedLevelPos,
+      scriptLevel,
+      allowMajorCurriculumChanges,
+      rubricLevelId,
+    } = this.props;
     const springConfig = {stiffness: 1000, damping: 80};
 
     return (
@@ -71,6 +76,7 @@ export class UnconnectedLevelToken extends Component {
               activitySectionPosition={this.props.activitySectionPosition}
               activityPosition={this.props.activityPosition}
               allowMajorCurriculumChanges={allowMajorCurriculumChanges}
+              rubricLevelId={rubricLevelId}
             />
           )
         }
@@ -95,6 +101,7 @@ export class LevelTokenContents extends Component {
     activitySectionPosition: PropTypes.number.isRequired,
     activityPosition: PropTypes.number.isRequired,
     allowMajorCurriculumChanges: PropTypes.bool.isRequired,
+    rubricLevelId: PropTypes.number,
   };
 
   handleDragStart = e => {
@@ -125,8 +132,13 @@ export class LevelTokenContents extends Component {
   };
 
   render() {
-    const {scriptLevel, allowMajorCurriculumChanges} = this.props;
+    const {scriptLevel, allowMajorCurriculumChanges, rubricLevelId} =
+      this.props;
     const hasVariants = scriptLevel.levels.length > 1;
+    const isRubricLevel =
+      rubricLevelId !== null &&
+      rubricLevelId !== undefined &&
+      String(rubricLevelId) === scriptLevel.activeId;
 
     const activeLevel = hasVariants
       ? scriptLevel.levels.filter(level => {
@@ -157,7 +169,7 @@ export class LevelTokenContents extends Component {
       >
         {allowMajorCurriculumChanges && (
           <div style={styles.reorder} onMouseDown={this.handleDragStart}>
-            <i className="fa fa-arrows-v" />
+            <i className="fa-solid fa-up-down" />
           </div>
         )}
         <span
@@ -196,15 +208,22 @@ export class LevelTokenContents extends Component {
         <div
           style={styles.edit}
           onClick={() => {
-            const win = window.open(activeLevel.url, 'noopener', 'noreferrer');
-            win.focus();
+            window.open(activeLevel.url, '_blank', 'noopener,noreferrer');
           }}
         >
-          <i className="fa fa-pencil" />
+          <i className="fa-solid fa-pen" />
         </div>
-        {allowMajorCurriculumChanges && (
+        {allowMajorCurriculumChanges && !isRubricLevel && (
           <div style={styles.remove} onMouseDown={this.handleRemove}>
-            <i className="fa fa-times" />
+            <i className="fa-solid fa-xmark" />
+          </div>
+        )}
+        {allowMajorCurriculumChanges && isRubricLevel && (
+          <div
+            style={styles.rubricLock}
+            title="This level is referenced by the lesson's rubric.  Select a different submittable level for the rubric first."
+          >
+            <i className="fa fa-lock" />
           </div>
         )}
         {scriptLevel.expand && (
@@ -271,6 +290,18 @@ const styles = {
     borderTopRightRadius: borderRadius,
     borderBottomRightRadius: borderRadius,
     cursor: 'pointer',
+  },
+  rubricLock: {
+    fontSize: 14,
+    display: 'table-cell',
+    color: '#888',
+    background: '#ddd',
+    border: '1px solid #bbb',
+    boxShadow: 'inset 0 1px 0 0 rgba(255, 255, 255, 0.6)',
+    padding: '7px 13px',
+    borderTopRightRadius: borderRadius,
+    borderBottomRightRadius: borderRadius,
+    cursor: 'not-allowed',
   },
   edit: {
     fontSize: 14,

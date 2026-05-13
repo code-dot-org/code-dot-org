@@ -7,7 +7,6 @@ import {
 } from '@cdo/apps/accounts/ManageLinkedAccounts';
 
 import {expect} from '../../util/deprecatedChai'; // eslint-disable-line no-restricted-imports
-import {replaceOnWindow, restoreOnWindow} from '../../util/testUtils';
 
 const DEFAULT_PROPS = {
   userType: 'student',
@@ -33,6 +32,9 @@ describe('ManageLinkedAccounts', () => {
       'Clever Account'
     );
     expect(wrapper.find('OauthConnection').at(3)).to.include.text(
+      'ClassLink Account'
+    );
+    expect(wrapper.find('OauthConnection').at(4)).to.include.text(
       'Facebook Account'
     );
   });
@@ -86,6 +88,11 @@ describe('ManageLinkedAccounts', () => {
         credentialType: 'clever',
         email: 'teacher@clever.com',
       },
+      5: {
+        id: 5,
+        credentialType: 'classlink',
+        email: 'teacher@classlink.com',
+      },
       3: {
         id: 3,
         credentialType: 'facebook',
@@ -121,7 +128,7 @@ describe('ManageLinkedAccounts', () => {
     );
     expect(cleverConnection.find('td').at(2)).to.have.text('Disconnect');
 
-    const facebookConnection = oauthConnections.at(3);
+    const facebookConnection = oauthConnections.at(4);
     expect(facebookConnection.find('td').at(1)).to.have.text(
       'teacher@facebook.com'
     );
@@ -176,6 +183,7 @@ describe('ManageLinkedAccounts', () => {
       '/users/auth/1/disconnect',
       '/users/auth/microsoft_v2_auth?action=connect',
       '/users/auth/clever?action=connect',
+      '/users/auth/classlink?action=connect',
       '/users/auth/2/disconnect',
     ];
     forms.forEach((form, i) => {
@@ -219,7 +227,7 @@ describe('ManageLinkedAccounts', () => {
         authenticationOptions={authOptions}
       />
     );
-    const facebookConnectButton = wrapper.find('BootstrapButton').at(3);
+    const facebookConnectButton = wrapper.find('BootstrapButton').at(4);
     expect(facebookConnectButton).to.have.attr('disabled');
   });
 
@@ -253,15 +261,37 @@ describe('ManageLinkedAccounts', () => {
     expect(googleConnectButton).to.have.attr('disabled');
   });
 
+  describe('LTI Account Unlinking', () => {
+    it('disables disconnecting from lti if user only has lti auth', () => {
+      const authOptions = {1: {id: 1, credentialType: 'lti_v1'}};
+      const wrapper = mount(
+        <ManageLinkedAccounts
+          {...DEFAULT_PROPS}
+          userHasPassword={true} // Should disable disconnecting from lti even if the user has a password attached to their account
+          authenticationOptions={authOptions}
+        />
+      );
+      const ltiConnectButton = wrapper.find('BootstrapButton').at(5);
+      expect(ltiConnectButton).to.have.attr('disabled');
+    });
+
+    it('does not disable disconnecting from lti if the user has another authentication option', () => {
+      const authOptions = {
+        1: {id: 1, credentialType: 'google_oauth2'},
+        2: {id: 2, credentialType: 'lti_v1'},
+      };
+      const wrapper = mount(
+        <ManageLinkedAccounts
+          {...DEFAULT_PROPS}
+          authenticationOptions={authOptions}
+        />
+      );
+      const ltiConnectButton = wrapper.find('BootstrapButton').at(4);
+      expect(ltiConnectButton).to.not.have.attr('disabled');
+    });
+  });
+
   describe('CPA lockout to prevent students from connecting oauth accounts without parent permission', () => {
-    beforeEach(() => {
-      replaceOnWindow('CPA_EXPERIENCE', 'true');
-    });
-
-    afterEach(() => {
-      restoreOnWindow('CPA_EXPERIENCE', undefined);
-    });
-
     it('disables the connect buttons when personal account linking is disabled', () => {
       const wrapper = mount(
         <ManageLinkedAccounts

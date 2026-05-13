@@ -1,0 +1,43 @@
+name 'self-paced-pl-ai-districts-transforming_05_2024'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Using AI as an Educator
+
+#### AI offers a vast array of capabilities, and including saving time in routine teaching duties. Here is a list of a few examples from teachers who have leveraged AI to enhance their teaching practices.
+
+* #### “Compose emails to parents, proofread emails, assist in writing tests…”
+* #### “Write lessons, create quizzes and to rewrite the standards into grade level language for my students and their parents.”
+* #### “Help formulate writing rubrics for my English classes.”
+* #### “...Create a lesson plan outline or formulate questions.”
+* #### “...to help teach lessons that I have taught in the past but add more hands-on learning!”
+
+## Practice
+
+#### Use <a href="https://chat.openai.com/" target="_blank">ChatGPT</a> to write all or part of a lesson plan.
+
+#### Try out this starter prompt, and then modify it from there: 
+
+##### "Create a detailed introduction for a 7th-grade science lesson on photosynthesis. This introduction should engage students by connecting the topic to real-life examples, explain the importance of photosynthesis, and outline the key concepts that will be covered in the lesson. Include a brief interactive activity to assess prior knowledge and stimulate interest."
+
+<br>
+
+<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
+    <summary style="font-size: 1.5em; font-weight: bold;">🚀 Want to Learn More?</summary>
+<div style="margin-top: 20px; margin-left: 20px; margin-right: 20px; padding-bottom:20px;">
+    <p>
+    
+
+### Prompting Tips and Tricks:
+* #### When you’re prompting the AI don’t just stop after the first prompt! Keep asking it more questions and diving deeper.
+* #### For more accurate and helpful responses, try to be as detailed as possible in your requests. The more context you provide, the better LLMs can tailor their answers to your needs.
+* #### Don’t forget to use the feedback mechanisms to improve your experience. Whether it’s clarifying misunderstandings, asking for further details, or simply exploring different approaches, your interactions can help guide the conversation to more effectively meet your goals.
+* #### Keep your critical thinking cap on. Don’t trust the AI at face value. We’ll learn more about AI and misinformation in a future module, but for now use your better judgment and fact check anything that maybe doesn’t sound right.
+
+#### Check out <a href="https://docs.google.com/presentation/d/1WXvjG9TscUuH5Xz8Pj2okz6lMIKV__g0v6AoYVXKb40/copy" target="_blank">Large Language Model Prompts for Educators</a>, by Code.org for more ways to level-up your prompting skills.
+</p></div>
+</details>
+
+
+MARKDOWN

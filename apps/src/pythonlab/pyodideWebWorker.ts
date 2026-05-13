@@ -4,7 +4,11 @@ import {loadPyodide, PyodideInterface, version} from 'pyodide';
 import {MAIN_PYTHON_FILE} from '@cdo/apps/lab2/constants';
 
 import {HOME_FOLDER} from './pythonHelpers/constants';
-import {SETUP_CODE} from './pythonHelpers/patches';
+import {
+  patchInputCode,
+  pythonlabInputModule,
+  SETUP_CODE,
+} from './pythonHelpers/patches';
 import {
   getCleanupCode,
   getUpdatedSourceAndDeleteFiles,
@@ -21,22 +25,43 @@ async function loadPyodideAndPackages() {
     // which does serve the unhashed files. We need to serve the unhashed files because
     // pyodide controls adding the filenames to the url we provide here.
     indexURL: `/blockly/js/pyodide/${version}/`,
-    // pre-load numpy as it will frequently be used, our custom setup package, and matplotlib
-    // which our custom setup package patches.
-    packages: [
-      'numpy',
-      'matplotlib',
-      // These are custom packages that we have built. They are defined in this repo:
-      // https://github.com/code-dot-org/pythonlab-packages
-      `/blockly/js/pyodide/${version}/unittest_runner-0.1.0-py3-none-any.whl`,
-      `/blockly/js/pyodide/${version}/pythonlab_setup-0.1.0-py3-none-any.whl`,
-    ],
     env: {
       HOME: `/${HOME_FOLDER}/`,
     },
+    // Remove all JS globals so Python can’t call browser APIs (like fetch) unless we
+    // explicitly add them.
+    jsglobals: {},
   });
   pyodide.setStdout(getStreamHandlerOptions('sysout'));
   pyodide.setStderr(getStreamHandlerOptions('syserr'));
+  // Freeze the module object and its properties
+  Object.freeze(pythonlabInputModule);
+  Object.defineProperty(pythonlabInputModule.getInput, 'constructor', {
+    writable: false,
+    configurable: false,
+    enumerable: false,
+  });
+  Object.freeze(pythonlabInputModule.getInput);
+
+  pyodide.registerJsModule('pythonlab_input', pythonlabInputModule);
+
+  // Pre-load our custom packages (unittest_runner and pythonlab_setup), as well as
+  // matplotlib, which pythonlab_setup depends on, and numpy,
+  // which will frequently be used. We have seen occasional issues with loading
+  // packages, so we retry loading if we see any errors.
+  let loadErrors = await loadPackages();
+  if (loadErrors.length > 0) {
+    // Retry loading packages once. Any packages that were successfully loaded
+    // will be skipped in the retry.
+    loadErrors = await loadPackages();
+    if (loadErrors.length > 0) {
+      postMessage({
+        type: 'load_failed',
+        message: `Error(s) loading python packages: ${loadErrors.join('\n')}`,
+        id: 'startup',
+      });
+    }
+  }
   // Warm up the pyodide environment by running setup code.
   await runInternalCode(SETUP_CODE, -1);
 }
@@ -45,15 +70,21 @@ let pyodideReadyPromise: Promise<void> | null = null;
 // Pyodide defines the globals object as any.
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 let pyodideGlobals: any | null = null;
+let loadStartTime: number | undefined;
 async function initializePyodide() {
   const promiseWasNull = pyodideReadyPromise === null;
   if (promiseWasNull) {
+    loadStartTime = Date.now();
     pyodideReadyPromise = loadPyodideAndPackages();
     postMessage({type: 'loading_pyodide'});
   }
   await pyodideReadyPromise;
   if (promiseWasNull) {
-    postMessage({type: 'loaded_pyodide'});
+    const loadTime = loadStartTime ? Date.now() - loadStartTime : undefined;
+    postMessage({
+      type: 'loaded_pyodide',
+      message: loadTime,
+    });
   }
   pyodideGlobals = pyodide.globals.toJs();
 }
@@ -67,19 +98,23 @@ onmessage = async event => {
   const {id, python, source, validationFile} = event.data;
   let results = undefined;
   let sourceToWrite = source;
-  // Add the validation file to the source if it exists.
+  // Add the validation file to the source if it exists. Use the id "validation"
+  // so the validation file does not overwrite a user file (user files have stringified numeric ids).
   if (validationFile) {
     sourceToWrite = {
       ...source,
       files: {
         ...source.files,
-        [validationFile.id]: validationFile,
+        validation: {...validationFile, id: 'validation'},
       },
     };
   }
   try {
     writeSource(sourceToWrite, DEFAULT_FOLDER_ID, '', pyodide);
+    postMessage({type: 'loading_packages'});
     await importPackagesFromFiles(sourceToWrite, pyodide);
+    postMessage({type: 'loaded_packages'});
+    await patchInput(id);
     results = await pyodide.runPythonAsync(python, {
       filename: `/${HOME_FOLDER}/${MAIN_PYTHON_FILE}`,
     });
@@ -109,7 +144,11 @@ onmessage = async event => {
   // https://pyodide.org/en/stable/usage/api/js-api.html#pyodide.ffi.PyProxy.toJs
   const resultsObject = results?.toJs();
   try {
-    postMessage({type: 'run_complete', message: resultsObject, id});
+    postMessage({
+      type: 'run_complete',
+      message: JSON.stringify(resultsObject),
+      id,
+    });
   } catch (e) {
     // Likely we hit a DataCloneError trying to send the resultsObject.
     // In this case, don't try to send the results object, as if it can't be
@@ -135,4 +174,45 @@ function getStreamHandlerOptions(type: MessageType) {
       postMessage({type: type, message: msg, id: 'none'});
     },
   };
+}
+
+async function patchInput(id: number) {
+  await runInternalCode(patchInputCode(id), id);
+}
+
+async function loadPackages() {
+  const loadErrors: string[] = [];
+  // We explicitly load all dependencies of the packages we want to be available to users,
+  // matplotlib and numpy, as well as our custom packages. We do this so that on retry
+  // if the top-level package was loaded successfully, but a dependency
+  // failed, we will still try to reload the dependency.
+  await pyodide.loadPackage(
+    [
+      // Main packages
+      'matplotlib',
+      'numpy',
+      // Dependencies of main packages
+      'contourpy',
+      'cycler',
+      'fonttools',
+      'kiwisolver',
+      'packaging',
+      'pillow',
+      'pyparsing',
+      'python-dateutil',
+      'pytz',
+      'six',
+      // Custom packages that we have built. They are defined in the
+      // python/pythonlab/ folder in the codebase.
+      `/blockly/js/pyodide/${version}/unittest_runner-0.3.0-py3-none-any.whl`,
+      `/blockly/js/pyodide/${version}/pythonlab_setup-0.2.0-py3-none-any.whl`,
+      `/blockly/js/pyodide/${version}/neighborhood-0.4.0-py3-none-any.whl`,
+    ],
+    {
+      errorCallback: (message: string) => {
+        loadErrors.push(message);
+      },
+    }
+  );
+  return loadErrors;
 }

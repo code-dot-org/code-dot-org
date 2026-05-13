@@ -10,9 +10,9 @@ type VideoChoiceType = undefined | 'youtube' | 'fallback';
 
 interface VideoProps {
   children: React.ReactNode;
-  src: string | undefined;
-  download: string | undefined;
-  thumbnail: string | undefined;
+  src?: string;
+  download?: string;
+  thumbnail?: string;
 }
 
 function useWindowSize() {
@@ -74,10 +74,14 @@ const Video: React.FunctionComponent<VideoProps> = ({
   const [videoChoice, setVideoChoice] = useState<VideoChoiceType>(undefined);
 
   useEffect(() => {
-    testYouTubeAvailable(available =>
-      setVideoChoice(available ? 'youtube' : 'fallback')
-    );
-  }, [setVideoChoice]);
+    if (src) {
+      const noCookie = src.includes('youtube-nocookie.com');
+
+      testYouTubeAvailable(noCookie, available =>
+        setVideoChoice(available ? 'youtube' : 'fallback')
+      );
+    }
+  }, [src]);
 
   const videoJsOptions = {
     autoplay: true,

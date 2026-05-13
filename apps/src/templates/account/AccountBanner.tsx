@@ -1,10 +1,10 @@
+import {Typography} from '@mui/material';
 import classNames from 'classnames';
 import React from 'react';
 
-import {BodyTwoText, Heading1} from '@cdo/apps/componentLibrary/typography';
 import i18n from '@cdo/locale';
 
-import codeLogo from '../images/codeLogo.svg';
+import codeLogo from '../images/codeLogo.png';
 
 import styles from './account-components.module.scss';
 
@@ -22,8 +22,12 @@ const AccountBanner: React.FunctionComponent<{
     )}
 
     <div className={classNames(className, styles.titleContainer)}>
-      <Heading1>{heading}</Heading1>
-      <BodyTwoText className={styles.titleDesc}>{desc}</BodyTwoText>
+      <Typography variant="h1" gutterBottom>
+        {heading}
+      </Typography>
+      <Typography className={styles.titleDesc} variant="body2" gutterBottom>
+        {desc}
+      </Typography>
     </div>
   </div>
 );

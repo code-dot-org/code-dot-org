@@ -15,9 +15,13 @@
 #
 
 class Api::V1::Pd::SessionSerializer < ActiveModel::Serializer
-  attributes :id, :start, :end, :code, :show_link?, :attendance_count
+  attributes :id, :start, :end, :code, :session_format, :meeting_link, :location_name, :location_address, :show_link?, :attendance_count, :is_local
 
   def attendance_count
     Pd::Attendance.where(session: object).count
+  end
+
+  def is_local # rubocop:disable Naming/PredicateName
+    object.local?
   end
 end

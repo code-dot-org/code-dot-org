@@ -1,0 +1,33 @@
+name 'pl-ai-101-V2-mod4-with-06'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Direct and Indirect AI Use
+
+#### While students don’t have to interact directly with a large language model (LLM) or AI chatbot (such as ChatGPT, Gemini, or Claude), these tools can be a powerful way to support learning when used thoughtfully. Direct interaction is just one approach among many for teaching with AI.
+
+#### In some classrooms, students may use AI tools themselves to ask questions, get feedback, or explore ideas. In others, teachers may use AI behind the scenes—to generate examples, model thinking, or provide scaffolded supports—without students ever directly accessing the tool.
+
+---
+## Key Considerations
+
+#### Before deciding whether or not to have student interact directly with an AI tool, you need to consider the following:
+
+### **Data Privacy**
+#### When using AI tools, it’s important to think about what data is being shared and how it is stored or used. Many AI systems process user input externally, which may raise concerns depending on school or district policies.
+* #### Avoid entering personally identifiable student information
+* #### Review tool privacy policies and district guidelines
+* #### Consider whether student accounts are required and how data is managed
+
+#### We dive deeper into data privacy with AI tools in Module 5: Responsible AI Use.
+
+### **Restrictions and Access**
+#### Not all students will have equal access to AI tools. Some districts block tools entirely, while others allow limited use.
+* #### Check school/district policies before planning AI-integrated activities
+* #### Be aware of age restrictions (many tools require users to be 13+)
+* #### Ensure access does not depend on personal devices or accounts
+
+
+>#### **💬 Quick Reflection:** Do you know what, if any, AI tools are allowed in your school or district? If not, do you know how to find out?
+MARKDOWN

@@ -15,12 +15,12 @@ Consider the following class.
 ```
 public class MysteryClass {
   public void mystery(int first) {
-    System.out.print(“b ” + first);
+    System.out.print("b " + first);
     mystery();
   }
 
   public void mystery() {
-    System.out.print(“a”);
+    System.out.print("a");
   }
 }
 ```

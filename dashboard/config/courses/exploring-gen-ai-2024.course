@@ -4,14 +4,18 @@
     "exploring-gen-ai1-2024",
     "exploring-gen-ai2-2024"
   ],
-  "published_state": "in_development",
+  "original_script_names": [
+    "exploring-gen-ai1-2024",
+    "exploring-gen-ai2-2024"
+  ],
+  "published_state": "stable",
   "instruction_type": "teacher_led",
   "participant_audience": "student",
   "instructor_audience": "teacher",
   "properties": {
     "family_name": "exploring-gen-ai",
-    "has_numbered_units": true,
     "has_verified_resources": true,
+    "numbered_units": "auto",
     "version_year": "2024"
   },
   "resources": [

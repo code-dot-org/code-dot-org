@@ -11,12 +11,12 @@
   hoc_stat_hours_served: "Over 100M students have tried an Hour of Code"
   hoc_stat_females: "Female students make up 50% of Hour of Code participants"
 
-  campaign_date_start_short: "Dec. 9"
-  campaign_date_start_long: "December 9"
-  campaign_date_short: "Dec. 9-15"
-  campaign_date_full: "December 9-15"
-  campaign_date_year: "2024"
-  campaign_date_full_year: "December 9-15, 2024"
+  campaign_date_start_short: "Dec. 8"
+  campaign_date_start_long: "December 8"
+  campaign_date_short: "Dec. 8-14"
+  campaign_date_full: "December 8-14"
+  campaign_date_year: "2025"
+  campaign_date_full_year: "December 8-14, 2025"
 
   nonus_campaign_date_start_short: "Sept. 5"
   nonus_campaign_date_start_long: "September 5"
@@ -59,6 +59,12 @@
     social:
       title: "Register your event for Hour of Code!"
       desc: "Explore how computer science can bring your favorite things to life."
+      v2:
+        title: "One Hour: Ignite. Inspire. Code."
+        desc: "The Hour of Code is a worldwide movement that aims to introduce millions of students to computer science through one-hour coding activities"
+    video_caption:
+      visible: "One Hour Can Make The Invisible Visible"
+      in_a_world: "Make The Invisible Visible | Official Trailer"
 
   hoc2023_header: "Creativity with AI"
   hoc2023_hero_desc_homepage: "Join millions across the globe in organizing an hour of coding, with or without AI and learning how AI works. Anyone, anywhere can do it. No experience needed."
@@ -89,7 +95,7 @@
   hoc2020_ai_header: 'Explore Artificial Intelligence'
   hoc2020_ai_description: 'AI and Machine Learning are impacting our entire world. Join us to explore AI in a new video series, train AI for Oceans in 25+ languages, discuss ethics and AI, and more...'
 
-  hoc2019_header: 'Learn computer science. Change the world.'
+  hoc2019_header: 'Computer science and artificial intelligence curriculum for K-12 Schools'
   hoc2019_header_line1_mobile: 'Learn computer science.'
   hoc2019_header_line2_mobile: 'Change the world.'
   social_hoc2019_every_sudent: 'Every student has the potential to change the world. Help them get started. #CSforGood'
@@ -1035,6 +1041,7 @@
   minecraft_show:
     title: "Minecraft: The Show Must Go On!"
     desc: "Step into the theater to save the day in The Show Must Go On! Find the missing star, unlock hidden gags, and interact with a cast of mobs. Help the Agent overcome stage fright as you solve fun coding puzzles. Watch your coding skills shine in an epic final performance!"
+    aria_label: "Get started with Minecraft: The Show Must Go On"
 
   afe_page_heading: "Free resources from Amazon Future Engineer"
   afe_page_top_desc: "Enhance your teaching experience with Code.org in partnership with [Amazon Future Engineer](%{afe_url}). Eligible educators from underserved schools can access these benefits at no cost:"
@@ -1071,7 +1078,7 @@
   blockchain_hero_heading: 'How Blockchain Works'
   blockchain_hero_desc: 'Dive into the world of blockchain with "How Blockchain Works," our new video series and accompanying lessons!'
   blockchain_intro_heading: 'See how blockchain works'
-  blockchain_intro_desc: 'The video series, made in partnership with Coinbase, features industry experts and aims to demystify this technology.'
+  blockchain_intro_desc: 'The video series features industry experts and aims to demystify this technology.'
   blockchain_intro_list_heading: 'This series will:'
   blockchain_intro_list_item_01: 'Explain what blockchain is'
   blockchain_intro_list_item_02: "Explore why it's important"
@@ -1196,7 +1203,7 @@
           overline: "3-5"
           title: "How AI Makes Decisions"
           desc: "Introduce young students to AI and machine learning with hands-on activities using predictive data models. Students will practice making their own predictions and learn about data categorization and sorting."
-          duration: "1 hour"
+          duration_1_week: "1 week"
           button: "Explore unit"
           aria_label: "Explore the How AI Makes Decisions unit"
         humanities:
@@ -1274,7 +1281,7 @@
       explore_gen_ai_card:
         title: "Exploring Generative AI"
         desc: "Prepare your students for the future with an engaging curriculum that demystifies generative AI. Through hands-on projects and ethical discussions, students gain the skills to become creators and critical thinkers in an AI-powered world."
-        see_pl: "See professional learrning"
+        see_pl: "See professional learning"
     flexible_units:
       title: "Flexible units in this course"
       desc: "Choose standalone units to fit your classroom needs or combine them for a deeper dive into AI concepts."
@@ -1382,6 +1389,14 @@
     prerequisites: "Verified teacher account or SSO-login needed to access AI Chat Lab"
     aria_label: "Start the Teaching Exploring Generative AI professional learning course"
 
+  exploring_gen_ai:
+    banner:
+      overline: "Explore our new"
+      title: "Generative AI curriculum"
+      desc: "Designed to inspire and equip the next generation of creators, thinkers, and innovators."
+      in_partnership_with: "In partnership with"
+      button: "Explore course"
+
   ai_integrations:
     heading: "AI Integrations"
     desc: "We are working on some exciting new technologies to empower students and teachers in the classroom."
@@ -1464,6 +1479,7 @@
   how_ai_works_resources_desc: "Interested in learning more about AI? Here are some additional resources that can help extend you and your students' learning."
 
   ai_vid_intro_caption: "Introducing How AI Works"
+  ai_vid_socimp_caption: "Impact on Society"
   ai_vid_chatbots_caption: "How Chatbots and Large Language Models Work"
   ai_vid_creativity_caption: "Does AI Have Creativity and Imagination?"
   ai_vid_mlintro_caption: "What is Machine Learning?"
@@ -1652,6 +1668,21 @@
     farsi_csf_unplugged_description: "Go ahead, cut the cord (for a while)! CS education does not always need to be in front of a screen and you don’t need to make device access a barrier to learning computer science concepts. "
     farsi_hello_world: "Hello World: Animals"
     farsi_hello_world_cta: "Explore Hello World"
+    faq:
+      heading: "Code.org in Farsi is about children, not politics"
+      description: "Code.org is an education nonprofit and NGO dedicated to the vision that every student in every school has the opportunity to learn computer science and artificial intelligence as part of their core education. Because of our global impact, we often collaborate with regional governments to advance this goal. However, for Code.org in Farsi, we operate independently from any government influence due to geopolitical sensitivities. This project is designed to enable global access to our free educational resources, and is unrestricted by US sanctions. Code.org’s purpose is to support educational opportunities for Farsi-speaking children, with no stance on any other political or controversial topics."
+      question_1: "What countries is Code.org in?"
+      answer_1: "The Code.org website and learning platform is used in over 50 languages, by students and classrooms in EVERY country in the world. Although headquartered in the USA, Code.org's curriculum is designed for global reach, localized to different languages and cultures, with targeted campaigns to reach students in Latin America, Asia, the Middle East, and Africa."
+      question_2: "Is Code.org collaborating with the government of _____?"
+      answer_2: "Code.org often collaborates with local governments to ensure that education systems teach computer science. When we work with governments, it is to work with national ministries or local departments of education, to create opportunities for children in local schools. In the case of Code.org in Farsi, Code.org is not collaborating with, for, or against any government. Code.org’s founder and CEO (Hadi Partovi) is Iranian-born, and he sees this as a project to support Farsi speaking children all around the globe."
+      question_3: "What is Code.org’s stance on the government of Iran?"
+      answer_3: "Code.org has no stance on any government or political issue other than our one organizing focus: that every student in every school should have the opportunity to learn computer science. You can read more about Code.org’s apolitical, inclusive, and unifying stance."
+      question_4: "What is Code.org’s stance on the hijab laws in Iran? Do Code.org videos abide by hijab laws?"
+      answer_4: "Code.org takes no stance on political issues in any country. We believe that every student should have equal access to a high quality computer science education, regardless of their birthplace, language, gender, skin color, or religion. To enable universal access to our courses, we design our content with a global audience in mind. And to localize our curriculum for Middle Eastern students, we are re-recording some of our educational videos with Iranian (or Arabic) speakers, so that Middle Eastern students may see computer science role models who showcase the customs of their region. In some of these videos, female speakers wear hijab, and in others they do not — both situations reflect their personal preference or custom, and not a position or stance of Code.org."
+      question_5: "Is Code.org in Farsi compliant with US sanctions on Iran?"
+      answer_5: "As a U.S. nonprofit, Code.org is subject to laws regarding sanctions with Iran. After consulting with U.S. legal counsel experienced in the Iranian Sanctions and Translations Regulations (ITSR), Code.org believes that it may fund, prepare, and distribute the Farsi translations of its computer science curriculum globally via its website, to audiences in every country including Iran. The ITSR provides an exemption for “information and informational materials” (the IIM Exemption) and Code.org believes that this exemption will fully shield its funding, preparation, and distribution of the Farsi translations and thus enable its Farsi translations effort to proceed in full compliance with U.S. economic sanctions requirements. Code.org does not have any financial relationship or legal contracts with any Iran-based entities."
+      question_6: "Who funds Code.org in Farsi, and what are their objectives?"
+      answer_6: "Code.org in Farsi is funded by donors who believe that every Farsi-speaking student should have the opportunity to learn computer science, with the same access as students who speak English, Spanish, Arabic, or other language. Code.org’s unifying mission attracts a diverse group of supporters, but their only relationship with Code.org is to support our student-focused mission. Any other efforts or goals of our funders have absolutely no bearing on the work or intentions of Code.org."
 
   naipi_page_heading: "Native American and Indigenous Peoples Initiative (NAIPI)"
   naipi_page_intro_heading: "What is NAIPI?"
@@ -2493,6 +2524,7 @@
     introducing_music_lab: "Introducing Music Lab"
     introducing_music_lab_strong: "Introducing **%{music_lab}**"
     make_music_learn_code: "Make Music, Learn Code"
+    get_started: "Get started with Music Lab!"
     button:
       try_music_lab: "Try Music Lab"
       learn_more: "Learn more"
@@ -2504,6 +2536,10 @@
     banner:
       heading: "Create music with code"
       desc: "Get creative with your favorite artist's music and code new songs and mixes!"
+    banner2:
+      heading: "Make Music. Learn Code."
+      desc: "Get creative with your favorite artist's music by coding new songs and mixes!"
+      overline: "New artists added to Music Lab"
     featuring_songs_by: "Featuring songs by:"
     artist_list: "%{artist_list} and more!"
     artist:
@@ -2521,6 +2557,7 @@
       desc: "Discover the jobs that bring technology together with music!"
     videos:
       heading: "Watch your favorite artists try Music Lab"
+      heading_2: "Explore Music Lab with artists and industry experts"
     quotes:
       heading: "What teachers and students are saying about Music Lab"
       bryant:
@@ -2578,9 +2615,11 @@
       name: "Music Lab: Jam Session"
       button:
         explore: "Explore Music Lab: Jam Session"
+        explore_short: "Explore Music Lab"
         start: "Start Music Lab: Jam Session"
+        create_new_project: "Create new project"
       banner:
-        desc_01: "Learn to code as you remix your favorite artists' tracks and explore creating beats with AI!"
+        desc_01: "Learn to code as you remix your favorite artists' tracks and use AI to generate your own beats!"
         desc_02: "Make music and learn to code in our new Music Lab activity for Hour of Code! In this self-guided, one-hour activity, students remix tracks from artists like %{artist_list}, and %{artist_name} while mastering coding basics such as sequencing, functions, and exploring AI-driven beat creation."
         desc_03: "Remix tracks from artists like %{artist_list}, and %{artist_name} while exploring coding basics like sequencing, functions, and generating beats with AI."
       block:
@@ -3021,6 +3060,12 @@
   ai_activity_experiments_desc: 'Start exploring machine learning through pictures, drawings, language, music, and more.'
   ai_activity_zooniverse: 'Zooniverse - Snapshot Mountain Zebra'
   ai_activity_zooniverse_desc: 'Help protect the endangered Cape Mountain Zebra by identifying the different animals in the images.'
+
+  aif_hero_banner:
+    heading: 'Artificial Intelligence Foundations'
+    desc: 'Prepare students for the future with our newest high school curriculum. Explore the core principles of AI, from machine learning to ethics, through hands-on projects and real-world applications.'
+    button: 'Explore curriculum'
+    button_aria_label: 'Explore the Artificial Intelligence Foundations curriculum'
 
   codeorg_homepage_hoc2018_curriculum: 'Go further with <a href="%{studio_url}/courses" class="hoc2018-curriculum-link">Code.org courses</a>'
   codeorg_homepage_hoc2018_dance_heading: 'Create your own <span class="highlight-word">Dance&nbsp;Party</span>'
@@ -8987,7 +9032,7 @@
   tutorial_carnegiesensabot_longdescription: "Learn how to program a virtual EV3 robot to complete the real-world Sensabot challenge in this activity the Carnegie Mellon Robotics Academy."
   tutorial_robotical4_longdescription: "MartyBlocks is put together in a vertical format, which is more common for writing code. Learners will be presented with a larger workspace and greater functionality for controlling Marty and eventually having them interact with the environment. This lesson will familiarize learners with the sections, layout, comparing this new environment with MartyBlocks Jr."
   tutorial_kinderadd_longdescription: "In this lesson, students will use algorithms and moving robots to model mathematical concepts. KIBO will travel along a physical number line to model counting, addition, and subtraction. Students will create algorithms (optionally including repeat loops) to solve problems, just like programmers do at work!"
-  tutorial_imagipython_longdescription: "Join the world's first social network for pre-teens who like to code. Design your first colorful project in minutes with the free imagi app."
+  tutorial_imagipython_longdescription: "Learn Python to create your own colorful pixel art and animations in this 1-hour course!"
   tutorial_robotical2_longdescription: "Learners will create a sequence of steps to allow a partner to travel a route to a goal, making use of the Marty Controller. Each of the directional symbols has an attached movement; in this lesson, learners will be encouraged to experiment with the directional arrows but the focus will be on the forward arrow."
   tutorial_robotical3_longdescription: "Learners will explore the new interface for Marty, where their instructions will stay on the device screen. Learners will be estimating how many steps they think Marty will need to reach a goal."
   tutorial_blockscadvirus_longdescription: "Use a 3D design platform to model a virus and learn about how our bodies use geometry to fight these invaders. "
@@ -9248,7 +9293,7 @@
   tutorial_carnegiesensabot_string_platforms: "All modern browsers"
   tutorial_robotical4_string_platforms: "All modern browsers"
   tutorial_kinderadd_string_platforms: "Unplugged"
-  tutorial_imagipython_string_platforms: "Chrome, Firefox, Android tablet, iPad, Android phone, iPhone"
+  tutorial_imagipython_string_platforms: "All modern browsers, Android tablet, iPad, iPhone"
   tutorial_robotical2_string_platforms: "Unplugged"
   tutorial_robotical3_string_platforms: "All modern browsers"
   tutorial_blockscadvirus_string_platforms: "All modern browsers"
@@ -10896,26 +10941,56 @@
   tutorial_scratchkindness_name: "Spreading Kindness with Scratch and Gitanjali Rao"
   tutorial_showmustgoon_name: "The Show Must Go On"
   tutorial_musiclabjam_name: "Music Lab: Jam Session"
+  tutorial_snackchase_name: "Lyla and Stu's Snack Chase"
+  tutorial_missionhubble_name: "Scott Kelly: Mission to Hubble"
+  tutorial_bubblepopping_name: "The Joy of Bubble Popping"
+  tutorial_rosebudai_name: "AI Text to Game: Platformer"
+  tutorial_quorumpenguin_name: "Penguins: Accessible Data Science with Quorum Blocks"
   tutorial_scratchinventing_longdescription: "Remix our starter project to design your own invention, share the invention's goal or purpose through text and/or a voice recording, and learn about Gitanjali's innovation process."
   tutorial_scratchkindness_longdescription: "Remix our starter project to develop and share a message of kindness, inspired by Gitanjali's innovative approach to anti-bullying efforts for young people around the world."
   tutorial_showmustgoon_longdescription: "Welcome to The Show Must Go On, where your creativity and coding skills take center stage! The big show is in chaos—the Agent has vanished! Use problem-solving and computational thinking to code through fun challenges, unlock surprises, and bring the show to life. Compose a song, choreograph a dance, craft a costume and save the show—all while learning key coding skills in blocks or Python."
   tutorial_musiclabjam_longdescription: "Make music and learn to code with Music Lab: Jam Session! In this self-guided, one-hour activity, students remix tracks from artists like Sabrina Carpenter, Lady Gaga, and Shakira while mastering coding basics such as sequencing, functions, and exploring AI-driven beat creation. This hands-on interactive experience sparks creativity and boosts confidence—leaving students proud of their custom track and the coding skills they've gained."
+  tutorial_snackchase_longdescription: "Code a multiplayer snack chase game with characters from Lyla in the Loop on PBS KIDS."
+  tutorial_missionhubble_longdescription: "Follow along with this tutorial to create a game based on Scott Kelly's first space flight!"
+  tutorial_bubblepopping_longdescription: "Create a bubble popping game featuring the stars of Disney and Pixar's Inside Out 2!"
+  tutorial_rosebudai_longdescription: "Create a platformer game from scratch, by just describing it. No coding knowledge needed. In this lesson we will take you step by step how to ask AI to code your first game. In the end you will have a published game you can share with your friends and family. Can be completed in one hour or spread out over a week to create a game with more detail."
+  tutorial_quorumpenguin_longdescription: "In this introduction to data science, you'll learn how to use fully accessible block-based code and data visualizations to discover insights within a large dataset about penguins from Antarctica."
   tutorial_scratchinventing_string_detail_grades: "Grades 2+"
   tutorial_scratchkindness_string_detail_grades: "Grades 2+"
   tutorial_showmustgoon_string_detail_grades: "Grades 2+"
   tutorial_musiclabjam_string_detail_grades: "Grades 3+"
+  tutorial_snackchase_string_detail_grades: "Pre-reader - Grade 5"
+  tutorial_missionhubble_string_detail_grades: "Grades 6+"
+  tutorial_bubblepopping_string_detail_grades: "Grades 2+"
+  tutorial_rosebudai_string_detail_grades: "Grades 2+"
+  tutorial_quorumpenguin_string_detail_grades: "Grades 6+"
   tutorial_scratchinventing_string_platforms: "All modern browsers"
   tutorial_scratchkindness_string_platforms: "All modern browsers"
   tutorial_showmustgoon_string_platforms: "All modern browsers, Android tablet, iPad, Windows phone, Android phone, iPhone"
   tutorial_musiclabjam_string_platforms: "All modern browsers, Android tablet, iPad"
+  tutorial_snackchase_string_platforms: "All modern browsers, Android tablet, iPad, Game console app"
+  tutorial_missionhubble_string_platforms: "All modern browsers, Android tablet, iPad, Game console app"
+  tutorial_bubblepopping_string_platforms: "All modern browsers, Android tablet, iPad, Game console app"
+  tutorial_rosebudai_string_platforms: "All modern browsers, Android tablet, iPad, Windows phone, Android phone, iPhone"
+  tutorial_quorumpenguin_string_platforms: "All modern browsers, Android tablet, iPad, Android phone, iPhone"
   tutorial_scratchinventing_string_detail_platforms: ""
   tutorial_scratchkindness_string_detail_platforms: ""
   tutorial_showmustgoon_string_detail_platforms: ""
   tutorial_musiclabjam_string_detail_platforms: ""
+  tutorial_snackchase_string_detail_platforms: ""
+  tutorial_missionhubble_string_detail_platforms: ""
+  tutorial_bubblepopping_string_detail_platforms: ""
+  tutorial_rosebudai_string_detail_platforms: ""
+  tutorial_quorumpenguin_string_detail_platforms: ""
   tutorial_scratchinventing_string_detail_programming_languages: "Blocks"
   tutorial_scratchkindness_string_detail_programming_languages: "Blocks"
   tutorial_showmustgoon_string_detail_programming_languages: "Blocks, Python"
   tutorial_musiclabjam_string_detail_programming_languages: "Blocks"
+  tutorial_snackchase_string_detail_programming_languages: "Blocks"
+  tutorial_missionhubble_string_detail_programming_languages: "Blocks"
+  tutorial_bubblepopping_string_detail_programming_languages: "Blocks"
+  tutorial_rosebudai_string_detail_programming_languages: "JavaScript, Language independent (can be taught in multiple languages)"
+  tutorial_quorumpenguin_string_detail_programming_languages: "Blocks, Quorum"
 
   school_not_found_heading: "We couldn't find your school. Please enter more information."
   school_name: "School name"
@@ -11001,6 +11076,7 @@
       heading: "Register your event"
       disclaimer: "Registrations close on %{close_date}"
       desc: "Join millions worldwide in the Hour of Code! Whether you're hosting an event at school, in the community, or online, we invite you to register your event today."
+      disclaimer_refresh: "Having issues seeing the form? Try disabling any extensions, including Ad Blockers, and refresh the page."
       how_to: "Looking for more guidance on how to host an Hour of Code? [Check out our How-To Guide](%{how_to_url})"
     resources:
       heading: "Additional resources for your Hour of Code"
@@ -11025,7 +11101,9 @@
 
   hoc_activities:
     heading: "Explore activities"
+    title: "Free One Hour Coding Tutorials"
     desc: "Teachers: [Host an hour](%{host_url}) or [read the How-To Guide](%{how_to_url})"
+    seo_desc: "Bring an Hour of Code and computer science to your classroom or school. With over 100 free coding tutorials available to begin learning it is easy."
     more:
       heading: "Can't find your favorite activity?"
       button: "Explore more here"
@@ -12005,8 +12083,8 @@
 
   ai_ta_page:
     heading: "AI Teaching Assistant"
-    desc: "Introducing our AI Teaching Assistant: Designed for CS educators, it offers instant, insightful project assessments, enabling teachers to concentrate on inspiring and connecting with their students."
-    button: "Apply to join the pilot"
+    desc: "An AI-powered thought partner designed to support CS educators with time-saving tools and curriculum-aligned guidance—all for free on Code.org."
+    button: "Use AI Teaching Assistant"
     announcement_banner: "We are now enrolling CSD Unit 3 teachers for our pilot! [Apply now](%{apply_url})"
     announcement_banner_csd_page: "We're recruiting CSD teachers for our AI Teaching Assistant pilot! [Learn more](%{learn_url})"
     assessment_power:
@@ -12017,9 +12095,22 @@
       list_03: "**Efficiency Boost:** Reduce administrative workload, freeing up more time for teaching."
     focus:
       heading: "Focus more on what matters"
-      desc: "The AI Teaching Assistant transforms CS education, easing the workload for new and experienced teachers alike. By streamlining assessments, it boosts educator confidence, enabling a focus on enriching student interactions and tailored learning experiences."
+      desc: "The AI Teaching Assistant transforms CS education, easing the workload for new and experienced teachers alike. It boosts educator confidence by offering constant customized support and streamlining assessments, enabling a focus on enriching student interactions and tailored learning experiences."
+    suggestions:
+      header_01: "What will you"
+      header_02: "dream up"
+      header_03: "with AI Teaching Assistant?"
+    summary:
+      header: "AI Teaching Assistant: Empowering teachers with confidence and efficiency"
+      desc: "We’ve designed AI Teaching Assistant to integrate seamlessly into your existing workflow and keep you in control. It’s like having an assistant who knows Code.org inside and out!"
+    customized_support:
+      heading: "Constant, customized support"
+      desc: "Use AI as a thought partner to quickly develop more customized learning experiences for your classroom."
+      list_01: "**Collaborate on Teaching Strategies:** Brainstorm lesson ideas, troubleshoot student misconceptions, and explore new ways to engage learners."
+      list_02: "**Differentiate with Confidence:** Get personalized suggestions to tailor instruction for different skill levels and learning needs."
+      list_03: "**Master the Curriculum:** Instantly access explanations, examples, and best practices aligned with Code.org’s pedagogy."
     get_started:
-      header: "Get started with AI Teaching Assistant"
+      header: "Get started with automated assessment"
       watch_demo: "Watch the demo video"
       assign_csd_3: "Assign Computer Science Discoveries Unit 3"
       become_verified: "Become a verified teacher"
@@ -12297,6 +12388,9 @@
   hoc_beyond_carousel_description: "Want to keep learning after Hour of Code? Check out these activities for learners of all ages and skill levels."
   hoc_beyond_submit_activity_form: "Submit your own activity [here](%{form_url})."
   hoc_beyond_end_section_label: "The Hour of Code is organized by [Code.org](%{home_page})"
+
+  code_org_og_description: "Code.org provides free computer science and AI curriculum, plus professional development to support any teacher—no coding experience needed!"
+  students_og_title: "Fun tutorials to learn computer science and artificial intelligence"
 
   pl_curriculum_launch_skinny_banner_2024:
     title: Introducing new professional learning!

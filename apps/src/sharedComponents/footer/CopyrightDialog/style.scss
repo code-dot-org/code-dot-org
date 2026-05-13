@@ -1,7 +1,7 @@
-@import 'font';
+@import '@code-dot-org/component-library-styles/font';
 @import 'color';
-@import "@cdo/apps/componentLibrary/typography/typography.module";
-@import "@cdo/apps/componentLibrary/common/styles/mixins";
+@import '@code-dot-org/component-library-styles/typography.module';
+@import '@code-dot-org/component-library-styles/mixins';
 
 #copyright-modal {
     display: flex;
@@ -45,7 +45,6 @@
         display: flex;
         flex-direction: column;
         align-items: flex-start;
-        gap: 1rem;
         overflow-x: hidden;
         overflow-y: auto;
         scrollbar-color: $light_gray_200 transparent; /* Scrollbar styling for Firefox browsers */
@@ -65,6 +64,8 @@
 
         .awsLogoContainer {
             display: block;
+            margin-left: -2px;
+            margin-bottom: 1rem;
         }
 
         .awsLogo {

@@ -1,6 +1,6 @@
 %div{id: 'main-logo'}
   %div{id: 'logo-container'}
     - if current_user
-      = link_to(image_tag('logo.svg'), '/home', {id: "logo-img", alt: I18n.t(:code_org_logo_alt)})
+      = link_to(image_tag(Cdo::Brand.logo_filename(request)), '/home', {id: "logo-img", alt: Cdo::Brand.logo_alt_text(request)})
     - else
-      = link_to(image_tag('logo.svg'), CDO.code_org_url, {id: "logo-img", alt: I18n.t(:code_org_logo_alt)})
+      = link_to(image_tag(Cdo::Brand.logo_filename(request)), CDO.code_org_url, {id: "logo-img", alt: Cdo::Brand.logo_alt_text(request)})

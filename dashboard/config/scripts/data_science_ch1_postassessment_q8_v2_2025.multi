@@ -1,0 +1,14 @@
+name 'data-science-ch1-postassessment-q8_v2-2025'
+
+question 'What characteristic makes a data question Investigative?'
+
+wrong 'It matches what the data is about.'
+wrong 'It is clear and to the point, without the use of broad, subjective language.'
+wrong 'It leads to actions or decisions.'
+right 'It can be broken down to get clear answers.'
+
+allow_multiple_attempts false
+
+markdown <<MARKDOWN
+
+MARKDOWN

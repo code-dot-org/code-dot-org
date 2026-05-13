@@ -23,6 +23,7 @@
     script_data = {}
     script_data[:logoUrl] = asset_path('logo.svg')
     script_data[:registrationID] = @registration_id
+    script_data[:lmsName] = @lms_name
 
   %script{src: webpack_asset_path('js/lti/v1/dynamic_registration.js'), data: {json: script_data.to_json}, 'data-ot-ignore' => ''}
   %body

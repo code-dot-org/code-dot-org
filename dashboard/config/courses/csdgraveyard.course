@@ -1,0 +1,23 @@
+{
+  "name": "csdgraveyard",
+  "script_names": [
+    "csdgraveyard"
+  ],
+  "original_script_names": [
+    "csdgraveyard"
+  ],
+  "published_state": "beta",
+  "instruction_type": "teacher_led",
+  "participant_audience": "student",
+  "instructor_audience": "teacher",
+  "properties": {
+    "family_name": "csdgraveyard",
+    "version_year": "unversioned"
+  },
+  "resources": [
+
+  ],
+  "student_resources": [
+
+  ]
+}

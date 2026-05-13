@@ -1,11 +1,11 @@
 /** @overview Component for adding a key/value pair row. */
+import {Button as MuiButton} from '@mui/material';
 import classNames from 'classnames';
 import PropTypes from 'prop-types';
 import React from 'react';
 
 import msg from '@cdo/locale';
 
-import PendingButton from '../../legacySharedComponents/PendingButton';
 import {WarningType} from '../constants';
 import {storageBackend} from '../storage';
 
@@ -102,13 +102,20 @@ class AddKeyRow extends React.Component {
           />
         </td>
         <td className={classNames(dataStyles.cell, dataStyles.addButton)}>
-          <PendingButton
-            isPending={this.state.isAdding}
+          <MuiButton
+            variant="outlined"
+            color="tertiary"
+            size="small"
+            loading={this.state.isAdding}
+            disabled={this.state.isAdding}
+            className={classNames(dataStyles.buttonText)}
+            id="addKeyValuePairButton"
             onClick={this.handleAdd}
-            pendingText={msg.addingToTable()}
-            className={classNames(dataStyles.button, dataStyles.buttonBlue)}
-            text={msg.addPairToTable()}
-          />
+            aria-label={msg.addPairToTable()}
+            type="button"
+          >
+            {msg.addPairToTable()}
+          </MuiButton>
         </td>
       </tr>
     );

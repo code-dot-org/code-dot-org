@@ -2,10 +2,10 @@ import * as utils from '@cdo/apps/utils';
 
 import {assert, expect} from '../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports
 
-var ReactDOM = require('react-dom');
 var sinon = require('sinon');
 
 var shareWarnings = require('@cdo/apps/shareWarnings');
+var createReactRootModule = require('@cdo/apps/util/createReactRoot');
 
 var testUtils = require('../util/testUtils');
 
@@ -16,18 +16,19 @@ describe('shareWarnings', function () {
     beforeEach(() => {
       localStorage.removeItem('is13Plus');
       localStorage.removeItem('dataAlerts');
-      sinon.spy(ReactDOM, 'render');
+
+      sinon.stub(createReactRootModule, 'createReactRoot');
       sinon.stub(utils, 'navigateToHref');
     });
 
     afterEach(() => {
-      ReactDOM.render.restore();
+      createReactRootModule.createReactRoot.restore();
       utils.navigateToHref.restore();
     });
 
     function checkSharedAppWarnings(config) {
       shareWarnings.checkSharedAppWarnings(config);
-      return ReactDOM.render.lastCall.args[0];
+      return createReactRootModule.createReactRoot.lastCall.args[0];
     }
 
     describe('basic usage', () => {
@@ -41,7 +42,7 @@ describe('shareWarnings', function () {
       });
 
       it('should render a ShareWarningsDialog dialog', () => {
-        assert(ReactDOM.render.calledOnce);
+        assert(createReactRootModule.createReactRoot.calledOnce);
       });
 
       it('should pass some props to the react dialog', () => {
@@ -92,11 +93,13 @@ describe('shareWarnings', function () {
 
       it('should call the onWarningsComplete callback if specified', () => {
         var onWarningsComplete = sinon.spy();
-        checkSharedAppWarnings({
+        var dialog = checkSharedAppWarnings({
           channelId: 'some-channel',
           isSignedIn: false,
           onWarningsComplete,
         });
+        assert.isFalse(onWarningsComplete.calledOnce);
+        dialog.props.handleClose();
         assert.isTrue(onWarningsComplete.calledOnce);
       });
 

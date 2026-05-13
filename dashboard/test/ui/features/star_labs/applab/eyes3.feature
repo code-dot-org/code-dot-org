@@ -6,7 +6,7 @@ Scenario: Data Browser
   Given I open my eyes to test "Applab Data Browser"
 
   When I start a new Applab project
-  Then I see no difference for "initial load" using stitch mode "none"
+  Then I see no difference for "initial load"
 
   When I switch to data mode
   Then I see no difference for "data overview"
@@ -24,9 +24,9 @@ Scenario: Data Browser
   And I press enter key
   And I press keys "1" for element "#addDataTableRow :nth-child(2) input"
   And I press keys "2" for element "#addDataTableRow :nth-child(3) input"
-  And element "#addDataTableRow button:contains(Add Row)" is visible
-  And I click selector "#addDataTableRow button:contains(Add Row)"
-  And I wait until element "button:contains(Edit)" is visible
+  And element "#addTableRowButton" is visible
+  And I click selector "#addTableRowButton"
+  And I wait until element "#editTableRowButton" is visible
   Then I see no difference for "data table with one row of data"
 
   When I click selector "#dataTable button:contains(Clear table)"
@@ -47,8 +47,8 @@ Scenario: Data Browser
 
   When I press keys "1" for element "#uitest-addKeyValuePairRow :nth-child(1) input"
   And I press keys "2" for element "#uitest-addKeyValuePairRow :nth-child(2) input"
-  And I click selector "button:contains(Add pair)"
-  And I wait until element "button:contains(Edit)" is visible
+  And I click selector "#addKeyValuePairButton"
+  And I wait until element "#editKeyValueButton" is visible
   Then I see no difference for "data properties with one row"
 
   And I close my eyes

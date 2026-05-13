@@ -3,14 +3,13 @@ import React from 'react';
 import {connect} from 'react-redux';
 
 import {OAuthSectionTypes} from '@cdo/apps/accounts/constants';
-import {PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants.js';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import locale from '@cdo/locale';
 
-import RailsAuthenticityToken from '../../lib/util/RailsAuthenticityToken';
 import color from '../../util/color';
 import BaseDialog from '../BaseDialog';
 
+import ReauthorizeGoogleClassroom from './ReauthorizeGoogleClassroom';
 import {classroomShape, loadErrorShape} from './shapes';
 import {
   cancelImportRosterFlow,
@@ -21,6 +20,8 @@ import {isRosterDialogOpen} from './teacherSectionsReduxSelectors';
 
 const COMPLETED_EVENT = 'Section Setup Completed';
 const CANCELLED_EVENT = 'Section Setup Cancelled';
+
+const ARCHIVED_STATE = 'ARCHIVED';
 
 const ctaButtonStyle = {
   background: color.orange,
@@ -48,6 +49,12 @@ const ClassroomList = ({classrooms, onSelect, selectedId, rosterProvider}) =>
           {classroom.name}
           {classroom.section && (
             <span style={{color: '#aaa'}}> ({classroom.section})</span>
+          )}
+          {classroom.course_state === ARCHIVED_STATE && (
+            <span id="course-state" style={{color: color.bootstrap_error_text}}>
+              {' '}
+              - {classroom.course_state}
+            </span>
           )}
           <span style={{float: 'right'}}>
             {locale.code()}
@@ -93,8 +100,10 @@ NoClassroomsFound.propTypes = {
   rosterProvider: PropTypes.oneOf(Object.keys(OAuthSectionTypes)),
 };
 
-const ROSTERED_SECTIONS_SUPPORT_URL =
+const GOOGLE_CLASSROOMS_SYNC_SUPPORT_URL =
   'https://support.code.org/hc/en-us/articles/115001319312';
+const ROSTERED_SECTIONS_SUPPORT_URL =
+  'https://support.code.org/hc/en-us/articles/6496495212557';
 
 const LoadError = ({rosterProvider, loginType}) => {
   switch (rosterProvider) {
@@ -105,7 +114,7 @@ const LoadError = ({rosterProvider, loginType}) => {
           <ReauthorizeGoogleClassroom />
           <p>
             <a
-              href={ROSTERED_SECTIONS_SUPPORT_URL}
+              href={GOOGLE_CLASSROOMS_SYNC_SUPPORT_URL}
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -133,19 +142,6 @@ LoadError.propTypes = {
   rosterProvider: PropTypes.string,
   loginType: PropTypes.string,
 };
-
-const REAUTHORIZE_URL =
-  '/users/auth/google_oauth2?scope=userinfo.email,userinfo.profile,classroom.courses.readonly,classroom.rosters.readonly';
-function ReauthorizeGoogleClassroom() {
-  return (
-    <form method="POST" action={REAUTHORIZE_URL}>
-      <RailsAuthenticityToken />
-      <button type="submit" style={ctaButtonStyle}>
-        {locale.authorizeGoogleClassrooms()}
-      </button>
-    </form>
-  );
-}
 
 class RosterDialog extends React.Component {
   static propTypes = {
@@ -228,13 +224,9 @@ class RosterDialog extends React.Component {
   recordSectionSetupExitEvent = eventName => {
     const {rosterProvider} = this.props;
 
-    analyticsReporter.sendEvent(
-      eventName,
-      {
-        oauthSource: rosterProvider,
-      },
-      PLATFORMS.BOTH
-    );
+    analyticsReporter.sendEvent(eventName, {
+      oauthSource: rosterProvider,
+    });
   };
 
   render() {

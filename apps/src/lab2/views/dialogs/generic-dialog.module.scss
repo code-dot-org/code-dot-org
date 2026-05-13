@@ -1,45 +1,42 @@
-@import 'color.scss';
-@import './dialog-manager.module.scss';
+.genericDialog {
+  font-size: 1rem;
 
-%generic-dialog {
-  @extend %dialog;
-  display: flex;
-  flex-direction: column;
-}
-
-.genericDialog-dark {
-  @extend %generic-dialog;
-  background-color: $light_gray_950;
-
-  // override any foreground text in the dialog that might be
-  // passed in for the title or body of the dialog
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6,
-  p,
-  strong {
-    color: $light_white;
-  }
-}
-
-.genericDialog-light {
-  @extend %generic-dialog;
-}
-
-.buttonContainer {
-  .outerButtonContainer {
+  // Override default FontAwesome styles
+  // causing the icon to be left-aligned.
+  > i {
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    margin-top: 20px;
-
-    .innerButtonContainer {
-      display: flex;
-      flex-direction: row;
-      justify-content: flex-end;
-    }
   }
+
+  // If the dialog is marked as destructive, change
+  // the icon background color to the error color.
+  &.destructive > i {
+    background-color: var(--background-error-primary);
+  }
+
+  // Add padding around labels inside the dialog so the focus
+  // state styles are not cut off when elements are focused.
+  label {
+    padding: 0.25rem;
+  }
+
+  .customContentWrapper {
+    width: calc(100% - 0.25rem);
+  }
+
+  &.dialogOnlyStyle {
+    text-align: center;
+    line-height: 1.4;
+  }
+}
+
+.spinnerContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.spinnerIcon {
+  font-size: 36px;
+  color: var(--text-neutral-primary);
 }

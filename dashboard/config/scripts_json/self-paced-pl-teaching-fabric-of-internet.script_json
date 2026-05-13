@@ -1,0 +1,1495 @@
+{
+  "script": {
+    "name": "self-paced-pl-teaching-fabric-of-internet",
+    "wrapup_video_id": null,
+    "login_required": true,
+    "properties": {
+      "content_area": "self_paced_pl_9_12",
+      "curriculum_umbrella": "Self-paced PL - AIF",
+      "is_migrated": true,
+      "student_detail_progress_view": true,
+      "topic_tags": [
+        "ai"
+      ]
+    },
+    "new_name": null,
+    "family_name": null,
+    "serialized_at": "2025-05-25 17:40:18 UTC",
+    "hide_within_course": false,
+    "published_state": null,
+    "instruction_type": null,
+    "instructor_audience": null,
+    "participant_audience": null,
+    "seeding_key": {
+      "script.name": "self-paced-pl-teaching-fabric-of-internet"
+    }
+  },
+  "lesson_groups": [
+    {
+      "key": "",
+      "user_facing": false,
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-fabric-of-internet"
+      }
+    }
+  ],
+  "lessons": [
+    {
+      "key": "Teaching The Fabric of the Internet and AI",
+      "name": "Teaching The Fabric of the Internet and AI",
+      "absolute_position": 1,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 1,
+      "properties": {
+        "overview": "**In this lesson,  you will:** \n\n- Get an overview of the The Fabric of the Internet and AI curriculum and resources.\n\n**Suggested Time:** 10 minutes ",
+        "student_overview": "**In this lesson,  you will:** \n\n- Get an overview of the The Fabric of the Internet and AI curriculum and resources.\n\n**Suggested Time:** 10 minutes "
+      },
+      "seeding_key": {
+        "lesson.key": "Teaching The Fabric of the Internet and AI",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-fabric-of-internet"
+      }
+    },
+    {
+      "key": "Lesson Exploration",
+      "name": "Lesson Exploration",
+      "absolute_position": 2,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 2,
+      "properties": {
+        "overview": "**In this lesson,  you will:** \n\n- Understand core networks concepts and how the Internet works.\n- Preview activities in the lessons.\n- Explore best practices for teaching The Fabric of the Internet and AI.\n\n**Suggested Time:** 50 minutes ",
+        "student_overview": "**In this lesson,  you will:** \n\n- Understand core networks concepts and how the Internet works.\n- Preview activities in the lessons.\n- Explore best practices for teaching The Fabric of the Internet and AI.\n\n**Suggested Time:** 50 minutes "
+      },
+      "seeding_key": {
+        "lesson.key": "Lesson Exploration",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-fabric-of-internet"
+      }
+    }
+  ],
+  "lesson_activities": [
+    {
+      "key": "2e2dfbeb-bd9d-451a-8fa5-7d6ae7f09a96",
+      "position": 1,
+      "properties": {
+        "duration": 10
+      },
+      "seeding_key": {
+        "lesson_activity.key": "2e2dfbeb-bd9d-451a-8fa5-7d6ae7f09a96",
+        "lesson.key": "Teaching The Fabric of the Internet and AI",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-fabric-of-internet"
+      }
+    },
+    {
+      "key": "9a5d5fe1-d902-4301-ad5c-493137d877e7",
+      "position": 1,
+      "properties": {
+        "duration": 10
+      },
+      "seeding_key": {
+        "lesson_activity.key": "9a5d5fe1-d902-4301-ad5c-493137d877e7",
+        "lesson.key": "Lesson Exploration",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-fabric-of-internet"
+      }
+    }
+  ],
+  "activity_sections": [
+    {
+      "key": "7fa78f43-39b1-481a-85ce-7fa1ae2aff4a",
+      "position": 1,
+      "properties": {
+        "progression_name": "Course Introduction"
+      },
+      "seeding_key": {
+        "activity_section.key": "7fa78f43-39b1-481a-85ce-7fa1ae2aff4a",
+        "lesson_activity.key": "2e2dfbeb-bd9d-451a-8fa5-7d6ae7f09a96"
+      }
+    },
+    {
+      "key": "cb34af3d-8fdb-46c5-92a4-e8886d8c30c7",
+      "position": 2,
+      "properties": {
+        "progression_name": "Course Resources"
+      },
+      "seeding_key": {
+        "activity_section.key": "cb34af3d-8fdb-46c5-92a4-e8886d8c30c7",
+        "lesson_activity.key": "2e2dfbeb-bd9d-451a-8fa5-7d6ae7f09a96"
+      }
+    },
+    {
+      "key": "c9e0f244-f7a7-49c3-8f23-6227399f527b",
+      "position": 1,
+      "properties": {
+        "progression_name": "Network Components"
+      },
+      "seeding_key": {
+        "activity_section.key": "c9e0f244-f7a7-49c3-8f23-6227399f527b",
+        "lesson_activity.key": "9a5d5fe1-d902-4301-ad5c-493137d877e7"
+      }
+    },
+    {
+      "key": "85256262-7416-4fb2-abd5-cf101fa02963",
+      "position": 2,
+      "properties": {
+        "progression_name": "The Internet"
+      },
+      "seeding_key": {
+        "activity_section.key": "85256262-7416-4fb2-abd5-cf101fa02963",
+        "lesson_activity.key": "9a5d5fe1-d902-4301-ad5c-493137d877e7"
+      }
+    },
+    {
+      "key": "ed482d37-dde3-4faf-ad64-22464b7fee7b",
+      "position": 3,
+      "properties": {
+        "progression_name": "The Internet Simulator"
+      },
+      "seeding_key": {
+        "activity_section.key": "ed482d37-dde3-4faf-ad64-22464b7fee7b",
+        "lesson_activity.key": "9a5d5fe1-d902-4301-ad5c-493137d877e7"
+      }
+    },
+    {
+      "key": "9f1d7113-37da-4271-8092-0a3f97482e8f",
+      "position": 4,
+      "properties": {
+        "progression_name": "Internet Access Advocacy Campaign Project"
+      },
+      "seeding_key": {
+        "activity_section.key": "9f1d7113-37da-4271-8092-0a3f97482e8f",
+        "lesson_activity.key": "9a5d5fe1-d902-4301-ad5c-493137d877e7"
+      }
+    },
+    {
+      "key": "6f2c82d6-71fb-49a3-ba82-ef36f4a48348",
+      "position": 5,
+      "properties": {
+        "progression_name": "Network Security"
+      },
+      "seeding_key": {
+        "activity_section.key": "6f2c82d6-71fb-49a3-ba82-ef36f4a48348",
+        "lesson_activity.key": "9a5d5fe1-d902-4301-ad5c-493137d877e7"
+      }
+    },
+    {
+      "key": "d28f8c6d-5d02-45be-bb78-d902ca8382b8",
+      "position": 6,
+      "properties": {
+        "progression_name": "Wrap-Up"
+      },
+      "seeding_key": {
+        "activity_section.key": "d28f8c6d-5d02-45be-bb78-d902ca8382b8",
+        "lesson_activity.key": "9a5d5fe1-d902-4301-ad5c-493137d877e7"
+      }
+    }
+  ],
+  "script_levels": [
+    {
+      "chapter": 1,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Course Introduction"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csaif_pl__net_overview_objectives_2025"
+        ],
+        "lesson.key": "Teaching The Fabric of the Internet and AI",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-fabric-of-internet",
+        "activity_section.key": "7fa78f43-39b1-481a-85ce-7fa1ae2aff4a"
+      },
+      "level_keys": [
+        "csaif_pl__net_overview_objectives_2025"
+      ]
+    },
+    {
+      "chapter": 2,
+      "position": 2,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Course Introduction"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csaif_pl_cert_2_2025"
+        ],
+        "lesson.key": "Teaching The Fabric of the Internet and AI",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-fabric-of-internet",
+        "activity_section.key": "7fa78f43-39b1-481a-85ce-7fa1ae2aff4a"
+      },
+      "level_keys": [
+        "csaif_pl_cert_2_2025"
+      ]
+    },
+    {
+      "chapter": 3,
+      "position": 3,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Course Introduction"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csaif_pl__nets_module_overview_2025"
+        ],
+        "lesson.key": "Teaching The Fabric of the Internet and AI",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-fabric-of-internet",
+        "activity_section.key": "7fa78f43-39b1-481a-85ce-7fa1ae2aff4a"
+      },
+      "level_keys": [
+        "csaif_pl__nets_module_overview_2025"
+      ]
+    },
+    {
+      "chapter": 4,
+      "position": 4,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "progression": "Course Introduction"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csaif_pl_nets_course_overview_2025"
+        ],
+        "lesson.key": "Teaching The Fabric of the Internet and AI",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-fabric-of-internet",
+        "activity_section.key": "7fa78f43-39b1-481a-85ce-7fa1ae2aff4a"
+      },
+      "level_keys": [
+        "csaif_pl_nets_course_overview_2025"
+      ]
+    },
+    {
+      "chapter": 5,
+      "position": 5,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Course Resources"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csaif_pl_nets_course_structure_2025"
+        ],
+        "lesson.key": "Teaching The Fabric of the Internet and AI",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-fabric-of-internet",
+        "activity_section.key": "cb34af3d-8fdb-46c5-92a4-e8886d8c30c7"
+      },
+      "level_keys": [
+        "csaif_pl_nets_course_structure_2025"
+      ]
+    },
+    {
+      "chapter": 6,
+      "position": 6,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Course Resources"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csaif_pl_nets_lesson_resources_2025"
+        ],
+        "lesson.key": "Teaching The Fabric of the Internet and AI",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-fabric-of-internet",
+        "activity_section.key": "cb34af3d-8fdb-46c5-92a4-e8886d8c30c7"
+      },
+      "level_keys": [
+        "csaif_pl_nets_lesson_resources_2025"
+      ]
+    },
+    {
+      "chapter": 7,
+      "position": 7,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Course Resources"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csaif_pl_nets_career_2025"
+        ],
+        "lesson.key": "Teaching The Fabric of the Internet and AI",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-fabric-of-internet",
+        "activity_section.key": "cb34af3d-8fdb-46c5-92a4-e8886d8c30c7"
+      },
+      "level_keys": [
+        "csaif_pl_nets_career_2025"
+      ]
+    },
+    {
+      "chapter": 8,
+      "position": 8,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "progression": "Course Resources"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csaif_pl_nets_ai_chat_2025"
+        ],
+        "lesson.key": "Teaching The Fabric of the Internet and AI",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-fabric-of-internet",
+        "activity_section.key": "cb34af3d-8fdb-46c5-92a4-e8886d8c30c7"
+      },
+      "level_keys": [
+        "csaif_pl_nets_ai_chat_2025"
+      ]
+    },
+    {
+      "chapter": 9,
+      "position": 9,
+      "activity_section_position": 5,
+      "assessment": false,
+      "properties": {
+        "progression": "Course Resources"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csaif_pl_nets_closing_2025"
+        ],
+        "lesson.key": "Teaching The Fabric of the Internet and AI",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-fabric-of-internet",
+        "activity_section.key": "cb34af3d-8fdb-46c5-92a4-e8886d8c30c7"
+      },
+      "level_keys": [
+        "csaif_pl_nets_closing_2025"
+      ]
+    },
+    {
+      "chapter": 10,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Network Components"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csaif_pl_nets_overview_objectives_2025"
+        ],
+        "lesson.key": "Lesson Exploration",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-fabric-of-internet",
+        "activity_section.key": "c9e0f244-f7a7-49c3-8f23-6227399f527b"
+      },
+      "level_keys": [
+        "csaif_pl_nets_overview_objectives_2025"
+      ]
+    },
+    {
+      "chapter": 11,
+      "position": 2,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Network Components"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csaif_pl_nets_interent_2025"
+        ],
+        "lesson.key": "Lesson Exploration",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-fabric-of-internet",
+        "activity_section.key": "c9e0f244-f7a7-49c3-8f23-6227399f527b"
+      },
+      "level_keys": [
+        "csaif_pl_nets_interent_2025"
+      ]
+    },
+    {
+      "chapter": 12,
+      "position": 3,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Network Components"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csaif_pl_nets_interent_1_2025"
+        ],
+        "lesson.key": "Lesson Exploration",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-fabric-of-internet",
+        "activity_section.key": "c9e0f244-f7a7-49c3-8f23-6227399f527b"
+      },
+      "level_keys": [
+        "csaif_pl_nets_interent_1_2025"
+      ]
+    },
+    {
+      "chapter": 13,
+      "position": 4,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "progression": "Network Components"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csaif_pl_nets_interent_3_2025"
+        ],
+        "lesson.key": "Lesson Exploration",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-fabric-of-internet",
+        "activity_section.key": "c9e0f244-f7a7-49c3-8f23-6227399f527b"
+      },
+      "level_keys": [
+        "csaif_pl_nets_interent_3_2025"
+      ]
+    },
+    {
+      "chapter": 14,
+      "position": 5,
+      "activity_section_position": 5,
+      "assessment": false,
+      "properties": {
+        "progression": "Network Components"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csaif_pl_nets_interent_3b_2025"
+        ],
+        "lesson.key": "Lesson Exploration",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-fabric-of-internet",
+        "activity_section.key": "c9e0f244-f7a7-49c3-8f23-6227399f527b"
+      },
+      "level_keys": [
+        "csaif_pl_nets_interent_3b_2025"
+      ]
+    },
+    {
+      "chapter": 15,
+      "position": 6,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "The Internet"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csaif_pl_nets_interent_2_2025"
+        ],
+        "lesson.key": "Lesson Exploration",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-fabric-of-internet",
+        "activity_section.key": "85256262-7416-4fb2-abd5-cf101fa02963"
+      },
+      "level_keys": [
+        "csaif_pl_nets_interent_2_2025"
+      ]
+    },
+    {
+      "chapter": 16,
+      "position": 7,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "The Internet"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csaif_pl_nets_interent_05_2025"
+        ],
+        "lesson.key": "Lesson Exploration",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-fabric-of-internet",
+        "activity_section.key": "85256262-7416-4fb2-abd5-cf101fa02963"
+      },
+      "level_keys": [
+        "csaif_pl_nets_interent_05_2025"
+      ]
+    },
+    {
+      "chapter": 17,
+      "position": 8,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "The Internet"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csaif_pl_nets_interent_06_2025"
+        ],
+        "lesson.key": "Lesson Exploration",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-fabric-of-internet",
+        "activity_section.key": "85256262-7416-4fb2-abd5-cf101fa02963"
+      },
+      "level_keys": [
+        "csaif_pl_nets_interent_06_2025"
+      ]
+    },
+    {
+      "chapter": 18,
+      "position": 9,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "progression": "The Internet"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csaif_pl_nets_interent_7_2025"
+        ],
+        "lesson.key": "Lesson Exploration",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-fabric-of-internet",
+        "activity_section.key": "85256262-7416-4fb2-abd5-cf101fa02963"
+      },
+      "level_keys": [
+        "csaif_pl_nets_interent_7_2025"
+      ]
+    },
+    {
+      "chapter": 19,
+      "position": 10,
+      "activity_section_position": 5,
+      "assessment": false,
+      "properties": {
+        "progression": "The Internet"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csaif_pl_nets_interent_0X_2025"
+        ],
+        "lesson.key": "Lesson Exploration",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-fabric-of-internet",
+        "activity_section.key": "85256262-7416-4fb2-abd5-cf101fa02963"
+      },
+      "level_keys": [
+        "csaif_pl_nets_interent_0X_2025"
+      ]
+    },
+    {
+      "chapter": 20,
+      "position": 11,
+      "activity_section_position": 6,
+      "assessment": false,
+      "properties": {
+        "progression": "The Internet"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csaif_pl_nets_interent_08_2025"
+        ],
+        "lesson.key": "Lesson Exploration",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-fabric-of-internet",
+        "activity_section.key": "85256262-7416-4fb2-abd5-cf101fa02963"
+      },
+      "level_keys": [
+        "csaif_pl_nets_interent_08_2025"
+      ]
+    },
+    {
+      "chapter": 21,
+      "position": 12,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "The Internet Simulator"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csaif_pl_nets_sim_01_2025"
+        ],
+        "lesson.key": "Lesson Exploration",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-fabric-of-internet",
+        "activity_section.key": "ed482d37-dde3-4faf-ad64-22464b7fee7b"
+      },
+      "level_keys": [
+        "csaif_pl_nets_sim_01_2025"
+      ]
+    },
+    {
+      "chapter": 22,
+      "position": 13,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "The Internet Simulator"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csaif_pl_nets_sim_02_2025"
+        ],
+        "lesson.key": "Lesson Exploration",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-fabric-of-internet",
+        "activity_section.key": "ed482d37-dde3-4faf-ad64-22464b7fee7b"
+      },
+      "level_keys": [
+        "csaif_pl_nets_sim_02_2025"
+      ]
+    },
+    {
+      "chapter": 23,
+      "position": 14,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "The Internet Simulator"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csaif_pl_nets_sim_03_2025"
+        ],
+        "lesson.key": "Lesson Exploration",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-fabric-of-internet",
+        "activity_section.key": "ed482d37-dde3-4faf-ad64-22464b7fee7b"
+      },
+      "level_keys": [
+        "csaif_pl_nets_sim_03_2025"
+      ]
+    },
+    {
+      "chapter": 24,
+      "position": 15,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "progression": "The Internet Simulator"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csaif_pl_nets_sim_04_2025"
+        ],
+        "lesson.key": "Lesson Exploration",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-fabric-of-internet",
+        "activity_section.key": "ed482d37-dde3-4faf-ad64-22464b7fee7b"
+      },
+      "level_keys": [
+        "csaif_pl_nets_sim_04_2025"
+      ]
+    },
+    {
+      "chapter": 25,
+      "position": 16,
+      "activity_section_position": 5,
+      "assessment": false,
+      "properties": {
+        "progression": "The Internet Simulator"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csaif_pl_nets_sim_05_2025"
+        ],
+        "lesson.key": "Lesson Exploration",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-fabric-of-internet",
+        "activity_section.key": "ed482d37-dde3-4faf-ad64-22464b7fee7b"
+      },
+      "level_keys": [
+        "csaif_pl_nets_sim_05_2025"
+      ]
+    },
+    {
+      "chapter": 26,
+      "position": 17,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Internet Access Advocacy Campaign Project"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csaif_pl_nets_project_1_B_2025"
+        ],
+        "lesson.key": "Lesson Exploration",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-fabric-of-internet",
+        "activity_section.key": "9f1d7113-37da-4271-8092-0a3f97482e8f"
+      },
+      "level_keys": [
+        "csaif_pl_nets_project_1_B_2025"
+      ]
+    },
+    {
+      "chapter": 27,
+      "position": 18,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Internet Access Advocacy Campaign Project"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csaif_pl_nets_project_1_2025"
+        ],
+        "lesson.key": "Lesson Exploration",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-fabric-of-internet",
+        "activity_section.key": "9f1d7113-37da-4271-8092-0a3f97482e8f"
+      },
+      "level_keys": [
+        "csaif_pl_nets_project_1_2025"
+      ]
+    },
+    {
+      "chapter": 28,
+      "position": 19,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Internet Access Advocacy Campaign Project"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csaif_pl_nets_project_1_2_2025"
+        ],
+        "lesson.key": "Lesson Exploration",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-fabric-of-internet",
+        "activity_section.key": "9f1d7113-37da-4271-8092-0a3f97482e8f"
+      },
+      "level_keys": [
+        "csaif_pl_nets_project_1_2_2025"
+      ]
+    },
+    {
+      "chapter": 29,
+      "position": 20,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Network Security"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csaif_pl_nets_security_2025"
+        ],
+        "lesson.key": "Lesson Exploration",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-fabric-of-internet",
+        "activity_section.key": "6f2c82d6-71fb-49a3-ba82-ef36f4a48348"
+      },
+      "level_keys": [
+        "csaif_pl_nets_security_2025"
+      ]
+    },
+    {
+      "chapter": 30,
+      "position": 21,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Network Security"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csaif_pl_nets_security_02_2025"
+        ],
+        "lesson.key": "Lesson Exploration",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-fabric-of-internet",
+        "activity_section.key": "6f2c82d6-71fb-49a3-ba82-ef36f4a48348"
+      },
+      "level_keys": [
+        "csaif_pl_nets_security_02_2025"
+      ]
+    },
+    {
+      "chapter": 31,
+      "position": 22,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Network Security"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csaif_pl_nets_project_2_C_2025"
+        ],
+        "lesson.key": "Lesson Exploration",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-fabric-of-internet",
+        "activity_section.key": "6f2c82d6-71fb-49a3-ba82-ef36f4a48348"
+      },
+      "level_keys": [
+        "csaif_pl_nets_project_2_C_2025"
+      ]
+    },
+    {
+      "chapter": 32,
+      "position": 23,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "progression": "Network Security"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csaif_pl_nets_security_03_2025"
+        ],
+        "lesson.key": "Lesson Exploration",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-fabric-of-internet",
+        "activity_section.key": "6f2c82d6-71fb-49a3-ba82-ef36f4a48348"
+      },
+      "level_keys": [
+        "csaif_pl_nets_security_03_2025"
+      ]
+    },
+    {
+      "chapter": 33,
+      "position": 24,
+      "activity_section_position": 5,
+      "assessment": false,
+      "properties": {
+        "progression": "Network Security"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csaif_pl_inter_wrap-up_2025"
+        ],
+        "lesson.key": "Lesson Exploration",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-fabric-of-internet",
+        "activity_section.key": "6f2c82d6-71fb-49a3-ba82-ef36f4a48348"
+      },
+      "level_keys": [
+        "csaif_pl_inter_wrap-up_2025"
+      ]
+    },
+    {
+      "chapter": 34,
+      "position": 25,
+      "activity_section_position": 6,
+      "assessment": false,
+      "properties": {
+        "progression": "Network Security"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csaif_pl_inter_wrap-up_02_2025"
+        ],
+        "lesson.key": "Lesson Exploration",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-fabric-of-internet",
+        "activity_section.key": "6f2c82d6-71fb-49a3-ba82-ef36f4a48348"
+      },
+      "level_keys": [
+        "csaif_pl_inter_wrap-up_02_2025"
+      ]
+    },
+    {
+      "chapter": 35,
+      "position": 26,
+      "activity_section_position": 7,
+      "assessment": false,
+      "properties": {
+        "progression": "Network Security"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csaif_pl_nets_project_2_2025"
+        ],
+        "lesson.key": "Lesson Exploration",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-fabric-of-internet",
+        "activity_section.key": "6f2c82d6-71fb-49a3-ba82-ef36f4a48348"
+      },
+      "level_keys": [
+        "csaif_pl_nets_project_2_2025"
+      ]
+    },
+    {
+      "chapter": 36,
+      "position": 27,
+      "activity_section_position": 8,
+      "assessment": false,
+      "properties": {
+        "progression": "Network Security"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csaif_pl_nets_project_2_02_2025"
+        ],
+        "lesson.key": "Lesson Exploration",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-fabric-of-internet",
+        "activity_section.key": "6f2c82d6-71fb-49a3-ba82-ef36f4a48348"
+      },
+      "level_keys": [
+        "csaif_pl_nets_project_2_02_2025"
+      ]
+    },
+    {
+      "chapter": 37,
+      "position": 28,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Wrap-Up"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csaif-pl-nextsteps-nets_2025"
+        ],
+        "lesson.key": "Lesson Exploration",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-fabric-of-internet",
+        "activity_section.key": "d28f8c6d-5d02-45be-bb78-d902ca8382b8"
+      },
+      "level_keys": [
+        "csaif-pl-nextsteps-nets_2025"
+      ]
+    }
+  ],
+  "levels_script_levels": [
+    {
+      "seeding_key": {
+        "level.key": "csaif_pl__net_overview_objectives_2025",
+        "script_level.level_keys": [
+          "csaif_pl__net_overview_objectives_2025"
+        ],
+        "lesson.key": "Teaching The Fabric of the Internet and AI",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-fabric-of-internet",
+        "activity_section.key": "7fa78f43-39b1-481a-85ce-7fa1ae2aff4a"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csaif_pl_cert_2_2025",
+        "script_level.level_keys": [
+          "csaif_pl_cert_2_2025"
+        ],
+        "lesson.key": "Teaching The Fabric of the Internet and AI",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-fabric-of-internet",
+        "activity_section.key": "7fa78f43-39b1-481a-85ce-7fa1ae2aff4a"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csaif_pl__nets_module_overview_2025",
+        "script_level.level_keys": [
+          "csaif_pl__nets_module_overview_2025"
+        ],
+        "lesson.key": "Teaching The Fabric of the Internet and AI",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-fabric-of-internet",
+        "activity_section.key": "7fa78f43-39b1-481a-85ce-7fa1ae2aff4a"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csaif_pl_nets_course_overview_2025",
+        "script_level.level_keys": [
+          "csaif_pl_nets_course_overview_2025"
+        ],
+        "lesson.key": "Teaching The Fabric of the Internet and AI",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-fabric-of-internet",
+        "activity_section.key": "7fa78f43-39b1-481a-85ce-7fa1ae2aff4a"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csaif_pl_nets_course_structure_2025",
+        "script_level.level_keys": [
+          "csaif_pl_nets_course_structure_2025"
+        ],
+        "lesson.key": "Teaching The Fabric of the Internet and AI",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-fabric-of-internet",
+        "activity_section.key": "cb34af3d-8fdb-46c5-92a4-e8886d8c30c7"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csaif_pl_nets_lesson_resources_2025",
+        "script_level.level_keys": [
+          "csaif_pl_nets_lesson_resources_2025"
+        ],
+        "lesson.key": "Teaching The Fabric of the Internet and AI",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-fabric-of-internet",
+        "activity_section.key": "cb34af3d-8fdb-46c5-92a4-e8886d8c30c7"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csaif_pl_nets_career_2025",
+        "script_level.level_keys": [
+          "csaif_pl_nets_career_2025"
+        ],
+        "lesson.key": "Teaching The Fabric of the Internet and AI",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-fabric-of-internet",
+        "activity_section.key": "cb34af3d-8fdb-46c5-92a4-e8886d8c30c7"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csaif_pl_nets_ai_chat_2025",
+        "script_level.level_keys": [
+          "csaif_pl_nets_ai_chat_2025"
+        ],
+        "lesson.key": "Teaching The Fabric of the Internet and AI",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-fabric-of-internet",
+        "activity_section.key": "cb34af3d-8fdb-46c5-92a4-e8886d8c30c7"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csaif_pl_nets_closing_2025",
+        "script_level.level_keys": [
+          "csaif_pl_nets_closing_2025"
+        ],
+        "lesson.key": "Teaching The Fabric of the Internet and AI",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-fabric-of-internet",
+        "activity_section.key": "cb34af3d-8fdb-46c5-92a4-e8886d8c30c7"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csaif_pl_nets_overview_objectives_2025",
+        "script_level.level_keys": [
+          "csaif_pl_nets_overview_objectives_2025"
+        ],
+        "lesson.key": "Lesson Exploration",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-fabric-of-internet",
+        "activity_section.key": "c9e0f244-f7a7-49c3-8f23-6227399f527b"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csaif_pl_nets_interent_2025",
+        "script_level.level_keys": [
+          "csaif_pl_nets_interent_2025"
+        ],
+        "lesson.key": "Lesson Exploration",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-fabric-of-internet",
+        "activity_section.key": "c9e0f244-f7a7-49c3-8f23-6227399f527b"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csaif_pl_nets_interent_1_2025",
+        "script_level.level_keys": [
+          "csaif_pl_nets_interent_1_2025"
+        ],
+        "lesson.key": "Lesson Exploration",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-fabric-of-internet",
+        "activity_section.key": "c9e0f244-f7a7-49c3-8f23-6227399f527b"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csaif_pl_nets_interent_3_2025",
+        "script_level.level_keys": [
+          "csaif_pl_nets_interent_3_2025"
+        ],
+        "lesson.key": "Lesson Exploration",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-fabric-of-internet",
+        "activity_section.key": "c9e0f244-f7a7-49c3-8f23-6227399f527b"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csaif_pl_nets_interent_3b_2025",
+        "script_level.level_keys": [
+          "csaif_pl_nets_interent_3b_2025"
+        ],
+        "lesson.key": "Lesson Exploration",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-fabric-of-internet",
+        "activity_section.key": "c9e0f244-f7a7-49c3-8f23-6227399f527b"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csaif_pl_nets_interent_2_2025",
+        "script_level.level_keys": [
+          "csaif_pl_nets_interent_2_2025"
+        ],
+        "lesson.key": "Lesson Exploration",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-fabric-of-internet",
+        "activity_section.key": "85256262-7416-4fb2-abd5-cf101fa02963"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csaif_pl_nets_interent_05_2025",
+        "script_level.level_keys": [
+          "csaif_pl_nets_interent_05_2025"
+        ],
+        "lesson.key": "Lesson Exploration",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-fabric-of-internet",
+        "activity_section.key": "85256262-7416-4fb2-abd5-cf101fa02963"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csaif_pl_nets_interent_06_2025",
+        "script_level.level_keys": [
+          "csaif_pl_nets_interent_06_2025"
+        ],
+        "lesson.key": "Lesson Exploration",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-fabric-of-internet",
+        "activity_section.key": "85256262-7416-4fb2-abd5-cf101fa02963"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csaif_pl_nets_interent_7_2025",
+        "script_level.level_keys": [
+          "csaif_pl_nets_interent_7_2025"
+        ],
+        "lesson.key": "Lesson Exploration",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-fabric-of-internet",
+        "activity_section.key": "85256262-7416-4fb2-abd5-cf101fa02963"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csaif_pl_nets_interent_0X_2025",
+        "script_level.level_keys": [
+          "csaif_pl_nets_interent_0X_2025"
+        ],
+        "lesson.key": "Lesson Exploration",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-fabric-of-internet",
+        "activity_section.key": "85256262-7416-4fb2-abd5-cf101fa02963"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csaif_pl_nets_interent_08_2025",
+        "script_level.level_keys": [
+          "csaif_pl_nets_interent_08_2025"
+        ],
+        "lesson.key": "Lesson Exploration",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-fabric-of-internet",
+        "activity_section.key": "85256262-7416-4fb2-abd5-cf101fa02963"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csaif_pl_nets_sim_01_2025",
+        "script_level.level_keys": [
+          "csaif_pl_nets_sim_01_2025"
+        ],
+        "lesson.key": "Lesson Exploration",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-fabric-of-internet",
+        "activity_section.key": "ed482d37-dde3-4faf-ad64-22464b7fee7b"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csaif_pl_nets_sim_02_2025",
+        "script_level.level_keys": [
+          "csaif_pl_nets_sim_02_2025"
+        ],
+        "lesson.key": "Lesson Exploration",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-fabric-of-internet",
+        "activity_section.key": "ed482d37-dde3-4faf-ad64-22464b7fee7b"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csaif_pl_nets_sim_03_2025",
+        "script_level.level_keys": [
+          "csaif_pl_nets_sim_03_2025"
+        ],
+        "lesson.key": "Lesson Exploration",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-fabric-of-internet",
+        "activity_section.key": "ed482d37-dde3-4faf-ad64-22464b7fee7b"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csaif_pl_nets_sim_04_2025",
+        "script_level.level_keys": [
+          "csaif_pl_nets_sim_04_2025"
+        ],
+        "lesson.key": "Lesson Exploration",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-fabric-of-internet",
+        "activity_section.key": "ed482d37-dde3-4faf-ad64-22464b7fee7b"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csaif_pl_nets_sim_05_2025",
+        "script_level.level_keys": [
+          "csaif_pl_nets_sim_05_2025"
+        ],
+        "lesson.key": "Lesson Exploration",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-fabric-of-internet",
+        "activity_section.key": "ed482d37-dde3-4faf-ad64-22464b7fee7b"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csaif_pl_nets_project_1_B_2025",
+        "script_level.level_keys": [
+          "csaif_pl_nets_project_1_B_2025"
+        ],
+        "lesson.key": "Lesson Exploration",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-fabric-of-internet",
+        "activity_section.key": "9f1d7113-37da-4271-8092-0a3f97482e8f"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csaif_pl_nets_project_1_2025",
+        "script_level.level_keys": [
+          "csaif_pl_nets_project_1_2025"
+        ],
+        "lesson.key": "Lesson Exploration",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-fabric-of-internet",
+        "activity_section.key": "9f1d7113-37da-4271-8092-0a3f97482e8f"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csaif_pl_nets_project_1_2_2025",
+        "script_level.level_keys": [
+          "csaif_pl_nets_project_1_2_2025"
+        ],
+        "lesson.key": "Lesson Exploration",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-fabric-of-internet",
+        "activity_section.key": "9f1d7113-37da-4271-8092-0a3f97482e8f"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csaif_pl_nets_security_2025",
+        "script_level.level_keys": [
+          "csaif_pl_nets_security_2025"
+        ],
+        "lesson.key": "Lesson Exploration",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-fabric-of-internet",
+        "activity_section.key": "6f2c82d6-71fb-49a3-ba82-ef36f4a48348"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csaif_pl_nets_security_02_2025",
+        "script_level.level_keys": [
+          "csaif_pl_nets_security_02_2025"
+        ],
+        "lesson.key": "Lesson Exploration",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-fabric-of-internet",
+        "activity_section.key": "6f2c82d6-71fb-49a3-ba82-ef36f4a48348"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csaif_pl_nets_project_2_C_2025",
+        "script_level.level_keys": [
+          "csaif_pl_nets_project_2_C_2025"
+        ],
+        "lesson.key": "Lesson Exploration",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-fabric-of-internet",
+        "activity_section.key": "6f2c82d6-71fb-49a3-ba82-ef36f4a48348"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csaif_pl_nets_security_03_2025",
+        "script_level.level_keys": [
+          "csaif_pl_nets_security_03_2025"
+        ],
+        "lesson.key": "Lesson Exploration",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-fabric-of-internet",
+        "activity_section.key": "6f2c82d6-71fb-49a3-ba82-ef36f4a48348"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csaif_pl_inter_wrap-up_2025",
+        "script_level.level_keys": [
+          "csaif_pl_inter_wrap-up_2025"
+        ],
+        "lesson.key": "Lesson Exploration",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-fabric-of-internet",
+        "activity_section.key": "6f2c82d6-71fb-49a3-ba82-ef36f4a48348"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csaif_pl_inter_wrap-up_02_2025",
+        "script_level.level_keys": [
+          "csaif_pl_inter_wrap-up_02_2025"
+        ],
+        "lesson.key": "Lesson Exploration",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-fabric-of-internet",
+        "activity_section.key": "6f2c82d6-71fb-49a3-ba82-ef36f4a48348"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csaif_pl_nets_project_2_2025",
+        "script_level.level_keys": [
+          "csaif_pl_nets_project_2_2025"
+        ],
+        "lesson.key": "Lesson Exploration",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-fabric-of-internet",
+        "activity_section.key": "6f2c82d6-71fb-49a3-ba82-ef36f4a48348"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csaif_pl_nets_project_2_02_2025",
+        "script_level.level_keys": [
+          "csaif_pl_nets_project_2_02_2025"
+        ],
+        "lesson.key": "Lesson Exploration",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-fabric-of-internet",
+        "activity_section.key": "6f2c82d6-71fb-49a3-ba82-ef36f4a48348"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csaif-pl-nextsteps-nets_2025",
+        "script_level.level_keys": [
+          "csaif-pl-nextsteps-nets_2025"
+        ],
+        "lesson.key": "Lesson Exploration",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-fabric-of-internet",
+        "activity_section.key": "d28f8c6d-5d02-45be-bb78-d902ca8382b8"
+      }
+    }
+  ],
+  "resources": [
+
+  ],
+  "lessons_resources": [
+
+  ],
+  "scripts_resources": [
+
+  ],
+  "scripts_student_resources": [
+
+  ],
+  "vocabularies": [
+
+  ],
+  "lessons_vocabularies": [
+
+  ],
+  "lessons_programming_expressions": [
+
+  ],
+  "objectives": [
+
+  ],
+  "lessons_standards": [
+
+  ],
+  "lessons_opportunity_standards": [
+
+  ],
+  "rubrics": [
+
+  ],
+  "learning_goals": [
+
+  ],
+  "learning_goal_evidence_levels": [
+
+  ]
+}

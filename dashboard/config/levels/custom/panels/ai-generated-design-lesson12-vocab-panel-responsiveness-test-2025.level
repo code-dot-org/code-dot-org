@@ -1,0 +1,22 @@
+<Panels>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 73,
+  "created_at": "2025-10-22T19:03:50.000Z",
+  "level_num": "custom",
+  "user_id": 18603,
+  "properties": {
+    "encrypted": "false",
+    "offer_browser_tts": "false",
+    "panels": [
+      {
+        "text": "**Responsiveness**: the practice of designing and developing websites so that their layouts adapt smoothly to different screen sizes and devices. This ensures content is usable and looks good everywhere.",
+        "imageUrl": "https://images.code.org/813aaa4dd467832e8fc792f63c8dd94e-responsiveness.png",
+        "key": "ai-generated-design-lesson5-vocab-panel-brandkit-test-2025-d32755b0-a47a-4875-862a-5558f4694b63",
+        "layout": "text-top-left"
+      }
+    ]
+  },
+  "audit_log": "[{\"changed_at\":\"2025-10-22T19:03:50.942+00:00\",\"changed\":[\"cloned from \\\"ai-generated-design-lesson10-vocab-panel-wireframe-test-2025\\\"\"],\"cloned_from\":\"ai-generated-design-lesson10-vocab-panel-wireframe-test-2025\"},{\"changed_at\":\"2025-10-22 19:04:00 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2025-10-22 20:10:45 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2025-10-24 16:32:42 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"}]"
+}]]></config>
+</Panels>

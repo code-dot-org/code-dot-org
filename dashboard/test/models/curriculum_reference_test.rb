@@ -8,9 +8,9 @@ class CurriculumReferenceTest < ActiveSupport::TestCase
   end
 
   test 'knows it is a reference guide' do
-    unit_group = create :unit_group, family_name: 'bogus-course', version_year: '2022', name: 'bogus-course-2022'
+    unit_group = create(:unit_group, family_name: 'bogus-course', version_year: '2022', name: 'bogus-course-2022')
     CourseOffering.add_course_offering(unit_group)
-    ref_guide = create :reference_guide, key: 'key', course_version: unit_group.course_version
+    ref_guide = create(:reference_guide, key: 'key', course_version: unit_group.course_version)
     level = create(:curriculum_reference, reference: "/courses/#{ref_guide.course_offering_version}/guides/#{ref_guide.key}")
     assert level.reference_guide_level?
     assert_equal ref_guide, level.reference_guide

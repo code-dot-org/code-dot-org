@@ -1,0 +1,14 @@
+name 'problem-solving-with-ai-postassessment-q10_2025-pilot_v2-2025'
+
+question 'Which best describes the purpose of adding context in an AI prompt?'
+
+wrong 'It forces the AI to give longer answers with extra filler details.'
+right 'It helps the AI focus on relevant background information to produce a more tailored response.'
+wrong 'It automatically overrides any task instructions the user previously gave.'
+wrong 'It ensures the AI only uses the latest training data and ignores older data.'
+
+allow_multiple_attempts true
+
+teacher_markdown <<MARKDOWN
+Lesson 8: Debugging and Refining Outputs
+MARKDOWN

@@ -1,5 +1,6 @@
 <Dancelab>
   <config><![CDATA[{
+  "published": true,
   "game_id": 63,
   "created_at": "2024-06-26T17:31:19.000Z",
   "level_num": "custom",
@@ -50,7 +51,7 @@
     "parent_level_id": 21716,
     "name_suffix": "_PL",
     "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"**How do I pass this level?**\\n* The dancer needs to switch to a new move after 4 measures.\\n\\n*The level ends after 7 measures.*\",\"hint_id\":\"validation\",\"hint_type\":\"general\",\"hint_path\":\"\",\"hint_video\":\"\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/220ef7e46e304a16ef5a8162a6be7796/Dance_Party_02.mp3\"}]",
-    "default_song": "neverreallyover_katyperry",
+    "default_song": "2beloved_lizzo",
     "short_instructions": "Make your dancer start a new move after the fourth measure.\r\n",
     "video_key": "hoc_dance_measures_2019",
     "encrypted": "false",
@@ -63,9 +64,8 @@
     "validation_enabled": "false",
     "hide_pause_button": "false"
   },
-  "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2024-06-26T17:31:19.353+00:00\",\"changed\":[\"cloned from \\\"CourseD_Dance_2020_04_grade5\\\"\"],\"cloned_from\":\"CourseD_Dance_2020_04_grade5\"}]",
+  "audit_log": "[{\"changed_at\":\"2024-06-26T17:31:19.353+00:00\",\"changed\":[\"cloned from \\\"CourseD_Dance_2020_04_grade5\\\"\"],\"cloned_from\":\"CourseD_Dance_2020_04_grade5\"},{\"changed_at\":\"2024-11-07 18:31:55 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"default_song\",\"encrypted_examples\",\"contained_level_names\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]",
   "level_concept_difficulty": {
     "sequencing": 2,
     "events": 2

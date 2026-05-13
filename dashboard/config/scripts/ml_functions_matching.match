@@ -1,0 +1,35 @@
+name 'ML-Functions-Matching'
+title 'Define a Function'
+
+height '75'
+
+question 'Step 1:'
+answer 'Sing, "Happy Birthday to you"'
+question 'Step 2:'
+answer 'Sing, "Happy Birthday to you"'
+question 'Step 3:'
+answer 'Sing, "Happy Birthday dear [Name]!"'
+question 'Step 4:'
+answer 'Sing, "Happy Birthday to you"'
+
+
+
+markdown <<MARKDOWN
+
+## Arrange the lyrics below to define the function: Happy Birthday
+
+
+
+
+
+
+
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+
+
+
+MARKDOWN
+
+allow_multiple_attempts true

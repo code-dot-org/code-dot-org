@@ -57,7 +57,6 @@ In case of `whatsUp("WATCH")`, here is the sequence of operations:
         
     - Print `"WATC"`.
     
-- Print `"WATCH"`.
 
 So the output is:
 
@@ -66,6 +65,5 @@ W
 WA
 WAT
 WATC
-WATCH
 ```
 MARKDOWN

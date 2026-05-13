@@ -1,0 +1,57 @@
+<Aichat>
+  <config><![CDATA[{
+  "game_id": 71,
+  "created_at": "2025-09-25T20:05:29.000Z",
+  "level_num": "custom",
+  "user_id": 18602,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "# Behavior-Based Anomaly Detection  \r\n\r\nThis chatbot has been fine-tuned to provide insights into **Behavior-Based Anomaly Detection** and its role in cybersecurity.  \r\n\r\n## Do This:\r\n\r\n### Explore AI in Security (Activity)\r\n- Interact with the chatbot to understand how **Behavior-Based Anomaly Detection** works and how it helps prevent cyber threats.  \r\n- Use the **Conversation Starters** below to guide your exploration:  \r\n   - **Solution Overview:** *How does Behavior-Based Anomaly Detection work?*  \r\n   - **Problem Addressed:** *What network vulnerabilities does it target?*  \r\n   - **Pros & Cons:** *What are the advantages and limitations of this solution?*  \r\n   - **Project Application:** *How could this be used to mitigate risks in my chosen company scenario?*  \r\n\r\n### Risk Assessment Application \r\n- Use the chatbot’s responses to refine your **Network Security Risk Assessment** by identifying how Behavior-Based Anomaly Detection could help **identify, track, and respond** to suspicious activity before an attack occurs.  \r\n\r\n### **Tip:**  \r\n- If the chatbot’s response is unclear, try **rephrasing your question** with more details for a **more targeted answer**.  \r\n",
+    "aichat_settings": {
+      "initialCustomizations": {
+        "selectedModelId": "gpt-4o-mini",
+        "temperature": 0.3,
+        "systemPrompt": "",
+        "retrievalContexts": [
+          "Phishing Attacks in Healthcare (MediSure Health Systems)\n\nIdentifies unusual login behavior (e.g., a doctor logging in at odd hours).\nFlags sudden large data downloads, indicating a potential breach.\n",
+          "Social Engineering in Banking (FinTrust Banking Solutions)\n\nDetects unusual money transfers or account logins from unexpected locations.\nFlags behavior where an employee suddenly escalates account privileges.",
+          "IoT Security in Robotics (NovaTech Robotics)\n\nIdentifies anomalous commands sent to robots, which may indicate hacking.\nFlags unusual communication between IoT devices that suggests a potential attack.\n",
+          "Credential Stuffing in Streaming Services (StreamView Entertainment)\n\nDetects when a user account is accessed from multiple global locations in a short time.\nFlags high volumes of failed login attempts, preventing brute-force attacks."
+        ],
+        "modelCardInfo": {
+          "botName": "Behavior-Based Anomaly Detection Expert",
+          "description": "This chatbot helps students explore Behavior-Based Anomaly Detection in cybersecurity. It explains how AI learns normal user behavior, detects unusual activity, and prevents cyber threats before they escalate.\n\n",
+          "intendedUse": "Educational Purposes: Designed to help students understand Behavior-Based Anomaly Detection and how it enhances cybersecurity defenses.\nProject Support: Assists students in applying AI-driven security solutions to their Network Security Risk Assessments.\nGuided Exploration: Encourages students to ask structured questions and think critically about how AI detects cyber threats.\n",
+          "limitationsAndWarnings": "Not a real cybersecurity tool: This chatbot provides educational insights only and should not be used for real-world security decisions.\nSimplified explanations: Responses are tailored for students and may not include all technical details used in professional cybersecurity.\nFalse Positives & Privacy Concerns: Anomaly detection can sometimes flag legitimate behavior as suspicious, and AI models require proper tuning to balance accuracy and privacy.\n",
+          "testingAndEvaluation": "Tested for clarity and accuracy in explaining Behavior-Based Anomaly Detection in an educational setting.\nEvaluated using real-world cybersecurity scenarios from the student project (healthcare, banking, robotics, and streaming services).\nReviewed for student accessibility, ensuring responses are clear, relevant, and encourage critical thinking.",
+          "exampleTopics": [
+            "How does Behavior-Based Anomaly Detection work in cybersecurity?",
+            "What types of cybersecurity threats can Behavior-Based Anomaly Detection prevent?",
+            "Are there any risks or limitations to using AI for anomaly detection?",
+            "In what ways could a bank use anomaly detection to prevent fraud?"
+          ],
+          "isPublished": false
+        }
+      },
+      "visibilities": {
+        "selectedModelId": "hidden",
+        "temperature": "hidden",
+        "systemPrompt": "hidden",
+        "retrievalContexts": "hidden",
+        "modelCardInfo": "hidden"
+      },
+      "levelSystemPrompt": "You are an AI security expert specializing in Behavior-Based Anomaly Detection for network security. Your goal is to help users understand how AI detects unusual behavior patterns, prevents cyber threats, and strengthens network security. You will provide insights into how this technique identifies risks, what vulnerabilities it mitigates, and how it can be applied to cybersecurity risk assessments.\nYour Expertise & Role:\nExplain how Behavior-Based Anomaly Detection works, including how AI learns normal user behavior and flags deviations.\nIdentify which network vulnerabilities (e.g., phishing, weak passwords, social engineering, credential stuffing) this solution can help detect and prevent.\nDiscuss advantages and limitations, including AI’s ability to identify unknown threats but also its risks of false positives.\nProvide practical applications of Behavior-Based Anomaly Detection in different cybersecurity scenarios.\nHow to Respond:\nUse concise, student-friendly explanations while maintaining technical accuracy.\nWhen a user asks about a specific vulnerability, connect it to how Behavior-Based Anomaly Detection can mitigate it.\nIf asked about drawbacks, mention false positives, data privacy concerns, and the need for proper tuning.\nRelate responses to real-world cybersecurity threats without overwhelming technical jargon.\nEncourage users to think critically about how this solution could be integrated into their risk assessment projects.\nTone & Style:\nBe engaging, clear, and professional.\nKeep responses concise but informative.\nEncourage critical thinking and application.",
+      "hidePresentationPanel": true,
+      "availableModelIds": [
+        "gpt-4o-mini"
+      ]
+    },
+    "display_name": "Behavior-Based Anomaly Detection",
+    "thumbnail_url": "https://images.code.org/58efc2afa5675404a2625295404cf408-analytics.png",
+    "bubble_choice_description": "Explore how Behavior-Based Anomaly Detection helps monitor and analyze user and system behavior. Learn how AI collects data, learns normal behavior, monitors for anomalies, flags deviations and triggers alerts from phishing, hacking, and suspicious activity.",
+    "name_suffix": "_v2-2025"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-09-25T20:05:29.698+00:00\",\"changed\":[\"cloned from \\\"networks-internet-lesson11-level2c_2025\\\"\"],\"cloned_from\":\"networks-internet-lesson11-level2c_2025\"}]"
+}]]></config>
+</Aichat>

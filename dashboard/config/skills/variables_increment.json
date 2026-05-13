@@ -1,0 +1,6 @@
+{
+  "key": "variables_increment",
+  "concept": "variables",
+  "description": "Increment values stored in variables ",
+  "evaluation_criteria": "Does the student's added code increment the values stored in the variables correctly?"
+}

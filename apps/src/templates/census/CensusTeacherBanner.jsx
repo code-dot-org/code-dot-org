@@ -36,12 +36,12 @@ export default function CensusTeacherBanner({
   const [showCensusUnknownError, setShowCensusUnknownError] = useState(false);
 
   const schoolInfo = useSchoolInfo({
-    schoolId: existingSchoolInfo.id,
-    country: existingSchoolInfo.country,
-    schoolName: existingSchoolInfo.name,
+    schoolId: existingSchoolInfo?.id,
+    country: existingSchoolInfo?.country,
+    schoolName: existingSchoolInfo?.name,
 
-    schoolZip: existingSchoolInfo.zip,
-    schoolType: existingSchoolInfo.type,
+    schoolZip: existingSchoolInfo?.zip,
+    schoolType: existingSchoolInfo?.type,
   });
 
   const hideSchoolInfoForm = () => {
@@ -145,12 +145,12 @@ export default function CensusTeacherBanner({
         <div style={styles.share}>
           <a href={facebookShareUrl} target="_blank" rel="noopener noreferrer">
             <button type="button" style={styles.shareButton}>
-              <i className="fa fa-facebook" /> Share on Facebook
+              <i className="fa-brands fa-facebook-f" /> Share on Facebook
             </button>
           </a>
           <a href={twitterShareUrl} target="_blank" rel="noopener noreferrer">
             <button type="button" style={styles.shareButton}>
-              <i className="fa fa-twitter" /> Share on Twitter
+              <i className="fa-brands fa-x-twitter" /> Share on X
             </button>
           </a>
         </div>
@@ -256,12 +256,12 @@ export default function CensusTeacherBanner({
       );
     }
 
-    if (schoolInfo.schoolName) {
+    if (existingSchoolInfo?.name) {
       return (
         <div>
           <div style={styles.header}>
             <h2 style={styles.title}>
-              Add {schoolInfo.schoolName} to our map!
+              Add {existingSchoolInfo?.name} to our map!
             </h2>
             <p style={styles.updateSchool}>
               Not teaching at this school anymore?&ensp;

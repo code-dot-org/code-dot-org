@@ -1,15 +1,18 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 
 import PeerReviewSubmissions from '@cdo/apps/code-studio/peer_reviews/PeerReviewSubmissions';
+import {createReactRoot} from '@cdo/apps/util/createReactRoot';
 import getScriptData from '@cdo/apps/util/getScriptData';
 
 document.addEventListener('DOMContentLoaded', function () {
-  ReactDOM.render(
+  createReactRoot(
     <PeerReviewSubmissions
       courseList={getScriptData('courseList')}
       courseUnitMap={getScriptData('courseUnitMap')}
     />,
-    document.getElementById('dashboard-container')
+    document.getElementById('dashboard-container'),
+    {
+      legacyReactDomRender: true,
+    }
   );
 });

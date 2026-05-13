@@ -3,7 +3,6 @@
 # This script truncates and then populates the following tables:
 #   contained_levels
 #   contained_level_answers
-#   level_sources_multi_type
 #   pd_applications_status_logs
 
 require_relative 'only_one'
@@ -29,12 +28,13 @@ end
 def get_contained_question(contained_level)
   contained_question_markdown = contained_level.properties['markdown']
 
-  contained_question_text = nil
-  if contained_level.properties['questions']
-    contained_question_text = contained_level.
-      properties['questions'].
-      first['text']
-  end
+  contained_question_text = if contained_level.properties['questions']
+                              contained_level.properties['questions'].first['text']
+                            elsif contained_level.properties['long_instructions']
+                              contained_level.properties['long_instructions']
+                            else
+                              nil
+                            end
 
   if contained_question_markdown.nil?
     return contained_question_text || ""
@@ -46,15 +46,15 @@ def get_contained_question(contained_level)
 end
 
 def main
+  answer_level_types = ['Multi', 'Match', 'EvaluationMulti']
+
   # Build the data for the tables.
   contained_levels = []
   contained_level_answers = []
-  level_sources_multi_types = []
 
   LevelGroup.find_each do |level|
     level.pages.each_with_index do |page, page_index|
       page.levels.each_with_index do |contained_level, position_index|
-        next unless contained_level.type == 'Multi'
         next if contained_levels.
           any? {|existing_contained_level| existing_contained_level[:level_id] == contained_level.id}
 
@@ -68,13 +68,14 @@ def main
           contained_level_text: sanitize_string_for_db(contained_question)
         }
 
+        next unless answer_level_types.include? contained_level.type
         answers = contained_level.properties['answers']
         answers.each_with_index do |answer, answer_number|
           contained_level_answers << {
             contained_level_id: contained_level.id,
             answer_number: answer_number,
             answer_text: sanitize_string_for_db(answer['text']),
-            correct: answer['correct']
+            correct: answer['correct'] || false
           }
         end
       end
@@ -82,17 +83,7 @@ def main
   end
 
   Level.find_each do |level|
-    begin
-    # The RecordNotFound exception happens when a Level does not belong to any ScriptLevel.
-    # The NoMethodError exception happens when a ScriptLevel does not have a Script.
-    # TODO(asher): Fix the corrupt data on staging, eliminating the need for this rescue clause.
-    rescue ActiveRecord::RecordNotFound, NoMethodError
-      next
-    end
-
     level.contained_levels.each_with_index do |contained_level, index|
-      next unless contained_level.type == 'Multi'
-
       contained_question = get_contained_question(contained_level)
       contained_levels << {
         level_id: level.id,
@@ -103,30 +94,23 @@ def main
         contained_level_text: sanitize_string_for_db(contained_question)
       }
 
+      next unless answer_level_types.include? contained_level.type
       answers = contained_level.properties['answers']
       answers.each_with_index do |answer, answer_number|
         contained_level_answers << {
           contained_level_id: contained_level.id,
           answer_number: answer_number,
           answer_text: sanitize_string_for_db(answer['text']),
-          correct: answer['correct']
+          correct: answer['correct'] || false
         }
       end
     end
-  end
-
-  contained_levels.map {|row| row[:contained_level_id]}.each do |contained_level_id|
-    LevelSource.
-      where(level_id: contained_level_id).
-      find_each do |level_source|
-      level_sources_multi_types << {
-        level_source_id: level_source.id,
-        level_id: level_source.level_id,
-        data: level_source.data,
-        md5: level_source.md5,
-        hidden: level_source.hidden
-      }
-    end
+  rescue ActiveRecord::RecordNotFound => exception
+    Honeybadger.notify(
+      exception,
+      error_message: "Error reading level '#{level.name}' for rollup tables."
+    )
+    next
   end
 
   Level.where(type: 'BubbleChoice').find_each do |level|
@@ -145,13 +129,11 @@ def main
   # Verify that the data size is sensible.
   CDO.log.info "contained_levels: #{contained_levels.size}"
   CDO.log.info "contained_level_answers: #{contained_level_answers.size}"
-  CDO.log.info "level_sources: #{level_sources_multi_types.size}"
   raise "contained_levels too big: #{contained_levels.size} rows exceeds limit of 100000" if contained_levels.size > 100_000
   raise "contained_level_answers too big: #{contained_level_answers.size} rows exceeds limit of 100000" if contained_level_answers.size > 100_000
-  raise "level_sources too big: #{level_sources_multi_types.size} rows exceeds limit of 100000" if level_sources_multi_types.size > 100_000
 
   # Maximum rows to insert per query
-  batch_size = 2000
+  batch_size = 1000
 
   # Write the data to the DB tables.
   begin
@@ -202,28 +184,6 @@ def main
     )
   end
 
-  begin
-    ActiveRecord::Base.connection.execute 'TRUNCATE level_sources_multi_types'
-    level_sources_multi_types.each_slice(batch_size) do |batch|
-      ActiveRecord::Base.connection.execute <<~SQL
-        INSERT INTO level_sources_multi_types (
-          level_source_id,
-          level_id,
-          data,
-          md5,
-          hidden
-        )
-        VALUES
-        #{batch.map {|row| level_sources_multi_types_row(row)}.join(",\n")}
-      SQL
-    end
-  rescue => exception
-    Honeybadger.notify(
-      exception,
-      error_message: "Error when writing level_sources_multi_type"
-    )
-  end
-
   # Because there may soon be > 100K application status log entries, batch the
   # reads in addition to the writes so that we do not end up loading too many
   # objects into memory.
@@ -260,18 +220,6 @@ def contained_level_answers_row(row_hash)
       #{row_hash[:answer_number]},
       #{row_hash[:answer_text]},
       #{row_hash[:correct]}
-    )
-  ROW
-end
-
-def level_sources_multi_types_row(row_hash)
-  <<~ROW
-    (
-      #{row_hash[:level_source_id]},
-      #{row_hash[:level_id]},
-      "#{row_hash[:data]}",
-      "#{row_hash[:md5]}",
-      #{row_hash[:hidden]}
     )
   ROW
 end

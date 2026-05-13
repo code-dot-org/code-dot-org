@@ -1,0 +1,26 @@
+name 'MLself-paced-pl-k5-2-intro_2024_Melissa_1'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Introduction to Programming with Music Lab
+
+
+#### Start your music making journey with Music Lab!
+
+<img src="https://images.code.org/205cc0e8da353930786208309788529d-image-1679953465855.png" alt="Image of a cartoon octopus holding a microphone and wearing a hat" style="border-radius:40px; float: right; padding-right: 75px; height: 275px; clear: both; margin: 0 0px 0px 0;">
+
+
+## In this module, you will:
+
+* #### Create music with code.
+* #### Write code using sequencing, loops, functions, and events.
+* #### Practice the Use-Modify-Create Pedagogical Practice.
+
+### **Suggested time:**  60 minutes
+
+
+## Let's get started!
+
+<div style="clear:both"/>
+MARKDOWN

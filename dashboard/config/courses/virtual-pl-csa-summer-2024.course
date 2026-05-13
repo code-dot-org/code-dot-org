@@ -7,6 +7,13 @@
     "virtual-pl-csa-summer-day4",
     "virtual-pl-csa-summer-day5"
   ],
+  "original_script_names": [
+    "virtual-pl-csa-summer-day2",
+    "virtual-pl-csa-summer-day3",
+    "virtual-pl-csa-summer-day4",
+    "virtual-pl-csa-summer-day5",
+    "virtual-pl-csa-summer-day1"
+  ],
   "published_state": "stable",
   "instruction_type": "teacher_led",
   "participant_audience": "teacher",

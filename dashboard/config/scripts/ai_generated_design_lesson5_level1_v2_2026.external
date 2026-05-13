@@ -1,0 +1,27 @@
+name 'ai-generated-design-lesson5-level1_v2_2026'
+title 'Style Critique'
+
+
+markdown <<MARKDOWN
+##Brand Analysis Activity Guide
+
+<div>
+<img style=" float: left; width:25%; padding-top:10px" src="https://images.code.org/8df5234daa49428fda707362d76f343f-ab-testing.png" />
+
+<div style="float: left; width: 70%; padding-left:20px">
+
+**Here is a digital copy of the activity guide if needed:**  [Brand Analysis](https://docs.google.com/document/d/1MH4cVQG4lyMhTIw234ihK72bdvcEEARNBitqn3N0hYc/edit?usp=sharing).
+
+###Do This
+1. If completing this activity digitally, open the digital Brand Analysis Activity Guide.
+2. Look at the images in the panels on Level 2. Compare each pair of websites (Nike vs Adidas, Spotify vs SoundCloud, etc). 
+3. Record what you notice about color, typography, layout, and overall tone. 
+4. Based on these design choices, explain which audience each brand seems to target.
+
+
+
+
+</div>
+
+
+MARKDOWN

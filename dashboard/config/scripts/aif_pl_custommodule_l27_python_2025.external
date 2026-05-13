@@ -1,0 +1,39 @@
+name 'aif-pl-custommodule-L27-python_2025'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# What is a Module? 
+
+#### A module is just a `.py` file that contains Python code.
+
+#### You can write your own module, like `custom.py`, to store your helper functions.
+### Then you can use them in another file like `main.py`.
+
+#### Remember,`custom.py` is where you define the functions you create, and `main.py` is where you run your main program and call the functions. 
+
+> #### Using multiple modules helps new programmers build clean, organized code and develop good coding habits.
+
+## Programming with Modules
+
+#### In this example, a function, `greet()`, is created to print a message, "Hello, World"
+
+#### The function is also called, or used, in the main module. You can see the message printed in the console.
+
+<img src="https://images.code.org/ef822d60b0852e60b250889f148ae656-image-1745429775931.png" alt="image of code using a main and custom module" width="550px" style="display: block; margin-left: auto; margin-right: auto; border-radius:10px;">
+
+
+
+
+<div style="clear:both;"></div>
+
+---
+
+
+
+
+## Next up!
+#### Practice using the custom module. 
+
+
+MARKDOWN

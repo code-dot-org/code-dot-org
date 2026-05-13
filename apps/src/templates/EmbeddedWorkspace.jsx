@@ -1,6 +1,8 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 
+import {workspaceSvgResize} from '@cdo/apps/blockly/utils';
+
 /**
  * Many of our hints include Blockly blocks. Unfortunately, Blockly
  * workspaces have a real problem with being created before they are
@@ -32,6 +34,7 @@ export default class EmbeddedWorkspace extends React.Component {
       {
         noScrolling: true,
         rtl: this.props.isRtl,
+        theme: Blockly.getMainWorkspace().getTheme(),
       }
     );
 
@@ -41,7 +44,6 @@ export default class EmbeddedWorkspace extends React.Component {
     // Setting state here will trigger an immediate re-render; however,
     // that is unavaoidable given that we cannot know what size our
     // workspace is until it's already in the DOM
-    // eslint-disable-next-line react/no-did-mount-set-state
     this.setState({
       height,
       workspace,
@@ -50,7 +52,7 @@ export default class EmbeddedWorkspace extends React.Component {
 
   componentDidUpdate() {
     if (this.state.workspace) {
-      Blockly.cdoUtils.workspaceSvgResize(this.state.workspace);
+      workspaceSvgResize(this.state.workspace);
     }
   }
 

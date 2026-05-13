@@ -1,0 +1,17 @@
+name 'programming-fundamentals-postassessment-question5_pilot-2025'
+title 'Programming Fundamentals Post-Assessment: Question 5'
+
+wrong 'Using print statements to track variable values'
+wrong 'Testing small sections of code at a time'
+right 'Ignoring error messages and rerunning the program until it works'
+wrong 'Asking an AI chatbot or a classmate for help when stuck'
+
+allow_multiple_attempts true
+
+markdown <<MARKDOWN
+Which of the following is **NOT** an effective debugging strategy?
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+Lesson 7: Debugging Strategies
+MARKDOWN

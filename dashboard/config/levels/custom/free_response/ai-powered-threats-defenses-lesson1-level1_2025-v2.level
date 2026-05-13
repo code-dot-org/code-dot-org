@@ -1,0 +1,26 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 52,
+  "created_at": "2025-12-16T07:05:35.000Z",
+  "level_num": "custom",
+  "user_id": 1574,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "Here is a student explanation of cybersecurity: \r\n> “Cybersecurity stops hackers so nothing bad happens online.” \r\n\r\nIs this explanation complete, incomplete, or incorrect based on what you’ve learned so far about what cybersecurity protects? Explain your reasoning in 1–2 sentences.",
+    "stay_on_level_after_submit": "false",
+    "allow_user_uploads": "false",
+    "submittable": "false",
+    "peer_reviewable": "false",
+    "optional": "false",
+    "allow_multiple_attempts": "false",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "teacher_markdown": "**Assessment Opportunity**\r\n\r\nThis level can be used as a formative assessment to check student understanding of the lesson objectives. Here are things to look for and actions you can take:\r\n\r\n- If students demonstrate strong understanding, their explanations should note that cybersecurity protects systems and data from being stolen, altered, or disrupted, not just from hackers, and should reference system failures or risks beyond attacks.\r\nIf students describe cybersecurity only as “blocking hackers,” revisit the vocabulary slide and emphasize that cybersecurity protects systems and data from being stolen, changed, or damaged.\r\n- If students struggle to justify their reasoning, prompt them to connect their answer to the earlier warm-up examples about system failures and their impacts.",
+    "title": "Check for Understanding"
+  },
+  "audit_log": "[{\"changed_at\":\"2025-12-16T07:05:35.927+00:00\",\"changed\":[\"cloned from \\\"ai-powered-threats-defenses-lesson4-level5_2025-pilot\\\"\"],\"cloned_from\":\"ai-powered-threats-defenses-lesson4-level5_2025-pilot\"},{\"changed_at\":\"2025-12-16 07:06:37 +0000\",\"changed\":[\"long_instructions\",\"teacher_markdown\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</FreeResponse>

@@ -1,0 +1,10 @@
+name 'programming-fundamentals-lesson8-level6_2025'
+display_name 'Loops Practice'
+description 'Pick one of the levels below!'
+
+sublevels
+level 'test-intro-to-programming-lesson9-level5a_2025'
+level 'test-intro-to-programming-lesson9-level5b_2025'
+level 'test-intro-to-programming-lesson9-level5c_2025'
+level 'test-intro-to-programming-lesson9-level5d_2025'
+level 'test-intro-to-programming-lesson9-level5e_2025'

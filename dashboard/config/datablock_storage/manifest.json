@@ -1,18 +1,3 @@
-{
-  "tables": [
-    {
-      "name": "100 Birds of the World",
-      "docUrl": "https://studio.code.org/data_docs/100-birds/",
-      "current": false,
-      "published": true,
-      "description": "Data and images about 100 different species of birds around the world"
-    }
-  ],
-  "categories": [
-    {
-      "name": "Animals",
-      "datasets": ["100 Birds of the World"],
-      "published": true
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:f9fde29644723de2f4712281dcb54bb541578c29d6d252fd0500394013140f14
+size 32443

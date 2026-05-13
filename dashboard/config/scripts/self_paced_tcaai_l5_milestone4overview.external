@@ -1,0 +1,19 @@
+name 'self-paced-TCaAI-L5-Milestone4Overview'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Milestone 4: Safety & Privacy
+
+#### In Milestone 4, students investigate how everyday data can be combined to reveal personal and sensitive information. Across Lessons 7 and 8, they explore how AI systems synthesize patterns from public data and develop strategies to protect privacy while still using AI responsibly.
+
+## Milestone 4 Overview
+
+#### **Lesson 7** is a Build Knowledge lesson where students analyze public, private, and sensitive data and test how AI uses small details to create highly personalized outputs.
+
+#### **Lesson 8** is a Develop & Critique lesson where students synthesize patterns across explorations and draft actionable Safety & Privacy Guidelines for their Responsible AI Use Guide.
+
+## 🧩 Project Progress
+
+#### By the end of Milestone 4, students will complete the Safety & Privacy section of their Responsible AI Use Guide, including specific Red Flags and Green Flags for responsible data sharing.
+MARKDOWN

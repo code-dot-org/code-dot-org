@@ -1,0 +1,16 @@
+name 'data-science-ch1-lesson9-level2a_2025-launch_v2-2025'
+title 'Dataset 1'
+display_name 'Dataset #1'
+bubble_choice_description 'Number of Times the Room Was Cleaned Each Month.'
+thumbnail_url 'https://images.code.org/448d56b6da13866132cff5f73dc74586-65ee26dc76978ebe1fab3dcc0fcab1e1-number-1.png'
+
+markdown <<MARKDOWN
+##Dataset 1
+
+This dataset recorded the number of times Micah cleaned their room each month over one year.
+
+**Do This:**
+1. Open **[Dataset #1](https://docs.google.com/spreadsheets/d/1oZySM0f07WWBQcFV6XL9Z6EDXd6NS2crRn0BiHeBPTo/edit?usp=drivesdk)**
+2. Explore the dataset and the visualization by clicking the tabs on the bottom of the spreadsheet.
+3. Discuss and answer the questions in your activity guide with your partner.
+MARKDOWN

@@ -1,0 +1,55 @@
+<Pythonlab>
+  <config><![CDATA[{
+  "game_id": 72,
+  "created_at": "2025-09-25T19:56:38.000Z",
+  "level_num": "custom",
+  "user_id": 16889,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "## Do This:\r\n\r\nYou're helping a civic engagement nonprofit build a personalized text bot. It needs to send reminders to register that include both the person's name and their registration deadline.\r\n\r\n1. Add **two parameters** to the function: one for the name and one for the deadline.\r\n\r\n2. Update the message to say something like:\r\n\r\n   ```\r\n   Samira, your voter registration deadline is April 15!\r\n   ```\r\n\r\n---\r\n\r\n<i class=\"fa-solid fa-laptop\"></i> **Coding Tip**\r\n\r\nA **parameter** is a placeholder in the function definition. When you call the function, you pass in an argument that fills that placeholder.\r\n\r\nTo include a variable like a name in your message, you can combine strings using the `+` operator. Here's an example:\r\n\r\n```\r\nprint(\"Hi, \" + name + \"!\")\r\n```\r\n\r\nMake sure to include spaces **inside the quotes**, like `\"Hi, \"` and `\"!\"`, or the message will get squished together.",
+    "ai_tutor_available": "false",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "enable_micro_bit": "false",
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "name_suffix": "_v2-2025",
+    "display_name": "Registration Text Bot",
+    "bubble_choice_description": "You're helping a civic engagement nonprofit build a personalized text bot. It needs to send reminders to register that include both the person's name and their registration deadline.",
+    "thumbnail_url": "https://images.code.org/32fc1e1d48ad3b2c6c016ee44c6e583b-verify.png",
+    "start_sources": {
+      "files": {
+        "0": {
+          "id": "0",
+          "name": "main.py",
+          "language": "py",
+          "contents": "# TODO - Add name and deadline parameters\ndef send_registration_reminder():\n  # Prints a reminder message\n\n  # TODO - Update the print statement to use the parameters\n  print(\"Alex, don't forget to register to vote!\")\n\n# TODO - Call the function with a name and deadline\nsend_registration_reminder()\n",
+          "folderId": "0",
+          "active": false,
+          "open": true,
+          "type": "locked_starter"
+        }
+      },
+      "folders": {
+      },
+      "openFiles": [
+        "0"
+      ]
+    },
+    "encrypted_exemplar_sources": "Cy05mEYW43yx3lpwk/lyQYs4qPKDc2JDG2xzW6EZ2HXNXiuQgI6R1SlqPKPt\nlYISiQp/Zt7oXvHNpBSUY2/tVcAoh32dY5clMNiyTLp2qQ5O47DJ0rGD0IJV\nXDiO//IRW/LZBlXyH5JryMNp/3+nzv7BD9HGh4Qc5utzGY+z4wy3jI18XcFl\nbmRP6DVrRAL/vEhKF03v5hm1iVFM2PD3USxKN7sRThfPfeZIisBSjehB75Lt\n16nEUXKdJRDKty8w1zzcBzBBkOHwGolGKA4OnyLbajP3HZ2q/8t4l7iR61n3\nuY29EuH6iBRpwnHHR4I8aXxFYchuZljRWl0FK4eZD2/N+ilWY6dKJMK/AhD9\nk8Yp0HO6L6Q9jUfaR7f3S7wwuJVpCzNlMNCNYaG4CpxknCEKtOj/3s5JTQqj\nOxr1k4t1a8W9QO85GV6cii1Ewjtu3mOAbtIhRySixeVNMURw9MOByY2Y596Q\nqr0CcIWbnKOkVoAyQ/BTsYL1K2/RRAEONluVYuFxcfxR/5Enl6E0wGFPLu4c\nmUExfrYIbrMHaADG3TQlpK8rfWY8mBc5sxQezwouSATnbEnJY9LUFUTDPUds\nUojiilQheKYZKiEGneWQ1C8ohM7TO+rjweJsCzIUpHhRGd+Wf4ztg0j/L42P\n6eyQs9ZnzP9wU7o9spPoaFc/L+G/yM8mZNiFbHyXiYosTK7672QWGiiYQXZn\nM+V/9Q==\n",
+    "validation_file": {
+      "id": "1",
+      "name": "test.py",
+      "language": "py",
+      "contents": "import inspect\nfrom unittest import TestCase\nfrom unittest_runner import ValidationProtocol\nfrom main import send_registration_reminder\n\nclass TestSendRegistrationReminder(TestCase):\n    @classmethod\n    def setUpClass(cls):\n        \"\"\"Set up validation and get stdout logs\"\"\"\n        cls.validation = ValidationProtocol()\n        cls.stdout_logs = cls.validation.get_stdout_logs()\n\n    def test_function_has_two_parameters(self):\n        \"\"\"send_registration_reminder should accept exactly two parameters\"\"\"\n        params = inspect.signature(send_registration_reminder).parameters\n        self.assertEqual(\n            len(params),\n            2,\n            \"The function send_registration_reminder should have exactly two parameters: one for the name and one for the deadline.\"\n        )\n\n    def test_output_uses_name_and_deadline(self):\n        \"\"\"Printed output should dynamically use the name and deadline\"\"\"\n        self.assertGreaterEqual(\n            len(self.stdout_logs),\n            1,\n            \"No output was found. Make sure send_registration_reminder() is called and prints a message.\"\n        )\n\n        last_output = self.stdout_logs[-1]\n\n        # Make sure it doesn't use the hardcoded \"Alex\"\n        self.assertNotIn(\n            \"Alex\",\n            last_output,\n            \"The output still uses the hardcoded name 'Alex'. Make sure you use the parameters passed to the function.\"\n        )\n",
+      "folderId": "0",
+      "active": false,
+      "open": false,
+      "type": "validation"
+    }
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-09-25T19:56:38.220+00:00\",\"changed\":[\"cloned from \\\"programming-fundamentals-lesson7-level1d_2025-launch_2025\\\"\"],\"cloned_from\":\"programming-fundamentals-lesson7-level1d_2025-launch_2025\"}]"
+}]]></config>
+</Pythonlab>

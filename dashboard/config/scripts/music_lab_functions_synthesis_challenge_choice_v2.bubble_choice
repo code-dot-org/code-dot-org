@@ -1,0 +1,10 @@
+name 'music-lab-functions-synthesis-challenge-choice_v2'
+display_name 'Challenge'
+description 'Choose at least 2 options below to practice'
+
+sublevels
+level 'music-lab-functions-synthesize-create-a_v2'
+level 'music-lab-functions-synthesize-create-b_v2'
+level 'music-lab-functions-synthesize-create-c_v2'
+level 'music-lab-functions-synthesis-challengeA_v2'
+uses_lab2

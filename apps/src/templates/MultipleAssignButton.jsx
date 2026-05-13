@@ -1,8 +1,9 @@
+import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
+import {Button} from '@mui/material';
 import PropTypes from 'prop-types';
 import React from 'react';
 import {connect} from 'react-redux';
 
-import Button from '@cdo/apps/legacySharedComponents/Button';
 import MultipleSectionsAssigner from '@cdo/apps/templates/MultipleSectionsAssigner';
 import {sectionForDropdownShape} from '@cdo/apps/templates/teacherDashboard/shapes';
 import {
@@ -10,21 +11,24 @@ import {
   unassignSection,
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import {sectionsForDropdown} from '@cdo/apps/templates/teacherDashboard/teacherSectionsReduxSelectors';
+import {AiChatToolsDependency} from '@cdo/generated-scripts/sharedConstants';
 import i18n from '@cdo/locale';
+
+import styles from './multipleAssignButton.module.scss';
 
 class MultipleAssignButton extends React.Component {
   static propTypes = {
-    sectionId: PropTypes.number.isRequired,
-    sectionName: PropTypes.string,
     courseId: PropTypes.number,
     courseOfferingId: PropTypes.number,
     courseVersionId: PropTypes.number,
     scriptId: PropTypes.number,
     assignmentName: PropTypes.string,
     reassignConfirm: PropTypes.func,
-    isAssigningCourse: PropTypes.bool,
-    isStandAloneUnit: PropTypes.bool,
+    isAssigningCourseOnly: PropTypes.bool,
+    isSingleUnitCourse: PropTypes.bool,
     participantAudience: PropTypes.string,
+    aiChatToolsDependency: PropTypes.oneOf(Object.values(AiChatToolsDependency))
+      .isRequired,
     // Redux
     assignToSection: PropTypes.func.isRequired,
     isRtl: PropTypes.bool,
@@ -55,30 +59,26 @@ class MultipleAssignButton extends React.Component {
       courseVersionId,
       scriptId,
       assignmentName,
-      isStandAloneUnit,
-      isRtl,
+      isSingleUnitCourse,
       sectionsForDropdown,
       participantAudience,
-      isAssigningCourse,
+      isAssigningCourseOnly,
       reassignConfirm,
+      aiChatToolsDependency,
     } = this.props;
 
-    // Adjust styles if locale is RTL
-    const buttonMarginStyle = isRtl
-      ? styles.buttonMarginRTL
-      : styles.buttonMargin;
-
     return (
-      <div>
-        <div style={buttonMarginStyle}>
-          <Button
-            color={Button.ButtonColor.brandSecondaryDefault}
-            text={i18n.assignToMultipleSections()}
-            icon="plus"
-            onClick={this.handleClick}
-            className={'uitest-assign-button'}
-          />
-        </div>
+      <div className={styles.container}>
+        <Button
+          variant="contained"
+          color="primary"
+          startIcon={<FontAwesomeV6Icon iconName="plus" iconStyle="solid" />}
+          onClick={this.handleClick}
+          id="uitest-multi-assign-button"
+          size="small"
+        >
+          {i18n.assignToMultipleSections()}
+        </Button>
         {assignmentChoiceDialogOpen && (
           <MultipleSectionsAssigner
             assignmentName={assignmentName}
@@ -89,28 +89,16 @@ class MultipleAssignButton extends React.Component {
             scriptId={scriptId}
             courseVersionId={courseVersionId}
             reassignConfirm={reassignConfirm}
-            isAssigningCourse={isAssigningCourse}
-            isStandAloneUnit={isStandAloneUnit}
+            isAssigningCourseOnly={isAssigningCourseOnly}
+            isSingleUnitCourse={isSingleUnitCourse}
             participantAudience={participantAudience}
+            aiChatToolsDependency={aiChatToolsDependency}
           />
         )}
       </div>
     );
   }
 }
-
-const styles = {
-  buttonMargin: {
-    marginLeft: 10,
-    display: 'flex',
-    alignItems: 'center',
-  },
-  buttonMarginRTL: {
-    marginRight: 10,
-    display: 'flex',
-    alignItems: 'center',
-  },
-};
 
 export const UnconnectedMultipleAssignButton = MultipleAssignButton;
 

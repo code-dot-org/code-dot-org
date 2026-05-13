@@ -1,5 +1,4 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 import {Provider} from 'react-redux';
 
 import reducers, {
@@ -24,9 +23,12 @@ import vocabulariesEditor, {
 import {getStore, registerReducers} from '@cdo/apps/redux';
 import instructionsDialog from '@cdo/apps/redux/instructionsDialog';
 import ExpandableImageDialog from '@cdo/apps/templates/lessonOverview/ExpandableImageDialog';
+import {prepareBlocklyForEmbeddingAllEnvironments} from '@cdo/apps/templates/utils/embeddedBlocklyUtils';
+import {createReactRoot} from '@cdo/apps/util/createReactRoot';
 import getScriptData from '@cdo/apps/util/getScriptData';
 
 $(document).ready(function () {
+  prepareBlocklyForEmbeddingAllEnvironments();
   const lessonData = getScriptData('lesson');
   const relatedLessons = getScriptData('relatedLessons');
   const unitInfo = getScriptData('unitForLesson');
@@ -60,7 +62,7 @@ $(document).ready(function () {
     initStandards('opportunityStandard', lessonData.opportunityStandards || [])
   );
 
-  ReactDOM.render(
+  createReactRoot(
     <Provider store={store}>
       <div>
         <LessonEditor
@@ -69,10 +71,14 @@ $(document).ready(function () {
           initialLessonData={lessonData}
           unitInfo={unitInfo}
           rubricId={rubric ? rubric.id : null}
+          rubricLevelId={rubric ? rubric.level_id : null}
         />
         <ExpandableImageDialog />
       </div>
     </Provider>,
-    document.getElementById('edit-container')
+    document.getElementById('edit-container'),
+    {
+      legacyReactDomRender: true,
+    }
   );
 });

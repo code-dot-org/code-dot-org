@@ -1,0 +1,430 @@
+{
+  "https://studio.code.org/s/k5howaimakesdecisions/lessons/1/levels/1": {
+    "dsls": {
+      "content1": "description here",
+      "markdown": "# How AI Makes Decisions\n\n##### Welcome! This free self-paced professional learning module is designed help you prepare to teach Code.org's\"How AI Makes Decisions\" unit, for 3-5th grade students. \n\n\n<img src=\"https://images.code.org/1cd0ec71458414495502b9598efd2028-image-1639773441510.37.01 PM.png\" alt=\"Image of AI bot and a model card\" style=\"border-radius:40px; float: right; padding-right: 120px; height: 275px; clear: both; margin: 0 20px 20px 0;\">\n\n\n## In this module, you will:\n\n* ##### Get an introduction to artificial intelligence (AI) and machine learning.\n* ##### Practice key concepts included in the unit..\n* ##### Make a plan for implementing the unit with your students.\n\n### **Suggested time:** 15 minutes\n\n## Take the pre-survey\n\nUpdate Survey link:\n##### Code.org values and is responsive to feedback. Please fill out <a href=\"https://studio.code.org/form/selfpaced_pd_how_ai_makes_decisions_pre_survey\" target=\"blank\" rel=\"noopener noreferrer\">this short pre-survey</a> to  tell us about who you are and how we can best support you.\n\n<a class=\"btn btn-large btn-primary\" href=\"https://studio.code.org/form/selfpaced_pd_how_ai_makes_decisions_pre_survey\" target=\"blank\" rel=\"noopener noreferrer\">Take the pre-survey</a>\n\n## Let's get started!\n\n<div style=\"clear:both\"/>\n\n\n"
+    }
+  },
+  "https://studio.code.org/s/k5howaimakesdecisions/lessons/1/levels/2": {
+    "dsls": {
+      "markdown": "# What is AI? \n<IMG SRC=\"hhttps://images.code.org/917f0bbc6abfdfa96aecd85850319ad6-image-1712694525313.png\">.\n## What is AI? \n\n####**Artificial Intelligence (AI)**  - when a machine acts in ways that mimic human intelligence such as playing a game, creating works of art, having a conversation, performing routine tasks, or solving problems.\n\n## Why Use AI?\n#### AI and machine learning impact our entire world, changing how we live and how we work. That's why it's critical for all of us to understand this increasingly important technology, including not just how it's designed and applied, but also its societal and ethical implications. \n\n## Where is AI? \n#### Your students are likely to be using AI and machine learning. Some AI and machine learning tech your students might use include: \n* #### **Voice-activated assistants** like Siri, Alexa, or Google Assistant \n* #### **Music and streaming** that provide recommendations \n* #### **Internet search** for personal or educational use \n* #### Amazon's **Shopping recommendations** \n* #### Instagram and Tiktok's **For You** page\n\n"
+    }
+  },
+  "https://studio.code.org/s/k5howaimakesdecisions/lessons/1/levels/3": {
+    "dsls": {
+      "content1": "description here",
+      "markdown": "# The AI Landscape\n\n#### What about all the other things we've heard about - machine learning, natural language processing, how do all of these fit together?\n\n#### Take a look at the diagram below to get a better idea. Key terms are defined underneath. \n\n<p style=\"text-align:center;\">\n<img src=\"https://images.code.org/6360156161735b4ffe0e2f19d74037d4-Screenshot 2024-04-15 at 1.36.49 PM.png\" alt=\"Venn diagram of nested terms related to AI.\">\n\nImage Source: https://www.wondavr.com/ai-course/module-1\n\n>* #### **Artificial Intelligence (AI):** AI is the branch of computer science that aims to develop systems capable of performing tasks that would normally require human intelligence, including decision-making, visual perception, and speech recognition.\n>* #### **Machine Learning (ML):** ML is a subset of AI that involves training algorithms to learn patterns and make decisions with minimal human intervention, based on data.\n>* #### **Natural Language Processing (NLP):** NLP is a field at the intersection of computer science, artificial intelligence, and linguistics, focused on enabling computers to understand, interpret, and generate human language.\n>* #### **Deep Learning:** Deep learning is a subset of machine learning that uses neural networks with many layers (deep neural networks) to analyze large volumes of data, enabling the model to learn complex patterns.\n>* #### **Large Language Models:** These are advanced deep learning models trained on extensive corpora of text data, capable of understanding and generating human-like text by predicting subsequent parts of text based on the input they receive.\n>* #### **ChatGPT:** ChatGPT is a prominent example of a large language model, developed by OpenAI, designed specifically for generating human-like responses in a conversational context by processing and producing text based on its training on a diverse dataset.\n\n#### Everything in this diagram falls under the larger umbrella of Data Science, so let's define that term too.\n\n>* #### **Data Science:** an interdisciplinary field that uses scientific methods, processes, algorithms, and systems to extract knowledge and insights from structured and unstructured data.\n\n<details style=\"background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;\">\n    <summary style=\"font-size: 1.5em; font-weight: bold;\">Wait...what...?</summary>\n<div style=\"margin-top: 20px; margin-left: 20px; margin-right: 20px; padding-bottom:20px;\">\n    <p>\n\n#### It's okay if you didn't catch all of that! Here are the same terms defined using non-technical language.\n\n>* #### **Artificial Intelligence (AI):** Teaching computers to think and make decisions like humans do.\n>* #### **Machine Learning (ML):** A way for computers to learn from experience without being directly programmed every step. For example, this is how Netflix recommendation algorithms work.\n>* #### **Natural Language Processing (NLP):** Helps computers understand and respond to human language, like reading or listening. This is how Siri understands your questions.\n>* #### **Deep Learning:** A method for computers to learn and make decisions by simulating the network of neurons in a human brain. Used in facial recognition technology such as unlocking smartphones.\n>* #### **Large Language Models:** Huge computer programs that are really good at understanding and generating human-like text based on what they've learned from a vast amount of written material. The technology behind ChatGPT.\n>* #### **ChatGPT:** A smart chat program that can write and chat about almost anything by using what it's learned from a lot of books, websites, and other texts.\n>* #### **Data Science:** The process of finding patterns and answers in a lot of information to help solve problems or make decisions. An example would be how Fitbit and other health trackers analyze sleep patterns.\n\n\n</p></div>\n</details>\n\n"
+    }
+  },
+  "https://studio.code.org/s/k5howaimakesdecisions/lessons/1/levels/4": {
+    "long_instructions": "#### This video is included in the CS Discoveries curriculum to introduce students to artificial intelligence and machine learning.\n\n## As you watch the video, consider the following:\n\n### How might your students engage with AI and machine learning in their daily lives?"
+  },
+  "https://studio.code.org/s/k5howaimakesdecisions/lessons/1/levels/5": {
+    "dsls": {
+      "content1": "description here",
+      "markdown": "# Whoa! There's no way I can teach all of that! \n\n## Don't worry; this module focuses on foundational AI concepts: How AI Makes Decisions.\n\n\n\n\n#### Here are the major takeaways covered in the module: \n\n#### <b>Big Idea #1:</b> Understanding what data a computer will need in order to make predictions in the future.\n#### <b>Big Idea #2:</b> There is a human component to training a model, thus, any human bias may be reflected in the predictions the computer makes. \n#### <b>Big Idea #3:</b> Sometimes AI gets it wrong in a way that a human wouldn't. \n\n## Main Ideas to Reinforce with Students:\n#### 👷 AI can help us automate tasks\n#### 📊 Machine learning algorithms require data provided to it by humans\n#### ⠳ AI makes predictions based on patterns it has seen from large datasets\n#### ❌ AI can sometimes be wrong or unfair\n#### 🪄 AI is not magical or random\n\n\n<div style=\"clear:both\"/>\n"
+    }
+  },
+  "https://studio.code.org/s/k5howaimakesdecisions/lessons/2/levels/1": {
+    "dsls": {
+      "content1": "description here",
+      "markdown": "# How AI Makes Decisions: Lessons 1-5\n\n#### This lesson will teach you about the foundational concepts of AI, building on your understanding of AI and its everyday applications.The following levels have been **pulled directly from student-facing content** that appears in the lessons of the module.\n\n\n<img src=\"https://images.code.org/1cd0ec71458414495502b9598efd2028-image-1639773441510.37.01 PM.png\" alt=\"white robot head with blue eyes with the letters AI beneath the face\" style=\"border-radius:40px; float: right; padding-right: 120px; height: 275px; clear: both; margin: 0 20px 20px 0;\">\n\n\n## In this lesson, you will:\n\n* #### Explore how data impacts AI decision making and results \n* #### Train an AI bot to recognize fish\n* #### Experience how biases impact AI \n* #### Create and use feature vectors\n\n## The following levels covers student-facing content: \n* #### <a href=\"https://levelbuilder-studio.code.org/s/k5-ai-data-2024/lessons/1\" target=\"_blank\">Lesson 1: Making Predictions</a>\n\n* #### <a href=\"https://levelbuilder-studio.code.org/s/k5-ai-data-2024/lessons/2\" target=\"_blank\">Lesson 2: Training AI</a>\n\n* #### <a href=\"https://levelbuilder-studio.code.org/s/k5-ai-data-2024/lessons/3\" target=\"_blank\">Lesson 3: Using AI Bot</a>\n\n* #### <a href=\"https://levelbuilder-studio.code.org/s/k5-ai-data-2024/lessons/4\" target=\"_blank\">Lesson 4: AI Tools in School</a>\n* #### <a href=\"https://levelbuilder-studio.code.org/s/k5-ai-data-2024/lessons/5\" target=\"_blank\">Lesson 5: Share Your Voice</a>\n\n\n### **Suggested time:** 60 minutes\n\n\n## Let's get started!\n\n<div style=\"clear:both\"/>\n\n\n"
+    }
+  },
+  "https://studio.code.org/s/k5howaimakesdecisions/lessons/2/levels/2": {
+    "dsls": {
+      "content1": "description here",
+      "markdown": "# Building Blocks of AI: Predictive Data Models\n\n#### The objective of this lesson is for students to understand that having access to more data improves the accuracy of predictions. This sets the foundation for understanding how AI uses data. In the following levels are pulled directly from the student curriculum to train you on the content. \n\n\n## While teaching this lesson, focus on these main takeaways:\n\n* #### AI uses pattern based logic. It's not magical or random.  \n* #### AI uses predictive data models, and challenges arise when there are limited data sets.\n* #### Choosing how to categorize datasets and by which features leads to different AI predictions\n\n\n\n<div style=\"clear:both\"/>\n\n\n"
+    }
+  },
+  "https://studio.code.org/s/k5howaimakesdecisions/lessons/2/levels/3": {
+    "dsls": {
+      "answers": [
+        {
+          "text": "The brownie because it is square.",
+          "correct": false
+        },
+        {
+          "text": "The pink donut because everything else is brown. ",
+          "correct": false
+        },
+        {
+          "text": "The cookie because it is the only one with no sprinkles. ",
+          "correct": false
+        },
+        {
+          "text": "Each of the above can be true. The items can be sorted in multiple different ways: by shape, color, photo orientation, and toppings.",
+          "correct": true
+        }
+      ],
+      "markdown": "<div>\n<img src = \"https://images.code.org/c5e31f0dc39743245a4c26efef4cd0c0-image-1719515488765.01.24 PM.png\">\n</div>\n\n\n",
+      "questions": [
+        {
+          "text": "Which one of these does not belong?"
+        }
+      ],
+      "title": "Multiple Choice: Classification"
+    }
+  },
+  "https://studio.code.org/s/k5howaimakesdecisions/lessons/2/levels/4": {
+    "long_instructions": "<div style=\"background-color: #A6E3E8; border-radius: 40px; color: #000000; width: 95%; padding: 1px 20px 1px 20px;\">\n<p style=\"line-height: 1.5; margin-left: 10px; margin-right: 10px; margin-top: 10px; margin-bottom: 10px; font-size: 18px; \"> \nLike with the sweet treats in the warm-up activity, we need more information, or data, to know how to sort these animals. Let’s continue to see how more data helps with sorting.\n</p>\n</div>\n<br>\n\n**Click <code style=\"color:black; background-color:#FFBD46\">Run</code>. Then click and drag each item into the \"wings\" or \"no wings\" box.**\n\n<img src=\"https://images.code.org/fe9b5522d05c3708d585104658a6709c-image-1720553593394.gif\" width=30%>\n\n<br>",
+    "callouts": {
+      "ai_data_run_button": "Click here!"
+    }
+  },
+  "https://studio.code.org/s/k5howaimakesdecisions/lessons/2/levels/5": {
+    "short_instructions": "New items ",
+    "long_instructions": "**Click Run. Then click and drag each item into a box.**\n\n<img src=\"\" width=30% style=\"padding-left: 100px\" >",
+    "contained levels": [
+      {
+        "dsls": {
+          "answers": [
+            {
+              "text": "**Box 1** sorted by shape",
+              "correct": false,
+              "feedback": "Not quite! This item could be sorted by shape or inside color. We need more data to know."
+            },
+            {
+              "text": "**Box 2** sorted by inside color",
+              "correct": false,
+              "feedback": "Not quite! These items could be sorted by shape or inside color. We need more data to know."
+            },
+            {
+              "text": "**Box 3** sorted by border color",
+              "correct": false,
+              "feedback": "Not quite! These items could be sorted by shape or inside color. We need more data to know."
+            },
+            {
+              "text": "It could go in **Box 1** or **Box 2**. We need more training data to know.",
+              "correct": true,
+              "feedback": "Correct! These items could be sorted by shape or inside color. We need more data to know."
+            }
+          ],
+          "questions": [
+            {
+              "text": "Look at the items on the left. Predict where the circle with the black border and pink color will go."
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "https://studio.code.org/s/k5howaimakesdecisions/lessons/2/levels/6": {
+    "short_instructions": "Click Run. Then click and drag each item into a box.",
+    "long_instructions": "<div style=\"background-color: #A6E3E8; border-radius: 40px; color: #000000; width: 95%; padding: 1px 20px 1px 20px;\">\n<p style=\"line-height: 1.5; margin-left: 10px; margin-right: 10px; margin-top: 10px; margin-bottom: 10px; font-size: 18px; \"> \n<b>Teacher Tip: </b> Having more data available, i.e. more sorted items on screen, helps students make a more accurate guess. Reinforce the idea that having more data makes predictions more accurate.\n</p>\n</div>\n\n**Can you figure out the pattern from the previous question?**\n\nClick <code style=\"color:black; background-color:#FFBD46\">Run</code>. Then click and drag each item into a box.",
+    "callouts": {
+      "ai_data_run_button": "Click here!"
+    }
+  },
+  "https://studio.code.org/s/k5howaimakesdecisions/lessons/2/levels/7": {
+    "short_instructions": "Click Run and drag each item into a box.",
+    "long_instructions": "**Now these items are sorted in a new way! Can you figure it out?**\n\nClick <code style=\"color:black; background-color:#FFBD46\">Run</code>. Then click and drag each item into a box.",
+    "callouts": {
+      "ai_data_run_button": "Click here!"
+    }
+  },
+  "https://studio.code.org/s/k5howaimakesdecisions/lessons/2/levels/8": {
+    "dsls": {
+      "answers": [
+        {
+          "text": "Sorted by **shape** ![](https://images.code.org/4ec47d0a14f40ec83db40e275379f496-image-1715960317983.jpg)"
+        },
+        {
+          "text": " Sorted by **inside color** ![](https://images.code.org/6e66d506320375530957215f3356919e-image-1715960321702.jpg)"
+        },
+        {
+          "text": "Sorted by **border color** ![](https://images.code.org/94f03f85356b4fc25d89001c2ed5c629-image-1715960324432.jpg)"
+        }
+      ],
+      "markdown": "###These items can be sorted in different ways. Match each way of sorting to the correct label.\n\n\n",
+      "questions": [
+        {
+          "text": "![](https://images.code.org/4e35f670bc113a6a647a8575d7887dbd-image-1715898341945.png)"
+        },
+        {
+          "text": "![](https://images.code.org/034ca31e19d9e0aa72f6b5355c6a7168-image-1715898395425.png)"
+        },
+        {
+          "text": "![](https://images.code.org/8d4b0514fee6879b9e7a2fa2b0d7248f-image-1715898407377.png)"
+        }
+      ],
+      "title": "How are these items sorted?"
+    }
+  },
+  "https://studio.code.org/s/k5howaimakesdecisions/lessons/2/levels/9": {
+    "display_name": "Video: Machine Learning",
+    "long_instructions": "# Lesson 2: Training AI"
+  },
+  "https://studio.code.org/s/k5howaimakesdecisions/lessons/2/levels/12": {
+    "dsls": {
+      "content1": "description here",
+      "markdown": "# Reinforce Main Takeaways\n\n##More Data Yields More Accurate Results\n\n#### In the previous activity, you used machine learning to train an AI bot to recognize fish. <b>Machine learning algorithms require data provided to it by humans.</b> You may have noticed that <b>the more data you provide to AI, the more accurate the results are. </b> That's because AI makes predictions based on patterns it has seen from large datasets. As a result, sometimes AI gets it wrong in a way that a human wouldn't because AI only learns what you teach it. \n\n\n## Teacher Tip: \n\n#### This activity is a great example of how to reinforce the idea that <b>“AI is not magical or random” </b> with your students. For example, if you mistakenly label a tire as a fish, AI will start to think that tires are fish. This happens because AI makes its predictions based on the data it receives, so it gets confused when the information is incorrect.\n\n\n\n<div style=\"clear:both\"/>\n\n\n"
+    }
+  },
+  "https://studio.code.org/s/k5howaimakesdecisions/lessons/2/levels/14": {
+    "dsls": {
+      "content1": "description here",
+      "markdown": "# How AI Used Data\n\n##Fish Characteristics \n![](https://images.code.org/3f052aa0cd94abab607278827fc16483-image-1719507512814.png)\n\n#### You may have noticed that if you clicked on the “i” on the results page, you can see what characteristics determined <b>how AI used your data input</b>. \n\n\n## Example: Emma's Angry Fish\n![](https://images.code.org/9addf71c703b7cc69b45a7c9bc9ee2c3-image-1720632803614.33.19 AM.png)\n#### Here you can clearly see that “color” was the most important feature followed closely by “body”. Most of the fish that AI predicted were Angry were red and/or triangular.\n## Consider This: \n\n#### Would someone else's results look exactly the same as yours? Why or why not?  \n\n\n\n<div style=\"clear:both\"/>\n\n\n"
+    }
+  },
+  "https://studio.code.org/s/k5howaimakesdecisions/lessons/2/levels/15": {
+    "dsls": {
+      "answers": [
+        {
+          "text": "Melissa and Dan did the activity incorrectly and their results are wrong.",
+          "correct": false
+        },
+        {
+          "text": "Amanda accidentally trained AI on the word “angry”.",
+          "correct": false
+        },
+        {
+          "text": "The AI bot made mistakes with all three results ",
+          "correct": false
+        },
+        {
+          "text": "Each student has a different opinion, or bias, on what makes a fish look hungry. Because of bias, each student input different training data.",
+          "correct": true
+        }
+      ],
+      "markdown": "<div class=\"container\">\n      <div class=\"image\"> <img src=\"https://images.code.org/f740b527f7b906aaa31abde888ec3531-image-1719527511113.27.32 PM.png\" alt=\"Melissa\" height=\"60%\" width= \"30%\" width= \"30%/> </div> \n      <div class=\"image\"> <img src=\"https://images.code.org/2eeee542ee3ba26596d41dac2aea6f18-image-1719527521950.27.57 PM.png\" alt=\"Dan\" height=\"60%\"width= \"30%\"width= \"30%/> </div> \n     <div class=\"image\"> <img src=\"https://images.code.org/17baaac80b01529af7c3d51ab05bbb02-image-1719527535980.28.17 PM.png\" alt=\"Amanda\" height=\"60%\" width= \"30%\" width= \"30%\"/> </div> \n    </div>\n\n\n",
+      "questions": [
+        {
+          "text": "Your students Melissa, Dan, and Amanda all chose to train AI on the word \"hungry.\" Why did AI Bot make different predictions based on the training data?"
+        }
+      ],
+      "title": "Multiple Choice: AI Bot Makes Different Predictions"
+    }
+  },
+  "https://studio.code.org/s/k5howaimakesdecisions/lessons/2/levels/16": {
+    "dsls": {
+      "content1": "description here",
+      "markdown": "# What is Bias?\n\n##Bias: when a decision favors some things and not others\n\n\n#### Because each student had a <b>different idea</b> of what constitutes a “hungry fish”,  <b>their biases impacted AI Bot's predictions</b>. \n![](https://images.code.org/57fc1d6ca95e11d5e31e89a1d77b19e8-image-1719510094671.png)\n\n#### For example, Melissa's results were biased in favor of colors, and biased against  dorsal fin. <b>Melissa was more likely to classify a green fish as hungry than a purple or red fish. </b> As a result, <b>AI predicted that most green fish were hungry.</b>\n\n\n#### Dan's results were biased in favor of eyes, but biased against tail. \n\n\n#### Amanda's results were biased in favor of colors, but against dorsal fin. \n\n\n## Consider This: \n\n#### How did Dan's and Amanda's biases impact AI's predictions? \n\n## Teacher Tip: \n#### It's important for students to understand that there are no “right” or “wrong” answers. <b>Bias in training data leads to biased AI predictions.</b> In fact, according to some studies,   <a href=\"https://medium.com/@laurahelendouglas/ai-is-not-just-learning-our-biases-it-is-amplifying-them-4d0dee75931d\" target=\"_blank\">AI even amplifies bias from the training data</a>.\n\n\n\n\n<div style=\"clear:both\"/>\n\n\n"
+    }
+  },
+  "https://studio.code.org/s/k5howaimakesdecisions/lessons/2/levels/17": {
+    "dsls": {
+      "content1": "description here",
+      "markdown": "# Why is Bias Important to Consider? \n\n##Bias can cause inaccurate predictions\n\n\n#### The previous activity showed that having <b>more data from more people </b> can help solve this problem and avoid biased input data. Combining Melissa, Dan, and Amanda's training data would ensure the results represent more types of fish.\n\n\n## How can you decrease bias? \n\n#### You can address bias by recognizing human biases are replicated in the predictions made by AI, since humans are involved in training these models. \n\n## Teacher Tip: \n* #### Bias (fair/unfair) in data can be a tricky concept to teach students. Alternatively, you can use the words, <b>“fair/unfair”</b>  to discuss topics of bias with your students. \n* #### Another way to explain bias is to ask your students, “Would it be fair if I only called on [boys/people with blue eyes/etc]? Would the [girls/people with not blue eyes] have the same learning experience?”\n\n\n\n<div style=\"clear:both\"/>\n\n\n"
+    }
+  },
+  "https://studio.code.org/s/k5howaimakesdecisions/lessons/2/levels/18": {
+    "dsls": {
+      "content1": "description here",
+      "markdown": "# Lesson 3: Using AI Bot and Feature Vectors\n#### The following levels come from Lesson 3 in the module and lead up to Dance Party AI Edition.\n\n<img src=\"https://images.code.org/9b822b615f797c236a7a0060874574fe-image-1720633199925.39.56 AM.png\" alt=\"A graph plotting data points on size and hardness for a 'Sweet Potato' dataset. The graph features orange and purple squares representing data points. There is a diagonal line indicating a separation. Below the graph are dropdown menus for 'x Axis' and 'y Axis', currently set to 'Size' and 'Hardness' respectively. There are also accuracy statistics: 'Fruit Accuracy: 7 / 12 (58%)' and 'Veggie Accuracy: 1 / 12 (8%)'. Buttons labeled 'Flip Colors', 'Try Your Own Food!', and 'Reset' are available at the bottom.\" style=\"border-radius:40px; float: right; padding-right: 0px; height: 275px; clear: both; margin: 0 20px 20px 0;\">\n\n\n##What is a Feature Vector?\n#### <b>Feature Vector:</b> Assigning a number value to certain features of an object so that a machine can find patterns in the data\n\n##Why are Feature Vectors Important?\n#### Humans choose important details (features) of a problem and convert them into numbers, creating feature vectors. These vectors are used to train the AI, helping it learn to recognize and understand different things.\n\n\n\n\n## Teacher Tip: \n#### Reinforce the idea that <b> AI only knows the information that we give it. </b>\n\n\n\n<div style=\"clear:both\"/>\n\n\n"
+    }
+  },
+  "https://studio.code.org/s/k5howaimakesdecisions/lessons/2/levels/19": {
+    "short_instructions": "It's time to build a feature vector!",
+    "long_instructions": "**Let's build a feature vector!  Click <code style=\"color:black; background-color:#FFBD46\">Run</code>. Then click and drag the items on screen.**\n\n<img src=\"https://images.code.org/c45a44e0bc00a6af6f69fe768ddbf245-image-1717109520797.gif\" width=20% style=\"float:right\" >\n\n<br>\n\n<div style=\"margin-right: 200px\">\n\n1.  Start by choosing a spot on the horizontal axis from **Not Sweet** to **Really Sweet**.\n2.  Then, move the vertical axis based on how much you like it from **Not for me!** to **Love it!**",
+    "callouts": {
+      "visualization_resize": "Click and drag the 3 dots to expand the screen."
+    }
+  },
+  "https://studio.code.org/s/k5howaimakesdecisions/lessons/2/levels/20": {
+    "short_instructions": "It's time to build a feature vector!",
+    "long_instructions": "**Let's build a feature vector! Click Run. Then click and drag the items on screen.**\n\n<img src=\"https://images.code.org/7abed13991c8b278d33a9b1b1a777b2e-image-1716243582346.gif\" width=30% style=\"float:right\" >\n\n<br>\n\n<div style=\"margin-right: 200px\">\n\n1.  Start by choosing a spot on the horizontal axis from **Not Sweet** to **Really Sweet**. \n2.  Then, move the food up the vertical axis based on how much you like it from **Not for me!** to **Love it!**",
+    "contained levels": [
+      {
+        "dsls": {
+          "answers": [
+            {
+              "text": "Hamburger",
+              "correct": false
+            },
+            {
+              "text": "Broccoli",
+              "correct": false
+            },
+            {
+              "text": "Strawberries",
+              "correct": true
+            },
+            {
+              "text": "Cake",
+              "correct": false
+            }
+          ],
+          "questions": [
+            {
+              "text": "AI Snack Picker was given training data from all the students in the class. The class wants a snack that is **sweet** and that students **like to eat**. AI Snack Picker chose **apples**. What is another snack that AI is likely to choose?"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "https://studio.code.org/s/k5howaimakesdecisions/lessons/2/levels/21": {
+    "short_instructions": "It's time to build a feature vector!",
+    "long_instructions": "**Click Run. Then click and drag the items on screen.**\n\n1.  Start by choosing a spot on the horizontal axis from **Not happy** to **Very happy**. \n2.  Then, move the emoji up the vertical axis based on how colorful you think it is from **Not colorful** to **Very colorful**",
+    "callouts": {
+      "visualization_resize": "Click and drag the 3 dots to expand the screen."
+    }
+  },
+  "https://studio.code.org/s/k5howaimakesdecisions/lessons/2/levels/22": {
+    "dsls": {
+      "answers": [
+        {
+          "text": "![](https://images.code.org/d6f30a1117a19366dbec9720572aa5e5-image-1716564634252.png)"
+        },
+        {
+          "text": " ![](https://images.code.org/b9f170de01a2947d4e192f9be9b3eeb3-image-1716564662966.png)"
+        },
+        {
+          "text": " ![](https://images.code.org/bec0c48dce24fc447e7133e62d6de7de-image-1716564742728.jpg)"
+        }
+      ],
+      "markdown": "###Based on this training data, match the backgrounds with the emojis.\n<img src=\"https://images.code.org/53c9fb0a0a2da359cbf79891a86f8817-image-1716936583924.png\" style=\"margin-left: 200px; width: 35%; float: center;\">\n\n\n",
+      "questions": [
+        {
+          "text": "Not colorful and not happy effects: ![](https://images.code.org/dc3f45485921e1a83735d44ca656c02b-image-1716564593233.jpg)"
+        },
+        {
+          "text": "A little color and very happy effects:![](https://images.code.org/998a2f603ecb1c65677b2b8fc3345e4d-image-1716504922992.jpg)"
+        },
+        {
+          "text": "Very colorful and happy effects:![](https://images.code.org/c8187188cd1bd2c180bcf98433dc6012-image-1716564684133.jpg)"
+        }
+      ],
+      "title": "Using the training data"
+    }
+  },
+  "https://studio.code.org/s/k5howaimakesdecisions/lessons/2/levels/23": {
+    "long_instructions": "<div style=\"background-color: #A6E3E8; border-radius: 40px; color: #000000; width: 95%; padding: 1px 20px 1px 20px;\">\n<p style=\"line-height: 1.5; margin-left: 10px; margin-right: 10px; margin-top: 10px; margin-bottom: 10px; font-size: 18px; \"> \nStudents will take their understanding of feature vectors to create an AI-powered dance party. \n</p>\n</div>\n<br> "
+  },
+  "https://studio.code.org/s/k5howaimakesdecisions/lessons/2/levels/24": {
+    "short_instructions": "**You can customize the effect A.I. creates!**\nClick the emojis on the block. Then either `Regenerate`, `Use code`, or `Start over`.",
+    "long_instructions": "<div style=\"background-color: #A6E3E8; border-radius: 40px; color: #000000; width: 95%; padding: 1px 20px 1px 20px;\">\n<p style=\"line-height: 1.5; margin-left: 10px; margin-right: 10px; margin-top: 10px; margin-bottom: 10px; font-size: 18px; \"> \n<b>Teacher Tip:</b> Remind students that the results are not random; AI uses <b>feature vectors</b> to <b>recommend</b> which background/foreground effects to use.\n</p>\n</div>\n\n**A.I. gets you started. You can customize the effect it creates!**\n\n-   Click the <code style=\"color:white; background-color:#566064\">A.I. generate effect</code> block to get started.\n\n-   Remember you can customize your effects:\n\n    -   <img src=\"https://images.code.org/101001680b5a4de2d752a6b3b59a116f-image-1699478528416.jpg\" style=\" margin-right: 5px;  height: 20px;\">`Regenerate`  A.I. will recommend a different effect based on the same emojis.\n\n    -   `Use code`  Use the code A.I. writes and customize it! \n\n    -   <img src=\"https://images.code.org/3e2c74fbae82198ebc3264ecaf3a823e-image-1699478492041.jpg\" style=\" margin-right: 5px;  height: 15px;\">`Start over`  Choose three new emojis to generate a new effect. ",
+    "authored_hints": {
+      "Hint1": "<img src=\"https://images.code.org/7be0ad471681f374466d45003ac04529-image-1699980027509.png\" style=\" margin-right: 10px;  height: 20px; float: left\"> Customize the effect by clicking emojis on the [blockly block][0] block in the workspace. ",
+      "HintEdit": "<img src=\"https://images.code.org/7be0ad471681f374466d45003ac04529-image-1699980027509.png\" style=\" margin-right: 10px;  height: 20px; float: left\"> If you would like to use the code A.I. writes, toggle to show the code and then click `Use code`. The blocks will replace the  [blockly block][0] block in your workspace. ",
+      "Hint2": "<img src=\"https://images.code.org/7be0ad471681f374466d45003ac04529-image-1699980027509.png\" style=\" margin-right: 10px;  height: 20px; float: left\"> **Still stuck?** Watch the video to see how you can customize the effect. "
+    },
+    "callouts": {
+      "ai_dance_callout_draft_level_6": "Click here!"
+    }
+  },
+  "https://studio.code.org/s/k5howaimakesdecisions/lessons/2/levels/25": {
+    "dsls": {
+      "title": "Let's Explore the Data!"
+    },
+    "sublevels": {
+      "sublevel_test_prod": {
+        "dsls": {
+          "content1": "description here",
+          "markdown": "#Lesson 4: AI Tools in School\n\n#### Frontload concepts by starting with the <a href=\"https://levelbuilder-studio.code.org/s/k5-ai-data-2024/lessons/4#activity-7883565\" target=\"_blank\">warm up activity</a> where students engage in a survey. \n\n\n<div style=\"background-color: #A6E3E8; border-radius: 40px; color: #000000; width: 95%; padding: 1px 20px 1px 20px;\">\n<p style=\"line-height: 1.5; margin-left: 10px; margin-right: 10px; margin-top: 10px; margin-bottom: 10px; font-size: 18px; \"> \n<b>Teacher Tip: </b>If needed, scaffold the lesson by choosing one topic to address as a class. Model how to respond to the prompts, and then have students complete another prompt independently. \n</p>\n</div>\n\n\n"
+        }
+      },
+      "k5_ai_student_data_overview_ai_prod": {
+        "dsls": {
+          "content1": "description here",
+          "markdown": "<h3><strong>Your school is considering using an A.I. tool for the following scenarios. Choose one:<strong></h3>\n\n> <div>\n> <img style=\"float:left; width:20%; padding-right:20px; padding-below:20px\" src=\"https://images.code.org/dfa6afa75c3ed875d9f83a42e6452bbc-image-1709763830890.png\" />\n> <h5>→  In the cafeteria, students are seated alphabetically by last name. <strong> <br> The Lunch Aide wants to use AI to seat students based on their interests.</strong> \n><h5> → Every month, there is a new Student of the Month.  <br> <strong>The 3rd grade teacher wants to use AI to help him choose this month's student.</strong> </h5>\n><h5>→ The gym teacher usually chooses teams randomly.  <br> <strong>Now she wants to use AI to help her form teams.</strong> </h5>\n<br>\n<br>\n></div>\n\n\n\n<h3><strong>Then look at the <a href=\"https://docs.google.com/spreadsheets/d/1t44C0ScGvgajfOEE6VE8sl7OQEJbgT1kvGDCnDgOPys/preview\n\" target=\"_blank\"> Student Dataset</a> and answer the questions below:</strong></h3>\n\n<img style=\"width:50%; float:left\" src=\"https://images.code.org/afdb1152306d71a7d1a1541f55266fb5-image-1717087213400.39.29 AM.png\" />\n<br>\n<br>\n<br> \n<br>\n<br>\n<br>\n<br>\n<br>\n<br>\n<br>\n<br>\n<br>\n<br>\n<br>\n<br>\n<br>\n<br>\n<br>\n<br>\n\n"
+        }
+      },
+      "k5_ai_student_data_scenarios_ai_prod": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "Choosing seats in the cafeteria",
+              "correct": true
+            },
+            {
+              "text": "Choosing teams for gym class",
+              "correct": true
+            },
+            {
+              "text": "Picking the Student of the Month",
+              "correct": true
+            }
+          ],
+          "questions": [
+            {
+              "text": "Which scenario did you choose?"
+            }
+          ]
+        }
+      },
+      "k5_ai_data_student_data_q1_prod": {
+        "long_instructions": "**Which columns in the dataset should you give to AI as your training data? Explain why.**"
+      },
+      "k5_ai_data_student_data_q2_prod": {
+        "long_instructions": "**Which columns in the dataset would you want to take out of the training data? Explain why.**"
+      },
+      "k5_ai_data_student_data_q3_prod": {
+        "long_instructions": "**What other data would you want to train the AI tool on? How would you collect that data?**"
+      }
+    }
+  },
+  "https://studio.code.org/s/k5howaimakesdecisions/lessons/2/levels/26": {
+    "dsls": {
+      "description": "This is the final lesson in the 3-5th grade How AI Makes Decisions module. <br> You have reached the end of the AI course. Choose a project to work on. The projects are ranked from Easy (🌶️) to Difficult (🌶️🌶️🌶️).",
+      "display_name": "Lesson 5: End of Module Project"
+    },
+    "sublevels": {
+      "k5_ai_final_choice_level_letter_to_principal_prod": {
+        "display_name": "Letter to Your Principal",
+        "bubble_choice_description": "🌶️ Share your thoughts on AI by writing a letter to your principal.",
+        "long_instructions": "####Turn your ideas into a persuasive letter.\r\n\r\n> **Do you think AI tools should be used to make decisions in school? Why or why not.** \r\n> **Write a letter to your school principal explaining your answer.**\r\n\r\n#####If you're not sure where to start, try one of these sentence starters:\r\n- I learned that AI...\r\n- I think that AI should/should not be used...\r\n- Did you know that AI...",
+        "title": "Letter to Your Principal"
+      },
+      "k5_ai_final_choice_level_make_a_poster_pl_prod": {
+        "dsls": {
+          "markdown": "##Make a Poster\n\n<div>\n<img style=\" float: left; width:25%; padding-top:10px\" src=\"https://images.code.org/1bec43fd061f8f84db40b53e1899f0e7-image-1715118441772.jpg\" />\n\n<div style=\"float: left; width: 70%; padding-left:20px\">\n<h4>\n<strong>It's time to plan your poster!</strong>\n</h4>\n\n>You should include:\n> - Pros and cons of using AI tools in school\n> - A one-two sentence description of how AI works\n> - Your opinion on AI \n\n**Here is a planning template you can copy to use yourself:**  <a href=\"https://docs.google.com/document/d/1geTnFqtszszfH7Q4_8ZORTAxvh38b-HuLpV1ezy7mgI/preview\" target=\"_blank\"> Using AI Tools in School</a>.\n\n</div>\n\n"
+        }
+      },
+      "k5_ai_final_choice_level_share_your_voice_prod": {
+        "display_name": "Share Your Voice",
+        "bubble_choice_description": "🌶️🌶️ Share your thoughts on AI by making a speech, writing a rap, or making up a song.",
+        "long_instructions": "Teach people about AI by creating a speech, writing a rap, or making up a song. \r\n\r\n>Make sure to include:\r\n> - A short description of how AI works\r\n> - Your opinion on AI \r\n> - The pros and cons of using AI tools in school",
+        "title": "Share Your Voice"
+      },
+      "k5_ai_final_choice_level_sprite_lab_prod": {
+        "display_name": "Create a Sprite Lab project",
+        "bubble_choice_description": "🌶️🌶️ Share your thoughts on AI by coding a Sprite Lab project.\r\n",
+        "long_instructions": "##Create a Sprite Lab Project\r\n\r\nShow what you know about AI by coding a project in Sprite Lab! ",
+        "behavior_names": {
+          "wandering": "wandering",
+          "moving east": "moving east",
+          "spinning left": "spinning left",
+          "spinning right": "spinning right",
+          "shrinking": "shrinking",
+          "growing": "growing",
+          "moving south": "moving south",
+          "swimming left and right": "swimming left and right",
+          "moving north": "moving north",
+          "jittering": "jittering",
+          "moving west": "moving west",
+          "patrolling": "patrolling"
+        },
+        "behavior_descriptions": {
+          "move a sprite, changing its direction randomly": "move a sprite, changing its direction randomly",
+          "move a sprite to the right across the screen": "move a sprite to the right across the screen",
+          "rotate a sprite to its left": "rotate a sprite to its left",
+          "rotate a sprite to its right": "rotate a sprite to its right",
+          "change the size of a sprite": "change the size of a sprite",
+          "move a sprite downwards across the screen": "move a sprite downwards across the screen",
+          "move a sprite horizontally, reversing direction if it touches the edges of the screen": "move a sprite horizontally, reversing direction if it touches the edges of the screen",
+          "move a sprite upwards across the screen": "move a sprite upwards across the screen",
+          "randomly change the size of a sprite": "randomly change the size of a sprite",
+          "move a sprite to the left across the screen": "move a sprite to the left across the screen",
+          "move a sprite across the screen, reversing direction if it touches the edges": "move a sprite across the screen, reversing direction if it touches the edges"
+        }
+      },
+      "k5_ai_final_choice_level_poetry_lab_prod": {
+        "display_name": "Code a Poem",
+        "bubble_choice_description": "🌶️🌶️🌶️ Share your thoughts on AI by coding a poem.\r\n\r\n",
+        "long_instructions": "**The freedom of a blank page!**\r\n\r\n1. Choose \"Enter my own\" from the Select Poem dropdown\r\n2. Write your AI poem \r\n3. Add event blocks to your code and bring your poem to life\r\n",
+        "callouts": {
+          "poetry_new_block": "New block!",
+          "poetry_selector": "Select any poem, or enter your own!"
+        }
+      }
+    }
+  },
+  "https://studio.code.org/s/k5howaimakesdecisions/lessons/3/levels/1": {
+    "dsls": {
+      "content1": "description here",
+      "markdown": "# Next Steps\n\n#### Thank you for completing **How AI Makes Decisions**. Access the student curriculum <a href=\"https://studio.code.org/s/k5-ai-data-2024\" target=\"_blank\">here</a>. Now that you've learned some basic computer science skills, check out some of our curriculum and professional learning offerings to continue your journey!\n\n## Teach CS in your class\n\n#### Explore some of these curriculum options to get started teaching CS in your class right away.\n\n<a href = \"https://code.org/educate/csc\" target=\"blank\" rel=\"noopener noreferrer\"><img src=\"https://images.code.org/3f623ba6e5151732099b3441225f5a66-image-1706037967333.jpg\" alt=\"thumbnail for the CS Connections curriculum \" width=\"240px\" style=\"border-radius:5px; float:left; margin: 20px 40px 40px 40px;\"></a>\n\n<a href = \"https://code.org/educate/csf\" target=\"blank\" rel=\"noopener noreferrer\"><img src=\"https://images.code.org/1d4bfa99f2282f9972713f289f03ec08-image-1706037638798.jpg\" alt=\"thumbnail for the CS Fundamentals curriculum \" width=\"240px\" style=\"border-radius:5px; float:left; margin: 20px 40px 40px 20px;\"></a>\n\n<a href = \"https://code.org/oceans\" target=\"blank\" rel=\"noopener noreferrer\"><img src=\"https://images.code.org/bc294ba333174bf92e8f9bb60380a5b3-image-1706038353939.png\" alt=\"thumbnail for the CS Connections self-paced professional learniing module \" width=\"240px\" style=\"border-radius:5px; float:left; margin: 20px 50px 40px 20px;\"></a>\n\n## Continue learning \n#### Learn more about teaching CS with these self-paced professional learning modules. \n\n<a href = \"https://studio.code.org/s/self-paced-pl-csc-2023\" target=\"blank\" rel=\"noopener noreferrer\"><img src=\"https://images.code.org/b4ca41cd43376f374fc5408d76241e59-image-1706300331462.png\" alt=\"thumbnail for the CS Connections self-paced professional learniing module \" width=\"240px\" style=\"border-radius:5px; float:left; margin: 20px 40px 40px 40px;\"></a>\n\n<a href = \"https://studio.code.org/s/k5-onlinepd-2023\" target=\"blank\" rel=\"noopener noreferrer\"><img src=\"https://images.code.org/c35579aa157b3605228885e325ddb03d-image-1706299786558.png\" alt=\"thumbnail for the CS Fundamentals self-paced professional learniing module \" width=\"240px\" style=\"border-radius:5px; float:left; margin: 20px 40px 40px 20px;\"></a>\n\n<a href = \"https://images.code.org/eab8b38416b81b495275cd83372e9c9d-image-1706220671094.jpg\" target=\"blank\" rel=\"noopener noreferrer\"><img src=\"https://images.code.org/1bcbd2c06e0956971485522eff921d49-image-1706299155070.png\" alt=\"thumbnail for the CS Basicss self-paced professional learniing module \" width=\"240px\" style=\"border-radius:5px; float:left; margin: 20px 50px 50px 20px;\"></a>\n\n<br>\n\n<p>\n\n## Help us make this module better!\n\n#### Code.org values and is responsive to feedback. Please fill out this <a href=\"https://studio.code.org/form/selfpaced_pd_how_ai_makes_decisions_post_survey\" target=\"blank\" rel=\"noopener noreferrer\">short survey</a> to provide your feedback on this module.\n\n<a class=\"btn btn-large btn-primary\" href=\"https://studio.code.org/form/selfpaced_pd_how_ai_makes_decisions_post_survey\" target=\"blank\" rel=\"noopener noreferrer\">Take the survey</a>\n\n\n## Stay connected \n\n* #### Continue participating in the <a href=\"https://forum.code.org/\" target=\"blank\" rel=\"noopener noreferrer\">Code.org teacher forum</a>. \n\n* #### Connect with <a href=\"http://twitter.com/teachcode\" target=\"blank\" rel=\"noopener noreferrer\">@teachcode</a> on Twitter.\n\n* #### Join the <a href=\"https://www.csteachers.org/\" target=\"blank\" rel=\"noopener noreferrer\">Computer Science Teachers Association (CSTA)</a>. \n\n<br>\n</p>\n\n\n"
+    }
+  }
+}

@@ -1,0 +1,19 @@
+name 'networks-postassessment-question3_v2-2025'
+title 'Networks and the Internet Post-Assessment: Question 3'
+
+right 'Transmission Control Protocol (TCP)'
+wrong 'User Datagram Protocol (UDP)'
+wrong 'HyperText Transfer Protocol (HTTP)'
+wrong 'Domain Name System (DNS)'
+
+allow_multiple_attempts true
+
+markdown <<MARKDOWN
+You are streaming a live sports game on your phone. Which of the following ensures that video data arrives in the correct order and without missing parts?
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+Lesson 2: Sending Bits
+
+Lesson 5: Packets
+MARKDOWN

@@ -1,10 +1,10 @@
+import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
+import {Typography} from '@mui/material';
 import classNames from 'classnames';
 import React from 'react';
 
-import FontAwesomeV6Icon from '@cdo/apps/componentLibrary/fontAwesomeV6Icon/FontAwesomeV6Icon';
-
-import darkModeStyles from '@cdo/apps/lab2/styles/dark-mode.module.scss';
 import moduleStyles from '@codebridge/FileBrowser/styles/filebrowser.module.scss';
+import dropdownStyles from '@codebridge/styles/dropdown.module.scss';
 
 /*
   This component provides a default layout & styling for an item in the PopUpButton.
@@ -18,23 +18,36 @@ type PopUpButtonOptionProps = {
   iconName: string;
   labelText: string;
   clickHandler?: () => void;
+  id?: string;
 };
 
 export const PopUpButtonOption = ({
   iconName,
   labelText,
   clickHandler,
+  id,
 }: PopUpButtonOptionProps) => {
   return (
     <div
       onClick={clickHandler}
+      onKeyDown={event => {
+        if (event.key === 'Enter' || event.key === ' ') {
+          event.preventDefault();
+          if (clickHandler) {
+            clickHandler();
+          }
+        }
+      }}
       className={classNames(
-        darkModeStyles.dropdownItem,
+        dropdownStyles.dropdownItem,
         moduleStyles.dropdownItem
       )}
+      role="button"
+      tabIndex={0}
+      id={id}
     >
       <FontAwesomeV6Icon iconName={iconName} iconStyle="solid" />
-      <div>{labelText}</div>
+      <Typography variant="body4">{labelText}</Typography>
     </div>
   );
 };

@@ -1,0 +1,48 @@
+name 'pl_sandbox_aif_2_U1_ai-modes-unit-overview'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# AI Course Progression
+
+#### In Unit1, students work with AI with a **designer** lense.
+
+#### Students define goals and plan the layout or behavior of their website, while the AI suggests options and offers feedback. Students remain in control of what to build and why.
+
+#### **Students do not need to write HTML or CSS themselves**. Instead, they focus on creativity and design. The AI supports this process by suggesting ideas, generating code, and helping debug. 
+
+<div style="text-align: center; width: 80%; margin: 0 auto;">
+  <p style="
+    font-size: 18px; 
+    background-color: #F5F7F8; 
+    padding: 10px; 
+    border-left: 5px solid #8148B2; 
+    border-right: 5px solid #8148B2;
+    display: inline-block;
+  ">
+    The goal is not just the final product, but how students think, make decisions, and interact with the tool.
+  </p>
+</div>
+
+
+## Unit by unit AI engagement strategies
+
+#### Unit 2 introduces JavaScript, bringing interactivity to web apps. During this unit, students shift into engineering mode. Students begin implementing and adapting code in HTML, CSS, and JavaScript, while the AI provides scaffolds, pseudocode, and debugging support. Students are responsible for ensuring their code works correctly and aligns with their design goals.
+
+
+#### In Unit 3, the QA (quality assurance) role is introduced. Students test and reflect on how their systems behave. The AI may suggest test cases or flag potential issues, but students interpret the results and decide what to revise.
+
+
+<img src="https://images.code.org/c983eb6de1b54f311563cdbeea6cfa25-image-1776098318089.png" alt="unit progression of AI tutor roles. going from designer, adding engineer, and finally Quality assurance as the units progress." width="750px" style="display: block; margin-left: auto; margin-right: auto;border-radius:10px; ">
+
+<br><br>
+
+<div style="background-color: #B7E0E5; border-radius: 40px; color: #000000; width: 95%; padding: 1px 20px 1px 20px;">
+
+<p style="line-height: 1.5; margin-left: 10px; margin-right: 10px; margin-top: 10px; margin-bottom: 10px; font-size: 18px; "><b> 💡Teacher Tip:</b> Understanding the different roles students should engage in with the AI tutor helps build important context for students. Each role shapes how the AI supports their work, so students can learn to engage with it in different ways, whether they are designing, building, or testing.
+</p>
+</div>
+
+
+
+MARKDOWN

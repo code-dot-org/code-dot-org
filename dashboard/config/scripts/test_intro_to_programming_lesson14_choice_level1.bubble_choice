@@ -1,0 +1,16 @@
+name 'test-intro-to-programming-lesson14-choice-level1'
+display_name 'Pixels of Me Project'
+description 'Choose one of the levels below based on the size of the grid you plan to use.'
+
+sublevels
+level 'test-intro-to-programming-lesson14-level1a'
+level 'test-intro-to-programming-lesson14-level1b'
+level 'test-intro-to-programming-lesson14-level1c'
+level 'test-intro-to-programming-lesson14-level1d'
+
+
+
+
+
+
+

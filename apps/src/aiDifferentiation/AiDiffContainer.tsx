@@ -1,236 +1,167 @@
-import classnames from 'classnames';
-import React, {useEffect, useRef, useState} from 'react';
+import React, {useEffect, useState} from 'react';
 import Draggable, {DraggableEventHandler} from 'react-draggable';
+import FocusLock from 'react-focus-lock';
 
-import ChatMessage from '@cdo/apps/aiComponentLibrary/chatMessage/ChatMessage';
-import {Role} from '@cdo/apps/aiComponentLibrary/chatMessage/types';
-import Button from '@cdo/apps/componentLibrary/button';
-import {AiInteractionStatus as Status} from '@cdo/generated-scripts/sharedConstants';
-import aiBotOutlineIcon from '@cdo/static/ai-bot-outline.png';
+import {useTeachingProfileData} from '@cdo/apps/aiDifferentiation/hooks/useTeachingProfileData';
 
-import {EVENTS, PLATFORMS} from '../metrics/AnalyticsConstants';
-import analyticsReporter from '../metrics/AnalyticsReporter';
-import HttpClient from '../util/HttpClient';
+import {useAppSelector} from '../util/reduxHooks';
+import {tryGetSessionStorage, trySetSessionStorage} from '../utils';
 
-import AiDiffChatFooter from './AiDiffChatFooter';
-import AiDiffSuggestedPrompts from './AiDiffSuggestedPrompts';
-import {ChatItem, ChatPrompt} from './types';
+import AiDiffArtifactSavePage from './AiDiffArtifactSavePage';
+import AiDiffHeader from './AiDiffHeader';
+import AiDiffWorkSpace from './AiDiffWorkspace';
+import {Context} from './types';
+import AiDiffWelcome from './welcome/AiDiffWelcome';
 
 import style from './ai-differentiation.module.scss';
 
+const AI_DIFF_POSITION_X = 'aiDiffPositionX';
+const AI_DIFF_POSITION_Y = 'aiDiffPositionY';
 interface AiDiffContainerProps {
   closeTutor?: () => void;
-  open: boolean;
-  lessonId: number;
-  lessonName: string;
-  unitDisplayName: string;
+  context: Context;
+  curriculumCourses: string[];
+  scriptName?: string;
+  unreadNotificationCount: number;
 }
+
+const MIN_VISIBLE = 40;
+const boxWidth = parseInt(style.containerWidth);
+const originX = parseInt(style.fabOriginX);
+// These isNaN checks are for testing as the SCSS variables don't come
+// through properly in the test environment.
+const minX = isNaN(originX) ? 0 : MIN_VISIBLE - originX - boxWidth;
+const maxX = isNaN(originX)
+  ? 1000
+  : document.documentElement.clientWidth - originX - MIN_VISIBLE;
+
+const boxHeight = parseInt(style.containerHeight);
+const originY = parseInt(style.fabOriginY);
+// These isNaN checks are for testing as the SCSS variables don't come
+// through properly in the test environment.
+const minY = isNaN(originY)
+  ? 0
+  : originY - document.documentElement.clientHeight + boxHeight;
+const maxY = isNaN(originY) ? 1000 : originY + boxHeight - MIN_VISIBLE;
+
+const AI_DIFF_CLOSE_BUTTON_CLASSNAME = 'ai_diff_close_button';
 
 const AiDiffContainer: React.FC<AiDiffContainerProps> = ({
   closeTutor,
-  open,
-  lessonId,
-  lessonName,
-  unitDisplayName,
+  context,
+  curriculumCourses,
+  scriptName,
+  unreadNotificationCount,
 }) => {
-  // TODO: Update to support i18n
-  const aiDiffHeaderText = 'AI Teaching Assistant';
+  // Welcome experience shut off in preparation for spring 2026 redesign.
+  const [showWelcomeExperience, setShowWelcomeExperience] = useState(false);
+  const {personalizationData} = useTeachingProfileData();
 
-  const aiDiffChatMessageEndpoint = '/ai_diff/chat_completion';
+  const [positionX, setPositionX] = useState(
+    parseInt(tryGetSessionStorage(AI_DIFF_POSITION_X, 0)) || 0
+  );
+  const [positionY, setPositionY] = useState(
+    parseInt(tryGetSessionStorage(AI_DIFF_POSITION_Y, 0)) || 0
+  );
 
-  const reportingData = {
-    lessonId: lessonId,
-    lessonName: lessonName,
-    unitName: unitDisplayName,
-  };
+  const hasCompletedAiDifferentiationWelcome = useAppSelector(
+    state => state.currentUser.hasCompletedAiDifferentiationWelcome
+  );
 
-  const [positionX, setPositionX] = useState(0);
-  const [positionY, setPositionY] = useState(0);
+  const pendingArtifactMessage = useAppSelector(
+    state => state.aiDiffChat.pendingArtifactMessage
+  );
 
-  const [sessionId, setSessionId] = useState(null);
+  const chatIsOpen = useAppSelector(state => state.aiDiffChat.chatIsOpen);
 
-  const [isWaitingForResponse, setIsWaitingForResponse] = useState(false);
+  useEffect(() => {
+    const ensureDraggableIsVisible = () => {
+      if (positionX < minX) {
+        setPositionX(minX);
+      } else if (positionX > maxX) {
+        setPositionX(maxX);
+      }
+    };
+    ensureDraggableIsVisible();
+    window.addEventListener('resize', ensureDraggableIsVisible);
+    trySetSessionStorage(AI_DIFF_POSITION_X, String(positionX));
+    return () => {
+      window.removeEventListener('resize', ensureDraggableIsVisible);
+    };
+  }, [positionX]);
 
-  const [messageHistory, setMessageHistory] = useState<ChatItem[]>([
-    {
-      role: Role.ASSISTANT,
-      chatMessageText: `Hi! I'm your AI Teaching Assistant. What can I help you with? Here are some things you can ask me.`,
-      status: Status.OK,
-    },
-    [
-      {
-        label: 'Explain a concept',
-        prompt:
-          'I need an explanation of a concept. You can ask me a follow-up question to find out what concept needs to be explained.',
-      },
-      {
-        label: 'Give an example to use with my class',
-        prompt:
-          'Can I have an example to use with my class? You can ask me a follow-up question to get more details for the kind of example needed.',
-      },
-      {
-        label: 'Write an extension activity for students who finish early',
-        prompt:
-          'Write an extension activity for this lesson for students who finish early',
-      },
-      {
-        label:
-          'Write an extension activity for students who need extra practice',
-        prompt:
-          'Write an extension activity for this lesson for students who need extra practice',
-      },
-    ],
-  ]);
+  useEffect(() => {
+    const ensureDraggableIsVisible = () => {
+      if (positionY < minY) {
+        setPositionY(minY);
+      } else if (positionY > maxY) {
+        setPositionY(maxY);
+      }
+    };
+    ensureDraggableIsVisible();
+    window.addEventListener('resize', ensureDraggableIsVisible);
+    trySetSessionStorage(AI_DIFF_POSITION_Y, String(positionY));
+    return () => {
+      window.removeEventListener('resize', ensureDraggableIsVisible);
+    };
+  }, [positionY]);
 
   const onStopHandler: DraggableEventHandler = (e, data) => {
     setPositionX(data.x);
     setPositionY(data.y);
   };
 
-  const onMessageSend = (message: string) => {
-    const newUserMessage = {
-      role: Role.USER,
-      chatMessageText: message,
-      status: Status.OK,
-    };
-
-    setMessageHistory(prevMessages => [...prevMessages, newUserMessage]);
-    getAIResponse(message, false);
-  };
-
-  const onPromptSelect = (prompt: ChatPrompt) => {
-    getAIResponse(prompt.prompt, true);
-  };
-
-  const sendChatEvent = (
-    role: string,
-    prompt: string,
-    preset: boolean,
-    session: string
-  ) => {
-    const responseEventData = {
-      ...reportingData,
-      role: role,
-      isPreset: preset,
-      text: prompt,
-      sessionId: session,
-    };
-    analyticsReporter.sendEvent(
-      EVENTS.AI_DIFF_CHAT_EVENT,
-      responseEventData,
-      PLATFORMS.STATSIG
-    );
-  };
-
-  const getAIResponse = (prompt: string, isPreset: boolean) => {
-    setIsWaitingForResponse(true);
-
-    if (sessionId !== null) {
-      sendChatEvent(Role.USER, prompt, isPreset, sessionId);
+  let content;
+  if (pendingArtifactMessage) {
+    content = <AiDiffArtifactSavePage message={pendingArtifactMessage} />;
+  } else if (curriculumCourses) {
+    if (!hasCompletedAiDifferentiationWelcome && showWelcomeExperience) {
+      content = (
+        <AiDiffWelcome
+          setShowWelcomeExperience={setShowWelcomeExperience}
+          context={context}
+          scriptName={scriptName}
+          curriculumCourses={curriculumCourses}
+        />
+      );
+    } else {
+      content = (
+        <AiDiffWorkSpace
+          context={context}
+          personalizationData={personalizationData}
+          scriptName={scriptName}
+          curriculumCourses={curriculumCourses}
+          unreadNotificationCount={unreadNotificationCount}
+        />
+      );
     }
-
-    const body = JSON.stringify({
-      inputText: prompt,
-      lessonId: lessonId,
-      unitDisplayName: unitDisplayName,
-      sessionId: sessionId,
-    });
-    HttpClient.post(`${aiDiffChatMessageEndpoint}`, body, true, {
-      'Content-Type': 'application/json',
-    })
-      .then(response => response.json())
-      .then(json => {
-        const newAiMessage = {
-          role: Role.ASSISTANT,
-          chatMessageText: json.chat_message_text,
-          status: json.status,
-        };
-
-        // logging here because on the first user message the sessionId is null
-        // we only get a sessionID initialized in the response
-        if (sessionId === null) {
-          sendChatEvent(Role.USER, prompt, isPreset, json.session_id);
-        }
-
-        sendChatEvent(
-          Role.ASSISTANT,
-          json.chat_message_text,
-          isPreset,
-          json.session_id
-        );
-        setSessionId(json.session_id);
-        setMessageHistory(prevMessages => [...prevMessages, newAiMessage]);
-      })
-      .catch(error => console.log(error))
-      .finally(() => {
-        setIsWaitingForResponse(false);
-      });
-  };
-
-  // Scroll to bottom of content when a new message comes in
-  const chatWindowRef = useRef<HTMLDivElement>(null);
-  useEffect(() => {
-    chatWindowRef.current?.lastElementChild?.scrollIntoView();
-  }, [messageHistory]);
+  }
 
   return (
     <Draggable
       handle=".ai_diff_handle"
-      defaultPosition={{x: positionX, y: positionY}}
+      position={{x: positionX, y: positionY}}
       onStop={onStopHandler}
+      cancel={`.${AI_DIFF_CLOSE_BUTTON_CLASSNAME}`}
     >
       <div
-        className={classnames(style.aiDiffContainer, {
-          [style.hiddenAiDiffPanel]: !open,
-        })}
+        // eslint-disable-next-line react/forbid-dom-props
+        data-testid="draggable-test-id"
+        id="draggable-id"
+        className={
+          !hasCompletedAiDifferentiationWelcome && showWelcomeExperience //don't use wide container for welcome
+            ? style.aiDiffContainer
+            : style.aiDiffContainerWide
+        }
+        style={chatIsOpen ? undefined : {display: 'none'}}
       >
-        <div className={classnames(style.aiDiffHeader, 'ai_diff_handle')}>
-          <div className={style.aiDiffHeaderLeftSide}>
-            <img
-              src={aiBotOutlineIcon}
-              className={style.aiBotOutlineIcon}
-              alt={aiDiffHeaderText}
-            />
-            <span>{aiDiffHeaderText}</span>
-          </div>
-          <div className={style.aiDiffHeaderRightSide}>
-            <Button
-              color="white"
-              icon={{iconName: 'times', iconStyle: 'solid'}}
-              type="tertiary"
-              isIconOnly={true}
-              onClick={closeTutor}
-              size="s"
-            />
-          </div>
-        </div>
-
-        <div className={style.fabBackground}>
-          <div className={style.chatContent} ref={chatWindowRef}>
-            {messageHistory.map((item: ChatItem, id: number) =>
-              Array.isArray(item) ? (
-                <AiDiffSuggestedPrompts
-                  suggestedPrompts={item}
-                  isLatest={id === messageHistory.length - 1}
-                  onSubmit={onPromptSelect}
-                  key={id}
-                />
-              ) : (
-                <ChatMessage {...item} key={id} />
-              )
-            )}
-            <img
-              src="/blockly/media/aichat/typing-animation.gif"
-              alt={'Waiting for response'}
-              className={
-                isWaitingForResponse
-                  ? style.waitingForResponse
-                  : style.hideWaitingForResponse
-              }
-            />
-          </div>
-          <AiDiffChatFooter onSubmit={onMessageSend} />
-        </div>
+        <FocusLock disabled={!chatIsOpen}>
+          <AiDiffHeader
+            closeTutor={closeTutor}
+            closeButtonClassName={AI_DIFF_CLOSE_BUTTON_CLASSNAME}
+          />
+          <div className={style.fabBackground}>{content}</div>
+        </FocusLock>
       </div>
     </Draggable>
   );

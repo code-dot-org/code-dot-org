@@ -3,6 +3,7 @@ import React from 'react';
 import {act} from 'react-dom/test-utils';
 
 import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
+import styleConstants from '@cdo/apps/styleConstants';
 import {
   UnconnectedTopInstructions as TopInstructions,
   TabType,
@@ -19,7 +20,7 @@ const DEFAULT_PROPS = {
   longInstructions: 'Some instructions for the level',
   isCollapsed: false,
   noVisualization: false,
-  toggleInstructionsCollapsed: () => {},
+  setInstructionsRenderedHeightAndCollapsed: () => {},
   setInstructionsHeight: () => {},
   setInstructionsRenderedHeight: () => {},
   setInstructionsMaxHeightNeeded: () => {},
@@ -41,6 +42,8 @@ const DEFAULT_PROPS = {
 };
 
 describe('TopInstructions', () => {
+  const HEADER_HEIGHT = styleConstants['workspace-headers-height'];
+
   it('shows contained level answers in teacher only tab if instructor in training level', () => {
     const wrapper = shallow(
       <TopInstructions
@@ -103,6 +106,26 @@ describe('TopInstructions', () => {
       <TopInstructions {...DEFAULT_PROPS} standalone={true} />
     );
     expect(wrapper.hasClass('editor-column')).toBe(false);
+  });
+
+  it('uses atomic collapse+height action when collapse button clicked', () => {
+    const setInstructionsRenderedHeightAndCollapsed = jest.fn();
+    const wrapper = shallow(
+      <TopInstructions
+        {...DEFAULT_PROPS}
+        noInstructionsWhenCollapsed={true}
+        setInstructionsRenderedHeightAndCollapsed={
+          setInstructionsRenderedHeightAndCollapsed
+        }
+      />
+    );
+
+    wrapper.instance().handleClickCollapser();
+
+    expect(setInstructionsRenderedHeightAndCollapsed).toHaveBeenCalledWith(
+      HEADER_HEIGHT,
+      true
+    );
   });
 
   it('is an empty div if passed the "hidden" property', () => {
@@ -245,7 +268,7 @@ describe('TopInstructions', () => {
         ).toBe(true);
       });
 
-      it('passes displayFeedback = false to TopInstructionsHeader on a level with a TA Rubric', () => {
+      it('passes displayFeedback = true to TopInstructionsHeader on a level with a TA Rubric', () => {
         const wrapper = shallow(
           <TopInstructions {...DEFAULT_PROPS} taRubric={{learningGoals: []}} />
         );
@@ -268,7 +291,7 @@ describe('TopInstructions', () => {
 
         expect(
           wrapper.find(TopInstructionsHeader).props().displayFeedback
-        ).toBe(false);
+        ).toBe(true);
       });
 
       it('passes displayFeedback = true to TopInstructionsHeader teacher is viewing student work and cannot leave feedback', () => {
@@ -336,7 +359,7 @@ describe('TopInstructions', () => {
         ).toBe(true);
       });
 
-      it('passes displayFeedback = false to TopInstructionsHeader on a level where there is a TA Rubric', () => {
+      it('passes displayFeedback = true to TopInstructionsHeader on a level where there is a TA Rubric', () => {
         const wrapper = shallow(
           <TopInstructions
             {...DEFAULT_PROPS}
@@ -372,7 +395,7 @@ describe('TopInstructions', () => {
 
         expect(
           wrapper.find(TopInstructionsHeader).props().displayFeedback
-        ).toBe(false);
+        ).toBe(true);
       });
 
       it('passes displayFeedback = false to TopInstructionsHeader on a level where the instructor has not given feedback and there is no miniRubric', () => {

@@ -1,14 +1,14 @@
+import Toggle from '@code-dot-org/component-library/toggle';
 import PropTypes from 'prop-types';
 import React, {useState} from 'react';
 
-import Toggle from '@cdo/apps/componentLibrary/toggle';
-import {PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
+import GlobalEditionWrapper from '@cdo/apps/templates/GlobalEditionWrapper';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 import {LmsLinks} from '@cdo/generated-scripts/sharedConstants';
 import i18n from '@cdo/locale';
 
-export default function LtiRosterSyncSettings(props) {
+export function LtiRosterSyncSettings(props) {
   const enabledLabel = i18n.ltiSectionSyncEnabled();
   const disabledLabel = i18n.ltiSectionSyncDisabled();
   const settingsDescription = i18n.ltiSectionSyncSettingsDescription({
@@ -25,7 +25,7 @@ export default function LtiRosterSyncSettings(props) {
     const eventName = enabled
       ? 'lti_opt_out_toggle_on'
       : 'lti_opt_out_toggle_off';
-    analyticsReporter.sendEvent(eventName, eventPayload, PLATFORMS.STATSIG);
+    analyticsReporter.sendEvent(eventName, eventPayload);
 
     const form = document.getElementById(props.formId);
     form.elements['user_lti_roster_sync_enabled'].value = enabled;
@@ -76,3 +76,13 @@ LtiRosterSyncSettings.propTypes = {
   formId: PropTypes.string.isRequired,
   lmsName: PropTypes.string,
 };
+
+const RegionalLtiRosterSyncSettings = props => (
+  <GlobalEditionWrapper
+    component={LtiRosterSyncSettings}
+    componentId="LtiRosterSyncSettings"
+    props={props}
+  />
+);
+
+export default RegionalLtiRosterSyncSettings;

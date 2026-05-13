@@ -7,19 +7,17 @@ import unitSelection from '@cdo/apps/redux/unitSelectionRedux';
 import currentUser, {
   setSortByFamilyName,
 } from '@cdo/apps/templates/currentUserRedux';
+import ProgressTableV2 from '@cdo/apps/templates/sectionProgressV2/ProgressTableV2.jsx';
 import sectionProgress, {
   addExpandedLesson,
-} from '@cdo/apps/templates/sectionProgress/sectionProgressRedux';
-import {
-  createStore,
-  getScriptData,
-} from '@cdo/apps/templates/sectionProgress/sectionProgressTestHelpers';
-import ProgressTableV2 from '@cdo/apps/templates/sectionProgressV2/ProgressTableV2.jsx';
+} from '@cdo/apps/templates/sectionProgressV2/sectionProgressRedux';
 import teacherSections, {
   setStudentsForCurrentSection,
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 
 import {expect} from '../../../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports
+
+import {createStore, getScriptData} from './sectionProgressTestHelpers';
 
 const STUDENT_1 = {id: 1, name: 'Student 1', familyName: 'FamNameB'};
 const STUDENT_2 = {id: 2, name: 'Student 2', familyName: 'FamNameA'};
@@ -29,6 +27,8 @@ const SECTION_ID = 11;
 const UNIT_DATA = getScriptData(5);
 const DEFAULT_PROPS = {
   isSkeleton: false,
+  courseId: 2,
+  unitPositon: 3,
 };
 
 const LESSON_ID_1 = UNIT_DATA.lessons[0].id;
@@ -79,9 +79,11 @@ describe('ProgressTableV2', () => {
       Node.DOCUMENT_POSITION_FOLLOWING
     );
 
+    // eslint-disable-next-line no-restricted-properties
     const cell1 = screen.getByTestId(
       'lesson-data-cell-' + LESSON_ID_1 + '-' + STUDENT_1.id
     );
+    // eslint-disable-next-line no-restricted-properties
     const cell2 = screen.getByTestId(
       'lesson-data-cell-' + LESSON_ID_1 + '-' + STUDENT_2.id
     );
@@ -99,12 +101,14 @@ describe('ProgressTableV2', () => {
       Node.DOCUMENT_POSITION_PRECEDING
     );
 
+    // eslint-disable-next-line no-restricted-properties
     const cell1 = screen.getByTestId(
       'lesson-data-cell-' + LESSON_ID_1 + '-' + STUDENT_1.id,
       {
         exact: false,
       }
     );
+    // eslint-disable-next-line no-restricted-properties
     const cell2 = screen.getByTestId(
       'lesson-data-cell-' + LESSON_ID_1 + '-' + STUDENT_2.id,
       {

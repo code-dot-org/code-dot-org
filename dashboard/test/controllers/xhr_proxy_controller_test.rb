@@ -11,10 +11,10 @@ class XhrProxyControllerTest < ActionController::TestCase
   BAD_CHANNEL_MSG = "XhrProxyController request with invalid channel_id"
 
   setup do
-    @user = create :user
+    @user = create(:user)
     sign_in @user
     stub_storage_id_for_user_id(@user.id)
-    @channel_id = storage_encrypt_channel_id(storage_id_for_user_id(@user.id), 123)
+    @channel_id = get_project_channel_id(storage_id_for_user_id(@user.id), 123)
   end
 
   test "should fetch proxied media with correct content type" do

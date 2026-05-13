@@ -4,18 +4,20 @@
     "wrapup_video_id": null,
     "login_required": true,
     "properties": {
-      "curriculum_umbrella": "AI",
-      "is_course": true,
+      "content_area": "curriculum_9_12",
+      "curriculum_umbrella": "9-12 Special topics",
       "is_migrated": true,
-      "version_year": "unversioned"
+      "topic_tags": [
+        "ai"
+      ]
     },
     "new_name": null,
-    "family_name": "ai-lab",
-    "serialized_at": "2024-04-23 16:41:20 UTC",
-    "published_state": "beta",
-    "instruction_type": "teacher_led",
-    "instructor_audience": "teacher",
-    "participant_audience": "student",
+    "family_name": null,
+    "serialized_at": "2025-03-28 09:29:35 UTC",
+    "published_state": null,
+    "instruction_type": null,
+    "instructor_audience": null,
+    "participant_audience": null,
     "seeding_key": {
       "script.name": "ai-lab"
     }

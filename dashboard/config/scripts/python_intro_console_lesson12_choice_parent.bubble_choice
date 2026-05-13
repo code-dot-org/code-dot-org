@@ -1,0 +1,12 @@
+name 'python-intro-console-lesson12-choice-parent'
+display_name 'Examples of Games'
+description 'Pick one of the choices below to see a completed game.'
+
+sublevels
+level 'python-intro-console-lesson12-exampleA'
+level 'python-intro-console-lesson12-exampleB'
+level 'python-intro-console-lesson12-exampleC'
+
+
+
+

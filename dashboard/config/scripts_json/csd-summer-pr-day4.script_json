@@ -4,11 +4,13 @@
     "wrapup_video_id": null,
     "login_required": false,
     "properties": {
+      "content_area": "pl_workshop_activities",
+      "curriculum_umbrella": "PD Workshop Activity CSD",
       "is_migrated": true
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2024-08-26 20:13:39 UTC",
+    "serialized_at": "2024-11-19 01:16:32 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -1775,6 +1777,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 collisions car intro_-pr-2024"
+        ],
         "progression": "Sample Game"
       },
       "bonus": false,
@@ -1797,6 +1802,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 collisions build isTouching_-pr-2024"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -1819,6 +1827,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 collisions isTouching intro_-pr-2024"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -1841,6 +1852,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 collisions egg_-pr-2024"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -1863,6 +1877,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 collisions debug isTouching_-pr-2024"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -1885,6 +1902,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD games istouching practice choice_-pr-2024"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -1907,6 +1927,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSD U3 collisions horse_-pr-2024"
+        ],
         "progression": "Assessment"
       },
       "bonus": false,
@@ -1929,6 +1952,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD games istouching challenge choice_-pr-2024"
+        ],
         "progression": "Challenges"
       },
       "bonus": false,
@@ -1951,6 +1977,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD games side scroller demo_-pr-2024"
+        ],
         "progression": "Intro to Side Scrollers"
       },
       "bonus": false,
@@ -1973,6 +2002,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD games sidescroll background_-pr-2024"
+        ],
         "progression": "Draw Your Background"
       },
       "bonus": false,
@@ -1995,6 +2027,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 abstraction tumbleweed_-pr-2024"
+        ],
         "progression": "Create Your Sprites"
       },
       "bonus": false,
@@ -2017,6 +2052,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 abstraction jump_-pr-2024"
+        ],
         "progression": "Player Controls"
       },
       "bonus": false,
@@ -2039,6 +2077,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 abstraction looping_-pr-2024"
+        ],
         "progression": "Looping"
       },
       "bonus": false,
@@ -2061,6 +2102,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 collisions sidescroll2_-pr-2024"
+        ],
         "progression": "Sprite Interactions"
       },
       "bonus": false,
@@ -2083,6 +2127,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 collisions scoreboard_-pr-2024"
+        ],
         "progression": "Scoring & Scoreboard"
       },
       "bonus": false,
@@ -2105,6 +2152,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD games sidescroll review_-pr-2024"
+        ],
         "progression": "Review Your Game"
       },
       "bonus": false,
@@ -2127,6 +2177,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 Complex Movement counter prediction gamelab_-pr-2024"
+        ],
         "progression": "Prediction"
       },
       "bonus": false,
@@ -2149,6 +2202,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 abstraction accelerateX_-pr-2024"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -2171,6 +2227,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 abstraction accelerateY_-pr-2024"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -2193,6 +2252,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 abstraction decelerateX_-pr-2024"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -2215,6 +2277,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD games movement2 practice choice_-pr-2024"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -2237,6 +2302,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSD U3 abstraction decelerateY_-pr-2024"
+        ],
         "progression": "Assessment"
       },
       "bonus": false,
@@ -2259,6 +2327,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD games movement2 challenge choice_-pr-2024"
+        ],
         "progression": "Challenges"
       },
       "bonus": false,
@@ -2281,6 +2352,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 AnimationsMulti Play Defender_-pr-2024"
+        ],
         "progression": "Same Game"
       },
       "bonus": false,
@@ -2303,6 +2377,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 AnimationsMulti STOP project guide_2018_2019_pilot_-pr-2024"
+        ],
         "progression": "Plan Your Project"
       },
       "bonus": false,
@@ -2325,6 +2402,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 AnimationsMulti defender animate cake enemies_-pr-2024"
+        ],
         "progression": "Set Up Sprites"
       },
       "bonus": false,
@@ -2347,6 +2427,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 AnimationsMulti defender enemies move_-pr-2024"
+        ],
         "progression": "Set Up Sprites"
       },
       "bonus": false,
@@ -2369,6 +2452,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 AnimationsMulti defender move player_-pr-2024"
+        ],
         "progression": "Control Your Player"
       },
       "bonus": false,
@@ -2391,6 +2477,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 AnimationsMulti defender move up down_-pr-2024"
+        ],
         "progression": "Control Your Player"
       },
       "bonus": false,
@@ -2413,6 +2502,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 AnimationsMulti defender animate player_-pr-2024"
+        ],
         "progression": "Control Your Player"
       },
       "bonus": false,
@@ -2435,6 +2527,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 AnimationsMulti defender enemies touch cake_-pr-2024"
+        ],
         "progression": "Sprite Interactions"
       },
       "bonus": false,
@@ -2457,6 +2552,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 AnimationsMulti defender enemies touch cake sprite2_-pr-2024"
+        ],
         "progression": "Sprite Interactions"
       },
       "bonus": false,
@@ -2479,6 +2577,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 AnimationsMulti defender create set enemies_-pr-2024"
+        ],
         "progression": "Sprite Interactions"
       },
       "bonus": false,
@@ -2501,6 +2602,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 AnimationsMulti defender displace enemies_-pr-2024"
+        ],
         "progression": "Sprite Interactions"
       },
       "bonus": false,
@@ -2523,6 +2627,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 AnimationsMulti defender touch water_-pr-2024"
+        ],
         "progression": "Sprite Interactions"
       },
       "bonus": false,
@@ -2545,6 +2652,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD games cake challenge choice_-pr-2024"
+        ],
         "progression": "Challenges"
       },
       "bonus": false,
@@ -2567,6 +2677,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 platform sample1_-pr-2024"
+        ],
         "progression": "Sample Platform Jumper Game"
       },
       "bonus": false,
@@ -2589,6 +2702,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 platform intro_2018_2019_pilot_-pr-2024"
+        ],
         "progression": "Build a Platform Jumper"
       },
       "bonus": false,
@@ -2611,6 +2727,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 platform background1_-pr-2024"
+        ],
         "progression": "Platform Jumper - Background and Variables"
       },
       "bonus": false,
@@ -2633,6 +2752,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 platform variable1_-pr-2024"
+        ],
         "progression": "Platform Jumper - Background and Variables"
       },
       "bonus": false,
@@ -2655,6 +2777,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 platform background2_-pr-2024"
+        ],
         "progression": "Platform Jumper - Background and Variables"
       },
       "bonus": false,
@@ -2677,6 +2802,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 platform scoreboard_-pr-2024"
+        ],
         "progression": "Platform Jumper - Background and Variables"
       },
       "bonus": false,
@@ -2699,6 +2827,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 platform platform1_-pr-2024"
+        ],
         "progression": "Platform Jumper - Platforms"
       },
       "bonus": false,
@@ -2721,6 +2852,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 platform platform2_-pr-2024"
+        ],
         "progression": "Platform Jumper - Platforms"
       },
       "bonus": false,
@@ -2743,6 +2877,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 platform platform3_-pr-2024"
+        ],
         "progression": "Platform Jumper - Platforms"
       },
       "bonus": false,
@@ -2765,6 +2902,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 platform items1_-pr-2024"
+        ],
         "progression": "Platform Jumper - Items"
       },
       "bonus": false,
@@ -2787,6 +2927,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 platform items2_-pr-2024"
+        ],
         "progression": "Platform Jumper - Items"
       },
       "bonus": false,
@@ -2809,6 +2952,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 platform items3_-pr-2024"
+        ],
         "progression": "Platform Jumper - Items"
       },
       "bonus": false,
@@ -2831,6 +2977,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 platform player1_-pr-2024"
+        ],
         "progression": "Platform Jumper - Player"
       },
       "bonus": false,
@@ -2853,6 +3002,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 platform player2_-pr-2024"
+        ],
         "progression": "Platform Jumper - Player"
       },
       "bonus": false,
@@ -2875,6 +3027,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 platform player3_-pr-2024"
+        ],
         "progression": "Platform Jumper - Player"
       },
       "bonus": false,
@@ -2897,6 +3052,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 platform player4_-pr-2024"
+        ],
         "progression": "Platform Jumper - Player"
       },
       "bonus": false,
@@ -2919,6 +3077,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSD U3 platform review_-pr-2024"
+        ],
         "progression": "Platform Jumper Review"
       },
       "bonus": false,
@@ -2941,6 +3102,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD games platform challenge choice_-pr-2024"
+        ],
         "progression": "Challenges"
       },
       "bonus": false,
@@ -2963,6 +3127,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 - Design a Game 1 - ExampleChoice_-pr-2024"
+        ],
         "progression": "Sample Games"
       },
       "bonus": false,
@@ -2985,6 +3152,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 game variables_-pr-2024"
+        ],
         "progression": "Project - Background and Variables"
       },
       "bonus": false,
@@ -3007,6 +3177,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 game backgrounds_-pr-2024"
+        ],
         "progression": "Project - Background and Variables"
       },
       "bonus": false,
@@ -3029,6 +3202,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 game display boards_-pr-2024"
+        ],
         "progression": "Project - Background and Variables"
       },
       "bonus": false,
@@ -3051,6 +3227,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 game choose background_-pr-2024"
+        ],
         "progression": "Project - Background and Variables"
       },
       "bonus": false,
@@ -3073,6 +3252,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 game animations_-pr-2024"
+        ],
         "progression": "Project - Sprites and Interactions"
       },
       "bonus": false,
@@ -3095,6 +3277,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 game create sprites_-pr-2024"
+        ],
         "progression": "Project - Sprites and Interactions"
       },
       "bonus": false,
@@ -3117,6 +3302,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 game sprite movement_-pr-2024"
+        ],
         "progression": "Project - Sprites and Interactions"
       },
       "bonus": false,
@@ -3139,6 +3327,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 game user controls_-pr-2024"
+        ],
         "progression": "Project - Sprites and Interactions"
       },
       "bonus": false,
@@ -3161,6 +3352,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 game interactions_-pr-2024"
+        ],
         "progression": "Project - Sprites and Interactions"
       },
       "bonus": false,
@@ -3183,6 +3377,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD games project review_-pr-2024"
+        ],
         "progression": "Review Your Game"
       },
       "bonus": false,
@@ -3205,6 +3402,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "Student End of Unit Survey_csd3_-pr-2024"
+        ],
         "progression": "End-Of-Unit Survey"
       },
       "bonus": false,

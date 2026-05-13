@@ -2,6 +2,7 @@ import $ from 'jquery';
 import jsonic from 'jsonic';
 
 import {installCustomBlocks} from '@cdo/apps/block_utils';
+import {getUserTheme, shrinkBlockSpaceContainer} from '@cdo/apps/blockly/utils';
 import assetUrl from '@cdo/apps/code-studio/assetUrl';
 import {customInputTypes as danceInputTypes} from '@cdo/apps/dance/blockly/blocks';
 import animationList, {
@@ -13,7 +14,6 @@ import {
   exampleSprites,
 } from '@cdo/apps/p5lab/spritelab/constants';
 import {getStore, registerReducers} from '@cdo/apps/redux';
-import {shrinkBlockSpaceContainer} from '@cdo/apps/templates/instructions/utils';
 import {parseElement} from '@cdo/apps/xml';
 
 function renderBlock(element) {
@@ -21,8 +21,9 @@ function renderBlock(element) {
   const config = element.getAttribute('config');
   const pool = element.getAttribute('pool');
   const parsedConfig = jsonic(config);
-  const customInputTypes =
-    pool === 'Dancelab' ? danceInputTypes : spriteLabInputTypes;
+  const customInputTypes = ['Dancelab', 'GeneratedDancers'].includes(pool)
+    ? danceInputTypes
+    : spriteLabInputTypes;
   const blocksInstalled = installCustomBlocks({
     blockly: Blockly,
     blockDefinitions: [
@@ -37,11 +38,14 @@ function renderBlock(element) {
   });
   const blockName = Object.values(blocksInstalled)[0][0];
   const blocksDom = parseElement(`<block type='${blockName}' />`);
-  const blockSpace = Blockly.createEmbeddedWorkspace(element, blocksDom, {
-    noScrolling: true,
-    inline: false,
+  getUserTheme().then(theme => {
+    const blockSpace = Blockly.createEmbeddedWorkspace(element, blocksDom, {
+      noScrolling: true,
+      inline: false,
+      theme,
+    });
+    shrinkBlockSpaceContainer(blockSpace, true);
   });
-  shrinkBlockSpaceContainer(blockSpace, true);
 }
 
 $(document).ready(() => {
@@ -50,7 +54,7 @@ $(document).ready(() => {
   Blockly.assetUrl = assetUrl;
   Blockly.valueTypeTabShapeMap = valueTypeTabShapeMap(Blockly);
   Blockly.typeHints = true;
-  Blockly.cdoUtils.injectCss(document);
+  Blockly.Css.inject(true, 'media');
 
   const divs = document.getElementsByClassName('blockly-container');
   for (let i = 0; i < divs.length; i++) {

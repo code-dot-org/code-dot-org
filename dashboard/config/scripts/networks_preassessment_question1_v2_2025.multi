@@ -1,0 +1,17 @@
+name 'networks-preassessment-question1_v2-2025'
+title 'Networks and the Internet Pre-Assessment: Question 1'
+
+wrong 'To connect different web browsers'
+right 'To allow devices to communicate and share data globally'
+wrong 'To store all information in one central location'
+wrong 'To make computers faster'
+
+allow_multiple_attempts true
+
+markdown <<MARKDOWN
+What is the primary function of the Internet?
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+Lesson 1: Introduction to the Internet
+MARKDOWN

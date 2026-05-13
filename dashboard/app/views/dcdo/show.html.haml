@@ -1,0 +1,64 @@
+:scss
+  .dcdo-list {
+    .dcdo-padding {
+      padding: 10px;
+      margin: auto 0;
+    }
+
+    .dcdo-row {
+      display: grid;
+      grid-template-columns: 240px 384px 111px 100px;
+      border-bottom: 1px solid #eee;
+    }
+
+    .dcdo-submit-button {
+      margin: auto;
+    }
+
+    .dcdo-value {
+      input {
+        width: 350px;
+      }
+    }
+
+    select {
+      width: auto;
+    }
+
+    form, input, select {
+      margin: 0;
+    }
+  }
+
+- data_types = ["Array", "Boolean", "Float", "Hash", "Integer", "String"]
+
+.dcdo-list
+  %h3 DCDO Flags
+  %div
+    .dcdo-row
+      .dcdo-label.dcdo-padding Key
+      .dcdo-label.dcdo-padding Value
+      .dcdo-label.dcdo-padding Data Type
+      .dcdo-label
+    = form_with url: dcdo_path, method: :patch do |f|
+      .dcdo-row
+        .dcdo-key.dcdo-padding
+          = f.text_field :key, placeholder: "new key"
+        .dcdo-value.dcdo-padding
+          = f.text_field :value, placeholder: "value"
+        .dcdo-padding
+          = f.select :data_type, data_types
+        .dcdo-submit-button.dcdo-padding
+          = f.submit "Add", class: "btn"
+    - @dcdo_hsh.to_a.sort.each do |key, value|
+      - current_type = (value.instance_of?(TrueClass) || value.instance_of?(FalseClass)) ? "Boolean" : value.class.to_s
+      = form_with url: dcdo_path, method: :patch do |f|
+        .dcdo-row
+          .dcdo-key.dcdo-padding= key
+          .dcdo-value.dcdo-padding
+            = f.text_field :key, value: key, style: "display: none"
+            = f.text_field :value, value: current_type == "Hash" ? value.to_json : value.to_s, placeholder: "value"
+          .dcdo-padding
+            = f.select :data_type, data_types, selected: current_type
+          .dcdo-submit-button.dcdo-padding
+            = f.submit "Update", class: "btn"

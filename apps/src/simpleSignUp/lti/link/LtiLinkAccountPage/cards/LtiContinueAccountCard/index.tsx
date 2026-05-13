@@ -1,9 +1,8 @@
+import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
+import {Button as MuiButton} from '@mui/material';
 import classNames from 'classnames';
 import React, {useContext, useState} from 'react';
 
-import {Button, buttonColors} from '@cdo/apps/componentLibrary/button';
-import FontAwesomeV6Icon from '@cdo/apps/componentLibrary/fontAwesomeV6Icon';
-import {PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import {
   Card,
@@ -20,7 +19,7 @@ import {LtiProviderContext} from '../../context';
 import styles from '../../../../../link-account.module.scss';
 
 const LtiContinueAccountCard = () => {
-  const {ltiProviderName, continueAccountUrl, userType} =
+  const {ltiProviderName, continueAccountUrl, userType, newAccountUrl} =
     useContext(LtiProviderContext)!;
   const [isSaving, setIsSaving] = useState(false);
 
@@ -29,18 +28,14 @@ const LtiContinueAccountCard = () => {
       lms_name: ltiProviderName,
       user_type: userType,
     };
-    analyticsReporter.sendEvent(
-      'lti_continue_account_click',
-      eventPayload,
-      PLATFORMS.STATSIG
-    );
+    analyticsReporter.sendEvent('lti_continue_account_click', eventPayload);
 
     navigateToHref(continueAccountUrl);
   };
   const handleSubmit = async () => {
     setIsSaving(true);
 
-    fetch('/lti/v1/account_linking/new_account', {
+    fetch(newAccountUrl.href, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -55,6 +50,7 @@ const LtiContinueAccountCard = () => {
   };
 
   return (
+    // eslint-disable-next-line react/forbid-component-props
     <Card data-testid={'continue-account-card'}>
       <CardHeader
         title={i18n.ltiLinkAccountNewAccountCardHeaderLabel()}
@@ -69,15 +65,18 @@ const LtiContinueAccountCard = () => {
         {i18n.ltiLinkAccountContinueAccountCardContent()}
       </CardContent>
       <CardActions>
-        <Button
-          className={classNames(styles.button, styles.cardSecondaryButton)}
-          color={buttonColors.white}
-          size="m"
-          isPending={isSaving}
+        <MuiButton
+          variant="contained"
+          color="white"
+          size="medium"
+          loading={isSaving}
           disabled={isSaving}
-          text={i18n.ltiIframeCallToAction()}
+          className={classNames(styles.button, styles.cardSecondaryButton)}
           onClick={handleSubmit}
-        />
+          type="button"
+        >
+          {i18n.ltiIframeCallToAction()}
+        </MuiButton>
       </CardActions>
     </Card>
   );

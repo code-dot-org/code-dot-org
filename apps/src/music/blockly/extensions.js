@@ -1,17 +1,23 @@
+import CdoFieldDropdown from '@cdo/apps/blockly/addons/cdoFieldDropdown';
+import CdoFieldImage from '@cdo/apps/blockly/addons/cdoFieldImage';
+
+import {TICKS_PER_MEASURE} from '../constants';
 import MusicLibrary from '../player/MusicLibrary';
 
 import {BlockTypes} from './blockTypes';
 import {
+  DEFAULT_EFFECT_VALUE,
   EXTRA_SOUND_INPUT_PREFIX,
+  FIELD_EFFECTS_NAME,
+  FIELD_EFFECTS_VALUE,
+  FIELD_EFFECTS_VALUE_OPTIONS,
+  FIELD_PATTERN_AI_NAME,
+  FIELD_PATTERN_NAME,
+  FIELD_SOUNDS_NAME,
   MINUS_IMAGE,
   PLUS_IMAGE,
   SOUND_VALUE_TYPE,
   TRACK_NAME_FIELD,
-  FIELD_EFFECTS_NAME,
-  FIELD_EFFECTS_VALUE,
-  FIELD_EFFECTS_VALUE_OPTIONS,
-  DEFAULT_EFFECT_VALUE,
-  FIELD_SOUNDS_NAME,
 } from './constants';
 
 export const getDefaultTrackNameExtension = player =>
@@ -35,7 +41,7 @@ export const playMultiMutator = {
     const shadowBlockXml = `<shadow type="${BlockTypes.VALUE_SAMPLE}"/>`;
     this.appendValueInput(EXTRA_SOUND_INPUT_PREFIX + this.extraSoundInputCount_)
       .setShadowDom(Blockly.Xml.textToDom(shadowBlockXml))
-      .setAlign(Blockly.Input.Align.RIGHT)
+      .setAlign(Blockly.inputs.Align.RIGHT)
       .setCheck(SOUND_VALUE_TYPE)
       .appendField('and');
 
@@ -76,7 +82,7 @@ export const playMultiMutator = {
 
     if (shouldShow) {
       this.appendDummyInput('PLUS').appendField(
-        new Blockly.FieldImage(PLUS_IMAGE, 20, 20),
+        new CdoFieldImage(PLUS_IMAGE, 20, 20),
         'PLUS',
         'plus'
       );
@@ -98,7 +104,7 @@ export const playMultiMutator = {
       }
       input.insertFieldAt(
         0,
-        new Blockly.FieldImage(MINUS_IMAGE, 20, 20),
+        new CdoFieldImage(MINUS_IMAGE, 20, 20),
         'MINUS',
         'minus'
       );
@@ -120,6 +126,23 @@ export const playMultiMutator = {
 };
 
 /*
+ * Mutator for blocks that support disabling the next connection.
+ */
+export const nextConnectionMutator = {
+  saveExtraState: function () {
+    return {
+      disableNextConnection: !this.nextConnection,
+    };
+  },
+  loadExtraState: function (state) {
+    if (state.disableNextConnection) {
+      this.setNextStatement(false);
+    }
+  },
+  canSerializeNextConnection: true,
+};
+
+/*
  * Extension for the effects field, which replaces the input_dummy in the block
  * with a dynamic field_dropdown and updates the effect value dropdown
  * based on the selected effect name.
@@ -127,7 +150,7 @@ export const playMultiMutator = {
 export const effectsFieldExtension = function () {
   // Set the initial state when the block gets created
   const thisBlock = this;
-  const valuesDropdown = new Blockly.FieldDropdown(function () {
+  const valuesDropdown = new CdoFieldDropdown(function () {
     return FIELD_EFFECTS_VALUE_OPTIONS[
       thisBlock.getFieldValue(FIELD_EFFECTS_NAME)
     ];
@@ -183,5 +206,36 @@ export const fieldSoundsValidator = function () {
       }
     }
     return newValue;
+  });
+};
+
+/**
+ * Extension to blocks with pattern fields that validates new values.
+ */
+export const fieldPatternsValidator = function () {
+  // A block may have a pattern field or pattern AI field, but should not have both.
+  const patternField =
+    this.getField(FIELD_PATTERN_NAME) || this.getField(FIELD_PATTERN_AI_NAME);
+
+  /**
+   * Removes invalid event notes from pattern field values.
+   * @param newValue The new instrument event value
+   * @returns The modified instrument event value
+   */
+  patternField?.setValidator(newValue => {
+    const kitNotes = MusicLibrary.getInstance()
+      ?.kits.find(kit => kit.id === newValue.instrument)
+      .sounds.map(sound => sound.note);
+    const validatedEvents = newValue.events.filter(
+      event =>
+        // Remove events with notes that not part of the current kit's sounds. (Ex. 1...8)
+        kitNotes.includes(event.note) &&
+        // Remove event with ticks that are outside the expected tick range.
+        event.tick <= newValue.length * TICKS_PER_MEASURE
+    );
+    return {
+      ...newValue,
+      events: validatedEvents,
+    };
   });
 };

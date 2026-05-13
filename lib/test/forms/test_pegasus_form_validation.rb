@@ -77,16 +77,6 @@ class PegasusFormValidationTest < Minitest::Test
     assert_equal FIELD_ERROR, FormValidationMethods.stripped(FIELD_ERROR)
   end
 
-  def test_uploaded_file
-    mock_file = mock
-    File.expects(:open).with('temp-filename').returns(mock_file).once
-    AWS::S3.expects(:upload_to_bucket).with('cdo-form-uploads', 's3-filename', mock_file).once
-    FormValidationMethods.uploaded_file({filename: 's3-filename', tempfile: 'temp-filename'})
-
-    assert_nil FormValidationMethods.uploaded_file('')
-    assert_equal FIELD_ERROR, FormValidationMethods.uploaded_file(FIELD_ERROR)
-  end
-
   def test_email_address
     assert_equal 'person@example.net', FormValidationMethods.email_address('person@example.net')
     assert_equal 'downcased@andstripped.net', FormValidationMethods.email_address('  DownCased@AndStripped.net  ')

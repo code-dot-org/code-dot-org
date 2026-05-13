@@ -1,7 +1,6 @@
 import fontConstants from '@cdo/apps/fontConstants';
 
 import styleConstants from '../../styleConstants';
-import color from '../../util/color';
 
 // Constants for React tables
 
@@ -12,6 +11,12 @@ import color from '../../util/color';
  *     textOverflow?: string;
  *     overflow?: string;
  *     whiteSpace?: "normal" | "nowrap" | "pre" | "pre-line" | "pre-wrap";
+ *   };
+ *   tableNameText: {
+ *     textOverflow: string,
+ *     overflow: string;
+ *     whiteSpace: string;
+ *     minWidth: number;
  *   };
  *   table: {
  *     borderWidth?: string;
@@ -53,24 +58,31 @@ export const tableLayoutStyles = {
     overflow: 'hidden',
     whiteSpace: 'nowrap',
   },
+  tableNameText: {
+    textOverflow: 'ellipsis',
+    overflow: 'hidden',
+    whiteSpace: 'nowrap',
+    minWidth: 160,
+  },
   table: {
     borderWidth: 1,
     borderStyle: 'solid',
-    borderColor: color.border_gray,
+    borderColor: 'var(--borders-neutral-primary)',
     width: styleConstants['content-width'],
-    backgroundColor: color.table_light_row,
+    backgroundColor: 'var(--background-neutral-primary)',
   },
   cell: {
     maxWidth: 200,
     border: '1px solid',
-    borderColor: color.border_light_gray,
+    borderColor: 'var(--borders-neutral-primary)',
     padding: 10,
     fontSize: 14,
+    color: 'var(--text-neutral-primary)',
   },
   headerCell: {
-    backgroundColor: color.table_header,
+    backgroundColor: 'var(--background-neutral-tertiary)',
     fontWeight: 'bold',
-    borderColor: color.border_light_gray,
+    borderColor: 'var(--borders-neutral-primary)',
     borderStyle: 'solid',
     borderBottomWidth: 1,
     borderTopWidth: 0,
@@ -78,7 +90,7 @@ export const tableLayoutStyles = {
     borderRightWidth: 1,
     paddingTop: 20,
     paddingBottom: 20,
-    color: color.charcoal,
+    color: 'var(--text-neutral-primary)',
     textAlign: 'inherit',
   },
   flexCell: {
@@ -102,13 +114,13 @@ export const plTableLayoutStyles = {
   link: {
     ...fontConstants['main-font-semi-bold'],
     fontSize: 14,
-    color: color.neutral_dark,
+    color: 'var(--text-neutral-primary)',
     textDecoration: 'underline',
   },
   sectionCodeLink: {
     ...fontConstants['main-font-semi-bold'],
     fontSize: 14,
-    color: color.brand_secondary_default,
+    color: 'var(--text-brand-purple-primary)',
   },
   currentUnit: {
     marginTop: 10,
@@ -131,7 +143,7 @@ export const plTableLayoutStyles = {
 // Settings for WrappedSortable
 export const sortableOptions = {
   // Dim inactive sorting icons in the column headers
-  default: {color: 'rgba(0, 0, 0, 0.2 )'},
+  default: {color: 'var(--text-neutral-tertiary)'},
 };
 
 export const NAME_CELL_INPUT_WIDTH = 160;

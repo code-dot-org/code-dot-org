@@ -2,7 +2,7 @@ import '@testing-library/jest-dom';
 import {act, fireEvent, render, screen, waitFor} from '@testing-library/react';
 import React from 'react';
 
-import {EVENTS, PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants';
+import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import SchoolInfoInterstitial from '@cdo/apps/schoolInfo/SchoolInfoInterstitial';
 import {schoolInfoInvalid} from '@cdo/apps/schoolInfo/utils/schoolInfoInvalid';
@@ -81,8 +81,7 @@ describe('SchoolInfoInterstitial', () => {
     await waitFor(() => {
       expect(mockSendEvent).toHaveBeenCalledWith(
         EVENTS.SCHOOL_INTERSTITIAL_SHOW,
-        {},
-        PLATFORMS.BOTH
+        {}
       );
     });
   });
@@ -100,7 +99,8 @@ describe('SchoolInfoInterstitial', () => {
       expect(mockUpdateSchoolInfo).toHaveBeenCalledWith({
         schoolId: '1',
         country: 'US',
-        schoolName: 'Test School',
+        // schoolName is empty when schoolId is passed to useSchoolInfo, regardless of initial state
+        schoolName: '',
         schoolZip: '12345',
       });
 
@@ -109,16 +109,14 @@ describe('SchoolInfoInterstitial', () => {
         {
           hasNcesId: 'true',
           attempt: 1,
-        },
-        PLATFORMS.BOTH
+        }
       );
 
       expect(mockSendEvent).toHaveBeenCalledWith(
         EVENTS.SCHOOL_INTERSTITIAL_SAVE_SUCCESS,
         {
           attempt: 1,
-        },
-        PLATFORMS.BOTH
+        }
       );
 
       expect(mockOnClose).toHaveBeenCalled();
@@ -142,16 +140,14 @@ describe('SchoolInfoInterstitial', () => {
         {
           hasNcesId: 'true',
           attempt: 1,
-        },
-        PLATFORMS.BOTH
+        }
       );
 
       expect(mockSendEvent).toHaveBeenCalledWith(
         EVENTS.SCHOOL_INTERSTITIAL_SAVE_FAILURE,
         {
           attempt: 1,
-        },
-        PLATFORMS.BOTH
+        }
       );
 
       expect(
@@ -170,16 +166,14 @@ describe('SchoolInfoInterstitial', () => {
         {
           hasNcesId: 'true',
           attempt: 2,
-        },
-        PLATFORMS.BOTH
+        }
       );
 
       expect(mockSendEvent).toHaveBeenCalledWith(
         EVENTS.SCHOOL_INTERSTITIAL_SAVE_FAILURE,
         {
           attempt: 2,
-        },
-        PLATFORMS.BOTH
+        }
       );
 
       expect(mockOnClose).toHaveBeenCalled();
@@ -196,8 +190,7 @@ describe('SchoolInfoInterstitial', () => {
     await waitFor(() => {
       expect(mockSendEvent).toHaveBeenCalledWith(
         EVENTS.SCHOOL_INTERSTITIAL_DISMISS,
-        {},
-        PLATFORMS.BOTH
+        {}
       );
       expect(mockOnClose).toHaveBeenCalled();
     });

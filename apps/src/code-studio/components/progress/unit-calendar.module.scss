@@ -1,0 +1,45 @@
+.weekColumn {
+  width: 100px;
+  min-width: 100px;
+  background-color: var(--background-brand-purple-primary);
+  color: var(--text-neutral-white-fixed);
+  text-align: center;
+  border: 1px solid var(--borders-brand-purple-primary);
+  border-collapse: collapse;
+  min-height: 50px;
+}
+
+.scheduleColumn {
+  border: 1px solid var(--borders-brand-purple-primary);
+  border-collapse: collapse;
+  display: flex;
+  min-height: 50px;
+  margin: 0;
+}
+
+.table {
+  border-collapse: collapse;
+  width: 100%;
+  border: 1px solid var(--borders-brand-purple-primary);
+}
+
+.key {
+  border: 1px solid var(--borders-brand-purple-primary);
+  border-collapse: collapse;
+  width: 100%;
+  margin-top: 20px;
+}
+
+.keyIcon {
+  margin-right: 5px;
+}
+
+.keySection {
+  display: flex;
+  width: 90%;
+  align-items: center;
+}
+
+.keyCell {
+  margin-inline-start: 24px;
+}

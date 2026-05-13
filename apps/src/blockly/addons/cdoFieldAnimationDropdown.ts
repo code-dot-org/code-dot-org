@@ -1,4 +1,4 @@
-import * as GoogleBlockly from 'blockly/core';
+import * as BlocklyCore from 'blockly/core';
 
 import {CdoFieldImageDropdown} from './cdoFieldImageDropdown';
 
@@ -9,9 +9,7 @@ interface ButtonConfig {
 
 export default class CdoFieldAnimationDropdown extends CdoFieldImageDropdown {
   constructor(
-    menuGenerator:
-      | GoogleBlockly.MenuOption[]
-      | (() => GoogleBlockly.MenuOption[]),
+    menuGenerator: BlocklyCore.MenuOption[] | (() => BlocklyCore.MenuOption[]),
     width: number,
     height: number,
     buttons: ButtonConfig[] | undefined

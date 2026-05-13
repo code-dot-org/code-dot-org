@@ -2,7 +2,6 @@ require_relative 'files_api_test_base' # Must be required first to establish loa
 require_relative 'files_api_test_helper'
 require 'cdo/share_filtering'
 require 'timecop'
-require 'cdo/firehose'
 
 MAIN_JSON = 'main.json'
 COMMENT_BLOCK_SOURCES = File.join(__dir__, '..', 'fixtures', 'comment-block-sources.json')
@@ -187,6 +186,7 @@ class SourcesTest < FilesApiTestBase
     filename = MAIN_JSON
     file_data = File.read(File.expand_path('../../fixtures/privacy-profanity/playlab-normal-source.json', __FILE__))
     file_headers = {'CONTENT_TYPE' => 'application/json'}
+    Projects.any_instance.stubs(:get).returns({projectType: 'playlab'})
     @api.put_object(filename, file_data, file_headers)
     assert successful?
 
@@ -214,6 +214,7 @@ class SourcesTest < FilesApiTestBase
     filename = MAIN_JSON
     file_data = File.read(File.expand_path('../../fixtures/privacy-profanity/playlab-privacy-violation-source.json', __FILE__))
     file_headers = {'CONTENT_TYPE' => 'application/json'}
+    Projects.any_instance.stubs(:get).returns({projectType: 'playlab'})
     @api.put_object(filename, file_data, file_headers)
     assert successful?
 
@@ -241,13 +242,12 @@ class SourcesTest < FilesApiTestBase
       assert not_found?
     end
 
-    # teacher cannot view
+    # teacher can view
     with_session(:teacher) do
       teacher_api = FilesApiTestHelper.new(current_session, 'sources', @channel)
       FilesApi.any_instance.stubs(:teaches_student?).returns(true)
       teacher_api.get_object(filename)
-      refute successful?
-      assert not_found?
+      assert successful?
       FilesApi.any_instance.unstub(:teaches_student?)
     end
 
@@ -260,6 +260,7 @@ class SourcesTest < FilesApiTestBase
     filename = MAIN_JSON
     file_data = File.read(File.expand_path('../../fixtures/privacy-profanity/playlab-privacy-violation-source.json', __FILE__))
     file_headers = {'CONTENT_TYPE' => 'application/json'}
+    Projects.any_instance.stubs(:get).returns({projectType: 'playlab'})
     @api.put_object(filename, file_data, file_headers)
     assert successful?
     policy_check_response = @api.channel_policy_violation
@@ -274,7 +275,7 @@ class SourcesTest < FilesApiTestBase
   end
 
   def test_replace_version
-    FirehoseClient.instance.expects(:put_record).never
+    CDO.expects(:log).never
 
     # Upload a source file.
     filename = MAIN_JSON
@@ -312,7 +313,7 @@ class SourcesTest < FilesApiTestBase
     assert successful?
     response = JSON.parse(last_response.body)
     timestamp1 = response['timestamp'].to_s
-    # this assert passes locally but fails on circle
+    # this assert passes locally but fails on CI
     # assert_equal timestamp1, Time.now.to_s
     version1 = response['versionId']
 
@@ -326,13 +327,13 @@ class SourcesTest < FilesApiTestBase
     Timecop.travel 1
 
     # log when replacing non-current version.
-    FirehoseClient.instance.expects(:put_record).with do |stream, data|
-      data_json_data = JSON.parse(data[:data_json])
-      data[:study] == 'project-data-integrity' &&
-        data[:event] == 'reject-comparing-older-main-json' &&
-        data[:project_id] == @channel &&
-        data_json_data['currentVersionId'] == version1 &&
-        stream == :analysis
+    CDO.log.expects(:info).with do |data|
+      data = JSON.parse(data)
+      data_json_data = data['data_json']
+      data['study'] == 'project-data-integrity' &&
+        data['event'] == 'reject-comparing-older-main-json' &&
+        data['project_id'] == @channel &&
+        data_json_data['currentVersionId'] == version1
     end
 
     file_data = '{"source":"version 3"}'

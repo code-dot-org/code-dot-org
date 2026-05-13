@@ -1,0 +1,5 @@
+{
+  "key": "dna_codons",
+  "name": "DNA Codons",
+  "content": "**Description:** Dataset of DNA codons and their corresponding amino acids, including stop signals used in the process of translating genetic information into proteins.\r\n\r\n[Source](https://github.com/zhanxw/anno/blob/master/codon.txt)\r\n\r\n**Columns:**\r\n\r\n* **Codon (string):** A sequence of three nucleotides (A, T, C, G) representing a unit of genetic code.\r\n* **Amino Acid (string):** The three-letter abbreviation for the amino acid (e.g., Met).\r\n* **Letter (string):** The one-letter code representing the amino acid (e.g., M).\r\n* **Full Name (string):** The amino acid specified by the codon, using the full name (e.g., Methionine)."
+}

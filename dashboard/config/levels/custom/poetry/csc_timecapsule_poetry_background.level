@@ -1,5 +1,9 @@
 <Poetry>
   <config><![CDATA[{
+  "game_id": 69,
+  "created_at": "2022-04-04T14:18:43.000Z",
+  "level_num": "custom",
+  "user_id": 13468,
   "properties": {
     "encrypted": "false",
     "skin": "gamelab",
@@ -30,7 +34,7 @@
     "validation_enabled": "true",
     "start_in_animation_tab": "false",
     "all_animations_single_frame": "true",
-    "start_animations": "{\r\n  \"orderedKeys\": [\r\n    \"ee418c45-96ab-46c1-af4d-70073ee59fde\",\r\n    \"ea0e0b61-add2-4890-90ce-657b36acf35d\",\r\n    \"a0b3644e-d42e-487f-bf8b-63d874b8bc8e\"\r\n  ],\r\n  \"propsByKey\": {\r\n    \"ee418c45-96ab-46c1-af4d-70073ee59fde\": {\r\n      \"name\": \"grid_1\",\r\n      \"sourceUrl\": \"https://studio.code.org/api/v1/animation-library/gamelab/6udB34wA0EBLf0wwVkEWGCKKSjt5rRRr/category_backgrounds/background_grid.png\",\r\n      \"frameSize\": {\r\n        \"x\": 400,\r\n        \"y\": 400\r\n      },\r\n      \"frameCount\": 1,\r\n      \"looping\": true,\r\n      \"frameDelay\": 2,\r\n      \"version\": \"6udB34wA0EBLf0wwVkEWGCKKSjt5rRRr\",\r\n      \"categories\": [\r\n        \"backgrounds\"\r\n      ]\r\n    },\r\n    \"ea0e0b61-add2-4890-90ce-657b36acf35d\": {\r\n      \"name\": \"planeRed1_1\",\r\n      \"sourceUrl\": \"https://studio.code.org/api/v1/animation-library/gamelab/doNsuLSldRWw4EqNUuQ0oxoMGvLIMOca/category_vehicles/planeRed1.png\",\r\n      \"frameSize\": {\r\n        \"x\": 88,\r\n        \"y\": 73\r\n      },\r\n      \"frameCount\": 1,\r\n      \"looping\": true,\r\n      \"frameDelay\": 2,\r\n      \"version\": \"doNsuLSldRWw4EqNUuQ0oxoMGvLIMOca\",\r\n      \"categories\": [\r\n        \"vehicles\"\r\n      ]\r\n    },\r\n    \"a0b3644e-d42e-487f-bf8b-63d874b8bc8e\": {\r\n      \"name\": \"planeBlue1_1\",\r\n      \"sourceUrl\": \"https://studio.code.org/api/v1/animation-library/gamelab/N8nE_yTUDZ.3xJ03IT21_joiiSkUtXbd/category_vehicles/planeBlue1.png\",\r\n      \"frameSize\": {\r\n        \"x\": 88,\r\n        \"y\": 73\r\n      },\r\n      \"frameCount\": 1,\r\n      \"looping\": true,\r\n      \"frameDelay\": 2,\r\n      \"version\": \"N8nE_yTUDZ.3xJ03IT21_joiiSkUtXbd\",\r\n      \"categories\": [\r\n        \"vehicles\"\r\n      ]\r\n    }\r\n  }\r\n}",
+    "start_animations": "{\n  \"orderedKeys\": [\n    \"ee418c45-96ab-46c1-af4d-70073ee59fde\",\n    \"ea0e0b61-add2-4890-90ce-657b36acf35d\",\n    \"a0b3644e-d42e-487f-bf8b-63d874b8bc8e\"\n  ],\n  \"propsByKey\": {\n    \"ee418c45-96ab-46c1-af4d-70073ee59fde\": {\n      \"name\": \"grid_1\",\n      \"sourceUrl\": \"/api/v1/animation-library/gamelab/6udB34wA0EBLf0wwVkEWGCKKSjt5rRRr/category_backgrounds/background_grid.png\",\n      \"frameSize\": {\n        \"x\": 400,\n        \"y\": 400\n      },\n      \"frameCount\": 1,\n      \"looping\": true,\n      \"frameDelay\": 2,\n      \"version\": \"6udB34wA0EBLf0wwVkEWGCKKSjt5rRRr\",\n      \"categories\": [\n        \"backgrounds\"\n      ]\n    },\n    \"ea0e0b61-add2-4890-90ce-657b36acf35d\": {\n      \"name\": \"planeRed1_1\",\n      \"sourceUrl\": \"/api/v1/animation-library/gamelab/doNsuLSldRWw4EqNUuQ0oxoMGvLIMOca/category_vehicles/planeRed1.png\",\n      \"frameSize\": {\n        \"x\": 88,\n        \"y\": 73\n      },\n      \"frameCount\": 1,\n      \"looping\": true,\n      \"frameDelay\": 2,\n      \"version\": \"doNsuLSldRWw4EqNUuQ0oxoMGvLIMOca\",\n      \"categories\": [\n        \"vehicles\"\n      ]\n    },\n    \"a0b3644e-d42e-487f-bf8b-63d874b8bc8e\": {\n      \"name\": \"planeBlue1_1\",\n      \"sourceUrl\": \"/api/v1/animation-library/gamelab/N8nE_yTUDZ.3xJ03IT21_joiiSkUtXbd/category_vehicles/planeBlue1.png\",\n      \"frameSize\": {\n        \"x\": 88,\n        \"y\": 73\n      },\n      \"frameCount\": 1,\n      \"looping\": true,\n      \"frameDelay\": 2,\n      \"version\": \"N8nE_yTUDZ.3xJ03IT21_joiiSkUtXbd\",\n      \"categories\": [\n        \"vehicles\"\n      ]\n    }\n  }\n}",
     "validation_code": "var validationInfo = getValidationInfo();\r\nif (!validationInfo.successFrame) {\r\n  setSuccessFrame();\r\n}\r\n\r\ndrawProgressBar();\r\nif (World.frameCount == validationInfo.endTime) {\r\n  levelFailure(0, 'successLevel2');\r\n}\r\n",
     "hide_pause_button": "true",
     "instructions_icon": "octiHopeful",
@@ -40,16 +44,9 @@
     "name_suffix": "_timecapsule",
     "authored_hints": "[{\"hint_class\":null,\"hint_markdown\":\"Make sure that the <xml><block type=\\\"gamelab_setBackgroundImageAs\\\" id=\\\"6\\\" disabled=\\\"true\\\"><field name=\\\"IMG\\\">\\\"cave\\\"</field></block></xml> block is connected to the when run command.\",\"hint_id\":\"background_hint\",\"hint_type\":\"general\",\"hint_path\":\"\",\"hint_video\":\"\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/ba7e40f91c5d5bb8e66a23c24fa94c81/csc_timecapsule_poetry_background.mp3\"}]",
     "long_instructions": "Do This: \r\n- Think about how your story makes you feel.  What background fits this feeling? \r\n- Drag a <xml><block type=\"gamelab_setBackgroundImageAs\"><field name=\"IMG\">\"cave\"</field></block></xml> block into your workspace under when run and change it. Click “run” to see how the background looks with your story.\r\n",
-    "preload_asset_list": null,
-    "encrypted_examples": [
-
-    ]
+    "preload_asset_list": null
   },
-  "game_id": 69,
   "published": true,
-  "created_at": "2022-04-04T14:18:43.000Z",
-  "level_num": "custom",
-  "user_id": 13468,
   "audit_log": "[{\"changed_at\":\"2022-04-04T14:18:43.581+00:00\",\"changed\":[\"cloned from \\\"csc_timecapsule_poetry_intro\\\"\"],\"cloned_from\":\"csc_timecapsule_poetry_intro\"},{\"changed_at\":\"2022-04-04 14:19:45 +0000\",\"changed\":[\"start_blocks\",\"short_instructions\",\"authored_hints\",\"long_instructions\",\"preload_asset_list\"],\"changed_by_id\":18528,\"changed_by_email\":\"grayjordann+levelbuilder@gmail.com\"},{\"changed_at\":\"2022-04-04 14:20:53 +0000\",\"changed\":[\"start_blocks\",\"embed\",\"validation_enabled\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":18528,\"changed_by_email\":\"grayjordann+levelbuilder@gmail.com\"},{\"changed_at\":\"2022-04-04 14:22:00 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18528,\"changed_by_email\":\"grayjordann+levelbuilder@gmail.com\"},{\"changed_at\":\"2022-04-04 14:22:21 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":18528,\"changed_by_email\":\"grayjordann+levelbuilder@gmail.com\"},{\"changed_at\":\"2022-04-04 14:22:58 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"preload_asset_list\"],\"changed_by_id\":18528,\"changed_by_email\":\"grayjordann+levelbuilder@gmail.com\"},{\"changed_at\":\"2022-04-04 14:23:29 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"authored_hints\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":18528,\"changed_by_email\":\"grayjordann+levelbuilder@gmail.com\"},{\"changed_at\":\"2022-04-04 16:53:54 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":18528,\"changed_by_email\":\"grayjordann+levelbuilder@gmail.com\"}]",
   "level_concept_difficulty": {
   }

@@ -1,15 +1,12 @@
+require 'cdo/i18n'
+
 module LocaleHelper
-  # Symbol of best valid locale code to be used for I18n.locale.
   def locale
-    current = request.env['cdo.locale']
-    # if(current_user && current_user.locale != current)
-    #   TODO: Set language cookie and reload the page.
-    # end
-    current.to_sym
+    I18n.locale
   end
 
   def locale_dir
-    Dashboard::Application::LOCALES[locale.to_s][:dir] || 'ltr'
+    Cdo::I18n.locale_direction(locale)
   end
 
   # String representing the 2 letter language code.
@@ -20,29 +17,11 @@ module LocaleHelper
 
   # String representing the Locale code for the Blockly client code.
   def js_locale(locale_code = locale)
-    locale_code.to_s.downcase.tr('-', '_')
+    Cdo::I18n.js_locale(locale_code)
   end
 
-  def options_for_locale_select
-    options = []
-    Dashboard::Application::LOCALES.each do |locale, data|
-      next unless I18n.available_locales.include?(locale.to_sym) && data.is_a?(Hash)
-      name = data[:native]
-      name = (data[:debug] ? "#{name} DBG" : name)
-      options << [name, locale]
-    end
-    options
-  end
-
-  def options_for_locale_dropdown
-    options = []
-    Dashboard::Application::LOCALES.each do |locale, data|
-      next unless I18n.available_locales.include?(locale.to_sym) && data.is_a?(Hash)
-      name = data[:native]
-      name = (data[:debug] ? "#{name} DBG" : name)
-      options << {value: locale, text: name}
-    end
-    options
+  def locale_options
+    Cdo::I18n.locale_options
   end
 
   def options_for_locale_code_select
@@ -66,7 +45,7 @@ module LocaleHelper
   end
 
   # Looks up a localized string driven by a database value.
-  # See config/locales/data.en.yml for details.
+  # See config/locales/data/en.yml for details.
   def data_t(dotted_path, key, default = nil)
     # Escape separator in provided key to support keys containing dot characters.
     try_t(
@@ -78,7 +57,7 @@ module LocaleHelper
   end
 
   # Looks up a localized string driven by a database value.
-  # See config/locales/data.en.yml for details.
+  # See config/locales/data/en.yml for details.
   def data_t_suffix(dotted_path, key, suffix, options = {})
     I18n.t("data.#{dotted_path}.#{key}.#{suffix}", **options)
   end

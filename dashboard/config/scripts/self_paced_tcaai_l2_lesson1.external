@@ -1,0 +1,68 @@
+name 'self-paced-TCaAI-L2-Lesson1'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Milestone 1 Lesson Overviews
+
+## Lesson 1: Investigating AI Tools
+
+#### Lesson 1 kicks off the unit by shifting students from passive AI users to active AI testers. Students explore what AI is, where it shows up in daily life, and how evidence can change their judgments about AI tools.
+
+### 📝 **Lesson Overview** 
+<p style="font-size: 18px; font-weight: bold; background-color: #F5F7F8; padding: 10px; border-left: 5px solid #8148B2; display: inline-block; width: 100%"> <a href="https://studio.code.org/courses/aid-thinking-critically-about-ai-2025/units/1/lessons/1" target="blank" rel="noopener noreferrer">Access Lesson 1: Investigating AI Tools</a></p> 
+
+<!-- Warm Up -->
+<details style="background-color:#ececec;padding:12px;margin-top:15px;margin-bottom:15px;border-radius:6px;">
+<summary style="font-size:13pt;font-weight:bold;">Warm Up (5 minutes)</summary>
+<div style="margin-top:12px;font-size:12pt;line-height:1.4;">
+<p style="font-size:13pt;margin-top:0;">Students watch a short video and discuss: <strong>What is AI?</strong> and <strong>How do people feel about it?</strong> This conversation is designed to surface prior knowledge and set the expectation that students will <em>test</em> AI tools, not just use them.</p>
+<p style="font-size:13pt;margin-bottom:0;">Introduce key vocabulary (<strong>artificial intelligence</strong>, <strong>prompt</strong>) and preview the lesson goal: moving from “gut feelings” to evidence-based judgments.</p>
+</div>
+</details>
+
+<!-- Activity -->
+<details style="background-color:#ececec;padding:12px;margin-bottom:15px;border-radius:6px;">
+<summary style="font-size:13pt;font-weight:bold;">Activity (30 minutes)</summary>
+<div style="margin-top:12px;font-size:12pt;line-height:1.4;">
+<p style="font-size:13pt;margin-top:0;"><strong>AI Dancer Testing</strong></p>
+
+<div style="text-align: center; margin: 20px auto;">
+  <img 
+    src="https://images.code.org/b7c74443f1ed92ec4fb609d7c46cda6e-image-1773172778084.59.33 PM.png" 
+    alt="The image generator has generated a dancer." 
+    style="width: 75%; border-radius: 10px;">
+</div>
+<p style="font-size:13pt;">Students generate a dancer with a basic prompt, then revise the prompt to see how the output changes. Encourage students to change <strong>one detail at a time</strong> so they can link cause and effect (e.g., “What happened when you added more descriptive words?”).</p>
+<p style="font-size:13pt;">Midway through, students complete the <strong>Snap Judgments</strong> section of the <strong>Milestone 1 Learning Log</strong>, capturing initial reactions and beginning to support claims with observable evidence.</p>
+<p style="font-size:13pt;margin-bottom:0;">As students test, circulate for misconceptions (e.g., the AI “understands” like a human) and prompt deeper reasoning: “What patterns do you think the model learned from its training data to produce this result?”</p>
+</div>
+</details>
+
+<!-- Wrap Up -->
+<details style="background-color:#ececec;padding:12px;margin-bottom:15px;border-radius:6px;">
+<summary style="font-size:13pt;font-weight:bold;">Wrap Up (10 minutes)</summary>
+<div style="margin-top:12px;font-size:12pt;line-height:1.4;">
+<p style="font-size:13pt;margin-top:0;"><strong>That’s AI? Stations + KWL Update</strong></p>
+<p style="font-size:13pt;">Students rotate through stations to spot AI systems that are <strong>visible, hidden, helpful,</strong> or <strong>potentially risky</strong>, and add at least one question to the “AI in Your World” section of their Learning Log.</p>
+<p style="font-size:13pt;">Close by revisiting the lesson objectives and having students update their <strong>KWL chart</strong>: What did they learn from testing? Which “Want to Know” questions changed or deepened?</p>
+</div>
+</details>
+
+### **🧾 What to Prepare:**
+* #### Print copies of the <strong>That’s AI? Stations</strong> and post them around the room.
+* #### Make physical copies of the <strong>KWL Chart</strong> and <strong>Milestone 1 Learning Log</strong> for each student, or prepare to send them virtually.
+* #### Preview the AI Dancer generator levels (up next!) so you are ready to model prompt testing and systematic changes.
+* #### Make a copy of the <strong>Lesson 1 slides</strong> and adjust pacing, norms, or grouping as needed.
+* #### Plan for how students will rotate through stations and record at least one question in their Learning Log.
+
+### **💡 Tips for Teaching:**
+
+* #### Reinforce systematic testing: encourage students to change one part of a prompt at a time to isolate cause and effect.
+* #### Use the stations to expand students’ understanding of AI beyond chatbots and image tools (e.g., filters, recommendations, sorting systems).
+* #### Normalize uncertainty: students don’t need to decide if AI is “good” or “bad” yet—only to notice patterns and ask testable questions.
+
+___
+
+### **Up Next**: Practice using the AI Dancer generation tool!
+MARKDOWN

@@ -1,29 +1,38 @@
 import {useDraggable} from '@dnd-kit/core';
+import classNames from 'classnames';
 import React from 'react';
 
 import {DragDataType} from './types';
 
-/*
-  This component adds draggable functionality to files/folders in the file browser. The intent is that the user can drag a file into a new folder as well
-  as drag a folder into a new parent folder.
+import moduleStyles from './styles/filebrowser.module.scss';
 
-  Should be used as a wrapper component around the contents which should be draggable, and can be given an html tag as a string to define the rendered component
-  on the page (defaults to 'div')
-*/
+type DragAriaAttributes = {
+  'aria-describedby': string | undefined;
+  'aria-roledescription': string;
+  'aria-pressed': true | undefined;
+};
+
+// Threads dnd-kit ARIA attributes down to the label button in ItemRow.
+export const DragDescriptionContext = React.createContext<
+  DragAriaAttributes | undefined
+>(undefined);
 
 type DraggableProps = {
   children: React.ReactNode;
   data: DragDataType;
   Component?: keyof JSX.IntrinsicElements;
+  className?: string;
 };
 
-export const Draggable = ({
+export const Draggable: React.FunctionComponent<DraggableProps> = ({
   children,
   data,
   Component = 'div',
+  className,
 }: DraggableProps) => {
+  const draggableId = `${data.type}-${data.id}-draggable`;
   const {attributes, listeners, setNodeRef, transform} = useDraggable({
-    id: `${data.type}-${data.id}`,
+    id: draggableId,
     data,
   });
   const style = transform
@@ -36,10 +45,34 @@ export const Draggable = ({
     Component,
     {
       ref: setNodeRef,
-      style: style,
+      style,
+      className: classNames(moduleStyles.draggable, className),
       ...listeners,
-      ...attributes,
     },
+    React.createElement(
+      DragDescriptionContext.Provider,
+      {
+        value: {
+          'aria-describedby': attributes['aria-describedby'],
+          'aria-roledescription': attributes['aria-roledescription'],
+          'aria-pressed': attributes['aria-pressed'] as true | undefined,
+        },
+      },
+      children
+    )
+  );
+};
+
+type NotDraggableProps = {
+  children: React.ReactNode;
+};
+
+export const NotDraggable: React.FunctionComponent<NotDraggableProps> = ({
+  children,
+}: NotDraggableProps) => {
+  return React.createElement(
+    'div',
+    {className: moduleStyles.notDraggable},
     children
   );
 };

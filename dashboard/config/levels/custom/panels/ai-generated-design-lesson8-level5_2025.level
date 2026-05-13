@@ -1,0 +1,22 @@
+<Panels>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 73,
+  "created_at": "2025-10-24T00:39:53.000Z",
+  "level_num": "custom",
+  "user_id": 18603,
+  "properties": {
+    "encrypted": "false",
+    "offer_browser_tts": "false",
+    "panels": [
+      {
+        "text": "**User flow**: the path a user takes through a site to complete a task. This can often take the form of a _flowchart_.",
+        "imageUrl": "https://images.code.org/d01c91d55026e26523d3a6adb6a19707-pexels-divinetechygirl-1181346.jpg",
+        "key": "ai-generated-design-lesson5-vocab-panel-brandkit-test-2025-d32755b0-a47a-4875-862a-5558f4694b63",
+        "layout": "text-bottom-right"
+      }
+    ]
+  },
+  "audit_log": "[{\"changed_at\":\"2025-10-24T00:39:53.257+00:00\",\"changed\":[\"cloned from \\\"ai-generated-design-lesson8-vocab-panel-userflow-test-2025\\\"\"],\"cloned_from\":\"ai-generated-design-lesson8-vocab-panel-userflow-test-2025\"},{\"changed_at\":\"2025-10-24 00:40:34 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
+}]]></config>
+</Panels>

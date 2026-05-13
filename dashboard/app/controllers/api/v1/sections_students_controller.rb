@@ -11,9 +11,10 @@ class Api::V1::SectionsStudentsController < Api::V1::JSONApiController
     summaries = @section.students.includes(:latest_parental_permission_request).map do |student|
       # Student depends on this section for login if student's account is
       # teacher managed and only belongs to the one section.
-      student.summarize.merge(depends_on_this_section_for_login:
-        student.teacher_managed_account? &&
-          student.sections_as_student.size == 1
+      student.summarize.merge(
+        depends_on_this_section_for_login:
+          student.teacher_managed_account? &&
+            student.sections_as_student.size == 1
       )
     end
     render json: summaries
@@ -35,7 +36,7 @@ class Api::V1::SectionsStudentsController < Api::V1::JSONApiController
   def update
     # Teachers aren't allowed to update other teachers' information, even if the teacher is
     # a student in a section.
-    return head :forbidden if @student.teacher?
+    return head :forbidden unless can?(:manage, @student) && !@student.teacher?
 
     @student.reset_secrets if params[:secrets] == User::RESET_SECRETS
 

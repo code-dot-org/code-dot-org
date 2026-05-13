@@ -16,7 +16,7 @@
     "display_name": "Sell All Donuts",
     "bubble_choice_description": "Update the inventory for all food trucks after selling all available donuts.",
     "thumbnail_url": "https://images.code.org/0e2d95bd6148a891d73d929a476ba26b-image-1634141040916.png",
-    "ai_tutor_available": true
+    "ai_tutor_available": "false"
   },
   "published": true,
   "audit_log": "[{\"changed_at\":\"2021-09-20 16:42:43 +0000\",\"changed\":[\"encrypted_examples\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-10-13 16:05:42 +0000\",\"changed\":[\"long_instructions\",\"contained_level_names\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-10-13 16:08:00 +0000\",\"changed\":[\"encrypted_examples\",\"display_name\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-10-13 16:22:54 +0000\",\"changed\":[\"encrypted_examples\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"}]"

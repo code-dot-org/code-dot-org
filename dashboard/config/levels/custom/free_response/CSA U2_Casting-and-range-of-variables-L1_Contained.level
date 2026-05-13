@@ -14,7 +14,7 @@
     "allow_multiple_attempts": "false",
     "skip_dialog": true,
     "skip_sound": true,
-    "ai_tutor_available": true
+    "ai_tutor_available": "false"
   },
   "published": true
 }]]></config>

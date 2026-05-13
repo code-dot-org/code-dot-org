@@ -15,7 +15,7 @@
     "display_name": "Assign Stars",
     "bubble_choice_description": "Find the overall sentiment of text and assign star ratings based on its sentiment.",
     "thumbnail_url": "https://images.code.org/12ef7dab8c8cc924603219d27c6a78ad-rating.png",
-    "ai_tutor_available": true
+    "ai_tutor_available": "false"
   },
   "published": true,
   "audit_log": "[{\"changed_at\":\"2022-04-14T19:45:14.276+00:00\",\"changed\":[\"cloned from \\\"CSA U6L10-L4c CR_2022\\\"\"],\"cloned_from\":\"CSA U6L10-L4c CR_2022\"},{\"changed_at\":\"2022-04-14 19:45:15 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-05-06 20:28:41 +0000\",\"changed\":[\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-05-06 20:45:55 +0000\",\"changed\":[\"long_instructions\",\"encrypted_examples\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-05-07 19:31:15 +0000\",\"changed\":[\"long_instructions\",\"encrypted_examples\",\"display_name\",\"bubble_choice_description\",\"thumbnail_url\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-06-21 19:10:10 +0000\",\"changed\":[\"long_instructions\",\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"

@@ -1,3 +1,9 @@
+@import 'color.scss';
+
+.teacherPanelContainer {
+  color: $default_text;
+}
+
 .sortDropdown {
   display: block;
   text-align: center;

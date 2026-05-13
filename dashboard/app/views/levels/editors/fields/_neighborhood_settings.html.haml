@@ -1,0 +1,9 @@
+%h1.control-legend{data: {toggle: "collapse", target: "#neighborhood-settings-container"}}
+  Neighborhood Settings
+
+#neighborhood-settings-container.in.collapse
+  #neighborhood-settings-editor
+
+- content_for :body_scripts do
+  %script{src: webpack_asset_path('js/levels/editors/fields/_neighborhood_settings.js'),
+        data: {serializedmaze: @level.properties["serialized_maze"].to_json}}

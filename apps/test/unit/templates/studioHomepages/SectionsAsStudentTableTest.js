@@ -101,4 +101,28 @@ describe('SectionsAsStudentTable', () => {
     expect(wrapper.containsMatchingElement(<td>Clever</td>));
     expect(wrapper.containsMatchingElement(<td>OrThisEither</td>)).toBe(false);
   });
+
+  it('does not show a unit link for a single-unit course', () => {
+    const singleUnitCourseSection = [
+      {
+        name: 'Period 5',
+        loginType: 'picture',
+        teacherName: 'Ms. Frizzle',
+        assignedTitle: 'Single Unit Course',
+        linkToAssigned:
+          'https://studio.code.org/courses/ui-test-single-unit-course',
+        code: 'ClassFiveCode',
+      },
+    ];
+
+    const wrapper = wrapped(
+      <SectionsAsStudentTable
+        sections={singleUnitCourseSection}
+        canLeave={false}
+      />
+    );
+    expect(wrapper.containsMatchingElement(<div>Current unit:</div>)).toBe(
+      false
+    );
+  });
 });

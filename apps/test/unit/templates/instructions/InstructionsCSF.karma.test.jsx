@@ -1,6 +1,7 @@
 import {assert} from 'chai'; // eslint-disable-line no-restricted-imports
 import {mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
+import {act} from 'react-dom/test-utils';
 import {Provider} from 'react-redux';
 
 import isRtl from '@cdo/apps/code-studio/isRtlRedux';
@@ -17,8 +18,11 @@ import instructions, {
 } from '@cdo/apps/redux/instructions';
 import pageConstants, {setPageConstants} from '@cdo/apps/redux/pageConstants';
 import InstructionsCSF from '@cdo/apps/templates/instructions/InstructionsCSF';
+import {convertXmlToBlockly} from '@cdo/apps/templates/instructions/utils';
 
 describe('InstructionsCSF', () => {
+  let wrapper;
+
   beforeEach(() => {
     stubRedux();
     registerReducers({authoredHints, instructions, isRtl, pageConstants});
@@ -36,35 +40,48 @@ describe('InstructionsCSF', () => {
   });
 
   afterEach(() => {
+    if (wrapper) {
+      wrapper.unmount();
+      wrapper = undefined;
+    }
     restoreRedux();
   });
 
-  it('can change feedback when rendering different blockly blocks', () => {
-    const wrapper = mount(
+  it('can change feedback when rendering different blockly blocks', async () => {
+    wrapper = mount(
       <Provider store={getStore()}>
         <InstructionsCSF {...DEFAULT_PROPS} />
       </Provider>,
       {attachTo: document.getElementById('container')} // needed for getScrollTarget
     );
 
-    failWithMessage('Repeat block: <xml><block type="controls_repeat"/></xml>');
+    await failWithMessage(
+      'Repeat block: <xml><block type="controls_repeat"/></xml>'
+    );
     wrapper.update();
-    assertFeedbackContainsText(wrapper, '>repeat</text>');
+    await assertFeedbackContainsText(wrapper, '>repeat</text>');
 
-    failWithMessage('If block: <xml><block type="controls_if"/></xml>');
+    await failWithMessage('If block: <xml><block type="controls_if"/></xml>');
     wrapper.update();
-    assertFeedbackContainsText(wrapper, '>if</text>');
+    await assertFeedbackContainsText(wrapper, '>if</text>');
   });
 
-  function failWithMessage(message) {
-    getStore().dispatch(setFeedback({message, isFailure: true}));
+  async function failWithMessage(message) {
+    await act(async () => {
+      getStore().dispatch(setFeedback({message, isFailure: true}));
+      await Promise.resolve();
+    });
   }
 
-  function assertFeedbackContainsText(wrapper, text) {
-    const html = wrapper
+  async function assertFeedbackContainsText(wrapper, text) {
+    const containerNode = wrapper
       .find('.uitest-topInstructions-inline-feedback')
       .first()
-      .html();
+      .getDOMNode();
+    // Ensure embedded workspaces are fully created before we inspect the HTML.
+    // convertXmlToBlockly returns a Promise when it does async theme lookup.
+    await Promise.resolve(convertXmlToBlockly(containerNode));
+    const html = containerNode.innerHTML;
     assert.include(html, text);
   }
 });

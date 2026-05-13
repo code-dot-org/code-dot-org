@@ -1,7 +1,7 @@
 import {render, screen} from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import React from 'react';
-import {act} from 'react-dom/test-utils'; // eslint-disable-line no-restricted-imports
+import {act} from 'react-dom/test-utils';
 import sinon, {SinonStub} from 'sinon'; // eslint-disable-line no-restricted-imports
 
 import {
@@ -19,7 +19,10 @@ const DEFAULT_PROPS = {
 
 describe('LTI Iframe Page Test', () => {
   beforeEach(() => sinon.stub(window, 'open'));
-  afterEach(() => (window.open as SinonStub).restore());
+  afterEach(() => {
+    (window.open as SinonStub).restore();
+    jest.useRealTimers();
+  });
 
   it('should open a new window when the button is pressed', async () => {
     const user = userEvent.setup();

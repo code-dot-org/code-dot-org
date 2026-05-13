@@ -1,0 +1,11 @@
+name 'ai-and-algorithmic-decisions-lesson9-level9_2025'
+display_name 'Creating a Multi-Decision Flowchart'
+description 'Choose one of the levels and create a conditionals flowchart to represent the scenario.'
+uses_lab2
+
+sublevels
+level 'ai-and-algorithmic-decisions-lesson9-level9a_2025'
+level 'ai-and-algorithmic-decisions-lesson9-level9b_2025'
+level 'ai-and-algorithmic-decisions-lesson9-level9c_2025'
+level 'ai-and-algorithmic-decisions-lesson9-level9d_2025'
+level 'ai-and-algorithmic-decisions-lesson9-level9e_2025'

@@ -1,0 +1,21 @@
+name 'csaif_pl_ai_02_06b'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# AI Prompt Framework
+
+<p align="center">
+<img src="https://images.code.org/a9b6ae8f94bfa64afbf2af4a60ec6609-Screenshot 2025-04-07 at 2.01.43 PM.png" alt="lesson plan diagram" width="70%" style="border-radius:10px; border: 5px solid black;">
+</p>
+
+## 📝 To Do
+
+#### Click continue to learn more about the TaCo FoRT prompt framework and then try it out in an AI Chat level. Think about *how various parts of the prompt can impact the output provided by the AI.*
+
+<br>
+
+<p style="font-size: 18px; font-weight: bold; background-color: #F5F7F8; padding: 10px; border-left: 5px solid #8148B2; display: inline-block;">
+    ➡️ This activity is from Lesson 8. You can find more details in the full <a href='https://studio.code.org/s/aif1-2025/lessons/8' target='_blank' rel='noopener noreferrer' style='text-decoration: none; font-weight: bold;'>Lesson Plan</a>.
+</p>
+MARKDOWN

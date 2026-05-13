@@ -28,7 +28,7 @@
         "tabOrder": 2
       }
     },
-    "ai_tutor_available": true,
+    "ai_tutor_available": "false",
     "serialized_maze": [
       [
         {

@@ -8,7 +8,7 @@ This is the client-side code for **Music Lab**, as instantiated by a `music` lev
 
 **Music Lab** is a powerful lab for creating music using code. It includes the following features:
 
-- Uses Google Blockly for editing user code.
+- Uses Blockly for editing user code.
 - The user code generates a timeline of audio events, which is rendered.
 - Uses WebAudio to play back the audio events.
 - The rendered timeline of audio events reflects code changes instantly.
@@ -69,7 +69,7 @@ When a user edits their code or runs the project, Blockly blocks are compiled to
 
 During execution, the execution runtime is provided a [Sequencer](./player/sequencer/Sequencer.ts) whose functions are called by the generator functions of each block ([example](./blockly/blocks/simple2.js#L90)). The Sequencer encapsulates all sequencing logic and there are a few different implementations for the different programming models supported (the [Simple2Sequencer](./player/sequencer/Simple2Sequencer.ts) being the primary one, corresponding to the "simple2" model). As a result of these function calls, the Sequencer assembles a list of [PlaybackEvents](./player/interfaces/PlaybackEvent.ts) based on the contents of each block, representing the full set of events in the song.
 
-When playback starts, the list of PlaybackEvents is handed to the [MusicPlayer](./player/MusicPlayer.ts) which handles all playback related functions. Internally, the MusicPlayer delegates to either a [ToneJSPlayer](./player/ToneJSPlayer.ts) which uses the ToneJS library, or a [SamplePlayer](./player/SamplePlayer.ts) which uses Web Audio APIs directly. The SamplePlayer code was used initially, while the ToneJSPlayer code was added more recently when more advanced functionality was required (such as pitch shifting and time stretching). Both player implementations are abstracted behind an [AudioPlayer](./player/types.ts) interface.
+When playback starts, the list of PlaybackEvents is handed to the [MusicPlayer](./player/MusicPlayer.ts) which handles all playback related functions. Internally, the MusicPlayer delegates to a [ToneJSPlayer](./player/ToneJSPlayer.ts) which uses the ToneJS library. The player is abstracted behind an [AudioPlayer](./player/types.ts) interface which was previously used for supporting an older player implementation that interfaced with Web Audio APIs directly.
 
 ### Handling Updates Mid-Playback
 
@@ -91,7 +91,6 @@ The contents of a user's project are represented as various types corresponding 
 
 - [SampleEvents](./player/types.ts#L100) represent a single event to be played by either of the internal player implementations, and therefore used in the [AudioPlayer](./player/types.ts#L8) interface. The MusicPlayer converts PlaybackEvents to SampleEvents. The playback time for a SampleEvent is also 1-based, corresponding to the number of measures.
   - The [ToneJSPlayer](./player/ToneJSPlayer.ts) internally converts the the playback time to a "transport time" used by ToneJS APIs. This is similar, but instead expressed as a string in the format "bars:beats:sixteenths" and 0-based. For example, a playback time of 1.5 would be transport time of "0:2:0".
-  - The [SamplePlayer](./player/SamplePlayer.ts) internally converts the playback time to a millisecond offset time from the play start time. This offset time is based on the project's BPM.
 - [SamplerSequences](./player/types.ts#L122) similarly represent a set of notes to be played by a sampler instrument. Currently, only the ToneJSPlayer supports playing SamplerSequences (this is indicated by the [supportsSamplers()](./player/types.ts#L10) function on the AudioPlayer interface).
 
 ## View Components
@@ -101,4 +100,4 @@ The contents of a user's project are represented as various types corresponding 
 - There are a few view components rendered by custom Blockly fields. These include:
   - [SoundsPanel](./views/SoundsPanel.tsx) which represents the sound picker UI.
   - [ChordPanel](./views/ChordPanel.tsx) which represents the "play notes" keyboard/chord selection UI.
-  - [PatternPanel](./views/PatternPanel.tsx) which represents the "play drums" grid drum editor.
+  - [InstrumentGrid](./views/InstrumentGrid/index.tsx) which represents the "play tunes" and "play drums" grid editor.

@@ -55,8 +55,8 @@ export default function VersionUnitDropdowns({
       updateCourse({
         ...sectionCourse,
         unitId: unitId,
-        hasLessonExtras: selectedUnit.lesson_extras_available,
-        hasTextToSpeech: selectedUnit.text_to_speech_enabled,
+        lessonExtrasAvailable: selectedUnit.lesson_extras_available,
+        textToSpeechEnabled: selectedUnit.text_to_speech_enabled,
       });
     }
   };
@@ -76,7 +76,9 @@ export default function VersionUnitDropdowns({
           orderedUnits &&
           Object.entries(orderedUnits).length > 1 && (
             <span className={moduleStyles.unitDropdown}>
-              <div>{i18n.startWithUnit()}</div>
+              <div className={moduleStyles.unitDropdownLabel}>
+                {i18n.startWithUnit()}
+              </div>
               <select
                 id="uitest-secondary-assignment"
                 value={selectedUnitId}

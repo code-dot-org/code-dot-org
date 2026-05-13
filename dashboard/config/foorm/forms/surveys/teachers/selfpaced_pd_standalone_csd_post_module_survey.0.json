@@ -211,7 +211,7 @@
         {
           "type": "radiogroup",
           "name": "permission_to_quote",
-          "title": "I give Code.org permission to quote my written comments from today for use on social media, promotional materials, and other communications.",
+          "title": "I give Code.org permission to quote my written comments from this survey for use on social media, promotional materials, and other communications.",
           "choices": [
             {
               "value": "yes",

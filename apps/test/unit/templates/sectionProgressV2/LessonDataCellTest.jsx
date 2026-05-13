@@ -8,7 +8,6 @@ const DEFAULT_PROPS = {
   sectionId: 1,
   studentLessonProgress: {
     incompletePercent: 20,
-    imperfectPercent: 20,
     completedPercent: 60,
     timeSpent: 300,
     lastTimestamp: 1614841198,
@@ -30,6 +29,7 @@ describe('LevelDataCell', () => {
   it('Shows empty if no progress', () => {
     renderDefault({studentLessonProgress: null});
 
+    // eslint-disable-next-line no-restricted-properties
     const cell = screen.getByTestId('lesson-data-cell-1-1');
     expect(cell.children).toHaveLength(0);
   });
@@ -50,7 +50,6 @@ describe('LevelDataCell', () => {
     renderDefault({
       studentLessonProgress: {
         incompletePercent: 0,
-        imperfectPercent: 0,
         completedPercent: 100,
         timeSpent: 300,
         lastTimestamp: 1614841198,
@@ -71,7 +70,6 @@ describe('LevelDataCell', () => {
       metadataExpanded: true,
       studentLessonProgress: {
         incompletePercent: 20,
-        imperfectPercent: 20,
         completedPercent: 60,
         timeSpent: 300,
         lastTimestamp: 1614991198,
@@ -91,7 +89,6 @@ describe('LevelDataCell', () => {
       metadataExpanded: true,
       studentLessonProgress: {
         incompletePercent: 20,
-        imperfectPercent: 20,
         completedPercent: 60,
         timeSpent: 621,
         lastTimestamp: 1614841198,

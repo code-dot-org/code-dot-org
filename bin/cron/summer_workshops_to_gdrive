@@ -23,14 +23,14 @@ def get_rows
   workshops = []
 
   # The first row is an array of strings, one for each attribute name.
-  workshops << Api::V1::Pd::WorkshopDownloadSerializer.new(Pd::Workshop.first).attributes.keys.map(&:to_s)
+  workshops << Api::V1::Pd::WorkshopSummerTrackerSerializer.new(Pd::Workshop.first).attributes.keys.map(&:to_s)
 
   # Subsequent rows are for each workshop.
   Pd::Workshop.
     where(subject: subjects).
     scheduled_start_on_or_after(EARLIEST_WORKSHOP_START_DATE).
     scheduled_start_on_or_before(LATEST_WORKSHOP_START_DATE).find_each do |workshop|
-      workshops << Api::V1::Pd::WorkshopDownloadSerializer.new(workshop).attributes.values
+      workshops << Api::V1::Pd::WorkshopSummerTrackerSerializer.new(workshop).attributes.values
     end
 
   workshops

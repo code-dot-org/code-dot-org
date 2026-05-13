@@ -74,6 +74,7 @@ const COURSE_SUMMARY = {
       title: 'CSP Unit 1',
       name: 'csp1',
       description: 'desc',
+      scriptPath: '/courses/csp/units/1',
     },
     {
       course_id: 30,
@@ -81,6 +82,7 @@ const COURSE_SUMMARY = {
       title: 'CSP Unit 2',
       name: 'csp2',
       description: 'desc',
+      scriptPath: '/courses/csp/units/2',
     },
   ],
   show_assign_button: true,
@@ -88,6 +90,7 @@ const COURSE_SUMMARY = {
   course_versions: {},
   announcements: [fakeTeacherAnnouncement],
   has_verified_resources: false,
+  ai_chat_tools_dependency: 'none',
 };
 
 const sections = [
@@ -115,6 +118,19 @@ const sections = [
     courseVersionName: 'csd-2024',
     scriptId: null,
   },
+  {
+    id: 14,
+    name: 'Period 4',
+    course_id: 155,
+    unitName: 'ui-test-single-unit-2025',
+    courseVersionName: 'ui-test-single-unit-course-2025',
+    scriptId: null,
+    is_assigned_single_unit_course: true,
+    script: {
+      name: 'ui-test-single-unit-2025',
+      id: 1,
+    },
+  },
 ];
 
 describe('TeacherCourseOverview', () => {
@@ -141,9 +157,10 @@ describe('TeacherCourseOverview', () => {
 
     fetchSpy = jest.spyOn(HttpClient, 'fetchJson').mockResolvedValue({
       value: {
-        unit_group: COURSE_SUMMARY,
+        course_summary: COURSE_SUMMARY,
         is_verified_instructor: true,
         hidden_scripts: [],
+        redirect_to_course_url: null,
       },
       response: new Response(),
     });
@@ -201,12 +218,12 @@ describe('TeacherCourseOverview', () => {
     expect(fetchSpy).not.toHaveBeenCalled();
   });
 
-  it('redirects to unit if standalone unit', async () => {
-    getStore().dispatch(selectSection(11));
+  it('redirects to unit if single-unit course', async () => {
+    getStore().dispatch(selectSection(14));
 
-    renderDefault('/sections/11/courses/csd-2024');
+    renderDefault('/sections/14/courses/csd-2024');
 
-    expect(navigate).toHaveBeenCalledWith('../unit/coursea-2024', {
+    expect(navigate).toHaveBeenCalledWith('../unit/ui-test-single-unit-2025', {
       replace: true,
     });
     expect(fetchSpy).not.toHaveBeenCalled();

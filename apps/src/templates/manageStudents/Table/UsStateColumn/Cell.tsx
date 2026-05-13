@@ -1,12 +1,13 @@
-import React from 'react';
-import {connect} from 'react-redux';
+import SimpleDropdown from '@code-dot-org/component-library/dropdown/simpleDropdown';
+import React, {useCallback} from 'react';
 
 import {STATE_CODES} from '@cdo/apps/geographyConstants';
-import {EVENTS, PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants';
+import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import {editStudent} from '@cdo/apps/templates/manageStudents/manageStudentsRedux';
-import {selectedSection} from '@cdo/apps/templates/teacherDashboard/teacherSectionsReduxSelectors';
-import {RootState} from '@cdo/apps/types/redux';
+import {selectedSectionSelector} from '@cdo/apps/templates/teacherDashboard/teacherSectionsReduxSelectors';
+import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
+import i18n from '@cdo/locale';
 
 import {CellProps} from './interface';
 
@@ -15,46 +16,52 @@ const Cell: React.FC<CellProps> = ({
   value,
   editedValue = '',
   isEditing = false,
-  // Provided by redux
-  currentUser,
-  section,
-  editStudent,
 }) => {
-  const handleChange = (event: {target: {value: string}}) => {
-    const selectedUsState = event.target.value || null;
+  const currentUser = useAppSelector(state => state.currentUser);
+  const section = useAppSelector(state => selectedSectionSelector(state));
+  const dispatch = useAppDispatch();
+  const handleChange = useCallback(
+    (event: React.ChangeEvent<HTMLSelectElement>) => {
+      const selectedUsState = event.target.value || null;
 
-    editStudent(studentId, {usState: selectedUsState});
+      dispatch(editStudent(studentId, {usState: selectedUsState}));
 
-    analyticsReporter.sendEvent(
-      EVENTS.SECTION_STUDENTS_TABLE_US_STATE_SET,
-      {
+      analyticsReporter.sendEvent(EVENTS.SECTION_STUDENTS_TABLE_US_STATE_SET, {
         studentId: studentId || null,
         sectionId: section.id,
         sectionLoginType: section.loginType,
         teacherUsState: currentUser?.usStateCode,
         originalUsState: value,
         selectedUsState,
-      },
-      PLATFORMS.STATSIG
-    );
-  };
+      });
+    },
+    [
+      currentUser?.usStateCode,
+      dispatch,
+      section.id,
+      section.loginType,
+      studentId,
+      value,
+    ]
+  );
+
+  const items = [
+    {value: '', text: ''},
+    ...STATE_CODES.map(code => ({value: code, text: code})),
+  ];
 
   return (
     <>
       {isEditing ? (
-        <select
-          style={{width: 60, margin: 0}}
+        <SimpleDropdown
           name="usState"
-          value={editedValue}
+          labelText={i18n.usState()}
+          isLabelVisible={false}
+          size="s"
+          items={items}
+          selectedValue={editedValue}
           onChange={handleChange}
-        >
-          <option value="" />
-          {STATE_CODES.map(code => (
-            <option key={code} value={code}>
-              {code}
-            </option>
-          ))}
-        </select>
+        />
       ) : (
         value
       )}
@@ -62,14 +69,4 @@ const Cell: React.FC<CellProps> = ({
   );
 };
 
-export default connect(
-  (state: RootState) => ({
-    currentUser: state.currentUser,
-    section: selectedSection(state),
-  }),
-  dispatch => ({
-    editStudent(id: number, studentData: {usState: string | null}) {
-      dispatch(editStudent(id, studentData));
-    },
-  })
-)(Cell);
+export default Cell;

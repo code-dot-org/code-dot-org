@@ -1,0 +1,31 @@
+<Pythonlab>
+  <config><![CDATA[{
+  "game_id": 72,
+  "created_at": "2025-12-19T16:13:52.000Z",
+  "level_num": "custom",
+  "user_id": 2,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "## Sample Python Lab Project Template Level",
+    "hide_share_and_remix": "false",
+    "start_sources": {
+      "files": {
+        "0": {
+          "id": "0",
+          "name": "main.py",
+          "language": "py",
+          "contents": "print(\"Hello from sample project template level!\")",
+          "folderId": "0",
+          "active": true,
+          "open": true
+        }
+      },
+      "folders": {
+      }
+    },
+    "name_suffix": "_cs50"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-12-19T16:13:52.886+00:00\",\"changed\":[\"cloned from \\\"pythonlab_test_project_template\\\"\"],\"cloned_from\":\"pythonlab_test_project_template\"}]"
+}]]></config>
+</Pythonlab>

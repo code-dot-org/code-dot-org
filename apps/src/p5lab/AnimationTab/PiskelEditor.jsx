@@ -4,8 +4,6 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import {connect} from 'react-redux';
 
-import firehoseClient from '@cdo/apps/metrics/firehose';
-
 import {editAnimation, removePendingFramesAction} from '../redux/animationList';
 import {show, Goal} from '../redux/animationPicker';
 import * as shapes from '../shapes';
@@ -56,13 +54,6 @@ class PiskelEditor extends React.Component {
      *          in the editor.
      */
     this.loadedAnimation_ = null;
-
-    /**
-     * @private {boolean} Tracks whether we have logged a Firehose event yet.
-     * - The Piskel editor saves continuously, so we only want to log the first
-     * event to Firehose.
-     */
-    this.hasLoggedFirehoseEvent_ = false;
 
     this.piskel = new PiskelApi();
     this.piskel.attachToPiskel(this.iframe);
@@ -205,16 +196,6 @@ class PiskelEditor extends React.Component {
   onAnimationSaved = message => {
     if (this.isLoadingAnimation_) {
       return;
-    }
-
-    if (!this.hasLoggedFirehoseEvent_) {
-      firehoseClient.putRecord({
-        study: 'animation-library',
-        study_group: 'control-2020',
-        event: 'asset-editing',
-        data_string: this.props.isBlockly ? 'spritelab' : 'gamelab',
-      });
-      this.hasLoggedFirehoseEvent_ = true;
     }
 
     this.props.editAnimation(this.loadedAnimation_, {

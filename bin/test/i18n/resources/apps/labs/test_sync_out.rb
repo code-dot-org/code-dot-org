@@ -52,7 +52,7 @@ describe I18n::Resources::Apps::Labs::SyncOut do
 
     before do
       I18n::Utils::MalformedI18nReporter.stubs(:new).with(i18n_locale).returns(malformed_i18n_reporter)
-      PegasusLanguages.stubs(:get_crowdin_name_and_locale).returns([{locale_s: i18n_locale}])
+      Cdo::I18n.stubs(:available_languages).returns([{locale_s: i18n_locale}])
       I18nScriptUtils.stubs(:to_js_locale).with(i18n_locale).returns(js_locale)
 
       FileUtils.mkdir_p(File.dirname(i18n_original_file_path))

@@ -1,25 +1,22 @@
+import {Typography, Button as MuiButton} from '@mui/material';
 import React from 'react';
-import {useSelector} from 'react-redux';
 import {useNavigate, NavLink} from 'react-router-dom';
 
-import {LinkButton} from '@cdo/apps/componentLibrary/button';
-import Button from '@cdo/apps/componentLibrary/button/Button';
-import {Heading3, BodyTwoText} from '@cdo/apps/componentLibrary/typography';
 import emptyDesk from '@cdo/apps/templates/teacherDashboard/images/empty_desk.svg';
 import blankScreen from '@cdo/apps/templates/teacherDashboard/images/no_curriculum_assigned.svg';
 import TeacherDashboardEmptyState from '@cdo/apps/templates/teacherNavigation/images/TeacherDashboardEmptyState.svg';
+import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 import i18n from '@cdo/locale';
 
 import {TEACHER_NAVIGATION_PATHS} from './TeacherNavigationPaths';
 
 import styles from './teacher-navigation.module.scss';
-import dashboardStyles from '@cdo/apps/templates/teacherDashboard/teacher-dashboard.module.scss';
 
 interface ElementOrEmptyPageProps {
   showNoStudents: boolean;
   showNoCurriculumAssigned: boolean;
   showNoUnitAssigned?: boolean;
-  courseName?: string;
+  courseName?: string | null;
   element: React.ReactElement;
 }
 
@@ -30,9 +27,8 @@ const ElementOrEmptyPage: React.FC<ElementOrEmptyPageProps> = ({
   courseName,
   element,
 }) => {
-  const isLoadingSectionData = useSelector(
-    (state: {teacherSections: {isLoadingSectionData: boolean}}) =>
-      state.teacherSections.isLoadingSectionData
+  const isLoadingSectionData = useAppSelector(
+    state => state.teacherSections.isLoadingSectionData
   );
 
   const textDescription = () => {
@@ -60,17 +56,34 @@ const ElementOrEmptyPage: React.FC<ElementOrEmptyPageProps> = ({
       return (
         <NavLink
           key={TEACHER_NAVIGATION_PATHS.roster}
-          to={TEACHER_NAVIGATION_PATHS.roster}
+          to={'../' + TEACHER_NAVIGATION_PATHS.roster}
           className={styles.navLink}
         >
           {i18n.addStudents()}
         </NavLink>
       );
     } else if (showNoCurriculumAssigned) {
-      return <LinkButton href="/catalog" text={i18n.browseCurriculum()} />;
+      return (
+        <MuiButton
+          variant="contained"
+          color="primary"
+          size="medium"
+          href="/catalog"
+        >
+          {i18n.browseCurriculum()}
+        </MuiButton>
+      );
     } else {
       return (
-        <Button onClick={navigateToCoursePage} text={i18n.assignAUnit()} />
+        <MuiButton
+          variant="contained"
+          color="primary"
+          size="medium"
+          onClick={navigateToCoursePage}
+          type="button"
+        >
+          {i18n.assignAUnit()}
+        </MuiButton>
       );
     }
   };
@@ -96,13 +109,15 @@ const ElementOrEmptyPage: React.FC<ElementOrEmptyPageProps> = ({
     return element;
   } else {
     return (
-      <div className={dashboardStyles.emptyClassroomDiv}>
-        <div className={dashboardStyles.emptyClassroomDiv}>
-          {displayedImage()}
-          <Heading3 className={styles.topPadding}>{heading}</Heading3>
-          <BodyTwoText>{textDescription()}</BodyTwoText>
-          {link()}
-        </div>
+      <div className={styles.emptyClassroomDiv}>
+        <div className={styles.emptyClassroomImage}>{displayedImage()}</div>
+        <Typography className={styles.topPadding} variant="h3" gutterBottom>
+          {heading}
+        </Typography>
+        <Typography variant="body2" gutterBottom>
+          {textDescription()}
+        </Typography>
+        {link()}
       </div>
     );
   }

@@ -24,6 +24,7 @@ export default class Spinner extends React.Component {
         icon="spinner"
         className={`fa-pulse ${displaySize}`}
         title={i18n.loading()}
+        id="uitest-spinner"
       />
     );
   }

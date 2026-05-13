@@ -5,7 +5,7 @@ wrong 'The dataset contains 789 columns and 23 rows.'
 right 'The dataset contains 23 columns and 789 rows.'
 wrong 'The dataset has 812 data points.'
 wrong 'The dataset has 812 columns and rows combined.'
-allow_multiple_attempts false
+allow_multiple_attempts true
 
 markdown <<MARKDOWN
 Kawhi runs the code below and gets `(789, 23)` as the output in the console. 

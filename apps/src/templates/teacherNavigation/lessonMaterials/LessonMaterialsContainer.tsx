@@ -1,12 +1,35 @@
+import {Dialog} from '@code-dot-org/component-library/dialog';
+import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
+import {Typography, Button as MuiButton} from '@mui/material';
 import _ from 'lodash';
-import React, {useState, useMemo, useCallback} from 'react';
-import {useLoaderData} from 'react-router-dom';
+import React, {useState, useMemo} from 'react';
+import {useSelector} from 'react-redux';
 
-import {SimpleDropdown} from '@cdo/apps/componentLibrary/dropdown';
-import {getStore} from '@cdo/apps/redux';
-import {getAuthenticityToken} from '@cdo/apps/util/AuthenticityTokenStore';
+import {THREAD_TYPES} from '@cdo/apps/aiDifferentiation/constants';
+import {
+  setChatIsOpen,
+  fetchThreadMessages,
+} from '@cdo/apps/aiDifferentiation/redux';
+import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
+import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
+import {
+  asyncLoadCoursesWithProgress,
+  getSelectedUnitId,
+} from '@cdo/apps/redux/unitSelectionRedux';
+import Spinner from '@cdo/apps/sharedComponents/Spinner';
+import {selectedSectionSelector} from '@cdo/apps/templates/teacherDashboard/teacherSectionsReduxSelectors';
+import experiments from '@cdo/apps/util/experiments';
+import HttpClient from '@cdo/apps/util/HttpClient';
+import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
+import {AiDiffContext} from '@cdo/generated-scripts/sharedConstants';
 import i18n from '@cdo/locale';
+import AIBotTAIcon from '@cdo/static/ai-bot-ta-tag-icon.png';
 
+import LessonSelector from '../../teacherDashboardShared/LessonSelector';
+import UnitSelectorV2 from '../../teacherDashboardShared/UnitSelectorV2';
+
+import CustomLessonResources from './CustomLessonResources';
+import {LessonMaterialsEmptyState} from './LessonMaterialsEmptyState';
 import {Lesson} from './LessonMaterialTypes';
 import LessonResources from './LessonResources';
 import UnitResourcesDropdown from './UnitResourcesDropdown';
@@ -15,82 +38,303 @@ import styles from './lesson-materials.module.scss';
 
 interface LessonMaterialsData {
   unitId: number;
+  unitName?: string;
   title: string;
   unitNumber: number;
   scriptOverviewPdfUrl: string;
   scriptResourcesPdfUrl: string;
   lessons: Lesson[];
+  hasNumberedUnits: boolean;
+  hasUnnumberedLessons: boolean;
+  versionYear?: number;
 }
 
-const lessonMaterialsCachedLoader = _.memoize(async assignedUnitId =>
-  getAuthenticityToken()
-    .then(token =>
-      fetch(`/dashboardapi/lesson_materials/${assignedUnitId}`, {
-        method: 'GET',
-        headers: {
-          'Content-Type': 'application/json',
-          'X-CSRF-Token': token,
-        },
-      })
-    )
-    .then(response => response.json())
-);
+interface LessonSummaryInfo {
+  learning_objective: string;
+  lesson_beats: string[];
+  misconceptions: string[];
+  tips: string[];
+}
 
-export const lessonMaterialsLoader =
-  async (): Promise<LessonMaterialsData | null> => {
-    const state = getStore().getState().teacherSections;
-    const selectedSectionId = state.selectedSectionId;
-    const sectionData = state.sections[selectedSectionId];
+interface LessonSummaryInfoResponse {
+  lesson_summary: string;
+  script: string;
+}
 
-    // NOTE: this page is not working for stand alone courses.
-    // this is because there is no "unitId" in the sectionData for stand alone courses.
+interface AIFStatus {
+  aif: boolean;
+}
 
-    if (!selectedSectionId || !sectionData.unitId) {
-      return null;
+const lessonMaterialsApiCall = (unitId: number) =>
+  HttpClient.fetchJson<LessonMaterialsData>(
+    `/dashboardapi/lesson_materials/${unitId}`
+  ).then(response => response?.value);
+
+interface LessonMaterialsContainerProps {
+  showNoCurriculumAssigned: boolean;
+}
+
+const LessonMaterialsContainer: React.FC<LessonMaterialsContainerProps> = ({
+  showNoCurriculumAssigned,
+}) => {
+  const [lessonMaterials, setLessonMaterials] =
+    useState<LessonMaterialsData | null>(null);
+  const [isLoading, setIsLoading] = useState<boolean>(true);
+  const [aiTALessonSummaryInfo, setAITALessonSummaryInfo] =
+    useState<LessonSummaryInfo | null>(null);
+  const [showTranscriptDialog, setShowTranscriptDialog] = useState(false);
+  const [finishedListeningToSummary, setFinishedListeningToSummary] =
+    useState(false);
+  const [canShowLessonSummaries, setCanShowLessonSummaries] = useState(false);
+  const [canShowPodcasts, setCanShowPodcasts] = useState(false);
+  const [audioSummaryTranscript, setAudioSummaryTranscript] =
+    useState<string>('');
+  const audioPlayerRef = React.useRef<HTMLAudioElement | null>(null);
+
+  const userId = useAppSelector(state => state.currentUser.userId);
+
+  const selectedSection = useAppSelector(selectedSectionSelector);
+
+  const needsReload = useAppSelector(
+    state => state.teacherSections.needsReload
+  );
+
+  const hasCompletedPersonalizationQuiz = useAppSelector(
+    state => state.currentUser.hasCompletedPersonalizationQuiz
+  );
+
+  const selectedUnitId = useSelector(getSelectedUnitId);
+
+  const dispatch = useAppDispatch();
+
+  const lessonMaterialsCachedLoader = React.useMemo(
+    () => _.memoize(lessonMaterialsApiCall),
+    []
+  );
+
+  React.useEffect(() => {
+    dispatch(asyncLoadCoursesWithProgress());
+  }, [dispatch]);
+
+  const isLoadingCoursesWithProgress = useSelector(
+    (state: {unitSelection: {isLoadingCoursesWithProgress: boolean}}) =>
+      state.unitSelection.isLoadingCoursesWithProgress
+  );
+
+  const unitToLoad = React.useMemo(
+    () =>
+      !!selectedSection.unitId
+        ? selectedUnitId || selectedSection.unitId
+        : null,
+    [selectedSection.unitId, selectedUnitId]
+  );
+
+  const showAITALessonSummary = useAppSelector(
+    state => state.currentUser.showAITALessonSummary
+  );
+
+  const showAITAPodcasts = useAppSelector(
+    state => state.currentUser.showAITAPodcasts
+  );
+
+  React.useEffect(() => {
+    const selectedSectionId = selectedSection.id;
+    if (!selectedSectionId || !unitToLoad) {
+      setLessonMaterials(null);
+      setIsLoading(false);
+      return;
     }
 
-    return lessonMaterialsCachedLoader(sectionData.unitId);
-  };
+    setIsLoading(true);
 
-const createDisplayName = (lessonName: string, lessonPosition: number) => {
-  return i18n.lessonNumberAndName({
-    lessonNumber: lessonPosition,
-    lessonName: lessonName,
-  });
-};
+    if (isLoadingCoursesWithProgress) {
+      return;
+    }
 
-const LessonMaterialsContainer: React.FC = () => {
-  const loadedData = useLoaderData() as LessonMaterialsData | null;
-  const lessons = useMemo(() => loadedData?.lessons || [], [loadedData]);
-  const unitNumber = useMemo(() => loadedData?.unitNumber || 1, [loadedData]);
+    lessonMaterialsCachedLoader(unitToLoad).then(data => {
+      setLessonMaterials(data);
+      setIsLoading(false);
+      setSelectedLesson(data.lessons[0]);
 
-  const getLessonFromId = (lessonId: number): Lesson | null => {
-    return lessons.find(lesson => lesson.id === lessonId) || null;
-  };
+      if (data?.unitName) {
+        analyticsReporter.sendEvent(EVENTS.VIEW_LESSON_MATERIALS, {
+          unitName: data.unitName,
+        });
+      }
+    });
+  }, [
+    isLoadingCoursesWithProgress,
+    unitToLoad,
+    selectedSection.id,
+    lessonMaterialsCachedLoader,
+  ]);
+
+  const {
+    hasNumberedUnits,
+    hasUnnumberedLessons,
+    lessons,
+    unitNumber,
+    versionYear,
+  } = useMemo(() => {
+    return {
+      hasNumberedUnits: lessonMaterials?.hasNumberedUnits || false,
+      hasUnnumberedLessons: lessonMaterials?.hasUnnumberedLessons || false,
+      lessons: lessonMaterials?.lessons || [],
+      unitNumber: lessonMaterials?.unitNumber || -1,
+      versionYear: lessonMaterials?.versionYear || -1,
+    };
+  }, [lessonMaterials]);
+  const isLegacyScript = useMemo(() => versionYear < 2021, [versionYear]);
+
+  const hasNoLessonsWithLessonPlans = useMemo(() => {
+    return lessons.every(lesson => !lesson.hasLessonPlan);
+  }, [lessons]);
+
+  const hasEmptyState =
+    isLegacyScript ||
+    showNoCurriculumAssigned ||
+    hasNoLessonsWithLessonPlans ||
+    !lessonMaterials;
 
   const [selectedLesson, setSelectedLesson] = useState<Lesson | null>(null);
 
   React.useEffect(() => {
-    if (lessons.length > 0) {
-      setSelectedLesson(lessons[0]);
+    if (selectedLesson && showAITALessonSummary) {
+      HttpClient.fetchJson<LessonSummaryInfoResponse>(
+        `/ai_lesson_summaries/show?lesson_id=${selectedLesson?.id}`
+      )
+        .then(response => {
+          if (response.response.ok) {
+            if (response.value?.lesson_summary) {
+              setAITALessonSummaryInfo(
+                JSON.parse(response.value.lesson_summary)
+              );
+            }
+            if (response.value?.script) {
+              setAudioSummaryTranscript(response.value.script);
+            }
+            setCanShowLessonSummaries(true);
+          } else {
+            setAITALessonSummaryInfo(null);
+            setCanShowLessonSummaries(false);
+          }
+        })
+        .catch(error => {
+          setAITALessonSummaryInfo(null);
+          setCanShowLessonSummaries(false);
+          console.log(`Error: ${error}`);
+        });
+      if (showAITAPodcasts || experiments.isEnabled('ai-lesson-podcasts')) {
+        HttpClient.fetchJson<AIFStatus>(
+          `/teacher_dashboard/unit_in_aif?unit_id=${selectedSection.unitId}`
+        )
+          .then(data => setCanShowPodcasts(data.value.aif))
+          .catch(error => console.error(error));
+      }
     }
-  }, [lessons]);
+  }, [
+    userId,
+    selectedLesson,
+    showAITALessonSummary,
+    showAITAPodcasts,
+    selectedSection.unitId,
+  ]);
 
-  const onDropdownChange = (value: string) => {
-    setSelectedLesson(getLessonFromId(Number(value)));
+  const handleLessonSummaryAskAITAClick = () => {
+    dispatch(
+      fetchThreadMessages({
+        contextType: AiDiffContext.LESSON,
+        thread: 0,
+        threadType: THREAD_TYPES.lessonSummaryHelp,
+        curriculumCourses: [],
+      })
+    );
+    dispatch(setChatIsOpen(true));
   };
 
-  const generateLessonDropdownOptions = useCallback(() => {
-    return lessons.map((lesson: Lesson) => {
-      const displayName = createDisplayName(lesson.name, lesson.position);
-      return {text: displayName, value: lesson.id.toString()};
-    });
-  }, [lessons]);
+  const handleTranscriptButtonClick = () => {
+    if (showTranscriptDialog) {
+      setShowTranscriptDialog(false);
+      analyticsReporter.sendEvent(EVENTS.TA_PODCAST_CLOSE_TRANSCRIPT, {
+        lesson_id: selectedLesson?.id,
+      });
+    } else {
+      setShowTranscriptDialog(true);
+      analyticsReporter.sendEvent(EVENTS.TA_PODCAST_OPEN_TRANSCRIPT, {
+        lesson_id: selectedLesson?.id,
+      });
+    }
+  };
 
-  const lessonOptions = useMemo(
-    () => generateLessonDropdownOptions(),
-    [generateLessonDropdownOptions]
-  );
+  React.useEffect(() => {
+    const audioPlayer = audioPlayerRef.current;
+    let playStartTime: number;
+    const handlePodcastPlay = () => {
+      playStartTime = Date.now();
+      analyticsReporter.sendEvent(EVENTS.TA_PODCAST_PLAYED, {
+        lesson_id: selectedLesson?.id,
+      });
+    };
+
+    const handlePodcastStop = () => {
+      const play_time = (Date.now() - playStartTime) / 1000;
+      analyticsReporter.sendEvent(EVENTS.TA_PODCAST_STOPPED, {
+        lesson_id: selectedLesson?.id,
+        time_played: play_time,
+      });
+    };
+
+    const handleSpeedChanged = () => {
+      analyticsReporter.sendEvent(EVENTS.TA_PODCAST_PLAYBACK_SPEED_CHANGED, {
+        lesson_id: selectedLesson?.id,
+        playback_rate: audioPlayer?.playbackRate,
+      });
+    };
+
+    if (audioPlayer) {
+      audioPlayer.addEventListener('play', handlePodcastPlay);
+      audioPlayer.addEventListener('pause', handlePodcastStop);
+      audioPlayer.addEventListener('ratechange', handleSpeedChanged);
+      return () => {
+        audioPlayer.removeEventListener('play', handlePodcastPlay);
+        audioPlayer.removeEventListener('pause', handlePodcastStop);
+        audioPlayer.removeEventListener('ratechange', handleSpeedChanged);
+      };
+    }
+  }, [selectedLesson, canShowLessonSummaries]);
+
+  const renderHeader = () => {
+    return (
+      <div className={styles.lessonMaterialsPageHeader}>
+        <div className={styles.lessonMaterialsDropdowns}>
+          <UnitSelectorV2
+            filterToSelectedCourse={true}
+            className={styles.unitSelector}
+          />
+          <LessonSelector
+            lessons={lessons}
+            selectedLesson={selectedLesson}
+            onLessonChange={(lessonId: number) => {
+              const lesson = _.find(lessons, {id: lessonId}) || null;
+              setSelectedLesson(lesson);
+            }}
+            hasUnnumberedLessons={hasUnnumberedLessons}
+            isLoading={isLoading || isLoadingCoursesWithProgress || needsReload}
+            unitName={lessonMaterials?.unitName}
+          />
+        </div>
+        {lessonMaterials && (
+          <UnitResourcesDropdown
+            hasNumberedUnits={hasNumberedUnits}
+            unitNumber={lessonMaterials.unitNumber}
+            scriptOverviewPdfUrl={lessonMaterials.scriptOverviewPdfUrl}
+            scriptResourcesPdfUrl={lessonMaterials.scriptResourcesPdfUrl}
+            disabled={isLoading || needsReload}
+          />
+        )}
+      </div>
+    );
+  };
 
   const renderTeacherResources = () => {
     if (!selectedLesson) {
@@ -99,7 +343,7 @@ const LessonMaterialsContainer: React.FC = () => {
 
     return (
       <LessonResources
-        unitNumber={unitNumber}
+        unitNumber={hasNumberedUnits ? unitNumber : null}
         lessonNumber={selectedLesson.position}
         resources={selectedLesson.resources.Teacher || []}
         standardsUrl={selectedLesson.standardsUrl}
@@ -107,6 +351,7 @@ const LessonMaterialsContainer: React.FC = () => {
         lessonPlanUrl={selectedLesson.lessonPlanHtmlUrl}
         lessonPlanPdfUrl={selectedLesson.lessonPlanPdfUrl}
         lessonName={selectedLesson.name}
+        hasLessonPlan={selectedLesson.hasLessonPlan}
       />
     );
   };
@@ -118,35 +363,225 @@ const LessonMaterialsContainer: React.FC = () => {
 
     return (
       <LessonResources
-        unitNumber={unitNumber}
+        unitNumber={hasNumberedUnits ? unitNumber : null}
         lessonNumber={selectedLesson.position}
         resources={selectedLesson.resources.Student || []}
       />
     );
   };
 
-  return (
-    <div>
-      <div className={styles.lessonMaterialsPageHeader}>
-        <SimpleDropdown
-          labelText={i18n.chooseLesson()}
-          isLabelVisible={false}
-          onChange={event => onDropdownChange(event.target.value)}
-          items={lessonOptions}
-          selectedValue={selectedLesson ? selectedLesson.id.toString() : ''}
-          name={'lessons-in-assigned-unit-dropdown'}
-          size="s"
+  const renderCustomResources = () => {
+    if (selectedLesson && experiments.isEnabled(experiments.AI_ARTIFACT)) {
+      return (
+        <CustomLessonResources
+          unitId={selectedUnitId}
+          lessonId={selectedLesson.id}
+          sectionId={selectedSection.id}
         />
-        {loadedData?.unitNumber && (
-          <UnitResourcesDropdown
-            unitNumber={loadedData.unitNumber || 0}
-            scriptOverviewPdfUrl={loadedData.scriptOverviewPdfUrl}
-            scriptResourcesPdfUrl={loadedData.scriptResourcesPdfUrl}
+      );
+    } else {
+      return null;
+    }
+  };
+
+  const renderLessonSummaryContainer = () => {
+    return (
+      <>
+        {showTranscriptDialog && audioSummaryTranscript && (
+          <Dialog
+            title={i18n.audioTranscript()}
+            primaryButtonProps={{
+              children: i18n.closeDialog(),
+              onClick: () => handleTranscriptButtonClick(),
+            }}
+            onClose={() => handleTranscriptButtonClick()}
+            closeLabel={i18n.closeTranscript()}
+            customContent={
+              <div className={styles.transcriptDialogContent}>
+                {audioSummaryTranscript}
+              </div>
+            }
+            className={styles.transcriptDialog}
           />
         )}
+        <div className={styles.lessonSummaryContainer}>
+          {canShowPodcasts && (
+            <div className={styles.lessonSummarySection}>
+              <div className={styles.lessonSummarySectionHeader}>
+                <div className={styles.lessonSummarySectionTitle}>
+                  <FontAwesomeV6Icon
+                    iconFamily="kit"
+                    iconName="solid-flask-sparkle"
+                  />
+                  <Typography variant="body2" gutterBottom>
+                    {i18n.audioSummary()}
+                  </Typography>
+                </div>
+                <MuiButton
+                  variant="outlined"
+                  color="secondary"
+                  size="extraSmall"
+                  className={styles.openTranscriptButton}
+                  onClick={() => handleTranscriptButtonClick()}
+                  type="button"
+                >
+                  {i18n.transcript()}
+                </MuiButton>
+              </div>
+              <div className={styles.audioPlayerContainer}>
+                {/* We're including our own custom time-stamped transcript dialog, so no need for media caption. */}
+                {/* eslint-disable-next-line jsx-a11y/media-has-caption */}
+                <audio
+                  id="lesson-summary-audio"
+                  ref={audioPlayerRef}
+                  src={`/ai_lesson_summary_podcasts/show?lesson_id=${selectedLesson?.id}`}
+                  preload="auto"
+                  controls
+                  className={styles.audioPlayer}
+                  onEnded={() => setFinishedListeningToSummary(true)}
+                />
+                {finishedListeningToSummary && (
+                  <FontAwesomeV6Icon
+                    iconName="circle-check"
+                    iconStyle="solid"
+                  />
+                )}
+              </div>
+            </div>
+          )}
+          <div className={styles.lessonSummarySection}>
+            <div className={styles.lessonSummarySectionTitle}>
+              <FontAwesomeV6Icon iconName="lightbulb" iconStyle="solid" />
+              <Typography variant="body2" gutterBottom>
+                {i18n.teachingTips()}
+              </Typography>
+            </div>
+            <div className={styles.lessonSummaryInfo}>
+              <div className={styles.lessonSummaryInfoBlock}>
+                <Typography variant="body3" gutterBottom>
+                  {i18n.learningObjective()}
+                </Typography>
+                <Typography variant="body3" gutterBottom>
+                  {aiTALessonSummaryInfo?.learning_objective}
+                </Typography>
+              </div>
+              <div className={styles.lessonSummaryInfoBlock}>
+                <Typography variant="body3" gutterBottom>
+                  {i18n.keyLessonBeats()}
+                </Typography>
+                <ol>
+                  {aiTALessonSummaryInfo?.lesson_beats.map(
+                    (lessonBeat, index) => (
+                      <li key={`lessonBeat-${index}`}>
+                        <Typography variant="body3" gutterBottom>
+                          {lessonBeat}
+                        </Typography>
+                      </li>
+                    )
+                  )}
+                </ol>
+              </div>
+              <div className={styles.lessonSummaryInfoBlock}>
+                <Typography variant="body3" gutterBottom>
+                  {i18n.tipsHeader()}
+                </Typography>
+                <ol>
+                  {aiTALessonSummaryInfo?.tips?.map((tip, index) => (
+                    <li key={`tip-${index}`}>
+                      <Typography variant="body3" gutterBottom>
+                        {tip}
+                      </Typography>
+                    </li>
+                  ))}
+                </ol>
+              </div>
+              <div className={styles.lessonSummaryInfoBlock}>
+                <Typography variant="body3" gutterBottom>
+                  {i18n.commonMisconceptions()}
+                </Typography>
+                <ul>
+                  {aiTALessonSummaryInfo?.misconceptions?.map(
+                    (misconception, index) => (
+                      <li key={`misconception-${index}`}>
+                        <Typography variant="body3" gutterBottom>
+                          {misconception}
+                        </Typography>
+                      </li>
+                    )
+                  )}
+                </ul>
+              </div>
+            </div>
+            <MuiButton
+              variant="outlined"
+              color="secondary"
+              size="medium"
+              className={styles.askAITAButton}
+              onClick={handleLessonSummaryAskAITAClick}
+              type="button"
+            >
+              {i18n.questionForAITA()}
+            </MuiButton>
+            {!hasCompletedPersonalizationQuiz && (
+              <div className={styles.personalizationQuizSection}>
+                <div className={styles.horizontalLine} />
+                <div className={styles.personalizationQuizPrompt}>
+                  <Typography variant="body3" gutterBottom>
+                    {i18n.wantToSeeDifferentInformation()}
+                  </Typography>
+                  <a href="/users/personalization_information">
+                    <Typography variant="body3" gutterBottom>
+                      {i18n.customizeForYourClassroom()}
+                    </Typography>
+                  </a>
+                </div>
+              </div>
+            )}
+          </div>
+          <div className={styles.poweredByAITANote}>
+            <img src={AIBotTAIcon} alt="" />
+            <Typography variant="body4" gutterBottom>
+              {i18n.poweredByAITA()}
+            </Typography>
+          </div>
+        </div>
+      </>
+    );
+  };
+
+  if (
+    hasEmptyState &&
+    !isLoading &&
+    !isLoadingCoursesWithProgress &&
+    !needsReload
+  ) {
+    return (
+      <LessonMaterialsEmptyState
+        isLegacyScript={isLegacyScript}
+        hasNoLessonsWithLessonPlans={hasNoLessonsWithLessonPlans}
+      />
+    );
+  }
+
+  const showSpinner = isLoading || needsReload;
+
+  return (
+    <div className={styles.lessonContainer}>
+      <div className={styles.lessonMaterialsContainer}>
+        {renderHeader()}
+        {showSpinner ? (
+          <div>
+            <Spinner size={'large'} />
+          </div>
+        ) : (
+          <>
+            {renderTeacherResources()}
+            {renderStudentResources()}
+            {renderCustomResources()}
+          </>
+        )}
       </div>
-      {renderTeacherResources()}
-      {renderStudentResources()}
+      {!showSpinner && canShowLessonSummaries && renderLessonSummaryContainer()}
     </div>
   );
 };

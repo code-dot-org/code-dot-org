@@ -1,0 +1,61 @@
+<Weblab2>
+  <config><![CDATA[{
+  "game_id": 74,
+  "created_at": "2026-03-13T12:10:56.000Z",
+  "level_num": "custom",
+  "user_id": 22366,
+  "properties": {
+    "start_sources": {
+      "folders": {
+      },
+      "files": {
+      },
+      "openFiles": [
+
+      ]
+    },
+    "encrypted": "false",
+    "display_name": "Add a Loading State",
+    "long_instructions": "# Add a Loading State\r\n\r\n**Goal:** Make it obvious that your app is working while it waits for API data.\r\n\r\n1. **Choose a Loading Indicator:** Decide what you will show, such as \"Loading...\" text, a spinner, or a simple skeleton area.\r\n2. **Show Loading Immediately:** As soon as the user clicks the button, display your loading indicator before the fetch finishes.\r\n3. **Hide Loading When Done:** After the data loads and renders, remove or hide the loading indicator.\r\n4. **Test It:** Click your button and confirm the loading state appears right away and disappears when results show.\r\n\r\n",
+    "bubble_choice_description": "Show a clear \"Loading...\" message or spinner right away when the user clicks, so the app never feels frozen while it waits for data. ***(supports completing Milestone 3 tasks)***",
+    "thumbnail_url": "https://images.code.org/fa14d6867db2ff334a52b3f328733467-loading.png",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "false",
+    "widget_view": "false",
+    "initial_view_mode": "split",
+    "predict_settings": {
+      "isPredictLevel": false,
+      "solution": "",
+      "questionType": "freeResponse",
+      "placeholderText": "",
+      "multipleChoiceOptions": [
+        ""
+      ],
+      "freeResponseHeight": 50,
+      "codeEditableAfterSubmit": false
+    },
+    "ai_tutor_prompt_settings": {
+      "answerTypes": [
+        "buildHTML",
+        "buildCSS",
+        "ask",
+        "hint",
+        "debug",
+        "example",
+        "explainCode",
+        "documentation",
+        "pseudocode",
+        "testCase",
+        "buildJavaScript"
+      ],
+      "answerTypeCustomizations": {
+      }
+    },
+    "project_template_level_name": "designing-reliable-apps-lesson11-template-test_2025-pilot",
+    "name_suffix": "_2025-pilot"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-03-13T12:10:56.122+00:00\",\"changed\":[\"cloned from \\\"designing-reliable-apps-lesson11-milestone3-level3a-test_2025-pilot\\\"\"],\"cloned_from\":\"designing-reliable-apps-lesson11-milestone3-level3a-test_2025-pilot\"}]"
+}]]></config>
+</Weblab2>

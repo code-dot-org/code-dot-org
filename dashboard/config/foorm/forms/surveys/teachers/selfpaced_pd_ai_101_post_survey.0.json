@@ -135,15 +135,15 @@
           "choices": [
             {
               "value": "yes",
-              "text": "Yes, I give the workshop organizer permission to quote me and use my name."
+              "text": "Yes, I give Code.org permission to quote me and use my name."
             },
             {
               "value": "yes_anon",
-              "text": "Yes, I give the workshop organizer permission to quote me, but I want to be anonymous."
+              "text": "Yes, I give Code.org permission to quote me, but I want to be anonymous."
             },
             {
               "value": "no",
-              "text": "No, I do not give the workshop organizer my permission."
+              "text": "No, I do not give Code.org my permission."
             }
           ]
         },

@@ -1,5 +1,6 @@
 import {mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
+import {act} from 'react-dom/test-utils';
 import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
 
 import CourseOfferingEditor from '@cdo/apps/levelbuilder/CourseOfferingEditor';
@@ -38,6 +39,7 @@ describe('CourseOfferingEditor', () => {
         self_paced_pl_course_offering_id: 1,
         video: 'https://www.youtube-nocookie.com/test_video',
         published_date: '2019-07-16 14:00:00',
+        facilitator_course_permissions: [],
       },
       selfPacedPLCourseOfferings: [
         {
@@ -67,6 +69,11 @@ describe('CourseOfferingEditor', () => {
           thumbnail: null,
           locale: 'en-US',
         },
+      ],
+      facilitatorsCourses: [
+        'CS Fundamentals',
+        'CS Principles',
+        'CS Discoveries',
       ],
     };
   });
@@ -108,6 +115,7 @@ describe('CourseOfferingEditor', () => {
         professional_learning: 'code.org/apply',
         video: 'https://www.youtube-nocookie.com/test_video',
         published_date: '2019-07-16 14:00:00',
+        facilitator_course_permissions: [],
       };
       server.respondWith('PUT', '/course_offerings/test-course-offering', [
         200,
@@ -120,13 +128,18 @@ describe('CourseOfferingEditor', () => {
       const saveAndKeepEditingButton = saveBar.find('button').at(1);
       expect(saveAndKeepEditingButton.contains('Save and Keep Editing')).to.be
         .true;
-      saveAndKeepEditingButton.simulate('click');
+      act(() => {
+        saveAndKeepEditingButton.simulate('click');
+      });
+      wrapper.update();
 
       // check the the spinner is showing
       expect(wrapper.find('.saveBar').find('FontAwesome').length).to.equal(1);
 
       clock = sinon.useFakeTimers(new Date('2020-12-01'));
-      server.respond();
+      act(() => {
+        server.respond();
+      });
       clock.tick(50);
 
       wrapper.update();
@@ -184,6 +197,7 @@ describe('CourseOfferingEditor', () => {
         professional_learning: 'code.org/apply',
         video: 'https://www.youtube-nocookie.com/test_video',
         published_date: '2019-07-16 14:00:00',
+        facilitator_course_permissions: [],
       };
 
       server.respondWith('PUT', '/course_offerings/test-course-offering', [
@@ -222,12 +236,17 @@ describe('CourseOfferingEditor', () => {
 
       const saveAndCloseButton = saveBar.find('button').at(2);
       expect(saveAndCloseButton.contains('Save and Close')).to.be.true;
-      saveAndCloseButton.simulate('click');
+      act(() => {
+        saveAndCloseButton.simulate('click');
+      });
+      wrapper.update();
 
       // check the the spinner is showing
       expect(wrapper.find('.saveBar').find('FontAwesome').length).to.equal(1);
 
-      server.respond();
+      act(() => {
+        server.respond();
+      });
 
       wrapper.update();
       expect(utils.navigateToHref).to.not.have.been.called;

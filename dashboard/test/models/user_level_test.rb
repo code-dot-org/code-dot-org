@@ -1,17 +1,17 @@
 require 'test_helper'
 
 class UserLevelTest < ActiveSupport::TestCase
-  self.use_transactional_test_case = true
+  include Minitest::RSpecMocks
 
   setup_all do
     @user = create(:user)
     @level = create(:level)
 
     # records for testing pairing-related methods
-    @unpaired_user_level = create :user_level, user: @user, level: @level
-    @driver = create :student, name: 'DriverName'
-    @navigator = create :student, name: 'NavigatorName'
-    @navigator2 = create :student, name: 'Navigator2Name'
+    @unpaired_user_level = create(:user_level, user: @user, level: @level)
+    @driver = create(:student, name: 'DriverName')
+    @navigator = create(:student, name: 'NavigatorName')
+    @navigator2 = create(:student, name: 'Navigator2Name')
 
     @driver_user_level, @navigator_user_level = setup_pairing_group(2)
   end
@@ -19,20 +19,23 @@ class UserLevelTest < ActiveSupport::TestCase
   def setup_pairing_group(group_size)
     case group_size
     when 2
-      driver_user_level = create :user_level, user: @driver, level: @level
-      navigator_user_level = create :user_level, user: @navigator, level: @level
-      create :paired_user_level,
+      driver_user_level = create(:user_level, user: @driver, level: @level)
+      navigator_user_level = create(:user_level, user: @navigator, level: @level)
+      create(:paired_user_level,
         driver_user_level: driver_user_level, navigator_user_level: navigator_user_level
+)
 
       return driver_user_level, navigator_user_level
     when 3
-      driver_user_level = create :user_level, user: @driver, level: @level
-      navigator_user_level = create :user_level, user: @navigator, level: @level
-      navigator2_user_level = create :user_level, user: @navigator2, level: @level
-      create :paired_user_level,
+      driver_user_level = create(:user_level, user: @driver, level: @level)
+      navigator_user_level = create(:user_level, user: @navigator, level: @level)
+      navigator2_user_level = create(:user_level, user: @navigator2, level: @level)
+      create(:paired_user_level,
         driver_user_level: driver_user_level, navigator_user_level: navigator_user_level
-      create :paired_user_level,
+)
+      create(:paired_user_level,
         driver_user_level: driver_user_level, navigator_user_level: navigator2_user_level
+)
 
       return driver_user_level, navigator_user_level, navigator2_user_level
     else
@@ -41,38 +44,39 @@ class UserLevelTest < ActiveSupport::TestCase
   end
 
   test "by_lesson" do
-    script = create :script
-    lesson = create :lesson, script: script
-    script_level = create :script_level, script: script, lesson: lesson
+    script = create(:script, :in_single_unit_course)
+    lesson = create(:lesson, script: script)
+    script_level = create(:script_level, script: script, lesson: lesson)
     level = script_level.levels.first
 
-    lesson_user_level = create :user_level, script: script, level: level
-    other_user_level = create :user_level
+    lesson_user_level = create(:user_level, script: script, level: level)
+    other_user_level = create(:user_level)
 
     assert_includes UserLevel.by_lesson(lesson), lesson_user_level
     refute_includes UserLevel.by_lesson(lesson), other_user_level
   end
 
   test "by_lesson will find all levels for each script_level" do
-    script = create :script
-    lesson = create :lesson, script: script
-    first_level = create :level
-    second_level = create :level
-    create :script_level,
+    script = create(:script, :in_single_unit_course)
+    lesson = create(:lesson, script: script)
+    first_level = create(:level)
+    second_level = create(:level)
+    create(:script_level,
       script: script,
       lesson: lesson,
       levels: [
         first_level,
         second_level
       ]
+)
 
     assert_equal UserLevel.by_lesson(lesson), []
 
-    first_user_level = create :user_level, script: script, level: first_level
+    first_user_level = create(:user_level, script: script, level: first_level)
 
     assert_equal UserLevel.by_lesson(lesson), [first_user_level]
 
-    second_user_level = create :user_level, script: script, level: second_level
+    second_user_level = create(:user_level, script: script, level: second_level)
 
     assert_equal UserLevel.by_lesson(lesson), [first_user_level, second_user_level]
   end
@@ -108,10 +112,11 @@ class UserLevelTest < ActiveSupport::TestCase
   end
 
   test "partners for pairing group with 3 students" do
-    navigator2 = create :student, name: 'NavigatorTwoName'
-    navigator2_user_level = create :user_level, user: navigator2, level: @level
-    create :paired_user_level,
+    navigator2 = create(:student, name: 'NavigatorTwoName')
+    navigator2_user_level = create(:user_level, user: navigator2, level: @level)
+    create(:paired_user_level,
       driver_user_level: @driver_user_level, navigator_user_level: navigator2_user_level
+)
 
     assert_equal [navigator2.name, @navigator.name], @driver_user_level.partner_names
     assert_equal [@driver.name, navigator2.name], @navigator_user_level.partner_names
@@ -338,8 +343,8 @@ class UserLevelTest < ActiveSupport::TestCase
 
   test 'unsubmitting destroys unclaimed peer reviews' do
     level = create(:free_response, peer_reviewable: true)
-    script = create :script
-    level_source = create :level_source
+    script = create(:script, :in_single_unit_course)
+    level_source = create(:level_source)
 
     ul = UserLevel.create(
       user: @user,
@@ -351,7 +356,7 @@ class UserLevelTest < ActiveSupport::TestCase
       best_result: Activity::UNREVIEWED_SUBMISSION_RESULT
     )
 
-    review_1 = create(:peer_review, submitter: @user, reviewer: (create :teacher), level: level, script: script)
+    review_1 = create(:peer_review, submitter: @user, reviewer: (create(:teacher)), level: level, script: script)
     review_2 = create(:peer_review, submitter: @user, reviewer: nil, level: level, script: script)
 
     ul.update! submitted: false
@@ -363,8 +368,8 @@ class UserLevelTest < ActiveSupport::TestCase
 
   test 'other changes do not destroy unclaimed peer reviews' do
     level = create(:free_response, peer_reviewable: true)
-    script = create :script
-    level_source = create :level_source
+    script = create(:script, :in_single_unit_course)
+    level_source = create(:level_source)
 
     ul = UserLevel.create(
       user: @user,
@@ -376,7 +381,7 @@ class UserLevelTest < ActiveSupport::TestCase
       best_result: Activity::UNREVIEWED_SUBMISSION_RESULT
     )
 
-    review_1 = create(:peer_review, submitter: @user, reviewer: (create :teacher), level: level, script: script)
+    review_1 = create(:peer_review, submitter: @user, reviewer: (create(:teacher)), level: level, script: script)
     review_2 = create(:peer_review, submitter: @user, reviewer: nil, level: level, script: script)
 
     ul.update! best_result: Activity::REVIEW_ACCEPTED_RESULT
@@ -393,7 +398,7 @@ class UserLevelTest < ActiveSupport::TestCase
 
   test 'count passed levels for users' do
     students = (0...3).map do |n|
-      create :student, :with_puzzles, num_puzzles: 10 - n
+      create(:student, :with_puzzles, num_puzzles: 10 - n)
     end
 
     passing_level_counts = UserLevel.count_passed_levels_for_users(User.where(id: students.map(&:id)))
@@ -408,8 +413,8 @@ class UserLevelTest < ActiveSupport::TestCase
   end
 
   test 'update_best_result sets best_result to the given value' do
-    script = create :script
-    ul = create :user_level, user: @user, level: @level, script: script, best_result: 10
+    script = create(:script, :in_single_unit_course)
+    ul = create(:user_level, user: @user, level: @level, script: script, best_result: 10)
 
     new_best_result = 100
     UserLevel.update_best_result(@user.id, @level.id, script.id, new_best_result)
@@ -418,8 +423,8 @@ class UserLevelTest < ActiveSupport::TestCase
   end
 
   test 'update_best_result does not change the updated_at date if touch_updated_at=false' do
-    script = create :script
-    ul = create :user_level, user: @user, level: @level, script: script, best_result: 10
+    script = create(:script, :in_single_unit_course)
+    ul = create(:user_level, user: @user, level: @level, script: script, best_result: 10)
     original_updated_at = ul.reload.updated_at
 
     UserLevel.update_best_result(@user.id, @level.id, script.id, 100, touch_updated_at: false)
@@ -454,5 +459,194 @@ class UserLevelTest < ActiveSupport::TestCase
     )
 
     assert_equal 4000, ul.calculate_total_time_spent(2000)
+  end
+
+  describe 'on creation' do
+    subject(:create_record) {described_instance.save!}
+
+    let(:described_instance) {build(:user_level)}
+    let(:system_locale) {'es-ES'}
+    let!(:original_locale) {I18n.locale.to_s}
+
+    before do
+      I18n.locale = system_locale
+    end
+
+    after do
+      I18n.locale = original_locale
+    end
+
+    it 'assigns #locale using system locale' do
+      expect(described_instance).to receive(:assign_locale_data).and_call_original
+      _ {create_record}.must_change -> {described_instance.locale}, from: nil, to: system_locale
+    end
+
+    it 'assigns #locale_supported to null' do
+      expect(described_instance).to receive(:refresh_locale_supported).twice.and_call_original
+      _ {create_record}.wont_change -> {described_instance.locale_supported}
+      _(described_instance.reload.locale_supported).must_be_nil
+    end
+
+    context 'when #locale attribute is already set' do
+      let(:user_level_locale) {'uk-UA'}
+
+      before do
+        described_instance.locale = user_level_locale
+      end
+
+      it 'does not change original #locale' do
+        expect(described_instance).not_to receive(:assign_locale_data).and_call_original
+        expect(described_instance).to receive(:refresh_locale_supported).and_call_original
+
+        _ {create_record}.wont_change -> {described_instance.locale}
+        _(described_instance.reload.locale).must_equal user_level_locale
+      end
+
+      it 'assigns #locale_supported to null' do
+        expect(described_instance).to receive(:refresh_locale_supported).and_call_original
+        _ {create_record}.wont_change -> {described_instance.locale_supported}
+        _(described_instance.reload.locale_supported).must_be_nil
+      end
+    end
+
+    context 'with script that does not support system locale' do
+      let(:script) {create(:unit)}
+
+      before do
+        described_instance.script = script
+      end
+
+      it 'assigns #locale_supported to false' do
+        expect(described_instance).to receive(:refresh_locale_supported).twice.and_call_original
+        _ {create_record}.must_change -> {described_instance.locale_supported}, from: nil, to: false
+      end
+    end
+
+    context 'with script that supports system locale' do
+      let(:script) {create(:unit, supported_locales: [system_locale])}
+
+      before do
+        described_instance.script = script
+      end
+
+      it 'assigns #locale_supported to true' do
+        expect(described_instance).to receive(:refresh_locale_supported).twice.and_call_original
+        _ {create_record}.must_change -> {described_instance.locale_supported}, from: nil, to: true
+      end
+    end
+  end
+
+  describe 'on updating' do
+    subject(:update_record) {described_instance.update!(user_level_args)}
+
+    let!(:described_instance) {create(:user_level, script: original_script, locale: user_level_locale)}
+    let(:user_level_args) {{}}
+
+    let(:original_script) {create(:unit, supported_locales: [user_level_locale])}
+    let(:user_level_locale) {'uk-UA'}
+    let(:system_locale) {'es-ES'}
+
+    let!(:original_locale) {I18n.locale.to_s}
+
+    before do
+      I18n.locale = system_locale
+    end
+
+    after do
+      I18n.locale = original_locale
+    end
+
+    it 'does not change original #locale' do
+      expect(described_instance).not_to receive(:assign_locale_data).and_call_original
+      _ {update_record}.wont_change -> {described_instance.locale}
+      _(described_instance.reload.locale).must_equal user_level_locale
+    end
+
+    it 'does not change original #locale_supported' do
+      expect(described_instance).not_to receive(:refresh_locale_supported).and_call_original
+      _ {update_record}.wont_change -> {described_instance.locale_supported}
+    end
+
+    context 'when #locale is changed' do
+      let(:new_locale) {'pt-PT'}
+
+      let(:user_level_args) {{locale: new_locale}}
+
+      it 'changes original #locale' do
+        expect(described_instance).not_to receive(:assign_locale_data).and_call_original
+        expect(described_instance).to receive(:refresh_locale_supported).and_call_original
+
+        _ {update_record}.must_change -> {described_instance.locale}, from: user_level_locale, to: new_locale
+        _(described_instance.reload.locale).must_equal new_locale
+      end
+    end
+
+    context 'when #scrip is changed' do
+      let(:new_script) {create(:unit)}
+
+      let(:user_level_args) {{script: new_script}}
+
+      it 'refreshes #locale_supported' do
+        expect(described_instance).to receive(:refresh_locale_supported).and_call_original
+        _ {update_record}.must_change -> {described_instance.locale_supported}, from: true, to: false
+      end
+
+      context 'and it supports #locale' do
+        before do
+          new_script.update!(supported_locales: [user_level_locale])
+        end
+
+        it 'does not change #locale_supported' do
+          expect(described_instance).to receive(:refresh_locale_supported).and_call_original
+          _ {update_record}.wont_change -> {described_instance.locale_supported}
+        end
+      end
+    end
+  end
+
+  describe '#assign_locale_data' do
+    subject(:assign_locale_data) {described_instance.assign_locale_data(locale)}
+
+    let(:locale) {'es-ES'}
+    let(:script) {build(:unit, supported_locales: [locale])}
+    let(:described_instance) {build(:user_level, script:)}
+
+    shared_examples_for 'assigns #locale attribute' do
+      it 'assigns #locale attribute' do
+        _ {assign_locale_data}.must_change -> {described_instance.locale}, from: nil, to: locale
+      end
+    end
+
+    shared_examples_for 'assigns #locale_supported attribute' do |expected_value: true|
+      it 'assigns #locale attribute' do
+        _ {assign_locale_data}.must_change -> {described_instance.locale_supported}, from: nil, to: expected_value
+      end
+    end
+
+    shared_examples_for 'does not assign #locale_supported attribute' do
+      it 'assigns #locale attribute' do
+        _ {assign_locale_data}.wont_change -> {described_instance.locale_supported}
+        _(described_instance.locale_supported).must_be_nil
+      end
+    end
+
+    it_behaves_like 'assigns #locale attribute'
+    it_behaves_like 'assigns #locale_supported attribute'
+
+    context 'when locale is not supported by script' do
+      before do
+        script.supported_locales.delete(locale)
+      end
+
+      it_behaves_like 'assigns #locale attribute'
+      it_behaves_like 'assigns #locale_supported attribute', expected_value: false
+    end
+
+    context 'when no script' do
+      let(:script) {nil}
+
+      it_behaves_like 'assigns #locale attribute'
+      it_behaves_like 'does not assign #locale_supported attribute'
+    end
   end
 end

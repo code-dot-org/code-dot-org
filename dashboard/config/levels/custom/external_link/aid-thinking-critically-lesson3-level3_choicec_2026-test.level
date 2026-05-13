@@ -1,0 +1,19 @@
+<ExternalLink>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 55,
+  "created_at": "2026-02-25T20:48:05.000Z",
+  "level_num": "custom",
+  "user_id": 18603,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "## Fair Creative and Ethical\r\n\r\nAI can create amazing art, but it learned from human artists. \r\n\r\n\r\nSo what’s fair, creative, and ethical in this new world?\r\n",
+    "link_title": "Fair Creative and Ethical",
+    "url": "https://docs.google.com/presentation/d/16ZVXg9-K2v0C9aBtwGoCh-N2VO5uIQTAy5Igh-K1VAs/present",
+    "name_suffix": "_2025",
+    "thumbnail_url": "https://images.code.org/c670fd614034fae4909efa484b932a6a-choice3.png",
+    "display_name": "Impact on Artists"
+  },
+  "audit_log": "[{\"changed_at\":\"2026-02-25T20:48:05.601+00:00\",\"changed\":[\"cloned from \\\"computer-systems-lesson6-level1_2025\\\"\"],\"cloned_from\":\"computer-systems-lesson6-level1_2025\"},{\"changed_at\":\"2026-02-25 21:07:56 +0000\",\"changed\":[\"long_instructions\",\"link_title\",\"url\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-02-25 21:11:02 +0000\",\"changed\":[],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-02-25 21:12:28 +0000\",\"changed\":[],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"}]"
+}]]></config>
+</ExternalLink>

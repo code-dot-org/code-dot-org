@@ -1,0 +1,14 @@
+name 'data-science-ch1-preassessment-q11_v2-2025'
+
+question 'Evaluate the essential skills and educational background required for a data scientist to succeed in the technology sector.'
+
+wrong 'Strong skills in physical sciences and basic coding knowledge.'
+right 'Proficiency in statistics, machine learning, and programming languages like Python and R.'
+wrong 'Expertise in visual arts and minimal data handling skills.'
+wrong 'Advanced knowledge in mechanical engineering and basic software use.'
+
+allow_multiple_attempts false
+
+markdown <<MARKDOWN
+
+MARKDOWN

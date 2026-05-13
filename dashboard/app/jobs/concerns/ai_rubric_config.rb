@@ -6,39 +6,7 @@ class AiRubricConfig
   #
   # Basic validation of the new AI config is done by UI tests, or can be done locally
   # by running `AiRubricConfig.validate_ai_config` from the rails console.
-  S3_AI_RELEASE_PATH = 'teaching_assistant/releases/2024-09-05-lesson-7-release/'.freeze
-
-  # 2D Map from unit name and level name, to the name of the lesson files within
-  # the release dir in S3 which will be used for AI evaluation.
-  UNIT_AND_LEVEL_TO_LESSON_S3_NAME = {
-    'csd3-2023' => {
-      'CSD U3 Sprites scene challenge_2023' => 'csd3-2023-L11',
-      'CSD web project animated review_2023' => 'csd3-2023-L14',
-      'CSD U3 Interactive Card Final_2023' => 'csd3-2023-L18',
-      'CSD games sidescroll review_2023' => 'csd3-2023-L21',
-      'CSD U3 collisions flyman bounceOff_2023' => 'csd3-2023-L24',
-      'CSD games project review_2023' => 'csd3-2023-L28',
-    },
-    'csd3-2024' => {
-      'CSD U3 L7 mini project_2024' => 'csd3-2023-L7',
-      'CSD U3 Sprites scene challenge_2024' => 'csd3-2023-L11',
-      'CSD web project animated review_2024' => 'csd3-2023-L14',
-      'CSD U3 Interactive Card Final_2024' => 'csd3-2023-L18',
-      'CSD games sidescroll review_2024' => 'csd3-2023-L21',
-      'CSD U3 collisions flyman bounceOff_2024' => 'csd3-2023-L24',
-      'CSD games project review_2024' => 'csd3-2023-L28',
-    },
-    'allthethings' => {
-      'CSD U3 Sprites scene challenge_allthethings' => 'allthethings-L48',
-    },
-  }
-  UNIT_AND_LEVEL_TO_LESSON_S3_NAME['interactive-games-animations-2023'] = UNIT_AND_LEVEL_TO_LESSON_S3_NAME['csd3-2023']
-  UNIT_AND_LEVEL_TO_LESSON_S3_NAME['focus-on-creativity3-2023'] = UNIT_AND_LEVEL_TO_LESSON_S3_NAME['csd3-2023']
-  UNIT_AND_LEVEL_TO_LESSON_S3_NAME['focus-on-coding3-2023'] = UNIT_AND_LEVEL_TO_LESSON_S3_NAME['csd3-2023']
-  UNIT_AND_LEVEL_TO_LESSON_S3_NAME['interactive-games-animations-2024'] = UNIT_AND_LEVEL_TO_LESSON_S3_NAME['csd3-2024']
-  UNIT_AND_LEVEL_TO_LESSON_S3_NAME['focus-on-creativity3-2024'] = UNIT_AND_LEVEL_TO_LESSON_S3_NAME['csd3-2024']
-  UNIT_AND_LEVEL_TO_LESSON_S3_NAME['focus-on-coding3-2024'] = UNIT_AND_LEVEL_TO_LESSON_S3_NAME['csd3-2024']
-  UNIT_AND_LEVEL_TO_LESSON_S3_NAME.freeze
+  S3_AI_RELEASE_PATH = 'teaching_assistant/releases/2026-04-06-claude-4-update/'.freeze
 
   # For testing purposes, we can raise this error to simulate a missing key
   class StubNoSuchKey < StandardError
@@ -48,10 +16,18 @@ class AiRubricConfig
     !!get_lesson_s3_name(script_level)
   end
 
-  # returns the path suffix of the location in S3 which contains the config
+  # Returns the path suffix of the location in S3 which contains the config
   # needed to evaluate the rubric for the given script level.
+  #
+  # The rubric's `s3_config_dir` field contains the name of the lesson directory
+  # within the S3 release dir used for AI evaluation.
+  # For example: "csd3-2023-L11"
   def self.get_lesson_s3_name(script_level)
-    UNIT_AND_LEVEL_TO_LESSON_S3_NAME[script_level&.script&.name].try(:[], script_level&.level&.name)
+    return nil unless script_level
+    level_ids = script_level.levels.map(&:id)
+    rubrics = script_level&.lesson&.rubrics
+    rubric = rubrics.find {|r| level_ids.include?(r.level_id)}
+    rubric&.s3_config_dir
   end
 
   def self.s3_client
@@ -101,58 +77,57 @@ class AiRubricConfig
       )
   end
 
+  # Validates AI rubric config in S3 for every rubric. For each rubric:
+  #
+  # 1) If s3_config_dir is set, confirms that essential config files exist in
+  #    S3 (params.json, system_prompt.txt, standard_rubric.csv).
+  #
+  # 2) If any learning goals are ai-enabled, confirms the rubric has an
+  #    s3_config_dir and that each ai-enabled learning goal has a matching
+  #    entry in standard_rubric.csv.
   def self.validate_ai_config
-    lesson_s3_names = UNIT_AND_LEVEL_TO_LESSON_S3_NAME.values.map(&:values).flatten.uniq
-    code = 'hello world'
-    lesson_s3_names.each do |lesson_s3_name|
-      validate_ai_config_for_lesson(lesson_s3_name, code)
+    # Use 4 threads to parallelize S3 reads. Limited to 4 because the
+    # ActiveRecord connection pool is 5 (see database.yml) and the main
+    # thread holds one connection.
+    Parallel.each(Rubric.all.to_a, in_threads: 4) do |rubric|
+      validate_ai_config_for_rubric(rubric)
     end
-    validate_learning_goals
+
     S3_AI_RELEASE_PATH
   end
 
-  def self.get_s3_learning_goals(lesson_s3_name)
-    rubric_csv = read_file_from_s3(lesson_s3_name, 'standard_rubric.csv')
-    rubric_rows = CSV.parse(rubric_csv, headers: true).map(&:to_h)
-    rubric_rows.map {|row| row['Key Concept']}
+  def self.validate_ai_config_for_rubric(rubric)
+    return if CDO.aws_s3_emulated
+    s3_config_dir = rubric.s3_config_dir
+    validate_s3_config_dir(s3_config_dir) if s3_config_dir.present?
+    validate_learning_goals_for_rubric(rubric)
   end
 
-  private_class_method def self.validate_ai_config_for_lesson(lesson_s3_name, code)
+  private_class_method def self.validate_s3_config_dir(lesson_s3_name)
     # this step should raise an error if any essential config files are missing
     # from the S3 release directory
-    get_openai_params(lesson_s3_name, code)
+    get_openai_params(lesson_s3_name, 'hello world')
   rescue Aws::S3::Errors::NoSuchKey => exception
     raise "Error validating AI config for lesson #{lesson_s3_name}: #{exception.message}\n request params: #{exception.context.params.to_h}"
   end
 
-  # For each lesson in UNIT_AND_LEVEL_TO_LESSON_S3_NAME, validate that every
-  # ai-enabled learning goal in its rubric in the database has a corresponding
-  # learning goal in the rubric in S3.
-  private_class_method def self.validate_learning_goals
-    UNIT_AND_LEVEL_TO_LESSON_S3_NAME.each do |unit_name, level_to_lesson|
-      levels = level_to_lesson.keys
-      unless Unit.find_by_name(unit_name)
-        raise "Unit not found: #{unit_name.inspect}. Make sure you ran `rake seed:scripts` locally, and added it to UI_TEST_SCRIPTS for drone/ci."
-      end
-      levels.each do |level_name|
-        level = Level.find_by_name!(level_name)
-        script_level = level.script_levels.select {|sl| sl.script.name == unit_name}.first
-        lesson = script_level.lesson
-        rubric = Rubric.find_by!(lesson: lesson, level: level)
-        validate_learning_goals_for_rubric(rubric)
-      rescue StandardError => exception
-        raise "Error validating learning goals for unit #{unit_name} lesson #{lesson&.relative_position.inspect} level #{level_name.inspect}: #{exception.message}"
-      end
-    end
-  end
-
   private_class_method def self.validate_learning_goals_for_rubric(rubric)
-    lesson_s3_name = get_lesson_s3_name(rubric.get_script_level)
     db_learning_goals = rubric.learning_goals.select(&:ai_enabled).map(&:learning_goal)
+    return if db_learning_goals.empty?
+
+    lesson_s3_name = rubric.s3_config_dir
+    raise "Rubric #{rubric.id} has ai-enabled learning goals but no s3_config_dir set" if lesson_s3_name.blank?
+
     s3_learning_goals = get_s3_learning_goals(lesson_s3_name)
     missing_learning_goals = db_learning_goals - s3_learning_goals
     if missing_learning_goals.any?
       raise "Missing AI config in S3 for lesson #{lesson_s3_name} learning goals: #{missing_learning_goals.inspect}"
     end
+  end
+
+  private_class_method def self.get_s3_learning_goals(lesson_s3_name)
+    rubric_csv = read_file_from_s3(lesson_s3_name, 'standard_rubric.csv')
+    rubric_rows = CSV.parse(rubric_csv, headers: true).map(&:to_h)
+    rubric_rows.map {|row| row['Key Concept']}
   end
 end

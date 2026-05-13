@@ -56,15 +56,21 @@ Given(/^I am a teacher with student sections named Section 1 and Section 2/) do
   )
 end
 
-Given(/^I create a new student section assigned to "([^"]*)"$/) do |script_name|
-  browser_request(
-    url: '/api/test/create_student_section_assigned_to_script',
-    method: 'POST',
-    body: {script_name: script_name}
+Given(/^I create a new student section assigned to course "([^"]*)" unit (\d+)( with AI chat enabled)?( and save the section)?$/) do |course_name, unit_position, ai_chat_enabled, save|
+  body = {course_name: course_name, unit_position: unit_position}
+  body[:ai_chat_access_level] = 'essential_only' if ai_chat_enabled
+  response = JSON.parse(browser_request(
+                          url: '/api/test/create_student_section_assigned_to_course_and_unit',
+                          method: 'POST',
+                          body: body
+    )
   )
+  if save
+    @section_url = "http://studio.code.org/join/#{response['section_code']}"
+  end
 end
 
-And /^I create a new "([^"]*)" student section with course "([^"]*)", version "([^"]*)"(?: and unit "([^"]*)")?$/ do |marketing_audience, assignment_family, version_year, secondary|
+And(/^I create a new "([^"]*)" student section with course "([^"]*)", version "([^"]*)"(?: and unit "([^"]*)")?(?: and name "([^"]*)")?$/) do |marketing_audience, assignment_family, version_year, secondary, name|
   individual_steps <<~GHERKIN
     When I see the section set up box
     When I press the new section button
@@ -73,13 +79,22 @@ And /^I create a new "([^"]*)" student section with course "([^"]*)", version "(
     When I select email login
 
     And I wait until element "button:contains(#{marketing_audience})" is visible
-    And I press keys "Untitled Section" for element "#uitest-section-name-setup"
     And I press the first "input[name='grades[]']" element
     And I click selector "button:contains(#{marketing_audience})"
     And I press the first "input[name='#{assignment_family}']" element
     And I click selector "#assignment-version-year" once I see it
     And I click selector ".assignment-version-title:contains(#{version_year})" once I see it
   GHERKIN
+
+  if name
+    individual_steps <<~GHERKIN
+      And I press keys "#{name}" for element "#uitest-section-name-setup"
+    GHERKIN
+  else
+    individual_steps <<~GHERKIN
+      And I press keys "Untitled Section" for element "#uitest-section-name-setup"
+    GHERKIN
+  end
 
   if secondary
     individual_steps <<~GHERKIN
@@ -121,14 +136,14 @@ And(/^I create a(n authorized)? teacher-associated( under-13)?( sponsored)? stud
     user_opts[:user_provided_us_state] = true
   end
 
-  cap_start_date = DateTime.parse('2023-07-01T00:00:00MDT').freeze
-
   if after_cap_start
-    user_opts[:created_at] = cap_start_date
+    raise "cap_lockout_date undefined" unless @cap_lockout_date
+    user_opts[:created_at] = @cap_lockout_date
   end
 
   if before_cap_start
-    user_opts[:created_at] = cap_start_date - 1.second
+    raise "cap_start_date undefined" unless @cap_start_date
+    user_opts[:created_at] = @cap_start_date - 1.second
   end
 
   create_user(name, **user_opts)
@@ -138,10 +153,9 @@ And(/^I create a(n authorized)? teacher-associated( under-13)?( sponsored)? stud
 end
 
 And(/^I save the student section url$/) do
-  wait_short_until {steps 'Then I should see the student section table'}
   section_code = @browser.execute_script <<-SCRIPT
     return document
-      .querySelector('.uitest-owned-sections tbody tr:last-of-type td:nth-child(6)')
+      .querySelector('#ui-test-section-code-button')
       .textContent
       .trim();
   SCRIPT
@@ -164,18 +178,18 @@ And(/^I attempt to join the section$/) do
 end
 
 And /^I click the "([^"]*)" checkbox in the dialog$/ do |section_name|
-  @browser.execute_script("return $(\"span:contains(#{section_name})\").siblings()[0].click();")
+  @browser.execute_script("$(\"span:contains(#{section_name})\").click();")
 end
 
 And /^I see that "([^"]*)" is assigned to "([^"]*)" in the section table$/ do |section_name, course_name|
   individual_steps <<~GHERKIN
-    And I wait until element "tr:contains(#{section_name}):contains(#{course_name})" is visible
+    And I wait until element "#course-content-dropdown-#{section_name.tr!(' ', '-')}:contains(#{course_name})" is visible
   GHERKIN
 end
 
 And /^I see that "([^"]*)" is not assigned to "([^"]*)" in the section table$/ do |section_name, course_name|
   individual_steps <<~GHERKIN
-    And I wait until element "tr:contains(#{section_name}):contains(#{course_name})" is not visible
+    And I wait until element "#course-content-dropdown-#{section_name.tr!(' ', '-')}:contains(#{course_name})" is not visible
   GHERKIN
 end
 
@@ -209,7 +223,7 @@ When /^I press the new section button$/ do
 end
 
 Then /^I should see the new section dialog$/ do
-  steps 'Then I see ".modal"'
+  steps 'Then I see ".uitest-new-section-dialog"'
 end
 
 When /^I select (picture|word|email) login$/ do |login_type|
@@ -271,12 +285,22 @@ Then /^the section table row at index (\d+) has (primary|secondary) assignment p
 
   # ignore query params
   actual_path = href.split('?')[0]
-  expect(actual_path).to eq(expected_path)
+  expect(actual_path).to include(expected_path)
 end
 
-Then /^I save the section id from row (\d+) of the section table$/ do |row_index|
-  wait_short_until {steps 'Then I should see the student section table'}
-  @section_id = get_section_id_from_table(row_index)
+Then /^I save the section id from row (\d+) of the section table$/ do |section_index|
+  wait_short_until {steps 'Then I wait until element "#section-options-dropdown-dropdown" is visible'}
+  href = nil
+  wait_until do
+    href = @browser.execute_script(
+      "return $('#ui-test-section-list li:eq(#{section_index}) #ui-test-Section-settings').attr('href')"
+    )
+    !href.nil?
+  end
+
+  @section_id = href.split('/')[-2].to_i
+  expect(@section_id).to be > 0
+  @section_id
 end
 
 Then /^the url contains the section id$/ do
@@ -284,16 +308,33 @@ Then /^the url contains the section id$/ do
   expect(@browser.current_url).to include("?section_id=#{@section_id}")
 end
 
+Then /^the teacher_dashboard url contains the section id$/ do
+  expect(@section_id).to be > 0
+  expect(@browser.current_url).to include("/sections/#{@section_id}")
+end
+
 Then /^the href of selector "([^"]*)" contains the section id$/ do |selector|
   href = nil
   wait_until do
     href = @browser.execute_script("return $(\"#{selector}\").attr('href');")
-    href != nil?
+    !href.nil?
   end
   expect(@section_id).to be > 0
 
   # make sure the query params do not come after the # symbol
   expect(href.split('#')[0]).to include("?section_id=#{@section_id}")
+end
+
+Then /^the teacher_dashboard href of selector "([^"]*)" contains the section id$/ do |selector|
+  href = nil
+  wait_until do
+    href = @browser.execute_script("return $(\"#{selector}\").attr('href');")
+    !href.nil?
+  end
+  expect(@section_id).to be > 0
+
+  # make sure the query params do not come after the # symbol
+  expect(href.split('#')[0]).to include("/sections/#{@section_id}")
 end
 
 Then /^I navigate to teacher dashboard for the section I saved$/ do
@@ -310,24 +351,24 @@ Then /^I navigate to teacher dashboard for the section I saved with experiment "
   }
 end
 
-Then /^I navigate to manage students for the section I saved$/ do
+Then /^I navigate to roster for the section I saved$/ do
   expect(@section_id).to be > 0
   steps %{
-    Then I am on "http://studio.code.org/teacher_dashboard/sections/#{@section_id}/manage_students"
+    Then I am on "http://studio.code.org/teacher_dashboard/sections/#{@section_id}/roster"
   }
 end
 
-Then /^I navigate to the script "([^"]*)" lesson (\d+) lesson extras page for the section I saved$/ do |script_name, lesson_num|
+Then /^I navigate to the course "([^"]*)" unit (\d+) lesson (\d+) lesson extras page for the section I saved$/ do |course_name, unit_position, lesson_num|
   expect(@section_id).to be > 0
   steps %{
-    Then I am on "http://studio.code.org/s/#{script_name}/lessons/#{lesson_num}/extras?section_id=#{@section_id}"
+    Then I am on "http://studio.code.org/courses/#{course_name}/units/#{unit_position}/lessons/#{lesson_num}/extras?section_id=#{@section_id}"
   }
 end
 
-Then /^I navigate to the script "([^"]*)" lesson (\d+) level (\d+) for the section I saved$/ do |script_name, lesson_num, level_num|
+Then /^I navigate to the course "([^"]*)" unit (\d+) lesson (\d+) level (\d+) for the section I saved$/ do |course_name, unit_position, lesson_num, level_num|
   expect(@section_id).to be > 0
   steps %{
-    Then I am on "http://studio.code.org/s/#{script_name}/lessons/#{lesson_num}/levels/#{level_num}?section_id=#{@section_id}&noautoplay=true"
+    Then I am on "http://studio.code.org/courses/#{course_name}/units/#{unit_position}/lessons/#{lesson_num}/levels/#{level_num}?section_id=#{@section_id}&noautoplay=true"
   }
 end
 
@@ -379,7 +420,7 @@ end
 Then /^I open the code review groups management dialog$/ do
   steps <<-GHERKIN
     And I navigate to teacher dashboard for the section I saved
-    And I click selector "#uitest-teacher-dashboard-nav a:contains(Manage Students)" once I see it
+    And I click selector "#ui-test-teacher-sidebar a:contains(Roster)" once I see it
     And I click selector "#uitest-code-review-groups-button" once I see it
   GHERKIN
 end
@@ -395,10 +436,9 @@ end
 
 And /^I navigate to the V2 progress dashboard for "([^"]+)"$/ do |section_name|
   steps <<-GHERKIN
-    Given I am on "http://studio.code.org"
-    When I use a cookie to mock the DCDO key "progress-table-v2-enabled" as "true"
-    When I click selector "a:contains(#{section_name})" once I see it to load a new page
-    And I wait until element "#uitest-teacher-dashboard-nav" is visible
+    Given I am on "http://studio.code.org/teacher_dashboard/home"
+    When I click "#task-button-View-progress-#{section_name.tr!(' ', '-')}" once it exists
+    Then I wait until element "#ui-test-teacher-sidebar" is visible
     And check that the URL contains "/teacher_dashboard/sections/"
     And element "#ui-test-progress-table-v2" is visible
   GHERKIN

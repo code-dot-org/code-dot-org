@@ -18,7 +18,7 @@ Resources:
       Description: 'Takes an AWS CloudFormation stack name and instance id and returns the AMI ID. Ref: https://blogs.aws.amazon.com/application-management/post/Tx38Z5CAM5WWRXW'
       FunctionName: AMIManager
       Code:
-        ZipFile: <%=js 'ami-manager.js' %>
+        ZipFile: <%=inline_js 'ami-manager.js' %>
       Handler: index.handler
       Runtime: nodejs6.10
       Timeout: 300
@@ -59,7 +59,7 @@ Resources:
       Description: 'Enables a VPC for ClassicLink through the EnableVpcClassicLink API.'
       FunctionName: VpcClassicLink
       Code:
-        ZipFile: <%=js 'vpcClassicLink.js' %>
+        ZipFile: <%=inline_js 'vpcClassicLink.js' %>
       Handler: index.handler
       Runtime: nodejs6.10
       Timeout: 300
@@ -93,7 +93,7 @@ Resources:
       Description: 'Returns the current number of InService instances in an Auto Scaling Group.'
       FunctionName: CountASG
       Code:
-        ZipFile: <%=js 'count_asg.js' %>
+        ZipFile: <%=inline_js 'count_asg.js' %>
       Handler: index.handler
       Runtime: nodejs6.10
       Timeout: 30
@@ -148,7 +148,7 @@ Resources:
       FunctionName: S3Object
       Role: !GetAtt S3ObjectRole.Arn
       Code:
-        ZipFile: <%=js 's3Object.js' %>
+        ZipFile: <%=inline_js 's3Object.js' %>
       Handler: index.handler
       Timeout: 30
       Runtime: nodejs6.10
@@ -185,7 +185,7 @@ Resources:
           ATHENA_DB: elb_logs
           ATHENA_TABLE: cloudfront_logs
       Code:
-        ZipFile: <%=js 's3PartitionCloudFrontLog.js'%>
+        ZipFile: <%=inline_js 's3PartitionCloudFrontLog.js'%>
       Handler: index.handler
       Runtime: nodejs12.x
       Timeout: 30

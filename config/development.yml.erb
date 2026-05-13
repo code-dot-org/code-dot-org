@@ -1,13 +1,18 @@
 # Configuration defaults for development environment.
 <%= clear_secrets %>
 
-dashboard_enable_pegasus: true
+# In local dev, start Puma in single mode (no workers) rather than cluster mode.
+dashboard_workers: 0
 
 db_cluster_id: localhost
 db_endpoint_writer: localhost
+db_endpoint_writer_port: 3306
 db_endpoint_proxy_writer: localhost
+db_endpoint_proxy_writer_port: 3306
 db_endpoint_proxy_reader: localhost
+db_endpoint_proxy_reader_port: 3306
 db_endpoint_proxy_reporting: localhost
+db_endpoint_proxy_reporting_port: 3306
 
 db_credential_admin: {"username":"root", "password":""}
 db_credential_writer: {"username":"root", "password":""}
@@ -37,6 +42,7 @@ poste_secret: not a real secret
 channels_api_secret: not a real secret
 dashboard_devise_pepper: not a pepper!
 dashboard_secret_key_base: not a secret
+puma_control_server_token: Tr0ub4dor&3
 
 custom_error_response: false
 
@@ -52,22 +58,37 @@ javabuilder_key_password: !Secret
 
 pardot_private_key: !Secret
 
-redshift_host: !Secret
-redshift_password: !Secret
-redshift_username: !Secret
-
 slack_bot_token: !Secret
 
 # JSON Web Key Set and private key data, configured in locals.yml
 jwks_data:
 jwk_private_key_data:
 
-openai_chat_completion_api_key: ''
 openai_evaluate_rubric_api_key:
-openai_aichat_safety_api_key: !Secret
+openai_student_learning_api_key: !Secret
+openai_measures_of_learning_api_key: !Secret
+openai_lesson_summaries_api_key: !Secret
+elevenlabs_api_key: !Secret
 
-# Mapbox
-mapbox_upload_tileset:    'censustiles-dev'
+google_gemini_ai_chat_lab_api_key: !Secret
+google_gemini_ai_tutor_api_key: !Secret
+
+# Azure AI Content Safety
+azure_ai_content_safety_key: !Secret
+
+# AI Gateway
+ai_gateway_auth_key: !Secret
+ai_gateway_auth_public_key: !Secret
+ai_gateway_auth_key_passphrase: !Secret
+
+google_vertex_ai_tutor_service_account_key: !Secret
+google_vertex_ai_chat_service_account_key: !Secret
+
+# Credentials for Langfuse API
+tutor_langfuse_secret_key: !Secret
+tutor_langfuse_public_key: !Secret
+ta_langfuse_secret_key: !Secret
+ta_langfuse_public_key: !Secret
 
 # Enables DCDO settings via cookies
 use_cookie_dcdo: true
@@ -75,6 +96,17 @@ use_cookie_dcdo: true
 # Allows Geolocation to be altered via cookies.
 use_geolocation_override: true
 
+# AWS DeviceFarm project ARNs for remote browser testing in UI tests.
+device_farm_desktop_project_arn: !Secret
+device_farm_mobile_project_arn: !Secret
+
 # ActiveJob Queue Adapter, default to async which doesn't require manually
 # starting the worker processes. See locals.yml.default for more discussion.
 active_job_queue_adapter: :async
+
+# Number of workers to start when running `rake build:start_active_job_workers`:
+active_job_backend_n_workers_to_start: 2
+active_job_backend_rolling_restart_in_n_batches: 1
+
+# Enables I18n lazy loading
+lazy_load_i18n: true

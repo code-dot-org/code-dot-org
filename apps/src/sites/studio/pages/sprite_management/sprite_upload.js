@@ -1,11 +1,14 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 
 import SpriteUpload from '@cdo/apps/code-studio/assets/SpriteUpload';
+import {createReactRoot} from '@cdo/apps/util/createReactRoot';
 
 $(document).ready(function () {
-  ReactDOM.render(
+  createReactRoot(
     <SpriteUpload />,
-    document.getElementById('sprite-upload-container')
+    document.getElementById('sprite-upload-container'),
+    {
+      legacyReactDomRender: true,
+    }
   );
 });

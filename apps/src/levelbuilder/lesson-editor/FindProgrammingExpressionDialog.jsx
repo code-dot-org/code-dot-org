@@ -4,8 +4,8 @@ import React, {Component} from 'react';
 import {connect} from 'react-redux';
 
 import Button from '@cdo/apps/legacySharedComponents/Button';
+import PaginationWrapper from '@cdo/apps/sharedComponents/PaginationWrapper';
 import StyledCodeBlock from '@cdo/apps/templates/lessonOverview/StyledCodeBlock';
-import PaginationWrapper from '@cdo/apps/templates/PaginationWrapper';
 import DialogFooter from '@cdo/apps/templates/teacherDashboard/DialogFooter';
 
 import LessonEditorDialog from './LessonEditorDialog';
@@ -133,6 +133,7 @@ export class FindProgrammingExpressionDialog extends Component {
   handleSearch = e => {
     this.setState({
       searchQuery: e.target.value,
+      currentPage: 1,
     });
   };
   handleFilter = e => {
@@ -150,10 +151,6 @@ export class FindProgrammingExpressionDialog extends Component {
   };
 
   doSearch() {
-    if (!this.state.searchQuery) {
-      return;
-    }
-
     const params = {
       page: this.state.currentPage,
       query: this.state.searchQuery,

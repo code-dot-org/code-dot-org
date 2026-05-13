@@ -5,7 +5,7 @@ import {
   LevelAichatSettings,
   ModelCardInfo,
   Visibility,
-} from '@cdo/apps/aichat/types';
+} from '@cdo/apps/aichatLab/types';
 import {ValueOf} from '@cdo/apps/types/utils';
 import {AiChatModelIds} from '@cdo/generated-scripts/sharedConstants';
 
@@ -27,4 +27,5 @@ export const UpdateContext = createContext({
     additionalModelIds: ValueOf<typeof AiChatModelIds>[],
     selectedModelId: ValueOf<typeof AiChatModelIds>
   ) => {},
+  setMultimodalEnabled: (value: boolean) => {},
 });

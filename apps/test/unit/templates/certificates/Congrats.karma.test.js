@@ -137,19 +137,35 @@ describe('Congrats', () => {
       .true;
   });
 
+  it('renders SuggestedAssignableCourses when there are assignable course suggestions', () => {
+    const assignableCourses = [
+      {
+        courseDisplayName: 'CS Discoveries',
+      },
+    ];
+    const wrapper = shallow(
+      <Congrats
+        {...plProps}
+        assignableCourseSuggestions={assignableCourses}
+        curriculumUrl="/courses/self-paced-pl-2023/units/3"
+      />
+    );
+    expect(wrapper.find('SuggestedAssignableCourses').exists()).to.be.true;
+  });
+
   it('renders a message when there is no certificateData', () => {
     const wrapper = shallow(
       <Congrats
         {...plProps}
         certificateData={[]}
-        curriculumUrl="/s/self-paced-pl3-2023"
+        curriculumUrl="/courses/self-paced-pl-2023/units/3"
       />
     );
     expect(wrapper.find('InlineMarkdown').props().markdown).to.include(
       'You must complete the course to earn a certificate.'
     );
     expect(wrapper.find('InlineMarkdown').props().markdown).to.include(
-      '/s/self-paced-pl3-2023'
+      '/courses/self-paced-pl-2023/units/3'
     );
   });
 });

@@ -1,22 +1,32 @@
+import Alert, {alertTypes} from '@code-dot-org/component-library/alert';
+import {SimpleDropdown} from '@code-dot-org/component-library/dropdown';
+import FormFieldWrapper from '@code-dot-org/component-library/formFieldWrapper';
+import Link from '@code-dot-org/component-library/link';
+import TextField from '@code-dot-org/component-library/textField';
+import {Typography, Button as MuiButton} from '@mui/material';
 import classNames from 'classnames';
-import React, {useMemo, useState} from 'react';
+import React, {ChangeEvent, useEffect, useMemo, useState} from 'react';
 
 import {hashEmail} from '@cdo/apps/code-studio/hashEmail';
-import Alert, {alertTypes} from '@cdo/apps/componentLibrary/alert/Alert';
-import {Button} from '@cdo/apps/componentLibrary/button';
-import {SimpleDropdown} from '@cdo/apps/componentLibrary/dropdown';
-import Link from '@cdo/apps/componentLibrary/link/Link';
-import TextField from '@cdo/apps/componentLibrary/textField/TextField';
-import {Heading2} from '@cdo/apps/componentLibrary/typography';
+import {queryParams} from '@cdo/apps/code-studio/utils';
+import {roleItemGroups} from '@cdo/apps/signUpFlow/FinishTeacherAccount';
+import locale from '@cdo/apps/signUpFlow/locale';
 import {getAuthenticityToken} from '@cdo/apps/util/AuthenticityTokenStore';
+import {navigateToHref} from '@cdo/apps/utils';
 import i18n from '@cdo/locale';
 
+import {
+  AccountSettingsSectionUrlParams,
+  handleUpdateUrlOnSettingsSave,
+} from '../accountUpdateConstants';
 import ChangeEmailModal from '../ChangeEmail/ChangeEmailModal';
 
 import {AccountInformationProps} from './types';
 
 import styles from './style.module.scss';
 import commonStyles from '../common/common.styles.module.scss';
+
+export const ACCOUNT_UPDATE_SUCCESS = 'account-update-success';
 
 export const AccountInformation: React.FC<AccountInformationProps> = ({
   verifiedTeacher,
@@ -26,13 +36,17 @@ export const AccountInformation: React.FC<AccountInformationProps> = ({
   shouldSeeEditEmailLink,
   isPasswordRequired,
   isStudent,
+  isFacilitator,
   migrated,
   userType,
   userAge,
   userUsername,
   userDisplayName,
+  userGivenName,
+  userFamilyName,
   userProperties,
   userEmail,
+  userFacilitatorBio,
   hashedEmail,
   encryptedPasswordPresent,
   canEditPassword,
@@ -46,12 +60,20 @@ export const AccountInformation: React.FC<AccountInformationProps> = ({
 }) => {
   const [name, setName] = useState(userDisplayName ?? '');
   const [username, setUsername] = useState(userUsername ?? '');
+  const [givenName, setGivenName] = useState(userGivenName ?? '');
+  const [familyName, setFamilyName] = useState(userFamilyName ?? '');
   const [email, setEmail] = useState(userEmail ?? '');
+  const [facilitatorBio, setFacilitatorBio] = useState(
+    userFacilitatorBio ?? ''
+  );
   const [gender, setGender] = useState(
     userProperties?.gender_student_input ?? ''
   );
   const [age, setAge] = useState(userAge ?? '');
   const [usState, setUsState] = useState(userProperties?.us_state ?? '');
+  const [educatorRole, setEducatorRole] = useState(
+    userProperties?.educator_role ?? ''
+  );
   const [password, setPassword] = useState('');
   const [passwordConfirmation, setPasswordConfirmation] = useState('');
   const [currentPassword, setCurrentPassword] = useState('');
@@ -88,20 +110,67 @@ export const AccountInformation: React.FC<AccountInformationProps> = ({
     [studentInLockoutFlow]
   );
 
+  useEffect(() => {
+    const accountUpdateSuccess =
+      sessionStorage.getItem(ACCOUNT_UPDATE_SUCCESS) === String(true);
+    if (accountUpdateSuccess) {
+      setShowAccountUpdateSuccess(true);
+      sessionStorage.removeItem(ACCOUNT_UPDATE_SUCCESS);
+    }
+  }, []);
+
+  const handleRoleChange = (e: ChangeEvent<HTMLSelectElement>) => {
+    if (educatorRole && !e.target.value) {
+      setErrors(prevErrors => ({
+        ...prevErrors,
+        educator_role: [
+          ...(prevErrors.educator_role ?? []),
+          i18n.accountInformation_educatorRoleCannotBeRemoved(),
+        ],
+      }));
+    } else {
+      setEducatorRole(e.target.value);
+      setErrors(prevErrors => {
+        const updatedErrors = {...prevErrors};
+        delete updatedErrors.educator_role;
+        return updatedErrors;
+      });
+    }
+  };
+
   const handleSubmitAccountSettingsUpdate = async () => {
     resetMessages();
     setErrors({});
-    const userUpdates = {
+
+    const userUpdates: {[key: string]: unknown} = {
       name,
-      username,
       password,
       password_confirmation: passwordConfirmation,
       current_password: currentPassword,
       age: isStudent ? age : '21+',
-      gender_student_input: isStudent && gender ? gender : undefined,
-      us_state: isStudent && isUSA ? usState : undefined,
-      country_code: isStudent ? countryCode : undefined,
     };
+    if (userUsername) {
+      userUpdates['username'] = username;
+    }
+    if (isStudent) {
+      userUpdates['country_code'] = countryCode;
+      if (showGenderInput) {
+        userUpdates['gender_student_input'] = gender;
+      }
+      if (isUSA) {
+        userUpdates['us_state'] = usState;
+      }
+    } else {
+      userUpdates['given_name'] = givenName;
+      userUpdates['family_name'] = familyName;
+      if (educatorRole) {
+        userUpdates['educator_role'] = educatorRole;
+      }
+    }
+    if (isFacilitator) {
+      userUpdates['facilitator_info_attributes'] = {bio: facilitatorBio};
+    }
+
     const response = await fetch('/users', {
       method: 'PUT',
       headers: {
@@ -116,9 +185,41 @@ export const AccountInformation: React.FC<AccountInformationProps> = ({
 
     if (response.ok) {
       setShowAccountUpdateSuccess(true);
+
+      // If sent here with a user_return_to param and there are no
+      // more Accoutn Settings sections the user is meant to update
+      // (tracked in the URL params), then redirect the user to
+      // user_return_to, otherwise handle reload.
+      const returnToHref = decodeURIComponent(
+        (queryParams('user_return_to') || '') as string
+      );
+      const hasFinishedAccountUpdates = handleUpdateUrlOnSettingsSave(
+        AccountSettingsSectionUrlParams.AccountInformation
+      );
+      if (returnToHref && hasFinishedAccountUpdates) {
+        navigateToHref(returnToHref);
+      } else {
+        handleReload();
+      }
     } else {
       const validationErrors = await response.json();
       setErrors(validationErrors);
+    }
+  };
+
+  /**
+   * Page must be reloaded if student updates their age or state.
+   * These values affect whether or not the student is locked out,
+   * which is passed down to the account settings page components
+   * through script data.
+   */
+  const handleReload = () => {
+    if (
+      isStudent &&
+      (age !== userAge || usState !== userProperties?.us_state)
+    ) {
+      sessionStorage.setItem(ACCOUNT_UPDATE_SUCCESS, String(true));
+      window.location.reload();
     }
   };
 
@@ -191,12 +292,14 @@ export const AccountInformation: React.FC<AccountInformationProps> = ({
   return (
     <>
       <hr />
-      <Heading2
-        visualAppearance="heading-sm"
+      <Typography
         className={commonStyles.sectionHeader}
+        component="h2"
+        variant="h5"
+        gutterBottom
       >
         {i18n.accountInformation_accountInformation()}
-      </Heading2>
+      </Typography>
       <form name="account-information-form" className={styles.accountForm}>
         <div className={commonStyles.inputContainer}>
           {/* verified teacher account */}
@@ -225,6 +328,44 @@ export const AccountInformation: React.FC<AccountInformationProps> = ({
             errorMessage={getError('name')}
           />
 
+          {!isStudent && (
+            <>
+              {/* given name */}
+              <TextField
+                id="given_name"
+                className={commonStyles.input}
+                label={i18n.firstName()}
+                onChange={e => {
+                  setGivenName(e.target.value);
+                  clearError('given_name');
+                }}
+                value={givenName}
+                name="user[given_name]"
+                maxLength={255}
+                errorMessage={getError('given_name')}
+              />
+            </>
+          )}
+
+          {!isStudent && (
+            <>
+              {/* family name */}
+              <TextField
+                id="family_name"
+                className={commonStyles.input}
+                label={i18n.lastName()}
+                onChange={e => {
+                  setFamilyName(e.target.value);
+                  clearError('family_name');
+                }}
+                value={familyName}
+                name="user[family_name]"
+                maxLength={255}
+                errorMessage={getError('family_name')}
+              />
+            </>
+          )}
+
           {/* username */}
           {userUsername && (
             <TextField
@@ -241,6 +382,42 @@ export const AccountInformation: React.FC<AccountInformationProps> = ({
               minLength={5}
               errorMessage={getError('username')}
             />
+          )}
+
+          {/* educator_role */}
+          {!isStudent && (
+            <SimpleDropdown
+              id="educator_role"
+              className={classNames(styles.dropdownContainer)}
+              labelText={locale.what_is_your_role()}
+              name="educator_role"
+              selectedValue={educatorRole}
+              onChange={handleRoleChange}
+              itemGroups={roleItemGroups}
+              dropdownTextThickness="thin"
+              errorMessage={getError('educator_role')}
+            />
+          )}
+
+          {/* facilitator bio */}
+          {isFacilitator && (
+            <FormFieldWrapper
+              label={i18n.facilitatorBio()}
+              errorMessage={
+                getError('facilitator_info.bio') ||
+                getError('facilitator_info.base') ||
+                getError('facilitator_info.user')
+              }
+            >
+              <textarea
+                name="user[facilitator_bio]"
+                value={facilitatorBio}
+                onChange={e => {
+                  setFacilitatorBio(e.target.value);
+                  clearError('facilitator_info.bio');
+                }}
+              />
+            </FormFieldWrapper>
           )}
 
           {/* email */}
@@ -435,12 +612,17 @@ export const AccountInformation: React.FC<AccountInformationProps> = ({
           )}
         </div>
         <div>
-          <Button
-            id="submit-update"
+          <MuiButton
+            variant="contained"
+            color="primary"
+            size="medium"
             className={commonStyles.submit}
-            text={i18n.accountInformation_updateAccountInformation()}
+            id="submit-update"
             onClick={handleSubmitAccountSettingsUpdate}
-          />
+            type="button"
+          >
+            {i18n.accountInformation_updateAccountInformation()}
+          </MuiButton>
         </div>
       </form>
     </>

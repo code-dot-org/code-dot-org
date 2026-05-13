@@ -1,0 +1,91 @@
+name 'pl-ai-101-V2-mod5-bias-05'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Recognizing Bias
+
+#### Bias in AI doesn’t always appear as something obviously harmful or inappropriate. More often, it shows up in subtle ways such as through assumptions, missing perspectives, or patterns in how information is presented.
+
+#### To use AI responsibly, it’s important to recognize these patterns and consider how they might impact students and learning.
+
+<div style="display:grid; gap:16px; max-width:90%; margin:0 auto; font-family:ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial; color:#292F36;">
+
+<!-- Card 1 -->
+<div style="display:grid; grid-template-columns:160px 1fr; gap:16px; border:2px solid #8C52BA; border-radius:16px; padding:18px; background:#FFFFFF; box-shadow:0 4px 12px rgba(41,47,54,0.06);">
+<div style="display:flex; align-items:center; justify-content:center; padding:10px;">
+<img src="https://images.code.org/54bd64eab4eb2210b987f25a901674f9-Screenshot 2026-04-17 at 12.39.01 PM.png" 
+     style="width:120px; height:120px; object-fit:contain;">
+</div>
+<div>
+<div style="font-size:22px; font-weight:800; margin-bottom:8px; color:#141414;">Relied on a stereotype</div>
+<div style="font-size:16px; line-height:1.5; margin-bottom:10px;">
+AI may repeat common but oversimplified ideas about groups of people.
+</div>
+<div style="font-size:16px; font-weight:700; margin-bottom:6px;">Example:</div>
+<div style="font-size:15px; line-height:1.5;">
+Suggesting that “boys tend to be better at math” or generating examples where engineers are always male and nurses are always female.
+</div>
+</div>
+</div>
+
+<!-- Card 2 -->
+<div style="display:grid; grid-template-columns:160px 1fr; gap:16px; border:2px solid #8C52BA; border-radius:16px; padding:18px; background:#FFFFFF; box-shadow:0 4px 12px rgba(41,47,54,0.06);">
+<div style="display:flex; align-items:center; justify-content:center; padding:10px;">
+<img src="https://images.code.org/44b1d62deb6a8b4faab79151cd2d6e28-Screenshot 2026-04-17 at 12.39.05 PM.png" 
+     style="width:120px; height:120px; object-fit:contain;">
+</div>
+<div>
+<div style="font-size:22px; font-weight:800; margin-bottom:8px; color:#141414;">Assumed one identity or experience</div>
+<div style="font-size:16px; line-height:1.5; margin-bottom:10px;">
+AI may present a single perspective as the “default” or “normal” experience.
+</div>
+<div style="font-size:16px; font-weight:700; margin-bottom:6px;">Example:</div>
+<div style="font-size:15px; line-height:1.5;">
+Writing a classroom scenario where all students celebrate Christmas or have access to a quiet space and internet at home for homework.</div>
+</div>
+</div>
+
+<!-- Card 3 -->
+<div style="display:grid; grid-template-columns:160px 1fr; gap:16px; border:2px solid #8C52BA; border-radius:16px; padding:18px; background:#FFFFFF; box-shadow:0 4px 12px rgba(41,47,54,0.06);">
+<div style="display:flex; align-items:center; justify-content:center; padding:10px;">
+<img src="https://images.code.org/cbfdea16ccc1082fd69bfddcc21f5185-Screenshot 2026-04-17 at 12.39.08 PM.png" 
+     style="width:120px; height:120px; object-fit:contain;">
+</div>
+<div>
+<div style="font-size:22px; font-weight:800; margin-bottom:8px; color:#141414;">Left out other perspectives</div>
+<div style="font-size:16px; line-height:1.5; margin-bottom:10px;">
+AI responses may ignore or minimize diverse viewpoints.
+</div>
+<div style="font-size:16px; font-weight:700; margin-bottom:6px;">Example:</div>
+<div style="font-size:15px; line-height:1.5;">
+Explaining westward expansion in U.S. history only from the perspective of settlers, without acknowledging the impact on Indigenous communities.</div>
+</div>
+</div>
+
+<!-- Card 4 -->
+<div style="display:grid; grid-template-columns:160px 1fr; gap:16px; border:2px solid #8C52BA; border-radius:16px; padding:18px; background:#FFFFFF; box-shadow:0 4px 12px rgba(41,47,54,0.06);">
+<div style="display:flex; align-items:center; justify-content:center; padding:10px;">
+<img src="https://images.code.org/4e96664d9d3798a6208d783662a216a7-Screenshot 2026-04-17 at 12.39.12 PM.png" 
+     style="width:120px; height:120px; object-fit:contain;">
+</div>
+<div>
+<div style="font-size:22px; font-weight:800; margin-bottom:8px; color:#141414;">Language that isn’t inclusive</div>
+<div style="font-size:16px; line-height:1.5; margin-bottom:10px;">
+AI may use wording that unintentionally excludes or overlooks certain groups.
+</div>
+<div style="font-size:16px; font-weight:700; margin-bottom:6px;">Example:</div>
+<div style="font-size:15px; line-height:1.5;">
+Using phrases like “ask your parents (mom and dad)” in a classroom example, or referring to all students as “he” in instructions.</div>
+</div>
+</div>
+
+</div>
+
+#### When something feels off, pause and reflect:
+* #### Whose perspective is represented here?
+* #### Whose perspective might be missing?
+* #### What assumptions are being made?
+
+>#### **💬 Quick Reflection:** What would you do if you recognized bias in an AI generated output?
+MARKDOWN

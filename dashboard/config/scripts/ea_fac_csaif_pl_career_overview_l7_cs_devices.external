@@ -1,0 +1,66 @@
+name 'ea-fac-csaif_pl_career_overview_L7-cs-devices'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Career Connections Overview
+
+#### The <a href="https://courseinfo.code.org/csaif/" target="blank" rel="noopener noreferrer">Computer Science and AI Foundations Curriculum</a> integrates career exploration and emerging technologies as students develop foundational skills in computing.
+
+#### Throughout the course, students engage with real-world case studies, hands-on projects, and industry-relevant tools to see how computer systems apply across various fields. 
+
+
+---
+
+## Career Journeys
+
+<h4>
+In <b>Computer Systems and Devices, </b> several lessons are labeled with a <span style="background-color: lightgray; padding: 2px;"><b> 🧑‍🎓 Career Journeys </b></span>  tag indicating that the lesson connects to real-world careers.  
+</h4> 
+
+<div style="display: flex; justify-content: center; gap: 15px; padding: 20px;">
+    <img src="https://images.code.org/bb0c4bc6d2a7b7c7c38889fd03541372-image-1742223629607.png" 
+         alt="Image 1" 
+         style="width: 150px; height: 150px; border-radius: 15px; box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2); object-fit: cover;">
+    
+    <img src="https://images.code.org/fb2d69820db91b3dbd3297223c8fd4be-image-1742223656216.png" 
+         alt="Image 2" 
+         style="width: 150px; height: 150px; border-radius: 15px; box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2); object-fit: cover;">
+    
+    <img src="https://images.code.org/1a69b780dd83bcb5ab9c3103ec8dd37c-image-1742225695511.png" 
+         alt="Image 3" 
+         style="width: 150px; height: 150px; border-radius: 15px; box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2); object-fit: cover;">
+    
+    <img src="https://images.code.org/2044b4d0a0c7851dca85e0824da030cd-image-1742225727658.png" 
+         alt="Image 4" 
+         style="width: 150px; height: 150px; border-radius: 15px; box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2); object-fit: cover;">
+</div>
+
+## Career Journey Examples
+
+<p style="font-size: 18px; font-weight: bold; background-color: #F5F7F8; padding: 10px; border-left: 5px solid #8148B2; display: inline-block;">
+    ➡️ In <a href='https://example.com/lesson1' target='_blank' rel='noopener noreferrer' style='text-decoration: none; font-weight: bold;'>Lesson 2</a>, explore how different careers rely on specific computer components.
+</p>
+
+<p style="font-size: 18px; font-weight: bold; background-color: #F5F7F8; padding: 10px; border-left: 5px solid #8148B2; display: inline-block;">
+    ➡️ In <a href='https://example.com/lesson1' target='_blank' rel='noopener noreferrer' style='text-decoration: none; font-weight: bold;'>Lesson 4</a>, explore how different careers rely on specialized software.
+</p>
+
+<p style="font-size: 18px; font-weight: bold; background-color: #F5F7F8; padding: 10px; border-left: 5px solid #8148B2; display: inline-block;">
+    ➡️ In <a href='https://example.com/lesson1' target='_blank' rel='noopener noreferrer' style='text-decoration: none; font-weight: bold;'>Lesson 7</a>, analyze how different careers rely on different types of data. 
+</p>
+
+
+<div style="background-color: #B7E0E5; color: #000000; padding: 15px; border-radius: 10px; width: 90%; margin: 20px auto;">
+        <p style="font-size: 14pt; font-weight: bold; margin: 0;"><strong>As you teach</strong>, consider ways to make these career connections meaningful:</p>
+        <ul style="font-size: 14pt; line-height: 1.5; margin-top: 10px; padding-left: 20px;">
+            <li><strong>Highlight Diverse Roles</strong> – Showcase a range of computing careers, from software development to AI ethics, to help students see multiple pathways.</li><br>
+            <li><strong>Encourage Reflection</strong> – Have students consider how their personal interests—whether in gaming, art, science, or social issues—connect to computing careers.</li><br>
+            <li><strong>Invite Guest Speakers</strong> – Bringing in professionals (virtually or in person) can provide insight into different career journeys and inspire students.</li><br>
+            <li><strong>Make Connections Ongoing</strong> – Reinforce career relevance throughout the unit, not just at the beginning, by tying discussions back to real-world applications.</li>
+        </ul>
+    </div>
+
+
+
+MARKDOWN

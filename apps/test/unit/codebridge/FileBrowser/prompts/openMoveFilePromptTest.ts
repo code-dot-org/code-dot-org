@@ -19,7 +19,7 @@ const getMoveFileMock = (): [ProjectFile, MoveFileFunction] => {
 
 describe('openMoveFilePrompt', function () {
   it('can successfully move a file', async function () {
-    const [analyticsData, sendCodebridgeAnalyticsEvent] = getAnalyticsMock();
+    const [analyticsData, sendLab2AnalyticsEvent] = getAnalyticsMock();
     const fileId = '4';
     const destinationFolderId = '1';
 
@@ -29,11 +29,11 @@ describe('openMoveFilePrompt', function () {
       fileId,
       projectFiles: testProject.files,
       projectFolders: testProject.folders,
-      dialogControl: getDialogControlMock(destinationFolderId),
+      dialogControl: getDialogControlMock('', destinationFolderId),
       moveFile: moveFileDataMock,
       isStartMode: false,
       validationFile: undefined,
-      sendCodebridgeAnalyticsEvent,
+      sendLab2AnalyticsEvent,
     });
 
     expect(moveFileData.id).toEqual(fileId);
@@ -43,7 +43,7 @@ describe('openMoveFilePrompt', function () {
   });
 
   it('can refuse to move a file that cannot be moved', async function () {
-    const [analyticsData, sendCodebridgeAnalyticsEvent] = getAnalyticsMock();
+    const [analyticsData, sendLab2AnalyticsEvent] = getAnalyticsMock();
     const fileId = '1';
     const destinationFolderId = '1';
 
@@ -53,11 +53,11 @@ describe('openMoveFilePrompt', function () {
       fileId,
       projectFiles: smallProject.files,
       projectFolders: smallProject.folders,
-      dialogControl: getDialogControlMock(destinationFolderId),
+      dialogControl: getDialogControlMock('', destinationFolderId),
       moveFile: moveFileDataMock,
       isStartMode: false,
       validationFile: undefined,
-      sendCodebridgeAnalyticsEvent,
+      sendLab2AnalyticsEvent,
     });
 
     expect(Object.keys(moveFileData).length).toEqual(0);

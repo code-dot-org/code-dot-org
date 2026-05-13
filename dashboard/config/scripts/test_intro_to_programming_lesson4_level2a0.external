@@ -1,0 +1,17 @@
+name 'test-intro-to-programming-lesson4-level2a0'
+title 'Designing an Algorithm - Access to Laptops'
+description 'description here'
+
+markdown <<MARKDOWN
+# Deciding Who Gets Access to Limited School Resources
+
+## Scenario Introduction
+
+##### Your school has a limited number of laptops available for checkout. Design an algorithm to decide who should get priority access.
+
+## Background Information:
+
+- Laptops are often checked out for research, assignments, or group projects.
+- Some students might not have access to a personal device at home.
+
+MARKDOWN

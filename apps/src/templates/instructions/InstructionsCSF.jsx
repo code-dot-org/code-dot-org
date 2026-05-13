@@ -154,7 +154,6 @@ class InstructionsCSF extends React.Component {
       contentContainer.scrollHeight > contentContainer.clientHeight;
     if (canScroll !== this.state.displayScrollButtons) {
       // see comment above
-      // eslint-disable-next-line react/no-did-update-set-state
       this.setState({
         displayScrollButtons: canScroll,
       });

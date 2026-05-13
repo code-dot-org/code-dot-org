@@ -5,15 +5,16 @@
  *
  */
 
+import {getCode} from '@cdo/apps/blockly/utils';
+
 import {TestResults, ResultType} from '../constants';
 import {getStore} from '../redux';
 import AppView from '../templates/AppView';
+import {createReactRoot} from '../util/createReactRoot';
 
 var React = require('react');
-var ReactDOM = require('react-dom');
 var Provider = require('react-redux').Provider;
 
-var dom = require('../dom');
 var studioApp = require('../StudioApp').singleton;
 
 var JigsawVisualizationColumn = require('./JigsawVisualizationColumn');
@@ -117,7 +118,7 @@ var drawMap = function () {
 
   if (level.ghost) {
     var blockCanvas = Blockly.mainBlockSpace.getCanvas();
-    Blockly.createSvgElement(
+    Blockly.utils.dom.createSvgElement(
       'rect',
       {
         fill: 'url(#pat_' + level.id + 'A)',
@@ -180,38 +181,37 @@ Jigsaw.init = function (config) {
     document.getElementById('runButton').style.display = 'none';
     Jigsaw.successListener = Blockly.mainBlockSpaceEditor.addChangeListener(
       function (evt) {
+        // Only used by level1, in which the success criteria is clicking on the block
+        if (evt.type === 'click' && evt.blockId === 'jigsaw_1A') {
+          Jigsaw.block1Clicked = true;
+        }
         checkForSuccess();
       }
     );
-
-    // Only used by level1, in which the success criteria is clicking on the block
-    var block1 = document.querySelectorAll("[block-id='1']")[0];
-    if (block1) {
-      dom.addMouseDownTouchEvent(block1, function () {
-        Jigsaw.block1Clicked = true;
-      });
-    }
   };
 
   studioApp().setPageConstants(config, {
     noVisualization: true,
   });
 
-  ReactDOM.render(
+  createReactRoot(
     <Provider store={getStore()}>
       <AppView
         visualizationColumn={<JigsawVisualizationColumn />}
         onMount={onMount}
       />
     </Provider>,
-    document.getElementById(config.containerId)
+    document.getElementById(config.containerId),
+    {
+      legacyReactDomRender: true,
+    }
   );
 };
 
 function checkForSuccess() {
   var success = level.goal.successCondition();
   if (success) {
-    Blockly.removeChangeListener(Jigsaw.successListener);
+    Blockly.getMainWorkspace().removeChangeListener(Jigsaw.successListener);
 
     Jigsaw.result = ResultType.SUCCESS;
     Jigsaw.onPuzzleComplete();
@@ -266,7 +266,7 @@ Jigsaw.onPuzzleComplete = function () {
     studioApp().playAudio('failure');
   }
 
-  var textBlocks = Blockly.cdoUtils.getCode(Blockly.mainBlockSpace);
+  var textBlocks = getCode(Blockly.mainBlockSpace);
 
   Jigsaw.waitingForReport = true;
 

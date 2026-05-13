@@ -27,6 +27,8 @@
 # @attr [String] audience - who this resource is targeted toward (eg teacher, student, etc)
 # @attr [String] download_url - URL that can download the file
 # @attr [Boolean] include_in_pdf - indicates whether the file will be included in a PDF handout
+# @attr [String] embeddability_type - what has access to this resource (embedded and able to be scraped, user-facing in resource dropdown, or both)
+# @attr [String] curriculum_category - corresponds with 'type' section of embeddings metadata (can be null, 'curriculum', or 'professional_learning')
 class Resource < ApplicationRecord
   include SerializedProperties
 
@@ -39,6 +41,10 @@ class Resource < ApplicationRecord
   has_and_belongs_to_many :lessons, join_table: :lessons_resources
   has_and_belongs_to_many :scripts, class_name: 'Unit', join_table: :scripts_resources, association_foreign_key: 'script_id'
   has_and_belongs_to_many :unit_groups, join_table: :unit_groups_resources
+  has_and_belongs_to_many :jit_pl_concepts, join_table: :jit_pl_concepts_resources
+  has_and_belongs_to_many :jit_pl_exemplars, join_table: :jit_pl_exemplars_resources
+  has_and_belongs_to_many :jit_pl_misconceptions, join_table: :jit_pl_misconceptions_resources
+  has_and_belongs_to_many :jit_pl_teaching_tips, join_table: :jit_pl_teaching_tips_resources
   belongs_to :course_version, optional: true
 
   before_validation :generate_key, on: :create
@@ -50,6 +56,8 @@ class Resource < ApplicationRecord
     download_url
     include_in_pdf
     is_rollup
+    embeddability_type
+    curriculum_category
   )
 
   def generate_key
@@ -74,12 +82,20 @@ class Resource < ApplicationRecord
     {'resource.key': key}.stringify_keys
   end
 
+  def show_in_resource_ui?
+    embeddability_type != SharedConstants::RESOURCE_EMBEDDABILITY_OPTIONS[:EMBED_ONLY][:value]
+  end
+
+  def embed_in_ai_ta?
+    embeddability_type != SharedConstants::RESOURCE_EMBEDDABILITY_OPTIONS[:RESOURCE_DROPDOWN_ONLY][:value]
+  end
+
   def should_include_in_pdf?
-    # Resources should be excluded from PDF rollups if they are either not
-    # explicitly flagged with the `include_in_pdf` property OR if they are
-    # intended to only be shown to verified teachers.
-    return false if audience == 'Verified Teacher'
-    return !!include_in_pdf
+    # Resources should be included in PDF rollups if they satisfy all of the following:
+    # - Flagged with the `include_in_pdf` property
+    # - Not intended to only be shown to verified teachers
+    # - Don't have an `embeddability_type` of `embed_only`
+    return (!!include_in_pdf && audience != 'Verified Teacher' && show_in_resource_ui?)
   end
 
   # A simple helper function to encapsulate creating a unique key, since this
@@ -100,6 +116,8 @@ class Resource < ApplicationRecord
       # used by lesson plan page and others
       download_url: download_url,
       audience: audience || 'All',
+      embeddabilityType: embeddability_type || SharedConstants::RESOURCE_EMBEDDABILITY_OPTIONS[:EMBED_AND_RESOURCE_DROPDOWN][:value],
+      curriculumCategory: curriculum_category || '',
       type: get_localized_property(:type)
     }
   end
@@ -114,6 +132,8 @@ class Resource < ApplicationRecord
       downloadUrl: download_url || '',
       audience: audience || '',
       type: type || '',
+      embeddabilityType: embeddability_type || SharedConstants::RESOURCE_EMBEDDABILITY_OPTIONS[:EMBED_AND_RESOURCE_DROPDOWN][:value],
+      curriculumCategory: curriculum_category || '',
       assessment: assessment || false,
       includeInPdf: include_in_pdf || false,
       isRollup: !!is_rollup
@@ -126,7 +146,9 @@ class Resource < ApplicationRecord
       key: key,
       markdownKey: Services::GloballyUniqueIdentifiers.build_resource_key(self),
       name: get_localized_property(:name),
-      url: get_localized_property(:url)
+      url: get_localized_property(:url),
+      embeddabilityType: embeddability_type || SharedConstants::RESOURCE_EMBEDDABILITY_OPTIONS[:EMBED_AND_RESOURCE_DROPDOWN][:value],
+      curriculumCategory: curriculum_category || ''
     }
   end
 
@@ -135,6 +157,9 @@ class Resource < ApplicationRecord
       scripts_to_serialize = lessons.map(&:script).concat(scripts).uniq
       scripts_to_serialize.each(&:write_script_json)
       unit_groups.each(&:write_serialization)
+      jit_pl_concepts_to_serialize = jit_pl_concepts.to_a +
+        jit_pl_misconceptions.map(&:jit_pl_concept)
+      jit_pl_concepts_to_serialize.uniq.each(&:write_serialization)
     end
   end
 

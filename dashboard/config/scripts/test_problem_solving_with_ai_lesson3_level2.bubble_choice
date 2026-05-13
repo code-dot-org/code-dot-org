@@ -1,0 +1,8 @@
+name 'test-problem-solving-with-ai-lesson3-level2'
+display_name 'One-Shot Prompting'
+description 'Choose one career to explore how one-shot prompting affects AI responses.'
+
+sublevels
+level 'test-problem-solving-with-ai-lesson3-level2-choice1'
+level 'test-problem-solving-with-ai-lesson3-level2-choice2'
+level 'test-problem-solving-with-ai-lesson3-level2-choice3'

@@ -1,6 +1,7 @@
-import {ProjectType, FolderId} from '@codebridge/types';
+import {FolderId} from '@codebridge/types';
 
 import codebridgeI18n from '@cdo/apps/codebridge/locale';
+import {MultiFileSource} from '@cdo/apps/lab2/types';
 
 import {isDuplicateFolderName} from './isDuplicateFolderName';
 import {isValidFolderName} from './isValidFolderName';
@@ -8,7 +9,7 @@ import {isValidFolderName} from './isValidFolderName';
 type ValidateFolderNameArgs = {
   folderName: string;
   parentId: FolderId;
-  projectFolders: ProjectType['folders'];
+  projectFolders: MultiFileSource['folders'];
 };
 
 /**
@@ -42,5 +43,17 @@ export const validateFolderName = ({
 
   if (duplicate) {
     return codebridgeI18n.duplicateFolderError({folderName});
+  }
+};
+
+export const validateFolderNameForModal = (
+  args: ValidateFolderNameArgs
+): {text: string; type: 'error' | 'warning'} | undefined => {
+  const errorMessage = validateFolderName(args);
+  if (errorMessage) {
+    return {
+      text: errorMessage,
+      type: 'error',
+    };
   }
 };

@@ -7,7 +7,6 @@ import ReactTooltip from 'react-tooltip';
 import fontConstants from '@cdo/apps/fontConstants';
 import Button from '@cdo/apps/legacySharedComponents/Button';
 import FontAwesome from '@cdo/apps/legacySharedComponents/FontAwesome';
-import firehoseClient from '@cdo/apps/metrics/firehose';
 import color from '@cdo/apps/util/color';
 
 export const NotificationType = {
@@ -36,7 +35,6 @@ const Notification = ({
   detailsLinkNewWindow,
   detailsLinkText,
   dismissible,
-  firehoseAnalyticsData,
   iconStyles,
   isRtl,
   newWindow,
@@ -58,40 +56,7 @@ const Notification = ({
     }
   };
 
-  const logAnnouncementClickToFirehose = () => {
-    let record = {};
-
-    // Our firehose logging system has standalone fields for commonly used metadata (eg, user_id).
-    // Here, we separate out those fields from any other analytics data provided in the firehoseAnalyticsData prop.
-    // We include these properties in the data_json object as well, in case that is easier for our product team to use.
-    ['user_id', 'script_id', 'lesson_id'].forEach(firehoseMetadataKey => {
-      if (firehoseMetadataKey in firehoseAnalyticsData) {
-        record[firehoseMetadataKey] =
-          firehoseAnalyticsData[firehoseMetadataKey];
-      }
-    });
-
-    record = {
-      ...record,
-      study: 'notification_engagement',
-      event: 'notification_click',
-      data_json: JSON.stringify({
-        ...firehoseAnalyticsData,
-        notice: notice,
-        details: details,
-        buttonLink: buttonLink,
-      }),
-    };
-
-    firehoseClient.putRecord(record, {includeUserId: true});
-  };
-
   const onAnnouncementClick = () => {
-    // Log to Firehose
-    if (firehoseAnalyticsData) {
-      logAnnouncementClickToFirehose();
-    }
-
     if (onButtonClick) {
       onButtonClick();
     }
@@ -100,10 +65,10 @@ const Notification = ({
   const desktop = responsiveSize === undefined || responsiveSize === 'lg';
 
   const icons = {
-    information: 'info-circle',
-    success: 'check-circle',
-    failure: 'exclamation-triangle',
-    warning: 'exclamation-triangle',
+    information: 'circle-info',
+    success: 'circle-check',
+    failure: 'triangle-exclamation',
+    warning: 'triangle-exclamation',
     bullhorn: 'bullhorn',
     bullhorn_yellow: 'bullhorn',
     feedback: 'envelope',
@@ -141,7 +106,7 @@ const Notification = ({
               {tooltipText ? (
                 <span>
                   <span data-tip data-for={tooltipId} style={styles.tooltip}>
-                    <FontAwesome icon="info-circle" />
+                    <FontAwesome icon="circle-info" />
                   </span>
                   <ReactTooltip id={tooltipId} effect="solid">
                     <p style={styles.tooltipText}>{tooltipText}</p>
@@ -200,7 +165,7 @@ const Notification = ({
         </div>
         {dismissible && (
           <div style={styles.dismiss}>
-            <FontAwesome icon="times" onClick={handleDismiss} />
+            <FontAwesome icon="xmark" onClick={handleDismiss} />
           </div>
         )}
       </div>
@@ -223,9 +188,6 @@ Notification.propTypes = {
   iconStyles: PropTypes.object,
   onDismiss: PropTypes.func,
   newWindow: PropTypes.bool,
-  // firehoseAnalyticsData are only used when a primary button is provided.
-  // It's not used by the array of buttons.
-  firehoseAnalyticsData: PropTypes.object,
   responsiveSize: PropTypes.oneOf(['lg', 'md', 'sm', 'xs']),
   isRtl: PropTypes.bool.isRequired,
   onButtonClick: PropTypes.func,

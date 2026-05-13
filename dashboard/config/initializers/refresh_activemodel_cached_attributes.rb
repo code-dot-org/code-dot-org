@@ -21,7 +21,7 @@ module Cdo
     end
 
     def assign_attributes(new_attributes)
-      super(new_attributes)
+      super
     rescue ActiveModel::UnknownAttributeError
       if new_database_migration_since_initialization?
         # Update migration count so we only try this refresh once.
@@ -36,7 +36,7 @@ module Cdo
         @attributes = self.class._default_attributes.deep_dup
 
         # Try again now that our attributes cache is accurately mirroring the database.
-        super(new_attributes)
+        super
       else
         raise
       end
@@ -54,7 +54,7 @@ module Cdo
     # we could consider instead checking a hash of the contents of the set
     # rather than the length, at a small performance cost.
     private def new_database_migration_since_initialization?
-      return nil unless defined?(@@latest_count_of_database_migrations)
+      return false unless defined?(@@latest_count_of_database_migrations)
       current_migrations_count = ActiveRecord::SchemaMigration.all.count
       return current_migrations_count != @@latest_count_of_database_migrations
     end

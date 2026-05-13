@@ -16,8 +16,8 @@ module Services
     setup do
       Game.game_cache = nil
       PDF.stubs(:generate_from_url)
-      @programming_environment = create :programming_environment, name: 'new-lab'
-      @framework = create :framework, shortcode: 'test_framework'
+      @programming_environment = create(:programming_environment, name: 'new-lab')
+      @framework = create(:framework, shortcode: 'test_framework')
     end
 
     # Tests serialization of a "full Unit tree" - a Unit with all of the associated models under it populated.
@@ -50,62 +50,6 @@ module Services
       refute result[:properties].key? 'seeded_from'
     end
 
-    test 'seed new script' do
-      # This line of code is used to initialize the `max_allowed_packet` setting in ActiveRecord::Import.
-      # When a test is run in isolation, this setting may not be set, which can cause an extra database request.
-      # This extra request can interfere with the `assert_queries` count in the test, causing it to fail.
-      # By calling `max_allowed_packet` here, we ensure that the setting is initialized before the test begins.
-      # See: https://github.com/zdennis/activerecord-import/blob/v1.0.8/lib/activerecord-import/adapters/mysql_adapter.rb#L55-L64
-      ApplicationRecord.connection.max_allowed_packet if ApplicationRecord.connection.respond_to?(:max_allowed_packet)
-
-      script = create_script_tree
-      script.freeze
-      json = ScriptSeed.serialize_seeding_json(script)
-      counts_before = get_counts
-
-      # remove the script from the database, leaving the frozen script object intact.
-      script_to_destroy = Unit.find(script.id)
-      script_to_destroy.course_version.resources.destroy_all
-      script_to_destroy.course_version.vocabularies.destroy_all
-      script_to_destroy.course_version.destroy!
-      script_to_destroy.destroy!
-
-      # This is currently:
-      #   3 misc queries - starting and stopping transaction, getting max_allowed_packet
-      #   4 queries to set up course offering and course version
-      #   34 queries - two for each model, + one extra query each for Lessons,
-      #     LessonActivities, ActivitySections, ScriptLevels, LevelsScriptLevels,
-      #     Resources, Vocabulary, Rubric, LearningGoal, and LearningGoalEvidenceLevel.
-      #     These 2-3 queries per model are to (1) delete old entries, (2) import
-      #     new/updated entries, and then (3) fetch the result for use by the next
-      #     layer down in the hierarchy.
-      #   12 queries - ScriptLevel validations related to having an activity_section.
-      #     These would be good candidates to eliminate in future optimization.
-      #   16 queries, one for each LevelsScriptLevel.
-      #   4 queries, one to remove LessonsResources from each Lesson.
-      #   2 queries, one to remove LessonsVocabularies from each Lesson.
-      #   2 queries, one to remove LessonsProgrammingExpression from each Lesson.
-      #   2 queries, one to remove LessonsStandards from each Lesson.
-      #   2 queries, one to remove LessonsOpportunityStandards from each Lesson.
-      #   1 query to get all the programming environments
-      #   1 query to get all the standards frameworks
-      #   1 query to check for a CourseOffering. (Would be a few more if is_course was true)
-      #   1 query to check if units in family have the same course type settings
-      # LevelsScriptLevels has queries which scale linearly with the number of rows.
-      # As far as I know, to get rid of those queries per row, we'd need to load all Levels into memory. I think
-      # this is slower for most individual Scripts, but there could be a savings when seeding multiple Scripts.
-      # For now, leaving this as a potential future optimization, since it seems to be reasonably fast as is.
-      # The game queries can probably be avoided with a little work, though they only apply for Blockly levels.
-      # (Dani) This will go back up by one when we turn the validation of families sharing course type back on
-      assert_queries(98) do
-        ScriptSeed.seed_from_json(json)
-      end
-
-      assert_equal counts_before, get_counts
-      script_after_seed = Unit.with_seed_models.find_by!(name: script.name)
-      assert_script_trees_equal(script, script_after_seed)
-    end
-
     test 'seed modifies script updated_at' do
       Timecop.freeze do
         script = create_script_tree
@@ -119,9 +63,9 @@ module Services
     end
 
     test 'seed script in unit group' do
-      script = create_script_tree(with_unit_group: true)
-      refute script.course_version
-      assert script.unit_group.course_version
+      script = create_script_tree
+      assert script.original_unit_group.course_version
+      assert script.original_unit_group.id, script.original_unit_group_id
       script.freeze
       json = ScriptSeed.serialize_seeding_json(script)
       counts_before = get_counts
@@ -130,8 +74,8 @@ module Services
       # its lessons and everything else they contain. Leave the script and its
       # unit group intact, so that resources can be imported.
       script_to_destroy = Unit.find(script.id)
-      script_to_destroy.unit_group.course_version.resources.destroy_all
-      script_to_destroy.unit_group.course_version.vocabularies.destroy_all
+      script_to_destroy.original_unit_group.course_version.resources.destroy_all
+      script_to_destroy.original_unit_group.course_version.vocabularies.destroy_all
       script_to_destroy.lesson_groups.destroy_all
 
       ScriptSeed.seed_from_json(json)
@@ -139,6 +83,7 @@ module Services
       assert_equal counts_before, get_counts
       script_after_seed = Unit.with_seed_models.find_by!(name: script.name)
       assert_script_trees_equal(script, script_after_seed)
+      assert_equal script_after_seed.original_unit_group, script.original_unit_group
     end
 
     # This tests the scenario where a script is in a unit group, but we don't
@@ -146,9 +91,8 @@ module Services
     # later seed step, perhaps because we are seeding for the first time on
     # a particular machine.
     test 'seed script not yet in unit group' do
-      script = create_script_tree(with_unit_group: true)
-      refute script.course_version
-      assert script.unit_group.course_version
+      script = create_script_tree
+      assert script.get_original_unit_group.course_version
 
       # Capture the json while resources are still present. This test checks
       # that these resources do not get added back during the seed process.
@@ -158,20 +102,24 @@ module Services
       script.resources.destroy_all
       script.student_resources.destroy_all
       script.freeze
+      script.get_original_unit_group.course_version.resources.destroy_all
+      script.get_original_unit_group.course_version.vocabularies.destroy_all
       expected_counts = get_counts
 
       # destroy the script and its unit group, so that no course version will
       # be available during seed.
       script_to_destroy = Unit.find(script.id)
-      script_to_destroy.unit_group.course_version.destroy!
-      script_to_destroy.unit_group.destroy!
+      unit_group_to_destroy = script_to_destroy.get_original_unit_group
+      script_to_destroy.original_unit_group.course_version.destroy!
       script_to_destroy.destroy!
+      unit_group_to_destroy.destroy!
 
       ScriptSeed.seed_from_json(json)
 
       assert_equal expected_counts, get_counts
       script_after_seed = Unit.with_seed_models.find_by!(name: script.name)
-      assert_script_trees_equal(script, script_after_seed)
+      # original_unit_group_id is set when the unit_group is seeded, unless a script already exists with an original_unit_group_id
+      assert_script_trees_equal(script, script_after_seed, ['original_unit_group_id'])
     end
 
     test 'seed with no changes is no-op' do
@@ -218,7 +166,7 @@ module Services
 
       script_with_changes, json = get_script_and_json_with_change_and_rollback(script) do
         script.lesson_groups.first.update!(big_questions: 'updated big questions')
-        create :lesson_group, script: script, description: 'my description'
+        create(:lesson_group, script: script, description: 'my description')
       end
 
       ScriptSeed.seed_from_json(json)
@@ -233,7 +181,7 @@ module Services
 
       script_with_changes, json = get_script_and_json_with_change_and_rollback(script) do
         script.lessons.first.update!(overview: 'updated overview')
-        create :lesson, lesson_group: script.lesson_groups.last, script: script, overview: 'my overview', relative_position: 5, absolute_position: 5
+        create(:lesson, lesson_group: script.lesson_groups.last, script: script, overview: 'my overview', relative_position: 5, absolute_position: 5)
       end
 
       ScriptSeed.seed_from_json(json)
@@ -293,13 +241,13 @@ module Services
 
     test 'seed updates script_levels' do
       script = create_script_tree
-      new_level = create :level
+      new_level = create(:level)
 
       script_with_changes, json = get_script_and_json_with_change_and_rollback(script) do
         updated_script_level = script.script_levels.first
         updated_script_level.update!(challenge: 'foo')
         updated_script_level.levels += [new_level]
-        create :script_level, lesson: script.lessons.last, script: script, levels: [new_level], assessment: false, bonus: false
+        create(:script_level, lesson: script.lessons.last, script: script, levels: [new_level], assessment: false, bonus: false)
       end
 
       ScriptSeed.seed_from_json(json)
@@ -313,7 +261,7 @@ module Services
       script = create_script_tree
       # give the new level a level key that will appear after the existing
       # level keys in the sort order.
-      new_level = create :level, name: 'xyz'
+      new_level = create(:level, name: 'xyz')
 
       script_with_changes, json = get_script_and_json_with_change_and_rollback(script) do
         updated_script_level = script.script_levels.first
@@ -334,7 +282,7 @@ module Services
       script = create_script_tree
       # give the new level a level key that will appear before the existing
       # level keys in the sort order.
-      new_level = create :level, name: 'abc'
+      new_level = create(:level, name: 'abc')
 
       script_with_changes, json = get_script_and_json_with_change_and_rollback(script) do
         updated_script_level = script.script_levels.first
@@ -353,8 +301,6 @@ module Services
 
     test 'seed updates lesson resources' do
       script = create_script_tree
-      CourseOffering.add_course_offering(script)
-      assert script.course_version
 
       script_with_changes, json = get_script_and_json_with_change_and_rollback(script) do
         lesson = script.lessons.first
@@ -363,7 +309,7 @@ module Services
           name: 'New Resource Name',
           key: "#{lesson.name}-resource-3",
           url: "fake.url",
-          course_version: script.course_version
+          course_version: script.get_course_version
         )
       end
 
@@ -380,15 +326,13 @@ module Services
 
     test 'seed updates script resources' do
       script = create_script_tree
-      CourseOffering.add_course_offering(script)
-      assert script.course_version
 
       script_with_changes, json = get_script_and_json_with_change_and_rollback(script) do
         script.resources.first.update!(name: 'updated name')
         script.resources.create(
           name: 'New Resource Name',
           url: "fake.url",
-          course_version: script.course_version
+          course_version: script.get_course_version
         )
       end
 
@@ -404,15 +348,13 @@ module Services
 
     test 'seed updates script student resources' do
       script = create_script_tree
-      CourseOffering.add_course_offering(script)
-      assert script.course_version
 
       script_with_changes, json = get_script_and_json_with_change_and_rollback(script) do
         script.student_resources.first.update!(name: 'updated name')
         script.student_resources.create(
           name: 'New Resource Name',
           url: "fake.url",
-          course_version: script.course_version
+          course_version: script.get_course_version
         )
       end
 
@@ -428,20 +370,18 @@ module Services
 
     test 'seed updates lesson vocabularies' do
       script = create_script_tree
-      CourseOffering.add_course_offering(script)
-      assert script.course_version
 
       script_with_changes, json = get_script_and_json_with_change_and_rollback(script) do
         lesson = script.lessons.first
         lesson.vocabularies.first.update!(definition: 'updated definition')
         key = Vocabulary.sanitize_key("#{lesson.name}-vocab-3")
         # uniquify_key always produces a key later in the sort order
-        key = Vocabulary.uniquify_key(key, script.course_version.id)
+        key = Vocabulary.uniquify_key(key, script.get_course_version.id)
         lesson.vocabularies.create(
           word: 'new word',
           key: key,
           definition: "new definition",
-          course_version: script.course_version
+          course_version: script.get_course_version
         )
         vocab_keys = lesson.vocabularies.map(&:key)
         assert_equal vocab_keys, vocab_keys.sort
@@ -464,8 +404,6 @@ module Services
 
     test 'seed updates lesson vocabularies with out of order keys' do
       script = create_script_tree
-      CourseOffering.add_course_offering(script)
-      assert script.course_version
 
       script_with_changes, json = get_script_and_json_with_change_and_rollback(script) do
         lesson = script.lessons.first
@@ -476,7 +414,7 @@ module Services
           word: 'new word',
           key: key,
           definition: "new definition",
-          course_version: script.course_version
+          course_version: script.get_course_version
         )
         vocab_keys = lesson.vocabularies.map(&:key)
         refute_equal vocab_keys, vocab_keys.sort
@@ -503,7 +441,7 @@ module Services
       # create the programming expression outside of the rollback block, because unlike vocab
       # or resources, the seed process will not re-create the programming expression for us.
       # choose a key later in the sort order than existing keys.
-      new_programming_expression = create :programming_expression, key: 'xyz'
+      new_programming_expression = create(:programming_expression, key: 'xyz')
       old_programming_expression = script.lessons.first.programming_expressions.last
 
       expected_keys = [
@@ -532,7 +470,7 @@ module Services
       # create the programming expression outside of the rollback block, because unlike vocab
       # or resources, the seed process will not re-create the programming expression for us.
       # choose a key earlier in the sort order than existing keys.
-      new_programming_expression = create :programming_expression, key: 'abc'
+      new_programming_expression = create(:programming_expression, key: 'abc')
       old_programming_expression = script.lessons.first.programming_expressions.last
 
       expected_keys = [
@@ -564,7 +502,7 @@ module Services
       # lesson standards are sorted by seeding_key. give the new standard a
       # framework shortcode and shortcode that will make it appear after the
       # existing standards in the sort order.
-      new_standard = create :standard, framework: @framework, shortcode: 'xyz', description: 'New Standard'
+      new_standard = create(:standard, framework: @framework, shortcode: 'xyz', description: 'New Standard')
 
       expected_descriptions = [
         script.lessons.first.standards.last.description,
@@ -592,7 +530,7 @@ module Services
 
       # give the new standard a shortcode that will make it appear before the
       # existing standards in the sort order.
-      new_standard = create :standard, framework: @framework, shortcode: 'abc', description: 'New Standard'
+      new_standard = create(:standard, framework: @framework, shortcode: 'abc', description: 'New Standard')
 
       expected_shortcodes = [
         new_standard.shortcode,
@@ -629,7 +567,7 @@ module Services
       # opportunity standards are sorted by seeding_key. give the new standard
       # a framework shortcode and shortcode that will make it appear after the
       # existing standards in the sort order.
-      new_standard = create :standard, framework: @framework, shortcode: 'xyz', description: 'New Standard'
+      new_standard = create(:standard, framework: @framework, shortcode: 'xyz', description: 'New Standard')
 
       expected_descriptions = [
         script.lessons.first.opportunity_standards.last.description,
@@ -657,7 +595,7 @@ module Services
 
       # give the new standard a shortcode that will make it appear before the
       # existing standards in the sort order.
-      new_standard = create :standard, framework: @framework, shortcode: 'abc', description: 'New Standard'
+      new_standard = create(:standard, framework: @framework, shortcode: 'abc', description: 'New Standard')
 
       # when the order of the serialized lessons_opportunity_standards changes,
       # the sort order of opportunity standards in the database is preserved.
@@ -886,7 +824,7 @@ module Services
     test 'seed deletes levels_script_levels' do
       script = create_script_tree
       old_level = script.script_levels.first.levels.first
-      new_level = create :level
+      new_level = create(:level)
       script.script_levels.first.add_variant(new_level)
       original_counts = get_counts
 
@@ -1188,18 +1126,6 @@ module Services
       end
     end
 
-    test 'seed sets published_state on course_version' do
-      script = create_script_tree(num_lessons_per_group: 1)
-      script.published_state = 'preview'
-      script.save!
-
-      json = ScriptSeed.serialize_seeding_json(script)
-      ScriptSeed.seed_from_json(json)
-
-      script = Unit.with_seed_models.find(script.id)
-      assert_equal 'preview', script.course_version.published_state
-    end
-
     test 'import_script sets seeded_from from serialized_at' do
       script = create(:script, is_migrated: true)
       assert script.seeded_from.nil?
@@ -1216,7 +1142,7 @@ module Services
     end
 
     test 'seed rejects bad plc module name' do
-      unit = create :script, :with_levels
+      unit = create(:script, :with_levels)
       unit.lesson_groups.first.update!(key: 'bad_module_type',  display_name: "Bad Module Type")
 
       # must skip callbacks, or generate_plc_objects will fail.
@@ -1231,19 +1157,90 @@ module Services
       assert_equal 'Validation failed: Module type is not included in the list', e.message
     end
 
-    test 'published state set to pilot when pilot_experiment is present' do
-      unit = create :script
-      assert_nil unit.pilot_experiment
-      assert_equal Curriculum::SharedCourseConstants::PUBLISHED_STATE.beta, unit.get_published_state
+    test 'seed clears md5 when course version is missing and resources are present' do
+      script = create_script_tree(name_prefix: 'test-md5-clear')
+      assert script.get_course_version
+      json = ScriptSeed.serialize_seeding_json(script)
 
-      json = ScriptSeed.serialize_seeding_json(unit)
-      unit_data = JSON.parse(json)
-      unit_data['script']['properties']['pilot_experiment'] = 'my-experiment'
+      # Verify the JSON contains resources and vocabularies
+      data = JSON.parse(json)
+      assert data['resources'].any?, 'expected resources in serialized data'
+      assert data['vocabularies'].any?, 'expected vocabularies in serialized data'
 
-      ScriptSeed.seed_from_json(unit_data.to_json)
-      unit.reload
-      assert_equal 'my-experiment', unit.pilot_experiment
-      assert_equal 'pilot', unit.get_published_state
+      # Destroy the unit group and course version so they won't be available during seed
+      script.get_original_unit_group.course_version.resources.destroy_all
+      script.get_original_unit_group.course_version.vocabularies.destroy_all
+      script_to_destroy = Unit.find(script.id)
+      unit_group_to_destroy = script_to_destroy.get_original_unit_group
+      script_to_destroy.original_unit_group.course_version.destroy!
+      script_to_destroy.destroy!
+      unit_group_to_destroy.destroy!
+
+      md5 = Digest::MD5.hexdigest(json)
+      ScriptSeed.seed_from_json(json, md5: md5)
+
+      seeded_script = Unit.find_by_name(script.name)
+      assert_nil seeded_script.md5, 'md5 should be nil because course version was missing and resources/vocab were present'
+    end
+
+    test 'seed preserves md5 when course version is missing but no resources or vocabularies' do
+      script = create_script_tree(
+        name_prefix: 'test-md5-no-resources',
+        num_resources_per_lesson: 0,
+        num_resources_per_script: 0,
+        num_vocabularies_per_lesson: 0
+      )
+      json = ScriptSeed.serialize_seeding_json(script)
+
+      data = JSON.parse(json)
+      assert_empty data['resources'], 'expected no resources in serialized data'
+      assert_empty data['vocabularies'], 'expected no vocabularies in serialized data'
+
+      # Destroy the unit group and course version
+      script_to_destroy = Unit.find(script.id)
+      unit_group_to_destroy = script_to_destroy.get_original_unit_group
+      script_to_destroy.original_unit_group.course_version.destroy!
+      script_to_destroy.destroy!
+      unit_group_to_destroy.destroy!
+
+      md5 = Digest::MD5.hexdigest(json)
+      ScriptSeed.seed_from_json(json, md5: md5)
+
+      seeded_script = Unit.find_by_name(script.name)
+      assert_equal md5, seeded_script.md5, 'md5 should be preserved when no resources or vocabularies need importing'
+    end
+
+    test 'seed_from_json_file stores md5 when provided' do
+      script = create_script_tree(name_prefix: 'test-md5-storage')
+      json = ScriptSeed.serialize_seeding_json(script)
+
+      file = Tempfile.new(['test-script', '.script_json'])
+      file.write(json)
+      file.rewind
+
+      md5 = Digest::MD5.hexdigest(json)
+      ScriptSeed.seed_from_json_file(file.path, md5: md5)
+
+      assert_equal md5, Unit.find_by_name(script.name).md5
+    ensure
+      file&.close
+      file&.unlink
+    end
+
+    test 'seed_from_json_file works without md5 parameter' do
+      script = create_script_tree(name_prefix: 'test-no-md5')
+      json = ScriptSeed.serialize_seeding_json(script)
+
+      file = Tempfile.new(['test-script', '.script_json'])
+      file.write(json)
+      file.rewind
+
+      ScriptSeed.seed_from_json_file(file.path)
+
+      assert_nil Unit.find_by_name(script.name).md5
+    ensure
+      file&.close
+      file&.unlink
     end
 
     def get_script_and_json_with_change_and_rollback(script, &db_write_block)
@@ -1268,11 +1265,11 @@ module Services
       ].map {|c| [c.name, c.count]}.to_h
     end
 
-    def assert_script_trees_equal(s1, s2)
+    def assert_script_trees_equal(s1, s2, script_excludes = [])
       # Make sure the scripts and their associations are already in memory,
       # because fetching data from the DB could lead to false positive matches.
       assert_queries(0) do
-        assert_scripts_equal s1, s2
+        assert_scripts_equal s1, s2, script_excludes
         assert_lesson_groups_equal s1.lesson_groups, s2.lesson_groups
         assert_lessons_equal s1.lessons, s2.lessons
         assert_lesson_activities_equal(
@@ -1327,8 +1324,8 @@ module Services
       end
     end
 
-    def assert_scripts_equal(script1, script2)
-      assert_attributes_equal(script1, script2, ['properties'])
+    def assert_scripts_equal(script1, script2, additional_excludes = [])
+      assert_attributes_equal(script1, script2, additional_excludes + ['properties'])
       assert_equal script1.properties.except('seeded_from'),
         script2.properties.except('seeded_from')
     end
@@ -1430,7 +1427,6 @@ module Services
       num_programming_expressions_per_lesson: 2,
       num_objectives_per_lesson: 2,
       num_standards_per_lesson: 2,
-      with_unit_group: false,
       num_rubrics_per_lesson: 1,
       num_learning_goals_per_rubric: 1,
       num_learning_goal_evidence_levels_per_learning_goal: 2
@@ -1453,42 +1449,33 @@ module Services
       family_name = "#{name_prefix.gsub(/[^a-z\-]/i, '')}-family"
       version_year = "1999"
 
-      if with_unit_group
-        unit_group = create :unit_group, family_name: family_name, version_year: version_year
-        create :unit_group_unit, unit_group: unit_group, script: script, position: 1
-        CourseOffering.add_course_offering(unit_group)
-      else
-        script.update!(
-          is_course: true,
-          family_name: family_name,
-          version_year: version_year
-        )
-        CourseOffering.add_course_offering(script)
-      end
+      unit_group = create(:single_unit_course, unit: script, family_name: family_name, version_year: version_year)
+      CourseOffering.add_course_offering(unit_group)
+
       script.reload
       course_version = script.get_course_version
       assert course_version
 
       num_lesson_groups.times do |i|
-        create :lesson_group, script: script, key: "#{name_prefix}-lesson-group-#{i + 1}", description: "description #{i + 1}"
+        create(:lesson_group, script: script, key: "#{name_prefix}-lesson-group-#{i + 1}", description: "description #{i + 1}")
       end
 
       script.lesson_groups.each_with_index do |lg, m|
         num_lessons_per_group.times do |n|
           name = "#{name_prefix}-lg-#{m + 1}-l-#{n + 1}"
-          create :lesson, lesson_group: lg, script: script, name: name, key: name, overview: "overview #{m + 1} #{n + 1}", has_lesson_plan: true
+          create(:lesson, lesson_group: lg, script: script, name: name, key: name, overview: "overview #{m + 1} #{n + 1}", has_lesson_plan: true)
         end
       end
       script.reload
 
       if course_version
         (1..num_resources_per_script).each do |r|
-          resource = create :resource, key: "#{script.name}-resource-#{r}", course_version: course_version
+          resource = create(:resource, key: "#{script.name}-resource-#{r}", course_version: course_version)
           ScriptsResource.find_or_create_by!(resource: resource, script: script)
         end
 
         (1..num_resources_per_script).each do |r|
-          resource = create :resource, key: "#{script.name}-student-resource-#{r}", course_version: course_version
+          resource = create(:resource, key: "#{script.name}-student-resource-#{r}", course_version: course_version)
           ScriptsStudentResource.find_or_create_by!(resource: resource, script: script)
         end
       end
@@ -1508,11 +1495,12 @@ module Services
               key: "#{activity.key}-s-#{section_pos}"
             )
             (1..num_script_levels_per_section).each do |sl_pos|
-              game = create :game, name: "#{name_prefix}_game#{sl_num}"
-              level = create :level, name: "#{name_prefix}_blockly_#{sl_num}", level_num: "custom", game: game
-              create :script_level, activity_section: section, activity_section_position: sl_pos,
+              game = create(:game, name: "#{name_prefix}_game#{sl_num}")
+              level = create(:level, name: "#{name_prefix}_blockly_#{sl_num}", level_num: "custom", game: game)
+              create(:script_level, activity_section: section, activity_section_position: sl_pos,
                      lesson: lesson, script: script, levels: [level], challenge: sl_num.even?,
                      assessment: false, bonus: false
+)
               sl_num += 1
             end
           end
@@ -1521,7 +1509,7 @@ module Services
         next unless course_version
 
         (1..num_resources_per_lesson).each do |r|
-          resource = create :resource, key: "#{lesson.name}-resource-#{r}", course_version: course_version
+          resource = create(:resource, key: "#{lesson.name}-resource-#{r}", course_version: course_version)
           LessonsResource.find_or_create_by!(resource: resource, lesson: lesson)
         end
 
@@ -1529,36 +1517,36 @@ module Services
           key = "#{lesson.name}-vocab-#{v}"
           key = Vocabulary.sanitize_key(key)
           key = Vocabulary.uniquify_key(key, course_version.id)
-          vocab = create :vocabulary, key: key, course_version: course_version
+          vocab = create(:vocabulary, key: key, course_version: course_version)
           LessonsVocabulary.find_or_create_by!(vocabulary: vocab, lesson: lesson)
         end
 
         (1..num_programming_expressions_per_lesson).each do |pe|
-          programming_expression = create :programming_expression, programming_environment: @programming_environment, key: "#{lesson.name}-programming-expression-#{pe}", name: "#{lesson.name}-programming-expression-#{pe}"
+          programming_expression = create(:programming_expression, programming_environment: @programming_environment, key: "#{lesson.name}-programming-expression-#{pe}", name: "#{lesson.name}-programming-expression-#{pe}")
           LessonsProgrammingExpression.find_or_create_by!(programming_expression: programming_expression, lesson: lesson)
         end
 
         (1..num_objectives_per_lesson).each do |o|
-          create :objective, key: "#{lesson.name}-objective-#{o}", lesson: lesson
+          create(:objective, key: "#{lesson.name}-objective-#{o}", lesson: lesson)
         end
 
         (1..num_standards_per_lesson).each do |s|
-          standard = create :standard, framework: @framework, shortcode: "#{lesson.name}-standard-#{s}"
+          standard = create(:standard, framework: @framework, shortcode: "#{lesson.name}-standard-#{s}")
           LessonsStandard.find_or_create_by!(standard: standard, lesson: lesson)
         end
 
         (1..num_standards_per_lesson).each do |s|
-          standard = create :standard, framework: @framework, shortcode: "#{lesson.name}-opportunity-standard-#{s}"
+          standard = create(:standard, framework: @framework, shortcode: "#{lesson.name}-opportunity-standard-#{s}")
           LessonsOpportunityStandard.find_or_create_by!(standard: standard, lesson: lesson)
         end
 
         next if lesson.levels.empty?
         (1..num_rubrics_per_lesson).each do |_r|
-          rubric = create :rubric, lesson: lesson, level: lesson.levels.last
+          rubric = create(:rubric, lesson: lesson, level: lesson.levels.last)
           (1..num_learning_goals_per_rubric).each do |lg|
-            learning_goal = create :learning_goal, rubric: rubric, key: "#{lesson.name}-learning-goal-#{lg}"
+            learning_goal = create(:learning_goal, rubric: rubric, key: "#{lesson.name}-learning-goal-#{lg}")
             (0...num_learning_goal_evidence_levels_per_learning_goal).each do |lge|
-              create :learning_goal_evidence_level, learning_goal: learning_goal, understanding: lge
+              create(:learning_goal_evidence_level, learning_goal: learning_goal, understanding: lge)
             end
           end
         end

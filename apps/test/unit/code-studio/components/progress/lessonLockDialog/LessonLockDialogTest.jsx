@@ -1,5 +1,6 @@
 import {mount, shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
+import {act} from 'react-dom/test-utils';
 import {Provider} from 'react-redux';
 import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
 
@@ -271,17 +272,19 @@ describe('LessonLockDialog with stubbed section selector', () => {
 
     const lockLessonButton = wrapper.find('button').at(2);
     expect(lockLessonButton.text() === 'Lock lesson');
-    lockLessonButton.simulate('click');
-    wrapper.update();
+    act(() => {
+      lockLessonButton.simulate('click');
+      wrapper.update();
+    });
 
     const saveButton = wrapper.find('button').at(7);
-    expect(saveButton.text() === 'Save');
-    saveButton.simulate('click');
-    wrapper.update();
+    await act(() => {
+      expect(saveButton.text() === 'Save');
+      saveButton.simulate('click');
+      wrapper.update();
+    });
 
-    await setTimeout(() => {}, 50);
     expect(lessonLockSaveStub).to.have.been.called;
-    await setTimeout(() => {}, 50);
 
     expect(wrapper.text().includes(i18n.errorSavingLockStatus())).to.be.true;
     expect(handleCloseSpy).to.not.be.called;

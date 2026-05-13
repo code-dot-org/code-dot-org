@@ -1,9 +1,12 @@
+import Dialog from '@code-dot-org/component-library/dialog';
+import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
+import {Button as MuiButton} from '@mui/material';
 import PropTypes from 'prop-types';
 import QRCode from 'qrcode.react';
 import React from 'react';
 import {connect} from 'react-redux';
 
-import Button, {buttonColors} from '@cdo/apps/componentLibrary/button';
+import {OPEN_ENDED_LEGACY_PROJECT_TYPES} from '@cdo/apps/constants';
 import fontConstants from '@cdo/apps/fontConstants';
 import FontAwesome from '@cdo/apps/legacySharedComponents/FontAwesome';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
@@ -16,8 +19,6 @@ import defaultThumbnail from '@cdo/static/projects/project_default.png';
 
 import * as applabConstants from '../../applab/constants';
 import BaseDialog from '../../templates/BaseDialog';
-import PublishDialog from '../../templates/projects/publishDialog/PublishDialog';
-import {showPublishDialog} from '../../templates/projects/publishDialog/publishDialogRedux';
 import color from '../../util/color';
 import {SongTitlesToArtistTwitterHandle} from '../dancePartySongArtistTags';
 
@@ -26,7 +27,7 @@ import AdvancedShareOptions from './AdvancedShareOptions';
 import DownloadReplayVideoButton from './DownloadReplayVideoButton';
 import LibraryCreationDialog from './libraries/LibraryCreationDialog';
 import SendToPhone from './SendToPhone';
-import {hideShareDialog, unpublishProject} from './shareDialogRedux';
+import {hideShareDialog} from './shareDialogRedux';
 
 function recordShare(type, appType) {
   if (!window.dashboard) {
@@ -75,19 +76,15 @@ class ShareAllowedDialog extends React.Component {
     isAbusive: PropTypes.bool.isRequired,
     isOpen: PropTypes.bool.isRequired,
     canPrint: PropTypes.bool,
-    canPublish: PropTypes.bool.isRequired,
-    isPublished: PropTypes.bool.isRequired,
-    isUnpublishPending: PropTypes.bool.isRequired,
     channelId: PropTypes.string.isRequired,
     appType: PropTypes.string.isRequired,
     onClickPopup: PropTypes.func.isRequired,
     onClose: PropTypes.func.isRequired,
-    onShowPublishDialog: PropTypes.func.isRequired,
-    onUnpublish: PropTypes.func.isRequired,
     hideBackdrop: BaseDialog.propTypes.hideBackdrop,
     canShareSocial: PropTypes.bool.isRequired,
     userSharingDisabled: PropTypes.bool,
     inRestrictedShareMode: PropTypes.bool,
+    hasPrivacyProfanityViolation: PropTypes.bool,
   };
 
   state = {
@@ -100,8 +97,7 @@ class ShareAllowedDialog extends React.Component {
     replayVideoUnavailable: false,
     hasBeenCopied: false,
     isLoadingAccountAndProjectAge: false,
-    isAccountOldEnoughToPublish: false,
-    isProjectOldEnoughToPublish: false,
+    showSharingDisallowedDialog: false,
   };
 
   componentDidMount() {
@@ -117,8 +113,6 @@ class ShareAllowedDialog extends React.Component {
         isTwitterAvailable => this.setState({isTwitterAvailable})
       );
     }
-
-    this.checkProjectAndAccountAge();
   }
 
   componentDidUpdate(prevProps, prevState, snapshot) {
@@ -126,29 +120,11 @@ class ShareAllowedDialog extends React.Component {
       recordShare('SHARING_DIALOG_OPEN', this.props.appType);
       this.setState({hasBeenCopied: false});
 
-      this.checkProjectAndAccountAge();
+      if (this.sharingDisallowedWhileSignedIn()) {
+        this.setState({showSharingDisallowedDialog: true});
+      }
     }
   }
-
-  checkProjectAndAccountAge = () => {
-    if (this.isPublishAllowed() && dashboard.project) {
-      this.setState({isLoadingAccountAndProjectAge: true});
-
-      const appType = dashboard.project.getStandaloneApp();
-      const channelId = dashboard.project.getCurrentId();
-      fetch(`/projects/${appType}/${channelId}/can_publish_age_status`)
-        .then(response => response.json())
-        .then(data => {
-          this.setState({
-            isProjectOldEnoughToPublish:
-              data.project_existed_long_enough_to_publish,
-            isAccountOldEnoughToPublish:
-              data.user_existed_long_enough_to_publish,
-            isLoadingAccountAndProjectAge: false,
-          });
-        });
-    }
-  };
 
   replayVideoNotFound = () => {
     this.setState({
@@ -158,13 +134,19 @@ class ShareAllowedDialog extends React.Component {
 
   sharingDisabled = () =>
     this.props.userSharingDisabled &&
-    ['applab', 'gamelab', 'weblab'].includes(this.props.appType);
+    OPEN_ENDED_LEGACY_PROJECT_TYPES.includes(this.props.appType);
+
+  sharingDisallowedWhileSignedIn = () =>
+    this.sharingDisabled() || this.hasPrivacyProfanityViolation();
+
+  hasPrivacyProfanityViolation = () => this.props.hasPrivacyProfanityViolation;
 
   close = () => {
     recordShare('SHARING_CLOSE_ESCAPE', this.props.appType);
     this.props.onClose();
     this.setState({
       replayVideoUnavailable: false,
+      showSharingDisallowedDialog: false,
     });
   };
 
@@ -188,14 +170,6 @@ class ShareAllowedDialog extends React.Component {
     });
   };
 
-  publish = () => {
-    this.props.onShowPublishDialog(this.props.channelId, this.props.appType);
-  };
-
-  unpublish = () => {
-    this.props.onUnpublish(this.props.channelId);
-  };
-
   // Copy to clipboard.
   copy = () => {
     copyToClipboard(this.props.shareUrl, () =>
@@ -203,13 +177,11 @@ class ShareAllowedDialog extends React.Component {
     );
   };
 
-  // inRestrictedShareMode overrides canPublish and canShareSocial
-  isPublishAllowed = () =>
-    this.props.canPublish && !this.props.inRestrictedShareMode;
+  // inRestrictedShareMode overrides canShareSocial
   isSocialShareAllowed = () =>
     this.props.canShareSocial && !this.props.inRestrictedShareMode;
 
-  getWarningText = showPublishInfo => {
+  getWarningText = () => {
     if (this.props.inRestrictedShareMode) {
       return i18n.restrictedShareInfo();
     }
@@ -218,34 +190,13 @@ class ShareAllowedDialog extends React.Component {
       return i18n.downloadReplayVideoButtonError();
     }
 
-    // The following warnings require showPublishInfo to be true
-    if (!showPublishInfo) {
-      return null;
-    }
-
     if (!this.props.thumbnailUrl) {
       return i18n.thumbnailWarning();
     }
-
-    if (
-      !this.state.isLoadingAccountAndProjectAge &&
-      !this.state.isAccountOldEnoughToPublish
-    ) {
-      return i18n.publishFailedAccountTooNew();
-    }
-
-    if (
-      !this.state.isLoadingAccountAndProjectAge &&
-      !this.state.isProjectOldEnoughToPublish
-    ) {
-      return i18n.publishFailedProjectTooNew();
-    }
   };
-
   render() {
     const {
       canPrint,
-      isPublished,
       canShareSocial,
       appType,
       selectedSong,
@@ -253,7 +204,6 @@ class ShareAllowedDialog extends React.Component {
       isOpen,
       hideBackdrop,
       isAbusive,
-      isUnpublishPending,
       onClickPopup,
       exportApp,
       channelId,
@@ -310,36 +260,37 @@ class ShareAllowedDialog extends React.Component {
       };
     }
 
-    const showPublishInfo = this.isPublishAllowed() && !isPublished;
-
-    const warningText = this.getWarningText(showPublishInfo);
+    const warningText = this.getWarningText();
 
     return (
       <div>
-        <BaseDialog
-          style={styles.modal}
-          isOpen={isOpen}
-          handleClose={this.close}
-          hideBackdrop={hideBackdrop}
-        >
-          {this.sharingDisabled() && (
-            <div style={{position: 'relative'}}>
-              <div style={{paddingRight: 10}}>
-                <p>{i18n.sharingBlockedByTeacher()}</p>
-              </div>
-              <div style={{clear: 'both', height: 40}}>
-                <button
-                  type="button"
-                  id="continue-button"
-                  style={{position: 'absolute', right: 0, bottom: 0, margin: 0}}
-                  onClick={this.close}
-                >
-                  {i18n.dialogOK()}
-                </button>
-              </div>
-            </div>
+        {this.sharingDisallowedWhileSignedIn() &&
+          this.state.showSharingDisallowedDialog && (
+            <Dialog
+              title={
+                this.sharingDisabled()
+                  ? i18n.sharingDisabledTitle()
+                  : 'Sharing is not allowed'
+              }
+              description={
+                this.sharingDisabled()
+                  ? i18n.sharingBlockedByTeacherOpenEndedProjects()
+                  : 'This project is unable to be shared because it contains content that is flagged. Please update your project or contact support@code.org if you believe this is an error.'
+              }
+              primaryButtonProps={{
+                onClick: this.close,
+                children: i18n.ok(),
+                id: 'uitest-sharing-disabled-button',
+              }}
+            />
           )}
-          {!this.sharingDisabled() && (
+        {!this.sharingDisallowedWhileSignedIn() && (
+          <BaseDialog
+            style={styles.modal}
+            isOpen={isOpen}
+            handleClose={this.close}
+            hideBackdrop={hideBackdrop}
+          >
             <div>
               <div
                 id="project-share"
@@ -374,19 +325,23 @@ class ShareAllowedDialog extends React.Component {
                     />
                   </div>
                   <div>
-                    <Button
-                      color={buttonColors.purple}
-                      type="primary"
+                    <MuiButton
+                      variant="contained"
+                      color="primary"
+                      size="medium"
+                      loadingPosition="start"
                       id="sharing-dialog-copy-button"
-                      iconLeft={{iconName: 'copy'}}
                       onClick={wrapShareClick(
                         this.copy,
                         'SHARING_LINK_COPY',
                         this.props.appType
                       )}
-                      text={i18n.copyLinkToProject()}
+                      type="button"
                       value={shareUrl}
-                    />
+                      startIcon={<FontAwesomeV6Icon iconName="copy" />}
+                    >
+                      {i18n.copyLinkToProject()}
+                    </MuiButton>
                     <DownloadReplayVideoButton
                       style={{...styles.button, marginBottom: 8}}
                       onError={this.replayVideoNotFound}
@@ -394,29 +349,36 @@ class ShareAllowedDialog extends React.Component {
                   </div>
                 </div>
                 <div className="social-buttons" style={{marginTop: 12}}>
-                  <Button
+                  <MuiButton
+                    variant="outlined"
+                    color="secondary"
+                    size="medium"
+                    loadingPosition="start"
                     id="sharing-phone"
-                    color={buttonColors.black}
-                    type="secondary"
                     onClick={wrapShareClick(
                       this.showSendToPhone,
                       'SHARING_LINK_SEND_TO_PHONE',
                       this.props.appType
                     )}
-                    text={i18n.sendToPhone()}
-                    iconLeft={{iconName: 'mobile-screen'}}
-                  />
+                    type="button"
+                    startIcon={<FontAwesomeV6Icon iconName="mobile-screen" />}
+                  >
+                    {i18n.sendToPhone()}
+                  </MuiButton>
                   {canPrint && hasThumbnail && (
-                    <Button
-                      color={buttonColors.purple}
-                      type="primary"
+                    <MuiButton
+                      variant="contained"
+                      color="primary"
+                      size="medium"
+                      loadingPosition="start"
                       onClick={wrapShareClick(this.print, 'print')}
-                      iconLeft={{iconName: 'print'}}
-                      text={i18n.print()}
-                    />
+                      type="button"
+                      startIcon={<FontAwesomeV6Icon iconName="print" />}
+                    >
+                      {i18n.print()}
+                    </MuiButton>
                   )}
-                  {/* prevent buttons from overlapping when unpublish is pending */}
-                  {this.isSocialShareAllowed() && !isUnpublishPending && (
+                  {this.isSocialShareAllowed() && (
                     <span>
                       {this.state.isFacebookAvailable && (
                         <a
@@ -430,7 +392,7 @@ class ShareAllowedDialog extends React.Component {
                           )}
                           style={styles.socialLink}
                         >
-                          <FontAwesome icon="facebook" />
+                          <FontAwesome icon="facebook-f" iconStyle="brands" />
                         </a>
                       )}
                       {this.state.isTwitterAvailable && (
@@ -445,7 +407,7 @@ class ShareAllowedDialog extends React.Component {
                           )}
                           style={styles.socialLink}
                         >
-                          <FontAwesome icon="twitter" />
+                          <FontAwesome icon="x-twitter" iconStyle="brands" />
                         </a>
                       )}
                     </span>
@@ -494,9 +456,8 @@ class ShareAllowedDialog extends React.Component {
                 </div>
               </div>
             </div>
-          )}
-        </BaseDialog>
-        <PublishDialog />
+          </BaseDialog>
+        )}
         <LibraryCreationDialog channelId={channelId} />
       </div>
     );
@@ -522,33 +483,6 @@ const styles = {
     color: color.red,
     fontSize: 13,
     fontWeight: 'bold',
-  },
-  button: {
-    // TODO: [Phase 2] Remove this once we have a new updated button component
-    fontSize: 'large',
-    height: 45,
-    paddingTop: 12.5,
-    paddingBottom: 12.5,
-    paddingLeft: 10,
-    paddingRight: 10,
-    marginTop: 0,
-    marginRight: 16,
-    marginBottom: 0,
-    marginLeft: 0,
-    verticalAlign: 'top',
-  },
-  buttonDisabled: {
-    height: 45,
-    fontSize: 'large',
-    paddingTop: 12.5,
-    paddingBottom: 12.5,
-    paddingLeft: 10,
-    paddingRight: 5,
-    marginTop: 0,
-    marginRight: 8,
-    marginBottom: 0,
-    marginLeft: 0,
-    verticalAlign: 'top',
   },
   thumbnail: {
     float: 'left',
@@ -620,17 +554,11 @@ export default connect(
   state => ({
     exportApp: state.pageConstants?.exportApp,
     isOpen: state.shareDialog.isOpen,
-    isUnpublishPending: state.shareDialog.isUnpublishPending,
     inRestrictedShareMode: state.project.inRestrictedShareMode,
+    showSharingDisallowedDialog: state.shareDialog.showSharingDisallowedDialog,
+    hasPrivacyProfanityViolation: state.project.hasPrivacyProfanityViolation,
   }),
   dispatch => ({
     onClose: () => dispatch(hideShareDialog()),
-    onShowPublishDialog(projectId, projectType) {
-      dispatch(hideShareDialog());
-      dispatch(showPublishDialog(projectId, projectType));
-    },
-    onUnpublish(projectId) {
-      dispatch(unpublishProject(projectId));
-    },
   })
 )(ShareAllowedDialog);

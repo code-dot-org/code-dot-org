@@ -1,11 +1,14 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 
 import DefaultSpritesEditor from '@cdo/apps/code-studio/assets/DefaultSpritesEditor';
+import {createReactRoot} from '@cdo/apps/util/createReactRoot';
 
 $(document).ready(function () {
-  ReactDOM.render(
+  createReactRoot(
     <DefaultSpritesEditor />,
-    document.getElementById('default-sprites-editor-container')
+    document.getElementById('default-sprites-editor-container'),
+    {
+      legacyReactDomRender: true,
+    }
   );
 });

@@ -142,6 +142,7 @@ export const createStoreWithHiddenLesson = (viewAs, lessonId) => {
       scriptName: 'script-name',
       scriptId: 17,
       unitProgressHasLoaded: true,
+      unitHasUnnumberedLessons: false,
     },
     currentUser: {
       userId: 1,
@@ -279,6 +280,7 @@ export const fakeProgressTableReduxInitialState = (
   );
 
   const sectionId = randomNumberUpTo100();
+  const courseVersionId = randomNumberUpTo100();
 
   return {
     currentUser: {
@@ -310,9 +312,25 @@ export const fakeProgressTableReduxInitialState = (
         scriptData,
         students
       ),
-      lessonOfInterest: 1,
     },
-    unitSelection: {scriptId: scriptData.id},
+    unitSelection: {
+      scriptId: scriptData.id,
+      courseVersionId: courseVersionId,
+      coursesWithProgress: [
+        {
+          id: courseVersionId,
+          course_name: scriptData.name,
+          units: [
+            {
+              id: scriptData.id,
+              key: scriptData.name,
+              name: scriptData.title,
+              position: 1,
+            },
+          ],
+        },
+      ],
+    },
     locales: {localeCode: 'en-US'},
   };
 };

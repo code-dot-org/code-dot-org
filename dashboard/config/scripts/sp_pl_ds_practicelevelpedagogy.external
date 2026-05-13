@@ -1,0 +1,41 @@
+name 'sp-pl-DS_practiceLevelPedagogy'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Practice Levels
+
+#### Practice levels are the final levels in most lessons. They let students apply lesson knowledge and develop fluency in new concepts and syntax. 
+
+#### The difficulty of the levels progress, meaning, level A is the easiest to complete, while C or D will be more challenging. 
+
+#### Students can choose which levels to complete and don't need to finish all before moving on.
+
+#### Here is an example: 
+
+<img src="https://images.code.org/3c3bf26647ff18a857ba23b2fcfc4248-image-1732034613490.png" alt="graph of element count and index for python" width="750px" style="display: block; float:left;">
+
+<div style="clear:both;"></div>
+
+## Facilitation Strategies 
+
+- #### **Embrace Student Choice:** Let students choose practice levels based on their interests and comfort to boost engagement.
+- #### **Student Explanations:** Provide opportunities for students to present and explain their solutions, fostering leadership and deeper understanding.
+- #### **Embrace Mistakes:** Use a "Mistake Counter" to normalize errors and celebrate debugging as part of learning.
+- #### **Resources:** Encourage using Help & Tips, Documentation tabs, or printed materials like a Word Wall for reference.
+
+
+
+<div style="background-color: #a6e3e8; border-radius: 40px; color: #000000; width: 95%; padding: 1px 20px 1px 20px;">
+
+<p style="line-height: 1.5; margin-left: 10px; margin-right: 10px; margin-top: 10px; margin-bottom: 10px; font-size: 18px; "><strong>Teacher Tip:</strong> Use choice levels flexibly—support students by using one of the levels as group code-along or partner work before having them complete a level independently.  
+</p>
+</div>
+
+
+
+
+
+
+
+MARKDOWN

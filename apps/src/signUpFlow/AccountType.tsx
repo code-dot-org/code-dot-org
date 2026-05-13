@@ -1,51 +1,87 @@
+import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
+import {Typography, Button as MuiButton} from '@mui/material';
 import React, {useState, useEffect} from 'react';
 
-import Button from '@cdo/apps/componentLibrary/button/Button';
 import {studio} from '@cdo/apps/lib/util/urlHelpers';
-import {EVENTS, PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants';
+import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import locale from '@cdo/apps/signUpFlow/locale';
 import AccountBanner from '@cdo/apps/templates/account/AccountBanner';
 
-import FontAwesomeV6Icon from '../componentLibrary/fontAwesomeV6Icon/FontAwesomeV6Icon';
-import {Heading2} from '../componentLibrary/typography';
 import AccountCard from '../templates/account/AccountCard';
 import {navigateToHref} from '../utils';
 
 import FreeCurriculumDialog from './FreeCurriculumDialog';
-import {ACCOUNT_TYPE_SESSION_KEY} from './signUpFlowConstants';
+import {
+  ACCOUNT_TYPE_SESSION_KEY,
+  OAUTH_LOGIN_TYPE_SESSION_KEY,
+  setUserReturnToUrl,
+} from './signUpFlowConstants';
 
 import style from './signUpFlowStyles.module.scss';
 
-const AccountType: React.FunctionComponent = () => {
+const AccountType: React.FunctionComponent<{
+  isSignedOut: boolean;
+}> = ({isSignedOut}) => {
+  const [loginTypeAlreadySelected, setLoginTypeAlreadySelected] =
+    useState(false);
   const [isFreeCurriculumDialogOpen, setIsFreeCurriculumDialogOpen] =
     useState(false);
 
   useEffect(() => {
-    analyticsReporter.sendEvent(
-      EVENTS.SIGN_UP_STARTED_EVENT,
-      {},
-      PLATFORMS.STATSIG
-    );
-  }, []);
+    if (isSignedOut) {
+      setUserReturnToUrl();
+
+      analyticsReporter.sendEvent(EVENTS.SIGN_UP_STARTED_EVENT, {});
+
+      // If sent here from trying to log in with OAuth without an account, log the OAuth type and have this page
+      // send to the final signup page instead of having them pick login type again.
+      let oauthType = sessionStorage.getItem(OAUTH_LOGIN_TYPE_SESSION_KEY);
+      if (oauthType) {
+        setLoginTypeAlreadySelected(true);
+
+        // Convert the name of the OAuth type so it lines up with our existing metrics for logging the login type
+        // selected.
+        if (oauthType === 'google_oauth2') {
+          oauthType = 'google';
+        } else if (oauthType === 'microsoft_v2_auth') {
+          oauthType = 'microsoft';
+        }
+
+        analyticsReporter.sendEvent(EVENTS.SIGN_UP_LOGIN_TYPE_PICKED_EVENT, {
+          'user login type': oauthType,
+        });
+      }
+    }
+  }, [isSignedOut]);
 
   const selectAccountType = (accountType: string) => {
-    analyticsReporter.sendEvent(
-      EVENTS.ACCOUNT_TYPE_PICKED_EVENT,
-      {
-        'account type': accountType,
-      },
-      PLATFORMS.STATSIG
-    );
+    analyticsReporter.sendEvent(EVENTS.ACCOUNT_TYPE_PICKED_EVENT, {
+      'account type': accountType,
+    });
     sessionStorage.setItem(ACCOUNT_TYPE_SESSION_KEY, accountType);
-    navigateToHref(studio('/users/new_sign_up/login_type'));
+
+    // By default, navigate the user to the login type page after selecting their user
+    // type. However, if a user is sent to this page after trying to login through OAuth
+    // without an account, then they'll be sent to the appropriate finish signup page
+    // since they've already selected their login type.
+    if (loginTypeAlreadySelected) {
+      const finishSignupUrl =
+        accountType === 'teacher'
+          ? '/users/sign_up/finish_teacher_account'
+          : '/users/sign_up/finish_student_account';
+      navigateToHref(studio(finishSignupUrl));
+    } else {
+      navigateToHref(
+        studio(`/users/sign_up/login_type?user_type=${accountType}`)
+      );
+    }
   };
 
   const sendCurriculumAnalyticsEvent = () => {
     analyticsReporter.sendEvent(
       EVENTS.CURRICULUM_FREE_DIALOG_BUTTON_CLICKED,
-      {},
-      PLATFORMS.STATSIG
+      {}
     );
   };
 
@@ -65,7 +101,7 @@ const AccountType: React.FunctionComponent = () => {
             title={locale.im_a_student()}
             content={locale.explore_courses_and_activities()}
             buttonText={locale.sign_up_as_a_student()}
-            buttonType="primary"
+            variant="contained"
             onClick={() => selectAccountType('student')}
             iconList={[
               locale.save_projects_and_progress(),
@@ -78,7 +114,7 @@ const AccountType: React.FunctionComponent = () => {
             title={locale.im_a_teacher()}
             content={locale.all_student_account_features()}
             buttonText={locale.sign_up_as_a_teacher()}
-            buttonType="primary"
+            variant="contained"
             onClick={() => selectAccountType('teacher')}
             iconList={[
               locale.create_classroom_sections(),
@@ -95,18 +131,22 @@ const AccountType: React.FunctionComponent = () => {
         />
         <div className={style.freeCurriculumWrapper}>
           <FontAwesomeV6Icon iconName={'book-open-cover'} />
-          <Heading2 visualAppearance="heading-xs">
+          <Typography component="h2" variant="h6" gutterBottom>
             {locale.free_curriculum_forever()}
-          </Heading2>
-          <Button
+          </Typography>
+          <MuiButton
+            variant="contained"
+            color="primary"
+            size="small"
             className={style.dialogButton}
-            size="s"
-            text={locale.read_our_commitment_free()}
             onClick={() => {
               sendCurriculumAnalyticsEvent();
               setIsFreeCurriculumDialogOpen(true);
             }}
-          />
+            type="button"
+          >
+            {locale.read_our_commitment_free()}
+          </MuiButton>
         </div>
       </div>
     </main>

@@ -1,10 +1,9 @@
+import Alert, {alertTypes} from '@code-dot-org/component-library/alert';
+import CloseButton from '@code-dot-org/component-library/closeButton';
+import {Typography, Button as MuiButton} from '@mui/material';
 import PropTypes from 'prop-types';
 import React from 'react';
 
-import Alert, {alertTypes} from '@cdo/apps/componentLibrary/alert/Alert';
-import {Button} from '@cdo/apps/componentLibrary/button';
-import CloseButton from '@cdo/apps/componentLibrary/closeButton/CloseButton';
-import {Heading3} from '@cdo/apps/componentLibrary/typography';
 import i18n from '@cdo/locale';
 
 import {hashEmail} from '../../code-studio/hashEmail';
@@ -148,9 +147,9 @@ export default class ChangeEmailModal extends React.Component {
       >
         <CloseButton onClick={this.cancel} className={styles.closeButton} />
         <div className={styles.container}>
-          <Heading3 visualAppearance="heading-sm">
+          <Typography component="h3" variant="h5" gutterBottom>
             {i18n.changeEmailModal_title()}
-          </Heading3>
+          </Typography>
           <ChangeEmailForm
             values={values}
             validationErrors={validationErrors}
@@ -168,19 +167,27 @@ export default class ChangeEmailModal extends React.Component {
             />
           )}
           <div className={styles.buttonContainer}>
-            <Button
-              text={i18n.cancel()}
-              onClick={this.cancel}
-              type="secondary"
-              color="gray"
+            <MuiButton
+              variant="outlined"
+              color="tertiary"
+              size="medium"
               disabled={STATE_SAVING === saveState}
-            />
-            <Button
-              text={i18n.changeEmailModal_save()}
-              onClick={this.save}
-              isPending={STATE_SAVING === saveState}
+              onClick={this.cancel}
+              type="button"
+            >
+              {i18n.cancel()}
+            </MuiButton>
+            <MuiButton
+              variant="contained"
+              color="primary"
+              size="medium"
+              loading={STATE_SAVING === saveState}
               disabled={STATE_SAVING === saveState || !isFormValid}
-            />
+              onClick={this.save}
+              type="button"
+            >
+              {i18n.changeEmailModal_save()}
+            </MuiButton>
           </div>
         </div>
       </BaseDialog>

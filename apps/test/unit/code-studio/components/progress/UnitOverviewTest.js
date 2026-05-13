@@ -17,6 +17,7 @@ const defaultProps = {
   unitData: {csf: false, isCsp: true, isCsd: false},
   scriptId: 123,
   scriptName: 'csp1',
+  scriptPath: '/courses/test-course/units/1',
   unitTitle: 'CSP 1',
   deeperLearningCourse: false,
   viewAs: ViewType.Instructor,
@@ -54,6 +55,11 @@ describe('UnitOverview', () => {
 
   it('does not display a course link if courseLink is empty', () => {
     const wrapper = setUp({courseLink: null});
+    expect(wrapper.find('.unit-breadcrumb').length).toEqual(0);
+  });
+
+  it('does not display a course link if the unit is part of a single-unit course', () => {
+    const wrapper = setUp({isSingleUnitCourse: true, courseLink: '/some/link'});
     expect(wrapper.find('.unit-breadcrumb').length).toEqual(0);
   });
 

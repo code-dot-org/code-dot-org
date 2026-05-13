@@ -86,7 +86,7 @@ function TopInstructionsHeader(props) {
           )}
         {documentationUrl && tabSelected !== TabType.COMMENTS && (
           <PaneButton
-            iconClass="fa fa-book"
+            iconClass="fa-solid fa-book"
             label={i18n.documentation()}
             isRtl={isRtl}
             headerHasFocus={false}

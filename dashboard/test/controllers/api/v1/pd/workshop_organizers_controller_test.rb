@@ -8,7 +8,7 @@ class Api::V1::Pd::WorkshopOrganizersControllerTest < ActionController::TestCase
   end
 
   test 'results' do
-    organizers = create_list :workshop_organizer, 2
+    organizers = create_list(:workshop_organizer, 2)
     non_organizers = [
       create(:facilitator),
       create(:teacher)

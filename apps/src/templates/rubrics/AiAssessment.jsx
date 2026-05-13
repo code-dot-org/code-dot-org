@@ -1,7 +1,7 @@
+import {Typography} from '@mui/material';
 import PropTypes from 'prop-types';
 import React from 'react';
 
-import {Heading6, StrongText} from '@cdo/apps/componentLibrary/typography';
 import i18n from '@cdo/locale';
 
 import AiAssessmentBox from './AiAssessmentBox';
@@ -30,9 +30,9 @@ export default function AiAssessment({
 }) {
   return (
     <div id="tour-ai-assessment" className="uitest-ai-assessment">
-      <Heading6 visualAppearance={'body-three'}>
-        <StrongText>{i18n.aiAssessment()}</StrongText>
-      </Heading6>
+      <Typography component="h6" variant="body3" gutterBottom>
+        <Typography variant="strong">{i18n.aiAssessment()}</Typography>
+      </Typography>
       <div className={style.aiAssessmentBlock}>
         <img alt={i18n.aiBot()} src={aiBotImage} className={style.aiBotImg} />
         <AiAssessmentBox

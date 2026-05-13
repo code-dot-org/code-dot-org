@@ -27,6 +27,7 @@ const SelectSectionTemplate = args => (
         name: 'Other Test Classroom',
         section: 'Section 3A',
         enrollment_code: 't108sh5',
+        course_state: 'ARCHIVED',
       },
       {
         id: '101',

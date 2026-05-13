@@ -3,10 +3,22 @@ module AichatSagemakerHelper
   TOP_P = 0.9
 
   def self.create_sagemaker_client
-    # Stubbed SageMaker allows UI tests (without the roundtrip to the model) to run in CI environments (ie, Drone)
-    Rails.application.config.respond_to?(:stub_aichat_aws_services) && Rails.application.config.stub_aichat_aws_services ?
+    # Stubbed SageMaker allows UI tests (without the roundtrip to the model) to run in CI environments
+    Rails.application.config.respond_to?(:stub_aichat_external_services) && Rails.application.config.stub_aichat_external_services ?
       StubbedSagemakerClient.new :
       Aws::SageMakerRuntime::Client.new
+  end
+
+  def self.get_sagemaker_assistant_response(aichat_model_customizations, stored_messages, new_message, level_id)
+    inputs = format_inputs_for_sagemaker_request(aichat_model_customizations, stored_messages, new_message, level_id)
+    selected_model_id = aichat_model_customizations['selectedModelId']
+
+    sagemaker_response = request_sagemaker_chat_completion(inputs, selected_model_id)
+    parsed_response = JSON.parse(sagemaker_response.body.string)
+    generated_text = parsed_response[0]["generated_text"]
+
+    model_processor = get_model_processor(selected_model_id)
+    model_processor.format_model_output(generated_text)
   end
 
   def self.get_instructions(system_prompt, level_system_prompt, retrieval_contexts)
@@ -18,11 +30,11 @@ module AichatSagemakerHelper
   end
 
   def self.format_inputs_for_sagemaker_request(aichat_model_customizations, stored_messages, new_message, level_id)
-    selected_model_id = aichat_model_customizations[:selectedModelId]
+    selected_model_id = aichat_model_customizations['selectedModelId']
     # Add system prompt and retrieval contexts if available to inputs as part of instructions that will be sent to model.
     # Get level system prompt that will be prepended to student system prompt.
     level_system_prompt = Level.find_by(id: level_id)&.properties&.dig('aichat_settings', 'levelSystemPrompt') || ""
-    instructions = get_instructions(aichat_model_customizations[:systemPrompt], level_system_prompt, aichat_model_customizations[:retrievalContexts])
+    instructions = get_instructions(aichat_model_customizations['systemPrompt'], level_system_prompt, aichat_model_customizations['retrievalContexts'])
     model_processor = get_model_processor(selected_model_id)
     inputs = model_processor.format_model_inputs(instructions, new_message, stored_messages)
     stopping_strings = model_processor.get_stop_strings
@@ -30,7 +42,7 @@ module AichatSagemakerHelper
     {
       inputs: inputs,
       parameters: {
-        temperature: aichat_model_customizations[:temperature].to_f,
+        temperature: aichat_model_customizations['temperature'].to_f,
         max_new_tokens: MAX_NEW_TOKENS,
         top_p: TOP_P,
         stop: stopping_strings,
@@ -39,16 +51,7 @@ module AichatSagemakerHelper
   end
 
   def self.get_model_processor(selected_model_id)
-    case selected_model_id
-    when SharedConstants::AI_CHAT_MODEL_IDS[:PIRATE]
-      return AiModelProcessors::PirateProcessor.new
-    when SharedConstants::AI_CHAT_MODEL_IDS[:KAREN]
-      return AiModelProcessors::KarenProcessor.new
-    when SharedConstants::AI_CHAT_MODEL_IDS[:ARITHMO]
-      return AiModelProcessors::ArithmoProcessor.new
-    else
-      return AiModelProcessors::MistralProcessor.new
-    end
+    AiModelProcessors::MistralProcessor.new
   end
 
   def self.request_sagemaker_chat_completion(inputs, selected_model_id)
@@ -59,26 +62,12 @@ module AichatSagemakerHelper
     )
   end
 
-  def self.get_sagemaker_assistant_response(aichat_model_customizations, stored_messages, new_message, level_id)
-    inputs = format_inputs_for_sagemaker_request(aichat_model_customizations, stored_messages, new_message, level_id)
-    selected_model_id = aichat_model_customizations[:selectedModelId]
-    sagemaker_response = request_sagemaker_chat_completion(inputs, selected_model_id)
-    parsed_response = JSON.parse(sagemaker_response.body.string)
-    generated_text = parsed_response[0]["generated_text"]
-    model_processor = get_model_processor(selected_model_id)
-    model_processor.format_model_output(generated_text)
-  end
-
-  def self.can_request_aichat_chat_completion?
-    DCDO.get("aichat_chat_completion", true)
-  end
-
   def self.get_endpoint_name(model_id)
-    "#{model_id}-#{rack_env?(:production) ? 'production' : 'test'}"
+    "#{model_id}-production"
   end
 end
 
-# Classes that allow us to stub Sagemaker in Drone, which does not have permission to access SageMaker.
+# Classes that allow us to stub Sagemaker in CI, which does not have permission to access SageMaker.
 class StubbedSagemakerClient
   def invoke_endpoint(_)
     StubbedSagemakerResponse.new

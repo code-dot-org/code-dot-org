@@ -1,8 +1,10 @@
 require 'rack/request'
 require 'rack/session/abstract/id'
+require 'i18n'
 require 'ipaddr'
 require 'json'
 require 'country_codes'
+require 'cdo/global_edition'
 
 module Cdo
   module RequestExtension
@@ -11,7 +13,7 @@ module Cdo
     end
 
     def trusted_proxy?(ip)
-      super(ip) || TRUSTED_PROXIES.any? do |proxy|
+      super || TRUSTED_PROXIES.any? do |proxy|
         proxy.include?(ip)
       rescue
         false
@@ -29,7 +31,7 @@ module Cdo
     end
 
     def locale
-      env['cdo.locale'] || 'en-US'
+      ::I18n.locale.to_s
     end
 
     def referer_site_with_port
@@ -40,6 +42,11 @@ module Cdo
       return 'code.org'
     rescue URI::InvalidURIError
       return 'code.org'
+    end
+
+    def http_host_and_port(host, port = 80)
+      return host if port == 80
+      "#{host}:#{port}"
     end
 
     def site
@@ -88,6 +95,10 @@ module Cdo
       env[:splat_path_info]
     end
 
+    def user
+      env['warden']&.user
+    end
+
     def user_id
       @user_id ||= user_id_from_session_store
     end
@@ -120,14 +131,22 @@ module Cdo
         location&.country_code
     end
 
+    def country_code
+      country.to_s.strip.upcase.presence
+    end
+
     def gdpr?
       gdpr_country_code?(country)
+    end
+
+    def ge_region
+      Cdo::GlobalEdition.current_region
     end
 
     # Initialize a private instance of the SessionStore used in Dashboard, so
     # we can access data stored there (ie, the id of the current user).
     private def dashboard_session_store
-      @dashboard_session_store ||= Dashboard::Application.config.session_store.new(
+      @@dashboard_session_store ||= Dashboard::Application.config.session_store.new(
         Dashboard::Application,
         Dashboard::Application.config.session_options
       )

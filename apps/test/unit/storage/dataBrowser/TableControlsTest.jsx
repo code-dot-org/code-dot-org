@@ -1,5 +1,6 @@
 import {mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
+import {act} from 'react-dom/test-utils';
 import {Provider} from 'react-redux';
 
 import {reducers} from '@cdo/apps/applab/redux/applab';
@@ -74,7 +75,9 @@ describe('TableControls', () => {
   }
 
   function setModalState(wrapper, newState) {
-    getModal(wrapper).setState(newState);
+    act(() => {
+      getModal(wrapper).setState(newState);
+    });
   }
 
   function setModalProps(wrapper, newProps) {

@@ -1,4 +1,7 @@
 require 'json'
+
+require_relative '../../deployment'
+require_relative 'i18n'
 require_relative 'http_cache'
 require_relative '../state_abbr'
 
@@ -11,9 +14,11 @@ require_relative '../state_abbr'
 # result in changes to these other files.
 
 module SharedConstants
-  DEFAULT_LOCALE = 'en-US'.freeze
+  DEFAULT_LOCALE = Cdo::I18n::DEFAULT_LOCALE
+  LOCALE_FALLBACKS = Cdo::I18n::LOCALE_FALLBACKS
+  LOCALIZE_TO_I18N_LOCALES = Cdo::I18n::LOCALIZE_TO_I18N_LOCALES
 
-  # Used to communicate different types of levels
+  # Used to communicate different types of levels.
   LEVEL_KIND = OpenStruct.new(
     {
       peer_review: "peer_review",
@@ -26,7 +31,7 @@ module SharedConstants
   ).freeze
 
   # Different possibilities for level.status, used to communicate how user has
-  # performed on a given level
+  # performed on a given level.
   LEVEL_STATUS = OpenStruct.new(
     {
       not_tried: "not_tried",
@@ -42,7 +47,20 @@ module SharedConstants
     }
   ).freeze
 
-  # The set of valid login types for a section
+  USER_LEVEL_INTERACTIONS = OpenStruct.new(
+    {
+      click_continue: "click_continue",
+      click_finish: "click_finish",
+      click_help_and_tips: "click_help_and_tips",
+      click_keep_working: "click_keep_working",
+      click_run: "click_run",
+      click_submit: "click_submit",
+      click_validate: "click_validate",
+      code_execution_error: "code_execution_error",
+    }
+  ).freeze
+
+  # The set of valid login types for a section.
   SECTION_LOGIN_TYPE = OpenStruct.new(
     {
       word: 'word',
@@ -58,14 +76,14 @@ module SharedConstants
 
   PL_GRADE_VALUE = 'pl'.freeze
 
-  # The set of artist autorun options
+  # The set of artist autorun options.
   ARTIST_AUTORUN_OPTIONS = OpenStruct.new(
     {
       full_auto_run: 'FULL_AUTO_RUN',
     }
   ).freeze
 
-  # Valid milestone post modes
+  # Valid milestone post modes.
   POST_MILESTONE_MODE = OpenStruct.new(
     {
       all: 'all',
@@ -105,9 +123,12 @@ module SharedConstants
     poetry_hoc
     thebadguys
     music
+    pythonlab
   ).freeze
 
-  # For privacy reasons, App Lab and Game Lab can only be shared if certain conditions are met. These project types can be shared if: the user is >= 13 years old and their teacher has NOT disabled sharing OR the user is < 13 and their teacher has enabled sharing.
+  # For privacy reasons, App Lab and Game Lab can only be shared if certain conditions are met.
+  # These project types can be shared if: the user is >= 13 years old and their teacher has NOT
+  # disabled sharing OR the user is < 13 and their teacher has enabled sharing.
   CONDITIONALLY_PUBLISHABLE_PROJECT_TYPES = %w(
     applab
     gamelab
@@ -130,7 +151,7 @@ module SharedConstants
 
   ALL_PROJECT_TYPES = ALL_PUBLISHABLE_PROJECT_TYPES + UNPUBLISHABLE_PROJECT_TYPES
 
-  # The status of a featured project based on it's `featured_at` and `unfeatured_at` properties
+  # The status of a featured project based on it's `featured_at` and `unfeatured_at` properties.
   FEATURED_PROJECT_STATUS = OpenStruct.new(
     {
       active: 'active',
@@ -621,33 +642,33 @@ module SharedConstants
     }
   ).freeze
 
-  # These reflect the 'status' of an AI rubric evaluation
+  # These reflect the 'status' of an AI rubric evaluation.
   RUBRIC_AI_EVALUATION_STATUS = {
-    # Queued as a job
+    # Queued as a job.
     QUEUED: 0,
-    # Job is running
+    # Job is running.
     RUNNING: 1,
-    # Succeeded
+    # Succeeded.
     SUCCESS: 2,
-    # General failure (along with anything larger)
+    # General failure (along with anything larger).
     FAILURE: 1000,
-    # PII Failure
+    # PII Failure.
     PII_VIOLATION: 1001,
-    # Profanity Failure
+    # Profanity Failure.
     PROFANITY_VIOLATION: 1002,
-    # Request Too Large
+    # Request Too Large.
     REQUEST_TOO_LARGE: 1003,
-    # Student exceeded max number of evaluations per project
+    # Student exceeded max number of evaluations per project.
     STUDENT_LIMIT_EXCEEDED: 1004,
-    # Teacher exceeded max number of evaluations per student per project
+    # Teacher exceeded max number of evaluations per student per project.
     TEACHER_LIMIT_EXCEEDED: 1005,
   }.freeze
 
   RUBRIC_AI_EVALUATION_LIMITS = {
-    # Maximum number of evaluations we will automatically run for a student per project
+    # Maximum number of evaluations we will automatically run for a student per project.
     STUDENT_LIMIT: 10,
 
-    # Maximum number of evaluations a teacher can request for a rubric per student
+    # Maximum number of evaluations a teacher can request for a rubric per student.
     TEACHER_LIMIT: 10
   }
 
@@ -697,9 +718,6 @@ module SharedConstants
       SHAPE: 100,
     },
   }.freeze
-  CENSUS_CONSTANTS = OpenStruct.new(
-    {CURRENT_CENSUS_SCHOOL_YEAR: 2024}
-  )
 
   CAP_LINKS = OpenStruct.new(
     PARENTAL_CONSENT_GUIDE_URL: 'https://support.code.org/hc/en-us/articles/15465423491085-How-do-I-obtain-parent-or-guardian-permission-for-student-accounts',
@@ -711,7 +729,7 @@ module SharedConstants
       INSTALL_INSTRUCTIONS_URL: 'https://support.code.org/hc/en-us/articles/23621907533965-Install-Code-org-Integrations-for-your-Learning-Management-System',
       ROSTER_SYNC_INSTRUCTIONS_URL: 'https://support.code.org/hc/en-us/articles/23621978654605-Sync-Rosters-with-your-Learning-Management-System',
       ADDITIONAL_FEEDBACK_URL: 'https://studio.code.org/form/lms_integration_modal_feedback',
-      # TODO(P20-873): Replace SUPPORTED_METHODS_URL with the link to the supported methods documentation
+      # TODO(P20-873): Replace SUPPORTED_METHODS_URL with the link to the supported methods documentation.
       SUPPORTED_METHODS_URL: 'https://github.com/code-dot-org/code-dot-org/blob/staging/docs/lti-integration.md#option-2-manual-entry',
     }
   ).freeze
@@ -719,12 +737,19 @@ module SharedConstants
   # Current song manifest file name for Dance Party. Note that different manifests
   # can be tested using query params (?manifest=...), but once this value is updated
   # the default manifest will change for all users.
-  DANCE_SONG_MANIFEST_FILENAME = 'songManifest2024_v2.json'
+  DANCE_SONG_MANIFEST_FILENAME = 'songManifest2025_v1.json'
 
   # We should always specify a version for the LLM so the results don't unexpectedly change.
-  # reference: https://platform.openai.com/docs/models/gpt-3-5
-  AI_TUTOR_CHAT_MODEL_VERISON = 'gpt-4o-2024-05-13'
-  AICHAT_SAFETY_MODEL_VERSION = 'gpt-4o-mini-2024-07-18'
+  # reference: https://platform.openai.com/docs/models/gpt-3-5.
+  AICHAT_MODEL_VERSION = 'gpt-4o-mini-2024-07-18'
+  EVALUATE_STUDENT_LEARNING_MODEL_VERSION = 'gpt-4o-mini-2024-07-18'
+  STUDENT_SNAPSHOT_MODEL_VERSION = 'gpt-4o-mini-2024-07-18'
+  PERSONALIZATION_MODEL_VERSION = 'gpt-4o-mini-2024-07-18'
+
+  AI_EVALUATION_TYPES = {
+    SINGLE_STUDENT: 'single_student',
+    SECTION_SUMMARY: 'section_summary',
+  }.freeze
 
   # These reflect the 'status' of an AI Interaction,
   # and are used in both AI Tutor and AI Chat.
@@ -733,16 +758,24 @@ module SharedConstants
     PII_VIOLATION: 'pii_violation',
     PROFANITY_VIOLATION: 'profanity_violation',
     USER_INPUT_TOO_LARGE: 'user_input_too_large',
+    MODEL_TIMEOUT: 'model_timeout',
+    MODEL_RATE_LIMITED: 'model_rate_limited',
     OK: 'ok',
     UNKNOWN: 'unknown',
   }.freeze
 
-  AI_TUTOR_INTERACTION_STATUS = AI_INTERACTION_STATUS
+  LESSON_OBJECTIVE_REFLECTION_VALUES = {
+    UNSURE: 'unsure',
+    LOST: 'lost',
+    CONFIDENT: 'confident',
+  }.freeze
 
   AI_TUTOR_TYPES = {
     COMPILATION: 'compilation',
     VALIDATION: 'validation',
     GENERAL_CHAT: 'general_chat',
+    COMPLETION: 'completion',
+    GENERIC_HELP: 'generic_help',
   }.freeze
 
   USER_TYPES = OpenStruct.new(
@@ -776,18 +809,327 @@ module SharedConstants
     # PII detected in the model's output.
     MODEL_PII: 1004,
     # The user input request exceeded the maximum token size allowed.
-    USER_INPUT_TOO_LARGE: 1005
+    USER_INPUT_TOO_LARGE: 1005,
+    # The model took too long to respond.
+    MODEL_TIMEOUT: 1006,
+    # Model output image flagged.
+    MODEL_IMAGE_FLAGGED: 1007,
+    # The model is currently rate-limited (HTTP 429).
+    MODEL_RATE_LIMITED: 1008,
+    # The model's internal content filter blocked its output.
+    MODEL_CONTENT_FILTERED: 1009,
+  }
+
+  STUDENT_WORK_EVALUATION_STATUS = {
+    # The student submitted a blank free response or did not change the starter code.
+    NO_ATTEMPT: 'no_attempt',
+    # Profanity detected in the student's work.
+    STUDENT_PROFANITY: 'student_profanity',
+    # PII detected in the student's work.
+    STUDENT_PII: 'student_pii',
+    # Possible responses from AI when evaluating student work.
+    ALL_COMPLETE_CORRECT: 'all_complete_correct',
+    PARTIAL_COMPLETE_CORRECT: 'partial_complete_correct',
+    INCOMPLETE_INCORRECT: 'incomplete_incorrect',
+    NOT_EVALUATED: 'not_evaluated',
   }
 
   AI_CHAT_MODEL_IDS = {
-    ARITHMO: "gen-ai-arithmo2-mistral-7b",
-    BIOMISTRAL: "gen-ai-biomistral-7b",
     MISTRAL: "gen-ai-mistral-7b-inst-v01",
-    KAREN: "gen-ai-karen-creative-mistral-7b",
-    PIRATE: "gen-ai-mistral-pirate-7b"
+    CHATGPT: "gpt-4o-mini",
+    LEARNLM: "learnlm-2.0-flash-experimental",
+    GEMINI_2_0_FLASH: "gemini-2.0-flash",
+    GEMINI_2_5_FLASH: "gemini-2.5-flash",
+    GEMINI_2_5_FLASH_LITE: "gemini-2.5-flash-lite",
+    GEMINI_2_5_PRO: "gemini-2.5-pro",
+    GEMINI_2_5_FLASH_IMAGE: "gemini-2.5-flash-image",
+  }
+
+  AI_CHAT_CLIENT_TYPES = {
+    AI_CHAT_LAB: "ai-chat-lab",
+    # AI Tutor in levels and on standalone projects.
+    AI_TUTOR: "ai-tutor",
+    FLOW_LAB: "flow-lab",
+    LESSON_DEEP_DIVE: "lesson-deep-dive",
+  }
+
+  AI_CHAT_READ_TIMEOUTS = {
+    AI_CHAT_CLIENT_TYPES[:AI_CHAT_LAB] => 30,
+    AI_CHAT_CLIENT_TYPES[:AI_TUTOR] => 30,
+    AI_CHAT_CLIENT_TYPES[:FLOW_LAB] => 60,
+    AI_CHAT_CLIENT_TYPES[:LESSON_DEEP_DIVE] => 60,
   }
 
   AICHAT_METRICS_NAMESPACE = 'GenAICurriculum'.freeze
 
+  AI_CHAT_TEACHER_FEEDBACK = {
+    # The teacher flagged a message that our system did not flag as inappropriate.
+    CLEAN_DISAGREE: 'clean_disagree',
+    # The teacher agreed with our system's flagging of a message as inappropriate.
+    PROFANITY_AGREE: 'profanity_agree',
+    # The teacher disagreed with our system's flagging of a message as inappropriate.
+    PROFANITY_DISAGREE: 'profanity_disagree',
+  }
+
+  # Level of access to AI chat features for students in a section.
+  AI_CHAT_ACCESS_LEVELS = {
+    ENABLED: 'enabled',
+    DISABLED: 'disabled',
+    ESSENTIAL_ONLY: 'essential_only',
+  }.freeze
+
+  # The degree to which a curriculum depends on AI chat features.
+  # 'essential' means the curriculum cannot be completed without AI chat tools.
+  # 'available' means the curriculum can be completed without AI chat tools but the tools are available for use.
+  # 'none' means the curriculum does not depend on AI chat tools at all.
+  AI_CHAT_TOOLS_DEPENDENCY = {
+    ESSENTIAL: 'essential',
+    AVAILABLE: 'available',
+    NONE: 'none',
+  }.freeze
+
   US_STATES = STATE_ABBR_WITH_DC_HASH.merge(DC: 'Washington, D.C.').sort_by(&:last).to_h.freeze
+
+  PROJECT_SUBMISSION_STATUS = {
+    CAN_SUBMIT: 'can_submit',
+    ALREADY_SUBMITTED: 'already_submitted',
+    PROJECT_TYPE_NOT_ALLOWED: 'project_type_not_allowed',
+    RESTRICTED_SHARE_MODE: 'restricted_share_mode',
+    SHARING_DISABLED: 'sharing_disabled',
+    OWNER_TOO_NEW: 'owner_too_new',
+    PROJECT_TOO_NEW: 'project_too_new',
+  }
+
+  EDUCATOR_ROLES = [
+    {value: "classroom_teacher", label: "Classroom Teacher", category: 'educator'},
+    {value: "stem_tech_teacher", label: "STEM/Technology Teacher", category: 'educator'},
+    {value: "subject_area_teacher", label: "Subject Area Teacher", category: 'educator'},
+    {value: "librarian_media_specialist", label: "Librarian/Media Specialist", category: 'educator'},
+    {value: "homeschool_teacher", label: "Homeschool Teacher", category: 'educator'},
+    {value: "school_admin", label: "School Administrator", category: "admin"},
+    {value: "district_admin", label: "District Administrator", category: "admin"},
+    {value: "parent", label: "Parent", category: 'other'},
+    {value: "other", label: "Other", category: 'other'}
+  ].freeze
+
+  RESOURCE_EMBEDDABILITY_OPTIONS = {
+    EMBED_AND_RESOURCE_DROPDOWN: {value: "embed_and_resource_dropdown", label: "AI TA knowledge base and resource dropdown"},
+    EMBED_ONLY: {value: "embed_only", label: "AI TA knowledge base only"},
+    RESOURCE_DROPDOWN_ONLY: {value: "resource_dropdown_only", label: "Resource dropdown only"}
+  }.freeze
+
+  AI_DIFF_CONTEXT = {
+    LESSON: "lesson",
+    UNIT: "unit",
+    COURSE: "course",
+    GENERAL: "general",
+    LEVEL: "level",
+    PROGRESS: "progress"
+  }.freeze
+
+  AI_DIFF_ASSOCIATION = {
+    LESSON: "lesson",
+    UNIT: "unit",
+    COURSE: "course",
+    SECTION: "section"
+  }.freeze
+
+  AI_DIFF_ARTIFACT_TYPE = {
+    EXIT_TICKET: "AidiffExitTicket",
+    LESSON_HOOK: "AidiffLessonHook"
+  }.freeze
+
+  DISALLOWED_ROUTES = [
+    "/admin/",
+    "/api/",
+    "/blockly/",
+    "/dashboardapi/",
+    "/join/",
+    "/milestone/",
+    "/projects/",
+    "/sections/",
+    "/r/",
+    "/c/",
+    "/oauth_sign_out/",
+    "/certificates/"
+  ].freeze
+
+  BUBBLE_CHOICE_CUSTOM_MODES = {
+    MUSIC_DANCE_AI: 'music_dance_ai',
+  }.freeze
+
+  BUBBLE_CHOICE_CUSTOM_MODE_MAX_SUBPROJECTS = 3
+
+  BUBBLE_CHOICE_NAVIGATION_TYPES = {
+    PARENT: 'parent',
+    NEXT_LEVEL: 'next_level',
+  }
+
+  # Web Lab 2 and App Lab projects use the same list of allowed hostnames.
+  # These are the hostnames that users are allowed to make requests to in their projects.
+  # SECURITY CONSIDERATIONS:
+  # - These APIs are allowlisted to let students make web requests in their projects
+  # - All APIs should be public, well-documented, and not require authentication for basic usage
+  # - APIs that require API keys should be documented as such.  These risk student exposure to the API keys.
+  # There has been a best effort to determine which APIs use keys and which are public.
+  # If an API is not specified as either, it means we can not determine if it requires a key or not.
+  # Some API descriptions have been generated by AI and spot-checked for accuracy, but may contain errors.
+  ALLOWED_HOSTNAME_SUFFIXES = [
+    # === ENTERTAINMENT ===
+    'api.themoviedb.org',         # Movie/TV data - API key required 🔑
+    'api.disneyapi.dev',          # Disney characters data - Public API
+
+    # === FINANCE & CRYPTOCURRENCY ===
+    'api.coinlayer.com',          # Cryptocurrency exchange rates - API key required 🔑
+    'pro-api.coinmarketcap.com',  # Cryptocurrency market data - API key required 🔑
+    'api.exchangeratesapi.io',    # Currency exchange rates - API key required 🔑
+    'currencyapi.com',            # Currency data - API key required 🔑
+    'moneyconvert.net',           # Exchange rate data - Public API
+    'quandl.com',                 # Financial datasets - API key required 🔑
+
+    # === FUN AND GAMES ===
+    'api.blizzard.com',           # Blizzard gaming data - API key required 🔑
+    'api.nookipedia.com',         # Animal Crossing data -  API key required 🔑
+    'api.mojang.com',             # Minecraft game data - Public API
+    'api.scryfall.com',           # Magic: The Gathering cards - Public API
+    'api.sportsdata.io',          # Sports data feeds - API key required 🔑
+    'ch.tetr.io',                 # Tetris game data - Public API
+    'deckofcardsapi.com',         # Deck of cards - Public API
+    'openlibrary.org',            # Open Library APIs - Public API
+    'opentdb.com',                # Trivia questions - Public API
+    'pokeapi.co',                 # Pokémon data - Public API
+    'roblox.com',                 # Roblox game data - API key required 🔑
+    'runescape.com',              # RuneScape game data - Public API
+    'sessionserver.mojang.com',   # Minecraft session data - Public API
+    'stats.minecraftservers.org', # Minecraft server stats - Public API
+    'textures.minecraft.net',     # Minecraft textures - Public API
+    'thecatapi.com',              # Cat photos - API key required 🔑
+    'thedogapi.com',              # Dog photos - API key required 🔑
+    'official-joke-api.appspot.com', # Joke API - Public API
+
+    # === GOVERNMENT ===
+    # SECURITY: Government APIs are generally well-maintained and secure
+    'api.census.gov',             # US Census data - Public API
+    'api.energidataservice.dk',   # Danish energy data - Public API
+    'api.fda.gov',                # FDA data - Public API
+    'api.nal.usda.gov',           # USDA data
+    'api.si.edu',                 # Smithsonian data - API key required 🔑
+    'api-v3.mbta.com',            # Boston transit data
+    'data.austintexas.gov',       # Austin city data
+    'data.cityofchicago.org',     # Chicago city data
+    'data.gv.at',                 # Austrian government data
+    'rejseplanen.dk',             # Denmark public transport
+    'transitchicago.com',         # Chicago transit - API key required 🔑
+    'vpic.nhtsa.dot.gov',         # Vehicle data - Public API
+    'api.congress.gov',           # Congress data - API key required 🔑
+
+    # === SPACE ===
+    'api.nasa.gov',               # NASA content - API key required 🔑
+    'api.open-notify.org',        # ISS location and space data - Public API
+    'api.spacexdata.com',         # SpaceX data - Public API
+    'data.nasa.gov',              # NASA datasets
+    'hubblesite.org',             # Hubble telescope data
+    'images-api.nasa.gov',        # NASA images - API key required 🔑
+
+    # === WEATHER & CLIMATE ===
+    # SECURITY: Weather APIs are generally reliable and well-maintained
+    'api.open-meteo.com',          # Weather data - Public API
+    'api.weather.gov',             # US National Weather Service - Public API
+    'api.weatherapi.com',          # Weather data - API key required 🔑
+    'api.openweathermap.org',      # Weather data - API key required 🔑
+    'api.waqi.info',               # Air quality data - API key required 🔑
+    'dataservice.accuweather.com', # Weather data - API key required 🔑
+    'data.weather.gov.hk',         # Hong Kong weather
+    'noaa.gov',                    # Weather/climate data - API key required 🔑
+
+    # === PLACES & GEOGRAPHY ===
+    # SECURITY: Geographic APIs are generally safe for educational use
+    'api.foursquare.com',       # Points of interest - API key required 🔑
+    'api.opencagedata.com',     # Geocoding - API key required 🔑
+    'api.openrouteservice.org', # Directions/routing - API key required 🔑
+    'api.zippopotam.us',        # Postal codes - Public API
+    'restcountries.com',        # Country information - Public API
+    'worldclockapi.com',        # Time zones - Public API
+    'worldtimeapi.org',         # Time zones - Public API
+
+    # === MATH ===
+    # SECURITY: Simple utility APIs with minimal security concerns
+    'api.mathjs.org',           # Mathematical expressions - Public API
+    # REMOVED: 'numbersapi.com' - HIGH RISK: DNS resolves but no HTTP/HTTPS service available
+    'qrng.anu.edu.au',          # Random numbers - Public API
+    'random.org',               # Random number generation - API Key required 🔑
+    'api.wolframalpha.com',     # Computational knowledge engine - API key required 🔑
+
+    # === TOOLS & INTEGRATIONS ===
+    # SECURITY: Some require authentication, others are public
+    'api.github.com',           # GitHub data - Public API, rate limited
+    'io.adafruit.com',          # Adafruit IO - API key required 🔑
+    'maker.ifttt.com',          # IFTTT webhooks
+    'googleapis.com',           # Google Services - API key required 🔑
+    'api.rebrandly.com',        # URL shortening - API key required 🔑
+
+    # === CONTENT & MEDIA ===
+    # SECURITY: Content APIs are generally safe for educational use
+    'api.spotify.com',          # Spotify music data - API key required 🔑
+    'itunes.apple.com',         # iTunes/App Store data - Public API
+    'pixabay.com',              # Photos/videos - API key required 🔑
+    'wikipedia.org',            # Wikipedia content - Public API
+    'xeno-canto.org',           # Bird sounds - API key required 🔑
+
+    # === WORDS & TEXTS ===
+    'api.datamuse.com',         # Word-finding engine - Public API
+    'gutendex.com',             # Project Gutenberg ebook metadata - Public API
+    'api.scripture.api.bible',  # Bible verses - API key required 🔑
+    'api.adviceslip.com',       # Advice API - Public API
+
+    # === OTHER ===
+    # SECURITY: Varies by API, most are public educational resources
+    'api.amadeus.com',          # Travel/flight data - API key required 🔑
+    'api.arasaac.org',          # AAC symbols - Public API
+    'api.randomuser.me',        # Random user data - Public API
+    'api.thingspeak.com',       # Analyze live data streams - API key required for private channels 🔑
+    'api.spoonacular.com',      # Food/recipe data - API key required 🔑
+    'native-land.ca',           # Indigenous territories - API key required 🔑
+    'perenual.com',             # Botanical data - API key required 🔑
+    'serpapi.com',              # Search engine results - Public API
+    'newsapi.org',              # News data - API key required 🔑
+    # REMOVED: 'myschoolapp.com' - HIGH RISK: DNS resolves but no HTTP/HTTPS service available
+    'isenseproject.org',        # Sensor data - Public API
+    'lakeside-cs.org',          # Educational data - Public API
+
+    # === INTERNAL ===
+    # These enable functionality within the Code.org ecosystem
+    # For example, so applab apps can access the tables and properties of other applab apps.
+    'code.org',
+
+    # === LEGACY/DEPRECATED ===
+    # These are maintained for backward compatibility
+    # These seemed deprecated/have inactive websites as of 9/3/2025
+    # SECURITY: Should be reviewed for continued necessity
+    'api.pegelalarm.at',        # Water level data
+    # REMOVED: 'api.quotable.io' - HIGH RISK: Domain does not resolve
+    'bnefoodtrucks.com.au',     # Brisbane food trucks
+    'covidtracking.com',        # COVID data (deprecated) - Public API
+    'cryptonator.com',          # Cryptocurrency data
+    # REMOVED: 'distanza.org' - HIGH RISK: DNS resolves but no HTTP/HTTPS service available
+    # REMOVED: 'githubusercontent.com' - HIGH RISK: Domain does not resolve
+    # REMOVED: 'grobchess.com' - HIGH RISK: DNS resolves but no HTTP/HTTPS service available
+    'open.mapquestapi.com',     # MapQuest mapping services
+    'swapi.dev',                # Star Wars data. We may want to remove this in favor of swapi.info
+    # REMOVED: 'theunitedstates.io' - HIGH RISK: DNS resolves but no HTTP/HTTPS service available
+  ].freeze
+
+  ALLOWED_IMAGE_HOSTNAME_SUFFIXES = [
+    'picsum.photos', # Placeholder images - Public API
+    'images.code.org' # Code.org hosted images - Public API
+  ].freeze
+
+  ALLOWED_FONT_HOSTNAMES = [
+    # These hostnames are used to load google fonts. Public API.
+    'fonts.googleapis.com',
+    'fonts.gstatic.com'
+  ].freeze
+
+  # Raster formats that are safe to process with ImageMagick, supported in assets, and supported by Azure AI Content Safety.
+  SAFE_AND_SUPPORTED_IMAGE_TYPES = %w(image/gif image/jpeg image/png image/webp).freeze
 end

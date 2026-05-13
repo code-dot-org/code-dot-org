@@ -7,6 +7,13 @@
     "focus-on-hardware3b-2023",
     "focus-on-hardware-post-survey-2023"
   ],
+  "original_script_names": [
+    "focus-on-hardware1-2023",
+    "focus-on-hardware2-2023",
+    "focus-on-hardware3a-2023",
+    "focus-on-hardware3b-2023",
+    "focus-on-hardware-post-survey-2023"
+  ],
   "published_state": "stable",
   "instruction_type": "teacher_led",
   "participant_audience": "student",

@@ -46,7 +46,7 @@ describe('JavabuilderConnection', () => {
       setIsRunning,
       setIsTesting,
       ExecutionType.RUN,
-      CsaViewMode.NEIGHBORHOOD,
+      CsaViewMode.CONSOLE,
       null,
       null,
       null,
@@ -252,7 +252,7 @@ describe('JavabuilderConnection', () => {
         setIsRunning,
         setIsTesting,
         executionType,
-        CsaViewMode.NEIGHBORHOOD
+        CsaViewMode.CONSOLE
       );
     }
   });

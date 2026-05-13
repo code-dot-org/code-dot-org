@@ -1,0 +1,9 @@
+name 'csaif_pl_ai_01_08b_2025'
+display_name 'Prompting AI Chat'
+description 'Pick at least one of the levels below to complete. Prompt the AI Chat to get the relevant information. While you work reflect *on how did your AI generated output change as you made updates to your prompt*?'
+
+sublevels
+level 'test-problem-solving-with-ai-lesson1-level6-choice1_2025'
+level 'test-problem-solving-with-ai-lesson1-level6-choice2_2025'
+level 'test-problem-solving-with-ai-lesson1-level6-choice3_2025'
+level 'test-problem-solving-with-ai-lesson1-level6-choice4_2025'

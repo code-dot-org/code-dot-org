@@ -1,0 +1,37 @@
+name 'pl-java-class-structure-toPrint-info-35_pl'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Printing Objects 
+
+#### When printing an object, the toString() method of the Object class is called.
+
+#### The `toString()` method is **automatically called** when an object reference is passed to a **print statement** or when an object reference is concatenated with a String.
+
+---
+
+<img src="https://images.code.org/f494e7d6e3cc1bc83dc7da4dfd005a75-image-1747935629911.png" alt="toString method header " width="350px" style="border-radius:10px; float:right; margin: 40px 0 00px 40px;">
+
+## Writing a toString() Method 
+
+#### The method signature is the same as the `toString()` method in the Object class. It has the same return type, name, and no parameters.
+
+<br><br>
+
+<div style="clear:both;"></div>
+
+<img src="https://images.code.org/cac55071fd59eb46f3081c629b14147f-image-1747935949991.png" alt="toString method header " width="350px" style="border-radius:10px; float:right; margin: 40px 0 0px 40px;">
+
+---
+
+#### In the body of the `toString()` method, we return a String that contains information about the object.
+
+<div style="clear:both;"></div>
+
+## Calling a toString() Method
+
+To 
+
+![](https://images.code.org/d3704efb4cf65ec6e613011857aec6ab-image-1747936306893.png)
+MARKDOWN

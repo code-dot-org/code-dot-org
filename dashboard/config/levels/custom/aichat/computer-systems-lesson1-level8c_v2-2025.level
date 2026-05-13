@@ -1,0 +1,50 @@
+<Aichat>
+  <config><![CDATA[{
+  "game_id": 71,
+  "created_at": "2025-09-25T19:59:35.000Z",
+  "level_num": "custom",
+  "user_id": 22366,
+  "properties": {
+    "encrypted": "false",
+    "display_name": "Wildlife Conservationist",
+    "long_instructions": "## Priya Desai, Wildlife Conservationist\r\n\r\n**Location:** Gujarat, India\r\n\r\n**Workplace:** Snake Conservation Research Center\r\n\r\n**Expertise:** Wildlife protection, snake research, community education\r\n\r\n**How I Use AI:** \"The AI Snake Identification App allows me to accurately track snake populations, educate local communities on venomous species, and assist hospitals in identifying snakebites. By using AI, we can reduce unnecessary fear, protect biodiversity, and support safer human-snake interactions.\"\r\n\r\n---\r\n\r\n### Do This:\r\n\r\n1. Use AI Chat to conduct the interview and take notes on their responses. Ask questions about their work, including:\r\n   * Key roles and responsibilities\r\n   * Key challenges\r\n   * How computing supports their work\r\n   * How your chosen innovation helps their job\r\n2. Summarize key insights in your activity guide.",
+    "aichat_settings": {
+      "initialCustomizations": {
+        "selectedModelId": "gpt-4o-mini",
+        "temperature": 0.3,
+        "systemPrompt": "",
+        "retrievalContexts": [
+
+        ],
+        "modelCardInfo": {
+          "botName": "",
+          "description": "",
+          "intendedUse": "",
+          "limitationsAndWarnings": "",
+          "testingAndEvaluation": "",
+          "exampleTopics": [
+
+          ],
+          "isPublished": false
+        }
+      },
+      "visibilities": {
+        "selectedModelId": "hidden",
+        "temperature": "hidden",
+        "systemPrompt": "hidden",
+        "retrievalContexts": "hidden",
+        "modelCardInfo": "hidden"
+      },
+      "levelSystemPrompt": "You are Priya Desai, a wildlife conservationist based in Gujarat, India, working at the Snake Conservation Research Center. Your job involves tracking snake populations, reducing human-snake conflicts, and assisting hospitals in identifying snakebites.\n\nYou use the AI Snake Identification App to:\n\nAccurately identify snakes in the wild, helping researchers and local communities differentiate between venomous and non-venomous species.\nEducate the public about snake safety, reducing unnecessary fear and killings of snakes.\nAssist hospitals in quickly confirming snake species to ensure proper medical treatment.\nWhen asked, explain how AI improves your work by:\n\nProviding fast, reliable snake identification, making research and conservation efforts more accurate.\nHelping communities coexist with snakes, reducing unnecessary harm to wildlife.\nSupporting emergency responders by ensuring accurate information reaches hospitals.\nYou may also discuss challenges, such as:\n\nGetting rural communities to trust AI-based identification tools.\nEnsuring that AI models are accurate across different snake species.\nBalancing technology with traditional conservation methods.\nStay in character, share real-world examples, and keep your responses engaging and easy for high school students to understand.",
+      "hidePresentationPanel": false,
+      "availableModelIds": [
+        "gpt-4o-mini"
+      ]
+    },
+    "thumbnail_url": "https://images.code.org/660772aa23f5f2b7892dc8fe66aed3ba-Pasted Graphic 13.png",
+    "name_suffix": "_v2-2025"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-09-25T19:59:35.026+00:00\",\"changed\":[\"cloned from \\\"computer-systems-lesson1-level8c_2025\\\"\"],\"cloned_from\":\"computer-systems-lesson1-level8c_2025\"}]"
+}]]></config>
+</Aichat>

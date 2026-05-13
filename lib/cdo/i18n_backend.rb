@@ -1,6 +1,8 @@
 require 'i18n'
 require 'active_support/core_ext/numeric/bytes'
 require 'cdo/honeybadger'
+require 'cdo/i18n'
+require 'cdo/i18n/plugins/interpolation_l10n'
 require 'cdo/i18n_string_url_tracker'
 
 module Cdo
@@ -12,7 +14,7 @@ module Cdo
           options = SmartTranslate.get_smart_translate_options(locale, key, options)
         end
 
-        super(locale, key, options)
+        super
       end
 
       def self.get_smart_translate_options(locale, key, options = ::I18n::EMPTY_HASH)
@@ -120,7 +122,7 @@ module Cdo
       end
 
       def translate(locale, key, options = ::I18n::EMPTY_HASH)
-        result = super(locale, key, options)
+        result = super
         return result if options[:safe_interpolation] == false
 
         # Log unused interpolation arguments to honeybadger; these are likely
@@ -169,6 +171,7 @@ module Cdo
       include MarkdownTranslate
       include SafeInterpolation
       include I18nStringUrlTrackerPlugin
+      include InterpolationL10n
     end
 
     class SimpleBackend < ::I18n::Backend::Simple
@@ -185,12 +188,12 @@ module Cdo
     class LazyLoadableBackend < ::I18n::Backend::LazyLoadable
       include Plugins
 
-      LOCALES_MAPPING = YAML.load_file(CDO.dir('dashboard/config/locales.yml')).each_with_object({}) do |(k, v), locales|
+      LOCALES_MAPPING = ::Cdo::I18n::LOCALE_CONFIGS.each_with_object({}) do |(k, v), locales|
         locales[k.to_sym] = v.to_sym if v.is_a?(String)
       end.freeze
 
       # The original method has been modified to work on i18n files named with a prefix and the locale,
-      # like "common.en.yml" or "common.en-US.json" and not only on files named with the locale, like "en-US.json".
+      # like "common/en.yml" or "common.en-US.json" and not only on files named with the locale, like "en-US.json".
       # https://github.com/ruby-i18n/i18n/blob/v1.12.0/lib/i18n/backend/lazy_loadable.rb#L55-L63
       class ::I18n::Backend::LocaleExtractor
         def self.locale_from_path(path)
@@ -276,5 +279,3 @@ module Cdo
     end
   end
 end
-
-CDO_I18N_BACKEND = Cdo::I18n::SimpleBackend.new

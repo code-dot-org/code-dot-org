@@ -1,6 +1,6 @@
 @use "sass:math";
 @import "color.scss";
-@import "font";
+@import '@code-dot-org/component-library-styles/font';
 @import "curriculum/markdown";
 @import "responsive-visualization";
 @import "style-constants";
@@ -1042,6 +1042,11 @@ $workspace-header-button-margin: ($workspace-headers-height - $workspace-header-
   }
 }
 
+// Hidden by default. Manually shown for Blockly labs only (loadApp.js)
+#settings-header {
+  display: none;
+}
+
 #versions-header {
   display: none;
 }
@@ -1223,10 +1228,10 @@ $workspace-header-button-margin: ($workspace-headers-height - $workspace-header-
     }
 
     .generated-code-container {
-      margin: 25px 10px 25px -80px;
+      margin: 25px 10px 25px 0;
 
       html[dir="rtl"] & {
-        margin: 25px -80px 25px 10px;
+        margin: 25px 0 25px 10px;
       }
     }
   }
@@ -1589,8 +1594,8 @@ $text-color: $white;
 $tooltip-border-radius: 14px;
 $tooltip-shadow-color: $shadow;
 $see-examples-font-weight: bold;
-$tooltip-font: $main-font;
-$function-name-font: $code-font;
+$tooltip-font: var(--font-family-main);
+$function-name-font: 'Source Code Pro', Monaco, 'Bitstream Vera Sans Mono', 'Lucida Console', Terminal, monospace;
 $see-examples-thick-underline-color: $yellow;
 
 .tooltip-example-link,
@@ -1641,7 +1646,7 @@ $see-examples-thick-underline-color: $yellow;
 
 .droplet-block-tooltipster .tooltipster-content {
   font-family: $tooltip-font;
-  font-weight: $regular-font-weight;
+  font-weight: var(--font-weight-regular);
   font-size: 12px;
   line-height: 16px;
   padding: 8px 10px;

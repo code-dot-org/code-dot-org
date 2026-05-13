@@ -1,5 +1,8 @@
+import {CdoTheme} from '@code-dot-org/component-library/themes';
+import {ThemeProvider as MuiThemeProvider} from '@mui/material/styles';
 import {mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
+import {act} from 'react-dom/test-utils';
 import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
 
 import ChangeEmailModal from '@cdo/apps/accounts/ChangeEmail/ChangeEmailModal';
@@ -39,7 +42,10 @@ describe('ChangeEmailModal', () => {
     );
 
   beforeEach(() => {
-    wrapper = mount(<ChangeEmailModal {...DEFAULT_PROPS} />);
+    wrapper = mount(<ChangeEmailModal {...DEFAULT_PROPS} />, {
+      wrappingComponent: MuiThemeProvider,
+      wrappingComponentProps: {theme: CdoTheme},
+    });
 
     // causing a blank change event to reveal validation messages
     emailInput(wrapper).simulate('change');
@@ -54,7 +60,9 @@ describe('ChangeEmailModal', () => {
       beforeEach(() => wrapper.setProps({userType}));
 
       it('disables everything and shows spinner when saving', () => {
-        wrapper.setState({saveState: 'saving'});
+        act(() => {
+          wrapper.setState({saveState: 'saving'});
+        });
         expect(emailInput(wrapper)).to.have.attr('disabled');
         expect(passwordInput(wrapper)).to.have.attr('disabled');
         if ('teacher' === userType) {
@@ -67,7 +75,9 @@ describe('ChangeEmailModal', () => {
       });
 
       it('shows unknown error text when an unknown error occurs', () => {
-        wrapper.setState({saveState: 'unknown-error'});
+        act(() => {
+          wrapper.setState({saveState: 'unknown-error'});
+        });
         expect(wrapper.text()).to.include(
           i18n.changeEmailModal_unexpectedError()
         );
@@ -83,12 +93,14 @@ describe('ChangeEmailModal', () => {
 
       describe('validation', () => {
         it('checks that email is present', () => {
-          wrapper.setState({
-            values: {
-              newEmail: '',
-              currentPassword: 'fake-password',
-              emailOptIn: 'yes',
-            },
+          act(() => {
+            wrapper.setState({
+              values: {
+                newEmail: '',
+                currentPassword: 'fake-password',
+                emailOptIn: 'yes',
+              },
+            });
           });
 
           expect(wrapper.text()).to.include(
@@ -97,12 +109,14 @@ describe('ChangeEmailModal', () => {
         });
 
         it('checks that email is valid', () => {
-          wrapper.setState({
-            values: {
-              newEmail: 'invalidEmail@nowhere',
-              currentPassword: 'fake-password',
-              emailOptIn: 'yes',
-            },
+          act(() => {
+            wrapper.setState({
+              values: {
+                newEmail: 'invalidEmail@nowhere',
+                currentPassword: 'fake-password',
+                emailOptIn: 'yes',
+              },
+            });
           });
 
           expect(wrapper.text()).to.include(
@@ -114,12 +128,14 @@ describe('ChangeEmailModal', () => {
           const email = 'validEmail@example.com';
           const hashedEmail = hashEmail(email);
           wrapper.setProps({currentHashedEmail: hashedEmail});
-          wrapper.setState({
-            values: {
-              newEmail: email,
-              currentPassword: 'fake-password',
-              emailOptIn: 'yes',
-            },
+          act(() => {
+            wrapper.setState({
+              values: {
+                newEmail: email,
+                currentPassword: 'fake-password',
+                emailOptIn: 'yes',
+              },
+            });
           });
 
           expect(wrapper.text()).to.include(
@@ -129,27 +145,32 @@ describe('ChangeEmailModal', () => {
 
         it('reports email server errors', () => {
           const serverError = 'test-server-error';
-          wrapper.setState({
-            values: {
-              newEmail: 'new@example.com',
-              currentPassword: 'fake-password',
-              emailOptIn: 'yes',
-            },
-            serverErrors: {
-              newEmail: serverError,
-            },
+
+          act(() => {
+            wrapper.setState({
+              values: {
+                newEmail: 'new@example.com',
+                currentPassword: 'fake-password',
+                emailOptIn: 'yes',
+              },
+              serverErrors: {
+                newEmail: serverError,
+              },
+            });
           });
 
           expect(wrapper.text()).to.include(serverError);
         });
 
         it('checks that password is present if user has a password', () => {
-          wrapper.setState({
-            values: {
-              newEmail: 'new@example.com',
-              currentPassword: '',
-              emailOptIn: 'yes',
-            },
+          act(() => {
+            wrapper.setState({
+              values: {
+                newEmail: 'new@example.com',
+                currentPassword: '',
+                emailOptIn: 'yes',
+              },
+            });
           });
 
           expect(wrapper.text()).to.include(
@@ -159,14 +180,20 @@ describe('ChangeEmailModal', () => {
 
         it('does not check that password is present if user does not have a password', () => {
           wrapper = mount(
-            <ChangeEmailModal {...DEFAULT_PROPS} isPasswordRequired={false} />
+            <ChangeEmailModal {...DEFAULT_PROPS} isPasswordRequired={false} />,
+            {
+              wrappingComponent: MuiThemeProvider,
+              wrappingComponentProps: {theme: CdoTheme},
+            }
           );
-          wrapper.setState({
-            values: {
-              newEmail: 'new@example.com',
-              currentPassword: '',
-              emailOptIn: 'yes',
-            },
+          act(() => {
+            wrapper.setState({
+              values: {
+                newEmail: 'new@example.com',
+                currentPassword: '',
+                emailOptIn: 'yes',
+              },
+            });
           });
 
           expect(wrapper.text()).not.to.include(
@@ -176,15 +203,17 @@ describe('ChangeEmailModal', () => {
 
         it('reports password server errors', () => {
           const serverError = 'test-password-server-error';
-          wrapper.setState({
-            values: {
-              newEmail: 'new@example.com',
-              currentPassword: 'fake-password',
-              emailOptIn: 'yes',
-            },
-            serverErrors: {
-              currentPassword: serverError,
-            },
+          act(() => {
+            wrapper.setState({
+              values: {
+                newEmail: 'new@example.com',
+                currentPassword: 'fake-password',
+                emailOptIn: 'yes',
+              },
+              serverErrors: {
+                currentPassword: serverError,
+              },
+            });
           });
 
           expect(wrapper.text()).to.include(serverError);
@@ -192,12 +221,14 @@ describe('ChangeEmailModal', () => {
 
         if ('teacher' === userType) {
           it('checks that emailOptIn is present', () => {
-            wrapper.setState({
-              values: {
-                newEmail: 'new@example.com',
-                currentPassword: 'fake-password',
-                emailOptIn: '',
-              },
+            act(() => {
+              wrapper.setState({
+                values: {
+                  newEmail: 'new@example.com',
+                  currentPassword: 'fake-password',
+                  emailOptIn: '',
+                },
+              });
             });
 
             expect(wrapper.text()).to.include(
@@ -207,15 +238,17 @@ describe('ChangeEmailModal', () => {
 
           it('reports emailOptIn server errors', () => {
             const serverError = 'test-email-opt-in-server-error';
-            wrapper.setState({
-              values: {
-                newEmail: 'new@example.com',
-                currentPassword: 'fake-password',
-                emailOptIn: 'yes',
-              },
-              serverErrors: {
-                emailOptIn: serverError,
-              },
+            act(() => {
+              wrapper.setState({
+                values: {
+                  newEmail: 'new@example.com',
+                  currentPassword: 'fake-password',
+                  emailOptIn: 'yes',
+                },
+                serverErrors: {
+                  emailOptIn: serverError,
+                },
+              });
             });
 
             expect(wrapper.text()).to.include(serverError);
@@ -223,24 +256,28 @@ describe('ChangeEmailModal', () => {
         }
 
         it('disables the submit button when validation errors are present', () => {
-          wrapper.setState({
-            values: {
-              newEmail: '',
-              currentPassword: '',
-              emailOptIn: '',
-            },
+          act(() => {
+            wrapper.setState({
+              values: {
+                newEmail: '',
+                currentPassword: '',
+                emailOptIn: '',
+              },
+            });
           });
 
           expect(submitButton(wrapper)).to.have.prop('disabled', true);
         });
 
         it('enables the submit button form passes validation', () => {
-          wrapper.setState({
-            values: {
-              newEmail: 'me@example.com',
-              currentPassword: 'fakepassword',
-              emailOptIn: 'yes',
-            },
+          act(() => {
+            wrapper.setState({
+              values: {
+                newEmail: 'me@example.com',
+                currentPassword: 'fakepassword',
+                emailOptIn: 'yes',
+              },
+            });
           });
 
           expect(submitButton(wrapper)).to.have.prop('disabled', false);
@@ -249,10 +286,12 @@ describe('ChangeEmailModal', () => {
 
       describe('changes clear server errors', () => {
         it('on email', () => {
-          wrapper.setState({
-            serverErrors: {
-              newEmail: 'test-server-error',
-            },
+          act(() => {
+            wrapper.setState({
+              serverErrors: {
+                newEmail: 'test-server-error',
+              },
+            });
           });
           expect(wrapper.state().serverErrors.newEmail).to.equal(
             'test-server-error'
@@ -264,10 +303,12 @@ describe('ChangeEmailModal', () => {
         });
 
         it('on password', () => {
-          wrapper.setState({
-            serverErrors: {
-              currentPassword: 'test-server-error',
-            },
+          act(() => {
+            wrapper.setState({
+              serverErrors: {
+                currentPassword: 'test-server-error',
+              },
+            });
           });
           expect(wrapper.state().serverErrors.currentPassword).to.equal(
             'test-server-error'
@@ -280,10 +321,12 @@ describe('ChangeEmailModal', () => {
 
         if (userType === 'teacher') {
           it('on emailOptIn', () => {
-            wrapper.setState({
-              serverErrors: {
-                emailOptIn: 'test-server-error',
-              },
+            act(() => {
+              wrapper.setState({
+                serverErrors: {
+                  emailOptIn: 'test-server-error',
+                },
+              });
             });
             expect(wrapper.state().serverErrors.emailOptIn).to.equal(
               'test-server-error'
@@ -297,7 +340,9 @@ describe('ChangeEmailModal', () => {
       describe('onSubmitFailure', () => {
         it('puts the dialog in UNKNOWN ERROR state if response has no server errors', () => {
           expect(wrapper.state().saveState).to.equal('initial');
-          wrapper.instance().onSubmitFailure(null, {});
+          act(() => {
+            wrapper.instance().onSubmitFailure(null, {});
+          });
           expect(wrapper.state().saveState).to.equal('unknown-error');
         });
 
@@ -308,12 +353,14 @@ describe('ChangeEmailModal', () => {
             currentPassword: '',
             emailOptIn: '',
           });
-          wrapper.instance().onSubmitFailure({
-            serverErrors: {
-              newEmail: 'test-email-server-error',
-              currentPassword: 'test-password-server-error',
-              emailOptIn: 'test-email-opt-in-server-error',
-            },
+          act(() => {
+            wrapper.instance().onSubmitFailure({
+              serverErrors: {
+                newEmail: 'test-email-server-error',
+                currentPassword: 'test-password-server-error',
+                emailOptIn: 'test-email-opt-in-server-error',
+              },
+            });
           });
           expect(wrapper.state().saveState).to.equal('initial');
           expect(wrapper.state().serverErrors).to.deep.equal({

@@ -1,10 +1,12 @@
 import LabMetricsReporter from '@cdo/apps/lab2/Lab2MetricsReporter';
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
 
+import {findParentStatementInputTypes} from '../../blockly/blockUtils';
 import {
   DEFAULT_CHORD_LENGTH,
   DEFAULT_PATTERN_LENGTH,
   DEFAULT_TUNE_LENGTH,
+  MAX_NUMBER_EVENTS,
 } from '../../constants';
 import {ChordEvent, ChordEventValue} from '../interfaces/ChordEvent';
 import {Effects, EffectValue} from '../interfaces/Effects';
@@ -46,6 +48,8 @@ export default class Simple2Sequencer extends Sequencer {
   private startMeasure: number;
   private inTrigger: boolean;
 
+  private currentEventCount: number;
+
   constructor(
     private readonly metricsReporter: LabMetricsReporter = Lab2Registry.getInstance().getMetricsReporter()
   ) {
@@ -59,14 +63,19 @@ export default class Simple2Sequencer extends Sequencer {
     this.uniqueInvocationIdUpTo = 0;
     this.startMeasure = 1;
     this.inTrigger = false;
+
+    this.currentEventCount = 0;
   }
 
   /**
    * Resets to the default new sequence and clears all sequenced events
+   * @param existingEventCount existing event count
    */
-  clear() {
+  clear(existingEventCount: number = 0) {
     this.newSequence();
     this.functionMap = {};
+
+    this.currentEventCount = existingEventCount;
   }
 
   getLastMeasure(): number {
@@ -118,11 +127,12 @@ export default class Simple2Sequencer extends Sequencer {
   /**
    * Starts a new function context.
    */
-  startFunctionContext(functionName: string) {
+  startFunctionContext(functionName: string, procedureID?: string) {
     const uniqueId = this.getUniqueInvocationId();
 
     this.functionMap[uniqueId] = {
       name: functionName,
+      procedureID,
       uniqueInvocationId: uniqueId,
       startMeasure: this.getCurrentMeasure(),
       endMeasure: this.getCurrentMeasure(),
@@ -221,7 +231,7 @@ export default class Simple2Sequencer extends Sequencer {
       length: soundData.length,
       soundType: soundData.type,
       blockId,
-      ...this.getCommonEventFields(),
+      ...this.getCommonEventFields(blockId),
     });
   }
 
@@ -238,7 +248,7 @@ export default class Simple2Sequencer extends Sequencer {
       value,
       blockId,
       length,
-      ...this.getCommonEventFields(),
+      ...this.getCommonEventFields(blockId),
     });
   }
 
@@ -252,7 +262,7 @@ export default class Simple2Sequencer extends Sequencer {
       value,
       length: DEFAULT_CHORD_LENGTH,
       blockId,
-      ...this.getCommonEventFields(),
+      ...this.getCommonEventFields(blockId),
     });
   }
 
@@ -267,7 +277,7 @@ export default class Simple2Sequencer extends Sequencer {
       value,
       length: value.length || DEFAULT_TUNE_LENGTH,
       blockId,
-      ...this.getCommonEventFields(),
+      ...this.getCommonEventFields(blockId),
     });
   }
 
@@ -277,9 +287,7 @@ export default class Simple2Sequencer extends Sequencer {
 
   // Can be used to render timeline
   getOrderedFunctions(): FunctionEvents[] {
-    return Object.keys(this.functionMap)
-      .sort()
-      .map(id => this.functionMap[id]);
+    return Object.keys(this.functionMap).map(id => this.functionMap[id]);
   }
 
   getPlaybackEvents(): PlaybackEvent[] {
@@ -294,6 +302,7 @@ export default class Simple2Sequencer extends Sequencer {
             ...playbackEvent,
             functionContext: {
               name: functionEvent.name,
+              procedureID: functionEvent.procedureID,
               uniqueInvocationId: functionEvent.uniqueInvocationId,
             },
           };
@@ -302,7 +311,7 @@ export default class Simple2Sequencer extends Sequencer {
       .flat();
   }
 
-  private getCommonEventFields() {
+  private getCommonEventFields(blockId: string) {
     const effects = this.getCurrentEffects();
     return {
       triggered: this.inTrigger,
@@ -310,10 +319,21 @@ export default class Simple2Sequencer extends Sequencer {
       // Snapshot the current value of effects
       effects: effects ? {...effects} : undefined,
       skipContext: this.getCurrentSkipContext(),
+      validationInfo: {
+        parentControlTypes: findParentStatementInputTypes(blockId),
+      },
     };
   }
 
   private addNewEvent<T extends PlaybackEvent>(event: T) {
+    this.currentEventCount++;
+    if (this.currentEventCount === MAX_NUMBER_EVENTS) {
+      console.log(`Reached MAX_NUMBER_EVENTS (${MAX_NUMBER_EVENTS}) events.`);
+    }
+    if (this.currentEventCount > MAX_NUMBER_EVENTS) {
+      return;
+    }
+
     const currentFunctionId = this.getCurrentFunctionId();
     if (currentFunctionId === null) {
       this.metricsReporter.logWarning('Invalid state: no current function ID');

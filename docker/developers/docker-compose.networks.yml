@@ -1,0 +1,5 @@
+networks:
+  cdo_network:
+    driver: bridge
+  cdo_network_test:
+    driver: bridge

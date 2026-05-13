@@ -1,0 +1,48 @@
+<Aichat>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 71,
+  "created_at": "2025-05-23T09:35:01.000Z",
+  "level_num": "custom",
+  "user_id": 18602,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "##  🔍Teacher Tip\r\nLet's try some additional prompts. We'll start with something simple and on the next level you'll add more detail to the prompt. \r\n\r\n---\r\n\r\n## Gift Recommendations, Part 1\r\n\r\nUse AI Chat to get gift recommendations for your friend. \r\n\r\n\r\n### Do This:\r\n\r\n1. **Copy and paste** the following prompt:\r\n\r\n>Give me 3 gift ideas.\r\n2. Press **Send**.\r\n3. Then read **AI Chat's response**.\r\n\r\n**Try it out!**",
+    "aichat_settings": {
+      "initialCustomizations": {
+        "selectedModelId": "gpt-4o-mini",
+        "temperature": 0.3,
+        "systemPrompt": "",
+        "retrievalContexts": [
+
+        ],
+        "modelCardInfo": {
+          "botName": "",
+          "description": "",
+          "intendedUse": "",
+          "limitationsAndWarnings": "",
+          "testingAndEvaluation": "",
+          "exampleTopics": [
+
+          ],
+          "isPublished": false
+        }
+      },
+      "visibilities": {
+        "selectedModelId": "hidden",
+        "temperature": "hidden",
+        "systemPrompt": "hidden",
+        "retrievalContexts": "hidden",
+        "modelCardInfo": "hidden"
+      },
+      "levelSystemPrompt": "You are a gift recommender. When given a prompt, answer with your gift recommendations.\n\nDo not answer any questions that are not related to gifts.",
+      "hidePresentationPanel": true,
+      "availableModelIds": [
+        "gpt-4o-mini"
+      ]
+    },
+    "name_suffix": "_2025"
+  },
+  "audit_log": "[{\"changed_at\":\"2025-05-23T01:55:34.532+00:00\",\"changed\":[\"cloned from \\\"csaif_pl_ai_01_04\\\"\"],\"cloned_from\":\"csaif_pl_ai_01_04\"},{\"changed_at\":\"2025-05-23 17:14:52 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":19151,\"changed_by_email\":\"micah.kennedy@code.org\"}]"
+}]]></config>
+</Aichat>

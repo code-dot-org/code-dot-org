@@ -1,6 +1,8 @@
 require 'test_reporter'
 require 'faker'
 
+require_relative '../../lib/cdo/ci_utils'
+
 if defined? ActiveRecord
   ActiveRecord::Migration&.check_pending!
 end
@@ -11,8 +13,8 @@ Minitest.extensions.delete('rails')
 Minitest.extensions.unshift('rails')
 
 reporters = [CowReporter.new]
-if ENV['CIRCLECI']
-  reporters << Minitest::Reporters::JUnitReporter.new("#{ENV.fetch('CIRCLE_TEST_REPORTS', nil)}/dashboard")
+if CI::Utils.ci_job_ui_tests?
+  reporters << Minitest::Reporters::JUnitReporter.new("#{ENV.fetch('CI_TEST_REPORTS', nil)}/dashboard")
 end
 # Skip this if the tests are run in RubyMine
 Minitest::Reporters.use! reporters unless ENV['RM_INFO']
@@ -22,7 +24,7 @@ ENV["RAILS_ENV"] = "test"
 ENV["RACK_ENV"] = "test"
 ENV['TZ'] = 'UTC'
 
-# deal with some ordering issues -- sometimes environment is loaded
+# Deal with some ordering issues -- sometimes environment is loaded
 # before test_helper and sometimes after. The CDO stuff uses RACK_ENV,
 # but running unit tests in the test env for developers only sets
 # RAILS ENV. We fix it above but we need to reload some stuff...
@@ -33,6 +35,26 @@ CDO.stubs(:rack_env).returns(:test) if defined? CDO
 Rails.application&.reload_routes! if defined?(Rails) && defined?(Rails.application)
 
 require File.expand_path('../../config/environment', __FILE__)
+
+# ... then, we apply some unit-test-specific configuration. We cannot target
+# the config layer from this file because Spring may have already loaded the
+# Rails application, applying all config options to the relevant components.
+# Set the runtime attributes directly instead.
+
+# Disable CSRF protection.
+ActionController::Base.allow_forgery_protection = false
+# Avoid using an actual cache, to prevent state leakage.
+Rails.cache = ActiveSupport::Cache.lookup_store(:null_store)
+
+if CDO.test_system? && !ENV.fetch('TEST_ENV_NUMBER', nil)
+  # Raise rather than silently correcting the error, because it's possible that the data in
+  # dashboard_test has already been corrupted by the time we get here. If we find that we're
+  # hitting this error without any data corruption, we can consider silently setting
+  # TEST_ENV_NUMBER=1 here instead.
+  raise 'Do not run unit tests against dashboard_test DB on the chef-managed test system. ' \
+      'Instead, specify TEST_ENV_NUMBER=1 to run against the dashboard_test1 database.'
+end
+
 I18n.load_path += Dir[Rails.root.join('test', 'en.yml')]
 I18n.backend.reload!
 I18n.fallbacks[:'te-ST'] = [:'te-ST', :'en-US', :en]
@@ -55,12 +77,17 @@ require 'testing/lock_thread'
 require 'testing/transactional_test_case'
 require 'testing/spec_syntax'
 require 'testing/capture_queries'
+require 'testing/cdo_contentful'
+require 'testing/honeybadger'
 require 'testing/rspec_mocks'
+require 'testing/vcr_cassettes'
 
 require 'parallel_tests/test/runtime_logger'
 
 class ActiveSupport::TestCase
   ActiveRecord::Migration.check_pending!
+
+  class_attribute :vcr_cassette_library_dir, instance_writer: false, default: Rails.root.join('test/vcr_cassettes').to_s
 
   setup do
     AWS::S3.stubs(:upload_to_bucket).raises("Don't actually upload anything to S3 in tests... mock it if you want to test it")
@@ -72,11 +99,6 @@ class ActiveSupport::TestCase
     CDO.stubs(override_dashboard: nil)
 
     set_env :test
-
-    # how come this doesn't work:
-    Dashboard::Application.config.action_controller.perform_caching = false
-    # as in, I still need to clear the cache even though we are not 'performing' caching
-    Rails.cache.clear
 
     # clear log of 'delivered' mails
     ActionMailer::Base.deliveries.clear
@@ -94,10 +116,12 @@ class ActiveSupport::TestCase
     # Don't attempt to make actual AWS API calls, either, for the same reason
     AWS::S3.stubs(:cached_exists_in_bucket?).returns(true)
     AWS::S3.stubs(:exists_in_bucket).returns(true)
+
+    # Test class specific VCR configs
+    VCR.configuration.cassette_library_dir = vcr_cassette_library_dir
   end
 
   teardown do
-    Dashboard::Application.config.action_controller.perform_caching = false
     I18n.locale = I18n.default_locale
     set_env :test
   end
@@ -136,52 +160,50 @@ class ActiveSupport::TestCase
     AWS::S3.expects(:upload_to_bucket).never
   end
 
+  # helper method to stub out the source data for a project when we don't want to look in s3
+  def stub_project_source_data(channel_id, code: 'fake-code', version_id: 'fake-version-id')
+    fake_main_json = {source: code}.to_json
+    fake_source_data = {
+      status: 'FOUND',
+      body: StringIO.new(fake_main_json),
+      version_id: version_id,
+      last_modified: DateTime.now
+    }
+    SourceBucket.any_instance.stubs(:get).with(channel_id, "main.json").returns(fake_source_data)
+  end
+
   # Add more helper methods to be used by all tests here...
   include FactoryBot::Syntax::Methods
   include ActiveSupport::Testing::SetupAllAndTeardownAll
   include ActiveSupport::Testing::TransactionalTestCase
   include ActiveSupport::Testing::SpecSyntax
   include CaptureQueries
+  include Curriculum::SharedCourseConstants
 
-  def seed_deprecated_unit_fixtures
-    # Some of the functionality we're testing here relies on Scripts with
-    # certain hardcoded names. In the old fixture-based model, this data was
-    # all provided; in the new factory-based model, we need to do a little
-    # prep.
-    #
-    # NOTE for any future developers: please DO NOT add new scripts to this
-    # list. This exists to provide backwards compatibility to old tests which
-    # are dependent on factory-provided content. If you are writing new tests,
-    # please make sure that they are instead relying on factory-provided
-    # content.
-    tested_script_names = [
-      'ECSPD',
-      'allthethings',
-      Unit::COURSE1_NAME,
-      Unit::COURSE4_NAME,
-      Unit::FLAPPY_NAME,
-      Unit::FROZEN_NAME,
-      Unit::HOC_NAME,
-      Unit::PLAYLAB_NAME,
-      Unit::TWENTY_HOUR_NAME
-    ]
+  # Create the hourofcode unit and levels from factories, taking care to first
+  # delete any conflicting objects that may have already been created in test
+  # fixtures. This paves the way to remove this unit from the test fixtures
+  # without breaking tests which use this helper.
+  #
+  # The hourofcode unit has some special properties, such as special routes for
+  # script lavels (e.g. /hoc/1), which make it helpful to test against a unit
+  # with this exact name.
+  def create_hourofcode_unit_and_levels
+    unit_name = Unit::HOC_NAME
 
-    tested_script_names.each do |script_name|
-      # create a placeholder factory-provided Unit if we don't already have a
-      # fixture-provided one.
-      # Specify skip_name_format_validation because 'ECSPD' will fail to be
-      # created otherwise, because upper case letters are not allowed.
-      script = Unit.find_by_name(script_name) ||
-        create(:script, :with_levels, levels_count: 5, name: script_name, skip_name_format_validation: true)
+    # remove any existing fixture-provided unit with this name.
+    # TODO: remove these lines once the hourofcode unit is no longer in fixtures.
+    Unit.find_by_name(unit_name)&.destroy
+    UnitGroup.find_by_name(unit_name)&.destroy
+    CourseOffering.find_by_key(unit_name)&.destroy
 
-      # make sure that all the Unit's ScriptLevels have associated Levels.
-      # This is expected during the interim period where we are no longer
-      # generating Levels from fixtures, but are still generating Scripts
-      script.script_levels.each do |script_level|
-        next unless script_level.levels.empty?
-        script_level.levels = [create(:level)]
-      end
-    end
+    # clear the unit cache to ensure we don't have a stale reference to the
+    # deleted unit and unit group
+    UnitGroup.clear_cache
+
+    # create placeholder hourofcode CourseOffering, UnitGroup, Unit and Levels.
+    unit = create(:script, :with_levels, levels_count: 10, name: unit_name)
+    create(:hoc_course, unit: unit, name: unit_name, family_name: unit_name, published_state: PUBLISHED_STATE.stable)
   end
 
   def assert_creates(*args, &block)
@@ -261,12 +283,16 @@ class ActiveSupport::TestCase
     end
   end
 
+  def set_request_locale(locale)
+    I18n.locale = locale
+  end
+
   def with_default_locale(locale)
     original_locale = I18n.default_locale
-    request.env['cdo.locale'] = I18n.default_locale = locale
+    I18n.locale = I18n.default_locale = locale
     yield
   ensure
-    request.env['cdo.locale'] = I18n.default_locale = original_locale
+    I18n.locale = I18n.default_locale = original_locale
   end
 
   # Based on assert_difference http://api.rubyonrails.org/classes/ActiveSupport/Testing/Assertions.html#method-i-assert_difference
@@ -286,7 +312,12 @@ class ActiveSupport::TestCase
     expressions.zip(exps).each_with_index do |(code, e), i|
       error  = "#{code.inspect} didn't change"
       error  = "#{message}.\n#{error}" if message
-      refute_equal(before[i], e.call, error)
+      # Avoid a deprecation notice when using refute_equal with nil
+      if before[i].nil?
+        refute_nil(e.call, error)
+      else
+        refute_equal(before[i], e.call, error)
+      end
     end
   end
 
@@ -307,7 +338,12 @@ class ActiveSupport::TestCase
     expressions.zip(exps).each_with_index do |(code, e), i|
       error  = "#{code.inspect} didn't change"
       error  = "#{message}.\n#{error}" if message
-      assert_equal(before[i], e.call, error)
+      # Avoid a deprecation notice when using assert_equal with nil
+      if before[i].nil?
+        assert_nil(e.call, error)
+      else
+        assert_equal(before[i], e.call, error)
+      end
     end
   end
 
@@ -375,14 +411,12 @@ class ActiveSupport::TestCase
     ActiveRecord::Base.stubs(:connection).raises 'Database disconnected'
   end
 
+  # Units use some bespoke in-memory caches instead of the Rails cache, so when
+  # we exercise them in tests we need to manually clear them to avoid
+  # inheriting any state from previous tests.
   def setup_script_cache
     Unit.stubs(:should_cache?).returns true
     Unit.clear_cache
-    # turn on the cache (off by default in test env so tests don't confuse each other)
-    Rails.application.config.action_controller.perform_caching = true
-    Rails.application.config.cache_store = :memory_store, {size: 64.megabytes}
-
-    Rails.cache.clear
   end
 end
 
@@ -393,7 +427,7 @@ class ActionController::TestCase
   setup do
     ActionDispatch::Cookies::CookieJar.always_write_cookie = true
     request.env["devise.mapping"] = Devise.mappings[:user]
-    request.env['cdo.locale'] = 'en-US'
+    I18n.locale = 'en-US'
   end
 
   # As `current_user` is not accessible from controller tests (only from within the controller),
@@ -640,7 +674,7 @@ def json_response
 end
 
 # helper method for mailers to test whether urls in an email are partial paths
-# first parameter is an email, ex: Pd::WorkshopMailer.detail_change_notification(enrollment)
+# first parameter is an email, ex: Pd::WorkshopMailer.organizer_detail_change_notification(enrollment)
 # allowed_urls is an optional array of strings that are not complete urls to allow anyway
 def links_are_complete_urls?(email, allowed_urls: nil)
   html = Nokogiri::HTML(email.body.to_s)

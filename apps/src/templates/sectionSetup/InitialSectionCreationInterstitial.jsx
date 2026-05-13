@@ -29,6 +29,7 @@ class InitialSectionCreationInterstitial extends Component {
   beginEditingSection = () => {
     this.setState({isOpen: false});
     analyticsReporter.sendEvent(EVENTS.SECTION_SETUP_SIGN_IN_EVENT);
+    analyticsReporter.sendEvent(EVENTS.SECTION_SETUP_STARTED, {});
     this.props.beginEditingSection();
   };
 

@@ -33,7 +33,7 @@
     "display_name": "Missing Tickets",
     "bubble_choice_description": "An event manager is preparing tickets to sell and needs to make sure there are no missing ticket numbers.",
     "thumbnail_url": "https://images.code.org/21d6ee59eeea20b84c201a273fa67a1d-ticket.png",
-    "ai_tutor_available": true
+    "ai_tutor_available": "false"
   },
   "published": true,
   "audit_log": "[{\"changed_at\":\"2022-04-18T19:48:39.401+00:00\",\"changed\":[\"cloned from \\\"CSA U8L9-L2b_2022\\\"\"],\"cloned_from\":\"CSA U8L9-L2b_2022\"},{\"changed_at\":\"2022-04-18 19:48:40 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-05-18 19:01:19 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-05-18 19:02:00 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-05-18 19:02:06 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-05-18 19:02:17 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-05-18 19:07:53 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"

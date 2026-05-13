@@ -1,0 +1,15 @@
+name 'test-problem-solving-with-ai-lesson6-level3'
+display_name 'Reviewing Profiles'
+description 'Pick one of the levels below. Review the six profiles and select two people.'
+
+sublevels
+level 'test-problem-solving-with-ai-lesson6-level3-sublevel1'
+level 'test-problem-solving-with-ai-lesson6-level3-sublevel2'
+level 'test-problem-solving-with-ai-lesson6-level3-sublevel3'
+
+
+
+
+
+
+

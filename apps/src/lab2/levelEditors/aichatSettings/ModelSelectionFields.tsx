@@ -1,10 +1,10 @@
-import React, {useContext, useState, useCallback} from 'react';
+import Checkbox from '@code-dot-org/component-library/checkbox';
+import SimpleDropdown from '@code-dot-org/component-library/dropdown/simpleDropdown';
+import {Typography} from '@mui/material';
+import React, {useContext, useState, useCallback, useMemo} from 'react';
 
 import {modelDescriptions} from '@cdo/apps/aichat/constants';
-import {Visibility} from '@cdo/apps/aichat/types';
-import Checkbox from '@cdo/apps/componentLibrary/checkbox/Checkbox';
-import SimpleDropdown from '@cdo/apps/componentLibrary/dropdown/simpleDropdown';
-import {BodyFourText} from '@cdo/apps/componentLibrary/typography';
+import {Visibility} from '@cdo/apps/aichatLab/types';
 import {ValueOf} from '@cdo/apps/types/utils';
 import {AiChatModelIds} from '@cdo/generated-scripts/sharedConstants';
 
@@ -18,7 +18,8 @@ const modelDropdownItems = modelDescriptions.map(model => {
 });
 
 const ModelSelectionFields: React.FunctionComponent = () => {
-  const {setModelSelectionValues, aichatSettings} = useContext(UpdateContext);
+  const {setModelSelectionValues, setMultimodalEnabled, aichatSettings} =
+    useContext(UpdateContext);
   const shouldDisableAdditionalModelSelection =
     aichatSettings.visibilities.selectedModelId !== Visibility.EDITABLE;
   const selectedModelId = aichatSettings.initialCustomizations.selectedModelId;
@@ -57,6 +58,12 @@ const ModelSelectionFields: React.FunctionComponent = () => {
     [additionalAvailableModelIds, selectedModelId, setModelSelectionValues]
   );
 
+  const supportsMultimodalInput = useMemo(() => {
+    return aichatSettings.availableModelIds.some(
+      id => modelDescriptions.find(model => model.id === id)?.multimodal
+    );
+  }, [aichatSettings.availableModelIds]);
+
   return (
     <CollapsibleFieldSection
       fieldName="selectedModelId"
@@ -74,14 +81,14 @@ const ModelSelectionFields: React.FunctionComponent = () => {
             size="s"
           />
           <br />
-          <BodyFourText>
+          <Typography variant="body4" gutterBottom>
             <i>
               Models available to the student to select from and compare to each
               other. If making this setting editable, it's best practice to
               select at least 2 models so students have something to compare -
               otherwise, consider making this read only or hidden.
             </i>
-          </BodyFourText>
+          </Typography>
           {modelDescriptions.map(model => {
             return (
               <div key={model.id} className={moduleStyles.fieldRow}>
@@ -102,6 +109,31 @@ const ModelSelectionFields: React.FunctionComponent = () => {
               </div>
             );
           })}
+          <br />
+          {supportsMultimodalInput && (
+            <>
+              <Typography variant="body4" gutterBottom>
+                <i>
+                  Enables multimodal inputs (images and file uploads). Only
+                  available if the list of models includes a model that supports
+                  multimodal inputs.
+                </i>
+              </Typography>
+              <div className={moduleStyles.fieldRow}>
+                <label
+                  htmlFor="multimodalEnabled"
+                  className={moduleStyles.inlineLabel}
+                >
+                  Enable Multimodal Inputs (File Uploads)
+                </label>
+                <Checkbox
+                  name="multimodalEnabled"
+                  checked={aichatSettings.multimodalEnabled || false}
+                  onChange={e => setMultimodalEnabled(e.target.checked)}
+                />
+              </div>
+            </>
+          )}
         </>
       }
     />

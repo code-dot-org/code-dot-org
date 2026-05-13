@@ -8,9 +8,9 @@ import {MusicState} from '../redux/musicRedux';
 
 import moduleStyles from './callouts.module.scss';
 
-const arrowImage = require(`@cdo/static/music/music-callout-arrow.png`);
+const arrowImage = require(`@cdo/static/music/music-callout-arrow-outline.png`);
 
-type DirectionString = 'up' | 'left';
+type DirectionString = 'up' | 'left' | 'up-inside' | 'up-left';
 
 interface AvailableCallout {
   selector?: string;
@@ -54,6 +54,10 @@ const availableCallouts: AvailableCallouts = {
     selector: `.blocklyWorkspace g[data-id="${BlockTypes.PLAY_SOUNDS_TOGETHER}"] path`,
     direction: 'left',
   },
+  'play-sounds-together-block-workspace-up-inside': {
+    selector: `.blocklyWorkspace g[data-id="${BlockTypes.PLAY_SOUNDS_TOGETHER}"] path`,
+    direction: 'up-inside',
+  },
   'play-sounds-together-block-2-workspace': {
     selector: `.blocklyWorkspace g[data-id="${BlockTypes.PLAY_SOUNDS_TOGETHER}_2"] path`,
     direction: 'left',
@@ -62,21 +66,38 @@ const availableCallouts: AvailableCallouts = {
     selector: `.blocklyWorkspace g[data-id="${BlockTypes.TRIGGERED_AT_SIMPLE2}"]`,
   },
   'repeat-block-field-workspace': {
-    selector: `.blocklyWorkspace g[data-id="${BlockTypes.REPEAT_SIMPLE2}"] > .blocklyEditableText`,
+    selector: `.blocklyWorkspace g[data-id="${BlockTypes.REPEAT_SIMPLE2}"] > .blocklyEditableField`,
   },
   'when-run-block': {
     selector: `g[data-id="${BlockTypes.WHEN_RUN_SIMPLE2}"] > path`,
   },
   'run-button': {selector: '#run-button'},
   'trigger-button-1': {selector: `#${Triggers[0].id}`},
+  'trigger-button-2': {selector: `#${Triggers[1].id}`},
+  'trigger-button-3': {selector: `#${Triggers[2].id}`},
+  'trigger-button-4': {selector: `#${Triggers[3].id}`},
+  'start-over-button': {selector: '#start-over-button'},
+  'documentation-button': {selector: '#documentation-button'},
   'toolbox-first-row': {selector: '.blocklyTreeRow'},
   'flyout-first-block': {
     selector: '.blocklyFlyout:not([style*="display: none;"]) .blocklyDraggable',
+  },
+  'flyout-second-block': {
+    selector:
+      '.blocklyFlyout:not([style*="display: none;"]) .blocklyDraggable ~ .blocklyDraggable',
   },
   'toolbox-second-block': {
     selector:
       '.blocklyFlyout:not([style*="display: none;"]) .blocklyDraggable ~ .blocklyDraggable',
     openToolboxCategory: 0,
+  },
+  'flyout-third-block': {
+    selector:
+      '.blocklyFlyout:not([style*="display: none;"]) .blocklyDraggable ~ .blocklyDraggable ~ .blocklyDraggable',
+  },
+  'flyout-fourth-block': {
+    selector:
+      '.blocklyFlyout:not([style*="display: none;"]) .blocklyDraggable ~ .blocklyDraggable ~ .blocklyDraggable ~ .blocklyDraggable',
   },
 };
 
@@ -106,10 +127,24 @@ const Callouts: React.FunctionComponent = () => {
     const splitId = calloutId.split(':');
     if (splitId.length === 2) {
       const dataId = splitId[1];
-      validCallouts.push({
-        selector: `.blocklyWorkspace g[data-id="${dataId}"] path`,
-        direction: splitId[0] === 'id-left' ? 'left' : 'up',
-      });
+      if (splitId[0] === 'flyout-id') {
+        validCallouts.push({
+          selector: `.blocklyFlyout g[data-id="${dataId}"] path`,
+          direction: 'left',
+        });
+      } else {
+        validCallouts.push({
+          selector: `.blocklyWorkspace g[data-id="${dataId}"] path`,
+          direction:
+            splitId[0] === 'id-left'
+              ? 'left'
+              : splitId[0] === 'id-up-inside'
+              ? 'up-inside'
+              : splitId[0] === 'id-up-left'
+              ? 'up-left'
+              : 'up',
+        });
+      }
     } else if (availableCallouts[calloutId]) {
       validCallouts.push({
         selector: availableCallouts[calloutId].selector,
@@ -134,6 +169,18 @@ const Callouts: React.FunctionComponent = () => {
           top: elementRect.top + elementHeight / 2,
         };
         calloutClassName = moduleStyles.calloutLeft;
+      } else if (validCallout.direction === 'up-inside') {
+        target = {
+          left: elementRect.left + 45,
+          top: elementRect.top + 37,
+        };
+        calloutClassName = moduleStyles.calloutUp;
+      } else if (validCallout.direction === 'up-left') {
+        target = {
+          left: elementRect.right + 16,
+          top: elementRect.bottom,
+        };
+        calloutClassName = moduleStyles.calloutUpLeft;
       } else {
         const elementWidth = elementRect.right - elementRect.left + 1;
         target = {

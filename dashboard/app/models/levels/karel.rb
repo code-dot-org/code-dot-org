@@ -22,6 +22,7 @@
 #  index_levels_on_game_id    (game_id)
 #  index_levels_on_level_num  (level_num)
 #  index_levels_on_name       (name)
+#  index_levels_on_type       (type)
 #
 
 class Karel < Maze
@@ -67,7 +68,7 @@ class Karel < Maze
     {'serialized_maze' => maze_json}
   end
 
-  def summarize_as_bonus
+  def summarize_as_bonus(unit_group_unit: nil)
     summary = super
     summary[:flower_type] = flower_type if flower_type
     summary

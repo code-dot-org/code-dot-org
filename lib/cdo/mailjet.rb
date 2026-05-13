@@ -4,7 +4,7 @@ require 'honeybadger/ruby'
 require_relative './shared_constants/mailjet_constants'
 
 module MailJet
-  include MailJetConstants
+  include MailjetConstants
 
   API_KEY = CDO.try(:mailjet_api_key).freeze
   SECRET_KEY = CDO.try(:mailjet_secret_key).freeze
@@ -74,6 +74,35 @@ module MailJet
     subaccount_contact_list_config = CONTACT_LISTS[:welcome_series][subaccount.to_sym]
     contact_list_id = subaccount_contact_list_config[locale.to_sym] || subaccount_contact_list_config[:default]
     add_to_contact_list(contact, contact_list_id)
+  end
+
+  def self.create_contact_and_add_to_course_list(user, unit_group_name)
+    return unless enabled?
+
+    return unless user&.id.present?
+    return unless user.teacher?
+
+    list_key = MAILJET_COURSE_ASSIGNMENT_CONTACT_LISTS[unit_group_name]
+    return unless list_key
+
+    contact_list_id = CONTACT_LISTS.dig(list_key, subaccount.to_sym, :default)
+    return unless contact_list_id
+
+    contact = find_or_create_contact(user.email, user.name)
+    update_contact_fields(contact,
+      [
+        {name: 'given_name', value: user.given_name},
+        {name: 'family_name', value: user.family_name},
+        {name: 'display_name', value: user.name},
+        {name: 'sign_up_date', value: user.created_at.to_datetime.rfc3339}
+      ]
+    )
+
+    begin
+      add_to_contact_list(contact, contact_list_id)
+    rescue Mailjet::ApiError => exception
+      raise unless exception.message.include?('A duplicate ListRecipient already exists.')
+    end
   end
 
   def self.find_or_create_contact(email, name)

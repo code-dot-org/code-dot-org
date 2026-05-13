@@ -1,89 +1,144 @@
-import cookies from 'js-cookie';
-import Statsig from 'statsig-js';
+import {StatsigClient} from '@statsig/js-client';
+import {runStatsigAutoCapture} from '@statsig/web-analytics';
 
 import logToCloud from '@cdo/apps/logToCloud';
 import experiments from '@cdo/apps/util/experiments';
+import {getGlobalEditionRegion} from '@cdo/apps/util/globalEdition';
 
 import {
   getEnvironment,
   isProductionEnvironment,
   isDevelopmentEnvironment,
-  createUuid,
 } from '../utils';
+
+import {
+  getUserID,
+  getUserType,
+  findOrCreateStableId,
+  formatUserId,
+} from './statsigHelpers';
 
 // A flag that can be toggled to send events regardless of environment
 const ALWAYS_SEND = false;
 const NO_EVENT_NAME = 'NO_VALID_EVENT_NAME_LOG_ERROR';
-const STABLE_ID_KEY = 'statsig_stable_id';
 
 class StatsigReporter {
   constructor() {
+    this.ready = false;
+    this.stable_id = null;
+    this.user = null;
+    this.api_key = '';
+    this.local_mode = true;
+    this.options = {};
+    this.environment = getEnvironment();
+    this.statsigClient = null;
+    const oneTrustPromise =
+      window.oneTrustPromise &&
+      typeof window.oneTrustPromise.then === 'function'
+        ? window.oneTrustPromise
+        : Promise.resolve(); // Default for environments without OneTrust (tests)
+    this.readyPromise = oneTrustPromise.then(() => {
+      return this.initializeAfterConsent();
+    });
+  }
+
+  initializeAfterConsent() {
+    this.stable_id = findOrCreateStableId();
+    this.log(`Statsig Stable ID: ${this.stable_id}`);
     let user = {
       custom: {
         enabledExperiments: experiments.getEnabledExperiments(),
+        geRegion: getGlobalEditionRegion(),
       },
+      customIDs: {stableID: this.stable_id},
     };
-    const user_id_element = document.querySelector('script[data-user-id]');
-    const user_id = user_id_element ? user_id_element.dataset.userId : null;
-    const user_type_element = document.querySelector('script[data-user-type');
-    const user_type = user_type_element
-      ? user_type_element.dataset.userType
-      : null;
+
+    const user_id = getUserID();
+    const user_type = getUserType();
+
     if (user_id) {
-      user.userID = this.formatUserId(user_id);
+      user.userID = formatUserId(user_id);
       user.custom.userType = user_type;
     }
+    this.user = user;
+
     const api_element = document.querySelector(
       'script[data-statsig-api-client-key]'
     );
-    const api_key = api_element ? api_element.dataset.statsigApiClientKey : '';
+    this.api_key = api_element ? api_element.dataset.statsigApiClientKey : '';
+
     const managed_test_environment_element = document.querySelector(
       'script[data-managed-test-server]'
     );
     const managed_test_environment = managed_test_environment_element
       ? managed_test_environment_element.dataset.managedTestServer === 'true'
       : false;
-    this.local_mode = !(isProductionEnvironment() || managed_test_environment);
-    this.stable_id = this.findOrCreateStableId();
-    const options = {
-      environment: {tier: getEnvironment()},
+    this.local_mode = !(
+      IN_UNIT_TEST ||
+      isProductionEnvironment() ||
+      managed_test_environment ||
+      process.env.STATSIG_LOCAL_MODE_OFF
+    );
+    this.options = {
       localMode: this.local_mode,
       disableErrorLogging: true,
-      overrideStableID: this.stable_id,
+      environment: {tier: this.environment},
     };
-    this.initialize(api_key, user, options);
+
+    this.ready = true;
+    this.initializedPromise = this.initialize(
+      this.api_key,
+      this.user,
+      this.options
+    );
+    return this.initializedPromise;
   }
 
   // This user object will potentially update via a setUserProperties call
   // (below) from current user redux
   async initialize(api_key, user, options) {
     if (this.shouldPutRecord(ALWAYS_SEND)) {
-      await Statsig.initialize(api_key, user, options);
+      this.statsigClient = new StatsigClient(api_key, user, options);
+      await this.statsigClient.initializeAsync();
     }
   }
 
   // Utilizes Statsig's function for updating a user once we've recognized a sign in
-  async setUserProperties(
+  async setUserProperties({
     userId,
     userType,
     isVerifiedInstructor,
-    enabledExperiments
-  ) {
-    const formattedUserId = this.formatUserId(userId);
+    enabledExperiments,
+    educatorRole,
+  }) {
+    await this.readyPromise;
+    if (!this.ready || !this.statsigClient) {
+      return;
+    }
+    const formattedUserId = formatUserId(userId);
     const user = {
       userID: formattedUserId,
-      custom: {userType, isVerifiedInstructor, enabledExperiments},
+      custom: {
+        userType,
+        isVerifiedInstructor,
+        enabledExperiments,
+        educatorRole,
+      },
     };
     if (!this.shouldPutRecord(ALWAYS_SEND)) {
       this.log(
         `User properties: userId: ${formattedUserId}, userType: ${userType}, isVerifiedInstructor: ${isVerifiedInstructor}, signInState: ${!!userId}`
       );
     } else {
-      await Statsig.updateUser(user);
+      await this.statsigClient.updateUserAsync(user);
     }
   }
 
   sendEvent(eventName, payload) {
+    if (!this.ready) {
+      this.readyPromise.then(() => this.sendEvent(eventName, payload));
+      return;
+    }
     if (this.shouldPutRecord(ALWAYS_SEND)) {
       if (!eventName) {
         logToCloud.addPageAction(
@@ -92,13 +147,13 @@ class StatsigReporter {
             payload: payload,
           }
         );
-        Statsig.logEvent(NO_EVENT_NAME, NO_EVENT_NAME, payload);
+        this.statsigClient.logEvent(NO_EVENT_NAME, NO_EVENT_NAME, payload);
       } else {
         // Statsig expects a name, value and data. Because we are unifying this
         // with our Amplitude logging, we are bypassing the 'value' and sending
         // event name twice. If we want to use this field moving forward, we
         // will need to refactor all AnalyticsReporting event calls accordingly.
-        Statsig.logEvent(eventName, eventName, payload);
+        this.statsigClient.logEvent(eventName, eventName, payload);
       }
     } else {
       this.log(
@@ -110,41 +165,27 @@ class StatsigReporter {
   }
 
   log(message) {
-    if (isDevelopmentEnvironment() && !IN_UNIT_TEST) {
+    if (!IN_UNIT_TEST && isDevelopmentEnvironment()) {
       console.log(`[STATSIG ANALYTICS EVENT]: ${message}`);
     }
   }
 
   getIsInExperiment(name, parameter, defaultValue) {
+    if (!this.ready || !this.statsigClient) {
+      return defaultValue ?? false;
+    }
     if (this.local_mode) {
-      return false;
+      return defaultValue ?? false;
     }
-    return Statsig.getExperiment(name).get(parameter, defaultValue);
+    return (
+      this.statsigClient.getExperiment(name).value[parameter] ?? defaultValue
+    );
   }
 
-  formatUserId(userId) {
-    const userIdString = userId.toString() || 'none';
-    if (!userId) {
-      return userIdString;
-    }
-    if (isProductionEnvironment()) {
-      return userIdString.padStart(5, '0');
-    } else {
-      const environment = getEnvironment();
-      return `${environment}-${userIdString}`;
-    }
-  }
-
-  findOrCreateStableId() {
-    let stableId = cookies.get(STABLE_ID_KEY);
-    if (!stableId) {
-      stableId = createUuid();
-      cookies.set(STABLE_ID_KEY, stableId, {
-        expires: 400,
-        domain: 'code.org',
-      });
-    }
-    return stableId;
+  // Returns a promise that resolves with the experiment result
+  async getIsInExperimentAsync(name, parameter, defaultValue) {
+    await this.readyPromise;
+    return this.getIsInExperiment(name, parameter, defaultValue);
   }
 
   /**
@@ -157,10 +198,35 @@ class StatsigReporter {
     if (alwaysPut) {
       return true;
     }
+    if (!this.ready) {
+      return false;
+    }
     if (!this.local_mode) {
       return true;
     }
     return false;
+  }
+
+  /**
+   * Runs Web Analytics auto-capturing.
+   * @see https://docs.statsig.com/webanalytics/overview
+   */
+  async runAutoCapture() {
+    await this.readyPromise;
+    if (!this.ready) {
+      return;
+    }
+    if (this.shouldPutRecord(ALWAYS_SEND)) {
+      const client = new StatsigClient(this.api_key, this.user, this.options);
+      runStatsigAutoCapture(client, {
+        eventFilterFunc: event =>
+          ![
+            'auto_capture::performance',
+            'auto_capture::page_view_end',
+          ].includes(event.eventName),
+      });
+      await client.initializeAsync();
+    }
   }
 }
 

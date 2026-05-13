@@ -1,13 +1,8 @@
+import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
+import {Button as MuiButton, ButtonProps} from '@mui/material';
 import classNames from 'classnames';
 import React from 'react';
 
-import {
-  ButtonType,
-  Button,
-  LinkButton,
-  buttonColors,
-} from '@cdo/apps/componentLibrary/button';
-import FontAwesomeV6Icon from '@cdo/apps/componentLibrary/fontAwesomeV6Icon';
 import {
   Card,
   CardActions,
@@ -23,7 +18,7 @@ const AccountCard: React.FunctionComponent<{
   title: string;
   content: string;
   buttonText: string;
-  buttonType: ButtonType;
+  variant?: ButtonProps['variant'];
   href?: string;
   onClick?: () => void;
   iconList?: string[];
@@ -33,11 +28,12 @@ const AccountCard: React.FunctionComponent<{
   title,
   content,
   buttonText,
-  buttonType,
+  variant = 'contained',
   href,
   onClick,
   iconList,
 }) => (
+  // eslint-disable-next-line react/forbid-component-props
   <Card data-testid={id}>
     <div className={styles.contentWrapper}>
       <CardHeader
@@ -46,6 +42,7 @@ const AccountCard: React.FunctionComponent<{
           <FontAwesomeV6Icon
             className={classNames(styles.cardIcon, 'fa-2x')}
             iconName={icon}
+            aria-hidden
           />
         }
       />
@@ -58,6 +55,7 @@ const AccountCard: React.FunctionComponent<{
                 <FontAwesomeV6Icon
                   className={styles.icon}
                   iconName="check-circle"
+                  aria-hidden
                 />
                 {item}
               </li>
@@ -69,31 +67,26 @@ const AccountCard: React.FunctionComponent<{
     <div className={styles.buttonWrapper}>
       <CardActions>
         {href ? (
-          <LinkButton
+          <MuiButton
+            variant={variant}
+            color={variant === 'contained' ? 'primary' : 'secondary'}
+            size="medium"
             className={styles.button}
-            color={
-              buttonType === 'primary'
-                ? buttonColors.purple
-                : buttonColors.black
-            }
-            size="m"
-            text={buttonText}
-            type={buttonType}
             href={href}
-          />
+          >
+            {buttonText}
+          </MuiButton>
         ) : (
-          <Button
+          <MuiButton
+            variant={variant}
+            color={variant === 'contained' ? 'primary' : 'secondary'}
+            size="medium"
             className={styles.button}
-            color={
-              buttonType === 'primary'
-                ? buttonColors.purple
-                : buttonColors.black
-            }
-            size="m"
-            text={buttonText}
-            type={buttonType}
             onClick={onClick}
-          />
+            type="button"
+          >
+            {buttonText}
+          </MuiButton>
         )}
       </CardActions>
     </div>

@@ -1,0 +1,53 @@
+name 'music-lab-612-pre-q8'
+
+question 'Which computational thinking skill is Kai using?'
+
+right 'Decomposition'
+wrong 'Pattern Recognition'
+wrong 'Abstraction'
+wrong 'Algorithm Design'
+
+allow_multiple_attempts true
+
+teacher_markdown <<MARKDOWN
+Topic: Computational Thinking
+
+Skill: Decomposition
+
+Appears in Lesson: Throughout the Curriculum
+MARKDOWN
+
+markdown <<MARKDOWN
+Kai wanted to remix a track with beats, vocals, and sound effects, but it felt like too much to do at once. So Kai focused on one part at a time. First Kai layered the beats, then synced the vocals, and added effects last.
+
+---
+
+
+<div style="width: 100%; box-sizing: border-box; background-color: #F7F8FA; padding: 15px; margin-bottom: 10px; border-radius: 5px; text-align: center;">
+    <p style="font-size: 16pt; font-weight: bold; margin: 0;">Computational Thinking Practices</p>
+  </div>
+
+  <div style="display: flex; justify-content: space-between; align-items: stretch; gap: 10px; margin-bottom: 5px; width: 100%; box-sizing: border-box;">
+    <!-- Decomposition -->
+    <div style="text-align: center; width: 23%; background-color: #F7F8FA; padding: 15px; border-radius: 10px;">
+      <img src="https://images.code.org/199f369578811ff11f8dc88b6d40f3f5-image-1736535589828.png" alt="A flowchart showing a central item being broken down into three." style="width: 40px; height: 40px; margin-bottom: 10px;">
+      <p style="font-size: 14pt; font-weight: bold; margin-bottom: 10px;">Decomposition</p>
+    </div>
+    <!-- Pattern Recognition -->
+    <div style="text-align: center; width: 23%; background-color: #F7F8FA; padding: 15px; border-radius: 10px;">
+      <img src="https://images.code.org/bcb4304d866a4ec46e036423fc0d79b0-image-1736535593030.png" alt="A magnifying glass showing three repeating items." style="width: 40px; height: 40px; margin-bottom: 10px;">
+      <p style="font-size: 14pt; font-weight: bold; margin-bottom: 10px;">Pattern Recognition</p>
+    </div>
+    <!-- Abstraction -->
+    <div style="text-align: center; width: 23%; background-color: #F7F8FA; padding: 15px; border-radius: 10px;">
+      <img src="https://images.code.org/53e922f8a75ee840f0e7989d9cfdfd35-image-1736535595178.png" alt="A highlighter marking up a piece of paper" style="width: 40px; height: 40px; margin-bottom: 10px;">
+      <p style="font-size: 14pt; font-weight: bold; margin-bottom: 10px;">Abstraction</p>
+    </div>
+    <!-- Algorithms -->
+    <div style="text-align: center; width: 23%; background-color: #F7F8FA; padding: 15px; border-radius: 10px;">
+      <img src="https://images.code.org/c41c2a800a5ad39838d6d7d37325f288-image-1736535608844.png" alt="A flowchart showing multiple steps" style="width: 40px; height: 40px; margin-bottom: 10px;">
+      <p style="font-size: 14pt; font-weight: bold; margin-bottom: 10px;">Algorithms</p>
+    </div>
+  </div>
+</div>
+MARKDOWN

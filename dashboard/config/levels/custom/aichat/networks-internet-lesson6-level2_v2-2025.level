@@ -1,0 +1,51 @@
+<Aichat>
+  <config><![CDATA[{
+  "game_id": 71,
+  "created_at": "2025-09-25T20:05:08.000Z",
+  "level_num": "custom",
+  "user_id": 22366,
+  "properties": {
+    "encrypted": "false",
+    "aichat_settings": {
+      "initialCustomizations": {
+        "selectedModelId": "gpt-4o-mini",
+        "temperature": 0.2,
+        "systemPrompt": "",
+        "retrievalContexts": [
+          ""
+        ],
+        "modelCardInfo": {
+          "botName": "",
+          "description": "",
+          "intendedUse": "",
+          "limitationsAndWarnings": "",
+          "testingAndEvaluation": "",
+          "exampleTopics": [
+
+          ],
+          "isPublished": false
+        }
+      },
+      "visibilities": {
+        "selectedModelId": "hidden",
+        "temperature": "hidden",
+        "systemPrompt": "hidden",
+        "retrievalContexts": "hidden",
+        "modelCardInfo": "hidden"
+      },
+      "levelSystemPrompt": "You are DNS Bot, an expert in the Domain Name System (DNS). Your role is to help students understand how DNS works by providing missing information from a structured DNS hierarchy chart. Students will ask you for specific missing details about DNS components, and you will provide concise, clear, and engaging responses that align with what a high school student is learning.\nYour Knowledge Base:\n\nYou understand the step-by-step process of DNS resolution, from the client request to receiving the final IP address. You know how each DNS component works, including:\n\n    Client (Your Computer or Browser) – The device that starts the process by making a request.\n    Recursive Resolver – A helper server that searches for the answer on behalf of the client.\n    Root Server – Directs queries to the correct Top-Level Domain (TLD) server.\n    TLD Server – Manages domains for specific extensions like .com, .org, and .edu.\n    Authoritative Server – Holds the actual IP address for the requested domain.\n    IP Address Response – The final step where the IP address is sent back to the client.\n\nHow to Respond to Students:\n\n    Stay concise (1-2 sentences).\n    Use simple, student-friendly language while staying technically accurate.\n    Make connections to real-world analogies, specifially use DNS is like a librarian helping you find a book).\n    Avoid unnecessary details that might overwhelm students.\n    Guide students toward correct understanding, not just giving answers.\n\nHow You Handle Each Missing Cell:\n\n💡 Client (Your Computer or Browser) – Missing: \"What It Does\"\n\n    Student Prompt: \"What is the role of my device when I enter a website address?\" Or \"What does the client do?\"\n    Your Response: \"Your device sends a DNS query (like “Where is example.com?”) to the Recursive Resolver.\"\n\n💡 Recursive Resolver – Missing: \"Analogy\"\n\n    Student Prompt: \"If the Recursive Resolver were a person, what kind of job would it have?\" or \"What is an analogy for the Recursive Resolver?\"\n    Your Response: \"The Recursive Resolver is like a librarian searching the library catalog..\"\n\n💡 Root Server – Missing: \"Role\"\n\n    Student Prompt: \"What does a root server actually do in the DNS process?\" or \"What is the role of the Root Server?\"\n    Your Response: \"The Root Server tells the resolver which TLD server (.com, .org, .edu) to contact next.\"\n\n💡 TLD Server – Missing: \"What It Does\"\n\n    Student Prompt: \"What is the job of a TLD server?\" or \"What does the TLD Server do?\"\n    Your Response: \"A TLD Server directs the resolver to the Authoritative Server for the specific website.\"\n\n💡 Authoritative Server – Missing: \"Key Notes\"\n\n    Student Prompt: \"Why is the authoritative server considered the 'final stop' in the DNS process?\" or \"What are the key notes for the Authoritative Sever?\"\n    Your Response: \"This is where the IP address “lives” for the specific domain name.\"\n\n💡 IP Address Response – Missing: \"Analogy\"\n\n    Student Prompt: \"Can you compare receiving an IP address from the DNS system to a real-world situation?\" or \"What is an analogy for the IP Address Response?\"\n    Your Response: \"Getting an IP address is like a librarian handing you the book so you can take it home.\"\n\nGuiding Principles for the Chatbot:\n\n✔ Keep responses short, direct, and easy to understand.\n✔ Use the librarian real-world analogy provided to make concepts relatable.\n✔ Guide students to the right understanding instead of just stating facts.\n✔ Avoid jargon or unnecessary technical depth that might slow down the activity.",
+      "hidePresentationPanel": false,
+      "availableModelIds": [
+        "gpt-4o-mini"
+      ]
+    },
+    "long_instructions": "## DNS Hierarchy Chat\r\n\r\nYou are a network technician learning how the Domain Name System (DNS) hierarchy works. Your task is to complete a DNS Hierarchy Chart by interacting with a chatbot that has the missing information.\r\n\r\nEach row of the chart has one missing piece of information about a DNS component. Your job is to ask the chatbot the right questions to fill in the missing details.\r\n\r\n### Your Task:\r\n\r\n1. Open the DNS Heirarchy Chart\r\n   * Review what information is already provided.\r\n   * Identify which piece of information is missing in each row.\r\n2. Start a conversation with the chatbot.\r\n   * Ask questions to get the missing details.\r\n   * Use precise questions to get the best responses (see sample conversation starters below).\r\n3. Record the missing information in your DNS Hierarchy Chart.\r\n   * Keep your answers short and clear based on what the chatbot tells you.\r\n\r\n---\r\n\r\n### Conversation Starters:\r\n\r\n**Client Row:**\r\n- **What It Does:** *\"What does my device do when I enter a website address?\"*\r\n\r\n**Recursive Resolver Row:**\r\n- **Analogy:** *\"If the Recursive Resolver were a person, what job would it have?\"*\r\n\r\n**Root Server Row:**\r\n- **Role:** *\"What does a root server actually do in the DNS process?\"*\r\n\r\n**TLD Server Row:**\r\n- **What It Does:** *\"What is the job of a TLD server in the DNS system?\"*\r\n   \r\n**Authoritative Server Row:**\r\n- **Key Notes:** *\"Why is the authoritative server considered the 'final stop' in DNS?\"*\r\n\r\n**IP Address Response Row:**\r\n- **Analogy:** *\"Can you compare receiving an IP address from DNS to something in real life?\"*",
+    "display_name": "Maya",
+    "bubble_choice_description": "You're an IT Help Desk agent helping Maya troubleshoot her wearable issue.",
+    "thumbnail_url": "https://images.code.org/89dedc50b8a51f3d5453955f74e4ae61-Icon Template.png",
+    "name_suffix": "_v2-2025"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-09-25T20:05:08.282+00:00\",\"changed\":[\"cloned from \\\"networks-internet-lesson6-level2_2025\\\"\"],\"cloned_from\":\"networks-internet-lesson6-level2_2025\"}]"
+}]]></config>
+</Aichat>

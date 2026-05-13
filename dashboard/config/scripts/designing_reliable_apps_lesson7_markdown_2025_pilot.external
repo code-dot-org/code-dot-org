@@ -1,0 +1,22 @@
+name 'designing-reliable-apps-lesson7-markdown-2025-pilot'
+title 'When Apps Fail'
+
+
+markdown <<MARKDOWN
+##When Apps Fail
+
+<div>
+<img style=" float: left; width:25%; padding-top:10px" src="https://images.code.org/4143640534921216abae1c9048e801c0-image-1770833204153.06.14 AM.png" />
+
+<div style="float: left; width: 70%; padding-left:20px">
+<h4>
+<strong>It's time to make your plan!</strong>
+</h4>
+
+> As you fill out your activity guide:
+> - Answer...
+
+**Click here to make a copy of the activity guide:**  <a href="https://docs.google.com/document/d/1DNW-QtZTH5i8NA64f3bSDDNB3LMewugFTukRwn2CLcE/template/preview" target="_blank"> When Apps Fail</a>.
+
+</div>
+MARKDOWN

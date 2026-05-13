@@ -1,8 +1,8 @@
+import {Typography} from '@mui/material';
 import PropTypes from 'prop-types';
 import React, {useMemo} from 'react';
 import {connect} from 'react-redux';
 
-import {BodyTwoText, StrongText} from '@cdo/apps/componentLibrary/typography';
 import Button from '@cdo/apps/legacySharedComponents/Button';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
@@ -22,6 +22,8 @@ const CoteacherInviteNotification = ({
   asyncLoadSectionData,
   coteacherInvite,
   coteacherInviteForPl,
+  // This prop is used to allow asyncLoadSectionData to be run in a way that might remove data
+  destructiveLoad = false,
 }) => {
   const invite = useMemo(() => {
     if (!!coteacherInviteForPl && isForPl) {
@@ -36,7 +38,7 @@ const CoteacherInviteNotification = ({
     HttpClient.put(api, '', true)
       .then(() => {
         asyncLoadCoteacherInvite();
-        asyncLoadSectionData();
+        asyncLoadSectionData(null, destructiveLoad);
       })
       .catch(err => console.error(err));
   };
@@ -67,13 +69,13 @@ const CoteacherInviteNotification = ({
         invitedByName: invite.invited_by_name,
       })}
       details={
-        <BodyTwoText style={{marginBottom: 0}}>
+        <Typography style={{marginBottom: 0}} variant="body2" gutterBottom>
           {i18n.coteacherInviteDescription({
             invitedByEmail: invite.invited_by_email,
           })}
           <br />
-          <StrongText>{invite.section_name}</StrongText>
-        </BodyTwoText>
+          <Typography variant="strong">{invite.section_name}</Typography>
+        </Typography>
       }
       tooltipText={i18n.coteacherTooltip()}
       buttonsStyles={styles.buttons}
@@ -115,6 +117,7 @@ CoteacherInviteNotification.propTypes = {
   asyncLoadSectionData: PropTypes.func.isRequired,
   coteacherInvite: PropTypes.object,
   coteacherInviteForPl: PropTypes.object,
+  destructiveLoad: PropTypes.bool,
 };
 
 // The Notification object uses styles instead of className for legacy reasons.

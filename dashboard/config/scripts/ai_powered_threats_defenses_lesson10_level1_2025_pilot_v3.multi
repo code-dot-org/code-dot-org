@@ -1,0 +1,14 @@
+name 'ai-powered-threats-defenses-lesson10-level1_2025-pilot_v3'
+title 'AI in Encryption'
+
+question 'Which explanation best describes how an AI password-guessing system creates its predictions?'
+
+wrong 'It guesses randomly until it finds a password that works.'
+right 'It uses personal data and leaked password patterns to predict likely choices.'
+wrong 'It can read your private messages to learn your password.'
+wrong 'It already knows everyone\'s passwords from its training data. '
+allow_multiple_attempts true
+
+teacher_markdown <<MARKDOWN
+AI tools trained on large datasets recognize patterns in how people create passwords. They do not read private content or “know” anyone’s password; they predict likely choices based on common patterns.
+MARKDOWN

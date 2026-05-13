@@ -1,0 +1,36 @@
+name 'pl-aif-2-U3-array-method-CFU'
+title 'Array Method Matching'
+
+height '75'
+
+question 'Adds an item to the end of the array.'
+answer '**push()**'
+question 'Adds an item to the front of an array.'
+answer '**unshift()**'
+question 'Removes the last item from the array.'
+answer '**pop()**'
+question 'Removes the first item from an array.'
+answer '**shift()**'
+
+
+markdown <<MARKDOWN
+ #### Match the correct definition to the term. 
+<br>
+
+::: details [**🔎 Check your Answers**]
+- #### Adds an item to the end of the array. - **push()**
+- ####  Adds an item to the front of an array. - **unshift()**
+- #### Removes the last item from the array. - **pop()**
+- #### Removes the first item from an array. - **shift()**
+:::
+
+<br>
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+
+
+
+MARKDOWN
+
+allow_multiple_attempts true

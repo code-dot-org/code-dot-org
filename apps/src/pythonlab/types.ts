@@ -11,7 +11,7 @@ export interface PyodideMessage {
   // string message. The return value could be any object.
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   message: any;
-  id: number;
+  id: string;
 }
 
 export type MessageType =
@@ -23,4 +23,12 @@ export type MessageType =
   | 'internal_error'
   | 'system_error'
   | 'loading_pyodide'
-  | 'loaded_pyodide';
+  | 'loaded_pyodide'
+  | 'load_failed'
+  | 'loading_packages'
+  | 'loaded_packages';
+
+export interface PythonValidationResult {
+  name: string;
+  result: string;
+}

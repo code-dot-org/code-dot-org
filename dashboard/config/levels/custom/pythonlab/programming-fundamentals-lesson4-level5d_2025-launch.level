@@ -1,0 +1,39 @@
+<Pythonlab>
+  <config><![CDATA[{
+  "game_id": 72,
+  "created_at": "2025-04-02T01:17:50.000Z",
+  "level_num": "custom",
+  "user_id": 16889,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "You're making a food prep app that tracks ingredients. You have two values: the number of tortillas and the number of fillings. Your app needs to calculate how many full meals you can make and compare ingredient amounts.\r\n\r\n## Do This:\r\n\r\n1. Two variables are already set up: `tortillas` and `fillings`\r\n\r\n2. Use math operations to:\r\n\r\n   * Add the two amounts\r\n   \r\n   * Subtract one from the other\r\n   \r\n   * Multiply them\r\n   \r\n   * Divide one by the other\r\n\r\n3. Use `print()` statements to show each result.\r\n\r\n---\r\n\r\n<i class=\"fa-solid fa-laptop\"></i> **Coding Tip**\r\n\r\nYou can use `+`, `-`, `*`, and `/` to do math with numbers in Python — just like on a calculator!",
+    "ai_tutor_available": "false",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "enable_micro_bit": "false",
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "display_name": "Meal Prep Math",
+    "bubble_choice_description": "You're making a food prep app that tracks ingredients. You have two values: the number of tortillas and the number of fillings. Your app needs to calculate how many full meals you can make and compare ingredient amounts.",
+    "start_sources": {
+      "files": {
+        "0": {
+          "id": "0",
+          "name": "main.py",
+          "language": "py",
+          "contents": "# This program does math with meal prep ingredients\n\ntortillas = 12\nfillings = 6\n\n# Add the stats and print the result\n\n\n\n# Subtract the stats and print the result\n\n\n\n# Multiply the stats and print the result\n\n\n\n# Divide the stats and print the result\n\n\n",
+          "folderId": "0",
+          "active": true,
+          "open": true
+        }
+      },
+      "folders": {
+      }
+    },
+    "thumbnail_url": "https://images.code.org/1b882a4e17c9d6c8b81e09abde716ea1-iftar.png"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-04-02 01:20:28 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2025-04-06 02:36:36 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2025-04-06 02:37:03 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2025-04-06 02:42:23 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
+}]]></config>
+</Pythonlab>

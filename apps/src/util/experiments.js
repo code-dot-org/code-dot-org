@@ -25,46 +25,54 @@ experiments.REDUX_LOGGING = 'reduxLogging';
 experiments.SCHOOL_AUTOCOMPLETE_DROPDOWN_NEW_SEARCH =
   'schoolAutocompleteDropdownNewSearch';
 experiments.SHOW_UNPUBLISHED_DATASET_TABLES = 'showUnpublishedDatasetTables';
-experiments.TEACHER_DASHBOARD_SECTION_BUTTONS =
-  'teacher-dashboard-section-buttons';
-experiments.TEACHER_DASHBOARD_SECTION_BUTTONS_ALTERNATE_TEXT =
-  'teacher-dashboard-section-buttons-alternate-text';
-experiments.FINISH_DIALOG_METRICS = 'finish-dialog-metrics';
 experiments.I18N_TRACKING = 'frontend-i18n-tracking';
-experiments.TIME_SPENT = 'time-spent';
 experiments.BYPASS_DIALOG_POPUP = 'bypass-dialog-popup';
 experiments.SPECIAL_TOPIC = 'special-topic';
-experiments.OPT_IN_EMAIL_REG_PARTNER = 'optInEmailRegPartner';
 // Experiment for showing a backgrounds tab and enabling student upload
 // for Sprite Lab animations
 experiments.BACKGROUNDS_AND_UPLOAD = 'backgroundsTab';
-experiments.SECTION_SETUP_REFRESH = 'sectionSetupRefresh';
 // Experiment for showing the gender field
 experiments.GENDER_FEATURE_ENABLED = 'gender';
-// Experiment for enabling the CPA lockout
-experiments.CPA_EXPERIENCE = 'cpa_experience';
 // Experiment for enabling the AI-TA differentiation chat
 experiments.AI_DIFFERENTIATION = 'ai-differentiation';
-// Experiment for showing the toggle a teacher can use to turn on AI Tutor for their section
-experiments.AI_TUTOR_ACCESS = 'ai-tutor';
-// Uses Google Blockly for a given user across labs/levels until the experiment is disabled
-experiments.GOOGLE_BLOCKLY = 'google_blockly';
-// Adds documentation links to block context menus in Sprite Lab (supported with Google Blockly only)
-experiments.SPRITE_LAB_DOCS = 'sl_docs';
-// Adds a keyboard navigation toggle to the workspace header in Google Blockly labs
-experiments.KEYBOARD_NAVIGATION = 'blockly_keyboard';
-// Adds the ability to toggle between v1 and v2 of the section progress page of the teacher dashboard
-experiments.SECTION_PROGRESS_V2 = 'section_progress_v2';
+// Experiment for enabling the AI-TA differentiation artifacts
+experiments.AI_ARTIFACT = 'ai-artifact';
+// Adds a "Get help with this block" option to block context menus if docs exist (e.g. Sprite Lab)
+experiments.BLOCKLY_DOCS = 'blockly_docs';
 // Allows the playspace to be dragged to take up a larger portion of the screen
 experiments.BIG_PLAYSPACE = 'bigPlayspace';
-// Shows the new sign-up flow
-experiments.NEW_SIGN_UP_FLOW = 'new_sign_up_flow';
-// Allows teacher view of student chat history in aichat workspace
-experiments.VIEW_CHAT_HISTORY = 'view_chat_history';
-// Allows user to view the new version of the teacher navigation
-experiments.TEACHER_LOCAL_NAV_V2 = 'teacher-local-nav-v2';
-// Enables LTI account disconnect buttons on the Account Settings page
-experiments.LTI_ACCOUNT_UNLINKING = 'lti_account_unlinking';
+// Use glow effect for Blockly block highlighting
+experiments.BLOCKLY_GLOW_HIGHLIGHT = 'blockly-glow-highlight';
+// Turn on Blockly Keyboard Navigation
+experiments.BLOCKLY_KEYBOARD_NAVIGATION = 'blockly-keyboard-navigation';
+// Use nested course URLs like /courses/csd-2024/units/1/...
+experiments.MODULARITY = 'modularity';
+// LocalizeJS
+experiments.LOCALIZEJS = 'localizejs';
+// Enable ActionCable load testing
+experiments.ACTIONCABLE_LOAD_TESTING = 'actioncable-load-testing';
+// Use AI Tutor system prompts from Langfuse
+experiments.USE_LANGFUSE_PROMPT = 'use-langfuse-prompt';
+// Enable AI lesson podcasts
+experiments.AI_LESSON_PODCASTS = 'ai-lesson-podcasts';
+// Use channel-id based preview urls on localhost for Web Lab 2
+experiments.WEBLAB2_FULL_URLS = 'weblab2-full-urls';
+// Show unified diff view in Code Editor.
+experiments.ACCEPT_REJECT_UNIFIED_DIFF = 'accept-reject-unified-diff';
+// Show split diff view in Code Editor.
+experiments.ACCEPT_REJECT_SPLIT_DIFF = 'accept-reject-split-diff';
+// Enable the new teacher dashboard student snapshot page and features
+experiments.STUDENT_SNAPSHOT = 'student-snapshot';
+// Show the lesson/<lesson_id>/tutor page as a home for a AI Tutor+
+experiments.LESSON_TUTOR = 'lesson-tutor';
+// Enable Onboarding experiments
+experiments.ONBOARDING = 'onboarding';
+// Enable AI Diff Chat Drawer
+experiments.AI_DIFF_DRAWER = 'ai-diff-drawer';
+// Route all Gemini model traffic through the AI gateway instead of the Rails backend
+experiments.USE_AI_GATEWAY = 'useAiGateway';
+// Legacy version of Sketch Lab. This should be removed once the new version is fully stable.
+experiments.EXCALIDRAW = 'excalidraw';
 
 /**
  * This was a gamified version of the finish dialog, built in 2018,

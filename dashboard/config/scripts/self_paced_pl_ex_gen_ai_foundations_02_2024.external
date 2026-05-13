@@ -1,0 +1,35 @@
+name 'self-paced-pl-ex-gen-ai-foundations_02_2024'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# What is Generative AI?
+
+#### Generative AI is a type of artificial intelligence that can create new content. In this unit, we will be exploring Large Language Models, or LLMs.
+
+
+<img src="https://images.code.org/94c91bb3b11d912f8b4c38f34b241e09-image-1712760508654.png" alt="AI bot with thought bubbles" width="250px" style="border-radius:10px; float:right; margin: 10px 50px 0px 40px;">
+
+- #### **Artificial Intelligence:** A technology that mimics human intelligence, performing tasks such as understanding language, recognizing patterns, and making decisions.
+
+
+- #### **Large Language Model:** A computer program that analyzes large amounts of raw human-created data to the point where it can represent and recreate new data to perform a variety of tasks
+
+<div style="clear:both;"></div>
+
+---
+
+## Why Students Should Learn It:
+
+#### It's important for students to learn how generative AI works because it helps them understand the technology shaping our world, fostering critical thinking about its capabilities and limitations. 
+
+#### Many students have already encountered AI in tools like search engines, social media, and voice assistants. 
+
+#### Additionally, this knowledge empowers them to use AI responsibly and creatively in their future careers.
+
+#### The **Exploring Generative AI** course aligns with the CSTA supported AI4K12 initiative, ensuring students gain a comprehensive understanding of AI concepts, preparing them to navigate and contribute to an AI-driven future.
+
+<img src="https://images.code.org/8fb4e1ab9742812c32b922c097fba151-image-1726498625343.png" alt="design process graph of the cycle" width="500px" style="display: block; margin-left: auto; margin-right: auto;">
+
+
+MARKDOWN

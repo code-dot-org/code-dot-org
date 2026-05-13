@@ -1,5 +1,5 @@
 import {CLOCKWISE_TURN_DIRECTION} from '../constants';
-import {FieldHelperOptions} from '../types';
+import {AngleHelperOptions} from '../types';
 
 import CdoFieldNumber from './cdoFieldNumber';
 
@@ -41,13 +41,11 @@ export default class CdoFieldAngleTextInput extends CdoFieldNumber {
     return direction || CLOCKWISE_TURN_DIRECTION;
   }
 
-  getFieldHelperOptions(field_helper: string) {
-    if (field_helper === Blockly.BlockFieldHelper.ANGLE_HELPER) {
-      return {
-        direction: this.direction,
-        directionTitle: this.directionFieldName,
-        block: this.getSourceBlock(),
-      } as FieldHelperOptions;
-    }
+  getAngleHelperOptions() {
+    return {
+      direction: this.direction,
+      directionTitle: this.directionFieldName,
+      block: this.getSourceBlock(),
+    } as AngleHelperOptions;
   }
 }

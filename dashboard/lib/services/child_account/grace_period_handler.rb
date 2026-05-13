@@ -26,7 +26,7 @@ module Services
 
       private def all_users_lockout_start_date
         return @all_users_lockout_start_date if defined? @all_users_lockout_start_date
-        @all_users_lockout_start_date = Policies::ChildAccount.state_policy(user).try(:[], :lockout_date)
+        @all_users_lockout_start_date = Policies::ChildAccount::StatePolicies.state_policy(user).try(:[], :lockout_date)
       end
 
       private def start_grace_period

@@ -10,11 +10,19 @@ import {ParentalPermissionRequest} from '@cdo/apps/redux/parentalPermissionReque
 import Notification, {
   NotificationType,
 } from '@cdo/apps/sharedComponents/Notification';
-import ParentalPermissionModal from '@cdo/apps/templates/policy_compliance/ParentalPermissionModal';
+import Spinner from '@cdo/apps/sharedComponents/Spinner';
 import {RootState} from '@cdo/apps/types/redux';
 import color from '@cdo/apps/util/color';
 import getCurrentLocale from '@cdo/apps/util/currentLocale';
 import i18n from '@cdo/locale';
+
+const LazyParentalPermissionModal = React.lazy(
+  () =>
+    import(
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
+      '@cdo/apps/templates/policy_compliance/ParentalPermissionModal' as any
+    )
+);
 
 interface ParentalPermissionBannerProps {
   lockoutDate: string;
@@ -34,6 +42,16 @@ const ParentalPermissionBanner: React.FC<ParentalPermissionBannerProps> = ({
     analyticsReporter.sendEvent(eventName, payload);
   };
 
+  const defaultEventParams = (
+    parentalPermissionRequest: ParentalPermissionRequest
+  ) => {
+    return {
+      inSection: currentUser.inSection,
+      us_state: currentUser.usStateCode,
+      consentStatus: parentalPermissionRequest.consent_status,
+    };
+  };
+
   useEffect(() => {
     currentUser.userId && setShow(true);
   }, [currentUser.userId]);
@@ -43,9 +61,15 @@ const ParentalPermissionBanner: React.FC<ParentalPermissionBannerProps> = ({
       reportEvent(EVENTS.CAP_PARENT_EMAIL_BANNER_SHOWN, {
         inSection: currentUser.inSection,
         consentStatus: currentUser.childAccountComplianceState,
+        us_state: currentUser.usStateCode,
       });
     }
-  }, [show, currentUser.inSection, currentUser.childAccountComplianceState]);
+  }, [
+    show,
+    currentUser.inSection,
+    currentUser.childAccountComplianceState,
+    currentUser.usStateCode,
+  ]);
 
   const handleModalShow = () => {
     setShowModal(true);
@@ -53,6 +77,7 @@ const ParentalPermissionBanner: React.FC<ParentalPermissionBannerProps> = ({
     reportEvent(EVENTS.CAP_PARENT_EMAIL_BANNER_CLICKED, {
       inSection: currentUser.inSection,
       consentStatus: currentUser.childAccountComplianceState,
+      us_state: currentUser.usStateCode,
     });
   };
 
@@ -67,6 +92,7 @@ const ParentalPermissionBanner: React.FC<ParentalPermissionBannerProps> = ({
 
     reportEvent(EVENTS.CAP_PARENT_EMAIL_MODAL_CLOSED, {
       inSection: currentUser.inSection,
+      us_state: currentUser.usStateCode,
       consentStatus,
     });
   };
@@ -74,41 +100,43 @@ const ParentalPermissionBanner: React.FC<ParentalPermissionBannerProps> = ({
   const handleModalSubmit = (
     parentalPermissionRequest: ParentalPermissionRequest
   ) => {
-    reportEvent(EVENTS.CAP_PARENT_EMAIL_SUBMITTED, {
-      inSection: currentUser.inSection,
-      consentStatus: parentalPermissionRequest.consent_status,
-    });
+    reportEvent(
+      EVENTS.CAP_PARENT_EMAIL_SUBMITTED,
+      defaultEventParams(parentalPermissionRequest)
+    );
   };
 
   const handleModalResend = (
     parentalPermissionRequest: ParentalPermissionRequest
   ) => {
-    reportEvent(EVENTS.CAP_PARENT_EMAIL_RESEND, {
-      inSection: currentUser.inSection,
-      consentStatus: parentalPermissionRequest.consent_status,
-    });
+    reportEvent(
+      EVENTS.CAP_PARENT_EMAIL_RESEND,
+      defaultEventParams(parentalPermissionRequest)
+    );
   };
 
   const handleModalUpdate = (
     parentalPermissionRequest: ParentalPermissionRequest
   ) => {
-    reportEvent(EVENTS.CAP_PARENT_EMAIL_UPDATED, {
-      inSection: currentUser.inSection,
-      consentStatus: parentalPermissionRequest.consent_status,
-    });
+    reportEvent(
+      EVENTS.CAP_PARENT_EMAIL_UPDATED,
+      defaultEventParams(parentalPermissionRequest)
+    );
   };
 
   return (
     <Fade in={show} mountOnEnter unmountOnExit>
       <div id="parental-permission-banner">
-        <ParentalPermissionModal
-          lockoutDate={lockoutDate}
-          show={showModal}
-          onClose={handleModalClose}
-          onSubmit={handleModalSubmit}
-          onResend={handleModalResend}
-          onUpdate={handleModalUpdate}
-        />
+        <React.Suspense fallback={<Spinner />}>
+          <LazyParentalPermissionModal
+            lockoutDate={lockoutDate}
+            show={showModal}
+            onClose={handleModalClose}
+            onSubmit={handleModalSubmit}
+            onResend={handleModalResend}
+            onUpdate={handleModalUpdate}
+          />
+        </React.Suspense>
 
         <Notification
           type={NotificationType.warning}

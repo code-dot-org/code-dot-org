@@ -1,0 +1,10 @@
+name 'music-lab-loops-synthesis-reflect-levelgroup_v2'
+title 'Reflect'
+submittable 'false'
+anonymous 'false'
+activity_guide_level 'true'
+
+page
+level 'music-lab-loops-synthesis-scale_v2'
+level 'music-lab-loops-synthesis-reflect1_v2'
+level  ‘music-lab-loops-synthesis-ct’

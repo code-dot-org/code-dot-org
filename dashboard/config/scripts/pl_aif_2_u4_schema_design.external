@@ -1,0 +1,68 @@
+name 'pl-aif-2-U4-schema-design'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Schema Design for Simple Features
+
+#### The unit wraps up by investigating how inconsistent field names and data types can lead to misinterpretation by both humans and AI in real-world datasets.
+
+#### When the schema isn’t clear, different people (and systems) may read the same data in totally different ways.
+
+## Same Fields, Different Interpretations
+
+#### Look at how three different users interpret the same three fields:
+
+- #### Title
+
+- #### Experience
+
+- #### Payment
+
+<img src="https://images.code.org/f7bf83ba1632cbdd5e20352851fbb680-image-1770054965407.png" alt="Three users interpreting Title, Experience, and Payment differently" width="650px" style="display:block; margin-left:auto; margin-right:auto; border-radius:10px;">
+
+<div style="background:#f7f8fa; border-radius:12px; padding:16px; margin:18px auto; max-width:85%;"> <p style="font-size:14pt; margin-top:0;"> 💡 <strong>Think about it:</strong> If humans interpret these fields differently, how might an AI system interpret them when sorting, filtering, or summarizing? </p> </div>
+
+
+<div style="background-color:#B7E0E5; border-radius:10px; padding:14px; margin:18px auto; max-width:85%;"> <p style="font-size:14pt; margin:0; line-height:135%;"> <strong>Big idea:</strong> A well-designed schema makes an app more trustworthy, scalable, and easier to maintain. </p> </div>
+
+## Why this is important
+
+#### Inconsistent schemas can cause:
+
+- #### Filters that “miss” items because the field names don’t match
+
+- #### Incorrect comparisons (like sorting numbers that are stored as text)
+
+- #### AI outputs that sound confident but are based on messy, unclear data
+
+- ####User confusion (because labels don’t match what people expect)
+
+#### 👉A consistent schema helps your app behave in ways users can understand and trust.
+
+---
+
+<img src="https://images.code.org/0cfb39609bf485b0f1be4e67d06ecef4-image-1770055318925.png" alt="icon with graduation hat and magnifying glass" width="200px" style="border-radius:10px; float:left; margin: 0 40px 0px 20px;">
+
+## Career Connection: Database Architect
+
+
+#### A Database Architect plans how data is stored and labeled so that:
+
+- #### Systems can use it correctly
+
+- #### People do not get confused
+
+- #### New features are easier to build
+
+<div style="clear:both;"></div>
+
+---
+
+
+## Next up
+
+#### Let’s review how these concepts get put together in the final project.
+
+
+MARKDOWN

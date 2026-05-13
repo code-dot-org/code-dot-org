@@ -1,0 +1,96 @@
+<Music>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 70,
+  "created_at": "2025-05-31T02:56:49.000Z",
+  "level_num": "custom",
+  "user_id": 1196,
+  "properties": {
+    "encrypted": "false",
+    "instructions_important": "false",
+    "long_instructions": "#### Layering Lyrics\r\n\r\n**Define:** Explore how vocal sounds can be layered in unexpected and creative ways. Your goal is to build a song by staggering vocal clips and using rests to create something new and experimental\r\n\r\n**Prepare:** Choose vocal samples that sound interesting when layered or offset from each other. Plan where to place rests so that the vocals don't all start at once, and think about how to make your remix feel experimental or surprising. Listen to the example song to hear what this could sound like!\r\n\r\n**Try:** Use at least 10 play blocks to stack and arrange your vocal samples. Use at least 5 rest blocks to shift the timing and create space among tracks. Focus on creating something unique, not just a typical pop remix.\r\n\r\n**Reflect:** Do your vocals interact in interesting or unexpected ways? Listen to your song and iterate until it sounds the way you want it to. In order to complete this level, your remix must include:\r\n\r\n- At least 10 play blocks\r\n- At least 5 rest blocks",
+    "offer_browser_tts": "true",
+    "use_secondary_finish_button": "false",
+    "hide_share_and_remix": "true",
+    "level_data": {
+      "library": "launch2024",
+      "sounds": {
+      },
+      "toolbox": {
+        "blocks": {
+          "Play": [
+            "play_sound_at_current_location_simple2",
+            "play_rest_at_current_location_simple2"
+          ],
+          "Control": [
+            "play_sounds_together",
+            "play_sounds_sequential"
+          ]
+        },
+        "type": "flyout"
+      },
+      "packId": "aloe_blacc_wake_me_up",
+      "startSources": {
+        "blocks": {
+          "languageVersion": 0,
+          "blocks": [
+            {
+              "type": "when_run_simple2",
+              "id": "when-run-block",
+              "x": 30,
+              "y": 30,
+              "deletable": false,
+              "movable": false
+            }
+          ]
+        }
+      },
+      "allowChangeStartingPlayheadPosition": true
+    },
+    "display_name": "Layering Lyrics",
+    "thumbnail_url": "https://curriculum.code.org/media/musiclab/library-launch2024/packs/i_need_a_dollar_aloe_blacc/i_need_a_dollar_aloe_blacc.jpg",
+    "exemplar_settings": {
+      "playerEnabled": true,
+      "validationEnabled": false,
+      "validationSuccessMessage": "",
+      "validationFailureMessage": "",
+      "validationMode": "default",
+      "playerTitle": "Example"
+    },
+    "encrypted_exemplar_sources": "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\nmheufhO3qmQ54x4wnmtBbrAPZB9zGiNW\n",
+    "bubble_choice_description": "Experiment with creating new songs using just lyrics and rests.",
+    "validations": [
+      {
+        "key": "test-music-lab-sequences-practice-choice-b_069553a4-264a-46fd-bf27-715ce7ec6044",
+        "message": "It looks like your song is on the right track!",
+        "next": true,
+        "conditions": [
+          {
+            "name": "block_count_by_type",
+            "value": "play_sound_at_current_location_simple2:10"
+          },
+          {
+            "name": "block_count_by_type",
+            "value": "play_rest_at_current_location_simple2:5"
+          }
+        ]
+      },
+      {
+        "key": "test-music-lab-sequences-practice-choice-b_86253497-8de2-4d8f-a016-200bfbaa3847",
+        "message": "Make sure your song has at least 10 play blocks and 5 rest blocks!",
+        "next": false,
+        "conditions": [
+
+        ]
+      }
+    ],
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "name_suffix": "_v2",
+    "preload_asset_list": null
+  },
+  "audit_log": "[{\"changed_at\":\"2025-05-31T02:56:49.199+00:00\",\"changed\":[\"cloned from \\\"test-music-lab-sequences-practice-choice-b\\\"\"],\"cloned_from\":\"test-music-lab-sequences-practice-choice-b\"},{\"changed_at\":\"2025-06-12 15:32:57 +0000\",\"changed\":[\"thumbnail_url\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-06-24 22:15:41 +0000\",\"changed\":[\"long_instructions\",\"validations\",\"predict_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-06-25 21:24:29 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-06-25 21:28:11 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-06-26 20:43:45 +0000\",\"changed\":[\"level_data\",\"thumbnail_url\",\"predict_settings\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]"
+}]]></config>
+  <blocks/>
+</Music>

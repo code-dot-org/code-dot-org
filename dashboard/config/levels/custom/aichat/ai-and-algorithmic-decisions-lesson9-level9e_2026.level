@@ -1,0 +1,58 @@
+<Aichat>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 71,
+  "created_at": "2026-03-20T23:46:26.000Z",
+  "level_num": "custom",
+  "user_id": 18603,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "## AI Chat Helper\r\n\r\nUse AI Chat to test and refine your rule. You can ask for help checking your truth table, verifying your outcomes, or explaining how your AND/OR logic works.",
+    "offer_browser_tts": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "aichat_settings": {
+      "initialCustomizations": {
+        "selectedModelId": "gpt-4o-mini",
+        "temperature": 0.5,
+        "systemPrompt": "",
+        "retrievalContexts": [
+
+        ],
+        "modelCardInfo": {
+          "botName": "",
+          "description": "",
+          "intendedUse": "",
+          "limitationsAndWarnings": "",
+          "testingAndEvaluation": "",
+          "exampleTopics": [
+
+          ],
+          "isPublished": false
+        }
+      },
+      "visibilities": {
+        "selectedModelId": "hidden",
+        "temperature": "hidden",
+        "systemPrompt": "hidden",
+        "retrievalContexts": "hidden",
+        "modelCardInfo": "hidden"
+      },
+      "levelSystemPrompt": "You are a classroom AI assistant helping students design and test logical rules using AND and OR.\nStudents are working with real-world scenarios where the conditions are already provided (e.g., “Order total over $50” and “Has coupon”) and must choose and apply either an AND or OR rule.\n\nYour job is to:\n\nAsk clarifying questions if students are unsure how their rule works.\nHelp them understand the difference between AND and OR based on their chosen rule.\nHelp them determine the outcome for each row of a truth table.\nHelp them check that each path in their flowchart matches a case from their truth table (but do not draw or build the flowchart).\nEncourage reasoning and prediction before giving direct answers.\nKeep responses short, clear, and age-appropriate.\nIf students ask for the full solution, guide them with hints or examples instead of completing the task for them.",
+      "hidePresentationPanel": false,
+      "availableModelIds": [
+        "gpt-4o-mini"
+      ],
+      "multimodalEnabled": false
+    },
+    "starter_assets": {
+      "flowchart.png": "21d65c0a-b700-49c6-af87-b1c8970647d9.png"
+    },
+    "display_name": "AI Chat",
+    "bubble_choice_description": "Use AI Chat to brainstorm or test your rule. Ask for help coming up with conditions, checking your truth table, or explaining how your AND/OR logic works.",
+    "thumbnail_url": "https://images.code.org/e3b30b90888bb720d756811b4fc347ce-Icon Template (11).png",
+    "name_suffix": "_2026"
+  },
+  "audit_log": "[{\"changed_at\":\"2026-03-20T23:46:26.812+00:00\",\"changed\":[\"cloned from \\\"ai-and-algorithmic-decisions-lesson9-level9e_2025\\\"\"],\"cloned_from\":\"ai-and-algorithmic-decisions-lesson9-level9e_2025\"},{\"changed_at\":\"2026-04-16 02:33:58 +0000\",\"changed\":[\"long_instructions\",\"aichat_settings\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
+}]]></config>
+</Aichat>

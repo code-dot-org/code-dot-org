@@ -17,6 +17,7 @@ class ProtectedStatefulDiv extends React.Component {
     contentFunction: PropTypes.func,
     children: PropTypes.node,
     canUpdate: PropTypes.bool,
+    canUnmount: PropTypes.bool,
   };
 
   static defaultProps = {
@@ -41,7 +42,7 @@ class ProtectedStatefulDiv extends React.Component {
     // when using the storybook styleguide, we don't really need to protect
     // anything, and actually we want to unmount/remount stuff all the time
     // when the page is hot-reloaded
-    if (!IN_STORYBOOK) {
+    if (!IN_STORYBOOK && !this.props.canUnmount) {
       throw new Error('Unmounting a ProtectedStatefulDiv is not allowed.');
     }
   }
@@ -54,6 +55,7 @@ class ProtectedStatefulDiv extends React.Component {
           'radiumConfigContext',
           'styleKeeperContext',
           'canUpdate',
+          'canUnmount',
         ])}
         ref="root"
       />

@@ -20,17 +20,6 @@ class PotentialTeachersController < ApplicationController
     send_hoc_email(params)
   end
 
-  # GET /potential_teachers/:id
-  def show
-    @potential_teacher_data = {
-      name: @potential_teacher.name,
-      email: @potential_teacher.email,
-      script_id: @potential_teacher.script_id,
-      receives_marketing: @potential_teacher.receives_marketing
-    }
-    render json: @potential_teacher_data
-  end
-
   def send_hoc_email(params)
     name = current_user&.name || params[:name]
     email = current_user&.email.presence || params[:email]

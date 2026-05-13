@@ -1,0 +1,10 @@
+name 'test-intro-to-programming-lesson8-level6choice-AI-Tutor'
+display_name 'Practice with Debugging'
+description 'Choose one of the options below!'
+
+sublevels
+level 'test-intro-to-programming-lesson8-level6a-AI-Tutor'
+level 'test-intro-to-programming-lesson8-level6b-AI-Tutor'
+level 'test-intro-to-programming-lesson8-level6c-AI-Tutor'
+level 'test-intro-to-programming-lesson8-level6d-AI-Tutor'
+

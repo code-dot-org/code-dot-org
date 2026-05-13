@@ -1,6 +1,5 @@
+import {Typography} from '@mui/material';
 import React from 'react';
-
-import Typography from '@cdo/apps/componentLibrary/typography/Typography';
 
 interface CardHeaderProps {
   title?: string;
@@ -10,9 +9,8 @@ export const CardHeader = ({icon, title}: CardHeaderProps) => {
   return (
     <>
       {icon}
-
       {title && (
-        <Typography semanticTag={'h1'} visualAppearance={'heading-lg'}>
+        <Typography component="h1" variant="h3" gutterBottom>
           {title}
         </Typography>
       )}

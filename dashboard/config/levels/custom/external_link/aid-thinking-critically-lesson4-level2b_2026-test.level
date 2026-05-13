@@ -1,0 +1,19 @@
+<ExternalLink>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 55,
+  "created_at": "2026-03-03T17:00:12.000Z",
+  "level_num": "custom",
+  "user_id": 18603,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "### Google Slide Template\r\n\r\nYou may choose to complete your project using Slides. If so, follow the directions below:\r\n\r\n1. CLick the link to go to the Slide template\r\n2. Click **File** > **Make a Copy** > **Entire Presentation**\r\n3. Rename your project and share it, as necessary",
+    "link_title": "Project Template - Slides",
+    "url": "https://docs.google.com/presentation/d/1JEAeUMASJ1rGkXgSNhbN51sOWq8GQtz5oH5apiBgYfI/edit?usp=sharing",
+    "display_name": "Slides",
+    "bubble_choice_description": "Create your project in Slides!",
+    "thumbnail_url": "https://images.code.org/34f4dd68716b031cb58882242adda796-google (1).png"
+  },
+  "audit_log": "[{\"changed_at\":\"2026-03-03 17:00:14 +0000\",\"changed\":[],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-03 17:40:08 +0000\",\"changed\":[],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-03 18:09:40 +0000\",\"changed\":[],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"}]"
+}]]></config>
+</ExternalLink>

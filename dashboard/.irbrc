@@ -20,3 +20,6 @@ IRB.conf[:PROMPT][:RAILS_APP] = {
 }
 
 IRB.conf[:PROMPT_MODE] = :RAILS_APP
+
+# Disable autocomplete, which causes perf issues since the Ruby 3.1 upgrade.
+IRB.conf[:USE_AUTOCOMPLETE] = false

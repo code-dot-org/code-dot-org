@@ -8,7 +8,7 @@ describe I18n::Resources::Dashboard::Standards::SyncOut do
   let(:i18n_locale) {'expected_i18n_locale'}
   let(:language) {{locale_s: i18n_locale}}
 
-  let(:standards_i18n_file_path) {CDO.dir('dashboard/config/locales', "standards.#{i18n_locale}.json")}
+  let(:standards_i18n_file_path) {CDO.dir("dashboard/config/locales/standards/#{i18n_locale}.json")}
   let(:crowdin_locale_dir) {CDO.dir('i18n/crowdin', i18n_locale, 'standards')}
   let(:i18n_locale_dir) {CDO.dir('i18n/locales', i18n_locale, 'standards')}
 
@@ -93,7 +93,7 @@ describe I18n::Resources::Dashboard::Standards::SyncOut do
     end
 
     describe 'frameworks localization distribution' do
-      let(:frameworks_i18n_file_path) {CDO.dir('dashboard/config/locales', "frameworks.#{i18n_locale}.json")}
+      let(:frameworks_i18n_file_path) {CDO.dir("dashboard/config/locales/frameworks/#{i18n_locale}.json")}
       let(:frameworks_i18n_file_data) do
         {
           i18n_locale => {
@@ -140,7 +140,7 @@ describe I18n::Resources::Dashboard::Standards::SyncOut do
       end
 
       describe 'standard categories localization distribution' do
-        let(:categories_i18n_file_path) {CDO.dir('dashboard/config/locales', "standard_categories.#{i18n_locale}.json")}
+        let(:categories_i18n_file_path) {CDO.dir("dashboard/config/locales/standard_categories/#{i18n_locale}.json")}
         let(:categories_i18n_file_data) do
           {
             i18n_locale => {
@@ -188,7 +188,7 @@ describe I18n::Resources::Dashboard::Standards::SyncOut do
       end
 
       describe 'standards localization distribution' do
-        let(:standards_i18n_file_path) {CDO.dir('dashboard/config/locales', "standards.#{i18n_locale}.json")}
+        let(:standards_i18n_file_path) {CDO.dir("dashboard/config/locales/standards/#{i18n_locale}.json")}
         let(:standards_i18n_file_data) do
           {
             i18n_locale => {

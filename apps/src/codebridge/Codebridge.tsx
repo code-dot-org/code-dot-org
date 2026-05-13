@@ -1,141 +1,244 @@
+import {CodebridgeContextProvider} from '@codebridge/codebridgeContext';
+import {useFlaggedImage, useZoomTracker} from '@codebridge/hooks';
+import {setWidgetViewShowCode} from '@codebridge/redux/workspaceRedux';
 import {
-  CodebridgeContextProvider,
-  projectReducer,
-  PROJECT_REDUCER_ACTIONS,
-  useProjectUtilities,
-} from '@codebridge/codebridgeContext';
-import {FileBrowser} from '@codebridge/FileBrowser';
-import {useReducerWithCallback} from '@codebridge/hooks';
-import {InfoPanel} from '@codebridge/InfoPanel';
-import {PreviewContainer} from '@codebridge/PreviewContainer';
-import {SideBar} from '@codebridge/SideBar';
-import {
-  ProjectType,
   ConfigType,
-  SetProjectFunction,
   SetConfigFunction,
   OnRunFunction,
+  SendConsoleInputFunction,
+  CodebridgeLevelProperties,
+  ProjectPickerSettings,
+  LayoutProps,
 } from '@codebridge/types';
-import React, {useEffect, useReducer, useRef} from 'react';
+import classNames from 'classnames';
+import React, {useEffect, useMemo} from 'react';
 
-import './styles/cdoIDE.scss';
-import './styles/small-footer-dark-overrides.scss';
-import {ProjectSources} from '@cdo/apps/lab2/types';
+import {useAiChatDisabledState} from '@cdo/apps/aichat/hooks/useAiChatDisabledState';
+import {ChatButtonData, ResponseSchemaSettings} from '@cdo/apps/aichat/types';
+import {AiTutorContextHelper} from '@cdo/apps/aiTutor/helpers/aiTutorContextHelper';
+import type {JsonVideoFileMetadata} from '@cdo/apps/jsonVideo/jsonVideoPrompt';
+import {START_SOURCES} from '@cdo/apps/lab2/constants';
+import useLifecycleNotifier from '@cdo/apps/lab2/hooks/useLifecycleNotifier';
+import {getAppOptionsEditBlocks} from '@cdo/apps/lab2/projects/utils';
+import {AppName, ProjectSources} from '@cdo/apps/lab2/types';
+import {LifecycleEvent} from '@cdo/apps/lab2/utils/LifecycleNotifier';
+import {BackpackAPIContext} from '@cdo/apps/sharedComponents/backpack/BackpackAPIContext';
+import BackpackClientApi from '@cdo/apps/sharedComponents/backpack/BackpackClientApi';
+import FlaggedImageModal from '@cdo/apps/sharedComponents/FlaggedImageModal';
+import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 
-import Console from './Console';
-import Workspace from './Workspace';
-import WorkspaceAndConsole from './Workspace/WorkspaceAndConsole';
+import moduleStyles from './styles/codebridgeContainer.module.scss';
+
+import './styles/codebridge.scss';
+
+const RUN_BUTTON_ID = '#uitest-codebridge-run';
+const EDITOR_ID = '#uitest-codebridge-editor';
+const CONSOLE_CLASS = '.xterm-helper-textarea';
 
 type CodebridgeProps = {
-  project: ProjectType;
   config: ConfigType;
-  setProject: SetProjectFunction;
   setConfig: SetConfigFunction;
-  startSource: ProjectSources;
+  startSources: ProjectSources;
   onRun?: OnRunFunction;
   onStop?: () => void;
-  projectVersion: number;
+  sendConsoleInput?: SendConsoleInputFunction;
+  levelProperties: CodebridgeLevelProperties;
+  projectPickerSettings?: ProjectPickerSettings;
+  hiddenContextCallback?: () => Promise<string>;
+  aiTutorMultimodalEnabled?: boolean;
+  aiTutorChatButtonData?: ChatButtonData[];
+  aiTutorContextHelper?: AiTutorContextHelper<object>;
+  aiTutorSystemPrompt?: string;
+  aiTutorResponseSchemaSettings?: ResponseSchemaSettings;
+  tutorVideos?: JsonVideoFileMetadata[];
+  secondaryBackpackAppNames?: AppName[];
 };
 
 export const Codebridge = React.memo(
   ({
-    project,
     config,
-    setProject,
     setConfig,
-    startSource,
+    startSources,
     onRun,
     onStop,
-    projectVersion,
+    sendConsoleInput,
+    levelProperties,
+    projectPickerSettings,
+    hiddenContextCallback,
+    aiTutorMultimodalEnabled,
+    aiTutorChatButtonData,
+    aiTutorContextHelper,
+    aiTutorSystemPrompt,
+    aiTutorResponseSchemaSettings,
+    tutorVideos,
+    secondaryBackpackAppNames,
   }: CodebridgeProps) => {
-    const reducerWithCallback = useReducerWithCallback(
-      projectReducer,
-      setProject,
-      new Set(PROJECT_REDUCER_ACTIONS.REPLACE_PROJECT)
+    const isShareView = useAppSelector(state => state.lab.isShareView);
+    const isWidgetView = !!levelProperties.widgetView;
+    const isStartMode = getAppOptionsEditBlocks() === START_SOURCES;
+    const appName = levelProperties.appName;
+    const currentUserId = useAppSelector(state => state.currentUser.userId);
+    const hasSubmittedPredictResponse = useAppSelector(
+      state => state.predictLevel.hasSubmittedResponse
     );
-    const [internalProject, dispatch] = useReducer(
-      reducerWithCallback,
-      project
-    );
+    const {disabled: aiTutorDisabled} = useAiChatDisabledState({
+      appName,
+      isPredictLevel: !!levelProperties.predictSettings?.isPredictLevel,
+      hasSubmittedPredictResponse,
+    });
 
-    const projectUtilities = useProjectUtilities(dispatch);
-
-    const currentProjectVersion = useRef(projectVersion);
+    // Adds keyboard shortcuts for Editor (1), Run (2), and Console (3)
+    // which are preceded by Control (Windows/Linux) or Command (macOS).
+    // Runs on mount (see empty dependency list).
     useEffect(() => {
-      if (projectVersion !== currentProjectVersion.current) {
-        projectUtilities.replaceProject(project);
-        currentProjectVersion.current = projectVersion;
+      const handleKeyDown = (event: KeyboardEvent) => {
+        // Check if Control (Windows/Linux) or Command (macOS) is pressed
+        const isControlOrCommand = event.ctrlKey || event.metaKey;
+        const editorElement = document.querySelector(EDITOR_ID);
+        const runButton = document.querySelector(RUN_BUTTON_ID);
+        const consoleElement = document.querySelector(CONSOLE_CLASS);
+        if (isControlOrCommand) {
+          switch (event.key) {
+            case '1':
+              if (editorElement) {
+                (editorElement as HTMLElement).focus();
+                // Also simulate 'Enter' to actually enter the editor
+                const enterKeyEvent = new KeyboardEvent('keydown', {
+                  key: 'Enter',
+                  keyCode: 13,
+                  bubbles: true,
+                });
+                editorElement.dispatchEvent(enterKeyEvent);
+              }
+              event.preventDefault();
+              break;
+            case '2':
+              if (runButton) {
+                (runButton as HTMLElement).click();
+              }
+              event.preventDefault();
+              break;
+            case '3':
+              if (consoleElement) {
+                (consoleElement as HTMLElement).focus();
+              }
+              event.preventDefault();
+              break;
+            default:
+              break;
+          }
+        }
+      };
+
+      // Attach the event listener
+      document.addEventListener('keydown', handleKeyDown);
+
+      // Cleanup the event listener on unmount
+      return () => {
+        document.removeEventListener('keydown', handleKeyDown);
+      };
+    }, []);
+
+    const InnerLayout = useMemo((): React.FunctionComponent<LayoutProps> => {
+      if (isShareView && config.layoutComponents.share) {
+        return config.layoutComponents.share;
       }
-    }, [currentProjectVersion, project, projectUtilities, projectVersion]);
+      if (isWidgetView && config.layoutComponents.widget && !isStartMode) {
+        return config.layoutComponents.widget;
+      }
+      let currentLayout = config.activeLayout;
+      if (!currentLayout) {
+        currentLayout = appName === 'pythonlab' ? 'horizontal' : 'vertical';
+      }
+      // Since 'horizontal' is an optional layout (not all labs have it),
+      // we need to add a fallback to 'vertical' to avoid type errors.
+      return (
+        config.layoutComponents[currentLayout] ||
+        config.layoutComponents.vertical
+      );
+    }, [
+      appName,
+      config.activeLayout,
+      config.layoutComponents,
+      isShareView,
+      isStartMode,
+      isWidgetView,
+    ]);
 
-    const ComponentMap = {
-      'file-browser': FileBrowser,
-      'side-bar': SideBar,
-      'preview-container': PreviewContainer,
-      'info-panel': config.Instructions || InfoPanel,
-      workspace: Workspace,
-      console: Console,
-      'workspace-and-console': WorkspaceAndConsole,
-    };
+    const backpackContext = useMemo(() => {
+      // The backpack api does not work for signed-out users (it redirects to sign-in),
+      // so we don't create the api instance if there is no current user.
+      if (currentUserId) {
+        const primaryApi = new BackpackClientApi(appName, null);
+        if (secondaryBackpackAppNames && secondaryBackpackAppNames.length > 0) {
+          const secondaryApis: {[key: string]: BackpackClientApi} = {};
+          secondaryBackpackAppNames.forEach(secondaryAppName => {
+            secondaryApis[secondaryAppName] = new BackpackClientApi(
+              secondaryAppName,
+              null
+            );
+          });
+          return {primaryApi, secondaryApis};
+        }
+        return {primaryApi};
+      }
+      return null;
+    }, [appName, currentUserId, secondaryBackpackAppNames]);
 
-    let gridLayout: string;
-    let gridLayoutRows: string;
-    let gridLayoutColumns: string;
-    if (
-      config.gridLayout &&
-      config.gridLayoutRows &&
-      config.gridLayoutColumns
-    ) {
-      gridLayout = config.gridLayout;
-      gridLayoutRows = config.gridLayoutRows;
-      gridLayoutColumns = config.gridLayoutColumns;
-    } else if (config.labeledGridLayouts && config.activeGridLayout) {
-      const labeledLayout = config.labeledGridLayouts[config.activeGridLayout];
-      gridLayout = labeledLayout.gridLayout;
-      gridLayoutRows = labeledLayout.gridLayoutRows;
-      gridLayoutColumns = labeledLayout.gridLayoutColumns;
-    } else {
-      throw new Error('Cannot render codebridge - no layout provided');
-    }
-    // gridLayout is a css string that defines the components in the grid layout.
-    // In order to find which components are in the grid layout, we remove all quotes
-    // from the string and tokenize it.
-    const gridLayoutKeys = gridLayout
-      .trim()
-      .replaceAll(`"`, '')
-      .split(' ')
-      .map(key => key.trim());
+    // Send analytics when user zooms in/out (will be compared to user updating font size via settings).
+    useZoomTracker(appName);
+
+    const dispatch = useAppDispatch();
+
+    // Set view code to false if level is switched for any levels in widget view.
+    useLifecycleNotifier(LifecycleEvent.LevelLoadStarted, () => {
+      dispatch(setWidgetViewShowCode(false));
+    });
+
+    const {
+      flaggedImageData,
+      onImageFlagged,
+      handleAcceptFlaggedImage,
+      handleCancelFlaggedImage,
+    } = useFlaggedImage();
 
     return (
       <CodebridgeContextProvider
         value={{
-          project: internalProject,
           config,
-          setProject,
           setConfig,
-          startSource,
+          startSources,
           onRun,
           onStop,
-          ...projectUtilities,
+          sendConsoleInput,
+          levelProperties,
+          projectPickerSettings,
+          hiddenContextCallback,
+          onImageFlagged,
+          aiTutorMultimodalEnabled,
+          aiTutorChatButtonData,
+          aiTutorContextHelper,
+          aiTutorResponseSchemaSettings,
+          aiTutorSystemPrompt,
+          tutorVideos,
+          aiTutorDisabled,
         }}
       >
-        <div
-          className="cdoide-container"
-          style={{
-            gridTemplateAreas: gridLayout,
-            gridTemplateRows: gridLayoutRows,
-            gridTemplateColumns: gridLayoutColumns,
-          }}
-        >
-          {(Object.keys(ComponentMap) as Array<keyof typeof ComponentMap>)
-            .filter(key => gridLayoutKeys.includes(key))
-            .map(key => {
-              const Component = ComponentMap[key];
-              return <Component key={key} />;
-            })}
-
-          {/*<Search />*/}
-        </div>
+        <BackpackAPIContext.Provider value={backpackContext}>
+          <div className={classNames(moduleStyles.codebridgeContainer)}>
+            {flaggedImageData && (
+              <FlaggedImageModal
+                onAccept={handleAcceptFlaggedImage}
+                onCancel={handleCancelFlaggedImage}
+                appName={appName}
+              />
+            )}
+            <InnerLayout
+              isProjectLevel={levelProperties.isProjectLevel}
+              isWidgetView={levelProperties.widgetView}
+            />
+          </div>
+        </BackpackAPIContext.Provider>
       </CodebridgeContextProvider>
     );
   }

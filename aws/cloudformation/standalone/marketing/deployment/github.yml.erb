@@ -1,0 +1,110 @@
+# Marketing Github Action Deployer Resources
+# This template is manually deployed to create/update the Marketing App's AWS resources.
+
+AWSTemplateFormatVersion: 2010-09-09
+
+Description: Marketing App Github Action Deployer IAM User resources
+
+Parameters:
+  MarketingApplicationStackName:
+    Type: String
+    Description: The name of the Marketing application stack to use for this deployment.
+
+Resources:
+  GithubDeployerUser:
+    Type: AWS::IAM::User
+    Properties:
+      UserName: !Sub "marketing-${MarketingApplicationStackName}-github-deployer"
+
+  GithubDeployerUserPolicy:
+    Type: 'AWS::IAM::Policy'
+    Version: '2012-10-17'
+    Properties:
+      PolicyName: GithubDeployerUserIamUserPolicy
+      Users:
+        - Ref: GithubDeployerUser
+      PolicyDocument:
+        Statement:
+          - Effect: Allow
+            Action:
+              - 'cloudformation:CreateStack'
+              - 'cloudformation:DescribeStacks'
+              - 'cloudformation:CreateChangeSet'
+              - 'cloudformation:DescribeChangeSet'
+              - 'cloudformation:DeleteChangeSet'
+              - 'cloudformation:ExecuteChangeSet'
+            Resource: !Sub "arn:aws:cloudformation:${AWS::Region}:${AWS::AccountId}:stack/${MarketingApplicationStackName}/*"
+          - Effect: Allow
+            Action:
+              - 'iam:GetRole'
+              - 'iam:PassRole'
+            Resource:
+              Fn::ImportValue: !Sub "${MarketingApplicationStackName}-FargateServiceTaskDefExecutionRoleArn"
+          - Effect: Allow
+            Action:
+              - 'iam:GetRole'
+              - 'iam:PassRole'
+            Resource:
+              Fn::ImportValue: !Sub "${MarketingApplicationStackName}-FargateServiceTaskDefTaskRoleArn"
+          - Effect: Allow
+            Action:
+              - 'iam:GetRole'
+            Resource:
+              Fn::ImportValue: !Sub "${MarketingApplicationStackName}-ECSAutoScalingRoleArn"
+          - Effect: Allow
+            Action:
+              - 'ecs:RegisterTaskDefinition'
+            Resource: !Sub "arn:aws:ecs:${AWS::Region}:${AWS::AccountId}:task-definition/MarketingStackStagingFargateServiceTaskDef:*"
+          - Effect: Allow
+            Action:
+              - 'ecs:DeregisterTaskDefinition'
+              - 'ecs:DescribeTaskDefinition'
+              - 'elasticloadbalancing:DescribeLoadBalancers'
+            Resource: '*'
+          - Effect: Allow
+            Action:
+              - 'ec2:DescribeSecurityGroups'
+            Resource: '*'
+          - Effect: Allow
+            Action:
+              - 'ecs:DescribeServices'
+              - 'ecs:UpdateService'
+            Resource:
+              Fn::ImportValue: !Sub "${MarketingApplicationStackName}-FargateServiceArn"
+          - Effect: Allow
+            Action:
+              - "s3:PutObject"
+              - "s3:ListBucket"
+            Resource:
+              - Fn::ImportValue: !Sub "${MarketingApplicationStackName}-StaticAssetsBucketArn"
+              - !Sub
+                - "${StaticAssetsBucketArn}/*"
+                - StaticAssetsBucketArn:
+                    Fn::ImportValue: !Sub "${MarketingApplicationStackName}-StaticAssetsBucketArn"
+          - Effect: Allow
+            Action:
+              - "cloudfront:CreateInvalidation"
+            Resource: !Sub 'arn:aws:cloudfront::${AWS::AccountId}:distribution/${CloudFrontDistribution}'
+
+  GithubDeployerAccessKey:
+    Type: AWS::IAM::AccessKey
+    Properties:
+      UserName:
+        Ref: GithubDeployerUser
+
+  GithubDeployerAccessKeySecret:
+    Type: AWS::SecretsManager::Secret
+    Properties:
+      SecretString:
+        Fn::Join:
+          - ""
+          - - '{"accessKeyId":"'
+            - Ref: GithubDeployerAccessKey
+            - '","secretAccessKey":"'
+            - Fn::GetAtt:
+                - GithubDeployerAccessKey
+                - SecretAccessKey
+            - '"}'
+    UpdateReplacePolicy: Delete
+    DeletionPolicy: Delete
+

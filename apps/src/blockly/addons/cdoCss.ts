@@ -2,27 +2,30 @@ import fontConstants from '@cdo/apps/fontConstants';
 import color from '@cdo/apps/util/color';
 
 import {BlocklyWrapperType} from '../types';
+
+let cssRegistered = false;
 export default function initializeCss(blocklyWrapper: BlocklyWrapperType) {
+  if (cssRegistered) {
+    return;
+  }
+  cssRegistered = true;
   blocklyWrapper.Css.register(
-    `.fieldGridDropDownContainer.blocklyMenu .blocklyMenuItem {
-      width: 32px;
-      height: 32px;
-      padding: 0px;
-      border: none;
+    `.blocklyFieldGrid {
+      margin: 5px;
     }
-    .fieldGridDropDownContainer .blocklyMenuItem.blocklyMenuItemSelected {
-      background-color: white;
+    .blocklyFieldGrid .blocklyFieldGridItem {
+      border: none !important;
+      padding: 0px !important;
+      margin: 0px;
     }
-    /* Change look of focus/highlighted cell */
-    .fieldGridDropDownContainer .blocklyMenuItem.blocklyMenuItemHighlight {
-      box-shadow: 0 0 0 4px hsla(0.57, 10%, 34%, .2);
-    }
-    .blocklyMenuItemContent > img {
-      width: 32px;
-      height: 32px;
+    .blocklyFieldGrid .blocklyFieldGridItem img {
+      opacity: 1;
       object-fit: contain;
     }
-
+    .blocklyFieldGridContainer {
+      padding: 0px;
+      overflow: auto;
+    }
     .blocklyFlyoutButton {
       fill: ${color.brand_secondary_default};
       cursor: pointer;
@@ -54,7 +57,6 @@ export default function initializeCss(blocklyWrapper: BlocklyWrapperType) {
       fill: ${color.neutral_dark} !important;
     }
     .fieldAngleDropDownContainer .blocklyAngleHelperContainer {
-      box-shadow: 4px 4px 6px #bbb;
       border-width: 1px;
       float: right;
     }
@@ -63,7 +65,6 @@ export default function initializeCss(blocklyWrapper: BlocklyWrapperType) {
     }
     .fieldAngleDropDownContainer .blocklyMenu::after {
       content: '';
-      border-left: 1px solid #949ca2;
       position: absolute;
       height: 80%;
       right: 0;
@@ -79,6 +80,19 @@ export default function initializeCss(blocklyWrapper: BlocklyWrapperType) {
     .blocklyDropDownDiv .blocklyMenu {
       font-family: ${fontConstants['main-font']};
       font-weight: 400 !important; // Noto Sans Math only supports the normal font-weight
+    }
+    .blocklyShadowFieldText {
+      fill: ${color.neutral_dark40} !important; // Prevents override by .blocklyText
+    }
+    .blocklyShadowMusicFieldRect {
+      fill: ${color.neutral_dark};
+    }
+    .blocklyDisabled .blocklyPath {
+      fill-opacity: 0.5;
+      stroke-opacity: 0.5;
+    }
+    .blocklyPath:focus {
+      outline: none;
     }
     `
   );

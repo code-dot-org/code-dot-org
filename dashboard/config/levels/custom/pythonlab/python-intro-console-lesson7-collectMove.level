@@ -1,0 +1,56 @@
+<Pythonlab>
+  <config><![CDATA[{
+  "game_id": 72,
+  "created_at": "2025-01-23T23:28:48.000Z",
+  "level_num": "custom",
+  "user_id": 1196,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "## Predict\r\nRead the code. If collect_ingredients() was not a function, what code would you need to write to collect ingredients in the second garden? ",
+    "ai_tutor_available": "false",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "enable_micro_bit": "false",
+    "predict_settings": {
+      "isPredictLevel": true,
+      "solution": "I would have needed to rewrite the while loop again. \n\nwhile hero.is_on_ingredient():\n        hero.collect_ingredient()\n        show_ingredient_message()\n        hero.move()",
+      "questionType": "freeResponse",
+      "allowMultipleAttempts": true,
+      "placeholderText": "",
+      "freeResponseHeight": 50,
+      "codeEditableAfterSubmit": true
+    },
+    "start_sources": {
+      "files": {
+        "0": {
+          "id": "0",
+          "name": "main.py",
+          "language": "py",
+          "contents": "from support import hero, show_ingredient_message\n\ndef collect_ingredients():\n    while hero.is_on_ingredient():\n        hero.collect_ingredient()\n        show_ingredient_message()\n        hero.move()\n\n# Collect ingredients from the first garden\ncollect_ingredients()\n\n# Walk to a new garden\nhero.walks()\n\n# Collect ingredients from the second garden\ncollect_ingredients()\n",
+          "folderId": "0",
+          "active": false,
+          "open": true
+        },
+        "1": {
+          "id": "1",
+          "name": "support.py",
+          "language": "py",
+          "contents": "import random\n\n# Simulated Hero class\nclass Hero:\n    def __init__(self):\n        self.ingredients = 0  # Total ingredients collected\n        self.steps = 0        # Steps in the current garden\n        self.max_steps = 5    # Max steps before moving to another area\n        self.garden_count = 1 # Number of gardens visited\n\n    def is_on_ingredient(self):\n        # Simulate being on an ingredient spot (50% chance)\n        return self.steps < self.max_steps and random.choice([True, False])\n\n    def collect_ingredient(self):\n        self.ingredients += 1\n        print(f\"🍄 Collected an ingredient! Total ingredients: {self.ingredients}\")\n\n    def move(self):\n        self.steps += 1\n        if self.steps < self.max_steps:\n            print(f\"➡️ Moved to step {self.steps} in Garden {self.garden_count}.\")\n        else:\n            print(f\"🌲 You've finished Garden {self.garden_count}!\")\n\n    def walks(self):\n        # Reset steps and move to the next garden\n        self.steps = 0\n        self.garden_count += 1\n        print(f\"🚶 Walking to Garden {self.garden_count}...\")\n        print(f\"🌼 You've arrived at Garden {self.garden_count}! Ready to collect more ingredients.\")\n\n# ASCII art and ingredient messages\ningredients = [\n    \"a shiny red mushroom\",\n    \"a bundle of glowing herbs\",\n    \"a sparkling blue flower\",\n    \"a rare golden berry\",\n    \"a bottle of enchanted dew\",\n]\n\nascii_art = [\n    \"\"\"\n     🌿\n    🌱 🌱\n     🌿\n    \"\"\",\n    \"\"\"\n      🌼\n     🌸 🌸\n      🌼\n    \"\"\",\n    \"\"\"\n      🍄\n     🍄 🍄\n      🍄\n    \"\"\",\n]\n\n# Function to show a random ingredient message with ASCII art\ndef show_ingredient_message():\n    ingredient = random.choice(ingredients)\n    art = random.choice(ascii_art)\n    print(f\"🌟 You found {ingredient}!\")\n    print(art)\n\n# Instantiate the hero object\nhero = Hero()\n",
+          "folderId": "0",
+          "active": true,
+          "open": true,
+          "type": "support"
+        }
+      },
+      "folders": {
+      },
+      "openFiles": [
+        "0",
+        "1"
+      ]
+    }
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-01-23T23:28:48.592+00:00\",\"changed\":[\"cloned from \\\"python-intro-console-lesson7-collect\\\"\"],\"cloned_from\":\"python-intro-console-lesson7-collect\"},{\"changed_at\":\"2025-01-23 23:35:06 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-01-23 23:35:35 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"}]"
+}]]></config>
+</Pythonlab>

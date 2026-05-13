@@ -1,14 +1,13 @@
+import {Typography} from '@mui/material';
 import PropTypes from 'prop-types';
 import React, {useState} from 'react';
 
-import {
-  Heading1,
-  Heading3,
-  Heading4,
-} from '@cdo/apps/componentLibrary/typography';
 import RailsAuthenticityToken from '@cdo/apps/lib/util/RailsAuthenticityToken';
+import {studio} from '@cdo/apps/lib/util/urlHelpers';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 import i18n from '@cdo/locale';
+import aiCurriculumHowItWorksImg from '@cdo/static/ai/ai-curriculum-how-ai-works.png';
+import teachPageTopImg from '@cdo/static/teach-page-top.png';
 
 import style from './certificate_batch.module.scss';
 
@@ -45,7 +44,7 @@ const curriculaData = [
       oldestGrade: '12',
     }),
     title: i18n.howAiWorks(),
-    image: 'https://code.org/images/ai/ai-curriculum-how-ai-works.png',
+    image: aiCurriculumHowItWorksImg,
     buttonText: i18n.exploreLessons(),
     description: i18n.howAiWorksDescription(),
     link: 'http://code.org/ai/how-ai-works',
@@ -53,7 +52,7 @@ const curriculaData = [
 ];
 
 const curriculumCatalogImages = [
-  'https://code.org/images/ai/ai-curriclum-machine-learning.png',
+  '/blockly/media/ai/ai-curriclum-machine-learning.png',
   'https://images.code.org/11d83ab1d397cafda327782812e8988c-Book%20Covers.png',
   '/../../../../shared/images/courses/logo_csa.jpg',
   '/../../../../shared/images/courses/logo_mobile.jpg',
@@ -65,14 +64,14 @@ const professionalLearning = [
     title: i18n.teachWithCodeOrg(),
     description: i18n.teachWithCodeOrgDescription(),
     buttonText: i18n.teachWithCodeOrg(),
-    image: 'https://code.org/images/teach-page-top.png',
+    image: teachPageTopImg,
     link: 'https://code.org/teach',
   },
   {
     title: i18n.courseOfferingSelfPacedPl(),
     description: i18n.selfPacedPlDescription(),
     buttonText: i18n.exploreProfessionalLearning(),
-    image: 'https://code.org/shared/images/banners/self-paced-pl-hero.png',
+    image: studio('/shared/images/banners/self-paced-pl-hero.png'),
     link: 'https://code.org/educate/professional-development-online',
   },
 ];
@@ -94,9 +93,9 @@ export default function CertificateBatch({
   return (
     <div className={style.wrapper}>
       <div className={style.headerContainer}>
-        <Heading1 className={style.header}>
+        <Typography className={style.header} variant="h1" gutterBottom>
           {i18n.printBatchCertificates()}
-        </Heading1>
+        </Typography>
       </div>
       <div className={style.certificateContainer}>
         <div className={style.imageWrapper}>
@@ -105,7 +104,9 @@ export default function CertificateBatch({
         </div>
         <div className={style.entryContainer}>
           <span className={style.instructions}>
-            <Heading3>{i18n.createYourCertificate()}</Heading3>
+            <Typography variant="h3" gutterBottom>
+              {i18n.createYourCertificate()}
+            </Typography>
             <SafeMarkdown
               markdown={i18n.enterCertificateNames({courseTitle})}
             />
@@ -140,11 +141,10 @@ export default function CertificateBatch({
           </form>
         </div>
       </div>
-
       <div className={style.continueBeyond}>
-        <Heading3 className={style.textCenter}>
-          {i18n.continueBeyondHourOfCode()}
-        </Heading3>
+        <Typography className={style.textCenter} variant="h3" gutterBottom>
+          Continue Beyond an Hour of AI
+        </Typography>
         <div
           className={`${style.actionBlockWrapper} ${style.actionBlockWrapperThreeCol}`}
         >
@@ -155,7 +155,9 @@ export default function CertificateBatch({
             >
               <div className={style.contentWrapper}>
                 <p className={style.overline}>{item.grade}</p>
-                <Heading3>{item.title}</Heading3>
+                <Typography variant="h3" gutterBottom>
+                  {item.title}
+                </Typography>
                 <img src={item.image} alt="" />
                 <p>{item.description}</p>
               </div>
@@ -170,7 +172,9 @@ export default function CertificateBatch({
         <hr />
 
         <div className={style.textCenter}>
-          <Heading4>{i18n.discoverMore()}</Heading4>
+          <Typography variant="h4" gutterBottom>
+            {i18n.discoverMore()}
+          </Typography>
           <p>{i18n.discoverMoreCatalogText()}</p>
           <div className={style.imageContainer}>
             {curriculumCatalogImages.map((item, index) => (
@@ -185,7 +189,6 @@ export default function CertificateBatch({
           </a>
         </div>
       </div>
-
       <div className={style.professionalLearning}>
         <div
           className={`${style.actionBlockWrapper} ${style.actionBlockTwoCol}`}
@@ -201,7 +204,9 @@ export default function CertificateBatch({
                   alt=""
                   className={style.professionalLearningImage}
                 />
-                <Heading3>{item.title}</Heading3>
+                <Typography variant="h3" gutterBottom>
+                  {item.title}
+                </Typography>
                 <p>{item.description}</p>
               </div>
               <div className={style.contentFooter}>

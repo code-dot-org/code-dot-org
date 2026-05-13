@@ -326,7 +326,11 @@ def get_ids_for_no_workshop_yet
 
     # Let's see if there is an enrollment that hasn't happened...
 
-    Pd::Enrollment.where(email: contact_email).all.each do |enrollment|
+    enrollments = user.alternate_email.present? ?
+      Pd::Enrollment.where(email: contact_email).or(Pd::Enrollment.where(email: user.alternate_email)).all :
+      Pd::Enrollment.where(email: contact_email).all
+
+    enrollments.each do |enrollment|
       enrollment_id = enrollment.pd_workshop_id
 
       puts "  found an enrollment!"

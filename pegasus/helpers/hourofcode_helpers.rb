@@ -3,7 +3,7 @@ def hoc_dir(*dirs)
 end
 
 def hoc_load_countries
-  JSON.parse(File.read(hoc_dir('i18n/countries.json')))
+  JSON.parse(File.read(pegasus_dir('config/sites/hourofcode.com/countries.json')))
 end
 HOC_COUNTRIES = hoc_load_countries
 
@@ -184,7 +184,7 @@ def campaign_date(format)
     id = 'campaign_date_full_year'
   end
 
-  # For hoc2024, we just want campaign dates for the US
+  # For hoc2025, we just want campaign dates for the US
   # and non-US.
   if @country != "us"
     id = "nonus_#{id}"

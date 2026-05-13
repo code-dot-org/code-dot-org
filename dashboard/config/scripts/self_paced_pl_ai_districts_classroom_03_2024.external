@@ -1,0 +1,49 @@
+name 'self-paced-pl-ai-districts-classroom_03_2024'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Restriction and Access Issues
+
+#### Before we dive in, let’s address some potential restriction and access issues.
+
+#### As of the publishing of this module, ChatGPT, Copilot, and Gemini all require users be 13 or older with users under 18, requiring parent or guardian's permission to create an account. Additionally, some school districts have banned or restricted the use of LLMs and AI in general with students.
+
+#### Make sure you reference your school and district policies before you use ChatGPT or any other AI technology with your students.
+
+#### We’ll address some of the reasons behind these restrictions in the next module. The good news is that there are alternative ways to still engage with AI in these situations.
+
+<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
+    <summary style="font-size: 1.5em; font-weight: bold;">🚀 Want to Learn More?</summary>
+<div style="margin-top: 20px; margin-left: 20px; margin-right: 20px; padding-bottom:20px;">
+    <p>
+
+#### Check out TeachAI’s <a href="https://www.teachai.org/toolkit-guidance" target="_blank">Guidance on the Use of AI in Our Schools Toolkit</a>
+</p></div>
+</details>
+
+#### AI tools designed for educational environments often incorporate specific features to ensure safe and responsible interactions for students:
+* #### Limitations on interactions: Some educational AI tools may restrict the number of messages a student can send per day to prevent misuse.
+* #### Visibility of chat history: Student interactions may be made accessible to educators or parents, allowing for monitoring and oversight.
+* #### Content monitoring: Proactive measures are often in place to scan for inappropriate content within student messages.
+
+#### When evaluating an AI tool for educational use, several steps can help determine its appropriateness and compliance with safety standards:
+* #### Check for educational focus: Verify if the tool is specifically developed for educational purposes, which often guarantees higher safety and privacy standards.
+* #### Review help articles and guides: Look for documentation provided by the tool's developers that explains its safety features and privacy measures.
+* #### Examine the privacy policy: Analyze the privacy policy for mentions of educational use, compliance with FERPA, COPPA, and other regional regulations.
+* #### Privacy settings adjustment: Before using an AI tool, configure its privacy settings to maximize data protection.
+
+#### Stay updated with local laws and administrative guidance concerning AI tools in education.
+
+<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
+    <summary style="font-size: 1.5em; font-weight: bold;">An Important Note about Privacy</summary>
+<div style="margin-top: 20px; margin-left: 20px; margin-right: 20px; padding-bottom:20px;">
+    <p>
+
+#### Before you or your schools start using LLMs (Large Language Models) it's crucial to consider privacy and data security concerns. LLMs can inadvertently store and reveal personal information input during interactions. You should confirm LLM usage complies with educational data protection laws such as FERPA or COPPA.
+
+#### In short, treat data or information you enter into an LLM as public. Don’t include personal information for yourself, colleagues, or students when prompting or chatting with an LLM and caution your students to do the same.
+
+</p></div>
+</details>
+MARKDOWN

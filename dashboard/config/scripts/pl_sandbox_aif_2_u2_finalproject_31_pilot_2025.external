@@ -1,0 +1,64 @@
+name 'pl_sandbox_aif_2_U2-finalproject-31_pilot-2025'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Final Project 
+
+#### At the beginning of this module, you were introduced to the final project — **an Interactive Customizer**, where students apply their learning to design and code a dynamic, personalized web app.
+
+#### Now that you’ve explored the lessons and practiced the same coding tools and logic structures, you can see how each skill builds toward this culminating experience.
+
+---
+
+<img src="https://images.code.org/fc1f5f35c9a52240d333369516c04017-image-1762456024629.png" alt="miletsone map for project" width="350px" style="border-radius:10px; float:right; margin: 10px 0 0px 10px;">
+
+## Building an interactive web app
+
+#### In this project, students act as Front-End Developers and QA Engineers to create a badge-awarding system within a web app of their choice.
+
+#### They start by planning their logic with a flowchart that defines how badges are earned, then translate it into JavaScript.
+
+<div style="clear:both;"></div>
+
+---
+
+## Support along the way
+
+<img src="https://images.code.org/137da4d1ddb53c311d772c15affc3b5c-image-1762456148561.png" alt="icons for bots that support along the way" width="750px" style="display: block; margin-left: auto; margin-right: auto;">
+
+#### Students can choose which tool best supports their current task: brainstorming ideas, organizing their plan, or sketching out their logic and design.
+
+#### 🔁 **Circulate: As students explore the hub, ask guiding questions such as:**
+- #### “What type of interaction or outcome are you imagining for your app?”
+- ####“Which of these tools will help you move your idea forward right now?”
+- ####“How does your planned logic connect to the kind of experience you want your user to have?”
+
+#### Use these check-ins to confirm students are moving from idea to planning, rather than jumping straight into code.
+
+<div style="background-color: #a6e3e8; border-radius: 40px; color: #000000; width: 95%; padding: 1px 20px 1px 20px;">
+
+<p style="line-height: 1.5; margin-left: 10px; margin-right: 10px; margin-top: 10px; margin-bottom: 10px; font-size: 16px; "> <b> 💡Teaching Tip:</b> Set expectations for pacing — Milestone 1 can typically be finished by the end of today's class or early next class. Encourage students to focus first on clarity of idea rather than polish
+</p>
+</div>
+
+
+
+## You did it! 
+
+#### You’ve now practiced using the tools to build this project while getting an overview of much of the Unit 2 content. This module is designed to give you a strong head start as you prepare to teach the unit.
+
+## Want to try more? 
+
+#### If you’d like to try to complete the full project, open the link in a new tab and return to it after finishing this module.
+
+---
+
+
+
+<p style="font-size: 18px; font-weight: bold; background-color: #F5F7F8; padding: 10px; border-left: 5px solid #8148B2; display: inline-block;">
+    ➡️ The project is in Lesson 11. You can find more details in the full <a href='https://studio.code.org/courses/artificial-intelligence-foundations-semester2-2025/units/2/lessons/11' target='_blank' rel='noopener noreferrer' style='text-decoration: none; font-weight: bold;'>lesson plan</a>.
+</p>
+
+
+MARKDOWN

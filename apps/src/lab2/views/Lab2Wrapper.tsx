@@ -6,27 +6,47 @@
 // boundary; a fade-in between levels; a loading spinner when a level takes a
 // while to load; and a sad bee when things go wrong.
 
+import {Theme, useTheme} from '@code-dot-org/component-library/common/contexts';
 import classNames from 'classnames';
 import React, {useEffect} from 'react';
 import {useSelector} from 'react-redux';
 
 import {setCurrentLevelId} from '@cdo/apps/code-studio/progressRedux';
-import {cancelSpeech} from '@cdo/apps/util/BrowserTextToSpeech';
+import {getUserAppOptionsPath} from '@cdo/apps/code-studio/progressReduxSelectors';
+import {
+  getAppOptionsLevelId,
+  getAppOptionsTheme,
+  getIsShareView,
+  getPublicCaching,
+} from '@cdo/apps/lab2/projects/utils';
+import {
+  hasPageError,
+  isLabLoading,
+} from '@cdo/apps/lab2/redux/lab2ReduxSelectors';
+import fetchPermissions from '@cdo/apps/lab2/utils/fetchPermissions';
+import {useBrowserTextToSpeech} from '@cdo/apps/sharedComponents/BrowserTextToSpeechWrapper';
+import {
+  CourseRoles,
+  setUserRoleInCourse,
+} from '@cdo/apps/templates/currentUserRedux';
+import {capitalizeFirstLetter} from '@cdo/apps/util/capitalizeFirstLetter';
+import HttpClient from '@cdo/apps/util/HttpClient';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 
+import {PERMISSIONS} from '../constants';
 import ErrorBoundary from '../ErrorBoundary';
-import {
-  LabState,
-  isLabLoading,
-  hasPageError,
-  setIsShareView,
-} from '../lab2Redux';
+import useLifecycleNotifier from '../hooks/useLifecycleNotifier';
+import useLoadLevelProperties from '../hooks/useLoadLevelProperties';
+import {LabState, setIsShareView, setPermissions} from '../lab2Redux';
 import Lab2Registry from '../Lab2Registry';
-import {getAppOptionsLevelId, getIsShareView} from '../projects/utils';
+import {PartialUserAppOptions} from '../types';
 import {LifecycleEvent} from '../utils';
 
 import {ErrorFallbackPage, ErrorUI} from './ErrorFallbackPage';
+import LevelPropertiesWrapper from './LevelPropertiesWrapper';
 import Loading from './Loading';
+import {ProjectBlockedUI} from './ProjectBlockedUI';
+import ScreenAnalyticsOverlay from './ScreenAnalyticsOverlay';
 
 import moduleStyles from './Lab2Wrapper.module.scss';
 
@@ -35,17 +55,59 @@ export interface Lab2WrapperProps {
 }
 
 const Lab2Wrapper: React.FunctionComponent<Lab2WrapperProps> = ({children}) => {
-  const isLoading: boolean = useSelector(isLabLoading);
+  const levelPropertiesMap = useLoadLevelProperties();
+  const isLoading: boolean = useSelector(isLabLoading) || !levelPropertiesMap;
   const isPageError: boolean = useSelector(hasPageError);
+  const isBlockedAbuse = useAppSelector(state => state.lab.isBlockedAbuse);
+  const projectSharingDisabled = useAppSelector(
+    state => state.lab.projectSharingDisabled
+  );
+  const dispatch = useAppDispatch();
+  const isProjectValidator = useAppSelector(state =>
+    state.lab.permissions?.includes(PERMISSIONS.PROJECT_VALIDATOR)
+  );
+
+  useEffect(() => {
+    fetchPermissions().then(data => {
+      dispatch(setPermissions(data));
+    });
+  }, [dispatch]);
   const errorMessage: string | undefined = useSelector(
     (state: {lab: LabState}) =>
       state.lab.pageError?.errorMessage || state.lab.pageError?.error?.message
   );
+  const {cancel} = useBrowserTextToSpeech();
 
   // Store some server-provided data in redux.
-
-  const dispatch = useAppDispatch();
   const currentLevelId = useAppSelector(state => state.progress.currentLevelId);
+  const {theme, setTheme} = useTheme();
+
+  useEffect(() => {
+    // Initialize the theme based on app options, which is set on the server.
+    // This allows us to take advantage of the server-side logic to show the correct loading theme
+    // based on the lesson and user preference.
+    // We default to dark theme if the body class is not set.
+    const appOptionsTheme = getAppOptionsTheme();
+    const upperCasedTheme = appOptionsTheme
+      ? (capitalizeFirstLetter(appOptionsTheme) as Theme)
+      : undefined;
+    const theme = upperCasedTheme || 'Dark';
+
+    setTheme(theme);
+  }, [setTheme]);
+
+  // We duplicate the theme to Lab2Registry, because modals opened via the header (such as the share modal)
+  // do not have access to the theme context.
+  // We also update the body class to match the theme, so elements such as the footer update correctly.
+  useEffect(() => {
+    Lab2Registry.getInstance().setTheme(theme);
+    const themeDowncase = theme.toLowerCase();
+    const oldTheme = themeDowncase === 'light' ? 'dark' : 'light';
+    if (document.body.classList.contains(`background-${oldTheme}`)) {
+      document.body.classList.remove(`background-${oldTheme}`);
+    }
+    document.body.classList.add(`background-${themeDowncase}`);
+  }, [theme]);
 
   // Store the level ID provided by App Options in redux if necessary.
   // This is needed on pages without a header, such as the share view.
@@ -64,19 +126,32 @@ const Lab2Wrapper: React.FunctionComponent<Lab2WrapperProps> = ({children}) => {
     }
   }, [isShareView, dispatch]);
 
-  // Add listeners to cancel in any-progress text to speech on level change or reload.
+  // If we are cached, and there is a user app options path because we are in a script
+  // level, then make an async call to the server to find out whether the user is an
+  // instructor, and if they are, then update the user role.  This is needed for the
+  // teacher panel to appear in cached levels.
+  const userAppOptionsPath = useSelector(getUserAppOptionsPath);
   useEffect(() => {
-    const notifier = Lab2Registry.getInstance().getLifecycleNotifier();
-    notifier.addListener(LifecycleEvent.LevelChangeRequested, cancelSpeech);
-    notifier.addListener(LifecycleEvent.LevelLoadStarted, cancelSpeech);
-    return () => {
-      notifier.removeListener(
-        LifecycleEvent.LevelChangeRequested,
-        cancelSpeech
+    if (getPublicCaching() && userAppOptionsPath) {
+      HttpClient.fetchJson<PartialUserAppOptions>(userAppOptionsPath).then(
+        ({value}) => {
+          if (value.isInstructor) {
+            dispatch(setUserRoleInCourse(CourseRoles.Instructor));
+          }
+        }
       );
-      notifier.removeListener(LifecycleEvent.LevelLoadStarted, cancelSpeech);
-    };
-  }, []);
+    }
+  }, [dispatch, userAppOptionsPath]);
+
+  // Add listeners to cancel in any-progress text to speech on level change or reload.
+  useLifecycleNotifier(LifecycleEvent.LevelChangeRequested, cancel);
+  useLifecycleNotifier(LifecycleEvent.LevelLoadStarted, cancel);
+
+  const blockedType = isBlockedAbuse
+    ? 'projectAbuse'
+    : projectSharingDisabled
+    ? 'projectSharingDisabled'
+    : undefined;
 
   return (
     <ErrorBoundary
@@ -97,10 +172,22 @@ const Lab2Wrapper: React.FunctionComponent<Lab2WrapperProps> = ({children}) => {
           isShareView && moduleStyles.labContainerShareView
         )}
       >
-        {children}
+        {levelPropertiesMap && (
+          // Don't display children (including lab views) until we have loaded level properties.
+          <LevelPropertiesWrapper levelPropertiesMap={levelPropertiesMap}>
+            {children}
+          </LevelPropertiesWrapper>
+        )}
         <Loading isLoading={isLoading} />
 
         {isPageError && <ErrorUI message={errorMessage} />}
+        {blockedType && (
+          <ProjectBlockedUI
+            blockedType={blockedType}
+            isProjectValidator={isProjectValidator}
+          />
+        )}
+        <ScreenAnalyticsOverlay />
       </div>
     </ErrorBoundary>
   );

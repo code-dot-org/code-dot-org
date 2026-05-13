@@ -12,15 +12,22 @@ export type Lesson = {
     Teacher: Resource[];
     Student: Resource[];
   };
+  hasLessonPlan: boolean;
+  isLockable: boolean;
 };
 
 export type Resource = {
   key: string;
-  name: string;
   url: string;
-  downloadUrl?: string;
-  audience: string;
   type: string;
+  // For non-custom resources, name is used
+  name?: string;
+  downloadUrl?: string;
+  audience?: string;
+  // For custom resources, title is used instead of name
+  id?: number;
+  title?: string;
+  content?: string;
 };
 
 export type MaterialType =
@@ -30,7 +37,10 @@ export type MaterialType =
   | 'LESSON_PLAN'
   | 'STANDARDS'
   | 'VOCABULARY'
-  | 'LINK';
+  | 'LINK'
+  | 'CUSTOM';
+
+export const CUSTOM_RESOURCE_TYPES = ['AidiffExitTicket', 'AidiffLessonHook'];
 
 export const computeMaterialType = (
   resourceType: string,
@@ -42,7 +52,7 @@ export const computeMaterialType = (
     } else {
       return 'GOOGLE_DOC';
     }
-  } else if (resourceType.includes('Video')) {
+  } else if (resourceType?.includes('Video')) {
     return 'VIDEO';
   } else if (resourceType === 'Lesson Plan') {
     return 'LESSON_PLAN';
@@ -50,7 +60,14 @@ export const computeMaterialType = (
     return 'STANDARDS';
   } else if (resourceType === 'Vocabulary') {
     return 'VOCABULARY';
+  } else if (CUSTOM_RESOURCE_TYPES.includes(resourceType)) {
+    return 'CUSTOM';
   } else {
     return 'LINK';
   }
+};
+
+export type AudioSummaryTranscriptLine = {
+  timeStamp: string;
+  text: string;
 };

@@ -1,3 +1,6 @@
+import * as Observability from '@code-dot-org/core/plugins/observability';
+
+import DCDO from '@cdo/apps/dcdo';
 import {getBrowserName} from '@cdo/apps/util/browser-detector';
 import {isDevelopmentEnvironment} from '@cdo/apps/utils';
 
@@ -17,6 +20,15 @@ const CHECK_CAN_REPORT_INTERVAL_MS =
 const LOCAL_STORAGE_KEY_NAME = 'cdo-metrics-reporter-last-check-time';
 // A flag that can be toggled to send events regardless of environment
 const ALWAYS_SEND = false;
+
+const observabilityLoggerByLevel: Record<
+  LogLevel,
+  (message: string, context: Record<string, unknown>) => void
+> = {
+  INFO: (message, context) => Observability.logger.info(message, context),
+  WARNING: (message, context) => Observability.logger.warn(message, context),
+  SEVERE: (message, context) => Observability.logger.error(message, context),
+};
 
 /**
  * Reports logs and metrics, intended primarily for developer-facing
@@ -79,6 +91,10 @@ class MetricsReporter {
 
   /**
    * Publish a metric.
+   *
+   * Note that this will send two metrics, with and without the browser version dimension
+   * (the browser name dimension is included in both).
+   * This allows us to more easily aggregate metrics by browser.
    */
   publishMetric(
     name: string,
@@ -96,7 +112,24 @@ class MetricsReporter {
       console.info('[MetricsReporter] ' + JSON.stringify(metric));
       return;
     }
-    this.sendMetric(metric);
+
+    if (DCDO.get('frontend-observability-enabled', false)) {
+      const dimensionAttributes = Object.fromEntries(
+        metric.dimensions
+          .filter(d => d?.name && d?.value)
+          .map(d => [d.name, d.value])
+      );
+      Observability.metrics.count(name, value, {unit, ...dimensionAttributes});
+    }
+
+    // Send a version of the metric with and without the browser version dimension
+    this.sendMetrics([
+      metric,
+      {
+        ...metric,
+        dimensions: [...metric.dimensions, this.getBrowserVersionDimension()],
+      },
+    ]);
   }
 
   private async log(level: LogLevel, message: string | object) {
@@ -106,8 +139,16 @@ class MetricsReporter {
       deviceInfo: this.getDeviceInfo(),
     };
 
+    if (DCDO.get('frontend-observability-enabled', false)) {
+      this.sendToObservabilityLogger(level, message);
+    }
+
     if (!this.isReportingEnabled()) {
       this.fallbackLog(payload);
+      return;
+    }
+
+    if (!DCDO.get('browser-events-enabled', true)) {
       return;
     }
 
@@ -119,16 +160,48 @@ class MetricsReporter {
     }
   }
 
-  private async sendMetric(metric: MetricDatum) {
+  private sendToObservabilityLogger(level: LogLevel, message: string | object) {
+    // TODO: Refactor all log entrypoints (logInfo, logWarning, logError) to
+    // accept explicit (msg: string, context: object) signatures once we fully
+    // migrate to publishing directly to the log provider. Until then, we feel
+    // for known string fields to use as the Sentry log message.
+    if (typeof message === 'string') {
+      observabilityLoggerByLevel[level](message, this.getDeviceInfo());
+    } else {
+      const {
+        message: msgField,
+        errorMessage,
+        ...rest
+      } = message as Record<string, unknown>;
+      let msgStr: string;
+      if (typeof msgField === 'string') {
+        msgStr = msgField;
+      } else if (typeof errorMessage === 'string') {
+        msgStr = errorMessage;
+      } else {
+        msgStr = level;
+      }
+      observabilityLoggerByLevel[level](msgStr, {
+        ...this.getDeviceInfo(),
+        ...rest,
+      });
+    }
+  }
+
+  private async sendMetrics(metrics: MetricDatum[]) {
     if (!this.isReportingEnabled()) {
-      this.fallbackLog(metric);
+      this.fallbackLog(metrics);
+      return;
+    }
+
+    if (!DCDO.get('browser-events-enabled', true)) {
       return;
     }
 
     try {
-      await this.metricsApi.sendMetricData([metric]);
+      await this.metricsApi.sendMetricData(metrics);
     } catch (error) {
-      this.fallbackLog(metric);
+      this.fallbackLog(metrics);
       this.handleError(error as Error);
     }
   }
@@ -143,7 +216,7 @@ class MetricsReporter {
     }
   }
 
-  private getDeviceInfo(): object {
+  private getDeviceInfo(): Record<string, unknown> {
     return {
       user_agent: window.navigator.userAgent,
       window_width: window.innerWidth,
@@ -163,11 +236,14 @@ class MetricsReporter {
         name: 'Browser',
         value: getBrowserName(),
       },
-      {
-        name: 'BrowserVersion',
-        value: getBrowserName(true),
-      },
     ];
+  }
+
+  private getBrowserVersionDimension(): MetricDimension {
+    return {
+      name: 'BrowserVersion',
+      value: getBrowserName(true),
+    };
   }
 
   private fallbackLog(payload: object) {

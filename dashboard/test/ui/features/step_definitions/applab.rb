@@ -32,7 +32,7 @@ end
 
 Given /^I am on the (\d+)(?:st|nd|rd|th)? App ?Lab test level$/ do |level_index|
   steps <<-GHERKIN
-    And I am on "http://studio.code.org/s/allthethings/lessons/#{APPLAB_ALLTHETHINGS_LESSON}/levels/#{level_index}"
+    And I am on "http://studio.code.org/courses/allthethingscourse/units/1/lessons/#{APPLAB_ALLTHETHINGS_LESSON}/levels/#{level_index}"
     And I wait for the lab page to fully load
   GHERKIN
 end
@@ -209,7 +209,7 @@ def drag_grippy(element_js, delta_x, delta_y)
 end
 
 And /^I drag the instructions grippy by ([-|\d]+) pixels$/ do |delta|
-  drag_grippy('$(".fa-ellipsis-h").eq(0).parent()', 0, delta)
+  drag_grippy('$(".fa-ellipsis").eq(0).parent()', 0, delta)
 end
 
 And /^I drag the visualization grippy by ([-|\d]+) pixels$/ do |delta|
@@ -337,7 +337,7 @@ And /^I drag element "([^"]*)" ([\d]+) horizontally and ([\d]+) vertically$/ do 
 end
 
 And /^I open the debug console$/ do
-  steps 'And I click selector "#debug-area-header .fa-chevron-circle-up" if it exists'
+  steps 'And I click selector "#debug-area-header .fa-circle-chevron-up" if it exists'
 end
 
 Then(/^the share link includes "([^"]*)"$/) do |expected_text|

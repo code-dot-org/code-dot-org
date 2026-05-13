@@ -56,7 +56,7 @@
       "sitting.png": "957e5eb4-a970-4858-84b7-b4da9a6e904d.png"
     },
     "name_suffix": "_2025",
-    "ai_tutor_available": true
+    "ai_tutor_available": "true"
   },
   "published": true,
   "audit_log": "[{\"changed_at\":\"2024-01-17T00:24:16.653+00:00\",\"changed\":[\"cloned from \\\"CSA U7L1-L1d_2023\\\"\"],\"cloned_from\":\"CSA U7L1-L1d_2023\"}]"

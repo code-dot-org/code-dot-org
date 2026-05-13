@@ -11,11 +11,13 @@ import {expect} from '../../../../util/reconfiguredChai'; // eslint-disable-line
 const MOCK_DATA = {
   email: 'test@code.org',
   registrationID: '12345',
+  lmsName: 'testLMS',
 };
 
 const DEFAULT_PROPS = {
   logoUrl: 'https://code.org/assets/logo.svg',
   registrationID: MOCK_DATA.registrationID,
+  lmsName: MOCK_DATA.lmsName,
 };
 
 describe('LTI Dynamic Registration Page', () => {

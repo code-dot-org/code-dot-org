@@ -1,0 +1,34 @@
+<Javalab>
+  <config><![CDATA[{
+  "game_id": 68,
+  "created_at": "2025-12-19T16:12:19.000Z",
+  "level_num": "custom",
+  "user_id": 1,
+  "properties": {
+    "encrypted": "false",
+    "instructions_important": "false",
+    "teacher_markdown": "Teachers should see this extra info.",
+    "long_instructions": "## Welcome to the Theater!\r\n\r\nHead over to the asset manager and upload an image of yourself. Your picture from the https://code.org/about/team page would be a great option!\r\n\r\n![](https://images.code.org/718dc869168a74a6382156c6b7b31a08-image-1627678801303.png)\r\n\r\nOnce you've finished uploading your image, take a look at the code and replace the sample text with your image name.\r\n\r\n![](https://images.code.org/d046446202282dfbdb9ce666565afc46-image-1627678635564.png)\r\n\r\nThat's it! Turn your volume up, click \"Run\" and watch (and hear) your creation come to life!",
+    "mini_rubric": "false",
+    "hide_share_and_remix": "false",
+    "csa_view_mode": "theater",
+    "parent_level_id": 28644,
+    "start_sources": {
+      "MyTheater.java": {
+        "text": "import org.code.theater.Theater;\nimport org.code.theater.Scene;\nimport org.code.theater.Instrument;\nimport org.code.media.Color;\nimport org.code.media.Image;\nimport org.code.media.Pixel;\nimport java.io.FileNotFoundException;\n\npublic class MyTheater {\n  public static void main(String[] args) throws Exception {\n    // ----- Edit this to add your own image! -----\n  \tScene scene = createMovie(true, \"dog.jpeg\");\n\n  \tTheater.playScenes(scene);\n  }\n\n  private static double wholeNote = 2.856;\n  private static double halfNote = 1.428;\n  private static double quarterNote = 0.714;\n  private static double eigthNote = 0.357;\n  private static double sixteenthNote = 0.1785;\n  private static int g = 67;\n  private static int a = 69;\n  private static int b = 71;\n  private static int c = 72;\n  private static int d = 74;\n  private static int e = 76;\n  private static int f = 77;\n \n  public static Scene createMovie(boolean wearMedal, String imageName) throws FileNotFoundException {\n    double eigthNoteWithDecay = eigthNote + sixteenthNote;\n  \tScene scene = new Scene();\n    scene.removeFillColor();\n    scene.setStrokeWidth(5);\n  \n  \t// First sequence and rings\n    scene.pause(eigthNote);\n  \tscene.playNote(Instrument.PIANO, g, eigthNoteWithDecay);\n    scene.setStrokeColor(Color.BLUE);\n    scene.drawEllipse(40, 50, 100, 100);\n    scene.pause(eigthNote);\n  \tscene.playNote(Instrument.PIANO, c, eigthNoteWithDecay);\n    scene.setStrokeColor(Color.BLACK);\n    scene.drawEllipse(150, 50, 100, 100);\n    scene.pause(eigthNote);\n  \tscene.playNote(Instrument.PIANO, e, eigthNoteWithDecay);\n    scene.setStrokeColor(Color.RED);\n    scene.drawEllipse(260, 50, 100, 100);\n    scene.pause(eigthNote);\n  \tscene.playNote(Instrument.PIANO, a, wholeNote+eigthNote);\n    scene.setStrokeColor(Color.GOLD);\n    scene.drawEllipse(94, 100, 100, 100);\n    scene.pause(eigthNote);\n    scene.setStrokeColor(Color.GREEN);\n    scene.drawEllipse(206, 100, 100, 100);\n    scene.pause(wholeNote);\n\n    // Second Note Sequence and face\n  \tImage im = new Image(imageName);\n  \tscene.drawImage(im, 110, 210, 180, 180, 0);\n  \tscene.playNote(Instrument.PIANO, a, eigthNoteWithDecay);\n    scene.pause(eigthNote);\n  \tscene.playNote(Instrument.PIANO, b, eigthNoteWithDecay);\n    scene.pause(eigthNote);\n  \tscene.playNote(Instrument.PIANO, c, eigthNoteWithDecay);\n    scene.pause(eigthNote);\n  \tscene.playNote(Instrument.PIANO, f, eigthNoteWithDecay);\n    scene.pause(eigthNote);\n\n    // Draw medal\n    if (wearMedal) {\n      scene.setStrokeWidth(2);\n      scene.setStrokeColor(Color.GRAY);\n      scene.setFillColor(Color.NAVY);\n      scene.drawShape(new int[]{154,310,194,360,206,360,166,310},true);\n      scene.drawShape(new int[]{234,310,194,360,206,360,246,310},true);\n  \t  scene.setStrokeWidth(2);\n      scene.setStrokeColor(Color.GRAY);\n      scene.setFillColor(Color.GOLD);\n      scene.drawEllipse(186, 360, 28, 28);\n    } else {\n      scene.setStrokeWidth(2);\n      scene.setStrokeColor(Color.GRAY);\n      scene.setFillColor(Color.NAVY);\n      scene.drawShape(new int[]{124,226,124,270,136,270,136,226},true);\n  \t  scene.setStrokeWidth(2);\n      scene.setStrokeColor(Color.GRAY);\n      scene.setFillColor(Color.GOLD);\n      scene.drawEllipse(116, 260, 28, 28); \n    }\n    \n  \tscene.playNote(Instrument.PIANO, e, sixteenthNote);\n    scene.pause(sixteenthNote);\n  \tscene.playNote(Instrument.PIANO, d, sixteenthNote);\n    scene.pause(sixteenthNote);\n  \tscene.playNote(Instrument.PIANO, e, eigthNoteWithDecay);\n    scene.pause(eigthNote);\n  \tscene.playNoteAndPause(Instrument.PIANO, c, eigthNote+wholeNote+halfNote+eigthNote);\n\n    return scene;\n  }\n}\n",
+        "isVisible": true,
+        "tabOrder": 0
+      }
+    },
+    "starter_assets": {
+      "dog.jpeg": "15ede25f-6d66-4e99-9347-e7956da817bc.jpeg"
+    },
+    "ai_tutor_available": "true",
+    "submittable": "false",
+    "name_suffix": "_cs50"
+  },
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2025-12-19T16:12:19.915+00:00\",\"changed\":[\"cloned from \\\"Allthethings Java Lab 4\\\"\"],\"cloned_from\":\"Allthethings Java Lab 4\"}]"
+}]]></config>
+</Javalab>

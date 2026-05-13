@@ -5,10 +5,6 @@ description 'description here'
 markdown <<MARKDOWN
 # Expressions
 
-<img src="https://images.code.org/5de949b2444cea4cd726ff53548b8702-image-1727203455539.png" alt="magnifying glass" width="50px" style="border-radius:20px; float:left; margin: 0 0 10px 0px;">
-
-### What did you discover from the modifications you made to the previous code?
-
 ## Expressions
 
 #### An **expression** is a combination of data and operators that evaluates a to a single value.
@@ -16,7 +12,9 @@ markdown <<MARKDOWN
 ![](https://images.code.org/57475ec41c652afa5db079b72fc99945-image-1727211392306.png)
 
 ## Python Operators 
-#### A Python operator is a special symbol or keyword that performs a specific operation on one or more operands (values or variables). 
+#### A **Python operator** is a special symbol or keyword that performs a specific operation on one or more operands (values or variables).
+
+#### **Operands** are the inputs (such as numbers, strings, or variables) that the operator acts upon to produce a result.
 
 #### **Common operators:** 
 
@@ -47,4 +45,7 @@ markdown <<MARKDOWN
             <td style="font-size: 14pt;">Modulus (remainder of division)</td>
         </tr>
     </table>
+    <div style="clear:both;"></div>
+
+## Next up, a *Modify* level using expressions!
 MARKDOWN

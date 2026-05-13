@@ -4,6 +4,10 @@
     "k5gettingstarted",
     "self-paced-pl-coding-with-ai-2024"
   ],
+  "original_script_names": [
+    "self-paced-pl-coding-with-ai-2024",
+    "k5gettingstarted"
+  ],
   "published_state": "stable",
   "instruction_type": "self_paced",
   "participant_audience": "teacher",

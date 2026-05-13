@@ -41,7 +41,7 @@
     },
     "teacher_markdown": "Students should notice that the `Content`, `Movie`, and `TVShow` classes all declare variables `title` and `year`.",
     "name_suffix": "_pilot-2025",
-    "ai_tutor_available": true
+    "ai_tutor_available": "false"
   },
   "published": true,
   "audit_log": "[{\"changed_at\":\"2024-08-01T22:17:14.374+00:00\",\"changed\":[\"cloned from \\\"CSA U2L1-L2_2025\\\"\"],\"cloned_from\":\"CSA U2L1-L2_2025\"}]"

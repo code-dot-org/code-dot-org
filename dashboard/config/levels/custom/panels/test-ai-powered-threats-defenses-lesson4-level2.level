@@ -1,0 +1,47 @@
+<Panels>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 73,
+  "created_at": "2025-07-24T20:41:18.000Z",
+  "level_num": "custom",
+  "user_id": 18603,
+  "properties": {
+    "encrypted": "false",
+    "offer_browser_tts": "false",
+    "panels": [
+      {
+        "text": "##Can You Trust That Voice?\nYou miss a call from someone claiming to be your principal. The voicemail sounds urgent—and convincing.\n\nBut it wasn’t your principal.\n\nIt was a **vishing attack**.",
+        "imageUrl": "https://images.code.org/fb4b8cb2fb0ffdbdac74620c47e96ea9-Screenshot 2025-07-24 160534.png",
+        "key": "test-ai-powered-threats-defenses-lesson3-level3-6ea9678a-ce7e-41b9-abb2-d878eb87ac30",
+        "typing": false,
+        "fadeInOverPrevious": true,
+        "layout": "text-top-left"
+      },
+      {
+        "text": "##What Is Vishing?\n\n**Vishing = Voice phishing.**\n\nScammers call or leave voicemails pretending to be someone they’re not—like tech support, family, or even government agents.\n\nThey try to get passwords, account info, or money.",
+        "imageUrl": "https://images.code.org/769e5c4253ecf3b47d53600197632f02-Screenshot 2025-07-24 155939.png",
+        "key": "test-ai-powered-threats-defenses-lesson3-level3-91f6e938-059e-4b97-b572-350b4fa8bbb8",
+        "fadeInOverPrevious": true,
+        "layout": "text-bottom-right"
+      },
+      {
+        "text": "##What Makes Vishing Convincing?\n\nVishing works because of:\n* Authority (*“I’m calling from the IRS.”*)\n* Urgency (*“You must act now.”*)\n* Emotion (*“Your account will be locked!”*) \n\nThey pressure you into acting before thinking.",
+        "imageUrl": "https://images.code.org/2ef14e700daf308a165ce10f1e4cbce2-Screenshot 2025-07-24 161017.png",
+        "key": "test-ai-powered-threats-defenses-lesson3-level3-79557c5a-46fd-42a9-8bcd-652ea77a7ed0",
+        "layout": "text-bottom-left"
+      },
+      {
+        "text": "##AI Is Changing the Game\n\nWith **AI voice cloning**, scammers can now create fake voicemails that sound like someone you know.\n\nSome vishing attacks use AI to impersonate bosses, parents, or friends.\n\nIt’s fast, cheap, and creepy.",
+        "imageUrl": "https://images.code.org/2e53dd52e964c79682e844bdf97b8b8f-Screenshot 2025-07-24 162331.png",
+        "key": "test-ai-powered-threats-defenses-lesson3-level3-10f16dff-0ead-45fb-8aaf-e7607fe82cca"
+      },
+      {
+        "text": "##Real-Life Example\n\nTime to investigate. In another tab, search: “Recent vishing scam” and find a real example and answer:\n* Who did the scammer pretend to be?\n* What did they want?\n* How did they make it believable?",
+        "imageUrl": "https://images.code.org/5f9619c8d74e45be002a37914c332107-Screenshot 2025-07-24 163046.png",
+        "key": "test-ai-powered-threats-defenses-lesson4-level2-925abbcf-9de2-46b6-b7bc-7ee3cc32bedd"
+      }
+    ]
+  },
+  "audit_log": "[{\"changed_at\":\"2025-07-24T20:41:18.074+00:00\",\"changed\":[\"cloned from \\\"test-ai-powered-threats-defenses-lesson4-level1\\\"\"],\"cloned_from\":\"test-ai-powered-threats-defenses-lesson4-level1\"},{\"changed_at\":\"2025-07-24 20:41:21 +0000\",\"changed\":[],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2025-07-24 22:49:20 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2025-07-24 23:31:02 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
+}]]></config>
+</Panels>

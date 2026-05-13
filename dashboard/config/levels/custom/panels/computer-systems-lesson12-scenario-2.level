@@ -1,0 +1,34 @@
+<Panels>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 73,
+  "created_at": "2025-02-11T18:14:56.000Z",
+  "level_num": "custom",
+  "user_id": 18603,
+  "properties": {
+    "encrypted": "false",
+    "offer_browser_tts": "true",
+    "panels": [
+      {
+        "text": "##Scenario 2\n**Should AI Hiring Tools Be Used for College Admissions?**\n\nSome universities are considering AI-powered tools to review applications, rank candidates, and flag potential concerns in college admissions. These tools analyze test scores, essays, extracurricular activities, and recommendation letters to predict student success.",
+        "imageUrl": "https://images.code.org/2647d6c4d1b067a3ab887edd9d6346ef-closeup-hand-and-a-person-with-a-document-for-acc-2023-11-27-05-35-57-utc.jpg",
+        "key": "undefined-ae4d7072-fc5f-4cfa-9fb4-dd5c9540d2ea",
+        "layout": "text-top-right"
+      },
+      {
+        "text": "Scenario Roles:\n* High School Applicant\n* College Admissions Officer\n* Civil Rights Advocate\n* Tech Company Representative",
+        "imageUrl": "https://images.code.org/038ffdf471b76dfc26c086b0c4cc0de4-10.jpg",
+        "key": "undefined-96e1ca3b-ed52-4eaa-b731-18f40f537e1a",
+        "layout": "text-top-center"
+      },
+      {
+        "text": "**Discussion Questions:**\n\n* Would you trust AI to decide your college admission, and could it unfairly favor some students over others?\n\n* Who should be responsible if an AI makes an unfair decision, and should students have access to how their applications are evaluated?\n\n* Can an AI truly understand what makes a student a good fit for a school, or does it miss important qualities?",
+        "imageUrl": "",
+        "key": "undefined-3b8137d9-fcb7-43b7-8302-60cb3bf5ae98",
+        "layout": "text-bottom-center"
+      }
+    ]
+  },
+  "audit_log": "[{\"changed_at\":\"2025-02-11T18:14:56.506+00:00\",\"changed\":[\"cloned from \\\"computer-systems-lesson12-scenario-1\\\"\"],\"cloned_from\":\"computer-systems-lesson12-scenario-1\"},{\"changed_at\":\"2025-02-11 18:16:36 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2025-02-21 17:45:51 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]"
+}]]></config>
+</Panels>

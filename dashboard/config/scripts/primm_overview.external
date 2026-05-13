@@ -1,0 +1,29 @@
+name 'PRIMM_Overview'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Pedagogical Approach: PRIMM
+
+![](https://images.code.org/3e21a71fb6d4b8bc1c20cb5e933e8a43-image-1732223096976.04.53 PM.png)
+
+
+## What is PRIMM?
+
+#### PRIMM stands for <b> Predict, Run, Investigate, Modify and Make </b>. These five stages form a framework that has been shown to be effective at helping students to learn to program. These stages are designed to support learners of various levels, including beginners. Teachers report that using PRIMM makes it easy to differentiate coding projects for students of different ability levels. The framework was developed by computing educational researcher Sue Sentance using <a href="https://primmportal.com/research/" target="_blank">research</a>  and known effective teaching practices. Code.org’s version of PRIMM was informed by this work and is detailed below. 
+
+
+##How can PRIMM be used on Code.org?
+####We recommend PRIMM for teachers who want to teach computer science using open-ended projects or who need to design lessons to fit specific educational outcomes. When compared with our full computer science courses, teaching with PRIMM as a framework gives the teacher more ownership of the context and desired outcomes of the lesson. We’ve used PRIMM to structure some of our new CS Connections projects. We hope that you will adapt and remix them to meet your needs!
+
+#### As your class moves through a PRIMM progression, students should feel an increased sense of ownership for their code. As the teacher, you’ll drive the early stages with whole class prompts and discussions. The later stages are more student-driven. You’ll guide and support student learning rather than give explicit instruction.
+
+![](https://images.code.org/205927c25a5cd54d8180180d956cba5c-image-1732223220188.06.54 PM.png)
+
+
+##Want to learn more about PRIMM? Click <a href="https://docs.google.com/document/d/1EvanAWaEN1gLfkld2u_bWL1HcWnb_GB2HKJJU9aJA2o/edit?tab=t.0#heading=h.brf36td6jka" target="_blank">here</a>
+
+<div style="clear:both"/>
+
+
+MARKDOWN

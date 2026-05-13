@@ -1,7 +1,6 @@
+import {Typography, Button as MuiButton} from '@mui/material';
 import React from 'react';
 
-import {Button, buttonColors} from '@cdo/apps/componentLibrary/button';
-import {Heading3} from '@cdo/apps/componentLibrary/typography';
 import i18n from '@cdo/locale';
 
 import BaseDialog from '../BaseDialog';
@@ -24,16 +23,22 @@ const ProjectNameFailureDialog: React.FunctionComponent<
       isOpen={isOpen}
       handleClose={handleClose}
     >
-      <Heading3>{i18n.nameFailureDialogTitle()}</Heading3>
+      <Typography variant="h3" gutterBottom>
+        {i18n.nameFailureDialogTitle()}
+      </Typography>
       <div className={styles.contents}>
         <p>{i18n.nameFailureDialogBody({text: flaggedText})}</p>
       </div>
       <DialogFooter rightAlign>
-        <Button
-          text={i18n.ok()}
+        <MuiButton
+          variant="contained"
+          color="primary"
+          size="medium"
           onClick={handleClose}
-          color={buttonColors.purple}
-        />
+          type="button"
+        >
+          {i18n.ok()}
+        </MuiButton>
       </DialogFooter>
     </BaseDialog>
   );

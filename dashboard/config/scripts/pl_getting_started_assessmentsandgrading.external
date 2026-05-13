@@ -1,0 +1,54 @@
+name 'PL_getting_started_assessmentsandgrading'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Assessment and Grading with Code.org
+
+#### Code.org curriculum provides opportunities for formative and summative assessments. 
+
+
+
+## What Grade Do You Teach?
+
+
+<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
+    <summary style="font-size: 1.5em; font-weight: bold;">Course Specific Guides to Assessment</summary>
+<div style="margin-top: 20px; margin-left: 20px; margin-right: 20px;">
+    <p>
+
+
+#### Each course provides a Guide to Assessment. Guides can be found under the "Teacher Resources" drop-down. 
+
+![](https://images.code.org/975dc256e30b3e5ab77d02fd41346287-image-1732222540780.png)
+
+
+</p></div>
+</details>
+
+<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
+    <summary style="font-size: 1.5em; font-weight: bold;">Middle School</summary>
+<div style="margin-top: 20px; margin-left: 20px; margin-right: 20px;">
+    <p>
+
+
+#### insert flowchart here
+</p></div>
+</details>
+
+<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
+    <summary style="font-size: 1.5em; font-weight: bold;">High School</summary>
+<div style="margin-top: 20px; margin-left: 20px; margin-right: 20px;">
+    <p>
+
+
+#### Insert flowchart here
+</p></div>
+</details>
+
+
+
+
+
+
+MARKDOWN

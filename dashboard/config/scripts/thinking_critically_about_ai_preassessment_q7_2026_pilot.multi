@@ -1,0 +1,14 @@
+name 'thinking-critically-about-ai-preassessment-q7_2026-pilot'
+
+question 'A student wants to use an AI writing assistant to help complete a class essay. Which approach best demonstrates responsible AI use?'
+
+wrong 'Copy the AI\'s output directly into the assignment without reading it.'
+wrong 'Ask the AI to write the entire essay and submit it as your own work.'
+right 'Use the AI to brainstorm ideas, then write the essay yourself and review any AI suggestions critically.'
+wrong 'Avoid using AI entirely, since it is always harmful to use in school.'
+
+allow_multiple_attempts true
+
+teacher_markdown <<MARKDOWN
+Lesson 4
+MARKDOWN

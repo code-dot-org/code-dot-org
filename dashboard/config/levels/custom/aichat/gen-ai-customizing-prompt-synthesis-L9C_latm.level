@@ -1,0 +1,55 @@
+<Aichat>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 71,
+  "created_at": "2025-03-06T22:46:33.000Z",
+  "level_num": "custom",
+  "user_id": 4,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "## Social Media Sound-Alike\r\n\r\nCreate a chatbot that generates social media posts in the same style and voice as someone recognizable on social media. The user can provide a topic and the chatbot responds with a post on that topic.\r\n\r\nYou should either make up examples in their voice and style, or provide real examples from their social media posts.\r\n",
+    "system_prompt": "deprecated",
+    "bot_title": "deprecated",
+    "bot_description": "deprecated",
+    "disable_projects": true,
+    "aichat_settings": {
+      "initialCustomizations": {
+        "selectedModelId": "gpt-4o-mini",
+        "temperature": "0.5",
+        "systemPrompt": "",
+        "retrievalContexts": [
+
+        ],
+        "modelCardInfo": {
+          "botName": "",
+          "description": "",
+          "intendedUse": "",
+          "limitationsAndWarnings": "",
+          "testingAndEvaluation": "",
+          "exampleTopics": [
+
+          ],
+          "isPublished": false
+        }
+      },
+      "visibilities": {
+        "selectedModelId": "hidden",
+        "temperature": "editable",
+        "systemPrompt": "editable",
+        "retrievalContexts": "hidden",
+        "modelCardInfo": "hidden"
+      },
+      "hidePresentationPanel": true,
+      "availableModelIds": [
+        "gpt-4o-mini"
+      ],
+      "levelSystemPrompt": "Por favor responde a mis preguntas en espanol."
+    },
+    "display_name": "Social Media Sound-Alike",
+    "bubble_choice_description": "Create a chatbot that generates social media posts in the same style and voice as someone recognizable on social media using examples.",
+    "thumbnail_url": "https://images.code.org/c3bf7e4be3229519276e4f30d202422a-Lesson 5 - Level 8C - Social Media Sound Alike.png",
+    "name_suffix": "_latm"
+  },
+  "audit_log": "[{\"changed_at\":\"2025-03-06T22:46:33.916+00:00\",\"changed\":[\"cloned from \\\"gen-ai-customizing-prompt-synthesis-L9C_2024\\\"\"],\"cloned_from\":\"gen-ai-customizing-prompt-synthesis-L9C_2024\"},{\"changed_at\":\"2025-03-07 19:54:59 +0000\",\"changed\":[\"aichat_settings\"],\"changed_by_id\":18914,\"changed_by_email\":\"samantha.schwartz+levelbuilder@code.org\"}]"
+}]]></config>
+</Aichat>

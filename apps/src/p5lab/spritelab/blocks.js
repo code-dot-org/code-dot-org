@@ -1,12 +1,34 @@
-import {NO_OPTIONS_MESSAGE} from '@cdo/apps/blockly/constants';
-import {parseSoundPathString} from '@cdo/apps/blockly/utils';
+import {Order} from 'blockly/javascript';
+
+import CdoFieldAnimationDropdown from '@cdo/apps/blockly/addons/cdoFieldAnimationDropdown';
+import CdoFieldBehaviorPicker from '@cdo/apps/blockly/addons/cdoFieldBehaviorPicker';
+import {CdoFieldBitmap} from '@cdo/apps/blockly/addons/cdoFieldBitmap';
+import CdoFieldButton from '@cdo/apps/blockly/addons/cdoFieldButton';
+import CdoFieldColour from '@cdo/apps/blockly/addons/cdoFieldColour';
+import CdoFieldImage from '@cdo/apps/blockly/addons/cdoFieldImage';
+import CdoFieldLabel from '@cdo/apps/blockly/addons/cdoFieldLabel';
+import CdoFieldVariable from '@cdo/apps/blockly/addons/cdoFieldVariable';
+import FunctionEditor from '@cdo/apps/blockly/addons/functionEditor';
+import {BLOCK_TYPES, NO_OPTIONS_MESSAGE} from '@cdo/apps/blockly/constants';
+import {blocks as behaviorBlocks} from '@cdo/apps/blockly/customBlocks/behaviorBlocks';
+import {
+  editButtonHandler,
+  toolboxConfigurationSupportsEditButton,
+} from '@cdo/apps/blockly/customBlocks/proceduresBlocks';
+import {
+  defineNewBlockGenerator,
+  locationField,
+  parseSoundPathString,
+  registerCustomProcedureBlocks,
+  soundField,
+} from '@cdo/apps/blockly/utils';
 import {SVG_NS} from '@cdo/apps/constants';
 import {spriteLabPointers} from '@cdo/apps/p5lab/spritelab/blockly/constants';
 import {getStore} from '@cdo/apps/redux';
+import {getAlphanumericId} from '@cdo/apps/utils';
 import i18n from '@cdo/locale';
 import spritelabMsg from '@cdo/spritelab/locale';
 
-import {TOOLBOX_EDIT_MODE} from '../../constants';
 import {changeInterfaceMode} from '../actions';
 import {P5LabInterfaceMode} from '../constants';
 import {animationSourceUrl} from '../redux/animationList';
@@ -94,7 +116,7 @@ const customInputTypes = {
           }
         });
       };
-      const fieldButton = Blockly.cdoUtils.locationField(
+      const fieldButton = locationField(
         icon,
         onChange,
         block,
@@ -113,7 +135,7 @@ const customInputTypes = {
       icon.style.fontFamily = 'FontAwesome';
       icon.textContent = ' \uf08e '; // arrow-up-right-from-square
       const onSelect = function (soundValue) {
-        block.setTitleValue(soundValue, inputConfig.name);
+        block.setFieldValue(soundValue, inputConfig.name);
       };
       const onClick = () => {
         dashboard.assets.showAssetManager(onSelect, 'audio', null, {
@@ -126,7 +148,7 @@ const customInputTypes = {
       currentInputRow
         .appendField(inputConfig.label)
         .appendField(
-          Blockly.cdoUtils.soundField(onClick, transformText, icon),
+          soundField(onClick, transformText, icon),
           inputConfig.name
         );
     },
@@ -155,7 +177,7 @@ const customInputTypes = {
       currentInputRow
         .appendField(inputConfig.label)
         .appendField(
-          new Blockly.FieldAnimationDropdown(costumeList, 32, 32, buttons),
+          new CdoFieldAnimationDropdown(costumeList, 32, 32, buttons),
           inputConfig.name
         );
     },
@@ -184,7 +206,7 @@ const customInputTypes = {
       currentInputRow
         .appendField(inputConfig.label)
         .appendField(
-          new Blockly.FieldAnimationDropdown(backgroundList, 40, 40, buttons),
+          new CdoFieldAnimationDropdown(backgroundList, 40, 40, buttons),
           inputConfig.name
         );
     },
@@ -239,7 +261,7 @@ const customInputTypes = {
       currentInputRow
         .appendField(label)
         .appendField(
-          new Blockly.FieldImage(imageUrl, width, block.thumbnailSize),
+          new CdoFieldImage(imageUrl, width, block.thumbnailSize),
           inputConfig.name
         );
     },
@@ -269,7 +291,7 @@ const customInputTypes = {
       currentInputRow
         .appendField(inputConfig.label)
         .appendField(
-          new Blockly.FieldVariable(
+          new CdoFieldVariable(
             null,
             null,
             null,
@@ -287,19 +309,74 @@ const customInputTypes = {
   },
   behaviorPicker: {
     addInput(blockly, block, inputConfig, currentInputRow) {
-      const dropdownField = new Blockly.FieldBehaviorPicker(
-        Blockly.customBlocks.getAllBehaviorOptions
-      );
+      const noBehaviorLabel = i18n.behaviorsNotFound();
+      const noBehaviorOption = [noBehaviorLabel, NO_OPTIONS_MESSAGE];
+      // We dynamically generate the list of behaviors each time the menu is
+      // opened, to ensure we have the most up-to-date list.
+      const menuGeneratorFunction = function () {
+        // Behavior definition blocks are always found on the hidden workspace.
+        const definitionWorkspace = Blockly.getHiddenDefinitionWorkspace();
+        const behaviorBlocks = definitionWorkspace
+          ?.getTopBlocks()
+          .filter(block => block.type === BLOCK_TYPES.behaviorDefinition);
+        // Menu options are an array, each option containing a human-readable part,
+        // and a language-neutral string.
+        const behaviorOptions = behaviorBlocks?.map(block => [
+          block.getProcedureModel().getName(),
+          block.behaviorId,
+        ]) || [noBehaviorOption];
+        behaviorOptions.sort();
+        // Add a "No behaviors found" option, if needed
+        if (behaviorOptions.length === 0) {
+          behaviorOptions.push(noBehaviorOption);
+        }
+        return behaviorOptions;
+      };
+
+      const dropdownField = new CdoFieldBehaviorPicker(menuGeneratorFunction);
       currentInputRow
         .appendField(inputConfig.label)
         .appendField(dropdownField, inputConfig.name);
-      Blockly.customBlocks.addBehaviorPickerEditButton.call(
-        this,
-        block,
-        inputConfig,
-        currentInputRow,
-        dropdownField
-      );
+      const behaviorsFound =
+        dropdownField.getOptions().length > 1 ||
+        dropdownField.getOptions()[0][1] !== NO_OPTIONS_MESSAGE;
+
+      // Behavior editing is only permitted using the modal function editor.
+      if (
+        behaviorsFound &&
+        Blockly.useModalFunctionEditor &&
+        // TODO: Support editing behaviors from within a modal editor workspace.
+        block.workspace.id === Blockly.getMainWorkspace().id &&
+        toolboxConfigurationSupportsEditButton(block)
+      ) {
+        const editButton = new CdoFieldButton({
+          value: i18n.edit(),
+          onClick: editButtonHandler,
+          colorOverrides: {button: 'blue', text: 'white'},
+          allowReadOnlyClick: true, // We support showing the editor even if viewing in read only mode.
+        });
+        block.inputList[block.inputList.length - 1].appendField(
+          editButton,
+          'EDIT'
+        );
+        // getProcedureModel is defined on procedure blocks as part of
+        // @blockly/block-shareable-procedures
+        // For this block, we will get the procedure based on selected
+        // dropdown field option.
+        block.getProcedureModel = function () {
+          const fieldValue = block.getFieldValue(inputConfig.name);
+          const procedureMap = block.workspace.getProcedureMap();
+          let procedure = undefined;
+          for (const value of procedureMap.values()) {
+            if (value.getName() === fieldValue) {
+              procedure = value;
+              break;
+            }
+          }
+          // We should always find the procedure in the map.
+          return procedure;
+        };
+      }
     },
     generateCode(block, arg) {
       const fieldValue = block.getFieldValue(arg.name);
@@ -332,10 +409,7 @@ const customInputTypes = {
       };
       currentInputRow
         .appendField(inputConfig.label)
-        .appendField(
-          new Blockly.FieldColour('#ff0000', undefined, options),
-          'VAL'
-        );
+        .appendField(new CdoFieldColour('#ff0000', undefined, options), 'VAL');
     },
     generateCode(block, arg) {
       return `'${block.getFieldValue(arg.name)}'`;
@@ -365,7 +439,7 @@ const customInputTypes = {
     addInput(blockly, block, inputConfig, currentInputRow) {
       currentInputRow
         .appendField(inputConfig.label)
-        .appendField(new Blockly.FieldVariable(), inputConfig.name);
+        .appendField(new CdoFieldVariable(), inputConfig.name);
     },
 
     generateCode(block, arg) {
@@ -388,10 +462,7 @@ const customInputTypes = {
       };
       currentInputRow
         .appendField(inputConfig.label)
-        .appendField(
-          new Blockly.FieldBitmap(null, null, config),
-          inputConfig.name
-        );
+        .appendField(new CdoFieldBitmap(null, null, config), inputConfig.name);
     },
     generateCode(block, arg) {
       // Convert 2d array into a string.
@@ -404,11 +475,11 @@ export default {
   costumeList,
   customInputTypes,
   install(blockly, blockInstallOptions) {
-    Blockly.cdoUtils.registerCustomProcedureBlocks();
+    registerCustomProcedureBlocks();
     // Legacy style block definitions :(
     const generator = blockly.getGenerator();
 
-    const behaviorEditor = (Blockly.behaviorEditor = new Blockly.FunctionEditor(
+    Blockly.behaviorEditor = new FunctionEditor(
       {
         FUNCTION_HEADER: i18n.behaviorEditorHeader(),
         FUNCTION_NAME_LABEL: i18n.behaviorEditorLabel(),
@@ -427,13 +498,128 @@ export default {
         Blockly.BlockValueType.SPRITE,
         Blockly.BlockValueType.LOCATION,
       ]
-    ));
+    );
 
-    Blockly.customBlocks.installBehaviorBlocks(behaviorEditor);
+    Blockly.common.defineBlocks(behaviorBlocks);
+
+    generator.forBlock.behavior_definition = function (_block, generator) {
+      const block = _block;
+      if (!generator.nameDB_) {
+        return null;
+      }
+      // If we don't have a behavior id, generate a random id.
+      // This ensures the hidden definition block will generate valid code.
+      if (!block.behaviorId) {
+        block.behaviorId = getAlphanumericId();
+      }
+      // Define a procedure with a return value.
+      const funcName = generator.nameDB_.getName(
+        block.behaviorId,
+        Blockly.Names.NameType.PROCEDURE
+      );
+
+      // Holds the additional code that is prefixed (injected before every statement) and/or
+      // suffixed (injected after every statement) to the main block of code
+      let xfix1 = '';
+      if (generator.STATEMENT_PREFIX) {
+        xfix1 += generator.injectId(generator.STATEMENT_PREFIX, block);
+      }
+      if (generator.STATEMENT_SUFFIX) {
+        xfix1 += generator.injectId(generator.STATEMENT_SUFFIX, block);
+      }
+      if (xfix1) {
+        xfix1 = generator.prefixLines(xfix1, generator.INDENT);
+      }
+      let loopTrap = '';
+      if (generator.INFINITE_LOOP_TRAP) {
+        loopTrap = generator.prefixLines(
+          generator.injectId(generator.INFINITE_LOOP_TRAP, block),
+          generator.INDENT
+        );
+      }
+
+      // Translate all the inner blocks within the current block into code
+      const branch = generator.statementToCode(block, 'STACK');
+      // Sprite Lab behavior blocks do not have return inputs, but this check is included
+      // in case we'd like to support that in the future.
+      let returnValue =
+        (block.getInput('RETURN') &&
+          generator.valueToCode(block, 'RETURN', Order.NONE)) ||
+        '';
+
+      // Contains the same code as xfix1 if both are present, but applied before the return statement
+      let xfix2 = '';
+      if (branch && returnValue) {
+        xfix2 = xfix1;
+      }
+      if (returnValue) {
+        returnValue = generator.INDENT + 'return ' + returnValue + ';\n';
+      }
+      const args = [];
+      args.push(
+        generator.nameDB_.getName(
+          i18n.thisSprite(),
+          Blockly.Names.NameType.VARIABLE
+        )
+      );
+      const variables = block.getVars();
+      for (let i = 0; i < variables.length; i++) {
+        args[i] = generator.nameDB_.getName(
+          variables[i],
+          Blockly.Names.NameType.VARIABLE
+        );
+      }
+      let code =
+        'function ' +
+        funcName +
+        '(' +
+        args.join(', ') +
+        ') {\n' +
+        xfix1 +
+        loopTrap +
+        branch +
+        xfix2 +
+        returnValue +
+        '}';
+      // Once we are on V11, we can remove this cast as scrub_ will no longer be protected.
+      code = generator.scrub_(block, code);
+      // Add % so as not to collide with helper functions in definitions list.
+      generator.provideFunction_('%' + funcName, code);
+      return null;
+    };
+    generator.forBlock.gamelab_behavior_get = function (_block, generator) {
+      const block = _block;
+      // Generating 'undefined' mimics the code for a missing block.
+      const undefinedCode = ['undefined', Order.ATOMIC];
+      // If we don't have a behavior Id, find on the definition block.
+      if (!this.behaviorId) {
+        const procedureModel = block.getProcedureModel();
+        // If there's no model, fail gracefully.
+        if (!procedureModel) {
+          return undefinedCode;
+        }
+        const definitionBlock = Blockly.Procedures.getDefinition(
+          procedureModel.getName(),
+          Blockly.getHiddenDefinitionWorkspace()
+        );
+        block.behaviorId = definitionBlock?.behaviorId;
+        // If we somehow still don't have a behavior id, fail gracefully.
+        if (!this.behaviorId) {
+          return undefinedCode;
+        }
+      }
+      if (block.behaviorId && generator.nameDB_) {
+        const name = generator.nameDB_.getName(block.behaviorId, 'PROCEDURE');
+        return [`new Behavior(${name}, [])`, Order.ATOMIC];
+      } else {
+        return null;
+      }
+    };
+    generator.forBlock.sprite_parameter_get = generator.forBlock.variables_get;
     Blockly.Blocks.sprite_variables_get = {
       // Variable getter.
       init: function () {
-        var fieldLabel = new Blockly.FieldLabel(Blockly.Msg.VARIABLES_GET_ITEM);
+        var fieldLabel = new CdoFieldLabel(Blockly.Msg.VARIABLES_GET_ITEM);
         // Must be marked EDITABLE so that cloned blocks share the same var name
         fieldLabel.EDITABLE = true;
         this.setHelpUrl('/docs/spritelab/codestudio_spriteName');
@@ -442,7 +628,7 @@ export default {
           .appendField(
             Blockly.disableVariableEditing
               ? fieldLabel
-              : new Blockly.FieldVariable(
+              : new CdoFieldVariable(
                   Blockly.Msg.VARIABLES_SET_ITEM,
                   null,
                   null,
@@ -452,7 +638,7 @@ export default {
             'VAR'
           )
           .appendField(Blockly.Msg.VARIABLES_GET_TAIL);
-        this.setStrictOutput(true, Blockly.BlockValueType.SPRITE);
+        this.setOutput(true, Blockly.BlockValueType.SPRITE);
         this.setTooltip(Blockly.Msg.VARIABLES_GET_TOOLTIP);
         this.setStyle('sprite_blocks');
       },
@@ -463,54 +649,54 @@ export default {
       },
       renameVar: function (oldName, newName) {
         if (Blockly.Names.equals(oldName, this.getFieldValue('VAR'))) {
-          this.setTitleValue(newName, 'VAR');
+          this.setFieldValue(newName, 'VAR');
         }
       },
       removeVar: Blockly.Blocks.variables_get.removeVar,
     };
-    Blockly.customBlocks.defineNewBlockGenerator(
-      generator,
-      'sprite_variables_get',
-      function () {
-        return [
-          `{name: '${Blockly.JavaScript.translateVarName(
-            this.getFieldValue('VAR')
-          )}'}`,
-          Blockly.JavaScript.ORDER_ATOMIC,
-        ];
-      }
-    );
+    defineNewBlockGenerator(generator, 'sprite_variables_get', function () {
+      return [
+        `{name: '${Blockly.JavaScript.translateVarName(
+          this.getFieldValue('VAR')
+        )}'}`,
+        Blockly.JavaScript.ORDER_ATOMIC,
+      ];
+    });
     Blockly.Variables.registerGetter(
       Blockly.BlockValueType.SPRITE,
       'sprite_variables_get'
     );
-    Blockly.customBlocks.defineNewBlockGenerator(
+    // Generator function copied and modified from core Blockly:
+    // https://github.com/google/blockly/blob/1ba0e55e8a61f4228dfcc4d0eb18b7e38666dc6c/generators/javascript/math.ts#L406-L429
+    // We need to provide this generator in order to continue using the
+    // legacy function name. Other custom blocks in pools depend on the original name.
+    defineNewBlockGenerator(
       generator,
       'math_random_int',
-      Blockly.customBlocks.mathRandomIntGenerator
+      (block, generator) => {
+        // Random integer between [X] and [Y].
+        const argument0 =
+          generator.valueToCode(block, 'FROM', Order.NONE) || '0';
+        const argument1 = generator.valueToCode(block, 'TO', Order.NONE) || '0';
+        const functionName = generator.provideFunction_(
+          'math_random_int', // Core Blockly uses 'mathRandomInt'
+          `
+function ${generator.FUNCTION_NAME_PLACEHOLDER_}(a, b) {
+  if (a > b) {
+    // Swap a and b to ensure a is smaller.
+    var c = a;
+    a = b;
+    b = c;
+  }
+  return Math.floor(Math.random() * (b - a + 1) + a);
+}
+`
+        );
+        const code = `${functionName}(${argument0}, ${argument1})`;
+        return [code, Order.FUNCTION_CALL];
+      }
     );
-    // NOTE: On the page where behaviors are created (the functions/#/edit page)
-    // blockInstallOptions is undefined.
-    if (
-      !blockInstallOptions ||
-      !blockInstallOptions.level ||
-      blockInstallOptions.level.editBlocks !== TOOLBOX_EDIT_MODE
-    ) {
-      // This is only used by CDO Blockly. When we are ready to remove support
-      // for CDO Blockly we can remove this call.
-      Blockly.Flyout.configure(Blockly.BlockValueType.BEHAVIOR, {
-        initialize(flyout, cursor) {
-          if (behaviorEditor && !behaviorEditor.isOpen()) {
-            flyout.addButtonToFlyout_(
-              cursor,
-              i18n.createBlocklyBehavior(),
-              behaviorEditor.openWithNewFunction.bind(behaviorEditor)
-            );
-          }
-        },
-        addDefaultVar: false,
-      });
-    }
+
     delete blockly.Blocks.procedures_defreturn;
     delete blockly.Blocks.procedures_ifreturn;
   },

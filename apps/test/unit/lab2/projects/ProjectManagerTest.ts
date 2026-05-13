@@ -1,9 +1,9 @@
 import {expect, assert} from 'chai'; // eslint-disable-line no-restricted-imports
 import sinon, {stubObject, StubbedInstance} from 'ts-sinon';
 
-import {RemoteChannelsStore} from '@cdo/apps/lab2/projects/ChannelsStore';
+import {ChannelsStore} from '@cdo/apps/lab2/projects/ChannelsStore';
 import ProjectManager from '@cdo/apps/lab2/projects/ProjectManager';
-import {RemoteSourcesStore} from '@cdo/apps/lab2/projects/SourcesStore';
+import {SourcesStore} from '@cdo/apps/lab2/projects/SourcesStore';
 import {ValidationError} from '@cdo/apps/lab2/responseValidators';
 import {ProjectSources, Channel} from '@cdo/apps/lab2/types';
 import {NetworkError} from '@cdo/apps/util/HttpClient';
@@ -36,16 +36,16 @@ const UPDATED_SOURCE_2 = {
 };
 
 describe('ProjectManager', () => {
-  let sourcesStore: StubbedInstance<RemoteSourcesStore>;
-  let channelsStore: StubbedInstance<RemoteChannelsStore>;
+  let sourcesStore: StubbedInstance<SourcesStore>;
+  let channelsStore: StubbedInstance<ChannelsStore>;
 
   beforeEach(() => {
-    sourcesStore = stubObject<RemoteSourcesStore>(new RemoteSourcesStore());
+    sourcesStore = stubObject<SourcesStore>(new SourcesStore());
     // We need to create separate promises for each call so they can each
     // be read from.
     sourcesStore.save.onCall(0).returns(Promise.resolve(new Response('')));
     sourcesStore.save.onCall(1).returns(Promise.resolve(new Response('')));
-    channelsStore = stubObject<RemoteChannelsStore>(new RemoteChannelsStore());
+    channelsStore = stubObject<ChannelsStore>(new ChannelsStore());
     channelsStore.load.returns(Promise.resolve(FAKE_CHANNEL));
     channelsStore.save
       .onCall(0)
@@ -57,12 +57,13 @@ describe('ProjectManager', () => {
 
   it('returns sources and channel on load', async () => {
     stubSuccessfulSourceLoad(sourcesStore);
-    const projectManager = new ProjectManager(
+    const projectManager = new ProjectManager({
       sourcesStore,
       channelsStore,
-      FAKE_CHANNEL_ID,
-      false
-    );
+      channelId: FAKE_CHANNEL_ID,
+      reduceChannelUpdates: false,
+      isStandaloneProjectLevel: false,
+    });
     const {sources, channel} = await projectManager.load();
     expect(sources).to.deep.equal(FAKE_SOURCE);
     expect(channel).to.deep.equal(FAKE_CHANNEL);
@@ -70,12 +71,13 @@ describe('ProjectManager', () => {
 
   it('triggers save immediately on first save', async () => {
     stubSuccessfulSourceLoad(sourcesStore);
-    const projectManager = new ProjectManager(
+    const projectManager = new ProjectManager({
       sourcesStore,
       channelsStore,
-      FAKE_CHANNEL_ID,
-      false
-    );
+      channelId: FAKE_CHANNEL_ID,
+      reduceChannelUpdates: false,
+      isStandaloneProjectLevel: false,
+    });
     await projectManager.load();
     await projectManager.save(UPDATED_SOURCE);
     assert.isTrue(sourcesStore.save.calledOnce);
@@ -84,12 +86,13 @@ describe('ProjectManager', () => {
 
   it('does not trigger a save if source has not changed', async () => {
     stubSuccessfulSourceLoad(sourcesStore);
-    const projectManager = new ProjectManager(
+    const projectManager = new ProjectManager({
       sourcesStore,
       channelsStore,
-      FAKE_CHANNEL_ID,
-      false
-    );
+      channelId: FAKE_CHANNEL_ID,
+      reduceChannelUpdates: false,
+      isStandaloneProjectLevel: false,
+    });
     await projectManager.load();
     await projectManager.save(FAKE_SOURCE);
     assert.isTrue(sourcesStore.save.notCalled);
@@ -98,12 +101,13 @@ describe('ProjectManager', () => {
 
   it('does not trigger another save if we already saved during the last save interval', async () => {
     stubSuccessfulSourceLoad(sourcesStore);
-    const projectManager = new ProjectManager(
+    const projectManager = new ProjectManager({
       sourcesStore,
       channelsStore,
-      FAKE_CHANNEL_ID,
-      false
-    );
+      channelId: FAKE_CHANNEL_ID,
+      reduceChannelUpdates: false,
+      isStandaloneProjectLevel: false,
+    });
     await projectManager.load();
     await projectManager.save(UPDATED_SOURCE);
     await projectManager.save(UPDATED_SOURCE_2);
@@ -115,12 +119,13 @@ describe('ProjectManager', () => {
 
   it('always triggers a save on force save', async () => {
     stubSuccessfulSourceLoad(sourcesStore);
-    const projectManager = new ProjectManager(
+    const projectManager = new ProjectManager({
       sourcesStore,
       channelsStore,
-      FAKE_CHANNEL_ID,
-      false
-    );
+      channelId: FAKE_CHANNEL_ID,
+      reduceChannelUpdates: false,
+      isStandaloneProjectLevel: false,
+    });
     await projectManager.load();
     await projectManager.save(UPDATED_SOURCE);
     await projectManager.save(UPDATED_SOURCE_2, true);
@@ -132,12 +137,13 @@ describe('ProjectManager', () => {
 
   it('does not trigger save if destroyed', async () => {
     stubSuccessfulSourceLoad(sourcesStore);
-    const projectManager = new ProjectManager(
+    const projectManager = new ProjectManager({
       sourcesStore,
       channelsStore,
-      FAKE_CHANNEL_ID,
-      false
-    );
+      channelId: FAKE_CHANNEL_ID,
+      reduceChannelUpdates: false,
+      isStandaloneProjectLevel: false,
+    });
     await projectManager.load();
     projectManager.destroy();
     await projectManager.save(UPDATED_SOURCE);
@@ -148,12 +154,13 @@ describe('ProjectManager', () => {
 
   it('skips second channel update in emergency mode', async () => {
     stubSuccessfulSourceLoad(sourcesStore);
-    const projectManager = new ProjectManager(
+    const projectManager = new ProjectManager({
       sourcesStore,
       channelsStore,
-      FAKE_CHANNEL_ID,
-      true /* turn emergency mode on */
-    );
+      channelId: FAKE_CHANNEL_ID,
+      reduceChannelUpdates: true /* turn emergency mode on */,
+      isStandaloneProjectLevel: false,
+    });
     await projectManager.load();
     await projectManager.save(UPDATED_SOURCE);
     // call second save with force save so that we save immediately
@@ -167,12 +174,13 @@ describe('ProjectManager', () => {
 
   it('triggers save noop event if save called before load', async () => {
     stubSuccessfulSourceLoad(sourcesStore);
-    const projectManager = new ProjectManager(
+    const projectManager = new ProjectManager({
       sourcesStore,
       channelsStore,
-      FAKE_CHANNEL_ID,
-      false
-    );
+      channelId: FAKE_CHANNEL_ID,
+      reduceChannelUpdates: false,
+      isStandaloneProjectLevel: false,
+    });
 
     const noopListener = sinon.stub();
     projectManager.addSaveNoopListener(noopListener);
@@ -182,12 +190,13 @@ describe('ProjectManager', () => {
 
   it('only triggers a channel save on rename', async () => {
     stubSuccessfulSourceLoad(sourcesStore);
-    const projectManager = new ProjectManager(
+    const projectManager = new ProjectManager({
       sourcesStore,
       channelsStore,
-      FAKE_CHANNEL_ID,
-      false
-    );
+      channelId: FAKE_CHANNEL_ID,
+      reduceChannelUpdates: false,
+      isStandaloneProjectLevel: false,
+    });
     await projectManager.load();
     await projectManager.rename('new name');
     assert.isTrue(sourcesStore.save.notCalled);
@@ -200,12 +209,13 @@ describe('ProjectManager', () => {
       new Response(null, {status: 404})
     );
     sourcesStore.load.throws(networkError);
-    const projectManager = new ProjectManager(
+    const projectManager = new ProjectManager({
       sourcesStore,
       channelsStore,
-      FAKE_CHANNEL_ID,
-      false
-    );
+      channelId: FAKE_CHANNEL_ID,
+      reduceChannelUpdates: false,
+      isStandaloneProjectLevel: false,
+    });
     await projectManager.load();
     await projectManager.save(UPDATED_SOURCE);
 
@@ -215,12 +225,13 @@ describe('ProjectManager', () => {
 
   it('can still load a channel if sources fail validation', async () => {
     sourcesStore.load.throws(new ValidationError('JSON error'));
-    const projectManager = new ProjectManager(
+    const projectManager = new ProjectManager({
       sourcesStore,
       channelsStore,
-      FAKE_CHANNEL_ID,
-      false
-    );
+      channelId: FAKE_CHANNEL_ID,
+      reduceChannelUpdates: false,
+      isStandaloneProjectLevel: false,
+    });
 
     const {channel, sources} = await projectManager.load();
 
@@ -234,12 +245,13 @@ describe('ProjectManager', () => {
       new Response(null, {status: 500})
     );
     sourcesStore.load.throws(networkError);
-    const projectManager = new ProjectManager(
+    const projectManager = new ProjectManager({
       sourcesStore,
       channelsStore,
-      FAKE_CHANNEL_ID,
-      false
-    );
+      channelId: FAKE_CHANNEL_ID,
+      reduceChannelUpdates: false,
+      isStandaloneProjectLevel: false,
+    });
 
     try {
       await projectManager.load();
@@ -252,12 +264,13 @@ describe('ProjectManager', () => {
     const readonlyChannel = {...FAKE_CHANNEL, isOwner: false};
     channelsStore.load.returns(Promise.resolve(readonlyChannel));
     stubSuccessfulSourceLoad(sourcesStore);
-    const projectManager = new ProjectManager(
+    const projectManager = new ProjectManager({
       sourcesStore,
       channelsStore,
-      FAKE_CHANNEL_ID,
-      false
-    );
+      channelId: FAKE_CHANNEL_ID,
+      reduceChannelUpdates: false,
+      isStandaloneProjectLevel: false,
+    });
     await projectManager.load();
     await projectManager.save(UPDATED_SOURCE);
     assert.isTrue(sourcesStore.save.notCalled);
@@ -268,12 +281,13 @@ describe('ProjectManager', () => {
     // First load will be "original" code, second will be the versioned we restored.
     sourcesStore.load.onCall(0).returns(Promise.resolve(FAKE_SOURCE));
     sourcesStore.load.onCall(1).returns(Promise.resolve(FAKE_MODIFIED_SOURCE));
-    const projectManager = new ProjectManager(
+    const projectManager = new ProjectManager({
       sourcesStore,
       channelsStore,
-      FAKE_CHANNEL_ID,
-      false
-    );
+      channelId: FAKE_CHANNEL_ID,
+      reduceChannelUpdates: false,
+      isStandaloneProjectLevel: false,
+    });
 
     // Load the initial sources
     const {sources} = await projectManager.load();
@@ -300,12 +314,13 @@ describe('ProjectManager', () => {
     // First load will be "original" code, second will be the versioned we restored.
     sourcesStore.load.onCall(0).returns(Promise.resolve(FAKE_SOURCE));
     sourcesStore.load.onCall(1).returns(Promise.resolve(FAKE_MODIFIED_SOURCE));
-    const projectManager = new ProjectManager(
+    const projectManager = new ProjectManager({
       sourcesStore,
       channelsStore,
-      FAKE_CHANNEL_ID,
-      false
-    );
+      channelId: FAKE_CHANNEL_ID,
+      reduceChannelUpdates: false,
+      isStandaloneProjectLevel: false,
+    });
 
     // Load the initial sources
     const {sources} = await projectManager.load();
@@ -321,12 +336,13 @@ describe('ProjectManager', () => {
 
   it('correctly forces a new version when forceNewVersion is true', async () => {
     stubSuccessfulSourceLoad(sourcesStore);
-    const projectManager = new ProjectManager(
+    const projectManager = new ProjectManager({
       sourcesStore,
       channelsStore,
-      FAKE_CHANNEL_ID,
-      false
-    );
+      channelId: FAKE_CHANNEL_ID,
+      reduceChannelUpdates: false,
+      isStandaloneProjectLevel: false,
+    });
     await projectManager.load();
     await projectManager.save(UPDATED_SOURCE, false, true);
     assert.isTrue(sourcesStore.save.calledOnce);
@@ -342,12 +358,13 @@ describe('ProjectManager', () => {
 
   it('does not force a new version when forceNewVersion is not provided', async () => {
     stubSuccessfulSourceLoad(sourcesStore);
-    const projectManager = new ProjectManager(
+    const projectManager = new ProjectManager({
       sourcesStore,
       channelsStore,
-      FAKE_CHANNEL_ID,
-      false
-    );
+      channelId: FAKE_CHANNEL_ID,
+      reduceChannelUpdates: false,
+      isStandaloneProjectLevel: false,
+    });
     await projectManager.load();
     await projectManager.save(UPDATED_SOURCE);
     assert.isTrue(sourcesStore.save.calledOnce);
@@ -360,11 +377,121 @@ describe('ProjectManager', () => {
       )
     );
   });
+
+  it('forces a new version when current version has a comment', async () => {
+    stubSuccessfulSourceLoad(sourcesStore);
+    // Mock getCurrentVersionId to return a version ID
+    sourcesStore.getCurrentVersionId.returns('version123');
+    // Mock getVersionList to return a version with a comment
+    sourcesStore.getVersionList.returns(
+      Promise.resolve([
+        {
+          versionId: 'version123',
+          lastModified: '2023-01-01T00:00:00Z',
+          isLatest: true,
+          comment: 'This is a test comment',
+        },
+      ])
+    );
+
+    const projectManager = new ProjectManager({
+      sourcesStore,
+      channelsStore,
+      channelId: FAKE_CHANNEL_ID,
+      reduceChannelUpdates: false,
+      isStandaloneProjectLevel: false,
+    });
+    await projectManager.load();
+    await projectManager.save(UPDATED_SOURCE);
+
+    assert.isTrue(sourcesStore.save.calledOnce);
+    assert.isTrue(
+      sourcesStore.save.calledWith(
+        FAKE_CHANNEL_ID,
+        UPDATED_SOURCE,
+        FAKE_CHANNEL.projectType,
+        /* forceNewVersion */ true
+      )
+    );
+  });
+
+  it('does not force a new version when current version has no comment', async () => {
+    stubSuccessfulSourceLoad(sourcesStore);
+    // Mock getCurrentVersionId to return a version ID
+    sourcesStore.getCurrentVersionId.returns('version123');
+    // Mock getVersionList to return a version without a comment
+    sourcesStore.getVersionList.returns(
+      Promise.resolve([
+        {
+          versionId: 'version123',
+          lastModified: '2023-01-01T00:00:00Z',
+          isLatest: true,
+        },
+      ])
+    );
+
+    const projectManager = new ProjectManager({
+      sourcesStore,
+      channelsStore,
+      channelId: FAKE_CHANNEL_ID,
+      reduceChannelUpdates: false,
+      isStandaloneProjectLevel: false,
+    });
+    await projectManager.load();
+    await projectManager.save(UPDATED_SOURCE);
+
+    assert.isTrue(sourcesStore.save.calledOnce);
+    assert.isTrue(
+      sourcesStore.save.calledWith(
+        FAKE_CHANNEL_ID,
+        UPDATED_SOURCE,
+        FAKE_CHANNEL.projectType,
+        /* forceNewVersion */ false
+      )
+    );
+  });
+
+  it('resets current version comment state after creating autosave version', async () => {
+    stubSuccessfulSourceLoad(sourcesStore);
+    // Mock getCurrentVersionId to return a version ID
+    sourcesStore.getCurrentVersionId.returns('version123');
+    // Mock getVersionList to return a version with a comment
+    sourcesStore.getVersionList.returns(
+      Promise.resolve([
+        {
+          versionId: 'version123',
+          lastModified: '2023-01-01T00:00:00Z',
+          isLatest: true,
+          comment: 'This is a test comment',
+        },
+      ])
+    );
+
+    const projectManager = new ProjectManager({
+      sourcesStore,
+      channelsStore,
+      channelId: FAKE_CHANNEL_ID,
+      reduceChannelUpdates: false,
+      isStandaloneProjectLevel: false,
+    });
+    await projectManager.load();
+
+    // Verify initial comment state is set correctly
+    assert.isTrue(projectManager.getForceNewVersion());
+
+    // First save should force new version due to comment (autosave)
+    await projectManager.save(UPDATED_SOURCE);
+
+    // After autosave, comment state should be reset since new version was created
+    assert.isFalse(projectManager.getForceNewVersion());
+
+    // Second save should not force new version (comment state reset)
+    await projectManager.save(UPDATED_SOURCE_2);
+    assert.isFalse(projectManager.getForceNewVersion());
+  });
 });
 
 // Helper functions
-function stubSuccessfulSourceLoad(
-  sourcesStore: StubbedInstance<RemoteSourcesStore>
-) {
+function stubSuccessfulSourceLoad(sourcesStore: StubbedInstance<SourcesStore>) {
   sourcesStore.load.returns(Promise.resolve(FAKE_SOURCE));
 }

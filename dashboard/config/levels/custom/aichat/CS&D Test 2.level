@@ -1,0 +1,50 @@
+<Aichat>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 71,
+  "created_at": "2024-12-04T19:13:56.000Z",
+  "level_num": "custom",
+  "user_id": 18602,
+  "properties": {
+    "encrypted": "false",
+    "aichat_settings": {
+      "initialCustomizations": {
+        "selectedModelId": "gen-ai-mistral-7b-inst-v01",
+        "temperature": 0.6,
+        "systemPrompt": "I’m here to help you understand Python code and debug issues. Share your code or describe your problem, and I’ll guide you toward a solution by asking questions and providing explanations.",
+        "retrievalContexts": [
+          "Variables in Python:\nx = 5\ny = \"Hello, World!\"\n\nPython has no command for declaring a variable.\nVariables do not need to be declared with any particular type, and can even change type after they have been set.\nIf you want to specify the data type of a variable, this can be done with casting.\nExample\nx = str(3)    # x will be '3'\ny = int(3)    # y will be 3\nz = float(3)  # z will be 3.0 \nVariable names are case-sensitive.\nA variable can have a short name (like x and y) or a more descriptive name (age, carname, total_volume). Rules for Python variables:\n\n    A variable name must start with a letter or the underscore character\n    A variable name cannot start with a number\n    A variable name can only contain alpha-numeric characters and underscores (A-z, 0-9, and _ )\n    Variable names are case-sensitive (age, Age and AGE are three different variables)\n    A variable name cannot be any of the Python keywords.\n\nPython allows you to assign values to multiple variables in one line:\nExample\nx, y, z = \"Orange\", \"Banana\", \"Cherry\"\nprint(x)\nprint(y)\nprint(z)\n\nAnd you can assign the same value to multiple variables in one line:\nExample\nx = y = z = \"Orange\"\nprint(x)\nprint(y)\nprint(z)\n\nIf you have a collection of values in a list, tuple etc. Python allows you to extract the values into variables. This is called unpacking.\n\nExample\n\nUnpack a list:\nfruits = [\"apple\", \"banana\", \"cherry\"]\nx, y, z = fruits\nprint(x)\nprint(y)\nprint(z)\n\nVariables that are created outside of a function (as in all of the examples in the previous pages) are known as global variables.\nGlobal variables can be used by everyone, both inside of functions and outside.\n\nPython has the following data types built-in by default, in these categories:\nText Type: \tstr\nNumeric Types: \tint, float, complex\nSequence Types: \tlist, tuple, range\nMapping Type: \tdict\nSet Types: \tset, frozenset\nBoolean Type: \tbool\nBinary Types: \tbytes, bytearray, memoryview\nNone Type: \tNoneType\n\nPython does not have a random() function to make a random number, but Python has a built-in module called random that can be used to make random numbers:\nExample\n\nImport the random module, and display a random number between 1 and 9:\nimport random\nprint(random.randrange(1, 10)) "
+        ],
+        "modelCardInfo": {
+          "botName": "CodeMentor",
+          "description": "CodeMentor is an AI chatbot designed to assist students in understanding Python code and debugging issues. It helps students analyze what pieces of code do and provides guidance to resolve errors. Rather than providing full code snippets, CodeMentor encourages active learning by asking guiding questions and fostering critical thinking.",
+          "intendedUse": "Primary Use Cases:\n1. Explaining how specific pieces of Python code work.\n2. Debugging Python code by identifying errors and suggesting corrections.\n3. Encouraging students to develop problem-solving skills through guided questioning.\n4. Providing context for Python syntax, functions, and common programming patterns.\n\nTarget Audience:\n1. Students learning Python programming at beginner to intermediate levels.",
+          "limitationsAndWarnings": "Does not provide full code solutions, focusing instead on guidance and understanding.\nLimited support for highly advanced or specialized Python libraries.\nDebugging suggestions may not fully resolve complex issues without additional context.\n\nStudents should verify all code changes before executing them.\nAvoid relying solely on CodeMentor for advanced programming concepts.",
+          "testingAndEvaluation": "",
+          "exampleTopics": [
+            "Can you explain what this for loop does?",
+            "Why am I getting a 'NameError' in my code?",
+            "What does the lambda keyword mean in Python?",
+            "How do I fix an 'IndexError' in this piece of code?",
+            "What does import pandas as pd mean in Python?"
+          ],
+          "isPublished": false
+        }
+      },
+      "visibilities": {
+        "selectedModelId": "hidden",
+        "temperature": "hidden",
+        "systemPrompt": "readonly",
+        "retrievalContexts": "hidden",
+        "modelCardInfo": "hidden"
+      },
+      "levelSystemPrompt": "You are a Python programming assistant for students. Provide clear, concise explanations of Python code and assist with debugging issues. Focus on guiding students to solutions by asking questions or breaking problems into smaller steps. Avoid providing full code snippets and prioritize educational outcomes. Ensure all responses are age-appropriate and align with ethical guidelines.",
+      "hidePresentationPanel": true,
+      "availableModelIds": [
+        "gen-ai-mistral-7b-inst-v01"
+      ]
+    }
+  },
+  "audit_log": "[{\"changed_at\":\"2024-12-04T19:13:56.709+00:00\",\"changed\":[\"cloned from \\\"CS&D Test\\\"\"],\"cloned_from\":\"CS&D Test\"},{\"changed_at\":\"2024-12-04 19:27:38 +0000\",\"changed\":[\"name\",\"aichat_settings\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2024-12-04 19:30:32 +0000\",\"changed\":[],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2024-12-04 19:30:37 +0000\",\"changed\":[],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"},{\"changed_at\":\"2024-12-04 19:36:43 +0000\",\"changed\":[],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2024-12-04 19:39:06 +0000\",\"changed\":[],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2024-12-04 19:55:08 +0000\",\"changed\":[\"aichat_settings\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
+}]]></config>
+</Aichat>

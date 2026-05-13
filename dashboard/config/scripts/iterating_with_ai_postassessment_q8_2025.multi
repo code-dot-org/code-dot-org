@@ -1,0 +1,16 @@
+name 'iterating-with-ai-postassessment-q8_2025'
+
+question 'A filter function works by checking a "predicate." What is a predicate in this context?'
+
+wrong 'A piece of code that adds two numbers together.'
+right 'A true/false test applied to each item to determine if it should be included in the results.'
+wrong 'The label at the top of a data column.'
+wrong 'A button that resets the entire application.'
+
+allow_multiple_attempts true
+
+teacher_markdown <<MARKDOWN
+Lesson 6
+
+In filtering, a predicate is the condition (e.g., `price < 20`) that evaluates each item. If the predicate is true, the item is kept; if false, it is excluded.
+MARKDOWN

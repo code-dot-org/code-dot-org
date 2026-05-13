@@ -833,4 +833,106 @@ describe('CdoBramble', () => {
       });
     });
   });
+
+  describe('writeFileData', () => {
+    let writeFileStub;
+
+    beforeEach(() => {
+      writeFileStub = sinon.stub();
+      sinon.stub(cdoBramble, 'fileSystem').returns({writeFile: writeFileStub});
+    });
+
+    afterEach(() => {
+      sinon.restore();
+    });
+
+    it('logs and calls callback with TypeError when data is a plain object', () => {
+      const callbackSpy = sinon.spy();
+
+      cdoBramble.writeFileData(
+        '/project/123/index.html',
+        {someKey: 'someValue'},
+        callbackSpy
+      );
+
+      expect(callbackSpy).to.have.been.calledOnce;
+      expect(callbackSpy.firstCall.args[0]?.name).to.equal('TypeError');
+      expect(console.error).to.have.been.calledOnce;
+    });
+
+    it('does not throw when data is a string', done => {
+      writeFileStub.callsFake((_path, _data, _opts, callback) =>
+        callback(null)
+      );
+      cdoBramble.writeFileData(
+        '/project/123/index.html',
+        '<html></html>',
+        err => {
+          expect(err).to.be.null;
+          done();
+        }
+      );
+    });
+  });
+
+  describe('getConcatenatedCodeString', () => {
+    beforeEach(() => {
+      const openDocuments = [
+        {
+          file: {fullPath: '/style.css'},
+          getText: () => 'body {color: blue;}',
+        },
+        {
+          file: {fullPath: '/ignore.js'},
+          getText: () => "console.log('ignore');",
+        },
+      ];
+
+      sinon.stub(cdoBramble, 'getBrackets').returns({
+        getModule: id =>
+          id === 'document/DocumentManager'
+            ? {getAllOpenDocuments: () => openDocuments}
+            : {},
+      });
+
+      sinon.stub(cdoBramble, 'shell').returns({
+        ls: (_, callback) =>
+          callback(null, [
+            {path: 'index.html'},
+            {path: 'style.css'},
+            {path: 'script.js'},
+          ]),
+      });
+
+      sinon
+        .stub(cdoBramble, 'recursivelyReadFiles')
+        .callsFake((filenames, _, __, callback) => {
+          const files = filenames.map(name => ({
+            name,
+            data: Buffer.from(
+              name === 'index.html' ? '<html></html>' : 'body {color: red;}',
+              'utf8'
+            ),
+          }));
+          callback(null, files);
+        });
+    });
+
+    afterEach(() => {
+      sinon.restore();
+    });
+
+    it('returns concatenated html and css, overlaying unsaved edits', async () => {
+      const result = await cdoBramble.getConcatenatedCodeString();
+
+      expect(cdoBramble.shell).to.have.been.calledOnce;
+      expect(cdoBramble.recursivelyReadFiles).to.have.been.calledOnce;
+      expect(result).to.include('/* /index.html */');
+      expect(result).to.include('<html></html>');
+      expect(result).to.include('/* /style.css */');
+      expect(result).to.include('body {color: blue;}');
+      expect(result).not.to.include('script.js');
+      expect(result).not.to.include("console.log('ignore');");
+    });
+  });
 });

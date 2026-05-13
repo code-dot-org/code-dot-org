@@ -1,30 +1,24 @@
+import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
+import {Typography} from '@mui/material';
 import _ from 'lodash';
 import PropTypes from 'prop-types';
 import React from 'react';
 
-import FontAwesome from '@cdo/apps/legacySharedComponents/FontAwesome';
 import {unitCalendarLesson} from '@cdo/apps/templates/progress/unitCalendarLessonShapes';
-import color from '@cdo/apps/util/color';
 import i18n from '@cdo/locale';
 
 import UnitCalendarLessonChunk from './UnitCalendarLessonChunk';
 
-export default class UnitCalendarGrid extends React.Component {
-  static propTypes = {
-    weeklyInstructionalMinutes: PropTypes.number.isRequired,
-    lessons: PropTypes.arrayOf(unitCalendarLesson).isRequired,
-    weekWidth: PropTypes.number.isRequired,
-  };
+import styles from './unit-calendar.module.scss';
 
-  constructor(props) {
-    super(props);
-    this.state = {
-      hovering: '',
-    };
-  }
+export default function UnitCalendarGrid({
+  weeklyInstructionalMinutes,
+  lessons,
+  weekWidth,
+}) {
+  const [hovering, setHovering] = React.useState('');
 
-  generateSchedule = () => {
-    const {lessons, weeklyInstructionalMinutes} = this.props;
+  const schedule = React.useMemo(() => {
     const lessonsCopy = _.cloneDeep(lessons);
     let allWeeks = [];
     let currWeek = [];
@@ -72,120 +66,100 @@ export default class UnitCalendarGrid extends React.Component {
     });
     allWeeks.push(currWeek);
     return allWeeks;
-  };
+  }, [lessons, weeklyInstructionalMinutes]);
 
-  handleHover = id => {
-    this.setState({hovering: id});
-  };
+  const renderWeek = React.useCallback(
+    (week, weekNumber) => {
+      const minuteWidth = weekWidth / weeklyInstructionalMinutes;
+      return week.map((lessonChunk, index) => (
+        <UnitCalendarLessonChunk
+          key={`week-${weekNumber}-lesson-chunk-${index}`}
+          minuteWidth={minuteWidth}
+          lessonChunk={lessonChunk}
+          isHover={lessonChunk.id === hovering}
+          handleHover={setHovering}
+        />
+      ));
+    },
+    [hovering, weeklyInstructionalMinutes, weekWidth]
+  );
 
-  renderWeek = (week, weekNumber) => {
-    const minuteWidth =
-      this.props.weekWidth / this.props.weeklyInstructionalMinutes;
-    return week.map((lessonChunk, index) => (
-      <UnitCalendarLessonChunk
-        key={`week-${weekNumber}-lesson-chunk-${index}`}
-        minuteWidth={minuteWidth}
-        lessonChunk={lessonChunk}
-        isHover={lessonChunk.id === this.state.hovering}
-        handleHover={this.handleHover}
-      />
-    ));
-  };
-
-  render() {
-    const schedule = this.generateSchedule();
-    return (
-      <div>
-        <table style={styles.table}>
-          <tbody>
-            {schedule.map((week, index) => (
-              <tr key={`week-${index}`}>
-                <td style={styles.weekColumn}>
+  return (
+    <div>
+      <table className={styles.table}>
+        <tbody>
+          {schedule.map((week, index) => (
+            <tr key={`week-${index}`}>
+              <td className={styles.weekColumn}>
+                <Typography variant="label1" sx={{color: 'inherit'}}>
                   {i18n.weekLabel({number: index + 1})}
-                </td>
-                <td style={styles.scheduleColumn}>
-                  {this.renderWeek(week, index + 1)}
-                </td>
-              </tr>
-            ))}
-          </tbody>
-        </table>
-        <table style={styles.key}>
-          <tbody>
-            <tr>
-              <td style={styles.weekColumn}>Key</td>
-              <td style={styles.scheduleColumn}>
-                <div style={styles.keySection}>
-                  <div>
-                    <FontAwesome
-                      icon="square-o"
-                      style={{
-                        color: color.teal,
-                        ...styles.keyIcon,
-                      }}
-                    />
-                    {i18n.instructionalLesson()}
-                  </div>
-                  <div>
-                    <FontAwesome
-                      icon="check-circle"
-                      style={{
-                        color: color.purple,
-                        ...styles.keyIcon,
-                      }}
-                    />
-                    {i18n.assessment()}
-                  </div>
-                  <div>
-                    <FontAwesome icon="scissors" style={styles.keyIcon} />
-                    {i18n.unpluggedLesson()}
-                  </div>
-                </div>
+                </Typography>
+              </td>
+              <td className={styles.scheduleColumn}>
+                {renderWeek(week, index + 1)}
               </td>
             </tr>
-          </tbody>
-        </table>
-      </div>
-    );
-  }
+          ))}
+        </tbody>
+      </table>
+      <table className={styles.key}>
+        <tbody>
+          <tr>
+            <td className={styles.weekColumn}>
+              <Typography variant="label1" sx={{color: 'inherit'}}>
+                Key
+              </Typography>
+            </td>
+            <td className={styles.scheduleColumn}>
+              <div className={styles.keySection}>
+                <div className={styles.keyCell}>
+                  <FontAwesomeV6Icon
+                    iconName="square"
+                    iconStyle="regular"
+                    style={{
+                      color: 'var(--text-brand-teal-primary)',
+                    }}
+                    className={styles.keyIcon}
+                  />
+                  <Typography variant="body2" component="span">
+                    {i18n.instructionalLesson()}
+                  </Typography>
+                </div>
+                <div className={styles.keyCell}>
+                  <FontAwesomeV6Icon
+                    iconName="circle-check"
+                    style={{
+                      color: 'var(--text-brand-purple-primary)',
+                    }}
+                    className={styles.keyIcon}
+                  />
+                  <Typography variant="body2" component="span">
+                    {i18n.assessment()}
+                  </Typography>
+                </div>
+                <div className={styles.keyCell}>
+                  <FontAwesomeV6Icon
+                    iconName="scissors"
+                    style={{
+                      color: 'var(--text-neutral-primary)',
+                    }}
+                    className={styles.keyIcon}
+                  />
+                  <Typography variant="body2" component="span">
+                    {i18n.unpluggedLesson()}
+                  </Typography>
+                </div>
+              </div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  );
 }
 
-const styles = {
-  weekColumn: {
-    width: 100,
-    backgroundColor: color.purple,
-    color: 'white',
-    textAlign: 'center',
-    border: '1px solid ' + color.purple,
-    borderCollapse: 'collapse',
-    fontWeight: 'bold',
-    minHeight: 50,
-  },
-  scheduleColumn: {
-    border: '1px solid ' + color.purple,
-    borderCollapse: 'collapse',
-    display: 'flex',
-    minHeight: 50,
-    margin: 0,
-  },
-  table: {
-    borderCollapse: 'collapse',
-    width: '100%',
-  },
-  key: {
-    border: '1px solid ' + color.purple,
-    borderCollapse: 'collapse',
-    width: '100%',
-    marginTop: 20,
-  },
-  keyIcon: {
-    marginRight: 5,
-  },
-  keySection: {
-    display: 'flex',
-    justifyContent: 'space-around',
-    width: '90%',
-    alignItems: 'center',
-    fontSize: 15,
-  },
+UnitCalendarGrid.propTypes = {
+  weeklyInstructionalMinutes: PropTypes.number.isRequired,
+  lessons: PropTypes.arrayOf(unitCalendarLesson).isRequired,
+  weekWidth: PropTypes.number.isRequired,
 };

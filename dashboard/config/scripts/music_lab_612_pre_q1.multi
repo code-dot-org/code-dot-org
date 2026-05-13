@@ -1,0 +1,29 @@
+name 'music-lab-612-pre-q1'
+
+question '**Which code should Alina use so that the drums match the length of the rest of the song?**'
+height '250'
+wrong '![](https://images.code.org/a7e554cd15640cac123ead8a4e3a25d9-image-1751048564460.png)'
+wrong '![](https://images.code.org/75fcaae1a9faf8f49703df1b489cddfe-image-1751048547323.png)'
+right '![](https://images.code.org/9e0e0f3f438fa1efb2de1e4cec7a2f70-image-1751048464095.png)'
+wrong '![](https://images.code.org/c0caf25bbaf1c577f6a86feae40bab38-image-1751048528611.png)'
+
+
+allow_multiple_attempts true
+
+teacher_markdown <<MARKDOWN
+Topic: Sequencing
+
+Skill: Use the play together and play sequential blocks together to create layered tracks with different measure counts
+
+Appears in the lesson: Sequencing - Practice
+MARKDOWN
+
+markdown <<MARKDOWN
+Alina is exploring drum and bass sounds that play together with the Prechorus vocals.
+The vocals and the bass are each 4 measures long, but the drum sounds are only 2 measures.
+This is the code she has so far:
+
+Alina wants to make the drum part last 4 measures by playing Kick Snare Loop (small) first and then Kick Snare Loop (big) right after.
+
+![](https://images.code.org/8575dad2945aa69c9dd78ae650ad6fa8-image-1750874142081.png)
+MARKDOWN

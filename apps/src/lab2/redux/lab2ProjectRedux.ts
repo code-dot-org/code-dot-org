@@ -1,85 +1,59 @@
+import {FileId, FolderId} from '@codebridge/types';
+import {PayloadAction, createSlice} from '@reduxjs/toolkit';
+
+import {START_SOURCES} from '@cdo/apps/lab2/constants';
+import {getAppOptionsEditBlocks} from '@cdo/apps/lab2/projects/utils';
 import {
-  PayloadAction,
-  ThunkAction,
-  createAsyncThunk,
-  createSlice,
-} from '@reduxjs/toolkit';
-import {AnyAction} from 'redux';
-
-import {ProjectSources} from '@cdo/apps/lab2/types';
-import {RootState} from '@cdo/apps/types/redux';
-
-import Lab2Registry from '../Lab2Registry';
+  LabConfig,
+  MultiFileSource,
+  ProjectFile,
+  ProjectSources,
+  ProjectFileType,
+  ProjectVersion,
+} from '@cdo/apps/lab2/types';
+import {
+  activateFileHelper,
+  closeFileHelper,
+  createNewFileHelper,
+  createNewFolderHelper,
+  deleteFileHelper,
+  deleteFolderHelper,
+} from '@cdo/apps/lab2/utils/multiFileSourceEditUtils';
 
 export interface Lab2ProjectState {
-  projectSource: ProjectSources | undefined;
+  projectSources: ProjectSources | undefined;
+  projectSourceBeforeAiTutorVersion?: MultiFileSource;
+  aiTutorVersionFiles?: ProjectFile[];
+  versionDetails: ProjectVersion | undefined;
   viewingOldVersion: boolean;
+  viewingAiTutorVersion?: boolean;
   restoredOldVersion: boolean;
   hasEdited: boolean;
+  hasEditedSinceLastVersionSave: boolean;
+  projectTooLarge: boolean;
+  lastSavedLabConfig: LabConfig | undefined;
+  projectSourceLevelId: number | undefined;
 }
 
 const initialState: Lab2ProjectState = {
-  projectSource: undefined,
+  projectSources: undefined,
+  projectSourceBeforeAiTutorVersion: undefined,
+  aiTutorVersionFiles: undefined,
+  versionDetails: undefined,
   viewingOldVersion: false,
+  viewingAiTutorVersion: false,
   restoredOldVersion: false,
   hasEdited: false,
+  hasEditedSinceLastVersionSave: false,
+  projectTooLarge: false,
+  lastSavedLabConfig: undefined,
+  projectSourceLevelId: undefined,
 };
 
-// THUNKS
-
-// Store the project source in the redux store and tell the project manager
-// to save it.
-export const setAndSaveProjectSource = (
-  projectSource: ProjectSources,
-  forceSave: boolean = false,
-  forceNewVersion: boolean = false
-): ThunkAction<void, RootState, undefined, AnyAction> => {
-  return dispatch => {
-    dispatch(projectSlice.actions.setProjectSource(projectSource));
-    if (Lab2Registry.getInstance().getProjectManager()) {
-      Lab2Registry.getInstance()
-        .getProjectManager()
-        ?.save(projectSource, forceSave, forceNewVersion);
-    }
-  };
-};
-
-export const loadVersion = createAsyncThunk(
-  'lab2Project/loadVersion',
-  async (payload: {versionId: string}, thunkAPI) => {
-    const projectManager = Lab2Registry.getInstance().getProjectManager();
-    if (projectManager) {
-      // We need to ensure we save the existing project before loading a new one.
-      await projectManager.flushSave();
-      const sources = await projectManager.loadSources(payload.versionId);
-      thunkAPI.dispatch(setPreviousVersionSource(sources));
-    }
-  }
-);
-
-export const previewStartSource = createAsyncThunk(
-  'lab2Project/previewStartSource',
-  async (payload: {startSource: ProjectSources}, thunkAPI) => {
-    const projectManager = Lab2Registry.getInstance().getProjectManager();
-    if (projectManager) {
-      // We need to ensure we save the existing project before loading the start source.
-      await projectManager.flushSave();
-      thunkAPI.dispatch(setPreviousVersionSource(payload.startSource));
-    }
-  }
-);
-
-export const resetToCurrentVersion = createAsyncThunk(
-  'lab2Project/resetToActiveVersion',
-  async (_, thunkAPI) => {
-    const projectManager = Lab2Registry.getInstance().getProjectManager();
-    if (projectManager) {
-      const sources = await projectManager.loadSources();
-      thunkAPI.dispatch(setProjectSource(sources));
-      thunkAPI.dispatch(setViewingOldVersion(false));
-    }
-  }
-);
+function markEdited(state: Lab2ProjectState) {
+  state.hasEdited = true;
+  state.hasEditedSinceLastVersionSave = true;
+}
 
 // SLICE
 
@@ -88,41 +62,458 @@ const projectSlice = createSlice({
   initialState,
   reducers: {
     setProjectSource(state, action: PayloadAction<ProjectSources | undefined>) {
-      state.projectSource = action.payload;
+      state.projectSources = action.payload;
+    },
+    setSource(state, action: PayloadAction<MultiFileSource>) {
+      state.projectSources = {
+        ...state.projectSources,
+        source: action.payload,
+      };
+    },
+    setProjectSourceLevelId(state, action: PayloadAction<number | undefined>) {
+      state.projectSourceLevelId = action.payload;
+    },
+    setProjectSourceBeforeAiTutorVersion(
+      state,
+      action: PayloadAction<MultiFileSource | undefined>
+    ) {
+      state.projectSourceBeforeAiTutorVersion = action.payload;
     },
     setPreviousVersionSource(
       state,
-      action: PayloadAction<ProjectSources | undefined>
+      action: PayloadAction<{
+        sources: ProjectSources | undefined;
+        version?: ProjectVersion;
+      }>
     ) {
-      state.projectSource = action.payload;
+      state.projectSources = action.payload.sources;
+      state.versionDetails = action.payload.version;
       state.viewingOldVersion = true;
     },
     setViewingOldVersion(state, action: PayloadAction<boolean>) {
       state.viewingOldVersion = action.payload;
+      if (!action.payload) {
+        state.versionDetails = undefined;
+      }
+    },
+    setViewingAiTutorVersion(state, action: PayloadAction<boolean>) {
+      state.viewingAiTutorVersion = action.payload;
+    },
+    setAiTutorVersionFiles(
+      state,
+      action: PayloadAction<ProjectFile[] | undefined>
+    ) {
+      state.aiTutorVersionFiles = action.payload;
     },
     setRestoredOldVersion(state, action: PayloadAction<boolean>) {
       state.restoredOldVersion = action.payload;
     },
-    setHasEdited(state, action: PayloadAction<boolean>) {
-      state.hasEdited = action.payload;
+    resetHasEditedSinceLastVersionSave(state) {
+      state.hasEditedSinceLastVersionSave = false;
+    },
+    setProjectTooLarge(state, action: PayloadAction<boolean>) {
+      state.projectTooLarge = action.payload;
+    },
+    createNewFile(
+      state,
+      action: PayloadAction<{
+        fileName: string;
+        folderId?: FolderId;
+        contents?: string;
+        url?: string;
+      }>
+    ) {
+      if (state.projectSources?.source) {
+        state.projectSources = {
+          ...state.projectSources,
+          source: createNewFileHelper({
+            source: state.projectSources?.source as MultiFileSource,
+            fileName: action.payload.fileName,
+            folderId: action.payload.folderId,
+            contents: action.payload.contents,
+            url: action.payload.url,
+          }),
+        };
+        markEdited(state);
+      }
+    },
+    createNewExternalFile(
+      state,
+      action: PayloadAction<{
+        fileName: string;
+        url: string;
+        folderId?: FolderId;
+        flagged?: boolean;
+      }>
+    ) {
+      if (state.projectSources?.source) {
+        const isStartMode = getAppOptionsEditBlocks() === START_SOURCES;
+        const source = state.projectSources.source as MultiFileSource;
+        const newSource = createNewFileHelper({
+          source,
+          fileName: action.payload.fileName,
+          folderId: action.payload.folderId,
+          url: action.payload.url,
+          isStartMode: isStartMode,
+          flagged: action.payload.flagged,
+        });
+        state.projectSources = {
+          ...state.projectSources,
+          source: newSource,
+        };
+        markEdited(state);
+      }
+    },
+    renameFile(
+      state,
+      action: PayloadAction<{fileId: FileId; newName: string}>
+    ) {
+      if (state.projectSources?.source) {
+        const source = state.projectSources.source as MultiFileSource;
+        if (
+          !source.files[action.payload.fileId] ||
+          source.files[action.payload.fileId]?.name === action.payload.newName
+        ) {
+          // No-op if the name is the same or the file does not exist.
+          return;
+        }
+        state.projectSources = {
+          ...state.projectSources,
+          source: {
+            ...source,
+            files: {
+              ...source.files,
+              [action.payload.fileId]: {
+                ...source.files[action.payload.fileId],
+                name: action.payload.newName,
+              },
+            },
+          },
+        };
+        markEdited(state);
+      }
+    },
+    saveFile(
+      state,
+      action: PayloadAction<{fileId: FileId; contents: string; url?: string}>
+    ) {
+      if (state.projectSources?.source) {
+        const source = state.projectSources.source as MultiFileSource;
+        if (
+          !source.files[action.payload.fileId] ||
+          (source.files[action.payload.fileId]?.contents ===
+            action.payload.contents &&
+            source.files[action.payload.fileId]?.url === action.payload.url)
+        ) {
+          // No-op if the contents and url are the same or the file does not exist.
+          return;
+        }
+        state.projectSources = {
+          ...state.projectSources,
+          source: {
+            ...source,
+            files: {
+              ...source.files,
+              [action.payload.fileId]: {
+                ...source.files[action.payload.fileId],
+                contents: action.payload.contents,
+                url: action.payload.url,
+              },
+            },
+          },
+        };
+        markEdited(state);
+      }
+    },
+    setFileType(
+      state,
+      action: PayloadAction<{fileId: FileId; type: ProjectFileType}>
+    ) {
+      if (state.projectSources?.source) {
+        const source = state.projectSources.source as MultiFileSource;
+        if (
+          !source.files[action.payload.fileId] ||
+          source.files[action.payload.fileId]?.type === action.payload.type
+        ) {
+          // No-op if the type is the same or the file does not exist.
+          return;
+        }
+        state.projectSources = {
+          ...state.projectSources,
+          source: {
+            ...source,
+            files: {
+              ...source.files,
+              [action.payload.fileId]: {
+                ...source.files[action.payload.fileId],
+                type: action.payload.type,
+              },
+            },
+          },
+        };
+        markEdited(state);
+      }
+    },
+    activateFile(state, action: PayloadAction<FileId>) {
+      if (state.projectSources?.source) {
+        // We don't count activating a file as an edit,
+        // as it doesn't meaningfully change the project state.
+        state.projectSources = {
+          ...state.projectSources,
+          source: activateFileHelper(
+            state.projectSources.source as MultiFileSource,
+            action.payload
+          ),
+        };
+      }
+    },
+    closeFile(state, action: PayloadAction<FileId>) {
+      if (state.projectSources?.source) {
+        // We don't count closing a file as an edit,
+        // as it doesn't meaningfully change the project state.
+        state.projectSources = {
+          ...state.projectSources,
+          source: closeFileHelper(
+            state.projectSources.source as MultiFileSource,
+            action.payload
+          ),
+        };
+      }
+    },
+    deleteFile(
+      state,
+      action: PayloadAction<{fileId: FileId; isBlockedAbuse?: boolean}>
+    ) {
+      if (state.projectSources?.source) {
+        const source = state.projectSources.source as MultiFileSource;
+        if (!source.files[action.payload.fileId]) {
+          // No-op if the file does not exist.
+          return;
+        }
+        const deleteResult = deleteFileHelper({
+          source,
+          fileId: action.payload.fileId,
+        });
+        state.projectSources = {
+          ...state.projectSources,
+          source: deleteResult.newSource,
+        };
+        markEdited(state);
+      }
+    },
+    moveFile(
+      state,
+      action: PayloadAction<{fileId: FileId; folderId: FolderId}>
+    ) {
+      if (state.projectSources?.source) {
+        const source = state.projectSources.source as MultiFileSource;
+        if (
+          !source.files[action.payload.fileId] ||
+          source.files[action.payload.fileId].folderId ===
+            action.payload.folderId
+          // No-op if the file does not exist or is already in the target folder.
+        ) {
+          return;
+        }
+        state.projectSources = {
+          ...state.projectSources,
+          source: {
+            ...source,
+            files: {
+              ...source.files,
+              [action.payload.fileId]: {
+                ...source.files[action.payload.fileId],
+                folderId: action.payload.folderId,
+              },
+            },
+          },
+        };
+        markEdited(state);
+      }
+    },
+    moveFolder(
+      state,
+      action: PayloadAction<{folderId: FolderId; parentId: FolderId}>
+    ) {
+      if (state.projectSources?.source) {
+        const source = state.projectSources.source as MultiFileSource;
+        if (
+          !source.folders[action.payload.folderId] ||
+          source.folders[action.payload.folderId].parentId ===
+            action.payload.parentId
+        ) {
+          // No-op if the folder does not exist or is already in the target parent.
+          return;
+        }
+        state.projectSources = {
+          ...state.projectSources,
+          source: {
+            ...source,
+            folders: {
+              ...source.folders,
+              [action.payload.folderId]: {
+                ...source.folders[action.payload.folderId],
+                parentId: action.payload.parentId,
+              },
+            },
+          },
+        };
+        markEdited(state);
+      }
+    },
+    createNewFolder(
+      state,
+      action: PayloadAction<{folderName: string; parentId?: FolderId}>
+    ) {
+      if (state.projectSources?.source) {
+        state.projectSources = {
+          ...state.projectSources,
+          source: createNewFolderHelper(
+            state.projectSources.source as MultiFileSource,
+            action.payload.folderName,
+            action.payload.parentId
+          ),
+        };
+        markEdited(state);
+      }
+    },
+    toggleOpenFolder(state, action: PayloadAction<FolderId>) {
+      if (state.projectSources?.source) {
+        const source = state.projectSources.source as MultiFileSource;
+        if (!source.folders[action.payload]) {
+          // No-op if the folder does not exist.
+          return;
+        }
+        // We don't count toggling a folder as an edit,
+        // as it doesn't meaningfully change the project state.
+        state.projectSources = {
+          ...state.projectSources,
+          source: {
+            ...source,
+            folders: {
+              ...source.folders,
+              [action.payload]: {
+                ...source.folders[action.payload],
+                open: !source.folders[action.payload].open,
+              },
+            },
+          },
+        };
+      }
+    },
+    deleteFolder(state, action: PayloadAction<FolderId>) {
+      if (state.projectSources?.source) {
+        const source = state.projectSources.source as MultiFileSource;
+        if (!source.folders[action.payload]) {
+          // No-op if the folder does not exist.
+          return;
+        }
+
+        const deleteResult = deleteFolderHelper({
+          source,
+          folderId: action.payload,
+        });
+        state.projectSources = {
+          ...state.projectSources,
+          source: deleteResult.newSource,
+        };
+        markEdited(state);
+      }
+    },
+    renameFolder(
+      state,
+      action: PayloadAction<{folderId: FolderId; newName: string}>
+    ) {
+      if (state.projectSources?.source) {
+        const source = state.projectSources.source as MultiFileSource;
+        if (
+          !source.folders[action.payload.folderId] ||
+          source.folders[action.payload.folderId].name ===
+            action.payload.newName
+        ) {
+          // No-op if the folder does not exist or the name is the same.
+          return;
+        }
+        state.projectSources = {
+          ...state.projectSources,
+          source: {
+            ...source,
+            folders: {
+              ...source.folders,
+              [action.payload.folderId]: {
+                ...source.folders[action.payload.folderId],
+                name: action.payload.newName,
+              },
+            },
+          },
+        };
+        markEdited(state);
+      }
+    },
+    rearrangeFiles(state, action: PayloadAction<FileId[]>) {
+      if (state.projectSources?.source) {
+        // We don't count rearranging files as an edit, as it doesn't
+        // meaningfully change the project state.
+        const source = state.projectSources.source as MultiFileSource;
+        state.projectSources = {
+          ...state.projectSources,
+          source: {
+            ...source,
+            openFiles: action.payload,
+          },
+        };
+      }
     },
     resetProjectMetadata(state) {
       // Reset the state that needs to be reset manually on level change.
       // Project source is handled elsewhere.
       state.hasEdited = false;
+      state.hasEditedSinceLastVersionSave = false;
+      state.versionDetails = undefined;
       state.viewingOldVersion = false;
       state.restoredOldVersion = false;
+      state.viewingAiTutorVersion = false;
+      state.aiTutorVersionFiles = undefined;
+    },
+    setLastSavedLabConfig(state, action: PayloadAction<LabConfig | undefined>) {
+      state.lastSavedLabConfig = action.payload;
+    },
+    markProjectEdited(state) {
+      markEdited(state);
     },
   },
 });
 
 export const {
   setProjectSource,
+  setProjectSourceBeforeAiTutorVersion,
+  setAiTutorVersionFiles,
+  setProjectSourceLevelId,
   setPreviousVersionSource,
   setViewingOldVersion,
+  setViewingAiTutorVersion,
   setRestoredOldVersion,
   resetProjectMetadata,
-  setHasEdited,
+  resetHasEditedSinceLastVersionSave,
+  setSource,
+  setProjectTooLarge,
+  createNewFile,
+  createNewExternalFile,
+  renameFile,
+  saveFile,
+  setFileType,
+  activateFile,
+  closeFile,
+  deleteFile,
+  moveFile,
+  moveFolder,
+  createNewFolder,
+  toggleOpenFolder,
+  deleteFolder,
+  renameFolder,
+  rearrangeFiles,
+  setLastSavedLabConfig,
+  markProjectEdited,
 } = projectSlice.actions;
 
 export default projectSlice.reducer;

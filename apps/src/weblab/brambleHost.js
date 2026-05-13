@@ -26,7 +26,10 @@ function load(Bramble) {
     api.redux(),
     `${BRAMBLE_BASE_URL}/index.html`,
     `/codedotorg/weblab/${api.getProjectId()}/`,
-    webLab_.disallowedHtmlTags
+    [
+      ...(webLab_.disallowedHtmlTags || []),
+      ...(webLab_.disallowedHtmlAttrs || []).map(attr => `*[${attr}]`),
+    ]
   );
   cdoBramble
     .on('mountable', () => api.onBrambleMountable(cdoBramble.getInterface()))

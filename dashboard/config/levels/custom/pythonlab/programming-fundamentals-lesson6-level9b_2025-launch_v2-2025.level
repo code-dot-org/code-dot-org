@@ -1,0 +1,55 @@
+<Pythonlab>
+  <config><![CDATA[{
+  "game_id": 72,
+  "created_at": "2025-09-25T19:56:34.000Z",
+  "level_num": "custom",
+  "user_id": 16889,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "## Do This:\r\n\r\nYou're creating a program to help a digital crossing guard remind people to look both ways before crossing the street. Every time a pedestrian approaches, the program should deliver the same safety reminder. You'll define the reminder once and reuse it for each crossing.\r\n\r\n1. Define a function called `look_both_ways()` that prints a safety message.\r\n\r\n2. Call the function **four times** to represent four people crossing the street.\r\n\r\n3. Make sure the same message prints each time.\r\n\r\n---\r\n\r\n<i class=\"fa-solid fa-laptop\"></i> **Coding Tip**\r\n\r\nWhen you need to do the same task over and over, a function helps you keep your code short and easy to read. You can call the function as many times as you need.\r\n\r\nUse the **UMPIRE** strategy to understand what's happening, make a plan, test your output, and explain your thinking.",
+    "ai_tutor_available": "false",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "enable_micro_bit": "false",
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "name_suffix": "_v2-2025",
+    "display_name": "Crossing Guard Reminder",
+    "bubble_choice_description": "You're creating a program to help a digital crossing guard remind people to look both ways before crossing the street. Every time a pedestrian approaches, the program should deliver the same safety reminder. You'll define the reminder once and reuse it for each crossing.",
+    "thumbnail_url": "https://images.code.org/14aec96e7b1ed57c93ca47c9ca1a78b8-crossing.png",
+    "start_sources": {
+      "files": {
+        "0": {
+          "id": "0",
+          "name": "main.py",
+          "language": "py",
+          "contents": "# TODO - Write the function look_both_ways()\n\n\n\n# TODO - Call the look_both_ways() function four times\n\n\n",
+          "folderId": "0",
+          "active": false,
+          "open": true,
+          "type": "locked_starter"
+        }
+      },
+      "folders": {
+      },
+      "openFiles": [
+        "0"
+      ]
+    },
+    "encrypted_exemplar_sources": "Cy05mEYW43yx3lpwk/lyQYs4qPKDc2JDG2xzW6EZ2HXNXiuQgI6R1SlqPKPt\nlYISiQp/Zt7oXvHNpBSUY2/tVcAoh32dY5clMNiyTLp2qQ5O47DJ0rGD0IJV\nXDiO//IRW/LZBlXyH5JryMNp/3+nzlLlnXfGyKokFOrhXT9s/5jh7GWOykMD\n8G1esmtVhwPyHssNAx7e0P1hlkeAOv+aYsxezrWaqJpT09DCI4tNh+Q3up0n\naOC8PxDw5/vqlkPnikwax2a3nsR00u0HQKBnomP9wFYajOxOeK5NaBz/4bzN\ncb6iV04YvO1OGkh4AwpfkMMEU5flT4t2yaedQLcFxOxmj8Ih9eM/EbIJQDP6\nrM7loJHGx6pNu89wtFVDEMl3jbA06xEmHHkzhxgf5zWUOGtqS+oMnmXZoffG\n5Oe1nOK/vh7a0d/+4qjkmzR+b6Kulg5lTGb8PtMZwZxEXbM9KPiEwjjMbV05\n1bz7VzpRGIqupq8PpQR/vz+T6gaznI48bKHxpH21KCO8K1aEj840f7pJmTTW\nNxTQO2IkOHN30Wvr8GPtsZDqM+A+pJxsrEZrCUbbGNz6NeaWROMVwFks/Q==\n",
+    "validation_file": {
+      "id": "1",
+      "name": "test.py",
+      "language": "py",
+      "contents": "from unittest import TestCase\nfrom unittest_runner import ValidationProtocol\n\n# Try importing the student's function\ntry:\n    from main import look_both_ways\n    function_exists = True\nexcept ImportError:\n    function_exists = False\n\nclass TestLookBothWaysFunction(TestCase):\n    @classmethod\n    def setUpClass(cls):\n        \"\"\"Get printed output log\"\"\"\n        cls.log = ValidationProtocol().get_stdout_logs()\n\n    def test_look_both_ways_function_exists(self):\n        \"\"\"look_both_ways() should exist and be callable\"\"\"\n        if not function_exists:\n            self.fail(\"Make sure you define a function called look_both_ways()!\")\n\n    def test_four_safety_reminders_printed(self):\n        \"\"\"Four crossing reminders should be printed\"\"\"\n        printed_messages = [line.strip() for line in self.log if line.strip()]\n\n        self.assertEqual(\n            len(printed_messages),\n            4,\n            \"Make sure you call your look_both_ways() function four times to print four reminders!\"\n        )\n\n        all_contain_crossing = all(\n            \"cross\" in line.lower() or \"look\" in line.lower() for line in printed_messages\n        )\n\n        self.assertTrue(\n            all_contain_crossing,\n            \"Each reminder should encourage looking both ways or crossing safely! Make sure your look_both_ways() function mentions crossing or looking.\"\n        )\n",
+      "folderId": "0",
+      "active": false,
+      "open": false,
+      "type": "validation"
+    }
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-09-25T19:56:34.569+00:00\",\"changed\":[\"cloned from \\\"programming-fundamentals-lesson6-level9b_2025-launch_2025\\\"\"],\"cloned_from\":\"programming-fundamentals-lesson6-level9b_2025-launch_2025\"}]"
+}]]></config>
+</Pythonlab>

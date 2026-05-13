@@ -1,0 +1,17 @@
+.readOnlyInput {
+  background-color: inherit;
+  cursor: default;
+  border: none;
+}
+
+.clearElement {
+  color: #999;
+  font-size: 18px;
+  z-index: 10;
+  cursor: pointer;
+  pointer-events: all;
+
+  &:hover {
+    color: #d0021b;
+  }
+}

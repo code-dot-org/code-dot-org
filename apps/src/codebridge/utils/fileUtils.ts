@@ -4,6 +4,24 @@ import {MultiFileSource, ProjectFileType} from '@cdo/apps/lab2/types';
 
 import {ProjectFile} from '../types';
 
+const FILE_TYPE_ICON_MAP = {
+  py: {iconName: 'python', iconStyle: 'regular' as const, isBrand: true},
+  csv: {iconName: 'file-csv', iconStyle: 'solid' as const, isBrand: false},
+  txt: {iconName: 'file-lines', iconStyle: 'solid' as const, isBrand: false},
+  md: {iconName: 'markdown', iconStyle: 'regular' as const, isBrand: true},
+  html: {iconName: 'file-code', iconStyle: 'solid' as const, isBrand: false},
+  js: {iconName: 'js', iconStyle: 'regular' as const, isBrand: true},
+  json: {
+    iconName: 'brackets-curly',
+    iconStyle: 'solid' as const,
+    isBrand: false,
+  },
+  css: {iconName: 'css', iconStyle: 'regular' as const, isBrand: true},
+  jpg: {iconName: 'image', iconStyle: 'solid' as const, isBrand: false},
+  png: {iconName: 'image', iconStyle: 'solid' as const, isBrand: false},
+  jpeg: {iconName: 'image', iconStyle: 'solid' as const, isBrand: false},
+} as const;
+
 export function shouldShowFile(file?: ProjectFile) {
   // We could have an undefined file if the file referenced is a validation file.
   if (!file) {
@@ -11,10 +29,11 @@ export function shouldShowFile(file?: ProjectFile) {
   }
   const isStartMode = getAppOptionsEditBlocks() === START_SOURCES;
 
-  // If we are in start mode, show all files. If we are not in start mode,
-  // show starter files, locked starter files, and files without a type.
+  // If we are in start mode, show all files except system support files.
+  // If we are not in start mode, show starter files, locked starter files,
+  // and files without a type.
   return isStartMode
-    ? true
+    ? file.type !== ProjectFileType.SYSTEM_SUPPORT
     : file.type === ProjectFileType.STARTER ||
         file.type === ProjectFileType.LOCKED_STARTER ||
         !file.type;
@@ -27,8 +46,11 @@ export function getFileIconNameAndStyle(file: ProjectFile): {
 } {
   const isStartMode = getAppOptionsEditBlocks() === START_SOURCES;
   if (!isStartMode) {
-    if (file.name.endsWith('.py')) {
-      return {iconName: 'python', iconStyle: 'regular', isBrand: true};
+    const fileType = file.name.split('.').pop();
+    const iconConfig =
+      FILE_TYPE_ICON_MAP[fileType as keyof typeof FILE_TYPE_ICON_MAP];
+    if (iconConfig) {
+      return iconConfig;
     }
     return {iconName: 'file', iconStyle: 'regular'};
   }
@@ -47,7 +69,9 @@ export function getFileIconNameAndStyle(file: ProjectFile): {
 /**
  * Prepare the source for saving in levelbuilder. This moves the validation file
  * into a separate field and removes it from the files and list of open files, if
- * it was open.
+ * it was open. It also removes system support files, which are included in the sources
+ * from the other level properties and therefore don't also need to be in the start sources
+ * (for example, the maze grid).
  *
  * We split out the validation file because it is handled differently from start sources
  * in user code. The validation file is not saved to the user's project, and we always use
@@ -60,16 +84,22 @@ export function prepareSourceForLevelbuilderSave(source?: MultiFileSource) {
   if (!source) {
     return {parsedSource: null, validationFile: null};
   }
+
+  // We skip validation and system support files when saving to levelbuilder.
+  // The validation file is split out into a separate field, and system support
+  // files are not part of level start sources.
   const newFiles = Object.fromEntries(
     Object.entries(source.files).filter(
-      ([_, file]) => file.type !== ProjectFileType.VALIDATION
+      ([_, file]) =>
+        file.type !== ProjectFileType.VALIDATION &&
+        file.type !== ProjectFileType.SYSTEM_SUPPORT
     )
   );
   let validationFile = getValidationFromSource(source) || null;
   let openFiles = source.openFiles;
   if (validationFile && source.openFiles?.includes(validationFile.id)) {
     openFiles = source.openFiles.filter(id => id !== validationFile?.id);
-    validationFile = {...validationFile, open: false, active: false};
+    validationFile = {...validationFile, active: false};
   }
   return {
     parsedSource: {...source, files: newFiles, openFiles: openFiles},
@@ -86,7 +116,7 @@ export function prepareSourceForLevelbuilderSave(source?: MultiFileSource) {
  * @returns: MultiFileSource with the validation file added to the files, if it exists.
  */
 export function combineStartSourcesAndValidation(
-  source?: MultiFileSource,
+  source: MultiFileSource,
   validationFile?: ProjectFile
 ) {
   let returnValue = source;
@@ -95,7 +125,7 @@ export function combineStartSourcesAndValidation(
       ...source,
       files: {
         ...source.files,
-        [validationFile.id]: {...validationFile, open: true},
+        [validationFile.id]: {...validationFile},
       },
       openFiles: source.openFiles
         ? [...source.openFiles, validationFile.id]

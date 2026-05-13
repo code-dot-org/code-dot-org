@@ -1,8 +1,8 @@
 import {RenameFileFunction} from '@codebridge/codebridgeContext/types';
-import {ProjectFile, ProjectType, FileId} from '@codebridge/types';
-import {validateFileName} from '@codebridge/utils';
+import {ProjectFile, FileId} from '@codebridge/types';
+import {validateFileNameForModal} from '@codebridge/utils';
 
-import codebridgeI18n from '@cdo/apps/codebridge/locale';
+import {MultiFileSource} from '@cdo/apps/lab2/types';
 import {
   DialogType,
   DialogControlInterface,
@@ -14,10 +14,14 @@ type RenameNewFilePromptArgsType = {
   fileId: FileId;
   dialogControl: Pick<DialogControlInterface, 'showDialog'>;
   renameFile: RenameFileFunction;
-  projectFiles: ProjectType['files'];
+  projectFiles: MultiFileSource['files'];
   isStartMode: boolean;
   validationFile: ProjectFile | undefined;
-  sendCodebridgeAnalyticsEvent: (eventName: string) => unknown;
+  validFileTypes?: string[];
+  sendLab2AnalyticsEvent: (
+    eventName: string,
+    payload?: Record<string, string>
+  ) => void;
 };
 
 export const openRenameFilePrompt = async ({
@@ -25,14 +29,20 @@ export const openRenameFilePrompt = async ({
   dialogControl,
   renameFile,
   projectFiles,
-  sendCodebridgeAnalyticsEvent,
+  sendLab2AnalyticsEvent,
   isStartMode,
   validationFile,
+  validFileTypes,
 }: RenameNewFilePromptArgsType) => {
   const file = projectFiles[fileId];
   const results = await dialogControl?.showDialog({
     type: DialogType.GenericPrompt,
-    title: codebridgeI18n.renameFile(),
+    title: 'Rename file',
+    message: 'Give your file a new name.',
+    textFieldProps: {
+      label: 'New file name',
+    },
+    confirmButtonText: 'Rename file',
     value: file.name,
     validateInput: (newName: string) => {
       if (!newName.length) {
@@ -42,14 +52,16 @@ export const openRenameFilePrompt = async ({
         return;
       }
 
-      return validateFileName({
+      return validateFileNameForModal({
         fileName: newName,
         folderId: file.folderId,
         projectFiles,
         isStartMode,
         validationFile,
+        validFileTypes,
       });
     },
+    useModal: true,
   });
 
   if (results.type !== 'confirm') {
@@ -58,5 +70,7 @@ export const openRenameFilePrompt = async ({
 
   const newName = extractUserInput(results);
   renameFile(fileId, newName);
-  sendCodebridgeAnalyticsEvent(EVENTS.CODEBRIDGE_RENAME_FILE);
+  sendLab2AnalyticsEvent(EVENTS.CODEBRIDGE_RENAME_FILE, {
+    fileType: newName.split('.').pop()?.toLowerCase() || '',
+  });
 };

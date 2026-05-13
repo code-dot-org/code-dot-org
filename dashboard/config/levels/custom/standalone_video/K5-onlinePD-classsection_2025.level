@@ -1,0 +1,23 @@
+<StandaloneVideo>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 54,
+  "created_at": "2025-04-06T19:51:33.000Z",
+  "level_num": "custom",
+  "user_id": 63,
+  "properties": {
+    "video_key": "PL_ClassSection_2024",
+    "instructions_important": "false",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "parent_level_id": 28814,
+    "name_suffix": "_2025",
+    "encrypted": "false",
+    "long_instructions": "## Consider the following when watching this video:\r\n#### Which login type will work best for my students?\r\n\r\n#### **Additional resources:**\r\n\r\n<p style = \"font-size: 16pt;>\r\n\r\n* <a href=\"https://support.code.org/hc/en-us/articles/115000488132-Creating-a-classroom-section\" target=\"blank\" rel=\"noopener noreferrer\" >Creating a classroom section</a> \r\n* <a href=\"https://support.code.org/hc/en-us/articles/202114633-Creating-accounts-for-students-and-adding-them-to-your-section\" target=\"blank\" rel=\"noopener noreferrer\" >Creating accounts for students and adding them to your section</a> \r\n\r\n</p>\r\n"
+  },
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2025-04-06T19:51:33.003+00:00\",\"changed\":[\"cloned from \\\"K5-onlinePD-classsection_2024\\\"\"],\"cloned_from\":\"K5-onlinePD-classsection_2024\"},{\"changed_at\":\"2025-05-07 16:18:25 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"},{\"changed_at\":\"2025-05-07 16:24:15 +0000\",\"changed\":[\"video_key\"],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</StandaloneVideo>

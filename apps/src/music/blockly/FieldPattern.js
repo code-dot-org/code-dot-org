@@ -1,12 +1,14 @@
-import * as GoogleBlockly from 'blockly/core';
+import * as BlocklyCore from 'blockly/core';
 import React from 'react';
 import ReactDOM from 'react-dom';
 
 import color from '@cdo/apps/util/color';
+import {createReactRoot} from '@cdo/apps/util/createReactRoot';
 import experiments from '@cdo/apps/util/experiments';
 
+import {DEFAULT_PATTERN_LENGTH} from '../constants';
 import {generateGraphDataFromPattern} from '../utils/Patterns';
-import PatternPanel from '../views/PatternPanel';
+import InstrumentGrid from '../views/InstrumentGrid';
 
 const FIELD_WIDTH = 32;
 const FIELD_HEIGHT = 18;
@@ -14,9 +16,9 @@ const FIELD_PADDING = 2;
 
 /**
  * A custom field that renders the pattern editing UI, used in the
- * "play_pattern" block. The UI is rendered by {@link PatternPanel}.
+ * "play_pattern" block.
  */
-class FieldPattern extends GoogleBlockly.Field {
+class FieldPattern extends BlocklyCore.Field {
   constructor(options) {
     super(options.currentValue);
 
@@ -24,6 +26,7 @@ class FieldPattern extends GoogleBlockly.Field {
     this.SERIALIZABLE = true;
     this.CURSOR = 'default';
     this.backgroundElement = null;
+    this.onValueChange = value => this.setValue(value);
   }
 
   saveState() {
@@ -35,6 +38,7 @@ class FieldPattern extends GoogleBlockly.Field {
       state.instrument = state.kit;
       delete state.kit;
     }
+    state.length ||= DEFAULT_PATTERN_LENGTH;
     this.setValue(state);
   }
 
@@ -49,7 +53,7 @@ class FieldPattern extends GoogleBlockly.Field {
       this.borderRect_.classList.add('blocklyDropdownRect');
     }
 
-    this.backgroundElement = GoogleBlockly.utils.dom.createSvgElement(
+    this.backgroundElement = BlocklyCore.utils.dom.createSvgElement(
       'g',
       {
         transform: 'translate(1,1)',
@@ -96,7 +100,6 @@ class FieldPattern extends GoogleBlockly.Field {
     this.renderContent();
 
     this.newDiv_.style.color = color.neutral_light;
-    this.newDiv_.style.width = '420px';
     this.newDiv_.style.backgroundColor = color.dark_black;
     this.newDiv_.style.padding = '5px';
 
@@ -107,19 +110,23 @@ class FieldPattern extends GoogleBlockly.Field {
     if (!this.newDiv_) {
       return;
     }
-
-    ReactDOM.render(
-      <PatternPanel
-        initValue={this.getValue()}
-        onChange={value => {
-          this.setValue(value);
-        }}
+    createReactRoot(
+      <InstrumentGrid
+        editorType="drums"
+        // Make a copy of the value object so that we don't overwrite Blockly's data.
+        initialValue={JSON.parse(JSON.stringify(this.getValue()))}
+        onChange={this.onValueChange}
+        lengthMeasures={1}
       />,
-      this.newDiv_
+      this.newDiv_,
+      {
+        legacyReactDomRender: true,
+      }
     );
   }
 
   dropdownDispose_() {
+    ReactDOM.unmountComponentAtNode(this.newDiv_);
     this.newDiv_ = null;
   }
 
@@ -133,7 +140,7 @@ class FieldPattern extends GoogleBlockly.Field {
       this.backgroundElement.innerHTML = '';
     }
 
-    GoogleBlockly.utils.dom.createSvgElement(
+    BlocklyCore.utils.dom.createSvgElement(
       'rect',
       {
         fill: color.neutral_dark,
@@ -155,7 +162,7 @@ class FieldPattern extends GoogleBlockly.Field {
     });
 
     graphNotes.forEach(graphNote => {
-      GoogleBlockly.utils.dom.createSvgElement(
+      BlocklyCore.utils.dom.createSvgElement(
         'rect',
         {
           fill: color.neutral_light,
@@ -170,10 +177,6 @@ class FieldPattern extends GoogleBlockly.Field {
     });
 
     this.renderContent();
-  }
-
-  getText() {
-    return this.getValue().kit;
   }
 
   updateSize_() {

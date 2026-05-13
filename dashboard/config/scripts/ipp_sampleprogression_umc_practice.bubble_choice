@@ -1,0 +1,10 @@
+name 'IPP_SampleProgression_UMC_Practice'
+display_name 'Variables Practice'
+description 'Get more practice with variables! Do as many of the activities below as you need.'
+
+sublevels
+level 'IPP_SampleProgression_UMC_Practice_1a'
+level 'IPP_SampleProgression_UMC_Practice_2'
+level 'IPP_SampleProgression_UMC_Practice_3'
+level 'IPP_SampleProgression_UMC_Practice_4'
+

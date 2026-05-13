@@ -1,0 +1,85 @@
+# Default configuration, overridden by:
+# - development.values.yml
+# - production.values.yml
+# argocd-detect-probe: code-dot-org run 10 at 2026-03-22T10:32:51Z
+
+image: code-dot-org:latest
+command: ["bin/dashboard-server"]
+args:
+
+# Override to set RAILS_ENV
+RAILS_ENV:
+dnsName: studio-development
+dashboard_workers: 0
+
+locals.yml:
+  # For example:
+  # levelbuilder_mode: true
+  # build_apps: false
+  # ...etc...
+
+# Require the k8s secret `cdo-external-secrets` to exist before bootup
+# Aka: "Require AWS Secrets Manager access to boot" mode
+require_external_secrets: false
+
+healthChecks:
+  enabled: false
+
+resources:
+  ephemeralStorage: 30Gi
+
+autoscaling:
+  enabled: false
+  minReplicas: 1
+  maxReplicas: 1
+  replicasWhenAutoscaleDisabled: 1
+
+dashboardJob:
+  enabled: false
+  name: zsh
+  command: ["zsh", "-c"]
+  args: []
+  restartPolicy: Never
+  backoffLimit: 1
+  ttlSecondsAfterFinished: 3600 # cleanup job an hour after it completes
+
+services:
+  redis:
+    enabled: false
+    # skaffold development profile will auto-generate, see cdo-local-secrets:
+    password:
+  mysql:
+    enabled: false
+    # skaffold development profile will auto-generate, see cdo-local-secrets:
+    password:
+  minio:
+    enabled: false
+    user: minioadmin
+    # skaffold development profile will auto-generate, see cdo-local-secrets:
+    password:
+    runSetupS3Job: false # seed the minio buckets, runs a one-time job
+
+# These should match the docker image's USERNAME, UID and GID args
+#
+# NOTE: these currently have no effect because they are overridden to root
+# in skaffold.yaml due to a bug in skaffold sync
+user:
+  username: code-dot-org
+  uid: 1000
+  gid: 1000
+  home: /home/code-dot-org
+  allowSudo: false
+
+# Use the AWS creds from your local machine inside the dashboard container
+# Tip: activate with the skaffold local-dev profile: `skaffold dev -p local-dev`
+localDev:
+  mounts:
+    mountDotAWS: false
+    mountDotConfigGcloud: false
+
+    # These are set in the skaffold development profile so we can
+    # use dynamic values appropriate to your particular system
+    AWS_PROFILE: # for mountDotAWS: match AWS_PROFILE on your local system
+    hostPaths:
+      home: # ~ on  your local dev box, set automatically by skaffold
+      skaffoldStorage: # code-dot-org/skaffoldStorage on your local dev box, set automatically by skaffold

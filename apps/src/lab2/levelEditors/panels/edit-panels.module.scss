@@ -4,25 +4,55 @@
 $scale-factor: 0.5;
 $full-width: 1920px;
 $full-height: 1080px;
+// Unitless. Used as Nvw below; exported to EditPanels.tsx for the JS-side
+// inner-surface scale.
+$pinned-width-vw: 29;
+
+:export {
+  pinnedWidthVw: $pinned-width-vw;
+}
 
 .container {
   display: flex;
   flex-direction: column;
 }
 
+// Reserves space so the page does not jump when the inner preview pins.
+.panelsSlot {
+  height: $full-height * $scale-factor;
+  width: $full-width * $scale-factor;
+  margin-bottom: 25px;
+}
+
 .panelsContainer {
   position: relative;
   height: $full-height * $scale-factor;
   width: $full-width * $scale-factor;
-  background-color: #121212;
-  margin-bottom: 25px;
+}
+
+// Pins the preview at top-left while the slot above scrolls offscreen.
+// --pinned-scale is written from JS; CSS length-division would work too but
+// has only recently landed across browsers.
+.panelsContainerPinned {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  width: #{$pinned-width-vw}vw;
+  height: auto;
+  aspect-ratio: 16 / 9;
+
+  .fullSizeContainer {
+    transform: scale(var(--pinned-scale, 0.5));
+  }
 }
 
 .fullSizeContainer {
   position: relative;
   width: $full-width;
   height: $full-height;
-  transform: scale($scale-factor) translateX(-50%) translateY(-50%);
+  transform-origin: 0 0;
+  transform: scale($scale-factor);
 }
 
 .panelEditors {
@@ -31,7 +61,6 @@ $full-height: 1080px;
   border-radius: 4px;
   margin-bottom: 25px;
   resize: vertical;
-  height: 300px;
   background-color: rgba($neutral_dark10, 0.5);
 }
 
@@ -86,6 +115,45 @@ $full-height: 1080px;
 .addPanelButton {
   @extend %button;
   margin: auto;
+}
+
+.linksSection {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 10px;
+}
+
+.linkRow {
+  flex-wrap: wrap;
+  align-items: flex-start;
+
+  label {
+    display: flex;
+    flex-direction: column;
+    font-size: 13px;
+  }
+
+  textarea {
+    min-width: 240px;
+  }
+}
+
+.linkSliderHorizontal {
+  input[type='range'] {
+    width: 140px;
+  }
+}
+
+.linkSliderVertical {
+  align-items: center;
+  width: 50px;
+
+  input[type='range'] {
+    writing-mode: vertical-lr;
+    height: 100px;
+    width: auto;
+  }
 }
 
 @keyframes fade-out-toast {

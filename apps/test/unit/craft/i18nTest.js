@@ -2,7 +2,6 @@ import craftI18n from '@cdo/apps/craft/locale';
 import {blockTypesToDropdownOptions} from '@cdo/apps/craft/utils';
 // we have to include the base locale file so the craft-specific one will work,
 // even though we don't need to use the base locale directly in this test.
-// eslint-disable-next-line no-unused-vars
 
 describe('Minecraft Internationalization', () => {
   it('provides a user-friendly name for a block when possible', () => {

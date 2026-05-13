@@ -10,7 +10,7 @@ Then /^I load the last Minecraft HoC level$/ do
     }
   ) do
     steps <<-STEPS
-      Given I am on "http://studio.code.org/s/mc/lessons/1/levels/14?noautoplay=true&customSlowMotion=0.1"
+      Given I am on "http://studio.code.org/courses/mc/units/1/lessons/1/levels/14?noautoplay=true&customSlowMotion=0.1"
       And I wait for the lab page to fully load
       And I wait until the Minecraft game is loaded
     STEPS

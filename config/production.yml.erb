@@ -1,12 +1,14 @@
-azure_content_moderation_key: !Secret
 discourse_sso_secret: !Secret
-level_sources_redis_url: !Secret
 pardot_password: !Secret
 pardot_user_key: !Secret
 pardot_username: !Secret
 pardot_private_key: !Secret
+pardot_client_id: !Secret
+pardot_client_secret: !Secret
 pd_teacher_application_list_secret_key: !Secret
 pledge_map_table_id: !Secret
+
+redshift_cluster_id: !Secret
 redshift_host: !Secret
 redshift_password: !Secret
 redshift_username: !Secret
@@ -17,7 +19,6 @@ sinatra_session_secret: !Secret
 db_credential_admin: {"username":"ACCESS_DISABLED", "password":"ACCESS_DISABLED"}
 <% end %>
 
-newrelic_logging: true
 stack_name: autoscale-prod
 solr_server:                            solr.code.org
 use_pusher:                             true
@@ -34,22 +35,39 @@ afe_pardot_form_handler_url: !Secret
 imm_reader_client_id:     '06d74083-9d25-43e4-acf6-0377f381a1e5'
 imm_reader_subdomain:     'cdo-immersive-reader-prod'
 
-# General CDO Amplitude key
-cdo_amplitude_api_key: !Secret
-
 # AI Proxy for OpenAI API
 ai_proxy_origin: https://aiproxy.code.org
 
 # Mapbox
-mapbox_upload_tileset:    'censustiles'
 mapbox_upload_token:      !Secret
-mapbox_access_tileset:    'censustiles'
 
 # Statsig API keys
 statsig_server_secret_key: !Secret
 statsig_api_client_key: !Secret
+statsig_api_client_key_session_replay: !Secret
 
 # MailGun/MailJet API keys
 mailjet_api_key: !Secret
 mailjet_secret_key: !Secret
 mailgun_api_key: !Secret
+
+# Number of workers to start when running `rake build:start_active_job_workers`:
+active_job_backend_n_workers_to_start: 140
+active_job_backend_rolling_restart_in_n_batches: 5
+
+# JSON Web Key Set (JWKS) and private key data. This overrides the non-prod JWKS data configured in config.yml.erb
+jwks_data: 
+  keys:
+    - kty: "RSA"
+      n: "s8ymkrciPcjA8enrCyg7oO8hGixV9nEAVdLwtuSlJt441OZKFE9vCYsyzxODjtFxTCTj0Q0misMWQbo-Dzvi7DeXRCVOlydeTKgL5UaozAySSe3Qj9WE0idFRZ9kTeuDxwB50AxL-k7yvvdl66a4iBqnmaRIdCMyTu44u9uyydauzPknZ7H3wjgOjv2SvJAIOxUW2QQ6-hTeAXT5N2lPOZYR2UzRaevVOFx91TX9ax8SNDz8UK7wJ7RWVPY22gIpowCUBMkaeZYHQK3E1XRifsrf5etK2PtZYetJk8NoVDnuGTm2ZS-Q4KyqDnSP2QyTM9vHloNhZPgrsvdpyX81rQ"
+      e: "AQAB"
+      use: "sig"
+      alg: "RS256"
+      kid: "Rc2LLhn9Qto98Yx63mDk--ZuS3LnjP5RPHteCorZzgE"
+jwk_private_key_data: !Secret
+
+# Enables OpenTelemetry instrumentation
+enable_opentelemetry: true
+
+# Enables Sentry error reporting and tracing.
+enable_sentry: true

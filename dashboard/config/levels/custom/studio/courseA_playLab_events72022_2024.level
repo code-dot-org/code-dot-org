@@ -67,7 +67,7 @@
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2024-04-03T21:06:34.111+00:00\",\"changed\":[\"cloned from \\\"courseA_playLab_events72022_2023\\\"\"],\"cloned_from\":\"courseA_playLab_events72022_2023\"},{\"changed_at\":\"2024-04-11 19:54:08 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2024-04-03T21:06:34.111+00:00\",\"changed\":[\"cloned from \\\"courseA_playLab_events72022_2023\\\"\"],\"cloned_from\":\"courseA_playLab_events72022_2023\"},{\"changed_at\":\"2024-04-11 19:54:08 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2025-06-25 14:13:46 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"}]",
   "level_concept_difficulty": {
     "sequencing": 1,
     "events": 1
@@ -130,50 +130,49 @@
     </start_blocks>
     <toolbox_blocks>
       <xml>
-        <block type="when_run"/>
-        <block type="studio_whenArrow">
+        <block type="studio_whenArrow" id="vILlG3Q9Kj7_/00!5=tl" x="0" y="81">
           <field name="VALUE">up</field>
         </block>
-        <block type="studio_whenSpriteClicked">
+        <block type="studio_whenSpriteClicked" id="P(M6OYhu3KtJFCaCh5x!" x="0" y="176">
           <field name="SPRITE">1</field>
         </block>
-        <block type="studio_whenSpriteCollided">
+        <block type="studio_whenSpriteCollided" id="gsLCHZT%_`L*k8OnWD(N" x="0" y="274">
           <field name="SPRITE1">1</field>
           <field name="SPRITE2">0</field>
         </block>
-        <block type="studio_setBackground">
+        <block type="studio_setBackground" id="iQWXeM$}3zAg.dompO1g" x="0" y="372">
           <field name="VALUE">random</field>
         </block>
-        <block type="studio_setSprite">
+        <block type="studio_setSprite" id="t|)MO9M_o8y8@p(XhhKy" x="0" y="470">
           <field name="VALUE">"visible"</field>
           <field name="SPRITE">0</field>
         </block>
-        <block type="studio_move">
+        <block type="studio_move" id="MOS]dw($gvB]q.AVG};d" x="0" y="568">
           <field name="SPRITE">1</field>
           <field name="DIR">1</field>
         </block>
-        <block type="studio_playSound">
+        <block type="studio_playSound" id="jl00oCJ[;U*8Kk-/q~:~" x="0" y="666">
           <field name="SOUND">random</field>
         </block>
-        <block type="studio_wait">
+        <block type="studio_wait" id="}R+^y]8U(t|o]O@wdXTZ" x="0" y="745">
           <field name="VALUE">1000</field>
         </block>
-        <block type="studio_setSpriteEmotion">
+        <block type="studio_setSpriteEmotion" id="YkGBaru2bLRd8cZ/4Di|" x="0" y="824">
           <field name="SPRITE">0</field>
           <field name="VALUE">0</field>
         </block>
-        <block type="studio_changeScore"/>
-        <block type="studio_saySpriteChoices">
+        <block type="studio_changeScore" id="eY}zpG;a}U,pIvyH3O`h" x="0" y="922"/>
+        <block type="studio_saySpriteChoices" id="g!vSHLq8TCm5WfKQrxfi" x="0" y="1001">
           <field name="SPRITE">0</field>
           <field name="VALUE">Hi there.</field>
         </block>
-        <block type="studio_vanish">
+        <block type="studio_vanish" id=":/r82J{HnDsGbCU9e?dB" x="0" y="1099">
           <field name="SPRITE">0</field>
         </block>
-        <block type="controls_repeat_simplified_dropdown">
+        <block type="controls_repeat_simplified_dropdown" id="]Oxf3Ui4lwpOk(H?c5rL" x="0" y="1197">
           <field name="TIMES" config="3-10">5</field>
         </block>
-        <block type="comment">
+        <block type="comment" id="ipM5iHKPj3V3e}ruF1@s" x="0" y="1303">
           <field name="TEXT"/>
         </block>
       </xml>

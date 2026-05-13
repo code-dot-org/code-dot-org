@@ -35,4 +35,20 @@ export enum BlockTypes {
   PLAY_SOUND_IN_TRACK = 'play_sound_in_track',
   REST_IN_TRACK = 'rest_in_track',
   VALUE_SAMPLE = 'value_sample',
+  IF_ELSE = 'controls_if',
+  FUNCTION_CALL = 'procedures_callnoreturn',
+  FUNCTION_DEFINITION = 'procedures_defnoreturn',
+  FUNCTION_DEFINITION_RETURN = 'procedures_defreturn',
+  CATEGORY = 'category',
+  CUSTOM_CATEGORY = 'custom_category',
 }
+
+export const FunctionDefinitionBlockTypes: string[] = [
+  BlockTypes.FUNCTION_DEFINITION,
+  BlockTypes.FUNCTION_DEFINITION_RETURN,
+];
+
+export const LoopBlockTypes: string[] = [
+  BlockTypes.REPEAT_SIMPLE2,
+  BlockTypes.FOR_LOOP,
+];

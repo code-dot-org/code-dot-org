@@ -322,8 +322,8 @@
           "correct": false
         },
         {
-          "text": "If you have a membership card, then you get a 10% discount.",
-          "correct": true
+          "text": "It is good to have a membership card when you shop.",
+          "correct": false
         }
       ],
       "questions": [

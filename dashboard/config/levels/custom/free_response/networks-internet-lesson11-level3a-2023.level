@@ -1,0 +1,23 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 52,
+  "created_at": "2025-02-26T19:42:57.000Z",
+  "level_num": "custom",
+  "user_id": 1574,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "## Scenario and Key Risk\r\n\r\n### What network scenario did you choose, and what is its primary security risk?\r\n",
+    "allow_user_uploads": "false",
+    "submittable": "false",
+    "peer_reviewable": "false",
+    "optional": "false",
+    "allow_multiple_attempts": "true",
+    "skip_dialog": true,
+    "skip_sound": true
+  },
+  "audit_log": "[{\"changed_at\":\"2025-02-26T19:42:57.432+00:00\",\"changed\":[\"cloned from \\\"test-networks-and-internet-lesson-11-3-1\\\"\"],\"cloned_from\":\"test-networks-and-internet-lesson-11-3-1\"},{\"changed_at\":\"2025-02-26 19:43:38 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</FreeResponse>

@@ -1,0 +1,64 @@
+name 'pl-aif-2-U6-team-engagement-7'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Team Engagement & Shared Ownership
+
+<img src="https://images.code.org/e79d68f9d3ab4f45f411f8e520f1dd3a-image-1776790030470.png"  
+     alt="teacher working with a group of students"  
+     style="width: 30%; border-radius: 10px; margin: 0px 10px 10px 0px; float: left;">
+
+## No Fixed "Other" Roles
+
+#### Unlike some group projects, this capstone does not assign permanent roles to students.
+
+#### All major decisions are made as a team, and the Project Leader is explicitly instructed not to do all the work or act as a boss.
+
+<br>
+
+## Rotating Leadership
+
+#### To keep responsibilities fair and ensure everyone stays engaged in the project's management, the Project Leader role is strictly temporary.
+
+#### It rotates at every scheduled benchmark (Days 3, 5, and 8), guaranteeing that everyone gets a chance to lead.
+
+<br>
+
+## Engagement Through the Kanban Board
+
+#### The primary way to keep non-leaders active is through proper task management.
+
+> #### Teachers should ensure that task cards on the Kanban board are:
+> * #### Specific  
+> * #### Actionable  
+> * #### Sized for one class period  
+
+#### This clear task division ensures that every team member always has a concrete piece of the project to build or test.
+
+<br>
+
+## Productive Support Behaviors
+
+#### When teammates are not the active Project Leader and are not independently coding, teachers should encourage **productive support behaviors**.
+
+#### Instead of taking control or writing code for someone else, teammates should stay involved by:
+
+* #### Asking clarifying questions  
+* #### Suggesting next steps or reviewing Kanban priorities  
+* #### Testing the app to find bugs or unexpected behaviors  
+* #### Gathering and giving feedback  
+
+---
+
+<div style="background-color: #B7E0E5; border-radius: 20px; color: #000000; width: 95%; padding: 10px 20px; margin-top: 20px;">
+
+<p style="line-height: 1.5; margin: 10px; font-size: 18px;">
+<b>💡 Teacher Tip: Assessing Shared Ownership</b><br><br>
+When evaluating projects, focus on the <b>Collaboration & Professional Practice</b> criteria in the rubric. High-scoring teams show shared ownership by consistently tracking tasks, communicating clearly, and staying actively involved throughout each stage of the project.
+</p>
+
+</div>
+
+![]()
+MARKDOWN

@@ -1,0 +1,35 @@
+name 'self-paced-TCaAI-L2-SectionOverview'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Curriculum Investigation
+
+#### Let’s begin with the first milestone in the Thinking Critically About AI unit: **AI in My World**!
+
+#### In this opening milestone, students engage in a compelling hook activity in Lesson 1 that surfaces their assumptions, questions, and lived experiences with AI. In Lesson 2, they deepen their understanding of how AI systems work and are introduced to the unit’s culminating project. Together, these two lessons serve as the **project launch**.
+
+<div style="display: flex; align-items: flex-start; gap: 20px; margin-top: 20px; margin-bottom:0px">
+    <div style="width: 70%;">
+        <p style="line-height: 1.; font-size: 18px;">
+            In this section, you will:
+        </p>
+        <ul style="margin-left: 20px; line-height: 1.;">
+            <li style="line-height: 1.5;font-size: 18px;">
+               Review and organize instructional materials needed to teach Thinking Critically About AI.
+            </li>
+            <li style="line-height: 1.2;font-size: 18px;">
+               Prepare to lead student investigations and introduce the culminating project with clarity and confidence.
+            </li>
+            <li style="line-height: 1.2;font-size: 18px;">
+               Examine the instructional flow from Build Knowledge to Develop & Critique in order to plan for effective facilitation and student support.
+            </li>
+        </ul>
+        <p style="font-size: 16px; color: black;">
+    </div>
+    <!-- Image on the right -->
+    <img src="https://images.code.org/11d7634b4267f4aa8afc6a3caa340a9b-MS17.png" alt="" style="width: 30%; height: auto; border-radius: 5px;">
+</div>
+
+#### **Suggested time for this section:** <mark>UPDATE</mark>
+MARKDOWN

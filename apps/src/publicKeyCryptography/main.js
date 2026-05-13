@@ -1,9 +1,9 @@
 /** @file Main entry file for the publicKeyCryptography bundle, used by the
  *        Public Key Cryptography widget levels. */
 import React from 'react';
-import ReactDOM from 'react-dom';
 
 import {registerGetResult} from '@cdo/apps/code-studio/levels/codeStudioLevels';
+import {createReactRoot} from '@cdo/apps/util/createReactRoot';
 
 import ModuloClockWidget from './ModuloClockWidget';
 import PublicKeyCryptographyWidget from './PublicKeyCryptographyWidget';
@@ -15,13 +15,16 @@ const ALICE_EVE_BOB_VIEW = 2;
 
 function initialize(options) {
   registerGetResult(); // a default getResult function.
-  ReactDOM.render(
+  createReactRoot(
     parseInt(options.cryptographyWidgetView, 10) === ALICE_EVE_BOB_VIEW ? (
       <PublicKeyCryptographyWidget />
     ) : (
       <ModuloClockWidget />
     ),
-    document.getElementById('public-key-cryptography-mount')
+    document.getElementById('public-key-cryptography-mount'),
+    {
+      legacyReactDomRender: true,
+    }
   );
 }
 

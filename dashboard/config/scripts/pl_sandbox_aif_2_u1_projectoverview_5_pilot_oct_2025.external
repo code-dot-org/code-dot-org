@@ -1,0 +1,50 @@
+name 'pl_sandbox_aif_2_U1-projectOverview_5_pilot-oct-2025'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Final Project Overview
+
+## Multi-page web application
+#### In the final project, students take on the role of web designers to create a multi-page digital magazine for a fictional user or community.
+
+#### They identify their target audience and brand, plan the layout for key pages like a home page and article page, and then use AI in Guide mode to help them generate the HTML and CSS needed to build their site. 
+
+---
+
+### **When Project Begins:** Final lesson of the unit
+
+### The project extends over three class periods. Beginning in Lesson 13.
+
+## Sample
+
+#### In this example, the student designed a web app to showcase local events and activities in their town.
+
+
+<img src="https://images.code.org/09e512de4a9aabe1d639227212addd72-image-1760984659003.png" alt="Sample student project of a website giving informaiton about events happening locally in their community" width="850px" style="display: block; margin-left: auto; margin-right: auto;">
+
+---
+
+## Primary Concepts Practiced
+- #### User-centered design
+- #### Wireframing and decomposition
+- #### Brand identity
+- #### Accessibility and responsiveness
+- #### Prompt engineering and evaluating AI output
+
+
+## Project criteria used for evaluation
+- #### Addresses real community issue
+- #### Documents AI workflow
+- #### Open-ended and flexible to student interests
+- #### Requires students to customize style and branding
+- #### Requires students to make the page responsive to mobile and web layouts
+
+---
+
+#### This project lets students apply their design and coding skills in a creative, authentic way while learning how AI can support the web development process.
+
+##Now, let’s see how we get here! 
+
+
+MARKDOWN

@@ -22,6 +22,7 @@
 #  index_levels_on_game_id    (game_id)
 #  index_levels_on_level_num  (level_num)
 #  index_levels_on_name       (name)
+#  index_levels_on_type       (type)
 #
 
 class LevelGroup < DSLDefined
@@ -48,7 +49,7 @@ class LevelGroup < DSLDefined
   end
 
   def icon
-    'fa fa-list-ul'
+    'fa-solid fa-list-ul'
   end
 
   # Returns an array of all the levels and texts in this LevelGroup,
@@ -120,7 +121,7 @@ class LevelGroup < DSLDefined
   end
 
   def self.setup(data, md5)
-    level = super(data, md5)
+    level = super
 
     levels_and_texts_by_page = data[:pages].map do |page|
       page[:levels].map do |level_name|
@@ -160,7 +161,7 @@ class LevelGroup < DSLDefined
 
   def assign_attributes(params)
     @pages = nil
-    super(params)
+    super
   end
 
   def plc_evaluation?

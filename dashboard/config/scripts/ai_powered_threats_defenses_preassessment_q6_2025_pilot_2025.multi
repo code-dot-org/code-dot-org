@@ -1,0 +1,14 @@
+name 'ai-powered-threats-defenses-preassessment-q6_2025-pilot_2025'
+
+question ‘Which of the following best describes a defense mechanism in cybersecurity?’
+
+wrong ‘A feature that slows down internet speed to prevent hackers’
+right ‘A tool or action that helps reduce the impact of a cyber threat’
+wrong ‘A setting that automatically saves your game progress’
+wrong ‘A software update that adds new emojis to your device’
+
+allow_multiple_attempts true
+
+teacher_markdown <<MARKDOWN
+Lesson 5: Successful Cybersecurity Stories
+MARKDOWN

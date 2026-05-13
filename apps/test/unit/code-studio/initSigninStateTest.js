@@ -1,4 +1,4 @@
-import cookies from 'js-cookie'; // eslint-disable-line no-restricted-imports
+import cookies from 'js-cookie';
 
 import {getUserSignedInFromCookieAndDom} from '@cdo/apps/code-studio/initSigninState';
 import {environmentSpecificCookieName} from '@cdo/apps/code-studio/utils';

@@ -1,7 +1,7 @@
+import Checkbox from '@code-dot-org/component-library/checkbox';
+import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
+import {IconButton as MuiIconButton} from '@mui/material';
 import React from 'react';
-
-import {Button} from '@cdo/apps/componentLibrary/button';
-import Checkbox from '@cdo/apps/componentLibrary/checkbox';
 
 import {LevelPredictSettings} from '../types';
 
@@ -60,6 +60,7 @@ const MultipleChoiceFields: React.FunctionComponent<
     return null;
   }
 
+  const solutions = predictSettings.solution?.split(',') || [];
   return (
     <div>
       <label className={moduleStyles.fieldArea}>
@@ -74,13 +75,16 @@ const MultipleChoiceFields: React.FunctionComponent<
             />
             <Checkbox
               label="Correct answer"
-              checked={predictSettings.solution?.includes(option) || false}
+              checked={solutions.includes(option) || false}
               onChange={handleToggleMultipleChoiceAnswer}
               name={`mark_correct_answer_${index}`}
               value={option}
             />
             {index > 0 && (
-              <Button
+              <MuiIconButton
+                variant="contained"
+                color="secondary"
+                size="extraSmall"
                 onClick={() => {
                   const newOptions = [
                     ...predictSettings.multipleChoiceOptions!,
@@ -91,16 +95,18 @@ const MultipleChoiceFields: React.FunctionComponent<
                     multipleChoiceOptions: newOptions,
                   });
                 }}
-                ariaLabel={'Delete option'}
-                color={'black'}
-                size={'xs'}
-                isIconOnly={true}
-                icon={{iconName: 'trash'}}
-              />
+                aria-label="Delete option"
+                type="button"
+              >
+                <FontAwesomeV6Icon iconName="trash" />
+              </MuiIconButton>
             )}
           </div>
         ))}
-        <Button
+        <MuiIconButton
+          variant="contained"
+          color="secondary"
+          size="small"
           onClick={() =>
             setPredictSettings({
               ...predictSettings,
@@ -110,12 +116,11 @@ const MultipleChoiceFields: React.FunctionComponent<
               ],
             })
           }
-          isIconOnly={true}
-          color={'black'}
-          size={'s'}
-          icon={{iconName: 'plus'}}
-          ariaLabel={'Add Option'}
-        />
+          aria-label="Add Option"
+          type="button"
+        >
+          <FontAwesomeV6Icon iconName="plus" />
+        </MuiIconButton>
 
         <Checkbox
           label="Mark as multiple select"

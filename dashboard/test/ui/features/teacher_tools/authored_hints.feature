@@ -1,7 +1,7 @@
 Feature: Authored Hints
 
 Scenario: View Authored Hints
-  Given I am on "http://studio.code.org/s/allthethings/lessons/6/levels/2?noautoplay=true"
+  Given I am on "http://studio.code.org/courses/allthethingscourse/units/1/lessons/6/levels/2?noautoplay=true"
   And I wait to see "#lightbulb"
 
   # This level has a total of three authored hints
@@ -29,5 +29,5 @@ Scenario: View Authored Hints
   And the hint lightbulb shows no hints available
 
   # Finally, verify that further clicking the lightbulb has no effect
-  When I press "lightbulb"
+  When I click selector "#lightbulb"
   Then element ".csf-top-instructions button:contains(Yes)" does not exist

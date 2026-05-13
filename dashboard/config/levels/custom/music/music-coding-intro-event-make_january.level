@@ -1,0 +1,111 @@
+<Music>
+  <config><![CDATA[{
+  "game_id": 70,
+  "created_at": "2025-01-23T23:12:25.000Z",
+  "level_num": "custom",
+  "user_id": 18605,
+  "properties": {
+    "encrypted": "false",
+    "instructions_important": "false",
+    "hint_prompt_attempts_threshold": "1",
+    "offer_browser_tts": "false",
+    "use_secondary_finish_button": "false",
+    "hide_share_and_remix": "false",
+    "level_data": {
+      "library": "curriculum2024",
+      "sounds": {
+        "twinkle_twinkle": [
+          "drums_main_beat",
+          "wash",
+          "bass_A",
+          "bass_B",
+          "bass_C",
+          "acoustic_A",
+          "acoustic_B",
+          "acoustic_C",
+          "synth_A",
+          "synth_B",
+          "synth_C",
+          "melodica_twinkle_twinkle",
+          "melodica_how_i_wonder",
+          "melodica_up_above",
+          "melodica_like_a_diamond",
+          "vocals_twinkle_twinkle",
+          "vocals_how_i_wonder",
+          "vocals_up_above",
+          "vocals_like_a_diamond"
+        ]
+      },
+      "packId": "twinkle_twinkle",
+      "startSources": {
+        "blocks": {
+          "languageVersion": 0,
+          "blocks": [
+            {
+              "type": "when_run_simple2",
+              "id": "when-run-block",
+              "x": 30,
+              "y": 30,
+              "deletable": false,
+              "movable": false,
+              "next": {
+                "block": {
+                  "type": "play_sound_at_current_location_simple2",
+                  "id": "G?,FGanKi+@(;J_q=8Om",
+                  "extraState": {
+                    "disableNextConnection": false
+                  },
+                  "fields": {
+                    "sound": "twinkle_twinkle/vocals_twinkle_twinkle"
+                  },
+                  "next": {
+                    "block": {
+                      "type": "play_sound_at_current_location_simple2",
+                      "id": "play_sound_at_current_location_simple2",
+                      "extraState": {
+                        "disableNextConnection": false
+                      },
+                      "fields": {
+                        "sound": "twinkle_twinkle/vocals_how_i_wonder"
+                      },
+                      "next": {
+                        "block": {
+                          "type": "play_sound_at_current_location_simple2",
+                          "id": "w^uJHD12sqv9p7~*HZwN",
+                          "extraState": {
+                            "disableNextConnection": false
+                          },
+                          "fields": {
+                            "sound": "twinkle_twinkle/vocals_up_above"
+                          },
+                          "next": {
+                            "block": {
+                              "type": "play_sound_at_current_location_simple2",
+                              "id": "qV=xs*14DgH4fWUY],R]",
+                              "extraState": {
+                                "disableNextConnection": false
+                              },
+                              "fields": {
+                                "sound": "twinkle_twinkle/vocals_like_a_diamond"
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        }
+      }
+    },
+    "name_suffix": "_january",
+    "preload_asset_list": null
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-01-23T23:12:25.117+00:00\",\"changed\":[\"cloned from \\\"music-coding-intro-event-make\\\"\"],\"cloned_from\":\"music-coding-intro-event-make\"},{\"changed_at\":\"2025-01-31 22:49:29 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-01-31 22:50:02 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-01-31 22:50:33 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-01-31 22:51:30 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]"
+}]]></config>
+  <blocks/>
+</Music>

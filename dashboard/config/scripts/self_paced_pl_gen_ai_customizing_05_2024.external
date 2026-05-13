@@ -9,8 +9,10 @@ markdown <<MARKDOWN
 
 #### Take as much time as you'd like to review these lessons.
 
+## Lesson Overviews
+
 <details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
-    <summary style="font-size: 1.5em; font-weight: bold;">🔎 Lesson 2: System Prompting - Exploration</summary>
+    <summary style="font-size: 1.5em; font-weight: bold;">🔎 Lesson 2: Exploration</summary> 
 <div style="margin-top: 20px; margin-left: 20px; margin-right: 20px;">
     <p>
 <img src="https://images.code.org/29c99d9ec0c5c98502e79a8cbdb6e57f-Screenshot 2024-08-30 at 2.37.31 PM.png" alt="system prompt with role, goal, tone, and restriction" width="300px" style="float:left; margin: 20px 20px 20px 20px;">
@@ -30,7 +32,7 @@ markdown <<MARKDOWN
 </details>
 
 <details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
-    <summary style="font-size: 1.5em; font-weight: bold;">🔎 Lesson 3: System Prompting - Practice
+    <summary style="font-size: 1.5em; font-weight: bold;">🔎 Lesson 3: Practice
 </summary>
 <div style="margin-top: 20px; margin-left: 20px; margin-right: 20px;">
     <p>
@@ -51,7 +53,7 @@ markdown <<MARKDOWN
 </details>
 
 <details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
-    <summary style="font-size: 1.5em; font-weight: bold;">🔎 Lesson 4: System Prompting - Synthesis</summary>
+    <summary style="font-size: 1.5em; font-weight: bold;">🔎 Lesson 4: Synthesis</summary>
 <div style="margin-top: 20px; margin-left: 20px; margin-right: 20px;">
     <p>
 <img src="https://images.code.org/4e168b9d7bad9acb0d4cb84a9ef312d0-Screenshot 2024-10-07 at 12.31.26 PM.png" alt="practice level from the lesson" width="300px" style="float:left; margin: 20px 20px 20px 20px;">
@@ -70,11 +72,6 @@ markdown <<MARKDOWN
 </p></div>
 </details>
 
-<div style="background-color: #a6e3e8; border-radius: 40px; color: #000000; width: 95%; padding: 1px 20px 1px 20px;">
-
-<p style="line-height: 1.5; margin-left: 10px; margin-right: 10px; margin-top: 10px; margin-bottom: 10px; font-size: 18px; "><strong>Teacher Tip:</strong> As students struggle getting the chatbot to respond in a particular way, they may want to know the “trick” or “secret” to getting the chatbot to respond how they want. You can assure students that there is no trick, just a set of strategies that tend to work more often than others but are still unreliable.  
-</p>
-</div>
 
 <br>
 
@@ -90,7 +87,14 @@ markdown <<MARKDOWN
 </p></div>
 </details>
 
-## Up Next!
-#### You’ll learn about the next tool in our AI tool box - **retrieval**.
+
+<br>
+
+<div style="background-color: #a6e3e8; border-radius: 40px; color: #000000; width: 95%; padding: 1px 20px 1px 20px;">
+
+<p style="line-height: 1.5; margin-left: 10px; margin-right: 10px; margin-top: 10px; margin-bottom: 10px; font-size: 18px; "><strong>Teacher Tip:</strong> The teaching guide is a great tool to help incorporate student responses in lessons and build engaging discussions in your class in real-time using the tools and features on the Code.org platform, especially during the predict and discuss levels.
+Take a few minutes to look over the <a href = "https://docs.google.com/document/d/1wESWwYm7Ty46eEK9qFcYfYI7NfG9mqodD12YOmuUcrs/edit?usp=sharing" target="blank" rel="noopener noreferrer">teaching guide</a>. 
+</p>
+</div>
 
 MARKDOWN

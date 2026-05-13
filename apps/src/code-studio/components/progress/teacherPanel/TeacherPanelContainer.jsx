@@ -8,31 +8,28 @@ import {tryGetLocalStorage, trySetLocalStorage} from '@cdo/apps/utils';
 export default class TeacherPanelContainer extends React.Component {
   static propTypes = {
     children: PropTypes.node,
-    logToFirehose: PropTypes.func,
+    className: PropTypes.string,
   };
 
   state = {open: tryGetLocalStorage('teacher-panel', 'open') !== 'closed'};
 
-  logToFirehose = () => {
-    if (this.props.logToFirehose) {
-      const eventName = this.state.open ? 'open' : 'close';
-      this.props.logToFirehose(eventName);
-    }
-  };
-
   hide = () => {
-    this.setState({open: false}, this.logToFirehose);
+    this.setState({open: false});
     trySetLocalStorage('teacher-panel', 'closed');
   };
 
   show = () => {
-    this.setState({open: true}, this.logToFirehose);
+    this.setState({open: true});
     trySetLocalStorage('teacher-panel', 'open');
   };
 
   render() {
     return (
-      <div className={classNames('teacher-panel', {hidden: !this.state.open})}>
+      <div
+        className={classNames('teacher-panel', this.props.className, {
+          hidden: !this.state.open,
+        })}
+      >
         <div className="hide-handle">
           <FontAwesome icon="chevron-right" onClick={this.hide} />
         </div>

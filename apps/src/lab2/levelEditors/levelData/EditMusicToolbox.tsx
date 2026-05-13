@@ -1,11 +1,11 @@
+import Alert from '@code-dot-org/component-library/alert';
+import Checkbox from '@code-dot-org/component-library/checkbox';
+import SegmentedButtons from '@code-dot-org/component-library/segmentedButtons';
+import {Typography} from '@mui/material';
 import classNames from 'classnames';
 import {isEqual} from 'lodash';
 import React, {useCallback} from 'react';
 
-import Alert from '@cdo/apps/componentLibrary/alert/Alert';
-import Checkbox from '@cdo/apps/componentLibrary/checkbox/Checkbox';
-import SegmentedButtons from '@cdo/apps/componentLibrary/segmentedButtons/SegmentedButtons';
-import {BodyTwoText} from '@cdo/apps/componentLibrary/typography';
 import {defaultMaps} from '@cdo/apps/music/blockly/toolbox/definitions';
 import {
   CategoryBlocksMap,
@@ -91,9 +91,13 @@ const EditMusicToolbox: React.FunctionComponent<EditMusicToolboxProps> = ({
             )}
           >
             <div className={styles.row}>
-              <BodyTwoText className={styles.noMargin}>
+              <Typography
+                className={styles.noMargin}
+                variant="body2"
+                gutterBottom
+              >
                 Sequencing Model:
-              </BodyTwoText>
+              </Typography>
               <SegmentedButtons
                 size="xs"
                 selectedButtonValue={blockMode}
@@ -112,7 +116,13 @@ const EditMusicToolbox: React.FunctionComponent<EditMusicToolboxProps> = ({
       <div className={classNames(styles.horizontalFlex, styles.gapMedium)}>
         <div className={classNames(styles.verticalFlex, styles.gapLarge)}>
           <div className={classNames(styles.verticalFlex, styles.gapMedium)}>
-            <BodyTwoText className={styles.noMargin}>Toolbox Type:</BodyTwoText>
+            <Typography
+              className={styles.noMargin}
+              variant="body2"
+              gutterBottom
+            >
+              Toolbox Type:
+            </Typography>
             <SegmentedButtons
               size="xs"
               selectedButtonValue={toolbox?.type || 'category'}

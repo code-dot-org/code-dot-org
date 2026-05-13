@@ -4,7 +4,8 @@
     "wrapup_video_id": null,
     "login_required": true,
     "properties": {
-      "curriculum_umbrella": "Foundations of CS",
+      "content_area": "curriculum_9_12",
+      "curriculum_umbrella": "AIF",
       "has_verified_resources": true,
       "hideable_lessons": true,
       "include_student_lesson_plans": true,
@@ -13,11 +14,12 @@
       "show_calendar": true,
       "student_detail_progress_view": true,
       "tts": true,
+      "version_year": "2024",
       "weekly_instructional_minutes": 225
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2024-07-11 17:52:30 UTC",
+    "serialized_at": "2025-04-23 18:15:32 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,

@@ -1,0 +1,60 @@
+name 'aif_pl_AI_chatbot_debrief_L12-2-data-science'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Lesson Debrief: Pizza Data + AI Analysis
+
+
+<img src="https://images.code.org/1cd0ec71458414495502b9598efd2028-image-1639773441510.37.01 PM.png" alt="code.org AI robot character" style="border-radius:10px; float: right; ; height: 200px; margin: 20px 20px 0px 10px; ">
+
+##🧠 Goal of the Activity
+#### Students practice analyzing real-world data, then compare their own observations to an AI-generated analysis.
+
+#### **This helps them:**
+
+- #### Practice data interpretation skills
+
+- #### Identify patterns or outliers in data
+
+- #### Think critically about how AI interprets data differently than humans
+
+- #### Discuss how decisions (like pizza ordering) can be informed by data
+
+---
+
+## ⚙️ Teacher Tips for Using the AI Chatbot
+- #### ✅ The Dataset Is Ready to Go: The class pizza data is pre-collected and available in the library.
+
+- #### 📊 Specific Prompts are Provided: Students can prompt the AI to summarize trends, do calculations, or find outliers.
+
+- #### 🔁 Try Iteration: If the AI answer is too general, students can re-prompt for more detail or to clarify a specific part of the data.
+
+---
+
+## 🔍 What Students Might Notice When Comparing to AI
+#### The AI might notice precise totals or slice counts students missed.
+
+#### Students might catch nuances or context (like a student reporting “I only eat pizza when it’s cheese”) that AI overlooks.
+
+#### AI will make assumptions (like 8 slices per pizza) that students might question or adjust.
+
+---
+>## 🧩 Guiding Questions for Class Reflection
+>- #### What were the main similarities/differences between your findings and the AI’s?
+>- #### What assumptions did the AI make?
+>- #### What might the AI miss that a human might catch?
+>- #### How confident are you in the AI's recommendation? Would you follow it?
+
+## ✅ Reminders on Responsible AI Use
+#### 🔒 **Privacy First:** No personal or identifying information should be in the dataset or prompts.
+
+#### 🔎 **Transparency:** Students should label when something came from the AI vs. their own analysis.
+
+#### 💬 **Moderation Aware:** All messages are visible to the teacher. Encourage respectful, academic use.
+
+#### 🧠 **AI ≠ Always Right:** Remind students that AI-generated responses are a starting point, not a final answer.
+
+## Next Up: Ethical Data Collection
+
+MARKDOWN

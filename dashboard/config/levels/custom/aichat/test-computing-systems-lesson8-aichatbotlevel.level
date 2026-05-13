@@ -1,0 +1,49 @@
+<Aichat>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 71,
+  "created_at": "2025-01-24T16:54:57.000Z",
+  "level_num": "custom",
+  "user_id": 18602,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "# Sensors / Data AI Assistant\r\n\r\n## Do This:\r\n- *Ask About Sensors*: Request information about which sensors might help solve the mystery and how they collect data\r\n- *Request Data Types*: Ask what types of data the sensors can provide and how that data might be useful.\r\n- *Seek Explanations*: If you’re not sure how a specific sensor works or why it’s useful, ask for a simple explanation.\r\n- *Propose Solutions*: Share your ideas for solving the problem, and ask the chatbot if your solution is feasible based on the data.\r\n- *Keep Learning*: Feel free to ask \"why\" or \"how\" questions to deepen your understanding of sensors and data\r\n\r\n\r\n**Example Prompts:**\r\n- How can I figure out what type of sensor to use for a problem in my scenario?\r\n- What sensors can measure environmental changes, like temperature or noise?\r\n- How can I use sound or light data to figure out what’s happening in my scenario?\r\n- Can you explain how a motion sensor works and what kind of data it collects?\r\n- What does a light sensor measure, and what do 'lux' and 'flicker frequency' mean?\r\n- How can I use data from multiple sensors to find patterns in my scenario?\r\n- What steps should I take to analyze sensor data and connect it to possible solutions?\r\n- How can I decide if my proposed solution is supported by the data I’ve collected?\r\n- What other factors might influence the data collected by my sensors?\r\n\r\n   ",
+    "aichat_settings": {
+      "initialCustomizations": {
+        "selectedModelId": "gen-ai-mistral-7b-inst-v01",
+        "temperature": 0.5,
+        "systemPrompt": "",
+        "retrievalContexts": [
+
+        ],
+        "modelCardInfo": {
+          "botName": "Computer Build AI Assistant",
+          "description": "This AI tool is here to guide you through choosing parts for a fictional computer build. It asks about things like budget, purpose (gaming, content creation, etc.), and personal preferences, then recommends specific components. Along the way, it also explains important details—like why certain hardware specs matter—so you can learn the basics of PC building.",
+          "intendedUse": "Who It’s For: Students or newcomers who want to learn about computer hardware.\n\nWhat It Does: \n* Asks about your needs and preferences. \n* Suggests specific CPUs, GPUs, motherboards, RAM, storage, power supplies, and peripherals. \n* Explains complex hardware terms in a clear, beginner-friendly way.",
+          "limitationsAndWarnings": "* Prices Can Change: The AI’s knowledge of hardware prices might not be up to date. Always double-check current pricing.\n\n* Verify Compatibility: Although the tool aims for accurate suggestions, real-world product lines and availability can change. Confirm any recommended parts with a trusted retailer or resource.\n\n* Budget Updates: The AI may not track shifting market prices, so keep an eye on how much your build might cost overall.",
+          "testingAndEvaluation": "Accuracy: Correct specs and part compatibility.\n\nClarity: Simple, understandable language for beginners.\n\nRelevance: Does the AI’s suggestion match your specific needs?",
+          "exampleTopics": [
+            "I want a PC for gaming on a $700 budget. What do I need?",
+            "How can I build a workstation for 3D rendering?",
+            "Explain in simple terms why NVMe SSDs are faster than SATA SSDs"
+          ],
+          "isPublished": false
+        }
+      },
+      "visibilities": {
+        "selectedModelId": "hidden",
+        "temperature": "hidden",
+        "systemPrompt": "hidden",
+        "retrievalContexts": "hidden",
+        "modelCardInfo": "hidden"
+      },
+      "levelSystemPrompt": "Role:\nYou are an AI Assistant designed to help students solve mystery scenarios by providing information about sensors, data types, and how they can be applied to real-world problems. Your goal is to help students understand which sensors to use in specific scenarios, what data those sensors collect, and how to interpret the data to propose solutions.\n\nGoals:\nUnderstand the Problem: Begin by asking students to describe the scenario or mystery they are trying to solve.\nRecommend Sensors: Based on the scenario, suggest appropriate sensors (e.g., microphones, motion detectors, GPS trackers, temperature sensors). Explain their purpose and how they collect data.\nExplain Data Types: Describe the types of data these sensors provide (e.g., numerical, visual, audio) and how the data can be analyzed to solve the problem.\nEncourage Critical Thinking: Guide students in interpreting the data and proposing potential solutions to the mystery.\nProvide Clear Explanations: Use simple, student-friendly language to explain technical concepts.\n\nExample Questions the Chatbot Might Ask:\n\"What unusual behavior or problem are you observing in your scenario?\"\n\"Are you looking to measure sound, light, movement, temperature, or something else?\"\n\"Would you like to know how this type of sensor works or what kind of data it collects?\"\n\"What do you think might be causing the issue? Let’s figure out what data you need to confirm your theory.\"\n",
+      "hidePresentationPanel": false,
+      "availableModelIds": [
+        "gen-ai-mistral-7b-inst-v01"
+      ]
+    }
+  },
+  "audit_log": "[{\"changed_at\":\"2025-01-24T16:54:57.682+00:00\",\"changed\":[\"cloned from \\\"test-computing-systems-lesson7-level2\\\"\"],\"cloned_from\":\"test-computing-systems-lesson7-level2\"},{\"changed_at\":\"2025-01-24 16:59:34 +0000\",\"changed\":[\"long_instructions\",\"aichat_settings\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"}]"
+}]]></config>
+</Aichat>

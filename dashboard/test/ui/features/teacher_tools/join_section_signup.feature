@@ -2,26 +2,18 @@
 # Users see sign up form when they attempt to join section without being signed in
 Feature: Using the join section page while not signed in
 
-  Scenario: Join section while not signed in with invalid form inputs
-    Given I am a teacher
-    And I create a new student section and go home
-    And I save the student section url
+  Scenario: Attempt to join section while signed out
+    Given I am on "http://studio.code.org/join"
+    And I wait until element "a:contains(Create an account)" is visible
+    Then I click selector "a:contains(Create an account)"
+    And I wait until I am on "http://studio.code.org/users/sign_up/account_type?user_return_to=%2Fjoin"
 
-    # Have new user join section with invalid password
-    Given I sign out
-    And I attempt to join the section
-    And I see "#student-terms"
-    And I fill in the sign up form with invalid values for "Bob"
-    Then I wait until element "#error_explanation" is visible
-
-  Scenario: Join section while not signed in with valid form inputs
+  Scenario: Attempt to join section while signed in
     Given I am a teacher
-    And I create a new student section and go home
-    And I save the student section url
+    And I create a new student section assigned to course "allthethingscourse" unit 1 and save the section
 
     # Have new user join section with valid form inputs
     Given I sign out
-    And I attempt to join the section
-    And I see "#student-terms"
-    And I fill in the sign up form with valid values for "ValidUser"
-    Then I wait until I am on "http://studio.code.org/home"
+    Given I am a student
+    And I join the section
+    Then I wait until I am on "http://studio.code.org/courses/allthethingscourse/units/1"

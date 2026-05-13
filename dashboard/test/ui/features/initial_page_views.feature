@@ -15,8 +15,8 @@ Feature: Looking at a few things with Applitools Eyes - Part 1
     And I sign out
     Examples:
       | url                                                                     | test_name                 |
-      | http://studio.code.org/s/allthethings/lessons/3/levels/6?noautoplay=true  | auto open function editor |
-      | http://studio.code.org/s/allthethings/lessons/24/levels/1?noautoplay=true | star wars                 |
-      | http://studio.code.org/s/allthethings/lessons/24/levels/2?noautoplay=true | star wars blocks          |
-      | http://studio.code.org/s/allthethings/lessons/25/levels/1?noautoplay=true | minecraft                 |
-      | http://studio.code.org/s/mc/lessons/1/levels/6                            | minecraft house dialog    |
+      | http://studio.code.org/courses/allthethingscourse/units/1/lessons/3/levels/6?noautoplay=true  | auto open function editor |
+      | http://studio.code.org/courses/allthethingscourse/units/1/lessons/24/levels/1?noautoplay=true | star wars                 |
+      | http://studio.code.org/courses/allthethingscourse/units/1/lessons/24/levels/2?noautoplay=true | star wars blocks          |
+      | http://studio.code.org/courses/allthethingscourse/units/1/lessons/25/levels/1?noautoplay=true | minecraft                 |
+      | http://studio.code.org/courses/mc/units/1/lessons/1/levels/6                            | minecraft house dialog    |

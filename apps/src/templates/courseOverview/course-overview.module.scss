@@ -1,0 +1,46 @@
+.main {
+  width: 100%;
+}
+
+.titleWrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.title {
+  display: inline-block;
+  color: var(--text-brand-purple-primary);
+}
+
+.description {
+  margin-bottom: 20px;
+}
+
+.notificationBanner {
+  margin-bottom: 20px;
+}
+
+.actionRow {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  flex-wrap: wrap;
+
+  .teacherResources {
+    margin-left: 10px;
+    margin-bottom: 10px;
+  }
+
+  .studentResources {
+    margin-left: 10px;
+    margin-bottom: 10px;
+  }
+
+  .assignButton {
+    display: flex;
+    flex-direction: column;
+    margin-left: 5px;
+    margin-bottom: 10px;
+  }
+}

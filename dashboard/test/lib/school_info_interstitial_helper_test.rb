@@ -16,7 +16,7 @@ class SchoolInfoInterstitialHelperTest < ActiveSupport::TestCase
   end
 
   test 'does not show a dialog if user is not a teacher' do
-    user = create :user
+    user = create(:user)
 
     refute user.teacher?
 
@@ -25,14 +25,14 @@ class SchoolInfoInterstitialHelperTest < ActiveSupport::TestCase
   end
 
   test 'does not show a dialog if the account is less than 7 days old' do
-    user = create :teacher, created_at: 6.days.ago
+    user = create(:teacher, created_at: 6.days.ago)
 
     refute SchoolInfoInterstitialHelper.show_confirmation_dialog? user
     refute SchoolInfoInterstitialHelper.show? user
   end
 
   test 'shows school info interstitial if account has no school info' do
-    user = create :teacher, created_at: 7.days.ago
+    user = create(:teacher, created_at: 7.days.ago)
 
     assert_nil user.school_info
     assert_empty user.user_school_infos
@@ -42,7 +42,7 @@ class SchoolInfoInterstitialHelperTest < ActiveSupport::TestCase
   end
 
   test 'shows school info interstitial if account has incomplete school info' do
-    user = create :teacher, created_at: 14.days.ago
+    user = create(:teacher, created_at: 14.days.ago)
     user.update! school_info: create(
       :school_info,
       school_id: nil,
@@ -58,7 +58,7 @@ class SchoolInfoInterstitialHelperTest < ActiveSupport::TestCase
   end
 
   test 'does not show a dialog if the last complete school_info is not a US school' do
-    user = create :teacher, created_at: 14.days.ago
+    user = create(:teacher, created_at: 14.days.ago)
     user.update! school_info: create(
       :school_info,
       school_id: nil,
@@ -74,17 +74,17 @@ class SchoolInfoInterstitialHelperTest < ActiveSupport::TestCase
   end
 
   test 'does not show a dialog when the last complete school_info school type is not private, public or charter' do
-    homeschool_teacher = create :teacher
+    homeschool_teacher = create(:teacher)
     homeschool_teacher.update! school_info: create(:school_info_us_homeschool)
     refute SchoolInfoInterstitialHelper.show_confirmation_dialog? homeschool_teacher
     refute SchoolInfoInterstitialHelper.show? homeschool_teacher
 
-    afterschool_teacher = create :teacher
+    afterschool_teacher = create(:teacher)
     afterschool_teacher.update! school_info: create(:school_info_us_after_school)
     refute SchoolInfoInterstitialHelper.show_confirmation_dialog? afterschool_teacher
     refute SchoolInfoInterstitialHelper.show? afterschool_teacher
 
-    organization_teacher = create :teacher
+    organization_teacher = create(:teacher)
     organization_teacher.update! school_info: create(
       :school_info_us_homeschool,
       school_type: SchoolInfo::SCHOOL_TYPE_ORGANIZATION
@@ -92,7 +92,7 @@ class SchoolInfoInterstitialHelperTest < ActiveSupport::TestCase
     refute SchoolInfoInterstitialHelper.show_confirmation_dialog? organization_teacher
     refute SchoolInfoInterstitialHelper.show? organization_teacher
 
-    other_teacher = create :teacher
+    other_teacher = create(:teacher)
     other_teacher.update! school_info: create(
       :school_info_us_homeschool,
       school_type: SchoolInfo::SCHOOL_TYPE_ORGANIZATION
@@ -102,7 +102,7 @@ class SchoolInfoInterstitialHelperTest < ActiveSupport::TestCase
   end
 
   test 'does not show a dialog when last complete school_info was confirmed less than a year ago' do
-    user = create :teacher
+    user = create(:teacher)
     user.update! school_info: create(:school_info)
 
     Timecop.travel 364.days
@@ -114,7 +114,7 @@ class SchoolInfoInterstitialHelperTest < ActiveSupport::TestCase
   end
 
   test 'does not show a dialog if it has been less than 7 days since we asked' do
-    user = create :teacher
+    user = create(:teacher)
     user.update! school_info: create(:school_info)
 
     Timecop.travel 1.year
@@ -127,7 +127,7 @@ class SchoolInfoInterstitialHelperTest < ActiveSupport::TestCase
   end
 
   test 'shows the confirmation dialog if all above conditions are met' do
-    user = create :teacher
+    user = create(:teacher)
     user.update! school_info: create(:school_info)
 
     Timecop.travel 1.year
@@ -136,7 +136,7 @@ class SchoolInfoInterstitialHelperTest < ActiveSupport::TestCase
   end
 
   test 'user school info updates as expected over lifetime of user' do
-    user = create :teacher
+    user = create(:teacher)
 
     assert_nil user.school_info
     assert_empty user.user_school_infos
@@ -173,8 +173,8 @@ class SchoolInfoInterstitialHelperTest < ActiveSupport::TestCase
   end
 
   test 'shows school info interstitial if account has no school info even if created recently if LTI user' do
-    user = create :teacher, created_at: 5.minutes.ago
-    create :lti_authentication_option, user: user
+    user = create(:teacher, created_at: 5.minutes.ago)
+    create(:lti_authentication_option, user: user)
 
     assert_nil user.school_info
     assert_empty user.user_school_infos

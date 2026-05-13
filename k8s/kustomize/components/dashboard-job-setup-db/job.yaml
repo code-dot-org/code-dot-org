@@ -1,0 +1,49 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: cdo-dashboard-job-setup-db
+  labels:
+    app.kubernetes.io/component: dashboard-job-setup-db
+spec:
+  backoffLimit: 1
+  ttlSecondsAfterFinished: 3600
+  template:
+    metadata:
+      labels:
+        app.kubernetes.io/component: dashboard-job-setup-db
+    spec:
+      containers:
+        - name: setup-db
+          image: code-dot-org:latest
+          command:
+            - zsh
+            - -c
+          args:
+            - cd dashboard && rake dashboard:setup_db && echo 'setup-db COMPLETE'
+          tty: true
+          env:
+            - name: RAILS_ENV
+              value: development
+            - name: RACK_ENV
+              value: development
+            - name: PERMIT_UNKNOWN_PROPERTIES_IN_CDO
+              value: "1"
+          envFrom:
+            - prefix: CDO_
+              configMapRef:
+                name: cdo-locals.yml
+            - prefix: CDO_
+              secretRef:
+                name: cdo-external-secrets
+                optional: true
+            - prefix: CDO_
+              secretRef:
+                name: cdo-local-secrets
+          securityContext:
+            allowPrivilegeEscalation: true
+      securityContext:
+        runAsUser: 1000
+        runAsGroup: 1000
+        fsGroup: 1000
+      restartPolicy: Never
+      enableServiceLinks: false

@@ -8,15 +8,15 @@ Feature: Using the manage students tab of the teacher dashboard
 
     # Navigate to Manage Students tab as Teacher
     When I sign in as "Teacher_SallyHasAVeryVeryLongFirstName" and go home
-    And I wait until element "a:contains('Untitled Section')" is visible
+    And I wait until element "#ui-test-section-list" is visible
     And I save the section id from row 0 of the section table
-    Then I navigate to manage students for the section I saved
+    Then I navigate to roster for the section I saved
     And I wait until element "#uitest-manage-students-table" is visible
 
     # Add a family name for Sally
     And I wait until element "td:contains('SallyHasAVeryVeryLongFirstName')" is visible
     And I click selector "#uitest-manage-students-table th:contains(Actions) i" once I see it
-    And I click selector ".pop-up-menu-item:contains(Edit all)" once I see it
+    And I click selector "button:contains(Edit all)" once I see it
     And I wait until element with css selector "input[name='uitest-family-name']" is enabled
     And I press keys "SallyAlsoHasAVeryVeryLongLastName" for element "input[name='uitest-family-name']"
     And I wait until element "input[value='SallyAlsoHasAVeryVeryLongLastName']" is visible

@@ -16,9 +16,6 @@
     "display_name": "Revealed Secret",
     "bubble_choice_description": "Learn another way to use the \"hover\" pseudo-class with a `div` tag to reveal text!",
     "thumbnail_url": "https://images.code.org/c191bef9878247350465ca783d4b0897-top-secret.png",
-    "encrypted_examples": [
-
-    ],
     "reference_links": [
       "/courses/csd-2022/guides/hyperlinks",
       "/courses/csd-2022/guides/flex-children",
@@ -39,8 +36,9 @@
       "/courses/csd-2022/guides/web-lab",
       "/courses/csd-2022/guides/debugging-html"
     ],
-    "map_reference": "/courses/csd-2022/guides/pseudo-classes"
+    "map_reference": "/courses/csd-2022/guides/pseudo-classes",
+    "encrypted_examples": "7o+sRMGU8rIpInMMswovs6zNC9wNll63Y/irLyREy++uHh+ZXi7GVQDjNOfM\ne20ymycksa3lu0uZeHb1sm/3rw==\n"
   },
-  "audit_log": "[{\"changed_at\":\"2024-02-14T22:53:44.270+00:00\",\"changed\":[\"cloned from \\\"CSD U2L18 chall_1\\\"\"],\"cloned_from\":\"CSD U2L18 chall_1\"},{\"changed_at\":\"2024-02-14 22:58:26 +0000\",\"changed\":[\"long_instructions\",\"display_name\",\"bubble_choice_description\",\"thumbnail_url\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2024-02-14 23:31:31 +0000\",\"changed\":[\"long_instructions\",\"start_sources\",\"display_name\",\"bubble_choice_description\",\"encrypted_examples\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2024-02-14 23:32:44 +0000\",\"changed\":[\"long_instructions\",\"encrypted_examples\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2024-02-16 20:02:43 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2024-02-20 19:11:38 +0000\",\"changed\":[],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2024-02-14T22:53:44.270+00:00\",\"changed\":[\"cloned from \\\"CSD U2L18 chall_1\\\"\"],\"cloned_from\":\"CSD U2L18 chall_1\"},{\"changed_at\":\"2024-02-14 22:58:26 +0000\",\"changed\":[\"long_instructions\",\"display_name\",\"bubble_choice_description\",\"thumbnail_url\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2024-02-14 23:31:31 +0000\",\"changed\":[\"long_instructions\",\"start_sources\",\"display_name\",\"bubble_choice_description\",\"encrypted_examples\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2024-02-14 23:32:44 +0000\",\"changed\":[\"long_instructions\",\"encrypted_examples\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2024-02-16 20:02:43 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2024-02-20 19:11:38 +0000\",\"changed\":[],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2024-12-06 21:12:52 +0000\",\"changed\":[],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
 }]]></config>
 </Weblab>

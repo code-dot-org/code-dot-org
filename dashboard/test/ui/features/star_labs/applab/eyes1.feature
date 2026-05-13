@@ -6,24 +6,24 @@ Scenario: Design elements are visible in local and shared projects
   When I open my eyes to test "applab eyes"
   Given I start a new Applab project
   And I wait for the lab page to fully load
-  Then I see no difference for "initial load" using stitch mode "none"
+  Then I see no difference for "initial load"
   And I press "show-code-header"
   And I add code for a canvas and a button
   And I press "runButton"
-  Then I see no difference for "button should be visible" using stitch mode "none"
+  Then I see no difference for "button should be visible"
   And I click selector ".project_share"
   And I wait to see a dialog titled "Share your project"
-  Then I see no difference for "project share dialog" using stitch mode "none"
+  Then I see no difference for "project share dialog"
   And I navigate to the share URL
   And I wait until element "#divApplab" is visible
-  Then I see no difference for "app lab share" using stitch mode "none"
+  Then I see no difference for "app lab share"
   And I close my eyes
 
 Scenario: App Lab UI elements from initial code and html
   When I open my eyes to test "App Lab UI Elements from initial code and html"
   # this level displays each ui element by generating it dynamically as well as
   # displaying design-mode-created elements.
-  And I am on "http://studio.code.org/s/allthethings/lessons/18/levels/9?noautoplay=true"
+  And I am on "http://studio.code.org/courses/allthethingscourse/units/1/lessons/18/levels/9?noautoplay=true"
   And I wait for the lab page to fully load
   And element "#runButton" is visible
   Then I see no difference for "design mode elements in code mode"
@@ -73,7 +73,7 @@ Scenario: Text area with multiple lines, radio button, checkbox
 
 Scenario: Applab Instructions Resize
   When I open my eyes to test "Applab instructions resize"
-  And I am on "http://studio.code.org/s/allthethings/lessons/18/levels/9"
+  And I am on "http://studio.code.org/courses/allthethingscourse/units/1/lessons/18/levels/9"
   And I wait for the lab page to fully load
   And I see no difference for "base case"
   Then I drag the instructions grippy by -150 pixels

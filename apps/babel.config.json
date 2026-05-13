@@ -22,5 +22,11 @@
         "dynamic-import-node"
       ]
     }
-  }
+  },
+  "overrides": [
+    {
+      "test": "node_modules/blockly/**",
+      "plugins": [["@babel/plugin-transform-classes", {"loose": false}]]
+    }
+  ]
 }

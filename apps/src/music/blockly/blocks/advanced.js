@@ -7,6 +7,7 @@ import {
   FIELD_EFFECTS_NAME,
   FIELD_EFFECTS_VALUE,
   FIELD_PATTERN_NAME,
+  FIELD_PATTERNS_VALIDATOR,
   FIELD_SOUNDS_NAME,
   FIELD_SOUNDS_VALIDATOR,
 } from '../constants';
@@ -72,6 +73,7 @@ export const playPatternAtMeasure = {
     style: 'lab_blocks',
     tooltip: musicI18n.blockly_blockPlayPatternAtMeasureTooltip(),
     helpUrl: '',
+    extensions: [FIELD_PATTERNS_VALIDATOR],
   },
   generator: block =>
     `Sequencer.playPatternAtMeasureById(${JSON.stringify(

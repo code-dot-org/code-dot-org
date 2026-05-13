@@ -11,8 +11,8 @@ class ExternalTest < ActiveSupport::TestCase
   end
 
   test "replaces <user_id/> with user's id" do
-    user1 = create :user
-    user2 = create :user
+    user1 = create(:user)
+    user2 = create(:user)
     markdown1 = @level.localized_replaced_markdown(user1)
     markdown2 = @level.localized_replaced_markdown(user2)
 

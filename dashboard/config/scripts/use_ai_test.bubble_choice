@@ -1,0 +1,12 @@
+name 'use_ai_test'
+display_name 'Try it out'
+description 'Choose at least one AI Chat level to try out!'
+
+sublevels
+level 'use_ai_test_choicea'
+level 'use_ai_test_choiceb'
+level 'use_ai_test_choicec'
+level 'use_ai_test_choiced'
+
+uses_lab2
+navigation_type 'next_level'

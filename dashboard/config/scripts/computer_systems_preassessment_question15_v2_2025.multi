@@ -1,0 +1,17 @@
+name 'computer-systems-preassessment-question15_v2-2025'
+title 'Computer Systems and Devices Pre-Assessment: Question 15'
+
+wrong 'AI will completely replace humans in all jobs'
+right 'AI will increase efficiency but raise ethical questions'
+wrong 'AI will make computers obsolete'
+wrong 'AI will stop evolving'
+
+allow_multiple_attempts true
+
+markdown <<MARKDOWN
+What is a potential future impact of AI?
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+Lesson 12: Just Because We Can, Should We?
+MARKDOWN

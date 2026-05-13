@@ -4,6 +4,7 @@
     "wrapup_video_id": null,
     "login_required": true,
     "properties": {
+      "content_area": "curriculum_9_12",
       "curriculum_umbrella": "CSA",
       "has_verified_resources": true,
       "hideable_lessons": true,
@@ -13,11 +14,12 @@
       "project_sharing": true,
       "show_calendar": true,
       "student_detail_progress_view": true,
+      "version_year": "2025",
       "weekly_instructional_minutes": 225
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2024-10-13 21:25:52 UTC",
+    "serialized_at": "2025-03-26 20:43:32 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -223,7 +225,7 @@
     },
     {
       "key": "lesson-8",
-      "name": "Ethical and Social Issues Around Data Collection",
+      "name": "Ethics in Data",
       "absolute_position": 8,
       "lockable": false,
       "has_lesson_plan": true,
@@ -241,7 +243,7 @@
     },
     {
       "key": "Polymorphism",
-      "name": "Polymorphism",
+      "name": "(Optional) Polymorphism",
       "absolute_position": 9,
       "lockable": false,
       "has_lesson_plan": true,
@@ -2672,7 +2674,7 @@
       "key": "ae4c6602-dc87-4712-8943-6d27dc20c51d",
       "position": 7,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students share what they discovered from the modifications they made to the code.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Explain the libraries that must be imported into the class where the file reading method is being written.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Explain that the `java.io.IOException` library must be imported in the tester class and the class where the file reader method is being written.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to explain how to validate the file name being used by adding `throws IOException` to the header of the method that uses the file. \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to explain how to create a `File` object and `Scanner` object to read the file being processed by the method. Remind students to call the `close()` method after the `Scanner` is finished reading from the file.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to show students the various `Scanner` methods that they may need to process a file.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 3 on Code Studio to investigate the program with a partner. Students make the changes to the program as prompted.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students share what they discovered from the modifications they made to the code.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Explain the libraries that must be imported into the class where the file reading method is being written.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Explain that the `java.io.IOException` library must be imported in the tester class and the class where the file reader method is being written.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to explain how to validate the file name being used by adding `throws IOException` to the header of the method that uses the file. \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to explain how to create a `File` object and `Scanner` object to read the file being processed by the method. Remind students to call the `close()` method after the `Scanner` is finished reading from the file.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to introduce the `split()` method and explain how it can be used to split text into an array of `String` objects.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to show students the various `Scanner` methods that they may need to process a file.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 3 on Code Studio to investigate the program with a partner. Students make the changes to the program as prompted.",
         "progression_name": "Investigate and Modify: Processing File Data"
       },
       "seeding_key": {
@@ -5280,6 +5282,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "csa-u3l1-datasets-l1cfu_2024"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,

@@ -1,8 +1,9 @@
+import {Typography, Button as MuiButton} from '@mui/material';
 import $ from 'jquery';
 import React, {useState} from 'react';
 
-import {Button} from '@cdo/apps/componentLibrary/button';
-import Typography from '@cdo/apps/componentLibrary/typography';
+import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
+import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import i18n from '@cdo/locale';
 
 import styles from './styles.module.scss';
@@ -10,11 +11,13 @@ import styles from './styles.module.scss';
 interface LtiDynamicRegistrationProps {
   logoUrl: string;
   registrationID: string;
+  lmsName: string;
 }
 
 export const LtiDynamicRegistrationPage = ({
   logoUrl,
   registrationID,
+  lmsName,
 }: LtiDynamicRegistrationProps) => {
   const [submitDisable, setSubmitDisable] = useState<boolean>(false);
   const [email, setEmail] = useState('');
@@ -37,6 +40,9 @@ export const LtiDynamicRegistrationPage = ({
         // Send post message to Canvas parent window
         // https://canvas.instructure.com/doc/api/file.registration.html#registration-response
         window.parent.postMessage({subject: 'org.imsglobal.lti.close'}, '*');
+        analyticsReporter.sendEvent(EVENTS.LTI_DYNAMIC_REGISTRATION_COMPLETED, {
+          lms_name: lmsName,
+        });
       },
       error: xhr => {
         setHasError(true);
@@ -53,15 +59,11 @@ export const LtiDynamicRegistrationPage = ({
     <main className={styles.mainContentContainer}>
       <div className={styles.mainContent}>
         <img className={styles.logo} src={logoUrl} alt={i18n.codeLogo()} />
-        <Typography
-          semanticTag="p"
-          visualAppearance="body-one"
-          className={styles.description}
-        >
+        <Typography className={styles.description} variant="body1" gutterBottom>
           {hasError ? errorMsg : i18n.ltiDynamicRegistrationDescription()}
         </Typography>
         <div>
-          <form>
+          <form onSubmit={handleSubmit}>
             <div className={styles.inputContainer}>
               <label className={styles.formLabel}>
                 <strong>{i18n.email()}</strong>
@@ -77,13 +79,17 @@ export const LtiDynamicRegistrationPage = ({
           </form>
         </div>
         <div>
-          <Button
+          <MuiButton
+            variant="contained"
+            color="primary"
+            size="large"
             disabled={submitDisable}
             className={styles.callToAction}
             onClick={handleSubmit}
-            size="l"
-            text={i18n.ltiDynamicRegistrationSubmit()}
-          />
+            type="button"
+          >
+            {i18n.ltiDynamicRegistrationSubmit()}
+          </MuiButton>
         </div>
       </div>
     </main>

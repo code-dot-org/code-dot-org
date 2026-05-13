@@ -1,10 +1,10 @@
+import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
+import {Typography, IconButton as MuiIconButton} from '@mui/material';
 import classNames from 'classnames';
 import PropTypes from 'prop-types';
 import React from 'react';
 import ReactTooltip from 'react-tooltip';
 
-import {StrongText, BodyTwoText} from '@cdo/apps/componentLibrary/typography';
-import FontAwesome from '@cdo/apps/legacySharedComponents/FontAwesome';
 import i18n from '@cdo/locale';
 
 import styles from './coteacher-settings.module.scss';
@@ -19,20 +19,24 @@ const getPendingPill = () => {
         data-event-off="mouseleave blur"
         data-for={'pending-tooltip'}
       >
-        <StrongText>
-          <FontAwesome icon={'ellipsis'} className={styles.tablePillIcon} />
+        <Typography variant="strong">
+          <FontAwesomeV6Icon
+            iconName={'ellipsis'}
+            className={styles.tablePillIcon}
+          />
           {i18n.coteacherPending()}
-        </StrongText>
+        </Typography>
       </div>
       <ReactTooltip
         id={'pending-tooltip'}
         role="tooltip"
         effect="solid"
         place="top"
+        className={styles.tableToolTipText}
       >
-        <BodyTwoText className={styles.tableToolTipText}>
+        <Typography variant="body3" component="span">
           {i18n.coteacherPendingTooltip()}
-        </BodyTwoText>
+        </Typography>
       </ReactTooltip>
     </span>
   );
@@ -48,28 +52,37 @@ const getStatusPill = status => {
     case 'active':
       return (
         <div className={classNames(styles.tableActive, styles.tablePill)}>
-          <StrongText>
-            <FontAwesome icon={'check'} className={styles.tablePillIcon} />
+          <Typography variant="strong">
+            <FontAwesomeV6Icon
+              iconName={'check'}
+              className={styles.tablePillIcon}
+            />
             {i18n.coteacherAccepted()}
-          </StrongText>
+          </Typography>
         </div>
       );
     case 'declined':
       return (
         <div className={classNames(styles.tableDeclined, styles.tablePill)}>
-          <StrongText>
-            <FontAwesome icon={'xmark'} className={styles.tablePillIcon} />
+          <Typography variant="strong">
+            <FontAwesomeV6Icon
+              iconName={'xmark'}
+              className={styles.tablePillIcon}
+            />
             {i18n.coteacherDeclined()}
-          </StrongText>
+          </Typography>
         </div>
       );
     default:
       return (
         <div className={classNames(styles.tableError, styles.tablePill)}>
-          <StrongText>
-            <FontAwesome icon={'xmark'} className={styles.tablePillIcon} />
+          <Typography variant="strong">
+            <FontAwesomeV6Icon
+              iconName={'xmark'}
+              className={styles.tablePillIcon}
+            />
             {i18n.coteacherError()}
-          </StrongText>
+          </Typography>
         </div>
       );
   }
@@ -87,12 +100,15 @@ export default function CoteacherTable({
           <div>
             {coteacher.instructorName && (
               <>
-                <StrongText> {coteacher.instructorName}</StrongText>
+                <Typography variant="strong">
+                  {' '}
+                  {coteacher.instructorName}
+                </Typography>
                 <br />
               </>
             )}
 
-            {coteacher.instructorEmail}
+            <Typography variant="body2">{coteacher.instructorEmail}</Typography>
           </div>
         </td>
         <td className={styles.tableStatusCell}>
@@ -100,15 +116,18 @@ export default function CoteacherTable({
         </td>
         {!disabled && (
           <td>
-            <button
+            <MuiIconButton
               type="button"
+              variant="text"
+              color="error"
               onClick={() => setCoteacherToRemove(coteacher)}
               className={styles.tableRemoveButton}
+              aria-label={i18n.coteacherRemoveDialogHeader({
+                email: coteacher.instructorEmail,
+              })}
             >
-              <i
-                className={classNames('fa-solid fa-trash', styles.trashIcon)}
-              />
-            </button>
+              <FontAwesomeV6Icon iconName="trash" />
+            </MuiIconButton>
           </td>
         )}
       </tr>
@@ -117,7 +136,9 @@ export default function CoteacherTable({
 
   return coteachers.length === 0 ? (
     <div className={styles.table}>
-      <div className={styles.tableRow}>{i18n.coteacherNoCoteachers()}</div>
+      <div className={styles.tableRow}>
+        <Typography variant="body2">{i18n.coteacherNoCoteachers()}</Typography>
+      </div>
     </div>
   ) : (
     <table className={styles.table}>

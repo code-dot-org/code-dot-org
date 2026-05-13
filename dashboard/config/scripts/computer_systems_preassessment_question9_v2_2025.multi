@@ -1,0 +1,17 @@
+name 'computer-systems-preassessment-question9_v2-2025'
+title 'Computer Systems and Devices Pre-Assessment: Question 9'
+
+wrong 'A type of internet service'
+right 'A network of connected devices'
+wrong 'A social media platform'
+wrong 'A new type of computer'
+
+allow_multiple_attempts true
+
+markdown <<MARKDOWN
+What is the **Internet of Things (IoT)**?
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+Lesson 10: IoT and Emerging Technologies
+MARKDOWN

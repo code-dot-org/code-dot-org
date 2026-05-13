@@ -4,6 +4,8 @@
     "wrapup_video_id": null,
     "login_required": true,
     "properties": {
+      "content_area": "pl_workshop_activities",
+      "curriculum_umbrella": "PD for Facilitators",
       "is_migrated": true,
       "peer_reviews_to_complete": 6,
       "professional_learning_course": "CS Discoveries Deeper Learning 2019 - 2020",
@@ -11,7 +13,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-11-22 19:56:49 UTC",
+    "serialized_at": "2024-11-19 01:17:26 UTC",
     "published_state": "beta",
     "instruction_type": "teacher_led",
     "instructor_audience": "plc_reviewer",
@@ -573,6 +575,15 @@
 
   ],
   "lessons_opportunity_standards": [
+
+  ],
+  "rubrics": [
+
+  ],
+  "learning_goals": [
+
+  ],
+  "learning_goal_evidence_levels": [
 
   ]
 }

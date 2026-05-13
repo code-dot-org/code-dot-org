@@ -1,0 +1,412 @@
+<Music>
+  <config><![CDATA[{
+  "game_id": 70,
+  "created_at": "2025-01-23T23:12:10.000Z",
+  "level_num": "custom",
+  "user_id": 1196,
+  "properties": {
+    "encrypted": "false",
+    "background": "music-black",
+    "instructions_important": "false",
+    "long_instructions": "###<i class=\"fa-duotone fa-solid fa-layer-plus\"></i> Build a Song with Functions\r\n\r\n1. Call [verse](#clickable=flyout-first-block) and [chorus](#clickable=flyout-second-block) under [when run](#clickable=when-run-block) to play the sounds in each function.",
+    "hide_share_and_remix": "true",
+    "level_data": {
+      "validationTimeout": 6,
+      "library": "launch2024",
+      "packId": "chainsmokers_coldplay_something_just_like_this",
+      "startSources": {
+        "blocks": {
+          "languageVersion": 0,
+          "blocks": [
+            {
+              "type": "when_run_simple2",
+              "id": "when_run_simple2",
+              "x": 34,
+              "y": 34,
+              "deletable": false,
+              "movable": false
+            },
+            {
+              "type": "procedures_defnoreturn",
+              "id": "chorus-function",
+              "x": 630,
+              "y": 30,
+              "deletable": false,
+              "editable": false,
+              "extraState": {
+                "procedureId": "chorus-procedure",
+                "initialDeleteConfig": false,
+                "initialEditConfig": false,
+                "initialMoveConfig": true
+              },
+              "fields": {
+                "NAME": "chorus"
+              },
+              "inputs": {
+                "STACK": {
+                  "block": {
+                    "type": "play_sounds_together",
+                    "id": "play_sounds_together",
+                    "deletable": false,
+                    "extraState": {
+                      "disableNextConnection": false
+                    },
+                    "inputs": {
+                      "code": {
+                        "block": {
+                          "type": "play_sound_at_current_location_simple2",
+                          "id": "play_sound_at_current_location_simple2",
+                          "deletable": false,
+                          "movable": false,
+                          "extraState": {
+                            "disableNextConnection": false
+                          },
+                          "fields": {
+                            "sound": "chainsmokers_coldplay_something_just_like_this/vocals_prechorus_1"
+                          },
+                          "next": {
+                            "block": {
+                              "type": "play_sound_at_current_location_simple2",
+                              "id": "qNQ1k.0XN15y#o]cKd%G",
+                              "deletable": false,
+                              "extraState": {
+                                "disableNextConnection": false
+                              },
+                              "fields": {
+                                "sound": "chainsmokers_coldplay_something_just_like_this/drums_drop_beat"
+                              },
+                              "next": {
+                                "block": {
+                                  "type": "play_sound_at_current_location_simple2",
+                                  "id": "zT}v;|yEx}30{XBtf}SP",
+                                  "extraState": {
+                                    "disableNextConnection": true
+                                  },
+                                  "fields": {
+                                    "sound": "chainsmokers_coldplay_something_just_like_this/wurly"
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    },
+                    "next": {
+                      "block": {
+                        "type": "play_sounds_together",
+                        "id": "T$nb#=2q|yC,|%Y(52St",
+                        "extraState": {
+                          "disableNextConnection": true
+                        },
+                        "inputs": {
+                          "code": {
+                            "block": {
+                              "type": "play_sound_at_current_location_simple2",
+                              "id": "#Q,[%mfEY-c.CJ]!=~;X",
+                              "deletable": false,
+                              "extraState": {
+                                "disableNextConnection": false
+                              },
+                              "fields": {
+                                "sound": "chainsmokers_coldplay_something_just_like_this/vocals_prechorus_2"
+                              },
+                              "next": {
+                                "block": {
+                                  "type": "play_sound_at_current_location_simple2",
+                                  "id": "P157|7U2Ycll5GaKXsto",
+                                  "deletable": false,
+                                  "extraState": {
+                                    "disableNextConnection": false
+                                  },
+                                  "fields": {
+                                    "sound": "chainsmokers_coldplay_something_just_like_this/drums_drop_beat"
+                                  },
+                                  "next": {
+                                    "block": {
+                                      "type": "play_sound_at_current_location_simple2",
+                                      "id": "S+qI3$t[BQmXY5bUbtpq",
+                                      "extraState": {
+                                        "disableNextConnection": true
+                                      },
+                                      "fields": {
+                                        "sound": "chainsmokers_coldplay_something_just_like_this/wurly"
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            {
+              "type": "procedures_defnoreturn",
+              "id": "intro-function",
+              "x": 270,
+              "y": 30,
+              "deletable": false,
+              "extraState": {
+                "procedureId": "intro-procedure",
+                "initialDeleteConfig": false,
+                "initialEditConfig": true,
+                "initialMoveConfig": true
+              },
+              "fields": {
+                "NAME": "verse"
+              },
+              "inputs": {
+                "STACK": {
+                  "block": {
+                    "type": "play_sounds_together",
+                    "id": "h68(Y613D1tw!LeM{R5D",
+                    "extraState": {
+                      "disableNextConnection": false
+                    },
+                    "inputs": {
+                      "code": {
+                        "block": {
+                          "type": "play_sound_at_current_location_simple2",
+                          "id": "N/KYOy.IXc7m*u(+;Buh",
+                          "deletable": false,
+                          "extraState": {
+                            "disableNextConnection": false
+                          },
+                          "fields": {
+                            "sound": "chainsmokers_coldplay_something_just_like_this/vocals_verse_1"
+                          },
+                          "next": {
+                            "block": {
+                              "type": "play_sound_at_current_location_simple2",
+                              "id": "3]-cj-Om/WS`e4Dz}v/C",
+                              "extraState": {
+                                "disableNextConnection": false
+                              },
+                              "fields": {
+                                "sound": "chainsmokers_coldplay_something_just_like_this/drums_verse_beat"
+                              },
+                              "next": {
+                                "block": {
+                                  "type": "play_sound_at_current_location_simple2",
+                                  "id": "/!ue%~5CLWQi6dsh6bk!",
+                                  "extraState": {
+                                    "disableNextConnection": true
+                                  },
+                                  "fields": {
+                                    "sound": "chainsmokers_coldplay_something_just_like_this/guitar_verse_1"
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    },
+                    "next": {
+                      "block": {
+                        "type": "play_sounds_together",
+                        "id": "%zTXEV4w#Yd)s?75DAVS",
+                        "extraState": {
+                          "disableNextConnection": true
+                        },
+                        "inputs": {
+                          "code": {
+                            "block": {
+                              "type": "play_sound_at_current_location_simple2",
+                              "id": "3acPbL$+tfFWOW!@b56T",
+                              "extraState": {
+                                "disableNextConnection": false
+                              },
+                              "fields": {
+                                "sound": "chainsmokers_coldplay_something_just_like_this/vocals_verse_2"
+                              },
+                              "next": {
+                                "block": {
+                                  "type": "play_sound_at_current_location_simple2",
+                                  "id": "jN6v:04PQW@K=KC*]Ik]",
+                                  "deletable": false,
+                                  "extraState": {
+                                    "disableNextConnection": false
+                                  },
+                                  "fields": {
+                                    "sound": "chainsmokers_coldplay_something_just_like_this/drums_verse_beat"
+                                  },
+                                  "next": {
+                                    "block": {
+                                      "type": "play_sound_at_current_location_simple2",
+                                      "id": "OJW^%gSWxo:Q]%_9Uv1V",
+                                      "deletable": false,
+                                      "movable": false,
+                                      "extraState": {
+                                        "disableNextConnection": true
+                                      },
+                                      "fields": {
+                                        "sound": "chainsmokers_coldplay_something_just_like_this/guitar_verse_2"
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        },
+        "procedures": [
+          {
+            "id": "chorus",
+            "name": "chorus_block",
+            "returnTypes": null
+          },
+          {
+            "id": "intro",
+            "name": "intro_block",
+            "returnTypes": null
+          },
+          {
+            "id": "chorus-procedure",
+            "name": "chorus",
+            "returnTypes": null
+          },
+          {
+            "id": "intro-procedure",
+            "name": "verse",
+            "returnTypes": null
+          }
+        ]
+      },
+      "toolbox": {
+        "addFunctionCallsSortByPosition": true,
+        "blocks": {
+          "Functions": [
+
+          ]
+        },
+        "type": "flyout",
+        "addFunctionCalls": true
+      },
+      "sounds": {
+        "chainsmokers_coldplay_something_just_like_this": [
+          "vocals_do_do_do_low",
+          "vocals_do_do_do_high",
+          "vocals_hook_high",
+          "vocals_hook_low",
+          "vocals_prechorus_1",
+          "vocals_prechorus_2",
+          "vocals_prechorus_3",
+          "vocals_prechorus_4",
+          "vocals_verse_1",
+          "vocals_verse_2",
+          "vocals_verse_3",
+          "vocals_verse_4",
+          "drums_drop_beat",
+          "drums_fill",
+          "drums_live_beat",
+          "drums_live_build",
+          "drums_perc_build",
+          "drums_riser",
+          "drums_tom_build",
+          "drums_verse_beat",
+          "bass_live_1",
+          "bass_live_2",
+          "bass_live_3",
+          "bass_sub",
+          "bass_synth",
+          "guitar_acoustic",
+          "guitar_chime",
+          "guitar_intro",
+          "guitar_lead_1",
+          "guitar_lead_2",
+          "guitar_muted_1",
+          "guitar_muted_2",
+          "guitar_verse_1",
+          "guitar_verse_2",
+          "piano_build",
+          "piano_full_1",
+          "piano_full_2",
+          "piano_melody",
+          "wurly",
+          "synth_arp",
+          "synth_drop_1",
+          "synth_drop_2",
+          "synth_lead",
+          "vocals_glitch",
+          "drums_crash",
+          "drums_vibraslap",
+          "vocals_ahh_swell",
+          "vocals_ohahh"
+        ]
+      }
+    },
+    "validations": [
+      {
+        "key": "music-ai-functions-doubleChorus_2_8596d526-19f0-43f3-bc07-02366a151f2a",
+        "message": "You used both functions! Functions help you reuse code quickly. Great work! ",
+        "next": true,
+        "conditions": [
+          {
+            "name": "played_sound_in_function",
+            "value": "chorus"
+          },
+          {
+            "name": "played_sound_in_function",
+            "value": "verse"
+          }
+        ]
+      },
+      {
+        "key": "music-ai-functions-doubleChorus_2_d72de94c-fc7b-4fa8-a9bf-4c67ec49841c",
+        "message": "You added the [verse](#clickable=flyout-first-block) block. Now add the [chorus](#clickable=flyout-second-block) block under [when run](#clickable=when-run-block). ",
+        "next": false,
+        "conditions": [
+          {
+            "name": "played_sound_in_function",
+            "value": "verse"
+          }
+        ],
+        "callout": "flyout-second-block"
+      },
+      {
+        "key": "music-ai-functions-doubleChorus_2_211ec330-8549-468a-9359-6f58deb212a2",
+        "message": "Almost there! Make sure to add the [verse](#clickable=flyout-first-block) block under [when run](#clickable=when-run-block).",
+        "next": false,
+        "conditions": [
+          {
+            "name": "played_sound_in_function",
+            "value": "chorus"
+          }
+        ],
+        "callout": "flyout-first-block"
+      },
+      {
+        "key": "music-ai-functions-chorus_e1d6c731-90ed-4e26-a2cd-040bfc5c373f",
+        "message": "Connect the [verse](#clickable=flyout-first-block) and [chorus](#clickable=flyout-second-block) blocks under [when run](#clickable=when-run-block) to play the sounds in each function.",
+        "next": false,
+        "conditions": [
+
+        ],
+        "callout": "flyout-first-block---when-run-block"
+      }
+    ],
+    "name_suffix": "_january",
+    "offer_browser_tts": "true",
+    "use_secondary_finish_button": "false",
+    "hint_prompt_attempts_threshold": "1",
+    "preload_asset_list": null
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-01-23T23:12:10.914+00:00\",\"changed\":[\"cloned from \\\"music-coding-intro-functions-use\\\"\"],\"cloned_from\":\"music-coding-intro-functions-use\"}]"
+}]]></config>
+  <blocks/>
+</Music>

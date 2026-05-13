@@ -1,4 +1,8 @@
 /** @file Provides clients to AWS Firehose, whose data is imported into AWS Redshift. */
+/**
+ * @deprecated We will be deprecating Firehose in favor of a different analytics solution.
+ * Please do not add new uses of this module.
+ */
 
 import logToCloud from '@cdo/apps/logToCloud';
 import {getStore} from '@cdo/apps/redux';
@@ -297,6 +301,10 @@ class FirehoseClient {
 }
 
 // Verifies that given data will not fail firehose batch
+/**
+ * @deprecated We will be deprecating Firehose in favor of a different analytics solution.
+ * Please do not add new uses of this module.
+ */
 function validateFirehoseDataSize(data) {
   const json_size = new Blob([data?.data_json]).size;
   const string_size = new Blob([data?.data_string]).size;
@@ -313,7 +321,6 @@ function validateFirehoseDataSize(data) {
 // This code sets up an AWS config against a very restricted user, so this is
 // not a concern, we just don't want to make things super obvious. For more
 // info, contact the infrastructure team.
-/* eslint-disable */
 function createNewFirehose(AWS, Firehose) {
   var _0xr0t13 = function (message) {
     return message.replace(/[a-z]/gi, letter =>
@@ -356,7 +363,6 @@ function createNewFirehose(AWS, Firehose) {
     correctClockSkew: true,
   });
 }
-/* eslint-enable */
 
 let promise;
 function getSingleton() {
@@ -380,12 +386,20 @@ function getSingleton() {
   return promise;
 }
 
+/**
+ * @deprecated We will be deprecating Firehose in favor of a different analytics solution.
+ * Please do not add new uses of this module.
+ */
 function putRecord(data, options) {
   return getSingleton().then(firehoseClient =>
     firehoseClient.putRecord(data, options)
   );
 }
 
+/**
+ * @deprecated We will be deprecating Firehose in favor of a different analytics solution.
+ * Please do not add new uses of this module.
+ */
 function putRecordBatch(data, options) {
   return getSingleton().then(firehoseClient =>
     firehoseClient.putRecordBatch(data, options)

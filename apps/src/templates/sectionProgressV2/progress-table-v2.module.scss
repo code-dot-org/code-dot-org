@@ -1,7 +1,10 @@
-@import 'color.scss';
+@use '@code-dot-org/component-library-styles/typography.module.scss' as
+  typography;
+@import 'style-constants';
 
 .progressV2Page {
-  background-color: white;
+  background-color: var(--background-neutral-primary);
+  color: var(--text-neutral-primary);
 }
 
 @mixin remove-default-button-styles {
@@ -71,12 +74,12 @@ $level-cell-width: 52;
 }
 
 .gridBox {
-  border-top: 1px solid $neutral_dark40;
-  border-left: 1px solid $neutral_dark40;
+  border-top: 1px solid var(--borders-neutral-strong);
+  border-left: 1px solid var(--borders-neutral-strong);
   border-right: 0;
   border-bottom: 0;
   padding: 0;
-  background-color: white;
+  background-color: var(--background-neutral-primary);
   font-size: 16px;
 
   &Student {
@@ -87,7 +90,7 @@ $level-cell-width: 52;
     text-overflow: ellipsis;
     overflow: hidden;
     white-space: nowrap;
-    background-color: $light_gray_50;
+    background-color: var(--background-neutral-secondary);
     font-size: 14px;
     font-weight: 600;
   }
@@ -135,8 +138,8 @@ $level-cell-width: 52;
 }
 
 .grid {
-  border-bottom: 1px solid $neutral_dark40;
-  border-right: 1px solid $neutral_dark40;
+  border-bottom: 1px solid var(--borders-neutral-strong);
+  border-right: 1px solid var(--borders-neutral-strong);
 }
 
 .title {
@@ -145,7 +148,7 @@ $level-cell-width: 52;
   display: flex;
   flex-direction: row;
 
-  &Students {
+  .titleStudents {
     height: 100%;
     min-width: 195px;
     margin-right: 12px;
@@ -155,16 +158,73 @@ $level-cell-width: 52;
     justify-content: flex-end;
   }
 
-  &UnitSelector {
+  .titleUnitSelector {
     display: flex;
     flex-direction: row;
     line-height: 32px;
     min-width: fit-content;
     max-height: 32px;
 
-    &Dropdown {
+    .titleUnitSelectorDropdown {
       margin-inline-start: 8px;
     }
+  }
+
+  // CSV download button
+  .downloadCsvDropdown, .moreOptionsDropdownButton {
+    display: flex;
+    margin-inline-start: 5px;
+    width: 32px;
+    height: 32px;
+  }
+}
+
+.downloadCsvContainer {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdownOption {
+  /* Reset's every elements apperance */
+  background: none repeat scroll 0 0 transparent;
+  border: none !important;
+  border-radius: 0;
+  border-spacing: 0;
+  list-style: none outside none;
+  margin: 0;
+  text-decoration: none;
+  text-indent: 0;
+  box-shadow: none;
+  flex-grow: 1;
+
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  color: var(--text-neutral-primary);
+
+  padding: 0.3125rem 0.875rem 0.3125rem 0.625rem;
+  gap: 0.5rem;
+
+  &:active {
+    border: 0 !important;
+  }
+
+  &:hover {
+    color: var(--text-neutral-primary);
+    text-decoration: none;
+  }
+
+  i {
+    font-size: 1rem;
+    line-height: 125%;
+    width: 1.25rem;
+    text-align: center;
+  }
+
+  span {
+    @include typography.body-three;
+    color: inherit;
+    margin-bottom: 0;
   }
 }
 
@@ -176,28 +236,28 @@ $level-cell-width: 52;
   }
 
   &HeaderCell {
-    border: 1px solid $neutral_dark40;
+    border: 1px solid var(--borders-neutral-strong);
     margin: 0;
     height: 42px;
     line-height: 42px;
     min-width: 52px;
     margin-bottom: 32px;
     text-align: center;
-    background-color: $light_gray_50;
+    background-color: var(--background-neutral-secondary);
     font-size: 14px;
     font-weight: 600;
   }
 
   &HeaderCellInteractive {
     @include remove-default-button-styles;
-    border: 1px solid $neutral_dark40;
+    border: 1px solid var(--borders-neutral-strong);
     margin: 0;
     height: 42px;
     line-height: 42px;
     min-width: 52px;
     margin-bottom: 32px;
     text-align: center;
-    background-color: $light_gray_50;
+    background-color: var(--background-neutral-secondary);
     font-size: 14px;
     font-weight: 600;
   }
@@ -225,8 +285,8 @@ $level-cell-width: 52;
   &DataColumn {
     display: flex;
     flex-direction: column;
-    border-bottom: 1px solid $neutral_dark40;
-    border-right: 1px solid $neutral_dark40;
+    border-bottom: 1px solid var(--borders-neutral-strong);
+    border-right: 1px solid var(--borders-neutral-strong);
   }
 }
 
@@ -235,14 +295,14 @@ $level-cell-width: 52;
     min-width: 80px;
 
     &LessonCell {
-      border-top: 1px solid $neutral_dark40;
-      border-left: 1px solid $neutral_dark40;
+      border-top: 1px solid var(--borders-neutral-strong);
+      border-left: 1px solid var(--borders-neutral-strong);
       height: 42px;
       line-height: 42px;
       min-width: 82px;
       border: 0;
-      background-color: $light_primary_500;
-      color: $light_white;
+      background-color: var(--background-brand-teal-primary);
+      color: var(--text-neutral-white-fixed);
       padding: 0;
       font-size: inherit;
     }
@@ -278,7 +338,7 @@ $level-cell-width: 52;
       width: fit-content;
 
       & .expandedHeaderLevelCell:last-child {
-        border-right: 1px solid $neutral_dark40;
+        border-right: 1px solid var(--borders-neutral-strong);
       }
     }
 
@@ -317,16 +377,16 @@ $level-cell-width: 52;
       }
 
       &Unexpanded {
-        background-color: $brand_teal_5;
+        background-color: var(--background-brand-teal-extra-light);
       }
     }
 
     &ExpandedLevelCell {
       border: 0;
       // Invisible border to match sizing of table
-      border-top: 1px solid $neutral_dark40;
-      color: $light_white;
-      background-color: $light_primary_500;
+      border-top: 1px solid var(--borders-neutral-strong);
+      color: var(--text-neutral-white-fixed);
+      background-color: var(--background-brand-teal-primary);
       width: fit-content;
 
       &Inner {
@@ -335,12 +395,12 @@ $level-cell-width: 52;
       }
 
       & .assessmentLevelIcon {
-        color: $light_white;
+        color: var(--text-neutral-white-fixed);
       }
     }
 
     &ExpandedLevelCellFirst {
-      border-left: 1px solid $neutral_dark40;
+      border-left: 1px solid var(--borders-neutral-strong);
       width: 52px;
     }
   }
@@ -357,8 +417,8 @@ $level-cell-width: 52;
   &Table {
     display: flex;
     flex-direction: column;
-    border-bottom: 1px solid $neutral_dark40;
-    border-right: 1px solid $neutral_dark40;
+    border-bottom: 1px solid var(--borders-neutral-strong);
+    border-right: 1px solid var(--borders-neutral-strong);
     width: fit-content;
   }
 
@@ -375,7 +435,7 @@ $level-cell-width: 52;
   }
 
   &ChoiceLevelLink {
-    border-left: 1px solid $light_gray_100;
+    border-left: 1px solid var(--borders-neutral-light);
     height: 32px;
     margin: 8px 0;
     line-height: 32px !important;
@@ -388,7 +448,7 @@ $level-cell-width: 52;
     width: auto;
 
     &First {
-      border-inline-start: 1px solid $neutral_dark40;
+      border-inline-start: 1px solid var(--borders-neutral-strong);
     }
   }
 
@@ -421,13 +481,13 @@ $level-cell-width: 52;
 
 .assessmentLevelIcon {
   font-size: 12px;
-  color: black;
+  color: var(--text-neutral-primary);
 }
 
 .studentColumnName {
   @include remove-default-button-styles;
-  border-top: 1px solid $neutral_dark40;
-  border-left: 1px solid $neutral_dark40;
+  border-top: 1px solid var(--borders-neutral-strong);
+  border-left: 1px solid var(--borders-neutral-strong);
   border-right: 0;
   border-bottom: 0;
   padding: 0;
@@ -440,19 +500,34 @@ $level-cell-width: 52;
   padding-inline-start: 12px;
   padding-inline-end: 0.5em;
   text-align: start;
-  text-overflow: ellipsis;
+  display: flex;
+  align-items: center;
   overflow: hidden;
   white-space: nowrap;
-  background-color: $light_gray_50;
 
   &:active {
     border-bottom: 0 !important;
     border-right: 0 !important;
   }
 
+  &Text {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    min-width: 0;
+  }
+
   &Caret {
+    flex-shrink: 0;
     margin-inline-end: 12px;
   }
+}
+
+.darkerBackground {
+  background-color: var(--background-neutral-secondary);
+}
+
+.lighterBackground {
+  background-color: var(--background-neutral-primary);
 }
 
 .studentColumnExpandedHeader {

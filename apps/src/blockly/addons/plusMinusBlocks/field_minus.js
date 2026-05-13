@@ -10,7 +10,7 @@
  * @fileoverview A function that creates a minus button used for mutation.
  */
 
-import * as GoogleBlockly from 'blockly/core';
+import * as BlocklyCore from 'blockly/core';
 
 import {getExtraBlockState} from './serialization_helper';
 
@@ -18,10 +18,10 @@ import {getExtraBlockState} from './serialization_helper';
  * Creates a minus image field used for mutation.
  * @param {Object=} args Untyped args passed to block.minus when the field
  *     is clicked.
- * @returns {GoogleBlockly.FieldImage} The minus field.
+ * @returns {BlocklyCore.FieldImage} The minus field.
  */
 export function createMinusField(args = undefined) {
-  const minus = new GoogleBlockly.FieldImage(
+  const minus = new BlocklyCore.FieldImage(
     minusImage,
     15,
     15,
@@ -39,7 +39,7 @@ export function createMinusField(args = undefined) {
 
 /**
  * Calls block.minus(args) when the minus field is clicked.
- * @param {GoogleBlockly.FieldImage} minusField The field being clicked.
+ * @param {BlocklyCore.FieldImage} minusField The field being clicked.
  * @private
  */
 function onClick_(minusField) {
@@ -50,14 +50,14 @@ function onClick_(minusField) {
     return;
   }
 
-  GoogleBlockly.Events.setGroup(true);
+  BlocklyCore.Events.setGroup(true);
   const oldExtraState = getExtraBlockState(block);
   block.minus(minusField.args_);
   const newExtraState = getExtraBlockState(block);
 
   if (oldExtraState !== newExtraState) {
-    GoogleBlockly.Events.fire(
-      new GoogleBlockly.Events.BlockChange(
+    BlocklyCore.Events.fire(
+      new BlocklyCore.Events.BlockChange(
         block,
         'mutation',
         null,
@@ -66,7 +66,7 @@ function onClick_(minusField) {
       )
     );
   }
-  GoogleBlockly.Events.setGroup(false);
+  BlocklyCore.Events.setGroup(false);
 }
 
 const minusImage =

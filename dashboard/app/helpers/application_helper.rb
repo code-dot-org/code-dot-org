@@ -47,6 +47,15 @@ module ApplicationHelper
     end
   end
 
+  # This method formats a date string to align with the format used in analytics:
+  # "YYYY-YY+1" (e.g. "2022-23")
+  # We define a school year as July 1st YYYY - June 30th YYYY+1, so:
+  # 07/01/2022 - 06/30/2023 should be formatted as "2022-23"
+  def school_year
+    year = Time.now.month >= 7 ? Time.now.year : Time.now.year - 1
+    "#{year}-#{year.to_s[-2..].to_i + 1}"
+  end
+
   def activity_css_class(user_level)
     best_activity_css_class([user_level])
   end
@@ -112,11 +121,6 @@ module ApplicationHelper
     CDO.code_org_url
   end
 
-  # used by sign-up to retrieve the user return_to URL from the session and delete it.
-  def get_and_clear_session_user_return_to
-    return session.delete(:user_return_to) if session[:user_return_to]
-  end
-
   # used by devise to redirect user after signing in
   def signed_in_root_path(resource_or_scope)
     if resource_or_scope.is_a?(User) && resource_or_scope.teacher?
@@ -165,6 +169,9 @@ module ApplicationHelper
       else
         asset_url "bounce_sharing_drawing.png"
       end
+    elsif opts[:level].is_a?(BubbleChoice)
+      project_type = opts[:level].try(:project_type)
+      asset_url "#{project_type}_sharing_drawing.png"
     else
       asset_url 'sharing_drawing.png'
     end
@@ -203,6 +210,10 @@ module ApplicationHelper
   # wrap the code in question in this function.
   def brakeman_no_warn(obj)
     obj
+  end
+
+  def render_shared_haml(name, locals = {})
+    render inline: File.read(CDO.dir("shared/haml/#{name}.haml")), type: :haml, locals: locals # rubocop:disable Rails/RenderInline
   end
 
   private def share_failure_message(failure_type)

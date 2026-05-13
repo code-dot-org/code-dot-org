@@ -2,9 +2,34 @@ import {expect} from 'chai'; // eslint-disable-line no-restricted-imports
 import {mount, shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import _ from 'lodash';
 import React from 'react';
+import {act} from 'react-dom/test-utils';
 import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
 
 import WorkshopTableLoader from '@cdo/apps/code-studio/pd/workshop_dashboard/components/workshop_table_loader';
+import {
+  COURSE_CSF,
+  COURSE_BUILD_YOUR_OWN,
+} from '@cdo/apps/code-studio/pd/workshop_dashboard/workshopConstants';
+
+const defaultFakeResponseData = {
+  limit: 100,
+  total_count: 2,
+  filters: '',
+  workshops: [
+    {
+      id: 1,
+      course: COURSE_CSF,
+      subject: 'Intro',
+      course_offering_names: null,
+    },
+    {
+      id: 2,
+      course: COURSE_BUILD_YOUR_OWN,
+      subject: '',
+      course_offering_names: 'Test Topic A, Test Topic B',
+    },
+  ],
+};
 
 describe('WorkshopTableLoader', () => {
   let server;
@@ -27,10 +52,6 @@ describe('WorkshopTableLoader', () => {
     server.restore();
   });
 
-  const getFakeWorkshopsData = () => {
-    return [{id: 1}, {id: 2}];
-  };
-
   it('Initially displays a spinner', () => {
     const Child = sinon.stub().returns(null);
     const loader = shallow(
@@ -43,9 +64,8 @@ describe('WorkshopTableLoader', () => {
     expect(loader.find('Spinner')).to.have.length(1);
   });
 
-  it('Loads workshops over ajax and passes them to the child component', () => {
-    const fakeWorkshopsData = getFakeWorkshopsData();
-    const responseJson = JSON.stringify(fakeWorkshopsData);
+  it('Loads workshops over ajax and passes them to the child component', async () => {
+    const responseJson = JSON.stringify(defaultFakeResponseData);
     server.respondWith('GET', 'fake-query-url', [
       200,
       {'Content-Type': 'application/json'},
@@ -59,15 +79,24 @@ describe('WorkshopTableLoader', () => {
       </WorkshopTableLoader>
     );
 
-    server.respond();
+    await act(() => {
+      server.respond();
+    });
+
     expect(server.requests.length).to.equal(1);
     expect(server.requests[0].url).to.equal('fake-query-url');
 
+    // First workshop is not BYO so its subject should remain unchanged, while the second workshop is BYO
+    // so its subject should be its course offering names.
     expect(Child.calledOnce).to.be.true;
-    expect(Child.getCall(0).args[0]).to.eql({
-      workshops: fakeWorkshopsData,
-      onDelete: null,
-    });
+    const returnedWorkshopSubjects =
+      Child.getCall(0).args[0].workshops.workshops;
+    expect(returnedWorkshopSubjects[0].subject).to.eql(
+      defaultFakeResponseData.workshops[0].subject
+    );
+    expect(returnedWorkshopSubjects[1].subject).to.eql(
+      defaultFakeResponseData.workshops[1].course_offering_names
+    );
   });
 
   it('Applies queryParams to the queryURL', () => {
@@ -91,8 +120,8 @@ describe('WorkshopTableLoader', () => {
     expect(server.requests[0].url).to.equal(expectedUrlWithParams);
   });
 
-  it('Passes delete function to child when canDelete is true', () => {
-    const fakeWorkshopsData = getFakeWorkshopsData();
+  it('Passes delete function to child when canDelete is true', async () => {
+    const fakeWorkshopsData = defaultFakeResponseData.workshops;
     const Child = sinon.stub().returns(null);
     const loader = mount(
       <WorkshopTableLoader queryUrl="fake-query-url" canDelete>
@@ -100,9 +129,11 @@ describe('WorkshopTableLoader', () => {
       </WorkshopTableLoader>
     );
 
-    loader.setState({
-      loading: false,
-      workshops: fakeWorkshopsData,
+    await act(() => {
+      loader.setState({
+        loading: false,
+        workshops: fakeWorkshopsData,
+      });
     });
 
     expect(Child.calledOnce).to.be.true;
@@ -112,7 +143,7 @@ describe('WorkshopTableLoader', () => {
     });
   });
 
-  it('Displays no workshops found message when no workshops are found', () => {
+  it('Displays no workshops found message when no workshops are found', async () => {
     const Child = sinon.stub().returns(null);
     const loader = mount(
       <WorkshopTableLoader queryUrl="fake-query-url">
@@ -120,9 +151,11 @@ describe('WorkshopTableLoader', () => {
       </WorkshopTableLoader>
     );
 
-    loader.setState({
-      loading: false,
-      workshops: [],
+    await act(() => {
+      loader.setState({
+        loading: false,
+        workshops: [],
+      });
     });
 
     expect(Child.called).to.be.false;
@@ -130,7 +163,7 @@ describe('WorkshopTableLoader', () => {
     expect(loader.find('p').text()).to.eql('No workshops found');
   });
 
-  it('Renders null when hideNoWorkshopsMessage is specified and no workshops are found', () => {
+  it('Renders null when hideNoWorkshopsMessage is specified and no workshops are found', async () => {
     const Child = sinon.stub().returns(null);
     const loader = mount(
       <WorkshopTableLoader queryUrl="fake-query-url" hideNoWorkshopsMessage>
@@ -138,9 +171,11 @@ describe('WorkshopTableLoader', () => {
       </WorkshopTableLoader>
     );
 
-    loader.setState({
-      loading: false,
-      workshops: [],
+    await act(() => {
+      loader.setState({
+        loading: false,
+        workshops: [],
+      });
     });
 
     expect(Child.called).to.be.false;

@@ -1,0 +1,16 @@
+name 'iterating-with-ai-postassessment-q3_2025'
+
+question 'A loop is designed to run from `i = 0` to `i < 5`. If the developer accidentally changes the condition to `i <= 5`, how many times will the loop run?'
+
+wrong '4 times'
+wrong '5 times'
+right '6 times'
+wrong 'It will not run at all.'
+
+allow_multiple_attempts true
+
+teacher_markdown <<MARKDOWN
+Lesson 2
+
+Using `< 5` runs the loop for 0, 1, 2, 3, 4 (5 times). Using `<= 5` adds an extra iteration for index 5, totaling 6 times. This is a classic "off-by-one" error.
+MARKDOWN

@@ -421,7 +421,7 @@ describe('manageStudentsRedux', () => {
           loginType: 'email',
           secretWords: 'wizard',
           secretPictureName: 'wizard',
-          secretPicturePath: '/wizard.jpg',
+          secretPictureUrl: '/wizard.jpg',
           sectionId: 53,
         },
       };
@@ -518,16 +518,16 @@ describe('manageStudentsRedux', () => {
         setSecretImageAction
       );
       assert.equal(
-        stateAfterUpdating.studentData[1].secretPicturePath,
+        stateAfterUpdating.studentData[1].secretPictureUrl,
         '/cat.jpg'
       );
       assert.deepEqual(
-        stateAfterUpdating.studentData[2].secretPicturePath,
-        sectionLoginData[2].secretPicturePath
+        stateAfterUpdating.studentData[2].secretPictureUrl,
+        sectionLoginData[2].secretPictureUrl
       );
       assert.deepEqual(
-        stateAfterUpdating.studentData[3].secretPicturePath,
-        sectionLoginData[3].secretPicturePath
+        stateAfterUpdating.studentData[3].secretPictureUrl,
+        sectionLoginData[3].secretPictureUrl
       );
     });
   });
@@ -787,7 +787,7 @@ describe('manageStudentsRedux', () => {
         age: 17,
         gender: 'f',
         usState: 'CO',
-        secretPicturePath: '/wizard.jpg',
+        secretPictureUrl: '/wizard.jpg',
         loginType: 'picture',
         isEditing: false,
       };
@@ -844,7 +844,7 @@ describe('manageStudentsRedux', () => {
           familyName: 'fam a',
           age: 17,
           gender: 'f',
-          secretPicturePath: '/wizard.jpg',
+          secretPictureUrl: '/wizard.jpg',
           loginType: 'picture',
           isEditing: false,
         },
@@ -853,7 +853,7 @@ describe('manageStudentsRedux', () => {
           name: 'new student b',
           age: 11,
           gender: 'm',
-          secretPicturePath: '/wizard.jpg',
+          secretPictureUrl: '/wizard.jpg',
           loginType: 'picture',
           isEditing: false,
         },
@@ -1131,7 +1131,6 @@ describe('manageStudentsRedux', () => {
         age: 17,
         sharing_disabled: true,
         has_ever_signed_in: false,
-        ai_tutor_access_denied: false,
         at_risk_age_gated: false,
         child_account_compliance_state: null,
         latest_permission_request_sent_at: null,

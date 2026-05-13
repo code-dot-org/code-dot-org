@@ -15,7 +15,9 @@
 
 /** Type of the locale object, parameterized by a StringMap type (usually derived from JSON) */
 export type Locale<StringMap> = {
-  [key in keyof StringMap]: (replaceMap?: {[key: string]: string}) => string;
+  [key in keyof StringMap]: (replaceMap?: {
+    [key: string]: string | number;
+  }) => string;
 };
 
 /** Exporting the common locale object as the Locale type, with keys derived from the common strings JSON file */

@@ -2,9 +2,9 @@ class RubricsController < ApplicationController
   include Rails.application.routes.url_helpers
   include SharedConstants
 
-  before_action :require_levelbuilder_mode_or_test_env, except: [:submit_evaluations, :get_ai_evaluations, :get_teacher_evaluations, :get_teacher_evaluations_for_all, :ai_evaluation_status_for_user, :ai_evaluation_status_for_all, :run_ai_evaluations_for_user, :run_ai_evaluations_for_all, :get_ai_rubrics_tour_seen, :update_ai_rubrics_tour_seen]
-  load_resource only: [:get_teacher_evaluations, :get_teacher_evaluations_for_all, :ai_evaluation_status_for_user, :ai_evaluation_status_for_all, :run_ai_evaluations_for_user, :run_ai_evaluations_for_all, :get_ai_rubrics_tour_seen, :update_ai_rubrics_tour_seen]
-  load_and_authorize_resource except: [:submit_evaluations, :get_ai_evaluations, :get_teacher_evaluations, :get_teacher_evaluations_for_all, :ai_evaluation_status_for_user, :ai_evaluation_status_for_all, :run_ai_evaluations_for_user, :run_ai_evaluations_for_all, :get_ai_rubrics_tour_seen, :update_ai_rubrics_tour_seen]
+  before_action :require_levelbuilder_mode_or_test_env, except: [:show, :find, :submit_evaluations, :get_ai_evaluations, :get_teacher_evaluations, :get_teacher_evaluations_for_all, :ai_evaluation_status_for_user, :ai_evaluation_status_for_all, :run_ai_evaluations_for_user, :run_ai_evaluations_for_all, :get_ai_rubrics_tour_seen, :update_ai_rubrics_tour_seen]
+  load_resource only: [:show, :get_teacher_evaluations, :get_teacher_evaluations_for_all, :ai_evaluation_status_for_user, :ai_evaluation_status_for_all, :run_ai_evaluations_for_user, :run_ai_evaluations_for_all, :get_ai_rubrics_tour_seen, :update_ai_rubrics_tour_seen]
+  load_and_authorize_resource except: [:find, :submit_evaluations, :get_ai_evaluations, :get_teacher_evaluations, :get_teacher_evaluations_for_all, :ai_evaluation_status_for_user, :ai_evaluation_status_for_all, :run_ai_evaluations_for_user, :run_ai_evaluations_for_all, :get_ai_rubrics_tour_seen, :update_ai_rubrics_tour_seen]
 
   # GET /rubrics/:rubric_id/edit
   def edit
@@ -43,6 +43,40 @@ class RubricsController < ApplicationController
     end
   end
 
+  # GET /rubrics/:id
+  def show
+    render json: {rubric: @rubric.summarize, canShowTaScoresAlert: can_show_ta_scores_alert?(@rubric.lesson)}
+  end
+
+  # GET /rubrics/find?lesson_id=X&level_id=Y (level_id optional)
+  def find
+    lesson_id = params[:lesson_id]
+    level_id = params[:level_id]
+
+    return render json: {error: 'lesson_id is required'}, status: :bad_request unless lesson_id
+
+    lesson = Lesson.find_by(id: lesson_id)
+    return render json: {error: 'Lesson not found'}, status: :not_found unless lesson
+
+    # If level_id is provided, find specific rubric for (lesson_id, level_id)
+    # Otherwise, use lesson.rubric (which returns the first rubric via has_one association)
+    rubric = if level_id
+               Rubric.find_by(lesson_id: lesson_id, level_id: level_id)
+             else
+               lesson.rubric
+             end
+
+    if rubric
+      render json: {
+        rubricId: rubric.id,
+        rubric: rubric.summarize,
+        levelId: rubric.level_id
+      }
+    else
+      render json: {error: 'Rubric not found'}, status: :not_found
+    end
+  end
+
   # POST /rubrics/:id/submit_evaluations
   def submit_evaluations
     return head :forbidden unless current_user&.teacher?
@@ -62,7 +96,7 @@ class RubricsController < ApplicationController
     project_id = nil
     version_id = nil
     if channel_token
-      _owner_id, project_id = storage_decrypt_channel_id(channel_token.channel)
+      _owner_id, project_id = get_storage_id_and_project_id(channel_token.channel)
       source_data = SourceBucket.new.get(channel_token.channel, "main.json")
       if source_data[:status] == 'FOUND'
         version_id = source_data[:version_id]
@@ -87,10 +121,14 @@ class RubricsController < ApplicationController
     return head :forbidden unless can?(:manage, student)
 
     # Get the latest rubric evaluation
-    rubric_ai_evaluation = RubricAiEvaluation.where(
+    scope = RubricAiEvaluation.where(
       rubric_id: permitted_params[:id],
       user_id: student.id
-    ).order(updated_at: :desc).first
+    )
+    # Demo students are shared across teachers, so scope to the current teacher's
+    # evaluations to prevent cross-teacher data leakage.
+    scope = scope.where(requester_id: current_user.id) if Policies::DemoSections.demo_student?(student.id)
+    rubric_ai_evaluation = scope.order(updated_at: :desc).first
 
     # Get the most recent learning goals based on the most recent graded rubric
     learning_goal_ai_evaluations = rubric_ai_evaluation&.learning_goal_ai_evaluations || []
@@ -123,8 +161,12 @@ class RubricsController < ApplicationController
       next unless @user&.student_of?(current_user)
 
       learning_goal_ids = @rubric.learning_goals.pluck(:id)
+      scope = LearningGoalTeacherEvaluation.where(user_id: user_id, learning_goal_id: learning_goal_ids).where.not(submitted_at: nil)
+      # Demo students are shared across teachers, so scope to the current teacher's
+      # evaluations to prevent cross-teacher data leakage.
+      scope = scope.where(teacher_id: current_user.id) if Policies::DemoSections.demo_student?(user_id)
       teacher_evaluations =
-        LearningGoalTeacherEvaluation.where(user_id: user_id, learning_goal_id: learning_goal_ids).where.not(submitted_at: nil).
+        scope.
           group_by(&:learning_goal_id).
           map {|_, eval_list| eval_list.max_by(&:submitted_at)}
       teacher_evals.append({user_name: @user.name, user_family_name: @user.family_name, user_id: user_id, eval: teacher_evaluations.map(&:summarize_for_participant)})
@@ -226,10 +268,14 @@ class RubricsController < ApplicationController
     is_level_ai_enabled = AiRubricConfig.ai_enabled?(script_level)
     return head :bad_request unless is_level_ai_enabled
 
-    rubric_ai_evaluation = RubricAiEvaluation.where(
+    scope = RubricAiEvaluation.where(
       rubric_id: @rubric.id,
       user_id: user_id
-    ).order(updated_at: :desc).first
+    )
+    # Demo students are shared across teachers, so scope to the current teacher's
+    # evaluations to prevent cross-teacher data leakage.
+    scope = scope.where(requester_id: current_user.id) if Policies::DemoSections.demo_student?(user_id.to_i)
+    rubric_ai_evaluation = scope.order(updated_at: :desc).first
 
     status = nil
     if rubric_ai_evaluation&.status
@@ -261,6 +307,9 @@ class RubricsController < ApplicationController
     last_attempt_evaluated_count = 0
     pending_count = 0
 
+    # map from user to evaluation status
+    student_to_ai_status_map = {}
+
     user_ids = Section.find_by(id: section_id).followers.pluck(:student_user_id)
     user_ids.each do |user_id|
       @user = User.find(user_id)
@@ -268,10 +317,14 @@ class RubricsController < ApplicationController
       attempted = attempted_at
       evaluated = ai_evaluated_at # only finished, successful evaluations
       last_attempt_evaluated = attempted && evaluated && evaluated >= attempted
-      rubric_ai_evaluation = RubricAiEvaluation.where(
+      scope = RubricAiEvaluation.where(
         rubric_id: @rubric.id,
         user_id: user_id
-      ).order(updated_at: :desc).first
+      )
+      # Demo students are shared across teachers, so scope to the current teacher's
+      # evaluations to prevent cross-teacher data leakage.
+      scope = scope.where(requester_id: current_user.id) if Policies::DemoSections.demo_student?(user_id)
+      rubric_ai_evaluation = scope.order(updated_at: :desc).first
 
       status = rubric_ai_evaluation&.status
       is_pending = status == RUBRIC_AI_EVALUATION_STATUS[:QUEUED] || status == RUBRIC_AI_EVALUATION_STATUS[:RUNNING]
@@ -280,6 +333,11 @@ class RubricsController < ApplicationController
       attempted_count += 1 if !!attempted
       last_attempt_evaluated_count += 1 if last_attempt_evaluated
       pending_count += 1 if is_pending
+
+      student_to_ai_status_map[user_id] = compute_student_ai_status(
+        attempted: attempted,
+        last_attempt_evaluated: last_attempt_evaluated,
+      )
     end
     render json: {
       notAttemptedCount: user_ids.length - attempted_count,
@@ -287,7 +345,8 @@ class RubricsController < ApplicationController
       attemptedUnevaluatedCount: attempted_unevaluated_count,
       lastAttemptEvaluatedCount: last_attempt_evaluated_count,
       pendingCount: pending_count,
-      csrfToken: form_authenticity_token
+      csrfToken: form_authenticity_token,
+      aiEvalStatusMap: student_to_ai_status_map
     }
   end
 
@@ -308,6 +367,7 @@ class RubricsController < ApplicationController
     params.transform_keys(&:underscore).permit(
       :level_id,
       :lesson_id,
+      :s3_config_dir,
       :seen,
       learning_goals_attributes: [
         :id,
@@ -360,5 +420,17 @@ class RubricsController < ApplicationController
     )
     return nil unless channel_token
     channel_token.channel
+  end
+
+  private def compute_student_ai_status(attempted:, last_attempt_evaluated:)
+    if attempted
+      if last_attempt_evaluated
+        return 'READY_TO_REVIEW'
+      else
+        return 'IN_PROGRESS'
+      end
+    else
+      'NOT_STARTED'
+    end
   end
 end

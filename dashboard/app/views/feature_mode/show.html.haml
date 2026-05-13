@@ -68,12 +68,12 @@
 
 %div#hoc_features
 
-  = form_tag(action: 'update') do
+  = form_with(url: feature_mode_path, method: :patch) do |f|
     %table{cellpadding: '4'}
       - FeatureModeManager::MODES.each do |mode|
         %tr{class: mode}
           %td
-            = radio_button_tag 'mode', mode, mode == @mode, {id: mode,
+            = f.radio_button 'mode', mode, {id: mode, checked: mode == @mode,
                 onclick: "$('.grid_preview').css('visibility', 'hidden'); $('##{mode}_grid').css('visibility', 'visible'); $('#submit').prop('disabled', false)"}
           %td
             %label{for: mode}
@@ -100,7 +100,7 @@
         %td
         %td
           %div.submit_div
-            = submit_tag('Update feature mode', :id => 'submit', :disabled => 'true')
+            = f.submit('Update feature mode', {id: 'submit', disabled: true})
 
       %tr
         %td

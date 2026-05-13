@@ -1,10 +1,10 @@
+import {SimpleDropdown} from '@code-dot-org/component-library/dropdown';
+import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
+import {Typography, Button as MuiButton} from '@mui/material';
 import classNames from 'classnames';
 import PropTypes from 'prop-types';
 import React, {useMemo} from 'react';
 
-import {Button} from '@cdo/apps/componentLibrary/button';
-import {SimpleDropdown} from '@cdo/apps/componentLibrary/dropdown';
-import {BodyTwoText, Heading2} from '@cdo/apps/componentLibrary/typography';
 import {
   SELECT_COUNTRY,
   US_COUNTRY_CODE,
@@ -26,6 +26,8 @@ const SEARCH_DEFAULTS = [
 
 const COUNTRIES_US_FIRST = getCountriesUsFirst();
 
+export const SCHOOL_INFO_ID = 'school_info';
+
 export default function SchoolDataInputs({
   schoolId,
   country,
@@ -37,7 +39,9 @@ export default function SchoolDataInputs({
   setSchoolName,
   setSchoolZip,
   usIp,
+  containerClassName,
   includeHeaders = true,
+  schoolsLoading = false,
   fieldNames = {
     country: 'user[school_info_attributes][country]',
     ncesSchoolId: 'user[school_info_attributes][school_id]',
@@ -82,25 +86,25 @@ export default function SchoolDataInputs({
     setCountry(c);
   };
 
-  const labelClassName = schoolZipIsValid ? '' : style.disabledLabel;
-
   const handleSchoolChange = id => {
     setSchoolId(id);
-
-    if (!Object.values(NonSchoolOptions).includes(id)) {
-      const schoolName = schoolsList.find(school => school.value === id)?.text;
-      if (schoolName) {
-        setSchoolName(schoolName);
-      }
-    }
   };
 
+  const labelClassName = schoolZipIsValid ? '' : style.disabledLabel;
+
+  const computedStyleClass = classNames(
+    style.schoolAssociationWrapper,
+    containerClassName
+  );
+
   return (
-    <div className={style.schoolAssociationWrapper}>
+    <div id={SCHOOL_INFO_ID} className={computedStyleClass}>
       {includeHeaders && (
         <div className={style.headerContainer}>
-          <Heading2>{i18n.censusHeading()}</Heading2>
-          <BodyTwoText>{i18n.schoolInfoInterstitialTitle()}</BodyTwoText>
+          <Typography variant="h2">{i18n.censusHeading()}</Typography>
+          <Typography variant="body2">
+            {i18n.schoolInfoInterstitialTitle()}
+          </Typography>
         </div>
       )}
       <div className={style.inputContainer}>
@@ -140,10 +144,10 @@ export default function SchoolDataInputs({
           />
         )}
         {countryIsUS && !inputManually && (
-          <div>
+          <div className={style.schoolsList}>
             <SimpleDropdown
               id="uitest-school-dropdown"
-              disabled={!schoolZipIsValid}
+              disabled={!schoolZipIsValid || schoolsLoading}
               name={fieldNames.ncesSchoolId}
               className={classNames(labelClassName, style.dropdown)}
               labelText={i18n.selectYourSchool()}
@@ -162,17 +166,22 @@ export default function SchoolDataInputs({
               dropdownTextThickness="thin"
             />
             {showNoSchoolSettingButton && (
-              <Button
-                text={i18n.noSchoolSetting()}
+              <MuiButton
+                variant="text"
+                color="primary"
+                size="small"
                 disabled={!schoolZipIsValid}
-                color={'purple'}
-                type={'tertiary'}
-                size={'s'}
                 onClick={e => {
                   e.preventDefault();
                   handleSchoolChange(NonSchoolOptions.NO_SCHOOL_SETTING);
                 }}
-              />
+                type="button"
+              >
+                {i18n.noSchoolSetting()}
+              </MuiButton>
+            )}
+            {schoolsLoading && (
+              <FontAwesomeV6Icon iconName="spinner" animationType="spin" />
             )}
           </div>
         )}
@@ -183,29 +192,20 @@ export default function SchoolDataInputs({
               schoolName={schoolName}
               setSchoolName={setSchoolName}
             />
-            <Button
-              text={i18n.returnToResults()}
-              color={'purple'}
-              type={'tertiary'}
-              size={'s'}
+            <MuiButton
+              variant="text"
+              color="primary"
+              size="small"
               onClick={() => {
                 handleSchoolChange(NonSchoolOptions.SELECT_A_SCHOOL);
               }}
-            />
+              type="button"
+            >
+              {i18n.returnToResults()}
+            </MuiButton>
           </div>
         )}
       </div>
-      {/* hidden fields are needed when form is submitted in _finish_sign_up.js 
-      in order to pass the default schoolType when the user does 
-      not teach in a school setting */}
-      {schoolId === NonSchoolOptions.NO_SCHOOL_SETTING && (
-        <input
-          hidden
-          readOnly
-          name={fieldNames.schoolType}
-          value={NonSchoolOptions.NO_SCHOOL_SETTING}
-        />
-      )}
     </div>
   );
 }
@@ -213,6 +213,7 @@ export default function SchoolDataInputs({
 SchoolDataInputs.propTypes = {
   includeHeaders: PropTypes.bool,
   fieldNames: PropTypes.object,
+  containerClassName: PropTypes.string,
   schoolId: PropTypes.string.isRequired,
   country: PropTypes.string.isRequired,
   schoolName: PropTypes.string.isRequired,
@@ -220,6 +221,7 @@ SchoolDataInputs.propTypes = {
   schoolsList: PropTypes.arrayOf(
     PropTypes.shape({value: PropTypes.string, text: PropTypes.string})
   ).isRequired,
+  schoolsLoading: PropTypes.bool,
   usIp: PropTypes.bool,
   setSchoolId: PropTypes.func.isRequired,
   setCountry: PropTypes.func.isRequired,

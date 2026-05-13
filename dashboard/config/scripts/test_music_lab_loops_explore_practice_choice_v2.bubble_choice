@@ -1,0 +1,13 @@
+name 'test-music-lab-loops-explore-practice-choice_v2'
+display_name 'Practice'
+description 'Choose at least 2 options below to try to recreate with code.'
+
+sublevels
+level 'music-lab-loops-explore-practicev2A_v2'
+level 'music-lab-loops-explore-practicev2B_v2'
+level 'test-music-lab-loops-explore-practice-choice-b_v2'
+level 'test-music-lab-loops-explore-practice-choice-c_v2'
+level 'test-music-lab-loops-explore-practice-choice-a_v2'
+# level 'test-music-lab-loops-explore-modify-2_v2'
+level 'music-lab-loops-explore-practice-f_v2'
+uses_lab2

@@ -1,0 +1,17 @@
+name 'student-end-of-unit-survey-q18_-cyber_v2-2025'
+
+question 'Thinking about what I learned in this unit, I feel like I understand . . .'
+
+right 'Strongly disagree'
+right 'Disagree'
+right 'Slightly disagree'
+right 'Neither'
+right 'Slightly agree'
+right 'Agree'
+right 'Strongly agree'
+
+allow_multiple_attempts true
+
+markdown <<MARKDOWN
+
+MARKDOWN

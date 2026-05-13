@@ -1,0 +1,47 @@
+<Dancelab>
+  <config><![CDATA[{
+  "game_id": 63,
+  "created_at": "2026-03-10T20:08:15.000Z",
+  "level_num": "custom",
+  "user_id": 1,
+  "properties": {
+    "skin": "dance",
+    "block_pools": [
+      "Dancelab",
+      "GeneratedDancers"
+    ],
+    "helper_libraries": [
+      "DanceLab"
+    ],
+    "hide_animation_mode": true,
+    "show_type_hints": true,
+    "encrypted": "false",
+    "embed": "false",
+    "instructions_important": "false",
+    "submittable": "false",
+    "never_autoplay_video": "false",
+    "disable_param_editing": "true",
+    "use_modal_function_editor": "false",
+    "hide_share_and_remix": "true",
+    "disable_if_else_editing": "false",
+    "free_play": "false",
+    "validation_enabled": "false",
+    "show_debug_watch": "false",
+    "expand_debugger": "false",
+    "debugger_disabled": "false",
+    "hide_pause_button": "false",
+    "default_song": "introtoshamstep_47SOUL",
+    "uses_lab2": "true",
+    "guide_mode": "aiDancerGenerate",
+    "ai_dancer_generate_adlib": "creature-attire-mood-style-05",
+    "long_instructions": "### Finish your lead dancer\r\nModify the prompt with even more details.",
+    "project_template_level_name": "mix-move-ai-dancer-prompt-template_2026-pilot",
+    "offer_browser_tts": "true",
+    "name_suffix": "_2026-pilot",
+    "preload_asset_list": null
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-03-10T20:08:15.624+00:00\",\"changed\":[\"cloned from \\\"aid-thinking-critically-lesson1-level4_2026-test_2026-pilot\\\"\"],\"cloned_from\":\"aid-thinking-critically-lesson1-level4_2026-test_2026-pilot\"}]"
+}]]></config>
+  <blocks/>
+</Dancelab>

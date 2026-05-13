@@ -13,7 +13,7 @@
  * @fileoverview Changes the if block to use a +/- mutator UI.
  */
 
-import * as GoogleBlockly from 'blockly/core';
+import * as BlocklyCore from 'blockly/core';
 
 import {createMinusField} from './field_minus';
 import {createPlusField} from './field_plus';
@@ -33,13 +33,13 @@ const controlsIfMutator = {
   /**
    * Creates XML to represent the number of else-if and else inputs.
    * @returns {Element} XML storage element.
-   * @this {GoogleBlockly.Block}
+   * @this {BlocklyCore.Block}
    */
   mutationToDom: function () {
     if (!this.elseIfCount_ && !this.hasElse_) {
       return null;
     }
-    const container = GoogleBlockly.utils.xml.createElement('mutation');
+    const container = BlocklyCore.utils.xml.createElement('mutation');
     container.setAttribute('elseif', this.elseIfCount_);
     if (this.hasElse_) {
       // Has to be stored as an int for backwards compat.
@@ -51,7 +51,7 @@ const controlsIfMutator = {
   /**
    * Parses XML to restore the else-if and else inputs.
    * @param {!Element} xmlElement XML storage element.
-   * @this {GoogleBlockly.Block}
+   * @this {BlocklyCore.Block}
    */
   domToMutation: function (xmlElement) {
     const targetCount = parseInt(xmlElement.getAttribute('elseif'), 10) || 0;
@@ -100,7 +100,7 @@ const controlsIfMutator = {
    * Adds else-if and do inputs to the block until the block matches the
    * target else-if count.
    * @param {number} targetCount The target number of else-if inputs.
-   * @this {GoogleBlockly.Block}
+   * @this {BlocklyCore.Block}
    * @private
    */
   updateShape_: function (targetCount) {
@@ -130,7 +130,7 @@ const controlsIfMutator = {
    * @see removeInput_
    * @param {number} index The index of the else-if input to "remove". Value will always be 1 or greater,
    * or undefined for if we are removing the else statement input.
-   * @this {GoogleBlockly.Block}
+   * @this {BlocklyCore.Block}
    */
   minus: function (index) {
     if ((index && this.elseIfCount_ === 0) || (!index && !this.hasElse_)) {
@@ -141,19 +141,19 @@ const controlsIfMutator = {
 
   /**
    * Adds an else statement input to the bottom of the block.
-   * @this {GoogleBlockly.Block}
+   * @this {BlocklyCore.Block}
    * @private
    */
   addElse_: function () {
     this.appendStatementInput('ELSE')
-      .appendField(GoogleBlockly.Msg['CONTROLS_IF_MSG_ELSE'])
+      .appendField(BlocklyCore.Msg['CONTROLS_IF_MSG_ELSE'])
       .appendField(createMinusField(), 'MINUS_ELSE');
     this.hasElse_ = true;
   },
 
   /**
    * Adds an else-if and a do input to the bottom of the block.
-   * @this {GoogleBlockly.Block}
+   * @this {BlocklyCore.Block}
    * @private
    */
   addElseIf_: function () {
@@ -161,13 +161,13 @@ const controlsIfMutator = {
     this.elseIfCount_++;
     this.appendValueInput('IF' + this.elseIfCount_)
       .setCheck('Boolean')
-      .appendField(GoogleBlockly.Msg['CONTROLS_IF_MSG_ELSEIF'])
+      .appendField(BlocklyCore.Msg['CONTROLS_IF_MSG_ELSEIF'])
       .appendField(
         createMinusField(this.elseIfCount_),
         'MINUS' + this.elseIfCount_
       );
     this.appendStatementInput('DO' + this.elseIfCount_).appendField(
-      GoogleBlockly.Msg['CONTROLS_IF_MSG_THEN']
+      BlocklyCore.Msg['CONTROLS_IF_MSG_THEN']
     );
 
     // Handle if-elseif-else block.
@@ -178,7 +178,7 @@ const controlsIfMutator = {
 
   /**
    * Removes the else statement from the bottom of the block
-   * @this {GoogleBlockly.Block}
+   * @this {BlocklyCore.Block}
    * @private
    */
   removeElse_: function (index = undefined) {
@@ -192,7 +192,7 @@ const controlsIfMutator = {
    * make sure the inputs are always IF0, IF1, etc with no gaps.
    * @param {?number=} index The index of the input to "remove", or undefined
    *     to remove the last input.
-   * @this {GoogleBlockly.Block}
+   * @this {BlocklyCore.Block}
    * @private
    */
   removeElseIf_: function (index = undefined) {
@@ -236,17 +236,17 @@ const controlsIfMutator = {
 
 /**
  * Adds the initial plus button to the if block.
- * @this {GoogleBlockly.Block}
+ * @this {BlocklyCore.Block}
  */
 const controlsIfHelper = function () {
   this.getInput('IF0').insertFieldAt(0, createPlusField(), 'PLUS');
 };
 
 export default function registerMutator() {
-  if (GoogleBlockly.Extensions.isRegistered('controls_if_mutator')) {
-    GoogleBlockly.Extensions.unregister('controls_if_mutator');
+  if (BlocklyCore.Extensions.isRegistered('controls_if_mutator')) {
+    BlocklyCore.Extensions.unregister('controls_if_mutator');
   }
-  GoogleBlockly.Extensions.registerMutator(
+  BlocklyCore.Extensions.registerMutator(
     'controls_if_mutator',
     controlsIfMutator,
     controlsIfHelper

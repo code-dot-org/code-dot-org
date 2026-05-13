@@ -2,6 +2,7 @@ import $ from 'jquery';
 import moment from 'moment';
 import PropTypes from 'prop-types';
 import React, {useState} from 'react';
+import {flushSync} from 'react-dom';
 import Select from 'react-select';
 
 import {
@@ -25,7 +26,7 @@ import {linkWithQueryParams, navigateToHref} from '@cdo/apps/utils';
 import {StudentGradeLevels} from '@cdo/generated-scripts/sharedConstants';
 import i18n from '@cdo/locale';
 
-import DatePicker from '../code-studio/pd/workshop_dashboard/components/date_picker';
+import DatePicker from '../sharedComponents/DatePicker';
 
 import ImageInput from './ImageInput';
 
@@ -57,41 +58,51 @@ export default function CourseOfferingEditor(props) {
   const handleSave = (event, shouldCloseAfterSave) => {
     event.preventDefault();
 
-    setError(null);
-    setLastSaved(null);
-    setIsSaving(true);
+    flushSync(() => {
+      setError(null);
+      setLastSaved(null);
+      setIsSaving(true);
+    });
 
     $.ajax({
       url: `/course_offerings/${courseOffering.key}`,
       method: 'PUT',
       dataType: 'json',
       contentType: 'application/json;charset=UTF-8',
-      data: JSON.stringify(courseOffering),
+      data: JSON.stringify({course_offering: courseOffering}),
     })
       .done(data => {
         if (shouldCloseAfterSave) {
           navigateToHref(linkWithQueryParams('/'));
         } else {
-          setLastSaved(Date.now());
-          setIsSaving(false);
+          flushSync(() => {
+            setLastSaved(Date.now());
+            setIsSaving(false);
+          });
         }
       })
       .fail(error => {
-        setError(error.responseText);
-        setIsSaving(false);
+        flushSync(() => {
+          setError(error.responseText);
+          setIsSaving(false);
+        });
       });
   };
 
+  const getSelectedOptions = e =>
+    Array.from(e.target.options)
+      .filter(option => option.selected && option.value !== '')
+      .map(option => option.value);
+
   // Converts selected options within the given fieldName into a string for the table
   const handleMultipleSelected = (e, fieldName) => {
-    var options = e.target.options;
-    var selectedOptions = [];
-    for (var i = 0, l = options.length; i < l; i++) {
-      if (options[i].selected && options[i].value !== '') {
-        selectedOptions.push(options[i].value);
-      }
-    }
+    const selectedOptions = getSelectedOptions(e);
     updateCourseOffering(fieldName, selectedOptions.join(','));
+  };
+
+  const handleFacilitatorsCourses = e => {
+    const selectedOptions = getSelectedOptions(e);
+    updateCourseOffering('facilitator_course_permissions', selectedOptions);
   };
 
   // Converts selected device compatibility options into a string for the table
@@ -479,6 +490,37 @@ export default function CourseOfferingEditor(props) {
         </select>
       </label>
       <label>
+        Facilitator Course Permissions
+        <HelpTip>
+          <p>
+            For self paced professional learning courses only!
+            <br />
+            <br />
+            Pick which types of facilitators can facilitate workshops associated
+            with this professional learning topic.
+          </p>
+        </HelpTip>
+        <select
+          multiple
+          value={
+            courseOffering.facilitator_course_permissions.length
+              ? courseOffering.facilitator_course_permissions
+              : ['']
+          }
+          style={styles.dropdown}
+          onChange={e => {
+            handleFacilitatorsCourses(e, 'facilitator_course_permissions');
+          }}
+        >
+          <option value="">(Anyone)</option>
+          {Object.values(props.facilitatorsCourses).map(course => (
+            <option key={course} value={course}>
+              {course}
+            </option>
+          ))}
+        </select>
+      </label>
+      <label>
         <div style={styles.flexContainer}>
           <h3>Published Date </h3>
           <HelpTip>
@@ -517,6 +559,7 @@ CourseOfferingEditor.propTypes = {
     self_paced_pl_course_offering_id: PropTypes.number,
     video: PropTypes.string,
     published_date: PropTypes.string,
+    facilitator_course_permissions: PropTypes.arrayOf(PropTypes.string),
   }),
   selfPacedPLCourseOfferings: PropTypes.arrayOf(
     PropTypes.shape({
@@ -534,6 +577,7 @@ CourseOfferingEditor.propTypes = {
       locale: PropTypes.string,
     })
   ),
+  facilitatorsCourses: PropTypes.arrayOf(PropTypes.string),
 };
 
 const styles = {

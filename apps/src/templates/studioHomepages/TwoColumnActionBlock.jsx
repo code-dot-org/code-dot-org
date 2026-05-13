@@ -1,13 +1,8 @@
+import {Typography} from '@mui/material';
 import classNames from 'classnames';
 import PropTypes from 'prop-types';
 import React from 'react';
 
-import {
-  Heading2,
-  BodyOneText,
-  BodyThreeText,
-  BodyFourText,
-} from '@cdo/apps/componentLibrary/typography';
 import Button from '@cdo/apps/legacySharedComponents/Button';
 
 import styles from './twoColumnActionBlock.module.scss';
@@ -25,9 +20,14 @@ export default function TwoColumnActionBlock({
     <div
       id={id}
       className={styles.container}
+      // eslint-disable-next-line react/forbid-dom-props
       data-testid="two-column-action-block"
     >
-      {heading && <Heading2>{heading}</Heading2>}
+      {heading && (
+        <Typography variant="h2" gutterBottom>
+          {heading}
+        </Typography>
+      )}
       <div
         className={styles.actionBlockWrapper}
         style={{marginBottom: marginBottom}}
@@ -36,18 +36,23 @@ export default function TwoColumnActionBlock({
           src={imageUrl}
           alt=""
           className={styles.image}
+          // eslint-disable-next-line react/forbid-dom-props
           data-testid="two-column-action-block-img"
         />
         <div className={styles.contentWrapper}>
           {subHeading && (
-            <BodyOneText
-              visualAppearance={'heading-sm'}
+            <Typography
               className="two-column-action-block--sub-heading"
+              component="p"
+              variant="h5"
+              gutterBottom
             >
               {subHeading}
-            </BodyOneText>
+            </Typography>
           )}
-          <BodyThreeText>{description}</BodyThreeText>
+          <Typography variant="body3" gutterBottom>
+            {description}
+          </Typography>
           <div
             className={classNames(
               styles.buttonsContainer,
@@ -70,7 +75,9 @@ export default function TwoColumnActionBlock({
                   aria-label={button.ariaLabel}
                 />
                 {button.extraText && (
-                  <BodyFourText>{button.extraText}</BodyFourText>
+                  <Typography variant="body4" gutterBottom>
+                    {button.extraText}
+                  </Typography>
                 )}
               </div>
             ))}

@@ -1,0 +1,576 @@
+@use '@code-dot-org/component-library-styles/variables.scss' as variables;
+@use '@code-dot-org/component-library-styles/mixins.scss' as mixins;
+@use '@code-dot-org/component-library-styles/typography.module.scss' as
+  typography;
+
+// Dropdown common styles
+.dropdownContainer {
+  position: relative;
+  display: inline-flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.125rem;
+  margin: 0;
+
+  &.styleAsFormField {
+    width: variables.$form-field-width;
+    text-wrap: nowrap;
+    text-overflow: ellipsis;
+
+    .dropdownArrowDiv {
+      width: 100%;
+
+      select {
+        flex-grow: 1;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+      }
+    }
+  }
+
+  .dropdownLabel {
+    display: block;
+  }
+
+  .iconLeft {
+    position: absolute;
+    z-index: 1;
+    pointer-events: none;
+  }
+
+  select {
+    display: inline-flex;
+    align-items: center;
+    align-self: stretch;
+    width: 100%;
+    background-color: unset;
+    border-radius: 0.25rem;
+    border: 1px solid;
+    transition:
+      150ms ease,
+      color 150ms ease;
+
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
+
+    &:hover {
+      cursor: pointer;
+    }
+
+    &:disabled {
+      cursor: not-allowed;
+    }
+
+    &:focus-visible {
+      outline: 2px solid var(--borders-brand-teal-primary);
+      border-radius: 0.25rem;
+      outline-offset: 2px;
+    }
+
+    &.readOnly {
+      opacity: 1;
+    }
+  }
+
+  // custom dropdown arrow styles
+  .dropdownArrowDiv {
+    position: relative;
+
+    &:after {
+      content: '\f078';
+      font-family: 'Font Awesome 6 Pro', sans-serif;
+      position: absolute;
+      pointer-events: none;
+      text-align: center;
+    }
+  }
+
+  .helperSection {
+    display: flex;
+    align-items: baseline;
+    align-self: stretch;
+  }
+}
+
+// Dropdown colors
+.dropdownContainer-black {
+  .dropdownLabel {
+    color: var(--text-neutral-primary);
+  }
+
+  select {
+    color: var(--text-neutral-primary);
+    border-color: var(--borders-neutral-solid);
+    background-color: var(--background-neutral-primary);
+
+    &.hasError {
+      border-color: var(--borders-error-primary);
+    }
+  }
+
+  .dropdownArrowDiv:after {
+    color: var(--text-neutral-primary);
+  }
+
+  .helperSection {
+    color: var(--text-neutral-primary);
+  }
+
+  .errorSection {
+    color: var(--text-error-primary);
+  }
+
+  &:has(select:hover) {
+    select:not(:disabled) {
+      color: var(--text-neutral-primary);
+      background-color: var(--background-neutral-tertiary);
+    }
+
+    .dropdownArrowDiv:after {
+      color: var(--text-neutral-primary);
+    }
+  }
+
+  &:has(select:active) {
+    select:not(:disabled) {
+      color: var(--text-neutral-primary);
+    }
+
+    .dropdownArrowDiv:after {
+      color: var(--text-neutral-primary);
+    }
+  }
+
+  &:has(select:disabled) {
+    select {
+      color: var(--text-neutral-disabled);
+      border-color: var(--borders-neutral-disabled);
+    }
+
+    .dropdownArrowDiv:after {
+      color: var(--text-neutral-disabled);
+    }
+
+    .helperSection,
+    .errorSection {
+      color: var(--text-neutral-disabled);
+    }
+  }
+
+  &:has(select.readOnly) {
+    select {
+      @include mixins.field-read-only-black-colors;
+    }
+
+    .dropdownArrowDiv:after {
+      @include mixins.field-read-only-black-colors;
+    }
+
+    .helperSection,
+    .errorSection {
+      @include mixins.field-read-only-black-colors;
+    }
+  }
+}
+
+.dropdownContainer-gray {
+  .dropdownLabel {
+    color: var(--text-neutral-primary);
+  }
+
+  select {
+    color: var(--text-neutral-primary);
+    border-color: var(--neutral-gray-40);
+    background-color: var(--background-neutral-primary);
+
+    &.hasError {
+      border-color: var(--borders-error-primary);
+    }
+  }
+
+  .dropdownArrowDiv:after {
+    color: var(--text-neutral-primary);
+  }
+
+  .helperSection {
+    color: var(--text-neutral-disabled);
+  }
+
+  .errorSection {
+    color: var(--text-error-primary);
+  }
+
+  &:has(select:hover) {
+    select:not(:disabled) {
+      color: var(--text-neutral-primary);
+      background-color: var(--background-neutral-tertiary);
+    }
+
+    .dropdownArrowDiv:after {
+      color: var(--text-neutral-primary);
+    }
+  }
+
+  &:has(select:active) {
+    select:not(:disabled) {
+      color: var(--text-neutral-primary);
+    }
+
+    .dropdownArrowDiv:after {
+      color: var(--text-neutral-primary);
+    }
+  }
+
+  &:has(select:disabled) {
+    select {
+      color: var(--text-neutral-disabled);
+      border-color: var(--borders-neutral-disabled);
+    }
+
+    .dropdownArrowDiv:after {
+      color: var(--text-neutral-disabled);
+    }
+
+    .helperSection,
+    .errorSection {
+      color: var(--text-neutral-disabled);
+    }
+  }
+
+  &:has(select.readOnly) {
+    select {
+      @include mixins.field-read-only-black-colors;
+    }
+
+    .dropdownArrowDiv:after {
+      @include mixins.field-read-only-black-colors;
+    }
+
+    .helperSection,
+    .errorSection {
+      @include mixins.field-read-only-black-colors;
+    }
+  }
+}
+
+.dropdownContainer-white {
+  .dropdownLabel {
+    color: var(--neutral-base-white);
+  }
+
+  &.dropdownContainer.dropdownContainer-thin select,
+  select {
+    color: var(--neutral-base-white);
+    border-color: var(--neutral-base-white);
+    background-color: var(--neutral-base-black);
+  }
+
+  .helperSection,
+  .errorSection {
+    color: var(--neutral-base-white);
+  }
+
+  &:has(select:hover) {
+    select:not(:disabled) {
+      color: var(--neutral-base-white);
+      background-color: var(--neutral-gray-90);
+    }
+
+    .dropdownArrowDiv:after {
+      color: var(--neutral-base-white);
+    }
+  }
+
+  &:has(select:active) {
+    select:not(:disabled) {
+      color: var(--neutral-base-white);
+    }
+
+    .dropdownArrowDiv:after {
+      color: var(--neutral-base-white);
+    }
+  }
+
+  &:has(select:disabled) {
+    select {
+      color: var(--neutral-gray-90);
+      border-color: var(--neutral-gray-90);
+    }
+
+    .dropdownArrowDiv:after {
+      color: var(--neutral-gray-90);
+    }
+
+    .helperSection,
+    .errorSection {
+      color: var(--neutral-gray-70);
+    }
+  }
+
+  .dropdownArrowDiv:after {
+    color: var(--neutral-base-white);
+  }
+
+  &:has(select.readOnly) {
+    select {
+      @include mixins.field-read-only-white-colors;
+    }
+
+    .dropdownArrowDiv:after {
+      @include mixins.field-read-only-white-colors;
+    }
+
+    .helperSection,
+    .errorSection {
+      @include mixins.field-read-only-white-colors;
+    }
+  }
+}
+
+// Sizes
+.dropdownContainer-l {
+  &.dropdownContainer-thick {
+    select {
+      @include mixins.button-one-text;
+      margin-bottom: 0;
+    }
+  }
+
+  &.dropdownContainer-thin {
+    select {
+      @include typography.body-one;
+      margin-bottom: 0;
+    }
+  }
+
+  .dropdownLabel {
+    @include mixins.label-one;
+    margin-bottom: 0;
+  }
+
+  select {
+    height: 3rem;
+    padding: 0.625rem 1rem;
+    padding-inline-end: 3rem;
+  }
+
+  .iconLeft {
+    font-size: 1.1875rem;
+    line-height: 125%;
+    width: 1.5rem;
+
+    inset-inline-start: 1rem;
+    top: 0.825rem;
+  }
+
+  &:has(.iconLeft) {
+    select {
+      padding-inline-start: 3rem;
+    }
+  }
+
+  .dropdownArrowDiv:after {
+    font-size: 1.1875rem;
+    line-height: 1.25;
+    height: 1.5rem;
+    width: 1.5rem;
+    inset-inline-end: 1rem;
+    top: 0.825rem;
+  }
+
+  .helperSection {
+    @include typography.body-two;
+    margin-bottom: 0;
+    gap: 0.375rem;
+
+    &.errorSection {
+      color: var(--sentiment-error-50);
+    }
+  }
+}
+
+.dropdownContainer-m {
+  &.dropdownContainer-thick {
+    select {
+      @include mixins.button-two-text;
+      margin-bottom: 0;
+    }
+  }
+
+  &.dropdownContainer-thin {
+    select {
+      @include typography.body-two;
+      color: inherit;
+      margin-bottom: 0;
+    }
+  }
+
+  .dropdownLabel {
+    @include mixins.label-two;
+    margin-bottom: 0;
+  }
+
+  select {
+    height: 2.5rem;
+    padding: 0.5rem 1rem;
+    padding-inline-end: 2.75rem;
+  }
+
+  .iconLeft {
+    font-size: 1rem;
+    line-height: 125%;
+    width: 1.25rem;
+
+    inset-inline-start: 1rem;
+    top: 0.625rem;
+  }
+
+  &:has(.iconLeft) {
+    select {
+      padding-inline-start: 2.75rem;
+    }
+  }
+
+  .dropdownArrowDiv:after {
+    font-size: 1rem;
+    line-height: 1.25;
+    height: 1.25rem;
+    width: 1.25rem;
+    inset-inline-end: 1rem;
+    top: 0.625rem;
+  }
+
+  .helperSection {
+    @include typography.body-three;
+    margin-bottom: 0;
+    gap: 0.375rem;
+
+    &.errorSection {
+      color: var(--sentiment-error-50);
+    }
+  }
+}
+
+.dropdownContainer-s {
+  &.dropdownContainer-thick {
+    select {
+      @include mixins.button-three-text;
+      margin-bottom: 0;
+    }
+  }
+
+  &.dropdownContainer-thin {
+    select {
+      @include typography.body-three;
+      margin-bottom: 0;
+    }
+  }
+
+  .dropdownLabel {
+    @include mixins.label-three;
+    margin-bottom: 0;
+  }
+
+  select {
+    height: 2rem;
+    padding: 0.3125rem 1rem;
+    padding-inline-end: 2.625rem;
+  }
+
+  .iconLeft {
+    font-size: 0.875rem;
+    line-height: 125%;
+    width: 1.125rem;
+
+    inset-inline-start: 1rem;
+    top: 0.425rem;
+  }
+
+  &:has(.iconLeft) {
+    select {
+      padding-inline-start: 2.625rem;
+    }
+  }
+
+  .dropdownArrowDiv:after {
+    font-size: 0.875rem;
+    line-height: 1.25;
+    height: 1.125rem;
+    width: 1.125rem;
+    inset-inline-end: 1rem;
+    top: 0.425rem;
+  }
+
+  .helperSection {
+    @include typography.body-four;
+    margin-bottom: 0;
+    gap: 0.25rem;
+
+    &.errorSection {
+      color: var(--sentiment-error-50);
+    }
+  }
+}
+
+.dropdownContainer-xs {
+  &.dropdownContainer-thick {
+    select {
+      @include mixins.button-four-text;
+      margin-bottom: 0;
+    }
+  }
+
+  &.dropdownContainer-thin {
+    select {
+      @include typography.body-four;
+      margin-bottom: 0;
+    }
+  }
+
+  .dropdownLabel {
+    @include mixins.label-four;
+    margin-bottom: 0;
+  }
+
+  select {
+    height: 1.5rem;
+    padding: 0.125rem 0.5rem;
+    padding-inline-end: 1.75rem;
+  }
+
+  .iconLeft {
+    font-size: 0.8125rem;
+    line-height: 125%;
+    width: 1rem;
+
+    inset-inline-start: 0.5rem;
+    top: 0.25rem;
+  }
+
+  &:has(.iconLeft) {
+    select {
+      padding-inline-start: 1.75rem;
+    }
+  }
+
+  .dropdownArrowDiv:after {
+    font-size: 0.8125rem;
+    line-height: 1.25;
+    height: 1rem;
+    width: 1rem;
+    inset-inline-end: 0.5rem;
+    top: 0.25rem;
+  }
+
+  .helperSection {
+    @include typography.body-four;
+    margin-bottom: 0;
+    gap: 0.25rem;
+
+    &.errorSection {
+      color: var(--sentiment-error-50);
+    }
+  }
+}

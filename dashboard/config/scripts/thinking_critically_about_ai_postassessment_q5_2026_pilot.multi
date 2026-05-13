@@ -1,0 +1,14 @@
+name 'thinking-critically-about-ai-postassessment-q5_2026-pilot'
+
+question 'A student tests an AI chatbot by asking it the same question five times. They get three different answers. What should the student conclude?'
+
+wrong 'The AI is broken and should not be used for any purpose.'
+wrong 'The first answer is always the most accurate because the AI hadn\'t been confused yet.'
+right 'The AI\'s outputs are not fully reliable for this question, and the student should verify the information using other sources before relying on any single response.'
+wrong 'The most common answer among the five is guaranteed to be correct.'
+
+allow_multiple_attempts true
+
+teacher_markdown <<MARKDOWN
+Lessons 2, 5
+MARKDOWN

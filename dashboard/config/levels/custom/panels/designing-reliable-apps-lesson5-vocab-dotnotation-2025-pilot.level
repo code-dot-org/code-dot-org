@@ -1,0 +1,22 @@
+<Panels>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 73,
+  "created_at": "2026-02-11T21:25:50.000Z",
+  "level_num": "custom",
+  "user_id": 22366,
+  "properties": {
+    "encrypted": "false",
+    "offer_browser_tts": "false",
+    "panels": [
+      {
+        "text": "# Dot Notation\n\nThe **dot notation** is a way to access properties inside JavaScript objects by chaining property names with dots from left to right.",
+        "imageUrl": "https://images.code.org/752c9a518cdb59d85206dfa41fb85716-Vocab Images (1).jpg",
+        "key": "designing-reliable-apps-lesson5-vocab-dotnotation-2025-pilot-6fac23ad-61be-483c-b364-3c2e7a7d7252",
+        "layout": "text-bottom-center"
+      }
+    ]
+  },
+  "audit_log": "[{\"changed_at\":\"2026-02-25 01:36:44 +0000\",\"changed\":[],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-02-25 01:42:21 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"}]"
+}]]></config>
+</Panels>

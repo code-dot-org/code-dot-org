@@ -1,0 +1,25 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 52,
+  "created_at": "2025-03-20T18:04:13.000Z",
+  "level_num": "custom",
+  "user_id": 18602,
+  "properties": {
+    "encrypted": "false",
+    "title": "Assessment - Free Response",
+    "long_instructions": "Why did your revised prompt lead to better AI Chat output than the initial generic prompt?",
+    "allow_user_uploads": "false",
+    "submittable": "false",
+    "peer_reviewable": "false",
+    "optional": "false",
+    "allow_multiple_attempts": "false",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "stay_on_level_after_submit": "false"
+  },
+  "audit_log": "[{\"changed_at\":\"2025-03-20T18:04:13.851+00:00\",\"changed\":[\"cloned from \\\"test-problem-solving-with-ai-lesson8-level7a\\\"\"],\"cloned_from\":\"test-problem-solving-with-ai-lesson8-level7a\"},{\"changed_at\":\"2025-03-20 18:04:41 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</FreeResponse>

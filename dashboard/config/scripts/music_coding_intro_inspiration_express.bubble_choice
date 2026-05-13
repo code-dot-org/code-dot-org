@@ -1,0 +1,7 @@
+name 'music-coding-intro-inspiration_express'
+display_name 'Get Inspired'
+description 'Explore and tinker with the code in these example projects!'
+
+sublevels
+level 'music-coding-intro-drop3_launch_express'
+level 'music-coding-intro-drop2_launch_express'

@@ -46,8 +46,6 @@ updates:
       # Exclude Blockly, for more info: https://github.com/code-dot-org/code-dot-org/pull/61094
       - dependency-name: "@blockly/*"
       - dependency-name: "blockly"
-      - dependency-name: "pepjs"
-      - dependency-name: "@code-dot-org/blockly"
     groups:
       amplitude:
         patterns:
@@ -61,12 +59,9 @@ updates:
         patterns:
         - "@blockly/*"
         - "blockly"
-        - "pepjs"
       codemirror:
         patterns:
         - "@codemirror/*"
-        - "codemirror"
-        - "codemirror-*"
       dnd-kit:
         patterns:
         - "@dnd-kit/*"
@@ -172,7 +167,6 @@ updates:
     directories: 
     - "/apps/eslint"
     - "/bin/i18n"
-    - "/tools/scripts/brokenLinkChecker"
     schedule:
       interval: "weekly"
       day: "sunday"
@@ -200,6 +194,7 @@ updates:
     directories:
     - "/aws/offsite/aurora-snapshots-fargate"
     - "/docker/dockerfiles"
+    - "/docker/developers"
     schedule:
       interval: "weekly"
       day: "sunday"

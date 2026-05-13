@@ -5,7 +5,7 @@ Scenario: Teachers can give and send feedback on the rubric to students.
   Given I create an authorized teacher-associated student named "Lillian"
 
   # Student can see the rubric and submit work
-  And I am on "http://studio.code.org/s/allthethings/lessons/48/levels/2"
+  And I am on "http://studio.code.org/courses/allthethingscourse/units/1/lessons/48/levels/2"
   And I click selector ".uitest-taRubricTab" once I see it
   Then I wait to see "#runButton"
   And I submit this gamelab level
@@ -13,11 +13,10 @@ Scenario: Teachers can give and send feedback on the rubric to students.
   # Teacher can see and submit feedback for a student
   Then I sign in as "Teacher_Lillian" and go home
   And I get debug info for the current user
-  And I am on "http://studio.code.org/s/allthethings/lessons/48/levels/2"
+  And I am on "http://studio.code.org/courses/allthethingscourse/units/1/lessons/48/levels/2"
   And I wait to see "#ui-floatingActionButton"
-  And I wait until element "#teacher-panel-container" is visible
   And I wait until element ".student-table" is visible
-  And I click selector ".student-table tr:nth(1)" to load a new page
+  And I click selector ".student-table tr:eq(1)" to load a new page
   And I wait for the lab page to fully load
   And I wait until element "h1:contains(Getting Started with Your AI Teaching Assistant)" is visible
   And I click selector ".introjs-skipbutton" once I see it
@@ -34,6 +33,7 @@ Scenario: Teachers can give and send feedback on the rubric to students.
   And I click selector "#ui-submitFeedbackButton" once I see it
   And I wait to see "#ui-feedback-submitted-timestamp"
   And I wait until element "p:contains(Feedback submitted at)" is visible
+  And element ".uitest-student-progress-status" contains text "Evaluated"
 
   # Check that the teacher can see submitted feedback
   # FAB should be sticky and be open when page loads
@@ -43,7 +43,7 @@ Scenario: Teachers can give and send feedback on the rubric to students.
 
   # The teacher given feedback is received by the student
   Then I sign in as "Lillian" and go home
-  And I am on "http://studio.code.org/s/allthethings/lessons/48/levels/2"
+  And I am on "http://studio.code.org/courses/allthethingscourse/units/1/lessons/48/levels/2"
   And I click selector ".uitest-taRubricTab" once I see it
   And I wait until element "p:contains(Extensive Evidence)" is visible
   And I click selector "h6:contains(Code Quality)" once I see it
@@ -53,9 +53,9 @@ Scenario: Teacher views rubric product tour
   # Teacher signs in and navigates to assessment page
   Given I create an authorized teacher-associated student named "Aiden"
   And I sign in as "Teacher_Aiden" and go home
-  And I wait until element "#homepage-container" is visible
+  And I wait until element "#ui-test-section-list" is visible
   And element "#sign_in_or_user" contains text "Teacher_Aiden"
-  And I am on "http://studio.code.org/s/allthethings/lessons/48/levels/2"
+  And I am on "http://studio.code.org/courses/allthethingscourse/units/1/lessons/48/levels/2"
   And I wait for the lab page to fully load
   And element ".teacher-panel td:eq(1)" contains text "Aiden"
   And I click selector ".teacher-panel td:eq(1)" to load a new page
@@ -71,7 +71,7 @@ Scenario: Teacher views rubric product tour
   Then I wait until element "h1:contains(Class Data)" is visible
   And I wait until element ".introjs-tooltiptext" is visible
   And I click selector ".introjs-button:contains(Next Tip)" once I see it
-  
+
   # Teacher views product tour step 3
   Then I wait until element "h1:contains(Understanding the AI Assessment)" is visible
   And I wait until element ".introjs-tooltiptext" is visible
@@ -143,9 +143,9 @@ Scenario: Teacher views rubric product tour
 Scenario: Teacher views Rubric and Settings tabs
   Given I create an authorized teacher-associated student named "Aiden"
   And I sign in as "Teacher_Aiden" and go home
-  And I wait until element "#homepage-container" is visible
+  And I wait until element "#ui-test-section-list" is visible
   And element "#sign_in_or_user" contains text "Teacher_Aiden"
-  And I am on "http://studio.code.org/s/allthethings/lessons/48/levels/2"
+  And I am on "http://studio.code.org/courses/allthethingscourse/units/1/lessons/48/levels/2"
   And I wait for the lab page to fully load
   And element ".teacher-panel td:eq(1)" contains text "Aiden"
   And I click selector ".teacher-panel td:eq(1)" to load a new page
@@ -172,13 +172,14 @@ Scenario: Teacher views Rubric and Settings tabs
   Then I close my eyes
 
 @eyes
+@skip
 Scenario: Teacher views product tour
   # Teacher signs in and navigates to assessment page
   Given I create an authorized teacher-associated student named "Aiden"
   And I sign in as "Teacher_Aiden" and go home
-  And I wait until element "#homepage-container" is visible
+  And I wait until element "#ui-test-section-list" is visible
   And element "#sign_in_or_user" contains text "Teacher_Aiden"
-  And I am on "http://studio.code.org/s/allthethings/lessons/48/levels/2"
+  And I am on "http://studio.code.org/courses/allthethingscourse/units/1/lessons/48/levels/2"
   And I wait for the lab page to fully load
   And element ".teacher-panel td:eq(1)" contains text "Aiden"
   And I click selector ".teacher-panel td:eq(1)" to load a new page

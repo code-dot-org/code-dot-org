@@ -1,0 +1,26 @@
+name 'csaif_pl-analyzedatea-L4-CSandDev_-rev_v2'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Validating and Analyzing Data
+
+#### Before working with data, it's important to validate it. Data that hasn’t been checked can contain errors that lead to wrong conclusions.
+
+<div style="background-color: #B7E0E5; border-radius: 10px; padding: 15px; margin: 20px auto; max-width: 85%; box-sizing: border-box; word-wrap: break-word; overflow-wrap: break-word;">
+<p style="font-size: 14pt; margin-top: 12px; line-height: 120%;">📖 <strong>Validating Data</strong> means to check for misleading or fabricated data (e.g. duplicate entries, mismatched authors, or impossible dates).</p>
+</div>
+
+#### Validating data ensures you’re working with accurate information. Once the data is trustworthy, the next step is to analyze it. Analyzing data helps us recognize patterns, answer questions, and draw meaningful insights. Computers use different techniques to organize and interpret data efficiently.
+
+<div style="background-color: #F5F7F8; color: #000000; padding: 15px; border-radius: 10px; width: 90%; margin: 20px auto;">
+<p style = "font-size:14pt;"><strong>Ways to Analyze Data:</strong></p>
+  <ul style = "font-size:14pt;">
+     <li><strong>Sorting</strong> – Organizing data in a specific order. <br>For example, sorting names alphabetically, ranking scores.</li><br>
+    <li><strong>Filtering</strong> – Selecting only relevant data based on conditions. <br>For example, showing only sales over 0, finding students with A grades.</li><br>
+    <li><strong>Grouping</strong> – Categorizing similar data points together. <br>For example, grouping sales by region, organizing students by grade level.</li><br>
+    <li><strong>Comparing</strong> – Examining relationships between data points. <br>For example, comparing monthly sales, analyzing test scores across schools.</li><br>
+    <li><strong>Aggregating</strong> – Summarizing data into key metrics. <br>For example,  calculating averages, finding total revenue, counting customer transactions.</li>
+</ul>
+</div>
+MARKDOWN

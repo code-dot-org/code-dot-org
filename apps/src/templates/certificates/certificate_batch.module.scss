@@ -1,6 +1,7 @@
-@import 'phase1-design-system';
-@import 'color', 'font', 'typography', 'breakpoints',
-  'barlow-semi-condensed-font';
+@import '2022-rebrand-update';
+@import 'color', 'breakpoints';
+@import '@code-dot-org/component-library-styles/font';
+@import '@code-dot-org/component-library-styles/typography.module';
 
 $border-radius: 4px;
 
@@ -11,6 +12,8 @@ $border-radius: 4px;
   font-size: 14px;
   line-height: 22px;
   color: dimgray;
+  flex-direction: column;
+  gap: 48px;
 }
 
 .certificate {

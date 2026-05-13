@@ -4,13 +4,18 @@ import {
 } from './AuthenticityTokenStore';
 
 export type ResponseValidator<ResponseType> = (
-  bodyJson: Record<string, unknown>
+  bodyJson: Record<string, unknown> | unknown[]
 ) => ResponseType;
 
 export type GetResponse<ResponseType> = {
   value: ResponseType;
   response: Response;
 };
+
+// Narrow the type of an error to NetworkError
+export function isNetworkError(error: unknown): error is NetworkError {
+  return error instanceof NetworkError;
+}
 
 /**
  * Error thrown by these functions when the response is not ok, which includes a
@@ -80,7 +85,7 @@ async function fetchJson<ResponseType>(
 async function sendRequest(
   method: string,
   endpoint: string,
-  body?: string,
+  body?: BodyInit,
   useAuthenticityToken = false,
   headers: Record<string, string> = {}
 ): Promise<Response> {
@@ -103,9 +108,21 @@ async function sendRequest(
   return response;
 }
 
+/**
+ * Performs a GET request to the given endpoint. Use {@link fetchJson}
+ * to automatically unwrap the response JSON as a typed object.
+ */
+async function get(
+  endpoint: string,
+  useAuthenticityToken = false,
+  headers: Record<string, string> = {}
+): Promise<Response> {
+  return sendRequest('GET', endpoint, undefined, useAuthenticityToken, headers);
+}
+
 async function put(
   endpoint: string,
-  body?: string,
+  body?: BodyInit,
   useAuthenticityToken = false,
   headers: Record<string, string> = {}
 ): Promise<Response> {
@@ -114,7 +131,7 @@ async function put(
 
 async function post(
   endpoint: string,
-  body?: string,
+  body?: BodyInit,
   useAuthenticityToken = false,
   headers: Record<string, string> = {}
 ): Promise<Response> {
@@ -140,4 +157,5 @@ export default {
   fetchJson,
   post,
   put,
+  get,
 };

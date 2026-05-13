@@ -1,0 +1,90 @@
+name 'pl_sandbox_aif_2_U2-if-else-flowchart-23_pilot-2025'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Flowcharts and Conditionals 
+
+<div style="background-color: #B7E0E5; border-radius: 10px; padding: 15px; margin: 20px auto; max-width: 85%; box-sizing: border-box; word-wrap: break-word; overflow-wrap: break-word;">
+<p style="font-size: 14pt; margin-top: 12px; line-height: 120%;">📖 <strong>Flowchart</strong> a diagram that shows the steps in a process using shapes and arrows. Flowcharts make it easier to plan out and visualize how a program or process works.
+</p>
+</div>
+<br>
+
+## Conditionals in flowcharts
+
+### Let's take a look at the flowchart from the previous level. 
+
+<img src="https://images.code.org/3beb270ece0b218a2c2753df93083649-image-1762364855399.png" alt="icon of hand pressing a button" width="250px" style="border-radius:10px; float:left; margin: 0 20px 0px 0px;">
+
+
+- #### Is `score > 100` is the decision point.
+- #### If it’s true, the program displays “You win!”
+- #### If it’s false, it displays “Keep trying!”
+
+<div style="clear:both;"></div>
+
+
+## From flowchart to code
+#### Flowcharts help students see how a program makes decisions — step by step. But computers don’t read diagrams; they need syntax to follow those same paths.
+
+#### In JavaScript, the logic from the flowchart is written with an **if/else statement**.
+
+<img src="https://images.code.org/160426fe400df8ee9b5a33be77e7380e-image-1762365311358.png" alt="icon of hand pressing a button" width="350px" style="border-radius:10px; float:left; margin: 40px 20px 100px 0px;">
+
+- #### The decision diamond becomes the **condition** inside the parentheses ()
+- #### The `true` arrow leads to one outcome, and the `false` arrow leads to another.
+- #### In JavaScript, those paths become code blocks wrapped in { }.
+- #### The `if` block runs if the condition is true, and the `else` block runs if it’s false.
+
+<div style="clear:both;"></div>
+
+---
+
+## Comparing flowcarts to code
+
+<div style="border-radius:10px; box-shadow:2px 2px 8px rgba(0,0,0,0.2); overflow:hidden; width:100%; font-size:14pt; margin:auto;">
+  <table style="width:100%; border-collapse:collapse;">
+    <thead>
+      <tr style="background-color:#b2dee3; font-weight:bold;">
+        <th style="text-align:left; padding:10px; border-bottom:1px solid #ccc;">Flowchart Element</th>
+        <th style="text-align:left; padding:10px; border-bottom:1px solid #ccc;">JavaScript Equivalent</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td style="padding:10px; border-bottom:1px solid #eee;font-size:14pt">Decision (diamond)</td>
+        <td style="padding:10px; border-bottom:1px solid #eee;font-size:14pt"><code>if (condition)</code></td>
+      </tr>
+      <tr>
+        <td style="padding:10px; border-bottom:1px solid #eee;font-size:14pt">“True” path</td>
+        <td style="padding:10px; border-bottom:1px solid #eee;font-size:14pt">Code inside <code>{ }</code> after <code>if</code></td>
+      </tr>
+      <tr>
+        <td style="padding:10px; border-bottom:1px solid #eee;font-size:14pt">“False” path</td>
+        <td style="padding:10px; border-bottom:1px solid #eee;font-size:14pt">Code inside <code>{ }</code> after <code>else</code></td>
+      </tr>
+      <tr>
+        <td style="padding:10px;font-size:14pt">Action boxes</td>
+        <td style="padding:10px;font-size:14pt">Statements that run (e.g., update text, change color)</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+
+<div style="background-color:#f0f8fa; border-left:6px solid #4ca3af; border-radius:10px; box-shadow:2px 2px 8px rgba(0,0,0,0.2); padding:15px; margin:20px 0; font-size:14pt;">
+  <p style="font-weight:bold; margin-top:0; font-size:14pt;">🧠 Teacher Tip:</p>
+  <p style="margin:0;font-size:14pt;">
+    Each shape in the flowchart connects directly to part of the code — the question becomes the condition, and the arrows become the paths the program can take. <br><br>
+    Encourage students to trace the code back to the flowchart to check their logic. This helps students see that their code is following the exact plan they created, building confidence and accuracy in their thinking.
+  </p>
+</div>
+
+
+## What's Next?
+
+#### After a brief tutorial of Sketch Lab, you will create a flowchart, and the upload the flowchart and work with AI to create an if/else statement. 
+
+![]()
+MARKDOWN

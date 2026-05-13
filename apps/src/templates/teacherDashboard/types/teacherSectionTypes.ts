@@ -1,0 +1,252 @@
+import {OAuthSectionTypes} from '@cdo/apps/accounts/constants';
+import {
+  AiChatAccessLevel,
+  AiChatToolsDependencyValue,
+} from '@cdo/apps/aichat/types/accessControls';
+import {
+  SectionLoginType,
+  UserTypes,
+} from '@cdo/generated-scripts/sharedConstants';
+
+// Typescript definitions for types relating to teacherSections. Note that many
+// of these are "duplicated" in `/templates/teacherDashboard/shapes.jsx, which defined
+// these using PropTypes for usage in Javascript React components. As we move towards
+// typescript we can deprecate the PropTypes definitions and use these instead.
+
+export interface Section {
+  atRiskAgeGatedDate?: Date;
+  atRiskAgeGatedUsState?: string;
+  anyStudentHasProgress?: boolean;
+  code: string;
+  codeReviewExpiresAt?: number | null;
+  course?: Course | null;
+  courseDisplayName: string | null;
+  courseId?: number | null;
+  courseOfferingId?: number | null;
+  courseVersionId?: number | null;
+  courseVersionName?: string;
+  createdAt?: string;
+  demoType?: DemoType | null;
+  grades: string[];
+  hidden: boolean;
+  id: number;
+  isAssignedCSA?: boolean;
+  lessonExtras: boolean;
+  loginType?: keyof typeof SectionLoginType;
+  loginTypeName?: string;
+  name: string;
+  pairingAllowed: boolean;
+  participantType: string | undefined;
+  postMilestoneDisabled?: boolean;
+  providerManaged: boolean;
+  restrictSection: boolean;
+  sectionInstructors?: SectionInstructor[];
+  sharingDisabled: boolean;
+  studentCount: number;
+  syncEnabled?: boolean;
+  ttsAutoplayEnabled: boolean;
+  unitId?: number | null;
+  unitName: string | null;
+  unitPosition: string | null;
+  avatar_color?: number | null;
+  avatar_emoji?: number | null;
+  assignedAiChatToolsDependency?: AiChatToolsDependencyValue;
+  aiChatAccessLevel?: AiChatAccessLevel;
+}
+
+export type DemoType = 'elementary' | 'middle' | 'high';
+
+export interface DemoPresetUnit {
+  name: string;
+  displayName: string;
+}
+
+export interface DemoPresetCourse {
+  name: string;
+  displayName: string;
+}
+
+export interface DemoPresetView {
+  demoType: DemoType;
+  sectionName: string;
+  avatarColor: number;
+  avatarEmoji: number;
+  loginType: NonNullable<Section['loginType']>;
+  participantType: NonNullable<Section['participantType']>;
+  unit: DemoPresetUnit | null;
+  unitGroup: DemoPresetCourse | null;
+}
+
+type Course = {
+  courseOfferingId: number | null;
+  versionId: number | null;
+  unitId: number | null;
+  lessonExtrasAvailable: boolean;
+  textToSpeechEnabled: boolean;
+};
+
+export interface UserEditableSection {
+  codeReviewExpiresAt?: number | null;
+  courseId?: number | null;
+  courseOfferingId?: number | null;
+  courseVersionId?: number | null;
+  grades?: string[];
+  hidden?: boolean;
+  lessonExtras?: boolean;
+  loginType?: keyof typeof SectionLoginType;
+  name?: string;
+  pairingAllowed?: boolean;
+  participantType?: string;
+  restrictSection?: boolean;
+  ttsAutoplayEnabled?: boolean;
+  unitId?: number | null;
+}
+
+export type OAuthSectionTypeName = keyof typeof OAuthSectionTypes;
+export type ServerOAuthSectionTypeName = OAuthSectionTypeName | 'google_oauth2';
+
+export interface ServerSection {
+  at_risk_age_gated_date?: string;
+  at_risk_age_gated_us_state?: string;
+  code: string;
+  course_display_name?: string | null;
+  course_id: number | null;
+  course_offering_id?: number | null;
+  course_version_id?: number | null;
+  courseVersionName?: string | null;
+  createdAt?: string;
+  demo_type?: DemoType | null;
+  grades?: string[];
+  hidden: boolean;
+  id: number;
+  lesson_extras: boolean;
+  login_type: string;
+  name: string;
+  pairing_allowed: boolean;
+  participant_type?: string;
+  post_milestone_disabled?: boolean;
+  provider_managed?: boolean;
+  restrict_section?: boolean;
+  script_id?: number;
+  sharing_disabled: boolean;
+  studentCount: number;
+  sync_enabled?: boolean;
+  tts_autoplay_enabled?: boolean;
+  unit_id?: number | null;
+  unitName?: string | null;
+  unitPosition?: number | null;
+  avatar_color?: number | null;
+  avatar_emoji?: number | null;
+}
+
+export interface Student {
+  familyName: string;
+  id: number;
+  isDemoStudent: boolean;
+  name: string;
+  secretPictureName: string;
+  secretPictureUrl: string;
+  secretWords: string;
+  sectionId: number;
+  sharingDisabled: boolean;
+  userType: keyof typeof UserTypes;
+}
+
+export interface ServerStudent {
+  family_name: string;
+  id: number;
+  is_demo_student: boolean;
+  name: string;
+  secret_picture_name: string;
+  secret_picture_url: string;
+  secret_words: string;
+  sectionId: number;
+  sharing_disabled: boolean;
+  user_type: keyof typeof UserTypes;
+}
+
+export interface ServerDemoPresetUnit {
+  name: string;
+  display_name: string;
+}
+
+export interface ServerDemoPresetCourse {
+  name: string;
+  display_name: string;
+}
+
+export interface ServerDemoPresetView {
+  demo_type: DemoType;
+  section_name: string;
+  avatar_color: number;
+  avatar_emoji: number;
+  login_type: NonNullable<Section['loginType']>;
+  participant_type: NonNullable<Section['participantType']>;
+  unit: ServerDemoPresetUnit | null;
+  unit_group: ServerDemoPresetCourse | null;
+}
+
+//TODO: better types here
+export interface AssignmentCourseOffering {
+  elementary: object;
+  high: object;
+  hoc: object;
+  middle: object;
+}
+
+export interface CourseOffering {
+  id: number;
+  display_name: string;
+  is_featured: boolean;
+  participant_audience: string;
+  course_versions: {
+    [courseVersionId: number]: CourseVersion;
+  };
+}
+
+export interface CourseVersion {
+  id: number;
+  content_root_id: number;
+  is_recommended: boolean;
+  is_stable: boolean;
+  key: string;
+  locale_codes: [string];
+  locale: [string];
+  name: string;
+  path: string;
+  units: object;
+  version_year: string;
+}
+
+export type SectionInstructor = {
+  instructor_email: string;
+  instructor_name: string;
+  invited_by_email: string;
+  invited_by_name: string;
+  participant_type: string;
+  section_id: number;
+  section_name: string;
+  status: string;
+};
+
+export type Classroom = {
+  enrollment_code: string;
+  id: string;
+  name: string;
+  section: string | null;
+};
+
+type LtiSection = {
+  name: string;
+  size: number;
+};
+
+export type LtiSectionSyncResult = {
+  all: {[key: number]: LtiSection};
+  changed: {[key: number]: LtiSection};
+  error?: string;
+};
+
+//TODO will probably need to convert other shapes from templates/teacherDashboard/shapes
+
+export type SectionMap = {[key: number]: Section};

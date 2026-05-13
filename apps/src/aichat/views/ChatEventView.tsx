@@ -1,34 +1,57 @@
-import React from 'react';
+import Alert from '@code-dot-org/component-library/alert';
+import classNames from 'classnames';
+import moment from 'moment';
+import React, {forwardRef, memo} from 'react';
 
-import ChatMessage from '@cdo/apps/aiComponentLibrary/chatMessage/ChatMessage';
-import Alert from '@cdo/apps/componentLibrary/alert/Alert';
-import {commonI18n} from '@cdo/apps/types/locale';
+import AiTutorVersionActionNotification from '@cdo/apps/aiComponentLibrary/aiTutorVersionActionNotification/AiTutorVersionActionNotification';
 import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
+import {AiChatTeacherFeedback as TeacherFeedback} from '@cdo/generated-scripts/sharedConstants';
 
-import {modelDescriptions} from '../constants';
-import {removeUpdateMessage} from '../redux/aichatRedux';
-import {timestampToLocalTime} from '../redux/utils';
+import {modelDescriptions, MODEL_PARAMETER_LABELS} from '../constants';
+import {removeUpdateMessage} from '../redux';
 import {
+  AI_TUTOR_VERSION_ACTION_ACCEPT,
+  AI_TUTOR_VERSION_ACTION_REJECT,
   ChatEvent,
-  ChatEventDescriptions,
   ModelUpdate,
   isChatMessage,
   isNotification,
   isModelUpdate,
+  ChatEventDescriptionKey,
+  ChatAsset,
+  ModelParameters,
+  isCompletedChatMessage,
 } from '../types';
 
-import {AI_CUSTOMIZATIONS_LABELS} from './modelCustomization/constants';
+import ChatMessageView, {getChatMessageDisplayText} from './ChatMessageView';
 
 import styles from './chatWorkspace.module.scss';
 
-interface ChatEventViewProps {
+const timestampToLocalTime = (timestamp: number) =>
+  moment(timestamp).format('LT');
+
+const chatEventDescriptionsOwner = {
+  CLEAR_CHAT: 'You cleared the chat workspace.',
+  LOAD_LEVEL: 'You loaded the level.',
+} as const satisfies {[key in ChatEventDescriptionKey]: string};
+
+const chatEventDescriptionsStudent = {
+  CLEAR_CHAT: 'The user cleared the chat workspace.',
+  LOAD_LEVEL: 'The user loaded the level.',
+} as const satisfies {[key in ChatEventDescriptionKey]: string};
+
+interface ChatEventViewProps extends React.HTMLAttributes<HTMLDivElement> {
   event: ChatEvent;
   isTeacherView?: boolean;
+  buildAssetUrl?: (asset: ChatAsset) => string;
+  clientType?: string;
+  modelParameters?: ModelParameters;
+  postText?: React.ReactNode;
 }
 
 function formatModelUpdateText(update: ModelUpdate): string {
   const {updatedField, updatedValue, timestamp} = update;
-  const fieldLabel = AI_CUSTOMIZATIONS_LABELS[updatedField];
+  const fieldLabel = MODEL_PARAMETER_LABELS[updatedField]!;
 
   let updatedToText = undefined;
   if (updatedField === 'temperature') {
@@ -40,82 +63,166 @@ function formatModelUpdateText(update: ModelUpdate): string {
     )?.name;
   }
 
-  const updatedText = updatedToText
-    ? `has been updated to ${updatedToText}.`
-    : 'has been updated.';
+  const modelUpdateText = updatedToText
+    ? `${fieldLabel} has been updated to ${updatedToText.toString()}. ${timestampToLocalTime(
+        timestamp
+      )}`
+    : `${fieldLabel} has been updated. ${timestampToLocalTime(timestamp)}`;
 
-  return `${fieldLabel} ${updatedText} ${timestampToLocalTime(timestamp)}`;
+  return modelUpdateText;
 }
 
 /**
  * Renders AI Chat {@link ChatEvent}s using common AI design components.
  */
-const ChatEventView: React.FunctionComponent<ChatEventViewProps> = ({
-  event,
-  isTeacherView,
-}) => {
-  const dispatch = useAppDispatch();
+const ChatEventView = forwardRef<HTMLDivElement, ChatEventViewProps>(
+  (
+    {
+      event,
+      isTeacherView,
+      buildAssetUrl,
+      tabIndex,
+      onKeyDown,
+      clientType,
+      modelParameters,
+      postText,
+    },
+    ref
+  ) => {
+    const dispatch = useAppDispatch();
 
-  if (isChatMessage(event)) {
-    return (
-      <ChatMessage {...event} showProfaneUserMessageToggle={isTeacherView} />
-    );
-  }
+    const chatEventDescriptions = isTeacherView
+      ? chatEventDescriptionsStudent
+      : chatEventDescriptionsOwner;
 
-  if (isNotification(event)) {
-    const {id, text, notificationType, timestamp} = event;
+    // Only wrap chat messages in a focusable div for keyboard navigation
+    if (isChatMessage(event)) {
+      const teacherFlagged =
+        isCompletedChatMessage(event) &&
+        event.teacherFeedback === TeacherFeedback.CLEAN_DISAGREE;
+      return (
+        <div
+          ref={ref}
+          tabIndex={tabIndex}
+          onKeyDown={onKeyDown}
+          aria-label={getChatMessageDisplayText(
+            event.status,
+            event.role,
+            event.chatMessageText,
+            false, // Profane messages are never shown in the aria-label context to prevent screen readers from reading inappropriate content.
+            teacherFlagged
+          )}
+          className={styles.chatMessageOutline}
+        >
+          <ChatMessageView
+            chatMessage={event}
+            isTeacherView={isTeacherView || false}
+            buildAssetUrl={buildAssetUrl}
+            clientType={clientType}
+            modelParameters={modelParameters}
+            postText={postText}
+            teacherFlagged={teacherFlagged}
+          />
+        </div>
+      );
+    }
+
+    if (isNotification(event)) {
+      const {
+        removeId,
+        text,
+        notificationType,
+        files,
+        timestamp,
+        commitDescription,
+      } = event;
+
+      // Use special notification component for AI tutor version actions.
+      if (
+        notificationType === AI_TUTOR_VERSION_ACTION_ACCEPT ||
+        notificationType === AI_TUTOR_VERSION_ACTION_REJECT
+      ) {
+        return (
+          <AiTutorVersionActionNotification
+            text={text}
+            type={
+              notificationType === AI_TUTOR_VERSION_ACTION_ACCEPT
+                ? 'accept'
+                : 'reject'
+            }
+            ref={ref}
+            tabIndex={tabIndex}
+            onKeyDown={onKeyDown}
+            aria-label={`Notification: ${text}`}
+            className={styles.chatMessageOutline}
+            files={files}
+            commitDescription={commitDescription}
+          />
+        );
+      }
+
+      return (
+        <Alert
+          text={`${text} ${timestampToLocalTime(timestamp)}`}
+          type={
+            ['error', 'permissionsError'].includes(notificationType)
+              ? 'danger'
+              : 'success'
+          }
+          onClose={
+            isTeacherView
+              ? undefined
+              : () => dispatch(removeUpdateMessage(removeId))
+          }
+          size="s"
+          ref={ref}
+          tabIndex={tabIndex}
+          onKeyDown={onKeyDown}
+          aria-label={`Notification: ${text}, Time: ${timestampToLocalTime(
+            timestamp
+          )}`}
+          className={styles.chatMessageOutline}
+        />
+      );
+    }
+
+    if (isModelUpdate(event)) {
+      return (
+        <Alert
+          className={classNames(
+            'uitest-aichat-chat-alert',
+            styles.chatMessageOutline
+          )}
+          text={formatModelUpdateText(event)}
+          type="success"
+          size="s"
+          onClose={
+            isTeacherView
+              ? undefined
+              : () => dispatch(removeUpdateMessage(event.removeId))
+          }
+          ref={ref}
+          tabIndex={tabIndex}
+          onKeyDown={onKeyDown}
+          aria-label={formatModelUpdateText(event)}
+        />
+      );
+    }
+
+    // Automatically narrowed to UserActionEvent
     return (
       <Alert
-        text={`${text} ${timestampToLocalTime(timestamp)}`}
-        type={
-          ['error', 'permissionsError'].includes(notificationType)
-            ? 'danger'
-            : 'success'
-        }
-        onClose={
-          isTeacherView ? undefined : () => dispatch(removeUpdateMessage(id))
-        }
-        link={
-          notificationType === 'permissionsError'
-            ? {
-                href: 'https://support.code.org/hc/en-us/articles/30162711193741-AI-Chat-Lab-FAQ',
-                text: commonI18n.learnMore(),
-                className: styles.alertLink,
-              }
-            : undefined
-        }
-        size="s"
-      />
-    );
-  }
-
-  if (isModelUpdate(event)) {
-    return (
-      <Alert
-        className="uitest-aichat-chat-alert"
-        text={formatModelUpdateText(event)}
-        type="success"
-        size="s"
-        onClose={
-          isTeacherView
-            ? undefined
-            : () => dispatch(removeUpdateMessage(event.id))
-        }
-      />
-    );
-  }
-
-  if (event.descriptionKey) {
-    return (
-      <Alert
-        text={ChatEventDescriptions[event.descriptionKey] as string}
+        text={chatEventDescriptions[event.descriptionKey]}
         type="info"
         size="s"
+        ref={ref}
+        tabIndex={tabIndex}
+        onKeyDown={onKeyDown}
+        aria-label={chatEventDescriptions[event.descriptionKey]}
+        className={styles.chatMessageOutline}
       />
     );
   }
+);
 
-  return null;
-};
-
-export default ChatEventView;
+export default memo(ChatEventView);

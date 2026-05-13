@@ -46,6 +46,12 @@ en:
             unlock_token:
               invalid: "is invalid or expired, possibly because your account has already been unlocked."
             lockout_flow: "cannot be updated because you need parent or guardian permission first."
+        user/facilitator_info:
+          attributes:
+            bio:
+              has_profanity: contains profanity
+            user:
+              not_facilitator: must have the facilitator permission
       messages:
         blank: "is required"
         blank_plural: "are required"
@@ -85,7 +91,9 @@ en:
         user_type: 'Account Type'
         us_state: 'State'
         ai_rubrics_disabled: 'Disable AI Rubric Feature'
-
+      user/facilitator_info:
+        user: User
+        bio: Biography
   beta: "beta"
   hello: "Hello world"
   welcome_back: "Welcome back, %{name}"
@@ -281,6 +289,7 @@ en:
       title: 'Forgot your password?'
       instructions: "Enter your email address associated with your account below and we'll send you password reset instructions."
       email: 'Email address'
+      username: 'Username'
       submit: 'Submit'
       confirmation: 'If we find your email address in our system, you will receive a password recovery link in a few minutes'
     reset_errors:
@@ -301,6 +310,8 @@ en:
       The tutorials are fun, visually engaging, and teach the basic concepts of computer science using a simple, guided, game-like experience. Learn to code from Bill Gates, Mark Zuckerberg, Angry Birds, and Plants vs. Zombies! :-)
 
       %{name}
+  inactive_user_purge_mailer:
+    teacher_soft_delete_warning_subject: 'Action Required: Your Code.org Account Will Be Deleted Due to Inactivity'
   parent_mailer:
     student_associated_subject: 'Login information for Code.org'
     parent_email_added_subject: 'Welcome to Code.org!'
@@ -372,6 +383,7 @@ en:
         personal_login_created_email: 'You created a personal login successfully. You can now sign into your account with your email and password'
         personal_login_created_username: 'You created a personal login successfully. You can now sign into your account with your username (%{username}) and password'
   nav:
+    skip_to_main_content: "Skip to main content"
     header:
       finished_hoc: "I finished!"
       sign_in_to_save: 'Sign in to save progress'
@@ -428,6 +440,9 @@ en:
       legal_privacy: "Privacy Policy"
       legal_cookie_notice: "Cookie Notice"
       legal_tos: "Terms of Service"
+      videos: "Videos"
+      hour_of_code: "Hour of Code"
+      csf: "CS Fundamentals"
 
     user:
       classroom: 'Teacher Home Page'
@@ -438,6 +453,7 @@ en:
       settings: 'Account settings'
       logout: 'Sign out'
       signin: 'Sign in'
+      signin_cap: 'Sign In'
       signup: 'Create an account'
       create_account: 'Create Account'
       create_account_low_cap: 'Create account'
@@ -465,6 +481,7 @@ en:
       gumball: 'The Amazing World of Gumball'
       iceage: 'Ice Age'
       infinity: 'Infinity'
+      javalab: 'Java Lab'
       makerlab: 'Maker Toolkit'
       minecraft_adventurer: 'Minecraft Adventurer'
       minecraft_aquatic: 'Minecraft Aquatic'
@@ -476,6 +493,7 @@ en:
       playlab_k1: 'Play Lab (Pre-reader)'
       poetry: 'Poetry'
       poetry_hoc: 'Poem Art'
+      pythonlab: 'Python Lab'
       scratch: 'Scratch'
       sports: 'Sports'
       spritelab: 'Sprite Lab'
@@ -534,6 +552,9 @@ en:
     new_email_hint: '(make sure you can receive emails to this email address)'
     new_password_hint: "(leave blank if you don't want to change it)"
     current_password_hint: '(we need your current password to confirm your changes)'
+    expire_other_sessions: 'Manage Other Sessions'
+    expire_other_sessions_description: 'Click the button below to sign out of any other browsers and devices where you might be signed in.'
+    expire_other_sessions_button: 'Sign Out All Other Sessions'
     delete: 'Delete Account'
     delete_text: "Deleting your account will erase all information and progress connected to this account."
     delete_text_teacher_managed_note: "You do not have permission to delete this account because it is managed by your teacher. Your teacher(s) will need to remove you from their sections before you can delete your account."
@@ -1091,6 +1112,7 @@ en:
     title: 'Hour of Code downloads'
     capsule_title: 'Do you have Internet?'
     capsule_desc: 'Use the online, web-based [%{app_name}](%{url}).'
+    deprecation: 'The following material is no longer supported by Code.org. You may encounter technical issues if you decide to use the material.'
     instructions_headline: 'No Internet?'
     instructions: 'Instructions for teachers: if you have poor Internet service, these Hour of Code tutorials are available to download and install for offline use. Choose your language and platform, download and install it on all the computers in your classroom. You may want to use a USB drive to download once and install on all computers. Note: students will not be able to log into Code Studio, save progress, or print certificates. Teachers may print certificates ahead of time [here](%{url}).'
     minecraft_name: 'Minecraft Hour Of Code'
@@ -1166,6 +1188,9 @@ en:
   return_course_overview: 'Go to course overview'
   view_all_units: 'View all units'
   view_teacher_guide: 'View teacher guide'
+  curriculum_catalog:
+    title: "Curriculum Catalog"
+    description: 'Courses, tutorials, and more designed to teach computer science, artificial intelligence, coding, and more to all ages and experience levels.'
   pd:
     survey:
       number_teachers: 'Number of attending teachers'
@@ -1231,10 +1256,13 @@ en:
         not_listed: 'Preferred term not listed'
         none: 'Prefer not to answer'
       school_country:
+        albania: 'Albania'
         antigua_and_barbuda: 'Antigua and Barbuda'
+        austria: 'Austria'
         australia: 'Australia'
         barbados: 'Barbados'
         belize: 'Belize'
+        bolivia: 'Bolivia'
         botswana: 'Botswana'
         brazil: 'Brazil'
         cambodia: 'Cambodia'
@@ -1270,9 +1298,12 @@ en:
         sri_lanka: 'Sri Lanka'
         thailand: 'Thailand'
         trinidad_and_tobago: 'Trinidad and Tobago'
+        turkey: 'Turkey'
+        united_kingdom: 'United Kingdom'
         uruguay: 'Uruguay'
         uzbekistan: 'Uzbekistan'
         vietnam: 'Vietnam'
+        venezuela: 'Venezuela'
       ages:
         ages_under_6: '< 6 years old'
         ages_7_8: '7-8 years old'
@@ -1426,6 +1457,11 @@ en:
     project_type: "project type"
     button: "View alternative courses"
     projects_button: "Go to Projects"
+    course1_retired: We’re sorry! Course 1 has been retired. We recommend [Course A](%{coursea_url}) or [Pre-reader Express](%{pre_reader_express_url}) as a replacement.
+    course2_retired: We’re sorry! Course 2 has been retired. We recommend [Course C](%{coursec_url}) as a replacement, or [Course D](%{course_d_url}) for older/more experienced students.
+    course3_retired: We’re sorry! Course 3 has been retired. We recommend [Course E](%{course_e_url}) as a replacement, or [Course F](%{course_f_url}) for older/more experienced students.
+    course4_retired: We’re sorry! Course 4 has been retired. We recommend [Course F](%{course_f_url}) as a replacement.
+    accelerated_course_retired: We’re sorry! The Accelerated Course has been retired. We recommend [Express Course](%{express_course_url}) as a replacement.
   hoc_tutorial_email_subject: "Rock the Hour of Code with Code.org Tutorials!"
   hoc_tutorial_email_content:
     dear_teacher: "Dear %{teacher_name},"
@@ -1452,8 +1488,10 @@ en:
       backend_error: "Oops! We encountered an error while trying to link your account. Please try launching Code.org again from your LMS."
       go_back: "Go back"
       invalid_credentials: "Invalid credentials"
+      launch_from_lms: "Please launch from your LMS to link your account."
       linking_page_header: "Link your %{provider} account to your existing Code.org account"
       linking_page_description: "Choose the sign-in method you normally use to access Code.org"
+      linking_page_description_restricted: "Choose the sign-in method allowed by your school"
       sign_in_and_connect: "Sign in and connect"
       successfully_linked: "You have successfully linked your Code.org account!"
       successfully_unlinked: "You have successfully unlinked your Code.org account."
@@ -1517,3 +1555,6 @@ en:
         parent_email_is_own: A request cannot be sent to your own email address
         resend_limit_reached: The limit for resend requests has been reached
   not_applicable_abbreviation: "N/A"
+  global_edition:
+    regions:
+      fa: Farsi

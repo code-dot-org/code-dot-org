@@ -1,0 +1,23 @@
+name 'programming-fundamentals-lesson9-level5-aitutor-2024'
+title 'Check for Understanding'
+description 'Olivia is writing a program with conditionals. Match each condition with when Olivia would use it.'
+height '75'
+
+question '`painter.is_on_bucket()`'
+answer 'Olivia needs the Painter to collect all the paint.'
+question '`painter.can_move(\'south\')`'
+answer 'The Painter is moving east and Olivia wants to check if there are any obstacles to the Painter\'s right.'
+question '`painter.is_facing_east()`'
+answer 'Olivia want the Painter to move if it is facing toward the right on the screen.'
+question '`painter.is_on_paint()`'
+answer 'Olivia wants the Painter to scrape up paint.'
+question '`painter.can_move()`'
+answer 'Olivia wants the Painter to move forward in the direction it is currently facing if there\'s no obstacle.'
+
+
+
+markdown <<MARKDOWN
+
+MARKDOWN
+
+allow_multiple_attempts true

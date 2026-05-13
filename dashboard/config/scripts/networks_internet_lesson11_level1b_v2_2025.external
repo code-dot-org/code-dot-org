@@ -1,0 +1,28 @@
+name 'networks-internet-lesson11-level1b_v2-2025'
+title 'FinTrust Banking Solutions'
+display_name 'FinTrust Banking Solutions'
+bubble_choice_description 'FinTrust Banking Solutions has faced a wave of social engineering attacks targeting customer service representatives and IT staff. '
+thumbnail_url 'https://images.code.org/551ae36acfdf05b7c02efd90a16e35c1-image-1740388449348.jpg'
+
+markdown <<MARKDOWN
+# FinTrust Banking Solutions  
+
+## Scenario
+FinTrust Banking Solutions is a **mid-sized financial institution** specializing in **online banking, loan processing, and credit card transactions**. With a growing customer base, FinTrust prides itself on fast, seamless service. However, in recent months, the company has faced a **wave of social engineering attacks** targeting customer service representatives and IT staff.  
+
+Cybercriminals pose as **high-profile clients or internal executives**, using urgency and deception to trick employees into **resetting passwords or granting unauthorized access** to banking systems. In some cases, attackers have called the help desk, claiming to be a locked-out executive, and **convinced employees to bypass security procedures**. Additionally, the company’s legacy systems still have **default administrator credentials** that were never updated, leaving internal networks vulnerable to brute-force attacks.  
+
+If a breach occurs, attackers could **drain customer accounts, manipulate financial transactions, or steal sensitive financial records**. The IT team has implemented security awareness training, but new employees continue to fall for sophisticated scams. Leadership is growing increasingly concerned about **customer trust and regulatory compliance** in the wake of these threats.  
+
+## Key Facts 
+- Call center employees receive **fraudulent requests** impersonating executives or customers.  
+- Attackers exploit **default administrative credentials** left unchanged in older banking systems.  
+- A breach could result in **financial fraud, stolen banking data, and regulatory fines**.  
+- The IT team struggles to **prevent social engineering attacks despite employee training**.  
+
+![](https://images.code.org/551ae36acfdf05b7c02efd90a16e35c1-image-1740388449348.jpg)
+
+
+
+
+MARKDOWN

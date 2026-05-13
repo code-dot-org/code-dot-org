@@ -1,0 +1,11 @@
+name 'genai-hallucinations-activity-lvl1a_2025'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# AI Auditors
+
+## Scenario 1
+
+#### Get Outta Here travel services wants to create a chatbot that can help recommend travel destinations to customers. Users will have a conversation with the chatbot about their interests and ideal travel scenarios, and then the chatbot will recommend different places to visit. The company wants to make sure the chatbot doesn’t suggest any factually inaccurate information, or give responses that prioritize certain destinations while unfairly excluding others.
+MARKDOWN

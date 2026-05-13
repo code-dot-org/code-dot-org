@@ -3,7 +3,7 @@
 // This is a React client for a panels level.  Note that this is
 // only used for levels that use Lab2.
 
-import React, {useCallback} from 'react';
+import React, {useCallback, useEffect, useRef} from 'react';
 
 import continueOrFinishLesson from '@cdo/apps/lab2/progress/continueOrFinishLesson';
 import {useDialogControl, DialogType} from '@cdo/apps/lab2/views/dialogs';
@@ -11,27 +11,29 @@ import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 import {sendSuccessReport} from '../code-studio/progressRedux';
 import {queryParams} from '../code-studio/utils';
+import useLifecycleNotifier from '../lab2/hooks/useLifecycleNotifier';
+import {LabProps} from '../lab2/types';
+import {LifecycleEvent} from '../lab2/utils';
+import analyticsReporter from '../metrics/AnalyticsReporter';
 import useWindowSize from '../util/hooks/useWindowSize';
 
 import PanelsView from './PanelsView';
 import {PanelsLevelProperties} from './types';
 
-const appName = 'panels';
+const sendAnalyticsEvent = async (event: string, data?: object) => {
+  analyticsReporter.sendEvent(event, {
+    ...data,
+    levelPath: window.location.pathname,
+  });
+};
 
-const PanelsLabView: React.FunctionComponent = () => {
+const PanelsLabView: React.FunctionComponent<
+  LabProps<PanelsLevelProperties>
+> = ({levelProperties}) => {
   const dispatch = useAppDispatch();
 
-  const panels = useAppSelector(
-    state =>
-      (state.lab.levelProperties as PanelsLevelProperties | undefined)?.panels
-  );
-  const currentAppName = useAppSelector(
-    state => state.lab.levelProperties?.appName
-  );
-  const skipUrl = useAppSelector(state => state.lab.levelProperties?.skipUrl);
-  const offerBrowserTts =
-    useAppSelector(state => state.lab.levelProperties?.offerBrowserTts) ||
-    queryParams('show-tts') === 'true';
+  const {panels, appName, skipUrl, offerBrowserTts, useLinks} = levelProperties;
+  const currentLevelId = useAppSelector(state => state.progress.currentLevelId);
 
   const dialogControl = useDialogControl();
 
@@ -46,7 +48,7 @@ const PanelsLabView: React.FunctionComponent = () => {
         dispatch(continueOrFinishLesson());
       }
     },
-    [dispatch]
+    [dispatch, appName]
   );
 
   const onSkip = useCallback(() => {
@@ -62,9 +64,49 @@ const PanelsLabView: React.FunctionComponent = () => {
     }
   }, [dialogControl, skipUrl]);
 
+  const startTime = useRef<number | null>(null);
+  useEffect(() => {
+    sendAnalyticsEvent('Panels Level Started');
+    startTime.current = Date.now();
+  }, [panels]);
+
+  useLifecycleNotifier(LifecycleEvent.LevelChangeRequested, () => {
+    if (startTime.current) {
+      sendAnalyticsEvent('Panels Level Completed', {
+        timeSpentSeconds: (Date.now() - startTime.current) / 1000,
+      });
+      startTime.current = null;
+    }
+  });
+
+  const onChangePanel = (
+    source: 'button' | 'bubble',
+    currentPanel: number,
+    nextPanel: number,
+    timeSpentOnPanelSeconds: number
+  ) => {
+    if (source === 'bubble') {
+      sendAnalyticsEvent('Panels Bubble Clicked', {
+        currentPanel,
+        nextPanel,
+        timeSpentOnPanelSeconds,
+      });
+    }
+  };
+
+  const onClickContinue = (
+    currentPanel: number,
+    timeSpentOnPanelSeconds: number
+  ) => {
+    sendAnalyticsEvent('Panels Continue Button Clicked', {
+      currentPanel,
+      timeSpentOnPanelSeconds,
+    });
+  };
+
   const [windowWidth, windowHeight] = useWindowSize();
 
-  if (!panels || currentAppName !== appName) {
+  if (!panels) {
     return <div />;
   }
 
@@ -75,7 +117,11 @@ const PanelsLabView: React.FunctionComponent = () => {
       onSkip={skipUrl ? onSkip : undefined}
       targetWidth={windowWidth}
       targetHeight={windowHeight}
-      offerBrowserTts={offerBrowserTts}
+      offerBrowserTts={offerBrowserTts || queryParams('show-tts') === 'true'}
+      levelId={currentLevelId}
+      useLinks={useLinks}
+      onChangePanel={onChangePanel}
+      onClickContinue={onClickContinue}
     />
   );
 };

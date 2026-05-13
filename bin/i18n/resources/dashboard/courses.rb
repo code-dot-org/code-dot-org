@@ -8,7 +8,7 @@ module I18n
         FILE_NAME = 'courses.yml'.freeze
         FILE_PATH = File.join(DIR_NAME, FILE_NAME).freeze
 
-        ORIGIN_I18N_FILE_PATH = File.join(ORIGIN_I18N_DIR_PATH, 'courses.en.yml').freeze
+        ORIGIN_I18N_FILE_PATH = File.join(ORIGIN_I18N_DIR_PATH, 'courses/en.yml').freeze
         I18N_SOURCE_FILE_PATH = File.join(I18N_SOURCE_DIR_PATH, FILE_NAME).freeze
         I18N_BACKUP_FILE_PATH = File.join(I18N_BACKUP_DIR_PATH, FILE_NAME).freeze
 

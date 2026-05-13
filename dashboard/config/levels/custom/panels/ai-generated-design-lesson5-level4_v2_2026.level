@@ -1,0 +1,39 @@
+<Panels>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 73,
+  "created_at": "2026-03-04T22:50:55.000Z",
+  "level_num": "custom",
+  "user_id": 18602,
+  "properties": {
+    "encrypted": "false",
+    "offer_browser_tts": "false",
+    "panels": [
+      {
+        "text": "#Export An Image of Sketch Lab \n\nSaving an image of your sketch lab canvas to your device allows you to access and upload it to AI Chat later.",
+        "imageUrl": "https://images.code.org/f78466fb9716e64db2e60ca5921b6fdb-Screenshot 2026-03-04 151239.png",
+        "key": "ai-generated-design-lesson5-level4_v2_2026-8affb550-f965-4117-91d4-6ac9ad36fa94",
+        "layout": "text-top-right"
+      },
+      {
+        "text": "#Step 1:\n\n* Click the \"hamburger\" menu in the top left\n* Select **\"Export Image\"**\n* Name your file and click **\"PNG\"**",
+        "imageUrl": "https://images.code.org/3ae391c2c190c93bf5c5e3f5d7f63bab-save as image 1.gif",
+        "key": "undefined-8b94dc52-04f4-4c40-ad06-353a94193761",
+        "layout": "text-top-right"
+      },
+      {
+        "text": "#Step 2:\n* Select where on your device you want to save the image.\n* Click **\"Save\"** and close the pop-up window.",
+        "imageUrl": "https://images.code.org/a782bf899e8676d0eb7cd07f2381fcdc-save as image 2.gif",
+        "key": "undefined-82778a41-bb61-478c-be40-d59f333de639",
+        "layout": "text-top-center"
+      },
+      {
+        "text": "#Step 3:\n* Upload an image to AI Chat by clicking **\"Add File\"**\n* Select the image you want to upload\n* Type your prompt to AI Chat",
+        "imageUrl": "https://images.code.org/10c887f5ab30bb83128bf94f4edbebc7-save as image 5.gif",
+        "key": "undefined-5cc816e6-0198-43e8-a274-ecce2a9d35aa"
+      }
+    ]
+  },
+  "audit_log": "[{\"changed_at\":\"2026-03-04 23:15:15 +0000\",\"changed\":[],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-04 23:15:49 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-04 23:39:44 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-04 23:43:49 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-04 23:48:54 +0000\",\"changed\":[],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-04 23:52:52 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
+}]]></config>
+</Panels>

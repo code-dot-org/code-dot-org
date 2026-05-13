@@ -1,5 +1,9 @@
 <Javalab>
   <config><![CDATA[{
+  "game_id": 68,
+  "created_at": "2021-12-10T00:47:25.000Z",
+  "level_num": "custom",
+  "user_id": 16889,
   "properties": {
     "encrypted": "false",
     "display_name": "Gamer Talk Show",
@@ -46,12 +50,9 @@
         "text": "import org.code.theater.*;\nimport org.code.media.*;\nimport java.io.FileNotFoundException;\n\npublic class GrayscaleImage extends Image {\n\n  private Pixel[][] imagePixels;\n\n  public GrayscaleImage(String filename) throws FileNotFoundException {\n    super(filename);\n    imagePixels = ImageEffect.getPixels(this);\n  }\n\n  public void grayscale() {\n    for (int row = 0; row < imagePixels.length; row++) {\n      for (int col = 0; col < imagePixels[0].length; col++) {\n        Pixel currentPixel = imagePixels[row][col];\n\n        int average = (int)((currentPixel.getRed() + currentPixel.getGreen() + currentPixel.getBlue()) / 3);\n\n        currentPixel.setRed(average);\n        currentPixel.setGreen(average);\n        currentPixel.setBlue(average);\n      }\n    }\n  }\n}",
         "isVisible": false
       }
-    }
+    },
+    "ai_tutor_available": "false"
   },
-  "game_id": 68,
-  "created_at": "2021-12-10T00:47:25.000Z",
-  "level_num": "custom",
-  "user_id": 16889,
   "published": true,
   "audit_log": "[{\"changed_at\":\"2021-12-10T00:47:24.994+00:00\",\"changed\":[\"cloned from \\\"CSA U7L1-L1b\\\"\"],\"cloned_from\":\"CSA U7L1-L1b\"},{\"changed_at\":\"2021-12-10 00:47:41 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2021-12-17 19:38:23 +0000\",\"changed\":[\"display_name\",\"bubble_choice_description\",\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2021-12-17 23:43:30 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2021-12-17 23:43:47 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2021-12-17 23:57:58 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
 }]]></config>

@@ -1,19 +1,31 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+
+import {createReactRoot} from '@cdo/apps/util/createReactRoot';
 
 import AddPasswordForm from './AddPasswordForm';
 
 export default class AddPasswordController {
-  constructor(form, mountPoint) {
+  constructor(form, mountPoint, disabled = false, userAge, userUsState) {
     this.form = form;
     this.mountPoint = mountPoint;
+    this.disabled = disabled;
+    this.userAge = userAge;
+    this.userUsState = userUsState;
     this.renderAddPasswordForm();
   }
 
   renderAddPasswordForm = () => {
-    ReactDOM.render(
-      <AddPasswordForm handleSubmit={this.submitAddPassword} />,
-      this.mountPoint
+    createReactRoot(
+      <AddPasswordForm
+        handleSubmit={this.submitAddPassword}
+        disabled={this.disabled}
+        userAge={this.userAge}
+        userUsState={this.userUsState}
+      />,
+      this.mountPoint,
+      {
+        legacyReactDomRender: true,
+      }
     );
   };
 

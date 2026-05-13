@@ -1,0 +1,9 @@
+name 'programming-fundamentals-lesson12-level2_2025-launch_pilot-2025'
+display_name 'What If Not?'
+description 'Choose **ONE** scenario and update the code to include an `else` statement so the `Painter` always makes a decision, no matter what it encounters.'
+
+sublevels
+level 'programming-fundamentals-lesson12-level2a_2025-launch_pilot-2025'
+level 'programming-fundamentals-lesson12-level2b_2025-launch_pilot-2025'
+level 'programming-fundamentals-lesson12-level2c_2025-launch_pilot-2025'
+level 'programming-fundamentals-lesson12-level2d_2025-launch_pilot-2025'

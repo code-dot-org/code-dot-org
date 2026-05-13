@@ -1,0 +1,47 @@
+name 'pl-java-module-overview-3_pl'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Module Overview
+
+#### This professional learning module is made up of **two units:**
+
+
+<div style="display: flex; flex-direction: column; gap: 20px; max-width: 900px; margin: auto;">
+
+  
+<div style="display: flex; align-items: center; gap: 15px;">
+        <img src="https://images.code.org/07a9acd74552fc9c3d1e41aad7679c63-image-1747321307115.png" alt="Java logo" style="width: 20%; max-width: 120px; height: auto;">
+        <div style="flex: 1; background: #f7f8fa; padding: 15px; border-radius: 10px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); font-size: 14pt;">
+            <h3><b>Unit 1 - Java Basics</b></h3>
+            <p style = "font-size: 14pt";><strong>⭐️ You are here!⭐️</strong> </p><p style = "font-size: 14pt";>            
+           This comprehensive unit provides an introduction to the fundamentals of Java programming, including variables, conditionals, loops, and arrays.<br><br> Through hands-on labs and practice, you will build a foundation in writing and understanding basic Java programs.<br><br> <em>2.5 hours</em></p>
+        </div>
+    </div>
+
+   
+<div style="display: flex; align-items: center; gap: 15px;">
+        <img src="https://images.code.org/9d412224007b68a0d9456583f08d59c5-image-1747321435772.png" alt="icon of computer moniter with letters OOP" style="width: 20%; max-width: 120px; height: auto;">
+        <div style="flex: 1; background: #B7E0E5; padding: 15px; border-radius: 10px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); ">
+            <h3> <b>Unit 2 - Object-Oriented Programming</b></h3>
+            <p style = "font-size: 14pt";>This unit introduces students to object-oriented programming in Java through the exploration of classes and objects.<br><br> Using the Painter class as a foundation, you will learn about class structure, design principles, and how to create and interact with custom objects.<br><br> <em>2 hours</em></p>
+        </div>
+    </div>
+
+
+
+
+
+
+
+---
+
+## Engaging with This Module
+
+#### Feel free to complete as much or as little of this module as is useful for you! **Stop, start, and revisit** content as you see fit. 
+
+#### You'll be able to give Code.org your feedback on the last level of this module.
+
+
+MARKDOWN

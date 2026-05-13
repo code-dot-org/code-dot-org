@@ -9,7 +9,7 @@ import {
   stubRedux,
 } from '@cdo/apps/redux';
 import currentUser from '@cdo/apps/templates/currentUserRedux';
-import sectionProgress from '@cdo/apps/templates/sectionProgress/sectionProgressRedux';
+import sectionProgress from '@cdo/apps/templates/sectionProgressV2/sectionProgressRedux';
 import StudentColumn from '@cdo/apps/templates/sectionProgressV2/StudentColumn.jsx';
 
 const studentA = {
@@ -90,13 +90,13 @@ describe('StudentColumn', () => {
     renderDefault({
       sortedStudents: [studentA, studentB],
     });
-    let holmes = screen.getByText('Sherlock Holmes');
-    expect(holmes.getAttribute('aria-expanded')).toBe('false');
+    let holmesButton = screen.getByText('Sherlock Holmes').closest('button');
+    expect(holmesButton.getAttribute('aria-expanded')).toBe('false');
 
-    fireEvent.click(holmes);
+    fireEvent.click(holmesButton);
 
-    holmes = screen.getByText('Sherlock Holmes');
-    expect(holmes.getAttribute('aria-expanded')).toBe('true');
+    holmesButton = screen.getByText('Sherlock Holmes').closest('button');
+    expect(holmesButton.getAttribute('aria-expanded')).toBe('true');
 
     screen.getByText('Time Spent (mins)');
     screen.getByText('Last Updated');

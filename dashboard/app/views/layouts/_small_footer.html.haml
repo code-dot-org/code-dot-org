@@ -2,9 +2,10 @@
   full_width = local_assigns[:full_width]
   channel = local_assigns[:channel]
   reactProps = {
-    i18nDropdownInBase: view_options[:has_i18n],
+    i18nDropdownInBase: view_options[:has_i18n] || false,
     localeUrl: locale_url,
-    localeOptions: options_for_locale_dropdown,
+    currentLocale: locale,
+    localeOptions: locale_options.map {|(text, value)| {text: text, value: value}},
     privacyPolicyInBase: true,
     copyrightInBase: true,
     baseMoreMenuString: I18n.t('footer.more'),

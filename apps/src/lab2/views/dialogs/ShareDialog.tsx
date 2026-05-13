@@ -1,47 +1,107 @@
+import Alert from '@code-dot-org/component-library/alert';
+import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
+import Modal from '@code-dot-org/component-library/modal';
+import {Typography, Button as MuiButton} from '@mui/material';
+import classNames from 'classnames';
 import QRCode from 'qrcode.react';
-import React, {useCallback, useEffect, useState} from 'react';
+import React, {useCallback} from 'react';
 import FocusLock from 'react-focus-lock';
 
 import {hideShareDialog} from '@cdo/apps/code-studio/components/shareDialogRedux';
-import {Button, LinkButton} from '@cdo/apps/componentLibrary/button';
-import FontAwesomeV6Icon from '@cdo/apps/componentLibrary/fontAwesomeV6Icon/FontAwesomeV6Icon';
-import Typography from '@cdo/apps/componentLibrary/typography';
-import {ProjectType} from '@cdo/apps/lab2/types';
-import copyToClipboard from '@cdo/apps/util/copyToClipboard';
-import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
-import trackEvent from '@cdo/apps/util/trackEvent';
-import i18n from '@cdo/locale';
+import DCDO from '@cdo/apps/dcdo';
+import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
+import {ProjectType, ShareDialogId} from '@cdo/apps/lab2/types';
+import {SignInState} from '@cdo/apps/templates/currentUserRedux';
+import {SubmissionStatusType} from '@cdo/apps/templates/projects/submitProjectDialog/submitProjectApi';
+import {commonI18n as i18n} from '@cdo/apps/types/locale';
+import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
+import {ProjectSubmissionStatus} from '@cdo/generated-scripts/sharedConstants';
 
-import moduleStyles from './ShareDialog.module.scss';
+import {CopyToClipboardButton} from './CopyToClipboardButton';
+import HoaiCongrats from './finishDialogs/HoaiCongrats';
 
-const CopyToClipboardButton: React.FunctionComponent<{
-  shareUrl: string;
-  projectType: ProjectType;
-}> = ({shareUrl, projectType}) => {
-  const [copiedToClipboard, setCopiedToClipboard] = useState(false);
+import moduleStyles from './share-dialog.module.scss';
 
-  const handleCopyToClipboard = useCallback(() => {
-    copyToClipboard(shareUrl, () => {
-      setCopiedToClipboard(true);
-    });
-    trackEvent('share', 'share_copy_url', {value: projectType});
-  }, [shareUrl, projectType]);
+const TEACHER_FEEDBACK_LINK =
+  'https://docs.google.com/forms/d/e/1FAIpQLSflGeMmY_ff1QllJfpTsWGZdn_xv6dKpPba_evTMwfbvG3FTA/viewform';
+const STUDENT_FEEDBACK_LINK =
+  'https://docs.google.com/forms/d/e/1FAIpQLSeZGNgX4wDvA29stId_Q2toofJN-r12zSP8yBMZ-E9KW5XPWg/viewform';
+
+const AfeCareerTourBlock: React.FunctionComponent = () => {
+  const careersUrl =
+    'https://www.amazonfutureengineer.com/musicsolo?utm_campaign=Code.Org&utm_medium=Musiclab&utm_source=US&utm_content=Career%20Tours&utm_term=2024';
 
   return (
-    <div>
-      <Button
-        iconLeft={{
-          iconName: copiedToClipboard ? 'clipboard-check' : 'clipboard',
-        }}
-        ariaLabel={i18n.copyLinkToProject()}
-        text={i18n.copyLinkToProject()}
-        type="primary"
-        color="black"
-        size="m"
-        onClick={handleCopyToClipboard}
-      />
+    <div className={classNames(moduleStyles.block, moduleStyles.blockAfe)}>
+      <Typography
+        className={moduleStyles.heading}
+        component="h2"
+        variant="h4"
+        gutterBottom
+      >
+        {i18n.careerTourTitle()}
+      </Typography>
+      <img alt="" src="/shared/images/afe/afe-career-tours-0.jpg" />
+      <div className={moduleStyles.afeText}>{i18n.careerTourDescription()}</div>
+      <MuiButton
+        variant="contained"
+        color="primary"
+        size="medium"
+        className={moduleStyles.shareDialogButton}
+        aria-label={i18n.careerTourAction()}
+        href={careersUrl}
+        rel="noopener noreferrer"
+        target="_blank"
+        endIcon={
+          <FontAwesomeV6Icon
+            iconName="arrow-up-right-from-square"
+            iconStyle="solid"
+            title="arrow-up-right-from-square"
+          />
+        }
+      >
+        {i18n.careerTourAction()}
+      </MuiButton>
     </div>
   );
+};
+
+const SubmitButtonInfo: React.FunctionComponent<{
+  submissionStatus: SubmissionStatusType | undefined;
+  onSubmitClick: () => void;
+}> = ({submissionStatus, onSubmitClick}) => {
+  const lab2SubmitProjectEnabled = DCDO.get(
+    'lab2-submit-project-enabled',
+    true
+  ) as boolean;
+  if (!lab2SubmitProjectEnabled) {
+    return null;
+  }
+  if (submissionStatus === ProjectSubmissionStatus.CAN_SUBMIT) {
+    return (
+      <MuiButton
+        variant="outlined"
+        color="secondary"
+        size="medium"
+        className={moduleStyles.shareDialogButton}
+        onClick={onSubmitClick}
+        type="button"
+        startIcon={<FontAwesomeV6Icon iconName="award" />}
+      >
+        {i18n.submitProjectGallery_header()}
+      </MuiButton>
+    );
+  } else if (submissionStatus === ProjectSubmissionStatus.ALREADY_SUBMITTED) {
+    return (
+      <Alert
+        text={i18n.submitted()}
+        type="success"
+        size="s"
+        className={moduleStyles.alert}
+      />
+    );
+  }
+  return null;
 };
 
 /**
@@ -50,91 +110,165 @@ const CopyToClipboardButton: React.FunctionComponent<{
  */
 
 const ShareDialog: React.FunctionComponent<{
-  dialogId?: string;
+  dialogId?: ShareDialogId;
   shareUrl: string;
   finishUrl?: string;
   projectType: ProjectType;
-}> = ({dialogId, shareUrl, finishUrl, projectType}) => {
+  onSubmitClick: () => void;
+  submissionStatus: SubmissionStatusType | undefined;
+  userSharingDisabled: boolean | undefined;
+}> = ({
+  dialogId,
+  shareUrl,
+  finishUrl,
+  projectType,
+  onSubmitClick,
+  submissionStatus,
+  userSharingDisabled,
+}) => {
   const dispatch = useAppDispatch();
+  const sharingDisabled = () =>
+    userSharingDisabled && ['pythonlab', 'weblab2'].includes(projectType);
 
-  useEffect(() => {
-    trackEvent('share', 'share_open_dialog', {
-      value:
-        dialogId === 'hoc2024'
-          ? 'share_open_dialog_congrats_hoc2024'
-          : projectType,
-    });
+  const handleClose = useCallback(() => {
+    dispatch(hideShareDialog());
+  }, [dispatch]);
+
+  const feedbackLink = useAppSelector(state => {
+    const {userType, signInState} = state.currentUser;
+    if (signInState !== SignInState.SignedIn) return undefined;
+    return userType === 'teacher'
+      ? TEACHER_FEEDBACK_LINK
+      : STUDENT_FEEDBACK_LINK;
   });
 
-  const handleClose = useCallback(
-    () => dispatch(hideShareDialog()),
-    [dispatch]
-  );
+  // We pull the theme from Lab2Registry because the ShareDialog is not wrapped by the lab's
+  // ThemeProvider (the header is in its own tree). We copy the lab theme to the registry
+  // in Lab2Wrapper.
+  const theme = Lab2Registry.getInstance().getTheme();
 
-  const careersUrl =
-    'https://www.amazonfutureengineer.com/careertours/careervideos';
+  if (finishUrl && dialogId === 'hoai2025') {
+    return (
+      <HoaiCongrats
+        handleClose={handleClose}
+        finishUrl={finishUrl}
+        shareUrl={shareUrl}
+        projectType={projectType}
+        theme={theme}
+      />
+    );
+  }
 
-  return (
+  return sharingDisabled() ? (
+    <div data-theme={theme}>
+      <Modal
+        title={i18n.sharingDisabledTitle()}
+        description={i18n.sharingBlockedByTeacherOpenEndedProjects()}
+        primaryButtonProps={{
+          onClick: () => dispatch(hideShareDialog()),
+          children: i18n.ok(),
+        }}
+      />
+    </div>
+  ) : (
     <FocusLock>
-      <div className={moduleStyles.dialogContainer}>
+      <div className={moduleStyles.dialogContainer} data-theme={theme}>
         <div id="share-dialog" className={moduleStyles.shareDialog}>
           <Typography
-            semanticTag="h1"
-            visualAppearance="heading-lg"
             className={moduleStyles.heading}
+            component="h1"
+            variant="h3"
+            gutterBottom
           >
             {dialogId === 'hoc2024'
               ? i18n.congratulations()
               : i18n.shareTitle()}
           </Typography>
+          <div>{dialogId === 'hoc2024' && i18n.congratsFinishedHoc()}</div>
           <div className={moduleStyles.columns}>
             <div className={moduleStyles.column}>
-              <div className={moduleStyles.share}>
-                <div id="share-qrcode-container">
-                  <QRCode value={shareUrl + '?qr=true'} size={140} />
+              <div className={moduleStyles.block}>
+                {dialogId === 'hoc2024' && (
+                  <Typography
+                    className={moduleStyles.heading}
+                    component="h2"
+                    variant="h4"
+                    gutterBottom
+                  >
+                    {i18n.shareTitle()}
+                  </Typography>
+                )}
+                <div
+                  className={moduleStyles.QRCodeContainer}
+                  id="share-qrcode-container"
+                >
+                  <div className={moduleStyles.QRCodeBorder}>
+                    <QRCode value={shareUrl + '?qr=true'} size={117} />
+                  </div>
                 </div>
                 <CopyToClipboardButton
                   shareUrl={shareUrl}
                   projectType={projectType}
                 />
+                <SubmitButtonInfo
+                  submissionStatus={submissionStatus}
+                  onSubmitClick={onSubmitClick}
+                />
               </div>
             </div>
-            <div className={moduleStyles.column}>
-              {dialogId === 'hoc2024' ? (
-                <div className={moduleStyles.careers}>
-                  Learn more about careers in technology and music.
-                  <LinkButton
-                    ariaLabel={i18n.learnMore()}
-                    href={careersUrl}
-                    text={i18n.learnMore()}
-                    type="primary"
-                    color="black"
-                    size="m"
-                    target="_blank"
-                  />
+            {dialogId === 'hoc2024' && (
+              <div className={moduleStyles.column}>
+                <AfeCareerTourBlock />
+              </div>
+            )}
+          </div>
+          <div className={moduleStyles.bottom}>
+            {feedbackLink && finishUrl && (
+              <a
+                href={feedbackLink}
+                target="_blank"
+                rel="noopener noreferrer"
+                className={moduleStyles.feedbackLink}
+                aria-label={i18n.feedbackHeader()}
+              >
+                {i18n.feedbackHeader()}
+              </a>
+            )}
+            <div className={moduleStyles.buttonGroup}>
+              {finishUrl ? (
+                <div className={moduleStyles.contents}>
+                  <MuiButton
+                    variant="outlined"
+                    color="secondary"
+                    size="medium"
+                    className={moduleStyles.keepPlayingButton}
+                    onClick={handleClose}
+                    aria-label={i18n.keepPlaying()}
+                    type="button"
+                  >
+                    {i18n.keepPlaying()}
+                  </MuiButton>
+                  <MuiButton
+                    variant="contained"
+                    color="primary"
+                    size="medium"
+                    aria-label={i18n.finish()}
+                    href={finishUrl}
+                  >
+                    {i18n.finish()}
+                  </MuiButton>
                 </div>
               ) : (
-                <div>Share your project by using these links.</div>
-              )}
-
-              {finishUrl ? (
-                <LinkButton
-                  ariaLabel={i18n.finish()}
-                  href={finishUrl}
-                  text={i18n.finish()}
-                  type="primary"
-                  size="m"
-                  className={moduleStyles.doneButton}
-                />
-              ) : (
-                <Button
-                  ariaLabel={i18n.done()}
-                  text={i18n.done()}
-                  type="primary"
-                  size="m"
+                <MuiButton
+                  variant="contained"
+                  color="primary"
+                  size="medium"
                   onClick={handleClose}
-                  className={moduleStyles.doneButton}
-                />
+                  aria-label={i18n.done()}
+                  type="button"
+                >
+                  {i18n.done()}
+                </MuiButton>
               )}
             </div>
           </div>

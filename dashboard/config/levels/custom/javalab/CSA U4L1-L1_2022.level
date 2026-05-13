@@ -22,7 +22,7 @@
       }
     },
     "teacher_markdown": "##Investigate and Modify\r\n\r\n1. When run, the program will play a bird song sound file and will draw a skybox and grass. After two second, a sun and a house will be added to the scene.\r\n\r\n2. By printing `myScene.getWidth()`(#e7e8ea) in the console, we can see that the width of the Theater scene is 400 pixels.\r\n\r\n3. Students will need to use the Manage Assets button, located on the upper-right portion of the output window, in order to be able to upload their image. They should change the filename within the `drawImage()`(#e7e8ea) method to match the exact name of the file that they uploaded to the scene.",
-    "ai_tutor_available": true
+    "ai_tutor_available": "false"
   },
   "published": true,
   "audit_log": "[{\"changed_at\":\"2022-04-07 17:20:18 +0000\",\"changed\":[\"encrypted_examples\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-04-11 16:16:05 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-04-11 16:36:54 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-04-19 21:09:14 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-10-07 17:49:17 +0000\",\"changed\":[\"contained_level_names\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2022-10-07 17:59:44 +0000\",\"changed\":[\"long_instructions\",\"encrypted_examples\",\"teacher_markdown\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"}]"

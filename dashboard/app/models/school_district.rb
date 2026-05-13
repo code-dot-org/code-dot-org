@@ -34,7 +34,7 @@ class SchoolDistrict < ApplicationRecord
   # Gets the seeding file name.
   # @param stub_school_data [Boolean] True for stub file.
   def self.get_seed_filename(stub_school_data)
-    stub_school_data ? 'test/fixtures/school_districts.tsv' : 'config/school_districts.tsv'
+    stub_school_data ? 'test/fixtures/files/school_districts.tsv' : 'config/school_districts.tsv'
   end
 
   # Seeds all the data from the source file.
@@ -173,6 +173,21 @@ class SchoolDistrict < ApplicationRecord
             state:                        row['Location State Abbr [District] 2022-23'].strip.to_s.upcase.presence,
             zip:                          row['Location ZIP [District] 2022-23'].tr('"=', ''),
             last_known_school_year_open:  OPEN_SCHOOL_STATUSES.include?(row['Updated Status [District] 2022-23']) ? '2022-2023' : nil
+          }
+        end
+      end
+
+      CDO.log.info "Seeding 2023-2024 school district data"
+      import_options_2324 = {col_sep: ",", headers: true, quote_char: "\x00", encoding: 'bom|utf-8'}
+      AWS::S3.seed_from_file('cdo-nces', "2023-2024/ccd/district.csv") do |filename|
+        SchoolDistrict.merge_from_csv(filename, import_options_2324, true, is_dry_run: false, ignore_attributes: ['last_known_school_year_open']) do |row|
+          {
+            id:                           row['Agency ID - NCES Assigned [District] Latest available year'].tr('"=', '').to_i,
+            name:                         row['Agency Name'].upcase,
+            city:                         row['Location City [District] 2023-24'].to_s.upcase.presence,
+            state:                        row['Location State Abbr [District] 2023-24'].strip.to_s.upcase.presence,
+            zip:                          row['Location ZIP [District] 2023-24'].tr('"=', ''),
+            last_known_school_year_open:  OPEN_SCHOOL_STATUSES.include?(row['Updated Status [District] 2023-24']) ? '2023-2024' : nil
           }
         end
       end

@@ -1,9 +1,9 @@
+import {Button as MuiButton} from '@mui/material';
 import PropTypes from 'prop-types';
 import React, {useEffect, useMemo, useState} from 'react';
 
 import fontConstants from '@cdo/apps/fontConstants';
-import Button from '@cdo/apps/legacySharedComponents/Button';
-import {EVENTS, PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants';
+import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import {NonSchoolOptions} from '@cdo/generated-scripts/sharedConstants';
 import i18n from '@cdo/locale';
@@ -17,28 +17,32 @@ import {schoolInfoInvalid} from './utils/schoolInfoInvalid';
 import {updateSchoolInfo} from './utils/updateSchoolInfo';
 
 export default function SchoolInfoInterstitial({
-  scriptData: {existingSchoolInfo, usIp},
+  scriptData: {
+    existingSchoolInfo,
+    usIp,
+    // TODO: ACQ-3300 remove when school info has been updated for affected users
+    affectedByMissingSchoolData,
+  },
   onClose,
 }) {
-  const schoolInfo = useSchoolInfo({
-    usIp,
-    country: existingSchoolInfo.country,
-    schoolName: existingSchoolInfo.school_name,
-    schoolId: existingSchoolInfo.school_id,
-    schoolZip: existingSchoolInfo.school_zip,
-    schoolType: existingSchoolInfo.school_type,
-  });
+  const schoolInfo = useSchoolInfo(
+    {
+      usIp,
+      country: existingSchoolInfo.country,
+      schoolName: existingSchoolInfo.school_name,
+      schoolId: existingSchoolInfo.school_id,
+      schoolZip: existingSchoolInfo.school_zip,
+      schoolType: existingSchoolInfo.school_type,
+    },
+    affectedByMissingSchoolData
+  );
 
   const [showSchoolInfoUnknownError, setShowSchoolInfoUnknownError] =
     useState(false);
   const [isOpen, setIsOpen] = useState(true);
 
   useEffect(() => {
-    analyticsReporter.sendEvent(
-      EVENTS.SCHOOL_INTERSTITIAL_SHOW,
-      {},
-      PLATFORMS.BOTH
-    );
+    analyticsReporter.sendEvent(EVENTS.SCHOOL_INTERSTITIAL_SHOW, {});
   }, []);
 
   const saveDisabled = useMemo(
@@ -63,14 +67,10 @@ export default function SchoolInfoInterstitial({
     const hasNcesId =
       schoolInfo.schoolId &&
       !Object.values(NonSchoolOptions).includes(schoolInfo.schoolId);
-    analyticsReporter.sendEvent(
-      EVENTS.SCHOOL_INTERSTITIAL_SUBMIT,
-      {
-        hasNcesId: hasNcesId.toString(),
-        attempt: showSchoolInfoUnknownError ? 2 : 1,
-      },
-      PLATFORMS.BOTH
-    );
+    analyticsReporter.sendEvent(EVENTS.SCHOOL_INTERSTITIAL_SUBMIT, {
+      hasNcesId: hasNcesId.toString(),
+      attempt: showSchoolInfoUnknownError ? 2 : 1,
+    });
 
     try {
       await updateSchoolInfo({
@@ -80,23 +80,15 @@ export default function SchoolInfoInterstitial({
         schoolZip: schoolInfo.schoolZip,
       });
 
-      analyticsReporter.sendEvent(
-        EVENTS.SCHOOL_INTERSTITIAL_SAVE_SUCCESS,
-        {
-          attempt: showSchoolInfoUnknownError ? 2 : 1,
-        },
-        PLATFORMS.BOTH
-      );
+      analyticsReporter.sendEvent(EVENTS.SCHOOL_INTERSTITIAL_SAVE_SUCCESS, {
+        attempt: showSchoolInfoUnknownError ? 2 : 1,
+      });
 
       onClose();
     } catch (error) {
-      analyticsReporter.sendEvent(
-        EVENTS.SCHOOL_INTERSTITIAL_SAVE_FAILURE,
-        {
-          attempt: showSchoolInfoUnknownError ? 2 : 1,
-        },
-        PLATFORMS.BOTH
-      );
+      analyticsReporter.sendEvent(EVENTS.SCHOOL_INTERSTITIAL_SAVE_FAILURE, {
+        attempt: showSchoolInfoUnknownError ? 2 : 1,
+      });
 
       if (!showSchoolInfoUnknownError) {
         // First failure, display error message and give the teacher a chance
@@ -110,11 +102,7 @@ export default function SchoolInfoInterstitial({
   };
 
   const dismissSchoolInfoForm = () => {
-    analyticsReporter.sendEvent(
-      EVENTS.SCHOOL_INTERSTITIAL_DISMISS,
-      {},
-      PLATFORMS.BOTH
-    );
+    analyticsReporter.sendEvent(EVENTS.SCHOOL_INTERSTITIAL_DISMISS, {});
     setIsOpen(false);
     onClose();
   };
@@ -137,23 +125,29 @@ export default function SchoolInfoInterstitial({
           <SchoolDataInputs {...schoolInfo} />
         </div>
         <div style={styles.bottom}>
-          <Button
+          <MuiButton
+            variant="outlined"
+            color="tertiary"
+            size="medium"
+            id="dismiss-button"
             onClick={dismissSchoolInfoForm}
             style={styles.button}
-            color="gray"
-            size="large"
-            text={i18n.dismiss()}
-            id="dismiss-button"
-          />
-          <Button
+            type="button"
+          >
+            {i18n.dismiss()}
+          </MuiButton>
+          <MuiButton
+            variant="contained"
+            color="primary"
+            size="medium"
+            disabled={saveDisabled}
+            id="save-button"
             onClick={handleSchoolInfoSubmit}
             style={styles.button}
-            size="large"
-            text={i18n.save()}
-            color={Button.ButtonColor.brandSecondaryDefault}
-            id="save-button"
-            disabled={saveDisabled}
-          />
+            type="button"
+          >
+            {i18n.save()}
+          </MuiButton>
         </div>
       </div>
     </BaseDialog>
@@ -173,6 +167,7 @@ SchoolInfoInterstitial.propTypes = {
       school_zip: PropTypes.string,
       school_type: PropTypes.string,
     }),
+    affectedByMissingSchoolData: PropTypes.bool,
   }).isRequired,
   onClose: PropTypes.func.isRequired,
 };
@@ -207,6 +202,7 @@ const styles = {
     color: color.red,
   },
   button: {
+    width: '6.25em',
     marginLeft: 7,
     marginRight: 7,
     marginTop: 15,

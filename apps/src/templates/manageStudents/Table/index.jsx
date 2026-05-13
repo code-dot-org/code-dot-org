@@ -1,3 +1,4 @@
+import {Button as MuiButton, Typography} from '@mui/material';
 import orderBy from 'lodash/orderBy';
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
@@ -6,17 +7,15 @@ import ReactTooltip from 'react-tooltip';
 import * as Table from 'reactabular-table';
 import * as sort from 'sortabular';
 
-import fontConstants from '@cdo/apps/fontConstants';
-import Button from '@cdo/apps/legacySharedComponents/Button';
-import {EVENTS, PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants';
+import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
-import firehoseClient from '@cdo/apps/metrics/firehose';
 import HelpTip from '@cdo/apps/sharedComponents/HelpTip';
 import Notification, {
   NotificationType,
 } from '@cdo/apps/sharedComponents/Notification';
 import CodeReviewGroupsDataApi from '@cdo/apps/templates/codeReviewGroups/CodeReviewGroupsDataApi';
 import {setSortByFamilyName} from '@cdo/apps/templates/currentUserRedux';
+import GlobalEditionWrapper from '@cdo/apps/templates/GlobalEditionWrapper';
 import AddMultipleStudents from '@cdo/apps/templates/manageStudents/AddMultipleStudents';
 import CodeReviewGroupsDialog from '@cdo/apps/templates/manageStudents/CodeReviewGroupsDialog';
 import DownloadParentLetter from '@cdo/apps/templates/manageStudents/DownloadParentLetter';
@@ -25,7 +24,6 @@ import ManageStudentsActionsHeaderCell from '@cdo/apps/templates/manageStudents/
 import ManageStudentsAgeCell from '@cdo/apps/templates/manageStudents/ManageStudentsAgeCell';
 import ManageStudentsFamilyNameCell from '@cdo/apps/templates/manageStudents/ManageStudentsFamilyNameCell';
 import ManageStudentsGenderCell from '@cdo/apps/templates/manageStudents/ManageStudentsGenderCell';
-import ManageStudentsGenderCellLegacy from '@cdo/apps/templates/manageStudents/ManageStudentsGenderCellLegacy';
 import ManageStudentsLoginInfo from '@cdo/apps/templates/manageStudents/ManageStudentsLoginInfo';
 import ManageStudentsNameCell from '@cdo/apps/templates/manageStudents/ManageStudentsNameCell';
 import {
@@ -41,49 +39,38 @@ import {
 } from '@cdo/apps/templates/manageStudents/manageStudentsRedux';
 import ManageStudentsSharingCell from '@cdo/apps/templates/manageStudents/ManageStudentsSharingCell';
 import MoveStudents from '@cdo/apps/templates/manageStudents/MoveStudents';
-import NoSectionCodeDialog from '@cdo/apps/templates/manageStudents/NoSectionCodeDialog';
 import PasswordReset from '@cdo/apps/templates/manageStudents/PasswordReset';
 import PrintLoginCards from '@cdo/apps/templates/manageStudents/PrintLoginCards';
 import SharingControlActionsHeaderCell from '@cdo/apps/templates/manageStudents/SharingControlActionsHeaderCell';
 import ShowSecret from '@cdo/apps/templates/manageStudents/ShowSecret';
 import UsStateColumn from '@cdo/apps/templates/manageStudents/Table/UsStateColumn';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
+import JoinLinkCopyButton from '@cdo/apps/templates/studioHomepages/teacherHomepageV2/JoinLink/JoinLinkCopyButton';
 import {
   tableLayoutStyles,
   sortableOptions,
 } from '@cdo/apps/templates/tables/tableConstants';
 import wrappedSortable from '@cdo/apps/templates/tables/wrapped_sortable';
 import {
-  selectedSection,
+  LOGIN_TYPES_WITH_ACTIONS_COLUMN,
+  LOGIN_TYPES_WITH_GENDER_COLUMN,
+  LOGIN_TYPES_WITH_PASSWORD_COLUMN,
+  NON_LMS_LOGIN_TYPES,
+  PICTURE_OR_WORD_LOGIN_TYPES,
+} from '@cdo/apps/templates/teacherDashboard/LoginTypeConstants';
+import {
+  selectedSectionSelector,
   syncEnabled,
   sectionCode,
   sectionName,
   sectionUnitName,
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsReduxSelectors';
 import {teacherDashboardUrl} from '@cdo/apps/templates/teacherDashboard/urlHelpers';
-import color from '@cdo/apps/util/color';
-import copyToClipboard from '@cdo/apps/util/copyToClipboard';
 import experiments from '@cdo/apps/util/experiments';
 import {SectionLoginType} from '@cdo/generated-scripts/sharedConstants';
 import i18n from '@cdo/locale';
 
-const LOGIN_TYPES_WITH_PASSWORD_COLUMN = [
-  SectionLoginType.word,
-  SectionLoginType.picture,
-  SectionLoginType.email,
-];
-const LOGIN_TYPES_WITH_ACTIONS_COLUMN = [
-  SectionLoginType.word,
-  SectionLoginType.picture,
-  SectionLoginType.email,
-  SectionLoginType.google_classroom,
-  SectionLoginType.clever,
-  SectionLoginType.lti_v1,
-];
-const LOGIN_TYPES_WITH_GENDER_COLUMN = [
-  SectionLoginType.word,
-  SectionLoginType.picture,
-];
+import moduleStyles from './table.module.scss';
 
 const MANAGE_STUDENTS_TABLE = 'ManageStudentsTable';
 
@@ -96,8 +83,9 @@ export const studentSectionDataPropType = PropTypes.shape({
   age: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
   gender: PropTypes.string,
   genderTeacherInput: PropTypes.string,
+  isDemoStudent: PropTypes.bool,
   secretWords: PropTypes.string,
-  secretPicturePath: PropTypes.string,
+  secretPictureUrl: PropTypes.string,
   sectionId: PropTypes.number,
   loginType: PropTypes.string,
   hasEverSignedIn: PropTypes.bool,
@@ -156,11 +144,8 @@ class ManageStudentsTable extends Component {
     this.getSortingColumns = this.getSortingColumns.bind(this);
     this.onSort = this.onSort.bind(this);
     this.getColumns = this.getColumns.bind(this);
-    this.copySectionCode = this.copySectionCode.bind(this);
     this.onPrintLoginCards = this.onPrintLoginCards.bind(this);
-    this.showSectionCodeDialog = this.showSectionCodeDialog.bind(this);
     this.handleSaveAllClick = this.handleSaveAllClick.bind(this);
-    this.close = this.close.bind(this);
   }
 
   state = {
@@ -170,8 +155,6 @@ class ManageStudentsTable extends Component {
         position: 0,
       },
     },
-    showCopiedMsg: false,
-    showSectionCodeDialog: false,
     showPasswordLengthFailure: false,
   };
 
@@ -209,11 +192,7 @@ class ManageStudentsTable extends Component {
 
   isMoveStudentsEnabled() {
     const {loginType} = this.props;
-    return (
-      loginType === SectionLoginType.word ||
-      loginType === SectionLoginType.picture ||
-      loginType === SectionLoginType.email
-    );
+    return NON_LMS_LOGIN_TYPES.includes(loginType);
   }
 
   // Helper function to determine if user is a teacher
@@ -230,7 +209,7 @@ class ManageStudentsTable extends Component {
   passwordHeaderFormatter() {
     const {loginType} = this.props;
     return (
-      <span style={styles.verticalAlign}>
+      <span className={moduleStyles.verticalAlign}>
         <div data-for="password" data-tip="" id="password-header">
           {this.getPasswordLabel(loginType)}
         </div>
@@ -287,12 +266,11 @@ class ManageStudentsTable extends Component {
                 }
               />
             )}
-            {(rowData.loginType === SectionLoginType.word ||
-              rowData.loginType === SectionLoginType.picture) && (
+            {PICTURE_OR_WORD_LOGIN_TYPES.includes(rowData.loginType) && (
               <ShowSecret
                 initialIsShowing={false}
                 secretWord={rowData.secretWords}
-                secretPicture={rowData.secretPicturePath}
+                secretPictureUrl={rowData.secretPictureUrl}
                 loginType={rowData.loginType}
                 id={rowData.id}
                 sectionId={sectionId}
@@ -301,7 +279,11 @@ class ManageStudentsTable extends Component {
             )}
           </div>
         )}
-        {rowData.isEditing && <div>{i18n.autoGenerated()}</div>}
+        {rowData.isEditing && (
+          <Typography variant="body3" component="p" sx={{textAlign: 'center'}}>
+            {i18n.autoGenerated()}
+          </Typography>
+        )}
       </div>
     );
   }
@@ -332,18 +314,6 @@ class ManageStudentsTable extends Component {
     );
   }
 
-  genderLegacyFormatter(gender, {rowData}) {
-    const editedValue = rowData.isEditing ? rowData.editingData.gender : '';
-    return (
-      <ManageStudentsGenderCellLegacy
-        gender={gender}
-        id={rowData.id}
-        isEditing={rowData.isEditing}
-        editedValue={editedValue}
-      />
-    );
-  }
-
   nameFormatter(name, {rowData}) {
     const editedValue = rowData.isEditing ? rowData.editingData.name : '';
     return (
@@ -353,6 +323,7 @@ class ManageStudentsTable extends Component {
         name={name}
         username={rowData.username}
         email={rowData.email}
+        isDemoStudent={rowData.isDemoStudent}
         isEditing={rowData.isEditing}
         editedValue={editedValue}
       />
@@ -389,8 +360,9 @@ class ManageStudentsTable extends Component {
         studentName={rowData.name}
         hasEverSignedIn={rowData.hasEverSignedIn}
         dependsOnThisSectionForLogin={rowData.dependsOnThisSectionForLogin}
-        canEdit={!this.isTeacher(rowData.userType)}
+        canEdit={!this.isTeacher(rowData.userType) && !rowData.isDemoStudent}
         rowData={rowData}
+        syncEnabled={this.props.syncEnabled}
       />
     );
   }
@@ -403,8 +375,7 @@ class ManageStudentsTable extends Component {
       {
         sectionId: this.props.sectionId,
         sectionLoginType: this.props.loginType,
-      },
-      PLATFORMS.STATSIG
+      }
     );
   }
 
@@ -413,17 +384,21 @@ class ManageStudentsTable extends Component {
     return (
       <div>
         {numberOfEditingRows > 1 && (
-          <Button
-            __useDeprecatedTag
+          <MuiButton
+            variant="contained"
+            color="primary"
+            size="small"
             onClick={this.handleSaveAllClick}
-            color={Button.ButtonColor.brandSecondaryDefault}
-            text={i18n.saveAll()}
-          />
+            className={moduleStyles.actionColumnHeaderSaveAllButton}
+            type="button"
+          >
+            {i18n.saveAll()}
+          </MuiButton>
         )}
         {numberOfEditingRows <= 1 && (
-          <span style={styles.verticalAlign}>
-            <div style={styles.headerName}>{i18n.actions()}</div>
-            <div style={styles.headerIcon}>
+          <span className={moduleStyles.verticalAlign}>
+            <div className={moduleStyles.headerName}>{i18n.actions()}</div>
+            <div>
               <ManageStudentsActionsHeaderCell
                 editAll={this.props.editAll}
                 isShareColumnVisible={this.props.showSharingColumn}
@@ -437,8 +412,12 @@ class ManageStudentsTable extends Component {
 
   projectSharingHeaderFormatter() {
     return (
-      <span style={styles.verticalAlign}>
-        <div style={styles.headerName} data-for="explain-sharing" data-tip="">
+      <span className={moduleStyles.verticalAlign}>
+        <div
+          className={moduleStyles.headerName}
+          data-for="explain-sharing"
+          data-tip=""
+        >
           {i18n.projectSharingColumnHeader()}
         </div>
         <ReactTooltip
@@ -451,7 +430,7 @@ class ManageStudentsTable extends Component {
         >
           <div>{i18n.shareSettingMoreDetailsTooltip()}</div>
         </ReactTooltip>
-        <div style={styles.headerIcon}>
+        <div>
           <SharingControlActionsHeaderCell />
         </div>
       </span>
@@ -622,7 +601,7 @@ class ManageStudentsTable extends Component {
         props: {
           style: {
             ...tableLayoutStyles.headerCell,
-            width: 90,
+            width: 110,
           },
         },
         transforms: [sortable],
@@ -632,7 +611,7 @@ class ManageStudentsTable extends Component {
         props: {
           style: {
             ...tableLayoutStyles.cell,
-            width: 90,
+            width: 110,
           },
         },
       },
@@ -640,52 +619,24 @@ class ManageStudentsTable extends Component {
   }
 
   genderColumn(sortable) {
-    if (
-      experiments.isEnabledAllowingQueryString(
-        experiments.GENDER_FEATURE_ENABLED
-      )
-    ) {
-      return {
-        property: 'genderTeacherInput',
-        header: {
-          label: i18n.gender(),
-          props: {
-            style: {
-              ...tableLayoutStyles.headerCell,
-              width: 120,
-            },
-          },
-          transforms: [sortable],
-        },
-        cell: {
-          formatters: [this.genderFormatter],
-          props: {
-            style: {
-              ...tableLayoutStyles.cell,
-              width: 120,
-            },
-          },
-        },
-      };
-    }
     return {
-      property: 'gender',
+      property: 'genderTeacherInput',
       header: {
         label: i18n.gender(),
         props: {
           style: {
             ...tableLayoutStyles.headerCell,
-            width: 120,
+            width: 140,
           },
         },
         transforms: [sortable],
       },
       cell: {
-        formatters: [this.genderLegacyFormatter],
+        formatters: [this.genderFormatter],
         props: {
           style: {
             ...tableLayoutStyles.cell,
-            width: 120,
+            width: 140,
           },
         },
       },
@@ -699,9 +650,9 @@ class ManageStudentsTable extends Component {
         formatters: [this.passwordHeaderFormatter],
         props: {
           style: {
+            ...tableLayoutStyles.cell,
             ...tableLayoutStyles.headerCell,
-            ...tableLayoutStyles.unsortableHeader,
-            width: 180,
+            width: 220,
           },
         },
       },
@@ -710,7 +661,8 @@ class ManageStudentsTable extends Component {
         props: {
           style: {
             ...tableLayoutStyles.cell,
-            width: 180,
+            width: 220,
+            maxWidth: 220,
           },
         },
       },
@@ -725,8 +677,8 @@ class ManageStudentsTable extends Component {
         formatters: [this.projectSharingHeaderFormatter],
         props: {
           style: {
+            ...tableLayoutStyles.cell,
             ...tableLayoutStyles.headerCell,
-            ...tableLayoutStyles.unsortableHeader,
             width: 130,
           },
         },
@@ -751,8 +703,8 @@ class ManageStudentsTable extends Component {
         formatters: [this.actionsHeaderFormatter],
         props: {
           style: {
+            ...tableLayoutStyles.cell,
             ...tableLayoutStyles.headerCell,
-            ...tableLayoutStyles.unsortableHeader,
           },
         },
       },
@@ -767,53 +719,11 @@ class ManageStudentsTable extends Component {
     };
   }
 
-  copySectionCode() {
-    const {sectionId, sectionCode, studioUrlPrefix} = this.props;
-    const joinLink = `${studioUrlPrefix}/join/${sectionCode}`;
-    copyToClipboard(joinLink);
-    firehoseClient.putRecord(
-      {
-        study: 'teacher-dashboard',
-        study_group: 'manage-students-actions',
-        event: 'copy-section-code-join-link',
-        data_json: JSON.stringify({
-          sectionId: sectionId,
-        }),
-      },
-      {includeUserId: true}
-    );
-    this.setState({showCopiedMsg: true});
-    setTimeout(() => {
-      this.setState({showCopiedMsg: false});
-    }, 5000);
-    clearTimeout();
-  }
-
   onPrintLoginCards() {
     const {sectionId} = this.props;
     const url =
       teacherDashboardUrl(sectionId, '/login_info') + `?autoPrint=true`;
     window.open(url, '_blank', 'noopener,noreferrer');
-  }
-
-  showSectionCodeDialog() {
-    const {sectionId} = this.props;
-    firehoseClient.putRecord(
-      {
-        study: 'teacher-dashboard',
-        study_group: 'manage-students-actions',
-        event: 'no-section-code-link',
-        data_json: JSON.stringify({
-          sectionId: sectionId,
-        }),
-      },
-      {includeUserId: true}
-    );
-    this.setState({showSectionCodeDialog: true});
-  }
-
-  close() {
-    this.setState({showSectionCodeDialog: false});
   }
 
   render() {
@@ -847,11 +757,6 @@ class ManageStudentsTable extends Component {
       studentData,
       isSectionAssignedCSA,
     } = this.props;
-
-    const noSectionCode = [
-      SectionLoginType.google_classroom,
-      SectionLoginType.clever,
-    ];
 
     return (
       <div>
@@ -891,25 +796,21 @@ class ManageStudentsTable extends Component {
         )}
         {transferStatus.status === TransferStatus.SUCCESS &&
           this.renderTransferSuccessNotification()}
-        <div>
-          {(loginType === SectionLoginType.word ||
-            loginType === SectionLoginType.picture) && (
-            <div style={styles.buttonWithMargin}>
+        <div className={moduleStyles.additionalControlsContainer}>
+          <div className={moduleStyles.additionalControlsButtonsRow}>
+            {PICTURE_OR_WORD_LOGIN_TYPES.includes(loginType) && (
               <AddMultipleStudents sectionId={this.props.sectionId} />
-            </div>
-          )}
-          {this.isMoveStudentsEnabled() && (
-            <div style={styles.button}>
+            )}
+            {this.isMoveStudentsEnabled() && (
               <MoveStudents
-                studentData={this.studentDataMinusBlanks()}
+                studentData={this.studentDataMinusBlanks().filter(
+                  s => !s.isDemoStudent
+                )}
                 transferData={transferData}
                 transferStatus={transferStatus}
               />
-            </div>
-          )}
-          {(loginType === SectionLoginType.word ||
-            loginType === SectionLoginType.picture) && (
-            <div style={styles.button}>
+            )}
+            {PICTURE_OR_WORD_LOGIN_TYPES.includes(loginType) && (
               <PrintLoginCards
                 sectionId={this.props.sectionId}
                 entryPointForMetrics={
@@ -917,127 +818,62 @@ class ManageStudentsTable extends Component {
                 }
                 onPrintLoginCards={this.onPrintLoginCards}
               />
-            </div>
-          )}
-          <div style={styles.button}>
-            <DownloadParentLetter
-              sectionId={this.props.sectionId}
-              buttonMetricsCategory={
-                ParentLetterButtonMetricsCategory.ABOVE_TABLE
-              }
+            )}
+            <GlobalEditionWrapper
+              component={() => (
+                <DownloadParentLetter
+                  sectionId={this.props.sectionId}
+                  buttonMetricsCategory={
+                    ParentLetterButtonMetricsCategory.ABOVE_TABLE
+                  }
+                />
+              )}
+              componentId="DownloadParentLetterButton"
+            />
+            {isSectionAssignedCSA && (
+              <CodeReviewGroupsDialog
+                dataApi={new CodeReviewGroupsDataApi(sectionId)}
+              />
+            )}
+          </div>
+          <div>
+            <JoinLinkCopyButton
+              sectionId={sectionId}
+              sectionCode={sectionCode}
+              loginType={loginType}
+              studioUrlPrefix={this.props.studioUrlPrefix}
+              sourceName="ManageStudentsTable"
             />
           </div>
-          {/* Passes button style to CodeReviewGroupsDialog to avoid extra div,
-            but is otherwise similar to other button/modal components here.
-            Despite being unused in this component, we pass the dataApi object
-            so that it can be more easily stubbed in tests. */}
-          {isSectionAssignedCSA && (
-            <CodeReviewGroupsDialog
-              dataApi={new CodeReviewGroupsDataApi(sectionId)}
-              buttonContainerStyle={styles.button}
-            />
-          )}
-          {LOGIN_TYPES_WITH_PASSWORD_COLUMN.includes(loginType) && (
-            <div
-              style={styles.sectionCodeBox}
-              data-for="section-code"
-              data-tip
-              onClick={this.copySectionCode}
-            >
-              {!this.state.showCopiedMsg && (
-                <span>
-                  <span>{i18n.sectionCodeWithColon()}</span>
-                  <span style={styles.sectionCode}>{sectionCode}</span>
-                  <ReactTooltip id="section-code" role="tooltip" effect="solid">
-                    <div>{i18n.copySectionCodeTooltip()}</div>
-                  </ReactTooltip>
-                </span>
-              )}
-              {this.state.showCopiedMsg && (
-                <span>{i18n.copySectionCodeSuccess()}</span>
-              )}
-            </div>
-          )}
-          {noSectionCode.includes(loginType) && (
-            <div style={styles.sectionCodeBox}>
-              {i18n.sectionCodeWithColon()}
-              <span
-                style={styles.sectionCodeNotApplicable}
-              >{` ${i18n.notApplicable()}. `}</span>
-              <span style={styles.noSectionCode}>
-                <a onClick={() => this.showSectionCodeDialog()}>
-                  {i18n.whyWithQuestionMark()}
-                </a>
-              </span>
-              <NoSectionCodeDialog
-                typeClassroom={loginType}
-                handleClose={this.close}
-                isOpen={this.state.showSectionCodeDialog}
-              />
-            </div>
-          )}
         </div>
-        <Table.Provider
-          columns={columns}
-          style={tableLayoutStyles.table}
-          id="uitest-manage-students-table"
-        >
-          <Table.Header />
-          <Table.Body rows={sortedRows} rowKey="id" />
-        </Table.Provider>
-        <ManageStudentsLoginInfo
-          sectionId={sectionId}
-          sectionName={sectionName}
-          studentData={studentData}
-          loginType={loginType}
-          sectionCode={this.props.sectionCode}
-          studioUrlPrefix={this.props.studioUrlPrefix}
+        <div>
+          <Table.Provider
+            columns={columns}
+            style={{...tableLayoutStyles.table, width: '100%', minWidth: 1050}}
+            id="uitest-manage-students-table"
+          >
+            <Table.Header />
+            <Table.Body rows={sortedRows} rowKey="id" />
+          </Table.Provider>
+        </div>
+
+        <GlobalEditionWrapper
+          component={ManageStudentsLoginInfo}
+          componentId="ManageStudentsLoginInfo"
+          props={{
+            sectionId: sectionId,
+            sectionName: sectionName,
+            studentData: studentData,
+            loginType: loginType,
+            sectionCode: this.props.sectionCode,
+            studioUrlPrefix: this.props.studioUrlPrefix,
+            providePrivacyLetter: true,
+          }}
         />
       </div>
     );
   }
 }
-
-const styles = {
-  headerName: {
-    width: '60%',
-    float: 'left',
-    marginRight: 5,
-  },
-  headerIcon: {
-    width: '20%',
-    float: 'left',
-  },
-  button: {
-    float: 'left',
-  },
-  buttonWithMargin: {
-    marginRight: 5,
-    float: 'left',
-  },
-  verticalAlign: {
-    display: 'flex',
-    alignItems: 'center',
-  },
-  sectionCodeBox: {
-    float: 'right',
-    lineHeight: '30px',
-  },
-  sectionCode: {
-    marginLeft: 5,
-    color: color.teal,
-    ...fontConstants['main-font-bold'],
-    cursor: 'copy',
-  },
-  noSectionCode: {
-    color: color.teal,
-    textDecoration: 'none',
-    cursor: 'pointer',
-  },
-  sectionCodeNotApplicable: {
-    ...fontConstants['main-font-bold'],
-  },
-};
 
 // The "add row" should always be pinned to the top when sorting.
 // The "new student rows" should always be next.
@@ -1131,7 +967,7 @@ export default connect(
         .participantType,
     loginType: state.manageStudents.loginType,
     studentData: convertStudentDataToArray(state.manageStudents.studentData),
-    isSectionAssignedCSA: selectedSection(state).isAssignedCSA,
+    isSectionAssignedCSA: selectedSectionSelector(state).isAssignedCSA,
     editingData: state.manageStudents.editingData,
     showSharingColumn: state.manageStudents.showSharingColumn,
     addStatus: state.manageStudents.addStatus,

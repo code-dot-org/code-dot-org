@@ -1,0 +1,46 @@
+<Panels>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 73,
+  "created_at": "2026-02-19T19:19:57.000Z",
+  "level_num": "custom",
+  "user_id": 18754,
+  "properties": {
+    "encrypted": "false",
+    "offer_browser_tts": "false",
+    "panels": [
+      {
+        "text": "###Map Apps Traffic Predictions\nHow does it know traffic before you get there?",
+        "imageUrl": "https://images.code.org/83d2b297559cd185dffda18aa0c0c943-panel1.png",
+        "key": "AI examples test-742a2562-4df2-42a4-a132-00423a12468b"
+      },
+      {
+        "text": "###TikTok / Instagram “For You” Page\nHow does it decide what to show you?",
+        "imageUrl": "https://images.code.org/f8691436f46fc68dc8aacb580745d7b3-panel2.png",
+        "key": "AI examples test-611ba198-a0e5-4fb2-8623-d114612f2ef5"
+      },
+      {
+        "text": "###Music App “Discover Weekly”\nHow does it predict what music you’ll like?",
+        "imageUrl": "https://images.code.org/f59b7cde05dfb5b085bf9fc1770ffa21-panel3.png",
+        "key": "AI examples test-a7fb6622-0cbc-4032-8f3c-54ab1182fa8d"
+      },
+      {
+        "text": "###Snapchat Filters & Face Tracking\nHow does it know where your eyes and mouth are?",
+        "imageUrl": "https://images.code.org/b6e63b01e4aea9c2a3d589ab3853d7d9-panel4.png",
+        "key": "AI examples test-5c7edadc-f372-4c61-9413-8f4f1d4b06cf"
+      },
+      {
+        "text": "###Autocorrect & Predictive Text\nHow does your phone guess your next word?",
+        "imageUrl": "https://images.code.org/ba5dc2d53e50e8010ed31ba347ae98ea-panel5.png",
+        "key": "AI examples test-5847fbef-aa70-468f-b8cc-3a1c68213de7"
+      },
+      {
+        "text": "###Face ID on Your Phone\nHow does it recognize you?",
+        "imageUrl": "https://images.code.org/edf16b271c007f2bf9d26dae7363dd3f-panel6.png",
+        "key": "AI examples test-92c937c2-dec7-4976-bff5-feb3e667a334"
+      }
+    ]
+  },
+  "audit_log": "[{\"changed_at\":\"2026-02-19 19:34:44 +0000\",\"changed\":[],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"}]"
+}]]></config>
+</Panels>

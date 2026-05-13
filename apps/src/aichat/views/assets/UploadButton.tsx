@@ -1,0 +1,182 @@
+import {ActionDropdown} from '@code-dot-org/component-library/dropdown';
+import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
+import {Button as MuiButton, IconButton as MuiIconButton} from '@mui/material';
+import React, {ChangeEvent, useState} from 'react';
+
+import StarterAssetsDialog from '@cdo/apps/lab2/views/components/starterAssetsDialog';
+import {AssetData} from '@cdo/apps/lab2/views/components/starterAssetsDialog/types';
+import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
+import useHiddenFileInput from '@cdo/apps/util/hooks/useHiddenFileInput';
+import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
+
+import {MAX_NUM_FILES} from '../../constants';
+import {addStagedFile, sendAnalytics, uploadFiles} from '../../redux';
+import {AssetSource, ChatAsset} from '../../types';
+
+export interface UploadButtonProps {
+  isDisabled: boolean;
+  levelName: string;
+  buildAssetUrl: (asset: ChatAsset) => string;
+  acceptedFileTypes: string[];
+  hasStarterAssets?: boolean;
+  showLabel?: boolean;
+}
+
+const UploadButton: React.FC<UploadButtonProps> = ({
+  isDisabled,
+  levelName,
+  buildAssetUrl,
+  acceptedFileTypes,
+  hasStarterAssets = false,
+  showLabel = true,
+}) => {
+  const dispatch = useAppDispatch();
+  const numStagedFiles = useAppSelector(
+    state => state.aichat.stagedFiles.length
+  );
+  const numAllowedFiles = MAX_NUM_FILES - numStagedFiles;
+  const [showAssetManager, setShowAssetManager] = useState(false);
+
+  const onUploadFiles = async (event: ChangeEvent<HTMLInputElement>) => {
+    const files = event.target.files;
+    if (!files) {
+      return;
+    }
+    dispatch(uploadFiles({files: Array.from(files), buildAssetUrl}));
+  };
+
+  const onSelectStarterAssets = (assets: AssetData[]) => {
+    for (const asset of assets) {
+      dispatch(
+        addStagedFile({
+          key: `${asset.filename}-${Date.now()}`,
+          asset: {
+            filename: asset.filename,
+            source: AssetSource.LEVEL,
+          },
+          loaded: true,
+        })
+      );
+    }
+    const fileCount = assets.length;
+    const fileCountPdf =
+      assets?.filter(asset => asset.filename.endsWith('.pdf')).length || 0;
+    const fileCountImage = fileCount - fileCountPdf;
+
+    dispatch(
+      sendAnalytics(EVENTS.AICHAT_MULTIMODAL_UPLOAD_STAGED, {
+        source: AssetSource.LEVEL,
+        fileCountSuccess: fileCount,
+        fileCountImage,
+        fileCountPdf,
+      })
+    );
+  };
+
+  const [openFileInput, FileInput] = useHiddenFileInput(
+    onUploadFiles,
+    acceptedFileTypes.join(','),
+    true
+  );
+
+  const onDeviceUploadClick = () => {
+    openFileInput();
+    dispatch(
+      sendAnalytics(EVENTS.AICHAT_MULTIMODAL_UPLOAD_OPENED, {
+        source: AssetSource.PROJECT,
+      })
+    );
+  };
+
+  const buttonPropsCommon = {
+    variant: 'outlined' as const,
+    color: 'tertiary' as const,
+  };
+
+  const buttonPropsWithLabel = {
+    ...buttonPropsCommon,
+    children: 'Add file',
+    startIcon: <FontAwesomeV6Icon iconName="plus" iconStyle="solid" />,
+  };
+
+  const buttonPropsIconOnly = {
+    ...buttonPropsCommon,
+    children: <FontAwesomeV6Icon iconName="plus" iconStyle="solid" />,
+  };
+
+  const isButtonDisabled = numStagedFiles >= MAX_NUM_FILES || isDisabled;
+
+  const uploadButton = hasStarterAssets ? (
+    <ActionDropdown
+      size="xs"
+      disabled={isButtonDisabled}
+      name="uploadDropdown"
+      labelText={'Upload'}
+      useIconButton={!showLabel}
+      triggerButtonProps={
+        showLabel ? buttonPropsWithLabel : buttonPropsIconOnly
+      }
+      menuVerticalPlacement="top"
+      options={[
+        {
+          value: 'fromLibrary',
+          label: 'From Library',
+          icon: {iconName: 'copy'},
+          onClick: () => {
+            setShowAssetManager(true);
+            dispatch(
+              sendAnalytics(EVENTS.AICHAT_MULTIMODAL_UPLOAD_OPENED, {
+                source: AssetSource.LEVEL,
+              })
+            );
+          },
+        },
+        {
+          value: 'fromDevice',
+          label: 'From Device',
+          icon: {iconName: 'file-magnifying-glass'},
+          onClick: onDeviceUploadClick,
+        },
+      ]}
+    />
+  ) : showLabel ? (
+    <MuiButton
+      variant={buttonPropsCommon.variant}
+      color={buttonPropsCommon.color}
+      size="extraSmall"
+      disabled={isButtonDisabled}
+      onClick={onDeviceUploadClick}
+      startIcon={<FontAwesomeV6Icon iconName="plus" iconStyle="solid" />}
+    >
+      Add file
+    </MuiButton>
+  ) : (
+    <MuiIconButton
+      variant={buttonPropsCommon.variant}
+      color={buttonPropsCommon.color}
+      size="extraSmall"
+      disabled={isButtonDisabled}
+      onClick={onDeviceUploadClick}
+    >
+      <FontAwesomeV6Icon iconName="plus" iconStyle="solid" />
+    </MuiIconButton>
+  );
+
+  return (
+    <>
+      {levelName && showAssetManager && (
+        <StarterAssetsDialog
+          levelName={levelName}
+          onClose={() => setShowAssetManager(false)}
+          mode="select"
+          onSelect={onSelectStarterAssets}
+          limit={numAllowedFiles}
+        />
+      )}
+      <FileInput />
+      {uploadButton}
+    </>
+  );
+};
+
+export default UploadButton;

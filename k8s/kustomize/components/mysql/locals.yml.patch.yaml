@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: cdo-locals.yml
+data:
+  db_cluster_id: "cdo-mysql"
+  db_endpoint_writer: "cdo-mysql"
+  db_endpoint_writer_port: "3306"
+  db_endpoint_proxy_writer: "cdo-mysql"
+  db_endpoint_proxy_writer_port: "3306"
+  db_endpoint_proxy_reader: "cdo-mysql"
+  db_endpoint_proxy_reader_port: "3306"
+  db_endpoint_proxy_reporting: "cdo-mysql"
+  db_endpoint_proxy_reporting_port: "3306"

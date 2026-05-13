@@ -4,24 +4,24 @@ class Pd::WorkshopSurveyResultsHelperTest < ActionView::TestCase
   include Pd::WorkshopSurveyResultsHelper
 
   test 'summarize summarizes teachercons as expected' do
-    enrollment_1 = create :pd_enrollment
+    enrollment_1 = create(:pd_enrollment)
     enrollment_1.workshop.facilitators << create(:facilitator, name: 'Facilitator Bob')
-    hash_1 = build :pd_teachercon_survey_hash
+    hash_1 = build(:pd_teachercon_survey_hash)
     hash_1[:whoFacilitated] = ['Facilitator Bob']
     hash_1[:thingsFacilitatorDidWell] = {'Facilitator Bob': 'Bob did well'}
     hash_1[:thingsFacilitatorCouldImprove] = {'Facilitator Bob': 'Bob could improve'}
-    create :pd_teachercon_survey, pd_enrollment: enrollment_1, form_data: hash_1.to_json
+    create(:pd_teachercon_survey, pd_enrollment: enrollment_1, form_data: hash_1.to_json)
 
-    enrollment_2 = create :pd_enrollment
+    enrollment_2 = create(:pd_enrollment)
     enrollment_2.workshop.facilitators << create(:facilitator, name: 'Facilitator Jane')
-    hash_2 = build :pd_teachercon_survey_hash
+    hash_2 = build(:pd_teachercon_survey_hash)
     hash_2[:receivedClearCommunication] = 'Strongly Disagree'
     hash_2[:venueFeedback] = 'more venue feedback'
     hash_2[:howCouldImprove] = 'so much'
     hash_2[:whoFacilitated] = ['Facilitator Jane']
     hash_2[:thingsFacilitatorDidWell] = {'Facilitator Jane': 'Jane did well'}
     hash_2[:thingsFacilitatorCouldImprove] = {'Facilitator Jane': 'Jane could improve'}
-    create :pd_teachercon_survey, form_data: hash_2.to_json, pd_enrollment: enrollment_2
+    create(:pd_teachercon_survey, form_data: hash_2.to_json, pd_enrollment: enrollment_2)
     workshops = [enrollment_1.workshop, enrollment_2.workshop]
     workshops.each {|w| w.update(course: Pd::Workshop::COURSE_CSP, subject: Pd::Workshop::SUBJECT_CSP_TEACHER_CON)}
 
@@ -40,8 +40,27 @@ class Pd::WorkshopSurveyResultsHelperTest < ActionView::TestCase
   end
 
   test 'averaging across multiple surveys' do
-    workshop_1 = create :workshop, :teachercon, num_sessions: 1, num_facilitators: 2, num_completed_surveys: 5
-    workshop_2 = create :workshop, :teachercon, num_sessions: 1, num_facilitators: 3, num_completed_surveys: 10
+    workshop_1 = build(:workshop, :teachercon, num_sessions: 1, num_facilitators: 2)
+    # workshop subject is deprecated so validation must be skipped
+    workshop_1.save(validate: false)
+
+    workshop_2 = build(:workshop, :teachercon, num_sessions: 1, num_facilitators: 3)
+    # workshop subject is deprecated so validation must be skipped
+    workshop_2.save(validate: false)
+
+    refute_nil workshop_1, 'workshop_1 should not be nil'
+    refute_nil workshop_2, 'workshop_2 should not be nil'
+
+    # Manually create surveys for the workshops
+    5.times do
+      enrollment = create(:pd_enrollment, workshop: workshop_1)
+      create(:pd_teachercon_survey, pd_enrollment: enrollment)
+    end
+
+    10.times do
+      enrollment = create(:pd_enrollment, workshop: workshop_2)
+      create(:pd_teachercon_survey, pd_enrollment: enrollment)
+    end
 
     workshop_1.survey_responses.each do |response|
       response.update_form_data_hash(

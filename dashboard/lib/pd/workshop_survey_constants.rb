@@ -132,9 +132,6 @@ module Pd
       CSF_CATEGORY => CSF_SURVEY_INDEXES.values.freeze
     }
 
-    SURVEY_LINKS = {
-      COURSE_BUILD_YOUR_OWN_TEACHER: 'form/professional_learning_educator_post_workshop_survey'.freeze,
-      COURSE_BUILD_YOUR_OWN_FACILITATOR: 'form/professional_learning_facilitator_post_workshop_survey'.freeze
-    }
+    BUILD_YOUR_OWN_FACILITATOR_POST_SURVEY = 'form/professional_learning_facilitator_post_workshop_survey'.freeze
   end
 end

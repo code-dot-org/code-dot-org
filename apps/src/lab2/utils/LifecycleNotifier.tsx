@@ -15,7 +15,11 @@ type CallbackArgs = {
   [LifecycleEvent.LevelLoadCompleted]: [
     levelProperties: LevelProperties,
     channel: Channel | undefined,
-    initialSources: ProjectSources | undefined
+    initialSources: ProjectSources | undefined,
+    abuseScore: number | undefined,
+    isReadOnly: boolean | undefined,
+    projectSharingDisabled: boolean | undefined,
+    isTeacherOfProjectOwner: boolean | undefined
   ];
 };
 
@@ -38,6 +42,7 @@ class LifecycleNotifier {
       this.listeners[event] = [];
     }
     this.listeners[event]?.push(callback);
+    return this;
   }
 
   removeListener<T extends LifecycleEvent>(event: T, callback: Callback<T>) {
@@ -47,10 +52,13 @@ class LifecycleNotifier {
         this.listeners[event].splice(index, 1);
       }
     }
+    return this;
   }
 
   notify<T extends LifecycleEvent>(event: T, ...args: CallbackArgs[T]) {
-    this.listeners[event]?.forEach(callback => callback(...args));
+    // Copy the listener list to avoid skipping listeners if the list is modified during iteration.
+    const staticListenerList = [...(this.listeners[event] || [])];
+    staticListenerList.forEach(callback => callback(...args));
   }
 }
 

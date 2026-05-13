@@ -1,0 +1,52 @@
+<Weblab2>
+  <config><![CDATA[{
+  "game_id": 74,
+  "created_at": "2026-01-01T01:30:43.000Z",
+  "level_num": "custom",
+  "user_id": 19378,
+  "properties": {
+    "encrypted": "false",
+    "display_name": "Debugging: Out of Order",
+    "long_instructions": "# Debug: Out of Order\r\n\r\nEven though the preview of this webpage looks just fine, all of the code is out of order! This will cause problems later, so it's important everything is formatted and nested correctly. Can we rearrange the code so it is formatted correctly?\r\n\r\n# Do This\r\n\r\n1) Re-arrange the code using copy-and-paste so the tags are in the correct order and nested correctly\r\n* Compare the problems you fixed with a neighbor",
+    "bubble_choice_description": "All of the code is out of order! Can we rearrange the code so it is formatted correctly?",
+    "thumbnail_url": "https://images.code.org/42f9b5f495e43bcf9029044d315c27f0-debug3.png",
+    "submittable": "false",
+    "hide_share_and_remix": "true",
+    "disable_edit_run_for_submission": "false",
+    "widget_view": "false",
+    "initial_view_mode": "split",
+    "ai_tutor_mode": "engineer",
+    "predict_settings": {
+      "isPredictLevel": false,
+      "solution": "",
+      "questionType": "freeResponse",
+      "placeholderText": "",
+      "multipleChoiceOptions": [
+        ""
+      ],
+      "freeResponseHeight": 50,
+      "codeEditableAfterSubmit": false
+    },
+    "start_sources": {
+      "folders": {
+      },
+      "files": {
+        "1": {
+          "id": "1",
+          "name": "index.html",
+          "language": "html",
+          "contents": "</body>\n\n<head>\n  \n  <body>\n    \n    <p>This should be the first paragraph!</p>\n    \n<html>\n\t\n    <!DOCTYPE html>    \n  \n\t</head>\n\t\n    </html>    \n  \n    <p>This should be the second paragraph!</p>",
+          "active": true,
+          "folderId": "0"
+        }
+      },
+      "openFiles": [
+        "1"
+      ]
+    },
+    "encrypted_exemplar_sources": "Dn7HQlwz0pFFO6c3d2DdXB/55clGnnwQzLWAr3sovMrWt2HFvH/UaEd1Aw6m\nH7NPCh2Lr52063tDqEoStRSedn5LQYmzKopHnMdxEddzMa1ry9pfnBII8zb7\nMD3Gw+QxEX86iJuKhBFDqXvjC26WIR0dnDES221G1n9EocbLnjbj+wGlS/mB\nbh/k49hgcmYIw1Hpq+tK9pQ2vccn6ze/YTsykZMcWkfvhw9NalwGMM4hhVaj\nUyJjG9iE1AgFWVOlIf8BwtARJ7jtZwdA9QIEQeGivHyEkK75L+ovUVAyffrL\ngnwchEZPqUJURmAfDSQxDXSF2OxsbXHpyZz9BVVh9Q3eTCDX2fh9R5Pg1bkH\nzZvxcw5VkmJhhHU09OwPJZTaHsw9Q/8VT6/CREkQxJO4k8B3DqYwAIC+RtST\n8xeFo0MzilGu6faSICt434UpUlhm2Dv0EcWLmR6Bo8yz9qlBg9catmb7bF5U\nqddKhCm01mj68+xPptL7GK7Eo+SE06G+rXn5S11HCQq7MUUf8I2d7A==\n"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-01-01 01:31:07 +0000\",\"changed\":[],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-01-01 01:31:21 +0000\",\"changed\":[],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"}]"
+}]]></config>
+</Weblab2>

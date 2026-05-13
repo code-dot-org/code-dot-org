@@ -1,0 +1,57 @@
+name 'pl-java-class-structure-no-argument-15_pl'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Creating an Object 
+
+#### In the main file where we run our code in the main method, we create a **new object** by calling the constructor and using the `new` keyword. 
+
+<img src="https://images.code.org/977d8166889c5bb73d2fb5d6f1b94ff0-image-1747769578974.png" alt="digram of a class indicating the name of the class, attributes, and behaviors" width="350px" style="border-radius:10px;display: block; margin-left: auto; margin-right: auto;">
+
+#### A constructor is a block of code that has the same name as the class and tells the computer how to create a new object.
+
+
+#### When a constructor is called, Java looks for the constructor in the class and executes the code inside the constructor before moving on to the next statement.
+
+<img src="https://images.code.org/6ffd3bff73c111ed4aed4a0d65cc522b-image-1747770168548.png" alt="digram of a class indicating the name of the class, attributes, and behaviors" width="550px" style="border-radius:10px;display: block; margin-left: auto; margin-right: auto;">
+
+
+
+## Types of Constructors
+
+#### In Java, you can write constructors with or without parameters. Constructors without parameters create a default object with set values. Constructors with parameters allow you to customize the object when setting it up.
+
+<div style="display: flex; gap: 20px; justify-content: center; flex-wrap: wrap;">
+
+  <!-- Box 1 -->
+  <div style="background-color: #f0f0f0; border-radius: 10px; box-shadow: 2px 2px 5px rgba(0,0,0,0.1); width: 300px; padding: 15px; text-align: center;">
+    <img src="https://images.code.org/5b103f3f7a24f79c4715dfda8264c785-image-1747772398235.png" alt="Example of a non-argument constructor for the painter class with instant variables xLocation, yLocation, direction, and remainingPaint" style="width: 100%; border-radius: 10px;">
+    <p style="margin-top: 10px; font-size: 14px;">
+    This is a <b>no-argument constructor</b>, which is a constructor with no parameters and has empty parentheses .
+    </p>
+  </div>
+
+  <!-- Box 2 -->
+  <div style="background-color: #f0f0f0; border-radius: 10px; box-shadow: 2px 2px 5px rgba(0,0,0,0.1); width: 300px; padding: 15px; text-align: center;">
+    <img src="https://images.code.org/1ded96ac58adaf59c4400871ab21661e-image-1747772439288.png" alt="Example Image 2" style="width: 100%; border-radius: 10px;">
+    <p style="margin-top: 10px; font-size: 14px;">
+      A <b>parameterized constructor</b> is a constructor that has a specific number of arguments to be passed to assign values to an object's instance variables.
+    </p>
+  </div>
+
+</div>
+
+## Calling a Parameterized Constructor 
+
+#### An **actual parameter** is the value to assign to the formal parameter.
+
+#### When you create an object with a **Parameterized constructor** you enter the specific values for the new object. 
+
+<img src="https://images.code.org/ce8c6409c50b29ddae2c37228e7653bd-image-1747772664237.png" alt="digram of a class indicating the name of the class, attributes, and behaviors" width="350px" style="border-radius:10px;display: block; margin-left: auto; margin-right: auto;">
+
+
+## Let's practice parameterized constructors! 
+
+
+MARKDOWN

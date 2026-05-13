@@ -2,6 +2,7 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import {connect} from 'react-redux';
 
+import Backpack from '@cdo/apps/javalab/Backpack';
 import PaneHeader, {
   PaneSection,
   PaneButton,
@@ -11,7 +12,6 @@ import msg from '@cdo/locale';
 
 import ProjectTemplateWorkspaceIcon from '../templates/ProjectTemplateWorkspaceIcon';
 
-import Backpack from './Backpack';
 import {DisplayTheme} from './DisplayTheme';
 import {openEditorDialog} from './redux/editorRedux';
 import {JavalabEditorDialog} from './types';
@@ -36,7 +36,7 @@ function JavalabEditorHeader({
     <PaneHeader hasFocus isOldPurpleColor>
       <PaneButton
         id="javalab-editor-create-file"
-        iconClass="fa fa-plus-circle"
+        iconClass="fa-solid fa-circle-plus"
         onClick={() => openEditorDialog(JavalabEditorDialog.CREATE_FILE)}
         headerHasFocus
         isLegacyStyles
@@ -58,7 +58,7 @@ function JavalabEditorHeader({
       <PaneButton
         id="data-mode-versions-header"
         isLegacyStyles
-        iconClass="fa fa-clock-o"
+        iconClass="fa-regular fa-clock"
         label={msg.showVersionsHeader()}
         headerHasFocus
         isRtl={false}
@@ -68,7 +68,7 @@ function JavalabEditorHeader({
       <PaneButton
         id="javalab-editor-save"
         isLegacyStyles
-        iconClass="fa fa-check-circle"
+        iconClass="fa-solid fa-circle-check"
         onClick={() => openEditorDialog(JavalabEditorDialog.COMMIT_FILES)}
         headerHasFocus
         isRtl={false}

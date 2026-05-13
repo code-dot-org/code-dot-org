@@ -1,0 +1,6 @@
+@use '@fontsource-variable/noto-sans-tc/scss/mixins' as NotoSansTc;
+@include NotoSansTc.faces($family: 'Noto Sans TC');
+
+.className {
+  font-family: 'Noto Sans TC', sans-serif;
+}

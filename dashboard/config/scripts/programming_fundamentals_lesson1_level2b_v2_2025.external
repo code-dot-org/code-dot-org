@@ -1,0 +1,97 @@
+name 'programming-fundamentals-lesson1-level2b_v2-2025'
+title 'Careers and Emerging Technologies'
+display_name 'Things-Oriented Careers'
+bubble_choice_description 'Explore things-oriented careers based on your interests and skills.'
+thumbnail_url 'https://images.code.org/4f245e227cb52dd6f6793497be3fb313-electrician.png'
+
+markdown <<MARKDOWN
+# Things-Oriented Careers
+
+##### Use the information below to match your interests and skills to the careers that are more things-oriented.
+
+
+## Careers in Computing
+
+<table style="border-collapse: collapse; width: 100%; text-align: center;">
+  <thead>
+    <tr style="background-color: #f2f2f2;">
+      <th style="border: 1px solid black; font-weight: bold; text-align: center;">Things-Oriented Careers</th>
+      <th style="border: 1px solid black; font-weight: bold; text-align: center;">Description</th>
+      <th style="border: 1px solid black; font-weight: bold; text-align: center;">Skills/Interests</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border: 1px solid black; font-weight: bold; padding: 8px;">Robotics Technician</td>
+      <td style="border: 1px solid black; padding: 8px;">Designs, builds, and maintains robots used for tasks like manufacturing or surgery</td>
+      <td style="border: 1px solid black; padding: 8px;">Precision, Problem-solving, Working with various tools, Curiosity</td>
+    </tr>
+    <tr>
+      <td style="border: 1px solid black; font-weight: bold; padding: 8px;">Cybersecurity Specialist</td>
+      <td style="border: 1px solid black; padding: 8px;">Protects computer systems and networks from hackers and other security threats</td>
+      <td style="border: 1px solid black; padding: 8px;">Detail-oriented, Logical thinking, Persistence, Analytical skills</td>
+    </tr>
+    <tr>
+      <td style="border: 1px solid black; font-weight: bold; padding: 8px;">Systems Architect</td>
+      <td style="border: 1px solid black; padding: 8px;">Designs the overall structure of computer systems to meet the needs of a company or project</td>
+      <td style="border: 1px solid black; padding: 8px;">Big-picture thinking, Problem-solving, Logical planning, Organization</td>
+    </tr>
+    <tr>
+      <td style="border: 1px solid black; font-weight: bold; padding: 8px;">Automation Specialist</td>
+      <td style="border: 1px solid black; padding: 8px;">Programs machines or systems to perform repetitive tasks efficiently, like warehouse automation</td>
+      <td style="border: 1px solid black; padding: 8px;">Attention to detail, Problem-solving, Working with systems, Precision</td>
+    </tr>
+    <tr>
+      <td style="border: 1px solid black; font-weight: bold; padding: 8px;">3D Modeler</td>
+      <td style="border: 1px solid black; padding: 8px;">Creates 3D designs for games, movies, or simulations using software tools.</td>
+      <td style="border: 1px solid black; padding: 8px;">Creativity, Technical skills, Detail-oriented, Problem-solving</td>
+    </tr>
+    <tr>
+      <td style="border: 1px solid black; font-weight: bold; padding: 8px;">Surgeon (Using Nanotechnology)</td>
+      <td style="border: 1px solid black; padding: 8px;">Performs minimally invasive procedures with the help of advanced medical robotics and nanotechnology</td>
+      <td style="border: 1px solid black; padding: 8px;">Precision, Problem-solving, Working with tools, Critical thinking</td>
+    </tr>
+    <tr>
+      <td style="border: 1px solid black; font-weight: bold; padding: 8px;">Farmer (Smart Agriculture)</td>
+      <td style="border: 1px solid black; padding: 8px;">Uses drones, IoT devices, and precision farming tools to increase crop yields efficiently</td>
+      <td style="border: 1px solid black; padding: 8px;">Technical literacy, Analytical skills, Curiosity, Problem-solving</td>
+    </tr>
+    <tr>
+      <td style="border: 1px solid black; font-weight: bold; padding: 8px;">Manufacturing Engineer (IoT Systems)</td>
+      <td style="border: 1px solid black; padding: 8px;">Implements IoT-based systems to optimize factory operations and streamline production</td>
+      <td style="border: 1px solid black; padding: 8px;">Attention to detail, Logical thinking, Working with tools, Organization</td>
+    </tr>
+  </tbody>
+</table>
+
+## You can also go back to check out careers in the other categories!
+
+<table style="border-collapse: collapse; width: 100%; text-align: center;">
+  <thead>
+    <tr style="background-color: #f2f2f2;">
+      <th style="border: 1px solid black; font-weight: bold; text-align: center;">People</th>
+      <th style="border: 1px solid black; font-weight: bold; text-align: center;">Things</th>
+      <th style="border: 1px solid black; font-weight: bold; text-align: center;">Ideas</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border: 1px solid black; text-align: center;">
+        Careers that focus on working with others, communication and collaboration
+        <br>
+        <img src="https://images.code.org/fb724faf1ea8e5a7745a8c498205b612-employee-engagement.png" alt="People category" style="border-radius:0px; height: 75px; margin: 10px 0;">
+      </td>
+      <td style="border: 1px solid black; text-align: center;">
+        Careers that focus on working with tools, machines, systems, or physical processes
+        <br>
+        <img src="https://images.code.org/4f245e227cb52dd6f6793497be3fb313-electrician.png" alt="Things category" style="border-radius:0px; height: 75px; margin: 10px 0;">
+      </td>
+      <td style="border: 1px solid black; text-align: center;">
+        Careers that focus on solving big problems, creativity, and critical thinking
+        <br>
+        <img src="https://images.code.org/d92eb2e909879bd991385cbc19657bcd-brain.png" alt="Ideas category" style="border-radius:0px; height: 75px; margin: 10px 0;">
+      </td>
+    </tr>
+  </tbody>
+</table>
+MARKDOWN

@@ -1,3 +1,4 @@
+import {Button as MuiButton} from '@mui/material';
 import PropTypes from 'prop-types';
 import React from 'react';
 import ReactDOM from 'react-dom';
@@ -5,7 +6,6 @@ import {connect} from 'react-redux';
 
 import i18n from '@cdo/locale';
 
-import LegacyButton from '../../legacySharedComponents/LegacyButton';
 import color from '../../util/color';
 import SafeMarkdown from '../SafeMarkdown';
 
@@ -173,9 +173,16 @@ class InstructionsCsfMiddleCol extends React.Component {
           {this.props.overlayVisible && (
             <div>
               <hr />
-              <LegacyButton type="primary" onClick={this.closeOverlay}>
+              <MuiButton
+                variant="contained"
+                color="primary"
+                size="medium"
+                onClick={this.closeOverlay}
+                aria-label={i18n.dialogOK()}
+                type="button"
+              >
                 {i18n.dialogOK()}
-              </LegacyButton>
+              </MuiButton>
             </div>
           )}
         </ChatBubble>

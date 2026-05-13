@@ -51,9 +51,16 @@ export default function AiAssessmentFeedbackRadio({aiEvalId, setAiFeedbackId}) {
             aria-hidden="true"
           >
             {aiFeedback === THUMBS_UP ? (
-              <FontAwesome icon="thumbs-up" data-testid="thumbs-up" />
+              <FontAwesome
+                icon="thumbs-up"
+                aria-label={i18n.thumbsUpSelected()}
+              />
             ) : (
-              <FontAwesome icon="thumbs-o-up" data-testid="thumbs-o-up" />
+              <FontAwesome
+                icon="thumbs-up"
+                iconStyle="regular"
+                aria-label={i18n.thumbsUpUnselected()}
+              />
             )}
           </span>
           <input
@@ -74,9 +81,16 @@ export default function AiAssessmentFeedbackRadio({aiEvalId, setAiFeedbackId}) {
             aria-hidden="true"
           >
             {aiFeedback === THUMBS_DOWN ? (
-              <FontAwesome icon="thumbs-down" data-testid="thumbs-down" />
+              <FontAwesome
+                icon="thumbs-down"
+                aria-label={i18n.thumbsDownSelected()}
+              />
             ) : (
-              <FontAwesome icon="thumbs-o-down" data-testid="thumbs-o-down" />
+              <FontAwesome
+                icon="thumbs-down"
+                iconStyle="regular"
+                aria-label={i18n.thumbsDownUnselected()}
+              />
             )}
           </span>
           <input

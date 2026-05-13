@@ -22,6 +22,7 @@
 #  index_levels_on_game_id    (game_id)
 #  index_levels_on_level_num  (level_num)
 #  index_levels_on_name       (name)
+#  index_levels_on_type       (type)
 #
 
 require 'nokogiri'
@@ -78,6 +79,7 @@ class Blockly < Level
     skip_autosave
     skip_run_save
     goal_override
+    hide_version_history
   )
 
   before_save :update_ideal_level_source
@@ -89,27 +91,7 @@ class Blockly < Level
   # DCDO key for turning this feature on or off.
   BLOCKLY_I18N_IN_TEXT_DCDO_KEY = 'blockly_i18n_in_text'.freeze
 
-  def self.migrated_skins
-    [
-      # Star Wars
-      "hoc2015", "hoc2015x",
-      # Maze
-      "birds", "pvz", "scrat",
-      # Karel
-      "farmer", "farmer_night", "bee", "bee_night", "collector", "harvester", "planter",
-      # Spelling Bee
-      "letters",
-      # Artist
-      "artist", "artist_zombie", "elsa", "anna"
-    ]
-  end
-
-  def uses_google_blockly?
-    skin = properties['skin']
-    self.class.migrated_skins.include?(skin)
-  end
-
-  def summarize_for_lab2_properties(script, script_level = nil, current_user = nil)
+  def summarize_for_lab2_properties(script, script_level = nil, current_user = nil, unit_group_unit: nil)
     level_properties = super
     level_properties[:sharedBlocks] = localized_blockly_level_options(script)["sharedBlocks"]
     level_properties[:levelData] = localized_blockly_level_options_for_lab2(script)["levelData"]
@@ -130,7 +112,7 @@ class Blockly < Level
   end
 
   def to_xml(options = {})
-    xml_node = Nokogiri::XML(super(options))
+    xml_node = Nokogiri::XML(super)
     Nokogiri::XML::Builder.with(xml_node.at(type)) do |xml|
       xml.blocks do
         xml_blocks.each do |attr|
@@ -143,7 +125,7 @@ class Blockly < Level
 
   def load_level_xml(xml_node)
     block_nodes = xml_blocks.count > 0 ? xml_node.xpath(xml_blocks.map {|x| '//' + x}.join(' | ')).map(&:remove) : []
-    level_properties = super(xml_node)
+    level_properties = super
     block_nodes.each do |attr_node|
       level_properties[attr_node.name] = attr_node.child.serialize(save_with: XML_OPTIONS).strip
     end
@@ -926,7 +908,7 @@ class Blockly < Level
 
   # Clear 'is_project_level' from cloned levels
   def clone_with_name(name, editor_experiment: nil)
-    level = super(name, editor_experiment: editor_experiment)
+    level = super
     level.update!(is_project_level: false)
     level
   end

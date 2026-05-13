@@ -1,0 +1,30 @@
+name 'self-paced-pl-gen-ai-foundations_0X_2025'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Safety Note with AI Chat Lab
+
+#### AI Chat Lab is used throughout this Unit. The message to the right will be displayed to your students as they work with AI Chat Lab.
+
+<img src="https://images.code.org/e91aabccd294fb82c1ac7bcc3fe60e86-image.png" alt="Remember to chat responsibily pop-up" width="400px" style="border: 2px solid black; border-radius: 8px; float:right; margin: 0 0 40px 40px">
+
+#### While teaching this Unit, it's important to emphasize responsible use when students interact with AI Chat Lab. Here are a few tips:
+* #### **Encourage Awareness**: Remind students that all interactions with the chatbot are recorded and monitored, ensuring that their conversations remain respectful and on-topic. Any inappropriate messages will be flagged, and consequences may follow.
+* #### **Protect Personal Information**: Teach students the importance of keeping personal information private. They should avoid sharing details like their name, phone number, or address when interacting with the chatbot.
+* #### **Promote Responsible Communication**: Reinforce the idea that the chatbot is a tool for learning and growth, not just for casual conversation. Encourage students to use it responsibly and with a focus on education.
+* #### **Be Prepared to Have Discussions with Students**: Use unexpected outputs as teaching moments. Encourage critical thinking by discussing potential biases in AI, how AI works, and why the chatbot might generate certain outputs.
+* #### **Actively Monitor Student Usage**: You should actively monitor student usage to identify any potential issues, providing guidance and intervention as necessary to maintain a safe and supportive learning environment. Learn more about how to do so <a href="https://support.code.org/hc/en-us/articles/30681531276045-Viewing-Student-AI-Chat-History-as-a-Teacher" target="blank">here</a>.
+
+
+<div style="background-color: #B7E0E5; border-radius: 10px; padding: 15px; margin: 20px auto; max-width: 85%; box-sizing: border-box; word-wrap: break-word; overflow-wrap: break-word;">
+<p style="font-size: 14pt; margin-top: 12px; line-height: 120%;">If you come across a student message that was not flagged but you believe should have been, you can manually flag it as inappropriate. <em>This helps us enhance our safety filter and better protect students.</em>
+</p>
+<p align="center">
+<img src="https://images.code.org/d77f1ae6462c9a0c34dbbc287a114533-flagchat.gif" alt="animation of clicking the flag below an inappropriate chat response" width="50%" style="border-radius:10px; border: 2px solid black;">
+</p>
+</div>
+
+#### For more information about safety with AI Chat Lab check out the <a href="https://support.code.org/hc/en-us/articles/30162711193741-AI-Chat-Lab-FAQ" target="blank">FAQ Support Article</a>.
+
+MARKDOWN

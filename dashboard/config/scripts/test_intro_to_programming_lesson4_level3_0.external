@@ -1,0 +1,14 @@
+name 'test-intro-to-programming-lesson4-level3-0'
+title 'Designing an Algorithm - Access to Laptops'
+description 'description here'
+
+markdown <<MARKDOWN
+# Algorithm Connections Reflection
+
+## Do This:
+
+**Individually answer each question below.**
+
+
+
+MARKDOWN

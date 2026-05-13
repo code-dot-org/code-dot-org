@@ -548,7 +548,7 @@
     "bubble_choice_description": "Paint a border around the food truck so it has a designated parking space. But someone left paint buckets all over The Neighborhood, and you need to collect all of the paint as well.",
     "thumbnail_url": "https://images.code.org/0c27cff1582329869e43baa0a853ddb2-image-1646323274618.gif",
     "name_suffix": "_pilot-2022",
-    "ai_tutor_available": true
+    "ai_tutor_available": "false"
   },
   "published": true,
   "audit_log": "[{\"changed_at\":\"2022-08-23T20:21:51.287+00:00\",\"changed\":[\"cloned from \\\"CSA U1L12-L4c_2022\\\"\"],\"cloned_from\":\"CSA U1L12-L4c_2022\"}]"

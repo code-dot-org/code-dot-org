@@ -16,7 +16,7 @@ class OnetrustCookieScriptsTest < ActionView::TestCase
   end
 
   teardown do
-    ActionController::Base.view_paths = @view_paths_backu
+    ActionController::Base.view_paths = @view_paths_backup
     DCDO.unstub(:get)
   end
 
@@ -29,14 +29,14 @@ class OnetrustCookieScriptsTest < ActionView::TestCase
     html = render_onetrust_cookie_scripts(CODE_DOMAIN, 'test')
     assert_match /977d-test\/OtAutoBlock\.js/, html
     assert_match /otSDKStub\.js/, html
-    assert_match "function OptanonWrapper() { }", html
+    assert_one_trust_promise(html)
   end
 
   test 'code.org renders OneTrust prod scripts' do
     html = render_onetrust_cookie_scripts(CODE_DOMAIN)
     assert_match /977d\/OtAutoBlock\.js/, html
     assert_match /otSDKStub\.js/, html
-    assert_match "function OptanonWrapper() { }", html
+    assert_one_trust_promise(html)
   end
 
   test 'hourofcode.com does not render OneTrust scripts' do
@@ -48,14 +48,14 @@ class OnetrustCookieScriptsTest < ActionView::TestCase
     html = render_onetrust_cookie_scripts(HOC_DOMAIN, 'test')
     assert_match /e345-test\/OtAutoBlock\.js/, html
     assert_match /otSDKStub\.js/, html
-    assert_match "function OptanonWrapper() { }", html
+    assert_one_trust_promise(html)
   end
 
   test 'hourofcode.com renders OneTrust prod scripts' do
     html = render_onetrust_cookie_scripts(HOC_DOMAIN)
     assert_match /e345\/OtAutoBlock\.js/, html
     assert_match /otSDKStub\.js/, html
-    assert_match "function OptanonWrapper() { }", html
+    assert_one_trust_promise(html)
   end
 
   def render_onetrust_cookie_scripts(domain, flag = nil)
@@ -73,5 +73,11 @@ class OnetrustCookieScriptsTest < ActionView::TestCase
       params: params,
       cookies: cookies,
     )
+  end
+
+  def assert_one_trust_promise(html)
+    assert_match(/window\.oneTrustPromise = new Promise\(/, html)
+    assert_match(/window\.OptanonWrapper = function OptanonWrapper\(\)\s*\{/, html)
+    assert_match(/resolve\(window\.OneTrust\);/, html)
   end
 end

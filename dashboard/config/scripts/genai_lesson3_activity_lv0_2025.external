@@ -1,0 +1,20 @@
+name 'genai-lesson3-activity-lv0_2025'
+title 'title'
+description 'description here'
+markdown <<MARKDOWN
+# RecipeBot Data Curation
+
+## Overview
+
+<!-- 
+<img src="https://images.code.org/1bf1f9c625e1f83821e4fc9fbc7f7f19-image-1739908559016.png" 
+     alt="ADD ALT TEXT" 
+     style="width: 15%; border-radius: 10px; margin: 0px 0px 20px 20px; float: right;">
+-->
+
+#### We’ve been hired to help create a brand new language model called RecipeBot. This chatbot will help people discover new recipes or suggest different types of cuisines based on people's preferences. Our job is to curate the online data sources used to train the model. This means looking at a lot of food websites!
+
+## Do This
+
+#### Use a search engine to find a website that can be used for this task. Look for websites with specific words and phrases that we want the chatbot to understand.
+MARKDOWN

@@ -1,0 +1,28 @@
+name 'computer-systems-postassessment-2024'
+title 'Computer Systems and Devices End-of-Unit Assessment'
+
+submittable 'true'
+anonymous 'false'
+activity_guide_level 'false'
+
+page
+text 'computer-systems-postassessment-intro-2024'
+level 'computer-systems-postassessment-question1-2024'
+level 'computer-systems-postassessment-question2-2024'
+level 'computer-systems-postassessment-question3-2024'
+level 'computer-systems-postassessment-question4-2024'
+level 'computer-systems-postassessment-question5-2024'
+
+page
+level 'computer-systems-postassessment-question6-2024'
+level 'computer-systems-postassessment-question7-2024'
+level 'computer-systems-postassessment-question8-2024'
+level 'computer-systems-postassessment-question9-2024'
+level 'computer-systems-postassessment-question10-2024'
+
+page
+level 'computer-systems-postassessment-question11-2024'
+level 'computer-systems-postassessment-question12-2024'
+level 'computer-systems-postassessment-question13-2024'
+level 'computer-systems-postassessment-question14-2024'
+level 'computer-systems-postassessment-question15-2024'

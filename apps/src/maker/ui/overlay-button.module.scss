@@ -1,0 +1,33 @@
+@import 'color.scss';
+@import 'font.scss';
+
+.overlayButton {
+  @include main-font-regular;
+  height: 40px;
+  padding-left: 30px;
+  padding-right: 30px;
+  box-sizing: border-box;
+  overflow: hidden;
+  font-size: 12px;
+  font-weight: bold;
+  color: $charcoal;
+  text-decoration: none;
+  background-color: transparent;
+  border: 1px solid $charcoal;
+  border-radius: 3px;
+  outline: none;
+
+  &:hover {
+    color: $charcoal;
+    border-color: $white;
+    background-color: $white;
+    cursor: pointer;
+    box-shadow: none;
+  }
+}
+
+.primary {
+  background-color: $charcoal;
+  border-color: $charcoal;
+  color: $lighter_gray;
+}

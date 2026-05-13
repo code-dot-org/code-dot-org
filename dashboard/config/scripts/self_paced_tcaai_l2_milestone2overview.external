@@ -1,0 +1,19 @@
+name 'self-paced-TCaAI-L2-Milestone2Overview'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Milestone 2: Responsible Creation & Impact
+
+#### In Milestone 2, students explore how to balance human creativity with AI power. Across Lessons 3 and 4, they investigate responsible co-creation and begin defining clear boundaries for ethical AI use.
+
+## Milestone 2 Overview
+
+#### **Lesson 3** is a Build Knowledge lesson where students test AI in creative contexts and analyze ownership, voice, and ethical trade-offs.
+
+#### **Lesson 4** is a Develop & Critique lesson where students synthesize their findings and draft shared Co-Creation Guidelines.
+
+## 🧩 Project Progress
+
+#### By the end of Milestone 2, students will complete the Co-Creation Guidelines section of their Responsible AI Use Guide.
+MARKDOWN

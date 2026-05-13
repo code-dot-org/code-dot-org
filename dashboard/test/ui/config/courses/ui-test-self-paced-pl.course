@@ -1,0 +1,23 @@
+{
+  "name": "ui-test-self-paced-pl",
+  "script_names": [
+    "ui-test-self-paced-pl"
+  ],
+  "original_script_names": [
+    "ui-test-self-paced-pl"
+  ],
+  "published_state": "stable",
+  "instruction_type": "self_paced",
+  "participant_audience": "teacher",
+  "instructor_audience": "facilitator",
+  "properties": {
+    "family_name": "ui-test-self-paced-pl",
+    "version_year": "unversioned"
+  },
+  "resources": [
+
+  ],
+  "student_resources": [
+
+  ]
+}

@@ -7,7 +7,7 @@
   "user_id": 18602,
   "properties": {
     "encrypted": "false",
-    "long_instructions": "> Follow the steps to modify the code. The **\"Modify\"** stage in PRIMM is important because it helps students deepen their understanding by making changes to existing code, encouraging experimentation and problem-solving.\r\n\r\n# DataFrame Names\r\n\r\n::: details [**✅ Step 1**]\r\nChange the variable name of the DataFrame on line 3.\r\n:::\r\n\r\n::: details [**✅ Step 2**]\r\n* Run the program\r\n* Discuss with your partner what happened and why?\r\n:::\r\n\r\n::: details [**✅ Step 3**]\r\nWithout changing the variable name _back_ to `data`, what other modifications might you need to make so that the program works? \r\n:::\r\n\r\n\r\n",
+    "long_instructions": "> Follow the steps to modify the code. The **\"Modify\"** stage in PRIMM is important because it helps students deepen their understanding by making changes to existing code, encouraging experimentation and problem-solving.\r\n\r\n> *Remember to switch the file to the main code.*\r\n\r\n# DataFrame Names\r\n\r\n::: details [**✅ Step 1**]\r\nChange the variable name of the DataFrame on line 3.\r\n:::\r\n\r\n::: details [**✅ Step 2**]\r\n* Run the program\r\n* Discuss with your partner what happened and why?\r\n:::\r\n\r\n::: details [**✅ Step 3**]\r\nWithout changing the variable name _back_ to `data`, what other modifications might you need to make so that the program works? \r\n:::\r\n\r\n<br>\r\n\r\nMake changes and run the program to continue.\r\n",
     "ai_tutor_available": "false",
     "submittable": "false",
     "hide_share_and_remix": "false",
@@ -43,6 +43,6 @@
       ]
     }
   },
-  "audit_log": "[{\"changed_at\":\"2024-09-25T20:35:05.568+00:00\",\"changed\":[\"cloned from \\\"datascience-U2L3-L3_2024-pilot\\\"\"],\"cloned_from\":\"datascience-U2L3-L3_2024-pilot\"},{\"changed_at\":\"2024-09-25 21:01:59 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2024-09-25T20:35:05.568+00:00\",\"changed\":[\"cloned from \\\"datascience-U2L3-L3_2024-pilot\\\"\"],\"cloned_from\":\"datascience-U2L3-L3_2024-pilot\"},{\"changed_at\":\"2024-09-25 21:01:59 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"},{\"changed_at\":\"2024-11-19 21:36:36 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"},{\"changed_at\":\"2024-11-19 21:37:52 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"}]"
 }]]></config>
 </Pythonlab>

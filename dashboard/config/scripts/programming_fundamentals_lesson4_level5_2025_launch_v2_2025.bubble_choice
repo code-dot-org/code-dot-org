@@ -1,0 +1,9 @@
+name 'programming-fundamentals-lesson4-level5_2025-launch_v2-2025'
+display_name 'Do the Math!'
+description 'Choose **ONE** of the scenarios, where you\'ll use math operations on two numbers stored in variables. Try out addition, subtraction, multiplication, and division — and use `print()` to show each result.'
+
+sublevels
+level 'programming-fundamentals-lesson4-level5a_2025-launch_v2-2025'
+level 'programming-fundamentals-lesson4-level5b_2025-launch_v2-2025'
+level 'programming-fundamentals-lesson4-level5c_2025-launch_v2-2025'
+level 'programming-fundamentals-lesson4-level5d_2025-launch_v2-2025'

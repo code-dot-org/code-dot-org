@@ -1,8 +1,6 @@
+import {Typography, Button as MuiButton} from '@mui/material';
 import PropTypes from 'prop-types';
 import React from 'react';
-
-import {Button} from '@cdo/apps/componentLibrary/button';
-import {Heading3, BodyThreeText} from '@cdo/apps/componentLibrary/typography';
 
 import styles from './borderedCallToAction.module.scss';
 
@@ -10,11 +8,9 @@ const BorderedCallToAction = ({
   headingText,
   descriptionText,
   className,
-  buttonType,
   buttonText,
   buttonUrl,
   buttonClass,
-  buttonColor,
   buttonDisabled = false,
   onClick,
   solidBorder,
@@ -28,20 +24,24 @@ const BorderedCallToAction = ({
   return (
     <div className={`${styles.outerBox} ${borderStyle} ${className}`}>
       <div className={styles.textWrapper}>
-        <Heading3 visualAppearance="heading-sm">{headingText}</Heading3>
-        <BodyThreeText>{descriptionText}</BodyThreeText>
+        <Typography component="h3" variant="h5" gutterBottom>
+          {headingText}
+        </Typography>
+        <Typography variant="body3" gutterBottom>
+          {descriptionText}
+        </Typography>
       </div>
-      <Button
-        onClick={onClick}
-        className={buttonClass}
-        color={buttonColor}
-        size={'s'}
-        type={buttonType}
-        text={buttonText}
-        href={buttonUrl}
-        useAsLink={!!buttonUrl}
+      <MuiButton
+        variant="contained"
+        color="primary"
+        size="small"
         disabled={buttonDisabled}
-      />
+        className={buttonClass}
+        onClick={onClick}
+        href={buttonUrl}
+      >
+        {buttonText}
+      </MuiButton>
     </div>
   );
 };
@@ -50,11 +50,9 @@ BorderedCallToAction.propTypes = {
   headingText: PropTypes.string.isRequired,
   descriptionText: PropTypes.string.isRequired,
   className: PropTypes.string,
-  buttonType: PropTypes.string,
   buttonText: PropTypes.string.isRequired,
   buttonUrl: PropTypes.string,
   buttonClass: PropTypes.string,
-  buttonColor: PropTypes.string,
   onClick: PropTypes.func,
   solidBorder: PropTypes.bool,
   buttonDisabled: PropTypes.bool,

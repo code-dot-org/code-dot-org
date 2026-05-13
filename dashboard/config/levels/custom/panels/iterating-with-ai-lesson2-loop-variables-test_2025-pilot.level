@@ -1,0 +1,23 @@
+<Panels>
+  <config><![CDATA[{
+  "game_id": 73,
+  "created_at": "2025-12-22T17:39:41.000Z",
+  "level_num": "custom",
+  "user_id": 22366,
+  "properties": {
+    "encrypted": "false",
+    "offer_browser_tts": "false",
+    "panels": [
+      {
+        "text": "# Loop Variable\n\nA **loop variable** is a variable that changes value each time a loop runs. It keeps track of the loop's current step or position.\n\n**Example**: In `for (let i = 0; i < 5; i++)`, the loop variable is `i`.",
+        "imageUrl": "https://images.code.org/0dc50f28b7bd87b0d74641242c337a8f-loop_variable.png",
+        "key": "undefined-ea03636a-a1b5-4568-be2b-86c3c6462665",
+        "layout": "text-bottom-right"
+      }
+    ],
+    "name_suffix": "_2025-pilot"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-12-22T17:39:41.027+00:00\",\"changed\":[\"cloned from \\\"iterating-with-ai-lesson2-loop-variables-test-2025\\\"\"],\"cloned_from\":\"iterating-with-ai-lesson2-loop-variables-test-2025\"}]"
+}]]></config>
+</Panels>

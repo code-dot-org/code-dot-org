@@ -11,7 +11,7 @@
         {
           "type": "radiogroup",
           "name": "how_ai_makes_decisions_better_understanding",
-          "title": "After completing this module, I have a better understanding of how AI concepts.",
+          "title": "After completing this module, I have a better understanding of AI concepts.",
           "choices": [
             {
               "value": "1",

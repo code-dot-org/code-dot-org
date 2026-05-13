@@ -1,0 +1,19 @@
+name 'self-paced-TCaAI-L4-Milestone3Overview'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Milestone 3: Truth & Credibility
+
+#### In Milestone 3, students investigate why AI outputs can feel believable even when information is incomplete, biased, or missing context. Across Lessons 5 and 6, they test AI-generated information, identify patterns that create a false sense of credibility, and practice verification strategies before trusting an output.
+
+## Milestone 3 Overview
+
+#### **Lesson 5** is a Build Knowledge lesson where students complete station explorations to test AI credibility, notice patterns in convincing responses, and begin drafting a Trust Meter.
+
+#### **Lesson 6** is a Develop & Critique lesson where students synthesize findings across explorations and create a Trust Meter that helps others decide when to trust AI and when to slow down and verify.
+
+## 🧩 Project Progress
+
+#### By the end of Milestone 3, students will complete the Trust & Credibility section of their Responsible AI Use Guide, including a visual Trust Meter and concrete user actions for verification.
+MARKDOWN

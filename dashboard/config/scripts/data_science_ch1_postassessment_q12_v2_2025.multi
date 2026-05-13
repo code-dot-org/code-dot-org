@@ -1,0 +1,15 @@
+name 'data-science-ch1-postassessment-q12_v2-2025'
+
+question 'What is a key element of effective data storytelling?'
+
+wrong 'Using technical jargon.'
+right 'Including clear visuals and narratives.'
+wrong 'Presenting only raw data.'
+wrong 'Focusing on complex algorithms.'
+
+
+allow_multiple_attempts false
+
+markdown <<MARKDOWN
+
+MARKDOWN

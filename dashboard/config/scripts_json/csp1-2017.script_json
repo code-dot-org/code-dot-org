@@ -4,9 +4,11 @@
     "wrapup_video_id": null,
     "login_required": true,
     "properties": {
+      "content_area": "curriculum_9_12",
       "curriculum_umbrella": "CSP",
       "has_verified_resources": true,
       "hideable_lessons": true,
+      "is_deprecated": true,
       "is_migrated": true,
       "project_sharing": true,
       "student_detail_progress_view": true,
@@ -15,7 +17,8 @@
     },
     "new_name": "csp1-2017",
     "family_name": "csp1",
-    "serialized_at": "2022-03-22 21:16:28 UTC",
+    "serialized_at": "2025-07-01 16:36:55 UTC",
+    "hide_within_course": false,
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -4350,6 +4353,15 @@
 
   ],
   "lessons_opportunity_standards": [
+
+  ],
+  "rubrics": [
+
+  ],
+  "learning_goals": [
+
+  ],
+  "learning_goal_evidence_levels": [
 
   ]
 }

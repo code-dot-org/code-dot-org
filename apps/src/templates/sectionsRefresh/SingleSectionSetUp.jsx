@@ -1,53 +1,130 @@
+import Chips from '@code-dot-org/component-library/chips';
+import TextField from '@code-dot-org/component-library/textField';
+import {Typography, Button as MuiButton} from '@mui/material';
+import classNames from 'classnames';
 import PropTypes from 'prop-types';
-import React from 'react';
+import React, {useState} from 'react';
 
 import {queryParams} from '@cdo/apps/code-studio/utils';
-import Chips from '@cdo/apps/componentLibrary/chips';
-import {Heading2} from '@cdo/apps/componentLibrary/typography';
 import {ParticipantAudience} from '@cdo/apps/generated/curriculum/sharedCourseConstants';
+import Spinner from '@cdo/apps/sharedComponents/Spinner';
+import SectionAvatar from '@cdo/apps/templates/studioHomepages/teacherHomepageV2/sectionAvatars/SectionAvatar';
 import {StudentGradeLevels} from '@cdo/generated-scripts/sharedConstants';
 import i18n from '@cdo/locale';
 
+import DemoChip from '../DemoChip';
+import SectionAvatarEditDialog from '../studioHomepages/teacherHomepageV2/sectionAvatars/SectionAvatarEditDialog';
+
 import moduleStyles from './sections-refresh.module.scss';
+import skeletonizeContent from '@cdo/apps/sharedComponents/skeletonize-content.module.scss';
+import styles from '@cdo/apps/templates/studioHomepages/teacherHomepageV2/sectionAvatars/section-avatars.module.scss';
 
 export default function SingleSectionSetUp({
   sectionNum,
   section,
   updateSection,
+  batchUpdateSection,
   isNewSection,
+  isLoading = false,
 }) {
+  const [showAvatarDialog, setShowAvatarDialog] = useState(false);
   const gradeOptions = StudentGradeLevels.map(g => ({label: g, value: g}));
   const participantType = isNewSection
     ? queryParams('participantType')
     : section.participantType;
 
+  const handleAvatarUpdate = (color, emoji) => {
+    batchUpdateSection({
+      avatar_color: color,
+      avatar_emoji: emoji,
+    });
+    setShowAvatarDialog(false);
+  };
+
   return (
     <div>
       <div className={moduleStyles.containerWithMarginTop}>
-        <Heading2>{i18n.classSection()}</Heading2>
-        <label className={moduleStyles.typographyLabelTwo}>
-          {i18n.className()}
-          <input
+        <div className={moduleStyles.sectionHeader}>
+          <Typography variant="h2">
+            {i18n.classSection()}
+            {section.demoType && <DemoChip />}
+          </Typography>
+        </div>
+        {isLoading ? (
+          <>
+            <div className={moduleStyles.typographyLabelTwo}>
+              {i18n.className()}
+            </div>
+            <div
+              className={classNames(
+                moduleStyles.skeletonTextField,
+                skeletonizeContent.skeletonizeContent
+              )}
+            />
+          </>
+        ) : (
+          <TextField
             required
-            type="text"
             id="uitest-section-name-setup"
-            className={moduleStyles.classNameTextField}
+            name="name"
+            fullWidth
+            label={i18n.className()}
             value={section.name}
             onChange={e => updateSection('name', e.target.value)}
+            onKeyDown={e => e.key === 'Enter' && e.preventDefault()}
+            className={moduleStyles.sectionNameTextField}
+            disabled={isLoading}
           />
-        </label>
+        )}
       </div>
+      <label className={moduleStyles.typographyLabelTwo}>
+        {i18n.avatar()}
+        <div className={styles.avatarContainer}>
+          {isLoading ? (
+            <Spinner />
+          ) : (
+            <>
+              <SectionAvatar
+                color={section.avatar_color || 0}
+                emoji={section.avatar_emoji || 0}
+                size={'m'}
+              />
+              <MuiButton
+                variant="outlined"
+                color="tertiary"
+                size="small"
+                className={styles.avatarButton}
+                onClick={() => setShowAvatarDialog(true)}
+                aria-label={i18n.editAvatar()}
+                type="button"
+              >
+                {i18n.editAvatar()}
+              </MuiButton>
+            </>
+          )}
+        </div>
+      </label>
       {participantType === ParticipantAudience.student && (
         <div className={moduleStyles.containerWithMarginTop}>
           <Chips
             label={i18n.chooseGrades()}
             name="grades"
             required={true}
+            requiredMessageText={i18n.chooseAtLeastOne()}
             options={gradeOptions}
-            values={section.grade || section.grades || []}
-            setValues={g => updateSection('grade', g)}
+            values={section.grades || []}
+            setValues={g => updateSection('grades', g)}
+            disabled={isLoading}
           />
         </div>
+      )}
+      {showAvatarDialog && (
+        <SectionAvatarEditDialog
+          closeCallback={() => setShowAvatarDialog(false)}
+          saveCallback={handleAvatarUpdate}
+          avatarColor={section.avatar_color}
+          avatarEmoji={section.avatar_emoji}
+        />
       )}
     </div>
   );
@@ -57,5 +134,7 @@ SingleSectionSetUp.propTypes = {
   sectionNum: PropTypes.number.isRequired,
   section: PropTypes.object.isRequired,
   updateSection: PropTypes.func.isRequired,
+  batchUpdateSection: PropTypes.func.isRequired,
   isNewSection: PropTypes.bool.isRequired,
+  isLoading: PropTypes.bool,
 };

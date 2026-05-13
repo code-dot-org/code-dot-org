@@ -1,7 +1,7 @@
+import Checkbox from '@code-dot-org/component-library/checkbox';
+import {Typography} from '@mui/material';
 import React from 'react';
 
-import Checkbox from '@cdo/apps/componentLibrary/checkbox/Checkbox';
-import {StrongText} from '@cdo/apps/componentLibrary/typography';
 import CollapsibleSection from '@cdo/apps/templates/CollapsibleSection';
 
 import styles from './multi-category-select.module.scss';
@@ -40,7 +40,7 @@ const MultiCategorySelect: React.FC<MultiCategorySelectProps> = ({
             <CollapsibleSection
               headerContent={
                 selectedCount > 0 ? (
-                  <StrongText>{labelWithCount}</StrongText>
+                  <Typography variant="strong">{labelWithCount}</Typography>
                 ) : (
                   labelWithCount
                 )

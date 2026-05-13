@@ -1,0 +1,48 @@
+<Weblab2>
+  <config><![CDATA[{
+  "game_id": 74,
+  "created_at": "2025-11-12T18:09:50.000Z",
+  "level_num": "custom",
+  "user_id": 18602,
+  "properties": {
+    "encrypted": "false",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "disable_edit_run_for_submission": "false",
+    "widget_view": "false",
+    "initial_view_mode": "split",
+    "ai_tutor_mode": "suggest",
+    "predict_settings": {
+      "isPredictLevel": false,
+      "solution": "",
+      "questionType": "freeResponse",
+      "allowMultipleAttempts": false,
+      "placeholderText": "",
+      "multipleChoiceOptions": [
+        ""
+      ],
+      "freeResponseHeight": 50,
+      "codeEditableAfterSubmit": false
+    },
+    "start_sources": {
+      "folders": {
+      },
+      "files": {
+        "1": {
+          "id": "1",
+          "name": "index.html",
+          "language": "html",
+          "contents": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"UTF-8\">\n  <title>Accessible Display</title>\n  <style>\n    .card {\n      border: 1px solid #333;\n      padding: 8px;\n      margin: 6px;\n      border-radius: 6px;\n      width: 220px;\n      font-family: Arial, sans-serif;\n      background-color: #f8f8f8;\n    }\n    dl {\n      margin: 0;\n    }\n    dt {\n      font-weight: bold;\n    }\n    p[role=\"status\"] {\n      color: #b20000;\n      font-size: 0.9em;\n      margin-top: 6px;\n    }\n  </style>\n</head>\n<body>\n  <h1>Supplies List (Accessible)</h1>\n\n  <!-- Live region announces changes for screen readers -->\n  <p aria-live=\"polite\"><strong>Total items:</strong> <span id=\"count\"></span></p>\n\n  <!-- Cards will be rendered here -->\n  <section id=\"list\" aria-label=\"Item cards\"></section>\n\n  <script>\n    const supplies = [\n      { id: 1, name: \"pencil\", category: \"writing\", isEssential: true },\n      { id: 2, name: \"marker\", category: \"\", isEssential: false },\n      { id: 3, name: \"\", category: \"art\", isEssential: true }\n    ];\n\n    const yesNo = (bool) => (bool ? \"Yes\" : \"No\");\n\n    const makeCard = (item) => {\n      const nameText = item.name || \"Unnamed item\";\n      const categoryText = item.category || \"— not provided —\";\n      const warningText = (!item.name || !item.category) \n        ? \"⚠️ Missing data fields.\" \n        : \"\";\n\n      return `\n        <article class=\"card\" aria-labelledby=\"item-${item.id}-title\">\n          <h2 id=\"item-${item.id}-title\">${nameText}</h2>\n          <dl>\n            <dt>Category</dt><dd>${categoryText}</dd>\n            <dt>Essential?</dt><dd>${yesNo(item.isEssential)}</dd>\n          </dl>\n          ${warningText ? `<p role=\"status\">${warningText}</p>` : \"\"}\n        </article>\n      `;\n    };\n\n    const render = () => {\n      const cards = supplies.map(item => makeCard(item));\n      document.getElementById(\"list\").innerHTML = cards.join(\"\");\n      document.getElementById(\"count\").textContent = supplies.length;\n    };\n\n    render();\n  </script>\n</body>\n</html>\n",
+          "active": true,
+          "folderId": "0"
+        }
+      },
+      "openFiles": [
+        "1"
+      ]
+    }
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-11-12T18:09:50.891+00:00\",\"changed\":[\"cloned from \\\"aif-sem2-u3-L6-prototype\\\"\"],\"cloned_from\":\"aif-sem2-u3-L6-prototype\"},{\"changed_at\":\"2025-11-12 18:09:54 +0000\",\"changed\":[],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2025-11-12 18:12:34 +0000\",\"changed\":[],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
+}]]></config>
+</Weblab2>

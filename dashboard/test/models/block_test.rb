@@ -2,7 +2,7 @@ require 'test_helper'
 
 class BlockTest < ActiveSupport::TestCase
   setup do
-    create :block, pool: Block::DEFAULT_POOL
+    create(:block, pool: Block::DEFAULT_POOL)
   end
 
   teardown do
@@ -12,7 +12,7 @@ class BlockTest < ActiveSupport::TestCase
   end
 
   test 'Block writes to and loads back from file' do
-    block = create :block
+    block = create(:block)
     json_before = block.block_options
     block.delete
     base_path = "config/blocks/#{block.pool}/#{block.name}"
@@ -28,7 +28,7 @@ class BlockTest < ActiveSupport::TestCase
   end
 
   test 'Block writes to and loads back from file without helper code' do
-    block = create :block, helper_code: nil
+    block = create(:block, helper_code: nil)
     json_before = block.block_options
     block.delete
     base_path = "config/blocks/#{block.pool}/#{block.name}"
@@ -44,7 +44,7 @@ class BlockTest < ActiveSupport::TestCase
   end
 
   test 'Block deletes files after being destroyed' do
-    block = create :block
+    block = create(:block)
     assert File.exist? "config/blocks/#{block.pool}/#{block.name}.json"
     assert File.exist? "config/blocks/#{block.pool}/#{block.name}.js"
     block.destroy
@@ -54,8 +54,8 @@ class BlockTest < ActiveSupport::TestCase
   end
 
   test 'load_records destroys old blocks' do
-    old_block = create :block
-    new_block = create :block
+    old_block = create(:block)
+    new_block = create(:block)
     File.delete old_block.file_path
 
     Block.load_records(blob: 'config/blocks/fakeLevelType/*.json')
@@ -65,7 +65,7 @@ class BlockTest < ActiveSupport::TestCase
   end
 
   test 'Renaming a block deletes the old files' do
-    block = create :block, helper_code: '// Comment comment comment'
+    block = create(:block, helper_code: '// Comment comment comment')
     old_file_path = block.file_path
     old_js_path = block.js_path
     assert File.exist? old_file_path
@@ -80,7 +80,7 @@ class BlockTest < ActiveSupport::TestCase
   end
 
   test 'Removing helper code deletes the helper code file' do
-    block = create :block, helper_code: '// Comment comment comment'
+    block = create(:block, helper_code: '// Comment comment comment')
     old_file_path = block.file_path
     old_js_path = block.js_path
     assert File.exist? old_file_path
@@ -98,7 +98,7 @@ class BlockTest < ActiveSupport::TestCase
   end
 
   test 'file_path works for unmodified and modified blocks' do
-    block = create :block
+    block = create(:block)
     name = block.name
     original_path = Rails.root.join("config/blocks/fakeLevelType/#{name}.json")
     assert_equal original_path, block.file_path_was

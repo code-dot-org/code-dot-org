@@ -1,21 +1,27 @@
-import React, {useCallback, useEffect} from 'react';
-
 import {
   SimpleDropdown,
   SimpleDropdownProps,
-} from '@cdo/apps/componentLibrary/dropdown';
-import {BodyTwoText} from '@cdo/apps/componentLibrary/typography';
+} from '@code-dot-org/component-library/dropdown';
+import {Typography} from '@mui/material';
+import React, {useCallback, useEffect} from 'react';
 
 import {useDialogControl} from './DialogControlContext';
 import GenericDialog, {GenericDialogProps} from './GenericDialog';
 
-export type GenericDropdownProps = Pick<GenericDialogProps, 'title'> & {
+export type GenericDropdownProps = Pick<
+  GenericDialogProps,
+  'title' | 'useModal'
+> & {
   dropdownLabel: string;
   handleConfirm?: (Dropdown: string) => void;
   handleCancel?: () => void;
   selectedValue: SimpleDropdownProps['selectedValue'];
   items: SimpleDropdownProps['items'];
   message?: string;
+  confirmText?: string;
+  neutralText?: string;
+  handleNeutral?: () => void;
+  neutralDestructive?: boolean;
 };
 
 type GenericDropdownBodyProps = {
@@ -31,13 +37,16 @@ const GenericDropdownBody: React.FunctionComponent<
 > = ({message, dropdownLabel, handleInputChange, items, selectedValue}) => {
   return (
     <>
-      {message && <BodyTwoText>{message}</BodyTwoText>}
+      {message && (
+        <Typography variant="body2" gutterBottom>
+          {message}
+        </Typography>
+      )}
       <SimpleDropdown
         name="dialog-dropdown"
         items={items}
         selectedValue={selectedValue}
         onChange={e => {
-          console.log('OC : ', e.target.value, e);
           handleInputChange(e.target.value);
         }}
         labelText={dropdownLabel}
@@ -50,10 +59,15 @@ const GenericDropdown: React.FunctionComponent<GenericDropdownProps> = ({
   title,
   message,
   handleConfirm,
+  handleNeutral,
   handleCancel,
   selectedValue,
   items,
   dropdownLabel,
+  confirmText,
+  neutralText,
+  neutralDestructive,
+  useModal = false,
 }) => {
   const {promiseArgs, setPromiseArgs} = useDialogControl();
 
@@ -64,7 +78,28 @@ const GenericDropdown: React.FunctionComponent<GenericDropdownProps> = ({
     [setPromiseArgs]
   );
 
-  useEffect(() => handleInputChange(selectedValue), []); // eslint-disable-line react-hooks/exhaustive-deps
+  useEffect(
+    () => handleInputChange(selectedValue),
+    [handleInputChange, selectedValue]
+  );
+
+  const buttons = {
+    confirm: {
+      text: confirmText,
+      callback: () => handleConfirm?.(promiseArgs as string),
+      disabled: false,
+    },
+    cancel: {callback: () => handleCancel?.()},
+    ...(neutralText
+      ? {
+          neutral: {
+            text: neutralText,
+            callback: () => handleNeutral?.(),
+            destructive: neutralDestructive,
+          },
+        }
+      : {}),
+  };
 
   return (
     <GenericDialog
@@ -78,13 +113,8 @@ const GenericDropdown: React.FunctionComponent<GenericDropdownProps> = ({
           handleInputChange={handleInputChange}
         />
       }
-      buttons={{
-        confirm: {
-          callback: () => handleConfirm?.(promiseArgs as string),
-          disabled: false,
-        },
-        cancel: {callback: () => handleCancel?.()},
-      }}
+      buttons={buttons}
+      useModal={useModal}
     />
   );
 };

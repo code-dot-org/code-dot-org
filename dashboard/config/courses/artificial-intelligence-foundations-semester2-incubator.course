@@ -1,0 +1,55 @@
+{
+  "name": "artificial-intelligence-foundations-semester2-incubator",
+  "script_names": [
+    "ai-generated-design-pilot-2025",
+    "ai-and-algorithmic-decisions-pilot-2025",
+    "building-data-driven-systems-with-ai-pilot-2025",
+    "iterating-with-ai-pilot-2025",
+    "designing-reliable-apps-with-ai-and-apis-pilot-2025",
+    "web-apps-with-ai-capstone-project-pilot-2025"
+  ],
+  "original_script_names": [
+
+  ],
+  "published_state": "pilot",
+  "instruction_type": "teacher_led",
+  "participant_audience": "student",
+  "instructor_audience": "teacher",
+  "properties": {
+    "announcements": [
+      {
+        "key": "df26100e-6a72-40e1-9f52-87c0f9c58c9d",
+        "notice": "AI Foundations Semester 2 Professional Learning",
+        "details": "Before starting this unit, consider exploring our free online self-paced professional development module that introduces you to the key concepts, tools, and projects of this unit.",
+        "link": "https://studio.code.org/courses/teaching-ai-foundations-semester2-2025",
+        "type": "collaborate",
+        "visibility": "Teacher-only",
+        "dismissible": true,
+        "buttonText": "Let's Go!"
+      }
+    ],
+    "family_name": "artificial-intelligence-foundations-semester2-incubator",
+    "has_verified_resources": true,
+    "numbered_units": "auto",
+    "pilot_experiment": "aif-semester2-2025-incubator-pilot",
+    "version_year": "unversioned"
+  },
+  "resources": [
+    {
+      "name": "Syllabus",
+      "url": "https://docs.google.com/document/d/1ow_qH2bPxBGKPoClSeIKkeM-9sSwTDucqSkXRZL713s/edit?usp=sharing",
+      "key": "syllabus",
+      "properties": {
+        "audience": "Teacher",
+        "embeddability_type": "resource_dropdown_only",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "syllabus"
+      }
+    }
+  ],
+  "student_resources": [
+
+  ]
+}

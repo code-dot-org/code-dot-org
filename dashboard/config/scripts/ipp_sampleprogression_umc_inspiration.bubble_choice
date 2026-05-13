@@ -1,0 +1,10 @@
+name 'IPP_SampleProgression_UMC_Inspiration'
+display_name 'Variables Inspiration'
+description 'Learn interesting or advanced uses with variables to get inspiration for your project! Do as many of the activities below as you want.'
+
+sublevels
+level 'IPP_SampleProgression_UMC_Inspiration_1'
+level 'IPP_SampleProgression_UMC_Inspiration_2'
+level 'IPP_SampleProgression_UMC_Inspiration_3'
+level 'IPP_SampleProgression_UMC_Inspiration_4'
+

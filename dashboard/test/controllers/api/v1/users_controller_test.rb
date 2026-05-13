@@ -1,10 +1,8 @@
 require 'test_helper'
 
 class Api::V1::UsersControllerTest < ActionController::TestCase
-  self.use_transactional_test_case = true
-
   setup do
-    @user = create :user
+    @user = create(:user)
   end
 
   test 'a get request to using_text_mode returns using_text_mode attribute of user object' do
@@ -73,42 +71,12 @@ class Api::V1::UsersControllerTest < ActionController::TestCase
     assert_equal false, !!@user.mute_music
   end
 
-  test 'a post request to show_progress_table_v2 updates show_progress_table_v2' do
-    sign_in(@user)
-    assert_nil @user.show_progress_table_v2
-    post :post_show_progress_table_v2, params: {user_id: 'me', show_progress_table_v2: true}
-    assert_response :success
-    @user.reload
-    assert @user.show_progress_table_v2
-
-    post :post_show_progress_table_v2, params: {user_id: 'me', show_progress_table_v2: false}
-    assert_response :success
-    @user.reload
-    refute @user.show_progress_table_v2
-  end
-
-  test 'a post request to show_progress_table_v2 updates appropriate timestamp' do
-    sign_in(@user)
-    assert_nil @user.progress_table_v2_timestamp
-    post :post_show_progress_table_v2, params: {user_id: 'me', show_progress_table_v2: true}
-    assert_response :success
-    @user.reload
-    assert @user.progress_table_v2_timestamp
-    assert_nil @user.progress_table_v1_timestamp
-
-    post :post_show_progress_table_v2, params: {user_id: 'me', show_progress_table_v2: false}
-    assert_response :success
-    @user.reload
-    assert @user.progress_table_v2_timestamp
-    assert @user.progress_table_v1_timestamp
-  end
-
   test 'a post request to disable_lti_roster_sync updates lti_roster_sync_enabled' do
-    teacher = create :teacher, lti_roster_sync_enabled: true
+    teacher = create(:teacher, lti_roster_sync_enabled: true)
     sign_in(teacher)
 
     assert teacher.lti_roster_sync_enabled
-    post :post_disable_lti_roster_sync, params: {user_id: 'me', show_progress_table_v2: true}
+    post :post_disable_lti_roster_sync, params: {user_id: 'me'}
     assert_response :success
     teacher.reload
     assert_nil teacher.lti_roster_sync_enabled
@@ -118,7 +86,7 @@ class Api::V1::UsersControllerTest < ActionController::TestCase
     sign_in(@user)
 
     assert_nil @user.lti_roster_sync_enabled
-    post :post_disable_lti_roster_sync, params: {user_id: 'me', show_progress_table_v2: true}
+    post :post_disable_lti_roster_sync, params: {user_id: 'me'}
     assert_response :unauthorized
     @user.reload
     assert_nil @user.lti_roster_sync_enabled
@@ -208,7 +176,7 @@ class Api::V1::UsersControllerTest < ActionController::TestCase
   end
 
   test 'a post request to postpone_census_banner updates next_census_display' do
-    test_user = create :user
+    test_user = create(:user)
     sign_in(test_user)
     post :postpone_census_banner, params: {user_id: 'me'}
     assert_response :success
@@ -218,7 +186,7 @@ class Api::V1::UsersControllerTest < ActionController::TestCase
   end
 
   test 'a post request to dismiss_census_banner updates next_census_display' do
-    test_user = create :user
+    test_user = create(:user)
     sign_in(test_user)
     post :dismiss_census_banner, params: {user_id: 'me'}
     assert_response :success
@@ -228,7 +196,7 @@ class Api::V1::UsersControllerTest < ActionController::TestCase
   end
 
   test 'a post request to dismiss_donor_teacher_banner' do
-    test_user = create :user
+    test_user = create(:user)
     sign_in(test_user)
     post :dismiss_donor_teacher_banner, params: {user_id: 'me', participate: true, source: 'marketing'}
     assert_response :success
@@ -238,22 +206,12 @@ class Api::V1::UsersControllerTest < ActionController::TestCase
   end
 
   test 'a post request to dismiss_parent_email_banner' do
-    test_user = create :student
+    test_user = create(:student)
     sign_in(test_user)
     post :dismiss_parent_email_banner, params: {user_id: 'me'}
     assert_response :success
     test_user.reload
     assert_equal "true", test_user.parent_email_banner_dismissed
-  end
-
-  test 'a post request to set_standards_report_info_to_seen' do
-    test_user = create :user
-    sign_in(test_user)
-    assert_nil test_user.has_seen_standards_report_info_dialog
-    post :set_standards_report_info_to_seen, params: {user_id: 'me'}
-    assert_response :success
-    test_user.reload
-    assert_equal true, test_user.has_seen_standards_report_info_dialog
   end
 
   test "a get request to get current returns signed out user info" do
@@ -265,7 +223,7 @@ class Api::V1::UsersControllerTest < ActionController::TestCase
   end
 
   test "a get request to get current returns signed in user info" do
-    teacher = create :teacher
+    teacher = create(:teacher, grades_teaching: %w[9 10 11 12])
     sign_in(teacher)
     get :current
     assert_response :success
@@ -276,7 +234,20 @@ class Api::V1::UsersControllerTest < ActionController::TestCase
     assert_equal teacher.username, response["username"]
     assert_equal "teacher", response["user_type"]
     assert_equal teacher.short_name, response["short_name"]
+    assert_equal teacher.educator_role, response["educator_role"]
+    assert_equal %w[9 10 11 12], response["grades_teaching"]
     assert_equal false, response["is_verified_instructor"]
+  end
+
+  test "a get request to get current returns empty grades_teaching when unset" do
+    teacher = create(:teacher, grades_teaching: nil)
+    sign_in(teacher)
+
+    get :current
+
+    assert_response :success
+    response = JSON.parse(@response.body)
+    assert_equal [], response["grades_teaching"]
   end
 
   test "a get request to get school_name returns school object" do
@@ -305,68 +276,81 @@ class Api::V1::UsersControllerTest < ActionController::TestCase
     assert_response 403
   end
 
-  test "get_school_donor_name 403s when not signed in" do
-    get :get_school_donor_name, params: {user_id: 'me'}
-    assert_response 403
-  end
-
-  test "get_school_donor_name returns null when no donor is found" do
-    sign_in create :teacher
-    get :get_school_donor_name, params: {user_id: 'me'}
-    assert_response 200
-    assert_equal 'null', response.body
-  end
-
-  test "get_school_donor_name returns donor name" do
-    usi = create :user_school_info
-    create :donor_school, name: 'DonorName', nces_id: usi.school_info.school_id
-
-    sign_in usi.user
-    get :get_school_donor_name, params: {user_id: 'me'}
-    assert_response 200
-    assert_equal '"DonorName"', response.body
-  end
-
-  test "teacher can update ai tutor access for student in section" do
-    teacher = create :teacher
-    student_in_section = create :student
-    section = create :section, teacher: teacher
-    section.students << student_in_section
-
+  test 'set_seen_ta_scores updates seen_ta_scores_map' do
+    teacher = create(:teacher)
+    assert_nil teacher.seen_ta_scores_map
     sign_in(teacher)
 
-    post :update_ai_tutor_access, params: {user_id: student_in_section.id, ai_tutor_access: false}
-    assert_response :no_content
-    student_in_section.reload
-    assert_equal true, student_in_section.ai_tutor_access_denied
+    unit = create(:unit, :with_lessons, :in_single_unit_course)
+    lesson = unit.lessons.first
+    params = {lesson_id: lesson.id}
+
+    post :set_seen_ta_scores, params: params
+    assert_response :success
+    assert_equal({lesson.id.to_s => true}, teacher.reload.seen_ta_scores_map)
   end
 
-  test 'teacher cannot update ai tutor access for student not in section' do
-    teacher = create :teacher
-    student_not_in_section = create :student
-    create :section, teacher: teacher
-
+  test 'set_seen_ta_scores returns 400 if lesson id is missing' do
+    teacher = create(:teacher)
     sign_in(teacher)
 
-    post :update_ai_tutor_access, params: {user_id: student_not_in_section.id, ai_tutor_access: false}
-    assert_response :unauthorized
+    post :set_seen_ta_scores
+    assert_response :bad_request
   end
 
-  test 'student cannot modify ai tutor access' do
-    student = create :student
-
-    sign_in(student)
-
-    post :update_ai_tutor_access, params: {user_id: student.id, ai_tutor_access: false}
-    assert_response :unauthorized
-  end
-
-  test 'updating ai tutor access for uncreated user returns unauthorized' do
-    teacher = create :teacher
+  test 'set_seen_ta_scores returns 400 if lesson id is not a number' do
+    teacher = create(:teacher)
     sign_in(teacher)
 
-    post :update_ai_tutor_access, params: {user_id: -1, ai_tutor_access: false}
+    post :set_seen_ta_scores, params: {lesson_id: 'not_a_number'}
+    assert_response :bad_request
+  end
 
-    assert_response :unauthorized
+  describe 'GET signed_in' do
+    let(:current_user) {@user}
+
+    before do
+      sign_in(current_user) if current_user
+    end
+
+    it 'renders correct current user signed-in indicator' do
+      get :signed_in
+
+      assert_response :success
+      _(json_response).must_equal({'is_signed_in' => true})
+    end
+
+    it 'allows CDO CORS from code.org by default' do
+      get :signed_in
+
+      _(response.headers['Access-Control-Allow-Origin']).must_equal 'http://test.code.org'
+      _(response.headers['Access-Control-Allow-Methods']).must_equal 'GET'
+      _(response.headers['Access-Control-Allow-Headers']).must_equal '*'
+      _(response.headers['Access-Control-Allow-Credentials']).must_equal 'true'
+    end
+
+    CDO.marketing_sites_hosts.each do |marketing_site_host|
+      it "allows CDO CORS from #{marketing_site_host}" do
+        request.headers['Origin'] = marketing_site_host
+
+        get :signed_in
+
+        _(response.headers['Access-Control-Allow-Origin']).must_equal marketing_site_host
+        _(response.headers['Access-Control-Allow-Methods']).must_equal 'GET'
+        _(response.headers['Access-Control-Allow-Headers']).must_equal '*'
+        _(response.headers['Access-Control-Allow-Credentials']).must_equal 'true'
+      end
+    end
+
+    context 'when no signed-in user' do
+      let(:current_user) {nil}
+
+      it 'renders correct current user signed-in indicator' do
+        get :signed_in
+
+        assert_response :success
+        _(json_response).must_equal({'is_signed_in' => false})
+      end
+    end
   end
 end

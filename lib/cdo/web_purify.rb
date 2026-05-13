@@ -6,12 +6,14 @@ require 'dynamic_config/dcdo'
 
 module WebPurify
   # WebPurify limits us to 30,000 characters per request and 4 simultaneous requests per API key
-  API_ENDPOINT = URI('http://api1.webpurify.com/services/rest').freeze
+  API_ENDPOINT = URI(CDO.webpurify_api_endpoint).freeze
   CHARACTER_LIMIT = 30_000
   REQUEST_LIMIT = 4
   CONNECTION_OPTIONS = {
+    use_ssl: true,
     read_timeout: DCDO.get('webpurify_http_read_timeout', 10),
-    open_timeout: DCDO.get('webpurify_tcp_connect_timeout', 5)
+    open_timeout: DCDO.get('webpurify_tcp_connect_timeout', 5),
+    keep_alive_timeout: DCDO.get('webpurify_http_keep_alive_timeout', 0) # Disable HTTP connection pooling.
   }
   ISO_639_1_TO_WEBPURIFY = {
     'es' => 'sp',
@@ -54,7 +56,10 @@ module WebPurify
   # @param [Array[String]] language_codes The set of languages to search for profanity in.
   # @return [Array<String>, nil] The profanities (if any) or nil (if none).
   def self.find_potential_profanities(text, language_codes = ['en'])
-    return nil unless CDO.webpurify_key && Gatekeeper.allows('webpurify', default: true)
+    unless CDO.webpurify_key && Gatekeeper.allows('webpurify', default: true)
+      Honeybadger.notify("WebPurify API key is missing or disabled", context: {endpoint: CDO.webpurify_api_endpoint})
+      return nil
+    end
     return nil if text.nil?
 
     # This is an artificial limit to prevent us from profanity-checking a file up to 5MB (the project size limit)
@@ -73,7 +78,7 @@ module WebPurify
 
     chunks = split_text(text)
     expletives = []
-    Net::HTTP.start(API_ENDPOINT.host, API_ENDPOINT.port, CONNECTION_OPTIONS) do |http|
+    Net::HTTP.start(API_ENDPOINT.host, API_ENDPOINT.port, **CONNECTION_OPTIONS) do |http|
       chunks.each do |chunk|
         request = Net::HTTP::Post.new(API_ENDPOINT)
         form_data = [

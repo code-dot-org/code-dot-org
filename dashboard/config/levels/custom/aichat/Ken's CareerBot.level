@@ -1,0 +1,47 @@
+<Aichat>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 71,
+  "created_at": "2024-12-04T21:07:15.000Z",
+  "level_num": "custom",
+  "user_id": 1574,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "## CareerBot\r\n\r\nCareer Exploration: Use AI to simulate interviews with professionals in AI-related fields, exposing students to real-world applications and career pathways.\r\n\r\nStart by prompting the bot which profession it should assume. For example, \r\n`You are a marine biologist`\r\n\r\nThen ask it questions you'd like to discuss with someone in this profession.\r\n\r\n::: details [**Prompts to Try on This Level**]\r\n- Tell me about sensors used in your field\r\n- What are some common implementations of AI-powered systems in your field?\r\n:::",
+    "aichat_settings": {
+      "initialCustomizations": {
+        "selectedModelId": "gen-ai-mistral-7b-inst-v01",
+        "temperature": 0.2,
+        "systemPrompt": "",
+        "retrievalContexts": [
+          ""
+        ],
+        "modelCardInfo": {
+          "botName": "Career Bot",
+          "description": "This chatbot is meant to help you ask questions of a professional in a given field.",
+          "intendedUse": "",
+          "limitationsAndWarnings": "",
+          "testingAndEvaluation": "",
+          "exampleTopics": [
+
+          ],
+          "isPublished": false
+        }
+      },
+      "visibilities": {
+        "selectedModelId": "readonly",
+        "temperature": "hidden",
+        "systemPrompt": "editable",
+        "retrievalContexts": "readonly",
+        "modelCardInfo": "editable"
+      },
+      "levelSystemPrompt": "",
+      "hidePresentationPanel": false,
+      "availableModelIds": [
+        "gen-ai-mistral-7b-inst-v01"
+      ]
+    }
+  },
+  "audit_log": "[{\"changed_at\":\"2024-12-04T21:07:15.160+00:00\",\"changed\":[\"cloned from \\\"Ken's First AI Chat Level\\\"\"],\"cloned_from\":\"Ken's First AI Chat Level\"},{\"changed_at\":\"2024-12-04 21:16:11 +0000\",\"changed\":[\"long_instructions\",\"aichat_settings\"],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"}]"
+}]]></config>
+</Aichat>

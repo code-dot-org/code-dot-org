@@ -1,0 +1,27 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 52,
+  "created_at": "2026-04-30T14:59:11.000Z",
+  "level_num": "custom",
+  "user_id": 22366,
+  "properties": {
+    "skip_dialog": true,
+    "skip_sound": true,
+    "encrypted": "false",
+    "title": "Reflect on the Bug",
+    "long_instructions": "## **Reflect on the Bug**\r\n\r\n> ##### Explain how you found and fixed the problem.\r\n>\r\n> * The bug I experienced was ___\r\n> * My guess was ___\r\n> * AI suggested ___\r\n> * AI suggested this because ___\r\n> * The correct fix was ___\r\n> * The mistake happened because AI assumed ___\r\n> * One thing I will check next time before trusting AI is ___\r\n",
+    "stay_on_level_after_submit": "false",
+    "height": "100",
+    "allow_user_uploads": "false",
+    "submittable": "false",
+    "peer_reviewable": "false",
+    "optional": "false",
+    "allow_multiple_attempts": "false",
+    "teacher_markdown": "## Bug 1\r\n\r\nThe bug I experienced was that when I added a new stop, the notes didn’t match the correct stop. My guess was that one of the arrays wasn’t being updated when adding a stop. AI suggested that the arrays might be out of sync and that all arrays need to be updated together.\r\n\r\nThe correct fix was to add `stopNotesArray.push(notes)` in the `addStop()` function. This happened because only some of the arrays were updated, so the data no longer matched across the route.\r\n\r\n---\r\n\r\n## Bug 2\r\n\r\nThe bug I experienced was that after removing a stop, the hours didn’t match the correct stop anymore. My guess was that one of the arrays wasn’t removing an item when I clicked remove. AI suggested that the arrays could be getting out of sync and that each array should be updated when removing data.\r\n\r\nThe correct fix was to add `stopHoursArray.pop()` in the `removeStop()` function. This happened because one array still had extra data, so the values were shifted and didn’t line up correctly.\r\n"
+  },
+  "audit_log": "[{\"changed_at\":\"2026-04-30 15:01:49 +0000\",\"changed\":[],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-04-30 15:03:44 +0000\",\"changed\":[],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-05-08 22:39:41 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-05-08 22:51:22 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</FreeResponse>

@@ -1,10 +1,11 @@
+import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
+import {Button as MuiButton} from '@mui/material';
 import $ from 'jquery';
 import PropTypes from 'prop-types';
 import React from 'react';
 import {connect} from 'react-redux';
 
 import fontConstants from '@cdo/apps/fontConstants';
-import Button from '@cdo/apps/legacySharedComponents/Button';
 import i18n from '@cdo/locale';
 
 import styleConstants from '../../styleConstants';
@@ -160,22 +161,31 @@ class ProjectAppTypeArea extends React.Component {
     return (
       <div style={styles.viewMoreButtons}>
         {showViewMore && (
-          <Button
-            __useDeprecatedTag
+          <MuiButton
+            variant="outlined"
+            color="secondary"
+            size="small"
             onClick={this.loadMore}
-            color={Button.ButtonColor.neutralDark}
-            icon="plus-circle"
-            text={i18n.viewMore()}
             style={styles.buttonRightMargin}
-          />
+            type="button"
+            startIcon={
+              <FontAwesomeV6Icon iconStyle="solid" iconName="plus-circle" />
+            }
+          >
+            {i18n.viewMore()}
+          </MuiButton>
         )}
-        <Button
-          __useDeprecatedTag
+        <MuiButton
+          variant="outlined"
+          color="secondary"
+          size="small"
           href="#top"
-          color={Button.ButtonColor.neutralDark}
-          icon="chevron-circle-up"
-          text={i18n.backToTop()}
-        />
+          startIcon={
+            <FontAwesomeV6Icon iconStyle="solid" iconName="circle-chevron-up" />
+          }
+        >
+          {i18n.backToTop()}
+        </MuiButton>
       </div>
     );
   };
@@ -194,11 +204,17 @@ class ProjectAppTypeArea extends React.Component {
             onClick={this.viewMore}
           >
             {this.props.isDetailView && (
-              <i className="fa fa-angle-left" style={styles.iconPaddingRight} />
+              <i
+                className="fa-solid fa-angle-left"
+                style={styles.iconPaddingRight}
+              />
             )}
             {this.props.labViewMoreString}
             {!this.props.isDetailView && (
-              <i className="fa fa-angle-right" style={styles.iconPaddingLeft} />
+              <i
+                className="fa-solid fa-angle-right"
+                style={styles.iconPaddingLeft}
+              />
             )}
           </span>
         )}
@@ -236,10 +252,12 @@ const styles = {
   },
   viewMoreButtons: {
     float: 'right',
-    marginRight: 22,
+    marginInlineEnd: 22,
+    display: 'flex',
+    alignItems: 'center',
   },
   buttonRightMargin: {
-    marginRight: 20,
+    marginInlineEnd: 20,
   },
   iconPaddingLeft: {
     paddingLeft: 6,

@@ -2,7 +2,6 @@ import $ from 'jquery';
 import PropTypes from 'prop-types';
 import React from 'react';
 
-import firehoseClient from '@cdo/apps/metrics/firehose.js';
 import Spinner from '@cdo/apps/sharedComponents/Spinner.jsx';
 import color from '@cdo/apps/util/color';
 import i18n from '@cdo/locale';
@@ -71,23 +70,6 @@ export default class Pairing extends React.Component {
     });
     const pairings = this.selectedSection().students.filter(
       student => studentIds.indexOf(student.id) !== -1
-    );
-
-    firehoseClient.putRecord(
-      {
-        study: 'pairing',
-        study_group: 'pairing',
-        event: 'initiating-pairing',
-        data_json: JSON.stringify({
-          location: window.location.href,
-          number_partners: pairings.length,
-          section_id: this.selectedSection().id,
-        }),
-      },
-      {
-        includeUserId: true,
-        useProgressScriptId: true,
-      }
     );
 
     $.ajax({

@@ -1,0 +1,28 @@
+name 'csaif_pl_nets_interent_2_-rev'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Sending Bits
+
+#### The Internet is a massive network of smaller networks that allows computers around the world to communicate with each other. When information like websites, emails, or videos is sent across the Internet, it’s broken down into small pieces called **packets**.
+
+#### All the data sent over the Internet is represented in **binary**, which is a system of only two digits: 1s and 0s. Each individual 1 or 0 is called a **bit**, short for “binary digit.” Bits are the smallest unit of data in computing, and they’re the building blocks of all digital information.
+
+<p align="center">
+<img src="https://images.code.org/10df7962c5b3ab87ca85db1c3f6534e6-Screenshot 2025-04-16 at 12.26.27 PM.png" alt="bits can be represented as 1 or 0" width="50%" style="border-radius:10px; border: 2px solid black;">
+</p>
+
+
+#### To send text over the Internet, computers use a system called ASCII (American Standard Code for Information Interchange). **ASCII** assigns a unique binary code to each letter, number, and symbol. For example, the letter "A" is represented in binary as 1000001. The image below shows the rest of the ASCII encoding for the English alphabet.
+
+<p align="center">
+<img src="https://images.code.org/60660dedbac173cb5544a4dced1ad7f8-Screenshot 2025-04-21 at 2.05.27 PM.png" alt="ASCII encoding for the English alphabet" width="40%" style="border-radius:10px; border: 2px solid black;">
+</p>
+
+<br>
+
+<p style="font-size: 18px; font-weight: bold; background-color: #F5F7F8; padding: 10px; border-left: 5px solid #8148B2; display: inline-block;">
+    ➡️ Students explore bits in an unplugged activity in Lesson 2. If you have time, check out the <a href='https://docs.google.com/document/d/1wlvPz9rwTQuBmB-fNfSRdluP9L1gbfMdvfrgQimehZE/edit?tab=t.0#heading=h.xe9cnc3216z0' target='_blank' rel='noopener noreferrer' style='text-decoration: none; font-weight: bold;'>Teacher Guide</a> for this activity.
+</p>
+MARKDOWN

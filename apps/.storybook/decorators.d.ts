@@ -4,3 +4,7 @@ import {Store} from 'redux';
 export declare const reduxStore: (reducers?: object, state?: object) => Store;
 
 export declare const reduxStoreDecorator: DecoratorFunction;
+
+export declare const withGlobalEdition: DecoratorFunction;
+
+export declare const MuiDecorator: DecoratorFunction;

@@ -1,0 +1,9 @@
+name 'computer-systems-lesson1-level3-2024'
+display_name 'Industry Professional for Solix Ag Robotics'
+description 'Learn how Solix Ag Robotics is transforming agriculture through automation and precision farming. Select a role and conduct an interview to understand how AI-powered robots help professionals increase efficiency and sustainability.'
+
+sublevels
+level 'computer-systems-lesson1-level3a-2024'
+level 'computer-systems-lesson1-level3b-2024'
+level 'computer-systems-lesson1-level3c-2024'
+level 'computer-systems-lesson1-level3d-2024'

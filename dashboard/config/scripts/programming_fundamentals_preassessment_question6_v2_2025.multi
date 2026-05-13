@@ -1,0 +1,23 @@
+name 'programming-fundamentals-preassessment-question6_v2-2025'
+title 'Programming Fundamentals Pre-Assessment: Question 6'
+
+wrong '`105`'
+right '`15`'
+wrong '`5`'
+wrong '`x + y`'
+
+allow_multiple_attempts true
+
+teacher_markdown <<MARKDOWN
+Lesson 4: Variables and Data Flow
+MARKDOWN
+
+markdown <<MARKDOWN
+What will be printed by the following code?
+
+```
+x = 10  
+y = 5  
+print(x + y)
+```
+MARKDOWN

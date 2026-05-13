@@ -1,0 +1,23 @@
+<StandaloneVideo>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 54,
+  "created_at": "2025-01-08T21:58:27.000Z",
+  "level_num": "custom",
+  "user_id": 63,
+  "properties": {
+    "video_key": "PL_overview_CSD",
+    "instructions_important": "false",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "parent_level_id": 28731,
+    "name_suffix": "_2024",
+    "encrypted": "false",
+    "long_instructions": "#### The following video provides more information about Code.org's stance toward equity in computer science education. While you watch, consider the following:\r\n\r\n* #### How would you rate your district, school, and/or classroom regarding the 3 components of **access**, **inclusion**, and **diversity**? "
+  },
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2025-01-08T21:58:27.582+00:00\",\"changed\":[\"cloned from \\\"self-paced-equity-U1L1-equityvid\\\"\"],\"cloned_from\":\"self-paced-equity-U1L1-equityvid\"},{\"changed_at\":\"2025-01-08 22:13:16 +0000\",\"changed\":[\"video_key\"],\"changed_by_id\":10559,\"changed_by_email\":\"aryanna@code.org\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</StandaloneVideo>

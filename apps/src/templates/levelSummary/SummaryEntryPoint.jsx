@@ -1,9 +1,9 @@
+import {Button as MuiButton} from '@mui/material';
 import PropTypes from 'prop-types';
 import React from 'react';
 import {connect} from 'react-redux';
 
 import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
-import Button from '@cdo/apps/legacySharedComponents/Button';
 import i18n from '@cdo/locale';
 
 import styles from './summary-entry-point.module.scss';
@@ -29,21 +29,23 @@ const SummaryEntryPoint = ({scriptData, students, selectedSection}) => {
 
   return (
     <div className={className}>
-      <Button
-        color={Button.ButtonColor.neutralDark}
-        text={i18n.viewStudentResponses()}
-        href={summaryUrl}
+      <MuiButton
+        variant="outlined"
+        color="secondary"
+        size="small"
         className={styles.button}
-        __useDeprecatedTag
-      />
-
+        href={summaryUrl}
+      >
+        {i18n.viewStudentResponses()}
+      </MuiButton>
       {selectedSection && (
         <>
           <div className={styles.responseIcon}>
-            <i className="fa fa-user" />
+            <i className="fa-solid fa-user" />
           </div>
           <div
             className={styles.responseCounter}
+            // eslint-disable-next-line react/forbid-dom-props
             data-testid={'response-counter'}
           >
             <p>

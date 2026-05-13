@@ -1,0 +1,132 @@
+<Weblab2>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 74,
+  "created_at": "2025-11-20T19:24:15.000Z",
+  "level_num": "custom",
+  "user_id": 18603,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "#Template U3L3L3b",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "widget_view": "false",
+    "initial_view_mode": "split",
+    "disable_edit_run_for_submission": "false",
+    "ai_tutor_mode": "engineer",
+    "predict_settings": {
+      "isPredictLevel": false,
+      "solution": "",
+      "questionType": "freeResponse",
+      "placeholderText": "",
+      "multipleChoiceOptions": [
+        ""
+      ],
+      "freeResponseHeight": 50,
+      "codeEditableAfterSubmit": false,
+      "allowMultipleAttempts": false
+    },
+    "start_sources": {
+      "folders": {
+        "1": {
+          "id": "1",
+          "name": "images",
+          "parentId": "0",
+          "open": false
+        }
+      },
+      "files": {
+        "1": {
+          "id": "1",
+          "name": "index.html",
+          "language": "html",
+          "contents": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"UTF-8\">\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n  <title>Sweet Bytes Bakery</title>\n  <link rel=\"stylesheet\" href=\"style.css\">\n  <script src=\"script.js\" defer></script>\n</head>\n<body>\n\n  <div class=\"phone-screen\">\n    <header>\n      <h1>Sweet Bytes</h1>\n      <p class=\"subtitle\">Weekly Specials</p>\n    </header>\n\n    <main>\n      <div class=\"special-card\">\n        <div class=\"special-info\">\n          <h2 id=\"special1-title\">Title Here</h2>\n          <p id=\"special1-content\" class=\"special-content\">Desc...</p>\n          <p class=\"special-day\">MONDAY</p>\n        </div>\n        <div class=\"special-image-placeholder\">\n          <span id=\"special1-img-name\">img.png</span>\n        </div>\n      </div>\n\n      <div class=\"special-card\">\n        <div class=\"special-info\">\n          <h2 id=\"special2-title\">Title Here</h2>\n          <p id=\"special2-content\" class=\"special-content\">Desc...</p>\n          <p class=\"special-day\">TUESDAY</p>\n        </div>\n        <div class=\"special-image-placeholder\">\n          <span id=\"special2-img-name\">img.png</span>\n        </div>\n      </div>\n\n      <div class=\"special-card\">\n        <div class=\"special-info\">\n          <h2 id=\"special3-title\">Title Here</h2>\n          <p id=\"special3-content\" class=\"special-content\">Desc...</p>\n          <p class=\"special-day\">WEDNESDAY</p>\n        </div>\n        <div class=\"special-image-placeholder\">\n          <span id=\"special3-img-name\">img.png</span>\n        </div>\n      </div>\n\n      <div class=\"special-card\">\n        <div class=\"special-info\">\n          <h2 id=\"special4-title\">Title Here</h2>\n          <p id=\"special4-content\" class=\"special-content\">Desc...</p>\n          <p class=\"special-day\">THURSDAY</p>\n        </div>\n        <div class=\"special-image-placeholder\">\n          <span id=\"special4-img-name\">img.png</span>\n        </div>\n      </div>\n\n      <div class=\"special-card\">\n        <div class=\"special-info\">\n          <h2 id=\"special5-title\">Title Here</h2>\n          <p id=\"special5-content\" class=\"special-content\">Desc...</p>\n          <p class=\"special-day\">FRIDAY</p>\n        </div>\n        <div class=\"special-image-placeholder\">\n          <span id=\"special5-img-name\">img.png</span>\n        </div>\n      </div>\n    </main>\n  </div>\n\n</body>\n</html>",
+          "active": false,
+          "folderId": "0"
+        },
+        "2": {
+          "id": "2",
+          "name": "script.js",
+          "language": "js",
+          "contents": "// DOM ELEMENTS\nlet special1Title = document.querySelector(\"#special1-title\");\nlet special1Content = document.querySelector(\"#special1-content\");\nlet special1Img = document.querySelector(\"#special1-img-name\");\n\nlet special2Title = document.querySelector(\"#special2-title\");\nlet special2Content = document.querySelector(\"#special2-content\");\nlet special2Img = document.querySelector(\"#special2-img-name\");\n\nlet special3Title = document.querySelector(\"#special3-title\");\nlet special3Content = document.querySelector(\"#special3-content\");\nlet special3Img = document.querySelector(\"#special3-img-name\");\n\nlet special4Title = document.querySelector(\"#special4-title\");\nlet special4Content = document.querySelector(\"#special4-content\");\nlet special4Img = document.querySelector(\"#special4-img-name\");\n\nlet special5Title = document.querySelector(\"#special5-title\");\nlet special5Content = document.querySelector(\"#special5-content\");\nlet special5Img = document.querySelector(\"#special5-img-name\");\n\n// DATA LISTS (Parallel Arrays)\n// Index 0 belongs to the Monday slot, Index 1 to Tuesday, etc.\nlet titles = [\"Muffin Monday\", \"Tart Tuesday\", \"Waffle Wednesday\", \"Treat Thursday\", \"Fudge Friday\"];\nlet contents = [\"Blueberry blast.\", \"Lemon zest.\", \"Syrup drizzle.\", \"Surprise sweet.\", \"Extra chocolate.\"];\nlet images = [\"/images/one.png\", \"/images/two.png\", \"/images/three.png\", \"/images/four.png\", \"/images/five.png\"];\n\n// DISPLAY LOGIC\nfunction renderFeed() {\n  // Monday Slot (Index 0)\n  special1Title.textContent = titles[0];\n  special1Content.textContent = contents[0];\n  special1Img.textContent = images[0];\n\n  // Tuesday Slot (Index 1)\n  special2Title.textContent = titles[1];\n  special2Content.textContent = contents[1];\n  special2Img.textContent = images[1];\n\n  // Wednesday Slot (Index 2)\n  special3Title.textContent = titles[2];\n  special3Content.textContent = contents[2];\n  special3Img.textContent = images[2];\n\n  // Thursday Slot (Index 3)\n  special4Title.textContent = titles[3];\n  special4Content.textContent = contents[3];\n  special4Img.textContent = images[3];\n\n  // Friday Slot (Index 4)\n  special5Title.textContent = titles[4];\n  special5Content.textContent = contents[4];\n  special5Img.textContent = images[4];\n}\n\n// START APP\nrenderFeed();\n\n// HELPER FUNCTIONS\n\n",
+          "folderId": "0",
+          "active": true
+        },
+        "3": {
+          "id": "3",
+          "name": "style.css",
+          "language": "css",
+          "contents": "@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&family=Nunito:wght@400;700&display=swap');\n\nbody {\n  background-color: #8D6E63; /* Cocoa brown background */\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  height: 100vh;\n  margin: 0;\n  font-family: 'Nunito', sans-serif;\n}\n\n.phone-screen {\n  width: 320px;\n  height: 600px;\n  background-color: #FFF8E1; /* Creamy vanilla */\n  border: 8px solid #3E2723; /* Dark chocolate border */\n  border-radius: 24px;\n  overflow: hidden;\n  box-shadow: 0 10px 25px rgba(0,0,0,0.3);\n  display: flex;\n  flex-direction: column;\n}\n\nheader {\n  background-color: #FF7043; /* Burnt Orange */\n  padding: 20px;\n  text-align: center;\n  border-bottom: 4px solid #FFAB91;\n  flex-shrink: 0;\n}\n\nh1 {\n  font-family: 'Fredoka One', cursive;\n  margin: 0;\n  color: #FFF;\n  font-size: 28px;\n  text-shadow: 2px 2px 0px rgba(0,0,0,0.1);\n}\n\n.subtitle {\n  margin: 5px 0 0;\n  color: #FFF;\n  font-size: 14px;\n  font-weight: bold;\n  letter-spacing: 0.5px;\n  opacity: 0.9;\n}\n\nmain {\n  flex: 1;\n  padding: 15px;\n  background-image: radial-gradient(#FFCCBC 1px, transparent 1px); /* Polka dot pattern */\n  background-size: 20px 20px;\n  overflow-y: auto;\n}\n\n.special-card {\n  background: white;\n  border-left: 6px solid #FF7043;\n  border-radius: 8px;\n  margin-bottom: 15px;\n  box-shadow: 0 4px 6px rgba(0,0,0,0.05);\n  display: flex;\n  justify-content: space-between;\n  align-items: flex-start;\n  padding: 12px;\n}\n\n.special-info {\n  flex: 1;\n  padding-right: 8px;\n}\n\n.special-card h2 {\n  margin: 0;\n  font-size: 18px;\n  color: #5D4037;\n  font-weight: 800;\n  line-height: 1.2;\n}\n\n.special-content {\n  margin: 4px 0;\n  font-size: 13px;\n  color: #795548; /* Lighter brown */\n  font-style: italic;\n}\n\n.special-day {\n  margin: 6px 0 0;\n  font-size: 11px;\n  color: #FF7043;\n  text-transform: uppercase;\n  font-weight: 800;\n  letter-spacing: 0.5px;\n}\n\n.special-image-placeholder {\n  width: 50px;\n  height: 50px;\n  background-color: #FFE0B2;\n  border-radius: 50%; /* Circle images */\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  font-size: 10px;\n  color: #E65100;\n  flex-shrink: 0;\n  word-break: break-all;\n  text-align: center;\n  border: 2px solid #fff;\n  box-shadow: 0 2px 4px rgba(0,0,0,0.1);\n}",
+          "folderId": "0",
+          "active": false
+        },
+        "4": {
+          "id": "4",
+          "name": "five.png",
+          "language": "png",
+          "contents": "",
+          "folderId": "1",
+          "url": "/level_starter_assets/building-data-driven-systems-lesson3-templateB-test-2025/uuid/dc22790f-68e4-4a4c-9a90-2be6aaa59a6a.png",
+          "type": "starter",
+          "active": false
+        },
+        "5": {
+          "id": "5",
+          "name": "three.png",
+          "language": "png",
+          "contents": "",
+          "folderId": "1",
+          "url": "/level_starter_assets/building-data-driven-systems-lesson3-templateB-test-2025/uuid/1a35dcf9-f121-4de2-8863-19b8d79ed1ff.png",
+          "type": "starter",
+          "active": false
+        },
+        "6": {
+          "id": "6",
+          "name": "one.png",
+          "language": "png",
+          "contents": "",
+          "folderId": "1",
+          "url": "/level_starter_assets/building-data-driven-systems-lesson3-templateB-test-2025/uuid/0d89593a-7adb-43a1-8873-a20f668540dd.png",
+          "type": "starter",
+          "active": false
+        },
+        "7": {
+          "id": "7",
+          "name": "four.png",
+          "language": "png",
+          "contents": "",
+          "folderId": "1",
+          "url": "/level_starter_assets/building-data-driven-systems-lesson3-templateB-test-2025/uuid/0e340752-35f5-4b32-9284-f8d8bc721adb.png",
+          "type": "starter",
+          "active": false
+        },
+        "8": {
+          "id": "8",
+          "name": "two.png",
+          "language": "png",
+          "contents": "",
+          "folderId": "1",
+          "url": "/level_starter_assets/building-data-driven-systems-lesson3-templateB-test-2025/uuid/d63a59df-464b-49a8-a940-e91bd11834d1.png",
+          "type": "starter",
+          "active": false
+        },
+        "9": {
+          "id": "9",
+          "name": "reflection.md",
+          "language": "md",
+          "contents": "##Reflect: Write a short statement about how helper functions protect data consistency.\n\n* push() helper function\n\n\n* pop() helper function\n\n\n* unshift() helper function\n\n\n* shift() helper function\n\n",
+          "folderId": "0",
+          "active": false
+        }
+      },
+      "openFiles": [
+        "1",
+        "3",
+        "2",
+        "9"
+      ]
+    }
+  },
+  "audit_log": "[{\"changed_at\":\"2025-11-20T19:24:15.028+00:00\",\"changed\":[\"cloned from \\\"building-data-driven-systems-template\\\"\"],\"cloned_from\":\"building-data-driven-systems-template\"},{\"changed_at\":\"2025-11-20 19:45:02 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2025-11-20 19:49:48 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2025-11-20 19:57:34 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2025-11-20 20:27:16 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2025-11-20 20:32:33 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2025-11-20 20:48:47 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2025-11-20 20:48:49 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2025-12-16 16:09:59 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"},{\"changed_at\":\"2025-12-16 16:11:01 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"}]"
+}]]></config>
+</Weblab2>

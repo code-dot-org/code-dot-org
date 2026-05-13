@@ -11,7 +11,6 @@ const {
   cloneWithoutFunctions,
   stripQuotes,
   stripEncapsulatingDoubleQuotes,
-  wrapNumberValidatorsForLevelBuilder,
   escapeHtml,
   escapeText,
   unescapeText,
@@ -249,45 +248,6 @@ describe('utils modules', () => {
       assert(stripQuotes('t"e"s"t"') === 'test');
       assert(stripQuotes('test') === 'test');
       assert(stripQuotes('') === '');
-    });
-  });
-
-  describe('wrapNumberValidatorsForLevelBuilder', function () {
-    let oldBlockly;
-
-    beforeEach(function () {
-      // Blockly hasn't actually been loaded at this point, but we can simulate it.
-      // First stash the current blockly in case things change and we do have it
-      // loaded.
-      oldBlockly = global.Blockly;
-    });
-
-    afterEach(function () {
-      global.Blockly = oldBlockly;
-    });
-
-    it('will allow ??? in number validators after being wrapped', function () {
-      global.Blockly = {
-        cdoUtils: {
-          // fake our validators
-          nonnegativeIntegerValidator: function (text) {
-            return isNaN(text) ? null : text;
-          },
-          numberValidator: function (text) {
-            return isNaN(text) ? null : text;
-          },
-        },
-      };
-
-      assert.equal(Blockly.cdoUtils.nonnegativeIntegerValidator('123'), 123);
-      assert.equal(Blockly.cdoUtils.numberValidator('123'), 123);
-      assert.equal(Blockly.cdoUtils.nonnegativeIntegerValidator('???'), null);
-      assert.equal(Blockly.cdoUtils.numberValidator('???'), null);
-      wrapNumberValidatorsForLevelBuilder();
-      assert.equal(Blockly.cdoUtils.nonnegativeIntegerValidator('123'), 123);
-      assert.equal(Blockly.cdoUtils.numberValidator('123'), 123);
-      assert.equal(Blockly.cdoUtils.nonnegativeIntegerValidator('???'), '???');
-      assert.equal(Blockly.cdoUtils.numberValidator('???'), '???');
     });
   });
 

@@ -1,11 +1,13 @@
 import {MoveFileFunction} from '@codebridge/codebridgeContext/types';
-import {ProjectFile, ProjectType, FileId} from '@codebridge/types';
+import {ProjectFile, FileId} from '@codebridge/types';
 import {
   getFolderPath,
   getPossibleDestinationFoldersForFile,
 } from '@codebridge/utils';
 
 import codebridgeI18n from '@cdo/apps/codebridge/locale';
+import {MultiFileSource} from '@cdo/apps/lab2/types';
+import {getFileExtension} from '@cdo/apps/lab2/utils/multiFileSourceUtils';
 import {
   DialogType,
   DialogControlInterface,
@@ -16,13 +18,16 @@ import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 
 type OpenMoveFilePromptArgsType = {
   fileId: FileId;
-  projectFiles: ProjectType['files'];
-  projectFolders: ProjectType['folders'];
+  projectFiles: MultiFileSource['files'];
+  projectFolders: MultiFileSource['folders'];
   dialogControl: Pick<DialogControlInterface, 'showDialog'>;
   moveFile: MoveFileFunction;
   isStartMode: boolean;
   validationFile: ProjectFile | undefined;
-  sendCodebridgeAnalyticsEvent: (eventName: string) => unknown;
+  sendLab2AnalyticsEvent: (
+    eventName: string,
+    payload?: Record<string, string>
+  ) => void;
 };
 
 export const openMoveFilePrompt = async ({
@@ -33,7 +38,7 @@ export const openMoveFilePrompt = async ({
   moveFile,
   isStartMode,
   validationFile,
-  sendCodebridgeAnalyticsEvent,
+  sendLab2AnalyticsEvent,
 }: OpenMoveFilePromptArgsType) => {
   const file = projectFiles[fileId];
 
@@ -59,6 +64,7 @@ export const openMoveFilePrompt = async ({
     selectedValue: possibleDestinationFolders[0].value,
     items: possibleDestinationFolders,
     dropdownLabel: '',
+    useModal: true,
   });
 
   if (results.type !== 'confirm') {
@@ -68,5 +74,7 @@ export const openMoveFilePrompt = async ({
   const destinationFolderId = extractUserInput(results);
   moveFile(fileId, destinationFolderId);
 
-  sendCodebridgeAnalyticsEvent(EVENTS.CODEBRIDGE_MOVE_FILE);
+  sendLab2AnalyticsEvent(EVENTS.CODEBRIDGE_MOVE_FILE, {
+    fileType: getFileExtension(file.name),
+  });
 };

@@ -42,7 +42,7 @@ function LessonProgressDataColumn({
       <LessonProgressColumnHeader lesson={lesson} allLocked={allLocked} />
 
       <div className={styles.lessonDataColumn}>
-        {sortedStudents.map(student => (
+        {sortedStudents.map((student, index) => (
           <LessonDataCell
             locked={lockedPerStudent[student.id]}
             lesson={lesson}
@@ -52,6 +52,7 @@ function LessonProgressDataColumn({
             key={student.id + '.' + lesson.id}
             studentId={student.id}
             metadataExpanded={expandedMetadataStudentIds.includes(student.id)}
+            index={index}
           />
         ))}
       </div>

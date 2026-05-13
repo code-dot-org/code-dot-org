@@ -1,0 +1,30 @@
+name 'pl-aif-2-U3-datasets-with-arrays-7_2025'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Structured Datasets
+
+#### Arrays and objects work together to create structured datasets. An array stores the full collection of data, while each object represents one record with related information stored as key-value pairs. This mirrors how data is organized in spreadsheets, databases, and APIs.
+
+<img src="https://images.code.org/d6df6b77273f9067ddc00b6dbddf5c07-image-1766165351780.png" alt="javascript code for a helper function to get index" width="500px" style="border-radius:10px; float:right; margin: 40px 0 20px 20px;">
+
+
+## Clean vs. Messy Data
+
+#### Using helper functions like `getItemByIndex` or `getItemById` helps clarify whether the data is clean or messy because they force you to define what “valid” data access looks like. 
+
+#### These functions make it easier to catch issues early, such as:
+
+- #### Invalid indexes or missing IDs
+
+- #### Unexpected input values
+
+#### When a helper function returns null, it signals that something doesn’t match expectations, making it easier to debug and improve data reliability before problems spread through the program.
+
+---
+
+## Next up
+
+#### Practice cleaning up a dataset! 
+MARKDOWN

@@ -17,7 +17,12 @@ class Api::V1::Pd::FormsController < ApplicationController
     return render json: {id: existing_form.id}, status: :conflict if existing_form
 
     if form.save
-      render json: {id: form.id}, status: :created
+      if form.form_data_hash["source"] == "contact-regional-partner"
+        regional_partner, _ = RegionalPartner.find_by_zip(form.form_data_hash["zip"])
+        render json: {id: form.id, regional_partner_name: regional_partner&.name}, status: :created
+      else
+        render json: {id: form.id}, status: :created
+      end
       on_successful_create
     else
       return_data = {

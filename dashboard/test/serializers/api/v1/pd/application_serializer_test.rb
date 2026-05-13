@@ -2,14 +2,14 @@ require 'test_helper'
 
 class Api::V1::Pd::ApplicationSerializerTest < ActionController::TestCase
   setup do
-    application_data = build :pd_teacher_application_hash, course: :csp
-    @application = create :pd_teacher_application, form_data_hash: application_data
+    application_data = build(:pd_teacher_application_hash, course: :csp)
+    @application = create(:pd_teacher_application, form_data_hash: application_data)
   end
 
   test 'Invalid application data does not break serializer result' do
     # Application data could have more than 1 invalid fields
-    app_data = build :pd_teacher_application_hash, course: :csp, school: 'invalid code'
-    app = build :pd_teacher_application, form_data_hash: app_data
+    app_data = build(:pd_teacher_application_hash, course: :csp, school: 'invalid code')
+    app = build(:pd_teacher_application, form_data_hash: app_data)
 
     serialized_app = Api::V1::Pd::ApplicationSerializer.new(app, {scope: {}}).attributes
     assert serialized_app.present?
@@ -21,7 +21,7 @@ class Api::V1::Pd::ApplicationSerializerTest < ActionController::TestCase
   end
 
   test 'Results with school data' do
-    create :school_stats_by_year, school_id: @application.school_id, students_total: 100, student_am_count: 10, student_as_count: 11, student_bl_count: 12
+    create(:school_stats_by_year, school_id: @application.school_id, students_total: 100, student_am_count: 10, student_as_count: 11, student_bl_count: 12)
     serialized = ::Api::V1::Pd::ApplicationSerializer.new(@application, {scope: {}}).attributes
     expected = {
       urm_percent: '22.0%',
@@ -38,7 +38,7 @@ class Api::V1::Pd::ApplicationSerializerTest < ActionController::TestCase
   end
 
   test 'Results with status change log' do
-    program_manager = create :program_manager
+    program_manager = create(:program_manager)
     @application.update(
       status_log: [{
         status: 'unreviewed',

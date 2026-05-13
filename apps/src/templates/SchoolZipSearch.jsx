@@ -1,8 +1,8 @@
+import TextField from '@code-dot-org/component-library/textField';
+import {Typography} from '@mui/material';
 import PropTypes from 'prop-types';
 import React, {useMemo} from 'react';
 
-import TextField from '@cdo/apps/componentLibrary/textField/TextField';
-import {BodyThreeText} from '@cdo/apps/componentLibrary/typography';
 import {ZIP_REGEX} from '@cdo/apps/signUpFlow/signUpFlowConstants';
 import i18n from '@cdo/locale';
 
@@ -27,12 +27,11 @@ export default function SchoolZipSearch({fieldNames, schoolZip, setSchoolZip}) {
           label={i18n.enterYourSchoolZip()}
           onChange={e => handleZipChange(e.target.value)}
           value={schoolZip}
-          placeholder="00000"
         />
         {schoolZip && !schoolZipIsValid && (
-          <BodyThreeText className={style.errorMessage}>
+          <Typography className={style.errorMessage} variant="body3">
             {i18n.zipInvalidMessage()}
-          </BodyThreeText>
+          </Typography>
         )}
       </label>
     </div>

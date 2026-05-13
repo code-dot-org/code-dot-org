@@ -51,8 +51,8 @@ describe('VersionUnitDropdowns', () => {
       displayName: 'Computer Science Discoveries',
       versionId: 737,
       unitId: 5080,
-      hasLessonExtras: false,
-      hasTextToSpeech: true,
+      lessonExtrasAvailable: false,
+      textToSpeechEnabled: true,
     });
   });
 });

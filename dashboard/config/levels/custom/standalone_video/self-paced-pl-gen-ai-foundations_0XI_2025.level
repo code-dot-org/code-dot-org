@@ -1,0 +1,23 @@
+<StandaloneVideo>
+  <config><![CDATA[{
+  "game_id": 54,
+  "created_at": "2025-05-29T11:50:35.000Z",
+  "level_num": "custom",
+  "user_id": 63,
+  "properties": {
+    "video_key": "ai-auditing-deb-raji",
+    "instructions_important": "false",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "parent_level_id": 28811,
+    "name_suffix": "_2025",
+    "encrypted": "false",
+    "long_instructions": "#### Bias isn't the only type of problematic outputs that can implicitly and unintentionally creep into large language models.\r\n\r\n#### Large language models make predictions based on patterns in their training data. If outdated, unbalanced, or biased data is overrepresented, the model might generate inaccurate outputs called **hallucinations**. \r\n\r\n#### For example, a model might still say Pluto is the smallest planet or repeat medical misinformation.\r\n\r\n## Lesson Highlight: Career Connection\r\n\r\n#### An **AI Auditor** is professional who tests, monitors, and advises on how to make AI systems more fair, accurate, and inclusive. In <a href='https://studio.code.org/courses/exploring-gen-ai-2025/units/1/lessons/11' target='_blank' rel='noopener noreferrer' style='text-decoration: none; font-weight: bold;'>Lesson 11: AI Auditing</a> students will take on the role of an AI Auditor in two different scenarios.\r\n\r\n#### Watch this video clip to hear Dr. Raji speak to what it means to be an AI Auditor. Watching this video ahead of time can help anticipate key teaching moments in the lesson.\r\n"
+  },
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2025-05-29T11:50:35.502+00:00\",\"changed\":[\"cloned from \\\"self-paced-pl-gen-ai-foundations_0XI_2024\\\"\"],\"cloned_from\":\"self-paced-pl-gen-ai-foundations_0XI_2024\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</StandaloneVideo>

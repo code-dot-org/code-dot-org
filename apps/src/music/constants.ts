@@ -48,6 +48,12 @@ export const DEFAULT_PATTERN_LENGTH = 1;
 export const DEFAULT_PATTERN_AI_LENGTH = 2;
 export const DEFAULT_CHORD_LENGTH = 1;
 export const DEFAULT_TUNE_LENGTH = 1;
+export const MAX_FUNCTION_CALLS_COUNT = 100;
+export const MAX_LOOP_ITERATIONS_COUNT = 1000;
+
+export const MAX_NUMBER_EVENTS = 1000;
+
+export const MAX_FUNCTION_BOUNDS_RENDER_DEPTH = 10;
 
 export const DEFAULT_PATTERN: InstrumentEventValue = {
   instrument: 'drums',
@@ -74,6 +80,8 @@ export const DEFAULT_TUNE: InstrumentEventValue = {
   instrument: 'piano',
   events: [],
   length: DEFAULT_TUNE_LENGTH,
+  relative: false,
+  scaleMode: 'simple',
 };
 
 export const LOCAL_STORAGE = 'local';
@@ -92,6 +100,7 @@ export const DEFAULT_BEATS_PER_MEASURE = 4;
 export const DEFAULT_KEY = Key.C;
 export const MIN_BPM = 60;
 export const MAX_BPM = 200;
+export const DEFAULT_VALIDATION_TIMEOUT = 2;
 
 export const BUS_EFFECT_COMBINATIONS: Effects[] = [
   {filter: 'medium', delay: 'medium'},
@@ -103,3 +112,7 @@ export const BUS_EFFECT_COMBINATIONS: Effects[] = [
   {delay: 'medium'},
   {delay: 'low'},
 ];
+
+export const TICKS_PER_MEASURE = 16;
+export const PATTERN_AI_NUM_EVENTS = TICKS_PER_MEASURE * 2;
+export const PATTERN_AI_NUM_SEED_EVENTS = 8;

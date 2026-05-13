@@ -30,3 +30,7 @@
       - else
         - lb_path = "https://levelbuilder-studio.code.org#{course_path(unit_group)}"
         %li= link_to "View on levelbuilder", lb_path
+
+/ Supply the FAB mount-point for the differentiation if allowed by the current user and this lesson
+- if Policies::Ai.ai_differentiation_enabled?(current_user) && Policies::Ai.ai_differentiation_enabled_for_unit?(unit_group)
+  %div#ai-differentiation-fab-mount-point

@@ -1,0 +1,26 @@
+name 'self-paced-pl-ai-districts-introduction_07_2024'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# AI Literacy
+
+#### With AI making its way into more and more aspects of our life, AI literacy is going to become an increasingly important skill for students.
+
+>**AI literacy** refers to the knowledge, skills, and attitudes associated with how artificial intelligence works, including its principles, concepts, and applications, as well as how to use artificial intelligence, such as its limitations, implications, and ethical considerations.
+
+#### Foundational concepts of AI literacy include elements of computer science, as well as ethics, psychology, data science, engineering, statistics, and other areas beyond STEM.
+
+#### AI literacy equips individuals to engage productively and responsibly with AI technologies in society, the economy, and their personal lives.
+
+<br>
+
+<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
+    <summary style="font-size: 1.5em; font-weight: bold;">🚀 Want to Learn More?</summary>
+<div style="margin-top: 20px; margin-left: 20px; margin-right: 20px; padding-bottom:20px;">
+    <p>
+
+#### Digital Promise has an <a href="https://digitalpromise.org/2024/06/18/ai-literacy-a-framework-to-understand-evaluate-and-use-emerging-technology/" target="_blank">AI Literacy: A Framework to Understand, Evaluate, and Use Emerging Technology</a>. Check it out!
+</p></div>
+</details>
+MARKDOWN

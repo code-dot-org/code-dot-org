@@ -1,0 +1,37 @@
+name 'ct_in_music_lab'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Computational Thinking in Music Lab
+
+## Computational Thinking Fosters:
+
+![](https://images.code.org/fe5a04a510bcae0db2286b1b93ec0375-image-1747691226849.png)
+
+
+
+## How can I best support my students to develop computational thinking skills? 
+#### **Encourage and Model Growth Mindset**.
+* #### Celebrate perseverance and revision: “What can we try differently?”
+
+* #### Reinforce that it’s okay to “debug” and revise ideas.
+
+#### **Use Tools that Scaffold Thinking**.
+* #### Try unplugged CS activities (provided in lesson plans) that guide students from play to purpose
+
+#### **Model Thinking Out Loud**.
+* #### When solving a problem (in any subject), talk through your steps: “First, I’ll break this into parts… now I’ll look for what’s repeating…” This makes abstract thinking visible and learnable.
+
+#### **Ask Guiding Questions**.
+* ####	“What did you try?”
+
+* #### “What changed when you did that?”
+
+* #### “How else could you solve this?”
+
+
+#### **Note:** The **Teacher Tips** in this professional learning module offer ways to incorporate computational thinking into your teaching practice.
+
+
+MARKDOWN

@@ -1,0 +1,23 @@
+{
+  "key": "teaching-ai-foundations-s1-v2",
+  "display_name": "Teaching AI Foundations Semester 1",
+  "is_featured": true,
+  "assignable": true,
+  "curriculum_type": "Professional Learning",
+  "marketing_initiative": "AIF",
+  "grade_levels": "9,10,11,12",
+  "header": "self_paced",
+  "image": "https://images.code.org/74aaa5f8d7ca09c6ccf17b1b7eaaff52-AIF_S1.avif",
+  "cs_topic": "artificial_intelligence",
+  "school_subject": null,
+  "device_compatibility": null,
+  "description": null,
+  "professional_learning_program": "https://code.org/apply",
+  "video": null,
+  "published_date": "2026-01-05 06:00:00 UTC",
+  "self_paced_pl_course_offering_key": null,
+  "ai_teaching_assistant_available": true,
+  "facilitator_course_permissions": [
+    "AI Foundations"
+  ]
+}

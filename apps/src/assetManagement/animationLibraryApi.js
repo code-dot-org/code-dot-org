@@ -82,6 +82,9 @@ export function getSourceUrlForLevelAnimation(
 export function generateAnimationMetadataForFile(fileObject) {
   const json = fileObject.json;
   const png = fileObject.png;
+  if (!json || !png) {
+    return Promise.resolve(undefined);
+  }
   return getAnimationLibraryFile(json.key)
     .then(metadata => {
       // Metadata contains name, frameCount, frameSize, looping, frameDelay
@@ -109,7 +112,9 @@ export function buildAnimationMetadata(files) {
     resolvedPromisesArray.push(
       generateAnimationMetadataForFile(fileObject)
         .then(metadata => {
-          animationMetadataByName[fileKey] = metadata;
+          if (metadata) {
+            animationMetadataByName[fileKey] = metadata;
+          }
         })
         .catch(err => Promise.reject(err))
     );

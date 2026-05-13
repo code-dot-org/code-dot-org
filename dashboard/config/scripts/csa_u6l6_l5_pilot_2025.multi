@@ -1,9 +1,9 @@
 name 'CSA U6L6-L5_pilot-2025'
 title 'Check for Understanding'
 
-right '`Alice`'
+wrong '`Alice`'
 wrong '`Bob`'
-wrong '`Charlie`'
+right '`Charlie`'
 wrong 'The code will not compile.'
 wrong 'The code will throw a `NullPointerException`'
 

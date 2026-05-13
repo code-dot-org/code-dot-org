@@ -1,11 +1,24 @@
-import * as GoogleBlockly from 'blockly/core';
+import {FieldColour} from '@blockly/field-colour';
+import * as BlocklyCore from 'blockly/core';
 
-export default class CdoFieldColour extends GoogleBlockly.FieldColour {
+import {COLOURS} from '../constants';
+
+interface FieldColourConfig extends BlocklyCore.FieldConfig {
+  colourOptions?: string[];
+  colourTitles?: string[];
+  columns?: number;
+}
+
+interface FieldColourFromJsonConfig extends FieldColourConfig {
+  colour?: string;
+}
+
+export default class CdoFieldColour extends FieldColour {
   // The colours and columns properties are both private in the parent class, so we create
   // additional properties to track the config values.
   private coloursConfig: string[] | null = null;
   private columnsConfig: number = 0;
-  static COLOURS: string[] = GoogleBlockly.FieldColour.COLOURS;
+  static COLOURS: string[] = COLOURS;
   static TITLES: string[] = [];
   static COLUMNS: number = 7;
   static K1_HEIGHT: number = 35;
@@ -26,9 +39,9 @@ export default class CdoFieldColour extends GoogleBlockly.FieldColour {
    * for a list of properties this parameter supports.
    */
   constructor(
-    value?: string | typeof Blockly.Field.SKIP_SETUP,
-    validator?: GoogleBlockly.FieldColourValidator,
-    config?: GoogleBlockly.FieldColourConfig,
+    value?: string | typeof BlocklyCore.Field.SKIP_SETUP,
+    validator?: BlocklyCore.FieldValidator,
+    config?: FieldColourConfig,
     isK1?: boolean
   ) {
     super(value, validator, config);
@@ -42,18 +55,17 @@ export default class CdoFieldColour extends GoogleBlockly.FieldColour {
 
   /**
    * Create and show the colour field's editor.
-   * Artist modifies blockly.FieldColour.COLOURS and blockly.FieldColour.COLUMNS directly.
+   * Artist modifies CdoFieldColour.COLOURS and CdoFieldColour.COLUMNS directly.
    * Therefore, wait to read these values until we need to create the field dropdown.
    * For pre-reader blocks (CSF Course A-B, Course 1 and Pre-Reader Express), we add a
    * class to manually increase the size of the field.
    * @override
    * */
-  protected override showEditor_() {
+  protected showEditor_() {
     this.setColours(this.coloursConfig || CdoFieldColour.COLOURS);
     this.setColumns(this.columnsConfig || CdoFieldColour.COLUMNS);
     super.showEditor_();
     if (this.isK1) {
-      // @ts-expect-error: Accessing private member 'picker'
       Blockly.utils.dom.addClass(this.picker, 'k1ColourDropdown');
     }
   }
@@ -77,5 +89,10 @@ export default class CdoFieldColour extends GoogleBlockly.FieldColour {
     }
 
     this.positionBorderRect_();
+  }
+
+  static fromJson(_options: BlocklyCore.FieldConfig) {
+    const options = _options as FieldColourFromJsonConfig;
+    return new CdoFieldColour(options.colour, undefined, options);
   }
 }

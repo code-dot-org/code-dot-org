@@ -1,8 +1,9 @@
+import {Button as MuiButton} from '@mui/material';
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 
-import Button from '@cdo/apps/legacySharedComponents/Button';
 import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
+import color from '@cdo/apps/util/color';
 import i18n from '@cdo/locale';
 
 import BaseDialog from './BaseDialog';
@@ -60,20 +61,25 @@ export default class GDPRDialog extends Component {
           </a>
         </div>
         <DialogFooter>
-          <Button
-            __useDeprecatedTag
-            text={i18n.gdprDialogLogout()}
-            href={logOutUrl}
-            color={Button.ButtonColor.gray}
+          <MuiButton
+            variant="outlined"
+            color="tertiary"
+            size="medium"
             className="ui-test-gdpr-dialog-logout"
-          />
-          <Button
-            __useDeprecatedTag
-            text={i18n.gdprDialogYes()}
-            onClick={this.handleYesClick}
-            color={Button.ButtonColor.brandSecondaryDefault}
+            href={logOutUrl}
+          >
+            {i18n.gdprDialogLogout()}
+          </MuiButton>
+          <MuiButton
+            variant="contained"
+            color="primary"
+            size="medium"
             className="ui-test-gdpr-dialog-accept"
-          />
+            onClick={this.handleYesClick}
+            type="button"
+          >
+            {i18n.gdprDialogYes()}
+          </MuiButton>
         </DialogFooter>
       </BaseDialog>
     );
@@ -85,6 +91,7 @@ const styles = {
     paddingLeft: 20,
     paddingRight: 20,
     paddingBottom: 20,
+    color: color.default_text,
   },
   instructions: {
     marginTop: 20,

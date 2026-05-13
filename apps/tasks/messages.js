@@ -1,8 +1,27 @@
+var fs = require('fs');
+var ts = require('typescript');
+
+require.extensions['.ts'] = function (module, filename) {
+  var source = fs.readFileSync(filename, 'utf8');
+  var result = ts.transpileModule(source, {
+    compilerOptions: {
+      module: ts.ModuleKind.CommonJS,
+      target: ts.ScriptTarget.ES2019,
+    },
+  });
+
+  module._compile(result.outputText, filename);
+};
+
 module.exports = function (grunt) {
   var path = require('path');
   var MessageFormat = require('messageformat');
 
   grunt.registerMultiTask('messages', 'Compile messages!', function () {
+    const {
+      LocaleFallbacks,
+    } = require('../generated-scripts/sharedConstants.ts');
+
     var locales = new Set();
     var namespaces = new Set();
 
@@ -17,14 +36,17 @@ module.exports = function (grunt) {
         var namespace = path.basename(filePair.dest).split('.js')[0];
         namespaces.add(namespace);
 
+        const normalizedLocale = normalizeLocale(locale);
+        const fallbackLocale =
+          LocaleFallbacks[normalizedLocale] &&
+          denormalizeLocale(LocaleFallbacks[normalizedLocale]);
+
         var englishData = grunt.file.readJSON(src.replace(locale, 'en_us'));
-        var localeData = grunt.file.readJSON(src);
-        Object.keys(localeData).forEach(function (key) {
-          if (localeData[key] === '') {
-            delete localeData[key];
-          }
-        });
-        var finalData = Object.assign(englishData, localeData);
+        var fallbackData = fallbackLocale
+          ? clearData(grunt.file.readJSON(src.replace(locale, fallbackLocale)))
+          : {};
+        var localeData = clearData(grunt.file.readJSON(src));
+        var finalData = Object.assign(englishData, fallbackData, localeData);
 
         // Verify the translated content is formatted correctly.
         const formatErrors = checkForFormatIssues(
@@ -95,6 +117,21 @@ module.exports = function (grunt) {
     });
   });
 
+  function normalizeLocale(locale) {
+    const [language, region] = locale.split('_');
+    return `${language.toLowerCase()}-${region.toUpperCase()}`;
+  }
+
+  function denormalizeLocale(locale) {
+    return locale.replace('-', '_').toLowerCase();
+  }
+
+  function clearData(data) {
+    return Object.fromEntries(
+      Object.entries(data).filter(([, value]) => value !== '')
+    );
+  }
+
   /**
    * Parses the given JSON for any MessageFormat issues and returns a list of exceptions found.
    * @param locale The language/region locale code for the given JSON.
@@ -120,6 +157,75 @@ module.exports = function (grunt) {
   }
 
   /**
+   * Formats and rewrites i18n string variable values according to locale-specific rules.
+   *
+   * - Localizes Western Arabic numerals to the numeral system of the specified locale, if applicable.
+   *
+   * @param value {string|number} The input value to be formatted.
+   * @param locale {string} The locale identifier used for formatting.
+   * @returns {string|number} The formatted variable value, localized according to the specified locale.
+   */
+  /* eslint-disable prettier/prettier */
+  function localizeInterpolation(value, locale) {
+    try {
+      // Converts the locale to the BCP 47 format, e.g., "en_us" -> "en-US".
+      var lang = locale.replace(/_(\w+)$/, function (match, region) { return '-' + region.toUpperCase(); });
+
+      // Localizes Western Arabic numbers, e.g., "1234.5678" -> "۱٬۲۳۴٫۵۶۷۸" for "fa-IR".
+      value = String(value).replace(/^(\d+(\.\d+)?)$/, function (match, number) {
+        return new Intl.NumberFormat(lang, {
+          useGrouping: false, // Prevents grouping (e.g., 1,000).
+          minimumFractionDigits: number.includes('.') ? number.split('.')[1].length : 0,
+          maximumFractionDigits: 20, // Prevents rounding (20 is max allowed by ECMA-402).
+        }).format(number);
+      });
+    } catch (e) {
+      window.console.error(e);
+    }
+
+    return value;
+  }
+  /* eslint-enable prettier/prettier */
+
+  /**
+   * Overrides the original `MessageFormat.compile` function
+   * to apply the default `fmt.l` formatter to all i18n message variables without a specified format.
+   * @param mf {MessageFormat} The instance of MessageFormat.
+   * @returns {void}
+   */
+  function applyDefaultVariableFormatter(mf) {
+    mf.addFormatters({
+      l: localizeInterpolation, // The default `fmt.l` formatter.
+    });
+
+    const preprocessMessage = msg => {
+      if (typeof msg === 'string') {
+        return msg.replace(/\{((?:[^{}]*|\{[^{}]*\})*)\}/g, (interp, varName) =>
+          varName.includes(',')
+            ? interp
+            : varName.includes('{')
+            ? `{${preprocessMessage(varName)}}`
+            : `{${varName}, l}`
+        );
+      }
+
+      if (msg && typeof msg === 'object') {
+        return Object.fromEntries(
+          Object.entries(msg).map(([key, value]) => [
+            key,
+            preprocessMessage(value),
+          ])
+        );
+      }
+
+      return msg;
+    };
+
+    const mfCompile = mf.compile.bind(mf);
+    mf.compile = messages => mfCompile(preprocessMessage(messages));
+  }
+
+  /**
    * Applies MessageFormat to all the strings found in the given JSON.
    * @param locale The language/region locale code for the given JSON.
    * @param namespace Some unique ID for the content, usually the file name e.g. 'fish' or 'maze'
@@ -135,6 +241,8 @@ module.exports = function (grunt) {
       // This turns off that check.
       // See https://messageformat.github.io/messageformat/MessageFormat#disablePluralKeyChecks__anchor
       mf.disablePluralKeyChecks();
+
+      applyDefaultVariableFormatter(mf);
     } catch (e) {
       // Fallback to en if locale is not found
       if (locale !== 'en') {

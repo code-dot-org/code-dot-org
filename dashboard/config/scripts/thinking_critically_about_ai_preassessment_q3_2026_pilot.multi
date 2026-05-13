@@ -1,0 +1,14 @@
+name 'thinking-critically-about-ai-preassessment-q3_2026-pilot'
+
+question 'A student asks an AI image generator to create a picture of "a scientist." The AI produces images showing mostly men. What does this most likely tell us about the AI?'
+
+right 'The AI was trained on data that did not equally represent all scientists, so it learned a biased pattern.'
+wrong 'The AI is programmed to prefer certain types of images over others.'
+wrong 'The AI cannot generate pictures of women.'
+wrong 'The AI is broken and needs to be restarted.'
+
+allow_multiple_attempts true
+
+teacher_markdown <<MARKDOWN
+Lessons 2, 6
+MARKDOWN

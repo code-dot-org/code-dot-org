@@ -1,5 +1,7 @@
+import {Button, Typography} from '@mui/material';
+import classNames from 'classnames';
 import PropTypes from 'prop-types';
-import React, {Component} from 'react';
+import React from 'react';
 import {connect} from 'react-redux';
 
 import {
@@ -7,31 +9,33 @@ import {
   toggleHiddenScript,
 } from '@cdo/apps/code-studio/hiddenLessonRedux';
 import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
-import fontConstants from '@cdo/apps/fontConstants';
-import Button from '@cdo/apps/legacySharedComponents/Button';
-import firehoseClient from '@cdo/apps/metrics/firehose';
-import AssignButton from '@cdo/apps/templates/AssignButton';
 import Assigned from '@cdo/apps/templates/Assigned';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 import {sectionForDropdownShape} from '@cdo/apps/templates/teacherDashboard/shapes';
 import {sectionsForDropdown} from '@cdo/apps/templates/teacherDashboard/teacherSectionsReduxSelectors';
-import UnassignSectionButton from '@cdo/apps/templates/UnassignSectionButton';
-import color from '@cdo/apps/util/color';
+import experiments from '@cdo/apps/util/experiments';
 import i18n from '@cdo/locale';
+
+import MultipleAssignButton from '../MultipleAssignButton';
 
 import CourseScriptTeacherInfo from './CourseScriptTeacherInfo';
 
-class CourseScript extends Component {
+import styles from './courseScript.module.scss';
+
+class CourseScript extends React.Component {
   static propTypes = {
     title: PropTypes.string,
     name: PropTypes.string,
     id: PropTypes.number.isRequired,
+    path: PropTypes.string.isRequired,
     courseId: PropTypes.number,
     courseOfferingId: PropTypes.number,
     courseVersionId: PropTypes.number,
     description: PropTypes.string,
     assignedSectionId: PropTypes.number,
     showAssignButton: PropTypes.bool,
+    participantAudience: PropTypes.string,
+    aiChatToolsDependency: PropTypes.string,
     // redux provided
     viewAs: PropTypes.oneOf(Object.values(ViewType)).isRequired,
     selectedSectionId: PropTypes.number,
@@ -57,21 +61,18 @@ class CourseScript extends Component {
   };
 
   onClickHiddenToggle = value => {
-    const {name, selectedSectionId, id, toggleHiddenScript} = this.props;
-    toggleHiddenScript(name, selectedSectionId, id, value === 'hidden');
-    firehoseClient.putRecord(
-      {
-        study: 'hidden-units',
-        study_group: 'v0',
-        event: value,
-        script_id: id,
-        data_json: JSON.stringify({
-          script_name: name,
-          section_id: selectedSectionId,
-        }),
-      },
-      {useProgressScriptId: false}
+    const {name, selectedSectionId, id, hiddenLessonState, toggleHiddenScript} =
+      this.props;
+    const nextHidden = value === 'hidden';
+    const currentHidden = isScriptHiddenForSection(
+      hiddenLessonState,
+      selectedSectionId,
+      id
     );
+    if (nextHidden === currentHidden) {
+      return;
+    }
+    toggleHiddenScript(name, selectedSectionId, id, nextHidden);
   };
 
   render() {
@@ -79,6 +80,7 @@ class CourseScript extends Component {
       title,
       name,
       id,
+      path,
       description,
       viewAs,
       selectedSectionId,
@@ -90,7 +92,10 @@ class CourseScript extends Component {
       courseVersionId,
       sectionsForDropdown,
       showAssignButton,
+      participantAudience,
+      aiChatToolsDependency,
     } = this.props;
+    const {confirmationMessageOpen} = this.state;
 
     const isHidden = isScriptHiddenForSection(
       hiddenLessonState,
@@ -113,58 +118,59 @@ class CourseScript extends Component {
       selectedSection.unitId === id;
     const isAssigned = assignedToStudent || assignedByTeacher;
 
+    let unitPath = `${path}${location.search}`;
+    if (location.pathname.includes('/teacher_dashboard')) {
+      if (experiments.isEnabled(experiments.MODULARITY)) {
+        unitPath = `/teacher_dashboard/sections/${selectedSectionId}${path}`;
+      } else {
+        unitPath = `/teacher_dashboard/sections/${selectedSectionId}/unit/${name}`;
+      }
+    }
     return (
       <div
-        style={{
-          ...styles.main,
-          ...(isHidden && styles.hidden),
-        }}
-        className="uitest-CourseScript"
+        className={classNames(
+          styles.main,
+          isHidden && styles.hidden,
+          'uitest-CourseScript'
+        )}
         data-visibility={isHidden ? 'hidden' : 'visible'}
       >
-        <div style={styles.content}>
-          <div style={styles.title}>{title}</div>
-          <div style={styles.description}>
+        <div className={styles.content}>
+          <Typography variant="h5" component="h5">
+            {title}
+          </Typography>
+          <div className={styles.description}>
             <SafeMarkdown markdown={description} />
           </div>
-          <span style={styles.flex}>
+          <div className={styles.flex}>
             <Button
-              __useDeprecatedTag
-              text={i18n.goToUnit()}
-              href={
-                location.pathname.includes('teacher_dashboard')
-                  ? `/teacher_dashboard/sections/${selectedSectionId}/unit/${name}`
-                  : `/s/${name}${location.search}`
-              }
-              color={Button.ButtonColor.gray}
+              href={unitPath}
               className="uitest-go-to-unit-button"
-            />
+              variant="outlined"
+              color="secondary"
+              size="small"
+            >
+              {i18n.goToUnit()}
+            </Button>
             {isAssigned && viewAs === ViewType.Participant && <Assigned />}
-            {isAssigned &&
-              viewAs === ViewType.Instructor &&
-              selectedSectionId && (
-                <UnassignSectionButton
-                  courseName={title}
-                  sectionId={selectedSectionId}
-                  buttonLocationAnalytics={'course-overview-unit'}
-                />
-              )}
-            {!isAssigned &&
-              viewAs === ViewType.Instructor &&
-              showAssignButton &&
-              selectedSection && (
-                <AssignButton
-                  sectionId={selectedSection.id}
-                  scriptId={id}
-                  courseId={courseId}
-                  courseOfferingId={courseOfferingId}
-                  courseVersionId={courseVersionId}
-                  assignmentName={title}
-                  sectionName={selectedSection.name}
-                  reassignConfirm={this.onReassignConfirm}
-                />
-              )}
-          </span>
+            {confirmationMessageOpen && (
+              <span className={styles.confirmText}>{i18n.assignSuccess()}</span>
+            )}
+            {viewAs === ViewType.Instructor && showAssignButton && (
+              <MultipleAssignButton
+                courseOfferingId={courseOfferingId}
+                courseVersionId={courseVersionId}
+                courseId={courseId}
+                scriptId={id}
+                assignmentName={title}
+                reassignConfirm={this.onReassignConfirm}
+                isAssigningCourseOnly={false}
+                isSingleUnitCourse={false}
+                participantAudience={participantAudience}
+                aiChatToolsDependency={aiChatToolsDependency}
+              />
+            )}
+          </div>
         </div>
         {viewAs === ViewType.Instructor && !hasNoSections && (
           <CourseScriptTeacherInfo
@@ -178,43 +184,6 @@ class CourseScript extends Component {
   }
 }
 
-const styles = {
-  main: {
-    display: 'table',
-    width: '100%',
-    height: '100%',
-    background: color.background_gray,
-    borderWidth: 1,
-    borderColor: color.border_gray,
-    borderStyle: 'solid',
-    borderRadius: 2,
-    marginBottom: 12,
-  },
-  content: {
-    padding: 20,
-  },
-  description: {
-    marginTop: 20,
-    marginBottom: 20,
-  },
-  title: {
-    fontSize: 18,
-    ...fontConstants['main-font-semi-bold'],
-  },
-  // TODO: share better with ProgressLesson
-  hidden: {
-    borderStyle: 'dashed',
-    borderWidth: 4,
-    marginTop: 0,
-    marginBottom: 12,
-    marginLeft: 0,
-    marginRight: 0,
-  },
-  flex: {
-    display: 'flex',
-    alignItems: 'center',
-  },
-};
 export const UnconnectedCourseScript = CourseScript;
 
 export default connect(

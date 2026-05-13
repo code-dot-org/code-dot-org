@@ -4,18 +4,20 @@
     "wrapup_video_id": null,
     "login_required": false,
     "properties": {
-      "is_course": true,
+      "content_area": "other",
+      "curriculum_umbrella": "Other",
       "is_migrated": true,
-      "pilot_experiment": "musiclab-pilot",
-      "version_year": "unversioned"
+      "topic_tags": [
+        "music_lab"
+      ]
     },
     "new_name": null,
-    "family_name": "musiclab",
-    "serialized_at": "2024-02-27 21:43:38 UTC",
-    "published_state": "pilot",
-    "instruction_type": "teacher_led",
-    "instructor_audience": "teacher",
-    "participant_audience": "student",
+    "family_name": null,
+    "serialized_at": "2025-03-28 09:29:17 UTC",
+    "published_state": null,
+    "instruction_type": null,
+    "instructor_audience": null,
+    "participant_audience": null,
     "seeding_key": {
       "script.name": "musiclab"
     }
@@ -640,6 +642,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "musiclab_all_sounds"
+        ]
       },
       "bonus": false,
       "seeding_key": {

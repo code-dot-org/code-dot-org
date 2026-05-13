@@ -1,0 +1,28 @@
+name 'programming-fundamentals-postassessment-question9_pilot-2025'
+title 'Programming Fundamentals Post-Assessment: Question 9'
+
+wrong '`"Even"`'
+right '`"Odd"`'
+wrong '`"Small number"`'
+wrong 'No output; there is an error'
+
+allow_multiple_attempts true
+
+markdown <<MARKDOWN
+What will be printed by the following code?
+
+```
+x = 7  
+if x > 5:  
+    if x % 2 == 0:  
+        print("Even")  
+    else:  
+        print("Odd")  
+else:  
+    print("Small number")
+```
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+Lesson 12: Two-Way and Nested Selection
+MARKDOWN

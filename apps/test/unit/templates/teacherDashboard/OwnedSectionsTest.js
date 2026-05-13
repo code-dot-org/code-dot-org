@@ -13,6 +13,17 @@ const defaultProps = {
 };
 
 describe('OwnedSections', () => {
+  const oldWindowLocation = window.location;
+
+  beforeEach(() => {
+    delete window.location;
+    window.location = new URL('https://studio.code.org/teacher_dashboard');
+  });
+
+  afterEach(() => {
+    window.location = oldWindowLocation;
+  });
+
   it('renders a OwnedSectionsTable with no extra button if no archived sections', () => {
     const wrapper = shallow(<OwnedSections {...defaultProps} />);
     expect(wrapper.find('Connect(OwnedSectionsTable)').length).to.equal(1);

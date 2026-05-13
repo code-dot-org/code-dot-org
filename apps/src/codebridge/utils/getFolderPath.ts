@@ -1,5 +1,7 @@
 import {DEFAULT_FOLDER_ID} from '@codebridge/constants';
-import {FolderId, ProjectType} from '@codebridge/types';
+import {FolderId} from '@codebridge/types';
+
+import {MultiFileSource} from '@cdo/apps/lab2/types';
 
 import {getFolderLineage} from './getFolderLineage';
 
@@ -15,7 +17,7 @@ import {getFolderLineage} from './getFolderLineage';
  */
 export const getFolderPath = (
   folderId: FolderId,
-  projectFolders: ProjectType['folders']
+  projectFolders: MultiFileSource['folders']
 ) => {
   if (folderId === DEFAULT_FOLDER_ID) {
     return '/';

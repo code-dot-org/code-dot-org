@@ -1,0 +1,96 @@
+name 'pl-java-variables-datatypes-3-1_pl'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Exploring Data Types
+
+<img src="https://images.code.org/be59c99d32b20fa2098483c9963e3114-image-1741196021063.png" alt="house with a garden and a tree" width="125px" style="border-radius:10px; float:left; margin: 0 20px 0px 0px;">
+
+#### Imagine you are the local community center organizer.
+#### You have received a set of data cards representing different types of neighborhood information: house numbers, resident names, street names, home prices, and whether a house has a garden. 
+#### **Your task?** Sort these cards and notice patterns in the data.
+
+<div style="clear:both;"></div>
+
+---
+## Data Cards
+
+#### Look at these sample data cards. What do you notice about them?
+
+<div style="display: flex; justify-content: center; gap: 10px; padding: 10px; width: 98%; flex-wrap: nowrap;">
+<!-- Card 1 -->
+<div style="background-color: #f8f8f8; padding: 15px; border-radius: 10px; width: 18%; height: 220px; 
+                box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2); text-align: center;">
+        <img src="https://images.code.org/42d3da5f31cd30cb1a8327c5b95d84f3-image-1741114767729.png" 
+             alt="house Icon" style="width: 60px; height: 60px; margin-bottom: 10px;"><br>
+        <p style="font-size:13pt;">102<br>205<br>311<br><br><b>House Numbers</b></p>
+    </div>
+
+<!-- Card 2 -->
+<div style="background-color: #f8f8f8; padding: 15px; border-radius: 10px; width: 18%; height: 220px; 
+                box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2); text-align: center;">
+        <img src="https://images.code.org/42d3da5f31cd30cb1a8327c5b95d84f3-image-1741114767729.png" 
+             alt="house Icon" style="width: 60px; height: 60px; margin-bottom: 10px;"><br>
+        <p style="font-size:13pt;">"Maple St"<br>"Oak Avenue"<br>"Pine Drive"<br><br><b>Street Names</b></p>
+    </div>
+
+<!-- Card 3 -->
+<div style="background-color: #f8f8f8; padding: 15px; border-radius: 10px; width: 18%; height: 220px; 
+                box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2); text-align: center;">
+        <img src="https://images.code.org/42d3da5f31cd30cb1a8327c5b95d84f3-image-1741114767729.png" 
+             alt="house Icon" style="width: 60px; height: 60px; margin-bottom: 10px;"><br>
+        <p style="font-size:13pt;">"Sam"<br>"Jordan"<br>"Maria"<br><br><b>Resident Names</b></p>
+    </div>
+
+<!-- Card 4 -->
+<div style="background-color: #f8f8f8; padding: 15px; border-radius: 10px; width: 18%; height: 220px; 
+                box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2); text-align: center;">
+        <img src="https://images.code.org/42d3da5f31cd30cb1a8327c5b95d84f3-image-1741114767729.png" 
+             alt="house Icon" style="width: 60px; height: 60px; margin-bottom: 10px;"><br>
+        <p style="font-size:13pt;">True<br>False<br>True<br><br><b>Has a Garden?</b></p>
+    </div>
+
+<!-- Card 5 -->
+<div style="background-color: #f8f8f8; padding: 15px; border-radius: 10px; width: 18%; height: 220px; 
+                box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2); text-align: center;">
+        <img src="https://images.code.org/42d3da5f31cd30cb1a8327c5b95d84f3-image-1741114767729.png" 
+             alt="house Icon" style="width: 60px; height: 60px; margin-bottom: 10px;"><br>
+        <p style="font-size:13pt;">250,000.50<br>187,500.75<br>320,000.00<br><br><b>House Price</b></p>
+    </div>
+</div>
+
+<div style="clear:both;"></div>
+
+---
+
+## How the Computer Sees Data
+
+#### Unlike humans, computers need to store and process data differently.
+
+<div style="background-color: #F5F7F8; color: #000000; padding: 15px; border-radius: 10px; width: 90%; margin: 20px auto;">
+        <p style="font-size: 14pt; line-height: 1.2; margin-top: 10px;">
+        <ul>
+    <li style="font-size: 14pt;"><b>Whole numbers</b> (integers) can be used for counting.<br></li><br>
+    <li style="font-size: 14pt;"><b>Text </b>(strings) stores names and addresses.<br></li><br>
+    <li style="font-size: 14pt;"><b>True/False values </b> (booleans) help make decisions.<br></li><br>
+    <li style="font-size: 14pt;"><b>Decimal numbers</b> (doubles) store values that are not whole, like prices or measurements.<br></li>
+</ul>
+    </p>
+</div>
+
+
+#### A computer organizes these into different types because it processes them differently.
+
+## Introducing Variable Types 
+
+#### In Java, we store data in variables. But depending on the type of data, we choose different variable types and define them when declaring the variable:
+
+<img src="https://images.code.org/71635f4c12a0634325422d955ef60a66-image-1747324184467.png" alt="sample code of declaring variable types in Java" width="450px" style="display: block; margin-left: auto; margin-right: auto;">
+
+#### Different variable types allow Java to handle data properly. Integers can be used for math, strings store text, booleans hold True/False values, and doubles handle decimal numbers.
+
+<br>
+
+## Let's explore more! 
+MARKDOWN

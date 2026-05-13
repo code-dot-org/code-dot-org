@@ -17,6 +17,7 @@
 #  time_spent       :integer
 #  deleted_at       :datetime
 #  properties       :text(65535)
+#  unit_group_id    :integer
 #
 # Indexes
 #
@@ -32,10 +33,15 @@ class UserLevel < ApplicationRecord
 
   acts_as_paranoid # Use deleted_at column instead of deleting rows.
 
+  store :properties, accessors: %i[locale locale_supported], coder: JSON
+
   belongs_to :user, optional: true
   belongs_to :level, optional: true
   belongs_to :script, class_name: 'Unit', optional: true
   belongs_to :level_source, optional: true
+
+  before_save :assign_locale_data, if: :new_record?, unless: :locale
+  before_save :refresh_locale_supported, if: -> {locale_changed? || script_id_changed?}
 
   after_save :after_submit, if: :submitted_or_resubmitted?
   before_save :before_unsubmit, if: ->(ul) {ul.submitted_changed? from: true, to: false}
@@ -194,6 +200,7 @@ class UserLevel < ApplicationRecord
   # This is called when a teacher updates the lock or readonly status for each student.
   # As such, one of locked or readonly will be populated, and the other nil.
   def self.update_lockable_state(user_id, level_id, script_id, locked, readonly_answers)
+    # TODO: TEACH-2145 set UserLevel#unit_group_id
     user_level = UserLevel.find_or_initialize_by(
       user_id: user_id,
       level_id: level_id,
@@ -235,6 +242,19 @@ class UserLevel < ApplicationRecord
   # @return [Hash<Integer, Integer>] user_id => passed_level_count
   def self.count_passed_levels_for_users(users)
     joins(:user).merge(users).passing.group(:user_id).count
+  end
+
+  def assign_locale_data(locale = I18n.locale)
+    self.locale = locale.to_s.presence
+    refresh_locale_supported
+  end
+
+  def resolved_unit
+    (script_id && Unit.get_from_cache(script_id)) || script
+  end
+
+  private def refresh_locale_supported
+    self.locale_supported = resolved_unit&.supported_locale?(locale)
   end
 
   # Retrieves and memoizes the latest PairedUserLevel that's associated with

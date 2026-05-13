@@ -6,8 +6,7 @@ class DatasetsController < ApplicationController
   before_action :require_levelbuilder_mode
   authorize_resource class: false
 
-  LIVE_DATASETS = ['Daily Weather', 'Top 200 USA', 'Top 200 Worldwide', 'Viral 50 USA', 'Viral 50 Worldwide',
-                   'Top 50 USA', 'Top 50 Worldwide', 'COVID-19 Cases per US State']
+  LIVE_DATASETS = ['Daily Weather', 'Viral 50 USA']
 
   # GET /datasets
   def index
@@ -46,6 +45,8 @@ class DatasetsController < ApplicationController
     end
 
     table.import_csv params[:csv_data]
+    table.write_serialization
+
     data = {
       columns: table.get_columns,
       records: table.read_records.map(&:to_json),
@@ -58,6 +59,7 @@ class DatasetsController < ApplicationController
     table_name = params[:dataset_name]
     table = DatablockStorageTable.find_shared_table table_name
     table.destroy!
+    table.remove_serialization
   end
 
   # GET /datasets/manifest/edit
@@ -71,6 +73,7 @@ class DatasetsController < ApplicationController
     db_manifest = DatablockStorageLibraryManifest.instance
     db_manifest.library_manifest = parsed_manifest
     db_manifest.save!
+    DatablockStorageLibraryManifest.write_serialization
     render json: {}
   rescue JSON::ParserError
     render json: {msg: 'Invalid JSON'}

@@ -3,7 +3,6 @@ import React, {Component} from 'react';
 import {connect} from 'react-redux';
 
 import Button from '@cdo/apps/legacySharedComponents/Button';
-import firehoseClient from '@cdo/apps/metrics/firehose';
 import BaseDialog from '@cdo/apps/templates/BaseDialog';
 import DialogFooter from '@cdo/apps/templates/teacherDashboard/DialogFooter';
 import copyToClipboard from '@cdo/apps/util/copyToClipboard';
@@ -19,7 +18,6 @@ class SendLessonDialog extends Component {
     lessonUrl: PropTypes.string.isRequired,
     lessonTitle: PropTypes.string,
     courseid: PropTypes.number,
-    analyticsData: PropTypes.string,
 
     // redux provided
     showGoogleButton: PropTypes.bool,
@@ -41,16 +39,6 @@ class SendLessonDialog extends Component {
     setTimeout(() => {
       this.setState({showLinkCopied: false});
     }, 4000);
-
-    firehoseClient.putRecord(
-      {
-        study: 'copy-lesson-link-button',
-        study_group: 'v0',
-        event: 'copy-lesson-link',
-        data_json: this.props.analyticsData,
-      },
-      {includeUserId: true}
-    );
   }
 
   renderCopyToClipboardRow() {
@@ -84,7 +72,6 @@ class SendLessonDialog extends Component {
           itemtype="assignment"
           title={this.props.lessonTitle}
           courseid={this.props.courseid}
-          analyticsData={this.props.analyticsData}
         />
       </div>
     );

@@ -4,7 +4,7 @@ import {BLOCKLY_LABS, LABS_WITH_JSON_SOURCES} from './constants';
 import Lab2Registry from './Lab2Registry';
 import {
   BlocklySource,
-  LevelProperties,
+  LevelPropertiesMap,
   MultiFileSource,
   ProjectSources,
 } from './types';
@@ -14,17 +14,17 @@ const BlocklySourceResponseValidator: ResponseValidator<
   ProjectSources
 > = response => {
   const blocklyValidator = (responseToValidate: Record<string, unknown>) => {
-    // Blockly sources are always stringified JSON.
-    let blocklySource;
-    try {
-      blocklySource = JSON.parse(
-        responseToValidate.source as string
-      ) as BlocklySource;
-    } catch (e) {
-      throw new ValidationError('Error parsing JSON: ' + e);
+    // Blockly sources can be stringified or plain JSON.
+    let blocklySource = responseToValidate.source as BlocklySource;
+    if (typeof responseToValidate.source === 'string') {
+      try {
+        blocklySource = JSON.parse(responseToValidate.source as string);
+      } catch (e) {
+        throw new ValidationError('Error parsing JSON: ' + e);
+      }
     }
     if (blocklySource.blocks === undefined) {
-      throwMissingFieldError('blocks');
+      throw missingFieldError('blocks');
     }
   };
 
@@ -86,24 +86,41 @@ export const SourceResponseValidator: ResponseValidator<
   }
 };
 
-export const LevelPropertiesValidator: ResponseValidator<
-  LevelProperties
+export const LevelPropertiesMapValidator: ResponseValidator<
+  LevelPropertiesMap
 > = response => {
-  if (!response.appName) {
-    throwMissingFieldError('appName');
+  if (Array.isArray(response)) {
+    throw new Error(
+      'Level properties map should be an object (received array).'
+    );
   }
 
-  // Convert stringified booleans to actual booleans.
-  for (const key of Object.keys(response)) {
-    if (response[key] === 'true') {
-      response[key] = true;
+  for (const levelId of Object.keys(response)) {
+    const properties = response[levelId] as Record<string, unknown>;
+    if (typeof properties !== 'object' || properties === null) {
+      throw new Error(
+        `Level properties should be an object (received ${typeof properties}).`
+      );
     }
-    if (response[key] === 'false') {
-      response[key] = false;
+    if (Array.isArray(properties)) {
+      throw new Error('Level properties should be an object (received array).');
+    }
+    if (!properties.appName) {
+      throw missingFieldError('appName');
+    }
+
+    // Convert stringified booleans to actual booleans.
+    for (const key of Object.keys(properties)) {
+      if (properties[key] === 'true') {
+        properties[key] = true;
+      }
+      if (properties[key] === 'false') {
+        properties[key] = false;
+      }
     }
   }
 
-  return response as unknown as LevelProperties;
+  return response as unknown as LevelPropertiesMap;
 };
 
 export class ValidationError extends Error {
@@ -118,16 +135,19 @@ export class ValidationError extends Error {
 }
 
 function sourceValidatorHelper(
-  response: Record<string, unknown>,
+  response: Record<string, unknown> | unknown[],
   appSpecificValidator: (response: Record<string, unknown>) => void
 ): ProjectSources {
+  if (Array.isArray(response)) {
+    throw new Error('Source response should be an object (received array).');
+  }
   if (!response.source) {
-    throwMissingFieldError('source');
+    throw missingFieldError('source');
   }
   appSpecificValidator(response);
   return response as unknown as ProjectSources;
 }
 
-function throwMissingFieldError(fieldName: string) {
-  throw new ValidationError('Missing required field: ' + fieldName);
+function missingFieldError(fieldName: string) {
+  return new ValidationError('Missing required field: ' + fieldName);
 }

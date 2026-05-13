@@ -1,0 +1,27 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "game_id": 52,
+  "created_at": "2025-09-25T20:08:11.000Z",
+  "level_num": "custom",
+  "user_id": 21093,
+  "properties": {
+    "encrypted": "false",
+    "title": "Check for Understanding",
+    "long_instructions": "After exploring all three scenarios and discussing your perspective on each,\r\n**write a statement that provides ethical guidance for collecting data about people**.\r\n\r\n_Try to include ideas about privacy, consent, accuracy, or fairness._",
+    "allow_user_uploads": "false",
+    "submittable": "false",
+    "peer_reviewable": "false",
+    "optional": "false",
+    "allow_multiple_attempts": "false",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "teacher_markdown": " Discussion Goal: Students should draw from the three previous scenarios and the discussions that followed to create a concise ethical principle or guideline for responsible data collection. Their statements should reflect one or more of the key themes that emerged, such as:\r\n- Privacy and Anonymity\r\n- Consent and Misuse\r\n- Accuracy and Bias\r\n\r\nEncourage students to generalize beyond the specific party planning context and articulate a broader takeaway about ethical practices in data collection. You can use their responses to highlight connections across the scenarios or spark deeper discussion. Display a range of student submissions using the “Show Responses” feature to explore different perspectives and synthesize common ideas.\r\n",
+    "name_suffix": "_v2-2025",
+    "stay_on_level_after_submit": "false"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-09-25T20:08:11.415+00:00\",\"changed\":[\"cloned from \\\"data-science-ch1-lesson3-level4_2025\\\"\"],\"cloned_from\":\"data-science-ch1-lesson3-level4_2025\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</FreeResponse>

@@ -1,0 +1,39 @@
+name 'csaif_pl_datacssys-L9-CSandDev'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Optimizing Software
+
+
+#### Now that you've worked through troubleshooting system issues, it’s time to tackle a different challenge: ensuring your computer system runs at its best for the task at hand.
+
+#### This process is called **optimization** —making adjustments to improve performance, rather than just fixing errors.
+
+## Troubleshooting vs. Optimization
+- #### **Troubleshooting** focuses on identifying and fixing problems when something is broken.
+- #### **Optimization** is about fine-tuning a system to run efficiently, even when nothing is wrong.
+#### ***Example:*** *If a computer is slow, troubleshooting might involve fixing a software bug, while optimization could involve upgrading memory or adjusting system settings.*
+
+
+
+---
+
+<h4>
+Follow along with the <a href="https://docs.google.com/document/d/1wNPHGsg1n4aIP995AduJqGVIQh7x16d2aPPynlppo84/edit?usp=sharing" target="blank" rel="noopener noreferrer">Activity Guide</a> as you work with the <b>AI Chatbot </b>in the next level.
+</h4> 
+
+
+<div style="background-color: #B7E0E5; color: #000000; padding: 15px; border-radius: 10px; width: 90%; margin: 20px auto;">
+      
+        <p style="font-size: 14pt;">
+        You will use the AI Chatbot to with optimization. The chatbot will help explore ways to enhance system performance based on different scenarios.<br><br>Experiment with different inputs to see how optimization strategies impact performance.
+        </p>
+    </div>
+
+ 
+<p style="font-size: 18px; font-weight: bold; background-color: #F5F7F8; padding: 10px; border-left: 5px solid #8148B2; display: inline-block;">
+    ➡️ This activity is from Lesson 5. You can find more details in the full <a href='https://studio.code.org/s/csad-pilot-content-2024/lessons/5' target='_blank' rel='noopener noreferrer' style='text-decoration: none; font-weight: bold;'>lesson plan</a>.
+</p>
+
+MARKDOWN

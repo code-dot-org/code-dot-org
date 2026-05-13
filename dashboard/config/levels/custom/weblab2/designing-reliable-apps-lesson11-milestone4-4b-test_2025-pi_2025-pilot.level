@@ -1,0 +1,61 @@
+<Weblab2>
+  <config><![CDATA[{
+  "game_id": 74,
+  "created_at": "2026-03-13T12:10:57.000Z",
+  "level_num": "custom",
+  "user_id": 22366,
+  "properties": {
+    "start_sources": {
+      "folders": {
+      },
+      "files": {
+      },
+      "openFiles": [
+
+      ]
+    },
+    "encrypted": "false",
+    "display_name": "Comment Your Code",
+    "long_instructions": "# Comment Your Code\r\n\r\n**Goal:** Show that you understand how your app works by explaining key parts of your code.\r\n\r\nAdd short, clear comments that explain:\r\n\r\n* **Your async fetch function**\r\n  What does it request? When does it run?\r\n\r\n* **Your event listener logic**\r\n  What happens when a user clicks a button?\r\n\r\n* **Your try/catch block**\r\n  What errors are you protecting against?\r\n\r\n* **Your loading or empty state logic**\r\n  When do these appear and why?\r\n",
+    "bubble_choice_description": "Add clear comments that explain how your async logic, event handling, and error handling work.  ***(supports completing Milestone 4 tasks)***",
+    "thumbnail_url": "https://images.code.org/cd453d4dbe7f1bd74e95ab625c4e8a05-comments-balloons-developer-coding.png",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "false",
+    "widget_view": "false",
+    "initial_view_mode": "split",
+    "predict_settings": {
+      "isPredictLevel": false,
+      "solution": "",
+      "questionType": "freeResponse",
+      "placeholderText": "",
+      "multipleChoiceOptions": [
+        ""
+      ],
+      "freeResponseHeight": 50,
+      "codeEditableAfterSubmit": false
+    },
+    "ai_tutor_prompt_settings": {
+      "answerTypes": [
+        "buildHTML",
+        "buildCSS",
+        "ask",
+        "hint",
+        "debug",
+        "example",
+        "explainCode",
+        "documentation",
+        "pseudocode",
+        "testCase",
+        "buildJavaScript"
+      ],
+      "answerTypeCustomizations": {
+      }
+    },
+    "project_template_level_name": "designing-reliable-apps-lesson11-template-test_2025-pilot",
+    "name_suffix": "_2025-pilot"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-03-13T12:10:57.903+00:00\",\"changed\":[\"cloned from \\\"designing-reliable-apps-lesson11-milestone4-4b-test_2025-pilot\\\"\"],\"cloned_from\":\"designing-reliable-apps-lesson11-milestone4-4b-test_2025-pilot\"}]"
+}]]></config>
+</Weblab2>

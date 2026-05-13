@@ -908,7 +908,7 @@
     "long_instructions": "##Investigate and Modify\r\n\r\nExperiment with the program by making the following modifications, then run the program to observe the results.\r\n\r\n✅ **TO DO:** Look at the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">paintLine()</code> method in the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">MuralPainter</code> class. What is the purpose of the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">setPaint()</code> method? (**Hint:** Look at the documentation for the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">Painter</code> class to find out!)",
     "teacher_markdown": "The `setPaint()` method sets the amount of paint a `Painter` object has.",
     "name_suffix": "_alt-2025",
-    "ai_tutor_available": true
+    "ai_tutor_available": "true"
   },
   "published": true,
   "audit_log": "[{\"changed_at\":\"2024-08-02T22:22:46.185+00:00\",\"changed\":[\"cloned from \\\"CSA U1L11-L1-2_pilot-2025\\\"\"],\"cloned_from\":\"CSA U1L11-L1-2_pilot-2025\"}]"

@@ -1,0 +1,2646 @@
+{
+  "script": {
+    "name": "6-12-computer-systems-and-devices",
+    "wrapup_video_id": null,
+    "login_required": false,
+    "properties": {
+      "is_migrated": true,
+      "version_year": "unversioned"
+    },
+    "new_name": null,
+    "family_name": null,
+    "serialized_at": "2025-02-25 19:00:10 UTC",
+    "published_state": null,
+    "instruction_type": null,
+    "instructor_audience": null,
+    "participant_audience": null,
+    "seeding_key": {
+      "script.name": "6-12-computer-systems-and-devices"
+    }
+  },
+  "lesson_groups": [
+    {
+      "key": "",
+      "user_facing": false,
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_group.key": "",
+        "script.name": "6-12-computer-systems-and-devices"
+      }
+    }
+  ],
+  "lessons": [
+    {
+      "key": "lesson-2",
+      "name": "Career Pathways and Computing Concepts",
+      "absolute_position": 1,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "6-12-computer-systems-and-devices"
+      }
+    },
+    {
+      "key": "lesson-3",
+      "name": "Hardware",
+      "absolute_position": 2,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 2,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "6-12-computer-systems-and-devices"
+      }
+    },
+    {
+      "key": "lesson-4",
+      "name": "Troubleshooting and Optimizing Hardware",
+      "absolute_position": 3,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 3,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "6-12-computer-systems-and-devices"
+      }
+    },
+    {
+      "key": "lesson-5",
+      "name": "Software and Operating Systems",
+      "absolute_position": 4,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 4,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "",
+        "script.name": "6-12-computer-systems-and-devices"
+      }
+    },
+    {
+      "key": "lesson-6",
+      "name": "Troubleshooting and Optimizing Software",
+      "absolute_position": 5,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 5,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "",
+        "script.name": "6-12-computer-systems-and-devices"
+      }
+    },
+    {
+      "key": "lesson-7",
+      "name": "Build a Computer System",
+      "absolute_position": 6,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 6,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "",
+        "script.name": "6-12-computer-systems-and-devices"
+      }
+    },
+    {
+      "key": "lesson-8",
+      "name": "Data in Computer Systems",
+      "absolute_position": 7,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 7,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-8",
+        "lesson_group.key": "",
+        "script.name": "6-12-computer-systems-and-devices"
+      }
+    },
+    {
+      "key": "lesson-9",
+      "name": "Processing Data in a System",
+      "absolute_position": 8,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 8,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-9",
+        "lesson_group.key": "",
+        "script.name": "6-12-computer-systems-and-devices"
+      }
+    },
+    {
+      "key": "lesson-10",
+      "name": "How AI uses Data",
+      "absolute_position": 9,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 9,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "",
+        "script.name": "6-12-computer-systems-and-devices"
+      }
+    },
+    {
+      "key": "lesson-11",
+      "name": "IoT and Emerging Technologies",
+      "absolute_position": 10,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 10,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-11",
+        "lesson_group.key": "",
+        "script.name": "6-12-computer-systems-and-devices"
+      }
+    },
+    {
+      "key": "lesson-12",
+      "name": "User Testing",
+      "absolute_position": 11,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 11,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-12",
+        "lesson_group.key": "",
+        "script.name": "6-12-computer-systems-and-devices"
+      }
+    },
+    {
+      "key": "lesson-13",
+      "name": "Just because we can, should we?",
+      "absolute_position": 12,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 12,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-13",
+        "lesson_group.key": "",
+        "script.name": "6-12-computer-systems-and-devices"
+      }
+    },
+    {
+      "key": "lesson-14",
+      "name": "Sustainable Systems",
+      "absolute_position": 13,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 13,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-14",
+        "lesson_group.key": "",
+        "script.name": "6-12-computer-systems-and-devices"
+      }
+    }
+  ],
+  "lesson_activities": [
+    {
+      "key": "72e86093-d3d3-43c7-b7fc-ca7d6270fafa",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "72e86093-d3d3-43c7-b7fc-ca7d6270fafa",
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "6-12-computer-systems-and-devices"
+      }
+    },
+    {
+      "key": "76e2d553-ca0a-40cf-88d1-6f072f2a41aa",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "76e2d553-ca0a-40cf-88d1-6f072f2a41aa",
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "6-12-computer-systems-and-devices"
+      }
+    },
+    {
+      "key": "035725b8-7dd1-4439-80b5-db0324125a0a",
+      "position": 1,
+      "properties": {
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "035725b8-7dd1-4439-80b5-db0324125a0a",
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "6-12-computer-systems-and-devices"
+      }
+    },
+    {
+      "key": "1e631737-135a-4260-bb66-e1d350d308d5",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "1e631737-135a-4260-bb66-e1d350d308d5",
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "",
+        "script.name": "6-12-computer-systems-and-devices"
+      }
+    },
+    {
+      "key": "048190f6-ec9d-4b8f-b944-4f418d5a02f9",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "048190f6-ec9d-4b8f-b944-4f418d5a02f9",
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "",
+        "script.name": "6-12-computer-systems-and-devices"
+      }
+    },
+    {
+      "key": "2a32d5a8-252a-42d7-ae55-a8b7ab541618",
+      "position": 1,
+      "properties": {
+        "name": "Main Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "2a32d5a8-252a-42d7-ae55-a8b7ab541618",
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "",
+        "script.name": "6-12-computer-systems-and-devices"
+      }
+    },
+    {
+      "key": "cd6e0f15-9e91-43de-b2da-61ef3a13c869",
+      "position": 2,
+      "properties": {
+        "name": "Wrap-Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "cd6e0f15-9e91-43de-b2da-61ef3a13c869",
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "",
+        "script.name": "6-12-computer-systems-and-devices"
+      }
+    },
+    {
+      "key": "524068f8-8d5d-4999-8c2c-65c26a24e15b",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "524068f8-8d5d-4999-8c2c-65c26a24e15b",
+        "lesson.key": "lesson-8",
+        "lesson_group.key": "",
+        "script.name": "6-12-computer-systems-and-devices"
+      }
+    },
+    {
+      "key": "905e909b-d690-46c4-a6d0-cfa5d47b2603",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "905e909b-d690-46c4-a6d0-cfa5d47b2603",
+        "lesson.key": "lesson-9",
+        "lesson_group.key": "",
+        "script.name": "6-12-computer-systems-and-devices"
+      }
+    },
+    {
+      "key": "1ca93810-ebe2-497f-83a8-38fab4f0d8a6",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "1ca93810-ebe2-497f-83a8-38fab4f0d8a6",
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "",
+        "script.name": "6-12-computer-systems-and-devices"
+      }
+    },
+    {
+      "key": "82d542a1-c7ea-48ad-abac-0f03eb4640db",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "82d542a1-c7ea-48ad-abac-0f03eb4640db",
+        "lesson.key": "lesson-11",
+        "lesson_group.key": "",
+        "script.name": "6-12-computer-systems-and-devices"
+      }
+    },
+    {
+      "key": "c7428662-603c-4f10-9e06-96780ad9bb10",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "c7428662-603c-4f10-9e06-96780ad9bb10",
+        "lesson.key": "lesson-12",
+        "lesson_group.key": "",
+        "script.name": "6-12-computer-systems-and-devices"
+      }
+    },
+    {
+      "key": "d736e951-0a96-4679-8fc8-6337351c8ebe",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "d736e951-0a96-4679-8fc8-6337351c8ebe",
+        "lesson.key": "lesson-13",
+        "lesson_group.key": "",
+        "script.name": "6-12-computer-systems-and-devices"
+      }
+    },
+    {
+      "key": "541dc361-4d8c-4172-a246-347361e427e6",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "541dc361-4d8c-4172-a246-347361e427e6",
+        "lesson.key": "lesson-14",
+        "lesson_group.key": "",
+        "script.name": "6-12-computer-systems-and-devices"
+      }
+    },
+    {
+      "key": "fc71ab45-dbd3-42d2-b6e3-d9b4b6cdb29e",
+      "position": 2,
+      "properties": {
+        "name": "Project Day 3"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "fc71ab45-dbd3-42d2-b6e3-d9b4b6cdb29e",
+        "lesson.key": "lesson-14",
+        "lesson_group.key": "",
+        "script.name": "6-12-computer-systems-and-devices"
+      }
+    }
+  ],
+  "activity_sections": [
+    {
+      "key": "21d9d2a0-4d74-4122-88be-7f55fee8a340",
+      "position": 1,
+      "properties": {
+        "progression_name": "Pick an Innovation"
+      },
+      "seeding_key": {
+        "activity_section.key": "21d9d2a0-4d74-4122-88be-7f55fee8a340",
+        "lesson_activity.key": "72e86093-d3d3-43c7-b7fc-ca7d6270fafa"
+      }
+    },
+    {
+      "key": "467d7ce8-ab10-40c8-b667-786b864dee52",
+      "position": 2,
+      "properties": {
+        "progression_name": "Industry Interviews"
+      },
+      "seeding_key": {
+        "activity_section.key": "467d7ce8-ab10-40c8-b667-786b864dee52",
+        "lesson_activity.key": "72e86093-d3d3-43c7-b7fc-ca7d6270fafa"
+      }
+    },
+    {
+      "key": "8fc23646-adcd-47e8-a9d8-83ee1118931b",
+      "position": 3,
+      "properties": {
+        "progression_name": "Your Role in Innovation"
+      },
+      "seeding_key": {
+        "activity_section.key": "8fc23646-adcd-47e8-a9d8-83ee1118931b",
+        "lesson_activity.key": "72e86093-d3d3-43c7-b7fc-ca7d6270fafa"
+      }
+    },
+    {
+      "key": "b15f47c1-cf97-433e-8c11-e8c7b2906267",
+      "position": 4,
+      "properties": {
+        "progression_name": "Check for Understanding"
+      },
+      "seeding_key": {
+        "activity_section.key": "b15f47c1-cf97-433e-8c11-e8c7b2906267",
+        "lesson_activity.key": "72e86093-d3d3-43c7-b7fc-ca7d6270fafa"
+      }
+    },
+    {
+      "key": "8e036283-c4b7-4ad3-87c4-fc2c8165be62",
+      "position": 1,
+      "properties": {
+        "progression_name": "Storage & Memory Components"
+      },
+      "seeding_key": {
+        "activity_section.key": "8e036283-c4b7-4ad3-87c4-fc2c8165be62",
+        "lesson_activity.key": "76e2d553-ca0a-40cf-88d1-6f072f2a41aa"
+      }
+    },
+    {
+      "key": "defc39f4-04ee-4daf-9054-0c5775ac7d5f",
+      "position": 2,
+      "properties": {
+        "progression_name": "Processing Components"
+      },
+      "seeding_key": {
+        "activity_section.key": "defc39f4-04ee-4daf-9054-0c5775ac7d5f",
+        "lesson_activity.key": "76e2d553-ca0a-40cf-88d1-6f072f2a41aa"
+      }
+    },
+    {
+      "key": "caff09ac-d6d8-45e3-aae8-901f0920460c",
+      "position": 3,
+      "properties": {
+        "progression_name": "Connecting Components"
+      },
+      "seeding_key": {
+        "activity_section.key": "caff09ac-d6d8-45e3-aae8-901f0920460c",
+        "lesson_activity.key": "76e2d553-ca0a-40cf-88d1-6f072f2a41aa"
+      }
+    },
+    {
+      "key": "d4e4e279-7de0-4c7b-8215-6477bcf77f96",
+      "position": 4,
+      "properties": {
+        "progression_name": "Career Hardware Needs"
+      },
+      "seeding_key": {
+        "activity_section.key": "d4e4e279-7de0-4c7b-8215-6477bcf77f96",
+        "lesson_activity.key": "76e2d553-ca0a-40cf-88d1-6f072f2a41aa"
+      }
+    },
+    {
+      "key": "2af2a495-d86e-4b2f-a523-dfcd7201284c",
+      "position": 1,
+      "properties": {
+        "progression_name": "Wearable Troubleshooting Scenario"
+      },
+      "seeding_key": {
+        "activity_section.key": "2af2a495-d86e-4b2f-a523-dfcd7201284c",
+        "lesson_activity.key": "035725b8-7dd1-4439-80b5-db0324125a0a"
+      }
+    },
+    {
+      "key": "d74a226b-adfb-46fe-a715-ab42ed9a0191",
+      "position": 2,
+      "properties": {
+        "progression_name": "Other Hardware Troubleshooting Scenarios"
+      },
+      "seeding_key": {
+        "activity_section.key": "d74a226b-adfb-46fe-a715-ab42ed9a0191",
+        "lesson_activity.key": "035725b8-7dd1-4439-80b5-db0324125a0a"
+      }
+    },
+    {
+      "key": "76e42a86-4b6d-4e72-8efc-97d429c42fe3",
+      "position": 3,
+      "properties": {
+        "progression_name": "Hardware Careers: Components & Troubleshooting"
+      },
+      "seeding_key": {
+        "activity_section.key": "76e42a86-4b6d-4e72-8efc-97d429c42fe3",
+        "lesson_activity.key": "035725b8-7dd1-4439-80b5-db0324125a0a"
+      }
+    },
+    {
+      "key": "61fcacde-c63c-42ca-ae14-05b314086e08",
+      "position": 1,
+      "properties": {
+        "progression_name": "Post-Scavenger Hunt Debrief"
+      },
+      "seeding_key": {
+        "activity_section.key": "61fcacde-c63c-42ca-ae14-05b314086e08",
+        "lesson_activity.key": "1e631737-135a-4260-bb66-e1d350d308d5"
+      }
+    },
+    {
+      "key": "777637da-e8cd-4024-86ef-27edee0c8793",
+      "position": 1,
+      "properties": {
+        "progression_name": "Troubleshooting"
+      },
+      "seeding_key": {
+        "activity_section.key": "777637da-e8cd-4024-86ef-27edee0c8793",
+        "lesson_activity.key": "048190f6-ec9d-4b8f-b944-4f418d5a02f9"
+      }
+    },
+    {
+      "key": "a31c7d01-d1b8-4379-8304-17fc415c775f",
+      "position": 2,
+      "properties": {
+        "progression_name": "Optimization"
+      },
+      "seeding_key": {
+        "activity_section.key": "a31c7d01-d1b8-4379-8304-17fc415c775f",
+        "lesson_activity.key": "048190f6-ec9d-4b8f-b944-4f418d5a02f9"
+      }
+    },
+    {
+      "key": "a49133e9-ed33-4270-9e79-b7a732782420",
+      "position": 1,
+      "properties": {
+        "progression_name": "PCPartPicker"
+      },
+      "seeding_key": {
+        "activity_section.key": "a49133e9-ed33-4270-9e79-b7a732782420",
+        "lesson_activity.key": "2a32d5a8-252a-42d7-ae55-a8b7ab541618"
+      }
+    },
+    {
+      "key": "9feb3386-2cb3-448d-8fc9-51dffac1fd41",
+      "position": 2,
+      "properties": {
+        "progression_name": "Computer Build User Profiles"
+      },
+      "seeding_key": {
+        "activity_section.key": "9feb3386-2cb3-448d-8fc9-51dffac1fd41",
+        "lesson_activity.key": "2a32d5a8-252a-42d7-ae55-a8b7ab541618"
+      }
+    },
+    {
+      "key": "a2514144-6689-44d6-8a82-45bd65d1c950",
+      "position": 3,
+      "properties": {
+        "progression_name": "Computer Build AI Assistant"
+      },
+      "seeding_key": {
+        "activity_section.key": "a2514144-6689-44d6-8a82-45bd65d1c950",
+        "lesson_activity.key": "2a32d5a8-252a-42d7-ae55-a8b7ab541618"
+      }
+    },
+    {
+      "key": "f6f5a47c-5ea0-4647-8d70-117622261d32",
+      "position": 1,
+      "properties": {
+        "progression_name": "Check for Understanding"
+      },
+      "seeding_key": {
+        "activity_section.key": "f6f5a47c-5ea0-4647-8d70-117622261d32",
+        "lesson_activity.key": "cd6e0f15-9e91-43de-b2da-61ef3a13c869"
+      }
+    },
+    {
+      "key": "6e8802f4-774a-4bfb-91e4-7b823c6400b5",
+      "position": 1,
+      "properties": {
+        "progression_name": "Sensors / Data AI Assistant"
+      },
+      "seeding_key": {
+        "activity_section.key": "6e8802f4-774a-4bfb-91e4-7b823c6400b5",
+        "lesson_activity.key": "524068f8-8d5d-4999-8c2c-65c26a24e15b"
+      }
+    },
+    {
+      "key": "8ca95fe0-5ade-463a-8378-218521a9dbca",
+      "position": 1,
+      "properties": {
+        "name": "Processing Library Data",
+        "progression_name": "Processing Library Data"
+      },
+      "seeding_key": {
+        "activity_section.key": "8ca95fe0-5ade-463a-8378-218521a9dbca",
+        "lesson_activity.key": "905e909b-d690-46c4-a6d0-cfa5d47b2603"
+      }
+    },
+    {
+      "key": "33a267d4-6962-4a5a-a6ff-1541977065ea",
+      "position": 2,
+      "properties": {
+        "name": "Reflection",
+        "progression_name": "Reflection"
+      },
+      "seeding_key": {
+        "activity_section.key": "33a267d4-6962-4a5a-a6ff-1541977065ea",
+        "lesson_activity.key": "905e909b-d690-46c4-a6d0-cfa5d47b2603"
+      }
+    },
+    {
+      "key": "1c384a06-ee3a-4b73-a01c-2b5380ba950f",
+      "position": 1,
+      "properties": {
+        "progression_name": "Explore an AI Model"
+      },
+      "seeding_key": {
+        "activity_section.key": "1c384a06-ee3a-4b73-a01c-2b5380ba950f",
+        "lesson_activity.key": "1ca93810-ebe2-497f-83a8-38fab4f0d8a6"
+      }
+    },
+    {
+      "key": "8b6956ac-14cc-4a7f-9337-4b0274b3548e",
+      "position": 2,
+      "properties": {
+        "progression_name": "Processing Unit Battle"
+      },
+      "seeding_key": {
+        "activity_section.key": "8b6956ac-14cc-4a7f-9337-4b0274b3548e",
+        "lesson_activity.key": "1ca93810-ebe2-497f-83a8-38fab4f0d8a6"
+      }
+    },
+    {
+      "key": "12f73108-ac3e-40b3-9fd0-624b66cbf482",
+      "position": 3,
+      "properties": {
+        "progression_name": "Determine AI Hardware"
+      },
+      "seeding_key": {
+        "activity_section.key": "12f73108-ac3e-40b3-9fd0-624b66cbf482",
+        "lesson_activity.key": "1ca93810-ebe2-497f-83a8-38fab4f0d8a6"
+      }
+    },
+    {
+      "key": "030e4b1d-85f7-4fda-ab4d-a2852cea7c6d",
+      "position": 1,
+      "properties": {
+        "progression_name": "Security, Privacy, and Data Ownership"
+      },
+      "seeding_key": {
+        "activity_section.key": "030e4b1d-85f7-4fda-ab4d-a2852cea7c6d",
+        "lesson_activity.key": "82d542a1-c7ea-48ad-abac-0f03eb4640db"
+      }
+    },
+    {
+      "key": "f349ea03-d72e-4b04-999d-19c67ed78849",
+      "position": 1,
+      "properties": {
+        "progression_name": "Analyzing User Testing Results"
+      },
+      "seeding_key": {
+        "activity_section.key": "f349ea03-d72e-4b04-999d-19c67ed78849",
+        "lesson_activity.key": "c7428662-603c-4f10-9e06-96780ad9bb10"
+      }
+    },
+    {
+      "key": "5dd71177-b7c4-48b2-890a-b2ec93f83be6",
+      "position": 2,
+      "properties": {
+        "progression_name": "Next Steps"
+      },
+      "seeding_key": {
+        "activity_section.key": "5dd71177-b7c4-48b2-890a-b2ec93f83be6",
+        "lesson_activity.key": "c7428662-603c-4f10-9e06-96780ad9bb10"
+      }
+    },
+    {
+      "key": "a35690e2-5c17-4c77-a29a-613476d338d2",
+      "position": 1,
+      "properties": {
+        "progression_name": "Check for Understanding"
+      },
+      "seeding_key": {
+        "activity_section.key": "a35690e2-5c17-4c77-a29a-613476d338d2",
+        "lesson_activity.key": "d736e951-0a96-4679-8fc8-6337351c8ebe"
+      }
+    },
+    {
+      "key": "9b160fa2-7fba-4170-a95d-482a094714a6",
+      "position": 1,
+      "properties": {
+        "name": "Project Day 1",
+        "progression_name": "Explore Sustainable Development Goal Targets"
+      },
+      "seeding_key": {
+        "activity_section.key": "9b160fa2-7fba-4170-a95d-482a094714a6",
+        "lesson_activity.key": "541dc361-4d8c-4172-a246-347361e427e6"
+      }
+    },
+    {
+      "key": "51142482-8b5f-4a64-99d3-7de94bc547b4",
+      "position": 2,
+      "properties": {
+        "progression_name": "Brainstorm Your Project"
+      },
+      "seeding_key": {
+        "activity_section.key": "51142482-8b5f-4a64-99d3-7de94bc547b4",
+        "lesson_activity.key": "541dc361-4d8c-4172-a246-347361e427e6"
+      }
+    },
+    {
+      "key": "8773e289-12de-4d5d-ac2e-f27c96243625",
+      "position": 3,
+      "properties": {
+        "progression_name": "Understanding Your Users"
+      },
+      "seeding_key": {
+        "activity_section.key": "8773e289-12de-4d5d-ac2e-f27c96243625",
+        "lesson_activity.key": "541dc361-4d8c-4172-a246-347361e427e6"
+      }
+    },
+    {
+      "key": "c73bb5ad-1be0-4db9-b42e-1ef8069c9f44",
+      "position": 1,
+      "properties": {
+        "progression_name": " Ethics & Impact"
+      },
+      "seeding_key": {
+        "activity_section.key": "c73bb5ad-1be0-4db9-b42e-1ef8069c9f44",
+        "lesson_activity.key": "fc71ab45-dbd3-42d2-b6e3-d9b4b6cdb29e"
+      }
+    }
+  ],
+  "script_levels": [
+    {
+      "chapter": 1,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "computer-systems-innovation-map"
+        ],
+        "progression": "Pick an Innovation"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "computer-systems-innovation-map"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "6-12-computer-systems-and-devices",
+        "activity_section.key": "21d9d2a0-4d74-4122-88be-7f55fee8a340"
+      },
+      "level_keys": [
+        "computer-systems-innovation-map"
+      ]
+    },
+    {
+      "chapter": 2,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "computer-systems-farmvibes-agri-professionals"
+        ],
+        "progression": "Industry Interviews"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "computer-systems-farmvibes-agri-professionals"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "6-12-computer-systems-and-devices",
+        "activity_section.key": "467d7ce8-ab10-40c8-b667-786b864dee52"
+      },
+      "level_keys": [
+        "computer-systems-farmvibes-agri-professionals"
+      ]
+    },
+    {
+      "chapter": 3,
+      "position": 3,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "computer-systems-solix-agri-professionals"
+        ],
+        "progression": "Industry Interviews"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "computer-systems-solix-agri-professionals"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "6-12-computer-systems-and-devices",
+        "activity_section.key": "467d7ce8-ab10-40c8-b667-786b864dee52"
+      },
+      "level_keys": [
+        "computer-systems-solix-agri-professionals"
+      ]
+    },
+    {
+      "chapter": 4,
+      "position": 4,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "computer-systems-armirror-fashion-professionals"
+        ],
+        "progression": "Industry Interviews"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "computer-systems-armirror-fashion-professionals"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "6-12-computer-systems-and-devices",
+        "activity_section.key": "467d7ce8-ab10-40c8-b667-786b864dee52"
+      },
+      "level_keys": [
+        "computer-systems-armirror-fashion-professionals"
+      ]
+    },
+    {
+      "chapter": 5,
+      "position": 5,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "computer-systems-jacket-fashion-professionals"
+        ],
+        "progression": "Industry Interviews"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "computer-systems-jacket-fashion-professionals"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "6-12-computer-systems-and-devices",
+        "activity_section.key": "467d7ce8-ab10-40c8-b667-786b864dee52"
+      },
+      "level_keys": [
+        "computer-systems-jacket-fashion-professionals"
+      ]
+    },
+    {
+      "chapter": 6,
+      "position": 6,
+      "activity_section_position": 5,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "computer-systems-smartboard-edu-professionals"
+        ],
+        "progression": "Industry Interviews"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "computer-systems-smartboard-edu-professionals"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "6-12-computer-systems-and-devices",
+        "activity_section.key": "467d7ce8-ab10-40c8-b667-786b864dee52"
+      },
+      "level_keys": [
+        "computer-systems-smartboard-edu-professionals"
+      ]
+    },
+    {
+      "chapter": 7,
+      "position": 7,
+      "activity_section_position": 6,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "computer-systems-scholarlab-edu-professionals"
+        ],
+        "progression": "Industry Interviews"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "computer-systems-scholarlab-edu-professionals"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "6-12-computer-systems-and-devices",
+        "activity_section.key": "467d7ce8-ab10-40c8-b667-786b864dee52"
+      },
+      "level_keys": [
+        "computer-systems-scholarlab-edu-professionals"
+      ]
+    },
+    {
+      "chapter": 8,
+      "position": 8,
+      "activity_section_position": 7,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "computer-systems-snake-medical-professionals"
+        ],
+        "progression": "Industry Interviews"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "computer-systems-snake-medical-professionals"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "6-12-computer-systems-and-devices",
+        "activity_section.key": "467d7ce8-ab10-40c8-b667-786b864dee52"
+      },
+      "level_keys": [
+        "computer-systems-snake-medical-professionals"
+      ]
+    },
+    {
+      "chapter": 9,
+      "position": 9,
+      "activity_section_position": 8,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "computer-systems-oura-medical-professionals"
+        ],
+        "progression": "Industry Interviews"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "computer-systems-oura-medical-professionals"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "6-12-computer-systems-and-devices",
+        "activity_section.key": "467d7ce8-ab10-40c8-b667-786b864dee52"
+      },
+      "level_keys": [
+        "computer-systems-oura-medical-professionals"
+      ]
+    },
+    {
+      "chapter": 10,
+      "position": 10,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "computer-systems-computing-careers-choice"
+        ],
+        "progression": "Your Role in Innovation"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "computer-systems-computing-careers-choice"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "6-12-computer-systems-and-devices",
+        "activity_section.key": "8fc23646-adcd-47e8-a9d8-83ee1118931b"
+      },
+      "level_keys": [
+        "computer-systems-computing-careers-choice"
+      ]
+    },
+    {
+      "chapter": 11,
+      "position": 11,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "computer-systems-interview-technical-roles"
+        ],
+        "progression": "Your Role in Innovation"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "computer-systems-interview-technical-roles"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "6-12-computer-systems-and-devices",
+        "activity_section.key": "8fc23646-adcd-47e8-a9d8-83ee1118931b"
+      },
+      "level_keys": [
+        "computer-systems-interview-technical-roles"
+      ]
+    },
+    {
+      "chapter": 12,
+      "position": 12,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "computing-systems-lesson1-reflection321"
+        ],
+        "progression": "Check for Understanding"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "computing-systems-lesson1-reflection321"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "6-12-computer-systems-and-devices",
+        "activity_section.key": "b15f47c1-cf97-433e-8c11-e8c7b2906267"
+      },
+      "level_keys": [
+        "computing-systems-lesson1-reflection321"
+      ]
+    },
+    {
+      "chapter": 13,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "test-computer-systems-lesson3-level1"
+        ],
+        "progression": "Storage & Memory Components"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "test-computer-systems-lesson3-level1"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "6-12-computer-systems-and-devices",
+        "activity_section.key": "8e036283-c4b7-4ad3-87c4-fc2c8165be62"
+      },
+      "level_keys": [
+        "test-computer-systems-lesson3-level1"
+      ]
+    },
+    {
+      "chapter": 14,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "test-computer-systems-lesson2-processing-components"
+        ],
+        "progression": "Processing Components"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "test-computer-systems-lesson2-processing-components"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "6-12-computer-systems-and-devices",
+        "activity_section.key": "defc39f4-04ee-4daf-9054-0c5775ac7d5f"
+      },
+      "level_keys": [
+        "test-computer-systems-lesson2-processing-components"
+      ]
+    },
+    {
+      "chapter": 15,
+      "position": 3,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "computer-systems-lesson2-pcbuilder"
+        ],
+        "progression": "Connecting Components"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "computer-systems-lesson2-pcbuilder"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "6-12-computer-systems-and-devices",
+        "activity_section.key": "caff09ac-d6d8-45e3-aae8-901f0920460c"
+      },
+      "level_keys": [
+        "computer-systems-lesson2-pcbuilder"
+      ]
+    },
+    {
+      "chapter": 16,
+      "position": 4,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "computer-systems-lesson2-career-exploration"
+        ],
+        "progression": "Career Hardware Needs"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "computer-systems-lesson2-career-exploration"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "6-12-computer-systems-and-devices",
+        "activity_section.key": "d4e4e279-7de0-4c7b-8215-6477bcf77f96"
+      },
+      "level_keys": [
+        "computer-systems-lesson2-career-exploration"
+      ]
+    },
+    {
+      "chapter": 17,
+      "position": 5,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "computer-systems-lesson2-level2-2024"
+        ],
+        "progression": "Career Hardware Needs"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "computer-systems-lesson2-level2-2024"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "6-12-computer-systems-and-devices",
+        "activity_section.key": "d4e4e279-7de0-4c7b-8215-6477bcf77f96"
+      },
+      "level_keys": [
+        "computer-systems-lesson2-level2-2024"
+      ]
+    },
+    {
+      "chapter": 18,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "computer-systems-lesson3-onlineresources-1"
+        ],
+        "progression": "Wearable Troubleshooting Scenario"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "computer-systems-lesson3-onlineresources-1"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "6-12-computer-systems-and-devices",
+        "activity_section.key": "2af2a495-d86e-4b2f-a523-dfcd7201284c"
+      },
+      "level_keys": [
+        "computer-systems-lesson3-onlineresources-1"
+      ]
+    },
+    {
+      "chapter": 19,
+      "position": 2,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "computer-systems-troubleshoot-choiceA"
+        ],
+        "progression": "Wearable Troubleshooting Scenario"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "computer-systems-troubleshoot-choiceA"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "6-12-computer-systems-and-devices",
+        "activity_section.key": "2af2a495-d86e-4b2f-a523-dfcd7201284c"
+      },
+      "level_keys": [
+        "computer-systems-troubleshoot-choiceA"
+      ]
+    },
+    {
+      "chapter": 20,
+      "position": 3,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "computer-systems-lesson3-scenario-choice"
+        ],
+        "progression": "Other Hardware Troubleshooting Scenarios"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "computer-systems-lesson3-scenario-choice"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "6-12-computer-systems-and-devices",
+        "activity_section.key": "d74a226b-adfb-46fe-a715-ab42ed9a0191"
+      },
+      "level_keys": [
+        "computer-systems-lesson3-scenario-choice"
+      ]
+    },
+    {
+      "chapter": 21,
+      "position": 4,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "computer-systems-troubleshoot"
+        ],
+        "progression": "Other Hardware Troubleshooting Scenarios"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "computer-systems-troubleshoot"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "6-12-computer-systems-and-devices",
+        "activity_section.key": "d74a226b-adfb-46fe-a715-ab42ed9a0191"
+      },
+      "level_keys": [
+        "computer-systems-troubleshoot"
+      ]
+    },
+    {
+      "chapter": 22,
+      "position": 5,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "computer-systems-lesson-3-wrap-up"
+        ],
+        "progression": "Hardware Careers: Components & Troubleshooting"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "computer-systems-lesson-3-wrap-up"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "6-12-computer-systems-and-devices",
+        "activity_section.key": "76e42a86-4b6d-4e72-8efc-97d429c42fe3"
+      },
+      "level_keys": [
+        "computer-systems-lesson-3-wrap-up"
+      ]
+    },
+    {
+      "chapter": 23,
+      "position": 6,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "computer-systems-lesson3-wrap-up-FRQ"
+        ],
+        "progression": "Hardware Careers: Components & Troubleshooting"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "computer-systems-lesson3-wrap-up-FRQ"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "6-12-computer-systems-and-devices",
+        "activity_section.key": "76e42a86-4b6d-4e72-8efc-97d429c42fe3"
+      },
+      "level_keys": [
+        "computer-systems-lesson3-wrap-up-FRQ"
+      ]
+    },
+    {
+      "chapter": 24,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "test-computer-systems-lesson-4-level1LG"
+        ],
+        "progression": "Post-Scavenger Hunt Debrief"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "test-computer-systems-lesson-4-level1LG"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "",
+        "script.name": "6-12-computer-systems-and-devices",
+        "activity_section.key": "61fcacde-c63c-42ca-ae14-05b314086e08"
+      },
+      "level_keys": [
+        "test-computer-systems-lesson-4-level1LG"
+      ]
+    },
+    {
+      "chapter": 25,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "test-computer-systems-lesson6-level1"
+        ],
+        "progression": "Troubleshooting"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "test-computer-systems-lesson6-level1"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "",
+        "script.name": "6-12-computer-systems-and-devices",
+        "activity_section.key": "777637da-e8cd-4024-86ef-27edee0c8793"
+      },
+      "level_keys": [
+        "test-computer-systems-lesson6-level1"
+      ]
+    },
+    {
+      "chapter": 26,
+      "position": 2,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "test-computer-systems-and-devices-lesson6-level2"
+        ],
+        "progression": "Troubleshooting"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "test-computer-systems-and-devices-lesson6-level2"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "",
+        "script.name": "6-12-computer-systems-and-devices",
+        "activity_section.key": "777637da-e8cd-4024-86ef-27edee0c8793"
+      },
+      "level_keys": [
+        "test-computer-systems-and-devices-lesson6-level2"
+      ]
+    },
+    {
+      "chapter": 27,
+      "position": 3,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "test-computer-systems-and-devices-lesson6-level3"
+        ],
+        "progression": "Optimization"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "test-computer-systems-and-devices-lesson6-level3"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "",
+        "script.name": "6-12-computer-systems-and-devices",
+        "activity_section.key": "a31c7d01-d1b8-4379-8304-17fc415c775f"
+      },
+      "level_keys": [
+        "test-computer-systems-and-devices-lesson6-level3"
+      ]
+    },
+    {
+      "chapter": 28,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "test-computing-systems-lesson7-PCPartPicker"
+        ],
+        "progression": "PCPartPicker"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "test-computing-systems-lesson7-PCPartPicker"
+        ],
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "",
+        "script.name": "6-12-computer-systems-and-devices",
+        "activity_section.key": "a49133e9-ed33-4270-9e79-b7a732782420"
+      },
+      "level_keys": [
+        "test-computing-systems-lesson7-PCPartPicker"
+      ]
+    },
+    {
+      "chapter": 29,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "test-computing-systems-lesson7-level1"
+        ],
+        "progression": "Computer Build User Profiles"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "test-computing-systems-lesson7-level1"
+        ],
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "",
+        "script.name": "6-12-computer-systems-and-devices",
+        "activity_section.key": "9feb3386-2cb3-448d-8fc9-51dffac1fd41"
+      },
+      "level_keys": [
+        "test-computing-systems-lesson7-level1"
+      ]
+    },
+    {
+      "chapter": 30,
+      "position": 3,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "test-computing-systems-lesson7-level2"
+        ],
+        "progression": "Computer Build AI Assistant"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "test-computing-systems-lesson7-level2"
+        ],
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "",
+        "script.name": "6-12-computer-systems-and-devices",
+        "activity_section.key": "a2514144-6689-44d6-8a82-45bd65d1c950"
+      },
+      "level_keys": [
+        "test-computing-systems-lesson7-level2"
+      ]
+    },
+    {
+      "chapter": 31,
+      "position": 4,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "test-computing-systems-lesson7-level3"
+        ],
+        "progression": "Check for Understanding"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "test-computing-systems-lesson7-level3"
+        ],
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "",
+        "script.name": "6-12-computer-systems-and-devices",
+        "activity_section.key": "f6f5a47c-5ea0-4647-8d70-117622261d32"
+      },
+      "level_keys": [
+        "test-computing-systems-lesson7-level3"
+      ]
+    },
+    {
+      "chapter": 32,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "test-computing-systems-lesson8-aichatbotlevel"
+        ],
+        "progression": "Sensors / Data AI Assistant"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "test-computing-systems-lesson8-aichatbotlevel"
+        ],
+        "lesson.key": "lesson-8",
+        "lesson_group.key": "",
+        "script.name": "6-12-computer-systems-and-devices",
+        "activity_section.key": "6e8802f4-774a-4bfb-91e4-7b823c6400b5"
+      },
+      "level_keys": [
+        "test-computing-systems-lesson8-aichatbotlevel"
+      ]
+    },
+    {
+      "chapter": 33,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "computing-systems-lesson9-level1"
+        ],
+        "progression": "Processing Library Data"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "computing-systems-lesson9-level1"
+        ],
+        "lesson.key": "lesson-9",
+        "lesson_group.key": "",
+        "script.name": "6-12-computer-systems-and-devices",
+        "activity_section.key": "8ca95fe0-5ade-463a-8378-218521a9dbca"
+      },
+      "level_keys": [
+        "computing-systems-lesson9-level1"
+      ]
+    },
+    {
+      "chapter": 34,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "computing-systems-lesson9-reflection1"
+        ],
+        "progression": "Reflection"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "computing-systems-lesson9-reflection1"
+        ],
+        "lesson.key": "lesson-9",
+        "lesson_group.key": "",
+        "script.name": "6-12-computer-systems-and-devices",
+        "activity_section.key": "33a267d4-6962-4a5a-a6ff-1541977065ea"
+      },
+      "level_keys": [
+        "computing-systems-lesson9-reflection1"
+      ]
+    },
+    {
+      "chapter": 35,
+      "position": 3,
+      "activity_section_position": 2,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "computing-systems-lesson9-reflection2"
+        ],
+        "progression": "Reflection"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "computing-systems-lesson9-reflection2"
+        ],
+        "lesson.key": "lesson-9",
+        "lesson_group.key": "",
+        "script.name": "6-12-computer-systems-and-devices",
+        "activity_section.key": "33a267d4-6962-4a5a-a6ff-1541977065ea"
+      },
+      "level_keys": [
+        "computing-systems-lesson9-reflection2"
+      ]
+    },
+    {
+      "chapter": 36,
+      "position": 4,
+      "activity_section_position": 3,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "computing-systems-lesson9-reflection3"
+        ],
+        "progression": "Reflection"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "computing-systems-lesson9-reflection3"
+        ],
+        "lesson.key": "lesson-9",
+        "lesson_group.key": "",
+        "script.name": "6-12-computer-systems-and-devices",
+        "activity_section.key": "33a267d4-6962-4a5a-a6ff-1541977065ea"
+      },
+      "level_keys": [
+        "computing-systems-lesson9-reflection3"
+      ]
+    },
+    {
+      "chapter": 37,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Explore an AI Model"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "computer-systems-lesson9-models"
+        ],
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "",
+        "script.name": "6-12-computer-systems-and-devices",
+        "activity_section.key": "1c384a06-ee3a-4b73-a01c-2b5380ba950f"
+      },
+      "level_keys": [
+        "computer-systems-lesson9-models"
+      ]
+    },
+    {
+      "chapter": 38,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Processing Unit Battle"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "computer-systems-lesson9-battle"
+        ],
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "",
+        "script.name": "6-12-computer-systems-and-devices",
+        "activity_section.key": "8b6956ac-14cc-4a7f-9337-4b0274b3548e"
+      },
+      "level_keys": [
+        "computer-systems-lesson9-battle"
+      ]
+    },
+    {
+      "chapter": 39,
+      "position": 3,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Determine AI Hardware"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "computer-systems-lesson9-aichat"
+        ],
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "",
+        "script.name": "6-12-computer-systems-and-devices",
+        "activity_section.key": "12f73108-ac3e-40b3-9fd0-624b66cbf482"
+      },
+      "level_keys": [
+        "computer-systems-lesson9-aichat"
+      ]
+    },
+    {
+      "chapter": 40,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "computer-systems-lesson10-level1-frq"
+        ],
+        "progression": "Security, Privacy, and Data Ownership"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "computer-systems-lesson10-level1-frq"
+        ],
+        "lesson.key": "lesson-11",
+        "lesson_group.key": "",
+        "script.name": "6-12-computer-systems-and-devices",
+        "activity_section.key": "030e4b1d-85f7-4fda-ab4d-a2852cea7c6d"
+      },
+      "level_keys": [
+        "computer-systems-lesson10-level1-frq"
+      ]
+    },
+    {
+      "chapter": 41,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "computer-systems-lesson11-level1-parent-choice"
+        ],
+        "progression": "Analyzing User Testing Results"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "computer-systems-lesson11-level1-parent-choice"
+        ],
+        "lesson.key": "lesson-12",
+        "lesson_group.key": "",
+        "script.name": "6-12-computer-systems-and-devices",
+        "activity_section.key": "f349ea03-d72e-4b04-999d-19c67ed78849"
+      },
+      "level_keys": [
+        "computer-systems-lesson11-level1-parent-choice"
+      ]
+    },
+    {
+      "chapter": 42,
+      "position": 2,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "test-computer-systems-lesson11-level2a"
+        ],
+        "progression": "Analyzing User Testing Results"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "test-computer-systems-lesson11-level2a"
+        ],
+        "lesson.key": "lesson-12",
+        "lesson_group.key": "",
+        "script.name": "6-12-computer-systems-and-devices",
+        "activity_section.key": "f349ea03-d72e-4b04-999d-19c67ed78849"
+      },
+      "level_keys": [
+        "test-computer-systems-lesson11-level2a"
+      ]
+    },
+    {
+      "chapter": 43,
+      "position": 3,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "test-computer-systems-lesson11-level3"
+        ],
+        "progression": "Next Steps"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "test-computer-systems-lesson11-level3"
+        ],
+        "lesson.key": "lesson-12",
+        "lesson_group.key": "",
+        "script.name": "6-12-computer-systems-and-devices",
+        "activity_section.key": "5dd71177-b7c4-48b2-890a-b2ec93f83be6"
+      },
+      "level_keys": [
+        "test-computer-systems-lesson11-level3"
+      ]
+    },
+    {
+      "chapter": 44,
+      "position": 4,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "test-computer-systems-lesson11-level4"
+        ],
+        "progression": "Next Steps"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "test-computer-systems-lesson11-level4"
+        ],
+        "lesson.key": "lesson-12",
+        "lesson_group.key": "",
+        "script.name": "6-12-computer-systems-and-devices",
+        "activity_section.key": "5dd71177-b7c4-48b2-890a-b2ec93f83be6"
+      },
+      "level_keys": [
+        "test-computer-systems-lesson11-level4"
+      ]
+    },
+    {
+      "chapter": 45,
+      "position": 5,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "test-computer-systems-lesson11-level5"
+        ],
+        "progression": "Next Steps"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "test-computer-systems-lesson11-level5"
+        ],
+        "lesson.key": "lesson-12",
+        "lesson_group.key": "",
+        "script.name": "6-12-computer-systems-and-devices",
+        "activity_section.key": "5dd71177-b7c4-48b2-890a-b2ec93f83be6"
+      },
+      "level_keys": [
+        "test-computer-systems-lesson11-level5"
+      ]
+    },
+    {
+      "chapter": 46,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "computer-systems-lesson12-cfu"
+        ],
+        "progression": "Check for Understanding"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "computer-systems-lesson12-cfu"
+        ],
+        "lesson.key": "lesson-13",
+        "lesson_group.key": "",
+        "script.name": "6-12-computer-systems-and-devices",
+        "activity_section.key": "a35690e2-5c17-4c77-a29a-613476d338d2"
+      },
+      "level_keys": [
+        "computer-systems-lesson12-cfu"
+      ]
+    },
+    {
+      "chapter": 47,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Explore Sustainable Development Goal Targets"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "computer-systems-project-level1"
+        ],
+        "lesson.key": "lesson-14",
+        "lesson_group.key": "",
+        "script.name": "6-12-computer-systems-and-devices",
+        "activity_section.key": "9b160fa2-7fba-4170-a95d-482a094714a6"
+      },
+      "level_keys": [
+        "computer-systems-project-level1"
+      ]
+    },
+    {
+      "chapter": 48,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Brainstorm Your Project"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "computer-systems-project-brainstorm-chat"
+        ],
+        "lesson.key": "lesson-14",
+        "lesson_group.key": "",
+        "script.name": "6-12-computer-systems-and-devices",
+        "activity_section.key": "51142482-8b5f-4a64-99d3-7de94bc547b4"
+      },
+      "level_keys": [
+        "computer-systems-project-brainstorm-chat"
+      ]
+    },
+    {
+      "chapter": 49,
+      "position": 3,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Understanding Your Users"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "computer-systems-project-user-profile-chat"
+        ],
+        "lesson.key": "lesson-14",
+        "lesson_group.key": "",
+        "script.name": "6-12-computer-systems-and-devices",
+        "activity_section.key": "8773e289-12de-4d5d-ac2e-f27c96243625"
+      },
+      "level_keys": [
+        "computer-systems-project-user-profile-chat"
+      ]
+    },
+    {
+      "chapter": 50,
+      "position": 4,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": " Ethics & Impact"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "computer-systems-project-ethics-chat"
+        ],
+        "lesson.key": "lesson-14",
+        "lesson_group.key": "",
+        "script.name": "6-12-computer-systems-and-devices",
+        "activity_section.key": "c73bb5ad-1be0-4db9-b42e-1ef8069c9f44"
+      },
+      "level_keys": [
+        "computer-systems-project-ethics-chat"
+      ]
+    }
+  ],
+  "levels_script_levels": [
+    {
+      "seeding_key": {
+        "level.key": "computer-systems-innovation-map",
+        "script_level.level_keys": [
+          "computer-systems-innovation-map"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "6-12-computer-systems-and-devices",
+        "activity_section.key": "21d9d2a0-4d74-4122-88be-7f55fee8a340"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "computer-systems-farmvibes-agri-professionals",
+        "script_level.level_keys": [
+          "computer-systems-farmvibes-agri-professionals"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "6-12-computer-systems-and-devices",
+        "activity_section.key": "467d7ce8-ab10-40c8-b667-786b864dee52"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "computer-systems-solix-agri-professionals",
+        "script_level.level_keys": [
+          "computer-systems-solix-agri-professionals"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "6-12-computer-systems-and-devices",
+        "activity_section.key": "467d7ce8-ab10-40c8-b667-786b864dee52"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "computer-systems-armirror-fashion-professionals",
+        "script_level.level_keys": [
+          "computer-systems-armirror-fashion-professionals"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "6-12-computer-systems-and-devices",
+        "activity_section.key": "467d7ce8-ab10-40c8-b667-786b864dee52"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "computer-systems-jacket-fashion-professionals",
+        "script_level.level_keys": [
+          "computer-systems-jacket-fashion-professionals"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "6-12-computer-systems-and-devices",
+        "activity_section.key": "467d7ce8-ab10-40c8-b667-786b864dee52"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "computer-systems-smartboard-edu-professionals",
+        "script_level.level_keys": [
+          "computer-systems-smartboard-edu-professionals"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "6-12-computer-systems-and-devices",
+        "activity_section.key": "467d7ce8-ab10-40c8-b667-786b864dee52"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "computer-systems-scholarlab-edu-professionals",
+        "script_level.level_keys": [
+          "computer-systems-scholarlab-edu-professionals"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "6-12-computer-systems-and-devices",
+        "activity_section.key": "467d7ce8-ab10-40c8-b667-786b864dee52"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "computer-systems-snake-medical-professionals",
+        "script_level.level_keys": [
+          "computer-systems-snake-medical-professionals"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "6-12-computer-systems-and-devices",
+        "activity_section.key": "467d7ce8-ab10-40c8-b667-786b864dee52"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "computer-systems-oura-medical-professionals",
+        "script_level.level_keys": [
+          "computer-systems-oura-medical-professionals"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "6-12-computer-systems-and-devices",
+        "activity_section.key": "467d7ce8-ab10-40c8-b667-786b864dee52"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "computer-systems-computing-careers-choice",
+        "script_level.level_keys": [
+          "computer-systems-computing-careers-choice"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "6-12-computer-systems-and-devices",
+        "activity_section.key": "8fc23646-adcd-47e8-a9d8-83ee1118931b"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "computer-systems-interview-technical-roles",
+        "script_level.level_keys": [
+          "computer-systems-interview-technical-roles"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "6-12-computer-systems-and-devices",
+        "activity_section.key": "8fc23646-adcd-47e8-a9d8-83ee1118931b"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "computing-systems-lesson1-reflection321",
+        "script_level.level_keys": [
+          "computing-systems-lesson1-reflection321"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "6-12-computer-systems-and-devices",
+        "activity_section.key": "b15f47c1-cf97-433e-8c11-e8c7b2906267"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "test-computer-systems-lesson3-level1",
+        "script_level.level_keys": [
+          "test-computer-systems-lesson3-level1"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "6-12-computer-systems-and-devices",
+        "activity_section.key": "8e036283-c4b7-4ad3-87c4-fc2c8165be62"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "test-computer-systems-lesson2-processing-components",
+        "script_level.level_keys": [
+          "test-computer-systems-lesson2-processing-components"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "6-12-computer-systems-and-devices",
+        "activity_section.key": "defc39f4-04ee-4daf-9054-0c5775ac7d5f"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "computer-systems-lesson2-pcbuilder",
+        "script_level.level_keys": [
+          "computer-systems-lesson2-pcbuilder"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "6-12-computer-systems-and-devices",
+        "activity_section.key": "caff09ac-d6d8-45e3-aae8-901f0920460c"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "computer-systems-lesson2-career-exploration",
+        "script_level.level_keys": [
+          "computer-systems-lesson2-career-exploration"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "6-12-computer-systems-and-devices",
+        "activity_section.key": "d4e4e279-7de0-4c7b-8215-6477bcf77f96"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "computer-systems-lesson2-level2-2024",
+        "script_level.level_keys": [
+          "computer-systems-lesson2-level2-2024"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "6-12-computer-systems-and-devices",
+        "activity_section.key": "d4e4e279-7de0-4c7b-8215-6477bcf77f96"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "computer-systems-lesson3-onlineresources-1",
+        "script_level.level_keys": [
+          "computer-systems-lesson3-onlineresources-1"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "6-12-computer-systems-and-devices",
+        "activity_section.key": "2af2a495-d86e-4b2f-a523-dfcd7201284c"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "computer-systems-troubleshoot-choiceA",
+        "script_level.level_keys": [
+          "computer-systems-troubleshoot-choiceA"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "6-12-computer-systems-and-devices",
+        "activity_section.key": "2af2a495-d86e-4b2f-a523-dfcd7201284c"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "computer-systems-lesson3-scenario-choice",
+        "script_level.level_keys": [
+          "computer-systems-lesson3-scenario-choice"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "6-12-computer-systems-and-devices",
+        "activity_section.key": "d74a226b-adfb-46fe-a715-ab42ed9a0191"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "computer-systems-troubleshoot",
+        "script_level.level_keys": [
+          "computer-systems-troubleshoot"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "6-12-computer-systems-and-devices",
+        "activity_section.key": "d74a226b-adfb-46fe-a715-ab42ed9a0191"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "computer-systems-lesson-3-wrap-up",
+        "script_level.level_keys": [
+          "computer-systems-lesson-3-wrap-up"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "6-12-computer-systems-and-devices",
+        "activity_section.key": "76e42a86-4b6d-4e72-8efc-97d429c42fe3"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "computer-systems-lesson3-wrap-up-FRQ",
+        "script_level.level_keys": [
+          "computer-systems-lesson3-wrap-up-FRQ"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "6-12-computer-systems-and-devices",
+        "activity_section.key": "76e42a86-4b6d-4e72-8efc-97d429c42fe3"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "test-computer-systems-lesson-4-level1LG",
+        "script_level.level_keys": [
+          "test-computer-systems-lesson-4-level1LG"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "",
+        "script.name": "6-12-computer-systems-and-devices",
+        "activity_section.key": "61fcacde-c63c-42ca-ae14-05b314086e08"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "test-computer-systems-lesson6-level1",
+        "script_level.level_keys": [
+          "test-computer-systems-lesson6-level1"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "",
+        "script.name": "6-12-computer-systems-and-devices",
+        "activity_section.key": "777637da-e8cd-4024-86ef-27edee0c8793"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "test-computer-systems-and-devices-lesson6-level2",
+        "script_level.level_keys": [
+          "test-computer-systems-and-devices-lesson6-level2"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "",
+        "script.name": "6-12-computer-systems-and-devices",
+        "activity_section.key": "777637da-e8cd-4024-86ef-27edee0c8793"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "test-computer-systems-and-devices-lesson6-level3",
+        "script_level.level_keys": [
+          "test-computer-systems-and-devices-lesson6-level3"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "",
+        "script.name": "6-12-computer-systems-and-devices",
+        "activity_section.key": "a31c7d01-d1b8-4379-8304-17fc415c775f"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "test-computing-systems-lesson7-PCPartPicker",
+        "script_level.level_keys": [
+          "test-computing-systems-lesson7-PCPartPicker"
+        ],
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "",
+        "script.name": "6-12-computer-systems-and-devices",
+        "activity_section.key": "a49133e9-ed33-4270-9e79-b7a732782420"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "test-computing-systems-lesson7-level1",
+        "script_level.level_keys": [
+          "test-computing-systems-lesson7-level1"
+        ],
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "",
+        "script.name": "6-12-computer-systems-and-devices",
+        "activity_section.key": "9feb3386-2cb3-448d-8fc9-51dffac1fd41"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "test-computing-systems-lesson7-level2",
+        "script_level.level_keys": [
+          "test-computing-systems-lesson7-level2"
+        ],
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "",
+        "script.name": "6-12-computer-systems-and-devices",
+        "activity_section.key": "a2514144-6689-44d6-8a82-45bd65d1c950"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "test-computing-systems-lesson7-level3",
+        "script_level.level_keys": [
+          "test-computing-systems-lesson7-level3"
+        ],
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "",
+        "script.name": "6-12-computer-systems-and-devices",
+        "activity_section.key": "f6f5a47c-5ea0-4647-8d70-117622261d32"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "test-computing-systems-lesson8-aichatbotlevel",
+        "script_level.level_keys": [
+          "test-computing-systems-lesson8-aichatbotlevel"
+        ],
+        "lesson.key": "lesson-8",
+        "lesson_group.key": "",
+        "script.name": "6-12-computer-systems-and-devices",
+        "activity_section.key": "6e8802f4-774a-4bfb-91e4-7b823c6400b5"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "computing-systems-lesson9-level1",
+        "script_level.level_keys": [
+          "computing-systems-lesson9-level1"
+        ],
+        "lesson.key": "lesson-9",
+        "lesson_group.key": "",
+        "script.name": "6-12-computer-systems-and-devices",
+        "activity_section.key": "8ca95fe0-5ade-463a-8378-218521a9dbca"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "computing-systems-lesson9-reflection1",
+        "script_level.level_keys": [
+          "computing-systems-lesson9-reflection1"
+        ],
+        "lesson.key": "lesson-9",
+        "lesson_group.key": "",
+        "script.name": "6-12-computer-systems-and-devices",
+        "activity_section.key": "33a267d4-6962-4a5a-a6ff-1541977065ea"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "computing-systems-lesson9-reflection2",
+        "script_level.level_keys": [
+          "computing-systems-lesson9-reflection2"
+        ],
+        "lesson.key": "lesson-9",
+        "lesson_group.key": "",
+        "script.name": "6-12-computer-systems-and-devices",
+        "activity_section.key": "33a267d4-6962-4a5a-a6ff-1541977065ea"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "computing-systems-lesson9-reflection3",
+        "script_level.level_keys": [
+          "computing-systems-lesson9-reflection3"
+        ],
+        "lesson.key": "lesson-9",
+        "lesson_group.key": "",
+        "script.name": "6-12-computer-systems-and-devices",
+        "activity_section.key": "33a267d4-6962-4a5a-a6ff-1541977065ea"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "computer-systems-lesson9-models",
+        "script_level.level_keys": [
+          "computer-systems-lesson9-models"
+        ],
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "",
+        "script.name": "6-12-computer-systems-and-devices",
+        "activity_section.key": "1c384a06-ee3a-4b73-a01c-2b5380ba950f"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "computer-systems-lesson9-battle",
+        "script_level.level_keys": [
+          "computer-systems-lesson9-battle"
+        ],
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "",
+        "script.name": "6-12-computer-systems-and-devices",
+        "activity_section.key": "8b6956ac-14cc-4a7f-9337-4b0274b3548e"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "computer-systems-lesson9-aichat",
+        "script_level.level_keys": [
+          "computer-systems-lesson9-aichat"
+        ],
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "",
+        "script.name": "6-12-computer-systems-and-devices",
+        "activity_section.key": "12f73108-ac3e-40b3-9fd0-624b66cbf482"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "computer-systems-lesson10-level1-frq",
+        "script_level.level_keys": [
+          "computer-systems-lesson10-level1-frq"
+        ],
+        "lesson.key": "lesson-11",
+        "lesson_group.key": "",
+        "script.name": "6-12-computer-systems-and-devices",
+        "activity_section.key": "030e4b1d-85f7-4fda-ab4d-a2852cea7c6d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "computer-systems-lesson11-level1-parent-choice",
+        "script_level.level_keys": [
+          "computer-systems-lesson11-level1-parent-choice"
+        ],
+        "lesson.key": "lesson-12",
+        "lesson_group.key": "",
+        "script.name": "6-12-computer-systems-and-devices",
+        "activity_section.key": "f349ea03-d72e-4b04-999d-19c67ed78849"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "test-computer-systems-lesson11-level2a",
+        "script_level.level_keys": [
+          "test-computer-systems-lesson11-level2a"
+        ],
+        "lesson.key": "lesson-12",
+        "lesson_group.key": "",
+        "script.name": "6-12-computer-systems-and-devices",
+        "activity_section.key": "f349ea03-d72e-4b04-999d-19c67ed78849"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "test-computer-systems-lesson11-level3",
+        "script_level.level_keys": [
+          "test-computer-systems-lesson11-level3"
+        ],
+        "lesson.key": "lesson-12",
+        "lesson_group.key": "",
+        "script.name": "6-12-computer-systems-and-devices",
+        "activity_section.key": "5dd71177-b7c4-48b2-890a-b2ec93f83be6"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "test-computer-systems-lesson11-level4",
+        "script_level.level_keys": [
+          "test-computer-systems-lesson11-level4"
+        ],
+        "lesson.key": "lesson-12",
+        "lesson_group.key": "",
+        "script.name": "6-12-computer-systems-and-devices",
+        "activity_section.key": "5dd71177-b7c4-48b2-890a-b2ec93f83be6"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "test-computer-systems-lesson11-level5",
+        "script_level.level_keys": [
+          "test-computer-systems-lesson11-level5"
+        ],
+        "lesson.key": "lesson-12",
+        "lesson_group.key": "",
+        "script.name": "6-12-computer-systems-and-devices",
+        "activity_section.key": "5dd71177-b7c4-48b2-890a-b2ec93f83be6"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "computer-systems-lesson12-cfu",
+        "script_level.level_keys": [
+          "computer-systems-lesson12-cfu"
+        ],
+        "lesson.key": "lesson-13",
+        "lesson_group.key": "",
+        "script.name": "6-12-computer-systems-and-devices",
+        "activity_section.key": "a35690e2-5c17-4c77-a29a-613476d338d2"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "computer-systems-project-level1",
+        "script_level.level_keys": [
+          "computer-systems-project-level1"
+        ],
+        "lesson.key": "lesson-14",
+        "lesson_group.key": "",
+        "script.name": "6-12-computer-systems-and-devices",
+        "activity_section.key": "9b160fa2-7fba-4170-a95d-482a094714a6"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "computer-systems-project-brainstorm-chat",
+        "script_level.level_keys": [
+          "computer-systems-project-brainstorm-chat"
+        ],
+        "lesson.key": "lesson-14",
+        "lesson_group.key": "",
+        "script.name": "6-12-computer-systems-and-devices",
+        "activity_section.key": "51142482-8b5f-4a64-99d3-7de94bc547b4"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "computer-systems-project-user-profile-chat",
+        "script_level.level_keys": [
+          "computer-systems-project-user-profile-chat"
+        ],
+        "lesson.key": "lesson-14",
+        "lesson_group.key": "",
+        "script.name": "6-12-computer-systems-and-devices",
+        "activity_section.key": "8773e289-12de-4d5d-ac2e-f27c96243625"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "computer-systems-project-ethics-chat",
+        "script_level.level_keys": [
+          "computer-systems-project-ethics-chat"
+        ],
+        "lesson.key": "lesson-14",
+        "lesson_group.key": "",
+        "script.name": "6-12-computer-systems-and-devices",
+        "activity_section.key": "c73bb5ad-1be0-4db9-b42e-1ef8069c9f44"
+      }
+    }
+  ],
+  "resources": [
+
+  ],
+  "lessons_resources": [
+
+  ],
+  "scripts_resources": [
+
+  ],
+  "scripts_student_resources": [
+
+  ],
+  "vocabularies": [
+
+  ],
+  "lessons_vocabularies": [
+
+  ],
+  "lessons_programming_expressions": [
+
+  ],
+  "objectives": [
+
+  ],
+  "lessons_standards": [
+
+  ],
+  "lessons_opportunity_standards": [
+
+  ],
+  "rubrics": [
+
+  ],
+  "learning_goals": [
+
+  ],
+  "learning_goal_evidence_levels": [
+
+  ]
+}

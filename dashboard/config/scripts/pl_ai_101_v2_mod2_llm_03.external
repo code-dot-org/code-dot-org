@@ -1,0 +1,15 @@
+name 'pl-ai-101-V2-mod2-llm-03'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Check for Understanding
+
+## Answer: B
+#### **Large language models can produce responses that seem human-like because they analyze patterns and contextual relationships across massive amounts of text data.**
+
+#### During training, these models process enormous datasets containing books, articles, conversations, and other written material. By identifying statistical patterns in how words and ideas relate to one another, they learn how language typically flows in different contexts. When generating a response, the model predicts the most likely next words based on that learned structure and context.
+
+#### Although this process is based on probability rather than true understanding, the scale of the training data and the complexity of the patterns learned allow the output to feel natural, coherent, and conversational.
+
+MARKDOWN

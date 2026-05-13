@@ -1,0 +1,17 @@
+name 'data-science-ch1-lesson9-level2d_2025-launch_v2-2025'
+title 'Dataset 4'
+display_name 'Dataset #4'
+bubble_choice_description 'Areas Cleaned Each Day Over 1 Year.'
+thumbnail_url 'https://images.code.org/6f8944edd10f51888061fb6c1cc8363e-7a4bd50577635bf876b4d1417e5219cf-number-4.png'
+
+
+markdown <<MARKDOWN
+##Dataset 4
+
+This dataset recorded which area of the room Micah cleaned or straightened up each day over one year.
+
+**Do This:**
+1. Open **[Dataset #4](https://docs.google.com/spreadsheets/d/13PTrN6QvdRMy4bGRudxJsD_NykH5tPHmgs2sMvP3O2I/edit?usp=drivesdk)**
+2. Explore the dataset and the visualization by clicking the tabs on the bottom of the spreadsheet.
+3. Discuss and answer the questions in your activity guide with your partner.
+MARKDOWN

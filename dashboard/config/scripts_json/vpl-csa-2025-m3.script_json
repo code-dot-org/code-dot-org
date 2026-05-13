@@ -1,0 +1,396 @@
+{
+  "script": {
+    "name": "vpl-csa-2025-m3",
+    "wrapup_video_id": null,
+    "login_required": true,
+    "properties": {
+      "content_area": "pl_workshop_activities",
+      "curriculum_umbrella": "PD Workshop Activity CSA",
+      "is_migrated": true,
+      "student_detail_progress_view": true,
+      "version_year": "2025"
+    },
+    "new_name": null,
+    "family_name": null,
+    "serialized_at": "2025-04-01 03:24:42 UTC",
+    "published_state": null,
+    "instruction_type": null,
+    "instructor_audience": null,
+    "participant_audience": null,
+    "seeding_key": {
+      "script.name": "vpl-csa-2025-m3"
+    }
+  },
+  "lesson_groups": [
+    {
+      "key": "",
+      "user_facing": false,
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_group.key": "",
+        "script.name": "vpl-csa-2025-m3"
+      }
+    }
+  ],
+  "lessons": [
+    {
+      "key": "lesson-1",
+      "name": "Module 3 post-work: The Theater and datasets in Unit 4",
+      "absolute_position": 1,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "vpl-csa-2025-m3"
+      }
+    }
+  ],
+  "lesson_activities": [
+    {
+      "key": "c0c0acf4-759c-490f-988f-f2641e2c8cc5",
+      "position": 1,
+      "properties": {
+        "duration": 60
+      },
+      "seeding_key": {
+        "lesson_activity.key": "c0c0acf4-759c-490f-988f-f2641e2c8cc5",
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "vpl-csa-2025-m3"
+      }
+    }
+  ],
+  "activity_sections": [
+    {
+      "key": "9834ad71-1d93-4ccc-9142-5dabe5520078",
+      "position": 1,
+      "properties": {
+        "progression_name": "Module 3 Overview (~5 minutes)"
+      },
+      "seeding_key": {
+        "activity_section.key": "9834ad71-1d93-4ccc-9142-5dabe5520078",
+        "lesson_activity.key": "c0c0acf4-759c-490f-988f-f2641e2c8cc5"
+      }
+    },
+    {
+      "key": "e2e99fcd-fa4b-4e2b-bad6-dc2553496a1e",
+      "position": 2,
+      "properties": {
+        "progression_name": "Unit 4, Lesson 10 Exploration (~45 minutes)"
+      },
+      "seeding_key": {
+        "activity_section.key": "e2e99fcd-fa4b-4e2b-bad6-dc2553496a1e",
+        "lesson_activity.key": "c0c0acf4-759c-490f-988f-f2641e2c8cc5"
+      }
+    },
+    {
+      "key": "4d912a15-2bf8-4604-9b62-1aa4b61bd7d5",
+      "position": 3,
+      "properties": {
+        "progression_name": "Reflection (~5 minutes)"
+      },
+      "seeding_key": {
+        "activity_section.key": "4d912a15-2bf8-4604-9b62-1aa4b61bd7d5",
+        "lesson_activity.key": "c0c0acf4-759c-490f-988f-f2641e2c8cc5"
+      }
+    },
+    {
+      "key": "5365bf66-e6c3-402f-bb65-82ad09e245c9",
+      "position": 4,
+      "properties": {
+        "progression_name": "Module 3 Wrap-up (~5 minutes)"
+      },
+      "seeding_key": {
+        "activity_section.key": "5365bf66-e6c3-402f-bb65-82ad09e245c9",
+        "lesson_activity.key": "c0c0acf4-759c-490f-988f-f2641e2c8cc5"
+      }
+    }
+  ],
+  "script_levels": [
+    {
+      "chapter": 1,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Module 3 Overview (~5 minutes)"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "vpl-csa-module-3-overview_2025"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "vpl-csa-2025-m3",
+        "activity_section.key": "9834ad71-1d93-4ccc-9142-5dabe5520078"
+      },
+      "level_keys": [
+        "vpl-csa-module-3-overview_2025"
+      ]
+    },
+    {
+      "chapter": 2,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Unit 4, Lesson 10 Exploration (~45 minutes)"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "vpl-csa-module-3-multi-select_2025"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "vpl-csa-2025-m3",
+        "activity_section.key": "e2e99fcd-fa4b-4e2b-bad6-dc2553496a1e"
+      },
+      "level_keys": [
+        "vpl-csa-module-3-multi-select_2025"
+      ]
+    },
+    {
+      "chapter": 3,
+      "position": 3,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Unit 4, Lesson 10 Exploration (~45 minutes)"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "vpl-csa-module-3-CSA U4L10-L1_2022-COPY_2025"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "vpl-csa-2025-m3",
+        "activity_section.key": "e2e99fcd-fa4b-4e2b-bad6-dc2553496a1e"
+      },
+      "level_keys": [
+        "vpl-csa-module-3-CSA U4L10-L1_2022-COPY_2025"
+      ]
+    },
+    {
+      "chapter": 4,
+      "position": 4,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Unit 4, Lesson 10 Exploration (~45 minutes)"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "vpl-csa-2022-module-3-CSA U4L10-L3_2022-COPY_2025"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "vpl-csa-2025-m3",
+        "activity_section.key": "e2e99fcd-fa4b-4e2b-bad6-dc2553496a1e"
+      },
+      "level_keys": [
+        "vpl-csa-2022-module-3-CSA U4L10-L3_2022-COPY_2025"
+      ]
+    },
+    {
+      "chapter": 5,
+      "position": 5,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "progression": "Unit 4, Lesson 10 Exploration (~45 minutes)"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "vpl-csa-2022-module-3-reflection_2025"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "vpl-csa-2025-m3",
+        "activity_section.key": "e2e99fcd-fa4b-4e2b-bad6-dc2553496a1e"
+      },
+      "level_keys": [
+        "vpl-csa-2022-module-3-reflection_2025"
+      ]
+    },
+    {
+      "chapter": 6,
+      "position": 6,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Reflection (~5 minutes)"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "vpl-csa-2022-module-3-reflection-project_2025"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "vpl-csa-2025-m3",
+        "activity_section.key": "4d912a15-2bf8-4604-9b62-1aa4b61bd7d5"
+      },
+      "level_keys": [
+        "vpl-csa-2022-module-3-reflection-project_2025"
+      ]
+    },
+    {
+      "chapter": 7,
+      "position": 7,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Module 3 Wrap-up (~5 minutes)"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "vpl-csa-module-3-wrap-up_2025"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "vpl-csa-2025-m3",
+        "activity_section.key": "5365bf66-e6c3-402f-bb65-82ad09e245c9"
+      },
+      "level_keys": [
+        "vpl-csa-module-3-wrap-up_2025"
+      ]
+    }
+  ],
+  "levels_script_levels": [
+    {
+      "seeding_key": {
+        "level.key": "vpl-csa-module-3-overview_2025",
+        "script_level.level_keys": [
+          "vpl-csa-module-3-overview_2025"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "vpl-csa-2025-m3",
+        "activity_section.key": "9834ad71-1d93-4ccc-9142-5dabe5520078"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "vpl-csa-module-3-multi-select_2025",
+        "script_level.level_keys": [
+          "vpl-csa-module-3-multi-select_2025"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "vpl-csa-2025-m3",
+        "activity_section.key": "e2e99fcd-fa4b-4e2b-bad6-dc2553496a1e"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "vpl-csa-module-3-CSA U4L10-L1_2022-COPY_2025",
+        "script_level.level_keys": [
+          "vpl-csa-module-3-CSA U4L10-L1_2022-COPY_2025"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "vpl-csa-2025-m3",
+        "activity_section.key": "e2e99fcd-fa4b-4e2b-bad6-dc2553496a1e"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "vpl-csa-2022-module-3-CSA U4L10-L3_2022-COPY_2025",
+        "script_level.level_keys": [
+          "vpl-csa-2022-module-3-CSA U4L10-L3_2022-COPY_2025"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "vpl-csa-2025-m3",
+        "activity_section.key": "e2e99fcd-fa4b-4e2b-bad6-dc2553496a1e"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "vpl-csa-2022-module-3-reflection_2025",
+        "script_level.level_keys": [
+          "vpl-csa-2022-module-3-reflection_2025"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "vpl-csa-2025-m3",
+        "activity_section.key": "e2e99fcd-fa4b-4e2b-bad6-dc2553496a1e"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "vpl-csa-2022-module-3-reflection-project_2025",
+        "script_level.level_keys": [
+          "vpl-csa-2022-module-3-reflection-project_2025"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "vpl-csa-2025-m3",
+        "activity_section.key": "4d912a15-2bf8-4604-9b62-1aa4b61bd7d5"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "vpl-csa-module-3-wrap-up_2025",
+        "script_level.level_keys": [
+          "vpl-csa-module-3-wrap-up_2025"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "vpl-csa-2025-m3",
+        "activity_section.key": "5365bf66-e6c3-402f-bb65-82ad09e245c9"
+      }
+    }
+  ],
+  "resources": [
+
+  ],
+  "lessons_resources": [
+
+  ],
+  "scripts_resources": [
+
+  ],
+  "scripts_student_resources": [
+
+  ],
+  "vocabularies": [
+
+  ],
+  "lessons_vocabularies": [
+
+  ],
+  "lessons_programming_expressions": [
+
+  ],
+  "objectives": [
+
+  ],
+  "lessons_standards": [
+
+  ],
+  "lessons_opportunity_standards": [
+
+  ],
+  "rubrics": [
+
+  ],
+  "learning_goals": [
+
+  ],
+  "learning_goal_evidence_levels": [
+
+  ]
+}

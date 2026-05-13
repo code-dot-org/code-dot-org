@@ -1,0 +1,250 @@
+<Music>
+  <config><![CDATA[{
+  "game_id": 70,
+  "created_at": "2025-03-13T21:50:07.000Z",
+  "level_num": "custom",
+  "user_id": 1196,
+  "properties": {
+    "encrypted": "false",
+    "instructions_important": "false",
+    "long_instructions": "### Recreate this Timeline \r\n\r\nRefresh your coding skills by recreating this timeline. Use what you know about how to repeat patterns of sounds and how to play them together. \r\n\r\n![](https://images.code.org/e5dcee17b4bb62196a8fbebb47ddf7ae-image-1741991359335.29.13 PM.png)",
+    "offer_browser_tts": "false",
+    "use_secondary_finish_button": "false",
+    "hide_share_and_remix": "true",
+    "level_data": {
+      "library": "launch2024",
+      "packId": "chainsmokers_riptide",
+      "sounds": {
+        "chainsmokers_riptide": [
+          "reverse_chord",
+          "open_can",
+          "drums_claps",
+          "synth_slide",
+          "bass_1"
+        ]
+      },
+      "allowChangeStartingPlayheadPosition": true,
+      "toolbox": {
+        "blocks": {
+        }
+      },
+      "startSources": {
+        "blocks": {
+          "languageVersion": 0,
+          "blocks": [
+            {
+              "type": "when_run_simple2",
+              "id": "when-run-block",
+              "x": 30,
+              "y": 30,
+              "deletable": false,
+              "movable": false
+            },
+            {
+              "type": "play_sound_at_current_location_simple2",
+              "id": "play_sound_at_current_location_simple2",
+              "x": 390,
+              "y": 70,
+              "disabledReasons": [
+                "MANUALLY_DISABLED"
+              ],
+              "extraState": {
+                "disableNextConnection": false
+              },
+              "fields": {
+                "sound": "chainsmokers_riptide/drums_claps"
+              }
+            },
+            {
+              "type": "play_sounds_together",
+              "id": "play_sounds_together",
+              "x": 210,
+              "y": 150,
+              "disabledReasons": [
+                "MANUALLY_DISABLED"
+              ],
+              "extraState": {
+                "disableNextConnection": false
+              }
+            },
+            {
+              "type": "play_sound_at_current_location_simple2",
+              "id": "A7%0|_(+`qvx$7K;e{AF",
+              "x": 390,
+              "y": 150,
+              "disabledReasons": [
+                "MANUALLY_DISABLED"
+              ],
+              "extraState": {
+                "disableNextConnection": false
+              },
+              "fields": {
+                "sound": "chainsmokers_riptide/bass_1"
+              }
+            },
+            {
+              "type": "play_sound_at_current_location_simple2",
+              "id": "$0o/%A8@~Jfp_3m.=/Ug",
+              "x": 390,
+              "y": 230,
+              "disabledReasons": [
+                "MANUALLY_DISABLED"
+              ],
+              "extraState": {
+                "disableNextConnection": false
+              },
+              "fields": {
+                "sound": "chainsmokers_riptide/synth_slide"
+              }
+            },
+            {
+              "type": "play_sound_at_current_location_simple2",
+              "id": "%WL)F.t-F$s[]`Rh-@d0",
+              "x": 390,
+              "y": 310,
+              "disabledReasons": [
+                "MANUALLY_DISABLED"
+              ],
+              "extraState": {
+                "disableNextConnection": false
+              },
+              "fields": {
+                "sound": "chainsmokers_riptide/open_can"
+              }
+            },
+            {
+              "type": "play_sound_at_current_location_simple2",
+              "id": "O1BmZqFP0*Sk|}J$Adgx",
+              "x": 390,
+              "y": 390,
+              "disabledReasons": [
+                "MANUALLY_DISABLED"
+              ],
+              "extraState": {
+                "disableNextConnection": false
+              },
+              "fields": {
+                "sound": "chainsmokers_riptide/reverse_chord"
+              }
+            },
+            {
+              "type": "repeat_simple2",
+              "id": ":-D97C`SfrWBpyI+4}$e",
+              "x": 210,
+              "y": 250,
+              "disabledReasons": [
+                "MANUALLY_DISABLED"
+              ],
+              "extraState": {
+                "disableNextConnection": false
+              },
+              "fields": {
+                "times": 1
+              }
+            },
+            {
+              "type": "play_sounds_together",
+              "id": "K!Vlw9r8v}Tn52iNo2Q0",
+              "x": 210,
+              "y": 370,
+              "disabledReasons": [
+                "MANUALLY_DISABLED"
+              ],
+              "extraState": {
+                "disableNextConnection": false
+              }
+            },
+            {
+              "type": "repeat_simple2",
+              "id": "repeat_simple2",
+              "x": 210,
+              "y": 50,
+              "disabledReasons": [
+                "MANUALLY_DISABLED"
+              ],
+              "extraState": {
+                "disableNextConnection": false
+              },
+              "fields": {
+                "times": 1
+              }
+            },
+            {
+              "type": "play_sound_at_current_location_simple2",
+              "id": "/]oQRQCXQu0aXOVG:OS?",
+              "x": 570,
+              "y": 70,
+              "disabledReasons": [
+                "MANUALLY_DISABLED"
+              ],
+              "extraState": {
+                "disableNextConnection": false
+              },
+              "fields": {
+                "sound": "chainsmokers_riptide/drums_claps"
+              }
+            },
+            {
+              "type": "play_sound_at_current_location_simple2",
+              "id": "r=(v/HgpJfdZCdn|V4OF",
+              "x": 570,
+              "y": 150,
+              "disabledReasons": [
+                "MANUALLY_DISABLED"
+              ],
+              "extraState": {
+                "disableNextConnection": false
+              },
+              "fields": {
+                "sound": "chainsmokers_riptide/bass_1"
+              }
+            },
+            {
+              "type": "play_sound_at_current_location_simple2",
+              "id": "BWD7qG%8f)e;W5xk7oX_",
+              "x": 570,
+              "y": 230,
+              "disabledReasons": [
+                "MANUALLY_DISABLED"
+              ],
+              "extraState": {
+                "disableNextConnection": false
+              },
+              "fields": {
+                "sound": "chainsmokers_riptide/synth_slide"
+              }
+            },
+            {
+              "type": "play_sound_at_current_location_simple2",
+              "id": "qgE=p,Co]iCi)c4dU$FK",
+              "x": 570,
+              "y": 310,
+              "disabledReasons": [
+                "MANUALLY_DISABLED"
+              ],
+              "extraState": {
+                "disableNextConnection": false
+              },
+              "fields": {
+                "sound": "chainsmokers_riptide/open_can"
+              }
+            }
+          ]
+        }
+      }
+    },
+    "exemplar_settings": {
+      "playerEnabled": true,
+      "validationEnabled": true,
+      "validationSuccessMessage": "That `Open Can` sound was very cool! ",
+      "validationFailureMessage": "Listen to the music player below and make your song match it. ",
+      "playerTitle": "Short Loop Song"
+    },
+    "encrypted_exemplar_sources": "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\nVWc3PhLck0OOoG54yCiHxOEdYsI+TyuI\n",
+    "preload_asset_list": null
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-03-14 20:36:14 +0000\",\"changed\":[],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-03-14 20:40:45 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-03-14 20:50:20 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-03-14 20:51:33 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-03-14 20:52:23 +0000\",\"changed\":[],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-03-14 20:53:58 +0000\",\"changed\":[\"exemplar_settings\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-03-14 22:28:44 +0000\",\"changed\":[\"encrypted_exemplar_sources\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-03-14 22:29:29 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-03-14 22:30:32 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-03-14 22:31:14 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"}]"
+}]]></config>
+  <blocks/>
+</Music>

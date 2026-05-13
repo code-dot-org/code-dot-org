@@ -9,11 +9,10 @@ import {
   LmsLoginTypeNames,
 } from '@cdo/apps/accounts/constants';
 import fontConstants from '@cdo/apps/fontConstants';
-import {EVENTS, PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants';
+import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import {tableLayoutStyles} from '@cdo/apps/templates/tables/tableConstants';
 import color from '@cdo/apps/util/color';
-import experiments from '@cdo/apps/util/experiments';
 import i18n from '@cdo/locale';
 
 import RailsAuthenticityToken from '../lib/util/RailsAuthenticityToken';
@@ -57,6 +56,7 @@ class ManageLinkedAccounts extends React.Component {
     isCleverStudent: PropTypes.bool.isRequired,
     personalAccountLinkingEnabled: PropTypes.bool.isRequired,
     usStateCode: PropTypes.string,
+    age: PropTypes.number,
     lmsName: PropTypes.string,
   };
 
@@ -71,6 +71,16 @@ class ManageLinkedAccounts extends React.Component {
     return (
       authOption.credentialType === SingleSignOnProviders.clever &&
       this.props.isCleverStudent
+    );
+  };
+
+  cannotDisconnectLti = authOption => {
+    return (
+      authOption.credentialType === SingleSignOnProviders.lti_v1 &&
+      _.every(this.props.authenticationOptions, [
+        'credentialType',
+        SingleSignOnProviders.lti_v1,
+      ])
     );
   };
 
@@ -108,6 +118,10 @@ class ManageLinkedAccounts extends React.Component {
       return DISCONNECT_DISABLED_STATUS.ROSTER_SECTION;
     }
 
+    if (this.cannotDisconnectLti(authOption)) {
+      return DISCONNECT_DISABLED_STATUS.NO_LOGIN_OPTIONS;
+    }
+
     // Make sure user has another way to log in if authOption is disconnected
     const otherAuthOptions = Object.values(
       this.props.authenticationOptions
@@ -140,6 +154,8 @@ class ManageLinkedAccounts extends React.Component {
         return i18n.manageLinkedAccounts_microsoft();
       case SingleSignOnProviders.clever:
         return i18n.manageLinkedAccounts_clever();
+      case SingleSignOnProviders.classlink:
+        return i18n.manageLinkedAccounts_classlink();
       case SingleSignOnProviders.facebook:
         return i18n.manageLinkedAccounts_facebook();
       case SingleSignOnProviders.lti_v1:
@@ -171,8 +187,7 @@ class ManageLinkedAccounts extends React.Component {
     Object.values(SingleSignOnProviders).forEach(provider => {
       if (
         provider === SingleSignOnProviders.lti_v1 &&
-        (!optionsByProvider[provider] ||
-          !experiments.isEnabled(experiments.LTI_ACCOUNT_UNLINKING))
+        !optionsByProvider[provider]
       ) {
         return;
       }
@@ -230,9 +245,9 @@ class ManageLinkedAccounts extends React.Component {
         {lockedOptions.length > 0 && (
           <>
             <p style={styles.message}>
-              {this.props.usStateCode
+              {this.props.usStateCode && this.props.age
                 ? i18n.manageLinkedAccounts_parentalPermissionRequired()
-                : i18n.manageLinkedAccounts_stateRequired()}
+                : i18n.manageLinkedAccounts_ageAndStateRequired()}
             </p>
             <div style={styles.lockContainer}>
               <table style={{...styles.table, ...styles.lockedTable}}>
@@ -281,6 +296,7 @@ export default connect(state => ({
   personalAccountLinkingEnabled:
     state.manageLinkedAccounts.personalAccountLinkingEnabled,
   usStateCode: state.currentUser.usStateCode,
+  age: state.currentUser.age,
   lmsName: state.manageLinkedAccounts.lmsName,
 }))(ManageLinkedAccounts);
 
@@ -351,11 +367,9 @@ class OauthConnection extends React.Component {
       if (credentialType === SingleSignOnProviders.lti_v1) {
         event.preventDefault();
         this.setShowUnlinkWarning(true);
-        analyticsReporter.sendEvent(
-          EVENTS.LTI_UNLINK_MODAL_SHOWN,
-          {lms_name: displayName},
-          PLATFORMS.STATSIG
-        );
+        analyticsReporter.sendEvent(EVENTS.LTI_UNLINK_MODAL_SHOWN, {
+          lms_name: displayName,
+        });
       }
     };
 

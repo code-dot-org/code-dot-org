@@ -7,7 +7,7 @@
   "user_id": 18602,
   "properties": {
     "encrypted": "false",
-    "long_instructions": "> **Teacher Tip:** Partnering your students for the **investigate & modify** levels is a great way to fuel discussions and make learning fun.\r\n\r\n# Bugs\r\n\r\n::: details [**✅ Step 1**]\r\nRun this code. Reflect on what is happening and why?\r\n:::\r\n\r\n::: details [**✅ Step 2**]\r\nAdd `plt.show()` on the indicated line. \r\n:::\r\n\r\n::: details [**✅ Step 3**]\r\nThink about what happens to the chart when `plt.show()` is not after the title and label lines of code? \r\n:::\r\n\r\n\r\n\r\n\r\n\r\n\r\n",
+    "long_instructions": "> In this modify level, you will fix a common bug. Give it a try! \r\n\r\n# Bugs\r\n\r\n::: details [**✅ Step 1**]\r\nRun this code. Reflect on what is happening and why?\r\n:::\r\n\r\n::: details [**✅ Step 2**]\r\nAdd `plt.show()` on the indicated line. \r\n:::\r\n\r\n::: details [**✅ Step 3**]\r\nThink about what happens to the chart when `plt.show()` is not after the title and label lines of code? \r\n:::\r\n\r\n\r\n\r\n\r\n\r\n\r\n",
     "ai_tutor_available": "false",
     "submittable": "false",
     "hide_share_and_remix": "false",
@@ -43,6 +43,6 @@
       ]
     }
   },
-  "audit_log": "[{\"changed_at\":\"2024-10-02T15:40:00.877+00:00\",\"changed\":[\"cloned from \\\"datascience-U2L4-L5_2024-pilot\\\"\"],\"cloned_from\":\"datascience-U2L4-L5_2024-pilot\"},{\"changed_at\":\"2024-10-03 16:23:37 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2024-10-02T15:40:00.877+00:00\",\"changed\":[\"cloned from \\\"datascience-U2L4-L5_2024-pilot\\\"\"],\"cloned_from\":\"datascience-U2L4-L5_2024-pilot\"},{\"changed_at\":\"2024-10-03 16:23:37 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"},{\"changed_at\":\"2024-11-20 16:31:26 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"}]"
 }]]></config>
 </Pythonlab>

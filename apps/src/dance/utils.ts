@@ -1,5 +1,6 @@
 import previewMetadata from '@cdo/static/dance/preview-metadata.json';
 
+import {GENERATED_DANCER} from './constants';
 import {SongMetadata} from './types';
 
 // Common utils shared between legacy and Lab2 Dance
@@ -15,7 +16,9 @@ function computeCharactersReferenced(studentCode: string): string[] {
   let match;
   while ((match = charactersRegExp.exec(studentCode))) {
     const characterName = match[2];
-    charactersReferencedSet.add(characterName);
+    if (characterName !== GENERATED_DANCER) {
+      charactersReferencedSet.add(characterName);
+    }
   }
 
   // Special parsing for the JSON parameter to ai().

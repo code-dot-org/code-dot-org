@@ -1,0 +1,17 @@
+name 'csaif_pl_nets_security_04'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Answers: Check for Understanding
+
+* #### **Threat**: Something that could damage or break into a system (e.g., malware, scam, breach)
+* #### **Vulnerability**: A weakness that makes a system easier to attack (e.g., outdated software)
+* #### **Anomaly**: Something unusual in network activity that may be a sign of a threat
+* #### **Phishing**: A fake message (email, text) trying to trick someone into giving personal info
+* #### **Breach**: When unauthorized people get access to secure data
+* #### **False Positive**: When AI flags something as a threat—but it is actually safe
+* #### **AI Bias**: When an AI system makes unfair decisions based on incomplete or skewed data
+* #### **Mitigation**: An action or tool that reduces the risk of a threat
+
+MARKDOWN

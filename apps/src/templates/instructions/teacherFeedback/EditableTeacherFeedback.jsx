@@ -6,9 +6,8 @@ import {connect} from 'react-redux';
 import {queryUserProgress} from '@cdo/apps/code-studio/progressRedux';
 import {loadLevelsWithProgress} from '@cdo/apps/code-studio/teacherPanelRedux';
 import Button from '@cdo/apps/legacySharedComponents/Button';
-import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
+import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants.js';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
-import firehoseClient from '@cdo/apps/metrics/firehose';
 import {ReviewStates} from '@cdo/apps/templates/feedback/types';
 import Comment from '@cdo/apps/templates/instructions/teacherFeedback/Comment';
 import EditableFeedbackStatus from '@cdo/apps/templates/instructions/teacherFeedback/EditableFeedbackStatus';
@@ -43,6 +42,7 @@ export class EditableTeacherFeedback extends Component {
     selectedSectionId: PropTypes.number,
     updateUserProgress: PropTypes.func.isRequired,
     canHaveFeedbackReviewState: PropTypes.bool,
+    scriptName: PropTypes.string,
   };
 
   constructor(props) {
@@ -64,6 +64,29 @@ export class EditableTeacherFeedback extends Component {
       allowEditing: verifiedInstructor || allowUnverified,
     };
   }
+
+  determineCurriculumUmbrella = () => {
+    const {scriptName} = this.props;
+    const csfCourses = [
+      'coursea',
+      'courseb',
+      'coursec',
+      'coursed',
+      'coursee',
+      'coursef',
+    ];
+    if (scriptName.includes('csd')) {
+      return 'csd';
+    } else if (scriptName.includes('csp')) {
+      return 'csp';
+    } else if (scriptName.includes('csa')) {
+      return 'csa';
+    } else if (csfCourses.some(course => scriptName.includes(course))) {
+      return 'csf';
+    } else {
+      return scriptName;
+    }
+  };
 
   componentDidMount = () => {
     window.addEventListener('beforeunload', this.onUnload);
@@ -104,25 +127,6 @@ export class EditableTeacherFeedback extends Component {
     });
   };
 
-  recordReviewStateUpdated() {
-    firehoseClient.putRecord(
-      {
-        study: 'teacher_feedback',
-        study_group: 'V0',
-        event: 'keep_working',
-        data_json: JSON.stringify({
-          student_id: this.studentId,
-          script_id: this.props.serverScriptId,
-          level_id: this.props.serverLevelId,
-          old_state: this.getLatestReviewState(),
-          new_state: this.state.reviewState,
-          section_id: this.props.selectedSectionId,
-        }),
-      },
-      {includeUserId: true}
-    );
-  }
-
   onRubricChange = value => {
     //If you click on the currently selected performance level clear the performance level
     if (value === this.state.performance) {
@@ -130,6 +134,11 @@ export class EditableTeacherFeedback extends Component {
     } else {
       this.setState({performance: value});
     }
+    analyticsReporter.sendEvent(EVENTS.RUBRIC_ACTIVITY, {
+      sectionId: this.props.selectedSectionId,
+      unitId: this.props.serverScriptId,
+      levelId: this.props.serverLevelId,
+    });
   };
 
   onSubmitFeedback = () => {
@@ -148,7 +157,6 @@ export class EditableTeacherFeedback extends Component {
     updateTeacherFeedback(payload, this.props.token)
       .done(data => {
         if (this.state.reviewStateUpdated) {
-          this.recordReviewStateUpdated();
           // The review state effects the state of the progress bubbles,
           // we re-fetch user progress after the review state has changed
           // so that the progress bubbles reflect the latest feedback
@@ -172,6 +180,7 @@ export class EditableTeacherFeedback extends Component {
       unitId: this.props.serverScriptId,
       levelId: this.props.serverLevelId,
       isRubric: this.props.rubric,
+      curriculumUmbrella: this.determineCurriculumUmbrella(),
     });
   };
 
@@ -191,7 +200,10 @@ export class EditableTeacherFeedback extends Component {
   renderError(errorText) {
     return (
       <span>
-        <i className="fa fa-warning" style={styles.errorIcon} />
+        <i
+          className="fa-solid fa-triangle-exclamation"
+          style={styles.errorIcon}
+        />
         {errorText}
       </span>
     );
@@ -311,6 +323,7 @@ export default connect(
     selectedSectionId: state.teacherSections?.selectedSectionId,
     canHaveFeedbackReviewState:
       state.pageConstants && state.pageConstants.canHaveFeedbackReviewState,
+    scriptName: state.progress.scriptName,
   }),
   dispatch => ({
     updateUserProgress(userId) {

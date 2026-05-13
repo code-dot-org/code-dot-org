@@ -33,6 +33,7 @@ module Lti
           issuer: openid_config['issuer'],
           lms_account_name: openid_config.dig(Policies::Lti::LTI_PLATFORM_CONFIGURATION, Policies::Lti::CANVAS_ACCOUNT_NAME),
         }
+        @lms_name = Policies::Lti.issuer_name(openid_config['issuer'])
         # Expire cache in 1 hour to match expiration of registration token
         @cache.write(@registration_id, registration_data, 1.hour)
         render 'lti/v1/dynamic_registration', layout: false
@@ -69,7 +70,7 @@ module Lti
         end
 
         begin
-          dynamic_registration_client = LtiDynamicRegistrationClient.new(registration_data[:registration_token], registration_data[:registration_endpoint])
+          dynamic_registration_client = Clients::LtiDynamicRegistrationClient.new(registration_data[:registration_token], registration_data[:registration_endpoint])
           registration_response = dynamic_registration_client.make_registration_request
         rescue => exception
           message = 'Error creating registration'
@@ -89,14 +90,6 @@ module Lti
             access_token_url: platform[:access_token_url],
             admin_email: admin_email,
           )
-          metadata = {
-            lms_name: platform[:name],
-          }
-          Metrics::Events.log_event_with_session(
-            session: session,
-            event_name: 'lti_dynamic_registration_completed',
-            metadata: metadata,
-          )
 
           return render status: :created, json: {}
         else
@@ -106,7 +99,7 @@ module Lti
 
       private def init_cache
         cache_namespace = 'lti_v1_dynamic_registration'
-        @cache = CacheClient.new(cache_namespace)
+        @cache = Clients::CacheClient.new(cache_namespace)
       end
 
       private def unauthorized_status

@@ -4,6 +4,7 @@
     "wrapup_video_id": null,
     "login_required": true,
     "properties": {
+      "content_area": "pl_workshop_activities",
       "curriculum_umbrella": "PD Workshop Activity CSA",
       "has_verified_resources": true,
       "hideable_lessons": true,
@@ -13,7 +14,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2024-05-09 19:02:12 UTC",
+    "serialized_at": "2024-11-19 01:19:45 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -109,7 +110,7 @@
     },
     {
       "key": "lesson-6",
-      "name": "Model Lesson 5: U2L1",
+      "name": "Model Lesson: U2L2",
       "absolute_position": 3,
       "lockable": false,
       "has_lesson_plan": true,
@@ -126,7 +127,7 @@
     },
     {
       "key": "lesson-7",
-      "name": "Model Lesson 6: U2L2",
+      "name": "Model Lesson: U2L3",
       "absolute_position": 4,
       "lockable": false,
       "has_lesson_plan": true,

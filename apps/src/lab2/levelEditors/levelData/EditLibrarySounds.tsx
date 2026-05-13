@@ -1,8 +1,8 @@
+import Checkbox from '@code-dot-org/component-library/checkbox';
+import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
+import {Typography, Button as MuiButton} from '@mui/material';
 import React, {useCallback} from 'react';
 
-import {Button} from '@cdo/apps/componentLibrary/button';
-import Checkbox from '@cdo/apps/componentLibrary/checkbox/Checkbox';
-import {BodyTwoText, StrongText} from '@cdo/apps/componentLibrary/typography';
 import MusicLibrary, {Sounds} from '@cdo/apps/music/player/MusicLibrary';
 import CollapsibleSection from '@cdo/apps/templates/CollapsibleSection';
 
@@ -84,15 +84,19 @@ const EditLibrarySounds: React.FunctionComponent<EditLibrarySoundsProps> = ({
       initiallyCollapsed={false}
     >
       <div className={moduleStyles.indentedContainer}>
-        <Button
-          text="Clear allowed sounds (enable all sounds)"
+        <MuiButton
+          variant="contained"
+          color="primary"
+          size="small"
+          disabled={!currentValue}
           onClick={() => {
             onChange(undefined);
           }}
-          size="s"
-          disabled={!currentValue}
-          iconLeft={{iconName: 'ban'}}
-        />
+          type="button"
+          startIcon={<FontAwesomeV6Icon iconName="ban" />}
+        >
+          {'Clear allowed sounds (enable all sounds)'}
+        </MuiButton>
       </div>
       {library.packs.map(pack => {
         if (pack.restricted && pack.id !== selectedPack) {
@@ -107,15 +111,25 @@ const EditLibrarySounds: React.FunctionComponent<EditLibrarySoundsProps> = ({
           <div className={moduleStyles.indentedContainer} key={pack.id}>
             <CollapsibleSection
               headerContent={
-                <BodyTwoText className={moduleStyles.noMargin}>
+                <Typography
+                  className={moduleStyles.noMargin}
+                  variant="body2"
+                  gutterBottom
+                >
                   {currentlySelected && currentlySelected.length > 0 ? (
-                    <StrongText>{title}</StrongText>
+                    <Typography variant="strong">{title}</Typography>
                   ) : (
                     title
                   )}
-                </BodyTwoText>
+                </Typography>
               }
             >
+              <Typography variant="body4" gutterBottom>
+                <i>
+                  Numbers in square brackets indicate the length of the sound in
+                  measures.
+                </i>
+              </Typography>
               <div className={moduleStyles.indentedContainer}>
                 <Checkbox
                   name={pack.name + '-select-all'}
@@ -132,7 +146,7 @@ const EditLibrarySounds: React.FunctionComponent<EditLibrarySoundsProps> = ({
                     <Checkbox
                       key={sound.src}
                       name={sound.src}
-                      label={sound.name}
+                      label={`${sound.name} [${sound.length}]`}
                       checked={
                         (currentlySelected &&
                           currentlySelected.includes(sound.src)) ||

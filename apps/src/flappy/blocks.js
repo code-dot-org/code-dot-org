@@ -5,6 +5,11 @@
  *
  */
 
+import CdoFieldDropdown from '@cdo/apps/blockly/addons/cdoFieldDropdown';
+import CdoFieldImage from '@cdo/apps/blockly/addons/cdoFieldImage';
+import {CdoFieldImageDropdown} from '@cdo/apps/blockly/addons/cdoFieldImageDropdown';
+import {numberValidator} from '@cdo/apps/blockly/utils';
+
 var _ = require('lodash');
 
 var commonMsg = require('@cdo/locale');
@@ -49,7 +54,7 @@ exports.install = function (blockly, blockInstallOptions) {
       if (isK1) {
         this.appendDummyInput()
           .appendField(commonMsg.when())
-          .appendField(new blockly.FieldImage(skin.clickIcon));
+          .appendField(new CdoFieldImage(skin.clickIcon));
       } else {
         this.appendDummyInput().appendField(msg.whenClick());
       }
@@ -72,7 +77,7 @@ exports.install = function (blockly, blockInstallOptions) {
       if (isK1) {
         this.appendDummyInput()
           .appendField(commonMsg.when())
-          .appendField(new blockly.FieldImage(skin.collideGroundIcon));
+          .appendField(new CdoFieldImage(skin.collideGroundIcon));
       } else {
         this.appendDummyInput().appendField(msg.whenCollideGround());
       }
@@ -95,7 +100,7 @@ exports.install = function (blockly, blockInstallOptions) {
       if (isK1) {
         this.appendDummyInput()
           .appendField(commonMsg.when())
-          .appendField(new blockly.FieldImage(skin.collideObstacleIcon));
+          .appendField(new CdoFieldImage(skin.collideObstacleIcon));
       } else {
         this.appendDummyInput().appendField(msg.whenCollideObstacle());
       }
@@ -118,7 +123,7 @@ exports.install = function (blockly, blockInstallOptions) {
       if (isK1) {
         this.appendDummyInput()
           .appendField(commonMsg.when())
-          .appendField(new blockly.FieldImage(skin.enterObstacleIcon));
+          .appendField(new CdoFieldImage(skin.enterObstacleIcon));
       } else {
         this.appendDummyInput().appendField(msg.whenEnterObstacle());
       }
@@ -141,7 +146,7 @@ exports.install = function (blockly, blockInstallOptions) {
       if (isK1) {
         this.appendDummyInput()
           .appendField(msg.flap())
-          .appendField(new blockly.FieldImage(skin.flapIcon));
+          .appendField(new CdoFieldImage(skin.flapIcon));
       } else {
         this.appendDummyInput().appendField(msg.flap());
       }
@@ -164,7 +169,7 @@ exports.install = function (blockly, blockInstallOptions) {
     // Block for flapping (flying upwards)
     helpUrl: '',
     init: function () {
-      var dropdown = new blockly.FieldDropdown(this.VALUES);
+      var dropdown = new CdoFieldDropdown(this.VALUES);
       dropdown.setValue(this.VALUES[3][1]); // default to normal
 
       this.setStyle('default');
@@ -201,16 +206,13 @@ exports.install = function (blockly, blockInstallOptions) {
     helpUrl: '',
     init: function () {
       this.VALUES = isK1 ? this.k1SoundChoices : this.soundChoices;
-      var soundDropdown = new blockly.FieldDropdown(
-        this.VALUES,
-        onSoundSelected
-      );
+      var soundDropdown = new CdoFieldDropdown(this.VALUES, onSoundSelected);
       soundDropdown.setValue(this.WING_FLAP_SOUND);
 
       if (isK1) {
         this.appendDummyInput()
           .appendField(commonMsg.play())
-          .appendField(new blockly.FieldImage(skin.soundIcon))
+          .appendField(new CdoFieldImage(skin.soundIcon))
           .appendField(soundDropdown, 'VALUE');
       } else {
         this.appendDummyInput().appendField(soundDropdown, 'VALUE');
@@ -269,7 +271,7 @@ exports.install = function (blockly, blockInstallOptions) {
       if (isK1) {
         this.appendDummyInput()
           .appendField(commonMsg.score())
-          .appendField(new blockly.FieldImage(skin.scoreCard));
+          .appendField(new CdoFieldImage(skin.scoreCard));
       } else {
         this.appendDummyInput().appendField(msg.incrementPlayerScore());
       }
@@ -292,7 +294,7 @@ exports.install = function (blockly, blockInstallOptions) {
       if (isK1) {
         this.appendDummyInput()
           .appendField(commonMsg.end())
-          .appendField(new blockly.FieldImage(skin.endIcon));
+          .appendField(new CdoFieldImage(skin.endIcon));
       } else {
         this.appendDummyInput().appendField(msg.endGame());
       }
@@ -315,7 +317,7 @@ exports.install = function (blockly, blockInstallOptions) {
     init: function () {
       this.setStyle('variable_blocks');
       if (isK1) {
-        var fieldImageDropdown = new blockly.FieldImageDropdown(
+        var fieldImageDropdown = new CdoFieldImageDropdown(
           this.K1_VALUES,
           63,
           33
@@ -325,7 +327,7 @@ exports.install = function (blockly, blockInstallOptions) {
           .appendField(msg.setSpeed())
           .appendField(fieldImageDropdown, 'VALUE');
       } else {
-        var dropdown = new blockly.FieldDropdown(this.VALUES);
+        var dropdown = new CdoFieldDropdown(this.VALUES);
         dropdown.setValue(this.VALUES[3][1]); // default to normal
         this.appendDummyInput().appendField(dropdown, 'VALUE');
       }
@@ -361,7 +363,7 @@ exports.install = function (blockly, blockInstallOptions) {
   blockly.Blocks.flappy_setGapHeight = {
     helpUrl: '',
     init: function () {
-      var dropdown = new blockly.FieldDropdown(this.VALUES);
+      var dropdown = new CdoFieldDropdown(this.VALUES);
       dropdown.setValue(this.VALUES[3][1]); // default to normal
 
       this.setStyle('variable_blocks');
@@ -397,10 +399,10 @@ exports.install = function (blockly, blockInstallOptions) {
       var input = this.appendDummyInput();
       if (isK1) {
         input.appendField(msg.setBackground());
-        dropdown = new blockly.FieldImageDropdown(this.K1_CHOICES, 50, 30);
+        dropdown = new CdoFieldImageDropdown(this.K1_CHOICES, 50, 30);
         dropdown.setValue(FLAPPY_VALUE);
       } else {
-        dropdown = new blockly.FieldDropdown(this.VALUES);
+        dropdown = new CdoFieldDropdown(this.VALUES);
         dropdown.setValue(FLAPPY_VALUE);
       }
 
@@ -448,10 +450,10 @@ exports.install = function (blockly, blockInstallOptions) {
       var input = this.appendDummyInput();
       if (isK1) {
         input.appendField(msg.setPlayer());
-        dropdown = new blockly.FieldImageDropdown(this.K1_CHOICES, 34, 24);
+        dropdown = new CdoFieldImageDropdown(this.K1_CHOICES, 34, 24);
         dropdown.setValue(FLAPPY_VALUE);
       } else {
-        dropdown = new blockly.FieldDropdown(this.VALUES);
+        dropdown = new CdoFieldDropdown(this.VALUES);
         dropdown.setValue(FLAPPY_VALUE);
       }
       input.appendField(dropdown, 'VALUE');
@@ -514,10 +516,10 @@ exports.install = function (blockly, blockInstallOptions) {
       var input = this.appendDummyInput();
       if (isK1) {
         input.appendField(msg.setObstacle());
-        dropdown = new blockly.FieldImageDropdown(this.K1_CHOICES, 50, 30);
+        dropdown = new CdoFieldImageDropdown(this.K1_CHOICES, 50, 30);
         dropdown.setValue(FLAPPY_VALUE);
       } else {
-        dropdown = new blockly.FieldDropdown(this.VALUES);
+        dropdown = new CdoFieldDropdown(this.VALUES);
         dropdown.setValue(FLAPPY_VALUE);
       }
 
@@ -564,10 +566,10 @@ exports.install = function (blockly, blockInstallOptions) {
       var input = this.appendDummyInput();
       if (isK1) {
         input.appendField(msg.setGround());
-        dropdown = new blockly.FieldImageDropdown(this.K1_CHOICES, 50, 30);
+        dropdown = new CdoFieldImageDropdown(this.K1_CHOICES, 50, 30);
         dropdown.setValue(FLAPPY_VALUE);
       } else {
-        dropdown = new blockly.FieldDropdown(this.VALUES);
+        dropdown = new CdoFieldDropdown(this.VALUES);
         dropdown.setValue(FLAPPY_VALUE);
       }
       input.appendField(dropdown, 'VALUE');
@@ -609,7 +611,7 @@ exports.install = function (blockly, blockInstallOptions) {
   blockly.Blocks.flappy_setGravity = {
     helpUrl: '',
     init: function () {
-      var dropdown = new blockly.FieldDropdown(this.VALUES);
+      var dropdown = new CdoFieldDropdown(this.VALUES);
       dropdown.setValue(this.VALUES[3][1]); // default to normal
 
       this.setStyle('variable_blocks');
@@ -640,10 +642,7 @@ exports.install = function (blockly, blockInstallOptions) {
       this.setStyle('variable_blocks');
       this.appendDummyInput()
         .appendField(msg.setScore())
-        .appendField(
-          new blockly.FieldTextInput('0', blockly.cdoUtils.numberValidator),
-          'VALUE'
-        );
+        .appendField(new blockly.FieldTextInput('0', numberValidator), 'VALUE');
       this.setInputsInline(true);
       this.setPreviousStatement(true);
       this.setNextStatement(true);

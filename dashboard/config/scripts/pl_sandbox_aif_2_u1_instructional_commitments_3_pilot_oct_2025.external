@@ -1,0 +1,343 @@
+name 'pl_sandbox_aif-2-U1-Instructional-commitments_3_pilot-oct-2025'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Instructional Commitments
+
+<img src="https://images.code.org/1cd0ec71458414495502b9598efd2028-image-1639773441510.37.01 PM.png" alt="Code.org AI bot character" style="border-radius:40px; float: left; padding-right: 2px; height: 150px; clear: both; margin: 0 20px 0px 10px;">
+
+<br>
+
+#### As part of this unit’s *instructional commitments*, students develop the habits and mindsets that connect computational thinking, human-centered design, and responsible AI use. They learn to think critically, design with empathy, and take ownership of their AI-assisted work—building a foundation that mirrors real-world roles in technology and design.
+
+<div style="clear:both;"></div>
+
+## Computational Thinking
+
+#### Foundational computational thinking practices are introduced through the design process, allowing students to apply these skills before writing any code.
+
+<!-- Grid container -->
+<div
+  style="
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 16px;
+    margin: 10px 0;
+  "
+>
+  <!-- Card 1 -->
+  <div
+    style="
+      flex: 1 1 calc(33.333% - 16px);
+      box-sizing: border-box;
+      border: 2px solid #0093A4;
+      border-radius: 10px;
+      padding: 12px;
+      background: #ffffff;
+      box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.2);
+      min-width: 220px;
+    "
+  >
+    <details>
+      <summary style="font-size: 16px; font-weight: 700; cursor: pointer;">
+        🧩 Decomposition
+      </summary>
+      <p style="margin: 8px 0 0 0; font-size: 16px;">
+        <i>Students practice decomposition by breaking down a high-level idea for a web app into smaller, manageable parts: individual pages, and the core structural components (e.g., navigation bar, content cards, footer) within each page.</i>
+      </p>
+    </details>
+  </div>
+
+  <!-- Card 2 -->
+  <div
+    style="
+      flex: 1 1 calc(33.333% - 16px);
+      box-sizing: border-box;
+      border: 2px solid #0093A4;
+      border-radius: 10px;
+      padding: 12px;
+      background: #ffffff;
+      box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.2);
+      min-width: 220px;
+    "
+  >
+    <details>
+      <summary style="font-size: 16px; font-weight: 700; cursor: pointer;">
+       🎨 Abstraction
+      </summary>
+      <p style="margin: 8px 0 0 0; font-size: 16px;">
+        <i>Students use abstraction when creating wireframes. They learn to ignore low-level details like color and font to focus on the high-level structure, layout, and user flow of the interface.</i>
+      </p>
+    </details>
+  </div>
+
+  <!-- Card 3 -->
+  <div
+    style="
+      flex: 1 1 calc(33.333% - 16px);
+      box-sizing: border-box;
+      border: 2px solid #0093A4;
+      border-radius: 10px;
+      padding: 12px;
+      background: #ffffff;
+      box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.2);
+      min-width: 220px;
+    "
+  >
+    <details>
+      <summary style="font-size: 16px; font-weight: 700; cursor: pointer;">
+        🔁 Pattern Recognition
+      </summary>
+      <p style="margin: 8px 0 0 0; font-size: 16px;">
+        <i>Students learn to identify and describe the common, recurring components of web apps. This allows them to communicate their design goals to the AI more effectively and ensures a consistent user experience across their application.</i>
+      </p>
+    </details>
+  </div>
+</div>
+
+
+
+
+<hr>
+
+## Human-Centered Design and Systems Thinking
+
+#### A “human-centered first” philosophy anchors the course, guiding students to prioritize people in every stage of design.
+
+<!-- Grid container -->
+<div
+  style="
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 16px;
+    margin: 10px 0;
+  "
+>
+  <!-- Card 1 -->
+  <div
+    style="
+      flex: 1 1 calc(33.333% - 16px);
+      box-sizing: border-box;
+      border: 2px solid #0093A4;
+      border-radius: 10px;
+      padding: 12px;
+      background: #ffffff;
+      box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.2);
+      min-width: 220px;
+    "
+  >
+    <details>
+      <summary style="font-size: 16px; font-weight: 700; cursor: pointer;">
+        💛 Empathy as the Starting Point
+      </summary>
+      <p style="margin: 8px 0 0 0; font-size: 16px;">
+        <i> All design work begins by defining a clear problem from a specific user's perspective. Students practice empathy by conducting mock interviews to understand a user's context, goals, and pain points before any solution is considered.
+</i>
+      </p>
+    </details>
+  </div>
+
+  <!-- Card 2 -->
+  <div
+    style="
+      flex: 1 1 calc(33.333% - 16px);
+      box-sizing: border-box;
+      border: 2px solid #0093A4;
+      border-radius: 10px;
+      padding: 12px;
+      background: #ffffff;
+      box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.2);
+      min-width: 220px;
+    "
+  >
+    <details>
+      <summary style="font-size: 16px; font-weight: 700; cursor: pointer;">
+        🖥️ Designing for Usability and Accessibility
+      </summary>
+      <p style="margin: 8px 0 0 0; font-size: 16px;">
+        <i>Human-centered principles are made concrete as students evaluate the AI's output. They are responsible for ensuring the final product is responsive, accessible (e.g., sufficient color contrast, appropriately sized touch targets), and logically structured for a real user.
+</i>
+      </p>
+    </details>
+  </div>
+
+  <!-- Card 3 -->
+  <div
+    style="
+      flex: 1 1 calc(33.333% - 16px);
+      box-sizing: border-box;
+      border: 2px solid #0093A4;
+      border-radius: 10px;
+      padding: 12px;
+      background: #ffffff;
+      box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.2);
+      min-width: 220px;
+    "
+  >
+    <details>
+      <summary style="font-size: 16px; font-weight: 700; cursor: pointer;">
+        🌐 Foundations of Systems Thinking
+      </summary>
+      <p style="margin: 8px 0 0 0; font-size: 16px;">
+        <i>While focused on a single user, the creation of a multi-page app introduces the concept of a small, interconnected system. Students must consider how navigation, brand consistency, and a shared stylesheet work together to create a coherent and trustworthy user journey.
+</i>
+      </p>
+    </details>
+  </div>
+</div>
+
+<hr>
+
+## AI Ethics and Safety 
+#### Students are introduced to the concept of responsible AI collaboration, with an emphasis on their accountability for the outputs produced by AI tools.
+<!-- AI Ethics and Safety Cards -->
+<div
+  style="
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 16px;
+    margin: 10px 0;
+  "
+>
+  <!-- Card 1 -->
+  <div
+    style="
+      flex: 1 1 calc(33.333% - 16px);
+      box-sizing: border-box;
+      border: 2px solid #0093A4;
+      border-radius: 10px;
+      padding: 12px;
+      background: #ffffff;
+      box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.2);
+      min-width: 220px;
+    "
+  >
+    <details>
+      <summary style="font-size: 16px; font-weight: 700; cursor: pointer;">
+        🧠 Designer Accountability
+      </summary>
+      <p style="margin: 8px 0 0 0; font-size: 16px;">
+        <i>Students learn that while AI can generate ideas, content, and code, they are the designers and are ultimately responsible for the quality, safety, and impact of the final product. This accountability applies to all outputs, from initial concepts like the user persona to the final text and layout.</i>
+      </p>
+    </details>
+  </div>
+
+  <!-- Card 2 -->
+  <div
+    style="
+      flex: 1 1 calc(33.333% - 16px);
+      box-sizing: border-box;
+      border: 2px solid #0093A4;
+      border-radius: 10px;
+      padding: 12px;
+      background: #ffffff;
+      box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.2);
+      min-width: 220px;
+    "
+  >
+    <details>
+      <summary style="font-size: 16px; font-weight: 700; cursor: pointer;">
+        🔍 Critical Evaluation
+      </summary>
+      <p style="margin: 8px 0 0 0; font-size: 16px;">
+        <i>Students are taught to critically evaluate AI-generated work, not just for aesthetic appeal, but for potential issues. This includes checking AI-generated text for accuracy and nonsensical content and inspecting designs for accessibility flaws or layouts that don't align with user needs.</i>
+      </p>
+    </details>
+  </div>
+
+  <!-- Card 3 -->
+  <div
+    style="
+      flex: 1 1 calc(33.333% - 16px);
+      box-sizing: border-box;
+      border: 2px solid #0093A4;
+      border-radius: 10px;
+      padding: 12px;
+      background: #ffffff;
+      box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.2);
+      min-width: 220px;
+    "
+  >
+    <details>
+      <summary style="font-size: 16px; font-weight: 700; cursor: pointer;">
+        ⚙️ Normalizing Imperfection
+      </summary>
+      <p style="margin: 8px 0 0 0; font-size: 16px;">
+        <i>Students learn that AI is not a perfect, all-knowing tool. They are taught that unexpected outputs and errors are normal parts of the collaborative process. This builds resilience and encourages a problem-solving mindset rather than frustration.</i>
+      </p>
+    </details>
+  </div>
+</div>
+
+<hr>
+
+## Career Journeys
+#### Activities are framed around real-world professional roles, helping students see design as a meaningful and practical career skill.
+
+<!-- Career Journeys Cards -->
+<div
+  style="
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 16px;
+    margin: 10px 0;
+  "
+>
+  <!-- Card 1 -->
+  <div
+    style="
+      flex: 1 1 calc(50% - 16px);
+      box-sizing: border-box;
+      border: 2px solid #0093A4;
+      border-radius: 10px;
+      padding: 16px;
+      background: #ffffff;
+      box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.2);
+      min-width: 280px;
+    "
+  >
+    <details>
+      <summary style="font-size: 16px; font-weight: 700; cursor: pointer;">
+        💡 User Experience (UX) Designer
+      </summary>
+      <p style="margin: 8px 0 0 0; font-size: 16px;">
+        <i>Students step into this role when they conduct mock interviews, define user problems, and create wireframes that map out the user flow. They focus on making the application logical, intuitive, and useful.</i>
+      </p>
+    </details>
+  </div>
+
+  <!-- Card 2 -->
+  <div
+    style="
+      flex: 1 1 calc(50% - 16px);
+      box-sizing: border-box;
+      border: 2px solid #0093A4;
+      border-radius: 10px;
+      padding: 16px;
+      background: #ffffff;
+      box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.2);
+      min-width: 280px;
+    "
+  >
+    <details>
+      <summary style="font-size: 16px; font-weight: 700; cursor: pointer;">
+        🎨 User Interface (UI) Designer
+      </summary>
+      <p style="margin: 8px 0 0 0; font-size: 16px;">
+        <i>Students act as UI designers when they define a brand’s visual style guide, including its color palette and typography. They focus on creating a visually consistent, appealing, and accessible interface that communicates the brand’s identity.</i>
+      </p>
+    </details>
+  </div>
+</div>
+
+<hr>
+
+
+
+
+MARKDOWN

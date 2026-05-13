@@ -59,6 +59,7 @@ export const classroomShape = PropTypes.shape({
   name: PropTypes.string.isRequired,
   section: PropTypes.string,
   enrollment_code: PropTypes.string.isRequired,
+  course_state: PropTypes.string,
 });
 
 export const loadErrorShape = PropTypes.shape({

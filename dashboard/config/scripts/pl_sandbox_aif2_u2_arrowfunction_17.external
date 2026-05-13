@@ -1,0 +1,67 @@
+name 'pl-sandbox-aif2-u2-arrowfunction-17'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Introducing Arrow Functions in JavaScript
+
+#### Now that you know how to write basic functions using the function keyword, let’s look at a newer, shorter way to write them.
+
+#### Arrow functions do the same thing as regular functions, but use a simpler syntax.
+
+#### They’re very common in modern JavaScript, especially when working with event handlers or short, single-purpose functions. 
+
+---
+
+##🧩 1. Start with the same idea — a function that does something
+
+#### Here’s a basic function we’ve seen before:
+
+<img src="https://images.code.org/866bbb37e2cb602dcdbe4226ceed22a3-image-1762380706476.png" alt="add five funciton in javascript" width="350px" style="border-radius:10px; float:left; margin: 0 0 40px 40px;">
+
+<div style="clear:both;"></div>
+
+#### This works perfectly,but in JavaScript, we can write the same thing using an arrow function.
+
+---
+
+## 🔁 2. Replace the function keyword with arrow syntax
+
+#### Instead of function addFive() {}, we write:
+
+<img src="https://images.code.org/cd57942c79b818039772e5a007da3435-image-1762380917289.png" alt="add five funciton in javascript" width="350px" style="border-radius:10px; float:left; margin: 0 0 40px 40px;">
+<div style="clear:both;"></div>
+
+
+#### ✅ **What’s happening here:**
+
+- #### We use const to store the function in a variable named addFive.
+
+- #### The parentheses () come before an arrow =>.
+
+- #### The curly braces { } hold the same instructions as before.
+
+#### It’s the same logic — just a shorter, modern way to define a function.
+
+---
+
+
+## 💡 3. Named arrow functions can still be reused
+
+#### If you plan to call the same function in multiple places, give it a name — just like you did with regular functions:
+
+<img src="https://images.code.org/4d6ab12d022993a607bcaaa4cb34b4b9-image-1762381088234.png" alt="add five funciton in javascript" width="450px" style="border-radius:10px; float:left; margin: 0 0 40px 40px;">
+<div style="clear:both;"></div>
+
+
+
+#### This makes your code neat, readable, and consistent with other functions in your app.
+
+---
+
+## Now you try!
+
+#### In the next level, you will use AI to help connect an inline event handler to a reusable, named arrow function. 
+
+![]()
+MARKDOWN

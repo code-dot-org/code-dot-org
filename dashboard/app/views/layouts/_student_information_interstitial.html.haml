@@ -10,7 +10,7 @@
         = t('activerecord.attributes.user.finish_sign_up_header_account_information')
         %a{href: SharedConstants::EMAIL_LINKS.PRIVACY_POLICY_URL, target: '_blank'}
           = t('age_interstitial.disclaimer', markdown: :inline).html_safe
-      = form_for(student, url: users_set_student_information_url, remote: true, html: {id: 'edit_user'}) do |f|
+      = form_for(student, as: :user, url: users_set_student_information_url, remote: true, html: {id: 'edit_user'}) do |f|
         - if student.age.nil?
           .form-group
             %div{style: 'display: flex;'}
@@ -34,4 +34,4 @@
         .form-group#information_form_buttons
           = link_to t('nav.user.logout'), destroy_user_session_url, class: 'btn primary-button', id: 'sign-out-btn'
           = f.submit I18n.locale == :'en-US' ? t('submit') : t('continue'), class: 'btn primary-button', id: 'submit-btn'
-%script{src: webpack_asset_path('js/layouts/_student_information_interstitial.js'), data: {retrieveInfoForCap: cap_user_info_required?(student, country).to_json, userId: student.id.to_json, inSection: (!student.sections_as_student.empty?).to_json, currentUsState: student.us_state.to_json, selectedLanguage: request.locale.to_json, studentAge: student.age.to_json}}
+%script{src: webpack_asset_path('js/layouts/_student_information_interstitial.js'), data: {retrieveInfoForCap: cap_user_info_required?(student, country).to_json, userId: student.id.to_json, inSection: (!student.sections_as_student.empty?).to_json, currentUsState: student.us_state.to_json, selectedLanguage: I18n.locale.to_json, studentAge: student.age.to_json}}

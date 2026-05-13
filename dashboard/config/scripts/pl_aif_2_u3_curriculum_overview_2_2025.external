@@ -1,0 +1,53 @@
+name 'pl=aif-2-U3-curriculum-overview-2_2025'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Unit 3: Building Data-Driven Systems with AI - Overview
+
+## What is Building Data-Driven Systems with AI all about?
+ 
+#### In **Building Data-Driven Systems**, students expand their skills as developers by creating web apps that organize, display, and manipulate meaningful datasets.
+
+#### Through schema-informed design and hands-on coding with arrays and objects, they learn to treat data as both a design material and a responsibility, building features that are reliable, ethical, and user-focused.
+
+---
+
+#### ***Note: Unlike the first semester, the second semester of AI Foundations is a continuous sequence and must be taught in order. Building Data-Driven Systems is the 3rd unit in the course.***
+
+## Student Learning Goals
+<div style="display: flex; align-items: center; justify-content: space-between; background: #f7f8fa; padding: 20px; border-radius: 10px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); font-size: 14pt; line-height: 1.6; max-width: 800px; margin: 20px auto;">
+
+  <div>
+    <h4 style="margin-top: 0; font-weight: bold;">By the end of this unit, students will be able to :</h4>
+    <ul style="list-style-type: disc; padding-left: 10px; font-size: 14pt">
+      <li>Represent real-world information using arrays and objects, designing simple schemas that define the fields, data types, and constraints of their datasets.
+
+</li> <br>
+      <li>Build web app features that display and update data.</li><br>
+      <li>Use AI-generated scaffolds for data choices and program behavior.
+</li><br>
+      <li>Combine arrays and objects to manage collections of data, writing functions that retrieve, modify, filter, search, and sort information.
+</li><br>
+<li>Apply data-structure skills in a meaningful final project.</li>
+    </ul>
+  </div>
+  <div>
+    <img src="https://images.code.org/6478f46b5bbaa8fc6468c40a545f9994-image-1760978656971.png" 
+         alt="Icon with computer and weblayout" 
+         style="border-radius: 10px; width: 300px; height: auto;">
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+MARKDOWN

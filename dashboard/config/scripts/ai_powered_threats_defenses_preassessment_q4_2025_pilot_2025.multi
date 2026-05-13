@@ -1,0 +1,13 @@
+name 'ai-powered-threats-defenses-preassessment-q4_2025-pilot_2025'
+
+question ‘An attacker creates a realistic but fake video of a company\'s CEO announcing a surprise bonus for the first 100 employees who register on a specific website. This is an example of what kind of AI-driven attack?’
+
+wrong ‘Smishing’
+wrong ‘Vishing’
+right ‘Deepfake’
+wrong ‘Social Conditioning’
+allow_multiple_attempts true
+
+teacher_markdown <<MARKDOWN
+Lesson 4: Phishing with AI
+MARKDOWN

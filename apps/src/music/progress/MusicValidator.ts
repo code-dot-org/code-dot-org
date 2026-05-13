@@ -7,12 +7,19 @@ import {
 } from '@cdo/apps/lab2/progress/ProgressManager';
 import {Condition, ConditionType} from '@cdo/apps/lab2/types';
 
+import {
+  BlockTypes,
+  FunctionDefinitionBlockTypes,
+  LoopBlockTypes,
+} from '../blockly/blockTypes';
+import {PATTERN_AI_NUM_SEED_EVENTS, Triggers} from '../constants';
 import {isChordEvent} from '../player/interfaces/ChordEvent';
 import {isInstrumentEvent} from '../player/interfaces/InstrumentEvent';
 import {PlaybackEvent} from '../player/interfaces/PlaybackEvent';
 import {PlayingTrigger} from '../player/interfaces/PlayingTrigger';
-import {isSoundEvent} from '../player/interfaces/SoundEvent';
+import {isSoundEvent, SoundEvent} from '../player/interfaces/SoundEvent';
 import MusicPlayer from '../player/MusicPlayer';
+import {ExemplarValidationMode} from '../types';
 
 import {MusicConditions} from './MusicConditions';
 
@@ -24,14 +31,20 @@ export default class MusicValidator extends Validator {
   constructor(
     private readonly getIsPlaying: () => boolean,
     private readonly getPlaybackEvents: () => PlaybackEvent[],
+    private readonly getExemplarPlaybackEvents: () => PlaybackEvent[],
     private readonly getValidationTimeout: () => number,
     private readonly player: MusicPlayer,
     private readonly getPlayingTriggers: () => PlayingTrigger[],
+    private readonly getExemplarValidationMode: () => ExemplarValidationMode,
     private readonly conditionsChecker: ConditionsChecker = new ConditionsChecker(
       Object.values(MusicConditions).map(condition => condition.name)
     )
   ) {
     super();
+  }
+
+  didPassExemplarValidation(): boolean {
+    return this.validatePlaybackEventsEquivalent();
   }
 
   shouldCheckConditions() {
@@ -60,6 +73,18 @@ export default class MusicValidator extends Validator {
     // A list of unique invocated ids associated with played trigger sounds.
     const playedTriggerSoundUniqueInvocationIds: number[] = [];
 
+    // A map of ids for blocks in functions and the count of playback events associated with them.
+    const blockIdFunctionRepetitions: {[key: string]: number} = {};
+
+    // A map of ids for blocks in loops and the count of playback events associated with them.
+    const blockIdLoopRepetitions: {[key: string]: number} = {};
+
+    // A map of ids for blocks in nested loops and the count of playback events associated with them.
+    const blockIdNestedLoopRepetitions: {[key: string]: number} = {};
+
+    // A map of sound types and the count of playback events associated with them.
+    const soundTypeRepetitions: {[key: string]: number} = {};
+
     // Get number of patterns that have been started, separately counting those
     // that are empty and those with events.
     let playedNumberEmptyPatterns = 0;
@@ -68,14 +93,24 @@ export default class MusicValidator extends Validator {
     // And the same for patterns made with AI.
     let playedNumberEmptyPatternsAi = 0;
     let playedNumberPatternsAi = 0;
+    let playedNumberGeneratedPatternsAi = 0;
 
     // Get number of chords that have been started, separately counting those
     // that are empty and those with notes.
     let playedNumberEmptyChords = 0;
     let playedNumberChords = 0;
 
+    // This is a list of unique sound IDs that have been played.
     const uniqueSounds: string[] = [];
+
+    // This is a list of unique sound IDs that are currently playing.
     const uniqueCurrentSounds: string[] = [];
+
+    // This is a list of unique function contexts that have been used to play sounds.
+    const uniqueFunctionContexts: string[] = [];
+
+    // This is a list of unique sound lengths that have been played.
+    const uniqueSoundLengths: number[] = [];
 
     const currentPlayheadPosition = this.player.getCurrentPlayheadPosition();
     this.getPlaybackEvents().forEach(eventData => {
@@ -84,6 +119,7 @@ export default class MusicValidator extends Validator {
         return;
       }
 
+      const blockId = eventData.blockId;
       const length = eventData.length;
 
       if (isSoundEvent(eventData)) {
@@ -102,13 +138,17 @@ export default class MusicValidator extends Validator {
             });
           }
 
-          if (eventData.functionContext) {
+          if (eventHasFunctionContext(eventData)) {
             this.conditionsChecker.addSatisfiedCondition({
               name: MusicConditions.PLAYED_SOUND_IN_ANY_FUNCTION.name,
             });
             this.conditionsChecker.addSatisfiedCondition({
               name: MusicConditions.PLAYED_SOUND_IN_FUNCTION.name,
-              value: eventData.functionContext.name,
+              value: eventData.functionContext!.name,
+            });
+            this.conditionsChecker.addSatisfiedCondition({
+              name: MusicConditions.PLAYED_SOUND_IN_FUNCTION.name,
+              value: eventData.functionContext!.procedureID,
             });
           }
 
@@ -116,10 +156,31 @@ export default class MusicValidator extends Validator {
             name: MusicConditions.PLAYED_SOUND_ID.name,
             value: eventData.id,
           });
+
+          this.conditionsChecker.addSatisfiedCondition({
+            name: MusicConditions.PLAYED_SOUND_TYPE.name,
+            value: eventData.soundType,
+          });
         }
 
         playedNumberSounds++;
-
+        if (!uniqueSoundLengths.includes(eventData.length)) {
+          uniqueSoundLengths.push(eventData.length);
+          this.conditionsChecker.addSatisfiedCondition({
+            name: MusicConditions.PLAYED_DIFFERENT_LENGTH_SOUNDS.name,
+            value: uniqueSoundLengths.length,
+          });
+        }
+        if (
+          eventHasFunctionContext(eventData) &&
+          !uniqueFunctionContexts.includes(eventData.functionContext!.name)
+        ) {
+          uniqueFunctionContexts.push(eventData.functionContext!.name);
+          this.conditionsChecker.addSatisfiedCondition({
+            name: MusicConditions.PLAYED_SOUNDS_IN_DIFFERENT_FUNCTIONS.name,
+            value: uniqueFunctionContexts.length,
+          });
+        }
         // In order to check that the user has pressed the beat map buttons multiple times,
         // we look at the unique invocation id. (Simple2 only)
         if (eventData.triggered) {
@@ -134,6 +195,17 @@ export default class MusicValidator extends Validator {
 
         if (!uniqueSounds.includes(eventData.id)) {
           playedNumberDifferentSounds++;
+          if (soundTypeRepetitions[eventData.soundType]) {
+            soundTypeRepetitions[eventData.soundType]++;
+          } else {
+            soundTypeRepetitions[eventData.soundType] = 1;
+          }
+          this.conditionsChecker.addSatisfiedCondition({
+            name: MusicConditions.PLAYED_SOUND_TYPE_MULTIPLE_TIMES.name,
+            value: `${eventData.soundType}:${
+              soundTypeRepetitions[eventData.soundType]
+            }`,
+          });
           uniqueSounds.push(eventData.id);
         }
       } else if (
@@ -149,6 +221,14 @@ export default class MusicValidator extends Validator {
         } else {
           if (eventData.value.ai) {
             playedNumberPatternsAi++;
+
+            if (
+              eventData.value.events.some(
+                event => event.tick > PATTERN_AI_NUM_SEED_EVENTS
+              )
+            ) {
+              playedNumberGeneratedPatternsAi++;
+            }
           } else {
             playedNumberPatterns++;
           }
@@ -158,6 +238,78 @@ export default class MusicValidator extends Validator {
           playedNumberEmptyChords++;
         } else {
           playedNumberChords++;
+        }
+      }
+
+      if (eventData.effects) {
+        this.conditionsChecker.addSatisfiedCondition({
+          name: MusicConditions.USED_EFFECT.name,
+        });
+        const effectValues = Object.values(eventData.effects);
+        if (effectValues.includes('low') || effectValues.includes('medium')) {
+          this.conditionsChecker.addSatisfiedCondition({
+            name: MusicConditions.USED_EFFECT_NON_DEFAULT.name,
+          });
+        }
+      }
+      const validationInfo = eventData.validationInfo;
+      if (validationInfo) {
+        // Check for a block nested within an if/else block causing something to play.
+        if (validationInfo.parentControlTypes?.includes(BlockTypes.IF_ELSE)) {
+          this.conditionsChecker.addSatisfiedCondition({
+            name: MusicConditions.PLAYED_ANYTHING_IN_CONDITIONAL.name,
+          });
+        }
+
+        // Check for a block nested within a function block causing something to play.
+        if (
+          validationInfo.parentControlTypes?.some(type =>
+            FunctionDefinitionBlockTypes.includes(type)
+          )
+        ) {
+          if (!blockIdFunctionRepetitions[blockId]) {
+            blockIdFunctionRepetitions[blockId] = 1;
+          } else {
+            blockIdFunctionRepetitions[blockId]++;
+          }
+          this.addPlayedConditions(
+            MusicConditions.PLAYED_ANYTHING_IN_SAME_FUNCTION.name,
+            Math.max(...Object.values(blockIdFunctionRepetitions))
+          );
+        }
+
+        // Check for a block nested within a loop block causing something to play.
+        if (
+          validationInfo.parentControlTypes?.some(type =>
+            LoopBlockTypes.includes(type)
+          )
+        ) {
+          if (!blockIdLoopRepetitions[blockId]) {
+            blockIdLoopRepetitions[blockId] = 1;
+          } else {
+            blockIdLoopRepetitions[blockId]++;
+          }
+          this.addPlayedConditions(
+            MusicConditions.PLAYED_ANYTHING_IN_SAME_LOOP.name,
+            Math.max(...Object.values(blockIdLoopRepetitions))
+          );
+        }
+
+        // Check for a block within a nested loop block causing something to play.
+        if (
+          validationInfo.parentControlTypes?.filter(type =>
+            LoopBlockTypes.includes(type)
+          ).length >= 2
+        ) {
+          if (!blockIdNestedLoopRepetitions[blockId]) {
+            blockIdNestedLoopRepetitions[blockId] = 1;
+          } else {
+            blockIdNestedLoopRepetitions[blockId]++;
+          }
+          this.addPlayedConditions(
+            MusicConditions.PLAYED_ANYTHING_IN_SAME_NESTED_LOOP.name,
+            Math.max(...Object.values(blockIdNestedLoopRepetitions))
+          );
         }
       }
     });
@@ -229,6 +381,10 @@ export default class MusicValidator extends Validator {
     this.addPlayedConditions(
       MusicConditions.PLAYED_PATTERNS_AI.name,
       playedNumberPatternsAi
+    );
+    this.addPlayedConditions(
+      MusicConditions.PLAYED_GENERATED_PATTERNS_AI.name,
+      playedNumberGeneratedPatternsAi
     );
 
     // Add satisfied conditions for the played chords.
@@ -303,6 +459,7 @@ export default class MusicValidator extends Validator {
   }
 
   conditionsMet(conditions: Condition[]): boolean {
+    this.addSatisfiedBlockCountConditions(conditions);
     return this.conditionsChecker.checkRequirementConditions(conditions);
   }
 
@@ -320,4 +477,100 @@ export default class MusicValidator extends Validator {
   getValidationResults(): ValidationResult[] | undefined {
     return undefined;
   }
+
+  // Validates that both playback event arrays are equivalent based on id, type, and starting measure.
+  validatePlaybackEventsEquivalent(): boolean {
+    const mode = this.getExemplarValidationMode();
+    const studentEvents = [...this.getPlaybackEvents()];
+    const exemplarEvents = this.getExemplarPlaybackEvents();
+
+    const studentMatchesExemplar = studentEvents.every(studentEvent =>
+      this.eventMatchFound(studentEvent, exemplarEvents, mode)
+    );
+    const exemplarMatchesStudent = exemplarEvents.every(exemplarEvent =>
+      this.eventMatchFound(exemplarEvent, studentEvents, mode)
+    );
+
+    return studentMatchesExemplar && exemplarMatchesStudent;
+  }
+
+  private eventMatchFound(
+    currentEvent: PlaybackEvent,
+    comparisonEvents: PlaybackEvent[],
+    mode: ExemplarValidationMode = 'default'
+  ): boolean {
+    switch (mode) {
+      case 'type':
+        return comparisonEvents.some(event => {
+          if (
+            event.type !== currentEvent.type ||
+            event.when !== currentEvent.when
+          ) {
+            return false;
+          }
+
+          // If both events are sound events, compare soundType too
+          if (event.type === 'sound' && currentEvent.type === 'sound') {
+            return (
+              (event as SoundEvent).soundType ===
+              (currentEvent as SoundEvent).soundType
+            );
+          }
+
+          // For other event types, matching type + when is sufficient
+          return true;
+        });
+      default:
+        return comparisonEvents.some(
+          event =>
+            event.id === currentEvent.id &&
+            event.type === currentEvent.type &&
+            event.when === currentEvent.when
+        );
+    }
+  }
+
+  private addSatisfiedBlockCountConditions(conditions: Condition[]) {
+    const blockCountConditions = conditions.filter(
+      ({name}) => name === MusicConditions.BLOCK_COUNT_BY_TYPE.name
+    );
+    if (blockCountConditions.length === 0) {
+      return;
+    }
+
+    const blocks = Blockly.getMainWorkspace()
+      .getAllBlocks()
+      .filter(block => block.isEnabled());
+
+    blockCountConditions.forEach(({value}) => {
+      const [blockType, countStr] = (value as string).split(':');
+      const expectedCount = parseInt(countStr);
+
+      const blockCountByType = blocks.filter(
+        block => block.type === blockType
+      ).length;
+
+      if (blockCountByType >= expectedCount) {
+        this.conditionsChecker.addSatisfiedCondition({
+          name: MusicConditions.BLOCK_COUNT_BY_TYPE.name,
+          value: `${blockType}:${expectedCount}`,
+        });
+      }
+    });
+  }
+}
+
+// Determines whether the event has a function context that is an actual
+// invocation of a function, as opposed to a trigger or 'when run' context.
+function eventHasFunctionContext(eventData: PlaybackEvent): boolean {
+  if (!eventData.functionContext) {
+    return false;
+  }
+  // Exclude 'when run' and trigger contexts.
+  return (
+    eventData.functionContext.name !== 'when_run' &&
+    !Triggers.map(trigger => trigger.id).includes(
+      eventData.functionContext.name
+    )
+  );
 }

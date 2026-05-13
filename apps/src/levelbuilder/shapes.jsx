@@ -82,6 +82,8 @@ export const resourceShape = PropTypes.shape({
   url: PropTypes.string.isRequired,
   type: PropTypes.string,
   audience: PropTypes.string,
+  embeddabilityType: PropTypes.string,
+  curriculumCategory: PropTypes.string,
   assessment: PropTypes.bool,
   includeInPdf: PropTypes.bool,
   downloadUrl: PropTypes.string,

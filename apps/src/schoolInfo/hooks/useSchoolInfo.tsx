@@ -1,6 +1,6 @@
-import {useCallback, useEffect, useMemo, useRef, useState} from 'react';
+import {useEffect, useMemo, useRef, useState} from 'react';
 
-import {EVENTS, PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants';
+import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import {
   SCHOOL_COUNTRY_SESSION_KEY,
@@ -15,9 +15,13 @@ import {NonSchoolOptions} from '@cdo/generated-scripts/sharedConstants';
 
 import {SchoolDropdownOption, SchoolInfoInitialState} from '../types';
 import {constructSchoolOption} from '../utils/constructSchoolOption';
-import {fetchSchools as fetchSchoolsAPI} from '../utils/fetchSchools';
+import {fetchSchools} from '../utils/fetchSchools';
 
-export function useSchoolInfo(initialState: SchoolInfoInitialState) {
+export function useSchoolInfo(
+  initialState: SchoolInfoInitialState,
+  // TODO: ACQ-3300 remove when school info has been updated for affected users
+  affectedByMissingSchoolData?: boolean
+) {
   const mounted = useRef(false);
 
   // Memoized initial values
@@ -29,15 +33,32 @@ export function useSchoolInfo(initialState: SchoolInfoInitialState) {
     [initialState.country, initialState.usIp]
   );
 
-  const detectedSchoolId = useMemo(
-    () =>
-      initialState.schoolType === NonSchoolOptions.NO_SCHOOL_SETTING
-        ? NonSchoolOptions.NO_SCHOOL_SETTING
-        : initialState.schoolId ||
-          sessionStorage.getItem(SCHOOL_ID_SESSION_KEY) ||
-          NonSchoolOptions.SELECT_A_SCHOOL,
-    [initialState.schoolId, initialState.schoolType]
-  );
+  const detectedSchoolId = useMemo(() => {
+    if (affectedByMissingSchoolData) {
+      return NonSchoolOptions.SELECT_A_SCHOOL;
+    }
+    if (initialState.schoolType === NonSchoolOptions.NO_SCHOOL_SETTING) {
+      return NonSchoolOptions.NO_SCHOOL_SETTING;
+    }
+    if (
+      !initialState.schoolId &&
+      initialState.schoolName &&
+      initialState.schoolZip
+    ) {
+      return NonSchoolOptions.CLICK_TO_ADD;
+    }
+    return (
+      initialState.schoolId ||
+      sessionStorage.getItem(SCHOOL_ID_SESSION_KEY) ||
+      NonSchoolOptions.SELECT_A_SCHOOL
+    );
+  }, [
+    initialState.schoolId,
+    initialState.schoolType,
+    initialState.schoolName,
+    initialState.schoolZip,
+    affectedByMissingSchoolData,
+  ]);
 
   const detectedZip = useMemo(
     () =>
@@ -49,113 +70,143 @@ export function useSchoolInfo(initialState: SchoolInfoInitialState) {
 
   const detectedSchoolName = useMemo(
     () =>
-      initialState.schoolName ||
-      sessionStorage.getItem(SCHOOL_NAME_SESSION_KEY) ||
-      '',
-    [initialState.schoolName]
+      initialState.schoolId || affectedByMissingSchoolData
+        ? ''
+        : initialState.schoolName ||
+          sessionStorage.getItem(SCHOOL_NAME_SESSION_KEY) ||
+          '',
+    [
+      initialState.schoolName,
+      initialState.schoolId,
+      affectedByMissingSchoolData,
+    ]
   );
 
-  // State hooks
-  const [country, setCountry] = useState(detectedCountry);
-  const [schoolId, setSchoolId] = useState(detectedSchoolId);
-  const [schoolZip, setSchoolZip] = useState(detectedZip);
-  const [schoolName, setSchoolName] = useState(detectedSchoolName);
+  const [state, setState] = useState<{
+    country: string;
+    schoolId: string;
+    schoolZip: string;
+    schoolName: string;
+  }>({
+    country: detectedCountry,
+    schoolId: detectedSchoolId,
+    schoolZip: detectedZip,
+    schoolName: detectedSchoolName,
+  });
+  const [schoolsLoading, setSchoolsLoading] = useState(false);
   const [schoolsList, setSchoolsList] = useState<SchoolDropdownOption[]>([]);
 
-  const reset = () => {
-    setCountry(detectedCountry);
-    setSchoolId(detectedSchoolId);
-    setSchoolZip(detectedZip);
-    setSchoolName(detectedSchoolName);
+  // State hooks
+  const setCountry = (value: string) => {
+    analyticsReporter.sendEvent(EVENTS.COUNTRY_SELECTED, {country: value});
+    setState(prevState => ({
+      ...prevState,
+      country: value,
+    }));
   };
 
-  // Memoized fetchSchools function using useCallback
-  const fetchSchools = useCallback(
-    (
-      zip: string,
-      callback: (data: {nces_id: number; name: string}[]) => void
-    ) => {
-      fetchSchoolsAPI(zip, callback);
-    },
-    []
-  );
+  const setSchoolId = (value: string) => {
+    if (value === NonSchoolOptions.NO_SCHOOL_SETTING) {
+      analyticsReporter.sendEvent(EVENTS.DO_NOT_TEACH_AT_SCHOOL_CLICKED, {
+        country: country,
+      });
+    } else if (value === NonSchoolOptions.CLICK_TO_ADD) {
+      analyticsReporter.sendEvent(EVENTS.ADD_MANUALLY_CLICKED, {
+        country: country,
+      });
+    } else {
+      analyticsReporter.sendEvent(EVENTS.SCHOOL_SELECTED_FROM_LIST, {
+        'nces Id': value,
+        country: country,
+      });
+    }
+    setState(prevState => ({
+      ...prevState,
+      schoolId: value,
+    }));
+  };
+
+  const setSchoolZip = (value: string) => {
+    if (ZIP_REGEX.test(value)) {
+      analyticsReporter.sendEvent(EVENTS.ZIP_CODE_ENTERED, {
+        zip: value,
+        country: country,
+      });
+    }
+
+    setState(prevState => ({
+      ...prevState,
+      schoolZip: value,
+    }));
+  };
+
+  const setSchoolName = (value: string) => {
+    setState(prevState => ({
+      ...prevState,
+      schoolName: value,
+    }));
+  };
+
+  const reset = () => {
+    setState({
+      country: detectedCountry,
+      schoolId: detectedSchoolId,
+      schoolZip: detectedZip,
+      schoolName: detectedSchoolName,
+    });
+  };
+
+  const handleSessionStorage = (key: string, value: string) => {
+    if (sessionStorage.getItem(key) !== value) {
+      sessionStorage.setItem(key, value);
+    }
+  };
+
+  const {country, schoolId, schoolZip, schoolName} = state;
 
   // Handle country changes
   useEffect(() => {
-    sessionStorage.setItem(SCHOOL_COUNTRY_SESSION_KEY, country);
-
-    if (mounted.current && country) {
-      analyticsReporter.sendEvent(
-        EVENTS.COUNTRY_SELECTED,
-        {country},
-        PLATFORMS.BOTH
-      );
-    }
+    handleSessionStorage(SCHOOL_COUNTRY_SESSION_KEY, country);
   }, [country]);
 
   // Handle schoolZip changes
   useEffect(() => {
     if (!ZIP_REGEX.test(schoolZip)) {
-      sessionStorage.setItem(SCHOOL_ZIP_SESSION_KEY, '');
+      handleSessionStorage(SCHOOL_ZIP_SESSION_KEY, '');
+      setSchoolsList([]);
       return;
     }
 
-    if (sessionStorage.getItem(SCHOOL_ZIP_SESSION_KEY) !== schoolZip) {
-      sessionStorage.setItem(SCHOOL_ZIP_SESSION_KEY, schoolZip);
+    handleSessionStorage(SCHOOL_ZIP_SESSION_KEY, schoolZip);
+    setSchoolsLoading(true);
 
-      analyticsReporter.sendEvent(
-        EVENTS.ZIP_CODE_ENTERED,
-        {zip: schoolZip},
-        PLATFORMS.BOTH
-      );
-    }
+    fetchSchools(schoolZip)
+      .then(data => {
+        if (!mounted.current) return;
 
-    fetchSchools(schoolZip, data => {
-      if (!mounted.current) return;
+        const schools = data
+          .map(constructSchoolOption)
+          .sort((a: SchoolDropdownOption, b: SchoolDropdownOption) =>
+            a.text.localeCompare(b.text)
+          );
 
-      const schools = data
-        .map(constructSchoolOption)
-        .sort((a, b) => a.text.localeCompare(b.text));
-      setSchoolsList(schools);
-
-      // this will auto select the school from the fetched list of schools if the user is updating their school info
-      if (schools.some(school => school.value === detectedSchoolId)) {
-        setSchoolId(detectedSchoolId);
-      }
-    });
-  }, [schoolZip, detectedSchoolId, fetchSchools]);
+        setSchoolsLoading(false);
+        setSchoolsList(schools);
+      })
+      .catch(error => {
+        setSchoolsLoading(false);
+        console.error(error);
+      });
+  }, [schoolZip]);
 
   // Handle schoolId changes
   useEffect(() => {
-    sessionStorage.setItem(SCHOOL_ID_SESSION_KEY, schoolId);
-    if (!mounted.current) return;
-
-    if (schoolId === NonSchoolOptions.NO_SCHOOL_SETTING) {
-      analyticsReporter.sendEvent(
-        EVENTS.DO_NOT_TEACH_AT_SCHOOL_CLICKED,
-        {},
-        PLATFORMS.BOTH
-      );
-    } else if (schoolId === NonSchoolOptions.CLICK_TO_ADD) {
-      analyticsReporter.sendEvent(
-        EVENTS.ADD_MANUALLY_CLICKED,
-        {},
-        PLATFORMS.BOTH
-      );
-    } else {
-      analyticsReporter.sendEvent(
-        EVENTS.SCHOOL_SELECTED_FROM_LIST,
-        {
-          'nces Id': schoolId,
-        },
-        PLATFORMS.BOTH
-      );
-    }
+    handleSessionStorage(SCHOOL_ID_SESSION_KEY, schoolId);
   }, [schoolId]);
 
   // Handle schoolName changes
   useEffect(() => {
-    sessionStorage.setItem(SCHOOL_NAME_SESSION_KEY, schoolName);
+    handleSessionStorage(SCHOOL_NAME_SESSION_KEY, schoolName);
   }, [schoolName]);
 
   // Manage mounted state
@@ -172,6 +223,7 @@ export function useSchoolInfo(initialState: SchoolInfoInitialState) {
     schoolName,
     schoolZip,
     schoolsList,
+    schoolsLoading,
     usIp: initialState.usIp,
     setSchoolId,
     setCountry,

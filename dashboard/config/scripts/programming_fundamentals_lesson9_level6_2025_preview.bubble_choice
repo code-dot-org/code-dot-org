@@ -1,0 +1,9 @@
+name 'programming-fundamentals-lesson9-level6_2025-preview'
+display_name 'Conditionals Practice'
+description 'Pick one of the levels below. Use conditionals to control the Painter.'
+
+sublevels
+level 'programming-fundamentals-lesson9-level6a_2025-preview'
+level 'programming-fundamentals-lesson9-level6b_2025-preview'
+level 'programming-fundamentals-lesson9-level6c_2025-preview'
+level 'programming-fundamentals-lesson9-level6d_2025-preview'

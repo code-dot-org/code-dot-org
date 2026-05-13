@@ -1,0 +1,3 @@
+task :build do
+  puts "Running stub of `rake build`"
+end

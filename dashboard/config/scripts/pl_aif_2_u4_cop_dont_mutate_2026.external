@@ -1,0 +1,77 @@
+name 'pl-aif-2-U4-cop-dont-mutate_2026'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Copying Data: Undo & Reset
+
+#### Sometimes your app should filter or transform data without permanently changing it.
+#### Other times, data will change and users need a way to recover when they make a mistake.
+
+## When should we copy data?
+
+#### Copy data when you want to try something (like filtering, sorting, or editing) without losing the original.
+#### **This is especially important when:**
+
+- #### Users might want to undo an action
+
+- #### Users might want to reset back to the original state
+
+- #### Multiple parts of your app rely on the same dataset
+
+<div style="background-color:#B7E0E5; border-radius:10px; padding:14px; margin:18px auto; max-width:85%;"> <p style="font-size:14pt; margin:0; line-height:135%;"><strong>Key idea:</strong> If you mutate the original data, you can’t easily “go back” unless you saved a copy first.</p> </div>
+
+---
+
+<img src="https://images.code.org/8fcfacdaf4be65223e4409f847e0df09-image-1769615559049.png" alt="spreadsheet with the drop down showing undo and redo" width="350px" style="border-radius:10px; float:right; margin: 0 20px 00px 20px;">
+
+## Real-world examples: Undo and Reset
+
+#### Think about tools like word processors, drawing apps, or photo editors.
+#### **They work because they support recovery:**
+
+- #### Undo lets you step back one change at a time
+
+- #### Reset restores the original version all at once
+
+#### Users expect these options because mistakes are normal. A good interface helps them recover quickly.
+
+<div style="clear:both;"></div>
+
+
+
+<div style="display:flex; gap:14px; flex-wrap:wrap; justify-content:center; margin-top:16px;"> <div style="background:#e4d7f0; border-radius:12px; padding:14px; width:360px; box-shadow:0 2px 8px rgba(0,0,0,0.1);"> <strong style="font-size:14pt;">↩️ Undo</strong> <ul> <li style="font-size:14pt;">Reverses the most recent change</li> <li style="font-size:14pt;">Useful for small mistakes</li> <li style="font-size:14pt;">Often repeatable (undo multiple steps)</li> </ul> </div> <div style="background:#f7bfbf; border-radius:12px; padding:14px; width:360px; box-shadow:0 2px 8px rgba(0,0,0,0.1);"> <strong style="font-size:14pt;">🔄 Reset</strong> <ul> <li style="font-size:14pt;">Restores the original starting point</li> <li style="font-size:14pt;">Useful when users want a “clean slate”</li> <li style="font-size:14pt;">Fast recovery from major changes</li> </ul> </div> </div>
+
+---
+
+## Design thinking: Why this matters
+#### If users don’t have recovery options, they may:
+
+- #### Lose work
+
+- #### Stop trusting the tool
+
+- #### Avoid exploring features
+
+#### Copying data supports good design because it makes recovery possible.
+
+---
+## Reflect
+
+#### Take a moment to reflect before moving on.
+
+- #### What do undo and reset help you do as a user?
+
+- #### What information would an app need to store to make undo/reset possible?
+
+- #### How could changing the original data make recovery harder?
+
+<details style="background-color:#ececec; padding:10px; margin-bottom:10px; border:1px solid transparent; border-radius:8px;"> <summary style="font-size:1.4em; font-weight:bold;">💡 Check your thinking</summary> <div style="margin-top:12px; margin-left:14px; margin-right:14px; margin-bottom:10px; font-size:13pt; line-height:145%;"> <ul> <li style = "font-size: 14pt";>Undo and reset let users recover from mistakes without fear. They support experimentation by making it safe to try things and go back if something doesn’t work.</li> <li style = "font-size: 14pt">The app needs access to a previous version of the data (often the original state or a history of changes) so it can restore what existed before the change.</li> <li style = "font-size: 14pt">If the original data is mutated, the previous state is lost. Without a saved copy, the app has nothing to return to, making undo or reset difficult or impossible.</li> </ul> </div> </details>
+
+---
+
+## Next up
+
+#### In Web Lab, you’ll add Undo and Reset functions and make them work by storing a safe copy of the original data.
+
+MARKDOWN

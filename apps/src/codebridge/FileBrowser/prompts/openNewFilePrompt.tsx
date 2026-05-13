@@ -1,25 +1,25 @@
-import {getNextFileId} from '@codebridge/codebridgeContext';
 import {NewFileFunction} from '@codebridge/codebridgeContext/types';
 import {DEFAULT_FOLDER_ID} from '@codebridge/constants';
-import {ProjectType, FolderId, ProjectFile} from '@codebridge/types';
-import {validateFileName} from '@codebridge/utils';
+import {FolderId, ProjectFile} from '@codebridge/types';
+import {validateFileNameForModal} from '@codebridge/utils';
 
-import codebridgeI18n from '@cdo/apps/codebridge/locale';
-import {
-  DialogType,
-  DialogControlInterface,
-  extractUserInput,
-} from '@cdo/apps/lab2/views/dialogs';
+import {MultiFileSource} from '@cdo/apps/lab2/types';
+import {DialogType, DialogControlInterface} from '@cdo/apps/lab2/views/dialogs';
+import {GenericPromptArgs} from '@cdo/apps/lab2/views/dialogs/GenericPrompt';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 
 type OpenNewFilePromptArgsType = {
   folderId?: FolderId;
   dialogControl: Pick<DialogControlInterface, 'showDialog'>;
   newFile: NewFileFunction;
-  projectFiles: ProjectType['files'];
-  sendCodebridgeAnalyticsEvent: (eventName: string) => unknown;
+  projectFiles: MultiFileSource['files'];
+  sendLab2AnalyticsEvent: (
+    eventName: string,
+    payload?: Record<string, string>
+  ) => void;
   isStartMode: boolean;
   validationFile: ProjectFile | undefined;
+  validFileTypes?: string[];
 };
 
 export const openNewFilePrompt = async ({
@@ -27,39 +27,63 @@ export const openNewFilePrompt = async ({
   dialogControl,
   newFile,
   projectFiles,
-  sendCodebridgeAnalyticsEvent,
+  sendLab2AnalyticsEvent,
   isStartMode,
   validationFile,
+  validFileTypes,
 }: OpenNewFilePromptArgsType) => {
   const results = await dialogControl.showDialog({
     type: DialogType.GenericPrompt,
-    title: codebridgeI18n.newFilePrompt(),
-    validateInput: (fileName: string) =>
-      validateFileName({
+    title: 'Create a new file',
+    message: 'Give your new file a name and type.',
+    messageMargin: true,
+    textFieldProps: {
+      label: 'File name',
+    },
+    dropdownProps: {
+      labelText: 'File type',
+      items: validFileTypes
+        ? validFileTypes.map(fileType => {
+            return {
+              key: fileType,
+              text: fileType.toUpperCase(),
+              value: fileType,
+            };
+          })
+        : [],
+      selectedValue: validFileTypes ? validFileTypes[0] : '',
+      styleAsFormField: true,
+    },
+    confirmButtonText: 'Create file',
+    validateInput: (fileName: string, dropdownValue?: string) =>
+      validateFileNameForModal({
         fileName,
         folderId,
         projectFiles,
         isStartMode,
         validationFile,
+        validFileTypes,
+        selectedFileType: dropdownValue,
       }),
+    useModal: true,
   });
   if (results.type !== 'confirm') {
     return;
   }
-  const fileName = extractUserInput(results);
 
-  const files = Object.values(projectFiles);
-  // The validation file is in the project files in start mode.
-  if (validationFile && !isStartMode) {
-    files.push(validationFile);
-  }
-  const fileId = getNextFileId(files);
+  const {textField: baseFileName, dropdown: selectedExtension} =
+    results.args as GenericPromptArgs;
+  const fileName = selectedExtension
+    ? `${baseFileName}.${selectedExtension}`
+    : baseFileName;
 
   newFile({
-    fileId,
     fileName,
     folderId,
   });
 
-  sendCodebridgeAnalyticsEvent(EVENTS.CODEBRIDGE_NEW_FILE);
+  sendLab2AnalyticsEvent(EVENTS.CODEBRIDGE_NEW_FILE, {
+    fileType:
+      selectedExtension || fileName.split('.').pop()?.toLowerCase() || '',
+  });
 };

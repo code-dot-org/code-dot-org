@@ -1,13 +1,13 @@
-import {
-  getNextFileId,
-  getNextFolderId,
-} from '@codebridge/codebridgeContext/utils';
 import {DEFAULT_FOLDER_ID} from '@codebridge/constants';
 import _ from 'lodash';
 import {PyodideInterface} from 'pyodide';
 
 import {MAIN_PYTHON_FILE} from '@cdo/apps/lab2/constants';
 import {MultiFileSource} from '@cdo/apps/lab2/types';
+import {
+  getNextFileId,
+  getNextFolderId,
+} from '@cdo/apps/lab2/utils/multiFileSourceUtils';
 
 import {PyodideMessage, PyodidePathContent} from '../types';
 
@@ -72,13 +72,16 @@ export function writeSource(
 // these are files such as validation that do not need to be saved to the user's project.
 export function getUpdatedSourceAndDeleteFiles(
   source: MultiFileSource,
-  id: number,
+  id: string,
   pyodide: PyodideInterface,
   sendMessage: (message: PyodideMessage) => void,
   skippedFilenames: string[] = []
 ) {
   const workingDir = pyodide.FS.cwd();
-  const directoryData = pyodide.FS.lookupPath(workingDir, {}).node;
+  // We are setting pyodide.FS to any here because the provided type for directoryData.contents
+  // is number[], which is not correct. It is an array of objects.
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  const directoryData = (pyodide.FS.lookupPath(workingDir, {}) as any).node;
   const directoryContents = Object.values(
     directoryData.contents
   ) as PyodidePathContent[];
@@ -101,13 +104,12 @@ function updateAndDeleteSourceWithContents(
   source: MultiFileSource,
   currentPath: string,
   folderId: string,
-  id: number,
+  id: string,
   pyodide: PyodideInterface,
   sendMessage: (message: PyodideMessage) => void,
   skippedFilenames: string[] = []
 ) {
   contents.forEach(content => {
-    const fileExtension = content.name.split('.').pop();
     const fullPath = currentPath + content.name;
     if (pyodide.FS.isFile(content.mode)) {
       // Only update the source with files that are not skipped.
@@ -126,7 +128,6 @@ function updateAndDeleteSourceWithContents(
               id: newFileId,
               folderId,
               name: content.name,
-              language: fileExtension || '',
               contents: newContents,
             };
           } else {

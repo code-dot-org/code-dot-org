@@ -1,0 +1,13 @@
+name 'HoAI_intro_2'
+title 'Review'
+description 'description here'
+
+markdown <<MARKDOWN
+
+  <h1 style="text-align: center;"> Let's get this party started!</h1>
+
+
+![](https://images.code.org/aff53a582f93f44fa982055bf06868b9-image-1759185089999.jpg)
+MARKDOWN
+
+"First, team up with AI to create your own star dancer. Next, remix a track to set the vibe. Finally, code an original dance routine to bring your dancer and music to life!"

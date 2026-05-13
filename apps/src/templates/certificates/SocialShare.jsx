@@ -1,3 +1,5 @@
+import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
+import {Button as MuiButton, IconButton as MuiIconButton} from '@mui/material';
 import PropTypes from 'prop-types';
 import React, {useEffect, useState} from 'react';
 
@@ -6,6 +8,22 @@ import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import color from '@cdo/apps/util/color';
 import i18n from '@cdo/locale';
+
+import moduleStyles from './social_share.module.scss';
+
+// Avoids setting state on unmounted components in tests, which produce console.error messsages from React.
+function testAvailability(url, setAvailability) {
+  let isMounted = true;
+  testImageAccess(url, () => {
+    if (isMounted) {
+      setAvailability(true);
+    }
+  });
+
+  return () => {
+    isMounted = false;
+  };
+}
 
 export default function SocialShare({
   facebook,
@@ -21,21 +39,21 @@ export default function SocialShare({
   const [isLinkedinAvailable, setIsLinkedinAvailable] = useState(false);
 
   useEffect(() => {
-    testImageAccess(
+    return testAvailability(
       'https://facebook.com/favicon.ico' + '?' + Math.random(),
-      () => setIsFacebookAvailable(true)
+      setIsFacebookAvailable
     );
   }, []);
   useEffect(() => {
-    testImageAccess(
-      'https://twitter.com/favicon.ico' + '?' + Math.random(),
-      () => setIsTwitterAvailable(true)
+    return testAvailability(
+      'https://x.com/favicon.ico' + '?' + Math.random(),
+      setIsTwitterAvailable
     );
   }, []);
   useEffect(() => {
-    testImageAccess(
+    return testAvailability(
       'https://www.linkedin.com/favicon.ico' + '?' + Math.random(),
-      () => setIsLinkedinAvailable(true)
+      setIsLinkedinAvailable
     );
   }, []);
 
@@ -51,63 +69,77 @@ export default function SocialShare({
   const linkedShareUrl = `https://www.linkedin.com/sharing/share-offsite/?${linkedin}`;
 
   return (
-    <div>
+    <div className={moduleStyles.social_share_container}>
       {/* note that linkedin share doesn't work with localhost urls */}
       {!under13 && isPlCourse && isLinkedinAvailable && (
-        <a
+        <MuiIconButton
+          variant="contained"
+          color="primary"
+          size="small"
+          aria-label={i18n.shareToLinkedIn()}
+          onClick={e => onShare(e, 'linkedin')}
+          style={{backgroundColor: color.linkedin_blue}}
           href={linkedShareUrl}
           target="_blank"
           rel="noopener noreferrer"
-          onClick={e => onShare(e, 'linkedin')}
         >
-          <button
-            type="button"
-            style={{background: color.linkedin_blue, ...styles.shareButton}}
-            onClick={e => e.preventDefault()}
-          >
-            <i className="fa fa-linkedin" title={i18n.shareToLinkedIn()} />
-          </button>
-        </a>
+          <FontAwesomeV6Icon
+            iconName="linkedin"
+            iconFamily="brands"
+            title={i18n.shareToLinkedIn()}
+          />
+        </MuiIconButton>
       )}
 
       {!under13 && isFacebookAvailable && (
-        <a
+        <MuiIconButton
+          variant="contained"
+          color="primary"
+          size="small"
+          aria-label={i18n.shareToFacebook()}
+          onClick={e => onShare(e, 'facebook')}
+          style={{backgroundColor: color.facebook_blue}}
           href={facebookShareUrl}
           target="_blank"
           rel="noopener noreferrer"
-          onClick={e => onShare(e, 'facebook')}
         >
-          <button
-            type="button"
-            style={{background: color.facebook_blue, ...styles.shareButton}}
-            onClick={e => e.preventDefault()}
-          >
-            <i className="fa fa-facebook" title={i18n.shareToFacebook()} />
-          </button>
-        </a>
+          <FontAwesomeV6Icon
+            iconName="facebook"
+            iconFamily="brands"
+            title={i18n.shareToFacebook()}
+          />
+        </MuiIconButton>
       )}
       {!under13 && isTwitterAvailable && (
-        <a
+        <MuiIconButton
+          variant="contained"
+          color="primary"
+          size="small"
+          aria-label={i18n.shareToTwitter()}
+          onClick={e => onShare(e, 'twitter')}
+          style={{backgroundColor: color.x_black}}
           href={twitterShareUrl}
           target="_blank"
           rel="noopener noreferrer"
-          onClick={e => onShare(e, 'twitter')}
         >
-          <button
-            type="button"
-            style={{background: color.twitter_blue, ...styles.shareButton}}
-            onClick={e => e.preventDefault()}
-          >
-            <i className="fa fa-twitter" title={i18n.shareToTwitter()} />
-          </button>
-        </a>
+          <FontAwesomeV6Icon
+            iconName="x-twitter"
+            iconFamily="brands"
+            title={i18n.shareToTwitter()}
+          />
+        </MuiIconButton>
       )}
-      <a href={print} className="social-print-link">
-        <button type="button" style={styles.printButton}>
-          <i className="fa fa-print" />
-          {' ' + i18n.print()}
-        </button>
-      </a>
+      <MuiButton
+        variant="outlined"
+        color="tertiary"
+        size="small"
+        loadingPosition="start"
+        className="social-print-link"
+        href={print}
+        startIcon={<FontAwesomeV6Icon iconName="print" />}
+      >
+        {i18n.print()}
+      </MuiButton>
     </div>
   );
 }
@@ -120,17 +152,4 @@ SocialShare.propTypes = {
   under13: PropTypes.bool,
   isPlCourse: PropTypes.bool,
   userType: PropTypes.string,
-};
-
-const styles = {
-  shareButton: {
-    color: color.white,
-    minWidth: 40,
-  },
-  printButton: {
-    backgroundColor: 'transparent',
-    borderColor: color.black,
-    borderWidth: '1px',
-    padding: '10px 20px',
-  },
 };

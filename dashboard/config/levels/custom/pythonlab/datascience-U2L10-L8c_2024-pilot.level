@@ -22,7 +22,8 @@
           "contents": "import pandas as pd\n\n\ndf = pd.read_csv('fabric_dye_log.csv')\n\n# Step 1\n\n\n# Step 2\n\n\n# Step 3\n\n\n# Step 4\n\n",
           "folderId": "0",
           "active": true,
-          "open": true
+          "open": true,
+          "type": "locked_starter"
         },
         "1": {
           "id": "1",
@@ -57,6 +58,6 @@
     }
   },
   "published": true,
-  "audit_log": "[{\"changed_at\":\"2024-09-17T22:50:00.670+00:00\",\"changed\":[\"cloned from \\\"datascience-U2L10-L8b_2024-pilot\\\"\"],\"cloned_from\":\"datascience-U2L10-L8b_2024-pilot\"},{\"changed_at\":\"2024-09-17 22:54:07 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\",\"display_name\",\"bubble_choice_description\",\"thumbnail_url\",\"teacher_markdown\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2024-09-17 22:55:07 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2024-10-02 17:41:20 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2024-10-02 17:41:24 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2024-10-02 17:51:07 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2024-10-02 17:51:13 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2024-10-03 16:41:41 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18753,\"changed_by_email\":\"molly+levelbuilder@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2024-09-17T22:50:00.670+00:00\",\"changed\":[\"cloned from \\\"datascience-U2L10-L8b_2024-pilot\\\"\"],\"cloned_from\":\"datascience-U2L10-L8b_2024-pilot\"},{\"changed_at\":\"2024-09-17 22:54:07 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\",\"display_name\",\"bubble_choice_description\",\"thumbnail_url\",\"teacher_markdown\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2024-09-17 22:55:07 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2024-10-02 17:41:20 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2024-10-02 17:41:24 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2024-10-02 17:51:07 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2024-10-02 17:51:13 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2024-10-03 16:41:41 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18753,\"changed_by_email\":\"molly+levelbuilder@code.org\"},{\"changed_at\":\"2024-10-21 16:54:23 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18914,\"changed_by_email\":\"samantha.schwartz+levelbuilder@code.org\"}]"
 }]]></config>
 </Pythonlab>

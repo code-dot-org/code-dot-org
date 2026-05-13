@@ -7,7 +7,7 @@ markdown <<MARKDOWN
 
 <div style="background-color: #a6e3e8; border-radius: 40px; color: #000000; width: 95%; padding: 1px 20px 1px 20px;">
 
-<p style="line-height: 1.5; margin-left: 10px; margin-right: 10px; margin-top: 10px; margin-bottom: 10px; font-size: 14px; "><strong>Teacher Tip: </strong> Data science is everywhere, influencing industries from healthcare to sports. Connecting your students to these real-world applications helps them see the relevance of what they’re learning and deepens their understanding.  
+<p style="line-height: 1.5; margin-left: 10px; margin-right: 10px; margin-top: 10px; margin-bottom: 10px; font-size: 16px; "><strong>Teacher Tip: </strong> Data science is everywhere, influencing industries from healthcare to sports. Connecting your students to these real-world applications helps them see the relevance of what they’re learning and deepens their understanding.  
 </p>
 </div>
 
@@ -101,6 +101,8 @@ markdown <<MARKDOWN
            
         </tr>
     </table>
+
+
 
 
 

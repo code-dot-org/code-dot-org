@@ -1,6 +1,6 @@
 # The Apps Package
 
-The **Apps Package** contains most of our client-side JavaScript, particularly the source code for the [Blockly](https://developers.google.com/blockly/) based 20 hour curriculum, Hour of Code, and our Droplet-based levels (including App Lab). Information about Blockly can be found in the [wiki](https://github.com/google/blockly/wiki).
+The **Apps Package** contains most of our client-side JavaScript, particularly the source code for the [Blockly](https://developers.google.com/blockly/) based 20 hour curriculum, Hour of Code, and our Droplet-based levels (including App Lab). Information about Blockly can be found in the [wiki](https://github.com/RaspberryPiFoundation/blockly/wiki).
 
 Blockly is a web-based, graphical programming editor. Users can drag blocks together to build an application. No typing required. Credit goes to these awesome [developers](https://github.com/google/blockly/graphs/contributors)
 and a small army of translators.
@@ -169,11 +169,6 @@ document.write('<audio src="/base/test/audio/assets/win.mp3"/>');
 We use Storybook to generate a UI component style guide that you can use
 to discover what components are available to reuse as you build new
 features. See more in the [apps/.storybook README](./.storybook/README.md).
-
-### Full build with blockly changes
-
-1. Check out a local copy of [blockly](https://github.com/code-dot-org/blockly/)
-1. Follow the directions in [Building with apps](https://github.com/code-dot-org/blockly#building-with-apps)
 
 ### Analyzing bundle sizes
 

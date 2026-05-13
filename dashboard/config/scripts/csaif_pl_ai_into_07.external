@@ -1,0 +1,30 @@
+name 'csaif_pl_ai_into_07'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# What is Artificial Intelligence
+
+<img src="https://images.code.org/94c91bb3b11d912f8b4c38f34b241e09-image-1712760508654.png" alt="AI bot with thought bubbles" width="250px" style="border-radius:10px; float:right; margin: 10px 50px 0px 40px;">
+
+
+## Defining AI
+
+#### **Artificial intelligence** (AI) is a technology that mimics human intelligence, performing tasks such as understanding language, recognizing patterns, and making decisions.
+
+#### Generative AI is a type of artificial intelligence that can create new content. In this unit, we will be mostly working with a specific type of generative AI - Large Language Models, or LLMs. You may have engaged with Gemini or ChatGPT before - these are LLMs.
+
+<br>
+
+---
+
+## Why students should learn it
+
+#### Understanding how generative AI works is important for students because it helps them understand the technology shaping our world, fostering critical thinking about its capabilities and limitations. 
+
+#### Many students have already encountered AI in tools like search engines, social media, and voice assistants. 
+
+#### Additionally, this knowledge empowers them to use AI responsibly and creatively in their future careers.
+
+
+MARKDOWN
