@@ -15,33 +15,26 @@ vi.mock('@code-dot-org/core/plugins/observability', () => ({
   metrics: {count: vi.fn()},
 }));
 
-// Replace the DashboardApiClient singleton with one backed by a mock
-// transport. Other exports (createApiClient, createMockTransport, schemas,
-// React hooks, etc.) pass through untouched via importActual.
+// Replace the DashboardApiClient singleton with stub methods that resolve to
+// the minimum shape App.tsx consumes. Other exports pass through untouched.
 vi.mock('@code-dot-org/core/api', async () => {
   const actual = await vi.importActual<typeof import('@code-dot-org/core/api')>(
     '@code-dot-org/core/api',
   );
 
-  const transport = actual.createMockTransport({
-    baseUrl: '',
-    routes: [
-      {
-        method: 'GET',
-        url: '/levels/46446/level_properties',
-        handler: () => ({}),
-      },
-      {
-        method: 'GET',
-        url: '/user_preference/theme',
-        handler: () => ({theme: {}}),
-      },
-    ],
-  });
-
   return {
     ...actual,
-    DashboardApiClient: actual.createApiClient(transport),
+    DashboardApiClient: {
+      ...actual.DashboardApiClient,
+      levels: {
+        ...actual.DashboardApiClient.levels,
+        getLevelProperties: async () => ({}),
+      },
+      preferences: {
+        ...actual.DashboardApiClient.preferences,
+        getThemeSettings: async () => ({}),
+      },
+    },
   };
 });
 
