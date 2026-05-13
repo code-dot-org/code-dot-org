@@ -56,8 +56,19 @@ under the lab key and `setActiveScenario` picks the active one from the URL.
    dashboard host the kyTransport is pointed at.
 3. Pull data from `getActiveFixture()` and fall back to a sensible default
    when the fixture is absent.
-4. For writes, persist via `scenarioStore` (sessionStorage write-through —
-   coming in a follow-up).
+4. For writes, persist via `scenarioStore`'s `writeResource(name, value)`;
+   reads layer `readResource()` over the fixture for the latest state.
+
+## Write-through and reset
+
+Writes (POST/PUT to channels, sources, thumbnails, etc.) persist to
+`sessionStorage` under keys shaped `cdo-mock:<labKey>:<tag>:<resource>`.
+Reads pick up those overrides on the next call, so reloading the page keeps
+your edits within a browser session.
+
+To wipe the store, navigate with `?cdoMockReset=1`. Studio's `enableMocks`
+calls `maybeResetFromUrl()` before the worker starts and strips the param
+from the URL so subsequent reloads don't reset again.
 
 ## Files
 
@@ -68,6 +79,7 @@ under the lab key and `setActiveScenario` picks the active one from the URL.
 | `worker.ts`               | `startMockWorker()` — dynamic import of `msw/browser`, idempotent    |
 | `levels.handlers.ts`      | `*/levels/:id/level_properties` and the script/lesson/project shapes |
 | `preferences.handlers.ts` | `*/user_preference/theme`                                            |
-| `channels.handlers.ts`    | Stub — to be filled in                                               |
-| `sources.handlers.ts`     | Stub — to be filled in                                               |
-| `projects.handlers.ts`    | Stub — to be filled in                                               |
+| `channels.handlers.ts`    | `*/v3/channels/:id`, publish/unpublish, abuse, sharing, teacher flag |
+| `sources.handlers.ts`     | `*/v3/sources/:channelId/...` GET/PUT, versions, restore             |
+| `projects.handlers.ts`    | `*/projects/...` channel-for-level, commits, extra_links, thumbnail  |
+| `scenarioStore.ts`        | sessionStorage write-through, namespaced by lab + tag                |

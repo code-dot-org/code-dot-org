@@ -7,7 +7,13 @@ export async function enableMocks(): Promise<void> {
   if (import.meta.env.VITE_API_MODE !== 'msw') return;
 
   // Dynamic import keeps msw and its handlers out of the production bundle.
-  const {startMockWorker} = await import('@code-dot-org/core/api/mocks');
+  const {startMockWorker, maybeResetFromUrl} = await import(
+    '@code-dot-org/core/api/mocks'
+  );
+
+  // `?cdoMockReset=1` wipes the sessionStorage scenarioStore. Honor it
+  // before any handler reads from the store.
+  maybeResetFromUrl();
 
   // vite-plugin-rails sets Vite's `base` from `config/vite.json`
   // (e.g. `/frontend-studio/`), so `public/mockServiceWorker.js` is served at
