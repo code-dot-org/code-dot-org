@@ -38,9 +38,16 @@ export default class JavabuilderConnection {
     onValidationPassed,
     onValidationFailed,
     onConnectDone,
-    setIsCaptchaDialogOpen
+    setIsCaptchaDialogOpen,
+    // Project state, sourced either from the legacy `project` singleton (when
+    // unset, on the legacy code path) or from lab2's ProjectManager (when
+    // set, on the new code path).
+    projectState = undefined
   ) {
-    this.channelId = project.getCurrentId();
+    this.projectChannelId = projectState?.channelId ?? project.getCurrentId();
+    this.projectHasBeenEdited =
+      projectState?.hasBeenEdited ?? project.getCurrentId() !== undefined;
+    this.channelId = this.projectChannelId;
     this.onOutputMessage = onMessage;
     this.miniApp = miniApp;
     this.levelId = serverLevelId;
@@ -155,7 +162,7 @@ export default class JavabuilderConnection {
     // that has not been modified from the starter code.
     // This case does not apply to students, who are able to execute unmodified starter code.
     // See this comment for more detail: https://github.com/code-dot-org/code-dot-org/pull/42313#discussion_r701417221
-    if (checkProjectEdited && project.getCurrentId() === undefined) {
+    if (checkProjectEdited && !this.projectHasBeenEdited) {
       this.onOutputMessage(javalabMsg.errorProjectNotEditedYet());
       return;
     }

@@ -1,3 +1,7 @@
+// TODO(javalab-lab2): delete after migration completes.
+// Orchestration moved to apps/src/javalab/lab2/JavaLab2View.tsx;
+// uses_lab2? is now true on the Javalab Rails level so this file's
+// init path is no longer reached.
 import React from 'react';
 import {Provider} from 'react-redux';
 

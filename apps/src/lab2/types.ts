@@ -19,6 +19,7 @@ import type * as BlocklyCore from 'blockly/core';
 import {ComponentType, CSSProperties, LazyExoticComponent} from 'react';
 
 import {BlockDefinition} from '@cdo/apps/blockly/types';
+import type {JavalabSource} from '@cdo/apps/javalab/lab2/types';
 import {LevelPredictSettings} from '@cdo/apps/lab2/levelEditors/types';
 import {AiTutorPromptSettings} from '@cdo/apps/weblab2/types';
 
@@ -91,7 +92,8 @@ export type Source =
   | BlocklySource
   | MultiFileSource
   | ExcalidrawSourceWithExternalFiles
-  | SketchlabReactFlowSource;
+  | SketchlabReactFlowSource
+  | JavalabSource;
 
 // -- REACT FLOW SKETCH LAB -- //
 

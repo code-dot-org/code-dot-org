@@ -1,3 +1,8 @@
+// TODO(javalab-lab2): delete after migration completes.
+// This connected class component was the legacy top-level view, mounted by
+// Javalab.js. Under lab2, apps/src/javalab/lab2/JavaLab2View.tsx renders
+// JavalabView as a leaf for compatibility; once that path is removed in a
+// follow-up cleanup, this file can be deleted too.
 import PropTypes from 'prop-types';
 import React from 'react';
 import {connect} from 'react-redux';

@@ -178,4 +178,37 @@ class Javalab < Level
   def get_starter_code
     properties["start_sources"]
   end
+
+  def uses_lab2?
+    true
+  end
+
+  # Pass Javalab-specific level properties to the lab2 frontend. The base
+  # implementation in Level emits camelCased serialized_attrs; we add the
+  # neighborhood-specific maze fields the legacy code path attached in
+  # non_blockly_puzzle_level_options.
+  def summarize_for_lab2_properties(script, script_level = nil, current_user = nil, unit_group_unit: nil)
+    level_properties = super
+    if csa_view_mode == 'neighborhood'
+      level_properties[:serializedMaze] = get_serialized_maze
+      level_properties[:startDirection] = start_direction || project_template_level.try(:start_direction)
+    end
+    level_properties
+  end
+
+  # Lab2 progress system condition: report PASSED_ALL_TESTS when the level
+  # has validation. Mirrors Pythonlab.get_validations.
+  def get_validations
+    return nil unless validated?
+    [{
+      conditions: [
+        {
+          name: 'PASSED_ALL_TESTS',
+          value: 'true',
+        },
+      ],
+      message: '',
+      next: true,
+    }]
+  end
 end
