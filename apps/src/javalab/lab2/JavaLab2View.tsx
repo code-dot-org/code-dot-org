@@ -55,7 +55,10 @@ import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import Neighborhood from '@cdo/apps/miniApps/neighborhood/Neighborhood';
 import {getStore, registerReducers} from '@cdo/apps/redux';
 import authoredHints from '@cdo/apps/redux/authoredHints';
-import instructions from '@cdo/apps/redux/instructions';
+import instructions, {
+  setInstructionsConstants,
+  setInstructionsRenderedHeightAndCollapsed,
+} from '@cdo/apps/redux/instructions';
 import pageConstants, {setPageConstants} from '@cdo/apps/redux/pageConstants';
 import runState from '@cdo/apps/redux/runState';
 import {BackpackAPIContext} from '@cdo/apps/sharedComponents/backpack/BackpackAPIContext';
@@ -136,6 +139,33 @@ function publishPageConstantsOnce(
   pageConstantsPublished = true;
 }
 
+// Page-stable instructions constants. The reducer throws on a second
+// SET_CONSTANTS once shortInstructions or longInstructions are set; we
+// dispatch only the truly-stable fields here (programmingEnvironment used
+// by DocumentationTab to build doc URLs, noInstructionsWhenCollapsed for
+// Java Lab's panel rendering style). Per-level fields like longInstructions
+// flow through Lab2TopInstructions via state.lab.levelProperties.
+let instructionsConstantsPublished = false;
+function publishInstructionsConstantsOnce() {
+  if (instructionsConstantsPublished) return;
+
+  getStore().dispatch(
+    setInstructionsConstants({
+      programmingEnvironment: 'javalab',
+      noInstructionsWhenCollapsed: true,
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    } as any)
+  );
+  // The SET_CONSTANTS reducer auto-collapses when its `longInstructions` and
+  // `hasContainedLevels` are both falsy. Java Lab does have long
+  // instructions, but they come through Lab2TopInstructions from
+  // state.lab.levelProperties — not through this dispatch — so the reducer
+  // can't see them. Reset isCollapsed to false; TopInstructions.componentDidMount
+  // will set the proper rendered height a moment later.
+  getStore().dispatch(setInstructionsRenderedHeightAndCollapsed(0, false));
+  instructionsConstantsPublished = true;
+}
+
 // Build an assetUrl function compatible with the legacy skinsBase contract:
 // `(path) => baseUrl + path`. baseUrl is set server-side to Blockly.base_url
 // (see app_options[:baseUrl] in dashboard/app/helpers/levels_helper.rb) and
@@ -201,6 +231,7 @@ const JavaLab2View: React.FunctionComponent<
     isSubmitted: false,
     isReadOnlyWorkspace: false,
   });
+  publishInstructionsConstantsOnce();
 
   // Mirror the lab2 theme into the legacy viewRedux so JavalabView/
   // CodeMirror styling tracks the theme picker. setDisplayTheme is typed
