@@ -142,9 +142,9 @@ class Pd::ProfessionalLearningController < ApplicationController
   def workshops_as_facilitator_for_pl_page
     workshops_as_facilitator =
       current_user.
-      pd_workshops_facilitated&.
-      order_by_scheduled_start&.
-      reject {|workshop| workshop.state == Pd::Workshop::STATE_ENDED}
+        pd_workshops_facilitated&.
+        order_by_scheduled_start&.
+        reject {|workshop| workshop.state == Pd::Workshop::STATE_ENDED}
     workshops_as_facilitator_with_surveys_completed = Pd::WorkshopSurveyFoormSubmission.where(user: current_user, pd_workshop: workshops_as_facilitator).pluck(:pd_workshop_id).uniq
     summarized_workshops_as_facilitator = workshops_as_facilitator.map do |workshop|
       workshop.summarize_for_my_pl_page.merge({feedback_given: workshops_as_facilitator_with_surveys_completed.include?(workshop.id)})
@@ -232,7 +232,7 @@ class Pd::ProfessionalLearningController < ApplicationController
   # Returns if the given workshop is within the provided regional partner's area.
   private def in_region?(workshop, regional_partner)
     workshop.regional_partner_id == regional_partner.id &&
-      (['Regional', 'National'].include?(workshop.participant_group_type)  ||
+      (['Regional', 'National'].include?(workshop.participant_group_type) ||
       [Pd::Workshop::COURSE_CSD, Pd::Workshop::COURSE_CSP, Pd::Workshop::COURSE_CSA, Pd::Workshop::COURSE_CSF].include?(workshop.course))
   end
 

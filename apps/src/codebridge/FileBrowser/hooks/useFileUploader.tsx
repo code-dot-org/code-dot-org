@@ -42,43 +42,49 @@ export const useFileUploader = (
   // Skip moderating images that are added by levelbuilders in start mode.
   const onImageFlaggedWithOverride = isStartMode ? undefined : onImageFlagged;
 
-  const uploadExternalFile = useCallback(
-    async (file: File) => {
+  const generateUploadUrl = useCallback(
+    (file: File): string => {
       const uuid = createUuid();
       const fileType = file.name.split('.').pop();
-
       if (isStartMode || isEditingExemplar) {
-        const bodyData = new FormData();
-        bodyData.append('files[]', file);
-
         const encodedLevelName = encodeURIComponent(name);
-        const url = `/level_starter_assets/${encodedLevelName}/uuid/${uuid}.${fileType}`;
-        await HttpClient.post(url, bodyData, true);
-        return url;
+        return `/level_starter_assets/${encodedLevelName}/uuid/${uuid}.${fileType}`;
       } else {
-        const url = `/v3/assets/${channelId}/${uuid}.${fileType}`;
-        await HttpClient.put(url, file);
-        return url;
+        return `/v3/assets/${channelId}/${uuid}.${fileType}`;
       }
     },
     [channelId, isStartMode, isEditingExemplar, name]
+  );
+
+  const uploadExternalFile = useCallback(
+    async (file: File, precomputedUrl?: string) => {
+      const url = precomputedUrl ?? generateUploadUrl(file);
+      if (isStartMode || isEditingExemplar) {
+        const bodyData = new FormData();
+        bodyData.append('files[]', file);
+        await HttpClient.post(url, bodyData, true);
+      } else {
+        await HttpClient.put(url, file);
+      }
+      return url;
+    },
+    [generateUploadUrl, isStartMode, isEditingExemplar]
   );
 
   const sendAnalyticsEvent = useCallback(
     (eventName: string, payload: Record<string, string>) => {
       switch (eventName) {
         case analyticsEvents.UPLOAD_FAILED: {
-          sendLab2AnalyticsEvent(EVENTS.CODEBRIDGE_UPLOAD_UNACCEPTED_FILE, {
+          sendLab2AnalyticsEvent(EVENTS.CODEBRIDGE_UPLOAD_FAILED, {
             ...payload,
-            fileType: payload.fileName.split('.').pop()?.toLowerCase() || '',
           });
           return;
         }
         case analyticsEvents.UPLOAD_UNACCEPTED_FILE: {
-          sendLab2AnalyticsEvent(EVENTS.CODEBRIDGE_UPLOAD_FAILED, {
+          sendLab2AnalyticsEvent(EVENTS.CODEBRIDGE_UPLOAD_UNACCEPTED_FILE, {
             ...payload,
-            fileType: payload.fileName.split('.').pop()?.toLowerCase() || '',
           });
+          return;
         }
       }
     },
@@ -104,6 +110,9 @@ export const useFileUploader = (
     sendAnalyticsEvent,
     validateFileName,
     uploadExternalFile,
+    generateUploadUrl: onImageFlaggedWithOverride
+      ? generateUploadUrl
+      : undefined,
     onImageFlagged: onImageFlaggedWithOverride,
     ...lab2FileUploaderArgs,
   });

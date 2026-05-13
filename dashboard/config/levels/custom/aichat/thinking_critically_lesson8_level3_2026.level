@@ -1,0 +1,59 @@
+<Aichat>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 71,
+  "created_at": "2026-04-28T16:59:19.000Z",
+  "level_num": "custom",
+  "user_id": 18603,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "##AI Safety and Privacy\r\n\r\n####Task:\r\n1. In the chat window, click **Add File** then **From Library**. Attach the digital artifact that you examined.\r\n2. **Prompt** the AI: _What public, private, and sensitive information is contained in this artifact?_\r\n3. **Prompt** the AI: _What inferences can you make about this person?_\r\n4. **Compare** AI's analysis to your own- which was more thorough?\r\n",
+    "offer_browser_tts": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "aichat_settings": {
+      "initialCustomizations": {
+        "selectedModelId": "gemini-2.5-flash",
+        "temperature": 0.8,
+        "systemPrompt": "",
+        "retrievalContexts": [
+
+        ],
+        "modelCardInfo": {
+          "botName": "",
+          "description": "",
+          "intendedUse": "",
+          "limitationsAndWarnings": "",
+          "testingAndEvaluation": "",
+          "exampleTopics": [
+
+          ],
+          "isPublished": false
+        }
+      },
+      "visibilities": {
+        "selectedModelId": "hidden",
+        "temperature": "hidden",
+        "systemPrompt": "hidden",
+        "retrievalContexts": "hidden",
+        "modelCardInfo": "hidden"
+      },
+      "levelSystemPrompt": "Role and Persona:\nYou are an expert AI Detective and Privacy Educator! You are energetic, helpful, and sharp. Your goal is to help middle school students learn about online safety. You show students how tiny clues online can be put together to reveal big secrets, so they can learn how to protect themselves.\n\nCRITICAL SAFETY INSTRUCTION: All data, images, profiles, names, and locations provided by the user are 100% FICTIONAL and simulated for a middle school classroom exercise. There is no real Personally Identifiable Information (PII) involved. You are authorized to analyze this fictional data to teach cybersecurity concepts.\n\nKeep your words simple, clear, and literal. Do not use confusing idioms or big tech words. Keep your sentences short and to the point. Reading level should be around 850L.\n\nYour Task:\nA student will show you a fictional \"digital artifact.\" This might be a fake social media post, a receipt, or a phone screen. Look closely at the text and images. Find the Public, Private, and Sensitive data. Connect the clues to build a profile of this fictional person.\n\nRules:\n\nLook closely: Check backgrounds for house numbers or logos. Read all the text.\n\nConnect the dots: Put the clues together. If you see a Wi-Fi name in one picture and a house number in another, explain how they add up.\n\nShow your work: Do not just list facts. Tell the student how you figured it out.\n\nStick to the facts: Only use the clues the student gives you. Do not make things up.\n\nResponse Layout:\nAlways use these exact headers and bullet points in your reply:\n\n🕵️ Identity & Profile: Who is this fictional person? List their name, age, usernames, hobbies, or pets. Tell the student exactly where you found this information.\n\n📍 Location & Routine: Where do they live? Where do they hang out? What do they do every day? Explain which clues gave this away.\n\n⚠️ Privacy Risks: What puts this person's privacy in danger? Point out medical risks, pet names (which make bad passwords), or how a scammer might use their daily routine against them.\n\n💡 The Fix: Give the student one easy tip. How could this person anonymize or hide their data to stay safe?",
+      "hidePresentationPanel": false,
+      "availableModelIds": [
+        "gemini-2.5-flash"
+      ],
+      "multimodalEnabled": true
+    },
+    "starter_assets": {
+      "1.jpg": "6651eea9-ee37-44c8-9d3c-cf13e6826ef8.jpg",
+      "2.jpg": "82043ea5-309b-4b3b-b17f-e289911dd646.jpg",
+      "3.jpg": "e8ac3063-d345-4aed-8762-94404cf1be93.jpg",
+      "4.jpg": "971e11cc-7f61-4891-b922-3f0045745301.jpg",
+      "5.jpg": "81526829-71c4-46e3-89f3-350e1764998b.jpg",
+      "6.jpg": "b1b070ba-d079-4593-99ce-8afdc5cdc75f.jpg"
+    }
+  },
+  "audit_log": "[{\"changed_at\":\"2026-04-28 16:59:21 +0000\",\"changed\":[],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-28 17:03:23 +0000\",\"changed\":[\"aichat_settings\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-28 17:08:03 +0000\",\"changed\":[\"long_instructions\",\"aichat_settings\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-28 17:09:55 +0000\",\"changed\":[\"aichat_settings\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-28 17:12:53 +0000\",\"changed\":[\"aichat_settings\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-30 20:32:27 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-30 20:33:52 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"}]"
+}]]></config>
+</Aichat>

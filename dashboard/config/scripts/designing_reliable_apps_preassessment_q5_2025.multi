@@ -1,0 +1,14 @@
+name 'designing-reliable-apps-preassessment-q5_2025'
+
+question 'What does fetch() immediately return when it is called in JavaScript?'
+
+wrong 'The actual data from the API as a usable JavaScript object'
+right 'A Promise object representing a result that has not arrived yet'
+wrong 'An error message if the server is unavailable at that moment'
+wrong 'A string of raw HTML from the server\'s response'
+
+allow_multiple_attempts true
+
+teacher_markdown <<MARKDOWN
+Lesson 3
+MARKDOWN

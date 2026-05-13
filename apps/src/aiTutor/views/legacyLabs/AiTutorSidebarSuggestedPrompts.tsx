@@ -9,7 +9,7 @@ import {submitChatContents} from '@cdo/apps/aichat/redux';
 import {AnalyticsProperties} from '@cdo/apps/aichat/types';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
-import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
+import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 import {AiChatClientTypes} from '@cdo/generated-scripts/sharedConstants';
 
 import {useAiTutorModelParameters} from '../../hooks/useAiTutorModelParameters';
@@ -24,6 +24,7 @@ interface AiTutorSidebarSuggestedPromptsProps {
   hiddenContextCallback: () => Promise<string>;
   toggleAiChat: () => void;
   analyticsData: AnalyticsData;
+  chatDisabled?: boolean;
 }
 
 const AiTutorSidebarSuggestedPrompts: React.FC<
@@ -34,9 +35,15 @@ const AiTutorSidebarSuggestedPrompts: React.FC<
   className = '',
   suggestedPrompts = [],
   analyticsData,
+  chatDisabled,
 }) => {
   const dispatch = useAppDispatch();
+  const teacherViewingStudentChatHistory = useAppSelector(
+    state => state.progress.viewAsUserId
+  );
   const {modelParameters} = useAiTutorModelParameters();
+  const suggestedPromptsDisabled =
+    !modelParameters || !!chatDisabled || !!teacherViewingStudentChatHistory;
 
   const handleSubmit = useCallback(
     async (userMessage: string, analyticsProperties?: AnalyticsProperties) => {
@@ -86,13 +93,15 @@ const AiTutorSidebarSuggestedPrompts: React.FC<
           onClick={() => handleSubmit(prompt.value, prompt.analyticsProperties)}
           aria-label={prompt.label}
           type="button"
-          disabled={!modelParameters}
+          disabled={suggestedPromptsDisabled}
         >
           <FontAwesomeV6Icon
             {...(prompt.icon as FontAwesomeV6IconProps)}
             className={classNames(
               styles['icon'],
-              prompt.icon?.iconName && styles[`icon-${prompt.icon.iconName}`]
+              prompt.icon?.iconName &&
+                !suggestedPromptsDisabled &&
+                styles[`icon-${prompt.icon.iconName}`]
             )}
           />
         </MuiButton>

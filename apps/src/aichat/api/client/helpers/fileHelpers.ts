@@ -1,30 +1,12 @@
 import {type FilePart, type GeneratedFile} from 'ai';
+import {
+  extension as mimeToExtension,
+  lookup as extensionToMime,
+} from 'mime-types';
 
 import {AssetSource, ChatAsset} from '@cdo/apps/aichat/types';
 import HttpClient from '@cdo/apps/util/HttpClient';
 import {createUuid} from '@cdo/apps/utils';
-
-const mediaTypeToExtensionMap: Record<string, string> = {
-  'image/jpeg': 'jpg',
-  'image/png': 'png',
-  'image/gif': 'gif',
-  'image/webp': 'webp',
-  'image/svg+xml': 'svg',
-  'image/bmp': 'bmp',
-  'image/heic': 'heic',
-  'image/heif': 'heif',
-  'image/tiff': 'tiff',
-  'application/pdf': 'pdf',
-};
-
-// Derived reverse map. `jpeg` is added as an alias since both `jpg` and
-// `jpeg` are valid extensions for `image/jpeg`.
-const extensionToMediaTypeMap: Record<string, string> = {
-  ...Object.fromEntries(
-    Object.entries(mediaTypeToExtensionMap).map(([type, ext]) => [ext, type])
-  ),
-  jpeg: 'image/jpeg',
-};
 
 /**
  * Converts a media type (MIME type) to a file extension.
@@ -35,7 +17,7 @@ const extensionToMediaTypeMap: Record<string, string> = {
  */
 function convertMediaTypeToExtension(
   mediaType: string,
-  accepts: string[]
+  accepts: readonly string[]
 ): string {
   if (!accepts.includes(mediaType)) {
     throw new Error(
@@ -44,7 +26,7 @@ function convertMediaTypeToExtension(
       )}`
     );
   }
-  const extension = mediaTypeToExtensionMap[mediaType];
+  const extension = mimeToExtension(mediaType);
   if (!extension) {
     throw new Error(
       `No file extension mapping found for media type: "${mediaType}"`
@@ -68,7 +50,7 @@ export async function assetToFilePart(
 
   const mediaType =
     response.headers.get('content-type') ||
-    extensionToMediaTypeMap[extension] ||
+    extensionToMime(extension) ||
     'application/octet-stream';
 
   return {
@@ -85,7 +67,7 @@ export async function assetToFilePart(
 export async function generatedFileToAsset(
   file: GeneratedFile,
   buildAssetUrl: (asset: ChatAsset) => string,
-  accepts: string[]
+  accepts: readonly string[]
 ): Promise<ChatAsset> {
   const {filename, fileBuffer} = prepareGeneratedFile(file, accepts);
   const asset: ChatAsset = {
@@ -106,7 +88,6 @@ interface PreparedFile {
   filename: string;
   fileBuffer: Uint8Array<ArrayBuffer>;
   mediaType: string;
-  extension: string;
 }
 
 /**
@@ -114,10 +95,10 @@ interface PreparedFile {
  */
 export function prepareGeneratedFile(
   file: GeneratedFile,
-  accepts: string[]
+  accepts: readonly string[]
 ): PreparedFile {
   const fileBuffer = file.uint8Array.slice();
   const extension = convertMediaTypeToExtension(file.mediaType, accepts);
   const filename = `generated-file-${createUuid()}.${extension}`;
-  return {filename, fileBuffer, mediaType: file.mediaType, extension};
+  return {filename, fileBuffer, mediaType: file.mediaType};
 }

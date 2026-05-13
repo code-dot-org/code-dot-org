@@ -2242,8 +2242,6 @@ class UnitTest < ActiveSupport::TestCase
   end
 
   test 'is ai assessment enabled' do
-    LearningGoal.any_instance.stubs(:validate_ai_config).returns(true)
-
     unit_without_rubrics = create(:unit, :with_levels)
 
     unit_with_non_ai_rubric = create(:unit, :with_levels)
@@ -2267,15 +2265,6 @@ class UnitTest < ActiveSupport::TestCase
     assert unit.summarize[:hasUnnumberedLessons]
     unit.update!(has_unnumbered_lessons: false)
     refute unit.summarize[:hasUnnumberedLessons]
-  end
-
-  test 'has ai tutor level' do
-    unit_without_ai_tutor = create(:unit)
-    refute unit_without_ai_tutor.has_ai_tutor_level?
-
-    unit_with_ai_tutor = create(:unit, :with_levels)
-    unit_with_ai_tutor.levels[0].update!(ai_tutor_available: true)
-    assert unit_with_ai_tutor.has_ai_tutor_level?
   end
 
   test 'with_ai_chat_tools returns units with essential or optional AI chat tools' do

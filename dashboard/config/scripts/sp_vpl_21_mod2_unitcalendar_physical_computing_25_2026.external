@@ -1,0 +1,20 @@
+name 'SP-VPL-21-mod2-UnitCalendar_physical-computing_25_2026'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Task: Modify the Unit Calendar
+
+#### The unit calendar is a tool you can use to help plan your unit pacing. The calendar can be adjusted based on instructional minutes per week. 
+
+### **Steps to modify the unit calendar**
+
+#### **Step 1:** Once on the Unit Overview page, click on the blue "View calendar" button. 
+
+#### **Step 2:** Use the dropdown menu to adjust the number of instructional minutes per week.  
+<br>
+
+<img src="https://images.code.org/e90f56b69333695ec0a334b3141faa1c-image-1776887757773.55.14 PM.png" alt="Screenshot of the Unit 2 Overview page demonstrating how to modify the unit calendar." style="float: left; clear: both; margin: 0 20px 20px 0;">
+
+<div style="clear:both"/>
+MARKDOWN

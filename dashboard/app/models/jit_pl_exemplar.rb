@@ -18,13 +18,25 @@
 class JitPlExemplar < ApplicationRecord
   include SerializedProperties
 
-  belongs_to :jit_pl_concept
-  belongs_to :jit_pl_misconception
+  belongs_to :jit_pl_concept, optional: true
+  belongs_to :jit_pl_misconception, optional: true
   has_and_belongs_to_many :resources, join_table: :jit_pl_exemplars_resources
+  has_and_belongs_to_many :json_videos, join_table: :jit_pl_exemplars_json_videos
 
   serialized_attrs %w(
     code_content
     text_content
     exemplar_type
   )
+
+  def serialize
+    {
+      id: id,
+      name: name,
+      text_content: text_content,
+      code_content: code_content,
+      exemplar_type: exemplar_type,
+      resources: resources.map(&:summarize_for_lesson_edit),
+    }
+  end
 end

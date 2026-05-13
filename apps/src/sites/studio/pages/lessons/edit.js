@@ -71,10 +71,14 @@ $(document).ready(function () {
           initialLessonData={lessonData}
           unitInfo={unitInfo}
           rubricId={rubric ? rubric.id : null}
+          rubricLevelId={rubric ? rubric.level_id : null}
         />
         <ExpandableImageDialog />
       </div>
     </Provider>,
-    document.getElementById('edit-container')
+    document.getElementById('edit-container'),
+    {
+      legacyReactDomRender: true,
+    }
   );
 });

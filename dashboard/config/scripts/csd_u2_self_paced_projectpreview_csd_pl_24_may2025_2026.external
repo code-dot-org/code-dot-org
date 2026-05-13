@@ -1,0 +1,30 @@
+name 'CSD-U2-Self-Paced-ProjectPreview_CSD-PL-24_may2025_2026'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# What Will My Students Create in Web Lab?
+
+#### Let's begin with the end in mind! Here are some sample projects to help you see what your students will build toward throughout Web Development. Please note that these are end-of-Chapter 1 projects, meaning that students will have to progress through all of the lessons in Chapter 1 to build up to these programming skills.
+
+#### Open up as many or as few sample projects as you want! Click on each example to review the sample project and its corresponding code. Focus *less* on the content and *more* on the way in which the content is structured and styled. We hope you enjoy exploring these projects and get excited to teach your students this content!
+
+## Sample Student Projects
+
+##### Click the images below to view the sample projects in a new tab.
+<br>
+
+<div style="float: left; text-align:center; font-size: 13pt;"><strong>Comic Book Creations</strong><br>
+<a href="https://studio.code.org/courses/ai-discoveries-2026/units/3/lessons/14/levels/1/sublevel/2?exemplar=true" target="blank" rel="noopener noreferrer">
+<img style="border-radius:10px; margin-right: 25px; margin-bottom:10px;" src="https://images.code.org/21525bae4b76e7e7d4961c10ad464971-image-1711567414642.23.31 PM.png" width="250px"; alt="A web page showing a user how to create comic books"></a></div>
+
+<div style="float: left; text-align:center; font-size: 13pt;"><strong>Lightning Strikers FC</strong><br>
+<a href="https://studio.code.org/courses/ai-discoveries-2026/units/3/lessons/14/levels/1/sublevel/1?exemplar=true" target="blank" rel="noopener noreferrer">
+<img style="border-radius:10px; margin-left: 20px; margin-right: 25px; margin-bottom:10px;" src="https://images.code.org/e5f4db5dd4d8b85a8aa6ec1fb9e77b98-image-1777322663377.44.07 PM.png" width="275px" alt="A webpage for an animal shelter in a town called Willow Grove"></a></div>
+
+<div style="float: left; text-align:center; font-size: 13pt;"><strong>Wild Guardian</strong><br>
+<a href="https://studio.code.org/courses/ai-discoveries-2026/units/3/lessons/14/levels/1/sublevel/3?exemplar=true" target="blank" rel="noopener noreferrer">
+<img style="border-radius:10px; margin-left: 20px; margin-right: 25px; margin-bottom:10px;" src="https://images.code.org/daa967d4990c2ddd4d05f0470d61f6eb-image-1711567513976.25.10 PM.png" width="250px" alt="A wildlife conservation web page"></a></div>
+
+![]()
+MARKDOWN

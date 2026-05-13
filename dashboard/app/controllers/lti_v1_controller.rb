@@ -67,7 +67,7 @@ class LtiV1Controller < ApplicationController
       prompt: 'none',
     }.to_query
 
-    redirect_to auth_redirect_url.to_s
+    redirect_to(auth_redirect_url.to_s, allow_other_host: true)
   end
 
   def authenticate
@@ -183,7 +183,11 @@ class LtiV1Controller < ApplicationController
         nrps_url: nrps_url,
       }
 
-      destination_url = "#{target_link_uri}?#{redirect_params.to_query}"
+      unless Policies::Lti.allowed_target_link_uri?(target_link_uri)
+        return log_unauthorized('Invalid target_link_uri', {target_link_uri: target_link_uri})
+      end
+
+      destination_url = build_destination_url(target_link_uri, redirect_params)
       session[:user_return_to] = destination_url
 
       if user
@@ -227,7 +231,7 @@ class LtiV1Controller < ApplicationController
           redirect_to lti_v1_deep_linking_path(deep_linking_settings:) and return
         end
 
-        redirect_to destination_url
+        redirect_to destination_url, allow_other_host: true
       else
         user = Services::Lti.initialize_lti_user(decoded_jwt)
         # PartialRegistration removes the email address, so store it in a local variable first
@@ -445,6 +449,13 @@ class LtiV1Controller < ApplicationController
 
   private def generate_random_string(length)
     SecureRandom.alphanumeric length
+  end
+
+  private def build_destination_url(target_link_uri, redirect_params)
+    uri = URI.parse(target_link_uri)
+    existing_query_params = Rack::Utils.parse_nested_query(uri.query.to_s)
+    uri.query = existing_query_params.merge(redirect_params.stringify_keys).to_query
+    uri.to_s
   end
 
   private def log_unauthorized(event, attributes = {})

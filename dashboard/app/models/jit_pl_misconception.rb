@@ -20,8 +20,19 @@ class JitPlMisconception < ApplicationRecord
   belongs_to :jit_pl_concept
   has_many :jit_pl_exemplars, dependent: :destroy
   has_and_belongs_to_many :resources, join_table: :jit_pl_misconceptions_resources
+  has_and_belongs_to_many :json_videos, join_table: :jit_pl_misconceptions_json_videos
 
   serialized_attrs %w(
     text_content
   )
+
+  def serialize
+    {
+      id: id,
+      name: name,
+      text_content: text_content,
+      resources: resources.map(&:summarize_for_lesson_edit),
+      exemplars: jit_pl_exemplars.map(&:serialize),
+    }
+  end
 end

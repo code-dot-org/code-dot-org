@@ -12,7 +12,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2026-03-18 06:21:02 UTC",
+    "serialized_at": "2026-04-21 22:06:04 UTC",
     "hide_within_course": false,
     "published_state": null,
     "instruction_type": null,
@@ -7876,6 +7876,27 @@
       ]
     },
     {
+      "chapter": 232,
+      "position": 5,
+      "activity_section_position": 5,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "allthethings sketchlab 5"
+        ],
+        "lesson.key": "lesson-57",
+        "lesson_group.key": "",
+        "script.name": "allthethings",
+        "activity_section.key": "b0e19c6d-9bd3-4227-93b2-397e925b9139"
+      },
+      "level_keys": [
+        "allthethings sketchlab 5"
+      ]
+    },
+    {
       "chapter": 233,
       "position": 1,
       "activity_section_position": 1,
@@ -10813,6 +10834,18 @@
     },
     {
       "seeding_key": {
+        "level.key": "allthethings sketchlab 5",
+        "script_level.level_keys": [
+          "allthethings sketchlab 5"
+        ],
+        "lesson.key": "lesson-57",
+        "lesson_group.key": "",
+        "script.name": "allthethings",
+        "activity_section.key": "b0e19c6d-9bd3-4227-93b2-397e925b9139"
+      }
+    },
+    {
+      "seeding_key": {
         "level.key": "csf_safety_in_my_online_neighborhood2022_2025",
         "script_level.level_keys": [
           "csf_safety_in_my_online_neighborhood2022_2025"
@@ -10854,9 +10887,13 @@
   "lessons_opportunity_standards": [
 
   ],
+  "jit_pl_concepts_lessons": [
+
+  ],
   "rubrics": [
     {
       "level_name": "Submittable Music Level 1",
+      "s3_config_dir": null,
       "seeding_key": {
         "lesson.key": "lesson-49",
         "lesson_group.key": "",
@@ -10865,6 +10902,7 @@
     },
     {
       "level_name": "CSD U3 Sprites scene challenge_allthethings",
+      "s3_config_dir": "allthethings-L48",
       "seeding_key": {
         "lesson.key": "lesson-51",
         "lesson_group.key": "",
@@ -10873,6 +10911,7 @@
     },
     {
       "level_name": "Allthethings Weblab2 9",
+      "s3_config_dir": null,
       "seeding_key": {
         "lesson.key": "lesson-54",
         "lesson_group.key": "",

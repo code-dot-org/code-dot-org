@@ -13,6 +13,7 @@ import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants.js';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import {getStore} from '@cdo/apps/redux';
 import {CourseContentDropdown} from '@cdo/apps/templates/studioHomepages/teacherHomepageV2/CourseContentDropdown';
+import {DemoSectionCourseContentDropdown} from '@cdo/apps/templates/studioHomepages/teacherHomepageV2/DemoSectionCourseContentDropdown';
 import {Section} from '@cdo/apps/templates/teacherDashboard/types/teacherSectionTypes';
 import {TEACHER_NAVIGATION_PATHS} from '@cdo/apps/templates/teacherNavigation/TeacherNavigationPaths';
 import HttpClient from '@cdo/apps/util/HttpClient';
@@ -26,7 +27,6 @@ describe('CourseContentDropdown', () => {
     courseVersionName: 'csd-2024',
     unitName: null,
     unitPosition: null,
-    aiTutorEnabled: false,
     atRiskAgeGatedDate: new Date(),
     atRiskAgeGatedUsState: 'xyz',
     anyStudentHasProgress: false,
@@ -63,7 +63,6 @@ describe('CourseContentDropdown', () => {
     courseVersionName: 'csd-2024',
     unitName: null,
     unitPosition: null,
-    aiTutorEnabled: false,
     atRiskAgeGatedDate: new Date(),
     atRiskAgeGatedUsState: 'xyz',
     anyStudentHasProgress: false,
@@ -96,7 +95,7 @@ describe('CourseContentDropdown', () => {
   const lessons = [
     {
       text: "Unit 3 - Interactive Animations and Games ('24-'25)",
-      value: '/courses/csd-2024/units/3',
+      value: '/teacher_dashboard/sections/11/courses/csd-2024/units/3',
     },
     {
       text: '1: Programming for a Purpose',
@@ -171,7 +170,9 @@ describe('CourseContentDropdown', () => {
   it('renders Jump to lesson dropdown when a unit is assigned', async () => {
     renderComponent(unitSection);
     await act(async () => await new Promise(process.nextTick));
-    expect(fetchSpy).toHaveBeenCalled();
+    expect(fetchSpy).toHaveBeenCalledWith(
+      '/sections/11/retrieve_lessons_for_dropdown'
+    );
     const lesson = screen.getByText('4: Shapes and Parameters');
     fireEvent.click(lesson);
     expect(sendEventSpy).toHaveBeenCalledWith(
@@ -188,8 +189,26 @@ describe('CourseContentDropdown', () => {
     expect(sendEventSpy).toHaveBeenCalledWith(
       EVENTS.SECTION_CARD_JUMP_TO_UNIT_OVERVIEW_CLICKED,
       {
-        lesson: '/courses/csd-2024/units/3',
+        lesson: '/teacher_dashboard/sections/11/courses/csd-2024/units/3',
       }
+    );
+  });
+
+  it('uses the demo preset path when demoType is provided', async () => {
+    render(
+      <Provider store={store}>
+        <DemoSectionCourseContentDropdown
+          section={nonUnitSection}
+          demoType="high"
+          beforeNavigate={() => {}}
+        />
+      </Provider>
+    );
+
+    await act(async () => await new Promise(process.nextTick));
+
+    expect(fetchSpy).toHaveBeenCalledWith(
+      '/sections/high/retrieve_lessons_for_dropdown'
     );
   });
 });

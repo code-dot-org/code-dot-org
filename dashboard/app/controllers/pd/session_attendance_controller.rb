@@ -94,6 +94,6 @@ class Pd::SessionAttendanceController < ApplicationController
     flash[:notice] = "You can't attend this workshop because you organized it. " \
       "If your attendees go to the link #{attend_url} they will see a success message here."
 
-    redirect_to CDO.studio_url('/', CDO.default_scheme)
+    redirect_to root_path
   end
 end

@@ -6,12 +6,16 @@ import {connect} from 'react-redux';
 import {navigateToLevelId} from '@cdo/apps/code-studio/progressRedux';
 import {
   lessonExtrasUrl,
+  hasLessonPlan,
+  lessonTutorPath,
   getCurrentLevel,
   getCurrentLevels,
 } from '@cdo/apps/code-studio/progressReduxSelectors';
 import LessonExtrasProgressBubble from '@cdo/apps/templates/progress/LessonExtrasProgressBubble';
+import LessonTutorProgressBubble from '@cdo/apps/templates/progress/LessonTutorProgressBubble';
 import ProgressBubble from '@cdo/apps/templates/progress/ProgressBubble';
 import {levelWithProgressType} from '@cdo/apps/templates/progress/progressTypes';
+import experiments from '@cdo/apps/util/experiments';
 import {LevelKind, LevelStatus} from '@cdo/generated-scripts/sharedConstants';
 
 import color from '../../../util/color';
@@ -25,6 +29,11 @@ class LessonProgress extends Component {
     levels: PropTypes.arrayOf(levelWithProgressType).isRequired,
     lessonName: PropTypes.string,
     lessonExtrasUrl: PropTypes.string,
+    hasLessonPlan: PropTypes.bool,
+    lessonTutorPath: PropTypes.string,
+    lessonId: PropTypes.number,
+    userId: PropTypes.number,
+    userType: PropTypes.string,
     isLessonExtras: PropTypes.bool,
     width: PropTypes.number,
     setDesiredWidth: PropTypes.func,
@@ -142,10 +151,22 @@ class LessonProgress extends Component {
     const {
       currentPageNumber,
       lessonExtrasUrl,
+      hasLessonPlan,
+      lessonTutorPath,
       lessonName,
+      lessonId,
+      userId,
+      userType,
       navigateToLevelId,
       currentLevel,
+      currentLevelId,
     } = this.props;
+
+    const showLessonTutorBubble =
+      lessonTutorPath &&
+      hasLessonPlan &&
+      experiments.isEnabledAllowingQueryString(experiments.LESSON_TUTOR);
+
     let levels = this.props.levels;
 
     // Bonus levels should not count towards mastery.
@@ -208,6 +229,18 @@ class LessonProgress extends Component {
                   lessonExtrasUrl={lessonExtrasUrl}
                   isPerfect={this.isBonusComplete()}
                   isSelected={onBonusLevel}
+                />
+              </div>
+            )}
+            {showLessonTutorBubble && (
+              <div>
+                <LessonTutorProgressBubble
+                  lessonTutorPath={lessonTutorPath}
+                  lessonId={lessonId}
+                  levelId={currentLevelId}
+                  lessonName={lessonName}
+                  userId={userId}
+                  userType={userType}
                 />
               </div>
             )}
@@ -287,6 +320,17 @@ export default connect(
       state.progress,
       state.progress.currentLessonId
     ),
+    hasLessonPlan: hasLessonPlan(
+      state.progress,
+      state.progress.currentLessonId
+    ),
+    lessonTutorPath: lessonTutorPath(
+      state.progress,
+      state.progress.currentLessonId
+    ),
+    lessonId: state.progress.currentLessonId,
+    userId: state.currentUser.userId,
+    userType: state.currentUser.userType,
     isLessonExtras: state.progress.isLessonExtras,
     currentPageNumber: state.progress.currentPageNumber,
     currentLevelId: state.progress.currentLevelId,

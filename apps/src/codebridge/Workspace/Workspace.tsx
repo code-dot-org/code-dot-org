@@ -23,7 +23,7 @@ import {
 } from '@cdo/apps/lab2/redux/lab2ReduxSelectors';
 import TeacherViewingStudentProjectAlert from '@cdo/apps/lab2/views/alerts/teacherViewingStudentProject';
 import PanelContainer from '@cdo/apps/lab2/views/components/PanelContainer';
-import WorkspaceHeader from '@cdo/apps/lab2/views/components/WorkspaceHeader';
+import {WorkspaceHeader} from '@cdo/apps/lab2/views/components/WorkspaceHeader';
 import currentLocale from '@cdo/apps/util/currentLocale';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 
@@ -45,6 +45,7 @@ const Workspace: React.FunctionComponent<WorkspaceProps> = ({
   hideHeaders,
 }) => {
   const {config} = useCodebridgeContext();
+
   const isStartMode = getAppOptionsEditBlocks() === START_SOURCES;
   const isWidget2SourcesMode = getAppOptionsEditBlocks() === WIDGET2_SOURCES;
   const containerRef = useRef<HTMLDivElement>(null);
@@ -101,8 +102,13 @@ const Workspace: React.FunctionComponent<WorkspaceProps> = ({
       <PanelContainer
         id="editor-workspace"
         hideHeaders={hideHeaders}
-        headerContent={<WorkspaceHeader />}
-        rightHeaderContent={<HeaderButtons />}
+        headerContent={<WorkspaceHeader.Content />}
+        rightHeaderContent={
+          <>
+            <WorkspaceHeader.TemplateIcon />
+            <HeaderButtons />
+          </>
+        }
         className={moduleStyles.workspace}
         headerClassName={moduleStyles.workspaceHeader}
       >
@@ -131,6 +137,7 @@ const Workspace: React.FunctionComponent<WorkspaceProps> = ({
               <Typography
                 className={moduleStyles.fileBrowserHeaderText}
                 variant="body4"
+                component="h2"
               >
                 {codebridgeI18n.filesHeader()}
               </Typography>

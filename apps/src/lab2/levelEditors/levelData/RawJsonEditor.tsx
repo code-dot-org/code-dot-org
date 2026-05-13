@@ -1,5 +1,6 @@
 import Alert from '@code-dot-org/component-library/alert';
-import {Button} from '@code-dot-org/component-library/button';
+import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
+import {Button as MuiButton} from '@mui/material';
 import React, {useEffect, useState} from 'react';
 
 import moduleStyles from './edit-music-level-data.module.scss';
@@ -42,23 +43,32 @@ const RawJsonEditor: React.FunctionComponent<RawJsonEditorProps> = ({
   return (
     <div className={moduleStyles.section}>
       <div className={moduleStyles.row}>
-        <Button
-          text={editing ? 'Done' : 'Edit'}
+        <MuiButton
+          variant="contained"
+          color="primary"
+          size="small"
           onClick={() => {
             editing ? onUpdate(currentValueString, true) : setEditing(true);
           }}
-          size="s"
-          iconLeft={{iconName: editing ? 'circle-check' : 'edit'}}
-        />
+          type="button"
+          startIcon={
+            <FontAwesomeV6Icon iconName={editing ? 'circle-check' : 'edit'} />
+          }
+        >
+          {editing ? 'Done' : 'Edit'}
+        </MuiButton>
         {editing && (
-          <Button
-            text="Update"
+          <MuiButton
+            variant="outlined"
+            color="tertiary"
+            size="small"
+            loadingPosition="start"
             onClick={() => onUpdate(currentValueString)}
-            size="s"
-            iconLeft={{iconName: 'upload'}}
-            color="gray"
-            type="secondary"
-          />
+            type="button"
+            startIcon={<FontAwesomeV6Icon iconName="upload" />}
+          >
+            {'Update'}
+          </MuiButton>
         )}
         {status && (
           <Alert

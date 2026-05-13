@@ -1,0 +1,100 @@
+name 'SP-VPL-21-mod3-LearningTools_25_2026'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Tools Across The Course
+
+#### AI Discoveries introduces students to **tools and programming languages that are accessible for beginners** while offering more advanced students opportunities to create sophisticated projects. All of the tools below are integrated directly into the Code.org website, allowing teachers to have visibility into all student work and progress. 
+
+<div style="clear:both"></div>
+
+<img src="https://images.code.org/f1d23accf51d2c97a816579ed7851e8a-image-1776974653734.04.09 PM.png" alt="Screenshot of a prompt and response in AI Chat Lab." style="float: right; width: 30%; height: auto; margin: 10px 10px 10px 20px; border-radius:10px;">
+
+## AI Chat Lab
+
+#### AI Chat Lab is an interactive tool where students engage in conversations with a large language model. The platform is designed with classroom use in mind: student interactions are moderated, and teachers can view all chats to support safe and appropriate use. AI Chat Lab can generate text and images.
+
+### **Units that use AI Chat Lab:** 
+
+* #### Thinking Critically About AI
+
+___
+
+<img src="https://images.code.org/c3ac1e635ea4050793d21af8d1c7d17e-image-1776974219840.56.54 PM.png" alt="Screenshot of Sketch Lab." style="float: right; width: 30%; height: auto; margin: 10px 10px 10px 20px; border-radius:10px;">
+
+## Sketch Lab
+
+#### Sketch Lab is an interactive whiteboard environment, similar to Canva, that allows students to brainstorm and draft ideas. Students can add text, shapes, images, and color to their designs.
+
+### **Units that use Sketch Lab:** 
+
+* #### Thinking Critically About AI
+
+___
+
+<img src="https://images.code.org/549961e22f386fa606c53bd31d7b9bd4-image-1626275709795.14.52 AM.png" alt="Screenshot of AI Lab." style="float: right; width: 30%; height: auto; margin: 10px 10px 10px 20px; border-radius:10px;">
+
+## AI Lab
+
+#### AI Lab is a browser-based tool for creating machine learning models from tabular data. 
+
+### **Units that use AI Lab:** 
+
+* #### AI and Machine Learning
+
+___
+
+<img src="https://images.code.org/7a7fc62ed0b722cb6186e1b46ef8bf43-image-1626275434726.10.17 AM.png" alt="Screenshot of Web Lab." style="float: right; width: 30%; height: auto; margin: 10px 10px 10px 20px; border-radius:10px;">
+
+## Web Lab
+
+#### Web Lab is a browser-based tool for creating and publishing HTML and CSS web sites. 
+
+### **Units that use Web Lab:** 
+
+* #### Web Development
+
+<hr style="clear:both">
+
+<img src="https://images.code.org/372d1a44d8167bd13c4e0b3cca3ca355-image-1626273216931.33.18 AM.png" alt="Screenshot of Game Lab." style="float: right; width: 30%; height: auto; margin: 10px 10px 10px 20px; border-radius:10px;">
+
+## Game Lab
+
+#### Game Lab is a browser-based JavaScript programming environment designed to create sprite-based drawings, animations, and games. Students are able to switch between programming in blocks or text. 
+
+### **Units that use Game Lab:** 
+
+* #### Interactive Animations and Games
+
+<hr style="clear:both">
+
+<img src="https://images.code.org/428d87d286793d1ed345dc296a8d83dc-image-1626273062584.30.31 AM.png" alt="Screenshot of App Lab." style="float: right; width: 30%; height: auto; margin: 10px 10px 10px 20px; border-radius:10px;">
+
+## App Lab
+
+#### App Lab is a browser-based JavaScript programming environment for creating interactive apps. Students are able to switch between programming in blocks or text. 
+
+### **Units that use App Lab:** 
+
+* #### The Design Process  
+* #### Creating Apps with Devices - Option A: Circuit Playground  
+* #### Creating Apps with Devices - Option B: micro:bit  
+* #### AI and Machine Learning  
+
+<hr style="clear:both">
+
+<img src="https://images.code.org/be4c9aaa20cea1863f357b7ec1ffd68d-image-1776975166557.12.42 PM.png" alt="Screenshot of Music Lab." style="float: right; width: 30%; height: auto; margin: 10px 10px 10px 20px; border-radius:10px;">
+
+## Music Lab
+
+#### Music Lab is a programming environment that allows students to create music using a timeline-based interface. Students place blocks at specific measures, use loops to repeat patterns, and trigger sounds or events, combining coding concepts with musical creativity.
+
+### **Units that use Music Lab:** 
+
+* #### Programming with Music Lab
+  
+<div style="clear:both"></div>
+
+<br><br>
+MARKDOWN

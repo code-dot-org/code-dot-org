@@ -11,6 +11,8 @@ module Cdo
     prepend SecretsConfig
     include Singleton
 
+    attr_accessor :execution_context
+
     # Match CDO_*, plus RACK_ENV and RAILS_ENV.
     ENV_PREFIX = /^(CDO|(RACK|RAILS)(?=_ENV))_/
 
@@ -32,6 +34,7 @@ module Cdo
     ].freeze
 
     def initialize
+      @execution_context = nil # Default context; may be overridden in puma.rb, active_job_backend.rb, bin/cronjob, etc.
       super
       root = File.expand_path('..', __dir__)
       load_configuration(
@@ -145,7 +148,7 @@ module Cdo
       MARKETING_SITES_HOSTS
     end
 
-    def site_url(domain, path = '', scheme = '', ge_region: nil)
+    def site_url(domain, path = '', scheme = '', ge_region: Cdo::GlobalEdition.current_region)
       path = '/' + path unless path.empty? || path[0] == '/'
 
       if ge_region && Cdo::GlobalEdition.target_host?(canonical_hostname(domain))
@@ -155,8 +158,8 @@ module Cdo
       "#{scheme}//#{site_host(domain)}#{path}"
     end
 
-    def studio_url(path = '', scheme = '', ge_region: nil)
-      site_url('studio.code.org', path, scheme, ge_region: ge_region)
+    def studio_url(path = '', scheme = '', ge_region: Cdo::GlobalEdition.current_region)
+      site_url('studio.code.org', path, scheme, ge_region:)
     end
 
     def code_org_url(path = '', scheme = '', ge_region: nil)
@@ -312,13 +315,12 @@ module Cdo
       rack_env?(:test) && dashboard_hostname == 'test-studio.code.org' && chef_managed
     end
 
-    # Identify whether we are executing within a web application server as most of our Ruby classes and modules
-    # can also be executed in Ruby shell scripts (cron jobs), ActiveJob consumers, or in interactive Ruby tools (irb).
-    # Some components may operate differently within a web application server, such as using a database proxy to
-    # connect to the database. We use the `puma` web application server in most environments, except development, where
-    # we use `thin`.
+    # Identify whether we are executing within a puma web application server as most of our Ruby classes and modules
+    # can also be executed in Ruby shell scripts (cron jobs), ActiveJob consumers, or in interactive Ruby tools (irb,
+    # rails console). Some components may operate differently within a web application server. For example, database
+    # timeouts are shorter when executing within a web application server.
     def running_web_application?
-      %w(puma thin).include?(File.basename($0))
+      execution_context == :web_application
     end
 
     # Whether we are executing within a web application server on the

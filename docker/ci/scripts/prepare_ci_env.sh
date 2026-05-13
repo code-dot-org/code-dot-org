@@ -14,9 +14,20 @@ export RACK_ENV=test
 export DISABLE_SPRING=1
 export LD_LIBRARY_PATH=/usr/local/lib
 
+# Enable jemalloc, both for memory optimization and parity with our deployed
+# application. Configuration options based on the defaults used in chef (see
+# cookbooks/cdo-jemalloc/attributes/default.rb), with the notable exception of
+# `background_thread:true` since that breaks chromedriver (see
+# https://issues.chromium.org/issues/378077860).
+export LD_PRELOAD=/usr/lib/x86_64-linux-gnu/libjemalloc.so.2
+export MALLOC_CONF=narenas:2,thp:never,dirty_decay_ms:1000,muzzy_decay_ms:0
+
 # Number of parallel processes for dashboard ruby unit tests,
 # optimized for drone m7i.4xlarge workers with 16 vCPUs and 64 GB RAM.
-export PARALLEL_TEST_PROCESSORS=7
+# We ran into OOM errors with 7, and get a persistent unexplained failure in
+# test_summarize_with_numbered_units#UnitGroupTest with 5, so 6 is our
+# Goldilocks number.
+export PARALLEL_TEST_PROCESSORS=6
 
 # Apps build parallelization settings for CI
 # optimized for drone m7i.4xlarge workers with 16 vCPUs and 64 GB RAM.
@@ -27,22 +38,6 @@ export APPS_BUILD_MAX_MEMORY=16384
 # caching easier.
 bundle config set --local deployment 'true'
 bundle install --quiet
-
-# Disable Pegasus content based on the exit code of the rake task.
-if bundle exec rake ci:sparse_checkout; then
-  echo "Full checkout – HAS_PEGASUS_CONTENT not set"
-else
-  # Nest this check inside the outer `if` block to ensure that a non-zero exit
-  # code from the rake task does not cause this script to exit immediately.
-  exit_code=$?
-  if [ "$exit_code" -eq 11 ]; then
-    export HAS_PEGASUS_CONTENT=false
-    echo "Sparse checkout – HAS_PEGASUS_CONTENT set to false"
-  else
-    echo "Unexpected exit code from ci:sparse_checkout: $exit_code"
-    exit 1
-  fi
-fi
 
 ulimit -n 16000
 

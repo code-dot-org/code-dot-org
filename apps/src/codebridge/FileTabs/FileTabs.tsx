@@ -28,7 +28,6 @@ import {
 } from '@dnd-kit/sortable';
 import React, {useMemo, useState} from 'react';
 
-import i18n from '@cdo/apps/codebridge/locale';
 import {
   closeFileThunk,
   rearrangeFilesThunk,
@@ -154,7 +153,8 @@ export const FileTabs = React.memo(() => {
         accessibility={{
           announcements,
           screenReaderInstructions: {
-            draggable: i18n.dragAndDropInstructionsTabs(),
+            draggable:
+              'Press m to pick up, arrow keys to move, m, space, or enter to drop, escape to cancel.',
           },
         }}
       >

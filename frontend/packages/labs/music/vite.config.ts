@@ -1,7 +1,7 @@
-import {defineConfig} from 'vite';
 import react from '@vitejs/plugin-react';
-import {externalizeDeps} from 'vite-plugin-externalize-deps';
+import {defineConfig} from 'vite';
 import dts from 'vite-plugin-dts';
+import {externalizeDeps} from 'vite-plugin-externalize-deps';
 
 // https://vite.dev/config/
 export default defineConfig({
@@ -20,9 +20,25 @@ export default defineConfig({
   },
   build: {
     lib: {
-      entry: ['src/App.tsx'],
+      entry: ['src/index.ts'],
       name: 'music-lab',
       formats: ['es', 'cjs'],
+    },
+    rollupOptions: {
+      output: [
+        {
+          format: 'es',
+          entryFileNames: '[name].mjs',
+          preserveModules: false,
+          dir: 'dist',
+        },
+        {
+          format: 'cjs',
+          entryFileNames: '[name].cjs',
+          preserveModules: false,
+          dir: 'dist',
+        },
+      ],
     },
   },
 });

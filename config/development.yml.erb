@@ -1,7 +1,7 @@
 # Configuration defaults for development environment.
 <%= clear_secrets %>
 
-# In local dev, start Puma in single mode (no workers) rather than cluster mode:
+# In local dev, start Puma in single mode (no workers) rather than cluster mode.
 dashboard_workers: 0
 
 db_cluster_id: localhost
@@ -58,10 +58,6 @@ javabuilder_key_password: !Secret
 
 pardot_private_key: !Secret
 
-redshift_host: !Secret
-redshift_password: !Secret
-redshift_username: !Secret
-
 slack_bot_token: !Secret
 
 # JSON Web Key Set and private key data, configured in locals.yml
@@ -77,6 +73,9 @@ elevenlabs_api_key: !Secret
 google_gemini_ai_chat_lab_api_key: !Secret
 google_gemini_ai_tutor_api_key: !Secret
 
+# Azure AI Content Safety
+azure_ai_content_safety_key: !Secret
+
 # AI Gateway
 ai_gateway_auth_key: !Secret
 ai_gateway_auth_public_key: !Secret
@@ -86,14 +85,20 @@ google_vertex_ai_tutor_service_account_key: !Secret
 google_vertex_ai_chat_service_account_key: !Secret
 
 # Credentials for Langfuse API
-langfuse_secret_key: !Secret
-langfuse_public_key: !Secret
+tutor_langfuse_secret_key: !Secret
+tutor_langfuse_public_key: !Secret
+ta_langfuse_secret_key: !Secret
+ta_langfuse_public_key: !Secret
 
 # Enables DCDO settings via cookies
 use_cookie_dcdo: true
 
 # Allows Geolocation to be altered via cookies.
 use_geolocation_override: true
+
+# AWS DeviceFarm project ARNs for remote browser testing in UI tests.
+device_farm_desktop_project_arn: !Secret
+device_farm_mobile_project_arn: !Secret
 
 # ActiveJob Queue Adapter, default to async which doesn't require manually
 # starting the worker processes. See locals.yml.default for more discussion.

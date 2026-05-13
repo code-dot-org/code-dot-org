@@ -1,0 +1,65 @@
+name 'pl-aif-2-U6-project-guide-4'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Utilizing the Project Guide 
+
+## What It Is: 
+####**The Project Guide is not a task list or a timeline.** Instead, it is a living document that captures student thinking, reasoning, and decisions as the project evolves over five specific milestones.
+
+> #### While the final app shows what was built, the Project Guide explains the how and why.
+
+<img src="https://images.code.org/3c574ded53b8358baff9d862f7c5df4a-image-1776697705188.png" alt="milestone one project guide" width="550px" style="border-radius:10px; float:right; margin: 0 0 40px 20px; box-shadow: 0 4px 8px rgba(0,0,0,0.15);">
+
+##What It Covers: 
+#### The guide is divided into sections that mirror the project's milestones: 
+- #### Intent & Scope (Day 1)
+- #### System Explanation (Day 2)
+- #### Testing & Behavior (Day 3+)
+- #### Feedback & Iteration (Day 8)
+- #### Final Reflection
+
+<div style="clear:both;"></div>
+
+## Keeping the Flow:
+
+#### This document is designed for iteration. Students should not just fill it out once and forget it; they are explicitly instructed to revisit and add on to earlier sections whenever their ideas, scope, or system designs change based on testing or feedback
+
+#### This ongoing documentation proves that their understanding is evolving.
+
+---
+
+## Using the Project Guide to Manage:
+
+<!-- Pacing & Redirection -->
+<div style="display: flex; align-items: center; gap: 15px; margin-bottom: 20px;">
+  <img src="https://images.code.org/a6383b704bd9c70435c6eb9c54f81352-image-1776699709862.png" alt="compass icon" style="width: 20%; max-width: 120px; height: auto; border-radius: 12px;">
+  <div style="flex: 1; background: #f7f8fa; padding: 15px; border-radius: 10px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
+    <h3 style="font-size: 14pt; margin-top: 0; margin-bottom: 10px;"><b>Pacing &amp; Redirection</b></h3>
+    <p style="font-size: 14pt; margin-top: 0; margin-bottom: 10px;">If students are rushing to write code on Day 2, redirect them to the System Explanation section of the guide.</p>
+    <p style="font-size: 14pt; margin-top: 0; margin-bottom: 0;">Require them to clearly explain the flow of one user interaction (user action → app decision → user sees) before they are allowed to build.</p>
+  </div>
+</div>
+
+<!-- Evidence for Grading -->
+<div style="display: flex; align-items: center; gap: 15px; margin-bottom: 20px;">
+  <img src="https://images.code.org/f8904ce9bbd20f037eb7b5b6f701cc15-image-1776699786662.png" alt="clipboard icon" style="width: 20%; max-width: 120px; height: auto; border-radius: 12px;">
+  <div style="flex: 1; background: #f7f8fa; padding: 15px; border-radius: 10px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
+    <h3 style="font-size: 14pt; margin-top: 0; margin-bottom: 10px;"><b>Evidence for Grading</b></h3>
+    <p style="font-size: 14pt; margin-top: 0; margin-bottom: 0;">The guide is your primary artifact for grading the Project Planning &amp; Intentional Design and Responsible AI &amp; Ethical Reflection categories on the rubric.</p>
+  </div>
+</div>
+
+<!-- Justifying Decisions -->
+<div style="display: flex; align-items: center; gap: 15px; margin-bottom: 20px;">
+  <img src="https://images.code.org/e03c589871538d69ec74607fa153fb6a-image-1776699823913.png" alt="magnifying glass icon" style="width: 20%; max-width: 120px; height: auto; border-radius: 12px;">
+  <div style="flex: 1; background: #f7f8fa; padding: 15px; border-radius: 10px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
+    <h3 style="font-size: 14pt; margin-top: 0; margin-bottom: 10px;"><b>Justifying Decisions</b></h3>
+    <p style="font-size: 14pt; margin-top: 0; margin-bottom: 10px;">Remind students that their reflections in the guide are evidence of their learning, not just busywork.</p>
+    <p style="font-size: 14pt; margin-top: 0; margin-bottom: 0;">Use the guide to push teams to justify why they changed a feature, rather than just listing what they changed.</p>
+  </div>
+</div>
+
+
+MARKDOWN

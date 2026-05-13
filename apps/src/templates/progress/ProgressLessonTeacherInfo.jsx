@@ -43,9 +43,19 @@ class ProgressLessonTeacherInfo extends React.Component {
   }
 
   onClickHiddenToggle(value) {
-    const {unitName, section, lesson, toggleHiddenLesson} = this.props;
+    const {unitName, section, lesson, hiddenLessonState, toggleHiddenLesson} =
+      this.props;
     const sectionId = (section && section.id.toString()) || '';
-    toggleHiddenLesson(unitName, sectionId, lesson.id, value === 'hidden');
+    const nextHidden = value === 'hidden';
+    const currentHidden = isLessonHiddenForSection(
+      hiddenLessonState,
+      sectionId,
+      lesson.id
+    );
+    if (nextHidden === currentHidden) {
+      return;
+    }
+    toggleHiddenLesson(unitName, sectionId, lesson.id, nextHidden);
   }
 
   render() {
@@ -87,7 +97,7 @@ class ProgressLessonTeacherInfo extends React.Component {
               id="uitest-lesson-plan"
               href={lesson.lesson_plan_html_url}
               text={i18n.viewLessonPlan()}
-              icon="file-text"
+              icon="file-lines"
               color="blue"
               target="_blank"
               style={styles.button}
@@ -101,7 +111,7 @@ class ProgressLessonTeacherInfo extends React.Component {
               id="uitest-student-resources"
               href={lesson.student_lesson_plan_html_url}
               text={i18n.studentResources()}
-              icon="file-text"
+              icon="file-lines"
               color="purple"
               target="_blank"
               style={styles.button}
@@ -137,7 +147,7 @@ class ProgressLessonTeacherInfo extends React.Component {
               __useDeprecatedTag
               href={lesson.lesson_feedback_url}
               text={i18n.rateThisLesson()}
-              icon="bar-chart"
+              icon="chart-column"
               color={Button.ButtonColor.gray}
               target="_blank"
               style={styles.button}

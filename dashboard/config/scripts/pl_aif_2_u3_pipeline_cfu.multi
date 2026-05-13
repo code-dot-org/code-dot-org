@@ -12,4 +12,28 @@ wrong 'sort songs by plays → filter songs with tag "pop" → take first 5'
 wrong 'take first 5 songs → filter songs with tag "pop" → sort by plays'
 wrong 'search for "pop" → sort songs alphabetically → take first 5.'
 right 'filter songs with tag "pop" → sort songs by plays → take first 5'
+
 allow_multiple_attempts true
+
+
+markdown <<MARKDOWN
+
+
+#### Choose the correct answer.
+
+<br>
+
+:::details [**🔎 Check your Answers**]
+
+#### filter songs with tag "pop" → sort songs by plays → take first 5
+
+:::
+
+<br>
+
+
+MARKDOWN
+
+
+
+

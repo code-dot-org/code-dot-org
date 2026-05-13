@@ -1,6 +1,5 @@
 @use '@code-dot-org/component-library-styles/typography.module.scss' as
   typography;
-@import 'color';
 @import 'https://fonts.googleapis.com/css2?family=Noto+Color+Emoji&display=swap';
 
 // TeacherHomepage
@@ -28,6 +27,10 @@
   width: 100%;
   max-width: 800px;
   min-width: 500px;
+
+  &:last-child {
+    max-width: none;
+  }
 }
 
 .headerButtonRow {
@@ -57,9 +60,9 @@
 
 // SectionCard
 .sectionCardWrapper {
-  border: 1px solid var(--neutral-gray-20);
+  border: 1px solid var(--borders-neutral-primary);
   border-radius: 4px;
-  background-color: var(--neutral-gray-5);
+  background-color: var(--background-neutral-secondary);
   display: flex;
   flex-direction: column;
   width: 100%;
@@ -68,7 +71,7 @@
 
 .sectionCardHeader {
   padding: 16px;
-  border-bottom: 1px solid var(--neutral-gray-20);
+  border-bottom: 1px solid var(--borders-neutral-primary);
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -110,6 +113,12 @@
   }
 }
 
+.demoSectionTitleRow {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
 .sectionCardHeaderRight {
   display: flex;
   margin-inline-start: 6px;
@@ -137,7 +146,7 @@
   display: flex;
   align-items: center;
   cursor: pointer;
-  color: var(--neutral-base-black);
+  color: var(--text-neutral-primary);
 
   padding: 0.5rem 1rem 0.5rem 0.75rem;
   gap: 0.75rem;
@@ -147,7 +156,7 @@
   }
 
   &:hover {
-    color: var(--neutral-base-black);
+    color: var(--text-neutral-secondary);
     text-decoration: none;
   }
 
@@ -163,6 +172,11 @@
     color: inherit;
     margin-bottom: 0;
   }
+
+  &:disabled {
+    opacity: 0.7;
+    cursor: wait;
+  }
 }
 
 // SectionCardBody
@@ -175,7 +189,7 @@
 
   a:hover {
     text-decoration: none;
-    background-color: var(--neutral-gray-10);
+    background-color: var(--background-neutral-tertiary);
   }
 }
 
@@ -207,19 +221,19 @@
   justify-content: space-between;
   margin: 0;
   border-radius: 4px;
-  background-color: var(--sentiment-success-10);
+  background-color: var(--background-success-extra-light);
 }
 
 .studentAddedAlertIcon {
-  color: var(--sentiment-success-50);
+  color: var(--background-success-primary);
 }
 
 // Task Button
-.taskButtons {
-  border: 1px solid var(--neutral-gray-40);
+%task-buttons-base {
+  border: 1px solid var(--borders-neutral-strong);
   display: flex;
   flex-direction: row;
-  background-color: var(--neutral-base-white);
+  background-color: var(--background-neutral-primary);
   gap: 8px;
   height: 38px;
   padding: 0 12px;
@@ -227,6 +241,22 @@
   justify-content: space-between;
   margin: 0;
   border-radius: 4px;
+}
+
+.taskButtons {
+  @extend %task-buttons-base;
+}
+
+.demoActionButton {
+  @extend %task-buttons-base;
+  width: 100%;
+  cursor: pointer;
+  text-align: start;
+
+  &:disabled {
+    cursor: wait;
+    opacity: 0.7;
+  }
 }
 
 .taskButtonLeft {
@@ -242,19 +272,19 @@
 }
 
 .taskButtonIcons {
-  color: var(--brand-teal-50);
+  color: var(--text-brand-teal-primary);
 }
 
 .taskButtonArrow {
-  color: var(--neutral-gray-80);
+  color: var(--text-neutral-quaternary);
 }
 
 // CourseContentDropdown
 .courseContentDropdownContainer {
   display: flex;
   flex-direction: column;
-  background-color: var(--neutral-base-white);
-  border: 1px solid var(--neutral-gray-20);
+  background-color: var(--background-neutral-primary);
+  border: 1px solid var(--borders-neutral-primary);
   border-radius: 4px;
   padding: 12px;
   gap: 8px;
@@ -289,13 +319,13 @@
   align-items: center;
   justify-content: space-between;
   margin: 0;
-  border: 1px dashed var(--brand-purple-50);
+  border: 1px dashed var(--borders-brand-purple-primary);
   border-radius: 4px;
-  background-color: var(--neutral-gray-5);
+  background-color: var(--background-neutral-secondary);
 }
 
 .emptyStateButtonIcon {
-  color: var(--brand-purple-50);
+  color: var(--text-brand-purple-primary);
 }
 
 .emptyImage {
@@ -425,6 +455,44 @@
   min-height: 50px;
   height: fit-content;
   margin-inline-start: 8px;
+}
+
+.onboardingChecklistOuter {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.onboardingChecklistInner {
+  border-radius: 10px;
+  padding: 28px 32px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  border-width: 3px;
+  border-style: solid;
+  border-color: var(--borders-brand-purple-primary);
+  text-align: center;
+}
+
+.onboardingChecklistButtons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+}
+
+.onboardingChecklistButton {
+  border-radius: 9999px !important;
+}
+
+.onboardingChecklistCheckIcon {
+  color: var(--text-success-primary);
+  font-size: 16px;
+  display: flex;
+  align-items: center;
 }
 
 // Drawer Component

@@ -25,7 +25,7 @@ Feature: Feedback Tab Visibility
   If a teacher on a level with mini rubric can see the rubric without viewing student work.
   Otherwise don't show feedback tab
     When I open my eyes to test "teacher giving student feedback"
-    And I sign in as "Teacher_Lillian"
+    And I sign in as "Teacher_Lillian" and go home
     And I give user "Teacher_Lillian" authorized teacher permission
 
     And I am on "http://studio.code.org/courses/allthethingscourse/units/1/lessons/38/levels/1"

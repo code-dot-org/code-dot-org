@@ -1,44 +1,48 @@
-import {render} from '@testing-library/react';
-import React from 'react';
-
 import {
   getGlobalEditionRegion,
   currentGlobalConfiguration,
 } from '@cdo/apps/util/globalEdition';
 
-interface DocumentProps {
-  region?: string;
-}
-
-const Document: React.FunctionComponent<DocumentProps> = ({region}) => (
-  <script data-ge-region={region} />
-);
+const setGlobalEditionRegion = (region?: string) => {
+  document.documentElement.dataset.geRegion = region;
+};
 
 describe('globalEdition', () => {
   describe('getGlobalEditionRegion', () => {
-    it('should return the region given in the embedded script data in spite of the location path', () => {
-      render(<Document region={'narnia'} />);
+    it('should return the region given in the embedded html data in spite of the location path', () => {
+      setGlobalEditionRegion('narnia');
       expect(getGlobalEditionRegion()).toBe('narnia');
     });
   });
 
   describe('currentGlobalConfiguration', () => {
     it('should return the root region configuration when the region is unknown', () => {
-      render(<Document region={'bogusweasel'} />);
+      setGlobalEditionRegion('bogusweasel');
       // Should match config/global_editions/root.yml
       expect(currentGlobalConfiguration().locales).toEqual(['en-US']);
     });
 
     it('should return the root region configuration when the region is not in the location', () => {
-      render(<Document />);
+      setGlobalEditionRegion();
       // Should match config/global_editions/root.yml
       expect(currentGlobalConfiguration().locales).toEqual(['en-US']);
     });
 
     it('should return the region configuration for the current region', () => {
-      render(<Document region={'fa'} />);
+      setGlobalEditionRegion('fa');
       // Should match config/global_editions/fa.yml
-      expect(currentGlobalConfiguration().locales).toEqual(['fa-IR', 'en-US']);
+      expect(currentGlobalConfiguration().locales).toEqual(['fa-IR']);
+
+      setGlobalEditionRegion('in');
+      // Should match config/global_editions/in.yml
+      expect(currentGlobalConfiguration().locales).toEqual([
+        'en-IN',
+        'hi-IN',
+        'ta-IN',
+        'te-IN',
+        'mr-IN',
+        'kn-IN',
+      ]);
     });
   });
 });

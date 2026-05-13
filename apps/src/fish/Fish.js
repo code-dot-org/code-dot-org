@@ -8,6 +8,7 @@ import localization from '@cdo/apps/localization';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import {createReactRoot} from '@cdo/apps/util/createReactRoot';
+import {LocalizeToI18nLocales} from '@cdo/generated-scripts/sharedConstants';
 
 import {getStore} from '../redux';
 
@@ -60,6 +61,11 @@ Fish.prototype.init = function (config) {
 
   config.pinWorkspaceToBottom = true;
 
+  this.locale = localization.locale;
+  localization.on('change', _info => {
+    this.locale = localization.locale;
+  });
+
   const reportActivityEvent = () => {
     // For publicly cached pages, config.isSignedIn will be false even when signed in.
     // Check the Redux store for the actual sign-in state.
@@ -72,6 +78,7 @@ Fish.prototype.init = function (config) {
       levelName: config.level.name,
       appName: config.app,
       levelPath: window.location.pathname,
+      locale: LocalizeToI18nLocales[this.locale] || this.locale,
     });
   };
 
@@ -113,7 +120,10 @@ Fish.prototype.init = function (config) {
     <Provider store={getStore()}>
       <FishView onMount={onMount} />
     </Provider>,
-    document.getElementById(config.containerId)
+    document.getElementById(config.containerId),
+    {
+      legacyReactDomRender: true,
+    }
   );
 };
 
@@ -150,7 +160,20 @@ Fish.prototype.initMLActivities = function () {
 
   // Localize
   const msg = Object.entries(fishMsg).reduce((acc, [key, msgFunction]) => {
-    acc[key] = (...args) => localization.translate(msgFunction(...args));
+    acc[key] = (...args) => {
+      if (key === 'notWord') {
+        // 'Not {word}' is too ambiguous and it contains the previously translated
+        // word inline. So we're always trying to translate "Not azul", etc, and
+        // that's not appropriate. A dynamic phrase catches too many other things.
+        // Therefore, we specialize this string as "Not {oceans-word:X}" which we
+        // can uniquely match and translate in the TMS.
+        return localization
+          .translate(`Not oceans-word:${args[0]['word']}`, ['oceans'])
+          .replace('oceans-word:', '');
+      } else {
+        return localization.translate(msgFunction(...args), ['oceans']);
+      }
+    };
     return acc;
   }, {});
 

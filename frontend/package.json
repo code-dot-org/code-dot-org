@@ -36,6 +36,8 @@
   "devDependencies": {
     "@axe-core/playwright": "^4.10.1",
     "@eslint/js": "catalog:",
+    "@turbo/gen": "^2.6.3",
+    "@types/node": "catalog:",
     "eslint": "catalog:",
     "lint-staged": "catalog:",
     "prettier": "catalog:",

@@ -6,13 +6,25 @@ class WebPurifyTest < Minitest::Test
   include SetupTest
 
   def setup
-    CDO.stubs(webpurify_key: 'mocksecret')
+    CDO.stubs(
+      webpurify_key: 'mocksecret',
+      webpurify_api_endpoint: 'https://fake.webpurify.endpoint'
+    )
   end
 
   # Do additional VCR configuration so as to prevent the CDO.webpurify_key from being logged to the
   # YML cassette, instead replacing it with a placeholder string.
   VCR.configure do |c|
     c.filter_sensitive_data('<API_KEY>') {CDO.webpurify_key}
+  end
+
+  def test_returns_nil_when_missing_api_key
+    CDO.stubs(webpurify_key: nil)
+    Honeybadger.expects(:notify).once.with(
+      "WebPurify API key is missing or disabled",
+      context: {endpoint: CDO.webpurify_api_endpoint}
+    )
+    assert_nil WebPurify.find_potential_profanities('some text')
   end
 
   def test_chunk_text_for_webpurify

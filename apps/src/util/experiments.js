@@ -63,6 +63,15 @@ experiments.ACCEPT_REJECT_UNIFIED_DIFF = 'accept-reject-unified-diff';
 experiments.ACCEPT_REJECT_SPLIT_DIFF = 'accept-reject-split-diff';
 // Enable the new teacher dashboard student snapshot page and features
 experiments.STUDENT_SNAPSHOT = 'student-snapshot';
+// Show the lesson/<lesson_id>/tutor page as a home for a AI Tutor+
+experiments.LESSON_TUTOR = 'lesson-tutor';
+// Enable Onboarding experiments
+experiments.ONBOARDING = 'onboarding';
+// Enable AI Diff Chat Drawer
+experiments.AI_DIFF_DRAWER = 'ai-diff-drawer';
+// Route all Gemini model traffic through the AI gateway instead of the Rails backend
+experiments.USE_AI_GATEWAY = 'useAiGateway';
+
 /**
  * This was a gamified version of the finish dialog, built in 2018,
  * but never fully shipped.

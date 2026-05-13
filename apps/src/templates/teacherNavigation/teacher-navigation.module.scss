@@ -182,9 +182,10 @@ h2.skeletonHeaderSectionName {
   align-items: center;
 }
 
-.calendarDropdownDescription {
-  font-weight: bold;
-  margin-right: 10px;
+.calendarMinutesPerWeekDropdown {
+  > div {
+    width: 100%;
+  }
 }
 
 .emptyClassroomDiv {

@@ -1,5 +1,6 @@
 <Weblab2>
   <config><![CDATA[{
+  "published": true,
   "game_id": 74,
   "created_at": "2026-02-21T03:42:37.000Z",
   "level_num": "custom",
@@ -50,9 +51,21 @@
         "2"
       ]
     },
-    "encrypted_exemplar_sources": "Dn7HQlwz0pFFO6c3d2DdXB/55clGnnwQzLWAr3sovMq6axOHbZCY2Ot6j2ta\nc2xUssWeFgyQik6LW5d9KjvGXB0WNtSc6Aew3gFAHiWxOPOkXODL1KEHdyrC\n197vfOvUyempysyXw77NCjviYRUdHKAC/uKseWjOSd/luHbWryYY7eMAPind\npl0D1Dx385kMY1KM9pNcbjEtlr4nfm2JpIpN28hK7FR5aEfQGSbdCEl5QB3T\nkEulo4Zuw8cvtiVrvUXocKu6K8vZ+cOvNmlYfz2vJsN2jZ8AJDtUW3KmPDfG\ngmv6BLcWhEgKVoT6HlhEPYgmxKagUCW5lvE3IEXC/YW0pcdgIUQ14uZ7YOKa\nOCTDuYvzFeRAB9rrgCT7ONqXdxLogTXZt7L43nIuclfoXC2em4Qdy4fjgrqx\nX6PoAzH5S7DevcO7Qwoei/w27bcMj0YIhs1mPhYwTBoWlaQbrnpFl38KfCtZ\n9F6BbqtadaPPuyOP3Q/h0VzpbB0668pYjE6sVn9As6HQ9K49JKPNQa27RQX3\nBbxFzero4aUdtREC0FqTx5jdxEpw+VOMkQjKCk8+ETdpLQEfo+/PFEx2zXva\nbXbVejEjUgJAi2Z/1GwyalJe4QDQHNDyh8Yy0R1dUeYOIddqzJMkS8WpDEQI\nMHnD3iIV/uQV/7jtmWXnnIPT6zwfdvX0UwxVLu3MdqCI84RTceeX1sY7W6bm\nxA77hIJCsUPDzwKDvspAatZu/bePqs/Bi0yOaZN1vfdgwgwJqKcy5aYI/1Jf\n0TjZIWbHtkLdpOg1DiSdHtqEuqehYuFQRVyPBUKephUh7h21wI1hXSuG9Wi3\nhGQAf+X9JrXJxDnUtUpZMYhuKySBjwxoZKgu4n/f6z0d35UvT6qv4tny8sX6\n44lnSjednRwc64o3uLabGmEKGBxhBllbIPDbVA5Y+9+h7iWX6sx/Arl059A3\nf+GzRnUd6CFKdQecN94ja5TDpDtruDmLwstekV+3Q611fW3SoGGQ+RsfP97b\npAqOYGtluigiQkAfE9IMytwjJq5UbiGILAZX7eHVkdHGVQKX3iN1k0l61cmE\nC4eU7VNGnPovFmdNJz5RJ90xo+H8D4T9P/wJw9RLbAfzK/mDWDPWAu37yoZf\nUdhXGi8JdlEGxKMvVNdeSzkrUXOvHW/v6vQfnQV/3UabPej3EGegvDu6VjKE\nqWu782BXoo4QP+eQW35AaqPXCpxsMyynK1FzpSuTeeIcwLicQhJLX0/Gi5+d\nD2cgCZRAwgroasSOQa0xiRm4YuoBfujr8jAFwVx+LBPevKRWQQuzKxIDn12b\ni7kv7uHoWunOS+ioikQJlZCdmLwtq4ypBHk0Od4ZFFv95qT9+fWS8i25zaoj\nE5jtcRZoKIMclTC4i0GNVldKN6SiBPwYC1U//iCHMLAKK33FJmCXNH1yhGjN\nV152gijcHMzdDs5wKURQz7456K0wV8fHhtl1PAHvN9kTQ9vntApyOOUtB7hd\nqYvO1E1pDbMHTtGZNdTYRNGV5X87EeOJdwNuE7o8sjM/KumeZdH4DEJVZCeb\n2XDLVm9mgnFvfBdWoYyowtS/Sl9n7Sz48vCJggWAeX5D6w0AdaY94G+Nm3TM\nWpJkX1M5MWkS+47C0ITIimWH22HT3scLMd2+dKVqmM2uJxjBzxo1kiur8gho\n2t97PCtYNUNB2hqaWeHQExDPs8c=\n"
+    "encrypted_exemplar_sources": "Dn7HQlwz0pFFO6c3d2DdXB/55clGnnwQzLWAr3sovMq6axOHbZCY2Ot6j2ta\nc2xUssWeFgyQik6LW5d9KjvGXB0WNtSc6Aew3gFAHiWxOPOkXODL1KEHdyrC\n197vfOvUyempysyXw77NCjviYRUdHKAC/uKseWjOSd/luHbWryYY7eMAPind\npl0D1Dx385kMY1KM9pNcbjEtlr4nfm2JpIpN28hK7FR5aEfQGSbdCEl5QB3T\nkEulo4Zuw8cvtiVrvUXocKu6K8vZ+cOvNmlYfz2vJsN2jZ8AJDtUW3KmPDfG\ngmv6BLcWhEgKVoT6HlhEPYgmxKagUCW5lvE3IEXC/YW0pcdgIUQ14uZ7YOKa\nOCTDuYvzFeRAB9rrgCT7ONqXdxLogTXZt7L43nIuclfoXC2em4Qdy4fjgrqx\nX6PoAzH5S7DevcO7Qwoei/w27bcMj0YIhs1mPhYwTBoWlaQbrnpFl38KfCtZ\n9F6BbqtadaPPuyOP3Q/h0VzpbB0668pYjE6sVn9As6HQ9K49JKPNQa27RQX3\nBbxFzero4aUdtREC0FqTx5jdxEpw+VOMkQjKCk8+ETdpLQEfo+/PFEx2zXva\nbXbVejEjUgJAi2Z/1GwyalJe4QDQHNDyh8Yy0R1dUeYOIddqzJMkS8WpDEQI\nMHnD3iIV/uQV/7jtmWXnnIPT6zwfdvX0UwxVLu3MdqCI84RTceeX1sY7W6bm\nxA77hIJCsUPDzwKDvspAatZu/bePqs/Bi0yOaZN1vfdgwgwJqKcy5aYI/1Jf\n0TjZIWbHtkLdpOg1DiSdHtqEuqehYuFQRVyPBUKephUh7h21wI1hXSuG9Wi3\nhGQAf+X9JrXJxDnUtUpZMYhuKySBjwxoZKgu4n/f6z0d35UvT6qv4tny8sX6\n44lnSjednRwc64o3uLabGmEKGBxhBllbIPDbVA5Y+9+h7iWX6sx/Arl059A3\nf+GzRnUd6CFKdQecN94ja5TDpDtruDmLwstekV+3Q611fW3SoGGQ+RsfP97b\npAqOYGtluigiQkAfE9IMytwjJq5UbiGILAZX7eHVkdHGVQKX3iN1k0l61cmE\nC4eU7VNGnPovFmdNJz5RJ90xo+H8D4T9P/wJw9RLbAfzK/mDWDPWAu37yoZf\nUdhXGi8JdlEGxKMvVNdeSzkrUXOvHW/v6vQfnQV/3UabPej3EGegvDu6VjKE\nqWu782BXoo4QP+eQW35AaqPXCpxsMyynK1FzpSuTeeIcwLicQhJLX0/Gi5+d\nD2cgCZRAwgroasSOQa0xiRm4YuoBfujr8jAFwVx+LBPevKRWQQuzKxIDn12b\ni7kv7uHoWunOS+ioikQJlZCdmLwtq4ypBHk0Od4ZFFv95qT9+fWS8i25zaoj\nE5jtcRZoKIMclTC4i0GNVldKN6SiBPwYC1U//iCHMLAKK33FJmCXNH1yhGjN\nV152gijcHMzdDs5wKURQz7456K0wV8fHhtl1PAHvN9kTQ9vntApyOOUtB7hd\nqYvO1E1pDbMHTtGZNdTYRNGV5X87EeOJdwNuE7o8sjM/KumeZdH4DEJVZCeb\n2XDLVm9mgnFvfBdWoYyowtS/Sl9n7Sz48vCJggWAeX5D6w0AdaY94G+Nm3TM\nWpJkX1M5MWkS+47C0ITIimWH22HT3scLMd2+dKVqmM2uJxjBzxo1kiur8gho\n2t97PCtYNUNB2hqaWeHQExDPs8c=\n",
+    "ai_tutor_prompt_settings": {
+      "answerTypes": [
+        "ask",
+        "hint",
+        "debug",
+        "example",
+        "explainCode",
+        "documentation",
+        "pseudocode"
+      ],
+      "answerTypeCustomizations": {
+      }
+    }
   },
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2026-02-21 03:42:57 +0000\",\"changed\":[],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-02-21 03:43:16 +0000\",\"changed\":[],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2026-02-21 03:42:57 +0000\",\"changed\":[],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-02-21 03:43:16 +0000\",\"changed\":[],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-03-25 16:57:17 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
 }]]></config>
 </Weblab2>

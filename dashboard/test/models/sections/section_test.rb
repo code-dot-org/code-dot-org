@@ -80,18 +80,6 @@ class SectionTest < ActiveSupport::TestCase
     end
   end
 
-  test 'update_student_sharing updates user settings' do
-    student = create(:student, sharing_disabled: false)
-    section = create(:section, sharing_disabled: false)
-    section.add_student student
-    section.update_student_sharing(true)
-    student.reload
-    assert student.sharing_disabled?
-    section.update_student_sharing(false)
-    student.reload
-    refute student.sharing_disabled?
-  end
-
   test 'adding student updates their share setting when section share is disabled' do
     section = create(:section, sharing_disabled: true)
     student = create(:student, sharing_disabled: false)
@@ -535,7 +523,6 @@ class SectionTest < ActiveSupport::TestCase
         participant_type: 'student',
         sectionInstructors: [{id: section.section_instructors[0].id, status: "active", instructor_name: section.teacher.name, instructor_email: section.teacher.email}],
         sync_enabled: nil,
-        ai_tutor_enabled: false,
         avatar_color: nil,
         avatar_emoji: nil,
         at_risk_age_gated_date: nil,
@@ -583,7 +570,6 @@ class SectionTest < ActiveSupport::TestCase
         participant_type: 'student',
         sectionInstructors: [{id: section.section_instructors[0].id, status: "active", instructor_name: section.teacher.name, instructor_email: section.teacher.email}],
         sync_enabled: nil,
-        ai_tutor_enabled: false,
         avatar_color: nil,
         avatar_emoji: nil,
         at_risk_age_gated_date: nil,
@@ -637,7 +623,6 @@ class SectionTest < ActiveSupport::TestCase
         sectionInstructors: [{id: primary_section_instructor_id, status: "active", instructor_name: section.teacher.name, instructor_email: section.teacher.email},
                              {id: coteacher_section_instructor.id, status: "invited", instructor_name: nil, instructor_email: coteacher_user.email}],
         sync_enabled: nil,
-        ai_tutor_enabled: false,
         avatar_color: nil,
         avatar_emoji: nil,
         at_risk_age_gated_date: nil,
@@ -690,7 +675,6 @@ class SectionTest < ActiveSupport::TestCase
         participant_type: 'student',
         sectionInstructors: [{id: section.section_instructors[0].id, status: "active", instructor_name: section.teacher.name, instructor_email: section.teacher.email}],
         sync_enabled: nil,
-        ai_tutor_enabled: false,
         avatar_color: nil,
         avatar_emoji: nil,
         at_risk_age_gated_date: nil,
@@ -735,7 +719,6 @@ class SectionTest < ActiveSupport::TestCase
         participant_type: 'student',
         sectionInstructors: [{id: section.section_instructors[0].id, status: "active", instructor_name: section.teacher.name, instructor_email: section.teacher.email}],
         sync_enabled: nil,
-        ai_tutor_enabled: false,
         avatar_color: nil,
         avatar_emoji: nil,
         at_risk_age_gated_date: nil,
@@ -965,7 +948,6 @@ class SectionTest < ActiveSupport::TestCase
         sectionInstructors: [{id: section.section_instructors[0].id, status: "active", instructor_name: section.teacher.name, instructor_email: section.teacher.email}],
         primaryInstructor: {email: section.teacher.email, name: section.teacher.name, ltiRosterSyncEnabled: nil},
         sync_enabled: nil,
-        ai_tutor_enabled: false,
         at_risk_age_gated_date: nil,
         at_risk_age_gated_us_state: nil,
         avatar_color: nil,
@@ -1027,7 +1009,6 @@ class SectionTest < ActiveSupport::TestCase
         sectionInstructors: [{id: section.section_instructors[0].id, status: "active", instructor_name: section.teacher.name, instructor_email: section.teacher.email}],
         primaryInstructor: {email: section.teacher.email, name: section.teacher.name, ltiRosterSyncEnabled: nil},
         sync_enabled: nil,
-        ai_tutor_enabled: false,
         at_risk_age_gated_date: nil,
         at_risk_age_gated_us_state: nil,
         avatar_color: nil,
@@ -1095,7 +1076,6 @@ class SectionTest < ActiveSupport::TestCase
                              {id: coteacher_section_instructor.id, status: "invited", instructor_name: nil, instructor_email: coteacher_user.email}],
         primaryInstructor: {email: section.teacher.email, name: section.teacher.name, ltiRosterSyncEnabled: nil},
         sync_enabled: nil,
-        ai_tutor_enabled: false,
         at_risk_age_gated_date: nil,
         at_risk_age_gated_us_state: nil,
         avatar_color: nil,
@@ -1163,7 +1143,6 @@ class SectionTest < ActiveSupport::TestCase
         sectionInstructors: [{id: section.section_instructors[0].id, status: "active", instructor_name: section.teacher.name, instructor_email: section.teacher.email}],
         primaryInstructor: {email: section.teacher.email, name: section.teacher.name, ltiRosterSyncEnabled: nil},
         sync_enabled: nil,
-        ai_tutor_enabled: false,
         at_risk_age_gated_date: nil,
         at_risk_age_gated_us_state: nil,
         avatar_color: nil,
@@ -1222,7 +1201,6 @@ class SectionTest < ActiveSupport::TestCase
         sectionInstructors: [{id: section.section_instructors[0].id, status: "active", instructor_name: section.teacher.name, instructor_email: section.teacher.email}],
         primaryInstructor: {email: section.teacher.email, name: section.teacher.name, ltiRosterSyncEnabled: nil},
         sync_enabled: nil,
-        ai_tutor_enabled: false,
         at_risk_age_gated_date: nil,
         at_risk_age_gated_us_state: nil,
         avatar_color: nil,
@@ -1688,5 +1666,31 @@ class SectionTest < ActiveSupport::TestCase
         end
       end
     end
+  end
+
+  test 'add_teacher_to_mailjet_course_list is called when matching course is assigned' do
+    unit_group = create(:unit_group, name: 'hoai-web-design-pilot-v2')
+    section = create(:section, teacher: @teacher)
+
+    MailJet.expects(:create_contact_and_add_to_course_list).with(@teacher, 'hoai-web-design-pilot-v2').once
+
+    section.update!(course_id: unit_group.id)
+  end
+
+  test 'add_teacher_to_mailjet_course_list is not called when course_id does not change' do
+    unit_group = create(:unit_group, name: 'hoai-web-design-pilot-v2')
+    section = create(:section, teacher: @teacher, course_id: unit_group.id)
+
+    MailJet.expects(:create_contact_and_add_to_course_list).never
+
+    section.update!(name: 'new-name')
+  end
+
+  test 'add_teacher_to_mailjet_course_list is called on section create with matching course' do
+    unit_group = create(:unit_group, name: 'hoai-web-design-pilot-v2')
+
+    MailJet.expects(:create_contact_and_add_to_course_list).with(@teacher, 'hoai-web-design-pilot-v2').once
+
+    create(:section, teacher: @teacher, course_id: unit_group.id)
   end
 end

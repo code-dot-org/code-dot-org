@@ -3,12 +3,17 @@ import {IconButton as MuiIconButton} from '@mui/material';
 import classNames from 'classnames';
 import React, {useEffect, useRef, useState, useCallback, useMemo} from 'react';
 
-import {useAiChatDisabled} from '@cdo/apps/aichat/context/aiChatDisabledContext';
 import {Role} from '@cdo/apps/aiComponentLibrary/chatMessage/types';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 import {selectIsWaitingForChatResponse} from '../redux';
-import {ChatAsset, ChatEvent, isChatMessage, ModelParameters} from '../types';
+import {
+  AiChatDisabledState,
+  ChatAsset,
+  ChatEvent,
+  isChatMessage,
+  ModelParameters,
+} from '../types';
 
 import {ChatDisabled} from './ChatDisabled';
 import ChatEventView from './ChatEventView';
@@ -23,8 +28,11 @@ interface ChatEventsListProps {
   events: ChatEvent[];
   isTeacherView?: boolean;
   buildAssetUrl?: (asset: ChatAsset) => string;
-  isAiTutorVersion?: boolean;
   hasInstructionsDrawer?: boolean;
+  disabledState?: AiChatDisabledState;
+  renderLastMessagePostText?: (
+    onRequestScrollToBottom: () => void
+  ) => React.ReactNode;
 }
 
 /**
@@ -36,10 +44,14 @@ const ChatEventsList: React.FunctionComponent<ChatEventsListProps> = ({
   events,
   isTeacherView,
   buildAssetUrl,
-  isAiTutorVersion,
   hasInstructionsDrawer,
+  disabledState,
+  renderLastMessagePostText,
 }) => {
-  const {chatDisabled, chatDisabledMessage} = useAiChatDisabled();
+  const chatDisabled = disabledState?.disabled ?? false;
+  const chatDisabledMessage = disabledState?.disabledMessage;
+  const chatDisabledLink = disabledState?.disabledLink;
+
   const [isInChatNavigationMode, setIsInChatNavigationMode] = useState(false);
   const [inProgrammaticScroll, setInProgrammaticScroll] = useState(false);
   const [showScrollToBottom, setShowScrollToBottom] = useState(true);
@@ -92,9 +104,21 @@ const ChatEventsList: React.FunctionComponent<ChatEventsListProps> = ({
     }
   };
 
-  const isTeacherViewEmptyStudentChatHistory = useMemo(() => {
-    return isTeacherView && events.length === 0;
-  }, [isTeacherView, events]);
+  const hasChatHistory = events.length > 0;
+
+  const resolvedLastMessagePostText = useMemo(() => {
+    if (renderLastMessagePostText) {
+      return renderLastMessagePostText(scrollToLastMessage);
+    }
+  }, [renderLastMessagePostText, scrollToLastMessage]);
+
+  const lastChatMessageIndex = useMemo(() => {
+    if (!resolvedLastMessagePostText) return -1;
+    for (let i = events.length - 1; i >= 0; i--) {
+      if (isChatMessage(events[i])) return i;
+    }
+    return -1;
+  }, [events, resolvedLastMessagePostText]);
 
   useEffect(() => {
     const container = conversationContainerRef.current;
@@ -192,29 +216,29 @@ const ChatEventsList: React.FunctionComponent<ChatEventsListProps> = ({
       )}
     >
       <div className={moduleStyles.messageArea} ref={conversationContainerRef}>
-        {chatDisabled ? (
-          <ChatDisabled message={chatDisabledMessage} />
+        {chatDisabled && !(isTeacherView && hasChatHistory) ? (
+          <ChatDisabled message={chatDisabledMessage} link={chatDisabledLink} />
         ) : (
           <>
             {hasInstructionsDrawer && (
               <div className={moduleStyles.instructionsDrawerInset} />
             )}
-            {isTeacherViewEmptyStudentChatHistory && (
-              <EmptyStudentChatHistory />
-            )}
+            {isTeacherView && !hasChatHistory && <EmptyStudentChatHistory />}
             {events.map((event, index) => {
-              const isLastMessage = index === events.length - 1;
+              const isLastEvent = index === events.length - 1;
+              const isLastChatMessage = index === lastChatMessageIndex;
               return (
                 <ChatEventView
                   event={event}
                   key={event.timestamp}
                   isTeacherView={isTeacherView}
                   buildAssetUrl={buildAssetUrl}
-                  isAiTutorVersion={isAiTutorVersion}
                   clientType={clientType}
                   modelParameters={modelParameters}
-                  isLastMessage={isLastMessage}
-                  ref={isLastMessage ? finalEventRef : undefined}
+                  postText={
+                    isLastChatMessage ? resolvedLastMessagePostText : undefined
+                  }
+                  ref={isLastEvent ? finalEventRef : undefined}
                   tabIndex={isInChatNavigationMode ? 0 : -1}
                   onKeyDown={e => {
                     if (e.key === 'Escape' && e.target === e.currentTarget) {

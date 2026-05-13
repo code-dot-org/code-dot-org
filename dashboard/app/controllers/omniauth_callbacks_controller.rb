@@ -281,12 +281,14 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
   private def sign_in_classlink(user)
     prepare_locale_cookie user
     user.update_oauth_credential_tokens auth_hash
+    auto_verify_teacher! user
     sign_in_user user
   end
 
   private def sign_in_clever(user)
     prepare_locale_cookie user
     user.update_oauth_credential_tokens auth_hash
+    auto_verify_teacher! user
     sign_in_user user
   end
 
@@ -456,6 +458,10 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
     clever_data = OmniAuth::AuthHash.new(dob: dob, gender: gender, user_type: user_type)
     auth.info&.merge!(clever_data)
     auth
+  end
+
+  private def auto_verify_teacher!(user)
+    user.verify_teacher! if user.teacher? && !user.verified_teacher?
   end
 
   # Moves non-standard attributes from the extra ClassLink OAuth data and puts it in the location we
@@ -640,13 +646,19 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
     return unless connecting_new_provider? || Policies::Lti.lti_registration_in_progress?(session)
     lock_reason = account_linking_locked?
     return unless lock_reason
-    redirect_back fallback_location: new_user_session_path, alert: lock_reason
+    redirect_back fallback_location: new_user_session_path, alert: lock_reason, allow_other_host: true
   end
 
   # Determine whether to link a new LTI auth option to an existing account
   # Not to be confused with the connect_provider flow
   private def should_link_accounts?
-    Policies::Lti.lti_registration_in_progress?(session) && !account_linking_locked?
+    return false unless Policies::Lti.lti_registration_in_progress?(session)
+    return false if current_user&.lms_landing_opted_out
+
+    partial_user = User.new_with_session(ActionController::Parameters.new, session)
+    return false if partial_user&.lms_landing_opted_out
+
+    !account_linking_locked?
   end
 
   # For linking new LTI auth options to existing accounts

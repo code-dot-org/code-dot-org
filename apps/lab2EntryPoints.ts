@@ -7,7 +7,7 @@
  * Note: old-style "lab1" labs use a different system, see webpackEntryPoints.js
  */
 
-import {AIChatEntryPoint} from '@cdo/apps/aichat/entrypoint';
+import {AIChatEntryPoint} from '@cdo/apps/aichatLab/entrypoint';
 import {BubbleChoiceEntryPoint} from '@cdo/apps/bubbleChoice/entrypoint';
 import {DanceEntryPoint} from '@cdo/apps/dance/lab2/entrypoint';
 import {Game2EntryPoint} from '@cdo/apps/game2/entrypoint';

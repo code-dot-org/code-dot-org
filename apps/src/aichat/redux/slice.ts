@@ -1,32 +1,26 @@
 import {createSlice, PayloadAction} from '@reduxjs/toolkit';
 
 import {
-  DEFAULT_THREAD_TITLE,
-  ThreadTypeFields,
-  THREAD_TYPES,
-} from '@cdo/apps/aiDifferentiation/constants';
-import {SUGGESTED_PROMPTS_FOR_SELECTION} from '@cdo/apps/aiDifferentiation/predefinedPrompts';
-import {
-  AiArtifact,
-  ChatItem,
-  ChatPrompt,
-  ChatTextMessage,
-} from '@cdo/apps/aiDifferentiation/types';
-import {registerReducers} from '@cdo/apps/redux';
-import {AiChatClientTypes} from '@cdo/generated-scripts/sharedConstants';
-
-import {
-  ModalTypes,
-  RESET_CONVERSATION_CUSTOMIZATION_UPDATES,
-} from '../constants';
-import {
   AiCustomizations,
-  ChatEvent,
   LevelAichatSettings,
+  ModalTypes,
   ModelCardInfo,
+  SaveError,
   SaveType,
   ViewMode,
   Visibility,
+} from '@cdo/apps/aichatLab/types';
+import {validateModelId} from '@cdo/apps/aichatLab/utils';
+import {
+  DEFAULT_VISIBILITIES,
+  EMPTY_AI_CUSTOMIZATIONS,
+} from '@cdo/apps/aichatLab/views/modelCustomization/constants';
+import {registerReducers} from '@cdo/apps/redux';
+import {AiChatClientTypes} from '@cdo/generated-scripts/sharedConstants';
+
+import {RESET_CONVERSATION_CUSTOMIZATION_UPDATES} from '../constants';
+import {
+  ChatEvent,
   isModelUpdate,
   isNotification,
   isUserActionEvent,
@@ -34,33 +28,19 @@ import {
   ServerChatEvent,
   isCompletedChatMessage,
   ChatAsset,
-  SaveError,
   AiChatClientType,
   WorkspaceTeacherViewTab,
   UserAddedSelectionContextItem,
   ChatMessage,
   isPendingOrCompletedChatMessage,
   CompletedChatMessage,
+  UploadStatus,
 } from '../types';
-import {
-  DEFAULT_VISIBILITIES,
-  EMPTY_AI_CUSTOMIZATIONS,
-} from '../views/modelCustomization/constants';
-import {validateModelId} from '../views/modelCustomization/utils';
 
 import {AichatState} from './state';
 
 const initialState: AichatState = {
-  chatIsOpen: false,
   clientType: undefined,
-  threadId: 0,
-  threadTitle: DEFAULT_THREAD_TITLE,
-  threadType: THREAD_TYPES.default,
-  initialThreadPrompt: null,
-  selectedPrompt: null,
-  threadMessages: [],
-  threadKeyId: 0,
-  initialChatMessage: SUGGESTED_PROMPTS_FOR_SELECTION['default'].initialMessage,
   chatEventsPast: [],
   chatEventsCurrent: [],
   studentChatHistory: [],
@@ -72,7 +52,6 @@ const initialState: AichatState = {
   viewMode: ViewMode.EDIT,
   saveInProgress: false,
   currentSaveType: undefined,
-  userHasAichatLabAccess: false,
   stagedFiles: [],
   stagedFilesAlert: undefined,
   hasSentMessage: false,
@@ -83,18 +62,12 @@ const initialState: AichatState = {
   hasSetInitialCustomizations: false,
   chatWorkspaceSelectedTab: null,
   userAddedSelectionContext: {},
-  artifactType: undefined,
-  artifact: undefined,
-  pendingArtifactMessage: undefined,
 };
 
 const aichatSlice = createSlice({
   name: 'aichat',
   initialState,
   reducers: {
-    setChatIsOpen: (state, action: PayloadAction<boolean>) => {
-      state.chatIsOpen = action.payload;
-    },
     addEventToChatEventsCurrent: (state, action: PayloadAction<ChatEvent>) => {
       state.chatEventsCurrent.push(action.payload);
     },
@@ -140,47 +113,8 @@ const aichatSlice = createSlice({
         state.chatEventsCurrent = events;
       }
     },
-    setUserHasAichatLabAccess: (state, action: PayloadAction<boolean>) => {
-      state.userHasAichatLabAccess = action.payload;
-    },
     setClientType(state, action: PayloadAction<AiChatClientType>) {
       state.clientType = action.payload;
-    },
-    setThreadId(state, action: PayloadAction<number>) {
-      state.threadId = action.payload;
-    },
-    setThreadTitle(state, action: PayloadAction<string>) {
-      state.threadTitle = action.payload;
-    },
-    setThreadType(state, action: PayloadAction<ThreadTypeFields>) {
-      state.threadType = action.payload;
-    },
-    setInitialThreadPrompt(state, action: PayloadAction<ChatPrompt | null>) {
-      state.initialThreadPrompt = action.payload;
-    },
-    setSelectedPrompt(state, action: PayloadAction<ChatPrompt | null>) {
-      state.selectedPrompt = action.payload;
-    },
-    setThreadMessages(state, action: PayloadAction<ChatItem[]>) {
-      state.threadMessages = action.payload;
-    },
-    addThreadMessage: (state, action: PayloadAction<ChatItem>) => {
-      state.threadMessages.push(action.payload);
-    },
-    setThreadKeyId(state, action: PayloadAction<number>) {
-      state.threadKeyId = action.payload;
-    },
-    setArtifactType(state, action: PayloadAction<string | undefined>) {
-      state.artifactType = action.payload;
-    },
-    setArtifact(state, action: PayloadAction<AiArtifact | undefined>) {
-      state.artifact = action.payload;
-    },
-    setPendingArtifactMessage(state, action: PayloadAction<ChatTextMessage>) {
-      state.pendingArtifactMessage = action.payload;
-    },
-    clearPendingArtifactMessage: state => {
-      state.pendingArtifactMessage = undefined;
     },
     removeUpdateMessage: (state, action: PayloadAction<number>) => {
       const modelUpdateMessageInfo = getUpdateMessageLocation(
@@ -240,9 +174,6 @@ const aichatSlice = createSlice({
     setNewChatSession: state => {
       state.chatEventsPast.push(...state.chatEventsCurrent);
       state.chatEventsCurrent = [];
-    },
-    setInitialChatMessage(state, action: PayloadAction<string>) {
-      state.initialChatMessage = action.payload;
     },
     setShowModalType: (
       state,
@@ -354,7 +285,12 @@ const aichatSlice = createSlice({
     },
     addStagedFile(
       state,
-      action: PayloadAction<{key: string; asset: ChatAsset; loaded?: boolean}>
+      action: PayloadAction<{
+        key: string;
+        asset: ChatAsset;
+        loaded?: boolean;
+        timestamp?: string;
+      }>
     ) {
       state.stagedFiles.push({
         ...action.payload,
@@ -365,19 +301,22 @@ const aichatSlice = createSlice({
       state,
       action: PayloadAction<{
         key: string;
-        status: 'uploaded' | 'uploadFailed' | 'sizeLimitExceeded';
+        status: UploadStatus;
+        hideAlert?: boolean;
       }>
     ) {
-      const {key, status} = action.payload;
+      const {key, status, hideAlert} = action.payload;
       if (status === 'uploaded') {
         const fileIndex = state.stagedFiles.findIndex(file => file.key === key);
         if (fileIndex !== -1) {
           state.stagedFiles[fileIndex].status = 'uploaded';
         }
       } else {
-        // Remove from staged files and set alert
+        // Remove from staged files and set alert (unless hidden)
         state.stagedFiles = state.stagedFiles.filter(file => file.key !== key);
-        state.stagedFilesAlert = status;
+        if (!hideAlert) {
+          state.stagedFilesAlert = status;
+        }
       }
     },
     stagedFilesLimitExceeded(state) {
@@ -454,7 +393,6 @@ registerReducers({aichat: aichatSlice.reducer});
 export const aichatReducer = aichatSlice.reducer;
 
 export const {
-  setChatIsOpen,
   addEventToChatEventsCurrent,
   startSave,
   updateChatMessageStatus,
@@ -469,25 +407,11 @@ export const {
   setAiCustomizationProperty,
   setModelCardProperty,
   setNewChatSession,
-  setInitialChatMessage,
   setShowModalType,
   setInitialConfiguration,
   setStudentChatHistory,
   setOwnChatHistory,
-  setUserHasAichatLabAccess,
   setClientType,
-  setThreadId,
-  setThreadTitle,
-  setThreadType,
-  setInitialThreadPrompt,
-  setSelectedPrompt,
-  setThreadMessages,
-  addThreadMessage,
-  setThreadKeyId,
-  setArtifactType,
-  setArtifact,
-  setPendingArtifactMessage,
-  clearPendingArtifactMessage,
   setViewMode,
   addStagedFile,
   stagedFileUploadFinished,

@@ -10,12 +10,12 @@ class AssetBucket < BucketHelper
   end
 
   def initialize
-    super CDO.assets_s3_bucket, CDO.assets_s3_directory
+    super(CDO.assets_s3_bucket, CDO.assets_s3_directory)
   end
 
   def allowed_file_types
     # Only allow specific image and sound types to be uploaded by users.
-    %w(.jpg .jpeg .gif .png .mp3 .wav .pdf .doc .docx)
+    %w(.jpg .jpeg .gif .png .mp3 .wav .pdf .doc .docx .webp)
   end
 
   def try_resize_file(body, extension)
@@ -25,12 +25,14 @@ class AssetBucket < BucketHelper
     # their original value because it's very quick from a compute perspective (<1s versus ~6s for
     # 1/2). And because the resolution is still pretty good on the small visualization area used
     # in our web apps.
-    if ([".jpg", ".jpeg", ".png"].include? extension.downcase) && (body.length < max_resize_size)
+    if ([".jpg", ".jpeg", ".png", ".webp"].include? extension.downcase) && (body.length < max_resize_size)
       image = MiniMagick::Image.read(body, extension)
       image.resize('25%')
       return image.to_blob
     end
 
+    body
+  rescue MiniMagick::Invalid, MiniMagick::Error
     body
   end
 

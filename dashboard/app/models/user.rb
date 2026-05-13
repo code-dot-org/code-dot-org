@@ -198,7 +198,6 @@ class User < ApplicationRecord
     family_name
     ai_rubrics_disabled
     ai_rubrics_tour_seen
-    ai_tutor_access_denied
     ai_differentiation_toggled_off
     has_seen_ai_assessments_announcement
     has_completed_ai_differentiation_welcome
@@ -214,6 +213,7 @@ class User < ApplicationRecord
     educator_role
     signup_sources_tracking
     has_dismissed_personalization_alert
+    grades_teaching
   )
 
   attr_accessor(
@@ -246,6 +246,7 @@ class User < ApplicationRecord
   has_many :hint_view_requests
   has_many :teacher_feedbacks, foreign_key: 'teacher_id', dependent: :destroy
   has_many :ai_lesson_summaries, dependent: :destroy
+  has_many :lesson_insights, foreign_key: 'student_id', dependent: :destroy
 
   has_many :plc_enrollments, class_name: '::Plc::UserCourseEnrollment', dependent: :destroy
 
@@ -991,11 +992,11 @@ class User < ApplicationRecord
       age: age,
       sharing_disabled: sharing_disabled?,
       has_ever_signed_in: has_ever_signed_in?,
-      ai_tutor_access_denied: !!ai_tutor_access_denied,
       at_risk_age_gated_date: at_risk_age_gated_date,
       child_account_compliance_state: cap_status,
       latest_permission_request_sent_at: latest_parental_permission_request&.updated_at,
       us_state: us_state,
+      is_demo_student: Policies::DemoSections.demo_student?(id),
     }
   end
 
@@ -1228,7 +1229,7 @@ class User < ApplicationRecord
   # course, we will create a UserScript entry so that they get a course card
   # In addition, we want to have green bubbles for the levels associated with these
   # channels, so we create level progress.
-  def generate_progress_from_storage_id(storage_id, script_name = 'applab-intro')
+  def generate_progress_from_storage_id(storage_id, script_name = 'applab-intro', locale: nil)
     # applab-intro is not seeded in our minimal test env used on test/CI. We
     # should be able to handle this gracefully
     script = begin
@@ -1274,6 +1275,7 @@ class User < ApplicationRecord
             new_result: ActivityConstants::BEST_PASS_RESULT,
             submitted: false,
             level_source_id: nil,
+            locale:,
             unit_group: unit_group
           )
         end
@@ -1715,10 +1717,7 @@ class User < ApplicationRecord
       total_time_spent = user_level.calculate_total_time_spent(time_spent)
       user_level.time_spent = total_time_spent if total_time_spent
 
-      if locale
-        user_level.locale = locale
-        user_level.locale_supported = script.supported_locale?(locale)
-      end
+      user_level.assign_locale_data(locale) if locale
 
       if unit_group && user_level.new_record?
         user_level.unit_group_id = unit_group.id

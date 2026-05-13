@@ -188,9 +188,7 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
     sign_in student
     section = create(:section, login_type: 'email')
 
-    500.times do
-      create(:follower, section: section)
-    end
+    create_list(:follower, 500, section: section) # rubocop:disable FactoryBot/ExcessiveCreateList
 
     post :join, params: {id: section.code}
     assert_response :forbidden
@@ -1361,44 +1359,6 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
     Section.find returned_json['id']
   end
 
-  test "update_sharing_disabled updates sharing_disabled" do
-    sign_in @teacher
-    section = create(:section, user: @teacher, script_id: @script.id)
-    post :update_sharing_disabled, params: {
-      id: section.id,
-      sharing_disabled: true
-    }
-    assert_response :success
-    section.reload
-    assert_equal(true, section.sharing_disabled)
-
-    post :update_sharing_disabled, params: {
-      id: section.id,
-      sharing_disabled: false
-    }
-    assert_response :success
-    section.reload
-    assert_equal(false, section.sharing_disabled)
-  end
-
-  test "update_sharing_disabled: cannot update section you dont own" do
-    other_teacher = create(:teacher)
-    sign_in other_teacher
-    post :update_sharing_disabled, params: {
-      id: @section.id,
-      sharing_disabled: true,
-    }
-    assert_response :forbidden
-  end
-
-  test "update_sharing_disabled: cannot update section if not logged in " do
-    post :update_sharing_disabled, params: {
-      id: @section.id,
-      sharing_disabled: true,
-    }
-    assert_response :forbidden
-  end
-
   test "available_participant_types: returns forbidden if no user" do
     get :available_participant_types
     assert_response :forbidden
@@ -1583,36 +1543,6 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
     assert_nil @section.code_review_expires_at
   end
 
-  test 'can toggle ai_tutor_enabled by the section teacher' do
-    sign_in @teacher
-    post :set_ai_tutor_enabled, params: {id: @section.id, ai_tutor_enabled: true}
-    assert_response :success
-    @section.reload
-    assert @section.ai_tutor_enabled
-
-    post :set_ai_tutor_enabled, params: {id: @section.id, ai_tutor_enabled: false}
-    assert_response :success
-    @section.reload
-    refute @section.ai_tutor_enabled
-  end
-
-  test 'cannot set ai_tutor_enabled by a different teacher' do
-    sign_in @following_teacher
-    post :set_ai_tutor_enabled, params: {id: @section.id, ai_tutor_enabled: true}
-    assert_response :forbidden
-  end
-
-  test 'set ai_tutor_enabled returns 403 for unauthorized access' do
-    post :set_ai_tutor_enabled, params: {id: @section.id, ai_tutor_enabled: true}
-    assert_response :forbidden
-  end
-
-  test 'set ai_tutor_enabled fails when section does not exist' do
-    sign_in @teacher
-    post :set_ai_tutor_enabled, params: {id: -1, ai_tutor_enabled: true}
-    assert_response :forbidden
-  end
-
   test 'can set ai_chat_access_level by the section teacher' do
     sign_in @teacher
     post :set_ai_chat_access_level, params: {id: @section.id, ai_chat_access_level: SharedConstants::AI_CHAT_ACCESS_LEVELS[:ENABLED]}
@@ -1685,6 +1615,148 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
     co_summary = course_offerings[modular_course.course_version.course_offering.id.to_s]
     cv_summary = co_summary['course_versions'][modular_course.course_version.id.to_s]
     assert_equal [@beta_unit_1.id.to_s, @beta_unit_2.id.to_s], cv_summary['units'].keys
+  end
+
+  # create_demo
+
+  test 'create_demo: returns forbidden when not signed in' do
+    post :create_demo, params: {demo_type: 'high'}
+    assert_response :forbidden
+  end
+
+  test 'create_demo: returns bad_request for invalid section type' do
+    sign_in @teacher
+    post :create_demo, params: {demo_type: 'invalid'}
+    assert_response :bad_request
+  end
+
+  test 'create_demo: creates section with preset config' do
+    sign_in @teacher
+    stub_demo_preset
+    post :create_demo, params: {demo_type: 'high'}
+    assert_response :success
+
+    section = returned_section
+    assert_equal 'My first AIF section', section.name
+    assert_equal 'email', section.login_type
+    assert_equal 'student', section.participant_type
+    assert_equal ['9', '10'], section.grades
+    assert_equal @csp_script.id, section.script_id
+    assert_equal @csp_unit_group.id, section.course_id
+    assert_equal 'high', section.demo_type
+  end
+
+  test 'create_demo: adds demo students to the section' do
+    sign_in @teacher
+    stub_demo_preset
+    demo_student = create(:student)
+    CDO.stubs(:demo_student_ids).returns({'high' => [demo_student.id.to_s]})
+    Policies::DemoSections.reset_cache!
+
+    post :create_demo, params: {demo_type: 'high'}
+    assert_response :success
+
+    section = returned_section
+    assert_includes section.students.map(&:id), demo_student.id
+  end
+
+  test 'create_demo: students cannot create demo sections' do
+    sign_in @student
+    post :create_demo, params: {demo_type: 'high'}
+    assert_response :forbidden
+  end
+
+  test 'create_demo: returns conflict when teacher already has a demo section of that type' do
+    sign_in @teacher
+    stub_demo_preset
+    post :create_demo, params: {demo_type: 'high'}
+    assert_response :success
+
+    post :create_demo, params: {demo_type: 'high'}
+    assert_response :conflict
+    assert_includes JSON.parse(@response.body)['error'], 'high'
+  end
+
+  test 'presets: returns forbidden when not signed in' do
+    get :presets
+    assert_response :forbidden
+  end
+
+  test 'presets: returns the preset projections' do
+    sign_in @teacher
+    high_unit = create(:unit, name: 'fake-high-unit')
+    middle_unit = create(:unit, name: 'fake-middle-unit')
+    high_unit_group = create(:unit_group, name: 'fake-high-course')
+    middle_unit_group = create(:unit_group, name: 'fake-middle-course')
+    create(:unit_group_unit, unit_group: high_unit_group, script: high_unit, position: 1)
+    create(:unit_group_unit, unit_group: middle_unit_group, script: middle_unit, position: 1)
+    Policies::DemoSections.stubs(:preset_views_for_all_types).returns(
+      {
+        high: {
+          demo_type: 'high',
+          section_name: 'Fake High Practice Section',
+          avatar_color: 8,
+          avatar_emoji: 5,
+          login_type: 'email',
+          participant_type: 'student',
+          unit: {
+            name: high_unit.name,
+            display_name: high_unit.localized_title,
+          },
+          unit_group: {
+            name: high_unit_group.name,
+            display_name: high_unit_group.localized_title,
+          },
+        },
+        middle: {
+          demo_type: 'middle',
+          section_name: 'Fake Middle Practice Section',
+          avatar_color: 1,
+          avatar_emoji: 0,
+          login_type: 'word',
+          participant_type: 'student',
+          unit: {
+            name: middle_unit.name,
+            display_name: middle_unit.localized_title,
+          },
+          unit_group: {
+            name: middle_unit_group.name,
+            display_name: middle_unit_group.localized_title,
+          },
+        },
+      }
+    )
+
+    get :presets
+
+    assert_response :success
+    response = JSON.parse(@response.body)
+    assert_equal 'Fake High Practice Section', response['high']['section_name']
+    assert_equal high_unit.name, response['high']['unit']['name']
+    assert_equal 'student', response['middle']['participant_type']
+  end
+
+  test 'presets: returns an empty response when no preset can be projected' do
+    sign_in @teacher
+    Policies::DemoSections.stubs(:preset_views_for_all_types).returns({})
+
+    get :presets
+
+    assert_response :success
+    assert_equal({}, JSON.parse(@response.body))
+  end
+
+  private def stub_demo_preset
+    Policies::DemoSections.stubs(:get_preset).with('high').returns(
+      {
+        section_name: 'My first AIF section',
+        login_type: 'email',
+        participant_type: 'student',
+        grades: ['9', '10'],
+        unit_name: @csp_script.name,
+        unit_group_name: @csp_unit_group.name,
+      }
+    )
   end
 
   private def set_up_code_review_groups

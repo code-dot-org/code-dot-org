@@ -15,6 +15,7 @@ import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import BackpackClientApi from '@cdo/apps/sharedComponents/backpack/BackpackClientApi';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 
+import {onClickAddFile} from './onClickAddFile';
 import {
   fetchAndSaveFile,
   handleSaveDuplicateFile,
@@ -55,6 +56,8 @@ const BackpackFileChip: React.FC<BackpackFileChipProps> = ({
   setActionInProgress,
   isSecondaryBackpack,
   onImageFlagged,
+  addFileTooltipText = 'Add to project',
+  addFileHandler,
 }) => {
   const fileExtension = fileName.split('.').pop()?.toLowerCase();
   const fileIcon = useMemo(
@@ -83,9 +86,9 @@ const BackpackFileChip: React.FC<BackpackFileChipProps> = ({
     } else if (!isFileSupported) {
       return 'File type not supported in this project';
     } else {
-      return 'Add to project';
+      return addFileTooltipText;
     }
-  }, [disableActions, inReadOnly, isFileSupported]);
+  }, [disableActions, inReadOnly, isFileSupported, addFileTooltipText]);
 
   const filePreviewUrl = useMemo(() => {
     if (fileExtension && EXTENSIONS_WITH_PREVIEWS.includes(fileExtension)) {
@@ -102,6 +105,17 @@ const BackpackFileChip: React.FC<BackpackFileChipProps> = ({
   }, [backpackApi, fileExtension, fileName, isRecentlyAdded]);
 
   const handleAdd = async (isSecondaryBackpack?: boolean) => {
+    // Use the addFileHandler if provided; otherwise fall back to default logic.
+    if (addFileHandler) {
+      onClickAddFile(
+        backpackApi,
+        fileName,
+        addAlert,
+        setActionInProgress,
+        addFileHandler
+      );
+      return;
+    }
     setActionInProgress(true);
     const {isSupportFileName, newFileName} = validateFileName(fileName);
     if (isSupportFileName) {
@@ -275,11 +289,10 @@ const BackpackFileChip: React.FC<BackpackFileChipProps> = ({
           labelText={`${fileName} options`}
           size={'xs'}
           triggerButtonProps={{
-            color: 'gray',
-            icon: {iconName: 'ellipsis-vertical'},
-            isIconOnly: true,
-            type: 'tertiary',
-            size: 'xs',
+            color: 'tertiary',
+            children: <FontAwesomeV6Icon iconName="ellipsis-vertical" />,
+            variant: 'text',
+            size: 'extraSmall',
           }}
           menuPlacement="right"
           disabled={disableActions}

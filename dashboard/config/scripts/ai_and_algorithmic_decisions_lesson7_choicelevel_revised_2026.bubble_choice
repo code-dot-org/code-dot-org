@@ -1,0 +1,10 @@
+name 'ai-and-algorithmic-decisions-lesson7-choicelevel_revised_2026'
+display_name 'Explore Dynamic Features'
+description 'Explore different dynamic, interactive features and see how they change a page. Notice what users can do and how the page responds.'
+
+sublevels
+level 'ai-and-algorithmic-decisions-lesson7-choicea_revised_2026'
+level 'ai-and-algorithmic-decisions-lesson7-choiceb_revised_2026'
+level 'ai-and-algorithmic-decisions-lesson7-choicec_revised_2026'
+
+uses_lab2
