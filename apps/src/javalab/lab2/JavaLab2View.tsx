@@ -98,6 +98,7 @@ import TheaterVisualizationColumn from '../theater/TheaterVisualizationColumn';
 
 import {JavalabLevelProperties} from './types';
 import useJavalabSources from './useJavalabSources';
+import useSourcesBridge from './useSourcesBridge';
 
 // Module-scoped guard so reducer registration only happens once per page
 // even if JavaLab2View remounts (e.g., across no-reload level navigation).
@@ -237,6 +238,10 @@ const JavaLab2View: React.FunctionComponent<
     isReadOnlyWorkspace: false,
     hasOpenCodeReview: false,
   });
+
+  // Forward editor source changes to lab2's ProjectManager so they get
+  // autosaved and flushed on navigation.
+  useSourcesBridge();
 
   // Fetch CSRF token once for project_commits & override-source POSTs.
   useEffect(() => {

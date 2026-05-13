@@ -189,7 +189,7 @@ class JavalabEditor extends React.Component {
       });
     }
 
-    const {fileMetadata} = this.props;
+    const {fileMetadata, sources} = this.props;
 
     if (
       !_.isEqual(Object.keys(prevProps.fileMetadata), Object.keys(fileMetadata))
@@ -197,10 +197,28 @@ class JavalabEditor extends React.Component {
       for (const tabKey in fileMetadata) {
         if (!this.editors[tabKey]) {
           // create an editor if it doesn't exist yet
-          const source = this.props.sources[fileMetadata[tabKey]];
+          const source = sources[fileMetadata[tabKey]];
           const doc = (source && source.text) || '';
           this.createEditor(tabKey, doc);
         }
+      }
+    }
+
+    // Sync existing editor docs when the underlying source text changes
+    // externally (e.g., lab2 no-reload navigation loads a new level into the
+    // same tab slots). A user keystroke updates state.sources via setSource,
+    // so the editor's local doc already matches the new text — in that case
+    // this loop is a no-op. We only dispatch when redux diverges from the
+    // editor, which is the case after setAllSourcesAndFileMetadata.
+    for (const tabKey in this.editors) {
+      const source = sources[fileMetadata[tabKey]];
+      if (!source) continue;
+      const editor = this.editors[tabKey];
+      const currentDoc = editor.state.doc.toString();
+      if (currentDoc !== source.text) {
+        editor.dispatch({
+          changes: {from: 0, to: editor.state.doc.length, insert: source.text},
+        });
       }
     }
   }
