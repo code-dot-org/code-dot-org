@@ -95,8 +95,8 @@ class JavalabTest < ActiveSupport::TestCase
     level.properties['start_sources'] = {'Main.java' => 'class Main {}'}
     level.save!
     summary = level.summarize_for_lab2_properties(nil)
-    assert_kind_of Hash, summary[:startSources]
-    assert(summary[:startSources]['files'].any? {|_, f| f['name'] == 'Main.java'})
+    assert_kind_of Hash, summary['startSources']
+    assert(summary['startSources']['files'].any? {|_, f| f['name'] == 'Main.java'})
   end
 
   test 'summarize_for_lab2_properties strips encrypted blobs' do
@@ -109,8 +109,8 @@ class JavalabTest < ActiveSupport::TestCase
     level.properties['encrypted_exemplar_sources'] = 'BLOB'
     level.save!
     summary = level.summarize_for_lab2_properties(nil)
-    refute summary.key?(:encryptedValidation)
-    refute summary.key?(:encryptedExemplarSources)
+    refute summary.key?('encryptedValidation')
+    refute summary.key?('encryptedExemplarSources')
   end
 
   test 'get_validations returns one PASSED_ALL_TESTS condition when validated' do

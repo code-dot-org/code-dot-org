@@ -5,7 +5,7 @@ import {CodebridgeLevelProperties, ConfigType} from '@codebridge/types';
 import {java} from '@codemirror/lang-java';
 import {json} from '@codemirror/lang-json';
 import {LanguageSupport} from '@codemirror/language';
-import React, {useState} from 'react';
+import React, {useMemo, useState} from 'react';
 
 import {LabProps, MultiFileSource, ProjectSources} from '@cdo/apps/lab2/types';
 import {AppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
@@ -18,6 +18,7 @@ import {
 import HorizontalLayout from './layout/HorizontalLayout';
 import ShareView from './layout/ShareView';
 import VerticalLayout from './layout/VerticalLayout';
+import {migrateLegacyJavalabSources} from './migrateLegacySources';
 
 import moduleStyles from './javalab-view.module.scss';
 
@@ -43,10 +44,17 @@ const Javalab2View: React.FunctionComponent<
   LabProps<CodebridgeLevelProperties, ProjectSources>
 > = ({levelProperties, initialSources}) => {
   const [config, setConfig] = useState<ConfigType>(defaultConfig);
+  // Old Java Lab wrote channel sources as a flat {filename: code} hash; the
+  // codebridge code path requires MultiFileSource. Normalize here so returning
+  // users with legacy projects do not crash on load.
+  const migratedInitialSources = useMemo(
+    () => migrateLegacyJavalabSources(initialSources),
+    [initialSources]
+  );
   const {startSources} = useSource(
     DEFAULT_PROJECT,
     levelProperties,
-    initialSources
+    migratedInitialSources
   );
   const sourceLevelId = useAppSelector(
     state => state.lab2Project.projectSourceLevelId

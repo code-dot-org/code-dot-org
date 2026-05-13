@@ -231,43 +231,50 @@ class Javalab < Level
   def summarize_for_lab2_properties(script, script_level = nil, current_user = nil, unit_group_unit: nil)
     properties_camelized = super
 
+    # The hash returned by super mixes string keys (from `properties.camelize_keys`)
+    # with symbol keys (set explicitly in the base method). Symbol- and string-keyed
+    # entries coexist as distinct hash keys but collide when serialized to JSON, so
+    # we always use string keys here to actually overwrite the camelized originals.
+
     # Replace flat-hash sources with MultiFileSource for codebridge.
-    properties_camelized[:startSources] = Javalab.convert_legacy_start_sources(start_sources, nil)
-    if properties_camelized[:templateSources]
-      properties_camelized[:templateSources] = Javalab.convert_legacy_start_sources(properties_camelized[:templateSources], nil)
+    properties_camelized['startSources'] = Javalab.convert_legacy_start_sources(start_sources, nil)
+    if properties_camelized['templateSources']
+      properties_camelized['templateSources'] = Javalab.convert_legacy_start_sources(properties_camelized['templateSources'], nil)
     end
-    if properties_camelized[:exemplarSources]
-      properties_camelized[:exemplarSources] = Javalab.convert_legacy_start_sources(properties_camelized[:exemplarSources], nil)
+    exemplar = properties_camelized[:exemplarSources] || properties_camelized['exemplarSources']
+    if exemplar
+      properties_camelized['exemplarSources'] = Javalab.convert_legacy_start_sources(exemplar, nil)
+      properties_camelized.delete(:exemplarSources)
     end
 
     # Encrypted blobs must never leak to the client.
-    properties_camelized.delete(:encryptedValidation)
-    properties_camelized.delete(:encryptedExemplarSources)
-    properties_camelized.delete(:encryptedExamples)
+    properties_camelized.delete('encryptedValidation')
+    properties_camelized.delete('encryptedExemplarSources')
+    properties_camelized.delete('encryptedExamples')
 
     # Neighborhood mode pulls maze + start direction from template fallback.
     if csa_view_mode == 'neighborhood'
-      properties_camelized[:serializedMaze] = get_serialized_maze
-      properties_camelized[:startDirection] = start_direction || project_template_level&.try(:start_direction)
+      properties_camelized['serializedMaze'] = get_serialized_maze
+      properties_camelized['startDirection'] = start_direction || project_template_level&.try(:start_direction)
     end
 
     # Send validation filenames (no code) so the file tree can render entries
     # without leaking solution code. In start_sources edit mode, the actual
     # validation code is fetched separately via the levelbuilder edit path.
     if validation
-      properties_camelized[:validation] = validation.transform_values {|_| ''}
+      properties_camelized['validation'] = validation.transform_values {|_| ''}
     end
 
     # Re-signed every call; do not cache.
-    properties_camelized[:recaptchaSiteKey] = CDO.recaptcha_site_key
+    properties_camelized['recaptchaSiteKey'] = CDO.recaptcha_site_key
     if starter_assets.present? || project_template_level&.try(:starter_assets).present?
       assets_source = project_template_level&.try(:starter_assets) || starter_assets
-      properties_camelized[:starterAssets] = assets_source.each_with_object({}) do |(friendly_name, _uuid), h|
+      properties_camelized['starterAssets'] = assets_source.each_with_object({}) do |(friendly_name, _uuid), h|
         h[friendly_name] = JavalabFilesHelper.generate_starter_asset_url(friendly_name, self)
       end
     end
 
-    properties_camelized[:csaViewMode] = csa_view_mode if csa_view_mode
+    properties_camelized['csaViewMode'] = csa_view_mode if csa_view_mode
 
     properties_camelized
   end
