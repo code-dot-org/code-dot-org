@@ -8,7 +8,11 @@ import HttpClient from '@cdo/apps/util/HttpClient';
 import {GatewayTranscribeResponseV1Schema} from './gatewaySchemas';
 import {getErrorLogData} from './logHelper';
 import {AI_GATEWAY_URL, fetchAccessToken, getModelString} from './shared';
-import {fetchTurnstileTokenIfEnabled, turnstileHeaders} from './turnstile';
+import {
+  fetchTurnstileTokenIfEnabled,
+  turnstileHeaders,
+} from './turnstile';
+import {LOG} from './turnstile/constants';
 
 type TranscribeOptions = Parameters<typeof transcribe>[0];
 
@@ -43,7 +47,16 @@ async function transcribeThroughGateway(
       turnstileHeaders(turnstileToken)
     );
 
-    const wire = GatewayTranscribeResponseV1Schema.parse(await response.json());
+    const rawResponse = await response.json();
+    const parseResult = GatewayTranscribeResponseV1Schema.safeParse(rawResponse);
+    if (!parseResult.success) {
+      console.error(
+        `${LOG} transcribe response schema mismatch:`,
+        parseResult.error.errors
+      );
+      throw parseResult.error;
+    }
+    const wire = parseResult.data;
 
     return {
       ...wire,
