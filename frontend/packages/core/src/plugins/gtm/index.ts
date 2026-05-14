@@ -1,34 +1,26 @@
 import type {CorePlugin, SiteConfig, SiteConfigExtensions} from '../../config';
 
-import {GtmClient, NoopClient} from './client';
+import {GtmClient} from './client';
+import {_initializeSingleton} from './singleton';
 import type {GoogleTagManagerEvent, GtmClientApi, GtmConfig} from './types';
 
 export type {GoogleTagManagerEvent, GtmClientApi, GtmConfig};
 
-/** Module-level singleton — facade points at this client. */
-let client: GtmClientApi = new NoopClient();
+// Re-export the imperative API from `./singleton`. The state lives there so
+// `./hooks` consumes it as a pure dependency, with no cycle through this
+// file.
+export {
+  _initializeSingleton,
+  _subscribe,
+  isEnabled,
+  trackEvent,
+} from './singleton';
 
-/** Test hook for swapping the active client. */
-export function _initializeSingleton(c: GtmClientApi): void {
-  client = c;
-}
+// Re-export the React hooks. They live in `./hooks` so the React import
+// stays out of consumers that only want the imperative API.
+export * from './hooks';
 
-/** Forward an event through the active client. No-op until init. */
-export function trackEvent(
-  name: string,
-  props?: Record<string, string | number | boolean>,
-): void {
-  client.trackEvent(name, props);
-}
-
-/**
- * Whether the live GTM client is currently active (i.e. the plugin was
- * registered and `gtmId` was present in the runtime config). Useful for
- * gating expensive prep work on consumers that don't always run with GTM.
- */
-export function isEnabled(): boolean {
-  return client.isEnabled();
-}
+// ─── Plugin ─────────────────────────────────────────────────────────────────
 
 /**
  * `CorePlugin` for Google Tag Manager. Register at bootstrap via
@@ -39,7 +31,7 @@ export const gtmPlugin: CorePlugin = {
   onCoreReady(config: SiteConfig & SiteConfigExtensions): void {
     if (!config.gtm.gtmId) return;
 
-    const live = new GtmClient();
+    const live: GtmClientApi = new GtmClient();
     live.init(config.gtm);
     _initializeSingleton(live);
   },

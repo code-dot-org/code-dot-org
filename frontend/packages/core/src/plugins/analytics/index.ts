@@ -3,6 +3,7 @@ import type {CorePlugin, SiteConfig, SiteConfigExtensions} from '../../config';
 import {DeferredAdapter} from './adapters/DeferredAdapter';
 import {NoopAdapter} from './adapters/NoopAdapter';
 import {createAnalyticsClient} from './factory';
+import {_initializeSingleton} from './singleton';
 import type {
   AnalyticsClient,
   AnalyticsConfig,
@@ -13,51 +14,26 @@ import type {
 export type {AnalyticsClient, AnalyticsConfig, AnalyticsUser, EventProps};
 export {createAnalyticsClient};
 
-/** Module-level singleton — facade points at this client. */
-let client: AnalyticsClient = new NoopAdapter();
+// Re-export the imperative API. Runtime state lives in `./singleton` so the
+// React hooks and plugin lifecycle consume it as a pure dependency, without
+// any almost-cycle between this file and `./hooks`.
+export {
+  _initializeSingleton,
+  _subscribe,
+  getExperiment,
+  isEnabled,
+  setUser,
+  shutdown,
+  startSessionReplay,
+  stopSessionReplay,
+  trackEvent,
+} from './singleton';
 
-/** Test hook for swapping the active client. */
-export function _initializeSingleton(c: AnalyticsClient): void {
-  client = c;
-}
+// Re-export the React hooks. They live in `./hooks` so the React import
+// stays out of consumers that only want the imperative API.
+export * from './hooks';
 
-export function trackEvent(name: string, props?: EventProps): void {
-  client.trackEvent(name, props);
-}
-
-export function setUser(user: AnalyticsUser): Promise<void> {
-  return client.setUser(user);
-}
-
-export function getExperiment<T>(
-  experimentName: string,
-  parameter: string,
-  defaultValue: T,
-): T {
-  return client.getExperiment(experimentName, parameter, defaultValue);
-}
-
-export function startSessionReplay(): Promise<void> {
-  return client.startSessionReplay();
-}
-
-export function stopSessionReplay(): void {
-  client.stopSessionReplay();
-}
-
-export function shutdown(): Promise<void> {
-  return client.shutdown();
-}
-
-/**
- * Whether the live analytics provider is wired up. `false` when the plugin
- * isn't registered; `true` while the SDK is loading (events buffer) and
- * after it's live. Useful for gating expensive prep work on consumers that
- * don't always run with analytics enabled.
- */
-export function isEnabled(): boolean {
-  return client.isEnabled();
-}
+// ─── Plugin ─────────────────────────────────────────────────────────────────
 
 /**
  * `CorePlugin` for frontend product analytics. Provider-agnostic; currently
