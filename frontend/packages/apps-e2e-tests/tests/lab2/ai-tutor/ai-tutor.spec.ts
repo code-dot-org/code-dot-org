@@ -40,7 +40,7 @@ async function sendHelloAndWaitForBotReply(
       await textarea.waitFor({state: 'visible', timeout: 10_000});
     }
   }
-  await botMessage.waitFor({state: 'visible', timeout: 30_000});
+  await botMessage.waitFor({state: 'visible', timeout: 60_000});
   return botMessage;
 }
 
@@ -108,7 +108,7 @@ test.describe('AI Tutor — Python Lab resource panel', () => {
 
 test.describe('AI Tutor — Weblab2 resource panel', () => {
   /**
-   * Migration status: PENDING
+   * Migration status: COMPLETED
    * Source: dashboard/test/ui/features/star_labs/ai_tutor/chat.feature
    * Scenario: Chat works in the resource panel AI Tutor tab in Weblab2
    * @no_ci @no_mobile @as_authorized_teacher
@@ -120,10 +120,6 @@ test.describe('AI Tutor — Weblab2 resource panel', () => {
     'Weblab2 resource panel AI Tutor tab sends message and receives bot reply',
     {tag: ['@no_ci', '@no_mobile']},
     async ({authorizedTeacherPage}) => {
-      test.fixme(
-        true,
-        'Pending migration: repeated runs intermittently leave the AI Tutor textbox active without submitting the user message in Weblab2.',
-      );
       await authorizedTeacherPage.goto(
         '/courses/allthethingscourse/units/1/lessons/51/levels/11?hideProductTours=true',
       );

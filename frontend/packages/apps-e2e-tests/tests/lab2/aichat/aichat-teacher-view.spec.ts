@@ -74,99 +74,56 @@ async function dismissTeacherPanel(page: Page): Promise<void> {
   }
 }
 
-/**
- * Stub the Drone moderation result for the "Damn" message so test-studio
- * records the same profane user-message state the Cucumber scenario expects.
- *
- * @param page - Playwright page that will send the chat message
- */
-async function stubDamnModeration(page: Page): Promise<void> {
-  let requestId = 91_001;
-  const stubbedIds = new Set<number>();
-
-  await page.route('**/aichat_request/start_chat_completion', async route => {
-    const postData = route.request().postData();
-    const payload = postData ? JSON.parse(postData) : {};
-    if (payload.newMessage?.chatMessageText !== 'Damn') {
-      await route.fallback();
-      return;
-    }
-
-    const id = requestId++;
-    stubbedIds.add(id);
-    await route.fulfill({
-      status: 200,
-      contentType: 'application/json',
-      body: JSON.stringify({
-        requestId: id,
-        pollingIntervalMs: 1000,
-        backoffRate: 1,
-      }),
-    });
-  });
-
-  await page.route('**/aichat_request/chat_request/*', async route => {
-    const id = Number(route.request().url().split('/').pop());
-    if (!stubbedIds.has(id)) {
-      await route.fallback();
-      return;
-    }
-
-    await route.fulfill({
-      status: 200,
-      contentType: 'application/json',
-      body: JSON.stringify({
-        executionStatus: 1001,
-        response: '',
-      }),
-    });
-  });
-}
+const MODERATION_NOTICE =
+  'This message has been flagged by our content moderation policy.';
 
 /**
- * Persist a completed profane user message if the app-side logger has not
- * flushed it yet. Teacher history is backed by `/aichat_events/chat_history`,
- * not by the student's current Redux state.
+ * Selects the first student in the teacher panel and waits until the persisted
+ * chat history visible to the teacher includes the moderated message.
  *
- * @param page - Playwright page still signed in as the student
- * @param aichatContext - Context captured from a prior app log request
- * @param requestId - Stubbed chat-completion request id
+ * The readiness signals mirror the Cucumber path: student table visible, the
+ * student-view loading overlay hidden, and the moderation notice visible in
+ * chat history. If the first fetch races the student chat-event write, reopen
+ * the teacher panel and select the student again to trigger another visible
+ * load.
+ *
+ * @param page - Playwright page signed in as the teacher
  */
-async function logProfaneUserMessage(
+async function selectFirstStudentAndWaitForModeratedHistory(
   page: Page,
-  aichatContext: Record<string, unknown>,
-  requestId: number,
 ): Promise<void> {
-  const result = await page.evaluate(
-    async ({context, id}) => {
-      const csrfToken =
-        document
-          .querySelector('meta[name="csrf-token"]')
-          ?.getAttribute('content') || '';
-      const response = await fetch('/aichat_events/log_chat_event', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json; charset=UTF-8',
-          'X-CSRF-Token': csrfToken,
-        },
-        body: JSON.stringify({
-          newChatEvent: {
-            chatMessageText: 'Damn',
-            role: 'user',
-            status: 'profanity_violation',
-            timestamp: Date.now(),
-            requestId: id,
-          },
-          aichatContext: context,
-        }),
-      });
+  const showHandle = page.locator('.show-handle .fa-chevron-left');
+  const studentTable = page.locator('.student-table');
+  const moderationNotice = page
+    .locator('.uitest-chat-message')
+    .filter({hasText: MODERATION_NOTICE});
 
-      return {ok: response.ok, status: response.status};
-    },
-    {context: aichatContext, id: requestId},
-  );
+  for (let attempt = 0; attempt < 3; attempt++) {
+    if (await showHandle.isVisible({timeout: 5_000}).catch(() => false)) {
+      await showHandle.click();
+    }
+    await expect(studentTable).toBeVisible({timeout: 15_000});
 
-  expect(result.ok, `log_chat_event returned ${result.status}`).toBe(true);
+    // Click first data row (tr index 0 = header, index 1 = first student).
+    await page.locator('#teacher-panel-container tr').nth(1).click();
+    await dismissTeacherPanel(page);
+
+    await page
+      .locator('.uitest-is-loading-overlay')
+      .waitFor({state: 'visible', timeout: 15_000})
+      .catch(() => {});
+    await page
+      .locator('.uitest-is-loading-overlay')
+      .waitFor({state: 'hidden', timeout: 30_000});
+
+    if (
+      await moderationNotice.isVisible({timeout: 20_000}).catch(() => false)
+    ) {
+      return;
+    }
+  }
+
+  await expect(moderationNotice).toBeVisible({timeout: 30_000});
 }
 
 test.describe(
@@ -174,7 +131,7 @@ test.describe(
   {tag: '@no_mobile'},
   () => {
     /**
-     * Migration status: PENDING
+     * Migration status: COMPLETED
      * Source: dashboard/test/ui/features/star_labs/aichat/view_student_chat_history.feature
      * Scenario: Teacher views student chat history and interacts with student model
      *
@@ -185,10 +142,6 @@ test.describe(
      * 4. Teacher verifies student's temperature setting and tests the model.
      */
     test('teacher flags messages and tests student model', async ({page}) => {
-      test.fixme(
-        true,
-        'Pending migration: deterministic profanity stubbing updates the student UI, but the profane event is not visible through teacher chat history.',
-      );
       // --- Background: authorized teacher + AI-chat-enabled section ---
       const teacher = await createAuthorizedTeacher(page);
       const {sectionCode} = await createSectionWithCourse(
@@ -204,20 +157,6 @@ test.describe(
 
       await page.goto(AICHAT_URL);
       await dismissCloseDialog(page);
-      await stubDamnModeration(page);
-      let latestAichatContext: Record<string, unknown> | undefined;
-      let sawLoggedProfanity = false;
-      await page.route('**/aichat_events/log_chat_event', async route => {
-        const postData = route.request().postData();
-        if (postData) {
-          const payload = JSON.parse(postData);
-          latestAichatContext = payload.aichatContext;
-          sawLoggedProfanity =
-            sawLoggedProfanity ||
-            payload.newChatEvent?.status === 'profanity_violation';
-        }
-        await route.fallback();
-      });
 
       const textarea = page.locator('#uitest-chat-textarea');
       const submit = page.locator('#uitest-chat-submit');
@@ -232,7 +171,7 @@ test.describe(
       await botMsg.waitFor({state: 'visible', timeout: 30_000});
       await expect(botMsg).toHaveCSS('background-color', 'rgb(235, 255, 254)');
 
-      // "Damn" is flagged by the stub content moderation service in Drone.
+      // "Damn" is flagged by the stub content moderation service in UI tests.
       await textarea.fill('Damn');
       await expect(submit).toBeEnabled({timeout: 10_000});
       await submit.click();
@@ -240,19 +179,9 @@ test.describe(
       // filter to the one containing the moderation notice.
       await expect(
         page.locator('.uitest-chat-message').filter({
-          hasText:
-            'This message has been flagged by our content moderation policy.',
+          hasText: MODERATION_NOTICE,
         }),
       ).toBeVisible({timeout: 30_000});
-      await expect
-        .poll(() => latestAichatContext !== undefined, {
-          timeout: 10_000,
-          message: 'AI Chat context was captured from chat event logging',
-        })
-        .toBe(true);
-      if (!sawLoggedProfanity && latestAichatContext) {
-        await logProfaneUserMessage(page, latestAichatContext, 91_001);
-      }
 
       // Decrease temperature once (default → 0.7) and save.
       await page.locator("[aria-label='Decrease']").click();
@@ -271,30 +200,7 @@ test.describe(
       await page.goto(AICHAT_URL);
       await dismissCloseDialog(page);
 
-      // Teacher panel loads expanded by default on this level; wait for
-      // the student table to confirm the panel is ready.  If for some reason
-      // it loaded collapsed, expand it first.
-      const showHandle = page.locator('.show-handle .fa-chevron-left');
-      const studentTable = page.locator('.student-table');
-      if (await showHandle.isVisible({timeout: 5_000}).catch(() => false)) {
-        await showHandle.click();
-      }
-      await expect(studentTable).toBeVisible({timeout: 15_000});
-
-      // Click first data row (tr index 0 = header, index 1 = first student).
-      await page.locator('#teacher-panel-container tr').nth(1).click();
-
-      // Collapse teacher panel; student view loads with a loading overlay.
-      await dismissTeacherPanel(page);
-
-      // Wait for loading overlay to clear (appears briefly after panel close).
-      await page
-        .locator('.uitest-is-loading-overlay')
-        .waitFor({state: 'visible', timeout: 15_000})
-        .catch(() => {});
-      await page
-        .locator('.uitest-is-loading-overlay')
-        .waitFor({state: 'hidden', timeout: 30_000});
+      await selectFirstStudentAndWaitForModeratedHistory(page);
 
       // Flag the student's first clean message at teacher level.
       // Multiple clean messages exist (student "Hello" + bot reply); target first.
@@ -311,8 +217,7 @@ test.describe(
       // The "Damn" message already carries the content moderation notice.
       await expect(
         page.locator('.uitest-chat-message').filter({
-          hasText:
-            'This message has been flagged by our content moderation policy.',
+          hasText: MODERATION_NOTICE,
         }),
       ).toBeVisible();
 
@@ -321,7 +226,14 @@ test.describe(
       await expect(
         page.locator('.uitest-profane-feedback-footer'),
       ).toContainText('Was this content flagged correctly?', {timeout: 15_000});
-      await page.locator("[aria-label='thumbs up']").click();
+      await page.mouse.move(0, 0);
+      await page
+        .locator('#show-hide-tooltip')
+        .waitFor({state: 'hidden', timeout: 5_000})
+        .catch(() => {});
+      const thumbsUp = page.locator("[aria-label='thumbs up']");
+      await expect(thumbsUp).toBeVisible({timeout: 15_000});
+      await thumbsUp.click();
       await expect(
         page.locator('.uitest-profane-feedback-footer'),
       ).toContainText('This content was flagged correctly.', {timeout: 15_000});

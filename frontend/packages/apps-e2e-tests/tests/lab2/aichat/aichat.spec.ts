@@ -1,5 +1,3 @@
-import {type Page} from '@playwright/test';
-
 import {expect, test} from '../../shared/fixtures';
 
 import {Aichat} from './Aichat';
@@ -70,56 +68,6 @@ async function gotoAichat(
   await dismissTeacherPanel(page);
 }
 
-/**
- * Stub the same moderation result Cucumber gets from Drone for the "Damn"
- * message. test-studio uses live model moderation, so the word is not
- * deterministic there.
- *
- * @param page - Playwright page that will send the chat message
- */
-async function stubDamnModeration(page: Page): Promise<void> {
-  let requestId = 90_001;
-  const stubbedIds = new Set<number>();
-
-  await page.route('**/aichat_request/start_chat_completion', async route => {
-    const postData = route.request().postData();
-    const payload = postData ? JSON.parse(postData) : {};
-    if (payload.newMessage?.chatMessageText !== 'Damn') {
-      await route.fallback();
-      return;
-    }
-
-    const id = requestId++;
-    stubbedIds.add(id);
-    await route.fulfill({
-      status: 200,
-      contentType: 'application/json',
-      body: JSON.stringify({
-        requestId: id,
-        pollingIntervalMs: 1000,
-        backoffRate: 1,
-      }),
-    });
-  });
-
-  await page.route('**/aichat_request/chat_request/*', async route => {
-    const id = Number(route.request().url().split('/').pop());
-    if (!stubbedIds.has(id)) {
-      await route.fallback();
-      return;
-    }
-
-    await route.fulfill({
-      status: 200,
-      contentType: 'application/json',
-      body: JSON.stringify({
-        executionStatus: 1001,
-        response: '',
-      }),
-    });
-  });
-}
-
 test.describe('AI Chat Lab — making a chat request', () => {
   /**
    * Migration status: COMPLETED
@@ -135,7 +83,6 @@ test.describe('AI Chat Lab — making a chat request', () => {
     {tag: '@no_mobile'},
     async ({levelbuilderPage}) => {
       await gotoAichat(levelbuilderPage);
-      await stubDamnModeration(levelbuilderPage);
 
       const textarea = levelbuilderPage.locator('#uitest-chat-textarea');
       const submit = levelbuilderPage.locator('#uitest-chat-submit');
@@ -223,7 +170,7 @@ test.describe('AI Chat Lab — publishing model', () => {
     async ({levelbuilderPage, browserName}) => {
       test.fixme(
         browserName !== 'chromium',
-        'Pending migration: published model card state is not reliably present after reload outside Chromium on test-studio.',
+        'Pending migration: after publish and visible Saved state, Firefox/WebKit reload with the saved model card but isPublished=false on test-studio.',
       );
       await gotoAichat(levelbuilderPage);
 
@@ -285,6 +232,9 @@ test.describe('AI Chat Lab — publishing model', () => {
       await expect(
         levelbuilderPage.locator('#uitest-presentation-view-header'),
       ).toContainText('Jeeves', {timeout: 15_000});
+      await expect(
+        levelbuilderPage.locator('.project_updated_at'),
+      ).toContainText('Saved', {timeout: 30_000});
 
       // Reload and switch to user view to confirm published state persists.
       await levelbuilderPage.reload();
@@ -292,9 +242,12 @@ test.describe('AI Chat Lab — publishing model', () => {
       await levelbuilderPage
         .locator('#modelCustomizationTabs-tab-modelCardInfo')
         .click();
+      await levelbuilderPage
+        .locator('#uitest-publish-notes-tab-content')
+        .waitFor({state: 'visible', timeout: 10_000});
       await expect(
         levelbuilderPage.locator('#uitest-user-view-button'),
-      ).toBeVisible({timeout: 15_000});
+      ).toBeVisible({timeout: 30_000});
       await levelbuilderPage.locator('#uitest-user-view-button').click();
       await expect(
         levelbuilderPage.locator('#uitest-presentation-view-container'),

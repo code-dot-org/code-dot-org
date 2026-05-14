@@ -30,6 +30,9 @@ export class PythonLab extends Lab2Lab {
   /** Validation tab in the resource panel. */
   readonly validationTab: Locator;
 
+  /** Validation results table rendered after validation runs. */
+  readonly validationResults: Locator;
+
   /** Project save status indicator in the header (shows "Saved" when up to date). */
   readonly projectUpdatedAt: Locator;
 
@@ -45,6 +48,9 @@ export class PythonLab extends Lab2Lab {
     this.console = page.locator('#uitest-codebridge-console');
     this.validateButton = page.locator('#instructions-validate-button');
     this.validationTab = page.locator('#resource-panel-tab-validation');
+    this.validationResults = page.locator('table', {
+      has: page.getByRole('cell', {name: 'Result'}),
+    });
     this.projectUpdatedAt = page.locator('.project_updated_at');
     this.extraLinksButton = page.locator(
       '#uitest-resource-panel-extra-links-button',
@@ -125,6 +131,40 @@ export class PythonLab extends Lab2Lab {
     await expect(bubble).toBeVisible();
     await expect(bubble).toHaveCSS('background-color', bgColor);
     await expect(bubble).toHaveCSS('border-top-color', borderColor);
+  }
+
+  /**
+   * Asserts that validation has rendered all expected pass results.
+   *
+   * This is the user-visible readiness signal after pressing Validate. The
+   * Continue button can become enabled while the result table is still filling
+   * in, so wait for the table before checking persisted progress.
+   */
+  async expectValidationPassed(): Promise<void> {
+    await expect(this.validationResults).toBeVisible({timeout: 30_000});
+    await expect(
+      this.validationResults.getByRole('cell', {name: /Pass/}),
+    ).toHaveCount(5, {timeout: 30_000});
+  }
+
+  /**
+   * Clicks Validate and waits for the milestone post that persists progress.
+   *
+   * The visible validation table and Continue button update before the
+   * `sendSuccessReport` fetch resolves. Cucumber covers this with its
+   * "wait until jQuery Ajax requests are finished" progress helper; this is the
+   * equivalent wait for the real request, not a stub.
+   */
+  async validateAndWaitForProgressSave(): Promise<void> {
+    const progressSave = this.page.waitForResponse(
+      response =>
+        response.request().method() === 'POST' &&
+        response.url().includes('/milestone/') &&
+        response.ok(),
+      {timeout: 30_000},
+    );
+    await this.validateButton.click();
+    await progressSave;
   }
 
   /**

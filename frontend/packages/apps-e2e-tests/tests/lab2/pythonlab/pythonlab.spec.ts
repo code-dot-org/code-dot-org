@@ -162,15 +162,11 @@ test.describe('Python Lab — run as student', () => {
   });
 
   /**
-   * Migration status: PENDING
+   * Migration status: COMPLETED
    * Source: dashboard/test/ui/features/code_tools/pythonlab/pythonlab_run.feature
    * Scenario: Continue button and progress status shows up correctly
    */
   test('continue button and progress status update correctly', async () => {
-    test.fixme(
-      true,
-      'Pending migration: repeated runs intermittently leave the level 2 header progress bubble not_tried after validation passes.',
-    );
     await expect(lab.editorContent).toBeVisible();
     await lab.expectProgressIs(1, 'not_tried');
 
@@ -196,8 +192,9 @@ test.describe('Python Lab — run as student', () => {
     await lab.validationTab.click();
     await expect(lab.validateButton).toBeVisible();
     await expect(lab.validateButton).toBeEnabled();
-    await lab.validateButton.click();
+    await lab.validateAndWaitForProgressSave();
 
+    await lab.expectValidationPassed();
     await expect(lab.continueButton).toBeVisible();
     await expect(lab.continueButton).toContainText('Continue');
     await expect(lab.projectUpdatedAt).toContainText('Saved');
