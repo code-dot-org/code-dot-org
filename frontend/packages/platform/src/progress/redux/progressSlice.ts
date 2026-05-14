@@ -50,7 +50,11 @@ type AsyncProgressThunkAction = ThunkAction<
   ProgressThunkExtra,
   AnyAction
 >;
-type AppDispatch = ThunkDispatch<RootState, ProgressThunkExtra, AnyAction>;
+export type AppDispatch = ThunkDispatch<
+  RootState,
+  ProgressThunkExtra,
+  AnyAction
+>;
 
 import {
   PUZZLE_PAGE_NONE,
@@ -963,7 +967,10 @@ async function userProgressFromServer(
 
   const data = await apiClient.progress.getUserProgress({
     scriptName: state.scriptName,
-    userId: userId ?? undefined,
+    // Callers pass an empty string when there is no logged-in user (see
+    // `sendSubmitReport` above). Treat that as "no userId" so the query
+    // param is absent rather than `?user_id=`.
+    userId: userId || undefined,
   });
 
   if (!data || _.isEmpty(data)) {
@@ -1020,10 +1027,10 @@ async function userProgressFromServer(
 }
 
 export const queryUserProgress =
-  (userId: string, mergeProgress: boolean = true): ProgressThunkAction =>
+  (userId: string, mergeProgress: boolean = true): AsyncProgressThunkAction =>
   (dispatch, getState, extra) => {
     const state = getState().progress;
-    void userProgressFromServer(
+    return userProgressFromServer(
       extra.apiClient,
       state,
       dispatch,
