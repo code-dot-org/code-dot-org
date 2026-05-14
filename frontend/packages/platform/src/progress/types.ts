@@ -143,7 +143,7 @@ export interface PeerReviewLevelInfo {
 
 export interface PeerReviewLessonInfo {
   name: string;
-  lesson_group_display_name: string;
+  lessonGroupDisplayName: string;
   levels: PeerReviewLevelInfo[];
   lockable: boolean;
 }
