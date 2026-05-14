@@ -1,30 +1,38 @@
-import type {Slice} from '@reduxjs/toolkit';
 import type {Store, ReducersMapObject} from 'redux';
 
 /**
- * Helper to combine a set of states into one state object.
+ * Collapses a union of object types into a single intersection. Used to
+ * merge per-slice state contributions into the combined store shape.
  */
-type UnionToIntersection<U> =
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  (U extends any ? (k: U) => void : never) extends (k: infer I) => void
-    ? I
-    : never;
+type UnionToIntersection<U> = (
+  U extends unknown ? (k: U) => void : never
+) extends (k: infer I) => void
+  ? I
+  : never;
 
 /**
- * Pulls out a Slice's name and state.
+ * Maps a slice-like shape `{name: 'foo'; getInitialState(): State}` to the
+ * single-key object `{foo: State}` that the slice contributes to the
+ * combined store. Structural matching (instead of `S extends Slice<...>`)
+ * keeps the `name` literal narrow — @reduxjs/toolkit v2's default `Slice`
+ * widens `Name` to `string` and makes the `actions` map invariant, both of
+ * which break direct assignability of real slice instances.
  */
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
-type SliceStateEntry<S extends Slice<any, any, string>> =
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  S extends Slice<infer State, any, infer Name extends string>
-    ? {[K in Name]: State}
-    : never;
+type SliceStateEntry<S> = S extends {
+  name: infer N;
+  getInitialState: () => infer State;
+}
+  ? N extends string
+    ? {[K in N]: State}
+    : never
+  : never;
 
 /**
- * Gets the redux state definition from the union of the the given redux toolkit Slices.
+ * Given a tuple of slices, produces the combined state shape — the
+ * union-intersection of each slice's `{name: state}` contribution. Mirrors
+ * what `configureStore({reducer: {...}})` would infer.
  */
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
-export type SlicesState<SlicesT extends readonly Slice<any, any, string>[]> =
+export type SlicesState<SlicesT extends readonly unknown[]> =
   UnionToIntersection<SliceStateEntry<SlicesT[number]>>;
 
 /**

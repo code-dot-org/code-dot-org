@@ -1,5 +1,4 @@
 import {configureStore, combineReducers} from '@reduxjs/toolkit';
-import type {Slice} from '@reduxjs/toolkit';
 import {useDispatch, useSelector} from 'react-redux';
 import type {AnyAction, Reducer, ReducersMapObject, Store} from 'redux';
 
@@ -25,9 +24,21 @@ const initialStore = configureStore({
   reducer: staticReducers,
 });
 
+/**
+ * Slice-like shape we accept everywhere a real `Slice` would do. Structural
+ * matching avoids the assignability hazards of `@reduxjs/toolkit` v2's
+ * `Slice<State, CaseReducers, Name>` — that type makes the `actions` map
+ * invariant, which prevents passing slices with different reducer shapes
+ * through a single tuple even when only `name` and the state matter here.
+ */
+interface SliceLike {
+  name: string;
+  reducer: Reducer;
+  getInitialState: () => unknown;
+}
+
 export function injectSlices<
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  TSlices extends readonly Slice<any, any, string>[],
+  TSlices extends readonly SliceLike[],
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   TExtendedStore extends StoreWithState<any, any>,
 >(
@@ -64,8 +75,7 @@ export function injectSlices<
 
 /** Optional convenience overload for a single slice */
 export function injectSlice<
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  S extends Slice<any, any, string>,
+  S extends SliceLike,
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   TStore extends Store<any, AnyAction>,
 >(slice: S, store: TStore) {
@@ -86,8 +96,9 @@ export const useAppSelector = useSelector.withTypes<RootState>();
 export type AppDispatchFor<TStore extends Store<any, AnyAction>> =
   TStore['dispatch'];
 
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
-export type MockStore<TSlices extends readonly Slice<any, any, string>[]> =
-  StoreWithState<typeof initialStore, SlicesState<TSlices>>;
+export type MockStore<TSlices extends readonly SliceLike[]> = StoreWithState<
+  typeof initialStore,
+  SlicesState<TSlices>
+>;
 
 export default defaultStore;
