@@ -124,13 +124,7 @@ class SectionsAsStudentTable extends React.Component {
               className="test-row"
             >
               <td style={{...styles.col, ...styles.sectionNameCol}}>
-                {this.props.isPlSections ? (
-                  <a style={styles.link} href={teacherDashboardUrl(section.id)}>
-                    {section.name}
-                  </a>
-                ) : (
-                  <div>{section.name}</div>
-                )}
+                <div>{section.name}</div>
               </td>
               <td style={{...styles.col, ...styles.courseCol}}>
                 <a href={section.linkToAssigned} style={styles.link}>
