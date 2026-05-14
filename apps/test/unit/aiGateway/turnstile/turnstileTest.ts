@@ -57,6 +57,14 @@ describe('fetchTurnstileTokenIfEnabled', () => {
   });
 });
 
+// Typed view of TurnstileManager's private internals used only in tests.
+type TurnstileManagerPrivates = {
+  nextTokenPromise: Promise<string> | null;
+  nextTokenResolvedAt: number | null;
+  getToken: () => Promise<string>;
+  runSerializedChallenge: () => Promise<string>;
+};
+
 describe('TurnstileManager stale pre-fetch', () => {
   beforeEach(() => {
     document.body.innerHTML = '';
@@ -68,17 +76,14 @@ describe('TurnstileManager stale pre-fetch', () => {
   });
 
   it('discards a pre-fetched token older than TOKEN_MAX_AGE_MS and runs a fresh challenge', async () => {
-    const manager = TurnstileManager.getInstance();
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    const m = manager as any;
+    const m = TurnstileManager.getInstance() as unknown as TurnstileManagerPrivates;
 
     const freshToken = 'fresh-token';
     const freshChallenge = jest.fn().mockResolvedValue(freshToken);
     jest.spyOn(m, 'runSerializedChallenge').mockImplementation(freshChallenge);
 
     // Simulate a stale pre-fetched token that resolved TOKEN_MAX_AGE_MS + 1s ago.
-    const staleToken = 'stale-token';
-    m.nextTokenPromise = Promise.resolve(staleToken);
+    m.nextTokenPromise = Promise.resolve('stale-token');
     m.nextTokenResolvedAt = Date.now() - TOKEN_MAX_AGE_MS - 1000;
 
     const result = await m.getToken();
@@ -88,9 +93,7 @@ describe('TurnstileManager stale pre-fetch', () => {
   });
 
   it('uses a pre-fetched token that is still within TOKEN_MAX_AGE_MS', async () => {
-    const manager = TurnstileManager.getInstance();
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    const m = manager as any;
+    const m = TurnstileManager.getInstance() as unknown as TurnstileManagerPrivates;
 
     const freshChallenge = jest.fn().mockResolvedValue('ignored');
     jest.spyOn(m, 'runSerializedChallenge').mockImplementation(freshChallenge);
