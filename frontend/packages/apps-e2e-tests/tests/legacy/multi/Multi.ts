@@ -17,6 +17,9 @@ export class Multi {
   /** Question text container — `.multi-question`. */
   readonly question: Locator;
 
+  /** Level heading — `.multi h1`. */
+  readonly heading: Locator;
+
   /** Top submit button — disabled until an answer is selected. */
   readonly submitButton: Locator;
 
@@ -38,6 +41,7 @@ export class Multi {
   constructor(page: Page) {
     this.page = page;
     this.question = page.locator('.multi-question');
+    this.heading = page.locator('.multi h1');
     this.submitButton = page.locator('.submitButton').first();
     this.reviewButton = page.locator('.submitButton').last();
     this.modal = page.locator('.modal');
@@ -61,6 +65,28 @@ export class Multi {
   ): Promise<void> {
     if (resetSession) await this.page.goto('/reset_session');
     await this.page.goto(labLevelUrl(lesson, level));
+    await expect(this.submitButton).toBeVisible();
+  }
+
+  /**
+   * Navigate to a localized multi level and wait for the submit button to appear.
+   *
+   * @param lesson - lesson number within allthethingscourse unit 1
+   * @param level - level number within that lesson
+   * @param locale - dashboard locale code, for example es-MX
+   * @param resetSession - clear any existing session first; pass false when
+   *   the caller has already signed in as a specific user and must stay signed in
+   */
+  async gotoLocalizedLevel(
+    lesson: number,
+    level: number,
+    locale: string,
+    {resetSession = true}: {resetSession?: boolean} = {},
+  ): Promise<void> {
+    if (resetSession) await this.page.goto('/reset_session');
+    await this.page.goto(
+      `/courses/allthethingscourse/units/1/lessons/${lesson}/levels/${level}/lang/${locale}`,
+    );
     await expect(this.submitButton).toBeVisible();
   }
 

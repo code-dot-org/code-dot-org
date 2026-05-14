@@ -24,8 +24,12 @@ import {Multi} from './Multi';
  * Level lives at allthethingscourse/units/1/lessons/9/levels/N.
  */
 test.describe('Multi — single-answer (lesson 9)', () => {
+  /**
+   * Migration status: COMPLETED
+   * Source: dashboard/test/ui/features/teacher_tools/level_types/multi.feature
+   * Scenario: Loading the level
+   */
   test('loading the level shows question text', async ({page}) => {
-    // Source: multi.feature "Loading the level"
     const multi = new Multi(page);
     await multi.gotoLevel(9, 1);
     await expect(multi.question).toHaveText(
@@ -33,11 +37,15 @@ test.describe('Multi — single-answer (lesson 9)', () => {
     );
   });
 
+  /**
+   * Migration status: COMPLETED
+   * Source: dashboard/test/ui/features/teacher_tools/level_types/multi.feature
+   * Scenario: Clicking an option enables submit and submitting the correct answer wins
+   */
   test(
     'correct answer enables submit and shows completion modal',
     {tag: '@no_mobile'},
     async ({page}) => {
-      // Source: multi.feature "Clicking an option enables submit and submitting the correct answer wins"
       const multi = new Multi(page);
       await multi.gotoLevel(9, 1);
       await multi.expectSubmitDisabled();
@@ -48,11 +56,15 @@ test.describe('Multi — single-answer (lesson 9)', () => {
     },
   );
 
+  /**
+   * Migration status: COMPLETED
+   * Source: dashboard/test/ui/features/teacher_tools/level_types/multi.feature
+   * Scenario: Submitting an incorrect option
+   */
   test(
     'incorrect answer shows error modal with cross marker',
     {tag: '@no_mobile'},
     async ({page}) => {
-      // Source: multi.feature "Submitting an incorrect option"
       // Cucumber targets ".submitButton:last" (review/bottom button) — use reviewButton.
       const multi = new Multi(page);
       await multi.gotoLevel(9, 1);
@@ -66,6 +78,20 @@ test.describe('Multi — single-answer (lesson 9)', () => {
       await expect(multi.crossMark(0)).toBeVisible();
     },
   );
+
+  /**
+   * Migration status: COMPLETED
+   * Source: dashboard/test/ui/features/teacher_tools/level_types/multi3.feature
+   * Scenario: Rendering in another language
+   */
+  test('renders in Spanish', async ({page}) => {
+    const multi = new Multi(page);
+    await multi.gotoLocalizedLevel(9, 1, 'es-MX');
+    await expect(multi.heading).toHaveText('Opción múltiple');
+    await expect(multi.question).toHaveText(
+      '¿Qué flecha lleva al Flurb hacia el tesoro?',
+    );
+  });
 
   test('does not scroll horizontally', async ({page}) => {
     // Source: multi3.feature "Does not scroll horizontally" — levels/2
@@ -90,8 +116,12 @@ test.describe('Multi — single-answer (lesson 9)', () => {
  * Background in both features navigates to this level before each scenario.
  */
 test.describe('Multi — multi-select (lesson 10)', () => {
+  /**
+   * Migration status: COMPLETED
+   * Source: dashboard/test/ui/features/teacher_tools/level_types/multi2.feature
+   * Scenario: Loading the level
+   */
   test('loading the level shows multi-select question text', async ({page}) => {
-    // Source: multi2.feature "Loading the level"
     const multi = new Multi(page);
     await multi.gotoLevel(10, 1);
     await expect(multi.question).toContainText(
@@ -99,10 +129,14 @@ test.describe('Multi — multi-select (lesson 10)', () => {
     );
   });
 
+  /**
+   * Migration status: COMPLETED
+   * Source: dashboard/test/ui/features/teacher_tools/level_types/multi2.feature
+   * Scenario: Clicking an option enables submit but submitting only one answer gets a warning
+   */
   test('one answer selected triggers too-few-answers warning', async ({
     page,
   }) => {
-    // Source: multi2.feature "Clicking an option enables submit but submitting only one answer gets a warning"
     const multi = new Multi(page);
     await multi.gotoLevel(10, 1);
     await multi.expectSubmitDisabled();
@@ -113,8 +147,12 @@ test.describe('Multi — multi-select (lesson 10)', () => {
     await multi.okButton.click();
   });
 
+  /**
+   * Migration status: COMPLETED
+   * Source: dashboard/test/ui/features/teacher_tools/level_types/multi2.feature
+   * Scenario: Clicking an option enables submit and submitting the correct answer (two checkboxes) wins
+   */
   test('two correct answers wins', async ({page}) => {
-    // Source: multi2.feature "Clicking an option enables submit and submitting the correct answer (two checkboxes) wins"
     const multi = new Multi(page);
     await multi.gotoLevel(10, 1);
     await multi.expectSubmitDisabled();
@@ -125,11 +163,15 @@ test.describe('Multi — multi-select (lesson 10)', () => {
     await expect(multi.modal).toBeVisible();
   });
 
+  /**
+   * Migration status: COMPLETED
+   * Source: dashboard/test/ui/features/teacher_tools/level_types/multi4.feature
+   * Scenario: Submitting an incorrect option
+   */
   test(
     'incorrect pair shows error modal',
     {tag: '@no_mobile'},
     async ({page}) => {
-      // Source: multi4.feature "Submitting an incorrect option"
       // Cucumber targets ".submitButton:last" — use reviewButton.
       const multi = new Multi(page);
       await multi.gotoLevel(10, 1);
@@ -144,8 +186,12 @@ test.describe('Multi — multi-select (lesson 10)', () => {
     },
   );
 
+  /**
+   * Migration status: COMPLETED
+   * Source: dashboard/test/ui/features/teacher_tools/level_types/multi4.feature
+   * Scenario: Pressing three options unselects the oldest
+   */
   test('selecting a third option auto-deselects the oldest', async ({page}) => {
-    // Source: multi4.feature "Pressing three options unselects the oldest"
     // Selecting 2, 1, 0 should keep 1 and 0 selected (drops 2, the oldest).
     const multi = new Multi(page);
     await multi.gotoLevel(10, 1);
@@ -158,8 +204,12 @@ test.describe('Multi — multi-select (lesson 10)', () => {
     await expect(multi.modal).toBeVisible();
   });
 
+  /**
+   * Migration status: COMPLETED
+   * Source: dashboard/test/ui/features/teacher_tools/level_types/multi4.feature
+   * Scenario: Pressing an option again toggles it
+   */
   test('pressing a selected option again deselects it', async ({page}) => {
-    // Source: multi4.feature "Pressing an option again toggles it"
     const multi = new Multi(page);
     await multi.gotoLevel(10, 1);
     await multi.expectSubmitDisabled();
