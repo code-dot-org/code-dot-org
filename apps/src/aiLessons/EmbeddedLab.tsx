@@ -13,18 +13,32 @@
 // toolbox.
 
 import {useTheme} from '@code-dot-org/component-library/common/contexts';
-import React, {Suspense, useEffect, useMemo} from 'react';
+import React, {Suspense, useEffect, useMemo, useState} from 'react';
 
-import {onLevelChange, setChannel} from '@cdo/apps/lab2/lab2Redux';
-import {setIsStandaloneCollapsed} from '@cdo/apps/lab2/redux/lab2ViewRedux';
+import {
+  onLevelChange,
+  setChannel,
+  setHideResourcePanel,
+} from '@cdo/apps/lab2/lab2Redux';
+import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
+import ProjectManager from '@cdo/apps/lab2/projects/ProjectManager';
 import {AppName, Channel, LabProps, ProjectSources} from '@cdo/apps/lab2/types';
 import {NullRubricProvider} from '@cdo/apps/lab2/views/components/rubrics/RubricWrapper';
+import DialogManager from '@cdo/apps/lab2/views/dialogs/DialogManager';
 import {ExtraLinksButtonContext} from '@cdo/apps/lab2/views/LabViewsRenderer';
 import {MusicEntryPoint} from '@cdo/apps/music/entrypoint';
 import PanelsView from '@cdo/apps/panels/PanelsView';
 import {Panel} from '@cdo/apps/panels/types';
 import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
 import {Weblab2EntryPoint} from '@cdo/apps/weblab2/entrypoint';
+
+import {
+  AiLessonsProjectManager,
+  loadSavedSources,
+} from './aiLessonsProjectManager';
+import {Checkpoint, LabType} from './types';
+
+import styles from './aiLessons.module.scss';
 
 // First (preferred) theme for each lab type, mirroring `themes[0]` in
 // lab2EntryPoints.ts.  Hardcoded here so we don't have to import the whole
@@ -35,37 +49,43 @@ const LAB_DEFAULT_THEME: Record<string, 'Light' | 'Dark'> = {
   panels: 'Light',
 };
 
-import {Checkpoint, LabType} from './types';
-
-import styles from './aiLessons.module.scss';
-
 interface EmbeddedLabProps {
   checkpoint: Checkpoint;
+  // The lesson this checkpoint belongs to.  Used as the storage scope for
+  // saved project sources — all checkpoints in the same lesson that target
+  // the same lab type share one project, so the student's code carries
+  // across checkpoints.
+  lessonId: string;
   // Called when an in-app navigation action signals the student has
   // finished the lab portion of the checkpoint — currently only the
   // Continue button on the last panel of a Panels checkpoint.
   onLabComplete?: () => void;
 }
 
-// Stable synthetic level IDs per checkpoint.  The Weblab2 view in particular
+// Stable synthetic level IDs per (lesson, lab type).  All checkpoints in
+// the same lesson sharing a lab type get the same level ID so lab2's
+// useSource() doesn't reset the workspace on checkpoint switch.  Weblab2
 // gates rendering on `state.lab2Project.projectSourceLevelId ===
-// levelProperties.id`, so the ID must be deterministic per checkpoint.
-function synthesizeLevelId(checkpointId: string): number {
+// levelProperties.id`, so the ID must be deterministic.
+function synthesizeLevelId(lessonId: string, labType: string): number {
+  const key = `${lessonId}::${labType}`;
   let hash = 0;
-  for (let i = 0; i < checkpointId.length; i++) {
-    hash = (hash * 31 + checkpointId.charCodeAt(i)) | 0;
+  for (let i = 0; i < key.length; i++) {
+    hash = (hash * 31 + key.charCodeAt(i)) | 0;
   }
   return Math.abs(hash) || 1;
 }
 
 function syntheticChannel(
-  checkpoint: Checkpoint,
-  projectType: AppName
+  lessonId: string,
+  labType: LabType,
+  projectType: AppName,
+  checkpointTitle: string
 ): Channel {
   const now = new Date().toISOString();
   return {
-    id: `ai-lesson-${checkpoint.id}`,
-    name: `AI Lesson Checkpoint: ${checkpoint.title}`,
+    id: `ai-lesson-${lessonId}-${labType}`,
+    name: `AI Lesson ${labType} project (${checkpointTitle})`,
     isOwner: true,
     projectType,
     publishedAt: null,
@@ -108,29 +128,35 @@ function defaultWeblab2Sources(): ProjectSources {
   };
 }
 
-function captionsToPanels(captions: string[]): Panel[] {
-  return captions.map((caption, i) => ({
-    imageUrl: '',
-    text: caption,
+interface SlideInput {
+  caption: string;
+  imageUrl?: string;
+}
+
+function slidesToPanels(slides: SlideInput[]): Panel[] {
+  return slides.map((s, i) => ({
+    imageUrl: s.imageUrl || '',
+    text: s.caption,
     key: `panel-${i}`,
   }));
 }
 
 const PanelsCheckpointLab: React.FC<{
   checkpoint: Checkpoint;
+  lessonId: string;
   onLabComplete?: () => void;
-}> = ({checkpoint, onLabComplete}) => {
+}> = ({checkpoint, lessonId, onLabComplete}) => {
   // Always render the real PanelsView.  If the AI didn't generate explicit
   // slide captions for this checkpoint, fall back to a single panel built
   // from the instruction text so the student still gets the same Continue
   // affordance.
   const panels = useMemo(() => {
     const explicit = (checkpoint.panels ?? [])
-      .map(p => p.caption.trim())
-      .filter(Boolean);
-    if (explicit.length > 0) return captionsToPanels(explicit);
-    return captionsToPanels([
-      checkpoint.instructions || checkpoint.description || checkpoint.title,
+      .map(p => ({caption: p.caption.trim(), imageUrl: p.imageUrl}))
+      .filter(p => p.caption.length > 0);
+    if (explicit.length > 0) return slidesToPanels(explicit);
+    return slidesToPanels([
+      {caption: checkpoint.description || checkpoint.title},
     ]);
   }, [checkpoint]);
 
@@ -142,7 +168,7 @@ const PanelsCheckpointLab: React.FC<{
         targetWidth={Math.min(window.innerWidth - 420, 1100)}
         targetHeight={window.innerHeight - 80}
         offerBrowserTts={false}
-        levelId={String(synthesizeLevelId(checkpoint.id))}
+        levelId={String(synthesizeLevelId(lessonId, 'panels'))}
       />
     </div>
   );
@@ -154,6 +180,8 @@ const PanelsCheckpointLab: React.FC<{
 // Also applies the lab's preferred theme — Music ships Dark-only, Panels
 // is Light-first, Weblab2 starts Dark.
 function useLabSetup(
+  lessonId: string,
+  labType: LabType,
   checkpoint: Checkpoint,
   appName: AppName,
   levelProperties: LabProps['levelProperties'],
@@ -163,7 +191,12 @@ function useLabSetup(
   const {setTheme} = useTheme();
 
   useEffect(() => {
-    const channel = syntheticChannel(checkpoint, appName);
+    const channel = syntheticChannel(
+      lessonId,
+      labType,
+      appName,
+      checkpoint.title
+    );
     dispatch(setChannel(channel));
     dispatch(
       onLevelChange({
@@ -172,10 +205,24 @@ function useLabSetup(
         initialSources,
       })
     );
-    // Force the lab's ResourcePanel into its collapsed sidebar state so the
-    // AI Tutor owns the instruction/help affordance.  The student can still
-    // expand it manually if they want lab settings or version history.
-    dispatch(setIsStandaloneCollapsed(true));
+    // Suppress the lab's ResourcePanel entirely — the AI Tutor owns all
+    // instructions/help on this surface.
+    dispatch(setHideResourcePanel(true));
+
+    // Install a custom ProjectManager so lab2 view saves (Weblab2's
+    // setAndSaveProjectSources thunk, MusicView's saveCode) persist to
+    // our per-(lesson, labType) source storage.  All checkpoints sharing
+    // a lab type within a lesson write to the same file.
+    const manager = new AiLessonsProjectManager(lessonId, labType);
+    if (initialSources) {
+      manager.setLastSource(initialSources);
+    }
+    // The Lab2Registry typing wants the full ProjectManager class but the
+    // surface lab2 callers actually use (save + setLastSource) is what we
+    // implement.  Cast through unknown to satisfy the type check.
+    Lab2Registry.getInstance().setProjectManager(
+      manager as unknown as ProjectManager
+    );
 
     const theme = LAB_DEFAULT_THEME[appName] || 'Light';
     setTheme(theme);
@@ -184,8 +231,15 @@ function useLabSetup(
     document.body.classList.remove(`background-${opposite}`);
     document.body.classList.add(`background-${lower}`);
     document.documentElement.setAttribute('data-theme', theme);
+
+    return () => {
+      // Force-flush any pending save before leaving this lab type.
+      manager.destroy();
+    };
   }, [
     dispatch,
+    lessonId,
+    labType,
     checkpoint,
     appName,
     levelProperties,
@@ -195,19 +249,30 @@ function useLabSetup(
 }
 
 const Lab2MountedView: React.FC<{
+  lessonId: string;
+  labType: LabType;
   checkpoint: Checkpoint;
   appName: AppName;
   view: React.LazyExoticComponent<React.ComponentType<LabProps>>;
   levelProperties: LabProps['levelProperties'];
   initialSources?: ProjectSources;
 }> = ({
+  lessonId,
+  labType,
   checkpoint,
   appName,
   view: LabView,
   levelProperties,
   initialSources,
 }) => {
-  useLabSetup(checkpoint, appName, levelProperties, initialSources);
+  useLabSetup(
+    lessonId,
+    labType,
+    checkpoint,
+    appName,
+    levelProperties,
+    initialSources
+  );
 
   return (
     <div
@@ -220,10 +285,17 @@ const Lab2MountedView: React.FC<{
           value={{setShowExtraLinksButton: () => {}}}
         >
           <NullRubricProvider>
-            <LabView
-              levelProperties={levelProperties}
-              initialSources={initialSources}
-            />
+            {/* DialogManager provides the dialog control context that
+                lab2 surfaces (Music's Start Over confirmation, the lab2
+                Skip dialog, etc.) expect.  Without it, `useDialogControl()`
+                falls back to a no-op default and dialogs silently fail to
+                open / re-open after dismissal. */}
+            <DialogManager>
+              <LabView
+                levelProperties={levelProperties}
+                initialSources={initialSources}
+              />
+            </DialogManager>
           </NullRubricProvider>
         </ExtraLinksButtonContext.Provider>
       </Suspense>
@@ -253,32 +325,63 @@ const MUSIC_START_SOURCES = {
 
 const EmbeddedLab: React.FunctionComponent<EmbeddedLabProps> = ({
   checkpoint,
+  lessonId,
   onLabComplete,
 }) => {
-  const id = synthesizeLevelId(checkpoint.id);
   const labType = checkpoint.labType as LabType;
+  const id = synthesizeLevelId(lessonId, labType);
+
+  // Sources start undefined until we either confirm there's nothing saved
+  // on the server or get back what was previously saved.  We re-fetch
+  // whenever the lab type changes (panels → weblab2 → music, etc.) so
+  // each lab type gets its own carry-over.
+  const [savedSources, setSavedSources] = useState<ProjectSources | undefined>(
+    undefined
+  );
+  const [sourcesLoading, setSourcesLoading] = useState<boolean>(true);
+
+  useEffect(() => {
+    let cancelled = false;
+    setSourcesLoading(true);
+    (async () => {
+      if (labType === 'panels') {
+        if (!cancelled) {
+          setSavedSources(undefined);
+          setSourcesLoading(false);
+        }
+        return;
+      }
+      const loaded = await loadSavedSources(lessonId, labType);
+      if (cancelled) return;
+      setSavedSources(loaded);
+      setSourcesLoading(false);
+    })();
+    return () => {
+      cancelled = true;
+    };
+  }, [lessonId, labType]);
 
   // IMPORTANT: memoize levelProperties + initialSources so their object
   // identity doesn't change every render.  Without this, `useLabSetup`'s
   // effect would dispatch Redux state on every render and we'd loop.
+  // Note: we deliberately omit `longInstructions` — the AI Tutor is the
+  // sole voice on this surface; the lab's own instruction UI is hidden.
   const levelProperties = useMemo(() => {
     if (labType === 'weblab2') {
       return {
         id,
-        name: `ai-lesson-${checkpoint.id}`,
+        name: `ai-lesson-${lessonId}-weblab2`,
         appName: 'weblab2' as AppName,
         isProjectLevel: true,
-        longInstructions: checkpoint.instructions,
         usesProjects: true,
       };
     }
     if (labType === 'music') {
       return {
         id,
-        name: `ai-lesson-${checkpoint.id}`,
+        name: `ai-lesson-${lessonId}-music`,
         appName: 'music' as AppName,
         isProjectLevel: true,
-        longInstructions: checkpoint.instructions,
         usesProjects: true,
         levelData: {
           startSources: MUSIC_START_SOURCES,
@@ -287,25 +390,39 @@ const EmbeddedLab: React.FunctionComponent<EmbeddedLabProps> = ({
       };
     }
     return undefined;
-  }, [labType, id, checkpoint.id, checkpoint.instructions]);
+  }, [labType, id, lessonId]);
 
+  // Prefer the server's saved sources if present; otherwise fall back to
+  // the lab-type-specific defaults for first-time mount.
   const initialSources = useMemo(() => {
-    if (labType === 'weblab2') return defaultWeblab2Sources();
+    if (labType === 'weblab2') {
+      return savedSources ?? defaultWeblab2Sources();
+    }
+    if (labType === 'music') {
+      return savedSources;
+    }
     return undefined;
-  }, [labType]);
+  }, [labType, savedSources]);
 
   if (labType === 'panels') {
     return (
       <PanelsCheckpointLab
         checkpoint={checkpoint}
+        lessonId={lessonId}
         onLabComplete={onLabComplete}
       />
     );
   }
 
+  if (sourcesLoading) {
+    return <div className={styles.labMessage}>Loading your project…</div>;
+  }
+
   if (labType === 'weblab2' && levelProperties) {
     return (
       <Lab2MountedView
+        lessonId={lessonId}
+        labType="weblab2"
         checkpoint={checkpoint}
         appName="weblab2"
         view={Weblab2EntryPoint.view}
@@ -318,10 +435,13 @@ const EmbeddedLab: React.FunctionComponent<EmbeddedLabProps> = ({
   if (labType === 'music' && levelProperties) {
     return (
       <Lab2MountedView
+        lessonId={lessonId}
+        labType="music"
         checkpoint={checkpoint}
         appName="music"
         view={MusicEntryPoint.view}
         levelProperties={levelProperties}
+        initialSources={initialSources}
       />
     );
   }

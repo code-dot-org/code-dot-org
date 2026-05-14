@@ -5,7 +5,7 @@
 # this prototype stays out of the way of the existing Level/Lesson/Script
 # infrastructure.
 class AiLessonsController < ApplicationController
-  before_action :authenticate_user!
+  before_action :authenticate_user!, except: [:image]
 
   def index
     view_options(full_width: true, no_padding_container: true, no_footer: true)
@@ -48,6 +48,104 @@ class AiLessonsController < ApplicationController
     return head :not_found unless existing
     write_lesson_json(id, existing.merge(lesson_payload).merge('id' => id))
     render json: {id: id}
+  end
+
+  def destroy
+    path = lesson_path(params[:id])
+    FileUtils.rm_f(path)
+    FileUtils.rm_rf(images_dir(params[:id]))
+    FileUtils.rm_rf(File.join(storage_dir, 'sources', params[:id]))
+    FileUtils.rm_rf(File.join(storage_dir, 'progress', params[:id]))
+    render json: {id: params[:id]}
+  rescue ArgumentError
+    head :bad_request
+  end
+
+  # Stores an uploaded image under `dashboard/tmp/ai_lessons/images/:id/`
+  # and returns the URL the served `image` action will respond to.
+  def upload_image
+    id = params[:id]
+    return head :not_found unless load_lesson_json(id)
+    file = params[:file]
+    return head :bad_request unless file.respond_to?(:read)
+
+    ext = File.extname(file.original_filename.to_s).downcase
+    ext = '.png' unless ext.match?(/\A\.(png|jpg|jpeg|gif|webp)\z/)
+    filename = "#{SecureRandom.hex(8)}#{ext}"
+
+    dir = images_dir(id)
+    FileUtils.mkdir_p(dir)
+    File.binwrite(File.join(dir, filename), file.read)
+
+    render json: {url: "/ai_lessons/#{id}/images/#{filename}"}
+  rescue ArgumentError
+    head :bad_request
+  end
+
+  # Serves an image previously uploaded via `upload_image`.  Auth is not
+  # required: the random-hex filename produced by `upload_image` is
+  # effectively a capability token, and skipping auth lets <img> tags
+  # render the image regardless of which session is in flight.
+  def image
+    return head :bad_request unless safe_image_filename?(params[:filename])
+    path = File.join(images_dir(params[:id]), params[:filename])
+    return head :not_found unless File.exist?(path)
+    send_file path, disposition: 'inline'
+  rescue ArgumentError
+    head :bad_request
+  end
+
+  # Returns the saved project source for a (lesson, lab_type) pair, or 404
+  # if no save has happened yet.  Sources are stored as JSON so the client
+  # can pass them straight to the lab2 view as `initialSources`.
+  def read_sources
+    return head :not_found unless load_lesson_json(params[:id])
+    path = sources_path(params[:id], params[:lab_type])
+    return head :not_found unless File.exist?(path)
+    render json: JSON.parse(File.read(path))
+  rescue ArgumentError, JSON::ParserError
+    head :bad_request
+  end
+
+  # Stores the current project source for a (lesson, lab_type) pair.  The
+  # whole JSON request body is treated as the new ProjectSources blob; the
+  # client controls the schema.
+  def write_sources
+    return head :not_found unless load_lesson_json(params[:id])
+    raw = request.raw_post
+    parsed = JSON.parse(raw)
+    path = sources_path(params[:id], params[:lab_type])
+    FileUtils.mkdir_p(File.dirname(path))
+    File.write(path, JSON.pretty_generate(parsed))
+    head :no_content
+  rescue ArgumentError, JSON::ParserError
+    head :bad_request
+  end
+
+  # Returns the current user's progress snapshot for this lesson, or 404
+  # if they have never recorded any progress.  Snapshot shape is
+  # client-controlled; the controller just persists JSON.
+  def read_progress
+    return head :not_found unless load_lesson_json(params[:id])
+    path = progress_path(params[:id], current_user.id)
+    return head :not_found unless File.exist?(path)
+    render json: JSON.parse(File.read(path))
+  rescue ArgumentError, JSON::ParserError
+    head :bad_request
+  end
+
+  # Stores a progress snapshot for the current user on this lesson.  Whole
+  # JSON request body is treated as the new snapshot.
+  def write_progress
+    return head :not_found unless load_lesson_json(params[:id])
+    raw = request.raw_post
+    parsed = JSON.parse(raw)
+    path = progress_path(params[:id], current_user.id)
+    FileUtils.mkdir_p(File.dirname(path))
+    File.write(path, JSON.pretty_generate(parsed))
+    head :no_content
+  rescue ArgumentError, JSON::ParserError
+    head :bad_request
   end
 
   private def storage_dir
@@ -101,5 +199,26 @@ class AiLessonsController < ApplicationController
 
   private def generate_id
     "#{Time.now.to_i.to_s(36)}-#{SecureRandom.hex(3)}"
+  end
+
+  private def images_dir(id)
+    raise ArgumentError, "bad id" unless id.is_a?(String) && id.match?(/\A[a-z0-9_-]{1,64}\z/)
+    File.join(storage_dir, 'images', id)
+  end
+
+  private def safe_image_filename?(filename)
+    filename.is_a?(String) && filename.match?(/\A[a-f0-9]{1,64}\.(png|jpg|jpeg|gif|webp)\z/)
+  end
+
+  private def sources_path(id, lab_type)
+    raise ArgumentError, "bad id" unless id.is_a?(String) && id.match?(/\A[a-z0-9_-]{1,64}\z/)
+    raise ArgumentError, "bad lab_type" unless lab_type.is_a?(String) && lab_type.match?(/\A[a-z0-9_]{1,32}\z/)
+    File.join(storage_dir, 'sources', id, "#{lab_type}.json")
+  end
+
+  private def progress_path(id, user_id)
+    raise ArgumentError, "bad id" unless id.is_a?(String) && id.match?(/\A[a-z0-9_-]{1,64}\z/)
+    raise ArgumentError, "bad user_id" unless user_id.is_a?(Integer) && user_id.positive?
+    File.join(storage_dir, 'progress', id, "#{user_id}.json")
   end
 end

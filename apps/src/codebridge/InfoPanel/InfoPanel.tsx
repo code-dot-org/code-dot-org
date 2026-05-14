@@ -34,6 +34,13 @@ export const InfoPanel: React.FunctionComponent<InfoPanelProps> = ({
   style,
   className,
 }) => {
+  // If the host has opted out of the ResourcePanel entirely (e.g. AI Lessons),
+  // skip rendering this wrapper too so the surrounding flex layout doesn't
+  // reserve width for an empty column.
+  const hideResourcePanel = useAppSelector(
+    state => state.lab.hideResourcePanel
+  );
+
   const {
     levelProperties,
     onRun,
@@ -139,6 +146,10 @@ export const InfoPanel: React.FunctionComponent<InfoPanelProps> = ({
     }
     return undefined;
   }, [appName]);
+
+  if (hideResourcePanel) {
+    return null;
+  }
 
   return (
     <div style={style} className={className}>

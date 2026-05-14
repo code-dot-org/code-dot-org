@@ -1298,6 +1298,16 @@ Dashboard::Application.routes.draw do
     get '/ai_lessons/:id.json', to: 'ai_lessons#read', defaults: {format: 'json'}
     patch '/ai_lessons/:id', to: 'ai_lessons#update'
     put '/ai_lessons/:id', to: 'ai_lessons#update'
+    delete '/ai_lessons/:id', to: 'ai_lessons#destroy'
+    post '/ai_lessons/:id/images', to: 'ai_lessons#upload_image'
+    get '/ai_lessons/:id/images/:filename', to: 'ai_lessons#image',
+      constraints: {filename: /[a-zA-Z0-9_.-]+/}
+    get '/ai_lessons/:id/sources/:lab_type', to: 'ai_lessons#read_sources',
+      constraints: {lab_type: /[a-z0-9_]+/}
+    put '/ai_lessons/:id/sources/:lab_type', to: 'ai_lessons#write_sources',
+      constraints: {lab_type: /[a-z0-9_]+/}
+    get '/ai_lessons/:id/progress', to: 'ai_lessons#read_progress'
+    put '/ai_lessons/:id/progress', to: 'ai_lessons#write_progress'
 
     resources :sprites, only: [:index], controller: 'sprite_management' do
       collection do

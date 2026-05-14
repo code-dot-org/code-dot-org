@@ -1,7 +1,8 @@
 // Minimal list of saved AI lessons.
 
-import React from 'react';
+import React, {useState} from 'react';
 
+import {deleteLesson} from './api';
 import {LessonIndexEntry} from './types';
 
 import styles from './aiLessons.module.scss';
@@ -11,8 +12,30 @@ interface LessonsListPageProps {
 }
 
 const LessonsListPage: React.FunctionComponent<LessonsListPageProps> = ({
-  lessons,
+  lessons: initialLessons,
 }) => {
+  const [lessons, setLessons] = useState<LessonIndexEntry[]>(initialLessons);
+  const [deletingId, setDeletingId] = useState<string | undefined>();
+  const [error, setError] = useState<string | undefined>();
+
+  const handleDelete = async (lesson: LessonIndexEntry) => {
+    const label = lesson.title || '(untitled)';
+    const ok = window.confirm(
+      `Delete "${label}"? This permanently removes the lesson JSON file.`
+    );
+    if (!ok) return;
+    setDeletingId(lesson.id);
+    setError(undefined);
+    try {
+      await deleteLesson(lesson.id);
+      setLessons(prev => prev.filter(l => l.id !== lesson.id));
+    } catch (e) {
+      setError(`Could not delete ${label}: ${(e as Error).message}`);
+    } finally {
+      setDeletingId(undefined);
+    }
+  };
+
   return (
     <div className={styles.listPage}>
       <header className={styles.authorHeader}>
@@ -28,6 +51,7 @@ const LessonsListPage: React.FunctionComponent<LessonsListPageProps> = ({
           </a>
         </div>
       </header>
+      {error && <div className={styles.error}>{error}</div>}
       {lessons.length === 0 ? (
         <p className={styles.muted}>No lessons yet — try creating one.</p>
       ) : (
@@ -42,6 +66,16 @@ const LessonsListPage: React.FunctionComponent<LessonsListPageProps> = ({
                 <a href={`/ai_lessons/${l.id}`}>Open as student</a>
                 {' · '}
                 <a href={`/ai_lessons/${l.id}/edit`}>Edit</a>
+                {' · '}
+                <button
+                  type="button"
+                  className={styles.linkButton}
+                  onClick={() => handleDelete(l)}
+                  disabled={deletingId === l.id}
+                  aria-label={`Delete ${l.title || 'lesson'}`}
+                >
+                  {deletingId === l.id ? 'Deleting…' : 'Delete'}
+                </button>
               </div>
             </li>
           ))}

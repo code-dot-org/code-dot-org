@@ -1,4 +1,8 @@
 - script_data = {lessons: @lessons}
+
+- content_for(:head) do
+  = render partial: 'lab_head_deps'
+
 %script{src: webpack_asset_path('js/ai_lessons/index.js'), data: {aiLessonsIndex: script_data.to_json}}
 
 #ai-lessons-index-container

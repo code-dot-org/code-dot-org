@@ -1,23 +1,27 @@
 // Authoring UI for an AI-generated lesson plan.
 //
-// The author types a single lesson objective and a list of checkpoint
-// descriptions (each with a target lab type).  Pressing "Generate" calls
-// the AI Gateway to flesh those into a full LessonPlan, which the author
-// can then review, tweak, and save.  Saving POSTs/PUTs JSON to the Rails
-// controller, which writes it to the filesystem.
+// The author writes a single free-text prompt ("create a 5-checkpoint
+// lesson on loops using Music Lab and Web Lab 2", etc.).  Pressing
+// Generate calls the AI Gateway with a structured-output schema and
+// fills in the entire LessonPlan in one shot — title, introduction,
+// checkpoint list, lab type assignments, instructions, success
+// criteria, and panel captions.  Everything in the generated plan is
+// then editable inline before saving.
 
+import {SimpleDropdown} from '@code-dot-org/component-library/dropdown';
 import React, {useState} from 'react';
 
 import {createLesson, updateLesson} from './api';
-import {generateLessonPlan} from './lessonGenerator';
-import {CheckpointInput, LabType, LessonPlan} from './types';
+import {generateLessonFromPrompt} from './lessonGenerator';
+import {generatePanelImage} from './panelImageGenerator';
+import {Checkpoint, LabType, LessonPlan, PanelSlide} from './types';
 
 import styles from './aiLessons.module.scss';
 
-const LAB_OPTIONS: {value: LabType; label: string}[] = [
-  {value: 'weblab2', label: 'Web Lab 2'},
-  {value: 'music', label: 'Music Lab'},
-  {value: 'panels', label: 'Panels (instructional slides)'},
+const LAB_ITEMS = [
+  {value: 'weblab2', text: 'Web Lab 2'},
+  {value: 'music', text: 'Music Lab'},
+  {value: 'panels', text: 'Panels (instructional slides)'},
 ];
 
 interface AuthorPageProps {
@@ -26,75 +30,133 @@ interface AuthorPageProps {
   initialLesson?: LessonPlan;
 }
 
-interface DraftState {
-  objective: string;
-  inputs: CheckpointInput[];
+function newCheckpoint(): Checkpoint {
+  return {
+    id: `cp-${Date.now()}-${Math.random().toString(36).slice(2, 5)}`,
+    title: 'New checkpoint',
+    description: '',
+    labType: 'panels',
+    successCriteria: '',
+    panels: [{caption: ''}],
+  };
 }
-
-const blankCheckpoint = (): CheckpointInput => ({
-  description: '',
-  labType: 'weblab2',
-});
-
-const deriveDraft = (lesson?: LessonPlan): DraftState => {
-  if (lesson?.authorInputs) {
-    return {
-      objective: lesson.authorInputs.objective,
-      inputs:
-        lesson.authorInputs.checkpointInputs.length > 0
-          ? lesson.authorInputs.checkpointInputs.map(c => ({...c}))
-          : [blankCheckpoint()],
-    };
-  }
-  return {objective: '', inputs: [blankCheckpoint()]};
-};
 
 const AuthorPage: React.FunctionComponent<AuthorPageProps> = ({
   mode,
   lessonId,
   initialLesson,
 }) => {
-  const [draft, setDraft] = useState<DraftState>(() =>
-    deriveDraft(initialLesson)
+  const [prompt, setPrompt] = useState<string>(
+    initialLesson?.authorInputs?.prompt || ''
   );
   const [plan, setPlan] = useState<LessonPlan | undefined>(initialLesson);
   const [busy, setBusy] = useState(false);
   const [error, setError] = useState<string | undefined>();
   const [savedId, setSavedId] = useState<string | undefined>(lessonId);
+  // Per-slide image-generation state, keyed by `${checkpointIndex}-${panelIndex}`.
+  const [generatingImageKey, setGeneratingImageKey] = useState<
+    string | undefined
+  >();
+  // Human-readable description of what the page is currently working on.
+  const [busyMessage, setBusyMessage] = useState<string | undefined>();
 
-  const setCheckpoint = (i: number, patch: Partial<CheckpointInput>) =>
-    setDraft(d => ({
-      ...d,
-      inputs: d.inputs.map((c, idx) => (idx === i ? {...c, ...patch} : c)),
+  // Auto-generate images for every panel slide in the freshly-generated plan,
+  // in parallel.  Failures are caught per-slide so a single bad caption
+  // doesn't sink the rest; affected slides just stay imageless and the
+  // author can retry them manually.
+  const populatePanelImages = async (
+    id: string,
+    seed: LessonPlan
+  ): Promise<LessonPlan> => {
+    const targets: {cpIndex: number; panelIndex: number; caption: string}[] =
+      [];
+    seed.checkpoints.forEach((cp, cpIndex) => {
+      if (cp.labType !== 'panels') return;
+      (cp.panels || []).forEach((panel, panelIndex) => {
+        if (panel.caption.trim() && !panel.imageUrl) {
+          targets.push({cpIndex, panelIndex, caption: panel.caption});
+        }
+      });
+    });
+
+    if (targets.length === 0) return seed;
+
+    const total = targets.length;
+    let completed = 0;
+    setBusyMessage(`Generating slide images (0 of ${total})…`);
+
+    const results = await Promise.all(
+      targets.map(async target => {
+        try {
+          const url = await generatePanelImage(id, target.caption);
+          completed++;
+          setBusyMessage(`Generating slide images (${completed} of ${total})…`);
+          return {...target, url};
+        } catch {
+          completed++;
+          setBusyMessage(`Generating slide images (${completed} of ${total})…`);
+          return {...target, url: undefined as string | undefined};
+        }
+      })
+    );
+
+    // Apply all results into the plan in one pass.
+    const checkpoints = seed.checkpoints.map(cp => ({
+      ...cp,
+      panels: cp.panels ? [...cp.panels] : cp.panels,
     }));
-
-  const addCheckpoint = () =>
-    setDraft(d => ({...d, inputs: [...d.inputs, blankCheckpoint()]}));
-
-  const removeCheckpoint = (i: number) =>
-    setDraft(d => ({
-      ...d,
-      inputs:
-        d.inputs.length > 1 ? d.inputs.filter((_, idx) => idx !== i) : d.inputs,
-    }));
+    for (const result of results) {
+      if (!result.url) continue;
+      const cp = checkpoints[result.cpIndex];
+      if (!cp.panels) continue;
+      cp.panels[result.panelIndex] = {
+        ...cp.panels[result.panelIndex],
+        imageUrl: result.url,
+      };
+    }
+    return {...seed, checkpoints};
+  };
 
   const handleGenerate = async () => {
     setBusy(true);
     setError(undefined);
+    setBusyMessage('Generating lesson plan…');
     try {
-      const cleaned = draft.inputs.filter(c => c.description.trim().length > 0);
-      if (!draft.objective.trim()) {
-        throw new Error('Please write a lesson objective.');
+      if (!prompt.trim()) {
+        throw new Error('Please describe the lesson you want to create.');
       }
-      if (cleaned.length === 0) {
-        throw new Error('Please add at least one checkpoint description.');
-      }
-      const generated = await generateLessonPlan(draft.objective, cleaned);
+      const generated = await generateLessonFromPrompt(prompt);
       setPlan(generated);
+
+      // Persist immediately so image uploads have a lessonId to scope to;
+      // re-use the existing savedId if the author is regenerating.
+      setBusyMessage('Saving draft…');
+      let id = savedId;
+      const draftToSave: LessonPlan = {
+        ...generated,
+        authorInputs: {prompt: prompt.trim()},
+      };
+      if (id) {
+        await updateLesson(id, draftToSave);
+      } else {
+        id = await createLesson(draftToSave);
+        setSavedId(id);
+      }
+
+      const withImages = await populatePanelImages(id, generated);
+      setPlan(withImages);
+      if (withImages !== generated) {
+        setBusyMessage('Saving images…');
+        await updateLesson(id, {
+          ...withImages,
+          authorInputs: {prompt: prompt.trim()},
+        });
+      }
     } catch (e) {
       setError((e as Error).message);
     } finally {
       setBusy(false);
+      setBusyMessage(undefined);
     }
   };
 
@@ -103,10 +165,14 @@ const AuthorPage: React.FunctionComponent<AuthorPageProps> = ({
     setBusy(true);
     setError(undefined);
     try {
+      const planToSave: LessonPlan = {
+        ...plan,
+        authorInputs: {prompt: prompt.trim()},
+      };
       if (savedId) {
-        await updateLesson(savedId, plan);
+        await updateLesson(savedId, planToSave);
       } else {
-        const id = await createLesson(plan);
+        const id = await createLesson(planToSave);
         setSavedId(id);
       }
     } catch (e) {
@@ -116,74 +182,206 @@ const AuthorPage: React.FunctionComponent<AuthorPageProps> = ({
     }
   };
 
-  const planJson = plan ? JSON.stringify(plan, null, 2) : '';
+  // ---- helpers for editing the plan in place ----
+
+  const updatePlan = (patch: Partial<LessonPlan>) =>
+    setPlan(p => (p ? {...p, ...patch} : p));
+
+  const updateCheckpoint = (i: number, patch: Partial<Checkpoint>) =>
+    setPlan(p =>
+      p
+        ? {
+            ...p,
+            checkpoints: p.checkpoints.map((c, idx) =>
+              idx === i ? {...c, ...patch} : c
+            ),
+          }
+        : p
+    );
+
+  const removeCheckpoint = (i: number) =>
+    setPlan(p =>
+      p ? {...p, checkpoints: p.checkpoints.filter((_, idx) => idx !== i)} : p
+    );
+
+  const addCheckpoint = () =>
+    setPlan(p =>
+      p ? {...p, checkpoints: [...p.checkpoints, newCheckpoint()]} : p
+    );
+
+  const updatePanel = (
+    cpIndex: number,
+    panelIndex: number,
+    patch: Partial<PanelSlide>
+  ) =>
+    setPlan(p => {
+      if (!p) return p;
+      const cp = p.checkpoints[cpIndex];
+      const panels = [...(cp.panels || [])];
+      panels[panelIndex] = {...panels[panelIndex], ...patch};
+      return {
+        ...p,
+        checkpoints: p.checkpoints.map((c, idx) =>
+          idx === cpIndex ? {...c, panels} : c
+        ),
+      };
+    });
+
+  const addPanel = (cpIndex: number) =>
+    setPlan(p => {
+      if (!p) return p;
+      const cp = p.checkpoints[cpIndex];
+      const panels: PanelSlide[] = [...(cp.panels || []), {caption: ''}];
+      return {
+        ...p,
+        checkpoints: p.checkpoints.map((c, idx) =>
+          idx === cpIndex ? {...c, panels} : c
+        ),
+      };
+    });
+
+  const removePanel = (cpIndex: number, panelIndex: number) =>
+    setPlan(p => {
+      if (!p) return p;
+      const cp = p.checkpoints[cpIndex];
+      const panels = (cp.panels || []).filter((_, i) => i !== panelIndex);
+      return {
+        ...p,
+        checkpoints: p.checkpoints.map((c, idx) =>
+          idx === cpIndex ? {...c, panels} : c
+        ),
+      };
+    });
+
+  const handleGenerateImage = async (
+    cpIndex: number,
+    panelIndex: number,
+    caption: string
+  ) => {
+    if (!savedId) {
+      setError(
+        'Save the lesson first so generated images can be stored alongside it.'
+      );
+      return;
+    }
+    const key = `${cpIndex}-${panelIndex}`;
+    setGeneratingImageKey(key);
+    setError(undefined);
+    try {
+      const url = await generatePanelImage(savedId, caption);
+      updatePanel(cpIndex, panelIndex, {imageUrl: url});
+    } catch (e) {
+      setError((e as Error).message);
+    } finally {
+      setGeneratingImageKey(prev => (prev === key ? undefined : prev));
+    }
+  };
+
+  const renderSlideEditor = (
+    cpIndex: number,
+    panelIndex: number,
+    panel: PanelSlide
+  ) => {
+    const key = `${cpIndex}-${panelIndex}`;
+    const isGenerating = generatingImageKey === key;
+    return (
+      <li key={panelIndex} className={styles.checkpointInput}>
+        <div className={styles.checkpointRow}>
+          <strong>Slide {panelIndex + 1}</strong>
+          <button
+            type="button"
+            className={styles.linkButton}
+            onClick={() => removePanel(cpIndex, panelIndex)}
+            disabled={(plan?.checkpoints[cpIndex].panels || []).length <= 1}
+            aria-label={`Remove slide ${panelIndex + 1}`}
+          >
+            Remove
+          </button>
+        </div>
+        <label className={styles.field}>
+          <span>Caption</span>
+          <textarea
+            value={panel.caption}
+            onChange={e =>
+              updatePanel(cpIndex, panelIndex, {caption: e.target.value})
+            }
+            rows={2}
+          />
+        </label>
+        <label className={styles.field}>
+          <span>Image URL</span>
+          <input
+            type="text"
+            value={panel.imageUrl || ''}
+            onChange={e =>
+              updatePanel(cpIndex, panelIndex, {imageUrl: e.target.value})
+            }
+            placeholder="Generate one below, or paste a URL."
+          />
+        </label>
+        {panel.imageUrl ? (
+          <img
+            src={panel.imageUrl}
+            alt=""
+            style={{
+              maxWidth: 240,
+              borderRadius: 4,
+              border: '1px solid rgba(0,0,0,0.1)',
+              marginBottom: 8,
+            }}
+          />
+        ) : null}
+        <button
+          type="button"
+          className={styles.secondaryButton}
+          onClick={() =>
+            handleGenerateImage(cpIndex, panelIndex, panel.caption)
+          }
+          disabled={
+            isGenerating ||
+            !!generatingImageKey ||
+            !panel.caption.trim() ||
+            !savedId
+          }
+          title={
+            !savedId
+              ? 'Save the lesson first to generate images'
+              : !panel.caption.trim()
+              ? 'Write a caption first'
+              : 'Generate an illustration with Gemini'
+          }
+        >
+          {isGenerating
+            ? 'Generating image…'
+            : panel.imageUrl
+            ? 'Regenerate image'
+            : 'Generate image'}
+        </button>
+      </li>
+    );
+  };
 
   return (
     <div className={styles.authorPage}>
       <header className={styles.authorHeader}>
         <h1>{mode === 'edit' ? 'Edit AI Lesson' : 'Author a new AI Lesson'}</h1>
         <p className={styles.muted}>
-          Describe the objective and the discrete checkpoints. The AI fills in
-          the rest — instructions for the student, success criteria, and any
-          instructional slides.
+          Describe the lesson you want in one paragraph. The AI fills in
+          everything — checkpoints, lab types, instructions, success criteria,
+          and slide captions — and you can tweak any of it before saving.
         </p>
       </header>
 
       <section className={styles.formSection}>
         <label className={styles.field}>
-          <span>Lesson objective</span>
+          <span>Lesson prompt</span>
           <textarea
-            value={draft.objective}
-            onChange={e => setDraft(d => ({...d, objective: e.target.value}))}
-            rows={3}
-            placeholder="e.g. Students learn how a song's structure is built from repeating patterns by composing a short loop in Music Lab."
+            value={prompt}
+            onChange={e => setPrompt(e.target.value)}
+            rows={5}
+            placeholder="e.g. Create a 5–6 checkpoint lesson for middle schoolers that teaches loops and conditionals. Start with a panels intro, then build a looping song in Music Lab, then have students use a conditional in Web Lab 2 to change a page's style. End with a recap panel."
           />
         </label>
-
-        <h2>Checkpoints</h2>
-        <ol className={styles.checkpointList}>
-          {draft.inputs.map((cp, i) => (
-            <li key={i} className={styles.checkpointInput}>
-              <div className={styles.checkpointRow}>
-                <select
-                  value={cp.labType}
-                  onChange={e =>
-                    setCheckpoint(i, {labType: e.target.value as LabType})
-                  }
-                  aria-label={`Checkpoint ${i + 1} lab type`}
-                >
-                  {LAB_OPTIONS.map(o => (
-                    <option key={o.value} value={o.value}>
-                      {o.label}
-                    </option>
-                  ))}
-                </select>
-                <button
-                  type="button"
-                  className={styles.linkButton}
-                  onClick={() => removeCheckpoint(i)}
-                  disabled={draft.inputs.length <= 1}
-                  aria-label={`Remove checkpoint ${i + 1}`}
-                >
-                  Remove
-                </button>
-              </div>
-              <textarea
-                value={cp.description}
-                onChange={e => setCheckpoint(i, {description: e.target.value})}
-                rows={2}
-                placeholder="What should the student demonstrate at this checkpoint?"
-              />
-            </li>
-          ))}
-        </ol>
-        <button
-          type="button"
-          className={styles.secondaryButton}
-          onClick={addCheckpoint}
-        >
-          + Add checkpoint
-        </button>
 
         <div className={styles.actions}>
           <button
@@ -192,43 +390,135 @@ const AuthorPage: React.FunctionComponent<AuthorPageProps> = ({
             onClick={handleGenerate}
             disabled={busy}
           >
-            {busy ? 'Working…' : plan ? 'Regenerate' : 'Generate lesson plan'}
+            {busy
+              ? busyMessage || 'Working…'
+              : plan
+              ? 'Regenerate from prompt'
+              : 'Generate lesson plan'}
           </button>
         </div>
+        {busy && busyMessage && (
+          <div className={styles.muted} style={{fontSize: 13, marginTop: 8}}>
+            {busyMessage}
+          </div>
+        )}
         {error && <div className={styles.error}>{error}</div>}
       </section>
 
       {plan && (
         <section className={styles.previewSection}>
-          <h2>Generated plan</h2>
-          <div className={styles.previewSummary}>
-            <h3>{plan.title}</h3>
-            <p>{plan.introduction}</p>
-            <ol>
-              {plan.checkpoints.map(c => (
-                <li key={c.id}>
-                  <strong>{c.title}</strong>{' '}
-                  <span className={styles.muted}>({c.labType})</span>
-                  <p>{c.instructions}</p>
-                  <p className={styles.muted}>
-                    <em>Success: {c.successCriteria}</em>
-                  </p>
-                  {c.panels && c.panels.length > 0 && (
-                    <ul>
-                      {c.panels.map((p, i) => (
-                        <li key={i}>{p.caption}</li>
-                      ))}
-                    </ul>
-                  )}
-                </li>
-              ))}
-            </ol>
-          </div>
+          <h2>Lesson</h2>
 
-          <details>
-            <summary>Raw JSON</summary>
-            <pre className={styles.codeBlock}>{planJson}</pre>
-          </details>
+          <label className={styles.field}>
+            <span>Title</span>
+            <input
+              type="text"
+              value={plan.title}
+              onChange={e => updatePlan({title: e.target.value})}
+            />
+          </label>
+
+          <label className={styles.field}>
+            <span>Objective</span>
+            <textarea
+              value={plan.objective}
+              onChange={e => updatePlan({objective: e.target.value})}
+              rows={2}
+            />
+          </label>
+
+          <h2>Checkpoints</h2>
+          <ol className={styles.checkpointList}>
+            {plan.checkpoints.map((cp, i) => (
+              <li key={cp.id} className={styles.checkpointInput}>
+                <div className={styles.checkpointRow}>
+                  <strong>#{i + 1}</strong>
+                  <SimpleDropdown
+                    name={`checkpoint-${i}-lab-type`}
+                    labelText="Lab type"
+                    isLabelVisible={false}
+                    size="s"
+                    color="black"
+                    items={LAB_ITEMS}
+                    selectedValue={cp.labType}
+                    onChange={e =>
+                      updateCheckpoint(i, {
+                        labType: e.target.value as LabType,
+                      })
+                    }
+                  />
+                  <button
+                    type="button"
+                    className={styles.linkButton}
+                    onClick={() => removeCheckpoint(i)}
+                    aria-label={`Remove checkpoint ${i + 1}`}
+                  >
+                    Remove
+                  </button>
+                </div>
+
+                <label className={styles.field}>
+                  <span>Title</span>
+                  <input
+                    type="text"
+                    value={cp.title}
+                    onChange={e => updateCheckpoint(i, {title: e.target.value})}
+                  />
+                </label>
+
+                <label className={styles.field}>
+                  <span>
+                    Description — what the student should do and any context the
+                    AI Tutor needs. Never shown verbatim; the tutor paraphrases
+                    on the fly.
+                  </span>
+                  <textarea
+                    value={cp.description}
+                    onChange={e =>
+                      updateCheckpoint(i, {description: e.target.value})
+                    }
+                    rows={4}
+                  />
+                </label>
+
+                <label className={styles.field}>
+                  <span>Success criteria (what the AI Tutor checks)</span>
+                  <textarea
+                    value={cp.successCriteria}
+                    onChange={e =>
+                      updateCheckpoint(i, {successCriteria: e.target.value})
+                    }
+                    rows={2}
+                  />
+                </label>
+
+                {cp.labType === 'panels' && (
+                  <div className={styles.field}>
+                    <span>Slide captions</span>
+                    <ol className={styles.checkpointList}>
+                      {(cp.panels || []).map((p, pi) =>
+                        renderSlideEditor(i, pi, p)
+                      )}
+                    </ol>
+                    <button
+                      type="button"
+                      className={styles.secondaryButton}
+                      onClick={() => addPanel(i)}
+                    >
+                      + Add slide
+                    </button>
+                  </div>
+                )}
+              </li>
+            ))}
+          </ol>
+          <button
+            type="button"
+            className={styles.secondaryButton}
+            onClick={addCheckpoint}
+          >
+            + Add checkpoint
+          </button>
 
           <div className={styles.actions}>
             <button

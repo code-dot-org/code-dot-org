@@ -10,32 +10,33 @@ export type LabType = 'weblab2' | 'music' | 'panels';
 
 export interface PanelSlide {
   caption: string;
+  // Optional illustration shown behind the caption.  Populated either by
+  // the AI image generator (uploaded to /level_assets) or by the author
+  // pasting a URL directly.
+  imageUrl?: string;
 }
 
 export interface Checkpoint {
   id: string;
   title: string;
+  // Description of what this checkpoint covers — what the student should do,
+  // and any context the AI Tutor needs to guide them.  Never shown to the
+  // student directly; the tutor turns it into natural language on the fly.
   description: string;
   labType: LabType;
-  instructions: string;
   successCriteria: string;
   panels?: PanelSlide[];
-}
-
-export interface CheckpointInput {
-  description: string;
-  labType: LabType;
 }
 
 export interface LessonPlan {
   id?: string;
   title: string;
   objective: string;
-  introduction: string;
   checkpoints: Checkpoint[];
   authorInputs: {
-    objective: string;
-    checkpointInputs: CheckpointInput[];
+    // The free-text prompt the author originally typed.  Kept so the
+    // author can tweak the prompt and regenerate later.
+    prompt: string;
   };
 }
 

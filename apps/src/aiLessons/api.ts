@@ -33,3 +33,7 @@ export async function loadLesson(id: string): Promise<LessonPlan> {
   const response = await HttpClient.get(`/ai_lessons/${id}.json`, false, {});
   return (await response.json()) as LessonPlan;
 }
+
+export async function deleteLesson(id: string): Promise<void> {
+  await HttpClient.delete(`/ai_lessons/${id}`, true);
+}

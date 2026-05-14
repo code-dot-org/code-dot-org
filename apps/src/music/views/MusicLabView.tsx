@@ -161,6 +161,10 @@ const MusicLabView: React.FunctionComponent<MusicLabViewProps> = ({
   const isStandaloneCollapsed = useAppSelector(
     state => state.lab2View.isStandaloneCollapsed
   );
+  // Host surfaces can suppress the entire ResourcePanel column.
+  const hideResourcePanel = useAppSelector(
+    state => state.lab.hideResourcePanel
+  );
   const timelineAreaRef = useRef<HTMLDivElement | null>(null);
   const teacherViewingStudent = Boolean(
     useAppSelector(state => state.progress.viewAsUserId)
@@ -370,45 +374,47 @@ const MusicLabView: React.FunctionComponent<MusicLabViewProps> = ({
               instructionsPosition === InstructionsPosition.RIGHT,
           })}
         >
-          <div
-            id="instructions-area"
-            className={classNames(
-              moduleStyles.instructionsArea,
-              moduleStyles.instructionsSide,
-              (isStandaloneCollapsed || guideMode) &&
-                moduleStyles.instructionsCollapsed
-            )}
-          >
-            <ResourcePanel
-              isRunning={isPlaying}
-              handleInstructionsTextClick={onInstructionsTextClick}
-              bottomComponent={
-                exemplarPlayerInsideInstructions &&
-                showExemplarPlayer && (
-                  <ExemplarPlayerView
-                    playbackEvents={exemplarPlaybackEvents}
-                    title={exemplarSettings.playerTitle!}
-                    player={player}
-                    insideInstructions={exemplarPlayerInsideInstructions}
-                  />
-                )
-              }
-              hasRun={hasRun}
-              hasEdited={hasEdited}
-              fixedDarkBackground={true}
-              overrideTheme={'Light'}
-              includeFooterSpacing={false}
-              levelProperties={levelProperties}
-              headerClassName={moduleStyles.headerWithBorder}
-              settings={settings}
-              hideContinueIfDisabled={true}
-              hideNavigation={false}
-              styleNavigationAsBubble={true}
-              documentationUrl={'/docs/ide/music'}
-              sidebarOnly={!!guideMode}
-              versionHistoryProps={{startSources, alwaysShowAutoSaves: true}}
-            />
-          </div>
+          {!hideResourcePanel && (
+            <div
+              id="instructions-area"
+              className={classNames(
+                moduleStyles.instructionsArea,
+                moduleStyles.instructionsSide,
+                (isStandaloneCollapsed || guideMode) &&
+                  moduleStyles.instructionsCollapsed
+              )}
+            >
+              <ResourcePanel
+                isRunning={isPlaying}
+                handleInstructionsTextClick={onInstructionsTextClick}
+                bottomComponent={
+                  exemplarPlayerInsideInstructions &&
+                  showExemplarPlayer && (
+                    <ExemplarPlayerView
+                      playbackEvents={exemplarPlaybackEvents}
+                      title={exemplarSettings.playerTitle!}
+                      player={player}
+                      insideInstructions={exemplarPlayerInsideInstructions}
+                    />
+                  )
+                }
+                hasRun={hasRun}
+                hasEdited={hasEdited}
+                fixedDarkBackground={true}
+                overrideTheme={'Light'}
+                includeFooterSpacing={false}
+                levelProperties={levelProperties}
+                headerClassName={moduleStyles.headerWithBorder}
+                settings={settings}
+                hideContinueIfDisabled={true}
+                hideNavigation={false}
+                styleNavigationAsBubble={true}
+                documentationUrl={'/docs/ide/music'}
+                sidebarOnly={!!guideMode}
+                versionHistoryProps={{startSources, alwaysShowAutoSaves: true}}
+              />
+            </div>
+          )}
 
           <div id="blockly-area" className={moduleStyles.blocklyArea}>
             <PanelContainer

@@ -18,6 +18,7 @@ import {generateText} from '@cdo/apps/aiGateway';
 import {AiChatModelIds} from '@cdo/generated-scripts/sharedConstants';
 
 import {initAiLessonsGatewayContext} from './aiGatewaySetup';
+import {getCapabilitiesMarkdownFor} from './labCapabilities';
 import {LessonPlan} from './types';
 
 const MODEL_ID = AiChatModelIds.GEMINI_2_5_FLASH;
@@ -74,7 +75,6 @@ decide when the student is ready to move on.
 LESSON
   Title: ${lesson.title}
   Objective: ${lesson.objective}
-  Introduction: ${lesson.introduction}
 
 CHECKPOINTS
 ${overview}
@@ -82,8 +82,9 @@ ${overview}
 CURRENT CHECKPOINT (#${currentIndex + 1} of ${totalCheckpoints})
   Title: ${current.title}
   Lab type: ${current.labType}
-  Description: ${current.description}
-  Instructions for the student: ${current.instructions}
+  Description (what the student should do — turn this into your own
+  natural-language guidance for the student; never paste it verbatim):
+  ${current.description}
   Success criteria (what you, the tutor, must verify before advancing): ${
     current.successCriteria
   }
@@ -97,7 +98,9 @@ ${
 }
 
 YOUR JOB
-- Keep replies short (1-4 short paragraphs).  Plain text, no markdown.
+- Keep replies short (1-4 short paragraphs).  Markdown is rendered, so
+  feel free to use **bold**, *italics*, bullet lists, and inline \`code\`
+  to highlight what matters.  Don't overdo it.
 - Stay focused on the current checkpoint.  If the student wanders, gently
   bring them back.
 - When the student shares their work (code, a description, or by clicking
@@ -109,7 +112,9 @@ YOUR JOB
 - Otherwise set action="stay" and give targeted, actionable feedback —
   one or two specific suggestions.  Never advance prematurely.
 - Do not invent UI controls.  The student has the lab on screen and a chat
-  with you; that's it.`;
+  with you; that's it.
+
+${getCapabilitiesMarkdownFor(current.labType)}`;
 };
 
 function formatTranscript(
@@ -159,10 +164,36 @@ export async function generateTutorOpening(
   currentIndex: number
 ): Promise<TutorReply> {
   initAiLessonsGatewayContext();
+  const isFirst = currentIndex === 0;
   return callTutorModel(
     SYSTEM_PROMPT_TEMPLATE(lesson, currentIndex),
-    `The student has just arrived at this checkpoint.  Greet them briefly
-and tell them what to do.  This is NOT an evaluation — set action="stay".`,
+    `The student has just arrived at this checkpoint.  Write a short
+opening message in markdown that gets them moving.  Focus on the
+objective; cut every word that isn't earning its keep.
+
+Structure (in this order):
+${
+  isFirst
+    ? `1. ONE short, friendly welcome sentence framing what they're about
+   to do.  Examples: "Welcome! Today we're making a beat in Music
+   Lab." / "Hey! Let's build a tiny webpage together."  Single
+   sentence, ≤15 words.  Don't summarise the whole lesson — just
+   set the tone.`
+    : `1. ONE short, friendly transition sentence acknowledging the previous
+   checkpoint and naming what's next.  Examples: "Nice work! Next up:
+   loops." / "Great — now let's add sound effects."  Keep it to a
+   single sentence, ≤12 words.  Skip it entirely if no natural
+   transition exists.`
+}
+2. The next line MUST start with **Do this:** in bold, followed by a
+   single-sentence call-to-action — the one concrete thing they should
+   do RIGHT NOW.  ≤15 words.  No preamble.
+3. Optionally one (just one!) follow-up line of supporting detail —
+   a tip, a pointer to a block/file/API, or a hint.  Use bullets only
+   if you have multiple discrete tips.
+
+Do not greet the student by name.  This is NOT an evaluation; set
+action="stay".`,
     0.5
   );
 }

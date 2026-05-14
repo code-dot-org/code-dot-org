@@ -6,9 +6,12 @@
 // The shape of the snapshot is lab-specific:
 // - weblab2: a multi-file source dump (filenames + contents) pulled from
 //   state.lab2Project.projectSources.source.
-// - music: a structured summary of the song the student has composed —
-//   pack, BPM, last measure, and the list of playback events — read from
-//   state.music (Music Lab doesn't write back into lab2Project).
+// - music: the Blockly workspace serialization — the actual program the
+//   student wrote, not the playback events that result from running it.
+//   Pulled from state.lab2Project.projectSources.source (a JSON string of
+//   the Blockly workspace) plus the labConfig metadata (pack, library,
+//   block mode).  This lets the tutor verify "did you use a Repeat
+//   block" rather than guessing from observed sound events.
 // - panels: undefined; there's no code to check on instructional panels.
 
 import {useMemo} from 'react';
@@ -16,18 +19,12 @@ import {useMemo} from 'react';
 import {MultiFileSource} from '@cdo/apps/lab2/types';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 
+import {selectSavedSource} from './aiLessonsSourcesRedux';
 import {Checkpoint} from './types';
 
 interface SerializedWeblab2File {
   name: string;
   contents: string;
-}
-
-interface MusicLikeState {
-  packId?: string | null;
-  bpm?: number;
-  lastMeasure?: number;
-  playbackEvents?: Array<Record<string, unknown>>;
 }
 
 function serializeWeblab2Source(source: MultiFileSource): string {
@@ -40,37 +37,57 @@ function serializeWeblab2Source(source: MultiFileSource): string {
     .join('\n');
 }
 
-function serializeMusicState(music: MusicLikeState): string {
-  const lines: string[] = [
-    `Music Lab project snapshot`,
-    `Sound pack: ${music.packId ?? '(default)'}`,
-    `BPM: ${music.bpm ?? '(unset)'}`,
-    `Last measure used: ${music.lastMeasure ?? 0}`,
-    `Number of playback events: ${music.playbackEvents?.length ?? 0}`,
-  ];
-  if (music.playbackEvents && music.playbackEvents.length > 0) {
-    lines.push('Playback events:');
-    music.playbackEvents.slice(0, 50).forEach((ev, i) => {
-      lines.push(`  ${i + 1}. ${JSON.stringify(ev)}`);
-    });
-    if (music.playbackEvents.length > 50) {
-      lines.push(`  …and ${music.playbackEvents.length - 50} more events`);
+interface MusicLabConfig {
+  music?: {
+    packId?: string;
+    library?: string;
+    blockMode?: string;
+  };
+}
+
+function serializeMusicSource(
+  source: unknown,
+  labConfig: MusicLabConfig | undefined
+): string {
+  const lines: string[] = ['Music Lab project — Blockly workspace JSON.'];
+  const music = labConfig?.music;
+  if (music?.library) lines.push(`Sound library: ${music.library}`);
+  if (music?.packId) lines.push(`Sound pack: ${music.packId}`);
+  if (music?.blockMode) lines.push(`Block mode: ${music.blockMode}`);
+  lines.push('');
+
+  // MusicView serializes `JSON.stringify(getCode())` into the `source`
+  // field, so the redux value is typically a string.  Try to pretty-print
+  // it back to JSON; if that fails fall back to the raw form.
+  let pretty: string;
+  if (typeof source === 'string') {
+    try {
+      pretty = JSON.stringify(JSON.parse(source), null, 2);
+    } catch {
+      pretty = source;
     }
+  } else if (source !== undefined && source !== null) {
+    try {
+      pretty = JSON.stringify(source, null, 2);
+    } catch {
+      pretty = String(source);
+    }
+  } else {
+    return 'Music Lab project — no workspace saved yet.';
   }
+  lines.push(pretty);
   return lines.join('\n');
 }
 
 export function useStudentWork(checkpoint: Checkpoint): string | undefined {
-  const projectSource = useAppSelector(
+  // Weblab2 source is in lab2Project (codebridge dispatches setProjectSource
+  // on every keystroke).  Music source lives in our own slice because
+  // dispatching into lab2Project would loop with MusicView's reload-on-
+  // source-change behaviour.
+  const weblab2Source = useAppSelector(
     state => state.lab2Project.projectSources?.source
   );
-
-  // state.music is registered lazily when the Music chunk loads; guard with
-  // an unknown-narrowing dance the same way useAutoCheckOnRun does.
-  const musicState = useAppSelector(state => {
-    const s = state as unknown as {music?: MusicLikeState};
-    return s.music;
-  });
+  const musicSaved = useAppSelector(state => selectSavedSource(state, 'music'));
 
   return useMemo(() => {
     if (checkpoint.labType === 'panels') {
@@ -78,15 +95,15 @@ export function useStudentWork(checkpoint: Checkpoint): string | undefined {
     }
 
     if (checkpoint.labType === 'music') {
-      if (!musicState) return undefined;
-      return serializeMusicState(musicState);
+      if (!musicSaved) return undefined;
+      return serializeMusicSource(musicSaved.source, musicSaved.labConfig);
     }
 
     if (checkpoint.labType === 'weblab2') {
-      if (!projectSource) return undefined;
-      return serializeWeblab2Source(projectSource as MultiFileSource);
+      if (!weblab2Source) return undefined;
+      return serializeWeblab2Source(weblab2Source as MultiFileSource);
     }
 
     return undefined;
-  }, [checkpoint.labType, projectSource, musicState]);
+  }, [checkpoint.labType, weblab2Source, musicSaved]);
 }

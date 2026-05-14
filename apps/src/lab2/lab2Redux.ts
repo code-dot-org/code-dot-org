@@ -83,6 +83,11 @@ export interface LabState {
   isTeacherOfProjectOwner: boolean | undefined;
   // If this lab is in a full screen view.
   isFullScreenView: boolean | undefined;
+  // If true, the lab's ResourcePanel sidebar is suppressed.  Used by
+  // surfaces like the AI Lessons hackathon, where the AI Tutor takes
+  // over the instructions/help affordance entirely and the panel's
+  // settings/version-history tabs would just confuse the student.
+  hideResourcePanel: boolean;
 }
 
 const initialState: LabState = {
@@ -102,6 +107,7 @@ const initialState: LabState = {
   permissions: [],
   isTeacherOfProjectOwner: undefined,
   isFullScreenView: undefined,
+  hideResourcePanel: false,
 };
 
 // Thunks
@@ -327,6 +333,9 @@ const labSlice = createSlice({
     setIsFullScreenView(state, action: PayloadAction<boolean>) {
       state.isFullScreenView = action.payload;
     },
+    setHideResourcePanel(state, action: PayloadAction<boolean>) {
+      state.hideResourcePanel = action.payload;
+    },
   },
   extraReducers: builder => {
     builder.addCase(setUpWithLevel.fulfilled, state => {
@@ -502,6 +511,7 @@ export const {
   setIsTeacherOfProjectOwner,
   setIsBlockedAbuse,
   setIsFullScreenView,
+  setHideResourcePanel,
 } = labSlice.actions;
 
 export default labSlice.reducer;

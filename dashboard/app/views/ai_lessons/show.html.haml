@@ -1,19 +1,7 @@
 - script_data = {lessonId: @lesson_id, lesson: @lesson_json}
 
--# Mirror dashboard/app/views/levels/_lab2.html.haml: load each per-app
--# locale bundle and Blockly into <head> via content_for so they're available
--# before any lab2 chunk evaluates.
 - content_for(:head) do
-  -# Per-app locale bundles for every lab type the student page may swap to.
-  -# Note: there is no panels_locale.js — panels uses lab2_locale strings.
-  -# pythonlab_locale.js is required because the shared lab2 CodeEditor
-  -# component imports its strings from @cdo/apps/pythonlab/locale.
-  %script{src: webpack_asset_path("js/#{js_locale}/music_locale.js")}
-  %script{src: webpack_asset_path("js/#{js_locale}/weblab2_locale.js")}
-  %script{src: webpack_asset_path("js/#{js_locale}/codebridge_locale.js")}
-  %script{src: webpack_asset_path("js/#{js_locale}/pythonlab_locale.js")}
-  %script{src: webpack_asset_path("js/#{js_locale}/lab2_locale.js")}
-  %script{src: webpack_asset_path('js/blockly.js')}
+  = render partial: 'lab_head_deps'
 
 %script{src: webpack_asset_path('js/ai_lessons/show.js'), data: {aiLessonsStudent: script_data.to_json}}
 
