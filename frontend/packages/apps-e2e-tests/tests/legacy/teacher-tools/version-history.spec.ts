@@ -132,10 +132,6 @@ test.describe('Version History in Teacher View', {tag: '@no_mobile'}, () => {
   test('teacher sees student versions without Restore button', async ({
     page,
   }) => {
-    test.fixme(
-      true,
-      'TODO: locator.waitFor timeout in teacher version history view on webkit',
-    );
     const {teacherEmail, teacherPassword} =
       await createTeacherAssociatedStudent(page, {authorized: true});
 
@@ -207,14 +203,14 @@ test.describe('Version History in Teacher View', {tag: '@no_mobile'}, () => {
 
     await dismissTeacherPanel(page);
 
-    await page.evaluate(() =>
-      (document.querySelector('#versions-header') as HTMLElement)?.click(),
-    );
-    await page
-      .locator('div')
-      .filter({hasText: 'Latest Version'})
-      .first()
-      .waitFor({state: 'visible', timeout: 30_000});
+    await expect(async () => {
+      await page.evaluate(() =>
+        (document.querySelector('#versions-header') as HTMLElement)?.click(),
+      );
+      await expect(
+        page.locator('div').filter({hasText: 'Latest Version'}).first(),
+      ).toBeVisible({timeout: 5_000});
+    }).toPass({timeout: 30_000});
 
     await expect(
       page.locator('.versionRow:nth-child(1) .img-upload'),

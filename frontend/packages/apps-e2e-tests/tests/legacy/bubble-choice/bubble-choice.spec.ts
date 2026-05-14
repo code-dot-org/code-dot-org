@@ -100,8 +100,6 @@ test.describe('BubbleChoice — progress tracking', () => {
    */
   test.fixme(
     'Lab2 BubbleChoice progress (@properties_encryption_key required)',
-    // Source: bubble_choice.feature "Lab2 BubbleChoice progress"
-    // Skipped: requires @properties_encryption_key not available in test env.
     async () => {},
   );
 });

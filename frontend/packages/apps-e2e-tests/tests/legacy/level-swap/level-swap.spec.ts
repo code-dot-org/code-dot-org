@@ -57,11 +57,6 @@ async function completeBlocklyLevel(
 
 test.describe('Level swap — active version', () => {
   test('signed-out user sees active version', async ({page}) => {
-    // Webkit: level-swap active version flaky under parallel run; passes alone.
-    test.fixme(
-      true,
-      'TODO: level-swap signed-out active version flaky on webkit under parallel run; page load or content timing issue',
-    );
     // Source: level_swap.feature "Signed-out user sees active version"
     await page.goto(`${LESSON_29}/1`);
     await expect(page.locator('.instructions-markdown')).toContainText(

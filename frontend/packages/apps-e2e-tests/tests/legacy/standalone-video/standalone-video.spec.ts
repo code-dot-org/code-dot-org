@@ -19,11 +19,6 @@ const LEVEL_URL = '/courses/allthethingscourse/units/1/lessons/34/levels/1';
 
 test.describe('Standalone video', () => {
   test('progress is posted when continue is clicked', async ({studentPage}) => {
-    // Webkit: standalone video progress posting flaky under parallel run; passes alone.
-    test.fixme(
-      true,
-      'TODO: standalone video continue/progress posting flaky on webkit under parallel run; XHR or progress bubble timing issue',
-    );
     // Source: standalone_video.feature "Progress is posted when continue is clicked"
     await studentPage.goto(LEVEL_URL);
     await studentPage

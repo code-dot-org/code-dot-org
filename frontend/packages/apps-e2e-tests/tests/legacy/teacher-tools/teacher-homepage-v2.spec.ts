@@ -28,11 +28,6 @@ test.describe('Teacher Homepage V2', {tag: '@no_mobile'}, () => {
   test('section options dropdown links navigate to correct pages', async ({
     page,
   }) => {
-    // Webkit: section options dropdown navigation flaky under parallel run; passes alone.
-    test.fixme(
-      true,
-      'TODO: section options dropdown links navigation flaky on webkit under parallel run; timing issue with teacher-homepage section card render',
-    );
     const {email: teacherEmail, password: teacherPassword} =
       await createTeacher(page);
     await page.goto('/home');
@@ -186,7 +181,7 @@ test.describe('Teacher Homepage V2', {tag: '@no_mobile'}, () => {
   }) => {
     test.fixme(
       true,
-      'TODO: locator.waitFor timeout in teacher homepage course assignment flow on chromium',
+      'TODO: assignment dialog intermittently closes without persisting under parallel repeat on test-studio',
     );
     await createTeacher(page);
     await page.goto('/home');
@@ -206,30 +201,33 @@ test.describe('Teacher Homepage V2', {tag: '@no_mobile'}, () => {
       .locator('h4')
       .filter({hasText: 'AI for Oceans'})
       .waitFor({state: 'visible', timeout: 30_000});
-    await page
-      .locator("[aria-label='Assign AI for Oceans to your classroom']")
-      .click();
-    await page
-      .locator('span')
-      .filter({hasText: 'Untitled Section'})
-      .waitFor({state: 'visible', timeout: 10_000});
-    await page.getByRole('checkbox', {name: 'Untitled Section'}).click();
-    await page
+    const assignAiForOceans = page.locator(
+      "[aria-label='Assign AI for Oceans to your classroom']",
+    );
+    const sectionOption = page.getByRole('checkbox', {
+      name: 'Untitled Section',
+    });
+    await expect(async () => {
+      await assignAiForOceans.click();
+      await expect(sectionOption).toBeVisible({timeout: 5_000});
+    }).toPass({timeout: 30_000});
+    await sectionOption.check();
+    await expect(sectionOption).toBeChecked();
+    const confirmAssignments = page
       .locator('button')
-      .filter({hasText: 'Confirm section assignments'})
-      .click();
-    await page
-      .locator('p')
-      .filter({hasText: 'You have successfully assigned'})
-      .waitFor({state: 'visible', timeout: 30_000});
+      .filter({hasText: 'Confirm section assignments'});
+    await expect(confirmAssignments).toBeEnabled({timeout: 10_000});
+    await confirmAssignments.click();
 
-    await page.goto('/teacher_dashboard/home');
-    await page
-      .locator('#course-content-dropdown-Untitled-Section')
-      .waitFor({state: 'visible', timeout: 30_000});
-    await expect(
-      page.locator('#course-content-dropdown-Untitled-Section'),
-    ).toContainText('Course: AI for Oceans');
+    const courseDropdown = page.locator(
+      '#course-content-dropdown-Untitled-Section',
+    );
+    await expect(async () => {
+      await page.goto('/teacher_dashboard/home');
+      await expect(courseDropdown).toContainText('Course: AI for Oceans', {
+        timeout: 5_000,
+      });
+    }).toPass({timeout: 45_000});
 
     await page
       .locator('#go-to-lesson-dropdown-button')

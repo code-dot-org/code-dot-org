@@ -1,6 +1,7 @@
 import {
   createEuStudent,
   createTeacher,
+  createTestUser,
   signIn,
   signOut,
 } from '../../shared/auth';
@@ -17,6 +18,34 @@ import {expect, test} from '../../shared/fixtures';
  */
 
 const EU_IP = '150.214.39.255';
+const gdprHeadingText =
+  /Do you agree that Code\.org may transfer data.*to the United States/;
+
+function gdprDialogHeading(page: import('@playwright/test').Page) {
+  return page.getByRole('heading', {name: gdprHeadingText});
+}
+
+async function createGdprTeacher(
+  page: import('@playwright/test').Page,
+): Promise<{email: string; password: string}> {
+  const ts = Date.now();
+  const rand = Math.random().toString(36).slice(2, 8);
+  const email = `gdpr_teacher_${ts}_${rand}@test.xx`;
+  const password = `TeacherPass${ts}`;
+
+  await createTestUser(page, {
+    user_type: 'teacher',
+    email,
+    password,
+    password_confirmation: password,
+    name: `Madame Maxime ${rand}`,
+    age: '21+',
+    terms_of_service_version: '1',
+    sign_in_count: 2,
+  });
+
+  return {email, password};
+}
 
 /**
  * Sets the GeolocationOverride cookie and navigates to /home so the GDPR
@@ -57,6 +86,23 @@ async function waitForGdprScriptDataField(
   }).toPass({timeout: 30_000});
 }
 
+async function acceptGdprDialog(
+  page: import('@playwright/test').Page,
+): Promise<void> {
+  await expect(gdprDialogHeading(page)).toBeVisible({timeout: 15_000});
+  const acceptResponse = page.waitForResponse(
+    response =>
+      response
+        .url()
+        .includes('/dashboardapi/v1/users/accept_data_transfer_agreement') &&
+      response.request().method() === 'POST',
+  );
+  await page.locator('.ui-test-gdpr-dialog-accept').click();
+  expect((await acceptResponse).status()).toBe(204);
+  await expect(gdprDialogHeading(page)).not.toBeVisible({timeout: 15_000});
+  await waitForGdprScriptDataField(page, 'false');
+}
+
 test.describe('GDPR Dialog', {tag: '@no_mobile'}, () => {
   /**
    * Migration status: COMPLETED
@@ -68,9 +114,7 @@ test.describe('GDPR Dialog', {tag: '@no_mobile'}, () => {
   test('EU teacher sees GDPR dialog', async ({page}) => {
     await createTeacher(page);
     await goHomeAsEuUser(page);
-    await expect(page.locator('.ui-test-gdpr-dialog')).toBeVisible({
-      timeout: 15_000,
-    });
+    await expect(gdprDialogHeading(page)).toBeVisible({timeout: 15_000});
   });
 
   /**
@@ -81,26 +125,20 @@ test.describe('GDPR Dialog', {tag: '@no_mobile'}, () => {
    * show_gdpr_dialog=false.  Reloading /home no longer shows the dialog.
    */
   test('EU teacher opts in and dialog does not reappear', async ({page}) => {
-    // Firefox: GDPR dialog does not appear; geolocation mock not applied consistently.
     test.fixme(
       true,
-      'TODO: GDPR dialog not appearing consistently; geolocation mock failure or product change in EU dialog flow across all browsers',
+      'TODO: accept endpoint returns 204, but test-studio re-renders show_gdpr_dialog=true after /home navigation',
     );
-    const {email, password} = await createTeacher(page);
+    const {email, password} = await createGdprTeacher(page);
     await goHomeAsEuUser(page);
-    await expect(page.locator('.ui-test-gdpr-dialog')).toBeVisible({
-      timeout: 15_000,
-    });
+    await acceptGdprDialog(page);
 
-    await page.locator('.ui-test-gdpr-dialog-accept').click();
-    await expect(page.locator('.ui-test-gdpr-dialog')).not.toBeVisible();
-    await waitForGdprScriptDataField(page, 'false');
-
-    await page.goto('/home');
+    await page.goto('/home?gdpr_dialog_test=after_accept');
     await page
       .locator('.header_user')
       .waitFor({state: 'visible', timeout: 15_000});
-    await expect(page.locator('.ui-test-gdpr-dialog')).not.toBeVisible();
+    await waitForGdprScriptDataField(page, 'false');
+    await expect(gdprDialogHeading(page)).not.toBeVisible({timeout: 15_000});
 
     void email;
     void password;
@@ -119,7 +157,7 @@ test.describe('GDPR Dialog', {tag: '@no_mobile'}, () => {
   }) => {
     await createEuStudent(page);
     await goHomeAsEuUser(page);
-    await expect(page.locator('.ui-test-gdpr-dialog')).not.toBeVisible({
+    await expect(gdprDialogHeading(page)).not.toBeVisible({
       timeout: 10_000,
     });
   });
@@ -133,18 +171,10 @@ test.describe('GDPR Dialog', {tag: '@no_mobile'}, () => {
   test('GDPR dialog privacy link points to code.org/privacy', async ({
     page,
   }) => {
-    test.fixme(
-      true,
-      'TODO: #gdpr-dialog never visible; GDPR dialog not appearing in test environment; possible EU geolocation mock failure',
-    );
     await createTeacher(page);
     await goHomeAsEuUser(page);
-    await page
-      .locator('#gdpr-dialog')
-      .waitFor({state: 'visible', timeout: 15_000});
-    const link = page
-      .locator('#gdpr-dialog')
-      .getByRole('link', {name: 'Visit Code.org'});
+    await expect(gdprDialogHeading(page)).toBeVisible({timeout: 15_000});
+    const link = page.locator('.ui-test-gdpr-dialog-privacy-link');
     await expect(link).toHaveAttribute('href', /code\.org\/privacy/);
   });
 
@@ -159,27 +189,22 @@ test.describe('GDPR Dialog', {tag: '@no_mobile'}, () => {
   }) => {
     test.fixme(
       true,
-      'TODO: GDPR dialog visible after accept+signout+signin; server-side state not persisting dismissal across all browsers',
+      'TODO: accept endpoint returns 204, but test-studio re-renders show_gdpr_dialog=true after sign-in',
     );
-    const {email, password} = await createTeacher(page);
+    const {email, password} = await createGdprTeacher(page);
     await goHomeAsEuUser(page);
-    await expect(page.locator('.ui-test-gdpr-dialog')).toBeVisible({
-      timeout: 15_000,
-    });
-
-    await page.locator('.ui-test-gdpr-dialog-accept').click();
-    await expect(page.locator('.ui-test-gdpr-dialog')).not.toBeVisible();
-    await waitForGdprScriptDataField(page, 'false');
+    await acceptGdprDialog(page);
 
     await signOut(page);
     // Re-apply the EU cookie after sign-out (reset_session clears client state
     // but the geolocation override persists in the browser context).
     await mockGeolocation(page, EU_IP);
     await signIn(page, email, password);
-    await page.goto('/home');
+    await page.goto('/home?gdpr_dialog_test=after_sign_in');
     await page
       .locator('.header_user')
       .waitFor({state: 'visible', timeout: 15_000});
-    await expect(page.locator('.ui-test-gdpr-dialog')).not.toBeVisible();
+    await waitForGdprScriptDataField(page, 'false');
+    await expect(gdprDialogHeading(page)).not.toBeVisible({timeout: 15_000});
   });
 });
