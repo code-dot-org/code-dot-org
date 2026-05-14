@@ -26,10 +26,12 @@ declare global {
 export interface SiteConfigExtensions {}
 
 /**
- * Shape of the frontend observability runtime config parsed from the
- * <meta name="app-config"> tag.
+ * Shape of the `<meta name="app-config">` runtime config blob. Each slot
+ * here has a corresponding plugin under `plugins/*`; SiteConfig parses the
+ * blob once at construction so plugins can read typed fields off `config`
+ * in their `onCoreReady` without re-parsing.
  */
-export interface ObservabilityRuntimeConfig {
+export interface RuntimeConfig {
   observability?: {
     provider?: 'sentry' | 'none';
     sentry?: {dsn: string};
@@ -41,19 +43,37 @@ export interface ObservabilityRuntimeConfig {
     };
     tracePropagationTargets?: Array<string>;
   };
+  analytics?: {
+    provider?: 'statsig' | 'none';
+    statsig?: {
+      sdkKey?: string;
+      sessionReplaySdkKey?: string;
+      autoCapture?: boolean;
+      sessionReplay?: boolean;
+    };
+  };
+  gtm?: {
+    gtmId?: string;
+  };
 }
+
+/**
+ * Back-compat alias — the old name predates the multi-plugin runtime
+ * config. New code should reference `RuntimeConfig`.
+ */
+export type ObservabilityRuntimeConfig = Pick<RuntimeConfig, 'observability'>;
 
 /**
  * Parse the <meta name="app-config"> tag and return the runtime config.
  * Returns an empty object if the tag is absent or the JSON is malformed.
  */
-function parseRuntimeConfig(): ObservabilityRuntimeConfig {
+function parseRuntimeConfig(): RuntimeConfig {
   try {
     const meta = document.querySelector<HTMLMetaElement>(
       'meta[name="app-config"]',
     );
     if (!meta?.content) return {};
-    return JSON.parse(meta.content) as ObservabilityRuntimeConfig;
+    return JSON.parse(meta.content) as RuntimeConfig;
   } catch {
     return {};
   }
@@ -69,12 +89,21 @@ export class SiteConfig {
 
   /**
    * Observability runtime config parsed from the meta tag.
-   * This is part of SiteConfig itself because core parses the runtime config
-   * before any plugins run.
+   * Always present; defaults to `{provider: 'none'}` when the slot is absent.
    */
-  public readonly observability: NonNullable<
-    ObservabilityRuntimeConfig['observability']
-  >;
+  public readonly observability: NonNullable<RuntimeConfig['observability']>;
+
+  /**
+   * Analytics runtime config parsed from the meta tag.
+   * Always present; defaults to `{provider: 'none'}` when the slot is absent.
+   */
+  public readonly analytics: NonNullable<RuntimeConfig['analytics']>;
+
+  /**
+   * GTM runtime config parsed from the meta tag.
+   * Always present; no `gtmId` means the plugin remains a no-op.
+   */
+  public readonly gtm: NonNullable<RuntimeConfig['gtm']>;
 
   constructor() {
     this.host = parse(window.location.hostname);
@@ -88,6 +117,11 @@ export class SiteConfig {
       provider: runtime.observability?.provider ?? 'none',
       ...runtime.observability,
     };
+    this.analytics = {
+      provider: runtime.analytics?.provider ?? 'none',
+      ...runtime.analytics,
+    };
+    this.gtm = {...runtime.gtm};
   }
 
   /**
