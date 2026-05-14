@@ -4,10 +4,12 @@ import {
   MilestoneReportSchema,
   OptionalMilestoneDataSchema,
   UnitProgressDefinitionSchema,
+  UnitProgressSchema,
+  UserProgressResponseDefinitionSchema,
   UserProgressResponseSchema,
 } from '../progress.schemata';
 
-describe('UnitProgressDefinitionSchema', () => {
+describe('UnitProgressDefinitionSchema (wire shape)', () => {
   it('accepts the minimal canonical shape', () => {
     const out = UnitProgressDefinitionSchema.parse({status: 'perfect'});
     expect(out.status).toBe('perfect');
@@ -43,6 +45,44 @@ describe('UnitProgressDefinitionSchema', () => {
         pages_completed: ['100', 0],
       }),
     ).toThrow();
+  });
+});
+
+describe('UnitProgressSchema (camelCase consumer shape)', () => {
+  it('renames snake_case fields to camelCase via the transform', () => {
+    const out = UnitProgressSchema.parse({
+      status: 'submitted',
+      last_progress_at: 1715600000,
+      pages_completed: [100, 0],
+      teacher_feedback_commented: true,
+      teacher_feedback_review_state: 'completed',
+      teacher_feedback_new: false,
+      time_spent: 600,
+    });
+    expect(out).toEqual({
+      status: 'submitted',
+      lastProgressAt: 1715600000,
+      pagesCompleted: [100, 0],
+      teacherFeedbackCommented: true,
+      teacherFeedbackReviewState: 'completed',
+      teacherFeedbackNew: false,
+      timeSpent: 600,
+    });
+  });
+
+  it('leaves single-word fields untouched', () => {
+    const out = UnitProgressSchema.parse({
+      status: 'perfect',
+      locked: true,
+      paired: false,
+      result: 100,
+    });
+    expect(out).toEqual({
+      status: 'perfect',
+      locked: true,
+      paired: false,
+      result: 100,
+    });
   });
 });
 
@@ -111,12 +151,31 @@ describe('MilestoneReportSchema', () => {
   });
 });
 
-describe('UserProgressResponseSchema', () => {
+describe('UserProgressResponseDefinitionSchema (wire shape)', () => {
+  it('accepts an empty object (new user, no progress yet)', () => {
+    expect(UserProgressResponseDefinitionSchema.parse({})).toEqual({});
+  });
+
+  it('rejects malformed progress entries', () => {
+    expect(() =>
+      UserProgressResponseDefinitionSchema.parse({
+        progress: {100: {/* missing status */ result: 100}},
+      }),
+    ).toThrow();
+  });
+});
+
+describe('UserProgressResponseSchema (camelCase consumer shape)', () => {
   it('accepts an empty object (new user, no progress yet)', () => {
     expect(UserProgressResponseSchema.parse({})).toEqual({});
   });
 
-  it('threads through the documented top-level fields', () => {
+  it('renames top-level current_lesson to currentLesson', () => {
+    const out = UserProgressResponseSchema.parse({current_lesson: 7});
+    expect(out).toEqual({currentLesson: 7});
+  });
+
+  it('passes already-camelCase top-level fields through unchanged', () => {
     const input = {
       isInstructor: true,
       teacherViewingStudent: false,
@@ -124,31 +183,32 @@ describe('UserProgressResponseSchema', () => {
       focusAreaLessonIds: [1, 2],
       changeFocusAreaPath: '/path',
       completed: false,
-      current_lesson: 7,
     };
     expect(UserProgressResponseSchema.parse(input)).toEqual(input);
   });
 
-  it('validates progress entries recursively as UnitProgressDefinitions', () => {
+  it('recursively converts snake_case fields inside the progress map', () => {
     const out = UserProgressResponseSchema.parse({
       progress: {
-        100: {status: 'perfect', result: 100},
-        101: {status: 'not_tried'},
+        100: {
+          status: 'perfect',
+          result: 100,
+          time_spent: 30,
+          last_progress_at: 1715600000,
+          teacher_feedback_review_state: 'completed',
+        },
       },
     });
-    expect(out.progress?.[100]?.status).toBe('perfect');
-    expect(out.progress?.[101]?.status).toBe('not_tried');
+    expect(out.progress?.[100]).toEqual({
+      status: 'perfect',
+      result: 100,
+      timeSpent: 30,
+      lastProgressAt: 1715600000,
+      teacherFeedbackReviewState: 'completed',
+    });
   });
 
-  it('rejects malformed progress entries', () => {
-    expect(() =>
-      UserProgressResponseSchema.parse({
-        progress: {100: {/* missing status */ result: 100}},
-      }),
-    ).toThrow();
-  });
-
-  it('accepts the peer-review summary shape', () => {
+  it('preserves the peer-review summary shape (already camelCase)', () => {
     const input = {
       peerReviewsPerformed: [
         {
@@ -161,5 +221,13 @@ describe('UserProgressResponseSchema', () => {
       ],
     };
     expect(UserProgressResponseSchema.parse(input)).toEqual(input);
+  });
+
+  it('rejects malformed progress entries (validation runs before transform)', () => {
+    expect(() =>
+      UserProgressResponseSchema.parse({
+        progress: {100: {/* missing status */ result: 100}},
+      }),
+    ).toThrow();
   });
 });

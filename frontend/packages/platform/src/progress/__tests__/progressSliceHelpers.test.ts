@@ -4,7 +4,10 @@
 
 import {describe, expect, it} from 'vitest';
 
-import type {Lesson} from '@code-dot-org/core/api';
+import type {
+  Lesson,
+  UnitProgress as ApiUnitProgress,
+} from '@code-dot-org/core/api';
 
 import {LevelStatuses, TestResults} from '../constants';
 import {
@@ -19,7 +22,7 @@ import {
   processServerStudentProgress,
   resultFromStatus,
 } from '../redux/progressSlice';
-import type {TestResult, UnitProgressDefinition} from '../types';
+import type {TestResult} from '../types';
 
 describe('mergeActivityResult', () => {
   it('treats 0 as "no attempt" and returns the other value', () => {
@@ -131,14 +134,14 @@ describe('getLevelResult', () => {
     const progress = {
       status: LevelStatuses.NotTried,
       result: TestResults.ALL_PASS,
-    } as UnitProgressDefinition;
+    } as ApiUnitProgress;
     expect(getLevelResult(progress)).toBe(TestResults.ALL_PASS);
   });
 
   it('falls back to the status-derived result when result is missing', () => {
     const progress = {
       status: LevelStatuses.Perfect,
-    } as UnitProgressDefinition;
+    } as ApiUnitProgress;
     expect(getLevelResult(progress)).toBe(TestResults.ALL_PASS);
   });
 });
@@ -165,17 +168,20 @@ describe('levelProgressFromResult', () => {
 });
 
 describe('levelProgressFromServer', () => {
-  it('pulls server fields into the canonical camelCase shape', () => {
-    const server: UnitProgressDefinition = {
+  it('pulls server fields into the canonical local shape', () => {
+    // Input is the camelCase wire shape coming back from
+    // `api.progress.getUserProgress`; output is the further-normalized
+    // platform `UnitProgress` (with defaults + `lastTimestamp` rename).
+    const server: ApiUnitProgress = {
       status: LevelStatuses.Submitted,
       result: TestResults.SUBMITTED_RESULT,
       locked: true,
       paired: true,
-      time_spent: 42,
-      teacher_feedback_review_state: 'completed',
-      teacher_feedback_new: true,
-      teacher_feedback_commented: true,
-      last_progress_at: 1234567890,
+      timeSpent: 42,
+      teacherFeedbackReviewState: 'completed',
+      teacherFeedbackNew: true,
+      teacherFeedbackCommented: true,
+      lastProgressAt: 1234567890,
     };
     expect(levelProgressFromServer(server)).toEqual({
       status: LevelStatuses.Submitted,
@@ -191,10 +197,10 @@ describe('levelProgressFromServer', () => {
     });
   });
 
-  it('expands pages_completed into a per-page UnitProgress when there are 2+ pages', () => {
-    const server: UnitProgressDefinition = {
+  it('expands pagesCompleted into a per-page UnitProgress when there are 2+ pages', () => {
+    const server: ApiUnitProgress = {
       status: LevelStatuses.Submitted,
-      pages_completed: [TestResults.ALL_PASS, 0 as TestResult],
+      pagesCompleted: [TestResults.ALL_PASS, 0 as TestResult],
       locked: true,
     };
     const out = levelProgressFromServer(server);
@@ -205,10 +211,10 @@ describe('levelProgressFromServer', () => {
     expect(out.pages![1].locked).toBe(true);
   });
 
-  it('leaves pages undefined when pages_completed has 0 or 1 entries', () => {
-    const single: UnitProgressDefinition = {
+  it('leaves pages undefined when pagesCompleted has 0 or 1 entries', () => {
+    const single: ApiUnitProgress = {
       status: LevelStatuses.Submitted,
-      pages_completed: [TestResults.ALL_PASS],
+      pagesCompleted: [TestResults.ALL_PASS],
     };
     expect(levelProgressFromServer(single).pages).toBeUndefined();
   });
@@ -217,8 +223,8 @@ describe('levelProgressFromServer', () => {
 describe('processServerStudentProgress', () => {
   it('maps each levelId through levelProgressFromServer', () => {
     const out = processServerStudentProgress({
-      1: {status: LevelStatuses.Perfect} as UnitProgressDefinition,
-      2: {status: LevelStatuses.Submitted} as UnitProgressDefinition,
+      1: {status: LevelStatuses.Perfect} as ApiUnitProgress,
+      2: {status: LevelStatuses.Submitted} as ApiUnitProgress,
     });
     expect(out[1].status).toBe(LevelStatuses.Perfect);
     expect(out[2].status).toBe(LevelStatuses.Submitted);

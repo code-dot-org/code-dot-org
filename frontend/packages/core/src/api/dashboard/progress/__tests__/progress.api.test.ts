@@ -145,18 +145,28 @@ describe('progressApi.getUserProgress', () => {
     );
   });
 
-  it('parses the response through UserProgressResponseSchema', async () => {
+  it('parses the response through UserProgressResponseSchema (camelCase)', async () => {
     const transport = makeTransport();
     transport.request.mockResolvedValueOnce({
       isInstructor: true,
-      progress: {100: {status: 'perfect', result: 100}},
+      current_lesson: 7,
+      progress: {
+        100: {status: 'perfect', result: 100, time_spent: 30},
+      },
     });
     const api = createProgressApi(transport);
 
     const out = await api.getUserProgress({scriptName: 'csd-1'});
 
     expect(out.isInstructor).toBe(true);
-    expect(out.progress?.[100]?.status).toBe('perfect');
+    // Top-level snake_case key was converted by the schema's transform.
+    expect(out.currentLesson).toBe(7);
+    // And the deep transform reached into the progress map values.
+    expect(out.progress?.[100]).toEqual({
+      status: 'perfect',
+      result: 100,
+      timeSpent: 30,
+    });
   });
 
   it('throws when the server returns a malformed payload', async () => {

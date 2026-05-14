@@ -1,15 +1,17 @@
+import camelcaseKeys from 'camelcase-keys';
 import {z} from 'zod';
 
 /**
- * Wire format for a single level's progress as returned by the dashboard
- * progress API. Snake_case mirrors the Rails JSON exactly; consumers are
- * expected to convert to camelCase at their boundary.
+ * Wire-format (snake_case) shape of a single level's progress as returned
+ * by the dashboard progress API. Use `UnitProgressSchema` below for the
+ * consumer-facing camelCase shape — this schema is mostly here as the
+ * input layer that the `.transform(...)` chain operates on.
  *
  * `status` is left as `z.string()` rather than a `z.enum(...)`: the
  * authoritative list of statuses (`not_tried`, `perfect`, `passed`,
  * `submitted`, `review_accepted`, `review_rejected`, …) currently lives
  * in platform's `progress/constants.ts`. Promoting that list into core
- * is a separate refactor — see the call site in `progressSlice.ts`.
+ * is a separate refactor.
  *
  * `result` / `pages_completed[]` entries are numeric `TestResult` codes
  * (also defined in platform's constants). Same story: kept loose here.
@@ -28,9 +30,20 @@ export const UnitProgressDefinitionSchema = z.object({
 });
 
 /**
+ * Consumer-facing camelCase shape — `last_progress_at` → `lastProgressAt`,
+ * `teacher_feedback_*` → `teacherFeedback*`, etc.
+ */
+export const UnitProgressSchema = UnitProgressDefinitionSchema.transform(data =>
+  camelcaseKeys(data, {deep: true}),
+);
+
+/**
  * Optional fields the client may attach to a milestone report. `program`
  * carries the user's code for predict-level reports; `submitted` is a
  * stringified boolean ("true"/"false") for submit/unsubmit toggles.
+ *
+ * Request-side schema — the milestone endpoint accepts camelCase request
+ * bodies, so no transform is needed here.
  */
 export const OptionalMilestoneDataSchema = z.object({
   program: z.string().optional(),
@@ -52,12 +65,16 @@ export const MilestoneReportSchema = OptionalMilestoneDataSchema.extend({
 });
 
 /**
- * Response from `/api/user_progress/:scriptName`. Top-level fields are
- * derived from `script_user.rb#progress_response` in dashboard. Every
- * field is optional because the server omits keys it doesn't have
+ * Wire-format shape of the `/api/user_progress/:scriptName` response.
+ * Top-level keys are mostly already camelCase from the server, but
+ * `current_lesson` and the snake_case fields inside each `progress`
+ * entry need conversion. Use `UserProgressResponseSchema` below for the
+ * consumer-facing shape.
+ *
+ * Every field is optional because the server omits keys it doesn't have
  * information for (new users, deeperLearningCourse paths, etc).
  */
-export const UserProgressResponseSchema = z.object({
+export const UserProgressResponseDefinitionSchema = z.object({
   isInstructor: z.boolean().optional(),
   teacherViewingStudent: z.boolean().optional(),
   deeperLearningCourse: z.boolean().optional(),
@@ -78,3 +95,13 @@ export const UserProgressResponseSchema = z.object({
     .optional(),
   current_lesson: z.number().optional(),
 });
+
+/**
+ * Consumer-facing camelCase shape. Each `progress` entry is recursively
+ * converted by the `deep: true` flag — `time_spent` → `timeSpent`, etc.
+ * The top-level `current_lesson` field also becomes `currentLesson`.
+ */
+export const UserProgressResponseSchema =
+  UserProgressResponseDefinitionSchema.transform(data =>
+    camelcaseKeys(data, {deep: true}),
+  );

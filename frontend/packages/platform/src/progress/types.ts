@@ -20,22 +20,6 @@ export const ReviewStates = {
   awaitingReview: 'awaitingReview',
 };
 
-/**
- * The schema for the unit progress as returned by our backend API.
- */
-export interface UnitProgressDefinition {
-  status: LevelStatus;
-  last_progress_at?: number;
-  locked?: boolean;
-  pages_completed?: TestResult[];
-  paired?: boolean;
-  result?: TestResult;
-  teacher_feedback_commented?: boolean;
-  teacher_feedback_review_state?: keyof typeof ReviewStates;
-  teacher_feedback_new?: boolean;
-  time_spent?: number;
-}
-
 export interface UnitProgress {
   lastTimestamp: number | undefined;
   locked: boolean;
@@ -226,18 +210,6 @@ export interface ExemplarSettings {
   validationEnabled: boolean;
   validationSuccessMessage: string;
   validationFailureMessage: string;
-}
-
-export interface OptionalMilestoneData {
-  program?: string;
-  // Submitted is a boolean, which the server expects as a string.
-  submitted?: string;
-}
-
-export interface MilestoneReport extends OptionalMilestoneData {
-  app: string;
-  result: boolean;
-  testResult: TestResult;
 }
 
 export type ProgressLevelType =
