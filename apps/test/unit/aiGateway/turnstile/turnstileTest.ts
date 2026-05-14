@@ -1,4 +1,5 @@
 import {TurnstileManager} from '@cdo/apps/aiGateway/turnstile/manager';
+import {TOKEN_MAX_AGE_MS} from '@cdo/apps/aiGateway/turnstile/constants';
 import {
   fetchTurnstileTokenIfEnabled,
   turnstileHeaders,
@@ -53,6 +54,73 @@ describe('fetchTurnstileTokenIfEnabled', () => {
 
     expect(getInstanceSpy).toHaveBeenCalled();
     expect(result).toBe(mockToken);
+  });
+});
+
+describe('TurnstileManager stale pre-fetch', () => {
+  beforeEach(() => {
+    document.body.innerHTML = '';
+    jest.useFakeTimers();
+  });
+
+  afterEach(() => {
+    jest.useRealTimers();
+  });
+
+  it('discards a pre-fetched token older than TOKEN_MAX_AGE_MS and runs a fresh challenge', async () => {
+    const manager = TurnstileManager.getInstance();
+    const m = manager as unknown as {
+      nextTokenPromise: Promise<string> | null;
+      nextTokenResolvedAt: number | null;
+      getToken: () => Promise<string>;
+    };
+
+    const freshToken = 'fresh-token';
+    const freshChallenge = jest.fn().mockResolvedValue(freshToken);
+    jest
+      .spyOn(
+        manager as unknown as {runSerializedChallenge: () => Promise<string>},
+        'runSerializedChallenge' as never
+      )
+      .mockImplementation(freshChallenge);
+
+    // Simulate a stale pre-fetched token that resolved TOKEN_MAX_AGE_MS + 1s ago.
+    const staleToken = 'stale-token';
+    m.nextTokenPromise = Promise.resolve(staleToken);
+    m.nextTokenResolvedAt = Date.now() - TOKEN_MAX_AGE_MS - 1000;
+
+    const result = await m.getToken();
+
+    expect(result).toBe(freshToken);
+    expect(freshChallenge).toHaveBeenCalledTimes(1);
+  });
+
+  it('uses a pre-fetched token that is still within TOKEN_MAX_AGE_MS', async () => {
+    const manager = TurnstileManager.getInstance();
+    const m = manager as unknown as {
+      nextTokenPromise: Promise<string> | null;
+      nextTokenResolvedAt: number | null;
+      getToken: () => Promise<string>;
+    };
+
+    const freshChallenge = jest.fn();
+    jest
+      .spyOn(
+        manager as unknown as {runSerializedChallenge: () => Promise<string>},
+        'runSerializedChallenge' as never
+      )
+      .mockImplementation(freshChallenge);
+
+    const validToken = 'valid-token';
+    m.nextTokenPromise = Promise.resolve(validToken);
+    m.nextTokenResolvedAt = Date.now() - 60_000; // 1 minute old — well within limit
+
+    const result = await m.getToken();
+
+    expect(result).toBe(validToken);
+    // runSerializedChallenge called once for the scheduled pre-fetch, not to
+    // replace the valid token.
+    expect(freshChallenge).toHaveBeenCalledTimes(1);
   });
 });
 
