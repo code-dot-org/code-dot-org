@@ -136,10 +136,14 @@ test.describe('Multiple choice contained levels', () => {
     ]);
   });
 
+  /**
+   * Migration status: COMPLETED
+   * Source: dashboard/test/ui/features/teacher_tools/level_types/multiple_choice_contained_levels.feature
+   * Scenario: Teacher can reset progress on multiple choice contained level
+   */
   test('teacher can reset progress on multiple choice contained level', async ({
     page,
   }) => {
-    // Scenario: Teacher can reset progress on multiple choice contained level
     const {teacherEmail, teacherPassword} =
       await createTeacherAssociatedStudent(page, {authorized: true});
 
@@ -171,10 +175,14 @@ test.describe('Multiple choice contained levels', () => {
     await expectPerfect(headerBubble(page, 2));
   });
 
+  /**
+   * Migration status: COMPLETED
+   * Source: dashboard/test/ui/features/teacher_tools/level_types/multiple_choice_contained_levels.feature
+   * Scenario: Student can retry multiple choice contained level that allows multiple attempts
+   */
   test('student can retry multiple choice contained level that allows multiple attempts', async ({
     page,
   }) => {
-    // Scenario: Student can retry multiple choice contained level that allows multiple attempts
     await createTeacherAssociatedStudent(page, {authorized: true});
 
     // Student (currently signed in) navigates to the retriable level.

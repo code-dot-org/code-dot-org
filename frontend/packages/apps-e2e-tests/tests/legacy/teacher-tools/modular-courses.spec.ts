@@ -18,6 +18,7 @@ import {ModularCoursesPage} from './ModularCoursesPage';
 
 test.describe('Using Modular Courses', {tag: '@no_mobile'}, () => {
   /**
+   * Migration status: COMPLETED
    * Source: dashboard/test/ui/features/teacher_tools/modular_courses.feature
    * Scenario: Navigating within modular courses
    *
@@ -36,6 +37,7 @@ test.describe('Using Modular Courses', {tag: '@no_mobile'}, () => {
   });
 
   /**
+   * Migration status: COMPLETED
    * Source: dashboard/test/ui/features/teacher_tools/modular_courses.feature
    * Scenario: Progress is saved across modular courses
    *

@@ -17,22 +17,30 @@ test.describe('Submittable multi-choice — lesson 9 level 3', () => {
     await createTeacherAssociatedStudent(page);
   });
 
+  /**
+   * Migration status: COMPLETED
+   * Source: dashboard/test/ui/features/teacher_tools/multi_submittable.feature
+   * Scenario: Loading the level
+   */
   test(
     'loading the level shows the question',
     {tag: '@no_mobile'},
     async ({page}) => {
-      // Scenario: Loading the level
       const level = new MultiSubmittablePage(page);
       await level.goto();
       await level.expectQuestion();
     },
   );
 
+  /**
+   * Migration status: COMPLETED
+   * Source: dashboard/test/ui/features/teacher_tools/multi_submittable.feature
+   * Scenario: Submit anything, unsubmit, be able to resubmit.
+   */
   test(
     'submit, unsubmit, and resubmit cycle restores editable state',
     {tag: '@no_mobile'},
     async ({page}) => {
-      // Scenario: Submit anything, unsubmit, be able to resubmit.
       const level = new MultiSubmittablePage(page);
       await level.goto();
       await level.expectSubmitDisabled();

@@ -93,15 +93,23 @@ test.describe('Multi — single-answer (lesson 9)', () => {
     );
   });
 
+  /**
+   * Migration status: COMPLETED
+   * Source: dashboard/test/ui/features/teacher_tools/level_types/multi3.feature
+   * Scenario: Does not scroll horizontally
+   */
   test('does not scroll horizontally', async ({page}) => {
-    // Source: multi3.feature "Does not scroll horizontally" — levels/2
     const multi = new Multi(page);
     await multi.gotoLevel(9, 2);
     expect(await multi.hasNoHorizontalScrollbar()).toBe(true);
   });
 
+  /**
+   * Migration status: COMPLETED
+   * Source: dashboard/test/ui/features/teacher_tools/level_types/multi3.feature
+   * Scenario: Can render without a question
+   */
   test('can render without a question', async ({page}) => {
-    // Source: multi3.feature "Can render without a question" — levels/4
     const multi = new Multi(page);
     await multi.gotoLevel(9, 4);
     await expect(multi.question).toBeHidden();

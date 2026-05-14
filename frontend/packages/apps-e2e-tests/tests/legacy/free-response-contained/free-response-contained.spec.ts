@@ -48,6 +48,13 @@ async function runAndWaitForMilestone(page: Page): Promise<void> {
   await milestonePost;
 }
 
+/**
+ * Verifies that an authorized teacher can answer and run a contained
+ * free-response level while seeing the teacher-only panel content.
+ *
+ * @param page - Playwright page
+ * @param levelPath - dashboard level path to open
+ */
 async function verifyAuthorizedTeacherContainedLevel(
   page: Page,
   levelPath: string,
@@ -194,10 +201,14 @@ test.describe('Free response contained levels', () => {
     );
   });
 
+  /**
+   * Migration status: COMPLETED
+   * Source: dashboard/test/ui/features/teacher_tools/level_types/free_response_contained_levels.feature
+   * Scenario: Teacher can reset progress on free response contained level
+   */
   test('teacher can reset progress on free response contained level', async ({
     page,
   }) => {
-    // Scenario: Teacher can reset progress on free response contained level
     const {teacherEmail, teacherPassword} =
       await createTeacherAssociatedStudent(page, {authorized: true});
 
@@ -232,10 +243,14 @@ test.describe('Free response contained levels', () => {
     await expectPerfect(headerBubble(page, 3));
   });
 
+  /**
+   * Migration status: COMPLETED
+   * Source: dashboard/test/ui/features/teacher_tools/level_types/free_response_contained_levels.feature
+   * Scenario: Student can attempt retriable free response contained level multiple times
+   */
   test('student can attempt retriable free response contained level multiple times', async ({
     page,
   }) => {
-    // Scenario: Student can attempt retriable free response contained level multiple times
     await createTeacherAssociatedStudent(page, {authorized: true});
 
     // Student (currently signed in) navigates to the retriable level.
