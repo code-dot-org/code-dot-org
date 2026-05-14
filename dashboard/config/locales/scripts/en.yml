@@ -28211,7 +28211,17 @@ en:
 
             **Suggested time:** 120 minutes
         self-paced-pl-thinking-critically-about-ai-2026:
-          lessons: {}
+          lessons:
+            lesson-2:
+              name: 'Big Idea 1: AI is Powerful and Unreliable'
+            lesson-3:
+              name: 'Big Idea 2: AI Use Requires Testing & Evidence'
+            lesson-4:
+              name: 'Big Idea 3: Context Matters'
+            lesson-5:
+              name: 'Big Idea 4: Responsible Use Includes Risk Awareness'
+            lesson-6:
+              name: Unit Projects
           lesson_groups: {}
           name: self-paced-pl-thinking-critically-about-ai-2026
           title: 'Educator Module: Thinking Critically about AI'
