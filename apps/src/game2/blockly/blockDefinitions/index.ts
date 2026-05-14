@@ -29,6 +29,11 @@ import {
   generator as setItemBehaviorGenerator,
   register as registerSetItemBehavior,
 } from './setItemBehavior';
+import {
+  BLOCK_TYPE as SET_WORLD,
+  generator as setWorldGenerator,
+  register as registerSetWorld,
+} from './setWorld';
 import showText from './showText';
 import startScoring from './startScoring';
 import {
@@ -69,6 +74,11 @@ export const dynamicBlocks: DynamicBlockEntry[] = [
     type: SET_BACKGROUND,
     register: registerSetBackground,
     generator: setBackgroundGenerator,
+  },
+  {
+    type: SET_WORLD,
+    register: registerSetWorld,
+    generator: setWorldGenerator,
   },
   {
     type: REMOVE_ITEM,

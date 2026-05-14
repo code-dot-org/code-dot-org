@@ -1,19 +1,21 @@
 import React, {useCallback, useEffect, useMemo, useRef, useState} from 'react';
 
-import {GRID_COLS, GRID_ROWS} from './gridConstants';
+import {createEmptyGrid, GRID_COLS, GRID_ROWS} from './gridConstants';
 import {renderGrid} from './gridRenderer';
 import {assetUrl, getCachedImage} from './imageCache';
-import {Game2ItemEntry} from './types';
+import {Game2ItemEntry, Game2World} from './types';
 import WorldGeneratePane from './WorldGeneratePane';
 
 import moduleStyles from './game2View.module.scss';
 
 interface WorldPanelProps {
   visible: boolean;
-  grid: string[][];
+  worlds: Game2World[];
+  activeWorldId: string;
   items: Game2ItemEntry[];
   channelId?: string;
-  onGridChange: (grid: string[][]) => void;
+  onWorldsChange: (worlds: Game2World[], activeWorldId?: string) => void;
+  onActiveWorldChange: (id: string) => void;
 }
 
 /**
@@ -37,13 +39,33 @@ function getItemColor(index: number): string {
   return ITEM_COLORS[index % ITEM_COLORS.length];
 }
 
+/** Generate a unique id like world2, world3, … for a new world. */
+function nextWorldId(existing: Game2World[]): string {
+  const ids = new Set(existing.map(w => w.id));
+  for (let i = 1; i < 10000; i++) {
+    const candidate = `world${i}`;
+    if (!ids.has(candidate)) {
+      return candidate;
+    }
+  }
+  return `world${Date.now()}`;
+}
+
 const WorldPanel: React.FunctionComponent<WorldPanelProps> = ({
   visible,
-  grid,
+  worlds,
+  activeWorldId,
   items,
   channelId,
-  onGridChange,
+  onWorldsChange,
+  onActiveWorldChange,
 }) => {
+  const activeWorld = useMemo(
+    () => worlds.find(w => w.id === activeWorldId) ?? worlds[0],
+    [worlds, activeWorldId]
+  );
+  const grid = activeWorld?.grid ?? createEmptyGrid();
+
   const [selectedBrush, setSelectedBrush] = useState<string>('');
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const containerRef = useRef<HTMLDivElement>(null);
@@ -231,13 +253,24 @@ const WorldPanel: React.FunctionComponent<WorldPanelProps> = ({
     [getCellPx]
   );
 
+  // Update the active world's grid only — leave other worlds untouched.
+  const updateActiveWorldGrid = useCallback(
+    (nextGrid: string[][]) => {
+      const nextWorlds = worlds.map(w =>
+        w.id === activeWorldId ? {...w, grid: nextGrid} : w
+      );
+      onWorldsChange(nextWorlds);
+    },
+    [worlds, activeWorldId, onWorldsChange]
+  );
+
   const applyPaint = useCallback(
     (row: number, col: number) => {
       const next = grid.map(r => [...r]);
       next[row][col] = paintValue.current ? selectedBrush : '';
-      onGridChange(next);
+      updateActiveWorldGrid(next);
     },
-    [grid, onGridChange, selectedBrush]
+    [grid, selectedBrush, updateActiveWorldGrid]
   );
 
   const handlePointerDown = useCallback(
@@ -273,84 +306,165 @@ const WorldPanel: React.FunctionComponent<WorldPanelProps> = ({
 
   const handleWorldGenerated = useCallback(
     (newGrid: string[][]) => {
-      onGridChange(newGrid);
+      updateActiveWorldGrid(newGrid);
     },
-    [onGridChange]
+    [updateActiveWorldGrid]
   );
+
+  // --- World list management -------------------------------------------------
+
+  const handleAddWorld = useCallback(() => {
+    const defaultId = nextWorldId(worlds);
+
+    const input = window.prompt('New world ID:', defaultId);
+    if (input === null) {
+      return;
+    }
+    const id = input.trim();
+    if (!id) {
+      return;
+    }
+    if (worlds.some(w => w.id === id)) {
+      window.alert(`World "${id}" already exists.`);
+      return;
+    }
+    const nextWorlds = [...worlds, {id, grid: createEmptyGrid()}];
+    onWorldsChange(nextWorlds, id);
+  }, [worlds, onWorldsChange]);
+
+  const handleDeleteWorld = useCallback(
+    (id: string) => {
+      if (worlds.length <= 1) {
+        window.alert('You must keep at least one world.');
+        return;
+      }
+
+      if (!window.confirm(`Delete world "${id}"?`)) {
+        return;
+      }
+      const nextWorlds = worlds.filter(w => w.id !== id);
+      // If the deleted world was active, let Game2View pick a new active id.
+      onWorldsChange(nextWorlds);
+    },
+    [worlds, onWorldsChange]
+  );
+
+  // --- Render ---------------------------------------------------------------
 
   return (
     <div className={moduleStyles.worldContainer}>
-      {/* Item palette */}
+      {/* Left sidebar: worlds list above the item palette */}
       <div className={moduleStyles.worldPalette}>
-        {/* Blocks group */}
-        <div className={moduleStyles.worldPaletteLabel}>Blocks</div>
-        {blockItems.map((img, i) => {
-          const url = itemUrlMap.get(img.name);
-          return (
-            <button
-              type="button"
-              key={img.name}
-              className={`${moduleStyles.worldPaletteItem} ${
-                selectedBrush === img.name
-                  ? moduleStyles.worldPaletteItemSelected
-                  : ''
+        <div className={moduleStyles.worldPaletteSection}>
+          <div className={moduleStyles.worldPaletteLabel}>Worlds</div>
+          {worlds.map(w => (
+            <div
+              key={w.id}
+              className={`${moduleStyles.worldListItem} ${
+                w.id === activeWorldId ? moduleStyles.worldListItemSelected : ''
               }`}
-              onClick={() => setSelectedBrush(img.name)}
             >
-              {url ? (
-                <img
-                  className={moduleStyles.worldPaletteSwatch}
-                  src={url}
-                  alt={img.name}
-                />
-              ) : (
-                <span
-                  className={moduleStyles.worldPaletteSwatch}
-                  style={{backgroundColor: getItemColor(i + 1)}}
-                />
-              )}
-              <span className={moduleStyles.worldPaletteItemName}>
-                {img.name}
-              </span>
-            </button>
-          );
-        })}
+              <button
+                type="button"
+                className={moduleStyles.worldListSelect}
+                onClick={() => onActiveWorldChange(w.id)}
+                title={`Edit world ${w.id}`}
+              >
+                {w.id}
+              </button>
+              <button
+                type="button"
+                className={moduleStyles.worldListDelete}
+                onClick={() => handleDeleteWorld(w.id)}
+                title={`Delete world ${w.id}`}
+                disabled={worlds.length <= 1}
+              >
+                ×
+              </button>
+            </div>
+          ))}
+          <button
+            type="button"
+            className={moduleStyles.worldListAdd}
+            onClick={handleAddWorld}
+          >
+            + Add world
+          </button>
+        </div>
 
-        {/* Sprites group */}
-        <div className={moduleStyles.worldPaletteLabel}>Sprites</div>
-        {spriteItems.map((img, i) => {
-          const url = itemUrlMap.get(img.name);
-          return (
-            <button
-              type="button"
-              key={img.name}
-              className={`${moduleStyles.worldPaletteItem} ${
-                selectedBrush === img.name
-                  ? moduleStyles.worldPaletteItemSelected
-                  : ''
-              }`}
-              onClick={() => setSelectedBrush(img.name)}
-            >
-              {url ? (
-                <img
-                  className={moduleStyles.worldPaletteSwatch}
-                  src={url}
-                  alt={img.name}
-                />
-              ) : (
-                <span
-                  className={moduleStyles.worldPaletteSwatch}
-                  style={{
-                    backgroundColor: getItemColor(blockItems.length + i + 1),
-                  }}
-                />
-              )}
-              <span className={moduleStyles.worldPaletteItemName}>
-                {img.name}
-              </span>
-            </button>
-          );
-        })}
+        <div className={moduleStyles.worldPaletteDivider} />
+
+        <div className={moduleStyles.worldPaletteSection}>
+          {/* Blocks group */}
+          <div className={moduleStyles.worldPaletteLabel}>Blocks</div>
+          {blockItems.map((img, i) => {
+            const url = itemUrlMap.get(img.name);
+            return (
+              <button
+                type="button"
+                key={img.name}
+                className={`${moduleStyles.worldPaletteItem} ${
+                  selectedBrush === img.name
+                    ? moduleStyles.worldPaletteItemSelected
+                    : ''
+                }`}
+                onClick={() => setSelectedBrush(img.name)}
+              >
+                {url ? (
+                  <img
+                    className={moduleStyles.worldPaletteSwatch}
+                    src={url}
+                    alt={img.name}
+                  />
+                ) : (
+                  <span
+                    className={moduleStyles.worldPaletteSwatch}
+                    style={{backgroundColor: getItemColor(i + 1)}}
+                  />
+                )}
+                <span className={moduleStyles.worldPaletteItemName}>
+                  {img.name}
+                </span>
+              </button>
+            );
+          })}
+
+          {/* Sprites group */}
+          <div className={moduleStyles.worldPaletteLabel}>Sprites</div>
+          {spriteItems.map((img, i) => {
+            const url = itemUrlMap.get(img.name);
+            return (
+              <button
+                type="button"
+                key={img.name}
+                className={`${moduleStyles.worldPaletteItem} ${
+                  selectedBrush === img.name
+                    ? moduleStyles.worldPaletteItemSelected
+                    : ''
+                }`}
+                onClick={() => setSelectedBrush(img.name)}
+              >
+                {url ? (
+                  <img
+                    className={moduleStyles.worldPaletteSwatch}
+                    src={url}
+                    alt={img.name}
+                  />
+                ) : (
+                  <span
+                    className={moduleStyles.worldPaletteSwatch}
+                    style={{
+                      backgroundColor: getItemColor(blockItems.length + i + 1),
+                    }}
+                  />
+                )}
+                <span className={moduleStyles.worldPaletteItemName}>
+                  {img.name}
+                </span>
+              </button>
+            );
+          })}
+        </div>
       </div>
 
       {/* Canvas-based grid editor */}

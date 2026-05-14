@@ -1,4 +1,4 @@
-import React, {useCallback, useEffect, useRef, useState} from 'react';
+import React, {useCallback, useEffect, useMemo, useRef, useState} from 'react';
 
 import AichatContextManager from '@cdo/apps/aichat/aichatContextManager';
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
@@ -11,13 +11,15 @@ import {createEmptyGrid} from './gridConstants';
 import ItemsPanel from './ItemsPanel';
 import PlayPanel from './PlayPanel';
 import ThemePanel from './ThemePanel';
-import {Game2ItemEntry, Game2Source} from './types';
+import {Game2ItemEntry, Game2Source, Game2World} from './types';
 import WorldPanel from './WorldPanel';
 
 import moduleStyles from './game2View.module.scss';
 
 const TABS = ['Description', 'Items', 'World', 'Code', 'Play'] as const;
 type Tab = (typeof TABS)[number];
+
+const DEFAULT_WORLD_ID = 'world1';
 
 function parseSource(raw: unknown): Game2Source {
   if (!raw) {
@@ -29,14 +31,50 @@ function parseSource(raw: unknown): Game2Source {
   return raw as Game2Source;
 }
 
+/**
+ * Build the initial worlds list from a parsed source.
+ *
+ * Order of precedence:
+ *   1. New-style `worlds` array.
+ *   2. Legacy single `grid` → wrap in one default world.
+ *   3. No grid data → start with one empty world.
+ */
+function worldsFromSource(parsed: Game2Source): {
+  worlds: Game2World[];
+  activeWorldId: string;
+} {
+  if (parsed.worlds && parsed.worlds.length > 0) {
+    const active =
+      parsed.activeWorldId &&
+      parsed.worlds.some(w => w.id === parsed.activeWorldId)
+        ? parsed.activeWorldId
+        : parsed.worlds[0].id;
+    return {worlds: parsed.worlds, activeWorldId: active};
+  }
+  if (parsed.grid && parsed.grid.length > 0) {
+    return {
+      worlds: [{id: DEFAULT_WORLD_ID, grid: parsed.grid}],
+      activeWorldId: DEFAULT_WORLD_ID,
+    };
+  }
+  return {
+    worlds: [{id: DEFAULT_WORLD_ID, grid: createEmptyGrid()}],
+    activeWorldId: DEFAULT_WORLD_ID,
+  };
+}
+
 const Game2View: React.FunctionComponent<LabProps> = ({initialSources}) => {
   const [activeTab, setActiveTab] = useState<Tab>('Description');
   const [items, setItems] = useState<Game2ItemEntry[]>([]);
-  const [grid, setGrid] = useState<string[][]>(createEmptyGrid);
+  const [worlds, setWorlds] = useState<Game2World[]>(() => [
+    {id: DEFAULT_WORLD_ID, grid: createEmptyGrid()},
+  ]);
+  const [activeWorldId, setActiveWorldId] = useState<string>(DEFAULT_WORLD_ID);
   const [itemGenerating, setItemGenerating] = useState(false);
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const blocklyRef = useRef<Record<string, any> | undefined>(undefined);
-  const gridRef = useRef<string[][]>(grid);
+  const worldsRef = useRef<Game2World[]>(worlds);
+  const activeWorldIdRef = useRef<string>(activeWorldId);
   const itemsRef = useRef<Game2ItemEntry[]>(items);
   const initializedRef = useRef(false);
   const codePanelRef = useRef<CodePanelHandle>(null);
@@ -78,11 +116,12 @@ const Game2View: React.FunctionComponent<LabProps> = ({initialSources}) => {
     if (parsedInitial.current.blockly) {
       blocklyRef.current = parsedInitial.current.blockly;
     }
-    if (parsedInitial.current.grid?.length) {
-      const savedGrid = parsedInitial.current.grid as string[][];
-      setGrid(savedGrid);
-      gridRef.current = savedGrid;
-    }
+    const {worlds: loadedWorlds, activeWorldId: loadedActive} =
+      worldsFromSource(parsedInitial.current);
+    setWorlds(loadedWorlds);
+    setActiveWorldId(loadedActive);
+    worldsRef.current = loadedWorlds;
+    activeWorldIdRef.current = loadedActive;
     initializedRef.current = true;
   }, [initialSources]);
 
@@ -91,17 +130,20 @@ const Game2View: React.FunctionComponent<LabProps> = ({initialSources}) => {
     ({
       updatedItems,
       updatedBlockly,
-      updatedGrid,
+      updatedWorlds,
+      updatedActiveWorldId,
     }: {
       updatedItems?: Game2ItemEntry[];
       // eslint-disable-next-line @typescript-eslint/no-explicit-any
       updatedBlockly?: Record<string, any>;
-      updatedGrid?: string[][];
+      updatedWorlds?: Game2World[];
+      updatedActiveWorldId?: string;
     } = {}) => {
       const source: Game2Source = {
         items: updatedItems ?? itemsRef.current,
         blockly: updatedBlockly ?? blocklyRef.current,
-        grid: updatedGrid ?? gridRef.current,
+        worlds: updatedWorlds ?? worldsRef.current,
+        activeWorldId: updatedActiveWorldId ?? activeWorldIdRef.current,
       };
       Lab2Registry.getInstance()
         .getProjectManager()
@@ -125,16 +167,17 @@ const Game2View: React.FunctionComponent<LabProps> = ({initialSources}) => {
       setItems(updatedItems);
       itemsRef.current = updatedItems;
 
-      // Remove from the grid too.
-      const updatedGrid = grid.map(row =>
-        row.map(cell => (cell === name ? '' : cell))
-      );
-      setGrid(updatedGrid);
-      gridRef.current = updatedGrid;
+      // Remove from every world's grid.
+      const updatedWorlds = worldsRef.current.map(w => ({
+        ...w,
+        grid: w.grid.map(row => row.map(cell => (cell === name ? '' : cell))),
+      }));
+      setWorlds(updatedWorlds);
+      worldsRef.current = updatedWorlds;
 
-      saveProject({updatedItems, updatedGrid});
+      saveProject({updatedItems, updatedWorlds});
     },
-    [items, grid, saveProject]
+    [items, saveProject]
   );
 
   const handleBlocksChange = useCallback(
@@ -146,11 +189,37 @@ const Game2View: React.FunctionComponent<LabProps> = ({initialSources}) => {
     [saveProject]
   );
 
-  const handleGridChange = useCallback(
-    (updatedGrid: string[][]) => {
-      setGrid(updatedGrid);
-      gridRef.current = updatedGrid;
-      saveProject({updatedGrid});
+  const handleWorldsChange = useCallback(
+    (updatedWorlds: Game2World[], updatedActiveWorldId?: string) => {
+      setWorlds(updatedWorlds);
+      worldsRef.current = updatedWorlds;
+      let newActiveId = activeWorldIdRef.current;
+      if (updatedActiveWorldId && updatedActiveWorldId !== newActiveId) {
+        newActiveId = updatedActiveWorldId;
+        setActiveWorldId(newActiveId);
+        activeWorldIdRef.current = newActiveId;
+      } else if (!updatedWorlds.some(w => w.id === newActiveId)) {
+        // Active world was deleted — pick the first remaining one.
+        newActiveId = updatedWorlds[0]?.id ?? DEFAULT_WORLD_ID;
+        setActiveWorldId(newActiveId);
+        activeWorldIdRef.current = newActiveId;
+      }
+      saveProject({
+        updatedWorlds,
+        updatedActiveWorldId: newActiveId,
+      });
+    },
+    [saveProject]
+  );
+
+  const handleActiveWorldChange = useCallback(
+    (id: string) => {
+      if (id === activeWorldIdRef.current) {
+        return;
+      }
+      setActiveWorldId(id);
+      activeWorldIdRef.current = id;
+      saveProject({updatedActiveWorldId: id});
     },
     [saveProject]
   );
@@ -158,6 +227,8 @@ const Game2View: React.FunctionComponent<LabProps> = ({initialSources}) => {
   const getCode = useCallback(() => {
     return codePanelRef.current?.getCode() ?? '';
   }, []);
+
+  const worldIds = useMemo(() => worlds.map(w => w.id), [worlds]);
 
   return (
     <div className={moduleStyles.container}>
@@ -195,16 +266,19 @@ const Game2View: React.FunctionComponent<LabProps> = ({initialSources}) => {
         <div style={{display: activeTab === 'World' ? 'contents' : 'none'}}>
           <WorldPanel
             visible={activeTab === 'World'}
-            grid={grid}
+            worlds={worlds}
+            activeWorldId={activeWorldId}
             items={items}
             channelId={channelId}
-            onGridChange={handleGridChange}
+            onWorldsChange={handleWorldsChange}
+            onActiveWorldChange={handleActiveWorldChange}
           />
         </div>
         <div style={{display: activeTab === 'Play' ? 'contents' : 'none'}}>
           <PlayPanel
             visible={activeTab === 'Play'}
-            grid={grid}
+            worlds={worlds}
+            activeWorldId={activeWorldId}
             items={items}
             channelId={channelId}
             getCode={getCode}
@@ -229,6 +303,7 @@ const Game2View: React.FunctionComponent<LabProps> = ({initialSources}) => {
             ref={codePanelRef}
             visible={activeTab === 'Code'}
             items={items}
+            worldIds={worldIds}
             initialBlocks={parsedInitial.current.blockly}
             onBlocksChange={handleBlocksChange}
           />

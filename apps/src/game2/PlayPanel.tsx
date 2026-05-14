@@ -1,13 +1,14 @@
 import React, {useCallback, useEffect, useRef, useState} from 'react';
 
 import {Game2Runtime} from './runtime';
-import {Game2ItemEntry} from './types';
+import {Game2ItemEntry, Game2World} from './types';
 
 import moduleStyles from './game2View.module.scss';
 
 interface PlayPanelProps {
   visible: boolean;
-  grid: string[][];
+  worlds: Game2World[];
+  activeWorldId: string;
   items: Game2ItemEntry[];
   channelId: string | undefined;
   getCode: () => string;
@@ -15,7 +16,8 @@ interface PlayPanelProps {
 
 const PlayPanel: React.FunctionComponent<PlayPanelProps> = ({
   visible,
-  grid,
+  worlds,
+  activeWorldId,
   items,
   channelId,
   getCode,
@@ -43,14 +45,20 @@ const PlayPanel: React.FunctionComponent<PlayPanelProps> = ({
     }
 
     const code = getCode();
-    const runtime = new Game2Runtime(canvas, grid, items, channelId);
+    const runtime = new Game2Runtime(
+      canvas,
+      worlds,
+      activeWorldId,
+      items,
+      channelId
+    );
     runtimeRef.current = runtime;
     // Restore debug state across restarts.
     if (debugOn) {
       runtime.toggleDebug();
     }
     runtime.run(code);
-  }, [grid, items, channelId, getCode, debugOn]);
+  }, [worlds, activeWorldId, items, channelId, getCode, debugOn]);
 
   const handleToggleDebug = useCallback(() => {
     if (runtimeRef.current) {
@@ -64,18 +72,24 @@ const PlayPanel: React.FunctionComponent<PlayPanelProps> = ({
   const hasStartedRef = useRef(false);
   const needsRestartRef = useRef(false);
 
-  // Track when grid/items/code change while not visible — restart on return.
-  const prevGridRef = useRef(grid);
+  // Track when worlds/items/active-id change while not visible — restart on return.
+  const prevWorldsRef = useRef(worlds);
   const prevItemsRef = useRef(items);
+  const prevActiveWorldIdRef = useRef(activeWorldId);
   useEffect(() => {
-    if (grid !== prevGridRef.current || items !== prevItemsRef.current) {
-      prevGridRef.current = grid;
+    if (
+      worlds !== prevWorldsRef.current ||
+      items !== prevItemsRef.current ||
+      activeWorldId !== prevActiveWorldIdRef.current
+    ) {
+      prevWorldsRef.current = worlds;
       prevItemsRef.current = items;
+      prevActiveWorldIdRef.current = activeWorldId;
       if (!visible) {
         needsRestartRef.current = true;
       }
     }
-  }, [grid, items, visible]);
+  }, [worlds, activeWorldId, items, visible]);
 
   // Auto-start when the panel first becomes visible, or restart if needed.
   useEffect(() => {

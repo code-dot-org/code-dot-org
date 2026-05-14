@@ -1,7 +1,7 @@
 import {GRID_COLS, GRID_ROWS} from './gridConstants';
 import {renderGrid} from './gridRenderer';
 import {assetUrl, getCachedImage} from './imageCache';
-import {Game2ItemEntry, Game2ItemType} from './types';
+import {Game2ItemEntry, Game2ItemType, Game2World} from './types';
 
 // The covering axis shows 110% of the grid, allowing only minimal scrolling.
 const VIEWPORT_OVERFLOW = 1.1;
@@ -122,7 +122,11 @@ function computeVisibleBounds(img: HTMLImageElement): VisibleBounds {
 export class Game2Runtime {
   private canvas: HTMLCanvasElement;
   private ctx: CanvasRenderingContext2D;
-  private sourceGrid: string[][];
+  /** Source grids keyed by world id (deep-copied on switch). */
+  private sourceWorlds: Map<string, string[][]> = new Map();
+  /** ID of the active world. */
+  private currentWorldId: string;
+  /** Mutable working copy of the active world's grid. */
   private grid: string[][];
   private itemEntries: Game2ItemEntry[];
   /** Keyed by user-facing name. */
@@ -164,14 +168,23 @@ export class Game2Runtime {
 
   constructor(
     canvas: HTMLCanvasElement,
-    grid: string[][],
+    worlds: Game2World[],
+    initialWorldId: string,
     items: Game2ItemEntry[],
     channelId: string | undefined
   ) {
     this.canvas = canvas;
     this.ctx = canvas.getContext('2d')!;
-    this.sourceGrid = grid;
-    this.grid = grid.map(row => [...row]);
+    for (const w of worlds) {
+      this.sourceWorlds.set(w.id, w.grid);
+    }
+    // Pick the initial world: requested id if it exists, else first world.
+    this.currentWorldId =
+      this.sourceWorlds.has(initialWorldId) && initialWorldId
+        ? initialWorldId
+        : worlds[0]?.id ?? '';
+    const initialGrid = this.sourceWorlds.get(this.currentWorldId) ?? [];
+    this.grid = initialGrid.map(row => [...row]);
     this.itemEntries = items;
     this.channelId = channelId;
 
@@ -227,14 +240,20 @@ export class Game2Runtime {
     this.particles = [];
     this.textOverlays = [];
 
-    // Deep-copy from the original grid so runtime removals don't persist.
-    this.grid = this.sourceGrid.map(row => [...row]);
+    // Deep-copy from the active world's source grid so runtime removals
+    // don't persist across runs.
+    const src = this.sourceWorlds.get(this.currentWorldId) ?? [];
+    this.grid = src.map(row => [...row]);
 
     const cx = GRID_COLS / 2 - SPRITE_CELLS / 2;
     const cy = GRID_ROWS / 2 - SPRITE_CELLS / 2;
 
     const setBackground = (name: string) => {
       this.backgroundName = name;
+    };
+
+    const setWorld = (id: string) => {
+      this.switchWorld(id);
     };
 
     const createItem = (name: string) => {
@@ -350,6 +369,7 @@ export class Game2Runtime {
         'createItem',
         'setItemBehavior',
         'setBackground',
+        'setWorld',
         'startScoring',
         'increaseScore',
         'decreaseScore',
@@ -366,6 +386,7 @@ export class Game2Runtime {
         createItem,
         setItemBehavior,
         setBackground,
+        setWorld,
         startScoring,
         increaseScore,
         decreaseScore,
@@ -387,6 +408,28 @@ export class Game2Runtime {
     this.updateCamera();
     this.running = true;
     this.tick();
+  }
+
+  /**
+   * Swap the active world. Used by the Game2_setWorld block at runtime.
+   *
+   * The new world's source grid is deep-copied so removals don't leak
+   * back into the source. Code-created items keep their existence but
+   * are re-positioned by any matching placement in the new grid (via
+   * instantiateGridItems). Active collisions are cleared so collision
+   * handlers fire correctly against the new world's contents.
+   */
+  private switchWorld(id: string) {
+    const src = this.sourceWorlds.get(id);
+    if (!src) {
+      console.warn(`[Game2 Runtime] Unknown world id: ${id}`);
+      return;
+    }
+    this.currentWorldId = id;
+    this.grid = src.map(row => [...row]);
+    this.activeCollisions.clear();
+    this.instantiateGridItems();
+    this.updateCamera();
   }
 
   /**

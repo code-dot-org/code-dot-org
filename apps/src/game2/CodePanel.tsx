@@ -11,6 +11,7 @@ import cdoDark from '@cdo/apps/blockly/themes/cdoDark';
 
 import {setItemEntries} from './blockly/imageRegistry';
 import {setupGame2BlocklyEnvironment} from './blockly/setup';
+import {setWorldIds} from './blockly/worldRegistry';
 import CodeGeneratePane from './CodeGeneratePane';
 import {Game2ItemEntry} from './types';
 
@@ -25,6 +26,7 @@ const TOOLBOX: BlocklyCore.utils.toolbox.ToolboxDefinition = {
     {kind: 'block', type: 'Game2_createItem'},
     {kind: 'block', type: 'Game2_setItemBehavior'},
     {kind: 'block', type: 'Game2_setBackground'},
+    {kind: 'block', type: 'Game2_setWorld'},
     {kind: 'block', type: 'Game2_startScoring'},
     {kind: 'block', type: 'Game2_increaseScore'},
     {kind: 'block', type: 'Game2_decreaseScore'},
@@ -45,6 +47,7 @@ export interface CodePanelHandle {
 interface CodePanelProps {
   visible: boolean;
   items: Game2ItemEntry[];
+  worldIds: string[];
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   initialBlocks?: Record<string, any>;
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
@@ -52,7 +55,7 @@ interface CodePanelProps {
 }
 
 const CodePanel = forwardRef<CodePanelHandle, CodePanelProps>(
-  ({visible, items, initialBlocks, onBlocksChange}, ref) => {
+  ({visible, items, worldIds, initialBlocks, onBlocksChange}, ref) => {
     const workspace = useRef<BlocklyCore.WorkspaceSvg | null>(null);
     const initialBlocksLoaded = useRef(false);
 
@@ -63,6 +66,11 @@ const CodePanel = forwardRef<CodePanelHandle, CodePanelProps>(
     useEffect(() => {
       setItemEntries(items);
     }, [items]);
+
+    // Keep world-id dropdown options in sync.
+    useEffect(() => {
+      setWorldIds(worldIds);
+    }, [worldIds]);
 
     // Expose getCode to parent via ref.
     useImperativeHandle(
@@ -91,8 +99,9 @@ const CodePanel = forwardRef<CodePanelHandle, CodePanelProps>(
         theme: cdoDark,
       } as BlocklyCore.BlocklyOptions);
 
-      // Ensure image names are populated before loading saved blocks.
+      // Ensure dropdown options are populated before loading saved blocks.
       setItemEntries(items);
+      setWorldIds(worldIds);
 
       // Load saved blocks if available.
       if (initialBlocks && !initialBlocksLoaded.current) {
@@ -126,7 +135,7 @@ const CodePanel = forwardRef<CodePanelHandle, CodePanelProps>(
           }
         }
       );
-    }, [items, initialBlocks, onBlocksChange]);
+    }, [items, worldIds, initialBlocks, onBlocksChange]);
 
     // Initialize workspace when the panel becomes visible.
     useEffect(() => {
