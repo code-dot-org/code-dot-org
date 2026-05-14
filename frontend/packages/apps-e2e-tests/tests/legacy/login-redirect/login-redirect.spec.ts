@@ -15,6 +15,7 @@ const MC_LEVEL_URL = '/courses/mc/units/1/lessons/1/levels/1';
 
 test.describe('Login redirect', () => {
   /**
+   * Migration status: COMPLETED
    * Source: dashboard/test/ui/features/platform/login_redirect.feature
    * Scenario: Student navigates to provided cached level link with a login_required parameter
    */
@@ -42,6 +43,7 @@ test.describe('Login redirect', () => {
   });
 
   /**
+   * Migration status: COMPLETED
    * Source: dashboard/test/ui/features/platform/login_redirect.feature
    * Scenario: Student already logged in navigates to provided cached level link with a login_required parameter
    */

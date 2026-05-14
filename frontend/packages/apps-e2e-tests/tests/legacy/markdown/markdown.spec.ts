@@ -7,6 +7,7 @@ import {expect, test} from '@playwright/test';
  */
 test.describe('Markdown rendering — details/summary tag', () => {
   /**
+   * Migration status: COMPLETED
    * Source: dashboard/test/ui/features/foundations/markdown_rendering.feature
    * Scenario: Visiting an external markdown level with details tag
    */
@@ -25,6 +26,7 @@ test.describe('Markdown rendering — details/summary tag', () => {
   });
 
   /**
+   * Migration status: COMPLETED
    * Source: dashboard/test/ui/features/foundations/markdown_rendering.feature
    * Scenario: Viewing a level with blockly embedded in instructions
    */

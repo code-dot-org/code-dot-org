@@ -13,6 +13,7 @@ import {expect, test} from '../../shared/fixtures';
  */
 
 /**
+ * Migration status: COMPLETED
  * Source: dashboard/test/ui/features/platform/global_edition/region_switch_confirm.feature
  * Scenario: The modal is shown on studio.code.org (Studio) domain
  */

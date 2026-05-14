@@ -40,6 +40,11 @@ const FLAPPY_PUZZLE_XML =
  *  5. Assert block parent relationships: flapHeight is child of whenClick, etc.
  */
 test.describe('Flappy — share page', () => {
+  /**
+   * Migration status: COMPLETED
+   * Source: dashboard/test/ui/features/star_labs/sharepage.feature
+   * Scenario: Share a flappy game, visit the share page, and visit the workspace
+   */
   test('share page game states and workspace block structure', async ({
     page,
   }) => {

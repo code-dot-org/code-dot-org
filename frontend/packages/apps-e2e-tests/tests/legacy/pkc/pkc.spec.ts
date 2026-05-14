@@ -13,6 +13,11 @@ import {PKC} from './PKC';
  * to level 2 and the "Pick a character" screen is shown.
  */
 test.describe('Public Key Cryptography — continue button', () => {
+  /**
+   * Migration status: COMPLETED
+   * Source: dashboard/test/ui/features/star_labs/public_key_cryptography/continue_button.feature
+   * Scenario: Clicking the continue button
+   */
   test('last Continue button advances to level 2', async ({page}) => {
     const pkc = new PKC(page);
     await pkc.gotoLevel(1);

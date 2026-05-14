@@ -14,6 +14,7 @@ import {expect, test} from '../../shared/fixtures';
  * cookie-layer DCDO; stored is the server-side datastore value (always null in
  * a fresh test run).
  *
+ * Migration status: COMPLETED
  * Source: dashboard/test/ui/features/dcdo_mocking.feature
  * Scenario: Using a cookie to mock DCDO
  */

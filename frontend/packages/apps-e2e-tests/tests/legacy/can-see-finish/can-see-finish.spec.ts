@@ -45,9 +45,9 @@ const FREE_PLAY_URLS = {
 
 test.describe('can see finish button — small screen', () => {
   /**
+   * Migration status: COMPLETED
    * Source: dashboard/test/ui/features/star_labs/can_see_finish.feature
    * Scenario: can see finish button on "Dance Party"
-   * Migration status: COMPLETED
    */
   test(
     'Dance Party free-play level shows finish button at 1366×727',
@@ -63,9 +63,9 @@ test.describe('can see finish button — small screen', () => {
   );
 
   /**
+   * Migration status: COMPLETED
    * Source: dashboard/test/ui/features/star_labs/can_see_finish.feature
    * Scenario: can see finish button on "Artist"
-   * Migration status: COMPLETED
    */
   test(
     'Artist free-play level shows finish button at 1366×727',
@@ -81,9 +81,9 @@ test.describe('can see finish button — small screen', () => {
   );
 
   /**
+   * Migration status: COMPLETED
    * Source: dashboard/test/ui/features/star_labs/can_see_finish.feature
    * Scenario: can see finish button on "Bounce"
-   * Migration status: COMPLETED
    */
   test(
     'Bounce free-play level shows finish button at 1366×727',
@@ -99,9 +99,9 @@ test.describe('can see finish button — small screen', () => {
   );
 
   /**
+   * Migration status: COMPLETED
    * Source: dashboard/test/ui/features/star_labs/can_see_finish.feature
    * Scenario: can see finish button on "Flappy"
-   * Migration status: COMPLETED
    */
   test(
     'Flappy free-play level shows finish button at 1366×727',
@@ -119,9 +119,9 @@ test.describe('can see finish button — small screen', () => {
   );
 
   /**
+   * Migration status: COMPLETED
    * Source: dashboard/test/ui/features/star_labs/can_see_finish.feature
    * Scenario: can see finish button on "Sprite Lab"
-   * Migration status: COMPLETED
    */
   test(
     'Sprite Lab free-play level shows finish button at 1366×727',

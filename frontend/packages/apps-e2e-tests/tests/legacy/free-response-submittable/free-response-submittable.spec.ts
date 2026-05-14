@@ -1,3 +1,5 @@
+import type {Page} from '@playwright/test';
+
 import {createTeacherAssociatedStudent} from '../../shared/auth';
 import {expect, test} from '../../shared/fixtures';
 
@@ -18,22 +20,48 @@ const LEVEL_1_URL =
 const LEVEL_4_URL =
   '/courses/allthethingscourse/units/1/lessons/27/levels/4?noautoplay=true';
 
+/**
+ * Activates a legacy control without depending on jQuery.
+ *
+ * The source Cucumber scenario uses `using jQuery` for these controls. In
+ * WebKit, a normal pointer click can report success without opening the
+ * visible confirmation modal. HTMLElement.click() matches that legacy path.
+ *
+ * @param page - Playwright page on the free-response level
+ * @param selector - selector for the legacy control
+ */
+async function clickLegacyControl(page: Page, selector: string): Promise<void> {
+  const target = page.locator(selector).first();
+  await expect(target).toBeVisible();
+  await target.evaluate(element => (element as HTMLElement).click());
+}
+
+/**
+ * Activates a legacy control and waits for the page navigation that follows.
+ *
+ * @param page - Playwright page
+ * @param selector - selector for the control to click
+ */
 async function clickAndWaitForNavigation(
-  page: import('@playwright/test').Page,
+  page: Page,
   selector: string,
 ): Promise<void> {
   await Promise.all([
     page.waitForNavigation({waitUntil: 'load', timeout: 30_000}),
-    page.locator(selector).first().click(),
+    clickLegacyControl(page, selector),
   ]);
 }
 
 test.describe('Free response submittable — lesson 27', () => {
+  /**
+   * Migration status: COMPLETED
+   * Source: dashboard/test/ui/features/teacher_tools/level_types/free_response_submittable.feature
+   * Scenario: Loading the level
+   */
   test(
     'loading the level shows the question heading',
     {tag: '@no_mobile'},
     async ({page}) => {
-      // Scenario: Loading the level
       await createTeacherAssociatedStudent(page);
       await page.goto(LEVEL_1_URL);
       await page
@@ -45,11 +73,15 @@ test.describe('Free response submittable — lesson 27', () => {
     },
   );
 
+  /**
+   * Migration status: COMPLETED
+   * Source: dashboard/test/ui/features/teacher_tools/level_types/free_response_submittable.feature
+   * Scenario: Submit anything, unsubmit, be able to resubmit.
+   */
   test(
     'submit, unsubmit, and resubmit cycle restores editable state',
     {tag: '@no_mobile'},
     async ({page}) => {
-      // Scenario: Submit anything, unsubmit, be able to resubmit.
       await createTeacherAssociatedStudent(page);
       await page.goto(LEVEL_1_URL);
       await page
@@ -72,7 +104,7 @@ test.describe('Free response submittable — lesson 27', () => {
       await expect(page.locator('.submitButton')).toBeHidden();
 
       // Unsubmit — confirmation modal; confirm navigates back.
-      await page.locator('.unsubmitButton').click();
+      await clickLegacyControl(page, '.unsubmitButton');
       await page.locator('.modal').waitFor({state: 'visible', timeout: 15_000});
       await clickAndWaitForNavigation(page, '.modal #ok-button');
 
@@ -85,11 +117,15 @@ test.describe('Free response submittable — lesson 27', () => {
     },
   );
 
+  /**
+   * Migration status: COMPLETED
+   * Source: dashboard/test/ui/features/teacher_tools/level_types/free_response_submittable.feature
+   * Scenario: Level without multiple attempts allowed is locked after submit
+   */
   test(
     'level without multiple attempts locks after submit',
     {tag: '@no_mobile'},
     async ({page}) => {
-      // Scenario: Level without multiple attempts allowed is locked after submit
       await createTeacherAssociatedStudent(page);
       await page.goto(LEVEL_4_URL);
       await page

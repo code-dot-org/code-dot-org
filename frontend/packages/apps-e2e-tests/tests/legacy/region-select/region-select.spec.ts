@@ -62,6 +62,7 @@ async function selectLocaleAndWaitForRedirect(
 
 test.describe('Global Edition — region select', () => {
   /**
+   * Migration status: COMPLETED
    * Source: dashboard/test/ui/features/platform/global_edition/region_select.feature
    * Scenario: User can switch between the international and regional versions using the language selector on a Studio page
    */
@@ -107,6 +108,7 @@ test.describe('Global Edition — region select', () => {
   );
 
   /**
+   * Migration status: COMPLETED
    * Source: dashboard/test/ui/features/platform/global_edition/region_select.feature
    * Scenario: User can switch to regional versions using the language selector on a Lab page
    */

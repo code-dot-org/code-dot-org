@@ -12,6 +12,11 @@ import {Studio} from './Studio';
  * heights before run and final heights after pressing again-button.
  */
 test.describe('PlayLab — sprite resize', () => {
+  /**
+   * Migration status: COMPLETED
+   * Source: dashboard/test/ui/features/star_labs/studio.feature
+   * Scenario: Resizing Sprites
+   */
   test('sprites resize after running the program', async ({page}) => {
     const studio = new Studio(page);
     await studio.gotoLevel(1);

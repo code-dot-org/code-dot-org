@@ -77,6 +77,7 @@ async function expectSpanishHeaderLink(
 
 test.describe('Header navigation', () => {
   /**
+   * Migration status: COMPLETED
    * Source: dashboard/test/ui/features/platform/header.feature
    * Scenario: Student in English should see 4 header links
    */
@@ -104,6 +105,7 @@ test.describe('Header navigation', () => {
   );
 
   /**
+   * Migration status: COMPLETED
    * Source: dashboard/test/ui/features/platform/header.feature
    * Scenario: Teacher in English should see 5 header links
    */
@@ -135,7 +137,7 @@ test.describe('Header navigation', () => {
 
   /**
    * Migration status: COMPLETED
-   * Source: header.feature
+   * Source: dashboard/test/ui/features/platform/header.feature
    * Scenario: Student in Spanish should see 4 header links
    */
   test(
@@ -168,7 +170,7 @@ test.describe('Header navigation', () => {
 
   /**
    * Migration status: COMPLETED
-   * Source: header.feature
+   * Source: dashboard/test/ui/features/platform/header.feature
    * Scenario: Teacher in Spanish should see 5 header links
    */
   test(
@@ -211,6 +213,7 @@ test.describe('Header navigation', () => {
   );
 
   /**
+   * Migration status: COMPLETED
    * Source: dashboard/test/ui/features/platform/header.feature
    * Scenario: Teacher can click on the header links
    */

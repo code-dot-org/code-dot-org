@@ -37,6 +37,7 @@ async function dismissSchoolInfoInterstitialIfPresent(
 
 test.describe('Create dropdown in header', () => {
   /**
+   * Migration status: COMPLETED
    * Source: dashboard/test/ui/features/foundations/create_dropdown.feature
    * Scenario: Create Dropdown does NOT show on level pages
    */
@@ -58,6 +59,7 @@ test.describe('Create dropdown in header', () => {
   );
 
   /**
+   * Migration status: COMPLETED
    * Source: dashboard/test/ui/features/foundations/create_dropdown.feature
    * Scenario: Teacher - Correct Create Links
    */
@@ -85,6 +87,7 @@ test.describe('Create dropdown in header', () => {
   );
 
   /**
+   * Migration status: COMPLETED
    * Source: dashboard/test/ui/features/foundations/create_dropdown.feature
    * Scenario: Student, Age 13+ - Correct Create Links
    */
@@ -112,6 +115,7 @@ test.describe('Create dropdown in header', () => {
   );
 
   /**
+   * Migration status: COMPLETED
    * Source: dashboard/test/ui/features/foundations/create_dropdown.feature
    * Scenario: Young Student, Not in Section - Correct Create Links
    */
@@ -138,6 +142,7 @@ test.describe('Create dropdown in header', () => {
   );
 
   /**
+   * Migration status: COMPLETED
    * Source: dashboard/test/ui/features/foundations/create_dropdown.feature
    * Scenario: Young Student, In Section - Correct Create Links
    */

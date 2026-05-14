@@ -15,6 +15,11 @@ import {Artist} from '../activities/artist/Artist';
  * to a /projects/artist/<id>/edit URL owned by the current student.
  */
 test.describe('Legacy share remix — Artist', () => {
+  /**
+   * Migration status: COMPLETED
+   * Source: dashboard/test/ui/features/star_labs/legacy_share_remix.feature
+   * Scenario: Remixing a legacy /c/ share link
+   */
   test(
     'remixing a legacy share link lands on /projects/artist/.../edit',
     {tag: '@no_mobile'},
