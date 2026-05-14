@@ -188,26 +188,27 @@ describe('useReportMilestone', () => {
     expect(reportMilestone).toHaveBeenCalledWith(milestonePayload);
   });
 
-  it('invalidates the user-progress entry for the given scriptName on success', async () => {
+  it('invokes a caller-supplied onSuccess after a successful report', async () => {
+    // Cache invalidation is the caller's responsibility — the canonical
+    // wiring is `options.onSuccess: () => queryClient.invalidateQueries(...)`.
+    // This test pins that the hook actually runs the supplied callback.
     const reportMilestone = vi.fn().mockResolvedValue(undefined);
     const api = makeApi({reportMilestone});
-    const invalidateSpy = vi.spyOn(queryClient, 'invalidateQueries');
+    const onSuccess = vi.fn();
 
-    const {result} = renderHook(() => useReportMilestone(api, 'csd-1'), {
+    const {result} = renderHook(() => useReportMilestone(api, {onSuccess}), {
       wrapper: wrapperFor(queryClient),
     });
 
     await result.current.mutateAsync(milestonePayload);
 
-    expect(invalidateSpy).toHaveBeenCalledWith({
-      queryKey: progressKeys.userProgress('csd-1'),
-    });
+    expect(onSuccess).toHaveBeenCalledTimes(1);
   });
 
-  it('does not invalidate when invalidateForScriptName is omitted', async () => {
-    // The hook is also useful for fire-and-forget submissions where the
-    // caller doesn't have (or want) cache invalidation. Skipping the
-    // arg should leave the cache untouched.
+  it('does nothing extra on success when no options are supplied', async () => {
+    // The default hook is just `mutationFn` — no cache touches, no side
+    // effects. Confirms that consumers who don't care about invalidation
+    // get a clean fire-and-forget mutation.
     const reportMilestone = vi.fn().mockResolvedValue(undefined);
     const api = makeApi({reportMilestone});
     const invalidateSpy = vi.spyOn(queryClient, 'invalidateQueries');
@@ -221,18 +222,35 @@ describe('useReportMilestone', () => {
     expect(invalidateSpy).not.toHaveBeenCalled();
   });
 
-  it('surfaces api errors as the mutation error state without invalidating', async () => {
+  it('does not invoke options.onSuccess when the api call fails', async () => {
     const reportMilestone = vi.fn().mockRejectedValue(new Error('500 boom'));
     const api = makeApi({reportMilestone});
-    const invalidateSpy = vi.spyOn(queryClient, 'invalidateQueries');
+    const onSuccess = vi.fn();
 
-    const {result} = renderHook(() => useReportMilestone(api, 'csd-1'), {
+    const {result} = renderHook(() => useReportMilestone(api, {onSuccess}), {
       wrapper: wrapperFor(queryClient),
     });
 
     await expect(result.current.mutateAsync(milestonePayload)).rejects.toThrow(
       '500 boom',
     );
-    expect(invalidateSpy).not.toHaveBeenCalled();
+    expect(onSuccess).not.toHaveBeenCalled();
+  });
+
+  it('surfaces api errors as the mutation error state', async () => {
+    const reportMilestone = vi.fn().mockRejectedValue(new Error('500 boom'));
+    const api = makeApi({reportMilestone});
+
+    const {result} = renderHook(() => useReportMilestone(api), {
+      wrapper: wrapperFor(queryClient),
+    });
+
+    await expect(result.current.mutateAsync(milestonePayload)).rejects.toThrow(
+      '500 boom',
+    );
+    // The hook's `isError` flag flips on a follow-up React render — wait
+    // for it rather than asserting synchronously after `mutateAsync`.
+    await waitFor(() => expect(result.current.isError).toBe(true));
+    expect(result.current.error?.message).toBe('500 boom');
   });
 });

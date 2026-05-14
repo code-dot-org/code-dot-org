@@ -1,7 +1,6 @@
 import {
   useMutation,
   useQuery,
-  useQueryClient,
   type UseMutationOptions,
   type UseQueryOptions,
 } from '@tanstack/react-query';
@@ -32,18 +31,23 @@ export function useUserProgress(
 }
 
 /**
- * Mutation: report a milestone (level result). Invalidates the matching
- * user-progress cache entry on success so the next read picks up the
- * server's view of the new state.
+ * Mutation: report a milestone (level result). Cache invalidation is
+ * the caller's responsibility — supply `options.onSuccess` if the
+ * surrounding component is also reading `useUserProgress` and needs
+ * the new server state. A typical wiring:
+ *
+ * ```ts
+ * const queryClient = useQueryClient();
+ * const report = useReportMilestone(api, {
+ *   onSuccess: () =>
+ *     queryClient.invalidateQueries({
+ *       queryKey: progressKeys.userProgress(scriptName),
+ *     }),
+ * });
+ * ```
  */
 export function useReportMilestone(
   api: ApiClient,
-  /**
-   * The scriptName whose progress query should be invalidated when this
-   * milestone reports successfully. Optional — pass when you know the
-   * caller is also reading from `useUserProgress` for that script.
-   */
-  invalidateForScriptName?: string,
   options?: Omit<
     UseMutationOptions<
       unknown,
@@ -60,17 +64,8 @@ export function useReportMilestone(
     'mutationFn'
   >,
 ) {
-  const queryClient = useQueryClient();
-
   return useMutation({
     mutationFn: params => api.progress.reportMilestone(params),
-    onSuccess: () => {
-      if (invalidateForScriptName) {
-        queryClient.invalidateQueries({
-          queryKey: progressKeys.userProgress(invalidateForScriptName),
-        });
-      }
-    },
     ...options,
   });
 }
