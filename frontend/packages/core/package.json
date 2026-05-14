@@ -52,6 +52,11 @@
       "types": "./dist/plugins/analytics/index.d.ts",
       "import": "./dist/plugins/analytics/index.mjs",
       "require": "./dist/plugins/analytics/index.cjs"
+    },
+    "./redux": {
+      "types": "./dist/redux/index.d.ts",
+      "import": "./dist/redux/index.mjs",
+      "require": "./dist/redux/index.cjs"
     }
   },
   "scripts": {
@@ -74,6 +79,7 @@
   },
   "devDependencies": {
     "@code-dot-org/lint-config": "workspace:*",
+    "@reduxjs/toolkit": "^2.8.2",
     "@sentry/browser": "catalog:",
     "@statsig/js-client": "^3.20.2",
     "@statsig/session-replay": "^3.20.2",
@@ -92,6 +98,7 @@
     "prettier": "catalog:",
     "query-string": "^9.3.1",
     "react": "catalog:",
+    "react-redux": "^9.2.0",
     "typescript": "catalog:",
     "uuid": "^14.0.0",
     "vite": "catalog:",
@@ -100,6 +107,7 @@
     "vitest": "catalog:"
   },
   "peerDependencies": {
+    "@reduxjs/toolkit": "^2.8.2",
     "@sentry/browser": "^10.51.0",
     "@statsig/js-client": "^3.20.2",
     "@statsig/session-replay": "^3.20.2",
@@ -109,9 +117,13 @@
     "ky": "^1.14.3",
     "query-string": "^9.3.1",
     "react": "^18.0.0 || ^19.0.0",
+    "react-redux": "^9.2.0",
     "uuid": ">=8.3.2"
   },
   "peerDependenciesMeta": {
+    "@reduxjs/toolkit": {
+      "optional": true
+    },
     "@statsig/js-client": {
       "optional": true
     },
@@ -125,6 +137,9 @@
       "optional": true
     },
     "query-string": {
+      "optional": true
+    },
+    "react-redux": {
       "optional": true
     }
   }

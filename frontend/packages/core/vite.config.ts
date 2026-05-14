@@ -52,6 +52,7 @@ export default defineConfig({
         'src/plugins/observability/index.ts',
         'src/plugins/gtm/index.ts',
         'src/plugins/analytics/index.ts',
+        'src/redux/index.ts',
       ],
       name: 'core',
     },
