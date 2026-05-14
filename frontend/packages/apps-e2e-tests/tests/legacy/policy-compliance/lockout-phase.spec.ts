@@ -1,7 +1,7 @@
-import {type Page} from '@playwright/test';
-
 import {mockCapLockoutPhase, createCapStudent} from '../../shared/cap';
-import {expect, test} from '../../shared/fixtures';
+import {test} from '../../shared/fixtures';
+
+import {LockoutPhasePage} from './LockoutPhasePage';
 
 /**
  * Child Account Policy — lockout phase: age/state field editability.
@@ -15,19 +15,8 @@ import {expect, test} from '../../shared/fixtures';
  */
 
 test.describe('CPA lockout phase — age/state field editability', () => {
-  /** Navigate to /users/edit and wait for both fields to be present. */
-  async function gotoEditAndWaitForFields(page: Page): Promise<void> {
-    await page.goto('/users/edit');
-    // /users/edit renders the form twice (mobile/desktop variants); .first() picks the primary field.
-    await expect(page.locator('#user_age').first()).toBeVisible({
-      timeout: 15_000,
-    });
-    await expect(page.locator('#user_us_state').first()).toBeVisible({
-      timeout: 15_000,
-    });
-  }
-
   /**
+   * Migration status: COMPLETED
    * Source: dashboard/test/ui/features/platform/policy_compliance/lockout_phase.feature
    * Scenario: Student account Under-13 in Colorado created before CAP start cannot change age and state
    */
@@ -41,13 +30,14 @@ test.describe('CPA lockout phase — age/state field editability', () => {
         colorado: true,
         timing: 'before',
       });
-      await gotoEditAndWaitForFields(page);
-      await expect(page.locator('#user_us_state').first()).toBeDisabled();
-      await expect(page.locator('#user_age').first()).toBeDisabled();
+      const lockoutPhase = new LockoutPhasePage(page);
+      await lockoutPhase.gotoEditAndWaitForFields();
+      await lockoutPhase.expectAgeAndStateDisabled();
     },
   );
 
   /**
+   * Migration status: COMPLETED
    * Source: dashboard/test/ui/features/platform/policy_compliance/lockout_phase.feature
    * Scenario: Student account Under-13 not in Colorado created after CAP start can change their age and state
    */
@@ -57,13 +47,14 @@ test.describe('CPA lockout phase — age/state field editability', () => {
     async ({page}) => {
       await mockCapLockoutPhase(page);
       await createCapStudent(page, {young: true, timing: 'after'});
-      await gotoEditAndWaitForFields(page);
-      await expect(page.locator('#user_us_state').first()).toBeEnabled();
-      await expect(page.locator('#user_age').first()).toBeEnabled();
+      const lockoutPhase = new LockoutPhasePage(page);
+      await lockoutPhase.gotoEditAndWaitForFields();
+      await lockoutPhase.expectAgeAndStateEnabled();
     },
   );
 
   /**
+   * Migration status: COMPLETED
    * Source: dashboard/test/ui/features/platform/policy_compliance/lockout_phase.feature
    * Scenario: Student account Under-13 not in Colorado created before CAP start can change their age and state
    */
@@ -73,13 +64,14 @@ test.describe('CPA lockout phase — age/state field editability', () => {
     async ({page}) => {
       await mockCapLockoutPhase(page);
       await createCapStudent(page, {young: true, timing: 'before'});
-      await gotoEditAndWaitForFields(page);
-      await expect(page.locator('#user_us_state').first()).toBeEnabled();
-      await expect(page.locator('#user_age').first()).toBeEnabled();
+      const lockoutPhase = new LockoutPhasePage(page);
+      await lockoutPhase.gotoEditAndWaitForFields();
+      await lockoutPhase.expectAgeAndStateEnabled();
     },
   );
 
   /**
+   * Migration status: COMPLETED
    * Source: dashboard/test/ui/features/platform/policy_compliance/lockout_phase.feature
    * Scenario: Student account Over-13 and in Colorado created after CAP start can change their age and state
    */
@@ -89,13 +81,14 @@ test.describe('CPA lockout phase — age/state field editability', () => {
     async ({page}) => {
       await mockCapLockoutPhase(page);
       await createCapStudent(page, {colorado: true, timing: 'after'});
-      await gotoEditAndWaitForFields(page);
-      await expect(page.locator('#user_us_state').first()).toBeEnabled();
-      await expect(page.locator('#user_age').first()).toBeEnabled();
+      const lockoutPhase = new LockoutPhasePage(page);
+      await lockoutPhase.gotoEditAndWaitForFields();
+      await lockoutPhase.expectAgeAndStateEnabled();
     },
   );
 
   /**
+   * Migration status: COMPLETED
    * Source: dashboard/test/ui/features/platform/policy_compliance/lockout_phase.feature
    * Scenario: Student account Over-13 and in Colorado created before CAP start can change their age and state
    */
@@ -105,13 +98,14 @@ test.describe('CPA lockout phase — age/state field editability', () => {
     async ({page}) => {
       await mockCapLockoutPhase(page);
       await createCapStudent(page, {colorado: true, timing: 'before'});
-      await gotoEditAndWaitForFields(page);
-      await expect(page.locator('#user_us_state').first()).toBeEnabled();
-      await expect(page.locator('#user_age').first()).toBeEnabled();
+      const lockoutPhase = new LockoutPhasePage(page);
+      await lockoutPhase.gotoEditAndWaitForFields();
+      await lockoutPhase.expectAgeAndStateEnabled();
     },
   );
 
   /**
+   * Migration status: COMPLETED
    * Source: dashboard/test/ui/features/platform/policy_compliance/lockout_phase.feature
    * Scenario: Student account under-13 and in Colorado created after CAP start using only clever cannot change their age and state
    */
@@ -126,13 +120,14 @@ test.describe('CPA lockout phase — age/state field editability', () => {
         sso: 'clever',
         timing: 'after',
       });
-      await gotoEditAndWaitForFields(page);
-      await expect(page.locator('#user_us_state').first()).toBeDisabled();
-      await expect(page.locator('#user_age').first()).toBeDisabled();
+      const lockoutPhase = new LockoutPhasePage(page);
+      await lockoutPhase.gotoEditAndWaitForFields();
+      await lockoutPhase.expectAgeAndStateDisabled();
     },
   );
 
   /**
+   * Migration status: COMPLETED
    * Source: dashboard/test/ui/features/platform/policy_compliance/lockout_phase.feature
    * Scenario: Student account under-13 and in Colorado created before CAP start using only clever cannot change their age and state
    */
@@ -147,13 +142,14 @@ test.describe('CPA lockout phase — age/state field editability', () => {
         sso: 'clever',
         timing: 'before',
       });
-      await gotoEditAndWaitForFields(page);
-      await expect(page.locator('#user_us_state').first()).toBeDisabled();
-      await expect(page.locator('#user_age').first()).toBeDisabled();
+      const lockoutPhase = new LockoutPhasePage(page);
+      await lockoutPhase.gotoEditAndWaitForFields();
+      await lockoutPhase.expectAgeAndStateDisabled();
     },
   );
 
   /**
+   * Migration status: COMPLETED
    * Source: dashboard/test/ui/features/platform/policy_compliance/lockout_phase.feature
    * Scenario: Student account under-13 and in Colorado created before CAP start using google cannot change their age and state
    */
@@ -168,13 +164,14 @@ test.describe('CPA lockout phase — age/state field editability', () => {
         sso: 'google',
         timing: 'before',
       });
-      await gotoEditAndWaitForFields(page);
-      await expect(page.locator('#user_us_state').first()).toBeDisabled();
-      await expect(page.locator('#user_age').first()).toBeDisabled();
+      const lockoutPhase = new LockoutPhasePage(page);
+      await lockoutPhase.gotoEditAndWaitForFields();
+      await lockoutPhase.expectAgeAndStateDisabled();
     },
   );
 
   /**
+   * Migration status: COMPLETED
    * Source: dashboard/test/ui/features/platform/policy_compliance/lockout_phase.feature
    * Scenario: Student account under-13 not in Colorado created after CAP start using clever cannot change their age and state
    */
@@ -188,13 +185,14 @@ test.describe('CPA lockout phase — age/state field editability', () => {
         sso: 'clever',
         timing: 'after',
       });
-      await gotoEditAndWaitForFields(page);
-      await expect(page.locator('#user_us_state').first()).toBeEnabled();
-      await expect(page.locator('#user_age').first()).toBeEnabled();
+      const lockoutPhase = new LockoutPhasePage(page);
+      await lockoutPhase.gotoEditAndWaitForFields();
+      await lockoutPhase.expectAgeAndStateEnabled();
     },
   );
 
   /**
+   * Migration status: COMPLETED
    * Source: dashboard/test/ui/features/platform/policy_compliance/lockout_phase.feature
    * Scenario: Student account under-13 not in Colorado created before CAP start using clever cannot change their age and state
    */
@@ -208,9 +206,9 @@ test.describe('CPA lockout phase — age/state field editability', () => {
         sso: 'clever',
         timing: 'before',
       });
-      await gotoEditAndWaitForFields(page);
-      await expect(page.locator('#user_us_state').first()).toBeEnabled();
-      await expect(page.locator('#user_age').first()).toBeEnabled();
+      const lockoutPhase = new LockoutPhasePage(page);
+      await lockoutPhase.gotoEditAndWaitForFields();
+      await lockoutPhase.expectAgeAndStateEnabled();
     },
   );
 });
