@@ -13,8 +13,32 @@ import {SendLessonPage} from './SendLesson';
  * @eyes scenario is skipped (Applitools only).
  */
 
-// @eyes: visual regression test — Applitools only.
-test.fixme('send lesson dialog renders properly', async () => {});
+/**
+ * Migration status: COMPLETED
+ * Source: dashboard/test/ui/features/teacher_tools/send_lesson.feature
+ * Scenario: Send lesson dialog renders properly
+ *
+ * The source scenario is `@eyes`. This port executes the page and modal
+ * readiness path up to the visual checkpoint; the Applitools screenshot
+ * assertion is intentionally not performed in apps-e2e-tests.
+ */
+test(
+  'visual path: send lesson dialog renders properly',
+  {tag: '@no_mobile'},
+  async ({page}) => {
+    await createTeacher(page);
+    const sendLesson = new SendLessonPage(page);
+    await sendLesson.gotoUnitOverview();
+    await expect(page.locator('.uitest-sendlesson').first()).toBeVisible();
+
+    // Eyes checkpoint in Cucumber: "unit overview".
+    await sendLesson.openDialog(4);
+    await expect(
+      page.locator('span').filter({hasText: 'Google'}).first(),
+    ).toBeVisible({timeout: 15_000});
+    // Eyes checkpoint in Cucumber: "send lesson dialog".
+  },
+);
 
 test.describe('Send lesson dialog', () => {
   let sendLesson: SendLessonPage;

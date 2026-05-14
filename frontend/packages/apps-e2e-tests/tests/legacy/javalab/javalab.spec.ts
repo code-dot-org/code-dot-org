@@ -42,14 +42,19 @@ test.describe('Java Lab — commit code', () => {
     'commit with notes appears in version history',
     {tag: '@no_mobile'},
     async ({page}) => {
-      test.fixme(
-        true,
-        'TODO: version history Restore/View button not visible on firefox/chromium; timing issue with javalab commit or version history render',
-      );
       await page.goto(`${LESSON_44}/levels/1?noautoplay=true`);
       await page
         .locator('#javalab-editor-save')
         .waitFor({state: 'visible', timeout: 30_000});
+
+      // Ensure the commit points at a fresh saved object version.  Without a
+      // source edit, the version-history request can race against autosave and
+      // show only the initial/autosave rows.
+      await page.getByRole('textbox').first().click();
+      await page.keyboard.insertText('// commit test\n');
+      await expect(page.locator('.project_updated_at')).toContainText('Saved', {
+        timeout: 60_000,
+      });
 
       // Open commit dialog and enter notes.
       await page.locator('#javalab-editor-save').click();
@@ -200,11 +205,6 @@ test.describe('Java Lab — submittable level', () => {
     'submit, unsubmit, and resubmit cycle restores submit state',
     {tag: '@no_mobile'},
     async ({page}) => {
-      // Firefox: submit/unsubmit/resubmit cycle flaky under parallel run; passes alone.
-      test.fixme(
-        true,
-        'TODO: javalab submit/unsubmit/resubmit cycle flaky on firefox under parallel run; timing issue with submit state restoration',
-      );
       await createTeacherAssociatedStudent(page);
 
       const LEVEL_URL = `${LESSON_44}/levels/9?noautoplay=true`;

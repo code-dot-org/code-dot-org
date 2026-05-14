@@ -67,10 +67,6 @@ test.describe('Disallowed Sharing', {tag: '@no_mobile'}, () => {
   test('sharing a profane studio game shows share-fail-explanation', async ({
     studentPage,
   }) => {
-    test.fixme(
-      true,
-      'Requires source @webpurify external API key, which is not configured in this Playwright environment. Source: dashboard/test/ui/features/teacher_tools/disallowedsharing.feature Scenario: Sharing a profane studio game',
-    );
     await studentPage.goto(LEVEL_URL);
     await expect(studentPage.locator('#runButton')).toBeVisible({
       timeout: 30_000,

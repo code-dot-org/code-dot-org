@@ -349,7 +349,21 @@ test.describe('Angle helper — Artist level 7', () => {
    * cover the same editor-opening states without invoking the retired Eyes
    * runner.
    */
-  test.skip('angle helper visual checkpoint sequence', async () => {});
+  test('visual path: opens all angle helper editor states', async ({page}) => {
+    await showFieldEditor(page, 'turnConstant', 'VALUE');
+    await expect(angleHelperSvg(page)).toBeVisible();
+    // Eyes checkpoint in Cucumber: "free text angle helper".
+
+    await showFieldEditor(page, 'turnDropdown', 'VALUE', 'dropdown');
+    await expect(angleHelperSvg(page)).toBeVisible();
+    await expectAngleDropdown(page, '270');
+    // Eyes checkpoint in Cucumber: "dropdown angle helper".
+
+    await showFieldEditor(page, 'mathNumber', 'NUM');
+    await expect(angleHelperSvg(page)).toBeVisible();
+    await expectAngleText(page, 30);
+    // Eyes checkpoint in Cucumber: "value input angle helper".
+  });
 
   /**
    * Migration status: COMPLETED

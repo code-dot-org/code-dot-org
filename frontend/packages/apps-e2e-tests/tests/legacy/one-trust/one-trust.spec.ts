@@ -37,13 +37,28 @@ async function assertNotCategorizedByOneTrust(
 // ─── OneTrust popup ───────────────────────────────────────────────────────────
 
 /**
+ * Migration status: COMPLETED
  * Source: dashboard/test/ui/features/platform/one_trust.feature
  * Scenario: User sees OneTrust cookie pop-up when self-hosting OneTrust libraries on code.org
+ *
+ * The source scenario is `@eyes`. This port executes the same readiness path
+ * through the visible banner; the Applitools screenshot assertion is
+ * intentionally not performed in apps-e2e-tests.
  */
-test.skip('visual OneTrust cookie pop-up check is covered by the Eyes lane', () => {
-  // The Cucumber scenario is tagged @eyes and asserts an Applitools visual
-  // diff for the same banner covered by the nonvisual popup test below.
-});
+test(
+  'visual path: OneTrust cookie pop-up is ready for screenshot',
+  {tag: '@no_mobile'},
+  async ({page}) => {
+    await createStudent(page);
+    await mockGeolocation(page, '150.214.39.255');
+    await page.goto('/home?otreset=true&otgeo=es');
+    await expect(page).toHaveURL(/otreset=false/, {timeout: 30_000});
+    await expect(page.locator('#onetrust-banner-sdk')).toBeVisible({
+      timeout: 30_000,
+    });
+    // Eyes checkpoint in Cucumber: "Onetrust pop up: code.org".
+  },
+);
 
 /**
  * Migration status: COMPLETED

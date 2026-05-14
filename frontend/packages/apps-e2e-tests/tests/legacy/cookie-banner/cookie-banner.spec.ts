@@ -18,11 +18,6 @@ test(
   'cookie banner: accepted on first visit and suppressed on reload',
   {tag: '@no_mobile'},
   async ({page}) => {
-    // Webkit: cookie banner flaky under parallel run; passes alone.
-    test.fixme(
-      true,
-      'TODO: cookie banner accept/suppress flaky on webkit under parallel run; timing issue with banner visibility or cookie state',
-    );
     await page.goto(`${LEVEL_URL}?show_cookie_banner_on_test=true`);
     await page
       .locator('#runButton, .uitest-lab-container')
