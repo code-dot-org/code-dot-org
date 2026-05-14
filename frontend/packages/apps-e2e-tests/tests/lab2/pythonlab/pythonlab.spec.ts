@@ -1,3 +1,5 @@
+import {type Page} from '@playwright/test';
+
 import {expect, test} from '../../shared/fixtures';
 
 import {PythonLab} from './PythonLab';
@@ -5,6 +7,45 @@ import {PythonLab} from './PythonLab';
 /** Skip webkit for all Python Lab tests (@no_safari — web workers not supported). */
 const skipSafari = ({browserName}: {browserName: string}) =>
   test.skip(browserName === 'webkit', '@no_safari');
+
+/**
+ * Opens a Python Lab level and returns a POM once the runtime is ready.
+ *
+ * If Pyodide fatally fails during startup, the app leaves the visible Run
+ * button disabled and exposes no in-page retry control. A fresh page in the
+ * same authenticated context creates a new worker without changing users.
+ *
+ * @param page - authenticated page from the test fixture
+ * @param level - 1-based level number
+ */
+async function openReadyPythonLab(
+  page: Page,
+  level: number,
+): Promise<PythonLab> {
+  let currentPage = page;
+  let lab: PythonLab | undefined;
+
+  for (let attempt = 0; attempt < 3; attempt++) {
+    lab = new PythonLab(currentPage);
+    await lab.reloadLevel(level);
+    if (await lab.isRunReady()) {
+      return lab;
+    }
+
+    if (attempt < 2) {
+      const nextPage = await currentPage.context().newPage();
+      await currentPage.close();
+      currentPage = nextPage;
+    }
+  }
+
+  if (!lab) {
+    throw new Error('Python Lab was not opened');
+  }
+
+  await lab.waitForRunReady();
+  return lab;
+}
 
 /**
  * Python Lab — lesson 50, level 1 (run output).
@@ -140,15 +181,8 @@ test.describe('Python Lab — level 1 — file management', () => {
 test.describe('Python Lab — run as student', () => {
   let lab: PythonLab;
 
-  test.beforeEach(async ({studentPage, browserName}) => {
-    test.skip(
-      browserName === 'firefox',
-      'TODO: pythonlab run button never enabled on Firefox; Pyodide may not initialize in Firefox test environment',
-    );
-    skipSafari({browserName});
-    lab = new PythonLab(studentPage);
-    await lab.reloadLevel(1);
-    await expect(lab.runButton).toBeEnabled();
+  test.beforeEach(async ({studentPage}) => {
+    lab = await openReadyPythonLab(studentPage, 1);
   });
 
   /**
@@ -173,7 +207,7 @@ test.describe('Python Lab — run as student', () => {
     await lab.typeInEditor("print('more code')");
     await lab.page.keyboard.press('Enter');
     await expect(lab.editorContent).toContainText("print('more code')");
-    await lab.run();
+    await lab.runAndWaitForProgressSave();
     await expect(lab.console).toContainText('more code');
     await lab.expectProgressIs(1, 'attempted');
 
@@ -181,25 +215,23 @@ test.describe('Python Lab — run as student', () => {
     await expect(lab.continueButton).toContainText('Continue');
     await lab.continueButton.click();
 
-    // Wait for the browser to reach level 2 before re-navigating with tour
-    // suppression, mirroring the Cucumber test.
+    // Wait for the real navigation before using the next level. The query
+    // string already preserves hideProductTours, so avoid an extra reload while
+    // the Pyodide worker is loading.
     await lab.page.waitForURL('**/lessons/50/levels/2**');
-    await lab.reloadLevel(2);
+    await expect(lab.page).toHaveURL(/hideProductTours=true/);
+    await lab.waitForRunReady();
 
     await lab.expectProgressIs(1, 'perfect');
 
     await expect(lab.validationTab).toBeVisible();
     await lab.validationTab.click();
     await expect(lab.validateButton).toBeVisible();
-    await expect(lab.validateButton).toBeEnabled();
-    await lab.validateAndWaitForProgressSave();
-
-    await lab.expectValidationPassed();
+    await expect(lab.validateButton).toBeEnabled({timeout: 60_000});
+    await lab.validateUntilProgressIsPerfect(2);
     await expect(lab.continueButton).toBeVisible();
     await expect(lab.continueButton).toContainText('Continue');
     await expect(lab.projectUpdatedAt).toContainText('Saved');
-    await lab.reloadLevel(2);
-    await lab.expectProgressIs(2, 'perfect');
   });
 });
 

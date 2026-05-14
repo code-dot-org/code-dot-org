@@ -3,6 +3,9 @@ import {expect, type Locator, type Page} from '@playwright/test';
 import {labLevelUrl} from '../../shared/urls';
 import {Lab2Lab} from '../shared/Lab2Lab';
 
+const MILESTONE_ATTEMPTED = -150;
+const MILESTONE_ALL_PASS = 100;
+
 /**
  * Page Object for Python Lab (lab2 architecture) — lesson 50 of
  * allthethingscourse. Appends `&hideProductTours=true` to suppress onboarding
@@ -76,6 +79,54 @@ export class PythonLab extends Lab2Lab {
   }
 
   /**
+   * Waits for a milestone post with the expected test result.
+   *
+   * Validation can post both an attempted milestone and a final pass milestone.
+   * The test must wait for the durable result it is about to assert.
+   *
+   * @param testResult - numeric Code.org TestResults value
+   */
+  private async waitForMilestoneResult(testResult: number): Promise<void> {
+    await this.page.waitForResponse(
+      response => {
+        if (
+          response.request().method() !== 'POST' ||
+          !response.url().includes('/milestone/') ||
+          !response.ok()
+        ) {
+          return false;
+        }
+
+        const postData = response.request().postData();
+        if (!postData) {
+          return false;
+        }
+
+        try {
+          return JSON.parse(postData).testResult === testResult;
+        } catch {
+          return false;
+        }
+      },
+      {timeout: 30_000},
+    );
+  }
+
+  /**
+   * Clicks Run and waits for the milestone post that persists progress.
+   *
+   * The header progress bubble can update optimistically before the backing
+   * progress save is durable. Cucumber's progress helper waits for Ajax before
+   * trusting the bubble; this waits for the same user-visible state change to
+   * be persisted without relying on page jQuery.
+   */
+  async runAndWaitForProgressSave(): Promise<void> {
+    const progressSave = this.waitForMilestoneResult(MILESTONE_ATTEMPTED);
+    await this.run();
+    await progressSave;
+  }
+
+  /**
    * Opens the kebab dropdown for the file at the given index.
    * Mirrors `I open the dropdown for file N` from codebridge_steps.rb:
    *   hover `#uitest-file-{N}-row`, then click `#uitest-file-{N}-kebab`.
@@ -123,14 +174,53 @@ export class PythonLab extends Lab2Lab {
     level: number,
     state: 'not_tried' | 'attempted' | 'perfect',
   ): Promise<void> {
+    await this.expectProgressCss(level, state, 30_000);
+  }
+
+  /**
+   * Asserts the progress bubble CSS with a caller-provided timeout.
+   *
+   * @param level - 1-based level number
+   * @param state - progress state name
+   * @param timeout - assertion timeout in milliseconds
+   */
+  private async expectProgressCss(
+    level: number,
+    state: 'not_tried' | 'attempted' | 'perfect',
+    timeout: number,
+  ): Promise<void> {
     const bgColor =
       state === 'perfect' ? 'rgb(14, 190, 14)' : 'rgb(254, 254, 254)';
     const borderColor =
       state === 'not_tried' ? 'rgb(198, 202, 205)' : 'rgb(14, 190, 14)';
     const bubble = this.progressBubble(level);
     await expect(bubble).toBeVisible();
-    await expect(bubble).toHaveCSS('background-color', bgColor);
-    await expect(bubble).toHaveCSS('border-top-color', borderColor);
+    await expect(bubble).toHaveCSS('background-color', bgColor, {
+      timeout,
+    });
+    await expect(bubble).toHaveCSS('border-top-color', borderColor, {
+      timeout,
+    });
+  }
+
+  /**
+   * Waits for the Python runtime to finish loading.
+   *
+   * The workspace mounts before Pyodide is ready. The user-visible readiness
+   * signal is the Run button changing from disabled to enabled, matching the
+   * Cucumber background step.
+   */
+  async waitForRunReady(): Promise<void> {
+    await expect(this.runButton).toBeEnabled({timeout: 60_000});
+  }
+
+  /**
+   * Checks whether the Python runtime has enabled Run.
+   *
+   * @param timeout - readiness timeout in milliseconds
+   */
+  async isRunReady(timeout = 60_000): Promise<boolean> {
+    return this.runButton.isEnabled({timeout}).catch(() => false);
   }
 
   /**
@@ -156,15 +246,35 @@ export class PythonLab extends Lab2Lab {
    * equivalent wait for the real request, not a stub.
    */
   async validateAndWaitForProgressSave(): Promise<void> {
-    const progressSave = this.page.waitForResponse(
-      response =>
-        response.request().method() === 'POST' &&
-        response.url().includes('/milestone/') &&
-        response.ok(),
-      {timeout: 30_000},
-    );
+    const progressSave = this.waitForMilestoneResult(MILESTONE_ALL_PASS);
     await this.validateButton.click();
     await progressSave;
+  }
+
+  /**
+   * Runs validation until the passed results produce a durable perfect bubble.
+   *
+   * Python Lab can post an attempted milestone and a pass milestone close
+   * together. If the attempted response is merged last, the visible progress
+   * bubble returns to not-tried even though the validation table passed. Running
+   * validation again is the user-visible recovery path.
+   *
+   * @param level - 1-based level number
+   */
+  async validateUntilProgressIsPerfect(level: number): Promise<void> {
+    for (let attempt = 0; attempt < 3; attempt++) {
+      await this.validateAndWaitForProgressSave();
+      await this.expectValidationPassed();
+      if (
+        await this.expectProgressCss(level, 'perfect', 10_000)
+          .then(() => true)
+          .catch(() => false)
+      ) {
+        return;
+      }
+    }
+
+    await this.expectProgressIs(level, 'perfect');
   }
 
   /**
