@@ -201,6 +201,7 @@ test(
 );
 
 /**
+ * Migration status: COMPLETED
  * Source: dashboard/test/ui/features/platform/policy_compliance/policy_compliance.feature
  * Scenario: Sponsored student should not be able to add a personal email on an account until providing a state
  */
@@ -253,6 +254,7 @@ test(
 );
 
 /**
+ * Migration status: COMPLETED
  * Source: dashboard/test/ui/features/platform/policy_compliance/policy_compliance.feature
  * Scenario: Sponsored student should not be able to add a personal email when they supply a policy state
  */
@@ -310,6 +312,7 @@ test(
 );
 
 /**
+ * Migration status: COMPLETED
  * Source: dashboard/test/ui/features/platform/policy_compliance/policy_compliance.feature
  * Scenario: Sponsored student is able to add a personal email on an unlocked account
  */

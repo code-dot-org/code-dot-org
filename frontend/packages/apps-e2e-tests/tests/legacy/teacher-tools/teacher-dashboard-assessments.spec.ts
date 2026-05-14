@@ -14,8 +14,9 @@ import {expect, test} from '../../shared/fixtures';
 
 test.describe('Teacher Dashboard Assessments', {tag: '@no_mobile'}, () => {
   /**
-   * Source: teacher_dashboard_assessments1.feature
-   * "Assessments tab initialization"
+   * Migration status: COMPLETED
+   * Source: dashboard/test/ui/features/teacher_tools/teacher_dashboard/teacher_dashboard_assessments1.feature
+   * Scenario: Assessments tab initialization
    *
    * Teacher assigns a unit with a survey (but no rubric assessment) to their
    * section; the Assessments tab shows the unit selector and assessment

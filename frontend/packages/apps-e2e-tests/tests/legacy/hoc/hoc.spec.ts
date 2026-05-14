@@ -29,6 +29,11 @@ test.describe('Hour of Code — anonymous progress tracking', () => {
     await page.goto('/hoc/reset');
   });
 
+  /**
+   * Migration status: COMPLETED
+   * Source: dashboard/test/ui/features/student_learning/hour_of_code/hour_of_code.feature
+   * Scenario: Solving puzzle 1, proceeding to puzzle 2, verifying that puzzle 1 appears as solved
+   */
   test('solving puzzle 1 saves progress and level source', async ({page}) => {
     const hoc = new HocLevel(page);
 
@@ -78,6 +83,11 @@ test.describe('Hour of Code — anonymous progress tracking', () => {
     ).not.toBeAttached();
   });
 
+  /**
+   * Migration status: COMPLETED
+   * Source: dashboard/test/ui/features/student_learning/hour_of_code/hour_of_code.feature
+   * Scenario: Failing at puzzle 1, refreshing puzzle 1, bubble should show up as attempted
+   */
   test('failing puzzle 1 shows attempted progress bubble', async ({page}) => {
     const hoc = new HocLevel(page);
 
@@ -97,6 +107,11 @@ test.describe('Hour of Code — anonymous progress tracking', () => {
     await hoc.expectProgressOnOverview(1, 1, 'attempted');
   });
 
+  /**
+   * Migration status: COMPLETED
+   * Source: dashboard/test/ui/features/student_learning/hour_of_code/hour_of_code.feature
+   * Scenario: Go to puzzle 10, see video, go somewhere else, return to puzzle 10, should not see video, comes back on link
+   */
   test(
     'video at puzzle 10 not re-shown after first viewing',
     {tag: '@no_mobile'},
@@ -126,6 +141,11 @@ test.describe('Hour of Code — anonymous progress tracking', () => {
     },
   );
 
+  /**
+   * Migration status: COMPLETED
+   * Source: dashboard/test/ui/features/student_learning/hour_of_code/hour_of_code.feature
+   * Scenario: Go to puzzle 9, see callouts, go somewhere else, return to puzzle 9, should not see callouts
+   */
   test('callouts at puzzle 9 not re-shown after first viewing', async ({
     page,
   }) => {
@@ -151,7 +171,9 @@ test.describe('Hour of Code — anonymous progress tracking', () => {
 
 test.describe('Hour of Code — hoc/reset', () => {
   /**
-   * Source: hoc_reset.feature
+   * Migration status: COMPLETED
+   * Source: dashboard/test/ui/features/student_learning/hour_of_code/hoc_reset.feature
+   * Scenario: hoc/reset clears videos, callouts, and level progress
    * hoc/reset always re-triggers the intro video and callouts regardless of
    * prior navigation state.
    */

@@ -22,8 +22,9 @@ test.describe(
   {tag: '@no_mobile'},
   () => {
     /**
-     * Source: teacher_dashboard_local_nav_v2.feature
-     * "Modifying settings on the teacher dashboard"
+     * Migration status: COMPLETED
+     * Source: dashboard/test/ui/features/teacher_tools/teacher_dashboard/teacher_dashboard_local_nav_v2.feature
+     * Scenario: Modifying settings on the teacher dashboard
      *
      * Teacher changes grade level, course, and section name via the settings
      * panel and confirms the progress page reflects the updates.
@@ -126,8 +127,9 @@ test.describe(
     });
 
     /**
-     * Source: teacher_dashboard_local_nav_v2.feature
-     * "Single-unit course overview"
+     * Migration status: COMPLETED
+     * Source: dashboard/test/ui/features/teacher_tools/teacher_dashboard/teacher_dashboard_local_nav_v2.feature
+     * Scenario: Single-unit course overview
      *
      * Teacher navigates to the Course tab for a single-unit course and sees the
      * unit overview page with no breadcrumb.

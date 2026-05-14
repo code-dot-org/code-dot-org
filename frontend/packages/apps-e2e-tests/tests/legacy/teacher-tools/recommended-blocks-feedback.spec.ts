@@ -60,7 +60,9 @@ test.describe(
   {tag: '@no_mobile'},
   () => {
     /**
-     * Source: feedback.feature — "Solve without recommended blocks"
+     * Migration status: COMPLETED
+     * Source: dashboard/test/ui/features/teacher_tools/feedback.feature
+     * Scenario: Solve without recommended blocks
      * @as_student
      *
      * Run the Bee level with the default (suboptimal) two-moveforward blocks →

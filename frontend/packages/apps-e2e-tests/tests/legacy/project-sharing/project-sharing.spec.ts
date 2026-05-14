@@ -174,7 +174,9 @@ async function openFirstProjectMenu(page: Page): Promise<void> {
 
 test.describe('Project Sharing — Young Students', {tag: '@no_mobile'}, () => {
   /**
-   * Source: "Share dialog can be opened and closed"
+   * Migration status: COMPLETED
+   * Source: dashboard/test/ui/features/teacher_tools/projects/project_sharing.feature
+   * Scenario: Share dialog can be opened and closed
    */
   test('share dialog opens and closes', async ({page}) => {
     await createStudent(page, {age: 10, us_state: 'CO'});
@@ -192,7 +194,9 @@ test.describe('Project Sharing — Young Students', {tag: '@no_mobile'}, () => {
   });
 
   /**
-   * Source: "Young Student Can Share Non-Open-ended Projects via URL"
+   * Migration status: COMPLETED
+   * Source: dashboard/test/ui/features/teacher_tools/projects/project_sharing.feature
+   * Scenario: Young Student Can Share Non-Open-ended Projects via URL
    */
   test('non-open-ended project (dance) share button is enabled', async ({
     page,
@@ -210,7 +214,9 @@ test.describe('Project Sharing — Young Students', {tag: '@no_mobile'}, () => {
   });
 
   /**
-   * Source: "Young Student Not In Teacher Section Cannot Share Open-ended Projects via URL"
+   * Migration status: COMPLETED
+   * Source: dashboard/test/ui/features/teacher_tools/projects/project_sharing.feature
+   * Scenario: Young Student Not In Teacher Section Cannot Share Open-ended Projects via URL
    */
   test('open-ended project (spritelab) without teacher section shows disabled share', async ({
     page,
@@ -243,6 +249,7 @@ test.describe('Project Sharing — Young Students', {tag: '@no_mobile'}, () => {
 
 test.describe('Personal Project Gallery', {tag: '@no_mobile'}, () => {
   /**
+   * Migration status: COMPLETED
    * Source: dashboard/test/ui/features/teacher_tools/projects/personal_project_gallery.feature
    * Scenario: Can Toggle to the Public Project Gallery
    */
@@ -266,6 +273,7 @@ test.describe('Personal Project Gallery', {tag: '@no_mobile'}, () => {
   });
 
   /**
+   * Migration status: COMPLETED
    * Source: dashboard/test/ui/features/teacher_tools/projects/personal_project_gallery.feature
    * Scenario: Can Rename a Project
    */
@@ -315,6 +323,7 @@ test.describe('Personal Project Gallery', {tag: '@no_mobile'}, () => {
   });
 
   /**
+   * Migration status: COMPLETED
    * Source: dashboard/test/ui/features/teacher_tools/projects/personal_project_gallery.feature
    * Scenario: Can Delete a Project
    */
@@ -340,6 +349,7 @@ test.describe('Personal Project Gallery', {tag: '@no_mobile'}, () => {
 
 test.describe('Project Sharing — Blockly projects', {tag: '@no_mobile'}, () => {
   /**
+   * Migration status: COMPLETED
    * Source: dashboard/test/ui/features/teacher_tools/projects/blockly_project.feature
    * Scenario: Save Blockly Project
    */
@@ -369,6 +379,7 @@ test.describe('Project Sharing — Blockly projects', {tag: '@no_mobile'}, () =>
   });
 
   /**
+   * Migration status: COMPLETED
    * Source: dashboard/test/ui/features/teacher_tools/projects/starwars_project.feature
    * Scenario: Starwars Flow
    */

@@ -10,6 +10,7 @@ import {expect, test} from '../../shared/fixtures';
 
 test.describe('Parental permission — /lockout page flow', () => {
   /**
+   * Migration status: COMPLETED
    * Source: dashboard/test/ui/features/platform/policy_compliance/parental_permission.feature
    * Scenario: New under 13 account should be able to send a parental request.
    */
@@ -72,6 +73,7 @@ test.describe('Parental permission — /lockout page flow', () => {
   );
 
   /**
+   * Migration status: COMPLETED
    * Source: dashboard/test/ui/features/platform/policy_compliance/parental_permission.feature
    * Scenario: New under 13 account should be able to provide state and see lockout page to send parental request.
    */
@@ -122,6 +124,7 @@ test.describe('Parental permission — /lockout page flow', () => {
   );
 
   /**
+   * Migration status: COMPLETED
    * Source: dashboard/test/ui/features/platform/policy_compliance/parental_permission.feature
    * Scenario: New under 13 account should be able to resend the email
    */
@@ -161,6 +164,7 @@ test.describe('Parental permission — /lockout page flow', () => {
   );
 
   /**
+   * Migration status: COMPLETED
    * Source: dashboard/test/ui/features/platform/policy_compliance/parental_permission.feature
    * Scenario: New under 13 account should be able to send a different email
    */
@@ -213,6 +217,7 @@ test.describe('Parental permission — /lockout page flow', () => {
   );
 
   /**
+   * Migration status: COMPLETED
    * Source: dashboard/test/ui/features/platform/policy_compliance/parental_permission.feature
    * Scenario: Student should not be able to enter their own email as their parent's email
    */
@@ -241,6 +246,7 @@ test.describe('Parental permission — /lockout page flow', () => {
   );
 
   /**
+   * Migration status: COMPLETED
    * Source: dashboard/test/ui/features/platform/policy_compliance/parental_permission.feature
    * Scenario: Student should be able to enter their parent's email if their parent created their account
    */

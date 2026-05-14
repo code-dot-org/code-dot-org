@@ -25,6 +25,7 @@ const STARWARS_LEVEL_5 = '/courses/starwars/units/1/lessons/1/levels/5';
 
 test.describe('Student Pairing', {tag: '@no_mobile'}, () => {
   /**
+   * Migration status: COMPLETED
    * Source: dashboard/test/ui/features/teacher_tools/pairing.feature
    * Scenario: Pair Programming submits levels for both students
    *
@@ -66,6 +67,7 @@ test.describe('Student Pairing', {tag: '@no_mobile'}, () => {
   });
 
   /**
+   * Migration status: COMPLETED
    * Source: dashboard/test/ui/features/teacher_tools/pairing.feature
    * Scenario: Pair Programming attempts levels for both students
    *
@@ -96,6 +98,7 @@ test.describe('Student Pairing', {tag: '@no_mobile'}, () => {
   });
 
   /**
+   * Migration status: COMPLETED
    * Source: dashboard/test/ui/features/teacher_tools/pairing.feature
    * Scenario: Pairing group is correctly displayed in user menu on cached levels
    *

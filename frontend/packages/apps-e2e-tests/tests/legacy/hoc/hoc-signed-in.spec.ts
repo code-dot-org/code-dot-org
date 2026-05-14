@@ -13,6 +13,11 @@ import {TWO_MOVE_FORWARD_BLOCKS} from './blocks';
  * localStorage but leaves server-side saves intact.
  */
 test.describe('Hour of Code — signed-in student progress', () => {
+  /**
+   * Migration status: COMPLETED
+   * Source: dashboard/test/ui/features/student_learning/hour_of_code/hour_of_code_signed_in.feature
+   * Scenario: Solving puzzle 1, proceeding to puzzle 2, verifying that puzzle 1 appears as solved
+   */
   test('solving puzzle 1 saves progress server-side; hoc/reset preserves saved source', async ({
     studentPage,
   }) => {
