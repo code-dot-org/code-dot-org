@@ -4,11 +4,12 @@
 
 import {configureStore, createSlice} from '@reduxjs/toolkit';
 import type {PayloadAction} from '@reduxjs/toolkit';
-import {beforeEach, describe, expect, it} from 'vitest';
+import {beforeEach, describe, expect, expectTypeOf, it} from 'vitest';
 
 import reduxSlice, {incrementCount} from '../reduxSlice';
 import {injectSlice, injectSlices} from '../store';
-import type {StoreWithState} from '../types';
+import type {MockStore, StateFor} from '../store';
+import type {SlicesState, StoreWithState} from '../types';
 
 // Fixture slices stand in for real platform slices. They intentionally have
 // dissimilar reducer shapes — that's what previously broke when the type
@@ -127,5 +128,64 @@ describe('injectSlices', () => {
     const injected = injectSlice(sliceA, store);
     injected.dispatch(sliceA.actions.setA(3));
     expect(injected.getState().a.value).toBe(3);
+  });
+});
+
+// Compile-time pins for the type-level surface. These don't exercise runtime
+// behavior — they fail at typecheck if the generic resolutions drift. The
+// hazard they guard against is `SlicesState` silently collapsing (e.g. to
+// `unknown` or `Record<string, ...>`) when someone re-tightens the constraint
+// or simplifies the structural extraction. Downstream packages would still
+// build but lose their per-slice keys.
+describe('redux module type surface', () => {
+  // The `{} as T` casts let us pin generic resolutions without constructing
+  // real values; only the type position matters to `expectTypeOf`.
+  it('SlicesState maps a tuple of literal-named slices to per-key state', () => {
+    expectTypeOf(
+      {} as SlicesState<[typeof sliceA, typeof sliceB]>,
+    ).branded.toEqualTypeOf<{
+      a: {value: number};
+      b: {label: string};
+    }>();
+  });
+
+  it('SlicesState composes with the built-in redux slice', () => {
+    expectTypeOf(
+      {} as SlicesState<[typeof reduxSlice, typeof sliceA]>,
+    ).branded.toEqualTypeOf<{
+      redux: {reducerCount: number};
+      a: {value: number};
+    }>();
+  });
+
+  it('MockStore exposes the combined state via getState', () => {
+    type S = MockStore<[typeof sliceA, typeof sliceB]>;
+    expectTypeOf({} as ReturnType<S['getState']>).branded.toEqualTypeOf<{
+      a: {value: number};
+      b: {label: string};
+    }>();
+  });
+
+  it('StateFor extracts the state shape from a MockStore', () => {
+    type S = MockStore<[typeof sliceA, typeof sliceB]>;
+    expectTypeOf({} as StateFor<S>).branded.toEqualTypeOf<{
+      a: {value: number};
+      b: {label: string};
+    }>();
+  });
+
+  it('injectSlices return widens the store state with the new slices', () => {
+    const fresh = configureStore({
+      reducer: {redux: reduxSlice.reducer},
+    }) as unknown as StoreWithState<
+      ReturnType<typeof configureStore>,
+      {redux: {reducerCount: number}}
+    >;
+    const injected = injectSlices([sliceA, sliceB] as const, fresh);
+    expectTypeOf(injected.getState()).branded.toEqualTypeOf<{
+      redux: {reducerCount: number};
+      a: {value: number};
+      b: {label: string};
+    }>();
   });
 });
