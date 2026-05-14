@@ -5,9 +5,9 @@ description 'description here'
 markdown <<MARKDOWN
 # Strategies for Teachers
 
-#### As students begin using AI tools, it’s important to explicitly teach them how to recognize and respond to AI-generated inaccuracies. This is an opportunity to strengthen digital literacy and critical thinking skills that extend beyond AI use.
+As students begin using AI tools, it’s important to explicitly teach them how to recognize and respond to AI-generated inaccuracies. This is an opportunity to strengthen digital literacy and critical thinking skills that extend beyond AI use.
 
-#### Teachers can support students by focusing on four key areas: modeling, verification, critical thinking, and reflection.
+Teachers can support students by focusing on four key areas: modeling, verification, critical thinking, and reflection.
 
 <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; margin-top: 15px;">
 

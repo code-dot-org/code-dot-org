@@ -2,6 +2,7 @@ import {
   CHALLENGE_TIMEOUT_MS,
   CONTAINER_ID,
   LOG,
+  TOKEN_MAX_AGE_MS,
   TURNSTILE_SITE_KEY,
 } from './constants';
 import {debuggerWillPauseInAnonymousScope} from './debuggerProbe';
@@ -38,6 +39,10 @@ export class TurnstileManager {
   // Cleared to null immediately when taken so a concurrent synchronous caller
   // cannot claim the same one-time-use token.
   private nextTokenPromise: Promise<string> | null = null;
+
+  // Timestamp (Date.now()) recorded when nextTokenPromise resolved. Used to
+  // detect tokens older than TOKEN_MAX_AGE_MS before they are consumed.
+  private nextTokenResolvedAt: number | null = null;
 
   private widgetId: string | null = null;
 
@@ -135,11 +140,26 @@ export class TurnstileManager {
 
   private getToken(): Promise<string> {
     if (this.nextTokenPromise) {
-      console.log(`${LOG} Pre-fetch hit — returning in-progress token`);
-      const p = this.nextTokenPromise;
-      this.nextTokenPromise = null;
-      this.schedulePrefetch();
-      return p;
+      const age =
+        this.nextTokenResolvedAt !== null
+          ? Date.now() - this.nextTokenResolvedAt
+          : null;
+      if (age !== null && age > TOKEN_MAX_AGE_MS) {
+        console.log(
+          `${LOG} Pre-fetch token stale (${(age / 1000).toFixed(0)}s old) — discarding and starting fresh`
+        );
+        this.nextTokenPromise = null;
+        this.nextTokenResolvedAt = null;
+      } else {
+        console.log(
+          `${LOG} Pre-fetch hit — returning in-progress token${age !== null ? ` (${(age / 1000).toFixed(0)}s old)` : ' (pending)'}`
+        );
+        const p = this.nextTokenPromise;
+        this.nextTokenPromise = null;
+        this.nextTokenResolvedAt = null;
+        this.schedulePrefetch();
+        return p;
+      }
     }
 
     console.log(`${LOG} Pre-fetch miss — enqueueing fresh challenge`);
@@ -161,6 +181,7 @@ export class TurnstileManager {
     this.nextTokenPromise = p;
     p.then(
       token => {
+        this.nextTokenResolvedAt = Date.now();
         console.log(
           `${LOG} Pre-fetch resolved — token ready (len=${token.length})`
         );
@@ -172,7 +193,10 @@ export class TurnstileManager {
           `${LOG} Pre-fetch failed — clearing nextTokenPromise:`,
           err
         );
-        if (this.nextTokenPromise === p) this.nextTokenPromise = null;
+        if (this.nextTokenPromise === p) {
+          this.nextTokenPromise = null;
+          this.nextTokenResolvedAt = null;
+        }
       }
     );
   }

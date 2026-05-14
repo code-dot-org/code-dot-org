@@ -5,13 +5,13 @@ description 'description here'
 markdown <<MARKDOWN
 # Module Overview 
 
-#### Thinking Critically About AI is split into **five milestones**, each containing **two lessons** and centering around a **theme**. This structure helps students break complex ideas into manageable phases while building toward a final product.
+Thinking Critically About AI is split into **five milestones**, each containing **two lessons** and centering around a **theme**. This structure helps students break complex ideas into manageable phases while building toward a final product.
 
 <div style="text-align: center; margin: 40px auto;"> <img src="https://images.code.org/84f21d55ad8a972bba224bf43dcca03b-image-1773419936950.jpg" alt="A diagram showing the layout of the unit, with two lessons per milestone. Five milestones and ten lessons total." style="width: 95%; height: auto; border-radius: 10px;"> </div>
 
 ## What's included in this module? 
 
-#### This professional learning module mirrors the structure of the Thinking Critically About AI Unit. There are six sections total:
+This professional learning module mirrors the structure of the Thinking Critically About AI Unit. There are six sections total:
 
 <div style="background-color: #FAFBFC; padding: 20px; border-radius: 10px; width: 88%; margin: 20px auto;">
 
@@ -72,5 +72,5 @@ markdown <<MARKDOWN
 
 ___
 
-#### This professional learning module is designed to prepare you to teach two lessons in Thinking Critically About AI at a time. Feel free to use this module to prepare for a chunk of the curriculum as you see fit - you can always pick up where you left off when you're ready.
+This professional learning module is designed to prepare you to teach two lessons in Thinking Critically About AI at a time. Feel free to use this module to prepare for a chunk of the curriculum as you see fit - you can always pick up where you left off when you're ready.
 MARKDOWN

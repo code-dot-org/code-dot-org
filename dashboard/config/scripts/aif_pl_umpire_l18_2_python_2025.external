@@ -5,9 +5,9 @@ description 'description here'
 markdown <<MARKDOWN
 # UMPIRE Strategy
 
-#### The **UMPIRE** strategy is a simple way to help students (or anyone new to coding) think through their code step by step—just like an umpire watches carefully and makes decisions. 
+The **UMPIRE** strategy is a simple way to help students (or anyone new to coding) think through their code step by step—just like an umpire watches carefully and makes decisions. 
 
-#### It’s especially useful when writing or debugging Python code.
+It’s especially useful when writing or debugging Python code.
 
 
 ## UPMIRE Steps: 
@@ -81,7 +81,7 @@ markdown <<MARKDOWN
 ---
 
 
-#### As you plan out your code in the next level, try using the **UMPIRE** strategy!
+As you plan out your code in the next level, try using the **UMPIRE** strategy!
 
 
 
