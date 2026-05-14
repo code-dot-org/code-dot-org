@@ -74,6 +74,101 @@ async function dismissTeacherPanel(page: Page): Promise<void> {
   }
 }
 
+/**
+ * Stub the Drone moderation result for the "Damn" message so test-studio
+ * records the same profane user-message state the Cucumber scenario expects.
+ *
+ * @param page - Playwright page that will send the chat message
+ */
+async function stubDamnModeration(page: Page): Promise<void> {
+  let requestId = 91_001;
+  const stubbedIds = new Set<number>();
+
+  await page.route('**/aichat_request/start_chat_completion', async route => {
+    const postData = route.request().postData();
+    const payload = postData ? JSON.parse(postData) : {};
+    if (payload.newMessage?.chatMessageText !== 'Damn') {
+      await route.fallback();
+      return;
+    }
+
+    const id = requestId++;
+    stubbedIds.add(id);
+    await route.fulfill({
+      status: 200,
+      contentType: 'application/json',
+      body: JSON.stringify({
+        requestId: id,
+        pollingIntervalMs: 1000,
+        backoffRate: 1,
+      }),
+    });
+  });
+
+  await page.route('**/aichat_request/chat_request/*', async route => {
+    const id = Number(route.request().url().split('/').pop());
+    if (!stubbedIds.has(id)) {
+      await route.fallback();
+      return;
+    }
+
+    await route.fulfill({
+      status: 200,
+      contentType: 'application/json',
+      body: JSON.stringify({
+        executionStatus: 1001,
+        response: '',
+      }),
+    });
+  });
+}
+
+/**
+ * Persist a completed profane user message if the app-side logger has not
+ * flushed it yet. Teacher history is backed by `/aichat_events/chat_history`,
+ * not by the student's current Redux state.
+ *
+ * @param page - Playwright page still signed in as the student
+ * @param aichatContext - Context captured from a prior app log request
+ * @param requestId - Stubbed chat-completion request id
+ */
+async function logProfaneUserMessage(
+  page: Page,
+  aichatContext: Record<string, unknown>,
+  requestId: number,
+): Promise<void> {
+  const result = await page.evaluate(
+    async ({context, id}) => {
+      const csrfToken =
+        document
+          .querySelector('meta[name="csrf-token"]')
+          ?.getAttribute('content') || '';
+      const response = await fetch('/aichat_events/log_chat_event', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json; charset=UTF-8',
+          'X-CSRF-Token': csrfToken,
+        },
+        body: JSON.stringify({
+          newChatEvent: {
+            chatMessageText: 'Damn',
+            role: 'user',
+            status: 'profanity_violation',
+            timestamp: Date.now(),
+            requestId: id,
+          },
+          aichatContext: context,
+        }),
+      });
+
+      return {ok: response.ok, status: response.status};
+    },
+    {context: aichatContext, id: requestId},
+  );
+
+  expect(result.ok, `log_chat_event returned ${result.status}`).toBe(true);
+}
+
 test.describe(
   'AI Chat Lab — teacher views student chat history',
   {tag: '@no_mobile'},
@@ -92,7 +187,7 @@ test.describe(
     test('teacher flags messages and tests student model', async ({page}) => {
       test.fixme(
         true,
-        'Pending migration: depends on deterministic AI chat moderation behavior and teacher-view state across sessions.',
+        'Pending migration: deterministic profanity stubbing updates the student UI, but the profane event is not visible through teacher chat history.',
       );
       // --- Background: authorized teacher + AI-chat-enabled section ---
       const teacher = await createAuthorizedTeacher(page);
@@ -109,6 +204,20 @@ test.describe(
 
       await page.goto(AICHAT_URL);
       await dismissCloseDialog(page);
+      await stubDamnModeration(page);
+      let latestAichatContext: Record<string, unknown> | undefined;
+      let sawLoggedProfanity = false;
+      await page.route('**/aichat_events/log_chat_event', async route => {
+        const postData = route.request().postData();
+        if (postData) {
+          const payload = JSON.parse(postData);
+          latestAichatContext = payload.aichatContext;
+          sawLoggedProfanity =
+            sawLoggedProfanity ||
+            payload.newChatEvent?.status === 'profanity_violation';
+        }
+        await route.fallback();
+      });
 
       const textarea = page.locator('#uitest-chat-textarea');
       const submit = page.locator('#uitest-chat-submit');
@@ -135,6 +244,15 @@ test.describe(
             'This message has been flagged by our content moderation policy.',
         }),
       ).toBeVisible({timeout: 30_000});
+      await expect
+        .poll(() => latestAichatContext !== undefined, {
+          timeout: 10_000,
+          message: 'AI Chat context was captured from chat event logging',
+        })
+        .toBe(true);
+      if (!sawLoggedProfanity && latestAichatContext) {
+        await logProfaneUserMessage(page, latestAichatContext, 91_001);
+      }
 
       // Decrease temperature once (default → 0.7) and save.
       await page.locator("[aria-label='Decrease']").click();

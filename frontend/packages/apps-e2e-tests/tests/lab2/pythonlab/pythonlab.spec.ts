@@ -27,7 +27,7 @@ test.describe('Python Lab — level 1 — run output', () => {
   });
 
   /**
-   * Migration status: PENDING
+   * Migration status: COMPLETED
    * Source: dashboard/test/ui/features/code_tools/pythonlab/pythonlab_run_eyes.feature
    * Scenario: Can run and see output of Python program
    */
@@ -35,11 +35,6 @@ test.describe('Python Lab — level 1 — run output', () => {
     'running prints Hello from the start! to the console',
     {tag: '@visual'},
     async () => {
-      // Chromium: pythonlab run output flaky under parallel run; passes alone.
-      test.fixme(
-        true,
-        'TODO: pythonlab run output flaky on chromium under parallel run; timing issue with run button or console output',
-      );
       // visual checkpoint: "initial load"
       await lab.run();
       await expect(lab.console).toContainText('Hello from the start!');
@@ -172,10 +167,9 @@ test.describe('Python Lab — run as student', () => {
    * Scenario: Continue button and progress status shows up correctly
    */
   test('continue button and progress status update correctly', async () => {
-    // Chromium: progress update flaky under parallel run; passes alone.
     test.fixme(
       true,
-      'TODO: continue button / progress update flaky on chromium under parallel run',
+      'Pending migration: repeated runs intermittently leave the level 2 header progress bubble not_tried after validation passes.',
     );
     await expect(lab.editorContent).toBeVisible();
     await lab.expectProgressIs(1, 'not_tried');
@@ -206,6 +200,8 @@ test.describe('Python Lab — run as student', () => {
 
     await expect(lab.continueButton).toBeVisible();
     await expect(lab.continueButton).toContainText('Continue');
+    await expect(lab.projectUpdatedAt).toContainText('Saved');
+    await lab.reloadLevel(2);
     await lab.expectProgressIs(2, 'perfect');
   });
 });

@@ -1,3 +1,5 @@
+import {type Page} from '@playwright/test';
+
 import {expect, test} from '../../shared/fixtures';
 
 import {Aichat} from './Aichat';
@@ -68,27 +70,72 @@ async function gotoAichat(
   await dismissTeacherPanel(page);
 }
 
+/**
+ * Stub the same moderation result Cucumber gets from Drone for the "Damn"
+ * message. test-studio uses live model moderation, so the word is not
+ * deterministic there.
+ *
+ * @param page - Playwright page that will send the chat message
+ */
+async function stubDamnModeration(page: Page): Promise<void> {
+  let requestId = 90_001;
+  const stubbedIds = new Set<number>();
+
+  await page.route('**/aichat_request/start_chat_completion', async route => {
+    const postData = route.request().postData();
+    const payload = postData ? JSON.parse(postData) : {};
+    if (payload.newMessage?.chatMessageText !== 'Damn') {
+      await route.fallback();
+      return;
+    }
+
+    const id = requestId++;
+    stubbedIds.add(id);
+    await route.fulfill({
+      status: 200,
+      contentType: 'application/json',
+      body: JSON.stringify({
+        requestId: id,
+        pollingIntervalMs: 1000,
+        backoffRate: 1,
+      }),
+    });
+  });
+
+  await page.route('**/aichat_request/chat_request/*', async route => {
+    const id = Number(route.request().url().split('/').pop());
+    if (!stubbedIds.has(id)) {
+      await route.fallback();
+      return;
+    }
+
+    await route.fulfill({
+      status: 200,
+      contentType: 'application/json',
+      body: JSON.stringify({
+        executionStatus: 1001,
+        response: '',
+      }),
+    });
+  });
+}
+
 test.describe('AI Chat Lab — making a chat request', () => {
   /**
-   * Migration status: PENDING
+   * Migration status: COMPLETED
    * Source: dashboard/test/ui/features/star_labs/aichat/chat.feature
    * Scenario: Making chat request gets appropriate response
    * @no_mobile @as_levelbuilder
    *
    * Sends "Hello" and verifies bot reply color; then sends "Damn" and verifies
-   * the content-moderation message appears. This remains pending because
-   * test-studio does not use Drone's stubbed moderation service that flags
-   * "Damn" in the Cucumber run.
+   * the content-moderation message appears.
    */
   test(
     'chat request gets bot reply; blocked message shows moderation notice',
     {tag: '@no_mobile'},
     async ({levelbuilderPage}) => {
-      test.fixme(
-        true,
-        'Pending migration: requires deterministic moderation stub equivalent to the Cucumber Drone stub.',
-      );
       await gotoAichat(levelbuilderPage);
+      await stubDamnModeration(levelbuilderPage);
 
       const textarea = levelbuilderPage.locator('#uitest-chat-textarea');
       const submit = levelbuilderPage.locator('#uitest-chat-submit');
@@ -109,11 +156,11 @@ test.describe('AI Chat Lab — making a chat request', () => {
       await expect(submit).toBeEnabled({timeout: 10_000});
       await submit.click();
       await expect(
-        levelbuilderPage.locator('.uitest-chat-message'),
-      ).toContainText(
-        'This message has been flagged by our content moderation policy.',
-        {timeout: 30_000},
-      );
+        levelbuilderPage.locator('.uitest-chat-message').filter({
+          hasText:
+            'This message has been flagged by our content moderation policy.',
+        }),
+      ).toBeVisible({timeout: 30_000});
     },
   );
 });
@@ -168,17 +215,15 @@ test.describe('AI Chat Lab — publishing model', () => {
    *
    * Fills the model card info tab (bot name, description, …), saves, publishes,
    * verifies the view-mode toggle and presentation container appear, reloads,
-   * and confirms the published state is preserved. This remains pending because
-   * the publish state is not persisted after reload on test-studio in this
-   * Playwright lane.
+   * and confirms the published state is preserved.
    */
   test(
     'model card info saves and published view appears after publish',
     {tag: '@no_mobile'},
-    async ({levelbuilderPage}) => {
+    async ({levelbuilderPage, browserName}) => {
       test.fixme(
-        true,
-        'Pending migration: published model card view appears before reload but is not persisted after reload on test-studio.',
+        browserName !== 'chromium',
+        'Pending migration: published model card state is not reliably present after reload outside Chromium on test-studio.',
       );
       await gotoAichat(levelbuilderPage);
 
@@ -244,6 +289,12 @@ test.describe('AI Chat Lab — publishing model', () => {
       // Reload and switch to user view to confirm published state persists.
       await levelbuilderPage.reload();
       await dismissTeacherPanel(levelbuilderPage);
+      await levelbuilderPage
+        .locator('#modelCustomizationTabs-tab-modelCardInfo')
+        .click();
+      await expect(
+        levelbuilderPage.locator('#uitest-user-view-button'),
+      ).toBeVisible({timeout: 15_000});
       await levelbuilderPage.locator('#uitest-user-view-button').click();
       await expect(
         levelbuilderPage.locator('#uitest-presentation-view-container'),
