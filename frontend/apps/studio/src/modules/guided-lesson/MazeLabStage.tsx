@@ -101,11 +101,12 @@ const MazeLabStage = ({config}: MazeLabStageProps) => {
 const DEFAULT_START_BLOCKS =
   '<xml><block type="when_run" deletable="false" movable="false"/></xml>';
 
-/** Just movement blocks. */
+/** Just movement blocks plus a count-based `repeat`. */
 export const TOOLBOX_BASIC = `<xml>
   <block type="maze_moveForward"/>
   <block type="maze_turn"><title name="DIR">turnLeft</title></block>
   <block type="maze_turn"><title name="DIR">turnRight</title></block>
+  <block type="controls_repeat_dropdown"><field name="TIMES">3</field></block>
 </xml>`;
 
 /** Movement + conditional logic (no loop). */
@@ -117,13 +118,14 @@ export const TOOLBOX_CONDITIONAL = `<xml>
   <block type="maze_ifElse"><title name="DIR">isPathForward</title></block>
 </xml>`;
 
-/** Movement + conditional + `until finished` loop. */
+/** Movement + conditional + count-based and `until finished` loops. */
 export const TOOLBOX_FULL = `<xml>
   <block type="maze_moveForward"/>
   <block type="maze_turn"><title name="DIR">turnLeft</title></block>
   <block type="maze_turn"><title name="DIR">turnRight</title></block>
   <block type="maze_if"><title name="DIR">isPathForward</title></block>
   <block type="maze_ifElse"><title name="DIR">isPathForward</title></block>
+  <block type="controls_repeat_dropdown"><field name="TIMES">5</field></block>
   <block type="maze_untilBlockedOrNotClear"><title name="DIR">isPathForward</title></block>
 </xml>`;
 

@@ -92,15 +92,23 @@ const blocks: (skin: Skin) => BlockDefinition[] = (skin: Skin) => [
     },
   },
   {
+    // Renders the standard "repeat N times" loop with a freeform number
+    // input. Type name retained as `controls_repeat_dropdown` for back
+    // compat with existing toolboxes and planted lesson XML; the dropdown
+    // form (hardcoded options) was unfit for guided lessons where the
+    // student needs to *type the correct count* themselves.
     type: 'controls_repeat_dropdown',
     style: 'loop_blocks',
     tooltip: '',
     message0: En.CONTROLS_REPEAT_TITLE,
     args0: [
       {
-        type: 'field_dropdown',
+        type: 'field_number',
         name: 'TIMES',
-        options: [['2', '2']],
+        value: 2,
+        min: 0,
+        max: 100,
+        precision: 1,
       },
     ],
     message1: En.CONTROLS_REPEAT_INPUT_DO + ' %1',

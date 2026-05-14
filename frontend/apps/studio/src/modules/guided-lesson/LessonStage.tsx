@@ -8,6 +8,7 @@ import DatasciLabStage from './DatasciLabStage';
 import MazeLabStage from './MazeLabStage';
 import MusicLabStage from './MusicLabStage';
 import OceansLabStage from './OceansLabStage';
+import AskTheAIMazeStage from './stage-primitives/AskTheAIMazeStage';
 import ConditionFork from './stage-primitives/ConditionFork';
 import DataDietPlate from './stage-primitives/DataDietPlate';
 import FeedMirror from './stage-primitives/FeedMirror';
@@ -39,6 +40,7 @@ const LessonStage = ({visual}: LessonStageProps) => {
   const isLab =
     visual.kind === 'music-lab' ||
     visual.kind === 'maze-lab' ||
+    visual.kind === 'ai-code-maze' ||
     visual.kind === 'datasci-lab' ||
     visual.kind === 'ai-trainer-lab';
   return (
@@ -134,6 +136,15 @@ function renderVisual(visual: StageVisual) {
 
     case 'maze-lab':
       return <MazeLabStage config={visual.config} />;
+
+    case 'ai-code-maze':
+      return (
+        <AskTheAIMazeStage
+          config={visual.config}
+          plantedBlocks={visual.plantedBlocks}
+          aiClaim={visual.aiClaim}
+        />
+      );
 
     case 'datasci-lab':
       return <DatasciLabStage config={visual.config} />;

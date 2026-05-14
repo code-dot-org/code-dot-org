@@ -55,6 +55,18 @@ export type StageVisual =
   | {kind: 'label-bucket'}
   | {kind: 'data-diet-plate'}
   | {kind: 'feed-mirror'}
+  // "Ask the AI to write it" maze. Renders a maze lab with a banner button
+  // that, when tapped, programmatically injects an authored buggy program
+  // into the workspace. Used by the `did-the-ai-get-it-right` lesson to
+  // teach trace-before-trust.
+  | {
+      kind: 'ai-code-maze';
+      config: MazeStageConfig;
+      /** Blockly XML the "AI" plants. Always include a root `when_run`. */
+      plantedBlocks: string;
+      /** Optional one-liner the AI "says" after planting. */
+      aiClaim?: string;
+    }
   // Labs — leave alone; they own the canvas when shown.
   | {kind: 'music-lab'}
   | {kind: 'maze-lab'; config: MazeStageConfig}
