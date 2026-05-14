@@ -25,6 +25,11 @@ test.describe('Send lesson dialog', () => {
     await sendLesson.gotoUnitOverview();
   });
 
+  /**
+   * Migration status: COMPLETED
+   * Source: dashboard/test/ui/features/teacher_tools/send_lesson.feature
+   * Scenario: Send lesson dialog opens and closes
+   */
   test('dialog opens and closes', {tag: '@no_mobile'}, async ({page}) => {
     await sendLesson.openDialog(4);
 
@@ -36,6 +41,11 @@ test.describe('Send lesson dialog', () => {
     await expect(sendLesson.modal).not.toBeVisible();
   });
 
+  /**
+   * Migration status: COMPLETED
+   * Source: dashboard/test/ui/features/teacher_tools/send_lesson.feature
+   * Scenario: Send lesson dialog copy link button works
+   */
   test('copy link button works', {tag: '@no_mobile'}, async () => {
     await sendLesson.openDialog(2);
 

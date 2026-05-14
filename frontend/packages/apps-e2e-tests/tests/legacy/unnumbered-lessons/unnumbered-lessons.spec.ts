@@ -17,6 +17,11 @@ const LEVEL1_URL =
   '/courses/ui-test-unnumbered-lessons/units/1/lessons/1/levels/1';
 
 test.describe('Unnumbered lessons', () => {
+  /**
+   * Migration status: COMPLETED
+   * Source: dashboard/test/ui/features/teacher_tools/unnumbered_lessons.feature
+   * Scenario: Units with Unnumbered Lessons
+   */
   test('lesson names appear without numeric prefixes across unit, lesson, and level views', async ({
     page,
   }) => {

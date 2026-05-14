@@ -112,8 +112,9 @@ test.describe('Teacher Homepage V2', {tag: '@no_mobile'}, () => {
   });
 
   /**
-   * Source: teacher_homepage_v2.feature
-   * "Teacher can archive and restore sections from the section options dropdown"
+   * Migration status: COMPLETED
+   * Source: dashboard/test/ui/features/teacher_tools/teacher_dashboard/teacher_homepage_v2.feature
+   * Scenario: Teacher can archive and restore sections from the section options dropdown
    */
   test('teacher can archive and restore sections', async ({page}) => {
     await createTeacher(page);
@@ -147,8 +148,9 @@ test.describe('Teacher Homepage V2', {tag: '@no_mobile'}, () => {
   });
 
   /**
-   * Source: teacher_homepage_v2.feature
-   * "Teacher can delete a section from the section options dropdown"
+   * Migration status: COMPLETED
+   * Source: dashboard/test/ui/features/teacher_tools/teacher_dashboard/teacher_homepage_v2.feature
+   * Scenario: Teacher can delete a section from the section options dropdown
    */
   test('teacher can delete a section', async ({page}) => {
     await createTeacher(page);
@@ -244,8 +246,9 @@ test.describe('Teacher Homepage V2', {tag: '@no_mobile'}, () => {
   });
 
   /**
-   * Source: teacher_homepage_v2.feature
-   * "Teacher can access section roster from the 'Add students' button"
+   * Migration status: COMPLETED
+   * Source: dashboard/test/ui/features/teacher_tools/teacher_dashboard/teacher_homepage_v2.feature
+   * Scenario: Teacher can access section roster from the "Add students" button on the section card
    */
   test('teacher opens roster via Add students button', async ({page}) => {
     await createTeacher(page);
@@ -263,8 +266,9 @@ test.describe('Teacher Homepage V2', {tag: '@no_mobile'}, () => {
   });
 
   /**
-   * Source: teacher_homepage_v2.feature
-   * "Teacher can view student progress from the 'View progress' button"
+   * Migration status: COMPLETED
+   * Source: dashboard/test/ui/features/teacher_tools/teacher_dashboard/teacher_homepage_v2.feature
+   * Scenario: Teacher can view student progress from the "View progress" button on the section card
    */
   test('teacher views student progress from View progress button', async ({
     page,
@@ -297,8 +301,9 @@ test.describe('Teacher Homepage V2', {tag: '@no_mobile'}, () => {
   });
 
   /**
-   * Source: teacher_homepage_v2.feature
-   * "Teacher can view lesson materials from the 'View lesson materials' button"
+   * Migration status: COMPLETED
+   * Source: dashboard/test/ui/features/teacher_tools/teacher_dashboard/teacher_homepage_v2.feature
+   * Scenario: Teacher can view lesson materials from the "View lesson materials" button on the section card
    */
   test('teacher views lesson materials from View lesson materials button', async ({
     page,

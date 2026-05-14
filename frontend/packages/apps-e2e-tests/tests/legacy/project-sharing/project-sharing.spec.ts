@@ -407,6 +407,7 @@ test.describe('Project Sharing — Blockly projects', {tag: '@no_mobile'}, () =>
 
 test.describe('Game Lab Projects', {tag: '@no_mobile'}, () => {
   /**
+   * Migration status: COMPLETED
    * Source: dashboard/test/ui/features/teacher_tools/projects/gamelab_project.feature
    * Scenario: Gamelab Flow
    */
@@ -481,6 +482,7 @@ test.describe('Game Lab Projects', {tag: '@no_mobile'}, () => {
   });
 
   /**
+   * Migration status: COMPLETED
    * Source: dashboard/test/ui/features/teacher_tools/projects/gamelab_project.feature
    * Scenario: Remix project creates and redirects to new channel
    */

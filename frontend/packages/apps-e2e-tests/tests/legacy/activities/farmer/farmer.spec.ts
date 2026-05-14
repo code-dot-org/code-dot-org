@@ -84,6 +84,11 @@ test.describe('Contextual hints — Farmer level 2', () => {
     await farmer.gotoLevel(2);
   });
 
+  /**
+   * Migration status: COMPLETED
+   * Source: dashboard/test/ui/features/teacher_tools/contextual_hints.feature
+   * Scenario: Blocks render in contextual hints
+   */
   test(
     'running with default workspace adds a contextual hint and renders a block visual',
     {tag: '@no_mobile'},
@@ -116,11 +121,21 @@ test.describe('Authored hints — Farmer level 2', () => {
     await farmer.gotoLevel(2);
   });
 
+  /**
+   * Migration status: COMPLETED
+   * Source: dashboard/test/ui/features/teacher_tools/authored_hints.feature
+   * Scenario: View Authored Hints
+   */
   test('lightbulb is visible and shows 3 hints available', async () => {
     await expect(farmer.lightbulb).toBeVisible();
     await expect(farmer.hintCount).toHaveText('3');
   });
 
+  /**
+   * Migration status: COMPLETED
+   * Source: dashboard/test/ui/features/teacher_tools/authored_hints.feature
+   * Scenario: View Authored Hints
+   */
   test('viewing all 3 hints decrements counter then removes it', async () => {
     // Hint 1 — text includes basic markup
     await farmer.lightbulb.click();
@@ -154,11 +169,31 @@ test.describe('Authored hints — Farmer level 2', () => {
     await expect(farmer.hintCount).not.toBeAttached();
   });
 
+  /**
+   * Migration status: COMPLETED
+   * Source: dashboard/test/ui/features/teacher_tools/authored_hints.feature
+   * Scenario: View Authored Hints
+   */
   test('clicking lightbulb after all hints shows no further prompt', async () => {
-    for (let i = 0; i < 3; i++) {
-      await farmer.lightbulb.click();
-      await farmer.acceptHint();
-    }
+    await farmer.lightbulb.click();
+    await farmer.acceptHint();
+    await expect(farmer.instructionsPanel).toContainText(
+      'This is the first hint.',
+    );
+    await expect(farmer.hintCount).toHaveText('2');
+
+    await farmer.lightbulb.click();
+    await farmer.acceptHint();
+    await expect(farmer.instructionsPanel).toContainText(
+      'This is the second hint. It has a hint video.',
+    );
+    await expect(farmer.hintCount).toHaveText('1');
+
+    await farmer.lightbulb.click();
+    await farmer.acceptHint();
+    await expect(farmer.instructionsPanel).toContainText(
+      'This is the third and final hint.',
+    );
     await expect(farmer.hintCount).not.toBeAttached();
 
     await farmer.lightbulb.click();

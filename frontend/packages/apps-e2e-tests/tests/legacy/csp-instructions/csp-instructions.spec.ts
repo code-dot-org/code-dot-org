@@ -142,7 +142,9 @@ test.describe('CSP Instructions', () => {
   });
 
   /**
-   * Source: "Instructions can be collapsed and expanded"
+   * Migration status: COMPLETED
+   * Source: dashboard/test/ui/features/teacher_tools/instructions/csp_instructions.feature
+   * Scenario: Instructions can be collapsed and expanded
    */
   test('instructions can be collapsed and expanded', async ({studentPage}) => {
     await studentPage.goto(`${BASE}/20`);
@@ -160,7 +162,9 @@ test.describe('CSP Instructions', () => {
   });
 
   /**
-   * Source: "Instructions have a resizer for non-embedded levels"
+   * Migration status: COMPLETED
+   * Source: dashboard/test/ui/features/teacher_tools/instructions/csp_instructions.feature
+   * Scenario: Instructions have a resizer for non-embedded levels
    */
   test('instructions have a resizer for non-embedded levels', async ({
     studentPage,
@@ -174,7 +178,9 @@ test.describe('CSP Instructions', () => {
   });
 
   /**
-   * Source: "Instructions do not show a resizer on embedded levels"
+   * Migration status: COMPLETED
+   * Source: dashboard/test/ui/features/teacher_tools/instructions/csp_instructions.feature
+   * Scenario: Instructions do not show a resizer on embedded levels
    */
   test('instructions do not show a resizer on embedded levels', async ({
     studentPage,

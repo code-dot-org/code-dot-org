@@ -225,7 +225,9 @@ test.describe('Version History in Teacher View', {tag: '@no_mobile'}, () => {
   });
 
   /**
-   * Source: version_history.feature — "Teacher can view own versions"
+   * Migration status: COMPLETED
+   * Source: dashboard/test/ui/features/teacher_tools/version_history.feature
+   * Scenario: Teacher can view own versions
    *
    * Teacher creates two versions of the project and can see the Restore
    * button on past versions (unlike when viewing a student's work).

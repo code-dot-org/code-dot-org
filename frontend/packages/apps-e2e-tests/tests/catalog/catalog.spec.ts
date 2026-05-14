@@ -346,6 +346,11 @@ async function assignAndUnassignCatalogOfferings(
 }
 
 test.describe('Curriculum Catalog — signed-out', () => {
+  /**
+   * Migration status: COMPLETED
+   * Source: dashboard/test/ui/features/acquisition_products/curriculum_catalog.feature
+   * Scenario: Signed-out user is redirected to sign-in page when clicking Assign
+   */
   test('signed-out user is redirected to sign-in when clicking Assign', async ({
     page,
   }) => {
@@ -372,11 +377,137 @@ test.describe('Curriculum Catalog — signed-out', () => {
       page.locator('h2', {hasText: 'Have an account already? Sign in'}),
     ).toBeVisible();
   });
+
+  /**
+   * Migration status: COMPLETED
+   * Source: dashboard/test/ui/features/acquisition_products/curriculum_catalog.feature
+   * Scenario: Signed-out user sees the curriculum catalog with offerings and can expand card and view recommendations
+   */
+  test(
+    'signed-out user expands a catalog card and sees recommendations',
+    {tag: '@no_mobile'},
+    async ({page}) => {
+      await page.goto('/catalog');
+      await waitForCatalog(page);
+
+      await page
+        .getByRole('button', {name: 'View details about AI for Oceans'})
+        .click();
+
+      await expect(
+        page.getByRole('heading', {name: 'AI for Oceans', level: 3}),
+      ).toBeVisible({timeout: 30_000});
+      await expect(
+        page.getByRole('link', {name: 'View details about AI for Oceans'}),
+      ).toBeVisible({timeout: 30_000});
+      await expect(
+        page.getByRole('heading', {name: 'Related Curricula'}),
+      ).toBeVisible({timeout: 30_000});
+      await expect(
+        page.locator('a[href="#curriculum-catalog-card-mix-move-ai"]'),
+      ).toBeVisible();
+      await expect(
+        page.locator('a[href="#curriculum-catalog-card-customizing-llms"]'),
+      ).toBeVisible();
+    },
+  );
+
+  /**
+   * Migration status: COMPLETED
+   * Source: dashboard/test/ui/features/acquisition_products/curriculum_catalog.feature
+   * Scenario: Signed-out user sees course offering page when clicking on see curriculum details on expanded card
+   */
+  test(
+    'signed-out user opens course offering page from expanded card',
+    {tag: '@no_mobile'},
+    async ({page}) => {
+      await page.goto('/catalog');
+      await waitForCatalog(page);
+
+      await page
+        .getByRole('button', {name: 'View details about AI for Oceans'})
+        .click();
+      await page
+        .getByRole('link', {name: 'View details about AI for Oceans'})
+        .waitFor({state: 'visible', timeout: 30_000});
+      await page
+        .getByRole('link', {name: 'View details about AI for Oceans'})
+        .click();
+
+      await expect(
+        page.getByRole('heading', {name: 'AI for Oceans'}),
+      ).toBeVisible({
+        timeout: 30_000,
+      });
+    },
+  );
+
+  /**
+   * Migration status: COMPLETED
+   * Source: dashboard/test/ui/features/acquisition_products/curriculum_catalog.feature
+   * Scenario: Signed-out user can navigate to facilitator led workshop through expanded card
+   */
+  test(
+    'signed-out user opens facilitator-led workshops from expanded card',
+    {tag: '@no_mobile'},
+    async ({page}) => {
+      await page.goto('/catalog');
+      await page
+        .locator('h4', {hasText: 'UI Test CSF'})
+        .waitFor({state: 'visible', timeout: 30_000});
+
+      await page
+        .getByRole('button', {name: 'View details about UI Test CSF'})
+        .click();
+      await page.getByRole('link', {name: 'Facilitator led workshops'}).click();
+
+      await expect(page).toHaveURL(/\/professional-learning\/workshops/, {
+        timeout: 30_000,
+      });
+    },
+  );
+
+  /**
+   * Migration status: COMPLETED
+   * Source: dashboard/test/ui/features/acquisition_products/curriculum_catalog.feature
+   * Scenario: On expanded card, Signed-out user is redirected to sign-in page when clicking Assign to class sections
+   */
+  test(
+    'signed-out user is redirected to sign-in from expanded-card Assign button',
+    {tag: '@no_mobile'},
+    async ({page}) => {
+      await page.goto('/catalog');
+      await waitForCatalog(page);
+
+      await page
+        .getByRole('button', {name: 'View details about AI for Oceans'})
+        .click();
+      await page
+        .getByRole('button', {
+          name: 'Assign AI for Oceans to your classroom',
+        })
+        .filter({hasText: 'Assign to class sections'})
+        .click();
+
+      await expect(
+        page.locator('h3', {
+          hasText: 'Sign in or create account to assign a curriculum',
+        }),
+      ).toBeVisible();
+
+      await page.locator('a', {hasText: 'Sign in or create account'}).click();
+      await expect(
+        page.locator('h2', {hasText: 'Have an account already? Sign in'}),
+      ).toBeVisible();
+    },
+  );
 });
 
 test.describe('Curriculum Catalog — signed-in student', () => {
   /**
-   * Source: curriculum_catalog.feature — "Signed-in student does not see Assign button"
+   * Migration status: COMPLETED
+   * Source: dashboard/test/ui/features/acquisition_products/curriculum_catalog.feature
+   * Scenario: Signed-in student does not see Assign button
    * @as_student
    *
    * Students are not allowed to assign curricula; the Assign button must not
@@ -395,8 +526,9 @@ test.describe('Curriculum Catalog — signed-in student', () => {
 
 test.describe('Curriculum Catalog — signed-in teacher', () => {
   /**
-   * Source: curriculum_catalog.feature —
-   * "Signed-in teacher without sections is prompted to create sections when clicking Assign"
+   * Migration status: COMPLETED
+   * Source: dashboard/test/ui/features/acquisition_products/curriculum_catalog.feature
+   * Scenario: Signed-in teacher without sections is prompted to created sections when clicking Assign
    * @as_teacher
    *
    * A teacher with no sections who clicks Assign should see a "Create class

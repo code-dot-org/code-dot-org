@@ -38,6 +38,11 @@ test.describe('Feedback — Bee level 5', () => {
     await bee.gotoLevel(5);
   });
 
+  /**
+   * Migration status: COMPLETED
+   * Source: dashboard/test/ui/features/teacher_tools/feedback.feature
+   * Scenario: Solve without recommended blocks
+   */
   test('suboptimal solution shows feedback; hint request reveals blocks panel', async () => {
     await bee.run();
 
@@ -56,6 +61,11 @@ test.describe('Feedback — Bee level 5', () => {
     await expect(bee.feedbackBlocks).toBeVisible();
   });
 
+  /**
+   * Migration status: COMPLETED
+   * Source: dashboard/test/ui/features/teacher_tools/feedback.feature
+   * Scenario: Solve without recommended blocks
+   */
   test('recommended solution passes without feedback prompt', async () => {
     await bee.loadBlocks(RECOMMENDED_BEE_LEVEL_5_BLOCKS);
     await bee.run();

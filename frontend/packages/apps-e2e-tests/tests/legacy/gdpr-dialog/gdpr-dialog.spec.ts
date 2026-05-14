@@ -59,7 +59,9 @@ async function waitForGdprScriptDataField(
 
 test.describe('GDPR Dialog', {tag: '@no_mobile'}, () => {
   /**
-   * Source: gdpr_dialog.feature — "EU user sees the GDPR Dialog on dashboard, opt out"
+   * Migration status: COMPLETED
+   * Source: dashboard/test/ui/features/xteam/gdpr_dialog.feature
+   * Scenario: EU user sees the GDPR Dialog on dashboard, opt out
    *
    * EU teacher lands on /home and sees the GDPR dialog.
    */
@@ -105,8 +107,9 @@ test.describe('GDPR Dialog', {tag: '@no_mobile'}, () => {
   });
 
   /**
-   * Source: gdpr_dialog.feature — "EU student who accepted on sign up doesn't
-   * see the GDPR Dialog"
+   * Migration status: COMPLETED
+   * Source: dashboard/test/ui/features/xteam/gdpr_dialog.feature
+   * Scenario: EU student who accepted on sign up doesn't see the GDPR Dialog
    *
    * Student created with data_transfer_agreement_accepted=true never sees the
    * dialog even from an EU IP.

@@ -19,6 +19,11 @@ const skipSafari = ({browserName}: {browserName: string}) =>
 test.describe('Web Lab — age restriction', () => {
   test.use({studentAge: 10});
 
+  /**
+   * Migration status: COMPLETED
+   * Source: dashboard/test/ui/features/star_labs/weblab/too_young.feature
+   * Scenario: Weblab Redirected
+   */
   test('young student is redirected from weblab to home', async ({
     studentPage,
   }) => {
