@@ -110,7 +110,10 @@ describe('currentUserSlice setInitialData', () => {
         isVerifiedInstructor: true,
       }),
     );
-    const state = store.getState().currentUser as Record<string, unknown>;
+    const state = store.getState().currentUser as unknown as Record<
+      string,
+      unknown
+    >;
     // These exist only on CurrentUserDefinition, not on CurrentUserState.
     expect(state.educatorRole).toBeUndefined();
     expect(state.isVerifiedInstructor).toBeUndefined();

@@ -60,7 +60,9 @@ describe('processedLevel for top-level UnitLevels', () => {
     const out = processedLevel(
       makeUnitLevel({id: 1, activeId: 1, kind: LevelKinds.Puzzle}),
     );
-    expect(out.pageNumber).toBe(PUZZLE_PAGE_NONE);
+    // pageNumber lives on the UnitLevel arm of the NumberedLevel union;
+    // narrow with a cast to a UnitLevel-shaped record.
+    expect((out as {pageNumber: number}).pageNumber).toBe(PUZZLE_PAGE_NONE);
   });
 
   it('preserves an explicit pageNumber', () => {
@@ -72,7 +74,9 @@ describe('processedLevel for top-level UnitLevels', () => {
         pageNumber: 4,
       }),
     );
-    expect(out.pageNumber).toBe(4);
+    // pageNumber lives on the UnitLevel arm of the NumberedLevel union;
+    // narrow with a cast to a UnitLevel-shaped record.
+    expect((out as {pageNumber: number}).pageNumber).toBe(4);
   });
 });
 

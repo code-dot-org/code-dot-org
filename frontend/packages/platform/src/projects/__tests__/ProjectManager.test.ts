@@ -63,7 +63,6 @@ function makeQuery(): QueryClient {
   return {} as unknown as QueryClient;
 }
 
-type Doubles = ReturnType<typeof setup>;
 function setup(
   opts: {
     channelId?: string;
@@ -643,6 +642,3 @@ describe('ProjectManager.initializeForceNewVersionState (via load)', () => {
     );
   });
 });
-
-// Silence the unused-doubles type so editors don't flag it.
-type _UnusedKeepDoublesAlias = Doubles;

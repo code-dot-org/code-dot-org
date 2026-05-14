@@ -4,6 +4,7 @@ export * from './courses';
 export * from './levels';
 export * from './metrics';
 export * from './preferences';
+export * from './progress';
 export * from './projects';
 export * from './sections';
 export * from './sources';

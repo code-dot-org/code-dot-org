@@ -76,7 +76,10 @@ describe('Markdown overrides composition', () => {
   });
 
   it('merges options.overrides over the defaults', () => {
-    const myH1 = {component: 'div'};
+    // markdown-to-jsx's Override type requires `props` alongside
+    // `component` — use full-shape fixtures even though our assertion
+    // only cares about reference identity.
+    const myH1 = {component: 'div' as const, props: {}};
     const out = render({
       content: '# h1',
       options: {overrides: {h1: myH1}},
@@ -89,8 +92,8 @@ describe('Markdown overrides composition', () => {
   });
 
   it('overrides prop wins over options.overrides (last-write semantics)', () => {
-    const fromOptions = {component: 'div'};
-    const fromOverrides = {component: 'span'};
+    const fromOptions = {component: 'div' as const, props: {}};
+    const fromOverrides = {component: 'span' as const, props: {}};
     const out = render({
       content: '# h1',
       options: {overrides: {h1: fromOptions}},
