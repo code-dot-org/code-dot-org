@@ -7,32 +7,39 @@ import {experiments} from '@code-dot-org/core/gates';
 import {UserTypes, CourseRoles, SignInStates} from '../constants';
 import type {UserType, CourseRole, SignInState} from '../types';
 
+/**
+ * Payload accepted by `setInitialData`. Field names match `CurrentUserState`
+ * where they overlap; consumers are responsible for converting whatever the
+ * upstream source uses (Rails snake_case, Devise JSON, etc.) before
+ * dispatching. `educatorRole` and `isVerifiedInstructor` are not stored in
+ * state — they're forwarded to the analytics `setUser` call only.
+ */
 export interface CurrentUserDefinition {
-  id?: number;
+  userId?: number;
   uuid?: string;
-  username?: string;
-  user_type?: UserType;
-  display_name?: string;
-  educator_role: string;
-  ai_rubrics_disabled?: boolean;
-  ai_differentiation_enabled?: boolean;
-  mute_music: boolean;
-  sort_by_family_name: boolean;
-  is_lti?: boolean;
-  is_verified_instructor: boolean;
-  under_13: boolean;
-  over_21: boolean;
-  child_account_compliance_state?: string;
-  country_code?: string;
-  us_state_code?: string;
-  in_section?: boolean;
-  created_at?: number;
-  sharing_disabled: boolean;
-  show_progress_table_v2: boolean;
-  progress_table_v2_closed_beta: boolean;
-  date_progress_table_invitation_last_delayed?: number;
-  has_seen_progress_table_v2_invitation: boolean;
-  has_completed_ai_differentiation_welcome: boolean;
+  userName?: string;
+  userType?: UserType;
+  displayName?: string;
+  educatorRole: string;
+  aiRubricsDisabled?: boolean;
+  aiDifferentiationEnabled?: boolean;
+  isBackgroundMusicMuted: boolean;
+  isSortedByFamilyName: boolean;
+  isLti?: boolean;
+  isVerifiedInstructor: boolean;
+  under13: boolean;
+  over21: boolean;
+  childAccountComplianceState?: string;
+  countryCode?: string;
+  usStateCode?: string;
+  inSection?: boolean;
+  userCreatedAt?: number;
+  userSharingDisabled: boolean;
+  showProgressTableV2: boolean;
+  progressTableV2ClosedBeta: boolean;
+  dateProgressTableInvitationDelayed?: number;
+  hasSeenProgressTableInvite: boolean;
+  hasCompletedAiDifferentiationWelcome: boolean;
   age: number;
 }
 
@@ -122,71 +129,21 @@ const currentUserSlice = createSlice({
       state.userRoleInCourse = action.payload;
     },
     setInitialData: (state, action: PayloadAction<CurrentUserDefinition>) => {
-      const {
-        id,
-        uuid,
-        username,
-        display_name,
-        user_type,
-        mute_music,
-        under_13,
-        over_21,
-        sort_by_family_name,
-        show_progress_table_v2,
-        ai_rubrics_disabled,
-        ai_differentiation_enabled,
-        progress_table_v2_closed_beta,
-        is_lti,
-        date_progress_table_invitation_last_delayed,
-        has_seen_progress_table_v2_invitation,
-        child_account_compliance_state,
-        country_code,
-        us_state_code,
-        age,
-        in_section,
-        created_at,
-        is_verified_instructor,
-        has_completed_ai_differentiation_welcome,
-        educator_role,
-        sharing_disabled,
-      } = action.payload;
+      // `educatorRole` and `isVerifiedInstructor` are forwarded to the
+      // analytics `setUser` call only — they aren't stored in slice state.
+      const {educatorRole, isVerifiedInstructor, ...patch} = action.payload;
 
       void setUser({
-        userId: (id || 0).toString(),
-        userType: user_type || '',
-        isVerifiedInstructor: is_verified_instructor,
+        userId: (patch.userId || 0).toString(),
+        userType: patch.userType || '',
+        isVerifiedInstructor,
         enabledExperiments: experiments.getEnabledExperiments(),
-        educatorRole: educator_role || '',
+        educatorRole: educatorRole || '',
       });
 
-      state.userId = id;
-      state.uuid = uuid;
-      state.userName = username;
-      state.userType = user_type;
-      state.displayName = display_name;
-      state.isBackgroundMusicMuted = mute_music;
-      state.under13 = under_13;
-      state.over21 = over_21;
-      state.isSortedByFamilyName = sort_by_family_name;
-      state.showProgressTableV2 = show_progress_table_v2;
-      state.aiRubricsDisabled = ai_rubrics_disabled;
-      state.aiDifferentiationEnabled = ai_differentiation_enabled;
-      state.progressTableV2ClosedBeta = progress_table_v2_closed_beta;
-      state.isLti = is_lti;
-      state.isTeacher = user_type === UserTypes.Teacher;
-      state.inUSA = ['US', 'RD'].includes(country_code || '');
-      state.dateProgressTableInvitationDelayed =
-        date_progress_table_invitation_last_delayed;
-      state.hasSeenProgressTableInvite = has_seen_progress_table_v2_invitation;
-      state.hasCompletedAiDifferentiationWelcome =
-        has_completed_ai_differentiation_welcome;
-      state.childAccountComplianceState = child_account_compliance_state;
-      state.countryCode = country_code;
-      state.usStateCode = us_state_code;
-      state.age = age;
-      state.inSection = in_section;
-      state.userCreatedAt = created_at;
-      state.userSharingDisabled = sharing_disabled;
+      Object.assign(state, patch);
+      state.isTeacher = patch.userType === UserTypes.Teacher;
+      state.inUSA = ['US', 'RD'].includes(patch.countryCode || '');
     },
     setMuteMusic: (state, action: PayloadAction<boolean>) => {
       state.isBackgroundMusicMuted = action.payload;
