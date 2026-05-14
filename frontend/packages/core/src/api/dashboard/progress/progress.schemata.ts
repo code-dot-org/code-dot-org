@@ -1,28 +1,42 @@
 import camelcaseKeys from 'camelcase-keys';
 import {z} from 'zod';
 
+import {LevelStatuses, TestResults} from './progress.constants';
+
+/**
+ * z.enum-style schema for `TestResult` codes. zod's `z.enum` is
+ * string-only, so we build a union of `z.literal(...)` for each numeric
+ * value. The cast preserves the literal-union type so consumers see
+ * `TestResult` rather than `number`.
+ */
+const TestResultSchema = z.union(
+  Object.values(TestResults).map(v => z.literal(v)) as [
+    z.ZodLiteral<number>,
+    z.ZodLiteral<number>,
+    ...z.ZodLiteral<number>[],
+  ],
+);
+
 /**
  * Wire-format (snake_case) shape of a single level's progress as returned
  * by the dashboard progress API. Use `UnitProgressSchema` below for the
  * consumer-facing camelCase shape — this schema is mostly here as the
  * input layer that the `.transform(...)` chain operates on.
  *
- * `status` is left as `z.string()` rather than a `z.enum(...)`: the
- * authoritative list of statuses (`not_tried`, `perfect`, `passed`,
- * `submitted`, `review_accepted`, `review_rejected`, …) currently lives
- * in platform's `progress/constants.ts`. Promoting that list into core
- * is a separate refactor.
- *
- * `result` / `pages_completed[]` entries are numeric `TestResult` codes
- * (also defined in platform's constants). Same story: kept loose here.
+ * `status` is validated against the canonical `LevelStatuses` list;
+ * `result` / `pages_completed[]` entries against `TestResults`. Both
+ * lists live alongside this schema in `progress.constants.ts` and the
+ * dashboard counterparts (`activity_constants.rb`,
+ * `LevelGroupConstants::LEVEL_STATUS`) must stay in sync — they back
+ * persisted columns.
  */
 export const UnitProgressDefinitionSchema = z.object({
-  status: z.string(),
+  status: z.enum(LevelStatuses),
   last_progress_at: z.number().optional(),
   locked: z.boolean().optional(),
-  pages_completed: z.array(z.number()).optional(),
+  pages_completed: z.array(TestResultSchema).optional(),
   paired: z.boolean().optional(),
-  result: z.number().optional(),
+  result: TestResultSchema.optional(),
   teacher_feedback_commented: z.boolean().optional(),
   teacher_feedback_review_state: z.string().optional(),
   teacher_feedback_new: z.boolean().optional(),

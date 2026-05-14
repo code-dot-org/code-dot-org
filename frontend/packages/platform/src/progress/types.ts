@@ -5,11 +5,15 @@ import type {
   Sublevel,
 } from '@code-dot-org/core/api';
 
-import type {ProgressLevelTypes, TestResults} from './constants';
-import {LevelStatuses, ViewTypes} from './constants';
+import type {LevelStatus, TestResult} from '@code-dot-org/core/api';
 
-export type TestResult = (typeof TestResults)[keyof typeof TestResults];
-export type LevelStatus = (typeof LevelStatuses)[keyof typeof LevelStatuses];
+import type {ProgressLevelTypes} from './constants';
+import {ViewTypes} from './constants';
+
+// LevelStatus/TestResult are wire-format enums shared with core's
+// progress API schemas. Re-export so existing platform imports
+// (`from '../types'`) keep working.
+export type {LevelStatus, TestResult};
 
 // LevelResults is a map of levelId -> TestResult. TestResult is a number.
 export type LevelResults = {[key: number]: TestResult};
