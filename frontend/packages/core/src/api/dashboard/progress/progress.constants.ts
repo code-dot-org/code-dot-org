@@ -105,3 +105,18 @@ export const TestResults = {
 } as const;
 
 export type TestResult = (typeof TestResults)[keyof typeof TestResults];
+
+/**
+ * Possible values for `teacher_feedback_review_state` on a progress
+ * entry. Server-side equivalent: `TeacherFeedback::REVIEW_STATES` in
+ * dashboard, which only enumerates `keepWorking` and `completed` —
+ * `awaitingReview` is a client-only state used when a student has
+ * requested feedback but the teacher hasn't yet responded.
+ */
+export const ReviewStates = {
+  completed: 'completed',
+  keepWorking: 'keepWorking',
+  awaitingReview: 'awaitingReview',
+} as const;
+
+export type ReviewState = (typeof ReviewStates)[keyof typeof ReviewStates];

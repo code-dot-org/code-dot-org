@@ -1,6 +1,8 @@
 import {z} from 'zod';
 import camelcaseKeys from 'camelcase-keys';
 
+import {ReviewStates} from '../progress/progress.constants';
+
 export const ParticipantAudiences = {
   Facilitator: 'facilitator',
   Teacher: 'teacher',
@@ -136,7 +138,7 @@ export const SublevelDefinitionSchema = LevelDefinitionSchema.extend({
   path: z.string(),
   perfect: z.boolean().optional(),
   status: z.string().optional(),
-  teacher_feedback_review_state: z.string().optional(),
+  teacher_feedback_review_state: z.enum(ReviewStates).optional(),
   exampleSolutions: z.array(z.string()).optional(),
 });
 

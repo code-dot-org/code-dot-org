@@ -5,24 +5,24 @@ import type {
   Sublevel,
 } from '@code-dot-org/core/api';
 
-import type {LevelStatus, TestResult} from '@code-dot-org/core/api';
+import type {
+  LevelStatus,
+  ReviewState,
+  TestResult,
+} from '@code-dot-org/core/api';
+import {ReviewStates} from '@code-dot-org/core/api';
 
 import type {ProgressLevelTypes} from './constants';
 import {ViewTypes} from './constants';
 
-// LevelStatus/TestResult are wire-format enums shared with core's
-// progress API schemas. Re-export so existing platform imports
+// LevelStatus/TestResult/ReviewState are wire-format enums shared with
+// core's progress API schemas. Re-export so existing platform imports
 // (`from '../types'`) keep working.
-export type {LevelStatus, TestResult};
+export {ReviewStates};
+export type {LevelStatus, ReviewState, TestResult};
 
 // LevelResults is a map of levelId -> TestResult. TestResult is a number.
 export type LevelResults = {[key: number]: TestResult};
-
-export const ReviewStates = {
-  completed: 'completed',
-  keepWorking: 'keepWorking',
-  awaitingReview: 'awaitingReview',
-};
 
 export interface UnitProgress {
   lastTimestamp: number | undefined;
@@ -32,7 +32,7 @@ export interface UnitProgress {
   result: TestResult;
   status: LevelStatus;
   teacherFeedbackCommented: boolean;
-  teacherFeedbackReviewState: keyof typeof ReviewStates | undefined;
+  teacherFeedbackReviewState: ReviewState | undefined;
   teacherFeedbackNew: boolean;
   timeSpent: number | undefined;
 }

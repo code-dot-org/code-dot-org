@@ -1,7 +1,7 @@
 import camelcaseKeys from 'camelcase-keys';
 import {z} from 'zod';
 
-import {LevelStatuses, TestResults} from './progress.constants';
+import {LevelStatuses, ReviewStates, TestResults} from './progress.constants';
 
 /**
  * z.enum-style schema for `TestResult` codes. zod's `z.enum` is
@@ -38,7 +38,7 @@ export const UnitProgressDefinitionSchema = z.object({
   paired: z.boolean().optional(),
   result: TestResultSchema.optional(),
   teacher_feedback_commented: z.boolean().optional(),
-  teacher_feedback_review_state: z.string().optional(),
+  teacher_feedback_review_state: z.enum(ReviewStates).optional(),
   teacher_feedback_new: z.boolean().optional(),
   time_spent: z.number().optional(),
 });
