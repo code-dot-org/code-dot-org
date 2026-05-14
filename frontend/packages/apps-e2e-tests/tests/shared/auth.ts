@@ -634,6 +634,76 @@ interface CreateSectionWithCourseOptions {
 }
 
 /**
+ * Finds a section id for the current teacher by section code, falling back to
+ * name for older test-controller responses that only include `section_code`.
+ *
+ * @param page - Playwright page holding the teacher session
+ * @param sectionCode - join code returned by the create-section endpoint
+ * @param sectionName - expected section name when code is absent from the list
+ * @returns numeric section id
+ */
+async function findCurrentTeacherSectionId(
+  page: Page,
+  sectionCode: string,
+  sectionName: string,
+): Promise<number> {
+  const resp = await page.request.get('/dashboardapi/sections');
+  if (!resp.ok()) {
+    throw new Error(
+      `list sections failed: ${resp.status()} — ${await resp.text()}`,
+    );
+  }
+
+  const sections = (await resp.json()) as Array<{
+    id: number;
+    code?: string;
+    name: string;
+  }>;
+  const section =
+    sections.find(s => s.code === sectionCode) ??
+    sections.find(s => s.name === sectionName);
+  if (!section) {
+    throw new Error(`created section ${sectionCode} was not returned by API`);
+  }
+
+  return section.id;
+}
+
+/**
+ * Sets AI Chat access for a teacher-owned section after creation.  This
+ * mirrors the Cucumber `with AI chat enabled` option even when the test
+ * controller computes the default access level from the course.
+ *
+ * @param page - Playwright page holding the teacher session
+ * @param sectionId - numeric section id
+ * @param accessLevel - section ai_chat_access_level value
+ */
+async function setSectionAiChatAccessLevel(
+  page: Page,
+  sectionId: number,
+  accessLevel: 'essential_only',
+): Promise<void> {
+  const csrf = await page
+    .locator('meta[name="csrf-token"]')
+    .getAttribute('content');
+  const resp = await page.request.post(
+    `/dashboardapi/sections/${sectionId}/ai_chat_access_level`,
+    {
+      headers: {
+        'Content-Type': 'application/json',
+        'X-CSRF-Token': csrf ?? '',
+      },
+      data: {ai_chat_access_level: accessLevel},
+    },
+  );
+  if (!resp.ok()) {
+    throw new Error(
+      `set ai chat access failed: ${resp.status()} — ${await resp.text()}`,
+    );
+  }
+}
+
+/**
  * Creates a student section pre-assigned to a course unit for the currently
  * signed-in teacher (test-only API).
  * Mirrors `I create a new student section assigned to course X unit N`.
@@ -672,8 +742,14 @@ export async function createSectionWithCourse(
       `create section with course failed: ${resp.status()} — ${await resp.text()}`,
     );
   }
-  const json = (await resp.json()) as {section_code: string; id: number};
-  return {sectionCode: json.section_code, sectionId: json.id};
+  const json = (await resp.json()) as {section_code: string; id?: number};
+  const sectionId =
+    json.id ??
+    (await findCurrentTeacherSectionId(page, json.section_code, 'New Section'));
+  if (aiChatEnabled) {
+    await setSectionAiChatAccessLevel(page, sectionId, 'essential_only');
+  }
+  return {sectionCode: json.section_code, sectionId};
 }
 
 /**

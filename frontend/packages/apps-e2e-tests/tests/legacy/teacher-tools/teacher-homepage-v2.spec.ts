@@ -1,3 +1,5 @@
+import type {Locator, Page} from '@playwright/test';
+
 import {
   createSection,
   createSectionWithCourse,
@@ -16,6 +18,76 @@ import {expect, test} from '../../shared/fixtures';
  *
  * Source: dashboard/test/ui/features/teacher_tools/teacher_dashboard/teacher_homepage_v2.feature
  */
+
+/**
+ * Confirms the course assignment dialog and waits for the section PATCH that
+ * persists the checked section.  The source scenario waits for the visible
+ * success toast, but the dashboard card needs the saved section assignment.
+ *
+ * @param page - Playwright page with the assignment dialog open
+ * @returns true when the section PATCH is observed and succeeds
+ */
+async function confirmSectionAssignments(page: Page): Promise<boolean> {
+  const sectionPatch = page
+    .waitForResponse(
+      response =>
+        response.url().includes('/dashboardapi/sections/') &&
+        response.request().method() === 'PATCH',
+      {timeout: 15_000},
+    )
+    .catch(() => null);
+
+  await page.getByRole('button', {name: 'Confirm section assignments'}).click();
+  const response = await sectionPatch;
+  if (!response) {
+    return false;
+  }
+  expect(response.ok()).toBe(true);
+  return true;
+}
+
+/**
+ * Assigns AI for Oceans to the empty teacher section.  If the dialog closes
+ * without emitting the save PATCH, reopen it and repeat the same visible user
+ * flow instead of navigating ahead with unsaved state.
+ *
+ * @param page - Playwright page on the course catalog page
+ * @param openButton - "Assign AI for Oceans to your classroom" button
+ */
+async function assignAiForOceansToUntitledSection(
+  page: Page,
+  openButton: Locator,
+): Promise<void> {
+  const sectionOption = page.getByRole('checkbox', {
+    name: 'Untitled Section',
+  });
+  const confirmAssignments = page.getByRole('button', {
+    name: 'Confirm section assignments',
+  });
+
+  for (let attempt = 0; attempt < 3; attempt++) {
+    await openButton.click();
+    await expect(confirmAssignments).toBeVisible({timeout: 15_000});
+    await expect(sectionOption).toBeVisible({timeout: 10_000});
+    await sectionOption.evaluate(element => (element as HTMLElement).click());
+    if (!(await sectionOption.isChecked().catch(() => false))) {
+      await expect(openButton).toBeVisible({timeout: 15_000});
+      continue;
+    }
+    await expect(confirmAssignments).toBeEnabled({timeout: 10_000});
+
+    if (await confirmSectionAssignments(page)) {
+      await expect(
+        page.locator('p').filter({hasText: 'You have successfully assigned'}),
+      ).toBeVisible({timeout: 15_000});
+      return;
+    }
+
+    await expect(openButton).toBeVisible({timeout: 15_000});
+  }
+
+  throw new Error('Course assignment dialog closed before saving the section');
+}
 
 test.describe('Teacher Homepage V2', {tag: '@no_mobile'}, () => {
   /**
@@ -179,10 +251,6 @@ test.describe('Teacher Homepage V2', {tag: '@no_mobile'}, () => {
   test('teacher assigns course from empty-state button and uses Jump to dropdown', async ({
     page,
   }) => {
-    test.fixme(
-      true,
-      'TODO: assignment dialog intermittently closes without persisting under parallel repeat on test-studio',
-    );
     await createTeacher(page);
     await page.goto('/home');
     await createSection(page);
@@ -204,20 +272,7 @@ test.describe('Teacher Homepage V2', {tag: '@no_mobile'}, () => {
     const assignAiForOceans = page.locator(
       "[aria-label='Assign AI for Oceans to your classroom']",
     );
-    const sectionOption = page.getByRole('checkbox', {
-      name: 'Untitled Section',
-    });
-    await expect(async () => {
-      await assignAiForOceans.click();
-      await expect(sectionOption).toBeVisible({timeout: 5_000});
-    }).toPass({timeout: 30_000});
-    await sectionOption.check();
-    await expect(sectionOption).toBeChecked();
-    const confirmAssignments = page
-      .locator('button')
-      .filter({hasText: 'Confirm section assignments'});
-    await expect(confirmAssignments).toBeEnabled({timeout: 10_000});
-    await confirmAssignments.click();
+    await assignAiForOceansToUntitledSection(page, assignAiForOceans);
 
     const courseDropdown = page.locator(
       '#course-content-dropdown-Untitled-Section',

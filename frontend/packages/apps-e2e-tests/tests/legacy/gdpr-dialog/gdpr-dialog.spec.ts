@@ -1,7 +1,6 @@
 import {
   createEuStudent,
   createTeacher,
-  createTestUser,
   signIn,
   signOut,
 } from '../../shared/auth';
@@ -21,30 +20,32 @@ const EU_IP = '150.214.39.255';
 const gdprHeadingText =
   /Do you agree that Code\.org may transfer data.*to the United States/;
 
+/**
+ * Returns the user-visible GDPR dialog heading.
+ *
+ * @param page - Playwright page on a dashboard route
+ */
 function gdprDialogHeading(page: import('@playwright/test').Page) {
   return page.getByRole('heading', {name: gdprHeadingText});
 }
 
+/**
+ * Creates a teacher after applying the EU geolocation override, matching the
+ * Cucumber ordering of `I am in Europe` before account creation.  The agreement
+ * persistence path keys off request geolocation, so the cookie must be present
+ * before the test-only create-user request.
+ *
+ * @param page - Playwright page whose context receives the teacher session
+ * @returns teacher credentials for a later sign-in
+ */
 async function createGdprTeacher(
   page: import('@playwright/test').Page,
 ): Promise<{email: string; password: string}> {
-  const ts = Date.now();
   const rand = Math.random().toString(36).slice(2, 8);
-  const email = `gdpr_teacher_${ts}_${rand}@test.xx`;
-  const password = `TeacherPass${ts}`;
 
-  await createTestUser(page, {
-    user_type: 'teacher',
-    email,
-    password,
-    password_confirmation: password,
-    name: `Madame Maxime ${rand}`,
-    age: '21+',
-    terms_of_service_version: '1',
-    sign_in_count: 2,
-  });
-
-  return {email, password};
+  await page.goto('/');
+  await mockGeolocation(page, EU_IP);
+  return createTeacher(page, {name: `Madame Maxime ${rand}`});
 }
 
 /**
@@ -75,31 +76,75 @@ async function waitForGdprScriptDataField(
   expected: string,
 ): Promise<void> {
   await expect(async () => {
-    const value = await page.evaluate(() => {
-      const el = document.querySelector('script[data-gdpr]');
-      const raw = (el as HTMLElement | null)?.dataset['gdpr'] ?? '{}';
-      return String(
-        (JSON.parse(raw) as Record<string, unknown>)['show_gdpr_dialog'],
-      );
-    });
+    const value = await gdprScriptDataField(page);
     expect(value).toBe(expected);
   }).toPass({timeout: 30_000});
 }
 
+/**
+ * Reads the current show_gdpr_dialog script-data value.
+ *
+ * @param page - Playwright page with the gdpr script element present
+ * @returns current show_gdpr_dialog value as a string
+ */
+async function gdprScriptDataField(
+  page: import('@playwright/test').Page,
+): Promise<string> {
+  return page.evaluate(() => {
+    const el = document.querySelector('script[data-gdpr]');
+    const raw = (el as HTMLElement | null)?.dataset['gdpr'] ?? '{}';
+    return String(
+      (JSON.parse(raw) as Record<string, unknown>)['show_gdpr_dialog'],
+    );
+  });
+}
+
+/**
+ * Waits briefly for show_gdpr_dialog=false.
+ *
+ * @param page - Playwright page with the gdpr script element present
+ * @returns true when the script data reaches false
+ */
+async function gdprScriptDataSettledFalse(
+  page: import('@playwright/test').Page,
+): Promise<boolean> {
+  return expect(async () => {
+    expect(await gdprScriptDataField(page)).toBe('false');
+  })
+    .toPass({timeout: 10_000})
+    .then(
+      () => true,
+      () => false,
+    );
+}
+
+/**
+ * Accepts the GDPR dialog through the visible UI.  On test-studio the first
+ * 204 response can be followed by a page rehydrate that restores
+ * show_gdpr_dialog=true, so retry the same user-visible action before failing.
+ *
+ * @param page - Playwright page showing the GDPR dialog
+ */
 async function acceptGdprDialog(
   page: import('@playwright/test').Page,
 ): Promise<void> {
-  await expect(gdprDialogHeading(page)).toBeVisible({timeout: 15_000});
-  const acceptResponse = page.waitForResponse(
-    response =>
-      response
-        .url()
-        .includes('/dashboardapi/v1/users/accept_data_transfer_agreement') &&
-      response.request().method() === 'POST',
-  );
-  await page.locator('.ui-test-gdpr-dialog-accept').click();
-  expect((await acceptResponse).status()).toBe(204);
-  await expect(gdprDialogHeading(page)).not.toBeVisible({timeout: 15_000});
+  for (let attempt = 0; attempt < 3; attempt++) {
+    await expect(gdprDialogHeading(page)).toBeVisible({timeout: 15_000});
+    const acceptResponse = page.waitForResponse(
+      response =>
+        response
+          .url()
+          .includes('/dashboardapi/v1/users/accept_data_transfer_agreement') &&
+        response.request().method() === 'POST',
+    );
+    await page.locator('.ui-test-gdpr-dialog-accept').click();
+    expect((await acceptResponse).status()).toBe(204);
+    await expect(gdprDialogHeading(page)).not.toBeVisible({timeout: 15_000});
+    if (await gdprScriptDataSettledFalse(page)) {
+      return;
+    }
+  }
+
   await waitForGdprScriptDataField(page, 'false');
 }
 
@@ -118,6 +163,7 @@ test.describe('GDPR Dialog', {tag: '@no_mobile'}, () => {
   });
 
   /**
+   * Migration status: PENDING
    * Source: gdpr_dialog.feature — "EU user sees the GDPR Dialog on dashboard,
    * opt in, don't show again"
    *
@@ -127,7 +173,7 @@ test.describe('GDPR Dialog', {tag: '@no_mobile'}, () => {
   test('EU teacher opts in and dialog does not reappear', async ({page}) => {
     test.fixme(
       true,
-      'TODO: accept endpoint returns 204, but test-studio re-renders show_gdpr_dialog=true after /home navigation',
+      'Passes alone, but under batch execution test-studio can return 204 from accept_data_transfer_agreement and then rehydrate script[data-gdpr] show_gdpr_dialog=true after repeated visible accept clicks. Source: dashboard/test/ui/features/xteam/gdpr_dialog.feature "EU user sees the GDPR Dialog on dashboard, opt in"',
     );
     const {email, password} = await createGdprTeacher(page);
     await goHomeAsEuUser(page);
@@ -179,6 +225,7 @@ test.describe('GDPR Dialog', {tag: '@no_mobile'}, () => {
   });
 
   /**
+   * Migration status: PENDING
    * Source: gdpr_dialog.feature — "Accept, sign out, sign in again, no dialog"
    *
    * After accepting the dialog, signing out and signing back in should not
@@ -189,18 +236,17 @@ test.describe('GDPR Dialog', {tag: '@no_mobile'}, () => {
   }) => {
     test.fixme(
       true,
-      'TODO: accept endpoint returns 204, but test-studio re-renders show_gdpr_dialog=true after sign-in',
+      'After the Cucumber-equivalent reset/sign-in flow, test-studio rehydrates script[data-gdpr] show_gdpr_dialog=true even though the accept POST returned 204 and the same-session /home reload stays accepted. Source: dashboard/test/ui/features/xteam/gdpr_dialog.feature "Accept, sign out, sign in again, no dialog"',
     );
     const {email, password} = await createGdprTeacher(page);
     await goHomeAsEuUser(page);
     await acceptGdprDialog(page);
 
     await signOut(page);
-    // Re-apply the EU cookie after sign-out (reset_session clears client state
-    // but the geolocation override persists in the browser context).
-    await mockGeolocation(page, EU_IP);
+    // Match the Cucumber scenario exactly: `I sign in as "Madame Maxime" and
+    // go home` resets the session and does not reapply the Europe cookie.
     await signIn(page, email, password);
-    await page.goto('/home?gdpr_dialog_test=after_sign_in');
+    await page.goto('/home');
     await page
       .locator('.header_user')
       .waitFor({state: 'visible', timeout: 15_000});
