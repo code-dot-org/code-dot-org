@@ -558,6 +558,13 @@ export const levelById: (
  * Posts via `apiClient.progress.reportMilestone` and merges the result
  * into redux on success. Errors propagate to the caller (the createAsync
  * thunks below), where redux-toolkit captures them as rejected actions.
+ *
+ * @returns `true` if a report was actually sent, `false` if the call
+ * bailed early because the redux state didn't have enough context
+ * (no current lesson, no current level, or no resolvable scriptLevelId).
+ * Callers use this to decide whether follow-up dispatches make sense —
+ * e.g. `sendSubmitReport` skips its `queryUserProgress` re-query when
+ * nothing was sent.
  */
 async function sendReportHelper(
   apiClient: ApiClient,
@@ -566,15 +573,15 @@ async function sendReportHelper(
   dispatch: AppDispatch,
   getState: () => RootState,
   extraData?: OptionalMilestoneData,
-): Promise<void> {
+): Promise<boolean> {
   const state = getState().progress;
   const levelId = state.currentLevelId;
   if (!state.currentLessonId || !levelId) {
-    return;
+    return false;
   }
   const scriptLevelId = getCurrentScriptLevelId(getState());
   if (!scriptLevelId) {
-    return;
+    return false;
   }
 
   // The server does not appear to use the user ID parameter,
@@ -599,6 +606,8 @@ async function sendReportHelper(
   if (currentLevel?.parentLevelId) {
     dispatch(mergeResults({[currentLevel.parentLevelId]: result}));
   }
+
+  return true;
 }
 
 // Thunks
@@ -887,7 +896,7 @@ export const sendSubmitReport = createAsyncThunk<
   const result = payload.submitted
     ? TestResults.SUBMITTED_RESULT
     : TestResults.UNSUBMITTED_ATTEMPT;
-  await sendReportHelper(
+  const sent = await sendReportHelper(
     thunkAPI.extra.apiClient,
     payload.appType,
     result,
@@ -895,20 +904,29 @@ export const sendSubmitReport = createAsyncThunk<
     thunkAPI.getState,
     extraPayload,
   );
-  // Submit status isn't properly updated by just saving the status code, so re-query
-  // user progress to force the bubble to update.
-  thunkAPI.dispatch(
-    queryUserProgress(
-      thunkAPI.getState().currentUser?.userId?.toString() || '',
-    ),
-  );
+  // Submit status isn't properly updated by just saving the status code,
+  // so re-query user progress to force the bubble to update — but only
+  // when the milestone actually went out. A pre-flight bail (missing
+  // lesson/level/scriptLevelId) means there's nothing on the server
+  // worth refetching.
+  if (sent) {
+    thunkAPI.dispatch(
+      queryUserProgress(
+        thunkAPI.getState().currentUser?.userId?.toString() || '',
+      ),
+    );
+  }
 });
 
 // The user has successfully completed the level and the page
 // will not be reloading. Currently only used by Lab2 labs.
+//
+// The thunk return type is `Promise<void>` (per `AsyncProgressThunkAction`),
+// so we drop sendReportHelper's did-send boolean here — only the submit
+// path uses it to gate a follow-up re-query.
 export function sendSuccessReport(appType: string): AsyncProgressThunkAction {
-  return (dispatch, getState, extra) => {
-    return sendReportHelper(
+  return async (dispatch, getState, extra) => {
+    await sendReportHelper(
       extra.apiClient,
       appType,
       TestResults.ALL_PASS,

@@ -153,19 +153,17 @@ function makeLessonsWith(
 // ─── sendSubmitReport ───────────────────────────────────────────────────────
 
 describe('sendSubmitReport', () => {
-  // The three no-op tests below provide a `scriptName` even though the
-  // tested behavior doesn't depend on it. Reason: sendSubmitReport
-  // unconditionally dispatches `queryUserProgress` after the milestone
-  // helper returns (to force the bubble UI to refresh), and that thunk
-  // throws when scriptName is missing. Production callers always have a
-  // scriptName loaded by the time submit is reachable, so this matches
-  // the realistic state.
+  // sendReportHelper returns `false` from the early-bail branches, so
+  // sendSubmitReport's follow-up `queryUserProgress` dispatch is gated
+  // off. These tests can leave scriptName unset and still complete
+  // cleanly — historically the missing scriptName would surface as an
+  // unhandled rejection.
 
   it('no-ops when currentLessonId is absent', async () => {
-    const {api, reportMilestone} = makeApi();
+    const {api, reportMilestone, getUserProgress} = makeApi();
     const store = makeStore({
       api,
-      progress: {currentLevelId: 42, scriptName: 'csd-1'},
+      progress: {currentLevelId: 42},
     });
 
     await store.dispatch(
@@ -173,13 +171,15 @@ describe('sendSubmitReport', () => {
     );
 
     expect(reportMilestone).not.toHaveBeenCalled();
+    // Follow-up re-query is skipped when the helper bailed.
+    expect(getUserProgress).not.toHaveBeenCalled();
   });
 
   it('no-ops when currentLevelId is absent', async () => {
-    const {api, reportMilestone} = makeApi();
+    const {api, reportMilestone, getUserProgress} = makeApi();
     const store = makeStore({
       api,
-      progress: {currentLessonId: 1, scriptName: 'csd-1'},
+      progress: {currentLessonId: 1},
     });
 
     await store.dispatch(
@@ -187,20 +187,17 @@ describe('sendSubmitReport', () => {
     );
 
     expect(reportMilestone).not.toHaveBeenCalled();
+    expect(getUserProgress).not.toHaveBeenCalled();
   });
 
   it('no-ops when the lessons tree cannot resolve a scriptLevelId', async () => {
     // currentLessonId + currentLevelId set, but no `lessons` array — so
     // getCurrentLevel returns undefined → getCurrentScriptLevelId returns
     // undefined → the helper bails out.
-    const {api, reportMilestone} = makeApi();
+    const {api, reportMilestone, getUserProgress} = makeApi();
     const store = makeStore({
       api,
-      progress: {
-        currentLessonId: 1,
-        currentLevelId: 42,
-        scriptName: 'csd-1',
-      },
+      progress: {currentLessonId: 1, currentLevelId: 42},
     });
 
     await store.dispatch(
@@ -208,6 +205,7 @@ describe('sendSubmitReport', () => {
     );
 
     expect(reportMilestone).not.toHaveBeenCalled();
+    expect(getUserProgress).not.toHaveBeenCalled();
   });
 
   it('reports SUBMITTED_RESULT when submitted=true with submitted:"true" in extraData', async () => {
