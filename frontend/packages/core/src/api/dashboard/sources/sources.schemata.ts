@@ -1,3 +1,4 @@
+import camelcaseKeys from 'camelcase-keys';
 import {z} from 'zod';
 
 /**
@@ -65,6 +66,13 @@ export const SourcesUpdateResponseSchema = z.object({
   versionId: z.string(),
 });
 
-export const SourcesRestoreResponseSchema = z.object({
+// Wire shape (snake_case) for the restore response; consumers see the
+// camelCase shape via the transform below.
+export const SourcesRestoreResponseDefinitionSchema = z.object({
   version_id: z.string().optional(),
 });
+
+export const SourcesRestoreResponseSchema =
+  SourcesRestoreResponseDefinitionSchema.transform(data =>
+    camelcaseKeys(data, {deep: true}),
+  );

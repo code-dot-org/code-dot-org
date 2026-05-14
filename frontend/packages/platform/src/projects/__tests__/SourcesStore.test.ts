@@ -52,7 +52,7 @@ function makeApi(
       getVersionList: overrides.getVersionList ?? vi.fn().mockResolvedValue([]),
       restore:
         overrides.restore ??
-        vi.fn().mockResolvedValue({version_id: 'v-restored'}),
+        vi.fn().mockResolvedValue({versionId: 'v-restored'}),
     },
   } as unknown as ApiClient;
 }
@@ -248,7 +248,7 @@ describe('SourcesStore.getVersionList', () => {
 });
 
 describe('SourcesStore.restore', () => {
-  it('records the returned version_id and invalidates the detail key', async () => {
+  it('records the returned versionId and invalidates the detail key', async () => {
     const store = new SourcesStore();
     const api = makeApi();
     const query = makeQuery();
@@ -265,7 +265,7 @@ describe('SourcesStore.restore', () => {
     });
   });
 
-  it('still invalidates when the response has no version_id', async () => {
+  it('still invalidates when the response has no versionId', async () => {
     const store = new SourcesStore();
     const api = makeApi({
       restore: vi.fn().mockResolvedValue(undefined),

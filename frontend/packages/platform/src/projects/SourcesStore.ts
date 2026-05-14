@@ -104,8 +104,8 @@ export class SourcesStore {
     versionId: string,
   ) {
     const body = await api.sources.restore({channelId, versionId});
-    if (body?.version_id) {
-      this.currentVersionId = body.version_id;
+    if (body?.versionId) {
+      this.currentVersionId = body.versionId;
     }
     this.lastNewVersionTime = Date.now();
 
