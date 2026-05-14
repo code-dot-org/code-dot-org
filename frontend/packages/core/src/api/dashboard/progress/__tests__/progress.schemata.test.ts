@@ -3,53 +3,19 @@ import {describe, expect, it} from 'vitest';
 import {
   MilestoneReportSchema,
   OptionalMilestoneDataSchema,
-  UnitProgressDefinitionSchema,
   UnitProgressSchema,
-  UserProgressResponseDefinitionSchema,
   UserProgressResponseSchema,
 } from '../progress.schemata';
 
-describe('UnitProgressDefinitionSchema (wire shape)', () => {
+describe('UnitProgressSchema', () => {
   it('accepts the minimal canonical shape', () => {
-    const out = UnitProgressDefinitionSchema.parse({status: 'perfect'});
+    const out = UnitProgressSchema.parse({status: 'perfect'});
     expect(out.status).toBe('perfect');
-    // All other fields are optional — they should be absent (not coerced
-    // to null/undefined slots) so server omissions stay omissions.
+    // Optional fields stay absent rather than becoming undefined slots.
     expect(Object.keys(out)).toEqual(['status']);
   });
 
-  it('threads through all optional snake_case fields verbatim', () => {
-    const input = {
-      status: 'submitted',
-      last_progress_at: 1715600000,
-      locked: true,
-      pages_completed: [100, 0, 20],
-      paired: false,
-      result: 100,
-      teacher_feedback_commented: true,
-      teacher_feedback_review_state: 'completed',
-      teacher_feedback_new: false,
-      time_spent: 600,
-    };
-    expect(UnitProgressDefinitionSchema.parse(input)).toEqual(input);
-  });
-
-  it('rejects when status is missing', () => {
-    expect(() => UnitProgressDefinitionSchema.parse({})).toThrow();
-  });
-
-  it('rejects pages_completed entries that are not numbers', () => {
-    expect(() =>
-      UnitProgressDefinitionSchema.parse({
-        status: 'perfect',
-        pages_completed: ['100', 0],
-      }),
-    ).toThrow();
-  });
-});
-
-describe('UnitProgressSchema (camelCase consumer shape)', () => {
-  it('renames snake_case fields to camelCase via the transform', () => {
+  it('accepts and converts snake_case wire fields to camelCase', () => {
     const out = UnitProgressSchema.parse({
       status: 'submitted',
       last_progress_at: 1715600000,
@@ -70,6 +36,16 @@ describe('UnitProgressSchema (camelCase consumer shape)', () => {
     });
   });
 
+  it('accepts camelCase input too (preprocess is idempotent)', () => {
+    const input = {
+      status: 'submitted',
+      lastProgressAt: 1715600000,
+      pagesCompleted: [100, 0],
+      timeSpent: 30,
+    };
+    expect(UnitProgressSchema.parse(input)).toEqual(input);
+  });
+
   it('leaves single-word fields untouched', () => {
     const out = UnitProgressSchema.parse({
       status: 'perfect',
@@ -83,6 +59,19 @@ describe('UnitProgressSchema (camelCase consumer shape)', () => {
       paired: false,
       result: 100,
     });
+  });
+
+  it('rejects when status is missing', () => {
+    expect(() => UnitProgressSchema.parse({})).toThrow();
+  });
+
+  it('rejects pagesCompleted entries that are not TestResult values', () => {
+    expect(() =>
+      UnitProgressSchema.parse({
+        status: 'perfect',
+        pages_completed: ['100', 0],
+      }),
+    ).toThrow();
   });
 });
 
@@ -147,20 +136,6 @@ describe('MilestoneReportSchema', () => {
     ).toThrow();
     expect(() =>
       MilestoneReportSchema.parse({result: true, testResult: 100}),
-    ).toThrow();
-  });
-});
-
-describe('UserProgressResponseDefinitionSchema (wire shape)', () => {
-  it('accepts an empty object (new user, no progress yet)', () => {
-    expect(UserProgressResponseDefinitionSchema.parse({})).toEqual({});
-  });
-
-  it('rejects malformed progress entries', () => {
-    expect(() =>
-      UserProgressResponseDefinitionSchema.parse({
-        progress: {100: {/* missing status */ result: 100}},
-      }),
     ).toThrow();
   });
 });
