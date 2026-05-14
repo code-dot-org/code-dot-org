@@ -11,11 +11,15 @@ import {expect, test} from '../../shared/fixtures';
  */
 
 test.describe('Map level', () => {
+  /**
+   * Migration status: COMPLETED
+   * Source: dashboard/test/ui/features/teacher_tools/level_types/map_level.feature
+   * Scenario: Map level displays content
+   */
   test(
     'map level displays content inside the iframe',
     {tag: '@no_mobile'},
     async ({studentPage}) => {
-      // Scenario: Map level displays content
       await studentPage.goto(
         '/courses/allthethingscourse/units/1/lessons/35/levels/1?noautoplay=true',
       );

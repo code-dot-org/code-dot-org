@@ -28,18 +28,26 @@ async function waitForMilestonePost(
  * All scenarios tagged @no_mobile per the source feature.
  */
 test.describe('Match — lesson 11', () => {
+  /**
+   * Migration status: COMPLETED
+   * Source: dashboard/test/ui/features/teacher_tools/level_types/match.feature
+   * Scenario: Loading the level
+   */
   test('loading the level shows question text', async ({page}) => {
-    // Scenario: Loading the level
     const match = new Match(page);
     await match.gotoLevel(1);
     await expect(match.questionText).toHaveText('Match the puzzles and blocks');
   });
 
+  /**
+   * Migration status: COMPLETED
+   * Source: dashboard/test/ui/features/teacher_tools/level_types/match.feature
+   * Scenario: Solving puzzle
+   */
   test(
     'solving all four answers shows correct modal',
     {tag: '@no_mobile'},
     async ({page}) => {
-      // Scenario: Solving puzzle
       // Dismiss the login reminder (sign-in callout) before dragging.
       const match = new Match(page);
       await match.gotoLevel(1);
@@ -59,6 +67,8 @@ test.describe('Match — lesson 11', () => {
 // ─── Match — signed-in student, incorrect solution persisted on reload ────────
 
 /**
+ * Migration status: COMPLETED
+ * Source: dashboard/test/ui/features/teacher_tools/level_types/match.feature
  * Scenario: Submitting an incorrect solution
  * Requires a signed-in student (@as_student @no_mobile).
  * Drags answers in reverse order (wrong solution), submits, verifies the
@@ -69,7 +79,6 @@ test.describe('Match — incorrect solution persists', () => {
     'submitting incorrect solution shows xmark; answers reload from server',
     {tag: '@no_mobile'},
     async ({studentPage}) => {
-      // Scenario: Submitting an incorrect solution
       const match = new Match(studentPage);
       await match.gotoLevel(1, {resetSession: false});
 

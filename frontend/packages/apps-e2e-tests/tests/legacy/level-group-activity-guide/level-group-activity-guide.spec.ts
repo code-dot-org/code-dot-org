@@ -18,10 +18,14 @@ const LESSON_53_L2 =
 // ─── Scenario 1 — @as_student: submit activity guide and advance ──────────────
 
 test.describe('Level group activity guide — submit and advance', () => {
+  /**
+   * Migration status: COMPLETED
+   * Source: dashboard/test/ui/features/teacher_tools/level_types/level_group_activity_guide.feature
+   * Scenario: Submit activity guide and go to next level.
+   */
   test('submit activity guide navigates to next level', async ({
     studentPage,
   }) => {
-    // Scenario: Submit activity guide and go to next level.
     await studentPage.goto(LESSON_53_L1);
     await studentPage
       .locator('.submitButton')
@@ -39,6 +43,13 @@ test.describe('Level group activity guide — submit and advance', () => {
 // ─── Scenarios 2–3 — teacher-associated student: teacher views summary ────────
 
 test.describe('Level group activity guide — teacher views summary', () => {
+  /**
+   * Submits a level group activity guide as a student, then signs in as the
+   * teacher and opens the student response summary.
+   *
+   * @param page - Playwright page
+   * @param levelUrl - activity-guide level URL to exercise
+   */
   async function studentSubmitAndTeacherViewSummary(
     page: Page,
     levelUrl: string,
@@ -74,22 +85,30 @@ test.describe('Level group activity guide — teacher views summary', () => {
       .waitFor({state: 'visible', timeout: 30_000});
   }
 
+  /**
+   * Migration status: COMPLETED
+   * Source: dashboard/test/ui/features/teacher_tools/level_types/level_group_activity_guide.feature
+   * Scenario: Teacher can view student summary of responses.
+   */
   test(
     'teacher can view student summary of responses on standard level',
     {tag: '@no_mobile'},
     async ({page}) => {
       test.slow();
-      // Scenario: Teacher can view student summary of responses.
       await studentSubmitAndTeacherViewSummary(page, LESSON_53_L1);
     },
   );
 
+  /**
+   * Migration status: COMPLETED
+   * Source: dashboard/test/ui/features/teacher_tools/level_types/level_group_activity_guide.feature
+   * Scenario: Teacher can view student summary of responses on level marked as assessment
+   */
   test(
     'teacher can view student summary of responses on assessment-marked level',
     {tag: '@no_mobile'},
     async ({page}) => {
       test.slow();
-      // Scenario: Teacher can view student summary of responses on level marked as assessment
       await studentSubmitAndTeacherViewSummary(page, LESSON_53_L2);
     },
   );
@@ -98,10 +117,14 @@ test.describe('Level group activity guide — teacher views summary', () => {
 // ─── Scenario 4 — teacher-associated student: numbered bubbles in header ──────
 
 test.describe('Level group activity guide — numbered header bubbles', () => {
+  /**
+   * Migration status: COMPLETED
+   * Source: dashboard/test/ui/features/teacher_tools/level_types/level_group_activity_guide.feature
+   * Scenario: Student can see level numbers for level group levels in header.
+   */
   test('student sees level numbers for activity guide levels in header', async ({
     page,
   }) => {
-    // Scenario: Student can see level numbers for level group levels in header.
     await createTeacherAssociatedStudent(page);
 
     await page.goto(LESSON_53_L1);

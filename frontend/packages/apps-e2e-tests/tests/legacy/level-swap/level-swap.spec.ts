@@ -82,10 +82,14 @@ test.describe('Level swap — active version', () => {
     );
   });
 
+  /**
+   * Migration status: COMPLETED
+   * Source: dashboard/test/ui/features/teacher_tools/level_types/level_swap.feature
+   * Scenario: Signed-in student without progress sees active version
+   */
   test('signed-in student without progress sees active version', async ({
     studentPage,
   }) => {
-    // Source: level_swap.feature "Signed-in student without progress sees active version"
     await studentPage.goto(`${LESSON_29}/1`);
     await expect(studentPage.locator('.instructions-markdown')).toContainText(
       'Guide me to the green evilness!',
@@ -111,12 +115,15 @@ test.describe('Level swap — active version', () => {
 // ─── Swapped version — student who completed the old version sees old text ────
 
 test.describe('Level swap — student with progress', () => {
+  /**
+   * Migration status: COMPLETED
+   * Source: dashboard/test/ui/features/teacher_tools/level_types/level_swap.feature
+   * Scenario: Student with progress sees old version
+   */
   test(
     'student with progress sees old version',
     {tag: '@no_mobile'},
     async ({studentPage}) => {
-      // Source: level_swap.feature "Student with progress sees old version"
-
       // Complete level 1 (maze: two move forward blocks).
       await studentPage.goto(
         `${LESSON_29}/1?level_name=2-3+Maze+1&noautoplay=true`,
