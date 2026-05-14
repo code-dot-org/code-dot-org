@@ -3943,6 +3943,7 @@ __metadata:
     tldts: "npm:^7.0.23"
     zod: "npm:^4.3.6"
   peerDependencies:
+    "@reduxjs/toolkit": ^2.8.2
     "@sentry/browser": ^10.51.0
     "@statsig/js-client": ^3.20.2
     "@statsig/session-replay": ^3.20.2
@@ -3952,8 +3953,11 @@ __metadata:
     ky: ^1.14.3
     query-string: ^9.3.1
     react: ^18.0.0 || ^19.0.0
+    react-redux: ^9.2.0
     uuid: ">=8.3.2"
   peerDependenciesMeta:
+    "@reduxjs/toolkit":
+      optional: true
     "@statsig/js-client":
       optional: true
     "@statsig/session-replay":
@@ -3963,6 +3967,8 @@ __metadata:
     js-cookie:
       optional: true
     query-string:
+      optional: true
+    react-redux:
       optional: true
   languageName: node
   linkType: soft
