@@ -16,13 +16,21 @@ test.describe('Public project gallery — signed out', () => {
     await new PublicProjectGalleryPage(page).goto();
   });
 
+  /**
+   * Migration status: COMPLETED
+   * Source: dashboard/test/ui/features/teacher_tools/projects/public_project_gallery_signed_out.feature
+   * Scenario: Public Gallery Shows Expected Elements
+   */
   test('gallery shows expected elements', async ({page}) => {
-    // Scenario: Public Gallery Shows Expected Elements
     await new PublicProjectGalleryPage(page).expectExpectedElements();
   });
 
+  /**
+   * Migration status: COMPLETED
+   * Source: dashboard/test/ui/features/teacher_tools/projects/public_project_gallery_signed_out.feature
+   * Scenario: Public Gallery Shows Expected Project Types
+   */
   test('gallery shows expected project types', async ({page}) => {
-    // Scenario: Public Gallery Shows Expected Project Types
     await new PublicProjectGalleryPage(page).expectProjectTypes();
   });
 });

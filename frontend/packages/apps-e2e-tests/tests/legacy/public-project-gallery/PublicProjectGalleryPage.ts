@@ -38,9 +38,7 @@ export class PublicProjectGalleryPage {
       .locator('.ui-project-app-type-area')
       .first()
       .waitFor({state: 'attached'});
-    await expect(
-      this.page.locator('.ui-project-app-type-area'),
-    ).not.toHaveCount(0);
+    await expect(this.page.locator('.ui-project-app-type-area')).toHaveCount(1);
     await expect(this.page.locator('.ui-featured')).toContainText(
       'Featured Projects',
     );

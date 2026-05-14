@@ -34,6 +34,9 @@ export class InstructorInTrainingPage {
   /** Bubble-choice level container. */
   readonly bubbleChoice: Locator;
 
+  /** Visible choice prompt on bubble-choice levels. */
+  readonly bubbleChoicePrompt: Locator;
+
   /** Level-group level container. */
   readonly levelGroup: Locator;
 
@@ -49,6 +52,9 @@ export class InstructorInTrainingPage {
     this.freeResponse = page.locator('.free-response');
     this.externalLevel = page.locator('.external');
     this.bubbleChoice = page.locator('.bubble-choice');
+    this.bubbleChoicePrompt = page.getByRole('heading', {
+      name: 'Choose from the following activities:',
+    });
     this.levelGroup = page.locator('.level-group');
     this.submitButton = page.locator('.submitButton');
   }
@@ -173,6 +179,8 @@ export class InstructorInTrainingPage {
    */
   async expectNoTeacherOnlyLevelContent(readyLocator: Locator): Promise<void> {
     await expect(readyLocator).toBeVisible({timeout: 45_000});
-    await expect(this.teacherOnlyContent).toBeHidden();
+    await expect(this.teacherOnlyContent.filter({visible: true})).toHaveCount(
+      0,
+    );
   }
 }
