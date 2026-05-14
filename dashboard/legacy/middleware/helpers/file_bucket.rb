@@ -6,7 +6,7 @@ class FileBucket < BucketHelper
   MAXIMUM_FILENAME_LENGTH = 512
 
   def initialize
-    super CDO.files_s3_bucket, CDO.files_s3_directory
+    super(CDO.files_s3_bucket, CDO.files_s3_directory)
   end
 
   def allowed_file_type?(extension)
@@ -45,7 +45,7 @@ class FileBucket < BucketHelper
   def copy_files(src_channel, dest_channel, options = {})
     # copy everything except the manifest
     options[:exclude_filenames] = [MANIFEST_FILENAME]
-    result = super src_channel, dest_channel, options
+    result = super
     # return right away if there are no files in the source project
     return [] if result.empty?
 

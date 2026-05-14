@@ -1,9 +1,10 @@
-import Typography, {Heading1} from '@code-dot-org/component-library/typography';
+import {Typography} from '@mui/material';
 import classNames from 'classnames';
 import _ from 'lodash';
 import React, {useCallback, useEffect, useState} from 'react';
 import {matchPath, useLocation} from 'react-router-dom';
 
+import DemoChip from '@cdo/apps/templates/DemoChip';
 import {
   convertStudentDataToArray,
   filterAgeGatedStudents,
@@ -11,7 +12,6 @@ import {
 } from '@cdo/apps/templates/manageStudents/manageStudentsRedux';
 import {AgeGatedStudentsBanner} from '@cdo/apps/templates/policy_compliance/AgeGatedStudentsModal/AgeGatedStudentsBanner';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
-import i18n from '@cdo/locale';
 
 import {selectedSectionSelector} from '../teacherDashboard/teacherSectionsReduxSelectors';
 
@@ -22,12 +22,13 @@ import skeletonizeContent from '@cdo/apps/sharedComponents/skeletonize-content.m
 
 const skeletonSectionName = (
   <Typography
-    semanticTag={'h2'}
-    visualAppearance={'overline-two'}
     className={classNames(
       skeletonizeContent.skeletonizeContent,
       styles.skeletonHeaderSectionName
     )}
+    component="h2"
+    variant="overline2"
+    gutterBottom
   >
     SKELETON SECTION NAME
   </Typography>
@@ -42,10 +43,6 @@ const PageHeader: React.FC<{urlSectionId: string}> = ({urlSectionId}) => {
     setAgeGatedModalOpen(!ageGatedModalOpen);
   }, [ageGatedModalOpen]);
   const selectedSection = useAppSelector(selectedSectionSelector);
-
-  const showProgressV2 = useAppSelector(
-    state => state.currentUser.showProgressTableV2
-  );
 
   const dispatch = useAppDispatch();
   useEffect(() => {
@@ -65,35 +62,40 @@ const PageHeader: React.FC<{urlSectionId: string}> = ({urlSectionId}) => {
   const showAgeGatedStudentsBanner = ageGatedStudents?.length > 0;
 
   const location = useLocation();
-  const pathName = React.useMemo(() => {
-    const result =
+  const pathName = React.useMemo(
+    () =>
       _.find(
         LABELED_TEACHER_NAVIGATION_PATHS,
         path => matchPath(path.absoluteUrl, location.pathname) !== null
-      )?.label || 'unknown path';
-
-    if (result === 'Progress' && showProgressV2 === 'legacy') {
-      return i18n.progressLegacy();
-    }
-    return result;
-  }, [location, showProgressV2]);
+      )?.label || 'unknown path',
+    [location]
+  );
 
   const sectionNameText = selectedSection ? selectedSection.name : '';
 
   const sectionName = (
-    <Typography
-      semanticTag={'h2'}
-      visualAppearance={'overline-two'}
-      className={styles.headerSectionName}
-    >
-      {sectionNameText}
-    </Typography>
+    <div className={styles.headerSectionNameRow}>
+      <Typography
+        className={styles.headerSectionName}
+        component="h2"
+        variant="overline2"
+      >
+        {sectionNameText}
+      </Typography>
+      {selectedSection?.demoType && (
+        <Typography component="span" variant="overline2">
+          <DemoChip />
+        </Typography>
+      )}
+    </div>
   );
 
   return (
     <div className={styles.header}>
       {isLoadingSectionData ? skeletonSectionName : sectionName}
-      <Heading1>{pathName}</Heading1>
+      <Typography variant="h1" gutterBottom>
+        {pathName}
+      </Typography>
       {showAgeGatedStudentsBanner && (
         <AgeGatedStudentsBanner
           toggleModal={toggleAgeGatedModal}

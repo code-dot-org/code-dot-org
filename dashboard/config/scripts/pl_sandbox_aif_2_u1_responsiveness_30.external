@@ -5,10 +5,10 @@ description 'description here'
 markdown <<MARKDOWN
 # What is a Web App?
 
-#### A **web app (web application)** is a program that runs in a web browser—like Chrome, Safari, or Edge—instead of being installed on your computer or phone. It combines web technologies such as HTML, CSS, and JavaScript to create an interactive experience for users.
+A **web app (web application)** is a program that runs in a web browser—like Chrome, Safari, or Edge—instead of being installed on your computer or phone. It combines web technologies such as HTML, CSS, and JavaScript to create an interactive experience for users.
 
 
-#### Whereas a **website** usually displays static information (like an online brochure or article), a web app lets users do something—such as submit a form, play a game, generate text with AI, or draw on a canvas.
+Whereas a **website** usually displays static information (like an online brochure or article), a web app lets users do something—such as submit a form, play a game, generate text with AI, or draw on a canvas.
 
 ___
 
@@ -23,7 +23,7 @@ ___
 
 ## Key Components
 
-#### A web app is built using three core web technologies, and students can now use AI tools to assist in their development process.
+A web app is built using three core web technologies, and students can now use AI tools to assist in their development process.
 
 <!-- Web Development Concepts Cards -->
 <div style="display: flex; justify-content: center; flex-wrap: wrap; gap: 20px; max-width: 1200px; margin: auto;">
@@ -64,15 +64,15 @@ ___
 
 ## Why it matters for students:
 
-#### **Building web apps helps students:**
-- #### See the connection between code and creativity.
-- #### Practice problem-solving and computational thinking.
-- #### Understand how many of the tools they use every day (from Google Docs to ChatGPT) are built with the same foundational technologies.
+**Building web apps helps students:**
+- See the connection between code and creativity.
+- Practice problem-solving and computational thinking.
+- Understand how many of the tools they use every day (from Google Docs to ChatGPT) are built with the same foundational technologies.
 
 
 ## Next Up
 
-#### Let's take a look at the final project the students will create in this unit. 
+Let's take a look at the final project the students will create in this unit. 
 
 ![]()
 MARKDOWN

@@ -292,11 +292,11 @@ class BubbleChoice < DSLDefined
   end
 
   def icon
-    'fa fa-sitemap'
+    'fa-solid fa-sitemap'
   end
 
   def clone_with_suffix(new_suffix, editor_experiment: nil)
-    level = super(new_suffix, editor_experiment: editor_experiment)
+    level = super
 
     level.rewrite_dsl_file(BubbleChoiceDSL.serialize(level))
     level
@@ -304,7 +304,7 @@ class BubbleChoice < DSLDefined
 
   def self.setup(data, md5)
     sublevel_names = data[:properties].delete(:sublevels)
-    level = super(data, md5)
+    level = super
     level.setup_sublevels(sublevel_names)
     level
   end

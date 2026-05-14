@@ -5,7 +5,7 @@ import {Provider} from 'react-redux';
 import AiDiffFloatingActionButton from '@cdo/apps/aiDifferentiation/AiDiffFloatingActionButton';
 import ScriptLevelRedirectDialog from '@cdo/apps/code-studio/components/ScriptLevelRedirectDialog';
 import {setIsMiniView} from '@cdo/apps/code-studio/progressRedux';
-import {EVENTS, PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants';
+import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import {getStore, registerReducers} from '@cdo/apps/redux';
 import instructions, {
@@ -46,7 +46,10 @@ function initPage() {
         scriptName={config.script_name}
         courseName={config.course_name}
       />,
-      redirectDialogMountPoint
+      redirectDialogMountPoint,
+      {
+        legacyReactDomRender: true,
+      }
     );
   }
 
@@ -79,7 +82,10 @@ function initPage() {
             canDefaultOpen={false}
           />
         </Provider>,
-        aiDiffFabMountPoint
+        aiDiffFabMountPoint,
+        {
+          legacyReactDomRender: true,
+        }
       );
     }
   };
@@ -111,14 +117,10 @@ function initPage() {
         rubric.learningGoals.some(lg => lg.aiEnabled) &&
         config.level_name === rubric.level.name
       ) {
-        analyticsReporter.sendEvent(
-          EVENTS.TA_RUBRIC_AI_PAGE_VISITED,
-          {
-            ...reportingData,
-            studentId: !!studentLevelInfo ? studentLevelInfo.user_id : '',
-          },
-          PLATFORMS.STATSIG
-        );
+        analyticsReporter.sendEvent(EVENTS.TA_RUBRIC_AI_PAGE_VISITED, {
+          ...reportingData,
+          studentId: !!studentLevelInfo ? studentLevelInfo.user_id : '',
+        });
       }
       createReactRoot(
         <Provider store={getStore()}>
@@ -133,7 +135,10 @@ function initPage() {
             levelType={levelType}
           />
         </Provider>,
-        rubricFabMountPoint
+        rubricFabMountPoint,
+        {
+          legacyReactDomRender: true,
+        }
       );
     } else {
       renderAiDiffButton();

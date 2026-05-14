@@ -1,7 +1,7 @@
 import {installCustomBlocks} from '@cdo/apps/block_utils';
 import commonBlocks from '@cdo/apps/blocksCommon';
 import initializeBlockPreview from '@cdo/apps/code-studio/initializeBlockPreview';
-import initializeCodeMirror from '@cdo/apps/code-studio/initializeCodeMirror';
+import initializeCodeMirror6 from '@cdo/apps/code-studio/initializeCodeMirror6';
 import getScriptData from '@cdo/apps/util/getScriptData';
 
 const data = getScriptData('pageOptions');
@@ -89,7 +89,7 @@ Object.keys(fieldConfig).forEach(key => {
   if (!element) {
     return;
   }
-  config.editor = initializeCodeMirror(config.codemirror, mode);
+  config.editor = initializeCodeMirror6(config.codemirror, mode);
   if (config.blockPreview && !data.uses_droplet) {
     initializeBlockPreview(
       config.editor,

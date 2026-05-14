@@ -28,12 +28,6 @@ if CDO.use_geolocation_override
   use Rack::GeolocationOverride
 end
 
-require 'cdo/rack/global_edition'
-use Rack::GlobalEdition
-
-require 'varnish_environment'
-use VarnishEnvironment
-
 unless CDO.chef_managed
   # Only Chef-managed environments run an HTTP-cache service alongside the Rack app.
   # For other environments (development / CI), run the HTTP cache from Rack middleware.

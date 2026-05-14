@@ -53,7 +53,7 @@ class UnitTest < ActiveSupport::TestCase
   end
 
   def populate_cache_and_disconnect_db
-    Unit.stubs(:should_cache?).returns true
+    setup_script_cache
     # Only need to populate cache once per test-suite run
     @@script_cached ||= Unit.unit_cache_to_cache
     Unit.script_cache
@@ -431,7 +431,7 @@ class UnitTest < ActiveSupport::TestCase
   end
 
   test 'has_other_versions? makes no queries when there is one other unit group version' do
-    Unit.stubs(:should_cache?).returns true
+    setup_script_cache
 
     csp_2017 = create(:unit_group, name: 'csp-2017', family_name: 'csp', version_year: '2017')
     csp1_2017 = create(:script, name: 'csp1-2017')
@@ -450,7 +450,7 @@ class UnitTest < ActiveSupport::TestCase
   end
 
   test 'has_other_versions? makes no queries when there are no other unit group versions' do
-    Unit.stubs(:should_cache?).returns true
+    setup_script_cache
 
     csp_2017 = create(:unit_group, name: 'csp-2017', family_name: 'csp', version_year: '2017')
     csp1_2017 = create(:script, name: 'csp1-2017')
@@ -1745,11 +1745,6 @@ class UnitTest < ActiveSupport::TestCase
     refute @hoc_unit.show_unit_overview_between_lessons?
   end
 
-  test "has_standards_associations?" do
-    assert @csf_unit_2019.has_standards_associations?
-    refute @csp_unit.has_standards_associations?
-  end
-
   test 'all_descendant_levels returns nested levels of all types' do
     # simple level
     level1 = create(:level, name: 'level1')
@@ -2247,8 +2242,6 @@ class UnitTest < ActiveSupport::TestCase
   end
 
   test 'is ai assessment enabled' do
-    LearningGoal.any_instance.stubs(:validate_ai_config).returns(true)
-
     unit_without_rubrics = create(:unit, :with_levels)
 
     unit_with_non_ai_rubric = create(:unit, :with_levels)
@@ -2272,15 +2265,6 @@ class UnitTest < ActiveSupport::TestCase
     assert unit.summarize[:hasUnnumberedLessons]
     unit.update!(has_unnumbered_lessons: false)
     refute unit.summarize[:hasUnnumberedLessons]
-  end
-
-  test 'has ai tutor level' do
-    unit_without_ai_tutor = create(:unit)
-    refute unit_without_ai_tutor.has_ai_tutor_level?
-
-    unit_with_ai_tutor = create(:unit, :with_levels)
-    unit_with_ai_tutor.levels[0].update!(ai_tutor_available: true)
-    assert unit_with_ai_tutor.has_ai_tutor_level?
   end
 
   test 'with_ai_chat_tools returns units with essential or optional AI chat tools' do

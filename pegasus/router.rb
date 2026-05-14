@@ -1,6 +1,5 @@
 require_relative 'src/env'
 require 'rack'
-require 'cdo/rack/locale'
 require 'sinatra/base'
 require 'cdo/sinatra'
 require 'cdo/geocoder'
@@ -35,11 +34,8 @@ require 'honeybadger'
 require src_dir 'database'
 require src_dir 'social_metadata'
 require src_dir 'forms'
-if CDO.has_pegasus_content
-  require src_dir 'curriculum_router'
-  require src_dir 'homepage'
-end
 require 'cdo/hamburger'
+require 'cdo/brand'
 
 require pegasus_dir 'helper_modules/multiple_extname_file_utils'
 
@@ -74,7 +70,6 @@ class Documents < Sinatra::Base
     configs
   end
 
-  use Rack::Locale
   use Rack::CdoDeflater
   use Rack::UpgradeInsecureRequests
 
@@ -242,22 +237,6 @@ class Documents < Sinatra::Base
 
     if @header['content-type']
       response.headers['Content-Type'] = @header['content-type']
-    end
-
-    if CDO.has_pegasus_content
-      layout = @header['layout'] || 'default'
-      unless ['', 'none'].include?(layout)
-        template = resolve_template('layouts', settings.template_extnames, layout)
-        raise Exception, "'#{layout}' layout not found." unless template
-        body render_template(template, {body: body.join.html_safe})
-      end
-
-      theme = @header['theme'] || 'default'
-      unless ['', 'none'].include?(theme)
-        template = resolve_template('themes', settings.template_extnames, theme)
-        raise Exception, "'#{theme}' theme not found." unless template
-        body render_template(template, {body: body.join.html_safe})
-      end
     end
   end
 
@@ -661,9 +640,5 @@ class Documents < Sinatra::Base
 
     # Load helpers
     load pegasus_dir('helpers.rb')
-  end
-
-  if CDO.has_pegasus_content
-    use CurriculumRouter
   end
 end

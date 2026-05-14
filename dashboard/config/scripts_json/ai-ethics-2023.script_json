@@ -12,7 +12,26 @@
       "show_calendar": true,
       "supported_locales": [
         "es-MX",
-        "fa-IR"
+        "fa-IR",
+        "ar-SA",
+        "cs-CZ",
+        "de-DE",
+        "es-ES",
+        "fr-FR",
+        "hi-IN",
+        "id-ID",
+        "kn-IN",
+        "ko-KR",
+        "pl-PL",
+        "mr-IN",
+        "pt-BR",
+        "sk-SK",
+        "ta-IN",
+        "te-IN",
+        "th-TH",
+        "tr-TR",
+        "zh-CN",
+        "zh-TW"
       ],
       "topic_tags": [
         "ai"
@@ -22,7 +41,8 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-03-28 09:29:20 UTC",
+    "serialized_at": "2026-03-07 04:55:51 UTC",
+    "hide_within_course": false,
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,

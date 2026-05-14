@@ -1,0 +1,14 @@
+name 'designing-reliable-apps-preassessment-q1_2025'
+
+question 'What is the primary purpose of an Application Programming Interface (API) in web development?'
+
+wrong 'To store a website\'s images and files on the user\'s device so pages load faster'
+right 'To define the rules that allow different software applications to communicate and share data'
+wrong 'To describe the visual layout of a web page using style rules'
+wrong 'To compile JavaScript code into a format that browsers can execute'
+
+allow_multiple_attempts true
+
+teacher_markdown <<MARKDOWN
+Lesson 1
+MARKDOWN

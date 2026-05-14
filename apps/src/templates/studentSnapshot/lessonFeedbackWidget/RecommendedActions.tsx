@@ -1,7 +1,9 @@
-import {Button} from '@code-dot-org/component-library/button';
-import {BodyFourText} from '@code-dot-org/component-library/typography';
+import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
+import {Typography, Button as MuiButton} from '@mui/material';
 import React from 'react';
 
+import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
+import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import i18n from '@cdo/locale';
 
 import AddResourceDialog from './AddResourceDialog';
@@ -59,6 +61,10 @@ const RecommendedActions: React.FC<RecommendedActionsProps> = ({
         resource_link: tempResourceLink,
       };
       setResourceData([newResource]);
+      analyticsReporter.sendEvent(
+        EVENTS.LESSON_SNAPSHOT_RESOURCE_LINK_ADDED,
+        {}
+      );
       handleCloseResourcePopup();
     }
   };
@@ -114,9 +120,9 @@ const RecommendedActions: React.FC<RecommendedActionsProps> = ({
       <label className={styles.typographyLabelTwo}>
         {i18n.lessonFeedbackRecommendedAction()}
       </label>
-      <BodyFourText noMargin>
+      <Typography variant="body4">
         {i18n.lessonFeedbackRecommendedActionDirections()}
-      </BodyFourText>
+      </Typography>
       <div className={styles.inputWrapper}>
         <input
           className={styles.inputBox}
@@ -126,19 +132,23 @@ const RecommendedActions: React.FC<RecommendedActionsProps> = ({
           onChange={handleRecommendedActionInputChange}
         />
         <div className={styles.resourceRow}>
-          <Button
-            text={'Add resource link'}
-            size="xs"
-            type="secondary"
-            color="gray"
+          <MuiButton
+            variant="outlined"
+            color="tertiary"
+            size="extraSmall"
             disabled={!!resourceData[0]?.resource_name}
-            iconLeft={{
-              iconStyle: 'solid',
-              iconName: 'plus',
-              title: 'Add Resource',
-            }}
             onClick={handleAddResourceClick}
-          />
+            type="button"
+            startIcon={
+              <FontAwesomeV6Icon
+                iconStyle="solid"
+                iconName="plus"
+                title="Add Resource"
+              />
+            }
+          >
+            {'Add resource link'}
+          </MuiButton>
           {resourceData[0]?.resource_name && resourceData[0]?.resource_link && (
             <UrlTab
               urlName={resourceData[0]?.resource_name}

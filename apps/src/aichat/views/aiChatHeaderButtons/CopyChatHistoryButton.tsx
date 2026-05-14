@@ -1,32 +1,46 @@
+import moment from 'moment';
 import React from 'react';
-import {useSelector} from 'react-redux';
 
+import {MODEL_PARAMETER_LABELS} from '@cdo/apps/aichat/constants';
 import {selectAllVisibleMessages, sendAnalytics} from '@cdo/apps/aichat/redux';
-import IconButtonWithTooltip from '@cdo/apps/lab2/views/components/IconButtonWithTooltip';
-import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
-import copyToClipboard from '@cdo/apps/util/copyToClipboard';
-import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
-import {AiInteractionStatus as Status} from '@cdo/generated-scripts/sharedConstants';
-
-import aichatI18n from '../../locale';
-import {timestampToDateTime} from '../../redux/utils';
 import {
   ChatEvent,
+  ChatEventDescriptionKey,
   isChatMessage,
   isModelUpdate,
   isNotification,
-} from '../../types';
-import {AI_CUSTOMIZATIONS_LABELS} from '../modelCustomization/constants';
+  isUserActionEvent,
+  WorkspaceTeacherViewTab,
+} from '@cdo/apps/aichat/types';
+import IconButtonWithTooltip from '@cdo/apps/lab2/views/components/IconButtonWithTooltip';
+import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
+import copyToClipboard from '@cdo/apps/util/copyToClipboard';
+import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
+import {AiInteractionStatus as Status} from '@cdo/generated-scripts/sharedConstants';
+
+const timestampToDateTime = (timestamp: number) =>
+  moment(timestamp).format('YYYY-MM-DD HH:mm');
 
 const CopyChatHistoryButton: React.FunctionComponent = () => {
-  const messages = useSelector(selectAllVisibleMessages);
+  const visibleMessages = useAppSelector(selectAllVisibleMessages);
+  const studentChatHistory = useAppSelector(
+    state => state.aichat.studentChatHistory
+  );
+  const selectedTab = useAppSelector(
+    state => state.aichat.chatWorkspaceSelectedTab
+  );
+  const isViewingStudentHistory =
+    selectedTab === WorkspaceTeacherViewTab.STUDENT_CHAT_HISTORY;
+  const messages = isViewingStudentHistory
+    ? studentChatHistory
+    : visibleMessages;
   const dispatch = useAppDispatch();
 
   const handleCopy = () => {
     const textToCopy = messages.map(chatEventToFormattedString).join('\n');
     copyToClipboard(
       textToCopy,
-      () => alert(aichatI18n.copyToClipboardAlert()),
+      () => alert('Text copied to clipboard'),
       () => {
         console.error('Error in copying text');
       }
@@ -41,11 +55,11 @@ const CopyChatHistoryButton: React.FunctionComponent = () => {
   return (
     <IconButtonWithTooltip
       id="copy-chat"
-      label={aichatI18n.copyChatButtonText()}
+      label={'Copy chat'}
       icon={{iconName: 'copy', iconStyle: 'solid'}}
-      type="tertiary"
-      color="gray"
-      buttonSize="xs"
+      variant="text"
+      color="tertiary"
+      size="extraSmall"
       tooltipSize="xs"
       tooltipDirection="onBottom"
       hideTooltipTail={true}
@@ -59,23 +73,29 @@ function chatEventToFormattedString(chatEvent: ChatEvent) {
   if (isChatMessage(chatEvent)) {
     return `[${formattedTimestamp} - ${chatEvent.role}] ${
       chatEvent.status === Status.PROFANITY_VIOLATION
-        ? aichatI18n.copyChatContainsProfanity()
+        ? '[FLAGGED AS PROFANITY]'
         : chatEvent.chatMessageText
     }`;
   }
 
   if (isModelUpdate(chatEvent)) {
-    return aichatI18n.copyChatFormatting_modelUpdate({
-      timestamp: formattedTimestamp,
-      updatedFieldLabel: AI_CUSTOMIZATIONS_LABELS[chatEvent.updatedField]!,
-    });
+    return `[${formattedTimestamp} - Model Update] ${MODEL_PARAMETER_LABELS[
+      chatEvent.updatedField
+    ]!} updated.`;
   }
 
   if (isNotification(chatEvent)) {
-    return aichatI18n.copyChatFormatting_notification({
-      timestamp: formattedTimestamp,
-      chatEventText: chatEvent.text,
-    });
+    return `[${formattedTimestamp} - Notification] ${chatEvent.text}`;
+  }
+
+  if (isUserActionEvent(chatEvent)) {
+    const descriptions: {[key in ChatEventDescriptionKey]: string} = {
+      CLEAR_CHAT: 'The user cleared the chat workspace.',
+      LOAD_LEVEL: 'The user loaded the level.',
+    };
+    return `[${formattedTimestamp} - User Action] ${
+      descriptions[chatEvent.descriptionKey]
+    }`;
   }
 }
 

@@ -53,9 +53,9 @@ Feature: Curriculum Catalog Page
   @no_mobile
   Scenario: Signed-out user can navigate to facilitator led workshop through expanded card
     Given I am on "http://studio.code.org/catalog"
-    And I wait until element "h4:contains(CS Fundamentals: Course A)" is visible
+    And I wait until element "h4:contains(UI Test CSF)" is visible
 
-    And I click selector "[aria-label='View details about CS Fundamentals: Course A']"
+    And I click selector "[aria-label='View details about UI Test CSF']"
     Then I wait until element "a:contains(Facilitator led workshops)" is visible
     And I click selector "a:contains(Facilitator led workshops)"
     Then I wait for jquery to load
@@ -65,17 +65,17 @@ Feature: Curriculum Catalog Page
   Scenario: On expanded card, Signed-in teacher sees professional learning section
     Given I create a teacher named "Teacher Tom"
     Given I am on "http://studio.code.org/catalog"
-    And I wait until element "h4:contains(CS Fundamentals: Course A)" is visible
-    And I click selector "[aria-label='View details about CS Fundamentals: Course A']"
-    And I scroll the "h4:contains(CS Fundamentals: Course A)" element into view
+    And I wait until element "h4:contains(UI Test CSF)" is visible
+    And I click selector "[aria-label='View details about UI Test CSF']"
+    And I scroll the "h4:contains(UI Test CSF)" element into view
     And I wait until element "h4:contains(Professional Learning)" is visible
 
   @no_mobile
   Scenario: On expanded card, Signed-in student does not see professional learning section
     Given I create a student named "Student Sam"
     Given I am on "http://studio.code.org/catalog"
-    And I wait until element "h4:contains(CS Fundamentals: Course A)" is visible
-    And I click selector "[aria-label='View details about CS Fundamentals: Course A']"
+    And I wait until element "h4:contains(UI Test CSF)" is visible
+    And I click selector "[aria-label='View details about UI Test CSF']"
     And I wait until element "h4:contains(Professional Learning)" is not visible
 
   # Expanded Card Assign button scenarios

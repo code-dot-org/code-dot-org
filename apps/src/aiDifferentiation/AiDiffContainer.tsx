@@ -53,7 +53,8 @@ const AiDiffContainer: React.FC<AiDiffContainerProps> = ({
   scriptName,
   unreadNotificationCount,
 }) => {
-  const [showWelcomeExperience, setShowWelcomeExperience] = useState(true);
+  // Welcome experience shut off in preparation for spring 2026 redesign.
+  const [showWelcomeExperience, setShowWelcomeExperience] = useState(false);
   const {personalizationData} = useTeachingProfileData();
 
   const [positionX, setPositionX] = useState(
@@ -68,10 +69,10 @@ const AiDiffContainer: React.FC<AiDiffContainerProps> = ({
   );
 
   const pendingArtifactMessage = useAppSelector(
-    state => state.aichat.pendingArtifactMessage
+    state => state.aiDiffChat.pendingArtifactMessage
   );
 
-  const chatIsOpen = useAppSelector(state => state.aichat.chatIsOpen);
+  const chatIsOpen = useAppSelector(state => state.aiDiffChat.chatIsOpen);
 
   useEffect(() => {
     const ensureDraggableIsVisible = () => {

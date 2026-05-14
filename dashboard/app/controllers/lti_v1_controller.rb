@@ -67,7 +67,7 @@ class LtiV1Controller < ApplicationController
       prompt: 'none',
     }.to_query
 
-    redirect_to auth_redirect_url.to_s
+    redirect_to(auth_redirect_url.to_s, allow_other_host: true)
   end
 
   def authenticate
@@ -85,9 +85,9 @@ class LtiV1Controller < ApplicationController
     return log_unauthorized('Missing aud or iss from ID token') unless extracted_client_id.present? && extracted_issuer_id.present?
     # set cache key
     integration_cache_key = "#{extracted_issuer_id}/#{extracted_client_id}"
-    # 'integration' can come back as a hash from the cache or as a class instance returned by ActiveRecord. In the case of the former, we are
-    # unable to access values using dot notation and instead must use brackets. This still works with the value returned by Active Record,
-    # as it has a '[]' method that behaves in the same way https://api.rubyonrails.org/classes/ActiveRecord/AttributeMethods.html#method-i-5B-5D
+    # `read_cache` returns a symbolized hash, and a cache miss falls back to an
+    # ActiveRecord object. Use bracket notation, not dot notation because it works for both.
+    # Example: integration[:id] not integration.id
     integration = read_cache(integration_cache_key)
     unless integration
       integration = LtiIntegration.find_by({client_id: extracted_client_id, issuer: extracted_issuer_id})
@@ -183,7 +183,11 @@ class LtiV1Controller < ApplicationController
         nrps_url: nrps_url,
       }
 
-      destination_url = "#{target_link_uri}?#{redirect_params.to_query}"
+      unless Policies::Lti.allowed_target_link_uri?(target_link_uri)
+        return log_unauthorized('Invalid target_link_uri', {target_link_uri: target_link_uri})
+      end
+
+      destination_url = build_destination_url(target_link_uri, redirect_params)
       session[:user_return_to] = destination_url
 
       if user
@@ -199,6 +203,10 @@ class LtiV1Controller < ApplicationController
           metadata: metadata,
           session: session,
         )
+
+        # Ensure the LTI user identity and deployment association exists
+        lti_user_identity = user.lti_user_identities&.find_by(lti_integration_id: integration[:id], subject: decoded_jwt[:sub])
+        deployment.lti_user_identities << lti_user_identity if lti_user_identity && deployment.lti_user_identities.exclude?(lti_user_identity)
 
         # If this is the user's first login, send them into the account linking flow
         unless user.lms_landing_opted_out
@@ -223,7 +231,7 @@ class LtiV1Controller < ApplicationController
           redirect_to lti_v1_deep_linking_path(deep_linking_settings:) and return
         end
 
-        redirect_to destination_url
+        redirect_to destination_url, allow_other_host: true
       else
         user = Services::Lti.initialize_lti_user(decoded_jwt)
         # PartialRegistration removes the email address, so store it in a local variable first
@@ -249,32 +257,36 @@ class LtiV1Controller < ApplicationController
   end
 
   def render_sync_course_error(reason, status, error = nil, message: nil)
-    # We want to log the error to Honeybadger, as we don't expect this to happen
-    # often.
-    honeybadger_id = Honeybadger.notify(
-      'LTI roster sync error',
-      context: {
-        reason:,
-        details: message,
-      }
-    )
+    error_id = capture_sync_course_error_id(reason, message)
     Clients::LtiLogger.log_event(
       message,
       {
         reason:,
         status:,
         error:,
-        honeybadger_id:,
+        error_id:,
       }
     )
     @lti_section_sync_result = {error: error, message: message}
-    @lti_section_sync_result[:honeybadger_id] = honeybadger_id if honeybadger_id
+    @lti_section_sync_result[:error_id] = error_id if error_id
     return respond_to do |format|
       format.html do
         render lti_v1_sync_course_path, status: status
       end
       format.json {render json: @lti_section_sync_result, status: status}
     end
+  end
+
+  def capture_sync_course_error_id(reason, message)
+    event = Observability::Errors.capture_message(
+      'LTI roster sync error',
+      extra: {
+        reason:,
+        details: message,
+      }
+    )
+
+    event&.event_id
   end
 
   # GET /lti/v1/sync_course
@@ -325,12 +337,9 @@ class LtiV1Controller < ApplicationController
 
       lti_deployment = lti_integration.lti_deployments.find_by(id: params[:deployment_id])
       return render_sync_course_error('LTI Deployment not found', :bad_request, 'no_deployment') unless lti_deployment
+      return render_sync_course_error('User not associated with LTI Integration', :forbidden, 'nrps_error') unless validate_integration_membership(lti_integration, lti_deployment, current_user)
 
-      # Temporary lock to prevent concurrent requests from racing past
-      # the ActiveRecord level uniqueness check and creating LtiCourse duplicates.
-      # TODO(P20-1796): Remove the lock once a DB-level unique constraint
-      #                 on (lti_integration_id, context_id) prevents duplicates.
-      lti_deployment.with_lock do
+      Retryable.retryable(on: ActiveRecord::RecordNotUnique) do
         lti_course = lti_integration.lti_courses.find_or_create_by!(context_id: params[:context_id]) do |new_record|
           new_record.assign_attributes(lti_deployment:, nrps_url:, resource_link_id:)
         end
@@ -446,6 +455,13 @@ class LtiV1Controller < ApplicationController
     SecureRandom.alphanumeric length
   end
 
+  private def build_destination_url(target_link_uri, redirect_params)
+    uri = URI.parse(target_link_uri)
+    existing_query_params = Rack::Utils.parse_nested_query(uri.query.to_s)
+    uri.query = existing_query_params.merge(redirect_params.stringify_keys).to_query
+    uri.to_s
+  end
+
   private def log_unauthorized(event, attributes = {})
     Clients::LtiLogger.log_event(event, attributes)
     unauthorized_status
@@ -460,5 +476,9 @@ class LtiV1Controller < ApplicationController
       event_name: 'lti_account_linking_page_visit',
       metadata: metadata,
     )
+  end
+
+  private def validate_integration_membership(lti_integration, lti_deployment, user)
+    lti_deployment.lti_user_identities.exists?(lti_integration:, user:)
   end
 end

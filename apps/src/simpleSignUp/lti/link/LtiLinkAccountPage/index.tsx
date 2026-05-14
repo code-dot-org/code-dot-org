@@ -1,7 +1,7 @@
 import Link from '@code-dot-org/component-library/link';
 import React, {useContext, useEffect} from 'react';
 
-import {EVENTS, PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants';
+import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import {LtiProviderContext} from '@cdo/apps/simpleSignUp/lti/link/LtiLinkAccountPage/context';
 import {navigateToHref} from '@cdo/apps/utils';
@@ -23,11 +23,9 @@ const LtiLinkAccountPage = () => {
   };
 
   useEffect(() => {
-    analyticsReporter.sendEvent(
-      EVENTS.LINK_ACCOUNT_PAGE_VISITED_EVENT,
-      {source: 'lti'},
-      PLATFORMS.STATSIG
-    );
+    analyticsReporter.sendEvent(EVENTS.LINK_ACCOUNT_PAGE_VISITED_EVENT, {
+      source: 'lti',
+    });
   }, []);
 
   return (

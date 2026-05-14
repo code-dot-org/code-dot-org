@@ -1,4 +1,3 @@
-import {buttonColors} from '@code-dot-org/component-library/button';
 import Dialog from '@code-dot-org/component-library/dialog';
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
@@ -44,19 +43,19 @@ class DeleteVocabularyDialog extends Component {
         onClose={() => handleDeleteVocabularyDialogClose()}
         primaryButtonProps={{
           id: 'delete-vocabulary',
-          text: `Delete`,
-          size: 's',
+          children: `Delete`,
+          size: 'small',
           onClick: () => {
             this.deleteVocabulary();
           },
-          color: buttonColors.destructive,
+          color: 'error',
         }}
         secondaryButtonProps={{
           id: 'cancel-delete-vocabulary',
-          size: 's',
-          text: 'Cancel',
-          type: 'secondary',
-          color: buttonColors.gray,
+          size: 'small',
+          children: 'Cancel',
+          color: 'tertiary',
+          variant: 'outlined',
           onClick: () => {
             handleDeleteVocabularyDialogClose();
           },

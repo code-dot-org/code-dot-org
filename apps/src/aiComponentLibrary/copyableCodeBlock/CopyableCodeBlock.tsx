@@ -1,5 +1,5 @@
-import Button from '@code-dot-org/component-library/button';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
+import {Button as MuiButton} from '@mui/material';
 import classNames from 'classnames';
 import React, {useState, useRef, useEffect} from 'react';
 
@@ -65,18 +65,17 @@ const CopyableCodeBlock: React.FunctionComponent<CopyableCodeBlockProps> = ({
   return (
     <article className={classNames(moduleStyles.codeBlock)}>
       <header className={moduleStyles['header']}>
-        <Button
-          onClick={handleCopy}
-          text={i18n.copyCode()}
-          size="xs"
-          color="black"
-          iconLeft={{
-            iconStyle: 'regular',
-            iconName: 'copy',
-          }}
-          type="secondary"
+        <MuiButton
+          variant="outlined"
+          color="secondary"
+          size="extraSmall"
           className={moduleStyles.copyButton}
-        />
+          onClick={handleCopy}
+          type="button"
+          startIcon={<FontAwesomeV6Icon iconStyle="regular" iconName="copy" />}
+        >
+          {i18n.copyCode()}
+        </MuiButton>
       </header>
       <div className={moduleStyles.codeContentBody}>
         <div className={moduleStyles.codeContent}>

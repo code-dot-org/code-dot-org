@@ -1,0 +1,878 @@
+<Sketchlab>
+  <config><![CDATA[{
+  "game_id": 75,
+  "created_at": "2026-04-01T21:38:28.000Z",
+  "level_num": "custom",
+  "user_id": 18603,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "#Introduction to a Filter & Sort Pipeline\r\n\r\n**Goal**: Act as the \"algorithm\" to curate a video feed. You will process a set of MyTube video cards using two different pipelines to see how the order of operations affects efficiency and fairness.\r\n\r\n####**Part 1: Filter First**\r\n\r\n* *Filter*: Keep only cards with the \"Sports\" tag.\r\n\r\n* *Sort*: Order them by Score (High to Low). **Scoring Rule**: *Score = Likes − Dislikes + Subscribers*\r\n\r\n* *Rank*: Place the top 2 in the Rank Slots.\r\n\r\n####**Part 2: Sort First**\r\n\r\n* *Reset*: Clear the board.\r\n\r\n* *Sort*: Order ALL cards by Score (High to Low).  **Scoring Rule**: *Score = Likes − Dislikes + Subscribers*\r\n\r\n* *Filter*: Select the first 2 cards from the top that have the \"Sports\" tag.\r\n\r\n* *Rank*: Place them in the Rank Slots.\r\n\r\n",
+    "start_sources": {
+      "source": {
+        "nodes": [
+          {
+            "id": "2nF__suHxSb7MsAuospDK",
+            "type": "text",
+            "position": {
+              "x": 1327.4974168571596,
+              "y": -840.919314571163
+            },
+            "data": {
+              "text": "Step One: Filter",
+              "fontColor": "var(--sketchlab-stroke-default)",
+              "fontSize": "large",
+              "showHandles": false
+            },
+            "measured": {
+              "width": 172,
+              "height": 47
+            },
+            "dragging": false
+          },
+          {
+            "id": "YESxT-c2hW6LdB5ATfkTu",
+            "type": "image",
+            "position": {
+              "x": 1091.4123026666646,
+              "y": -840.215746380675
+            },
+            "style": {
+              "width": 137.00000000000006,
+              "height": 137.00000000000006
+            },
+            "data": {
+              "src": "/level_starter_assets/building-data-driven-systems-lesson10-level1-test_2025-pilot_2026/uuid/b914cde8-8e0d-4c3c-ba08-8fa52254c41b.png",
+              "altText": "",
+              "showHandles": false
+            },
+            "measured": {
+              "width": 137,
+              "height": 137
+            },
+            "dragging": false
+          },
+          {
+            "id": "U25tPt9vdvNYvljSkOxyC",
+            "type": "image",
+            "position": {
+              "x": 1085.1190476190495,
+              "y": -559.5476190476186
+            },
+            "style": {
+              "width": 132.00000000000043,
+              "height": 132.00000000000043
+            },
+            "data": {
+              "src": "/level_starter_assets/building-data-driven-systems-lesson10-level1-test_2025-pilot_2026/uuid/122640b2-15af-48be-bc13-1f4d046708c3.png",
+              "altText": "",
+              "showHandles": false
+            },
+            "measured": {
+              "width": 132,
+              "height": 132
+            },
+            "dragging": false
+          },
+          {
+            "id": "KFnh70QvEK6FYRNDNKPcK",
+            "type": "text",
+            "position": {
+              "x": 1319.5238095238115,
+              "y": -556.3408740952328
+            },
+            "data": {
+              "text": "Step Two: Sort",
+              "fontColor": "var(--sketchlab-stroke-default)",
+              "fontSize": "large",
+              "showHandles": false
+            },
+            "measured": {
+              "width": 165,
+              "height": 47
+            },
+            "resizing": false,
+            "dragging": false
+          },
+          {
+            "id": "fMCPkoWO4_3r7pI7PEHez",
+            "type": "text",
+            "position": {
+              "x": 1093.3972211428634,
+              "y": -658.8099799997699
+            },
+            "data": {
+              "text": "Keep only results whose interest chips contain",
+              "fontColor": "var(--sketchlab-stroke-default)",
+              "fontSize": "large",
+              "showHandles": false
+            },
+            "measured": {
+              "width": 474,
+              "height": 47
+            },
+            "dragging": false
+          },
+          {
+            "id": "vp4CT1Rnn3yzS14WabkQI",
+            "type": "image",
+            "position": {
+              "x": 1576.8797497276119,
+              "y": -684.6720152378725
+            },
+            "style": {
+              "width": 133.40136054421768,
+              "height": 67.17857142857153
+            },
+            "data": {
+              "src": "/level_starter_assets/building-data-driven-systems-lesson10-level1-test_2025-pilot_2026/uuid/05f08e6d-2139-46c8-96d1-be2fc6e0ffd8.png",
+              "altText": "",
+              "showHandles": false
+            },
+            "measured": {
+              "width": 133,
+              "height": 67
+            },
+            "dragging": false
+          },
+          {
+            "id": "pcnT09s6jDKs7-lpLJsSl",
+            "type": "text",
+            "position": {
+              "x": 1095.6103196190413,
+              "y": -398.10177438099447
+            },
+            "data": {
+              "text": "Sort the remaining results from Highest to Lowest using\nthe following algorithm:     ",
+              "fontColor": "var(--sketchlab-stroke-default)",
+              "fontSize": "large",
+              "showHandles": false,
+              "textAlign": "left"
+            },
+            "measured": {
+              "width": 568,
+              "height": 75
+            },
+            "dragging": false
+          },
+          {
+            "id": "ijTLmJAOjaHrHndarfTvP",
+            "type": "shape",
+            "position": {
+              "x": 1747.8087497967535,
+              "y": -873.4321991702341
+            },
+            "style": {
+              "width": 1377.4999999999995,
+              "height": 275.00000000000017
+            },
+            "data": {
+              "shapeType": "rectangle",
+              "label": "",
+              "backgroundColor": "var(--sketchlab-bg-gray)",
+              "strokeColor": "var(--sketchlab-stroke-default)"
+            },
+            "measured": {
+              "width": 1378,
+              "height": 275
+            },
+            "dragging": false
+          },
+          {
+            "id": "yKOhq3RuC6aW7rtnNgfe9",
+            "type": "text",
+            "position": {
+              "x": 1220.155230574403,
+              "y": -300.3970124762327
+            },
+            "data": {
+              "text": "Likes - Dislikes + Subscribed",
+              "fontColor": "var(--sketchlab-stroke-blue)",
+              "fontSize": "large",
+              "showHandles": false
+            },
+            "measured": {
+              "width": 296,
+              "height": 47
+            },
+            "dragging": false
+          },
+          {
+            "id": "RHKBLgf7jdUa8yP5eIQbD",
+            "type": "shape",
+            "position": {
+              "x": 1750.8661442854332,
+              "y": -596.7260273809432
+            },
+            "style": {
+              "width": 1029.9999999999995,
+              "height": 734.9999999999997
+            },
+            "data": {
+              "shapeType": "rectangle",
+              "label": "",
+              "backgroundColor": "var(--sketchlab-bg-gray)",
+              "strokeColor": "var(--sketchlab-stroke-default)"
+            },
+            "measured": {
+              "width": 1376,
+              "height": 763
+            },
+            "dragging": false,
+            "width": 1376,
+            "height": 763,
+            "resizing": false
+          },
+          {
+            "id": "VoGRtihqdNfdKdQz1JnvN",
+            "type": "text",
+            "position": {
+              "x": 1798.7851266663845,
+              "y": -840.6465752380385
+            },
+            "data": {
+              "text": "What got filtered out? Was this filter accurate-- why or why not?",
+              "fontColor": "var(--sketchlab-stroke-default)",
+              "fontSize": "large",
+              "showHandles": false
+            },
+            "measured": {
+              "width": 654,
+              "height": 47
+            },
+            "dragging": false
+          },
+          {
+            "id": "Mb6fbz_O8XPqjrYAlaiDN",
+            "type": "text",
+            "position": {
+              "x": 2158.70587071422,
+              "y": -579.1976516666672
+            },
+            "data": {
+              "text": "Drag the remaining sorted results from the video feed \nin the order they appear:",
+              "fontColor": "var(--sketchlab-stroke-default)",
+              "fontSize": "large",
+              "showHandles": false
+            },
+            "measured": {
+              "width": 551,
+              "height": 75
+            },
+            "dragging": false
+          },
+          {
+            "id": "iUdq-YNN4zfUF60xtahMW",
+            "type": "shape",
+            "position": {
+              "x": 1901.915915952089,
+              "y": -459.74272666665826
+            },
+            "style": {
+              "width": 452.4999999999998,
+              "height": 549.9999999999998
+            },
+            "data": {
+              "shapeType": "rectangle",
+              "label": "",
+              "backgroundColor": "#ffffff",
+              "strokeColor": "var(--sketchlab-stroke-default)"
+            },
+            "measured": {
+              "width": 453,
+              "height": 550
+            },
+            "dragging": false
+          },
+          {
+            "id": "T0wakm1cp-KOJb4Ucnanm",
+            "type": "shape",
+            "position": {
+              "x": 2518.6664052378287,
+              "y": -456.87599476189285
+            },
+            "style": {
+              "width": 452.4999999999998,
+              "height": 549.9999999999998
+            },
+            "data": {
+              "shapeType": "rectangle",
+              "label": "",
+              "backgroundColor": "#ffffff",
+              "strokeColor": "var(--sketchlab-stroke-default)"
+            },
+            "measured": {
+              "width": 453,
+              "height": 550
+            },
+            "dragging": false
+          },
+          {
+            "id": "P94hxbKVrRx1frccu90bB",
+            "type": "text",
+            "position": {
+              "x": 2095.6358116664205,
+              "y": -431.8499023810728
+            },
+            "data": {
+              "text": "#1",
+              "fontColor": "#1e1e1e",
+              "fontSize": "large",
+              "showHandles": false
+            },
+            "measured": {
+              "width": 58,
+              "height": 47
+            },
+            "dragging": false
+          },
+          {
+            "id": "blNs3-3_FHBqXFz5lj9AX",
+            "type": "text",
+            "position": {
+              "x": 2705.2675795236055,
+              "y": -409.84527095250803
+            },
+            "data": {
+              "text": "#2",
+              "fontColor": "#1e1e1e",
+              "fontSize": "large",
+              "showHandles": false
+            },
+            "measured": {
+              "width": 58,
+              "height": 47
+            },
+            "dragging": false
+          },
+          {
+            "id": "aAuvh2YaQvggvPUBo_O0k",
+            "type": "text",
+            "position": {
+              "x": 1808.2350288092362,
+              "y": -720.362034999879
+            },
+            "data": {
+              "text": "type response here...",
+              "fontColor": "var(--sketchlab-stroke-default)",
+              "fontSize": "large",
+              "showHandles": false
+            },
+            "measured": {
+              "width": 221,
+              "height": 47
+            },
+            "dragging": false
+          },
+          {
+            "id": "4npf3eV6JQ0iMNoEoYkeI",
+            "type": "image",
+            "position": {
+              "x": 1102.679165047627,
+              "y": 187.24513952342448
+            },
+            "style": {
+              "width": 132.00000000000043,
+              "height": 132.00000000000043
+            },
+            "data": {
+              "src": "/level_starter_assets/building-data-driven-systems-lesson10-level1-test_2025-pilot_2026/uuid/e80c38d0-d118-48b6-af69-fc8cc801e484.png",
+              "altText": "",
+              "showHandles": false
+            },
+            "measured": {
+              "width": 132,
+              "height": 132
+            },
+            "dragging": false
+          },
+          {
+            "id": "BPafWMnapnL21SBGpBKzJ",
+            "type": "text",
+            "position": {
+              "x": 1425.4636920952337,
+              "y": 179.931845332951
+            },
+            "data": {
+              "text": "Step Three: Flip the Order!",
+              "fontColor": "var(--sketchlab-stroke-default)",
+              "fontSize": "large",
+              "showHandles": false
+            },
+            "measured": {
+              "width": 279,
+              "height": 47
+            },
+            "dragging": false
+          },
+          {
+            "id": "aPyGMkc3je8_i34ACpGxH",
+            "type": "image",
+            "position": {
+              "x": 1260.4123026666646,
+              "y": 180.072119332965
+            },
+            "style": {
+              "width": 137.00000000000006,
+              "height": 137.00000000000006
+            },
+            "data": {
+              "src": "/level_starter_assets/building-data-driven-systems-lesson10-level1-test_2025-pilot_2026/uuid/9306699d-23ae-4d82-bf64-4a42a88af9a8.png",
+              "altText": "",
+              "showHandles": false
+            },
+            "measured": {
+              "width": 137,
+              "height": 137
+            },
+            "dragging": false
+          },
+          {
+            "id": "oaoOPOTubI7QsRJ6bZUXq",
+            "type": "text",
+            "position": {
+              "x": 1100.1503979047598,
+              "y": 331.47153219007794
+            },
+            "data": {
+              "text": "1. Sort by the algorithm   ",
+              "fontColor": "var(--sketchlab-stroke-default)",
+              "fontSize": "large",
+              "showHandles": false
+            },
+            "measured": {
+              "width": 262,
+              "height": 47
+            },
+            "dragging": false
+          },
+          {
+            "id": "KLY5fKTLm7Vnk0Heij58F",
+            "type": "text",
+            "position": {
+              "x": 1136.8947217172333,
+              "y": 409.6161766662618
+            },
+            "data": {
+              "text": "Likes - Dislikes + Subscribed",
+              "fontColor": "var(--sketchlab-stroke-blue)",
+              "fontSize": "large",
+              "showHandles": false
+            },
+            "measured": {
+              "width": 296,
+              "height": 47
+            },
+            "dragging": false
+          },
+          {
+            "id": "KI3ClljeYuMLcZKr3s1IW",
+            "type": "text",
+            "position": {
+              "x": 1087.8371037142858,
+              "y": 473.9167897138117
+            },
+            "data": {
+              "text": "2. Keep only results whose interest chips contain",
+              "fontColor": "var(--sketchlab-stroke-default)",
+              "fontSize": "large",
+              "showHandles": false
+            },
+            "measured": {
+              "width": 497,
+              "height": 47
+            },
+            "dragging": false
+          },
+          {
+            "id": "nJ7rkDsl4pHMZLulPt3Es",
+            "type": "image",
+            "position": {
+              "x": 1583.9198280133305,
+              "y": 455.20806171380286
+            },
+            "style": {
+              "width": 133.40136054421768,
+              "height": 67.17857142857153
+            },
+            "data": {
+              "src": "/level_starter_assets/building-data-driven-systems-lesson10-level1-test_2025-pilot_2026/uuid/3b8488a8-3005-4dbb-b86f-fe4fc6f67510.png",
+              "altText": "",
+              "showHandles": false
+            },
+            "measured": {
+              "width": 133,
+              "height": 67
+            },
+            "dragging": false
+          },
+          {
+            "id": "h3FMN-sPUsYhGTsaEOrOY",
+            "type": "shape",
+            "position": {
+              "x": 1752.5714285714284,
+              "y": 164.8571428571429
+            },
+            "style": {
+              "width": 1377.4999999999995,
+              "height": 275.00000000000017
+            },
+            "data": {
+              "shapeType": "rectangle",
+              "label": "",
+              "backgroundColor": "var(--sketchlab-bg-gray)",
+              "strokeColor": "var(--sketchlab-stroke-default)",
+              "fontColor": "var(--sketchlab-stroke-default)"
+            },
+            "measured": {
+              "width": 1374,
+              "height": 385
+            },
+            "dragging": false,
+            "width": 1374,
+            "height": 385,
+            "resizing": false
+          },
+          {
+            "id": "lNKKBUDsa_EpRUe-SqhMB",
+            "type": "text",
+            "position": {
+              "x": 1789.357142857145,
+              "y": 201.98571428571483
+            },
+            "data": {
+              "text": "Was this order more efficient? Why or why not?",
+              "fontColor": "var(--sketchlab-stroke-default)",
+              "fontSize": "large",
+              "showHandles": false
+            },
+            "measured": {
+              "width": 487,
+              "height": 47
+            },
+            "dragging": false
+          },
+          {
+            "id": "K3a4JX1uf3kUjyoOFYRPc",
+            "type": "text",
+            "position": {
+              "x": 1793.857142857145,
+              "y": 289.98571428571483
+            },
+            "data": {
+              "text": "type response here...",
+              "fontColor": "var(--sketchlab-stroke-default)",
+              "fontSize": "large",
+              "showHandles": false
+            },
+            "measured": {
+              "width": 221,
+              "height": 47
+            },
+            "dragging": false
+          },
+          {
+            "id": "mNGAqivFqKjmmEZnE8kuz",
+            "type": "shape",
+            "position": {
+              "x": -993.0705958617002,
+              "y": -672.1333469548613
+            },
+            "style": {
+              "width": 2258.333333333332,
+              "height": 1686.666666666666
+            },
+            "data": {
+              "shapeType": "rectangle",
+              "label": "",
+              "backgroundColor": "var(--sketchlab-bg-gray)",
+              "strokeColor": "var(--sketchlab-stroke-default)"
+            },
+            "measured": {
+              "width": 1951,
+              "height": 1189
+            },
+            "dragging": false,
+            "width": 1951,
+            "height": 1189,
+            "resizing": false
+          },
+          {
+            "id": "fPg867G6ignC5CydXKVz5",
+            "type": "text",
+            "position": {
+              "x": -196.25288252949315,
+              "y": -650.2379671048509
+            },
+            "data": {
+              "text": "MyTube Video Feed",
+              "fontColor": "var(--sketchlab-stroke-default)",
+              "fontSize": 32,
+              "showHandles": false
+            },
+            "measured": {
+              "width": 317,
+              "height": 65
+            },
+            "dragging": false,
+            "width": 317,
+            "height": 65,
+            "resizing": false
+          },
+          {
+            "id": "FWDQ6TgJiPZwJXKrGo-n1",
+            "type": "image",
+            "position": {
+              "x": -910.547619047615,
+              "y": -556.9047619047628
+            },
+            "style": {
+              "width": 428.02054794520546,
+              "height": 505.99999999999994
+            },
+            "data": {
+              "src": "/level_starter_assets/building-data-driven-systems-lesson10-level1-test_2025-pilot_2026/uuid/25728c42-48cb-4d6b-8cab-623b9b578482.png",
+              "altText": "",
+              "showHandles": false
+            },
+            "measured": {
+              "width": 428,
+              "height": 506
+            },
+            "dragging": false
+          },
+          {
+            "id": "iOCbd0NKadGxLaI2v_K7l",
+            "type": "image",
+            "position": {
+              "x": -432.71428571428237,
+              "y": -549.5714285714294
+            },
+            "style": {
+              "width": 420.99999999999994,
+              "height": 503.14634146341456
+            },
+            "data": {
+              "src": "/level_starter_assets/building-data-driven-systems-lesson10-level1-test_2025-pilot_2026/uuid/c9840868-7ad9-45a3-b909-9465566257f3.png",
+              "altText": "",
+              "showHandles": false
+            },
+            "measured": {
+              "width": 421,
+              "height": 503
+            },
+            "dragging": false
+          },
+          {
+            "id": "kBMhq_Cx1n7U0cQbMmriq",
+            "type": "image",
+            "position": {
+              "x": 27.45238095238369,
+              "y": -549.9047619047624
+            },
+            "style": {
+              "width": 412.9999999999996,
+              "height": 499.6790123456785
+            },
+            "data": {
+              "src": "/level_starter_assets/building-data-driven-systems-lesson10-level1-test_2025-pilot_2026/uuid/ca1e95ea-04c0-4344-a0ae-5d7ea1e0c799.png",
+              "altText": "",
+              "showHandles": false
+            },
+            "measured": {
+              "width": 413,
+              "height": 500
+            },
+            "dragging": false
+          },
+          {
+            "id": "rQ3mFujybv18_UUYcnKk9",
+            "type": "image",
+            "position": {
+              "x": 476.4523809523837,
+              "y": -548.4455782312925
+            },
+            "style": {
+              "width": 418.23232323232304,
+              "height": 506.99999999999983
+            },
+            "data": {
+              "src": "/level_starter_assets/building-data-driven-systems-lesson10-level1-test_2025-pilot_2026/uuid/5610a8dc-cce1-4172-a9ad-1825e325ed12.png",
+              "altText": "",
+              "showHandles": false
+            },
+            "measured": {
+              "width": 418,
+              "height": 507
+            },
+            "dragging": false
+          },
+          {
+            "id": "TLxCSLZBUSTfLy-0NoyMJ",
+            "type": "image",
+            "position": {
+              "x": -905.8809523809493,
+              "y": -27.90476190476261
+            },
+            "style": {
+              "width": 427.66666666666646,
+              "height": 500.93227091633446
+            },
+            "data": {
+              "src": "/level_starter_assets/building-data-driven-systems-lesson10-level1-test_2025-pilot_2026/uuid/b79c7510-b5c6-46cc-bed8-57ad15a8bdd4.png",
+              "altText": "",
+              "showHandles": false
+            },
+            "measured": {
+              "width": 428,
+              "height": 501
+            },
+            "dragging": false
+          },
+          {
+            "id": "775XMMsml-QTk4nflmPfR",
+            "type": "image",
+            "position": {
+              "x": -430.38095238094934,
+              "y": -28.071428571429124
+            },
+            "style": {
+              "width": 416,
+              "height": 495.479674796748
+            },
+            "data": {
+              "src": "/level_starter_assets/building-data-driven-systems-lesson10-level1-test_2025-pilot_2026/uuid/35b02d0b-ca0d-44d5-bb48-e6509139decd.png",
+              "altText": "",
+              "showHandles": false
+            },
+            "measured": {
+              "width": 416,
+              "height": 495
+            },
+            "dragging": false
+          },
+          {
+            "id": "9lsDOVG15iQBkVNk9v7Q-",
+            "type": "image",
+            "position": {
+              "x": 31.119047619050207,
+              "y": -21.571428571429124
+            },
+            "style": {
+              "width": 413.6666666666665,
+              "height": 489.03103913630207
+            },
+            "data": {
+              "src": "/level_starter_assets/building-data-driven-systems-lesson10-level1-test_2025-pilot_2026/uuid/abdc7709-a9b9-4029-835d-671f95f7160c.png",
+              "altText": "",
+              "showHandles": false
+            },
+            "measured": {
+              "width": 414,
+              "height": 489
+            },
+            "dragging": false
+          },
+          {
+            "id": "LWAtFvgBkl_AprWqIDwG_",
+            "type": "image",
+            "position": {
+              "x": 488.28571428571627,
+              "y": -9.571428571429351
+            },
+            "style": {
+              "width": 404.66666666666646,
+              "height": 479.7258064516127
+            },
+            "data": {
+              "src": "/level_starter_assets/building-data-driven-systems-lesson10-level1-test_2025-pilot_2026/uuid/53a0b485-7133-4e30-bc18-0d2c572add25.png",
+              "altText": "",
+              "showHandles": false
+            },
+            "measured": {
+              "width": 405,
+              "height": 480
+            },
+            "dragging": false
+          },
+          {
+            "id": "aa5bbd72-7303-4ffa-8093-13c401c74423",
+            "type": "shape",
+            "data": {
+              "shapeType": "rectangle",
+              "label": "",
+              "strokeColor": "var(--sketchlab-stroke-default)",
+              "fontColor": "var(--sketchlab-stroke-default)"
+            },
+            "position": {
+              "x": 1049.429295343372,
+              "y": -878.1500904937993
+            },
+            "width": 702,
+            "height": 284,
+            "measured": {
+              "width": 702,
+              "height": 284
+            },
+            "dragging": false,
+            "resizing": false,
+            "zIndex": -1
+          },
+          {
+            "id": "ad213cdf-7f57-48a0-8af5-776013193ded",
+            "type": "shape",
+            "data": {
+              "shapeType": "rectangle",
+              "label": ""
+            },
+            "position": {
+              "x": 1049.429295343372,
+              "y": -597.3219654937993
+            },
+            "width": 706,
+            "height": 764,
+            "measured": {
+              "width": 706,
+              "height": 764
+            },
+            "dragging": false,
+            "resizing": false,
+            "zIndex": -2
+          },
+          {
+            "id": "5b51bbce-0f13-4a31-be1f-db891b6d70e2",
+            "type": "shape",
+            "data": {
+              "shapeType": "rectangle",
+              "label": ""
+            },
+            "position": {
+              "x": 1049.429295343372,
+              "y": 166.62273665463817
+            },
+            "width": 702,
+            "height": 386,
+            "measured": {
+              "width": 702,
+              "height": 386
+            },
+            "dragging": false,
+            "resizing": false,
+            "zIndex": -3
+          }
+        ],
+        "edges": [
+
+        ],
+        "viewport": {
+          "x": 296.23546538429264,
+          "y": 484.4011735989203,
+          "zoom": 0.5159517565630714
+        }
+      }
+    },
+    "name_suffix": "_2026"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-04-01T21:38:28.340+00:00\",\"changed\":[\"cloned from \\\"building-data-driven-systems-lesson10-level1-test_2025-pilot\\\"\"],\"cloned_from\":\"building-data-driven-systems-lesson10-level1-test_2025-pilot\"},{\"changed_at\":\"2026-05-01 14:07:02 -0400\",\"changed\":[\"start_sources\"],\"changed_by_id\":1,\"changed_by_email\":\"levelbuilder@dev.com\"},{\"changed_at\":\"2026-05-06 20:36:49 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":155,\"changed_by_email\":\"dani@code.org\"},{\"changed_at\":\"2026-05-08 13:51:58 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":155,\"changed_by_email\":\"dani@code.org\"}]"
+}]]></config>
+</Sketchlab>

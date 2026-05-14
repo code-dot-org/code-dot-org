@@ -1,12 +1,7 @@
-import {LinkButton} from '@code-dot-org/component-library/button';
 import Image from '@code-dot-org/component-library/image';
 import Link from '@code-dot-org/component-library/link';
 import Tags from '@code-dot-org/component-library/tags';
-import {
-  BodyThreeText,
-  BodyFourText,
-  StrongText,
-} from '@code-dot-org/component-library/typography';
+import {Typography, Button as MuiButton} from '@mui/material';
 import React from 'react';
 
 import {CourseOfferingFacilitatedWorkshop} from '@cdo/apps/templates/courseOfferings/types';
@@ -60,14 +55,14 @@ const SelfPacedPLCatalogCourseFacilitatedWorkshops: React.FC<
       <div className={moduleStyles.noFacilitatedWorkshopsCard}>
         <Image src={workshopsTeachWithConfidenceIllustration} />
         <div>
-          <BodyThreeText noMargin>
-            <StrongText>Teach with confidence</StrongText>
-          </BodyThreeText>
-          <BodyFourText noMargin>
+          <Typography variant="body3">
+            <Typography variant="strong">Teach with confidence</Typography>
+          </Typography>
+          <Typography variant="body4">
             Experience Code.org’s curriculum firsthand in interactive workshops
             that prepare you to teach with confidence. Connect with fellow
             educators and leave ready to inspire your students!
-          </BodyFourText>
+          </Typography>
 
           <Link
             href="/professional-learning/workshops"
@@ -92,9 +87,9 @@ const SelfPacedPLCatalogCourseFacilitatedWorkshops: React.FC<
         ({id, link, title, sessions, is_virtual}) => (
           <div key={id} className={moduleStyles.facilitatedWorkshopCard}>
             <div>
-              <BodyThreeText noMargin>
-                <StrongText>{title}</StrongText>
-              </BodyThreeText>
+              <Typography variant="body3">
+                <Typography variant="strong">{title}</Typography>
+              </Typography>
               <Tags
                 className={moduleStyles.facilitatedWorkshopTags}
                 size="s"
@@ -120,22 +115,23 @@ const SelfPacedPLCatalogCourseFacilitatedWorkshops: React.FC<
               />
             </div>
 
-            <LinkButton
-              size="xs"
-              type="secondary"
-              color="black"
-              text="Learn more"
-              href={link}
+            <MuiButton
+              variant="outlined"
+              color="secondary"
+              size="extraSmall"
               className={moduleStyles.facilitatedWorkshopLearnMoreButton}
-            />
+              href={link}
+            >
+              {'Learn more'}
+            </MuiButton>
           </div>
         )
       )}
       <div className={moduleStyles.findMoreWorkshopsCard}>
         <div>
-          <BodyThreeText noMargin>
+          <Typography variant="body3">
             Find more workshops on this topic and others.
-          </BodyThreeText>
+          </Typography>
           <Link
             text="Find workshops"
             href="/professional-learning/workshops"

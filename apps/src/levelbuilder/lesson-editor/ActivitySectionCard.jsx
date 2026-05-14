@@ -53,6 +53,7 @@ class ActivitySectionCard extends Component {
     updateActivitySectionMetrics: PropTypes.func.isRequired,
     hasLessonPlan: PropTypes.bool.isRequired,
     allowMajorCurriculumChanges: PropTypes.bool.isRequired,
+    rubricLevelId: PropTypes.number,
 
     //redux
     moveActivitySection: PropTypes.func.isRequired,
@@ -345,7 +346,7 @@ class ActivitySectionCard extends Component {
 
   appendSlide = () => {
     this.insertMarkdownSyntaxAtSelection(
-      '<i class="fa fa-list-alt" aria-hidden="true"></i> '
+      '<i class="fa-solid fa-rectangle-list" aria-hidden="true"></i> '
     );
   };
 
@@ -407,6 +408,7 @@ class ActivitySectionCard extends Component {
       activityPosition,
       hasLessonPlan,
       allowMajorCurriculumChanges,
+      rubricLevelId,
     } = this.props;
     const {draggedLevelPos, levelPosToRemove} = this.state;
     const isTargetActivitySection =
@@ -449,6 +451,12 @@ class ActivitySectionCard extends Component {
                 remove={this.handleRemoveActivitySection}
                 item={this.props.activitySection}
                 itemType={'activitySection'}
+                isDeleteable={
+                  !activitySection.scriptLevels.some(
+                    scriptLevel =>
+                      String(rubricLevelId) === String(scriptLevel.activeId)
+                  )
+                }
               />
             )}
           </label>
@@ -511,6 +519,7 @@ class ActivitySectionCard extends Component {
                 }
                 handleDragStart={this.handleDragStart}
                 allowMajorCurriculumChanges={allowMajorCurriculumChanges}
+                rubricLevelId={rubricLevelId}
               />
             ))}
           </div>

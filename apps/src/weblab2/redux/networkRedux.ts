@@ -13,6 +13,7 @@ interface RequestData {
   startTime: string;
   url: string;
   cspDirectiveViolated?: string;
+  blocked?: boolean;
 }
 
 interface ResponseData {
@@ -26,10 +27,12 @@ interface ResponseData {
 
 export interface Weblab2NetworkState {
   requests: NetworkEntry[];
+  networkRequestsBlocked: boolean;
 }
 
 const initialState: Weblab2NetworkState = {
   requests: [],
+  networkRequestsBlocked: false,
 };
 
 const networkSlice = createSlice({
@@ -55,12 +58,19 @@ const networkSlice = createSlice({
     clearRequests: state => {
       state.requests = [];
     },
+    setNetworkRequestsBlocked: (state, action: PayloadAction<boolean>) => {
+      state.networkRequestsBlocked = action.payload;
+    },
   },
 });
 
 registerReducers({weblab2Network: networkSlice.reducer});
 
-export const {addRequestData, addResponseData, clearRequests} =
-  networkSlice.actions;
+export const {
+  addRequestData,
+  addResponseData,
+  clearRequests,
+  setNetworkRequestsBlocked,
+} = networkSlice.actions;
 
 export default networkSlice.reducer;

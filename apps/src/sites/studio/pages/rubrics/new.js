@@ -17,6 +17,9 @@ $(document).ready(() => {
       submittableLevels={submittableLevels}
       lessonId={lessonId}
     />,
-    document.getElementById('form')
+    document.getElementById('form'),
+    {
+      legacyReactDomRender: true,
+    }
   );
 });

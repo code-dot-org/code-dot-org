@@ -2,6 +2,8 @@ import {render, screen} from '@testing-library/react';
 import React from 'react';
 import {Provider} from 'react-redux';
 
+import isRtlReducer from '@cdo/apps/code-studio/isRtlRedux';
+import responsive from '@cdo/apps/code-studio/responsiveRedux';
 import {
   getStore,
   registerReducers,
@@ -17,7 +19,7 @@ describe('ProjectHeader', () => {
   let store;
   beforeEach(() => {
     stubRedux();
-    registerReducers({currentUser});
+    registerReducers({currentUser, responsive, isRtl: isRtlReducer});
     store = getStore();
     store.dispatch(
       setInitialData({
@@ -44,7 +46,7 @@ describe('ProjectHeader', () => {
     renderDefault();
 
     expect(
-      screen.getByText('Over 200 million projects created')
+      screen.getByText('Over 200 million projects created!')
     ).toBeInTheDocument();
   });
 });

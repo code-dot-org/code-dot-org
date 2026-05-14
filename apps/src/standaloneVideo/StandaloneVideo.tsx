@@ -5,7 +5,7 @@
 // they will get an older-style level implemented with a HAML page and some
 // non-React JS code.
 
-import {Button} from '@code-dot-org/component-library/button';
+import {Button as MuiButton} from '@mui/material';
 import React from 'react';
 
 import {
@@ -34,12 +34,17 @@ const StandaloneVideo: React.FunctionComponent<LabProps> = ({
   return (
     <div id="standalone-video">
       <Video {...levelVideo}>
-        <Button
+        <MuiButton
+          variant="contained"
+          color="primary"
+          size="medium"
+          className={styles.buttonNext}
           id="standalone-video-continue-button"
           onClick={() => nextButtonPressed()}
-          className={styles.buttonNext}
-          text={standaloneVideoLocale.continue()}
-        />
+          type="button"
+        >
+          {standaloneVideoLocale.continue()}
+        </MuiButton>
       </Video>
     </div>
   );

@@ -2,23 +2,47 @@ require 'selenium/webdriver'
 require 'cgi'
 require 'httparty'
 require_relative '../../../../../deployment'
+require 'cdo/ci_utils'
+require_relative '../../../../../lib/cdo/aws/device_farm'
 require 'active_support/core_ext/object/blank'
 require_relative '../../utils/selenium_browser'
 require 'retryable'
 
 UI_TEST_DIR = File.expand_path('../..', __dir__)
-$browser_config = JSON.parse(File.read(File.join(UI_TEST_DIR, 'browsers.json'))).detect {|b| b['name'] == ENV['BROWSER_CONFIG']} || {}
+
+# Load the browser config for the active provider from its JSON file. Only
+# one of the two globals is populated per run; the other stays empty.
+$saucelabs_browser_config = {}
+$device_farm_browser_config = {}
+if ENV['TEST_DEVICE_FARM'] == 'true'
+  browsers = JSON.parse(File.read(File.join(UI_TEST_DIR, 'browsers_device_farm.json')))
+  $device_farm_browser_config = browsers.detect {|b| b['name'] == ENV['BROWSER_CONFIG']} || {}
+else
+  browsers = JSON.parse(File.read(File.join(UI_TEST_DIR, 'browsers_saucelabs.json')))
+  $saucelabs_browser_config = browsers.detect {|b| b['name'] == ENV['BROWSER_CONFIG']} || {}
+end
 
 MAX_CONNECT_RETRIES = 3
 SAUCELABS_SELENIUM_URL = ENV.fetch('SAUCELABS_SELENIUM_URL', 'https://ondemand.us-west-1.saucelabs.com/wd/hub').freeze
 
 # Run all feature scenarios in a single session.
+# TODO: the SauceLabs branch misses Sauce's mobile configs, which use
+# `appium:mobile` rather than the bare `mobile` key. Sauce iPhone/iPad runs
+# that don't carry the @single_session tag fall through to per-scenario
+# sessions. Mirror runner.rb's `mobile_browser?` (which checks both keys)
+# as a follow-up.
 def single_session?
-  $browser_config['mobile'] || $single_session
+  is_mobile =
+    if test_device_farm?
+      $device_farm_browser_config['mobile']
+    else
+      $saucelabs_browser_config['mobile']
+    end
+  is_mobile || $single_session
 end
 
-# Should we run the tests using the local Selenium webdriver rather than on
-# Saucelabs?
+# Should we run the tests using the local Selenium webdriver rather than a
+# remote provider (SauceLabs or Device Farm)?
 #
 # Used not only to modify the behavior of `get_browser` but also to avoid
 # unnecessarily applying various Saucelabs-specific accommodations throughout
@@ -27,11 +51,17 @@ def test_local?
   return ENV['TEST_LOCAL'] == 'true'
 end
 
+# Should we run the tests using AWS Device Farm instead of SauceLabs?
+# We expect TEST_DEVICE_FARM to be set by `runner.rb`.
+def test_device_farm?
+  return ENV['TEST_DEVICE_FARM'] == 'true'
+end
+
 def saucelabs_browser(test_run_name, http_client: nil)
   raise 'Please define CDO.saucelabs_username' if CDO.saucelabs_username.blank?
   raise 'Please define CDO.saucelabs_authkey'  if CDO.saucelabs_authkey.blank?
 
-  capabilities = Selenium::WebDriver::Remote::Capabilities.new($browser_config.except('name'))
+  capabilities = Selenium::WebDriver::Remote::Capabilities.new($saucelabs_browser_config.except('name'))
 
   sauce_options = {
     name: test_run_name,
@@ -44,7 +74,7 @@ def saucelabs_browser(test_run_name, http_client: nil)
     tunnelIdentifier: CDO.saucelabs_tunnel_name,
   }
 
-  sauce_options[:priority] = ENV['PRIORITY'].to_i if ENV['PRIORITY']
+  sauce_options[:priority] = ENV['SAUCELABS_PRIORITY'].to_i if ENV['SAUCELABS_PRIORITY']
   capabilities['sauce:options'] ||= {}
   capabilities['sauce:options'].merge!(sauce_options)
 
@@ -54,6 +84,79 @@ def saucelabs_browser(test_run_name, http_client: nil)
     http_client: http_client
   )
   return browser
+end
+
+def device_farm_desktop_browser(http_client: nil)
+  # One-shot TestGrid URL, ready immediately.
+  url = Cdo::AWS::DeviceFarm.create_test_grid_url
+
+  capabilities = Selenium::WebDriver::Remote::Capabilities.new(
+    $device_farm_browser_config.except(*Cdo::AWS::DeviceFarm::INTERNAL_KEYS)
+  )
+
+  SeleniumBrowser.remote(
+    url,
+    capabilities: capabilities,
+    http_client: http_client
+  )
+end
+
+# Provisions a real mobile device, then connects Selenium with retries
+# (the Appium endpoint may return 400 briefly after status becomes RUNNING).
+# If a whole DF session fails (typically a bad physical device -- Web
+# Inspector disabled, etc.), tear it down and pick a fresh device from
+# the pool.
+def device_farm_mobile_browser(http_client: nil)
+  Retryable.retryable(tries: Cdo::AWS::DeviceFarm::MOBILE_DEVICE_TRIES) do |try, exception|
+    if exception
+      puts "Device Farm: previous mobile session attempt failed " \
+           "(#{exception.class}: #{exception.message.lines.first&.strip}); " \
+           "provisioning a fresh device (attempt #{try})..."
+    end
+    session = Cdo::AWS::DeviceFarm.create_mobile_session(
+      device_arns: $device_farm_browser_config['device_arns']
+    )
+    $device_farm_mobile_session_arn = session[:session_arn]
+    $device_farm_mobile_device = session[:device]
+
+    capabilities = Selenium::WebDriver::Remote::Capabilities.new(
+      $device_farm_browser_config.except(*Cdo::AWS::DeviceFarm::INTERNAL_KEYS)
+    )
+
+    # Anything after a successful create_mobile_session leaks a running
+    # device on failure unless we stop it here -- at_exit's quit_browser
+    # eventually stops it, but stopping immediately frees the device for
+    # the next attempt, and lets the outer Retryable pick a different one.
+    begin
+      browser = Retryable.retryable(
+        tries: Cdo::AWS::DeviceFarm::MOBILE_CONNECT_TRIES,
+        sleep: Cdo::AWS::DeviceFarm::MOBILE_CONNECT_RETRY_SLEEP,
+      ) do
+        SeleniumBrowser.remote(
+          session[:url],
+          capabilities: capabilities,
+          http_client: http_client
+        )
+      end
+
+      # Device Farm rejects `appium:orientation` as a session capability, so
+      # apply it via the WebDriver /orientation endpoint after session-start.
+      orientation = $device_farm_browser_config['appium:orientation']
+      if orientation
+        browser.send(:bridge).http.call(
+          :post,
+          "session/#{browser.session_id}/orientation",
+          {orientation: orientation.upcase}
+        )
+      end
+
+      browser
+    rescue
+      Cdo::AWS::DeviceFarm.stop_mobile_session($device_farm_mobile_session_arn)
+      $device_farm_mobile_session_arn = nil
+      raise
+    end
+  end
 end
 
 # Set HTTP read timeout to the specified value during the block.
@@ -74,18 +177,52 @@ def change_orientation(orientation)
   )
 end
 
+# Connects via Device Farm and logs the session's AWS console URL.
+# Assumes test_device_farm? and $selenium_http_client have been established
+# by the caller.
+def get_device_farm_browser
+  is_mobile = $device_farm_browser_config['mobile']
+  browser =
+    if is_mobile
+      # Provision once, then retry the Selenium connection (Appium server
+      # may need a few seconds after the session reaches RUNNING).
+      device_farm_mobile_browser(http_client: $selenium_http_client)
+    else
+      Retryable.retryable(tries: MAX_CONNECT_RETRIES) do
+        device_farm_desktop_browser(http_client: $selenium_http_client)
+      end
+    end
+  console_url =
+    if is_mobile
+      Cdo::AWS::DeviceFarm.mobile_session_url($device_farm_mobile_session_arn)
+    else
+      Cdo::AWS::DeviceFarm.desktop_session_url(browser.session_id)
+    end
+  if console_url
+    account_suffix = CI::Utils.running_on_ci? ? ' (codeorg-dev AWS account)' : ''
+    puts "visual log on device farm#{account_suffix}: <a href='#{console_url}'>#{console_url}</a>"
+  end
+  if is_mobile && $device_farm_mobile_device
+    d = $device_farm_mobile_device
+    puts "mobile device on device farm: #{d.name} (#{d.platform} #{d.os}) #{d.arn}"
+  end
+  browser
+end
+
 def get_browser(test_run_name)
   browser = nil
   $selenium_http_client ||= SeleniumBrowser::Client.new(read_timeout: 2.minutes)
   if test_local?
     headless = ENV['TEST_LOCAL_HEADLESS'] == 'true'
     browser = SeleniumBrowser.local(browser: ENV.fetch('BROWSER_CONFIG', nil), headless: headless)
+  elsif test_device_farm?
+    browser = get_device_farm_browser
   else
     browser = Retryable.retryable(tries: MAX_CONNECT_RETRIES) do
       saucelabs_browser(test_run_name, http_client: $selenium_http_client)
     end
-    $session_id = browser.session_id
-    visual_log_url = "https://saucelabs.com/tests/#{$session_id}"
+    $saucelabs_session_id = browser.session_id
+    visual_log_url = "https://saucelabs.com/tests/#{$saucelabs_session_id}"
     puts "visual log on sauce labs: <a href='#{visual_log_url}'>#{visual_log_url}</a>"
   end
 
@@ -96,15 +233,19 @@ def get_browser(test_run_name)
   # IE11 requires this to be explicitly set.
   browser.manage.timeouts.script_timeout = 30.seconds
 
-  # Maximize the window on desktop, as some tests require 1280px width.
-  unless ENV['MOBILE']
-    max_width, max_height = browser.execute_script('return [window.screen.availWidth, window.screen.availHeight];')
-    browser.manage.window.resize_to(max_width, max_height)
+  # Resize the desktop browser window to 1280x1024, the minimum supported
+  # screen size. SauceLabs' Chrome config also requests this via
+  # sauce:options.screenResolution; this resize covers the other SauceLabs
+  # browsers (Firefox, Safari) and all Device Farm desktop sessions, where
+  # no equivalent capability exists.
+  unless ENV['MOBILE'] == 'true'
+    browser.manage.window.resize_to(1280, 1024)
   end
   browser
 end
 
 $browser = nil
+$device_farm_mobile_session_arn = nil
 
 Before('@dashboard_db_access') do
   require_rails_env
@@ -128,9 +269,13 @@ Before do |scenario|
 end
 
 def log_result(result)
-  return unless $session_id
+  # Device Farm has no equivalent "stamp this session as passed/failed"
+  # API; the session's AWS console URL is printed at session-start for any
+  # post-mortem needs.
+  return if test_device_farm?
+  return unless $saucelabs_session_id
 
-  url = "https://#{CDO.saucelabs_username}:#{CDO.saucelabs_authkey}@saucelabs.com/rest/v1/#{CDO.saucelabs_username}/jobs/#{$session_id}"
+  url = "https://#{CDO.saucelabs_username}:#{CDO.saucelabs_authkey}@saucelabs.com/rest/v1/#{CDO.saucelabs_username}/jobs/#{$saucelabs_session_id}"
   HTTParty.put(
     url,
     body: {"passed" => result}.to_json,
@@ -146,6 +291,12 @@ def quit_browser
     $browser&.quit
   rescue => exception
     puts "Error quitting browser session: #{exception}"
+  end
+  # Release the Device Farm device so subsequent sessions don't block
+  # on PENDING_CONCURRENCY.
+  if $device_farm_mobile_session_arn
+    Cdo::AWS::DeviceFarm.stop_mobile_session($device_farm_mobile_session_arn)
+    $device_farm_mobile_session_arn = nil
   end
   $browser = @browser = nil
 end
@@ -167,8 +318,8 @@ After do |scenario|
   end
 end
 
-def context(str)
-  unless test_local?
+def saucelabs_context(str)
+  unless test_local? || test_device_farm?
     $browser&.execute_script("sauce:context=#{str}")
   end
 rescue => exception
@@ -178,22 +329,22 @@ end
 failed = false
 AfterConfiguration do |config|
   config.on_event :test_case_started do |event|
-    context "Scenario: #{event.test_case.name}"
+    saucelabs_context "Scenario: #{event.test_case.name}"
   end
   config.on_event :test_step_started do |event|
     last = event.test_step.source.last
     # Don't record context for (skipped) steps in scenario after failure.
     next if failed && last.is_a?(Cucumber::Core::Ast::Step)
-    context last
+    saucelabs_context last
   end
   config.on_event :test_step_finished do |event|
     if event.result.failed?
       failed = true
-      context "Failed: #{event.result.exception}"
+      saucelabs_context "Failed: #{event.result.exception}"
     end
   end
   config.on_event :test_case_finished do |_|
-    context 'Passed' unless failed
+    saucelabs_context 'Passed' unless failed
     failed = false
   end
 end

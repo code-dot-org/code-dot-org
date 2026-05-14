@@ -5,12 +5,12 @@ description 'description here'
 markdown <<MARKDOWN
 # Navigating the Professional Learning Module
 
-#### This professional learning module is designed with flexibility in mind. You choose the units that best serve your learning needs. 
+This professional learning module is designed with flexibility in mind. You choose the units that best serve your learning needs. 
 
 
 <br>
 
-#### A full professional learning experience includes **three parts**:
+A full professional learning experience includes **three parts**:
 
 <p style = "font-size:30px; font-weight:bold"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<code style="color:black; background-color:#5ED5DD; font-size: 14pt">Part 1</code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<code style="color:white; background-color:#8c52BA; font-size: 14pt">Part 2</code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<code style="color:white; background-color:#ed6060; font-size: 14pt">Part 3</code> </p>
 
@@ -18,7 +18,7 @@ markdown <<MARKDOWN
 
 <br>
 
-#### Learn more about the different parts here. 
+Learn more about the different parts here. 
 
 <details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
     <summary style="font-size: 1.5em; font-weight: bold;">Unit 1: Intro to Code.org</summary>
@@ -44,13 +44,13 @@ markdown <<MARKDOWN
 ## What's next? 
 ### **Choose your learning experience:**
 
-- #### Finish Unit 1 by continuing to Lesson Two: Implementing with Code.org 
-#### *Click the 'Continue' button on the bottom right of the page*
+- Finish Unit 1 by continuing to Lesson Two: Implementing with Code.org 
+*Click the 'Continue' button on the bottom right of the page*
 
 ###  **OR** 
 
-- #### Return to the overview page to select the next unit
-#### *Click the 'Return to Overview Page' button on the bottom left of the page*
+- Return to the overview page to select the next unit
+*Click the 'Return to Overview Page' button on the bottom left of the page*
 
 <a class="btn btn-large btn-primary" href="https://studio.code.org/courses/k5-maker-pilot-2024" rel="noopener noreferrer" style="float:left;">Return to Overview Page</a>
 

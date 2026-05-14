@@ -1,4 +1,4 @@
-import Button, {buttonColors} from '@code-dot-org/component-library/button';
+import {Button as MuiButton} from '@mui/material';
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
@@ -29,17 +29,23 @@ class ShareDisallowedDialog extends Component {
             {i18n.createAccountToShareDescription()}
           </div>
           <div style={styles.bottom}>
-            <Button
-              text={i18n.cancel()}
+            <MuiButton
+              variant="outlined"
+              color="tertiary"
+              size="medium"
               onClick={this.props.hideShareDialog}
-              type="secondary"
-              color={buttonColors.gray}
-            />
-            <Button
-              useAsLink={true}
+              type="button"
+            >
+              {i18n.cancel()}
+            </MuiButton>
+            <MuiButton
+              variant="contained"
+              color="primary"
+              size="medium"
               href={`/users/sign_up/account_type?user_return_to=${location.pathname}`}
-              text={i18n.createAccount()}
-            />
+            >
+              {i18n.createAccount()}
+            </MuiButton>
           </div>
         </div>
       </BaseDialog>

@@ -5,34 +5,6 @@ import type {RootState} from '@cdo/apps/types/redux';
 import {AiInteractionStatus} from '@cdo/generated-scripts/sharedConstants';
 
 import {isChatMessage} from '../../types';
-import {
-  allFieldsHidden,
-  anyFieldsChanged,
-  findChangedProperties,
-  hasFilledOutModelCard,
-} from '../utils';
-
-export const selectHasFilledOutModelCard = createSelector(
-  (state: RootState) => state.aichat.currentAiCustomizations.modelCardInfo,
-  hasFilledOutModelCard
-);
-
-export const selectAllFieldsHidden = createSelector(
-  (state: RootState) => state.aichat.fieldVisibilities,
-  allFieldsHidden
-);
-
-export const selectCurrentCustomizationsMatchInitial = createSelector(
-  (state: RootState) => state.aichat.initialAiCustomizations,
-  (state: RootState) => state.aichat.currentAiCustomizations,
-  anyFieldsChanged
-);
-
-export const selectSavedCustomizationsMatchInitial = createSelector(
-  (state: RootState) => state.aichat.initialAiCustomizations,
-  (state: RootState) => state.aichat.savedAiCustomizations,
-  anyFieldsChanged
-);
 
 export const selectIsWaitingForChatResponse = (state: RootState) => {
   let lastChatEvent;
@@ -51,13 +23,11 @@ export const selectIsWaitingForChatResponse = (state: RootState) => {
   );
 };
 
-export const selectAllVisibleMessages = (state: RootState) => {
-  const {chatEventsPast, chatEventsCurrent} = state.aichat;
-  return [...chatEventsPast, ...chatEventsCurrent];
-};
-
-export const selectHavePropertiesChanged = (state: RootState) =>
-  findChangedProperties(
-    state.aichat.savedAiCustomizations,
-    state.aichat.currentAiCustomizations
-  ).length > 0;
+export const selectAllVisibleMessages = createSelector(
+  (state: RootState) => state.aichat.chatEventsPast,
+  (state: RootState) => state.aichat.chatEventsCurrent,
+  (chatEventsPast, chatEventsCurrent) => [
+    ...chatEventsPast,
+    ...chatEventsCurrent,
+  ]
+);

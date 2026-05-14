@@ -606,7 +606,7 @@ class UnitEditor extends React.Component {
                   ))}
                 </select>
               </label>
-              <label>
+              <div style={styles.marginBottom}>
                 Topic tags
                 <Chips
                   name="unit-editor-topic-tags"
@@ -620,7 +620,7 @@ class UnitEditor extends React.Component {
                   values={this.state.topicTags}
                   setValues={vals => this.setState({topicTags: vals})}
                 />
-              </label>
+              </div>
               {this.props.hasCourse &&
                 this.props.initialPublishedState !==
                   PublishedState.in_development && (
@@ -667,7 +667,7 @@ class UnitEditor extends React.Component {
 
         <CollapsibleEditorSection title="Lesson Settings">
           {this.props.isMigrated && this.props.initialUseLegacyLessonPlans && (
-            <label>
+            <div style={styles.marginBottom}>
               <Button
                 text={'Use Code Studio Lesson Plans'}
                 size={Button.ButtonSize.narrow}
@@ -694,7 +694,7 @@ class UnitEditor extends React.Component {
                   lessons in this unit.
                 </p>
               </HelpTip>
-            </label>
+            </div>
           )}
           {(!this.props.isMigrated || this.state.useLegacyLessonPlans) && (
             <label>
@@ -1015,6 +1015,9 @@ const styles = {
     marginBottom: 10,
     border: '1px solid ' + color.light_gray,
     padding: 10,
+  },
+  marginBottom: {
+    marginBottom: 5,
   },
 };
 

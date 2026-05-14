@@ -1,7 +1,4 @@
-import {
-  BodyFourText,
-  StrongText,
-} from '@code-dot-org/component-library/typography';
+import {Typography} from '@mui/material';
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
 import React, {useCallback, useEffect, useMemo, useState} from 'react';
@@ -250,13 +247,17 @@ function RubricFloatingActionButton({
               dismissConfirmed && 'uitest-dismiss-confirmed'
             )}
           >
-            <BodyFourText className={style.countText}>
-              <StrongText>
+            <Typography
+              className={style.countText}
+              variant="body4"
+              gutterBottom
+            >
+              <Typography variant="strong">
                 <span aria-label={i18n.aiEvaluationsToReview()}>
                   {readyStudentCount}
                 </span>
-              </StrongText>
-            </BodyFourText>
+              </Typography>
+            </Typography>
           </div>
           {showScoresAlert && (
             <StudentScoresAlert

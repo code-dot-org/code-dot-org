@@ -281,12 +281,14 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
   private def sign_in_classlink(user)
     prepare_locale_cookie user
     user.update_oauth_credential_tokens auth_hash
+    auto_verify_teacher! user
     sign_in_user user
   end
 
   private def sign_in_clever(user)
     prepare_locale_cookie user
     user.update_oauth_credential_tokens auth_hash
+    auto_verify_teacher! user
     sign_in_user user
   end
 
@@ -329,7 +331,12 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
       id: auth_hash.uid
   end
 
-  # Temporary method to find existing Clever users by their legacy_id field
+  # Temporary method to find existing Clever users by their legacy_id field. This
+  # method also updates the user's credentials to use the new Clever v3 id and logs a metric for the migration.
+  # This is here to handle the edge case where an existing user's Clever auth option wasn't updated to the new v3 id
+  # during the migration, due to a district disabling the Clever integration, and then re-enabling it after the migration
+  # was complete. We want to make sure these users can still sign in without losing access to their account,
+  # and we also want to log a metric so we can understand how many users this is impacting and when it's no longer needed.
   private def find_clever_user_by_legacy_id
     return nil unless auth_hash
     # Teacher and staff users in Clever have a legacy_id field in the v3 API response.
@@ -344,9 +351,21 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
     end
     return nil unless legacy_id
 
-    User.find_by_credential \
+    user = User.find_by_credential \
       type: auth_hash.provider,
       id: legacy_id
+
+    if user
+      ao = user.authentication_options.find_by(credential_type: auth_hash.provider, authentication_id: legacy_id)
+      ao.update!(authentication_id: auth_hash.uid, version: AuthenticationOption::Clever::VERSION[:v3]) if ao
+
+      Metrics::Events.log_event(
+        user: user,
+        event_name: 'clever_legacy_id_migration',
+      )
+    end
+
+    return user
   end
 
   private def auth_hash
@@ -359,10 +378,7 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
 
   private def prepare_locale_cookie(user)
     # Set user-account locale only if no cookie is already set.
-    if user.locale &&
-        user.locale != request.env['cdo.locale'] &&
-        cookies[:language_].nil?
-
+    if user.locale && user.locale != I18n.locale.to_s && cookies[:language_].nil?
       set_locale_cookie(user.locale)
     end
   end
@@ -439,6 +455,10 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
     clever_data = OmniAuth::AuthHash.new(dob: dob, gender: gender, user_type: user_type)
     auth.info&.merge!(clever_data)
     auth
+  end
+
+  private def auto_verify_teacher!(user)
+    user.verify_teacher! if user.teacher? && !user.verified_teacher?
   end
 
   # Moves non-standard attributes from the extra ClassLink OAuth data and puts it in the location we
@@ -623,13 +643,19 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
     return unless connecting_new_provider? || Policies::Lti.lti_registration_in_progress?(session)
     lock_reason = account_linking_locked?
     return unless lock_reason
-    redirect_back fallback_location: new_user_session_path, alert: lock_reason
+    redirect_back fallback_location: new_user_session_path, alert: lock_reason, allow_other_host: true
   end
 
   # Determine whether to link a new LTI auth option to an existing account
   # Not to be confused with the connect_provider flow
   private def should_link_accounts?
-    Policies::Lti.lti_registration_in_progress?(session) && !account_linking_locked?
+    return false unless Policies::Lti.lti_registration_in_progress?(session)
+    return false if current_user&.lms_landing_opted_out
+
+    partial_user = User.new_with_session(ActionController::Parameters.new, session)
+    return false if partial_user&.lms_landing_opted_out
+
+    !account_linking_locked?
   end
 
   # For linking new LTI auth options to existing accounts

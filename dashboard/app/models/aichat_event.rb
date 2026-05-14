@@ -11,9 +11,11 @@
 #  created_at   :datetime         not null
 #  updated_at   :datetime         not null
 #  request_id   :bigint
+#  lesson_id    :integer
 #
 # Indexes
 #
+#  index_ace_lesson_user              (lesson_id,user_id)
 #  index_ace_user_level_script        (user_id,level_id,script_id)
 #  index_ace_user_level_script_id     (user_id,level_id,script_id,id)
 #  index_ace_user_project             (user_id,project_id)

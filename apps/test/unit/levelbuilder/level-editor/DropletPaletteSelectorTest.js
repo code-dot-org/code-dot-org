@@ -1,4 +1,3 @@
-import CodeMirror from 'codemirror';
 import {mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
 import {act} from 'react-dom/test-utils';
@@ -6,18 +5,30 @@ import {act} from 'react-dom/test-utils';
 import DropletPaletteSelector from '@cdo/apps/levelbuilder/level-editor/DropletPaletteSelector';
 
 describe('DropletPaletteSelector', () => {
-  let textArea, editor;
-  beforeEach(() => {
-    textArea = document.createElement('textarea');
-    document.body.appendChild(textArea);
-    editor = CodeMirror.fromTextArea(textArea);
-  });
+  let editor;
 
-  afterEach(() => {
-    // Removes the CodeMirror editor and restores the original textarea.
-    // @see https://codemirror.net/doc/manual.html#api_static
-    editor.toTextArea();
-    document.body.removeChild(textArea);
+  function createMockEditor() {
+    let value = '';
+    const changeListeners = [];
+
+    return {
+      on(event, callback) {
+        if (event === 'change') {
+          changeListeners.push(callback);
+        }
+      },
+      getValue() {
+        return value;
+      },
+      setValue(newValue) {
+        value = newValue;
+        changeListeners.forEach(listener => listener());
+      },
+    };
+  }
+
+  beforeEach(() => {
+    editor = createMockEditor();
   });
 
   describe('when the editor is empty and no blocks are provided in the palette', () => {
@@ -97,7 +108,7 @@ describe('DropletPaletteSelector', () => {
           />
         );
         await act(() => {
-          editor.setValue('invalud json');
+          editor.setValue('invalid json');
         });
         selector.update();
         expect(

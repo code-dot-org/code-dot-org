@@ -26,11 +26,11 @@ import CodeEditor from '@cdo/apps/lab2/views/components/editor/CodeEditor';
 import GuideInstructions from '@cdo/apps/lab2/views/components/guide/GuideInstructions';
 import ResourcePanel from '@cdo/apps/lab2/views/components/Instructions/ResourcePanel';
 import PanelContainer from '@cdo/apps/lab2/views/components/PanelContainer';
-import WorkspaceHeader from '@cdo/apps/lab2/views/components/WorkspaceHeader';
+import {WorkspaceHeader} from '@cdo/apps/lab2/views/components/WorkspaceHeader';
 import {DialogType, useDialogControl} from '@cdo/apps/lab2/views/dialogs';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 
-import AnalyticsReporter from '../analytics/AnalyticsReporter';
+import MusicAnalyticsReporter from '../analytics/AnalyticsReporter';
 import AppConfig from '../appConfig';
 import {installFunctionBlocks} from '../blockly/blockUtils';
 import MusicBlocklyWorkspace from '../blockly/MusicBlocklyWorkspace';
@@ -77,7 +77,7 @@ interface MusicLabViewProps {
   validator: MusicValidator;
   player: MusicPlayer;
   allowPackSelection: boolean;
-  analyticsReporter: AnalyticsReporter;
+  analyticsReporter: MusicAnalyticsReporter;
   blocklyWorkspace: MusicBlocklyWorkspace;
   exemplarPlaybackEvents: PlaybackEvent[];
   executeCode: (code: string) => void;
@@ -116,6 +116,7 @@ const MusicLabView: React.FunctionComponent<MusicLabViewProps> = ({
   viewingOldVersion,
 }) => {
   const dialogControl = useDialogControl();
+
   useUpdatePlayer(player);
   useUpdateAnalytics(
     analyticsReporter,
@@ -412,17 +413,20 @@ const MusicLabView: React.FunctionComponent<MusicLabViewProps> = ({
           <div id="blockly-area" className={moduleStyles.blocklyArea}>
             <PanelContainer
               id="workspace-panel"
-              headerContent={<WorkspaceHeader />}
+              headerContent={<WorkspaceHeader.Content />}
               hideHeaders={hideHeaders}
               rightHeaderContent={
-                <HeaderButtons
-                  onClickUndo={undo}
-                  onClickRedo={redo}
-                  clearCode={clearCode}
-                  allowPackSelection={allowPackSelection}
-                  skipUrl={skipUrl}
-                  hideChaff={hideChaff}
-                />
+                <>
+                  <WorkspaceHeader.TemplateIcon />
+                  <HeaderButtons
+                    onClickUndo={undo}
+                    onClickRedo={redo}
+                    clearCode={clearCode}
+                    allowPackSelection={allowPackSelection}
+                    skipUrl={skipUrl}
+                    hideChaff={hideChaff}
+                  />
+                </>
               }
               headerClassName={moduleStyles.headerWithBorder}
             >
@@ -474,7 +478,7 @@ const MusicLabView: React.FunctionComponent<MusicLabViewProps> = ({
               {AppConfig.getValue('js-editor') === 'true' && (
                 <CodeEditor
                   onCodeChange={executeCode}
-                  startCode={''}
+                  initialCode={''}
                   editorConfigExtensions={[javascript()]}
                   appName="music"
                 />

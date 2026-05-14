@@ -1,12 +1,11 @@
+import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import classNames from 'classnames';
 import PropTypes from 'prop-types';
 import React from 'react';
 import {connect} from 'react-redux';
 
-import FontAwesome from '../../legacySharedComponents/FontAwesome';
-import {toggleExpandedChoiceLevel} from '../sectionProgress/sectionProgressRedux';
-
 import {getLevelColumnHeaderId} from './LevelDataCell';
+import {toggleExpandedChoiceLevel} from './sectionProgressRedux';
 
 import styles from './progress-table-v2.module.scss';
 
@@ -26,8 +25,9 @@ function LevelProgressHeader({
           {lesson.relative_position + '.' + level.bubbleText}
         </div>
         {level.kind === 'assessment' && (
-          <FontAwesome
-            icon="star"
+          <FontAwesomeV6Icon
+            iconName="star"
+            iconStyle="solid"
             aria-label="assessment"
             className={styles.assessmentLevelIcon}
           />
@@ -44,7 +44,10 @@ function LevelProgressHeader({
         className={styles.expandedHeaderLevelCellExpandable}
         aria-expanded={isExpanded}
       >
-        {<FontAwesome icon={isExpanded ? 'caret-down' : 'caret-right'} />}
+        <FontAwesomeV6Icon
+          iconName={isExpanded ? 'caret-down' : 'caret-right'}
+          iconStyle="solid"
+        />
         {getLevelHeaderContent()}
       </button>
     ),

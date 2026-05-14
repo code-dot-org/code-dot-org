@@ -1,10 +1,6 @@
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import Link from '@code-dot-org/component-library/link';
-import {
-  Heading3,
-  BodyThreeText,
-  StrongText,
-} from '@code-dot-org/component-library/typography';
+import {Typography} from '@mui/material';
 import React from 'react';
 
 import {OrganizerInfo} from './../types';
@@ -23,26 +19,28 @@ const OrganizerInformation: React.FC<OrganizerInformationProps> = ({
 }) => {
   return (
     <div className={moduleStyles.card}>
-      <Heading3 visualAppearance="heading-xs">Organizer information</Heading3>
+      <Typography component="h3" variant="h6" gutterBottom>
+        Organizer information
+      </Typography>
       <div className={moduleStyles.underCardHeadingDetails}>
-        <BodyThreeText>
+        <Typography variant="body3" gutterBottom>
           <FontAwesomeV6Icon iconName="user" />
-          <StrongText>Organizer:</StrongText>
+          <Typography variant="strong">Organizer:</Typography>
           {organizer.name}
-        </BodyThreeText>
-        <BodyThreeText>
+        </Typography>
+        <Typography variant="body3" gutterBottom>
           <FontAwesomeV6Icon iconName="at" />
-          <StrongText>Email: </StrongText>
+          <Typography variant="strong">Email: </Typography>
           <Link size="s" href={`mailto:${organizer.email}`}>
             {organizer.email}
           </Link>
-        </BodyThreeText>
+        </Typography>
         {regionalPartnerName && (
-          <BodyThreeText>
+          <Typography variant="body3" gutterBottom>
             <FontAwesomeV6Icon iconName="building" />
-            <StrongText>Regional Partner:</StrongText>
+            <Typography variant="strong">Regional Partner:</Typography>
             {regionalPartnerName}
-          </BodyThreeText>
+          </Typography>
         )}
       </div>
     </div>

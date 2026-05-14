@@ -28,27 +28,9 @@ class TeacherDashboardController < ApplicationController
       @section_summary = @section.selected_section_summarize.except('secret_words')
     end
     @section_order = UserPreference.find_by(user_id: current_user.id)&.section_order
-    @locale_code = request.locale
+    @locale_code = I18n.locale.to_s
     @flash = flash
     view_options(full_width: true, no_padding_container: true)
-  end
-
-  def redirect_to_newest_section
-    if current_user.sections_instructed.empty?
-      redirect_to "/home"
-    else
-      section_id = current_user.sections_instructed.order(created_at: :desc).first.id
-      redirect_to "/teacher_dashboard/sections/#{section_id}/#{params[:location]}"
-    end
-  end
-
-  def redirect_to_newest_section_progress
-    if current_user.sections_instructed.empty?
-      redirect_to "https://support.code.org/hc/en-us/articles/25195525766669-Getting-Started-New-Progress-View"
-    else
-      section_id = current_user.sections_instructed.order(created_at: :desc).first.id
-      redirect_to "/teacher_dashboard/sections/#{section_id}/progress?view=v2"
-    end
   end
 
   def parent_letter
@@ -84,10 +66,10 @@ class TeacherDashboardController < ApplicationController
   def unit_in_aif
     unit = Unit.find(params[:unit_id])
     if unit
-      aif_status = unit.name.include?('aif')
+      aif_status = unit.curriculum_umbrella == 'AIF'
       render json: {aif: aif_status}
     else
-      return false
+      render json: {aif: false}
     end
   end
 end

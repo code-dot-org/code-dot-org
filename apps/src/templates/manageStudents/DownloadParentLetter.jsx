@@ -1,7 +1,8 @@
+import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
+import {Button as MuiButton} from '@mui/material';
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 
-import Button from '@cdo/apps/legacySharedComponents/Button';
 import {ParentLetterButtonMetricsCategory} from '@cdo/apps/templates/manageStudents/manageStudentsRedux';
 import {teacherDashboardUrl} from '@cdo/apps/templates/teacherDashboard/urlHelpers';
 import i18n from '@cdo/locale';
@@ -21,26 +22,16 @@ export default class DownloadParentLetter extends Component {
 
   render() {
     return (
-      <div style={styles.container}>
-        <Button
-          style={styles.buttonWithoutMargin}
-          onClick={this.onDownloadParentLetter}
-          target="_blank"
-          color={Button.ButtonColor.gray}
-          text={i18n.downloadParentLetter()}
-          icon="file-text"
-        />
-      </div>
+      <MuiButton
+        variant="outlined"
+        color="tertiary"
+        size="small"
+        onClick={this.onDownloadParentLetter}
+        type="button"
+        startIcon={<FontAwesomeV6Icon iconName="file-lines" />}
+      >
+        {i18n.downloadParentLetter()}
+      </MuiButton>
     );
   }
 }
-
-const styles = {
-  container: {
-    marginLeft: 5,
-    marginBottom: 5,
-  },
-  buttonWithoutMargin: {
-    margin: 0,
-  },
-};

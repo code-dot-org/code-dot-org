@@ -44,12 +44,12 @@ export const ArchiveAllModal: React.FC<ArchiveAllModalProps> = ({onClose}) => {
       title: i18n.archiveWarning(),
       customContent: <SafeMarkdown markdown={i18n.archiveAllNote()} />,
       primaryButtonProps: {
-        text: i18n.archiveAllSections(),
+        children: i18n.archiveAllSections(),
         onClick: archiveAll,
-        isPending: isLoading,
+        loading: isLoading,
       },
       secondaryButtonProps: {
-        text: i18n.cancel(),
+        children: i18n.cancel(),
         onClick: onClose,
       },
     }),
@@ -61,7 +61,7 @@ export const ArchiveAllModal: React.FC<ArchiveAllModalProps> = ({onClose}) => {
       title: i18n.archivedAllSections(),
       description: i18n.numArchivedSections({numHidden}),
       primaryButtonProps: {
-        text: i18n.closeDialog(),
+        children: i18n.closeDialog(),
         onClick: onClose,
       },
     }),

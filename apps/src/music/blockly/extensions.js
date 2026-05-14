@@ -1,20 +1,23 @@
+import CdoFieldDropdown from '@cdo/apps/blockly/addons/cdoFieldDropdown';
+import CdoFieldImage from '@cdo/apps/blockly/addons/cdoFieldImage';
+
 import {TICKS_PER_MEASURE} from '../constants';
 import MusicLibrary from '../player/MusicLibrary';
 
 import {BlockTypes} from './blockTypes';
 import {
+  DEFAULT_EFFECT_VALUE,
   EXTRA_SOUND_INPUT_PREFIX,
+  FIELD_EFFECTS_NAME,
+  FIELD_EFFECTS_VALUE,
+  FIELD_EFFECTS_VALUE_OPTIONS,
+  FIELD_PATTERN_AI_NAME,
+  FIELD_PATTERN_NAME,
+  FIELD_SOUNDS_NAME,
   MINUS_IMAGE,
   PLUS_IMAGE,
   SOUND_VALUE_TYPE,
   TRACK_NAME_FIELD,
-  FIELD_EFFECTS_NAME,
-  FIELD_EFFECTS_VALUE,
-  FIELD_EFFECTS_VALUE_OPTIONS,
-  DEFAULT_EFFECT_VALUE,
-  FIELD_SOUNDS_NAME,
-  FIELD_PATTERN_NAME,
-  FIELD_PATTERN_AI_NAME,
 } from './constants';
 
 export const getDefaultTrackNameExtension = player =>
@@ -79,7 +82,7 @@ export const playMultiMutator = {
 
     if (shouldShow) {
       this.appendDummyInput('PLUS').appendField(
-        new Blockly.FieldImage(PLUS_IMAGE, 20, 20),
+        new CdoFieldImage(PLUS_IMAGE, 20, 20),
         'PLUS',
         'plus'
       );
@@ -101,7 +104,7 @@ export const playMultiMutator = {
       }
       input.insertFieldAt(
         0,
-        new Blockly.FieldImage(MINUS_IMAGE, 20, 20),
+        new CdoFieldImage(MINUS_IMAGE, 20, 20),
         'MINUS',
         'minus'
       );
@@ -147,7 +150,7 @@ export const nextConnectionMutator = {
 export const effectsFieldExtension = function () {
   // Set the initial state when the block gets created
   const thisBlock = this;
-  const valuesDropdown = new Blockly.FieldDropdown(function () {
+  const valuesDropdown = new CdoFieldDropdown(function () {
     return FIELD_EFFECTS_VALUE_OPTIONS[
       thisBlock.getFieldValue(FIELD_EFFECTS_NAME)
     ];

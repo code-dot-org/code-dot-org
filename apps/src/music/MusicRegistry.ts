@@ -1,4 +1,4 @@
-import AnalyticsReporter from './analytics/AnalyticsReporter';
+import MusicAnalyticsReporter from './analytics/AnalyticsReporter';
 import MusicPlayer from './player/MusicPlayer';
 
 /**
@@ -8,7 +8,7 @@ import MusicPlayer from './player/MusicPlayer';
  */
 class MusicRegistry {
   private playerRef: MusicPlayer | null = null;
-  private analyticsReporterRef: AnalyticsReporter | null = null;
+  private analyticsReporterRef: MusicAnalyticsReporter | null = null;
 
   public showSoundFilters: boolean = false;
   public showSoundsPanelInSoundsMode: boolean = false;
@@ -28,14 +28,14 @@ class MusicRegistry {
     this.playerRef = player;
   }
 
-  public get analyticsReporter(): AnalyticsReporter {
+  public get analyticsReporter(): MusicAnalyticsReporter {
     if (!this.analyticsReporterRef) {
       throw new Error('AnalyticsReporter not set in MusicRegistry');
     }
     return this.analyticsReporterRef;
   }
 
-  public set analyticsReporter(analyticsReporter: AnalyticsReporter) {
+  public set analyticsReporter(analyticsReporter: MusicAnalyticsReporter) {
     this.analyticsReporterRef = analyticsReporter;
   }
 }

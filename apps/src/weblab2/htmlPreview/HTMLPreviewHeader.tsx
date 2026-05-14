@@ -1,14 +1,17 @@
-import Button from '@code-dot-org/component-library/button';
+import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import SegmentedButtons, {
   SegmentedButtonsProps,
 } from '@code-dot-org/component-library/segmentedButtons';
 import {WithTooltip} from '@code-dot-org/component-library/tooltip';
+import {IconButton as MuiIconButton} from '@mui/material';
 import classNames from 'classnames';
 import React, {useEffect, ChangeEvent, useCallback, useRef} from 'react';
 
 import {AutocompleteInput} from '@cdo/apps/templates/autocompleteInput/AutocompleteInput';
-import {useAppSelector} from '@cdo/apps/util/reduxHooks';
+import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 import weblab2I18n from '@cdo/apps/weblab2/locale';
+
+import {setDebugPanelOpen} from '../weblab2Redux';
 
 import {PreviewViewMode} from './constants';
 
@@ -47,6 +50,9 @@ export const HTMLPreviewHeader: React.FC<HTMLPreviewHeaderProps> = ({
   fetchFileSearchOptions,
 }) => {
   const isFullScreenView = useAppSelector(state => state.lab.isFullScreenView);
+  const isShareView = useAppSelector(state => state.lab.isShareView);
+  const debugPanelOpen = useAppSelector(state => state.weblab2.debugPanelOpen);
+  const dispatch = useAppDispatch();
 
   // Supports our preview page "navigation" feature so the autocomplete suggestions
   // are only shown for user input and not for programmatic changes to the URL bar.
@@ -120,28 +126,30 @@ export const HTMLPreviewHeader: React.FC<HTMLPreviewHeaderProps> = ({
     >
       <div className={moduleStyles.urlBarContent}>
         <div className={moduleStyles.navButtonsWrapper}>
-          <Button
-            onClick={onNavigateBack}
-            aria-label={weblab2I18n.navigateBack()}
-            size="xs"
-            type="tertiary"
-            color="gray"
-            isIconOnly={true}
-            icon={{iconName: 'chevron-left'}}
+          <MuiIconButton
+            variant="text"
+            color="tertiary"
+            size="extraSmall"
             disabled={!canNavigateBack}
             className={moduleStyles.iconButton}
-          />
-          <Button
-            onClick={onNavigateForward}
-            aria-label={weblab2I18n.navigateForward()}
-            size="xs"
-            type="tertiary"
-            color="gray"
-            isIconOnly={true}
-            icon={{iconName: 'chevron-right'}}
+            onClick={onNavigateBack}
+            aria-label={weblab2I18n.navigateBack()}
+            type="button"
+          >
+            <FontAwesomeV6Icon iconName="chevron-left" />
+          </MuiIconButton>
+          <MuiIconButton
+            variant="text"
+            color="tertiary"
+            size="extraSmall"
             disabled={!canNavigateForward}
             className={moduleStyles.iconButton}
-          />
+            onClick={onNavigateForward}
+            aria-label={weblab2I18n.navigateForward()}
+            type="button"
+          >
+            <FontAwesomeV6Icon iconName="chevron-right" />
+          </MuiIconButton>
         </div>
         <AutocompleteInput
           id="html-preview-url-listbox"
@@ -158,16 +166,17 @@ export const HTMLPreviewHeader: React.FC<HTMLPreviewHeaderProps> = ({
           placeholder=""
           aria-label={weblab2I18n.addressBar()}
         />
-        <Button
+        <MuiIconButton
+          variant="text"
+          color="tertiary"
+          size="extraSmall"
+          className={moduleStyles.iconButton}
           onClick={onRefresh}
           aria-label={weblab2I18n.refresh()}
-          size="xs"
-          type="tertiary"
-          color="gray"
-          isIconOnly={true}
-          icon={{iconName: 'refresh'}}
-          className={moduleStyles.iconButton}
-        />
+          type="button"
+        >
+          <FontAwesomeV6Icon iconName="refresh" />
+        </MuiIconButton>
       </div>
       <WithTooltip
         tooltipProps={{
@@ -177,26 +186,57 @@ export const HTMLPreviewHeader: React.FC<HTMLPreviewHeaderProps> = ({
           text: 'Stop preview',
         }}
       >
-        <Button
-          onClick={onStopPreview}
-          aria-label={'Stop Preview'}
-          size="xs"
-          type="secondary"
+        <MuiIconButton
+          variant="outlined"
+          color="error"
+          size="extraSmall"
           disabled={!isStopEnabled}
-          isIconOnly={true}
-          icon={{iconName: 'circle-stop'}}
           className={moduleStyles.iconButton}
-          color={'destructive'}
-        />
+          onClick={onStopPreview}
+          aria-label="Stop Preview"
+          type="button"
+        >
+          <FontAwesomeV6Icon iconName="circle-stop" />
+        </MuiIconButton>
       </WithTooltip>
       <SegmentedButtons
         className={moduleStyles.previewViewModeButtons}
         {...previewViewModeButtonsProps}
       />
-      <ToggleFullScreenButton
-        isFullScreenView={isFullScreenView}
-        onToggleFullScreen={onToggleFullScreen}
-      />
+
+      {!isShareView && (
+        // Hide debug panel toggle and full screen toggle buttons in share view.
+        <>
+          <WithTooltip
+            tooltipProps={{
+              tooltipId: 'toggle-debug-panel',
+              direction: 'onBottom',
+              size: 'xs',
+              text: debugPanelOpen ? 'Close debug panel' : 'Open debug panel',
+            }}
+          >
+            <MuiIconButton
+              variant="outlined"
+              color="tertiary"
+              size="extraSmall"
+              className={
+                debugPanelOpen ? moduleStyles.closeDebugPanelButton : undefined
+              }
+              onClick={() => dispatch(setDebugPanelOpen(!debugPanelOpen))}
+              aria-label={
+                debugPanelOpen ? 'Close debug panel' : 'Open debug panel'
+              }
+              type="button"
+            >
+              <FontAwesomeV6Icon iconName="bug" />
+            </MuiIconButton>
+          </WithTooltip>
+          <ToggleFullScreenButton
+            isFullScreenView={isFullScreenView}
+            onToggleFullScreen={onToggleFullScreen}
+          />
+        </>
+      )}
     </div>
   );
 };
@@ -211,18 +251,19 @@ const ToggleFullScreenButton: React.FC<ToggleFullScreenButtonProps> = ({
   onToggleFullScreen,
 }) => {
   return (
-    <Button
+    <MuiIconButton
+      variant="text"
+      color="tertiary"
+      size="extraSmall"
       onClick={onToggleFullScreen}
       aria-label={
         isFullScreenView
           ? weblab2I18n.minimizePreview()
           : weblab2I18n.maximizePreview()
       }
-      size="xs"
-      type="tertiary"
-      color="gray"
-      isIconOnly={true}
-      icon={{iconName: isFullScreenView ? 'compress' : 'expand'}}
-    />
+      type="button"
+    >
+      <FontAwesomeV6Icon iconName={isFullScreenView ? 'compress' : 'expand'} />
+    </MuiIconButton>
   );
 };

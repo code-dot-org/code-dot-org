@@ -13,7 +13,7 @@ import {
   getSelectedCourseId,
   getSelectedUnitPosition,
 } from '@cdo/apps/redux/unitSelectionRedux';
-import {loadUnitProgress} from '@cdo/apps/templates/sectionProgress/sectionProgressLoader';
+import {loadUnitProgress} from '@cdo/apps/templates/sectionProgressV2/sectionProgressLoader';
 import i18n from '@cdo/locale';
 
 import styles from './unit-selector-v2.module.scss';
@@ -35,6 +35,7 @@ function UnitSelectorV2({
   selectedSectionCourse,
   isLabelVisible = false,
   labelText = i18n.selectUnit(),
+  v1Styles = false,
 }) {
   // Reload courses with progress when selected section changes.
   React.useEffect(() => {
@@ -86,7 +87,7 @@ function UnitSelectorV2({
     <div
       className={classNames(
         skeletonizeContent.skeletonizeContent,
-        styles.skeleton
+        v1Styles ? styles.v1SkeletonDropdown : styles.skeleton
       )}
     />
   );
@@ -103,7 +104,7 @@ function UnitSelectorV2({
       selectedValue={`${courseVersionId}-${unitId}`}
       name="unitSelector"
       onChange={onSelectUnit}
-      className={className}
+      className={classNames(className, v1Styles && styles.v1Dropdown)}
       isLabelVisible={isLabelVisible}
       size="s"
       dropdownTextThickness="thin"
@@ -130,6 +131,7 @@ UnitSelectorV2.propTypes = {
   selectedSectionCourse: PropTypes.any,
   isLabelVisible: PropTypes.bool,
   labelText: PropTypes.string,
+  v1Styles: PropTypes.bool,
 };
 
 export const UnconnectedUnitSelectorV2 = UnitSelectorV2;

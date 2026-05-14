@@ -1,4 +1,5 @@
-import Button from '@code-dot-org/component-library/button';
+import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
+import {IconButton as MuiIconButton} from '@mui/material';
 import classNames from 'classnames';
 import React from 'react';
 
@@ -49,25 +50,27 @@ export const MultiItemInput: React.FunctionComponent<{
       {!readOnly && (
         <div className={moduleStyles.buttonsRow}>
           {showPlus && (
-            <Button
+            <MuiIconButton
+              variant="outlined"
+              color="tertiary"
+              size="small"
               className={moduleStyles.plusMinusButton}
               onClick={onAdd}
-              isIconOnly
-              size="s"
-              type="secondary"
-              color="gray"
-              icon={{iconName: 'plus'}}
-            />
+              type="button"
+            >
+              <FontAwesomeV6Icon iconName="plus" />
+            </MuiIconButton>
           )}
-          <Button
+          <MuiIconButton
+            variant="outlined"
+            color="tertiary"
+            size="small"
             className={moduleStyles.plusMinusButton}
             onClick={onRemove}
-            isIconOnly
-            size="s"
-            type="secondary"
-            color="gray"
-            icon={{iconName: 'minus'}}
-          />
+            type="button"
+          >
+            <FontAwesomeV6Icon iconName="minus" />
+          </MuiIconButton>
         </div>
       )}
     </div>

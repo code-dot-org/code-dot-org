@@ -21,6 +21,7 @@ $container-width: 512;
 $header-height: 40;
 $body-height: 612;
 $fab-left: 11;
+$fab-right: 11;
 $fab-bottom: 35;
 $fab-height: 48;
 $sidebar-tooltip-z-index: 2010;
@@ -33,6 +34,65 @@ $sidebar-tooltip-z-index: 2010;
   fabOriginY: $fab-bottom + $fab-height + 16;
 }
 
+// Styles for AI diff drawer
+.aiDiffDrawer {
+  position: fixed;
+  left: 10px;
+  bottom: 106px;
+  z-index: 2000;
+
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  width: 400px;
+}
+
+.fabBackgroundDrawer {
+  display: flex;
+  flex-direction: column;
+  border-right: 0.125rem solid $neutral_dark;
+  border-left: 0.125rem solid $neutral_dark;
+  background: $neutral_white;
+  flex: 1;
+  overflow-x: hidden;
+  overflow-y: auto;
+
+  &:last-child {
+    border-radius: 0 0 0.25rem 0.25rem;
+    border-bottom: 0.125rem solid $neutral_dark;
+  }
+
+  h2 {
+    margin-bottom: 0;
+  }
+}
+
+.floatingActionButtonRight {
+  position: fixed;
+  right: $fab-right * 1px;
+  bottom: $fab-bottom * 1px;
+  height: $fab-height * 1px;
+  width: 48px;
+  background-size: 60px;
+  padding: 0;
+  background-color: transparent;
+  border-width: 0;
+  border-radius: 50%;
+  z-index: 1000;
+
+  img {
+    opacity: 1;
+  }
+
+  .floatingActionButtonTag {
+    position: absolute;
+    width: 25px;
+    left: 33px;
+    top: -8px;
+  }
+}
+
+// Styles for AI Diff Container
 .aiDiffContainer {
   position: fixed;
   left: 10px;
@@ -443,6 +503,11 @@ html body .sidebarActionTooltip {
   overflow: hidden;
 }
 
+.sidebarArtifactIconContainer {
+  justify-content: space-between;
+  display: flex;
+}
+
 .sidebarChatItemSecondary {
   color: var(--text-neutral-tertiary) !important;
   font-family: Figtree, sans-serif !important;
@@ -538,6 +603,33 @@ html body .sidebarActionTooltip {
   }
 }
 
+.artifactShowButtons {
+  display: flex;
+  margin-top: 12px;
+
+  button {
+    margin-inline-end: 8px;
+    margin-bottom: 8px;
+  }
+
+  a {
+    color: var(--text-neutral-tertiary);
+    font-weight: 600;
+    text-decoration: underline;
+    align-self: center;
+    width: 100%;
+    justify-content: flex-start;
+
+    i {
+      padding: 4px;
+      margin-inline-start: 4px;
+      border-radius: 4px;
+      background: var(--background-brand-aqua-light, #bffffc);
+      color: var(--text-brand-aqua-secondary);
+    }
+  }
+}
+
 .artifactConfiguration {
   &Section {
     margin: 20px;
@@ -556,7 +648,7 @@ html body .sidebarActionTooltip {
       margin-bottom: 12px;
       display: flex;
       justify-content: space-between;
-      align-items: flex-start;
+      align-items: flex-end;
       align-self: stretch;
 
       a {
@@ -566,6 +658,16 @@ html body .sidebarActionTooltip {
         font-size: 14px;
       }
     }
+  }
+
+  &TitleSection {
+    margin: 20px;
+    padding: 20px;
+    background-color: var(--background-neutral-secondary);
+    flex-direction: row;
+    display: flex;
+    gap: 12px;
+    align-items: end;
   }
 
   &Dropdowns {
@@ -677,23 +779,23 @@ html body .sidebarActionTooltip {
   margin-top: -16px;
   border-radius: 4px;
 
-  p{
+  p {
     white-space: pre-line;
   }
 
   &Blue {
-    border: 1px solid var(--borders-brand-teal-primary, #0093A4);
-    background: var(--background-brand-teal-extra-light, #E0F8F9);
+    border: 1px solid var(--borders-brand-teal-primary, #0093a4);
+    background: var(--background-brand-teal-extra-light, #e0f8f9);
   }
 
   &Red {
-    border: 1px solid var(--accent-strawberry-50, #ED6060);
-    background: var(--accent-strawberry-10, #FFE3E3);
+    border: 1px solid var(--accent-strawberry-50, #ed6060);
+    background: var(--accent-strawberry-10, #ffe3e3);
   }
 
   &Purple {
-    border: 1px solid var(--borders-brand-purple-primary, #8C52BA);
-    background: var(--background-brand-purple-extra-light, #F6EDFD);
+    border: 1px solid var(--borders-brand-purple-primary, #8c52ba);
+    background: var(--background-brand-purple-extra-light, #f6edfd);
   }
 }
 
@@ -703,22 +805,22 @@ html body .sidebarActionTooltip {
   align-items: center;
   gap: 8px;
   border-radius: 4px;
-  background: var(--background-brand-teal-primary, #0093A4);
+  background: var(--background-brand-teal-primary, #0093a4);
   z-index: 1;
-  p{
+  p {
     color: $neutral_white;
     margin: 0;
   }
   &Blue {
-    background: var(--background-brand-teal-primary, #0093A4);
+    background: var(--background-brand-teal-primary, #0093a4);
   }
 
   &Red {
-    background: var(--accent-strawberry-50, #ED6060);
+    background: var(--accent-strawberry-50, #ed6060);
   }
 
   &Purple {
-    background: var(--borders-brand-purple-primary, #8C52BA);
+    background: var(--borders-brand-purple-primary, #8c52ba);
   }
 }
 
@@ -731,16 +833,16 @@ html body .sidebarActionTooltip {
 
 .markdownStyle {
   p {
-  color: var(--text-neutral-primary, #292F36);
-  text-align: center;
-  font-feature-settings: 'liga' off, 'clig' off;
+    color: var(--text-neutral-primary, #292f36);
+    text-align: center;
+    font-feature-settings: 'liga' off, 'clig' off;
 
-  /* Body/Body 1 - ExtraStrong */
-  font-family: var(--font-family-body, Figtree);
-  font-size: var(--font-size-body-lg, 20px);
-  font-style: normal;
-  font-weight: 700;
-  line-height: var(--font-line-height-body-lg, 28px); /* 140% */
+    /* Body/Body 1 - ExtraStrong */
+    font-family: var(--font-family-body, Figtree);
+    font-size: var(--font-size-body-lg, 20px);
+    font-style: normal;
+    font-weight: 700;
+    line-height: var(--font-line-height-body-lg, 28px); /* 140% */
   }
 }
 
@@ -751,8 +853,8 @@ html body .sidebarActionTooltip {
   padding: 12px 20px;
   gap: 20px;
   border-radius: 4px;
-  border: 1px solid var(--borders-neutral-primary, #D4DAE1);
-  background: var(--background-neutral-secondary, #F0F2F5);
+  border: 1px solid var(--borders-neutral-primary, #d4dae1);
+  background: var(--background-neutral-secondary, #f0f2f5);
 }
 
 .answerKeyHeader {
@@ -767,4 +869,23 @@ html body .sidebarActionTooltip {
   display: flex;
   justify-content: center;
   color: $neutral_dark;
+}
+
+.artifactThreadIcon {
+  color: var(--background-neutral-octonary);
+  align-self: center;
+}
+
+.artifactTitleInput {
+  min-height: 24px;
+  max-height: 24px;
+  box-sizing: border-box;
+  resize: none;
+  margin: 0;
+  width: 100%;
+
+  &:disabled {
+    opacity: 0.5;
+    background: none;
+  }
 }

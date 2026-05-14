@@ -4,6 +4,7 @@ import React, {useMemo} from 'react';
 
 import {setActiveFileThunk} from '@cdo/apps/lab2/redux/lab2ProjectReduxThunks';
 import {sendLab2AnalyticsEvent} from '@cdo/apps/lab2/utils';
+import {getFileExtension} from '@cdo/apps/lab2/utils/multiFileSourceUtils';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 
@@ -62,7 +63,7 @@ export const FileRow: React.FunctionComponent<FileRowProps> = ({
     if (isAiTutorVersion) {
       sendLab2AnalyticsEvent(EVENTS.AI_TUTOR_VERSION_VIEW_FILE_CLICKED, {
         fileName: item.name,
-        fileType: item.language,
+        fileType: getFileExtension(item.name),
         aiTutorVersionFileUpdated: item.isAiTutorVersionUpdated
           ? 'true'
           : 'false',

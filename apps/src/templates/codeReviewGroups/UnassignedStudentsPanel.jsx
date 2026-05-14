@@ -1,39 +1,44 @@
+import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
+import {Button as MuiButton} from '@mui/material';
 import PropTypes from 'prop-types';
 import React from 'react';
 
-import fontConstants from '@cdo/apps/fontConstants';
-import JavalabButton from '@cdo/apps/javalab/JavalabButton';
-import FontAwesome from '@cdo/apps/legacySharedComponents/FontAwesome';
-import color from '@cdo/apps/util/color';
 import i18n from '@cdo/locale';
 
 import StudentGroup from './StudentGroup';
+
+import moduleStyles from './studentGroupsPanel.module.scss';
 
 export default function UnassignedStudentsPanel({
   unassignedGroup,
   onUnassignAllClick,
 }) {
   return (
-    <div style={styles.unassignedStudentsPanel}>
-      <div style={styles.header}>
-        <span style={styles.headerTitle}>{i18n.unassignedStudents()}</span>
-        <JavalabButton
+    <div className={moduleStyles.unassignedStudentsPanel}>
+      <div className={moduleStyles.header}>
+        <span className={moduleStyles.headerTitle}>
+          {i18n.unassignedStudents()}
+        </span>
+        <MuiButton
           id="uitest-unassign-all-button"
+          variant="outlined"
+          color="tertiary"
+          size="small"
           onClick={onUnassignAllClick}
-          icon={<FontAwesome icon="times" className="fa" />}
-          text={i18n.unassignAll()}
-          inlineStyle={styles.button}
-          isHorizontal
-        />
+          type="button"
+          startIcon={<FontAwesomeV6Icon iconName="xmark" />}
+        >
+          {i18n.unassignAll()}
+        </MuiButton>
       </div>
       <div
         id="uitest-code-review-group-unassigned"
-        style={styles.groupsContainer}
+        className={moduleStyles.groupsContainer}
       >
         <StudentGroup
           droppableId={unassignedGroup.droppableId}
           members={unassignedGroup.members}
-          dropAreaStyle={styles.studentGroup}
+          dropAreaStyle={{height: 355}}
           showEmptyGroupPlaceholder={false}
         />
       </div>
@@ -44,50 +49,4 @@ export default function UnassignedStudentsPanel({
 UnassignedStudentsPanel.propTypes = {
   unassignedGroup: PropTypes.object.isRequired,
   onUnassignAllClick: PropTypes.func.isRequired,
-};
-
-export const HEADER_STYLE = {
-  height: 54,
-  display: 'flex',
-  alignItems: 'center',
-  justifyContent: 'space-between',
-  padding: '5px 10px',
-  border: `1px solid ${color.lighter_gray}`,
-  background: color.lightest_gray,
-  ...fontConstants['main-font-semi-bold'],
-  fontSize: 14,
-};
-
-export const HEADER_TITLE_STYLE = {
-  margin: '5px',
-};
-
-export const BUTTON_STYLE = {
-  backgroundColor: color.lightest_gray,
-  color: color.dark_charcoal,
-  borderRadius: 4,
-  border: `1px solid ${color.dark_charcoal}`,
-  fontSize: 14,
-};
-
-export const GROUPS_CONTAINER_STYLE = {
-  display: 'flex',
-  flexDirection: 'column',
-  height: 355,
-  overflow: 'auto',
-  border: `1px solid ${color.lightest_gray}`,
-  padding: '10px 4px 0 0',
-};
-
-const styles = {
-  unassignedStudentsPanel: {
-    width: 400,
-  },
-  header: HEADER_STYLE,
-  headerTitle: HEADER_TITLE_STYLE,
-  button: BUTTON_STYLE,
-  groupsContainer: GROUPS_CONTAINER_STYLE,
-  studentGroup: {
-    height: 355,
-  },
 };

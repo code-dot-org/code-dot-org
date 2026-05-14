@@ -8,12 +8,9 @@ Metadata:
         - W2001 # Allow unused parameters
 Parameters:
   # ---------------------------------------------
-  # Domain Names - Each Stack operates 5 sites (examples are for production):
+  # Domain Names - Each Stack operates 2 sites (examples are for production):
   # 1) Learning Platform ("Dashboard") - https://studio.code.org
-  # 2) Corporate Website ("Pegasus") - https://code.org
-  # 3) Advocacy Website (runs on LeadPages) - https://advocacy.code.org
-  # 4) Hour of Code (runs on Pegasus) - https://hourofcode.com
-  # 5) Code Projects (host user created content) - https://codeprojects.org
+  # 2) Code Projects (host user created content) - https://codeprojects.org
   # ---------------------------------------------
   BaseDomainName:
     Type: String
@@ -23,32 +20,6 @@ Parameters:
     Type: String
     Default: <%=rack_env?(:production) ? 'studio' : "#{stack_name}-studio" %>
     Description: Subdomain name for learning platform ("Dashboard").
-  PegasusSubdomainName:
-    Type: String
-    Default: <%=rack_env?(:production) ? '\'\'' : stack_name %>
-    Description: Subdomain name for corporate web site ("Pegasus").
-  # This domain name needs to be referenced both in Cloudformation and in the code for MarketingRouterLambda.
-  # As a result, it is declared here in Ruby so that it can be passed to the Lambda function.
-  # WARNING: Changing this value is NOT sufficient to change the value in the stack. It ONLY changes the default value.
-  # The value must be changed manually in the AWS Console or CLI, followed by an update to the stack. 
-  <% INTERNAL_MARKETING_DOMAIN_NAME = "code.marketing-sites.#{rack_env?(:production) ? 'code.org' : 'test-code.org'}" %>
-  InternalMarketingDomainName:
-    Type: String
-    Default: <%=INTERNAL_MARKETING_DOMAIN_NAME %>
-    Description: Interim domain name of the Contentful CMS-based marketing site. The DNS record for code.org still points to Pegasus, which dynamically routes some requests to the new Contentful site. This parameter is intended for internal routing and should not be used outside that context.
-  HourOfCodeBaseDomainName:
-    Type: String
-    Default: hourofcode.com
-    Description: Hour Of Code base domain name.
-  HourOfCodeHostedZoneId:
-    Type: String
-    # Default to ID for `hourofcode.com`
-    Default: Z3TQLAV9VNIB0G
-    Description: Route 53 Hosted Zone ID for Hour of Code base domain name.
-  HourOfCodeSubdomainName:
-    Type: String
-    Default: <%=rack_env?(:production) ? '\'\'' : stack_name %>
-    Description: Subdomain name for Hour Of Code site.
   CodeprojectsBaseDomainName:
     Type: String
     Default: <%=rack_env?(:production) ? 'codeprojects.org' : "#{stack_name}.codeprojects.org" %>
@@ -89,31 +60,6 @@ Parameters:
     Type: String
 <% end -%>
 Resources:
-
-  HourOfCodeCertificate:
-    Type: AWS::CertificateManager::Certificate
-    Properties:
-<% if rack_env?(:production) -%>
-      DomainName: !Sub "${HourOfCodeBaseDomainName}"
-      SubjectAlternativeNames:
-        - !Sub "www.${HourOfCodeBaseDomainName}"
-      ValidationMethod: DNS
-      DomainValidationOptions:
-        - DomainName: !Sub "${HourOfCodeBaseDomainName}"
-          HostedZoneId: !Ref HourOfCodeHostedZoneId
-        - DomainName: !Sub "www.${HourOfCodeBaseDomainName}"
-          HostedZoneId: !Ref HourOfCodeHostedZoneId
-<% else -%>
-      DomainName: !Sub "${HourOfCodeSubdomainName}.${HourOfCodeBaseDomainName}"
-      SubjectAlternativeNames:
-        - !Sub "www.${HourOfCodeSubdomainName}.${HourOfCodeBaseDomainName}"
-      ValidationMethod: DNS
-      DomainValidationOptions:
-        - DomainName: !Sub "${HourOfCodeSubdomainName}.${HourOfCodeBaseDomainName}"
-          HostedZoneId: !Ref HourOfCodeHostedZoneId
-        - DomainName: !Sub "www.${HourOfCodeSubdomainName}.${HourOfCodeBaseDomainName}"
-          HostedZoneId: !Ref HourOfCodeHostedZoneId
-<% end -%>
 
   # ---------------------------------------------
   # Stack-specific IAM permissions
@@ -284,24 +230,39 @@ Resources:
               - 'bedrock:Retrieve'
             Resource:
               # TODO: Deploy KB with Cloudformation and !Ref it here
-              - !Sub 'arn:aws:bedrock:${AWS::Region}:${AWS::AccountId}:knowledge-base/1WHRENJ0OA'
+              - !Sub "arn:aws:bedrock:${AWS::Region}:${AWS::AccountId}:knowledge-base/1WHRENJ0OA"
           - Effect: Allow
             Action:
               - 'bedrock:Retrieve'
             Resource:
               # TODO: Deploy KB with Cloudformation and !Ref it here
-              - !Sub 'arn:aws:bedrock:${AWS::Region}:${AWS::AccountId}:knowledge-base/ODWSNBOEZG'
+              - !Sub "arn:aws:bedrock:${AWS::Region}:${AWS::AccountId}:knowledge-base/ODWSNBOEZG"
+          - Effect: Allow
+            Action:
+              - 'bedrock:InvokeModel'
+              - 'bedrock:GetInferenceProfile'
+            Resource:
+              - !Sub "arn:aws:bedrock:${AWS::Region}:${AWS::AccountId}:inference-profile/us.anthropic.claude-sonnet-4-5-20250929-v1:0"
           - Effect: Allow
             Action:
               - 'bedrock:InvokeModel'
             Resource:
-              - 'arn:aws:bedrock:us-east-1::foundation-model/anthropic.claude-3-sonnet-20240229-v1:0'
+              - 'arn:aws:bedrock:*::foundation-model/anthropic.claude-sonnet-4-5-20250929-v1:0'
+            Condition:
+              StringLike:
+                bedrock:InferenceProfileArn: !Sub "arn:aws:bedrock:${AWS::Region}:${AWS::AccountId}:inference-profile/us.anthropic.claude-sonnet-4-5-20250929-v1:0"
+          # Allow Frontend and Daemon servers to write to Amazon Managed Prometheus (AMP)
+          # TODO: Replace with SSM - https://codedotorg.atlassian.net/browse/INF-2079
+          - Effect: Allow
+            Action:
+              - 'aps:RemoteWrite'
+            Resource: '*'
 
   # ---------------------------------------------
   # Frontend Servers
   # ---------------------------------------------
 
-<% frontend_availability_zones = AVAILABILITY_ZONES - ['us-east-1e'] # As of Nov 2025, us-east-1e doesn't support m7i instance types. 
+<% frontend_availability_zones = AVAILABILITY_ZONES - ['us-east-1e'] # As of Nov 2025, us-east-1e doesn't support m7i instance types.
    frontend_subnet_suffixes = availability_zone_suffixes(frontend_availability_zones)
 -%>
 
@@ -333,10 +294,7 @@ Resources:
 
 <% if load_balancer -%>
   # ---------------------------------------------
-  # Load Balancers
-  #
-  # TODO
-  # - hourofcode.com and csedweek.org load balancers should be added to this template.
+  # Load Balancer - supports both learning platform ("studio") and Code Projects sites.
   # ---------------------------------------------
 <% raise "LoadBalancer name [#{stack_name}] cannot be longer than 32 characters" if stack_name.length > 32 -%>
 
@@ -387,7 +345,6 @@ Resources:
       Properties:
         Certificates:
           - CertificateArn: <%=certificate_arn%>
-          - CertificateArn: !Ref HourOfCodeCertificate
         ListenerArn: !GetAtt HTTPSListener.ListenerArn
 
   ALBTargetGroup:
@@ -435,99 +392,33 @@ Resources:
 
   # ---------------------------------------------
   # Route53 (DNS) and CloudFront (CDN) resources
-  #
-  # TODO
-  # - hourofcode.com and csedweek.org DNS/CDN resources should be added to this template.
   # ---------------------------------------------
-<%
-  %w(Dashboard Pegasus).each do |app|
-    app_domain = app == 'Dashboard' ? studio_subdomain : subdomain
--%>
-  <%=app%>DNS:
+
+  DashboardDNS:
     Type: AWS::Route53::RecordSetGroup
     Properties:
       HostedZoneName: <%=domain%>.
       RecordSets:
-        - Name: <%=app_domain%>
+        - Name: <%=studio_subdomain%>
           Type: A
-<%   if cdn_enabled -%>
+<% if cdn_enabled -%>
           AliasTarget:
-            DNSName: !GetAtt [<%=app%>CDN, DomainName]
+            DNSName: !GetAtt [DashboardCDN, DomainName]
             HostedZoneId: Z2FDTNDATAQYW2 # static ID for cloudfront aliases
-<%   elsif load_balancer -%>
+<% elsif load_balancer -%>
           AliasTarget:
             DNSName: !GetAtt [ALB, DNSName]
             HostedZoneId: !GetAtt [ALB, CanonicalHostedZoneID]
-<%   else -%>
+<% else -%>
           TTL: <%= DNS_TTL %>
           ResourceRecords: [!GetAtt <%=daemon%>.PublicIp]
-<%   end -%>
+<% end -%>
 
-<%   if cdn_enabled -%>
-  <%=app%>CDN:
+<% if cdn_enabled -%>
+  DashboardCDN:
     Type: AWS::CloudFront::Distribution
     Properties:
-      DistributionConfig: <%= cloudfront_config(app) %>
-<%   end -%>
-
-<%   if cdn_enabled && app == 'Pegasus' -%>
-<%=    component 'www_redirect', app: app -%>
-<%
-       marketing_router_package = zip_directory(
-         'marketing-router',
-         environment_variables: {marketingDomain: INTERNAL_MARKETING_DOMAIN_NAME}
-       )
-%>
-  MarketingRouterLambda:
-    Type: AWS::Lambda::Function
-    Properties:
-      Description: 'Lambda for dynamically routing Corporate website traffic to new NextJS/Contentful system based on the URL path.'
-      FunctionName: !Sub "${AWS::StackName}-marketing-router"
-      Code: <%= marketing_router_package[:s3_location].to_json %>
-      Handler: index.handler
-      Runtime: nodejs22.x
-      Role: !GetAtt MarketingRouterLambdaRole.Arn
-      LoggingConfig:
-        ApplicationLogLevel: "ERROR"
-        LogFormat: "JSON"
-  MarketingRouterVersion:
-    Type: AWS::Lambda::Version
-    Properties:
-      FunctionName: !Ref MarketingRouterLambda
-      Description: "Code hash: <%= marketing_router_package[:content_hash] %>"
-  # Create an Alias to make it easier to monitor Metrics in CloudWatch.
-  MarketingRouterAlias:
-    Type: AWS::Lambda::Alias
-    Properties:
-      FunctionName: !Ref MarketingRouterLambda
-      FunctionVersion: !GetAtt MarketingRouterVersion.Version
-      Name: LIVE
-  MarketingRouterLambdaRole:
-    Type: AWS::IAM::Role
-    Properties:
-      <%=service_role ['lambda', 'edgelambda']%>
-      Path: /
-      Policies:
-        - PolicyName: Logging
-          PolicyDocument:
-            Version: "2012-10-17"
-            Statement:
-              - Effect: Allow
-                Action:
-                  - logs:CreateLogGroup
-                Resource: 
-                  - !Sub "arn:aws:logs:*:*:log-group:/aws/lambda/us-east-1.${AWS::StackName}-marketing-router:*"
-                  - !Sub "arn:aws:logs:*:*:log-group:/aws/lambda/${AWS::StackName}-marketing-router:*"
-              - Effect: Allow
-                Action:
-                  - logs:CreateLogStream
-                  - logs:PutLogEvents
-                Resource:
-                  - !Sub "arn:aws:logs:*:*:log-group:/aws/lambda/us-east-1.${AWS::StackName}-marketing-router:log-stream:*"
-                  - !Sub "arn:aws:logs:*:*:log-group:/aws/lambda/${AWS::StackName}-marketing-router:log-stream:*"
-      PermissionsBoundary: !ImportValue IAM-DevPermissions
-<%  end -%>
-
+      DistributionConfig: <%= cloudfront_config('Dashboard') %>
 <% end -%>
 
 <% if cdn_enabled -%>
@@ -622,48 +513,36 @@ Resources:
               - Effect: Allow
                 Action: iam:PassRole
                 Resource: !Sub "arn:aws:iam::${AWS::AccountId}:role/admin/CloudFormationService"
-<% if rack_env?(:production) -%>
-        # Grant scheduled processes (Export to Redshift, etc.) permission to clone/delete RDS clusters.
-        - PolicyName: CloneDeleteRDSClusters
+<% if rack_env?(:production) || rack_env?(:test) -%>
+        # Permit cron jobs on test and production daemon servers to utilize the `etl_client` SQL user to carry out data
+        # integration tasks and to monitor status of Zero ETL Integrations.
+        - PolicyName: RedshiftDataAPI
           PolicyDocument:
             Statement:
               - Effect: Allow
                 Action:
-                  - 'rds:DescribeDBClusters'
-                  - 'rds:RestoreDBClusterToPointInTime'
-                Resource:
-                  - !Sub "arn:aws:rds:${AWS::Region}:${AWS::AccountId}:cluster:*"
-                  - !Sub "arn:aws:rds:${AWS::Region}:${AWS::AccountId}:subgrp:*"
-                  - !Sub "arn:aws:rds:${AWS::Region}:${AWS::AccountId}:cluster-pg:*"
-              - Effect: Allow
-                Action:
-                  - 'rds:DeleteDBCluster'
-                Resource:
-                  - !Sub "arn:aws:rds:${AWS::Region}:${AWS::AccountId}:cluster:*"
-              - Effect: Allow
-                Action:
-                  - 'rds:CreateDBInstance'
-                  - 'rds:DeleteDBInstance'
-                Resource:
-                  - !Sub "arn:aws:rds:${AWS::Region}:${AWS::AccountId}:db:*"
-                  - !Sub "arn:aws:rds:${AWS::Region}:${AWS::AccountId}:cluster:*"
-                  - !Sub "arn:aws:rds:${AWS::Region}:${AWS::AccountId}:pg:*"
-              - Effect: Allow
-                Action:
-                  - 'rds:DescribeDBInstances'
+                  - 'redshift-data:BatchExecuteStatement'
+                  - 'redshift-data:CancelStatement'
+                  - 'redshift-data:DescribeStatement'
+                  - 'redshift-data:ExecuteStatement'
+                  - 'redshift-data:GetStatementResult'
+                  - 'redshift-data:ListStatements'
+                  - 'redshift-data:ListTables'
                 Resource: '*'
               - Effect: Allow
-                Action:
-                  - 'rds:CopyDBClusterParameterGroup'
-                  - 'rds:DeleteDBClusterParameterGroup'
+                Action: 'redshift:GetClusterCredentials'
                 Resource:
-                  - !Sub "arn:aws:rds:${AWS::Region}:${AWS::AccountId}:cluster-pg:*"
-              - Effect: Allow
-                Action:
-                  - 'rds:CopyDBParameterGroup'
-                  - 'rds:DeleteDBParameterGroup'
-                Resource:
-                  - !Sub "arn:aws:rds:${AWS::Region}:${AWS::AccountId}:pg:*"
+                  - !Sub
+                    - "arn:aws:redshift:${AWS::Region}:${AWS::AccountId}:dbuser:${ClusterNamespace}/etl_client"
+                    - ClusterNamespace: !ImportValue "DATA-production-RedshiftClusterIdentifier"
+                  - !Sub
+                    - "arn:aws:redshift:${AWS::Region}:${AWS::AccountId}:dbname:${ClusterNamespace}/dashboard"
+                    - ClusterNamespace: !ImportValue "DATA-production-RedshiftClusterIdentifier"
+                  - !Sub
+                    - "arn:aws:redshift:${AWS::Region}:${AWS::AccountId}:dbname:${ClusterNamespace}/<%=rack_env%>_learningplatform_mysql_zeroetl"
+                    - ClusterNamespace: !ImportValue "DATA-production-RedshiftClusterIdentifier"
+<% end -%>
+<% if rack_env?(:production) -%>
         - PolicyName: StopInactiveAdhocInstances
           PolicyDocument:
             Statement:
@@ -733,6 +612,96 @@ Resources:
                   - dms:ListTagsForResource
                   - dms:StartReplicationTask
                 Resource: !Sub "arn:aws:dms:${AWS::Region}:${AWS::AccountId}:task:*"
+<% end -%>
+<% if rack_env?(:test) -%>
+        # AWS Device Farm (Test Grid) access for UI test runners on the test daemon.
+        # Scoped to Test Grid only — this is a Selenium/WebDriver replacement
+        # evaluation for Saucelabs and does not need mobile Device Farm actions.
+        - PolicyName: DaemonDeviceFarmPolicy
+          PolicyDocument:
+            Statement:
+              # Resource-scoped actions: operate on a specific project or session.
+              - Effect: Allow
+                Action:
+                  - 'devicefarm:CreateTestGridUrl'
+                  - 'devicefarm:GetTestGridProject'
+                  - 'devicefarm:GetTestGridSession'
+                  - 'devicefarm:ListTestGridSessionActions'
+                  - 'devicefarm:ListTestGridSessionArtifacts'
+                  - 'devicefarm:ListTestGridSessions'
+                Resource:
+                  - !Sub 'arn:aws:devicefarm:*:${AWS::AccountId}:testgrid-project:*'
+                  - !Sub 'arn:aws:devicefarm:*:${AWS::AccountId}:testgrid-session:*'
+              # List actions are not resource-scopable by AWS and must use "*".
+              - Effect: Allow
+                Action:
+                  - 'devicefarm:ListTestGridProjects'
+                Resource: '*'
+        # Mobile Device Farm access for UI test runners on the test daemon.
+        # Covers the run lifecycle: read project/run/job/suite/test/upload
+        # state, schedule and stop runs, manage uploads, and drive remote
+        # access sessions. Erring on the side of broader access — trim later
+        # if a tighter set proves sufficient.
+        - PolicyName: DaemonDeviceFarmMobilePolicy
+          PolicyDocument:
+            Statement:
+              # Resource-scoped actions on Device Farm resources owned by this account.
+              - Effect: Allow
+                Action:
+                  - 'devicefarm:GetProject'
+                  - 'devicefarm:GetRun'
+                  - 'devicefarm:GetJob'
+                  - 'devicefarm:GetSuite'
+                  - 'devicefarm:GetTest'
+                  - 'devicefarm:GetUpload'
+                  - 'devicefarm:GetDevicePool'
+                  - 'devicefarm:GetDevicePoolCompatibility'
+                  - 'devicefarm:GetNetworkProfile'
+                  - 'devicefarm:GetRemoteAccessSession'
+                  - 'devicefarm:ListJobs'
+                  - 'devicefarm:ListSuites'
+                  - 'devicefarm:ListTests'
+                  - 'devicefarm:ListArtifacts'
+                  - 'devicefarm:ListSamples'
+                  - 'devicefarm:ListUniqueProblems'
+                  - 'devicefarm:ListUploads'
+                  - 'devicefarm:ListRuns'
+                  - 'devicefarm:ListNetworkProfiles'
+                  - 'devicefarm:ListDevicePools'
+                  - 'devicefarm:ListRemoteAccessSessions'
+                  - 'devicefarm:StopRun'
+                  - 'devicefarm:StopJob'
+                  - 'devicefarm:StopRemoteAccessSession'
+                  - 'devicefarm:CreateUpload'
+                  - 'devicefarm:DeleteRun'
+                  - 'devicefarm:DeleteUpload'
+                  - 'devicefarm:DeleteRemoteAccessSession'
+                Resource:
+                  - !Sub 'arn:aws:devicefarm:*:${AWS::AccountId}:project:*'
+                  - !Sub 'arn:aws:devicefarm:*:${AWS::AccountId}:run:*'
+                  - !Sub 'arn:aws:devicefarm:*:${AWS::AccountId}:job:*'
+                  - !Sub 'arn:aws:devicefarm:*:${AWS::AccountId}:suite:*'
+                  - !Sub 'arn:aws:devicefarm:*:${AWS::AccountId}:test:*'
+                  - !Sub 'arn:aws:devicefarm:*:${AWS::AccountId}:upload:*'
+                  - !Sub 'arn:aws:devicefarm:*:${AWS::AccountId}:devicepool:*'
+                  - !Sub 'arn:aws:devicefarm:*:${AWS::AccountId}:networkprofile:*'
+                  - !Sub 'arn:aws:devicefarm:*:${AWS::AccountId}:session:*'
+                  - !Sub 'arn:aws:devicefarm:*:${AWS::AccountId}:artifact:*'
+              # Actions evaluated against AWS-managed device ARNs (no account
+              # ID in the ARN) or against account-wide list endpoints — neither
+              # is resource-scopable. CreateRemoteAccessSession and ScheduleRun
+              # take a deviceArn parameter and IAM evaluates them against the
+              # device resource, not the project.
+              - Effect: Allow
+                Action:
+                  - 'devicefarm:GetDevice'
+                  - 'devicefarm:ListDevices'
+                  - 'devicefarm:ListProjects'
+                  - 'devicefarm:ListOfferings'
+                  - 'devicefarm:ListOfferingPromotions'
+                  - 'devicefarm:CreateRemoteAccessSession'
+                  - 'devicefarm:ScheduleRun'
+                Resource: '*'
 <% end -%>
       ManagedPolicyArns:
         - !Ref CDOPolicy
@@ -921,17 +890,20 @@ Outputs:
   DashboardURL:
     Value: "https://<%=studio_subdomain%>"
     Description: Dashboard URL
-  PegasusURL:
-    Value: "https://<%=subdomain%>"
-    Description: Pegasus URL
 <% if cdn_enabled -%>
   PreviewCodeprojectsURL:
     Description: Codeprojects URL
     Value: !Sub preview.${CodeprojectsBaseDomainName}
 <% end -%>
-# display information about how to ssh to console if this is a single instance adhoc environment
-<% if rack_env?(:adhoc) && !frontends -%>
-  SSHServerName:
-    Value: <%=cdn_enabled ? subdomain('origin') : stack_name%>
-    Description: SSH server name
-<%end-%>
+<% if rack_env?(:adhoc) -%>
+  DaemonSSHCommand:
+    Description: "AWS CLI command to connect to the daemon instance via AWS Systems Manager (SSM) Session Manager."
+    Value: !Sub
+      - "aws ssm start-session --target ${InstanceId}"
+      - InstanceId: !Ref <%=daemon%>
+  DaemonProvisioningLog:
+    Description: "Link to CloudWatch Log that the daemon EC2 Instance Cloud Init Output logs are streamed to for diagnosis of provisioning issues."
+    Value: !Sub
+      - "https://${AWS::Region}.console.aws.amazon.com/cloudwatch/home?region=${AWS::Region}#logsV2:log-groups/log-group/adhoc-syslog/log-events/${InstanceId}"
+      - InstanceId: !Ref <%=daemon%>
+<% end -%>

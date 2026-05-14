@@ -1,8 +1,9 @@
-import Button from '@code-dot-org/component-library/button';
 import Checkbox from '@code-dot-org/component-library/checkbox';
 import Link from '@code-dot-org/component-library/link';
+import {Button as MuiButton} from '@mui/material';
 import Papa from 'papaparse';
 import React, {useState} from 'react';
+
 import './skills.css';
 
 import {
@@ -218,12 +219,17 @@ const AccuracyCheck: React.FC<{
       </div>
       <br />
       <div>
-        <Button
-          text="Upload Examples of Student Answers"
-          onClick={importCSV}
+        <MuiButton
+          variant="contained"
+          color="primary"
+          size="medium"
+          loading={evaluationPending}
           disabled={!csvSelected}
-          isPending={evaluationPending}
-        />
+          onClick={importCSV}
+          type="button"
+        >
+          {'Upload Examples of Student Answers'}
+        </MuiButton>
       </div>
       <br />
       {hasSkills && (
@@ -240,11 +246,16 @@ const AccuracyCheck: React.FC<{
       <br />
       <br />
       <div>
-        <Button
-          text="Download CSV"
-          onClick={downloadCSV}
+        <MuiButton
+          variant="contained"
+          color="primary"
+          size="medium"
           disabled={aiEvaluatedAnswers.length === 0 || evaluationPending}
-        />
+          onClick={downloadCSV}
+          type="button"
+        >
+          {'Download CSV'}
+        </MuiButton>
       </div>
       {aiEvaluatedAnswers.length > 0 && !evaluationPending && (
         <div className="evaluation-complete-notification">

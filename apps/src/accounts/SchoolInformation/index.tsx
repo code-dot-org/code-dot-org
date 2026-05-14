@@ -1,6 +1,5 @@
 import Alert, {alertTypes} from '@code-dot-org/component-library/alert';
-import {Button} from '@code-dot-org/component-library/button';
-import {Typography} from '@mui/material';
+import {Typography, Button as MuiButton} from '@mui/material';
 import React, {useEffect, useMemo, useState} from 'react';
 
 import {queryParams} from '@cdo/apps/code-studio/utils';
@@ -142,12 +141,17 @@ export const SchoolInformation: React.FC<SchoolInformationProps> = ({
           )}
         </div>
         <div>
-          <Button
-            className={commonStyles.submit}
-            text={i18n.schoolInformation_updateSchoolInformation()}
-            onClick={handleSchoolInformationUpdate}
+          <MuiButton
+            variant="contained"
+            color="primary"
+            size="medium"
             disabled={saveDisabled}
-          />
+            className={commonStyles.submit}
+            onClick={handleSchoolInformationUpdate}
+            type="button"
+          >
+            {i18n.schoolInformation_updateSchoolInformation()}
+          </MuiButton>
         </div>
       </form>
     </>

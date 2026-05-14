@@ -25,6 +25,19 @@ iframe {
     pointer-events: none;
 }
 
+/* Poster Image */
+#poster {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    background-color: #000;
+    z-index: 5;
+    pointer-events: auto; /* Ensures clicks register for play/pause */
+}
+
 /* Captions Overlay */
 #closed-caption-overlay {
     position: absolute;
@@ -63,6 +76,7 @@ iframe {
     padding: 0 12px 8px 12px;
     gap: 0;
     transition: opacity 0.2s ease-in-out;
+    z-index: 10; /* Ensures controls stay above the poster */
 }
 
 :host([controls]) #controls-bar {
@@ -77,6 +91,13 @@ iframe {
     display: none;
 }
 
+/* Make controls look disabled on error */
+:host(.has-error) #controls-bar {
+    opacity: 0.5;
+    pointer-events: none; /* Prevents clicking play/volume/scrubber */
+    filter: grayscale(100%);
+}
+    
 .controls-row {
     display: flex;
     align-items: center;
@@ -183,6 +204,24 @@ iframe {
     display: none !important;
 }
 
+
+/* Fullscreen Button */
+#fullscreen-btn {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='white' d='M7 14H5v5h5v-2H7v-3zm-2-4h2V7h3V5H5v5zm12 7h-3v2h5v-5h-2v3zM14 5v2h3v3h2V5h-5z'/%3E%3C/svg%3E");
+}
+
+#fullscreen-btn.fullscreen-active {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='white' d='M5 16h3v3h2v-5H5v2zm3-8H5v2h5V5H8v3zm6 11h2v-3h3v-2h-5v5zm2-11V5h-2v5h5V8h-3z'/%3E%3C/svg%3E");
+}
+
+/* Fullscreen layout */
+:host(:fullscreen),
+:host(:-webkit-full-screen) {
+    aspect-ratio: unset;
+    width: 100%;
+    height: 100%;
+}
+
 /* Progress bar */
 input[type=range] {
     -webkit-appearance: none;
@@ -243,8 +282,6 @@ input[type=range]::-moz-range-thumb {
     opacity: 0;
     pointer-events: none;
 }
-
-
 `;
 
 export default styles;

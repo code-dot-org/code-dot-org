@@ -9,7 +9,7 @@ class CalloutTest < ActiveSupport::TestCase
     @script2 = create(:script, :in_single_unit_course, name: 'repeat-button-callout-script')
     @script_level = create(:script_level, script: @script, levels: [@level])
     @script_level2 = create(:script_level, script: @script2, levels: [@level])
-    @csv_callouts = Callout.find_or_create_all_from_tsv!('test/fixtures/callouts.tsv')
+    @csv_callouts = Callout.find_or_create_all_from_tsv!('test/fixtures/files/callouts.tsv')
   end
 
   test "callouts should be generated from a tsv" do
@@ -24,7 +24,7 @@ class CalloutTest < ActiveSupport::TestCase
   end
 
   test "callouts should first_or_create when imported from tsv" do
-    callouts_second_time = Callout.find_or_create_all_from_tsv!('test/fixtures/callouts.tsv')
+    callouts_second_time = Callout.find_or_create_all_from_tsv!('test/fixtures/files/callouts.tsv')
     assert_equal(@csv_callouts.first.id, callouts_second_time.first.id)
     assert_equal(@csv_callouts.last.id, callouts_second_time.last.id)
   end
@@ -42,7 +42,7 @@ class CalloutTest < ActiveSupport::TestCase
 
   test "callout lines with an invalid script / level pair should fail silently" do
     content = capture(:stdout) do
-      @invalid_callout_import = Callout.find_or_create_all_from_tsv!('test/fixtures/callouts_invalid.tsv')
+      @invalid_callout_import = Callout.find_or_create_all_from_tsv!('test/fixtures/files/callouts_invalid.tsv')
       assert_nil(@invalid_callout_import[0])
     end
     assert_includes(content, "Error finding script level ")

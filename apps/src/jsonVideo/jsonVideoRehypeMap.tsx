@@ -1,11 +1,13 @@
 import React from 'react';
+
 import '@cdo/apps/jsonVideo/jsonVideoElement';
+import TutorVideo from './TutorVideo';
 
 const LinkWrapper: React.FunctionComponent<
   React.AnchorHTMLAttributes<HTMLAnchorElement>
 > = ({children, ...props}) => {
   if (props.href?.includes('assets/js/json')) {
-    return <json-video controls="true" src={props.href} />;
+    return <TutorVideo href={props.href} />;
   }
   return <a {...props}>{children}</a>;
 };

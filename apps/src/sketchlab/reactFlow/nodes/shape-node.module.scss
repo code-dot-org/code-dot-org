@@ -1,0 +1,85 @@
+.shapeNode {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  outline: none;
+  color: var(--text-neutral-primary);
+}
+
+// Rotatable layer that contains only the visual content (shape + label).
+// React Flow's NodeResizer, toolbar, and ConnectionHandles sit outside this
+// wrapper so resize math and edge attachment stay axis-aligned.
+.rotatable {
+  position: absolute;
+  inset: 0;
+  transform-origin: center;
+}
+
+.shapeSvg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+}
+
+.rectangleBackground {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  border: 2px solid var(--text-neutral-primary);
+  box-sizing: border-box;
+}
+
+.circleLabel {
+  padding: 12%;
+}
+
+.triangleLabel {
+  padding-top: 30%;
+  padding-left: 20%;
+  padding-right: 20%;
+  padding-bottom: 5%;
+}
+
+.diamondLabel {
+  padding: 20% 15%;
+}
+
+.rectangleLabel {
+  padding: 4px 8px;
+}
+
+.label {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  cursor: default;
+  user-select: none;
+  width: 100%;
+  min-width: 40px;
+  min-height: 20px;
+  box-sizing: border-box;
+  word-break: normal;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+  font-size: 14px;
+  line-height: 1.3;
+  pointer-events: all;
+  outline: none;
+  color: var(--text-neutral-primary);
+
+  &[contenteditable='true'] {
+    cursor: text;
+    user-select: text;
+    outline: 2px solid var(--borders-info-primary);
+    border-radius: 2px;
+    padding: 4px;
+    min-width: 40px;
+    background: var(--background-neutral-primary);
+    color: var(--text-neutral-primary);
+  }
+}

@@ -1,4 +1,4 @@
-import {Button} from '@code-dot-org/component-library/button';
+import {Button as MuiButton} from '@mui/material';
 import $ from 'jquery';
 import PropTypes from 'prop-types';
 import React from 'react';
@@ -254,16 +254,20 @@ export class RegionalPartnerMiniContact extends React.Component {
           )}
           <div className={style.submitContainer}>
             {!this.state.submitting && (
-              <Button
-                id="submit"
-                text="Send"
-                color="purple"
+              <MuiButton
+                variant="contained"
+                color="primary"
+                size="medium"
                 className={style.submitButton}
+                id="submit"
                 onClick={this.submit}
-              />
+                type="button"
+              >
+                {'Send'}
+              </MuiButton>
             )}
             {this.state.submitting && (
-              <span className="fa fa-spin fa-spinner" />
+              <span className="fa-solid fa-spin fa-spinner" />
             )}{' '}
           </div>
         </FormGroup>

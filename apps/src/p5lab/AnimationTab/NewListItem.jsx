@@ -25,7 +25,9 @@ class NewListItem extends React.Component {
       >
         <div className={style.wrapper}>
           <div className={style.border}>
-            <i className={classNames(style.addButton, 'fa fa-plus-circle')} />
+            <i
+              className={classNames(style.addButton, 'fa-solid fa-circle-plus')}
+            />
             <div className={style.animationName}>{this.props.label}</div>
           </div>
         </div>

@@ -1,12 +1,12 @@
 import Alert from '@code-dot-org/component-library/alert';
-import {Button} from '@code-dot-org/component-library/button';
 import CloseButton from '@code-dot-org/component-library/closeButton';
-import {Typography} from '@mui/material';
+import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
+import {Typography, Button as MuiButton} from '@mui/material';
 import Drawer from '@mui/material/Drawer';
 import React from 'react';
 
 import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
-import {EVENTS, PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants.js';
+import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants.js';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import {useSchoolInfo} from '@cdo/apps/schoolInfo/hooks/useSchoolInfo';
 import {updateSchoolInfo} from '@cdo/apps/schoolInfo/utils/updateSchoolInfo';
@@ -51,7 +51,6 @@ export const TeacherHomepageDrawer: React.FC<TeacherHomepageDrawerProps> = ({
     React.useState(false);
   const [success, setSuccess] = React.useState(false);
   const [AFEDrawerOpen, setAFEDrawerOpen] = React.useState(afeOpenInitially);
-  const [AFEParticipate, setAFEParticipate] = React.useState(false);
   const [NPSOpen, setNPSOpen] = React.useState(npsOpenInitially);
   const [NPSSuccess, setNPSSuccess] = React.useState(false);
 
@@ -156,40 +155,54 @@ export const TeacherHomepageDrawer: React.FC<TeacherHomepageDrawerProps> = ({
   const primaryButton: () => React.ReactNode = () => {
     if (schoolInfoInterstitialOpen) {
       return (
-        <Button
-          type={'primary'}
-          size={'m'}
-          text={i18n.save()}
+        <MuiButton
+          variant="contained"
+          color="primary"
+          size="medium"
           onClick={handlePrimaryButtonClick}
-        />
+          type="button"
+        >
+          {i18n.save()}
+        </MuiButton>
       );
     } else if (schoolInfoConfirmationOpen) {
       return (
-        <Button
-          type={'primary'}
-          size={'m'}
-          text={i18n.imAtaNewSchool()}
+        <MuiButton
+          variant="contained"
+          color="primary"
+          size="medium"
           onClick={handlePrimaryButtonClick}
-        />
+          type="button"
+        >
+          {i18n.imAtaNewSchool()}
+        </MuiButton>
       );
     } else if (success) {
       return (
-        <Button
-          type={'primary'}
-          size={'m'}
-          text={i18n.closeDialog()}
+        <MuiButton
+          variant="contained"
+          color="primary"
+          size="medium"
           onClick={handlePrimaryButtonClick}
-        />
+          type="button"
+        >
+          {i18n.closeDialog()}
+        </MuiButton>
       );
     } else if (AFEDrawerOpen) {
       return (
-        <Button
-          type={'primary'}
-          size={'m'}
-          iconRight={{iconName: 'up-right-from-square'}}
-          text={i18n.learnMore()}
+        <MuiButton
+          variant="contained"
+          color="primary"
+          size="medium"
           onClick={handlePrimaryButtonClick}
-        />
+          href={pegasus('/resources/amazon-future-engineer#eligibility')}
+          target="_blank"
+          rel="noopener noreferrer"
+          endIcon={<FontAwesomeV6Icon iconName="up-right-from-square" />}
+        >
+          {i18n.learnMore()}
+        </MuiButton>
       );
     }
   };
@@ -197,35 +210,41 @@ export const TeacherHomepageDrawer: React.FC<TeacherHomepageDrawerProps> = ({
   const secondaryButton: () => React.ReactNode = () => {
     if (schoolInfoConfirmationOpen) {
       return (
-        <Button
-          type={'secondary'}
-          size={'m'}
-          color={'gray'}
-          text={i18n.imStillTeachingHere()}
-          onClick={onDrawerClose}
-        />
+        <MuiButton
+          variant="outlined"
+          color="tertiary"
+          size="medium"
+          onClick={() => onDrawerClose()}
+          type="button"
+        >
+          {i18n.imStillTeachingHere()}
+        </MuiButton>
       );
     } else if (success) {
       return null;
     } else if (AFEDrawerOpen) {
       return (
-        <Button
-          type={'secondary'}
-          size={'m'}
-          color={'gray'}
-          text={i18n.notInterested()}
-          onClick={onDrawerClose}
-        />
+        <MuiButton
+          variant="outlined"
+          color="tertiary"
+          size="medium"
+          onClick={() => onDrawerClose()}
+          type="button"
+        >
+          {i18n.notInterested()}
+        </MuiButton>
       );
     } else {
       return (
-        <Button
-          type={'secondary'}
-          size={'m'}
-          color={'gray'}
-          text={i18n.dismiss()}
-          onClick={onDrawerClose}
-        />
+        <MuiButton
+          variant="outlined"
+          color="tertiary"
+          size="medium"
+          onClick={() => onDrawerClose()}
+          type="button"
+        >
+          {i18n.dismiss()}
+        </MuiButton>
       );
     }
   };
@@ -233,14 +252,10 @@ export const TeacherHomepageDrawer: React.FC<TeacherHomepageDrawerProps> = ({
   const tryUpdateSchoolInfo = async () => {
     const hasNcesId =
       schoolInfo.schoolId && !NON_SCHOOL_OPTIONS.includes(schoolInfo.schoolId);
-    analyticsReporter.sendEvent(
-      EVENTS.SCHOOL_INTERSTITIAL_SUBMIT,
-      {
-        hasNcesId: hasNcesId.toString(),
-        attempt: showSchoolInfoUnknownError ? 2 : 1,
-      },
-      PLATFORMS.STATSIG
-    );
+    analyticsReporter.sendEvent(EVENTS.SCHOOL_INTERSTITIAL_SUBMIT, {
+      hasNcesId: hasNcesId.toString(),
+      attempt: showSchoolInfoUnknownError ? 2 : 1,
+    });
     try {
       await updateSchoolInfo({
         schoolId: schoolInfo.schoolId,
@@ -249,24 +264,16 @@ export const TeacherHomepageDrawer: React.FC<TeacherHomepageDrawerProps> = ({
         schoolZip: schoolInfo.schoolZip,
       });
 
-      analyticsReporter.sendEvent(
-        EVENTS.SCHOOL_INTERSTITIAL_SAVE_SUCCESS,
-        {
-          attempt: showSchoolInfoUnknownError ? 2 : 1,
-        },
-        PLATFORMS.STATSIG
-      );
+      analyticsReporter.sendEvent(EVENTS.SCHOOL_INTERSTITIAL_SAVE_SUCCESS, {
+        attempt: showSchoolInfoUnknownError ? 2 : 1,
+      });
 
       setSuccess(true);
       setSchoolInfoInterstitialOpen(false);
     } catch (error) {
-      analyticsReporter.sendEvent(
-        EVENTS.SCHOOL_INTERSTITIAL_SAVE_FAILURE,
-        {
-          attempt: showSchoolInfoUnknownError ? 2 : 1,
-        },
-        PLATFORMS.STATSIG
-      );
+      analyticsReporter.sendEvent(EVENTS.SCHOOL_INTERSTITIAL_SAVE_FAILURE, {
+        attempt: showSchoolInfoUnknownError ? 2 : 1,
+      });
 
       if (!showSchoolInfoUnknownError) {
         // First failure, display error message and give the teacher a chance
@@ -286,52 +293,31 @@ export const TeacherHomepageDrawer: React.FC<TeacherHomepageDrawerProps> = ({
     } else if (schoolInfoConfirmationOpen) {
       // If the confirmation drawer is open, the user can click through to
       // make the school info panel appear.
-      analyticsReporter.sendEvent(
-        EVENTS.CONFIRM_SCHOOL_CLICKED,
-        {},
-        PLATFORMS.STATSIG
-      );
+      analyticsReporter.sendEvent(EVENTS.CONFIRM_SCHOOL_CLICKED, {});
       setSchoolInfoInterstitialOpen(true);
       setSchoolInfoConfirmationOpen(false);
     } else if (schoolInfoInterstitialOpen) {
       // If the interstitial is open, we want to submit the school info.
       tryUpdateSchoolInfo();
     } else if (AFEDrawerOpen) {
-      analyticsReporter.sendEvent(
-        EVENTS.AFE_HOMEPAGE_BANNER_SUBMIT,
-        {},
-        PLATFORMS.STATSIG
-      );
+      analyticsReporter.sendEvent(EVENTS.AFE_HOMEPAGE_BANNER_SUBMIT, {});
 
-      setAFEParticipate(true);
-      onDrawerClose();
+      onDrawerClose(true);
     }
   };
 
-  const onDrawerClose = () => {
+  const onDrawerClose = (afeParticipate: boolean = false) => {
     if (schoolInfoInterstitialOpen) {
-      analyticsReporter.sendEvent(
-        EVENTS.SCHOOL_INTERSTITIAL_DISMISS,
-        {},
-        PLATFORMS.STATSIG
-      );
+      analyticsReporter.sendEvent(EVENTS.SCHOOL_INTERSTITIAL_DISMISS, {});
     } else if (schoolInfoConfirmationOpen) {
-      analyticsReporter.sendEvent(
-        EVENTS.UPDATE_SCHOOL_INFO_DIALOG_CLOSED,
-        {},
-        PLATFORMS.STATSIG
-      );
+      analyticsReporter.sendEvent(EVENTS.UPDATE_SCHOOL_INFO_DIALOG_CLOSED, {});
     } else if (AFEDrawerOpen) {
-      analyticsReporter.sendEvent(
-        EVENTS.AFE_HOMEPAGE_BANNER_SUBMIT,
-        {},
-        PLATFORMS.STATSIG
-      );
+      analyticsReporter.sendEvent(EVENTS.AFE_HOMEPAGE_BANNER_SUBMIT, {});
 
       HttpClient.post(
         '/dashboardapi/v1/users/me/dismiss_donor_teacher_banner',
         JSON.stringify({
-          participate: AFEParticipate,
+          participate: afeParticipate,
           source: 'teacher_home',
         }),
         true,
@@ -339,11 +325,6 @@ export const TeacherHomepageDrawer: React.FC<TeacherHomepageDrawerProps> = ({
           'Content-Type': 'application/json',
         }
       ).catch(error => console.error(error));
-
-      // redirect to form on amazon-future-engineer page if user accepted
-      if (AFEParticipate) {
-        window.location.assign(pegasus('/amazon-future-engineer#eligibility'));
-      }
     }
     setSchoolInfoInterstitialOpen(false);
     setSchoolInfoConfirmationOpen(false);
@@ -364,7 +345,7 @@ export const TeacherHomepageDrawer: React.FC<TeacherHomepageDrawerProps> = ({
       <div id={'ui-test-drawer-toolbar'} className={styles.toolbar}>
         <CloseButton
           aria-label={'close button'}
-          onClick={onDrawerClose}
+          onClick={() => onDrawerClose()}
           color={'light'}
           size="l"
           className={''}

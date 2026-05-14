@@ -19,7 +19,7 @@ var StudioVisualizationColumn = function (props) {
     <span>
       <ProtectedVisualizationDiv>
         <SwipePrompt />
-        <svg version="1.1" id="svgStudio" />
+        <svg id="svgStudio" />
         <VisualizationOverlay width={400} height={400}>
           <CrosshairOverlay />
           <TooltipOverlay

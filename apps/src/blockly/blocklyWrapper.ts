@@ -1,6 +1,6 @@
 import {
-  ObservableProcedureModel,
   ObservableParameterModel,
+  ObservableProcedureModel,
 } from '@blockly/block-shareable-procedures';
 import {installAllBlocks as installFieldColourBlocks} from '@blockly/field-colour';
 import {CrossTabCopyPaste} from '@blockly/plugin-cross-tab-copy-paste';
@@ -27,26 +27,15 @@ import * as utils from '@cdo/apps/utils';
 import {START_BLOCKS} from '../constants';
 import {START_SOURCES} from '../lab2/constants';
 
-import CdoAngleHelper from './addons/cdoAngleHelper';
 import CdoBlockSerializer from './addons/cdoBlockSerializer';
 import CdoConnectionChecker from './addons/cdoConnectionChecker';
 import initializeCdoConstants from './addons/cdoConstants';
 import initializeCss from './addons/cdoCss';
-import CdoFieldAngleDropdown from './addons/cdoFieldAngleDropdown';
-import CdoFieldAngleTextInput from './addons/cdoFieldAngleTextInput';
-import CdoFieldAnimationDropdown from './addons/cdoFieldAnimationDropdown';
-import CdoFieldBehaviorPicker from './addons/cdoFieldBehaviorPicker';
-import {CdoFieldBitmap} from './addons/cdoFieldBitmap';
-import CdoFieldButton from './addons/cdoFieldButton';
 import CdoFieldColour from './addons/cdoFieldColour';
 import CdoFieldDropdown from './addons/cdoFieldDropdown';
-import CdoFieldFlyout from './addons/cdoFieldFlyout';
-import CdoFieldImage from './addons/cdoFieldImage';
-import {CdoFieldImageDropdown} from './addons/cdoFieldImageDropdown';
 import CdoFieldLabel from './addons/cdoFieldLabel';
 import CdoFieldNumber from './addons/cdoFieldNumber';
 import CdoFieldParameter from './addons/cdoFieldParameter';
-import CdoFieldToggle from './addons/cdoFieldToggle';
 import CdoFieldVariable from './addons/cdoFieldVariable';
 import initializeGenerator from './addons/cdoGenerator';
 import {gestureOverrides} from './addons/cdoGesture';
@@ -74,7 +63,7 @@ import {filterFunctionArgVariables} from './addons/plusMinusBlocks/advancedProce
 import registerIfMutator from './addons/plusMinusBlocks/if';
 import registerTextJoinMutator from './addons/plusMinusBlocks/text_join';
 import {UNKNOWN_BLOCK} from './addons/unknownBlock';
-import {Themes, Renderers} from './constants';
+import {Renderers, Themes} from './constants';
 import {flyoutCategory as behaviorsFlyoutCategory} from './customBlocks/behaviorBlocks';
 import {flyoutCategory as functionsFlyoutCategory} from './customBlocks/proceduresBlocks';
 import {flyoutCategory as variablesFlyoutCategory} from './customBlocks/variableBlocks';
@@ -89,13 +78,13 @@ import {
   updateBlockLimits,
 } from './eventHandlers';
 import {
-  CdoProtanopiaDarkTheme,
   CdoDeuteranopiaDarkTheme,
+  CdoProtanopiaDarkTheme,
   CdoTritanopiaDarkTheme,
 } from './themes/cdoAccessibleDarkThemes';
 import {
-  CdoProtanopiaTheme,
   CdoDeuteranopiaTheme,
+  CdoProtanopiaTheme,
   CdoTritanopiaTheme,
 } from './themes/cdoAccessibleThemes';
 import CdoDarkTheme from './themes/cdoDark';
@@ -104,23 +93,23 @@ import CdoHighContrastDarkTheme from './themes/cdoHighContrastDark';
 import CdoJigsawTheme from './themes/cdoJigsaw';
 import CdoTheme from './themes/cdoTheme';
 import {
+  BlocklyCoreInstance,
   BlocklyWrapperType,
   ExtendedBlocklyOptions,
   ExtendedJavascriptGenerator,
   ExtendedWorkspace,
   ExtendedWorkspaceSvg,
-  BlocklyCoreInstance,
 } from './types';
 import {
+  cleanUp,
+  createBlockLimitMap,
+  getUserTheme,
   handleCodeGenerationFailure,
-  strip,
   initializeVariableLocalization,
   isDarkTheme,
-  setThemeAndRenderBlocks,
-  getUserTheme,
-  createBlockLimitMap,
   loadBlocksToWorkspace,
-  cleanUp,
+  setThemeAndRenderBlocks,
+  strip,
 } from './utils';
 
 const options: {contextMenu: true; shortcut: true} = {
@@ -166,30 +155,6 @@ const BlocklyWrapper = function (
       set: function (newValue) {
         this.blockly_[propertyName] = newValue;
       },
-    });
-  };
-
-  /**
-   * Override core Blockly fields with Code.org customized versions,
-   * and sets the field on our wrapper for use by our code.
-   * @param {array} overrides (elements are arrays of shape [fieldRegistryName, fieldClassName, fieldClass])
-   */
-  this.overrideFields = function (overrides) {
-    overrides.forEach(override => {
-      const fieldRegistryName = override[0];
-      const fieldClassName = override[1];
-      const fieldClass = override[2];
-
-      // Force Blockly to use our custom versions of fields
-      this.fieldRegistry.unregister(fieldRegistryName);
-      this.fieldRegistry.register(fieldRegistryName, fieldClass);
-
-      // Add each field for when our wrapper is accessed in /apps code
-      // This method helps us avoid duplicated boilerplate, but we would
-      // need the type of fieldClass to align with fieldClassName
-      // in order to avoid using any here.
-      // eslint-disable-next-line @typescript-eslint/no-explicit-any
-      (this as any)[fieldClassName] = fieldClass;
     });
   };
 };
@@ -252,45 +217,67 @@ function initializeBlocklyWrapper(blocklyInstance: BlocklyCoreInstance) {
     console.warn(e);
   }
 
+  // Custom fields need to be registered for two reasons:
+  // 1. To be used in JSON block definitions, e.g. in Music Lab
+  // 2. To be used by core Blockly blocks to override default field functionality, e.g. colour blocks
   type registrableFieldType = BlocklyCore.fieldRegistry.RegistrableField;
   // elements in this list should be structured as follows:
-  // [field registry name for field, class name of field being overridden, class to use as override]
-  const fieldOverrides: [string, string, registrableFieldType][] = [
-    ['field_variable', 'FieldVariable', CdoFieldVariable],
-    ['field_dropdown', 'FieldDropdown', CdoFieldDropdown],
-    ['field_number', 'FieldNumber', CdoFieldNumber],
-    // CdoFieldBitmap and CdoFieldColour extend from plugins.
-    // We know they're fields, so it's safe to cast as unknown.
-    [
-      'field_bitmap',
-      'FieldBitmap',
-      CdoFieldBitmap as unknown as registrableFieldType,
-    ],
-    [
-      'field_colour',
-      'FieldColour',
-      CdoFieldColour as unknown as registrableFieldType,
-    ],
-    ['field_label', 'FieldLabel', CdoFieldLabel],
-    ['field_parameter', 'FieldParameter', CdoFieldParameter],
+  // [field registry name for field, class to use as override]
+  const fieldsToRegister: [string, registrableFieldType][] = [
+    // CdoFieldColour extends from a plugin. We know it's a field, so it's safe to cast as unknown.
+    ['field_colour', CdoFieldColour as unknown as registrableFieldType],
+    ['field_dropdown', CdoFieldDropdown],
+    ['field_label', CdoFieldLabel],
+    ['field_number', CdoFieldNumber],
+    ['field_parameter', CdoFieldParameter],
+    ['field_variable', CdoFieldVariable],
   ];
-  blocklyWrapper.overrideFields(fieldOverrides);
+  // Tell Blockly to use our custom versions of fields
+  fieldsToRegister.forEach(override => {
+    const fieldRegistryName = override[0];
+    const fieldClass = override[1];
+    try {
+      blocklyWrapper.fieldRegistry.unregister(fieldRegistryName);
+    } catch (_e) {
+      // Not yet registered; safe to skip unregister.
+    }
+    blocklyWrapper.fieldRegistry.register(fieldRegistryName, fieldClass);
+  });
+
+  // In Blockly v12.4+, translate() sets style.transform (CSS) on the block canvas via
+  // LayerManager instead of the SVG transform attribute. This breaks
+  // @blockly/plugin-scroll-options, which reads svgBlockCanvas_.getAttribute('transform').
+  // Fix: mirror the full (x,y) translation to the SVG attribute and clear the CSS style
+  // to avoid double-counting in getRelativeXY(), which reads both.
+  // Guard against re-wrapping when initializeBlocklyWrapper() is called multiple times.
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  if (!(blocklyWrapper.WorkspaceSvg.prototype.translate as any).__cdoPatched) {
+    const originalTranslate = blocklyWrapper.WorkspaceSvg.prototype.translate;
+    blocklyWrapper.WorkspaceSvg.prototype.translate = function (
+      x: number,
+      y: number
+    ) {
+      originalTranslate.call(this, x, y);
+      if (this.svgBlockCanvas_) {
+        // Set the SVG attribute with the full translation (x, y already include
+        // absoluteLeft/absoluteTop) so getInjectionDivXY reads the correct origin offset.
+        this.svgBlockCanvas_.setAttribute(
+          'transform',
+          `translate(${x},${y}) scale(${this.scale})`
+        );
+        // Remove the CSS style.transform so getRelativeXY() doesn't double-count:
+        // it reads both the SVG attribute and the CSS style, so we must clear one.
+        this.svgBlockCanvas_.style.transform = '';
+      }
+    };
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    (blocklyWrapper.WorkspaceSvg.prototype.translate as any).__cdoPatched =
+      true;
+  }
 
   // TODO: Can/should we make CdoTrashcan have the same type as Trashcan?
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   blocklyWrapper.Trashcan = CdoTrashcan as any;
-
-  // Code.org custom fields
-  blocklyWrapper.AngleHelper = CdoAngleHelper;
-  blocklyWrapper.FieldButton = CdoFieldButton;
-  blocklyWrapper.FieldImage = CdoFieldImage;
-  blocklyWrapper.FieldImageDropdown = CdoFieldImageDropdown;
-  blocklyWrapper.FieldToggle = CdoFieldToggle;
-  blocklyWrapper.FieldFlyout = CdoFieldFlyout;
-  blocklyWrapper.FieldBehaviorPicker = CdoFieldBehaviorPicker;
-  blocklyWrapper.FieldAnimationDropdown = CdoFieldAnimationDropdown;
-  blocklyWrapper.FieldAngleDropdown = CdoFieldAngleDropdown;
-  blocklyWrapper.FieldAngleTextInput = CdoFieldAngleTextInput;
 
   blocklyWrapper.registry.register(
     blocklyWrapper.registry.Type.FLYOUTS_VERTICAL_TOOLBOX,
@@ -323,7 +310,11 @@ function initializeBlocklyWrapper(blocklyInstance: BlocklyCoreInstance) {
     CdoConnectionChecker,
     true /* opt_allowOverrides */
   );
-  blocklyWrapper.serialization.registry.unregister('blocks');
+  try {
+    blocklyWrapper.serialization.registry.unregister('blocks');
+  } catch (_e) {
+    // Not yet registered; safe to skip unregister.
+  }
   blocklyWrapper.serialization.registry.register(
     'blocks',
     new CdoBlockSerializer()
@@ -337,7 +328,11 @@ function initializeBlocklyWrapper(blocklyInstance: BlocklyCoreInstance) {
 
   blocklyWrapper.procedureSerializer = procedureSerializer;
   // Register the shareable procedures serializer, used for the modal function editor.
-  blocklyWrapper.serialization.registry.unregister('procedures');
+  try {
+    blocklyWrapper.serialization.registry.unregister('procedures');
+  } catch (_e) {
+    // Not yet registered; safe to skip unregister.
+  }
   blocklyWrapper.serialization.registry.register(
     'procedures',
     procedureSerializer
@@ -507,7 +502,6 @@ function initializeBlocklyWrapper(blocklyInstance: BlocklyCoreInstance) {
         xmlns: 'http://www.w3.org/2000/svg',
         'xmlns:html': 'http://www.w3.org/1999/xhtml',
         'xmlns:xlink': 'http://www.w3.org/1999/xlink',
-        version: '1.1',
         class: `${Renderers.DEFAULT}-renderer modern-theme readOnlyBlockSpace injectionDiv`,
       },
       null

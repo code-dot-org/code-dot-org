@@ -19,6 +19,12 @@ $tabs-default-spacing: 4px;
   scroll-margin-top: 0.6rem;
 }
 
+.teacherFlaggedMessage {
+  outline: 2px solid var(--borders-error-primary);
+  border-radius: 0.375rem;
+  margin-top: 0.25rem;
+}
+
 .chatMessageOutline:focus-visible {
   outline: 2px solid var(--borders-brand-teal-primary);
   outline-offset: 2px;
@@ -101,6 +107,15 @@ $tabs-default-spacing: 4px;
   }
 }
 
+.chatDisabledAlert {
+  border-radius: 0;
+
+  .chatDisabledAlertIcon.chatDisabledAlertIcon {
+    font-size: 1.25rem;
+    align-self: center;
+  }
+}
+
 .tabsContainer {
   background-color: var(--background-neutral-secondary);
   padding: $tabs-default-spacing $tabs-default-spacing 0 $tabs-default-spacing;
@@ -144,6 +159,14 @@ $tabs-default-spacing: 4px;
   }
 }
 
+.chipsRow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  align-items: flex-start;
+  min-width: 0;
+}
+
 .alertLink {
   white-space: nowrap;
 }
@@ -154,6 +177,10 @@ $tabs-default-spacing: 4px;
   justify-content: flex-end;
   flex-wrap: wrap;
   gap: 0.375rem;
+
+  &.assistant {
+    justify-content: flex-start;
+  }
 }
 
 .imagePreview {
@@ -162,6 +189,15 @@ $tabs-default-spacing: 4px;
   width: auto;
   height: auto;
   opacity: 1;
+
+  &.assistant {
+    max-height: 200px;
+  }
+}
+
+.teacherFlaggedImagePreview {
+  border-radius: variables.$default-border-radius;
+  box-shadow: 0 0 0 2px var(--background-neutral-white-fixed), 0 0 0 4px var(--borders-error-primary);
 }
 
 .assetButton {
@@ -172,4 +208,17 @@ $tabs-default-spacing: 4px;
   line-height: 1;
 
   @include focus-styles;
+}
+
+.assetImageWrapper {
+  position: relative;
+  display: inline-flex;
+  align-self: end;
+
+  --overflow-menu-opacity: 0;
+
+  &:hover,
+  &:focus-within {
+    --overflow-menu-opacity: 1;
+  }
 }

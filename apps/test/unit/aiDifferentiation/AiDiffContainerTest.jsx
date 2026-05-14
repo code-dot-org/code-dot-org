@@ -3,8 +3,8 @@ import userEvent from '@testing-library/user-event';
 import React from 'react';
 import {Provider} from 'react-redux';
 
-import {aichatReducer} from '@cdo/apps/aichat/redux/slice';
 import AiDiffContainer from '@cdo/apps/aiDifferentiation/AiDiffContainer';
+import {aiDiffChatReducer} from '@cdo/apps/aiDifferentiation/redux/slice';
 import {getStore, registerReducers} from '@cdo/apps/redux';
 import currentUser, {
   setInitialData,
@@ -68,7 +68,7 @@ describe('AiDiffContainer', () => {
     registerReducers({
       currentUser,
       teacherSections,
-      aichat: aichatReducer,
+      aiDiffChat: aiDiffChatReducer,
     });
     store.dispatch(
       setInitialData({
@@ -167,9 +167,11 @@ describe('AiDiffContainer', () => {
     });
   });
 
-  it('Shows the welcome experience when user property is false', () => {
-    renderDefault({disableWelcome: false}, false);
+  // Was asked to disable the AITA welcome experience without removing any code.
+  // Commenting out this test until further notice.
+  // it('Shows the welcome experience when user property is false', () => {
+  //   renderDefault({disableWelcome: false}, false);
 
-    screen.getByText('Empowering teachers. Enhancing learning.');
-  });
+  //   screen.getByText('Empowering teachers. Enhancing learning.');
+  // });
 });

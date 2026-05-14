@@ -3,6 +3,7 @@ import $ from 'jquery';
 import React from 'react';
 
 import {UnwrappedInstructionsWithWorkspace as InstructionsWithWorkspace} from '@cdo/apps/templates/instructions/InstructionsWithWorkspace';
+import {AiChatAccessLevels} from '@cdo/generated-scripts/sharedConstants';
 
 describe('InstructionsWithWorkspace', () => {
   it('renders instructions and code workspace', () => {
@@ -27,7 +28,69 @@ describe('InstructionsWithWorkspace', () => {
     expect(wrapper.state()).toEqual({
       windowWidth: undefined,
       windowHeight: undefined,
-      aiChatOpen: true,
+      tutorLayout: {isVisible: false, isOpen: false},
+    });
+  });
+
+  describe('AI tutor visibility', () => {
+    beforeEach(() => {
+      window.appOptions = {level: {aiTutorAvailable: true}};
+    });
+
+    afterEach(() => {
+      delete window.appOptions;
+    });
+
+    it('does not render AI tutor in share view', () => {
+      const wrapper = shallow(
+        <InstructionsWithWorkspace
+          instructionsHeight={400}
+          setInstructionsMaxHeightAvailable={() => {}}
+          labType="applab"
+          isShareView={true}
+          aiChatAccessLevel={AiChatAccessLevels.ENABLED}
+        />
+      );
+      expect(wrapper.find('AiTutorContainer')).toHaveLength(0);
+    });
+
+    it('renders AI tutor when not in share view', () => {
+      const wrapper = shallow(
+        <InstructionsWithWorkspace
+          instructionsHeight={400}
+          setInstructionsMaxHeightAvailable={() => {}}
+          labType="applab"
+          isShareView={false}
+          aiChatAccessLevel={AiChatAccessLevels.ENABLED}
+        />
+      );
+      expect(wrapper.find('AiTutorContainer')).toHaveLength(1);
+    });
+
+    it('renders AI tutor when AI enabled', () => {
+      const wrapper = shallow(
+        <InstructionsWithWorkspace
+          instructionsHeight={400}
+          setInstructionsMaxHeightAvailable={() => {}}
+          labType="applab"
+          isShareView={false}
+          aiChatAccessLevel={AiChatAccessLevels.ENABLED}
+        />
+      );
+      expect(wrapper.find('AiTutorContainer')).toHaveLength(1);
+    });
+
+    it('does not render AI tutor when AI disabled', () => {
+      const wrapper = shallow(
+        <InstructionsWithWorkspace
+          instructionsHeight={400}
+          setInstructionsMaxHeightAvailable={() => {}}
+          labType="applab"
+          isShareView={false}
+          aiChatAccessLevel={AiChatAccessLevels.DISABLED}
+        />
+      );
+      expect(wrapper.find('AiTutorContainer')).toHaveLength(0);
     });
   });
 

@@ -45,8 +45,7 @@ class CoursesControllerTest < ActionController::TestCase
 
   class CoursesQueryCountTests < ActionController::TestCase
     setup do
-      Unit.stubs(:should_cache?).returns true
-      Unit.clear_cache
+      setup_script_cache
       UnitGroup.clear_cache
 
       @unit_group_regular = create(:unit_group, name: 'non-plc-course', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.beta)
@@ -59,9 +58,10 @@ class CoursesControllerTest < ActionController::TestCase
 
   class CachedQueryCounts < ActionController::TestCase
     setup do
-      Unit.stubs(:should_cache?).returns true
-      Unit.clear_cache
+      setup_script_cache
       UnitGroup.clear_cache
+
+      ActiveRecord::Base.connection.disable_query_cache!
 
       offering = create(:course_offering, key: 'csx')
 
@@ -473,6 +473,16 @@ class CoursesControllerTest < ActionController::TestCase
                               name: 'pilot instructor can view pilot course'
   ) do
     assert_redirected_to "http://test.host/teacher_dashboard/sections/#{@pilot_pl_section.id}/courses/#{@pilot_pl_unit_group.name}"
+  end
+
+  test 'teacher with only a hidden section for the course is not redirected to teacher dashboard' do
+    teacher = create(:teacher)
+    create(:section, :hidden, user: teacher, unit_group: @unit_group_regular)
+    sign_in teacher
+
+    get :show, params: {course_name: @unit_group_regular.name}
+
+    assert_response :success
   end
 
   test_user_gets_response_for(:show, response: :success, user: -> {@pilot_student},

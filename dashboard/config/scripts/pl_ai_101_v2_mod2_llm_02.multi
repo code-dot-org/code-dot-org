@@ -1,8 +1,10 @@
 name 'pl-ai-101-V2-mod2-llm-02'
 title 'Check for Understanding: Large Language Models'
 description ''
-question 'Large Language Models (LLMs) are a type of AI designed to understand and generate human-like text based on vast amounts of training data.'
+question 'Why do large language models produce responses that seem human-like?'
 
-right 'True'
-wrong  'False'
+wrong 'They understand language, emotions, and intentions the same way humans do'
+right 'They analyze patterns and contextual relationships across massive amounts of text data'
+wrong 'They store complete copies of books and websites and retrieve the most relevant passages'
+wrong  'They rely on complex algorithms that simulate reasoning processes during conversations'
 allow_multiple_attempts true

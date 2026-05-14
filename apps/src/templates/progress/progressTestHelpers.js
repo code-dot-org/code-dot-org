@@ -312,7 +312,6 @@ export const fakeProgressTableReduxInitialState = (
         scriptData,
         students
       ),
-      lessonOfInterest: 1,
     },
     unitSelection: {
       scriptId: scriptData.id,

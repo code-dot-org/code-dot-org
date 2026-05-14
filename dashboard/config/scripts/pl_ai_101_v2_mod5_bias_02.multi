@@ -1,0 +1,10 @@
+name 'pl-ai-101-V2-mod5-bias-02'
+title 'Check For Understanding: Bias'
+description ''
+question 'Which of the following is NOT an example of algorithmic bias?'
+
+wrong 'A hiring tool trained on past company data that consistently ranks candidates higher if they attended certain universities that have historically enrolled less diverse student populations.'
+wrong  'A language translation system that produces slightly different levels of fluency and nuance depending on how frequently certain languages appear in its training data.'
+wrong 'An online advertising system that shows job advertisements for high-paying executive positions more frequently to men than to women, based on historical clicking patterns.'
+right 'A recommendation system that suggests different types of products to users based on their past browsing behavior and stated preferences.'
+allow_multiple_attempts true

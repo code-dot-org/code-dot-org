@@ -1,4 +1,4 @@
-import {BodyThreeText} from '@code-dot-org/component-library/typography';
+import {Typography} from '@mui/material';
 import React from 'react';
 
 import {
@@ -99,10 +99,10 @@ const MusicExemplarSettings: React.FunctionComponent<
           </select>
         </div>
         <div className={moduleStyles.row}>
-          <BodyThreeText>
+          <Typography variant="body3" gutterBottom>
             A sound player can be added below the instructions, which will play
             the song that is the exemplar for this level.
-          </BodyThreeText>
+          </Typography>
         </div>
         <div className={moduleStyles.row}>
           <label htmlFor="exemplarPlayer" className={moduleStyles.label}>

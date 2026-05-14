@@ -5,18 +5,18 @@ description 'description here'
 markdown <<MARKDOWN
 # Next Steps
 
-#### 🎉 Congratulations on completing the **Exploring Generative AI** self-paced professional learning module! Check out our curriculum and professional learning offerings to continue your journey.
+🎉 Congratulations on completing the **Exploring Generative AI** self-paced professional learning module! Check out our curriculum and professional learning offerings to continue your journey.
 
 <div style="display: flex; align-items: left; margin:20px 0px 30px 0px">
 
-<a href="https://forum.code.org/t/student-logins-reflection/40539" target="_blank" rel="noopener noreferrer">
+<a href="https://forum.code.org/t/exploring-generative-ai/41845" target="_blank" rel="noopener noreferrer">
 <img src="https://images.code.org/7dbe63a051fbad4ef262d6ab710e2966-image-1731959037460.png" style="width: auto; height: 100px;"  alt="A browser with two text boxes, both including an avatar and lines of text."></a>
 
 <div style="background-color: #007786; border-radius: 20px 20px 20px 20px; color: #000000; width: 80%; margin-left: 5%; margin-right: 5%; padding: 10px 10px 5px 10px;">
 
 <p style="color: white; line-height: 1.5; margin-left: 10px; margin-right: 10px; font-size: 18px"><b>Post to the Code.org Forum</b></p>
 
-<p style="color: white; line-height: 1.2; margin-left: 10px; margin-right: 10px; font-size: 18px">Share your key takeaways from this PL and read other educators' ideas on the forum! Click on the icon to the left to direct to our forum post.
+<p style="color: white; line-height: 1.2; margin-left: 10px; margin-right: 10px; font-size: 18px">Share your key takeaways from this professional learning, ask questions, and read other educators' ideas on everything from implementaiton to differentiation on the forum! Click on the icon to the left to direct to our forum post.
 </p>
 
 
@@ -26,13 +26,13 @@ markdown <<MARKDOWN
 
 ## Help us make this module better!
 
-#### Code.org values and is responsive to feedback. Please fill out this <a href="LINK" target="blank" rel="noopener noreferrer">short survey</a> to provide your feedback on this module.
+Code.org values and is responsive to feedback. Please fill out this <a href="LINK" target="blank" rel="noopener noreferrer">short survey</a> to provide your feedback on this module.
 
 <a class="btn btn-large btn-primary" href="LINK" target="blank" rel="noopener noreferrer">Take the survey</a>
 
 
 ## Teach AI in your class
-#### Explore these curriculum options to get started teaching with and about AI in your class right away. 
+Explore these curriculum options to get started teaching with and about AI in your class right away. 
 
 
 <table width="1000px">
@@ -70,7 +70,7 @@ markdown <<MARKDOWN
 <br>
 
 ## Continue learning
-#### Learn more about teaching AI with these self-paced professional learning modules. 
+Learn more about teaching AI with these self-paced professional learning modules. 
 
 <table width="1000px">
 	<tr> 
@@ -116,11 +116,11 @@ markdown <<MARKDOWN
 
 ## Stay connected 
 
-* #### Continue participating in the <a href="https://forum.code.org/" target="blank" rel="noopener noreferrer">Code.org teacher forum</a>. 
+* Continue participating in the <a href="https://forum.code.org/" target="blank" rel="noopener noreferrer">Code.org teacher forum</a>. 
 
-* #### Connect with <a href="http://twitter.com/teachcode" target="blank" rel="noopener noreferrer">@teachcode</a> on Twitter.
+* Connect with <a href="http://twitter.com/teachcode" target="blank" rel="noopener noreferrer">@teachcode</a> on Twitter.
 
-* #### Join the <a href="https://www.csteachers.org/" target="blank" rel="noopener noreferrer">Computer Science Teachers Association (CSTA)</a>. 
+* Join the <a href="https://www.csteachers.org/" target="blank" rel="noopener noreferrer">Computer Science Teachers Association (CSTA)</a>. 
 
 <br>
 </p>

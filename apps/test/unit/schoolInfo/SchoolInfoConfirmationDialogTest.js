@@ -1,175 +1,141 @@
-import {mount, shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
+import {render, screen, fireEvent, waitFor} from '@testing-library/react';
 import React from 'react';
-import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
+import {Provider} from 'react-redux';
 
-import {Body} from '@cdo/apps/legacySharedComponents/Dialog';
+import {getStore} from '@cdo/apps/redux';
 import SchoolInfoConfirmationDialog from '@cdo/apps/schoolInfo/SchoolInfoConfirmationDialog';
-import SchoolInfoInterstitial from '@cdo/apps/schoolInfo/SchoolInfoInterstitial';
-
-import {expect} from '../../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports
 
 jest.mock('@cdo/apps/util/AuthenticityTokenStore', () => ({
   getAuthenticityToken: jest.fn().mockResolvedValue('authToken'),
+}));
+
+jest.mock('@cdo/apps/metrics/AnalyticsReporter', () => ({
+  sendEvent: jest.fn(),
 }));
 
 describe('SchoolInfoConfirmationDialog', () => {
   const MINIMUM_PROPS = {
     scriptData: {
       usIp: true,
-      existingSchoolInfo: {},
+      existingSchoolInfo: {
+        user_school_info_id: 123,
+      },
     },
-    onClose: function () {},
+    onClose: jest.fn(),
   };
 
-  it('renders the schoolinfointerstitial form', () => {
-    const wrapper = shallow(
-      <SchoolInfoConfirmationDialog
-        {...MINIMUM_PROPS}
-        scriptData={{
-          ...MINIMUM_PROPS.scriptData,
-          existingSchoolInfo: {
-            country: 'US',
-          },
-        }}
-      />
+  function renderComponent(props = {}) {
+    const store = getStore();
+    return render(
+      <Provider store={store}>
+        <SchoolInfoConfirmationDialog {...MINIMUM_PROPS} {...props} />
+      </Provider>
     );
+  }
 
-    wrapper.setState({showSchoolInterstitial: true});
-    expect(wrapper.find(SchoolInfoInterstitial)).to.have.lengthOf(1);
+  afterEach(() => {
+    jest.clearAllMocks();
+  });
+
+  it('renders the schoolinfointerstitial form', async () => {
+    renderComponent({
+      scriptData: {
+        ...MINIMUM_PROPS.scriptData,
+        existingSchoolInfo: {
+          ...MINIMUM_PROPS.scriptData.existingSchoolInfo,
+          country: 'US',
+        },
+      },
+    });
+
+    // Click the update button to show the school interstitial
+    fireEvent.click(screen.getByRole('button', {name: 'No, update my info'}));
+
+    await waitFor(() => {
+      screen.getByText('Tell us about your school');
+      screen.getByRole('button', {name: 'Save'});
+      screen.getByRole('button', {name: 'Dismiss'});
+    });
   });
 
   it('renders the school info confirmation dialog', () => {
-    const wrapper = shallow(
-      <SchoolInfoConfirmationDialog
-        {...MINIMUM_PROPS}
-        scriptData={{
-          ...MINIMUM_PROPS.scriptData,
-          existingSchoolInfo: {
-            country: 'US',
-          },
-        }}
-      />
-    );
+    renderComponent({
+      scriptData: {
+        ...MINIMUM_PROPS.scriptData,
+        existingSchoolInfo: {
+          ...MINIMUM_PROPS.scriptData.existingSchoolInfo,
+          country: 'US',
+          school_name: 'TestName High',
+        },
+      },
+    });
 
-    expect(wrapper.find(Body)).to.have.lengthOf(1);
+    screen.getByText('Welcome back! Are you still teaching at', {exact: false});
+    screen.getByText('TestName High?');
+    screen.getByRole('button', {name: 'No, update my info'});
+    screen.getByRole('button', {name: 'Yes'});
   });
 
-  it('confirms there are two buttons in the school information confirmation modal', () => {
-    const wrapper = mount(
-      <SchoolInfoConfirmationDialog
-        {...MINIMUM_PROPS}
-        scriptData={{
-          ...MINIMUM_PROPS.scriptData,
-          existingSchoolInfo: {
-            country: 'US',
-          },
-        }}
-      />
-    );
-    const handleClickUpdateStub = sinon.stub(
-      wrapper.instance(),
-      'handleClickUpdate'
-    );
-    handleClickUpdateStub.callsFake(() => {});
-    wrapper.setState({showSchoolInterstitial: false});
-    wrapper.find('Button');
-    expect(wrapper.find('Button').length).to.equal(3);
+  it('confirms there are buttons in the school information confirmation modal', () => {
+    renderComponent({
+      scriptData: {
+        ...MINIMUM_PROPS.scriptData,
+        existingSchoolInfo: {
+          ...MINIMUM_PROPS.scriptData.existingSchoolInfo,
+          country: 'US',
+        },
+      },
+    });
+
+    const buttons = screen.getAllByRole('button');
+    expect(buttons).toHaveLength(3);
   });
 
-  describe('fetch', () => {
-    let stubedFetch;
+  describe('school info confirmation dialog behavior', () => {
+    let fetchSpy;
 
     beforeEach(() => {
-      stubedFetch = sinon.stub(window, 'fetch');
+      fetchSpy = jest.spyOn(window, 'fetch').mockResolvedValue(new Response());
     });
 
     afterEach(() => {
-      stubedFetch.restore();
+      jest.restoreAllMocks();
     });
 
-    describe('school info confirmation dialog behavior', () => {
-      const onClose = sinon.spy();
-      const wrapper = mount(
-        <SchoolInfoConfirmationDialog
-          scriptData={{
-            usIp: true,
-            existingSchoolInfo: {
-              country: 'US',
-            },
-          }}
-          onClose={onClose}
-          isOpen={true}
-        />
-      );
-
-      it('calls handleClickUpdate method when a user clicks the button to update school information', async () => {
-        const wrapperInstance = wrapper.instance();
-        sinon.spy(wrapperInstance, 'handleClickUpdate');
-        wrapper.setState({showSchoolInterstitial: false});
-        wrapper.find('button#update-button').simulate('click');
-
-        expect(wrapperInstance.handleClickUpdate).to.have.been.called;
-        await setTimeout(() => {}, 50);
-        expect(wrapper.state('showSchoolInterstitial')).to.be.true;
+    it('calls handleClickYes method when a user does not need to update school information', async () => {
+      const onCloseMock = jest.fn();
+      renderComponent({
+        scriptData: {
+          usIp: true,
+          existingSchoolInfo: {
+            user_school_info_id: 123,
+            country: 'US',
+          },
+        },
+        onClose: onCloseMock,
+        isOpen: true,
       });
 
-      it('calls handleClickYes method when a user does not need to update school information', async () => {
-        stubedFetch.resolves();
-        const wrapperInstance = wrapper.instance();
-        const handleClickYesSpy = sinon.spy(wrapperInstance, 'handleClickYes');
-        wrapper.setState({showSchoolInterstitial: false});
-        wrapper.find('button#yes-button').simulate('click');
+      // Click the yes button
+      fireEvent.click(screen.getByRole('button', {name: 'Yes'}));
 
-        expect(wrapperInstance.handleClickYes).to.have.been.called;
-        await setTimeout(() => {}, 50);
-        expect(await onClose).to.have.been.called;
-        await setTimeout(() => {}, 50);
-        expect(wrapper.state('showSchoolInterstitial')).to.be.false;
-        handleClickYesSpy.restore();
+      // Assert that fetch was called with the correct URL
+      await waitFor(() => {
+        expect(fetchSpy).toHaveBeenCalledWith(
+          '/api/v1/user_school_infos/123/update_last_confirmation_date',
+          expect.objectContaining({
+            method: 'PATCH',
+            headers: expect.objectContaining({
+              'X-CSRF-Token': 'authToken',
+            }),
+          })
+        );
       });
-    });
-  });
 
-  describe('when to render school info confirmation dialog', () => {
-    let onClose, wrapper;
-
-    beforeEach(() => {
-      onClose = sinon.spy();
-      wrapper = mount(
-        <SchoolInfoConfirmationDialog
-          {...MINIMUM_PROPS}
-          scriptData={{
-            ...MINIMUM_PROPS.scriptData,
-            existingSchoolInfo: {
-              country: 'US',
-            },
-          }}
-          onClose={onClose}
-          isOpen={true}
-        />
-      );
-    });
-
-    it('renders school info form when school info interstitial is set to true', () => {
-      const wrapperInstance = wrapper.instance();
-      const renderSchoolInformationForm = sinon.spy(
-        wrapperInstance,
-        'renderSchoolInformationForm'
-      );
-      wrapper.setState({showSchoolInterstitial: true});
-
-      expect(renderSchoolInformationForm).to.have.been.called;
-    });
-
-    it('renders school info confirmation dialog when school info interstitial is set to false', () => {
-      const wrapperInstance = wrapper.instance();
-      const renderSchoolInfoConfirmationDialog = sinon.spy(
-        wrapperInstance,
-        'renderInitialContent'
-      );
-      wrapper.setState({showSchoolInterstitial: false});
-
-      expect(renderSchoolInfoConfirmationDialog).to.have.been.called;
+      // Assert that onClose was called
+      await waitFor(() => {
+        expect(onCloseMock).toHaveBeenCalled();
+      });
     });
   });
 });

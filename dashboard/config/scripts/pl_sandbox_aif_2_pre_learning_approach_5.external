@@ -5,14 +5,14 @@ description 'description here'
 markdown <<MARKDOWN
 # Human-AI Co-Learning
 
-#### Human-AI Co-Learning is a learning approach where students learn with artificial intelligence as a collaborator, not just a tool. Through coding, designing, and creating alongside AI, they build curiosity, creativity, and ethical judgment. 
+Human-AI Co-Learning is a learning approach where students learn with artificial intelligence as a collaborator, not just a tool. Through coding, designing, and creating alongside AI, they build curiosity, creativity, and ethical judgment. 
 
-#### Guided by teachers, students learn to question, evaluate, and make responsible choices—developing the adaptability and human-centered mindset needed to thrive in an AI-driven world.
+Guided by teachers, students learn to question, evaluate, and make responsible, and thus developing the adaptability and human-centered mindset needed to thrive in an AI-driven world.
 
 ## Why This Learning Approach is Critical
 
-#### As technology reshapes every corner of the workforce, preparing students isn’t just about tools—it’s about mindset.  
-#### This learning approach equips them to thrive in an AI-driven world with the adaptability, creativity, and judgment that tomorrow demands.
+As technology reshapes every corner of the workforce, preparing students isn’t just about tools, it’s also about **mindset**.  
+This learning approach equips them to thrive in an AI-driven world with the adaptability, creativity, and judgment that tomorrow demands.
 
 
 ## Preparing for a rapidly evolving job landscape
@@ -60,7 +60,7 @@ markdown <<MARKDOWN
   <div style="flex: 1; min-width: 280px; padding: 20px;">
     <h2 style="margin-top: 0;">Nurture Ethical and Human-Centered Creators</h2>
     <p style="margin-bottom: 15px; font-size: 1rem; line-height: 1.5;">
-      As AI becomes more powerful, questions about fairness, transparency, and agency grow more urgent. Learning to critically evaluate AI outputs and embed values in design isn’t optional—it’s foundational.
+      As AI becomes more powerful, questions about fairness, transparency, and agency grow more urgent. Learning to critically evaluate AI outputs and embed values in design isn’t optional, it’s <b>foundational.</b>
     </p>
     </div>
 
@@ -75,18 +75,7 @@ markdown <<MARKDOWN
 
 ---
 
-<div style="text-align: center; margin: 40px 0; padding: 20px;">
 
-  <!-- CTA Highlight Box -->
-  <div style="display: inline-block; background-color: #f0f8ff; border: 2px solid #007acc; border-radius: 12px; padding: 20px 30px; max-width: 700px; box-shadow: 0 2px 6px rgba(0,0,0,0.1);">
-    <p style="font-size: 1.2rem; font-weight: bold; margin: 0; line-height: 1.5; color: #003366;">
-      Learning in this way—through coding, designing, evaluating, and creating with AI—builds adaptability, creativity, critical thinking, values-based judgment, and real-world readiness.
-    </p>
-  </div>
-
-</div>
-
----
 Sources:
 
 PWC [The Fearless Future: 2025 Global AI Jobs Barometer](https://www.pwc.com/gx/en/issues/artificial-intelligence/job-barometer/aijb-2025-united-states-analysis.pdf)

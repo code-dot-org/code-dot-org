@@ -10,6 +10,7 @@ chef_client_updater 'install' do
 end
 
 include_recipe 'apt'
+include_recipe 'cdo-cloudwatch-agent'
 
 include_recipe 'cdo-apps::hostname'
 
@@ -76,8 +77,6 @@ end
 
 include_recipe 'cdo-repository'
 
-include_recipe 'cdo-apps::workers'
-
 %w(dashboard pegasus).each do |app|
   node.override['cdo-secrets']["#{app}_port"] = node['cdo-apps'][app]['port']
 end
@@ -86,7 +85,7 @@ node.default['cdo-secrets']['daemon'] = node['cdo-apps']['daemon'] if node['cdo-
 include_recipe 'cdo-secrets'
 include_recipe 'cdo-mysql'
 include_recipe 'cdo-postfix'
-include_recipe 'cdo-cloudwatch-agent'
+include_recipe 'cdo-otel-collector'
 include_recipe 'cdo-syslog'
 
 # Production analytics utilities.

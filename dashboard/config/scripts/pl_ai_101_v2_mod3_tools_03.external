@@ -1,0 +1,148 @@
+name 'pl-ai-101-V2-mod3-tools-03'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Practice
+
+Below are a few examples of AI tools developed specificaly for educational use to support teachers and administrators.
+
+Each tool below includes a brief description. Take some time to learn more about these tools to explore the types of support AI tools can provide.
+
+## Educator's Choice
+
+Choose one or more of these tools to try out. Try using the tool for a real task—such as drafting a lesson plan, creating an assessment, or writing a parent email.
+
+👉 Click on the logo to go directly to the tool's webpage. Spend as much time exploring as you find helpful.
+
+**Note**: These tools vary in cost and access. If one doesn’t meet your needs, try another.
+
+
+<div style="display: grid; gap:16px; max-width:900px; margin:auto;">
+
+<!-- Row -->
+<div style="display:grid; grid-template-columns: 2fr 1fr; align-items:center; background:#fff; border-radius:14px; border:2px solid #5a2ca0; padding:20px;">
+
+<div>
+<div style="font-size:22px; font-weight:700; margin-bottom:6px;">Khanmigo by Khan Academy</div>
+<div style="font-size:16px; line-height:1.5;">
+An AI-powered teaching assistant that helps teachers plan lessons, generate resources, and support student learning while encouraging critical thinking rather than providing direct answers.
+</div>
+</div>
+
+<div style="display:flex; align-items:center; justify-content:center;">
+<img src="https://images.code.org/2394a44142b1cc234151d18830035ca8-download.png" 
+style="max-width:180px; max-height:80px; object-fit:contain;">
+</div>
+
+</div>
+
+<!-- Row -->
+<div style="display:grid; grid-template-columns: 2fr 1fr; align-items:center; background:#fff; border-radius:14px; border:2px solid #5a2ca0; padding:20px;">
+
+<div>
+<div style="font-size:22px; font-weight:700; margin-bottom:6px;">SchoolAI</div>
+<div style="font-size:16px; line-height:1.5;">
+A classroom-focused AI platform that helps teachers create lessons, personalize learning, and monitor student progress in real time with built-in oversight and privacy protections.
+</div>
+</div>
+
+<div style="display:flex; align-items:center; justify-content:center;">
+<img src="https://images.code.org/09db31b0963c162ae3008608c31fecc5-downloadA.png" 
+style="max-width:180px; max-height:80px; object-fit:contain;">
+</div>
+
+</div>
+
+<!-- Row -->
+<div style="display:grid; grid-template-columns: 2fr 1fr; align-items:center; background:#fff; border-radius:14px; border:2px solid #5a2ca0; padding:20px;">
+
+<div>
+<div style="font-size:22px; font-weight:700; margin-bottom:6px;">Grammarly</div>
+<div style="font-size:16px; line-height:1.5;">
+An AI writing assistant that supports educators by improving communication, generating drafts, and providing insights into student writing processes while helping students revise and strengthen their work.
+</div>
+</div>
+
+<div style="display:flex; align-items:center; justify-content:center;">
+<img src="https://images.code.org/1748e5796ace9a6bd6725da1f2f7b70e-Screenshot 2026-03-26 at 2.33.25 PM.png" 
+style="max-width:180px; max-height:80px; object-fit:contain;">
+</div>
+
+</div>
+
+<!-- Row -->
+<div style="display:grid; grid-template-columns: 2fr 1fr; align-items:center; background:#fff; border-radius:14px; border:2px solid #5a2ca0; padding:20px;">
+
+<div>
+<div style="font-size:22px; font-weight:700; margin-bottom:6px;">Diffit</div>
+<div style="font-size:16px; line-height:1.5;">
+A teacher tool that generates and adapts instructional materials at different reading levels, helping educators differentiate content and make grade-level learning accessible to all students.
+</div>
+</div>
+
+<div style="display:flex; align-items:center; justify-content:center;">
+<img src="https://images.code.org/ea9a04be044bb26a0ba429c07fda4c2c-Screenshot 2026-04-09 at 10.50.41 AM.png" 
+style="max-width:180px; max-height:80px; object-fit:contain;">
+</div>
+
+</div>
+
+<!-- Row -->
+<div style="display:grid; grid-template-columns: 2fr 1fr; align-items:center; background:#fff; border-radius:14px; border:2px solid #5a2ca0; padding:20px;">
+
+<div>
+<div style="font-size:22px; font-weight:700; margin-bottom:6px;">Code.org AI Teaching Assistant</div>
+<div style="font-size:16px; line-height:1.5;"> https://code.org/en-US/artificial-intelligence/teaching-assistant
+An AI-powered thought partner for educators that supports lesson planning, differentiation, and assessment by providing curriculum-aligned guidance and automating feedback to save time and improve instruction.
+</div>
+</div>
+
+<div style="display:flex; align-items:center; justify-content:center;">
+<img src="https://images.code.org/f833ab32e9c90fdee6ef0049a557597d-Screenshot 2026-04-09 at 10.50.09 AM.png" 
+style="max-width:180px; max-height:80px; object-fit:contain;">
+</div>
+
+</div>
+
+<!-- Row -->
+<div style="display:grid; grid-template-columns: 2fr 1fr; align-items:center; background:#fff; border-radius:14px; border:2px solid #5a2ca0; padding:20px;">
+
+<div>
+<div style="font-size:22px; font-weight:700; margin-bottom:6px;">Gradescope by Turnitin</div>
+<div style="font-size:16px; line-height:1.5;">
+AI-supported grading platform that helps teachers efficiently assess student work, provide consistent feedback, and analyze patterns in student understanding.
+</div>
+</div>
+
+<div style="display:flex; align-items:center; justify-content:center;">
+<img src="https://images.code.org/fe5d17d7b738585e1ec82f0a14bdff76-gradescope800x600.png" 
+style="max-width:350px; max-height:80px; object-fit:contain;">
+</div>
+
+</div>
+
+<!-- Row -->
+<div style="display:grid; grid-template-columns: 2fr 1fr; align-items:center; background:#fff; border-radius:14px; border:2px solid #5a2ca0; padding:20px;">
+
+<div>
+<div style="font-size:22px; font-weight:700; margin-bottom:6px;">Canva for Education</div>
+<div style="font-size:16px; line-height:1.5;">
+AI-powered design and content creation platform that helps teachers generate presentations, visuals, and instructional materials quickly.
+</div>
+</div>
+
+<div style="display:flex; align-items:center; justify-content:center;">
+<img src="https://images.code.org/47a5f4bc82e29db11de9ff9bc42c43f7-Screenshot 2026-04-09 at 10.56.02 AM.png" 
+style="max-width:180px; max-height:80px; object-fit:contain;">
+</div>
+
+</div>
+
+</div>
+
+<br>
+
+>#### **💬 Quick Reflection:** What's one way you can integrate one tool you tried today into your regular teaching practice?
+
+MARKDOWN

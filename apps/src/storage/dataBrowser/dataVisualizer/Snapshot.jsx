@@ -1,4 +1,4 @@
-import {Button} from '@code-dot-org/component-library/button';
+import {Button as MuiButton} from '@mui/material';
 import classNames from 'classnames';
 import moment from 'moment';
 import PropTypes from 'prop-types';
@@ -158,34 +158,38 @@ class Snapshot extends React.Component {
             </p>
             <p>{this.props.selectedOptions}</p>
           </div>
-          <Button
-            isPending={this.state.isCopyPending}
+          <MuiButton
+            variant="outlined"
+            color="tertiary"
+            size="small"
+            loading={this.state.isCopyPending}
+            className={classNames(
+              dataStyles.button,
+              dataStyles.buttonText,
+              dataStyles.buttonRightMargin
+            )}
             onClick={this.copy}
-            text={msg.copy()}
-            ariaLabel={msg.copy()}
+            aria-label={msg.copy()}
+            type="button"
+          >
+            {msg.copy()}
+          </MuiButton>
+          <MuiButton
+            variant="outlined"
+            color="tertiary"
+            size="small"
+            loading={this.state.isSavePending}
             className={classNames(
               dataStyles.button,
               dataStyles.buttonText,
               dataStyles.buttonRightMargin
             )}
-            size="s"
-            type="secondary"
-            color="gray"
-          />
-          <Button
-            isPending={this.state.isSavePending}
             onClick={this.save}
-            text={msg.save()}
-            ariaLabel={msg.save()}
-            className={classNames(
-              dataStyles.button,
-              dataStyles.buttonText,
-              dataStyles.buttonRightMargin
-            )}
-            size="s"
-            type="secondary"
-            color="gray"
-          />
+            aria-label={msg.save()}
+            type="button"
+          >
+            {msg.save()}
+          </MuiButton>
         </BaseDialog>
       </div>
     );

@@ -134,6 +134,9 @@ class Ability
       # A user can review the code of other_user if they are the other_user's teacher or if
       # they're in a shared section with code review turned on and they're in the same code review group
       can :code_review, User do |other_user|
+        # Demo students are shared across teachers; block code review to prevent
+        # cross-teacher visible comments on shared projects.
+        return false if Policies::DemoSections.demo_student?(other_user.id)
         return true if other_user.student_of?(user)
 
         in_shared_section_with_code_review = user.shared_sections_with(other_user).any?(&:code_review_enabled?)
@@ -161,6 +164,8 @@ class Ability
       can :workshops_user_enrolled_in, Pd::Workshop
       can :index, Section, user_id: user.id
       can [:get_feedbacks, :count, :increment_visit_count, :index], TeacherFeedback, student_id: user.id
+      can :create, UserLessonReflection, student_id: user.id
+      can :create, UserLessonObjectiveReflection, student_id: user.id
       can :create, UserMlModel, user_id: user.id
 
       can :list_projects, Section do |section|
@@ -176,7 +181,7 @@ class Ability
 
       # all signed in users can access the aichat_request and aichat_events endpoints
       # additional permission logic lives in the controllers themselves
-      can [:start_chat_completion, :chat_request], :aichat_request
+      can :manage, :aichat_request
       can [:log_chat_event, :chat_history, :submit_teacher_feedback], :aichat_event
 
       if user.teacher?
@@ -190,17 +195,17 @@ class Ability
         can [:accept, :decline], SectionInstructor, instructor_id: user.id
         can :manage, :teacher
         can :manage, User do |u|
-          user.students.include?(u)
+          user.students.include?(u) && !Policies::DemoSections.demo_student?(u.id)
         end
         can [:create, :get_feedback_from_teacher], TeacherFeedback do |feedback|
           user.students.exists?(id: feedback.student_id)
         end
         can :manage, Follower
         can :manage, UserLevel do |user_level|
-          !user.students.where(id: user_level.user_id).empty?
+          !user.students.where(id: user_level.user_id).empty? && !Policies::DemoSections.demo_student?(user_level.user_id)
         end
         can :create, UserLevelEvaluation do |ule|
-          !user.students.where(id: ule.user_id).empty?
+          !user.students.where(id: ule.user_id).empty? && !Policies::DemoSections.demo_student?(ule.user_id)
         end
         can :read, Plc::UserCourseEnrollment, user_id: user.id
         can :view_level_solutions, Unit do |script|
@@ -218,6 +223,14 @@ class Ability
         end
         can :get_feedbacks, TeacherFeedback do |feedback|
           user.students.exists?(id: feedback.student_id)
+        end
+
+        # LessonFeedback abilities - teachers can manage lesson feedback for their students
+        can :create, LessonFeedback do |feedback|
+          user.students.exists?(id: feedback.student_id)
+        end
+        can :update, LessonFeedback do |feedback|
+          user.students.exists?(id: feedback.student_id) && feedback.teacher_id == user.id
         end
 
       end
@@ -354,7 +367,7 @@ class Ability
       end
     end
 
-    can [:read, :show_by_id, :student_lesson_plan, :level_properties, :level_properties_by_id], Lesson do |lesson, context_unit_group|
+    can [:read, :show_by_id, :student_lesson_plan, :level_properties, :level_properties_by_id, :tutor], Lesson do |lesson, context_unit_group|
       script = lesson.script
       unit_group = context_unit_group || script.original_unit_group
       can?(:read, script, unit_group)
@@ -430,6 +443,11 @@ class Ability
         ReferenceGuide,
         Rubric,
         DataDoc,
+        JitPlConcept,
+        JitPlMisconception,
+        JitPlExemplar,
+        JitPlTeachingTip,
+        JSONVideo,
         CourseOffering,
         UnitGroup,
         Resource,
@@ -528,10 +546,8 @@ class Ability
       end
 
       can :find_toxicity, :aichat do
-        user.teacher_can_access_ai_chat? || user.student_can_access_ai_chat?
+        user.has_essential_aichat_access?
       end
-
-      can :user_has_access, :aichat
     end
 
     if user.persisted? && user.permission?(UserPermission::PROJECT_VALIDATOR)

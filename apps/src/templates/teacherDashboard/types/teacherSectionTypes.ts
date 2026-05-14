@@ -14,7 +14,6 @@ import {
 // typescript we can deprecate the PropTypes definitions and use these instead.
 
 export interface Section {
-  aiTutorEnabled: boolean;
   atRiskAgeGatedDate?: Date;
   atRiskAgeGatedUsState?: string;
   anyStudentHasProgress?: boolean;
@@ -27,6 +26,7 @@ export interface Section {
   courseVersionId?: number | null;
   courseVersionName?: string;
   createdAt?: string;
+  demoType?: DemoType | null;
   grades: string[];
   hidden: boolean;
   id: number;
@@ -54,6 +54,29 @@ export interface Section {
   aiChatAccessLevel?: AiChatAccessLevel;
 }
 
+export type DemoType = 'elementary' | 'middle' | 'high';
+
+export interface DemoPresetUnit {
+  name: string;
+  displayName: string;
+}
+
+export interface DemoPresetCourse {
+  name: string;
+  displayName: string;
+}
+
+export interface DemoPresetView {
+  demoType: DemoType;
+  sectionName: string;
+  avatarColor: number;
+  avatarEmoji: number;
+  loginType: NonNullable<Section['loginType']>;
+  participantType: NonNullable<Section['participantType']>;
+  unit: DemoPresetUnit | null;
+  unitGroup: DemoPresetCourse | null;
+}
+
 type Course = {
   courseOfferingId: number | null;
   versionId: number | null;
@@ -63,7 +86,6 @@ type Course = {
 };
 
 export interface UserEditableSection {
-  aiTutorEnabled?: boolean;
   codeReviewExpiresAt?: number | null;
   courseId?: number | null;
   courseOfferingId?: number | null;
@@ -84,7 +106,6 @@ export type OAuthSectionTypeName = keyof typeof OAuthSectionTypes;
 export type ServerOAuthSectionTypeName = OAuthSectionTypeName | 'google_oauth2';
 
 export interface ServerSection {
-  ai_tutor_enabled?: boolean;
   at_risk_age_gated_date?: string;
   at_risk_age_gated_us_state?: string;
   code: string;
@@ -94,6 +115,7 @@ export interface ServerSection {
   course_version_id?: number | null;
   courseVersionName?: string | null;
   createdAt?: string;
+  demo_type?: DemoType | null;
   grades?: string[];
   hidden: boolean;
   id: number;
@@ -120,6 +142,7 @@ export interface ServerSection {
 export interface Student {
   familyName: string;
   id: number;
+  isDemoStudent: boolean;
   name: string;
   secretPictureName: string;
   secretPictureUrl: string;
@@ -132,6 +155,7 @@ export interface Student {
 export interface ServerStudent {
   family_name: string;
   id: number;
+  is_demo_student: boolean;
   name: string;
   secret_picture_name: string;
   secret_picture_url: string;
@@ -139,6 +163,27 @@ export interface ServerStudent {
   sectionId: number;
   sharing_disabled: boolean;
   user_type: keyof typeof UserTypes;
+}
+
+export interface ServerDemoPresetUnit {
+  name: string;
+  display_name: string;
+}
+
+export interface ServerDemoPresetCourse {
+  name: string;
+  display_name: string;
+}
+
+export interface ServerDemoPresetView {
+  demo_type: DemoType;
+  section_name: string;
+  avatar_color: number;
+  avatar_emoji: number;
+  login_type: NonNullable<Section['loginType']>;
+  participant_type: NonNullable<Section['participantType']>;
+  unit: ServerDemoPresetUnit | null;
+  unit_group: ServerDemoPresetCourse | null;
 }
 
 //TODO: better types here

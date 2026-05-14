@@ -1,0 +1,42 @@
+<Weblab2>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 74,
+  "created_at": "2026-04-20T06:37:49.000Z",
+  "level_num": "custom",
+  "user_id": 19378,
+  "properties": {
+    "encrypted": "false",
+    "project_template_level_name": "ai-and-algorithmic-decisions-lesson11-template-revised_2026",
+    "long_instructions": "## Plan Your App Idea\r\n\r\nIn this level, you’ll define the core idea for your app.\r\n\r\nOpen `planning.md` and describe:\r\n- what your app is about\r\n- the main interaction your app will include\r\n\r\nThis will guide your design and logic in the next levels.\r\n\r\n:::details [**Not Sure Where To Start?**]\r\n\r\n</br>\r\n\r\nIf you’re not sure what to write, you can use AI Tutor to brainstorm ideas or refine your interaction.\r\n\r\n:::",
+    "offer_browser_tts": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "false",
+    "widget_view": "false",
+    "initial_view_mode": "code",
+    "require_edit_to_continue": "true",
+    "predict_settings": {
+      "isPredictLevel": false,
+      "solution": "",
+      "questionType": "freeResponse",
+      "placeholderText": "",
+      "multipleChoiceOptions": [
+        ""
+      ],
+      "freeResponseHeight": 50,
+      "codeEditableAfterSubmit": false
+    },
+    "ai_tutor_prompt_settings": {
+      "answerTypes": [
+        "ask",
+        "hint",
+        "example"
+      ],
+      "answerTypeCustomizations": {
+      }
+    }
+  },
+  "audit_log": "[{\"changed_at\":\"2026-04-20 06:37:54 +0000\",\"changed\":[],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-05-13 05:53:14 +0000\",\"changed\":[],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"}]"
+}]]></config>
+</Weblab2>

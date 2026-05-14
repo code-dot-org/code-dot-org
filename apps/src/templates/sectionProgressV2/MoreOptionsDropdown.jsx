@@ -1,23 +1,20 @@
-import throttle from 'lodash/debounce';
+import {ActionDropdown} from '@code-dot-org/component-library/dropdown';
+import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import PropTypes from 'prop-types';
-import React, {useState, useEffect, useRef} from 'react';
+import React from 'react';
 import {connect} from 'react-redux';
 
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
-import PopUpMenu from '@cdo/apps/sharedComponents/PopUpMenu';
 import {studentShape} from '@cdo/apps/templates/teacherDashboard/teacherSectionsReduxSelectors';
 import i18n from '@cdo/locale';
 
-import FontAwesome from '../../legacySharedComponents/FontAwesome';
 import {
   collapseMetadataForStudents,
   expandMetadataForStudents,
-} from '../sectionProgress/sectionProgressRedux';
+} from './sectionProgressRedux';
 
-import style from './expand-all-rows-dropdown.module.scss';
-
-const DROPDOWN_OFFSET = 172;
+import styles from './progress-table-v2.module.scss';
 
 function MoreOptionsDropdown({
   students,
@@ -25,110 +22,57 @@ function MoreOptionsDropdown({
   collapseMetadataForStudents,
   sectionId,
 }) {
-  const [opened, setOpened] = useState(false);
-  const [menuLocation, setMenuLocation] = useState({menuTop: 0, menuLeft: 0});
-  const elementRef = useRef(null);
-  const resizeListener = useRef(null);
-
-  const getAllStudentIds = React.useMemo(
+  const studentIds = React.useMemo(
     () => students.map(student => student.id),
     [students]
   );
 
-  const expandMetaDataForAllStudents = () => {
+  const expandAll = React.useCallback(() => {
     analyticsReporter.sendEvent(EVENTS.PROGRESS_V2_ALL_ROWS_EXPANDED, {
-      sectionId: sectionId,
+      sectionId,
     });
-    expandMetadataForStudents(getAllStudentIds);
-    setOpened(false);
-  };
+    expandMetadataForStudents(studentIds);
+  }, [expandMetadataForStudents, studentIds, sectionId]);
 
-  const collapseMetaDataForAllStudents = () => {
+  const collapseAll = React.useCallback(() => {
     analyticsReporter.sendEvent(EVENTS.PROGRESS_V2_ALL_ROWS_COLLAPSED, {
-      sectionId: sectionId,
+      sectionId,
     });
-    collapseMetadataForStudents(getAllStudentIds);
-    setOpened(false);
-  };
-
-  const getMenuLocation = () => {
-    const rect = elementRef.current.firstChild.getBoundingClientRect();
-    return {
-      menuTop: rect.bottom + window.pageYOffset,
-      menuLeft: rect.right + window.pageXOffset - DROPDOWN_OFFSET,
-    };
-  };
-
-  const updateMenuLocation = throttle(() => {
-    setMenuLocation(getMenuLocation());
-  }, 50);
-
-  useEffect(() => {
-    if (opened && !resizeListener.current) {
-      resizeListener.current = updateMenuLocation;
-      window.addEventListener('resize', resizeListener.current);
-      setMenuLocation(getMenuLocation());
-    } else if (!opened && resizeListener.current) {
-      window.removeEventListener('resize', resizeListener.current);
-      resizeListener.current = null;
-    }
-
-    return () => {
-      if (resizeListener.current) {
-        window.removeEventListener('resize', resizeListener.current);
-      }
-    };
-  }, [updateMenuLocation, opened]);
-
-  const handleDropdownClick = e => {
-    e.stopPropagation();
-    setOpened(!opened);
-  };
-
-  const onClose = () => {
-    setOpened(false);
-  };
-
-  const targetPoint = {top: menuLocation.menuTop, left: menuLocation.menuLeft};
+    collapseMetadataForStudents(studentIds);
+  }, [collapseMetadataForStudents, studentIds, sectionId]);
 
   return (
-    <div className={style.main} ref={elementRef}>
-      <button
-        type="button"
-        className={style.expandButton}
-        onClick={handleDropdownClick}
-        aria-label={i18n.additionalOptions()}
-        id="ui-see-more-options-dropdown"
-      >
-        <FontAwesome icon="ellipsis-vertical" />
-      </button>
-      {opened && (
-        <PopUpMenu
-          isOpen={opened}
-          targetPoint={targetPoint}
-          offset={{x: -elementRef.current.firstChild.offsetWidth, y: 5}}
-          onClose={onClose}
-          className={style.menu}
-        >
-          <PopUpMenu.Item
-            className={style.menuItem}
-            onClick={expandMetaDataForAllStudents}
-            style={{marginTop: '4px', padding: '5px 14px'}}
-          >
-            <FontAwesome icon="arrows-from-line" />
-            <div id="ui-test-expand-all">{i18n.expandAll()}</div>
-          </PopUpMenu.Item>
-          <PopUpMenu.Item
-            className={style.menuItem}
-            onClick={collapseMetaDataForAllStudents}
-            style={{marginBottom: '4px', padding: '5px 14px'}}
-          >
-            <FontAwesome icon="arrows-to-line" />
-            <div id="ui-test-collapse-all">{i18n.collapseAll()}</div>
-          </PopUpMenu.Item>
-        </PopUpMenu>
-      )}
-    </div>
+    <ActionDropdown
+      name="more-options-dropdown"
+      labelText={i18n.additionalOptions()}
+      menuPlacement="left"
+      size="s"
+      triggerButtonProps={{
+        id: 'ui-see-more-options-dropdown',
+        'aria-label': i18n.additionalOptions(),
+        children: (
+          <FontAwesomeV6Icon iconName="ellipsis-vertical" iconStyle="solid" />
+        ),
+        className: styles.moreOptionsDropdownButton,
+        variant: 'outlined',
+        color: 'tertiary',
+        size: 'small',
+      }}
+      options={[
+        {
+          value: 'expand-all',
+          label: i18n.expandAll(),
+          icon: {iconName: 'arrows-from-line', iconStyle: 'solid'},
+          onClick: expandAll,
+        },
+        {
+          value: 'collapse-all',
+          label: i18n.collapseAll(),
+          icon: {iconName: 'arrows-to-line', iconStyle: 'solid'},
+          onClick: collapseAll,
+        },
+      ]}
+    />
   );
 }
 MoreOptionsDropdown.propTypes = {

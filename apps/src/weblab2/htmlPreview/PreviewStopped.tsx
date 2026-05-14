@@ -1,3 +1,4 @@
+import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import {CodebridgeEmptyState} from '@codebridge/components/CodebridgeEmptyState';
 import React, {MouseEvent} from 'react';
 
@@ -17,12 +18,13 @@ const PreviewStopped: React.FC<PreviewStoppedProps> = ({onReload}) => {
         title="Preview Stopped"
         description="You stopped the preview. If there was an error, review your code or use AI Tutor to help debug before reloading."
         buttonProps={{
-          text: 'Reload Preview',
+          children: 'Reload Preview',
           onClick: onReload,
-          iconLeft: {iconName: 'sync', iconStyle: 'solid'},
-          type: 'secondary',
-          color: 'gray',
-          size: 's',
+          startIcon: <FontAwesomeV6Icon iconName="sync" iconStyle="solid" />,
+          variant: 'outlined',
+          color: 'tertiary',
+          size: 'small',
+          type: 'button',
         }}
       />
     </div>

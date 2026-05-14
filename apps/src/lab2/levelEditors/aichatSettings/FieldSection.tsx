@@ -1,8 +1,8 @@
-import {BodyFourText} from '@code-dot-org/component-library/typography';
+import {Typography} from '@mui/material';
 import classNames from 'classnames';
 import React, {useContext} from 'react';
 
-import {AiCustomizations} from '@cdo/apps/aichat/types';
+import {AiCustomizations} from '@cdo/apps/aichatLab/types';
 
 import {UpdateContext} from './UpdateContext';
 import VisibilityDropdown from './VisibilityDropdown';
@@ -36,9 +36,9 @@ const FieldSection: React.FunctionComponent<FieldSectionProps> = ({
   return (
     <>
       {description && (
-        <BodyFourText>
+        <Typography variant="body4" gutterBottom>
           <i>{description}</i>
-        </BodyFourText>
+        </Typography>
       )}
       <div className={moduleStyles.fieldRow}>
         <div className={moduleStyles['field-value']}>

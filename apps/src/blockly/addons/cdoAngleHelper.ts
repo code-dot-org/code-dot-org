@@ -168,7 +168,6 @@ class CdoAngleHelper {
     this.svg_ = BlocklyCore.utils.dom.createSvgElement(
       'svg',
       {
-        version: '1.1',
         height: `${this.height_}px`,
         width: `${this.width_}px`,
         style: 'background: rgb(255, 255, 255);',

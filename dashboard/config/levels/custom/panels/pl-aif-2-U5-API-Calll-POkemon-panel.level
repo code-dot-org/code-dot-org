@@ -57,7 +57,7 @@
         "layout": "text-bottom-right"
       },
       {
-        "text": "## Catching Errors\nIf something goes wrong with the fetch (network issue, bad response), catch the error, log it for debugging, and show a simple “Error!” message in the UI.",
+        "text": "## Catching Errors\nIf something goes wrong with the fetch (network issue, bad response), this part catches the error, logs it for debugging, and shows a simple “Error!” message in the UI.",
         "imageUrl": "https://images.code.org/5a66778e08552162fb5c587cf0c6134c-pokemonAPI (8).png",
         "key": "pl-aif-2-U5-API-Calll-POkemon-panel-bc9a2f73-10c2-426c-8e8f-f9d25da1af5a",
         "layout": "text-bottom-right"
@@ -92,6 +92,6 @@
     ],
     "name_suffix": "_2025-pilot"
   },
-  "audit_log": "[{\"changed_at\":\"2026-02-09T16:36:50.982+00:00\",\"changed\":[\"cloned from \\\"pl-aif-2-U4-forloop-panel\\\"\"],\"cloned_from\":\"pl-aif-2-U4-forloop-panel\"},{\"changed_at\":\"2026-02-10 21:30:05 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2026-02-09T16:36:50.982+00:00\",\"changed\":[\"cloned from \\\"pl-aif-2-U4-forloop-panel\\\"\"],\"cloned_from\":\"pl-aif-2-U4-forloop-panel\"},{\"changed_at\":\"2026-02-10 21:30:05 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"},{\"changed_at\":\"2026-03-10 14:26:12 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"}]"
 }]]></config>
 </Panels>

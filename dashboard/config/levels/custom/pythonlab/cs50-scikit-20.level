@@ -1,0 +1,42 @@
+<Pythonlab>
+  <config><![CDATA[{
+  "game_id": 72,
+  "created_at": "2026-02-18T16:59:43.000Z",
+  "level_num": "custom",
+  "user_id": 14639,
+  "properties": {
+    "encrypted": "false",
+    "ai_tutor_available": "true",
+    "offer_browser_tts": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "false",
+    "enable_micro_bit": "false",
+    "widget_view": "false",
+    "widget_view_allow_show_code": "false",
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "start_sources": {
+      "files": {
+        "0": {
+          "id": "0",
+          "name": "main.py",
+          "language": "py",
+          "contents": "# CIW AI Associate Standard: 2.12\n# Standard Description: Modify existing script to clean data.\n#\n# Rationale: In the real world, you rarely start from scratch. You will \n# often inherit \"Legacy\" code (scripts written by someone else) that \n# doesn't work perfectly. This tutorial provides a script with bugs in \n# the cleaning logic and asks students to find and fix them.\n\n\"\"\"\nWelcome to your first job as a Data Engineer! \nA co-worker wrote a script to clean some sales data, but they forgot to \nhandle a few things. The data is still messy!\n\nYour task is to \"Modify the existing script\" to make it work.\n\"\"\"\n\nimport pandas as pd\n\n# --- THE RAW MESSY DATA ---\ndata = {\n    'Item': ['Apple', 'apple', 'BANANA', '  Cherry  ', 'Date'],\n    'Price_String': ['$1.50', '$2.00', '3.50', '$0.75', 'FREE'],\n    'Quantity': [10, 5, 8, 12, 0]\n}\ndf = pd.DataFrame(data)\n\ndef broken_cleaning_script(df_input):\n    \"\"\"This script is incomplete!\"\"\"\n    df_clean = df_input.copy()\n    \n    # PROBLEM 1: The items have inconsistent capitalization and spaces\n    # TODO: Make everything lowercase and remove extra spaces\n    \n    # PROBLEM 2: The 'Price_String' column has dollar signs and words\n    # TODO: Remove the '$' sign and change 'FREE' to '0.00'\n    # TODO: Convert the whole column to a FLOAT (number)\n    \n    return df_clean\n\n# --- THE CHALLENGE ---\nprint(\"--- Data Before Cleaning ---\")\nprint(df)\n\n# We want the 'Item' column to be: ['apple', 'apple', 'banana', 'cherry', 'date']\n# We want the 'Price' column to be: [1.50, 2.00, 3.50, 0.75, 0.00]\n\n\"\"\"\n--- YOUR TURN ---\nModify the 'broken_cleaning_script' below to fix the Item and Price columns.\nWe've provided some hints to get you started!\n\"\"\"\n\n# STARTING CODE FOR STUDENT:\ndef my_fixed_script(df_input):\n    df_clean = df_input.copy()\n    \n    # 1. Fix the Item names\n    # Hint: Use .str.lower() and .str.strip()\n    df_clean['Item'] = df_clean['Item'].str.lower().str.strip()\n    \n    # 2. Fix the Prices\n    # Hint: Use .str.replace('$', '') and .replace('FREE', '0.00')\n    # Hint: Use .astype(float) at the end!\n    \n    # TODO: Add your code here!\n    \n    return df_clean\n\n# Test your script!\n# df_final = my_fixed_script(df)\n# print(\"\\n--- Data After YOUR Cleaning ---\")\n# print(df_final)\n",
+          "folderId": "0",
+          "active": true
+        }
+      },
+      "folders": {
+      },
+      "openFiles": [
+        "0"
+      ]
+    },
+    "encrypted_exemplar_sources": "A3vaHWcrNLyiKjVtNgHDFTDG6jyYgtI/CEUE/82dEkG4hlI8OLsdjJD0In8S\n03BB+jPkGgyYB0/9C3zqHMHEFpKeCsugYbpGMxzBNwrd7qASagJaFzMnVUyM\n2TXS7Hau9lj7JpZIHXn9fmxXRRANWUQ13IUWMxkpYhW1vdXUk+H5gOX3Z1VE\nxV0hAcdcQ24AK/CdYf3duO1WOYO9ByJ9HE8wrkz/4aVOVZWsIHc3jBgiczvp\nqojq1MCfTWlIV/XfM/Ogks9cGCnorEEArXa29K1zS69Il7l3wLRwkqdt2OHR\nidj3119ysG5qE6W3PLN/sTwbEbq0Jgpq2CjNx5oKYa+lHrtnhYDxZWlhh4al\nUVkoObJsZNZ6TEweAyc412spgpv6VWE7TYo+gEGNTXrWZ64+pj04fAGwyVam\nI4Qtv4oPezRlflKnsqM4XqTXzthzuheVPJ8UbcZA3atmD4f3sxPQQIpWZzwd\nKS3++JLFPioPVgKxdcjtnoX+5OsOg0NjeCRm/Gzob5IiM6dSSWB5edYT2TvR\nnUSWNYy3bu6X41ppEQ3fRxF995BPZxDMgJkOnsUZxNkbW0hqPEGzmLghNdMl\nb6q1lmA4nIdNmcnhSVorgTh8Kdbxm35z6UQ6/XXiL5bOvZATtxbfS/JfW1gT\nAkvlQ/eb3M2gXjPp6XxiHIio7OroFK/QBuxGCQY8m7FlFDxdRYvhJOaRmOwp\nCS6YoxW3CORyncAV5wCoYHm6kod+UsVPJP6KWLcSbSEFvJd0LKAH15MtKpov\n2bLiVlpCou4IZEaQMm5Hk2yr0Mzu2rB3exsuEavaaZrTsrL6qrd4Nw/i6/cT\n42735yZHjfKvUOtxXkf/u9ucueasy/7rpFFTmeb/FmdDbsWGheWbR2gD5lY0\nLm8UJ/k+LYr6TEo4VEFUhCVnSYBfOzleBfrA4++qnB1F/oGH5KdlsS9Jrp3h\ne3VQht22qqM5znUKMI80Hesfz6lKlg8IvlFf1KMNx7j53FEB1IhQoKjrLFKK\nba9dFSDMKzGvts9HRS8Mraxdb+4pJZsah10eXKrgK6z+FJtFn3o/Zci05qtR\nqp18XFMJekOaXLQuRiTr9bH4G7AswO3NfdUi9Qx3JTBEd2Q533VZet+br6Hm\nilJzMZ58zA5Uwgdfgox3BYVVWl/pSxxgV0AOT7rZKJ0joCiA9p2Q7BbUcAax\nwX/atLj7e/JLdgIoCu8cRheNoQlyuFApAoWr+gWKLTRyYmdEMm7Cl9kHDGt1\nvueftV21DgNT7FlYNXL3pu/+1mi60q9rZTMTB3jOS8nVzO0Y7qczglN+wOMT\nTnhaJQp59EPu4HNAjtrQfdBN7CZxDtMYZvfS8zBl9ZM/OxbITqLDH+wuXyMp\nBmgDN562o2pA/9MG7SFV3Ik1B8Bj3SIJXhT1rJdsot63e1hv1XsIvWayDOyV\n4HSad54vp1a3EwKtzOXDy4HEltXofOCwiVUazDk2ulKqdHiodexak3dLFJWu\nCboaR1/5ESUSA13JZA0sJeupbzC6gnJ1DrOy5Mx9hZVWTGXIY1sGNBboC+tL\nGUYIANmXGwCquVHoOaPcPrprb3so5t+AVSOQ6nrh09POTZ/zjsKPRwfE7Dtd\nUqOeT79yzVJk0Bq7L09Yohg=\n"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-02-18T16:59:43.339+00:00\",\"changed\":[\"cloned from \\\"cs50-scikit-19\\\"\"],\"cloned_from\":\"cs50-scikit-19\"},{\"changed_at\":\"2026-02-18 16:59:45 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2026-02-18 17:40:20 +0000\",\"changed\":[],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2026-02-18 17:40:39 +0000\",\"changed\":[],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2026-02-18 17:40:46 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
+}]]></config>
+</Pythonlab>

@@ -1,4 +1,5 @@
-import Button from '@code-dot-org/component-library/button';
+import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
+import {Button as MuiButton} from '@mui/material';
 import React from 'react';
 
 import PersonalizationInterstitial from '@cdo/apps/aiDifferentiation/personalization/components/personalizationInterstitial/PersonalizationInterstitial';
@@ -44,16 +45,17 @@ const PersonalizationCollectorContainer: React.FC = () => {
     useTeachingProfileData();
 
   const onCarouselPress = async (direction: number) => {
+    if (direction === NEXT && !showInterstitialState) {
+      analyticsReporter.sendEvent(EVENTS.PERSONALIZATION_ANSWER_SUBMITTED, {
+        question: PERSONALIZATION_PROMPTS[questionsNumber].question,
+        questionNumber: questionsNumber + 1,
+      });
+    }
+
     if (
       direction === NEXT &&
       questionsNumber < PERSONALIZATION_PROMPTS.length - 1
     ) {
-      if (!showInterstitialState) {
-        analyticsReporter.sendEvent(EVENTS.PERSONALIZATION_ANSWER_SUBMITTED, {
-          question: PERSONALIZATION_PROMPTS[questionsNumber].question,
-          questionNumber: questionsNumber + 1,
-        });
-      }
       setIsSaving(true);
       try {
         await saveTeachingProfileData(personalizationData);
@@ -297,24 +299,33 @@ const PersonalizationCollectorContainer: React.FC = () => {
               </>
             )}
             <div className={style.navigationButtons}>
-              <Button
-                id={'back-button'}
-                text={i18n.back()}
-                type="secondary"
-                color="gray"
-                size="m"
+              <MuiButton
+                variant="outlined"
+                color="tertiary"
+                size="medium"
+                id="back-button"
                 onClick={() => onCarouselPress(BACK)}
-                iconLeft={{iconName: 'angle-left'}}
-              />
-              <Button
-                id={'next-button'}
-                text={isSaving ? i18n.saving() : i18n.next()}
-                type="primary"
-                size="m"
+                type="button"
+                startIcon={<FontAwesomeV6Icon iconName="angle-left" />}
+              >
+                {i18n.back()}
+              </MuiButton>
+              <MuiButton
+                variant="contained"
+                color="primary"
+                size="medium"
+                id="next-button"
                 onClick={() => onCarouselPress(NEXT)}
+                type="button"
                 disabled={isSaving}
-                iconRight={isSaving ? undefined : {iconName: 'angle-right'}}
-              />
+                endIcon={
+                  isSaving ? undefined : (
+                    <FontAwesomeV6Icon iconName="angle-right" />
+                  )
+                }
+              >
+                {isSaving ? i18n.saving() : i18n.next()}
+              </MuiButton>
             </div>
           </>
         )}

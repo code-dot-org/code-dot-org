@@ -151,7 +151,6 @@ interface UnitData {
   curriculum_umbrella: string;
   family_name: string | null;
   version_year: string | null;
-  hasStandards: boolean;
   tts: boolean;
   deprecated: boolean;
   is_migrated: boolean;

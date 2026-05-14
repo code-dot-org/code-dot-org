@@ -1,4 +1,4 @@
-import Button, {buttonColors} from '@code-dot-org/component-library/button';
+import {Button as MuiButton} from '@mui/material';
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
@@ -29,15 +29,15 @@ class CourseCard extends Component {
         <div style={isRtl ? styles.titleRtl : styles.title}>{title}</div>
         <div style={styles.description}>
           <p>{description}</p>
-          <Button
-            useAsLink={true}
+          <MuiButton
+            variant="outlined"
+            color="tertiary"
+            size="small"
+            aria-label={i18n.viewCourse()}
             href={link}
-            ariaLabel={i18n.viewCourse()}
-            color={buttonColors.gray}
-            text={i18n.viewCourse()}
-            type="secondary"
-            size="s"
-          />
+          >
+            {i18n.viewCourse()}
+          </MuiButton>
         </div>
       </div>
     );

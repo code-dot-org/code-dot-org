@@ -10,7 +10,7 @@ import {SVG_NS} from '@cdo/apps/constants';
 import Button from '@cdo/apps/legacySharedComponents/Button';
 import i18n from '@cdo/locale';
 
-import {readBooleanAttribute, FALSEY_DEFAULT} from '../xml/booleanAttributes';
+import {FALSEY_DEFAULT, readBooleanAttribute} from '../xml/booleanAttributes';
 
 const INPUTS = {
   FLYOUT: 'flyout_input',
@@ -26,7 +26,7 @@ export function initializeMiniToolbox(renderToolboxBeforeStack = false) {
   // Function to create the flyout
   const createFlyoutField = function (block: BlocklyCore.Block) {
     const flyoutKey = CdoFieldFlyout.getFlyoutId(block);
-    const flyoutField = new Blockly.FieldFlyout('', {
+    const flyoutField = new CdoFieldFlyout('', {
       flyoutKey: flyoutKey,
       name: 'FLYOUT',
     });
@@ -77,7 +77,7 @@ export function initializeMiniToolbox(renderToolboxBeforeStack = false) {
     button: Button.ButtonColor.blue,
   };
 
-  const flyoutToggleButton = new Blockly.FieldToggle({
+  const flyoutToggleButton = new CdoFieldToggle({
     onClick: toggleFlyout,
     defaultIcon,
     alternateIcon,

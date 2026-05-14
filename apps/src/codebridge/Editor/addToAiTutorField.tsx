@@ -7,6 +7,7 @@ import {sendAnalytics} from '@cdo/apps/aichat/redux';
 import {addItemToUserAddedSelectionContext} from '@cdo/apps/aichat/redux/slice';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import {createReactRoot} from '@cdo/apps/util/createReactRoot';
+import currentLocale from '@cdo/apps/util/currentLocale';
 import {AppDispatch} from '@cdo/apps/util/reduxHooks';
 
 import moduleStyles from './styles/editor.module.scss';
@@ -59,6 +60,10 @@ export const getAddToAiTutorField = (
                 end: endingLine.number,
               },
               filename: filename,
+              timestamp: new Date().toLocaleTimeString(currentLocale(), {
+                hour: 'numeric',
+                minute: '2-digit',
+              }),
             })
           );
         };
@@ -72,7 +77,10 @@ export const getAddToAiTutorField = (
             dom.className = moduleStyles.aiTutorTooltip;
             createReactRoot(
               <AddToAiTutorChatButton saveSelectionContext={saveSelection} />,
-              dom
+              dom,
+              {
+                legacyReactDomRender: true,
+              }
             );
             return {dom};
           },

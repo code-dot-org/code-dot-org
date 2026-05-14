@@ -1,7 +1,7 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 
 import AiDiffExitTicket from '@cdo/apps/aiDifferentiation/AiDiffExitTicket';
+import {createReactRoot} from '@cdo/apps/util/createReactRoot';
 import getScriptData from '@cdo/apps/util/getScriptData';
 
 $(document).ready(function () {
@@ -11,12 +11,15 @@ $(document).ready(function () {
 function displayExitTicket() {
   const exitTicketData = getScriptData('artifact');
 
-  ReactDOM.render(
+  createReactRoot(
     <AiDiffExitTicket
       title={exitTicketData['title']}
       updated={new Date(exitTicketData['updated_at'])}
       content={exitTicketData['content']}
     />,
-    document.getElementById('show-container')
+    document.getElementById('show-container'),
+    {
+      legacyReactDomRender: true,
+    }
   );
 }

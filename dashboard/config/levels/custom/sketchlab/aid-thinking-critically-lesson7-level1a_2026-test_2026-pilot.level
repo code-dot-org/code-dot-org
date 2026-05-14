@@ -1,0 +1,1073 @@
+<Sketchlab>
+  <config><![CDATA[{
+  "game_id": 75,
+  "created_at": "2026-03-10T16:32:32.000Z",
+  "level_num": "custom",
+  "user_id": 18603,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "##Exploration 1: Smart Cart Data\r\n\r\n**Inquiry Question**: How does an AI use pattern recognition based on public shopping data?\r\n\r\n1. Examine the list of 15 data points for the fictional student, Marina. Sort them into three categories: public, private, and sensitive\r\n2. Practice anonymizing private data to make it less specific and more general (\"Cass Tech Keychain\" > \"Keychain\").\r\n\r\n\r\n",
+    "start_sources": {
+      "source": {
+        "nodes": [
+          {
+            "id": "9MN6FQW-gRPK6mrh7hYw-",
+            "type": "shape",
+            "position": {
+              "x": -539,
+              "y": 10.75
+            },
+            "style": {
+              "width": 1286.0000000000005,
+              "height": 787.9999999999999
+            },
+            "data": {
+              "shapeType": "rectangle",
+              "label": "",
+              "backgroundColor": "#ffc9c9",
+              "strokeColor": "#1e1e1e"
+            },
+            "measured": {
+              "width": 1286,
+              "height": 788
+            }
+          },
+          {
+            "id": "iN_mv987vqmZSIAK6sshC",
+            "type": "text",
+            "position": {
+              "x": 8.49999999999909,
+              "y": -86.16666666666657
+            },
+            "data": {
+              "text": "Data Points",
+              "fontColor": "#1e1e1e",
+              "fontSize": "large",
+              "showHandles": false
+            },
+            "measured": {
+              "width": 139,
+              "height": 81
+            },
+            "width": 139,
+            "height": 81,
+            "resizing": false,
+            "dragging": false
+          },
+          {
+            "id": "n98s5wWO4uUJ2_5g3qGuX",
+            "type": "image",
+            "position": {
+              "x": -530.5000000000011,
+              "y": -173.33333333333337
+            },
+            "style": {
+              "width": 325.3333333333334,
+              "height": 325.3333333333334
+            },
+            "data": {
+              "src": "/level_starter_assets/aid-thinking-critically-lesson7-level1a_2026-test/uuid/973d357da7b2f2cad3ba043d8802ba7d132138de.png",
+              "altText": "",
+              "showHandles": false
+            },
+            "measured": {
+              "width": 197,
+              "height": 155
+            },
+            "width": 197,
+            "height": 155,
+            "resizing": false,
+            "dragging": false
+          },
+          {
+            "id": "psLob9HKcLpvn9u3UyJzu",
+            "type": "text",
+            "position": {
+              "x": -482.3333333333345,
+              "y": -190.83333333333331
+            },
+            "data": {
+              "text": "Smart Cart",
+              "fontColor": "#1e1e1e",
+              "fontSize": "large",
+              "showHandles": false
+            },
+            "measured": {
+              "width": 409,
+              "height": 105
+            },
+            "width": 409,
+            "height": 105,
+            "resizing": false,
+            "dragging": false
+          },
+          {
+            "id": "bSFG0FSCuzuL3YPjmcL5a",
+            "type": "shape",
+            "position": {
+              "x": -524.0833333333335,
+              "y": 842.2976190476193
+            },
+            "style": {
+              "width": 386.53081510934373,
+              "height": 889.1650099403577
+            },
+            "data": {
+              "shapeType": "rectangle",
+              "label": "",
+              "backgroundColor": "#b2f2bb",
+              "strokeColor": "#1e1e1e"
+            },
+            "measured": {
+              "width": 387,
+              "height": 889
+            }
+          },
+          {
+            "id": "sazKT7KGmWQBfF5f7M6As",
+            "type": "shape",
+            "position": {
+              "x": -87.3537110669323,
+              "y": 842.2976190476193
+            },
+            "style": {
+              "width": 386.53081510934373,
+              "height": 889.1650099403575
+            },
+            "data": {
+              "shapeType": "rectangle",
+              "label": "",
+              "backgroundColor": "#a5d8ff",
+              "strokeColor": "#1e1e1e"
+            },
+            "measured": {
+              "width": 387,
+              "height": 889
+            }
+          },
+          {
+            "id": "WuvDU_kheh-n2kkJEGPXF",
+            "type": "shape",
+            "position": {
+              "x": 349.3858515573222,
+              "y": 844.8075594054721
+            },
+            "style": {
+              "width": 386.53081510934373,
+              "height": 889.1650099403575
+            },
+            "data": {
+              "shapeType": "rectangle",
+              "label": "",
+              "backgroundColor": "#ffc9c9",
+              "strokeColor": "#1e1e1e"
+            },
+            "measured": {
+              "width": 387,
+              "height": 889
+            }
+          },
+          {
+            "id": "TUYY7MxPGF99CusDLJTKW",
+            "type": "text",
+            "position": {
+              "x": -440.5000000000007,
+              "y": 861.8333333333333
+            },
+            "data": {
+              "text": "Public Data",
+              "fontColor": "#1e1e1e",
+              "fontSize": "large",
+              "showHandles": false
+            },
+            "measured": {
+              "width": 129,
+              "height": 47
+            }
+          },
+          {
+            "id": "m_HNcRJd_KOBPF9C3LoVq",
+            "type": "text",
+            "position": {
+              "x": -25.500000000001137,
+              "y": 864.3333333333333
+            },
+            "data": {
+              "text": "Private Data",
+              "fontColor": "#1e1e1e",
+              "fontSize": "large",
+              "showHandles": false
+            },
+            "measured": {
+              "width": 137,
+              "height": 47
+            }
+          },
+          {
+            "id": "b8gVDeUO3TmkSGJdoElf3",
+            "type": "text",
+            "position": {
+              "x": 406.99999999999886,
+              "y": 859.3333333333333
+            },
+            "data": {
+              "text": "Sensitive Data",
+              "fontColor": "#1e1e1e",
+              "fontSize": "large",
+              "showHandles": false
+            },
+            "measured": {
+              "width": 159,
+              "height": 47
+            }
+          },
+          {
+            "id": "6-POMe_KEUxquov80lNrx",
+            "type": "image",
+            "position": {
+              "x": -675.561121236962,
+              "y": 753.7046906752219
+            },
+            "style": {
+              "width": 188.5,
+              "height": 188.5
+            },
+            "data": {
+              "src": "/level_starter_assets/aid-thinking-critically-lesson7-level1a_2026-test/uuid/27f944a08094f2088c427571f3b065aef3237460.png",
+              "altText": "",
+              "showHandles": false,
+              "rotation": 45
+            },
+            "measured": {
+              "width": 189,
+              "height": 189
+            },
+            "dragging": false
+          },
+          {
+            "id": "wSEijdcDOJ7nSGJqhZpxH",
+            "type": "shape",
+            "position": {
+              "x": -546.3311764949057,
+              "y": 1848.1426718080356
+            },
+            "style": {
+              "width": 1286.0000000000005,
+              "height": 787.9999999999999
+            },
+            "data": {
+              "shapeType": "rectangle",
+              "label": "",
+              "backgroundColor": "transparent",
+              "strokeColor": "#1e1e1e"
+            },
+            "measured": {
+              "width": 1286,
+              "height": 788
+            },
+            "dragging": false
+          },
+          {
+            "id": "7JBXNL9zw3bQjVZKG1a6g",
+            "type": "image",
+            "position": {
+              "x": -641.6030523957958,
+              "y": 1718.8809523809523
+            },
+            "style": {
+              "width": 188.5,
+              "height": 188.5
+            },
+            "data": {
+              "src": "/level_starter_assets/aid-thinking-critically-lesson7-level1a_2026-test/uuid/27f944a08094f2088c427571f3b065aef3237460.png",
+              "altText": "",
+              "showHandles": false,
+              "rotation": 45
+            },
+            "measured": {
+              "width": 189,
+              "height": 189
+            },
+            "dragging": false
+          },
+          {
+            "id": "WenUUxq4FQQsWRlAST8zo",
+            "type": "text",
+            "position": {
+              "x": 0.9644338532998233,
+              "y": 1848.4999999999995
+            },
+            "data": {
+              "text": "Anonymized Data",
+              "fontColor": "#1e1e1e",
+              "fontSize": "large",
+              "showHandles": false
+            },
+            "measured": {
+              "width": 192,
+              "height": 47
+            },
+            "dragging": false
+          },
+          {
+            "id": "Eln6uDMhOJ19ZnjMuZNmu",
+            "type": "image",
+            "position": {
+              "x": -396.74999999999955,
+              "y": 1554.6309523809525
+            },
+            "style": {
+              "width": 128.66666666666674,
+              "height": 128.66666666666674
+            },
+            "data": {
+              "src": "/level_starter_assets/aid-thinking-critically-lesson7-level1a_2026-test/uuid/fcaf39c607267bb51cc2554664eadc0674bd491c.png",
+              "altText": "",
+              "showHandles": false
+            },
+            "measured": {
+              "width": 129,
+              "height": 129
+            }
+          },
+          {
+            "id": "i5kSdcGzZ5TdRabXuRpZA",
+            "type": "image",
+            "position": {
+              "x": 65.25000000000023,
+              "y": 1563.297619047619
+            },
+            "style": {
+              "width": 114.66666666666652,
+              "height": 114.66666666666652
+            },
+            "data": {
+              "src": "/level_starter_assets/aid-thinking-critically-lesson7-level1a_2026-test/uuid/1f338b076ec6bd4ef09f87962bf3ac9d29c802b4.png",
+              "altText": "",
+              "showHandles": false
+            },
+            "measured": {
+              "width": 115,
+              "height": 115
+            }
+          },
+          {
+            "id": "QRFWxChj5TgTgrOCP5kvu",
+            "type": "image",
+            "position": {
+              "x": 489.91666666666583,
+              "y": 1571.2976190476188
+            },
+            "style": {
+              "width": 118.66666666666697,
+              "height": 118.66666666666697
+            },
+            "data": {
+              "src": "/level_starter_assets/aid-thinking-critically-lesson7-level1a_2026-test/uuid/fbb975c70188869daeac255de991cb080bd34f71.png",
+              "altText": "",
+              "showHandles": false
+            },
+            "measured": {
+              "width": 119,
+              "height": 119
+            }
+          },
+          {
+            "id": "aIvpD-o5IgKaZ-nHvq2vq",
+            "type": "shape",
+            "position": {
+              "x": -446.33333333333417,
+              "y": 2042.666666666666
+            },
+            "style": {
+              "width": 457.5,
+              "height": 77.50000000000011
+            },
+            "data": {
+              "shapeType": "rectangle",
+              "label": "insert data here",
+              "backgroundColor": "#e9ecef",
+              "strokeColor": "#1e1e1e",
+              "fontColor": "#1e1e1e",
+              "fontSize": "medium"
+            },
+            "measured": {
+              "width": 458,
+              "height": 78
+            }
+          },
+          {
+            "id": "E45bOCOHSPn8eJCseQpPH",
+            "type": "shape",
+            "position": {
+              "x": 213.6666666666656,
+              "y": 2040.166666666666
+            },
+            "style": {
+              "width": 457.5,
+              "height": 77.50000000000011
+            },
+            "data": {
+              "shapeType": "rectangle",
+              "label": "revise data here",
+              "backgroundColor": "#e9ecef",
+              "strokeColor": "#1e1e1e",
+              "fontColor": "#1e1e1e",
+              "fontSize": "medium"
+            },
+            "measured": {
+              "width": 458,
+              "height": 78
+            }
+          },
+          {
+            "id": "FcO7KS72bKJJ_PtEmGrIb",
+            "type": "text",
+            "position": {
+              "x": -363.83333333333417,
+              "y": 1963.4999999999993
+            },
+            "data": {
+              "text": "Original Data",
+              "fontColor": "#1e1e1e",
+              "fontSize": "large",
+              "showHandles": false
+            },
+            "measured": {
+              "width": 145,
+              "height": 47
+            }
+          },
+          {
+            "id": "wcP-bwNY2x6m1rJz3RU5h",
+            "type": "text",
+            "position": {
+              "x": 308.6666666666656,
+              "y": 1965.9999999999993
+            },
+            "data": {
+              "text": "Revised Data",
+              "fontColor": "#1e1e1e",
+              "fontSize": "large",
+              "showHandles": false
+            },
+            "measured": {
+              "width": 146,
+              "height": 47
+            }
+          },
+          {
+            "id": "dmEPXagF3gJus-FxVe0hK",
+            "type": "shape",
+            "position": {
+              "x": -446.33333333333417,
+              "y": 2165.166666666666
+            },
+            "style": {
+              "width": 457.5,
+              "height": 77.50000000000011
+            },
+            "data": {
+              "shapeType": "rectangle",
+              "label": "insert data here",
+              "backgroundColor": "#e9ecef",
+              "strokeColor": "#1e1e1e",
+              "fontColor": "#1e1e1e",
+              "fontSize": "medium"
+            },
+            "measured": {
+              "width": 458,
+              "height": 78
+            }
+          },
+          {
+            "id": "YxZiYQ10RUkyyAZdvfQN8",
+            "type": "shape",
+            "position": {
+              "x": 213.6666666666656,
+              "y": 2162.666666666666
+            },
+            "style": {
+              "width": 457.5,
+              "height": 77.50000000000011
+            },
+            "data": {
+              "shapeType": "rectangle",
+              "label": "revise data here",
+              "backgroundColor": "#e9ecef",
+              "strokeColor": "#1e1e1e",
+              "fontColor": "#1e1e1e",
+              "fontSize": "medium"
+            },
+            "measured": {
+              "width": 458,
+              "height": 78
+            }
+          },
+          {
+            "id": "y3uw0ne69pCG6I-RxwoKz",
+            "type": "shape",
+            "position": {
+              "x": -446.33333333333417,
+              "y": 2285.1666666666656
+            },
+            "style": {
+              "width": 457.5,
+              "height": 77.50000000000011
+            },
+            "data": {
+              "shapeType": "rectangle",
+              "label": "insert data here",
+              "backgroundColor": "#e9ecef",
+              "strokeColor": "#1e1e1e",
+              "fontColor": "#1e1e1e",
+              "fontSize": "medium"
+            },
+            "measured": {
+              "width": 458,
+              "height": 78
+            }
+          },
+          {
+            "id": "IxA6lixpgNZWWY5vnrkKS",
+            "type": "shape",
+            "position": {
+              "x": 213.6666666666656,
+              "y": 2282.6666666666656
+            },
+            "style": {
+              "width": 457.5,
+              "height": 77.50000000000011
+            },
+            "data": {
+              "shapeType": "rectangle",
+              "label": "revise data here",
+              "backgroundColor": "#e9ecef",
+              "strokeColor": "#1e1e1e",
+              "fontColor": "#1e1e1e",
+              "fontSize": "medium"
+            },
+            "measured": {
+              "width": 458,
+              "height": 78
+            }
+          },
+          {
+            "id": "msYdfHVDv8Sbkz5sluVN3",
+            "type": "shape",
+            "position": {
+              "x": -443.83333333333417,
+              "y": 2407.666666666666
+            },
+            "style": {
+              "width": 457.5,
+              "height": 77.50000000000011
+            },
+            "data": {
+              "shapeType": "rectangle",
+              "label": "insert data here",
+              "backgroundColor": "#e9ecef",
+              "strokeColor": "#1e1e1e",
+              "fontColor": "#1e1e1e",
+              "fontSize": "medium"
+            },
+            "measured": {
+              "width": 458,
+              "height": 78
+            }
+          },
+          {
+            "id": "VeExCS0PijBlHItCj2nd_",
+            "type": "shape",
+            "position": {
+              "x": 216.1666666666656,
+              "y": 2405.166666666666
+            },
+            "style": {
+              "width": 457.5,
+              "height": 77.50000000000011
+            },
+            "data": {
+              "shapeType": "rectangle",
+              "label": "revise data here",
+              "backgroundColor": "#e9ecef",
+              "strokeColor": "#1e1e1e",
+              "fontColor": "#1e1e1e",
+              "fontSize": "medium"
+            },
+            "measured": {
+              "width": 458,
+              "height": 78
+            }
+          },
+          {
+            "id": "Dy0D6bT4NsW23-L7lA-83",
+            "type": "shape",
+            "position": {
+              "x": -443.83333333333417,
+              "y": 2527.6666666666656
+            },
+            "style": {
+              "width": 457.5,
+              "height": 77.50000000000011
+            },
+            "data": {
+              "shapeType": "rectangle",
+              "label": "insert data here",
+              "backgroundColor": "#e9ecef",
+              "strokeColor": "#1e1e1e",
+              "fontColor": "#1e1e1e",
+              "fontSize": "medium"
+            },
+            "measured": {
+              "width": 458,
+              "height": 78
+            }
+          },
+          {
+            "id": "cOt0t-RvJxE77F0hq-tlz",
+            "type": "shape",
+            "position": {
+              "x": 216.1666666666656,
+              "y": 2525.1666666666656
+            },
+            "style": {
+              "width": 457.5,
+              "height": 77.50000000000011
+            },
+            "data": {
+              "shapeType": "rectangle",
+              "label": "revise data here",
+              "backgroundColor": "#e9ecef",
+              "strokeColor": "#1e1e1e",
+              "fontColor": "#1e1e1e",
+              "fontSize": "medium"
+            },
+            "measured": {
+              "width": 458,
+              "height": 78
+            }
+          },
+          {
+            "id": "_G_pngFXUwfZ0AAZsLl2v",
+            "type": "shape",
+            "position": {
+              "x": -471.33333333333417,
+              "y": 82.66666666666652
+            },
+            "style": {
+              "width": 312.5,
+              "height": 90.00000000000011
+            },
+            "data": {
+              "shapeType": "rectangle",
+              "label": "\"Detroit vs. Everybody\" \nT-Shirt",
+              "backgroundColor": "#ffffff",
+              "strokeColor": "#1e1e1e",
+              "fontColor": "#1e1e1e",
+              "fontSize": "medium"
+            },
+            "measured": {
+              "width": 313,
+              "height": 90
+            }
+          },
+          {
+            "id": "GGU1m81A16upYBGSlZWfa",
+            "type": "shape",
+            "position": {
+              "x": -471.33333333333417,
+              "y": 215.16666666666652
+            },
+            "style": {
+              "width": 312.5,
+              "height": 90.00000000000011
+            },
+            "data": {
+              "shapeType": "rectangle",
+              "label": "Faygo Red Pop",
+              "backgroundColor": "#ffffff",
+              "strokeColor": "#1e1e1e",
+              "fontColor": "#1e1e1e",
+              "fontSize": "medium"
+            },
+            "measured": {
+              "width": 313,
+              "height": 90
+            }
+          },
+          {
+            "id": "nYS_rzdFyYxGs7IypFexs",
+            "type": "shape",
+            "position": {
+              "x": -471.33333333333417,
+              "y": 350.1666666666665
+            },
+            "style": {
+              "width": 312.5,
+              "height": 90.00000000000011
+            },
+            "data": {
+              "shapeType": "rectangle",
+              "label": "Blue and Silver Face \nPaint",
+              "backgroundColor": "#ffffff",
+              "strokeColor": "#1e1e1e",
+              "fontColor": "#1e1e1e",
+              "fontSize": "medium"
+            },
+            "measured": {
+              "width": 313,
+              "height": 90
+            }
+          },
+          {
+            "id": "tQ4wkPyvT4rOd6yblnWvs",
+            "type": "shape",
+            "position": {
+              "x": -472.58333333333417,
+              "y": 486.4166666666665
+            },
+            "style": {
+              "width": 312.5,
+              "height": 90.00000000000011
+            },
+            "data": {
+              "shapeType": "rectangle",
+              "label": "Fleece-Lined Leggings",
+              "backgroundColor": "#ffffff",
+              "strokeColor": "#1e1e1e",
+              "fontColor": "#1e1e1e",
+              "fontSize": "medium"
+            },
+            "measured": {
+              "width": 313,
+              "height": 90
+            }
+          },
+          {
+            "id": "_WTNxQhulh_S9y5mfThiF",
+            "type": "shape",
+            "position": {
+              "x": -471.33333333333417,
+              "y": 622.6666666666665
+            },
+            "style": {
+              "width": 312.5,
+              "height": 90.00000000000011
+            },
+            "data": {
+              "shapeType": "rectangle",
+              "label": "Rechargeable Hand Warmers",
+              "backgroundColor": "#ffffff",
+              "strokeColor": "#1e1e1e",
+              "fontColor": "#1e1e1e",
+              "fontSize": "medium"
+            },
+            "measured": {
+              "width": 313,
+              "height": 90
+            }
+          },
+          {
+            "id": "sb54VXGN8kUY5paOEO15r",
+            "type": "shape",
+            "position": {
+              "x": -77.58333333333417,
+              "y": 80.16666666666652
+            },
+            "style": {
+              "width": 312.5,
+              "height": 90.00000000000011
+            },
+            "data": {
+              "shapeType": "rectangle",
+              "label": "\"313\" Area Code Sticker",
+              "backgroundColor": "#ffffff",
+              "strokeColor": "#1e1e1e",
+              "fontColor": "#1e1e1e",
+              "fontSize": "medium"
+            },
+            "measured": {
+              "width": 313,
+              "height": 90
+            }
+          },
+          {
+            "id": "417LdnGKD-YmsJ9pfguAw",
+            "type": "shape",
+            "position": {
+              "x": -77.58333333333417,
+              "y": 212.66666666666652
+            },
+            "style": {
+              "width": 312.5,
+              "height": 90.00000000000011
+            },
+            "data": {
+              "shapeType": "rectangle",
+              "label": "Motown Records 60th \nAnniversary Vinyl",
+              "backgroundColor": "#ffffff",
+              "strokeColor": "#1e1e1e",
+              "fontColor": "#1e1e1e",
+              "fontSize": "medium"
+            },
+            "measured": {
+              "width": 313,
+              "height": 90
+            }
+          },
+          {
+            "id": "Lz1C6uH7pAOMcah-ez13U",
+            "type": "shape",
+            "position": {
+              "x": -77.58333333333417,
+              "y": 347.6666666666665
+            },
+            "style": {
+              "width": 312.5,
+              "height": 90.00000000000011
+            },
+            "data": {
+              "shapeType": "rectangle",
+              "label": "Crossbody Bag",
+              "backgroundColor": "#ffffff",
+              "strokeColor": "#1e1e1e",
+              "fontColor": "#1e1e1e",
+              "fontSize": "medium"
+            },
+            "measured": {
+              "width": 313,
+              "height": 90
+            }
+          },
+          {
+            "id": "j3KgAURJo24kWmmVsTL2U",
+            "type": "shape",
+            "position": {
+              "x": -78.83333333333417,
+              "y": 483.9166666666665
+            },
+            "style": {
+              "width": 312.5,
+              "height": 90.00000000000011
+            },
+            "data": {
+              "shapeType": "rectangle",
+              "label": " \"Better Made\" Potato \nChips",
+              "backgroundColor": "#ffffff",
+              "strokeColor": "#1e1e1e",
+              "fontColor": "#1e1e1e",
+              "fontSize": "medium"
+            },
+            "measured": {
+              "width": 313,
+              "height": 90
+            }
+          },
+          {
+            "id": "BFHPVMjU7Zf5Vhag3w3IK",
+            "type": "shape",
+            "position": {
+              "x": -75.08333333333417,
+              "y": 620.1666666666665
+            },
+            "style": {
+              "width": 312.5,
+              "height": 90.00000000000011
+            },
+            "data": {
+              "shapeType": "rectangle",
+              "label": "Winter Emergency Kit",
+              "backgroundColor": "#ffffff",
+              "strokeColor": "#1e1e1e",
+              "fontColor": "#1e1e1e",
+              "fontSize": "medium"
+            },
+            "measured": {
+              "width": 313,
+              "height": 90
+            }
+          },
+          {
+            "id": "UduRjcHvQqvAYDXebZIx4",
+            "type": "shape",
+            "position": {
+              "x": 309.91666666666583,
+              "y": 77.66666666666652
+            },
+            "style": {
+              "width": 312.5,
+              "height": 90.00000000000011
+            },
+            "data": {
+              "shapeType": "rectangle",
+              "label": "\"Cass Tech\" Hydroflask",
+              "backgroundColor": "#ffffff",
+              "strokeColor": "#1e1e1e",
+              "fontColor": "#1e1e1e",
+              "fontSize": "medium"
+            },
+            "measured": {
+              "width": 313,
+              "height": 90
+            }
+          },
+          {
+            "id": "_ikWeH6f97OYrYPu3-05x",
+            "type": "shape",
+            "position": {
+              "x": 309.91666666666583,
+              "y": 210.16666666666652
+            },
+            "style": {
+              "width": 312.5,
+              "height": 90.00000000000011
+            },
+            "data": {
+              "shapeType": "rectangle",
+              "label": "Detroit City FC Scarf",
+              "backgroundColor": "#ffffff",
+              "strokeColor": "#1e1e1e",
+              "fontColor": "#1e1e1e",
+              "fontSize": "medium"
+            },
+            "measured": {
+              "width": 313,
+              "height": 90
+            }
+          },
+          {
+            "id": "4ucnhGj_cfF7gQqaHtBWz",
+            "type": "shape",
+            "position": {
+              "x": 309.91666666666583,
+              "y": 345.1666666666665
+            },
+            "style": {
+              "width": 312.5,
+              "height": 90.00000000000011
+            },
+            "data": {
+              "shapeType": "rectangle",
+              "label": "\"Coney Island\" Style \nChili Sauce",
+              "backgroundColor": "#ffffff",
+              "strokeColor": "#1e1e1e",
+              "fontColor": "#1e1e1e",
+              "fontSize": "medium"
+            },
+            "measured": {
+              "width": 313,
+              "height": 90
+            }
+          },
+          {
+            "id": "8nqGpK88O5_LrNC1kjOgQ",
+            "type": "shape",
+            "position": {
+              "x": 308.66666666666583,
+              "y": 481.4166666666665
+            },
+            "style": {
+              "width": 312.5,
+              "height": 90.00000000000011
+            },
+            "data": {
+              "shapeType": "rectangle",
+              "label": "LED Ring Light for \nGaming",
+              "backgroundColor": "#ffffff",
+              "strokeColor": "#1e1e1e",
+              "fontColor": "#1e1e1e",
+              "fontSize": "medium"
+            },
+            "measured": {
+              "width": 313,
+              "height": 90
+            }
+          },
+          {
+            "id": "y2sk2IZKDrE9Xwtkqpu4L",
+            "type": "shape",
+            "position": {
+              "x": 312.41666666666583,
+              "y": 616.4166666666665
+            },
+            "style": {
+              "width": 312.5,
+              "height": 90.00000000000011
+            },
+            "data": {
+              "shapeType": "rectangle",
+              "label": "Portable Power Bank",
+              "backgroundColor": "#ffffff",
+              "strokeColor": "#1e1e1e",
+              "fontColor": "#1e1e1e",
+              "fontSize": "medium"
+            },
+            "measured": {
+              "width": 313,
+              "height": 90
+            }
+          },
+          {
+            "id": "09a54227-dfe1-471b-9154-9c09e49d885c",
+            "type": "lineAnchor",
+            "position": {
+              "x": 99.25000000000023,
+              "y": 1965.630952380952
+            },
+            "style": {
+              "width": 10,
+              "height": 10
+            },
+            "data": {
+              "lineAnchorRole": "source"
+            },
+            "measured": {
+              "width": 10,
+              "height": 10
+            }
+          },
+          {
+            "id": "2b38f137-6177-496a-8235-8ce37cb18b17",
+            "type": "lineAnchor",
+            "position": {
+              "x": 109.25000000000023,
+              "y": 2638.9642857142853
+            },
+            "style": {
+              "width": 10,
+              "height": 10
+            },
+            "data": {
+              "lineAnchorRole": "target"
+            },
+            "measured": {
+              "width": 10,
+              "height": 10
+            }
+          }
+        ],
+        "edges": [
+          {
+            "id": "dfa23fbe-1939-494e-9507-3a1678a015eb",
+            "source": "09a54227-dfe1-471b-9154-9c09e49d885c",
+            "target": "2b38f137-6177-496a-8235-8ce37cb18b17",
+            "type": "straight"
+          }
+        ],
+        "viewport": {
+          "x": 607.9561826006877,
+          "y": 141.31971778380938,
+          "zoom": 0.6954409858550005
+        }
+      }
+    },
+    "display_name": "Smart Cart Data",
+    "bubble_choice_description": "How does an AI use pattern recognition based on public shopping data?",
+    "thumbnail_url": "https://images.code.org/06ce57f8d0a793af92a20490111b1477-1a.png",
+    "name_suffix": "_2026-pilot"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-03-10T16:32:32.463+00:00\",\"changed\":[\"cloned from \\\"aid-thinking-critically-lesson7-level1a_2026-test\\\"\"],\"cloned_from\":\"aid-thinking-critically-lesson7-level1a_2026-test\"},{\"changed_at\":\"2026-05-04 19:29:01 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":155,\"changed_by_email\":\"dani@code.org\"},{\"changed_at\":\"2026-05-04 19:29:58 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":155,\"changed_by_email\":\"dani@code.org\"}]"
+}]]></config>
+</Sketchlab>

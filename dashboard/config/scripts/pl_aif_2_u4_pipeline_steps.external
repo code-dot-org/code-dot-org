@@ -5,20 +5,20 @@ description 'description here'
 markdown <<MARKDOWN
 # Display Pipeline
 
-#### Before users ever see data on the screen, an app has to make a series of decisions about what data to use, how to process it, and how to display it.
+Before users ever see data on the screen, an app has to make a series of decisions about what data to use, how to process it, and how to display it.
 
 
  <div style="background-color: #B7E0E5; border-radius: 10px; padding: 15px; margin: 20px auto; max-width: 85%; box-sizing: border-box; word-wrap: break-word; overflow-wrap: break-word;"> <p style="font-size: 14pt; margin-top: 12px; line-height: 120%;">📖 A <strong>pipeline</strong> is a series of steps that you run in order, where the output from one step becomes the input to the next. </p> </div>
 
 
-#### A pipeline starts with raw data, reshapes it for a purpose, and then displays the result to the user.
+A pipeline starts with raw data, reshapes it for a purpose, and then displays the result to the user.
 
 ---
 
 ## How Loops Fit into the Display Pipeline
 
-#### A display pipeline describes how data moves from storage to the screen.
-#### Loops are what allow the program to process each piece of data systematically at every stage.
+A display pipeline describes how data moves from storage to the screen.
+Loops are what allow the program to process each piece of data systematically at every stage.
 
 
 ## Steps
@@ -90,8 +90,7 @@ Formatting and feedback (colors, messages, layout) happen here.
 
 
 
-## Next up
-#### Practice creating a pipeline for a web app. 
+
 
 
 MARKDOWN

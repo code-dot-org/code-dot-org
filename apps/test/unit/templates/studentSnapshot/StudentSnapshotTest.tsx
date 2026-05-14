@@ -21,9 +21,12 @@ jest.mock('@cdo/apps/util/HttpClient', () => ({
   },
 }));
 
-jest.mock('@cdo/apps/templates/sectionProgress/sectionProgressLoader', () => ({
-  loadUnitProgress: jest.fn(),
-}));
+jest.mock(
+  '@cdo/apps/templates/sectionProgressV2/sectionProgressLoader',
+  () => ({
+    loadUnitProgress: jest.fn(),
+  })
+);
 
 jest.mock('@cdo/apps/redux/unitSelectionRedux', () => ({
   ...jest.requireActual('@cdo/apps/redux/unitSelectionRedux'),

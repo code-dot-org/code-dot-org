@@ -1,9 +1,4 @@
-import {
-  BodyFourText,
-  Heading4,
-  Heading6,
-  StrongText,
-} from '@code-dot-org/component-library/typography';
+import {Typography} from '@mui/material';
 import classNames from 'classnames';
 import React from 'react';
 
@@ -33,16 +28,22 @@ const ValidationResults: React.FunctionComponent<ValidationResultsProps> = ({
 
   return (
     <div className={classNames(className, moduleStyles.validationResults)}>
-      <Heading4>{lab2I18n.validationResults()}</Heading4>
+      <Typography variant="h4" gutterBottom>
+        {lab2I18n.validationResults()}
+      </Typography>
       <div>
         <table className={moduleStyles.validationResultsTable}>
           <thead>
             <tr>
               <td>
-                <Heading6>{lab2I18n.testName()}</Heading6>
+                <Typography variant="h6" gutterBottom>
+                  {lab2I18n.testName()}
+                </Typography>
               </td>
               <td>
-                <Heading6>{lab2I18n.result()}</Heading6>
+                <Typography variant="h6" gutterBottom>
+                  {lab2I18n.result()}
+                </Typography>
               </td>
             </tr>
           </thead>
@@ -50,7 +51,9 @@ const ValidationResults: React.FunctionComponent<ValidationResultsProps> = ({
             {validationResults.map((result, index) => (
               <tr key={index}>
                 <td>
-                  <BodyFourText>{result.message}</BodyFourText>
+                  <Typography variant="body4" gutterBottom>
+                    {result.message}
+                  </Typography>
                 </td>
                 <td>
                   <div className={moduleStyles.results}>
@@ -58,9 +61,11 @@ const ValidationResults: React.FunctionComponent<ValidationResultsProps> = ({
                       status={getStatusForResult(result)}
                       className={moduleStyles.icon}
                     />
-                    <BodyFourText>
-                      <StrongText>{getTranslatedResult(result)}</StrongText>
-                    </BodyFourText>
+                    <Typography variant="body4" gutterBottom>
+                      <Typography variant="strong">
+                        {getTranslatedResult(result)}
+                      </Typography>
+                    </Typography>
                   </div>
                 </td>
               </tr>

@@ -3,7 +3,7 @@ title 'title'
 description 'description here'
 
 markdown <<MARKDOWN
-#### Let’s hear what Sal and Hadi have to say about how AI is going to impact all of us.
+Let’s hear what Sal and Hadi have to say about how AI is going to impact all of us.
 
 <br>
 
@@ -12,10 +12,10 @@ markdown <<MARKDOWN
 <div style="margin-top: 20px; margin-left: 20px; margin-right: 20px; padding-bottom:20px;">
     <p>
 
-* #### AI will significantly impact all industries by increasing productivity, especially in tasks involving writing or any computer-based work.
-* #### AI will not replace jobs entirely but will automate repetitive tasks and assist with initial drafts and corrections, making jobs easier and reducing the time needed to complete tasks.
-* #### It's crucial for the education system to teach students not only how to use AI but also how it works, its risks, and its strengths and weaknesses, to prepare them for a future workforce that heavily incorporates AI.
-* #### Understanding the nature of how AI works and its potential for biases and errors is important for users to recognize its limitations and effectively utilize its capabilities.
+* AI will significantly impact all industries by increasing productivity, especially in tasks involving writing or any computer-based work.
+* AI will not replace jobs entirely but will automate repetitive tasks and assist with initial drafts and corrections, making jobs easier and reducing the time needed to complete tasks.
+* It's crucial for the education system to teach students not only how to use AI but also how it works, its risks, and its strengths and weaknesses, to prepare them for a future workforce that heavily incorporates AI.
+* Understanding the nature of how AI works and its potential for biases and errors is important for users to recognize its limitations and effectively utilize its capabilities.
 
 </p></div>
 </details>

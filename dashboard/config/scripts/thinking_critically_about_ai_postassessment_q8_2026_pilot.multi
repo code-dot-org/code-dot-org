@@ -1,0 +1,14 @@
+name 'thinking-critically-about-ai-postassessment-q8_2026-pilot'
+
+question 'Which of the following recommendations for sharing information with AI tools reflects the BEST understanding of data privacy?'
+
+right 'Before sharing any information with an AI tool, ask yourself whether you would be comfortable if that information were made public or used in ways you didn\'t intend.'
+wrong 'Only share information you wouldn\'t mind your parents seeing, since they have access to all your accounts.'
+wrong 'It is always safe to share information with AI tools owned by large, reputable companies.'
+wrong 'The safest approach is to never use any AI tool that requires you to type anything.'
+
+allow_multiple_attempts true
+
+teacher_markdown <<MARKDOWN
+Lesson 8
+MARKDOWN

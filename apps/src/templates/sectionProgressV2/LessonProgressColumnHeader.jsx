@@ -1,3 +1,4 @@
+import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import classNames from 'classnames';
 import PropTypes from 'prop-types';
 import React from 'react';
@@ -5,11 +6,10 @@ import {connect} from 'react-redux';
 
 import i18n from '@cdo/locale';
 
-import FontAwesome from '../../legacySharedComponents/FontAwesome';
 import {lessonHasLevels} from '../progress/progressHelpers';
-import {addExpandedLesson} from '../sectionProgress/sectionProgressRedux';
 
 import LessonTitleTooltip, {getTooltipId} from './LessonTitleTooltip';
+import {addExpandedLesson} from './sectionProgressRedux';
 
 import styles from './progress-table-v2.module.scss';
 import skeletonizeContent from '@cdo/apps/sharedComponents/skeletonize-content.module.scss';
@@ -25,8 +25,9 @@ const getUninteractiveLessonColumnHeader = (lesson, allLocked) => {
       <LessonTitleTooltip lesson={lesson} />
       {!lesson.lockable && lesson.relative_position}
       {lesson.lockable && (
-        <FontAwesome
-          icon={allLocked ? 'lock' : 'lock-open'}
+        <FontAwesomeV6Icon
+          iconName={allLocked ? 'lock' : 'lock-open'}
+          iconStyle="solid"
           title={i18n.locked()}
         />
       )}
@@ -80,8 +81,9 @@ function LessonProgressColumnHeader({
       tabIndex={0}
     >
       <LessonTitleTooltip lesson={lesson} />
-      <FontAwesome
-        icon="caret-right"
+      <FontAwesomeV6Icon
+        iconName="caret-right"
+        iconStyle="solid"
         className={styles.lessonHeaderCaret}
         title={i18n.expand()}
       />

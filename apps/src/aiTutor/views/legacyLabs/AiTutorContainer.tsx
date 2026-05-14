@@ -1,12 +1,16 @@
-import Button from '@code-dot-org/component-library/button';
-import {Typography} from '@mui/material';
+import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
+import {Typography, IconButton as MuiIconButton} from '@mui/material';
 import classNames from 'classnames';
-import React, {FC} from 'react';
+import React, {FC, useEffect, useRef, useState} from 'react';
 
+import {shouldShowAiTutor} from '@cdo/apps/aichat/helpers/aiChatAccess';
+import {useAiChatDisabledState} from '@cdo/apps/aichat/hooks/useAiChatDisabledState';
+import {fetchUserChatHistory} from '@cdo/apps/aichat/redux';
 import AiTutorChat from '@cdo/apps/lab2/views/components/AiTutorChat';
 import {LegacyLabsState} from '@cdo/apps/redux/legacyLabs';
 import {singleton as studioApp} from '@cdo/apps/StudioApp';
-import {useAppSelector} from '@cdo/apps/util/reduxHooks';
+import {selectedSectionSelector} from '@cdo/apps/templates/teacherDashboard/teacherSectionsReduxSelectors';
+import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 import aiBotOutlineIcon from '@cdo/static/ai-bot-outline.png';
 
 import {
@@ -38,20 +42,85 @@ interface CommonLab {
 }
 
 export const AiTutorContainer: FC<{
-  toggleAiChat: () => void;
-  aiChatOpen: boolean;
-}> = ({toggleAiChat, aiChatOpen}) => {
+  onLayoutChange: (state: {isVisible: boolean; isOpen: boolean}) => void;
+}> = ({onLayoutChange}) => {
+  const [aiChatOpen, setAiChatOpen] = useState(false);
+  const dispatch = useAppDispatch();
+
   const labState = useAppSelector(
     (state: {pageConstants: LegacyLabsState}) => state.pageConstants
   );
+
+  // When a teacher is viewing a student, viewAsUserId is set.
+  const viewAsUserId = useAppSelector(state => state.progress.viewAsUserId);
+
+  const sectionAiChatAccessLevel = useAppSelector(
+    state => selectedSectionSelector(state)?.aiChatAccessLevel
+  );
+
+  const aiTutorAvailableForLevel =
+    window?.appOptions?.level?.aiTutorAvailable ?? false;
+
+  const tutorDisabledForSelectedSection =
+    !!sectionAiChatAccessLevel &&
+    !!labState.appType &&
+    !shouldShowAiTutor({
+      appName: labState.appType,
+      tutorLevel: aiTutorAvailableForLevel,
+      aiChatAccessLevel: sectionAiChatAccessLevel,
+    });
+
+  const disabledState = useAiChatDisabledState({
+    appName: labState.appType,
+  });
+
+  const lab: CommonLab | undefined =
+    labState.appType === 'weblab' ? window.getWebLab?.() : studioApp()?.config;
+
+  // When chat is disabled but a teacher is viewing a student, eagerly fetch the
+  // student's history so we can decide whether to show the component before
+  // ChatWorkspace mounts.
+  useEffect(() => {
+    if (tutorDisabledForSelectedSection && viewAsUserId) {
+      dispatch(
+        fetchUserChatHistory({
+          userId: viewAsUserId,
+          isOwnHistory: false,
+          channelId: lab?.channel,
+        })
+      );
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
+  const hasChatHistory = useAppSelector(
+    state => state.aichat.studentChatHistory.length > 0
+  );
+
+  // Use a ref so visibility doesn't flip back to false when ChatWorkspace
+  // calls clearChatMessages on its own mount (before its re-fetch completes).
+  const hasEverHadHistory = useRef(false);
+  if (hasChatHistory) {
+    hasEverHadHistory.current = true;
+  }
+
+  const isVisible =
+    !tutorDisabledForSelectedSection || hasEverHadHistory.current;
+
+  useEffect(() => {
+    onLayoutChange({isVisible, isOpen: aiChatOpen});
+  }, [isVisible, aiChatOpen, onLayoutChange]);
+
+  if (!isVisible) {
+    return null;
+  }
+
+  const toggleAiChat = () => setAiChatOpen(open => !open);
 
   const inLevel = !!labState.serverScriptId;
   const allPrompts = inLevel
     ? [...levelPrompts, ...defaultPrompts]
     : [...standaloneProjectPrompts, ...defaultPrompts];
-
-  const lab: CommonLab | undefined =
-    labState.appType === 'weblab' ? window.getWebLab?.() : studioApp()?.config;
 
   const getHiddenContext = async () => {
     const params: AiTutorLegacyLabParams = {
@@ -99,20 +168,22 @@ export const AiTutorContainer: FC<{
           <Typography className={styles['header-text']} variant="body3">
             AI Tutor
           </Typography>
-          <Button
-            aria-label="Close AI tutor"
-            isIconOnly
-            icon={{iconName: 'dash'}}
+          <MuiIconButton
+            variant="text"
+            color="secondary"
+            size="extraSmall"
             onClick={toggleAiChat}
-            size="xs"
-            type="tertiary"
-            color="black"
-          />
+            aria-label="Close AI tutor"
+            type="button"
+          >
+            <FontAwesomeV6Icon iconName="dash" />
+          </MuiIconButton>
         </div>
         <AiTutorChat
           hiddenContextCallback={getHiddenContext}
           aiTutorChatButtonData={allPrompts}
           channelId={lab?.channel}
+          disabledState={disabledState}
         />
       </div>
       <div
@@ -125,6 +196,7 @@ export const AiTutorContainer: FC<{
           suggestedPrompts={allPrompts}
           hiddenContextCallback={getHiddenContext}
           analyticsData={analyticsData}
+          disabled={disabledState.disabled}
         />
       </div>
     </>

@@ -5,7 +5,7 @@ class Clients::CleverRest
 
   attr_reader :oauth_token, :api_version
 
-  def initialize(oauth_token:, api_version: AuthenticationOption::Clever::VERSION[:v2])
+  def initialize(oauth_token:, api_version: AuthenticationOption::Clever::VERSION[:v3])
     @oauth_token = oauth_token
     @api_version = api_version
   end
@@ -26,8 +26,6 @@ class Clients::CleverRest
 
   private def version_path
     case api_version
-    when AuthenticationOption::Clever::VERSION[:v2]
-      'v2.1'
     when AuthenticationOption::Clever::VERSION[:v3]
       'v3.0'
     else

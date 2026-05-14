@@ -58,14 +58,13 @@ describe('TextResponses', () => {
           <TextResponses
             sectionId={2}
             scriptId={1}
-            setUnit={() => {}}
             courseVersionName="csd-2024"
             unitPosition={1}
           />
         );
       });
 
-      expect(wrapper.exists('Connect(UnitSelector)')).toBe(true);
+      expect(wrapper.exists('Connect(UnitSelectorV2)')).toBe(true);
     });
 
     it('renders the TextResponsesTable', async () => {
@@ -76,7 +75,6 @@ describe('TextResponses', () => {
           <TextResponses
             sectionId={2}
             scriptId={1}
-            setUnit={() => {}}
             courseVersionName="csd-2024"
             unitPosition={1}
           />
@@ -99,7 +97,6 @@ describe('TextResponses', () => {
           <TextResponses
             sectionId={2}
             scriptId={1}
-            setUnit={() => {}}
             courseVersionName="csd-2024"
             unitPosition={1}
           />
@@ -118,7 +115,6 @@ describe('TextResponses', () => {
           <TextResponses
             sectionId={2}
             scriptId={1}
-            setUnit={() => {}}
             courseVersionName="csd-2024"
             unitPosition={1}
           />
@@ -152,7 +148,6 @@ describe('TextResponses', () => {
           <TextResponses
             sectionId={2}
             scriptId={1}
-            setUnit={() => {}}
             courseVersionName="csd-2024"
             unitPosition={1}
           />

@@ -1,4 +1,4 @@
-import {getFileNameWithNumberSuffix} from '@codebridge/utils';
+import {uniqueFileName} from '@codebridge/utils';
 import React from 'react';
 
 import BackpackErrorAlertBody from '@cdo/apps/codebridge/FileBrowser/BackpackErrorAlertBody';
@@ -52,10 +52,7 @@ export const openSaveToBackpackPrompt = async ({
       // Check if filename is a duplicate of a saved file in backpack.
       const isDuplicateFileName = filenames.includes(file.name);
 
-      let fileNameCopy = file.name;
-      while (filenames.includes(fileNameCopy)) {
-        fileNameCopy = getFileNameWithNumberSuffix(fileNameCopy);
-      }
+      const fileNameCopy = uniqueFileName(file.name, filenames);
 
       const dialog = isDuplicateFileName
         ? {

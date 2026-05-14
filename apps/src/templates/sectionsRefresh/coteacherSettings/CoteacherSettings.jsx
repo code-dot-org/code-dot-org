@@ -1,4 +1,4 @@
-import {StrongText} from '@code-dot-org/component-library/typography';
+import {Typography} from '@mui/material';
 import PropTypes from 'prop-types';
 import React, {useCallback, useMemo, useState} from 'react';
 
@@ -78,13 +78,15 @@ export default function CoteacherSettings({
 
   return (
     <div className={styles.expandedSection}>
-      {disabled ? i18n.coteacherLtiAddInfo() : i18n.coteacherAddInfo()}
+      <Typography variant="body2">
+        {disabled ? i18n.coteacherLtiAddInfo() : i18n.coteacherAddInfo()}
+      </Typography>
       <PrimaryTeacher
         primaryTeacher={primaryTeacher}
         numCoteachers={coteachers.length}
       />
       <label className={styles.label}>
-        <StrongText>{i18n.coteacherLabel()}</StrongText>
+        <Typography variant="strong">{i18n.coteacherLabel()}</Typography>
       </label>
       <div className={styles.settings}>
         <AddCoteacher

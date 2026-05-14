@@ -3,7 +3,7 @@
 #
 class LibraryBucket < BucketHelper
   def initialize
-    super CDO.libraries_s3_bucket, CDO.libraries_s3_directory
+    super(CDO.libraries_s3_bucket, CDO.libraries_s3_directory)
   end
 
   def allowed_file_types

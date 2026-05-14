@@ -21,6 +21,7 @@ class ActivitiesEditor extends Component {
   static propTypes = {
     hasLessonPlan: PropTypes.bool.isRequired,
     allowMajorCurriculumChanges: PropTypes.bool.isRequired,
+    rubricLevelId: PropTypes.number,
 
     //redux
     activities: PropTypes.arrayOf(activityShape).isRequired,
@@ -125,7 +126,7 @@ class ActivitiesEditor extends Component {
   };
 
   render() {
-    const {activities, allowMajorCurriculumChanges} = this.props;
+    const {activities, allowMajorCurriculumChanges, rubricLevelId} = this.props;
 
     return (
       <div style={styles.activityEditAndPreview}>
@@ -144,6 +145,7 @@ class ActivitiesEditor extends Component {
             updateActivitySectionMetrics={this.updateActivitySectionMetrics}
             hasLessonPlan={this.props.hasLessonPlan}
             allowMajorCurriculumChanges={allowMajorCurriculumChanges}
+            rubricLevelId={rubricLevelId}
           />
         ))}
         <div>
@@ -154,7 +156,7 @@ class ActivitiesEditor extends Component {
               style={styles.addActivity}
               type="button"
             >
-              <i style={{marginRight: 7}} className="fa fa-plus-circle" />
+              <i style={{marginRight: 7}} className="fa-solid fa-circle-plus" />
               Activity
             </button>
           )}

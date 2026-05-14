@@ -1,0 +1,29 @@
+.container {
+  margin: 64px 0;
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  border: 1px solid var(--borders-neutral-primary);
+  border-radius: 4px;
+  background: var(--background-neutral-primary);
+  padding: 0 16px 0 0;
+  overflow: hidden;
+}
+
+.image {
+  width: 160px;
+  height: 112px;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.text {
+  flex: 1;
+
+  :first-child {
+    margin-bottom: 4px;
+  }
+}

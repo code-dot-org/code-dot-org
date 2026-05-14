@@ -1,9 +1,8 @@
 import * as BlocklyCore from 'blockly/core';
 import _ from 'lodash';
 
-import {appendNewFunctions} from '@cdo/apps/block_utils';
-import {BLOCK_TYPES, stringIsXml} from '@cdo/apps/blockly/constants';
-import {WorkspaceSerialization, JsonBlockConfig} from '@cdo/apps/blockly/types';
+import {BLOCK_TYPES} from '@cdo/apps/blockly/constants';
+import {JsonBlockConfig, WorkspaceSerialization} from '@cdo/apps/blockly/types';
 
 import {getDefaultLocation} from '../workspace/layout';
 import {shouldSkipHiddenWorkspace} from '../workspace/serialization';
@@ -150,27 +149,21 @@ function blockExists(behaviorId: string, projectBlocks: JsonBlockConfig[]) {
 }
 
 /**
- * Combines shared functions (XML) with a starting block source (XML or JSON).
+ * Combines shared functions (XML) with a starting block source (JSON).
  * Used in levels where shared functions and behaviors are enabled.
  *
- * @param {string} startBlocksSource - The source of starting blocks (XML or JSON).
+ * @param {string} startBlocksSource - The source of starting blocks (JSON).
  * @param {string} functionsXml - The XML representation of functions to append.
  * @returns {string} - Updated starting blocks in JSON format.
  */
-export function appendSharedFunctions(
+export function appendSharedFunctionsToState(
   startBlocksSource: string,
   functionsXml: string
 ) {
-  let startBlocks;
-  if (stringIsXml(startBlocksSource)) {
-    startBlocks = appendNewFunctions(startBlocksSource, functionsXml);
-  } else {
-    const proceduresState = convertFunctionsXmlToJson(functionsXml);
-    const stateToLoad = appendProceduresToState(
-      JSON.parse(startBlocksSource),
-      proceduresState
-    );
-    startBlocks = JSON.stringify(stateToLoad);
-  }
-  return startBlocks;
+  const proceduresState = convertFunctionsXmlToJson(functionsXml);
+  const stateToLoad = appendProceduresToState(
+    JSON.parse(startBlocksSource),
+    proceduresState
+  );
+  return JSON.stringify(stateToLoad);
 }

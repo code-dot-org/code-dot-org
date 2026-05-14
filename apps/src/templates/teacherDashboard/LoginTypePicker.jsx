@@ -1,10 +1,7 @@
-/**
- * View shown to a teacher when beginning to add students to an empty section.
- * Lets the teacher decide whether to use word/picture logins, have students
- * manage their own accounts via email/oauth, or to sync students with an
- * external service like Microsoft Classroom or Clever.
- */
-import Typography from '@code-dot-org/component-library/typography';
+import Alert from '@code-dot-org/component-library/alert';
+import Dialog from '@code-dot-org/component-library/dialog';
+import Link from '@code-dot-org/component-library/link';
+import {Button as MuiButton, Typography} from '@mui/material';
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
@@ -14,18 +11,10 @@ import {
   LmsLoginTypeNames,
   LmsLoginInstructionUrls,
 } from '@cdo/apps/accounts/constants';
-import fontConstants from '@cdo/apps/fontConstants';
-import Button from '@cdo/apps/legacySharedComponents/Button';
-import {Heading3} from '@cdo/apps/legacySharedComponents/Headings';
-import {PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants.js';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import {getStore} from '@cdo/apps/redux';
-import StylizedBaseDialog from '@cdo/apps/sharedComponents/StylizedBaseDialog';
-import color from '@cdo/apps/util/color';
 import {SectionLoginType} from '@cdo/generated-scripts/sharedConstants';
 import i18n from '@cdo/locale';
-
-import styleConstants from '../../styleConstants';
 
 import CardContainer from './CardContainer';
 import LmsInformationalCard from './LmsInformationalCard';
@@ -37,9 +26,16 @@ import {
 } from './LmsInformationalCard/assets';
 import LoginTypeCard from './LoginTypeCard';
 
+import styles from './sectionSetup.module.scss';
 const LOGIN_TYPE_SELECTED_EVENT = 'Login Type Selected';
 const CANCELLED_EVENT = 'Section Setup Cancelled';
 const SELECT_LOGIN_TYPE = 'Login Type Selection';
+
+export const recordLoginTypePickerCancelled = () => {
+  analyticsReporter.sendEvent(CANCELLED_EVENT, {
+    source: SELECT_LOGIN_TYPE,
+  });
+};
 
 /**
  * UI for selecting the login type of a class section:
@@ -47,12 +43,10 @@ const SELECT_LOGIN_TYPE = 'Login Type Selection';
  */
 class LoginTypePicker extends Component {
   static propTypes = {
-    title: PropTypes.string.isRequired,
     handleImportOpen: PropTypes.func,
+    handleCancel: PropTypes.func.isRequired,
     setRosterProvider: PropTypes.func,
     setLoginType: PropTypes.func.isRequired,
-    handleCancel: PropTypes.func.isRequired,
-    disabled: PropTypes.bool,
     // Provided by Redux
     providers: PropTypes.arrayOf(PropTypes.string),
   };
@@ -70,16 +64,6 @@ class LoginTypePicker extends Component {
     });
   };
 
-  recordSectionSetupExitEvent = eventName => {
-    analyticsReporter.sendEvent(
-      eventName,
-      {
-        source: SELECT_LOGIN_TYPE,
-      },
-      PLATFORMS.STATSIG
-    );
-  };
-
   openImportDialog = provider => {
     this.reportLoginTypeSelection(provider);
     this.props.setRosterProvider(provider);
@@ -92,13 +76,8 @@ class LoginTypePicker extends Component {
     this.props.setLoginType(provider);
   };
 
-  cancel = () => {
-    this.recordSectionSetupExitEvent(CANCELLED_EVENT);
-    this.props.handleCancel();
-  };
-
   render() {
-    const {title, providers, disabled} = this.props;
+    const {providers} = this.props;
     const withGoogle =
       providers && providers.includes(OAuthSectionTypes.google_classroom);
     const withMicrosoft =
@@ -119,127 +98,72 @@ class LoginTypePicker extends Component {
     const showStudentsToSectionPermissionWarning =
       inUSA && currentUser.isTeacher;
 
-    const style = {
-      container: {
-        width: styleConstants['content-width'],
-        left: '20px',
-        right: '20px',
-      },
-      scroll: {
-        overflowX: 'hidden',
-        overflowY: 'auto',
-        marginBottom: '16px',
-      },
-      thirdPartyProviderUpsell: {
-        marginBottom: '10px',
-      },
-      warningIcon: {
-        color: 'red',
-        marginLeft: '5px',
-        marginRight: '5px',
-      },
-      warningHeader: {
-        color: 'red',
-      },
-      footer: {
-        width: styleConstants['content-width'],
-        height: '100px',
-        left: 0,
-        bottom: '-51px',
-        backgroundColor: '#fff',
-        borderRadius: '5px',
-      },
-      mediumText: {
-        fontSize: '.75em',
-        color: color.neutral_dark,
-        ...fontConstants['main-font-semi-bold'],
-      },
-      emailPolicyNote: {
-        marginBottom: '31px',
-        paddingTop: '8px',
-        borderTop: `1px solid ${color.neutral_dark}`,
-      },
-      subheader: {
-        color: color.charcoal,
-      },
-      lmsInfoCardsContainer: {
-        display: 'flex',
-        flexWrap: 'wrap',
-        justifyContent: 'flex-start',
-        rowGap: '16px',
-        columnGap: '16px',
-        paddingBottom: '16px',
-      },
-    };
-
     return (
-      <div style={style.container}>
-        <Heading3 isRebranded>{title}</Heading3>
-        <p>{i18n.addStudentsToSectionInstructionsUpdated()}</p>
+      <div className={styles.screen}>
+        <Typography
+          id="dsco-dialog-description"
+          className={styles.bodyText}
+          variant="body2"
+        >
+          {i18n.addStudentsToSectionInstructionsUpdated()}
+        </Typography>
         {showStudentsToSectionPermissionWarning && (
-          <p>
-            <span
-              className="fa fa-exclamation-triangle"
-              aria-hidden="true"
-              style={style.warningIcon}
-            />
-            <span style={style.warningHeader}>
-              <strong>
-                {i18n.addStudentsToSectionPermissionHeader() + ' '}
-              </strong>
-            </span>
-            {i18n.addStudentsToSectionPermissionWarning() + ' '}
-            <Button
-              styleAsText={true}
-              onClick={() => this.setState({isLearnMoreOpen: true})}
-            >
-              {i18n.learnMore()}
-            </Button>
-          </p>
-        )}
-        {this.state.isLearnMoreOpen && (
-          <StylizedBaseDialog
-            isOpen={true}
-            hideFooter={true}
-            renderFooter={() => {}}
-            confirmationButtonText="OK"
-            cancellationButtonText="Cancel"
-            body={<p>{i18n.addStudentsToSectionPermissionExplanation()}</p>}
-            handleClose={() => this.setState({isLearnMoreOpen: false})}
+          <Alert
+            className={styles.warningAlert}
+            type="warning"
+            size="s"
+            isImmediateImportance={false}
+            text={
+              <>
+                <strong>{i18n.addStudentsToSectionPermissionHeader()}</strong>{' '}
+                {i18n.addStudentsToSectionPermissionWarning()}{' '}
+                <MuiButton
+                  className={styles.learnMoreButton}
+                  variant="text"
+                  color="primary"
+                  size="small"
+                  type="button"
+                  onClick={() => this.setState({isLearnMoreOpen: true})}
+                >
+                  {i18n.learnMore()}
+                </MuiButton>
+              </>
+            }
           />
         )}
-        <Typography
-          style={style.subheader}
-          semanticTag={'h6'}
-          visualAppearance={'heading-xs'}
-        >
+        {this.state.isLearnMoreOpen && (
+          <Dialog
+            title={i18n.addStudentsToSectionPermissionHeader()}
+            description={i18n.addStudentsToSectionPermissionExplanation()}
+            primaryButtonProps={{
+              text: i18n.ok(),
+              onClick: () => this.setState({isLearnMoreOpen: false}),
+            }}
+            onClose={() => this.setState({isLearnMoreOpen: false})}
+          />
+        )}
+        <Typography className={styles.sectionTitle} variant="h6">
           {i18n.loginTypes()}
         </Typography>
-        <div style={style.scroll}>
-          <CardContainer>
-            {withGoogle && (
-              <GoogleClassroomCard onClick={this.openImportDialog} />
-            )}
-            {withMicrosoft && (
-              <MicrosoftClassroomCard onClick={this.openImportDialog} />
-            )}
-            {withClever && <CleverCard onClick={this.openImportDialog} />}
-            <PictureLoginCard onClick={this.onLoginTypeSelect} />
-            <WordLoginCard onClick={this.onLoginTypeSelect} />
-            <EmailLoginCard onClick={this.onLoginTypeSelect} />
-          </CardContainer>
-        </div>
+        <CardContainer>
+          {withGoogle && (
+            <GoogleClassroomCard onClick={this.openImportDialog} />
+          )}
+          {withMicrosoft && (
+            <MicrosoftClassroomCard onClick={this.openImportDialog} />
+          )}
+          {withClever && <CleverCard onClick={this.openImportDialog} />}
+          <PictureLoginCard onClick={this.onLoginTypeSelect} />
+          <WordLoginCard onClick={this.onLoginTypeSelect} />
+          <EmailLoginCard onClick={this.onLoginTypeSelect} />
+        </CardContainer>
         {!withAllLmsProviders && (
           <>
-            <Typography
-              style={style.subheader}
-              semanticTag={'h6'}
-              visualAppearance={'heading-xs'}
-            >
+            <Typography className={styles.sectionTitle} variant="h6">
               {i18n.lmsIntegrations()}
             </Typography>
             <div
-              style={style.lmsInfoCardsContainer}
+              className={styles.lmsCards}
               // eslint-disable-next-line react/forbid-dom-props
               data-testid={'lms-info-cards-container'}
             >
@@ -270,18 +194,12 @@ class LoginTypePicker extends Component {
             </div>
           </>
         )}
-        <div style={style.footer}>
-          <p style={{...style.mediumText, ...style.emailPolicyNote}}>
+        <div className={styles.footer}>
+          <Typography className={styles.note} variant="body2">
             {i18n.note()}
             {' ' + i18n.emailAddressPolicy() + ' '}
-            <a href="https://code.org/privacy">{i18n.moreInfo()}</a>
-          </p>
-          <Button
-            onClick={this.cancel}
-            text={i18n.dialogCancel()}
-            color={Button.ButtonColor.neutralDark}
-            disabled={disabled}
-          />
+            <Link href="https://code.org/privacy">{i18n.moreInfo()}</Link>
+          </Typography>
         </div>
       </div>
     );
@@ -289,6 +207,7 @@ class LoginTypePicker extends Component {
 }
 
 export const UnconnectedLoginTypePicker = LoginTypePicker;
+
 export default connect(state => ({
   providers: state.teacherSections.providers,
 }))(LoginTypePicker);
@@ -302,6 +221,7 @@ const PictureLoginCard = props => (
     onClick={() => props.onClick('picture')}
   />
 );
+
 PictureLoginCard.propTypes = {
   onClick: PropTypes.func.isRequired,
   disabled: PropTypes.bool,
@@ -316,6 +236,7 @@ const WordLoginCard = props => (
     onClick={() => props.onClick('word')}
   />
 );
+
 WordLoginCard.propTypes = PictureLoginCard.propTypes;
 
 const EmailLoginCard = props => (
@@ -327,6 +248,7 @@ const EmailLoginCard = props => (
     onClick={() => props.onClick('email')}
   />
 );
+
 EmailLoginCard.propTypes = PictureLoginCard.propTypes;
 
 const GoogleClassroomCard = props => (
@@ -336,6 +258,7 @@ const GoogleClassroomCard = props => (
     onClick={() => props.onClick(OAuthSectionTypes.google_classroom)}
   />
 );
+
 GoogleClassroomCard.propTypes = PictureLoginCard.propTypes;
 
 const MicrosoftClassroomCard = props => (
@@ -345,6 +268,7 @@ const MicrosoftClassroomCard = props => (
     onClick={() => props.onClick(OAuthSectionTypes.microsoft_classroom)}
   />
 );
+
 MicrosoftClassroomCard.propTypes = PictureLoginCard.propTypes;
 
 const CleverCard = props => (
@@ -354,4 +278,5 @@ const CleverCard = props => (
     onClick={() => props.onClick(OAuthSectionTypes.clever)}
   />
 );
+
 CleverCard.propTypes = PictureLoginCard.propTypes;

@@ -13,9 +13,9 @@
           "id": "0",
           "name": "main.py",
           "language": "py",
-          "contents": "print('Hello from the start!')",
+          "contents": "print(\"Example starting code.\")",
           "folderId": "0",
-          "active": false,
+          "active": true,
           "open": true,
           "type": "locked_starter"
         },
@@ -37,7 +37,7 @@
         "2"
       ]
     },
-    "long_instructions": "## Welcome to Python Lab\r\n\r\nPress the Run button and see what happens.",
+    "long_instructions": "## Example Instructions Title\r\n\r\nThis is an example description.",
     "hide_share_and_remix": "true",
     "teacher_markdown": "Teachers should see this extra info.",
     "ai_tutor_available": "true",
@@ -45,9 +45,14 @@
     "predict_settings": {
       "isPredictLevel": false
     },
-    "name_suffix": "_cs50"
+    "name_suffix": "_cs50",
+    "offer_browser_tts": "false",
+    "disable_edit_run_for_submission": "false",
+    "enable_micro_bit": "false",
+    "widget_view": "false",
+    "widget_view_allow_show_code": "false"
   },
   "published": true,
-  "audit_log": "[{\"changed_at\":\"2025-12-19T16:13:52.465+00:00\",\"changed\":[\"cloned from \\\"Allthethings Python Lab 1\\\"\"],\"cloned_from\":\"Allthethings Python Lab 1\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-12-19T16:13:52.465+00:00\",\"changed\":[\"cloned from \\\"Allthethings Python Lab 1\\\"\"],\"cloned_from\":\"Allthethings Python Lab 1\"},{\"changed_at\":\"2026-03-06 20:23:44 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":23838,\"changed_by_email\":\"brian@fifty.foundation\"},{\"changed_at\":\"2026-03-06 21:47:38 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":23838,\"changed_by_email\":\"brian@fifty.foundation\"},{\"changed_at\":\"2026-03-06 21:48:02 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":23838,\"changed_by_email\":\"brian@fifty.foundation\"}]"
 }]]></config>
 </Pythonlab>

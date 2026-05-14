@@ -1,4 +1,4 @@
-import {BodyThreeText} from '@code-dot-org/component-library/typography';
+import {Typography} from '@mui/material';
 import type {InferProps} from 'prop-types';
 import React, {useEffect, useState} from 'react';
 
@@ -119,16 +119,26 @@ const StudentRubricWidget: React.FC<StudentRubricWidgetProps> = ({
   let scrollable = false;
 
   if (isLoading) {
-    widgetContent = <BodyThreeText>Loading rubric...</BodyThreeText>;
+    widgetContent = (
+      <Typography variant="body3" gutterBottom>
+        Loading rubric...
+      </Typography>
+    );
   } else if (error) {
-    widgetContent = <BodyThreeText>{error}</BodyThreeText>;
+    widgetContent = (
+      <Typography variant="body3" gutterBottom>
+        {error}
+      </Typography>
+    );
   } else if (
     !rubric ||
     !rubric.learningGoals ||
     rubric.learningGoals.length === 0
   ) {
     widgetContent = (
-      <BodyThreeText>This lesson doesn't have a rubric.</BodyThreeText>
+      <Typography variant="body3" gutterBottom>
+        This lesson doesn't have a rubric.
+      </Typography>
     );
   } else {
     scrollable = true;

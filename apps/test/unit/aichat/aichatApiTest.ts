@@ -54,7 +54,7 @@ describe('aichatApi', () => {
     ];
 
     modelParameters = {
-      selectedModelId: AiChatModelIds.ARITHMO,
+      selectedModelId: AiChatModelIds.MISTRAL,
       temperature: 0.5,
       retrievalContexts: ['123'],
       systemPrompt: 'hello',
@@ -236,6 +236,16 @@ describe('aichatApi', () => {
       expect(messages[0].status).toBe(AiInteractionStatus.ERROR);
       expect(messages[1].status).toBe(AiInteractionStatus.PROFANITY_VIOLATION);
       expect(messages[1].chatMessageText).toBe(modelResponse);
+    });
+
+    it('returns user and bot message with MODEL_RATE_LIMITED if status is MODEL_RATE_LIMITED', async () => {
+      fetchJson.mockResolvedValue(
+        createResponse(AiRequestExecutionStatus.MODEL_RATE_LIMITED, '')
+      );
+      const messages = await callApiGetMessages();
+      expect(messages.length).toBe(2);
+      expect(messages[0].status).toBe(AiInteractionStatus.MODEL_RATE_LIMITED);
+      expect(messages[1].status).toBe(AiInteractionStatus.MODEL_RATE_LIMITED);
     });
 
     it('throws an error if an unknown status is returned', async () => {

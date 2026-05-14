@@ -1,0 +1,34 @@
+@import 'color.scss';
+
+.tip {
+  margin-bottom: 5px;
+}
+
+.tab {
+  // borders everywhere except the bottom
+  border-style: solid solid none solid;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  border-width: 1px;
+  padding: 5px 10px;
+  width: 200px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  cursor: pointer;
+}
+
+.box {
+  border-style: solid;
+  border-width: 1px;
+  padding: 10px;
+}
+
+.icon {
+  margin-left: 7px;
+  margin-right: 5px;
+}
+
+.caret {
+  margin-left: auto;
+}

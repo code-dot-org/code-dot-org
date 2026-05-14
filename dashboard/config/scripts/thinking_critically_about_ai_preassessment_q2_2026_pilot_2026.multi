@@ -1,0 +1,13 @@
+name 'thinking-critically-about-ai-preassessment-q2_2026-pilot_2026'
+
+question 'A student uses a navigation app that automatically suggests a faster route based on traffic. Which type of AI is this an example of?'
+wrong 'A visible AI, because you can see the map on screen.'
+wrong 'A helpful AI only if the student is driving somewhere new.'
+right 'A hidden AI, because it works in the background without the user directly asking it to.'
+wrong 'A risky AI, because navigation apps are always dangerous.'
+
+allow_multiple_attempts true
+
+teacher_markdown <<MARKDOWN
+Lesson 1
+MARKDOWN

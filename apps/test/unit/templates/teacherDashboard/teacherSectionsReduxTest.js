@@ -25,6 +25,13 @@ import reducer, {
   cancelEditingSection,
   finishEditingSection,
   asyncLoadSectionData,
+  setDemoPresets,
+  setDemoPresetsLoaded,
+  fetchDemoPresets,
+  createDemoSection,
+  DemoSectionCreationError,
+  startDemoSectionCreation,
+  finishDemoSectionCreation,
   beginImportRosterFlow,
   cancelImportRosterFlow,
   importOrUpdateRoster,
@@ -48,7 +55,7 @@ import {
   sortedSectionsList,
   sortSectionsList,
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsReduxSelectors';
-import HttpClient from '@cdo/apps/util/HttpClient';
+import HttpClient, {NetworkError} from '@cdo/apps/util/HttpClient';
 
 import {assert, expect} from '../../../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports
 
@@ -477,7 +484,6 @@ describe('teacherSectionsRedux', () => {
         unitId: null,
         hidden: false,
         restrictSection: false,
-        aiTutorEnabled: false,
       });
     });
 
@@ -512,7 +518,6 @@ describe('teacherSectionsRedux', () => {
         unitId: unitId,
         hidden: false,
         restrictSection: false,
-        aiTutorEnabled: false,
       });
     });
   });
@@ -542,7 +547,6 @@ describe('teacherSectionsRedux', () => {
         unitId: null,
         hidden: false,
         restrictSection: false,
-        aiTutorEnabled: false,
       });
     });
 
@@ -580,6 +584,7 @@ describe('teacherSectionsRedux', () => {
         isAssignedSingleUnitCourse: undefined,
         courseId: undefined,
         createdAt: createdAt,
+        demoType: undefined,
         studentCount: 1,
         hidden: false,
         restrictSection: false,
@@ -606,7 +611,6 @@ describe('teacherSectionsRedux', () => {
           ltiRosterSyncEnabled: false,
         },
         syncEnabled: undefined,
-        aiTutorEnabled: undefined,
         anyStudentHasProgress: undefined,
         atRiskAgeGatedDate: null,
         atRiskAgeGatedUsState: undefined,
@@ -772,7 +776,6 @@ describe('teacherSectionsRedux', () => {
       hidden: false,
       restrict_section: false,
       post_milestone_disabled: false,
-      ai_tutor_enabled: false,
       at_risk_age_gated_date: undefined,
       at_risk_age_gated_us_state: undefined,
     };
@@ -947,6 +950,7 @@ describe('teacherSectionsRedux', () => {
           isAssignedSingleUnitCourse: undefined,
           courseId: undefined,
           createdAt: createdAt,
+          demoType: undefined,
           hidden: false,
           restrictSection: false,
           postMilestoneDisabled: false,
@@ -966,7 +970,6 @@ describe('teacherSectionsRedux', () => {
             ltiRosterSyncEnabled: false,
           },
           syncEnabled: undefined,
-          aiTutorEnabled: false,
           anyStudentHasProgress: undefined,
           atRiskAgeGatedDate: null,
           atRiskAgeGatedUsState: undefined,
@@ -1244,6 +1247,14 @@ describe('teacherSectionsRedux', () => {
     it('sets student count', () => {
       const section = sectionFromServerSection(serverSection);
       assert.equal(section.studentCount, 10);
+    });
+
+    it('maps demo_type', () => {
+      const section = sectionFromServerSection({
+        ...serverSection,
+        demo_type: 'high',
+      });
+      assert.equal(section.demoType, 'high');
     });
   });
 
@@ -2061,6 +2072,180 @@ describe('teacherSectionsRedux', () => {
       jest.mock('@cdo/apps/metrics/firehose');
       store.dispatch(assignToSection(11, 2, 2, 3, null));
       expect(analyticsSpy).to.not.be.called;
+    });
+  });
+
+  describe('demo section thunks', () => {
+    let fetchSpy;
+    let postSpy;
+
+    beforeEach(() => {
+      fetchSpy = sinon.stub(HttpClient, 'fetchJson');
+      postSpy = sinon.stub(HttpClient, 'post');
+    });
+
+    afterEach(() => {
+      fetchSpy.restore();
+      postSpy.restore();
+    });
+
+    it('stores fetched demo presets', async () => {
+      fetchSpy.resolves({
+        response: new Response(),
+        value: {
+          high: {
+            demo_type: 'high',
+            section_name: 'High School Practice Section',
+            avatar_color: 8,
+            avatar_emoji: 5,
+            login_type: 'email',
+            participant_type: 'student',
+            unit: {
+              name: 'aif2-2025',
+              display_name: 'Artificial Intelligence Foundations',
+            },
+            unit_group: {
+              name: 'artificial-intelligence-foundations-2025',
+              display_name: 'Artificial Intelligence Foundations',
+            },
+          },
+        },
+      });
+
+      await store.dispatch(fetchDemoPresets());
+
+      assert.deepEqual(getState().teacherSections.demoPresets.high, {
+        demoType: 'high',
+        sectionName: 'High School Practice Section',
+        avatarColor: 8,
+        avatarEmoji: 5,
+        loginType: 'email',
+        participantType: 'student',
+        unit: {
+          name: 'aif2-2025',
+          displayName: 'Artificial Intelligence Foundations',
+        },
+        unitGroup: {
+          name: 'artificial-intelligence-foundations-2025',
+          displayName: 'Artificial Intelligence Foundations',
+        },
+      });
+    });
+
+    it('logs preset fetch failures and marks presets as loaded', async () => {
+      const consoleErrorStub = sinon.stub(console, 'error');
+      try {
+        fetchSpy.rejects(new Error('presets failed'));
+
+        await store.dispatch(fetchDemoPresets());
+
+        assert.deepEqual(getState().teacherSections.demoPresets, {});
+        expect(getState().teacherSections.demoPresetsAreLoaded).to.be.true;
+        expect(consoleErrorStub).to.have.been.calledOnce;
+      } finally {
+        consoleErrorStub.restore();
+      }
+    });
+
+    it('returns cached demo presets after the first load', async () => {
+      store.dispatch(setDemoPresets({high: {demoType: 'high'}}));
+      store.dispatch(setDemoPresetsLoaded(true));
+
+      const demoPresets = await store.dispatch(fetchDemoPresets());
+
+      assert.deepEqual(demoPresets, {high: {demoType: 'high'}});
+      expect(fetchSpy).not.to.have.been.called;
+    });
+
+    it('creates a demo section from the create response', async () => {
+      const serverSection = sections[0];
+      store.dispatch(setDemoPresets({high: {demoType: 'high'}}));
+      postSpy.resolves(
+        new Response(JSON.stringify(serverSection), {
+          status: 200,
+          headers: {'Content-Type': 'application/json'},
+        })
+      );
+
+      const createdSection = await store.dispatch(createDemoSection('high'));
+
+      assert.equal(createdSection.id, serverSection.id);
+      assert.deepEqual(getState().teacherSections.sectionIds, [307]);
+      assert.deepEqual(getState().teacherSections.demoPresets, {
+        high: {demoType: 'high'},
+      });
+      expect(fetchSpy).not.to.have.been.called;
+      expect(getState().teacherSections.demoSectionCreationInProgress).to.be
+        .false;
+    });
+
+    it('returns early when demo section creation is already in progress', async () => {
+      store.dispatch(startDemoSectionCreation());
+
+      const createdSection = await store.dispatch(createDemoSection('high'));
+
+      expect(createdSection).to.be.undefined;
+      expect(postSpy).not.to.have.been.called;
+      expect(getState().teacherSections.demoSectionCreationInProgress).to.be
+        .true;
+    });
+
+    it('throws a typed conflict error without refetching sections', async () => {
+      postSpy.rejects(
+        new NetworkError(
+          '409 Conflict',
+          new Response('{}', {
+            status: 409,
+            headers: {'Content-Type': 'application/json'},
+          })
+        )
+      );
+      await expect(
+        store.dispatch(createDemoSection('high'))
+      ).to.be.rejectedWith(DemoSectionCreationError);
+      assert.deepEqual(getState().teacherSections.sectionIds, []);
+      expect(fetchSpy).not.to.have.been.called;
+      expect(getState().teacherSections.demoSectionCreationInProgress).to.be
+        .false;
+    });
+
+    it('keeps demo presets on forbidden demo creation attempts', async () => {
+      const consoleErrorStub = sinon.stub(console, 'error');
+      try {
+        store.dispatch(setDemoPresets({high: {demoType: 'high'}}));
+        postSpy.rejects(
+          new NetworkError(
+            '403 Forbidden',
+            new Response('{}', {
+              status: 403,
+              headers: {'Content-Type': 'application/json'},
+            })
+          )
+        );
+
+        await expect(
+          store.dispatch(createDemoSection('high'))
+        ).to.be.rejectedWith(DemoSectionCreationError);
+        assert.deepEqual(getState().teacherSections.demoPresets, {
+          high: {demoType: 'high'},
+        });
+        expect(consoleErrorStub).to.have.been.calledOnce;
+        expect(getState().teacherSections.demoSectionCreationInProgress).to.be
+          .false;
+      } finally {
+        consoleErrorStub.restore();
+      }
+    });
+
+    it('can clear the in-progress demo section state', () => {
+      store.dispatch(startDemoSectionCreation());
+      expect(getState().teacherSections.demoSectionCreationInProgress).to.be
+        .true;
+
+      store.dispatch(finishDemoSectionCreation());
+
+      expect(getState().teacherSections.demoSectionCreationInProgress).to.be
+        .false;
     });
   });
 });

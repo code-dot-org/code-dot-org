@@ -3,7 +3,7 @@ Web Lab 2 allows students to make web pages using HTML, CSS and vanilla JS.
 
 ## How it works
 See the htmlPreview folder for the bulk of the display logic. There are 2 iframes that support the preview.
-The outer iframe, hosted by HTMLPreview.tsx points to <unique-project-id>.preview.codeprojects.org, 
+The outer iframe, hosted by HTMLPreview.tsx points to `<unique-project-id>.preview.codeprojects.org`, 
 which eventually routes to InnerHTMlPreview.tsx. The outer iframe sends the student code to the inner iframe via
 message passing. The inner iframe sets up a service worker (weblab2_project_service_worker), which acts as a false
 "server" for the student code. This allows file links to work as expected in a student project. The service worker

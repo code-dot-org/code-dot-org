@@ -32,7 +32,7 @@ const AddButton = function (props) {
       style={styles.addButton}
       type="button"
     >
-      <i style={{marginRight: 7}} className="fa fa-plus-circle" />
+      <i style={{marginRight: 7}} className="fa-solid fa-circle-plus" />
       {props.displayText}
     </button>
   );

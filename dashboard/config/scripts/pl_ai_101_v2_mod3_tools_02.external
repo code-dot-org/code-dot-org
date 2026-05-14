@@ -1,0 +1,173 @@
+name 'pl-ai-101-V2-mod3-tools-02'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Types of Educational AI Tools
+
+Below are a few examples of the types of education-specific AI tools that have been developed.
+
+Take a moment to learn more about what these tools can do for you and your teaching practice.
+
+👉 Click on each box to reveal examples from the classroom.
+
+<div style="max-width:90%; margin:0 auto; font-family:ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial; color:#2f2f2f;">
+
+<div style="display:grid; grid-template-columns:repeat(2, 1fr); gap:16px;">
+
+<!-- Lesson Planning and Idea Generation -->
+<details style="background:#ffffff; border:2px solid #5a2ca0; border-radius:16px; overflow:hidden; box-shadow:0 3px 8px rgba(0,0,0,0.06);">
+<summary style="list-style:none; cursor:pointer; padding:0; display:block;">
+<div style="padding:16px; text-align:center;">
+<div style="font-size:18px; font-weight:800; margin-bottom:12px;">Lesson Planning and Idea Generation</div>
+<img src="https://images.code.org/9d74b832edea5b49d8f6ff329ba52c96-Screenshot 2026-04-10 at 10.12.52 AM.png" alt="Lesson planning icon" style="width:150px; height:150px; object-fit:contain; margin-bottom:12px;">
+<div style="font-size:14px; line-height:1.5; text-align:left;">
+These tools help teachers design instruction by generating lesson ideas, activities, questions, and examples.
+</div>
+</div>
+</summary>
+<div style="padding:0 16px 16px 16px; font-size:14px; line-height:1.5;">
+<div style="font-weight:700; margin-bottom:6px;">They can:</div>
+<ul style="margin:0 0 0 18px; padding:0;">
+<li>Suggest ways to introduce or extend a topic</li>
+<li>Generate discussion questions or practice problems</li>
+<li>Help teachers move from a rough idea to a structured lesson</li>
+</ul>
+</div>
+</details>
+
+<!-- Instructional Materials and Content Creation -->
+<details style="background:#ffffff; border:2px solid #5a2ca0; border-radius:16px; overflow:hidden; box-shadow:0 3px 8px rgba(0,0,0,0.06);">
+<summary style="list-style:none; cursor:pointer; padding:0; display:block;">
+<div style="padding:16px; text-align:center;">
+<div style="font-size:18px; font-weight:800; margin-bottom:12px;">Instructional Materials and Content Creation</div>
+<img src="https://images.code.org/78e1c3ab6d6d5e56955cd5c86fd15de2-Screenshot 2026-04-10 at 10.12.56 AM.png" alt="Materials creation icon" style="width:150px; height:150px; object-fit:contain; margin-bottom:12px;">
+<div style="font-size:14px; line-height:1.5; text-align:left;">
+These tools help teachers create classroom-ready materials quickly and efficiently.
+</div>
+</div>
+</summary>
+<div style="padding:0 16px 16px 16px; font-size:14px; line-height:1.5;">
+<div style="font-weight:700; margin-bottom:6px;">They can:</div>
+<ul style="margin:0 0 0 18px; padding:0;">
+<li>Generate worksheets, slides, and handouts</li>
+<li>Create examples or models for student work</li>
+<li>Support visual and multimedia content creation</li>
+</ul>
+</div>
+</details>
+
+<!-- Differentiation and Accessibility -->
+<details style="background:#ffffff; border:2px solid #5a2ca0; border-radius:16px; overflow:hidden; box-shadow:0 3px 8px rgba(0,0,0,0.06);">
+<summary style="list-style:none; cursor:pointer; padding:0; display:block;">
+<div style="padding:16px; text-align:center;">
+<div style="font-size:18px; font-weight:800; margin-bottom:12px;">Differentiation and Accessibility</div>
+<img src="https://images.code.org/91d0184c1dace44eae2d7acf6c86154d-Screenshot 2026-04-10 at 10.13.00 AM.png" alt="Differentiation icon" style="width:150px; height:150px; object-fit:contain; margin-bottom:12px;">
+<div style="font-size:14px; line-height:1.5; text-align:left;">
+These tools help teachers adapt content to meet the needs of diverse learners.
+</div>
+</div>
+</summary>
+<div style="padding:0 16px 16px 16px; font-size:14px; line-height:1.5;">
+<div style="font-weight:700; margin-bottom:6px;">They can:</div>
+<ul style="margin:0 0 0 18px; padding:0;">
+<li>Adjust reading levels or language complexity</li>
+<li>Generate multiple versions of the same task</li>
+<li>Support multilingual learners or students needing additional scaffolds</li>
+</ul>
+</div>
+</details>
+
+<!-- Assessment and Feedback -->
+<details style="background:#ffffff; border:2px solid #5a2ca0; border-radius:16px; overflow:hidden; box-shadow:0 3px 8px rgba(0,0,0,0.06);">
+<summary style="list-style:none; cursor:pointer; padding:0; display:block;">
+<div style="padding:16px; text-align:center;">
+<div style="font-size:18px; font-weight:800; margin-bottom:12px;">Assessment and Feedback</div>
+<img src="https://images.code.org/a504ed0cd168f7eaa85b322923cb1778-Screenshot 2026-04-10 at 10.13.04 AM.png" alt="Assessment icon" style="width:150px; height:150px; object-fit:contain; margin-bottom:12px;">
+<div style="font-size:14px; line-height:1.5; text-align:left;">
+These tools support grading, feedback, and understanding student progress.
+</div>
+</div>
+</summary>
+<div style="padding:0 16px 16px 16px; font-size:14px; line-height:1.5;">
+<div style="font-weight:700; margin-bottom:6px;">They can:</div>
+<ul style="margin:0 0 0 18px; padding:0;">
+<li>Help generate or refine assessments</li>
+<li>Provide structured feedback on student work</li>
+<li>Identify patterns in student responses or misconceptions</li>
+</ul>
+</div>
+</details>
+
+<!-- Communication and Professional Writing -->
+<details style="background:#ffffff; border:2px solid #5a2ca0; border-radius:16px; overflow:hidden; box-shadow:0 3px 8px rgba(0,0,0,0.06);">
+<summary style="list-style:none; cursor:pointer; padding:0; display:block;">
+<div style="padding:16px; text-align:center;">
+<div style="font-size:18px; font-weight:800; margin-bottom:12px;">Communication and Professional Writing</div>
+<img src="https://images.code.org/6bee513745759c663dd38a6a701892f9-Screenshot 2026-04-10 at 10.13.07 AM.png" alt="Communication icon" style="width:150px; height:150px; object-fit:contain; margin-bottom:12px;">
+<div style="font-size:14px; line-height:1.5; text-align:left;">
+These tools support teacher communication and writing tasks.
+</div>
+</div>
+</summary>
+<div style="padding:0 16px 16px 16px; font-size:14px; line-height:1.5;">
+<div style="font-weight:700; margin-bottom:6px;">They can:</div>
+<ul style="margin:0 0 0 18px; padding:0;">
+<li>Draft emails, newsletters, and reports</li>
+<li>Improve clarity, tone, and organization</li>
+<li>Help teachers communicate more efficiently with families and colleagues</li>
+</ul>
+</div>
+</details>
+
+<!-- Classroom Support and Insight -->
+<details style="background:#ffffff; border:2px solid #5a2ca0; border-radius:16px; overflow:hidden; box-shadow:0 3px 8px rgba(0,0,0,0.06);">
+<summary style="list-style:none; cursor:pointer; padding:0; display:block;">
+<div style="padding:16px; text-align:center;">
+<div style="font-size:18px; font-weight:800; margin-bottom:12px;">Classroom Support and Insight</div>
+<img src="https://images.code.org/fc7a4834d504b73ddfd91068c0eecf18-Screenshot 2026-04-10 at 10.13.11 AM.png" alt="Classroom support icon" style="width:150px; height:150px; object-fit:contain; margin-bottom:12px;">
+<div style="font-size:14px; line-height:1.5; text-align:left;">
+These tools provide real-time insights or support during instruction.
+</div>
+</div>
+</summary>
+<div style="padding:0 16px 16px 16px; font-size:14px; line-height:1.5;">
+<div style="font-weight:700; margin-bottom:6px;">They can:</div>
+<ul style="margin:0 0 0 18px; padding:0;">
+<li>Help monitor student progress</li>
+<li>Identify where students are struggling</li>
+<li>Support personalized learning experiences</li>
+</ul>
+</div>
+</details>
+
+<!-- Reflection and Professional Practice -->
+<details style="grid-column: span 2; justify-self: center; width:60%; background:#ffffff; border:2px solid #5a2ca0; border-radius:16px; overflow:hidden; box-shadow:0 3px 8px rgba(0,0,0,0.06);">
+<summary style="list-style:none; cursor:pointer; padding:0; display:block;">
+<div style="padding:16px; text-align:center;">
+<div style="font-size:18px; font-weight:800; margin-bottom:12px;">Reflection and Professional Practice</div>
+<img src="https://images.code.org/97c27597b13d31364ad78cd0d0749aa1-Screenshot 2026-04-10 at 10.13.27 AM.png" alt="Reflection icon" style="width:150px; height:150px; object-fit:contain; margin-bottom:12px;">
+<div style="font-size:14px; line-height:1.5; text-align:left;">
+These tools act as thought partners to help teachers reflect and improve their work.
+</div>
+</div>
+</summary>
+<div style="padding:0 16px 16px 16px; font-size:14px; line-height:1.5;">
+<div style="font-weight:700; margin-bottom:6px;">They can:</div>
+<ul style="margin:0 0 0 18px; padding:0;">
+<li>Provide feedback on lesson plans or instructional strategies</li>
+<li>Suggest improvements or alternative approaches</li>
+<li>Support ongoing professional learning and growth</li>
+</ul>
+</div>
+</details>
+
+</div>
+</div>
+
+
+<br>
+
+>#### **💬 Quick Reflection:** What's one category of tools that you'd like to try out?
+
+MARKDOWN

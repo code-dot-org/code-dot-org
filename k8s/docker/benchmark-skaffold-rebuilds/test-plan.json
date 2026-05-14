@@ -1,0 +1,26 @@
+[
+  {
+    "day": 0,
+    "modify_paths": [
+      "apps/i18n/change-me-to-trigger-dockerfile-copy-cache-miss.txt",
+      "apps/static/change-me-to-trigger-dockerfile-copy-cache-miss.txt",
+      "change-me-to-trigger-dockerfile-copy-cache-miss.txt",
+      "dashboard/app/assets/change-me-to-trigger-dockerfile-copy-cache-miss.txt",
+      "dashboard/config/levels/change-me-to-trigger-dockerfile-copy-cache-miss.txt",
+      "dashboard/config/scripts/change-me-to-trigger-dockerfile-copy-cache-miss.txt",
+      "dashboard/config/scripts_json/change-me-to-trigger-dockerfile-copy-cache-miss.txt",
+      "dashboard/public/change-me-to-trigger-dockerfile-copy-cache-miss.txt",
+      "pegasus/change-me-to-trigger-dockerfile-copy-cache-miss.txt",
+      "shared/images/change-me-to-trigger-dockerfile-copy-cache-miss.txt"
+    ],
+    "cache_miss_all_day": true
+  },
+  {
+    "day": 1,
+    "modify_paths": [
+      "apps/i18n/change-me-to-trigger-dockerfile-copy-cache-miss.txt",
+      "dashboard/config/levels/change-me-to-trigger-dockerfile-copy-cache-miss.txt",
+      "dashboard/config/scripts_json/change-me-to-trigger-dockerfile-copy-cache-miss.txt"
+    ]
+  }
+]

@@ -545,22 +545,28 @@ img.video_thumbnail {
   padding: 10px;
 
   a:link, a:visited, a:hover, a:active {
-    @include main-font-bold;
-    color: $brand_secondary_default;
-    background-color: transparent;
-    text-decoration: underline;
+    &:where(:not(.MuiButton-root, .MuiIconButton-root)) {
+      @include main-font-bold;
+      color: $brand_secondary_default;
+      background-color: transparent;
+      text-decoration: underline;
+    }
   }
   a:hover {
-    color: $brand_secondary_dark;
-    text-decoration: underline;
+    &:where(:not(.MuiButton-root, .MuiIconButton-root)) {
+      color: $brand_secondary_dark;
+      text-decoration: underline;
+    }
   }
 
   a:link, a:visited, a:active {
-    &:has(.visual-block) {
-      text-decoration: unset;
+    &:where(:not(.MuiButton-root, .MuiIconButton-root)) {
+      &:has(.visual-block) {
+        text-decoration: unset;
 
-      &:hover {
-        text-decoration: underline;
+        &:hover {
+          text-decoration: underline;
+        }
       }
     }
   }
@@ -1247,11 +1253,14 @@ $default-modal-width: 640px;
       vertical-align: middle;
       font-size: 24pt;
 
-      &.fa-facebook {
+      &.fa-facebook, &.fa-facebook-f {
         background-color: $facebook_blue;
       }
       &.fa-twitter {
         background-color: $twitter_blue;
+      }
+      &.fa-x-twitter {
+        background-color: $x_black;
       }
     }
     span {
@@ -1613,6 +1622,10 @@ body.iframe_embed_app_and_code {
 
 .x-close {
   @include close-button($cornerOffset: -20px);
+  // Reset native <button> styles so the icon matches the old <div>-based markup.
+  // (background-color already reset by the `background` shorthand in close-button mixin.)
+  border: 0;
+  padding: 0;
 }
 
 .open-link {
@@ -2702,8 +2715,44 @@ a.download-video {
   }
 }
 
+.free-response {
+  li {
+    font-size: 16px;
+  }
+  h1 {
+    font-size: 37px;
+  }
+  h2 {
+    font-size: 25px;
+  }
+  h3 {
+    font-size: 21px;
+  }
+}
+
+
 .external .content-level {
   overflow: hidden;
+
+  p, label, li {
+    font-size: 16px;
+  }
+
+  h1 {
+    font-size: 37px;
+  }
+
+  h2 {
+    font-size: 25px;
+  }
+
+  h3 {
+    font-size: 21px;
+  }
+
+  h4 {
+    font-size: 21px;
+  }
 }
 
 .external-video-container {
@@ -2871,6 +2920,26 @@ a.download-video {
 
   &-full-width {
     width: unset;
+  }
+
+  p, label, li {
+    font-size: 16px;
+  }
+
+  h1 {
+    font-size: 37px;
+  }
+
+  h2 {
+    font-size: 25px;
+  }
+
+  h3 {
+    font-size: 21px;
+  }
+
+  h4 {
+    font-size: 21px;
   }
 }
 

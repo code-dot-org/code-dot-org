@@ -8,9 +8,9 @@ class SessionsControllerTest < ActionController::TestCase
     @request.env["devise.mapping"] = Devise.mappings[:user]
   end
 
-  test 'login error derives locale from cdo.locale' do
+  test 'login error derives locale from I18n.locale' do
     locale = 'es-ES'
-    @request.env['cdo.locale'] = locale
+    I18n.locale = locale
     post :create
     assert_select '.alert', I18n.t('devise.failure.not_found_in_database', locale: locale)
   end
@@ -51,12 +51,19 @@ class SessionsControllerTest < ActionController::TestCase
     end
   end
 
-  test "teachers go to specified return to url after signing in" do
+  test 'teachers go to specified return to path after signing in' do
     teacher = create(:teacher)
-    session[:user_return_to] = user_return_to = '//test.code.org/the-return-to-url'
+    session[:user_return_to] = user_return_to = '/the-return-to-url'
     create_session_for_user(teacher)
     assert_signed_in_as teacher
     assert_redirected_to user_return_to
+  end
+
+  test 'teachers will not return to a url on a different host after signing in' do
+    teacher = create(:teacher)
+    session[:user_return_to] = 'https://some-other-site.com/the-return-to-url'
+    create_session_for_user(teacher)
+    assert_response :not_found
   end
 
   test 'signing in as user via username' do
@@ -141,13 +148,13 @@ class SessionsControllerTest < ActionController::TestCase
 
     delete :destroy
 
-    assert_redirected_to '//test.code.org'
+    assert_redirected_to root_path
   end
 
   test "if you're not signed in you can still sign out" do
     delete :destroy
 
-    assert_redirected_to '//test.code.org'
+    assert_redirected_to root_path
   end
 
   test "facebook users go to generic oauth sign out page after logging out" do

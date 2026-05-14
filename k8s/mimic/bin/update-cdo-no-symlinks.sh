@@ -10,6 +10,7 @@
 
 set -e
 cd "$(dirname "$0")/.."
+echo "running k8s/mimic/bin/update-cdo-no-symlinks.sh, syncing from k8s/mimic/code-dot-org to k8s/mimic/cdo-no-symlinks to resolve symlinks"
 
 dont_copy_dirs=(.venv .yarn/cache)
 excludes=()

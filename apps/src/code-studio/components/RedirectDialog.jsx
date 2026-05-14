@@ -1,9 +1,7 @@
-import Button from '@code-dot-org/component-library/button';
+import Dialog from '@code-dot-org/component-library/dialog';
 import PropTypes from 'prop-types';
 import React from 'react';
 
-import BaseDialog from '@cdo/apps/templates/BaseDialog';
-import DialogFooter from '@cdo/apps/templates/teacherDashboard/DialogFooter';
 import {navigateToHref} from '@cdo/apps/utils';
 import i18n from '@cdo/locale';
 
@@ -14,38 +12,35 @@ const RedirectDialog = ({
   redirectUrl,
   redirectButtonText,
 }) => {
+  if (!isOpen) {
+    return null;
+  }
+
   const redirect = () => {
     navigateToHref(redirectUrl);
   };
 
   return (
-    <BaseDialog
-      useUpdatedStyles
-      isOpen={isOpen}
-      style={styles.dialog}
-      handleClose={handleClose}
-    >
-      <div>
-        <h2 style={styles.dialogHeader}>{i18n.notInRightPlace()}</h2>
-        {details}
-      </div>
-      <DialogFooter>
-        <Button
-          text={i18n.stayHere()}
-          onClick={handleClose}
-          type="secondary"
-          color="gray"
-          size="s"
-        />
-        <Button
-          text={redirectButtonText}
-          onClick={redirect}
-          type="primary"
-          color="purple"
-          size="s"
-        />
-      </DialogFooter>
-    </BaseDialog>
+    <Dialog
+      title={i18n.notInRightPlace()}
+      description={details}
+      onClose={handleClose}
+      primaryButtonProps={{
+        children: redirectButtonText,
+        onClick: redirect,
+        size: 'small',
+        color: 'primary',
+        type: 'button',
+      }}
+      secondaryButtonProps={{
+        children: i18n.stayHere(),
+        onClick: handleClose,
+        size: 'small',
+        color: 'tertiary',
+        variant: 'outlined',
+        type: 'button',
+      }}
+    />
   );
 };
 
@@ -55,15 +50,6 @@ RedirectDialog.propTypes = {
   handleClose: PropTypes.func.isRequired,
   redirectUrl: PropTypes.string.isRequired,
   redirectButtonText: PropTypes.string.isRequired,
-};
-
-const styles = {
-  dialog: {
-    padding: 20,
-  },
-  dialogHeader: {
-    marginTop: 0,
-  },
 };
 
 export default RedirectDialog;

@@ -12,7 +12,7 @@ markdown <<MARKDOWN
 
 # Welcome!
 
-#### This professional learning module prepares you to teach a unit where students shift from writing isolated interactions to building full web apps that manage and display meaningful datasets through arrays, objects, and schema-informed design.
+This professional learning module prepares you to teach a unit where students shift from writing isolated interactions to building full web apps that manage and display meaningful datasets through arrays, objects, and schema-informed design.
 
 
 
@@ -27,12 +27,12 @@ ___
 ___
 
 
-#### **By the end of this professional learning module, you will be able to:**
+**By the end of this professional learning module, you will be able to:**
 
-* #### Explain how arrays, objects, and schemas organize real-world data and support clear, predictable program design
-* #### Model core data-structure skills in Web Lab
-* #### Teach common array and object operations
-* #### Guide students in using AI-generated scaffolds responsibly, emphasizing accountability for both data choices and code
+* Explain how arrays, objects, and schemas organize real-world data and support clear, predictable program design
+* Model core data-structure skills in Web Lab
+* Teach common array and object operations
+* Guide students in using AI-generated scaffolds responsibly, emphasizing accountability for both data choices and code
 
 
 
@@ -41,10 +41,10 @@ ___
 
 ## Take Our Pre-Survey
 
-#### To better gauge your learning and improve this professional learning module, please take our pre-survey - it will take fewer than five minutes to complete.
+To better gauge your learning and improve this professional learning module, please take our pre-survey - it will take fewer than five minutes to complete.
 
 <div style="margin: 20px 0px">
-<a class="btn btn-large btn-primary" href="https://studio.code.org/form/selfpaced_pd_teaching_programming_in_musiclab_pre_survey" target="blank" rel="noopener noreferrer">Take the Pre-Survey</a>
+<a class="btn btn-large btn-primary" href="https://docs.google.com/forms/d/e/1FAIpQLSeygRc84_nhKrsmViOJLBCzEJreGbSY0MQbl52GblJEKkI8zw/viewform?usp=publish-editor" target="blank" rel="noopener noreferrer">Take the Pre-Survey</a>
 </div>
 
 ### **Suggested total time for this module:** 75 minutes

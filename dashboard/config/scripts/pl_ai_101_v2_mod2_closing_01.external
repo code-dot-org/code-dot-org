@@ -3,50 +3,27 @@ title 'title'
 description 'description here'
 
 markdown <<MARKDOWN
-# Wrap-Up
+# Don't stop here, keep learning!
 
-<div style="display: flex; align-items: center; justify-content: space-between; background: #f7f8fa; padding: 20px; border-radius: 10px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); font-size: 14pt; line-height: 1.6; max-width: 800px; margin: 20px auto;">
-
-  <div>
-    <h4 style="margin-top: 0; font-weight: bold;">In this professional learning module, you learned to:</h4>
-    <ul style="list-style-type: disc; padding-left: 10px; font-size: 14pt">
-      <li>Explain what AI is as well as it's impact on industry and education.
-</li><br>
-	  <li>Realize the benefits and address the risks of AI in an educational setting.
-</li><br>
-      <li>Describe AI Literacy and explain the benefits of AI literacy for both educators and students.</li>
-    </ul>
-  </div>
-  <div>
-    <img src="https://images.code.org/89644a0804bcdfc2839b17f70bcef23c-Screenshot 2025-12-04 at 2.33.30 PM.png" 
-         alt="Icon with computer and weblayout" 
-         style="border-radius: 10px; width: 200px; height: auto;">
-  </div>
-</div>
-
-## Resources
-* #### <a href="https://www.teachai.org/" target="_blank">TeachAI.org</a> Empowering educators to teach with and about AI.
-* #### <a href="https://www.teachai.org/ailiteracy" target="_blank">AILit Framework</a> from TeachAI.org.
-* #### <a href="https://quickdraw.withgoogle.com/" target="_blank">Quick, Draw with Google</a> a quick and fun AI-powered game.
-* #### <a href="https://www.khanmigo.ai/" target="_blank">Khanmigo</a> Khanacademy’s on-demand AI-powered support for education.
-* #### <a href="https://labs.google/" target="_blank">Labs.Google</a> Google’s home for the latest AI tools, technology and discourse.
+## Additional Resources
+* <a href="https://www.teachai.org/" target="_blank">TeachAI.org</a> Empowering educators to teach with and about AI.
+* <a href="https://www.teachai.org/ailiteracy" target="_blank">AILit Framework</a> from TeachAI.org.
 
 
-## Take it Further
+## Take it Further Activities
 
-#### Want to learn more? Try out the following optional activities.
+Want to learn more? Try out the following optional activities.
   <!-- Dropdown 1 -->
 <details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
 
 <summary style="font-size: 16px; font-weight: bold">
-	Learn More About AI
+	Learn More About Generative AI
 </summary>
 
 <div style="margin-top: 10px; padding-top: 10px; border-top: 1px solid #ddd;">
-<p style="margin: 5px 0 10px 0; font-size: 16px; line-height: 1.5;">A TED Talk is a short, powerful presentation, typically 18 minutes or less, given by experts on a wide range of topics including technology, entertainment, and design, aimed at spreading innovative ideas and sparking discussion. <br> Learn some more about AI on your own. Watch one or more AI-themed Ted Talks. 
-</p>
+<p style="margin: 5px 0 10px 0; font-size: 16px; line-height: 1.5;">Generative AI may seem magical and mysterious, but it’s a lot easier to understand when you break it down to four core components: input, storage, processing, and output. Learn How Generative AI Works in this video series!</p>
 
-<a href="https://www.ted.com/playlists/310/artificial_intelligence" 
+<a href="https://www.youtube.com/playlist?list=PLzdnOPI1iJNfJLo5nNGPHo0xCd9Xw5lSs" 
          target="blank" 
          rel="noopener noreferrer" 
          style="display: inline-block; margin-top: 5px; padding: 8px 12px; background-color: #026C7A; color: #ffffff; text-decoration: none; border-radius: 6px; font-size: 14px;">Check it Out
@@ -59,14 +36,33 @@ markdown <<MARKDOWN
 <details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
 
 <summary style="font-size: 16px; font-weight: bold">
-	AI Literacy Activities for the Classroom
+	Learn How Neural Networks Work
 </summary>
 
 <div style="margin-top: 10px; padding-top: 10px; border-top: 1px solid #ddd;">
-<p style="margin: 5px 0 10px 0; font-size: 16px; line-height: 1.5;">TeachAI.org has ready-to-use AI Literacy focused activity ideas for every subject. Designed to fit into a 40-minute class with almost no prep required.<br> Review these activities and choose one to implement in your classroom.
+<p style="margin: 5px 0 10px 0; font-size: 16px; line-height: 1.5;">Watch this video to start learning how Neural Networks work. Then, take your learning to an LLM - prompt the model of your choice to learn more.
 </p>
 
-<a href="https://www.teachai.org/media/learningscenarios_deck_final-j9gmue" 
+<a href="https://www.youtube.com/watch?v=JrXazCEACVo" 
+         target="blank" 
+         rel="noopener noreferrer" 
+         style="display: inline-block; margin-top: 5px; padding: 8px 12px; background-color: #026C7A; color: #ffffff; text-decoration: none; border-radius: 6px; font-size: 14px;">Check it Out
+</a>
+</div>
+
+</details>
+
+  <!-- Dropdown 3 -->
+<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
+
+<summary style="font-size: 16px; font-weight: bold">
+	Bring AI to Your Classroom
+</summary>
+
+<div style="margin-top: 10px; padding-top: 10px; border-top: 1px solid #ddd;">
+<p style="margin: 5px 0 10px 0; font-size: 16px; line-height: 1.5;">Teach your students how AI really works through short, engaging videos and in-class lessons. This free lesson series breaks down core AI concepts—from machine learning and generative models to ethics and real-world applications. Use one lesson or all seven to spark curiosity and critical thinking.</p>
+
+<a href="https://code.org/en-US/curriculum/how-artificial-intelligence-works" 
          target="blank" 
          rel="noopener noreferrer" 
          style="display: inline-block; margin-top: 5px; padding: 8px 12px; background-color: #026C7A; color: #ffffff; text-decoration: none; border-radius: 6px; font-size: 14px;">Check it Out

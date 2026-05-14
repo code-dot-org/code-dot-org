@@ -84,6 +84,7 @@ describe('ActivitySectionCard', () => {
       targetActivitySectionPos: 1,
       hasLessonPlan: true,
       allowMajorCurriculumChanges: true,
+      rubricLevelId: null,
 
       //redux
       moveActivitySection,
@@ -352,5 +353,56 @@ describe('ActivitySectionCard', () => {
     instance.editorTextAreaRef.selectionEnd = 11;
     instance.insertMarkdownSyntaxAtSelection('example');
     expect(updateActivitySectionField.mock.lastCall[3]).toBe('Simple example');
+  });
+
+  it('passes isDeleteable=true to OrderControls when no rubric level matches', () => {
+    const wrapper = shallow(
+      <ActivitySectionCard
+        {...defaultProps}
+        activitySection={sampleActivities[0].activitySections[2]}
+        rubricLevelId={999} // Non-matching ID
+      />
+    );
+
+    const orderControls = wrapper.find('OrderControls');
+    expect(orderControls.prop('isDeleteable')).toBe(true);
+  });
+
+  it('passes isDeleteable=false to OrderControls when rubric level matches script level', () => {
+    const wrapper = shallow(
+      <ActivitySectionCard
+        {...defaultProps}
+        activitySection={sampleActivities[0].activitySections[2]}
+        rubricLevelId={1} // Matches first script level activeId '1'
+      />
+    );
+
+    const orderControls = wrapper.find('OrderControls');
+    expect(orderControls.prop('isDeleteable')).toBe(false);
+  });
+
+  it('passes isDeleteable=true when no rubricLevelId provided', () => {
+    const wrapper = shallow(
+      <ActivitySectionCard
+        {...defaultProps}
+        activitySection={sampleActivities[0].activitySections[2]}
+        rubricLevelId={null}
+      />
+    );
+
+    const orderControls = wrapper.find('OrderControls');
+    expect(orderControls.prop('isDeleteable')).toBe(true);
+  });
+
+  it('passes isDeleteable=true when activity section has no script levels', () => {
+    const wrapper = shallow(
+      <ActivitySectionCard
+        {...defaultProps}
+        rubricLevelId={1} // Even with rubricLevelId, no levels to match
+      />
+    );
+
+    const orderControls = wrapper.find('OrderControls');
+    expect(orderControls.prop('isDeleteable')).toBe(true);
   });
 });

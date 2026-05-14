@@ -1,40 +1,58 @@
-import Alert from '@code-dot-org/component-library/alert';
+import Alert, {alertTypes} from '@code-dot-org/component-library/alert';
 import {Typography} from '@mui/material';
 import React from 'react';
 
+import {VERIFIED_TEACHER_SUPPORT_LINK} from '@cdo/apps/aichat/constants';
+import DCDO from '@cdo/apps/dcdo';
 import UserPreferences from '@cdo/apps/lib/util/UserPreferences';
-import {EVENTS, PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants.js';
+import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants.js';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
-import {atRiskAgeGatedSections} from '@cdo/apps/templates/teacherDashboard/teacherSectionsReduxSelectors';
 import {detectNetworkAvailability} from '@cdo/apps/util/detectNetworkAvailability';
+import experiments from '@cdo/apps/util/experiments';
+import HttpClient from '@cdo/apps/util/HttpClient';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 import {tryGetSessionStorage, trySetSessionStorage} from '@cdo/apps/utils';
+import {AiChatAccessLevels} from '@cdo/generated-scripts/sharedConstants';
 import i18n from '@cdo/locale';
 
-import {AgeGatedSectionsBanner} from '../../policy_compliance/AgeGatedSectionsModal/AgeGatedSectionsBanner';
 import {
   asyncLoadTeacherHomepageSectionData,
   asyncLoadCoteacherInvite,
+  fetchDemoPresets,
 } from '../../teacherDashboard/teacherSectionsRedux';
 import CoteacherInviteNotification from '../CoteacherInviteNotification';
 
+import DemoSectionCard from './DemoSectionCard';
 import {EmptyHomepage} from './EmptyHomepage';
 import {Header} from './Header';
+import OnboardingChecklist from './OnboardingChecklist';
 import {SectionList} from './SectionList';
 import TeacherHomepagePopups from './TeacherHomepagePopups';
 import TeacherPromotions from './TeacherPromotions';
+import useCreateSectionTour from './useCreateSectionTour';
 
 import styles from './teacherHomepage.module.scss';
 
 export type ArchivedToggleOption = 'teaching' | 'archived';
 
 const LOGGED_TEACHER_SESSION = 'logged_teacher_session';
-
 interface TeacherHomepageProps {
   studioUrlPrefix: string;
 }
 
+interface EssentialAiDependencyResponse {
+  has_assigned_essential_ai_dependency: boolean;
+}
+
 const TeacherHomepage: React.FC<TeacherHomepageProps> = ({studioUrlPrefix}) => {
+  const isMiniTutorialEnabled =
+    experiments.isEnabled(experiments.ONBOARDING) ||
+    DCDO.get('onboarding-enabled', false);
+  // TODO: replace with real data once teacher grade level is stored on the platform
+  const isElementaryTeacher = true;
+  const tour = useCreateSectionTour(isElementaryTeacher);
+  const isDemoSectionEnabled = experiments.isEnabled('demo-section');
+
   const teacherName = useAppSelector(state => state.currentUser.displayName);
   const teacherId = useAppSelector(state => state.currentUser.userId);
 
@@ -53,22 +71,18 @@ const TeacherHomepage: React.FC<TeacherHomepageProps> = ({studioUrlPrefix}) => {
     isLoadingPersonalizationAlertStatus,
     setIsLoadingPersonalizationAlertStatus,
   ] = React.useState<boolean>(true);
+  const [
+    hasAssignedEssentialAiDependency,
+    setHasAssignedEssentialAiDependency,
+  ] = React.useState<boolean>(false);
 
   const dispatch = useAppDispatch();
 
-  const [CAPmodalOpen, setCAPModalOpen] = React.useState(false);
-  const toggleCAPModal = () => {
-    setCAPModalOpen(!CAPmodalOpen);
-  };
-
-  const ageGatedSections = useAppSelector(atRiskAgeGatedSections);
-
-  const shouldDisplayAtRiskAgeGatedWarning = () => {
-    return ageGatedSections?.length > 0;
-  };
-
   React.useEffect(() => {
     dispatch(asyncLoadTeacherHomepageSectionData());
+    if (isDemoSectionEnabled) {
+      dispatch(fetchDemoPresets());
+    }
     dispatch(asyncLoadCoteacherInvite());
 
     // Fetch personalization alert dismissal status
@@ -107,7 +121,37 @@ const TeacherHomepage: React.FC<TeacherHomepageProps> = ({studioUrlPrefix}) => {
     };
 
     fetchTeachingProfileData();
-  }, [dispatch]);
+  }, [dispatch, isDemoSectionEnabled]);
+
+  const aiChatAccessLevel = useAppSelector(
+    state => state.currentUser.aiChatAccessLevel
+  );
+
+  React.useEffect(() => {
+    if (aiChatAccessLevel !== AiChatAccessLevels.DISABLED) {
+      return;
+    }
+
+    const fetchEssentialAiDependency = async () => {
+      try {
+        const {value} =
+          await HttpClient.fetchJson<EssentialAiDependencyResponse>(
+            '/api/v1/sections/assigned_essential_ai_dependency'
+          );
+        setHasAssignedEssentialAiDependency(
+          value.has_assigned_essential_ai_dependency
+        );
+      } catch (error) {
+        console.error('Error fetching essential AI dependency:', error);
+      }
+    };
+
+    fetchEssentialAiDependency();
+  }, [aiChatAccessLevel]);
+
+  const shouldShowVerificationAlert =
+    aiChatAccessLevel === AiChatAccessLevels.DISABLED &&
+    hasAssignedEssentialAiDependency;
 
   const needsToAnswerPersonalizationQuestions = React.useMemo(() => {
     // Don't show while loading
@@ -151,19 +195,11 @@ const TeacherHomepage: React.FC<TeacherHomepageProps> = ({studioUrlPrefix}) => {
     ) {
       trySetSessionStorage(LOGGED_TEACHER_SESSION, 'true');
 
-      analyticsReporter.sendEvent(
-        EVENTS.TEACHER_LOGIN_EVENT,
-        {
-          'user id': teacherId,
-        },
-        PLATFORMS.STATSIG
-      );
+      analyticsReporter.sendEvent(EVENTS.TEACHER_LOGIN_EVENT, {
+        'user id': teacherId,
+      });
     }
-    analyticsReporter.sendEvent(
-      EVENTS.NEW_TEACHER_HOMEPAGE_VISITED,
-      {},
-      PLATFORMS.STATSIG
-    );
+    analyticsReporter.sendEvent(EVENTS.NEW_TEACHER_HOMEPAGE_VISITED, {});
 
     // Temporarily check network availability on teacher login
     detectNetworkAvailability(teacherId);
@@ -190,7 +226,7 @@ const TeacherHomepage: React.FC<TeacherHomepageProps> = ({studioUrlPrefix}) => {
       value === 'teaching'
         ? EVENTS.SECTION_LIST_TEACHING_TOGGLE_CLICKED
         : EVENTS.SECTION_LIST_ARCHIVE_TOGGLE_CLICKED;
-    analyticsReporter.sendEvent(toggleEvent, {}, PLATFORMS.STATSIG);
+    analyticsReporter.sendEvent(toggleEvent, {});
     setSelectedArchiveToggle(value);
   };
 
@@ -226,28 +262,42 @@ const TeacherHomepage: React.FC<TeacherHomepageProps> = ({studioUrlPrefix}) => {
                 onClose={handleAlertClose}
               />
             )}
+            {shouldShowVerificationAlert && (
+              <Alert
+                type={alertTypes.warning}
+                text="Your students won't be able to complete some of their assigned curriculum until you verify your teacher account."
+                link={{
+                  text: 'Learn how to get verified',
+                  href: VERIFIED_TEACHER_SUPPORT_LINK,
+                }}
+              />
+            )}
             <Header
               selectedArchiveToggle={selectedArchiveToggle}
               setSelectedArchiveToggle={onArchiveToggleChange}
             />
 
-            {shouldDisplayAtRiskAgeGatedWarning() && (
-              <AgeGatedSectionsBanner
-                toggleModal={toggleCAPModal}
-                modalOpen={CAPmodalOpen}
-                ageGatedSections={ageGatedSections}
-              />
-            )}
-
             <CoteacherInviteNotification
               isForPl={false}
               destructiveLoad={true}
             />
-            {numSections === 0 ? (
-              <EmptyHomepage showHiddenOnly={showHiddenOnly} />
+            {!!isMiniTutorialEnabled && (
+              <OnboardingChecklist createSectionTour={tour} />
+            )}
+            {!isDemoSectionEnabled ? (
+              numSections === 0 ? (
+                <EmptyHomepage showHiddenOnly={showHiddenOnly} />
+              ) : (
+                <SectionList
+                  showHiddenOnly={showHiddenOnly}
+                  studioUrlPrefix={studioUrlPrefix}
+                />
+              )
+            ) : numSections === 0 ? (
+              <DemoSectionCard showHiddenOnly={showHiddenOnly} />
             ) : (
               <SectionList
-                showHiddenOnly={selectedArchiveToggle === 'archived'}
+                showHiddenOnly={showHiddenOnly}
                 studioUrlPrefix={studioUrlPrefix}
               />
             )}

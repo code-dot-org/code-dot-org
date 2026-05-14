@@ -1,5 +1,4 @@
-import Button, {buttonColors} from '@code-dot-org/component-library/button';
-import {Typography} from '@mui/material';
+import {Typography, Button as MuiButton} from '@mui/material';
 import React from 'react';
 
 import AccessibleDialog from '@cdo/apps/sharedComponents/AccessibleDialog';
@@ -41,11 +40,15 @@ const ChatWarningModal: React.FunctionComponent<ChatWarningModalProps> = ({
     </div>
     <hr />
     <div className={moduleStyles.bottomSection}>
-      <Button
+      <MuiButton
+        variant="contained"
+        color="primary"
+        size="medium"
         onClick={onClose}
-        color={buttonColors.purple}
-        text={i18n.aiWarningModalOk()}
-      />
+        type="button"
+      >
+        {i18n.aiWarningModalOk()}
+      </MuiButton>
     </div>
   </AccessibleDialog>
 );

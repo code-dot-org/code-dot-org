@@ -16,7 +16,6 @@ import currentUser, {
   setShowAITALessonSummary,
   setShowAITAPodcasts,
   setHasCompletedPersonalizationQuiz,
-  setAudioSummaryTranscript,
 } from '@cdo/apps/templates/currentUserRedux';
 import teacherSections, {
   selectSection,
@@ -138,10 +137,13 @@ const COURSES_WITH_PROGRESS = [
 ];
 
 const LESSON_SUMMARY = {
-  learning_objective: 'Sample learning objective info.',
-  lesson_beats: ['Beat 1', 'Beat 2', 'Beat 3'],
-  misconceptions: ['Misconception 1', 'Misconception 2'],
-  tips: ['Tip 1', 'Tip 2', 'Tip 3'],
+  lesson_summary: JSON.stringify({
+    learning_objective: 'Sample learning objective info.',
+    lesson_beats: ['Beat 1', 'Beat 2', 'Beat 3'],
+    misconceptions: ['Misconception 1', 'Misconception 2'],
+    tips: ['Tip 1', 'Tip 2', 'Tip 3'],
+  }),
+  script: 'This is a podcast transcript',
 };
 
 describe('LessonMaterialsContainer', () => {
@@ -329,7 +331,12 @@ describe('LessonMaterialsContainer', () => {
         });
       } else if (path.includes('ai_lesson_summaries')) {
         return Promise.resolve({
-          value: {lesson_summary: JSON.stringify(lessonSummary)},
+          value: lessonSummary,
+          response: new Response(),
+        });
+      } else if (path.includes('unit_in_aif')) {
+        return Promise.resolve({
+          value: {aif: true},
           response: new Response(),
         });
       }
@@ -664,6 +671,8 @@ describe('LessonMaterialsContainer', () => {
   });
 
   describe('lesson summary', () => {
+    const summary = JSON.parse(LESSON_SUMMARY.lesson_summary);
+
     beforeEach(() => {
       store.dispatch(setShowAITALessonSummary(true));
     });
@@ -674,14 +683,14 @@ describe('LessonMaterialsContainer', () => {
 
       expect(screen.queryByText(i18n.audioSummary())).toBe(null);
       expect(screen.queryByText(i18n.teachingTips())).toBe(null);
-      expect(screen.queryByText(LESSON_SUMMARY.learning_objective)).toBe(null);
-      LESSON_SUMMARY.lesson_beats.forEach(beat =>
+      expect(screen.queryByText(summary.learning_objective)).toBe(null);
+      summary.lesson_beats.forEach((beat: string) =>
         expect(screen.queryByText(beat)).toBe(null)
       );
-      LESSON_SUMMARY.misconceptions.forEach(misconception =>
+      summary.misconceptions.forEach((misconception: string) =>
         expect(screen.queryByText(misconception)).toBe(null)
       );
-      LESSON_SUMMARY.tips.forEach(tip =>
+      summary.tips.forEach((tip: string) =>
         expect(screen.queryByText(tip)).toBe(null)
       );
     });
@@ -691,14 +700,14 @@ describe('LessonMaterialsContainer', () => {
 
       expect(screen.queryByText(i18n.audioSummary())).toBe(null);
       expect(screen.queryByText(i18n.teachingTips())).toBe(null);
-      expect(screen.queryByText(LESSON_SUMMARY.learning_objective)).toBe(null);
-      LESSON_SUMMARY.lesson_beats.forEach(beat =>
+      expect(screen.queryByText(summary.learning_objective)).toBe(null);
+      summary.lesson_beats.forEach((beat: string) =>
         expect(screen.queryByText(beat)).toBe(null)
       );
-      LESSON_SUMMARY.misconceptions.forEach(misconception =>
+      summary.misconceptions.forEach((misconception: string) =>
         expect(screen.queryByText(misconception)).toBe(null)
       );
-      LESSON_SUMMARY.tips.forEach(tip =>
+      summary.tips.forEach((tip: string) =>
         expect(screen.queryByText(tip)).toBe(null)
       );
     });
@@ -708,21 +717,16 @@ describe('LessonMaterialsContainer', () => {
 
       screen.getByText(i18n.audioSummary());
       screen.getByText(i18n.teachingTips());
-      screen.getByText(LESSON_SUMMARY.learning_objective);
-      LESSON_SUMMARY.lesson_beats.forEach(beat => screen.getByText(beat));
-      LESSON_SUMMARY.misconceptions.forEach(misconception =>
+      screen.getByText(summary.learning_objective);
+      summary.lesson_beats.forEach((beat: string) => screen.getByText(beat));
+      summary.misconceptions.forEach((misconception: string) =>
         screen.getByText(misconception)
       );
-      LESSON_SUMMARY.tips.forEach(tip => screen.getByText(tip));
+      summary.tips.forEach((tip: string) => screen.getByText(tip));
     });
 
     it('renders audio summary transcript dialog when transcript data is present', async () => {
-      const audioTranscript = [
-        {timeStamp: '0:00', text: 'First line of dialogue.'},
-        {timeStamp: '0:30', text: 'Second line of dialogue.'},
-        {timeStamp: '1:00', text: 'Third line of dialogue.'},
-      ];
-      store.dispatch(setAudioSummaryTranscript(audioTranscript));
+      store.dispatch(setShowAITAPodcasts(true));
 
       await renderDefault();
 
@@ -730,11 +734,7 @@ describe('LessonMaterialsContainer', () => {
 
       // Audio summary transcript dialog is present as well
       fireEvent.click(screen.getByText(i18n.transcript()));
-      screen.getByText(i18n.audioTranscript());
-      audioTranscript.forEach(transcriptLine => {
-        screen.getByText(transcriptLine.timeStamp);
-        screen.getByText(transcriptLine.text);
-      });
+      screen.getByText(LESSON_SUMMARY.script);
     });
 
     it('does not render audio component when experiment and DCDO flag are false', async () => {

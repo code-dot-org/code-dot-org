@@ -55,48 +55,4 @@ class TeacherDashboardControllerTest < ActionController::TestCase
     get :show, params: {section_id: cotaught_section.id}
     assert_response :success
   end
-
-  test 'redirect_to_newest_section: redirects to support URL if no sections instructed' do
-    other_teacher = create(:teacher)
-    sign_in other_teacher
-
-    get :redirect_to_newest_section_progress
-
-    assert_redirected_to 'https://support.code.org/hc/en-us/articles/25195525766669-Getting-Started-New-Progress-View'
-  end
-
-  test 'redirect_to_newest_section: redirects to newest section progress page if sections instructed' do
-    sign_in @section_owner
-
-    section = create(:section, user: @section_owner, created_at: 2.days.from_now)
-
-    get :redirect_to_newest_section_progress
-
-    assert_redirected_to "/teacher_dashboard/sections/#{section.id}/progress?view=v2"
-  end
-
-  test 'redirect_to_newest_section: redirects to newest section courses page if sections instructed' do
-    sign_in @section_owner
-    section = create(:section, user: @section_owner, created_at: 2.days.from_now)
-    get :redirect_to_newest_section, params: {location: "courses"}
-
-    assert_redirected_to "/teacher_dashboard/sections/#{section.id}/courses"
-  end
-
-  test 'redirect_to_newest_section: redirects to newest section calendar page if sections instructed' do
-    sign_in @section_owner
-    section = create(:section, user: @section_owner, created_at: 2.days.from_now)
-
-    get :redirect_to_newest_section, params: {location: "calendar"}
-
-    assert_redirected_to "/teacher_dashboard/sections/#{section.id}/calendar"
-  end
-
-  test 'redirect_to_newest_section: redirects to newest section lesson materials page if sections instructed' do
-    sign_in @section_owner
-    section = create(:section, user: @section_owner, created_at: 2.days.from_now)
-    get :redirect_to_newest_section, params: {location: "materials"}
-
-    assert_redirected_to "/teacher_dashboard/sections/#{section.id}/materials"
-  end
 end

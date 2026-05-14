@@ -1,5 +1,6 @@
 <Aichat>
   <config><![CDATA[{
+  "published": true,
   "game_id": 71,
   "created_at": "2025-04-14T23:15:27.000Z",
   "level_num": "custom",
@@ -42,13 +43,15 @@
       "multimodalEnabled": true
     },
     "starter_assets": {
-      "Pizza_Slice_Dataset.pdf": "7426a459-fd9e-4337-b339-24416586106b.pdf"
+      "Pizza Slices Dataset.pdf": "a02bb8ec-f90e-4e54-89a1-2abae2ac8210.pdf"
     },
     "display_name": "Analyze Data with AI",
     "bubble_choice_description": "Use AI Chat to analyze data from the pizza survey.",
-    "name_suffix": "_2025"
+    "name_suffix": "_2025",
+    "offer_browser_tts": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false"
   },
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2025-04-14T23:15:27.049+00:00\",\"changed\":[\"cloned from \\\"data_science_lesson2_ai_chat\\\"\"],\"cloned_from\":\"data_science_lesson2_ai_chat\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-04-14T23:15:27.049+00:00\",\"changed\":[\"cloned from \\\"data_science_lesson2_ai_chat\\\"\"],\"cloned_from\":\"data_science_lesson2_ai_chat\"},{\"changed_at\":\"2026-02-26 21:46:00 +0000\",\"changed\":[],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"}]"
 }]]></config>
 </Aichat>

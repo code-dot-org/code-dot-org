@@ -5,9 +5,9 @@ description 'description here'
 markdown <<MARKDOWN
 # APIs, JSON, and System Awareness
 
-#### When an app uses an API, it becomes part of a bigger system.
-#### That system includes the app, the API, and the server providing the data.
-#### This can make apps more powerful, but it also comes with tradeoffs.
+When an app uses an API, it becomes part of a bigger system.
+That system includes the app, the API, and the server providing the data.
+This can make apps more powerful, but it also comes with tradeoffs.
 
 ---
 
@@ -15,22 +15,22 @@ markdown <<MARKDOWN
 
 <img src="https://images.code.org/fe80ffcaf242fd209bba74e944c7b139-image-1770744758950.png" alt="icon of map with location pin" width="250px" style="border-radius:10px; float:right; margin: 0 0 40px 40px;">
 
-#### **External data integration** is the process of pulling live data from **outside** your app into your app.
-#### Instead of hard-coding information, the app retrieves it when needed.
+**External data integration** is the process of pulling live data from **outside** your app into your app.
+Instead of hard-coding information, the app retrieves it when needed.
 
-#### **Examples:**
-- #### A weather app showing today’s forecast  
-- #### A map app displaying real-time traffic  
-- #### A fitness app pulling step data from a device  
+**Examples:**
+- A weather app showing today’s forecast  
+- A map app displaying real-time traffic  
+- A fitness app pulling step data from a device  
 
-
+<div style="clear:both;"></div>
 
 ---
 
 
 ## What Data Often Looks Like: JSON
 
-#### When apps receive data from an API, it’s often in a format called **JSON**.
+When apps receive data from an API, it’s often in a format called **JSON**.
 
 <div style="background-color: #B7E0E5; border-radius: 10px; padding: 15px; margin: 20px auto; max-width: 85%; box-sizing: border-box; word-wrap: break-word; overflow-wrap: break-word;">
 <p style="font-size: 14pt; margin-top: 12px; line-height: 120%;">
@@ -38,11 +38,11 @@ markdown <<MARKDOWN
 </p>
 </div>
 
-#### JSON is designed to be:
-- #### Easy for humans to read
-- #### Easy for computers to generate
+JSON is designed to be:
+- Easy for humans to read
+- Easy for computers to generate
 
-#### **Example (Weather Data):**
+**Example (Weather Data):**
 
 <div style="background-color: #f2f2f2; border-radius: 8px; padding: 16px; margin: 20px auto; max-width: 85%; font-family: monospace;">
 <p style="font-size: 14pt; margin: 0; line-height: 1.4;">

@@ -1,11 +1,6 @@
-import Button from '@code-dot-org/component-library/button';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import Image from '@code-dot-org/component-library/image';
-import {
-  BodyTwoText,
-  BodyThreeText,
-  StrongText,
-} from '@code-dot-org/component-library/typography';
+import {Typography, Button as MuiButton} from '@mui/material';
 import classNames from 'classnames';
 import React, {useState} from 'react';
 
@@ -29,22 +24,31 @@ const FacilitatorItem: React.FC<{facilitator: FacilitatorInfo}> = ({
           )}
         </div>
         <div className={moduleStyles.workshopFacilitatorContactInfo}>
-          <BodyTwoText>
-            <StrongText>{facilitator.name}</StrongText>
-          </BodyTwoText>
-          <BodyThreeText>{facilitator.email}</BodyThreeText>
+          <Typography variant="body2" gutterBottom>
+            <Typography variant="strong">{facilitator.name}</Typography>
+          </Typography>
+          <Typography variant="body3" gutterBottom>
+            {facilitator.email}
+          </Typography>
         </div>
         {facilitator.bio && (
           <div>
-            <Button
-              type="tertiary"
-              size="s"
+            <MuiButton
+              variant="text"
+              color="primary"
+              size="small"
               className={moduleStyles.showBioButton}
-              text={showBio ? 'Hide biography' : 'Show biography'}
-              iconRight={{iconName: showBio ? 'chevron-up' : 'chevron-down'}}
               onClick={() => handleShowBio(!showBio)}
+              type="button"
               aria-expanded={showBio}
-            />
+              endIcon={
+                <FontAwesomeV6Icon
+                  iconName={showBio ? 'chevron-up' : 'chevron-down'}
+                />
+              }
+            >
+              {showBio ? 'Hide biography' : 'Show biography'}
+            </MuiButton>
           </div>
         )}
       </div>
@@ -55,7 +59,9 @@ const FacilitatorItem: React.FC<{facilitator: FacilitatorInfo}> = ({
             !showBio && moduleStyles.hidden
           )}
         >
-          <BodyThreeText>{facilitator.bio}</BodyThreeText>
+          <Typography variant="body3" gutterBottom>
+            {facilitator.bio}
+          </Typography>
         </div>
       )}
     </div>

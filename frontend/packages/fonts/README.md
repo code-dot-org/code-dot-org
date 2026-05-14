@@ -35,20 +35,32 @@ If you are looking to update the FontAwesome files in the `injectFontAwesome` fu
    This should produce a download of a superset of files you'll need to upload to S3 (we only use the css and webfont directories).
 2. **Use "Host Yourself - Webfonts" instructions** [here](https://fontawesome.com/docs/web/setup/host-yourself/webfonts).
    Supplement with the "Version 4 Compatibility" instructions listed there as well. [link](https://fontawesome.com/docs/web/setup/host-yourself/webfonts#version-4-compatibility)
-3. Once you've downloaded the kit, **updated relative paths**
-   for font files listed in CSS to be absolute paths to URLs storing font files, and uploaded them to a S3 bucket where we can access them.
-   I've timestamped the folder location in S3 such that a developer can upload an updated set of files without affecting production.
-4. **Updated CORS configuration on `cdo-dsco` bucket**
-   to allow fetching of these files across code.org, studio.code.org, and hourofcode.com.
-   More documentation on those changes are in [this Slack thread](https://codedotorg.slack.com/archives/C03CK49G9/p1681500978173639).
-5. If you're modifying custom fontawesome icons (i.e. 'kit' icons), make sure the list in `frontend/packages/component-library/src/fontAwesomeV6Icon/constants/index.ts` is up to date as well as the FontAwesome storybook `frontend/packages/component-library/src/fontAwesomeV6Icon/stories/FontAwesomeV6Icon.story.tsx` If any are being removed, you might want to search the codebase for any usages of those icons to avoid regressions.
+3. Once you've downloaded the kit, **look up the current unix timestamp and update relative paths for font files listed in CSS to be absolute paths** to URLs where the font files will be located. You'll only need to upload the `css` and `webfonts` directories. You'll upload them to `cdo-dsco` bucket -- see an example of how updated CSS would look with absolute paths, and the folder structure in S3.
 
-At time of writing, these files were referenced in the following places:
+**Example CSS with absolute paths**
+
+```
+@font-face {
+  font-family: "Font Awesome Kit";
+  font-style: normal;
+  font-display: block;
+  src: url("https://dsco.code.org/assets/font-awesome-pro/1771519720295/webfonts/custom-icons.woff2") format("woff2");
+}
+```
+
+**Example S3 folder structure (cdo-dsco/assets/font-awesome-pro/[unix timestamp], with css and webfonts directories)**
+
+<img width="1674" height="408" alt="image" src="https://github.com/user-attachments/assets/da1ea1c6-18ac-4fc2-ba5c-c3be697f140a" />
+
+4. If you're modifying custom fontawesome icons (i.e. 'kit' icons), make sure the list in `frontend/packages/component-library/src/fontAwesomeV6Icon/constants/index.ts` is up to date as well as the FontAwesome storybook `frontend/packages/component-library/src/fontAwesomeV6Icon/stories/FontAwesomeV6Icon.story.tsx` If any are being removed, you might want to search the codebase for any usages of those icons to avoid regressions.
+
+If we end up changing the location of these files in S3 outside of the `cdo-dsco` bucket, we may need to update CORS settings. More documentation on those changes are in [this Slack thread](https://codedotorg.slack.com/archives/C03CK49G9/p1681500978173639).
+
+As of April 2026, these files were referenced in the following places:
 
 **Hard coded strings**
 
 - Applab Exporter: apps/src/applab/Exporter.js
-- hourofcode.com: pegasus/sites.v3/hourofcode.com/styles/030-font-awesome-min.css
 
 **Usages of shared strings**
 

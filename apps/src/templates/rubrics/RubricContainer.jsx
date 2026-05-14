@@ -1,4 +1,4 @@
-import {Heading6} from '@code-dot-org/component-library/typography';
+import {Typography} from '@mui/material';
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
 import React, {useCallback, useEffect, useState, useRef} from 'react';
@@ -445,7 +445,9 @@ const HeaderTab = ({text, isSelected, onClick}) => {
       onClick={onClick}
       type="button"
     >
-      <Heading6>{text}</Heading6>
+      <Typography variant="h6" gutterBottom>
+        {text}
+      </Typography>
     </button>
   );
 };

@@ -36,6 +36,7 @@ class ActivityCard extends Component {
     collapsed: PropTypes.bool.isRequired,
     hasLessonPlan: PropTypes.bool.isRequired,
     allowMajorCurriculumChanges: PropTypes.bool.isRequired,
+    rubricLevelId: PropTypes.number,
 
     //redux
     addActivitySection: PropTypes.func.isRequired,
@@ -84,6 +85,17 @@ class ActivityCard extends Component {
     );
   };
 
+  hasRubricLevel = () => {
+    const {activity, rubricLevelId} = this.props;
+    if (!rubricLevelId) return false;
+
+    return activity.activitySections.some(activitySection =>
+      activitySection.scriptLevels.some(
+        scriptLevel => String(rubricLevelId) === String(scriptLevel.activeId)
+      )
+    );
+  };
+
   render() {
     const {
       activity,
@@ -93,6 +105,7 @@ class ActivityCard extends Component {
       updateActivitySectionMetrics,
       hasLessonPlan,
       allowMajorCurriculumChanges,
+      rubricLevelId,
     } = this.props;
 
     let levelsInActivity = 0;
@@ -113,7 +126,9 @@ class ActivityCard extends Component {
               {hasLessonPlan && (
                 <div>
                   <FontAwesome
-                    icon={this.props.collapsed ? 'expand' : 'compress'}
+                    icon={
+                      this.props.collapsed ? 'chevron-right' : 'chevron-down'
+                    }
                     onClick={this.props.handleCollapse}
                   />
                   <label style={styles.labelAndInput}>
@@ -146,6 +161,7 @@ class ActivityCard extends Component {
                   remove={this.handleRemoveActivity}
                   item={this.props.activity}
                   itemType={'activity'}
+                  isDeleteable={!this.hasRubricLevel()}
                 />
               )}
           </div>
@@ -174,6 +190,7 @@ class ActivityCard extends Component {
                 updateActivitySectionMetrics={updateActivitySectionMetrics}
                 hasLessonPlan={hasLessonPlan}
                 allowMajorCurriculumChanges={allowMajorCurriculumChanges}
+                rubricLevelId={rubricLevelId}
               />
 
               <button
@@ -185,7 +202,10 @@ class ActivityCard extends Component {
                 type="button"
                 key={section.key + 'add'}
               >
-                <i style={{marginRight: 7}} className="fa fa-plus-circle" />
+                <i
+                  style={{marginRight: 7}}
+                  className="fa-solid fa-circle-plus"
+                />
                 Activity Section
               </button>
             </React.Fragment>

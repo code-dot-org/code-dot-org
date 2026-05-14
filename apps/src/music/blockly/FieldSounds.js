@@ -180,7 +180,10 @@ class FieldSounds extends BlocklyCore.Field {
         }}
         onSelect={value => this.setValue(value)}
       />,
-      this.newDiv_
+      this.newDiv_,
+      {
+        legacyReactDomRender: true,
+      }
     );
   }
 

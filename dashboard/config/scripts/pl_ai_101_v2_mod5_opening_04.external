@@ -1,0 +1,159 @@
+name 'pl-ai-101-V2-mod5-opening-04'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Ethical Scenarios
+
+These strategies are most useful when applied in real situations. The scenarios below highlight common moments where ethical questions may arise during classroom activities.
+
+>#### **💬 Quick Reflection:** As you read each scenario, consider how you might respond in the moment.
+
+👉 Click on the scenario to reveal some additional thoughts to further your own reflection.
+
+---
+
+<div style="max-width:900px; margin:20px auto; font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif; color:#292F36;">
+
+<details style="margin-bottom:12px; border:1px solid #D9DDE3; border-radius:10px; overflow:hidden;">
+<summary style="cursor:pointer; padding:16px 18px; background-color:#F7F8FA; list-style:none;">
+<div style="font-size:18px; font-weight:600; margin-bottom:6px;">
+Scenario 1
+</div>
+<div style="font-size:16px; color:#555; margin-bottom:10px;">
+Your class is using an AI chatbot for the first time.<br><br>
+A student asks: <i>If using AI takes a lot of energy, should we avoid it? Are we hurting the environment just by doing this assignment?</i><br><br>
+The question makes classmates uneasy and unsure how to respond.
+</div>
+</summary>
+
+<div style="padding:18px; font-size:18px; line-height:1.5;">
+
+<p style="font-size:16px;"><strong>Acknowledge Uncertainty</strong></p>
+
+<p style="font-size:16px;">Help students sit with the “gray areas.” Use this moment to show that ethical questions about technology rarely have simple answers. You might say:</p>
+
+<p style="font-size:16px;"><i>AI uses energy, and researchers are still studying how much different types of AI contribute to environmental impact. At the same time, AI can support learning, creativity, and problem-solving. So we make decisions by weighing benefits and costs, even when the information isn't perfect.</i></p>
+
+<p style="font-size:16px;">Then help students think about responsible use by asking:</p>
+
+<ul style="font-size:16px; margin-top:6px;">
+<li>When does using an AI tool add enough value to justify its energy use?</li>
+<li>When might a simpler tool or approach work just as well?</li>
+<li>How can we stay aware of environmental impact without feeling discouraged or powerless?</li>
+</ul>
+
+<p style="font-size:16px;">Reinforce that uncertainty doesn’t stop us from acting responsibly—it encourages us to:</p>
+
+<ul style="font-size:16px; margin-top:6px;">
+<li>Use technology with intention rather than habit</li>
+<li>Stay curious about how tools work and how they evolve</li>
+<li>Keep balancing environmental awareness with learning goals and real needs</li>
+</ul>
+
+</div>
+</details>
+
+<br>
+</div>
+
+<div style="max-width:900px; margin:20px auto; font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif; color:#292F36;">
+
+<details style="margin-bottom:12px; border:1px solid #D9DDE3; border-radius:10px; overflow:hidden;">
+<summary style="cursor:pointer; padding:16px 18px; background-color:#F7F8FA; list-style:none;">
+<div style="font-size:18px; font-weight:600; margin-bottom:6px;">
+Scenario 2
+</div>
+<div style="font-size:16px; color:#555; margin-bottom:10px;">
+After watching a video about facial recognition—showing its use in unlocking phones, airport security, policing, and retail—students react strongly.<br><br>
+Some say, <i>This is scary and should be banned.</i><br>
+Others argue, <i>It can catch criminals or find missing people, so we should use it.</i><br><br>
+The class splits into “all bad” versus “all good.”
+</div>
+</summary>
+
+<div style="padding:18px; font-size:18px; line-height:1.5;">
+
+<p style="font-size:16px;"><strong>Encourage Multiple Perspectives</strong></p>
+
+<p style="font-size:16px;">Move from “good vs. bad” to “who and when?”</p>
+
+<p style="font-size:16px;">List the contexts shown in the video:</p>
+<ul style="font-size:16px;">
+<li>Unlocking phones</li>
+<li>Airport/border security</li>
+<li>Law enforcement</li>
+<li>Advertising and retail</li>
+</ul>
+
+<p style="font-size:16px;">Next, assign stakeholder roles:</p>
+<ul style="font-size:16px;">
+<li>A teenager unlocking their phone</li>
+<li>A store owner trying to prevent theft</li>
+<li>A person misidentified due to system bias</li>
+<li>A community concerned about constant surveillance</li>
+</ul>
+
+<p style="font-size:16px;">Discussion prompts:</p>
+<ul style="font-size:16px;">
+<li>Who benefits most in each situation?</li>
+<li>Who carries the biggest risks?</li>
+<li>Are there contexts where most stakeholders would support it? Where they wouldn’t?</li>
+</ul>
+
+<p style="font-size:16px;">Students discover that facial recognition can be <b>both helpful and harmful</b>, depending on whose experience you focus on and the conditions of its use.</p>
+
+</div>
+</details>
+
+<br>
+</div>
+
+<div style="max-width:900px; margin:20px auto; font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif; color:#292F36;">
+
+<details style="margin-bottom:12px; border:1px solid #D9DDE3; border-radius:10px; overflow:hidden;">
+<summary style="cursor:pointer; padding:16px 18px; background-color:#F7F8FA; list-style:none;">
+<div style="font-size:18px; font-weight:600; margin-bottom:6px;">
+Scenario 3
+</div>
+<div style="font-size:16px; color:#555; margin-bottom:10px;">
+During a lesson on algorithms, students learn how social media platforms decide what to show them based on past likes, clicks, comments, and watch time.<br><br>
+You show how two users following the same accounts can still see very different feeds.<br><br>
+Some students say, <i>This is great—I see content I like!</i><br>
+Others say, <i>It manipulates people and hides important information.</i>
+</div>
+</summary>
+
+<div style="padding:18px; font-size:18px; line-height:1.5;">
+
+<p style="font-size:16px;"><strong>Use “What-If” Scenarios</strong></p>
+
+<p style="font-size:16px;">Stretch thinking with thought experiments. Ask questions such as:</p>
+
+<ul style="font-size:16px;">
+<li>What if the algorithm prioritized content that keeps people angry because that increases engagement?</li>
+<li>What if users could switch between different feed modes:
+  <ul>
+    <li>Chronological only</li>
+    <li>Diverse viewpoints</li>
+    <li>Friends and family first</li>
+  </ul>
+</li>
+<li>What if platforms had to label why each post was shown (e.g., “Because you liked similar videos,” “Paid promotion”)?</li>
+</ul>
+
+<p style="font-size:16px;">Follow-up questions:</p>
+<ul style="font-size:16px;">
+<li>How might each change influence what people believe?</li>
+<li>Who benefits or loses under each scenario?</li>
+<li>Would the platform feel more trustworthy?</li>
+</ul>
+
+<p style="font-size:16px;">What-if scenarios help students recognize that algorithmic feeds are <b>design choices</b>, not neutral systems—and that alternative designs could lead to very different social outcomes.</p>
+
+</div>
+</details>
+
+<br>
+</div>
+MARKDOWN

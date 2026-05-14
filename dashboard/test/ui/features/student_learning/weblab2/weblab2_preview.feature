@@ -10,12 +10,16 @@ Feature: Web Lab 2 Preview
 @no_ci
 Scenario: Web Lab 2 Preview loads
   Given I create a student named "Penelope"
-  When I am on "http://studio.code.org/courses/allthethingscourse/units/1/lessons/51/levels/11"
+  When I am on "http://studio.code.org/courses/allthethingscourse/units/1/lessons/51/levels/11?hideProductTours=true"
   And I wait until element "#preview" is visible
   And I switch to the iframe "#preview"
   And I wait until element "#codeprojects-preview-container" is visible
+  And I wait until element "#inner-preview" is visible
   And I switch to the iframe "#inner-preview"
   And I wait to see element with ID "hello-world-message"
+  # jquery is unavailable inside the iframe, so use an explicit wait insteaad.
+  And I wait for 5 seconds
   Then element with ID "hello-world-message" contains text "Hello world!"
+
   And I switch to the default content
   And I sign out

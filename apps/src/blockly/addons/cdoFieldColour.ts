@@ -55,7 +55,7 @@ export default class CdoFieldColour extends FieldColour {
 
   /**
    * Create and show the colour field's editor.
-   * Artist modifies blockly.FieldColour.COLOURS and blockly.FieldColour.COLUMNS directly.
+   * Artist modifies CdoFieldColour.COLOURS and CdoFieldColour.COLUMNS directly.
    * Therefore, wait to read these values until we need to create the field dropdown.
    * For pre-reader blocks (CSF Course A-B, Course 1 and Pre-Reader Express), we add a
    * class to manually increase the size of the field.

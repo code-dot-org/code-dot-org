@@ -3,7 +3,7 @@ import React, {useEffect, useMemo, useState} from 'react';
 import {connect} from 'react-redux';
 
 import Button from '@cdo/apps/legacySharedComponents/Button';
-import {EVENTS, PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants';
+import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import {setUserAiEvalStatus} from '@cdo/apps/templates/rubrics/teacherRubricRedux';
 import {RubricAiEvaluationStatus} from '@cdo/generated-scripts/sharedConstants';
@@ -171,15 +171,11 @@ function RunAIAssessmentButton({
     const url = `/rubrics/${rubricId}/run_ai_evaluations_for_user`;
     const params = {user_id: studentUserId};
     const eventName = EVENTS.TA_RUBRIC_INDIVIDUAL_AI_EVAL;
-    analyticsReporter.sendEvent(
-      eventName,
-      {
-        ...(reportingData || {}),
-        rubricId: rubricId,
-        studentId: studentUserId,
-      },
-      PLATFORMS.STATSIG
-    );
+    analyticsReporter.sendEvent(eventName, {
+      ...(reportingData || {}),
+      rubricId: rubricId,
+      studentId: studentUserId,
+    });
     fetch(url, {
       method: 'POST',
       headers: {
@@ -206,7 +202,7 @@ function RunAIAssessmentButton({
             style={{margin: 0}}
             disabled={status !== STATUS.READY && status !== STATUS.ERROR}
           >
-            {polling && <i className="fa fa-spinner fa-spin" />}
+            {polling && <i className="fa-solid fa-spinner fa-spin" />}
           </Button>
         </div>
       )}

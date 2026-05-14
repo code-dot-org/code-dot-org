@@ -51,7 +51,7 @@ module Cdo::CloudFormation
     def initialize(**options)
       options[:stack_name]  ||= CDO.stack_name
       options[:filename]    ||= 'cloud_formation_stack.yml.erb'
-      super(**options)
+      super
       options = @options = OpenStruct.new(options)
 
       # For adhoc stacks only (for now), preserve initial options via 'Op:' CloudFormation tags
@@ -234,7 +234,7 @@ To specify an alternate branch name, run `rake adhoc:start branch=BRANCH`."
     private def read_existing_stack_op_tags
       client = Aws::CloudFormation::Client.new
       tags = client.describe_stacks(stack_name: stack_name).
-                  stacks.first.tags
+        stacks.first.tags
       tags.each_with_object({}) do |t, memo|
         next unless t.key.start_with?('Op:')
         raw_key = t.key.delete_prefix('Op:')

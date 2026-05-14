@@ -416,6 +416,7 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
       uid: user.primary_contact_info.authentication_id
     @request.env['omniauth.auth'] = auth
     @request.env['omniauth.params'] = {}
+    user.expects(:verify_teacher!).never
     assert_does_not_create(User) do
       get :clever
     end
@@ -425,15 +426,75 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
     assert_equal user.id, signed_in_user_id
   end
 
-  test 'clever: signs in user if user is found by legacy_id' do
-    legacy_id = SecureRandom.alphanumeric(10)
-    user = create(:teacher)
-    create(
-      :authentication_option,
-      user: user,
-      credential_type: AuthenticationOption::CLEVER,
-      authentication_id: legacy_id
+  test 'clever: verifies unverified teacher on sign in with Clever teacher role' do
+    user = create(:teacher, :with_clever_authentication_option)
+    clever_auth_option = user.authentication_options.find_by(credential_type: AuthenticationOption::CLEVER)
+    refute user.verified_teacher?
+
+    auth = generate_auth_user_hash(
+      provider: AuthenticationOption::CLEVER,
+      uid: clever_auth_option.authentication_id
     )
+    auth.extra[:raw_info][:canonical] = {data: {roles: {teacher: {legacy_id: '123456'}}}}
+    @request.env['omniauth.auth'] = auth
+    @request.env['omniauth.params'] = {}
+
+    assert_difference('UserPermission.count', 1) do
+      get :clever
+    end
+
+    assert_equal user.id, signed_in_user_id
+    assert User.find(user.id).verified_teacher?
+  end
+
+  test 'clever: does not duplicate verification for already verified teacher on sign in' do
+    user = create(:authorized_teacher, :with_clever_authentication_option)
+    clever_auth_option = user.authentication_options.find_by(credential_type: AuthenticationOption::CLEVER)
+
+    auth = generate_auth_user_hash(
+      provider: AuthenticationOption::CLEVER,
+      uid: clever_auth_option.authentication_id
+    )
+    auth.extra[:raw_info][:canonical] = {data: {roles: {teacher: {legacy_id: '123456'}}}}
+    @request.env['omniauth.auth'] = auth
+    @request.env['omniauth.params'] = {}
+    user.expects(:verify_teacher!).never
+
+    assert_no_difference('UserPermission.count') do
+      get :clever
+    end
+
+    assert_equal user.id, signed_in_user_id
+    assert User.find(user.id).verified_teacher?
+  end
+
+  test 'clever: verifies unverified teacher on sign in with Clever staff role' do
+    user = create(:teacher, :with_clever_authentication_option)
+    clever_auth_option = user.authentication_options.find_by(credential_type: AuthenticationOption::CLEVER)
+    refute user.verified_teacher?
+
+    auth = generate_auth_user_hash(
+      provider: AuthenticationOption::CLEVER,
+      uid: clever_auth_option.authentication_id
+    )
+    auth.extra[:raw_info][:canonical] = {data: {roles: {staff: {legacy_id: '123456'}}}}
+    @request.env['omniauth.auth'] = auth
+    @request.env['omniauth.params'] = {}
+
+    assert_difference('UserPermission.count', 1) do
+      get :clever
+    end
+
+    assert_equal user.id, signed_in_user_id
+    assert User.find(user.id).verified_teacher?
+  end
+
+  test 'clever: signs in user and updates auth option if user is found by legacy_id' do
+    legacy_id = SecureRandom.alphanumeric(10)
+    user = create(:teacher, :with_clever_authentication_option)
+    auth_option = user.authentication_options.find_by(credential_type: AuthenticationOption::CLEVER)
+    refute_equal AuthenticationOption::Clever::VERSION[:v3], auth_option.version
+    auth_option.update!(authentication_id: legacy_id)
 
     auth = generate_auth_user_hash \
       provider: AuthenticationOption::CLEVER,
@@ -442,12 +503,17 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
 
     @request.env['omniauth.auth'] = auth
     @request.env['omniauth.params'] = {}
-    assert_does_not_create(User) do
-      get :clever
+    assert_no_difference('AuthenticationOption.count') do
+      assert_does_not_create(User) do
+        get :clever
+      end
     end
 
     user.reload
+    auth_option.reload
     assert_equal user.id, signed_in_user_id
+    assert_equal auth[:uid], auth_option.authentication_id
+    assert_equal AuthenticationOption::Clever::VERSION[:v3], auth_option.version
   end
 
   test 'clever: updates tokens when unmigrated user is found by credentials' do
@@ -1414,7 +1480,7 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
     # Verify takeover completed
     malformed_account.reload
     assert_equal AuthenticationOption::GOOGLE, malformed_account.provider
-    assert_equal  uid, malformed_account.uid
+    assert_equal uid, malformed_account.uid
 
     # Verify the account has an email and is now well-formed
     assert_equal email, malformed_account.email
@@ -1448,7 +1514,7 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
     # Verify takeover completed
     student.reload
     assert_equal AuthenticationOption::GOOGLE, student.provider
-    assert_equal  uid, student.uid
+    assert_equal uid, student.uid
 
     # Verify the account has an email and is now well-formed
     assert_empty student.email
@@ -1628,6 +1694,61 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
       it 'signs in the existing user' do
         classlink_req
         _(existing_user.id).must_equal signed_in_user_id
+      end
+
+      it 'verifies an unverified teacher' do
+        refute existing_user.verified_teacher?
+
+        assert_difference('UserPermission.count', 1) do
+          classlink_req
+        end
+
+        assert User.find(existing_user.id).verified_teacher?
+      end
+    end
+
+    context 'when teacher already verified' do
+      subject(:existing_user) {create(:authorized_teacher, :classlink_sso_provider, uid: TEST_CLASSLINK_AUTH_HASH.uid)}
+      let(:classlink_req) {get :classlink}
+
+      before do
+        request.env['omniauth.auth'] = TEST_CLASSLINK_AUTH_HASH
+        request.env['omniauth.params'] = {}
+        existing_user
+      end
+
+      it 'does not duplicate verification' do
+        existing_user.expects(:verify_teacher!).never
+        assert_no_difference('UserPermission.count') do
+          classlink_req
+        end
+
+        assert User.find(existing_user.id).verified_teacher?
+      end
+    end
+
+    context 'when student' do
+      subject(:existing_user) {create(:student, :classlink_sso_provider, uid: TEST_CLASSLINK_AUTH_HASH.uid)}
+      let(:student_auth_hash) do
+        auth_hash = TEST_CLASSLINK_AUTH_HASH.dup
+        auth_hash.extra.raw_info.role = 'Student'
+        auth_hash
+      end
+      let(:classlink_req) {get :classlink}
+
+      before do
+        request.env['omniauth.auth'] = student_auth_hash
+        request.env['omniauth.params'] = {}
+        existing_user
+      end
+
+      it 'does not verify the student' do
+        existing_user.expects(:verify_teacher!).never
+        assert_no_difference('UserPermission.count') do
+          classlink_req
+        end
+
+        refute User.find(existing_user.id).verified_teacher?
       end
     end
   end
@@ -1823,6 +1944,55 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
         end
       end
     end
+  end
+
+  test 'opted-out LTI partial registration does not trigger account linking' do
+    user = create(:teacher)
+    lti_integration = create(:lti_integration)
+    provider_auth_option = create(
+      :authentication_option,
+      user: user,
+      email: user.email,
+      hashed_email: user.hashed_email,
+      credential_type: AuthenticationOption::GOOGLE,
+      authentication_id: SecureRandom.uuid,
+      data: {
+        oauth_token: 'some-google-token',
+        oauth_refresh_token: 'some-google-refresh-token',
+        oauth_token_expiration: '999999'
+      }.to_json
+    )
+    partial_lti_teacher = create(:teacher, lms_landing_opted_out: true)
+    partial_lti_teacher.authentication_options = [
+      AuthenticationOption.new(
+        authentication_id: Services::Lti::AuthIdGenerator.new(
+          {iss: lti_integration.issuer, aud: lti_integration.client_id, sub: 'foo'}
+        ).call,
+        credential_type: AuthenticationOption::LTI_V1,
+        email: user.email,
+      )
+    ]
+
+    @controller.stubs(:account_linking_lock_reason).with(user).returns(nil)
+    @request.env['omniauth.auth'] = generate_auth_user_hash(
+      provider: AuthenticationOption::GOOGLE,
+      uid: provider_auth_option.authentication_id
+    )
+    @request.env['omniauth.params'] = {}
+    PartialRegistration.persist_attributes(session, partial_lti_teacher)
+
+    Metrics::Events.expects(:log_event).with(
+      has_entries(
+        user: user,
+        event_name: 'lti_account_linked'
+      )
+    ).never
+
+    get :google_oauth2
+
+    user.reload
+    _(user.authentication_options.count).must_equal 2
+    _(user.lti_user_identities.count).must_equal 0
   end
 
   describe '#register_new_user' do

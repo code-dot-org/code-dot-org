@@ -8,8 +8,8 @@
 # EXAMPLES:
 #   bin/pumactl_admin stats
 #   bin/pumactl_admin stats --query="booted_workers"
-#   bin/pumactl_admin stats --query="worker_status[0].last_status.backlog"
-#   bin/pumactl_admin stats --query="worker_status[?pid == \`433276\`].last_status.backlog | [0]"
+#   bin/pumactl_admin stats --query="reverse(sort_by(worker_status, &last_status.backlog))[].{pid: pid, backlog: last_status.backlog}" # Find the child puma process with worst/longest backlog.
+#   bin/pumactl_admin stats --query="worker_status[?pid == \`433276\`].last_status.backlog | [0]" # Get the backlog for a specific child puma process (`433276`).
 #   bin/pumactl_admin stats --query="length(worker_status)"
 #   bin/pumactl_admin phased-restart
 #   bin/pumactl_admin thread-backtraces   # Only outputs for parent puma process threads.

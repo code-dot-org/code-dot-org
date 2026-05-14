@@ -5,16 +5,16 @@ description 'description here'
 markdown <<MARKDOWN
 # Begin with the End in Mind: Final Project Overview
 
-#### Let's take a moment to *begin with the end in mind* by taking a look at the Final Project for this Unit.
+Let's take a moment to *begin with the end in mind* by taking a look at the Final Project for this Unit.
 
 ## Multi-Page Web Application
 
-#### In this project, students take on the role of web designers to create a multi-page digital magazine for a fictional user or community.
+In this project, students take on the role of web designers to create a multi-page digital magazine for a fictional user or community.
 
 <div style="display: flex; align-items: center; justify-content: space-between; background: #f7f8fa; padding: 20px; border-radius: 10px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); font-size: 14pt; line-height: 1.6; max-width: 800px; margin: 20px auto;">
 
   <div>
-    <h4 style="margin-top: 0; font-weight: bold">Students willl:</h4>
+    <p>Students willl:</p>
     <ul style="list-style-type: disc; padding-left: 10px; font-size: 14pt">
       <li>Identify their target audience and brand.
 </li> <br>
@@ -31,23 +31,25 @@ markdown <<MARKDOWN
   </div>
 </div>
 
-#### In this example, the student designed a web app to showcase local events and activities in their town.
+## Example Project
+
+In this example, the student designed a web app to showcase local events and activities in their town.
 
 <img src="https://images.code.org/0fa53a5cbf5480e4c10f9f2bc406506f-image-1765910932701.png" alt="Sample student project of a website giving informaiton about events happening locally in their community" width="850px" style="display: block; margin-left: auto; margin-right: auto;">
 
 ---
 
 ## Primary Concepts Practiced
-####✅ User-centered design
-####✅ Wireframing and decomposition
-####✅ Brand identity
-####✅ Accessibility and responsiveness
-#### ✅Prompt engineering and evaluating AI output
+✅ User-centered design
+✅ Wireframing and decomposition
+✅ Brand identity
+✅ Accessibility and responsiveness
+✅Prompt engineering and evaluating AI output
 
 
 ## Project Criteria Used for Evaluation
 
-#### This project lets students apply their design and coding skills in a creative, authentic way while learning how AI can support the web development process.
+This project lets students apply their design and coding skills in a creative, authentic way while learning how AI can support the web development process.
 
 <div style="display:flex; justify-content:center; gap:16px; flex-wrap:wrap;">
 

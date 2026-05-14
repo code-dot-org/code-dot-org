@@ -13,7 +13,7 @@ import MigrateToMultiAuth from '@cdo/apps/accounts/MigrateToMultiAuth';
 import RemoveParentEmailController from '@cdo/apps/accounts/RemoveParentEmailController';
 import {SchoolInformation} from '@cdo/apps/accounts/SchoolInformation';
 import TurnOffAiDiff from '@cdo/apps/accounts/TurnOffAiDiff';
-import {EVENTS, PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants';
+import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import {getStore} from '@cdo/apps/redux';
 import LockoutLinkedAccounts from '@cdo/apps/templates/policy_compliance/LockoutLinkedAccounts';
@@ -49,7 +49,10 @@ $(document).ready(() => {
       <Provider store={store}>
         <MigrateToMultiAuth />
       </Provider>,
-      migrateMultiAuthMountPoint
+      migrateMultiAuthMountPoint,
+      {
+        legacyReactDomRender: true,
+      }
     );
   }
 
@@ -59,7 +62,10 @@ $(document).ready(() => {
   if (accountInformationMountPoint) {
     createReactRoot(
       <AccountInformation {...scriptData} />,
-      accountInformationMountPoint
+      accountInformationMountPoint,
+      {
+        legacyReactDomRender: true,
+      }
     );
   }
 
@@ -68,7 +74,10 @@ $(document).ready(() => {
   if (schoolInformationMountPoint) {
     createReactRoot(
       <SchoolInformation {...scriptData} />,
-      schoolInformationMountPoint
+      schoolInformationMountPoint,
+      {
+        legacyReactDomRender: true,
+      }
     );
   }
 
@@ -120,7 +129,10 @@ $(document).ready(() => {
         formId={'lti-sync-settings-form'}
         lmsName={lmsName}
       />,
-      ltiSyncSettingsMountPoint
+      ltiSyncSettingsMountPoint,
+      {
+        legacyReactDomRender: true,
+      }
     );
   }
 
@@ -154,7 +166,10 @@ $(document).ready(() => {
         )}
         usState={lockoutLinkedAccountsMountPoint.getAttribute('data-us-state')}
       />,
-      lockoutLinkedAccountsMountPoint
+      lockoutLinkedAccountsMountPoint,
+      {
+        legacyReactDomRender: true,
+      }
     );
   }
 
@@ -166,7 +181,10 @@ $(document).ready(() => {
       <Provider store={store}>
         <TurnOffAiDiff />
       </Provider>,
-      turnOffAiDiffMountPoint
+      turnOffAiDiffMountPoint,
+      {
+        legacyReactDomRender: true,
+      }
     );
   }
 
@@ -196,15 +214,16 @@ $(document).ready(() => {
         hasStudents={dependentStudentsCount > 0}
         isAdmin={isAdmin}
       />,
-      deleteAccountMountPoint
+      deleteAccountMountPoint,
+      {
+        legacyReactDomRender: true,
+      }
     );
   }
 
-  analyticsReporter.sendEvent(
-    EVENTS.ACCOUNT_SETTINGS_PAGE_VISITED,
-    {'user type': userType},
-    PLATFORMS.STATSIG
-  );
+  analyticsReporter.sendEvent(EVENTS.ACCOUNT_SETTINGS_PAGE_VISITED, {
+    'user type': userType,
+  });
 
   initializeCreatePersonalAccountControls();
 });

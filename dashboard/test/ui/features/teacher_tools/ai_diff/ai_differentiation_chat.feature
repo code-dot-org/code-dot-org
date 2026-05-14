@@ -2,6 +2,9 @@
 @no_firefox
 @no_mobile
 Feature: Send and receive messages in the AI differentiation chat
+  # Was asked to disable the AITA welcome experience without removing any code.
+  # Skipping this test and commenting out references to welcome experience until further notice
+  @skip
   @eyes
   @chrome
   Scenario: Teacher sees welcome screen for AI Differentiation
@@ -19,7 +22,7 @@ Feature: Send and receive messages in the AI differentiation chat
     And I wait until element "button:contains(Get Started)" is not visible
 
     #Go to curriculum page
-    And I am on "http://studio.code.org/courses/csp-2025"
+    And I am on "http://studio.code.org/courses/ui-test-artist"
     And I wait until element "#ui-floatingActionButton" is visible
     #wait for pulse to finish
     And I wait for 5 seconds
@@ -77,14 +80,14 @@ Feature: Send and receive messages in the AI differentiation chat
     And I get debug info for the current user
     And I am on "http://studio.code.org/teacher_dashboard/home"
     And element "#sign_in_or_user" contains text "Stilgar"
-    And I am on "http://studio.code.org/courses/csp-2025/units/4"
+    And I am on "http://studio.code.org/courses/ui-test-artist/units/1"
     And I wait until element "#ui-floatingActionButton" is visible
 
     # Teacher sees and skips AI Diff chat welcome
-    And I wait until element "button:contains(Get Started)" is visible
-    And I click selector "button:contains(Get Started)"
-    And I wait until element "button:contains(Create)" is visible
-    And I click selector "a:contains('Skip the tutorial')"
+    # And I wait until element "button:contains(Get Started)" is visible
+    # And I click selector "button:contains(Get Started)"
+    # And I wait until element "button:contains(Create)" is visible
+    # And I click selector "a:contains('Skip the tutorial')"
 
     # Typing a chat message
     And I click selector "#uitest-chat-textarea" once I see it
@@ -117,9 +120,9 @@ Feature: Send and receive messages in the AI differentiation chat
     And element "#ui-floatingActionButton" is visible
 
     # Teacher sees and skips AI Diff chat welcome
-    And I wait until element "button:contains(Get Started)" is visible
-    And I click selector "button:contains(Get Started)"
-    And I click selector "a:contains('Skip the tutorial')" once I see it
+    # And I wait until element "button:contains(Get Started)" is visible
+    # And I click selector "button:contains(Get Started)"
+    # And I click selector "a:contains('Skip the tutorial')" once I see it
 
     # Typing a chat message
     And I wait until element "button:contains(Suggest prompts)" is visible
@@ -151,10 +154,10 @@ Feature: Send and receive messages in the AI differentiation chat
     And I wait until element "#ui-floatingActionButton" is visible
 
     # Teacher sees and skips AI Diff chat welcome
-    And I wait until element "button:contains(Get Started)" is visible
-    And I click selector "button:contains(Get Started)"
-    And I wait until element "button:contains(Create)" is visible
-    And I click selector "a:contains('Skip the tutorial')"
+    # And I wait until element "button:contains(Get Started)" is visible
+    # And I click selector "button:contains(Get Started)"
+    # And I wait until element "button:contains(Create)" is visible
+    # And I click selector "a:contains('Skip the tutorial')"
 
     #Now we see the regular AI diff chat (with thread sidebar)
     And I wait until element "button:contains(Suggest prompts)" is visible

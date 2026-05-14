@@ -1,0 +1,567 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://cdo-v3-files.s3.amazonaws.com/files_test/1/1/manifest.json
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Amz-Sdk-Invocation-Id:
+      - 3880ea56-2b90-4ddf-b414-e3bad61a27f3
+      X-Amz-Checksum-Mode:
+      - ENABLED
+  response:
+    status:
+      code: 404
+      message: Not Found
+    headers:
+      Content-Type:
+      - application/xml
+      Transfer-Encoding:
+      - chunked
+      Date:
+      - Fri, 27 Mar 2026 01:43:52 GMT
+      Server:
+      - AmazonS3
+    body:
+      encoding: UTF-8
+      string: |-
+        <?xml version="1.0" encoding="UTF-8"?>
+        <Error><Code>NoSuchKey</Code><Message>The specified key does not exist.</Message><Key>files_test/1/1/manifest.json</Key><RequestId>WD966DR07T1FEGPA</RequestId><HostId>IQqwj9/TSi1YHCjs8yaMtvgG0aZjSJqtDksLiNqXyTYYyzCe3/5X86Z69XhaiMZAex8XmKfy1Vc=</HostId></Error>
+  recorded_at: Fri, 27 Mar 2026 01:43:52 GMT
+- request:
+    method: get
+    uri: https://cdo-v3-files.s3.amazonaws.com/files_test/1/1/manifest.json
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Amz-Sdk-Invocation-Id:
+      - dce9b08f-83f0-413e-96fb-8b1e756b051d
+      X-Amz-Checksum-Mode:
+      - ENABLED
+  response:
+    status:
+      code: 404
+      message: Not Found
+    headers:
+      Content-Type:
+      - application/xml
+      Transfer-Encoding:
+      - chunked
+      Date:
+      - Fri, 27 Mar 2026 01:43:52 GMT
+      Server:
+      - AmazonS3
+    body:
+      encoding: UTF-8
+      string: |-
+        <?xml version="1.0" encoding="UTF-8"?>
+        <Error><Code>NoSuchKey</Code><Message>The specified key does not exist.</Message><Key>files_test/1/1/manifest.json</Key><RequestId>WD9550PMVZ348D3J</RequestId><HostId>tDqEJhX3Bg/xbMdlussjTiDtTmcF0YGzBhTaQxPJnJGcOGiVWy1U4JkvwoWORXf+zUYdG0uWqb4=</HostId></Error>
+  recorded_at: Fri, 27 Mar 2026 01:43:53 GMT
+- request:
+    method: get
+    uri: https://cdo-v3-files.s3.amazonaws.com/?encoding-type=url&prefix=files_test/1/1/
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Amz-Sdk-Invocation-Id:
+      - 01544c3c-2a2b-4f5e-9f68-09796c33cd44
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Fri, 27 Mar 2026 01:43:54 GMT
+      X-Amz-Bucket-Region:
+      - us-east-1
+      Content-Type:
+      - application/xml
+      Transfer-Encoding:
+      - chunked
+      Server:
+      - AmazonS3
+    body:
+      encoding: UTF-8
+      string: |-
+        <?xml version="1.0" encoding="UTF-8"?>
+        <ListBucketResult xmlns="http://s3.amazonaws.com/doc/2006-03-01/"><Name>cdo-v3-files</Name><Prefix>files_test/1/1/</Prefix><Marker></Marker><MaxKeys>1000</MaxKeys><EncodingType>url</EncodingType><IsTruncated>false</IsTruncated><Contents><Key>files_test/1/1/bad-name.txt</Key><LastModified>2025-08-06T22:58:00.000Z</LastModified><ETag>&quot;8d777f385d3dfec8815d20f7496026dc&quot;</ETag><ChecksumAlgorithm>CRC64NVME</ChecksumAlgorithm><ChecksumType>FULL_OBJECT</ChecksumType><Size>4</Size><Owner><ID>cf6bd5437eaccbf2d79d5d40694e94c727ef59eb29caa52acbc32daffeb8e9e4</ID></Owner><StorageClass>STANDARD</StorageClass></Contents><Contents><Key>files_test/1/1/evil--name.txt</Key><LastModified>2025-06-04T23:50:16.000Z</LastModified><ETag>&quot;8d777f385d3dfec8815d20f7496026dc&quot;</ETag><ChecksumAlgorithm>CRC64NVME</ChecksumAlgorithm><ChecksumType>FULL_OBJECT</ChecksumType><Size>4</Size><Owner><ID>cf6bd5437eaccbf2d79d5d40694e94c727ef59eb29caa52acbc32daffeb8e9e4</ID></Owner><StorageClass>STANDARD</StorageClass></Contents><Contents><Key>files_test/1/1/file-nameac0a7f8c2faac49775a6.txt</Key><LastModified>2025-06-04T23:50:11.000Z</LastModified><ETag>&quot;8d777f385d3dfec8815d20f7496026dc&quot;</ETag><ChecksumAlgorithm>CRC64NVME</ChecksumAlgorithm><ChecksumType>FULL_OBJECT</ChecksumType><Size>4</Size><Owner><ID>cf6bd5437eaccbf2d79d5d40694e94c727ef59eb29caa52acbc32daffeb8e9e4</ID></Owner><StorageClass>STANDARD</StorageClass></Contents></ListBucketResult>
+  recorded_at: Fri, 27 Mar 2026 01:43:53 GMT
+- request:
+    method: put
+    uri: https://cdo-v3-files.s3.amazonaws.com/files_test/1/1/index.html
+    body:
+      encoding: ASCII-8BIT
+      string: <button onclick="alert(1)">Click me</button>
+    headers:
+      Amz-Sdk-Invocation-Id:
+      - 4d3f647d-3885-42da-9f63-e02263c7a85d
+      X-Amz-Meta-Abuse-Score:
+      - '0'
+      Expect:
+      - 100-continue
+      X-Amz-Sdk-Checksum-Algorithm:
+      - CRC32
+      X-Amz-Checksum-Crc32:
+      - ipN6jA==
+      Content-Length:
+      - '44'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Fri, 27 Mar 2026 01:43:54 GMT
+      X-Amz-Version-Id:
+      - eFogTRdOEfGHFuIXyYZ7CH.xMgHSR7ll
+      X-Amz-Server-Side-Encryption:
+      - AES256
+      Etag:
+      - '"6078072742b5406e4c27ec745992b88b"'
+      X-Amz-Checksum-Crc32:
+      - ipN6jA==
+      X-Amz-Checksum-Type:
+      - FULL_OBJECT
+      Content-Length:
+      - '0'
+      Server:
+      - AmazonS3
+    body:
+      encoding: UTF-8
+      string: ''
+  recorded_at: Fri, 27 Mar 2026 01:43:53 GMT
+- request:
+    method: put
+    uri: https://cdo-v3-files.s3.amazonaws.com/files_test/1/1/manifest.json
+    body:
+      encoding: UTF-8
+      string: '[{"filename":"index.html","category":"text","size":44,"versionId":"eFogTRdOEfGHFuIXyYZ7CH.xMgHSR7ll","timestamp":"2026-03-26T15:43:53.844-10:00"}]'
+    headers:
+      Amz-Sdk-Invocation-Id:
+      - 2196356a-5333-4863-9bc8-bba2535b8a31
+      X-Amz-Meta-Abuse-Score:
+      - '0'
+      Expect:
+      - 100-continue
+      X-Amz-Sdk-Checksum-Algorithm:
+      - CRC32
+      X-Amz-Checksum-Crc32:
+      - g7Yf0Q==
+      Content-Length:
+      - '146'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Fri, 27 Mar 2026 01:43:55 GMT
+      X-Amz-Version-Id:
+      - QglTa10QlQn_pKX7CbgHPs34qhd7lpQG
+      X-Amz-Server-Side-Encryption:
+      - AES256
+      Etag:
+      - '"8664518b152610090b2f56907fed4300"'
+      X-Amz-Checksum-Crc32:
+      - g7Yf0Q==
+      X-Amz-Checksum-Type:
+      - FULL_OBJECT
+      Content-Length:
+      - '0'
+      Server:
+      - AmazonS3
+    body:
+      encoding: UTF-8
+      string: ''
+  recorded_at: Fri, 27 Mar 2026 01:43:54 GMT
+- request:
+    method: get
+    uri: https://cdo-v3-files.s3.amazonaws.com/files_test/1/1/index.html
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Amz-Sdk-Invocation-Id:
+      - e7198159-9903-4930-a443-1507554ce69e
+      X-Amz-Checksum-Mode:
+      - ENABLED
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Fri, 27 Mar 2026 01:43:55 GMT
+      Last-Modified:
+      - Fri, 27 Mar 2026 01:43:54 GMT
+      Etag:
+      - '"6078072742b5406e4c27ec745992b88b"'
+      X-Amz-Checksum-Crc32:
+      - ipN6jA==
+      X-Amz-Checksum-Type:
+      - FULL_OBJECT
+      X-Amz-Server-Side-Encryption:
+      - AES256
+      X-Amz-Meta-Abuse-Score:
+      - '0'
+      X-Amz-Version-Id:
+      - eFogTRdOEfGHFuIXyYZ7CH.xMgHSR7ll
+      Accept-Ranges:
+      - bytes
+      Content-Type:
+      - application/octet-stream
+      Content-Length:
+      - '44'
+      Server:
+      - AmazonS3
+    body:
+      encoding: UTF-8
+      string: <button onclick="alert(1)">Click me</button>
+  recorded_at: Fri, 27 Mar 2026 01:43:54 GMT
+- request:
+    method: get
+    uri: https://cdo-v3-files.s3.amazonaws.com/files_test/1/1/index.html
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Amz-Sdk-Invocation-Id:
+      - a50a0886-649f-4608-a146-bc5471575a8c
+      X-Amz-Checksum-Mode:
+      - ENABLED
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Fri, 27 Mar 2026 01:43:55 GMT
+      Last-Modified:
+      - Fri, 27 Mar 2026 01:43:54 GMT
+      Etag:
+      - '"6078072742b5406e4c27ec745992b88b"'
+      X-Amz-Checksum-Crc32:
+      - ipN6jA==
+      X-Amz-Checksum-Type:
+      - FULL_OBJECT
+      X-Amz-Server-Side-Encryption:
+      - AES256
+      X-Amz-Meta-Abuse-Score:
+      - '0'
+      X-Amz-Version-Id:
+      - eFogTRdOEfGHFuIXyYZ7CH.xMgHSR7ll
+      Accept-Ranges:
+      - bytes
+      Content-Type:
+      - application/octet-stream
+      Content-Length:
+      - '44'
+      Server:
+      - AmazonS3
+    body:
+      encoding: UTF-8
+      string: <button onclick="alert(1)">Click me</button>
+  recorded_at: Fri, 27 Mar 2026 01:43:55 GMT
+- request:
+    method: get
+    uri: https://cdo-v3-files.s3.amazonaws.com/files_test/1/1/index.html
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Amz-Sdk-Invocation-Id:
+      - 8874ae64-0187-4073-bdf3-08c877a5deaa
+      X-Amz-Checksum-Mode:
+      - ENABLED
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Fri, 27 Mar 2026 01:43:56 GMT
+      Last-Modified:
+      - Fri, 27 Mar 2026 01:43:54 GMT
+      Etag:
+      - '"6078072742b5406e4c27ec745992b88b"'
+      X-Amz-Checksum-Crc32:
+      - ipN6jA==
+      X-Amz-Checksum-Type:
+      - FULL_OBJECT
+      X-Amz-Server-Side-Encryption:
+      - AES256
+      X-Amz-Meta-Abuse-Score:
+      - '0'
+      X-Amz-Version-Id:
+      - eFogTRdOEfGHFuIXyYZ7CH.xMgHSR7ll
+      Accept-Ranges:
+      - bytes
+      Content-Type:
+      - application/octet-stream
+      Content-Length:
+      - '44'
+      Server:
+      - AmazonS3
+    body:
+      encoding: UTF-8
+      string: <button onclick="alert(1)">Click me</button>
+  recorded_at: Fri, 27 Mar 2026 01:43:55 GMT
+- request:
+    method: get
+    uri: https://cdo-v3-files.s3.amazonaws.com/files_test/1/1/index.html
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Amz-Sdk-Invocation-Id:
+      - 28ef643a-7477-43c8-9d54-394dda348e02
+      X-Amz-Checksum-Mode:
+      - ENABLED
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Fri, 27 Mar 2026 01:43:56 GMT
+      Last-Modified:
+      - Fri, 27 Mar 2026 01:43:54 GMT
+      Etag:
+      - '"6078072742b5406e4c27ec745992b88b"'
+      X-Amz-Checksum-Crc32:
+      - ipN6jA==
+      X-Amz-Checksum-Type:
+      - FULL_OBJECT
+      X-Amz-Server-Side-Encryption:
+      - AES256
+      X-Amz-Meta-Abuse-Score:
+      - '0'
+      X-Amz-Version-Id:
+      - eFogTRdOEfGHFuIXyYZ7CH.xMgHSR7ll
+      Accept-Ranges:
+      - bytes
+      Content-Type:
+      - application/octet-stream
+      Content-Length:
+      - '44'
+      Server:
+      - AmazonS3
+    body:
+      encoding: UTF-8
+      string: <button onclick="alert(1)">Click me</button>
+  recorded_at: Fri, 27 Mar 2026 01:43:55 GMT
+- request:
+    method: get
+    uri: https://cdo-v3-files.s3.amazonaws.com/files_test/1/1/manifest.json
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Amz-Sdk-Invocation-Id:
+      - 7e5fdeeb-8e35-4d8a-a86a-f01e28d2209a
+      X-Amz-Checksum-Mode:
+      - ENABLED
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Fri, 27 Mar 2026 01:43:57 GMT
+      Last-Modified:
+      - Fri, 27 Mar 2026 01:43:55 GMT
+      Etag:
+      - '"8664518b152610090b2f56907fed4300"'
+      X-Amz-Checksum-Crc32:
+      - g7Yf0Q==
+      X-Amz-Checksum-Type:
+      - FULL_OBJECT
+      X-Amz-Server-Side-Encryption:
+      - AES256
+      X-Amz-Meta-Abuse-Score:
+      - '0'
+      X-Amz-Version-Id:
+      - QglTa10QlQn_pKX7CbgHPs34qhd7lpQG
+      Accept-Ranges:
+      - bytes
+      Content-Type:
+      - application/octet-stream
+      Content-Length:
+      - '146'
+      Server:
+      - AmazonS3
+    body:
+      encoding: UTF-8
+      string: '[{"filename":"index.html","category":"text","size":44,"versionId":"eFogTRdOEfGHFuIXyYZ7CH.xMgHSR7ll","timestamp":"2026-03-26T15:43:53.844-10:00"}]'
+  recorded_at: Fri, 27 Mar 2026 01:43:56 GMT
+- request:
+    method: put
+    uri: https://cdo-v3-files.s3.amazonaws.com/files_test/1/1/manifest.json
+    body:
+      encoding: UTF-8
+      string: "[]"
+    headers:
+      Amz-Sdk-Invocation-Id:
+      - 45a31043-3c46-4edb-ade2-389efc97c3eb
+      X-Amz-Meta-Abuse-Score:
+      - '0'
+      Expect:
+      - 100-continue
+      X-Amz-Sdk-Checksum-Algorithm:
+      - CRC32
+      X-Amz-Checksum-Crc32:
+      - DUy7KQ==
+      Content-Length:
+      - '2'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Fri, 27 Mar 2026 01:43:57 GMT
+      X-Amz-Version-Id:
+      - IUHnCUFqZcJit6jeSxbdnfim.O1sV0HN
+      X-Amz-Server-Side-Encryption:
+      - AES256
+      Etag:
+      - '"d751713988987e9331980363e24189ce"'
+      X-Amz-Checksum-Crc32:
+      - DUy7KQ==
+      X-Amz-Checksum-Type:
+      - FULL_OBJECT
+      Content-Length:
+      - '0'
+      Server:
+      - AmazonS3
+    body:
+      encoding: UTF-8
+      string: ''
+  recorded_at: Fri, 27 Mar 2026 01:43:56 GMT
+- request:
+    method: delete
+    uri: https://cdo-v3-files.s3.amazonaws.com/files_test/1/1/index.html
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Amz-Sdk-Invocation-Id:
+      - 411bf459-035c-4a32-906a-c35ced5a2c45
+  response:
+    status:
+      code: 204
+      message: No Content
+    headers:
+      Date:
+      - Fri, 27 Mar 2026 01:43:57 GMT
+      X-Amz-Version-Id:
+      - plcjGN2R9hBiY1RADGhnUPGnRCqZwWra
+      X-Amz-Delete-Marker:
+      - 'true'
+      Server:
+      - AmazonS3
+    body:
+      encoding: UTF-8
+      string: ''
+  recorded_at: Fri, 27 Mar 2026 01:43:56 GMT
+- request:
+    method: get
+    uri: https://cdo-v3-files.s3.amazonaws.com/?encoding-type=url&prefix=files_test/1/1/manifest.json&versions
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Amz-Sdk-Invocation-Id:
+      - '084e6f9a-b190-40cf-908c-7ea87e990240'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Fri, 27 Mar 2026 01:43:58 GMT
+      Content-Type:
+      - application/xml
+      Transfer-Encoding:
+      - chunked
+      Server:
+      - AmazonS3
+    body:
+      encoding: UTF-8
+      string: |-
+        <?xml version="1.0" encoding="UTF-8"?>
+        <ListVersionsResult xmlns="http://s3.amazonaws.com/doc/2006-03-01/"><Name>cdo-v3-files</Name><Prefix>files_test/1/1/manifest.json</Prefix><KeyMarker></KeyMarker><VersionIdMarker></VersionIdMarker><MaxKeys>1000</MaxKeys><EncodingType>url</EncodingType><IsTruncated>false</IsTruncated><Version><Key>files_test/1/1/manifest.json</Key><VersionId>IUHnCUFqZcJit6jeSxbdnfim.O1sV0HN</VersionId><IsLatest>true</IsLatest><LastModified>2026-03-27T01:43:57.000Z</LastModified><ETag>&quot;d751713988987e9331980363e24189ce&quot;</ETag><ChecksumAlgorithm>CRC32</ChecksumAlgorithm><ChecksumType>FULL_OBJECT</ChecksumType><Size>2</Size><Owner><ID>cf6bd5437eaccbf2d79d5d40694e94c727ef59eb29caa52acbc32daffeb8e9e4</ID></Owner><StorageClass>STANDARD</StorageClass></Version><Version><Key>files_test/1/1/manifest.json</Key><VersionId>QglTa10QlQn_pKX7CbgHPs34qhd7lpQG</VersionId><IsLatest>false</IsLatest><LastModified>2026-03-27T01:43:55.000Z</LastModified><ETag>&quot;8664518b152610090b2f56907fed4300&quot;</ETag><ChecksumAlgorithm>CRC32</ChecksumAlgorithm><ChecksumType>FULL_OBJECT</ChecksumType><Size>146</Size><Owner><ID>cf6bd5437eaccbf2d79d5d40694e94c727ef59eb29caa52acbc32daffeb8e9e4</ID></Owner><StorageClass>STANDARD</StorageClass></Version></ListVersionsResult>
+  recorded_at: Fri, 27 Mar 2026 01:43:57 GMT
+- request:
+    method: post
+    uri: https://cdo-v3-files.s3.amazonaws.com/?delete
+    body:
+      encoding: UTF-8
+      string: <Delete xmlns="http://s3.amazonaws.com/doc/2006-03-01/"><Object><Key>files_test/1/1/manifest.json</Key><VersionId>IUHnCUFqZcJit6jeSxbdnfim.O1sV0HN</VersionId></Object><Object><Key>files_test/1/1/manifest.json</Key><VersionId>QglTa10QlQn_pKX7CbgHPs34qhd7lpQG</VersionId></Object><Quiet>true</Quiet></Delete>
+    headers:
+      Amz-Sdk-Invocation-Id:
+      - 2b519e38-bbbf-49bc-a38b-e6bc2aef6e1f
+      Expect:
+      - 100-continue
+      X-Amz-Sdk-Checksum-Algorithm:
+      - CRC32
+      X-Amz-Checksum-Crc32:
+      - lVBFAQ==
+      Content-Length:
+      - '306'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Fri, 27 Mar 2026 01:43:58 GMT
+      Connection:
+      - close
+      Content-Type:
+      - application/xml
+      Transfer-Encoding:
+      - chunked
+      Server:
+      - AmazonS3
+    body:
+      encoding: UTF-8
+      string: |-
+        <?xml version="1.0" encoding="UTF-8"?>
+        <DeleteResult xmlns="http://s3.amazonaws.com/doc/2006-03-01/"></DeleteResult>
+  recorded_at: Fri, 27 Mar 2026 01:43:57 GMT
+- request:
+    method: get
+    uri: https://cdo-v3-files.s3.amazonaws.com/files_test/1/1/manifest.json
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Amz-Sdk-Invocation-Id:
+      - dd37531f-433c-4945-87b4-a6347948cdec
+      X-Amz-Checksum-Mode:
+      - ENABLED
+  response:
+    status:
+      code: 404
+      message: Not Found
+    headers:
+      Content-Type:
+      - application/xml
+      Transfer-Encoding:
+      - chunked
+      Date:
+      - Fri, 27 Mar 2026 01:43:57 GMT
+      Server:
+      - AmazonS3
+    body:
+      encoding: UTF-8
+      string: |-
+        <?xml version="1.0" encoding="UTF-8"?>
+        <Error><Code>NoSuchKey</Code><Message>The specified key does not exist.</Message><Key>files_test/1/1/manifest.json</Key><RequestId>06R6JR3ZGDY9Z92K</RequestId><HostId>LNEgOqbHeMA34yP3dRgbCFgW/DJgoSwTYdYKZ1VUFtAWP7OzHQIHZybHi2yAurWI0mqk59yxazSJ8tmqUnsaPubc46LvIEUJ3KdyXmRZMJg=</HostId></Error>
+  recorded_at: Fri, 27 Mar 2026 01:43:58 GMT
+recorded_with: VCR 6.2.0

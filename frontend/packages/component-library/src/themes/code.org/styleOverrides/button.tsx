@@ -1,5 +1,7 @@
 import {Components, Theme} from '@mui/material/styles';
 
+import FontAwesomeV6Icon from '@/fontAwesomeV6Icon';
+
 /**
  * MUI Button style overrides to match the existing button design.
  * Extends MUI's size and color systems to support custom options:
@@ -54,6 +56,13 @@ const SIZE_SPECS = {
 export const BUTTON_OVERRIDES: Components<Theme>['MuiButton'] = {
   defaultProps: {
     disableRipple: true,
+    loadingIndicator: (
+      <FontAwesomeV6Icon
+        iconName="spinner"
+        iconStyle="solid"
+        animationType="spin"
+      />
+    ),
   },
   // Add variants for custom sizes
   variants: [
@@ -178,9 +187,21 @@ export const BUTTON_OVERRIDES: Components<Theme>['MuiButton'] = {
         '&:active, a&:active': {
           color: 'var(--text-neutral-white-fixed)',
         },
+        // Normal disabled look (non-loading)
         '&.Mui-disabled': {
           backgroundColor: 'var(--background-neutral-disabled)',
           color: 'var(--text-neutral-disabled-inverse)',
+        },
+        // Pending/loading: keep primary colors even though disabled
+        '&.MuiButton-loading': {
+          backgroundColor: 'var(--background-brand-purple-primary)',
+          color: 'var(--text-neutral-white-fixed)',
+        },
+        '&.MuiButton-loading:not(:has(.MuiButton-icon))': {
+          color: 'transparent',
+        },
+        '&.MuiButton-loading i': {
+          color: 'var(--text-neutral-white-fixed)',
         },
       },
     },
@@ -203,6 +224,16 @@ export const BUTTON_OVERRIDES: Components<Theme>['MuiButton'] = {
           backgroundColor: 'var(--background-neutral-disabled)',
           color: 'var(--text-neutral-disabled-inverse)',
         },
+        '&.MuiButton-loading': {
+          backgroundColor: 'var(--background-neutral-primary-inverse)',
+          color: 'var(--text-neutral-inverse)',
+        },
+        '&.MuiButton-loading:not(:has(.MuiButton-icon))': {
+          color: 'transparent',
+        },
+        '&.MuiButton-loading i': {
+          color: 'var(--text-neutral-inverse)',
+        },
       },
     },
     {
@@ -222,6 +253,16 @@ export const BUTTON_OVERRIDES: Components<Theme>['MuiButton'] = {
         },
         '&.Mui-disabled': {
           backgroundColor: 'var(--background-neutral-octonary)',
+          color: 'var(--text-neutral-primary)',
+        },
+        '&.MuiButton-loading': {
+          backgroundColor: 'var(--background-neutral-white-fixed)',
+          color: 'var(--text-neutral-primary)',
+        },
+        '&.MuiButton-loading:not(:has(.MuiButton-icon))': {
+          color: 'transparent',
+        },
+        '&.MuiButton-loading i': {
           color: 'var(--text-neutral-primary)',
         },
       },
@@ -244,6 +285,16 @@ export const BUTTON_OVERRIDES: Components<Theme>['MuiButton'] = {
         '&.Mui-disabled': {
           backgroundColor: 'var(--background-neutral-disabled)',
           color: 'var(--text-neutral-disabled-inverse)',
+        },
+        '&.MuiButton-loading': {
+          backgroundColor: 'var(--background-error-primary)',
+          color: 'var(--text-neutral-white-fixed)',
+        },
+        '&.MuiButton-loading:not(:has(.MuiButton-icon))': {
+          color: 'transparent',
+        },
+        '&.MuiButton-loading i': {
+          color: 'var(--text-neutral-white-fixed)',
         },
       },
     },
@@ -271,6 +322,16 @@ export const BUTTON_OVERRIDES: Components<Theme>['MuiButton'] = {
           color: 'var(--text-neutral-disabled)',
           backgroundColor: 'var(--background-neutral-primary)',
         },
+        '&.MuiButton-loading': {
+          border: '1px solid var(--borders-brand-purple-primary)',
+          color: 'var(--text-brand-purple-primary)',
+        },
+        '&.MuiButton-loading:not(:has(.MuiButton-icon))': {
+          color: 'transparent',
+        },
+        '&.MuiButton-loading i': {
+          color: 'var(--text-brand-purple-primary)',
+        },
       },
     },
     {
@@ -295,6 +356,17 @@ export const BUTTON_OVERRIDES: Components<Theme>['MuiButton'] = {
           borderColor: 'var(--borders-neutral-disabled) !important',
           color: 'var(--text-neutral-disabled)',
           backgroundColor: 'var(--background-neutral-primary)',
+        },
+        '&.MuiButton-loading': {
+          border: '1px solid var(--borders-neutral-solid)',
+          backgroundColor: 'var(--background-neutral-primary)',
+          color: 'var(--text-neutral-primary)',
+        },
+        '&.MuiButton-loading:not(:has(.MuiButton-icon))': {
+          color: 'transparent',
+        },
+        '&.MuiButton-loading i': {
+          color: 'var(--text-neutral-primary)',
         },
       },
     },
@@ -321,6 +393,17 @@ export const BUTTON_OVERRIDES: Components<Theme>['MuiButton'] = {
           color: 'var(--text-neutral-disabled)',
           backgroundColor: 'var(--background-neutral-primary)',
         },
+        '&.MuiButton-loading': {
+          border: '1px solid var(--borders-neutral-strong)',
+          backgroundColor: 'var(--background-neutral-primary)',
+          color: 'var(--text-neutral-primary)',
+        },
+        '&.MuiButton-loading:not(:has(.MuiButton-icon))': {
+          color: 'transparent',
+        },
+        '&.MuiButton-loading i': {
+          color: 'var(--text-neutral-primary)',
+        },
       },
     },
     {
@@ -345,6 +428,17 @@ export const BUTTON_OVERRIDES: Components<Theme>['MuiButton'] = {
           borderColor: 'var(--neutral-gray-80) !important',
           color: 'var(--neutral-gray-80)',
           backgroundColor: 'unset',
+        },
+        '&.MuiButton-loading': {
+          border: '1px solid var(--neutral-base-white)',
+          backgroundColor: 'var(--neutral-base-black)',
+          color: 'var(--neutral-base-white)',
+        },
+        '&.MuiButton-loading:not(:has(.MuiButton-icon))': {
+          color: 'transparent',
+        },
+        '&.MuiButton-loading i': {
+          color: 'var(--neutral-base-white)',
         },
       },
     },
@@ -371,6 +465,17 @@ export const BUTTON_OVERRIDES: Components<Theme>['MuiButton'] = {
           color: 'var(--text-neutral-disabled)',
           backgroundColor: 'var(--background-neutral-primary)',
         },
+        '&.MuiButton-loading': {
+          border: '1px solid var(--borders-error-primary)',
+          backgroundColor: 'var(--background-error-light)',
+          color: 'var(--text-error-primary)',
+        },
+        '&.MuiButton-loading:not(:has(.MuiButton-icon))': {
+          color: 'transparent',
+        },
+        '&.MuiButton-loading i': {
+          color: 'var(--text-error-primary)',
+        },
       },
     },
 
@@ -394,6 +499,15 @@ export const BUTTON_OVERRIDES: Components<Theme>['MuiButton'] = {
           color: 'var(--text-neutral-disabled)',
           backgroundColor: 'unset',
         },
+        '&.MuiButton-loading': {
+          color: 'var(--text-brand-purple-primary)',
+        },
+        '&.MuiButton-loading:not(:has(.MuiButton-icon))': {
+          color: 'transparent',
+        },
+        '&.MuiButton-loading i': {
+          color: 'var(--text-brand-purple-primary)',
+        },
       },
     },
     {
@@ -414,6 +528,15 @@ export const BUTTON_OVERRIDES: Components<Theme>['MuiButton'] = {
         '&.Mui-disabled': {
           color: 'var(--text-neutral-disabled)',
           backgroundColor: 'unset',
+        },
+        '&.MuiButton-loading': {
+          color: 'var(--text-neutral-primary)',
+        },
+        '&.MuiButton-loading:not(:has(.MuiButton-icon))': {
+          color: 'transparent',
+        },
+        '&.MuiButton-loading i': {
+          color: 'var(--text-neutral-primary)',
         },
       },
     },
@@ -436,6 +559,15 @@ export const BUTTON_OVERRIDES: Components<Theme>['MuiButton'] = {
           color: 'var(--text-neutral-disabled)',
           backgroundColor: 'unset',
         },
+        '&.MuiButton-loading': {
+          color: 'var(--text-neutral-quaternary)',
+        },
+        '&.MuiButton-loading:not(:has(.MuiButton-icon))': {
+          color: 'transparent',
+        },
+        '&.MuiButton-loading i': {
+          color: 'var(--text-neutral-quaternary)',
+        },
       },
     },
     {
@@ -457,6 +589,15 @@ export const BUTTON_OVERRIDES: Components<Theme>['MuiButton'] = {
           color: 'var(--text-neutral-tertiary)',
           backgroundColor: 'unset',
         },
+        '&.MuiButton-loading': {
+          color: 'var(--neutral-base-white)',
+        },
+        '&.MuiButton-loading:not(:has(.MuiButton-icon))': {
+          color: 'transparent',
+        },
+        '&.MuiButton-loading i': {
+          color: 'var(--neutral-base-white)',
+        },
       },
     },
     {
@@ -477,6 +618,15 @@ export const BUTTON_OVERRIDES: Components<Theme>['MuiButton'] = {
         '&.Mui-disabled': {
           color: 'var(--text-neutral-disabled)',
           backgroundColor: 'unset',
+        },
+        '&.MuiButton-loading': {
+          color: 'var(--text-error-primary)',
+        },
+        '&.MuiButton-loading:not(:has(.MuiButton-icon))': {
+          color: 'transparent',
+        },
+        '&.MuiButton-loading i': {
+          color: 'var(--text-error-primary)',
         },
       },
     },
@@ -555,15 +705,8 @@ export const BUTTON_OVERRIDES: Components<Theme>['MuiButton'] = {
           marginRight: 0,
         },
 
-        // Pending state with hidden text - center the spinner
-        '&.buttonPendingWithHiddenText': {
-          position: 'relative',
-        },
-        '&.buttonPendingWithHiddenText .MuiButton-startIcon': {
-          position: 'absolute',
-          left: '50%',
-          transform: 'translateX(-50%)',
-          margin: 0,
+        '.MuiButton-loadingIndicator': {
+          color: 'inherit', // Ensure spinner inherits text color
         },
       };
 

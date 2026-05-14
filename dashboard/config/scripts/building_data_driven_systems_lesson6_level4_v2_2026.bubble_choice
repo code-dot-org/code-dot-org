@@ -1,0 +1,10 @@
+name 'building-data-driven-systems-lesson6-level4-v2-2026'
+display_name 'Make the Queue Interactive'
+description '### Add button actions to update your array and re-render the list.'
+
+sublevels
+level 'building-data-driven-systems-lesson6-level4a-v2-2026'
+level 'building-data-driven-systems-lesson6-level4b-v2-2026'
+level 'building-data-driven-systems-lesson6-level4c-v2-2026'
+
+uses_lab2

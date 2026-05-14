@@ -1,0 +1,49 @@
+# frozen_string_literal: true
+
+module Observability
+  module OpenTelemetry
+    # Sets up OpenTelemetry tracing. Runs in all processes except unit test runners.
+    def self.setup
+      return unless CDO.enable_opentelemetry && !CDO.unit_test
+
+      require 'opentelemetry/sdk'
+      require 'opentelemetry/instrumentation/all'
+      require 'opentelemetry-exporter-otlp'
+
+      # Suppress noisy messages from auto-instrumentation gems by default.
+      # (e.g. detach/attach mismatches, double-finish on spans).
+      ENV['OTEL_LOG_LEVEL'] ||= 'fatal'
+
+      # Always sample every span so the full span volume reaches the collector.
+      # The default parentbased_always_on sampler would drop spans whose remote
+      # parent carries traceparent: sampled=0 (e.g. unsampled frontend sessions),
+      # causing Prometheus spanmetrics to undercount. Sampling decisions for the
+      # APM backend are made at the collector, not here.
+      ENV['OTEL_TRACES_SAMPLER'] ||= 'always_on'
+
+      ::OpenTelemetry::SDK.configure do |c|
+        c.service_name = 'dashboard'
+
+        # Enable all ruby instrumentation
+        c.use_all(
+          'OpenTelemetry::Instrumentation::ActionPack' => {
+            # TODO: Once we are on Rails 7.1, remove this override.
+            # This is needed to set low cardinality span names using Rails controller class names such as Controller#Method
+            # This naming scheme does not adhere to OpenTelemetry semantic conventions, but is necessary because the instrumentation
+            # does not support it until Rails 7.1.
+            span_naming: :class,
+          }
+        )
+
+        # Configure a batch span processor with the OTLP exporter to send telemetry data to our OpenTelemetry Collector.
+        # By default, this is sent to the local OpenTelemetry Collector installed by the cdo-otel-collector cookbook.
+        # See: cookbooks/cdo-otel-collector
+        c.add_span_processor(
+          ::OpenTelemetry::SDK::Trace::Export::BatchSpanProcessor.new(
+            ::OpenTelemetry::Exporter::OTLP::Exporter.new
+          )
+        )
+      end
+    end
+  end
+end

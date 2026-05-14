@@ -20,6 +20,10 @@
     border-radius: variables.$default-border-radius;
     z-index: 10; // Ensure outline is visible above outline in aiTutorVersionActive
   }
+
+  *:has(> .active):focus-visible {
+    outline-color: var(--text-neutral-white-fixed);
+  }
 }
 
 .fileTab {
@@ -52,16 +56,16 @@
 }
 
 .active {
-  background-color: var(--background-brand-teal-primary);
+  background-color: #00818f;
   color: var(--text-neutral-white-fixed);
-
-  .closeButton:focus-visible {
-    outline-color: var(--borders-brand-teal-strong);
-  }
 
   p,
   i {
     color: var(--text-neutral-white-fixed);
+  }
+
+  *:focus-visible {
+    outline-color: var(--text-neutral-white-fixed);
   }
 }
 

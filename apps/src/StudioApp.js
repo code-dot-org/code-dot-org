@@ -6,17 +6,15 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import {Provider} from 'react-redux';
 
-// Make sure polyfills are available in all code studio apps and level tests.
-import './polyfills';
 import {
   Renderers,
   stringIsXml,
   stripUserCreated,
 } from '@cdo/apps/blockly/constants';
 import {
-  loadBlocksToWorkspace,
+  appendSharedFunctionsToState,
   highlightBlock,
-  appendSharedFunctions,
+  loadBlocksToWorkspace,
   processToolboxXml,
 } from '@cdo/apps/blockly/utils';
 import {addCallouts} from '@cdo/apps/code-studio/callouts';
@@ -24,18 +22,19 @@ import {createLibraryClosure} from '@cdo/apps/code-studio/components/libraries/l
 import WorkspaceAlert from '@cdo/apps/code-studio/components/WorkspaceAlert';
 import {queryParams} from '@cdo/apps/code-studio/utils';
 import localization from '@cdo/apps/localization';
-import {EVENTS, PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants';
+import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import {userAlreadyReportedAbuse} from '@cdo/apps/reportAbuse';
 import {setArrowButtonDisabled} from '@cdo/apps/templates/arrowDisplayRedux';
 import {
-  setUserRoleInCourse,
   CourseRoles,
+  setUserRoleInCourse,
 } from '@cdo/apps/templates/currentUserRedux';
 import InstructionsDialog from '@cdo/apps/templates/instructions/InstructionsDialog';
-import {workspace_running_background, white} from '@cdo/apps/util/color';
+import {white, workspace_running_background} from '@cdo/apps/util/color';
 import {createReactRoot} from '@cdo/apps/util/createReactRoot';
 import experiments from '@cdo/apps/util/experiments';
+import {LocalizeToI18nLocales} from '@cdo/generated-scripts/sharedConstants';
 import msg from '@cdo/locale';
 
 import annotationList from './acemode/annotationList';
@@ -57,10 +56,10 @@ import {lockContainedLevelAnswers} from './code-studio/levels/codeStudioLevels';
 import {closeWorkspaceAlert} from './code-studio/projectRedux';
 import {
   KeyCodes,
-  TestResults,
-  TOOLBOX_EDIT_MODE,
   NOTIFICATION_ALERT_TYPE,
   START_BLOCKS,
+  TestResults,
+  TOOLBOX_EDIT_MODE,
 } from './constants';
 import {getValidatedResult, initializeContainedLevel} from './containedLevels';
 import * as dom from './dom';
@@ -69,6 +68,8 @@ import FeedbackUtils from './feedback';
 import Alert from './legacySharedComponents/alert';
 import {isEditWhileRun} from './lib/tools/jsdebugger/redux';
 import {configCircuitPlayground, configMicrobit} from './maker/dropletConfig';
+// Make sure polyfills are available in all code studio apps and level tests.
+import './polyfills';
 import puzzleRatingUtils from './puzzleRatingUtils';
 import {getStore} from './redux';
 import {
@@ -79,12 +80,12 @@ import {
 } from './redux/feedback';
 import {
   determineInstructionsConstants,
-  setInstructionsConstants,
   setFeedback,
+  setInstructionsConstants,
 } from './redux/instructions';
 import {setVisualizationScale} from './redux/layout';
 import {setPageConstants} from './redux/pageConstants';
-import {setIsRunning, setIsEditWhileRun, setStepSpeed} from './redux/runState';
+import {setIsEditWhileRun, setIsRunning, setStepSpeed} from './redux/runState';
 import {
   getIdleTimeSinceLastReport,
   resetIdleTime,
@@ -378,7 +379,10 @@ StudioApp.prototype.init = function (config) {
           })}
         />
       </Provider>,
-      document.body.appendChild(document.createElement('div'))
+      document.body.appendChild(document.createElement('div')),
+      {
+        legacyReactDomRender: true,
+      }
     );
   }
 
@@ -549,7 +553,14 @@ StudioApp.prototype.init = function (config) {
     // Hook the blockly environment into the localization engine
     if (experiments.isEnabledAllowingQueryString(experiments.LOCALIZEJS)) {
       localization.on('change', info => {
-        BlocklyUtils.updateLocale(info.rtl);
+        const blockDefinitions =
+          BlocklyUtils.getBlockDefinitionsForUpdatedLocale(info.rtl);
+        blockUtils.installCustomBlocks({
+          blockly: Blockly,
+          blockDefinitions,
+          customInputTypes: Blockly.SourceCustomInputTypes,
+        });
+        BlocklyUtils.refreshWorkspacesForUpdatedLocale(info.rtl);
       });
     }
     // Store result so that we can cleanup later in tests
@@ -625,7 +636,10 @@ StudioApp.prototype.init = function (config) {
         levelId={config.serverLevelId}
         unitId={config.serverScriptId}
       />,
-      startDialogDiv
+      startDialogDiv,
+      {
+        legacyReactDomRender: true,
+      }
     );
   }
 
@@ -755,7 +769,9 @@ StudioApp.prototype.getSettingsHandler = function () {
       id: 'settings-modal',
     });
 
-    createReactRoot(React.createElement(SettingsModal), contentDiv);
+    createReactRoot(React.createElement(SettingsModal), contentDiv, {
+      legacyReactDomRender: true,
+    });
     dialog.show();
   };
 };
@@ -776,7 +792,10 @@ StudioApp.prototype.getVersionHistoryHandler = function (config) {
         selectedVersion: queryParams('version'),
         isReadOnly: !!config.readonlyWorkspace,
       }),
-      contentDiv
+      contentDiv,
+      {
+        legacyReactDomRender: true,
+      }
     );
 
     dialog.show();
@@ -1065,7 +1084,9 @@ StudioApp.prototype.renderShareFooter_ = function (container) {
     channel: project.getCurrentId(),
   };
 
-  createReactRoot(<SmallFooter {...reactProps} />, footerDiv);
+  createReactRoot(<SmallFooter {...reactProps} />, footerDiv, {
+    legacyReactDomRender: true,
+  });
 };
 
 /**
@@ -1151,20 +1172,19 @@ StudioApp.prototype.toggleRunReset = function (button) {
     lockContainedLevelAnswers();
   }
 
-  var run = document.getElementById('runButton');
-  if (run) {
+  // Toggle all run/reset buttons, including duplicates in the phone frame.
+  document.querySelectorAll('#runButton, #topRunButton').forEach(run => {
     // Note: Checking alwaysHideRunButton is necessary because are some levels where we never
     // want to show the "run" button (e.g., maze levels that are "stepOnly").
     run.style.display =
       showRun && !this.config.alwaysHideRunButton ? 'inline-block' : 'none';
     run.disabled = !showRun;
-  }
+  });
 
-  var reset = document.getElementById('resetButton');
-  if (reset) {
+  document.querySelectorAll('#resetButton, #topResetButton').forEach(reset => {
     reset.style.display = !showRun ? 'inline-block' : 'none';
     reset.disabled = showRun;
-  }
+  });
 
   if (this.isUsingBlockly() && !this.config.readonlyWorkspace) {
     // craft has a darker color scheme than other blockly labs. It needs to
@@ -2161,6 +2181,11 @@ StudioApp.prototype.skipLevel = function () {
  * @param {AppOptionsConfig}
  */
 StudioApp.prototype.configureDom = function (config) {
+  let locale = localization.locale;
+  localization.on('change', _info => {
+    locale = localization.locale;
+  });
+
   var container = document.getElementById(config.containerId);
   var codeWorkspace = container.querySelector('#codeWorkspace');
 
@@ -2173,34 +2198,42 @@ StudioApp.prototype.configureDom = function (config) {
     trailing: false,
   });
 
+  const shouldLogLevelActivity = () =>
+    !runButtonWasClicked && !config.level.isProjectLevel;
+
+  const logLevelActivity = () => {
+    analyticsReporter.sendEvent(EVENTS.LEVEL_ACTIVITY, {
+      signedIn: config.isSignedIn,
+      unitName: config.scriptName,
+      levelId: config.serverLevelId,
+      levelName: config.level.name,
+      locale: LocalizeToI18nLocales[locale] || locale,
+    });
+    runButtonWasClicked = true;
+  };
+
   // Modify throttledRunClick to include metrics logging
   const originalThrottledRunClick = throttledRunClick;
   throttledRunClick = () => {
     originalThrottledRunClick();
-    let eventName;
-    if (!!config.level.isProjectLevel) {
-      eventName = EVENTS.PROJECT_ACTIVITY;
-    } else {
-      eventName = EVENTS.LEVEL_ACTIVITY;
-    }
-    if (!runButtonWasClicked) {
-      analyticsReporter.sendEvent(
-        eventName,
-        {
-          signedIn: config.isSignedIn,
-          unitName: config.scriptName,
-          levelId: config.serverLevelId,
-          levelName: config.level.name,
-        },
-        PLATFORMS.BOTH
-      );
-      runButtonWasClicked = true;
+    if (shouldLogLevelActivity()) {
+      logLevelActivity();
     }
   };
 
+  // Bind click handlers to all run/reset buttons, including duplicates
+  // in the phone frame top bar.
+  var runButtons = container.querySelectorAll('#runButton, #topRunButton');
+  var resetButtons = container.querySelectorAll(
+    '#resetButton, #topResetButton'
+  );
+  runButtons.forEach(btn => {
+    dom.addClickTouchEvent(btn, _.bind(throttledRunClick, this));
+  });
+  resetButtons.forEach(btn => {
+    dom.addClickTouchEvent(btn, _.bind(this.resetButtonClick, this));
+  });
   if (runButton && resetButton) {
-    dom.addClickTouchEvent(runButton, _.bind(throttledRunClick, this));
-    dom.addClickTouchEvent(resetButton, _.bind(this.resetButtonClick, this));
     this.keyHandler.registerEvent(['Control', 'Enter'], () => {
       if (this.isRunning()) {
         this.resetButtonClick();
@@ -2333,7 +2366,10 @@ StudioApp.prototype.handleHideSource_ = function (options) {
               appType: project.getStandaloneApp(),
               isLegacyShare: !!options.isLegacyShare,
             }),
-            div
+            div,
+            {
+              legacyReactDomRender: true,
+            }
           );
         }
       }
@@ -2472,6 +2508,15 @@ StudioApp.prototype.handleEditCode_ = function (config) {
     config.dropletConfig
   );
 
+  // Localize the droplet palette categories
+  fullDropletPalette.forEach(
+    info =>
+      (info.name = localization.translate(info.name, [
+        'droplet',
+        'droplet-palette',
+      ]))
+  );
+
   // Create a child element of codeTextbox to instantiate droplet on, because
   // droplet sets css properties on its wrapper that would interfere with our
   // layout otherwise.
@@ -2479,6 +2524,8 @@ StudioApp.prototype.handleEditCode_ = function (config) {
   const codeTextbox = document.getElementById('codeTextbox');
   const dropletCodeTextbox = document.createElement('div');
   dropletCodeTextbox.setAttribute('id', 'dropletCodeTextbox');
+  // Do not translate the contents. We will do that manually.
+  dropletCodeTextbox.setAttribute('data-notranslate', '');
   codeTextbox.appendChild(dropletCodeTextbox);
 
   this.editor = new droplet.Editor(dropletCodeTextbox, {
@@ -2582,6 +2629,7 @@ StudioApp.prototype.handleEditCode_ = function (config) {
   if (config.level.dropletTooltipsDisabled) {
     this.dropletTooltipManager.setTooltipsEnabled(false);
   }
+
   this.dropletTooltipManager.registerBlocks();
 
   // Bind listener to palette/toolbox 'Hide' and 'Show' links
@@ -2613,8 +2661,20 @@ StudioApp.prototype.handleEditCode_ = function (config) {
   var startBlocks = config.level.lastAttempt || config.level.startBlocks;
   if (startBlocks) {
     try {
-      // Don't pass CRLF pairs to droplet until they fix CR handling:
-      this.editor.setValue(startBlocks.replace(/\r\n/g, '\n'));
+      // Try to localize the comments in start droplet code
+      // Also, ensures we don't pass CRLF pairs to droplet until they fix CR handling:
+      const localizedStartCode = startBlocks
+        .split(/\r\n|\n/)
+        .map(line =>
+          line.startsWith('//')
+            ? `//${localization.translate(line.substring(2), [
+                'comment',
+                'droplet',
+              ])}`
+            : line
+        )
+        .join('\n');
+      this.editor.setValue(localizedStartCode);
       // When adding content via setValue, the aceEditor cursor gets set to be
       // at the end of the file. For mysterious reasons we've been unable to
       // understand, we end up with some pretty funky render issues if the first
@@ -2839,10 +2899,17 @@ StudioApp.prototype.setStartBlocks_ = function (config, loadLastAttempt) {
 
   // Only used in Sprite Lab.
   if (config.level.sharedFunctions) {
-    startBlocks = appendSharedFunctions(
-      startBlocks,
-      config.level.sharedFunctions
-    );
+    if (stringIsXml(startBlocks)) {
+      startBlocks = blockUtils.appendNewFunctionsXml(
+        startBlocks,
+        config.level.sharedFunctions
+      );
+    } else {
+      startBlocks = appendSharedFunctionsToState(
+        startBlocks,
+        config.level.sharedFunctions
+      );
+    }
   }
   let isXml = stringIsXml(startBlocks);
 
@@ -3134,7 +3201,9 @@ StudioApp.prototype.displayWorkspaceAlert = function (
     },
     alertContents
   );
-  createReactRoot(workspaceAlert, container[0]);
+  createReactRoot(workspaceAlert, container[0], {
+    legacyReactDomRender: true,
+  });
 
   return container[0];
 };
@@ -3173,7 +3242,9 @@ StudioApp.prototype.displayPlayspaceAlert = function (type, alertContents) {
   }
 
   const playspaceAlert = React.createElement(Alert, alertProps, alertContents);
-  createReactRoot(playspaceAlert, renderElement);
+  createReactRoot(playspaceAlert, renderElement, {
+    legacyReactDomRender: true,
+  });
 
   return renderElement;
 };

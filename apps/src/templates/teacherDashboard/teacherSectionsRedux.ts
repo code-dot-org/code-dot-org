@@ -12,10 +12,11 @@ import {OAuthSectionTypes} from '@cdo/apps/accounts/constants';
 import {AiChatAccessLevel} from '@cdo/apps/aichat/types/accessControls';
 import DCDO from '@cdo/apps/dcdo';
 import {ParticipantAudience} from '@cdo/apps/generated/curriculum/sharedCourseConstants';
-import {EVENTS, PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants';
+import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import {RootState} from '@cdo/apps/types/redux';
-import HttpClient from '@cdo/apps/util/HttpClient';
+import experiments from '@cdo/apps/util/experiments';
+import HttpClient, {NetworkError} from '@cdo/apps/util/HttpClient';
 import {
   PlGradeValue,
   SectionLoginType,
@@ -36,11 +37,14 @@ import {
 import {
   Classroom,
   CourseOffering,
+  DemoPresetView,
+  DemoType,
   LtiSectionSyncResult,
   OAuthSectionTypeName,
   Section,
   SectionInstructor,
   SectionMap,
+  ServerDemoPresetView,
   ServerOAuthSectionTypeName,
   ServerSection,
   ServerStudent,
@@ -65,6 +69,42 @@ interface CourseOfferingSet {
   [courseOfferingId: number]: CourseOffering;
 }
 
+type DemoPresetMap = Partial<Record<DemoType, DemoPresetView>>;
+type DemoPresetsResponse = Partial<
+  Record<DemoType, ServerDemoPresetView | null>
+>;
+
+const demoPresetFromServerDemoPreset = (
+  demoPreset: ServerDemoPresetView
+): DemoPresetView => ({
+  demoType: demoPreset.demo_type,
+  sectionName: demoPreset.section_name,
+  avatarColor: demoPreset.avatar_color,
+  avatarEmoji: demoPreset.avatar_emoji,
+  loginType: demoPreset.login_type,
+  participantType: demoPreset.participant_type,
+  unit: demoPreset.unit
+    ? {
+        name: demoPreset.unit.name,
+        displayName: demoPreset.unit.display_name,
+      }
+    : null,
+  unitGroup: demoPreset.unit_group
+    ? {
+        name: demoPreset.unit_group.name,
+        displayName: demoPreset.unit_group.display_name,
+      }
+    : null,
+});
+
+export class DemoSectionCreationError extends Error {
+  constructor(public errorType: 'conflict' | 'generic', message: string) {
+    super(message);
+    this.name = 'DemoSectionCreationError';
+    Object.setPrototypeOf(this, DemoSectionCreationError.prototype);
+  }
+}
+
 export interface TeacherSectionState {
   nextTempId: number;
   studioUrl: string;
@@ -84,6 +124,9 @@ export interface TeacherSectionState {
   // assignmentCourseOfferingShape PropType.
   courseOfferings: CourseOfferingSet;
   courseOfferingsAreLoaded: boolean;
+  demoPresets: DemoPresetMap;
+  demoPresetsAreLoaded: boolean;
+  demoSectionCreationInProgress: boolean;
   // The participant types the user can create sections for
   availableParticipantTypes: string[];
   // Mapping from sectionId to section object
@@ -147,6 +190,9 @@ const initialState: TeacherSectionState = {
   // assignmentCourseOfferingShape PropType.
   courseOfferings: [],
   courseOfferingsAreLoaded: false,
+  demoPresets: {},
+  demoPresetsAreLoaded: false,
+  demoSectionCreationInProgress: false,
   // The participant types the user can create sections for
   availableParticipantTypes: [],
   // Mapping from sectionId to section object
@@ -370,17 +416,6 @@ const sectionSlice = createSlice({
     setRosterProviderName(state, action: PayloadAction<string>) {
       state.rosterProviderName = action.payload;
     },
-    updateSectionAiTutorEnabled(
-      state,
-      action: PayloadAction<{
-        sectionId: number;
-        aiTutorEnabled: boolean;
-      }>
-    ) {
-      const {sectionId, aiTutorEnabled} = action.payload;
-
-      state.sections[sectionId].aiTutorEnabled = aiTutorEnabled;
-    },
     updateSectionAiChatAccessLevel(
       state,
       action: PayloadAction<{
@@ -398,6 +433,18 @@ const sectionSlice = createSlice({
     },
     setAvailableParticipantTypes(state, action: PayloadAction<string[]>) {
       state.availableParticipantTypes = action.payload;
+    },
+    setDemoPresets(state, action: PayloadAction<DemoPresetMap>) {
+      state.demoPresets = action.payload;
+    },
+    setDemoPresetsLoaded(state, action: PayloadAction<boolean>) {
+      state.demoPresetsAreLoaded = action.payload;
+    },
+    startDemoSectionCreation(state) {
+      state.demoSectionCreationInProgress = true;
+    },
+    finishDemoSectionCreation(state) {
+      state.demoSectionCreationInProgress = false;
     },
     setSectionCodeReviewExpiresAt: {
       reducer(
@@ -871,6 +918,92 @@ export const asyncLoadTeacherHomepageSectionData =
       });
   };
 
+export const fetchDemoPresets =
+  () =>
+  async (
+    dispatch: ThunkDispatch<RootState, undefined, AnyAction>,
+    getState: () => RootState
+  ): Promise<DemoPresetMap> => {
+    const {
+      teacherSections: {demoPresets, demoPresetsAreLoaded},
+    } = getState();
+
+    if (demoPresetsAreLoaded) {
+      return demoPresets;
+    }
+
+    try {
+      const response = await HttpClient.fetchJson<DemoPresetsResponse>(
+        '/api/v1/sections/demo/presets'
+      );
+      const demoPresets = Object.entries(response.value).reduce<DemoPresetMap>(
+        (presets, [demoType, demoPreset]) => {
+          if (demoPreset) {
+            presets[demoType as DemoType] =
+              demoPresetFromServerDemoPreset(demoPreset);
+          }
+          return presets;
+        },
+        {}
+      );
+      dispatch(setDemoPresets(demoPresets));
+      dispatch(setDemoPresetsLoaded(true));
+      return demoPresets;
+    } catch (error) {
+      console.error('Error fetching demo section presets:', error);
+      dispatch(setDemoPresetsLoaded(true));
+      return {};
+    }
+  };
+
+export const createDemoSection =
+  (demoType: DemoType) =>
+  async (
+    dispatch: ThunkDispatch<RootState, undefined, AnyAction>,
+    getState: () => RootState
+  ): Promise<Section | void> => {
+    if (getState().teacherSections.demoSectionCreationInProgress) {
+      return;
+    }
+
+    dispatch(startDemoSectionCreation());
+
+    try {
+      const response = await HttpClient.post(
+        `/api/v1/sections/demo/${demoType}`,
+        undefined,
+        true
+      );
+      const serverSection = (await response.json()) as ServerSection;
+      dispatch(setSections([serverSection], false));
+      return sectionFromServerSection(serverSection);
+    } catch (error) {
+      if (error instanceof NetworkError) {
+        if (error.response?.status === 409) {
+          throw new DemoSectionCreationError(
+            'conflict',
+            'You already have a practice section.'
+          );
+        }
+
+        if (error.response?.status === 403) {
+          console.error('Unauthorized to create demo section:', error);
+          throw new DemoSectionCreationError(
+            'generic',
+            "Couldn't create your practice section."
+          );
+        }
+      }
+
+      console.error('Error creating demo section:', error);
+      throw new DemoSectionCreationError(
+        'generic',
+        "Couldn't create your practice section."
+      );
+    } finally {
+      dispatch(finishDemoSectionCreation());
+    }
+  };
 export const asyncLoadSectionData =
   (id: number | void, destructive: boolean | void): SectionThunkAction =>
   dispatch => {
@@ -981,16 +1114,29 @@ export const assignToSection = (
 ): SectionThunkAction => {
   return (dispatch, getState) => {
     const section = getState().teacherSections.sections[sectionId];
+    // Generate AI lesson summaries
     if (
       unitId &&
       section.unitId !== unitId &&
       DCDO.get('show-aita-lesson-summaries', false)
     ) {
       HttpClient.get(
-        `/ai_lesson_summaries/perform_ai_lesson_summaries_by_unit?unit_id=${unitId}`
+        `/ai_lesson_summaries/request_ai_lesson_summaries?unit_id=${unitId}`
       ).catch(error => {
         console.error(error);
       });
+      // Generate AI podcasts
+
+      if (
+        DCDO.get('ai-lesson-summary-podcasts', false) ||
+        experiments.isEnabled('ai-lesson-podcasts')
+      ) {
+        HttpClient.get(
+          `/ai_lesson_summary_podcasts/generate_podcasts_by_unit?unit_id=${unitId}`
+        ).catch(error => {
+          console.error(error);
+        });
+      }
     }
     // Only log if the assignment is changing.
     if (
@@ -998,21 +1144,17 @@ export const assignToSection = (
       (courseVersionId && section.courseVersionId !== courseVersionId) ||
       (unitId && section.unitId !== unitId)
     ) {
-      analyticsReporter.sendEvent(
-        EVENTS.CURRICULUM_ASSIGNED,
-        {
-          sectionName: section.name,
-          sectionId,
-          sectionLoginType: section.loginType,
-          previousUnitId: section.unitId,
-          previousCourseId: section.courseOfferingId,
-          previousCourseVersionId: section.courseVersionId,
-          newUnitId: unitId,
-          newCourseId: courseOfferingId,
-          newCourseVersionId: courseVersionId,
-        },
-        PLATFORMS.STATSIG
-      );
+      analyticsReporter.sendEvent(EVENTS.CURRICULUM_ASSIGNED, {
+        sectionName: section.name,
+        sectionId,
+        sectionLoginType: section.loginType,
+        previousUnitId: section.unitId,
+        previousCourseId: section.courseOfferingId,
+        previousCourseVersionId: section.courseVersionId,
+        newUnitId: unitId,
+        newCourseId: courseOfferingId,
+        newCourseVersionId: courseVersionId,
+      });
     }
 
     dispatch(beginEditingSection(sectionId, true));
@@ -1188,6 +1330,10 @@ export const {
   setCoteacherInvite,
   setCoteacherInviteForPl,
   setCourseOfferings,
+  setDemoPresets,
+  setDemoPresetsLoaded,
+  startDemoSectionCreation,
+  finishDemoSectionCreation,
   setPageType,
   setRosterProvider,
   setRosterProviderName,
@@ -1196,7 +1342,6 @@ export const {
   setStudentsForCurrentSection,
   setAvailableParticipantTypes,
   startLoadingSectionData,
-  updateSectionAiTutorEnabled,
   updateSectionAiChatAccessLevel,
   updateSelectedSection,
   sectionHasNewData,

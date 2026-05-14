@@ -1,7 +1,7 @@
 import React from 'react';
 import {Provider} from 'react-redux';
 
-import initializeCodeMirror from '@cdo/apps/code-studio/initializeCodeMirror';
+import initializeCodeMirror6 from '@cdo/apps/code-studio/initializeCodeMirror6';
 import {getStore, registerReducers} from '@cdo/apps/redux';
 import ManifestEditor from '@cdo/apps/storage/levelbuilder/ManifestEditor';
 import data, {setLibraryManifest} from '@cdo/apps/storage/redux/data';
@@ -17,10 +17,13 @@ $(document).ready(function () {
     <Provider store={store}>
       <ManifestEditor />
     </Provider>,
-    document.querySelector('.manifest_editor')
+    document.querySelector('.manifest_editor'),
+    {
+      legacyReactDomRender: true,
+    }
   );
   const codeMirrorArea = document.getElementsByTagName('textarea')[0];
-  initializeCodeMirror(codeMirrorArea, 'application/json', {
+  initializeCodeMirror6(codeMirrorArea, 'json', {
     callback: onChange,
   });
 });

@@ -4,29 +4,19 @@ import {JsonObjectSchema} from '@cdo/apps/aichat/types';
 import {DEFAULT_FOLDER_ID} from '@cdo/apps/codebridge/constants';
 import {getActiveFileForSource} from '@cdo/apps/lab2/projects/utils';
 import {MultiFileSource, ProjectFile} from '@cdo/apps/lab2/types';
-import {getNextFileId} from '@cdo/apps/lab2/utils/multiFileSourceUtils';
+import {
+  getFileExtension,
+  getNextFileId,
+} from '@cdo/apps/lab2/utils/multiFileSourceUtils';
+import {AI_TUTOR_ANSWER_TYPES} from '@cdo/apps/weblab2/types';
 
 const getAnswerJsonSchema = (): JsonObjectSchema => {
   return {
     type: 'object',
     properties: {
-      tutorMode: {
+      answerType: {
         type: 'string',
-        enum: [
-          'Build HTML',
-          'Build CSS',
-          'Build JavaScript',
-          'Ask',
-          'Hint',
-          'Debug',
-          'Explain Code',
-          'Example',
-          'Pseudocode',
-          'Documentation',
-          'Test Case',
-          'Refusal JavaScript Snippet',
-          'Refusal',
-        ],
+        enum: [...AI_TUTOR_ANSWER_TYPES],
       },
       goal: {
         type: 'string',
@@ -51,7 +41,7 @@ const getAnswerJsonSchema = (): JsonObjectSchema => {
           additionalProperties: false,
         },
         description:
-          '`html`, `css`, or `js` fences. Limit to one language (html, css, or js) across the entire list. ' +
+          '`text`, `html`, `css`, `js` or `json` fences. Limit to one language (text, html, css, js, or json) across the entire list. ' +
           'The list can be empty. Code should be formatted with appropriate newlines and indentation. ' +
           'When providing modifications to a file in the student code, provide the entire contents of the file. ' +
           'Code should be formatted with appropriate newlines and indentation.',
@@ -71,18 +61,36 @@ const getAnswerJsonSchema = (): JsonObjectSchema => {
         description:
           'short list to confirm ambiguous details. Format as markdown bullets.',
       },
+      pseudocode: {
+        type: 'string',
+        description:
+          'Pseudocode in plain English only (no JS). Wrap the pseudocode in a markdown fenced code block with language tag `text` so newlines and indentation are preserved. Use markdown outside the block only if needed.',
+      },
+      example: {
+        type: 'string',
+        description:
+          "1-2 concrete example(s) of the code or plain-text answer(s) to the student's question. Use markdown.",
+      },
+      videoUrl: {
+        type: 'string',
+        description:
+          'Optional. URL of a single tutorial video to share with the student, copied exactly from the available videos list. Omit if no video is relevant.',
+      },
     },
-    // We return tutorMode and goal but do not show them to the student.
+    // We return answerType and goal but do not show them to the student.
     // These are used to help guide the AI's response.
-    required: ['tutorMode', 'nextSteps', 'code', 'explanation', 'goal'],
+    required: ['answerType', 'nextSteps', 'code', 'explanation', 'goal'],
     propertyOrdering: [
-      'tutorMode',
+      'answerType',
       'goal',
       'assumptions',
       'code',
       'explanation',
+      'pseudocode',
+      'example',
       'nextSteps',
       'questions',
+      'videoUrl',
     ],
     additionalProperties: false,
   };
@@ -92,16 +100,17 @@ const getAnswerJsonSchema = (): JsonObjectSchema => {
 // for which we format the model response with formatAcceptRejectResponse. Otherwise, we format
 // the model response with formatCopyPasteResponse.
 export const acceptRejectAnswerTypes = [
-  'Build HTML',
-  'Build CSS',
-  'Build JavaScript',
+  'buildHTML',
+  'buildCSS',
+  'buildJavaScript',
+  'buildJSON',
 ];
 
-const acceptRejectCodeFileTypes = ['html', 'css', 'js'];
+const acceptRejectCodeFileTypes = ['html', 'css', 'js', 'json'];
 
 /**
  * Validates that all files have file types that are supported in the accept-reject flow.
- * Returns true if all files are html, css, or js files.
+ * Returns true if all files are of supported types, false otherwise.
  */
 export const isAcceptRejectCodeFileTypes = (
   files: Array<{name: string}>
@@ -133,7 +142,7 @@ const formatSection = (title: string, content?: string): string => {
   return content ? `**${title}**\n\n${content}\n\n` : '';
 };
 
-// This is used when the AI Tutor response's tutorMode is not 'Build HTML', 'Build CSS', nor 'Build JavaScript'.
+// This is used when the AI Tutor response's answerType is not 'buildHTML', 'buildCSS', nor 'buildJavaScript'.
 // Parsed json comes in as 'any', but it follows the structure defined in getAnswerJsonSchemaAcceptReject().
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 export const formatCopyPasteResponse = (response: any): string => {
@@ -150,8 +159,13 @@ export const formatCopyPasteResponse = (response: any): string => {
   }
 
   formattedResponse += formatSection('Explanation', response.explanation);
+  formattedResponse += formatSection('Pseudocode', response.pseudocode);
+  formattedResponse += formatSection('Example', response.example);
   formattedResponse += formatSection('Next Steps', response.nextSteps);
   formattedResponse += formatSection('Questions', response.questions);
+  if (response.videoUrl) {
+    formattedResponse += `\n[Watch this video](${response.videoUrl})\n`;
+  }
 
   return formattedResponse;
 };
@@ -167,20 +181,23 @@ type AcceptRejectFormattedResponse = {
   answerType: string;
 };
 
-// This is used when the AI Tutor response's tutorMode is 'Build HTML', 'Build CSS', or 'Build JavaScript'.
+// This is used when the AI Tutor response's answerType is 'buildHTML', 'buildCSS', or 'buildJavaScript'.
 // Parsed json comes in as 'any', but it follows the structure defined in acceptRejectJsonSchema.
 export const formatAcceptRejectResponse = (
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   response: any
 ): AcceptRejectFormattedResponse => {
+  const explanation =
+    formatSection('Explanation', response.explanation) +
+    (response.videoUrl ? `\n[Watch this video](${response.videoUrl})\n` : '');
   return {
-    explanation: formatSection('Explanation', response.explanation),
+    explanation,
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     code: response.code.map((codeFile: any) => ({
       name: codeFile.filename,
       contents: codeFile.sourceCode,
     })),
-    answerType: response.tutorMode,
+    answerType: response.answerType,
   };
 };
 
@@ -258,7 +275,6 @@ export const getMergedAiTutorCodeWithSource = (
         name: aiFile.name,
         contents: aiFile.contents,
         folderId: DEFAULT_FOLDER_ID,
-        language: aiFile.name.split('.').pop() || '',
         isAiTutorVersionCreated: true,
       };
       updatedSource.files[newFileId] = aiTutorVersionFile;
@@ -272,7 +288,9 @@ export const getMergedAiTutorCodeWithSource = (
 
   // Update openFiles to prioritize AI files: active file first, then other AI files, then existing.
   if (aiTutorVersionFiles.length > 0) {
-    const firstHtmlFile = aiTutorVersionFiles.find(f => f.language === 'html');
+    const firstHtmlFile = aiTutorVersionFiles.find(
+      f => getFileExtension(f.name) === 'html'
+    );
     const fileToActivate = firstHtmlFile || aiTutorVersionFiles[0];
 
     updatedSource.files[fileToActivate.id] = {

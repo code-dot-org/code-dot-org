@@ -2,6 +2,8 @@
  * A set of blocks used by some of our custom levels (i.e. built by level builder)
  */
 
+import CdoFieldDropdown from '@cdo/apps/blockly/addons/cdoFieldDropdown';
+
 import {BlockStyles} from '../blockly/constants';
 
 var msg = require('./locale');
@@ -581,7 +583,7 @@ function installCreateASnowflakeDropdown(blockly, generator, gensym) {
     init: function () {
       this.setStyle(BlockStyles.PROCEDURE);
 
-      var title = new blockly.FieldDropdown(snowflakes);
+      var title = new CdoFieldDropdown(snowflakes);
       this.appendDummyInput().appendField(title, 'TYPE');
 
       this.setPreviousStatement(true);

@@ -730,7 +730,7 @@ class CourseOfferingTest < ActiveSupport::TestCase
   end
 
   test 'query count for assignable_course_offerings' do
-    Unit.stubs(:should_cache?).returns true
+    setup_script_cache
 
     assert_cached_queries(0) do
       CourseOffering.assignable_course_offerings_info(@teacher)
@@ -739,8 +739,6 @@ class CourseOfferingTest < ActiveSupport::TestCase
     assert_cached_queries(0) do
       CourseOffering.assignable_course_offerings_info(@facilitator)
     end
-
-    Unit.clear_cache
   end
 
   test 'missing_required_device_compatibility? returns false for pl course offerings' do
@@ -907,7 +905,7 @@ class CourseOfferingTest < ActiveSupport::TestCase
     lesson_group = create(:lesson_group, script: unit)
 
     lesson = create(:lesson, script: unit, lesson_group: lesson_group)
-    6.times {create(:lesson_activity, lesson: lesson, duration: 1000)}
+    create_list(:lesson_activity, 6, lesson: lesson, duration: 1000)
 
     # A course_offering of this unit should have a 'school_year' duration since a school year is labeled as 5000+ minutes.
     co = CourseOffering.add_course_offering(unit.original_unit_group)
@@ -1108,7 +1106,7 @@ class CourseOfferingTest < ActiveSupport::TestCase
   end
 
   test 'finds corresponding offerings for pl course' do
-    pl_course_offering =create(:course_offering)
+    pl_course_offering = create(:course_offering)
     pl_course = create(:single_unit_course, :pl_course)
     create(:course_version, content_root: pl_course, course_offering: pl_course_offering)
 

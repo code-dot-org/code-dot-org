@@ -1,0 +1,9 @@
+name 'aid-thinking_critically_lesson6_level2choice_2026'
+display_name 'Improve Your Project'
+description 'Use the feedback you got from the AI Reviewers to improve your project.'
+
+sublevels
+level 'aid-thinking_critically_lesson6_level4a_2026'
+level 'aid-thinking_critically_lesson6_level3_2026'
+
+uses_lab2

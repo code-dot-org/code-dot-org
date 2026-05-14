@@ -48,7 +48,7 @@ class DatasetList extends React.Component {
         <p>
           After adding a new dataset, you'll need to{' '}
           <a href="../data_docs/edit">add documentation</a> and{' '}
-          <a href="./manifest/edit">edit the manifest</a>.
+          <a href="/datasets/manifest/edit">edit the manifest</a>.
         </p>
       </div>
     );

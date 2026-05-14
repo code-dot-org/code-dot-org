@@ -5,16 +5,11 @@ description 'description here'
 markdown <<MARKDOWN
 # Realizing the Benefits of AI in Education
 
-#### With guidance, an education system may realize the potential benefits of AI to improve learning outcomes, support teacher instruction and quality of life, and enhance educational equity. Without guidance, teachers and students can be exposed to privacy violations, inconsistent disciplinary consequences, and counterproductive AI adoption practices.
+With guidance, an education system may realize the potential benefits of AI to improve learning outcomes, support teacher instruction and quality of life, and enhance educational equity. Without guidance, teachers and students can be exposed to privacy violations, inconsistent disciplinary consequences, and counterproductive AI adoption practices.
 
-#### Take a look at the graphic below that highlights seven **Principles for AI in Education** and explore the drop downs to learn more about each principle.
+Take a look at the seven **Principles for AI in Education**.
 
-<br>
-<p style="text-align:center;"><img src="https://images.code.org/18fa5a89b18e779fadb3a109f82806a8-Screenshot 2026-02-04 at 3.11.56 PM.png" alt="Potential benefits and risks of AI in education."></p>
-
-*Image: TeachAI*
-
----
+👉 Click on the drop downs below to learn more about each principle.
 
 <!-- 6 Principle Dropdowns -->
 
@@ -87,6 +82,6 @@ Because AI tools and policies evolve quickly, schools should regularly review ho
 
 ---
 
-#### We'll return to these **Principles for AI in Education** in Module 6, Ensuring a Responsible Approach to AI.
+We'll return to these **Principles for AI in Education** in Module 6, Ensuring a Responsible Approach to AI.
 
 MARKDOWN

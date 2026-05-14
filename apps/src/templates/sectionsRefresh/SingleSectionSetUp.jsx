@@ -1,6 +1,6 @@
-import Button from '@code-dot-org/component-library/button';
 import Chips from '@code-dot-org/component-library/chips';
-import {Heading2} from '@code-dot-org/component-library/typography';
+import TextField from '@code-dot-org/component-library/textField';
+import {Typography, Button as MuiButton} from '@mui/material';
 import classNames from 'classnames';
 import PropTypes from 'prop-types';
 import React, {useState} from 'react';
@@ -12,6 +12,7 @@ import SectionAvatar from '@cdo/apps/templates/studioHomepages/teacherHomepageV2
 import {StudentGradeLevels} from '@cdo/generated-scripts/sharedConstants';
 import i18n from '@cdo/locale';
 
+import DemoChip from '../DemoChip';
 import SectionAvatarEditDialog from '../studioHomepages/teacherHomepageV2/sectionAvatars/SectionAvatarEditDialog';
 
 import moduleStyles from './sections-refresh.module.scss';
@@ -43,29 +44,38 @@ export default function SingleSectionSetUp({
   return (
     <div>
       <div className={moduleStyles.containerWithMarginTop}>
-        <Heading2>{i18n.classSection()}</Heading2>
-        <label className={moduleStyles.typographyLabelTwo}>
-          {i18n.className()}
-
-          {isLoading ? (
+        <div className={moduleStyles.sectionHeader}>
+          <Typography variant="h2">
+            {i18n.classSection()}
+            {section.demoType && <DemoChip />}
+          </Typography>
+        </div>
+        {isLoading ? (
+          <>
+            <div className={moduleStyles.typographyLabelTwo}>
+              {i18n.className()}
+            </div>
             <div
               className={classNames(
                 moduleStyles.skeletonTextField,
                 skeletonizeContent.skeletonizeContent
               )}
             />
-          ) : (
-            <input
-              required
-              type="text"
-              id="uitest-section-name-setup"
-              className={moduleStyles.classNameTextField}
-              value={section.name}
-              onChange={e => updateSection('name', e.target.value)}
-              disabled={isLoading}
-            />
-          )}
-        </label>
+          </>
+        ) : (
+          <TextField
+            required
+            id="uitest-section-name-setup"
+            name="name"
+            fullWidth
+            label={i18n.className()}
+            value={section.name}
+            onChange={e => updateSection('name', e.target.value)}
+            onKeyDown={e => e.key === 'Enter' && e.preventDefault()}
+            className={moduleStyles.sectionNameTextField}
+            disabled={isLoading}
+          />
+        )}
       </div>
       <label className={moduleStyles.typographyLabelTwo}>
         {i18n.avatar()}
@@ -79,15 +89,17 @@ export default function SingleSectionSetUp({
                 emoji={section.avatar_emoji || 0}
                 size={'m'}
               />
-              <Button
+              <MuiButton
+                variant="outlined"
+                color="tertiary"
+                size="small"
                 className={styles.avatarButton}
-                text={i18n.editAvatar()}
-                aria-label={i18n.editAvatar()}
-                type={'secondary'}
-                color={'gray'}
-                size={'s'}
                 onClick={() => setShowAvatarDialog(true)}
-              />
+                aria-label={i18n.editAvatar()}
+                type="button"
+              >
+                {i18n.editAvatar()}
+              </MuiButton>
             </>
           )}
         </div>

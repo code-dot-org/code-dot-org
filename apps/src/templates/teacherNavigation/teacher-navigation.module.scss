@@ -52,18 +52,6 @@
   margin-bottom: 2px;
 }
 
-.sidebarNewTags {
-  margin-inline-start: 10px;
-}
-
-.sidebarSectionHeader .sidebarNewTags div {
-  background-color: var(--background-brand-teal-primary);
-}
-
-.sidebarSectionHeader .sidebarNewTags div span {
-  color: white;
-}
-
 .sectionDropdown {
   padding-left: 16px;
   width: 210px;
@@ -159,6 +147,16 @@
   display: flex;
   flex-direction: column;
 
+  .headerSectionNameRow {
+    display: flex;
+    align-items: center;
+    min-width: 0;
+
+    h2 {
+      min-width: 0;
+    }
+  }
+
   .headerSectionName {
     margin-bottom: 0;
     margin-top: 0;
@@ -194,9 +192,10 @@ h2.skeletonHeaderSectionName {
   align-items: center;
 }
 
-.calendarDropdownDescription {
-  font-weight: bold;
-  margin-right: 10px;
+.calendarMinutesPerWeekDropdown {
+  > div {
+    width: 100%;
+  }
 }
 
 .emptyClassroomDiv {

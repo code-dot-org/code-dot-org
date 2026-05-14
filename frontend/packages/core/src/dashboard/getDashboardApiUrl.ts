@@ -2,6 +2,8 @@ import type {Environment} from '../environment';
 
 export function getDashboardApiUrl(environment: Environment): string {
   switch (environment) {
+    case 'adhoc':
+      return window.location.origin;
     case 'development':
       return 'http://localhost-studio.code.org:3000';
     case 'staging':

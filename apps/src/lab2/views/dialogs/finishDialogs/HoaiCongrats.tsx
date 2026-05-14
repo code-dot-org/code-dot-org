@@ -1,6 +1,6 @@
 import {Theme} from '@code-dot-org/component-library/common/contexts';
 import Modal from '@code-dot-org/component-library/modal';
-import Typography from '@code-dot-org/component-library/typography';
+import {Typography} from '@mui/material';
 import QRCode from 'qrcode.react';
 import React from 'react';
 
@@ -20,7 +20,6 @@ interface Props {
   finishUrl: string;
   shareUrl: string;
   projectType: ProjectType;
-  channelId: string | undefined;
   theme?: Theme;
 }
 
@@ -33,20 +32,19 @@ const HoaiCongrats: React.FC<Props> = ({
   shareUrl,
   theme,
   projectType,
-  channelId,
 }) => {
   return (
     <Modal
       data-theme={theme}
       title="Congratulations!"
       description="You finished this Hour of AI activity. What's next?"
-      primaryButtonProps={{text: 'Finish', href: finishUrl, useAsLink: true}}
-      secondaryButtonProps={{text: 'Keep Playing', onClick: handleClose}}
+      primaryButtonProps={{children: 'Finish', href: finishUrl}}
+      secondaryButtonProps={{children: 'Keep Playing', onClick: handleClose}}
       customContent={
         shareEnabled && (
           <div className={styles.shareContainer}>
             <div className={styles.block}>
-              <Typography semanticTag="h2" visualAppearance="heading-md">
+              <Typography component="h2" variant="h4" gutterBottom>
                 Share your project
               </Typography>
               <div className={styles.qrCode} id="share-qrcode-container">
@@ -58,7 +56,6 @@ const HoaiCongrats: React.FC<Props> = ({
               <CopyToClipboardButton
                 shareUrl={shareUrl}
                 projectType={projectType}
-                channelId={channelId}
               />
             </div>
           </div>

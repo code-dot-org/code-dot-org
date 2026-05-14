@@ -8,6 +8,12 @@ declare module '*.module.scss' {
   export default classes;
 }
 
+// Type definition for plain SCSS files imported in TypeScript files
+declare module '*.scss';
+
+// Type definition for plain CSS files imported in TypeScript files
+declare module '*.css';
+
 // Declaring dashboard as 'any' because it is not well documented.
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 declare const dashboard: any;
@@ -20,6 +26,12 @@ declare const DEBUG_MINIFIED: number;
 // which is currently experimental.
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 declare const stylelint: any;
+
+// Imported markdown files are treated as raw strings
+declare module '*.md' {
+  const content: string;
+  export = content;
+}
 
 // Imported static files are treated as strings
 declare module '*.png' {

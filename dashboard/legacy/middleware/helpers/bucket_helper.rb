@@ -138,8 +138,7 @@ class BucketHelper
     result = s3.list_objects(bucket: @bucket, prefix: src_prefix).contents.map do |fileinfo|
       filename = %r{#{src_prefix}(.+)$}.match(fileinfo.key)[1]
       next unless (!options[:filenames] && (!options[:exclude_filenames] || !options[:exclude_filenames].include?(filename))) || options[:filenames].try(:include?, filename)
-      mime_type = Sinatra::Base.mime_type(File.extname(filename))
-      category = mime_type.split('/').first  # e.g. 'image' or 'audio'
+      category = category_from_file_type(File.extname(filename))
 
       src = "#{@bucket}/#{src_prefix}#{filename}"
       dest = s3_path dest_owner_id, dest_storage_app_id, filename
@@ -355,7 +354,7 @@ class BucketHelper
             select(:comment).
             where(storage_app_id: storage_app_id, object_version_id: version.version_id).
             first&.
-          fetch(:comment) :
+            fetch(:comment) :
           nil
         {
           versionId: version.version_id,

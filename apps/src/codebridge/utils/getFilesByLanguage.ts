@@ -1,6 +1,7 @@
 import {MultiFileSource, ProjectFile} from '@cdo/apps/lab2/types';
+import {getFileExtension} from '@cdo/apps/lab2/utils/multiFileSourceUtils';
 
-// Returns a list of files matching the given language/extension (eg, 'html').
+// Returns a list of files matching the given extension (eg, 'html').
 export const getFilesByLanguage = (
   source: MultiFileSource | undefined,
   language: string
@@ -9,10 +10,7 @@ export const getFilesByLanguage = (
     return [];
   }
 
-  return Object.values(source.files).filter(file => {
-    const fileLanguage = file.language?.toLowerCase();
-    if (fileLanguage === language) {
-      return true;
-    }
-  });
+  return Object.values(source.files).filter(
+    file => getFileExtension(file.name) === language
+  );
 };

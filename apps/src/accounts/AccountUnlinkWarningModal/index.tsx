@@ -1,9 +1,8 @@
-import {Button, buttonColors} from '@code-dot-org/component-library/button';
-import {Typography} from '@mui/material';
+import {Typography, Button as MuiButton} from '@mui/material';
 import React from 'react';
 import {Fade} from 'react-bootstrap'; // eslint-disable-line no-restricted-imports
 
-import {EVENTS, PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants';
+import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import AccessibleDialog from '@cdo/apps/sharedComponents/AccessibleDialog';
 import {getAuthenticityToken} from '@cdo/apps/util/AuthenticityTokenStore';
@@ -21,11 +20,7 @@ const AccountUnlinkWarningModal = ({
   onClose,
 }: AccountUnlinkWarningModalProps) => {
   const handleSubmit = async () => {
-    analyticsReporter.sendEvent(
-      EVENTS.LTI_UNLINK_CLICK,
-      {lms_name: lmsName},
-      PLATFORMS.STATSIG
-    );
+    analyticsReporter.sendEvent(EVENTS.LTI_UNLINK_CLICK, {lms_name: lmsName});
 
     await fetch('/lti/v1/account_linking/unlink', {
       method: 'POST',
@@ -40,11 +35,7 @@ const AccountUnlinkWarningModal = ({
   };
 
   const handleCancel = () => {
-    analyticsReporter.sendEvent(
-      EVENTS.LTI_UNLINK_CANCEL,
-      {lms_name: lmsName},
-      PLATFORMS.STATSIG
-    );
+    analyticsReporter.sendEvent(EVENTS.LTI_UNLINK_CANCEL, {lms_name: lmsName});
     onClose();
   };
 
@@ -68,17 +59,25 @@ const AccountUnlinkWarningModal = ({
         </Typography>
         <hr className={styles.line} />
         <div className={styles.warningFooter}>
-          <Button
-            onClick={handleCancel}
-            color={buttonColors.white}
-            text={i18n.cancel()}
+          <MuiButton
+            variant="contained"
+            color="white"
+            size="medium"
             className={styles.cancelButton}
-          />
-          <Button
+            onClick={handleCancel}
+            type="button"
+          >
+            {i18n.cancel()}
+          </MuiButton>
+          <MuiButton
+            variant="contained"
+            color="primary"
+            size="medium"
             onClick={handleSubmit}
-            color={buttonColors.purple}
-            text={i18n.manageLinkedAccounts_warning_button()}
-          />
+            type="button"
+          >
+            {i18n.manageLinkedAccounts_warning_button()}
+          </MuiButton>
         </div>
       </AccessibleDialog>
     </Fade>

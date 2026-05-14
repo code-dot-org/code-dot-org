@@ -50,7 +50,7 @@ class AiLessonSummariesJob < ApplicationJob
 
   def perform(request:)
     request[:lesson_ids].each do |lesson_id|
-      AiLessonSummariesHelper.retrieve_and_save_ai_lesson_summary(lesson_id, request[:user_id], AiSystemPrompts::LessonSummariesSystemPromptHelper::RESPONSE_FORMATS[:BRIEF_SUMMARY])
+      AiLessonSummariesHelper.retrieve_and_save_ai_lesson_summary(lesson_id, request[:user_id], false)
     end
   end
 end

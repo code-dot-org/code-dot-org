@@ -1,7 +1,7 @@
 import {render, screen, fireEvent} from '@testing-library/react';
 import React from 'react';
 
-import {EVENTS, PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants';
+import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import JoinLinkCopyButton from '@cdo/apps/templates/studioHomepages/teacherHomepageV2/JoinLink/JoinLinkCopyButton';
 import copyToClipboard from '@cdo/apps/util/copyToClipboard';
@@ -64,8 +64,7 @@ describe('JoinLinkCopyButton', () => {
     );
     expect(analyticsReporter.sendEvent).toHaveBeenCalledWith(
       EVENTS.SECTION_CARD_CLASS_CODE_CLICKED,
-      {source: 'teacherHomepage'},
-      PLATFORMS.STATSIG
+      {source: 'teacherHomepage'}
     );
 
     screen.getByText(i18n.copySectionCodeSuccess());

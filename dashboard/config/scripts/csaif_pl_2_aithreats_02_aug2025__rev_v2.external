@@ -5,12 +5,12 @@ description 'description here'
 markdown <<MARKDOWN
 # The Day Everything Broke Comic
 
-#### Let’s take a look at a real-world cybersecurity scenario comic that your students will analyze in <a href='https://studio.code.org/courses/artificial-intelligence-foundations-v2-2025/units/5/lessons/1' target='_blank' rel='noopener noreferrer' style='text-decoration: none; font-weight: bold;'>Lesson 1</a>.
+Let’s take a look at a real-world cybersecurity scenario comic that your students will analyze in <a href='https://studio.code.org/courses/artificial-intelligence-foundations-2026/units/5/lessons/1' target='_blank' rel='noopener noreferrer' style='text-decoration: none; font-weight: bold;'>Lesson 1</a>.
 
 
 ## 📝 To Do
 
-#### Jordan is a 10th grader with a big day ahead. A paper is due, a test is scheduled, and he's part of the planning committee for the school talent show. But from the moment school starts, everything begins to unravel.
+Jordan is a 10th grader with a big day ahead. A paper is due, a test is scheduled, and he's part of the planning committee for the school talent show. But from the moment school starts, everything begins to unravel.
 
 <br>
 
@@ -18,7 +18,7 @@ markdown <<MARKDOWN
 <img src="https://images.code.org/2d6ef03c89b7375b3ddd58cd19f8adc4-Screenshot 2025-08-15 at 12.19.10 PM.png" alt="The Day Everything Broke Comic" width="90%" style="border-radius:10px; border: 5px solid black;">
 </p>
 
-#### *What Went Wrong?* Pick one failure scenario. Figure out at least one possible cause and reflect on what you think happened.
+*What Went Wrong?* Pick one failure scenario. Figure out at least one possible cause and reflect on what you think happened.
 
 <br>
 
