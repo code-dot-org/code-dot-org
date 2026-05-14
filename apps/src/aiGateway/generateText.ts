@@ -8,7 +8,11 @@ import {
 } from './gatewaySchemas';
 import {getErrorLogData} from './logHelper';
 import {AI_GATEWAY_URL, fetchAccessToken, getModelString} from './shared';
-import {fetchTurnstileTokenIfEnabled, turnstileHeaders} from './turnstile';
+import {
+  fetchTurnstileTokenIfEnabled,
+  turnstileHeaders,
+} from './turnstile';
+import {LOG} from './turnstile/constants';
 
 type SDKOptions = Parameters<typeof generateText>[0];
 type SDKTools = NonNullable<SDKOptions['tools']>;
@@ -103,9 +107,17 @@ const generateTextThroughGateway = async <
       headers
     );
 
-    const wire = GatewayGenerateTextResponseV1Schema.parse(
-      await response.json()
-    );
+    const rawResponse = await response.json();
+    const parseResult =
+      GatewayGenerateTextResponseV1Schema.safeParse(rawResponse);
+    if (!parseResult.success) {
+      console.error(
+        `${LOG} generateText response schema mismatch:`,
+        parseResult.error.errors
+      );
+      throw parseResult.error;
+    }
+    const wire = parseResult.data;
 
     return rehydrateAIResponse<TOOLS, OUTPUT>(wire);
   } catch (error) {
