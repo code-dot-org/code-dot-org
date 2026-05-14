@@ -5,8 +5,8 @@ import type {
   QueryClient,
   SaveSourceOptions,
   UpdateSourceOptions,
-} from '@code-dot-org/core/api';
-import {sourcesKeys} from '@code-dot-org/core/api';
+} from '@code-dot-org/core/api/data';
+import {sourcesKeys} from '@code-dot-org/core/api/data';
 import {getTabId} from '@code-dot-org/platform/user';
 
 /**

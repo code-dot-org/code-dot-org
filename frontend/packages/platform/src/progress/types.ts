@@ -3,14 +3,14 @@ import type {
   LessonGroupSummary,
   UnitLevel,
   Sublevel,
-} from '@code-dot-org/core/api';
+} from '@code-dot-org/core/api/data';
 
 import type {
   LevelStatus,
   ReviewState,
   TestResult,
-} from '@code-dot-org/core/api';
-import {ReviewStates} from '@code-dot-org/core/api';
+} from '@code-dot-org/core/api/data';
+import {ReviewStates} from '@code-dot-org/core/api/data';
 
 import type {ProgressLevelTypes} from './constants';
 import {ViewTypes} from './constants';
@@ -127,9 +127,9 @@ export interface InitProgressPayload {
 }
 
 export interface PeerReviewSummary {
-  status: string;
+  status: LevelStatus;
   name: string;
-  result: string;
+  result: TestResult;
   icon: string;
   locked: boolean;
 }

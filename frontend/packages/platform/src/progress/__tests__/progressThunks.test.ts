@@ -1,7 +1,3 @@
-/**
- * @vitest-environment jsdom
- */
-
 import {configureStore} from '@reduxjs/toolkit';
 import {describe, expect, it, vi} from 'vitest';
 
@@ -10,7 +6,7 @@ import type {
   Lesson,
   QueryClient,
   UserProgressResponse,
-} from '@code-dot-org/core/api';
+} from '@code-dot-org/core/api/data';
 
 // The currentUser slice pulls singletons from analytics + gates at module
 // load. Stub them so the slice's reducer loads cleanly in tests.

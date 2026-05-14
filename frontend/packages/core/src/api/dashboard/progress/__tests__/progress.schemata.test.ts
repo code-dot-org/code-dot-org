@@ -209,18 +209,52 @@ describe('UserProgressResponseSchema (camelCase consumer shape)', () => {
   });
 
   it('preserves the peer-review summary shape (already camelCase)', () => {
+    // Values mirror what `PeerReview#summarize` returns from dashboard:
+    // status is a LevelStatus, result is a numeric TestResult.
     const input = {
       peerReviewsPerformed: [
         {
-          status: 'review_complete',
+          status: 'perfect',
           name: 'Alex',
-          result: 'accepted',
+          result: 100, // ActivityConstants::BEST_PASS_RESULT
           icon: 'check',
           locked: false,
         },
       ],
     };
     expect(UserProgressResponseSchema.parse(input)).toEqual(input);
+  });
+
+  it('rejects unknown LevelStatus values in peer-review status', () => {
+    expect(() =>
+      UserProgressResponseSchema.parse({
+        peerReviewsPerformed: [
+          {
+            status: 'review_complete', // not in LevelStatuses
+            name: 'Alex',
+            result: 100,
+            icon: 'check',
+            locked: false,
+          },
+        ],
+      }),
+    ).toThrow();
+  });
+
+  it('rejects non-TestResult numeric results in peer-review entries', () => {
+    expect(() =>
+      UserProgressResponseSchema.parse({
+        peerReviewsPerformed: [
+          {
+            status: 'perfect',
+            name: 'Alex',
+            result: 9999, // not in TestResults
+            icon: 'check',
+            locked: false,
+          },
+        ],
+      }),
+    ).toThrow();
   });
 
   it('rejects malformed progress entries (validation runs before transform)', () => {

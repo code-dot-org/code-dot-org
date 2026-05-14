@@ -1,10 +1,6 @@
-/**
- * @vitest-environment jsdom
- */
-
 import {describe, expect, it, vi} from 'vitest';
 
-import type {AppOptions, ExemplarSettings} from '@code-dot-org/core/api';
+import type {AppOptions, ExemplarSettings} from '@code-dot-org/core/api/data';
 
 import ProgressManager, {getInitialValidationState} from '../ProgressManager';
 import type {

@@ -1,15 +1,11 @@
-/**
- * @vitest-environment jsdom
- */
-
 import {beforeEach, describe, expect, it, vi} from 'vitest';
 
 import type {
   ApiClient,
   ProjectSources,
   QueryClient,
-} from '@code-dot-org/core/api';
-import {sourcesKeys} from '@code-dot-org/core/api';
+} from '@code-dot-org/core/api/data';
+import {sourcesKeys} from '@code-dot-org/core/api/data';
 
 import {SourcesStore} from '../SourcesStore';
 

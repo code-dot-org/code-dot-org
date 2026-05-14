@@ -1,10 +1,6 @@
-/**
- * @vitest-environment jsdom
- */
-
 import {beforeEach, describe, expect, it, vi} from 'vitest';
 
-import type {ApiClient, QueryClient} from '@code-dot-org/core/api';
+import type {ApiClient, QueryClient} from '@code-dot-org/core/api/data';
 
 // Mock the channels-for-level call. ProjectManagerFactory constructs its
 // own ChannelsStore and SourcesStore internally, so we can't inject

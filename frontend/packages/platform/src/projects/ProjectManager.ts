@@ -16,8 +16,8 @@ import type {
   ProjectAndSources,
   ProjectSources,
   QueryClient,
-} from '@code-dot-org/core/api';
-import {ApiError, ValidationError} from '@code-dot-org/core/api';
+} from '@code-dot-org/core/api/data';
+import {ApiError, ValidationError} from '@code-dot-org/core/api/data';
 import {logger, recordError} from '@code-dot-org/core/plugins/observability';
 
 import {ChannelsStore} from './ChannelsStore';

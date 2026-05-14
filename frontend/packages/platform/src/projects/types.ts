@@ -1,5 +1,5 @@
 /// ------ PROJECTS ------ ///
-import type {Channel} from '@code-dot-org/core/api';
+import type {Channel} from '@code-dot-org/core/api/data';
 
 export type {
   AppName,
@@ -17,7 +17,7 @@ export type {
   Source,
   UpdateSourceOptions,
   SaveSourceOptions,
-} from '@code-dot-org/core/api';
+} from '@code-dot-org/core/api/data';
 
 export type {Channel};
 export type DefaultChannel = Pick<Channel, 'name'>;

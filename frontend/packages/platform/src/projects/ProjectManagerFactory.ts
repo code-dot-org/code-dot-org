@@ -4,7 +4,7 @@
  * for the given type.
  */
 
-import type {ApiClient, QueryClient} from '@code-dot-org/core/api';
+import type {ApiClient, QueryClient} from '@code-dot-org/core/api/data';
 
 import {ChannelsStore} from './ChannelsStore';
 import ProjectManager from './ProjectManager';

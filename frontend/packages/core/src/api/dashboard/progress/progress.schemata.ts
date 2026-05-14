@@ -2,12 +2,17 @@ import camelcaseKeys from 'camelcase-keys';
 import {z} from 'zod';
 
 import {LevelStatuses, ReviewStates, TestResults} from './progress.constants';
+import type {TestResult} from './progress.constants';
 
 /**
  * z.enum-style schema for `TestResult` codes. zod's `z.enum` is
  * string-only, so we build a union of `z.literal(...)` for each numeric
- * value. The cast preserves the literal-union type so consumers see
- * `TestResult` rather than `number`.
+ * value.
+ *
+ * The static type is asserted as `z.ZodType<TestResult>` so consumers'
+ * inferred result type stays the literal union — the inner cast widens
+ * each member to `z.ZodLiteral<number>`, and without this outer
+ * assertion `z.infer<typeof TestResultSchema>` resolves to `number`.
  */
 const TestResultSchema = z.union(
   Object.values(TestResults).map(v => z.literal(v)) as [
@@ -15,7 +20,7 @@ const TestResultSchema = z.union(
     z.ZodLiteral<number>,
     ...z.ZodLiteral<number>[],
   ],
-);
+) as unknown as z.ZodType<TestResult>;
 
 /**
  * Wire-format (snake_case) shape of a single level's progress as returned
@@ -96,12 +101,19 @@ export const UserProgressResponseDefinitionSchema = z.object({
   changeFocusAreaPath: z.string().optional(),
   completed: z.boolean().optional(),
   progress: z.record(z.string(), UnitProgressDefinitionSchema).optional(),
+  // Server-side: `PeerReview#summarize` in dashboard. `status` is
+  // either `LEVEL_STATUS.perfect` or `LEVEL_STATUS.not_tried`; `result`
+  // is either `ActivityConstants::UNSUBMITTED_RESULT` (-50) or
+  // `ActivityConstants::BEST_PASS_RESULT` (100). Validating against the
+  // full enums rather than the two values that actually flow today
+  // because (a) it's the canonical wire shape and (b) it'd be brittle
+  // to pin the subset.
   peerReviewsPerformed: z
     .array(
       z.object({
-        status: z.string(),
+        status: z.enum(LevelStatuses),
         name: z.string(),
-        result: z.string(),
+        result: TestResultSchema,
         icon: z.string(),
         locked: z.boolean(),
       }),

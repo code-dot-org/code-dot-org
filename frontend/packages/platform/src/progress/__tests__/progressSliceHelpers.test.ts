@@ -1,13 +1,9 @@
-/**
- * @vitest-environment jsdom
- */
-
 import {describe, expect, it} from 'vitest';
 
 import type {
   Lesson,
   UnitProgress as ApiUnitProgress,
-} from '@code-dot-org/core/api';
+} from '@code-dot-org/core/api/data';
 
 import {LevelStatuses, TestResults} from '../constants';
 import {

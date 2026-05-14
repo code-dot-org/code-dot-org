@@ -1,11 +1,7 @@
-/**
- * @vitest-environment jsdom
- */
-
 import {describe, expect, it} from 'vitest';
 
-import {LevelKinds} from '@code-dot-org/core/api';
-import type {Sublevel, UnitLevel} from '@code-dot-org/core/api';
+import {LevelKinds} from '@code-dot-org/core/api/data';
+import type {Sublevel, UnitLevel} from '@code-dot-org/core/api/data';
 
 import {PUZZLE_PAGE_NONE} from '../constants';
 import {processedLevel} from '../redux/progressSlice';

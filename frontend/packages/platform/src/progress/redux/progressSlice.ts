@@ -20,8 +20,8 @@ import type {
   // file's `../types`) which is the further-normalized in-memory shape
   // with defaults filled in. Aliased here to keep both visible.
   UnitProgress as ApiUnitProgress,
-} from '@code-dot-org/core/api';
-import {LevelKinds} from '@code-dot-org/core/api';
+} from '@code-dot-org/core/api/data';
+import {LevelKinds} from '@code-dot-org/core/api/data';
 import type {StateFor, MockStore} from '@code-dot-org/core/redux';
 import type {currentUserSlice} from '@code-dot-org/platform/user';
 

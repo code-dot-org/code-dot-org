@@ -10,8 +10,8 @@ import type {
   Channel,
   ProjectSources,
   QueryClient,
-} from '@code-dot-org/core/api';
-import {ApiError} from '@code-dot-org/core/api';
+} from '@code-dot-org/core/api/data';
+import {ApiError} from '@code-dot-org/core/api/data';
 
 import ProjectManager from '../ProjectManager';
 

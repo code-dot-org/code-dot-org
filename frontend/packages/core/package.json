@@ -28,6 +28,11 @@
       "import": "./dist/api/index.mjs",
       "require": "./dist/api/index.cjs"
     },
+    "./api/data": {
+      "types": "./dist/api/data.d.ts",
+      "import": "./dist/api/data.mjs",
+      "require": "./dist/api/data.cjs"
+    },
     "./gates": {
       "types": "./dist/gates/index.d.ts",
       "import": "./dist/gates/index.mjs",

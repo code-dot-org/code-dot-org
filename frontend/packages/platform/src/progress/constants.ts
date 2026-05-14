@@ -2,8 +2,8 @@
 // with the dashboard API, so they live in core alongside the schemas
 // that validate against them. Re-exported here so existing platform
 // imports (`from '../constants'`) keep working.
-export {LevelStatuses, TestResults} from '@code-dot-org/core/api';
-import type {TestResult} from '@code-dot-org/core/api';
+export {LevelStatuses, TestResults} from '@code-dot-org/core/api/data';
+import type {TestResult} from '@code-dot-org/core/api/data';
 
 export const PUZZLE_PAGE_NONE = -1;
 

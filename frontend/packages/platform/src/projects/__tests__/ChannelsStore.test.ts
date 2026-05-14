@@ -4,8 +4,12 @@
 
 import {afterEach, beforeEach, describe, expect, it, vi} from 'vitest';
 
-import type {ApiClient, Channel, QueryClient} from '@code-dot-org/core/api';
-import {channelsKeys, projectsKeys} from '@code-dot-org/core/api';
+import type {
+  ApiClient,
+  Channel,
+  QueryClient,
+} from '@code-dot-org/core/api/data';
+import {channelsKeys, projectsKeys} from '@code-dot-org/core/api/data';
 
 import {ChannelsStore} from '../ChannelsStore';
 
