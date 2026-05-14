@@ -17,6 +17,7 @@ import {expect, test} from '../../shared/fixtures';
 
 test.describe('Signing in', () => {
   /**
+   * Migration status: COMPLETED
    * Source: dashboard/test/ui/features/platform/signing_in.feature
    * Scenario: Student sign in from studio.code.org
    */
@@ -42,6 +43,7 @@ test.describe('Signing in', () => {
   });
 
   /**
+   * Migration status: COMPLETED
    * Source: dashboard/test/ui/features/platform/signing_in.feature
    * Scenario: Student sign in from studio.code.org in the eu
    */
@@ -71,6 +73,7 @@ test.describe('Signing in', () => {
   });
 
   /**
+   * Migration status: COMPLETED
    * Source: dashboard/test/ui/features/platform/signing_in.feature
    * Scenario: Teacher sign in from studio.code.org
    */
@@ -96,6 +99,7 @@ test.describe('Signing in', () => {
   });
 
   /**
+   * Migration status: COMPLETED
    * Source: dashboard/test/ui/features/platform/signing_in.feature
    * Scenario: Signed-out joining non-picture non-word section from sign in page goes to link account page
    */

@@ -46,6 +46,7 @@ test.skip('visual OneTrust cookie pop-up check is covered by the Eyes lane', () 
 });
 
 /**
+ * Migration status: COMPLETED
  * Source: dashboard/test/ui/features/platform/one_trust.feature
  * Scenario: OneTrust cookie pop-up shows when self-hosting OneTrust libraries on code.org
  */
@@ -67,6 +68,7 @@ test(
 // ─── Script loading — self-hosted (default) ───────────────────────────────────
 
 /**
+ * Migration status: COMPLETED
  * Source: dashboard/test/ui/features/platform/one_trust.feature
  * Scenario: The dashboard pages load the self hosted OneTrust libraries.
  */
@@ -90,6 +92,7 @@ test(
 // ─── Script loading — prod libraries via DCDO mock ───────────────────────────
 
 /**
+ * Migration status: COMPLETED
  * Source: dashboard/test/ui/features/platform/one_trust.feature
  * Scenario: The dashboard pages load the Onetrust prod libraries.
  */
@@ -118,6 +121,7 @@ test(
 // ─── Script loading — test libraries via query param ─────────────────────────
 
 /**
+ * Migration status: COMPLETED
  * Source: dashboard/test/ui/features/platform/one_trust.feature
  * Scenario: The dashboard pages load the test OneTrust libraries.
  */
@@ -141,6 +145,7 @@ test(
 // ─── Script loading — disabled via query param ───────────────────────────────
 
 /**
+ * Migration status: COMPLETED
  * Source: dashboard/test/ui/features/platform/one_trust.feature
  * Scenario: The dashboard pages do not load the OneTrust libraries.
  */
@@ -162,6 +167,7 @@ test(
 // ─── Critical JS files are not categorized by OneTrust ───────────────────────
 
 /**
+ * Migration status: COMPLETED
  * Source: dashboard/test/ui/features/platform/one_trust.feature
  * Scenario: Critical Javascript files are appropriately categorized by OneTrust on dashboard
  */

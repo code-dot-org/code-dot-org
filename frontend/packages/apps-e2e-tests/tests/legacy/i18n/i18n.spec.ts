@@ -455,6 +455,7 @@ async function expectLocalizedPixelationInstructions(
 
 test.describe('Legacy i18n localized tutorials', () => {
   /**
+   * Migration status: COMPLETED
    * Source: dashboard/test/ui/features/foundations/i18n.feature
    * Scenario: HoC tutorial in Spanish
    */
@@ -468,6 +469,7 @@ test.describe('Legacy i18n localized tutorials', () => {
   });
 
   /**
+   * Migration status: COMPLETED
    * Source: dashboard/test/ui/features/foundations/i18n.feature
    * Scenario: Frozen tutorial in Spanish
    */
@@ -481,6 +483,7 @@ test.describe('Legacy i18n localized tutorials', () => {
   });
 
   /**
+   * Migration status: COMPLETED
    * Source: dashboard/test/ui/features/foundations/i18n.feature
    * Scenario: Minecraft:Agent tutorial in Spanish
    */
@@ -494,6 +497,7 @@ test.describe('Legacy i18n localized tutorials', () => {
   });
 
   /**
+   * Migration status: COMPLETED
    * Source: dashboard/test/ui/features/foundations/i18n.feature
    * Scenario: Toolbox Categories in Spanish
    */
@@ -507,6 +511,7 @@ test.describe('Legacy i18n localized tutorials', () => {
   });
 
   /**
+   * Migration status: COMPLETED
    * Source: dashboard/test/ui/features/foundations/i18n.feature
    * Scenario: Translated function names in Spanish
    */
@@ -520,6 +525,7 @@ test.describe('Legacy i18n localized tutorials', () => {
   });
 
   /**
+   * Migration status: COMPLETED
    * Source: dashboard/test/ui/features/foundations/i18n.feature
    * Scenario: HoC tutorial in Portuguese
    */
@@ -533,6 +539,7 @@ test.describe('Legacy i18n localized tutorials', () => {
   });
 
   /**
+   * Migration status: COMPLETED
    * Source: dashboard/test/ui/features/foundations/i18n.feature
    * Scenario: Frozen tutorial in Portuguese
    * @no_ci
@@ -547,6 +554,7 @@ test.describe('Legacy i18n localized tutorials', () => {
   });
 
   /**
+   * Migration status: COMPLETED
    * Source: dashboard/test/ui/features/foundations/i18n.feature
    * Scenario: Minecraft:Agent tutorial in Portuguese
    */
@@ -560,6 +568,7 @@ test.describe('Legacy i18n localized tutorials', () => {
   });
 
   /**
+   * Migration status: COMPLETED
    * Source: dashboard/test/ui/features/foundations/i18n.feature
    * Scenario: Toolbox Categories in Portuguese
    */
@@ -573,6 +582,7 @@ test.describe('Legacy i18n localized tutorials', () => {
   });
 
   /**
+   * Migration status: COMPLETED
    * Source: dashboard/test/ui/features/foundations/i18n.feature
    * Scenario: Translated function names in Portuguese
    */
@@ -586,6 +596,7 @@ test.describe('Legacy i18n localized tutorials', () => {
   });
 
   /**
+   * Migration status: COMPLETED
    * Source: dashboard/test/ui/features/foundations/i18n.feature
    * Scenario: HoC tutorial in Arabic (RTL)
    */
@@ -599,6 +610,7 @@ test.describe('Legacy i18n localized tutorials', () => {
   });
 
   /**
+   * Migration status: COMPLETED
    * Source: dashboard/test/ui/features/foundations/i18n.feature
    * Scenario: Frozen tutorial in Arabic (RTL)
    */
@@ -612,6 +624,7 @@ test.describe('Legacy i18n localized tutorials', () => {
   });
 
   /**
+   * Migration status: COMPLETED
    * Source: dashboard/test/ui/features/foundations/i18n.feature
    * Scenario: Minecraft:Agent tutorial in Arabic (RTL)
    */
@@ -625,6 +638,7 @@ test.describe('Legacy i18n localized tutorials', () => {
   });
 
   /**
+   * Migration status: COMPLETED
    * Source: dashboard/test/ui/features/foundations/i18n.feature
    * Scenario: Translated function names in Arabic
    */
@@ -635,6 +649,7 @@ test.describe('Legacy i18n localized tutorials', () => {
   });
 
   /**
+   * Migration status: COMPLETED
    * Source: dashboard/test/ui/features/foundations/i18n.feature
    * Scenario: Toolbox Categories in Arabic (RTL)
    */
@@ -648,6 +663,7 @@ test.describe('Legacy i18n localized tutorials', () => {
   });
 
   /**
+   * Migration status: COMPLETED
    * Source: dashboard/test/ui/features/foundations/i18n.feature
    * Scenario: Pixelation Widget long and short instructions in Spanish
    */
