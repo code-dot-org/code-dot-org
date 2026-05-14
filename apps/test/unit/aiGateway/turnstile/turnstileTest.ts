@@ -69,20 +69,12 @@ describe('TurnstileManager stale pre-fetch', () => {
 
   it('discards a pre-fetched token older than TOKEN_MAX_AGE_MS and runs a fresh challenge', async () => {
     const manager = TurnstileManager.getInstance();
-    const m = manager as unknown as {
-      nextTokenPromise: Promise<string> | null;
-      nextTokenResolvedAt: number | null;
-      getToken: () => Promise<string>;
-    };
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    const m = manager as any;
 
     const freshToken = 'fresh-token';
     const freshChallenge = jest.fn().mockResolvedValue(freshToken);
-    jest
-      .spyOn(
-        manager as unknown as {runSerializedChallenge: () => Promise<string>},
-        'runSerializedChallenge' as never
-      )
-      .mockImplementation(freshChallenge);
+    jest.spyOn(m, 'runSerializedChallenge').mockImplementation(freshChallenge);
 
     // Simulate a stale pre-fetched token that resolved TOKEN_MAX_AGE_MS + 1s ago.
     const staleToken = 'stale-token';
@@ -97,19 +89,11 @@ describe('TurnstileManager stale pre-fetch', () => {
 
   it('uses a pre-fetched token that is still within TOKEN_MAX_AGE_MS', async () => {
     const manager = TurnstileManager.getInstance();
-    const m = manager as unknown as {
-      nextTokenPromise: Promise<string> | null;
-      nextTokenResolvedAt: number | null;
-      getToken: () => Promise<string>;
-    };
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    const m = manager as any;
 
-    const freshChallenge = jest.fn();
-    jest
-      .spyOn(
-        manager as unknown as {runSerializedChallenge: () => Promise<string>},
-        'runSerializedChallenge' as never
-      )
-      .mockImplementation(freshChallenge);
+    const freshChallenge = jest.fn().mockResolvedValue('ignored');
+    jest.spyOn(m, 'runSerializedChallenge').mockImplementation(freshChallenge);
 
     const validToken = 'valid-token';
     m.nextTokenPromise = Promise.resolve(validToken);
