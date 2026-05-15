@@ -4,27 +4,17 @@ import {
   WithTooltip,
 } from '@code-dot-org/component-library/tooltip';
 import type {MiniApp} from '@code-dot-org/mini-app-base';
-import {
-  NEIGHBORHOOD_NAME,
-  NeighborhoodInputsContext,
-  type NeighborhoodInputs,
-  type NeighborhoodMiniApp,
-} from '@code-dot-org/neighborhood-mini-app';
 import {useCodebridgeContext} from '@codebridge/codebridgeContext';
 import CodebridgeRegistry from '@codebridge/CodebridgeRegistry';
 import ControlButtons from '@codebridge/Console/ControlButtons';
-import {DEFAULT_FOLDER_ID, MAZE_FILE_NAME} from '@codebridge/constants';
-import {createMiniApp} from '@codebridge/miniAppRegistry';
-import {findFile} from '@codebridge/utils';
+import {createMiniApp, getMiniAppAdapter} from '@codebridge/miniAppRegistry';
 import {IconButton as MuiIconButton} from '@mui/material';
 import {throttle} from 'lodash';
 import React, {useCallback, useEffect, useMemo, useRef, useState} from 'react';
 
 import codebridgeI18n from '@cdo/apps/codebridge/locale';
 import {setIsRunning} from '@cdo/apps/lab2/redux/systemRedux';
-import {MultiFileSource} from '@cdo/apps/lab2/types';
 import PanelContainer from '@cdo/apps/lab2/views/components/PanelContainer';
-import skins from '@cdo/apps/maze/skins';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 import {DEFAULT_MINI_APP_SIZE} from '../Workspace/constants';
@@ -64,10 +54,6 @@ const MiniAppPreview: React.FunctionComponent<MiniAppPreviewProps> = ({
   const miniAppName = useAppSelector(
     state => state.lab2Project.projectSources?.labConfig?.miniApp?.name
   );
-  const serializedMaze = useAppSelector(state => {
-    const source = state.lab2Project.projectSources?.source as MultiFileSource;
-    return findFile(source, MAZE_FILE_NAME, DEFAULT_FOLDER_ID)?.contents;
-  });
 
   // The MiniApp instance is held in state (rather than just read from
   // the registry on each render) so renders are triggered when it
@@ -106,19 +92,6 @@ const MiniAppPreview: React.FunctionComponent<MiniAppPreviewProps> = ({
     };
   }, [miniAppName, dispatch]);
 
-  // Neighborhood skin loading lives here because `@cdo/apps/maze/skins`
-  // is apps-only. The package's preview consumes the loaded skin
-  // through the inputs context.
-  const neighborhoodSkin = useMemo(() => {
-    if (miniAppName !== NEIGHBORHOOD_NAME || !levelProperties) {
-      return null;
-    }
-    return skins.load(
-      (path: string) => levelProperties.baseAssetUrl + path,
-      NEIGHBORHOOD_NAME
-    );
-  }, [miniAppName, levelProperties]);
-
   // Window-resize scaling. The container ref points at the wrapper
   // around the rendered preview; on resize we recompute the scale and
   // apply it through the shared apps-side helper.
@@ -139,33 +112,20 @@ const MiniAppPreview: React.FunctionComponent<MiniAppPreviewProps> = ({
     return () => window.removeEventListener('resize', throttledScale);
   }, [throttledScale, handleScaling, miniApp]);
 
-  const neighborhoodInputs = useMemo<NeighborhoodInputs | null>(() => {
-    if (miniAppName !== NEIGHBORHOOD_NAME) return null;
-    return {
-      miniApp: miniApp as NeighborhoodMiniApp | null,
-      levelProperties,
-      skin: neighborhoodSkin,
-      serializedMaze,
-    };
-  }, [miniAppName, miniApp, levelProperties, neighborhoodSkin, serializedMaze]);
-
   const miniAppComponent = useMemo(() => {
     const PreviewComponent = miniApp?.PreviewComponent;
-    if (!PreviewComponent) return null;
+    if (!PreviewComponent || !miniAppName) return null;
     const rendered = (
       <div ref={containerRef} className={moduleStyles.miniAppContainer}>
         <PreviewComponent handleScaling={handleScaling} />
       </div>
     );
-    if (neighborhoodInputs) {
-      return (
-        <NeighborhoodInputsContext.Provider value={neighborhoodInputs}>
-          {rendered}
-        </NeighborhoodInputsContext.Provider>
-      );
+    const Adapter = getMiniAppAdapter(miniAppName);
+    if (Adapter && miniApp) {
+      return <Adapter miniApp={miniApp}>{rendered}</Adapter>;
     }
     return rendered;
-  }, [miniApp, handleScaling, neighborhoodInputs]);
+  }, [miniApp, miniAppName, handleScaling]);
 
   const resetMiniApp = () => {
     setIsResetButtonDisabled(true);
