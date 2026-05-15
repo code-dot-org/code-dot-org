@@ -1,6 +1,8 @@
 import {createTeacherAssociatedStudent} from '../../shared/auth';
 import {expect, test} from '../../shared/fixtures';
 
+import {WebLab2} from './WebLab2';
+
 /** Skip webkit — @no_safari (Safari 16 regex incompatibility in WebLab2). */
 const skipSafari = ({browserName}: {browserName: string}) =>
   test.skip(browserName === 'webkit', '@no_safari');
@@ -61,8 +63,6 @@ test('teacher-associated under-13 student can open Web Lab', async ({page}) => {
  *
  * Verifies that the instructions drawer, file list, and CodeMirror editor
  * all render correctly for a signed-in student on the designated UI-test level.
- * The preview iframe (@no_ci) is covered by weblab2_preview.feature and not
- * ported here.
  */
 test.describe('Web Lab 2 — editor and instructions load', () => {
   test(
@@ -70,22 +70,36 @@ test.describe('Web Lab 2 — editor and instructions load', () => {
     {tag: '@no_mobile'},
     async ({studentPage, browserName}) => {
       skipSafari({browserName});
-      // hideProductTours suppresses first-visit tour overlays.
-      await studentPage.goto(
-        '/courses/allthethingscourse/units/1/lessons/51/levels/11?hideProductTours=true',
-      );
-      await studentPage
-        .locator('#instructions-drawer')
-        .waitFor({state: 'visible', timeout: 60_000});
-      await expect(studentPage.locator('#instructions-drawer')).toContainText(
-        'This is the level for a basic Web Lab 2 UI Test.',
-      );
-      await expect(studentPage.locator('#uitest-files-list')).toContainText(
-        'index.html',
-      );
-      await expect(studentPage.locator('.codemirror-container')).toContainText(
-        'Hello world!',
-      );
+      const lab = new WebLab2(studentPage);
+      await lab.reloadLevel(11);
+      await lab.expectEditorLoaded();
+    },
+  );
+});
+
+/**
+ * Web Lab 2 — preview iframe load.
+ *
+ * Source: dashboard/test/ui/features/student_learning/weblab2/weblab2_preview.feature
+ * @no_safari @no_mobile @no_ci
+ *
+ * Verifies that the outer preview iframe, preview shell, nested rendered HTML
+ * iframe, and hello-world content all load on a real test-studio environment.
+ */
+test.describe('Web Lab 2 — preview loads', () => {
+  /**
+   * Migration status: COMPLETED
+   * Source: dashboard/test/ui/features/student_learning/weblab2/weblab2_preview.feature
+   * Scenario: Web Lab 2 Preview loads
+   */
+  test(
+    'preview iframe renders hello-world page',
+    {tag: ['@no_mobile', '@no_ci']},
+    async ({studentPage, browserName}) => {
+      skipSafari({browserName});
+      const lab = new WebLab2(studentPage);
+      await lab.reloadLevel(11);
+      await lab.expectPreviewLoaded();
     },
   );
 });
