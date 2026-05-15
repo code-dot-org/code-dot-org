@@ -118,4 +118,22 @@ describe('NeighborhoodMiniApp', () => {
     app.afterInject('a', 'b', 'c');
     expect(inner.afterInject).toHaveBeenCalledWith('a', 'b', 'c');
   });
+
+  it('returns the SVG element for thumbnail capture', () => {
+    // Note: this test runs without jsdom by default, so the lookup
+    // returns null. The assertion pins the contract: the method
+    // queries by SVG_ID and returns null when the element is absent.
+    const app = new NeighborhoodMiniApp(stubDeps());
+    expect(app.getThumbnailElement()).toBeNull();
+
+    // With the SVG mounted in the document, the method returns it.
+    const svg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
+    svg.id = 'svgMaze';
+    document.body.appendChild(svg);
+    try {
+      expect(app.getThumbnailElement()).toBe(svg);
+    } finally {
+      svg.remove();
+    }
+  });
 });

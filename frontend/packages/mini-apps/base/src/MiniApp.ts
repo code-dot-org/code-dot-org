@@ -72,10 +72,14 @@ export interface MiniApp<Signal = unknown> {
   parseException?(traceback: string): string | null;
 
   /**
-   * Optional: capture the current visualization as a thumbnail. Called
-   * after a successful run.
+   * Optional: the DOM element codebridge should screenshot for the
+   * project thumbnail. Called after a successful run. Returning null
+   * skips the capture. The package exposes which element represents
+   * the visualization; codebridge owns the conversion pipeline (SVG →
+   * canvas → blob → save) because those helpers and the cropping scale
+   * live on the apps side.
    */
-  captureThumbnail?(): Promise<Blob | null>;
+  getThumbnailElement?(): Element | null;
 
   /**
    * Optional: preview scaling factor codebridge should apply when laying

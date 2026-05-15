@@ -112,13 +112,16 @@ function cropNeighborhoodCanvasFromTopLeft(canvas) {
 }
 
 /**
- * Converts the contents of an SVG element into an image, shrinks it to a
- * width equal to THUMBNAIL_WIDTH preserving aspect ratio, and saves it to
- * the server.
- * This version is to generate thumbnail image for Python Lab projects using Neighborhood mini-app.
+ * Convert a mini-app's SVG visualization into a thumbnail blob. Used by
+ * codebridge (pythonlab) after a run completes. The SVG element comes
+ * from the active MiniApp's `getThumbnailElement()`; cropping uses the
+ * preview scale stored in `CodebridgeRegistry.getMiniAppPreviewScale()`
+ * — both are mini-app-agnostic by name now, even though Neighborhood is
+ * the only mini-app that currently produces a capturable SVG.
+ *
  * @param {SVGElement | undefined} svg SVG element to capture the contents of.
  */
-export function captureThumbnailFromSvgPythonlabNeighborhood(svg) {
+export function captureMiniAppThumbnailFromSvg(svg) {
   if (!svg) {
     console.warn(`Thumbnail capture failed: svg element not found.`);
     return;

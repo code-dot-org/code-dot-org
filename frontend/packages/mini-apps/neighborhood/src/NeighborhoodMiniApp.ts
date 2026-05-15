@@ -6,7 +6,7 @@ import type {
   MiniAppPreviewProps,
 } from '@code-dot-org/mini-app-base';
 
-import {NEIGHBORHOOD_NAME, NEIGHBORHOOD_SIGNAL_TAG} from './constants';
+import {NEIGHBORHOOD_NAME, NEIGHBORHOOD_SIGNAL_TAG, SVG_ID} from './constants';
 import Neighborhood from './Neighborhood';
 import NeighborhoodPreview from './NeighborhoodPreview';
 import {parseNeighborhoodException} from './parseNeighborhoodException';
@@ -81,6 +81,15 @@ export class NeighborhoodMiniApp
     // The inner method has a strict typed signature; the wrapper stays
     // permissive at the codebridge boundary, so we cast through here.
     (this.neighborhood.afterInject as (...a: unknown[]) => void)(...args);
+  }
+
+  /**
+   * Codebridge calls this to find the DOM node to screenshot for the
+   * project thumbnail. For Neighborhood, that's the SVG element the
+   * MazeController draws into.
+   */
+  getThumbnailElement(): Element | null {
+    return document.getElementById(SVG_ID);
   }
 }
 

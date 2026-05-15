@@ -11,10 +11,9 @@ import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
 import ProgressManager from '@cdo/apps/lab2/progress/ProgressManager';
 import {getFileByName} from '@cdo/apps/lab2/projects/utils';
 import {MultiFileSource, ProjectFile} from '@cdo/apps/lab2/types';
-import {SVG_ID} from '@cdo/apps/maze/constants';
 import pythonlabI18n from '@cdo/apps/pythonlab/locale';
 import {getStore} from '@cdo/apps/redux';
-import {captureThumbnailFromSvgPythonlabNeighborhood} from '@cdo/apps/util/thumbnail';
+import {captureMiniAppThumbnailFromSvg} from '@cdo/apps/util/thumbnail';
 
 import {getValidationFromSource, RunType} from '../codebridge';
 
@@ -180,19 +179,18 @@ function handleRunEndedUnexpectedly(
 }
 
 async function setProjectThumbnail() {
-  // Lifecycle flush goes through the MiniApp interface; the SVG-based
-  // capture below is still Neighborhood-specific and will move to
-  // `miniApp.captureThumbnail()` in a follow-up.
   const miniApp = CodebridgeRegistry.getInstance().getMiniApp();
   miniApp?.onClose();
   const projectManager = Lab2Registry.getInstance().getProjectManager();
   const shouldCapture = projectManager?.getShouldCaptureThumbnail();
   if (!shouldCapture) return;
   await miniApp?.waitUntilDone(); // Wait for signal processing to be completed.
-  const svg = document.getElementById(SVG_ID);
-  const svgArg = svg instanceof SVGSVGElement ? svg : null;
-  if (svgArg) {
-    const pngBlob = await captureThumbnailFromSvgPythonlabNeighborhood(svgArg);
+  // The mini-app says which DOM element represents its visualization;
+  // codebridge owns the SVG → blob conversion (canvg + crop by preview
+  // scale + resize) because those helpers live on the apps side.
+  const target = miniApp?.getThumbnailElement?.();
+  if (target instanceof SVGSVGElement) {
+    const pngBlob = await captureMiniAppThumbnailFromSvg(target);
     projectManager?.setThumbnail(pngBlob);
   }
 }
