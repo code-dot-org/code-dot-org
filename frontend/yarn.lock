@@ -1499,12 +1499,68 @@ __metadata:
   languageName: unknown
   linkType: soft
 
+"@code-dot-org/maze@npm:2.16.0":
+  version: 2.16.0
+  resolution: "@code-dot-org/maze@npm:2.16.0"
+  checksum: 10c0/69936c28b88b1f5e0a433c8c15d1cb996ceaaaefb70d43b1cbe40e1ba07b77a0707e356028dc7529b4079755ce39a6a26fca143686d6f81770a4f93d6e964b8c
+  languageName: node
+  linkType: hard
+
+"@code-dot-org/mini-app-base@workspace:packages/mini-apps/base":
+  version: 0.0.0-use.local
+  resolution: "@code-dot-org/mini-app-base@workspace:packages/mini-apps/base"
+  dependencies:
+    "@code-dot-org/lint-config": "workspace:*"
+    "@types/node": "catalog:"
+    "@types/react": "catalog:"
+    eslint: "catalog:"
+    prettier: "catalog:"
+    react: "catalog:"
+    typescript: "catalog:"
+    vite: "catalog:"
+    vite-plugin-dts: "catalog:"
+    vite-plugin-externalize-deps: "catalog:"
+    vitest: "catalog:"
+  peerDependencies:
+    react: ^18.0.0 || ^19.0.0
+  languageName: unknown
+  linkType: soft
+
 "@code-dot-org/music-lab@workspace:*, @code-dot-org/music-lab@workspace:packages/labs/music":
   version: 0.0.0-use.local
   resolution: "@code-dot-org/music-lab@workspace:packages/labs/music"
   dependencies:
     "@code-dot-org/core": "workspace:*"
     "@code-dot-org/lint-config": "workspace:*"
+    "@testing-library/dom": "catalog:"
+    "@testing-library/react": "catalog:"
+    "@types/node": "catalog:"
+    "@types/react": "catalog:"
+    "@types/react-dom": "catalog:"
+    "@vitejs/plugin-react": "catalog:"
+    eslint: "catalog:"
+    jsdom: "catalog:"
+    prettier: "catalog:"
+    react: "catalog:"
+    react-dom: "catalog:"
+    typescript: "catalog:"
+    vite: "catalog:"
+    vite-plugin-dts: "catalog:"
+    vite-plugin-externalize-deps: "catalog:"
+    vitest: "catalog:"
+  peerDependencies:
+    react: ^18.0.0 || ^19.0.0
+    react-dom: ^18.0.0 || ^19.0.0
+  languageName: unknown
+  linkType: soft
+
+"@code-dot-org/neighborhood-mini-app@workspace:packages/mini-apps/neighborhood":
+  version: 0.0.0-use.local
+  resolution: "@code-dot-org/neighborhood-mini-app@workspace:packages/mini-apps/neighborhood"
+  dependencies:
+    "@code-dot-org/core": "workspace:*"
+    "@code-dot-org/lint-config": "workspace:*"
+    "@code-dot-org/maze": "npm:2.16.0"
     "@testing-library/dom": "catalog:"
     "@testing-library/react": "catalog:"
     "@types/node": "catalog:"
