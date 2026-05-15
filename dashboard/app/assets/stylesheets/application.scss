@@ -3667,7 +3667,7 @@ $width: 400px;
   color: $white;
   background-color: $light_purple;
   padding: 3px;
-  z-index: 100;
+  z-index: 2000; // must be greater than bootstrap's .navbar-static-top
   cursor: pointer;
   box-shadow: 0 0 7px 2px $shadow;
 }
