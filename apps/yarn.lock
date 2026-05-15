@@ -4023,6 +4023,14 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@code-dot-org/mini-app-base@portal:../frontend/packages/mini-apps/base/::locator=blockly-mooc%40workspace%3A.":
+  version: 0.0.0-use.local
+  resolution: "@code-dot-org/mini-app-base@portal:../frontend/packages/mini-apps/base/::locator=blockly-mooc%40workspace%3A."
+  peerDependencies:
+    react: ^18.0.0 || ^19.0.0
+  languageName: node
+  linkType: soft
+
 "@code-dot-org/ml-activities@npm:0.1.3":
   version: 0.1.3
   resolution: "@code-dot-org/ml-activities@npm:0.1.3"
@@ -4054,6 +4062,15 @@ __metadata:
   checksum: 10/79a3aa73f29c468422f2e08e232c6ec56480689987a6d6eb33d8b82de228bd7c3a788778a86a06ddd57202bdaf8e0d3c3868db3468457986d4e820f18f0c1f28
   languageName: node
   linkType: hard
+
+"@code-dot-org/neighborhood-mini-app@portal:../frontend/packages/mini-apps/neighborhood/::locator=blockly-mooc%40workspace%3A.":
+  version: 0.0.0-use.local
+  resolution: "@code-dot-org/neighborhood-mini-app@portal:../frontend/packages/mini-apps/neighborhood/::locator=blockly-mooc%40workspace%3A."
+  peerDependencies:
+    react: ^18.0.0 || ^19.0.0
+    react-dom: ^18.0.0 || ^19.0.0
+  languageName: node
+  linkType: soft
 
 "@code-dot-org/p5.play@npm:1.3.21-cdo":
   version: 1.3.21-cdo
@@ -11386,8 +11403,10 @@ __metadata:
     "@code-dot-org/js-interpreter": "npm:1.3.13"
     "@code-dot-org/js-numbers": "npm:0.1.0-cdo.0"
     "@code-dot-org/maze": "npm:2.16.0"
+    "@code-dot-org/mini-app-base": "portal:../frontend/packages/mini-apps/base/"
     "@code-dot-org/ml-activities": "npm:0.1.3"
     "@code-dot-org/ml-playground": "npm:0.0.47"
+    "@code-dot-org/neighborhood-mini-app": "portal:../frontend/packages/mini-apps/neighborhood/"
     "@code-dot-org/p5.play": "npm:1.3.21-cdo"
     "@code-dot-org/piskel": "npm:0.13.0-cdo.13"
     "@code-dot-org/redactable-markdown": "npm:^0.10.0"

@@ -1506,7 +1506,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@code-dot-org/mini-app-base@workspace:packages/mini-apps/base":
+"@code-dot-org/mini-app-base@workspace:*, @code-dot-org/mini-app-base@workspace:packages/mini-apps/base":
   version: 0.0.0-use.local
   resolution: "@code-dot-org/mini-app-base@workspace:packages/mini-apps/base"
   dependencies:
@@ -1561,6 +1561,7 @@ __metadata:
     "@code-dot-org/core": "workspace:*"
     "@code-dot-org/lint-config": "workspace:*"
     "@code-dot-org/maze": "npm:2.16.0"
+    "@code-dot-org/mini-app-base": "workspace:*"
     "@testing-library/dom": "catalog:"
     "@testing-library/react": "catalog:"
     "@types/node": "catalog:"
