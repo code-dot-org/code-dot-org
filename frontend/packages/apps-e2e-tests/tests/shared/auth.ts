@@ -946,6 +946,7 @@ export async function createLevelbuilder(page: Page): Promise<void> {
  * @param page - Playwright page holding an active teacher session
  */
 export async function getLevelbuilderAccess(page: Page): Promise<void> {
+  await page.goto('/');
   const csrf = await page
     .locator('meta[name="csrf-token"]')
     .getAttribute('content');
@@ -1068,6 +1069,7 @@ export async function assignSectionToCourseAndUnit(
   courseName: string,
   unitPosition: number,
 ): Promise<void> {
+  await page.goto('/teacher_dashboard/home');
   const csrf = await page
     .locator('meta[name="csrf-token"]')
     .getAttribute('content');

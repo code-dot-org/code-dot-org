@@ -6,6 +6,7 @@ import {expect, test} from '../../shared/fixtures';
 import {Dance} from '../activities/dance/Dance';
 
 import {ProjectSharingPage} from './ProjectSharingPage';
+import {ProjectsPage} from './ProjectsPage';
 
 /**
  * Project Sharing — Young Students.
@@ -347,6 +348,42 @@ test.describe('Personal Project Gallery', {tag: '@no_mobile'}, () => {
 });
 
 test.describe('Project Sharing — Blockly projects', {tag: '@no_mobile'}, () => {
+  /**
+   * Migration status: COMPLETED
+   * Source: dashboard/test/ui/features/teacher_tools/projects/projects.feature
+   * Scenario: My Projects
+   */
+  test('my projects page expands the full project type list', async ({
+    page,
+  }) => {
+    await createStudent(page);
+    const projects = new ProjectsPage(page);
+
+    await projects.gotoMyProjects();
+    await projects.expectCompactProjectList();
+    // Visual checkpoint stub: initial My Projects page.
+    await projects.showFullProjectList();
+    // Visual checkpoint stub: expanded project type list.
+  });
+
+  /**
+   * Migration status: COMPLETED
+   * Source: dashboard/test/ui/features/teacher_tools/projects/projects.feature
+   * Scenario: Project Ownership
+   */
+  test('anonymous project ownership transfers to account created with storage id', async ({
+    page,
+  }) => {
+    const projects = new ProjectsPage(page);
+
+    const projectUrl = await projects.startAnonymousArtistProject();
+    await projects.expectEditAccessAfterReload();
+    await createStudent(page, {name: 'Takeover'});
+    await projects.expectEditAccess(projectUrl);
+    await signOut(page);
+    await projects.expectViewAccess(projectUrl);
+  });
+
   /**
    * Migration status: COMPLETED
    * Source: dashboard/test/ui/features/teacher_tools/projects/blockly_project.feature

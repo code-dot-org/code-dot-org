@@ -102,18 +102,44 @@ export class ManageStudentsPage {
     ).toBeVisible({timeout: 30_000});
   }
 
+  /**
+   * Enables roster edit-all mode, fills the first student's family name, and
+   * saves the change.
+   *
+   * @param studentName - visible student display name
+   * @param familyName - family name to save
+   */
+  async saveFamilyNameForStudent(
+    studentName: string,
+    familyName: string,
+  ): Promise<void> {
+    await expect(this.table.getByText(studentName).first()).toBeVisible({
+      timeout: 30_000,
+    });
+    await this.table
+      .getByRole('columnheader', {name: /^Actions/})
+      .getByRole('button', {name: 'Actions'})
+      .last()
+      .click();
+    await this.page.getByRole('button', {name: 'Edit all'}).click();
+    const familyNameInput = this.page.locator(
+      "input[name='uitest-family-name']",
+    );
+    await expect(familyNameInput).toBeEnabled({timeout: 30_000});
+    await familyNameInput.fill(familyName);
+    await expect(familyNameInput).toHaveValue(familyName);
+    await this.page
+      .getByRole('button', {name: 'Save'})
+      .evaluate(element => (element as HTMLElement).click());
+    await expect(familyNameInput).not.toBeVisible({timeout: 30_000});
+    await expect(this.table).toContainText(familyName, {timeout: 30_000});
+  }
+
   private get table(): Locator {
     return this.page.locator('#uitest-manage-students-table');
   }
 
   private get modal(): Locator {
     return this.page.locator('#us-state-column-bulk-set-modal');
-  }
-
-  private studentRow(studentName: string): Locator {
-    return this.table
-      .getByRole('row')
-      .filter({hasText: new RegExp(`^${studentName}\\b`)})
-      .first();
   }
 }

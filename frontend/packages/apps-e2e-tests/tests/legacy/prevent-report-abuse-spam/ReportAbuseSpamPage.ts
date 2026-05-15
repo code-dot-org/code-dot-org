@@ -109,7 +109,10 @@ export class ReportAbuseSpamPage {
    *
    * @param link - report-abuse link in the help or footer menu
    */
-  async submitAbuseReportFrom(link: Locator): Promise<void> {
+  async submitAbuseReportFrom(
+    link: Locator,
+    reporter: 'student' | 'teacher' = 'student',
+  ): Promise<void> {
     const popupPromise = this.page.context().waitForEvent('page');
     await link.click();
     const popup = await popupPromise;
@@ -119,10 +122,27 @@ export class ReportAbuseSpamPage {
     });
 
     const reportAbuse = new ReportAbusePage(popup);
-    await reportAbuse.fillStudentReport();
+    if (reporter === 'teacher') {
+      await reportAbuse.fillTeacherReport();
+    } else {
+      await reportAbuse.fillStudentReport();
+    }
     await reportAbuse.submitAndExpectSupportRedirect();
     await popup.close();
     await this.page.bringToFront();
+  }
+
+  /**
+   * Opens a share URL and waits for the footer menu affordance that a viewer
+   * can use to report abuse.
+   *
+   * @param shareUrl - absolute share URL from the share dialog
+   */
+  async gotoSharePage(shareUrl: string): Promise<void> {
+    await this.page.goto(shareUrl, {waitUntil: 'domcontentloaded'});
+    await expect(
+      this.page.locator('div.small-footer-base button.more-link').first(),
+    ).toBeVisible({timeout: 30_000});
   }
 
   /**

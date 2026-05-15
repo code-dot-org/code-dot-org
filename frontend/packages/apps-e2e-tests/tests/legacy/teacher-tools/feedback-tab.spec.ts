@@ -7,6 +7,8 @@ import {
 } from '../../shared/auth';
 import {expect, test} from '../../shared/fixtures';
 
+import {FeedbackTabPage} from './FeedbackTabPage';
+
 /**
  * Feedback Tab Visibility — teacher and student views of the rubric
  * feedback tab on a level with a mini rubric.
@@ -23,6 +25,28 @@ import {expect, test} from '../../shared/fixtures';
 const LEVEL_URL = '/courses/allthethingscourse/units/1/lessons/38/levels/1';
 
 test.describe('Feedback Tab Visibility', {tag: '@no_mobile'}, () => {
+  /**
+   * Migration status: COMPLETED
+   * Source: dashboard/test/ui/features/teacher_tools/instructions/feedback_tab_eyes.feature
+   * Scenario: As student 'Feedback' tab is the 'Key Concept' tab if no feedback
+   */
+  test('eyes port: student feedback tab shows key concept when there is no feedback', async ({
+    page,
+  }) => {
+    const teacher = await createAuthorizedTeacher(page);
+    const {sectionCode} = await createSection(page);
+    const student = await createStudent(page);
+    await joinSection(page, sectionCode);
+
+    const feedbackTab = new FeedbackTabPage(page);
+    await feedbackTab.completeLevel();
+    await feedbackTab.expectStudentKeyConceptFeedbackTab();
+    // Visual checkpoint stub: student with no feedback tab.
+
+    void teacher;
+    void student;
+  });
+
   /**
    * Migration status: COMPLETED
    * Source: dashboard/test/ui/features/teacher_tools/instructions/feedback_tab.feature

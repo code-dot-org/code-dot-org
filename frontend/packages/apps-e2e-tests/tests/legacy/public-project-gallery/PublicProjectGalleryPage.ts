@@ -43,4 +43,35 @@ export class PublicProjectGalleryPage {
       'Featured Projects',
     );
   }
+
+  /**
+   * Opens the public gallery with the special-topic experiment enabled.
+   */
+  async gotoSpecialTopicExperiment(): Promise<void> {
+    await this.page.goto('/projects/public/?enableExperiments=special-topic');
+    await expect(this.page.locator('#projects-page')).toBeVisible({
+      timeout: 30_000,
+    });
+    await expect(
+      this.page.locator('.ui-project-app-type-area').first(),
+    ).toBeAttached({
+      timeout: 30_000,
+    });
+  }
+
+  /**
+   * Verifies the special-topic experiment project sections.
+   */
+  async expectSpecialTopics(): Promise<void> {
+    await expect(this.page.locator('.ui-project-app-type-area')).toHaveCount(
+      2,
+      {
+        timeout: 30_000,
+      },
+    );
+    await expect(this.page.locator('.ui-special_topic')).toContainText(
+      'View more Featured Topics projects',
+      {timeout: 30_000},
+    );
+  }
 }
