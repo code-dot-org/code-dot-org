@@ -18,12 +18,14 @@
         },
         "totalTokens": {
           "type": "number"
+        },
+        "inputTokens": {
+          "type": "number"
+        },
+        "outputTokens": {
+          "type": "number"
         }
       },
-      "required": [
-        "promptTokens",
-        "completionTokens"
-      ],
       "additionalProperties": false
     },
     "output": {},
@@ -79,8 +81,7 @@
     }
   },
   "required": [
-    "finishReason",
-    "usage"
+    "finishReason"
   ],
   "additionalProperties": false,
   "$schema": "http://json-schema.org/draft-07/schema#"

@@ -188,11 +188,18 @@ const GatewayGenerateTextRequestV1Schema = z.object({
 export const GatewayGenerateTextResponseV1Schema = z.object({
   text: z.string().optional(),
   finishReason: z.string(),
-  usage: z.object({
-    promptTokens: z.number(),
-    completionTokens: z.number(),
-    totalTokens: z.number().optional(),
-  }),
+  // usage is optional: some providers don't report token counts at all.
+  // promptTokens/completionTokens are deprecated SDK v6 aliases for
+  // inputTokens/outputTokens — providers may omit them entirely.
+  usage: z
+    .object({
+      promptTokens: z.number().optional(),
+      completionTokens: z.number().optional(),
+      totalTokens: z.number().optional(),
+      inputTokens: z.number().optional(),
+      outputTokens: z.number().optional(),
+    })
+    .optional(),
   // Parsed structured output when the request included an `output` schema.
   // The concrete shape is determined per-callsite by the OUTPUT generic of
   // generateText — the wire contract can't capture it, so it stays unknown.

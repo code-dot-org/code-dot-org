@@ -63,7 +63,7 @@ async function transcribeThroughGateway(
       warnings: (wire.warnings ?? []) as TranscriptionResult['warnings'],
     } as unknown as TranscriptionResult;
   } catch (error) {
-    const logData = getErrorLogData(error);
+    const logData = await getErrorLogData(error);
     console.error('Fetch error in transcribeThroughGateway:', logData);
     throw error;
   }
