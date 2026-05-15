@@ -139,6 +139,40 @@ test.describe('Multiple choice contained levels', () => {
   /**
    * Migration status: COMPLETED
    * Source: dashboard/test/ui/features/teacher_tools/level_types/multiple_choice_contained_levels.feature
+   * Scenario: Unauthorized Teacher on CSF Maze with multiple choice contained level
+   */
+  test('unauthorized teacher can view a CSF contained multiple choice answer', async ({
+    page,
+  }) => {
+    const {teacherEmail, teacherPassword, sectionId} =
+      await createTeacherAssociatedStudent(page, {studentName: 'Sally'});
+    await signIn(page, teacherEmail, teacherPassword);
+
+    await page.goto(
+      `/courses/ui-test-csf/units/1/lessons/1/levels/2?section_id=${sectionId}&viewAs=Instructor`,
+    );
+    await page
+      .locator('#runButton')
+      .waitFor({state: 'visible', timeout: 60_000});
+    // Visual checkpoint stub: "initial load".
+
+    await selectAnswer(page, 0);
+    // Visual checkpoint stub: "answer entered".
+
+    await page.locator('.uitest-teacherOnlyTab').first().click();
+    await expect(
+      page.locator('.editor-column').filter({hasText: 'Answer'}).first(),
+    ).toBeVisible({timeout: 30_000});
+    // Visual checkpoint stub: "multiple choice answer for teacher".
+
+    await page.locator('#runButton').click();
+    await expect(page.locator('#resetButton')).toBeVisible({timeout: 30_000});
+    // Visual checkpoint stub: "level run".
+  });
+
+  /**
+   * Migration status: COMPLETED
+   * Source: dashboard/test/ui/features/teacher_tools/level_types/multiple_choice_contained_levels.feature
    * Scenario: Teacher can reset progress on multiple choice contained level
    */
   test('teacher can reset progress on multiple choice contained level', async ({

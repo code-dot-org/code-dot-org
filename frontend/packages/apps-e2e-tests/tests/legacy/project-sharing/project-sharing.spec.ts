@@ -1,5 +1,6 @@
 import {type Page} from '@playwright/test';
 
+import {AppLab} from '../../applab/AppLab';
 import {createStudent, createTeacher, signOut} from '../../shared/auth';
 import {expect, test} from '../../shared/fixtures';
 import {Dance} from '../activities/dance/Dance';
@@ -498,6 +499,112 @@ test.describe('Game Lab Projects', {tag: '@no_mobile'}, () => {
     await expect(page.locator('#runButton')).toBeVisible({timeout: 60_000});
     await expect(page).toHaveTitle(/Remix: Code Ninja - Game Lab - Code\.org/);
     expect(page.url()).toContain('/projects/gamelab');
+    expect(page.url()).toContain('/edit');
+    expect(page.url()).not.toBe(originalUrl);
+    await page.locator('#runButton').click();
+  });
+});
+
+test.describe('App Lab Projects', {tag: '@no_mobile'}, () => {
+  /**
+   * Migration status: COMPLETED
+   * Source: dashboard/test/ui/features/teacher_tools/projects/applab_project.feature
+   * Scenario: Applab Flow
+   */
+  test('student App Lab project routes view-code links by ownership', async ({
+    page,
+  }) => {
+    test.slow();
+
+    await createStudent(page);
+    await makeProjectFromFamilyRoute(page, 'applab');
+    const applab = new AppLab(page);
+    await page.evaluate(() => localStorage.setItem('is13Plus', 'true'));
+    await applab.ensureTextMode();
+    await applab.appendCode(
+      "image('id', 'https://studio.code.org/blockly/media/logo.png')",
+    );
+    await expect(page.locator('.project_updated_at')).toContainText('Saved', {
+      timeout: 60_000,
+    });
+    await renameProject(page, 'Code Ninja');
+    await expect(page).toHaveTitle(/Code Ninja - App Lab - Code\.org/);
+
+    await page.locator('#runButton').click();
+    await expect(page.locator('.project_updated_at')).toContainText('Saved', {
+      timeout: 60_000,
+    });
+    const shareUrl = await openShareDialogAndReadUrl(page);
+    const projectSharing = new ProjectSharingPage(page);
+
+    await projectSharing.gotoSharePage(shareUrl);
+    await expect(page.locator('#codeWorkspace')).toBeHidden();
+    await projectSharing.clickViewCode();
+    await expect(page).toHaveURL(/\/projects\/applab\/[^/]+\/edit/, {
+      timeout: 60_000,
+    });
+    await projectSharing.expectEditableCodeWorkspace();
+
+    await signOut(page);
+    await projectSharing.gotoSharePage(shareUrl);
+    await expect(page.locator('#codeWorkspace')).toBeHidden();
+    await projectSharing.clickViewCode();
+    await expect(page).toHaveURL(/\/projects\/applab\/[^/]+\/view/, {
+      timeout: 60_000,
+    });
+    await projectSharing.expectReadonlyCodeWorkspace();
+
+    await createTeacher(page, {name: 'Non-Owner'});
+    await page.goto(`${shareUrl}/edit`);
+    await expect(page).toHaveURL(/\/projects\/applab\/[^/]+\/view/, {
+      timeout: 60_000,
+    });
+    await projectSharing.expectReadonlyCodeWorkspace();
+  });
+
+  /**
+   * Migration status: SKIPPED
+   * Source: dashboard/test/ui/features/teacher_tools/projects/applab_project.feature
+   * Scenario: Save Project After Signing Out
+   */
+  test.skip('save project after signing out source scenario is skipped', async () => {
+    test.skip(
+      true,
+      'Source Cucumber scenario is tagged @skip and documents a known non-broken user-experience follow-up.',
+    );
+  });
+
+  /**
+   * Migration status: SKIPPED
+   * Source: dashboard/test/ui/features/teacher_tools/projects/applab_project.feature
+   * Scenario: Save Script Level After Signing Out
+   */
+  test.skip('save script level after signing out source scenario is skipped', async () => {
+    test.skip(
+      true,
+      'Source Cucumber scenario is tagged @skip and references retired csp-2017 curriculum.',
+    );
+  });
+
+  /**
+   * Migration status: COMPLETED
+   * Source: dashboard/test/ui/features/teacher_tools/projects/applab_project.feature
+   * Scenario: Remix project creates and redirects to new channel
+   */
+  test('remix App Lab project creates and redirects to a new channel', async ({
+    page,
+  }) => {
+    await createStudent(page);
+    await makeProjectFromFamilyRoute(page, 'applab');
+    await page.evaluate(() => localStorage.setItem('is13Plus', 'true'));
+    await renameProject(page, 'Code Ninja');
+    await expect(page).toHaveTitle(/Code Ninja - App Lab - Code\.org/);
+    const originalUrl = page.url();
+
+    await page.locator('.project_remix').click();
+    await expect(page.locator('#runButton')).toBeVisible({timeout: 60_000});
+    await expect(page).toHaveTitle(/Remix: Code Ninja - App Lab - Code\.org/);
+    expect(page.url()).toContain('/projects/applab');
     expect(page.url()).toContain('/edit');
     expect(page.url()).not.toBe(originalUrl);
     await page.locator('#runButton').click();
