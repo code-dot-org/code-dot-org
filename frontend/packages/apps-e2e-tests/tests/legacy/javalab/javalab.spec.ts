@@ -1,33 +1,292 @@
-import {createTeacherAssociatedStudent} from '../../shared/auth';
+import {type APIResponse, type Page} from '@playwright/test';
+
+import {
+  createAuthorizedTeacher,
+  createSectionWithCourse,
+  createStudent,
+  createTeacherAssociatedStudent,
+  joinSection,
+  signIn as dashboardSignIn,
+  type UserCredentials,
+} from '../../shared/auth';
 import {expect, test} from '../../shared/fixtures';
 
+import {JavaLabPage} from './JavaLabPage';
+
 /**
- * Java Lab — commit code, finish button, and submittable level scenarios.
+ * Java Lab — commit code, code review, console-only, finish button, and
+ * submittable level scenarios.
  *
  * Sources:
  *   dashboard/test/ui/features/javalab/commit_code.feature
+ *   dashboard/test/ui/features/javalab/code_review_finish_button.feature
+ *   dashboard/test/ui/features/javalab/code_review_scenarios.feature
+ *   dashboard/test/ui/features/javalab/console_only.feature
  *   dashboard/test/ui/features/javalab/finish_button.feature
  *   dashboard/test/ui/features/javalab/javalab_submittable.feature
- *
- * Skipped (all @eyes and/or @no_ci with visual assertions or complex infra):
- *   code_review_finish_button.feature — @no_ci + custom code-review group setup
- *   code_review_scenarios.feature     — @eyes + same group setup
- *   console_only.feature              — @eyes + @no_ci
- *   javalab_demo_mode.feature         — @eyes + @no_ci + reCAPTCHA
- *   neighborhood.feature              — @eyes + @no_ci
- *   prompter.feature                  — @eyes + @no_ci + file upload
- *   theater.feature                   — @eyes + @no_ci + 15s wait
  */
 
-// Fixme stubs — @eyes / @no_ci with no porteable non-visual steps.
-test.fixme(
-  'code review: running code in own review does not enable finish button',
-  async () => {},
-);
-test.fixme('code review V2: full peer-review flow', async () => {});
-test.fixme('console only level responds to text input', async () => {});
-
 const LESSON_44 = '/courses/allthethingscourse/units/1/lessons/44';
+
+interface CodeReviewSetup {
+  teacher: UserCredentials;
+  student0: UserCredentials;
+  student1: UserCredentials;
+  student0Id: number;
+  student1Id: number;
+  sectionId: number;
+}
+
+interface SectionStudent {
+  id: number;
+  name: string;
+  family_name?: string | null;
+  familyName?: string | null;
+}
+
+/**
+ * Parse a JSON API response and throw a useful error if it failed.
+ *
+ * @param response - API response to inspect
+ * @param action - human-readable action for failure messages
+ * @returns parsed JSON body
+ */
+async function parseJsonResponse<T>(
+  response: APIResponse,
+  action: string,
+): Promise<T> {
+  const text = await response.text();
+  if (!response.ok()) {
+    throw new Error(`${action} failed: ${response.status()} — ${text}`);
+  }
+
+  return (text ? JSON.parse(text) : {}) as T;
+}
+
+/**
+ * Read the current page CSRF token for dashboard JSON requests.
+ *
+ * @param page - Playwright page holding the active session
+ */
+async function csrfToken(page: Page): Promise<string> {
+  return (
+    (await page.locator('meta[name="csrf-token"]').getAttribute('content')) ??
+    ''
+  );
+}
+
+/**
+ * POST JSON as the current signed-in user.
+ *
+ * @param page - Playwright page holding the active session
+ * @param url - dashboard path
+ * @param data - JSON request body
+ * @param action - human-readable action for failure messages
+ * @returns parsed JSON response
+ */
+async function postJson<T>(
+  page: Page,
+  url: string,
+  data: object,
+  action: string,
+): Promise<T> {
+  return parseJsonResponse<T>(
+    await page.request.post(url, {
+      headers: {
+        'Content-Type': 'application/json',
+        'X-CSRF-Token': await csrfToken(page),
+      },
+      data,
+    }),
+    action,
+  );
+}
+
+/**
+ * GET JSON as the current signed-in user.
+ *
+ * @param page - Playwright page holding the active session
+ * @param url - dashboard path
+ * @param action - human-readable action for failure messages
+ * @returns parsed JSON response
+ */
+async function getJson<T>(page: Page, url: string, action: string): Promise<T> {
+  return parseJsonResponse<T>(await page.request.get(url), action);
+}
+
+/**
+ * Sign in, retrying the full reset-session flow if dashboard rejects a stale
+ * CSRF token under heavy parallel load.
+ *
+ * @param page - Playwright page
+ * @param email - user's login email
+ * @param password - user's password
+ */
+async function signIn(
+  page: Page,
+  email: string,
+  password: string,
+): Promise<void> {
+  let lastError: unknown;
+  for (let attempt = 1; attempt <= 3; attempt++) {
+    try {
+      await dashboardSignIn(page, email, password);
+      return;
+    } catch (error) {
+      lastError = error;
+      const message = error instanceof Error ? error.message : String(error);
+      if (
+        !message.includes('InvalidAuthenticityToken') &&
+        !message.includes('422')
+      ) {
+        throw error;
+      }
+    }
+  }
+
+  throw lastError instanceof Error ? lastError : new Error(String(lastError));
+}
+
+/**
+ * Resolve a student id from the teacher's section roster.
+ *
+ * @param page - Playwright page signed in as the section teacher
+ * @param sectionId - dashboard section id
+ * @param studentName - student display name
+ * @returns dashboard user id for the student
+ */
+async function getSectionStudentId(
+  page: Page,
+  sectionId: number,
+  studentName: string,
+): Promise<number> {
+  const students = await getJson<SectionStudent[]>(
+    page,
+    `/dashboardapi/sections/${sectionId}/students`,
+    'get section students',
+  );
+  const student = students.find(candidate => {
+    const fullName = [
+      candidate.name,
+      candidate.family_name ?? candidate.familyName ?? '',
+    ]
+      .join(' ')
+      .trim();
+    return candidate.name === studentName || fullName === studentName;
+  });
+
+  if (!student) {
+    throw new Error(`could not find section student named ${studentName}`);
+  }
+
+  return student.id;
+}
+
+/**
+ * Create an authorized teacher with a CSA section and sign in as its student.
+ * Mirrors Cucumber's `I create a student named "..." in a CSA section`.
+ *
+ * @param page - Playwright page receiving the student session
+ * @param studentName - optional display name for the enrolled student
+ * @returns teacher and student credentials plus section id
+ */
+async function createAuthorizedCsaStudent(
+  page: Page,
+  studentName?: string,
+): Promise<{
+  teacher: UserCredentials;
+  student: UserCredentials;
+  sectionId: number;
+}> {
+  const teacher = await createAuthorizedTeacher(page);
+  const {sectionCode, sectionId} = await createSectionWithCourse(
+    page,
+    'ui-test-csa-family-script',
+    1,
+  );
+  const student = await createStudent(page, {name: studentName});
+  await joinSection(page, sectionCode);
+  return {teacher, student, sectionId};
+}
+
+/**
+ * Create two students in one authorized CSA code-review group.  This mirrors
+ * Cucumber's `I set up code review for teacher ... with 2 students in a group`
+ * without depending on React Beautiful DnD in test setup.
+ *
+ * @param page - Playwright page receiving the final student_0 session
+ * @returns credentials and section id for the code-review group
+ */
+async function setupCodeReviewGroup(page: Page): Promise<CodeReviewSetup> {
+  const teacher = await createAuthorizedTeacher(page);
+  const {sectionCode, sectionId} = await createSectionWithCourse(
+    page,
+    'ui-test-csa-family-script',
+    1,
+  );
+  const suffix = `${Date.now()}${Math.random().toString(36).slice(2, 8)}`;
+  const student0 = await createStudent(page, {
+    name: `ReviewStudent0${suffix}`,
+  });
+  await joinSection(page, sectionCode);
+  const student1 = await createStudent(page, {
+    name: `ReviewStudent1${suffix}`,
+  });
+  await joinSection(page, sectionCode);
+
+  await signIn(page, teacher.email, teacher.password);
+  await page.goto('/', {waitUntil: 'domcontentloaded'});
+
+  const currentGroups = await getJson<{
+    groups: Array<{
+      unassigned?: boolean;
+      members: Array<{follower_id: number; name: string}>;
+    }>;
+  }>(
+    page,
+    `/api/v1/sections/${sectionId}/code_review_groups`,
+    'get code review groups',
+  );
+  const unassigned = currentGroups.groups.find(group => group.unassigned);
+  if (!unassigned || unassigned.members.length < 2) {
+    throw new Error('expected at least two unassigned code-review members');
+  }
+
+  await postJson(
+    page,
+    `/api/v1/sections/${sectionId}/code_review_groups`,
+    {
+      groups: [
+        {
+          name: 'review group',
+          members: unassigned.members.map(member => ({
+            follower_id: member.follower_id,
+          })),
+        },
+      ],
+    },
+    'set code review groups',
+  );
+  await postJson(
+    page,
+    `/api/v1/sections/${sectionId}/code_review_enabled`,
+    {enabled: true},
+    'enable code review',
+  );
+  const student0Id = await getSectionStudentId(
+    page,
+    sectionId,
+    student0.displayName,
+  );
+  const student1Id = await getSectionStudentId(
+    page,
+    sectionId,
+    student1.displayName,
+  );
+  await signIn(page, student0.email, student0.password);
+
+  return {teacher, student0, student1, student0Id, student1Id, sectionId};
+}
 
 // ---------------------------------------------------------------------------
 // Commit code (commit_code.feature)
@@ -38,6 +297,11 @@ test.describe('Java Lab — commit code', () => {
     await createTeacherAssociatedStudent(page);
   });
 
+  /**
+   * Migration status: COMPLETED
+   * Source: dashboard/test/ui/features/javalab/commit_code.feature
+   * Scenario: Open the commit code dialog, enter commit notes, commit, and see commit in version history.
+   */
   test(
     'commit with notes appears in version history',
     {tag: '@no_mobile'},
@@ -96,102 +360,232 @@ test.describe('Java Lab — commit code', () => {
     },
   );
 
+  /**
+   * Migration status: COMPLETED
+   * Source: dashboard/test/ui/features/javalab/commit_code.feature
+   * Scenario: Open the commit code dialog and try committing without notes, student should not be able to submit.
+   */
   test(
     'committing without notes leaves dialog open',
     {tag: '@no_mobile'},
     async ({page}) => {
+      const lab = new JavaLabPage(page);
       await page.goto(`${LESSON_44}/levels/1?noautoplay=true`);
-      await page
-        .locator('#javalab-editor-save')
-        .waitFor({state: 'visible', timeout: 30_000});
+      await expect(lab.commitCodeButton).toBeVisible({timeout: 30_000});
 
-      await page.locator('#javalab-editor-save').click();
-      await page
-        .locator('#commit-notes')
-        .waitFor({state: 'visible', timeout: 15_000});
+      await lab.commitCodeButton.click();
+      await expect(lab.commitNotes).toBeVisible({timeout: 15_000});
 
       // Without notes the confirm button is disabled — clicking is blocked.
       // Verify the invariant directly: the button must be disabled.
-      await expect(page.locator('#confirmationButton')).toBeDisabled();
+      await expect(lab.confirmButton).toBeDisabled();
+    },
+  );
+});
+
+// ---------------------------------------------------------------------------
+// Code review finish button (code_review_finish_button.feature)
+// ---------------------------------------------------------------------------
+
+test.describe('Java Lab — code review finish button', () => {
+  /**
+   * Migration status: COMPLETED
+   * Source: dashboard/test/ui/features/javalab/code_review_finish_button.feature
+   * Scenario: Running code in your own code review does not enable the finish button
+   */
+  test(
+    'running code in own code review keeps finish disabled',
+    {tag: ['@no_mobile', '@no_ci']},
+    async ({page}) => {
+      const setup = await setupCodeReviewGroup(page);
+      const lab = new JavaLabPage(page);
+
+      await lab.gotoLevel(2);
+      await lab.commitCode('my first commit');
+      await lab.openNewCodeReview();
+      await lab.gotoLevel(
+        2,
+        `viewingCodeReview=true&user_id=${setup.student0Id}&noautoplay=true`,
+      );
+      await lab.openReviewTab();
+      await lab.waitForOpenReviewInTimeline();
+      await expect(lab.finishButton).toBeDisabled();
+
+      await lab.runConsoleProgram('Harry');
+      await expect(lab.finishButton).toBeDisabled();
+    },
+  );
+
+  /**
+   * Migration status: COMPLETED
+   * Source: dashboard/test/ui/features/javalab/code_review_finish_button.feature
+   * Scenario: Running code in your peer's code review does not enable the finish button
+   */
+  test(
+    "running code in peer's code review keeps finish disabled",
+    {tag: ['@no_mobile', '@no_ci']},
+    async ({page}) => {
+      const setup = await setupCodeReviewGroup(page);
+      const lab = new JavaLabPage(page);
+
+      await lab.gotoLevel(2);
+      await lab.commitCode('my first commit');
+      await lab.openNewCodeReview();
+      await signIn(page, setup.student1.email, setup.student1.password);
+
+      await lab.gotoLevel(2);
+      await lab.loadPeerCodeReview(1);
+      await expect(lab.finishButton).toBeDisabled();
+
+      await lab.runConsoleProgram('Harry');
+      await expect(lab.finishButton).toBeDisabled();
+    },
+  );
+});
+
+// ---------------------------------------------------------------------------
+// Code review V2 (code_review_scenarios.feature)
+// ---------------------------------------------------------------------------
+
+test.describe('Java Lab — code review V2', () => {
+  /**
+   * Migration status: COMPLETED
+   * Source: dashboard/test/ui/features/javalab/code_review_scenarios.feature
+   * Scenario: Code review V2
+   */
+  test(
+    'student, peer, and teacher can view a code review',
+    {tag: ['@no_mobile', '@eyes']},
+    async ({page}) => {
+      test.slow();
+      const setup = await setupCodeReviewGroup(page);
+      const lab = new JavaLabPage(page);
+
+      await lab.gotoLevel(2);
+      await lab.editSourceForNewVersion();
+      await lab.commitCode('my first commit');
+      await lab.openReviewTab();
+      await lab.waitForCommitInReviewTimeline();
+      await lab.openNewCodeReview();
+      // Eyes checkpoint in Cucumber: owner sees the open review timeline.
+
+      await signIn(page, setup.student1.email, setup.student1.password);
+      await lab.gotoLevel(2);
+      await lab.loadPeerCodeReview(1);
+      // Eyes checkpoint in Cucumber: student code reviewing peer.
+
+      await signIn(page, setup.teacher.email, setup.teacher.password);
+      const student0Id = await getSectionStudentId(
+        page,
+        setup.sectionId,
+        setup.student0.displayName,
+      );
+      await lab.gotoLevel(
+        2,
+        `section_id=${setup.sectionId}&user_id=${student0Id}&noautoplay=true`,
+      );
+      await lab.selectReviewTab();
+      await expect(
+        page.getByText(`Code Reviewing ${setup.student0.displayName}`),
+      ).toBeVisible({timeout: 30_000});
+      // Eyes checkpoint in Cucumber: teacher code reviewing student.
+
+      await signIn(page, setup.student0.email, setup.student0.password);
+      await lab.gotoLevel(2);
+      await lab.openReviewTab();
+      await expect(lab.closeCodeReviewButton).toBeVisible({timeout: 30_000});
+      // Eyes checkpoint in Cucumber: student viewing own code review.
+      await lab.closeOwnCodeReview();
+    },
+  );
+});
+
+// ---------------------------------------------------------------------------
+// Console-only Java Lab (console_only.feature)
+// ---------------------------------------------------------------------------
+
+test.describe('Java Lab — console-only level', () => {
+  /**
+   * Migration status: COMPLETED
+   * Source: dashboard/test/ui/features/javalab/console_only.feature
+   * Scenario: Console only level responds to text input from user
+   */
+  test(
+    'console-only level responds to text input from user',
+    {tag: ['@no_mobile', '@eyes', '@no_ci']},
+    async ({page}) => {
+      await createAuthorizedCsaStudent(page);
+      const lab = new JavaLabPage(page);
+
+      await lab.gotoLevel(2);
+      await expect(page.locator('#levelbuilder-menu-toggle')).not.toBeVisible();
+      // Eyes checkpoint in Cucumber: initial page load.
+
+      await lab.runConsoleProgram('Harry');
+      await expect(lab.console).toContainText('Hello Harry!');
+      // Eyes checkpoint in Cucumber: program completed.
     },
   );
 });
 
 // ---------------------------------------------------------------------------
 // Finish button (finish_button.feature)
-//
-// All scenarios tagged @no_ci in the legacy suite — they require a live
-// Javabuilder WebSocket connection to compile and run Java code.
-// Run these manually against test-studio; skip in automated CI.
 // ---------------------------------------------------------------------------
 
 test.describe('Java Lab — finish button', () => {
   test.beforeEach(async ({page}) => {
-    // Original feature uses "student in CSA section" (creates teacher with
-    // authorized access + section assigned to ui-test-csa-family-script).
-    // createTeacherAssociatedStudent is sufficient on test-studio since
-    // allthethingscourse lesson 44 is accessible to any enrolled student.
-    await createTeacherAssociatedStudent(page);
+    await createAuthorizedCsaStudent(page);
   });
 
+  /**
+   * Migration status: COMPLETED
+   * Source: dashboard/test/ui/features/javalab/finish_button.feature
+   * Scenario: Finish button goes from disabled to enabled on run
+   */
   test(
     'finish button goes from disabled to enabled on run',
     {tag: '@no_ci'},
     async ({page}) => {
-      await page.goto(`${LESSON_44}/levels/1?noautoplay=true`);
-      await page
-        .locator('#finishButton')
-        .waitFor({state: 'visible', timeout: 30_000});
+      const lab = new JavaLabPage(page);
 
-      await expect(page.locator('#finishButton')).toBeDisabled();
-      await page.locator('#runButton').click();
-      await expect(page.locator('#finishButton')).toBeEnabled({
-        timeout: 60_000,
-      });
+      await lab.gotoLevel(1);
+      await expect(lab.finishButton).toBeDisabled();
+      await lab.runButton.click();
+      await expect(lab.finishButton).toBeEnabled({timeout: 60_000});
     },
   );
 
+  /**
+   * Migration status: COMPLETED
+   * Source: dashboard/test/ui/features/javalab/finish_button.feature
+   * Scenario: Finish button does not become enabled if tests fail
+   */
   test(
     'finish button does not become enabled if tests fail',
     {tag: '@no_ci'},
     async ({page}) => {
-      test.fixme(
-        true,
-        'TODO: [JAVALAB] Program completed. never appears; Javabuilder WebSocket not available in automated test run',
-      );
-      await page.goto(`${LESSON_44}/levels/11?noautoplay=true`);
-      await page
-        .locator('#finishButton')
-        .waitFor({state: 'visible', timeout: 30_000});
+      const lab = new JavaLabPage(page);
 
-      await page.locator('#testButton').click();
-      await expect(page.locator('.javalab-console')).toContainText(
-        '[JAVALAB] Program completed.',
-        {timeout: 60_000},
-      );
-      await expect(page.locator('#finishButton')).toBeDisabled();
+      await lab.gotoLevel(11);
+      await lab.runValidationTests();
+      await expect(lab.finishButton).toBeDisabled();
     },
   );
 
+  /**
+   * Migration status: COMPLETED
+   * Source: dashboard/test/ui/features/javalab/finish_button.feature
+   * Scenario: Finish button becomes enabled if tests succeed
+   */
   test(
     'finish button becomes enabled if tests succeed',
     {tag: '@no_ci'},
     async ({page}) => {
-      test.fixme(
-        true,
-        'TODO: [JAVALAB] Program completed. never appears; Javabuilder WebSocket not available in automated test run',
-      );
-      await page.goto(`${LESSON_44}/levels/12?noautoplay=true`);
-      await page
-        .locator('#finishButton')
-        .waitFor({state: 'visible', timeout: 30_000});
+      const lab = new JavaLabPage(page);
 
-      await page.locator('#testButton').click();
-      await expect(page.locator('.javalab-console')).toContainText(
-        '[JAVALAB] Program completed.',
-        {timeout: 60_000},
-      );
-      await expect(page.locator('#finishButton')).toBeEnabled();
+      await lab.gotoLevel(12);
+      await lab.runValidationTests();
+      await expect(lab.finishButton).toBeEnabled();
     },
   );
 });
@@ -201,26 +595,28 @@ test.describe('Java Lab — finish button', () => {
 // ---------------------------------------------------------------------------
 
 test.describe('Java Lab — submittable level', () => {
+  /**
+   * Migration status: COMPLETED
+   * Source: dashboard/test/ui/features/javalab/javalab_submittable.feature
+   * Scenario: Submit anything, unsubmit, be able to resubmit.
+   */
   test(
     'submit, unsubmit, and resubmit cycle restores submit state',
     {tag: '@no_mobile'},
     async ({page}) => {
       await createTeacherAssociatedStudent(page);
+      const lab = new JavaLabPage(page);
 
       const LEVEL_URL = `${LESSON_44}/levels/9?noautoplay=true`;
       await page.goto(LEVEL_URL);
-      await page
-        .locator('#runButton')
-        .waitFor({state: 'visible', timeout: 30_000});
+      await lab.waitForReady();
 
       // Run code so the submit button becomes available.
-      await page.locator('#runButton').click();
-      await page
-        .locator('#submitButton')
-        .waitFor({state: 'visible', timeout: 60_000});
+      await lab.runButton.click();
+      await expect(lab.submitButton).toBeVisible({timeout: 60_000});
 
       // Submit and confirm.
-      await page.locator('#submitButton').click();
+      await lab.submitButton.click();
       await page.locator('.modal').waitFor({state: 'visible'});
       await page
         .locator('.modal')
@@ -234,14 +630,12 @@ test.describe('Java Lab — submittable level', () => {
 
       // Reload: unsubmit button visible; submit button gone.
       await page.goto(LEVEL_URL);
-      await page
-        .locator('#unsubmitButton')
-        .waitFor({state: 'visible', timeout: 30_000});
-      await expect(page.locator('#submitButton')).not.toBeVisible();
+      await expect(lab.unsubmitButton).toBeVisible({timeout: 30_000});
+      await expect(lab.submitButton).not.toBeVisible();
 
       // Unsubmit and confirm.
-      await page.locator('#runButton').click();
-      await page.locator('#unsubmitButton').click();
+      await lab.runButton.click();
+      await lab.unsubmitButton.click();
       await page.locator('.modal').waitFor({state: 'visible'});
       await page
         .locator('.modal')
@@ -255,15 +649,50 @@ test.describe('Java Lab — submittable level', () => {
 
       // After unsubmit, run again to restore submit button.
       await page.goto(LEVEL_URL);
-      await page
-        .locator('#runButton')
-        .waitFor({state: 'visible', timeout: 30_000});
-      await page.locator('#runButton').click();
-      await page
-        .locator('#submitButton')
-        .waitFor({state: 'visible', timeout: 60_000});
+      await lab.waitForReady();
+      await lab.runButton.click();
+      await expect(lab.submitButton).toBeVisible({timeout: 60_000});
     },
   );
 
-  test.fixme('teacher can unsubmit on behalf of student', async () => {});
+  /**
+   * Migration status: COMPLETED
+   * Source: dashboard/test/ui/features/javalab/javalab_submittable.feature
+   * Scenario: Submit anything, teacher is able to unsubmit
+   */
+  test(
+    'teacher can unsubmit on behalf of student',
+    {tag: '@no_mobile'},
+    async ({page}) => {
+      const studentName = `JavaLabStudent${Date.now()}${Math.random()
+        .toString(36)
+        .slice(2, 8)}`;
+      const {teacherEmail, teacherPassword, sectionId, studentDisplayName} =
+        await createTeacherAssociatedStudent(page, {studentName});
+      const lab = new JavaLabPage(page);
+      const levelUrl = `${LESSON_44}/levels/9?noautoplay=true`;
+
+      await page.goto(levelUrl, {waitUntil: 'domcontentloaded'});
+      await lab.waitForReady();
+      await lab.submitLevel();
+
+      await page.goto(levelUrl, {waitUntil: 'domcontentloaded'});
+      await expect(lab.unsubmitButton).toBeVisible({timeout: 30_000});
+
+      await signIn(page, teacherEmail, teacherPassword);
+      const studentId = await getSectionStudentId(
+        page,
+        sectionId,
+        studentDisplayName,
+      );
+      await lab.gotoLevel(
+        9,
+        `section_id=${sectionId}&user_id=${studentId}&noautoplay=true`,
+      );
+
+      await expect(lab.teacherUnsubmitButton).toBeEnabled({timeout: 30_000});
+      await lab.teacherUnsubmitButton.click();
+      await expect(lab.teacherUnsubmitButton).toBeDisabled({timeout: 30_000});
+    },
+  );
 });
