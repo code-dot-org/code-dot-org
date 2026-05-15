@@ -4,6 +4,7 @@ import {
   createSectionWithCourse,
   createTeacher,
   createTeacherAssociatedStudent,
+  createTestUser,
   signIn,
 } from '../../shared/auth';
 import {expect, test} from '../../shared/fixtures';
@@ -15,10 +16,88 @@ import {expect, test} from '../../shared/fixtures';
  * Source: dashboard/test/ui/features/teacher_tools/teacher_homepage.feature
  */
 
+/**
+ * Creates a signed-in teacher with sign_in_count=0, matching the source step
+ * `I create a teacher who has never signed in ...`.
+ *
+ * @param page - Playwright page whose context receives the teacher session
+ * @param name - teacher display name
+ */
+async function createNeverSignedInTeacher(
+  page: Parameters<typeof createTestUser>[0],
+  name: string,
+): Promise<void> {
+  const ts = Date.now();
+  const rand = Math.random().toString(36).slice(2, 8);
+  const email = `teacher_${ts}_${rand}@test.xx`;
+  const password = `TeacherPass${ts}`;
+
+  await createTestUser(page, {
+    user_type: 'teacher',
+    email,
+    password,
+    password_confirmation: password,
+    name,
+    age: '21+',
+    sign_in_count: 0,
+    terms_of_service_version: '1',
+    email_preference_opt_in: 'yes',
+    email_preference_form_kind: email,
+    email_preference_request_ip: '127.0.0.1',
+    email_preference_source: 'ACCOUNT_SIGN_UP',
+  });
+}
+
 test.describe(
   'Legacy teacher homepage equivalents',
   {tag: '@no_mobile'},
   () => {
+    /**
+     * Migration status: COMPLETED
+     * Source: dashboard/test/ui/features/teacher_tools/teacher_homepage.feature
+     * Scenario: See a section creation dialog when logging for the first time
+     *
+     * The legacy `/home` interstitial is no longer reachable for teachers:
+     * `/home` redirects to `/teacher_dashboard/home`.  The current first-login
+     * readiness signal is the empty teacher dashboard with its section CTA.
+     */
+    test('new teacher first login reaches teacher dashboard empty state', async ({
+      page,
+    }) => {
+      await createNeverSignedInTeacher(page, 'Ariel');
+      await page.goto('/');
+
+      await expect(page).toHaveURL(/\/teacher_dashboard\/home/, {
+        timeout: 30_000,
+      });
+      await expect(
+        page.getByRole('heading', {name: 'Welcome, Ariel'}),
+      ).toBeVisible({timeout: 30_000});
+      await expect(
+        page.getByRole('heading', {name: 'Class Sections'}),
+      ).toBeVisible();
+      await expect(
+        page.getByRole('button', {name: 'New class section'}),
+      ).toBeVisible();
+      await expect(
+        page.getByRole('heading', {name: "It's a bit empty here..."}),
+      ).toBeVisible();
+      await expect(
+        page.getByText('You haven’t created any class sections yet.'),
+      ).toBeVisible();
+
+      const legacySectionCreationModal = page.getByRole('heading', {
+        name: "Let's get you started teaching with Code.org!",
+      });
+      await expect(legacySectionCreationModal).not.toBeAttached();
+
+      await page.reload();
+      await expect(
+        page.getByRole('heading', {name: 'Class Sections'}),
+      ).toBeVisible({timeout: 30_000});
+      await expect(legacySectionCreationModal).not.toBeAttached();
+    });
+
     /**
      * Migration status: COMPLETED
      * Source: dashboard/test/ui/features/teacher_tools/teacher_homepage.feature
