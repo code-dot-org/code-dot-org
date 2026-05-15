@@ -7,9 +7,13 @@ import {
 } from '../../shared/auth';
 import {expect, test} from '../../shared/fixtures';
 import {
+  addCurrentUserSchoolInfo,
   createPdWorkshop,
   deletePdWorkshop,
   endPdWorkshop,
+  enrollCurrentUserInWorkshop,
+  markCurrentUserAttended,
+  startPdWorkshop,
 } from '../../shared/pd';
 
 import {ProfessionalLearningPage} from './ProfessionalLearningPage';
@@ -87,7 +91,37 @@ test.describe('PD dashboard and workshop flows', () => {
    * Source: dashboard/test/ui/features/acquisition_products/pd/workshop_certificates.feature
    * Scenario: Simple Workshop Certificate
    */
-  test.skip('workshop certificate requires attended enrollment factory data', async () => {});
+  test('workshop certificate renders for an attended teacher', async ({
+    page,
+  }) => {
+    await createTeacher(page, {name: 'Certificate Creator'});
+    await grantWorkshopAdminAccess(page);
+    const workshopId = await createPdWorkshop(page);
+
+    try {
+      await createTeacher(page, {
+        name: 'Certificate Teacher',
+        givenName: 'Certificate',
+        familyName: 'Teacher',
+      });
+      await addCurrentUserSchoolInfo(page);
+      const enrollmentCode = await enrollCurrentUserInWorkshop(
+        page,
+        workshopId,
+      );
+      await grantWorkshopAdminAccess(page);
+      await markCurrentUserAttended(page, workshopId);
+
+      const response = await page.goto(
+        `/pd/generate_workshop_certificate/${enrollmentCode}`,
+      );
+      expect(response?.ok()).toBe(true);
+      expect(response?.headers()['content-type']).toContain('image/png');
+    } finally {
+      await grantWorkshopAdminAccess(page);
+      await deletePdWorkshop(page, workshopId);
+    }
+  });
 
   /**
    * Migration status: COMPLETED
@@ -232,14 +266,56 @@ test.describe('PD dashboard and workshop flows', () => {
    * Source: dashboard/test/ui/features/acquisition_products/pd/workshop_enrollment.feature
    * Scenario: Attempting to join closed workshop as a teacher states it is closed
    */
-  test.skip('closed workshop requires factory-ended workshop state', async () => {});
+  test('closed workshop join shows closed status', async ({page}) => {
+    await createTeacher(page, {name: 'Closed Workshop Creator'});
+    await grantWorkshopAdminAccess(page);
+    const workshopId = await createPdWorkshop(page);
+    await startPdWorkshop(page, workshopId);
+    await endPdWorkshop(page, workshopId);
+    await createTeacher(page, {name: 'Closed Workshop Teacher'});
+
+    try {
+      await page.goto(`/pd/workshops/${workshopId}/join`);
+      await expect(page.getByRole('heading', {name: 'Closed'})).toBeVisible({
+        timeout: 30_000,
+      });
+    } finally {
+      await createTeacher(page, {name: 'Workshop Cleanup'});
+      await grantWorkshopAdminAccess(page);
+      await deletePdWorkshop(page, workshopId);
+    }
+  });
 
   /**
    * Migration status: COMPLETED
    * Source: dashboard/test/ui/features/acquisition_products/pd/workshop_enrollment2.feature
    * Scenario: Attempting to join full workshop as a teacher states it is full
    */
-  test.skip('full workshop requires factory-created enrollment state', async () => {});
+  test('full workshop join shows full status', async ({page}) => {
+    await createTeacher(page, {name: 'Full Workshop Creator'});
+    await grantWorkshopAdminAccess(page);
+    const workshopId = await createPdWorkshop(page, {capacity: 1});
+
+    try {
+      await createTeacher(page, {
+        name: 'Existing Enrolled Teacher',
+        givenName: 'Existing',
+        familyName: 'Teacher',
+      });
+      await addCurrentUserSchoolInfo(page);
+      await enrollCurrentUserInWorkshop(page, workshopId);
+
+      await createTeacher(page, {name: 'Full Workshop Teacher'});
+      await page.goto(`/pd/workshops/${workshopId}/join`);
+      await expect(page.getByRole('heading', {name: 'Full'})).toBeVisible({
+        timeout: 30_000,
+      });
+    } finally {
+      await createTeacher(page, {name: 'Workshop Cleanup'});
+      await grantWorkshopAdminAccess(page);
+      await deletePdWorkshop(page, workshopId);
+    }
+  });
 
   /**
    * Migration status: COMPLETED
@@ -266,7 +342,32 @@ test.describe('PD dashboard and workshop flows', () => {
    * Source: dashboard/test/ui/features/acquisition_products/pd/workshop_enrollment2.feature
    * Scenario: Attempting to join workshop again as a teacher states you have already enrolled
    */
-  test.skip('duplicate enrollment requires factory-created enrollment state', async () => {});
+  test('duplicate workshop join shows duplicate-enrollment status', async ({
+    page,
+  }) => {
+    await createTeacher(page, {name: 'Duplicate Workshop Creator'});
+    await grantWorkshopAdminAccess(page);
+    const workshopId = await createPdWorkshop(page);
+
+    try {
+      await createTeacher(page, {
+        name: 'Duplicate Workshop Teacher',
+        givenName: 'Duplicate',
+        familyName: 'Teacher',
+      });
+      await addCurrentUserSchoolInfo(page);
+      await enrollCurrentUserInWorkshop(page, workshopId);
+
+      await page.goto(`/pd/workshops/${workshopId}/join`);
+      await expect(
+        page.getByRole('heading', {name: 'Duplicate enrollment'}),
+      ).toBeVisible({timeout: 30_000});
+    } finally {
+      await createTeacher(page, {name: 'Workshop Cleanup'});
+      await grantWorkshopAdminAccess(page);
+      await deletePdWorkshop(page, workshopId);
+    }
+  });
 
   /**
    * Migration status: COMPLETED

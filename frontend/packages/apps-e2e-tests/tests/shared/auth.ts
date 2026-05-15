@@ -13,6 +13,8 @@ export interface CreateUserPayload {
   /** Omitted for SSO and sponsored accounts. */
   password_confirmation?: string;
   name: string;
+  given_name?: string;
+  family_name?: string;
   age: string;
   sign_in_count?: number;
   terms_of_service_version?: string;
@@ -64,10 +66,23 @@ export async function createTestUser(
   page: Page,
   payload: CreateUserPayload,
 ): Promise<void> {
-  await page.goto('/reset_session');
-  const csrf = await page
-    .locator('meta[name="csrf-token"]')
-    .getAttribute('content');
+  let csrf: string | null = null;
+  const csrfPages = ['/reset_session', '/users/sign_in'];
+  for (let attempt = 1; attempt <= 3 && !csrf; attempt++) {
+    for (const csrfPage of csrfPages) {
+      await page.goto(csrfPage, {waitUntil: 'domcontentloaded'});
+      const csrfToken = page.locator('meta[name="csrf-token"]');
+      if ((await csrfToken.count()) > 0) {
+        csrf = await csrfToken.getAttribute('content');
+      }
+      if (csrf) {
+        break;
+      }
+    }
+  }
+  if (!csrf) {
+    throw new Error('reset_session did not render a CSRF token');
+  }
 
   let lastFailure = '';
   for (let attempt = 1; attempt <= 3; attempt++) {
@@ -113,6 +128,8 @@ export interface UserCredentials {
  */
 interface CreateTeacherOptions {
   name?: string;
+  givenName?: string;
+  familyName?: string;
 }
 
 /**
@@ -127,7 +144,7 @@ interface CreateTeacherOptions {
  */
 export async function createTeacher(
   page: Page,
-  {name}: CreateTeacherOptions = {},
+  {name, givenName, familyName}: CreateTeacherOptions = {},
 ): Promise<UserCredentials> {
   const ts = Date.now();
   const rand = Math.random().toString(36).slice(2, 8);
@@ -147,6 +164,8 @@ export async function createTeacher(
     password,
     password_confirmation: password,
     name: fullName,
+    ...(givenName ? {given_name: givenName} : {}),
+    ...(familyName ? {family_name: familyName} : {}),
     age: '21+',
     sign_in_count: 2,
     terms_of_service_version: '1',
