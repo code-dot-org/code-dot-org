@@ -14,22 +14,20 @@ export class StudentNotStartedPage {
   }
 
   /**
-   * Opens a level as teacher and selects the first student from the teacher
-   * panel.  The section selector and student table are visible readiness
-   * signals, matching the Cucumber flow without the jQuery row selector.
+   * Opens a level as teacher and selects a student from the visible teacher
+   * panel. The panel heading, section selector, student table, and student row
+   * link are the visible readiness signals found with Agent Browser.
    *
    * @param path - level path to open
-   * @param sectionId - teacher section id to select in instructor view
+   * @param studentName - visible student name in the teacher panel table
    */
-  async openFirstStudentWork(path: string, sectionId: number): Promise<void> {
-    await this.page.goto(`${path}?section_id=${sectionId}&viewAs=Instructor`, {
+  async openStudentWork(path: string, studentName: string): Promise<void> {
+    await this.page.goto(path, {
       waitUntil: 'domcontentloaded',
     });
-    const panelHandle = this.page.locator('.show-handle .fa-chevron-left');
-    if (await panelHandle.isVisible({timeout: 5_000}).catch(() => false)) {
-      await panelHandle.click();
-    }
-    await expect(this.page.locator('#teacher-panel-container')).toBeVisible({
+    await expect(
+      this.page.getByRole('heading', {name: 'Teacher Panel'}),
+    ).toBeVisible({
       timeout: 60_000,
     });
     await expect(this.page.locator('.uitest-sectionselect')).toContainText(
@@ -39,28 +37,40 @@ export class StudentNotStartedPage {
     await expect(this.page.locator('.student-table')).toBeVisible({
       timeout: 60_000,
     });
-    await this.page.locator('#teacher-panel-container tr').nth(1).click();
-    await expect(this.page.locator('.editor-column').first()).toBeVisible({
-      timeout: 60_000,
-    });
+    const studentRow = this.page
+      .locator('.student-table tr')
+      .filter({hasText: studentName})
+      .first();
+    await expect(studentRow).toBeVisible({timeout: 60_000});
+
+    await Promise.all([
+      this.page.waitForEvent('framenavigated', {
+        predicate: frame => frame === this.page.mainFrame(),
+        timeout: 30_000,
+      }),
+      studentRow.evaluate(row => (row as HTMLElement).click()),
+    ]);
+    await this.page.waitForLoadState('domcontentloaded');
+    await expect(this.page).toHaveURL(/[?&]user_id=\d+/, {timeout: 30_000});
   }
 
   /**
-   * Expects the visible not-started warning in the level editor column.
+   * Expects the visible not-started banner in the workspace.
    */
   async expectWarningVisible(): Promise<void> {
-    await expect(this.page.locator('.editor-column').first()).toContainText(
+    await expect(this.page.locator('#notStartedBanner')).toContainText(
       'This student has not started the level.',
       {timeout: 60_000},
     );
   }
 
   /**
-   * Expects no visible not-started warning in the level editor column.
+   * Expects no visible not-started banner after the student view is ready.
    */
   async expectWarningHidden(): Promise<void> {
-    await expect(this.page.locator('.editor-column').first()).not.toContainText(
-      'This student has not started the level.',
-    );
+    await expect(this.page.getByRole('button', {name: /Run/})).toBeVisible({
+      timeout: 60_000,
+    });
+    await expect(this.page.locator('#notStartedBanner')).toHaveCount(0);
   }
 }

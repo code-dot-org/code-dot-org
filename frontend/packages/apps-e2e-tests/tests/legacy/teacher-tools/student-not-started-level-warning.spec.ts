@@ -8,18 +8,14 @@ test.describe(
   {tag: '@no_mobile'},
   () => {
     /**
-     * Migration status: PENDING
+     * Migration status: COMPLETED
      * Source: dashboard/test/ui/features/teacher_tools/student_not_started_level_warning.feature
      * Scenario: Game lab level where student has not started
      */
     test('Game Lab teacher panel shows not-started warning for untouched student work', async ({
       page,
     }) => {
-      test.fixme(
-        true,
-        'Budget exhausted: teacher panel remains hidden on current Playwright URL despite Cucumber sign-in-home setup. Source: dashboard/test/ui/features/teacher_tools/student_not_started_level_warning.feature "Game lab level where student has not started"',
-      );
-      const {teacherEmail, teacherPassword, sectionId} =
+      const {teacherEmail, teacherPassword} =
         await createTeacherAssociatedStudent(page, {
           authorized: true,
           studentName: 'Sally',
@@ -31,13 +27,13 @@ test.describe(
         timeout: 30_000,
       });
       const warning = new StudentNotStartedPage(page);
-      await warning.openFirstStudentWork(
+      await warning.openStudentWork(
         '/courses/allthethingscourse/units/1/lessons/38/levels/3',
-        sectionId,
+        'Sally',
       );
       await expect(page.locator('#ui-test-feedback-input')).toHaveAttribute(
         'placeholder',
-        'Please enter feedback for your student here.',
+        /Please enter feedback for your student here\./,
         {timeout: 30_000},
       );
       await warning.expectWarningVisible();
@@ -45,18 +41,14 @@ test.describe(
     });
 
     /**
-     * Migration status: PENDING
+     * Migration status: COMPLETED
      * Source: dashboard/test/ui/features/teacher_tools/student_not_started_level_warning.feature
      * Scenario: Maze level where student has not started
      */
     test('Maze teacher panel shows not-started warning for untouched student work', async ({
       page,
     }) => {
-      test.fixme(
-        true,
-        'Budget exhausted: teacher panel remains hidden on current Playwright URL despite Cucumber sign-in-home setup. Source: dashboard/test/ui/features/teacher_tools/student_not_started_level_warning.feature "Maze level where student has not started"',
-      );
-      const {teacherEmail, teacherPassword, sectionId} =
+      const {teacherEmail, teacherPassword} =
         await createTeacherAssociatedStudent(page, {
           authorized: true,
           studentName: 'Sally',
@@ -68,25 +60,21 @@ test.describe(
         timeout: 30_000,
       });
       const warning = new StudentNotStartedPage(page);
-      await warning.openFirstStudentWork(
+      await warning.openStudentWork(
         '/courses/allthethingscourse/units/1/lessons/4/levels/2',
-        sectionId,
+        'Sally',
       );
       await warning.expectWarningVisible();
       // Visual checkpoint stub: student not-started warning.
     });
 
     /**
-     * Migration status: PENDING
+     * Migration status: COMPLETED
      * Source: dashboard/test/ui/features/teacher_tools/student_not_started_level_warning.feature
      * Scenario: Contained level
      */
     test('contained level omits not-started warning', async ({page}) => {
-      test.fixme(
-        true,
-        'Budget exhausted: teacher panel remains hidden on current Playwright URL despite Cucumber sign-in-home setup. Source: dashboard/test/ui/features/teacher_tools/student_not_started_level_warning.feature "Contained level"',
-      );
-      const {teacherEmail, teacherPassword, sectionId} =
+      const {teacherEmail, teacherPassword} =
         await createTeacherAssociatedStudent(page, {
           authorized: true,
           studentName: 'Sally',
@@ -98,9 +86,9 @@ test.describe(
         timeout: 30_000,
       });
       const warning = new StudentNotStartedPage(page);
-      await warning.openFirstStudentWork(
+      await warning.openStudentWork(
         '/courses/allthethingscourse/units/1/lessons/41/levels/1',
-        sectionId,
+        'Sally',
       );
       await warning.expectWarningHidden();
       // Visual checkpoint stub: no student not-started warning.
