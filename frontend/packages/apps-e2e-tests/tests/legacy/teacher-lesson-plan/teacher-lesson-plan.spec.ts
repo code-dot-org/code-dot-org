@@ -53,4 +53,15 @@ test.describe('Teacher lesson plan', () => {
     // Visual checkpoint stub: level instructions preview.
     await lessonPlan.dismissLevelDetails();
   });
+
+  /**
+   * Migration status: COMPLETED
+   * Source: dashboard/test/ui/features/teacher_tools/lesson_show.feature
+   * Scenario: Print Mode
+   */
+  test('print mode renders lesson overview', async ({page}) => {
+    const lessonPlan = new TeacherLessonPlanPage(page);
+    await lessonPlan.openPrintModeLesson();
+    // Visual checkpoint stub: "initial page view".
+  });
 });

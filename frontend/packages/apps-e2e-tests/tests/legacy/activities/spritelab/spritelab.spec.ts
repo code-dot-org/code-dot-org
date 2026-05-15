@@ -109,3 +109,40 @@ test.describe('Sprite Lab — lesson 36 — level 1', () => {
     },
   );
 });
+
+test.describe('Sprite Lab — lesson 36 — visual start blocks', () => {
+  /**
+   * Migration status: COMPLETED
+   * Source: dashboard/test/ui/features/code_tools/blockly/spritelab_eyes.feature
+   * Scenario: It renders
+   */
+  test(
+    'renders and can scroll through representative start blocks',
+    {tag: '@no_mobile'},
+    async ({page}) => {
+      const spritelab = new SpriteLab(page);
+      await spritelab.gotoLevel(4);
+      await expect(spritelab.runButton).toBeVisible();
+      await expect(spritelab.resetButton).toBeHidden();
+      // Visual checkpoint stub: "variety of start blocks".
+
+      for (const blockId of [
+        'uitest-show-title',
+        'uitest-when-touching-block',
+        'uitest-when-clicked',
+      ]) {
+        await page.evaluate(id => {
+          // eslint-disable-next-line @typescript-eslint/no-explicit-any
+          const Blockly = (window as any).Blockly;
+          const block = Blockly.mainBlockSpace.getBlockById(id);
+          block?.select();
+          block?.getSvgRoot()?.scrollIntoView();
+        }, blockId);
+        await expect(
+          page.locator(`.blocklySelected[data-id="${blockId}"]`),
+        ).toBeVisible();
+        // Visual checkpoint stub: scrolled workspace to selected block.
+      }
+    },
+  );
+});

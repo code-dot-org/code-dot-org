@@ -65,6 +65,11 @@ test('teacher-associated under-13 student can open Web Lab', async ({page}) => {
  * all render correctly for a signed-in student on the designated UI-test level.
  */
 test.describe('Web Lab 2 — editor and instructions load', () => {
+  /**
+   * Migration status: COMPLETED
+   * Source: dashboard/test/ui/features/student_learning/weblab2/weblab2_general.feature
+   * Scenario: Web Lab 2 Instructions and Editor load
+   */
   test(
     'instructions drawer, file list, and code editor are all visible',
     {tag: '@no_mobile'},

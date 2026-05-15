@@ -40,6 +40,18 @@ export class TeacherLessonPlanPage {
   }
 
   /**
+   * Opens the print-media lesson-plan route and waits for its overview.
+   */
+  async openPrintModeLesson(): Promise<void> {
+    await this.page.goto(
+      '/courses/allthelessonplans/units/1/lessons/4?emulate_print_media',
+    );
+    await expect(this.page.locator('.lesson-overview')).toBeVisible({
+      timeout: 30_000,
+    });
+  }
+
+  /**
    * Waits for the main lesson-plan container visible to users.
    */
   async expectReady(): Promise<void> {
