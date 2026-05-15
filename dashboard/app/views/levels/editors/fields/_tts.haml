@@ -5,10 +5,10 @@
     #alert-content
   .row
     - unless (@level.is_a?(Applab) || @level.instance_of?(Gamelab) || @level.is_a?(Weblab) || @level.is_a?(Javalab)) || @level.is_a?(Aichat) || @level.is_a?(Music)
-      .span6
+      .col-md-6
         %h5 Short Instructions
         = f.text_area :tts_short_instructions_override, placeholder: '', rows: 4, class:"input-block-level"
-    .span6
+    .col-md-6
       %h5 Long Instructions
       = f.text_area :tts_long_instructions_override, placeholder: '', rows: 4, class:"input-block-level"
   - if CDO.use_acapela

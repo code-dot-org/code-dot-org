@@ -27,14 +27,14 @@
       %span.form-required-field
         *
     %div.controls
-      =form.text_field :first_name, class: 'span5'
+      =form.text_field :first_name, class: 'col-md-5'
   %div.control-group
     %label
       Last Name
       %span.form-required-field
         *
     %div.controls
-      =form.text_field :last_name, class: 'span5'
+      =form.text_field :last_name, class: 'col-md-5'
   %div.control-group
     %label
       Email Address
@@ -42,7 +42,7 @@
         *
     %div.controls
       - readonly_email = current_user && !current_user.email.blank? && !@enrollment.email.blank?
-      =form.text_field :email, class: 'span5', readonly: readonly_email,
+      =form.text_field :email, class: 'col-md-5', readonly: readonly_email,
         title: readonly_email ? 'Email can be changed in account settings' : nil
   - unless current_user
     %div.control-group
@@ -51,7 +51,7 @@
         %span.form-required-field
           *
       %div.controls
-        =form.text_field :email_confirmation, class: 'span5'
+        =form.text_field :email_confirmation, class: 'col-md-5'
   %div.control-group
     %label
       School Info
@@ -59,7 +59,7 @@
         *
     -# Manually wrap an error highlight around the entire district dropdown.
     - error_class = @enrollment.errors.include?(:"school_info") ? "field_with_errors_div" : ""
-    #school_info.span5{class: error_class, style: "border: solid 1px #bbb; border-radius: 4px; padding: 15px; margin-left: 0px; box-sizing: border-box;"}
+    #school_info.col-md-5{class: error_class, style: "border: solid 1px #bbb; border-radius: 4px; padding: 15px; margin-left: 0px; box-sizing: border-box;"}
       %div.controls
         -# ignore existing info if it was in the old data format, to avoid inclusion of bogus fields.
         - existing_school_info = (@enrollment.school_info && @enrollment.school_info.country) ? @enrollment.school_info : nil
