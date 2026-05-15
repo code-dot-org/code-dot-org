@@ -9,7 +9,6 @@ import {
 import PropTypes from 'prop-types';
 import React, {useEffect, useRef} from 'react';
 
-import FontAwesome from '@cdo/apps/legacySharedComponents/FontAwesome';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import {AiChatToolsDependency} from '@cdo/generated-scripts/sharedConstants';
@@ -130,19 +129,19 @@ const ExpandedCurriculumCatalogCard = ({
               </Typography>
               <div className={style.infoContainer}>
                 <div className={style.iconWithDescription}>
-                  <FontAwesome icon="user" className="fa-solid" />
+                  <FontAwesomeV6Icon iconName="user" iconStyle="solid" />
                   <Typography variant="body2" gutterBottom>
                     {gradeRange}
                   </Typography>
                 </div>
                 <div className={style.iconWithDescription}>
-                  <FontAwesome icon="clock" className="fa-solid" />
+                  <FontAwesomeV6Icon iconName="clock" iconStyle="solid" />
                   <Typography variant="body2" gutterBottom>
                     {duration}
                   </Typography>
                 </div>
                 <div className={style.iconWithDescription}>
-                  <FontAwesome icon="book" className="fa-solid" />
+                  <FontAwesomeV6Icon iconName="book" iconStyle="solid" />
                   <Typography
                     className={style.subjectsText}
                     variant="body2"
@@ -222,9 +221,9 @@ const ExpandedCurriculumCatalogCard = ({
                             text={i18n.facilitatorLedWorkshops()}
                             href={professionalLearningProgram}
                             icon={
-                              <FontAwesome
-                                icon="arrow-up-right-from-square"
-                                className="fa-solid"
+                              <FontAwesomeV6Icon
+                                iconName="arrow-up-right-from-square"
+                                iconStyle="solid"
                               />
                             }
                           />
@@ -238,9 +237,9 @@ const ExpandedCurriculumCatalogCard = ({
                             text={i18n.selfPacedPl()}
                             href={selfPacedPlCourseOfferingPath}
                             icon={
-                              <FontAwesome
-                                icon="arrow-up-right-from-square"
-                                className="fa-solid"
+                              <FontAwesomeV6Icon
+                                iconName="arrow-up-right-from-square"
+                                iconStyle="solid"
                               />
                             }
                           />
@@ -255,11 +254,10 @@ const ExpandedCurriculumCatalogCard = ({
                   device =>
                     devices[device] !== '' && (
                       <div key={device} className={style.iconWithDescription}>
-                        <FontAwesome
-                          icon={iconData[devices[device]].icon}
-                          className={`fa-solid ${
-                            iconData[devices[device]].color
-                          }`}
+                        <FontAwesomeV6Icon
+                          iconName={iconData[devices[device]].icon}
+                          iconStyle="solid"
+                          className={iconData[devices[device]].color}
                         />
                         <Typography variant="body2" gutterBottom>
                           {device !== 'no_device'
