@@ -35,8 +35,9 @@ test.describe(
     });
 
     /**
-     * Source: ai_differentiation_chat.feature
-     * "Teacher can disable AI chat feature"
+     * Migration status: COMPLETED
+     * Source: dashboard/test/ui/features/teacher_tools/ai_diff/ai_differentiation_chat.feature
+     * Scenario: Teacher can disable AI chat feature
      *
      * Teacher enrolled in the ai-differentiation experiment can send a chat
      * message; toggling the AI teacher diff setting on /users/edit removes the

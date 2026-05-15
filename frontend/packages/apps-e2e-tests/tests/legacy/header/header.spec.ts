@@ -255,12 +255,38 @@ test.describe('Header navigation', () => {
   );
 
   /**
+   * Migration status: COMPLETED
    * Source: dashboard/test/ui/features/platform/header.feature
    * Scenario: Student can click on the header links
    */
-  test.skip('student can click on the header links', () => {
-    // Source Cucumber scenario is tagged @skip. It includes a cross-site
-    // hop through code.org/students, so keep the trace explicit without
-    // introducing a new always-skipped browser journey.
-  });
+  test(
+    'student can click on the header links',
+    {tag: ['@no_mobile', '@chrome']},
+    async ({page}) => {
+      await createStudent(page, {name: 'Squire Clicks-A-Lot Student'});
+      await setHeaderClickCookies(page);
+      await page.goto('/home');
+      await waitForHeaderLinks(page);
+
+      await clickHeaderLinkAndExpectUrl(
+        page,
+        '#header-student-home',
+        /\/home$/,
+      );
+
+      await expect(page.locator('#header-student-courses')).toHaveAttribute(
+        'href',
+        /code\.org\/students|code\.org\/en-US\/students/,
+      );
+
+      await page.goto('/home');
+      await waitForHeaderLinks(page);
+      await clickHeaderLinkAndExpectUrl(
+        page,
+        '#header-student-projects',
+        /\/projects$/,
+      );
+      await clickHeaderLinkAndExpectUrl(page, '#logo_home_link', /\/home$/);
+    },
+  );
 });

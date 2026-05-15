@@ -37,7 +37,7 @@ test.describe('Music Lab — play-sound block', () => {
   /**
    * Migration status: COMPLETED
    * Source: dashboard/test/ui/features/star_labs/musiclab/musiclab_drag_block.feature
-   * Scenario Outline: Dragging play sound block
+   * Scenario: Dragging play sound block
    * Example: <url> = http://studio.code.org/courses/allthethingscourse/units/1/lessons/46/levels/4
    */
   test(
@@ -54,7 +54,7 @@ test.describe('Music Lab — play-sound block', () => {
   /**
    * Migration status: COMPLETED
    * Source: dashboard/test/ui/features/star_labs/musiclab/musiclab_drag_block.feature
-   * Scenario Outline: Dragging play sound block
+   * Scenario: Dragging play sound block
    * Example: <url> = http://studio.code.org/projects/music/new
    */
   test(
