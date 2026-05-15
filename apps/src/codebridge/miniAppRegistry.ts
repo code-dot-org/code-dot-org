@@ -1,3 +1,4 @@
+import {DEMO_NAME, DemoMiniApp} from '@code-dot-org/demo-mini-app';
 import type {
   MiniApp,
   MiniAppDeps,
@@ -15,6 +16,7 @@ import {
  */
 const MINI_APPS: Record<string, MiniAppFactory> = {
   [NEIGHBORHOOD_NAME]: deps => new NeighborhoodMiniApp(deps),
+  [DEMO_NAME]: deps => new DemoMiniApp(deps),
 };
 
 /**

@@ -1379,6 +1379,32 @@ __metadata:
   languageName: unknown
   linkType: soft
 
+"@code-dot-org/demo-mini-app@workspace:packages/mini-apps/demo":
+  version: 0.0.0-use.local
+  resolution: "@code-dot-org/demo-mini-app@workspace:packages/mini-apps/demo"
+  dependencies:
+    "@code-dot-org/lint-config": "workspace:*"
+    "@code-dot-org/mini-app-base": "workspace:*"
+    "@types/node": "catalog:"
+    "@types/react": "catalog:"
+    "@types/react-dom": "catalog:"
+    "@vitejs/plugin-react": "catalog:"
+    eslint: "catalog:"
+    jsdom: "catalog:"
+    prettier: "catalog:"
+    react: "catalog:"
+    react-dom: "catalog:"
+    typescript: "catalog:"
+    vite: "catalog:"
+    vite-plugin-dts: "catalog:"
+    vite-plugin-externalize-deps: "catalog:"
+    vitest: "catalog:"
+  peerDependencies:
+    react: ^18.0.0 || ^19.0.0
+    react-dom: ^18.0.0 || ^19.0.0
+  languageName: unknown
+  linkType: soft
+
 "@code-dot-org/design-system-storybook@workspace:apps/design-system-storybook":
   version: 0.0.0-use.local
   resolution: "@code-dot-org/design-system-storybook@workspace:apps/design-system-storybook"
