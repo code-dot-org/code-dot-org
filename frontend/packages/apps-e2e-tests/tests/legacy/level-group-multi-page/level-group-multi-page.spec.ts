@@ -169,11 +169,15 @@ async function expectPageOneAnswers(page: Page): Promise<void> {
 }
 
 test.describe('Level group multi-page', () => {
+  /**
+   * Migration status: COMPLETED
+   * Source: dashboard/test/ui/features/teacher_tools/level_types/level_group_multi_page.feature
+   * Scenario: multi page level numbering
+   */
   test(
     'multi-page level numbering is correct across all pages',
     {tag: '@no_mobile'},
     async ({page}) => {
-      // Scenario: multi page level numbering
       await createTeacherAssociatedStudent(page);
 
       await page.goto(PAGE1_URL);
@@ -228,11 +232,15 @@ test.describe('Level group multi-page', () => {
     },
   );
 
+  /**
+   * Migration status: COMPLETED
+   * Source: dashboard/test/ui/features/teacher_tools/level_types/level_group_multi_page.feature
+   * Scenario: Submit three pages.
+   */
   test(
     'submit three pages persists all answers across reloads',
     {tag: '@no_mobile'},
     async ({page}) => {
-      // Scenario: Submit three pages.
       await createTeacherAssociatedStudent(page);
 
       await page.goto(PAGE1_URL);

@@ -295,12 +295,16 @@ async function gotoUnitAndExpectPageProgress(page: Page): Promise<void> {
 }
 
 test.describe('Level group multi-page dots', () => {
+  /**
+   * Migration status: COMPLETED
+   * Source: dashboard/test/ui/features/teacher_tools/level_types/level_group_multi_page_dots.feature
+   * Scenario: Submit three pages as... 1. all, 2. none, 3. some questions answered.
+   */
   test(
     'progress dots reflect partial/full/none answers across three pages',
     {tag: '@no_mobile'},
     async ({page}) => {
       test.slow();
-      // Scenario: Submit three pages as... 1. all, 2. none, 3. some questions answered.
       await createTeacherAssociatedStudent(page);
 
       await page.goto(PAGE1_URL);
@@ -386,12 +390,16 @@ test.describe('Level group multi-page dots', () => {
     },
   );
 
+  /**
+   * Migration status: COMPLETED
+   * Source: dashboard/test/ui/features/teacher_tools/level_types/level_group_multi_page_dots.feature
+   * Scenario: optional free play level
+   */
   test(
     'optional free play level: incomplete warning clears after answering optional question',
     {tag: '@no_mobile'},
     async ({page}) => {
       test.slow();
-      // Scenario: optional free play level
       await createTeacherAssociatedStudent(page);
 
       // ── Page 1 — answer all three multis ────────────────────────────────────

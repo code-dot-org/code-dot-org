@@ -57,11 +57,15 @@ async function dragFirstUnplacedToFirstSlot(
 // ─── Scenario 1 — @as_student: submit three multi answers ────────────────────
 
 test.describe('Level group — submit multi answers', () => {
+  /**
+   * Migration status: COMPLETED
+   * Source: dashboard/test/ui/features/teacher_tools/level_types/level_group.feature
+   * Scenario: Submit three answers.
+   */
   test(
     'submit three answers shows incomplete warning; reload restores selections',
     {tag: '@no_mobile'},
     async ({studentPage}) => {
-      // Scenario: Submit three answers.
       await studentPage.goto(LEVEL_URL);
       await studentPage
         .locator('.submitButton')
@@ -154,11 +158,15 @@ test.describe('Level group — submit multi answers', () => {
 // ─── Scenario 2 — teacher-associated student: match levels within group ───────
 
 test.describe('Level group — match levels', () => {
+  /**
+   * Migration status: COMPLETED
+   * Source: dashboard/test/ui/features/teacher_tools/level_types/level_group.feature
+   * Scenario: Match levels within level group
+   */
   test(
     'match levels within level group: drag, submit, reload, teacher view',
     {tag: '@no_mobile'},
     async ({page}) => {
-      // Scenario: Match levels within level group
       const {teacherEmail, teacherPassword} =
         await createTeacherAssociatedStudent(page);
 
@@ -293,11 +301,15 @@ test.describe('Level group — match levels', () => {
 // ─── Scenario 3 — anonymous: submit all answers including match levels ────────
 
 test.describe('Level group — submit all answers', () => {
+  /**
+   * Migration status: COMPLETED
+   * Source: dashboard/test/ui/features/teacher_tools/level_types/level_group.feature
+   * Scenario: Submit all answers, including match levels
+   */
   test(
     'submit all answers including match levels shows no incomplete warning',
     {tag: '@no_mobile'},
     async ({page}) => {
-      // Scenario: Submit all answers, including match levels
       await page.goto(LEVEL_URL);
       await page
         .locator('.submitButton')
