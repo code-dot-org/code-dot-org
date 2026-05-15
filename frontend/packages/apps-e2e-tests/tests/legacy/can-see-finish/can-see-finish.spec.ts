@@ -21,6 +21,7 @@ import {SpriteLab} from '../activities/spritelab/SpriteLab';
 
 /** Small-screen viewport matching "1366 by 727" step in the Cucumber suite. */
 const SMALL_SCREEN = {width: 1366, height: 727} as const;
+const MOBILE_SCREEN = {width: 1024, height: 768} as const;
 
 /**
  * Free-play level URLs from check_finish_button.rb.
@@ -42,6 +43,30 @@ const FREE_PLAY_URLS = {
   minecraftAdventurer:
     '/courses/allthethingscourse/units/1/lessons/25/levels/5?noautoplay=true&no_redirect=true',
 } as const;
+
+/**
+ * Open a free-play level in a mobile landscape viewport, run it, and verify the
+ * visible Finish control stays in the viewport.
+ *
+ * @param page - signed-in student page
+ * @param url - free-play level URL
+ * @param lab - page object for the level
+ * @param finishButton - visible Finish control for the lab
+ */
+async function expectMobileFinishButton(
+  page: import('@playwright/test').Page,
+  url: string,
+  lab: {waitForLabPage(): Promise<void>},
+  finishButton: import('@playwright/test').Locator,
+): Promise<void> {
+  await page.setViewportSize(MOBILE_SCREEN);
+  await page.goto(url);
+  await lab.waitForLabPage();
+  await page
+    .locator('#runButton')
+    .evaluate(element => (element as HTMLElement).click());
+  await expect(finishButton).toBeInViewport({timeout: 30_000});
+}
 
 test.describe('can see finish button — small screen', () => {
   /**
@@ -173,4 +198,96 @@ test.describe('can see finish button — small screen', () => {
       await expect(craft.finishButton).toBeInViewport();
     },
   );
+});
+
+test.describe('can see finish button — mobile screen', () => {
+  /**
+   * Migration status: COMPLETED
+   * Source: dashboard/test/ui/features/star_labs/can_see_finish.feature
+   * Scenario: can see finish button on "Dance Party"
+   * @only_mobile
+   */
+  test('Dance Party free-play level shows finish button on mobile', async ({
+    studentPage,
+  }) => {
+    const dance = new Dance(studentPage);
+    await expectMobileFinishButton(
+      studentPage,
+      FREE_PLAY_URLS.dance,
+      dance,
+      dance.finishButton,
+    );
+  });
+
+  /**
+   * Migration status: COMPLETED
+   * Source: dashboard/test/ui/features/star_labs/can_see_finish.feature
+   * Scenario: can see finish button on "Artist"
+   * @only_mobile
+   */
+  test('Artist free-play level shows finish button on mobile', async ({
+    studentPage,
+  }) => {
+    const artist = new Artist(studentPage);
+    await expectMobileFinishButton(
+      studentPage,
+      FREE_PLAY_URLS.artist,
+      artist,
+      artist.finishButton,
+    );
+  });
+
+  /**
+   * Migration status: COMPLETED
+   * Source: dashboard/test/ui/features/star_labs/can_see_finish.feature
+   * Scenario: can see finish button on "Flappy"
+   * @only_mobile
+   */
+  test('Flappy free-play level shows finish button on mobile', async ({
+    studentPage,
+  }) => {
+    const flappy = new Flappy(studentPage);
+    await expectMobileFinishButton(
+      studentPage,
+      FREE_PLAY_URLS.flappy,
+      flappy,
+      flappy.rightButton,
+    );
+  });
+
+  /**
+   * Migration status: COMPLETED
+   * Source: dashboard/test/ui/features/star_labs/can_see_finish.feature
+   * Scenario: can see finish button on "Sprite Lab"
+   * @only_mobile
+   */
+  test('Sprite Lab free-play level shows finish button on mobile', async ({
+    studentPage,
+  }) => {
+    const spritelab = new SpriteLab(studentPage);
+    await expectMobileFinishButton(
+      studentPage,
+      FREE_PLAY_URLS.spritelab,
+      spritelab,
+      spritelab.finishButton,
+    );
+  });
+
+  /**
+   * Migration status: COMPLETED
+   * Source: dashboard/test/ui/features/star_labs/can_see_finish.feature
+   * Scenario: can see finish button on "Game Lab"
+   * @only_mobile
+   */
+  test('Game Lab free-play level shows finish button on mobile', async ({
+    studentPage,
+  }) => {
+    const gamelab = new GameLab(studentPage);
+    await expectMobileFinishButton(
+      studentPage,
+      FREE_PLAY_URLS.gamelab,
+      gamelab,
+      studentPage.getByRole('button', {name: 'Finish'}),
+    );
+  });
 });

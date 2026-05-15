@@ -276,6 +276,43 @@ class CatalogDetailsPage {
 }
 
 /**
+ * Page object for the catalog mobile card actions.
+ */
+class CatalogMobilePage {
+  private readonly page: Page;
+
+  /**
+   * @param page - Playwright page on /catalog
+   */
+  constructor(page: Page) {
+    this.page = page;
+  }
+
+  /**
+   * Opens the catalog in a portrait viewport and waits for a known card.
+   */
+  async goto(): Promise<void> {
+    await this.page.setViewportSize({width: 390, height: 844});
+    await this.page.goto('/catalog');
+    await waitForCatalog(this.page);
+  }
+
+  /**
+   * Clicks a mobile card action and waits for its course-offering route.
+   *
+   * @param label - accessible label for the mobile card action
+   * @param path - expected course-offering path segment
+   */
+  async clickCardAction(label: string, path: string): Promise<void> {
+    await this.page.getByLabel(label).click();
+    await expect(this.page).toHaveURL(new RegExp(path), {timeout: 30_000});
+    await expect(
+      this.page.getByRole('heading', {name: 'AI for Oceans'}),
+    ).toBeVisible({timeout: 30_000});
+  }
+}
+
+/**
  * Create two named sections for the currently signed-in teacher.
  * Mirrors `I am a teacher with student sections named Section 1 and Section 2`
  * from section_management_steps.rb.
@@ -967,6 +1004,22 @@ test.describe('Curriculum Catalog — signed-in student', () => {
       await catalog.expectAssignToClassSectionsHidden('AI for Oceans');
     },
   );
+
+  /**
+   * Migration status: COMPLETED
+   * Source: dashboard/test/ui/features/acquisition_products/curriculum_catalog.feature
+   * Scenario: On mobile, Signed-in student sees the Try Now button on Catalog Cards
+   * @as_student
+   * @only_mobile
+   */
+  test('mobile signed-in student can try AI for Oceans', async ({
+    studentPage,
+  }) => {
+    const catalog = new CatalogMobilePage(studentPage);
+
+    await catalog.goto();
+    await catalog.clickCardAction('Try AI for Oceans now', '/oceans');
+  });
 });
 
 test.describe('Curriculum Catalog — signed-in teacher', () => {
@@ -1044,6 +1097,40 @@ test.describe('Curriculum Catalog — signed-in teacher', () => {
       ).toBeVisible({timeout: 15_000});
     },
   );
+
+  /**
+   * Migration status: COMPLETED
+   * Source: dashboard/test/ui/features/acquisition_products/curriculum_catalog.feature
+   * Scenario: On mobile, Signed-in teacher sees the Learn More button on Catalog Cards
+   * @as_teacher
+   * @only_mobile
+   */
+  test('mobile signed-in teacher can learn more about AI for Oceans', async ({
+    teacherPage,
+  }) => {
+    const catalog = new CatalogMobilePage(teacherPage);
+
+    await catalog.goto();
+    await catalog.clickCardAction('Learn more about AI for Oceans', '/oceans');
+  });
+});
+
+test.describe('Curriculum Catalog — mobile signed-out', () => {
+  /**
+   * Migration status: COMPLETED
+   * Source: dashboard/test/ui/features/acquisition_products/curriculum_catalog.feature
+   * Scenario: On mobile, Signed-out User sees the Learn More button on Catalog Cards
+   * @only_mobile
+   */
+  test('mobile signed-out user can learn more about AI for Oceans', async ({
+    page,
+  }) => {
+    const catalog = new CatalogMobilePage(page);
+
+    await page.goto('/reset_session');
+    await catalog.goto();
+    await catalog.clickCardAction('Learn more about AI for Oceans', '/oceans');
+  });
 });
 
 test.describe('Curriculum Catalog — assign and unassign', () => {

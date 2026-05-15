@@ -1,3 +1,4 @@
+import {createTeacherAssociatedStudent, signIn} from '../../../shared/auth';
 import {expect, test} from '../../../shared/fixtures';
 
 import {Craft} from './Craft';
@@ -165,5 +166,34 @@ test.describe('Craft — lesson 25 — signed-in finish dialog (level 4)', () =>
     await craft.finish();
     await expect(craft.continueButton).toBeVisible({timeout: 30_000});
     await expect(craft.saveToProjectGalleryButton).toBeVisible();
+  });
+});
+
+test.describe('Craft — mobile finish button', () => {
+  /**
+   * Migration status: COMPLETED
+   * Source: dashboard/test/ui/features/star_labs/craft/can_see_finish.feature
+   * Scenario: can see finish button on "Minecraft Adventurer"
+   * @only_mobile
+   */
+  test('Minecraft Adventurer free-play level shows finish button on mobile', async ({
+    page,
+  }) => {
+    const pair = await createTeacherAssociatedStudent(page, {
+      studentName: 'Sally',
+      authorized: true,
+    });
+    await signIn(page, pair.teacherEmail, pair.teacherPassword);
+    await page.setViewportSize({width: 1024, height: 768});
+
+    const craft = new Craft(page);
+    await page.goto(
+      '/courses/allthethingscourse/units/1/lessons/25/levels/5?noautoplay=true&no_redirect=true',
+    );
+    await craft.waitForLabPage();
+    await page
+      .locator('#runButton')
+      .evaluate(element => (element as HTMLElement).click());
+    await expect(craft.finishButton).toBeInViewport({timeout: 30_000});
   });
 });
