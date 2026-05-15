@@ -1,3 +1,4 @@
+import {Typography} from '@mui/material';
 import orderBy from 'lodash/orderBy';
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
@@ -51,11 +52,13 @@ class FreeResponsesAssessmentsTable extends Component {
   responseCellFormatter = (response, {rowData, rowIndex}) => {
     return (
       <div>
-        {response && <div className={moduleStyles.response}>{response}</div>}
+        {response && (
+          <Typography variant="body3" className={moduleStyles.response}>
+            {response}
+          </Typography>
+        )}
         {!response && (
-          <div className={moduleStyles.noResponse}>
-            {i18n.emptyFreeResponse()}
-          </div>
+          <Typography vartiant="body3">{i18n.emptyFreeResponse()}</Typography>
         )}
       </div>
     );

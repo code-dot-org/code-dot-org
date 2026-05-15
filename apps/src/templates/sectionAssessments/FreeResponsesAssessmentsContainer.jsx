@@ -54,10 +54,12 @@ class FreeResponsesAssessmentsContainer extends Component {
             {freeResponseQuestions.map((question, index) => (
               <div key={index}>
                 <div className={moduleStyles.questionLabel}>
-                  {`${question.questionNumber}. ${question.questionText.slice(
-                    0,
-                    QUESTION_CHARACTER_LIMIT
-                  )}`}
+                  <Typography variant="body3">
+                    {`${question.questionNumber}. ${question.questionText.slice(
+                      0,
+                      QUESTION_CHARACTER_LIMIT
+                    )}`}
+                  </Typography>
                   {question.questionText.length >= QUESTION_CHARACTER_LIMIT && (
                     <Link
                       size="s"
