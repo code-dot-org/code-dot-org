@@ -1,10 +1,12 @@
 import pythonlabI18n from '@cdo/apps/pythonlab/locale';
-import {
-  parseMessageToNeighborhoodSignal,
-  extractNeighborhoodExceptionType,
-  getNeighborhoodExceptionMessage,
-  parseErrorMessage,
-} from '@cdo/apps/pythonlab/pythonHelpers/messageHelpers';
+import {parseErrorMessage} from '@cdo/apps/pythonlab/pythonHelpers/messageHelpers';
+
+// `parseErrorMessage` is now pure: it formats a traceback and, if given,
+// prepends a friendly mini-app exception message. The mini-app-specific
+// recognition (matching `NeighborhoodRuntimeException: KEY` etc.) lives
+// inside `miniApp.parseException` in the mini-app's own package and is
+// tested there; here we just hand the function a fixture prefix and
+// verify the formatting.
 
 describe('messageHelpers', function () {
   let tracebackLine: string;
@@ -31,47 +33,7 @@ describe('messageHelpers', function () {
     missingGenericModuleErrorLine =
       "ModuleNotFoundError: The module 'some_module' is included in the Pyodide distribution, but it is not installed.";
   });
-  describe('parseMessageToNeighborhoodSignal', function () {
-    it('can successfully parse a message string with no detail', function () {
-      expect(parseMessageToNeighborhoodSignal('[NEIGHBORHOOD] MOVE')).toEqual({
-        value: 'MOVE',
-      });
-    });
-    it('can successfully parse a message string with detail', function () {
-      expect(
-        parseMessageToNeighborhoodSignal(
-          '[NEIGHBORHOOD] PAINT {"color": "Blue"}'
-        )
-      ).toEqual({
-        value: 'PAINT',
-        detail: {
-          color: 'Blue',
-        },
-      });
-    });
-    it('returns null if message string has invalid format', function () {
-      expect(parseMessageToNeighborhoodSignal('Invalid')).toEqual(null);
-    });
-  });
-  describe('extractNeighborhoodExceptionType', function () {
-    it('can successfully extract a Neighborhood exception type given a traceback error message', function () {
-      const tracebackMessage = `${tracebackLine}\n${baseErrorLine}\n${mainErrorLine}\n${detailsErrorLine}\n${neighborhoodExceptionLine}`;
-      expect(extractNeighborhoodExceptionType(tracebackMessage)).toEqual(
-        'INVALID_MOVE'
-      );
-    });
-    it('returns null if there is no Neighborhood exception within a traceback error message', function () {
-      const tracebackMessage = `${tracebackLine}\n AttributeError: File '/Files/main.py', line 3, in <module>\n p.turnleft()\n 'Painter' object has no attribute 'turnleft'`;
-      expect(extractNeighborhoodExceptionType(tracebackMessage)).toEqual(null);
-    });
-  });
-  describe('getNeighborhoodExceptionMessage', function () {
-    it('can successfully return a Neighborhood exception given an exception type', function () {
-      expect(getNeighborhoodExceptionMessage('INVALID_MOVE')).toEqual(
-        neighborhoodExceptionMessageLine
-      );
-    });
-  });
+
   describe('parseErrorMessage', function () {
     it('returns the entire error message if main.py error is not found', function () {
       const tracebackMessage = `${tracebackLine}\n${baseErrorLine}`;
@@ -79,11 +41,15 @@ describe('messageHelpers', function () {
         tracebackMessage
       );
     });
-    it('returns the Neighborhood exception message and entire error message if main.py error is not found', function () {
+    it('prepends the mini-app prefix when main.py error is not found', function () {
       const tracebackMessage = `${tracebackLine}\n${baseErrorLine}\n${neighborhoodExceptionLine}`;
-      expect(parseErrorMessage(tracebackMessage, false)).toEqual(
-        `${neighborhoodExceptionMessageLine}\n${tracebackMessage}`
-      );
+      expect(
+        parseErrorMessage(
+          tracebackMessage,
+          false,
+          neighborhoodExceptionMessageLine
+        )
+      ).toEqual(`${neighborhoodExceptionMessageLine}\n${tracebackMessage}`);
     });
     it('successfully returns the parsed exception message', async function () {
       const tracebackMessage = `${tracebackLine}\n${baseErrorLine}\n${mainErrorLine}\n${detailsErrorLine}`;
@@ -92,12 +58,30 @@ describe('messageHelpers', function () {
         expectedErrorMessage
       );
     });
-    it('successfully returns the Neighborhood exception with parsed exception message', function () {
+    it('prepends the mini-app prefix to the parsed exception message', function () {
       const tracebackMessage = `${tracebackLine}: \n${baseErrorLine}\n${mainErrorLine}\n${detailsErrorLine}\n${neighborhoodExceptionLine}`;
       const expectedErrorMessage = `${mainErrorLine}\n${detailsErrorLine}\n${neighborhoodExceptionLine}`;
-      expect(parseErrorMessage(tracebackMessage, false)).toEqual(
-        `${neighborhoodExceptionMessageLine}\n${expectedErrorMessage}`
-      );
+      expect(
+        parseErrorMessage(
+          tracebackMessage,
+          false,
+          neighborhoodExceptionMessageLine
+        )
+      ).toEqual(`${neighborhoodExceptionMessageLine}\n${expectedErrorMessage}`);
+    });
+    it('ignores the prefix when the error is a missing module (module path wins)', function () {
+      // Module-not-found short-circuits before any prefix prepend — the
+      // friendly module message stands alone.
+      const expectedMessage = pythonlabI18n.missingModuleError({
+        module: 'pandas',
+      });
+      expect(
+        parseErrorMessage(
+          missingSupportedModuleErrorLine,
+          false,
+          'this prefix should be discarded'
+        )
+      ).toEqual(expectedMessage);
     });
     it('provides correct message for missing module in system code', function () {
       const tracebackMessage = missingSupportedModuleErrorLine;

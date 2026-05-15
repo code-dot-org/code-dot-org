@@ -157,12 +157,27 @@ const setUpPyodideWorker = () => {
           writeConsoleMessage(getErrorMessage(pythonlabI18n.inputFailed()));
           break;
         }
-        writeConsoleMessage(getErrorMessage(parseErrorMessage(message, false)));
+        writeConsoleMessage(
+          getErrorMessage(
+            parseErrorMessage(
+              message,
+              false,
+              miniApp?.parseException?.(message)
+            )
+          )
+        );
         break;
       case 'system_error':
         getStore().dispatch(setHasError(true));
         writeConsoleMessage(
-          getSystemError(parseErrorMessage(message, true), appName)
+          getSystemError(
+            parseErrorMessage(
+              message,
+              true,
+              miniApp?.parseException?.(message)
+            ),
+            appName
+          )
         );
         Lab2Registry.getInstance()
           .getMetricsReporter()
