@@ -1,6 +1,7 @@
 import {
   assignSectionToCourseAndUnit,
   createSection,
+  createSectionWithCourse,
   createTeacher,
   createTeacherAssociatedStudent,
   signIn,
@@ -108,6 +109,79 @@ test.describe(
       await expect(page.locator('#ui-test-section-list')).not.toContainText(
         'Current unit:',
       );
+    });
+
+    /**
+     * Migration status: COMPLETED
+     * Source: dashboard/test/ui/features/teacher_tools/teacher_homepage.feature
+     * Scenario: Navigate to course pages with course versions enabled
+     */
+    test('teacher homepage course links preserve section context on course pages', async ({
+      page,
+    }) => {
+      await createTeacher(page);
+      const {sectionId} = await createSectionWithCourse(
+        page,
+        'ui-test-csp-2025',
+        1,
+      );
+
+      await page.goto('/teacher_dashboard/home');
+      await expect(page.locator('#ui-test-section-list')).toBeVisible({
+        timeout: 30_000,
+      });
+
+      const sectionCard = page.locator('#ui-test-section-list').filter({
+        hasText: 'UI Test CSP',
+      });
+      await expect(sectionCard).toBeVisible({timeout: 30_000});
+      await expect(
+        page.locator('#course-content-dropdown-New-Section'),
+      ).toContainText('UI Test CSP', {timeout: 30_000});
+
+      await page.locator('#go-to-lesson-dropdown-button').click();
+      const unitLink = page.getByRole('link', {name: 'Unit 1: Applab'});
+      await expect(unitLink).toBeVisible({timeout: 15_000});
+      await expect(unitLink).toHaveAttribute(
+        'href',
+        new RegExp(
+          `/teacher_dashboard/sections/${sectionId}/courses/ui-test-csp-2025/units/1`,
+        ),
+      );
+      await unitLink.click();
+
+      await expect(page).toHaveURL(
+        new RegExp(
+          `/teacher_dashboard/sections/${sectionId}/courses/ui-test-csp-2025/units/1`,
+        ),
+        {timeout: 30_000},
+      );
+      await expect(
+        page.getByRole('heading', {name: 'Unit 1 - Applab'}),
+      ).toBeVisible({timeout: 30_000});
+      const courseOverviewLink = page.getByRole('link', {
+        name: '< UI Test CSP',
+      });
+      await expect(courseOverviewLink).toHaveAttribute(
+        'href',
+        new RegExp(
+          `/teacher_dashboard/sections/${sectionId}/courses/ui-test-csp-2025$`,
+        ),
+      );
+      await courseOverviewLink.click();
+
+      await expect(page).toHaveURL(
+        new RegExp(
+          `/teacher_dashboard/sections/${sectionId}/courses/ui-test-csp-2025$`,
+        ),
+        {timeout: 30_000},
+      );
+      await expect(
+        page.getByRole('heading', {name: 'UI Test CSP', exact: true}),
+      ).toBeVisible({timeout: 30_000});
+      await expect(page.locator('#assignment-version-year')).toBeVisible({
+        timeout: 15_000,
+      });
     });
   },
 );
