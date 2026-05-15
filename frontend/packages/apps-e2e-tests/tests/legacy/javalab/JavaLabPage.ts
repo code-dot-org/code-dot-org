@@ -27,6 +27,10 @@ export class JavaLabPage {
   readonly teacherPanel: Locator;
   readonly teacherPanelRows: Locator;
   readonly teacherUnsubmitButton: Locator;
+  readonly levelbuilderToggle: Locator;
+  readonly neighborhoodSpeedSlider: Locator;
+  readonly photoInput: Locator;
+  readonly captchaDialog: Locator;
 
   /**
    * @param page - Playwright page for the current Java Lab scenario
@@ -63,6 +67,14 @@ export class JavaLabPage {
     this.teacherPanel = page.locator('#teacher-panel-container');
     this.teacherPanelRows = page.locator('#teacher-panel-container tr');
     this.teacherUnsubmitButton = page.locator('#unsubmit-button-uitest');
+    this.levelbuilderToggle = page.locator('#levelbuilder-menu-toggle');
+    this.neighborhoodSpeedSlider = page.locator(
+      'input[name="neighborhood-speed"]',
+    );
+    this.photoInput = page.locator('#photoInput');
+    this.captchaDialog = page.locator('.modal', {
+      hasText: "Please confirm you're human",
+    });
   }
 
   /**
@@ -266,6 +278,24 @@ export class JavaLabPage {
     await expect(this.console).toContainText('[JAVALAB] Program completed.', {
       timeout: 60_000,
     });
+  }
+
+  /**
+   * Press the levelbuilder toggle used by the source Eyes scenarios before
+   * their visual checkpoints.
+   */
+  async clickLevelbuilderToggle(): Promise<void> {
+    await expect(this.levelbuilderToggle).toBeVisible({timeout: 30_000});
+    await this.levelbuilderToggle.click();
+  }
+
+  /**
+   * Set the visible Neighborhood speed slider to its fastest value.
+   */
+  async setNeighborhoodSpeedToFast(): Promise<void> {
+    await expect(this.neighborhoodSpeedSlider).toBeVisible({timeout: 30_000});
+    await this.neighborhoodSpeedSlider.fill('100');
+    await expect(this.neighborhoodSpeedSlider).toHaveValue('100');
   }
 
   /**

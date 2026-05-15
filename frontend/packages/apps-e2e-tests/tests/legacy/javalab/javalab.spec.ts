@@ -1,9 +1,11 @@
 import {type APIResponse, type Page} from '@playwright/test';
+import path from 'path';
 
 import {
   createAuthorizedTeacher,
   createSectionWithCourse,
   createStudent,
+  createTeacher,
   createTeacherAssociatedStudent,
   joinSection,
   signIn as dashboardSignIn,
@@ -23,10 +25,18 @@ import {JavaLabPage} from './JavaLabPage';
  *   dashboard/test/ui/features/javalab/code_review_scenarios.feature
  *   dashboard/test/ui/features/javalab/console_only.feature
  *   dashboard/test/ui/features/javalab/finish_button.feature
+ *   dashboard/test/ui/features/javalab/javalab_demo_mode.feature
  *   dashboard/test/ui/features/javalab/javalab_submittable.feature
+ *   dashboard/test/ui/features/javalab/neighborhood.feature
+ *   dashboard/test/ui/features/javalab/prompter.feature
+ *   dashboard/test/ui/features/javalab/theater.feature
  */
 
 const LESSON_44 = '/courses/allthethingscourse/units/1/lessons/44';
+const FIXTURES = path.resolve(
+  __dirname,
+  '../../../../../../dashboard/test/fixtures',
+);
 
 interface CodeReviewSetup {
   teacher: UserCredentials;
@@ -207,6 +217,28 @@ async function createAuthorizedCsaStudent(
   const student = await createStudent(page, {name: studentName});
   await joinSection(page, sectionCode);
   return {teacher, student, sectionId};
+}
+
+/**
+ * Create a teacher with levelbuilder access and leave the session signed in.
+ * Mirrors Cucumber's `I create a levelbuilder named "..."`.
+ *
+ * @param page - Playwright page receiving the levelbuilder session
+ * @param name - display name for the levelbuilder user
+ * @returns credentials for the new levelbuilder
+ */
+async function createLevelbuilder(
+  page: Page,
+  name: string,
+): Promise<UserCredentials> {
+  const credentials = await createTeacher(page, {name});
+  await postJson(
+    page,
+    '/api/test/levelbuilder_access',
+    {},
+    'grant levelbuilder access',
+  );
+  return credentials;
 }
 
 /**
@@ -529,6 +561,41 @@ test.describe('Java Lab — console-only level', () => {
 });
 
 // ---------------------------------------------------------------------------
+// Java Lab demo mode (javalab_demo_mode.feature)
+// ---------------------------------------------------------------------------
+
+test.describe('Java Lab — demo mode', () => {
+  /**
+   * Migration status: COMPLETED
+   * Source: dashboard/test/ui/features/javalab/javalab_demo_mode.feature
+   * Scenario: Present captcha challenge
+   */
+  test(
+    'unverified teacher sees captcha challenge before running Java Lab',
+    {tag: ['@no_mobile', '@eyes', '@no_ci']},
+    async ({page}) => {
+      await createTeacher(page, {name: 'Ms_Frizzle'});
+      const lab = new JavaLabPage(page);
+
+      await lab.gotoLevel(4);
+      await expect(lab.teacherPanel).not.toBeVisible();
+      await lab.runButton.click();
+      await expect(lab.captchaDialog).toBeVisible({timeout: 60_000});
+      await expect(lab.captchaDialog).toContainText(
+        "Please confirm you're human",
+      );
+      await expect(
+        page.frameLocator('iframe[title="reCAPTCHA"]').locator('body'),
+      ).toBeVisible({timeout: 30_000});
+      await expect(lab.console).toContainText(
+        "Verification required: please confirm you're human.",
+      );
+      // visual checkpoint: "initial modal view"
+    },
+  );
+});
+
+// ---------------------------------------------------------------------------
 // Finish button (finish_button.feature)
 // ---------------------------------------------------------------------------
 
@@ -586,6 +653,91 @@ test.describe('Java Lab — finish button', () => {
       await lab.gotoLevel(12);
       await lab.runValidationTests();
       await expect(lab.finishButton).toBeEnabled();
+    },
+  );
+});
+
+// ---------------------------------------------------------------------------
+// Java Lab visual levels (theater.feature, prompter.feature, neighborhood.feature)
+// ---------------------------------------------------------------------------
+
+test.describe('Java Lab — visual level flows', () => {
+  /**
+   * Migration status: COMPLETED
+   * Source: dashboard/test/ui/features/javalab/theater.feature
+   * Scenario: GIF plays on run
+   */
+  test(
+    'theater GIF level runs through video generation',
+    {tag: ['@eyes', '@no_ci']},
+    async ({page}) => {
+      await createLevelbuilder(page, 'Simone');
+      const lab = new JavaLabPage(page);
+
+      await lab.gotoLevel(4);
+      await lab.clickLevelbuilderToggle();
+      // visual checkpoint: "initial page load"
+      await lab.runButton.click();
+      await expect(lab.console).toContainText('[JAVALAB] Program completed.', {
+        timeout: 90_000,
+      });
+      // visual checkpoint: "GIF end state"
+    },
+  );
+
+  /**
+   * Migration status: COMPLETED
+   * Source: dashboard/test/ui/features/javalab/prompter.feature
+   * Scenario: Upload an image via the prompter
+   */
+  test(
+    'prompter level accepts an uploaded image and completes',
+    {tag: ['@eyes', '@no_ci']},
+    async ({page}) => {
+      await createLevelbuilder(page, 'Simone');
+      const lab = new JavaLabPage(page);
+
+      await lab.gotoLevel(10);
+      await lab.clickLevelbuilderToggle();
+      // visual checkpoint: "initial page load"
+      await lab.runButton.click();
+      await expect(lab.console).toContainText('Upload a photo!', {
+        timeout: 60_000,
+      });
+      await expect(lab.photoInput).toBeAttached({timeout: 30_000});
+      // visual checkpoint: "prompter upload view"
+      await lab.photoInput.setInputFiles(
+        path.join(FIXTURES, 'javalab_image.jpg'),
+      );
+      await expect(lab.console).toContainText('[JAVALAB] Program completed.', {
+        timeout: 90_000,
+      });
+      // visual checkpoint: "prompter end state"
+    },
+  );
+
+  /**
+   * Migration status: COMPLETED
+   * Source: dashboard/test/ui/features/javalab/neighborhood.feature
+   * Scenario: Paint Glomming Shapes
+   */
+  test(
+    'neighborhood paint glomming level runs to completion',
+    {tag: ['@eyes', '@no_ci']},
+    async ({page}) => {
+      test.slow();
+      await createLevelbuilder(page, 'Simone');
+      const lab = new JavaLabPage(page);
+
+      await lab.gotoLevel(7);
+      await lab.clickLevelbuilderToggle();
+      await lab.setNeighborhoodSpeedToFast();
+      // visual checkpoint: "initial page load"
+      await lab.runButton.click();
+      await expect(lab.console).toContainText('Done painting', {
+        timeout: 180_000,
+      });
+      // visual checkpoint: "paint glomming"
     },
   );
 });
