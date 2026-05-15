@@ -1,3 +1,5 @@
+import {type Locator, type Page} from '@playwright/test';
+
 import {
   assignSectionToCourseAndUnit,
   createSection,
@@ -6,6 +8,7 @@ import {
   createTeacherAssociatedStudent,
   createTestUser,
   signIn,
+  signOut,
 } from '../../shared/auth';
 import {expect, test} from '../../shared/fixtures';
 
@@ -45,6 +48,50 @@ async function createNeverSignedInTeacher(
     email_preference_form_kind: email,
     email_preference_request_ip: '127.0.0.1',
     email_preference_source: 'ACCOUNT_SIGN_UP',
+  });
+}
+
+function sectionCourseLabel(page: Page, sectionName = 'New Section'): Locator {
+  return page.locator(
+    `#course-content-dropdown-${sectionName.replaceAll(' ', '-')}`,
+  );
+}
+
+async function openJumpToLink(page: Page, linkName: string): Promise<Locator> {
+  await page.locator('#go-to-lesson-dropdown-button').click();
+  const link = page.getByRole('link', {name: linkName});
+  await expect(link).toBeVisible({timeout: 15_000});
+  return link;
+}
+
+async function gotoHomeWithLessonListReady(
+  page: Page,
+  sectionId: number,
+): Promise<void> {
+  // WebKit can open the visible Jump to dropdown before its async lesson list
+  // hydrates, so wait for the narrow lesson-list response before using it.
+  const lessonsLoaded = page.waitForResponse(
+    response =>
+      response
+        .url()
+        .includes(`/sections/${sectionId}/retrieve_lessons_for_dropdown`) &&
+      response.ok(),
+    {timeout: 30_000},
+  );
+
+  await page.goto('/teacher_dashboard/home');
+  await lessonsLoaded;
+  await expect(page.locator('#ui-test-section-list')).toBeVisible({
+    timeout: 30_000,
+  });
+}
+
+async function hideUnit(page: Page, unitName: string): Promise<void> {
+  const unitCard = page.locator('.uitest-CourseScript', {hasText: unitName});
+  await expect(unitCard).toBeVisible({timeout: 30_000});
+  await unitCard.locator('.fa-eye-slash').click();
+  await expect(unitCard).toHaveAttribute('data-visibility', 'hidden', {
+    timeout: 30_000,
   });
 }
 
@@ -193,6 +240,126 @@ test.describe(
     /**
      * Migration status: COMPLETED
      * Source: dashboard/test/ui/features/teacher_tools/teacher_homepage.feature
+     * Scenario: Assign hidden unit to section
+     *
+     * Current teacher-dashboard routing exposes the same behavior on the course
+     * overview: hiding the assigned unit marks the unit hidden for the section,
+     * and the enrolled student sees the hidden-unit warning.
+     */
+    test('hidden assigned unit is marked hidden and blocked for the student', async ({
+      page,
+    }) => {
+      const {
+        teacherEmail,
+        teacherPassword,
+        studentEmail,
+        studentPassword,
+        sectionId,
+      } = await createTeacherAssociatedStudent(page, {
+        authorized: true,
+        studentName: 'Sally',
+      });
+
+      await signIn(page, teacherEmail, teacherPassword);
+      await assignSectionToCourseAndUnit(page, 0, 'allthethingscourse', 1);
+      await page.goto(`/courses/allthethingscourse?section_id=${sectionId}`);
+      await expect(page.locator('.uitest-CourseScript').first()).toBeVisible({
+        timeout: 30_000,
+      });
+
+      await hideUnit(page, 'All the Things!');
+
+      await signOut(page);
+      await signIn(page, studentEmail, studentPassword);
+      await page.goto(
+        `/courses/allthethingscourse/units/1?section_id=${sectionId}`,
+      );
+      await expect(
+        page.getByText("Your teacher didn't expect you to be here."),
+      ).toBeVisible({timeout: 30_000});
+      await expect(
+        page.getByRole('link', {name: 'Go to course overview'}),
+      ).toBeVisible({timeout: 30_000});
+    });
+
+    /**
+     * Migration status: COMPLETED
+     * Source: dashboard/test/ui/features/teacher_tools/teacher_homepage.feature
+     * Scenario: Assign a Course assigns first Unit in Course by default
+     */
+    test('assigned course defaults the section Jump to menu to unit 1', async ({
+      page,
+    }) => {
+      await createTeacher(page);
+      const {sectionId} = await createSectionWithCourse(
+        page,
+        'ui-test-csp-2025',
+        1,
+      );
+
+      await gotoHomeWithLessonListReady(page, sectionId);
+      await expect(sectionCourseLabel(page)).toContainText('UI Test CSP', {
+        timeout: 30_000,
+      });
+
+      const unitLink = await openJumpToLink(page, 'Unit 1: Applab');
+      await expect(unitLink).toHaveAttribute(
+        'href',
+        new RegExp(
+          `/teacher_dashboard/sections/${sectionId}/courses/ui-test-csp-2025/units/1`,
+        ),
+      );
+    });
+
+    /**
+     * Migration status: COMPLETED
+     * Source: dashboard/test/ui/features/teacher_tools/teacher_homepage.feature
+     * Scenario: Assign a CSF course with multiple versions
+     */
+    test('section card reflects changing a versioned course assignment', async ({
+      page,
+    }) => {
+      await createTeacher(page);
+      const {sectionId} = await createSectionWithCourse(
+        page,
+        'ui-test-course-2017',
+        1,
+      );
+
+      await gotoHomeWithLessonListReady(page, sectionId);
+      await expect(sectionCourseLabel(page)).toContainText(
+        'ui-test-course-2017',
+        {timeout: 30_000},
+      );
+      let unitLink = await openJumpToLink(
+        page,
+        'ui-test-script-in-course-2017',
+      );
+      await expect(unitLink).toHaveAttribute(
+        'href',
+        new RegExp(
+          `/teacher_dashboard/sections/${sectionId}/courses/ui-test-course-2017/units/1`,
+        ),
+      );
+
+      await assignSectionToCourseAndUnit(page, 0, 'ui-test-course-2019', 1);
+      await gotoHomeWithLessonListReady(page, sectionId);
+      await expect(sectionCourseLabel(page)).toContainText(
+        'ui-test-course-2019',
+        {timeout: 30_000},
+      );
+      unitLink = await openJumpToLink(page, 'ui-test-script-in-course-2019');
+      await expect(unitLink).toHaveAttribute(
+        'href',
+        new RegExp(
+          `/teacher_dashboard/sections/${sectionId}/courses/ui-test-course-2019/units/1`,
+        ),
+      );
+    });
+
+    /**
+     * Migration status: COMPLETED
+     * Source: dashboard/test/ui/features/teacher_tools/teacher_homepage.feature
      * Scenario: Navigate to course pages with course versions enabled
      */
     test('teacher homepage course links preserve section context on course pages', async ({
@@ -205,10 +372,7 @@ test.describe(
         1,
       );
 
-      await page.goto('/teacher_dashboard/home');
-      await expect(page.locator('#ui-test-section-list')).toBeVisible({
-        timeout: 30_000,
-      });
+      await gotoHomeWithLessonListReady(page, sectionId);
 
       const sectionCard = page.locator('#ui-test-section-list').filter({
         hasText: 'UI Test CSP',
