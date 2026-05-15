@@ -173,7 +173,7 @@ test.describe('Hour of Code — hoc/reset', () => {
   /**
    * Migration status: COMPLETED
    * Source: dashboard/test/ui/features/student_learning/hour_of_code/hoc_reset.feature
-   * Scenario: hoc/reset clears videos, callouts, and level progress
+   * Scenario: hoc/reset resets videos, callouts, level progress
    * hoc/reset always re-triggers the intro video and callouts regardless of
    * prior navigation state.
    */

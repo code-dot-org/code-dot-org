@@ -129,7 +129,8 @@ async function openTeacherPanel(
 test.describe('App Lab — data storage blocks', () => {
   /**
    * Migration status: COMPLETED
-   * Source: data_blocks.feature — "Evaluate Data Blocks"
+   * Source: dashboard/test/ui/features/star_labs/applab/data_blocks.feature
+   * Scenario: Evaluate Data Blocks
    * @no_mobile
    *
    * Level 18/8 runs create/read/update/deleteRecord and set/getKeyValue blocks
@@ -153,7 +154,8 @@ test.describe('App Lab — data storage blocks', () => {
 test.describe('App Lab — design mode clipping', () => {
   /**
    * Migration status: COMPLETED
-   * Source: clipping.feature — "Load an app to edit and see the blocks unclipped in design mode"
+   * Source: dashboard/test/ui/features/star_labs/applab/clipping.feature
+   * Scenario: Load an app to edit and see the blocks unclipped in design mode
    *
    * After navigating to the App Lab project page and switching to design mode
    * the design canvas must carry the clip-content CSS class.
@@ -179,7 +181,8 @@ test.describe('App Lab — design mode clipping', () => {
 test.describe('App Lab — data browser', () => {
   /**
    * Migration status: COMPLETED
-   * Source: level_options.feature — "Table data in level definition appears in data browser"
+   * Source: dashboard/test/ui/features/star_labs/applab/level_options.feature
+   * Scenario: Table data in level definition appears in data browser
    * @as_student
    *
    * Level 18/16 has pre-seeded table data (table_name2 with a "Seattle" row).
@@ -362,7 +365,8 @@ test.describe('App Lab — submittable level', () => {
 test.describe('App Lab — button text read/write', () => {
   /**
    * Migration status: COMPLETED
-   * Source: scenarios.feature — "Can read and set button text"
+   * Source: dashboard/test/ui/features/star_labs/applab/scenarios.feature
+   * Scenario: Can read and set button text
    * @as_student @no_mobile
    *
    * Creates two buttons in code mode and uses setText/getText to copy one
@@ -396,7 +400,8 @@ test.describe('App Lab — button text read/write', () => {
 test.describe('App Lab — textarea newline preservation', () => {
   /**
    * Migration status: COMPLETED
-   * Source: scenarios.feature — "Text is preserved when reading and setting newlines in textarea"
+   * Source: dashboard/test/ui/features/star_labs/applab/scenarios.feature
+   * Scenario: Text is preserved when reading and setting newlines in textarea
    * @as_student @no_mobile
    *
    * Drags a TEXT_AREA into design mode, runs getText/setText 100 times with
@@ -437,7 +442,8 @@ test.describe('App Lab — textarea newline preservation', () => {
 test.describe('App Lab — HTTP image proxy', () => {
   /**
    * Migration status: COMPLETED
-   * Source: scenarios3.feature — "App Lab Http Image"
+   * Source: dashboard/test/ui/features/star_labs/applab/scenarios3.feature
+   * Scenario: App Lab Http Image
    * @as_student @no_mobile
    *
    * An image created with an HTTP src must be proxied through the
@@ -470,7 +476,8 @@ test.describe('App Lab — HTTP image proxy', () => {
 test.describe('App Lab — clear puzzle restores initial HTML', () => {
   /**
    * Migration status: COMPLETED
-   * Source: scenarios3.feature — "App Lab Clear Puzzle and Design Mode"
+   * Source: dashboard/test/ui/features/star_labs/applab/scenarios3.feature
+   * Scenario: App Lab Clear Puzzle and Design Mode
    * @as_student @no_mobile
    *
    * A BUTTON dragged into design mode must disappear after resetting the
@@ -504,7 +511,8 @@ test.describe('App Lab — clear puzzle restores initial HTML', () => {
 test.describe('App Lab — HTML sanitization', () => {
   /**
    * Migration status: COMPLETED
-   * Source: html_sanitization.feature — "Elements do not become nested"
+   * Source: dashboard/test/ui/features/star_labs/applab/html_sanitization.feature
+   * Scenario: Elements do not become nested
    * @as_student @no_mobile
    *
    * Drags SCREEN ×2, LABEL, TEXT_AREA, BUTTON into design mode and verifies
@@ -580,7 +588,8 @@ test.describe('App Lab — HTML sanitization', () => {
 test.describe('App Lab — change event on text input', () => {
   /**
    * Migration status: COMPLETED
-   * Source: scenarios2.feature — "Change event works in text input"
+   * Source: dashboard/test/ui/features/star_labs/applab/scenarios2.feature
+   * Scenario: Change event works in text input
    * @as_student @no_mobile
    *
    * Drags a TEXT_INPUT into design mode, registers an onEvent 'change' handler
@@ -648,7 +657,8 @@ test.describe('App Lab — change event on text input', () => {
 test.describe('App Lab — change event on text area', () => {
   /**
    * Migration status: COMPLETED
-   * Source: scenarios2.feature — "Change event works in text area"
+   * Source: dashboard/test/ui/features/star_labs/applab/scenarios2.feature
+   * Scenario: Change event works in text area
    * @as_student @no_mobile
    *
    * Drags a TEXT_AREA into design mode, registers an onEvent 'change' handler,
@@ -700,7 +710,8 @@ test.describe('App Lab — change event on text area', () => {
 test.describe('App Lab — asset management', () => {
   /**
    * Migration status: COMPLETED
-   * Source: scenarios2.feature — "Upload Image Asset"
+   * Source: dashboard/test/ui/features/star_labs/applab/scenarios2.feature
+   * Scenario: Upload Image Asset
    * @as_student @no_mobile
    *
    * Uploads artist_image_1.png through the hidden uploader and deletes it.

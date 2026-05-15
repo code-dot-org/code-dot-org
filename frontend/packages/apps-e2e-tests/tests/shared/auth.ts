@@ -503,7 +503,8 @@ export interface SectionInfo {
 type TestRoleEndpoint =
   | 'universal_instructor_access'
   | 'plc_reviewer_access'
-  | 'facilitator_access';
+  | 'facilitator_access'
+  | 'program_manager_access';
 
 /**
  * POSTs a current-user role endpoint from TestController.
@@ -562,6 +563,16 @@ export async function grantPlcReviewerAccess(page: Page): Promise<void> {
  */
 export async function grantFacilitatorAccess(page: Page): Promise<void> {
   await grantTestRole(page, 'facilitator_access');
+}
+
+/**
+ * Grants program manager access to the current user.
+ * Mirrors `I get program manager access` from pd.rb.
+ *
+ * @param page - Playwright page holding the signed-in teacher session
+ */
+export async function grantProgramManagerAccess(page: Page): Promise<void> {
+  await grantTestRole(page, 'program_manager_access');
 }
 
 /**

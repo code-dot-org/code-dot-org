@@ -185,6 +185,97 @@ class CatalogFiltersPage {
 }
 
 /**
+ * Page object for expanded curriculum catalog cards.
+ */
+class CatalogDetailsPage {
+  private readonly page: Page;
+
+  /**
+   * @param page - Playwright page on /catalog
+   */
+  constructor(page: Page) {
+    this.page = page;
+  }
+
+  /**
+   * Navigates to the catalog and waits for a known offering card.
+   */
+  async goto(): Promise<void> {
+    await this.page.goto('/catalog');
+    await waitForCatalog(this.page);
+  }
+
+  /**
+   * Opens the details panel for one offering.
+   *
+   * @param curriculumName - visible curriculum title
+   */
+  async expand(curriculumName: string): Promise<void> {
+    await this.page
+      .getByRole('button', {name: `View details about ${curriculumName}`})
+      .click();
+    await expect(
+      this.page.getByRole('heading', {name: curriculumName, level: 3}),
+    ).toBeVisible({timeout: 30_000});
+  }
+
+  /**
+   * Asserts the Professional Learning section is visible.
+   */
+  async expectProfessionalLearningVisible(): Promise<void> {
+    await expect(
+      this.page.getByRole('heading', {name: 'Professional Learning'}),
+    ).toBeVisible({timeout: 30_000});
+  }
+
+  /**
+   * Asserts the Professional Learning section is hidden.
+   */
+  async expectProfessionalLearningHidden(): Promise<void> {
+    await expect(
+      this.page.getByRole('heading', {name: 'Professional Learning'}),
+    ).not.toBeVisible();
+  }
+
+  /**
+   * Asserts the expanded-card assignment control is hidden.
+   *
+   * @param curriculumName - visible curriculum title
+   */
+  async expectAssignToClassSectionsHidden(
+    curriculumName: string,
+  ): Promise<void> {
+    await expect(
+      this.page
+        .getByRole('button', {
+          name: `Assign ${curriculumName} to your classroom`,
+        })
+        .filter({hasText: 'Assign to class sections'}),
+    ).not.toBeVisible();
+  }
+
+  /**
+   * Clicks the expanded-card assignment control and waits for the create-section
+   * dialog heading.
+   *
+   * @param curriculumName - visible curriculum title
+   */
+  async openCreateSectionDialog(curriculumName: string): Promise<void> {
+    await this.page
+      .getByRole('button', {
+        name: `Assign ${curriculumName} to your classroom`,
+      })
+      .filter({hasText: 'Assign to class sections'})
+      .click();
+    await expect(
+      this.page.getByRole('heading', {
+        name: 'Create class section to assign a curriculum',
+      }),
+    ).toBeVisible({timeout: 15_000});
+  }
+}
+
+/**
  * Create two named sections for the currently signed-in teacher.
  * Mirrors `I am a teacher with student sections named Section 1 and Section 2`
  * from section_management_steps.rb.
@@ -838,6 +929,44 @@ test.describe('Curriculum Catalog — signed-in student', () => {
       studentPage.locator('button', {hasText: 'Assign'}),
     ).not.toBeVisible();
   });
+
+  /**
+   * Migration status: COMPLETED
+   * Source: dashboard/test/ui/features/acquisition_products/curriculum_catalog.feature
+   * Scenario: On expanded card, Signed-in student does not see professional learning section
+   * @as_student
+   * @no_mobile
+   */
+  test(
+    'signed-in student does not see Professional Learning on expanded card',
+    {tag: '@no_mobile'},
+    async ({studentPage}) => {
+      const catalog = new CatalogDetailsPage(studentPage);
+
+      await catalog.goto();
+      await catalog.expand('UI Test CSF');
+      await catalog.expectProfessionalLearningHidden();
+    },
+  );
+
+  /**
+   * Migration status: COMPLETED
+   * Source: dashboard/test/ui/features/acquisition_products/curriculum_catalog.feature
+   * Scenario: On expanded card, Signed-in student does not see Assign button
+   * @as_student
+   * @no_mobile
+   */
+  test(
+    'signed-in student does not see expanded-card Assign button',
+    {tag: '@no_mobile'},
+    async ({studentPage}) => {
+      const catalog = new CatalogDetailsPage(studentPage);
+
+      await catalog.goto();
+      await catalog.expand('AI for Oceans');
+      await catalog.expectAssignToClassSectionsHidden('AI for Oceans');
+    },
+  );
 });
 
 test.describe('Curriculum Catalog — signed-in teacher', () => {
@@ -872,6 +1001,49 @@ test.describe('Curriculum Catalog — signed-in teacher', () => {
       teacherPage.locator('button', {hasText: 'New class section'}),
     ).toBeVisible({timeout: 15_000});
   });
+
+  /**
+   * Migration status: COMPLETED
+   * Source: dashboard/test/ui/features/acquisition_products/curriculum_catalog.feature
+   * Scenario: On expanded card, Signed-in teacher sees professional learning section
+   * @as_teacher
+   * @no_mobile
+   */
+  test(
+    'signed-in teacher sees Professional Learning on expanded card',
+    {tag: '@no_mobile'},
+    async ({teacherPage}) => {
+      const catalog = new CatalogDetailsPage(teacherPage);
+
+      await catalog.goto();
+      await catalog.expand('UI Test CSF');
+      await catalog.expectProfessionalLearningVisible();
+    },
+  );
+
+  /**
+   * Migration status: COMPLETED
+   * Source: dashboard/test/ui/features/acquisition_products/curriculum_catalog.feature
+   * Scenario: On the expanded card, Signed-in teacher without sections is prompted to created sections when clicking Assign to class sections
+   * @as_teacher
+   * @no_mobile
+   */
+  test(
+    'teacher without sections is prompted from expanded-card Assign button',
+    {tag: '@no_mobile'},
+    async ({teacherPage}) => {
+      const catalog = new CatalogDetailsPage(teacherPage);
+
+      await catalog.goto();
+      await catalog.expand('AI for Oceans');
+      await catalog.openCreateSectionDialog('AI for Oceans');
+      await teacherPage.getByRole('link', {name: 'Create Section'}).click();
+      await teacherPage.waitForURL('**/home', {timeout: 15_000});
+      await expect(
+        teacherPage.getByRole('button', {name: 'New class section'}),
+      ).toBeVisible({timeout: 15_000});
+    },
+  );
 });
 
 test.describe('Curriculum Catalog — assign and unassign', () => {
@@ -879,7 +1051,7 @@ test.describe('Curriculum Catalog — assign and unassign', () => {
 
   /**
    * Migration status: COMPLETED
-   * Source: curriculum_catalog_assign_unassign.feature
+   * Source: dashboard/test/ui/features/acquisition_products/curriculum_catalog_assign_unassign.feature
    * Scenario: Signed-in teacher with sections assigns and unassigns offerings to sections
    *
    * Creates a teacher with two named sections, assigns AI for Oceans to
@@ -894,7 +1066,7 @@ test.describe('Curriculum Catalog — assign and unassign', () => {
 
   /**
    * Migration status: COMPLETED
-   * Source: curriculum_catalog_assign_unassign.feature
+   * Source: dashboard/test/ui/features/acquisition_products/curriculum_catalog_assign_unassign.feature
    * Scenario: On expanded card, Signed-in teacher with sections assigns and unassigns offerings to sections
    * @no_mobile
    *

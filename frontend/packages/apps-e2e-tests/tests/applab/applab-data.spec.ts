@@ -41,12 +41,12 @@ async function clickAndWaitForMainFrameNavigation(
 
 test.describe('App Lab — Data Blocks', () => {
   /**
-   * Source: data_blocks.feature — "Evaluate Data Blocks"
+   * Migration status: COMPLETED
+   * Source: dashboard/test/ui/features/star_labs/applab/data_blocks.feature
+   * Scenario: Evaluate Data Blocks
    *
    * Navigates to the data-blocks evaluation level, runs it, and confirms
    * both the key-value and record output labels appear inside #divApplab.
-   *
-   * Migration status: COMPLETED.
    */
   test(
     'data storage API labels visible after run',
@@ -77,13 +77,12 @@ test.describe('App Lab — Data Blocks', () => {
 
 test.describe('App Lab — Level Options', () => {
   /**
-   * Source: level_options.feature — "Table data in level definition appears
-   * in data browser"
+   * Migration status: COMPLETED
+   * Source: dashboard/test/ui/features/star_labs/applab/level_options.feature
+   * Scenario: Table data in level definition appears in data browser
    *
    * Navigates to a level that ships pre-populated table data, opens data
    * mode, and confirms the table and one of its rows are visible.
-   *
-   * Migration status: COMPLETED.
    */
   test('pre-populated table data visible in data browser', async ({
     studentPage,
@@ -104,15 +103,14 @@ test.describe('App Lab — Level Options', () => {
   });
 
   /**
-   * Source: level_options.feature — "Level defaults to design mode, students
-   * see design mode and teachers see code mode when viewing student work"
+   * Migration status: COMPLETED
+   * Source: dashboard/test/ui/features/star_labs/applab/level_options.feature
+   * Scenario: Level defaults to design mode, students see design mode and teachers see code mode when viewing student work
    *
    * Creates a teacher-associated student, verifies that the student lands in
    * design mode, then signs in as the teacher and opens that student's work
    * from the teacher panel.  The code workspace is the visible readiness
    * signal for teacher review mode.
-   *
-   * Migration status: COMPLETED.
    */
   test(
     'teacher views student work in code mode; student sees design mode',
@@ -184,12 +182,12 @@ async function openDataTab(applab: AppLab): Promise<void> {
 
 test.describe('App Lab — Data Tab', () => {
   /**
-   * Source: data_tab.feature — "Datasets Panel"
+   * Migration status: COMPLETED
+   * Source: dashboard/test/ui/features/star_labs/applab/data_tab.feature
+   * Scenario: Datasets Panel
    *
    * Imports a public dataset via the library picker modal and verifies
    * the dataset name appears in the tables list.
-   *
-   * Migration status: COMPLETED.
    */
   test(
     'datasets panel — import a public dataset',
@@ -219,13 +217,13 @@ test.describe('App Lab — Data Tab', () => {
   );
 
   /**
-   * Source: data_tab.feature — "Data Tables Tab"
+   * Migration status: COMPLETED
+   * Source: dashboard/test/ui/features/star_labs/applab/data_tab.feature
+   * Scenario: Data Tables Tab
    *
    * Creates a new table, adds a row, and edits the row value.
    * Column rename is omitted: the Bootstrap dropdown-toggle button is
    * clipped by the narrow th and cannot be actioned in headless Playwright.
-   *
-   * Migration status: COMPLETED.
    */
   test(
     'data tables tab — create table, add and edit row',
@@ -305,12 +303,12 @@ test.describe('App Lab — Data Tab', () => {
   );
 
   /**
-   * Source: data_tab.feature — "Key/Value Pairs Tab"
+   * Migration status: COMPLETED
+   * Source: dashboard/test/ui/features/star_labs/applab/data_tab.feature
+   * Scenario: Key/Value Pairs Tab
    *
    * Opens the key-value tab, adds a pair, edits the value, and verifies
    * both changes are reflected.
-   *
-   * Migration status: COMPLETED.
    */
   test(
     'key-value pairs tab — add and edit a pair',

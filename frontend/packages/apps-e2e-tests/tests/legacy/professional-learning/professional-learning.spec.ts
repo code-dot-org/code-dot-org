@@ -1,6 +1,7 @@
 import {
   createTeacher,
   grantFacilitatorAccess,
+  grantProgramManagerAccess,
   grantUniversalInstructorAccess,
 } from '../../shared/auth';
 import {expect, test} from '../../shared/fixtures';
@@ -118,6 +119,52 @@ test.describe('Global Edition Farsi Professional Learning landing page', () => {
     await expect(
       page.locator('button#myPLTabs-tab-instructorCenter'),
     ).toBeVisible({timeout: 30_000});
+  });
+
+  /**
+   * Migration status: COMPLETED
+   * Source: dashboard/test/ui/features/platform/global_edition/fa/pl_landing_page.feature
+   * Scenario: Facilitator does not see Facilitator Center in Farsi MVP
+   */
+  test('facilitator does not see Facilitator Center in Farsi MVP', async ({
+    page,
+  }) => {
+    await createTeacher(page, {name: 'PL Facilitator'});
+    await grantFacilitatorAccess(page);
+    const pl = new ProfessionalLearningPage(page);
+
+    await pl.goto();
+    await expect(pl.tab('Facilitator Center')).toBeVisible({timeout: 30_000});
+
+    await pl.goto({farsi: true});
+    await pl.expectFarsiLandingContent();
+    await expect(
+      page.locator('button#myPLTabs-tab-myFacilitatorCenter'),
+    ).not.toBeVisible();
+  });
+
+  /**
+   * Migration status: COMPLETED
+   * Source: dashboard/test/ui/features/platform/global_edition/fa/pl_landing_page.feature
+   * Scenario: Regional Partner does not see Regional Partner Center in Farsi MVP
+   */
+  test('regional partner does not see Regional Partner Center in Farsi MVP', async ({
+    page,
+  }) => {
+    await createTeacher(page, {name: 'Program Manager'});
+    await grantProgramManagerAccess(page);
+    const pl = new ProfessionalLearningPage(page);
+
+    await pl.goto();
+    await expect(pl.tab('Regional Partner Center')).toBeVisible({
+      timeout: 30_000,
+    });
+
+    await pl.goto({farsi: true});
+    await pl.expectFarsiLandingContent();
+    await expect(
+      page.locator('button#myPLTabs-tab-RPCenter'),
+    ).not.toBeVisible();
   });
 
   /**
