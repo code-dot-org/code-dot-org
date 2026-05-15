@@ -237,10 +237,14 @@ test.describe('Multi — multi-select (lesson 10)', () => {
  * answer buttons get class "lock-answers" and the submit button is hidden.
  */
 test.describe('Multi — non-retryable level (lesson 9 level 5)', () => {
+  /**
+   * Migration status: COMPLETED
+   * Source: dashboard/test/ui/features/teacher_tools/level_types/multi3.feature
+   * Scenario: Standalone level without retries locks after answer is submitted
+   */
   test('standalone level locks after answer is submitted', async ({
     studentPage,
   }) => {
-    // Source: multi3.feature scenario 4
     const multi = new Multi(studentPage);
     await multi.gotoLevel(9, 5, {resetSession: false});
     await multi.expectSubmitDisabled();

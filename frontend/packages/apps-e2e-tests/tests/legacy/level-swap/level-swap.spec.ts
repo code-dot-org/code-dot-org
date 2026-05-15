@@ -56,8 +56,12 @@ async function completeBlocklyLevel(
 // ─── Active version — anonymous and students without progress ─────────────────
 
 test.describe('Level swap — active version', () => {
+  /**
+   * Migration status: COMPLETED
+   * Source: dashboard/test/ui/features/teacher_tools/level_types/level_swap.feature
+   * Scenario: Signed-out user sees active version
+   */
   test('signed-out user sees active version', async ({page}) => {
-    // Source: level_swap.feature "Signed-out user sees active version"
     await page.goto(`${LESSON_29}/1`);
     await expect(page.locator('.instructions-markdown')).toContainText(
       'Guide me to the green evilness!',

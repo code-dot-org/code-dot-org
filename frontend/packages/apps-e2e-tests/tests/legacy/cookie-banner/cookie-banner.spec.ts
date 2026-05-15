@@ -14,6 +14,11 @@ import {expect, test} from '../../shared/fixtures';
 
 const LEVEL_URL = '/courses/frozen/units/1/lessons/1/levels/1';
 
+/**
+ * Migration status: COMPLETED
+ * Source: dashboard/test/ui/features/xteam/cookie_banner.feature
+ * Scenario: Show cookie banner, dismiss it and confirm it's dismissed
+ */
 test(
   'cookie banner: accepted on first visit and suppressed on reload',
   {tag: '@no_mobile'},

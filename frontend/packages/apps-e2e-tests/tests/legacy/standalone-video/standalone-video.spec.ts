@@ -18,8 +18,12 @@ import {
 const LEVEL_URL = '/courses/allthethingscourse/units/1/lessons/34/levels/1';
 
 test.describe('Standalone video', () => {
+  /**
+   * Migration status: COMPLETED
+   * Source: dashboard/test/ui/features/teacher_tools/level_types/standalone_video.feature
+   * Scenario: Progress is posted when continue is clicked
+   */
   test('progress is posted when continue is clicked', async ({studentPage}) => {
-    // Source: standalone_video.feature "Progress is posted when continue is clicked"
     await studentPage.goto(LEVEL_URL);
     await studentPage
       .locator('.submitButton')

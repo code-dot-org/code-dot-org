@@ -91,8 +91,9 @@ async function assignAiForOceansToUntitledSection(
 
 test.describe('Teacher Homepage V2', {tag: '@no_mobile'}, () => {
   /**
-   * Source: teacher_homepage_v2.feature
-   * "Teacher can access section pages from section options dropdown"
+   * Migration status: COMPLETED
+   * Source: dashboard/test/ui/features/teacher_tools/teacher_dashboard/teacher_homepage_v2.feature
+   * Scenario: Teacher can access section pages from section options dropdown
    *
    * Settings, Roster, Login cards, and Print certificates links all load the
    * correct destination pages.
@@ -244,9 +245,9 @@ test.describe('Teacher Homepage V2', {tag: '@no_mobile'}, () => {
   });
 
   /**
-   * Source: teacher_homepage_v2.feature
-   * "Teacher can assign a course from the 'Assign a course' button and access
-   * lessons from the 'Jump to' dropdown"
+   * Migration status: COMPLETED
+   * Source: dashboard/test/ui/features/teacher_tools/teacher_dashboard/teacher_homepage_v2.feature
+   * Scenario: Teacher can assign a course from the "Assign a course" button and access lessons from the "Jump to" dropdown
    */
   test('teacher assigns course from empty-state button and uses Jump to dropdown', async ({
     page,
@@ -376,5 +377,37 @@ test.describe('Teacher Homepage V2', {tag: '@no_mobile'}, () => {
       .locator('h1')
       .filter({hasText: 'Lesson Materials'})
       .waitFor({state: 'visible', timeout: 15_000});
+  });
+
+  /**
+   * Migration status: COMPLETED
+   * Source: dashboard/test/ui/features/teacher_tools/teacher_dashboard/teacher_homepage_v2.feature
+   * Scenario: Teacher can view sections on new teacher homepage
+   */
+  test('teacher can view sections on new teacher homepage', async ({page}) => {
+    const {email: teacherEmail, password: teacherPassword} =
+      await createTeacher(page, {name: 'Teacher Hank'});
+    await page.goto('/home');
+    await getLevelbuilderAccess(page);
+
+    await createSection(page);
+    const {sectionCode} = await createSectionWithCourse(
+      page,
+      'ui-test-single-unit-course-2026',
+      1,
+    );
+    await createStudent(page, {name: 'Bobby'});
+    await joinSection(page, sectionCode);
+
+    await signOut(page);
+    await signIn(page, teacherEmail, teacherPassword);
+    await page.goto('/teacher_dashboard/home');
+
+    await expect(page.locator('#ui-test-section-list')).toBeVisible({
+      timeout: 30_000,
+    });
+    await expect(page.getByText('New Section')).toBeVisible();
+    await expect(page.getByText('Untitled Section')).toBeVisible();
+    // Visual checkpoint stub: "teacher homepage".
   });
 });

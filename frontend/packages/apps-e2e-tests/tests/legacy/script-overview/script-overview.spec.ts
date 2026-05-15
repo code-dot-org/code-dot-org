@@ -119,6 +119,11 @@ test.describe('Unit overview page', {tag: ['@no_mobile', '@no_safari']}, () => {
     await scriptOverview.openLessonPlanInNewTab();
   });
 
+  /**
+   * Migration status: COMPLETED
+   * Source: dashboard/test/ui/features/teacher_tools/script_overview.feature
+   * Scenario: Unit overview student resources as teacher
+   */
   test(
     'student resources link (as teacher) opens in a new tab',
     {tag: '@no_mobile'},
@@ -144,6 +149,11 @@ test.describe('Unit overview page', {tag: ['@no_mobile', '@no_safari']}, () => {
     },
   );
 
+  /**
+   * Migration status: COMPLETED
+   * Source: dashboard/test/ui/features/teacher_tools/script_overview.feature
+   * Scenario: Unit overview student resources as student
+   */
   test(
     'student resources link (as student) opens in a new tab',
     {tag: '@no_mobile'},
@@ -167,6 +177,11 @@ test.describe('Unit overview page', {tag: ['@no_mobile', '@no_safari']}, () => {
     },
   );
 
+  /**
+   * Migration status: COMPLETED
+   * Source: dashboard/test/ui/features/teacher_tools/script_overview.feature
+   * Scenario: Unit overview for unit in single-unit course
+   */
   test(
     'version selector on single-unit course redirects to new version',
     {tag: '@no_mobile'},

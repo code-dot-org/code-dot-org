@@ -10,6 +10,11 @@ import {test} from '../../shared/fixtures';
  * Tagged @no_mobile.
  */
 
+/**
+ * Migration status: COMPLETED
+ * Source: dashboard/test/ui/features/teacher_tools/teacher_dashboard/demo_section_card.feature
+ * Scenario: Teacher with zero sections can create a practice section from the homepage
+ */
 test(
   'teacher with zero sections can navigate to demo section progress',
   {tag: '@no_mobile'},

@@ -123,7 +123,9 @@ async function dismissTeacherPanel(
 
 test.describe('Version History in Teacher View', {tag: '@no_mobile'}, () => {
   /**
-   * Source: version_history.feature — "Teacher can view student versions"
+   * Migration status: COMPLETED
+   * Source: dashboard/test/ui/features/teacher_tools/version_history.feature
+   * Scenario: Teacher can view student versions
    *
    * Student creates two versions of the project; teacher views the version
    * history and confirms the Restore button is absent (teachers cannot

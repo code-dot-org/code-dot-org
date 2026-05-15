@@ -225,6 +225,7 @@ const EMBEDDED_PROJECT_URLS = [
 ] as const;
 
 /**
+ * Migration status: COMPLETED
  * Source: dashboard/test/ui/features/platform/one_trust.feature
  * Scenario: Embedded projects do not display the OneTrust banner
  */

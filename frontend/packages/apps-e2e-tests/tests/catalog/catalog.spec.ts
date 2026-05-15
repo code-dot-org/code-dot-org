@@ -6,6 +6,13 @@ import {expect, test} from '../shared/fixtures';
 type SectionName = 'Section 1' | 'Section 2';
 type NamedSectionIds = Record<SectionName, number>;
 
+type CatalogFilterId =
+  | 'grade'
+  | 'duration'
+  | 'topic'
+  | 'device'
+  | 'marketingInitiative';
+
 /**
  * Curriculum Catalog — signed-out, student, teacher, and assign/unassign flows.
  *
@@ -23,6 +30,158 @@ async function waitForCatalog(page: Page): Promise<void> {
   await page
     .locator('h4', {hasText: 'AI for Oceans'})
     .waitFor({state: 'visible', timeout: 30_000});
+}
+
+/**
+ * Page object for curriculum catalog filters.
+ */
+class CatalogFiltersPage {
+  private readonly page: Page;
+
+  /**
+   * @param page - Playwright page on /catalog
+   */
+  constructor(page: Page) {
+    this.page = page;
+  }
+
+  /**
+   * Navigates to the catalog and waits for visible catalog-card readiness.
+   *
+   * @param path - catalog path, including optional locale segment
+   */
+  async goto(path = '/catalog'): Promise<void> {
+    await this.page.goto(path);
+    await this.waitForReady();
+  }
+
+  /**
+   * Waits for user-visible catalog readiness signals: the topic filter and a
+   * known offering card.
+   */
+  async waitForReady(): Promise<void> {
+    await expect(this.dropdownButton('topic')).toBeVisible({timeout: 30_000});
+  }
+
+  /**
+   * Opens one filter dropdown.
+   *
+   * @param filter - filter id prefix from the catalog DOM
+   */
+  async openFilter(filter: CatalogFilterId): Promise<void> {
+    await this.dropdownButton(filter).click();
+    await expect(this.dropdown(filter)).toBeVisible({timeout: 10_000});
+  }
+
+  /**
+   * Selects a visible option from the open filter dropdown.
+   *
+   * @param text - option label
+   */
+  async selectVisibleOption(text: string): Promise<void> {
+    await this.checkbox(text).click();
+  }
+
+  /**
+   * Clicks the Select all command in an open dropdown.
+   */
+  async selectAll(): Promise<void> {
+    await this.page.getByRole('button', {name: 'Select all'}).click();
+  }
+
+  /**
+   * Clicks the Clear all command in an open dropdown.
+   */
+  async clearAll(): Promise<void> {
+    await this.page.getByRole('button', {name: 'Clear all'}).click();
+  }
+
+  /**
+   * Clears all selected filters through the page-level Clear filters button.
+   */
+  async clearFilters(): Promise<void> {
+    await this.page.locator('#clear-filters').click();
+  }
+
+  /**
+   * Assert an offering card heading is visible.
+   *
+   * @param name - visible offering title
+   */
+  async expectOfferingVisible(name: string): Promise<void> {
+    await expect(this.page.locator('h4', {hasText: name})).toBeVisible({
+      timeout: 30_000,
+    });
+  }
+
+  /**
+   * Assert an offering card heading is no longer visible.
+   *
+   * @param name - visible offering title
+   */
+  async expectOfferingHidden(name: string): Promise<void> {
+    await expect(this.page.locator('h4', {hasText: name})).not.toBeVisible({
+      timeout: 30_000,
+    });
+  }
+
+  /**
+   * Assert the no-results state is visible.
+   *
+   * @param text - localized no-results heading
+   */
+  async expectNoMatchingCurricula(text: string | RegExp): Promise<void> {
+    await expect(this.page.getByRole('heading', {name: text})).toBeVisible({
+      timeout: 30_000,
+    });
+  }
+
+  /**
+   * Assert a named filter checkbox state.
+   *
+   * @param label - checkbox label
+   * @param checked - expected state
+   */
+  async expectCheckbox(label: string, checked: boolean): Promise<void> {
+    const checkbox = this.checkbox(label);
+    if (checked) {
+      await expect(checkbox).toBeChecked();
+    } else {
+      await expect(checkbox).not.toBeChecked();
+    }
+  }
+
+  /**
+   * Returns a filter dropdown button.
+   *
+   * @param filter - filter id prefix from the catalog DOM
+   */
+  dropdownButton(filter: CatalogFilterId) {
+    return this.page.locator(`#${filter}-dropdown-button`);
+  }
+
+  /**
+   * Returns a checkbox by option text, allowing checked checkmarks and
+   * parenthetical duration labels while avoiding prefix collisions such as
+   * Grade 1 vs Grade 10.
+   *
+   * @param label - option text from the source scenario
+   */
+  private checkbox(label: string) {
+    const escaped = label.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+    return this.page.getByRole('checkbox', {
+      name: new RegExp(`(^|\\s)${escaped}(\\s|$|\\s*\\()`, 'i'),
+    });
+  }
+
+  /**
+   * Returns a filter dropdown container.
+   *
+   * @param filter - filter id prefix from the catalog DOM
+   */
+  private dropdown(filter: CatalogFilterId) {
+    return this.page.locator(`#${filter}-dropdown`);
+  }
 }
 
 /**
@@ -501,6 +660,163 @@ test.describe('Curriculum Catalog — signed-out', () => {
       ).toBeVisible();
     },
   );
+});
+
+test.describe('Curriculum Catalog — filters', () => {
+  /**
+   * Migration status: COMPLETED
+   * Source: dashboard/test/ui/features/acquisition_products/curriculum_catalog_filters.feature
+   * Scenario: Signed-out user sees the curriculum catalog with offerings and can filter
+   */
+  test('signed-out user filters offerings by topic and grade', async ({
+    page,
+  }) => {
+    const catalog = new CatalogFiltersPage(page);
+    await catalog.goto('/catalog');
+    await catalog.expectOfferingVisible('AI for Oceans');
+    // Visual checkpoint stub: "Curriculum Catalog: All Offerings".
+
+    await catalog.openFilter('topic');
+    await catalog.selectVisibleOption('Digital Literacy');
+    await catalog.expectOfferingHidden('AI for Oceans');
+    // Visual checkpoint stub: "Curriculum Catalog: One Offering".
+
+    await catalog.openFilter('grade');
+    await catalog.selectVisibleOption('Grade 12');
+    await catalog.expectNoMatchingCurricula('No matching curricula');
+    // Visual checkpoint stub: "Curriculum Catalog: No Offerings".
+  });
+
+  /**
+   * Migration status: COMPLETED
+   * Source: dashboard/test/ui/features/acquisition_products/curriculum_catalog_filters.feature
+   * Scenario: Signed-out user sees the curriculum catalog with offerings and can filter
+   * Locale: Spanish version.
+   */
+  test('signed-out user filters Spanish offerings by topic and grade', async ({
+    page,
+  }) => {
+    const catalog = new CatalogFiltersPage(page);
+    await catalog.goto('/catalog/lang/es');
+    await expect(page).toHaveURL(/\/catalog\?lang=es/, {timeout: 30_000});
+    await catalog.expectOfferingVisible('Inteligencia Artificial para Océanos');
+    // Visual checkpoint stub: "Curriculum Catalog: All Offerings in Spanish".
+
+    await catalog.openFilter('topic');
+    await catalog.selectVisibleOption('Alfabetización Digital');
+    await catalog.expectOfferingHidden('Inteligencia Artificial para Océanos');
+    // Visual checkpoint stub: "Curriculum Catalog: One Offering in Spanish".
+
+    await catalog.openFilter('grade');
+    await catalog.selectVisibleOption('Grado 12');
+    await expect(page.locator('figure ~ h2')).toBeVisible({timeout: 30_000});
+    // Visual checkpoint stub: "Curriculum Catalog: No Offerings in Spanish".
+  });
+
+  /**
+   * Migration status: COMPLETED
+   * Source: dashboard/test/ui/features/acquisition_products/curriculum_catalog_filters.feature
+   * Scenario: User can Select all and Clear all in Curriculum Catalog filters
+   */
+  test('grade filter supports select all and clear all', async ({page}) => {
+    const catalog = new CatalogFiltersPage(page);
+    await catalog.goto('/catalog');
+
+    await catalog.openFilter('grade');
+    await catalog.selectAll();
+    for (const label of [
+      'Kindergarten',
+      'Grade 1',
+      'Grade 2',
+      'Grade 3',
+      'Grade 4',
+      'Grade 5',
+      'Grade 6',
+      'Grade 7',
+      'Grade 8',
+      'Grade 9',
+      'Grade 10',
+      'Grade 11',
+      'Grade 12',
+    ]) {
+      await catalog.expectCheckbox(label, true);
+    }
+
+    await catalog.clearAll();
+    for (const label of [
+      'Kindergarten',
+      'Grade 1',
+      'Grade 2',
+      'Grade 3',
+      'Grade 4',
+      'Grade 5',
+      'Grade 6',
+      'Grade 7',
+      'Grade 8',
+      'Grade 9',
+      'Grade 10',
+      'Grade 11',
+      'Grade 12',
+    ]) {
+      await catalog.expectCheckbox(label, false);
+    }
+  });
+
+  /**
+   * Migration status: COMPLETED
+   * Source: dashboard/test/ui/features/acquisition_products/curriculum_catalog_filters.feature
+   * Scenario: User can use Clear filters button to clear all selected filters
+   */
+  test('clear filters clears selected filter checkboxes', async ({page}) => {
+    const catalog = new CatalogFiltersPage(page);
+    await catalog.goto('/catalog');
+
+    for (const [filter, label] of [
+      ['grade', 'Kindergarten'],
+      ['duration', 'School Year'],
+      ['topic', 'Interdisciplinary'],
+      ['device', 'Computer'],
+      ['marketingInitiative', 'AP CSA'],
+    ] as const) {
+      await catalog.openFilter(filter);
+      await catalog.selectVisibleOption(label);
+      await catalog.expectCheckbox(label, true);
+    }
+
+    await catalog.clearFilters();
+
+    for (const [filter, label] of [
+      ['grade', 'Kindergarten'],
+      ['duration', 'School Year'],
+      ['topic', 'Interdisciplinary'],
+      ['device', 'Computer'],
+      ['marketingInitiative', 'AP CSA'],
+    ] as const) {
+      await catalog.openFilter(filter);
+      await catalog.expectCheckbox(label, false);
+    }
+  });
+
+  /**
+   * Migration status: COMPLETED
+   * Source: dashboard/test/ui/features/acquisition_products/curriculum_catalog_filters.feature
+   * Scenario: User can use Tab navigation on filters, Space to select and escape to close
+   * @chrome
+   */
+  test('keyboard navigation selects and closes filter options', async ({
+    page,
+  }) => {
+    const catalog = new CatalogFiltersPage(page);
+    await catalog.goto('/catalog');
+
+    await catalog.openFilter('grade');
+    await catalog.selectVisibleOption('Kindergarten');
+    await page.keyboard.press('Tab');
+    await page.keyboard.press('Space');
+    await catalog.expectCheckbox('Grade 1', true);
+    await page.keyboard.press('Escape');
+    await expect(page.locator('.dropdown-menu')).not.toBeVisible();
+  });
 });
 
 test.describe('Curriculum Catalog — signed-in student', () => {

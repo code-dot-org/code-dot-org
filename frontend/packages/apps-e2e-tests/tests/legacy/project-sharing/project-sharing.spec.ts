@@ -295,6 +295,7 @@ test.describe('Personal Project Gallery', {tag: '@no_mobile'}, () => {
   });
 
   /**
+   * Migration status: COMPLETED
    * Source: dashboard/test/ui/features/teacher_tools/projects/personal_project_gallery.feature
    * Scenario: Can Remix a Project
    * @no_safari
