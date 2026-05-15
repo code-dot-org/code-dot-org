@@ -23,9 +23,11 @@ module AichatSafetyHelper
       input = safety_check_input(text, level_id)
       output_type = 'Unstructured'
 
-      # Retry only on network-related exceptions
+      # Retry only on network-related exceptions. Keep retries low by default so
+      # moderation calls do not monopolize workers during provider incidents.
+      retry_attempts = [DCDO.get('aichat_safety_openai_retry_attempts', 1).to_i, 1].max
       response = Retryable.retryable(
-        tries: 2,
+        tries: retry_attempts,
         on: [Net::OpenTimeout, Net::ReadTimeout, SocketError, Errno::ECONNRESET]
       ) do
         attempts += 1
