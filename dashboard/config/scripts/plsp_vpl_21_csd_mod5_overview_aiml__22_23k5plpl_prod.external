@@ -4,10 +4,10 @@ description 'description here'
 
 markdown <<MARKDOWN
 # What are Variables? 
-####Variables store information (data). The value stored in a variable can be updated throughout a program.
+Variables store information (data). The value stored in a variable can be updated throughout a program.
 
 ##Examples of Variables in Games
-####Variables appear in games in a multitude of ways. If you have ever played a game that used player health, score, inventory of items, game time, character position, level status, resources, difficulty settings, or quest progress, you’ve used variables. 
+Variables appear in games in a multitude of ways. If you have ever played a game that used player health, score, inventory of items, game time, character position, level status, resources, difficulty settings, or quest progress, you’ve used variables. 
 
 ##Check Out This Student-Created Game:
 

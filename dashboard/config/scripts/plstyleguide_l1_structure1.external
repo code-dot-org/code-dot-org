@@ -5,7 +5,7 @@ description 'description here'
 markdown <<MARKDOWN
 # Designing on a Grid
 
-#### Generally, organizing information on a grid allows for the user's focus to be on the content, rather than its structure.
+Generally, organizing information on a grid allows for the user's focus to be on the content, rather than its structure.
 
 <div style="background-color: #B7E0E5; border-radius: 10px; padding: 15px; margin: 20px auto; max-width: 100%; box-sizing: border-box; word-wrap: break-word; overflow-wrap: break-word;">
 	<p style="font-size: 14pt; font-weight: bold; margin: 0;">💡 Design Tip</p>
@@ -20,7 +20,7 @@ markdown <<MARKDOWN
 
 ## Examples
 
-#### The following examples use various columns and rows to organize the page. Notice that like elements - such as cards and images - have similar widths and heights. Notice *also* that not everything aligns perfectly with the columns and rows, but are pretty close. That's good enough for the purposes of PL.
+The following examples use various columns and rows to organize the page. Notice that like elements - such as cards and images - have similar widths and heights. Notice *also* that not everything aligns perfectly with the columns and rows, but are pretty close. That's good enough for the purposes of PL.
 
 <div style="display:flex;justify-content:center;gap:20px;text-align:center;max-width:100%;flex-wrap:wrap;margin:20px 0px 20px 0px">
     <div style="flex:1;min-width:300px;">
@@ -37,5 +37,5 @@ markdown <<MARKDOWN
     </div>
 </div>
 
-#### Chances are, you're probably already designing like this. You don't need to plan your grid before adding content to a page. Just ensure that you've got a general sense of organization and a set structure among similar elements.
+Chances are, you're probably already designing like this. You don't need to plan your grid before adding content to a page. Just ensure that you've got a general sense of organization and a set structure among similar elements.
 MARKDOWN

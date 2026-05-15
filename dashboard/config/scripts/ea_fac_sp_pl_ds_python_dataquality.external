@@ -5,14 +5,14 @@ description 'description here'
 markdown <<MARKDOWN
 # Cleaning Data 
 
-#### Cleaning data is a crucial step in the data analysis process. It helps us identify and address data quality issues such as missing, invalid, and inconsistent data entries. By handling these issues, we can ensure the integrity and usability of our dataset, making it reliable for accurate analysis and meaningful insights.
+Cleaning data is a crucial step in the data analysis process. It helps us identify and address data quality issues such as missing, invalid, and inconsistent data entries. By handling these issues, we can ensure the integrity and usability of our dataset, making it reliable for accurate analysis and meaningful insights.
 
 <img src="https://images.code.org/e805f88c49d82f9248141b3a47398b84-image-1728506327931.png" alt="pandas logo" width="150px" style="border-radius:20px; float:right; margin: 0 0 10px 0px;">
 
 ## Data Quality Issues
-- #### **Missing Data:** no value stored in a cell
-- #### **Invalid Data Entries:** Cell values that do not conform to expected format
-- #### **Inconsistent Data Formats:** Similar data is stored in different formats
+- **Missing Data:** no value stored in a cell
+- **Invalid Data Entries:** Cell values that do not conform to expected format
+- **Inconsistent Data Formats:** Similar data is stored in different formats
 
 ---
 
