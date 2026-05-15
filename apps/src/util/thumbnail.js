@@ -88,8 +88,7 @@ export function captureThumbnailFromSvg(svg) {
  * @param {HTMLCanvasElement} canvas - The original canvas to crop from.
  */
 function cropNeighborhoodCanvasFromTopLeft(canvas) {
-  const scale =
-    CodebridgeRegistry.getInstance().getNeighborhoodThumbnailScale();
+  const scale = CodebridgeRegistry.getInstance().getMiniAppPreviewScale();
   const croppedCanvas = document.createElement('canvas');
   croppedCanvas.width = canvas.width * scale;
   croppedCanvas.height = canvas.height * scale;

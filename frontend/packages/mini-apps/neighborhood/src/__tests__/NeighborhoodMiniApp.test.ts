@@ -122,6 +122,7 @@ describe('NeighborhoodMiniApp', () => {
       onClose: vi.fn(),
       reset: vi.fn(),
       waitUntilDone: vi.fn().mockResolvedValue(undefined),
+      afterInject: vi.fn(),
     };
     const app = new NeighborhoodMiniApp(adopted);
     // The inner constructor must not fire when we adopt.

@@ -2,7 +2,6 @@ import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon
 import {useCodebridgeContext} from '@codebridge/codebridgeContext';
 import CodebridgeRegistry from '@codebridge/CodebridgeRegistry';
 import WithConditionalTooltip from '@codebridge/components/WithConditionalTooltip';
-import {MiniApps} from '@codebridge/constants';
 import {Button as MuiButton} from '@mui/material';
 import React, {useCallback} from 'react';
 
@@ -78,10 +77,11 @@ const ControlButtons: React.FunctionComponent = () => {
         interaction: UserLevelInteractions.click_run,
       });
       onRun(/*runTests*/ false, dispatch, source).finally(() => {
-        // We don't set isRunning to false when running the neighborhood,
-        // as the neighborhood animation handles setting isRunning to false
-        // once it is done.
-        if (miniApp !== MiniApps.Neighborhood) {
+        // Mini-app levels keep isRunning=true until the animation finishes
+        // (the mini-app sets it false via its setIsRunning callback);
+        // non-mini-app levels clear it immediately after the run promise
+        // resolves.
+        if (!miniApp) {
           dispatch(setIsRunning(false));
         }
       });

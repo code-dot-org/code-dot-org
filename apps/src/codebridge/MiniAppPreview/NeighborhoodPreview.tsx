@@ -1,11 +1,10 @@
-import {NeighborhoodMiniApp} from '@code-dot-org/neighborhood-mini-app';
+import {
+  NEIGHBORHOOD_NAME,
+  NeighborhoodMiniApp,
+} from '@code-dot-org/neighborhood-mini-app';
 import {useCodebridgeContext} from '@codebridge/codebridgeContext';
 import CodebridgeRegistry from '@codebridge/CodebridgeRegistry';
-import {
-  DEFAULT_FOLDER_ID,
-  MAZE_FILE_NAME,
-  MiniApps,
-} from '@codebridge/constants';
+import {DEFAULT_FOLDER_ID, MAZE_FILE_NAME} from '@codebridge/constants';
 import {findFile} from '@codebridge/utils';
 import {throttle} from 'lodash';
 import React, {useCallback, useEffect, useMemo, useRef} from 'react';
@@ -13,7 +12,6 @@ import React, {useCallback, useEffect, useMemo, useRef} from 'react';
 import {setIsRunning} from '@cdo/apps/lab2/redux/systemRedux';
 import {MazeCell, MultiFileSource} from '@cdo/apps/lab2/types';
 import skins from '@cdo/apps/maze/skins';
-import Neighborhood from '@cdo/apps/miniApps/neighborhood/Neighborhood';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 import {DEFAULT_MINI_APP_SIZE} from '../Workspace/constants';
@@ -71,38 +69,21 @@ const NeighborhoodPreview: React.FunctionComponent<
     }
   }, [throttledScaleNeighborhood, handleScaling]);
 
-  const neighborhood = useMemo(() => {
-    // We can't store consoleManager in a variable for reuse because
-    // it may not exist on neighborhood creation.
-    const onOutputMessage = (message: string) =>
-      CodebridgeRegistry.getInstance()
-        .getConsoleManager()
-        ?.writeConsoleMessage(message);
-    const onNewlineMessage = () =>
-      CodebridgeRegistry.getInstance()
-        .getConsoleManager()
-        ?.writeConsoleMessage('');
-    const onPartialLineMessage = (message: string) =>
-      CodebridgeRegistry.getInstance()
-        .getConsoleManager()
-        ?.writePartialLine(message);
+  const miniApp = useMemo(() => {
+    // The console manager isn't stored in a local because it may not
+    // exist at the time of mini-app creation; we resolve it lazily on
+    // each callback invocation.
+    const consoleManager = () =>
+      CodebridgeRegistry.getInstance().getConsoleManager();
 
-    const neighborhoodRef = new Neighborhood(
-      onOutputMessage,
-      onNewlineMessage,
-      isRunning => dispatch(setIsRunning(isRunning)),
-      onPartialLineMessage
-    );
-    CodebridgeRegistry.getInstance().setNeighborhood(neighborhoodRef);
-    // Also register the generic MiniApp slot. We adopt the legacy
-    // Neighborhood rather than spinning up a second instance, so signal
-    // dispatch through either slot lands in the same queue. Once
-    // codebridge fully routes through the MiniApp interface, this
-    // becomes the only registration and `setNeighborhood` retires.
-    CodebridgeRegistry.getInstance().setMiniApp(
-      new NeighborhoodMiniApp(neighborhoodRef)
-    );
-    return neighborhoodRef;
+    const instance = new NeighborhoodMiniApp({
+      onOutputMessage: msg => consoleManager()?.writeConsoleMessage(msg),
+      onNewlineMessage: () => consoleManager()?.writeConsoleMessage(''),
+      onPartialOutputMessage: msg => consoleManager()?.writePartialLine(msg),
+      setIsRunning: running => dispatch(setIsRunning(running)),
+    });
+    CodebridgeRegistry.getInstance().setMiniApp(instance);
+    return instance;
   }, [dispatch]);
 
   const neighborhoodSkin = useMemo(() => {
@@ -111,7 +92,7 @@ const NeighborhoodPreview: React.FunctionComponent<
     }
     return skins.load(
       (path: string) => levelProperties.baseAssetUrl + path,
-      MiniApps.Neighborhood
+      NEIGHBORHOOD_NAME
     );
   }, [levelProperties]);
 
@@ -134,11 +115,11 @@ const NeighborhoodPreview: React.FunctionComponent<
       ? {...levelProperties, serializedMaze: mazeContents}
       : levelProperties;
 
-    neighborhood.afterInject(
+    miniApp.getNeighborhood().afterInject(
       parsedLevelProperties,
       neighborhoodSkin,
       {
-        skinId: MiniApps.Neighborhood,
+        skinId: NEIGHBORHOOD_NAME,
         level: parsedLevelProperties,
         skin: neighborhoodSkin,
       },
@@ -153,7 +134,7 @@ const NeighborhoodPreview: React.FunctionComponent<
     isVertical,
     neighborhoodSkin,
     serializedMaze,
-    neighborhood,
+    miniApp,
   ]);
 
   return (

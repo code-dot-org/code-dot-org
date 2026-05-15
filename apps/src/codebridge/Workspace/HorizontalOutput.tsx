@@ -1,6 +1,5 @@
 import {useCodebridgeContext} from '@codebridge/codebridgeContext';
 import CodebridgeRegistry from '@codebridge/CodebridgeRegistry';
-import {MiniApps} from '@codebridge/constants';
 import {throttle} from 'lodash';
 import React, {useRef, useState, useCallback, useMemo, useEffect} from 'react';
 import {useResizable} from 'react-resizable-layout';
@@ -90,11 +89,9 @@ const HorizontalOutput: React.FunctionComponent<HorizontalOutputProps> = ({
         ?.getTerminalFitAddon()
         ?.fit();
 
-      // If this is a neighborhood level, also resize the visualization.
-      if (
-        miniAppName === MiniApps.Neighborhood &&
-        (desiredHeight !== undefined || miniAppWidth)
-      ) {
+      // Mini-app levels also resize the visualization. Any registered
+      // mini-app participates; non-mini-app levels skip this branch.
+      if (miniAppName && (desiredHeight !== undefined || miniAppWidth)) {
         const outputWidth =
           desiredWidth || resizeContainerRef.current?.clientWidth;
         const newConsoleWidth = Math.max(
@@ -115,7 +112,7 @@ const HorizontalOutput: React.FunctionComponent<HorizontalOutputProps> = ({
         const newWidth = newMiniAppWidth;
 
         const scale = scaleMiniApp(newHeight, newWidth);
-        CodebridgeRegistry.getInstance().setNeighborhoodThumbnailScale(scale);
+        CodebridgeRegistry.getInstance().setMiniAppPreviewScale(scale);
 
         setWaitingForResize(false);
       }

@@ -28,6 +28,15 @@ export interface NeighborhoodLike {
   onClose(): void;
   reset(): void;
   waitUntilDone(): Promise<void>;
+  /**
+   * Boot the MazeController against the rendered SVG and start the
+   * level. Signature is intentionally permissive — codebridge passes
+   * shapes assembled from level/skin data it owns, and the inner
+   * Neighborhood validates them at runtime. Once orchestration moves
+   * inside the package this leaves `NeighborhoodLike` and becomes a
+   * private detail.
+   */
+  afterInject(...args: unknown[]): void;
 }
 
 function isNeighborhoodLike(

@@ -4,7 +4,6 @@ import {
   getSystemMessage,
   getTimestampMessage,
 } from '@codebridge/Console/MessageHelpers';
-import {MiniApps} from '@codebridge/constants';
 import {AnyAction, Dispatch} from 'redux';
 
 import {MAIN_PYTHON_FILE} from '@cdo/apps/lab2/constants';
@@ -63,7 +62,7 @@ export async function handleRunClick(
       return;
     }
     await runPythonCode(code, source);
-    if (isNeighborhoodLevel()) {
+    if (isMiniAppLevel()) {
       setProjectThumbnail();
     }
   }
@@ -75,25 +74,17 @@ export async function runPythonCode(
   validationFile?: ProjectFile
 ) {
   try {
-    const isNeighborhoodRun = isNeighborhoodLevel();
-    if (isNeighborhoodRun) {
-      // The MiniApp wraps the same Neighborhood instance the legacy
-      // slot holds, so these route to the same queue. The
-      // `isNeighborhoodLevel` gate stays because it also drives
-      // `outputToNeighborhood` (the console-routing legacy path).
+    const isMiniAppRun = isMiniAppLevel();
+    if (isMiniAppRun) {
       const miniApp = CodebridgeRegistry.getInstance().getMiniApp();
       miniApp?.reset();
       miniApp?.onRun();
     }
-    // We only send all output to the neighborhood if this is a neighborhood level and
-    // we are not running validation, as validation does not render to the neighborhood.
-    const outputToNeighborhood = isNeighborhoodRun && !validationFile;
-    return await asyncRun(
-      mainFile,
-      source,
-      validationFile,
-      outputToNeighborhood
-    );
+    // Route console output through the mini-app's signal queue when
+    // this is a mini-app run that isn't validation. Validation output
+    // bypasses the mini-app and goes straight to the console manager.
+    const outputToMiniApp = isMiniAppRun && !validationFile;
+    return await asyncRun(mainFile, source, validationFile, outputToMiniApp);
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
   } catch (e: any) {
     console.log(
@@ -103,7 +94,7 @@ export async function runPythonCode(
 }
 
 export function stopPythonCode() {
-  if (isNeighborhoodLevel()) {
+  if (isMiniAppLevel()) {
     CodebridgeRegistry.getInstance().getMiniApp()?.onStop();
   }
   // This will terminate the worker and create a new one if there is a running program.
@@ -160,11 +151,15 @@ export async function runAllTests(
   }
 }
 
-function isNeighborhoodLevel() {
-  return (
-    getStore().getState().lab2Project.projectSources?.labConfig?.miniApp
-      ?.name === MiniApps.Neighborhood
-  );
+/**
+ * True when the current level binds a mini-app. The runner uses this to
+ * gate mini-app lifecycle calls and to decide whether console output
+ * should route into the mini-app's signal queue (so it interleaves with
+ * movement signals) rather than going straight to the console manager.
+ */
+function isMiniAppLevel() {
+  return !!getStore().getState().lab2Project.projectSources?.labConfig?.miniApp
+    ?.name;
 }
 
 function handleRunEndedUnexpectedly(
@@ -172,10 +167,9 @@ function handleRunEndedUnexpectedly(
   message: string
 ) {
   consoleManager?.writeConsoleMessage(getSystemMessage(message, appName));
-  if (isNeighborhoodLevel()) {
-    // We reset, run, and close the neighborhood to ensure that the neighborhood
-    // properly resets the run button back to run (from stop), and to reset the
-    // neighborhood to its original state.
+  if (isMiniAppLevel()) {
+    // Reset/run/close on crash so the mini-app's run button is back in
+    // the Run state and the visualization is reset.
     const miniApp = CodebridgeRegistry.getInstance().getMiniApp();
     miniApp?.reset();
     miniApp?.onRun();
