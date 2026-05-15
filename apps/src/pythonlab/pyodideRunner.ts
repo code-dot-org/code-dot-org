@@ -77,8 +77,13 @@ export async function runPythonCode(
   try {
     const isNeighborhoodRun = isNeighborhoodLevel();
     if (isNeighborhoodRun) {
-      CodebridgeRegistry.getInstance().getNeighborhood()?.reset();
-      CodebridgeRegistry.getInstance().getNeighborhood()?.onRun();
+      // The MiniApp wraps the same Neighborhood instance the legacy
+      // slot holds, so these route to the same queue. The
+      // `isNeighborhoodLevel` gate stays because it also drives
+      // `outputToNeighborhood` (the console-routing legacy path).
+      const miniApp = CodebridgeRegistry.getInstance().getMiniApp();
+      miniApp?.reset();
+      miniApp?.onRun();
     }
     // We only send all output to the neighborhood if this is a neighborhood level and
     // we are not running validation, as validation does not render to the neighborhood.
@@ -99,7 +104,7 @@ export async function runPythonCode(
 
 export function stopPythonCode() {
   if (isNeighborhoodLevel()) {
-    CodebridgeRegistry.getInstance().getNeighborhood()?.onStop();
+    CodebridgeRegistry.getInstance().getMiniApp()?.onStop();
   }
   // This will terminate the worker and create a new one if there is a running program.
   restartPyodideIfProgramIsRunning();
@@ -171,21 +176,25 @@ function handleRunEndedUnexpectedly(
     // We reset, run, and close the neighborhood to ensure that the neighborhood
     // properly resets the run button back to run (from stop), and to reset the
     // neighborhood to its original state.
-    CodebridgeRegistry.getInstance().getNeighborhood()?.reset();
-    CodebridgeRegistry.getInstance().getNeighborhood()?.onRun();
-    CodebridgeRegistry.getInstance().getNeighborhood()?.onClose();
+    const miniApp = CodebridgeRegistry.getInstance().getMiniApp();
+    miniApp?.reset();
+    miniApp?.onRun();
+    miniApp?.onClose();
   } else {
     consoleManager?.writeConsoleMessage('');
   }
 }
 
 async function setProjectThumbnail() {
-  const neighborhood = CodebridgeRegistry.getInstance().getNeighborhood();
-  neighborhood?.onClose();
+  // Lifecycle flush goes through the MiniApp interface; the SVG-based
+  // capture below is still Neighborhood-specific and will move to
+  // `miniApp.captureThumbnail()` in a follow-up.
+  const miniApp = CodebridgeRegistry.getInstance().getMiniApp();
+  miniApp?.onClose();
   const projectManager = Lab2Registry.getInstance().getProjectManager();
   const shouldCapture = projectManager?.getShouldCaptureThumbnail();
   if (!shouldCapture) return;
-  await neighborhood?.waitUntilDone(); // Wait for neighborhood signal processing to be completed.
+  await miniApp?.waitUntilDone(); // Wait for signal processing to be completed.
   const svg = document.getElementById(SVG_ID);
   const svgArg = svg instanceof SVGSVGElement ? svg : null;
   if (svgArg) {
