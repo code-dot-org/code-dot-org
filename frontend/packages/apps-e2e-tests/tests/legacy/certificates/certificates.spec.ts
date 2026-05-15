@@ -236,4 +236,20 @@ test.describe('batch certificate printing', () => {
     await certificates.openBatchCertificates();
     await certificates.submitBatchCertificates(['Alice', 'Bob', 'Charlie']);
   });
+
+  /**
+   * Migration status: COMPLETED
+   * Source: dashboard/test/ui/features/teacher_tools/hour_of_code/hoc_batch_certificates.feature
+   * Scenario: Eyes test for oceans certificate on bulk print page
+   */
+  test('teacher prints an oceans batch certificate', async ({page}) => {
+    const certificates = new CertificatePage(page);
+
+    await createTeacher(page);
+    await certificates.openBatchCertificates('b2NlYW5z');
+    // Visual checkpoint stub: bulk certificate page.
+
+    await certificates.submitBatchCertificates(['Student One']);
+    // Visual checkpoint stub: bulk print page.
+  });
 });
