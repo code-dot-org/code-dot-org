@@ -38,6 +38,60 @@ export class TeacherDashboardPage {
   }
 
   /**
+   * Waits for the V2 progress page to finish rendering the visible table.
+   */
+  async expectProgressV2Ready(): Promise<void> {
+    await expect(
+      this.page.getByRole('heading', {name: 'Icon Key'}),
+    ).toBeVisible({
+      timeout: 30_000,
+    });
+    await expect(this.page.locator('#ui-test-progress-table-v2')).toBeVisible({
+      timeout: 30_000,
+    });
+    await this.page.waitForSelector('#ui-test-skeleton-progress-column', {
+      state: 'hidden',
+      timeout: 60_000,
+    });
+  }
+
+  /**
+   * Opens a V2 progress lesson column by lesson position.
+   *
+   * @param lessonPosition - one-based lesson number in the table
+   */
+  async expandProgressLesson(lessonPosition: number): Promise<void> {
+    const lessonHeader = this.page.locator(
+      `#ui-test-lesson-header-${lessonPosition}`,
+    );
+    await lessonHeader.evaluate(element => {
+      element.scrollIntoView({block: 'center', inline: 'center'});
+    });
+    await lessonHeader.click({force: true});
+    await expect(
+      this.page.locator(
+        `#ui-test-expanded-progress-column-header-${lessonPosition}`,
+      ),
+    ).toBeVisible({timeout: 15_000});
+  }
+
+  /**
+   * Closes a V2 progress lesson column by lesson position.
+   *
+   * @param lessonPosition - one-based lesson number in the table
+   */
+  async collapseProgressLesson(lessonPosition: number): Promise<void> {
+    await this.page
+      .locator(`#ui-test-expanded-progress-column-header-${lessonPosition}`)
+      .click();
+    await expect(
+      this.page.locator(
+        `#ui-test-expanded-progress-column-header-${lessonPosition}`,
+      ),
+    ).not.toBeAttached({timeout: 15_000});
+  }
+
+  /**
    * Opens progress for a section by its task button id suffix.
    *
    * @param sectionName - visible section name encoded in the button id
