@@ -587,6 +587,7 @@ $footer_padding-top: 20px;
 $footer_fullheight: $footer_min_height + $footer_padding-top;
 html, body {
   height: 100%;
+  font-size: 100%;
 }
 .wrapper {
   min-height: 100%;
