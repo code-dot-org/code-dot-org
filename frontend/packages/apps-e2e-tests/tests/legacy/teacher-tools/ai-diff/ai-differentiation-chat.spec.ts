@@ -200,5 +200,92 @@ test.describe(
         page.locator('p').filter({hasText: 'EXPIRED NOTIFICATION'}),
       ).not.toBeVisible();
     });
+
+    /**
+     * Migration status: COMPLETED
+     * Source: dashboard/test/ui/features/teacher_tools/ai_diff/ai_differentiation_threads.feature
+     * Scenario: Teacher can see threads and create new threads
+     */
+    test('teacher can see threads and create new threads', async ({page}) => {
+      await createTeacher(page, {name: 'Stilgar'});
+      await page.goto('/home');
+      await addUserToExperiment(page, 'ai-differentiation');
+
+      await page.goto('/courses/ui-test-artist/units/1');
+      await page
+        .locator('#ui-floatingActionButton')
+        .waitFor({state: 'visible', timeout: 20_000});
+      await page
+        .getByRole('button', {name: 'Suggest prompts'})
+        .waitFor({state: 'visible', timeout: 30_000});
+
+      // Visual checkpoint stub: Cucumber captured the starting chat state.
+      await page
+        .locator('#uitest-chat-textarea')
+        .fill('Which lessons have a project');
+      await page.locator('#uitest-chat-submit').click();
+      await expect(
+        page.locator('[aria-label="User chat message"]'),
+      ).toContainText('Which lessons have a project');
+      await page
+        .locator('p')
+        .filter({hasText: 'Lorem ipsum'})
+        .first()
+        .waitFor({state: 'visible', timeout: 30_000});
+      await expect(
+        page.locator('li').filter({hasText: 'Which lessons have a project'}),
+      ).toBeVisible({timeout: 30_000});
+
+      await page.getByRole('button', {name: 'New Chat'}).click();
+      await expect(
+        page
+          .locator('p')
+          .filter({hasText: "Hi! I'm your AI Teaching Assistant"}),
+      ).toBeVisible({timeout: 30_000});
+      await expect(
+        page.getByRole('button', {name: 'Give me an example'}),
+      ).toBeVisible();
+      await expect(
+        page.locator('[aria-label="User chat message"]'),
+      ).not.toBeVisible();
+      // Visual checkpoint stub: Cucumber captured the new-thread state.
+
+      await page.locator('#uitest-chat-textarea').fill('How do I debug');
+      await page.locator('#uitest-chat-submit').click();
+      await expect(
+        page.locator('[aria-label="User chat message"]'),
+      ).toContainText('How do I debug');
+      await page
+        .locator('p')
+        .filter({hasText: 'Lorem ipsum'})
+        .first()
+        .waitFor({state: 'visible', timeout: 30_000});
+      await expect(
+        page.locator('li').filter({hasText: 'How do I debug'}),
+      ).toBeVisible({timeout: 30_000});
+
+      await page
+        .locator('span')
+        .filter({hasText: 'Which lessons have a project'})
+        .click();
+      await expect(
+        page
+          .locator('[aria-label="User chat message"]')
+          .filter({hasText: 'Which lessons have a project'}),
+      ).toBeVisible({timeout: 30_000});
+      await expect(
+        page.locator('p').filter({hasText: 'Lorem ipsum'}).first(),
+      ).toBeVisible();
+      // Visual checkpoint stub: Cucumber captured the old-thread display.
+
+      await page.getByRole('button', {name: 'Suggest prompts'}).click();
+      await page.getByRole('button', {name: 'Create'}).click();
+      await page.getByRole('button', {name: 'Write a lesson hook'}).click();
+      const responses = page.locator('p').filter({hasText: 'Lorem ipsum'});
+      await expect(async () =>
+        expect(await responses.count()).toBeGreaterThanOrEqual(2),
+      ).toPass({timeout: 30_000, intervals: [500, 1000, 2000]});
+      // Visual checkpoint stub: Cucumber captured continuing an old thread.
+    });
   },
 );

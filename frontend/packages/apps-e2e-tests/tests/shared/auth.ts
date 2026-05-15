@@ -342,6 +342,12 @@ export async function signIn(
 interface CreateTeacherAssociatedStudentOptions {
   studentAge?: number;
   studentName?: string;
+  /** Student US state code (e.g. 'CO') for CAP and roster state tests. */
+  studentUsState?: string;
+  /** Student country code companion to {@link studentUsState}. */
+  studentCountryCode?: string;
+  /** ISO-8601 account creation time for CAP timing tests. */
+  studentCreatedAt?: string;
   authorized?: boolean;
 }
 
@@ -363,6 +369,9 @@ export async function createTeacherAssociatedStudent(
   {
     studentAge = 16,
     studentName,
+    studentUsState,
+    studentCountryCode,
+    studentCreatedAt,
     authorized = false,
   }: CreateTeacherAssociatedStudentOptions = {},
 ): Promise<TeacherStudentPair> {
@@ -471,6 +480,11 @@ export async function createTeacherAssociatedStudent(
     name: studentDisplayName,
     age: String(studentAge),
     sign_in_count: 2,
+    ...(studentUsState
+      ? {us_state: studentUsState, user_provided_us_state: true}
+      : {}),
+    ...(studentCountryCode ? {country_code: studentCountryCode} : {}),
+    ...(studentCreatedAt ? {created_at: studentCreatedAt} : {}),
   });
 
   // Enroll student in the section.
