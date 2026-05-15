@@ -57,14 +57,9 @@ test.describe('Python Lab — level 1 — run output', () => {
   let lab: PythonLab;
 
   test.beforeEach(async ({page, browserName}) => {
-    test.skip(
-      browserName === 'firefox',
-      'TODO: pythonlab run button never enabled on Firefox; Pyodide may not initialize in Firefox test environment',
-    );
     skipSafari({browserName});
-    lab = new PythonLab(page);
-    await lab.gotoLevel(1);
-    await expect(lab.runButton).toBeEnabled();
+    await page.goto('/reset_session');
+    lab = await openReadyPythonLab(page, 1);
   });
 
   /**
@@ -94,14 +89,9 @@ test.describe('Python Lab — level 10 — Neighborhood', () => {
   let lab: PythonLab;
 
   test.beforeEach(async ({page, browserName}) => {
-    test.skip(
-      browserName === 'firefox',
-      'TODO: pythonlab run button never enabled on Firefox; Pyodide may not initialize in Firefox test environment',
-    );
     skipSafari({browserName});
-    lab = new PythonLab(page);
-    await lab.gotoLevel(10);
-    await expect(lab.runButton).toBeEnabled();
+    await page.goto('/reset_session');
+    lab = await openReadyPythonLab(page, 10);
   });
 
   /**
@@ -181,7 +171,8 @@ test.describe('Python Lab — level 1 — file management', () => {
 test.describe('Python Lab — run as student', () => {
   let lab: PythonLab;
 
-  test.beforeEach(async ({studentPage}) => {
+  test.beforeEach(async ({studentPage, browserName}) => {
+    skipSafari({browserName});
     lab = await openReadyPythonLab(studentPage, 1);
   });
 
@@ -281,5 +272,17 @@ test.describe('Python Lab — start mode (levelbuilder)', () => {
     // After designating a validation file, no other file offers the option
     await lab.openFileDropdown(0);
     await expect(lab.filePopup(0)).not.toContainText('Make validation file');
+  });
+
+  /**
+   * Migration status: COMPLETED
+   * Source: dashboard/test/ui/features/code_tools/pythonlab/pythonlab_start_mode_eyes.feature
+   * Scenario: Basic Start mode
+   */
+  test('basic start mode page is ready', {tag: '@visual'}, async () => {
+    await lab.waitForRunReady();
+    await expect(lab.editorContent).toBeVisible();
+    await expect(lab.filesList).toContainText('main.py');
+    // visual checkpoint: "basic start mode page"
   });
 });
