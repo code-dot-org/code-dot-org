@@ -5,10 +5,11 @@
  *   - base font-size scales proportionally so Radium %-relative styles
  *     cascade identically to the curriculum path
  *
- * Sizing uses cqi/cqb so the lab tracks any nearest container's size.
- * Where no ancestor has container-type set, cqi/cqb fall back to small
- * viewport units (svw/svb) per spec, which is fine for the studio's
- * flex-column main area.  No JS measurement required.
+ * Sizing uses dvw/dvh (dynamic viewport) so the lab tracks the current
+ * viewport in real time, including after orientation changes on phones.
+ * The earlier cqi/cqb implementation needed `container-type: size` on an
+ * ancestor to resolve correctly, which itself breaks the React UI overlay
+ * (Radium uses absolute positioning against the activity frame).
  */
 
 .oceans-lab-shell {
@@ -33,9 +34,18 @@
    * sidesteps the SCSS lint rule about newlines around `/`.
    */
   --oceans-lab-font-scale: 0.0194;
+
+  /*
+   * Letterbox to 16:9 against the live viewport. dvw/dvh re-evaluate when
+   * the URL bar settles AND when the device rotates, so a phone rotated
+   * from portrait to landscape re-fits without any JS listener.
+   *
+   * Account for shell padding (10 px each side, 20 px each axis) so the
+   * frame never overflows.
+   */
   --oceans-lab-width: min(
-    100cqi,
-    calc(100cqb * 16 / 9),
+    calc(100dvw - 20px),
+    calc((100dvh - 20px) * 16 / 9),
     var(--oceans-lab-max-width)
   );
 

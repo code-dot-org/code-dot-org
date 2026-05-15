@@ -5,6 +5,9 @@
   "type": "module",
   "scripts": {
     "build": "tsc -b && vite build",
+    "build:mobile": "VITE_MOBILE=1 tsc -b && VITE_MOBILE=1 vite build",
+    "cap:sync:ios": "yarn build:mobile && cap sync ios",
+    "cap:sync:android": "yarn build:mobile && cap sync android",
     "dev": "vite dev",
     "lint": "eslint .",
     "lint:fix": "eslint --fix .",
@@ -31,11 +34,17 @@
     "@sentry/browser": "catalog:",
     "@tanstack/react-router": "^1.139.14",
     "@tanstack/react-router-devtools": "^1.139.14",
+    "idb-keyval": "^6.2.1",
     "ky": "catalog:",
     "react": "catalog:",
-    "react-dom": "catalog:"
+    "react-dom": "catalog:",
+    "workbox-window": "^7.3.0"
   },
   "devDependencies": {
+    "@capacitor/android": "^6.2.1",
+    "@capacitor/cli": "^6.2.1",
+    "@capacitor/core": "^6.2.1",
+    "@capacitor/ios": "^6.2.1",
     "@code-dot-org/lint-config": "workspace:*",
     "@tanstack/router-plugin": "^1.139.14",
     "@testing-library/dom": "catalog:",
@@ -47,11 +56,13 @@
     "@vitejs/plugin-react": "catalog:",
     "eslint-plugin-react-hooks": "catalog:",
     "eslint-plugin-react-refresh": "catalog:",
+    "fake-indexeddb": "^6.0.0",
     "globals": "catalog:",
     "jsdom": "catalog:",
     "typescript": "~5.9.3",
     "typescript-eslint": "catalog:",
     "vite": "catalog:",
+    "vite-plugin-pwa": "^1.0.0",
     "vite-plugin-rails": "^0.5.0",
     "vitest": "catalog:"
   }

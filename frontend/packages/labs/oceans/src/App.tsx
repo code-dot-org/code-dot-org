@@ -18,6 +18,14 @@ export interface OceansLabProps {
   textToSpeechLocale?: string;
   /** Called when the user advances past the current activity. */
   onContinue?: () => void;
+  /**
+   * When true, the lab is running inside the studio mobile shell (PWA or
+   * Capacitor). The lab MUST NOT make any network requests in this mode —
+   * every asset (images, model weights, TF.js) is bundled or precached.
+   * Today this prop is a marker that other code paths can branch on; the
+   * lab is already fully self-contained, so its behavior is unchanged.
+   */
+  studioMobile?: boolean;
 }
 
 /**
@@ -30,6 +38,10 @@ export default function OceansLab({
   guides,
   textToSpeechLocale,
   onContinue,
+  // Accepted but not consumed inside the lab today: the audit confirmed
+  // every fetch already resolves to a bundled asset. Threading the prop
+  // here documents the contract so future code paths can branch on it.
+  studioMobile: _studioMobile,
 }: OceansLabProps) {
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const backgroundCanvasRef = useRef<HTMLCanvasElement>(null);

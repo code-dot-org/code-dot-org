@@ -10,11 +10,17 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as LabSlugRouteImport } from './routes/lab/$slug'
 import { Route as ProjectsLabTypeChannelIdEditRouteImport } from './routes/projects/$labType/$channelId/edit'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const LabSlugRoute = LabSlugRouteImport.update({
+  id: '/lab/$slug',
+  path: '/lab/$slug',
   getParentRoute: () => rootRouteImport,
 } as any)
 const ProjectsLabTypeChannelIdEditRoute =
@@ -26,27 +32,31 @@ const ProjectsLabTypeChannelIdEditRoute =
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/lab/$slug': typeof LabSlugRoute
   '/projects/$labType/$channelId/edit': typeof ProjectsLabTypeChannelIdEditRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/lab/$slug': typeof LabSlugRoute
   '/projects/$labType/$channelId/edit': typeof ProjectsLabTypeChannelIdEditRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/lab/$slug': typeof LabSlugRoute
   '/projects/$labType/$channelId/edit': typeof ProjectsLabTypeChannelIdEditRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/projects/$labType/$channelId/edit'
+  fullPaths: '/' | '/lab/$slug' | '/projects/$labType/$channelId/edit'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/projects/$labType/$channelId/edit'
-  id: '__root__' | '/' | '/projects/$labType/$channelId/edit'
+  to: '/' | '/lab/$slug' | '/projects/$labType/$channelId/edit'
+  id: '__root__' | '/' | '/lab/$slug' | '/projects/$labType/$channelId/edit'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  LabSlugRoute: typeof LabSlugRoute
   ProjectsLabTypeChannelIdEditRoute: typeof ProjectsLabTypeChannelIdEditRoute
 }
 
@@ -57,6 +67,13 @@ declare module '@tanstack/react-router' {
       path: '/'
       fullPath: '/'
       preLoaderRoute: typeof IndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/lab/$slug': {
+      id: '/lab/$slug'
+      path: '/lab/$slug'
+      fullPath: '/lab/$slug'
+      preLoaderRoute: typeof LabSlugRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/projects/$labType/$channelId/edit': {
@@ -71,6 +88,7 @@ declare module '@tanstack/react-router' {
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  LabSlugRoute: LabSlugRoute,
   ProjectsLabTypeChannelIdEditRoute: ProjectsLabTypeChannelIdEditRoute,
 }
 export const routeTree = rootRouteImport

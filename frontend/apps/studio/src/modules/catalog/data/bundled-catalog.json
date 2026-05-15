@@ -1,0 +1,62 @@
+{
+  "version": 1,
+  "fetchedAt": 0,
+  "courses": [
+    {
+      "slug": "ai-for-oceans",
+      "title": "AI for Oceans",
+      "description": "Train a model to sort fish from ocean trash. Runs fully offline.",
+      "illustration": "tile-oceans.webp",
+      "sampleOffline": true
+    },
+    {
+      "slug": "music",
+      "title": "Music Lab",
+      "description": "Compose a song by dragging sound blocks together.",
+      "illustration": "tile-music.webp",
+      "sampleOffline": false
+    },
+    {
+      "slug": "maze",
+      "title": "Maze",
+      "description": "Help the bird reach the pig by stacking direction blocks.",
+      "illustration": "tile-maze.webp",
+      "sampleOffline": false
+    },
+    {
+      "slug": "sprite-lab",
+      "title": "Sprite Lab",
+      "description": "Build interactive animations and games with sprites.",
+      "illustration": "tile-sprite-lab.webp",
+      "sampleOffline": false
+    },
+    {
+      "slug": "dance",
+      "title": "Dance Party",
+      "description": "Choreograph dancers to your favorite track.",
+      "illustration": "tile-dance.webp",
+      "sampleOffline": false
+    },
+    {
+      "slug": "applab",
+      "title": "App Lab",
+      "description": "Design and code your own mobile-style app.",
+      "illustration": "tile-applab.webp",
+      "sampleOffline": false
+    },
+    {
+      "slug": "weblab",
+      "title": "Web Lab",
+      "description": "Build a webpage with HTML and CSS.",
+      "illustration": "tile-weblab.webp",
+      "sampleOffline": false
+    },
+    {
+      "slug": "artist",
+      "title": "Artist",
+      "description": "Draw shapes and patterns with code.",
+      "illustration": "tile-artist.webp",
+      "sampleOffline": false
+    }
+  ]
+}

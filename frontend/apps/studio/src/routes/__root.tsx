@@ -5,7 +5,7 @@ import '@code-dot-org/component-library-styles/primitiveColors.css';
 import '@code-dot-org/component-library-styles/colors.css';
 
 import {Box, ThemeProvider} from '@mui/material';
-import {createRootRoute, Outlet} from '@tanstack/react-router';
+import {createRootRoute, Outlet, useMatches} from '@tanstack/react-router';
 import {TanStackRouterDevtools} from '@tanstack/react-router-devtools';
 
 import Header from '@code-dot-org/component-library/header';
@@ -25,24 +25,35 @@ const SIGNED_OUT_MENU_ITEMS = [
   {label: 'About', href: '/about'},
 ];
 
+// Routes that take over the full viewport — no global header/footer chrome.
+// Labs (canvas-based, fixed 16:9, orientation-sensitive) need every pixel
+// for the activity surface.
+function useChromeless(): boolean {
+  const matches = useMatches();
+  return matches.some(m => m.routeId.startsWith('/lab/'));
+}
+
 /** Root layout: flex column so the main content area fills the remaining viewport height. */
 function RootLayout() {
+  const chromeless = useChromeless();
   return (
     <ThemeProvider theme={CdoTheme}>
       <Box sx={{display: 'flex', flexDirection: 'column', minHeight: '100vh'}}>
         <Bootstrap locale="en-US" />
-        <Header
-          logoImageUrl={CdoLogo}
-          brandName="Code.org"
-          menuItems={SIGNED_OUT_MENU_ITEMS}
-        />
+        {!chromeless && (
+          <Header
+            logoImageUrl={CdoLogo}
+            brandName="Code.org"
+            menuItems={SIGNED_OUT_MENU_ITEMS}
+          />
+        )}
         <Box
           component="main"
           sx={{flex: 1, display: 'flex', flexDirection: 'column'}}
         >
           <Outlet />
         </Box>
-        <StudioFooter />
+        {!chromeless && <StudioFooter />}
         <TanStackRouterDevtools />
       </Box>
     </ThemeProvider>
