@@ -24,12 +24,17 @@ module AichatOpenaiResponsesHelper
         input: input
       }.merge(options)
 
+      # Safety checks can run on the critical path for ActiveJob workers, so allow
+      # separate timeout tuning from the general OpenAI client.
+      open_timeout = DCDO.get('aichat_safety_openai_http_open_timeout', DCDO.get('openai_http_open_timeout', 5))
+      read_timeout = DCDO.get('aichat_safety_openai_http_read_timeout', DCDO.get('openai_http_read_timeout', 30))
+
       HTTParty.post(
         OPEN_AI_URL,
         headers: headers,
         body: data.to_json,
-        open_timeout: DCDO.get('openai_http_open_timeout', 5),
-        read_timeout: DCDO.get('openai_http_read_timeout', 30)
+        open_timeout: open_timeout,
+        read_timeout: read_timeout
       )
     end
   end
