@@ -7,14 +7,14 @@ markdown <<MARKDOWN
 
 <img src="https://images.code.org/6f13673a0ca38964117b3ad1e8261040-image-1771342723588.png" alt="cartoon image of chef flipping a pancake" width="275px" style="border-radius:10px; float:right; margin: 0 0 0px 20px;">
 
-#### In real programs, some tasks happen immediately, while others take time.
+In real programs, some tasks happen immediately, while others take time.
 
-#### The question is not whether waiting happens.  
-#### The real question is: **What does the program do while it waits?**
+The question is not whether waiting happens.  
+The real question is: **What does the program do while it waits?**
 
-#### In this activity, we’ll compare two patterns:
-- ####  **Synchronous (blocking):** Tasks happen one at a time, in order.
-- ####  **Asynchronous (non-blocking):** Some tasks are scheduled to finish later, allowing other work to continue.
+In this activity, we’ll compare two patterns:
+- **Synchronous (blocking):** Tasks happen one at a time, in order.
+- **Asynchronous (non-blocking):** Some tasks are scheduled to finish later, allowing other work to continue.
 
 
 <div style="clear:both;"></div>
@@ -24,11 +24,11 @@ markdown <<MARKDOWN
 
 ## Predict 
 
-#### Look at the blocking code, or synchronous code below and predict the order of the chef's events. 
+Look at the blocking code, or synchronous code below and predict the order of the chef's events. 
 
 <img src="https://images.code.org/59c9b8a356ff4e56ec8c802ba5718b37-image-1684269154206.png" alt="A clipboard with the words TO DO on it. This icon is used to signal an action item for participants." width="30px" style="border-radius:10px; float:left; margin: 0px 10px 5px 0px;">
 
-#### **To Do:**
+**To Do:**
 
 > #### **Read**: Look closely at the code inside the Event Listener.
 > #### **Predict**: Think or write it down - In what order will the chef complete the tasks? 
@@ -92,11 +92,11 @@ markdown <<MARKDOWN
 
 ---
 
-#### Look at the -nonblocking code, or asynchronous code below and predict the order of the chef's events. 
+Look at the -nonblocking code, or asynchronous code below and predict the order of the chef's events. 
 
 <img src="https://images.code.org/59c9b8a356ff4e56ec8c802ba5718b37-image-1684269154206.png" alt="A clipboard with the words TO DO on it. This icon is used to signal an action item for participants." width="30px" style="border-radius:10px; float:left; margin: 0px 10px 5px 0px;">
 
-#### **To Do:**
+**To Do:**
 
 > #### **Read**:Look closely at the milliseconds (e.g. 2000, 5000) inside the code.
 > #### **Predict:** In what order will the chef complete the tasks based on their timers? Think or write it down.
@@ -168,22 +168,22 @@ markdown <<MARKDOWN
 
 ## 🕒 How the Milliseconds Make It Asynchronous
 
-#### The numbers inside `setTimeout` (like 2000, 3000, 5000) represent **milliseconds**.
+The numbers inside `setTimeout` (like 2000, 3000, 5000) represent **milliseconds**.
 
-- #### 1000 milliseconds = 1 second  
-- ####  2000 = 2 seconds  
-- ####  5000 = 5 seconds  
+- 1000 milliseconds = 1 second  
+- 2000 = 2 seconds  
+- 5000 = 5 seconds  
 
-#### When the code runs, JavaScript does **not** stop and wait.
+When the code runs, JavaScript does **not** stop and wait.
 
-#### **Instead:**
-- #### 1. It schedules the task to run later.
-- #### 2. It continues executing the rest of the code immediately.
-- #### 3. When the timer finishes, the scheduled task is added back into the queue to run.
+**Instead:**
+- 1. It schedules the task to run later.
+- 2. It continues executing the rest of the code immediately.
+- 3. When the timer finishes, the scheduled task is added back into the queue to run.
 
-#### That’s why the chef pours orange juice and places the ticket on the counter *before* the toast pops even though the toast code appears earlier in the file.
+That’s why the chef pours orange juice and places the ticket on the counter *before* the toast pops even though the toast code appears earlier in the file.
 
-#### The order of completion depends on the timer, not the position in the code.
+The order of completion depends on the timer, not the position in the code.
 
 
 MARKDOWN

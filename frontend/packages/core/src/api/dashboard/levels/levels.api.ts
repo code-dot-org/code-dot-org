@@ -1,0 +1,196 @@
+import type {Transport} from '../../transports/types';
+import {getLevelKindSchema} from './levels.kinds';
+import type {
+  LevelPropertiesMap,
+  LevelProperties,
+  ProjectLevelPropertiesRequestParams,
+  LevelPropertiesRequestParams,
+} from './levels.types';
+import {
+  AppOptionsSchema,
+  CloneLevelResponseSchema,
+  DeleteLevelResponseSchema,
+  ExtraLinksLevelDataSchema,
+  LevelPropertiesMapSchema,
+  PredictResponseSchema,
+  SectionSummarySchema,
+  UserAppOptionsSchema,
+} from './levels.schemata';
+
+function getProjectLevelPropertiesUrl(
+  params: ProjectLevelPropertiesRequestParams,
+) {
+  return `/projects/${params.standaloneProjectType}/level_properties`;
+}
+
+/**
+ * Returns the URL for the API call to retrieve level metadata depending on the
+ * level type and/or position.
+ */
+function getLevelPropertiesUrl(params: LevelPropertiesRequestParams) {
+  if (params.standaloneProjectType) {
+    // Standalone project level
+    return getProjectLevelPropertiesUrl(params);
+  }
+
+  const {levelId, scriptName, lessonPosition} = params;
+
+  return scriptName && lessonPosition
+    ? // Level as part of a unit progression
+      `/s/${scriptName}/lessons/${lessonPosition}/level_properties`
+    : // Specific level (when viewing/editing a specific level)
+      `/levels/${levelId}/level_properties`;
+}
+
+export function createLevelsApi(transport: Transport) {
+  return {
+    /**
+     * GET /levels/:levelId/level_properties
+     * GET /projects/:standaloneProjectType/level_properties
+     * GET /s/:scriptName/lessons/:lessonPosition/level_properties
+     */
+    async getLevelProperties(
+      params: LevelPropertiesRequestParams,
+    ): Promise<LevelPropertiesMap> {
+      const raw = await transport.request<unknown>({
+        method: 'GET',
+        url: getLevelPropertiesUrl(params),
+      });
+
+      // Transform 'true'/'false' into actual boolean values
+      Object.values(raw as LevelPropertiesMap).forEach(base => {
+        const simple = base as unknown as Record<string, string | boolean>;
+        Object.entries(simple).forEach(([key, value]) => {
+          if (value === 'true') {
+            simple[key] = true;
+          } else if (value === 'false') {
+            simple[key] = false;
+          }
+        });
+      });
+
+      // 1) validate base (and discover kind)
+      const map = LevelPropertiesMapSchema.parse(raw);
+
+      Object.entries(raw as LevelPropertiesMap).forEach(([key, base]) => {
+        // 2) validate extension if registered
+        const extSchema = getLevelKindSchema(base.appName);
+        if (extSchema) {
+          // If the app kind is registered, it is validated as well
+          // 3) parse extension and merge
+          const ext = extSchema.parse(base) as unknown as LevelProperties;
+
+          // Merge (prefer extension fields if overlap)
+          map[key] = {...map[key], ...ext};
+        }
+      });
+
+      return map;
+    },
+
+    async getPredictResponse(params: {levelId: number; scriptId: number}) {
+      const {levelId, scriptId} = params;
+
+      const raw = await transport.request<unknown>({
+        method: 'GET',
+        url: `/user_levels/level_source/${scriptId}/${levelId}`,
+      });
+
+      return PredictResponseSchema.parse(raw).data;
+    },
+
+    async resetPredictLevelProgress(params: {
+      currentLevelId?: number;
+      scriptId?: number;
+    }) {
+      const {currentLevelId, scriptId} = params;
+
+      return await transport.request<unknown>({
+        method: 'POST',
+        url: '/delete_predict_level_progress',
+        body: {
+          script_id: scriptId || null,
+          level_id:
+            currentLevelId !== undefined ? currentLevelId.toString() : null,
+        },
+      });
+    },
+
+    async getSectionSummary(params: {sectionId: number; levelId: number}) {
+      const {sectionId, levelId} = params;
+
+      const raw = await transport.request<unknown>({
+        method: 'GET',
+        url: `/user_levels/section_summary/${sectionId}/${levelId}`,
+      });
+
+      return SectionSummarySchema.parse(raw);
+    },
+
+    /**
+     * GET /levels/:levelId/extra_links
+     */
+    async getExtraLinksData(params: {levelId: number; scriptLevelId?: number}) {
+      const {levelId, scriptLevelId} = params;
+
+      const raw = await transport.request<unknown>({
+        method: 'GET',
+        url: `/levels/${levelId}/extra_links${scriptLevelId ? `?scriptLevelId=${scriptLevelId}` : ''}`,
+      });
+
+      return ExtraLinksLevelDataSchema.parse(raw);
+    },
+
+    /**
+     * GET /levels/:levelId/app_options
+     */
+    async getAppOptions(params: {levelId: number}) {
+      const {levelId} = params;
+
+      const raw = await transport.request<unknown>({
+        method: 'GET',
+        url: `/levels/${levelId}/app_options`,
+      });
+
+      return AppOptionsSchema.parse(raw);
+    },
+
+    async getUserAppOptions(params: {
+      scriptName: string;
+      lessonPosition: number;
+      levelPosition: number;
+      levelId: number;
+    }) {
+      const {scriptName, lessonPosition, levelPosition, levelId} = params;
+
+      const raw = await transport.request<unknown>({
+        method: 'GET',
+        url: `/api/user_app_options/${scriptName}/${lessonPosition}/${levelPosition}/${levelId}`,
+      });
+
+      return UserAppOptionsSchema.parse(raw);
+    },
+
+    async cloneLevel(params: {levelId: number; clonedLevelName: string}) {
+      const {levelId, clonedLevelName} = params;
+
+      const raw = await transport.request<unknown>({
+        method: 'POST',
+        url: `/levels/${levelId}/clone?name=${clonedLevelName}`,
+      });
+
+      return CloneLevelResponseSchema.parse(raw);
+    },
+
+    async deleteLevel(params: {levelId: number}) {
+      const {levelId} = params;
+
+      const raw = await transport.request<unknown>({
+        method: 'DELETE',
+        url: `/levels/${levelId}`,
+      });
+
+      return DeleteLevelResponseSchema.parse(raw);
+    },
+  };
+}

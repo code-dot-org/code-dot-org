@@ -5,11 +5,11 @@ description 'description here'
 markdown <<MARKDOWN
 # Facilitating Ethical Discussions
 
-#### Teaching students about ethical issues in algorithms goes beyond understanding how they work—it’s about **thinking critically** and **questioning the impact of technology on society**.
+Teaching students about ethical issues in algorithms goes beyond understanding how they work—it’s about **thinking critically** and **questioning the impact of technology on society**.
 
-#### As students analyze more complex and controversial algorithms, such as those used in self-driving cars, AI-driven hiring, and facial recognition, discussions may spark strong opinions and highlight real-world dilemmas. 
+As students analyze more complex and controversial algorithms, such as those used in self-driving cars, AI-driven hiring, and facial recognition, discussions may spark strong opinions and highlight real-world dilemmas. 
 
-#### These topics can spark strong opinions and have no easy answers.
+These topics can spark strong opinions and have no easy answers.
 
 ## When guiding students, consider:
 
@@ -21,9 +21,9 @@ markdown <<MARKDOWN
     <p>
 
 
-#### Ask: “Who benefits from this algorithm? Who might be harmed?”
+Ask: “Who benefits from this algorithm? Who might be harmed?”
 
-#### Frame debates around trade-offs rather than “right vs. wrong.”
+Frame debates around trade-offs rather than “right vs. wrong.”
 
 </p></div>
 </details>
@@ -34,9 +34,9 @@ markdown <<MARKDOWN
     <p>
 
 
-#### Example: “What if a self-driving car had to choose between protecting its passenger or a pedestrian?”
+Example: “What if a self-driving car had to choose between protecting its passenger or a pedestrian?”
 
-#### Let students explore different viewpoints before giving definitive answer
+Let students explore different viewpoints before giving definitive answer
 
 </p></div>
 </details>
@@ -47,8 +47,8 @@ markdown <<MARKDOWN
     <p>
 
 
-#### Ethical decisions in AI are complex. Reinforce that even experts debate these topics.
-#### Help students see that questioning and critical thinking are valuable skills.
+Ethical decisions in AI are complex. Reinforce that even experts debate these topics.
+Help students see that questioning and critical thinking are valuable skills.
 
 
 </p></div>
@@ -56,6 +56,6 @@ markdown <<MARKDOWN
 
 ---
 
-#### By guiding these discussions with openness and curiosity, you will help students develop a thoughtful, ethical approach to technology—one that prepares them to navigate and shape the digital world they live in.
+By guiding these discussions with openness and curiosity, you will help students develop a thoughtful, ethical approach to technology—one that prepares them to navigate and shape the digital world they live in.
 
 MARKDOWN

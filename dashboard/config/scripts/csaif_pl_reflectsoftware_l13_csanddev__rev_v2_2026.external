@@ -8,9 +8,9 @@ markdown <<MARKDOWN
 
 ## Real-world Scenarios 
 
-#### Using real-world scenarios to analyze the software needs of different careers helps students develop **critical thinking** and **problem-solving** skills by connecting classroom learning to practical applications. 
+Using real-world scenarios to analyze the software needs of different careers helps students develop **critical thinking** and **problem-solving** skills by connecting classroom learning to practical applications. 
 
-#### This approach **enhances engagement**, fosters **career awareness**, and encourages students to **think like professionals**, preparing them to make informed decisions about technology in various fields.
+This approach **enhances engagement**, fosters **career awareness**, and encourages students to **think like professionals**, preparing them to make informed decisions about technology in various fields.
 
 <div style="width: 90%; margin: 20px auto; display: flex; flex-direction: column; align-items: center; gap: 20px;">
 
@@ -69,17 +69,17 @@ markdown <<MARKDOWN
 ---
 
 ## Analogies 
-#### Using analogies helps students **visualize** different types of software by relating complex concepts to familiar ideas, making it easier to understand their functions and real-world applications. This approach **builds connections**, enhances **retention**, and makes abstract topics more **accessible and engaging**.
+Using analogies helps students **visualize** different types of software by relating complex concepts to familiar ideas, making it easier to understand their functions and real-world applications. This approach **builds connections**, enhances **retention**, and makes abstract topics more **accessible and engaging**.
 
 <img src="https://images.code.org/8f9c880432ab28f66bf2c86bf5ee1481-image-1742398827093.png" alt="concert stage with crowd" width="250px" style="border-radius:10px; float:right; margin: 0 0 10px 30px;">
 
 ### **The Concert Analogy**
-- ####**Operating System**: The concert organizer
-#### They book the venue, manage the schedule, and make sure the show runs on time.
-- #### **Application Software**: The performers
-#### They sing, play instruments, or DJ, giving the audience the main experience.
-- #### **Utility Software**: The sound technicians and stage crew
-#### They set up the lights, adjust the microphones, and troubleshoot issues so the performers can shine.
+- **Operating System**: The concert organizer
+They book the venue, manage the schedule, and make sure the show runs on time.
+- **Application Software**: The performers
+They sing, play instruments, or DJ, giving the audience the main experience.
+- **Utility Software**: The sound technicians and stage crew
+They set up the lights, adjust the microphones, and troubleshoot issues so the performers can shine.
 
 <div style="clear:both;"></div>
 
@@ -88,13 +88,13 @@ markdown <<MARKDOWN
 <img src="https://images.code.org/f0f6a6861436040dcbd7162109d0311e-image-1742399059273.png" alt="concert stage with crowd" width="250px" style="border-radius:10px; float:right; margin: 0 0 10px 30px;">
 
 ### **The House Analogy**  
-- #### **Operating System**: The foundation and structure of the house  
+- **Operating System**: The foundation and structure of the house  
   #### It holds everything together, provides support, and makes sure all rooms and systems function properly.  
 
-- #### **Application Software**: The furniture and appliances  
+- **Application Software**: The furniture and appliances  
   #### They provide the functionality you need for daily life, like a couch for relaxing, a stove for cooking, or a TV for entertainment.  
 
-- #### **Utility Software**: The maintenance tools and security systems  
+- **Utility Software**: The maintenance tools and security systems  
   #### They help keep the house in good condition, like a vacuum cleaner for cleaning, a thermostat for regulating temperature, or a security system for protection.  
 
 <p style="font-size: 18px; font-weight: bold; background-color: #F5F7F8; padding: 10px; border-left: 5px solid #8148B2; display: inline-block;">

@@ -5,16 +5,16 @@ description 'description here'
 markdown <<MARKDOWN
 # Practice
 
-#### Let’s try it out!
+Let’s try it out!
 
-#### We’ll dive into how to use these tools as an educator in Module 3, Transforming Teaching with AI. For now, your primary goal should be getting started using an LLM and practicing good prompting strategies.
+We’ll dive into how to use these tools as an educator in Module 3, Transforming Teaching with AI. For now, your primary goal should be getting started using an LLM and practicing good prompting strategies.
 
 
 ## Educator’s Choice
 
-#### **1. Choose an LLM.** Click on the image to open the link in a new tab.
+**1. Choose an LLM.** Click on the image to open the link in a new tab.
 
-#### If your school/district uses a particular LLM (even if it's not on the list below), we recommend that you practice using that one.
+If your school/district uses a particular LLM (even if it's not on the list below), we recommend that you practice using that one.
 
 
 <div style="display:flex;justify-content:space-between;align-items:center;width:95%;margin:20pt auto;padding:0 5px;">
@@ -40,20 +40,20 @@ markdown <<MARKDOWN
   </div>
 </div>
 
-#### <i>As of the writing of this module, **Claude** is the only LLM on this list that requires you to create an account.</i>
+<i>As of the writing of this module, **Claude** is the only LLM on this list that requires you to create an account.</i>
 
 <br>
 
-#### **2. Choose a topic.** It can be anything you wish to explore, such as:
+**2. Choose a topic.** It can be anything you wish to explore, such as:
 
-* #### *How do I make a taco?*
-* #### *What is the environmental impact of AI technology?*
-* #### *How is AI being integrated into everyday technology?*
-* #### *What materials do I need to make the best pillow fort?*
+* *How do I make a taco?*
+* *What is the environmental impact of AI technology?*
+* *How is AI being integrated into everyday technology?*
+* *What materials do I need to make the best pillow fort?*
 
 <br>
 
-#### **3. Try a simple prompt**. Start with something open-ended such as:
+**3. Try a simple prompt**. Start with something open-ended such as:
 
 <div style="width:80%; margin:0 auto 18px auto;">
   <div style="background:#F7F8FA; border-left:5px solid #8C52BA; border-radius:14px; padding:18px;">
@@ -65,7 +65,7 @@ markdown <<MARKDOWN
 
 <br>
 
-#### **4. Add detail.** For example, you can add some context and a tone to your prompt:
+**4. Add detail.** For example, you can add some context and a tone to your prompt:
 
 
 <div style="width:80%; margin:0 auto 18px auto;">
@@ -77,7 +77,7 @@ markdown <<MARKDOWN
 </div>
 
 
-#### You don't have to, but you may choose to use the TaCo FoRT prompting structure. 
+You don't have to, but you may choose to use the TaCo FoRT prompting structure. 
 
 <p align="center">
 <img src="https://images.code.org/a9b6ae8f94bfa64afbf2af4a60ec6609-Screenshot 2025-04-07 at 2.01.43 PM.png" alt="lesson plan diagram" width="70%" style="border-radius:10px; border: 5px solid black;">
@@ -85,7 +85,7 @@ markdown <<MARKDOWN
 
 <br>
 
-#### **5. Keep exploring.** Continue to practice prompting. Explore with different prompting techniques, amount of detail, or even try multimodal prompting.
+**5. Keep exploring.** Continue to practice prompting. Explore with different prompting techniques, amount of detail, or even try multimodal prompting.
 
 <div style="width:80%; margin:0 auto 18px auto;">
   <div style="background:#F7F8FA; border-left:5px solid #8C52BA; border-radius:14px; padding:18px;">
@@ -98,7 +98,7 @@ markdown <<MARKDOWN
 
 <br>
 
-#### **6. Take it further.** If you have time, try prompting in two or more LLMs to see how the responses differ.
+**6. Take it further.** If you have time, try prompting in two or more LLMs to see how the responses differ.
 
 <br>
 

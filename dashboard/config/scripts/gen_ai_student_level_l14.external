@@ -5,10 +5,10 @@ description 'description here'
 markdown <<MARKDOWN
 # ✅ Lesson Recap: Embeddings: How They're Created
 
-#### After this lesson, you can 
+After this lesson, you can 
 
-* #### Explain how different passages can create different embeddings
-* #### Construct an embedding for a text passage
+* Explain how different passages can create different embeddings
+* Construct an embedding for a text passage
 
 ## Resources
 

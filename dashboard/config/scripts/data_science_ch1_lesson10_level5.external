@@ -8,11 +8,11 @@ markdown <<MARKDOWN
 ###[CODAP Link](https://codap.concord.org/app/static/dg/en/cert/index.html#shared=https%3A%2F%2Fcfm-shared.concord.org%2FunWqudZ0UC51dAoB4JNP%2Ffile.json)
 
 ###**Do This**
-####1. Click on the “Map” icon in the top toolbar. 
-####2. Find the location of the two fastest roller coasters on the map. 
-####3. Use the “**+**” icon to zoom in and find out what city and state these two fastest roller coasters are located in.
-####4. Find the location of the two slowest roller coasters on the map. 
-####5. Use the “**+**” icon to zoom in and find out what city and state these two slowest roller coasters are located in.
+1. Click on the “Map” icon in the top toolbar. 
+2. Find the location of the two fastest roller coasters on the map. 
+3. Use the “**+**” icon to zoom in and find out what city and state these two fastest roller coasters are located in.
+4. Find the location of the two slowest roller coasters on the map. 
+5. Use the “**+**” icon to zoom in and find out what city and state these two slowest roller coasters are located in.
 MARKDOWN
 
 teacher_markdown <<MARKDOWN

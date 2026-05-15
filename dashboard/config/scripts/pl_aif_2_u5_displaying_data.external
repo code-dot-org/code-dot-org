@@ -5,13 +5,13 @@ description 'description here'
 markdown <<MARKDOWN
 # Displaying Data
 
-####Websites often show the same data in different ways depending on what the user needs.
+Websites often show the same data in different ways depending on what the user needs.
 
 ---
 
 ## Compare the Images
 
-#### Look at these two ways of showing the same dishes. One is cards, the other is a list. Both are representations of the exact same data, but they serve different user needs.
+Look at these two ways of showing the same dishes. One is cards, the other is a list. Both are representations of the exact same data, but they serve different user needs.
 
 <div style="max-width: 800px; margin: 25px auto;">
 
