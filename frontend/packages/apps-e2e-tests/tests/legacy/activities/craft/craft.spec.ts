@@ -18,9 +18,9 @@ test.describe('Craft — lesson 25 — aquatic completion (level 3)', () => {
   });
 
   /**
+   * Migration status: COMPLETED
    * Source: dashboard/test/ui/features/star_labs/craft/aquatic.feature
    * Scenario: Winning the first level
-   * Migration status: COMPLETED
    *
    * The Cucumber source is tagged @skip for an old Selenium CI instability.
    * Playwright waits for Craft.phaserLoaded(), then relies on the run/reset
@@ -51,9 +51,9 @@ test.describe('Craft — Minecraft Hour of Code dialogs', () => {
   });
 
   /**
+   * Migration status: COMPLETED
    * Source: dashboard/test/ui/features/star_labs/craft/dialogs.feature
    * Scenario: Playing level 1, seeing character select dialog and re-playing
-   * Migration status: COMPLETED
    *
    * The source feature is tagged @skip for Selenium CI instability. This port
    * keeps the functional checks and omits the commented Eyes checkpoints.
@@ -95,9 +95,9 @@ test.describe('Craft — Minecraft Hour of Code dialogs', () => {
   });
 
   /**
+   * Migration status: COMPLETED
    * Source: dashboard/test/ui/features/star_labs/craft/dialogs.feature
    * Scenario: Playing level 6, seeing house select dialog
-   * Migration status: COMPLETED
    *
    * The source scenario is tagged @skip alongside the legacy Eyes assertions.
    * Keep an explicit trace here so the skipped upstream visual flow is
@@ -121,9 +121,9 @@ test.describe('Craft — lesson 25 — signed-out finish dialog (level 4)', () =
   });
 
   /**
+   * Migration status: COMPLETED
    * Source: dashboard/test/ui/features/star_labs/craft/hero_logged_out.feature
    * Scenario: Signed out finish dialog
-   * Migration status: COMPLETED
    *
    * Verifies that signed-out users see the continue button but not the
    * publish-to-gallery or save-to-gallery buttons after completing the level.
@@ -145,9 +145,9 @@ test.describe('Craft — lesson 25 — signed-out finish dialog (level 4)', () =
  */
 test.describe('Craft — lesson 25 — signed-in finish dialog (level 4)', () => {
   /**
+   * Migration status: COMPLETED
    * Source: dashboard/test/ui/features/star_labs/craft/hero_logged_in.feature
    * Scenario: Signed in finish dialog
-   * Migration status: COMPLETED
    *
    * A signed-in student who completes the level sees both the continue button
    * and the save-to-project-gallery button in the finish dialog.  The gallery

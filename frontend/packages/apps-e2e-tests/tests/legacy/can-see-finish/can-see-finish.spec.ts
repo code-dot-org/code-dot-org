@@ -162,9 +162,9 @@ test.describe('can see finish button — small screen', () => {
   );
 
   /**
+   * Migration status: COMPLETED
    * Source: dashboard/test/ui/features/star_labs/can_see_finish.feature
    * Scenario: can see finish button on "Game Lab"
-   * Migration status: COMPLETED
    */
   test(
     'Game Lab free-play level shows finish button at 1366×727',
@@ -182,9 +182,9 @@ test.describe('can see finish button — small screen', () => {
   );
 
   /**
+   * Migration status: COMPLETED
    * Source: dashboard/test/ui/features/star_labs/can_see_finish.feature
    * Scenario: can see finish button on "Minecraft Adventurer"
-   * Migration status: COMPLETED
    */
   test(
     'Minecraft Adventurer free-play level shows finish button at 1366×727',

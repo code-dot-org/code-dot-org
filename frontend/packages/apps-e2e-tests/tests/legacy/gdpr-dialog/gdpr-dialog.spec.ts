@@ -426,8 +426,8 @@ test.describe('GDPR Dialog', {tag: '@no_mobile'}, () => {
 
   /**
    * Migration status: COMPLETED
-   * Source: gdpr_dialog.feature — "EU user sees the GDPR Dialog on dashboard,
-   * opt in, don't show again"
+   * Source: dashboard/test/ui/features/xteam/gdpr_dialog.feature
+   * Scenario: EU user sees the GDPR Dialog on dashboard, opt in, don't show again
    *
    * EU teacher opts in; the dialog closes and the gdpr script data reflects
    * show_gdpr_dialog=false.  Reloading /home no longer shows the dialog.
@@ -465,7 +465,8 @@ test.describe('GDPR Dialog', {tag: '@no_mobile'}, () => {
 
   /**
    * Migration status: COMPLETED
-   * Source: gdpr_dialog.feature — "GDPR Dialog privacy link works from dashboard"
+   * Source: dashboard/test/ui/features/xteam/gdpr_dialog.feature
+   * Scenario: GDPR Dialog privacy link works from dashboard
    *
    * The "Visit Code.org" link inside the GDPR dialog navigates to the privacy
    * policy page.
@@ -483,7 +484,8 @@ test.describe('GDPR Dialog', {tag: '@no_mobile'}, () => {
 
   /**
    * Migration status: COMPLETED
-   * Source: gdpr_dialog.feature — "Accept, sign out, sign in again, no dialog"
+   * Source: dashboard/test/ui/features/xteam/gdpr_dialog.feature
+   * Scenario: Accept, sign out, sign in again, no dialog
    *
    * After accepting the dialog, signing out and signing back in should not
    * surface the dialog again.

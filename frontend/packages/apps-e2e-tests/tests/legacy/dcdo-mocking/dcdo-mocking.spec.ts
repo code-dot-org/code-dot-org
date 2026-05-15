@@ -5,7 +5,7 @@ import {expect, test} from '../../shared/fixtures';
  * DCDO cookie mocking — verifies the DCDO cookie mechanism via the
  * /api/test/get_dcdo endpoint.
  *
- * Source:
+ * Feature source:
  *   dashboard/test/ui/features/dcdo_mocking.feature
  *
  * Anonymous; no authentication required.

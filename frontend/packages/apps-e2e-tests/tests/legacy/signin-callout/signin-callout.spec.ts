@@ -53,9 +53,9 @@ test.describe('Sign-in callout', () => {
   });
 
   /**
+   * Migration status: COMPLETED
    * Source: dashboard/test/ui/features/star_labs/signin_callout.feature
    * Scenario: Should be able to clear cookies and session storage to see callout again
-   * Migration status: COMPLETED
    * @no_mobile
    */
   test('clearing cookie and session storage shows the callout again', async ({
@@ -75,9 +75,9 @@ test.describe('Sign-in callout', () => {
   });
 
   /**
+   * Migration status: COMPLETED
    * Source: dashboard/test/ui/features/star_labs/signin_callout.feature
    * Scenario: Should not see callout on CSF coursea lesson if logged in
-   * Migration status: COMPLETED
    * @as_student
    */
   test('signed-in students do not see the callout', async ({studentPage}) => {
@@ -86,9 +86,9 @@ test.describe('Sign-in callout', () => {
   });
 
   /**
+   * Migration status: COMPLETED
    * Source: dashboard/test/ui/features/star_labs/signin_callout2.feature
    * Scenario: Clicking anywhere should dismiss the login reminder
-   * Migration status: COMPLETED
    */
   test('dismissing the callout leaves instructions and run button usable', async ({
     page,
@@ -105,9 +105,9 @@ test.describe('Sign-in callout', () => {
   });
 
   /**
+   * Migration status: COMPLETED
    * Source: dashboard/test/ui/features/star_labs/signin_callout2.feature
    * Scenario: See age callout, not signin callout on hour of code
-   * Migration status: COMPLETED
    */
   test('age dialog suppresses the sign-in callout on Hour of Code', async ({
     page,
@@ -125,9 +125,9 @@ test.describe('Sign-in callout', () => {
   });
 
   /**
+   * Migration status: COMPLETED
    * Source: dashboard/test/ui/features/star_labs/signin_callout2.feature
    * Scenario: After dismissing the callout, it should not reappear upon refresh
-   * Migration status: COMPLETED
    */
   test('dismissed callout stays hidden after reload', async ({page}) => {
     await gotoCsfLevel(page);
@@ -141,9 +141,9 @@ test.describe('Sign-in callout', () => {
   });
 
   /**
+   * Migration status: COMPLETED
    * Source: dashboard/test/ui/features/star_labs/signin_callout2.feature
    * Scenario: Nested callouts should work as expected
-   * Migration status: COMPLETED
    */
   test('dismissing the callout reveals top instructions', async ({page}) => {
     await gotoCsfLevel(page);
@@ -155,9 +155,9 @@ test.describe('Sign-in callout', () => {
   });
 
   /**
+   * Migration status: COMPLETED
    * Source: dashboard/test/ui/features/star_labs/signin_callout2.feature
    * Scenario: Should be immediately redirected to sign in if pressing sign in button
-   * Migration status: COMPLETED
    */
   test('sign-in link still navigates to the sign-in page while callout is visible', async ({
     page,
