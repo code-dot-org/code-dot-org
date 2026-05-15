@@ -236,7 +236,7 @@ img.video_thumbnail {
     }
 
     .header_logo {
-      width: 38px;
+      width: 66px;
       padding: 6px 14px;
       margin-top: 0;
     }
@@ -1179,8 +1179,8 @@ $default-modal-width: 640px;
   margin-top: -24px;
   padding-top: 14px;
   min-width: 0;
-  max-width: 55px;
-  width: 55px;
+  max-width: 66px;
+  width: 66px;
 
   a:hover {
     background-color: transparent;
@@ -2807,6 +2807,7 @@ a.download-video {
 
 .container {
   width: $content-width;
+  padding: 0;
 }
 
 .container,
