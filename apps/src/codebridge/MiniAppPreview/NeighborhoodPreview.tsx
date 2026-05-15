@@ -1,3 +1,4 @@
+import {NeighborhoodMiniApp} from '@code-dot-org/neighborhood-mini-app';
 import {useCodebridgeContext} from '@codebridge/codebridgeContext';
 import CodebridgeRegistry from '@codebridge/CodebridgeRegistry';
 import {
@@ -82,6 +83,14 @@ const NeighborhoodPreview: React.FunctionComponent<
       onPartialLineMessage
     );
     CodebridgeRegistry.getInstance().setNeighborhood(neighborhoodRef);
+    // Also register the generic MiniApp slot. We adopt the legacy
+    // Neighborhood rather than spinning up a second instance, so signal
+    // dispatch through either slot lands in the same queue. Once
+    // codebridge fully routes through the MiniApp interface, this
+    // becomes the only registration and `setNeighborhood` retires.
+    CodebridgeRegistry.getInstance().setMiniApp(
+      new NeighborhoodMiniApp(neighborhoodRef)
+    );
     return neighborhoodRef;
   }, [dispatch]);
 

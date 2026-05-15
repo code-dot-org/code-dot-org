@@ -21,10 +21,7 @@ import {getStore} from '@cdo/apps/redux';
 import {createUuid} from '@cdo/apps/utils';
 
 import {AWAITING_INPUT, SENDING_INPUT} from './pythonHelpers/constants';
-import {
-  parseMessageToNeighborhoodSignal,
-  parseErrorMessage,
-} from './pythonHelpers/messageHelpers';
+import {parseErrorMessage} from './pythonHelpers/messageHelpers';
 import {MessageTag} from './pythonHelpers/patches';
 import {PyodideMessage} from './types';
 
@@ -96,6 +93,7 @@ const setUpPyodideWorker = () => {
     const onSuccess = callbacks[id];
 
     const neighborhood = CodebridgeRegistry.getInstance().getNeighborhood();
+    const miniApp = CodebridgeRegistry.getInstance().getMiniApp();
     if (!loadedMessageHandlers) {
       const messageHandlers = getMessageHandlers(
         CodebridgeRegistry.getInstance().getConsoleManager(),
@@ -124,12 +122,13 @@ const setUpPyodideWorker = () => {
           writeConsoleMessage(getImageMessage(image));
           break;
         }
-        if (message.startsWith(MessageTag.NEIGHBORHOOD_SIGNAL)) {
-          if (neighborhood) {
-            // Parse message string to NeighborhoodSignal.
-            const data = parseMessageToNeighborhoodSignal(message);
-            neighborhood.handleSignal(data);
-          }
+        if (miniApp && message.startsWith(miniApp.signalTag)) {
+          // Mini-app signal envelope (currently only `[NEIGHBORHOOD]`).
+          // The wrapped Neighborhood is the same instance that powers
+          // the legacy slot, so this and `getNeighborhood().handleSignal`
+          // would route to the same queue.
+          const data = miniApp.parseSignal(message);
+          if (data) miniApp.handleSignal(data);
           break;
         }
         if (message.includes(MessageTag.INPUT_PROMPT)) {

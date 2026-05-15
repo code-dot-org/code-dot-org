@@ -110,4 +110,26 @@ describe('NeighborhoodMiniApp', () => {
     );
     expect(typeof out).toBe('string');
   });
+
+  it('adopts an externally-supplied Neighborhood instance', () => {
+    // The migration path: codebridge passes an already-constructed
+    // legacy Neighborhood (or anything matching NeighborhoodLike) and
+    // we wrap it without constructing a fresh one.
+    const adopted = {
+      handleSignal: vi.fn(),
+      onRun: vi.fn(),
+      onStop: vi.fn(),
+      onClose: vi.fn(),
+      reset: vi.fn(),
+      waitUntilDone: vi.fn().mockResolvedValue(undefined),
+    };
+    const app = new NeighborhoodMiniApp(adopted);
+    // The inner constructor must not fire when we adopt.
+    expect(ctorSpy).not.toHaveBeenCalled();
+    app.onRun();
+    app.handleSignal({value: 'MOVE'} as never);
+    expect(adopted.onRun).toHaveBeenCalledTimes(1);
+    expect(adopted.handleSignal).toHaveBeenCalledTimes(1);
+    expect(app.getNeighborhood()).toBe(adopted);
+  });
 });

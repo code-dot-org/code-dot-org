@@ -1,4 +1,5 @@
 export {NeighborhoodMiniApp, default} from './NeighborhoodMiniApp';
+export type {NeighborhoodLike} from './NeighborhoodMiniApp';
 
 export {default as NeighborhoodPreview} from './NeighborhoodPreview';
 export {default as NeighborhoodVisualization} from './NeighborhoodVisualization';
