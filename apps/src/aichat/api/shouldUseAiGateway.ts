@@ -6,7 +6,7 @@ import {isGeminiModel} from './client/helpers/modelHelpers';
 
 type ModelId = ValueOf<typeof AiChatModelIds>;
 
-export default function supportsClientApi(modelId: ModelId) {
+export default function shouldUseAiGateway(modelId: ModelId) {
   // FLASH_IMAGE has no Rails backend support, so it always routes through the gateway.
   if (modelId === AiChatModelIds.GEMINI_2_5_FLASH_IMAGE) return true;
   return (

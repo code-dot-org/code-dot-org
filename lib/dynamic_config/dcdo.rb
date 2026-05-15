@@ -68,6 +68,7 @@ class DCDOBase < DynamicConfigBase
       'sketchlab-s3-image-storage': DCDO.get('sketchlab-s3-image-storage', true),
       'brand-router-enabled': DCDO.get('brand-router-enabled', false),
       'ai-gateway-enabled': DCDO.get('ai-gateway-enabled', true),
+      'enable-speech-to-text': DCDO.get('enable-speech-to-text', false),
       'frontend-observability-enabled': DCDO.get('frontend-observability-enabled', false),
       'frontend-newrelic-enabled': DCDO.get('frontend-newrelic-enabled', true),
       'browser-events-enabled': DCDO.get('browser-events-enabled', true),
