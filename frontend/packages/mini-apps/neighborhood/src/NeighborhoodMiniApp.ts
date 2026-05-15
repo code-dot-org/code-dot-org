@@ -14,50 +14,9 @@ import {parseNeighborhoodSignal} from './parseNeighborhoodSignal';
 import type {ConsoleSignal, NeighborhoodSignal} from './types';
 
 /**
- * Structural shape of the underlying signal-queue object. The package's
- * own `Neighborhood` class satisfies this — and so does the
- * pre-migration copy at `apps/src/miniApps/neighborhood/Neighborhood.ts`,
- * which lets codebridge wrap its existing instance while the migration
- * is in flight. Once that legacy copy is gone, this interface and the
- * `Neighborhood` class collapse back into one type.
- */
-export interface NeighborhoodLike {
-  handleSignal(signal: NeighborhoodSignal | ConsoleSignal | null): void;
-  onRun(): void;
-  onStop(): void;
-  onClose(): void;
-  reset(): void;
-  waitUntilDone(): Promise<void>;
-  /**
-   * Boot the MazeController against the rendered SVG and start the
-   * level. Signature is intentionally permissive — the inner
-   * Neighborhood validates the shapes at runtime.
-   */
-  afterInject(...args: unknown[]): void;
-}
-
-function isNeighborhoodLike(
-  arg: MiniAppDeps | NeighborhoodLike,
-): arg is NeighborhoodLike {
-  return typeof (arg as NeighborhoodLike).handleSignal === 'function';
-}
-
-/**
- * Neighborhood implementation of the `MiniApp` contract. Wraps a
- * `Neighborhood` signal-queue so codebridge can talk to one polymorphic
+ * Neighborhood implementation of the `MiniApp` contract. Owns a
+ * `Neighborhood` signal queue so codebridge can talk to one polymorphic
  * object regardless of which mini-app is mounted.
- *
- * Two construction modes:
- *
- *   - `new NeighborhoodMiniApp(deps)` — the production path. Constructs
- *     a fresh `Neighborhood` from the package using the codebridge
- *     callbacks in `MiniAppDeps`.
- *
- *   - `new NeighborhoodMiniApp(existingNeighborhood)` — the migration
- *     path. Adopts a pre-built instance (the legacy
- *     `apps/src/miniApps/neighborhood/Neighborhood`) so codebridge can
- *     register a MiniApp alongside the legacy slot without
- *     double-allocating state.
  */
 export class NeighborhoodMiniApp
   implements MiniApp<NeighborhoodSignal | ConsoleSignal>
@@ -67,25 +26,15 @@ export class NeighborhoodMiniApp
   readonly PreviewComponent: ComponentType<MiniAppPreviewProps> =
     NeighborhoodPreview;
 
-  private readonly neighborhood: NeighborhoodLike;
+  private readonly neighborhood: Neighborhood;
 
-  // Order matters: the legacy Neighborhood has private fields with the
-  // same names as `MiniAppDeps` properties, which would make TS pick
-  // the deps overload first and then reject the access. Probing for
-  // `handleSignal` first selects the adopt path cleanly.
-  constructor(neighborhood: NeighborhoodLike);
-  constructor(deps: MiniAppDeps);
-  constructor(arg: MiniAppDeps | NeighborhoodLike) {
-    if (isNeighborhoodLike(arg)) {
-      this.neighborhood = arg;
-    } else {
-      this.neighborhood = new Neighborhood(
-        arg.onOutputMessage,
-        arg.onNewlineMessage,
-        arg.setIsRunning,
-        arg.onPartialOutputMessage,
-      );
-    }
+  constructor(deps: MiniAppDeps) {
+    this.neighborhood = new Neighborhood(
+      deps.onOutputMessage,
+      deps.onNewlineMessage,
+      deps.setIsRunning,
+      deps.onPartialOutputMessage,
+    );
   }
 
   parseSignal(line: string) {
@@ -125,10 +74,13 @@ export class NeighborhoodMiniApp
    * level + skin + serialized maze. Called by the package's
    * `NeighborhoodPreview` after mount, once codebridge has supplied the
    * inputs through `NeighborhoodInputsContext`. Signature stays
-   * permissive — same reason as on `NeighborhoodLike.afterInject`.
+   * permissive — the inner `Neighborhood.afterInject` validates the
+   * shapes at runtime.
    */
   afterInject(...args: unknown[]): void {
-    this.neighborhood.afterInject(...args);
+    // The inner method has a strict typed signature; the wrapper stays
+    // permissive at the codebridge boundary, so we cast through here.
+    (this.neighborhood.afterInject as (...a: unknown[]) => void)(...args);
   }
 }
 
