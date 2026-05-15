@@ -44,6 +44,33 @@ export class ProfessionalLearningPage {
   }
 
   /**
+   * Asserts shared staff-center resources and the workshops table row.
+   */
+  async expectWorkshopCenterContent(): Promise<void> {
+    await expect(
+      this.page.getByRole('link', {name: 'View workshop dashboard'}),
+    ).toHaveAttribute('href', /\/pd\/workshop_dashboard/);
+    await expect(
+      this.page.getByRole('button', {name: 'Workshop Details'}),
+    ).toBeVisible({timeout: 30_000});
+  }
+
+  /**
+   * Asserts the regional-partner center resource links.
+   */
+  async expectRegionalPartnerResources(): Promise<void> {
+    await expect(
+      this.page.getByRole('link', {name: 'View workshop dashboard'}),
+    ).toHaveAttribute('href', /\/pd\/workshop_dashboard/);
+    await expect(
+      this.page.getByRole('link', {name: 'View playbook'}),
+    ).toHaveAttribute(
+      'href',
+      /\/professional-learning\/regional-partner\/playbook/,
+    );
+  }
+
+  /**
    * Starts the self-paced PL course used by the source Cucumber scenario.
    */
   async startSelfPacedCourse(): Promise<void> {

@@ -504,7 +504,8 @@ type TestRoleEndpoint =
   | 'universal_instructor_access'
   | 'plc_reviewer_access'
   | 'facilitator_access'
-  | 'program_manager_access';
+  | 'program_manager_access'
+  | 'workshop_admin_access';
 
 /**
  * POSTs a current-user role endpoint from TestController.
@@ -573,6 +574,16 @@ export async function grantFacilitatorAccess(page: Page): Promise<void> {
  */
 export async function grantProgramManagerAccess(page: Page): Promise<void> {
   await grantTestRole(page, 'program_manager_access');
+}
+
+/**
+ * Grants workshop administrator access to the current user.
+ * Mirrors `I make the teacher a workshop admin` from pd.rb.
+ *
+ * @param page - Playwright page holding the signed-in teacher session
+ */
+export async function grantWorkshopAdminAccess(page: Page): Promise<void> {
+  await grantTestRole(page, 'workshop_admin_access');
 }
 
 /**
