@@ -6,15 +6,13 @@ import {
 import {useCodebridgeContext} from '@codebridge/codebridgeContext';
 import CodebridgeRegistry from '@codebridge/CodebridgeRegistry';
 import ControlButtons from '@codebridge/Console/ControlButtons';
-import {MiniApps} from '@codebridge/constants';
+import {getMiniAppOrchestrator} from '@codebridge/miniAppRegistry';
 import {IconButton as MuiIconButton} from '@mui/material';
 import React, {useEffect, useMemo, useState} from 'react';
 
 import codebridgeI18n from '@cdo/apps/codebridge/locale';
 import PanelContainer from '@cdo/apps/lab2/views/components/PanelContainer';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
-
-import NeighborhoodPreview from './NeighborhoodPreview';
 
 import moduleStyles from './mini-app-preview.module.scss';
 
@@ -54,22 +52,27 @@ const MiniAppPreview: React.FunctionComponent<MiniAppPreviewProps> = ({
     setIsResetButtonDisabled(true);
   }, [levelProperties.id]);
 
-  const miniApp = useAppSelector(
+  const miniAppName = useAppSelector(
     state => state.lab2Project.projectSources?.labConfig?.miniApp?.name
   );
 
   const miniAppComponent = useMemo(() => {
-    if (miniApp === MiniApps.Neighborhood) {
-      return <NeighborhoodPreview handleScaling={handleScaling} />;
-    }
-    return null;
-  }, [handleScaling, miniApp]);
+    if (!miniAppName) return null;
+    const miniApp = CodebridgeRegistry.getInstance().getMiniApp();
+    const PreviewComponent = miniApp?.PreviewComponent;
+    if (!PreviewComponent) return null;
+    const Orchestrator = getMiniAppOrchestrator(miniAppName);
+    const rendered = <PreviewComponent handleScaling={handleScaling} />;
+    return Orchestrator ? (
+      <Orchestrator handleScaling={handleScaling}>{rendered}</Orchestrator>
+    ) : (
+      rendered
+    );
+  }, [handleScaling, miniAppName]);
 
   const resetMiniApp = () => {
     setIsResetButtonDisabled(true);
-    if (miniApp === MiniApps.Neighborhood) {
-      CodebridgeRegistry.getInstance().getNeighborhood()?.reset();
-    }
+    CodebridgeRegistry.getInstance().getMiniApp()?.reset();
   };
 
   return (

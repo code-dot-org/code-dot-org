@@ -14,7 +14,6 @@ import {setIsRunning} from '@cdo/apps/lab2/redux/systemRedux';
 import {MazeCell, MultiFileSource} from '@cdo/apps/lab2/types';
 import skins from '@cdo/apps/maze/skins';
 import Neighborhood from '@cdo/apps/miniApps/neighborhood/Neighborhood';
-import NeighborhoodVisualization from '@cdo/apps/miniApps/neighborhood/NeighborhoodVisualization';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 import {DEFAULT_MINI_APP_SIZE} from '../Workspace/constants';
@@ -24,12 +23,24 @@ import moduleStyles from './mini-app-preview.module.scss';
 
 interface NeighborhoodPreviewProps {
   handleScaling?: boolean;
+  /**
+   * The mini-app's `PreviewComponent` — i.e. the SVG visualization the
+   * package owns. We host it inside the orchestration container so the
+   * scaling ref / container styles still apply.
+   */
+  children?: React.ReactNode;
 }
 
-// Preview panel for the neighborhood mini app.
+/**
+ * Codebridge-side orchestrator for the Neighborhood mini-app. Owns the
+ * apps-only wiring — codebridge context, redux, the maze skin loader,
+ * and the scaling-container ref — and hosts the package's
+ * visualization as `children`. The package owns the rendered DOM; this
+ * component owns the surrounding effects.
+ */
 const NeighborhoodPreview: React.FunctionComponent<
   NeighborhoodPreviewProps
-> = ({handleScaling}) => {
+> = ({handleScaling, children}) => {
   const {config, levelProperties} = useCodebridgeContext();
   const serializedMaze = useAppSelector(state => {
     const source = state.lab2Project.projectSources?.source as MultiFileSource;
@@ -147,7 +158,7 @@ const NeighborhoodPreview: React.FunctionComponent<
 
   return (
     <div ref={containerRef} className={moduleStyles.miniAppContainer}>
-      <NeighborhoodVisualization useProtectedDiv={false} />
+      {children}
     </div>
   );
 };
