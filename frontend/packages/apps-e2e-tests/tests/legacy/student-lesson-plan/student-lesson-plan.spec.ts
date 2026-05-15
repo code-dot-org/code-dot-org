@@ -2,20 +2,17 @@ import {createStudent} from '../../shared/auth';
 import {expect, test} from '../../shared/fixtures';
 
 /**
- * Student lesson plan page — content sections and lesson navigation.
- *
- * Source:
- *   dashboard/test/ui/features/teacher_tools/student_lesson_plan.feature
- *
- * Tagged @no_safari @no_mobile. A link on the unit overview opens the lesson
- * plan in a new tab; the test captures the new page via context event.
+ * Migration status: COMPLETED
+ * Source: dashboard/test/ui/features/teacher_tools/student_lesson_plan.feature
+ * Scenario: Viewing Student Lesson Plan
  */
-
 test(
   'student lesson plan: content sections and lesson navigation',
   {tag: '@no_mobile'},
-  async ({page}) => {
-    await createStudent(page);
+  async ({browserName, page}) => {
+    test.skip(browserName === 'webkit', '@no_safari');
+
+    await createStudent(page, {name: 'Jean'});
     await page.goto('/courses/allthelessonplans/units/1?no_redirect=true');
     await page
       .locator('.ui-test-lesson-resources')
