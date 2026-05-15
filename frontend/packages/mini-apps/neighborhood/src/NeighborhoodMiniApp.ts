@@ -30,11 +30,8 @@ export interface NeighborhoodLike {
   waitUntilDone(): Promise<void>;
   /**
    * Boot the MazeController against the rendered SVG and start the
-   * level. Signature is intentionally permissive — codebridge passes
-   * shapes assembled from level/skin data it owns, and the inner
-   * Neighborhood validates them at runtime. Once orchestration moves
-   * inside the package this leaves `NeighborhoodLike` and becomes a
-   * private detail.
+   * level. Signature is intentionally permissive — the inner
+   * Neighborhood validates the shapes at runtime.
    */
   afterInject(...args: unknown[]): void;
 }
@@ -124,13 +121,14 @@ export class NeighborhoodMiniApp
   }
 
   /**
-   * Escape hatch for codebridge orchestration code that still owns the
-   * MazeController boot — exposes the inner Neighborhood-shaped object
-   * so the preview's effect can call `afterInject(...)`. Will go away
-   * once that lives inside `NeighborhoodPreview`.
+   * Boot the MazeController against the rendered SVG and feed in the
+   * level + skin + serialized maze. Called by the package's
+   * `NeighborhoodPreview` after mount, once codebridge has supplied the
+   * inputs through `NeighborhoodInputsContext`. Signature stays
+   * permissive — same reason as on `NeighborhoodLike.afterInject`.
    */
-  getNeighborhood(): NeighborhoodLike {
-    return this.neighborhood;
+  afterInject(...args: unknown[]): void {
+    this.neighborhood.afterInject(...args);
   }
 }
 

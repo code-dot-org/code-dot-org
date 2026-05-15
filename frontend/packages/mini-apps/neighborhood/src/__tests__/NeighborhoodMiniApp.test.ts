@@ -14,6 +14,7 @@ const {ctorSpy, inner} = vi.hoisted(() => {
     onClose: vi.fn(),
     reset: vi.fn(),
     waitUntilDone: vi.fn().mockResolvedValue(undefined),
+    afterInject: vi.fn(),
   };
   return {ctorSpy: vi.fn(), inner: innerStub};
 });
@@ -26,6 +27,7 @@ vi.mock('../Neighborhood', () => ({
     onClose = inner.onClose;
     reset = inner.reset;
     waitUntilDone = inner.waitUntilDone;
+    afterInject = inner.afterInject;
     constructor(...args: unknown[]) {
       ctorSpy(...args);
     }
@@ -131,6 +133,11 @@ describe('NeighborhoodMiniApp', () => {
     app.handleSignal({value: 'MOVE'} as never);
     expect(adopted.onRun).toHaveBeenCalledTimes(1);
     expect(adopted.handleSignal).toHaveBeenCalledTimes(1);
-    expect(app.getNeighborhood()).toBe(adopted);
+  });
+
+  it('forwards afterInject through to the inner Neighborhood', () => {
+    const app = new NeighborhoodMiniApp(stubDeps());
+    app.afterInject('a', 'b', 'c');
+    expect(inner.afterInject).toHaveBeenCalledWith('a', 'b', 'c');
   });
 });
