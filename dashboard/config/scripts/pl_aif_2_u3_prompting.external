@@ -5,7 +5,7 @@ description 'description here'
 markdown <<MARKDOWN
 # Prompting Basics
 
-#### In this unit, students use arrays and objects to manage real-world data and build interactive web app features. Strong prompting skills are essential to help them generate useful code, understand program behavior, and improve their solutions.
+In this unit, students use arrays and objects to manage real-world data and build interactive web app features. Strong prompting skills are essential to help them generate useful code, understand program behavior, and improve their solutions.
 
 ## Strong prompts include: 
 
@@ -40,17 +40,17 @@ markdown <<MARKDOWN
 ---
 ## Example Prompts 
 
-#### **Example 1: Declaring an array of 5 objects**
+**Example 1: Declaring an array of 5 objects**
 
-#### I’m building a JavaScript web app that tracks books. Create an array with 5 book objects. Each object should include title, author, and pages. Use realistic example data. Keep the code simple and beginner-friendly.
+I’m building a JavaScript web app that tracks books. Create an array with 5 book objects. Each object should include title, author, and pages. Use realistic example data. Keep the code simple and beginner-friendly.
 
-#### **Example 2: Writing a push function (adding to a schedule)**
+**Example 2: Writing a push function (adding to a schedule)**
 
-#### I’m making a schedule app using JavaScript and arrays. Write a function called addEvent that takes an event object and adds it to the end of a schedule array using .push(). Each event should have name and time. Include an example of calling the function.
+I’m making a schedule app using JavaScript and arrays. Write a function called addEvent that takes an event object and adds it to the end of a schedule array using .push(). Each event should have name and time. Include an example of calling the function.
 
-#### **Example 3: Sorting data (smallest to largest)**
+**Example 3: Sorting data (smallest to largest)**
 
-#### I have an array of numbers in JavaScript. Write a function that sorts the array from smallest to largest. Use a built-in method if possible, and explain the code with short comments for a beginner.
+I have an array of numbers in JavaScript. Write a function that sorts the array from smallest to largest. Use a built-in method if possible, and explain the code with short comments for a beginner.
 
 ---
 
@@ -61,5 +61,5 @@ markdown <<MARKDOWN
 
 ## Reminder
 
-#### As you work through this module, remember: the clearer your prompt, the more useful and accurate the code the AI will generate.
+As you work through this module, remember: the clearer your prompt, the more useful and accurate the code the AI will generate.
 MARKDOWN

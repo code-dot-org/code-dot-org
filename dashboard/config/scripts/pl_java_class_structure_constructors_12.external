@@ -5,9 +5,9 @@ description 'description here'
 markdown <<MARKDOWN
 # Constructors
 
-#### The next part of writing a class is creating the **constructor**, because it sets up the object with the information it needs as soon as it's created.
+The next part of writing a class is creating the **constructor**, because it sets up the object with the information it needs as soon as it's created.
 
-#### You can think of a constructor like a recipe that tells Java how to make a new object and what ingredients (information) to include when it's created.
+You can think of a constructor like a recipe that tells Java how to make a new object and what ingredients (information) to include when it's created.
 
 <div style="background-color: #B7E0E5; border-radius: 10px; padding: 15px; margin: 20px auto; max-width: 85%; box-sizing: border-box; word-wrap: break-word; overflow-wrap: break-word;">
 <p style="font-size: 14pt; margin-top: 12px; line-height: 120%;">📖 <strong>Constructor</strong> is a block of code that has the <b>same name as the class</b> and tells the computer how to create a new object.
@@ -17,7 +17,7 @@ markdown <<MARKDOWN
 
 ## Class Structure 
 
-#### Take a look at the code for the Book class below. Notice the two types of constructors underneath the instance variables. 
+Take a look at the code for the Book class below. Notice the two types of constructors underneath the instance variables. 
 
 <img 
   src="https://images.code.org/dd33516776a34db9b7e39bfa34be9bfc-image-1747764289087.png" 

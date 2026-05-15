@@ -12,7 +12,7 @@ markdown <<MARKDOWN
 
 # Welcome!
 
-#### This professional learning module prepares you to teach a unit where students advance from managing single interactions to processing entire collections of data using iteration and loops.
+This professional learning module prepares you to teach a unit where students advance from managing single interactions to processing entire collections of data using iteration and loops.
 
 
 
@@ -28,11 +28,11 @@ ___
 ___
 
 
-#### **By the end of this professional learning module, you will be able to:**
+**By the end of this professional learning module, you will be able to:**
 
-* #### Explain how iteration and loops work
-* #### Implement loops in JavaScript to create interactive features such as filters, searches, and views
-* #### Guide students in using AI-generated scaffolds responsibly, emphasizing accountability for both data choices and code.
+* Explain how iteration and loops work
+* Implement loops in JavaScript to create interactive features such as filters, searches, and views
+* Guide students in using AI-generated scaffolds responsibly, emphasizing accountability for both data choices and code.
 
 
 

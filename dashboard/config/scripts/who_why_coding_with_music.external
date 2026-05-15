@@ -4,7 +4,7 @@ description 'description here'
 
 markdown <<MARKDOWN
 ## Who is Coding with Music for? 
-#### Coding with Music is designed for students with diverse interests and abilities, including those who may not connect with traditional programming activities. It’s ideal for teachers seeking flexible, inclusive resources to introduce computer science in an engaging, creative format.
+Coding with Music is designed for students with diverse interests and abilities, including those who may not connect with traditional programming activities. It’s ideal for teachers seeking flexible, inclusive resources to introduce computer science in an engaging, creative format.
 
 ## Why Teach Coding with Music? 
 <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 20px; margin: 0 auto; max-width: 1200px;">

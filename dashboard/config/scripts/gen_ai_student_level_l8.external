@@ -5,14 +5,14 @@ description 'description here'
 markdown <<MARKDOWN
 # ✅ Lesson Recap: Attention Is All You Need
 
-#### After this lesson, you can 
+After this lesson, you can 
 
-* #### Explain how embeddings and neural networks are used in the attention process
-* #### Construct examples of words and sentences that require context clues to understand fully
+* Explain how embeddings and neural networks are used in the attention process
+* Construct examples of words and sentences that require context clues to understand fully
 
 ## **Key Terms**
 
-* #### **Attention** - A process that updates the meaning of each word by using the context from the other words in the input
+* **Attention** - A process that updates the meaning of each word by using the context from the other words in the input
 
 ## Resources
 

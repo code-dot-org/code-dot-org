@@ -109,7 +109,7 @@ Look at each example below and choose whether it should use <strong>Hardcoded / 
 
 ## Rule of Thumb
 
-#### Frequently changing, time-sensitive data should be fetched **Live**, while stable, structural, or rarely changing data is better stored **Locally** for speed and reliability.
+Frequently changing, time-sensitive data should be fetched **Live**, while stable, structural, or rarely changing data is better stored **Locally** for speed and reliability.
   
 
 
