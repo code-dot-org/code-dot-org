@@ -6,7 +6,7 @@
   "user_id": 18603,
   "properties": {
     "encrypted": "false",
-    "long_instructions": "## Create a Conditional Flowchart\r\n\r\nExplore the flowchart components. Then, create a flowchart to model your own  conditional.\r\n\r\nSave your sketch to your **Backpack**, so you can use it in the following level.",
+    "long_instructions": "## Do This:\r\n\r\n1. Create a flowchart to model your own scenario.\r\n\r\n2. Save your flowchart to your **Backpack**.\r\n\r\n---\r\n\r\n### Example Scenario: Shopping Cart\r\n\r\n- If the user adds at least one item, display the notification badge with the current item total.\r\n- If the user has no items in their cart, hide the badge.",
     "start_sources": {
       "source": {
         "nodes": [
@@ -49,14 +49,18 @@
               "label": "",
               "backgroundColor": "transparent",
               "strokeColor": "var(--sketchlab-stroke-default)",
-              "fontColor": "var(--sketchlab-stroke-default)"
+              "fontColor": "var(--sketchlab-stroke-default)",
+              "locked": true
             },
             "measured": {
-              "width": 406,
-              "height": 635
+              "width": 414,
+              "height": 559
             },
             "dragging": false,
-            "zIndex": -1
+            "zIndex": -1,
+            "width": 414,
+            "height": 559,
+            "resizing": false
           },
           {
             "id": "FtgHojQj0r-NGEdWG3qwn",
@@ -141,11 +145,12 @@
               "text": "Flowchart Components ",
               "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": "large",
-              "showHandles": false
+              "showHandles": false,
+              "locked": true
             },
             "measured": {
-              "width": 255,
-              "height": 47
+              "width": 254,
+              "height": 46
             }
           },
           {
@@ -168,24 +173,6 @@
             "measured": {
               "width": 1880,
               "height": 1228
-            }
-          },
-          {
-            "id": "2tm9i046KFB5_Regv0SDT",
-            "type": "text",
-            "position": {
-              "x": 2328.2590989612395,
-              "y": -2174.338340668448
-            },
-            "data": {
-              "text": "Your Workspace",
-              "fontColor": "var(--sketchlab-stroke-default)",
-              "fontSize": "large",
-              "showHandles": false
-            },
-            "measured": {
-              "width": 177,
-              "height": 47
             }
           },
           {
@@ -358,64 +345,15 @@
               "y": -577.709167752942
             },
             "data": {
-              "text": "Model",
+              "text": "Example",
               "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": "large",
               "showHandles": false
             },
             "measured": {
-              "width": 79,
-              "height": 47
+              "width": 101,
+              "height": 46
             }
-          },
-          {
-            "id": "AkKIXIm448d8U3O4Fc4UA",
-            "type": "shape",
-            "position": {
-              "x": 1093.4257312761297,
-              "y": -1668.498026098448
-            },
-            "style": {
-              "width": 231.15911762042447,
-              "height": 72.99037364781316
-            },
-            "data": {
-              "shapeType": "circle",
-              "label": "Variable",
-              "backgroundColor": "var(--sketchlab-bg-green)",
-              "strokeColor": "var(--sketchlab-stroke-default)",
-              "fontColor": "var(--sketchlab-stroke-default)",
-              "fontSize": "large"
-            },
-            "measured": {
-              "width": 231,
-              "height": 73
-            }
-          },
-          {
-            "id": "XDCOD5UItDGJdGoMLVb81",
-            "type": "shape",
-            "position": {
-              "x": 2050.485588049628,
-              "y": -556.165313546116
-            },
-            "style": {
-              "width": 202.29915687557042,
-              "height": 96.51582450387939
-            },
-            "data": {
-              "shapeType": "circle",
-              "label": "totalPrice",
-              "backgroundColor": "var(--sketchlab-bg-green)",
-              "strokeColor": "var(--sketchlab-stroke-default)",
-              "fontColor": "var(--sketchlab-stroke-default)",
-              "fontSize": "large"
-            },
-            "measured": {
-              "width": 202,
-              "height": 97
-            },
-            "dragging": false
           },
           {
             "id": "d084920f-9aba-40a4-a827-ef990ed84cab",
@@ -486,8 +424,8 @@
               "y": -261.1084360077233
             },
             "measured": {
-              "width": 58,
-              "height": 39
+              "width": 57,
+              "height": 38
             },
             "dragging": false
           },
@@ -503,8 +441,8 @@
               "y": -264.3269203827233
             },
             "measured": {
-              "width": 58,
-              "height": 39
+              "width": 57,
+              "height": 38
             },
             "dragging": false
           }
@@ -560,16 +498,6 @@
             }
           },
           {
-            "id": "642e09ce-5e59-4fb2-95f5-2331ac9d43b4",
-            "source": "Mt_aglExI-SgcyRjW1iPJ",
-            "target": "XDCOD5UItDGJdGoMLVb81",
-            "sourceHandle": "right-source",
-            "targetHandle": "left-target",
-            "markerEnd": {
-              "type": "arrowclosed"
-            }
-          },
-          {
             "source": "McFE1K1B6hPIr4g31ZgHp",
             "sourceHandle": "bottom-source",
             "target": "vrco96t5fb3aOyVwob9K1",
@@ -581,14 +509,14 @@
           }
         ],
         "viewport": {
-          "x": -508.5121170719501,
-          "y": 1250.1062836425463,
+          "x": -491.4789368351336,
+          "y": 1275.2958130614916,
           "zoom": 0.5565488559496535
         }
       }
     },
     "display_name": "Choose Your Own Scenario",
-    "bubble_choice_description": "Use Sketch Lab to design a flowchart for your own scenario. ",
+    "bubble_choice_description": "Create a flowchart for your own scenario. ",
     "thumbnail_url": "https://images.code.org/1c6c44de7140845be4df066516add379-Screenshot 2026-04-14 at 5.21.08 PM.png",
     "exemplar_sources": {
       "source": {
@@ -2379,6 +2307,6 @@
     "name_suffix": "_2026"
   },
   "published": true,
-  "audit_log": "[{\"changed_at\":\"2026-04-14T23:01:20.719+00:00\",\"changed\":[\"cloned from \\\"ai-and-algorithmic-decisions-lesson5-level1a_2026\\\"\"],\"cloned_from\":\"ai-and-algorithmic-decisions-lesson5-level1a_2026\"},{\"changed_at\":\"2026-04-14 23:02:03 +0000\",\"changed\":[\"long_instructions\",\"display_name\",\"bubble_choice_description\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-14 23:04:53 +0000\",\"changed\":[\"display_name\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-14 23:21:59 +0000\",\"changed\":[\"thumbnail_url\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-05-01 12:42:10 -0400\",\"changed\":[\"start_sources\"],\"changed_by_id\":1,\"changed_by_email\":\"levelbuilder@dev.com\"},{\"changed_at\":\"2026-05-06 20:15:36 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":155,\"changed_by_email\":\"dani@code.org\"},{\"changed_at\":\"2026-05-08 13:02:59 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":155,\"changed_by_email\":\"dani@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2026-04-14T23:01:20.719+00:00\",\"changed\":[\"cloned from \\\"ai-and-algorithmic-decisions-lesson5-level1a_2026\\\"\"],\"cloned_from\":\"ai-and-algorithmic-decisions-lesson5-level1a_2026\"},{\"changed_at\":\"2026-04-14 23:02:03 +0000\",\"changed\":[\"long_instructions\",\"display_name\",\"bubble_choice_description\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-14 23:04:53 +0000\",\"changed\":[\"display_name\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-14 23:21:59 +0000\",\"changed\":[\"thumbnail_url\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-05-01 12:42:10 -0400\",\"changed\":[\"start_sources\"],\"changed_by_id\":1,\"changed_by_email\":\"levelbuilder@dev.com\"},{\"changed_at\":\"2026-05-06 20:15:36 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":155,\"changed_by_email\":\"dani@code.org\"},{\"changed_at\":\"2026-05-08 13:02:59 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":155,\"changed_by_email\":\"dani@code.org\"},{\"changed_at\":\"2026-05-13 14:24:39 +0000\",\"changed\":[\"long_instructions\",\"bubble_choice_description\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2026-05-13 14:25:38 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2026-05-13 14:26:34 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2026-05-13 14:27:56 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2026-05-13 14:28:20 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
 }]]></config>
 </Sketchlab>
