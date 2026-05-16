@@ -24,7 +24,7 @@ export class LockoutPhasePage {
    * Opens account settings and waits for visible account-edit readiness signals.
    */
   public async gotoEditAndWaitForFields(): Promise<void> {
-    await this.page.goto('/users/edit');
+    await this.page.goto('/users/edit', {waitUntil: 'commit'});
     await expect(this.editAccountHeading).toBeVisible({timeout: 15_000});
     await expect(this.ageField).toBeVisible({timeout: 15_000});
     await expect(this.stateField).toBeVisible({timeout: 15_000});

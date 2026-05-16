@@ -46,7 +46,7 @@ export class ScriptOverviewPage {
    * @param url - dashboard-relative unit overview URL
    */
   async gotoUnitOverview(url: string): Promise<void> {
-    await this.page.goto(url, {waitUntil: 'domcontentloaded'});
+    await this.page.goto(url, {waitUntil: 'commit'});
     await expect(
       this.page.getByRole('tab', {name: /Summary View|Detail View/}).first(),
     ).toBeVisible({timeout: 30_000});
@@ -195,7 +195,7 @@ export class ScriptOverviewPage {
     blocks: object,
     headerLevel: number,
   ): Promise<void> {
-    await this.page.goto(url, {waitUntil: 'domcontentloaded'});
+    await this.page.goto(url, {waitUntil: 'commit'});
     await this.expectRunButtonReady();
     await this.page.evaluate(workspaceBlocks => {
       // eslint-disable-next-line @typescript-eslint/no-explicit-any
