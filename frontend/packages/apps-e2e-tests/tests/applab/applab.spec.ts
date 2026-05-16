@@ -638,21 +638,32 @@ test.describe('App Lab — change event on text input', () => {
         "  console.log(event.targetId + ': ' + getText('text_input1'));\n",
       );
       await applab.appendCode('});');
+      await expect(
+        studentPage.locator('.ace_line').filter({
+          hasText: "onEvent('text_input1', 'change'",
+        }),
+      ).toBeVisible();
+      await expect(
+        studentPage.locator('.ace_line').filter({hasText: 'console.log'}),
+      ).toBeVisible();
       await applab.run();
       await expect(applab.resetButton).toBeVisible({timeout: 15_000});
 
       const input = studentPage.locator('#text_input1');
       await input.waitFor({state: 'visible', timeout: 15_000});
 
-      // Blur after typing → change fires.
-      await input.fill('123');
-      await input.evaluate((el: HTMLElement) => el.blur());
+      // Blur after typing fires change; Tab is the user-visible blur action.
+      await input.click();
+      await input.pressSequentially('123');
+      await expect(input).toHaveValue('123');
+      await input.press('Tab');
       await expect(applab.consoleOutput).toContainText('"text_input1: 123"', {
         timeout: 10_000,
       });
 
-      // Enter after changing the visible value → change fires.
-      await input.fill('123456');
+      // Enter after changing the visible value fires change.
+      await input.click();
+      await input.pressSequentially('456');
       await expect(input).toHaveValue('123456');
       await input.press('Enter');
       await expect(applab.consoleOutput).toContainText(
@@ -660,8 +671,8 @@ test.describe('App Lab — change event on text input', () => {
         {timeout: 10_000},
       );
 
-      // Second blur → no new change event; "123456" appears only once.
-      await input.evaluate((el: HTMLElement) => el.blur());
+      // Second blur produces no new change event; "123456" appears only once.
+      await input.press('Tab');
       await expect
         .poll(async () => {
           const debugText = (await applab.consoleOutput.textContent()) ?? '';

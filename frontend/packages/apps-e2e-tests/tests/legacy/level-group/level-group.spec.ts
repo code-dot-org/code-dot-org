@@ -16,6 +16,20 @@ const LEVEL_URL =
   '/courses/allthethingscourse/units/1/lessons/33/levels/1?noautoplay=true';
 
 /**
+ * Navigate to a level-group page and wait for the source Cucumber readiness
+ * signal: a visible submit button.
+ *
+ * @param page - Playwright page
+ * @param url - level-group URL to open
+ */
+async function gotoLevelGroup(page: Page, url = LEVEL_URL): Promise<void> {
+  await page.goto(url, {waitUntil: 'domcontentloaded'});
+  await page
+    .locator('.submitButton')
+    .waitFor({state: 'visible', timeout: 30_000});
+}
+
+/**
  * Drag an answer tile from a match level's unplaced pool into its first
  * empty slot.  The match level is identified by its 0-based index within all
  * `.match` containers on the page.
@@ -66,10 +80,7 @@ test.describe('Level group — submit multi answers', () => {
     'submit three answers shows incomplete warning; reload restores selections',
     {tag: '@no_mobile'},
     async ({studentPage}) => {
-      await studentPage.goto(LEVEL_URL);
-      await studentPage
-        .locator('.submitButton')
-        .waitFor({state: 'visible', timeout: 30_000});
+      await gotoLevelGroup(studentPage);
       await expect(
         studentPage
           .locator('.level-group-content')
@@ -121,12 +132,12 @@ test.describe('Level group — submit multi answers', () => {
 
       // Confirm — navigates to next level.
       await Promise.all([
-        studentPage.waitForNavigation(),
+        studentPage.waitForNavigation({waitUntil: 'domcontentloaded'}),
         studentPage.locator('#ok-button').click(),
       ]);
 
       // Reload the level; previously selected answers should still be checked.
-      await studentPage.goto(LEVEL_URL);
+      await gotoLevelGroup(studentPage);
       await expect(
         studentPage
           .locator('.level-group-content')
@@ -170,10 +181,7 @@ test.describe('Level group — match levels', () => {
       const {teacherEmail, teacherPassword} =
         await createTeacherAssociatedStudent(page);
 
-      await page.goto(LEVEL_URL);
-      await page
-        .locator('.submitButton')
-        .waitFor({state: 'visible', timeout: 30_000});
+      await gotoLevelGroup(page);
 
       // Verify match level questions.
       await expect(
@@ -224,15 +232,12 @@ test.describe('Level group — match levels', () => {
       await page.locator('.submitButton').first().click();
       await page.locator('.modal').waitFor({state: 'visible', timeout: 15_000});
       await Promise.all([
-        page.waitForNavigation(),
+        page.waitForNavigation({waitUntil: 'domcontentloaded'}),
         page.locator('#ok-button').click(),
       ]);
 
       // Reload — server should restore the placed answers.
-      await page.goto(LEVEL_URL);
-      await page
-        .locator('.submitButton')
-        .waitFor({state: 'visible', timeout: 30_000});
+      await gotoLevelGroup(page);
       await page
         .locator('.match')
         .last()
@@ -259,7 +264,7 @@ test.describe('Level group — match levels', () => {
 
       // Sign in as teacher, open teacher panel, click student row.
       await signIn(page, teacherEmail, teacherPassword);
-      await page.goto(LEVEL_URL.replace('?noautoplay=true', ''));
+      await gotoLevelGroup(page, LEVEL_URL.replace('?noautoplay=true', ''));
       // The show-handle chevron is position:fixed with no layout dimensions;
       // use a raw JS click (mirrors Cucumber's "click selector" which fires a
       // synthetic event that bypasses visibility requirements).
@@ -270,7 +275,7 @@ test.describe('Level group — match levels', () => {
         .locator('.student-table')
         .waitFor({state: 'visible', timeout: 15_000});
       await Promise.all([
-        page.waitForNavigation(),
+        page.waitForNavigation({waitUntil: 'domcontentloaded'}),
         page.locator('#teacher-panel-container tr').nth(1).click(),
       ]);
 
@@ -310,10 +315,7 @@ test.describe('Level group — submit all answers', () => {
     'submit all answers including match levels shows no incomplete warning',
     {tag: '@no_mobile'},
     async ({page}) => {
-      await page.goto(LEVEL_URL);
-      await page
-        .locator('.submitButton')
-        .waitFor({state: 'visible', timeout: 30_000});
+      await gotoLevelGroup(page);
       await expect(
         page.locator('.level-group-content').nth(1).locator('.multi-question'),
       ).toContainText('The standard QWERTY keyboard has');

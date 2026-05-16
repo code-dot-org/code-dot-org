@@ -32,10 +32,7 @@ test.describe('Lesson locking', {tag: ['@no_mobile']}, () => {
     await locks.openLockDialog();
     await expect(locks.modalBody).toContainText(/Lock|Allow editing/);
     // Visual checkpoint stub: "stage lock dialog".
-    await locks.modalBody.getByRole('button', {name: 'Cancel'}).click();
-    await expect(page.locator('.modal-backdrop')).toBeHidden();
-
-    await locks.setLessonLockStatus(sectionId, 0, false, false);
+    await locks.unlockLessonForStudents();
     await locks.gotoUnitOverview(sectionId, {teacherControls: true});
     await expect(
       page.getByRole('button', {name: /Anonymous student survey/}).last(),

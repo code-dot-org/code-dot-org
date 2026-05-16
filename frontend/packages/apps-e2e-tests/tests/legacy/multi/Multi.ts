@@ -63,9 +63,13 @@ export class Multi {
     level: number,
     {resetSession = true}: {resetSession?: boolean} = {},
   ): Promise<void> {
-    if (resetSession) await this.page.goto('/reset_session');
-    await this.page.goto(labLevelUrl(lesson, level));
-    await expect(this.submitButton).toBeVisible();
+    if (resetSession) {
+      await this.page.goto('/reset_session', {waitUntil: 'domcontentloaded'});
+    }
+    await this.page.goto(labLevelUrl(lesson, level), {
+      waitUntil: 'domcontentloaded',
+    });
+    await expect(this.submitButton).toBeVisible({timeout: 30_000});
   }
 
   /**
@@ -83,11 +87,14 @@ export class Multi {
     locale: string,
     {resetSession = true}: {resetSession?: boolean} = {},
   ): Promise<void> {
-    if (resetSession) await this.page.goto('/reset_session');
+    if (resetSession) {
+      await this.page.goto('/reset_session', {waitUntil: 'domcontentloaded'});
+    }
     await this.page.goto(
       `/courses/allthethingscourse/units/1/lessons/${lesson}/levels/${level}/lang/${locale}`,
+      {waitUntil: 'domcontentloaded'},
     );
-    await expect(this.submitButton).toBeVisible();
+    await expect(this.submitButton).toBeVisible({timeout: 30_000});
   }
 
   /**

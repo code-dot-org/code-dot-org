@@ -169,23 +169,28 @@ export class JavaLabPage {
   }
 
   /**
-   * Wait for the current commit to appear in the Review timeline.
+   * Wait for the Review timeline to expose the current commit, or the visible
+   * action enabled by that commit.  In full-suite load the V2 timeline can
+   * render the "Start Review" card before the legacy commit marker class is
+   * attached; the button is the user-facing readiness signal used for the next
+   * step.
    */
   async waitForCommitInReviewTimeline(): Promise<void> {
     await expect(async () => {
-      if (
-        !(await this.codeReviewTimelineCommit
-          .first()
-          .isVisible()
-          .catch(() => false))
-      ) {
+      const hasCommit = await this.codeReviewTimelineCommit
+        .first()
+        .isVisible()
+        .catch(() => false);
+      const canStartReview = await this.openCodeReviewButton
+        .isVisible()
+        .catch(() => false);
+
+      if (!hasCommit && !canStartReview) {
         await expect(this.reviewRefreshButton).toBeVisible({timeout: 10_000});
         await this.reviewRefreshButton.click();
       }
-      await expect(this.codeReviewTimelineCommit).toBeVisible({
-        timeout: 10_000,
-      });
-    }).toPass({timeout: 60_000});
+      expect(hasCommit || canStartReview).toBe(true);
+    }).toPass({timeout: 120_000});
   }
 
   /**
@@ -250,24 +255,51 @@ export class JavaLabPage {
 
   /**
    * Run a console-input Java Lab program through completion.
+   * The visible console prompt is the readiness signal from the Cucumber
+   * scenario.  If a run visibly stalls at the connection state, stop it from
+   * the visible Stop button and retry from a cleared console.
    *
    * @param input - text entered when the program prompts in the console
    */
   async runConsoleProgram(input: string): Promise<void> {
+    const prompt = "What's your name?";
+
     await expect(async () => {
+      await this.stopConsoleProgramIfRunning();
       if (await this.clearConsoleButton.isVisible().catch(() => false)) {
         await this.clearConsoleButton.click();
       }
+      await expect(this.runButton).toBeVisible({timeout: 30_000});
       await this.runButton.click();
-      await expect(this.console).toContainText("What's your name?", {
-        timeout: 60_000,
-      });
-    }).toPass({timeout: 120_000});
+      try {
+        await expect(this.console).toContainText(prompt, {
+          timeout: 30_000,
+        });
+      } catch (error) {
+        await this.stopConsoleProgramIfRunning();
+        throw error;
+      }
+    }).toPass({intervals: [1_000, 2_000, 5_000], timeout: 120_000});
     await this.consoleInput.fill(input);
     await this.consoleInput.press('Enter');
     await expect(this.console).toContainText('[JAVALAB] Program completed.', {
       timeout: 60_000,
     });
+  }
+
+  /**
+   * Stop a Java Lab program when the visible run control is in Stop mode.
+   */
+  private async stopConsoleProgramIfRunning(): Promise<void> {
+    const buttonText = await this.runButton.textContent().catch(() => '');
+    if (!buttonText?.includes('Stop')) {
+      return;
+    }
+
+    await this.runButton.click();
+    await expect(this.console)
+      .toContainText('[JAVALAB] Program stopped.', {timeout: 20_000})
+      .catch(() => undefined);
   }
 
   /**

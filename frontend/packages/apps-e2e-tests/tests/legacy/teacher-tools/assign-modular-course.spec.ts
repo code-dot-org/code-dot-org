@@ -68,18 +68,16 @@ async function clickSectionCheckbox(
 
   await expect(async () => {
     if (!(await checkbox.isChecked())) {
+      await checkbox.check({force: true, timeout: 1_000}).catch(() => {});
+    }
+    if (!(await checkbox.isChecked())) {
+      await checkbox.focus();
+      await page.keyboard.press('Space');
+    }
+    if (!(await checkbox.isChecked())) {
       await sectionLabel.click();
     }
-    if (!(await checkbox.isChecked())) {
-      await checkbox.click({force: true});
-    }
-    if (!(await checkbox.isChecked())) {
-      await sectionLabel.evaluate(element => {
-        const label = element.closest('label') as HTMLLabelElement | null;
-        label?.click();
-      });
-    }
-    expect(await checkbox.isChecked()).toBe(true);
+    await expect(checkbox).toBeChecked({timeout: 1_000});
   }).toPass({timeout: 10_000});
 }
 
@@ -144,10 +142,7 @@ async function assignSectionOneThroughDialog(
   openButton: Locator,
 ): Promise<void> {
   for (let attempt = 0; attempt < 3; attempt++) {
-    await openButton.click();
-    await page
-      .getByRole('button', {name: 'Confirm section assignments'})
-      .waitFor({state: 'visible', timeout: 15_000});
+    await openSectionAssignmentsDialog(page, openButton);
 
     // Both checkboxes should start unchecked.
     await expect(async () =>
@@ -175,6 +170,37 @@ async function assignSectionOneThroughDialog(
   }
 
   throw new Error('Section assignment dialog closed without a section PATCH');
+}
+
+/**
+ * Open the section assignment dialog and wait for its visible confirm button.
+ * Firefox can occasionally focus the legacy assign button without dispatching
+ * the React click handler, so retry with an element click only if the visible
+ * dialog state does not change.
+ *
+ * @param page - Playwright page on the unit or course overview
+ * @param openButton - locator for the relevant "Assign to sections" button
+ */
+async function openSectionAssignmentsDialog(
+  page: Page,
+  openButton: Locator,
+): Promise<void> {
+  const confirmButton = page.getByRole('button', {
+    name: 'Confirm section assignments',
+  });
+
+  await expect(async () => {
+    await expect(openButton).toBeVisible({timeout: 10_000});
+    await expect(openButton).toBeEnabled({timeout: 10_000});
+    await openButton.scrollIntoViewIfNeeded();
+    await openButton.click();
+
+    if (!(await confirmButton.isVisible({timeout: 3_000}).catch(() => false))) {
+      await openButton.evaluate(element => (element as HTMLElement).click());
+    }
+
+    await expect(confirmButton).toBeVisible({timeout: 10_000});
+  }).toPass({timeout: 30_000});
 }
 
 test.describe('Assigning Modular Courses', {tag: '@no_mobile'}, () => {

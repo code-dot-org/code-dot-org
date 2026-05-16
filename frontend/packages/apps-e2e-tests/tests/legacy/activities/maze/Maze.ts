@@ -1,3 +1,5 @@
+import {expect, type Locator} from '@playwright/test';
+
 import {labLevelUrl} from '../../../shared/urls';
 import {LegacyBlocklyLab} from '../../shared/LegacyBlocklyLab';
 
@@ -8,29 +10,38 @@ export class Maze extends LegacyBlocklyLab {
   }
 
   async runUntilInlineFeedback(): Promise<void> {
+    await this.setExecutionSpeedToFast();
     await this.run();
-    await this.waitForRunToFinishWith(
-      '.uitest-topInstructions-inline-feedback',
+    await this.waitForVisibleFeedback(
+      this.page.locator('.uitest-topInstructions-inline-feedback'),
     );
   }
 
+  /** Run the workspace and wait for the Cucumber-visible congrats dialog. */
   async runUntilCongrats(): Promise<void> {
+    await this.setExecutionSpeedToFast();
     await this.run();
-    await this.waitForRunToFinishWith(this.congratsSelector);
+    await this.waitForVisibleFeedback(this.congratsMessage);
   }
 
-  private async waitForRunToFinishWith(selector: string): Promise<void> {
-    await this.page.waitForFunction((feedbackSelector: string) => {
+  /**
+   * Use the same speed control exposed by Cucumber's "set slider speed to fast"
+   * step.  Under full-suite load the default Maze animation can take long
+   * enough to make the visible feedback wait flaky.
+   */
+  private async setExecutionSpeedToFast(): Promise<void> {
+    await this.page.evaluate(() => {
       // eslint-disable-next-line @typescript-eslint/no-explicit-any
-      const maze = (window as any).Maze;
-      const feedbackElement = document.querySelector(feedbackSelector);
-      return (
-        maze?.waitingForReport === false &&
-        maze?.animating_ === false &&
-        feedbackElement instanceof HTMLElement &&
-        feedbackElement.offsetParent !== null &&
-        feedbackElement.textContent?.trim()
-      );
-    }, selector);
+      (window as any).__TestInterface?.setSpeedSliderValue?.(1);
+    });
+  }
+
+  /**
+   * Wait for feedback the user can see.  The Cucumber scenarios assert only the
+   * visible feedback surfaces, not Maze's internal animation/report flags.
+   */
+  private async waitForVisibleFeedback(feedback: Locator): Promise<void> {
+    await expect(feedback).toBeVisible({timeout: 60_000});
+    await expect(feedback).not.toHaveText(/^\s*$/);
   }
 }

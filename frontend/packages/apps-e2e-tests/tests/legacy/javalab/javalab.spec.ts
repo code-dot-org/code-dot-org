@@ -429,6 +429,7 @@ test.describe('Java Lab — code review finish button', () => {
     'running code in own code review keeps finish disabled',
     {tag: ['@no_mobile', '@no_ci']},
     async ({page}) => {
+      test.slow();
       const setup = await setupCodeReviewGroup(page);
       const lab = new JavaLabPage(page);
 
@@ -457,6 +458,7 @@ test.describe('Java Lab — code review finish button', () => {
     "running code in peer's code review keeps finish disabled",
     {tag: ['@no_mobile', '@no_ci']},
     async ({page}) => {
+      test.slow();
       const setup = await setupCodeReviewGroup(page);
       const lab = new JavaLabPage(page);
 

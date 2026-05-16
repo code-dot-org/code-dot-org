@@ -65,6 +65,31 @@ async function waitForInitialProjectSave(page: Page): Promise<void> {
 }
 
 /**
+ * Start a fresh App Lab project and wait for visible editor readiness.
+ * The source Cucumber helper waits for the lab page plus the App Lab mode
+ * buttons; DOMContentLoaded avoids WebKit hanging on the page's load event.
+ *
+ * @param page - authenticated page
+ * @param applab - App Lab page object for visible editor waits
+ */
+async function startNewAppLabProject(
+  page: Page,
+  applab: AppLab,
+): Promise<void> {
+  await page.goto('/projects/applab/new', {waitUntil: 'domcontentloaded'});
+  await page.waitForURL(/\/projects\/applab\/[^/]+\/edit/, {
+    timeout: 60_000,
+  });
+  await applab.waitForReady();
+  await expect(page.locator('#codeModeButton')).toBeVisible({timeout: 30_000});
+  await expect(page.locator('#designModeButton')).toBeVisible({
+    timeout: 30_000,
+  });
+  await expect(page.locator('#dataModeButton')).toBeVisible({timeout: 30_000});
+  await waitForInitialProjectSave(page);
+}
+
+/**
  * Open the share dialog, expand advanced options if needed, click the
  * "Share as library" tab, then click the "Share as library" button that
  * dispatches showLibraryCreationDialog().
@@ -139,9 +164,7 @@ async function publishBasicLibrary(
 ): Promise<{libraryUrl: string; channelId: string}> {
   const applab = new AppLab(page);
 
-  await page.goto('/projects/applab/new');
-  await applab.waitForReady();
-  await waitForInitialProjectSave(page);
+  await startNewAppLabProject(page, applab);
   await applab.ensureTextMode();
 
   await applab.insertCodeAtCursor(
@@ -241,9 +264,8 @@ test.describe('App Lab — Libraries', () => {
       const {channelId} = await publishBasicLibrary(page);
 
       await createStudent(page, {name: 'Student2'});
-      await page.goto('/projects/applab/new');
       const applab = new AppLab(page);
-      await applab.waitForReady();
+      await startNewAppLabProject(page, applab);
 
       await openManageLibrariesDialog(page);
       await expect(
@@ -324,9 +346,8 @@ test.describe('App Lab — Libraries', () => {
       await signOut(page);
       await createStudent(page, {name: 'Library_Student'});
       await joinSection(page, sectionCode);
-      await page.goto('/projects/applab/new');
       const applab = new AppLab(page);
-      await applab.waitForReady();
+      await startNewAppLabProject(page, applab);
 
       await openManageLibrariesDialog(page);
       await expect(page.locator('a', {hasText: 'UntitledProject'})).toBeVisible(

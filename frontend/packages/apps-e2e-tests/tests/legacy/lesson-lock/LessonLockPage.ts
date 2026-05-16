@@ -99,6 +99,23 @@ export class LessonLockPage {
   }
 
   /**
+   * Unlock the currently open lesson through the user-visible dialog controls.
+   */
+  async unlockLessonForStudents(): Promise<void> {
+    await this.modalBody.getByRole('button', {name: 'Allow editing'}).click();
+    await this.modalBody.getByRole('button', {name: 'Save'}).click();
+    await this.waitForLockDialogClosed();
+  }
+
+  /**
+   * Close the lesson-lock dialog and wait for the modal overlay to leave.
+   */
+  async closeLockDialog(): Promise<void> {
+    await this.modalBody.getByRole('button', {name: 'Cancel'}).click();
+    await this.waitForLockDialogClosed();
+  }
+
+  /**
    * Updates a lockable lesson through the same lock-status endpoint used by
    * the dialog after opening the dialog and reading its payload.
    *
@@ -155,8 +172,16 @@ export class LessonLockPage {
       );
     }
 
-    await this.modalBody.getByRole('button', {name: 'Cancel'}).click();
-    await expect(this.page.locator('.modal-backdrop')).toBeHidden({
+    await this.closeLockDialog();
+  }
+
+  /**
+   * Wait for the dialog and backdrop to be gone.  This is the visible
+   * readiness signal used by the Cucumber source after saving lock settings.
+   */
+  private async waitForLockDialogClosed(): Promise<void> {
+    await expect(this.modalBody).toBeHidden({timeout: 30_000});
+    await expect(this.page.locator('.modal-backdrop')).toHaveCount(0, {
       timeout: 30_000,
     });
   }

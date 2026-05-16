@@ -218,11 +218,7 @@ test.describe('App Lab — Version History', () => {
    * visible in Version History as the second row.
    */
   test('project load and reload creates version', async ({studentPage}) => {
-    const applab = new AppLab(studentPage);
-
-    await studentPage.goto('/projects/applab/new');
-    await applab.waitForReady();
-    await waitForInitialSave(applab);
+    const applab = await createFreshAppLabProject(studentPage);
 
     await studentPage.reload();
     await applab.waitForReady();
@@ -284,11 +280,7 @@ test.describe('App Lab — Version History', () => {
     'project version checkpoint after interval',
     {tag: '@no_mobile'},
     async ({studentPage}) => {
-      const applab = new AppLab(studentPage);
-
-      await studentPage.goto('/projects/applab/new');
-      await applab.waitForReady();
-      await waitForInitialSave(applab);
+      const applab = await createFreshAppLabProject(studentPage);
       await applab.ensureTextMode();
 
       await applab.insertCodeAtCursor('// comment A');
@@ -412,26 +404,10 @@ test.describe('App Lab — Version History', () => {
       await expect
         .poll(() => applab0.getAceEditorCode(), {timeout: 10_000})
         .toBe('// Alpha');
-      await addCodeRunAndSave(
-        applab0,
-        '// Bravo',
-        ['// Alpha// Bravo', '// Alpha\n// Bravo'],
-        {
-          mode: 'append',
-        },
-      );
-      await tab0.reload();
-      await applab0.waitForReady();
-      await applab0.ensureTextMode();
-      await expect
-        .poll(
-          async () =>
-            ['// Alpha// Bravo', '// Alpha\n// Bravo'].includes(
-              await applab0.getAceEditorCode(),
-            ),
-          {timeout: 10_000},
-        )
-        .toBe(true);
+      await addCodeRunSaveAndReloadUntilPersisted(applab0, '// Bravo', [
+        '// Alpha// Bravo',
+        '// Alpha\n// Bravo',
+      ]);
 
       await expect
         .poll(() => applab1.getAceEditorCode(), {timeout: 10_000})
@@ -452,13 +428,26 @@ test.describe('App Lab — Version History', () => {
 async function createFreshAppLabProject(
   page: import('@playwright/test').Page,
 ): Promise<AppLab> {
-  await page.goto('/projects/applab/new');
-  await page.waitForURL(/\/projects\/applab\/[^/]+\/edit/, {timeout: 30_000});
-  const applab = new AppLab(page);
-  await applab.waitForReady();
-  await waitForInitialSave(applab);
-  await waitForSaved(applab);
-  return applab;
+  let lastError: unknown;
+
+  for (let attempt = 1; attempt <= 2; attempt++) {
+    await page.goto('/projects/applab/new', {waitUntil: 'domcontentloaded'});
+
+    try {
+      await page.waitForURL(/\/projects\/applab\/[^/]+\/edit/, {
+        timeout: 45_000,
+      });
+      const applab = new AppLab(page);
+      await applab.waitForReady();
+      await waitForInitialSave(applab);
+      await waitForSaved(applab);
+      return applab;
+    } catch (error) {
+      lastError = error;
+    }
+  }
+
+  throw lastError;
 }
 
 /**
@@ -534,6 +523,36 @@ async function addCodeRunAndExpectConflict(
       {timeout: 60_000},
     )
     .toBe(true);
+}
+
+/**
+ * Add code, wait for App Lab's visible Saved state, then reload and verify the
+ * editor still shows the new source.  The Cucumber source reloads here with the
+ * comment "Make sure the change stuck"; this wraps that same user-visible check
+ * in a retry because the App Lab save indicator can briefly report Saved before
+ * a follow-up reload serves the latest source.
+ */
+async function addCodeRunSaveAndReloadUntilPersisted(
+  applab: AppLab,
+  code: string,
+  expectedCode: string[],
+): Promise<void> {
+  await expect(async () => {
+    await addCodeRunAndSave(applab, code, expectedCode, {mode: 'append'});
+    await applab.page.reload({waitUntil: 'domcontentloaded'});
+    await applab.waitForReady();
+    await applab.ensureTextMode();
+    await expect
+      .poll(
+        async () =>
+          codeMatches(await getAceEditorCodeIfReady(applab), expectedCode),
+        {timeout: 10_000},
+      )
+      .toBe(true);
+  }).toPass({
+    intervals: [1_000, 2_000, 5_000],
+    timeout: 2 * 60_000,
+  });
 }
 
 /**

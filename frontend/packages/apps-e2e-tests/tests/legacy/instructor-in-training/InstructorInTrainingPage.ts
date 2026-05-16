@@ -121,12 +121,14 @@ export class InstructorInTrainingPage {
     expectExampleSolution: boolean,
   ): Promise<void> {
     await expect(this.teacherOnlyTab).toBeVisible();
-    await this.teacherOnlyTab.click();
-    const editorColumn = this.page
-      .locator('.editor-column')
-      .filter({hasText: expectedText})
-      .first();
-    await expect(editorColumn).toBeVisible();
+    const editorColumn = this.page.locator('.editor-column').first();
+    await expect(async () => {
+      await this.teacherOnlyTab.click();
+      await expect(editorColumn).toBeVisible({timeout: 10_000});
+      await expect(editorColumn).toContainText(expectedText, {
+        timeout: 10_000,
+      });
+    }).toPass({timeout: 45_000});
     await expect(editorColumn).toContainText('For Teachers Only');
     if (expectExampleSolution) {
       await expect(

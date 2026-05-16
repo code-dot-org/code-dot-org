@@ -27,8 +27,16 @@ async function clearSigninCalloutState(page: Page) {
  * Navigate to the UI-test CSF level and wait for the user-visible ready state.
  */
 async function gotoCsfLevel(page: Page) {
-  await page.goto(CSF_LEVEL_URL);
-  await expect(page.locator('#runButton')).toBeVisible();
+  await page.goto(CSF_LEVEL_URL, {waitUntil: 'domcontentloaded'});
+  await expect(page.locator('#runButton')).toBeVisible({timeout: 60_000});
+}
+
+/**
+ * Reload the CSF level and wait for the same visible ready state.
+ */
+async function reloadCsfLevel(page: Page) {
+  await page.reload({waitUntil: 'domcontentloaded'});
+  await expect(page.locator('#runButton')).toBeVisible({timeout: 60_000});
 }
 
 /**
@@ -65,12 +73,11 @@ test.describe('Sign-in callout', () => {
     await expect(signinCalloutCloseButton(page)).toBeVisible();
 
     await dismissLoginReminder(page);
-    await page.reload();
+    await reloadCsfLevel(page);
     await expect(signinCalloutCloseButton(page)).not.toBeAttached();
 
     await clearSigninCalloutState(page);
-    await page.reload();
-    await expect(page.locator('#runButton')).toBeVisible();
+    await reloadCsfLevel(page);
     await expect(signinCalloutCloseButton(page)).toBeVisible();
   });
 
@@ -134,9 +141,8 @@ test.describe('Sign-in callout', () => {
     await expect(signinCalloutCloseButton(page)).toBeVisible();
 
     await dismissLoginReminder(page);
-    await page.reload();
+    await reloadCsfLevel(page);
 
-    await expect(page.locator('#runButton')).toBeVisible();
     await expect(signinCalloutCloseButton(page)).not.toBeAttached();
   });
 

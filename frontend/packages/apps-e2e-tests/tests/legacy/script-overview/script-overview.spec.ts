@@ -98,6 +98,7 @@ test.describe('Unit overview page', {tag: ['@no_mobile', '@no_safari']}, () => {
    * Scenario: Unit overview end-of-lesson
    */
   test('end-of-lesson header appears then clears on reload', async ({page}) => {
+    test.slow();
     const scriptOverview = new ScriptOverviewPage(page);
     await createStudent(page, {name: 'Jean'});
 

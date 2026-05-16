@@ -26,7 +26,8 @@ export class PairingPage {
    * @param readinessSelector - visible selector that indicates lab readiness
    */
   async gotoLevel(url: string, readinessSelector: string): Promise<void> {
-    await this.page.goto(url);
+    await this.page.goto(url, {waitUntil: 'domcontentloaded'});
+    await this.waitForVisibleWithReload('.header_user');
     await this.waitForVisibleWithReload(readinessSelector);
   }
 
@@ -40,12 +41,18 @@ export class PairingPage {
   async initiatePairing(name1: string, name2: string): Promise<void> {
     for (let attempt = 1; attempt <= 3; attempt++) {
       try {
+        if (await this.pairingGroupIsVisible(name1, name2)) {
+          return;
+        }
         await this.openPairingDialog();
         await this.selectPartner(name1);
         await this.confirmSelectedPartners();
         await this.expectPairingGroup(name1, name2);
         return;
       } catch (error) {
+        if (await this.pairingGroupIsVisible(name1, name2)) {
+          return;
+        }
         if (attempt === 3) {
           throw error;
         }
@@ -174,7 +181,9 @@ export class PairingPage {
     await this.page
       .locator('.fa-users')
       .waitFor({state: 'visible', timeout: 10_000});
-    await this.page.locator('.pairing_name').click();
+    if (!(await this.page.locator('.pairing_summary').isVisible())) {
+      await this.page.locator('.pairing_name').click();
+    }
     await this.page
       .locator('.pairing_summary')
       .waitFor({state: 'visible', timeout: 10_000});
@@ -260,5 +269,22 @@ export class PairingPage {
     }
 
     throw lastError;
+  }
+
+  /**
+   * Return whether the visible header already shows the expected pairing group.
+   * The cached-level scenario can reach "Team" before a retry observes the
+   * dialog close, so retries must be idempotent.
+   *
+   * @param name1 - first student display name
+   * @param name2 - second student display name
+   */
+  private async pairingGroupIsVisible(
+    name1: string,
+    name2: string,
+  ): Promise<boolean> {
+    return this.expectPairingGroup(name1, name2)
+      .then(() => true)
+      .catch(() => false);
   }
 }

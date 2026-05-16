@@ -1,3 +1,5 @@
+import {type Page} from '@playwright/test';
+
 import {expect, test} from '../../shared/fixtures';
 
 /**
@@ -16,6 +18,19 @@ import {expect, test} from '../../shared/fixtures';
 
 const BASE = '/courses/allthethingscourse/units/1/lessons/18/levels';
 
+/**
+ * Open a CSP App Lab level and wait for the visible lab controls.  Cucumber's
+ * source waits for the lab page to fully load; Agent Browser shows `Run` and
+ * the instruction tabs as the user-visible readiness signal, while the page
+ * `load` event can hang on unrelated assets.
+ */
+async function gotoCspLevel(page: Page, level: number): Promise<void> {
+  await page.goto(`${BASE}/${level}`, {waitUntil: 'domcontentloaded'});
+  await expect(page.locator('#runButton')).toBeVisible({
+    timeout: 60_000,
+  });
+}
+
 test.describe('CSP Instructions', () => {
   /**
    * Migration status: COMPLETED
@@ -25,10 +40,7 @@ test.describe('CSP Instructions', () => {
   test('help and tips tab visible when level has videos', async ({
     studentPage,
   }) => {
-    await studentPage.goto(`${BASE}/1`);
-    await expect(studentPage.locator('#runButton')).toBeVisible({
-      timeout: 60_000,
-    });
+    await gotoCspLevel(studentPage, 1);
 
     await studentPage.locator('.uitest-helpTab').click();
     await expect(studentPage.locator('.editor-column').first()).toContainText(
@@ -51,10 +63,7 @@ test.describe('CSP Instructions', () => {
   test('help and tips tab visible when level has map reference', async ({
     studentPage,
   }) => {
-    await studentPage.goto(`${BASE}/18`);
-    await expect(studentPage.locator('#runButton')).toBeVisible({
-      timeout: 60_000,
-    });
+    await gotoCspLevel(studentPage, 18);
 
     await studentPage.locator('.uitest-helpTab').click();
     await expect(studentPage.locator('.editor-column').first()).toContainText(
@@ -77,10 +86,7 @@ test.describe('CSP Instructions', () => {
   test('help and tips tab visible when level has reference links', async ({
     studentPage,
   }) => {
-    await studentPage.goto(`${BASE}/19`);
-    await expect(studentPage.locator('#runButton')).toBeVisible({
-      timeout: 60_000,
-    });
+    await gotoCspLevel(studentPage, 19);
 
     await studentPage.locator('.uitest-helpTab').click();
     await expect(studentPage.locator('.editor-column').first()).toContainText(
@@ -103,10 +109,7 @@ test.describe('CSP Instructions', () => {
   test('resources tab absent when level has no videos, map references, or reference links', async ({
     studentPage,
   }) => {
-    await studentPage.goto(`${BASE}/3`);
-    await expect(studentPage.locator('#runButton')).toBeVisible({
-      timeout: 60_000,
-    });
+    await gotoCspLevel(studentPage, 3);
 
     await expect(studentPage.locator('.uitest-helpTab')).not.toBeVisible();
   });
@@ -119,10 +122,7 @@ test.describe('CSP Instructions', () => {
   test('resources tab shows all resource types with correct content', async ({
     studentPage,
   }) => {
-    await studentPage.goto(`${BASE}/20`);
-    await expect(studentPage.locator('#runButton')).toBeVisible({
-      timeout: 60_000,
-    });
+    await gotoCspLevel(studentPage, 20);
 
     await studentPage.locator('.uitest-helpTab').click();
     await expect(studentPage.locator('.editor-column').first()).toContainText(
@@ -147,10 +147,7 @@ test.describe('CSP Instructions', () => {
    * Scenario: Instructions can be collapsed and expanded
    */
   test('instructions can be collapsed and expanded', async ({studentPage}) => {
-    await studentPage.goto(`${BASE}/20`);
-    await expect(studentPage.locator('#runButton')).toBeVisible({
-      timeout: 60_000,
-    });
+    await gotoCspLevel(studentPage, 20);
 
     await studentPage.locator('#ui-test-collapser').click();
     await expect(
@@ -169,10 +166,7 @@ test.describe('CSP Instructions', () => {
   test('instructions have a resizer for non-embedded levels', async ({
     studentPage,
   }) => {
-    await studentPage.goto(`${BASE}/20`);
-    await expect(studentPage.locator('#runButton')).toBeVisible({
-      timeout: 60_000,
-    });
+    await gotoCspLevel(studentPage, 20);
 
     await expect(studentPage.locator('#ui-test-resizer')).toBeVisible();
   });
@@ -185,10 +179,7 @@ test.describe('CSP Instructions', () => {
   test('instructions do not show a resizer on embedded levels', async ({
     studentPage,
   }) => {
-    await studentPage.goto(`${BASE}/12`);
-    await expect(studentPage.locator('#runButton')).toBeVisible({
-      timeout: 60_000,
-    });
+    await gotoCspLevel(studentPage, 12);
 
     await expect(studentPage.locator('#ui-test-resizer')).not.toBeVisible();
   });
@@ -201,10 +192,7 @@ test.describe('CSP Instructions', () => {
   test('resources tab for contained levels shows correct content', async ({
     studentPage,
   }) => {
-    await studentPage.goto(`${BASE}/15`);
-    await expect(studentPage.locator('#runButton')).toBeVisible({
-      timeout: 60_000,
-    });
+    await gotoCspLevel(studentPage, 15);
 
     await studentPage.locator('.uitest-helpTab').click();
     await expect(studentPage.locator('.editor-column').first()).toContainText(

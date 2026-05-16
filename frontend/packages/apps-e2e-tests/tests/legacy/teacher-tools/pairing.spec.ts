@@ -88,6 +88,12 @@ test.describe('Student Pairing', {tag: '@no_mobile'}, () => {
     const pairing = new PairingPage(page);
     await pairing.gotoLevel(LESSON_2_LEVEL_2, '#runButton');
     await pairing.initiatePairing(thingOne.displayName, thingTwo.displayName);
+    await pairing.ensurePairingPersists(
+      LESSON_2_LEVEL_2,
+      '#runButton',
+      thingOne.displayName,
+      thingTwo.displayName,
+    );
     await pairing.runForAttempt();
     await pairing.expectHeaderProgress(2, 'attempted');
 

@@ -297,13 +297,22 @@ export class AppLab {
    * @param code - source text to append at the end of the editor
    */
   async appendCode(code: string): Promise<void> {
-    await this.page.evaluate((c: string) => {
-      // eslint-disable-next-line @typescript-eslint/no-explicit-any
-      const ace = (window as any).__TestInterface.getDroplet().aceEditor;
-      ace.navigateFileEnd();
-      ace.textInput.focus();
-      ace.onTextInput(c);
-    }, code);
+    await expect(async () => {
+      if (!(await this.dropletContents()).includes(code)) {
+        await this.page.evaluate((c: string) => {
+          // eslint-disable-next-line @typescript-eslint/no-explicit-any
+          const ace = (window as any).__TestInterface.getDroplet().aceEditor;
+          ace.navigateFileEnd();
+          ace.textInput.focus();
+          ace.onTextInput(c);
+        }, code);
+      }
+
+      await expect.poll(() => this.dropletContents()).toContain(code);
+    }).toPass({
+      intervals: [250, 500, 1_000],
+      timeout: 15_000,
+    });
   }
 
   /**
@@ -321,6 +330,14 @@ export class AppLab {
       ace.textInput.focus();
       ace.onTextInput(c);
     }, code);
+  }
+
+  /** Return the current text-mode Droplet source. */
+  private async dropletContents(): Promise<string> {
+    return this.page.evaluate(() => {
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
+      return (window as any).__TestInterface.getDroplet().aceEditor.getValue();
+    });
   }
 
   /**
