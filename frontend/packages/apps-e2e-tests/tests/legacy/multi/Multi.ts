@@ -66,10 +66,7 @@ export class Multi {
     if (resetSession) {
       await this.page.goto('/reset_session', {waitUntil: 'domcontentloaded'});
     }
-    await this.page.goto(labLevelUrl(lesson, level), {
-      waitUntil: 'domcontentloaded',
-    });
-    await expect(this.submitButton).toBeVisible({timeout: 30_000});
+    await this.gotoLevelUrl(labLevelUrl(lesson, level));
   }
 
   /**
@@ -90,10 +87,19 @@ export class Multi {
     if (resetSession) {
       await this.page.goto('/reset_session', {waitUntil: 'domcontentloaded'});
     }
-    await this.page.goto(
+    await this.gotoLevelUrl(
       `/courses/allthethingscourse/units/1/lessons/${lesson}/levels/${level}/lang/${locale}`,
-      {waitUntil: 'domcontentloaded'},
     );
+  }
+
+  /**
+   * Open the level and wait for the same visible readiness signal Cucumber
+   * uses after navigation. WebKit can occasionally withhold the
+   * `domcontentloaded` navigation event even though the level controls render;
+   * the submit button is the user-visible contract these tests need.
+   */
+  private async gotoLevelUrl(url: string): Promise<void> {
+    await this.page.goto(url, {waitUntil: 'commit'});
     await expect(this.submitButton).toBeVisible({timeout: 30_000});
   }
 
