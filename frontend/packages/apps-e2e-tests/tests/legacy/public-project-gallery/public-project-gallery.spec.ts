@@ -1,3 +1,4 @@
+import {createTeacher} from '../../shared/auth';
 import {test} from '../../shared/fixtures';
 
 import {PublicProjectGalleryPage} from './PublicProjectGalleryPage';
@@ -45,5 +46,25 @@ test.describe('Public project gallery — signed out', () => {
     const gallery = new PublicProjectGalleryPage(page);
     await gallery.gotoSpecialTopicExperiment();
     await gallery.expectSpecialTopics();
+  });
+});
+
+test.describe('Public project gallery — signed in switcher', () => {
+  /**
+   * Migration status: COMPLETED
+   * Source: dashboard/test/ui/features/teacher_tools/projects/public_project_gallery_project_validator.feature
+   * Scenario: Can Toggle to the Personal Project Gallery
+   *
+   * Current gallery switching is available to any signed-in user. The source
+   * used project-validator setup for DB cleanup; the user-visible behavior is
+   * the public-to-personal gallery switch.
+   */
+  test('switches from featured projects to my projects', async ({page}) => {
+    await createTeacher(page, {name: 'Project Czar'});
+
+    const gallery = new PublicProjectGalleryPage(page);
+    await gallery.goto();
+    await gallery.expectPublicGallery();
+    await gallery.switchToPersonalGallery();
   });
 });

@@ -28,6 +28,31 @@ export class PublicProjectGalleryPage {
   }
 
   /**
+   * Verifies the public gallery is selected and visible.
+   */
+  async expectPublicGallery(): Promise<void> {
+    await expect(this.page.locator('#projects-page')).toBeVisible({
+      timeout: 30_000,
+    });
+    await expect(this.page.locator('#uitest-public-projects')).toBeVisible({
+      timeout: 30_000,
+    });
+    await expect(this.page.locator('#uitest-personal-projects')).toBeHidden();
+  }
+
+  /**
+   * Switches from the public gallery to the signed-in user's personal gallery.
+   */
+  async switchToPersonalGallery(): Promise<void> {
+    await this.page.getByRole('button', {name: 'My Projects'}).click();
+    await expect(this.page).toHaveURL(/\/projects$/);
+    await expect(this.page.locator('#uitest-personal-projects')).toBeVisible({
+      timeout: 30_000,
+    });
+    await expect(this.page.locator('#uitest-public-projects')).toBeHidden();
+  }
+
+  /**
    * Verifies project type and featured project sections render.
    */
   async expectProjectTypes(): Promise<void> {
