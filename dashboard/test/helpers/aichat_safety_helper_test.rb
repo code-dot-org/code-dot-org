@@ -4,6 +4,8 @@ class AichatSafetyHelperTest < ActionView::TestCase
   include AichatSafetyHelper
 
   setup do
+    AichatSafetyHelper::ToxicityDetector.clear_in_spanish_script_cache
+
     openai_response_profanity_hash = {
       output: [
         {
@@ -134,6 +136,15 @@ class AichatSafetyHelperTest < ActionView::TestCase
     end
 
     AichatSafetyHelper.find_toxicity('clean message', @spanish_script.levels.first)
+  end
+
+  test "Spanish script lookup is cached per level id" do
+    level = @english_script.levels.first
+
+    Level.expects(:find_by).with(id: level.id).once.returns(level)
+
+    AichatSafetyHelper.find_toxicity('clean message', level.id)
+    AichatSafetyHelper.find_toxicity('clean message', level.id)
   end
 
   def create_stubbed_response(body)
