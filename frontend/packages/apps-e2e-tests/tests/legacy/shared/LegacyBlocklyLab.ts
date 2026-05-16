@@ -249,8 +249,8 @@ export abstract class LegacyBlocklyLab {
    * subclass needs an alternate URL scheme (e.g. Dance course vs allthethings).
    */
   protected async navigate(url: string): Promise<void> {
-    await this.page.goto('/reset_session');
-    await this.page.goto(url);
+    await this.page.goto('/reset_session', {waitUntil: 'commit'});
+    await this.page.goto(url, {waitUntil: 'commit'});
     await this.waitForInitialLoad();
     await this.dismissOptionalOverlays();
     await this.waitForReady();
@@ -261,7 +261,7 @@ export abstract class LegacyBlocklyLab {
    * Used by reloadLevel() for mid-test same-session navigation.
    */
   private async navigateDirect(url: string): Promise<void> {
-    await this.page.goto(url);
+    await this.page.goto(url, {waitUntil: 'commit'});
     await this.waitForReady();
   }
 

@@ -62,14 +62,12 @@ export class ProjectsPage {
    * @returns editable project URL
    */
   async startAnonymousArtistProject(): Promise<string> {
-    await this.page.goto('/reset_session');
-    await this.page.goto('/projects/artist/new');
+    await this.page.goto('/reset_session', {waitUntil: 'commit'});
+    await this.page.goto('/projects/artist/new', {waitUntil: 'commit'});
     await this.page.waitForURL(/\/projects\/artist\/[^/]+\/edit$/, {
       timeout: 60_000,
     });
-    await expect(this.page.locator('#runButton')).toBeVisible({
-      timeout: 60_000,
-    });
+    await this.expectArtistEditorReady();
     return this.page.url();
   }
 
@@ -77,13 +75,11 @@ export class ProjectsPage {
    * Reloads the current project and expects the viewer to retain edit access.
    */
   async expectEditAccessAfterReload(): Promise<void> {
-    await this.page.reload({waitUntil: 'domcontentloaded'});
+    await this.page.goto(this.page.url(), {waitUntil: 'commit'});
     await expect(this.page).toHaveURL(/\/projects\/artist\/[^/]+\/edit$/, {
       timeout: 60_000,
     });
-    await expect(this.page.locator('#runButton')).toBeVisible({
-      timeout: 60_000,
-    });
+    await this.expectArtistEditorReady();
   }
 
   /**
@@ -92,13 +88,11 @@ export class ProjectsPage {
    * @param url - saved Artist project URL
    */
   async expectEditAccess(url: string): Promise<void> {
-    await this.page.goto(url, {waitUntil: 'domcontentloaded'});
+    await this.page.goto(url, {waitUntil: 'commit'});
     await expect(this.page).toHaveURL(/\/projects\/artist\/[^/]+\/edit$/, {
       timeout: 60_000,
     });
-    await expect(this.page.locator('#runButton')).toBeVisible({
-      timeout: 60_000,
-    });
+    await this.expectArtistEditorReady();
   }
 
   /**
@@ -107,9 +101,22 @@ export class ProjectsPage {
    * @param url - saved Artist project URL
    */
   async expectViewAccess(url: string): Promise<void> {
-    await this.page.goto(url, {waitUntil: 'domcontentloaded'});
+    await this.page.goto(url, {waitUntil: 'commit'});
     await expect(this.page).toHaveURL(/\/projects\/artist\/[^/]+\/view$/, {
       timeout: 60_000,
     });
+  }
+
+  /**
+   * Waits for the visible Artist project editor controls.
+   */
+  private async expectArtistEditorReady(): Promise<void> {
+    await expect(this.page.getByRole('button', {name: 'Run'})).toBeVisible({
+      timeout: 60_000,
+    });
+    await expect(this.page.locator('.project_updated_at')).toContainText(
+      'Saved',
+      {timeout: 60_000},
+    );
   }
 }

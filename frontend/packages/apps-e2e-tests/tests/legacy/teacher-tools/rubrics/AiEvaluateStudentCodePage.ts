@@ -255,13 +255,13 @@ export class AiEvaluateStudentCodePage {
     studentName: string,
     sectionId: number,
   ): Promise<void> {
-    await signIn(this.page, teacherEmail, teacherPassword);
-    await this.page.goto('/teacher_dashboard/home', {
-      waitUntil: 'domcontentloaded',
-    });
-    await expect(
-      this.page.getByRole('heading', {name: 'Class Sections'}),
-    ).toBeVisible({timeout: 30_000});
+    await expect(async () => {
+      await signIn(this.page, teacherEmail, teacherPassword);
+      await this.page.goto('/teacher_dashboard/home', {waitUntil: 'commit'});
+      await expect(
+        this.page.getByRole('heading', {name: 'Class Sections'}),
+      ).toBeVisible({timeout: 10_000});
+    }).toPass({timeout: 90_000, intervals: [1000, 2000, 5000, 10_000]});
     await this.gotoRubricLevel(sectionId);
 
     const studentRow = this.page
