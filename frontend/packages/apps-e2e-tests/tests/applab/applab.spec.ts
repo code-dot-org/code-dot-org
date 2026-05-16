@@ -37,6 +37,24 @@ const FIXTURES = path.resolve(
   '../../../../../dashboard/test/fixtures',
 );
 
+test.describe('App Lab — new project shell', () => {
+  /**
+   * Migration status: COMPLETED
+   * Source: dashboard/test/ui/features/star_labs/applab/scenarios.feature
+   * Scenario: Project Template Workspace Icon should not appear since this is not a project template backed level.
+   */
+  test('new project does not show the project-template workspace icon', async ({
+    studentPage,
+  }) => {
+    const applab = new AppLab(studentPage);
+    await studentPage.goto('/projects/applab');
+    await applab.waitForReady();
+    await expect(
+      studentPage.locator('.projectTemplateWorkspaceIcon'),
+    ).toBeHidden();
+  });
+});
+
 /**
  * Click an element that performs a full-page navigation and wait only for the
  * main-frame navigation to reach DOMContentLoaded.  The caller must assert the
