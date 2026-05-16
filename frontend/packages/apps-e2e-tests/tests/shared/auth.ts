@@ -304,13 +304,13 @@ export async function signIn(
   email: string,
   password: string,
 ): Promise<void> {
-  await page.goto('/reset_session');
-  const csrf = await page
-    .locator('meta[name="csrf-token"]')
-    .getAttribute('content');
-
   let lastFailure = '';
   for (let attempt = 1; attempt <= 3; attempt++) {
+    await page.goto('/reset_session', {waitUntil: 'domcontentloaded'});
+    const csrf = await page
+      .locator('meta[name="csrf-token"]')
+      .getAttribute('content');
+
     const response = await page.request.post('/users/sign_in', {
       headers: {
         'Content-Type': 'application/json',
@@ -324,7 +324,7 @@ export async function signIn(
     }
 
     lastFailure = `${response.status()} — ${await response.text()}`;
-    if (response.status() < 500 || attempt === 3) {
+    if (response.status() < 500 && response.status() !== 422) {
       break;
     }
   }

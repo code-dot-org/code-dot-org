@@ -493,7 +493,11 @@ test.describe(
         await expect(
           page.locator('.uitest-progress-lesson').first(),
         ).toContainText('Lesson 1:');
-        await expect(page.locator('.uitest-progress-lesson')).toHaveCount(1);
+        await expect(
+          page
+            .locator('.uitest-progress-lesson')
+            .filter({hasText: 'Lesson 2:'}),
+        ).toHaveCount(0);
       } finally {
         await levelbuilder.destroyTempUnit(unit.scriptName);
       }

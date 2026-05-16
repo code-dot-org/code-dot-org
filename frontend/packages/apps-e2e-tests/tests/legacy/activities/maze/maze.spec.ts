@@ -55,6 +55,7 @@ test.describe('Maze — level 5', () => {
     async () => {
       await expect(maze.resetButton).toBeHidden();
       await maze.loadBlocks(VALID_MAZE_BLOCKS);
+      await maze.waitForFiveBlockWorkspace();
 
       await maze.runUntilCongrats();
 

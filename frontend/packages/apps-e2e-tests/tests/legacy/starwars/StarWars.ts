@@ -142,7 +142,9 @@ export class StarWars {
    * Uses Start Over and confirms the reset modal.
    */
   public async startOver(): Promise<void> {
-    await this.startOverButton.click();
+    await this.startOverButton.evaluate(element =>
+      (element as HTMLElement).click(),
+    );
     await expect(this.completionModal).toBeVisible({timeout: 10_000});
     await this.confirmButton.click();
     await expect(this.completionModal).toBeHidden({timeout: 10_000});

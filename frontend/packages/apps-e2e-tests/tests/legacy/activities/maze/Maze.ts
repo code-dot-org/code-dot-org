@@ -9,6 +9,13 @@ export class Maze extends LegacyBlocklyLab {
     return labLevelUrl(2, level);
   }
 
+  /** Wait until Blockly shows the loaded five-block solution. */
+  async waitForFiveBlockWorkspace(): Promise<void> {
+    await expect(this.page.getByText('Workspace: 5 / 5 blocks')).toBeVisible({
+      timeout: 15_000,
+    });
+  }
+
   async runUntilInlineFeedback(): Promise<void> {
     await this.setExecutionSpeedToFast();
     await this.run();
@@ -25,14 +32,25 @@ export class Maze extends LegacyBlocklyLab {
   }
 
   /**
-   * Use the same speed control exposed by Cucumber's "set slider speed to fast"
-   * step.  Under full-suite load the default Maze animation can take long
-   * enough to make the visible feedback wait flaky.
+   * Keep the legacy Maze animation quick. The user-visible readiness signal is
+   * still the feedback surface; this only avoids long animation tails under
+   * repeat runs.
    */
   private async setExecutionSpeedToFast(): Promise<void> {
     await this.page.evaluate(() => {
-      // eslint-disable-next-line @typescript-eslint/no-explicit-any
-      (window as any).__TestInterface?.setSpeedSliderValue?.(1);
+      const maze = (
+        window as Window & {
+          Maze?: {
+            shouldSpeedUpInfiniteLoops: boolean;
+            scale: {stepSpeed: number};
+          };
+        }
+      ).Maze;
+      if (!maze) {
+        throw new Error('Maze test interface was not ready');
+      }
+      maze.shouldSpeedUpInfiniteLoops = true;
+      maze.scale.stepSpeed = 1;
     });
   }
 
