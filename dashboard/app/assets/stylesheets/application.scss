@@ -50,14 +50,22 @@ $selectUserTypeButtonTextColorHover: #000;
 $selectUserTypeButtonBackgroundColorSelected: #0093a4;
 $selectUserTypeButtonTextColorSelected: #fff;
 
-// Redefine some variables from Bootstrap v2.3.22 which were removed in v3.x
-// but which we still rely on
-// https://github.com/twbs/bootstrap-sass/blob/v2.3.2.2/templates/project/_variables.scss
-$blue: #049cdb;
-
 $contrastTealHeader: #00818f;
 
 @import "bootstrap";
+
+// Redefine some variables and redeclare some styles from Bootstrap v2.3.22
+// which were removed in v3.x but which we still rely on
+// https://github.com/twbs/bootstrap-sass/blob/v2.3.2.2/templates/project/_variables.scss
+$blue: #049cdb;
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 10px 0;
+}
+
+h1, h2, h3 {
+  line-height: 40px;
+}
 
 p,pre,span {
   @include selectable;
@@ -2808,7 +2816,8 @@ a.download-video {
 
 .container {
   width: $content-width;
-  padding: 0;
+  padding-left: 0;
+  padding-right: 0;
 }
 
 .container,
