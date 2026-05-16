@@ -62,6 +62,17 @@ export class GameLab extends LegacyBlocklyLab {
   }
 
   /**
+   * Waits for the user-visible Game Lab run control after app load.
+   *
+   * The source Cucumber step waits for `#runButton`. Keep that readiness
+   * signal, but allow full-suite WebKit reloads enough time to pass through the
+   * visible "This is taking longer than usual..." loading state.
+   */
+  protected async waitForInitialLoad(): Promise<void> {
+    await expect(this.runButton).toBeVisible({timeout: 60_000});
+  }
+
+  /**
    * Navigate to a new Game Lab project and wait for the animation library
    * manifest to be parsed and rendered before returning.
    *

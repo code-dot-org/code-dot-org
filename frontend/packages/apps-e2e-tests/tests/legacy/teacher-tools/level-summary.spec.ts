@@ -1,4 +1,4 @@
-import {type Page} from '@playwright/test';
+import {type Locator, type Page} from '@playwright/test';
 
 import {
   createAuthorizedTeacher,
@@ -77,7 +77,7 @@ async function submitFreeResponse(page: Page, text: string): Promise<void> {
 async function showStudentNames(page: Page): Promise<void> {
   const checkbox = page.getByRole('checkbox', {name: /Show student names/});
   if (!(await checkbox.isChecked())) {
-    await page.getByText('Show student names', {exact: true}).click();
+    await clickSwitchLabel(page, checkbox, 'Show student names');
   }
   await expect(checkbox).toBeChecked({timeout: 10_000});
 }
@@ -92,9 +92,44 @@ async function showStudentNames(page: Page): Promise<void> {
 async function showAiInsights(page: Page): Promise<void> {
   const checkbox = page.getByRole('checkbox', {name: /Show AI Insights/});
   if (!(await checkbox.isChecked())) {
-    await page.getByText('Show AI Insights', {exact: true}).click();
+    await clickSwitchLabel(page, checkbox, 'Show AI Insights');
   }
   await expect(checkbox).toBeChecked({timeout: 10_000});
+}
+
+/**
+ * Toggles a summary-page switch through its visible label, matching the
+ * Cucumber `label:contains(...)` selector.  The checkbox input is styled and
+ * can receive a pointer click without changing state in Firefox.
+ *
+ * @param page - Playwright page on a level summary
+ * @param checkbox - switch checkbox locator
+ * @param labelText - visible switch label
+ */
+async function clickSwitchLabel(
+  page: Page,
+  checkbox: Locator,
+  labelText: string,
+): Promise<void> {
+  const label = page
+    .locator('label')
+    .filter({has: checkbox})
+    .filter({hasText: labelText})
+    .first();
+
+  await expect(async () => {
+    if (!(await checkbox.isChecked())) {
+      await label.click();
+    }
+    if (!(await checkbox.isChecked())) {
+      await label.evaluate(element => (element as HTMLElement).click());
+    }
+    if (!(await checkbox.isChecked())) {
+      await checkbox.focus();
+      await page.keyboard.press('Space');
+    }
+    expect(await checkbox.isChecked()).toBe(true);
+  }).toPass({timeout: 10_000});
 }
 
 test.describe(

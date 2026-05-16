@@ -59,7 +59,28 @@ async function clickSectionCheckbox(
   page: Page,
   sectionName: string,
 ): Promise<void> {
-  await page.getByRole('checkbox', {name: sectionName}).check();
+  const dialog = page.getByRole('dialog');
+  const checkbox = dialog.getByRole('checkbox', {name: sectionName});
+  const sectionLabel = dialog.getByText(sectionName, {exact: true});
+
+  await expect(checkbox).toBeVisible({timeout: 10_000});
+  await expect(sectionLabel).toBeVisible({timeout: 10_000});
+
+  await expect(async () => {
+    if (!(await checkbox.isChecked())) {
+      await sectionLabel.click();
+    }
+    if (!(await checkbox.isChecked())) {
+      await checkbox.click({force: true});
+    }
+    if (!(await checkbox.isChecked())) {
+      await sectionLabel.evaluate(element => {
+        const label = element.closest('label') as HTMLLabelElement | null;
+        label?.click();
+      });
+    }
+    expect(await checkbox.isChecked()).toBe(true);
+  }).toPass({timeout: 10_000});
 }
 
 /**
@@ -73,7 +94,10 @@ async function sectionCheckboxIsChecked(
   page: Page,
   sectionName: string,
 ): Promise<boolean> {
-  return page.getByRole('checkbox', {name: sectionName}).isChecked();
+  return page
+    .getByRole('dialog')
+    .getByRole('checkbox', {name: sectionName})
+    .isChecked();
 }
 
 /**

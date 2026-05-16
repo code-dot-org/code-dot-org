@@ -44,9 +44,19 @@ test.describe('Documentation landing page', () => {
       await expect(page.locator('h1').first()).toContainText(
         'App Lab Documentation',
       );
-      await expect(page.locator('.page-content')).toContainText('UI controls');
       await expect(page.locator('.page-content')).toContainText('onEvent');
-      await expect(page.locator('.nav-bar')).toContainText('UI controls');
+      // Visible readiness signal: docs category labels are localized on
+      // test-studio, but the App Lab UI-control function links remain stable.
+      await expect(
+        page
+          .locator(
+            '.page-content a[href="/docs/ide/applab/expressions/button"]',
+          )
+          .last(),
+      ).toBeVisible();
+      await expect(
+        page.locator('main').getByRole('button').first(),
+      ).toBeVisible();
     },
   );
 });

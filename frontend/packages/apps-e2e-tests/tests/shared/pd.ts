@@ -21,8 +21,13 @@ interface PdEnrollmentResponse {
 
 interface CreatePdWorkshopOptions {
   capacity?: number;
+  course?: string;
+  courseOfferingIds?: number[];
+  facilitatorIds?: number[];
   name?: string;
+  participantGroupType?: string;
   regionalPartnerId?: number;
+  subject?: string;
 }
 
 /**
@@ -99,10 +104,20 @@ export async function createPdWorkshop(
   page: Page,
   {
     capacity = 10,
+    course = 'CS Principles',
+    courseOfferingIds,
+    facilitatorIds,
     name = `PW Workshop ${Date.now()}`,
+    participantGroupType,
     regionalPartnerId,
+    subject,
   }: CreatePdWorkshopOptions = {},
 ): Promise<number> {
+  const workshopSubject =
+    subject ??
+    (course === 'Build Your Own Workshop'
+      ? undefined
+      : 'Academic Year Workshop 1');
   const start = new Date(Date.now() + 14 * 24 * 60 * 60 * 1000);
   start.setUTCHours(9, 0, 0, 0);
   const end = new Date(start.getTime() + 6 * 60 * 60 * 1000);
@@ -114,13 +129,18 @@ export async function createPdWorkshop(
     data: {
       pd_workshop: {
         location_address: 'Seattle, WA',
-        course: 'CS Principles',
-        subject: 'Academic Year Workshop 1',
+        course,
+        ...(workshopSubject === undefined ? {} : {subject: workshopSubject}),
         capacity,
         suppress_email: true,
         name,
         description: 'This is a Playwright-created workshop',
         grades: ['K', '1'],
+        ...(courseOfferingIds ? {course_offerings: courseOfferingIds} : {}),
+        ...(facilitatorIds ? {facilitators: facilitatorIds} : {}),
+        ...(participantGroupType
+          ? {participant_group_type: participantGroupType}
+          : {}),
         ...(regionalPartnerId ? {regional_partner_id: regionalPartnerId} : {}),
         sessions_attributes: [
           {

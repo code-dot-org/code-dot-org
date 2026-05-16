@@ -48,7 +48,7 @@ class GdprDialogPage {
    * the visible readiness signal used by the Cucumber scenario after reload.
    */
   async gotoHomeAndWaitForHeader(): Promise<void> {
-    await this.page.goto(`/home?gdpr_probe=${Date.now()}`);
+    await this.page.goto('/home');
     await this.page.locator('.header_user').waitFor({state: 'visible'});
   }
 
@@ -58,20 +58,10 @@ class GdprDialogPage {
    */
   async expectAcceptedHome(): Promise<void> {
     await expect(async () => {
+      await this.acceptServerSide();
       await this.gotoHomeAndWaitForHeader();
-      if (
-        await this.heading()
-          .isVisible({timeout: 1000})
-          .catch(() => false)
-      ) {
-        await browserFormRequest(
-          this.page,
-          '/dashboardapi/v1/users/accept_data_transfer_agreement',
-          {user_id: 'me'},
-          204,
-        );
-        throw new Error('GDPR dialog still visible after accepted home load');
-      }
+      await expect(this.heading()).not.toBeVisible({timeout: 1000});
+      expect(await this.scriptDataShowsDialog()).toBe('false');
     }).toPass({timeout: 90_000, intervals: [500, 1000, 2000, 5000]});
 
     await expect(this.heading()).not.toBeVisible({timeout: 15_000});
@@ -81,12 +71,18 @@ class GdprDialogPage {
    * Reads the current show_gdpr_dialog script-data value.
    */
   async scriptDataShowsDialog(): Promise<string> {
+    const data = await this.scriptData();
+    return String(data['show_gdpr_dialog']);
+  }
+
+  /**
+   * Reads the current GDPR script-data object.
+   */
+  async scriptData(): Promise<Record<string, unknown>> {
     return this.page.evaluate(() => {
       const el = document.querySelector('script[data-gdpr]');
       const raw = (el as HTMLElement | null)?.dataset['gdpr'] ?? '{}';
-      return String(
-        (JSON.parse(raw) as Record<string, unknown>)['show_gdpr_dialog'],
-      );
+      return JSON.parse(raw) as Record<string, unknown>;
     });
   }
 
@@ -101,37 +97,18 @@ class GdprDialogPage {
   }
 
   /**
-   * Waits until a future server-rendered dashboard home document agrees that
-   * the dialog is accepted.  The visible current page updates before this
-   * server state is readable on the next navigation, and there is no current
-   * page UI signal for that future render.
+   * Replays the idempotent accept endpoint for the current user.  The UI click
+   * remains the behavior under test; this waits for the same server state that
+   * the following full page load observes.
    */
-  async waitForAcceptedServerRender(): Promise<void> {
-    await expect(async () => {
-      const showDialog = await this.page.evaluate(async () => {
-        const response = await fetch(`/home?gdpr_probe=${Date.now()}`, {
-          credentials: 'same-origin',
-          cache: 'no-store',
-        });
-        const html = await response.text();
-        const match = html.match(/data-gdpr=(["'])(.*?)\1/);
-        if (!match) {
-          return undefined;
-        }
-        const decoded = document.createElement('textarea');
-        decoded.innerHTML = match[2];
-        return JSON.parse(decoded.value)['show_gdpr_dialog'];
-      });
-      if (showDialog === true) {
-        await browserFormRequest(
-          this.page,
-          '/dashboardapi/v1/users/accept_data_transfer_agreement',
-          {user_id: 'me'},
-          204,
-        );
-      }
-      expect(showDialog).toBe(false);
-    }).toPass({timeout: 60_000, intervals: [500, 1000, 2000, 5000]});
+  async acceptServerSide(): Promise<void> {
+    await browserRequest(
+      this.page,
+      '/dashboardapi/v1/users/accept_data_transfer_agreement',
+      'POST',
+      {user_id: 'me'},
+      204,
+    );
   }
 
   /**
@@ -148,16 +125,19 @@ class GdprDialogPage {
     await expect(
       this.page.getByRole('link', {name: /Explore professional/}),
     ).toBeVisible();
+    const acceptResponse = this.page.waitForResponse(
+      response =>
+        response
+          .url()
+          .includes('/dashboardapi/v1/users/accept_data_transfer_agreement') &&
+        response.request().method() === 'POST',
+      {timeout: 15_000},
+    );
     await this.acceptButton().click();
+    expect((await acceptResponse).status()).toBe(204);
+    await this.acceptServerSide();
     await expect(this.heading()).not.toBeVisible({timeout: 15_000});
     await this.waitForScriptDataFalse();
-    await browserFormRequest(
-      this.page,
-      '/dashboardapi/v1/users/accept_data_transfer_agreement',
-      {user_id: 'me'},
-      204,
-    );
-    await this.waitForAcceptedServerRender();
   }
 }
 
@@ -212,6 +192,22 @@ async function mockGeolocationLikeCucumber(
 }
 
 /**
+ * Navigates to a dashboard document with a CSRF token for browser-origin XHRs.
+ */
+async function gotoCsrfDocument(
+  page: import('@playwright/test').Page,
+): Promise<void> {
+  for (const path of ['/reset_session', '/users/sign_in']) {
+    await page.goto(path, {waitUntil: 'domcontentloaded'});
+    if ((await page.locator('meta[name="csrf-token"]').count()) > 0) {
+      return;
+    }
+  }
+
+  throw new Error('dashboard did not render a CSRF token');
+}
+
+/**
  * Issues an XMLHttpRequest from the browser page, matching Cucumber's
  * `browser_request` helper.
  *
@@ -228,76 +224,39 @@ async function browserRequest(
   body: unknown = undefined,
   expectedStatus = 200,
 ): Promise<string> {
-  const response = await page.evaluate(
-    ({body, method, url}) =>
-      new Promise<{status: number; text: string}>((resolve, reject) => {
-        const xhr = new XMLHttpRequest();
-        xhr.open(method, url, true);
-        const csrf = document.head.querySelector<HTMLMetaElement>(
-          "meta[name='csrf-token']",
-        );
-        if (csrf) {
-          xhr.setRequestHeader('X-Csrf-Token', csrf.content);
-        }
-        if (body !== undefined) {
-          xhr.setRequestHeader('Content-Type', 'application/json');
-        }
-        xhr.onreadystatechange = () => {
-          if (xhr.readyState === 4) {
-            resolve({status: xhr.status, text: xhr.responseText});
+  let response: {status: number; text: string} | undefined;
+  for (let attempt = 1; attempt <= 3; attempt++) {
+    response = await page.evaluate(
+      ({body, method, url}) =>
+        new Promise<{status: number; text: string}>((resolve, reject) => {
+          const xhr = new XMLHttpRequest();
+          xhr.open(method, url, true);
+          const csrf = document.head.querySelector<HTMLMetaElement>(
+            "meta[name='csrf-token']",
+          );
+          if (csrf) {
+            xhr.setRequestHeader('X-Csrf-Token', csrf.content);
           }
-        };
-        xhr.onerror = () => reject(new Error(`XHR failed: ${method} ${url}`));
-        xhr.send(body === undefined ? undefined : JSON.stringify(body));
-      }),
-    {body, method, url},
-  );
-  expect(response.status, response.text).toBe(expectedStatus);
-  return response.text;
-}
+          if (body !== undefined) {
+            xhr.setRequestHeader('Content-Type', 'application/json');
+          }
+          xhr.onreadystatechange = () => {
+            if (xhr.readyState === 4) {
+              resolve({status: xhr.status, text: xhr.responseText});
+            }
+          };
+          xhr.onerror = () => reject(new Error(`XHR failed: ${method} ${url}`));
+          xhr.send(body === undefined ? undefined : JSON.stringify(body));
+        }),
+      {body, method, url},
+    );
+    if (response.status === expectedStatus || response.status < 500) {
+      break;
+    }
+  }
 
-/**
- * Sends a URL-encoded form request from the browser page.  This matches the
- * dashboard GDPR dialog transport (`$.post`) without depending on jQuery.
- *
- * @param page - Playwright page with a dashboard document
- * @param url - same-origin URL to request
- * @param form - form fields to send
- * @param expectedStatus - expected HTTP status
- */
-async function browserFormRequest(
-  page: import('@playwright/test').Page,
-  url: string,
-  form: Record<string, string>,
-  expectedStatus = 200,
-): Promise<string> {
-  const response = await page.evaluate(
-    ({form, url}) =>
-      new Promise<{status: number; text: string}>((resolve, reject) => {
-        const xhr = new XMLHttpRequest();
-        xhr.open('POST', url, true);
-        const csrf = document.head.querySelector<HTMLMetaElement>(
-          "meta[name='csrf-token']",
-        );
-        if (csrf) {
-          xhr.setRequestHeader('X-Csrf-Token', csrf.content);
-        }
-        xhr.setRequestHeader(
-          'Content-Type',
-          'application/x-www-form-urlencoded; charset=UTF-8',
-        );
-        xhr.onreadystatechange = () => {
-          if (xhr.readyState === 4) {
-            resolve({status: xhr.status, text: xhr.responseText});
-          }
-        };
-        xhr.onerror = () => reject(new Error(`XHR failed: POST ${url}`));
-        xhr.send(new URLSearchParams(form).toString());
-      }),
-    {form, url},
-  );
-  expect(response.status, response.text).toBe(expectedStatus);
-  return response.text;
+  expect(response?.status, response?.text).toBe(expectedStatus);
+  return response?.text ?? '';
 }
 
 /**
@@ -312,7 +271,7 @@ async function createTeacherLikeCucumber(
   page: import('@playwright/test').Page,
   name: string,
 ): Promise<{email: string; password: string}> {
-  await page.goto('/reset_session');
+  await gotoCsrfDocument(page);
   const ts = Date.now();
   const rand = Math.random().toString(36).slice(2, 8);
   const email = `user${ts}_${rand}@test.xx`;
@@ -390,7 +349,7 @@ async function signInAndGoHomeLikeCucumber(
   email: string,
   password: string,
 ): Promise<void> {
-  await page.goto('/reset_session');
+  await gotoCsrfDocument(page);
   await browserRequest(
     page,
     '/users/sign_in',

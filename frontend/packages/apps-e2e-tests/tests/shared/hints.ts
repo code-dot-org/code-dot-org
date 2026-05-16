@@ -8,21 +8,40 @@ import {expect, type Locator, type Page} from '@playwright/test';
  * @param page - Playwright page with a CSF level open
  */
 export async function viewNextHint(page: Page): Promise<void> {
+  const okButton = page.getByRole('button', {name: 'OK', exact: true});
+  if (await okButton.isVisible().catch(() => false)) {
+    await clickButtonUntilHidden(okButton);
+  }
+
   await page.locator('#lightbulb').click();
   const yesButton = page.getByRole('button', {name: 'Yes', exact: true});
   await expect(yesButton).toBeVisible();
+  await clickButtonUntilHidden(yesButton);
+}
 
+/**
+ * Clicks a prompt button until the visible prompt is dismissed.
+ * Firefox can report a successful pointer click on these legacy instruction
+ * controls without the React handler observing it, so fall back to the same
+ * element activation Cucumber gets from Selenium.
+ *
+ * @param button - prompt button to activate
+ */
+async function clickButtonUntilHidden(button: Locator): Promise<void> {
   for (let attempt = 0; attempt < 3; attempt++) {
-    await yesButton.click();
+    await button.click();
     try {
-      await expect(yesButton).not.toBeVisible({timeout: 2_000});
+      await expect(button).not.toBeVisible({timeout: 2_000});
       return;
-    } catch (error) {
+    } catch {
       if (attempt === 2) {
-        throw error;
+        break;
       }
     }
   }
+
+  await button.evaluate(element => (element as HTMLElement).click());
+  await expect(button).not.toBeVisible();
 }
 
 /**

@@ -35,6 +35,19 @@ async function waitForBlockReady(page: Page, blockId: string): Promise<void> {
 }
 
 /**
+ * Close Blockly tutorial callouts if test-studio shows them for this level.
+ * The callout is a visible UI layer over the workspace and can steal focus
+ * from the first Firefox field-editor open.
+ */
+async function dismissBlocklyCallouts(page: Page): Promise<void> {
+  const closeButton = page.locator('.cdo-qtips .tooltip-x-close').first();
+  if (!(await closeButton.isVisible().catch(() => false))) return;
+
+  await closeButton.click();
+  await expect(page.locator('.cdo-qtips')).toBeHidden();
+}
+
+/**
  * Open a field editor by addressing the block via the Blockly workspace API.
  * Mirrors `I show the editor of field "X" of block "Y"`. Waits for the angle
  * helper SVG to mount so callers do not need to poll for the container.
@@ -147,6 +160,26 @@ async function setDropdownValue(
  */
 function angleHelperSvg(page: Page): Locator {
   return page.locator('.blocklyAngleHelperContainer svg').last();
+}
+
+/**
+ * Assert the visible angle-helper readiness signal: the helper SVG is mounted
+ * and laid out. This is stronger than a plain visibility assertion on
+ * `.last()`, which can lose a just-mounted helper while Blockly is rebuilding
+ * the DropDownDiv.
+ */
+async function expectAngleHelperVisible(page: Page): Promise<void> {
+  await expect
+    .poll(
+      async () => {
+        const svg = angleHelperSvg(page);
+        if ((await svg.count()) !== 1) return false;
+        const box = await svg.boundingBox().catch(() => null);
+        return Boolean(box && box.width > 0 && box.height > 0);
+      },
+      {timeout: 30_000},
+    )
+    .toBe(true);
 }
 
 /**
@@ -328,6 +361,7 @@ test.describe('Angle helper — Artist level 7', () => {
   test.beforeEach(async ({page}) => {
     artist = new Artist(page);
     await artist.gotoLevel(7);
+    await dismissBlocklyCallouts(page);
     // The Blockly main workspace is created asynchronously after the
     // runButton becomes visible. Wait for the four starter blocks to be
     // present before any showFieldEditor() call so getBlockById() does not
@@ -351,16 +385,16 @@ test.describe('Angle helper — Artist level 7', () => {
    */
   test('visual path: opens all angle helper editor states', async ({page}) => {
     await showFieldEditor(page, 'turnConstant', 'VALUE');
-    await expect(angleHelperSvg(page)).toBeVisible();
+    await expectAngleHelperVisible(page);
     // Eyes checkpoint in Cucumber: "free text angle helper".
 
     await showFieldEditor(page, 'turnDropdown', 'VALUE', 'dropdown');
-    await expect(angleHelperSvg(page)).toBeVisible();
+    await expectAngleHelperVisible(page);
     await expectAngleDropdown(page, '270');
     // Eyes checkpoint in Cucumber: "dropdown angle helper".
 
     await showFieldEditor(page, 'mathNumber', 'NUM');
-    await expect(angleHelperSvg(page)).toBeVisible();
+    await expectAngleHelperVisible(page);
     await expectAngleText(page, 30);
     // Eyes checkpoint in Cucumber: "value input angle helper".
   });

@@ -1,6 +1,9 @@
+import {type Page} from '@playwright/test';
+
 import {
   createStudent,
   createTeacher,
+  grantFacilitatorAccess,
   grantProgramManagerAccess,
   grantWorkshopAdminAccess,
   signOut,
@@ -12,6 +15,7 @@ import {
   deletePdWorkshop,
   endPdWorkshop,
   enrollCurrentUserInWorkshop,
+  getCurrentUserId,
   markCurrentUserAttended,
   startPdWorkshop,
 } from '../../shared/pd';
@@ -21,6 +25,148 @@ import {RegionalPartnerMiniContactPage} from './RegionalPartnerMiniContactPage';
 
 const REGGIE_PARTNER_ID = 2;
 const MINI_CONTACT_NOTES = 'Sample message for regional partner.';
+
+interface WorkshopCourseOffering {
+  id: number;
+}
+
+async function gotoCsrfDocument(page: Page): Promise<void> {
+  for (const path of ['/reset_session', '/users/sign_in']) {
+    await page.goto(path, {waitUntil: 'domcontentloaded'});
+    if ((await page.locator('meta[name="csrf-token"]').count()) > 0) {
+      return;
+    }
+  }
+
+  throw new Error('dashboard did not render a CSRF token');
+}
+
+async function browserRequest(
+  page: Page,
+  url: string,
+  method = 'GET',
+  body: unknown = undefined,
+  expectedStatus = 200,
+): Promise<void> {
+  const response = await page.evaluate(
+    ({body, method, url}) =>
+      new Promise<{status: number; text: string}>((resolve, reject) => {
+        const xhr = new XMLHttpRequest();
+        xhr.open(method, url, true);
+        const csrf = document.head.querySelector<HTMLMetaElement>(
+          "meta[name='csrf-token']",
+        );
+        if (csrf) {
+          xhr.setRequestHeader('X-Csrf-Token', csrf.content);
+        }
+        if (body !== undefined) {
+          xhr.setRequestHeader('Content-Type', 'application/json');
+        }
+        xhr.onreadystatechange = () => {
+          if (xhr.readyState === 4) {
+            resolve({status: xhr.status, text: xhr.responseText});
+          }
+        };
+        xhr.onerror = () => reject(new Error(`XHR failed: ${method} ${url}`));
+        xhr.send(body === undefined ? undefined : JSON.stringify(body));
+      }),
+    {body, method, url},
+  );
+  expect(response.status, response.text).toBe(expectedStatus);
+}
+
+async function signOutByBrowserRequest(page: Page): Promise<void> {
+  await browserRequest(page, '/users/sign_out.json', 'GET', undefined, 204);
+}
+
+async function signInByBrowserRequest(
+  page: Page,
+  email: string,
+  password: string,
+): Promise<void> {
+  await gotoCsrfDocument(page);
+  await browserRequest(
+    page,
+    '/users/sign_in',
+    'POST',
+    {user: {login: email, password}},
+    200,
+  );
+}
+
+async function getWorkshopCourseOfferingId(page: Page): Promise<number> {
+  const response = await page.request.get(
+    '/course_offerings/self_paced_pl_course_offerings_for_workshops',
+  );
+  if (!response.ok()) {
+    throw new Error(
+      `course offering lookup failed: ${response.status()} - ${await response.text()}`,
+    );
+  }
+
+  const courseOfferings = (await response.json()) as WorkshopCourseOffering[];
+  const courseOfferingId = courseOfferings[0]?.id;
+  if (!courseOfferingId) {
+    throw new Error('no workshop course offering was available');
+  }
+
+  return courseOfferingId;
+}
+
+/**
+ * Creates the started, ended, and not-started workshop set used by the source
+ * dashboard_view.feature setup.
+ *
+ * @param page - Playwright page holding a workshop-admin session
+ */
+async function createDashboardStatusWorkshops(
+  page: Page,
+  facilitatorId?: number,
+): Promise<{
+  startedWorkshopId: number;
+  endedWorkshopId: number;
+  notStartedWorkshopId: number;
+}> {
+  const courseOfferingId = await getWorkshopCourseOfferingId(page);
+  const dashboardWorkshopOptions = {
+    capacity: 5,
+    course: 'Build Your Own Workshop',
+    courseOfferingIds: [courseOfferingId],
+    ...(facilitatorId ? {facilitatorIds: [facilitatorId]} : {}),
+    participantGroupType: 'Regional',
+    subject: undefined,
+  };
+
+  const startedWorkshopId = await createPdWorkshop(
+    page,
+    dashboardWorkshopOptions,
+  );
+  await startPdWorkshop(page, startedWorkshopId);
+
+  const endedWorkshopId = await createPdWorkshop(
+    page,
+    dashboardWorkshopOptions,
+  );
+  await startPdWorkshop(page, endedWorkshopId);
+  await endPdWorkshop(page, endedWorkshopId);
+
+  const notStartedWorkshopId = await createPdWorkshop(
+    page,
+    dashboardWorkshopOptions,
+  );
+
+  return {startedWorkshopId, endedWorkshopId, notStartedWorkshopId};
+}
+
+/**
+ * Waits for a status table to render, matching the Cucumber table-id signal.
+ *
+ * @param page - Playwright page on the workshop dashboard
+ * @param tableId - rendered dashboard table id
+ */
+async function expectWorkshopTable(page: Page, tableId: string): Promise<void> {
+  await expect(page.locator(`#${tableId}`)).toBeVisible({timeout: 30_000});
+}
 
 test.describe('PD dashboard and workshop flows', () => {
   /**
@@ -36,23 +182,47 @@ test.describe('PD dashboard and workshop flows', () => {
    * Scenario: Facilitator View of dashboard is as expected
    */
   test('facilitator dashboard shows workshop status tables', async ({page}) => {
-    await createTeacher(page, {name: 'PL Facilitator'});
+    const facilitator = await createTeacher(page, {name: 'PL Facilitator'});
+    await grantFacilitatorAccess(page);
+    const facilitatorId = await getCurrentUserId(page);
+
+    const workshopAdmin = await createTeacher(page, {
+      name: 'PL Workshop Admin',
+    });
     await grantWorkshopAdminAccess(page);
 
-    const notStartedWorkshopId = await createPdWorkshop(page);
-    const endedWorkshopId = await createPdWorkshop(page);
-    await endPdWorkshop(page, endedWorkshopId);
+    const {startedWorkshopId, endedWorkshopId, notStartedWorkshopId} =
+      await createDashboardStatusWorkshops(page, facilitatorId);
 
     try {
+      await signOutByBrowserRequest(page);
+      await page.context().clearCookies();
+      await signInByBrowserRequest(
+        page,
+        facilitator.email,
+        facilitator.password,
+      );
       await page.goto('/pd/workshop_dashboard');
       await expect(
         page.getByRole('heading', {name: 'In Progress'}),
       ).toBeVisible({timeout: 30_000});
+      await expectWorkshopTable(page, 'inProgressWorkshopsTable');
       await expect(
         page.getByRole('heading', {name: 'Not Started'}),
       ).toBeVisible();
-      await expect(page.locator('#notStartedWorkshopsTable')).toBeVisible();
+      await expectWorkshopTable(page, 'notStartedWorkshopsTable');
+      await expect(page.getByRole('heading', {name: 'Past'})).toBeVisible();
+      await expectWorkshopTable(page, 'endedWorkshopsTable');
     } finally {
+      await signOutByBrowserRequest(page);
+      await page.context().clearCookies();
+      await signInByBrowserRequest(
+        page,
+        workshopAdmin.email,
+        workshopAdmin.password,
+      );
+      await page.goto('/');
+      await deletePdWorkshop(page, startedWorkshopId);
       await deletePdWorkshop(page, notStartedWorkshopId);
       await deletePdWorkshop(page, endedWorkshopId);
     }
@@ -65,22 +235,30 @@ test.describe('PD dashboard and workshop flows', () => {
    */
   test('organizer dashboard shows workshop status tables', async ({page}) => {
     await createTeacher(page, {name: 'PL Organizer'});
-    await grantWorkshopAdminAccess(page);
+    // The source Cucumber step creates a workshop_organizer directly through
+    // Rails. apps-e2e has no workshop-organizer endpoint, so use the equivalent
+    // non-admin PD dashboard scope. Workshop admin is not equivalent here: it
+    // loads every In Progress workshop and the unbounded table can stay in its
+    // visible loading state under full-suite data volume.
+    await grantProgramManagerAccess(page);
 
-    const notStartedWorkshopId = await createPdWorkshop(page);
-    const endedWorkshopId = await createPdWorkshop(page);
-    await endPdWorkshop(page, endedWorkshopId);
+    const {startedWorkshopId, endedWorkshopId, notStartedWorkshopId} =
+      await createDashboardStatusWorkshops(page);
 
     try {
       await page.goto('/pd/workshop_dashboard');
       await expect(
         page.getByRole('heading', {name: 'In Progress'}),
       ).toBeVisible({timeout: 30_000});
+      await expectWorkshopTable(page, 'inProgressWorkshopsTable');
       await expect(
         page.getByRole('heading', {name: 'Not Started'}),
       ).toBeVisible();
-      await expect(page.locator('#notStartedWorkshopsTable')).toBeVisible();
+      await expectWorkshopTable(page, 'notStartedWorkshopsTable');
+      await expect(page.getByRole('heading', {name: 'Past'})).toBeVisible();
+      await expectWorkshopTable(page, 'endedWorkshopsTable');
     } finally {
+      await deletePdWorkshop(page, startedWorkshopId);
       await deletePdWorkshop(page, notStartedWorkshopId);
       await deletePdWorkshop(page, endedWorkshopId);
     }
