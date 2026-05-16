@@ -24,6 +24,13 @@ async function waitForInitialProjectSave(
   );
 }
 
+async function gotoSharePage(
+  page: import('@playwright/test').Page,
+  shareUrl: string,
+): Promise<void> {
+  await page.goto(shareUrl, {waitUntil: 'commit'});
+}
+
 /**
  * App Lab — Shared Apps: interactive share page behavior.
  *
@@ -82,7 +89,7 @@ test.describe('App Lab — Shared Apps', () => {
       await applab.resetButton.click();
 
       const shareUrl = await applab.getShareUrlFromDialog();
-      await studentPage.goto(shareUrl, {waitUntil: 'domcontentloaded'});
+      await gotoSharePage(studentPage, shareUrl);
 
       // Share page auto-runs the code.
       await expect(
@@ -137,7 +144,7 @@ test.describe('App Lab — Shared Apps', () => {
     await applab.resetButton.click();
 
     const shareUrl = await applab.getShareUrlFromDialog();
-    await studentPage.goto(shareUrl, {waitUntil: 'domcontentloaded'});
+    await gotoSharePage(studentPage, shareUrl);
 
     await expect(
       studentPage.locator('#divApplab > .screen > button#testButton1'),
@@ -173,7 +180,7 @@ test.describe('App Lab — Shared Apps', () => {
     await applab.resetButton.click();
 
     const shareUrl = await applab.getShareUrlFromDialog();
-    await studentPage.goto(shareUrl, {waitUntil: 'domcontentloaded'});
+    await gotoSharePage(studentPage, shareUrl);
 
     await expect(studentPage.locator('.screen > #testDropdown')).toBeVisible({
       timeout: 30_000,
@@ -205,7 +212,7 @@ test.describe('App Lab — Shared Apps', () => {
     await applab.resetButton.click();
 
     const shareUrl = await applab.getShareUrlFromDialog();
-    await studentPage.goto(shareUrl, {waitUntil: 'domcontentloaded'});
+    await gotoSharePage(studentPage, shareUrl);
 
     await expect(studentPage.locator('.screen > #radio2')).toBeVisible({
       timeout: 30_000,
@@ -243,7 +250,7 @@ test.describe('App Lab — Shared Apps', () => {
     await applab.resetButton.click();
 
     const shareUrl = await applab.getShareUrlFromDialog();
-    await studentPage.goto(shareUrl, {waitUntil: 'domcontentloaded'});
+    await gotoSharePage(studentPage, shareUrl);
 
     await expect(studentPage.locator('.screen > #checkbox2')).toBeVisible({
       timeout: 30_000,
@@ -281,7 +288,7 @@ test.describe('App Lab — Shared Apps', () => {
     await applab.waitForUiSaveAfter(() => applab.switchToCodeMode());
 
     const shareUrl = await applab.getShareUrlFromDialog();
-    await studentPage.goto(shareUrl, {waitUntil: 'domcontentloaded'});
+    await gotoSharePage(studentPage, shareUrl);
 
     await expect(studentPage.locator('.screen > input').first()).toBeVisible({
       timeout: 30_000,
@@ -321,7 +328,7 @@ test.describe('App Lab — Shared Apps', () => {
       await applab.waitForUiSaveAfter(() => applab.switchToCodeMode());
 
       const shareUrl = await applab.getShareUrlFromDialog();
-      await studentPage.goto(shareUrl, {waitUntil: 'domcontentloaded'});
+      await gotoSharePage(studentPage, shareUrl);
 
       await expect(studentPage.locator('.screen > #text_area1')).toBeVisible({
         timeout: 30_000,

@@ -1,4 +1,5 @@
 import {type Page} from '@playwright/test';
+import {randomUUID} from 'node:crypto';
 
 import {createTestUser, type CreateUserPayload} from './auth';
 import {mockDcdo} from './cookies';
@@ -9,6 +10,10 @@ const CAP_LOCKOUT_ISO = '2024-07-01T06:00:00.000Z';
 const CAP_START_ISO = '2023-07-01T06:00:00.000Z';
 // One second before cap_CO_start_date — "before CAP start".
 const BEFORE_CAP_ISO = '2023-07-01T05:59:59.000Z';
+
+function uniqueCapSuffix(): string {
+  return randomUUID().replace(/-/g, '').slice(0, 16);
+}
 
 /**
  * Mocks the CPA lockout phase by setting DCDO cookies for
@@ -73,11 +78,10 @@ export async function createCapStudent(
     parentCreated = false,
   }: CapStudentOptions = {},
 ): Promise<CapStudentCredentials> {
-  const ts = Date.now();
-  const rand = Math.random().toString(36).slice(2, 8);
-  const email = `cap_student_${ts}_${rand}@test.xx`;
-  const password = sso ? undefined : `CapPass${ts}`;
-  const displayName = `CapStudent${ts}${rand}`;
+  const suffix = uniqueCapSuffix();
+  const email = `cap_student_${suffix}@test.xx`;
+  const password = sso ? undefined : `CapPass${suffix}`;
+  const displayName = `CapStudent${suffix}`;
 
   const payload: CreateUserPayload = {
     user_type: 'student',
@@ -102,7 +106,7 @@ export async function createCapStudent(
 
   if (sso) {
     payload.sso = sso === 'google' ? 'google_oauth2' : sso;
-    payload.uid = `${ts}_${rand}`;
+    payload.uid = suffix;
   }
 
   if (parentCreated) {
@@ -138,11 +142,10 @@ export async function createCapTeacher(
   page: Page,
   {neverSignedIn = false, timing}: CapTeacherOptions = {},
 ): Promise<{email: string; password: string; displayName: string}> {
-  const ts = Date.now();
-  const rand = Math.random().toString(36).slice(2, 8);
-  const email = `cap_teacher_${ts}_${rand}@test.xx`;
-  const password = `CapTeacherPass${ts}`;
-  const displayName = `CapTeacher${ts}${rand}`;
+  const suffix = uniqueCapSuffix();
+  const email = `cap_teacher_${suffix}@test.xx`;
+  const password = `CapTeacherPass${suffix}`;
+  const displayName = `CapTeacher${suffix}`;
 
   const payload: CreateUserPayload = {
     user_type: 'teacher',
@@ -203,10 +206,9 @@ export async function createCapSponsoredStudent(
     timing,
   }: CapSponsoredStudentOptions = {},
 ): Promise<{displayName: string}> {
-  const ts = Date.now();
-  const rand = Math.random().toString(36).slice(2, 8);
-  const teacherEmail = `cap_teacher_${ts}_${rand}@test.xx`;
-  const teacherPassword = `CapTeacherPass${ts}`;
+  const teacherSuffix = uniqueCapSuffix();
+  const teacherEmail = `cap_teacher_${teacherSuffix}@test.xx`;
+  const teacherPassword = `CapTeacherPass${teacherSuffix}`;
 
   // Create teacher and sign in.
   await createTestUser(page, {
@@ -214,7 +216,7 @@ export async function createCapSponsoredStudent(
     email: teacherEmail,
     password: teacherPassword,
     password_confirmation: teacherPassword,
-    name: `CapTeacher${ts}${rand}`,
+    name: `CapTeacher${teacherSuffix}`,
     age: '21+',
     sign_in_count: 2,
     terms_of_service_version: '1',
@@ -261,9 +263,7 @@ export async function createCapSponsoredStudent(
   const sectionCode = ((await sectionResp.json()) as {code: string}).code;
 
   // Build sponsored student payload (no email/password).
-  const studentTs = Date.now();
-  const studentRand = Math.random().toString(36).slice(2, 8);
-  const displayName = `CapSponsored${studentTs}${studentRand}`;
+  const displayName = `CapSponsored${uniqueCapSuffix()}`;
 
   const studentPayload: CreateUserPayload = {
     user_type: 'student',

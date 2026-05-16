@@ -49,7 +49,7 @@ async function selectLocaleAndWaitForRedirect(
 ): Promise<void> {
   await Promise.all([
     page.waitForURL(expectedUrl, {
-      waitUntil: 'domcontentloaded',
+      waitUntil: 'commit',
       timeout: 30_000,
     }),
     page.locator(selector).evaluate((selectElement, localeValue) => {

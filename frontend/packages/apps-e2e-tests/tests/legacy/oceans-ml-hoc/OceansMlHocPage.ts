@@ -18,7 +18,8 @@ export class OceansMlHocPage {
    */
   async gotoLevel(level: number): Promise<void> {
     await this.page.goto(
-      `/courses/oceans/units/1/lessons/1/levels/${level}?guide=off`,
+      `/courses/oceans/units/1/lessons/1/levels/${level}?guide=off&lang=en-US`,
+      {waitUntil: 'commit'},
     );
     await expect(this.page.getByRole('button').first()).toBeVisible({
       timeout: 60_000,
