@@ -70,11 +70,12 @@ test.describe('Python Lab — level 1 — run output', () => {
   test(
     'running prints Hello from the start! to the console',
     {tag: '@visual'},
-    async () => {
-      // visual checkpoint: "initial load"
+    async ({eyes}) => {
+      await eyes.open('run and see output of a Python program');
+      await eyes.check('initial load');
       await lab.run();
       await expect(lab.console).toContainText('Hello from the start!');
-      // visual checkpoint: "completed run"
+      await eyes.check('completed run');
     },
   );
 });
@@ -102,11 +103,12 @@ test.describe('Python Lab — level 10 — Neighborhood', () => {
   test(
     'running Neighborhood program outputs 10 to the console',
     {tag: '@visual'},
-    async () => {
-      // visual checkpoint: "initial load"
+    async ({eyes}) => {
+      await eyes.open('run and see output of Neighborhood');
+      await eyes.check('initial load');
       await lab.run();
       await expect(lab.console).toContainText('10');
-      // visual checkpoint: "completed run"
+      await eyes.check('completed run');
     },
   );
 });
@@ -279,10 +281,11 @@ test.describe('Python Lab — start mode (levelbuilder)', () => {
    * Source: dashboard/test/ui/features/code_tools/pythonlab/pythonlab_start_mode_eyes.feature
    * Scenario: Basic Start mode
    */
-  test('basic start mode page is ready', {tag: '@visual'}, async () => {
+  test('basic start mode page is ready', {tag: '@visual'}, async ({eyes}) => {
+    await eyes.open('Python Lab start mode');
     await lab.waitForRunReady();
     await expect(lab.editorContent).toBeVisible();
     await expect(lab.filesList).toContainText('main.py');
-    // visual checkpoint: "basic start mode page"
+    await eyes.check('basic start mode page');
   });
 });

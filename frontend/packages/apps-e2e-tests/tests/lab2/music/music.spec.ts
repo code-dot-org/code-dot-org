@@ -1,4 +1,4 @@
-import {expect, test} from '@playwright/test';
+import {expect, test} from '../../shared/fixtures';
 
 import {WINNING_MUSIC_LEVEL_2_BLOCKS} from './blocks';
 import {MusicLab} from './MusicLab';
@@ -91,10 +91,11 @@ test.describe('Music Lab — level switching', () => {
   test(
     'clicking level 5 bubble loads level 5 workspace',
     {tag: '@visual'},
-    async () => {
+    async ({eyes}) => {
+      await eyes.open('levelLoading');
       await music.page.locator("[title='Level 5 Lesson Music']").click();
       await expect(music.runButton).toBeVisible();
-      // visual checkpoint: "new level loading"
+      await eyes.check('new level loading');
     },
   );
 });

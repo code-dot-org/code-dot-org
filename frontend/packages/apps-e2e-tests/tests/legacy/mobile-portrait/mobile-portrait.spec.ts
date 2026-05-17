@@ -1,3 +1,4 @@
+import type {EyesFixture} from '../../shared/eyes';
 import {expect, test} from '../../shared/fixtures';
 
 /**
@@ -13,10 +14,12 @@ const PORTRAIT_VIEWPORT = {width: 390, height: 844} as const;
  *
  * @param page - Playwright page
  * @param url - level URL path from the Cucumber example row
+ * @param eyes - Eyes fixture for the rotate-overlay checkpoint
  */
 async function expectRotateOverlay(
   page: import('@playwright/test').Page,
   url: string,
+  eyes: EyesFixture,
 ): Promise<void> {
   await page.setViewportSize(PORTRAIT_VIEWPORT);
   await page.goto(url);
@@ -25,7 +28,7 @@ async function expectRotateOverlay(
   await expect(page.locator('#rotateText')).toContainText(
     /Rotate your device|Turn off orientation lock/,
   );
-  // Visual checkpoint stub: "initial load".
+  await eyes.check('initial load');
 }
 
 test.describe('Mobile portrait rotate overlay', () => {
@@ -37,14 +40,18 @@ test.describe('Mobile portrait rotate overlay', () => {
    */
   test('Blockly portrait levels show the rotate-device overlay', async ({
     page,
+    eyes,
   }) => {
+    await eyes.open('droplet level');
     await expectRotateOverlay(
       page,
       '/courses/allthethingscourse/units/1/lessons/18/levels/5?noautoplay=true',
+      eyes,
     );
     await expectRotateOverlay(
       page,
       '/courses/allthethingscourse/units/1/lessons/37/levels/1?noautoplay=true',
+      eyes,
     );
   });
 });

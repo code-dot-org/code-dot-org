@@ -119,12 +119,19 @@ test.describe('Sprite Lab — lesson 36 — visual start blocks', () => {
   test(
     'renders and can scroll through representative start blocks',
     {tag: '@no_mobile'},
-    async ({page}) => {
+    async ({page, eyes}) => {
       const spritelab = new SpriteLab(page);
       await spritelab.gotoLevel(4);
       await expect(spritelab.runButton).toBeVisible();
       await expect(spritelab.resetButton).toBeHidden();
-      // Visual checkpoint stub: "variety of start blocks".
+      await eyes.open('basic rendering test');
+      await eyes.check('variety of start blocks');
+
+      const scrollCheckpointForBlock: Record<string, string> = {
+        'uitest-show-title': 'scroll to middle of workspace',
+        'uitest-when-touching-block': 'scroll to when touches block',
+        'uitest-when-clicked': 'scroll to when clicked block',
+      };
 
       for (const blockId of [
         'uitest-show-title',
@@ -141,7 +148,7 @@ test.describe('Sprite Lab — lesson 36 — visual start blocks', () => {
         await expect(
           page.locator(`.blocklySelected[data-id="${blockId}"]`),
         ).toBeVisible();
-        // Visual checkpoint stub: scrolled workspace to selected block.
+        await eyes.check(scrollCheckpointForBlock[blockId]);
       }
     },
   );

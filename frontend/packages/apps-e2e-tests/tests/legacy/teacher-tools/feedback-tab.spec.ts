@@ -33,16 +33,18 @@ test.describe('Feedback Tab Visibility', {tag: '@no_mobile'}, () => {
    */
   test('eyes port: student feedback tab shows key concept when there is no feedback', async ({
     page,
+    eyes,
   }) => {
     const teacher = await createAuthorizedTeacher(page);
     const {sectionCode} = await createSection(page);
     const student = await createStudent(page);
     await joinSection(page, sectionCode);
 
+    await eyes.open('student with no feedback');
     const feedbackTab = new FeedbackTabPage(page);
     await feedbackTab.completeLevel();
     await feedbackTab.expectStudentKeyConceptFeedbackTab();
-    // Visual checkpoint stub: student with no feedback tab.
+    await eyes.check('student with no feedback tab');
 
     void teacher;
     void student;
@@ -123,6 +125,7 @@ test.describe('Feedback Tab Visibility', {tag: '@no_mobile'}, () => {
    */
   test('teacher can submit rubric feedback that student later sees', async ({
     page,
+    eyes,
   }) => {
     // Background: create authorized teacher + section + student, complete level.
     const teacher = await createAuthorizedTeacher(page);
@@ -142,6 +145,7 @@ test.describe('Feedback Tab Visibility', {tag: '@no_mobile'}, () => {
 
     // --- Teacher: check feedback tab presence on different level types ---
     await signIn(page, teacher.email, teacher.password);
+    await eyes.open('teacher giving student feedback');
 
     // Contained level without mini rubric — feedback tab absent.
     await page.goto('/courses/allthethingscourse/units/1/lessons/18/levels/15');
@@ -170,7 +174,7 @@ test.describe('Feedback Tab Visibility', {tag: '@no_mobile'}, () => {
     await expect(page.locator('.editor-column').first()).toContainText(
       'This is the key concept for this mini rubric.',
     );
-    // Visual checkpoint stub: teacher rubric feedback tab.
+    await eyes.check('teacher rubric feedback tab');
     await expect(
       page.locator('#rubric-input-performanceLevel1'),
     ).not.toBeAttached();
@@ -193,7 +197,7 @@ test.describe('Feedback Tab Visibility', {tag: '@no_mobile'}, () => {
     await expect(page.locator('.editor-column').first()).toContainText(
       'This is the key concept for this mini rubric.',
     );
-    // Visual checkpoint stub: teacher giving feedback tab load.
+    await eyes.check('teacher giving feedback tab load');
     await expect(page.locator('#ui-test-submit-feedback')).toContainText(
       'Save and share',
     );
@@ -254,7 +258,7 @@ test.describe('Feedback Tab Visibility', {tag: '@no_mobile'}, () => {
     await expect(page.locator('#ui-test-submit-feedback')).toContainText(
       'Update',
     );
-    // Visual checkpoint stub: teacher gave feedback.
+    await eyes.check('teacher gave feedback');
 
     // --- Student: verify teacher feedback is now visible ---
     await signIn(page, student.email, student.password);
@@ -274,6 +278,6 @@ test.describe('Feedback Tab Visibility', {tag: '@no_mobile'}, () => {
     await expect(page.locator('#ui-test-feedback-time')).toContainText(
       'Last updated',
     );
-    // Visual checkpoint stub: student viewing teacher feedback.
+    await eyes.check('student viewing teacher feedback');
   });
 });

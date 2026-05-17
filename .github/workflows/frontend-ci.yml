@@ -88,7 +88,7 @@ jobs:
   # Common teardown actions that must occur after _all_ workflows have completed.
   # For example, closing the Applitools batch after its completion.
   teardown:
-    needs: [setup, component-library]
+    needs: [setup, component-library, apps-e2e-tests]
     if: always()
     runs-on: ubuntu-24.04
     steps:

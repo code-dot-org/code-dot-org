@@ -487,8 +487,9 @@ test.describe('Java Lab — code review V2', () => {
   test(
     'student, peer, and teacher can view a code review',
     {tag: ['@no_mobile', '@eyes']},
-    async ({page}) => {
+    async ({page, eyes}) => {
       test.slow();
+      await eyes.open('Javalab Code Review V2');
       const setup = await setupCodeReviewGroup(page);
       const lab = new JavaLabPage(page);
 
@@ -498,12 +499,11 @@ test.describe('Java Lab — code review V2', () => {
       await lab.openReviewTab();
       await lab.waitForCommitInReviewTimeline();
       await lab.openNewCodeReview();
-      // Eyes checkpoint in Cucumber: owner sees the open review timeline.
 
       await signIn(page, setup.student1.email, setup.student1.password);
       await lab.gotoLevel(2);
       await lab.loadPeerCodeReview(1);
-      // Eyes checkpoint in Cucumber: student code reviewing peer.
+      await eyes.check('student code reviewing peer');
 
       await signIn(page, setup.teacher.email, setup.teacher.password);
       const student0Id = await getSectionStudentId(
@@ -519,13 +519,13 @@ test.describe('Java Lab — code review V2', () => {
       await expect(
         page.getByText(`Code Reviewing ${setup.student0.displayName}`),
       ).toBeVisible({timeout: 30_000});
-      // Eyes checkpoint in Cucumber: teacher code reviewing student.
+      await eyes.check('teacher code reviewing student');
 
       await signIn(page, setup.student0.email, setup.student0.password);
       await lab.gotoLevel(2);
       await lab.openReviewTab();
       await expect(lab.closeCodeReviewButton).toBeVisible({timeout: 30_000});
-      // Eyes checkpoint in Cucumber: student viewing own code review.
+      await eyes.check('student viewing own code review');
       await lab.closeOwnCodeReview();
     },
   );
@@ -544,17 +544,18 @@ test.describe('Java Lab — console-only level', () => {
   test(
     'console-only level responds to text input from user',
     {tag: ['@no_mobile', '@eyes', '@no_ci']},
-    async ({page}) => {
+    async ({page, eyes}) => {
       await createAuthorizedCsaStudent(page);
+      await eyes.open('Javalab Console Only Level');
       const lab = new JavaLabPage(page);
 
       await lab.gotoLevel(2);
       await expect(page.locator('#levelbuilder-menu-toggle')).not.toBeVisible();
-      // Eyes checkpoint in Cucumber: initial page load.
+      await eyes.check('initial page load');
 
       await lab.runConsoleProgram('Harry');
       await expect(lab.console).toContainText('Hello Harry!');
-      // Eyes checkpoint in Cucumber: program completed.
+      await eyes.check('program completed');
     },
   );
 });
@@ -572,8 +573,9 @@ test.describe('Java Lab — demo mode', () => {
   test(
     'unverified teacher sees captcha challenge before running Java Lab',
     {tag: ['@no_mobile', '@eyes', '@no_ci']},
-    async ({page}) => {
+    async ({page, eyes}) => {
       await createTeacher(page, {name: 'Ms_Frizzle'});
+      await eyes.open('Javalab Demo Mode');
       const lab = new JavaLabPage(page);
 
       await lab.gotoLevel(4);
@@ -589,7 +591,7 @@ test.describe('Java Lab — demo mode', () => {
       await expect(lab.console).toContainText(
         "Verification required: please confirm you're human.",
       );
-      // visual checkpoint: "initial modal view"
+      await eyes.check('initial modal view');
     },
   );
 });
@@ -671,18 +673,19 @@ test.describe('Java Lab — visual level flows', () => {
   test(
     'theater GIF level runs through video generation',
     {tag: ['@eyes', '@no_ci']},
-    async ({page}) => {
+    async ({page, eyes}) => {
       await createLevelbuilder(page, 'Simone');
+      await eyes.open('Javalab Theater GIF Playback');
       const lab = new JavaLabPage(page);
 
       await lab.gotoLevel(4);
       await lab.clickLevelbuilderToggle();
-      // visual checkpoint: "initial page load"
+      await eyes.check('initial page load');
       await lab.runButton.click();
       await expect(lab.console).toContainText('[JAVALAB] Program completed.', {
         timeout: 90_000,
       });
-      // visual checkpoint: "GIF end state"
+      await eyes.check('GIF end state');
     },
   );
 
@@ -694,26 +697,27 @@ test.describe('Java Lab — visual level flows', () => {
   test(
     'prompter level accepts an uploaded image and completes',
     {tag: ['@eyes', '@no_ci']},
-    async ({page}) => {
+    async ({page, eyes}) => {
       await createLevelbuilder(page, 'Simone');
+      await eyes.open('Javalab Prompter Image Upload');
       const lab = new JavaLabPage(page);
 
       await lab.gotoLevel(10);
       await lab.clickLevelbuilderToggle();
-      // visual checkpoint: "initial page load"
+      await eyes.check('initial page load');
       await lab.runButton.click();
       await expect(lab.console).toContainText('Upload a photo!', {
         timeout: 60_000,
       });
       await expect(lab.photoInput).toBeAttached({timeout: 30_000});
-      // visual checkpoint: "prompter upload view"
+      await eyes.check('prompter upload view');
       await lab.photoInput.setInputFiles(
         path.join(FIXTURES, 'javalab_image.jpg'),
       );
       await expect(lab.console).toContainText('[JAVALAB] Program completed.', {
         timeout: 90_000,
       });
-      // visual checkpoint: "prompter end state"
+      await eyes.check('prompter end state');
     },
   );
 
@@ -725,20 +729,21 @@ test.describe('Java Lab — visual level flows', () => {
   test(
     'neighborhood paint glomming level runs to completion',
     {tag: ['@eyes', '@no_ci']},
-    async ({page}) => {
+    async ({page, eyes}) => {
       test.slow();
       await createLevelbuilder(page, 'Simone');
+      await eyes.open('Javalab Neighborhood Paint Glomming');
       const lab = new JavaLabPage(page);
 
       await lab.gotoLevel(7);
       await lab.clickLevelbuilderToggle();
       await lab.setNeighborhoodSpeedToFast();
-      // visual checkpoint: "initial page load"
+      await eyes.check('initial page load');
       await lab.runButton.click();
       await expect(lab.console).toContainText('Done painting', {
         timeout: 180_000,
       });
-      // visual checkpoint: "paint glomming"
+      await eyes.check('paint glomming');
     },
   );
 });

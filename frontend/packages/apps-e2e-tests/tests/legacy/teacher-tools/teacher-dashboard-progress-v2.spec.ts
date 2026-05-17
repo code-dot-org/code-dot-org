@@ -246,13 +246,15 @@ test.describe('Teacher Dashboard Progress V2', {tag: '@no_mobile'}, () => {
    */
   test('teacher sees lesson progress icons after student progress', async ({
     page,
+    eyes,
   }) => {
     await openProgressDashboard(page, {completeMazeLevel: true});
 
     await expect(page.getByTestId('progress-icon').first()).toBeVisible({
       timeout: 15_000,
     });
-    // Visual checkpoint stub: V2 progress dashboard.
+    await eyes.open('V2 progress dashboard');
+    await eyes.check('V2 progress dashboard');
   });
 
   /**
@@ -263,11 +265,14 @@ test.describe('Teacher Dashboard Progress V2', {tag: '@no_mobile'}, () => {
   test('teacher can open rubric-level student work from progress', async ({
     page,
     context,
+    eyes,
   }) => {
+    await eyes.open('V2 Progress Dashboard Assessments');
     const dashboard = await openProgressDashboard(page);
 
     await page.locator('#ui-test-lesson-header-38').scrollIntoViewIfNeeded();
     await dashboard.expandProgressLesson(38);
+    await eyes.check('needs feedback icon is displayed');
     const studentWorkPage = context.waitForEvent('page');
     await page
       .locator(
@@ -276,7 +281,6 @@ test.describe('Teacher Dashboard Progress V2', {tag: '@no_mobile'}, () => {
       .click();
     const newPage = await studentWorkPage;
     await expect(newPage).toHaveURL(/lessons\/38\/levels\/1/);
-    // Visual checkpoint stub: feedback and keep-working icons.
   });
 
   /**
@@ -286,7 +290,9 @@ test.describe('Teacher Dashboard Progress V2', {tag: '@no_mobile'}, () => {
    */
   test('teacher expands and collapses choice-level progress', async ({
     page,
+    eyes,
   }) => {
+    await eyes.open('V2 Progress - Choice Levels');
     const dashboard = await openProgressDashboard(page);
 
     await dashboard.expandProgressLesson(40);
@@ -296,16 +302,16 @@ test.describe('Teacher Dashboard Progress V2', {tag: '@no_mobile'}, () => {
     await expect(choiceLevel).toBeVisible({
       timeout: 15_000,
     });
-    // Visual checkpoint stub: unexpanded choice level.
+    await eyes.check('unexpanded choice level');
 
     await choiceLevel.click();
     await expect(choiceSublevel).toBeVisible({
       timeout: 15_000,
     });
-    // Visual checkpoint stub: expanded choice level.
+    await eyes.check('expanded choice level');
 
     await choiceLevel.click();
     await expect(choiceSublevel).not.toBeVisible();
-    // Visual checkpoint stub: unexpanded choice level - closed.
+    await eyes.check('unexpanded choice level - closed');
   });
 });

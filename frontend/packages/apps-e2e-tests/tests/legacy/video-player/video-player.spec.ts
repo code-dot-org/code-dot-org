@@ -8,13 +8,14 @@ test.describe('Video player', () => {
    * Source: dashboard/test/ui/features/teacher_tools/video/videoplayer_eyes.feature
    * Scenario: Fallback player
    */
-  test('fallback player for Flappy level', async ({page}) => {
+  test('fallback player for Flappy level', async ({page, eyes}) => {
+    await eyes.open('fallback player');
     const videoPlayer = new VideoPlayerPage(page);
 
     await videoPlayer.open('/flappy/1?force_youtube_fallback');
     await videoPlayer.expectFlappyVideoDialogReady();
     await videoPlayer.expectFallbackPlayerReady();
-    // Visual checkpoint stub: fallback video player for level.
+    await eyes.check('fallback video player for level');
   });
 
   /**
@@ -22,14 +23,15 @@ test.describe('Video player', () => {
    * Source: dashboard/test/ui/features/teacher_tools/video/videoplayer_eyes.feature
    * Scenario: Fallback player for unplugged
    */
-  test('fallback player for unplugged level', async ({page}) => {
+  test('fallback player for unplugged level', async ({page, eyes}) => {
+    await eyes.open('fallback player for unplugged');
     const videoPlayer = new VideoPlayerPage(page);
 
     await videoPlayer.open(
       '/courses/allthethingscourse/units/1/lessons/55/levels/1?force_youtube_fallback',
     );
     await videoPlayer.expectFallbackPlayButtonReady();
-    // Visual checkpoint stub: fallback video player for unplugged.
+    await eyes.check('fallback video player for unplugged');
   });
 
   /**
@@ -37,14 +39,15 @@ test.describe('Video player', () => {
    * Source: dashboard/test/ui/features/teacher_tools/video/videoplayer_eyes.feature
    * Scenario: Fallback player for embedded
    */
-  test('fallback player for embedded level', async ({page}) => {
+  test('fallback player for embedded level', async ({page, eyes}) => {
+    await eyes.open('fallback player for embedded');
     const videoPlayer = new VideoPlayerPage(page);
 
     await videoPlayer.open(
       '/courses/allthethingscourse/units/1/lessons/34/levels/1?force_youtube_fallback=1',
     );
     await videoPlayer.expectFallbackPlayButtonReady();
-    // Visual checkpoint stub: fallback video player for embedded.
+    await eyes.check('fallback video player for embedded');
   });
 
   /**

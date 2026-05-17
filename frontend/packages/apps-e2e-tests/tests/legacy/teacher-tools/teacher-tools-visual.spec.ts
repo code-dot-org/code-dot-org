@@ -9,11 +9,15 @@ test.describe('Teacher tools visual readiness ports', () => {
    * Source: dashboard/test/ui/features/teacher_tools/lesson_show.feature
    * Scenario: Print Mode
    */
-  test('print mode lesson plan renders printable content', async ({page}) => {
+  test('print mode lesson plan renders printable content', async ({
+    page,
+    eyes,
+  }) => {
     const visualPage = new TeacherToolsVisualPage(page);
 
+    await eyes.open('printed lesson plan');
     await visualPage.openPrintableLessonPlan();
-    // Visual checkpoint stub: initial page view.
+    await eyes.check('initial page view');
   });
 
   /**
@@ -23,15 +27,17 @@ test.describe('Teacher tools visual readiness ports', () => {
    */
   test('video thumbnails remain below visualization while resizing', async ({
     page,
+    eyes,
   }) => {
     await createStudent(page);
     const visualPage = new TeacherToolsVisualPage(page);
 
+    await eyes.open('Video thumbnail position');
     await visualPage.openBelowVisualizationLevel();
-    // Visual checkpoint stub: default visualization width.
+    await eyes.check('default visualization width');
     await visualPage.dragVisualizationResizeBar(400);
-    // Visual checkpoint stub: wider visualization.
+    await eyes.check('wider visualization');
     await visualPage.dragVisualizationResizeBar(-400);
-    // Visual checkpoint stub: narrower visualization.
+    await eyes.check('narrower visualization');
   });
 });

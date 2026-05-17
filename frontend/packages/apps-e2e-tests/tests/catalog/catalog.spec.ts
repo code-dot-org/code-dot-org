@@ -798,21 +798,23 @@ test.describe('Curriculum Catalog — filters', () => {
    */
   test('signed-out user filters offerings by topic and grade', async ({
     page,
+    eyes,
   }) => {
     const catalog = new CatalogFiltersPage(page);
     await catalog.goto('/catalog');
+    await eyes.open('Curriculum Catalog');
     await catalog.expectOfferingVisible('AI for Oceans');
-    // Visual checkpoint stub: "Curriculum Catalog: All Offerings".
+    await eyes.check('Curriculum Catalog: All Offerings');
 
     await catalog.openFilter('topic');
     await catalog.selectVisibleOption('Digital Literacy');
     await catalog.expectOfferingHidden('AI for Oceans');
-    // Visual checkpoint stub: "Curriculum Catalog: One Offering".
+    await eyes.check('Curriculum Catalog: One Offering');
 
     await catalog.openFilter('grade');
     await catalog.selectVisibleOption('Grade 12');
     await catalog.expectNoMatchingCurricula('No matching curricula');
-    // Visual checkpoint stub: "Curriculum Catalog: No Offerings".
+    await eyes.check('Curriculum Catalog: No Offerings');
   });
 
   /**
@@ -823,22 +825,24 @@ test.describe('Curriculum Catalog — filters', () => {
    */
   test('signed-out user filters Spanish offerings by topic and grade', async ({
     page,
+    eyes,
   }) => {
     const catalog = new CatalogFiltersPage(page);
     await catalog.goto('/catalog/lang/es');
     await expect(page).toHaveURL(/\/catalog\?lang=es/, {timeout: 30_000});
+    await eyes.open('Curriculum Catalog in Spanish');
     await catalog.expectOfferingVisible('Inteligencia Artificial para Océanos');
-    // Visual checkpoint stub: "Curriculum Catalog: All Offerings in Spanish".
+    await eyes.check('Curriculum Catalog: All Offerings in Spanish');
 
     await catalog.openFilter('topic');
     await catalog.selectVisibleOption('Alfabetización Digital');
     await catalog.expectOfferingHidden('Inteligencia Artificial para Océanos');
-    // Visual checkpoint stub: "Curriculum Catalog: One Offering in Spanish".
+    await eyes.check('Curriculum Catalog: One Offering in Spanish');
 
     await catalog.openFilter('grade');
     await catalog.selectVisibleOption('Grado 12');
     await expect(page.locator('figure ~ h2')).toBeVisible({timeout: 30_000});
-    // Visual checkpoint stub: "Curriculum Catalog: No Offerings in Spanish".
+    await eyes.check('Curriculum Catalog: No Offerings in Spanish');
   });
 
   /**

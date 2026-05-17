@@ -17,16 +17,18 @@ test.describe(
      */
     test('submittable multiple-choice level preserves submitted state', async ({
       page,
+      eyes,
     }) => {
       await createTeacherAssociatedStudent(page, {authorized: true});
       await assignCourseAndUnit(page, 'allthethingscourse', 1);
       const submittable = new SubmittableLevelPage(page);
 
+      await eyes.open('submittable level');
       await submittable.gotoSubmittableLevel();
-      // Visual checkpoint stub: initial load.
+      await eyes.check('initial load');
       await submittable.answerAndSubmit();
       await submittable.expectSubmittedAfterReload();
-      // Visual checkpoint stub: submitted puzzle.
+      await eyes.check('submitted puzzle');
     });
 
     /**
@@ -34,17 +36,21 @@ test.describe(
      * Source: dashboard/test/ui/features/teacher_tools/submittable_eyes.feature
      * Scenario: Lockable level
      */
-    test('lockable level and header progress popup render', async ({page}) => {
+    test('lockable level and header progress popup render', async ({
+      page,
+      eyes,
+    }) => {
       await createTeacherAssociatedStudent(page, {authorized: true});
       await assignCourseAndUnit(page, 'allthethingscourse', 1);
       const submittable = new SubmittableLevelPage(page);
 
+      await eyes.open('lockable level');
       await submittable.gotoUnitOverview();
-      // Visual checkpoint stub: course overview.
+      await eyes.check('course overview');
       await submittable.gotoLockableLevel();
-      // Visual checkpoint stub: locked level on level page.
+      await eyes.check('locked level on level page');
       await submittable.openHeaderProgressPopup();
-      // Visual checkpoint stub: locked level popup progress.
+      await eyes.check('locked level popup progress');
     });
   },
 );

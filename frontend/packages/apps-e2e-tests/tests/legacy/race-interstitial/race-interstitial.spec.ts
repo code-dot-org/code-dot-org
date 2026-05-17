@@ -10,12 +10,14 @@ test.describe('Race interstitial', () => {
    */
   test('student can dismiss the forced race interstitial', async ({
     studentPage,
+    eyes,
   }) => {
+    await eyes.open('Race Interstitial Shown And Dismissed');
     const interstitial = new RaceInterstitialPage(studentPage);
     await interstitial.gotoForcedInterstitial();
-    // Visual checkpoint stub: "race interstitial".
+    await eyes.check('race interstitial');
 
     await interstitial.dismissLater();
-    // Visual checkpoint stub: "race interstitial closed".
+    await eyes.check('race interstitial closed');
   });
 });

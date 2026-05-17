@@ -13,7 +13,7 @@ test.describe('Teacher student toggle', () => {
    * Source: dashboard/test/ui/features/teacher_tools/teacher_student_toggle.feature
    * Scenario: Toggle on Multi Level
    */
-  test('toggle on multi level', async ({page}) => {
+  test('toggle on multi level', async ({page, eyes}) => {
     const pair = await createTeacherAssociatedStudent(page, {
       authorized: true,
       studentName: 'Daenerys',
@@ -23,21 +23,22 @@ test.describe('Teacher student toggle', () => {
     await assignSectionToCourseAndUnit(page, 0, 'allthethingscourse', 1);
     const toggle = new TeacherStudentTogglePage(page);
 
+    await eyes.open('toggle on multi level');
     await toggle.openMultiLevel(pair.sectionId);
-    // Visual checkpoint stub: page load.
+    await eyes.check('page load');
     await toggle.switchToStudentView();
-    // Visual checkpoint stub: view as student.
+    await eyes.check('view as student');
     await toggle.switchToTeacherView();
-    // Visual checkpoint stub: view as teacher.
+    await eyes.check('view as teacher');
     await toggle.openProgressDropdown();
-    // Visual checkpoint stub: progress dropdown for teacher.
+    await eyes.check('progress dropdown for teacher');
 
     await toggle.openFirstStudentFromPanel();
     await toggle.openProgressDropdown();
     await expect(
       page.locator('.user-stats-block', {hasText: 'Jigsaw'}),
     ).toBeVisible({timeout: 30_000});
-    // Visual checkpoint stub: progress dropdown for teacher viewing as student.
+    await eyes.check('progress dropdown for teacher viewing as student');
   });
 
   /**
@@ -45,7 +46,7 @@ test.describe('Teacher student toggle', () => {
    * Source: dashboard/test/ui/features/teacher_tools/teacher_student_toggle.feature
    * Scenario: Toggle on Hidden Maze Level
    */
-  test('toggle on hidden maze level', async ({page}) => {
+  test('toggle on hidden maze level', async ({page, eyes}) => {
     const pair = await createTeacherAssociatedStudent(page, {
       authorized: true,
       studentName: 'Arya',
@@ -55,12 +56,13 @@ test.describe('Teacher student toggle', () => {
     await assignSectionToCourseAndUnit(page, 0, 'allthethingscourse', 1);
     const toggle = new TeacherStudentTogglePage(page);
 
+    await eyes.open('toggle on hidden maze level');
     await toggle.openHiddenMazeLevel(pair.sectionId);
-    // Visual checkpoint stub: page load.
+    await eyes.check('page load');
     await toggle.switchToStudentView();
-    // Visual checkpoint stub: view as student.
+    await eyes.check('view as student');
     await toggle.switchToTeacherView();
-    // Visual checkpoint stub: view as teacher.
+    await eyes.check('view as teacher');
   });
 
   /**
@@ -68,7 +70,7 @@ test.describe('Teacher student toggle', () => {
    * Source: dashboard/test/ui/features/teacher_tools/teacher_student_toggle.feature
    * Scenario: Toggle on Lockable Level
    */
-  test('toggle on lockable level', async ({page}) => {
+  test('toggle on lockable level', async ({page, eyes}) => {
     const pair = await createTeacherAssociatedStudent(page, {
       authorized: true,
       studentName: 'Joffrey',
@@ -78,15 +80,16 @@ test.describe('Teacher student toggle', () => {
     await assignSectionToCourseAndUnit(page, 0, 'allthethingscourse', 1);
     const toggle = new TeacherStudentTogglePage(page);
 
+    await eyes.open('toggle on a lockable level');
     await toggle.openLockableLevel(pair.sectionId);
-    // Visual checkpoint stub: page load.
+    await eyes.check('page load');
     await toggle.switchToStudentView();
     await expect(toggle.lockedLesson).toBeVisible({timeout: 30_000});
-    // Visual checkpoint stub: view as student while locked.
+    await eyes.checkViewport('view as student while locked');
     await toggle.switchToTeacherView();
     await expect(toggle.lockedLesson).toBeHidden();
     await expect(toggle.levelGroup).toBeVisible();
-    // Visual checkpoint stub: view as teacher while locked.
+    await eyes.check('view as teacher while locked');
 
     await toggle.openFirstStudentFromPanel();
     await expect(page.locator('#level-body')).toContainText(
@@ -100,7 +103,7 @@ test.describe('Teacher student toggle', () => {
     await toggle.openLockableLevel(pair.sectionId);
     await toggle.switchToStudentView();
     await expect(toggle.lockedLesson).toBeHidden();
-    // Visual checkpoint stub: view as student while unlocked.
+    await eyes.check('view as student while unlocked');
     await toggle.switchToTeacherView();
     await expect(toggle.lockedLesson).toBeHidden();
 

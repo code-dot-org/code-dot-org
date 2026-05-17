@@ -23,7 +23,9 @@ test.describe(
      */
     test('calendar tab renders instructional minutes and lessons', async ({
       page,
+      eyes,
     }) => {
+      await eyes.open('calendar page');
       const {teacherEmail, teacherPassword} =
         await createTeacherAssociatedStudent(page, {
           authorized: true,
@@ -48,7 +50,7 @@ test.describe(
       await expect(page.getByText('Lesson 1: Intro')).toBeVisible({
         timeout: 30_000,
       });
-      // Visual checkpoint stub: calendar.
+      await eyes.check('calendar');
     });
 
     /**
@@ -58,7 +60,9 @@ test.describe(
      */
     test('lesson materials tab renders resources and lesson plan link', async ({
       page,
+      eyes,
     }) => {
+      await eyes.open('lesson materials');
       const {teacherEmail, teacherPassword} =
         await createTeacherAssociatedStudent(page, {
           authorized: true,
@@ -78,7 +82,7 @@ test.describe(
       await expect(
         page.getByRole('heading', {name: 'Teacher Resources'}),
       ).toBeVisible({timeout: 30_000});
-      // Visual checkpoint stub: lesson materials.
+      await eyes.check('lesson materials');
 
       await page
         .locator('#ui-test-lessons-in-assigned-unit-dropdown')
@@ -88,7 +92,7 @@ test.describe(
       await expect(page.getByText('Lesson Plan: AI Rubrics')).toBeVisible({
         timeout: 30_000,
       });
-      // Visual checkpoint stub: lesson materials - lesson 48.
+      await eyes.check('lesson materials - lesson 48');
     });
 
     /**
@@ -98,7 +102,9 @@ test.describe(
      */
     test('single-unit course local navigation switches to student view', async ({
       page,
+      eyes,
     }) => {
+      await eyes.open('teacher local nav v2 - single-unit course overview');
       const {teacherEmail, teacherPassword} =
         await createTeacherAssociatedStudent(page, {
           authorized: true,
@@ -120,13 +126,13 @@ test.describe(
       await expect(
         page.getByRole('heading', {name: 'Single Unit 2026'}),
       ).toBeVisible({timeout: 30_000});
-      // Visual checkpoint stub: unit overview.
+      await eyes.check('unit overview');
 
       await page.locator('#uitest-view-as-student').click();
       await expect(page.locator('.uitest-assigned')).toBeVisible({
         timeout: 30_000,
       });
-      // Visual checkpoint stub: student view.
+      await eyes.check('student view');
     });
 
     /**
@@ -136,7 +142,9 @@ test.describe(
      */
     test('manage students tab edit-all saves a long family name', async ({
       page,
+      eyes,
     }) => {
+      await eyes.open('manage students tab');
       const {teacherEmail, teacherPassword, studentDisplayName} =
         await createTeacherAssociatedStudent(page, {
           authorized: true,
@@ -150,7 +158,7 @@ test.describe(
         studentDisplayName,
         'SallyAlsoHasAVeryVeryLongLastName',
       );
-      // Visual checkpoint stub: manage students tab.
+      await eyes.check('manage students tab');
     });
 
     /**
@@ -160,7 +168,9 @@ test.describe(
      */
     test('progress v2 local navigation renders first and second sections', async ({
       page,
+      eyes,
     }) => {
+      await eyes.open('teacher local nav v2 - progress');
       const {teacherEmail, teacherPassword} =
         await createTeacherAssociatedStudent(page, {
           authorized: true,
@@ -191,7 +201,7 @@ test.describe(
         state: 'hidden',
         timeout: 60_000,
       });
-      // Visual checkpoint stub: progress v2 - first section.
+      await eyes.check('progress v2 - first section');
 
       await page
         .locator('#uitest-sidebar-section-dropdown')
@@ -203,7 +213,7 @@ test.describe(
         state: 'hidden',
         timeout: 60_000,
       });
-      // Visual checkpoint stub: progress v2 - second section.
+      await eyes.check('progress v2 - second section');
     });
 
     /**
@@ -213,7 +223,9 @@ test.describe(
      */
     test('unit and course overview local navigation renders', async ({
       page,
+      eyes,
     }) => {
+      await eyes.open('teacher local nav v2 - unit/course overview');
       const {teacherEmail, teacherPassword} =
         await createTeacherAssociatedStudent(page, {
           authorized: true,
@@ -230,13 +242,13 @@ test.describe(
       await expect(
         page.getByRole('heading', {name: 'All the Things!'}),
       ).toBeVisible({timeout: 30_000});
-      // Visual checkpoint stub: unit overview.
+      await eyes.check('unit overview');
 
       await page.getByRole('link', {name: 'allthethingscourse'}).click();
       await expect(
         page.getByRole('heading', {name: 'allthethingscourse'}),
       ).toBeVisible({timeout: 30_000});
-      // Visual checkpoint stub: course overview.
+      await eyes.check('course overview');
     });
   },
 );

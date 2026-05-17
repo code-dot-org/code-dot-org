@@ -38,8 +38,10 @@ async function dragVisualizationGrippy(
  */
 test('video thumbnails stay below visualization as it resizes', async ({
   page,
+  eyes,
 }) => {
   await createStudent(page);
+  await eyes.open('Video thumbnail position');
   await page.goto(
     '/courses/allthethingscourse/units/1/lessons/18/levels/1?noautoplay=true',
   );
@@ -47,13 +49,13 @@ test('video thumbnails stay below visualization as it resizes', async ({
   await expect(page.locator('#belowVisualization')).toBeAttached({
     timeout: 30_000,
   });
-  // Visual checkpoint stub: "default visualization width".
+  await eyes.check('default visualization width');
 
   await dragVisualizationGrippy(page, 400);
   await expect(page.locator('#belowVisualization')).toBeAttached();
-  // Visual checkpoint stub: "wider visualization".
+  await eyes.check('wider visualization');
 
   await dragVisualizationGrippy(page, -400);
   await expect(page.locator('#belowVisualization')).toBeAttached();
-  // Visual checkpoint stub: "narrower visualization".
+  await eyes.check('narrower visualization');
 });

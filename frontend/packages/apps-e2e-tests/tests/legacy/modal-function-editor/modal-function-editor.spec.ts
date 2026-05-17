@@ -111,7 +111,10 @@ test.describe('Modal Function Editor', () => {
    * Source: dashboard/test/ui/features/code_tools/blockly/modal_function_editor_eyes.feature
    * Scenario: Edit a function
    */
-  test('visual flow edits a function and runs the updated program', async () => {
+  test('visual flow edits a function and runs the updated program', async ({
+    eyes,
+  }) => {
+    await eyes.open('edit a function');
     await lab.openFunctionEditorFromBlock(1);
     await lab.openFunctionEditorCategory('Sprites');
 
@@ -125,11 +128,11 @@ test.describe('Modal Function Editor', () => {
     await lab.page.mouse.down();
     await lab.page.mouse.move(startX + 40, startY + 100, {steps: 10});
     await lab.page.mouse.up();
-    // Visual checkpoint stub: "add a new block to the function".
+    await eyes.check('add a new block to the function');
 
     await lab.closeFunctionEditor();
     await lab.runButton.click();
     await expect(lab.resetButton).toBeVisible({timeout: 15_000});
-    // Visual checkpoint stub: "run the program with the updated function".
+    await eyes.check('run the program with the updated function');
   });
 });

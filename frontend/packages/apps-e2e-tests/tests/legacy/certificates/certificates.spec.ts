@@ -1,6 +1,5 @@
-import {expect, test} from '@playwright/test';
-
 import {createStudent, createTeacher} from '../../shared/auth';
+import {expect, test} from '../../shared/fixtures';
 
 import {CertificatePage} from './CertificatePage';
 import {MinecraftCertificatePage} from './MinecraftCertificatePage';
@@ -61,22 +60,24 @@ test.describe('certificate pages', () => {
    */
   test('generic certificate can be personalized, shared, and printed', async ({
     page,
+    eyes,
   }) => {
     const certificates = new CertificatePage(page);
 
+    await eyes.open('customized certificates');
     await certificates.resetSession();
     await certificates.openCongrats();
     await certificates.expectPrintLink();
-    // Visual checkpoint stub: uncustomized congrats page.
+    await eyes.check('uncustomized congrats page');
 
     await certificates.personalize('Robo Códer');
-    // Visual checkpoint stub: personalized congrats page.
+    await eyes.check('personalized congrats page');
 
     await certificates.openCertificateImagePage();
-    // Visual checkpoint stub: certificate page.
+    await eyes.check('certificate page');
 
     await certificates.openPrintPageFromSharePage();
-    // Visual checkpoint stub: print certificate page.
+    await eyes.check('print certificate page');
   });
 });
 
@@ -110,9 +111,11 @@ test.describe('CSF certificate pages', () => {
    */
   test('completed CSF course certificate can be personalized', async ({
     page,
+    eyes,
   }) => {
     const certificates = new CertificatePage(page);
 
+    await eyes.open('CSF certificate pages');
     await createStudent(page, {name: 'Student1'});
     await completeCsfCourse(certificates);
 
@@ -120,10 +123,10 @@ test.describe('CSF certificate pages', () => {
     await certificates.expectCertificateReady();
     await expect(page.locator('.fa-x-twitter')).toBeVisible();
     await certificates.expectPrintLink();
-    // Visual checkpoint stub: uncustomized CSF certificate.
+    await eyes.check('uncustomized CSF certificate');
 
     await certificates.personalize('Robo Códer');
-    // Visual checkpoint stub: customized CSF certificate.
+    await eyes.check('customized CSF certificate');
   });
 });
 
@@ -178,18 +181,20 @@ test.describe('Hour of Code certificate pages', () => {
    */
   test('flappy certificate can be personalized, shared, and printed', async ({
     page,
+    eyes,
   }) => {
     const certificates = new CertificatePage(page);
 
+    await eyes.open('flappy certificates');
     await certificates.resetSession();
     await certificates.finishHourOfCode('flappy');
     await certificates.expectCertificateReady();
     await expect(page.locator('.fa-x-twitter')).toBeVisible();
     await certificates.expectPrintLink();
-    // Visual checkpoint stub: uncustomized flappy certificate.
+    await eyes.check('uncustomized flappy certificate');
 
     await certificates.personalize('Robo Códer');
-    // Visual checkpoint stub: customized flappy certificate.
+    await eyes.check('customized flappy certificate');
 
     await certificates.openCertificateImagePage();
     await certificates.openPrintPageFromSharePage();
@@ -202,24 +207,26 @@ test.describe('Hour of Code certificate pages', () => {
    */
   test('oceans certificate can be personalized, shared, and printed', async ({
     page,
+    eyes,
   }) => {
     const certificates = new CertificatePage(page);
 
+    await eyes.open('oceans certificates');
     await certificates.resetSession();
     await certificates.finishHourOfCode('oceans');
     await certificates.expectCertificateReady();
     await expect(page.locator('.fa-x-twitter')).toBeVisible();
     await certificates.expectPrintLink();
-    // Visual checkpoint stub: uncustomized oceans certificate.
+    await eyes.check('uncustomized oceans certificate');
 
     await certificates.personalize('Robo Códer');
-    // Visual checkpoint stub: customized oceans certificate.
+    await eyes.check('customized oceans certificate');
 
     await certificates.openCertificateImagePage();
-    // Visual checkpoint stub: oceans certificate page.
+    await eyes.check('oceans certificate page');
 
     await certificates.openPrintPageFromSharePage();
-    // Visual checkpoint stub: oceans print certificate page.
+    await eyes.check('oceans print certificate page');
   });
 });
 
@@ -242,14 +249,15 @@ test.describe('batch certificate printing', () => {
    * Source: dashboard/test/ui/features/teacher_tools/hour_of_code/hoc_batch_certificates.feature
    * Scenario: Eyes test for oceans certificate on bulk print page
    */
-  test('teacher prints an oceans batch certificate', async ({page}) => {
+  test('teacher prints an oceans batch certificate', async ({page, eyes}) => {
     const certificates = new CertificatePage(page);
 
     await createTeacher(page);
+    await eyes.open('batch print certificates');
     await certificates.openBatchCertificates('b2NlYW5z');
-    // Visual checkpoint stub: bulk certificate page.
+    await eyes.check('bulk certificate page');
 
     await certificates.submitBatchCertificates(['Student One']);
-    // Visual checkpoint stub: bulk print page.
+    await eyes.check('bulk print page');
   });
 });

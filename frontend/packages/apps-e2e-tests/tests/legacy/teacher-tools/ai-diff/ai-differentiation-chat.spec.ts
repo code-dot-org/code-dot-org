@@ -206,7 +206,10 @@ test.describe(
      * Source: dashboard/test/ui/features/teacher_tools/ai_diff/ai_differentiation_threads.feature
      * Scenario: Teacher can see threads and create new threads
      */
-    test('teacher can see threads and create new threads', async ({page}) => {
+    test('teacher can see threads and create new threads', async ({
+      page,
+      eyes,
+    }) => {
       await createTeacher(page, {name: 'Stilgar'});
       await page.goto('/home');
       await addUserToExperiment(page, 'ai-differentiation');
@@ -219,7 +222,8 @@ test.describe(
         .getByRole('button', {name: 'Suggest prompts'})
         .waitFor({state: 'visible', timeout: 30_000});
 
-      // Visual checkpoint stub: Cucumber captured the starting chat state.
+      await eyes.open('ai diff threads');
+      await eyes.check('ai diff threads starting state');
       await page
         .locator('#uitest-chat-textarea')
         .fill('Which lessons have a project');
@@ -248,7 +252,7 @@ test.describe(
       await expect(
         page.locator('[aria-label="User chat message"]'),
       ).not.toBeVisible();
-      // Visual checkpoint stub: Cucumber captured the new-thread state.
+      await eyes.check('ai diff threads new thread from button');
 
       await page.locator('#uitest-chat-textarea').fill('How do I debug');
       await page.locator('#uitest-chat-submit').click();
@@ -276,7 +280,7 @@ test.describe(
       await expect(
         page.locator('p').filter({hasText: 'Lorem ipsum'}).first(),
       ).toBeVisible();
-      // Visual checkpoint stub: Cucumber captured the old-thread display.
+      await eyes.check('ai diff threads display old thread');
 
       await page.getByRole('button', {name: 'Suggest prompts'}).click();
       await page.getByRole('button', {name: 'Create'}).click();
@@ -285,7 +289,7 @@ test.describe(
       await expect(async () =>
         expect(await responses.count()).toBeGreaterThanOrEqual(2),
       ).toPass({timeout: 30_000, intervals: [500, 1000, 2000]});
-      // Visual checkpoint stub: Cucumber captured continuing an old thread.
+      await eyes.check('ai diff threads continue old thread');
     });
   },
 );

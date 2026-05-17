@@ -6,6 +6,7 @@ import {
   createStudent,
   createTeacher,
 } from './auth';
+import {createEyesHandle, type EyesFixture} from './eyes';
 
 /**
  * Option controlling the age of the student account created by studentPage.
@@ -26,7 +27,17 @@ interface AuthFixtures {
   authorizedTeacherPage: Page;
 }
 
-export const test = base.extend<StudentOptions & AuthFixtures>({
+interface EyesFixtures {
+  /**
+   * Applitools Eyes per-test handle. No-op when `APPLITOOLS_API_KEY` is
+   * unset (so functional flow still runs in local dev). Opens the session
+   * lazily on first `check`/`checkRegion`/`checkViewport` call; closes
+   * fail-fast in fixture teardown (any visual diff throws).
+   */
+  eyes: EyesFixture;
+}
+
+export const test = base.extend<StudentOptions & AuthFixtures & EyesFixtures>({
   studentAge: [16, {option: true}],
 
   studentPage: async ({page, studentAge}, use) => {
@@ -47,6 +58,15 @@ export const test = base.extend<StudentOptions & AuthFixtures>({
   authorizedTeacherPage: async ({page}, use) => {
     await createAuthorizedTeacher(page);
     await use(page);
+  },
+
+  eyes: async ({page}, use, testInfo) => {
+    const handle = createEyesHandle(page, testInfo.title);
+    try {
+      await use(handle);
+    } finally {
+      await handle.close();
+    }
   },
 });
 

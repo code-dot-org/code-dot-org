@@ -14,7 +14,9 @@ test.describe(
      */
     test('Game Lab teacher panel shows not-started warning for untouched student work', async ({
       page,
+      eyes,
     }) => {
+      await eyes.open('game lab student has not started');
       const {teacherEmail, teacherPassword} =
         await createTeacherAssociatedStudent(page, {
           authorized: true,
@@ -37,7 +39,7 @@ test.describe(
         {timeout: 30_000},
       );
       await warning.expectWarningVisible();
-      // Visual checkpoint stub: student not-started warning.
+      await eyes.check('student not started warning');
     });
 
     /**
@@ -47,6 +49,7 @@ test.describe(
      */
     test('Maze teacher panel shows not-started warning for untouched student work', async ({
       page,
+      eyes,
     }) => {
       const {teacherEmail, teacherPassword} =
         await createTeacherAssociatedStudent(page, {
@@ -55,6 +58,7 @@ test.describe(
         });
 
       await signIn(page, teacherEmail, teacherPassword);
+      await eyes.open('maze student has not started');
       await page.goto('/teacher_dashboard/home');
       await expect(page.locator('#ui-test-section-list')).toBeVisible({
         timeout: 30_000,
@@ -65,7 +69,7 @@ test.describe(
         'Sally',
       );
       await warning.expectWarningVisible();
-      // Visual checkpoint stub: student not-started warning.
+      await eyes.check('student not started warning');
     });
 
     /**
@@ -73,7 +77,7 @@ test.describe(
      * Source: dashboard/test/ui/features/teacher_tools/student_not_started_level_warning.feature
      * Scenario: Contained level
      */
-    test('contained level omits not-started warning', async ({page}) => {
+    test('contained level omits not-started warning', async ({page, eyes}) => {
       const {teacherEmail, teacherPassword} =
         await createTeacherAssociatedStudent(page, {
           authorized: true,
@@ -81,6 +85,7 @@ test.describe(
         });
 
       await signIn(page, teacherEmail, teacherPassword);
+      await eyes.open('contained level');
       await page.goto('/teacher_dashboard/home');
       await expect(page.locator('#ui-test-section-list')).toBeVisible({
         timeout: 30_000,
@@ -91,7 +96,7 @@ test.describe(
         'Sally',
       );
       await warning.expectWarningHidden();
-      // Visual checkpoint stub: no student not-started warning.
+      await eyes.check('no student not started warning');
     });
   },
 );

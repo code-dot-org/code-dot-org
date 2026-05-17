@@ -23,17 +23,21 @@ test.describe('Level completion visual readiness', () => {
    * Source: dashboard/test/ui/features/teacher_tools/level_completion.feature
    * Scenario: (unnamed scenario) - bounce game
    */
-  test('bounce game reaches completion visual checkpoint', async ({page}) => {
+  test('bounce game reaches completion visual checkpoint', async ({
+    page,
+    eyes,
+  }) => {
+    await eyes.open('bounce game');
     const bounce = new Bounce(page);
     await bounce.gotoLevel(1);
     await expect(bounce.runButton).toBeVisible();
-    // Visual checkpoint stub: "initial load".
+    await eyes.check('initial load');
     await bounce.loadBlocks(LEVEL_1_BOUNCE_BLOCKS);
-    // Visual checkpoint stub: "block snap".
+    await eyes.check('block snap');
     await bounce.run();
     await bounce.holdKey('ArrowLeft');
     await expect(bounce.congratsMessage).toBeVisible({timeout: 30_000});
-    // Visual checkpoint stub: "level completion".
+    await eyes.check('level completion');
     await bounce.releaseKey('ArrowLeft');
   });
 
@@ -56,19 +60,21 @@ test.describe('Level completion visual readiness', () => {
    */
   test('freeplay playlab reaches completion visual checkpoint', async ({
     page,
+    eyes,
   }) => {
+    await eyes.open('freeplay playlab sharing');
     await page.goto(
       '/courses/playlab/units/1/lessons/1/levels/10?noautoplay=true',
     );
     await expect(page.locator('#runButton')).toBeVisible({timeout: 60_000});
     await dismissInstructionsOverlay(page);
-    // Visual checkpoint stub: "initial load".
+    await eyes.check('initial load');
     await page.locator('#runButton').click();
     await expect(page.locator('#finishButton')).toBeVisible({timeout: 30_000});
     await page.locator('#finishButton').click();
     await page.keyboard.down('ArrowLeft');
     await expect(page.locator('.congrats')).toBeVisible({timeout: 30_000});
-    // Visual checkpoint stub: "freeplay playlab level completion".
+    await eyes.check('freeplay playab level completion');
     await page.keyboard.up('ArrowLeft');
   });
 });

@@ -384,7 +384,10 @@ test.describe('Teacher Homepage V2', {tag: '@no_mobile'}, () => {
    * Source: dashboard/test/ui/features/teacher_tools/teacher_dashboard/teacher_homepage_v2.feature
    * Scenario: Teacher can view sections on new teacher homepage
    */
-  test('teacher can view sections on new teacher homepage', async ({page}) => {
+  test('teacher can view sections on new teacher homepage', async ({
+    page,
+    eyes,
+  }) => {
     const {email: teacherEmail, password: teacherPassword} =
       await createTeacher(page, {name: 'Teacher Hank'});
     await page.goto('/home');
@@ -401,6 +404,7 @@ test.describe('Teacher Homepage V2', {tag: '@no_mobile'}, () => {
 
     await signOut(page);
     await signIn(page, teacherEmail, teacherPassword);
+    await eyes.open('teacher homepage');
     await page.goto('/teacher_dashboard/home');
 
     await expect(page.locator('#ui-test-section-list')).toBeVisible({
@@ -408,6 +412,6 @@ test.describe('Teacher Homepage V2', {tag: '@no_mobile'}, () => {
     });
     await expect(page.getByText('New Section')).toBeVisible();
     await expect(page.getByText('Untitled Section')).toBeVisible();
-    // Visual checkpoint stub: "teacher homepage".
+    await eyes.check('teacher homepage');
   });
 });

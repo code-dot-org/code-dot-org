@@ -18,26 +18,30 @@ test.describe('Lesson locking', {tag: ['@no_mobile']}, () => {
    * Source: dashboard/test/ui/features/teacher_tools/lesson_lock.feature
    * Scenario: Stage Locking Dialog
    */
-  test('stage locking dialog opens and unlocks the lesson', async ({page}) => {
+  test('stage locking dialog opens and unlocks the lesson', async ({
+    page,
+    eyes,
+  }) => {
     const {teacherEmail, teacherPassword, sectionId} =
       await createTeacherAssociatedStudent(page, {
         authorized: true,
         studentName: 'bobby',
       });
+    await eyes.open('stage locking');
     await signIn(page, teacherEmail, teacherPassword);
 
     const locks = new LessonLockPage(page);
     await locks.gotoUnitOverview(sectionId, {teacherControls: true});
-    // Visual checkpoint stub: "selected section".
+    await eyes.check('selected section');
     await locks.openLockDialog();
     await expect(locks.modalBody).toContainText(/Lock|Allow editing/);
-    // Visual checkpoint stub: "stage lock dialog".
+    await eyes.check('stage lock dialog');
     await locks.unlockLessonForStudents();
     await locks.gotoUnitOverview(sectionId, {teacherControls: true});
     await expect(
       page.getByRole('button', {name: /Anonymous student survey/}).last(),
     ).toBeVisible({timeout: 30_000});
-    // Visual checkpoint stub: "course overview for authorized teacher".
+    await eyes.check('course overview for authorized teacher');
   });
 
   /**

@@ -47,15 +47,5 @@ export default defineConfig({
       name: 'webkit',
       use: {...devices['Desktop Safari']},
     },
-    /**
-     * Visual-diff lane. Gates Applitools / screenshot-diff runs behind the
-     * @visual tag; not exercised in this PoC. Run with --project=visual or
-     * filter by tag: `yarn test --grep @visual`.
-     */
-    {
-      name: 'visual',
-      use: {...devices['Desktop Chrome']},
-      grep: /@visual/,
-    },
   ],
 });

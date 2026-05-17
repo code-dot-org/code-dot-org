@@ -355,15 +355,17 @@ test.describe('Project Sharing — Blockly projects', {tag: '@no_mobile'}, () =>
    */
   test('my projects page expands the full project type list', async ({
     page,
+    eyes,
   }) => {
     await createStudent(page);
+    await eyes.open('My Projects page');
     const projects = new ProjectsPage(page);
 
     await projects.gotoMyProjects();
     await projects.expectCompactProjectList();
-    // Visual checkpoint stub: initial My Projects page.
+    await eyes.check('page load');
     await projects.showFullProjectList();
-    // Visual checkpoint stub: expanded project type list.
+    await eyes.check('view full list of new project types');
   });
 
   /**

@@ -24,6 +24,7 @@
   },
   "prettier": "@code-dot-org/lint-config/prettier/index.mjs",
   "devDependencies": {
+    "@applitools/eyes-playwright": "^1.47.2",
     "@code-dot-org/lint-config": "workspace:*",
     "@playwright/mcp": "^0.0.73",
     "@playwright/test": "^1.59.0",

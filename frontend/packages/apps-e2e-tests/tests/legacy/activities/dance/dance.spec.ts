@@ -459,18 +459,19 @@ test.describe('Dance Party — lesson 37 — AI Modal eyes (level 4)', () => {
   test(
     'AI modal code toggle and emoji picker render in LTR and RTL',
     {tag: ['@no_mobile', '@visual']},
-    async () => {
+    async ({eyes}) => {
+      await eyes.open('open Dance AI modal');
       // LTR: open modal (pre-generated results already visible).
       await dance.openAiModal();
       await expect(dance.aiUseButton).toBeVisible();
       await dance.toggleAiCodeView();
-      // visual checkpoint: "toggle to code"
+      await eyes.check('toggle to code');
       await dance.toggleAiEffectView();
 
       // Start over and select new emojis in LTR.
       await dance.startOverAi();
       await dance.selectAiEmojis('💎', '🌊', '🚀');
-      // visual checkpoint: "selecting new emojis"
+      await eyes.check('selecting new emojis');
 
       // RTL: navigate to Arabic locale of the same level.
       await dance.page.goto(
@@ -482,16 +483,16 @@ test.describe('Dance Party — lesson 37 — AI Modal eyes (level 4)', () => {
       await dance.openAiModal();
       await expect(dance.aiUseButton).toBeVisible();
       await dance.toggleAiCodeView();
-      // visual checkpoint: "toggle to code in RTL"
+      await eyes.check('toggle to code in RTL');
       await dance.toggleAiEffectView();
 
       // RTL: start over.
       await dance.startOverAi();
-      // visual checkpoint: "starting over in Dance AI modal in RTL"
+      await eyes.check('starting over in Dance AI modal in RTL');
 
       // RTL: select new emojis.
       await dance.selectAiEmojis('💎', '🌊', '🚀');
-      // visual checkpoint: "selecting new emojis in RTL"
+      await eyes.check('selecting new emojis in RTL');
     },
   );
 });

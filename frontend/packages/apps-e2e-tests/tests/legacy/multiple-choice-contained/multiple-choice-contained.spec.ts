@@ -71,21 +71,23 @@ test.describe('Multiple choice contained levels', () => {
    */
   test('gamelab with submittable contained level reaches visual checkpoints', async ({
     page,
+    eyes,
   }) => {
     await createTeacherAssociatedStudent(page, {authorized: true});
 
+    await eyes.open('gamelab submittable contained level');
     await page.goto('/courses/allthethingscourse/units/1/lessons/41/levels/7');
     await page
       .locator('#runButton')
       .waitFor({state: 'visible', timeout: 60_000});
-    // Applitools snapshot stub: "initial load".
+    await eyes.check('initial load');
 
     await selectAnswer(page, 0);
     await expect(page.locator('#runButton')).toBeEnabled({timeout: 15_000});
-    // Applitools snapshot stub: "answer entered".
+    await eyes.check('answer entered');
 
     await runAndWaitForMilestone(page);
-    // Applitools snapshot stub: "level run".
+    await eyes.check('level run');
 
     await Promise.all([
       page.waitForURL(/\/lessons\/41\/levels\/8/, {timeout: 30_000}),
@@ -100,35 +102,37 @@ test.describe('Multiple choice contained levels', () => {
    */
   test('gamelab with multiple choice contained level reaches visual checkpoints', async ({
     page,
+    eyes,
   }) => {
     await createTeacherAssociatedStudent(page, {authorized: true});
 
+    await eyes.open('gamelab multiple choice contained level');
     await page.goto('/courses/allthethingscourse/units/1/lessons/41/levels/2');
     await page
       .locator('#runButton')
       .waitFor({state: 'visible', timeout: 60_000});
-    // Applitools snapshot stub: "initial load".
+    await eyes.check('initial load');
 
     await selectAnswer(page, 0);
     await expect(page.locator('#runButton')).toBeEnabled({timeout: 15_000});
-    // Applitools snapshot stub: "answer entered".
+    await eyes.check('answer entered');
 
     await runAndWaitForMilestone(page);
-    // Applitools snapshot stub: "level run".
+    await eyes.check('level run');
 
     await page.goto('/courses/allthethingscourse/units/1/lessons/41/levels/2');
     await page
       .locator('#runButton')
       .waitFor({state: 'visible', timeout: 60_000});
     await expect(page.locator('#checked_0')).toBeVisible({timeout: 5_000});
-    // Applitools snapshot stub: "reloaded with contained level answered".
+    await eyes.check('reloaded with contained level answered');
 
     await runAndWaitForMilestone(page);
     await page
       .locator('#finishButton')
       .waitFor({state: 'visible', timeout: 15_000});
     await page.locator('#finishButton').click();
-    // Applitools snapshot stub: "finished level with contained level".
+    await eyes.check('finished level with contained level');
 
     await Promise.all([
       page.waitForURL(/\/lessons\/41\/levels\/3/, {timeout: 30_000}),
@@ -143,31 +147,33 @@ test.describe('Multiple choice contained levels', () => {
    */
   test('unauthorized teacher can view a CSF contained multiple choice answer', async ({
     page,
+    eyes,
   }) => {
     const {teacherEmail, teacherPassword, sectionId} =
       await createTeacherAssociatedStudent(page, {studentName: 'Sally'});
     await signIn(page, teacherEmail, teacherPassword);
 
+    await eyes.open('maze multi contained level');
     await page.goto(
       `/courses/ui-test-csf/units/1/lessons/1/levels/2?section_id=${sectionId}&viewAs=Instructor`,
     );
     await page
       .locator('#runButton')
       .waitFor({state: 'visible', timeout: 60_000});
-    // Visual checkpoint stub: "initial load".
+    await eyes.check('initial load');
 
     await selectAnswer(page, 0);
-    // Visual checkpoint stub: "answer entered".
+    await eyes.check('answer entered');
 
     await page.locator('.uitest-teacherOnlyTab').first().click();
     await expect(
       page.locator('.editor-column').filter({hasText: 'Answer'}).first(),
     ).toBeVisible({timeout: 30_000});
-    // Visual checkpoint stub: "multiple choice answer for teacher".
+    await eyes.check('multiple choice answer for teacher');
 
     await page.locator('#runButton').click();
     await expect(page.locator('#resetButton')).toBeVisible({timeout: 30_000});
-    // Visual checkpoint stub: "level run".
+    await eyes.check('level run');
   });
 
   /**

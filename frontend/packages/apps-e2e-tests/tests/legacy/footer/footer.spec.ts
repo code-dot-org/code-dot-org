@@ -1,4 +1,5 @@
 import {createStudent} from '../../shared/auth';
+import type {EyesFixture} from '../../shared/eyes';
 import {expect, test} from '../../shared/fixtures';
 import {ProjectSharingPage} from '../project-sharing/ProjectSharingPage';
 
@@ -56,21 +57,23 @@ async function createMinecraftShareUrl(
  *
  * @param page - Playwright page
  * @param shareUrl - share URL from the level completion dialog
+ * @param eyes - Eyes fixture for visual checkpoints
  */
 async function expectShareFooter(
   page: import('@playwright/test').Page,
   shareUrl: string,
+  eyes: EyesFixture,
 ): Promise<void> {
   const footer = new FooterPage(page);
   await page.goto(shareUrl, {waitUntil: 'domcontentloaded'});
   await footer.expectSmallFooter();
-  // Visual checkpoint stub: "small footer".
+  await eyes.check('small footer');
 
   await footer.openSmallFooterMenu();
-  // Visual checkpoint stub: "footer menu".
+  await eyes.check('footer menu');
   await footer.selectSmallFooterItem('Copyright');
   await expect(footer.copyrightDialog()).toBeVisible();
-  // Visual checkpoint stub: "copyright modal".
+  await eyes.check('copyright modal');
 }
 
 test.describe('Small footer visual smoke ports', () => {
@@ -79,14 +82,15 @@ test.describe('Small footer visual smoke ports', () => {
    * Source: dashboard/test/ui/features/foundations/footer.feature
    * Scenario: Desktop puzzle using light small footer
    */
-  test('desktop puzzle uses the light small footer', async ({page}) => {
+  test('desktop puzzle uses the light small footer', async ({page, eyes}) => {
+    await eyes.open('Desktop puzzle using light small footer');
     const footer = new FooterPage(page);
     await footer.openLevel(
       '/courses/allthethingscourse/units/1/lessons/2/levels/1?noautoplay=true',
     );
-    // Visual checkpoint stub: "small footer".
+    await eyes.check('small footer');
     await footer.openCopyrightDialog();
-    // Visual checkpoint stub: "copyright modal".
+    await eyes.check('copyright modal');
     await footer.closeDialog();
   });
 
@@ -97,14 +101,16 @@ test.describe('Small footer visual smoke ports', () => {
    */
   test('desktop Minecraft puzzle uses the dark small footer', async ({
     page,
+    eyes,
   }) => {
+    await eyes.open('Desktop Minecraft puzzle using dark small footer');
     const footer = new FooterPage(page);
     await footer.openLevel(
       '/courses/mc/units/1/lessons/1/levels/14?noautoplay=true',
     );
-    // Visual checkpoint stub: "small footer".
+    await eyes.check('small footer');
     await footer.openCopyrightDialog();
-    // Visual checkpoint stub: "copyright modal".
+    await eyes.check('copyright modal');
   });
 
   /**
@@ -114,25 +120,27 @@ test.describe('Small footer visual smoke ports', () => {
    */
   test('desktop Star Wars share page exposes footer menu and copyright', async ({
     page,
+    eyes,
   }) => {
+    await eyes.open('Desktop Star Wars share small footer');
     const footer = new FooterPage(page);
     const shareUrl = await createStarWarsShareUrl(page);
     await page.goto(shareUrl, {waitUntil: 'domcontentloaded'});
     await footer.expectSmallFooter();
-    // Visual checkpoint stub: "small footer".
+    await eyes.check('small footer');
 
     await footer.openSmallFooterMenu();
-    // Visual checkpoint stub: "footer menu".
+    await eyes.check('footer menu');
     await footer.selectSmallFooterItem('Copyright');
     await expect(footer.copyrightDialog()).toBeVisible();
-    // Visual checkpoint stub: "copyright modal".
+    await eyes.check('copyright modal');
     await footer.closeDialog();
 
     await footer.openSmallFooterMenu();
     await footer.selectSmallFooterItem('How it Works (View Code)');
     await expect(page.locator('#runButton')).toBeVisible({timeout: 60_000});
     await footer.expectSmallFooter();
-    // Visual checkpoint stub: "how it works small footer".
+    await eyes.check('how it works small footer');
   });
 
   /**
@@ -142,8 +150,10 @@ test.describe('Small footer visual smoke ports', () => {
    */
   test('desktop App Lab share page exposes footer menu and copyright', async ({
     page,
+    eyes,
   }) => {
     await createStudent(page);
+    await eyes.open('Desktop Applab share small footer');
     const projectSharing = new ProjectSharingPage(page);
     const footer = new FooterPage(page);
 
@@ -151,13 +161,13 @@ test.describe('Small footer visual smoke ports', () => {
     const shareUrl = await projectSharing.openShareDialogAndReadUrl();
     await projectSharing.gotoSharePage(shareUrl);
     await footer.expectSmallFooter();
-    // Visual checkpoint stub: "small footer".
+    await eyes.check('small footer');
 
     await footer.openSmallFooterMenu();
-    // Visual checkpoint stub: "footer menu".
+    await eyes.check('footer menu');
     await footer.selectSmallFooterItem('Copyright');
     await expect(footer.copyrightDialog()).toBeVisible();
-    // Visual checkpoint stub: "copyright modal".
+    await eyes.check('copyright modal');
   });
 
   /**
@@ -167,9 +177,11 @@ test.describe('Small footer visual smoke ports', () => {
    */
   test('desktop Minecraft share page exposes footer menu and copyright', async ({
     page,
+    eyes,
   }) => {
+    await eyes.open('Desktop Minecraft share small footer');
     const shareUrl = await createMinecraftShareUrl(page);
-    await expectShareFooter(page, shareUrl);
+    await expectShareFooter(page, shareUrl, eyes);
 
     const footer = new FooterPage(page);
     await footer.closeDialog();
@@ -177,7 +189,7 @@ test.describe('Small footer visual smoke ports', () => {
     await footer.selectSmallFooterItem('How it Works (View Code)');
     await expect(page.locator('#runButton')).toBeVisible({timeout: 60_000});
     await footer.expectSmallFooter();
-    // Visual checkpoint stub: "how it works small footer".
+    await eyes.check('how it works small footer');
   });
 
   /**
@@ -188,10 +200,12 @@ test.describe('Small footer visual smoke ports', () => {
    */
   test('mobile Star Wars share page exposes footer menu and copyright', async ({
     page,
+    eyes,
   }) => {
+    await eyes.open('Mobile Star Wars share small footer');
     const shareUrl = await createStarWarsShareUrl(page);
     await page.setViewportSize({width: 390, height: 844});
-    await expectShareFooter(page, shareUrl);
+    await expectShareFooter(page, shareUrl, eyes);
   });
 
   /**
@@ -202,10 +216,12 @@ test.describe('Small footer visual smoke ports', () => {
    */
   test('mobile Minecraft share page exposes footer menu and copyright', async ({
     page,
+    eyes,
   }) => {
+    await eyes.open('Mobile Minecraft share small footer');
     const shareUrl = await createMinecraftShareUrl(page);
     await page.setViewportSize({width: 390, height: 844});
-    await expectShareFooter(page, shareUrl);
+    await expectShareFooter(page, shareUrl, eyes);
   });
 
   /**
@@ -216,13 +232,15 @@ test.describe('Small footer visual smoke ports', () => {
    */
   test('mobile App Lab share page exposes footer menu and copyright', async ({
     page,
+    eyes,
   }) => {
     await createStudent(page);
+    await eyes.open('Mobile Applab share small footer');
     const projectSharing = new ProjectSharingPage(page);
 
     await projectSharing.makeProjectFromFamilyRoute('applab');
     const shareUrl = await projectSharing.openShareDialogAndReadUrl();
     await page.setViewportSize({width: 390, height: 844});
-    await expectShareFooter(page, shareUrl);
+    await expectShareFooter(page, shareUrl, eyes);
   });
 });

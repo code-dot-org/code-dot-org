@@ -1,6 +1,5 @@
-import {expect, test} from '@playwright/test';
-
 import {createStudent} from '../../shared/auth';
+import {expect, test} from '../../shared/fixtures';
 
 import {PageViewsPage} from './PageViewsPage';
 
@@ -116,12 +115,16 @@ test.describe('initial visual page views', () => {
      * Source: dashboard/test/ui/features/initial_page_views.feature
      * Scenario: Simple blockly level page view
      */
-    test(`student sees initial page view: ${example.name}`, async ({page}) => {
+    test(`student sees initial page view: ${example.name}`, async ({
+      page,
+      eyes,
+    }) => {
       const pageViews = new PageViewsPage(page);
 
       await createStudent(page);
+      await eyes.open(example.name);
       await pageViews.openAndExpectReady(example.url, LAB_READY);
-      // Visual checkpoint stub: initial load.
+      await eyes.check('initial load');
     });
   }
 
@@ -133,15 +136,17 @@ test.describe('initial visual page views', () => {
      */
     test(`student sees logged-in page view: ${example.name}`, async ({
       page,
+      eyes,
     }) => {
       const pageViews = new PageViewsPage(page);
 
       await createStudent(page);
+      await eyes.open(example.name);
       await pageViews.openAndExpectReady(example.url, example.selectors);
       if (example.attachmentHidden) {
         await pageViews.expectAttachmentHidden();
       }
-      // Visual checkpoint stub: initial load.
+      await eyes.check('initial load');
     });
   }
 
@@ -150,15 +155,16 @@ test.describe('initial visual page views', () => {
    * Source: dashboard/test/ui/features/initial_page_views3.feature
    * Scenario: Temporarily circle disabled simple dashboard page view without instructions dialog
    */
-  test('student sees embedded blocks page view', async ({page}) => {
+  test('student sees embedded blocks page view', async ({page, eyes}) => {
     const pageViews = new PageViewsPage(page);
 
     await createStudent(page);
+    await eyes.open('embedded blocks');
     await pageViews.openAndExpectReady(
       '/courses/allthethingscourse/units/1/lessons/13/levels/1?noautoplay=true',
       ['text=Today you', 'text=Continue'],
     );
-    // Visual checkpoint stub: initial load.
+    await eyes.check('initial load');
   });
 
   for (const example of LOGGED_OUT_PAGE_VIEW_EXAMPLES) {
@@ -167,20 +173,24 @@ test.describe('initial visual page views', () => {
      * Source: dashboard/test/ui/features/initial_page_views3.feature
      * Scenario: Logged out simple page view without instructions dialog
      */
-    test(`signed-out user sees page view: ${example.name}`, async ({page}) => {
+    test(`signed-out user sees page view: ${example.name}`, async ({
+      page,
+      eyes,
+    }) => {
       const pageViews = new PageViewsPage(page);
 
       await page.goto('/reset_session');
+      await eyes.open(example.name);
       if (example.url === '/users/sign_in') {
         await page.goto('/users/sign_in');
         await expect(page.locator('#signin')).toBeVisible();
-        // Visual checkpoint stub: initial load.
+        await eyes.check('initial load');
         return;
       }
 
       await pageViews.openAndExpectReady(example.url, example.selectors);
       await pageViews.dismissLanguageSelector();
-      // Visual checkpoint stub: initial load.
+      await eyes.check('initial load');
     });
   }
 
@@ -190,12 +200,16 @@ test.describe('initial visual page views', () => {
      * Source: dashboard/test/ui/features/initial_page_views_csf.feature
      * Scenario: Simple blockly level page view
      */
-    test(`student sees CSF page view: ${example.name}`, async ({page}) => {
+    test(`student sees CSF page view: ${example.name}`, async ({
+      page,
+      eyes,
+    }) => {
       const pageViews = new PageViewsPage(page);
 
       await createStudent(page);
+      await eyes.open(example.name);
       await pageViews.openAndExpectReady(example.url, LAB_READY);
-      // Visual checkpoint stub: initial load.
+      await eyes.check('initial load');
     });
   }
 });
@@ -223,14 +237,15 @@ test.describe('related video level', () => {
    * Source: dashboard/test/ui/features/teacher_tools/level_video.feature
    * Scenario: Sprite lab level
    */
-  test('sprite lab level shows related video area', async ({page}) => {
+  test('sprite lab level shows related video area', async ({page, eyes}) => {
     const pageViews = new PageViewsPage(page);
 
     await createStudent(page);
+    await eyes.open('sprite lab level');
     await pageViews.openAndExpectReady(
       '/courses/allthethingscourse/units/1/lessons/36/levels/2',
       ['#belowVisualization'],
     );
-    // Visual checkpoint stub: sprite lab level with related video.
+    await eyes.check('sprite lab level with related video');
   });
 });
