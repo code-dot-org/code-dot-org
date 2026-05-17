@@ -93,6 +93,18 @@ async function hideUnit(page: Page, unitName: string): Promise<void> {
   await expect(unitCard).toHaveAttribute('data-visibility', 'hidden', {
     timeout: 30_000,
   });
+  await expect
+    .poll(
+      () =>
+        page.evaluate(() =>
+          Boolean(
+            (window as Window & {__TestInterface?: Record<string, unknown>})
+              .__TestInterface?.toggleHiddenUnitComplete,
+          ),
+        ),
+      {timeout: 30_000},
+    )
+    .toBe(true);
 }
 
 test.describe(
@@ -242,9 +254,10 @@ test.describe(
      * Source: dashboard/test/ui/features/teacher_tools/teacher_homepage.feature
      * Scenario: Assign hidden unit to section
      *
-     * Current teacher-dashboard routing exposes the same behavior on the course
-     * overview: hiding the assigned unit marks the unit hidden for the section,
-     * and the enrolled student sees the hidden-unit warning.
+     * Current teacher-dashboard routing exposes the same behavior on the
+     * course overview.  The readiness signal is the Cucumber-backed
+     * `window.__TestInterface.toggleHiddenUnitComplete`, after the visible
+     * hidden state appears on the unit card.
      */
     test('hidden assigned unit is marked hidden and blocked for the student', async ({
       page,

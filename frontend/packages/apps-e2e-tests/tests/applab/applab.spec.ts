@@ -329,7 +329,7 @@ test.describe('App Lab — submittable level', () => {
       const studentName = `AppLabStudent${Date.now()}${Math.random()
         .toString(36)
         .slice(2, 8)}`;
-      const {teacherEmail, teacherPassword} =
+      const {teacherEmail, teacherPassword, sectionId} =
         await createTeacherAssociatedStudent(page, {studentName});
       const applab = new AppLab(page);
       const levelUrl =
@@ -345,8 +345,10 @@ test.describe('App Lab — submittable level', () => {
         .waitFor({state: 'visible', timeout: 30_000});
 
       await signIn(page, teacherEmail, teacherPassword);
-      await page.goto(levelUrl, {waitUntil: 'domcontentloaded'});
-      await applab.loadStudentWorkFromTeacherPanel(studentName);
+      await page.goto(`${levelUrl}&section_id=${sectionId}`, {
+        waitUntil: 'domcontentloaded',
+      });
+      await applab.loadStudentWorkFromTeacherPanel(studentName, sectionId);
       await applab.unsubmitSelectedStudentWork();
     },
   );

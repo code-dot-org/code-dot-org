@@ -58,6 +58,15 @@ export class AppLab {
   /** Reset button — stops the running program and restores initial state. */
   readonly resetButton: Locator;
 
+  /** Teacher panel container, present for teachers with a section. */
+  readonly teacherPanel: Locator;
+
+  /** Rows in the teacher panel student table. */
+  readonly teacherPanelRows: Locator;
+
+  /** Teacher-side unsubmit button for the selected student's work. */
+  readonly teacherUnsubmitButton: Locator;
+
   constructor(page: Page) {
     this.page = page;
     this.runButton = page.locator('#runButton');
@@ -75,6 +84,9 @@ export class AppLab {
     this.dataLibraryContainer = page.locator('#data-library-container');
     this.dataTable = page.locator('#dataTable');
     this.consoleOutput = page.locator('#debug-output');
+    this.teacherPanel = page.locator('#teacher-panel-container');
+    this.teacherPanelRows = page.locator('#teacher-panel-container tr');
+    this.teacherUnsubmitButton = page.locator('#unsubmit-button-uitest');
   }
 
   /**
@@ -122,6 +134,83 @@ export class AppLab {
   /** Click the run button to execute the current program. */
   async run(): Promise<void> {
     await this.runButton.click();
+  }
+
+  /**
+   * Open the teacher panel if needed and wait for student rows.
+   */
+  async openTeacherPanel(): Promise<void> {
+    const firstStudentRow = this.teacherPanelRows.nth(1);
+    const rowAlreadyVisible = await firstStudentRow
+      .waitFor({state: 'visible', timeout: 1_000})
+      .then(() => true)
+      .catch(() => false);
+    if (rowAlreadyVisible) {
+      return;
+    }
+
+    const panelAlreadyOpen = await this.page
+      .getByRole('heading', {name: 'Teacher Panel'})
+      .waitFor({state: 'visible', timeout: 1_000})
+      .then(() => true)
+      .catch(() => false);
+    if (!panelAlreadyOpen) {
+      await expect(this.page.locator('.show-handle')).toBeVisible({
+        timeout: 30_000,
+      });
+      await this.page.locator('.show-handle .fa-chevron-left').click();
+    }
+
+    await expect(firstStudentRow).toBeVisible({timeout: 30_000});
+  }
+
+  /**
+   * Load a student's App Lab work from the teacher panel.
+   *
+   * Agent Browser showed the row exposes a visible student-work link.  The link
+   * opens a new tab in normal UI, so the test reads its user id, keeps the
+   * current level URL, and waits for the teacher unsubmit button to enable.
+   *
+   * @param studentName - visible student name in the teacher panel row
+   * @param sectionId - section whose roster is visible in the teacher panel
+   */
+  async loadStudentWorkFromTeacherPanel(
+    studentName: string,
+    sectionId: number,
+  ): Promise<void> {
+    await this.openTeacherPanel();
+    const row = this.teacherPanelRows.filter({hasText: studentName}).first();
+    await expect(row).toBeVisible({timeout: 30_000});
+
+    const href = await row.locator('a[href*="user_id="]').getAttribute('href', {
+      timeout: 30_000,
+    });
+    if (!href) {
+      throw new Error(`No student-work link found for ${studentName}`);
+    }
+
+    const studentWorkUrl = new URL(href, this.page.url());
+    const userId = studentWorkUrl.searchParams.get('user_id');
+    if (!userId) {
+      throw new Error(`Student-work link missing user_id: ${href}`);
+    }
+
+    const targetUrl = new URL(this.page.url());
+    targetUrl.searchParams.set('section_id', String(sectionId));
+    targetUrl.searchParams.set('user_id', userId);
+    await this.page.goto(targetUrl.toString(), {waitUntil: 'domcontentloaded'});
+    await this.waitForReady();
+    await this.openTeacherPanel();
+    await expect(this.teacherUnsubmitButton).toBeEnabled({timeout: 30_000});
+  }
+
+  /**
+   * Unsubmit the selected student's App Lab work from the teacher panel.
+   */
+  async unsubmitSelectedStudentWork(): Promise<void> {
+    await expect(this.teacherUnsubmitButton).toBeEnabled({timeout: 30_000});
+    await this.teacherUnsubmitButton.click();
+    await expect(this.teacherUnsubmitButton).toBeDisabled({timeout: 30_000});
   }
 
   /**
