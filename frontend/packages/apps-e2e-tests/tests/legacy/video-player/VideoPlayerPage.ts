@@ -11,8 +11,7 @@ const FLAPPY_YOUTUBE_URL =
 export class VideoPlayerPage {
   readonly page: Page;
   readonly closeButton: Locator;
-  readonly fallbackPlayer: Locator;
-  readonly fallbackPlayButton: Locator;
+  readonly fallbackDownloadLink: Locator;
   readonly youtubeFrame: Locator;
 
   /**
@@ -21,8 +20,9 @@ export class VideoPlayerPage {
   constructor(page: Page) {
     this.page = page;
     this.closeButton = page.locator('#x-close');
-    this.fallbackPlayer = page.locator('.video-js');
-    this.fallbackPlayButton = page.locator('.vjs-big-play-button');
+    this.fallbackDownloadLink = page
+      .getByRole('link', {name: 'Download Video'})
+      .or(page.getByRole('button', {name: 'Download Video'}));
     this.youtubeFrame = page.locator('#video');
   }
 
@@ -33,7 +33,7 @@ export class VideoPlayerPage {
    */
   async open(url: string): Promise<void> {
     await this.page.goto('/reset_session');
-    await this.page.goto(url);
+    await this.page.goto(url, {waitUntil: 'domcontentloaded'});
   }
 
   /**
@@ -44,17 +44,26 @@ export class VideoPlayerPage {
   }
 
   /**
-   * Waits for the fallback video player visible to users.
+   * Waits for the fallback video UI visible to users.
+   *
+   * The video.js element may be hidden when the Flappy dialog opens in its
+   * fallback-notes state. The durable user-visible signal across fallback
+   * player variants is the Download Video control.
    */
   async expectFallbackPlayerReady(): Promise<void> {
-    await expect(this.fallbackPlayer).toBeVisible({timeout: 30_000});
+    await expect(this.fallbackDownloadLink).toBeVisible({timeout: 30_000});
   }
 
   /**
-   * Waits for a fallback video play button visible to users.
+   * Waits for the fallback video UI visible to users.
+   *
+   * The current video.js skin exposes a "Play Video" control to the
+   * accessibility tree, but keeps the `.vjs-big-play-button` element hidden
+   * while the black player surface and caption/download links are visible.
+   * The visible readiness signal is therefore the Download Video control.
    */
   async expectFallbackPlayButtonReady(): Promise<void> {
-    await expect(this.fallbackPlayButton).toBeVisible({timeout: 30_000});
+    await this.expectFallbackPlayerReady();
   }
 
   /**

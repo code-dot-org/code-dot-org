@@ -17,14 +17,11 @@ async function expectFallbackCaptionsDialog(
   page: Page,
   url: string,
 ): Promise<void> {
-  await page.goto(url);
-  await page
-    .locator('.vjs-big-play-button')
-    .waitFor({state: 'visible', timeout: 30_000});
+  await page.goto(url, {waitUntil: 'domcontentloaded'});
 
   await expect(
     page.locator('.ui-test-fallback-player-caption-dialog-link'),
-  ).toBeVisible();
+  ).toBeVisible({timeout: 30_000});
 
   await page.locator('.ui-test-fallback-player-caption-dialog-link').click();
   await page

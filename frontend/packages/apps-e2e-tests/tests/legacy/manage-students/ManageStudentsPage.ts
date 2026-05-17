@@ -30,9 +30,7 @@ export class ManageStudentsPage {
    * Opens the US state bulk-set modal.
    */
   async openStateBulkSetModal(): Promise<void> {
-    const stateHeader = this.table.getByRole('columnheader', {
-      name: /State Actions/,
-    });
+    const stateHeader = this.table.locator('th').filter({hasText: 'State'});
     await stateHeader.waitFor({state: 'visible', timeout: 30_000});
     await stateHeader.getByRole('button', {name: 'Actions'}).click();
     await this.page

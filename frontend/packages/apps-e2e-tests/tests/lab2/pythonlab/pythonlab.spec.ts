@@ -12,8 +12,8 @@ const skipSafari = ({browserName}: {browserName: string}) =>
  * Opens a Python Lab level and returns a POM once the runtime is ready.
  *
  * If Pyodide fatally fails during startup, the app leaves the visible Run
- * button disabled and exposes no in-page retry control. A fresh page in the
- * same authenticated context creates a new worker without changing users.
+ * button disabled and exposes no in-page retry control. Reloading the level
+ * creates a new worker while keeping the fixture-bound page alive for Eyes.
  *
  * @param page - authenticated page from the test fixture
  * @param level - 1-based level number
@@ -22,20 +22,13 @@ async function openReadyPythonLab(
   page: Page,
   level: number,
 ): Promise<PythonLab> {
-  let currentPage = page;
   let lab: PythonLab | undefined;
 
   for (let attempt = 0; attempt < 3; attempt++) {
-    lab = new PythonLab(currentPage);
+    lab = new PythonLab(page);
     await lab.reloadLevel(level);
     if (await lab.isRunReady()) {
       return lab;
-    }
-
-    if (attempt < 2) {
-      const nextPage = await currentPage.context().newPage();
-      await currentPage.close();
-      currentPage = nextPage;
     }
   }
 
