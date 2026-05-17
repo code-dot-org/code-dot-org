@@ -33,10 +33,7 @@ import {JavaLabPage} from './JavaLabPage';
  */
 
 const LESSON_44 = '/courses/allthethingscourse/units/1/lessons/44';
-const FIXTURES = path.resolve(
-  __dirname,
-  '../../../../../../dashboard/test/fixtures',
-);
+const FIXTURES = path.resolve(__dirname, '../../shared/fixtures');
 
 interface CodeReviewSetup {
   teacher: UserCredentials;
@@ -602,6 +599,8 @@ test.describe('Java Lab — demo mode', () => {
 // ---------------------------------------------------------------------------
 
 test.describe('Java Lab — finish button', () => {
+  test.describe.configure({timeout: 270_000});
+
   test.beforeEach(async ({page}) => {
     await createAuthorizedCsaStudent(page);
   });

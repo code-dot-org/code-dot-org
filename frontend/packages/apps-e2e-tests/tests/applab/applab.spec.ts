@@ -32,10 +32,7 @@ function applabLevelUrl(level: number): string {
   return `/courses/allthethingscourse/units/1/lessons/18/levels/${level}?noautoplay=true`;
 }
 
-const FIXTURES = path.resolve(
-  __dirname,
-  '../../../../../dashboard/test/fixtures',
-);
+const FIXTURES = path.resolve(__dirname, '../shared/fixtures');
 
 test.describe('App Lab — new project shell', () => {
   /**
@@ -126,22 +123,6 @@ async function openManageAssetsDialog(applab: AppLab): Promise<void> {
   await expect(applab.page.locator('.modal')).toContainText('Manage Assets', {
     timeout: 15_000,
   });
-}
-
-/**
- * Wait for the teacher panel shell and student rows to render.
- *
- * @param page - teacher-authenticated level page
- */
-async function openTeacherPanel(
-  page: import('@playwright/test').Page,
-): Promise<void> {
-  await expect(
-    page.locator('#teacher-panel-container .teacher-panel'),
-  ).toBeVisible({timeout: 30_000});
-  await expect(page.locator('#teacher-panel-container tr').nth(1)).toBeAttached(
-    {timeout: 30_000},
-  );
 }
 
 test.describe('App Lab — data storage blocks', () => {
@@ -337,8 +318,9 @@ test.describe('App Lab — submittable level', () => {
    * Scenario: Submit anything, teacher is able to unsubmit
    * @no_mobile @as_taught_student
    *
-   * The teacher panel row is the visible readiness signal for viewing student
-   * work.  The teacher-side unsubmit button then disables after the reset.
+   * The visible readiness signals are the teacher panel selecting the student
+   * row after navigation and the teacher-side unsubmit button disabling after
+   * the reset reload.
    */
   test(
     'teacher can unsubmit student work',
@@ -364,18 +346,8 @@ test.describe('App Lab — submittable level', () => {
 
       await signIn(page, teacherEmail, teacherPassword);
       await page.goto(levelUrl, {waitUntil: 'domcontentloaded'});
-      await openTeacherPanel(page);
-
-      const studentRow = page
-        .locator('#teacher-panel-container tr', {hasText: studentName})
-        .first();
-      await expect(studentRow).toBeVisible({timeout: 30_000});
-      await studentRow.click();
-
-      const unsubmitButton = page.locator('#unsubmit-button-uitest');
-      await expect(unsubmitButton).toBeEnabled({timeout: 30_000});
-      await unsubmitButton.click();
-      await expect(unsubmitButton).toBeDisabled({timeout: 30_000});
+      await applab.loadStudentWorkFromTeacherPanel(studentName);
+      await applab.unsubmitSelectedStudentWork();
     },
   );
 });

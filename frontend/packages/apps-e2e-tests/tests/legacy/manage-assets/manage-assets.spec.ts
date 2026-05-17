@@ -8,15 +8,12 @@ import {expect, test} from '../../shared/fixtures';
  *
  * Source: dashboard/test/ui/features/star_labs/manage_assets.feature
  *
- * Fixture files live in dashboard/test/fixtures/.
+ * Fixture files live in tests/shared/fixtures/.
  * The hidden file input (.uitest-hidden-uploader) can receive setInputFiles
  * directly — no need to unhide the element first.
  */
 
-const FIXTURES = path.resolve(
-  __dirname,
-  '../../../../../../dashboard/test/fixtures',
-);
+const FIXTURES = path.resolve(__dirname, '../../shared/fixtures');
 
 /**
  * Open the Manage Assets dialog from the Game Lab settings cog.
