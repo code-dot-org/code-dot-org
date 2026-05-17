@@ -22,17 +22,20 @@ jobs:
       component-library-changed: ${{ steps.changes.outputs.component-library }}
       studio-changed: ${{ steps.changes.outputs.studio }}
       apps-e2e-tests-changed: ${{ steps.changes.outputs.apps-e2e-tests }}
-      playwright-version: ${{ steps.playwright.outputs.version }}
+      component-library-playwright-version: ${{ steps.playwright.outputs.component-library-version }}
+      apps-e2e-tests-playwright-version: ${{ steps.playwright.outputs.apps-e2e-tests-version }}
     steps:
-      # Single source of truth for the Playwright container tag passed to
-      # every reusable workflow that runs Playwright. Must match the version
-      # resolved for `playwright` / `@playwright/test` in frontend/yarn.lock
-      # so the bundled chrome-headless-shell revision is present at runtime.
-      # Bump in lockstep with yarn upgrades of either package.
+      # Single source of truth for the Playwright container tags passed to
+      # reusable workflows that run Playwright. Each tag must match the
+      # package version resolved for that workspace in frontend/yarn.lock so
+      # the bundled chrome-headless-shell revision is present at runtime.
+      # Bump in lockstep with yarn upgrades of those packages.
       - name: Resolve Playwright version
         id: playwright
         shell: bash
-        run: echo "version=1.60.0" >> "$GITHUB_OUTPUT"
+        run: |
+          echo "component-library-version=1.60.0" >> "$GITHUB_OUTPUT"
+          echo "apps-e2e-tests-version=1.55.1" >> "$GITHUB_OUTPUT"
 
       # Determine what changed to later skip workflows
       # Github Actions does not offer conditional runtime path filtering, thus use this action to calculate the
@@ -73,7 +76,7 @@ jobs:
     uses: ./.github/workflows/component-library-ci.yml
     secrets: inherit
     with:
-      playwright-version: ${{ needs.setup.outputs.playwright-version }}
+      playwright-version: ${{ needs.setup.outputs.component-library-playwright-version }}
 
   # Sharded Playwright suite that runs against https://test-studio.code.org.
   # PoC: gated to PRs that touch the suite itself. Broaden later once stable.
@@ -83,7 +86,7 @@ jobs:
     uses: ./.github/workflows/apps-e2e-tests.yml
     secrets: inherit
     with:
-      playwright-version: ${{ needs.setup.outputs.playwright-version }}
+      playwright-version: ${{ needs.setup.outputs.apps-e2e-tests-playwright-version }}
 
   # Common teardown actions that must occur after _all_ workflows have completed.
   # For example, closing the Applitools batch after its completion.

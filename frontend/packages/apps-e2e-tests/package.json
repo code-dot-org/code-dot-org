@@ -27,9 +27,10 @@
     "@applitools/eyes-playwright": "^1.47.2",
     "@code-dot-org/lint-config": "workspace:*",
     "@playwright/mcp": "^0.0.73",
-    "@playwright/test": "^1.59.0",
+    "@playwright/test": "1.55.1",
     "@types/node": "catalog:",
     "eslint": "catalog:",
+    "playwright": "1.55.1",
     "prettier": "catalog:",
     "typescript": "catalog:"
   }
