@@ -122,14 +122,26 @@ export class LevelbuilderPage {
   /**
    * Remove a temporary course created by the test controller.
    *
+   * This is cleanup-only. A missing course means an earlier cleanup attempt
+   * already removed it.
+   *
    * @param courseName - course slug
    */
   async destroyTempCourse(courseName: string): Promise<void> {
-    await this.postTestEndpoint(
-      '/api/test/destroy_course',
-      {course_name: courseName},
-      'destroy course',
-    );
+    const csrf = await this.csrfToken();
+    const response = await this.page.request.post('/api/test/destroy_course', {
+      headers: {
+        'Content-Type': 'application/json',
+        'X-CSRF-Token': csrf,
+      },
+      data: {course_name: courseName},
+    });
+
+    if (response.status() === 404) {
+      return;
+    }
+
+    await this.parseJson(response, 'destroy course');
   }
 
   /**

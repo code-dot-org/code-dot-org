@@ -2,6 +2,14 @@ import {expect, test} from '../../shared/fixtures';
 
 import {LevelbuilderPage} from './LevelbuilderPage';
 
+function currentShardSlug(): string {
+  const shardArg = process.argv.find(arg => arg.startsWith('--shard='));
+  return (shardArg?.split('=')[1] ?? 'local')
+    .replace(/[^a-zA-Z0-9]+/g, '-')
+    .replace(/^-|-$/g, '')
+    .toLowerCase();
+}
+
 /**
  * Levelbuilder editor scenarios.
  *
@@ -305,16 +313,30 @@ test.describe('Levelbuilder — modular courses', {tag: '@no_mobile'}, () => {
    * Source: dashboard/test/ui/features/teacher_tools/levelbuilder/modular_courses.feature
    * Scenario: Create a new course assigned to a shared unit
    */
-  test('creates a course assigned to a shared unit', async ({page}) => {
+  test('creates a course assigned to a shared unit', async ({
+    page,
+  }, testInfo) => {
     const levelbuilder = new LevelbuilderPage(page);
     await levelbuilder.createLevelbuilder('Levi');
-    const unit = await levelbuilder.createTempMigratedUnit();
-    const familyName = levelbuilder.uniqueSlug('temp-course');
+    let unit:
+      | Awaited<ReturnType<LevelbuilderPage['createTempMigratedUnit']>>
+      | undefined;
+    const familyName = levelbuilder.uniqueSlug(
+      [
+        'temp-course',
+        currentShardSlug(),
+        testInfo.project.name,
+        `p${testInfo.parallelIndex}`,
+        `w${testInfo.workerIndex}`,
+        `r${testInfo.repeatEachIndex}`,
+      ].join('-'),
+    );
     try {
       await page.goto('/courses/new', {waitUntil: 'domcontentloaded'});
       await expect(page.locator('.familyNameSelector')).toBeVisible({
         timeout: 30_000,
       });
+      unit = await levelbuilder.createTempMigratedUnit();
       await page.locator('.familyNameInput').fill(familyName);
       await expect(page.locator('.isVersionedSelector')).toBeVisible({
         timeout: 30_000,
@@ -354,7 +376,9 @@ test.describe('Levelbuilder — modular courses', {tag: '@no_mobile'}, () => {
           .filter({hasText: 'UI Test Shared Unit'}),
       ).toBeVisible({timeout: 30_000});
     } finally {
-      await levelbuilder.destroyTempUnit(unit.scriptName);
+      if (unit) {
+        await levelbuilder.destroyTempUnit(unit.scriptName);
+      }
       await levelbuilder.destroyTempCourse(familyName);
     }
   });
