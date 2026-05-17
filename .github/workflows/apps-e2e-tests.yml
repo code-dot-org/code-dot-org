@@ -48,6 +48,10 @@ jobs:
       - name: Setup Frontend
         uses: ./.github/actions/frontend/setup
 
+      - name: Build fonts package
+        working-directory: frontend
+        run: yarn turbo build --filter=@code-dot-org/fonts
+
       - name: Run shard
         working-directory: frontend
         env:
