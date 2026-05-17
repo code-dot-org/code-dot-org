@@ -116,6 +116,35 @@ export class PageViewsPage {
     }
 
     await expect(this.page.locator('.header_user').first()).toBeVisible();
+    await this.expectCodeStudioHeaderReady();
+  }
+
+  /**
+   * Wait for lab header chrome and progress bubbles when this page view is a
+   * Code Studio level page.
+   */
+  private async expectCodeStudioHeaderReady(): Promise<void> {
+    const header = this.page.locator('.header_level').first();
+    if (!(await header.isVisible({timeout: 1_000}).catch(() => false))) {
+      return;
+    }
+
+    await expect(this.page.locator('#header_middle_content')).toBeVisible({
+      timeout: 30_000,
+    });
+
+    const progressContainer = this.page
+      .locator('#lesson_progress_container')
+      .first();
+    if (
+      !(await progressContainer.isVisible({timeout: 1_000}).catch(() => false))
+    ) {
+      return;
+    }
+
+    await expect(
+      this.page.locator('.header_level .progress-bubble').first(),
+    ).toBeVisible({timeout: 30_000});
   }
 
   /**

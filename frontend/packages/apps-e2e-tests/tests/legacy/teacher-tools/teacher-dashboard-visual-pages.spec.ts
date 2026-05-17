@@ -158,13 +158,9 @@ test.describe(
         studentDisplayName,
         'SallyAlsoHasAVeryVeryLongLastName',
       );
+      await roster.expectRosterVisualReady();
       await eyes.check('manage students tab', {
-        ignoreRegions: [
-          '#ui-test-section-code-button',
-          '#section-options-dropdown-dropdown-button',
-          '#uitest-manage-students-table tbody tr td:first-child',
-          '[class*="manageStudentsLoginInfo"][class*="explanation"]',
-        ],
+        ignoreRegions: roster.visualIgnoreRegions(),
       });
     });
 

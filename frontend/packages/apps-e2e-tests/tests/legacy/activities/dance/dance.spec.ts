@@ -459,13 +459,15 @@ test.describe('Dance Party — lesson 37 — AI Modal eyes (level 4)', () => {
   test(
     'AI modal code toggle and emoji picker render in LTR and RTL',
     {tag: ['@no_mobile', '@visual']},
-    async ({eyes}) => {
+    async ({eyes, page}) => {
       await eyes.open('open Dance AI modal');
       // LTR: open modal (pre-generated results already visible).
       await dance.openAiModal();
       await expect(dance.aiUseButton).toBeVisible();
       await dance.toggleAiCodeView();
-      await eyes.check('toggle to code');
+      await eyes.check('toggle to code', {
+        ignoreRegions: [page.locator('.blocklyScrollbarVertical')],
+      });
       await dance.toggleAiEffectView();
 
       // Start over and select new emojis in LTR.

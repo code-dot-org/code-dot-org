@@ -58,7 +58,37 @@ export class InstructionsVisualPage {
       '#runButton, .csf-top-instructions, .editor-column, #visualization',
     );
     await this.dismissInstructionsOverlayIfPresent();
+    await this.waitForCodeStudioHeaderReady();
     await this.waitForAnyVisible('.csf-top-instructions, .editor-column');
+  }
+
+  /**
+   * Waits for the Code Studio level header and progress bubbles when present.
+   * These elements are part of the lab page this POM owns, not the shared
+   * screenshot fixture.
+   */
+  async waitForCodeStudioHeaderReady(): Promise<void> {
+    const header = this.page.locator('.header_level').first();
+    if (!(await header.isVisible({timeout: 1_000}).catch(() => false))) {
+      return;
+    }
+
+    await expect(this.page.locator('#header_middle_content')).toBeVisible({
+      timeout: 30_000,
+    });
+
+    const progressContainer = this.page
+      .locator('#lesson_progress_container')
+      .first();
+    if (
+      !(await progressContainer.isVisible({timeout: 1_000}).catch(() => false))
+    ) {
+      return;
+    }
+
+    await expect(
+      this.page.locator('.header_level .progress-bubble').first(),
+    ).toBeVisible({timeout: 30_000});
   }
 
   /**
@@ -71,6 +101,24 @@ export class InstructionsVisualPage {
     }
     await expect(yesButton).toBeVisible({timeout: 15_000});
     await yesButton.evaluate(element => (element as HTMLElement).click());
+  }
+
+  /**
+   * Sets top-instruction panes to a deterministic scroll position before a
+   * visual checkpoint. Hint insertion can otherwise leave the browser at a
+   * different auto-scrolled offset between runs.
+   *
+   * @param position - scroll target inside the top instructions pane
+   */
+  async stabilizeInstructionScroll(
+    position: 'top' | 'bottom' = 'top',
+  ): Promise<void> {
+    await this.topInstructions.evaluateAll((elements, scrollPosition) => {
+      for (const element of elements) {
+        element.scrollTop =
+          scrollPosition === 'bottom' ? element.scrollHeight : 0;
+      }
+    }, position);
   }
 
   /**

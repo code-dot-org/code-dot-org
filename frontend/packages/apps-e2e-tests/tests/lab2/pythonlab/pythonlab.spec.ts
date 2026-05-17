@@ -66,8 +66,9 @@ test.describe('Python Lab — level 1 — run output', () => {
     async ({eyes}) => {
       await eyes.open('run and see output of a Python program');
       await eyes.check('initial load');
-      await lab.run();
+      await lab.runAndWaitForProgressSave();
       await expect(lab.console).toContainText('Hello from the start!');
+      await lab.expectProgressIs(1, 'attempted');
       await eyes.check('completed run');
     },
   );
@@ -99,8 +100,9 @@ test.describe('Python Lab — level 10 — Neighborhood', () => {
     async ({eyes}) => {
       await eyes.open('run and see output of Neighborhood');
       await eyes.check('initial load');
-      await lab.run();
+      await lab.runAndWaitForProgressSave();
       await expect(lab.console).toContainText('10');
+      await lab.expectProgressIs(10, 'attempted');
       await eyes.check('completed run');
     },
   );

@@ -1,3 +1,5 @@
+import type {Page} from '@playwright/test';
+
 import {AppLab} from '../../applab/AppLab';
 import {expect, test} from '../../shared/fixtures';
 import {labLevelUrl} from '../../shared/urls';
@@ -11,7 +13,9 @@ import {Multi} from '../multi/Multi';
 import {Pixelation} from '../pixelation/Pixelation';
 import {PKC} from '../pkc/PKC';
 
-const MAZE_DYNAMIC_GRID_IGNORE_REGIONS = ['#visualization'];
+function mazeDynamicGridIgnoreRegions(page: Page) {
+  return [page.locator('#visualization')];
+}
 
 /**
  * Legacy Applitools smoke ports.
@@ -143,7 +147,7 @@ test.describe('Legacy Eyes smoke ports', () => {
       page.locator('.uitest-topInstructions-inline-feedback'),
     ).toBeVisible();
     await eyes.check('maze feedback with blocks', {
-      ignoreRegions: MAZE_DYNAMIC_GRID_IGNORE_REGIONS,
+      ignoreRegions: mazeDynamicGridIgnoreRegions(page),
     });
 
     await page.goto(
@@ -152,7 +156,7 @@ test.describe('Legacy Eyes smoke ports', () => {
     await maze.waitForLabPage();
     await expect(page.locator('#runButton')).toBeVisible();
     await eyes.check('maze RTL', {
-      ignoreRegions: MAZE_DYNAMIC_GRID_IGNORE_REGIONS,
+      ignoreRegions: mazeDynamicGridIgnoreRegions(page),
     });
   });
 });
@@ -239,7 +243,7 @@ test.describe('App Lab Eyes smoke ports', () => {
         studentPage.locator(`[data-element-type='${elementType}']`),
       ).toBeVisible();
       await eyes.check(`${elementType.toLowerCase()} palette visible`, {
-        ignoreRegions: ['.project_updated_at'],
+        ignoreRegions: [studentPage.locator('.project_updated_at')],
       });
     }
   });

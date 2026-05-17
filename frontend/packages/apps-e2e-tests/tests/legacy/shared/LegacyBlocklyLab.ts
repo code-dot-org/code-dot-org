@@ -240,7 +240,37 @@ export abstract class LegacyBlocklyLab {
    */
   async waitForReady(): Promise<void> {
     await expect(this.runButton).toBeVisible();
+    await this.waitForCodeStudioHeaderReady();
     await expect(this.page.locator('.uitest-signincallout')).toBeHidden();
+  }
+
+  /**
+   * Waits for dashboard's level header to finish rendering when the level uses
+   * the Code Studio course chrome. Standalone project pages do not always have
+   * this header, so absence is a ready state for this POM.
+   */
+  protected async waitForCodeStudioHeaderReady(): Promise<void> {
+    const header = this.page.locator('.header_level').first();
+    if (!(await header.isVisible({timeout: 1_000}).catch(() => false))) {
+      return;
+    }
+
+    await expect(this.page.locator('#header_middle_content')).toBeVisible({
+      timeout: 30_000,
+    });
+
+    const progressContainer = this.page
+      .locator('#lesson_progress_container')
+      .first();
+    if (
+      !(await progressContainer.isVisible({timeout: 1_000}).catch(() => false))
+    ) {
+      return;
+    }
+
+    await expect(
+      this.page.locator('.header_level .progress-bubble').first(),
+    ).toBeVisible({timeout: 30_000});
   }
 
   /**

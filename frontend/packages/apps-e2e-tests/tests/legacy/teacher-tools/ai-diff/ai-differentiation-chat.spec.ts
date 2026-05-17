@@ -1,3 +1,5 @@
+import type {Page} from '@playwright/test';
+
 import {addUserToExperiment, createTeacher} from '../../../shared/auth';
 import {expect, test} from '../../../shared/fixtures';
 
@@ -13,9 +15,13 @@ import {expect, test} from '../../../shared/fixtures';
  * @chrome — both scenarios are tagged @chrome in the source feature file.
  */
 
-const AI_DIFF_THREAD_DYNAMIC_IGNORE_REGIONS = [
-  'nav[aria-label="AI differentiation chat threads"] li p',
-];
+function aiDiffThreadDynamicIgnoreRegions(page: Page) {
+  return [
+    page
+      .getByRole('navigation', {name: 'AI differentiation chat threads'})
+      .locator('li p'),
+  ];
+}
 
 test.describe(
   'AI Differentiation Chat',
@@ -237,7 +243,7 @@ test.describe(
 
       await eyes.open('ai diff threads');
       await eyes.check('ai diff threads starting state', {
-        ignoreRegions: AI_DIFF_THREAD_DYNAMIC_IGNORE_REGIONS,
+        ignoreRegions: aiDiffThreadDynamicIgnoreRegions(page),
       });
       await page
         .locator('#uitest-chat-textarea')
@@ -268,7 +274,7 @@ test.describe(
         page.locator('[aria-label="User chat message"]'),
       ).not.toBeVisible();
       await eyes.check('ai diff threads new thread from button', {
-        ignoreRegions: AI_DIFF_THREAD_DYNAMIC_IGNORE_REGIONS,
+        ignoreRegions: aiDiffThreadDynamicIgnoreRegions(page),
       });
 
       await page.locator('#uitest-chat-textarea').fill('How do I debug');
@@ -298,7 +304,7 @@ test.describe(
         page.locator('p').filter({hasText: 'Lorem ipsum'}).first(),
       ).toBeVisible();
       await eyes.check('ai diff threads display old thread', {
-        ignoreRegions: AI_DIFF_THREAD_DYNAMIC_IGNORE_REGIONS,
+        ignoreRegions: aiDiffThreadDynamicIgnoreRegions(page),
       });
 
       await page.getByRole('button', {name: 'Suggest prompts'}).click();
@@ -309,7 +315,7 @@ test.describe(
         expect(await responses.count()).toBeGreaterThanOrEqual(2),
       ).toPass({timeout: 30_000, intervals: [500, 1000, 2000]});
       await eyes.check('ai diff threads continue old thread', {
-        ignoreRegions: AI_DIFF_THREAD_DYNAMIC_IGNORE_REGIONS,
+        ignoreRegions: aiDiffThreadDynamicIgnoreRegions(page),
       });
     });
   },

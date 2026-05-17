@@ -24,6 +24,24 @@ export class TeacherDashboardPage {
   }
 
   /**
+   * Waits for teacher-homepage section cards to finish async course-content
+   * rendering before a visual checkpoint.
+   */
+  async expectHomepageVisualReady(): Promise<void> {
+    await expect(this.page.locator('#ui-test-section-list')).toBeVisible({
+      timeout: 30_000,
+    });
+    await expect(
+      this.page.locator('#go-to-lesson-dropdown-button').first(),
+    ).toBeEnabled({timeout: 30_000});
+    await this.page.evaluate(() => {
+      if (document.activeElement instanceof HTMLElement) {
+        document.activeElement.blur();
+      }
+    });
+  }
+
+  /**
    * Opens the first visible section's progress page.
    */
   async openFirstSectionProgress(): Promise<void> {

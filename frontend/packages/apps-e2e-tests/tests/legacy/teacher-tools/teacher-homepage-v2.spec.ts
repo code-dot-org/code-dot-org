@@ -12,6 +12,8 @@ import {
 } from '../../shared/auth';
 import {expect, test} from '../../shared/fixtures';
 
+import {TeacherDashboardPage} from './TeacherDashboardPage';
+
 /**
  * Teacher Homepage V2 — section management actions from the teacher dashboard
  * home page.
@@ -412,6 +414,7 @@ test.describe('Teacher Homepage V2', {tag: '@no_mobile'}, () => {
     });
     await expect(page.getByText('New Section')).toBeVisible();
     await expect(page.getByText('Untitled Section')).toBeVisible();
+    await new TeacherDashboardPage(page).expectHomepageVisualReady();
     await eyes.check('teacher homepage');
   });
 });

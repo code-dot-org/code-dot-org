@@ -28,7 +28,10 @@ test.describe('Top instructions visual smoke ports', () => {
 
     await instructions.openAllTheThingsLevel(2, 7);
     await expect(instructions.topInstructions.locator('img')).toBeVisible();
-    await eyes.check('maze short instructions with ani gif');
+    await instructions.stabilizeInstructionScroll();
+    await eyes.check('maze short instructions with ani gif', {
+      ignoreRegions: [page.locator('#ani-gif-preview-wrapper')],
+    });
 
     await page.locator('#ani-gif-preview').click();
     await expect(page.locator('.modal')).toBeVisible({
@@ -66,17 +69,21 @@ test.describe('Top instructions visual smoke ports', () => {
       (element as HTMLElement).click(),
     );
     await expect(instructions.topInstructions).toContainText('Do you want');
+    await instructions.stabilizeInstructionScroll('bottom');
     await eyes.check('farmer with hint prompt');
 
     await instructions.expandTopInstructions();
+    await instructions.stabilizeInstructionScroll('bottom');
     await eyes.check('farmer with expanded instructions');
 
     await instructions.acceptNextHint();
     await expect(page.locator('.block-space')).toBeVisible({timeout: 15_000});
+    await instructions.stabilizeInstructionScroll('bottom');
     await eyes.check('farmer with block hint');
 
     await instructions.acceptNextHint();
     await expect(instructions.topInstructions).toContainText('first hint');
+    await instructions.stabilizeInstructionScroll('bottom');
     await eyes.check('farmer with markdown hint');
 
     await instructions.acceptNextHint();
@@ -86,6 +93,7 @@ test.describe('Top instructions visual smoke ports', () => {
     await expect(instructions.topInstructions).toContainText(
       'third and final hint',
     );
+    await instructions.stabilizeInstructionScroll('bottom');
     await eyes.check('farmer with video hint');
     await page.evaluate(() => window.localStorage.clear());
   });
@@ -186,6 +194,7 @@ test.describe('Top instructions visual smoke ports', () => {
     );
     const instructions = new InstructionsVisualPage(page);
     await instructions.expectLabReady();
+    await instructions.stabilizeInstructionScroll();
     await eyes.check('teacher in feedback tab');
 
     await instructions.clickTab('.uitest-instructionsTab');

@@ -71,6 +71,35 @@ export class PythonLab extends Lab2Lab {
    */
   protected async waitForReady(): Promise<void> {
     await this.runButton.waitFor({state: 'visible'});
+    await this.waitForCodeStudioHeaderReady();
+  }
+
+  /**
+   * Waits for the Code Studio level header and progress bubbles when present.
+   * Python Lab visual checkpoints include this course chrome.
+   */
+  async waitForCodeStudioHeaderReady(): Promise<void> {
+    const header = this.page.locator('.header_level').first();
+    if (!(await header.isVisible({timeout: 1_000}).catch(() => false))) {
+      return;
+    }
+
+    await expect(this.page.locator('#header_middle_content')).toBeVisible({
+      timeout: 30_000,
+    });
+
+    const progressContainer = this.page
+      .locator('#lesson_progress_container')
+      .first();
+    if (
+      !(await progressContainer.isVisible({timeout: 1_000}).catch(() => false))
+    ) {
+      return;
+    }
+
+    await expect(
+      this.page.locator('.header_level .progress-bubble').first(),
+    ).toBeVisible({timeout: 30_000});
   }
 
   /** Clicks the run button. */

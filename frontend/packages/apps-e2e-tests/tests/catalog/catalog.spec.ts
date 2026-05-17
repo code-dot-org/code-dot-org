@@ -13,7 +13,9 @@ type CatalogFilterId =
   | 'device'
   | 'marketingInitiative';
 
-const CATALOG_DYNAMIC_IGNORE_REGIONS = ['footer.footer'];
+function catalogDynamicIgnoreRegions(page: Page) {
+  return [page.getByRole('contentinfo')];
+}
 
 /**
  * Curriculum Catalog — signed-out, student, teacher, and assign/unassign flows.
@@ -807,21 +809,21 @@ test.describe('Curriculum Catalog — filters', () => {
     await eyes.open('Curriculum Catalog');
     await catalog.expectOfferingVisible('AI for Oceans');
     await eyes.check('Curriculum Catalog: All Offerings', {
-      ignoreRegions: CATALOG_DYNAMIC_IGNORE_REGIONS,
+      ignoreRegions: catalogDynamicIgnoreRegions(page),
     });
 
     await catalog.openFilter('topic');
     await catalog.selectVisibleOption('Digital Literacy');
     await catalog.expectOfferingHidden('AI for Oceans');
     await eyes.check('Curriculum Catalog: One Offering', {
-      ignoreRegions: CATALOG_DYNAMIC_IGNORE_REGIONS,
+      ignoreRegions: catalogDynamicIgnoreRegions(page),
     });
 
     await catalog.openFilter('grade');
     await catalog.selectVisibleOption('Grade 12');
     await catalog.expectNoMatchingCurricula('No matching curricula');
     await eyes.check('Curriculum Catalog: No Offerings', {
-      ignoreRegions: CATALOG_DYNAMIC_IGNORE_REGIONS,
+      ignoreRegions: catalogDynamicIgnoreRegions(page),
     });
   });
 
@@ -841,21 +843,21 @@ test.describe('Curriculum Catalog — filters', () => {
     await eyes.open('Curriculum Catalog in Spanish');
     await catalog.expectOfferingVisible('Inteligencia Artificial para Océanos');
     await eyes.check('Curriculum Catalog: All Offerings in Spanish', {
-      ignoreRegions: CATALOG_DYNAMIC_IGNORE_REGIONS,
+      ignoreRegions: catalogDynamicIgnoreRegions(page),
     });
 
     await catalog.openFilter('topic');
     await catalog.selectVisibleOption('Alfabetización Digital');
     await catalog.expectOfferingHidden('Inteligencia Artificial para Océanos');
     await eyes.check('Curriculum Catalog: One Offering in Spanish', {
-      ignoreRegions: CATALOG_DYNAMIC_IGNORE_REGIONS,
+      ignoreRegions: catalogDynamicIgnoreRegions(page),
     });
 
     await catalog.openFilter('grade');
     await catalog.selectVisibleOption('Grado 12');
     await expect(page.locator('figure ~ h2')).toBeVisible({timeout: 30_000});
     await eyes.check('Curriculum Catalog: No Offerings in Spanish', {
-      ignoreRegions: CATALOG_DYNAMIC_IGNORE_REGIONS,
+      ignoreRegions: catalogDynamicIgnoreRegions(page),
     });
   });
 

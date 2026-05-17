@@ -22,6 +22,7 @@ export class JavaLabPage {
   readonly closeCodeReviewButton: Locator;
   readonly codeReviewTimelineReview: Locator;
   readonly codeReviewTimelineCommit: Locator;
+  readonly openCodeReviewWarningBanner: Locator;
   readonly peerDropdownButton: Locator;
   readonly codeReviewCommentInput: Locator;
   readonly teacherPanel: Locator;
@@ -60,6 +61,9 @@ export class JavaLabPage {
     this.codeReviewTimelineCommit = page.locator(
       '.uitest-code-review-timeline-commit',
     );
+    this.openCodeReviewWarningBanner = page.locator(
+      '#openCodeReviewWarningBanner',
+    );
     this.peerDropdownButton = page.locator('.peer-dropdown-button');
     this.codeReviewCommentInput = page.locator(
       '#ui-test-code-review-comment-input',
@@ -97,6 +101,35 @@ export class JavaLabPage {
   async waitForReady(): Promise<void> {
     await expect(this.runButton).toBeVisible({timeout: 60_000});
     await expect(this.testButton).toBeVisible({timeout: 60_000});
+    await this.waitForCodeStudioHeaderReady();
+  }
+
+  /**
+   * Waits for the Code Studio level header and progress bubbles when present.
+   * Java Lab screenshots include this chrome, so the readiness belongs here.
+   */
+  async waitForCodeStudioHeaderReady(): Promise<void> {
+    const header = this.page.locator('.header_level').first();
+    if (!(await header.isVisible({timeout: 1_000}).catch(() => false))) {
+      return;
+    }
+
+    await expect(this.page.locator('#header_middle_content')).toBeVisible({
+      timeout: 30_000,
+    });
+
+    const progressContainer = this.page
+      .locator('#lesson_progress_container')
+      .first();
+    if (
+      !(await progressContainer.isVisible({timeout: 1_000}).catch(() => false))
+    ) {
+      return;
+    }
+
+    await expect(
+      this.page.locator('.header_level .progress-bubble').first(),
+    ).toBeVisible({timeout: 30_000});
   }
 
   /**
@@ -233,6 +266,91 @@ export class JavaLabPage {
       peerLink.click(),
     ]);
     await expect(this.codeReviewCommentInput).toBeVisible({timeout: 30_000});
+  }
+
+  /**
+   * Wait for code-review visual chrome to settle before screenshotting.
+   * The timeline scrolls to the newest item after load and contains dynamic
+   * dates and generated student names, so visual checkpoints wait for the
+   * timeline, banner, and scroll positions to stop moving.
+   */
+  async expectCodeReviewVisualReady(): Promise<void> {
+    await expect(this.reviewRefreshButton).toBeVisible({timeout: 30_000});
+    await expect(this.codeReviewTimelineCommit.first()).toBeVisible({
+      timeout: 30_000,
+    });
+    await expect(this.codeReviewTimelineReview.first()).toBeVisible({
+      timeout: 30_000,
+    });
+    await this.page.mouse.move(0, 0);
+    await this.page.evaluate(() => {
+      if (document.activeElement instanceof HTMLElement) {
+        document.activeElement.blur();
+      }
+    });
+
+    await this.page.waitForFunction(
+      async () => {
+        const selectors = [
+          '.uitest-code-review-timeline-commit',
+          '.uitest-code-review-timeline-review',
+          '#openCodeReviewWarningBanner',
+          '.editor-column',
+          '#codeWorkspace',
+        ];
+        const signature = () =>
+          selectors
+            .flatMap(selector =>
+              [...document.querySelectorAll(selector)].map(element => {
+                const rect = element.getBoundingClientRect();
+                return [
+                  selector,
+                  Math.round(rect.x),
+                  Math.round(rect.y),
+                  Math.round(rect.width),
+                  Math.round(rect.height),
+                  Math.round(element.scrollTop),
+                  Math.round(element.scrollLeft),
+                  Math.round(element.scrollHeight),
+                  Math.round(element.scrollWidth),
+                  element.textContent?.trim(),
+                ].join(':');
+              }),
+            )
+            .join('|');
+
+        let previous = signature();
+        for (let i = 0; i < 5; i++) {
+          await new Promise<void>(resolve =>
+            requestAnimationFrame(() => resolve()),
+          );
+          const current = signature();
+          if (current !== previous) return false;
+          previous = current;
+        }
+        return true;
+      },
+      undefined,
+      {timeout: 30_000, polling: 250},
+    );
+  }
+
+  /**
+   * Dynamic code-review timeline regions for visual checkpoints.
+   *
+   * @returns stable container locators for generated names and timestamps
+   */
+  codeReviewVisualIgnoreRegions(): Locator[] {
+    return [
+      this.page.getByText(/^Code Reviewing /).locator('xpath=ancestor::div[1]'),
+      this.reviewTab.locator('xpath=ancestor::div[1]'),
+      this.reviewRefreshButton.locator('xpath=ancestor::div[3]'),
+      this.page.locator('#show-toolbox-icon'),
+      this.page.locator('.teacher-panel'),
+      this.page.locator('.teacher-panel .hide-handle'),
+      this.page.locator('.teacher-panel .fa-chevron-right'),
+      this.teacherPanel,
+    ];
   }
 
   /**

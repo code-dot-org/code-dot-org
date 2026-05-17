@@ -100,7 +100,7 @@ export const test = baseTest.extend<
     testInfo: TestInfo,
   ) => {
     hideApplitoolsIdentifierAttachment(testInfo);
-    const handle = createEyesHandle(page, testInfo.title);
+    const handle = createEyesHandle(page, testInfo.title, 'Code.org', testInfo);
     try {
       await use(handle);
     } finally {

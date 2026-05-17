@@ -127,6 +127,8 @@ test.describe('Feedback Tab Visibility', {tag: '@no_mobile'}, () => {
     page,
     eyes,
   }) => {
+    const feedbackTab = new FeedbackTabPage(page);
+
     // Background: create authorized teacher + section + student, complete level.
     const teacher = await createAuthorizedTeacher(page);
     const {sectionCode} = await createSection(page);
@@ -174,7 +176,10 @@ test.describe('Feedback Tab Visibility', {tag: '@no_mobile'}, () => {
     await expect(page.locator('.editor-column').first()).toContainText(
       'This is the key concept for this mini rubric.',
     );
-    await eyes.check('teacher rubric feedback tab');
+    await feedbackTab.expectTeacherFeedbackVisualReady();
+    await eyes.check('teacher rubric feedback tab', {
+      ignoreRegions: feedbackTab.teacherFeedbackVisualIgnoreRegions(),
+    });
     await expect(
       page.locator('#rubric-input-performanceLevel1'),
     ).not.toBeAttached();
@@ -197,7 +202,10 @@ test.describe('Feedback Tab Visibility', {tag: '@no_mobile'}, () => {
     await expect(page.locator('.editor-column').first()).toContainText(
       'This is the key concept for this mini rubric.',
     );
-    await eyes.check('teacher giving feedback tab load');
+    await feedbackTab.expectTeacherFeedbackVisualReady();
+    await eyes.check('teacher giving feedback tab load', {
+      ignoreRegions: feedbackTab.teacherFeedbackVisualIgnoreRegions(),
+    });
     await expect(page.locator('#ui-test-submit-feedback')).toContainText(
       'Save and share',
     );
@@ -258,7 +266,10 @@ test.describe('Feedback Tab Visibility', {tag: '@no_mobile'}, () => {
     await expect(page.locator('#ui-test-submit-feedback')).toContainText(
       'Update',
     );
-    await eyes.check('teacher gave feedback');
+    await feedbackTab.expectTeacherFeedbackVisualReady();
+    await eyes.check('teacher gave feedback', {
+      ignoreRegions: feedbackTab.teacherFeedbackVisualIgnoreRegions(),
+    });
 
     // --- Student: verify teacher feedback is now visible ---
     await signIn(page, student.email, student.password);

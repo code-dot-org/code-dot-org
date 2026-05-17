@@ -132,10 +132,94 @@ export class ManageStudentsPage {
       .evaluate(element => (element as HTMLElement).click());
     await expect(familyNameInput).not.toBeVisible({timeout: 30_000});
     await expect(this.table).toContainText(familyName, {timeout: 30_000});
+    await this.page.keyboard.press('Escape');
+    await expect(
+      this.page.getByRole('button', {name: 'Edit all'}),
+    ).not.toBeVisible();
+  }
+
+  /**
+   * Wait for the roster tab to settle before a visual checkpoint.
+   * The roster row and login-info panel contain generated section and student
+   * values, so callers mask those stable containers after the table is ready.
+   */
+  async expectRosterVisualReady(): Promise<void> {
+    await expect(this.table).toBeVisible({timeout: 30_000});
+    await expect(this.loginInfo).toBeVisible({timeout: 30_000});
+
+    await this.page.waitForFunction(
+      async () => {
+        const selectors = [
+          '#uitest-manage-students-table',
+          'h2',
+          '#section-options-dropdown-dropdown-button',
+        ];
+        const signature = () =>
+          selectors
+            .flatMap(selector =>
+              [...document.querySelectorAll(selector)].map(element => {
+                const rect = element.getBoundingClientRect();
+                return [
+                  selector,
+                  Math.round(rect.x),
+                  Math.round(rect.y),
+                  Math.round(rect.width),
+                  Math.round(rect.height),
+                  Math.round(element.scrollHeight),
+                  element.textContent?.trim(),
+                ].join(':');
+              }),
+            )
+            .join('|');
+
+        let previous = signature();
+        for (let i = 0; i < 5; i++) {
+          await new Promise<void>(resolve =>
+            requestAnimationFrame(() => resolve()),
+          );
+          const current = signature();
+          if (current !== previous) return false;
+          previous = current;
+        }
+        return true;
+      },
+      undefined,
+      {timeout: 30_000, polling: 250},
+    );
+  }
+
+  /**
+   * Dynamic roster tab regions for visual checkpoints.
+   *
+   * @returns stable containers for generated section and student data
+   */
+  visualIgnoreRegions(): Locator[] {
+    return [
+      this.page.getByText('Section Code:'),
+      this.sectionCodeSummary,
+      this.page
+        .locator('#ui-test-section-code-button')
+        .locator('xpath=ancestor::div[2]'),
+      this.page.locator('#section-options-dropdown-dropdown-button'),
+      this.table.locator('tbody tr td:first-child'),
+      this.loginInfo,
+    ];
   }
 
   private get table(): Locator {
     return this.page.locator('#uitest-manage-students-table');
+  }
+
+  private get loginInfo(): Locator {
+    return this.page
+      .getByRole('heading', {name: 'Set up your class'})
+      .locator('xpath=ancestor::div[1]');
+  }
+
+  private get sectionCodeSummary(): Locator {
+    return this.page
+      .getByText('Section Code:')
+      .locator('xpath=ancestor::div[3]');
   }
 
   private get modal(): Locator {

@@ -391,6 +391,10 @@ export class Dance extends LegacyBlocklyLab {
    */
   async toggleAiCodeView(): Promise<void> {
     await this.page.locator('#toggle-code-button').click();
+    await expect(this.page.locator('#convert-button')).toBeVisible({
+      timeout: 10_000,
+    });
+    await this.stabilizeBlocklyWorkspaceForVisual();
   }
 
   /**
@@ -399,6 +403,21 @@ export class Dance extends LegacyBlocklyLab {
    */
   async toggleAiEffectView(): Promise<void> {
     await this.page.locator('#toggle-effect-button').click();
+    await expect(this.aiUseButton).toBeVisible({timeout: 10_000});
+    await this.stabilizeBlocklyWorkspaceForVisual();
+  }
+
+  /**
+   * Keeps the background Blockly workspace from leaving scrollbars in
+   * different positions while the AI modal is the visual subject.
+   */
+  async stabilizeBlocklyWorkspaceForVisual(): Promise<void> {
+    await this.page.evaluate(() => {
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
+      const workspace = (window as any).Blockly?.getMainWorkspace?.();
+      workspace?.scrollbar?.set?.(0, 0);
+      workspace?.getFlyout?.()?.scrollbar_?.set?.(0);
+    });
   }
 
   /**

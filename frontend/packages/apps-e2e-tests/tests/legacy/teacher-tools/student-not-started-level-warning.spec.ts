@@ -39,6 +39,7 @@ test.describe(
         {timeout: 30_000},
       );
       await warning.expectWarningVisible();
+      await warning.expectVisualLayoutReady();
       await eyes.check('student not started warning');
     });
 
@@ -69,6 +70,7 @@ test.describe(
         'Sally',
       );
       await warning.expectWarningVisible();
+      await warning.expectVisualLayoutReady();
       await eyes.check('student not started warning');
     });
 
@@ -96,6 +98,7 @@ test.describe(
         'Sally',
       );
       await warning.expectWarningHidden();
+      await warning.expectVisualLayoutReady();
       await eyes.check('no student not started warning');
     });
   },

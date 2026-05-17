@@ -73,4 +73,50 @@ export class StudentNotStartedPage {
     });
     await expect(this.page.locator('#notStartedBanner')).toHaveCount(0);
   }
+
+  /**
+   * Waits for the lab body and teacher panel boxes to stop moving before a
+   * visual checkpoint.
+   */
+  async expectVisualLayoutReady(): Promise<void> {
+    await this.page.waitForFunction(
+      async () => {
+        const selectors = [
+          '#level-body',
+          '#instructions',
+          '#codeWorkspace',
+          '#visualization',
+          '.teacher-panel',
+        ];
+        const signature = () =>
+          selectors
+            .flatMap(selector =>
+              [...document.querySelectorAll(selector)].map(element => {
+                const rect = element.getBoundingClientRect();
+                return [
+                  selector,
+                  Math.round(rect.x),
+                  Math.round(rect.y),
+                  Math.round(rect.width),
+                  Math.round(rect.height),
+                ].join(':');
+              }),
+            )
+            .join('|');
+
+        let previous = signature();
+        for (let index = 0; index < 5; index++) {
+          await new Promise<void>(resolve =>
+            requestAnimationFrame(() => resolve()),
+          );
+          const current = signature();
+          if (current !== previous) return false;
+          previous = current;
+        }
+        return true;
+      },
+      undefined,
+      {timeout: 30_000, polling: 250},
+    );
+  }
 }

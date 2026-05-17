@@ -503,7 +503,10 @@ test.describe('Java Lab — code review V2', () => {
       await signIn(page, setup.student1.email, setup.student1.password);
       await lab.gotoLevel(2);
       await lab.loadPeerCodeReview(1);
-      await eyes.check('student code reviewing peer');
+      await lab.expectCodeReviewVisualReady();
+      await eyes.check('student code reviewing peer', {
+        ignoreRegions: lab.codeReviewVisualIgnoreRegions(),
+      });
 
       await signIn(page, setup.teacher.email, setup.teacher.password);
       const student0Id = await getSectionStudentId(
@@ -519,13 +522,19 @@ test.describe('Java Lab — code review V2', () => {
       await expect(
         page.getByText(`Code Reviewing ${setup.student0.displayName}`),
       ).toBeVisible({timeout: 30_000});
-      await eyes.check('teacher code reviewing student');
+      await lab.expectCodeReviewVisualReady();
+      await eyes.check('teacher code reviewing student', {
+        ignoreRegions: lab.codeReviewVisualIgnoreRegions(),
+      });
 
       await signIn(page, setup.student0.email, setup.student0.password);
       await lab.gotoLevel(2);
       await lab.openReviewTab();
       await expect(lab.closeCodeReviewButton).toBeVisible({timeout: 30_000});
-      await eyes.check('student viewing own code review');
+      await lab.expectCodeReviewVisualReady();
+      await eyes.check('student viewing own code review', {
+        ignoreRegions: lab.codeReviewVisualIgnoreRegions(),
+      });
       await lab.closeOwnCodeReview();
     },
   );
