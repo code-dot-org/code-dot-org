@@ -83,7 +83,16 @@ test.describe(
       await page
         .locator('input[name="aiTeacherDiffToggle"]')
         .waitFor({state: 'visible', timeout: 15_000});
-      await page.locator('input[name="aiTeacherDiffToggle"]').click();
+      await Promise.all([
+        page.waitForResponse(
+          response =>
+            response
+              .url()
+              .includes('/api/v1/users/ai_differentiation_enabled') &&
+            response.ok(),
+        ),
+        page.locator('input[name="aiTeacherDiffToggle"]').click(),
+      ]);
 
       // FAB should be absent on the teacher dashboard home.
       await page.goto('/teacher_dashboard/home');
