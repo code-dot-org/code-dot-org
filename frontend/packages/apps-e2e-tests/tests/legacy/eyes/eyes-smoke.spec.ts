@@ -232,7 +232,9 @@ test.describe('App Lab Eyes smoke ports', () => {
       await expect(
         studentPage.locator(`[data-element-type='${elementType}']`),
       ).toBeVisible();
-      await eyes.check(`${elementType.toLowerCase()} palette visible`);
+      await eyes.check(`${elementType.toLowerCase()} palette visible`, {
+        ignoreRegions: ['.project_updated_at'],
+      });
     }
   });
 

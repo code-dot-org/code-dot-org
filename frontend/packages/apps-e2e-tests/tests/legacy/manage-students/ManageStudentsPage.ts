@@ -115,7 +115,8 @@ export class ManageStudentsPage {
       timeout: 30_000,
     });
     await this.table
-      .getByRole('columnheader', {name: /^Actions/})
+      .getByRole('row')
+      .first()
       .getByRole('button', {name: 'Actions'})
       .last()
       .click();

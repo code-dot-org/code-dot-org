@@ -6,7 +6,10 @@ import {
   StitchMode,
   Target,
 } from '@applitools/eyes-playwright';
-import type {Driver} from '@applitools/eyes-playwright';
+import type {
+  CheckSettingsAutomation,
+  Driver,
+} from '@applitools/eyes-playwright';
 import type {Page} from '@playwright/test';
 import {execSync} from 'node:child_process';
 
@@ -22,6 +25,21 @@ const MATCH_TIMEOUT_MS = 5000;
  * isolated from the legacy `test` branch.
  */
 const LEGACY_VIEWPORT = {width: 1024, height: 690};
+
+const GLOBAL_IGNORE_REGIONS = [
+  '#environment_tag',
+  'footer.footer',
+  '.small-footer-base',
+  '.project_updated_at',
+];
+
+export interface EyesCheckOptions {
+  /**
+   * CSS selectors for generated or environment-specific text that should not
+   * decide the screenshot. Missing selectors are ignored.
+   */
+  ignoreRegions?: string[];
+}
 
 /**
  * Public Eyes API exposed to tests. Implemented either by the live
@@ -43,9 +61,9 @@ export interface EyesFixture {
    */
   open(cucumberTestName: string): Promise<void>;
   /** Full-page visual checkpoint. Equivalent to Cucumber `I see no difference for "X"`. */
-  check(name: string): Promise<void>;
+  check(name: string, options?: EyesCheckOptions): Promise<void>;
   /** Viewport-only visual checkpoint. Equivalent to `... in the current viewport`. */
-  checkViewport(name: string): Promise<void>;
+  checkViewport(name: string, options?: EyesCheckOptions): Promise<void>;
   /**
    * Region visual checkpoint, scoped to the given CSS selector. Equivalent
    * to Cucumber `... within "<selector>"` — pass the same selector string
@@ -181,18 +199,41 @@ export function createEyesHandle(
     await openSession(explicitTestName ?? fallbackTestName);
   }
 
+  async function applyIgnoreRegions(
+    target: CheckSettingsAutomation,
+    options?: EyesCheckOptions,
+  ): Promise<CheckSettingsAutomation> {
+    let targetWithIgnores = target;
+    const selectors = [
+      ...GLOBAL_IGNORE_REGIONS,
+      ...(options?.ignoreRegions ?? []),
+    ];
+    for (const selector of selectors) {
+      if ((await page.locator(selector).count()) > 0) {
+        targetWithIgnores = targetWithIgnores.ignoreRegions({selector});
+      }
+    }
+    return targetWithIgnores;
+  }
+
   return {
     async open(cucumberTestName) {
       explicitTestName = cucumberTestName;
       await openSession(cucumberTestName);
     },
-    async check(name) {
+    async check(name, options) {
       await ensureOpen();
-      await eyes.check(name, Target.window().fully());
+      await eyes.check(
+        name,
+        await applyIgnoreRegions(Target.window().fully(), options),
+      );
     },
-    async checkViewport(name) {
+    async checkViewport(name, options) {
       await ensureOpen();
-      await eyes.check(name, Target.window());
+      await eyes.check(
+        name,
+        await applyIgnoreRegions(Target.window(), options),
+      );
     },
     async checkRegion(selector, name) {
       await ensureOpen();

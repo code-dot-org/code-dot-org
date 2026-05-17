@@ -13,6 +13,10 @@ import {expect, test} from '../../../shared/fixtures';
  * @chrome — both scenarios are tagged @chrome in the source feature file.
  */
 
+const AI_DIFF_THREAD_DYNAMIC_IGNORE_REGIONS = [
+  'nav[aria-label="AI differentiation chat threads"] li p',
+];
+
 test.describe(
   'AI Differentiation Chat',
   {tag: ['@no_mobile', '@chrome']},
@@ -232,7 +236,9 @@ test.describe(
         .waitFor({state: 'visible', timeout: 30_000});
 
       await eyes.open('ai diff threads');
-      await eyes.check('ai diff threads starting state');
+      await eyes.check('ai diff threads starting state', {
+        ignoreRegions: AI_DIFF_THREAD_DYNAMIC_IGNORE_REGIONS,
+      });
       await page
         .locator('#uitest-chat-textarea')
         .fill('Which lessons have a project');
@@ -261,7 +267,9 @@ test.describe(
       await expect(
         page.locator('[aria-label="User chat message"]'),
       ).not.toBeVisible();
-      await eyes.check('ai diff threads new thread from button');
+      await eyes.check('ai diff threads new thread from button', {
+        ignoreRegions: AI_DIFF_THREAD_DYNAMIC_IGNORE_REGIONS,
+      });
 
       await page.locator('#uitest-chat-textarea').fill('How do I debug');
       await page.locator('#uitest-chat-submit').click();
@@ -289,7 +297,9 @@ test.describe(
       await expect(
         page.locator('p').filter({hasText: 'Lorem ipsum'}).first(),
       ).toBeVisible();
-      await eyes.check('ai diff threads display old thread');
+      await eyes.check('ai diff threads display old thread', {
+        ignoreRegions: AI_DIFF_THREAD_DYNAMIC_IGNORE_REGIONS,
+      });
 
       await page.getByRole('button', {name: 'Suggest prompts'}).click();
       await page.getByRole('button', {name: 'Create'}).click();
@@ -298,7 +308,9 @@ test.describe(
       await expect(async () =>
         expect(await responses.count()).toBeGreaterThanOrEqual(2),
       ).toPass({timeout: 30_000, intervals: [500, 1000, 2000]});
-      await eyes.check('ai diff threads continue old thread');
+      await eyes.check('ai diff threads continue old thread', {
+        ignoreRegions: AI_DIFF_THREAD_DYNAMIC_IGNORE_REGIONS,
+      });
     });
   },
 );
