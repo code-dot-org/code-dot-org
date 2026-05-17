@@ -26,15 +26,13 @@ export class Maze extends LegacyBlocklyLab {
 
   /** Run the workspace and wait for the Cucumber-visible congrats dialog. */
   async runUntilCongrats(): Promise<void> {
-    await this.setExecutionSpeedToFast();
     await this.run();
     await this.waitForVisibleFeedback(this.congratsMessage);
   }
 
   /**
-   * Keep the legacy Maze animation quick. The user-visible readiness signal is
-   * still the feedback surface; this only avoids long animation tails under
-   * repeat runs.
+   * Keep invalid-loop feedback quick. Passing Maze scenarios keep the same
+   * animation path as Cucumber and wait on the visible feedback surface.
    */
   private async setExecutionSpeedToFast(): Promise<void> {
     await this.page.evaluate(() => {

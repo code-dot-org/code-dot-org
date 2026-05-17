@@ -379,7 +379,9 @@ test.describe('Levelbuilder — modular courses', {tag: '@no_mobile'}, () => {
       if (unit) {
         await levelbuilder.destroyTempUnit(unit.scriptName);
       }
-      await levelbuilder.destroyTempCourse(familyName);
+      // Do not call /api/test/destroy_course here. On a shared dashboard env it
+      // destroys the UnitGroup/CourseVersion but leaves an empty CourseOffering,
+      // which makes /courses/new raise when it reads co.course_versions.first.
     }
   });
 });
