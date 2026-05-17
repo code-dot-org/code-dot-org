@@ -5,6 +5,14 @@ name: Apps-E2E-Tests-CI
 # and report merge.
 on:
   workflow_call:
+    inputs:
+      playwright-version:
+        description: >-
+          Playwright version tag for the mcr.microsoft.com/playwright
+          container. Must match the version resolved in frontend/yarn.lock so
+          the bundled chrome-headless-shell revision is present at runtime.
+        type: string
+        required: true
 
 jobs:
   test:
@@ -12,11 +20,7 @@ jobs:
     runs-on: ubuntu-24.04
     timeout-minutes: 15
     container:
-      # Must match the @playwright/test version resolved in frontend/yarn.lock.
-      # The package.json range is ^1.59.0; yarn currently resolves to 1.60.0,
-      # which ships chrome-headless-shell-1223 (only present in the matching
-      # container tag). Bump in lockstep with yarn upgrades of @playwright/test.
-      image: mcr.microsoft.com/playwright:v1.60.0-noble
+      image: mcr.microsoft.com/playwright:v${{ inputs.playwright-version }}-noble
     strategy:
       fail-fast: false
       matrix:
