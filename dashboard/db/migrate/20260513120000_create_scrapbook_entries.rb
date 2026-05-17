@@ -1,6 +1,6 @@
-class CreatePortfolioEntries < ActiveRecord::Migration[7.0]
+class CreateScrapbookEntries < ActiveRecord::Migration[7.0]
   def change
-    create_table :portfolio_entries do |t|
+    create_table :scrapbook_entries do |t|
       t.references :user, null: false, foreign_key: true, type: :integer
       t.integer :script_id, null: false
       t.integer :level_id, null: false
@@ -11,6 +11,6 @@ class CreatePortfolioEntries < ActiveRecord::Migration[7.0]
       t.text :and_now_text
       t.timestamps
     end
-    add_index :portfolio_entries, [:user_id, :script_id, :level_id], unique: true
+    add_index :scrapbook_entries, [:user_id, :script_id, :level_id], unique: true
   end
 end

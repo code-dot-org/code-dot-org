@@ -1,6 +1,6 @@
 # == Schema Information
 #
-# Table name: portfolio_entries
+# Table name: scrapbook_entries
 #
 #  id               :bigint           not null, primary key
 #  user_id          :integer          not null
@@ -16,10 +16,10 @@
 #
 # Indexes
 #
-#  index_portfolio_entries_on_user_id                             (user_id)
-#  index_portfolio_entries_on_user_id_and_script_id_and_level_id  (user_id,script_id,level_id) UNIQUE
+#  index_scrapbook_entries_on_user_id                             (user_id)
+#  index_scrapbook_entries_on_user_id_and_script_id_and_level_id  (user_id,script_id,level_id) UNIQUE
 #
-class PortfolioEntry < ApplicationRecord
+class ScrapbookEntry < ApplicationRecord
   belongs_to :user
 
   validates :script_id, :level_id, presence: true

@@ -663,7 +663,7 @@ Dashboard::Application.routes.draw do
       end
     end
 
-    get '/portfolio', to: 'portfolio#show'
+    get '/scrapbook', to: 'scrapbook#show'
 
     get '/beta', to: redirect('/')
 
@@ -1095,7 +1095,7 @@ Dashboard::Application.routes.draw do
 
     namespace :api do
       namespace :v1 do
-        resources :portfolio_entries, only: [:create, :index, :destroy]
+        resources :scrapbook_entries, only: [:create, :index, :destroy]
         concerns :api_v1_pd_routes
         concerns :section_api_routes
         post 'users/:user_id/using_text_mode', to: 'users#post_using_text_mode'

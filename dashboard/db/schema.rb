@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2026_05_13_130000) do
+ActiveRecord::Schema[7.0].define(version: 2026_05_13_140000) do
   create_table "activities", id: :integer, charset: "utf8mb3", collation: "utf8mb3_unicode_ci", force: :cascade do |t|
     t.integer "user_id"
     t.integer "level_id"
@@ -59,6 +59,8 @@ ActiveRecord::Schema[7.0].define(version: 2026_05_13_130000) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.text "script"
+    t.index ["lesson_id"], name: "index_ai_lesson_summaries_on_lesson_id"
+    t.index ["user_id", "lesson_id"], name: "index_ai_lesson_summaries_on_user_id_and_lesson_id"
   end
 
   create_table "ai_student_podcast_objectives", charset: "utf8mb4", collation: "utf8mb4_unicode_ci", force: :cascade do |t|
@@ -1858,21 +1860,6 @@ ActiveRecord::Schema[7.0].define(version: 2026_05_13_130000) do
     t.index ["user_id", "plc_course_id"], name: "index_plc_user_course_enrollments_on_user_id_and_plc_course_id", unique: true
   end
 
-  create_table "portfolio_entries", charset: "utf8mb4", collation: "utf8mb4_unicode_ci", force: :cascade do |t|
-    t.integer "user_id", null: false
-    t.integer "script_id", null: false
-    t.integer "level_id", null: false
-    t.text "before_asset_url", size: :medium
-    t.text "after_asset_url", size: :medium
-    t.text "at_first_text"
-    t.text "but_then_text"
-    t.text "and_now_text"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["user_id", "script_id", "level_id"], name: "index_portfolio_entries_on_user_id_and_script_id_and_level_id", unique: true
-    t.index ["user_id"], name: "index_portfolio_entries_on_user_id"
-  end
-
   create_table "potential_teachers", charset: "utf8mb3", collation: "utf8mb3_unicode_ci", force: :cascade do |t|
     t.string "name", null: false
     t.string "email", null: false
@@ -2184,6 +2171,21 @@ ActiveRecord::Schema[7.0].define(version: 2026_05_13_130000) do
     t.index ["name", "city"], name: "index_schools_on_name_and_city", type: :fulltext
     t.index ["school_district_id"], name: "index_schools_on_school_district_id"
     t.index ["zip"], name: "index_schools_on_zip"
+  end
+
+  create_table "scrapbook_entries", charset: "utf8mb4", collation: "utf8mb4_unicode_ci", force: :cascade do |t|
+    t.integer "user_id", null: false
+    t.integer "script_id", null: false
+    t.integer "level_id", null: false
+    t.text "before_asset_url", size: :medium
+    t.text "after_asset_url", size: :medium
+    t.text "at_first_text"
+    t.text "but_then_text"
+    t.text "and_now_text"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["user_id", "script_id", "level_id"], name: "index_scrapbook_entries_on_user_id_and_script_id_and_level_id", unique: true
+    t.index ["user_id"], name: "index_scrapbook_entries_on_user_id"
   end
 
   create_table "script_levels", id: :integer, charset: "utf8mb3", collation: "utf8mb3_unicode_ci", force: :cascade do |t|
@@ -2927,7 +2929,6 @@ ActiveRecord::Schema[7.0].define(version: 2026_05_13_130000) do
   add_foreign_key "peer_reviews", "users", column: "submitter_id"
   add_foreign_key "plc_course_units", "scripts"
   add_foreign_key "plc_learning_modules", "stages"
-  add_foreign_key "portfolio_entries", "users"
   add_foreign_key "queued_account_purges", "users"
   add_foreign_key "rubric_ai_evaluations", "rubrics"
   add_foreign_key "rubric_ai_evaluations", "users"
@@ -2936,6 +2937,7 @@ ActiveRecord::Schema[7.0].define(version: 2026_05_13_130000) do
   add_foreign_key "school_infos", "schools"
   add_foreign_key "school_stats_by_years", "schools"
   add_foreign_key "schools", "school_districts"
+  add_foreign_key "scrapbook_entries", "users"
   add_foreign_key "scripts", "unit_groups", column: "original_unit_group_id"
   add_foreign_key "section_instructors", "users", column: "instructor_id"
   add_foreign_key "section_instructors", "users", column: "invited_by_id"
