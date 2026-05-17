@@ -24,6 +24,28 @@ const MATCH_TIMEOUT_MS = 5000;
 const LEGACY_VIEWPORT = {width: 1024, height: 690};
 
 /**
+ * The Applitools Playwright spec-driver version in this workspace still
+ * identifies a driver by a prototype constructor named `Page`. Playwright
+ * 1.60 exposes pages as `_Page`, so pass Eyes a thin proxy whose prototype
+ * satisfies that driver check while every method/property still delegates to
+ * the real Playwright page.
+ *
+ * Remove this once @applitools/spec-driver-playwright recognizes `_Page`.
+ */
+function asEyesDriver(page: Page): Driver {
+  function Page(): void {}
+
+  const eyesPagePrototype = Object.create(Object.getPrototypeOf(page));
+  Object.defineProperty(eyesPagePrototype, 'constructor', {
+    value: Page,
+  });
+
+  return new Proxy(page, {
+    getPrototypeOf: () => eyesPagePrototype,
+  }) as unknown as Driver;
+}
+
+/**
  * Public Eyes API exposed to tests. Implemented either by the live
  * Applitools-backed adapter (when an API key is present) or by a no-op stub
  * (when no key is set). Method names mirror the Cucumber step verbs:
@@ -164,12 +186,7 @@ export function createEyesHandle(
    */
   async function openSession(testName: string): Promise<void> {
     if (opened) return;
-    await eyes.open(
-      page as unknown as Driver,
-      appName,
-      testName,
-      LEGACY_VIEWPORT,
-    );
+    await eyes.open(asEyesDriver(page), appName, testName, LEGACY_VIEWPORT);
     opened = true;
   }
 
