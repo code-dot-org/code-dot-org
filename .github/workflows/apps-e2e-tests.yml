@@ -1,0 +1,75 @@
+name: Apps-E2E-Tests-CI
+
+# Reusable workflow invoked from frontend-ci.yml. See frontend-ci.yml for
+# the trigger / path-filter gating; this file just defines the shard matrix
+# and report merge.
+on:
+  workflow_call:
+
+jobs:
+  test:
+    name: shard ${{ matrix.shard }}/${{ strategy.job-total }}
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    container:
+      # Must match @playwright/test in frontend/packages/apps-e2e-tests/package.json (1.59.0).
+      image: mcr.microsoft.com/playwright:v1.59.0-noble
+    strategy:
+      fail-fast: false
+      matrix:
+        shard: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
+    steps:
+      - name: Install git-lfs
+        run: apt-get update && apt-get install -y git-lfs
+
+      - uses: actions/checkout@v4
+        with:
+          sparse-checkout: |
+            frontend
+            shared/fonts
+            .github
+          lfs: true
+
+      - name: Setup Frontend
+        uses: ./.github/actions/frontend/setup
+
+      - name: Run shard
+        working-directory: frontend
+        run: |
+          yarn workspace @code-dot-org/apps-e2e-tests exec \
+            playwright test --project=chromium \
+              --shard=${{ matrix.shard }}/${{ strategy.job-total }} \
+              --reporter=blob
+
+      - name: Upload blob report
+        if: ${{ !cancelled() }}
+        uses: actions/upload-artifact@v4
+        with:
+          name: blob-report-pr-${{ matrix.shard }}
+          path: frontend/packages/apps-e2e-tests/blob-report
+          retention-days: 1
+
+      - name: Upload raw test artifacts (on failure)
+        if: failure()
+        uses: actions/upload-artifact@v4
+        with:
+          name: traces-pr-${{ matrix.shard }}
+          path: frontend/packages/apps-e2e-tests/test-results
+          retention-days: 7
+
+  merge-reports:
+    name: merge reports
+    if: ${{ !cancelled() }}
+    needs: [test]
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          sparse-checkout: |
+            frontend
+            .github
+
+      - name: Merge Playwright reports
+        uses: ./.github/actions/frontend/merge-playwright-reports
+        with:
+          GITHUB_ENVIRONMENT_NAME: pr

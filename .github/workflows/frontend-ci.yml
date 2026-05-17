@@ -21,6 +21,7 @@ jobs:
     outputs:
       component-library-changed: ${{ steps.changes.outputs.component-library }}
       studio-changed: ${{ steps.changes.outputs.studio }}
+      apps-e2e-tests-changed: ${{ steps.changes.outputs.apps-e2e-tests }}
     steps:
       # Determine what changed to later skip workflows
       # Github Actions does not offer conditional runtime path filtering, thus use this action to calculate the
@@ -41,6 +42,11 @@ jobs:
               - 'frontend/apps/studio/**'
               - 'frontend/*'
               - '.github/**'
+            apps-e2e-tests:
+              - 'frontend/packages/apps-e2e-tests/**'
+              - '.github/workflows/apps-e2e-tests.yml'
+              - '.github/actions/frontend/setup/**'
+              - '.github/actions/frontend/merge-playwright-reports/**'
 
   # Start the studio app CI workflow
   studio:
@@ -54,6 +60,14 @@ jobs:
     if: ${{ needs.setup.outputs.component-library-changed == 'true' }}
     needs: setup
     uses: ./.github/workflows/component-library-ci.yml
+    secrets: inherit
+
+  # Sharded Playwright suite that runs against https://test-studio.code.org.
+  # PoC: gated to PRs that touch the suite itself. Broaden later once stable.
+  apps-e2e-tests:
+    if: ${{ needs.setup.outputs.apps-e2e-tests-changed == 'true' }}
+    needs: setup
+    uses: ./.github/workflows/apps-e2e-tests.yml
     secrets: inherit
 
   # Common teardown actions that must occur after _all_ workflows have completed.
