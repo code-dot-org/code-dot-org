@@ -59,8 +59,8 @@ test.describe('Sign up flow', () => {
     await signUp.chooseStudent();
     await signUp.createEmailAccount('student');
     await signUp.finishStudentAccount('Colorado');
+    await signUp.expectColoradoLockout();
     await eyes.open('Colorado Lockout');
     await eyes.check('Colorado Lockout');
-    await signUp.expectColoradoLockout();
   });
 });
