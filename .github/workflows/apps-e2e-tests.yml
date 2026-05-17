@@ -31,6 +31,7 @@ jobs:
             frontend
             shared/fonts
             .github
+            dashboard/test/fixtures
           lfs: true
 
       - name: Setup Frontend
