@@ -13,7 +13,7 @@ export default defineConfig({
   testDir: './tests',
   fullyParallel: true,
   forbidOnly: !!process.env.CI,
-  retries: process.env.CI ? 2 : 0,
+  retries: 0,
   // Tests tagged @no_ci require infra not available in automated runs
   // (e.g. Javabuilder WebSocket).  Skip them in CI; run manually against
   // test-studio.
