@@ -17,9 +17,9 @@ import {execSync} from 'node:child_process';
 const MATCH_TIMEOUT_MS = 5000;
 
 /**
- * Legacy Chrome viewport used by Cucumber Eyes baselines on the `test`
- * branch. Baselines exist there today; matching this viewport lets the
- * Playwright suite reuse them without rebaselining.
+ * Legacy Chrome viewport used by Cucumber Eyes baselines. Keep the viewport
+ * stable so Playwright snapshots remain comparable while their baselines are
+ * isolated from the legacy `test` branch.
  */
 const LEGACY_VIEWPORT = {width: 1024, height: 690};
 
@@ -37,7 +37,7 @@ export interface EyesFixture {
   /**
    * Open an Applitools session with the given Cucumber test name. The name
    * is the string from the legacy `I open my eyes to test "X"` step — pass
-   * it verbatim so the Cucumber baselines on the `test` branch match.
+   * it verbatim so migrated scenarios keep their existing names.
    * Optional; first `check` call will auto-open with the Playwright test
    * title if `open` was not called.
    */
@@ -74,7 +74,10 @@ function buildConfiguration(apiKey: string): Configuration {
   if (branchName) {
     config.setBranchName(branchName);
   }
-  config.setParentBranchName(process.env.APPLITOOLS_PARENT_BRANCH ?? 'test');
+  const parentBranchName = process.env.APPLITOOLS_PARENT_BRANCH;
+  if (parentBranchName) {
+    config.setParentBranchName(parentBranchName);
+  }
 
   config.setMatchTimeout(MATCH_TIMEOUT_MS);
   config.setStitchMode(StitchMode.CSS);
@@ -127,9 +130,9 @@ export interface EyesHandle extends EyesFixture {
 /**
  * Construct an `EyesHandle` bound to the given Playwright `page` and the
  * Playwright test title. The Playwright title is only used as a fallback
- * test name when the test does not call `open(...)` first; for baseline
- * reuse from the Cucumber `test` branch, tests SHOULD call `open` with the
- * exact string the legacy `I open my eyes to test "X"` step used.
+ * test name when the test does not call `open(...)` first; migrated Eyes
+ * tests SHOULD call `open` with the exact string the legacy
+ * `I open my eyes to test "X"` step used.
  *
  * `appName` defaults to `'Code.org'` — matches the legacy Ruby config
  * (`app_name: 'Code.org'`) so baselines carry over across the migration.
@@ -154,8 +157,8 @@ export function createEyesHandle(
 
   /**
    * Open the Applitools session. Resizes the page viewport to the legacy
-   * Cucumber Chrome viewport (1024x690) so baselines line up with the
-   * existing Cucumber-side baselines on the `test` branch.
+   * Cucumber Chrome viewport (1024x690) so Playwright baselines are stable
+   * across runs.
    *
    * The Eyes SDK bundles its own copy of playwright-core, so its `Driver`
    * type is structurally identical but nominally distinct from the

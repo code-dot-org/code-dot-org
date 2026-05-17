@@ -17,9 +17,9 @@ on:
       APPLITOOLS_API_KEY:
         description: >-
           Applitools Eyes API key. When set, @eyes tests open Applitools
-          sessions and run visual diffs against the `test` branch baselines
-          (parentBranchName=test). When unset, the eyes fixture is a no-op:
-          functional flow still runs, only visual diffs are skipped.
+          sessions and run visual diffs on this workflow's branch. When
+          unset, the eyes fixture is a no-op: functional flow still runs,
+          only visual diffs are skipped.
         required: false
 
 jobs:
@@ -60,14 +60,13 @@ jobs:
           # batch per PR commit; the existing close-batch curl in the
           # frontend-ci `teardown` job then closes that single batch.
           #
-          # parentBranchName=test (default in the eyes fixture) makes PR
-          # baselines fork from the `test` branch — where the legacy
-          # Cucumber Eyes baselines live.
+          # Do not set APPLITOOLS_PARENT_BRANCH here. Apps-e2e Playwright Eyes
+          # baselines are intentionally isolated from the legacy Cucumber
+          # baselines on the `test` branch.
           APPLITOOLS_API_KEY: ${{ secrets.APPLITOOLS_API_KEY }}
           APPLITOOLS_BATCH_ID: ${{ github.event.pull_request.head.sha || github.sha }}
           APPLITOOLS_BATCH_NAME: apps-e2e-tests | ${{ github.head_ref || github.ref_name }}
           APPLITOOLS_BRANCH: ${{ github.head_ref || github.ref_name }}
-          APPLITOOLS_PARENT_BRANCH: test
         run: |
           yarn workspace @code-dot-org/apps-e2e-tests exec \
             playwright test --project=chromium \
