@@ -9,7 +9,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2026-05-07 19:16:27 UTC",
+    "serialized_at": "2026-05-08 16:28:55 UTC",
     "hide_within_course": false,
     "published_state": "in_development",
     "instruction_type": null,
@@ -228,31 +228,6 @@
       "assessment": false,
       "properties": {
         "level_keys": [
-          "pl_sandbox_aif_2_U1-webapp_4"
-        ],
-        "progression": "Introduction (5 min)"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "pl_sandbox_aif_2_U1-webapp_4"
-        ],
-        "lesson.key": "lesson-1",
-        "lesson_group.key": "",
-        "script.name": "pl-sandbox-aif-sem-2-unit-1",
-        "activity_section.key": "03c8ef9a-a5f0-4639-8832-8713397d80ab"
-      },
-      "level_keys": [
-        "pl_sandbox_aif_2_U1-webapp_4"
-      ]
-    },
-    {
-      "chapter": 5,
-      "position": 5,
-      "activity_section_position": 5,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
           "pl_sandbox_aif_2_U1-projectOverview_5"
         ],
         "progression": "Introduction (5 min)"
@@ -269,6 +244,31 @@
       },
       "level_keys": [
         "pl_sandbox_aif_2_U1-projectOverview_5"
+      ]
+    },
+    {
+      "chapter": 5,
+      "position": 5,
+      "activity_section_position": 5,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "pl_sandbox_aif_2_U1-webapp_4"
+        ],
+        "progression": "Introduction (5 min)"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl_sandbox_aif_2_U1-webapp_4"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "pl-sandbox-aif-sem-2-unit-1",
+        "activity_section.key": "03c8ef9a-a5f0-4639-8832-8713397d80ab"
+      },
+      "level_keys": [
+        "pl_sandbox_aif_2_U1-webapp_4"
       ]
     },
     {
@@ -962,6 +962,28 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "progression": "Closing(5 min)"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-aif-2-U1-CFU-scenario"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "pl-sandbox-aif-sem-2-unit-1",
+        "activity_section.key": "3d42791f-5713-463c-9dc3-c952d7c88e00"
+      },
+      "level_keys": [
+        "pl-aif-2-U1-CFU-scenario"
+      ]
+    },
+    {
+      "chapter": 35,
+      "position": 35,
+      "activity_section_position": 5,
+      "assessment": false,
+      "properties": {
         "level_keys": [
           "pl-sandbox-aif2-U1-reflection"
         ],
@@ -982,9 +1004,9 @@
       ]
     },
     {
-      "chapter": 35,
-      "position": 35,
-      "activity_section_position": 5,
+      "chapter": 36,
+      "position": 36,
+      "activity_section_position": 6,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1007,9 +1029,9 @@
       ]
     },
     {
-      "chapter": 36,
-      "position": 36,
-      "activity_section_position": 6,
+      "chapter": 37,
+      "position": 37,
+      "activity_section_position": 7,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1071,9 +1093,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "pl_sandbox_aif_2_U1-webapp_4",
+        "level.key": "pl_sandbox_aif_2_U1-projectOverview_5",
         "script_level.level_keys": [
-          "pl_sandbox_aif_2_U1-webapp_4"
+          "pl_sandbox_aif_2_U1-projectOverview_5"
         ],
         "lesson.key": "lesson-1",
         "lesson_group.key": "",
@@ -1083,9 +1105,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "pl_sandbox_aif_2_U1-projectOverview_5",
+        "level.key": "pl_sandbox_aif_2_U1-webapp_4",
         "script_level.level_keys": [
-          "pl_sandbox_aif_2_U1-projectOverview_5"
+          "pl_sandbox_aif_2_U1-webapp_4"
         ],
         "lesson.key": "lesson-1",
         "lesson_group.key": "",
@@ -1422,6 +1444,18 @@
         "level.key": "pl-sandbox-aif2-U1-teaching-moves-pendalum",
         "script_level.level_keys": [
           "pl-sandbox-aif2-U1-teaching-moves-pendalum"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "pl-sandbox-aif-sem-2-unit-1",
+        "activity_section.key": "3d42791f-5713-463c-9dc3-c952d7c88e00"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-aif-2-U1-CFU-scenario",
+        "script_level.level_keys": [
+          "pl-aif-2-U1-CFU-scenario"
         ],
         "lesson.key": "lesson-1",
         "lesson_group.key": "",

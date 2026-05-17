@@ -13,7 +13,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2026-04-15 16:19:57 UTC",
+    "serialized_at": "2026-05-13 17:31:21 UTC",
     "hide_within_course": false,
     "published_state": "in_development",
     "instruction_type": null,
@@ -53,8 +53,8 @@
       }
     },
     {
-      "key": "Milestone 1: AI in My World",
-      "name": "Milestone 1: AI in My World",
+      "key": "lesson-2",
+      "name": "Big Idea 1: AI is Powerful and Unreliable",
       "absolute_position": 2,
       "lockable": false,
       "has_lesson_plan": true,
@@ -62,14 +62,14 @@
       "properties": {
       },
       "seeding_key": {
-        "lesson.key": "Milestone 1: AI in My World",
+        "lesson.key": "lesson-2",
         "lesson_group.key": "",
         "script.name": "self-paced-pl-thinking-critically-about-ai-2026"
       }
     },
     {
-      "key": "Milestone 2: Responsible Creation & Impact",
-      "name": "Milestone 2: Responsible Creation & Impact",
+      "key": "lesson-3",
+      "name": "Big Idea 2: AI Use Requires Testing & Evidence",
       "absolute_position": 3,
       "lockable": false,
       "has_lesson_plan": true,
@@ -77,14 +77,14 @@
       "properties": {
       },
       "seeding_key": {
-        "lesson.key": "Milestone 2: Responsible Creation & Impact",
+        "lesson.key": "lesson-3",
         "lesson_group.key": "",
         "script.name": "self-paced-pl-thinking-critically-about-ai-2026"
       }
     },
     {
-      "key": "Milestone 3: Truth & Credibility",
-      "name": "Milestone 3: Truth & Credibility",
+      "key": "lesson-4",
+      "name": "Big Idea 3: Context Matters",
       "absolute_position": 4,
       "lockable": false,
       "has_lesson_plan": true,
@@ -92,14 +92,14 @@
       "properties": {
       },
       "seeding_key": {
-        "lesson.key": "Milestone 3: Truth & Credibility",
+        "lesson.key": "lesson-4",
         "lesson_group.key": "",
         "script.name": "self-paced-pl-thinking-critically-about-ai-2026"
       }
     },
     {
-      "key": "Milestone 4: Safety & Privacy",
-      "name": "Milestone 4: Safety & Privacy",
+      "key": "lesson-5",
+      "name": "Big Idea 4: Responsible Use Includes Risk Awareness",
       "absolute_position": 5,
       "lockable": false,
       "has_lesson_plan": true,
@@ -107,14 +107,14 @@
       "properties": {
       },
       "seeding_key": {
-        "lesson.key": "Milestone 4: Safety & Privacy",
+        "lesson.key": "lesson-5",
         "lesson_group.key": "",
         "script.name": "self-paced-pl-thinking-critically-about-ai-2026"
       }
     },
     {
-      "key": "Milestone 5: Synthesis & Sharing",
-      "name": "Milestone 5: Synthesis & Sharing",
+      "key": "lesson-6",
+      "name": "Unit Projects",
       "absolute_position": 6,
       "lockable": false,
       "has_lesson_plan": true,
@@ -122,7 +122,7 @@
       "properties": {
       },
       "seeding_key": {
-        "lesson.key": "Milestone 5: Synthesis & Sharing",
+        "lesson.key": "lesson-6",
         "lesson_group.key": "",
         "script.name": "self-paced-pl-thinking-critically-about-ai-2026"
       }
@@ -137,66 +137,6 @@
       "seeding_key": {
         "lesson_activity.key": "75245236-d4bb-40c5-8911-a1aee3846ced",
         "lesson.key": "Introduction to Thinking Critically About AI",
-        "lesson_group.key": "",
-        "script.name": "self-paced-pl-thinking-critically-about-ai-2026"
-      }
-    },
-    {
-      "key": "40253d72-ee77-45d3-9fae-a5a2534672be",
-      "position": 1,
-      "properties": {
-      },
-      "seeding_key": {
-        "lesson_activity.key": "40253d72-ee77-45d3-9fae-a5a2534672be",
-        "lesson.key": "Milestone 1: AI in My World",
-        "lesson_group.key": "",
-        "script.name": "self-paced-pl-thinking-critically-about-ai-2026"
-      }
-    },
-    {
-      "key": "0a661045-ad76-4d8a-b01b-6fcbab37d6f0",
-      "position": 1,
-      "properties": {
-      },
-      "seeding_key": {
-        "lesson_activity.key": "0a661045-ad76-4d8a-b01b-6fcbab37d6f0",
-        "lesson.key": "Milestone 2: Responsible Creation & Impact",
-        "lesson_group.key": "",
-        "script.name": "self-paced-pl-thinking-critically-about-ai-2026"
-      }
-    },
-    {
-      "key": "acec5038-8274-4542-83d9-fb06e88aa190",
-      "position": 1,
-      "properties": {
-      },
-      "seeding_key": {
-        "lesson_activity.key": "acec5038-8274-4542-83d9-fb06e88aa190",
-        "lesson.key": "Milestone 3: Truth & Credibility",
-        "lesson_group.key": "",
-        "script.name": "self-paced-pl-thinking-critically-about-ai-2026"
-      }
-    },
-    {
-      "key": "0f82ddfc-416b-4413-89d0-5e7bc9c17f07",
-      "position": 1,
-      "properties": {
-      },
-      "seeding_key": {
-        "lesson_activity.key": "0f82ddfc-416b-4413-89d0-5e7bc9c17f07",
-        "lesson.key": "Milestone 4: Safety & Privacy",
-        "lesson_group.key": "",
-        "script.name": "self-paced-pl-thinking-critically-about-ai-2026"
-      }
-    },
-    {
-      "key": "090750e2-ffdf-4050-8221-a3fd7731b92e",
-      "position": 1,
-      "properties": {
-      },
-      "seeding_key": {
-        "lesson_activity.key": "090750e2-ffdf-4050-8221-a3fd7731b92e",
-        "lesson.key": "Milestone 5: Synthesis & Sharing",
         "lesson_group.key": "",
         "script.name": "self-paced-pl-thinking-critically-about-ai-2026"
       }
@@ -256,67 +196,6 @@
       "seeding_key": {
         "activity_section.key": "2e7ce864-c2ed-400a-84e4-d339c3821964",
         "lesson_activity.key": "75245236-d4bb-40c5-8911-a1aee3846ced"
-      }
-    },
-    {
-      "key": "e2005a39-1c7a-43ae-8134-571f47200169",
-      "position": 1,
-      "properties": {
-      },
-      "seeding_key": {
-        "activity_section.key": "e2005a39-1c7a-43ae-8134-571f47200169",
-        "lesson_activity.key": "40253d72-ee77-45d3-9fae-a5a2534672be"
-      }
-    },
-    {
-      "key": "04b04d49-7141-4e95-894d-eae5736bdb7d",
-      "position": 1,
-      "properties": {
-      },
-      "seeding_key": {
-        "activity_section.key": "04b04d49-7141-4e95-894d-eae5736bdb7d",
-        "lesson_activity.key": "0a661045-ad76-4d8a-b01b-6fcbab37d6f0"
-      }
-    },
-    {
-      "key": "0cd8e3c6-d114-4381-975b-5525aa293789",
-      "position": 1,
-      "properties": {
-      },
-      "seeding_key": {
-        "activity_section.key": "0cd8e3c6-d114-4381-975b-5525aa293789",
-        "lesson_activity.key": "acec5038-8274-4542-83d9-fb06e88aa190"
-      }
-    },
-    {
-      "key": "2a0b11af-9532-4c8b-9b28-672f65a84326",
-      "position": 1,
-      "properties": {
-      },
-      "seeding_key": {
-        "activity_section.key": "2a0b11af-9532-4c8b-9b28-672f65a84326",
-        "lesson_activity.key": "0f82ddfc-416b-4413-89d0-5e7bc9c17f07"
-      }
-    },
-    {
-      "key": "2639e731-c9b2-4fa9-acce-d90a5ecd12b0",
-      "position": 1,
-      "properties": {
-      },
-      "seeding_key": {
-        "activity_section.key": "2639e731-c9b2-4fa9-acce-d90a5ecd12b0",
-        "lesson_activity.key": "090750e2-ffdf-4050-8221-a3fd7731b92e"
-      }
-    },
-    {
-      "key": "5f62ad54-f3f0-4414-841b-ed29d4ab1a71",
-      "position": 2,
-      "properties": {
-        "progression_name": "Wrap Up"
-      },
-      "seeding_key": {
-        "activity_section.key": "5f62ad54-f3f0-4414-841b-ed29d4ab1a71",
-        "lesson_activity.key": "090750e2-ffdf-4050-8221-a3fd7731b92e"
       }
     }
   ],
@@ -672,490 +551,6 @@
       "level_keys": [
         "self-paced-TCaAI-L1-Closing_2026"
       ]
-    },
-    {
-      "chapter": 17,
-      "position": 1,
-      "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "self-paced-TCaAI-L2-SectionOverview_2026"
-        ],
-        "lesson.key": "Milestone 1: AI in My World",
-        "lesson_group.key": "",
-        "script.name": "self-paced-pl-thinking-critically-about-ai-2026",
-        "activity_section.key": "e2005a39-1c7a-43ae-8134-571f47200169"
-      },
-      "level_keys": [
-        "self-paced-TCaAI-L2-SectionOverview_2026"
-      ]
-    },
-    {
-      "chapter": 18,
-      "position": 2,
-      "activity_section_position": 2,
-      "assessment": false,
-      "properties": {
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "self-paced-TCaAI-L2-MilestoneOverview_2026"
-        ],
-        "lesson.key": "Milestone 1: AI in My World",
-        "lesson_group.key": "",
-        "script.name": "self-paced-pl-thinking-critically-about-ai-2026",
-        "activity_section.key": "e2005a39-1c7a-43ae-8134-571f47200169"
-      },
-      "level_keys": [
-        "self-paced-TCaAI-L2-MilestoneOverview_2026"
-      ]
-    },
-    {
-      "chapter": 19,
-      "position": 3,
-      "activity_section_position": 3,
-      "assessment": false,
-      "properties": {
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "self-paced-TCaAI-L2-Lesson1_2026"
-        ],
-        "lesson.key": "Milestone 1: AI in My World",
-        "lesson_group.key": "",
-        "script.name": "self-paced-pl-thinking-critically-about-ai-2026",
-        "activity_section.key": "e2005a39-1c7a-43ae-8134-571f47200169"
-      },
-      "level_keys": [
-        "self-paced-TCaAI-L2-Lesson1_2026"
-      ]
-    },
-    {
-      "chapter": 20,
-      "position": 4,
-      "activity_section_position": 4,
-      "assessment": false,
-      "properties": {
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "self-paced-TCaAI-L2-Lesson1-DanceGenerator1_2026"
-        ],
-        "lesson.key": "Milestone 1: AI in My World",
-        "lesson_group.key": "",
-        "script.name": "self-paced-pl-thinking-critically-about-ai-2026",
-        "activity_section.key": "e2005a39-1c7a-43ae-8134-571f47200169"
-      },
-      "level_keys": [
-        "self-paced-TCaAI-L2-Lesson1-DanceGenerator1_2026"
-      ]
-    },
-    {
-      "chapter": 21,
-      "position": 5,
-      "activity_section_position": 5,
-      "assessment": false,
-      "properties": {
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "self-paced-TCaAI-L2-Lesson1-DanceGenerator2_2026"
-        ],
-        "lesson.key": "Milestone 1: AI in My World",
-        "lesson_group.key": "",
-        "script.name": "self-paced-pl-thinking-critically-about-ai-2026",
-        "activity_section.key": "e2005a39-1c7a-43ae-8134-571f47200169"
-      },
-      "level_keys": [
-        "self-paced-TCaAI-L2-Lesson1-DanceGenerator2_2026"
-      ]
-    },
-    {
-      "chapter": 22,
-      "position": 6,
-      "activity_section_position": 6,
-      "assessment": false,
-      "properties": {
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "self-paced-TCaAI-L2-Lesson1-DanceGenerator3_2026"
-        ],
-        "lesson.key": "Milestone 1: AI in My World",
-        "lesson_group.key": "",
-        "script.name": "self-paced-pl-thinking-critically-about-ai-2026",
-        "activity_section.key": "e2005a39-1c7a-43ae-8134-571f47200169"
-      },
-      "level_keys": [
-        "self-paced-TCaAI-L2-Lesson1-DanceGenerator3_2026"
-      ]
-    },
-    {
-      "chapter": 23,
-      "position": 7,
-      "activity_section_position": 7,
-      "assessment": false,
-      "properties": {
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "self-paced-TCaAI-L2-Lesson2_2026"
-        ],
-        "lesson.key": "Milestone 1: AI in My World",
-        "lesson_group.key": "",
-        "script.name": "self-paced-pl-thinking-critically-about-ai-2026",
-        "activity_section.key": "e2005a39-1c7a-43ae-8134-571f47200169"
-      },
-      "level_keys": [
-        "self-paced-TCaAI-L2-Lesson2_2026"
-      ]
-    },
-    {
-      "chapter": 24,
-      "position": 1,
-      "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "self-paced-TCaAI-L2-Milestone2Overview_2026"
-        ],
-        "lesson.key": "Milestone 2: Responsible Creation & Impact",
-        "lesson_group.key": "",
-        "script.name": "self-paced-pl-thinking-critically-about-ai-2026",
-        "activity_section.key": "04b04d49-7141-4e95-894d-eae5736bdb7d"
-      },
-      "level_keys": [
-        "self-paced-TCaAI-L2-Milestone2Overview_2026"
-      ]
-    },
-    {
-      "chapter": 25,
-      "position": 2,
-      "activity_section_position": 2,
-      "assessment": false,
-      "properties": {
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "self-paced-TCaAI-L2-Lesson3_2026"
-        ],
-        "lesson.key": "Milestone 2: Responsible Creation & Impact",
-        "lesson_group.key": "",
-        "script.name": "self-paced-pl-thinking-critically-about-ai-2026",
-        "activity_section.key": "04b04d49-7141-4e95-894d-eae5736bdb7d"
-      },
-      "level_keys": [
-        "self-paced-TCaAI-L2-Lesson3_2026"
-      ]
-    },
-    {
-      "chapter": 26,
-      "position": 3,
-      "activity_section_position": 3,
-      "assessment": false,
-      "properties": {
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "self-paced-TCaAI-L2-Lesson3AIChat_2026"
-        ],
-        "lesson.key": "Milestone 2: Responsible Creation & Impact",
-        "lesson_group.key": "",
-        "script.name": "self-paced-pl-thinking-critically-about-ai-2026",
-        "activity_section.key": "04b04d49-7141-4e95-894d-eae5736bdb7d"
-      },
-      "level_keys": [
-        "self-paced-TCaAI-L2-Lesson3AIChat_2026"
-      ]
-    },
-    {
-      "chapter": 27,
-      "position": 4,
-      "activity_section_position": 4,
-      "assessment": false,
-      "properties": {
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "self-paced-TCaAI-L2-Lesson4_2026"
-        ],
-        "lesson.key": "Milestone 2: Responsible Creation & Impact",
-        "lesson_group.key": "",
-        "script.name": "self-paced-pl-thinking-critically-about-ai-2026",
-        "activity_section.key": "04b04d49-7141-4e95-894d-eae5736bdb7d"
-      },
-      "level_keys": [
-        "self-paced-TCaAI-L2-Lesson4_2026"
-      ]
-    },
-    {
-      "chapter": 28,
-      "position": 1,
-      "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "self-paced-TCaAI-L4-Milestone3Overview_2026"
-        ],
-        "lesson.key": "Milestone 3: Truth & Credibility",
-        "lesson_group.key": "",
-        "script.name": "self-paced-pl-thinking-critically-about-ai-2026",
-        "activity_section.key": "0cd8e3c6-d114-4381-975b-5525aa293789"
-      },
-      "level_keys": [
-        "self-paced-TCaAI-L4-Milestone3Overview_2026"
-      ]
-    },
-    {
-      "chapter": 29,
-      "position": 2,
-      "activity_section_position": 2,
-      "assessment": false,
-      "properties": {
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "self-paced-TCaAI-L4-Lesson5_2026"
-        ],
-        "lesson.key": "Milestone 3: Truth & Credibility",
-        "lesson_group.key": "",
-        "script.name": "self-paced-pl-thinking-critically-about-ai-2026",
-        "activity_section.key": "0cd8e3c6-d114-4381-975b-5525aa293789"
-      },
-      "level_keys": [
-        "self-paced-TCaAI-L4-Lesson5_2026"
-      ]
-    },
-    {
-      "chapter": 30,
-      "position": 3,
-      "activity_section_position": 3,
-      "assessment": false,
-      "properties": {
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "self-paced-TCaAI-L4-Lesson5AIChat_2026"
-        ],
-        "lesson.key": "Milestone 3: Truth & Credibility",
-        "lesson_group.key": "",
-        "script.name": "self-paced-pl-thinking-critically-about-ai-2026",
-        "activity_section.key": "0cd8e3c6-d114-4381-975b-5525aa293789"
-      },
-      "level_keys": [
-        "self-paced-TCaAI-L4-Lesson5AIChat_2026"
-      ]
-    },
-    {
-      "chapter": 31,
-      "position": 4,
-      "activity_section_position": 4,
-      "assessment": false,
-      "properties": {
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "self-paced-TCaAI-L4-Lesson6_2026"
-        ],
-        "lesson.key": "Milestone 3: Truth & Credibility",
-        "lesson_group.key": "",
-        "script.name": "self-paced-pl-thinking-critically-about-ai-2026",
-        "activity_section.key": "0cd8e3c6-d114-4381-975b-5525aa293789"
-      },
-      "level_keys": [
-        "self-paced-TCaAI-L4-Lesson6_2026"
-      ]
-    },
-    {
-      "chapter": 32,
-      "position": 1,
-      "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "self-paced-TCaAI-L5-Milestone4Overview_2026"
-        ],
-        "lesson.key": "Milestone 4: Safety & Privacy",
-        "lesson_group.key": "",
-        "script.name": "self-paced-pl-thinking-critically-about-ai-2026",
-        "activity_section.key": "2a0b11af-9532-4c8b-9b28-672f65a84326"
-      },
-      "level_keys": [
-        "self-paced-TCaAI-L5-Milestone4Overview_2026"
-      ]
-    },
-    {
-      "chapter": 33,
-      "position": 2,
-      "activity_section_position": 2,
-      "assessment": false,
-      "properties": {
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "self-paced-TCaAI-L5-Lesson7_2026"
-        ],
-        "lesson.key": "Milestone 4: Safety & Privacy",
-        "lesson_group.key": "",
-        "script.name": "self-paced-pl-thinking-critically-about-ai-2026",
-        "activity_section.key": "2a0b11af-9532-4c8b-9b28-672f65a84326"
-      },
-      "level_keys": [
-        "self-paced-TCaAI-L5-Lesson7_2026"
-      ]
-    },
-    {
-      "chapter": 34,
-      "position": 3,
-      "activity_section_position": 3,
-      "assessment": false,
-      "properties": {
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "self-paced-TCaAI-L5-Lesson7AIChat_2026"
-        ],
-        "lesson.key": "Milestone 4: Safety & Privacy",
-        "lesson_group.key": "",
-        "script.name": "self-paced-pl-thinking-critically-about-ai-2026",
-        "activity_section.key": "2a0b11af-9532-4c8b-9b28-672f65a84326"
-      },
-      "level_keys": [
-        "self-paced-TCaAI-L5-Lesson7AIChat_2026"
-      ]
-    },
-    {
-      "chapter": 35,
-      "position": 4,
-      "activity_section_position": 4,
-      "assessment": false,
-      "properties": {
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "self-paced-TCaAI-L5-Lesson8_2026"
-        ],
-        "lesson.key": "Milestone 4: Safety & Privacy",
-        "lesson_group.key": "",
-        "script.name": "self-paced-pl-thinking-critically-about-ai-2026",
-        "activity_section.key": "2a0b11af-9532-4c8b-9b28-672f65a84326"
-      },
-      "level_keys": [
-        "self-paced-TCaAI-L5-Lesson8_2026"
-      ]
-    },
-    {
-      "chapter": 36,
-      "position": 1,
-      "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "self-paced-TCaAI-L6-Milestone5Overview_2026"
-        ],
-        "lesson.key": "Milestone 5: Synthesis & Sharing",
-        "lesson_group.key": "",
-        "script.name": "self-paced-pl-thinking-critically-about-ai-2026",
-        "activity_section.key": "2639e731-c9b2-4fa9-acce-d90a5ecd12b0"
-      },
-      "level_keys": [
-        "self-paced-TCaAI-L6-Milestone5Overview_2026"
-      ]
-    },
-    {
-      "chapter": 37,
-      "position": 2,
-      "activity_section_position": 2,
-      "assessment": false,
-      "properties": {
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "self-paced-TCaAI-L6-Lesson9_2026"
-        ],
-        "lesson.key": "Milestone 5: Synthesis & Sharing",
-        "lesson_group.key": "",
-        "script.name": "self-paced-pl-thinking-critically-about-ai-2026",
-        "activity_section.key": "2639e731-c9b2-4fa9-acce-d90a5ecd12b0"
-      },
-      "level_keys": [
-        "self-paced-TCaAI-L6-Lesson9_2026"
-      ]
-    },
-    {
-      "chapter": 38,
-      "position": 3,
-      "activity_section_position": 3,
-      "assessment": false,
-      "properties": {
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "self-paced-TCaAI-L6-Lesson10_2026"
-        ],
-        "lesson.key": "Milestone 5: Synthesis & Sharing",
-        "lesson_group.key": "",
-        "script.name": "self-paced-pl-thinking-critically-about-ai-2026",
-        "activity_section.key": "2639e731-c9b2-4fa9-acce-d90a5ecd12b0"
-      },
-      "level_keys": [
-        "self-paced-TCaAI-L6-Lesson10_2026"
-      ]
-    },
-    {
-      "chapter": 39,
-      "position": 4,
-      "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
-        "progression": "Wrap Up"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "self-paced-TCaAI-L6-WrapUp_2026"
-        ],
-        "lesson.key": "Milestone 5: Synthesis & Sharing",
-        "lesson_group.key": "",
-        "script.name": "self-paced-pl-thinking-critically-about-ai-2026",
-        "activity_section.key": "5f62ad54-f3f0-4414-841b-ed29d4ab1a71"
-      },
-      "level_keys": [
-        "self-paced-TCaAI-L6-WrapUp_2026"
-      ]
     }
   ],
   "levels_script_levels": [
@@ -1350,282 +745,6 @@
         "script.name": "self-paced-pl-thinking-critically-about-ai-2026",
         "activity_section.key": "2e7ce864-c2ed-400a-84e4-d339c3821964"
       }
-    },
-    {
-      "seeding_key": {
-        "level.key": "self-paced-TCaAI-L2-SectionOverview_2026",
-        "script_level.level_keys": [
-          "self-paced-TCaAI-L2-SectionOverview_2026"
-        ],
-        "lesson.key": "Milestone 1: AI in My World",
-        "lesson_group.key": "",
-        "script.name": "self-paced-pl-thinking-critically-about-ai-2026",
-        "activity_section.key": "e2005a39-1c7a-43ae-8134-571f47200169"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "self-paced-TCaAI-L2-MilestoneOverview_2026",
-        "script_level.level_keys": [
-          "self-paced-TCaAI-L2-MilestoneOverview_2026"
-        ],
-        "lesson.key": "Milestone 1: AI in My World",
-        "lesson_group.key": "",
-        "script.name": "self-paced-pl-thinking-critically-about-ai-2026",
-        "activity_section.key": "e2005a39-1c7a-43ae-8134-571f47200169"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "self-paced-TCaAI-L2-Lesson1_2026",
-        "script_level.level_keys": [
-          "self-paced-TCaAI-L2-Lesson1_2026"
-        ],
-        "lesson.key": "Milestone 1: AI in My World",
-        "lesson_group.key": "",
-        "script.name": "self-paced-pl-thinking-critically-about-ai-2026",
-        "activity_section.key": "e2005a39-1c7a-43ae-8134-571f47200169"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "self-paced-TCaAI-L2-Lesson1-DanceGenerator1_2026",
-        "script_level.level_keys": [
-          "self-paced-TCaAI-L2-Lesson1-DanceGenerator1_2026"
-        ],
-        "lesson.key": "Milestone 1: AI in My World",
-        "lesson_group.key": "",
-        "script.name": "self-paced-pl-thinking-critically-about-ai-2026",
-        "activity_section.key": "e2005a39-1c7a-43ae-8134-571f47200169"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "self-paced-TCaAI-L2-Lesson1-DanceGenerator2_2026",
-        "script_level.level_keys": [
-          "self-paced-TCaAI-L2-Lesson1-DanceGenerator2_2026"
-        ],
-        "lesson.key": "Milestone 1: AI in My World",
-        "lesson_group.key": "",
-        "script.name": "self-paced-pl-thinking-critically-about-ai-2026",
-        "activity_section.key": "e2005a39-1c7a-43ae-8134-571f47200169"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "self-paced-TCaAI-L2-Lesson1-DanceGenerator3_2026",
-        "script_level.level_keys": [
-          "self-paced-TCaAI-L2-Lesson1-DanceGenerator3_2026"
-        ],
-        "lesson.key": "Milestone 1: AI in My World",
-        "lesson_group.key": "",
-        "script.name": "self-paced-pl-thinking-critically-about-ai-2026",
-        "activity_section.key": "e2005a39-1c7a-43ae-8134-571f47200169"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "self-paced-TCaAI-L2-Lesson2_2026",
-        "script_level.level_keys": [
-          "self-paced-TCaAI-L2-Lesson2_2026"
-        ],
-        "lesson.key": "Milestone 1: AI in My World",
-        "lesson_group.key": "",
-        "script.name": "self-paced-pl-thinking-critically-about-ai-2026",
-        "activity_section.key": "e2005a39-1c7a-43ae-8134-571f47200169"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "self-paced-TCaAI-L2-Milestone2Overview_2026",
-        "script_level.level_keys": [
-          "self-paced-TCaAI-L2-Milestone2Overview_2026"
-        ],
-        "lesson.key": "Milestone 2: Responsible Creation & Impact",
-        "lesson_group.key": "",
-        "script.name": "self-paced-pl-thinking-critically-about-ai-2026",
-        "activity_section.key": "04b04d49-7141-4e95-894d-eae5736bdb7d"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "self-paced-TCaAI-L2-Lesson3_2026",
-        "script_level.level_keys": [
-          "self-paced-TCaAI-L2-Lesson3_2026"
-        ],
-        "lesson.key": "Milestone 2: Responsible Creation & Impact",
-        "lesson_group.key": "",
-        "script.name": "self-paced-pl-thinking-critically-about-ai-2026",
-        "activity_section.key": "04b04d49-7141-4e95-894d-eae5736bdb7d"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "self-paced-TCaAI-L2-Lesson3AIChat_2026",
-        "script_level.level_keys": [
-          "self-paced-TCaAI-L2-Lesson3AIChat_2026"
-        ],
-        "lesson.key": "Milestone 2: Responsible Creation & Impact",
-        "lesson_group.key": "",
-        "script.name": "self-paced-pl-thinking-critically-about-ai-2026",
-        "activity_section.key": "04b04d49-7141-4e95-894d-eae5736bdb7d"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "self-paced-TCaAI-L2-Lesson4_2026",
-        "script_level.level_keys": [
-          "self-paced-TCaAI-L2-Lesson4_2026"
-        ],
-        "lesson.key": "Milestone 2: Responsible Creation & Impact",
-        "lesson_group.key": "",
-        "script.name": "self-paced-pl-thinking-critically-about-ai-2026",
-        "activity_section.key": "04b04d49-7141-4e95-894d-eae5736bdb7d"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "self-paced-TCaAI-L4-Milestone3Overview_2026",
-        "script_level.level_keys": [
-          "self-paced-TCaAI-L4-Milestone3Overview_2026"
-        ],
-        "lesson.key": "Milestone 3: Truth & Credibility",
-        "lesson_group.key": "",
-        "script.name": "self-paced-pl-thinking-critically-about-ai-2026",
-        "activity_section.key": "0cd8e3c6-d114-4381-975b-5525aa293789"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "self-paced-TCaAI-L4-Lesson5_2026",
-        "script_level.level_keys": [
-          "self-paced-TCaAI-L4-Lesson5_2026"
-        ],
-        "lesson.key": "Milestone 3: Truth & Credibility",
-        "lesson_group.key": "",
-        "script.name": "self-paced-pl-thinking-critically-about-ai-2026",
-        "activity_section.key": "0cd8e3c6-d114-4381-975b-5525aa293789"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "self-paced-TCaAI-L4-Lesson5AIChat_2026",
-        "script_level.level_keys": [
-          "self-paced-TCaAI-L4-Lesson5AIChat_2026"
-        ],
-        "lesson.key": "Milestone 3: Truth & Credibility",
-        "lesson_group.key": "",
-        "script.name": "self-paced-pl-thinking-critically-about-ai-2026",
-        "activity_section.key": "0cd8e3c6-d114-4381-975b-5525aa293789"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "self-paced-TCaAI-L4-Lesson6_2026",
-        "script_level.level_keys": [
-          "self-paced-TCaAI-L4-Lesson6_2026"
-        ],
-        "lesson.key": "Milestone 3: Truth & Credibility",
-        "lesson_group.key": "",
-        "script.name": "self-paced-pl-thinking-critically-about-ai-2026",
-        "activity_section.key": "0cd8e3c6-d114-4381-975b-5525aa293789"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "self-paced-TCaAI-L5-Milestone4Overview_2026",
-        "script_level.level_keys": [
-          "self-paced-TCaAI-L5-Milestone4Overview_2026"
-        ],
-        "lesson.key": "Milestone 4: Safety & Privacy",
-        "lesson_group.key": "",
-        "script.name": "self-paced-pl-thinking-critically-about-ai-2026",
-        "activity_section.key": "2a0b11af-9532-4c8b-9b28-672f65a84326"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "self-paced-TCaAI-L5-Lesson7_2026",
-        "script_level.level_keys": [
-          "self-paced-TCaAI-L5-Lesson7_2026"
-        ],
-        "lesson.key": "Milestone 4: Safety & Privacy",
-        "lesson_group.key": "",
-        "script.name": "self-paced-pl-thinking-critically-about-ai-2026",
-        "activity_section.key": "2a0b11af-9532-4c8b-9b28-672f65a84326"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "self-paced-TCaAI-L5-Lesson7AIChat_2026",
-        "script_level.level_keys": [
-          "self-paced-TCaAI-L5-Lesson7AIChat_2026"
-        ],
-        "lesson.key": "Milestone 4: Safety & Privacy",
-        "lesson_group.key": "",
-        "script.name": "self-paced-pl-thinking-critically-about-ai-2026",
-        "activity_section.key": "2a0b11af-9532-4c8b-9b28-672f65a84326"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "self-paced-TCaAI-L5-Lesson8_2026",
-        "script_level.level_keys": [
-          "self-paced-TCaAI-L5-Lesson8_2026"
-        ],
-        "lesson.key": "Milestone 4: Safety & Privacy",
-        "lesson_group.key": "",
-        "script.name": "self-paced-pl-thinking-critically-about-ai-2026",
-        "activity_section.key": "2a0b11af-9532-4c8b-9b28-672f65a84326"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "self-paced-TCaAI-L6-Milestone5Overview_2026",
-        "script_level.level_keys": [
-          "self-paced-TCaAI-L6-Milestone5Overview_2026"
-        ],
-        "lesson.key": "Milestone 5: Synthesis & Sharing",
-        "lesson_group.key": "",
-        "script.name": "self-paced-pl-thinking-critically-about-ai-2026",
-        "activity_section.key": "2639e731-c9b2-4fa9-acce-d90a5ecd12b0"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "self-paced-TCaAI-L6-Lesson9_2026",
-        "script_level.level_keys": [
-          "self-paced-TCaAI-L6-Lesson9_2026"
-        ],
-        "lesson.key": "Milestone 5: Synthesis & Sharing",
-        "lesson_group.key": "",
-        "script.name": "self-paced-pl-thinking-critically-about-ai-2026",
-        "activity_section.key": "2639e731-c9b2-4fa9-acce-d90a5ecd12b0"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "self-paced-TCaAI-L6-Lesson10_2026",
-        "script_level.level_keys": [
-          "self-paced-TCaAI-L6-Lesson10_2026"
-        ],
-        "lesson.key": "Milestone 5: Synthesis & Sharing",
-        "lesson_group.key": "",
-        "script.name": "self-paced-pl-thinking-critically-about-ai-2026",
-        "activity_section.key": "2639e731-c9b2-4fa9-acce-d90a5ecd12b0"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "self-paced-TCaAI-L6-WrapUp_2026",
-        "script_level.level_keys": [
-          "self-paced-TCaAI-L6-WrapUp_2026"
-        ],
-        "lesson.key": "Milestone 5: Synthesis & Sharing",
-        "lesson_group.key": "",
-        "script.name": "self-paced-pl-thinking-critically-about-ai-2026",
-        "activity_section.key": "5f62ad54-f3f0-4414-841b-ed29d4ab1a71"
-      }
     }
   ],
   "resources": [
@@ -1656,6 +775,9 @@
 
   ],
   "lessons_opportunity_standards": [
+
+  ],
+  "jit_pl_concepts_lessons": [
 
   ],
   "rubrics": [

@@ -21,7 +21,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2026-05-07 11:09:43 UTC",
+    "serialized_at": "2026-05-14 00:18:50 UTC",
     "hide_within_course": false,
     "published_state": "in_development",
     "instruction_type": null,
@@ -1327,7 +1327,7 @@
       "position": 14,
       "properties": {
         "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to complete Lesson 2, Level 1 to complete Levels 1 through 4.\n- **Level 1:** Predict and trace what the code will do when a button is clicked\n- **Level 2:** Use AI to generate code for one button interaction\n- **Level 3:** Write code yourself to add a second button interaction\n- **Level 4:** Build a full interactive app based on a chosen scenario\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** In Level 1, focus on helping students connect the code to the event handling model. Check that they can identify where the code selects an element, listens for an event, and responds. Ask questions like, “What event is this listening for?” and “What actually changes on the page when you click?” In Levels 2 and 3, support students in working with AI-generated code. Watch for common issues like nothing happening on click or the wrong element responding. Prompt students with, “Which element is this code targeting?” and “How can you tell if it’s the right one?” In Level 4, push students toward fully working interactions. Encourage them to test each button and verify that every interaction works as expected.\n",
-        "progression_name": "Predict & Trace: What Happens When You Click?",
+        "progression_name": "Adding Interactivity",
         "tips": [
           {
             "type": "teachingTip",
@@ -3414,7 +3414,7 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Predict & Trace: What Happens When You Click?"
+        "progression": "Adding Interactivity"
       },
       "bonus": false,
       "seeding_key": {
@@ -3436,7 +3436,7 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "progression": "Predict & Trace: What Happens When You Click?"
+        "progression": "Adding Interactivity"
       },
       "bonus": false,
       "seeding_key": {
@@ -3458,7 +3458,7 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "progression": "Predict & Trace: What Happens When You Click?"
+        "progression": "Adding Interactivity"
       },
       "bonus": false,
       "seeding_key": {
@@ -3480,7 +3480,29 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
-        "progression": "Predict & Trace: What Happens When You Click?"
+        "progression": "Adding Interactivity"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ai-and-algorithmic-decisions-lesson2-level4chatbot_2026"
+        ],
+        "lesson.key": "Lesson 2: Making a Button Respond",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "ai-and-algorithmic-decisions-2026",
+        "activity_section.key": "af985f57-83f1-4ff8-9750-1313b58d1e40"
+      },
+      "level_keys": [
+        "ai-and-algorithmic-decisions-lesson2-level4chatbot_2026"
+      ]
+    },
+    {
+      "chapter": 9,
+      "position": 5,
+      "activity_section_position": 5,
+      "assessment": false,
+      "properties": {
+        "progression": "Adding Interactivity"
       },
       "bonus": false,
       "seeding_key": {
@@ -3497,31 +3519,9 @@
       ]
     },
     {
-      "chapter": 9,
+      "chapter": 10,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
-        "progression": "Working with Variables"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "ai-and-algorithmic-decisions-lesson3-level1-revised-v2_2026"
-        ],
-        "lesson.key": "Lesson 3: Variables and Live Updates",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "ai-and-algorithmic-decisions-2026",
-        "activity_section.key": "b2c3960d-a997-446f-9012-ecd02f0314f4"
-      },
-      "level_keys": [
-        "ai-and-algorithmic-decisions-lesson3-level1-revised-v2_2026"
-      ]
-    },
-    {
-      "chapter": 10,
-      "position": 2,
-      "activity_section_position": 2,
       "assessment": false,
       "properties": {
         "progression": "Working with Variables"
@@ -3542,8 +3542,8 @@
     },
     {
       "chapter": 11,
-      "position": 3,
-      "activity_section_position": 3,
+      "position": 2,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
         "progression": "Working with Variables"
@@ -3564,8 +3564,8 @@
     },
     {
       "chapter": 12,
-      "position": 4,
-      "activity_section_position": 4,
+      "position": 3,
+      "activity_section_position": 3,
       "assessment": true,
       "properties": {
         "progression": "Working with Variables"
@@ -3631,28 +3631,6 @@
     {
       "chapter": 15,
       "position": 3,
-      "activity_section_position": 3,
-      "assessment": false,
-      "properties": {
-        "progression": "Predict & Trace"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "ai-and-algorithmic-decisions-lesson4-level3-revised_2026"
-        ],
-        "lesson.key": "Lesson 4: Writing Reusable Functions",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "ai-and-algorithmic-decisions-2026",
-        "activity_section.key": "7b9b1649-773a-48b1-b311-12bf3c66ad80"
-      },
-      "level_keys": [
-        "ai-and-algorithmic-decisions-lesson4-level3-revised_2026"
-      ]
-    },
-    {
-      "chapter": 16,
-      "position": 4,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -3673,7 +3651,7 @@
       ]
     },
     {
-      "chapter": 17,
+      "chapter": 16,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -3695,7 +3673,7 @@
       ]
     },
     {
-      "chapter": 18,
+      "chapter": 17,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -3717,7 +3695,7 @@
       ]
     },
     {
-      "chapter": 19,
+      "chapter": 18,
       "position": 3,
       "activity_section_position": 2,
       "assessment": true,
@@ -3739,7 +3717,7 @@
       ]
     },
     {
-      "chapter": 20,
+      "chapter": 19,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -3761,74 +3739,9 @@
       ]
     },
     {
-      "chapter": 21,
+      "chapter": 20,
       "position": 2,
-      "activity_section_position": 2,
-      "assessment": false,
-      "properties": {
-        "progression": "Exploring Functions"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "ai-and-algorithmic-decisions-lesson6-level2-revised-v4_2026"
-        ],
-        "lesson.key": "Lesson 6: Functions with Parameters",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "ai-and-algorithmic-decisions-2026",
-        "activity_section.key": "ea506632-3276-4e31-9179-9be8f4c7e161"
-      },
-      "level_keys": [
-        "ai-and-algorithmic-decisions-lesson6-level2-revised-v4_2026"
-      ]
-    },
-    {
-      "chapter": 22,
-      "position": 3,
-      "activity_section_position": 3,
-      "assessment": false,
-      "properties": {
-        "progression": "Exploring Functions"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "ai-and-algorithmic-decisions-lesson6-level3-revised-v4_2026"
-        ],
-        "lesson.key": "Lesson 6: Functions with Parameters",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "ai-and-algorithmic-decisions-2026",
-        "activity_section.key": "ea506632-3276-4e31-9179-9be8f4c7e161"
-      },
-      "level_keys": [
-        "ai-and-algorithmic-decisions-lesson6-level3-revised-v4_2026"
-      ]
-    },
-    {
-      "chapter": 23,
-      "position": 4,
       "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "ai-and-algorithmic-decisions-lesson6-level4-revised-v3_2026"
-        ],
-        "lesson.key": "Lesson 6: Functions with Parameters",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "ai-and-algorithmic-decisions-2026",
-        "activity_section.key": "079e10dc-d250-4b7c-8f6a-b3ac542f1674"
-      },
-      "level_keys": [
-        "ai-and-algorithmic-decisions-lesson6-level4-revised-v3_2026"
-      ]
-    },
-    {
-      "chapter": 24,
-      "position": 5,
-      "activity_section_position": 2,
       "assessment": false,
       "properties": {
       },
@@ -3847,9 +3760,9 @@
       ]
     },
     {
-      "chapter": 25,
-      "position": 6,
-      "activity_section_position": 3,
+      "chapter": 21,
+      "position": 3,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
       },
@@ -3868,7 +3781,7 @@
       ]
     },
     {
-      "chapter": 26,
+      "chapter": 22,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -3890,7 +3803,7 @@
       ]
     },
     {
-      "chapter": 27,
+      "chapter": 23,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -3912,7 +3825,7 @@
       ]
     },
     {
-      "chapter": 28,
+      "chapter": 24,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
@@ -3934,7 +3847,7 @@
       ]
     },
     {
-      "chapter": 29,
+      "chapter": 25,
       "position": 4,
       "activity_section_position": 3,
       "assessment": false,
@@ -3956,7 +3869,7 @@
       ]
     },
     {
-      "chapter": 30,
+      "chapter": 26,
       "position": 5,
       "activity_section_position": 4,
       "assessment": false,
@@ -3978,7 +3891,7 @@
       ]
     },
     {
-      "chapter": 31,
+      "chapter": 27,
       "position": 6,
       "activity_section_position": 5,
       "assessment": false,
@@ -4000,7 +3913,7 @@
       ]
     },
     {
-      "chapter": 32,
+      "chapter": 28,
       "position": 7,
       "activity_section_position": 6,
       "assessment": false,
@@ -4022,7 +3935,7 @@
       ]
     },
     {
-      "chapter": 33,
+      "chapter": 29,
       "position": 8,
       "activity_section_position": 7,
       "assessment": false,
@@ -4044,7 +3957,7 @@
       ]
     },
     {
-      "chapter": 34,
+      "chapter": 30,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -4066,7 +3979,7 @@
       ]
     },
     {
-      "chapter": 35,
+      "chapter": 31,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -4088,7 +4001,7 @@
       ]
     },
     {
-      "chapter": 36,
+      "chapter": 32,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -4110,7 +4023,7 @@
       ]
     },
     {
-      "chapter": 37,
+      "chapter": 33,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -4132,7 +4045,7 @@
       ]
     },
     {
-      "chapter": 38,
+      "chapter": 34,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -4154,7 +4067,7 @@
       ]
     },
     {
-      "chapter": 39,
+      "chapter": 35,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -4176,7 +4089,7 @@
       ]
     },
     {
-      "chapter": 40,
+      "chapter": 36,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -4198,7 +4111,7 @@
       ]
     },
     {
-      "chapter": 41,
+      "chapter": 37,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -4220,7 +4133,7 @@
       ]
     },
     {
-      "chapter": 42,
+      "chapter": 38,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -4242,7 +4155,7 @@
       ]
     },
     {
-      "chapter": 43,
+      "chapter": 39,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
@@ -4264,7 +4177,7 @@
       ]
     },
     {
-      "chapter": 44,
+      "chapter": 40,
       "position": 4,
       "activity_section_position": 3,
       "assessment": true,
@@ -4286,7 +4199,7 @@
       ]
     },
     {
-      "chapter": 45,
+      "chapter": 41,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -4308,7 +4221,7 @@
       ]
     },
     {
-      "chapter": 46,
+      "chapter": 42,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -4330,7 +4243,7 @@
       ]
     },
     {
-      "chapter": 47,
+      "chapter": 43,
       "position": 3,
       "activity_section_position": 3,
       "assessment": false,
@@ -4352,7 +4265,7 @@
       ]
     },
     {
-      "chapter": 48,
+      "chapter": 44,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -4374,7 +4287,7 @@
       ]
     },
     {
-      "chapter": 49,
+      "chapter": 45,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
@@ -4396,7 +4309,7 @@
       ]
     },
     {
-      "chapter": 50,
+      "chapter": 46,
       "position": 6,
       "activity_section_position": 1,
       "assessment": false,
@@ -4417,7 +4330,7 @@
       ]
     },
     {
-      "chapter": 51,
+      "chapter": 47,
       "position": 7,
       "activity_section_position": 1,
       "assessment": false,
@@ -4439,7 +4352,7 @@
       ]
     },
     {
-      "chapter": 52,
+      "chapter": 48,
       "position": 8,
       "activity_section_position": 2,
       "assessment": false,
@@ -4461,7 +4374,7 @@
       ]
     },
     {
-      "chapter": 53,
+      "chapter": 49,
       "position": 9,
       "activity_section_position": 1,
       "assessment": false,
@@ -4483,7 +4396,7 @@
       ]
     },
     {
-      "chapter": 54,
+      "chapter": 50,
       "position": 10,
       "activity_section_position": 1,
       "assessment": false,
@@ -4505,7 +4418,7 @@
       ]
     },
     {
-      "chapter": 55,
+      "chapter": 51,
       "position": 11,
       "activity_section_position": 1,
       "assessment": false,
@@ -4526,7 +4439,7 @@
       ]
     },
     {
-      "chapter": 56,
+      "chapter": 52,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -4635,9 +4548,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "ai-and-algorithmic-decisions-lesson2-level4_2026",
+        "level.key": "ai-and-algorithmic-decisions-lesson2-level4chatbot_2026",
         "script_level.level_keys": [
-          "ai-and-algorithmic-decisions-lesson2-level4_2026"
+          "ai-and-algorithmic-decisions-lesson2-level4chatbot_2026"
         ],
         "lesson.key": "Lesson 2: Making a Button Respond",
         "lesson_group.key": "lessonGroup-3",
@@ -4647,14 +4560,14 @@
     },
     {
       "seeding_key": {
-        "level.key": "ai-and-algorithmic-decisions-lesson3-level1-revised-v2_2026",
+        "level.key": "ai-and-algorithmic-decisions-lesson2-level4_2026",
         "script_level.level_keys": [
-          "ai-and-algorithmic-decisions-lesson3-level1-revised-v2_2026"
+          "ai-and-algorithmic-decisions-lesson2-level4_2026"
         ],
-        "lesson.key": "Lesson 3: Variables and Live Updates",
+        "lesson.key": "Lesson 2: Making a Button Respond",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "ai-and-algorithmic-decisions-2026",
-        "activity_section.key": "b2c3960d-a997-446f-9012-ecd02f0314f4"
+        "activity_section.key": "af985f57-83f1-4ff8-9750-1313b58d1e40"
       }
     },
     {
@@ -4710,18 +4623,6 @@
         "level.key": "ai-and-algorithmic-decisions-lesson4-level2-revised_2026",
         "script_level.level_keys": [
           "ai-and-algorithmic-decisions-lesson4-level2-revised_2026"
-        ],
-        "lesson.key": "Lesson 4: Writing Reusable Functions",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "ai-and-algorithmic-decisions-2026",
-        "activity_section.key": "7b9b1649-773a-48b1-b311-12bf3c66ad80"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "ai-and-algorithmic-decisions-lesson4-level3-revised_2026",
-        "script_level.level_keys": [
-          "ai-and-algorithmic-decisions-lesson4-level3-revised_2026"
         ],
         "lesson.key": "Lesson 4: Writing Reusable Functions",
         "lesson_group.key": "lessonGroup-3",
@@ -4787,42 +4688,6 @@
         "lesson_group.key": "lessonGroup-3",
         "script.name": "ai-and-algorithmic-decisions-2026",
         "activity_section.key": "ea506632-3276-4e31-9179-9be8f4c7e161"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "ai-and-algorithmic-decisions-lesson6-level2-revised-v4_2026",
-        "script_level.level_keys": [
-          "ai-and-algorithmic-decisions-lesson6-level2-revised-v4_2026"
-        ],
-        "lesson.key": "Lesson 6: Functions with Parameters",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "ai-and-algorithmic-decisions-2026",
-        "activity_section.key": "ea506632-3276-4e31-9179-9be8f4c7e161"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "ai-and-algorithmic-decisions-lesson6-level3-revised-v4_2026",
-        "script_level.level_keys": [
-          "ai-and-algorithmic-decisions-lesson6-level3-revised-v4_2026"
-        ],
-        "lesson.key": "Lesson 6: Functions with Parameters",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "ai-and-algorithmic-decisions-2026",
-        "activity_section.key": "ea506632-3276-4e31-9179-9be8f4c7e161"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "ai-and-algorithmic-decisions-lesson6-level4-revised-v3_2026",
-        "script_level.level_keys": [
-          "ai-and-algorithmic-decisions-lesson6-level4-revised-v3_2026"
-        ],
-        "lesson.key": "Lesson 6: Functions with Parameters",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "ai-and-algorithmic-decisions-2026",
-        "activity_section.key": "079e10dc-d250-4b7c-8f6a-b3ac542f1674"
       }
     },
     {

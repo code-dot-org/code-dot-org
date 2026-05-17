@@ -5,9 +5,9 @@ description 'description here'
 markdown <<MARKDOWN
 # PDF Pathways
 
-#### Navigating this course is different from other Code.org courses. The partnership with micro:bit allows us to experience different platforms. Although Code.org will still function as the homebase for the course, at times, you will be directed to the micro:bit classroom website to code the micro:bits. 
+Navigating this course is different from other Code.org courses. The partnership with micro:bit allows us to experience different platforms. Although Code.org will still function as the homebase for the course, at times, you will be directed to the micro:bit classroom website to code the micro:bits. 
 
-#### Expect the flow of the course to look something like this: 
+Expect the flow of the course to look something like this: 
 
 ## Pathway Overview
 
@@ -15,7 +15,7 @@ markdown <<MARKDOWN
 
 ##Lesson Plans
 
-#### The CSF Maker Course micro:bit lesson plans are provided on a convenient, downloadable PDF booklet. 
+The CSF Maker Course micro:bit lesson plans are provided on a convenient, downloadable PDF booklet. 
 
 
 <a href="https://code.org/maker/assets/CSF-Booklet-Course-C-Nov2023.pdf" target="blank" rel="noopener noreferrer" style="font-size: 18px;">Course C: micro:bit booklet</a>

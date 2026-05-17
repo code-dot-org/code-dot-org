@@ -7,13 +7,13 @@ markdown <<MARKDOWN
 
 <img src="https://images.code.org/190860a0ca4dc068707fca0169af0296-0e6a8e59-b5d0-49bf-ab87-08ad9d5ba4d8.png" alt="trucks on roads driving between computers" width="250px" style="border: 2px solid black; border-radius: 8px; float:right; margin: 0 0 40px 40px">
 
-#### When data is transmitted across the internet it is divided into **packets**. A packet travels from one place to another much like you might travel in a car - if there’s too much traffic or construction on one route you may take another one.
+When data is transmitted across the internet it is divided into **packets**. A packet travels from one place to another much like you might travel in a car - if there’s too much traffic or construction on one route you may take another one.
 
-#### And just like a large delivery might be broken down into different packages, sent via different trucks, and reassembled upon arrival, digital information is broken down into different packets and might all take different routes to get to the final location.
+And just like a large delivery might be broken down into different packages, sent via different trucks, and reassembled upon arrival, digital information is broken down into different packets and might all take different routes to get to the final location.
 
-#### In the internet **routers** act as traffic directors to keep the packets moving.
+In the internet **routers** act as traffic directors to keep the packets moving.
 
-#### **TCP** manages the sending of data as packages, sort of like a guaranteed mail service. It checks to make sure all packets arrive at the final destination. TCP also asks for any missing packets.
+**TCP** manages the sending of data as packages, sort of like a guaranteed mail service. It checks to make sure all packets arrive at the final destination. TCP also asks for any missing packets.
 
 <br>
 

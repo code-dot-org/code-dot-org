@@ -6,18 +6,18 @@ markdown <<MARKDOWN
 # Data, Data, Data
 
 
-#### Data is all around us. It’s in the number of steps you take each day, the songs you stream, and even the toppings people choose on their pizza.
+Data is all around us. It’s in the number of steps you take each day, the songs you stream, and even the toppings people choose on their pizza.
 
-#### At its core, data is any organized form of information—numbers, words, images, or categories—that helps us describe the world in a structured way. We often think of data as something technical, but it's simply a way to capture details about people, places, and things.
+At its core, data is any organized form of information—numbers, words, images, or categories—that helps us describe the world in a structured way. We often think of data as something technical, but it's simply a way to capture details about people, places, and things.
 
 ---
 <img src="https://images.code.org/b5e2a67a75681390f709e468c050cbd3-image-1724268380001.png" alt="data symbols icon" width="250px" style="border-radius:10px; float:right; margin: 0 20px 0px 40px;">
 
 ## Data Science
 
-#### **Data science** is what happens when we take that information and try to make sense of it. It's the process of asking questions, searching for patterns, and drawing conclusions based on evidence.
+**Data science** is what happens when we take that information and try to make sense of it. It's the process of asking questions, searching for patterns, and drawing conclusions based on evidence.
 
-#### Whether you're deciding how many pizzas to order for a party or figuring out which movie genre is most popular in your class, you're doing a form of data science. It’s not just about analyzing numbers—it’s about using information to solve problems and make informed choices.
+Whether you're deciding how many pizzas to order for a party or figuring out which movie genre is most popular in your class, you're doing a form of data science. It’s not just about analyzing numbers—it’s about using information to solve problems and make informed choices.
 
 
 
@@ -25,7 +25,7 @@ markdown <<MARKDOWN
 
 ## Data and Your Students 
 
-#### When students begin learning about data science, they start by recognizing data in everyday situations. From there, they learn how to read and interpret real datasets, ask questions, and make decisions based on what they find. These early experiences help them build a foundation for thinking critically with data.
+When students begin learning about data science, they start by recognizing data in everyday situations. From there, they learn how to read and interpret real datasets, ask questions, and make decisions based on what they find. These early experiences help them build a foundation for thinking critically with data.
 
 
 
@@ -39,7 +39,7 @@ markdown <<MARKDOWN
 
 ## Up Next 
 
-#### Let's explore an activity from **Lesson 2** where students analyze a spreadsheet using the **Three Reads** routine to explore a dataset on pizza choices, then use it to answer questions for planning a school event.
+Let's explore an activity from **Lesson 2** where students analyze a spreadsheet using the **Three Reads** routine to explore a dataset on pizza choices, then use it to answer questions for planning a school event.
 
 <br>
 <p style="font-size: 18px; font-weight: bold; background-color: #F5F7F8; padding: 10px; border-left: 5px solid #8148B2; display: inline-block;">

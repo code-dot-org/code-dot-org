@@ -12,7 +12,7 @@
     "parent_level_id": 28731,
     "name_suffix": "_1",
     "encrypted": "false",
-    "long_instructions": "#### A computer system is a set of parts that work together to process information and complete tasks. Simply put, it includes:\r\n\r\n>- #### **Hardware** - the physical parts\r\n>- #### **Software** - the programs that run on it\r\n>- #### **Operating System** - manages the hardware and software\r\n\r\n#### This video gives a brief overview of computer systems. While you watch this video, consider how the different parts of a computer system — **hardware, software, and the operating system** — work together."
+    "long_instructions": "A computer system is a set of parts that work together to process information and complete tasks. Simply put, it includes:\r\n\r\n>- #### **Hardware** - the physical parts\r\n>- #### **Software** - the programs that run on it\r\n>- #### **Operating System** - manages the hardware and software\r\n\r\nThis video gives a brief overview of computer systems. While you watch this video, consider how the different parts of a computer system — **hardware, software, and the operating system** — work together."
   },
   "published": true,
   "notes": "",
