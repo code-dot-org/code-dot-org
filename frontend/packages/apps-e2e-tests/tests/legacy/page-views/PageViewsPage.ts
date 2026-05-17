@@ -24,6 +24,8 @@ export class PageViewsPage {
     await this.page.goto(this.relativeUrl(url), {
       waitUntil: 'domcontentloaded',
     });
+    await this.expectAnyVisible(selectors);
+    await this.expectLabChromeIfNeeded(selectors);
     await this.dismissOptionalOverlays();
     await this.expectAnyVisible(selectors);
   }
@@ -82,17 +84,38 @@ export class PageViewsPage {
    * Dismiss user-visible overlays that obscure the page after initial load.
    */
   private async dismissOptionalOverlays(): Promise<void> {
-    const okButton = this.page.getByRole('button', {name: 'OK'}).last();
-    if (await okButton.isVisible({timeout: 1000}).catch(() => false)) {
-      await okButton.click();
-    }
+    for (let attempt = 0; attempt < 3; attempt++) {
+      const overlay = this.page.locator('#overlay');
+      if (await overlay.isVisible({timeout: 1000}).catch(() => false)) {
+        const modalBackdrop = this.page.locator(
+          '.modal-backdrop.in, .modal-backdrop.show',
+        );
+        if (await modalBackdrop.isVisible({timeout: 500}).catch(() => false)) {
+          break;
+        }
 
-    const overlay = this.page.locator('#overlay');
-    if (await overlay.isVisible({timeout: 1000}).catch(() => false)) {
-      await overlay.evaluate(element => (element as HTMLElement).click());
+        await overlay.click({position: {x: 5, y: 5}});
+        await expect(overlay).toBeHidden({timeout: 5000});
+        continue;
+      }
+
+      break;
     }
 
     await this.dismissLanguageSelector();
+  }
+
+  /**
+   * Match Cucumber's shared "lab page fully load" readiness signal.
+   *
+   * @param selectors - readiness selectors requested by the scenario
+   */
+  private async expectLabChromeIfNeeded(selectors: string[]): Promise<void> {
+    if (!selectors.includes('#runButton')) {
+      return;
+    }
+
+    await expect(this.page.locator('.header_user').first()).toBeVisible();
   }
 
   /**

@@ -13,6 +13,8 @@ import type {
 import type {Page} from '@playwright/test';
 import {execSync} from 'node:child_process';
 
+import {FONT_FAMILY_NAMES, loadFonts} from '@code-dot-org/fonts';
+
 /**
  * Match timeout that the legacy Ruby Eyes steps overrode from the Applitools
  * default of 2s. Keep parity with `MATCH_TIMEOUT = 5` in eyes_steps.rb.
@@ -32,6 +34,12 @@ const GLOBAL_IGNORE_REGIONS = [
   '.small-footer-base',
   '.project_updated_at',
 ];
+
+const VISUAL_READY_TIMEOUT_MS = 30_000;
+
+type EyesBackedPage = Page & {
+  __eyes?: Eyes;
+};
 
 export interface EyesCheckOptions {
   /**
@@ -120,6 +128,22 @@ function detectGitBranch(): string | undefined {
   }
 }
 
+async function withTimeout<T>(
+  promise: Promise<T>,
+  timeoutMs: number,
+  message: string,
+): Promise<T> {
+  let timeout: ReturnType<typeof setTimeout> | undefined;
+  return Promise.race([
+    promise.finally(() => {
+      if (timeout) clearTimeout(timeout);
+    }),
+    new Promise<never>((_, reject) => {
+      timeout = setTimeout(() => reject(new Error(message)), timeoutMs);
+    }),
+  ]);
+}
+
 /**
  * No-op fixture used when `APPLITOOLS_API_KEY` is not set. Lets the
  * functional flow of `@eyes` tests run to completion in local dev without
@@ -139,8 +163,8 @@ const NOOP_EYES: EyesFixture = {
  */
 export interface EyesHandle extends EyesFixture {
   /**
-   * Close any open Applitools session. Throws on visual diff (fail-fast).
-   * Always safe to call — no-op if no session was opened.
+   * Close hook retained for the shared fixture. Live Eyes sessions are closed
+   * by the Applitools Playwright fixture so it can write HTML report data.
    */
   close(): Promise<void>;
 }
@@ -170,6 +194,7 @@ export function createEyesHandle(
 
   const runner = new ClassicRunner();
   const eyes = new Eyes(runner, buildConfiguration(apiKey));
+  (page as EyesBackedPage).__eyes = eyes;
   let opened = false;
   let explicitTestName: string | undefined;
 
@@ -199,6 +224,85 @@ export function createEyesHandle(
     await openSession(explicitTestName ?? fallbackTestName);
   }
 
+  /**
+   * Wait for the same user-visible rendering readiness as the Cucumber Eyes
+   * step, then require images and key layout boxes to stop moving before the
+   * screenshot. Font loading is visible as icon/text reflow; Agent Browser
+   * confirmed lab pages expose the Run button while Font Awesome can still be
+   * settling.
+   */
+  async function waitForVisualReadiness(): Promise<void> {
+    await withTimeout(
+      page.evaluate(loadFonts, FONT_FAMILY_NAMES),
+      VISUAL_READY_TIMEOUT_MS,
+      'Timed out waiting for fonts',
+    );
+
+    await page.waitForFunction(
+      () => !document.fonts || document.fonts.status === 'loaded',
+      undefined,
+      {timeout: VISUAL_READY_TIMEOUT_MS},
+    );
+
+    await page.waitForFunction(
+      () =>
+        [...document.images]
+          .filter(image => {
+            const rect = image.getBoundingClientRect();
+            return rect.width > 0 && rect.height > 0;
+          })
+          .every(image => image.complete && image.naturalWidth > 0),
+      undefined,
+      {timeout: VISUAL_READY_TIMEOUT_MS},
+    );
+
+    await page.waitForFunction(
+      async () => {
+        const selectors = [
+          'body',
+          'header',
+          'main',
+          'footer',
+          '#level-body',
+          '#visualization',
+          '#instructions',
+          '#codeWorkspace',
+          '#codeWorkspaceWrapper',
+          '#designWorkspace',
+          '#teacher-dashboard',
+        ];
+        const signature = () =>
+          selectors
+            .flatMap(selector =>
+              [...document.querySelectorAll(selector)].map(element => ({
+                element,
+                selector,
+              })),
+            )
+            .map(({element, selector}) => {
+              const rect = element.getBoundingClientRect();
+              return [
+                selector,
+                Math.round(rect.x),
+                Math.round(rect.y),
+                Math.round(rect.width),
+                Math.round(rect.height),
+                Math.round(element.scrollHeight),
+              ].join(':');
+            })
+            .join('|');
+
+        const before = signature();
+        await new Promise<void>(resolve =>
+          requestAnimationFrame(() => requestAnimationFrame(() => resolve())),
+        );
+        return before === signature();
+      },
+      undefined,
+      {timeout: VISUAL_READY_TIMEOUT_MS, polling: 250},
+    );
+  }
+
   async function applyIgnoreRegions(
     target: CheckSettingsAutomation,
     options?: EyesCheckOptions,
@@ -206,6 +310,7 @@ export function createEyesHandle(
     let targetWithIgnores = target;
     const selectors = [
       ...GLOBAL_IGNORE_REGIONS,
+      ...((await hasDynamicMazeVisualization()) ? ['#visualization'] : []),
       ...(options?.ignoreRegions ?? []),
     ];
     for (const selector of selectors) {
@@ -216,6 +321,32 @@ export function createEyesHandle(
     return targetWithIgnores;
   }
 
+  /**
+   * Maze-family levels can choose a different visible grid for the same level
+   * load while keeping the user-facing instructions and workspace stable.
+   * Ignore only that lab visualization; App Lab and Artist use the same
+   * `#visualization` id for deterministic content, so do not ignore it there.
+   */
+  async function hasDynamicMazeVisualization(): Promise<boolean> {
+    return page
+      .evaluate(() => {
+        const win = window as Window & {
+          Maze?: {
+            controller?: {
+              level?: {shapeShift?: boolean};
+              map?: {hasMultiplePossibleGrids?: () => boolean};
+            };
+          };
+        };
+        const maze = win.Maze;
+        return !!(
+          maze?.controller?.level?.shapeShift ||
+          maze?.controller?.map?.hasMultiplePossibleGrids?.()
+        );
+      })
+      .catch(() => false);
+  }
+
   return {
     async open(cucumberTestName) {
       explicitTestName = cucumberTestName;
@@ -223,6 +354,7 @@ export function createEyesHandle(
     },
     async check(name, options) {
       await ensureOpen();
+      await waitForVisualReadiness();
       await eyes.check(
         name,
         await applyIgnoreRegions(Target.window().fully(), options),
@@ -230,6 +362,7 @@ export function createEyesHandle(
     },
     async checkViewport(name, options) {
       await ensureOpen();
+      await waitForVisualReadiness();
       await eyes.check(
         name,
         await applyIgnoreRegions(Target.window(), options),
@@ -237,15 +370,11 @@ export function createEyesHandle(
     },
     async checkRegion(selector, name) {
       await ensureOpen();
+      await waitForVisualReadiness();
       await eyes.check(name, Target.region(selector).fully());
     },
     async close() {
-      if (!opened) return;
-      try {
-        await eyes.close(true);
-      } finally {
-        await eyes.abortIfNotClosed();
-      }
+      return undefined;
     },
   };
 }

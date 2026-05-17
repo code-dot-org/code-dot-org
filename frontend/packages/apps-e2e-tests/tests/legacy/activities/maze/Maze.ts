@@ -16,8 +16,12 @@ export class Maze extends LegacyBlocklyLab {
     });
   }
 
-  async runUntilInlineFeedback(): Promise<void> {
-    await this.setExecutionSpeedToFast();
+  async runUntilInlineFeedback({
+    speedUp = true,
+  }: {speedUp?: boolean} = {}): Promise<void> {
+    if (speedUp) {
+      await this.setExecutionSpeedToFast();
+    }
     await this.run();
     await this.waitForVisibleFeedback(
       this.page.locator('.uitest-topInstructions-inline-feedback'),

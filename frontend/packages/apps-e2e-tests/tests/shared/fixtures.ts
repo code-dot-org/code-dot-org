@@ -1,4 +1,13 @@
-import {test as base, type Page} from '@playwright/test';
+import {test as base} from '@applitools/eyes-playwright/fixture';
+import {
+  type Page,
+  type PlaywrightTestArgs,
+  type PlaywrightTestOptions,
+  type PlaywrightWorkerArgs,
+  type PlaywrightWorkerOptions,
+  type TestInfo,
+  type TestType,
+} from '@playwright/test';
 
 import {
   createAuthorizedTeacher,
@@ -37,7 +46,32 @@ interface EyesFixtures {
   eyes: EyesFixture;
 }
 
-export const test = base.extend<StudentOptions & AuthFixtures & EyesFixtures>({
+type Attach = TestInfo['attach'];
+
+const baseTest = base as unknown as TestType<
+  PlaywrightTestArgs & PlaywrightTestOptions,
+  PlaywrightWorkerArgs & PlaywrightWorkerOptions
+>;
+
+function hideApplitoolsIdentifierAttachment(testInfo: TestInfo): void {
+  const originalAttach = testInfo.attach.bind(testInfo);
+  (testInfo as TestInfo & {attach: Attach}).attach = async (name, options) => {
+    if (name === 'applitoolsIdentifier' && options?.body) {
+      await originalAttach(name, {
+        ...options,
+        body: Buffer.from(options.body.toString()),
+        contentType: 'application/octet-stream',
+      });
+      return;
+    }
+
+    await originalAttach(name, options);
+  };
+}
+
+export const test = baseTest.extend<
+  StudentOptions & AuthFixtures & EyesFixtures
+>({
   studentAge: [16, {option: true}],
 
   studentPage: async ({page, studentAge}, use) => {
@@ -60,7 +94,12 @@ export const test = base.extend<StudentOptions & AuthFixtures & EyesFixtures>({
     await use(page);
   },
 
-  eyes: async ({page}, use, testInfo) => {
+  eyes: async (
+    {page}: {page: Page},
+    use: (fixture: EyesFixture) => Promise<void>,
+    testInfo: TestInfo,
+  ) => {
+    hideApplitoolsIdentifierAttachment(testInfo);
     const handle = createEyesHandle(page, testInfo.title);
     try {
       await use(handle);

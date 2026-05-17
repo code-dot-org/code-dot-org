@@ -11,6 +11,8 @@ import {Multi} from '../multi/Multi';
 import {Pixelation} from '../pixelation/Pixelation';
 import {PKC} from '../pkc/PKC';
 
+const MAZE_DYNAMIC_GRID_IGNORE_REGIONS = ['#visualization'];
+
 /**
  * Legacy Applitools smoke ports.
  *
@@ -136,18 +138,22 @@ test.describe('Legacy Eyes smoke ports', () => {
     await eyes.open('maze');
     const maze = new Maze(page);
     await maze.gotoLevel(1);
-    await maze.runUntilInlineFeedback();
+    await maze.runUntilInlineFeedback({speedUp: false});
     await expect(
       page.locator('.uitest-topInstructions-inline-feedback'),
     ).toBeVisible();
-    await eyes.check('maze feedback with blocks');
+    await eyes.check('maze feedback with blocks', {
+      ignoreRegions: MAZE_DYNAMIC_GRID_IGNORE_REGIONS,
+    });
 
     await page.goto(
       '/courses/allthethingscourse/units/1/lessons/2/levels/1/lang/ar-sa?noautoplay=true',
     );
     await maze.waitForLabPage();
     await expect(page.locator('#runButton')).toBeVisible();
-    await eyes.check('maze RTL');
+    await eyes.check('maze RTL', {
+      ignoreRegions: MAZE_DYNAMIC_GRID_IGNORE_REGIONS,
+    });
   });
 });
 

@@ -1,5 +1,8 @@
 import {defineConfig, devices} from '@playwright/test';
 
+const isCI = !!process.env.CI;
+const htmlReportOptions = {outputFolder: 'playwright-report', open: 'never'};
+
 /**
  * Playwright configuration for the apps-e2e-tests suite.
  *
@@ -12,15 +15,17 @@ import {defineConfig, devices} from '@playwright/test';
 export default defineConfig({
   testDir: './tests',
   fullyParallel: true,
-  forbidOnly: !!process.env.CI,
+  forbidOnly: isCI,
   retries: 0,
   // Tests tagged @no_ci require infra not available in automated runs
   // (e.g. Javabuilder WebSocket).  Skip them in CI; run manually against
   // test-studio.
-  grepInvert: process.env.CI ? /@no_ci/ : undefined,
+  grepInvert: isCI ? /@no_ci/ : undefined,
   workers: undefined,
   reporter: [
-    ['html', {outputFolder: 'playwright-report'}],
+    isCI
+      ? ['html', htmlReportOptions]
+      : ['@applitools/eyes-playwright/reporter', htmlReportOptions],
     ['junit', {outputFile: 'test-results/junit.xml'}],
   ],
 
@@ -29,10 +34,11 @@ export default defineConfig({
 
   use: {
     baseURL: 'https://test-studio.code.org',
+    eyesConfig: {failTestsOnDiff: 'afterEach'},
     trace: 'on-first-retry',
     screenshot: 'only-on-failure',
     video: 'retain-on-failure',
-  },
+  } as never,
 
   projects: [
     {
