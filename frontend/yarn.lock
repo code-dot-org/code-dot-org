@@ -1597,6 +1597,7 @@ __metadata:
   resolution: "@code-dot-org/apps-e2e-tests@workspace:packages/apps-e2e-tests"
   dependencies:
     "@applitools/eyes-playwright": "npm:^1.47.2"
+    "@code-dot-org/fonts": "workspace:*"
     "@code-dot-org/lint-config": "workspace:*"
     "@playwright/mcp": "npm:^0.0.73"
     "@playwright/test": "npm:1.55.1"
