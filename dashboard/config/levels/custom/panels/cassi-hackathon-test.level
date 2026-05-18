@@ -25,9 +25,10 @@
           },
           {
             "imageUrl": "https://images.code.org/168ed16a2c1689c3b0e14423deb74dd5-soloCup.png",
-            "x": 65,
-            "y": 47,
-            "width": 21
+            "x": 64,
+            "y": 46,
+            "width": 21,
+            "targetKey": "cassi-hackathon-test-bb77fa33-9177-444e-93c6-8049af188355"
           }
         ]
       },
@@ -39,7 +40,7 @@
         "images": [
           {
             "imageUrl": "https://images.code.org/835246f7e238d08b692d60ebf3f67150-soloCupReveal.png",
-            "x": 26,
+            "x": 27,
             "y": 34,
             "width": 30
           },
@@ -54,6 +55,13 @@
             "x": 31,
             "y": 60,
             "width": 8
+          },
+          {
+            "imageUrl": "https://images.code.org/23d01d8e6a8b9a6768053c6ba2619844-backButton.png",
+            "x": 6,
+            "y": 9,
+            "width": 3,
+            "targetKey": "ai-generated-design-lesson5-vocab-panel-brandkit-test-2025-d32755b0-a47a-4875-862a-5558f4694b63"
           }
         ]
       },
@@ -65,8 +73,8 @@
         "images": [
           {
             "imageUrl": "https://images.code.org/d815479b98ea69ed90523cacdc0fda08-soloCupReveal.png",
-            "x": 63,
-            "y": 39,
+            "x": 65,
+            "y": 38,
             "width": 30
           },
           {
@@ -74,6 +82,13 @@
             "x": 33,
             "y": 42,
             "width": 23
+          },
+          {
+            "imageUrl": "https://images.code.org/fdf3c34e0c763baff74901b1473423a2-backButton.png",
+            "x": 6,
+            "y": 9,
+            "width": 6,
+            "targetKey": "ai-generated-design-lesson5-vocab-panel-brandkit-test-2025-d32755b0-a47a-4875-862a-5558f4694b63"
           }
         ]
       }
@@ -81,6 +96,6 @@
     "name_suffix": "_2026",
     "use_links": "true"
   },
-  "audit_log": "[{\"changed_at\":\"2026-05-13T13:27:32.160-07:00\",\"changed\":[\"cloned from \\\"ai-generated-design-lesson10-level2_2026\\\"\"],\"cloned_from\":\"ai-generated-design-lesson10-level2_2026\"},{\"changed_at\":\"2026-05-13 13:40:00 -0700\",\"changed\":[\"panels\"],\"changed_by_id\":10,\"changed_by_email\":\"cassi.brenci-local-levelbuilder@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2026-05-13T13:27:32.160-07:00\",\"changed\":[\"cloned from \\\"ai-generated-design-lesson10-level2_2026\\\"\"],\"cloned_from\":\"ai-generated-design-lesson10-level2_2026\"},{\"changed_at\":\"2026-05-13 13:40:00 -0700\",\"changed\":[\"panels\"],\"changed_by_id\":10,\"changed_by_email\":\"cassi.brenci-local-levelbuilder@code.org\"},{\"changed_at\":\"2026-05-13 13:46:27 -0700\",\"changed\":[\"panels\"],\"changed_by_id\":10,\"changed_by_email\":\"cassi.brenci-local-levelbuilder@code.org\"},{\"changed_at\":\"2026-05-13 13:59:33 -0700\",\"changed\":[\"panels\"],\"changed_by_id\":10,\"changed_by_email\":\"cassi.brenci-local-levelbuilder@code.org\"}]"
 }]]></config>
 </Panels>

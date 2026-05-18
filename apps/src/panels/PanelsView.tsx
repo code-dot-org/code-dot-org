@@ -445,7 +445,7 @@ const PanelImageOverlay: React.FunctionComponent<PanelImageOverlayProps> = ({
     return (
       <button
         type="button"
-        className={classNames(styles.panelImageLink, styles.imageCurrent)}
+        className={styles.panelImageLink}
         style={positionStyle}
         onClick={() => image.targetKey && onClick(image.targetKey)}
         aria-label={image.altText || commonI18n.panel()}

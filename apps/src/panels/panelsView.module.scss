@@ -90,17 +90,24 @@ $text-horizontal-padding: 2.6cqw;
       position: absolute;
       transform: translate(-50%, -50%);
       max-width: 100%;
+      opacity: 1;
+      animation: none;
       cursor: pointer;
-      transition:
-        transform 0.1s ease,
-        filter 0.1s ease;
+      line-height: 0;
+      transition: transform 0.1s ease;
 
       @include focus-styles;
 
       &:hover,
       &:focus-visible {
-        filter: brightness(0.95);
         transform: translate(-50%, -50%) scale(1.02);
+      }
+
+      &:hover .panelImageLinkImage,
+      &:focus-visible .panelImageLinkImage {
+        filter:
+          drop-shadow(0 0 8px rgba($brand_primary_default, 0.9))
+          drop-shadow(0 0 20px rgba($brand_primary_default, 0.55));
       }
     }
 
@@ -108,6 +115,11 @@ $text-horizontal-padding: 2.6cqw;
       display: block;
       width: 100%;
       height: auto;
+      opacity: 1;
+      filter:
+        drop-shadow(0 0 6px rgba($brand_primary_default, 0.75))
+        drop-shadow(0 0 14px rgba($brand_primary_default, 0.35));
+      transition: filter 0.1s ease;
       pointer-events: none;
       user-select: none;
     }
