@@ -2,18 +2,31 @@ import ConsoleManager from '@codebridge/Console/ConsoleManager';
 
 import Neighborhood from '@cdo/apps/miniApps/neighborhood/Neighborhood';
 
+// Minimal contract a Theater singleton must satisfy so the runner can
+// hand it Javabuilder THEATER frames without depending on the full
+// implementation (which lives in javalab2 — keeping codebridge lab-agnostic).
+export interface TheaterController {
+  handleSignal(data: unknown): void;
+  reset(): void;
+  onRun(): void;
+  onStop(): void;
+  onClose(): void;
+}
+
 // Registry for Codebridge singletons that need to be accessed by
 // multiple components/helper classes.
 export default class CodebridgeRegistry {
   private consoleManager: ConsoleManager | null;
   private neighborhood: Neighborhood | null;
   private neighborhoodThumbnailScale: number | undefined;
+  private theater: TheaterController | null;
 
   private static _instance: CodebridgeRegistry;
   constructor() {
     this.consoleManager = null;
     this.neighborhood = null;
     this.neighborhoodThumbnailScale = undefined;
+    this.theater = null;
   }
 
   public static getInstance(): CodebridgeRegistry {
@@ -49,5 +62,13 @@ export default class CodebridgeRegistry {
 
   public getNeighborhoodThumbnailScale() {
     return this.neighborhoodThumbnailScale;
+  }
+
+  public setTheater(theater: TheaterController | null) {
+    this.theater = theater;
+  }
+
+  public getTheater() {
+    return this.theater;
   }
 }

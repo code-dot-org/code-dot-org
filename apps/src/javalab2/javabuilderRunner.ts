@@ -94,12 +94,19 @@ export async function handleRunClick(
   }
 
   const isNeighborhood = csaViewMode === CsaViewMode.NEIGHBORHOOD;
+  const isTheater = csaViewMode === CsaViewMode.THEATER;
   const neighborhood = isNeighborhood
     ? CodebridgeRegistry.getInstance().getNeighborhood()
+    : null;
+  const theater = isTheater
+    ? CodebridgeRegistry.getInstance().getTheater()
     : null;
   if (isNeighborhood) {
     neighborhood?.reset();
     neighborhood?.onRun();
+  }
+  if (isTheater) {
+    theater?.onRun();
   }
 
   cm?.writeConsoleMessage(
@@ -201,14 +208,28 @@ export async function handleRunClick(
     getStore().dispatch(setIsRunning(false));
     neighborhood?.onClose();
   }
+  if (isTheater) {
+    theater?.onClose();
+  }
 }
 
 export function stopJavaCode(): void {
+  // Tell mini-apps to tear down too — closing the WebSocket alone leaves the
+  // photo prompter / audio element in whatever state they were in.
+  CodebridgeRegistry.getInstance().getNeighborhood()?.onStop();
+  CodebridgeRegistry.getInstance().getTheater()?.onStop();
   activeClient?.close();
 }
 
 export function sendStdin(input: string): void {
   activeClient?.sendInput(input, InputMessageType.SYSTEM_IN);
+}
+
+// Send a theater input frame back to Javabuilder (e.g. photo-prompter
+// UPLOAD_SUCCESS / UPLOAD_ERROR). The legacy javalab sent these via the same
+// WebSocket as stdin, distinguishing by `messageType`.
+export function sendTheaterInput(message: string): void {
+  activeClient?.sendInput(message, InputMessageType.THEATER);
 }
 
 function handleJavabuilderMessage(
@@ -217,8 +238,12 @@ function handleJavabuilderMessage(
   csaViewMode: string | undefined
 ): void {
   const isNeighborhood = csaViewMode === CsaViewMode.NEIGHBORHOOD;
+  const isTheater = csaViewMode === CsaViewMode.THEATER;
   const neighborhood = isNeighborhood
     ? CodebridgeRegistry.getInstance().getNeighborhood()
+    : null;
+  const theater = isTheater
+    ? CodebridgeRegistry.getInstance().getTheater()
     : null;
 
   switch (data.type) {
@@ -260,6 +285,11 @@ function handleJavabuilderMessage(
         );
       }
       return;
+    case WebSocketMessageType.THEATER:
+      if (isTheater && theater) {
+        theater.handleSignal(data);
+      }
+      return;
     case WebSocketMessageType.TEST_RESULT:
       onTestResult(data, writeRaw, csaViewMode, levelId);
       return;
@@ -274,7 +304,7 @@ function handleJavabuilderMessage(
         writeRaw(`[debug] ${data.value}`);
       }
       return;
-    // THEATER and AUTHORIZER handled in later phases.
+    // AUTHORIZER handled in later phases.
     default:
       return;
   }

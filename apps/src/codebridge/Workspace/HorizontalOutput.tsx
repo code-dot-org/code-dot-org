@@ -90,9 +90,8 @@ const HorizontalOutput: React.FunctionComponent<HorizontalOutputProps> = ({
         ?.getTerminalFitAddon()
         ?.fit();
 
-      // If this is a neighborhood level, also resize the visualization.
       if (
-        miniAppName === MiniApps.Neighborhood &&
+        miniAppName !== undefined &&
         (desiredHeight !== undefined || miniAppWidth)
       ) {
         const outputWidth =
@@ -111,11 +110,14 @@ const HorizontalOutput: React.FunctionComponent<HorizontalOutputProps> = ({
         }
         setAdjustedMiniAppWidth(newMiniAppWidth);
 
-        const newHeight = desiredHeight || DEFAULT_MINI_APP_SIZE;
-        const newWidth = newMiniAppWidth;
-
-        const scale = scaleMiniApp(newHeight, newWidth);
-        CodebridgeRegistry.getInstance().setNeighborhoodThumbnailScale(scale);
+        // Neighborhood is the only mini-app that needs an explicit SVG scale
+        // hint for the maze; theater (and any future preview-style mini-app)
+        // self-scales via CSS.
+        if (miniAppName === MiniApps.Neighborhood) {
+          const newHeight = desiredHeight || DEFAULT_MINI_APP_SIZE;
+          const scale = scaleMiniApp(newHeight, newMiniAppWidth);
+          CodebridgeRegistry.getInstance().setNeighborhoodThumbnailScale(scale);
+        }
 
         setWaitingForResize(false);
       }

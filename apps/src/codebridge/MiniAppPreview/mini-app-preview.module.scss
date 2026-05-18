@@ -12,7 +12,12 @@
 }
 
 .miniAppContainer {
-  height: 100%;
+  // Fill the remaining height of the PanelContainer flex-column (the header
+  // already occupies the top 2.5rem). `height: 100%` resolved against the
+  // panel's full height, which overflowed by exactly the header amount and
+  // clipped the bottom of any contained mini-app.
+  flex: 1;
+  min-height: 0;
   width: 100%;
   box-sizing: border-box;
 }

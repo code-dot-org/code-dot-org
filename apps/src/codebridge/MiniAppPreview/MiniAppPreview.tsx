@@ -15,6 +15,7 @@ import PanelContainer from '@cdo/apps/lab2/views/components/PanelContainer';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 import NeighborhoodPreview from './NeighborhoodPreview';
+import TheaterPreview from './TheaterPreview';
 
 import moduleStyles from './mini-app-preview.module.scss';
 
@@ -62,6 +63,9 @@ const MiniAppPreview: React.FunctionComponent<MiniAppPreviewProps> = ({
     if (miniApp === MiniApps.Neighborhood) {
       return <NeighborhoodPreview handleScaling={handleScaling} />;
     }
+    if (miniApp === MiniApps.Theater) {
+      return <TheaterPreview />;
+    }
     return null;
   }, [handleScaling, miniApp]);
 
@@ -69,6 +73,8 @@ const MiniAppPreview: React.FunctionComponent<MiniAppPreviewProps> = ({
     setIsResetButtonDisabled(true);
     if (miniApp === MiniApps.Neighborhood) {
       CodebridgeRegistry.getInstance().getNeighborhood()?.reset();
+    } else if (miniApp === MiniApps.Theater) {
+      CodebridgeRegistry.getInstance().getTheater()?.reset();
     }
   };
 

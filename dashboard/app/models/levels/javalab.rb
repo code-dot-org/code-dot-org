@@ -281,12 +281,14 @@ class Javalab < Level
 
     # Neighborhood mode pulls maze + start direction from template fallback.
     # `miniApp` is the field codebridge's MiniAppPreview/useInitialSources read
-    # to activate the neighborhood visualization; we alias from csa_view_mode
-    # so existing javalab levels do not need their stored shape changed.
+    # to activate the visualization; we alias from csa_view_mode so existing
+    # javalab levels do not need their stored shape changed.
     if csa_view_mode == 'neighborhood'
       properties_camelized['serializedMaze'] = get_serialized_maze
       properties_camelized['startDirection'] = start_direction || project_template_level&.try(:start_direction)
       properties_camelized['miniApp'] = 'neighborhood'
+    elsif csa_view_mode == 'theater'
+      properties_camelized['miniApp'] = 'theater'
     end
 
     # Send validation filenames (no code) so the file tree can render entries

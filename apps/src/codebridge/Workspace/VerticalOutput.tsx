@@ -84,9 +84,8 @@ const VerticalOutput: React.FunctionComponent<VerticalOutputProps> = ({
         ?.getTerminalFitAddon()
         ?.fit();
 
-      // If this is a neighborhood level, also resize the visualization.
       if (
-        miniAppName === MiniApps.Neighborhood &&
+        miniAppName !== undefined &&
         (desiredWidth !== undefined || miniAppHeight)
       ) {
         const outputHeight = resizeContainerRef.current?.clientHeight;
@@ -104,11 +103,12 @@ const VerticalOutput: React.FunctionComponent<VerticalOutputProps> = ({
         }
         setAdjustedMiniAppHeight(newMiniAppHeight);
 
-        const newHeight = newMiniAppHeight;
-        const newWidth = desiredWidth;
-
-        const scale = scaleMiniApp(newHeight, newWidth);
-        CodebridgeRegistry.getInstance().setNeighborhoodThumbnailScale(scale);
+        // Only neighborhood needs an explicit maze-scale hint; theater self-
+        // scales via CSS.
+        if (miniAppName === MiniApps.Neighborhood) {
+          const scale = scaleMiniApp(newMiniAppHeight, desiredWidth);
+          CodebridgeRegistry.getInstance().setNeighborhoodThumbnailScale(scale);
+        }
 
         setWaitingForResize(false);
       }
