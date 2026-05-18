@@ -9,7 +9,7 @@ import {connect, useDispatch} from 'react-redux';
 import ActionBlocksWrapper from '@cdo/apps/code-studio/pd/professional_learning/ActionBlocksWrapper';
 import SetUpSections from '@cdo/apps/code-studio/pd/professional_learning/SetUpSections';
 import DCDO from '@cdo/apps/dcdo';
-import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
+import {pegasus, studio} from '@cdo/apps/lib/util/urlHelpers';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import GlobalEditionWrapper from '@cdo/apps/templates/GlobalEditionWrapper';
@@ -363,7 +363,7 @@ function LandingPage({
           description={i18n.plLandingGettingStartedDescription()}
           buttons={[
             {
-              url: pegasus('/educate/professional-learning'),
+              url: studio('/courses/getting-started-2025'),
               text: i18n.plLandingGettingStartedButton(),
             },
           ]}
