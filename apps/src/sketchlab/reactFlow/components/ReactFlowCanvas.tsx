@@ -458,6 +458,7 @@ export default function ReactFlowCanvas({
     setNodes,
     setEdges,
     screenToFlowPosition,
+    pushSnapshot,
   });
 
   const onConnect: OnConnect = useCallback(
