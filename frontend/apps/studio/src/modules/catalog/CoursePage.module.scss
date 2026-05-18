@@ -1,0 +1,40 @@
+.container {
+  padding-block: 2rem;
+  flex: 1;
+}
+
+.hero {
+  width: 100%;
+  height: 280px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 1.5rem;
+}
+
+.title {
+  margin-bottom: 0.5rem;
+}
+
+.level {
+  margin-bottom: 1rem;
+}
+
+.summary {
+  margin-bottom: 2rem;
+}
+
+.callout {
+  background: var(--background-neutral-secondary);
+  border-radius: 8px;
+  padding: 1.5rem;
+  text-align: center;
+}
+
+.calloutTitle {
+  margin-bottom: 0.5rem;
+}
+
+.calloutBody {
+  margin-bottom: 1rem;
+  color: var(--text-neutral-secondary);
+}

@@ -11,10 +11,20 @@ import {
   generateColorPalette,
 } from './helpers';
 
-// Both model.json and group1-shard1of1.bin are emitted to assets/models/ by
-// the emitModelAssets Vite plugin (vite.config.ts). At runtime import.meta.url
-// resolves relative to this bundle's location so TFJS can fetch both files.
-const modelUrl = new URL('./assets/models/model.json', import.meta.url).href;
+// Both model files are emitted to `assets/models/` by the
+// emitModelAssets plugin (see vite.config.ts), and each is referenced
+// here via `new URL(relative, import.meta.url)` so the consuming
+// bundler (studio, any host embedding the lab) re-emits both through
+// its own asset pipeline. The .bin reference here — not just from
+// inside model.json — is what makes the bundler track the weight
+// shard; without it the consumer would only emit the JSON and the
+// shard would 404 at runtime.
+const modelJsonUrl = new URL('./assets/models/model.json', import.meta.url)
+  .href;
+const weightShardUrl = new URL(
+  './assets/models/group1-shard1of1.bin',
+  import.meta.url,
+).href;
 
 /** Index of loaded fish part images, keyed by part type then variation index. */
 const fishPartImages: Record<number, Record<number, HTMLImageElement>> = {};
@@ -96,7 +106,23 @@ export const loadAllFishPartImages = (): Promise<void> => {
 
 /** Initialize the mobilenet model used for logit generation. */
 export const initMobilenet = (): Promise<void> => {
-  return mobilenetModule.load({version: 1, modelUrl: modelUrl}).then(res => {
+  // TFJS resolves the weight shard as a sibling of model.json (from
+  // `paths[]` inside the JSON). The bundler hashes both files
+  // independently, so the sibling URL produces a 404. Override the
+  // fetch function and route requests for `group1-shard1of1.bin` to
+  // the bundler-emitted hashed URL. `fetchFunc` is the TFJS 1.x
+  // mechanism on `LoadOptions`; later versions renamed it to
+  // `customFetch` / added `weightUrlConverter`.
+  const modelIO = tf.io.http(modelJsonUrl, {
+    fetchFunc: (input: RequestInfo, init?: RequestInit) => {
+      const url = typeof input === 'string' ? input : input.url;
+      if (url.endsWith('group1-shard1of1.bin')) {
+        return fetch(weightShardUrl, init);
+      }
+      return fetch(input, init);
+    },
+  });
+  return mobilenetModule.load({version: 1, modelUrl: modelIO}).then(res => {
     mobilenet = res;
   });
 };

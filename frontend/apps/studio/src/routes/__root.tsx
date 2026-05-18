@@ -5,7 +5,7 @@ import '@code-dot-org/component-library-styles/primitiveColors.css';
 import '@code-dot-org/component-library-styles/colors.css';
 
 import {Box, ThemeProvider} from '@mui/material';
-import {createRootRoute, Outlet} from '@tanstack/react-router';
+import {createRootRoute, Outlet, useRouterState} from '@tanstack/react-router';
 import {TanStackRouterDevtools} from '@tanstack/react-router-devtools';
 
 import Header from '@code-dot-org/component-library/header';
@@ -27,9 +27,35 @@ const SIGNED_OUT_MENU_ITEMS = [
 
 /** Root layout: flex column so the main content area fills the remaining viewport height. */
 function RootLayout() {
+  // Hide the footer inside a lab/project (the bottom chrome competes with
+  // limited mobile viewport space for interactive activities). Match the
+  // route by pathname rather than route-id so any future
+  // `/projects/...` subtree is covered uniformly.
+  const inLab = useRouterState({
+    select: state => state.location.pathname.includes('/projects/'),
+  });
+
   return (
     <ThemeProvider theme={CdoTheme}>
-      <Box sx={{display: 'flex', flexDirection: 'column', minHeight: '100vh'}}>
+      <Box
+        sx={{
+          display: 'flex',
+          flexDirection: 'column',
+          // Use `height` (not `minHeight`) so the flex chain has a definite
+          // block-size all the way down. Routes whose layout queries the
+          // available height — e.g. the oceans lab using `100cqb` container
+          // queries — return 0 unless every ancestor has a definite height.
+          // `100dvh` (dynamic viewport height) handles mobile browser chrome
+          // resizing the visible area.
+          height: '100dvh',
+          // Respect iOS notch / Android cutout. viewport-fit=cover in index.html
+          // enables env() values; without these the header overlaps the status bar.
+          paddingTop: 'env(safe-area-inset-top)',
+          paddingLeft: 'env(safe-area-inset-left)',
+          paddingRight: 'env(safe-area-inset-right)',
+          paddingBottom: 'env(safe-area-inset-bottom)',
+        }}
+      >
         <Bootstrap locale="en-US" />
         <Header
           logoImageUrl={CdoLogo}
@@ -42,7 +68,7 @@ function RootLayout() {
         >
           <Outlet />
         </Box>
-        <StudioFooter />
+        {!inLab && <StudioFooter />}
         <TanStackRouterDevtools />
       </Box>
     </ThemeProvider>

@@ -1,0 +1,27 @@
+.container {
+  padding-block: 2rem;
+  flex: 1;
+}
+
+.title {
+  margin-bottom: 0.5rem;
+}
+
+.subtitle {
+  margin-bottom: 2rem;
+  color: var(--text-neutral-secondary);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+.brokenCard {
+  border: 1px dashed var(--background-error-primary);
+  border-radius: 8px;
+  padding: 1rem;
+  color: var(--text-neutral-primary);
+  background: var(--background-error-extra-light);
+}

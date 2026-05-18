@@ -1,0 +1,26 @@
+{
+  "name": "@code-dot-org/mobile",
+  "version": "0.0.0",
+  "private": true,
+  "description": "Capacitor.js shell that wraps @code-dot-org/studio for iOS and Android. Near-empty by design — web logic lives in studio.",
+  "scripts": {
+    "sync": "yarn workspace @code-dot-org/studio build:mobile && cap sync",
+    "ios": "cap run ios",
+    "android": "cap run android",
+    "open:ios": "cap open ios",
+    "open:android": "cap open android",
+    "build": "echo 'Nothing to build — sync copies studio dist into the native shells.'"
+  },
+  "dependencies": {
+    "@capacitor/android": "^7.0.0",
+    "@capacitor/app": "^7.0.0",
+    "@capacitor/core": "^7.0.0",
+    "@capacitor/ios": "^7.0.0",
+    "@capacitor/keyboard": "^7.0.0",
+    "@capacitor/preferences": "^7.0.0"
+  },
+  "devDependencies": {
+    "@capacitor/assets": "^3.0.5",
+    "@capacitor/cli": "^7.0.0"
+  }
+}

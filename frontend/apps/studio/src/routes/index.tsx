@@ -1,9 +1,7 @@
 import {createFileRoute} from '@tanstack/react-router';
 
-export const Route = createFileRoute('/')({
-  component: RouteComponent,
-});
+import Catalog from '@/modules/catalog/Catalog';
 
-function RouteComponent() {
-  return <div>Hello "/"!</div>;
-}
+export const Route = createFileRoute('/')({
+  component: Catalog,
+});

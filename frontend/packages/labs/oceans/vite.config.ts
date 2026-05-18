@@ -5,10 +5,16 @@ import {defineConfig, type Plugin} from 'vite';
 import dts from 'vite-plugin-dts';
 import {externalizeDeps} from 'vite-plugin-externalize-deps';
 
-// In library build mode Vite cannot determine the deployment base URL, so
-// ?url imports get inlined as data URIs. TFJS cannot resolve the .bin weight
-// file relative to a data URI, so we emit both model files explicitly via a
-// Rollup plugin and reference them at runtime via import.meta.url.
+// Vite library mode forcibly inlines `new URL(import.meta.url)` and `?url`
+// asset references as data URIs and ignores `build.assetsInlineLimit`
+// (documented). To keep model.json and the TFJS weight shard as real
+// emitted files — so downstream consumers (studio etc.) can re-emit them
+// through their own asset pipelines — emit both explicitly here.
+//
+// (Tried @laynezh/vite-plugin-lib-assets as the canonical workaround;
+// it rewrites all asset references through `?url` internally, which
+// trips `@rollup/plugin-commonjs` during the CJS pass of our dual-format
+// build. An explicit emit composes cleanly with both ES and CJS outputs.)
 function emitModelAssets(): Plugin {
   return {
     name: 'emit-model-assets',
@@ -33,9 +39,9 @@ function emitModelAssets(): Plugin {
 }
 
 // In dev mode OceanObject.ts resolves model files via import.meta.url as
-// src/oceans/assets/models/{file}, but the source files live one level up at
-// src/oceans/{file}. Redirect those requests to the actual source location so
-// TFJS can fetch the model without a build step.
+// src/oceans/assets/models/{file}, but the source files live one level up
+// at src/oceans/{file}. Redirect those requests to the actual source
+// location so TFJS can fetch the model without a build step.
 function devModelAssets(): Plugin {
   return {
     name: 'dev-model-assets',

@@ -21,6 +21,23 @@
 
   /* Match the curriculum-path body background. */
   background-color: rgb(2 0 28);
+
+  /*
+   * Make the frame's cqi/cqb queries reference THIS container's actual
+   * size rather than falling back to the viewport. Without this, on
+   * landscape phones 100cqb evaluates to the full viewport height, the
+   * frame computes its 16:9 width from that, and overflows the shell —
+   * because the shell only owns the area below the header.
+   */
+  container-type: size;
+}
+
+/* Narrow viewports (phones in portrait): drop the shell padding so the
+ * 16:9 frame can claim the full inline-size of the container. */
+@media (max-width: 480px) {
+  .oceans-lab-shell {
+    padding: 0;
+  }
 }
 
 .oceans-lab-frame {
@@ -49,6 +66,15 @@
    */
   flex-shrink: 0;
   font-size: calc(var(--oceans-lab-width) * var(--oceans-lab-font-scale));
+}
+
+/* Below 320 px the lab would otherwise overflow horizontally. Drop the
+ * floor so the frame tracks the actual viewport — better to have a small
+ * but complete UI than horizontal scroll on a phone. */
+@media (max-width: 320px) {
+  .oceans-lab-frame {
+    --oceans-lab-min-width: 0;
+  }
 }
 
 /*

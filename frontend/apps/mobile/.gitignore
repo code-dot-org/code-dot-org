@@ -1,0 +1,22 @@
+# Capacitor / iOS
+ios/App/Pods/
+ios/App/build/
+ios/App/Podfile.lock
+ios/DerivedData/
+ios/.xcode.env.local
+
+# Capacitor / Android
+android/.gradle/
+android/app/build/
+android/build/
+android/local.properties
+android/captures/
+android/.idea/
+android/app/release/
+
+# Node
+node_modules/
+.cache/
+
+# OS
+.DS_Store
