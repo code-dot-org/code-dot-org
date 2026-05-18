@@ -1,4 +1,3 @@
-import type {LevelProperties} from '@code-dot-org/core/api';
 import {tiles, MazeController} from '@code-dot-org/maze';
 
 import {
@@ -14,6 +13,13 @@ import type {
   NeighborhoodSignalType,
   ConsoleSignal,
   NeighborhoodSignal,
+  NeighborhoodLevelProperties,
+  NeighborhoodConfig,
+  SkinType,
+  PlayAudio,
+  PlayAudioOnFailure,
+  LoadAudio,
+  GetTestResults,
 } from './types';
 
 const Direction = tiles.Direction;
@@ -24,13 +30,6 @@ const ANIMATED_STEPS: (ConsoleSignalType | NeighborhoodSignalType)[] = [
   NeighborhoodSignalTypes.MOVE,
 ];
 const SIGNAL_CHECK_TIME = 200;
-
-// We are relying on old maze skins here, which are not typed.
-type SkinType = Record<string, unknown>;
-
-interface NeighborhoodData {
-  serializedMaze: number[];
-}
 
 export default class Neighborhood {
   private controller: MazeController | null;
@@ -63,19 +62,13 @@ export default class Neighborhood {
   }
 
   afterInject(
-    level: LevelProperties<NeighborhoodData>,
+    level: NeighborhoodLevelProperties,
     skin: SkinType,
-    config: {skinId: string; level: LevelProperties; skin: SkinType},
-    playAudio: (name: string, options: Record<string, unknown>) => void,
-    playAudioOnFailure: () => void,
-    loadAudio: (filenames: string[], name: string[]) => void,
-    getTestResults: (
-      levelComplete: boolean,
-      options: {
-        executionError: {error: Error; lineNumber: number};
-        allowTopBlocks: boolean;
-      },
-    ) => void,
+    config: NeighborhoodConfig,
+    playAudio: PlayAudio,
+    playAudioOnFailure: PlayAudioOnFailure,
+    loadAudio: LoadAudio,
+    getTestResults: GetTestResults,
   ) {
     if (!level.serializedMaze) {
       return;

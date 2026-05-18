@@ -1,3 +1,4 @@
+import type {LevelProperties} from '@code-dot-org/core/api';
 import type {MiniApp} from '@code-dot-org/mini-app-base';
 import {
   NEIGHBORHOOD_NAME,
@@ -50,7 +51,12 @@ const NeighborhoodAdapter = ({miniApp, children}: NeighborhoodAdapterProps) => {
   const inputs = useMemo<NeighborhoodInputs>(
     () => ({
       miniApp: miniApp as NeighborhoodMiniApp,
-      levelProperties,
+      // apps still uses its legacy `LevelProperties` (apps/src/lab2/types.ts)
+      // while the package consumes the canonical type from
+      // @code-dot-org/core/api. The two shapes describe the same backend
+      // response but have divergent `appName` enums; the cast bridges
+      // them until apps migrates onto the core/api types.
+      levelProperties: levelProperties as unknown as LevelProperties,
       skin,
       serializedMaze,
     }),

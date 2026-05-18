@@ -127,8 +127,35 @@ describe('NeighborhoodMiniApp', () => {
 
   it('forwards afterInject through to the inner Neighborhood', () => {
     const app = new NeighborhoodMiniApp(stubDeps());
-    app.afterInject('a', 'b', 'c');
-    expect(inner.afterInject).toHaveBeenCalledWith('a', 'b', 'c');
+    const level = {id: 7} as Parameters<typeof app.afterInject>[0];
+    const skin = {} as Parameters<typeof app.afterInject>[1];
+    const config = {
+      skinId: 'neighborhood',
+      level,
+      skin,
+    } as Parameters<typeof app.afterInject>[2];
+    const playAudio = vi.fn();
+    const playAudioOnFailure = vi.fn();
+    const loadAudio = vi.fn();
+    const getTestResults = vi.fn();
+    app.afterInject(
+      level,
+      skin,
+      config,
+      playAudio,
+      playAudioOnFailure,
+      loadAudio,
+      getTestResults,
+    );
+    expect(inner.afterInject).toHaveBeenCalledWith(
+      level,
+      skin,
+      config,
+      playAudio,
+      playAudioOnFailure,
+      loadAudio,
+      getTestResults,
+    );
   });
 
   it('captureThumbnail resolves to null when the SVG is not mounted', async () => {

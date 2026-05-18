@@ -1,6 +1,9 @@
 import {createContext} from 'react';
 
+import type {LevelProperties} from '@code-dot-org/core/api';
+
 import type {NeighborhoodMiniApp} from './NeighborhoodMiniApp';
+import type {SkinType} from './types';
 
 /**
  * Inputs codebridge supplies to the package's `NeighborhoodPreview` at
@@ -17,18 +20,18 @@ export interface NeighborhoodInputs {
   miniApp: NeighborhoodMiniApp | null;
 
   /**
-   * Codebridge's `levelProperties` for the current level. Typed as
-   * `unknown` here — the package doesn't introspect this object, it
-   * forwards it into `afterInject` where the inner Neighborhood (and
-   * the MazeController it constructs) consume it.
+   * Level properties for the current level. The preview reads `.id`
+   * for the boot key and forwards the rest into `afterInject`, where
+   * the inner Neighborhood and the MazeController it constructs are
+   * the real consumers.
    */
-  levelProperties: unknown | null;
+  levelProperties: LevelProperties | null;
 
   /**
    * Loaded maze skin assets. Resolved by `apps/src/maze/skins`, opaque
    * to the package.
    */
-  skin: Record<string, unknown> | null;
+  skin: SkinType | null;
 
   /**
    * The level's serialized maze contents (JSON string). The preview

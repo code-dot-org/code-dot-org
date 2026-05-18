@@ -12,7 +12,17 @@ import Neighborhood from './Neighborhood';
 import NeighborhoodPreview from './NeighborhoodPreview';
 import {parseNeighborhoodException} from './parseNeighborhoodException';
 import {parseNeighborhoodSignal} from './parseNeighborhoodSignal';
-import type {ConsoleSignal, NeighborhoodSignal} from './types';
+import type {
+  ConsoleSignal,
+  GetTestResults,
+  LoadAudio,
+  NeighborhoodConfig,
+  NeighborhoodLevelProperties,
+  NeighborhoodSignal,
+  PlayAudio,
+  PlayAudioOnFailure,
+  SkinType,
+} from './types';
 
 /**
  * Neighborhood implementation of the `MiniApp` contract. Owns a
@@ -74,14 +84,29 @@ export class NeighborhoodMiniApp
    * Boot the MazeController against the rendered SVG and feed in the
    * level + skin + serialized maze. Called by the package's
    * `NeighborhoodPreview` after mount, once codebridge has supplied the
-   * inputs through `NeighborhoodInputsContext`. Signature stays
-   * permissive — the inner `Neighborhood.afterInject` validates the
-   * shapes at runtime.
+   * inputs through `NeighborhoodInputsContext`. Mirrors the inner
+   * `Neighborhood.afterInject` signature — Python lab passes no-ops for
+   * the audio + test-result callbacks; Java lab (legacy, not on this
+   * path) supplied real handlers.
    */
-  afterInject(...args: unknown[]): void {
-    // The inner method has a strict typed signature; the wrapper stays
-    // permissive at the codebridge boundary, so we cast through here.
-    (this.neighborhood.afterInject as (...a: unknown[]) => void)(...args);
+  afterInject(
+    level: NeighborhoodLevelProperties,
+    skin: SkinType,
+    config: NeighborhoodConfig,
+    playAudio: PlayAudio,
+    playAudioOnFailure: PlayAudioOnFailure,
+    loadAudio: LoadAudio,
+    getTestResults: GetTestResults,
+  ): void {
+    this.neighborhood.afterInject(
+      level,
+      skin,
+      config,
+      playAudio,
+      playAudioOnFailure,
+      loadAudio,
+      getTestResults,
+    );
   }
 
   /**

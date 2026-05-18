@@ -33,8 +33,7 @@ const NeighborhoodPreview = () => {
     const {miniApp, levelProperties, skin, serializedMaze} = inputs;
     if (!miniApp || !levelProperties || !skin || !serializedMaze) return;
 
-    const levelId = (levelProperties as {id?: unknown}).id;
-    const bootKey = `${String(levelId)}|${serializedMaze}`;
+    const bootKey = `${levelProperties.id}|${serializedMaze}`;
     if (
       lastBootedRef.current?.miniApp === miniApp &&
       lastBootedRef.current.key === bootKey
@@ -42,7 +41,7 @@ const NeighborhoodPreview = () => {
       return;
     }
 
-    let mazeContents: unknown;
+    let mazeContents: number[];
     try {
       mazeContents = JSON.parse(serializedMaze);
     } catch (error) {
@@ -56,7 +55,7 @@ const NeighborhoodPreview = () => {
     }
 
     const parsedLevelProperties = {
-      ...(levelProperties as object),
+      ...levelProperties,
       serializedMaze: mazeContents,
     };
 
