@@ -289,7 +289,9 @@ export function useKeyboardNavigation({
   const handleUndo = useCallback(
     (keyContext: KeyContext): boolean => {
       const {event} = keyContext;
-      if (event.key !== 'z' || !(event.ctrlKey || event.metaKey)) return false;
+      // Exclude Shift so Cmd+Shift+Z routes to redo, not undo.
+      if (event.shiftKey || !(event.ctrlKey || event.metaKey)) return false;
+      if (event.key !== 'z' && event.key !== 'Z') return false;
       undo();
       event.preventDefault();
       event.stopPropagation();
@@ -298,14 +300,17 @@ export function useKeyboardNavigation({
     [undo]
   );
 
-  // Redo: Ctrl/Cmd+Y, or Ctrl/Cmd+Shift+Z (event.key is 'Z' when shift is held).
+  // Redo: Ctrl/Cmd+Y, or Ctrl/Cmd+Shift+Z.
+  // Accept both 'z' and 'Z' with Shift to handle platforms where event.key
+  // doesn't capitalize on Shift, and to survive Shift-before-Z release order.
   const handleRedo = useCallback(
     (keyContext: KeyContext): boolean => {
       const {event} = keyContext;
       if (!(event.ctrlKey || event.metaKey)) return false;
-      if (event.key !== 'y' && event.key !== 'Y' && event.key !== 'Z') {
-        return false;
-      }
+      const isRedoZ =
+        event.shiftKey && (event.key === 'z' || event.key === 'Z');
+      const isRedoY = event.key === 'y' || event.key === 'Y';
+      if (!isRedoZ && !isRedoY) return false;
       redo();
       event.preventDefault();
       event.stopPropagation();
