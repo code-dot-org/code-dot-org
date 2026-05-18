@@ -188,19 +188,24 @@ export default function ReactFlowCanvas({
     setNodeOrEdgeFocused,
   } = useTabOrder(nodes, edges);
 
+  // Push snapshot when a drag begins — at this point nodesRef still holds the
+  // pre-drag positions, so undo correctly restores the node to where it was
+  // before the move.
+  const handleNodeDragStart = useCallback(() => {
+    pushSnapshot();
+  }, [pushSnapshot]);
+
   // Intercept React Flow's change callbacks to push undo snapshots before
-  // commits (drag-stop, resize-stop, delete). Adds without going through
-  // onNodesChange (e.g. setNodes calls) are handled at their call sites.
+  // resize-stop and delete. Drag is handled by handleNodeDragStart instead.
+  // Adds that bypass onNodesChange (direct setNodes calls) are handled at
+  // their call sites.
   const handleNodesChange: OnNodesChange<SketchLabNode> = useCallback(
     changes => {
-      const commitsDrag = changes.some(
-        change => change.type === 'position' && change.dragging === false
-      );
       const commitsResize = changes.some(
         change => change.type === 'dimensions' && change.resizing === false
       );
       const hasDelete = changes.some(change => change.type === 'remove');
-      if (commitsDrag || commitsResize || hasDelete) pushSnapshot();
+      if (commitsResize || hasDelete) pushSnapshot();
       onNodesChange(changes);
     },
     [onNodesChange, pushSnapshot]
@@ -662,6 +667,7 @@ export default function ReactFlowCanvas({
               onReconnectStart={handleReconnectStart}
               onReconnect={handleReconnect}
               onReconnectEnd={handleReconnectEnd}
+              onNodeDragStart={handleNodeDragStart}
               onNodeDragStop={handleNodeDragStop}
               isValidConnection={isValidConnection}
               minZoom={MIN_ZOOM}
