@@ -67,6 +67,12 @@ h1, h2, h3 {
   line-height: 40px;
 }
 
+label, input, button, select, textarea {
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 20px;
+}
+
 p,pre,span {
   @include selectable;
 }
