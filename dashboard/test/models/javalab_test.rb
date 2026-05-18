@@ -55,10 +55,11 @@ class JavalabTest < ActiveSupport::TestCase
 
   test 'convert_legacy_start_sources handles a single starter file' do
     result = Javalab.convert_legacy_start_sources({'Main.java' => 'class Main {}'}, nil)
-    assert_equal({'root' => {'id' => 'root', 'name' => 'src', 'parentId' => '0'}}, result['folders'])
+    assert_equal({}, result['folders'])
     assert_equal 1, result['files'].size
     file = result['files'].values.first
     assert_equal 'Main.java', file['name']
+    assert_equal '0', file['folderId']
     assert_equal 'class Main {}', file['contents']
     assert_equal 'starter', file['type']
     assert_equal [file['id']], result['openFiles']
@@ -90,8 +91,8 @@ class JavalabTest < ActiveSupport::TestCase
 
   test 'convert_legacy_start_sources is idempotent on MultiFileSource shape' do
     new_shape = {
-      'folders' => {'root' => {'id' => 'root', 'name' => 'src', 'parentId' => '0'}},
-      'files' => {'f0' => {'id' => 'f0', 'name' => 'Main.java', 'contents' => '', 'folderId' => 'root', 'type' => 'starter'}},
+      'folders' => {},
+      'files' => {'f0' => {'id' => 'f0', 'name' => 'Main.java', 'contents' => '', 'folderId' => '0', 'type' => 'starter'}},
       'openFiles' => ['f0'],
     }
     assert_equal new_shape, Javalab.convert_legacy_start_sources(new_shape, nil)

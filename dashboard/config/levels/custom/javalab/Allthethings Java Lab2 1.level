@@ -1,6 +1,5 @@
 <Javalab>
   <config><![CDATA[{
-  "published": true,
   "game_id": 68,
   "created_at": "2026-05-18T20:40:38.000Z",
   "level_num": "custom",
@@ -354,12 +353,26 @@
     ],
     "ai_tutor_available": "true",
     "submittable": "false",
-    "encrypted_examples": [
-
-    ],
-    "uses_lab2": "true"
+    "uses_lab2": "true",
+    "start_sources": {
+      "folders": {
+      },
+      "files": {
+        "2": {
+          "id": "2",
+          "name": "MyClass.java",
+          "contents": "import org.code.neighborhood.*;\nimport java.util.Scanner;\n\npublic class MyClass {\n  public static void main(String[] args) {\n    Scanner scanner = new Scanner(System.in);\n    Painter p = new Painter();\n    System.out.print(\"How much paint should I take? \");\n    int paintCount = scanner.nextInt();\n    scanner.nextLine();\n    for(int i = 0; i < paintCount; i++) {\n      p.takePaint();\n    }\n    p.move();\n    System.out.print(\"What color should I paint? \");\n    String color = scanner.nextLine();\n    p.paint(color);\n    p.move();\n    p.move();\n    System.out.println(\"All done!\");\n  }\n}\n\n",
+          "folderId": "0",
+          "active": true
+        }
+      },
+      "openFiles": [
+        "2"
+      ]
+    }
   },
+  "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2026-05-18T13:40:38.095-07:00\",\"changed\":[\"cloned from \\\"Allthethings Java Lab 1\\\"\"],\"cloned_from\":\"Allthethings Java Lab 1\"},{\"changed_at\":\"2026-05-18 13:41:15 -0700\",\"changed\":[\"long_instructions\",\"serialized_maze\"],\"changed_by_id\":2,\"changed_by_email\":\"molly+levelbuilder@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2026-05-18T13:40:38.095-07:00\",\"changed\":[\"cloned from \\\"Allthethings Java Lab 1\\\"\"],\"cloned_from\":\"Allthethings Java Lab 1\"},{\"changed_at\":\"2026-05-18 13:41:15 -0700\",\"changed\":[\"long_instructions\",\"serialized_maze\"],\"changed_by_id\":2,\"changed_by_email\":\"molly+levelbuilder@code.org\"},{\"changed_at\":\"2026-05-18 14:07:52 -0700\",\"changed\":[],\"changed_by_id\":2,\"changed_by_email\":\"molly+levelbuilder@code.org\"}]"
 }]]></config>
 </Javalab>

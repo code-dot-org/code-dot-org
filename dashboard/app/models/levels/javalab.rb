@@ -221,9 +221,14 @@ class Javalab < Level
   # legacy flat validation hash into the codebridge MultiFileSource shape.
   # Idempotent: if input is already a MultiFileSource (has a 'files' key), it
   # is returned unchanged. Empty/nil input returns a single empty file.
+  #
+  # Files sit directly at the workspace root (folderId '0', empty folders map),
+  # matching pythonlab's DEFAULT_PROJECT — codebridge treats '0' as the implicit
+  # root, so listing it in `folders` would render an extra wrapper folder in
+  # the file tree.
   def self.convert_legacy_start_sources(flat_sources, validation_hash)
     return flat_sources if flat_sources.is_a?(Hash) && flat_sources.key?('files')
-    folder_id = 'root'
+    folder_id = '0'
     files = {}
     open_files = []
     (flat_sources || {}).each_with_index do |(name, contents), i|
@@ -244,7 +249,7 @@ class Javalab < Level
       }
     end
     {
-      'folders' => {folder_id => {'id' => folder_id, 'name' => 'src', 'parentId' => '0'}},
+      'folders' => {},
       'files' => files,
       'openFiles' => open_files,
     }
