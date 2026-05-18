@@ -74,7 +74,7 @@ def main(options)
   open_log_files
   configure_for_eyes if eyes?
   report_tests_starting
-  run_status_page_url = generate_status_page(start_time) if options.with_status_page
+  s3_status_page_url = generate_status_page(start_time) if options.with_status_page
 
   run_results = Parallel.map(browser_feature_generator, parallel_config(options.parallel_limit)) do |browser, feature|
     run_feature browser, feature, options
@@ -98,7 +98,7 @@ def main(options)
     return 1001
   end
 
-  report_tests_finished start_time, run_results, run_status_page_url
+  report_tests_finished start_time, run_results, s3_status_page_url
   run_results.count {|feature_succeeded, _, _| !feature_succeeded}
 ensure
   close_log_files
@@ -441,7 +441,7 @@ def report_tests_starting
   end
 end
 
-def report_tests_finished(start_time, run_results, run_status_page_url = nil)
+def report_tests_finished(start_time, run_results, s3_status_page_url = nil)
   suite_duration = Time.now - start_time
 
   # How many flaky test reruns occurred across all tests (ignoring the initial attempt).
@@ -476,7 +476,7 @@ def report_tests_finished(start_time, run_results, run_status_page_url = nil)
   test_report += "\n#{failures.count}x failed features:\n" + failures.map {|failure| "• #{failure}\n"}.join if failures.any?
   test_report += "\n"
   test_report += "Applitools Eyes Results:\n#{applitools_batch_url}\n\n" if applitools_batch_url
-  test_report += status_page_links(run_status_page_url)
+  test_report += status_page_links(s3_status_page_url)
   test_report += "#{pass_fail_summary(suite_success_count, failures.count, run_results.count, suite_duration, total_flaky_successful_reruns)}\n"
 
   ChatClient.log test_report, color: 'purple'
@@ -492,13 +492,13 @@ end
 #   - non-CI with a live server: server URL first, S3 URL second
 #     as a fallback for when the server is unreachable.
 #   - CI (drone): only the S3 URL.
-def status_page_links(run_status_page_url)
+def status_page_links(s3_status_page_url)
   if server_status_page_url && !CI::Utils.running_on_ci?
     out = "#{test_type_label} Test Status Page:\n#{server_status_page_url}\n\n"
-    out += "Fallback status page (if server is unavailable):\n#{run_status_page_url}\n\n" if run_status_page_url
+    out += "Fallback status page (if server is unavailable):\n#{s3_status_page_url}\n\n" if s3_status_page_url
     out
-  elsif run_status_page_url
-    "#{test_type_label} Test Status Page:\n#{run_status_page_url}\n\n"
+  elsif s3_status_page_url
+    "#{test_type_label} Test Status Page:\n#{s3_status_page_url}\n\n"
   else
     ''
   end
@@ -590,10 +590,10 @@ def generate_status_page(suite_start_time)
       }
     )
   )
-  run_status_page_url = upload_status_page_to_s3(status_page_path)
-  links = status_page_links(run_status_page_url)
+  s3_status_page_url = upload_status_page_to_s3(status_page_path)
+  links = status_page_links(s3_status_page_url)
   ChatClient.log links unless links.empty?
-  return run_status_page_url
+  return s3_status_page_url
 end
 
 def test_run_identifier(browser, feature)
