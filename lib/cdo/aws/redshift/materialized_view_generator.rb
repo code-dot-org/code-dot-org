@@ -30,6 +30,15 @@ module Cdo
           @model = model
         end
 
+        # Returns the fully-qualified view names this generator would create
+        # for the given environment.
+        # @param environment_type [Symbol, String] e.g., :production, :test
+        # @return [Array<String>] e.g., ["dashboard_production_pii.zeroetl_users", "dashboard_production.zeroetl_users"]
+        def expected_view_fqns(environment_type)
+          env = environment_type.to_s
+          view_variants.map {|pii| fully_qualified_view_name(env, pii: pii)}
+        end
+
         # Generates the DDL for the PII (full) Materialized View
         def generate_pii_ddl
           columns = model.columns.map(&:name)
@@ -109,6 +118,57 @@ module Cdo
         def self.render_ddl(template_path, environment_type:)
           template = File.read(template_path)
           ERB.new(template).result_with_hash(environment_type: environment_type.to_s)
+        end
+
+        # Syncs materialized views in Redshift for a set of models: creates or
+        # replaces views for each model and drops orphaned views that no longer
+        # correspond to any model in the set.
+        #
+        # @param client [Cdo::Aws::Redshift::Client]
+        # @param environment_type [Symbol] :production or :test
+        # @param models [Enumerable<Class>] ActiveRecord model classes to sync
+        # @param dry_run [Boolean] when true, returns the plan without executing
+        # @return [Hash] :to_add, :to_update, :to_drop arrays of fully-qualified view names
+        def self.sync_all_views(client:, environment_type:, models:, dry_run: false)
+          generators = models.map {|model| new(model)}
+
+          desired_fqns = Set.new
+          generators.each {|gen| desired_fqns.merge(gen.expected_view_fqns(environment_type))}
+
+          existing_fqns = list_existing_views(client: client, environment_type: environment_type)
+
+          plan = {
+            to_add: (desired_fqns - existing_fqns).sort,
+            to_update: (desired_fqns & existing_fqns).sort,
+            to_drop: (existing_fqns - desired_fqns).sort
+          }
+
+          unless dry_run
+            generators.each do |gen|
+              gen.create_or_replace_views(client: client, environment_type: environment_type)
+            end
+
+            unless plan[:to_drop].empty?
+              client.batch_execute(plan[:to_drop].map {|fqn| "DROP MATERIALIZED VIEW IF EXISTS #{fqn}"})
+            end
+          end
+
+          plan
+        end
+
+        # Queries Redshift for existing zeroetl_ materialized views in the
+        # dashboard schemas for the given environment.
+        private_class_method def self.list_existing_views(client:, environment_type:)
+          env = environment_type.to_s
+          schemas = ["#{BASE_REDSHIFT_SCHEMA_NAME}_#{env}", "#{BASE_REDSHIFT_SCHEMA_NAME}_#{env}_pii"]
+          schema_list = schemas.map {|s| "'#{s}'"}.join(', ')
+
+          rows = client.execute(<<~SQL)
+            SELECT schema, name FROM stv_mv_info
+            WHERE schema IN (#{schema_list}) AND name LIKE 'zeroetl_%'
+          SQL
+
+          Set.new(rows.map {|r| "#{r['schema']}.#{r['name']}"})
         end
 
         private def non_pii_columns

@@ -347,6 +347,202 @@ module Cdo
             assert_includes ddl, 'DISTKEY (id)'
           end
         end
+
+        describe '#expected_view_fqns' do
+          it 'returns both PII and non-PII FQNs when non-pii columns exist' do
+            fqns = MaterializedViewGenerator.new(model).expected_view_fqns(:production)
+            assert_equal %w[dashboard_production_pii.zeroetl_users dashboard_production.zeroetl_users], fqns
+          end
+
+          it 'returns only PII FQN when all columns are text' do
+            model.stubs(:columns).returns([name_col, bio_col])
+            fqns = MaterializedViewGenerator.new(model).expected_view_fqns(:test)
+            assert_equal %w[dashboard_test_pii.zeroetl_users], fqns
+          end
+
+          it 'returns empty array when model has no columns' do
+            model.stubs(:columns).returns([])
+            fqns = MaterializedViewGenerator.new(model).expected_view_fqns(:production)
+            assert_empty fqns
+          end
+
+          it 'accepts string environment_type' do
+            fqns = MaterializedViewGenerator.new(model).expected_view_fqns('test')
+            assert_equal %w[dashboard_test_pii.zeroetl_users dashboard_test.zeroetl_users], fqns
+          end
+        end
+
+        describe '.sync_all_views' do
+          let(:client) {mock('redshift_client')}
+          let(:tmpdir) {Dir.mktmpdir}
+
+          let(:activities_model) {stub}
+
+          before do
+            MaterializedViewGenerator.send(:remove_const, :SQL_VIEW_TEMPLATE_DIR)
+            MaterializedViewGenerator.const_set(:SQL_VIEW_TEMPLATE_DIR, tmpdir)
+
+            activities_model.stubs(:table_name).returns('activities')
+            activities_model.stubs(:primary_key).returns('id')
+            activities_model.stubs(:columns).returns([id_col, age_col, created_at_col])
+          end
+
+          after do
+            FileUtils.remove_entry(tmpdir)
+          end
+
+          it 'classifies new views as to_add' do
+            client.stubs(:execute).returns([])
+            client.stubs(:batch_execute)
+
+            plan = MaterializedViewGenerator.sync_all_views(
+              client: client,
+              environment_type: :production,
+              models: [model]
+            )
+
+            assert_includes plan[:to_add], 'dashboard_production_pii.zeroetl_users'
+            assert_includes plan[:to_add], 'dashboard_production.zeroetl_users'
+            assert_empty plan[:to_update]
+            assert_empty plan[:to_drop]
+          end
+
+          it 'classifies existing views as to_update' do
+            client.stubs(:execute).returns(
+              [
+                {'schema' => 'dashboard_production_pii', 'name' => 'zeroetl_users'},
+                {'schema' => 'dashboard_production', 'name' => 'zeroetl_users'}
+              ]
+            )
+            client.stubs(:batch_execute)
+
+            plan = MaterializedViewGenerator.sync_all_views(
+              client: client,
+              environment_type: :production,
+              models: [model]
+            )
+
+            assert_empty plan[:to_add]
+            assert_includes plan[:to_update], 'dashboard_production_pii.zeroetl_users'
+            assert_includes plan[:to_update], 'dashboard_production.zeroetl_users'
+            assert_empty plan[:to_drop]
+          end
+
+          it 'classifies orphaned views as to_drop' do
+            client.stubs(:execute).returns(
+              [
+                {'schema' => 'dashboard_production_pii', 'name' => 'zeroetl_users'},
+                {'schema' => 'dashboard_production', 'name' => 'zeroetl_users'},
+                {'schema' => 'dashboard_production_pii', 'name' => 'zeroetl_old_table'},
+                {'schema' => 'dashboard_production', 'name' => 'zeroetl_old_table'}
+              ]
+            )
+            client.stubs(:batch_execute)
+
+            plan = MaterializedViewGenerator.sync_all_views(
+              client: client,
+              environment_type: :production,
+              models: [model]
+            )
+
+            assert_includes plan[:to_drop], 'dashboard_production_pii.zeroetl_old_table'
+            assert_includes plan[:to_drop], 'dashboard_production.zeroetl_old_table'
+          end
+
+          it 'executes create_or_replace and drop when not dry_run' do
+            client.stubs(:execute).returns(
+              [
+                {'schema' => 'dashboard_test_pii', 'name' => 'zeroetl_old_table'}
+              ]
+            )
+            batches = []
+            client.stubs(:batch_execute).with {|sqls| batches << sqls; true}
+
+            MaterializedViewGenerator.sync_all_views(
+              client: client,
+              environment_type: :test,
+              models: [model]
+            )
+
+            create_batches = batches.select {|b| b.any? {|s| s.include?('CREATE')}}
+            drop_batches = batches.select {|b| b.all? {|s| s.include?('DROP') && !s.include?('CREATE')}}
+
+            refute_empty create_batches
+            assert_equal 1, drop_batches.length
+            assert_includes drop_batches[0][0], 'zeroetl_old_table'
+          end
+
+          it 'does not execute anything when dry_run is true' do
+            client.stubs(:execute).returns(
+              [
+                {'schema' => 'dashboard_test_pii', 'name' => 'zeroetl_old_table'}
+              ]
+            )
+
+            plan = MaterializedViewGenerator.sync_all_views(
+              client: client,
+              environment_type: :test,
+              models: [model],
+              dry_run: true
+            )
+
+            refute_empty plan[:to_add]
+            refute_empty plan[:to_drop]
+          end
+
+          it 'handles multiple models' do
+            client.stubs(:execute).returns([])
+            client.stubs(:batch_execute)
+
+            plan = MaterializedViewGenerator.sync_all_views(
+              client: client,
+              environment_type: :production,
+              models: [model, activities_model]
+            )
+
+            assert_equal 4, plan[:to_add].length
+            assert_includes plan[:to_add], 'dashboard_production_pii.zeroetl_users'
+            assert_includes plan[:to_add], 'dashboard_production.zeroetl_users'
+            assert_includes plan[:to_add], 'dashboard_production_pii.zeroetl_activities'
+            assert_includes plan[:to_add], 'dashboard_production.zeroetl_activities'
+          end
+
+          it 'does not issue a standalone DROP batch when to_drop is empty' do
+            client.stubs(:execute).returns([])
+            batches = []
+            client.stubs(:batch_execute).with {|sqls| batches << sqls; true}
+
+            MaterializedViewGenerator.sync_all_views(
+              client: client,
+              environment_type: :test,
+              models: [model]
+            )
+
+            batches.each do |batch|
+              assert batch.any? {|sql| sql.include?('CREATE')},
+                "Expected every batch to contain a CREATE statement, got: #{batch}"
+            end
+          end
+
+          it 'handles empty model set' do
+            client.stubs(:execute).returns(
+              [
+                {'schema' => 'dashboard_test_pii', 'name' => 'zeroetl_old_table'}
+              ]
+            )
+            client.stubs(:batch_execute)
+
+            plan = MaterializedViewGenerator.sync_all_views(
+              client: client,
+              environment_type: :test,
+              models: []
+            )
+
+            assert_empty plan[:to_add]
+            assert_empty plan[:to_update]
+            assert_includes plan[:to_drop], 'dashboard_test_pii.zeroetl_old_table'
+          end
+        end
       end
     end
   end

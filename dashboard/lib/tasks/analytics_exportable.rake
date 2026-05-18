@@ -27,6 +27,72 @@ Rake::Task['db:migrate'].enhance do
   warn ""
 end
 
+namespace :redshift do
+  # bundle exec rake 'redshift:sync_materialized_views[production]'
+  # DRY_RUN=1 bundle exec rake 'redshift:sync_materialized_views[test]'
+  desc "Sync Redshift materialized views for all exported models. Set DRY_RUN=1 to preview."
+  task :sync_materialized_views, [:environment_type] => :environment do |_t, args|
+    abort "Usage: rake redshift:sync_materialized_views[environment_type]" if args[:environment_type].blank?
+
+    require 'cdo/aws/redshift/materialized_view_generator'
+    require 'cdo/aws/redshift/client'
+
+    Rails.application.eager_load!
+    AnalyticsExportable.validate_exported_models!
+
+    env = args[:environment_type].to_sym
+    dry_run = ENV['DRY_RUN'].present?
+    db_user = ENV.fetch('REDSHIFT_DB_USER', 'dev')
+
+    client = Cdo::Aws::Redshift::Client.new(db_user: db_user)
+
+    plan = Cdo::Aws::Redshift::MaterializedViewGenerator.sync_all_views(
+      client: client,
+      environment_type: env,
+      models: AnalyticsExportable.exported_models,
+      dry_run: true
+    )
+
+    if plan[:to_add].any?
+      puts "Add (#{plan[:to_add].length}):"
+      plan[:to_add].each {|v| puts "  + #{v}"}
+    end
+
+    if plan[:to_update].any?
+      puts "Update (#{plan[:to_update].length}):"
+      plan[:to_update].each {|v| puts "  ~ #{v}"}
+    end
+
+    if plan[:to_drop].any?
+      puts "Drop (#{plan[:to_drop].length}):"
+      plan[:to_drop].each {|v| puts "  - #{v}"}
+    end
+
+    total = plan[:to_add].length + plan[:to_update].length + plan[:to_drop].length
+
+    if total == 0
+      puts "No changes needed."
+      next
+    end
+
+    if dry_run
+      puts "\n[DRY RUN] No changes applied."
+      next
+    end
+
+    print "\nProceed? [y/N] "
+    abort "Aborted." unless $stdin.gets&.strip&.downcase == 'y'
+
+    Cdo::Aws::Redshift::MaterializedViewGenerator.sync_all_views(
+      client: client,
+      environment_type: env,
+      models: AnalyticsExportable.exported_models
+    )
+
+    puts "Done. #{plan[:to_add].length} added, #{plan[:to_update].length} updated, #{plan[:to_drop].length} dropped."
+  end
+end
+
 namespace :zero_etl do
   # bundle exec rake 'zero_etl:data_filter[production]'
   desc "Print the Maxwell filter expression for the dashboard database."
