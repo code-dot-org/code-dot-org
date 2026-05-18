@@ -9,7 +9,7 @@ class AiStudentPodcastsJob < ApplicationJob
     Honeybadger.notify(
       "AiStudentPodcastsJob failed with unexpected error: #{exception.message}",
       context: {
-        request: request[:student_podcast_data].id
+        ai_student_podcast_id: request[:student_podcast_data].id
       }
     )
     # Re-raise error to notify our system of the failed job.
