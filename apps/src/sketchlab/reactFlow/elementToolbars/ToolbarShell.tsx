@@ -82,6 +82,27 @@ export default function ToolbarShell({
     return null;
   }
 
+  // When the user clicks a non-interactive area of the toolbar
+  // (background padding, group spacing, labels), prevent that event,
+  // which would otherwise cause focus to leave the currently select node/edge
+  // and close the toolbar.
+  const preventAutoClose = (event: React.MouseEvent) => {
+    const target = event.target;
+    if (!(target instanceof HTMLElement)) return;
+    // Skip preventDefault for any focusable / interactive control
+    // so MUI widgets get their native focus on click. The tabindex check
+    // also catches custom widgets that aren't covered by tag or role.
+    if (
+      target.closest(
+        'button, input, textarea, select, a, [contenteditable="true"], ' +
+          '[tabindex]:not([tabindex="-1"]), [role="slider"], [role="button"]'
+      )
+    ) {
+      return;
+    }
+    event.preventDefault();
+  };
+
   return (
     <FocusTrap
       active={trapFocus}
@@ -111,25 +132,7 @@ export default function ToolbarShell({
         role="toolbar"
         aria-label={ariaLabel}
         style={{maxHeight}}
-        // When the user clicks a non-interactive area of the toolbar
-        // (background padding, group spacing, labels), keep focus on
-        // the selected node/edge.
-        onMouseDown={event => {
-          const target = event.target;
-          if (!(target instanceof HTMLElement)) return;
-          // Skip preventDefault for any focusable / interactive control
-          // so MUI widgets get their native focus on click. The tabindex check
-          // also catches custom widgets that aren't covered by tag or role.
-          if (
-            target.closest(
-              'button, input, textarea, select, a, [contenteditable="true"], ' +
-                '[tabindex]:not([tabindex="-1"]), [role="slider"], [role="button"]'
-            )
-          ) {
-            return;
-          }
-          event.preventDefault();
-        }}
+        onMouseDown={preventAutoClose}
       >
         <div className={styles.header}>
           <Tooltip title="Close toolbar" placement="top">
