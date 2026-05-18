@@ -487,11 +487,17 @@ def server_status_page_url
   CDO.studio_url('/ui_test/' + status_page_filename, scheme_for_environment, ge_region: nil)
 end
 
-# Returns chat-ready text describing where to find the test status page,
-# tuned for the current environment:
-#   - non-CI with a live server: server URL first, S3 URL second
-#     as a fallback for when the server is unreachable.
-#   - CI (drone): only the S3 URL.
+# Returns text describing where to find the test status page:
+#   - non-CI: server URL first because it loads results faster, S3 URL second
+#     as a fallback in case the server is unreachable.
+#   - CI (drone): only the S3 URL, because the server is not typically
+#     available after the drone run ends.
+#
+# Both status pages show the most recent results for each
+# server name + branch name (+ CI run identifier) tuple. This means that CI
+# status page links remain tied to the specific CI run indefinitely,
+# while status page links on the test machine constantly update to show
+# the most recent results in that environment.
 def status_page_links(s3_status_page_url)
   if server_status_page_url && !CI::Utils.running_on_ci?
     out = "#{test_type_label} Test Status Page:\n#{server_status_page_url}\n\n"
