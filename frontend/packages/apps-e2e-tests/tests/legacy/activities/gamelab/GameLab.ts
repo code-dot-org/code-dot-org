@@ -247,20 +247,25 @@ export class GameLab extends LegacyBlocklyLab {
    * Mirrors `I open the Manage Libraries dialog`.
    */
   async openManageLibrariesDialog(): Promise<void> {
-    await this.page
-      .locator('.settings-cog:visible')
-      .waitFor({state: 'visible', timeout: 15_000});
-    await this.page.locator('.settings-cog:visible').click();
-    await this.page
-      .locator(
-        '.ui-test-settings-cog-menu:visible .ui-test-settings-cog-menu-item',
-        {hasText: 'Manage Libraries'},
-      )
-      .click();
-    await expect(this.page.locator('.modal')).toContainText(
-      'Manage libraries in this project',
-      {timeout: 15_000},
+    const settingsCog = this.page.locator('.settings-cog:visible');
+    await expect(settingsCog).toBeVisible({timeout: 15_000});
+    await settingsCog.click();
+
+    const manageLibraries = this.page.locator(
+      '.ui-test-settings-cog-menu:visible .ui-test-settings-cog-menu-item',
+      {hasText: 'Manage Libraries'},
     );
+    await expect(manageLibraries).toBeVisible({timeout: 15_000});
+    await manageLibraries.click();
+
+    await expect(
+      this.page.getByRole('heading', {
+        name: 'Manage libraries in this project',
+      }),
+    ).toBeVisible({timeout: 15_000});
+    await expect(
+      this.page.getByRole('heading', {name: 'Import library from ID'}),
+    ).toBeVisible({timeout: 15_000});
   }
 
   /**

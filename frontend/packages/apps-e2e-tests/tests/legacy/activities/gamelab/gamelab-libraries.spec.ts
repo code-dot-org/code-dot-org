@@ -79,7 +79,6 @@ test.describe('Game Lab — Libraries', () => {
 
       await createStudent(page, {name: 'Student2'});
       await gamelab.gotoNewProject();
-      await gamelab.waitForInitialProjectSave();
       await gamelab.importLibraryByChannelId(channelId);
 
       await gamelab.openManageLibrariesDialog();
