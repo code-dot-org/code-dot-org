@@ -3,7 +3,9 @@ class AiStudentPodcastsController < ApplicationController
 
   # GET /ai_student_podcasts/:id
   def show
-    render json: @podcast_data
+    podcast = AiStudentPodcast.find_by(id: params[:id], user_id: current_user.id)
+    return head :not_found unless podcast
+    render json: podcast
   end
 
   # POST /ai_student_podcasts/find_or_create_student_podcast
@@ -24,19 +26,21 @@ class AiStudentPodcastsController < ApplicationController
       first
 
     unless podcast
-      podcast = AiStudentPodcast.create!(user_id: current_user.id, lesson_id: lesson_id)
+      podcast = AiStudentPodcast.create!(
+        user_id: current_user.id,
+        lesson_id: lesson_id,
+      )
       objective_ids.each do |obj_id|
         podcast.ai_student_podcast_objectives.
           create!(objective_id: obj_id)
       end
+      AiStudentPodcastsJob.perform(podcast)
     end
-
-    AiStudentPodcastsHelper.create_and_save_to_s3(podcast)
 
     render json: podcast, status: podcast.previously_new_record? ? :created : :ok
   end
 
   private def podcast_params
-    params.transform_keys(&:underscore).permit(:lesson_id, :objective_ids)
+    params.transform_keys(&:underscore).permit(:lesson_id, objective_ids: [])
   end
 end

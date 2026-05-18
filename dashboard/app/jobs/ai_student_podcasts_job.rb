@@ -17,6 +17,6 @@ class AiStudentPodcastsJob < ApplicationJob
   end
 
   def perform(request:)
-    AiStudentPodcastsHelper.create_and_save_to_s3(request[:lesson_id], request[:user_id])
+    AiStudentPodcastsHelper.create_and_save_to_s3(request[:student_podcast_data])
   end
 end
