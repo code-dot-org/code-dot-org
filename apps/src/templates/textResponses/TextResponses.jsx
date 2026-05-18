@@ -89,9 +89,7 @@ function TextResponses({sectionId, scriptId, courseVersionName, unitPosition}) {
   return (
     <div>
       <div style={styles.unitSelection}>
-        <Typography variant="h3" sx={styles.header}>
-          {i18n.selectACourse()}
-        </Typography>
+        <Typography variant="h3">{i18n.selectACourse()}</Typography>
         <UnitSelectorV2 v1Styles />
       </div>
       {filteredResponses.length > 0 && (
