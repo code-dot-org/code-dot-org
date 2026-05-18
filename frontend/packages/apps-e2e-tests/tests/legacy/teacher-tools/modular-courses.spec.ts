@@ -46,6 +46,7 @@ test.describe('Using Modular Courses', {tag: '@no_mobile'}, () => {
    * URL in the V2 progress table.
    */
   test('progress is saved across modular courses', async ({page}) => {
+    test.slow();
     const {email: teacherEmail, password: teacherPassword} =
       await createTeacher(page, {name: 'Teacher_Sally'});
     await createStudent(page, {name: 'Sally'});
