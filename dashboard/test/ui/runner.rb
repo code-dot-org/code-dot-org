@@ -477,10 +477,7 @@ def report_tests_finished(start_time, run_results, run_status_page_url = nil)
   test_report += "\n"
   test_report += "Applitools Eyes Results:\n#{applitools_batch_url}\n\n" if applitools_batch_url
   test_report += status_page_links(run_status_page_url)
-  summary = "#{suite_success_count} passed. #{failures.count} failed. Test count: #{run_results.count}. Duration: #{RakeUtils.format_duration(suite_duration)}."
-  did_retry_flaky_tests = $options.retry_count || $options.magic_retry || $options.auto_retry
-  summary += " Total successful reruns of flaky tests: #{total_flaky_successful_reruns}." if did_retry_flaky_tests
-  test_report += "#{summary}\n"
+  test_report += "#{pass_fail_summary(suite_success_count, failures.count, run_results.count, suite_duration, total_flaky_successful_reruns)}\n"
 
   ChatClient.log test_report, color: 'purple'
 end
@@ -510,6 +507,13 @@ def status_page_links(run_status_page_url)
   else
     ''
   end
+end
+
+def pass_fail_summary(success_count, failure_count, total_count, duration, total_flaky_successful_reruns)
+  summary = "#{success_count} passed. #{failure_count} failed. Test count: #{total_count}. Duration: #{RakeUtils.format_duration(duration)}."
+  did_retry_flaky_tests = $options.retry_count || $options.magic_retry || $options.auto_retry
+  summary += " Total successful reruns of flaky tests: #{total_flaky_successful_reruns}." if did_retry_flaky_tests
+  summary
 end
 
 # Ordered list of UI/Eyes test status pages used to render the
