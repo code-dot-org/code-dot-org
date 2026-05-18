@@ -257,7 +257,7 @@ const styles = {
     backgroundColor: color.lightest_gray,
     border: `1px solid ${color.lighter_gray}`,
     borderRadius: 5,
-    height: 40,
+    height: 42,
     position: 'relative',
     overflow: 'hidden',
   },
