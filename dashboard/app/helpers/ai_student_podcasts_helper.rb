@@ -13,7 +13,12 @@ module AiStudentPodcastsHelper
     return if AWS::S3.exists_in_bucket(PODCAST_BUCKET, filename)
     return unless elevenlabs_client.available_credits
 
-    podcast_script = generate_podcast_script(student_podcast_data)
+    podcast_script = if student_podcast_data.podcast_script
+                       student_podcast_data.podcast_script
+                     else
+                       generate_podcast_script(student_podcast_data)
+                     end
+
     podcast = get_podcast_from_script(podcast_script)
     AWS::S3.upload_to_bucket(PODCAST_BUCKET, filename, podcast, no_random: true)
   end
@@ -35,7 +40,27 @@ module AiStudentPodcastsHelper
   end
 
   def self.generate_podcast_script(student_podcast_data)
-    prompt = AiSystemPrompts::StudentPodcastPromptHelper.get_openai_system_prompt(student_podcast_data.lesson_id, student_podcast_data.objective_ids, student_podcast_data.user_id)
+    objective_ids = student_podcast_data.objective_ids
+    existing_script_podcast = AiStudentPodcast.
+      joins(:ai_student_podcast_objectives).
+      where(lesson_id: student_podcast_data.lesson_id).
+      where.not(podcast_script: nil).
+      group('ai_student_podcasts.id').
+      having(
+        'COUNT(ai_student_podcast_objectives.objective_id) = ? AND SUM(ai_student_podcast_objectives.objective_id IN (?)) = ?',
+        objective_ids.size,
+        objective_ids,
+        objective_ids.size
+      ).
+      first
+
+    if existing_script_podcast
+      student_podcast_data.podcast_script = existing_script_podcast.podcast_script
+      student_podcast_data.save!
+      return existing_script_podcast.podcast_script
+    end
+
+    prompt = AiSystemPrompts::StudentPodcastPromptHelper.get_openai_system_prompt(student_podcast_data.lesson_id, objective_ids, student_podcast_data.user_id)
 
     begin
       response = openai_client.request_podcast_script(prompt)

@@ -3,6 +3,7 @@ class AiStudentPodcastsController < ApplicationController
 
   # GET /ai_student_podcasts/:id
   def show
+    return head :forbidden unless SingleUserExperiment.enabled?(user: current_user, experiment_name: 'lesson-tutor')
     podcast_data = AiStudentPodcast.find_by(id: params[:id], user_id: current_user.id)
     return head :not_found unless podcast_data
     render json: podcast_data
@@ -10,6 +11,7 @@ class AiStudentPodcastsController < ApplicationController
 
   # POST /ai_student_podcasts/generate_podcast
   def generate_podcast
+    return head :forbidden unless SingleUserExperiment.enabled?(user: current_user, experiment_name: 'lesson-tutor')
     lesson_id = podcast_params[:lesson_id]
     objective_ids = Array(podcast_params[:objective_ids]).map(&:to_i).sort
 

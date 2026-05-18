@@ -9,6 +9,7 @@ class AiStudentPodcastsControllerTest < ActionController::TestCase
     @objective2 = create(:objective)
 
     AiStudentPodcastsJob.stubs(:perform_later)
+    SingleUserExperiment.stubs(:enabled?).returns(true)
   end
 
   teardown do
@@ -28,6 +29,31 @@ class AiStudentPodcastsControllerTest < ActionController::TestCase
     podcast = AiStudentPodcast.create!(user_id: @user.id, lesson_id: @lesson.id)
     get :show, params: {id: podcast.id}, format: :json
     assert_response :unauthorized
+  end
+
+  test 'generate_podcast returns 403 when the lesson-tutor experiment is not enabled for the user' do
+    sign_in @user
+    SingleUserExperiment.unstub(:enabled?)
+    SingleUserExperiment.expects(:enabled?).
+      with(user: @user, experiment_name: 'lesson-tutor').returns(false)
+
+    post :generate_podcast,
+      params: {lesson_id: @lesson.id, objective_ids: [@objective1.id]},
+      format: :json
+
+    assert_response :forbidden
+  end
+
+  test 'show returns 403 when the lesson-tutor experiment is not enabled for the user' do
+    sign_in @user
+    podcast = AiStudentPodcast.create!(user_id: @user.id, lesson_id: @lesson.id)
+    SingleUserExperiment.unstub(:enabled?)
+    SingleUserExperiment.expects(:enabled?).
+      with(user: @user, experiment_name: 'lesson-tutor').returns(false)
+
+    get :show, params: {id: podcast.id}, format: :json
+
+    assert_response :forbidden
   end
 
   # *****

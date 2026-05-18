@@ -3,8 +3,10 @@ require 'test_helper'
 class AiStudentPodcastsHelperTest < ActionView::TestCase
   setup do
     @user = create(:student)
+    @other_user = create(:student)
     @lesson = create(:lesson)
     @objective = create(:objective)
+    @extra_objective = create(:objective)
     @podcast = AiStudentPodcast.create!(user_id: @user.id, lesson_id: @lesson.id)
     @podcast.ai_student_podcast_objectives.create!(objective_id: @objective.id)
 
@@ -50,6 +52,47 @@ class AiStudentPodcastsHelperTest < ActionView::TestCase
 
     assert_equal script_array, JSON.parse(result)
     assert_equal script_array, JSON.parse(@podcast.reload.podcast_script)
+  end
+
+  test "generate_podcast_script reuses an existing matching script from another user and skips OpenAI" do
+    other_podcast = AiStudentPodcast.create!(
+      user_id: @other_user.id,
+      lesson_id: @lesson.id,
+      podcast_script: [{'voice_id' => 'Dan', 'text' => 'shared'}].to_json
+    )
+    other_podcast.ai_student_podcast_objectives.create!(objective_id: @objective.id)
+
+    AiStudentPodcastsHelper::OpenaiClient.expects(:new).never
+    AiSystemPrompts::StudentPodcastPromptHelper.expects(:get_openai_system_prompt).never
+
+    result = AiStudentPodcastsHelper.generate_podcast_script(@podcast)
+
+    assert_equal other_podcast.podcast_script, result
+    assert_equal other_podcast.podcast_script, @podcast.reload.podcast_script
+  end
+
+  test "generate_podcast_script ignores existing podcasts whose objective set differs" do
+    other_podcast = AiStudentPodcast.create!(
+      user_id: @other_user.id,
+      lesson_id: @lesson.id,
+      podcast_script: 'should-not-be-used'
+    )
+    other_podcast.ai_student_podcast_objectives.create!(objective_id: @objective.id)
+    other_podcast.ai_student_podcast_objectives.create!(objective_id: @extra_objective.id)
+
+    AiSystemPrompts::StudentPodcastPromptHelper.stubs(:get_openai_system_prompt).returns('prompt')
+    fresh_script = [{'voice_id' => 'Sam', 'text' => 'fresh'}].to_json
+    openai_body = {choices: [{message: {content: {script: JSON.parse(fresh_script)}.to_json}}]}.to_json
+    mock_response = mock('response')
+    mock_response.stubs(:code).returns(200)
+    mock_response.stubs(:body).returns(openai_body)
+    mock_client = mock('client')
+    mock_client.expects(:request_podcast_script).returns(mock_response)
+    AiStudentPodcastsHelper::OpenaiClient.expects(:new).returns(mock_client)
+
+    result = AiStudentPodcastsHelper.generate_podcast_script(@podcast)
+
+    assert_equal fresh_script, result
   end
 
   test "generate_podcast_script raises OpenaiStudentPodcastTimeout on read timeout" do
@@ -111,6 +154,25 @@ class AiStudentPodcastsHelperTest < ActionView::TestCase
       with(@podcast).returns(generated_script)
     AiStudentPodcastsHelper.expects(:get_podcast_from_script).
       with(generated_script).returns('mp3-bytes')
+    AWS::S3.expects(:upload_to_bucket).with(
+      AiStudentPodcastsHelper::PODCAST_BUCKET,
+      AiStudentPodcastsHelper.s3_filename(@podcast.id),
+      'mp3-bytes',
+      no_random: true
+    )
+
+    AiStudentPodcastsHelper.create_and_save_to_s3(@podcast)
+  end
+
+  test "create_and_save_to_s3 reuses an existing podcast_script and skips OpenAI when one is already saved" do
+    existing_script = [{voice_id: 'Dan', text: 'reused'}].to_json
+    @podcast.update!(podcast_script: existing_script)
+    AWS::S3.stubs(:exists_in_bucket).returns(false)
+    AiStudentPodcastsHelper::ElevenlabsClient.any_instance.stubs(:available_credits).returns(true)
+
+    AiStudentPodcastsHelper.expects(:generate_podcast_script).never
+    AiStudentPodcastsHelper.expects(:get_podcast_from_script).
+      with(existing_script).returns('mp3-bytes')
     AWS::S3.expects(:upload_to_bucket).with(
       AiStudentPodcastsHelper::PODCAST_BUCKET,
       AiStudentPodcastsHelper.s3_filename(@podcast.id),
