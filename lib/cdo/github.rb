@@ -214,8 +214,15 @@ module GitHub
   # request number.
   # @param pr_number [Integer] The pull request number.
   # @return [String] The HTML URL for the pull request.
-  def self.url(pr_number)
+  def self.pr_url(pr_number)
     "https://github.com/#{REPO}/pull/#{pr_number}"
+  end
+
+  # Builds the GitHub URL from a commit SHA. Does not validate the commit SHA.
+  # @param commit_sha [String] The commit SHA.
+  # @return [String] The HTML URL for the commit.
+  def self.commit_url(commit_sha)
+    "https://github.com/#{REPO}/commit/#{commit_sha}"
   end
 
   # Octokit Documentation: http://octokit.github.io/octokit.rb/Octokit/Client/PullRequests.html#pull_merged

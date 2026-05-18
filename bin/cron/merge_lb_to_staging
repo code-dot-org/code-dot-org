@@ -59,7 +59,7 @@ def main
 
   ChatClient.message(
     'staging',
-    "robo-DTS created and merged <a href=\"#{GitHub.url(pr_number)}\">PR#{pr_number}</a>",
+    "robo-DTS created and merged <a href=\"#{GitHub.pr_url(pr_number)}\">PR#{pr_number}</a>",
     color: 'green'
   )
 rescue Exception => exception

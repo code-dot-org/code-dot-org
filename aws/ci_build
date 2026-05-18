@@ -206,7 +206,7 @@ def mark_dtt_green
   # untested changes green.
   test_branch_sha = GitUtils.git_revision_short
 
-  msg = "Automatically marking commit #{test_branch_sha} green"
+  msg = "Automatically marking commit <a href=\"#{GitHub.commit_url(test_branch_sha)}\">#{test_branch_sha}</a> green"
   ChatClient.log msg
   ChatClient.message 'deploy-status', msg
 

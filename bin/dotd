@@ -129,15 +129,15 @@ def do_dtp(dotd_name)
     title: "DTP (Test > Production: #{test_green_commit})"
   )
   print_database_changes production_pr_number
-  dtp_auto_merged = should_i "merge DTP (#{GitHub.url(production_pr_number)})" do
+  dtp_auto_merged = should_i "merge DTP (#{GitHub.pr_url(production_pr_number)})" do
     DevelopersTopic.set_dtp "in progress (@#{dotd_name})"
     GitHub.merge_pull_request(
       production_pr_number,
       "DTP (Test > Production: #{test_green_commit})"
     )
   end
-  GitHub.open_url GitHub.url(production_pr_number) unless dtp_auto_merged
-  @logger.info "DTPs #{test_green_commit} in #{GitHub.url(production_pr_number)}"
+  GitHub.open_url GitHub.pr_url(production_pr_number) unless dtp_auto_merged
+  @logger.info "DTPs #{test_green_commit} in #{GitHub.pr_url(production_pr_number)}"
 end
 
 # Creates a DTL branch from the most recent green commit, creates a GitHub PR merging it to
@@ -156,8 +156,8 @@ def do_dtl(dotd_name)
     head: branch_name,
     title: "DTL (Test > Levelbuilder: #{test_green_commit})"
   )
-  puts "MERGED DTL: PR#{levelbuilder_pr_number} (#{GitHub.url(levelbuilder_pr_number)})"
-  @logger.info "DTLs #{test_green_commit} in #{GitHub.url(levelbuilder_pr_number)}"
+  puts "MERGED DTL: PR#{levelbuilder_pr_number} (#{GitHub.pr_url(levelbuilder_pr_number)})"
+  @logger.info "DTLs #{test_green_commit} in #{GitHub.pr_url(levelbuilder_pr_number)}"
 end
 
 # @return [String] The text for the DOTD menu prompt.
@@ -269,7 +269,7 @@ def dotd_menu(dotd_name)
         )
         puts <<-OUTPUT.unindent
 
-          DTS (Levelbuilder > Staging): #{GitHub.url(dts_pr_number)}
+          DTS (Levelbuilder > Staging): #{GitHub.pr_url(dts_pr_number)}
 
         OUTPUT
         @logger.info 'merges levelbuilder into staging'
@@ -282,7 +282,7 @@ def dotd_menu(dotd_name)
         )
         puts <<-OUTPUT.unindent
 
-          DTT (Staging > Test): #{GitHub.url(dtt_pr_number)}
+          DTT (Staging > Test): #{GitHub.pr_url(dtt_pr_number)}
 
         OUTPUT
         @logger.info 'manually DTTs from staging'

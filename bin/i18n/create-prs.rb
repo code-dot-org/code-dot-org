@@ -66,7 +66,7 @@ class CreateI18nPullRequests
       title: "I18n sync In & Up #{Date.today.strftime('%m/%d')}"
     )
     GitHub.label_pull_request(in_up_pr, ["i18n"])
-    puts "Created In & Up PR: #{GitHub.url(in_up_pr)}"
+    puts "Created In & Up PR: #{GitHub.pr_url(in_up_pr)}"
   end
 
   def self.down_and_out
@@ -150,6 +150,6 @@ class CreateI18nPullRequests
     )
     GitHub.label_pull_request(down_out_pr, ["i18n"])
 
-    puts "Created Down & Out PR: #{GitHub.url(down_out_pr)}"
+    puts "Created Down & Out PR: #{GitHub.pr_url(down_out_pr)}"
   end
 end
