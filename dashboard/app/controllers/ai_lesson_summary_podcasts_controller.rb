@@ -5,9 +5,7 @@ class AiLessonSummaryPodcastsController < ApplicationController
 
   def show
     podcast_filename = PODCAST_FOLDER + 'lesson_' + params[:lesson_id].to_s + '_podcast.mp3'
-    unless AWS::S3.exists_in_bucket(PODCAST_BUCKET, podcast_filename)
-      return head :not_found
-    end
+    return head :not_found unless AWS::S3.exists_in_bucket(PODCAST_BUCKET, podcast_filename)
     podcast = AWS::S3.download_from_bucket(PODCAST_BUCKET, podcast_filename)
     send_data podcast, type: 'audio/mpeg', disposition: 'inline'
   end
