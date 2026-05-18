@@ -62,11 +62,7 @@
   min-height: 0;
   overflow-y: auto;
   overflow-x: hidden;
-  // Reserve space for the vertical scrollbar so it never paints over
-  // toolbar content (e.g. the right-edge swatch).
   scrollbar-gutter: stable;
-  // Inner horizontal padding so swatch selection/focus rings
-  // aren't clipped by the scroll container's edge.
   padding: 0 6px;
 }
 

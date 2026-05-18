@@ -1,5 +1,5 @@
 import {Panel} from '@xyflow/react';
-import React from 'react';
+import React, {useMemo} from 'react';
 
 import {
   SketchlabReactFlowEdge,
@@ -44,34 +44,51 @@ export default function CornerToolbarPanel({
     setLineEdgeLocked,
   } = useLineToolbar({edges, openToolbarTarget, setEdges});
 
-  let body: React.ReactNode = null;
-
-  if (openToolbarTarget?.type === 'node') {
-    const node = nodes.find(candidate => candidate.id === openToolbarTarget.id);
-    if (node?.type === 'shape') {
-      body = <ShapeNodeToolbar nodeId={node.id} />;
-    } else if (node?.type === 'image') {
-      body = <ImageNodeToolbar nodeId={node.id} />;
-    } else if (node?.type === 'text') {
-      body = <TextNodeToolbar nodeId={node.id} />;
+  const body = useMemo(() => {
+    if (openToolbarTarget?.type === 'node') {
+      const node = nodes.find(
+        candidate => candidate.id === openToolbarTarget.id
+      );
+      if (node?.type === 'shape') {
+        return <ShapeNodeToolbar nodeId={node.id} />;
+      }
+      if (node?.type === 'image') {
+        return <ImageNodeToolbar nodeId={node.id} />;
+      }
+      if (node?.type === 'text') {
+        return <TextNodeToolbar nodeId={node.id} />;
+      }
+      return null;
     }
-  } else if (openToolbarTarget?.type === 'edge' && openLineEdge) {
-    body = (
-      <LineEdgeToolbar
-        edge={openLineEdge}
-        onSelectColor={value => setLineEdgeColor(openLineEdge.id, value)}
-        onSelectWidth={value => setLineEdgeWidth(openLineEdge.id, value)}
-        onSelectStrokeStyle={value =>
-          setLineEdgeStrokeStyle(openLineEdge.id, value)
-        }
-        onSelectArrowHeads={value =>
-          setLineEdgeArrowHeads(openLineEdge.id, value)
-        }
-        onSetLocked={value => setLineEdgeLocked(openLineEdge.id, value)}
-        onSelectEdgeType={value => setLineEdgeType(openLineEdge.id, value)}
-      />
-    );
-  }
+    if (openToolbarTarget?.type === 'edge' && openLineEdge) {
+      return (
+        <LineEdgeToolbar
+          edge={openLineEdge}
+          onSelectColor={value => setLineEdgeColor(openLineEdge.id, value)}
+          onSelectWidth={value => setLineEdgeWidth(openLineEdge.id, value)}
+          onSelectStrokeStyle={value =>
+            setLineEdgeStrokeStyle(openLineEdge.id, value)
+          }
+          onSelectArrowHeads={value =>
+            setLineEdgeArrowHeads(openLineEdge.id, value)
+          }
+          onSetLocked={value => setLineEdgeLocked(openLineEdge.id, value)}
+          onSelectEdgeType={value => setLineEdgeType(openLineEdge.id, value)}
+        />
+      );
+    }
+    return null;
+  }, [
+    openToolbarTarget,
+    nodes,
+    openLineEdge,
+    setLineEdgeColor,
+    setLineEdgeWidth,
+    setLineEdgeStrokeStyle,
+    setLineEdgeArrowHeads,
+    setLineEdgeLocked,
+    setLineEdgeType,
+  ]);
 
   if (!body) return null;
 

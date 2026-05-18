@@ -31,20 +31,21 @@ export default function ToolbarShell({
     openToolbarTarget?.type === target.type &&
     openToolbarTarget.id === target.id;
 
+  const containerRef = useRef<HTMLDivElement>(null);
+  const [maxHeight, setMaxHeight] = useState<number | undefined>(undefined);
+
   // The React Flow canvas wrapper can be taller than the visible window.
   // Cap the toolbar's max-height against whichever is higher on screen:
   // the bottom-right Controls panel, or the window's lower edge.
   // Recompute on resize.
-  const paperRef = useRef<HTMLDivElement>(null);
-  const [maxHeight, setMaxHeight] = useState<number | undefined>(undefined);
   useLayoutEffect(() => {
     if (!isVisible) return;
-    const paper = paperRef.current;
-    if (!paper) return;
-    const wrapper = paper.closest('.react-flow');
+    const container = containerRef.current;
+    if (!container) return;
+    const wrapper = container.closest('.react-flow');
 
-    const recompute = () => {
-      const top = paper.getBoundingClientRect().top;
+    const recomputeHeight = () => {
+      const top = container.getBoundingClientRect().top;
       const controls = wrapper?.querySelector('.react-flow__controls');
       const controlsTop =
         controls?.getBoundingClientRect().top ?? window.innerHeight;
@@ -52,13 +53,13 @@ export default function ToolbarShell({
       const available = bottomAnchor - top - TOOLBAR_BOTTOM_GAP_PX;
       setMaxHeight(Math.max(available, TOOLBAR_MIN_HEIGHT_PX));
     };
-    recompute();
+    recomputeHeight();
 
-    window.addEventListener('resize', recompute);
-    const observer = wrapper ? new ResizeObserver(recompute) : null;
+    window.addEventListener('resize', recomputeHeight);
+    const observer = wrapper ? new ResizeObserver(recomputeHeight) : null;
     if (wrapper && observer) observer.observe(wrapper);
     return () => {
-      window.removeEventListener('resize', recompute);
+      window.removeEventListener('resize', recomputeHeight);
       observer?.disconnect();
     };
   }, [isVisible]);
@@ -104,7 +105,7 @@ export default function ToolbarShell({
       }}
     >
       <Paper
-        ref={paperRef}
+        ref={containerRef}
         className={styles.toolbar}
         elevation={3}
         role="toolbar"
@@ -117,10 +118,8 @@ export default function ToolbarShell({
           const target = event.target;
           if (!(target instanceof HTMLElement)) return;
           // Skip preventDefault for any focusable / interactive control
-          // so MUI widgets (Slider thumb, IconButton, TextField input,
-          // etc.) get their native focus on click. The tabindex check
-          // also catches custom widgets that aren't covered by tag or
-          // role.
+          // so MUI widgets get their native focus on click. The tabindex check
+          // also catches custom widgets that aren't covered by tag or role.
           if (
             target.closest(
               'button, input, textarea, select, a, [contenteditable="true"], ' +
