@@ -1,0 +1,39 @@
+<Panels>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 73,
+  "created_at": "2026-05-17T01:49:32.000Z",
+  "level_num": "custom",
+  "user_id": 16889,
+  "properties": {
+    "encrypted": "false",
+    "offer_browser_tts": "false",
+    "use_links": "false",
+    "panels": [
+      {
+        "text": "A heart fills in when you tap — but does the change announce itself to someone who can't see the screen?",
+        "imageUrl": "https://images.code.org/caaf9821d49aff6a48cac4c007cfb910-panel1.png",
+        "key": "ai-and-algorithmic-decisions-lesson1-level2-panel_2026-798fc7fd-8a68-4945-9d77-7245029eb265"
+      },
+      {
+        "text": "A toggle flips with a tap — can it also flip with the keyboard alone?",
+        "imageUrl": "https://images.code.org/11a6fc9d5ce5675c26ccc64e71e85fc4-panel2.png",
+        "key": "ai-and-algorithmic-decisions-lesson1-level2-panel_2026-54701536-4f25-4785-af32-879c411ecb9a",
+        "layout": "text-bottom-center"
+      },
+      {
+        "text": "A pop-up appears — does pressing Escape close it, or is the user trapped?",
+        "imageUrl": "https://images.code.org/931c6b040d035e8fb49d130402ac9488-panel3.png",
+        "key": "ai-and-algorithmic-decisions-lesson1-level2-panel_2026-482ceeb8-0a43-41da-8efc-c8a2ca92a109"
+      },
+      {
+        "text": "A spinner spins — but if there's no text, how does the user know what's loading?",
+        "imageUrl": "https://images.code.org/3268850681443d49bb0464e4b1a2fbfb-panel4.png",
+        "key": "ai-and-algorithmic-decisions-lesson1-level2-panel_2026-796c8dc7-1be5-4539-adfd-463ba2f81787",
+        "layout": "text-top-center"
+      }
+    ]
+  },
+  "audit_log": "[{\"changed_at\":\"2026-05-17 01:54:15 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
+}]]></config>
+</Panels>

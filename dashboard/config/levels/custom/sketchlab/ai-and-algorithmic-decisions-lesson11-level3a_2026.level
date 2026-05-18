@@ -1,12 +1,13 @@
 <Sketchlab>
   <config><![CDATA[{
+  "published": true,
   "game_id": 75,
   "created_at": "2026-04-20T06:58:42.000Z",
   "level_num": "custom",
   "user_id": 18602,
   "properties": {
     "encrypted": "false",
-    "long_instructions": "## Map Your App Logic\r\n\r\nIn this level, you’ll create a flowchart to plan how your app works.\r\n\r\n1. Use the workspace to map how user inputs lead to outcomes.\r\n\r\n</br>\r\n\r\n2. Add conditions to show how your app makes decisions.\r\n\r\n</br>\r\n\r\n3. Include at least one combined condition (two inputs affecting one result).\r\n\r\n</br>\r\n\r\n4. Identify any key values your app needs to track (such as selections or scores).\r\n\r\nFocus on how your app behaves, not how it looks.\r\n\r\n:::details [**Tips**]\r\nStart with a user action, then show what happens step by step. You can use arrows and shapes to represent decisions and outcomes.\r\n:::",
+    "long_instructions": "## Map Your App Logic\r\n\r\nCreate a flowchart to plan how your app works.\r\n\r\n1. Use the workspace to map how user inputs lead to outcomes.\r\n\r\n2. Add conditions to show how your app makes decisions.\r\n\r\n3. Include at least one combined condition (two inputs affecting one result).\r\n\r\n4. Identify any key values your app needs to track (such as selections or scores).\r\n",
     "start_sources": {
       "source": {
         "nodes": [
@@ -25,7 +26,7 @@
               "shapeType": "rectangle",
               "label": "",
               "backgroundColor": "transparent",
-              "strokeColor": "#1e1e1e"
+              "strokeColor": "var(--sketchlab-stroke-default)"
             },
             "measured": {
               "width": 342,
@@ -48,9 +49,9 @@
             "data": {
               "shapeType": "rectangle",
               "label": "Input",
-              "backgroundColor": "#a5d8ff",
-              "strokeColor": "#1e1e1e",
-              "fontColor": "#1e1e1e",
+              "backgroundColor": "var(--sketchlab-bg-blue)",
+              "strokeColor": "var(--sketchlab-stroke-default)",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": "medium"
             },
             "measured": {
@@ -73,9 +74,9 @@
             "data": {
               "shapeType": "diamond",
               "label": "Decision",
-              "backgroundColor": "#ffec99",
-              "strokeColor": "#1e1e1e",
-              "fontColor": "#1e1e1e",
+              "backgroundColor": "var(--sketchlab-bg-yellow)",
+              "strokeColor": "var(--sketchlab-stroke-default)",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": "medium"
             },
             "measured": {
@@ -97,9 +98,9 @@
             "data": {
               "shapeType": "rectangle",
               "label": "Process",
-              "backgroundColor": "#e9ecef",
-              "strokeColor": "#1e1e1e",
-              "fontColor": "#1e1e1e",
+              "backgroundColor": "var(--sketchlab-bg-gray)",
+              "strokeColor": "var(--sketchlab-stroke-default)",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": "medium"
             },
             "measured": {
@@ -121,9 +122,9 @@
             "data": {
               "shapeType": "circle",
               "label": "Start / End",
-              "backgroundColor": "#ffc9c9",
-              "strokeColor": "#1e1e1e",
-              "fontColor": "#1e1e1e",
+              "backgroundColor": "var(--sketchlab-bg-pink)",
+              "strokeColor": "var(--sketchlab-stroke-default)",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": "medium"
             },
             "measured": {
@@ -140,7 +141,7 @@
             },
             "data": {
               "text": "Flowchart Components",
-              "fontColor": "#1e1e1e",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": "large",
               "showHandles": false
             },
@@ -164,7 +165,8 @@
               "shapeType": "rectangle",
               "label": "",
               "backgroundColor": "transparent",
-              "strokeColor": "#1e1e1e"
+              "strokeColor": "var(--sketchlab-stroke-default)",
+              "fontColor": "var(--sketchlab-stroke-default)"
             },
             "measured": {
               "width": 984,
@@ -180,7 +182,7 @@
             },
             "data": {
               "text": "Your Workspace",
-              "fontColor": "#1e1e1e",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": "large",
               "showHandles": false
             },
@@ -203,9 +205,9 @@
             "data": {
               "shapeType": "rectangle",
               "label": "Output",
-              "backgroundColor": "#ffd8a8",
-              "strokeColor": "#1e1e1e",
-              "fontColor": "#1e1e1e",
+              "backgroundColor": "var(--sketchlab-bg-red)",
+              "strokeColor": "var(--sketchlab-stroke-default)",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": "medium"
             },
             "measured": {
@@ -265,15 +267,15 @@
           }
         ],
         "viewport": {
-          "x": 144.98390293292312,
-          "y": 15.244792386598078,
+          "x": 169.5721927942045,
+          "y": 34.64390904370623,
           "zoom": 0.5938062456817199
         }
       }
     },
-    "display_name": "Sketch Lab - App Logic   ",
+    "display_name": "Create a Flowchart",
     "thumbnail_url": "https://images.code.org/d2f6256449032ef4cee95fe915800e7c-mood-board.png",
-    "bubble_choice_description": "Use SketchLab to create a flowchart to map how your app works. Show how user inputs lead to outcomes using conditions and identify key values your app needs to track.",
+    "bubble_choice_description": "Create a flowchart to map how your app works. Show how user inputs lead to outcomes using conditions and identify key values your app needs to track.",
     "exemplar_sources": {
       "source": {
         "type": "excalidraw",
@@ -7330,7 +7332,6 @@
     },
     "name_suffix": "_2026"
   },
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2026-04-20T06:58:42.285+00:00\",\"changed\":[\"cloned from \\\"ai-and-algorithmic-decisions-lesson11-level1b_2026\\\"\"],\"cloned_from\":\"ai-and-algorithmic-decisions-lesson11-level1b_2026\"},{\"changed_at\":\"2026-04-20 07:00:51 +0000\",\"changed\":[\"long_instructions\",\"display_name\",\"bubble_choice_description\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-04-20 07:03:38 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-04-20 07:05:44 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-05-01 13:32:52 -0400\",\"changed\":[\"start_sources\"],\"changed_by_id\":1,\"changed_by_email\":\"levelbuilder@dev.com\"},{\"changed_at\":\"2026-05-01 13:33:16 -0400\",\"changed\":[\"start_sources\"],\"changed_by_id\":1,\"changed_by_email\":\"levelbuilder@dev.com\"},{\"changed_at\":\"2026-05-06 20:26:31 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":155,\"changed_by_email\":\"dani@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2026-04-20T06:58:42.285+00:00\",\"changed\":[\"cloned from \\\"ai-and-algorithmic-decisions-lesson11-level1b_2026\\\"\"],\"cloned_from\":\"ai-and-algorithmic-decisions-lesson11-level1b_2026\"},{\"changed_at\":\"2026-04-20 07:00:51 +0000\",\"changed\":[\"long_instructions\",\"display_name\",\"bubble_choice_description\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-04-20 07:03:38 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-04-20 07:05:44 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-05-01 13:32:52 -0400\",\"changed\":[\"start_sources\"],\"changed_by_id\":1,\"changed_by_email\":\"levelbuilder@dev.com\"},{\"changed_at\":\"2026-05-01 13:33:16 -0400\",\"changed\":[\"start_sources\"],\"changed_by_id\":1,\"changed_by_email\":\"levelbuilder@dev.com\"},{\"changed_at\":\"2026-05-06 20:26:31 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":155,\"changed_by_email\":\"dani@code.org\"},{\"changed_at\":\"2026-05-08 13:31:33 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":155,\"changed_by_email\":\"dani@code.org\"},{\"changed_at\":\"2026-05-16 19:20:57 +0000\",\"changed\":[\"long_instructions\",\"display_name\",\"bubble_choice_description\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
 }]]></config>
 </Sketchlab>

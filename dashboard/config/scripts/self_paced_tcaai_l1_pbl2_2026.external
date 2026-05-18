@@ -5,9 +5,9 @@ description 'description here'
 markdown <<MARKDOWN
 # Milestones
 
-#### As previously mentioned, Thinking Critically About AI is split into **five milestones** to make progress toward the final project feel manageable for teachers and students.
+As previously mentioned, Thinking Critically About AI is split into **five milestones** to make progress toward the final project feel manageable for teachers and students.
 
-#### Each milestone spans two lessons and centers on a theme. Within each milestone, students investigate a guiding question that contributes to answering the unit’s overall driving question (*How can people make thoughtful decisions about when and how to use AI?*).
+Each milestone spans two lessons and centers on a theme. Within each milestone, students investigate a guiding question that contributes to answering the unit’s overall driving question (*How can people make thoughtful decisions about when and how to use AI?*).
 
 <!-- Sustained Inquiry -->
 <div style="background-color: #F5F7F8; padding: 15px; border-radius: 10px; margin: 20px 0; display: flex; align-items: flex-start; gap: 12px;">
@@ -20,7 +20,7 @@ markdown <<MARKDOWN
   </div>
 </div>
 
-#### Briefly review each of the Milestones below. We'll go into more depth with each later in this module.
+Briefly review each of the Milestones below. We'll go into more depth with each later in this module.
 
 <!-- Milestone 1 -->
 <details style="background-color: #ececec; padding: 12px; margin-bottom: 15px; border-radius: 6px;">

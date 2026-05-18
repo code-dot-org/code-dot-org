@@ -7,7 +7,7 @@
   "user_id": 18603,
   "properties": {
     "encrypted": "false",
-    "title": "Fairness and Inclusivity",
+    "title": "Check for Understanding",
     "long_instructions": "Reflect on the logic you analyzed and refactored in the previous level.\r\n\r\n* When is this rule true?\r\n* Who might be excluded or affected by this rule?\r\n* How could you change the rule to make it more fair?",
     "stay_on_level_after_submit": "false",
     "height": "100",
@@ -22,7 +22,7 @@
     "teacher_markdown": "Prompt students to actively propose solutions for improving inclusivity and to consider the trade-offs or unintended consequences of those solutions. Encourage students to think critically about the potential for bias or exclusion in their designed rules, promoting a human-centered approach to coding.\r\n",
     "name_suffix": "_2026"
   },
-  "audit_log": "[{\"changed_at\":\"2026-03-20T23:46:40.842+00:00\",\"changed\":[\"cloned from \\\"ai-and-algorithmic-decisions-lesson10-level6_2025\\\"\"],\"cloned_from\":\"ai-and-algorithmic-decisions-lesson10-level6_2025\"},{\"changed_at\":\"2026-04-16 00:26:21 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2026-03-20T23:46:40.842+00:00\",\"changed\":[\"cloned from \\\"ai-and-algorithmic-decisions-lesson10-level6_2025\\\"\"],\"cloned_from\":\"ai-and-algorithmic-decisions-lesson10-level6_2025\"},{\"changed_at\":\"2026-04-16 00:26:21 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-05-16 18:24:20 +0000\",\"changed\":[\"title\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

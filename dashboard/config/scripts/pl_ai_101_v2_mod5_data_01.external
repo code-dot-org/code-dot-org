@@ -5,9 +5,9 @@ description 'description here'
 markdown <<MARKDOWN
 # AI Tools in Educational Settings
 
-#### AI tools designed for educational environments often include features that support safe, structured, and age-appropriate use. These tools are typically built with schools in mind and may include safeguards that are not present in general-purpose AI tools.
+AI tools designed for educational environments often include features that support safe, structured, and age-appropriate use. These tools are typically built with schools in mind and may include safeguards that are not present in general-purpose AI tools.
 
-#### Understanding these features can help educators make informed decisions about which tools are appropriate for classroom use.
+Understanding these features can help educators make informed decisions about which tools are appropriate for classroom use.
 
 
 <div style="text-align: center; width: 80%; margin: 0 auto;">
@@ -24,14 +24,14 @@ markdown <<MARKDOWN
 
 
 ## Common Safety Features in Education-Focused AI Tools
-#### Education-specific AI tools often include built-in protections to support student safety and responsible use:
+Education-specific AI tools often include built-in protections to support student safety and responsible use:
 
-* #### **Limits on Interactions** Some tools restrict how frequently students can interact with the AI (such as limiting the number of messages per day). These limits help prevent overuse and reduce the risk of misuse.
+* **Limits on Interactions** Some tools restrict how frequently students can interact with the AI (such as limiting the number of messages per day). These limits help prevent overuse and reduce the risk of misuse.
 
-* #### **Visibility and Oversight** Student interactions may be visible to teachers, administrators, or parents. This transparency allows educators to monitor how tools are being used and provide guidance when needed.
+* **Visibility and Oversight** Student interactions may be visible to teachers, administrators, or parents. This transparency allows educators to monitor how tools are being used and provide guidance when needed.
 
-* #### **Content Monitoring** Many tools include systems that scan for inappropriate or unsafe content. These safeguards help prevent misuse and ensure that interactions remain appropriate for a school setting.
+* **Content Monitoring** Many tools include systems that scan for inappropriate or unsafe content. These safeguards help prevent misuse and ensure that interactions remain appropriate for a school setting.
 
-#### These features are designed to support AI use in ways that are safe, supervised, and aligned to learning.
+These features are designed to support AI use in ways that are safe, supervised, and aligned to learning.
 
 MARKDOWN

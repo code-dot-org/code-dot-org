@@ -500,6 +500,12 @@ GEM
       google-apis-core (>= 0.9.1, < 2.a)
     google-apis-youtube_v3 (0.25.0)
       google-apis-core (>= 0.9.1, < 2.a)
+    google-protobuf (4.33.6)
+      bigdecimal
+      rake (>= 13)
+    google-protobuf (4.33.6-arm64-darwin)
+      bigdecimal
+      rake (>= 13)
     google-protobuf (4.33.6-x86_64-linux-gnu)
       bigdecimal
       rake (>= 13)

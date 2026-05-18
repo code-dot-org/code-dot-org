@@ -5,19 +5,19 @@ description 'description here'
 markdown <<MARKDOWN
 # If/ Else Conditionals 
 
-#### Conditionals let your program make decisions.They check whether something is true or false and then choose what to do next.
+Conditionals let your program make decisions.They check whether something is true or false and then choose what to do next.
 
 <img src="https://images.code.org/adfe383e838d3e72fa57df27d2e1ac44-image-1762364455509.png" alt="Happy birthday Python code condensed with a function" width="300px" style="display: block; float:right; margin: 0 0 0px 10px; border-radius:10px;">
 
 
 ## 💡 Think of it like a flowchart
 
-#### Your program asks a question — for example:  **“Is the score greater than 100?”**
+Your program asks a question — for example:  **“Is the score greater than 100?”**
 
-- #### If the answer is `true`, the program runs one set of instructions.
-- #### If the answer is `false`, it can do something else instead.
+- If the answer is `true`, the program runs one set of instructions.
+- If the answer is `false`, it can do something else instead.
 
-#### That question produces a **Boolean** value (true or false), which controls the flow of your program.
+That question produces a **Boolean** value (true or false), which controls the flow of your program.
 
 
  <div style="clear:both;"></div>
@@ -32,7 +32,7 @@ markdown <<MARKDOWN
 
 ## Next up
 
-#### Let's see how flowcharts translate to code. 
+Let's see how flowcharts translate to code. 
 
 ![]()
 MARKDOWN

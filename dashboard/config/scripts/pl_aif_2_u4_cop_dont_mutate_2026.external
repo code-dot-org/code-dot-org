@@ -5,19 +5,19 @@ description 'description here'
 markdown <<MARKDOWN
 # Copying Data: Undo & Reset
 
-#### Sometimes your app should filter or transform data without permanently changing it.
-#### Other times, data will change and users need a way to recover when they make a mistake.
+Sometimes your app should filter or transform data without permanently changing it.
+Other times, data will change and users need a way to recover when they make a mistake.
 
 ## When should we copy data?
 
-#### Copy data when you want to try something (like filtering, sorting, or editing) without losing the original.
-#### **This is especially important when:**
+Copy data when you want to try something (like filtering, sorting, or editing) without losing the original.
+**This is especially important when:**
 
-- #### Users might want to undo an action
+- Users might want to undo an action
 
-- #### Users might want to reset back to the original state
+- Users might want to reset back to the original state
 
-- #### Multiple parts of your app rely on the same dataset
+- Multiple parts of your app rely on the same dataset
 
 <div style="background-color:#B7E0E5; border-radius:10px; padding:14px; margin:18px auto; max-width:85%;"> <p style="font-size:14pt; margin:0; line-height:135%;"><strong>Key idea:</strong> If you mutate the original data, you can’t easily “go back” unless you saved a copy first.</p> </div>
 
@@ -27,14 +27,14 @@ markdown <<MARKDOWN
 
 ## Real-world examples: Undo and Reset
 
-#### Think about tools like word processors, drawing apps, or photo editors.
-#### **They work because they support recovery:**
+Think about tools like word processors, drawing apps, or photo editors.
+**They work because they support recovery:**
 
-- #### Undo lets you step back one change at a time
+- Undo lets you step back one change at a time
 
-- #### Reset restores the original version all at once
+- Reset restores the original version all at once
 
-#### Users expect these options because mistakes are normal. A good interface helps them recover quickly.
+Users expect these options because mistakes are normal. A good interface helps them recover quickly.
 
 <div style="clear:both;"></div>
 
@@ -45,26 +45,26 @@ markdown <<MARKDOWN
 ---
 
 ## Design thinking: Why this matters
-#### If users don’t have recovery options, they may:
+If users don’t have recovery options, they may:
 
-- #### Lose work
+- Lose work
 
-- #### Stop trusting the tool
+- Stop trusting the tool
 
-- #### Avoid exploring features
+- Avoid exploring features
 
-#### Copying data supports good design because it makes recovery possible.
+Copying data supports good design because it makes recovery possible.
 
 ---
 ## Reflect
 
-#### Take a moment to reflect before moving on.
+Take a moment to reflect before moving on.
 
-- #### What do undo and reset help you do as a user?
+- What do undo and reset help you do as a user?
 
-- #### What information would an app need to store to make undo/reset possible?
+- What information would an app need to store to make undo/reset possible?
 
-- #### How could changing the original data make recovery harder?
+- How could changing the original data make recovery harder?
 
 <details style="background-color:#ececec; padding:10px; margin-bottom:10px; border:1px solid transparent; border-radius:8px;"> <summary style="font-size:1.4em; font-weight:bold;">💡 Check your thinking</summary> <div style="margin-top:12px; margin-left:14px; margin-right:14px; margin-bottom:10px; font-size:13pt; line-height:145%;"> <ul> <li style = "font-size: 14pt";>Undo and reset let users recover from mistakes without fear. They support experimentation by making it safe to try things and go back if something doesn’t work.</li> <li style = "font-size: 14pt">The app needs access to a previous version of the data (often the original state or a history of changes) so it can restore what existed before the change.</li> <li style = "font-size: 14pt">If the original data is mutated, the previous state is lost. Without a saved copy, the app has nothing to return to, making undo or reset difficult or impossible.</li> </ul> </div> </details>
 
@@ -72,6 +72,6 @@ markdown <<MARKDOWN
 
 ## Next up
 
-#### In Web Lab, you’ll add Undo and Reset functions and make them work by storing a safe copy of the original data.
+In Web Lab, you’ll add Undo and Reset functions and make them work by storing a safe copy of the original data.
 
 MARKDOWN

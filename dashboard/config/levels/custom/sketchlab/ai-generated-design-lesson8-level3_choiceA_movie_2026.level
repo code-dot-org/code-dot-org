@@ -1,0 +1,75 @@
+<Sketchlab>
+  <config><![CDATA[{
+  "game_id": 75,
+  "created_at": "2026-05-07T20:05:27.000Z",
+  "level_num": "custom",
+  "user_id": 22366,
+  "properties": {
+    "encrypted": "false",
+    "display_name": "Comedy Filter",
+    "start_sources": {
+      "source": {
+        "nodes": [
+          {
+            "id": "d8d2ed37-7cba-4eb8-bdec-49332affca19",
+            "type": "shape",
+            "data": {
+              "shapeType": "rectangle",
+              "label": "",
+              "backgroundColor": "#f0fdf5",
+              "strokeColor": "var(--sketchlab-stroke-green)",
+              "showHandles": false
+            },
+            "position": {
+              "x": 278,
+              "y": 269.6999969482422
+            },
+            "width": 238,
+            "height": 287,
+            "measured": {
+              "width": 238,
+              "height": 287
+            },
+            "resizing": false,
+            "dragging": false
+          },
+          {
+            "id": "667d85e5-f03d-41f4-a177-54374bd585ae",
+            "type": "shape",
+            "data": {
+              "shapeType": "rectangle",
+              "label": "",
+              "backgroundColor": "var(--sketchlab-bg-gray)",
+              "strokeColor": "var(--sketchlab-stroke-blue)",
+              "showHandles": false
+            },
+            "position": {
+              "x": 529.8495685777075,
+              "y": 269.3274333016435
+            },
+            "width": 238,
+            "height": 287,
+            "measured": {
+              "width": 238,
+              "height": 287
+            },
+            "resizing": false,
+            "dragging": false
+          }
+        ],
+        "edges": [
+
+        ],
+        "viewport": {
+          "x": -201.24829558002966,
+          "y": -369.2261959283095,
+          "zoom": 1.9296781204465019
+        }
+      }
+    },
+    "long_instructions": "## **Plan a Movie Filter**\r\n\r\n### Do This:\r\n\r\n1. Choose one filter to plan:\r\n\r\n   * **Comedy**\r\n   * **Recent Movies**\r\n   * **High Rated**\r\n\r\n2. Annotate one of the movie objects:\r\n\r\n   * Circle the **property** your filter will check.\r\n   * Underline the **value** your filter will compare.\r\n\r\n3. Decide: Should this movie be **Kept** or **Removed**?\r\n\r\n4. Write how your filter works in your own words.\r\n\r\n5. Complete the code condition for your filter:\r\n\r\n6. Save this sketch to your **Backpack**.\r\n\r\n"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-05-07 20:05:33 +0000\",\"changed\":[],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-05-07 20:24:40 +0000\",\"changed\":[],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-05-07 20:51:09 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-05-07 21:09:52 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-05-07 21:15:40 +0000\",\"changed\":[],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-05-07 21:17:44 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-05-07 21:19:39 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-05-07 21:20:03 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-05-08 16:27:40 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-05-08 16:39:33 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
+}]]></config>
+</Sketchlab>
