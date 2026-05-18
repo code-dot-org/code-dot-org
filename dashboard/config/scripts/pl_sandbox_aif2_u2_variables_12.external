@@ -5,9 +5,9 @@ description 'description here'
 markdown <<MARKDOWN
 # Variables
 
-#### Have you ever noticed how a game keeps track of your score or how an app shows your number of likes? 
+Have you ever noticed how a game keeps track of your score or how an app shows your number of likes? 
 
-#### Programs do this using **variables!** Just like we use names to keep track of things in real life, programs use **variables** to keep track of changing information.
+Programs do this using **variables!** Just like we use names to keep track of things in real life, programs use **variables** to keep track of changing information.
 
 <div style="width:90%; margin:auto; font-family:sans-serif; font-size:14pt;">
 

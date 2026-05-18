@@ -7,7 +7,7 @@ markdown <<MARKDOWN
 
 <img src="https://images.code.org/da2d6f6c30ac5b47931d9affb929f6a5-Screenshot 2024-08-30 at 1.38.26 PM.png" alt="examples headlines of AI bias" width="400px" style="border: 2px solid black; border-radius: 8px; float:right; margin: 0 0 40px 40px">
 
-#### In this lesson, students **explore** why language models produce **hallucinations** or inaccurate outputs. They discuss how **bias** in training data leads to errors and act as AI Auditors to suggest proactive measures for mitigating harm from language models.
+In this lesson, students **explore** why language models produce **hallucinations** or inaccurate outputs. They discuss how **bias** in training data leads to errors and act as AI Auditors to suggest proactive measures for mitigating harm from language models.
 
 
 <div style="background-color: #a6e3e8; border-radius: 40px; color: #000000; width: 95%; padding: 1px 20px 1px 20px;">

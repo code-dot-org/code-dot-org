@@ -1,0 +1,14 @@
+{
+  "category_key": "javascript",
+  "content": "# OR Operator\n\nThe OR operator `||` checks whether at least one condition is true. Use `||` when your app should do something if one condition or another condition is true.",
+  "examples": "[{\"name\":\"Check Access\",\"description\":\"Show a message when the user is an admin or the owner of the page.\",\"code\":\"```\\nif (isAdmin === true || isOwner === true) {\\n  message.textContent = \\\"You can edit this page.\\\";\\n} else {\\n  message.textContent = \\\"You do not have edit access.\\\";\\n}\\n```\"}]",
+  "external_documentation": "",
+  "fields": "[]",
+  "key": "or-operator",
+  "name": "OR Operator",
+  "syntax": "`if (isAdmin || isOwner) { ... }`",
+  "tips": "- Use `||` between two Boolean values or conditions.\n- Only one side of `||` needs to be true for the whole condition to be true.\n- Put each comparison on its own side, like `score > 10 || hasBonus === true`.\n- Do not use `||` when both conditions need to be true.\n- In Web Lab, `||` is often used to check multiple possible choices or app states before updating the page.",
+  "methods": [
+
+  ]
+}

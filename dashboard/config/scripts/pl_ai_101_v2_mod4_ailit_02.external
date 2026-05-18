@@ -5,7 +5,7 @@ description 'description here'
 markdown <<MARKDOWN
 # The Four Domains of AI Literacy
 
-#### The AI Literacy Framework organizes learning into four domains that describe how students interact with AI. These domains provide practical entry points for integrating AI into classroom activities across subjects and grade levels.
+The AI Literacy Framework organizes learning into four domains that describe how students interact with AI. These domains provide practical entry points for integrating AI into classroom activities across subjects and grade levels.
 
 >#### 💬 **Quick Reflection:** At first look, which domain are you most interested in starting with?
 
@@ -74,6 +74,6 @@ markdown <<MARKDOWN
 
 
 
-#### Together, these four domains help students move from simply using AI to understanding, directing, and ultimately shaping how it works in the world.
+Together, these four domains help students move from simply using AI to understanding, directing, and ultimately shaping how it works in the world.
 
 MARKDOWN
