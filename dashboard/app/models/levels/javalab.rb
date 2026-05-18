@@ -201,6 +201,22 @@ class Javalab < Level
     }]
   end
 
+  # Pull the actual file contents out of whatever shape the level's
+  # start_sources value is in. Two legacy shapes are recognized:
+  #
+  #   - flat string:           "import ..."           (oldest)
+  #   - nested editor state:   {"text" => "...", "isVisible" => true, ...}
+  #
+  # Anything else is coerced to a string with `to_s` as a last resort. The
+  # nested shape was produced by the legacy `getSources` redux selector;
+  # `start_sources` on disk has been migrated to it over time for many
+  # levels.
+  def self.extract_file_contents(value)
+    return value if value.is_a?(String)
+    return value['text'].to_s if value.is_a?(Hash) && value.key?('text')
+    value.to_s
+  end
+
   # Convert legacy flat-hash start_sources ({filename => contents}) plus the
   # legacy flat validation hash into the codebridge MultiFileSource shape.
   # Idempotent: if input is already a MultiFileSource (has a 'files' key), it
@@ -214,7 +230,7 @@ class Javalab < Level
       fid = "f#{i}"
       files[fid] = {
         'id' => fid, 'name' => name, 'language' => 'java',
-        'contents' => contents.to_s, 'folderId' => folder_id,
+        'contents' => extract_file_contents(contents), 'folderId' => folder_id,
         'type' => 'starter', 'open' => i.zero?, 'active' => i.zero?,
       }
       open_files << fid if i.zero?
@@ -223,7 +239,7 @@ class Javalab < Level
       fid = "v#{i}"
       files[fid] = {
         'id' => fid, 'name' => name, 'language' => 'java',
-        'contents' => contents.to_s, 'folderId' => folder_id,
+        'contents' => extract_file_contents(contents), 'folderId' => folder_id,
         'type' => 'validation', 'open' => false, 'active' => false,
       }
     end

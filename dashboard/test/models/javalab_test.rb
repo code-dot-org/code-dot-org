@@ -78,6 +78,16 @@ class JavalabTest < ActiveSupport::TestCase
     assert_equal 1, result['openFiles'].size
   end
 
+  test 'convert_legacy_start_sources unwraps nested {text, isVisible} entries' do
+    result = Javalab.convert_legacy_start_sources(
+      {'MyClass.java' => {'text' => 'class MyClass {}', 'isVisible' => true}},
+      nil,
+    )
+    file = result['files'].values.first
+    assert_equal 'class MyClass {}', file['contents']
+    assert_equal 'MyClass.java', file['name']
+  end
+
   test 'convert_legacy_start_sources is idempotent on MultiFileSource shape' do
     new_shape = {
       'folders' => {'root' => {'id' => 'root', 'name' => 'src', 'parentId' => '0'}},
