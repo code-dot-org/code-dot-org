@@ -3,12 +3,14 @@ import {Typography} from '@mui/material';
 import React from 'react';
 
 import {Section} from '@cdo/apps/templates/teacherDashboard/types/teacherSectionTypes';
+import experiments from '@cdo/apps/util/experiments';
 import i18n from '@cdo/locale';
 
 import {TEACHER_NAVIGATION_PATHS} from '../../teacherNavigation/TeacherNavigationPaths';
 
 import {CourseContentDropdown} from './CourseContentDropdown';
 import {EmptyStateButton} from './EmptyStateButton';
+import SuggestedLessonLink from './SuggestedLessonLink';
 import {TaskButton} from './TaskButton';
 
 import styles from './teacherHomepage.module.scss';
@@ -30,6 +32,9 @@ const SectionCardBody: React.FC<SectionCardBodyProps> = ({section}) => {
             sectionId={section.id}
             path={'/catalog'}
           />
+        )}
+        {section.unitId && experiments.isEnabled('suggested-lesson') && (
+          <SuggestedLessonLink sectionId={section.id} />
         )}
       </div>
       <div className={styles.sectionCardBodyRight}>

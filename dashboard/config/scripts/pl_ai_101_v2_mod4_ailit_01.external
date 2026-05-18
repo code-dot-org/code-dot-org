@@ -5,15 +5,15 @@ description 'description here'
 markdown <<MARKDOWN
 # AILit Framework
 
-#### AI Literacy Frameworks are being developed to support educators in brining AI relevant skills into the classroom.
+AI Literacy Frameworks are being developed to support educators in brining AI relevant skills into the classroom.
 
 
-#### The **AILit Framework** is a joint initiative of the European Commission and the Organization for Economic Cooperation and Development (OECD). Code.org and leading international experts support its development.
+The **AILit Framework** is a joint initiative of the European Commission and the Organization for Economic Cooperation and Development (OECD). Code.org and leading international experts support its development.
 
 
-#### The AILit Framework provides a starting point for helping students understand and use AI in thoughtful, responsible ways. It is designed for all educators and can be integrated into existing subjects and lessons.
+The AILit Framework provides a starting point for helping students understand and use AI in thoughtful, responsible ways. It is designed for all educators and can be integrated into existing subjects and lessons.
 
-#### The framework is organized around three key elements that work together:
+The framework is organized around three key elements that work together:
 
 <div style="max-width:1000px; margin:20px auto; font-family:ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;">
 
@@ -65,8 +65,8 @@ Attitudes focus on how students approach AI.
 </div>
 
 
-#### Rather than focusing only on technical concepts, the framework emphasizes helping students think critically, make informed decisions, and use AI in ways that support learning and human judgment.
+Rather than focusing only on technical concepts, the framework emphasizes helping students think critically, make informed decisions, and use AI in ways that support learning and human judgment.
 
-#### The framework is flexible and meant to be applied across grade levels and subjects. Teachers can use it to identify small, meaningful ways to incorporate AI-related thinking into the lessons they already teach.
+The framework is flexible and meant to be applied across grade levels and subjects. Teachers can use it to identify small, meaningful ways to incorporate AI-related thinking into the lessons they already teach.
 
 MARKDOWN

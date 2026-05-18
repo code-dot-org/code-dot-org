@@ -7,19 +7,19 @@ markdown <<MARKDOWN
 
 <img src="https://images.code.org/fae3e057bee266b6e45ecc8a9080d86c-image-1736367701916.21.40 PM.png" alt="A young student sits at a table in front of a laptop and smiles." style="border-radius:20px; float: right; padding-right: 10px; height: 180px; clear: both; margin: 0px 20px 20px 20px;">
 
-#### Pressed for time? Unsure how to start teaching computer science? The following activities from Code.org's cross-subject curriculum, <a href="https://code.org/curriculum/csc" target="blank" rel="noopener noreferrer">CS Connections</a>, is a great place to start! CS Connections is mapped to the Common Core State Standards (CCSS) for ELA and Math, the Next Generation Science Standards (NGSS), and the Computer Science Teacher Association Standards (CSTA).
+Pressed for time? Unsure how to start teaching computer science? The following activities from Code.org's cross-subject curriculum, <a href="https://code.org/curriculum/csc" target="blank" rel="noopener noreferrer">CS Connections</a>, is a great place to start! CS Connections is mapped to the Common Core State Standards (CCSS) for ELA and Math, the Next Generation Science Standards (NGSS), and the Computer Science Teacher Association Standards (CSTA).
 
 ## What is CS Connections?
 
-#### **CS Connections** is a curriculum designed for third through fifth graders that helps you incorporate computer science into other subjects, whether you have an hour or a week to devote to coding time.
+**CS Connections** is a curriculum designed for third through fifth graders that helps you incorporate computer science into other subjects, whether you have an hour or a week to devote to coding time.
 
-#### CS Connections lessons:
+CS Connections lessons:
 
-* #### Reinforce learning in other subjects
-* #### Meet core subject standards
-* #### Are a fun way to teach students about computer science
-* #### Contain open-ended projects for more personalized learning
-* #### Are easy for any teacher with any background
+* Reinforce learning in other subjects
+* Meet core subject standards
+* Are a fun way to teach students about computer science
+* Contain open-ended projects for more personalized learning
+* Are easy for any teacher with any background
 
 <div style="flex: 1 1 calc(50% - 20px); background-color: rgba(0, 119, 134, .1); border-radius: 10px; padding: 20px; display: flex; align-items: center; margin: 20px 0px 20px 0px">
     <p style="font-size: 18px; line-height: 1.2; margin: 0;">
@@ -29,7 +29,7 @@ markdown <<MARKDOWN
 
 ## Explore CS Connections
 
-#### Explore CS Connections curricula below! Review these activities and choose a few to try with your students. Share one with a colleague!
+Explore CS Connections curricula below! Review these activities and choose a few to try with your students. Share one with a colleague!
 
 <div style="background-color: #F7F8FA; border-radius: 20px; padding: 15px; margin: 10px;">
 
@@ -44,7 +44,7 @@ markdown <<MARKDOWN
 </p>
 <p>
 
-#### Use code to create an animated cover of a book, using sprites and text to convey characters, setting, plot, and more.
+Use code to create an animated cover of a book, using sprites and text to convey characters, setting, plot, and more.
 </p>
 </div>
 </div>
@@ -58,7 +58,7 @@ markdown <<MARKDOWN
 </p>
 <p>
 
-#### Explore the intersection of coding and language arts by creating interactive poems, bringing words to life through programming.
+Explore the intersection of coding and language arts by creating interactive poems, bringing words to life through programming.
 </p>
 </div>
 </div>
@@ -77,7 +77,7 @@ markdown <<MARKDOWN
 </p>
 <p>
 
-#### Learn code to create geometric patterns in stunning star quilts, blending mathematical concepts with creative expression.
+Learn code to create geometric patterns in stunning star quilts, blending mathematical concepts with creative expression.
 </p>
 </div>
 </div>
@@ -96,7 +96,7 @@ markdown <<MARKDOWN
 </p>
 <p>
 
-#### Use coding to simulate a marine ecosystem, exploring the interdependencies between different organisms and their environment.
+Use coding to simulate a marine ecosystem, exploring the interdependencies between different organisms and their environment.
 </p>
 </div>
 </div>
@@ -110,7 +110,7 @@ markdown <<MARKDOWN
 </p>
 <p>
 
-#### Use code to model animal adaptations, deepening your understanding of how different species have evolved to survive in their environments.
+Use code to model animal adaptations, deepening your understanding of how different species have evolved to survive in their environments.
 </p>
 </div>
 </div>
@@ -129,7 +129,7 @@ markdown <<MARKDOWN
 </p>
 <p>
 
-#### Create a digital time capsule to capture and preserve memories for the future.
+Create a digital time capsule to capture and preserve memories for the future.
 </p>
 </div>
 </div>
@@ -143,7 +143,7 @@ markdown <<MARKDOWN
 </p>
 <p>
 
-#### Use coding to develop a map that tells a story, allowing you to explore geographic information in an engaging and interactive way.
+Use coding to develop a map that tells a story, allowing you to explore geographic information in an engaging and interactive way.
 </p>
 </div>
 </div>
@@ -165,7 +165,7 @@ ___
 </p>
 <p>
 
-#### In this hour-long version of our Coding with Poetry module, students will explore the intersection of coding and language arts by creating interactive poems, illustrating the mood and tone with code.
+In this hour-long version of our Coding with Poetry module, students will explore the intersection of coding and language arts by creating interactive poems, illustrating the mood and tone with code.
 </p>
 </div>
 </div>
@@ -179,7 +179,7 @@ ___
 </p>
 <p>
 
-#### Students embark on their coding journey with this Hello World lesson, designed specifically for beginners! Explore Sprite Lab, an intuitive block-based programming interface, and master foundational skills for future coding projects in the K-5 curriculum.
+Students embark on their coding journey with this Hello World lesson, designed specifically for beginners! Explore Sprite Lab, an intuitive block-based programming interface, and master foundational skills for future coding projects in the K-5 curriculum.
 </p>
 </div>
 </div>

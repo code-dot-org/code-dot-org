@@ -14,7 +14,7 @@
     "parent_level_id": 20772,
     "name_suffix": "_2026",
     "encrypted": "false",
-    "long_instructions": "#### This video is included in the AI Discoveries curriculum to introduce students to if-else conditional statements. \r\n\r\n### **As you watch the video, consider the following:**\r\n\r\n#### How will if-else statements allow my students to make games in Game Lab?\r\n"
+    "long_instructions": "This video is included in the AI Discoveries curriculum to introduce students to if-else conditional statements. \r\n\r\n### **As you watch the video, consider the following:**\r\n\r\nHow will if-else statements allow my students to make games in Game Lab?\r\n"
   },
   "notes": "",
   "audit_log": "[{\"changed_at\":\"2026-04-13T19:16:55.392+00:00\",\"changed\":[\"cloned from \\\"VPL-CSD-PILOT-S22-CI-CSD U3 - Conditionals Video_25_2025\\\"\"],\"cloned_from\":\"VPL-CSD-PILOT-S22-CI-CSD U3 - Conditionals Video_25_2025\"},{\"changed_at\":\"2026-04-24 22:26:26 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":10559,\"changed_by_email\":\"aryanna@code.org\"}]",

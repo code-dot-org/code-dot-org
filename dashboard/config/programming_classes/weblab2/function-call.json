@@ -1,0 +1,14 @@
+{
+  "category_key": "javascript",
+  "content": "# Function Call\n\nA function call tells JavaScript to run a function that has already been created. Use the function name followed by parentheses to make the code inside the function happen.",
+  "examples": "[{\"name\":\"Run a Function\",\"description\":\"This calls `updateScreen()` so the code inside that function runs.\",\"code\":\"```\\nconst updateScreen = () =\\u003e {\\n  message.textContent = \\\"Screen updated!\\\";\\n};\\n\\nupdateScreen();\\n```\"}]",
+  "external_documentation": "",
+  "fields": "[]",
+  "key": "function-call",
+  "name": "Function Call",
+  "syntax": "`updateScreen();`",
+  "tips": "- Use the function name followed by parentheses to call a function.\n- The function must be created before it can be called.\n- Remember to include the parentheses, like `updateScreen()`.\n- A function call can happen inside an event handler, inside another function, or after a function is created.\n- In Web Lab, function calls often update the page after a button click or user choice.",
+  "methods": [
+
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "category_key": "javascript",
+  "content": "# Query Selector All\n\nThe `document.querySelectorAll()` method finds all elements on the page that match a CSS selector. Use it when you want to select a group of elements, such as all buttons, all cards, or all elements with the same class.",
+  "examples": "[{\"name\":\"Select All Cards\",\"description\":\"This selects every element with the class `card.`\",\"code\":\"`const cards = document.querySelectorAll(\\\".card\\\");`\"},{\"name\":\"Select All Buttons\",\"description\":\"This selects all `button` elements on the page.\",\"code\":\"`const buttons = document.querySelectorAll(\\\"button\\\");`\"}]",
+  "external_documentation": "",
+  "fields": "[]",
+  "key": "query-selector-all",
+  "name": "Query Selector All",
+  "syntax": "`document.querySelectorAll(\".card\")`",
+  "tips": "- `document.querySelectorAll()` selects all elements that match the selector.\n- Use `.` before a class name, like `\".card\"`.\n- Use `#` before an `id`, like `\"#main\"`, but `id` values should usually be unique.\n- Remember to put the selector inside quotation marks.\n- In Web Lab, this method is often used when code needs to update or check several elements on the page.",
+  "methods": [
+
+  ]
+}

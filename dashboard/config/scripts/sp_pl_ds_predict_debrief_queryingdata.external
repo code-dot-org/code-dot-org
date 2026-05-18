@@ -9,15 +9,15 @@ markdown <<MARKDOWN
 
 
 ## 🔎You might have noticed:
-#### A logical operator filter is applied to the DataFrame, which:
-- #### Filters out rows where the city is not 'New York'.
-- #### Filters for rows where the power level is greater than 90.
-- #### Ensures the affiliation column is not null.
+A logical operator filter is applied to the DataFrame, which:
+- Filters out rows where the city is not 'New York'.
+- Filters for rows where the power level is greater than 90.
+- Ensures the affiliation column is not null.
 
 
 ## 💡You might Wonder: 
-- #### The meanings of symbols and functions in the expression (e.g., !=, &, notnull).
-- #### The overall purpose of the expression and what it is evaluating.
+- The meanings of symbols and functions in the expression (e.g., !=, &, notnull).
+- The overall purpose of the expression and what it is evaluating.
 
 <br>
 

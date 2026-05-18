@@ -12,7 +12,7 @@
     "parent_level_id": 21258,
     "name_suffix": "_k5-maker-2024",
     "encrypted": "false",
-    "long_instructions": "## What Are Events? \r\n\r\n#### <b>Events </b> are actions that cause something to happen. In code, events allow user interaction, like the arrow button being clicked to cause a sprite to move. In Flappy Bird, you will use events to code a game.\r\n\r\n\r\n<img src=\"https://images.code.org/365260b061905b3495f28eb1cbafcc92-image-1706655509364.58.24 PM.png\" alt=\"Image of the block code of an event handler\" width=\"350px\" style=\"border-radius:10px; float:right; margin: 0 0 0px 40px;\">\r\n\r\n## Let’s take a look at coding with events. \r\n\r\n\r\n\r\n \r\n\r\n\r\n\r\n\r\n"
+    "long_instructions": "## What Are Events? \r\n\r\n<b>Events </b> are actions that cause something to happen. In code, events allow user interaction, like the arrow button being clicked to cause a sprite to move. In Flappy Bird, you will use events to code a game.\r\n\r\n\r\n<img src=\"https://images.code.org/365260b061905b3495f28eb1cbafcc92-image-1706655509364.58.24 PM.png\" alt=\"Image of the block code of an event handler\" width=\"350px\" style=\"border-radius:10px; float:right; margin: 0 0 0px 40px;\">\r\n\r\n## Let’s take a look at coding with events. \r\n\r\n\r\n\r\n \r\n\r\n\r\n\r\n\r\n"
   },
   "published": true,
   "notes": "",
