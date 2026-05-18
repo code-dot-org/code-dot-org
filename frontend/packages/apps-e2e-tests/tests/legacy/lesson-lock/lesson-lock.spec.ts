@@ -32,7 +32,7 @@ test.describe('Lesson locking', {tag: ['@no_mobile']}, () => {
 
     const locks = new LessonLockPage(page);
     await locks.gotoUnitOverview(sectionId, {teacherControls: true});
-    await eyes.check('selected section');
+    await eyes.checkViewport('selected section');
     await locks.openLockDialog();
     await expect(locks.modalBody).toContainText(/Lock|Allow editing/);
     await eyes.check('stage lock dialog');

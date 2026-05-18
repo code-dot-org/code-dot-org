@@ -44,15 +44,16 @@ test.describe('Teacher lesson plan', () => {
     await eyes.open('level details dialog');
     await lessonPlan.openLesson(5);
     await lessonPlan.openLevelDetails(0);
-    await eyes.check('bubble choice preview');
+    await eyes.checkLocator(lessonPlan.modal, 'bubble choice preview');
     await lessonPlan.dismissLevelDetails();
 
     await lessonPlan.openLevelDetails(1);
-    await eyes.check('standalone video preview');
+    await lessonPlan.expectVideoPreviewReady();
+    await eyes.checkLocator(lessonPlan.modal, 'standalone video preview');
     await lessonPlan.dismissLevelDetails();
 
     await lessonPlan.openLevelDetails(2);
-    await eyes.check('level instructions preview');
+    await eyes.checkLocator(lessonPlan.modal, 'level instructions preview');
     await lessonPlan.dismissLevelDetails();
   });
 

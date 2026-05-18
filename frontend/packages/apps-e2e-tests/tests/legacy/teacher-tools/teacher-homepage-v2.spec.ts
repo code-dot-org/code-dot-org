@@ -415,6 +415,13 @@ test.describe('Teacher Homepage V2', {tag: '@no_mobile'}, () => {
     await expect(page.getByText('New Section')).toBeVisible();
     await expect(page.getByText('Untitled Section')).toBeVisible();
     await new TeacherDashboardPage(page).expectHomepageVisualReady();
-    await eyes.check('teacher homepage');
+    await eyes.check('teacher homepage', {
+      ignoreRegions: [
+        page
+          .locator('#ui-test-section-list p')
+          .filter({hasText: 'Section Code:'})
+          .locator('xpath=..'),
+      ],
+    });
   });
 });

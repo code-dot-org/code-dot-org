@@ -162,6 +162,45 @@ export class CertificatePage {
     await this.page.getByRole('button', {name: 'Submit'}).click();
     await expect(this.thanksMessage).toBeVisible();
     await this.expectGeneratedCertificateImage();
+    await this.waitForConfettiSettled();
+  }
+
+  /**
+   * Wait for the randomized certificate confetti to finish before visual
+   * checkpoints. The visual fixture disables animations at screenshot time; if
+   * called too early, that freezes confetti at a random frame.
+   */
+  async waitForConfettiSettled(): Promise<void> {
+    const certificate = this.certificate;
+    await expect
+      .poll(
+        async () =>
+          certificate.evaluate(element => {
+            const wrapper = element.firstElementChild;
+            if (!(wrapper instanceof HTMLElement)) {
+              return true;
+            }
+
+            const pieces = [...wrapper.querySelectorAll<HTMLElement>('*')];
+            if (pieces.length === 0) {
+              return true;
+            }
+
+            return pieces.every(piece => {
+              const rect = piece.getBoundingClientRect();
+              const style = getComputedStyle(piece);
+              return (
+                rect.width === 0 ||
+                rect.height === 0 ||
+                style.display === 'none' ||
+                style.visibility === 'hidden' ||
+                Number(style.opacity) === 0
+              );
+            });
+          }),
+        {timeout: 8_000},
+      )
+      .toBe(true);
   }
 
   /**
@@ -282,5 +321,8 @@ export class CertificatePage {
     await expect(this.page).toHaveURL(/\/print_certificates\/batch/);
     await expect(this.batchPrintActions).toBeVisible();
     await expect(this.batchCertificateImages).toHaveCount(names.length);
+    for (let index = 0; index < names.length; index++) {
+      await this.expectImageLoaded(this.batchCertificateImages.nth(index));
+    }
   }
 }

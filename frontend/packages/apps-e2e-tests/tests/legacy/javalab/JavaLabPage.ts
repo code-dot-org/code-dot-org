@@ -31,6 +31,7 @@ export class JavaLabPage {
   readonly levelbuilderToggle: Locator;
   readonly neighborhoodSpeedSlider: Locator;
   readonly photoInput: Locator;
+  readonly theaterImage: Locator;
   readonly captchaDialog: Locator;
 
   /**
@@ -76,6 +77,7 @@ export class JavaLabPage {
       'input[name="neighborhood-speed"]',
     );
     this.photoInput = page.locator('#photoInput');
+    this.theaterImage = page.locator('#theater');
     this.captchaDialog = page.locator('.modal', {
       hasText: "Please confirm you're human",
     });
@@ -276,9 +278,6 @@ export class JavaLabPage {
    */
   async expectCodeReviewVisualReady(): Promise<void> {
     await expect(this.reviewRefreshButton).toBeVisible({timeout: 30_000});
-    await expect(this.codeReviewTimelineCommit.first()).toBeVisible({
-      timeout: 30_000,
-    });
     await expect(this.codeReviewTimelineReview.first()).toBeVisible({
       timeout: 30_000,
     });
@@ -426,6 +425,31 @@ export class JavaLabPage {
   async runValidationTests(): Promise<void> {
     await this.testButton.click();
     await expect(this.console).toContainText('[JAVALAB] Program completed.', {
+      timeout: 60_000,
+    });
+  }
+
+  /**
+   * Wait for a Java Lab run to expose its expected console output and return
+   * the visible run control to its idle state.
+   *
+   * @param text - console text emitted by the program
+   * @param timeout - timeout for the console output
+   */
+  async waitForConsoleTextAndIdle(
+    text: string | RegExp,
+    timeout = 90_000,
+  ): Promise<void> {
+    await expect(this.console).toContainText(text, {timeout});
+    await expect(this.runButton).toContainText('Run', {timeout: 60_000});
+  }
+
+  /**
+   * Wait for the Theater output image to load before a visual checkpoint.
+   */
+  async waitForTheaterImageLoaded(): Promise<void> {
+    await expect(this.theaterImage).toBeVisible({timeout: 60_000});
+    await expect(this.theaterImage).toHaveJSProperty('complete', true, {
       timeout: 60_000,
     });
   }

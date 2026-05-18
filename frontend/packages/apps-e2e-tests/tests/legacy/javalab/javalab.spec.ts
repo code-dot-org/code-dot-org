@@ -335,57 +335,27 @@ test.describe('Java Lab — commit code', () => {
     'commit with notes appears in version history',
     {tag: '@no_mobile'},
     async ({page}) => {
-      await page.goto(`${LESSON_44}/levels/1?noautoplay=true`);
-      await page
-        .locator('#javalab-editor-save')
-        .waitFor({state: 'visible', timeout: 30_000});
+      const lab = new JavaLabPage(page);
 
-      // Ensure the commit points at a fresh saved object version.  Without a
-      // source edit, the version-history request can race against autosave and
-      // show only the initial/autosave rows.
-      await page.getByRole('textbox').first().click();
-      await page.keyboard.insertText('// commit test\n');
+      await page.goto(`${LESSON_44}/levels/1?noautoplay=true`);
+      await lab.waitForReady();
       await expect(page.locator('.project_updated_at')).toContainText('Saved', {
         timeout: 60_000,
       });
 
-      // Open commit dialog and enter notes.
-      await page.locator('#javalab-editor-save').click();
-      await page
-        .locator('#commit-notes')
-        .waitFor({state: 'visible', timeout: 15_000});
-      await page.locator('#commit-notes').fill('my commit notes');
-      await expect(page.locator('#commit-notes')).toHaveValue(
-        'my commit notes',
-      );
+      await lab.commitCode('my commit notes');
 
-      // Confirm commit.  The dialog closes only after POST /project_commits
-      // succeeds (see onCommitCode → fetch.then → handleCommitSaveSuccess →
-      // handleClose), so waiting for the dialog to hide is sufficient to
-      // guarantee the commit is persisted before we open version history.
-      const commitSaved = page.waitForResponse(
-        resp =>
-          resp.url().includes('/project_commits') &&
-          resp.request().method() === 'POST',
-        {timeout: 30_000},
-      );
-      await page.locator('#confirmationButton').click();
-      await commitSaved;
-      await page
-        .locator('#commit-notes')
-        .waitFor({state: 'hidden', timeout: 15_000});
-
-      // Open version history.
       await page.locator('#data-mode-versions-header').click();
       await page.locator('.modal').waitFor({state: 'visible', timeout: 15_000});
+      await expect(page.locator('.modal tr:last-child p')).toContainText(
+        'Initial version',
+        {timeout: 30_000},
+      );
 
-      // Both rows must be present.  Assert by content (server ordering may vary).
-      await expect(
-        page.locator('.modal tr', {hasText: 'my commit notes'}),
-      ).toBeVisible({timeout: 30_000});
-      await expect(
-        page.locator('.modal tr', {hasText: 'Initial version'}),
-      ).toBeVisible();
+      await expect(page.locator('.modal tr').first()).toContainText(
+        'my commit notes',
+        {timeout: 30_000},
+      );
     },
   );
 
@@ -694,7 +664,10 @@ test.describe('Java Lab — visual level flows', () => {
       await expect(lab.console).toContainText('[JAVALAB] Program completed.', {
         timeout: 90_000,
       });
-      await eyes.check('GIF end state');
+      await lab.waitForTheaterImageLoaded();
+      await eyes.check('GIF end state', {
+        ignoreRegions: [lab.theaterImage],
+      });
     },
   );
 
@@ -726,6 +699,7 @@ test.describe('Java Lab — visual level flows', () => {
       await expect(lab.console).toContainText('[JAVALAB] Program completed.', {
         timeout: 90_000,
       });
+      await lab.waitForTheaterImageLoaded();
       await eyes.check('prompter end state');
     },
   );
@@ -749,9 +723,7 @@ test.describe('Java Lab — visual level flows', () => {
       await lab.setNeighborhoodSpeedToFast();
       await eyes.check('initial page load');
       await lab.runButton.click();
-      await expect(lab.console).toContainText('Done painting', {
-        timeout: 180_000,
-      });
+      await lab.waitForConsoleTextAndIdle('Done painting', 180_000);
       await eyes.check('paint glomming');
     },
   );

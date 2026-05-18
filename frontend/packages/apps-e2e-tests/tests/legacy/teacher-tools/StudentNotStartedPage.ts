@@ -1,5 +1,7 @@
 import {expect, type Page} from '@playwright/test';
 
+import {dismissTeacherPanel} from '../../shared/ui';
+
 /**
  * Page object for teacher-panel student-work readiness on lab levels.
  */
@@ -52,6 +54,11 @@ export class StudentNotStartedPage {
     ]);
     await this.page.waitForLoadState('domcontentloaded');
     await expect(this.page).toHaveURL(/[?&]user_id=\d+/, {timeout: 30_000});
+    await expect(studentRow).toBeVisible({timeout: 60_000});
+    await expect(this.page.locator('.uitest-feedback')).toBeVisible({
+      timeout: 60_000,
+    });
+    await dismissTeacherPanel(this.page);
   }
 
   /**

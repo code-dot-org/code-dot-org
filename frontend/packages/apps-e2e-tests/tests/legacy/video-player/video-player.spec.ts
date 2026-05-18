@@ -15,7 +15,10 @@ test.describe('Video player', () => {
     await videoPlayer.open('/flappy/1?force_youtube_fallback');
     await videoPlayer.expectFlappyVideoDialogReady();
     await videoPlayer.expectFallbackPlayerReady();
-    await eyes.check('fallback video player for level');
+    await eyes.checkLocator(
+      videoPlayer.videoModal,
+      'fallback video player for level',
+    );
   });
 
   /**

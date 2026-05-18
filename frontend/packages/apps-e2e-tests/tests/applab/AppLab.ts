@@ -67,6 +67,21 @@ export class AppLab {
   /** Teacher-side unsubmit button for the selected student's work. */
   readonly teacherUnsubmitButton: Locator;
 
+  /** Debugger step-in button, visible when the debug area is open. */
+  readonly stepInButton: Locator;
+
+  /** Debugger continue button, enabled when execution is paused. */
+  readonly continueButton: Locator;
+
+  /** ACE editor active-line marker shown at the paused statement. */
+  readonly aceActiveLine: Locator;
+
+  /** ACE text line for the generated canvas code used by debugging tests. */
+  readonly createCanvasLine: Locator;
+
+  /** ACE text line for the generated button code used by debugging tests. */
+  readonly buttonLine: Locator;
+
   constructor(page: Page) {
     this.page = page;
     this.runButton = page.locator('#runButton');
@@ -87,6 +102,17 @@ export class AppLab {
     this.teacherPanel = page.locator('#teacher-panel-container');
     this.teacherPanelRows = page.locator('#teacher-panel-container tr');
     this.teacherUnsubmitButton = page.locator('#unsubmit-button-uitest');
+    this.stepInButton = page.locator('#stepInButton');
+    this.continueButton = page.locator('#continueButton');
+    this.aceActiveLine = page.locator('.ace_active-line');
+    this.createCanvasLine = page
+      .locator('.ace_line')
+      .filter({hasText: 'createCanvas'})
+      .first();
+    this.buttonLine = page
+      .locator('.ace_line')
+      .filter({hasText: 'button'})
+      .first();
   }
 
   /**
@@ -158,6 +184,113 @@ export class AppLab {
     if (await chevron.isVisible()) {
       await chevron.click();
     }
+  }
+
+  /**
+   * Step into App Lab code and wait for the visible paused-debugger state.
+   * Agent Browser showed this state through the Reset button, enabled Continue
+   * controls, and the ACE active-line marker.
+   */
+  async stepIntoDebugger(): Promise<void> {
+    await expect(this.stepInButton).toBeVisible({timeout: 15_000});
+    await this.stepInButton.click();
+    await expect(this.resetButton).toBeVisible({timeout: 15_000});
+    await expect(this.continueButton).toBeEnabled({timeout: 15_000});
+    await expect(this.stepInButton).toBeEnabled({timeout: 15_000});
+    await expect(this.aceActiveLine).toBeVisible({timeout: 15_000});
+    await this.refreshTextEditorRendering();
+    await expect(this.page.locator('.ace_text-layer')).toBeVisible({
+      timeout: 15_000,
+    });
+    await expect(this.createCanvasLine).toBeVisible({timeout: 15_000});
+    await expect(this.buttonLine).toBeVisible({timeout: 15_000});
+    await this.waitForStableDebugLayout();
+  }
+
+  /**
+   * Force ACE to repaint before visual checks. Under parallel load the ACE
+   * line DOM can be present while the editor surface has not repainted yet.
+   */
+  async refreshTextEditorRendering(): Promise<void> {
+    await this.page.evaluate(() => {
+      const testInterface = (
+        window as unknown as {
+          __TestInterface?: {
+            getDroplet?: () => {
+              aceEditor?: {
+                renderer?: {updateFull?: (force?: boolean) => void};
+                resize?: (force?: boolean) => void;
+              };
+            };
+          };
+        }
+      ).__TestInterface;
+      const aceEditor = testInterface?.getDroplet?.().aceEditor;
+      aceEditor?.renderer?.updateFull?.(true);
+      aceEditor?.resize?.(true);
+    });
+  }
+
+  /**
+   * Wait for the editor/debugger region to stop shifting before a visual
+   * checkpoint.
+   */
+  async waitForStableDebugLayout(): Promise<void> {
+    await this.waitForStableVisualLayout([
+      '#codeWorkspaceWrapper',
+      '#debug-area',
+      '#debug-commands',
+      '.ace_text-layer',
+      '.ace_active-line',
+    ]);
+  }
+
+  /**
+   * Wait for App Lab visual regions to stop shifting.
+   *
+   * @param selectors - CSS selectors whose boxes and text should be stable
+   */
+  async waitForStableVisualLayout(selectors: string[]): Promise<void> {
+    await this.page.waitForFunction(
+      stableSelectors =>
+        new Promise<boolean>(resolve => {
+          let previous = '';
+          let stableFrames = 0;
+          const signature = () =>
+            stableSelectors
+              .flatMap(selector =>
+                Array.from(document.querySelectorAll(selector)),
+              )
+              .map(element => {
+                const box = element.getBoundingClientRect();
+                const styles = getComputedStyle(element);
+                return [
+                  Math.round(box.x),
+                  Math.round(box.y),
+                  Math.round(box.width),
+                  Math.round(box.height),
+                  styles.opacity,
+                  styles.transform,
+                  element.textContent?.trim(),
+                ].join(':');
+              })
+              .join('|');
+
+          const check = () => {
+            const current = signature();
+            stableFrames = current === previous ? stableFrames + 1 : 0;
+            previous = current;
+            if (stableFrames >= 5) {
+              resolve(true);
+            } else {
+              requestAnimationFrame(check);
+            }
+          };
+          requestAnimationFrame(check);
+        }),
+      selectors,
+      {timeout: 15_000},
+    );
   }
 
   /** Click the run button to execute the current program. */
@@ -324,6 +457,20 @@ export class AppLab {
    */
   async waitForDataLibrary(): Promise<void> {
     await expect(this.dataLibraryContainer).toBeVisible({timeout: 30_000});
+    await expect(
+      this.dataLibraryContainer.getByPlaceholder('Search'),
+    ).toBeVisible({timeout: 30_000});
+    await expect(this.dataLibraryContainer.getByText('Animals')).toBeVisible({
+      timeout: 30_000,
+    });
+    await expect(
+      this.dataLibraryContainer.getByText('Transportation'),
+    ).toBeVisible({timeout: 30_000});
+    await this.waitForStableVisualLayout([
+      '#dataWorkspaceWrapper',
+      '#data-library-container',
+      '#dataTable',
+    ]);
   }
 
   /**

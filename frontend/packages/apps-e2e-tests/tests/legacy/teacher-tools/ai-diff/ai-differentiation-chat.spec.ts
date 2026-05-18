@@ -20,7 +20,35 @@ function aiDiffThreadDynamicIgnoreRegions(page: Page) {
     page
       .getByRole('navigation', {name: 'AI differentiation chat threads'})
       .locator('li p'),
+    page
+      .getByRole('navigation', {name: 'AI differentiation chat threads'})
+      .getByText('Notifications')
+      .locator('xpath=..'),
   ];
+}
+
+async function expectAiDiffThreadsVisualReady(page: Page): Promise<void> {
+  await expect(
+    page.getByRole('heading', {name: 'Unit 1 - UI Test Artist'}),
+  ).toBeVisible({timeout: 30_000});
+  await expect(page.getByText('View page as:')).toBeVisible({
+    timeout: 30_000,
+  });
+  await expect(page.getByRole('button', {name: 'Teacher'})).toBeVisible({
+    timeout: 30_000,
+  });
+  await page
+    .locator('#ui-floatingActionButton')
+    .waitFor({state: 'visible', timeout: 20_000});
+  await page
+    .getByRole('button', {name: 'Suggest prompts'})
+    .waitFor({state: 'visible', timeout: 30_000});
+  await expect(
+    page.getByRole('navigation', {name: 'AI differentiation chat threads'}),
+  ).toBeVisible({timeout: 30_000});
+  await expect(page.locator('#uitest-chat-textarea')).toBeVisible({
+    timeout: 30_000,
+  });
 }
 
 test.describe(
@@ -234,12 +262,7 @@ test.describe(
       await addUserToExperiment(page, 'ai-differentiation');
 
       await page.goto('/courses/ui-test-artist/units/1');
-      await page
-        .locator('#ui-floatingActionButton')
-        .waitFor({state: 'visible', timeout: 20_000});
-      await page
-        .getByRole('button', {name: 'Suggest prompts'})
-        .waitFor({state: 'visible', timeout: 30_000});
+      await expectAiDiffThreadsVisualReady(page);
 
       await eyes.open('ai diff threads');
       await eyes.check('ai diff threads starting state', {

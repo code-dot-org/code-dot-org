@@ -27,8 +27,13 @@ export class TeacherStudentTogglePage {
   readonly page: Page;
   readonly viewAsStudent: Locator;
   readonly viewAsTeacher: Locator;
+  readonly headerProgress: Locator;
+  readonly teacherPanel: Locator;
   readonly teacherPanelRows: Locator;
+  readonly multiChoiceHeading: Locator;
+  readonly multiChoiceSubmit: Locator;
   readonly progressDropdown: Locator;
+  readonly progressDropdownPanel: Locator;
   readonly progressTable: Locator;
   readonly lockedLesson: Locator;
   readonly levelGroup: Locator;
@@ -44,8 +49,15 @@ export class TeacherStudentTogglePage {
     this.viewAsTeacher = page
       .locator('.uitest-viewAsTeacher')
       .or(page.getByRole('tab', {name: 'Teacher'}));
+    this.headerProgress = page.locator('#lesson_progress_container');
+    this.teacherPanel = page.locator('.teacher-panel');
     this.teacherPanelRows = page.locator('#teacher-panel-container tr');
+    this.multiChoiceHeading = page.getByRole('heading', {
+      name: 'Multiple Choice',
+    });
+    this.multiChoiceSubmit = page.locator('.submitButton');
     this.progressDropdown = page.locator('.header_popup_link');
+    this.progressDropdownPanel = page.locator('.header_popup');
     this.progressTable = page.locator('.uitest-summary-progress-table');
     this.lockedLesson = page.locator('#locked-lesson');
     this.levelGroup = page.locator('.level-group');
@@ -58,9 +70,10 @@ export class TeacherStudentTogglePage {
     await this.page.goto(
       `/courses/allthethingscourse/units/1/lessons/9/levels/1?section_id=${sectionId}&viewAs=Instructor`,
     );
-    await expect(this.page.locator('.submitButton')).toBeVisible({
-      timeout: 30_000,
-    });
+    await this.expectMultiLevelVisualReady();
+    await this.expectTeacherPanelRosterReady();
+    await this.expectTeacherPanelStudentRowReady();
+    await this.expectTeacherPanelLevelSummaryReady();
   }
 
   /**
@@ -82,17 +95,18 @@ export class TeacherStudentTogglePage {
    */
   async openHiddenMazeLevel(sectionId: number): Promise<void> {
     await this.openUnitOverview(sectionId);
-    await this.page
-      .locator('.uitest-togglehidden')
-      .nth(1)
-      .locator('div', {hasText: 'Hidden'})
-      .click();
+    const hiddenLessonToggle = this.page.locator('.uitest-togglehidden').nth(1);
+    await hiddenLessonToggle.locator('div', {hasText: 'Hidden'}).click();
     await this.page.goto(
       `/courses/allthethingscourse/units/1/lessons/2/levels/1?noautoplay=true&section_id=${sectionId}&viewAs=Instructor`,
     );
     await expect(this.page.locator('#runButton')).toBeVisible({
       timeout: 30_000,
     });
+    await this.expectTeacherPanelRosterReady();
+    await this.expectTeacherPanelStudentRowReady();
+    await this.expectTeacherPanelLevelSummaryReady();
+    await this.expectHeaderProgressReady();
   }
 
   /**
@@ -104,6 +118,74 @@ export class TeacherStudentTogglePage {
     );
     await expect(this.levelGroup).toBeVisible({timeout: 30_000});
     await expect(this.lockedLesson).toBeHidden();
+    await this.expectTeacherPanelLevelProgressReady();
+  }
+
+  /**
+   * Wait for the teacher panel's per-level progress request to finish. Before
+   * this data arrives, the panel shows only the selected name and then shifts.
+   */
+  async expectTeacherPanelLevelProgressReady(): Promise<void> {
+    const panel = this.page.locator('#teacher-panel-container');
+    await expect(panel.getByText('Submitted On:')).toBeVisible({
+      timeout: 30_000,
+    });
+  }
+
+  /**
+   * Waits for the teacher panel roster controls to finish their visible loading
+   * state before a visual checkpoint.
+   */
+  async expectTeacherPanelRosterReady(): Promise<void> {
+    await expect(this.teacherPanel).toBeVisible({timeout: 30_000});
+    await expect(this.teacherPanel).not.toContainText('Loading...', {
+      timeout: 30_000,
+    });
+    await expect(this.teacherPanel.getByText('Viewing section:')).toBeVisible({
+      timeout: 30_000,
+    });
+  }
+
+  /**
+   * Waits for the first student row to be visible in teacher view.
+   */
+  async expectTeacherPanelStudentRowReady(): Promise<void> {
+    await expect(this.teacherPanelRows.nth(1)).toBeVisible({timeout: 30_000});
+  }
+
+  /**
+   * Waits for the teacher panel's per-level summary to render.
+   */
+  async expectTeacherPanelLevelSummaryReady(): Promise<void> {
+    await expect(this.teacherPanel.getByText('Last Updated:')).toBeVisible({
+      timeout: 30_000,
+    });
+    await expect(this.teacherPanel.getByText('N/A')).toBeVisible({
+      timeout: 30_000,
+    });
+  }
+
+  /**
+   * Waits for the level progress header to finish rendering.
+   */
+  async expectHeaderProgressReady(): Promise<void> {
+    await expect(this.headerProgress).toBeVisible({timeout: 30_000});
+    await expect(
+      this.page.getByRole('link', {name: /Lesson \d+:/}),
+    ).toBeVisible({timeout: 30_000});
+  }
+
+  /**
+   * Waits for the multi-choice lab body to be visible and stable.
+   */
+  async expectMultiLevelVisualReady(): Promise<void> {
+    await this.expectHeaderProgressReady();
+    await expect(this.multiChoiceHeading).toBeVisible({timeout: 30_000});
+    await expect(this.multiChoiceSubmit).toBeVisible({timeout: 30_000});
+    await expect(this.page.locator('#level-body')).toContainText(
+      'Which arrow gets the Flurb to the treasure?',
+      {timeout: 30_000},
+    );
   }
 
   /**
@@ -133,6 +215,7 @@ export class TeacherStudentTogglePage {
     await expect(this.viewAsStudent).toBeVisible({timeout: 30_000});
     await this.viewAsStudent.click();
     await expect(this.viewAsTeacher).toBeVisible({timeout: 30_000});
+    await this.expectTeacherPanelRosterReady();
   }
 
   /**
@@ -142,6 +225,7 @@ export class TeacherStudentTogglePage {
     await expect(this.viewAsTeacher).toBeVisible({timeout: 30_000});
     await this.viewAsTeacher.click();
     await expect(this.viewAsStudent).toBeVisible({timeout: 30_000});
+    await this.expectTeacherPanelRosterReady();
   }
 
   /**
@@ -153,6 +237,10 @@ export class TeacherStudentTogglePage {
     await expect(
       this.page.getByRole('link', {name: 'View Unit Overview'}),
     ).toBeVisible({timeout: 30_000});
+    await expect(
+      this.page.getByRole('button', {name: /Lesson 9: Multi/}),
+    ).toBeVisible({timeout: 30_000});
+    await this.expectTeacherPanelRosterReady();
   }
 
   /**
@@ -165,6 +253,7 @@ export class TeacherStudentTogglePage {
       this.teacherPanelRows.nth(1).click(),
     ]);
     await expect(this.progressDropdown).toBeVisible({timeout: 30_000});
+    await this.expectTeacherPanelRosterReady();
   }
 
   /**

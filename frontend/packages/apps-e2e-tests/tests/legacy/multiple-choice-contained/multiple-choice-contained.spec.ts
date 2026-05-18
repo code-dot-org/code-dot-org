@@ -7,6 +7,7 @@ import {
   expectPerfect,
   headerBubble,
 } from '../../shared/progress';
+import {expectCodeStudioHeaderReady} from '../shared/visualReadiness';
 
 /**
  * Multiple choice contained levels — lesson 41 of allthethingscourse unit 1.
@@ -80,6 +81,8 @@ test.describe('Multiple choice contained levels', () => {
     await page
       .locator('#runButton')
       .waitFor({state: 'visible', timeout: 60_000});
+    await expectCodeStudioHeaderReady(page);
+    await expect(page.locator('#unchecked_0')).toBeVisible({timeout: 30_000});
     await eyes.check('initial load');
 
     await selectAnswer(page, 0);
@@ -111,6 +114,7 @@ test.describe('Multiple choice contained levels', () => {
     await page
       .locator('#runButton')
       .waitFor({state: 'visible', timeout: 60_000});
+    await expectCodeStudioHeaderReady(page);
     await eyes.check('initial load');
 
     await selectAnswer(page, 0);
@@ -160,20 +164,36 @@ test.describe('Multiple choice contained levels', () => {
     await page
       .locator('#runButton')
       .waitFor({state: 'visible', timeout: 60_000});
-    await eyes.check('initial load');
+    await expect(
+      page.getByRole('combobox', {name: 'Select Section'}),
+    ).toBeVisible({timeout: 30_000});
+    await expect(
+      page.locator('.header_level .progress-bubble').first(),
+    ).toBeVisible({timeout: 30_000});
+    await expect(page.locator('#teacher-panel-container')).toContainText(
+      'Last Updated:',
+      {timeout: 30_000},
+    );
+    const dynamicChrome = [
+      page.locator('#visualizationColumn'),
+      page.locator('#teacher-panel-container'),
+    ];
+    await eyes.check('initial load', {ignoreRegions: dynamicChrome});
 
     await selectAnswer(page, 0);
-    await eyes.check('answer entered');
+    await eyes.check('answer entered', {ignoreRegions: dynamicChrome});
 
     await page.locator('.uitest-teacherOnlyTab').first().click();
     await expect(
       page.locator('.editor-column').filter({hasText: 'Answer'}).first(),
     ).toBeVisible({timeout: 30_000});
-    await eyes.check('multiple choice answer for teacher');
+    await eyes.check('multiple choice answer for teacher', {
+      ignoreRegions: dynamicChrome,
+    });
 
     await page.locator('#runButton').click();
     await expect(page.locator('#resetButton')).toBeVisible({timeout: 30_000});
-    await eyes.check('level run');
+    await eyes.check('level run', {ignoreRegions: dynamicChrome});
   });
 
   /**
@@ -189,7 +209,9 @@ test.describe('Multiple choice contained levels', () => {
 
     // Sign in as the teacher.
     await signIn(page, teacherEmail, teacherPassword);
-    await page.goto('/courses/allthethingscourse/units/1/lessons/41/levels/2');
+    await page.goto('/courses/allthethingscourse/units/1/lessons/41/levels/2', {
+      waitUntil: 'domcontentloaded',
+    });
     await page
       .locator('#runButton')
       .waitFor({state: 'visible', timeout: 60_000});

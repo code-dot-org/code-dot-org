@@ -36,6 +36,9 @@ export class Dance extends LegacyBlocklyLab {
   /** AI modal header area — present while the AI modal is open. */
   readonly aiModalHeader: Locator;
 
+  /** AI modal dialog — the visual subject for Dance AI modal screenshots. */
+  readonly aiModalDialog: Locator;
+
   /** Use-effects button inside the AI modal. Visible once effects are generated. */
   readonly aiUseButton: Locator;
 
@@ -51,6 +54,9 @@ export class Dance extends LegacyBlocklyLab {
     this.projectRemixButton = page.locator('.project_remix');
     this.projectUpdatedAt = page.locator('.project_updated_at');
     this.aiModalHeader = page.locator('#ai-modal-header-area');
+    this.aiModalDialog = page.getByRole('dialog').filter({
+      has: page.locator('#ai-modal-inner-area'),
+    });
     this.aiUseButton = page.locator('#use-button');
     this.ageDialog = page.locator('.age-dialog');
   }
@@ -418,6 +424,125 @@ export class Dance extends LegacyBlocklyLab {
       workspace?.scrollbar?.set?.(0, 0);
       workspace?.getFlyout?.()?.scrollbar_?.set?.(0);
     });
+    await this.waitForStableVisualLayout([
+      '[role="dialog"]',
+      '#ai-modal-inner-area',
+      '#visualizationColumn',
+      '.csf-top-instructions',
+    ]);
+  }
+
+  /**
+   * Wait for the AI modal itself to be ready for a visual checkpoint.
+   * The surrounding lab chrome can shift independently after Blockly toggles;
+   * the dialog is the user-visible subject of the legacy Eyes scenario.
+   */
+  async waitForAiModalVisual(): Promise<void> {
+    await expect(this.aiModalDialog).toBeVisible({timeout: 10_000});
+    await expect(this.aiModalHeader).toBeVisible({timeout: 10_000});
+    await expect(this.page.locator('#ai-modal-inner-area')).toBeVisible({
+      timeout: 10_000,
+    });
+    await this.waitForStableVisualLayout([
+      '[role="dialog"]',
+      '#ai-modal-header-area',
+      '#ai-modal-inner-area',
+    ]);
+    await this.waitForStableAiModalRendering();
+  }
+
+  /**
+   * Wait for transform, opacity, and text rendering inside the AI modal to
+   * settle. The modal's flip-card code preview can have a stable box while
+   * SVG block text is still rendering through a transition.
+   */
+  async waitForStableAiModalRendering(): Promise<void> {
+    await this.page.waitForFunction(
+      () =>
+        new Promise<boolean>(resolve => {
+          const innerArea = document.querySelector('#ai-modal-inner-area');
+          const dialog = innerArea?.closest('[role="dialog"]');
+          if (!dialog) {
+            resolve(false);
+            return;
+          }
+
+          let previous = '';
+          let stableFrames = 0;
+          const signature = () =>
+            [dialog, ...Array.from(dialog.querySelectorAll('*'))]
+              .map(element => {
+                const box = element.getBoundingClientRect();
+                const styles = getComputedStyle(element);
+                return [
+                  element.tagName,
+                  Math.round(box.x),
+                  Math.round(box.y),
+                  Math.round(box.width),
+                  Math.round(box.height),
+                  styles.opacity,
+                  styles.transform,
+                  styles.color,
+                  styles.backgroundColor,
+                  element.textContent?.trim(),
+                ].join(':');
+              })
+              .join('|');
+
+          const check = () => {
+            const current = signature();
+            stableFrames = current === previous ? stableFrames + 1 : 0;
+            previous = current;
+            if (stableFrames >= 8) {
+              resolve(true);
+            } else {
+              requestAnimationFrame(check);
+            }
+          };
+          requestAnimationFrame(check);
+        }),
+      undefined,
+      {timeout: 15_000},
+    );
+  }
+
+  /**
+   * Wait for modal and background lab chrome bounding boxes to stop shifting.
+   */
+  async waitForStableVisualLayout(selectors: string[]): Promise<void> {
+    await this.page.waitForFunction(
+      stableSelectors =>
+        new Promise<boolean>(resolve => {
+          let previous = '';
+          let stableFrames = 0;
+          const signature = () =>
+            stableSelectors
+              .flatMap(selector =>
+                Array.from(document.querySelectorAll(selector)),
+              )
+              .map(element => {
+                const box = element.getBoundingClientRect();
+                return `${Math.round(box.x)}:${Math.round(box.y)}:${Math.round(
+                  box.width,
+                )}:${Math.round(box.height)}`;
+              })
+              .join('|');
+
+          const check = () => {
+            const current = signature();
+            stableFrames = current === previous ? stableFrames + 1 : 0;
+            previous = current;
+            if (stableFrames >= 5) {
+              resolve(true);
+            } else {
+              requestAnimationFrame(check);
+            }
+          };
+          requestAnimationFrame(check);
+        }),
+      selectors,
+      {timeout: 15_000},
+    );
   }
 
   /**

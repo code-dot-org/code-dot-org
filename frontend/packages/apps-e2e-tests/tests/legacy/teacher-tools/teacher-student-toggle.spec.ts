@@ -27,18 +27,27 @@ test.describe('Teacher student toggle', () => {
     await toggle.openMultiLevel(pair.sectionId);
     await eyes.check('page load');
     await toggle.switchToStudentView();
+    await toggle.expectMultiLevelVisualReady();
     await eyes.check('view as student');
     await toggle.switchToTeacherView();
+    await toggle.expectMultiLevelVisualReady();
+    await toggle.expectTeacherPanelLevelSummaryReady();
     await eyes.check('view as teacher');
     await toggle.openProgressDropdown();
-    await eyes.check('progress dropdown for teacher');
+    await eyes.checkLocator(
+      toggle.progressDropdownPanel,
+      'progress dropdown for teacher',
+    );
 
     await toggle.openFirstStudentFromPanel();
     await toggle.openProgressDropdown();
     await expect(
       page.locator('.user-stats-block', {hasText: 'Jigsaw'}),
     ).toBeVisible({timeout: 30_000});
-    await eyes.check('progress dropdown for teacher viewing as student');
+    await eyes.checkLocator(
+      toggle.progressDropdownPanel,
+      'progress dropdown for teacher viewing as student',
+    );
   });
 
   /**
@@ -58,11 +67,11 @@ test.describe('Teacher student toggle', () => {
 
     await eyes.open('toggle on hidden maze level');
     await toggle.openHiddenMazeLevel(pair.sectionId);
-    await eyes.check('page load');
+    await eyes.checkLocator(toggle.teacherPanel, 'page load');
     await toggle.switchToStudentView();
     await eyes.check('view as student');
     await toggle.switchToTeacherView();
-    await eyes.check('view as teacher');
+    await eyes.checkLocator(toggle.teacherPanel, 'view as teacher');
   });
 
   /**
@@ -103,6 +112,9 @@ test.describe('Teacher student toggle', () => {
     await toggle.openLockableLevel(pair.sectionId);
     await toggle.switchToStudentView();
     await expect(toggle.lockedLesson).toBeHidden();
+    await expect(page.getByRole('heading', {name: /Pre-survey/})).toBeVisible({
+      timeout: 30_000,
+    });
     await eyes.check('view as student while unlocked');
     await toggle.switchToTeacherView();
     await expect(toggle.lockedLesson).toBeHidden();

@@ -459,21 +459,21 @@ test.describe('Dance Party — lesson 37 — AI Modal eyes (level 4)', () => {
   test(
     'AI modal code toggle and emoji picker render in LTR and RTL',
     {tag: ['@no_mobile', '@visual']},
-    async ({eyes, page}) => {
+    async ({eyes}) => {
       await eyes.open('open Dance AI modal');
       // LTR: open modal (pre-generated results already visible).
       await dance.openAiModal();
       await expect(dance.aiUseButton).toBeVisible();
       await dance.toggleAiCodeView();
-      await eyes.check('toggle to code', {
-        ignoreRegions: [page.locator('.blocklyScrollbarVertical')],
-      });
+      await dance.waitForAiModalVisual();
+      await eyes.checkLocator(dance.aiModalDialog, 'toggle to code');
       await dance.toggleAiEffectView();
 
       // Start over and select new emojis in LTR.
       await dance.startOverAi();
       await dance.selectAiEmojis('💎', '🌊', '🚀');
-      await eyes.check('selecting new emojis');
+      await dance.waitForAiModalVisual();
+      await eyes.checkLocator(dance.aiModalDialog, 'selecting new emojis');
 
       // RTL: navigate to Arabic locale of the same level.
       await dance.page.goto(
@@ -485,16 +485,25 @@ test.describe('Dance Party — lesson 37 — AI Modal eyes (level 4)', () => {
       await dance.openAiModal();
       await expect(dance.aiUseButton).toBeVisible();
       await dance.toggleAiCodeView();
-      await eyes.check('toggle to code in RTL');
+      await dance.waitForAiModalVisual();
+      await eyes.checkLocator(dance.aiModalDialog, 'toggle to code in RTL');
       await dance.toggleAiEffectView();
 
       // RTL: start over.
       await dance.startOverAi();
-      await eyes.check('starting over in Dance AI modal in RTL');
+      await dance.waitForAiModalVisual();
+      await eyes.checkLocator(
+        dance.aiModalDialog,
+        'starting over in Dance AI modal in RTL',
+      );
 
       // RTL: select new emojis.
       await dance.selectAiEmojis('💎', '🌊', '🚀');
-      await eyes.check('selecting new emojis in RTL');
+      await dance.waitForAiModalVisual();
+      await eyes.checkLocator(
+        dance.aiModalDialog,
+        'selecting new emojis in RTL',
+      );
     },
   );
 });

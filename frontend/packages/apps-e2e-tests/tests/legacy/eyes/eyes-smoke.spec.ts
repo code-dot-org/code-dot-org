@@ -321,10 +321,18 @@ test.describe('App Lab Eyes smoke ports', () => {
     eyes,
   }) => {
     await eyes.open('Applab widget mode');
+    const applab = new AppLab(page);
     await page.goto(labLevelUrl(18, 22));
+    await applab.waitForCodeStudioHeaderReady();
+    await expect(applab.appCanvas).toBeVisible({timeout: 30_000});
     await expect(page.locator('#start_over_button')).toBeVisible({
       timeout: 30_000,
     });
+    await applab.waitForStableVisualLayout([
+      '#divApplab',
+      '#codeWorkspaceWrapper',
+      '#start_over_button',
+    ]);
     await eyes.check('widget mode level');
   });
 
@@ -399,11 +407,11 @@ test.describe('App Lab Eyes smoke ports', () => {
       "createCanvas('my_canvas', 320, 480);\nbutton('my_button', 'ButtonText');",
     );
     await applab.openDebugConsole();
-    await expect(studentPage.locator('#stepInButton')).toBeVisible({
-      timeout: 15_000,
-    });
-    await studentPage.locator('#stepInButton').click();
-    await eyes.check('stepped in once');
+    await applab.stepIntoDebugger();
+    await eyes.checkLocator(
+      studentPage.locator('#debug-area'),
+      'stepped in once',
+    );
   });
 
   /**

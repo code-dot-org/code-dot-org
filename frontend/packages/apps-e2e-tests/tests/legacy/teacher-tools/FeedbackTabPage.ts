@@ -1,5 +1,8 @@
 import {expect, type Locator, type Page} from '@playwright/test';
 
+import {headerBubble} from '../../shared/progress';
+import {expectCodeStudioHeaderReady} from '../shared/visualReadiness';
+
 const LEVEL_URL = '/courses/allthethingscourse/units/1/lessons/38/levels/1';
 
 /**
@@ -43,6 +46,12 @@ export class FeedbackTabPage {
    */
   async expectStudentKeyConceptFeedbackTab(): Promise<void> {
     await this.page.goto(LEVEL_URL);
+    await expectCodeStudioHeaderReady(this.page);
+    await expect(this.page.locator('.project_updated_at')).toContainText(
+      'Saved',
+      {timeout: 30_000},
+    );
+    await expect(headerBubble(this.page, 1)).toBeVisible();
     await expect(this.page.locator('.uitest-feedback')).toBeVisible({
       timeout: 30_000,
     });
@@ -54,6 +63,14 @@ export class FeedbackTabPage {
     await expect(
       this.page.locator('#ui-test-submit-feedback'),
     ).not.toBeVisible();
+  }
+
+  /**
+   * The mini-rubric level progress bubble can render either completed or
+   * attempted assessment while preserving the feedback-tab state under test.
+   */
+  studentFeedbackVisualIgnoreRegions(): Locator[] {
+    return [headerBubble(this.page, 1)];
   }
 
   /**

@@ -431,7 +431,39 @@ async function expectSectionCheckbox(
 }
 
 /**
- * Toggle one section in the assignment dialog and confirm.
+ * Wait for the named section's persisted assignment state.
+ *
+ * @param page - Playwright page holding the teacher session
+ * @param sectionId - dashboard section id
+ * @param checked - target selected state for the section
+ */
+async function expectPersistedSectionAssignment(
+  page: Page,
+  sectionId: number,
+  checked: boolean,
+): Promise<void> {
+  await expect(async () => {
+    const response = await page.request.get('/dashboardapi/sections');
+    expect(response.ok()).toBe(true);
+
+    const sections = (await response.json()) as Array<{
+      id: number;
+      course_id: number | null;
+    }>;
+    const section = sections.find(s => s.id === sectionId);
+    expect(section).toBeTruthy();
+
+    if (checked) {
+      expect(section!.course_id).not.toBeNull();
+    } else {
+      expect(section!.course_id).toBeNull();
+    }
+  }).toPass({timeout: 30_000, intervals: [500, 1_000, 2_000]});
+}
+
+/**
+ * Toggle one section in the assignment dialog, confirm, and wait for the
+ * persisted dashboard section state.
  *
  * @param page - Playwright page with assignment dialog open
  * @param sectionName - accessible checkbox name
@@ -453,25 +485,9 @@ async function confirmSectionAssignment(
   const confirmButton = page.getByRole('button', {
     name: 'Confirm section assignments',
   });
-  const sectionUpdateResponse = page.waitForResponse(
-    response => {
-      return (
-        response.url().includes(`/dashboardapi/sections/${sectionId}`) &&
-        response.request().method() === 'PATCH'
-      );
-    },
-    {timeout: 30_000},
-  );
   await confirmButton.click();
-  const response = await sectionUpdateResponse;
-  expect(response.ok()).toBe(true);
-  const section = (await response.json()) as {course_id: number | null};
-  if (checked) {
-    expect(section.course_id).not.toBeNull();
-  } else {
-    expect(section.course_id).toBeNull();
-  }
   await expect(confirmButton).toBeHidden({timeout: 30_000});
+  await expectPersistedSectionAssignment(page, sectionId, checked);
 }
 
 /**

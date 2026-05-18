@@ -67,6 +67,13 @@ export class SubmittableLevelPage {
     await expect(this.page.locator('table:visible').first()).toBeVisible({
       timeout: 30_000,
     });
+    await expect(this.page.getByText('Assigned')).toBeVisible({
+      timeout: 30_000,
+    });
+    await expect(
+      this.page.getByRole('link', {name: 'Continue'}).first(),
+    ).toBeVisible({timeout: 30_000});
+    await this.expectUnitOverviewLayoutStable();
   }
 
   /**
@@ -90,5 +97,130 @@ export class SubmittableLevelPage {
     await expect(this.page.locator('.react_stage')).toBeVisible({
       timeout: 30_000,
     });
+    await expect(
+      this.page.locator('.header_popup .uitest-summary-progress-table'),
+    ).toBeVisible({timeout: 30_000});
+    await this.expectHeaderAnimationFinished();
+    await expect(this.page.locator('.header_popup .fa-spin')).toHaveCount(0, {
+      timeout: 30_000,
+    });
+    const lockableLesson = this.page
+      .locator('.header_popup_body .fa-lock')
+      .first();
+    if (await lockableLesson.isVisible({timeout: 1_000}).catch(() => false)) {
+      await lockableLesson.scrollIntoViewIfNeeded();
+    }
+    await this.expectHeaderPopupLayoutStable();
+  }
+
+  /**
+   * Wait for unit overview progress and top-row state to stop changing.
+   */
+  private async expectUnitOverviewLayoutStable(): Promise<void> {
+    await this.page.waitForFunction(
+      () =>
+        new Promise<boolean>(resolve => {
+          const selectors = [
+            '.unit-overview-top-row',
+            '.uitest-summary-progress-table',
+            'table',
+          ];
+          let previous = '';
+          let stableFrames = 0;
+          const signature = () =>
+            selectors
+              .flatMap(selector =>
+                Array.from(document.querySelectorAll(selector)),
+              )
+              .map(element => {
+                const box = element.getBoundingClientRect();
+                return [
+                  Math.round(box.x),
+                  Math.round(box.y),
+                  Math.round(box.width),
+                  Math.round(box.height),
+                  element.textContent?.trim(),
+                ].join(':');
+              })
+              .join('|');
+
+          const check = () => {
+            const current = signature();
+            stableFrames = current === previous ? stableFrames + 1 : 0;
+            previous = current;
+            if (stableFrames >= 5) {
+              resolve(true);
+            } else {
+              requestAnimationFrame(check);
+            }
+          };
+          requestAnimationFrame(check);
+        }),
+      undefined,
+      {timeout: 15_000},
+    );
+  }
+
+  /**
+   * Wait for the header popup's progress table to finish its layout pass.
+   */
+  private async expectHeaderPopupLayoutStable(): Promise<void> {
+    await this.page.waitForFunction(
+      () =>
+        new Promise<boolean>(resolve => {
+          const selectors = [
+            '.header_popup',
+            '.header_popup_body',
+            '.header_popup .uitest-summary-progress-table',
+          ];
+          let previous = '';
+          let stableFrames = 0;
+          const signature = () =>
+            selectors
+              .flatMap(selector =>
+                Array.from(document.querySelectorAll(selector)),
+              )
+              .map(element => {
+                const box = element.getBoundingClientRect();
+                return [
+                  Math.round(box.x),
+                  Math.round(box.y),
+                  Math.round(box.width),
+                  Math.round(box.height),
+                  element.scrollTop,
+                  element.textContent?.trim(),
+                ].join(':');
+              })
+              .join('|');
+
+          const check = () => {
+            const current = signature();
+            stableFrames = current === previous ? stableFrames + 1 : 0;
+            previous = current;
+            if (stableFrames >= 5) {
+              resolve(true);
+            } else {
+              requestAnimationFrame(check);
+            }
+          };
+          requestAnimationFrame(check);
+        }),
+      undefined,
+      {timeout: 15_000},
+    );
+  }
+
+  /**
+   * Mirrors the Cucumber header animation readiness helper for visual checks.
+   */
+  private async expectHeaderAnimationFinished(): Promise<void> {
+    await this.page.waitForFunction(
+      () =>
+        getComputedStyle(
+          document.querySelector('#header_middle_content') ?? document.body,
+        ).opacity === '1',
+      undefined,
+      {timeout: 15_000},
+    );
   }
 }

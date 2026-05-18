@@ -1,4 +1,4 @@
-import {type Locator, type Page} from '@playwright/test';
+import {expect, type Locator, type Page} from '@playwright/test';
 
 import {labLevelUrl} from '../../shared/urls';
 import {Lab2Lab} from '../shared/Lab2Lab';
@@ -31,6 +31,15 @@ export class MusicLab extends Lab2Lab {
    */
   readonly whenRunBlock: Locator;
 
+  /** User-visible slow-load message shown while the lab shell is waiting. */
+  readonly slowLoadMessage: Locator;
+
+  /** Optional track picker shown on new Music projects before editing. */
+  readonly trackPickerHeading: Locator;
+
+  /** Button that dismisses the optional new-project track picker. */
+  readonly skipTrackPickerButton: Locator;
+
   constructor(page: Page) {
     super(page);
     this.runButton = page.locator('#run-button');
@@ -38,6 +47,11 @@ export class MusicLab extends Lab2Lab {
     this.whenRunBlock = page.locator("[data-id='when-run-block']");
     this.timeline = page.locator('#timeline');
     this.soundsPanel = page.locator('#sounds-panel');
+    this.slowLoadMessage = page.getByText('This is taking longer than usual');
+    this.trackPickerHeading = page.getByRole('heading', {
+      name: 'Select a track',
+    });
+    this.skipTrackPickerButton = page.getByRole('button', {name: 'Skip'});
   }
 
   protected buildLevelUrl(level: number): string {
@@ -48,19 +62,41 @@ export class MusicLab extends Lab2Lab {
   async gotoNewProject(): Promise<void> {
     await this.page.goto('/reset_session');
     await this.page.goto('/projects/music/new?library=intro2024');
+    await this.dismissTrackPickerIfPresent();
     await this.waitForReady();
   }
 
   /**
-   * Music Lab is ready when the `when_run_simple2` block is visible in the
-   * workspace. That block is assigned `id="when-run-block"` in the level
-   * startSources, which Blockly surfaces as `data-id` on the SVG element.
+   * Dismisses the optional new-project track picker.
+   *
+   * The picker and the Run button are mutually exclusive user-visible states:
+   * either the project is ready to edit, or the modal must be skipped first.
+   */
+  async dismissTrackPickerIfPresent(): Promise<void> {
+    await expect(
+      this.trackPickerHeading.or(this.runButton).first(),
+    ).toBeVisible({timeout: 120_000});
+
+    if (await this.trackPickerHeading.isVisible()) {
+      await expect(this.skipTrackPickerButton).toBeVisible({timeout: 30_000});
+      await this.skipTrackPickerButton.click();
+      await expect(this.trackPickerHeading).toBeHidden();
+    }
+  }
+
+  /**
+   * Music Lab is ready when the slow-load shell has cleared and the user can
+   * see the run button and `when_run_simple2` block. The block is assigned
+   * `id="when-run-block"` in the level startSources, which Blockly surfaces
+   * as `data-id` on the SVG element.
    *
    * Note: Music Lab's flyout toolbox has no `.blocklyTreeRow` elements, so
-   * `[data-id='when-run-block']` is the correct single ready signal.
+   * `[data-id='when-run-block']` is the final Blockly-specific ready signal.
    */
   protected async waitForReady(): Promise<void> {
-    await this.whenRunBlock.waitFor({state: 'visible'});
+    await expect(this.slowLoadMessage).toBeHidden({timeout: 120_000});
+    await expect(this.runButton).toBeVisible({timeout: 120_000});
+    await this.whenRunBlock.waitFor({state: 'visible', timeout: 120_000});
   }
 
   /**

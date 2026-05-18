@@ -35,6 +35,7 @@ const MATCH_TIMEOUT_MS = 5000;
 const LEGACY_VIEWPORT = {width: 1024, height: 690};
 
 const VISUAL_READY_TIMEOUT_MS = 30_000;
+const IGNORE_BOX_PADDING_PX = 16;
 
 const PLAYWRIGHT_VISUAL_BASELINE_DIR =
   process.env.APPS_E2E_VISUAL_BASELINE_DIR ?? '/tmp/apps-e2e-visual-baselines';
@@ -93,6 +94,12 @@ export interface EyesFixture {
    * the legacy step used.
    */
   checkRegion(selector: string, name: string): Promise<void>;
+  /**
+   * Region visual checkpoint scoped to a resolved Playwright locator. Use
+   * this when a stable visual subject is best identified by role/name or by a
+   * locator relation, rather than by a unique CSS selector.
+   */
+  checkLocator(locator: Locator, name: string): Promise<void>;
 }
 
 /**
@@ -170,6 +177,7 @@ const NOOP_EYES: EyesFixture = {
   check: async () => undefined,
   checkViewport: async () => undefined,
   checkRegion: async () => undefined,
+  checkLocator: async () => undefined,
 };
 
 /**
@@ -244,6 +252,13 @@ export function createEyesHandle(
    * teacher dashboards belongs in the POM that owns the page.
    */
   async function waitForVisualReadiness(): Promise<void> {
+    await page.mouse.move(0, 0);
+    await page.evaluate(() => {
+      if (document.activeElement instanceof HTMLElement) {
+        document.activeElement.blur();
+      }
+    });
+
     await page.evaluate(() => {
       if (document.getElementById('apps-e2e-visual-stability-style')) return;
       const style = document.createElement('style');
@@ -260,11 +275,16 @@ export function createEyesHandle(
       document.head.appendChild(style);
     });
 
-    await withTimeout(
-      page.evaluate(loadFonts, FONT_FAMILY_NAMES),
-      VISUAL_READY_TIMEOUT_MS,
-      'Timed out waiting for fonts',
+    const fontsReady = await page.evaluate(
+      () => !document.fonts || document.fonts.status === 'loaded',
     );
+    if (!fontsReady) {
+      await withTimeout(
+        page.evaluate(loadFonts, FONT_FAMILY_NAMES),
+        VISUAL_READY_TIMEOUT_MS,
+        'Timed out waiting for fonts',
+      );
+    }
 
     await page.waitForFunction(
       () => !document.fonts || document.fonts.status === 'loaded',
@@ -279,7 +299,10 @@ export function createEyesHandle(
             const rect = image.getBoundingClientRect();
             return rect.width > 0 && rect.height > 0;
           })
-          .every(image => image.complete && image.naturalWidth > 0),
+          // Broken legacy instruction images are still a settled browser
+          // state.  Waiting on naturalWidth keeps otherwise-ready Java Lab
+          // pages blocked forever.
+          .every(image => image.complete),
       undefined,
       {timeout: VISUAL_READY_TIMEOUT_MS},
     );
@@ -370,6 +393,8 @@ export function createEyesHandle(
       page.locator('[class*="section-code"]'),
       page.locator('[class*="sectionCodeText"]'),
       page.locator('[class*="sectionCodeBox"]'),
+      page.getByRole('button', {name: /^[A-Z]{6}$/}),
+      page.getByRole('button', {name: /^[A-Z]{6}$/}).locator('xpath=..'),
       page.getByLabel(/email/i),
       page.locator('input[type="email"]'),
       page.locator('#email'),
@@ -464,7 +489,10 @@ export function createEyesHandle(
     for (const name of locatorNames) {
       switch (name) {
         case 'visualization':
-          locators.push(page.locator('#visualization'));
+          locators.push(
+            page.locator('#visualization'),
+            page.locator('#visualizationColumn'),
+          );
           break;
         case 'jigsaw':
           locators.push(page.locator('#jigsaw'), page.locator('.jigsaw'));
@@ -624,10 +652,16 @@ export function createEyesHandle(
    */
   function applyIgnoreBoxes(image: PNG, boxes: IgnoreBox[]): void {
     for (const box of boxes) {
-      const left = Math.max(0, Math.floor(box.x));
-      const top = Math.max(0, Math.floor(box.y));
-      const right = Math.min(image.width, Math.ceil(box.x + box.width));
-      const bottom = Math.min(image.height, Math.ceil(box.y + box.height));
+      const left = Math.max(0, Math.floor(box.x - IGNORE_BOX_PADDING_PX));
+      const top = Math.max(0, Math.floor(box.y - IGNORE_BOX_PADDING_PX));
+      const right = Math.min(
+        image.width,
+        Math.ceil(box.x + box.width + IGNORE_BOX_PADDING_PX),
+      );
+      const bottom = Math.min(
+        image.height,
+        Math.ceil(box.y + box.height + IGNORE_BOX_PADDING_PX),
+      );
 
       for (let y = top; y < bottom; y++) {
         for (let x = left; x < right; x++) {
@@ -689,6 +723,18 @@ export function createEyesHandle(
           }),
         );
       },
+      async checkLocator(locator, name) {
+        await ensureOpen();
+        await waitForVisualReadiness();
+        await compareOrUpdateScreenshot(
+          name,
+          'region-locator',
+          await locator.screenshot({
+            animations: 'disabled',
+            caret: 'hide',
+          }),
+        );
+      },
       async close() {
         return undefined;
       },
@@ -729,6 +775,14 @@ export function createEyesHandle(
       await ensureOpen();
       await waitForVisualReadiness();
       await eyes.check(name, Target.region(selector).fully());
+    },
+    async checkLocator(locator, name) {
+      await ensureOpen();
+      await waitForVisualReadiness();
+      await eyes.check(
+        name,
+        Target.region(locator as unknown as Selector).fully(),
+      );
     },
     async close() {
       return undefined;

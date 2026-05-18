@@ -128,7 +128,10 @@ test.describe('Modal Function Editor', () => {
     await lab.page.mouse.down();
     await lab.page.mouse.move(startX + 40, startY + 100, {steps: 10});
     await lab.page.mouse.up();
-    await eyes.check('add a new block to the function');
+    await lab.expectFunctionEditorVisualReady();
+    await eyes.check('add a new block to the function', {
+      ignoreRegions: lab.functionEditorLocationFieldVisualIgnoreRegions(),
+    });
 
     await lab.closeFunctionEditor();
     await lab.runButton.click();

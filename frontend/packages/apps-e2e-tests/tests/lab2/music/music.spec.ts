@@ -16,6 +16,8 @@ import {MusicLab} from './MusicLab';
  * and the panel closes.
  */
 test.describe('Music Lab — play-sound block', () => {
+  test.describe.configure({timeout: 150_000});
+
   let music: MusicLab;
 
   async function expectPlaySoundBlockCanChangeSound(): Promise<void> {
@@ -76,6 +78,8 @@ test.describe('Music Lab — play-sound block', () => {
  * Scenario: Load a level and load the next
  */
 test.describe('Music Lab — level switching', () => {
+  test.describe.configure({timeout: 150_000});
+
   let music: MusicLab;
 
   test.beforeEach(async ({page}) => {
@@ -94,6 +98,16 @@ test.describe('Music Lab — level switching', () => {
     async ({eyes}) => {
       await eyes.open('levelLoading');
       await music.page.locator("[title='Level 5 Lesson Music']").click();
+      await expect(music.page).toHaveURL(/\/levels\/5/);
+      await expect(
+        music.page.getByText('This is taking longer than usual'),
+      ).toBeHidden({timeout: 60_000});
+      await expect(
+        music.page.getByRole('heading', {name: 'Workspace'}),
+      ).toBeVisible({timeout: 60_000});
+      await expect(
+        music.page.getByRole('heading', {name: 'Timeline'}),
+      ).toBeVisible({timeout: 60_000});
       await expect(music.runButton).toBeVisible();
       await eyes.check('new level loading');
     },
@@ -107,6 +121,8 @@ test.describe('Music Lab — level switching', () => {
  * Scenario: Ensure users can navigate into and out of timeline, and between elements with arrows
  */
 test.describe('Music Lab — level 6 — timeline keyboard navigation', () => {
+  test.describe.configure({timeout: 150_000});
+
   let music: MusicLab;
 
   test.beforeEach(async ({page}) => {

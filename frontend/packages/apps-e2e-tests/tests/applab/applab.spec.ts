@@ -626,8 +626,9 @@ test.describe('App Lab — change event on text input', () => {
       const input = studentPage.locator('#text_input1');
       await expect(input).toBeEditable({timeout: 15_000});
 
-      // Blur after typing fires change; Tab is the user-visible blur action.
-      await input.fill('123');
+      // Blur after typing fires change; match Cucumber's real key events.
+      await input.focus();
+      await input.pressSequentially('123');
       await expect(input).toHaveValue('123');
       await input.evaluate((el: HTMLInputElement) => el.blur());
       await expect(applab.consoleOutput).toContainText('"text_input1: 123"', {
@@ -635,7 +636,8 @@ test.describe('App Lab — change event on text input', () => {
       });
 
       // Enter after changing the visible value fires change.
-      await input.fill('123456');
+      await input.focus();
+      await input.pressSequentially('456');
       await expect(input).toHaveValue('123456');
       await input.press('Enter');
       await expect(applab.consoleOutput).toContainText(

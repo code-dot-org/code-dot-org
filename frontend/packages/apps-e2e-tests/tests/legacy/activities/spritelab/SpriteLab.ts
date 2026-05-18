@@ -2,6 +2,7 @@ import {expect, type Locator, type Page} from '@playwright/test';
 
 import {labLevelUrl} from '../../../shared/urls';
 import {LegacyBlocklyLab} from '../../shared/LegacyBlocklyLab';
+import {waitForStableVisualLayout} from '../../shared/visualReadiness';
 
 /**
  * Page Object for Sprite Lab — p5.js + Blockly CSF activity.
@@ -201,5 +202,51 @@ export class SpriteLab extends LegacyBlocklyLab {
         (window as any).Blockly.getFunctionEditorWorkspace().getAllBlocks()
           .length as number,
     );
+  }
+
+  /**
+   * Wait for the modal function editor to stop rendering selected Blockly
+   * fields before a visual checkpoint.
+   */
+  async expectFunctionEditorVisualReady(): Promise<void> {
+    await expect(this.modalFunctionEditor).toBeVisible();
+    expect(await this.getFunctionEditorBlockCount()).toBe(4);
+    await this.page.evaluate(() => {
+      if (document.activeElement instanceof HTMLElement) {
+        document.activeElement.blur();
+      }
+
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
+      const Blockly = (window as any).Blockly;
+      Blockly?.hideChaff?.();
+      Blockly?.WidgetDiv?.hide?.();
+      Blockly?.DropDownDiv?.hideWithoutAnimation?.();
+      Blockly?.common?.getSelected?.()?.unselect?.();
+      Blockly?.selected?.unselect?.();
+      Blockly?.getFunctionEditorWorkspace?.()?.hideChaff?.();
+    });
+    const editorBox = await this.modalFunctionEditor.boundingBox();
+    if (editorBox) {
+      await this.page.mouse.click(
+        editorBox.x + editorBox.width - 40,
+        editorBox.y + editorBox.height - 40,
+      );
+    }
+    await waitForStableVisualLayout(this.page, ['#modalFunctionEditor']);
+  }
+
+  /**
+   * Dynamic Blockly editable field in the newly dragged sprite block.
+   *
+   * The field text is deterministic, but its SVG editing surface can render
+   * one frame apart after the drag gesture. The scenario asserts the block
+   * exists before masking this narrow field for the visual checkpoint.
+   */
+  functionEditorLocationFieldVisualIgnoreRegions(): Locator[] {
+    return [
+      this.modalFunctionEditor
+        .locator('.blocklyEditableText')
+        .filter({hasText: '(200, 200)'}),
+    ];
   }
 }

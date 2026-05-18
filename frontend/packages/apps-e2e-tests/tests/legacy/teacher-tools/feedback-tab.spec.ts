@@ -44,7 +44,9 @@ test.describe('Feedback Tab Visibility', {tag: '@no_mobile'}, () => {
     const feedbackTab = new FeedbackTabPage(page);
     await feedbackTab.completeLevel();
     await feedbackTab.expectStudentKeyConceptFeedbackTab();
-    await eyes.check('student with no feedback tab');
+    await eyes.check('student with no feedback tab', {
+      ignoreRegions: feedbackTab.studentFeedbackVisualIgnoreRegions(),
+    });
 
     void teacher;
     void student;

@@ -136,6 +136,31 @@ export class TeacherDashboardPage {
   }
 
   /**
+   * Waits for a course overview page to render to its end. Full-page visual
+   * screenshots otherwise can capture before the legend and footer mount.
+   */
+  async expectCourseOverviewVisualReady(): Promise<void> {
+    await expect(
+      this.page.getByRole('button', {name: 'Show All Lessons'}),
+    ).toBeVisible({timeout: 30_000});
+    await expect(
+      this.page.getByRole('button', {name: 'Hide All Lessons'}),
+    ).toBeVisible({timeout: 30_000});
+    await expect(this.page.getByText('Lesson 55: Unplugged Level')).toBeVisible(
+      {
+        timeout: 30_000,
+      },
+    );
+    await expect(this.page.getByRole('cell', {name: 'Level Type'})).toBeVisible(
+      {timeout: 30_000},
+    );
+    await expect(
+      this.page.getByRole('link', {name: 'Powered by AWS Cloud Computing'}),
+    ).toBeVisible({timeout: 30_000});
+    await this.page.evaluate(() => window.scrollTo(0, 0));
+  }
+
+  /**
    * Waits for the Assessments tab selectors.
    */
   async expectAssessmentsTabReady(): Promise<void> {

@@ -27,7 +27,7 @@ async function clearSigninCalloutState(page: Page) {
  * Navigate to the UI-test CSF level and wait for the user-visible ready state.
  */
 async function gotoCsfLevel(page: Page) {
-  await page.goto(CSF_LEVEL_URL, {waitUntil: 'domcontentloaded'});
+  await page.goto(CSF_LEVEL_URL, {waitUntil: 'commit'});
   await expect(page.locator('#runButton')).toBeVisible({timeout: 60_000});
 }
 
@@ -35,7 +35,7 @@ async function gotoCsfLevel(page: Page) {
  * Reload the CSF level and wait for the same visible ready state.
  */
 async function reloadCsfLevel(page: Page) {
-  await page.reload({waitUntil: 'domcontentloaded'});
+  await page.reload({waitUntil: 'commit'});
   await expect(page.locator('#runButton')).toBeVisible({timeout: 60_000});
 }
 

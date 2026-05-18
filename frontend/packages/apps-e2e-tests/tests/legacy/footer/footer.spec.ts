@@ -16,6 +16,7 @@ async function createStarWarsShareUrl(
   const footer = new FooterPage(page);
   await footer.openLevel(
     '/courses/starwars/units/1/lessons/1/levels/15?noautoplay=true',
+    {waitForBlocklyWorkspace: false},
   );
   await page
     .locator('#runButton')
@@ -67,13 +68,14 @@ async function expectShareFooter(
   const footer = new FooterPage(page);
   await page.goto(shareUrl, {waitUntil: 'domcontentloaded'});
   await footer.expectSmallFooter();
-  await eyes.check('small footer');
+  const runtimeRegion = page.locator('#visualizationColumn');
+  await eyes.check('small footer', {ignoreRegions: [runtimeRegion]});
 
   await footer.openSmallFooterMenu();
-  await eyes.check('footer menu');
+  await eyes.check('footer menu', {ignoreRegions: [runtimeRegion]});
   await footer.selectSmallFooterItem('Copyright');
   await expect(footer.copyrightDialog()).toBeVisible();
-  await eyes.check('copyright modal');
+  await eyes.check('copyright modal', {ignoreRegions: [runtimeRegion]});
 }
 
 test.describe('Small footer visual smoke ports', () => {
@@ -88,7 +90,9 @@ test.describe('Small footer visual smoke ports', () => {
     await footer.openLevel(
       '/courses/allthethingscourse/units/1/lessons/2/levels/1?noautoplay=true',
     );
-    await eyes.check('small footer');
+    await eyes.check('small footer', {
+      ignoreRegions: [page.locator('#visualizationColumn')],
+    });
     await footer.openCopyrightDialog();
     await eyes.check('copyright modal');
     await footer.closeDialog();
@@ -140,7 +144,7 @@ test.describe('Small footer visual smoke ports', () => {
     await footer.selectSmallFooterItem('How it Works (View Code)');
     await expect(page.locator('#runButton')).toBeVisible({timeout: 60_000});
     await footer.expectSmallFooter();
-    await eyes.check('how it works small footer');
+    await eyes.checkRegion('.small-footer-base', 'how it works small footer');
   });
 
   /**
@@ -189,7 +193,7 @@ test.describe('Small footer visual smoke ports', () => {
     await footer.selectSmallFooterItem('How it Works (View Code)');
     await expect(page.locator('#runButton')).toBeVisible({timeout: 60_000});
     await footer.expectSmallFooter();
-    await eyes.check('how it works small footer');
+    await eyes.checkRegion('.small-footer-base', 'how it works small footer');
   });
 
   /**

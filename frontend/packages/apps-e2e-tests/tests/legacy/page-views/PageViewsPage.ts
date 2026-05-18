@@ -1,5 +1,10 @@
 import {expect, type Page} from '@playwright/test';
 
+import {
+  expectCodeStudioHeaderReady,
+  waitForStableVisualLayout,
+} from '../shared/visualReadiness';
+
 /**
  * Page object for Cucumber's visual page-view smoke scenarios.
  */
@@ -27,6 +32,14 @@ export class PageViewsPage {
     await this.expectAnyVisible(selectors);
     await this.expectLabChromeIfNeeded(selectors);
     await this.dismissOptionalOverlays();
+    await this.dismissInstructionsOkIfPresent();
+    await this.dismissProjectTemplateCallout();
+    await this.expectVideoIframeReadyIfPresent(selectors);
+    await this.waitForStableVisualLayout([
+      '#visualizationColumn',
+      '.editor-column',
+      '.csf-top-instructions',
+    ]);
     await this.expectAnyVisible(selectors);
   }
 
@@ -62,6 +75,51 @@ export class PageViewsPage {
    */
   async expectAttachmentHidden(): Promise<void> {
     await expect(this.page.locator('.uitest-attachment')).toBeHidden();
+  }
+
+  /**
+   * Wait for the signed-in course overview's next-step CTA to settle.
+   *
+   * Agent Browser showed the authenticated allthethingscourse overview exposes
+   * "Continue" once the page has resolved the user's next level. Capturing
+   * earlier can freeze the transient "Try Now" label.
+   */
+  async expectCourseOverviewContinueReady(): Promise<void> {
+    await expect(this.page.getByRole('link', {name: 'Continue'})).toBeVisible({
+      timeout: 30_000,
+    });
+    await waitForStableVisualLayout(this.page, [
+      'main',
+      '.uitest-summary-progress-table',
+      '#course_overview',
+    ]);
+  }
+
+  /**
+   * Wait for dashboard project controls to include their Font Awesome icons.
+   */
+  async expectStudentHomepageProjectControlsReady(): Promise<void> {
+    await this.page.waitForFunction(
+      () => {
+        const selectors = [
+          'a[href="/projects"] i.fa-chevron-right',
+          '#uitest-view-full-list i.fa-chevron-down',
+        ];
+
+        return selectors.every(selector => {
+          const element = document.querySelector(selector);
+          if (!element) return false;
+          const rect = element.getBoundingClientRect();
+          return rect.width > 0 && rect.height > 0;
+        });
+      },
+      undefined,
+      {timeout: 30_000},
+    );
+    await waitForStableVisualLayout(this.page, [
+      'a[href="/projects"]',
+      '#uitest-view-full-list',
+    ]);
   }
 
   /**
@@ -124,27 +182,95 @@ export class PageViewsPage {
    * Code Studio level page.
    */
   private async expectCodeStudioHeaderReady(): Promise<void> {
-    const header = this.page.locator('.header_level').first();
-    if (!(await header.isVisible({timeout: 1_000}).catch(() => false))) {
+    const isCourseLevel = /\/courses\/.*\/lessons\//.test(
+      new URL(this.page.url()).pathname,
+    );
+    if (!isCourseLevel) {
       return;
     }
 
-    await expect(this.page.locator('#header_middle_content')).toBeVisible({
-      timeout: 30_000,
-    });
+    await expectCodeStudioHeaderReady(this.page);
+  }
 
-    const progressContainer = this.page
-      .locator('#lesson_progress_container')
-      .first();
+  /**
+   * Dismiss the auto-open project-template callout when it obscures the
+   * workspace. The related-video scenario is about the left help area, not
+   * this first-load hint.
+   */
+  private async dismissProjectTemplateCallout(): Promise<void> {
+    const callout = this.page
+      .locator('.qtip')
+      .filter({hasText: 'This icon means that this level is part'});
+    if (!(await callout.isVisible({timeout: 1_000}).catch(() => false))) {
+      return;
+    }
+
+    const closeButton = callout.getByRole('button').first();
+    if (await closeButton.isVisible({timeout: 500}).catch(() => false)) {
+      await closeButton.click();
+    } else {
+      await this.page.keyboard.press('Escape');
+    }
+    await expect(callout).toBeHidden({timeout: 5_000});
+  }
+
+  /**
+   * Wait for embedded YouTube chrome when a standalone video page is under
+   * test. The page is visible before the iframe paints its play control.
+   */
+  private async expectVideoIframeReadyIfPresent(
+    selectors: string[],
+  ): Promise<void> {
     if (
-      !(await progressContainer.isVisible({timeout: 1_000}).catch(() => false))
+      !selectors.some(selector =>
+        ['.video-modal', '.video-player'].includes(selector),
+      )
     ) {
       return;
     }
 
+    const videoFrame = this.page
+      .locator('iframe.video-player, iframe#video')
+      .first();
+    if (!(await videoFrame.isVisible({timeout: 500}).catch(() => false))) {
+      return;
+    }
+
     await expect(
-      this.page.locator('.header_level .progress-bubble').first(),
+      this.page
+        .frameLocator('iframe.video-player, iframe#video')
+        .getByRole('button', {name: 'Play video'})
+        .first(),
     ).toBeVisible({timeout: 30_000});
+  }
+
+  /**
+   * Dismiss the visible instructions OK card when it covers the workspace.
+   */
+  private async dismissInstructionsOkIfPresent(): Promise<void> {
+    const houseSelectionDialog = this.page.locator(
+      '#craft-popup-house-selection',
+    );
+    if (
+      await houseSelectionDialog.isVisible({timeout: 500}).catch(() => false)
+    ) {
+      return;
+    }
+
+    const okButton = this.page.getByRole('button', {name: 'OK'});
+    if (!(await okButton.isVisible({timeout: 1_000}).catch(() => false))) {
+      return;
+    }
+
+    await okButton.click();
+    await expect(okButton).toBeHidden({timeout: 5_000});
+  }
+
+  /**
+   * Wait for major legacy lab columns to finish their post-load resizing.
+   */
+  private async waitForStableVisualLayout(selectors: string[]): Promise<void> {
+    await waitForStableVisualLayout(this.page, selectors);
   }
 
   /**

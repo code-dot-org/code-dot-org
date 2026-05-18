@@ -47,9 +47,6 @@ async function createNamedSections(page: Page): Promise<void> {
 
 /**
  * Toggle the checkbox for sectionName inside the multi-assign dialog.
- * Uses getByRole so Playwright's accessibility tree resolves the label/input
- * pairing correctly, avoiding the fragility of document-wide span searches on
- * pages with multiple potential text matches (e.g. course overview).
  * Mirrors `I click the "..." checkbox in the dialog` from section_management_steps.rb.
  *
  * @param page - Playwright page with the assign dialog open
@@ -61,21 +58,15 @@ async function clickSectionCheckbox(
 ): Promise<void> {
   const dialog = page.getByRole('dialog');
   const checkbox = dialog.getByRole('checkbox', {name: sectionName});
-  const sectionLabel = dialog.getByText(sectionName, {exact: true});
+  const labelText = dialog.locator('span', {hasText: sectionName}).first();
 
   await expect(checkbox).toBeVisible({timeout: 10_000});
-  await expect(sectionLabel).toBeVisible({timeout: 10_000});
+  await expect(checkbox).toBeEnabled({timeout: 10_000});
+  await expect(labelText).toBeVisible({timeout: 10_000});
 
   await expect(async () => {
     if (!(await checkbox.isChecked())) {
-      await checkbox.check({force: true, timeout: 1_000}).catch(() => {});
-    }
-    if (!(await checkbox.isChecked())) {
-      await checkbox.focus();
-      await page.keyboard.press('Space');
-    }
-    if (!(await checkbox.isChecked())) {
-      await sectionLabel.click();
+      await labelText.click({timeout: 1_000});
     }
     await expect(checkbox).toBeChecked({timeout: 1_000});
   }).toPass({timeout: 10_000});

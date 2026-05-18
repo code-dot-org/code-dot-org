@@ -7,6 +7,7 @@ export class InstructionsVisualPage {
   readonly page: Page;
   readonly runButton: Locator;
   readonly topInstructions: Locator;
+  readonly editorColumn: Locator;
   readonly lightbulb: Locator;
 
   /**
@@ -16,6 +17,7 @@ export class InstructionsVisualPage {
     this.page = page;
     this.runButton = page.locator('#runButton');
     this.topInstructions = page.locator('.csf-top-instructions');
+    this.editorColumn = page.locator('.editor-column').first();
     this.lightbulb = page.locator('#lightbulb');
   }
 
@@ -113,12 +115,19 @@ export class InstructionsVisualPage {
   async stabilizeInstructionScroll(
     position: 'top' | 'bottom' = 'top',
   ): Promise<void> {
-    await this.topInstructions.evaluateAll((elements, scrollPosition) => {
-      for (const element of elements) {
-        element.scrollTop =
-          scrollPosition === 'bottom' ? element.scrollHeight : 0;
-      }
-    }, position);
+    await this.page
+      .locator('.csf-top-instructions, .editor-column')
+      .evaluateAll((elements, scrollPosition) => {
+        for (const element of elements) {
+          element.scrollTop =
+            scrollPosition === 'bottom' ? element.scrollHeight : 0;
+        }
+      }, position);
+    await this.waitForStableVisualLayout([
+      '#visualizationColumn',
+      '.editor-column',
+      '.csf-top-instructions',
+    ]);
   }
 
   /**
@@ -177,6 +186,45 @@ export class InstructionsVisualPage {
         }),
       selector,
       {timeout: 60_000},
+    );
+  }
+
+  /**
+   * Wait for top-instruction and lab column resizing to settle.
+   */
+  private async waitForStableVisualLayout(selectors: string[]): Promise<void> {
+    await this.page.waitForFunction(
+      stableSelectors =>
+        new Promise<boolean>(resolve => {
+          let previous = '';
+          let stableFrames = 0;
+          const signature = () =>
+            stableSelectors
+              .flatMap(selector =>
+                Array.from(document.querySelectorAll(selector)),
+              )
+              .map(element => {
+                const box = element.getBoundingClientRect();
+                return `${Math.round(box.x)}:${Math.round(box.y)}:${Math.round(
+                  box.width,
+                )}:${Math.round(box.height)}`;
+              })
+              .join('|');
+
+          const check = () => {
+            const current = signature();
+            stableFrames = current === previous ? stableFrames + 1 : 0;
+            previous = current;
+            if (stableFrames >= 5) {
+              resolve(true);
+            } else {
+              requestAnimationFrame(check);
+            }
+          };
+          requestAnimationFrame(check);
+        }),
+      selectors,
+      {timeout: 15_000},
     );
   }
 }

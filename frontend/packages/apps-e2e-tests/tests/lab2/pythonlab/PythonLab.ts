@@ -249,7 +249,12 @@ export class PythonLab extends Lab2Lab {
    * @param timeout - readiness timeout in milliseconds
    */
   async isRunReady(timeout = 60_000): Promise<boolean> {
-    return this.runButton.isEnabled({timeout}).catch(() => false);
+    return expect(this.runButton)
+      .toBeEnabled({timeout})
+      .then(
+        () => true,
+        () => false,
+      );
   }
 
   /**

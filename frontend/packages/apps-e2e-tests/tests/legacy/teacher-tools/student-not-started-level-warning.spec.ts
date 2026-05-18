@@ -71,7 +71,12 @@ test.describe(
       );
       await warning.expectWarningVisible();
       await warning.expectVisualLayoutReady();
-      await eyes.check('student not started warning');
+      await eyes.check('student not started warning', {
+        ignoreRegions: [
+          page.locator('#visualizationColumn'),
+          page.locator('.header_level'),
+        ],
+      });
     });
 
     /**

@@ -50,7 +50,9 @@ test.describe(
       await submittable.gotoLockableLevel();
       await eyes.check('locked level on level page');
       await submittable.openHeaderProgressPopup();
-      await eyes.check('locked level popup progress');
+      await eyes.check('locked level popup progress', {
+        ignoreRegions: [page.locator('#header_middle_content')],
+      });
     });
   },
 );

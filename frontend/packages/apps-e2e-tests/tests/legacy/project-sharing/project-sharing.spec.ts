@@ -90,10 +90,18 @@ async function openShareDialogAndReadUrl(page: Page): Promise<string> {
  * @param name - project title to save
  */
 async function renameProject(page: Page, name: string): Promise<void> {
+  await expect(page.locator('.project_updated_at')).toContainText(/Saved/, {
+    timeout: 30_000,
+  });
   await page.locator('.project_edit').click();
   await page.locator('input.project_name').fill(name);
-  await page.locator('.project_save').click();
+  const saveButton = page.locator('.project_save');
+  await expect(saveButton).toBeEnabled({timeout: 15_000});
+  await saveButton.click();
   await expect(page.locator('.project_edit')).toBeVisible({timeout: 15_000});
+  await expect(page.locator('.project_updated_at')).toContainText(/Saved/, {
+    timeout: 30_000,
+  });
 }
 
 /**

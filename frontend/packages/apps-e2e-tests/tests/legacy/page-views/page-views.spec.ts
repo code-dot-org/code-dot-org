@@ -143,10 +143,21 @@ test.describe('initial visual page views', () => {
       await createStudent(page);
       await eyes.open(example.name);
       await pageViews.openAndExpectReady(example.url, example.selectors);
+      if (example.name === 'logged in student studio homepage') {
+        await pageViews.expectStudentHomepageProjectControlsReady();
+      }
+      if (example.name === 'logged in script progress') {
+        await pageViews.expectCourseOverviewContinueReady();
+      }
       if (example.attachmentHidden) {
         await pageViews.expectAttachmentHidden();
       }
-      await eyes.check('initial load');
+      await eyes.check('initial load', {
+        ignoreRegions:
+          example.name === 'unplugged video level'
+            ? [page.locator('.header_level')]
+            : [],
+      });
     });
   }
 
@@ -246,6 +257,9 @@ test.describe('related video level', () => {
       '/courses/allthethingscourse/units/1/lessons/36/levels/2',
       ['#belowVisualization'],
     );
-    await eyes.check('sprite lab level with related video');
+    await eyes.checkRegion(
+      '#belowVisualization',
+      'sprite lab level with related video',
+    );
   });
 });

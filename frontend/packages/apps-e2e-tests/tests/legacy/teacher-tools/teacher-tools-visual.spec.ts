@@ -1,5 +1,6 @@
 import {createStudent} from '../../shared/auth';
 import {test} from '../../shared/fixtures';
+import {BelowVisualizationPage} from '../below-visualization/BelowVisualizationPage';
 
 import {TeacherToolsVisualPage} from './TeacherToolsVisualPage';
 
@@ -30,14 +31,17 @@ test.describe('Teacher tools visual readiness ports', () => {
     eyes,
   }) => {
     await createStudent(page);
-    const visualPage = new TeacherToolsVisualPage(page);
+    const visualPage = new BelowVisualizationPage(page);
 
     await eyes.open('Video thumbnail position');
-    await visualPage.openBelowVisualizationLevel();
-    await eyes.check('default visualization width');
-    await visualPage.dragVisualizationResizeBar(400);
-    await eyes.check('wider visualization');
-    await visualPage.dragVisualizationResizeBar(-400);
-    await eyes.check('narrower visualization');
+    await visualPage.gotoVideoThumbnailLevel();
+    await eyes.checkRegion(
+      '#visualizationColumn',
+      'default visualization width',
+    );
+    await visualPage.dragVisualizationGrippy(400);
+    await eyes.checkRegion('#visualizationColumn', 'wider visualization');
+    await visualPage.dragVisualizationGrippy(-400);
+    await eyes.checkRegion('#visualizationColumn', 'narrower visualization');
   });
 });

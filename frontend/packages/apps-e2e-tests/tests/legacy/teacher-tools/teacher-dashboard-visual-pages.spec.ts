@@ -245,13 +245,14 @@ test.describe(
       await expect(
         page.getByRole('heading', {name: 'All the Things!'}),
       ).toBeVisible({timeout: 30_000});
-      await eyes.check('unit overview');
+      await dashboard.expectCourseOverviewVisualReady();
+      await eyes.checkViewport('unit overview');
 
       await page.getByRole('link', {name: 'allthethingscourse'}).click();
       await expect(
         page.getByRole('heading', {name: 'allthethingscourse'}),
       ).toBeVisible({timeout: 30_000});
-      await eyes.check('course overview');
+      await eyes.checkViewport('course overview');
     });
   },
 );

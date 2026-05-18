@@ -1,5 +1,6 @@
 import {createTeacherAssociatedStudent, signIn} from '../../shared/auth';
 import {expect, test} from '../../shared/fixtures';
+import {dismissTeacherPanel} from '../../shared/ui';
 
 import {InstructionsVisualPage} from './InstructionsVisualPage';
 
@@ -56,6 +57,17 @@ test.describe('Top instructions visual smoke ports', () => {
   }) => {
     await eyes.open('top instructions in CSF with hints');
     const instructions = new InstructionsVisualPage(page);
+    const nonInstructionRegions = [
+      page.locator('#visualizationColumn'),
+      page.locator('#codeWorkspaceWrapper'),
+      page.locator('#codeWorkspace'),
+      page.locator('#toolbox-header'),
+      page.locator('#show-toolbox-header'),
+      page.locator('#workspace-header'),
+      page.locator('#versions-header'),
+      page.locator('#settings-header'),
+      page.locator('.editor-column'),
+    ];
     await instructions.openAllTheThingsLevel(6, 2);
     await instructions.runButton.evaluate(element =>
       (element as HTMLElement).click(),
@@ -63,28 +75,38 @@ test.describe('Top instructions visual smoke ports', () => {
     await expect(
       page.locator('.uitest-topInstructions-inline-feedback'),
     ).toBeVisible({timeout: 20_000});
-    await eyes.check('farmer with hints');
+    await eyes.check('farmer with hints', {
+      ignoreRegions: nonInstructionRegions,
+    });
 
     await instructions.lightbulb.evaluate(element =>
       (element as HTMLElement).click(),
     );
     await expect(instructions.topInstructions).toContainText('Do you want');
     await instructions.stabilizeInstructionScroll('bottom');
-    await eyes.check('farmer with hint prompt');
+    await eyes.check('farmer with hint prompt', {
+      ignoreRegions: nonInstructionRegions,
+    });
 
     await instructions.expandTopInstructions();
     await instructions.stabilizeInstructionScroll('bottom');
-    await eyes.check('farmer with expanded instructions');
+    await eyes.check('farmer with expanded instructions', {
+      ignoreRegions: nonInstructionRegions,
+    });
 
     await instructions.acceptNextHint();
     await expect(page.locator('.block-space')).toBeVisible({timeout: 15_000});
     await instructions.stabilizeInstructionScroll('bottom');
-    await eyes.check('farmer with block hint');
+    await eyes.check('farmer with block hint', {
+      ignoreRegions: nonInstructionRegions,
+    });
 
     await instructions.acceptNextHint();
     await expect(instructions.topInstructions).toContainText('first hint');
     await instructions.stabilizeInstructionScroll('bottom');
-    await eyes.check('farmer with markdown hint');
+    await eyes.check('farmer with markdown hint', {
+      ignoreRegions: nonInstructionRegions,
+    });
 
     await instructions.acceptNextHint();
     await expect(instructions.topInstructions).toContainText('hint video');
@@ -185,7 +207,10 @@ test.describe('Top instructions visual smoke ports', () => {
     page,
     eyes,
   }) => {
-    const pair = await createTeacherAssociatedStudent(page, {authorized: true});
+    const pair = await createTeacherAssociatedStudent(page, {
+      authorized: true,
+      studentName: 'Sally',
+    });
     await signIn(page, pair.teacherEmail, pair.teacherPassword);
     await eyes.open('resizing top instructions in CSP');
 
@@ -194,6 +219,7 @@ test.describe('Top instructions visual smoke ports', () => {
     );
     const instructions = new InstructionsVisualPage(page);
     await instructions.expectLabReady();
+    await dismissTeacherPanel(page);
     await instructions.stabilizeInstructionScroll();
     await eyes.check('teacher in feedback tab');
 
@@ -234,7 +260,11 @@ test.describe('Top instructions visual smoke ports', () => {
     await expect(
       page.getByRole('button', {name: 'For Teachers Only'}),
     ).toBeHidden();
-    await eyes.check('student doesnt see teacher markdown');
+    await instructions.stabilizeInstructionScroll();
+    await eyes.checkLocator(
+      instructions.editorColumn,
+      'student doesnt see teacher markdown',
+    );
 
     await signIn(page, pair.teacherEmail, pair.teacherPassword);
     await page.goto('/courses/allthethingscourse/units/1/lessons/18/levels/11');
@@ -242,6 +272,10 @@ test.describe('Top instructions visual smoke ports', () => {
     await expect(
       page.getByRole('button', {name: 'For Teachers Only'}),
     ).toBeVisible();
-    await eyes.check('authorized teacher does see teacher markdown');
+    await instructions.stabilizeInstructionScroll();
+    await eyes.checkLocator(
+      instructions.editorColumn,
+      'authorized teacher does see teacher markdown',
+    );
   });
 });

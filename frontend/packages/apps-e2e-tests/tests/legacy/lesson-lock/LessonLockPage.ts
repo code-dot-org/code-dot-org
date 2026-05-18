@@ -1,5 +1,7 @@
 import {expect, type Locator, type Page} from '@playwright/test';
 
+import {waitForStableVisualLayout} from '../shared/visualReadiness';
+
 interface LockStatusStudent {
   user_level_data: Record<string, unknown>;
   locked: boolean;
@@ -57,11 +59,46 @@ export class LessonLockPage {
       await expect(this.page.getByText('Lesson 1: Jigsaw')).toBeVisible({
         timeout: 30_000,
       });
+      await this.expectTeacherControlsReady();
     } else {
       await expect(this.page.locator('table:visible').first()).toBeVisible({
         timeout: 30_000,
       });
     }
+  }
+
+  /**
+   * Wait for teacher-only controls on the detail unit overview to finish
+   * mounting. Full-page screenshots can otherwise capture rows after the
+   * teacher info boxes mount but before the visible/hidden controls render.
+   */
+  async expectTeacherControlsReady(): Promise<void> {
+    await expect(
+      this.page.getByRole('button', {name: 'Show All Lessons'}),
+    ).toBeVisible({timeout: 30_000});
+    await expect(
+      this.page.getByRole('button', {name: 'Hide All Lessons'}),
+    ).toBeVisible({timeout: 30_000});
+    await expect(
+      this.page.getByRole('button', {name: /Visible/}).first(),
+    ).toBeVisible({timeout: 30_000});
+    await expect(
+      this.page.getByRole('button', {name: /Hidden/}).last(),
+    ).toBeVisible({timeout: 30_000});
+    await expect(this.page.getByText('Lesson 55: Unplugged Level')).toBeVisible(
+      {
+        timeout: 30_000,
+      },
+    );
+    await expect(
+      this.page.getByRole('link', {name: 'Powered by AWS Cloud Computing'}),
+    ).toBeVisible({timeout: 30_000});
+    await waitForStableVisualLayout(this.page, [
+      '.uitest-detail-progress-table',
+      'main',
+      'footer',
+    ]);
+    await this.page.evaluate(() => window.scrollTo(0, 0));
   }
 
   /**
@@ -96,6 +133,10 @@ export class LessonLockPage {
       .nth(lockableLessonIndex)
       .evaluate(element => (element.firstElementChild as HTMLElement).click());
     await expect(this.modalBody).toBeVisible({timeout: 30_000});
+    await expect(this.modalBody.getByRole('radio').first()).toBeVisible({
+      timeout: 30_000,
+    });
+    await waitForStableVisualLayout(this.page, ['.modal-dialog']);
   }
 
   /**

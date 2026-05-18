@@ -1,4 +1,4 @@
-import {type Locator, type Page} from '@playwright/test';
+import {type FrameLocator, type Locator, type Page} from '@playwright/test';
 
 import {expect} from '../../shared/fixtures';
 
@@ -12,6 +12,7 @@ export class TeacherLessonPlanPage {
   readonly lessonDropdown: Locator;
   readonly modal: Locator;
   readonly modalBackdrop: Locator;
+  readonly modalVideoFrame: FrameLocator;
   readonly discussionGoalTab: Locator;
 
   /**
@@ -24,6 +25,7 @@ export class TeacherLessonPlanPage {
     this.lessonDropdown = page.locator('.uitest-lesson-dropdown-nav');
     this.modal = page.locator('.modal');
     this.modalBackdrop = page.locator('.modal-backdrop');
+    this.modalVideoFrame = this.modal.frameLocator('iframe').first();
     this.discussionGoalTab = page.locator('.unit-test-tip-tab');
   }
 
@@ -158,6 +160,7 @@ export class TeacherLessonPlanPage {
     await expect(
       this.modal.getByRole('button', {name: 'Dismiss'}),
     ).toBeVisible();
+    await this.waitForStableModal();
   }
 
   /**
@@ -166,6 +169,74 @@ export class TeacherLessonPlanPage {
   async dismissLevelDetails(): Promise<void> {
     await this.modal.getByRole('button', {name: 'Dismiss'}).click();
     await expect(this.modalBackdrop).toBeHidden({timeout: 30_000});
+  }
+
+  /**
+   * Waits for the video preview iframe to render its thumbnail player.
+   *
+   * This is the user-visible readiness signal for the standalone video dialog.
+   * Without it, screenshots can race between the black player shell and the
+   * rendered video thumbnail.
+   */
+  async expectVideoPreviewReady(): Promise<void> {
+    await expect(
+      this.modalVideoFrame.getByRole('link', {
+        name: 'Web Development: Intro to Web Lab',
+      }),
+    ).toBeVisible({timeout: 30_000});
+    await expect(
+      this.modalVideoFrame.getByRole('button', {name: 'thumbnail-image'}),
+    ).toBeVisible({timeout: 30_000});
+    await expect(
+      this.modalVideoFrame.getByRole('button', {name: 'Play video'}),
+    ).toBeVisible();
+    await this.waitForStableModal();
+  }
+
+  /**
+   * Wait for the level details modal to stop shifting before screenshots.
+   */
+  async waitForStableModal(): Promise<void> {
+    await this.page.waitForFunction(
+      () =>
+        new Promise<boolean>(resolve => {
+          let previous = '';
+          let stableFrames = 0;
+          const signature = () =>
+            ['.modal', '.modal-body']
+              .flatMap(selector =>
+                Array.from(document.querySelectorAll(selector)),
+              )
+              .map(element => {
+                const box = element.getBoundingClientRect();
+                const styles = getComputedStyle(element);
+                return [
+                  Math.round(box.x),
+                  Math.round(box.y),
+                  Math.round(box.width),
+                  Math.round(box.height),
+                  styles.opacity,
+                  styles.transform,
+                  element.textContent?.trim(),
+                ].join(':');
+              })
+              .join('|');
+
+          const check = () => {
+            const current = signature();
+            stableFrames = current === previous ? stableFrames + 1 : 0;
+            previous = current;
+            if (stableFrames >= 5) {
+              resolve(true);
+            } else {
+              requestAnimationFrame(check);
+            }
+          };
+          requestAnimationFrame(check);
+        }),
+      undefined,
+      {timeout: 15_000},
+    );
   }
 
   /**
