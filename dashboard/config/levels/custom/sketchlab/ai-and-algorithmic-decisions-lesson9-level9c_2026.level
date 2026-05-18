@@ -1,12 +1,12 @@
 <Sketchlab>
   <config><![CDATA[{
   "game_id": 75,
-  "created_at": "2026-03-30T10:28:56.000Z",
+  "created_at": "2026-03-20T23:46:26.000Z",
   "level_num": "custom",
   "user_id": 18603,
   "properties": {
     "encrypted": "false",
-    "long_instructions": "## Tryout Eligibility\r\n\r\n1. Choose one rule:\r\n   - A student can join the team only if they meet the grade requirement **AND** meet the attendance requirement.\r\n   - A student can join the team if they meet the grade requirement **OR** meet the attendance requirement.\r\n2. Complete the truth table using the rule you chose.\r\n3. Use the table to build your flowchart.\r\n4. Include all 4 outcomes—one for each case in your table.\r\n5. Save your flowchart to your Backpack.\r\n",
+    "long_instructions": "## Do This:\r\n\r\n1. Create a flowchart to implement **one** of the following rules:\r\n\r\n   a. A student can join the team only if they meet the grade requirement **AND** meet the attendance requirement.\r\n\r\n   b. A student can join the team if they meet the grade requirement **OR** meet the attendance requirement. \r\n\r\n2. Save your flowchart to your **Backpack**.\r\n",
     "start_sources": {
       "source": {
         "nodes": [
@@ -24,9 +24,9 @@
             "data": {
               "shapeType": "diamond",
               "label": "Meets \nGrade \nRequirement?",
-              "backgroundColor": "transparent",
-              "strokeColor": "#1e1e1e",
-              "fontColor": "#1e1e1e",
+              "backgroundColor": "var(--sketchlab-bg-yellow)",
+              "strokeColor": "var(--sketchlab-stroke-default)",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": "large"
             },
             "measured": {
@@ -34,10 +34,6 @@
               "height": 220
             },
             "dragging": false,
-            "selected": false,
-            "domAttributes": {
-              "tabIndex": 0
-            },
             "width": 302,
             "height": 220,
             "resizing": false
@@ -56,18 +52,14 @@
             "data": {
               "shapeType": "diamond",
               "label": "Meets \nAttendance \nRequirement?",
-              "backgroundColor": "transparent",
-              "strokeColor": "#1e1e1e",
-              "fontColor": "#1e1e1e",
+              "backgroundColor": "var(--sketchlab-bg-yellow)",
+              "strokeColor": "var(--sketchlab-stroke-default)",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": "large"
             },
             "measured": {
               "width": 308,
               "height": 270
-            },
-            "selected": true,
-            "domAttributes": {
-              "tabIndex": 0
             },
             "width": 308,
             "height": 270,
@@ -87,18 +79,14 @@
             "data": {
               "shapeType": "diamond",
               "label": "Meets \nAttendance \nRequirement?",
-              "backgroundColor": "transparent",
-              "strokeColor": "#1e1e1e",
-              "fontColor": "#1e1e1e",
+              "backgroundColor": "var(--sketchlab-bg-yellow)",
+              "strokeColor": "var(--sketchlab-stroke-default)",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": "large"
             },
             "measured": {
               "width": 315,
               "height": 272
-            },
-            "selected": true,
-            "domAttributes": {
-              "tabIndex": 0
             },
             "width": 315,
             "height": 272,
@@ -117,19 +105,15 @@
             },
             "data": {
               "shapeType": "circle",
-              "label": "Fill in \noutcome \nfrom \ntable",
-              "backgroundColor": "transparent",
-              "strokeColor": "#1e1e1e",
-              "fontColor": "#e03131",
+              "label": "outcome",
+              "backgroundColor": "var(--sketchlab-bg-green)",
+              "strokeColor": "var(--sketchlab-stroke-default)",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": "large"
             },
             "measured": {
               "width": 181,
               "height": 158
-            },
-            "selected": true,
-            "domAttributes": {
-              "tabIndex": 0
             },
             "width": 181,
             "height": 158,
@@ -148,10 +132,10 @@
             },
             "data": {
               "shapeType": "circle",
-              "label": "Fill in \noutcome \nfrom \ntable",
-              "backgroundColor": "transparent",
-              "strokeColor": "#1e1e1e",
-              "fontColor": "#e03131",
+              "label": "outcome",
+              "backgroundColor": "var(--sketchlab-bg-green)",
+              "strokeColor": "var(--sketchlab-stroke-default)",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": "large"
             },
             "measured": {
@@ -175,10 +159,10 @@
             },
             "data": {
               "shapeType": "circle",
-              "label": "Fill in \noutcome \nfrom \ntable",
-              "backgroundColor": "transparent",
-              "strokeColor": "#1e1e1e",
-              "fontColor": "#e03131",
+              "label": "outcome",
+              "backgroundColor": "var(--sketchlab-bg-green)",
+              "strokeColor": "var(--sketchlab-stroke-default)",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": "large"
             },
             "measured": {
@@ -202,10 +186,10 @@
             },
             "data": {
               "shapeType": "circle",
-              "label": "Fill in \noutcome \nfrom \ntable",
-              "backgroundColor": "transparent",
-              "strokeColor": "#1e1e1e",
-              "fontColor": "#e03131",
+              "label": "outcome",
+              "backgroundColor": "var(--sketchlab-bg-green)",
+              "strokeColor": "var(--sketchlab-stroke-default)",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": "large"
             },
             "measured": {
@@ -215,70 +199,6 @@
             "width": 192,
             "height": 152,
             "resizing": false
-          },
-          {
-            "id": "mSuzAvT0q8T6X4OlUSf8V",
-            "type": "shape",
-            "position": {
-              "x": 39.45703194949124,
-              "y": 109.87693509132453
-            },
-            "style": {
-              "width": 821.3898617260127,
-              "height": 474.2331138608705
-            },
-            "data": {
-              "shapeType": "rectangle",
-              "label": "",
-              "backgroundColor": "#ffffff",
-              "strokeColor": "#1e1e1e"
-            },
-            "measured": {
-              "width": 821,
-              "height": 474
-            },
-            "dragging": false
-          },
-          {
-            "id": "bsP1hId1qL7vLjfSIygSp",
-            "type": "text",
-            "position": {
-              "x": 218.29800409512575,
-              "y": 126.0875010844477
-            },
-            "data": {
-              "text": "Truth Table - Use this to plan your flowchart",
-              "fontColor": "#1e1e1e",
-              "fontSize": "large",
-              "showHandles": false
-            },
-            "measured": {
-              "width": 447,
-              "height": 47
-            },
-            "dragging": false
-          },
-          {
-            "id": "cuUghB9_k36BuDG5pB94p",
-            "type": "image",
-            "position": {
-              "x": 43.05214858433607,
-              "y": 178.17284158533755
-            },
-            "style": {
-              "width": 812.4053816867607,
-              "height": 322.70547105890773
-            },
-            "data": {
-              "src": "/level_starter_assets/ai-and-algorithmic-decisions-lesson9-level9c_2026/uuid/a13ed1267843dc283f398b597f146c3869429cc8.png",
-              "altText": "",
-              "showHandles": false
-            },
-            "measured": {
-              "width": 812,
-              "height": 323
-            },
-            "dragging": false
           },
           {
             "id": "v1NnsRxdAlV_xaSmOkQfA",
@@ -294,12 +214,8 @@
               "showHandles": false
             },
             "measured": {
-              "width": 153,
-              "height": 39
-            },
-            "selected": true,
-            "domAttributes": {
-              "tabIndex": 0
+              "width": 152,
+              "height": 38
             },
             "dragging": false
           },
@@ -317,14 +233,10 @@
               "showHandles": false
             },
             "measured": {
-              "width": 186,
-              "height": 39
+              "width": 185,
+              "height": 38
             },
-            "dragging": false,
-            "selected": true,
-            "domAttributes": {
-              "tabIndex": 0
-            }
+            "dragging": false
           },
           {
             "id": "Nck3yZKR3yZD5KrcF_ozg",
@@ -340,14 +252,10 @@
               "showHandles": false
             },
             "measured": {
-              "width": 344,
-              "height": 47
+              "width": 343,
+              "height": 46
             },
-            "dragging": false,
-            "selected": false,
-            "domAttributes": {
-              "tabIndex": -1
-            }
+            "dragging": false
           },
           {
             "id": "UVtDv3rtzLM3zIoQLttsi",
@@ -358,13 +266,13 @@
             },
             "data": {
               "text": "True",
-              "fontColor": "#1971c2",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": "large",
               "showHandles": false
             },
             "measured": {
-              "width": 61,
-              "height": 47
+              "width": 60,
+              "height": 46
             }
           },
           {
@@ -376,13 +284,13 @@
             },
             "data": {
               "text": "True",
-              "fontColor": "#1971c2",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": "large",
               "showHandles": false
             },
             "measured": {
-              "width": 61,
-              "height": 47
+              "width": 60,
+              "height": 46
             }
           },
           {
@@ -394,13 +302,13 @@
             },
             "data": {
               "text": "False",
-              "fontColor": "#1971c2",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": "large",
               "showHandles": false
             },
             "measured": {
-              "width": 68,
-              "height": 47
+              "width": 67,
+              "height": 46
             }
           },
           {
@@ -412,13 +320,13 @@
             },
             "data": {
               "text": "False",
-              "fontColor": "#1971c2",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": "large",
               "showHandles": false
             },
             "measured": {
-              "width": 68,
-              "height": 47
+              "width": 67,
+              "height": 46
             }
           },
           {
@@ -430,13 +338,13 @@
             },
             "data": {
               "text": "False",
-              "fontColor": "#1971c2",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": "large",
               "showHandles": false
             },
             "measured": {
-              "width": 68,
-              "height": 47
+              "width": 67,
+              "height": 46
             }
           },
           {
@@ -448,36 +356,13 @@
             },
             "data": {
               "text": "True",
-              "fontColor": "#1971c2",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": "large",
               "showHandles": false
             },
             "measured": {
-              "width": 61,
-              "height": 47
-            }
-          },
-          {
-            "id": "jz-WFos7kIZ1igWQ0YIdg",
-            "type": "text",
-            "position": {
-              "x": 129.53630383605048,
-              "y": 500.76566785278857
-            },
-            "data": {
-              "text": "Each row in your table should match one path and one outcome \nin your flowchart.",
-              "fontColor": "#1e1e1e",
-              "fontSize": "large",
-              "showHandles": false
-            },
-            "measured": {
-              "width": 651,
-              "height": 75
-            },
-            "dragging": false,
-            "selected": true,
-            "domAttributes": {
-              "tabIndex": 0
+              "width": 60,
+              "height": 46
             }
           }
         ],
@@ -544,8 +429,8 @@
           }
         ],
         "viewport": {
-          "x": 71.39027501113708,
-          "y": 20.015925994162558,
+          "x": -370.8572225474568,
+          "y": 111.95187913442126,
           "zoom": 0.8013695570032512
         }
       }
@@ -2617,6 +2502,6 @@
     "bubble_choice_description": "Decide if a student can join a team based on grade and attendance requirements."
   },
   "published": true,
-  "audit_log": "[{\"changed_at\":\"2026-03-20T23:46:26.277+00:00\",\"changed\":[\"cloned from \\\"ai-and-algorithmic-decisions-lesson9-level9c_2025\\\"\"],\"cloned_from\":\"ai-and-algorithmic-decisions-lesson9-level9c_2025\"},{\"changed_at\":\"2026-04-16 02:14:21 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-16 02:15:43 +0000\",\"changed\":[\"long_instructions\",\"bubble_choice_description\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-16 02:16:08 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-16 02:19:32 +0000\",\"changed\":[\"exemplar_sources\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-16 02:19:44 +0000\",\"changed\":[],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-16 02:30:57 +0000\",\"changed\":[],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-05-01 13:17:58 -0400\",\"changed\":[\"start_sources\"],\"changed_by_id\":1,\"changed_by_email\":\"levelbuilder@dev.com\"}]"
+  "audit_log": "[{\"changed_at\":\"2026-03-20T23:46:26.277+00:00\",\"changed\":[\"cloned from \\\"ai-and-algorithmic-decisions-lesson9-level9c_2025\\\"\"],\"cloned_from\":\"ai-and-algorithmic-decisions-lesson9-level9c_2025\"},{\"changed_at\":\"2026-04-16 02:14:21 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-16 02:15:43 +0000\",\"changed\":[\"long_instructions\",\"bubble_choice_description\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-16 02:16:08 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-16 02:19:32 +0000\",\"changed\":[\"exemplar_sources\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-16 02:19:44 +0000\",\"changed\":[],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-16 02:30:57 +0000\",\"changed\":[],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-05-01 13:17:58 -0400\",\"changed\":[\"start_sources\"],\"changed_by_id\":1,\"changed_by_email\":\"levelbuilder@dev.com\"},{\"changed_at\":\"2026-05-08 13:16:39 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":155,\"changed_by_email\":\"dani@code.org\"},{\"changed_at\":\"2026-05-16 17:50:54 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2026-05-16 17:53:56 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
 }]]></config>
 </Sketchlab>

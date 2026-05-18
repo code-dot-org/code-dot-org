@@ -5,7 +5,7 @@ description 'description here'
 markdown <<MARKDOWN
 # Data Visualization with Google Sheets
 
-#### Data isn't always easy to understand when it's sitting in a spreadsheet full of numbers. That’s where data visualization comes in. 
+Data isn't always easy to understand when it's sitting in a spreadsheet full of numbers. That’s where data visualization comes in. 
 
 <div style="background-color: #B7E0E5; border-radius: 10px; padding: 15px; margin: 20px auto; max-width: 85%; box-sizing: border-box; word-wrap: break-word; overflow-wrap: break-word;">
 <p style="font-size: 14pt; margin-top: 12px; line-height: 120%;">📖 <strong>Data Visualization</strong> is the process of turning data into <strong>graphs or charts</strong> that help reveal patterns, relationships, or differences more clearly. A well-designed graph can make complex information easier to interpret at a glance.</p>
@@ -13,7 +13,7 @@ markdown <<MARKDOWN
 
 ## Types of Charts
 
-#### Different types of charts are useful for different kinds of data.
+Different types of charts are useful for different kinds of data.
 
 <div style="background-color: #B7E0E5; border-radius: 10px; padding: 15px; margin: 20px auto; max-width: 85%; box-sizing: border-box; word-wrap: break-word; overflow-wrap: break-word;">
 
@@ -24,8 +24,8 @@ markdown <<MARKDOWN
 
 <br>
 
-#### 🔎 **Think About** 
-#### There are many ways to visualize data. *Take a minute to think through the difference between bar charts and pie charts and when you might want to use each.*
+🔎 **Think About** 
+There are many ways to visualize data. *Take a minute to think through the difference between bar charts and pie charts and when you might want to use each.*
 <br>
 
 
@@ -61,7 +61,7 @@ markdown <<MARKDOWN
   </tr>
 </table>
 
-#### When students explore data in Google Sheets, they practice using these visual tools to ask and answer questions. By creating their own charts and filtering data, they learn how visualization can bring clarity, insight, and storytelling power to a dataset.
+When students explore data in Google Sheets, they practice using these visual tools to ask and answer questions. By creating their own charts and filtering data, they learn how visualization can bring clarity, insight, and storytelling power to a dataset.
 
 
 <br>

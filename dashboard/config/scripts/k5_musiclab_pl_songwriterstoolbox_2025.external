@@ -4,7 +4,7 @@ description 'description here'
 
 markdown <<MARKDOWN
 # Computational Thinking and Problem Solving 
-#### Before we jump into the coding, concepts, and skills that are covered in this lesson, let's explore how computational thinking and problem-solving are at the heart of what students will be doing. Understanding how to break down problems, recognize patterns, and create step-by-step solutions gives students a powerful toolkit—not just for coding, but for learning across subjects. 
+Before we jump into the coding, concepts, and skills that are covered in this lesson, let's explore how computational thinking and problem-solving are at the heart of what students will be doing. Understanding how to break down problems, recognize patterns, and create step-by-step solutions gives students a powerful toolkit—not just for coding, but for learning across subjects. 
 
 
 <div style="width: 100%; max-width: 90%; box-sizing: border-box; border: 2px solid #009EB0; padding: 10px; border-radius: 10px; margin: 30px 20px 20px 30px;">

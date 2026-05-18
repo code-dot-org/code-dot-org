@@ -5,25 +5,25 @@ description 'description here'
 markdown <<MARKDOWN
 # Variables
 
-#### In the previous level, we observed how computers sort and store data. Let's take a look at how we can declare and define variables in Java.
+In the previous level, we observed how computers sort and store data. Let's take a look at how we can declare and define variables in Java.
 
 <img src="https://images.code.org/051f1d57020960bc5c4374e4691379d2-image-1727203669873.png" alt="pandas logo" width="150px" style="border-radius:20px; float:right; margin: 0 0 10px 0px;">
 
 ## Variables
-#### A **variable** is a container that stores a value in memory. 
-#### A variable can only hold **one value** at a time. 
+A **variable** is a container that stores a value in memory. 
+A variable can only hold **one value** at a time. 
 
 
 
 ## Data Type
-#### A **data type** is the format of the data that can be stored in a variable.
+A **data type** is the format of the data that can be stored in a variable.
 
 <img src="https://images.code.org/129ea4c5768110e1250b1f9db2036d39-image-1747324714983.png" alt="variable types: int, double, string, boolean" width="650px" style="display: block; margin-left: auto; margin-right: auto;">
 
 
-#### In Java, you need to say what kind of data you're using when you create a variable.
+In Java, you need to say what kind of data you're using when you create a variable.
 
-#### For example, if you write `int age = 12;`, it shows Java that age is a number, and if you write `String name = "Alex";`, it signals that name is text.
+For example, if you write `int age = 12;`, it shows Java that age is a number, and if you write `String name = "Alex";`, it signals that name is text.
 
 ## Creating a Variable 
 
@@ -58,14 +58,14 @@ markdown <<MARKDOWN
 
 ## Declaring Different Variable Types 
 
-#### Variable types are not named when creating variables, however, how you input the value determines the variable type.
+Variable types are not named when creating variables, however, how you input the value determines the variable type.
 
 <img src="https://images.code.org/71635f4c12a0634325422d955ef60a66-image-1747324184467.png" alt="sample code of declaring variable types in Java" width="450px" style="display: block; margin-left: auto; margin-right: auto;">
 
-#### **Notice:**
+**Notice:**
 
-- #### **String**, or text, the keyword `String` is capitalized *(remember Java is case sensitive)* and variables are defined using quotation marks.
-- #### **Booleans** are defined using the words true or false.
+- **String**, or text, the keyword `String` is capitalized *(remember Java is case sensitive)* and variables are defined using quotation marks.
+- **Booleans** are defined using the words true or false.
 
 
 ##Let's practice!  

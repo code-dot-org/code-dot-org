@@ -5,7 +5,7 @@ description 'description here'
 markdown <<MARKDOWN
 # Evaluating AI Tools for Classroom Use
 
-#### Before using any AI tool with students or as part of your teaching practice, it’s important to evaluate whether it meets safety, privacy, and instructional needs. This is true whether or not the tool was initially designed to be used in an educational setting.
+Before using any AI tool with students or as part of your teaching practice, it’s important to evaluate whether it meets safety, privacy, and instructional needs. This is true whether or not the tool was initially designed to be used in an educational setting.
 
 <br>
 
@@ -102,5 +102,5 @@ Evaluating an AI Tool for Classroom Use
 </div>
 </div>
 
-#### Always follow your school or district’s policies regarding AI use. Stay informed about local laws, approved tools, and any guidance provided by your administration.
+Always follow your school or district’s policies regarding AI use. Stay informed about local laws, approved tools, and any guidance provided by your administration.
 MARKDOWN
