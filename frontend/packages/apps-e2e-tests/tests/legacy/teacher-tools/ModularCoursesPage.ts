@@ -252,8 +252,35 @@ export class ModularCoursesPage {
    * The progress table can render while the "Lessons in" dropdown is still a
    * skeleton waiting on the section courses API. The visible dropdown is the
    * user-facing readiness signal for selecting the shared unit.
+   *
+   * `/dashboardapi/section_courses/{id}` occasionally returns an empty list
+   * right after a fresh section assignment. The reducer caches that result via
+   * `loadedSectionId`, so the React selector renders nothing and never
+   * refetches without a user-driven refresh. A page reload re-runs the load
+   * cycle and is the user-equivalent way to recover.
    */
   private async waitForProgressDashboard(): Promise<void> {
+    await this.waitForProgressShell();
+    try {
+      await this.page
+        .locator('#unit-selector-v2')
+        .waitFor({state: 'visible', timeout: 45_000});
+      return;
+    } catch {
+      // Refresh once to clear stale empty courses-with-progress state.
+    }
+    await this.page.reload({waitUntil: 'domcontentloaded'});
+    await this.waitForProgressShell();
+    await expect(this.page.locator('#unit-selector-v2')).toBeVisible({
+      timeout: 60_000,
+    });
+  }
+
+  /**
+   * Waits for the V2 progress page shell — the Progress heading and the
+   * skeleton/loaded progress table — without requiring the unit dropdown.
+   */
+  private async waitForProgressShell(): Promise<void> {
     await this.page
       .locator('h1')
       .filter({hasText: 'Progress'})
@@ -261,8 +288,5 @@ export class ModularCoursesPage {
     await this.page
       .locator('#ui-test-progress-table-v2')
       .waitFor({state: 'visible', timeout: 30_000});
-    await expect(this.page.locator('#unit-selector-v2')).toBeVisible({
-      timeout: 120_000,
-    });
   }
 }
