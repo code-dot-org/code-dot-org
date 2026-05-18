@@ -204,6 +204,7 @@ const MultipleSectionsAssigner = ({
   return (
     <Modal
       onClose={onClose}
+      closeLabel={i18n.closeDialog()}
       title={i18n.chooseSectionsPrompt({assignmentName})}
       description={sectionDirections}
       primaryButtonProps={{
