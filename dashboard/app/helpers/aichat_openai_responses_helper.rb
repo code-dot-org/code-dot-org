@@ -29,7 +29,7 @@ module AichatOpenaiResponsesHelper
         headers: headers,
         body: data.to_json,
         open_timeout: DCDO.get('openai_http_open_timeout', 5),
-        read_timeout: DCDO.get('openai_http_read_timeout', 30)
+        read_timeout: DCDO.get('aichat_safety_openai_read_timeout', DCDO.get('openai_http_read_timeout', 30))
       )
     end
   end
