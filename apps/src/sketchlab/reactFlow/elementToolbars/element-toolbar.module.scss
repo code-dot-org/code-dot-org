@@ -42,6 +42,10 @@
   color: var(--text-neutral-primary);
   border: 1px solid var(--borders-neutral-primary);
   pointer-events: all;
+  // When the available window space is smaller than the toolbar's
+  // natural height, ToolbarShell sets an inline max-height; the Paper
+  // scrolls internally rather than spilling off-screen.
+  overflow-y: auto;
 }
 
 .header {
@@ -49,9 +53,16 @@
   justify-content: flex-end;
   // Pull into the Paper's 8px padding so the X sits in the corner
   // rather than inside its own row of whitespace. Bottom -10px
-  // offset makes it so the header (just a close button) 
+  // offset makes it so the header (just a close button)
   // doesn't have a massive gap to the toolbar content.
   margin: -4px -4px -10px 0;
+  // Keep the close button reachable while the toolbar body scrolls.
+  // The sticky top matches the negative top margin above so the
+  // visual position is unchanged when not scrolled.
+  position: sticky;
+  top: -4px;
+  z-index: 1;
+  background-color: var(--background-neutral-primary);
 }
 
 .close-button {
