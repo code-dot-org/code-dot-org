@@ -30,14 +30,15 @@ export interface Panel {
   fadeInOverPrevious?: boolean;
 }
 
-// Clickable box inside a panel that jumps to the panel with matching key.
+// Positioned text inside a panel. If targetKey is present, it jumps to the
+// panel with that key when clicked.
 // x, y, width are percentages of the containing panel; (x, y) is the center.
 export interface PanelLink {
   text: string;
   x: number;
   y: number;
   width?: number;
-  targetKey: string;
+  targetKey?: string;
 }
 
 // Image rendered over a panel background. x, y, and width are percentages
@@ -48,6 +49,8 @@ export interface PanelImage {
   x: number;
   y: number;
   width?: number;
+  // Honored only when useLinks is set on the level.
+  targetKey?: string;
 }
 
 export const DEFAULT_PANEL_LINK_WIDTH = 40;

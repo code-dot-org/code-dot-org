@@ -4,8 +4,9 @@ This is a React client for a `panels` level using [Lab2](../lab2/).
 
 A panels level displays a series of information panels.  Each panel contains
 one background image and one piece of text.  The location of the text can be
-specified.  Panels with link navigation can also render multiple image overlays
-with configurable position and scale.
+specified.  Panels with link navigation can also render multiple positioned
+image overlays and text elements. Each image or text element can optionally
+target another panel.
 
 In the future, this level type could be expanded to support additional layouts
 (e.g. multiple pieces of text per panel), and additional media types (e.g. short

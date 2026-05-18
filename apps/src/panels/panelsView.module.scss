@@ -1,4 +1,4 @@
-@import "color.scss";
+@import 'color.scss';
 @import 'font.scss';
 @import '../mixins.scss';
 
@@ -11,7 +11,7 @@ $text-horizontal-padding: 2.6cqw;
   from {
     opacity: 0;
   }
-  to{
+  to {
     opacity: 1;
   }
 }
@@ -85,6 +85,33 @@ $text-horizontal-padding: 2.6cqw;
       user-select: none;
     }
 
+    .panelImageLink {
+      all: unset;
+      position: absolute;
+      transform: translate(-50%, -50%);
+      max-width: 100%;
+      cursor: pointer;
+      transition:
+        transform 0.1s ease,
+        filter 0.1s ease;
+
+      @include focus-styles;
+
+      &:hover,
+      &:focus-visible {
+        filter: brightness(0.95);
+        transform: translate(-50%, -50%) scale(1.02);
+      }
+    }
+
+    .panelImageLinkImage {
+      display: block;
+      width: 100%;
+      height: auto;
+      pointer-events: none;
+      user-select: none;
+    }
+
     .text {
       background-color: $neutral_light;
       color: $neutral_dark;
@@ -92,7 +119,9 @@ $text-horizontal-padding: 2.6cqw;
       width: 40%;
       position: absolute;
       padding: $text-vertical-padding $text-horizontal-padding;
-      animation: 0.5s ease 0.5s fade-in, 0.5s ease 0.5s slide-in;
+      animation:
+        0.5s ease 0.5s fade-in,
+        0.5s ease 0.5s slide-in;
       animation-fill-mode: both;
       font-size: 1.6cqw;
       line-height: 1.4em;
@@ -102,12 +131,17 @@ $text-horizontal-padding: 2.6cqw;
         color: $light_white;
       }
 
-      h1, h2, h3, h4 {
+      h1,
+      h2,
+      h3,
+      h4 {
         margin: 0 0 1cqw 0;
         font-size: 3cqw;
         line-height: 1.2em;
 
-        &, em, strong {
+        &,
+        em,
+        strong {
           font-family: var(--font-family-barlow-semi-condensed-semibold);
         }
       }
@@ -121,7 +155,8 @@ $text-horizontal-padding: 2.6cqw;
         }
       }
 
-      ol, ul {
+      ol,
+      ul {
         font-size: 1.6cqw;
         margin: 0 0 1.1cqw 2.2cqw;
 
@@ -201,31 +236,45 @@ $text-horizontal-padding: 2.6cqw;
       font-size: 1.6cqw;
       line-height: 1.4em;
       text-align: center;
-      cursor: pointer;
-      transition: transform 0.1s ease, filter 0.1s ease;
 
-      @include focus-styles;
+      &Clickable {
+        @include focus-styles;
 
-      &:hover, &:focus-visible {
-        filter: brightness(0.95);
-        transform: translate(-50%, -50%) scale(1.02);
+        cursor: pointer;
+        transition:
+          transform 0.1s ease,
+          filter 0.1s ease;
+
+        &:hover,
+        &:focus-visible {
+          filter: brightness(0.95);
+          transform: translate(-50%, -50%) scale(1.02);
+        }
       }
 
       &Dark {
         background-color: $neutral_dark;
         color: $light_white;
+      }
 
-        &:hover, &:focus-visible {
+      &Dark.linkClickable {
+        &:hover,
+        &:focus-visible {
           filter: brightness(1.15);
         }
       }
 
-      h1, h2, h3, h4 {
+      h1,
+      h2,
+      h3,
+      h4 {
         margin: 0 0 1cqw 0;
         font-size: 2.4cqw;
         line-height: 1.2em;
 
-        &, em, strong {
+        &,
+        em,
+        strong {
           font-family: var(--font-family-barlow-semi-condensed-semibold);
         }
       }
@@ -251,13 +300,17 @@ $text-horizontal-padding: 2.6cqw;
 
       // After typing, the button will be ready.
       &Ready {
-        animation: 0.5s ease 0s fade-in, 0.5s ease 0s delay-pointer-events;
+        animation:
+          0.5s ease 0s fade-in,
+          0.5s ease 0s delay-pointer-events;
         animation-fill-mode: both;
       }
 
       // If no typing, the button appears with a delay.
       &Delay {
-        animation: 0.5s ease 1.2s fade-in, 0.5s ease 1.2s delay-pointer-events;
+        animation:
+          0.5s ease 1.2s fade-in,
+          0.5s ease 1.2s delay-pointer-events;
         animation-fill-mode: both;
       }
     }

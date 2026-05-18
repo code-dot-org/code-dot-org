@@ -1,4 +1,4 @@
-import {render, screen} from '@testing-library/react';
+import {fireEvent, render, screen} from '@testing-library/react';
 import '@testing-library/jest-dom';
 import React from 'react';
 
@@ -73,5 +73,90 @@ describe('PanelsView', () => {
 
     expect(screen.queryByAltText('Overlay one')).toBeNull();
     expect(screen.queryByAltText('Overlay two')).toBeNull();
+  });
+
+  it('uses linked image overlays for panel navigation', () => {
+    render(
+      <PanelsView
+        {...DEFAULT_PROPS}
+        panels={[
+          {
+            key: 'panel-1',
+            imageUrl: 'background.png',
+            text: '',
+            images: [
+              {
+                imageUrl: 'overlay-1.png',
+                altText: 'Go to second panel',
+                x: 25,
+                y: 75,
+                width: 35,
+                targetKey: 'panel-2',
+              },
+            ],
+          },
+          {
+            key: 'panel-2',
+            imageUrl: 'background.png',
+            text: 'Second panel',
+          },
+        ]}
+        useLinks
+      />
+    );
+
+    fireEvent.click(screen.getByRole('button', {name: 'Go to second panel'}));
+
+    expect(screen.getByText('Second panel')).toBeInTheDocument();
+  });
+
+  it('renders targetless panel text as non-clickable text', () => {
+    render(
+      <PanelsView
+        {...DEFAULT_PROPS}
+        panels={[
+          {
+            key: 'panel-1',
+            imageUrl: 'background.png',
+            text: '',
+            links: [{text: 'Plain panel text', x: 50, y: 50}],
+          },
+        ]}
+        useLinks
+      />
+    );
+
+    expect(screen.getByText('Plain panel text')).toBeInTheDocument();
+    expect(
+      screen.queryByRole('button', {name: 'Plain panel text'})
+    ).not.toBeInTheDocument();
+  });
+
+  it('uses targeted panel text for panel navigation', () => {
+    render(
+      <PanelsView
+        {...DEFAULT_PROPS}
+        panels={[
+          {
+            key: 'panel-1',
+            imageUrl: 'background.png',
+            text: '',
+            links: [
+              {text: 'Go to second panel', x: 50, y: 50, targetKey: 'panel-2'},
+            ],
+          },
+          {
+            key: 'panel-2',
+            imageUrl: 'background.png',
+            text: 'Second panel',
+          },
+        ]}
+        useLinks
+      />
+    );
+
+    fireEvent.click(screen.getByRole('button', {name: 'Go to second panel'}));
+
+    expect(screen.getByText('Second panel')).toBeInTheDocument();
   });
 });

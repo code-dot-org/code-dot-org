@@ -14,6 +14,7 @@ import {createUuid} from '@cdo/apps/utils';
 
 import {PANEL_HEIGHT, PANEL_WIDTH} from './constants';
 import EditPanelsImages from './EditPanelsImages';
+import EditPanelsLayoutEditor from './EditPanelsLayoutEditor';
 import EditPanelsLinks from './EditPanelsLinks';
 
 import moduleStyles from './edit-panels.module.scss';
@@ -208,7 +209,7 @@ const EditPanels: React.FunctionComponent<EditPanelsProps> = ({
           <Checkbox
             checked={useLinks}
             name="use_links"
-            label="Use links for navigation"
+            label="Advanced Panels"
             size="s"
             onChange={event => setUseLinks(event.target.checked)}
           />
@@ -393,7 +394,16 @@ const EditPanel: React.FunctionComponent<EditPanelProps> = ({
           />
         </div>
       )}
-      {useLinks && <EditPanelsImages panel={panel} updatePanel={updatePanel} />}
+      {useLinks && (
+        <EditPanelsLayoutEditor panel={panel} updatePanel={updatePanel} />
+      )}
+      {useLinks && (
+        <EditPanelsImages
+          panel={panel}
+          allPanels={allPanels}
+          updatePanel={updatePanel}
+        />
+      )}
       {useLinks && (
         <EditPanelsLinks
           panel={panel}

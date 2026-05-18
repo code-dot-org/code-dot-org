@@ -26,7 +26,6 @@ import {
   DEFAULT_PANEL_IMAGE_Y,
   DEFAULT_PANEL_LINK_WIDTH,
   Panel,
-  PanelLink,
 } from './types';
 
 import styles from './panelsView.module.scss';
@@ -160,9 +159,9 @@ const PanelsView: React.FunctionComponent<PanelsProps> = ({
     [changePanel]
   );
 
-  const handleLinkClick = useCallback(
-    (link: PanelLink) => {
-      const targetIndex = panels.findIndex(p => p.key === link.targetKey);
+  const handleTargetClick = useCallback(
+    (targetKey: string) => {
+      const targetIndex = panels.findIndex(p => p.key === targetKey);
       if (targetIndex !== -1) {
         changePanel(targetIndex, 'bubble');
       }
@@ -295,35 +294,21 @@ const PanelsView: React.FunctionComponent<PanelsProps> = ({
               }
 
               return (
-                <img
+                <PanelImageOverlay
                   key={`image-${index}`}
-                  className={classNames(styles.panelImage, styles.imageCurrent)}
-                  src={localization.translate(image.imageUrl, ['lz-image'])}
-                  alt={image.altText || ''}
-                  aria-hidden={image.altText ? undefined : true}
-                  style={{
-                    left: `${image.x ?? DEFAULT_PANEL_IMAGE_X}%`,
-                    top: `${image.y ?? DEFAULT_PANEL_IMAGE_Y}%`,
-                    width: `${image.width ?? DEFAULT_PANEL_IMAGE_WIDTH}%`,
-                  }}
+                  image={image}
+                  onClick={handleTargetClick}
                 />
               );
             })}
         {useLinks &&
           panel.links?.map((link, index) => (
-            <button
-              type="button"
+            <PanelTextOverlay
               key={`link-${index}`}
-              className={classNames(styles.link, panel.dark && styles.linkDark)}
-              style={{
-                left: `${link.x}%`,
-                top: `${link.y}%`,
-                width: `${link.width ?? DEFAULT_PANEL_LINK_WIDTH}%`,
-              }}
-              onClick={() => handleLinkClick(link)}
-            >
-              <EnhancedSafeMarkdown markdown={link.text} />
-            </button>
+              link={link}
+              dark={panel.dark}
+              onClick={handleTargetClick}
+            />
           ))}
         {panel.text && (
           <div
@@ -434,6 +419,97 @@ const PanelsView: React.FunctionComponent<PanelsProps> = ({
           </button>
         </div>
       )}
+    </div>
+  );
+};
+
+interface PanelImageOverlayProps {
+  image: NonNullable<Panel['images']>[number];
+  onClick: (targetKey: string) => void;
+}
+
+const PanelImageOverlay: React.FunctionComponent<PanelImageOverlayProps> = ({
+  image,
+  onClick,
+}) => {
+  const translatedImageUrl = localization.translate(image.imageUrl, [
+    'lz-image',
+  ]);
+  const positionStyle = {
+    left: `${image.x ?? DEFAULT_PANEL_IMAGE_X}%`,
+    top: `${image.y ?? DEFAULT_PANEL_IMAGE_Y}%`,
+    width: `${image.width ?? DEFAULT_PANEL_IMAGE_WIDTH}%`,
+  };
+
+  if (image.targetKey) {
+    return (
+      <button
+        type="button"
+        className={classNames(styles.panelImageLink, styles.imageCurrent)}
+        style={positionStyle}
+        onClick={() => image.targetKey && onClick(image.targetKey)}
+        aria-label={image.altText || commonI18n.panel()}
+      >
+        <img
+          className={styles.panelImageLinkImage}
+          src={translatedImageUrl}
+          alt=""
+          aria-hidden
+        />
+      </button>
+    );
+  }
+
+  return (
+    <img
+      className={classNames(styles.panelImage, styles.imageCurrent)}
+      src={translatedImageUrl}
+      alt={image.altText || ''}
+      aria-hidden={image.altText ? undefined : true}
+      style={positionStyle}
+    />
+  );
+};
+
+interface PanelTextOverlayProps {
+  link: NonNullable<Panel['links']>[number];
+  dark?: boolean;
+  onClick: (targetKey: string) => void;
+}
+
+const PanelTextOverlay: React.FunctionComponent<PanelTextOverlayProps> = ({
+  link,
+  dark,
+  onClick,
+}) => {
+  const className = classNames(
+    styles.link,
+    link.targetKey && styles.linkClickable,
+    dark && styles.linkDark
+  );
+  const style = {
+    left: `${link.x}%`,
+    top: `${link.y}%`,
+    width: `${link.width ?? DEFAULT_PANEL_LINK_WIDTH}%`,
+  };
+  const content = <EnhancedSafeMarkdown markdown={link.text} />;
+
+  if (link.targetKey) {
+    return (
+      <button
+        type="button"
+        className={className}
+        style={style}
+        onClick={() => link.targetKey && onClick(link.targetKey)}
+      >
+        {content}
+      </button>
+    );
+  }
+
+  return (
+    <div className={className} style={style}>
+      {content}
     </div>
   );
 };

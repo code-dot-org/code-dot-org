@@ -1,3 +1,4 @@
+import {SimpleDropdown} from '@code-dot-org/component-library/dropdown';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import {Typography} from '@mui/material';
 import classNames from 'classnames';
@@ -19,6 +20,7 @@ import moduleStyles from './edit-panels.module.scss';
 
 interface EditPanelsImagesProps {
   panel: Panel;
+  allPanels?: Panel[];
   updatePanel: (panel: Panel) => void;
 }
 
@@ -36,9 +38,11 @@ const getImageEditorKey = (image: PanelImage, imageIndex: number) =>
 // percentages and scaled by width percentage while preserving aspect ratio.
 const EditPanelsImages: React.FunctionComponent<EditPanelsImagesProps> = ({
   panel,
+  allPanels,
   updatePanel,
 }) => {
   const images = panel.images || [];
+  const otherPanels = allPanels?.filter(p => p.key !== panel.key) || [];
   const [draggedImageIndex, setDraggedImageIndex] = useState<number | null>(
     null
   );
@@ -171,18 +175,27 @@ const EditPanelsImages: React.FunctionComponent<EditPanelsImagesProps> = ({
           >
             <FontAwesomeV6Icon iconName="grip-vertical" />
           </button>
-          <Typography variant="body2" className={moduleStyles.imageHeader}>
-            Image {imageIndex + 1}
-          </Typography>
-          <ImageInput
-            initialImageUrl={image.imageUrl}
-            updateImageUrl={(imageUrl: string) =>
-              updateImage(imageIndex, {...image, imageUrl})
-            }
-            dimensions={{width: PANEL_WIDTH, height: PANEL_HEIGHT}}
-            fileTypes={['GIF', 'JPG', 'PNG']}
-            showPreview
-          />
+          <div className={moduleStyles.imagePreviewColumn}>
+            {image.imageUrl && (
+              <img
+                className={moduleStyles.imageThumbnail}
+                src={image.imageUrl}
+                alt=""
+                aria-hidden
+                draggable={false}
+              />
+            )}
+          </div>
+          <div className={moduleStyles.imageInputControl}>
+            <ImageInput
+              initialImageUrl={image.imageUrl}
+              updateImageUrl={(imageUrl: string) =>
+                updateImage(imageIndex, {...image, imageUrl})
+              }
+              dimensions={{width: PANEL_WIDTH, height: PANEL_HEIGHT}}
+              fileTypes={['GIF', 'JPG', 'PNG']}
+            />
+          </div>
           <label className={moduleStyles.imageAltText}>
             Alt text
             <input
@@ -196,45 +209,31 @@ const EditPanelsImages: React.FunctionComponent<EditPanelsImagesProps> = ({
               }
             />
           </label>
-          <label className={moduleStyles.imageSlider}>
-            X: {image.x ?? DEFAULT_PANEL_IMAGE_X}%
-            <input
-              type="range"
-              min={0}
-              max={100}
-              value={image.x ?? DEFAULT_PANEL_IMAGE_X}
-              onChange={e =>
-                updateImage(imageIndex, {...image, x: Number(e.target.value)})
-              }
+          {allPanels && (
+            <SimpleDropdown
+              labelText="Target panel"
+              name={`image-target-${imageIndex}`}
+              size="s"
+              selectedValue={image.targetKey || ''}
+              disabled={otherPanels.length === 0}
+              onChange={e => {
+                const newImage = {...image};
+                if (e.target.value) {
+                  newImage.targetKey = e.target.value;
+                } else {
+                  delete newImage.targetKey;
+                }
+                updateImage(imageIndex, newImage);
+              }}
+              items={[
+                {value: '', text: 'No link'},
+                ...otherPanels.map(p => ({
+                  value: p.key,
+                  text: `Panel ${allPanels.indexOf(p) + 1}`,
+                })),
+              ]}
             />
-          </label>
-          <label className={moduleStyles.imageSlider}>
-            Y: {image.y ?? DEFAULT_PANEL_IMAGE_Y}%
-            <input
-              type="range"
-              min={0}
-              max={100}
-              value={image.y ?? DEFAULT_PANEL_IMAGE_Y}
-              onChange={e =>
-                updateImage(imageIndex, {...image, y: Number(e.target.value)})
-              }
-            />
-          </label>
-          <label className={moduleStyles.imageSlider}>
-            Scale: {image.width ?? DEFAULT_PANEL_IMAGE_WIDTH}%
-            <input
-              type="range"
-              min={1}
-              max={100}
-              value={image.width ?? DEFAULT_PANEL_IMAGE_WIDTH}
-              onChange={e =>
-                updateImage(imageIndex, {
-                  ...image,
-                  width: Number(e.target.value),
-                })
-              }
-            />
-          </label>
+          )}
           <button
             type="button"
             className={moduleStyles.deleteButton}

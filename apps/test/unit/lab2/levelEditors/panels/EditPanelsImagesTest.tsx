@@ -66,7 +66,7 @@ describe('EditPanelsImages', () => {
     });
   });
 
-  it('updates an image url, position, and scale', () => {
+  it('updates an image url and alt text', () => {
     const updatePanel = jest.fn();
     const panelWithImage: Panel = {
       ...panel,
@@ -93,30 +93,6 @@ describe('EditPanelsImages', () => {
         {imageUrl: 'old.png', altText: 'description', x: 10, y: 20, width: 30},
       ],
     });
-
-    fireEvent.change(screen.getByLabelText('X: 10%'), {
-      target: {value: '45'},
-    });
-    expect(updatePanel).toHaveBeenLastCalledWith({
-      ...panelWithImage,
-      images: [{imageUrl: 'old.png', x: 45, y: 20, width: 30}],
-    });
-
-    fireEvent.change(screen.getByLabelText('Y: 20%'), {
-      target: {value: '55'},
-    });
-    expect(updatePanel).toHaveBeenLastCalledWith({
-      ...panelWithImage,
-      images: [{imageUrl: 'old.png', x: 10, y: 55, width: 30}],
-    });
-
-    fireEvent.change(screen.getByLabelText('Scale: 30%'), {
-      target: {value: '65'},
-    });
-    expect(updatePanel).toHaveBeenLastCalledWith({
-      ...panelWithImage,
-      images: [{imageUrl: 'old.png', x: 10, y: 20, width: 65}],
-    });
   });
 
   it('removes the images property after deleting the last image', () => {
@@ -134,6 +110,72 @@ describe('EditPanelsImages', () => {
     expect(updatePanel).toHaveBeenCalledWith({
       ...panelWithImage,
       images: undefined,
+    });
+  });
+
+  it('updates an image target panel', () => {
+    const updatePanel = jest.fn();
+    const panelWithImage: Panel = {
+      ...panel,
+      images: [{imageUrl: 'old.png', x: 10, y: 20, width: 30}],
+    };
+    const targetPanel: Panel = {
+      ...panel,
+      key: 'panel-2',
+    };
+    render(
+      <EditPanelsImages
+        panel={panelWithImage}
+        allPanels={[panelWithImage, targetPanel]}
+        updatePanel={updatePanel}
+      />
+    );
+
+    fireEvent.change(screen.getByLabelText('Target panel'), {
+      target: {value: 'panel-2'},
+    });
+
+    expect(updatePanel).toHaveBeenCalledWith({
+      ...panelWithImage,
+      images: [
+        {imageUrl: 'old.png', x: 10, y: 20, width: 30, targetKey: 'panel-2'},
+      ],
+    });
+  });
+
+  it('removes an image target panel', () => {
+    const updatePanel = jest.fn();
+    const panelWithImage: Panel = {
+      ...panel,
+      images: [
+        {
+          imageUrl: 'old.png',
+          x: 10,
+          y: 20,
+          width: 30,
+          targetKey: 'panel-2',
+        },
+      ],
+    };
+    const targetPanel: Panel = {
+      ...panel,
+      key: 'panel-2',
+    };
+    render(
+      <EditPanelsImages
+        panel={panelWithImage}
+        allPanels={[panelWithImage, targetPanel]}
+        updatePanel={updatePanel}
+      />
+    );
+
+    fireEvent.change(screen.getByLabelText('Target panel'), {
+      target: {value: ''},
+    });
+
+    expect(updatePanel).toHaveBeenCalledWith({
+      ...panelWithImage,
+      images: [{imageUrl: 'old.png', x: 10, y: 20, width: 30}],
     });
   });
 

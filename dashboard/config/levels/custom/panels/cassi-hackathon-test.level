@@ -1,0 +1,86 @@
+<Panels>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 73,
+  "created_at": "2026-05-13T20:27:32.000Z",
+  "level_num": "custom",
+  "user_id": 18603,
+  "properties": {
+    "encrypted": "false",
+    "offer_browser_tts": "false",
+    "panels": [
+      {
+        "text": "Which cup has the ai bot???",
+        "imageUrl": "https://images.code.org/4310cf102b7c73533ee720024bf57168-BG.jpg",
+        "key": "ai-generated-design-lesson5-vocab-panel-brandkit-test-2025-d32755b0-a47a-4875-862a-5558f4694b63",
+        "layout": "text-bottom-center",
+        "typing": false,
+        "images": [
+          {
+            "imageUrl": "https://images.code.org/e7fc1db54b50fe34b30bd5e8e44e6f94-soloCup.png",
+            "x": 32,
+            "y": 47,
+            "width": 21,
+            "targetKey": "cassi-hackathon-test-96d2f549-a47a-4b92-b2ac-881ec40b7f22"
+          },
+          {
+            "imageUrl": "https://images.code.org/168ed16a2c1689c3b0e14423deb74dd5-soloCup.png",
+            "x": 65,
+            "y": 47,
+            "width": 21
+          }
+        ]
+      },
+      {
+        "text": "You did it!",
+        "imageUrl": "https://images.code.org/47b91056590f58b9a6186ae4a4de6201-BG.jpg",
+        "key": "cassi-hackathon-test-96d2f549-a47a-4b92-b2ac-881ec40b7f22",
+        "layout": "text-bottom-center",
+        "images": [
+          {
+            "imageUrl": "https://images.code.org/835246f7e238d08b692d60ebf3f67150-soloCupReveal.png",
+            "x": 26,
+            "y": 34,
+            "width": 30
+          },
+          {
+            "imageUrl": "https://images.code.org/7606678c6974a2851b6730fb2ccede53-soloCup.png",
+            "x": 64,
+            "y": 45,
+            "width": 22
+          },
+          {
+            "imageUrl": "https://images.code.org/5f779b41c8b794675cf4b6f5638c5821-robot.png",
+            "x": 31,
+            "y": 60,
+            "width": 8
+          }
+        ]
+      },
+      {
+        "text": "booooooo",
+        "imageUrl": "https://images.code.org/0547acb973bbe5328c394dd9e46bcecf-BG.jpg",
+        "key": "cassi-hackathon-test-bb77fa33-9177-444e-93c6-8049af188355",
+        "layout": "text-bottom-center",
+        "images": [
+          {
+            "imageUrl": "https://images.code.org/d815479b98ea69ed90523cacdc0fda08-soloCupReveal.png",
+            "x": 63,
+            "y": 39,
+            "width": 30
+          },
+          {
+            "imageUrl": "https://images.code.org/c5f49da1e5c1d2d9134ba7c89ce9c7f8-soloCup.png",
+            "x": 33,
+            "y": 42,
+            "width": 23
+          }
+        ]
+      }
+    ],
+    "name_suffix": "_2026",
+    "use_links": "true"
+  },
+  "audit_log": "[{\"changed_at\":\"2026-05-13T13:27:32.160-07:00\",\"changed\":[\"cloned from \\\"ai-generated-design-lesson10-level2_2026\\\"\"],\"cloned_from\":\"ai-generated-design-lesson10-level2_2026\"},{\"changed_at\":\"2026-05-13 13:40:00 -0700\",\"changed\":[\"panels\"],\"changed_by_id\":10,\"changed_by_email\":\"cassi.brenci-local-levelbuilder@code.org\"}]"
+}]]></config>
+</Panels>
