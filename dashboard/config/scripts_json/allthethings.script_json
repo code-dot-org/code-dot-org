@@ -12,7 +12,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2026-04-21 22:06:04 UTC",
+    "serialized_at": "2026-05-18 20:59:06 UTC",
     "hide_within_course": false,
     "published_state": null,
     "instruction_type": null,
@@ -907,6 +907,21 @@
         "lesson_group.key": "",
         "script.name": "allthethings"
       }
+    },
+    {
+      "key": "lesson-59",
+      "name": "Java Lab2",
+      "absolute_position": 59,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 56,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-59",
+        "lesson_group.key": "",
+        "script.name": "allthethings"
+      }
     }
   ],
   "lesson_activities": [
@@ -1651,6 +1666,18 @@
         "lesson_group.key": "",
         "script.name": "allthethings"
       }
+    },
+    {
+      "key": "11c7103d-05ff-4a87-9145-220bd44bfa2c",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "11c7103d-05ff-4a87-9145-220bd44bfa2c",
+        "lesson.key": "lesson-59",
+        "lesson_group.key": "",
+        "script.name": "allthethings"
+      }
     }
   ],
   "activity_sections": [
@@ -2232,6 +2259,16 @@
       "seeding_key": {
         "activity_section.key": "12303960-f0ec-444d-a9f1-56dbc0edbb56",
         "lesson_activity.key": "1eed5d8a-fbbf-4c94-8ea1-d41b997ed41f"
+      }
+    },
+    {
+      "key": "b5b970d9-6081-457d-8b92-cc70dba45a2f",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "b5b970d9-6081-457d-8b92-cc70dba45a2f",
+        "lesson_activity.key": "11c7103d-05ff-4a87-9145-220bd44bfa2c"
       }
     }
   ],
@@ -7898,6 +7935,69 @@
       "level_keys": [
         "csf_safety_in_my_online_neighborhood2022_2025"
       ]
+    },
+    {
+      "chapter": 234,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Allthethings Java Lab2 1"
+        ],
+        "lesson.key": "lesson-59",
+        "lesson_group.key": "",
+        "script.name": "allthethings",
+        "activity_section.key": "b5b970d9-6081-457d-8b92-cc70dba45a2f"
+      },
+      "level_keys": [
+        "Allthethings Java Lab2 1"
+      ]
+    },
+    {
+      "chapter": 235,
+      "position": 2,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Allthethings Java Lab2 2"
+        ],
+        "lesson.key": "lesson-59",
+        "lesson_group.key": "",
+        "script.name": "allthethings",
+        "activity_section.key": "b5b970d9-6081-457d-8b92-cc70dba45a2f"
+      },
+      "level_keys": [
+        "Allthethings Java Lab2 2"
+      ]
+    },
+    {
+      "chapter": 236,
+      "position": 3,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Allthethings Java Lab2 3"
+        ],
+        "lesson.key": "lesson-59",
+        "lesson_group.key": "",
+        "script.name": "allthethings",
+        "activity_section.key": "b5b970d9-6081-457d-8b92-cc70dba45a2f"
+      },
+      "level_keys": [
+        "Allthethings Java Lab2 3"
+      ]
     }
   ],
   "levels_script_levels": [
@@ -10821,6 +10921,42 @@
         "lesson_group.key": "",
         "script.name": "allthethings",
         "activity_section.key": "12303960-f0ec-444d-a9f1-56dbc0edbb56"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Allthethings Java Lab2 1",
+        "script_level.level_keys": [
+          "Allthethings Java Lab2 1"
+        ],
+        "lesson.key": "lesson-59",
+        "lesson_group.key": "",
+        "script.name": "allthethings",
+        "activity_section.key": "b5b970d9-6081-457d-8b92-cc70dba45a2f"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Allthethings Java Lab2 2",
+        "script_level.level_keys": [
+          "Allthethings Java Lab2 2"
+        ],
+        "lesson.key": "lesson-59",
+        "lesson_group.key": "",
+        "script.name": "allthethings",
+        "activity_section.key": "b5b970d9-6081-457d-8b92-cc70dba45a2f"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Allthethings Java Lab2 3",
+        "script_level.level_keys": [
+          "Allthethings Java Lab2 3"
+        ],
+        "lesson.key": "lesson-59",
+        "lesson_group.key": "",
+        "script.name": "allthethings",
+        "activity_section.key": "b5b970d9-6081-457d-8b92-cc70dba45a2f"
       }
     }
   ],
