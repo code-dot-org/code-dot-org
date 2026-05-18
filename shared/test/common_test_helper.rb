@@ -48,16 +48,17 @@ VCR.configure do |c|
   end
 end
 
-# Truncate database tables to ensure repeatable tests.
-DASHBOARD_TEST_TABLES = %w(channel_tokens user_project_storage_ids projects project_commits code_review_comments code_reviews).freeze
-DASHBOARD_TEST_TABLES.each do |table|
-  # rubocop:disable CustomCops/DashboardDbUsage
-  DASHBOARD_DB[table.to_sym].truncate
-  # rubocop:enable CustomCops/DashboardDbUsage
-end.freeze
-
 module SetupTest
+  DASHBOARD_TEST_TABLES = %w(channel_tokens user_project_storage_ids projects project_commits code_review_comments code_reviews).freeze
+
   def around(&block)
+    # Truncate database tables to ensure repeatable tests.
+    DASHBOARD_TEST_TABLES.each do |table|
+      # rubocop:disable CustomCops/DashboardDbUsage
+      DASHBOARD_DB[table.to_sym].truncate
+      # rubocop:enable CustomCops/DashboardDbUsage
+    end.freeze
+
     random = Random.new(0)
     # 4 test wrappers:
     # VCR (record/replay HTTP interactions)
@@ -124,12 +125,5 @@ module SetupTest
     # so reset them to ensure that they are not reused across tests.
     BucketHelper.s3_client = nil if defined?(BucketHelper)
     AWS::S3.s3 = nil
-
-    # Reset AUTO_INCREMENT, since it is unaffected by transaction rollback.
-    DASHBOARD_TEST_TABLES.each do |table|
-      # rubocop:disable CustomCops/DashboardDbUsage
-      DASHBOARD_DB.execute("ALTER TABLE `#{table}` AUTO_INCREMENT = 1")
-      # rubocop:enable CustomCops/DashboardDbUsage
-    end
   end
 end
