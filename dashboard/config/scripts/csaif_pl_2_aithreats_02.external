@@ -5,7 +5,7 @@ description 'description here'
 markdown <<MARKDOWN
 # The Day Everything Broke Comic
 
-#### Jordan is a 10th grader with a big day ahead. A paper is due, a test is scheduled, and he's part of the planning committee for the school talent show. But from the moment school starts, everything begins to unravel.
+Jordan is a 10th grader with a big day ahead. A paper is due, a test is scheduled, and he's part of the planning committee for the school talent show. But from the moment school starts, everything begins to unravel.
 
 <br>
 
@@ -18,16 +18,16 @@ markdown <<MARKDOWN
 
 ## 📝 To Do
 
-#### *What Went Wrong?* Pick one failure scenario. Use the checklist below to figure out possible causes and reflect on what you think happened.
+*What Went Wrong?* Pick one failure scenario. Use the checklist below to figure out possible causes and reflect on what you think happened.
 
-* #### Password was entered wrong
-* #### System didn’t recognize the account
-* #### Password reset link never arrived
-* #### Too many login attempts
-* #### System was busy or too slow
-* #### Multi-factor login didn’t go through
-* #### Email system blocked
-* #### IT system was busy or too slow
+* Password was entered wrong
+* System didn’t recognize the account
+* Password reset link never arrived
+* Too many login attempts
+* System was busy or too slow
+* Multi-factor login didn’t go through
+* Email system blocked
+* IT system was busy or too slow
 
 <br>
 

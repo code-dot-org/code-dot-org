@@ -1,0 +1,14 @@
+{
+  "category_key": "javascript",
+  "content": "# Property: Style\n\nThe `.style` property lets JavaScript change the CSS of a selected element. Use it to update colors, sizes, backgrounds, and other styles while the page is running.",
+  "examples": "[{\"name\":\"Change Element Styles\",\"description\":\"This changes the text color, page background color, and button fill color with JavaScript.\",\"code\":\"```\\nconst message = document.getElementById(\\\"message\\\");\\nconst heartButton1 = document.getElementById(\\\"heartButton1\\\");\\n\\nmessage.style.color = \\\"orange\\\";\\nmessage.style.fontSize = \\\"24px\\\";\\ndocument.body.style.backgroundColor = \\\"#ff7e5f\\\";\\nheartButton1.style.fill = \\\"black\\\";\\n```\"}]",
+  "external_documentation": "",
+  "fields": "[]",
+  "key": "property-style",
+  "name": "Property: Style",
+  "syntax": "`message.style.color = \"orange\";`",
+  "tips": "- Use `.style` on an element that has already been selected.\n- Put the CSS value in quotation marks, like `\"orange\"` or `\"24px\"`.\n- CSS property names with hyphens use camel case in JavaScript, like `backgroundColor` instead of `background-color`.\n- Common style properties include `.color`, `.fontSize`, `.background`, and `.backgroundColor`.\n- In Web Lab, `.style` often appears inside event handlers to change how an element looks after a click or input change.",
+  "methods": [
+
+  ]
+}

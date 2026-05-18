@@ -5,9 +5,9 @@ description 'description here'
 markdown <<MARKDOWN
 # Recognizing Bias
 
-#### Bias in AI doesn’t always appear as something obviously harmful or inappropriate. More often, it shows up in subtle ways such as through assumptions, missing perspectives, or patterns in how information is presented.
+Bias in AI doesn’t always appear as something obviously harmful or inappropriate. More often, it shows up in subtle ways such as through assumptions, missing perspectives, or patterns in how information is presented.
 
-#### To use AI responsibly, it’s important to recognize these patterns and consider how they might impact students and learning.
+To use AI responsibly, it’s important to recognize these patterns and consider how they might impact students and learning.
 
 <div style="display:grid; gap:16px; max-width:90%; margin:0 auto; font-family:ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial; color:#292F36;">
 
@@ -82,10 +82,10 @@ Using phrases like “ask your parents (mom and dad)” in a classroom example, 
 
 </div>
 
-#### When something feels off, pause and reflect:
-* #### Whose perspective is represented here?
-* #### Whose perspective might be missing?
-* #### What assumptions are being made?
+When something feels off, pause and reflect:
+* Whose perspective is represented here?
+* Whose perspective might be missing?
+* What assumptions are being made?
 
 >#### **💬 Quick Reflection:** What would you do if you recognized bias in an AI generated output?
 MARKDOWN

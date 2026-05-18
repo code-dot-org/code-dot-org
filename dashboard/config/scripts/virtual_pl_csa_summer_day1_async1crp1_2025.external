@@ -3,7 +3,7 @@ title 'title'
 description 'description here'
 
 markdown <<MARKDOWN
-#### The contents of this level have been removed. Please proceed to the next level.
+The contents of this level have been removed. Please proceed to the next level.
 
 
 

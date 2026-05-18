@@ -1,0 +1,14 @@
+{
+  "category_key": "javascript",
+  "content": "# Boolean\n\nA `boolean` is a value that can only be `true` or `false`. Use booleans when JavaScript needs to remember whether something is happening or not happening.",
+  "examples": "[{\"name\":\"Track a Favorite\",\"description\":\"This creates a variable that tracks whether something is marked as a favorite, then updates it to `true`.\",\"code\":\"```\\nlet favorites1 = false;\\n\\nfavorites1 = true;\\n```\"}]",
+  "external_documentation": "",
+  "fields": "[]",
+  "key": "boolean",
+  "name": "Boolean",
+  "syntax": "`let favorites1 = false;`",
+  "tips": "- Use booleans for values with two possible states, like `true` / `false` or on / off.\n- Do not put quotation marks around `true` or `false`.\n- `false` means the condition is not currently true.\n- A boolean value can be updated later, like `favorites1 = true;`.\n- In Web Lab, booleans often track whether a button has been clicked, an item is selected, or a setting is turned on.",
+  "methods": [
+
+  ]
+}

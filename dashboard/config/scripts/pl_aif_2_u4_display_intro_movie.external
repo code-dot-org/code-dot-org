@@ -5,10 +5,10 @@ description 'description here'
 markdown <<MARKDOWN
 # What Should an App Show? Making Results Clear and Trustworthy
 
-#### When you search for something in an app, you expect the results to make sense.
-#### Too little information can make it feel broken. Too much information can feel overwhelming.
+When you search for something in an app, you expect the results to make sense.
+Too little information can make it feel broken. Too much information can feel overwhelming.
 
-#### Below are three versions of a movie search for a 7:00 pm showtime. Each one makes different choices about what results to display. As you explore them, focus not just on what is shown, but how those choices affect your confidence in the results.
+Below are three versions of a movie search for a 7:00 pm showtime. Each one makes different choices about what results to display. As you explore them, focus not just on what is shown, but how those choices affect your confidence in the results.
 
 ---
 ## Movie Times
@@ -18,11 +18,11 @@ markdown <<MARKDOWN
 ---
 
 
-#### **Think about:**
+**Think about:**
 
-- #### Which version feels most helpful or realistic?
+- Which version feels most helpful or realistic?
 
-- #### Which one feels confusing or overwhelming?
+- Which one feels confusing or overwhelming?
 
 
  #### 👉 **How does each version affect your trust that the app is working correctly?**
@@ -53,7 +53,7 @@ markdown <<MARKDOWN
 
 ## Next up
 
-#### Let's practice adding transparency to a web app.
+Let's practice adding transparency to a web app.
 
 
 MARKDOWN

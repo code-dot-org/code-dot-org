@@ -1,0 +1,90 @@
+<Weblab2>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 74,
+  "created_at": "2026-05-15T05:21:12.000Z",
+  "level_num": "custom",
+  "user_id": 18603,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "# Render Your Data Cards\r\n\r\nIn this level, you’ll build the first version of your app interface and display your dataset using `.map()`.\r\n\r\n## Do This:\r\n\r\n1. Use your wireframe to build the page layout and one card design.\r\n\r\n2. Use `.map()` to render your dataset as cards on the page.\r\n\r\n3. Test your app.\r\n   - Does each item create one card?\r\n   - Does each card show the correct information?\r\n   - Are the labels clear and easy to understand?\r\n\r\nFocus on getting your dataset to display clearly before adding search, filter, or sort features.",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "widget_view": "false",
+    "initial_view_mode": "split",
+    "disable_edit_run_for_submission": "false",
+    "ai_tutor_mode": "engineer",
+    "predict_settings": {
+      "isPredictLevel": false,
+      "solution": "",
+      "questionType": "freeResponse",
+      "placeholderText": "",
+      "multipleChoiceOptions": [
+        ""
+      ],
+      "freeResponseHeight": 50,
+      "codeEditableAfterSubmit": false,
+      "allowMultipleAttempts": false
+    },
+    "start_sources": {
+      "folders": {
+      },
+      "files": {
+        "1": {
+          "id": "1",
+          "name": "index.html",
+          "language": "html",
+          "contents": "",
+          "active": true,
+          "folderId": "0"
+        },
+        "2": {
+          "id": "2",
+          "name": "script.js",
+          "language": "js",
+          "contents": "",
+          "folderId": "0",
+          "active": false
+        },
+        "3": {
+          "id": "3",
+          "name": "style.css",
+          "language": "css",
+          "contents": "",
+          "folderId": "0",
+          "active": false
+        }
+      },
+      "openFiles": [
+        "1",
+        "2",
+        "3"
+      ]
+    },
+    "project_template_level_name": "building-data-driven-systems-lesson11-template-v1-2026",
+    "display_name": "Render Your UI",
+    "bubble_choice_description": "Turn your wireframes into code by building your HTML/CSS structure and using `.map()` to display your dataset clearly.",
+    "thumbnail_url": "https://images.code.org/ae6f63421668b4869f5d5308ddf03e11-user-experience.png",
+    "name_suffix": "_2026",
+    "offer_browser_tts": "false",
+    "require_edit_to_continue": "false",
+    "ai_tutor_prompt_settings": {
+      "answerTypes": [
+        "buildHTML",
+        "buildCSS",
+        "buildJavaScript",
+        "ask",
+        "hint",
+        "debug",
+        "example",
+        "explainCode",
+        "documentation",
+        "pseudocode"
+      ],
+      "answerTypeCustomizations": {
+      }
+    }
+  },
+  "audit_log": "[{\"changed_at\":\"2026-05-15T05:21:12.204+00:00\",\"changed\":[\"cloned from \\\"building-data-driven-systems-lesson11-level4-test_2025-pilot_2026\\\"\"],\"cloned_from\":\"building-data-driven-systems-lesson11-level4-test_2025-pilot_2026\"},{\"changed_at\":\"2026-05-15 05:23:41 +0000\",\"changed\":[\"long_instructions\",\"project_template_level_name\",\"bubble_choice_description\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"}]"
+}]]></config>
+</Weblab2>
