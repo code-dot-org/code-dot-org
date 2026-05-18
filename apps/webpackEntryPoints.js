@@ -198,6 +198,7 @@ const INTERNAL_ENTRIES = {
   'rubrics/edit': './src/sites/studio/pages/rubrics/edit.js',
   'sections/new': './src/sites/studio/pages/sections/new.js',
   'scripts/edit': './src/sites/studio/pages/scripts/edit.js',
+  'scripts/generate': './src/sites/studio/pages/scripts/generate.js',
   'scripts/new': './src/sites/studio/pages/scripts/new.js',
   'shared/_check_admin': './src/sites/studio/pages/shared/_check_admin.js',
   'shared_blockly_functions/edit': './src/sites/studio/pages/shared_blockly_functions/edit.js',

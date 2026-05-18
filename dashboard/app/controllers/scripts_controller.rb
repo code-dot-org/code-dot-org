@@ -5,10 +5,10 @@ class ScriptsController < ApplicationController
   include TeacherDashboardUtils
 
   before_action :require_levelbuilder_mode, except: [:show, :vocab, :resources, :code, :standards, :edit, :update, :new, :create]
-  before_action :require_levelbuilder_mode_or_test_env, only: [:edit, :update, :new, :create]
+  before_action :require_levelbuilder_mode_or_test_env, only: [:edit, :update, :new, :create, :generate, :update_lesson_outlines]
   before_action :authenticate_user!, except: [:show, :vocab, :resources, :code, :standards]
   check_authorization
-  before_action :set_unit, only: [:show, :vocab, :resources, :code, :get_rollup_resources, :standards, :edit, :destroy]
+  before_action :set_unit, only: [:show, :vocab, :resources, :code, :get_rollup_resources, :standards, :edit, :destroy, :generate, :update_lesson_outlines]
   before_action :render_no_access, only: [:show]
   before_action :set_redirect_override, only: [:show]
   before_action :redirect_to_canonical_path, only: [:show, :vocab, :resources, :code, :standards]
@@ -184,6 +184,55 @@ class ScriptsController < ApplicationController
       locales: Cdo::I18n.locale_options,
       is_levelbuilder: current_user.levelbuilder?
     }
+  end
+
+  # GET /s/:script_name/generate
+  # GET /courses/:course_course_name/units/:position/generate
+  # Levelbuilder UI for bulk-creating lessons in this unit, each with an
+  # AI-suggested outline prompt that the user can edit before saving.
+  # Mirrors LessonsController#generate but at the unit level.
+  def generate
+    return head :forbidden unless @script.is_migrated
+    edit_url = request.path.sub(%r{/generate\z}, '/edit')
+    edit_url = edit_script_path(id: @script) if edit_url == request.path
+    @unit_data = @script.summarize_for_unit_generate.merge(editUnitUrl: edit_url)
+  end
+
+  # PUT /s/:script_name/lesson_outlines
+  # PUT /courses/:course_course_name/units/:position/lesson_outlines
+  # Replace the unit's lesson list with the supplied ordered array. Each
+  # entry is {id?, key, name, generateOutline?}; entries without an id are
+  # created. Lessons present in the unit but missing from the payload are
+  # destroyed (this is the "delete" path the /generate UI uses). Honors
+  # only the first user-facing lesson group: the page is intentionally
+  # scoped to simple units, and the controller refuses anything else.
+  def update_lesson_outlines
+    return head :bad_request, json: {message: 'cannot update unmigrated unit'} unless @script.is_migrated
+    raw = params[:lessons]
+    return head :bad_request, json: {message: 'lessons param required'} unless raw
+    # Rails wraps a JSON body's array entries in ActionController::Parameters,
+    # which the model layer can't symbolize-key directly. String body (legacy
+    # callers) goes through JSON.parse; Parameters get explicitly permitted +
+    # converted to plain hashes here so the model just sees Hash<String, _>.
+    lessons =
+      if raw.is_a?(String)
+        JSON.parse(raw)
+      else
+        Array(raw).map do |entry|
+          if entry.respond_to?(:permit)
+            entry.permit(:id, :key, :name, :generateOutline).to_h
+          else
+            entry
+          end
+        end
+      end
+    # nil means "leave the persisted unit outline alone"; sending the param
+    # at all (even '') updates it.
+    unit_outline = params.key?(:generateOutline) ? params[:generateOutline].to_s : nil
+    @script.update_lesson_outlines(lessons, unit_outline)
+    render json: @script.summarize_for_unit_generate
+  rescue StandardError => exception
+    render status: :unprocessable_entity, json: {message: exception.message}
   end
 
   def update
