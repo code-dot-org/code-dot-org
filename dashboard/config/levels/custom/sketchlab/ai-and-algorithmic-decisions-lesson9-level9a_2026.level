@@ -6,7 +6,7 @@
   "user_id": 18603,
   "properties": {
     "encrypted": "false",
-    "long_instructions": "## Movie Admission\r\n\r\n1. Choose one rule:\r\n   - A customer can enter the movie only if they meet the age requirement **AND** have a ticket.\r\n   - A customer can enter the movie if they meet the age requirement **OR** have a ticket. \r\n2. Complete the truth table using the rule you chose.\r\n3. Use the table to build your flowchart.\r\n4. Include all 4 outcomes - one for each row in your table.\r\n5. Save your flowchart to your Backpack.\r\n",
+    "long_instructions": "## Do This:\r\n\r\n1. Create a flowchart to implement **one** of the following rules:\r\n\r\n   a. A customer can enter the movie only if they meet the age requirement **AND** have a ticket.\r\n\r\n   b. A customer can enter the movie if they meet the age requirement **OR** have a ticket. \r\n\r\n2. Save your flowchart to your **Backpack**.\r\n",
     "start_sources": {
       "source": {
         "nodes": [
@@ -99,7 +99,7 @@
             },
             "data": {
               "shapeType": "circle",
-              "label": "Fill in \noutcome \nfrom \ntable",
+              "label": "outcome",
               "backgroundColor": "var(--sketchlab-bg-green)",
               "strokeColor": "var(--sketchlab-stroke-default)",
               "fontColor": "var(--sketchlab-stroke-default)",
@@ -126,7 +126,7 @@
             },
             "data": {
               "shapeType": "circle",
-              "label": "Fill in \noutcome \nfrom \ntable",
+              "label": "outcome",
               "backgroundColor": "var(--sketchlab-bg-green)",
               "strokeColor": "var(--sketchlab-stroke-default)",
               "fontColor": "var(--sketchlab-stroke-default)",
@@ -153,7 +153,7 @@
             },
             "data": {
               "shapeType": "circle",
-              "label": "Fill in \noutcome \nfrom \ntable",
+              "label": "outcome",
               "backgroundColor": "var(--sketchlab-bg-green)",
               "strokeColor": "var(--sketchlab-stroke-default)",
               "fontColor": "var(--sketchlab-stroke-default)",
@@ -180,7 +180,7 @@
             },
             "data": {
               "shapeType": "circle",
-              "label": "Fill in \noutcome \nfrom \ntable",
+              "label": "outcome",
               "backgroundColor": "var(--sketchlab-bg-green)",
               "strokeColor": "var(--sketchlab-stroke-default)",
               "fontColor": "var(--sketchlab-stroke-default)",
@@ -193,89 +193,6 @@
             "width": 203,
             "height": 146,
             "resizing": false
-          },
-          {
-            "id": "uMfcuBv5eVdvIBhGBSLJu",
-            "type": "shape",
-            "position": {
-              "x": -583.075121573374,
-              "y": 149.4027065043137
-            },
-            "style": {
-              "width": 821.3898617260127,
-              "height": 482.1675004780732
-            },
-            "data": {
-              "shapeType": "rectangle",
-              "label": "",
-              "backgroundColor": "#ffffff",
-              "strokeColor": "#1e1e1e"
-            },
-            "measured": {
-              "width": 821,
-              "height": 482
-            }
-          },
-          {
-            "id": "rCXX0WYArwWAOac3frvI9",
-            "type": "text",
-            "position": {
-              "x": -425.1215753775725,
-              "y": 171.47821952768425
-            },
-            "data": {
-              "text": "Truth Table - Use this to plan your flowchart",
-              "fontColor": "#1e1e1e",
-              "fontSize": "large",
-              "showHandles": false
-            },
-            "measured": {
-              "width": 447,
-              "height": 47
-            },
-            "dragging": false
-          },
-          {
-            "id": "72XvyYb13G2gfCVy8BFOl",
-            "type": "image",
-            "position": {
-              "x": -577.3624594890596,
-              "y": 224.21813758491152
-            },
-            "style": {
-              "width": 812.4053816867607,
-              "height": 322.70547105890773
-            },
-            "data": {
-              "src": "/level_starter_assets/ai-and-algorithmic-decisions-lesson9-level9a_2026/uuid/a13ed1267843dc283f398b597f146c3869429cc8.png",
-              "altText": "",
-              "showHandles": false
-            },
-            "measured": {
-              "width": 812,
-              "height": 323
-            },
-            "dragging": false
-          },
-          {
-            "id": "HZ5CtaHRWb7MI0P1ve2J-",
-            "type": "text",
-            "position": {
-              "x": -567.6156274755747,
-              "y": 233.30256990765352
-            },
-            "data": {
-              "text": "meetsAge (T/F)",
-              "fontColor": "#ffffff",
-              "fontSize": "large",
-              "showHandles": false
-            },
-            "measured": {
-              "width": 173,
-              "height": 47
-            },
-            "resizing": false,
-            "dragging": false
           },
           {
             "id": "T5vWMB1VpB2DbTa9XWOMN",
@@ -292,7 +209,7 @@
             },
             "measured": {
               "width": 165,
-              "height": 47
+              "height": 46
             },
             "dragging": false
           },
@@ -310,8 +227,8 @@
               "showHandles": false
             },
             "measured": {
-              "width": 245,
-              "height": 47
+              "width": 244,
+              "height": 46
             }
           },
           {
@@ -328,8 +245,8 @@
               "showHandles": false
             },
             "measured": {
-              "width": 61,
-              "height": 47
+              "width": 60,
+              "height": 46
             }
           },
           {
@@ -346,8 +263,8 @@
               "showHandles": false
             },
             "measured": {
-              "width": 61,
-              "height": 47
+              "width": 60,
+              "height": 46
             }
           },
           {
@@ -364,8 +281,8 @@
               "showHandles": false
             },
             "measured": {
-              "width": 68,
-              "height": 47
+              "width": 67,
+              "height": 46
             }
           },
           {
@@ -382,8 +299,8 @@
               "showHandles": false
             },
             "measured": {
-              "width": 68,
-              "height": 47
+              "width": 67,
+              "height": 46
             }
           },
           {
@@ -400,8 +317,8 @@
               "showHandles": false
             },
             "measured": {
-              "width": 68,
-              "height": 47
+              "width": 67,
+              "height": 46
             }
           },
           {
@@ -418,28 +335,9 @@
               "showHandles": false
             },
             "measured": {
-              "width": 61,
-              "height": 47
+              "width": 60,
+              "height": 46
             }
-          },
-          {
-            "id": "A8eIe1h6bgi43zexaYlB0",
-            "type": "text",
-            "position": {
-              "x": -500.0249227927793,
-              "y": 543.7024383364593
-            },
-            "data": {
-              "text": "Each row in your table should match one path and one outcome \nin your flowchart.",
-              "fontColor": "#1e1e1e",
-              "fontSize": "large",
-              "showHandles": false
-            },
-            "measured": {
-              "width": 651,
-              "height": 75
-            },
-            "dragging": false
           }
         ],
         "edges": [
@@ -505,8 +403,8 @@
           }
         ],
         "viewport": {
-          "x": 533.8616569277156,
-          "y": -11.654582500822016,
+          "x": 81.05926587546946,
+          "y": -25.848542690641352,
           "zoom": 0.8830728089091547
         }
       }
@@ -2568,6 +2466,6 @@
     "name_suffix": "_2026"
   },
   "published": true,
-  "audit_log": "[{\"changed_at\":\"2026-03-20T23:46:25.669+00:00\",\"changed\":[\"cloned from \\\"ai-and-algorithmic-decisions-lesson9-level9a_2025\\\"\"],\"cloned_from\":\"ai-and-algorithmic-decisions-lesson9-level9a_2025\"},{\"changed_at\":\"2026-04-16 01:04:24 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-16 01:06:41 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-16 01:13:49 +0000\",\"changed\":[\"exemplar_sources\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-16 01:22:54 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-16 01:56:48 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-16 02:30:40 +0000\",\"changed\":[\"bubble_choice_description\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-05-01 13:12:06 -0400\",\"changed\":[\"start_sources\"],\"changed_by_id\":1,\"changed_by_email\":\"levelbuilder@dev.com\"},{\"changed_at\":\"2026-05-08 13:14:24 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":155,\"changed_by_email\":\"dani@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2026-03-20T23:46:25.669+00:00\",\"changed\":[\"cloned from \\\"ai-and-algorithmic-decisions-lesson9-level9a_2025\\\"\"],\"cloned_from\":\"ai-and-algorithmic-decisions-lesson9-level9a_2025\"},{\"changed_at\":\"2026-04-16 01:04:24 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-16 01:06:41 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-16 01:13:49 +0000\",\"changed\":[\"exemplar_sources\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-16 01:22:54 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-16 01:56:48 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-16 02:30:40 +0000\",\"changed\":[\"bubble_choice_description\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-05-01 13:12:06 -0400\",\"changed\":[\"start_sources\"],\"changed_by_id\":1,\"changed_by_email\":\"levelbuilder@dev.com\"},{\"changed_at\":\"2026-05-08 13:14:24 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":155,\"changed_by_email\":\"dani@code.org\"},{\"changed_at\":\"2026-05-16 17:50:07 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2026-05-16 17:52:20 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
 }]]></config>
 </Sketchlab>

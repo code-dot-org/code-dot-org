@@ -6,7 +6,7 @@
   "user_id": 18603,
   "properties": {
     "encrypted": "false",
-    "long_instructions": "## Smart Home Automation\r\n\r\n1. Choose one rule:\r\n   - The lights turn on only if motion is detected **AND** it is nighttime.\r\n   - The lights turn on if motion is detected **OR** it is nighttime.\r\n2. Complete the truth table using the rule you chose.\r\n3. Use the table to build your flowchart.\r\n4. Include all 4 outcomes—one for each case in your table.\r\n5. Save your flowchart to your Backpack.\r\n\r\n",
+    "long_instructions": "## Do This:\r\n\r\n1. Create a flowchart to implement **one** of the following rules:\r\n\r\n   a. The lights turn on only if motion is detected **AND** it is nighttime.\r\n\r\n   b. The lights turn on if motion is detected **OR** it is nighttime.\r\n\r\n2. Save your flowchart to your **Backpack**.\r\n",
     "start_sources": {
       "source": {
         "nodes": [
@@ -96,7 +96,7 @@
             },
             "data": {
               "shapeType": "circle",
-              "label": "Fill in \noutcome \nfrom \ntable",
+              "label": "outcome",
               "backgroundColor": "var(--sketchlab-bg-green)",
               "strokeColor": "var(--sketchlab-stroke-default)",
               "fontColor": "var(--sketchlab-stroke-default)",
@@ -123,7 +123,7 @@
             },
             "data": {
               "shapeType": "circle",
-              "label": "Fill in \noutcome \nfrom \ntable",
+              "label": "outcome",
               "backgroundColor": "var(--sketchlab-bg-green)",
               "strokeColor": "var(--sketchlab-stroke-default)",
               "fontColor": "var(--sketchlab-stroke-default)",
@@ -151,7 +151,7 @@
             },
             "data": {
               "shapeType": "circle",
-              "label": "Fill in \noutcome \nfrom \ntable",
+              "label": "outcome",
               "backgroundColor": "var(--sketchlab-bg-green)",
               "strokeColor": "var(--sketchlab-stroke-default)",
               "fontColor": "var(--sketchlab-stroke-default)",
@@ -178,7 +178,7 @@
             },
             "data": {
               "shapeType": "circle",
-              "label": "Fill in \noutcome \nfrom \ntable",
+              "label": "outcome",
               "backgroundColor": "var(--sketchlab-bg-green)",
               "strokeColor": "var(--sketchlab-stroke-default)",
               "fontColor": "var(--sketchlab-stroke-default)",
@@ -194,68 +194,6 @@
             "dragging": false
           },
           {
-            "id": "iai1VMAUuJS5fpbto-Ivh",
-            "type": "shape",
-            "position": {
-              "x": -276.2907267735957,
-              "y": 286.1504921464397
-            },
-            "style": {
-              "width": 821.3898617260127,
-              "height": 474.2331138608705
-            },
-            "data": {
-              "shapeType": "rectangle",
-              "label": "",
-              "backgroundColor": "#ffffff",
-              "strokeColor": "#1e1e1e"
-            },
-            "measured": {
-              "width": 821,
-              "height": 474
-            }
-          },
-          {
-            "id": "8qpmGIPbWxSxORKWUHar0",
-            "type": "text",
-            "position": {
-              "x": -95.18314991935364,
-              "y": 303.4943604938667
-            },
-            "data": {
-              "text": "Truth Table - Use this to plan your flowchart",
-              "fontColor": "#1e1e1e",
-              "fontSize": "large",
-              "showHandles": false
-            },
-            "measured": {
-              "width": 447,
-              "height": 47
-            },
-            "dragging": false
-          },
-          {
-            "id": "xPCT2ZdPZ6mXg-ui48YAA",
-            "type": "image",
-            "position": {
-              "x": -270.42900543014326,
-              "y": 353.31309628614906
-            },
-            "style": {
-              "width": 812.4053816867607,
-              "height": 322.70547105890773
-            },
-            "data": {
-              "src": "/level_starter_assets/ai-and-algorithmic-decisions-lesson9-level9d_2026/uuid/a13ed1267843dc283f398b597f146c3869429cc8.png",
-              "altText": "",
-              "showHandles": false
-            },
-            "measured": {
-              "width": 812,
-              "height": 323
-            }
-          },
-          {
             "id": "o2Fsz0cIK9aDyojPKAkZM",
             "type": "text",
             "position": {
@@ -269,8 +207,8 @@
               "showHandles": false
             },
             "measured": {
-              "width": 175,
-              "height": 39
+              "width": 174,
+              "height": 38
             },
             "dragging": false
           },
@@ -288,27 +226,8 @@
               "showHandles": false
             },
             "measured": {
-              "width": 141,
-              "height": 39
-            },
-            "dragging": false
-          },
-          {
-            "id": "XsCgSSDdihbSgBUW3DctB",
-            "type": "text",
-            "position": {
-              "x": 147.42119003531414,
-              "y": 359.99716858206875
-            },
-            "data": {
-              "text": "Outcome (Lights turn on?)",
-              "fontColor": "#ffffff",
-              "fontSize": "medium",
-              "showHandles": false
-            },
-            "measured": {
-              "width": 208,
-              "height": 39
+              "width": 140,
+              "height": 38
             },
             "dragging": false
           },
@@ -326,8 +245,8 @@
               "showHandles": false
             },
             "measured": {
-              "width": 61,
-              "height": 47
+              "width": 60,
+              "height": 46
             }
           },
           {
@@ -344,8 +263,8 @@
               "showHandles": false
             },
             "measured": {
-              "width": 61,
-              "height": 47
+              "width": 60,
+              "height": 46
             }
           },
           {
@@ -362,8 +281,8 @@
               "showHandles": false
             },
             "measured": {
-              "width": 68,
-              "height": 47
+              "width": 67,
+              "height": 46
             }
           },
           {
@@ -380,8 +299,8 @@
               "showHandles": false
             },
             "measured": {
-              "width": 68,
-              "height": 47
+              "width": 67,
+              "height": 46
             }
           },
           {
@@ -398,8 +317,8 @@
               "showHandles": false
             },
             "measured": {
-              "width": 68,
-              "height": 47
+              "width": 67,
+              "height": 46
             }
           },
           {
@@ -416,28 +335,9 @@
               "showHandles": false
             },
             "measured": {
-              "width": 61,
-              "height": 47
+              "width": 60,
+              "height": 46
             }
-          },
-          {
-            "id": "YvncEuZoK03L3I4l1J04F",
-            "type": "text",
-            "position": {
-              "x": -191.87796665855544,
-              "y": 674.7726201992962
-            },
-            "data": {
-              "text": "Each row in your table should match one path and one outcome \nin your flowchart.",
-              "fontColor": "#1e1e1e",
-              "fontSize": "large",
-              "showHandles": false
-            },
-            "measured": {
-              "width": 651,
-              "height": 75
-            },
-            "dragging": false
           }
         ],
         "edges": [
@@ -503,8 +403,8 @@
           }
         ],
         "viewport": {
-          "x": 263.41255535948494,
-          "y": -131.21052231926467,
+          "x": -124.92078814637443,
+          "y": -175.40444913048293,
           "zoom": 0.8823770604573786
         }
       }
@@ -2576,6 +2476,6 @@
     "name_suffix": "_2026"
   },
   "published": true,
-  "audit_log": "[{\"changed_at\":\"2026-03-20T23:46:26.579+00:00\",\"changed\":[\"cloned from \\\"ai-and-algorithmic-decisions-lesson9-level9d_2025\\\"\"],\"cloned_from\":\"ai-and-algorithmic-decisions-lesson9-level9d_2025\"},{\"changed_at\":\"2026-04-16 02:23:54 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-16 02:24:58 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-16 02:27:54 +0000\",\"changed\":[\"exemplar_sources\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-16 02:28:04 +0000\",\"changed\":[],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-16 02:31:06 +0000\",\"changed\":[\"bubble_choice_description\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-05-01 13:30:08 -0400\",\"changed\":[\"start_sources\"],\"changed_by_id\":1,\"changed_by_email\":\"levelbuilder@dev.com\"},{\"changed_at\":\"2026-05-08 13:18:06 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":155,\"changed_by_email\":\"dani@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2026-03-20T23:46:26.579+00:00\",\"changed\":[\"cloned from \\\"ai-and-algorithmic-decisions-lesson9-level9d_2025\\\"\"],\"cloned_from\":\"ai-and-algorithmic-decisions-lesson9-level9d_2025\"},{\"changed_at\":\"2026-04-16 02:23:54 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-16 02:24:58 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-16 02:27:54 +0000\",\"changed\":[\"exemplar_sources\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-16 02:28:04 +0000\",\"changed\":[],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-16 02:31:06 +0000\",\"changed\":[\"bubble_choice_description\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-05-01 13:30:08 -0400\",\"changed\":[\"start_sources\"],\"changed_by_id\":1,\"changed_by_email\":\"levelbuilder@dev.com\"},{\"changed_at\":\"2026-05-08 13:18:06 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":155,\"changed_by_email\":\"dani@code.org\"},{\"changed_at\":\"2026-05-16 17:51:28 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2026-05-16 17:54:54 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
 }]]></config>
 </Sketchlab>
