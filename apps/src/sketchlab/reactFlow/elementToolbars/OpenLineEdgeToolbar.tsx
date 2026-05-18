@@ -18,6 +18,7 @@ interface OpenLineEdgeToolbarProps {
   setEdges: (
     updater: (edges: SketchlabReactFlowEdge[]) => SketchlabReactFlowEdge[]
   ) => void;
+  pushSnapshot: () => void;
 }
 
 /**
@@ -29,6 +30,7 @@ export default function OpenLineEdgeToolbar({
   edges,
   nodes,
   setEdges,
+  pushSnapshot,
 }: OpenLineEdgeToolbarProps) {
   const {openToolbarTarget} = useToolbarVisibility();
   const {
@@ -43,6 +45,7 @@ export default function OpenLineEdgeToolbar({
     edges,
     openToolbarTarget,
     setEdges,
+    pushSnapshot,
   });
 
   const {screenToFlowPosition} = useReactFlow();

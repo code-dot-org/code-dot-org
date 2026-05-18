@@ -20,18 +20,21 @@ interface UseLineToolbarOptions {
   setEdges: (
     updater: (edges: SketchlabReactFlowEdge[]) => SketchlabReactFlowEdge[]
   ) => void;
+  pushSnapshot: () => void;
 }
 
 export function useLineToolbar({
   edges,
   openToolbarTarget,
   setEdges,
+  pushSnapshot,
 }: UseLineToolbarOptions) {
   const updateLineEdge = useCallback(
     (
       edgeId: string,
       updater: (edge: SketchlabReactFlowEdge) => SketchlabReactFlowEdge
     ) => {
+      pushSnapshot();
       setEdges(currentEdges =>
         currentEdges.map(edge => {
           if (edge.id !== edgeId) {
@@ -44,11 +47,12 @@ export function useLineToolbar({
         })
       );
     },
-    [setEdges]
+    [pushSnapshot, setEdges]
   );
 
   const updateLineEdgeLockState = useCallback(
     (edgeId: string, locked: boolean) => {
+      pushSnapshot();
       setEdges(currentEdges =>
         currentEdges.map(edge => {
           if (edge.id !== edgeId) {
@@ -64,7 +68,7 @@ export function useLineToolbar({
         })
       );
     },
-    [setEdges]
+    [pushSnapshot, setEdges]
   );
 
   const openLineEdge = useMemo(() => {
