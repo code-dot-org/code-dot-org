@@ -7,6 +7,10 @@ This directory contains CloudFormation stack templates, associated Custom Resour
 - `*.js, *.rb` (e.g., [`ami-manager.js`](ami-manager.js), [`count_asg.js`](count_asg.js), [`vpcClassicLink.js`](vpcClassicLink.js), [`fast_snapshot_restore.rb`](fast_snapshot_restore.rb)) - Custom Resource Lambda function code.
 - `package.json`, `yarn.lock`, `test/*` -  Package definitions and test files related to Custom Resource Lambda functions.
 
+## Edge Auth (optional)
+
+Some internal stacks (adhoc and levelbuilder) attach a viewer-request CloudFront Function that enforces a simple Basic Auth gate at the edge, backed by a global CloudFront KeyValueStore. This reduces exposure of internal hosts (especially levelbuilder and adhocs) to public scanners while keeping friction low for engineers. The shared token is rotated via the infra repo’s `bin/edge_auth_rotate` and is not stored in this repo. See the related infra stack `aws/common/edge-auth-kvs.yml`.
+
 ## See also
 
 - [`stack.rake`](../../lib/rake/stack.rake), [`adhoc.rake`](../../lib/rake/adhoc.rake) - Rakefiles implementing `stack:*` / `adhoc:*` commands for managing various CloudFormation stacks.

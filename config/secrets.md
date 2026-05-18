@@ -15,6 +15,8 @@ We provision AWS Secrets for specific environment types (`adhoc`, `staging`, `te
   * The `Developer` role is also prevented from reading secrets outside of the `development` environment for a better security posture.
 * Certain environments (`development`, `adhoc`, and `test`-unit_test/CI) include a `<%= clear_secrets %>` line in their environment-specific config, which disables _all_ globally-defined secrets by default for that environment. These environments generally should not require secrets to function, since AWS credentials are not guaranteed. To add an exception, you can opt-in to a specific secret by re-defining it below the `clear_secrets` line. (Make sure the secret is really necessary and the usage scope limited, since use of the secret will require AWS credentials!)
 
+> Note: For the Edge Auth gate on adhoc/levelbuilder, we intentionally store the shared Basic token in a CloudFront KeyValueStore (not in Secrets Manager), because it is read directly at the edge by a CloudFront Function and rotated without redeploys via the infra repo's `bin/edge_auth_rotate`. Engineers should ask for the current password in #infrastructure Slack rather than running the rotation script themselves.
+
 ### Creating/updating a secret
 * Create a `config/secrets.yml` file (see [`secrets.yml.template`](secrets.yml.template) as a reference) containing the configuration for the secrets you wish to create/update, then run the [`bin/update_secrets`](../bin/update_secrets) helper script to apply the changes.
   * To confirm secrets were created, `aws secretsmanager list-secrets --query "SecretList[?contains(Name, 'my-secret')].[Name, LastChangedDate]"`

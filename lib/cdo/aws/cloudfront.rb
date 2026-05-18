@@ -277,6 +277,11 @@ module AWS
           EventType: 'viewer-request',
           FunctionARN: {'Fn::Sub': 'arn:aws:cloudfront::${AWS::AccountId}:function/AcceptLanguage'}
         },
+        edge_auth: {
+          EventType: 'viewer-request',
+          # CloudFront Function to enforce Basic Auth at the edge for internal sites
+          FunctionARN: {Ref: 'EdgeAuthFunction'}
+        },
         marketing_router: {
           EventType: 'origin-request',
           LambdaFunctionARN: {Ref: 'MarketingRouterVersion'}
@@ -300,7 +305,13 @@ module AWS
           Headers: headers,
           QueryString: behavior_config[:query] != false
         },
-        FunctionAssociations: normalize_accept_language ? [function_associations[:accept_language]] : [],
+        # CloudFront allows only ONE function per event type per behavior.
+        # Prefer edge-auth on all adhoc and levelbuilder. Otherwise use Accept-Language normalizer when applicable.
+        FunctionAssociations: if rack_env?(:adhoc) || rack_env?(:levelbuilder)
+                                [function_associations[:edge_auth]]
+                              else
+                                (normalize_accept_language ? [function_associations[:accept_language]] : [])
+                              end,
         LambdaFunctionAssociations: behavior_config[:include_marketing_router_lambda] ? [function_associations[:marketing_router]] : [],
         MaxTTL: 31_536_000, # =1 year,
         MinTTL: 0,

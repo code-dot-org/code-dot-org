@@ -1,6 +1,8 @@
 # Complete, external-facing Level Builder instructions live in this [wiki](https://github.com/code-dot-org/code-dot-org/wiki/For-Levelbuilders).
 This .md file should only contain information which is specific to Code.org engineers.
 
+> Security note: Levelbuilder may be protected by an Edge Auth prompt at CloudFront (simple shared Basic Auth) to reduce exposure to public scanners and mitigate risks around admin logins and content-to-code flows. If you cannot reach levelbuilder, ask for the current password in #infrastructure Slack.
+
 # How to update level builder
 
 ## To update levelbuilder to match test:

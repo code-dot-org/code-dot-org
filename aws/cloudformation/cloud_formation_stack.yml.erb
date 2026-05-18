@@ -421,6 +421,113 @@ Resources:
       DistributionConfig: <%= cloudfront_config('Dashboard') %>
 <% end -%>
 
+<%# ------------------------------------------------------------ %>
+<%# Edge auth resources (CloudFront Function + KeyValueStore)   %>
+<%# Only provision in levelbuilder environment for now.         %>
+<%# ------------------------------------------------------------ %>
+<% if cdn_enabled && (rack_env?(:levelbuilder) || rack_env?(:adhoc)) -%>
+  EdgeAuthFunction:
+    Type: AWS::CloudFront::Function
+    Properties:
+      Name: !Sub "${AWS::StackName}-edge-auth"
+      AutoPublish: true
+      FunctionConfig:
+        Comment: Enforce Basic Auth for Levelbuilder via KVS
+        Runtime: cloudfront-js-2.0
+        KeyValueStoreAssociations:
+          - KeyValueStoreARN: { 'Fn::ImportValue': EdgeAuth-KVSArn }
+      FunctionCode: |
+        <%= indent(File.read(aws_dir('cloudformation/partials/accept_language_normalizer.js')), 8) %>
+<%
+  require 'cdo/languages'
+  require_relative '../../pegasus/helpers/pegasus_languages'
+  tags = PegasusLanguages.table.select(:locale_s, :code_s).map {|x| x.values.values}.flatten.uniq.map(&:downcase)
+%>
+        async function handler(event) {
+          var cf = require('cloudfront');
+          var request = event.request;
+          var headers = request.headers || {};
+
+          // Native Basic Auth prompt when unauthorized
+          function unauthorized() {
+            return {
+              statusCode: 401,
+              statusDescription: 'Unauthorized',
+              headers: {
+                'www-authenticate': { value: 'Basic realm="Levelbuilder"' },
+                'cache-control': { value: 'no-store' },
+                'content-type': { value: 'text/plain; charset=utf-8' }
+              },
+              body: 'Authentication required'
+            };
+          }
+
+          // Allow health checks to pass
+          if (request.uri === '/healthcheck' || request.uri === '/health_check') {
+            return request;
+          }
+
+          // Read expected tokens from KeyValueStore
+          var kvs = cf.kvs();
+          var expected1 = (await kvs.get('currentAuthB64')) || '';
+          var expected2 = (await kvs.get('previousAuthB64')) || '';
+
+          var provided = (headers.authorization && headers.authorization.value) || '';
+          if (provided === expected1 || (expected2 && provided === expected2)) {
+            // Strip Authorization before forwarding
+            delete headers.authorization;
+
+            // Normalize Accept-Language for cache key stability
+            try {
+              var normalized = normalizeAcceptLanguage(request, <%= tags.to_json %>);
+              if (normalized) {
+                headers['accept-language'] = { value: normalized };
+              }
+            } catch (e) {}
+            return request;
+          }
+
+          return unauthorized();
+        }
+
+        // Best-effort Accept-Language normalization
+        function normalizeAcceptLanguage(request) {
+          var cookie = request.cookies && request.cookies.language_ ? request.cookies.language_.value : '';
+          if (cookie) {
+            return cookie.toLowerCase();
+          }
+          var hdr = request.headers && request.headers['accept-language'] ? request.headers['accept-language'].value : '';
+          if (!hdr) return 'en';
+
+          // Parse list of ranges with optional q-values, pick highest q
+          var parts = hdr.split(',');
+          var best = null;
+          var bestQ = -1;
+          for (var i = 0; i < parts.length; i++) {
+            var p = parts[i].trim();
+            if (!p) continue;
+            var semis = p.split(';');
+            var lang = semis[0].toLowerCase();
+            var q = 1.0;
+            for (var j = 1; j < semis.length; j++) {
+              var s = semis[j].trim();
+              if (s.startsWith('q=')) {
+                var val = parseFloat(s.substring(2));
+                if (!isNaN(val)) q = val;
+              }
+            }
+            if (q > bestQ) {
+              bestQ = q;
+              best = lang;
+            }
+          }
+          if (!best) return 'en';
+          // Reduce to primary tag (e.g., en-US -> en)
+          var primary = best.split('-')[0];
+          return primary || 'en';
+        }
+<% end -%>
+
 <% if cdn_enabled -%>
   OriginDNS:
     Type: AWS::Route53::RecordSetGroup

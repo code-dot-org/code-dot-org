@@ -1,4 +1,5 @@
 # Building assets on adhoc environment
+> Access note: Adhoc stacks may be protected by a simple Edge Auth prompt (shared Basic Auth) at CloudFront. This is intended to keep public scanners off internal hosts while staying low-friction for engineers. If you unexpectedly see a prompt, ask for the current password in #infrastructure Slack.
 ## Flow of CI build system
 - `bin/start-build`
   - signal a cron job on daemon servers (e.g. adhoc, staging, test) to restart the build on that server by creating `./build-started` file
