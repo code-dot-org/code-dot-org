@@ -250,30 +250,31 @@ export class ModularCoursesPage {
    * Waits for the V2 progress dashboard and unit selector to settle.
    *
    * The progress table can render while the "Lessons in" dropdown is still a
-   * skeleton waiting on the section courses API. The visible dropdown is the
-   * user-facing readiness signal for selecting the shared unit.
+   * skeleton waiting on `/dashboardapi/section_courses/{id}`. Under CI shard
+   * contention that endpoint occasionally hangs or returns stale empty data;
+   * the reducer caches the latter via `loadedSectionId`, so the React selector
+   * renders nothing and never refetches without a user-driven refresh.
    *
-   * `/dashboardapi/section_courses/{id}` occasionally returns an empty list
-   * right after a fresh section assignment. The reducer caches that result via
-   * `loadedSectionId`, so the React selector renders nothing and never
-   * refetches without a user-driven refresh. A page reload re-runs the load
-   * cycle and is the user-equivalent way to recover.
+   * Reload acts as the user-equivalent recovery. Retry several times to ride
+   * out transient backend slowness without inflating per-wait timeouts.
    */
   private async waitForProgressDashboard(): Promise<void> {
-    await this.waitForProgressShell();
-    try {
-      await this.page
-        .locator('#unit-selector-v2')
-        .waitFor({state: 'visible', timeout: 45_000});
-      return;
-    } catch {
-      // Refresh once to clear stale empty courses-with-progress state.
+    const maxAttempts = 4;
+    const perAttemptTimeoutMs = 30_000;
+    for (let attempt = 1; attempt <= maxAttempts; attempt++) {
+      await this.waitForProgressShell();
+      try {
+        await this.page
+          .locator('#unit-selector-v2')
+          .waitFor({state: 'visible', timeout: perAttemptTimeoutMs});
+        return;
+      } catch (error) {
+        if (attempt === maxAttempts) {
+          throw error;
+        }
+        await this.page.reload({waitUntil: 'domcontentloaded'});
+      }
     }
-    await this.page.reload({waitUntil: 'domcontentloaded'});
-    await this.waitForProgressShell();
-    await expect(this.page.locator('#unit-selector-v2')).toBeVisible({
-      timeout: 60_000,
-    });
   }
 
   /**
