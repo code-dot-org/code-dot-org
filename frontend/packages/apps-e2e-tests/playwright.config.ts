@@ -21,7 +21,7 @@ export default defineConfig({
   // (e.g. Javabuilder WebSocket).  Skip them in CI; run manually against
   // test-studio.
   grepInvert: isCI ? /@no_ci/ : undefined,
-  workers: undefined,
+  workers: isCI ? '100%' : undefined,
   reporter: [
     isCI
       ? ['html', htmlReportOptions]
