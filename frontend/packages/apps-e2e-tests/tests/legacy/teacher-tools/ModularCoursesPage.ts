@@ -136,6 +136,10 @@ export class ModularCoursesPage {
       '#unit-selector-v2',
       'UI Test Shared Unit',
     );
+    await this.page.waitForSelector('#ui-test-skeleton-progress-column', {
+      state: 'hidden',
+      timeout: 60_000,
+    });
     const lessonHeader = this.page.locator('#ui-test-lesson-header-1');
     const expandedHeader = this.page.locator(
       '#ui-test-expanded-progress-column-header-1',
@@ -253,9 +257,8 @@ export class ModularCoursesPage {
     await this.page
       .locator('#ui-test-progress-table-v2')
       .waitFor({state: 'visible', timeout: 30_000});
-    await this.page.waitForSelector('#ui-test-skeleton-progress-column', {
-      state: 'hidden',
-      timeout: 60_000,
-    });
+    await this.page
+      .locator('#unit-selector-v2')
+      .waitFor({state: 'visible', timeout: 60_000});
   }
 }
