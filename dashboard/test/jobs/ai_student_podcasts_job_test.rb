@@ -32,7 +32,7 @@ class AiStudentPodcastsJobTest < ActiveJob::TestCase
 
     Honeybadger.expects(:notify).with(
       "AiStudentPodcastsJob failed with unexpected error: upstream blew up",
-      context: {request: @request.to_json}
+      context: {request: @podcast.id}
     )
 
     assert_raises(StandardError) do
