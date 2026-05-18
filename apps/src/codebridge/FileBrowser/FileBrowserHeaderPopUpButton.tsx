@@ -35,6 +35,10 @@ export const FileBrowserHeaderPopUpButton = ({
     state => (state.lab2Project.projectSources?.source as MultiFileSource).files
   );
   const isWidget2SourcesMode = getAppOptionsEditBlocks() === WIDGET2_SOURCES;
+  // Java Lab uses package-less single-folder Java source layouts and the
+  // Javabuilder bundle adapter does not preserve folder structure on the
+  // wire, so we hide folder creation in the file browser.
+  const supportsFolders = appName !== 'javalab';
 
   const uploadErrorCallback = useFileUploadErrorCallback();
   const handleFileUpload = useHandleFileUpload(files);
@@ -61,7 +65,7 @@ export const FileBrowserHeaderPopUpButton = ({
         disabled={disabled}
         ariaLabel={codebridgeI18n.manageFiles()}
       >
-        {!isWidget2SourcesMode && (
+        {!isWidget2SourcesMode && supportsFolders && (
           <PopUpButtonOption
             iconName="plus"
             labelText={codebridgeI18n.newFolder()}

@@ -1,3 +1,4 @@
+import {useCodebridgeContext} from '@codebridge/codebridgeContext';
 import {useFileUploader, usePrompts} from '@codebridge/FileBrowser/hooks';
 import {ProjectFolder} from '@codebridge/types';
 import {getPossibleDestinationFoldersForFolder} from '@codebridge/utils';
@@ -26,6 +27,11 @@ export const useFolderRowOptions = (
     state =>
       (state.lab2Project.projectSources?.source as MultiFileSource).folders
   );
+
+  const {levelProperties} = useCodebridgeContext();
+  // Java Lab does not allow folder creation; see FileBrowserHeaderPopUpButton
+  // for the matching gate at the top level.
+  const supportsFolders = levelProperties.appName !== 'javalab';
 
   const {
     openConfirmDeleteFolder,
@@ -59,7 +65,7 @@ export const useFolderRowOptions = (
         clickHandler: () => openRenameFolderPrompt({folderId: folder.id}),
       },
       {
-        condition: true,
+        condition: supportsFolders,
         iconName: 'folder-plus',
         labelText: codebridgeI18n.addSubFolder(),
         clickHandler: () => openNewFolderPrompt({parentId: folder.id}),
@@ -94,6 +100,7 @@ export const useFolderRowOptions = (
     openRenameFolderPrompt,
     projectFolders,
     startFileUpload,
+    supportsFolders,
   ]);
 
   return dropdownOptions;
