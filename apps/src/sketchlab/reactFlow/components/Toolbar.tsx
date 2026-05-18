@@ -100,36 +100,6 @@ export default function Toolbar({
       aria-label="Canvas tools"
       aria-orientation="vertical"
     >
-      <Tooltip title="Undo" placement="right">
-        {/* span wrapper required so Tooltip receives pointer events when button is disabled */}
-        <span>
-          <IconButton
-            aria-label="Undo"
-            onClick={onUndo}
-            disabled={!canUndo}
-            size="small"
-            color="tertiary"
-            variant="outlined"
-          >
-            <FontAwesomeV6Icon iconName="rotate-left" />
-          </IconButton>
-        </span>
-      </Tooltip>
-      <Tooltip title="Redo" placement="right">
-        <span>
-          <IconButton
-            aria-label="Redo"
-            onClick={onRedo}
-            disabled={!canRedo}
-            size="small"
-            color="tertiary"
-            variant="outlined"
-          >
-            <FontAwesomeV6Icon iconName="rotate-right" />
-          </IconButton>
-        </span>
-      </Tooltip>
-      <Divider flexItem />
       <Tooltip title="Add rectangle" placement="right">
         <IconButton
           aria-label="Add rectangle"
@@ -220,8 +190,37 @@ export default function Toolbar({
           <FontAwesomeV6Icon iconName="image" />
         </IconButton>
       </Tooltip>
-
       <FileInput />
+      <Divider flexItem />
+      <Tooltip title="Undo" placement="right">
+        {/* span wrapper required so Tooltip receives pointer events when button is disabled */}
+        <span>
+          <IconButton
+            aria-label="Undo"
+            onClick={onUndo}
+            disabled={!canUndo}
+            size="small"
+            color="tertiary"
+            variant="outlined"
+          >
+            <FontAwesomeV6Icon iconName="rotate-left" />
+          </IconButton>
+        </span>
+      </Tooltip>
+      <Tooltip title="Redo" placement="right">
+        <span>
+          <IconButton
+            aria-label="Redo"
+            onClick={onRedo}
+            disabled={!canRedo}
+            size="small"
+            color="tertiary"
+            variant="outlined"
+          >
+            <FontAwesomeV6Icon iconName="rotate-right" />
+          </IconButton>
+        </span>
+      </Tooltip>
     </Paper>
   );
 }
