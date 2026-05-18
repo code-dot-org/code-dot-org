@@ -19,7 +19,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2026-05-06 17:00:17 UTC",
+    "serialized_at": "2026-05-18 03:10:42 UTC",
     "hide_within_course": false,
     "published_state": null,
     "instruction_type": null,
@@ -5161,10 +5161,11 @@
     },
     {
       "name": "Aluminum Boats",
-      "url": "https://docs.google.com/document/d/1qHsuBxLTbCCUwjkUDKP0WywF249kx3s4aLeJyYR2Byo/edit",
+      "url": "https://docs.google.com/document/d/1AkhfFAkdDCi_NfMRPpyMJ1Mb9dtGkD29OfdesT3wiKY/view",
       "key": "aluminum_boats",
       "properties": {
         "audience": "Verified Teacher",
+        "embeddability_type": "embed_and_resource_dropdown",
         "type": "Exemplar"
       },
       "seeding_key": {
@@ -5173,10 +5174,11 @@
     },
     {
       "name": "Aluminum Boats",
-      "url": "https://docs.google.com/document/d/1dY3N0DvsPLoPRgWOXcSwRKGxZGaiP2HI84QaalQcE7s/",
+      "url": "https://docs.google.com/document/d/18426Co0lfw1tV18ZNI-lWrw3n5FuGe0MrPfJnn2Rn6Y/view",
       "key": "aluminum_boats_1",
       "properties": {
         "audience": "Student",
+        "embeddability_type": "embed_and_resource_dropdown",
         "include_in_pdf": true,
         "type": "Activity Guide"
       },
@@ -5186,10 +5188,11 @@
     },
     {
       "name": "Apps and Problem Solving",
-      "url": "https://docs.google.com/document/d/1Oza12wkU_FWawNSeXBae_v6knPNdO8Ph5EPeYBSvy3k/edit",
+      "url": "https://docs.google.com/document/d/1RzJds5-VhNc7YRy54jKLHLfGx28bf1zuFUQ1KfqqUxo/view",
       "key": "apps_and_problem_solving",
       "properties": {
         "audience": "Student",
+        "embeddability_type": "embed_and_resource_dropdown",
         "include_in_pdf": true,
         "type": "Activity Guide"
       },
@@ -5199,10 +5202,11 @@
     },
     {
       "name": "Apps and Problem Solving - Student Checklist",
-      "url": "https://docs.google.com/document/d/1KVhC59py0Myrqx2hJcFX9wEST48u_kxZ8CCAzZSwJe0/edit",
+      "url": "https://docs.google.com/document/d/1y4AOwYQ8EAMFrDGx9ddBkxmJGLbMII1Z8r046gw4YQ8/view",
       "key": "apps_and_problem_solving_-_student_checklist",
       "properties": {
         "audience": "Student",
+        "embeddability_type": "embed_and_resource_dropdown",
         "include_in_pdf": true,
         "type": "Resource"
       },
@@ -5212,12 +5216,12 @@
     },
     {
       "name": "Apps and Problem Solving",
-      "url": "https://docs.google.com/document/d/1pJbXBKzppBtWwjo3bBXD8fE_QfI4yt2gQQD1hou1_Gg/",
+      "url": "https://docs.google.com/document/d/1KwUP0fUkWsTiYe8fY7jngZSiPbVfspCPcPSVEDw3gLE/view",
       "key": "apps_and_problem_solving_1",
       "properties": {
         "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Peer Review"
+        "embeddability_type": "embed_and_resource_dropdown",
+        "include_in_pdf": true
       },
       "seeding_key": {
         "resource.key": "apps_and_problem_solving_1"
@@ -5225,10 +5229,11 @@
     },
     {
       "name": "Apps and Problem Solving",
-      "url": "https://docs.google.com/document/d/1lkmNph6eIP1ERFbn7PTbUagWaVnPOiFGgESMKuECTuE/edit",
+      "url": "https://docs.google.com/document/d/1vRTLkFtCjBpZRjYA29718Q0V_jx24kGEaH97dspvwgk/view",
       "key": "apps_and_problem_solving_2",
       "properties": {
         "audience": "Student",
+        "embeddability_type": "embed_and_resource_dropdown",
         "include_in_pdf": true,
         "type": "Rubric"
       },
@@ -5238,10 +5243,11 @@
     },
     {
       "name": "Apps with Processing",
-      "url": "https://docs.google.com/document/d/1S3OZcT2RUzp6WTnd1M74xQ6axbZF6qAXzYgAnn2sHJk/edit?usp=sharing",
+      "url": "https://docs.google.com/document/d/18OGiQVsL2OOWuu46z4sd2wKoi0Qg0OQPq42rMUi6Rc0/view",
       "key": "apps_with_processing",
       "properties": {
         "audience": "Verified Teacher",
+        "embeddability_type": "embed_and_resource_dropdown",
         "type": "Exemplar"
       },
       "seeding_key": {
@@ -5250,10 +5256,11 @@
     },
     {
       "name": "Apps with Processing",
-      "url": "https://docs.google.com/document/d/1X_F-Sr4pj_E4jM0eGqE9crfrY2bNEozJqPw765QQ4Jw/view",
+      "url": "https://docs.google.com/document/d/1s61-3IdouzoepoxszxrBGXg49TXGK3fLwCrU52Rpvc8/view",
       "key": "apps_with_processing_1",
       "properties": {
         "audience": "Student",
+        "embeddability_type": "embed_and_resource_dropdown",
         "include_in_pdf": true,
         "type": "Activity Guide"
       },
@@ -5275,10 +5282,11 @@
     },
     {
       "name": "Apps with Storage",
-      "url": "https://docs.google.com/document/d/1WUFg-bK_Z7KYACda7pwQ6DZVThUulwAT0RvdYH2bsug/edit?usp=sharing",
+      "url": "https://docs.google.com/document/d/1GPzxjBFp1n9Slw_4CHP3gM3kg2qRD-1y5tpSNe3d3Pc/view",
       "key": "apps_with_storage",
       "properties": {
         "audience": "Verified Teacher",
+        "embeddability_type": "embed_and_resource_dropdown",
         "type": "Exemplar"
       },
       "seeding_key": {
@@ -5287,10 +5295,11 @@
     },
     {
       "name": "Apps with Storage",
-      "url": "https://docs.google.com/document/d/17X6xpUxRugcGDMRzplSRPU3d18VviQ4v7uOj2E3s99s/edit",
+      "url": "https://docs.google.com/document/d/1VlBnHBnbMJ6ns8k-WKJ0N1MpQJQFTDuo7h0sIjP0954/view",
       "key": "apps_with_storage_1",
       "properties": {
         "audience": "Student",
+        "embeddability_type": "embed_and_resource_dropdown",
         "include_in_pdf": true,
         "type": "Activity Guide"
       },
@@ -5312,10 +5321,11 @@
     },
     {
       "name": "Build a Newspaper Table",
-      "url": "https://docs.google.com/document/d/1ghhCM2xUqrm2qe6egJ2JGjYNVAHsCTVv3c5ywo-JJmo/edit?usp=sharing",
+      "url": "https://docs.google.com/document/d/1ZPn3e_UPXktvfVAoqjvUbHHGq7Tz3RzkzCYBVxSMPDg/view",
       "key": "build_a_newspaper_table",
       "properties": {
         "audience": "Verified Teacher",
+        "embeddability_type": "embed_and_resource_dropdown",
         "type": "Exemplar"
       },
       "seeding_key": {
@@ -5328,6 +5338,7 @@
       "key": "build_a_newspaper_table_1",
       "properties": {
         "audience": "Student",
+        "embeddability_type": "embed_and_resource_dropdown",
         "include_in_pdf": true,
         "type": "Activity Guide"
       },
@@ -5359,10 +5370,11 @@
     },
     {
       "name": "Computer Science Practices",
-      "url": "https://docs.google.com/document/d/1gX1ki1x8HH7EN-59JcCFjaYnCVPhbniEH4ysZBuGKW8/view",
+      "url": "https://docs.google.com/document/d/1rjlogxzdp6BCpltbxxUhEEZyUzx7HOY4LEE1CxiTLsk/view",
       "key": "computer_science_practices",
       "properties": {
         "audience": "Student",
+        "embeddability_type": "embed_and_resource_dropdown",
         "include_in_pdf": true,
         "type": "Activity Guide"
       },
@@ -5439,10 +5451,11 @@
     },
     {
       "name": "Exploring Problem Solving - Animal Theme",
-      "url": "https://docs.google.com/document/d/1yEDSiEwx6OICs4MZwzl4zBd_aVfVEWd6JlPIqo2mc1c/edit?usp=sharing",
+      "url": "https://docs.google.com/document/d/1YtMWFBYBKmoBlb0vsF8t6fr-wWsY6YE46TdncbEwy-o/view",
       "key": "exploring_problem_solving_-_animal_theme",
       "properties": {
         "audience": "Verified Teacher",
+        "embeddability_type": "embed_and_resource_dropdown",
         "type": "Exemplar"
       },
       "seeding_key": {
@@ -5451,10 +5464,11 @@
     },
     {
       "name": "Exploring Problem Solving - Games Theme",
-      "url": "https://docs.google.com/document/d/1INTy954U_5XR2VgA5Mq17GKfxXHr29KVwMPVfVqcm04/edit?usp=sharing",
+      "url": "https://docs.google.com/document/d/1B-3K9xbFxe4zVX3ErRv1P86mb7aAkwzyzwg7CXYiTRw/view",
       "key": "exploring_problem_solving_-_games_theme",
       "properties": {
         "audience": "Verified Teacher",
+        "embeddability_type": "embed_and_resource_dropdown",
         "type": "Exemplar"
       },
       "seeding_key": {
@@ -5487,10 +5501,11 @@
     },
     {
       "name": "Input and Output",
-      "url": "https://docs.google.com/document/d/1y6JJOsmZh0zwXpP4qCQoPFhQiLXGi4NJnnQoLnHAkPc/edit?usp=sharing",
+      "url": "https://docs.google.com/document/d/1wgbJo5nIaKB5LBT_m9ijmfFLQoTzRIPCfWYf_cR51gc/view",
       "key": "input_and_output",
       "properties": {
         "audience": "Verified Teacher",
+        "embeddability_type": "embed_and_resource_dropdown",
         "type": "Exemplar"
       },
       "seeding_key": {
@@ -5499,10 +5514,11 @@
     },
     {
       "name": "Input and Output",
-      "url": "https://docs.google.com/document/d/1Wf9oUuRi5iNb2cVrn1F8kbDDys0CcAcN-m4ZLpXohmY",
+      "url": "https://docs.google.com/document/d/1DA-2uk6ClaCdHviDrbuTwOnOwp-hZ4kzYRPbGaWkUCU/view",
       "key": "input_and_output_1",
       "properties": {
         "audience": "Student",
+        "embeddability_type": "embed_and_resource_dropdown",
         "include_in_pdf": true,
         "type": "Activity Guide"
       },
@@ -5536,10 +5552,11 @@
     },
     {
       "name": "Intro to Problem Solving - Paper Tower",
-      "url": "https://docs.google.com/document/d/1UNCZD2dRyfZB7wW2yW5_zDRF_lzJjmdLeu21YovvmBs/edit?usp=sharing",
+      "url": "https://docs.google.com/document/d/1BK0Y0yDv96ab2ijF5NU1LIYmctWQyhXL5E1hY_Goa5g/view",
       "key": "intro_to_problem_solving_-_paper_tower",
       "properties": {
         "audience": "Verified Teacher",
+        "embeddability_type": "embed_and_resource_dropdown",
         "type": "Exemplar"
       },
       "seeding_key": {
@@ -5584,10 +5601,11 @@
     },
     {
       "name": "Paper Tower",
-      "url": "https://docs.google.com/document/d/1B4c4oTSnJdlhXjUmmkVNgPrWa1WxTn2-QLEIg4ZI5yU/edit",
+      "url": "https://docs.google.com/document/d/1elCW6c68tStPjLTzmpu2SMNxoZ8COjky8XGcC4nB0Gk/view",
       "key": "paper_tower",
       "properties": {
         "audience": "Student",
+        "embeddability_type": "embed_and_resource_dropdown",
         "include_in_pdf": true,
         "type": "Activity Guide"
       },
@@ -5597,10 +5615,11 @@
     },
     {
       "name": "Peer Review Exemplar",
-      "url": "https://docs.google.com/document/d/1Vctwpr27vkSbw3SLuOtT86jzltqWt6LQ1YotnbutEgs/edit?usp=sharing",
+      "url": "https://docs.google.com/document/d/1N-Bx1uOve3rEAaR7ZN9kgF8DXq6c5-q3Rph59juBcDw/view",
       "key": "peer_review_exemplar",
       "properties": {
         "audience": "Verified Teacher",
+        "embeddability_type": "embed_and_resource_dropdown",
         "type": "Exemplar"
       },
       "seeding_key": {
@@ -5609,10 +5628,11 @@
     },
     {
       "name": "Problem Solving Process",
-      "url": "https://docs.google.com/document/d/1lWv8fKJO2ZRvObUx6Ys1MTVqcSC5ZUfKI8RRXGayRpY/",
+      "url": "https://docs.google.com/document/d/1S4gkPSOVlVp0xqhJybFvUdO8i3O72rpEmiJwbG2uTdw/view",
       "key": "problem_solving_process",
       "properties": {
         "audience": "Verified Teacher",
+        "embeddability_type": "embed_and_resource_dropdown",
         "type": "Exemplar"
       },
       "seeding_key": {
@@ -5657,10 +5677,11 @@
     },
     {
       "name": "Project Guide Exemplar",
-      "url": "https://docs.google.com/document/d/1m8a9nnCGCriSvzWUr5Bh7Siod2iu2FdFQtMEz4TONuc/edit?usp=sharing",
+      "url": "https://docs.google.com/document/d/1-fEUF7Y8HiUwC3KC6xjJkYF6_LLCVGMxNRCmXlC-jk0/view",
       "key": "project_guide_exemplar",
       "properties": {
         "audience": "Verified Teacher",
+        "embeddability_type": "embed_and_resource_dropdown",
         "type": "Exemplar"
       },
       "seeding_key": {
@@ -5669,10 +5690,11 @@
     },
     {
       "name": "Sample Marked Rubrics",
-      "url": "https://docs.google.com/document/d/17C1pGuIk1FL84FjMvUIisYa6x_U8aKREcljfqnEm21c/edit?usp=sharing",
+      "url": "https://docs.google.com/document/d/1RlG5HQAUSU4WssPX5zsm0MbZex1BiX6t5mQZ-T8ArD4/view",
       "key": "sample_marked_rubrics_1",
       "properties": {
         "audience": "Verified Teacher",
+        "embeddability_type": "embed_and_resource_dropdown",
         "include_in_pdf": true,
         "type": "Exemplar"
       },
@@ -5682,10 +5704,11 @@
     },
     {
       "name": "Solving Problems",
-      "url": "https://docs.google.com/document/d/11Gy--8a7-BPT0uMa3ME23nI1FxPKrodORRbb3oc7vsY/",
+      "url": "https://docs.google.com/document/d/1PpgocbCOCRM7yVUnqYRINi6PokKlExaRuG4PQmYnRU8/view",
       "key": "solving_problems",
       "properties": {
         "audience": "Verified Teacher",
+        "embeddability_type": "embed_and_resource_dropdown",
         "type": "Answer Key"
       },
       "seeding_key": {
@@ -5694,10 +5717,11 @@
     },
     {
       "name": "Solving Problems",
-      "url": "https://docs.google.com/document/d/1HUE7g2tqk-_3wiOU4cEFfE4CoOQ5kMzZQc-BTXdco5E/edit",
+      "url": "https://docs.google.com/document/d/1BnQ8xjqjRi-smt9MAWo6-pC45Mj8qpsIHg57iAFf4Pc/view",
       "key": "solving_problems_1",
       "properties": {
         "audience": "Student",
+        "embeddability_type": "embed_and_resource_dropdown",
         "include_in_pdf": true,
         "type": "Activity Guide"
       },
@@ -5707,10 +5731,11 @@
     },
     {
       "name": "Solving Problems",
-      "url": "https://docs.google.com/document/d/10kPXjW-A81o_7lIigLzpPq1lCVbE0bT42fxBUT6C758/edit#heading=h.1nymh4dpxwx1",
+      "url": "https://docs.google.com/document/d/1u_XfE1w4OJXsSMTQblr8lC4MMzX5frGl4ufCkWxOGxI/view",
       "key": "solving_problems_2",
       "properties": {
         "audience": "Student",
+        "embeddability_type": "embed_and_resource_dropdown",
         "include_in_pdf": true,
         "type": "Activity Guide"
       },
@@ -5720,10 +5745,11 @@
     },
     {
       "name": "Solving Problems",
-      "url": "https://docs.google.com/document/d/1Fwpp9gfPGNdF32LlOFTIa0mF6i5c6s2_2uXnRZlvkhU/edit",
+      "url": "https://docs.google.com/document/d/1I6x84n63azDPNBYzvMmzyzLYPMC1o3TZcPjkTaLOlyE/view",
       "key": "solving_problems_3",
       "properties": {
         "audience": "Student",
+        "embeddability_type": "embed_and_resource_dropdown",
         "include_in_pdf": true,
         "type": "Activity Guide"
       },
@@ -5733,10 +5759,11 @@
     },
     {
       "name": "Spaghetti Bridge",
-      "url": "https://docs.google.com/document/d/1XUKyQ3UfGDOugVRWybvjietxgM-LEkdsaT2h6haXp4Q/edit?usp=sharing",
+      "url": "https://docs.google.com/document/d/1-XHOkGcV44KpVRhP1BYXRNXvNMquZ_ye_9Hl7FVaQrU/view",
       "key": "spaghetti_bridge",
       "properties": {
         "audience": "Verified Teacher",
+        "embeddability_type": "embed_and_resource_dropdown",
         "type": "Exemplar"
       },
       "seeding_key": {
@@ -5745,10 +5772,11 @@
     },
     {
       "name": "Spaghetti Bridge - Activity Guide",
-      "url": "https://docs.google.com/document/d/17j77zulzXehMma9Y8yDrJNTRWnN1B7z1aBgQ4vqg8z0/edit?usp=sharing",
+      "url": "https://docs.google.com/document/d/1gqDgS3CbeonMZjm8GaS5gfYeZik4b83E7FtUaCwH4FI/view",
       "key": "spaghetti_bridge_-_activity_guide",
       "properties": {
         "audience": "Student",
+        "embeddability_type": "embed_and_resource_dropdown",
         "include_in_pdf": true,
         "type": "Activity Guide"
       },
@@ -5758,10 +5786,11 @@
     },
     {
       "name": "Tangrams",
-      "url": "https://docs.google.com/document/d/15EVADKK_Dk3UVwDIbuRK6TLjIJJD8-6bVWPsu0zTvLc/edit",
+      "url": "https://docs.google.com/document/d/1E9T4EI5uNEEY8VgGckPr4asnpEsgJ9idrDlDuSFdn3k/view",
       "key": "tangrams",
       "properties": {
         "audience": "Student",
+        "embeddability_type": "embed_and_resource_dropdown",
         "include_in_pdf": true,
         "type": "Resource"
       },
@@ -5817,10 +5846,11 @@
     },
     {
       "name": "The Problem Solving Process",
-      "url": "https://docs.google.com/document/d/1KczAoklRXU1MemCJaah68E9-YtM4Qny00uZJE5f_Ly0/edit?usp=sharing",
+      "url": "https://docs.google.com/document/d/15Cu9C2oyUYaqI3RUwfZl7N2p4T5VYr7F2VsnsQOS39w/view",
       "key": "the_problem_solving_process_3",
       "properties": {
         "audience": "Student",
+        "embeddability_type": "embed_and_resource_dropdown",
         "include_in_pdf": true,
         "type": "Activity Guide"
       },
@@ -5856,10 +5886,11 @@
     },
     {
       "name": "What is a Computer?",
-      "url": "https://docs.google.com/document/d/19QfEaVJcF85W6iZwITFIcPycO11znVjYTAaKO78VPH0/edit?usp=sharing",
+      "url": "https://docs.google.com/document/d/1UlSyLB4kEyqJRSt7Q8ppsyT5J1OOYni8VLvZlC9D4J8/view",
       "key": "what_is_a_computer_",
       "properties": {
         "audience": "Verified Teacher",
+        "embeddability_type": "embed_and_resource_dropdown",
         "type": "Exemplar"
       },
       "seeding_key": {
@@ -5880,10 +5911,11 @@
     },
     {
       "name": "What is a Computer (Version A)",
-      "url": "https://docs.google.com/document/d/1I0Pw3qKhtT0TdbPME3EKsi-L7ufgpxB3JBT59uxgp4w",
+      "url": "https://docs.google.com/document/d/1XujX4kG5rNZX1o-G3DxkQ1NJBg7sPteQK8QoKF_q9iU/view",
       "key": "what_is_a_computer_version_a_",
       "properties": {
         "audience": "Student",
+        "embeddability_type": "embed_and_resource_dropdown",
         "include_in_pdf": true,
         "type": "Activity Guide"
       },
@@ -5893,10 +5925,11 @@
     },
     {
       "name": "What is a Computer (Version B)",
-      "url": "https://docs.google.com/document/d/1z4LfopE0NCEdiQo2BhYDXGm39Z7Wgr-SZjN1nw2U00Q/",
+      "url": "https://docs.google.com/document/d/1K5V6wlModNF4M3e5P5qQuXwSEfW710IZP6JkajIjhb8/view",
       "key": "what_is_a_computer_version_b_",
       "properties": {
         "audience": "Student",
+        "embeddability_type": "embed_and_resource_dropdown",
         "include_in_pdf": true,
         "type": "Activity Guide"
       },

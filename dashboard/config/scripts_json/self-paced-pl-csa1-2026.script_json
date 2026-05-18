@@ -1,0 +1,589 @@
+{
+  "script": {
+    "name": "self-paced-pl-csa1-2026",
+    "wrapup_video_id": null,
+    "login_required": true,
+    "properties": {
+      "content_area": "self_paced_pl_9_12",
+      "curriculum_umbrella": "Self-paced PL - CSA",
+      "is_migrated": true,
+      "supported_locales": [
+        "ar-SA",
+        "cs-CZ",
+        "de-DE",
+        "es-ES",
+        "es-MX",
+        "fa-IR",
+        "fr-FR",
+        "hi-IN",
+        "id-ID",
+        "it-IT",
+        "kn-IN",
+        "ko-KR",
+        "mr-IN",
+        "pl-PL",
+        "pt-BR",
+        "sk-SK",
+        "ta-IN",
+        "te-IN",
+        "th-TH",
+        "tr-TR",
+        "zh-CN",
+        "zh-TW"
+      ]
+    },
+    "new_name": null,
+    "family_name": null,
+    "serialized_at": "2026-05-15 15:06:15 UTC",
+    "hide_within_course": false,
+    "published_state": "in_development",
+    "instruction_type": null,
+    "instructor_audience": null,
+    "participant_audience": null,
+    "seeding_key": {
+      "script.name": "self-paced-pl-csa1-2026"
+    }
+  },
+  "lesson_groups": [
+    {
+      "key": "",
+      "user_facing": false,
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csa1-2026"
+      }
+    }
+  ],
+  "lessons": [
+    {
+      "key": "Welcome to Codeorg",
+      "name": "Welcome to Code.org",
+      "absolute_position": 1,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 1,
+      "properties": {
+        "overview": "**You will:**\n\n* Get an introduction to Code.org.\n* Learn how to engage in these professional learning modules.\n\n**Estimated time:** 20 minutes\n",
+        "student_overview": "**You will:**\n\n* Get an introduction to Code.org.\n* Learn how to engage in these professional learning modules.\n\n**Estimated time:** 20 minutes"
+      },
+      "seeding_key": {
+        "lesson.key": "Welcome to Codeorg",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csa1-2026"
+      }
+    },
+    {
+      "key": "Get to know Computer Science A",
+      "name": "Get to know Computer Science A",
+      "absolute_position": 2,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 2,
+      "properties": {
+        "overview": "**You will:**\n\n* Get an introduction to the AP Computer Science A course\n* Learn Code.org’s curricular approach to CSA \n\n**Estimated time:** 40 minutes\n",
+        "student_overview": "**You will:**\n\n* Get an introduction to the AP Computer Science A course\n* Learn Code.org’s curricular approach to CSA \n\n**Estimated time:** 40 minutes\n"
+      },
+      "seeding_key": {
+        "lesson.key": "Get to know Computer Science A",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csa1-2026"
+      }
+    }
+  ],
+  "lesson_activities": [
+    {
+      "key": "713f541f-991a-4de7-b1dc-670506502fe1",
+      "position": 1,
+      "properties": {
+        "duration": 20
+      },
+      "seeding_key": {
+        "lesson_activity.key": "713f541f-991a-4de7-b1dc-670506502fe1",
+        "lesson.key": "Welcome to Codeorg",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csa1-2026"
+      }
+    },
+    {
+      "key": "ef0a69e3-d603-444d-b158-fb2920211514",
+      "position": 1,
+      "properties": {
+        "duration": 40
+      },
+      "seeding_key": {
+        "lesson_activity.key": "ef0a69e3-d603-444d-b158-fb2920211514",
+        "lesson.key": "Get to know Computer Science A",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csa1-2026"
+      }
+    }
+  ],
+  "activity_sections": [
+    {
+      "key": "7083368d-24c3-4167-ad61-5a38a5002afe",
+      "position": 1,
+      "properties": {
+        "progression_name": "Overview"
+      },
+      "seeding_key": {
+        "activity_section.key": "7083368d-24c3-4167-ad61-5a38a5002afe",
+        "lesson_activity.key": "713f541f-991a-4de7-b1dc-670506502fe1"
+      }
+    },
+    {
+      "key": "e3318227-69b4-4ada-9d28-1cd4b3a67dff",
+      "position": 2,
+      "properties": {
+        "progression_name": "What is Code.org?"
+      },
+      "seeding_key": {
+        "activity_section.key": "e3318227-69b4-4ada-9d28-1cd4b3a67dff",
+        "lesson_activity.key": "713f541f-991a-4de7-b1dc-670506502fe1"
+      }
+    },
+    {
+      "key": "32d6cc7a-c32f-4ef7-88ce-b7f547fa32d1",
+      "position": 1,
+      "properties": {
+        "progression_name": "What is AP CSA? "
+      },
+      "seeding_key": {
+        "activity_section.key": "32d6cc7a-c32f-4ef7-88ce-b7f547fa32d1",
+        "lesson_activity.key": "ef0a69e3-d603-444d-b158-fb2920211514"
+      }
+    },
+    {
+      "key": "f1c8d11d-b1da-4182-aade-270156cc40c5",
+      "position": 2,
+      "properties": {
+        "progression_name": "The CSA Framework and Curriculum "
+      },
+      "seeding_key": {
+        "activity_section.key": "f1c8d11d-b1da-4182-aade-270156cc40c5",
+        "lesson_activity.key": "ef0a69e3-d603-444d-b158-fb2920211514"
+      }
+    },
+    {
+      "key": "a9c9adc8-cbab-4e8d-8637-d2ae7a12d847",
+      "position": 3,
+      "properties": {
+        "progression_name": "College Board Resources "
+      },
+      "seeding_key": {
+        "activity_section.key": "a9c9adc8-cbab-4e8d-8637-d2ae7a12d847",
+        "lesson_activity.key": "ef0a69e3-d603-444d-b158-fb2920211514"
+      }
+    },
+    {
+      "key": "9e5e8c72-6360-4869-b968-289c44a25e0d",
+      "position": 4,
+      "properties": {
+        "progression_name": "Frequently Asked Questions "
+      },
+      "seeding_key": {
+        "activity_section.key": "9e5e8c72-6360-4869-b968-289c44a25e0d",
+        "lesson_activity.key": "ef0a69e3-d603-444d-b158-fb2920211514"
+      }
+    },
+    {
+      "key": "56e3138c-caf4-4164-89cb-d8a9f4539543",
+      "position": 5,
+      "properties": {
+        "progression_name": "Wrap up"
+      },
+      "seeding_key": {
+        "activity_section.key": "56e3138c-caf4-4164-89cb-d8a9f4539543",
+        "lesson_activity.key": "ef0a69e3-d603-444d-b158-fb2920211514"
+      }
+    }
+  ],
+  "script_levels": [
+    {
+      "chapter": 1,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Overview"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "SP-VPL-21-CSA-mod1-Overview-Welcome_2026"
+        ],
+        "lesson.key": "Welcome to Codeorg",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csa1-2026",
+        "activity_section.key": "7083368d-24c3-4167-ad61-5a38a5002afe"
+      },
+      "level_keys": [
+        "SP-VPL-21-CSA-mod1-Overview-Welcome_2026"
+      ]
+    },
+    {
+      "chapter": 2,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "What is Code.org?"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "SP-VPL-21-mod1-welcome-vid_2026"
+        ],
+        "lesson.key": "Welcome to Codeorg",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csa1-2026",
+        "activity_section.key": "e3318227-69b4-4ada-9d28-1cd4b3a67dff"
+      },
+      "level_keys": [
+        "SP-VPL-21-mod1-welcome-vid_2026"
+      ]
+    },
+    {
+      "chapter": 3,
+      "position": 3,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "What is Code.org?"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "SP-VPL-21-mod1-CSisFoundational_2026"
+        ],
+        "lesson.key": "Welcome to Codeorg",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csa1-2026",
+        "activity_section.key": "e3318227-69b4-4ada-9d28-1cd4b3a67dff"
+      },
+      "level_keys": [
+        "SP-VPL-21-mod1-CSisFoundational_2026"
+      ]
+    },
+    {
+      "chapter": 4,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "What is AP CSA? "
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "SP-VPL-21-CSA-mod1-what-is-CSA1_2026"
+        ],
+        "lesson.key": "Get to know Computer Science A",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csa1-2026",
+        "activity_section.key": "32d6cc7a-c32f-4ef7-88ce-b7f547fa32d1"
+      },
+      "level_keys": [
+        "SP-VPL-21-CSA-mod1-what-is-CSA1_2026"
+      ]
+    },
+    {
+      "chapter": 5,
+      "position": 2,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "What is AP CSA? "
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "SP-VPL-21-CSA-mod1-why-teach-with-Code_2026"
+        ],
+        "lesson.key": "Get to know Computer Science A",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csa1-2026",
+        "activity_section.key": "32d6cc7a-c32f-4ef7-88ce-b7f547fa32d1"
+      },
+      "level_keys": [
+        "SP-VPL-21-CSA-mod1-why-teach-with-Code_2026"
+      ]
+    },
+    {
+      "chapter": 6,
+      "position": 3,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "The CSA Framework and Curriculum "
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "SP-VPL-21-CSA-mod1-csa-framework_2026"
+        ],
+        "lesson.key": "Get to know Computer Science A",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csa1-2026",
+        "activity_section.key": "f1c8d11d-b1da-4182-aade-270156cc40c5"
+      },
+      "level_keys": [
+        "SP-VPL-21-CSA-mod1-csa-framework_2026"
+      ]
+    },
+    {
+      "chapter": 7,
+      "position": 4,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "The CSA Framework and Curriculum "
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "SP-VPL-21-CSA-mod1-approach-to-curriculum_2026"
+        ],
+        "lesson.key": "Get to know Computer Science A",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csa1-2026",
+        "activity_section.key": "f1c8d11d-b1da-4182-aade-270156cc40c5"
+      },
+      "level_keys": [
+        "SP-VPL-21-CSA-mod1-approach-to-curriculum_2026"
+      ]
+    },
+    {
+      "chapter": 8,
+      "position": 5,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "College Board Resources "
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "SP-VPL-21-CSA-mod1-college-board-resources_2026"
+        ],
+        "lesson.key": "Get to know Computer Science A",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csa1-2026",
+        "activity_section.key": "a9c9adc8-cbab-4e8d-8637-d2ae7a12d847"
+      },
+      "level_keys": [
+        "SP-VPL-21-CSA-mod1-college-board-resources_2026"
+      ]
+    },
+    {
+      "chapter": 9,
+      "position": 6,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Frequently Asked Questions "
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "SP-VPL-21-CSA-FAQ_2026"
+        ],
+        "lesson.key": "Get to know Computer Science A",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csa1-2026",
+        "activity_section.key": "9e5e8c72-6360-4869-b968-289c44a25e0d"
+      },
+      "level_keys": [
+        "SP-VPL-21-CSA-FAQ_2026"
+      ]
+    },
+    {
+      "chapter": 10,
+      "position": 7,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Wrap up"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "SP-VPL-CSA-22-Navigation-Mod1_2026"
+        ],
+        "lesson.key": "Get to know Computer Science A",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csa1-2026",
+        "activity_section.key": "56e3138c-caf4-4164-89cb-d8a9f4539543"
+      },
+      "level_keys": [
+        "SP-VPL-CSA-22-Navigation-Mod1_2026"
+      ]
+    }
+  ],
+  "levels_script_levels": [
+    {
+      "seeding_key": {
+        "level.key": "SP-VPL-21-CSA-mod1-Overview-Welcome_2026",
+        "script_level.level_keys": [
+          "SP-VPL-21-CSA-mod1-Overview-Welcome_2026"
+        ],
+        "lesson.key": "Welcome to Codeorg",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csa1-2026",
+        "activity_section.key": "7083368d-24c3-4167-ad61-5a38a5002afe"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "SP-VPL-21-mod1-welcome-vid_2026",
+        "script_level.level_keys": [
+          "SP-VPL-21-mod1-welcome-vid_2026"
+        ],
+        "lesson.key": "Welcome to Codeorg",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csa1-2026",
+        "activity_section.key": "e3318227-69b4-4ada-9d28-1cd4b3a67dff"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "SP-VPL-21-mod1-CSisFoundational_2026",
+        "script_level.level_keys": [
+          "SP-VPL-21-mod1-CSisFoundational_2026"
+        ],
+        "lesson.key": "Welcome to Codeorg",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csa1-2026",
+        "activity_section.key": "e3318227-69b4-4ada-9d28-1cd4b3a67dff"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "SP-VPL-21-CSA-mod1-what-is-CSA1_2026",
+        "script_level.level_keys": [
+          "SP-VPL-21-CSA-mod1-what-is-CSA1_2026"
+        ],
+        "lesson.key": "Get to know Computer Science A",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csa1-2026",
+        "activity_section.key": "32d6cc7a-c32f-4ef7-88ce-b7f547fa32d1"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "SP-VPL-21-CSA-mod1-why-teach-with-Code_2026",
+        "script_level.level_keys": [
+          "SP-VPL-21-CSA-mod1-why-teach-with-Code_2026"
+        ],
+        "lesson.key": "Get to know Computer Science A",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csa1-2026",
+        "activity_section.key": "32d6cc7a-c32f-4ef7-88ce-b7f547fa32d1"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "SP-VPL-21-CSA-mod1-csa-framework_2026",
+        "script_level.level_keys": [
+          "SP-VPL-21-CSA-mod1-csa-framework_2026"
+        ],
+        "lesson.key": "Get to know Computer Science A",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csa1-2026",
+        "activity_section.key": "f1c8d11d-b1da-4182-aade-270156cc40c5"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "SP-VPL-21-CSA-mod1-approach-to-curriculum_2026",
+        "script_level.level_keys": [
+          "SP-VPL-21-CSA-mod1-approach-to-curriculum_2026"
+        ],
+        "lesson.key": "Get to know Computer Science A",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csa1-2026",
+        "activity_section.key": "f1c8d11d-b1da-4182-aade-270156cc40c5"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "SP-VPL-21-CSA-mod1-college-board-resources_2026",
+        "script_level.level_keys": [
+          "SP-VPL-21-CSA-mod1-college-board-resources_2026"
+        ],
+        "lesson.key": "Get to know Computer Science A",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csa1-2026",
+        "activity_section.key": "a9c9adc8-cbab-4e8d-8637-d2ae7a12d847"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "SP-VPL-21-CSA-FAQ_2026",
+        "script_level.level_keys": [
+          "SP-VPL-21-CSA-FAQ_2026"
+        ],
+        "lesson.key": "Get to know Computer Science A",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csa1-2026",
+        "activity_section.key": "9e5e8c72-6360-4869-b968-289c44a25e0d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "SP-VPL-CSA-22-Navigation-Mod1_2026",
+        "script_level.level_keys": [
+          "SP-VPL-CSA-22-Navigation-Mod1_2026"
+        ],
+        "lesson.key": "Get to know Computer Science A",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csa1-2026",
+        "activity_section.key": "56e3138c-caf4-4164-89cb-d8a9f4539543"
+      }
+    }
+  ],
+  "resources": [
+
+  ],
+  "lessons_resources": [
+
+  ],
+  "scripts_resources": [
+
+  ],
+  "scripts_student_resources": [
+
+  ],
+  "vocabularies": [
+
+  ],
+  "lessons_vocabularies": [
+
+  ],
+  "lessons_programming_expressions": [
+
+  ],
+  "objectives": [
+
+  ],
+  "lessons_standards": [
+
+  ],
+  "lessons_opportunity_standards": [
+
+  ],
+  "jit_pl_concepts_lessons": [
+
+  ],
+  "rubrics": [
+
+  ],
+  "learning_goals": [
+
+  ],
+  "learning_goal_evidence_levels": [
+
+  ]
+}
