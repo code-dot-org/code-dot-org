@@ -115,9 +115,13 @@ const generateTextThroughGateway = async <
         `${LOG} generateText response schema mismatch:`,
         parseResult.error.errors
       );
-      throw parseResult.error;
+      if (process.env.NODE_ENV === 'development') {
+        throw parseResult.error;
+      }
     }
-    const wire = parseResult.data;
+    const wire = parseResult.success
+      ? parseResult.data
+      : (rawResponse as GatewayGenerateTextResponseV1);
 
     return rehydrateAIResponse<TOOLS, OUTPUT>(wire);
   } catch (error) {

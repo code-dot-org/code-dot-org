@@ -5,7 +5,10 @@ import {
 
 import HttpClient from '@cdo/apps/util/HttpClient';
 
-import {GatewayTranscribeResponseV1Schema} from './gatewaySchemas';
+import {
+  GatewayTranscribeResponseV1Schema,
+  type GatewayTranscribeResponseV1,
+} from './gatewaySchemas';
 import {getErrorLogData} from './logHelper';
 import {AI_GATEWAY_URL, fetchAccessToken, getModelString} from './shared';
 import {
@@ -54,9 +57,13 @@ async function transcribeThroughGateway(
         `${LOG} transcribe response schema mismatch:`,
         parseResult.error.errors
       );
-      throw parseResult.error;
+      if (process.env.NODE_ENV === 'development') {
+        throw parseResult.error;
+      }
     }
-    const wire = parseResult.data;
+    const wire = parseResult.success
+      ? parseResult.data
+      : (rawResponse as GatewayTranscribeResponseV1);
 
     return {
       ...wire,
