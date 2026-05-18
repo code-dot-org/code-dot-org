@@ -42,10 +42,8 @@
   color: var(--text-neutral-primary);
   border: 1px solid var(--borders-neutral-primary);
   pointer-events: all;
-  // When the available window space is smaller than the toolbar's
-  // natural height, ToolbarShell sets an inline max-height; the Paper
-  // scrolls internally rather than spilling off-screen.
   overflow-y: auto;
+  overflow-x: hidden;
 }
 
 .header {

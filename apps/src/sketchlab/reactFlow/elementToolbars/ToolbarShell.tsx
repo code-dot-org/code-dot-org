@@ -10,11 +10,8 @@ import {
 
 import styles from './element-toolbar.module.scss';
 
-// Bottom breathing room between the toolbar and the window edge when the
-// toolbar is tall enough to need internal scrolling.
-const TOOLBAR_BOTTOM_MARGIN_PX = 16;
-// Floor for the computed max-height so the toolbar remains usable even
-// when the canvas wrapper is positioned mostly off-screen.
+// Gap between the toolbar's lower edge and the Controls panel.
+const TOOLBAR_BOTTOM_GAP_PX = 32;
 const TOOLBAR_MIN_HEIGHT_PX = 120;
 
 interface ToolbarShellProps {
@@ -34,26 +31,36 @@ export default function ToolbarShell({
     openToolbarTarget?.type === target.type &&
     openToolbarTarget.id === target.id;
 
-  // The React Flow canvas wrapper can be taller than the visible window
-  // (we keep the canvas itself unconstrained). Anchor the toolbar's
-  // max-height to the window viewport rather than its parent so it
-  // scrolls internally when content would otherwise spill below the
-  // screen. The Paper's top stays fixed (Panel is position: absolute,
-  // top: 0), so we compute once on mount and on window resize.
+  // The React Flow canvas wrapper can be taller than the visible window.
+  // Cap the toolbar's max-height against whichever is higher on screen:
+  // the bottom-right Controls panel, or the window's lower edge.
+  // Recompute on resize.
   const paperRef = useRef<HTMLDivElement>(null);
   const [maxHeight, setMaxHeight] = useState<number | undefined>(undefined);
   useLayoutEffect(() => {
     if (!isVisible) return;
+    const paper = paperRef.current;
+    if (!paper) return;
+    const wrapper = paper.closest('.react-flow');
+
     const recompute = () => {
-      const paper = paperRef.current;
-      if (!paper) return;
       const top = paper.getBoundingClientRect().top;
-      const available = window.innerHeight - top - TOOLBAR_BOTTOM_MARGIN_PX;
+      const controls = wrapper?.querySelector('.react-flow__controls');
+      const controlsTop =
+        controls?.getBoundingClientRect().top ?? window.innerHeight;
+      const bottomAnchor = Math.min(controlsTop, window.innerHeight);
+      const available = bottomAnchor - top - TOOLBAR_BOTTOM_GAP_PX;
       setMaxHeight(Math.max(available, TOOLBAR_MIN_HEIGHT_PX));
     };
     recompute();
+
     window.addEventListener('resize', recompute);
-    return () => window.removeEventListener('resize', recompute);
+    const observer = wrapper ? new ResizeObserver(recompute) : null;
+    if (wrapper && observer) observer.observe(wrapper);
+    return () => {
+      window.removeEventListener('resize', recompute);
+      observer?.disconnect();
+    };
   }, [isVisible]);
 
   const returnFocusToTarget = useCallback(() => {
