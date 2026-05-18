@@ -21,7 +21,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2026-05-04 16:37:31 UTC",
+    "serialized_at": "2026-05-17 23:10:23 UTC",
     "hide_within_course": false,
     "published_state": null,
     "instruction_type": null,
@@ -11296,10 +11296,11 @@
     },
     {
       "name": "Problem Solving and Design",
-      "url": "https://docs.google.com/document/d/1adyft9qT9H9YNs-UVWuDReqPbiOIF4UfZvPH2m7BBUU/view",
+      "url": "https://docs.google.com/document/d/1Tyzdf9kJahJ-Ar491fvALGBcxnkRueWmVFkKcbRxZqI/view",
       "key": "problem_solving_and_design",
       "properties": {
         "audience": "Student",
+        "embeddability_type": "embed_and_resource_dropdown",
         "include_in_pdf": true,
         "type": "Resource"
       },
