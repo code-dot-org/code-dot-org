@@ -11,6 +11,7 @@ module AiStudentPodcastsHelper
   def self.create_and_save_to_s3(student_podcast_data)
     filename = s3_filename(student_podcast_data.id)
     return if AWS::S3.exists_in_bucket(PODCAST_BUCKET, filename)
+    return unless elevenlabs_client.available_credits
 
     podcast_script = generate_podcast_script(student_podcast_data)
     podcast = get_podcast_from_script(podcast_script)
@@ -73,10 +74,28 @@ module AiStudentPodcastsHelper
     attr_accessor :api_key, :model
 
     ELEVENLABS_URL = "https://api.elevenlabs.io/v1/text-to-dialogue"
+    ELEVENLABS_SUBSCRIPTION_URL = "https://api.elevenlabs.io/v1/user/subscription"
 
     def initialize(api_key, model)
       @api_key = api_key
       @model = model
+    end
+
+    def available_credits
+      headers = {
+        "Content-Type" => "application/json",
+        "xi-api-key" => @api_key
+      }
+
+      user_response = HTTParty.get(
+        ELEVENLABS_SUBSCRIPTION_URL,
+        headers: headers,
+        timeout: 180,
+      )
+
+      subscription_info = JSON.parse(user_response.body)
+
+      subscription_info['character_count'] < subscription_info['character_limit'] * 0.95
     end
 
     def request_podcast(prompt)

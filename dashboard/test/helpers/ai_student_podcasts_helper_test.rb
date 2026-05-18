@@ -85,14 +85,26 @@ class AiStudentPodcastsHelperTest < ActionView::TestCase
   test "create_and_save_to_s3 short-circuits without generating script when file already exists in S3" do
     AWS::S3.stubs(:exists_in_bucket).returns(true)
     AWS::S3.expects(:upload_to_bucket).never
+    AiStudentPodcastsHelper::ElevenlabsClient.any_instance.expects(:available_credits).never
     AiStudentPodcastsHelper.expects(:generate_podcast_script).never
     AiStudentPodcastsHelper.expects(:get_podcast_from_script).never
 
     AiStudentPodcastsHelper.create_and_save_to_s3(@podcast)
   end
 
-  test "create_and_save_to_s3 generates script, fetches mp3, and uploads when S3 file missing" do
+  test "create_and_save_to_s3 short-circuits without generating script when ElevenLabs credits unavailable" do
     AWS::S3.stubs(:exists_in_bucket).returns(false)
+    AiStudentPodcastsHelper::ElevenlabsClient.any_instance.stubs(:available_credits).returns(false)
+    AWS::S3.expects(:upload_to_bucket).never
+    AiStudentPodcastsHelper.expects(:generate_podcast_script).never
+    AiStudentPodcastsHelper.expects(:get_podcast_from_script).never
+
+    AiStudentPodcastsHelper.create_and_save_to_s3(@podcast)
+  end
+
+  test "create_and_save_to_s3 generates script, fetches mp3, and uploads when S3 file missing and credits available" do
+    AWS::S3.stubs(:exists_in_bucket).returns(false)
+    AiStudentPodcastsHelper::ElevenlabsClient.any_instance.stubs(:available_credits).returns(true)
     generated_script = [{voice_id: 'Dan', text: 'hello'}].to_json
 
     AiStudentPodcastsHelper.expects(:generate_podcast_script).
@@ -207,6 +219,28 @@ class AiStudentPodcastsHelperTest < ActionView::TestCase
     client = AiStudentPodcastsHelper::ElevenlabsClient.new('key', 'model')
     assert_equal 'key', client.api_key
     assert_equal 'model', client.model
+  end
+
+  test "ElevenlabsClient available_credits returns true when usage is under 95% of the character limit" do
+    mock_response = mock('response')
+    mock_response.stubs(:body).returns({character_count: 949, character_limit: 1000}.to_json)
+    HTTParty.expects(:get).with(
+      AiStudentPodcastsHelper::ElevenlabsClient::ELEVENLABS_SUBSCRIPTION_URL,
+      headers: {"Content-Type" => "application/json", "xi-api-key" => @elevenlabs_api_key},
+      timeout: 180
+    ).returns(mock_response)
+
+    client = AiStudentPodcastsHelper::ElevenlabsClient.new(@elevenlabs_api_key, AiStudentPodcastsHelper::ELEVENLABS_MODEL)
+    assert client.available_credits
+  end
+
+  test "ElevenlabsClient available_credits returns false when usage is at or above 95% of the character limit" do
+    mock_response = mock('response')
+    mock_response.stubs(:body).returns({character_count: 950, character_limit: 1000}.to_json)
+    HTTParty.stubs(:get).returns(mock_response)
+
+    client = AiStudentPodcastsHelper::ElevenlabsClient.new(@elevenlabs_api_key, AiStudentPodcastsHelper::ELEVENLABS_MODEL)
+    refute client.available_credits
   end
 
   test "ElevenlabsClient request_podcast POSTs JSON to the text-to-dialogue endpoint" do
