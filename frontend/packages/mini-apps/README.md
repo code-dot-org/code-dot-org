@@ -168,6 +168,43 @@ Demo has no adapter — `MiniAppPreview` renders its `PreviewComponent`
 directly. If a new mini-app's inputs all fit inside `MiniAppDeps`,
 skip the adapter.
 
+### Typing the inputs
+
+Declare the inputs interface with concrete types.
+
+For level data, import `LevelProperties` from `@code-dot-org/core/api`:
+
+```ts
+import type {LevelProperties} from '@code-dot-org/core/api';
+
+export interface FooInputs {
+  miniApp: FooMiniApp | null;
+  levelProperties: LevelProperties | null;
+  // ...mini-app-specific fields
+}
+```
+
+apps and `@code-dot-org/core/api` currently expose **two different**
+`LevelProperties` types — they describe the same backend response but
+have divergent `appName` enums until apps migrates onto core/api's
+types. Every adapter that consumes `levelProperties` from
+`useCodebridgeContext()` pays a one-line cast:
+
+```tsx
+levelProperties: levelProperties as unknown as LevelProperties,
+```
+
+See `NeighborhoodAdapter.tsx` for the worked example, including the
+comment explaining why the cast is there. This will disappear when we
+are using the `api` definitions in both places.
+
+### Type surface inside the package
+
+Per-mini-app type aliases (signal shapes, data extensions, callback
+types) live in a `types.ts` next to the implementation. Keep them
+exported through `src/index.ts` so the adapter and the package itself
+agree on shape.
+
 ## Where things live
 
 ```
