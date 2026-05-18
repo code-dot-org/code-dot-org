@@ -1,0 +1,112 @@
+import {test as base} from '@applitools/eyes-playwright/fixture';
+import {
+  type Page,
+  type PlaywrightTestArgs,
+  type PlaywrightTestOptions,
+  type PlaywrightWorkerArgs,
+  type PlaywrightWorkerOptions,
+  type TestInfo,
+  type TestType,
+} from '@playwright/test';
+
+import {
+  createAuthorizedTeacher,
+  createLevelbuilder,
+  createStudent,
+  createTeacher,
+} from './auth';
+import {createEyesHandle, type EyesFixture} from './eyes';
+
+/**
+ * Option controlling the age of the student account created by studentPage.
+ * Set per-describe with test.use({ studentAge: 10 }) for under-13 behaviour.
+ */
+interface StudentOptions {
+  studentAge: number;
+}
+
+interface AuthFixtures {
+  /** Authenticated student page. Age set by the studentAge option (default 16). */
+  studentPage: Page;
+  /** Authenticated teacher page. */
+  teacherPage: Page;
+  /** Authenticated levelbuilder page (teacher + levelbuilder access). */
+  levelbuilderPage: Page;
+  /** Authenticated teacher page with authorized-teacher permission. */
+  authorizedTeacherPage: Page;
+}
+
+interface EyesFixtures {
+  /**
+   * Applitools Eyes per-test handle. No-op when `APPLITOOLS_API_KEY` is
+   * unset (so functional flow still runs in local dev). Opens the session
+   * lazily on first `check`/`checkRegion`/`checkViewport` call; closes
+   * fail-fast in fixture teardown (any visual diff throws).
+   */
+  eyes: EyesFixture;
+}
+
+type Attach = TestInfo['attach'];
+
+const baseTest = base as unknown as TestType<
+  PlaywrightTestArgs & PlaywrightTestOptions,
+  PlaywrightWorkerArgs & PlaywrightWorkerOptions
+>;
+
+function hideApplitoolsIdentifierAttachment(testInfo: TestInfo): void {
+  const originalAttach = testInfo.attach.bind(testInfo);
+  (testInfo as TestInfo & {attach: Attach}).attach = async (name, options) => {
+    if (name === 'applitoolsIdentifier' && options?.body) {
+      await originalAttach(name, {
+        ...options,
+        body: Buffer.from(options.body.toString()),
+        contentType: 'application/octet-stream',
+      });
+      return;
+    }
+
+    await originalAttach(name, options);
+  };
+}
+
+export const test = baseTest.extend<
+  StudentOptions & AuthFixtures & EyesFixtures
+>({
+  studentAge: [16, {option: true}],
+
+  studentPage: async ({page, studentAge}, use) => {
+    await createStudent(page, {age: studentAge});
+    await use(page);
+  },
+
+  teacherPage: async ({page}, use) => {
+    await createTeacher(page);
+    await use(page);
+  },
+
+  levelbuilderPage: async ({page}, use) => {
+    await createLevelbuilder(page);
+    await use(page);
+  },
+
+  authorizedTeacherPage: async ({page}, use) => {
+    await createAuthorizedTeacher(page);
+    await use(page);
+  },
+
+  eyes: async (
+    {page}: {page: Page},
+    use: (fixture: EyesFixture) => Promise<void>,
+    testInfo: TestInfo,
+  ) => {
+    hideApplitoolsIdentifierAttachment(testInfo);
+    const handle = createEyesHandle(page, testInfo.title, 'Code.org', testInfo);
+    try {
+      await use(handle);
+    } finally {
+      await handle.close();
+    }
+  },
+});
+
+export {expect} from '@playwright/test';

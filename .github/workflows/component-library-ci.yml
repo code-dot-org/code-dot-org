@@ -2,6 +2,15 @@ name: Component-Library-CI
 
 on:
   workflow_call:
+    inputs:
+      playwright-version:
+        description: >-
+          Playwright version tag for the mcr.microsoft.com/playwright
+          container used by ui-test. Must match the version resolved in
+          frontend/yarn.lock so the bundled chrome-headless-shell revision
+          is present at runtime.
+        type: string
+        required: true
 
 jobs:
   build:
@@ -42,8 +51,7 @@ jobs:
   ui-test:
     runs-on: ubuntu-24.04
     container:
-      # Ensure the Playwright version matches in frontend/apps/design-system-storybook/package.json
-      image: mcr.microsoft.com/playwright:v1.57.0-noble
+      image: mcr.microsoft.com/playwright:v${{ inputs.playwright-version }}-noble
 
     steps:
       - name: Install LFS

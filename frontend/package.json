@@ -37,7 +37,7 @@
     "vite": "7.2.7"
   },
   "devDependencies": {
-    "@axe-core/playwright": "^4.10.1",
+    "@axe-core/playwright": "^4.11.0",
     "@eslint/js": "catalog:",
     "@turbo/gen": "^2.6.3",
     "@types/node": "catalog:",

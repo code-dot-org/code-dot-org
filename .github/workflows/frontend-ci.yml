@@ -21,7 +21,22 @@ jobs:
     outputs:
       component-library-changed: ${{ steps.changes.outputs.component-library }}
       studio-changed: ${{ steps.changes.outputs.studio }}
+      apps-e2e-tests-changed: ${{ steps.changes.outputs.apps-e2e-tests }}
+      component-library-playwright-version: ${{ steps.playwright.outputs.component-library-version }}
+      apps-e2e-tests-playwright-version: ${{ steps.playwright.outputs.apps-e2e-tests-version }}
     steps:
+      # Single source of truth for the Playwright container tags passed to
+      # reusable workflows that run Playwright. Each tag must match the
+      # package version resolved for that workspace in frontend/yarn.lock so
+      # the bundled chrome-headless-shell revision is present at runtime.
+      # Bump in lockstep with yarn upgrades of those packages.
+      - name: Resolve Playwright version
+        id: playwright
+        shell: bash
+        run: |
+          echo "component-library-version=1.60.0" >> "$GITHUB_OUTPUT"
+          echo "apps-e2e-tests-version=1.55.1" >> "$GITHUB_OUTPUT"
+
       # Determine what changed to later skip workflows
       # Github Actions does not offer conditional runtime path filtering, thus use this action to calculate the
       # changes. Root level applications (such as marketing) are not skipped as its dependency tree always changes
@@ -41,6 +56,11 @@ jobs:
               - 'frontend/apps/studio/**'
               - 'frontend/*'
               - '.github/**'
+            apps-e2e-tests:
+              - 'frontend/packages/apps-e2e-tests/**'
+              - '.github/workflows/apps-e2e-tests.yml'
+              - '.github/actions/frontend/setup/**'
+              - '.github/actions/frontend/merge-playwright-reports/**'
 
   # Start the studio app CI workflow
   studio:
@@ -55,11 +75,23 @@ jobs:
     needs: setup
     uses: ./.github/workflows/component-library-ci.yml
     secrets: inherit
+    with:
+      playwright-version: ${{ needs.setup.outputs.component-library-playwright-version }}
+
+  # Sharded Playwright suite that runs against https://test-studio.code.org.
+  # PoC: gated to PRs that touch the suite itself. Broaden later once stable.
+  apps-e2e-tests:
+    if: ${{ needs.setup.outputs.apps-e2e-tests-changed == 'true' }}
+    needs: setup
+    uses: ./.github/workflows/apps-e2e-tests.yml
+    secrets: inherit
+    with:
+      playwright-version: ${{ needs.setup.outputs.apps-e2e-tests-playwright-version }}
 
   # Common teardown actions that must occur after _all_ workflows have completed.
   # For example, closing the Applitools batch after its completion.
   teardown:
-    needs: [setup, component-library]
+    needs: [setup, component-library, apps-e2e-tests]
     if: always()
     runs-on: ubuntu-24.04
     steps:

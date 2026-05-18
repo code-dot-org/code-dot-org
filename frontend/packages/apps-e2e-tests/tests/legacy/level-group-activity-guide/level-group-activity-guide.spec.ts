@@ -1,0 +1,142 @@
+import {type Page} from '@playwright/test';
+
+import {createTeacherAssociatedStudent, signIn} from '../../shared/auth';
+import {expect, test} from '../../shared/fixtures';
+
+/**
+ * Level Group Activity Guide level type — lesson 53 of allthethingscourse unit 1.
+ *
+ * Source:
+ *   dashboard/test/ui/features/teacher_tools/level_types/level_group_activity_guide.feature
+ */
+
+const LESSON_53_L1 =
+  '/courses/allthethingscourse/units/1/lessons/53/levels/1?noautoplay=true';
+const LESSON_53_L2 =
+  '/courses/allthethingscourse/units/1/lessons/53/levels/2?noautoplay=true';
+
+// ─── Scenario 1 — @as_student: submit activity guide and advance ──────────────
+
+test.describe('Level group activity guide — submit and advance', () => {
+  /**
+   * Migration status: COMPLETED
+   * Source: dashboard/test/ui/features/teacher_tools/level_types/level_group_activity_guide.feature
+   * Scenario: Submit activity guide and go to next level.
+   */
+  test('submit activity guide navigates to next level', async ({
+    studentPage,
+  }) => {
+    await studentPage.goto(LESSON_53_L1);
+    await studentPage
+      .locator('.submitButton')
+      .waitFor({state: 'visible', timeout: 30_000});
+
+    const urlBefore = studentPage.url();
+    await Promise.all([
+      studentPage.waitForNavigation(),
+      studentPage.locator('.submitButton').first().click(),
+    ]);
+    expect(studentPage.url()).not.toBe(urlBefore);
+  });
+});
+
+// ─── Scenarios 2–3 — teacher-associated student: teacher views summary ────────
+
+test.describe('Level group activity guide — teacher views summary', () => {
+  /**
+   * Submits a level group activity guide as a student, then signs in as the
+   * teacher and opens the student response summary.
+   *
+   * @param page - Playwright page
+   * @param levelUrl - activity-guide level URL to exercise
+   */
+  async function studentSubmitAndTeacherViewSummary(
+    page: Page,
+    levelUrl: string,
+  ): Promise<void> {
+    const {teacherEmail, teacherPassword} =
+      await createTeacherAssociatedStudent(page);
+
+    // Student fills in the activity guide and submits.
+    await page.goto(levelUrl);
+    await page
+      .locator('.progress-bubble.enabled')
+      .first()
+      .waitFor({state: 'visible', timeout: 30_000});
+    await page.locator('#unchecked_0').first().click();
+    await page.locator('.free-response > textarea').fill('sample response');
+    await Promise.all([
+      page.waitForNavigation(),
+      page.locator('.submitButton').first().click(),
+    ]);
+
+    // Teacher signs in and views the student response summary.
+    await signIn(page, teacherEmail, teacherPassword);
+    await page.goto(levelUrl);
+    await page
+      .locator('a', {hasText: 'View student responses'})
+      .waitFor({state: 'visible', timeout: 30_000});
+    await Promise.all([
+      page.waitForURL(/\/summary/, {timeout: 30_000}),
+      page.locator('a', {hasText: 'View student responses'}).click(),
+    ]);
+    await page
+      .locator('#summary-container')
+      .waitFor({state: 'visible', timeout: 30_000});
+  }
+
+  /**
+   * Migration status: COMPLETED
+   * Source: dashboard/test/ui/features/teacher_tools/level_types/level_group_activity_guide.feature
+   * Scenario: Teacher can view student summary of responses.
+   */
+  test(
+    'teacher can view student summary of responses on standard level',
+    {tag: '@no_mobile'},
+    async ({page}) => {
+      test.slow();
+      await studentSubmitAndTeacherViewSummary(page, LESSON_53_L1);
+    },
+  );
+
+  /**
+   * Migration status: COMPLETED
+   * Source: dashboard/test/ui/features/teacher_tools/level_types/level_group_activity_guide.feature
+   * Scenario: Teacher can view student summary of responses on level marked as assessment
+   */
+  test(
+    'teacher can view student summary of responses on assessment-marked level',
+    {tag: '@no_mobile'},
+    async ({page}) => {
+      test.slow();
+      await studentSubmitAndTeacherViewSummary(page, LESSON_53_L2);
+    },
+  );
+});
+
+// ─── Scenario 4 — teacher-associated student: numbered bubbles in header ──────
+
+test.describe('Level group activity guide — numbered header bubbles', () => {
+  /**
+   * Migration status: COMPLETED
+   * Source: dashboard/test/ui/features/teacher_tools/level_types/level_group_activity_guide.feature
+   * Scenario: Student can see level numbers for level group levels in header.
+   */
+  test('student sees level numbers for activity guide levels in header', async ({
+    page,
+  }) => {
+    await createTeacherAssociatedStudent(page);
+
+    await page.goto(LESSON_53_L1);
+    // Progress bubble numbered "1" should be enabled/visible.
+    await expect(
+      page.locator('.progress-bubble.enabled').filter({hasText: /^1$/}),
+    ).toBeVisible({timeout: 30_000});
+
+    await page.goto(LESSON_53_L2);
+    // Progress bubble numbered "2" should be enabled/visible.
+    await expect(
+      page.locator('.progress-bubble.enabled').filter({hasText: /^2$/}),
+    ).toBeVisible({timeout: 30_000});
+  });
+});

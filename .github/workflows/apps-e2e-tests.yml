@@ -1,0 +1,111 @@
+name: Apps-E2E-Tests-CI
+
+# Reusable workflow invoked from frontend-ci.yml. See frontend-ci.yml for
+# the trigger / path-filter gating; this file just defines the shard matrix
+# and report merge.
+on:
+  workflow_call:
+    inputs:
+      playwright-version:
+        description: >-
+          Playwright version tag for the mcr.microsoft.com/playwright
+          container. Must match the version resolved in frontend/yarn.lock so
+          the bundled chrome-headless-shell revision is present at runtime.
+        type: string
+        required: true
+    secrets:
+      APPLITOOLS_API_KEY:
+        description: >-
+          Applitools Eyes API key. When set, @eyes tests open Applitools
+          sessions and run visual diffs on this workflow's branch. When
+          unset, the eyes fixture is a no-op: functional flow still runs,
+          only visual diffs are skipped.
+        required: false
+
+jobs:
+  test:
+    name: shard ${{ matrix.shard }}/${{ strategy.job-total }}
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    container:
+      image: mcr.microsoft.com/playwright:v${{ inputs.playwright-version }}-noble
+    strategy:
+      fail-fast: false
+      matrix:
+        shard: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
+    steps:
+      - name: Install git-lfs
+        run: apt-get update && apt-get install -y git-lfs
+
+      - uses: actions/checkout@v4
+        with:
+          sparse-checkout: |
+            frontend
+            shared/fonts
+            .github
+          lfs: true
+
+      - name: Setup Frontend
+        uses: ./.github/actions/frontend/setup
+
+      - name: Build fonts package
+        working-directory: frontend
+        run: yarn turbo build --filter=@code-dot-org/fonts
+
+      - name: Run shard
+        working-directory: frontend
+        env:
+          # Eyes integration is disabled for this workflow while the migrated
+          # visual ports settle.  The eyes fixture treats an unset API key as a
+          # no-op, so functional flow still runs and visual diffs are skipped.
+          #
+          # APPLITOOLS_BATCH_ID matches the value in frontend-ci.yml so all
+          # shards (and the component-library suite) aggregate into one
+          # batch per PR commit; the existing close-batch curl in the
+          # frontend-ci `teardown` job then closes that single batch.
+          #
+          # Do not set APPLITOOLS_PARENT_BRANCH here. Apps-e2e Playwright Eyes
+          # baselines are intentionally isolated from the legacy Cucumber
+          # baselines on the `test` branch.
+          APPLITOOLS_API_KEY: ''
+          APPLITOOLS_BATCH_ID: ${{ github.event.pull_request.head.sha || github.sha }}
+          APPLITOOLS_BATCH_NAME: apps-e2e-tests | ${{ github.head_ref || github.ref_name }}
+          APPLITOOLS_BRANCH: ${{ github.head_ref || github.ref_name }}
+        run: |
+          yarn workspace @code-dot-org/apps-e2e-tests exec \
+            playwright test --project=chromium \
+              --shard=${{ matrix.shard }}/${{ strategy.job-total }} \
+              --reporter=blob
+
+      - name: Upload blob report
+        if: ${{ !cancelled() }}
+        uses: actions/upload-artifact@v4
+        with:
+          name: blob-report-pr-${{ matrix.shard }}
+          path: frontend/packages/apps-e2e-tests/blob-report
+          retention-days: 1
+
+      - name: Upload raw test artifacts (on failure)
+        if: failure()
+        uses: actions/upload-artifact@v4
+        with:
+          name: traces-pr-${{ matrix.shard }}
+          path: frontend/packages/apps-e2e-tests/test-results
+          retention-days: 7
+
+  merge-reports:
+    name: merge reports
+    if: ${{ !cancelled() }}
+    needs: [test]
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          sparse-checkout: |
+            frontend
+            .github
+
+      - name: Merge Playwright reports
+        uses: ./.github/actions/frontend/merge-playwright-reports
+        with:
+          GITHUB_ENVIRONMENT_NAME: pr

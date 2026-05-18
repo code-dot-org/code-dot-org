@@ -60,7 +60,7 @@
     "concurrently": "^9.1.0",
     "globals": "catalog:",
     "http-server": "^14.1.1",
-    "playwright": "^1.57.0",
+    "playwright": "^1.59.0",
     "sass-loader": "^16.0.3",
     "storybook": "^10.1.7",
     "storybook-addon-rtl": "^3.0.1",
