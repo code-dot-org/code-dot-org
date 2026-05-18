@@ -43,9 +43,14 @@ class JavalabTest < ActiveSupport::TestCase
     assert_equal template_level.get_serialized_maze, neighborhood_level.get_serialized_maze
   end
 
-  test 'uses_lab2? returns true' do
-    level = Javalab.create(game_id: 68, level_num: "custom", name: "uses_lab2_check")
-    assert_predicate level, :uses_lab2?
+  test 'uses_lab2? defaults to false and is opt-in per level' do
+    legacy = create(:javalab, name: "legacy_javalab")
+    refute_predicate legacy, :uses_lab2?
+
+    lab2 = create(:javalab, name: "lab2_javalab")
+    lab2.uses_lab2 = true
+    lab2.save!
+    assert_predicate lab2, :uses_lab2?
   end
 
   test 'convert_legacy_start_sources handles a single starter file' do
