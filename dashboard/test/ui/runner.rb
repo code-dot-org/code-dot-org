@@ -489,21 +489,16 @@ end
 
 # Returns chat-ready text describing where to find the test status page,
 # tuned for the current environment:
-#   - non-CI with a live server: server URL first, unversioned S3 URL second
+#   - non-CI with a live server: server URL first, S3 URL second
 #     as a fallback for when the server is unreachable.
-#   - CI (drone): only the unversioned S3 URL.
-# The S3 URL is *un*versioned because status pages rewrite themselves under a
-# stable key as new runs land, so a pinned versionId would freeze a snapshot
-# whose embedded sub-row links point at moving S3 keys — i.e., not actually
-# a permalink.
+#   - CI (drone): only the S3 URL.
 def status_page_links(run_status_page_url)
-  unversioned_s3_url = run_status_page_url&.split('?', 2)&.first
   if server_status_page_url && !CI::Utils.running_on_ci?
     out = "#{test_type_label} Test Status Page:\n#{server_status_page_url}\n\n"
-    out += "Fallback status page (if server is unavailable):\n#{unversioned_s3_url}\n\n" if unversioned_s3_url
+    out += "Fallback status page (if server is unavailable):\n#{run_status_page_url}\n\n" if run_status_page_url
     out
-  elsif unversioned_s3_url
-    "#{test_type_label} Test Status Page:\n#{unversioned_s3_url}\n\n"
+  elsif run_status_page_url
+    "#{test_type_label} Test Status Page:\n#{run_status_page_url}\n\n"
   else
     ''
   end
@@ -551,12 +546,13 @@ def status_page_filename
   "test_status_#{test_type_label.tr(' +', '_').squeeze('_')}.html"
 end
 
-# Returns a permalink URL for the Test Status Page, assuming we can upload it to S3
+# Returns a URL for the Test Status Page, assuming we can upload it to S3
 def upload_status_page_to_s3(status_page_path = File.join(UI_TEST_DIR, status_page_filename))
   LOG_UPLOADER.upload_file(File.join(UI_TEST_DIR, 'test_status.css'), {content_type: 'text/css'})
   LOG_UPLOADER.upload_file(File.join(UI_TEST_DIR, 'test_status.js'), {content_type: 'text/javascript'})
 
-  return LOG_UPLOADER.upload_file(status_page_path, {content_type: 'text/html'})
+  versioned_url = LOG_UPLOADER.upload_file(status_page_path, {content_type: 'text/html'})
+  versioned_url&.split('?', 2)&.first
 rescue Aws::Sigv4::Errors::MissingCredentialsError
   ChatClient.log "No AWS credentials set, skipping upload of the '#{test_type_label} Test Status Page' to S3"
   nil
