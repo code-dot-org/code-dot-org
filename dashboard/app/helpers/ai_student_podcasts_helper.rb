@@ -11,9 +11,9 @@ module AiStudentPodcastsHelper
   def self.create_and_save_to_s3(student_podcast_data)
     filename = s3_filename(student_podcast_data.id)
     return if AWS::S3.exists_in_bucket(PODCAST_BUCKET, filename)
-    return if student_podcast_data.podcast_script.blank?
 
-    podcast = get_podcast_from_script(student_podcast_data.podcast_script)
+    podcast_script = generate_podcast_script(student_podcast_data)
+    podcast = get_podcast_from_script(podcast_script)
     AWS::S3.upload_to_bucket(PODCAST_BUCKET, filename, podcast, no_random: true)
   end
 
@@ -33,8 +33,8 @@ module AiStudentPodcastsHelper
     end
   end
 
-  def self.generate_podcast_script(lesson_id, objective_ids, user_id = nil)
-    prompt = AiSystemPrompts::StudentPodcastPromptHelper.get_openai_system_prompt(lesson_id, objective_ids, user_id)
+  def self.generate_podcast_script(student_podcast_data)
+    prompt = AiSystemPrompts::StudentPodcastPromptHelper.get_openai_system_prompt(student_podcast_data.lesson_id, student_podcast_data.objective_ids, student_podcast_data.user_id)
 
     begin
       response = openai_client.request_podcast_script(prompt)
@@ -47,7 +47,10 @@ module AiStudentPodcastsHelper
     raise StandardError.new("Received status code #{response.code} when generating AI student podcast script: #{response.body}") unless response.code == 200
 
     content = JSON.parse(response.body).dig('choices', 0, 'message', 'content')
-    JSON.parse(content).fetch('script').to_json
+    podcast_script = JSON.parse(content).fetch('script').to_json
+    student_podcast_data.podcast_script = podcast_script
+    student_podcast_data.save!
+    return podcast_script
   end
 
   def self.get_podcast_from_script(podcast_script)

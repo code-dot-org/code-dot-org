@@ -3,17 +3,17 @@ class AiStudentPodcastsController < ApplicationController
 
   # GET /ai_student_podcasts/:id
   def show
-    podcast = AiStudentPodcast.find_by(id: params[:id], user_id: current_user.id)
-    return head :not_found unless podcast
-    render json: podcast
+    podcast_data = AiStudentPodcast.find_by(id: params[:id], user_id: current_user.id)
+    return head :not_found unless podcast_data
+    render json: podcast_data
   end
 
-  # POST /ai_student_podcasts/find_or_create_student_podcast
-  def find_or_create_student_podcast
+  # POST /ai_student_podcasts/generate_podcast
+  def generate_podcast
     lesson_id = podcast_params[:lesson_id]
     objective_ids = Array(podcast_params[:objective_ids]).map(&:to_i).sort
 
-    podcast = AiStudentPodcast.
+    podcast_data = AiStudentPodcast.
       joins(:ai_student_podcast_objectives).
       where(user_id: current_user.id, lesson_id: lesson_id).
       group('ai_student_podcasts.id').
@@ -25,19 +25,21 @@ class AiStudentPodcastsController < ApplicationController
       ).
       first
 
-    unless podcast
-      podcast = AiStudentPodcast.create!(
+    unless podcast_data
+      podcast_data = AiStudentPodcast.create!(
         user_id: current_user.id,
         lesson_id: lesson_id,
       )
       objective_ids.each do |obj_id|
-        podcast.ai_student_podcast_objectives.
+        podcast_data.ai_student_podcast_objectives.
           create!(objective_id: obj_id)
       end
-      AiStudentPodcastsJob.perform(podcast)
     end
 
-    render json: podcast, status: podcast.previously_new_record? ? :created : :ok
+    request = {student_podcast_data: podcast_data}
+    AiStudentPodcastsJob.perform_later(request: request)
+
+    render json: podcast_data
   end
 
   private def podcast_params

@@ -6,6 +6,7 @@ class AiStudentPodcastsHelperTest < ActionView::TestCase
     @lesson = create(:lesson)
     @objective = create(:objective)
     @podcast = AiStudentPodcast.create!(user_id: @user.id, lesson_id: @lesson.id)
+    @podcast.ai_student_podcast_objectives.create!(objective_id: @objective.id)
 
     @openai_api_key = 'test-openai-key'
     @elevenlabs_api_key = 'test-elevenlabs-key'
@@ -26,7 +27,7 @@ class AiStudentPodcastsHelperTest < ActionView::TestCase
   # generate_podcast_script tests
   # *****
 
-  test "generate_podcast_script returns JSON-encoded script array when API call succeeds" do
+  test "generate_podcast_script saves script to the podcast record and returns it on success" do
     script_array = [
       {'voice_id' => 'Dan', 'text' => 'Hi there.'},
       {'voice_id' => 'Sam', 'text' => 'Hello!'}
@@ -45,9 +46,10 @@ class AiStudentPodcastsHelperTest < ActionView::TestCase
     mock_client.expects(:request_podcast_script).with('prompt text').returns(mock_response)
     AiStudentPodcastsHelper::OpenaiClient.expects(:new).returns(mock_client)
 
-    result = AiStudentPodcastsHelper.generate_podcast_script(@lesson.id, [@objective.id], @user.id)
+    result = AiStudentPodcastsHelper.generate_podcast_script(@podcast)
 
     assert_equal script_array, JSON.parse(result)
+    assert_equal script_array, JSON.parse(@podcast.reload.podcast_script)
   end
 
   test "generate_podcast_script raises OpenaiStudentPodcastTimeout on read timeout" do
@@ -57,7 +59,7 @@ class AiStudentPodcastsHelperTest < ActionView::TestCase
     AiStudentPodcastsHelper::OpenaiClient.expects(:new).returns(mock_client)
 
     assert_raises(OpenaiStudentPodcastTimeout) do
-      AiStudentPodcastsHelper.generate_podcast_script(@lesson.id, [@objective.id], @user.id)
+      AiStudentPodcastsHelper.generate_podcast_script(@podcast)
     end
   end
 
@@ -71,7 +73,7 @@ class AiStudentPodcastsHelperTest < ActionView::TestCase
     AiStudentPodcastsHelper::OpenaiClient.expects(:new).returns(mock_client)
 
     error = assert_raises(StandardError) do
-      AiStudentPodcastsHelper.generate_podcast_script(@lesson.id, [@objective.id], @user.id)
+      AiStudentPodcastsHelper.generate_podcast_script(@podcast)
     end
     assert_includes error.message, 'status code 500'
   end
@@ -80,28 +82,23 @@ class AiStudentPodcastsHelperTest < ActionView::TestCase
   # create_and_save_to_s3 tests
   # *****
 
-  test "create_and_save_to_s3 returns without upload when file already exists in S3" do
+  test "create_and_save_to_s3 short-circuits without generating script when file already exists in S3" do
     AWS::S3.stubs(:exists_in_bucket).returns(true)
     AWS::S3.expects(:upload_to_bucket).never
+    AiStudentPodcastsHelper.expects(:generate_podcast_script).never
     AiStudentPodcastsHelper.expects(:get_podcast_from_script).never
 
     AiStudentPodcastsHelper.create_and_save_to_s3(@podcast)
   end
 
-  test "create_and_save_to_s3 returns without upload when podcast_script is blank" do
+  test "create_and_save_to_s3 generates script, fetches mp3, and uploads when S3 file missing" do
     AWS::S3.stubs(:exists_in_bucket).returns(false)
-    AWS::S3.expects(:upload_to_bucket).never
-    AiStudentPodcastsHelper.expects(:get_podcast_from_script).never
+    generated_script = [{voice_id: 'Dan', text: 'hello'}].to_json
 
-    AiStudentPodcastsHelper.create_and_save_to_s3(@podcast)
-  end
-
-  test "create_and_save_to_s3 uploads when S3 file missing and script present" do
-    @podcast.update!(podcast_script: [{voice_id: 'Dan', text: 'hello'}].to_json)
-    AWS::S3.stubs(:exists_in_bucket).returns(false)
-
+    AiStudentPodcastsHelper.expects(:generate_podcast_script).
+      with(@podcast).returns(generated_script)
     AiStudentPodcastsHelper.expects(:get_podcast_from_script).
-      with(@podcast.podcast_script).returns('mp3-bytes')
+      with(generated_script).returns('mp3-bytes')
     AWS::S3.expects(:upload_to_bucket).with(
       AiStudentPodcastsHelper::PODCAST_BUCKET,
       AiStudentPodcastsHelper.s3_filename(@podcast.id),

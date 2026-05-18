@@ -1205,7 +1205,7 @@ Dashboard::Application.routes.draw do
     # AI Student Podcast routes
     resources :ai_student_podcasts, only: [:show] do
       collection do
-        post :find_or_create_student_podcast
+        post :generate_podcast
       end
     end
 

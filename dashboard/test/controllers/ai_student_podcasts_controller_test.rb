@@ -8,8 +8,7 @@ class AiStudentPodcastsControllerTest < ActionController::TestCase
     @objective1 = create(:objective)
     @objective2 = create(:objective)
 
-    AiStudentPodcastsHelper.stubs(:create_and_save_to_s3)
-    AiStudentPodcastsHelper.stubs(:generate_podcast_script).returns([{voice_id: 'Dan', text: 'hi'}].to_json)
+    AiStudentPodcastsJob.stubs(:perform_later)
   end
 
   teardown do
@@ -20,8 +19,8 @@ class AiStudentPodcastsControllerTest < ActionController::TestCase
   # Authentication
   # *****
 
-  test 'unauthenticated user cannot call find_or_create_student_podcast' do
-    post :find_or_create_student_podcast, params: {lesson_id: @lesson.id, objective_ids: [@objective1.id]}, format: :json
+  test 'unauthenticated user cannot call generate_podcast' do
+    post :generate_podcast, params: {lesson_id: @lesson.id, objective_ids: [@objective1.id]}, format: :json
     assert_response :unauthorized
   end
 
@@ -32,21 +31,21 @@ class AiStudentPodcastsControllerTest < ActionController::TestCase
   end
 
   # *****
-  # find_or_create_student_podcast
+  # generate_podcast
   # *****
 
-  test 'find_or_create_student_podcast creates a new podcast and associates objectives when none matches' do
+  test 'generate_podcast creates a new podcast and associates objectives when none matches' do
     sign_in @user
 
     assert_difference 'AiStudentPodcast.count', 1 do
       assert_difference 'AiStudentPodcastObjective.count', 2 do
-        post :find_or_create_student_podcast,
+        post :generate_podcast,
           params: {lesson_id: @lesson.id, objective_ids: [@objective1.id, @objective2.id]},
           format: :json
       end
     end
 
-    assert_response :created
+    assert_response :ok
     created = AiStudentPodcast.last
     assert_equal @user.id, created.user_id
     assert_equal @lesson.id, created.lesson_id
@@ -54,14 +53,14 @@ class AiStudentPodcastsControllerTest < ActionController::TestCase
       created.ai_student_podcast_objectives.pluck(:objective_id).sort
   end
 
-  test 'find_or_create_student_podcast returns existing podcast with matching objectives' do
+  test 'generate_podcast returns existing podcast with matching objectives' do
     sign_in @user
     existing = AiStudentPodcast.create!(user_id: @user.id, lesson_id: @lesson.id)
     existing.ai_student_podcast_objectives.create!(objective_id: @objective1.id)
     existing.ai_student_podcast_objectives.create!(objective_id: @objective2.id)
 
     assert_no_difference 'AiStudentPodcast.count' do
-      post :find_or_create_student_podcast,
+      post :generate_podcast,
         params: {lesson_id: @lesson.id, objective_ids: [@objective2.id, @objective1.id]},
         format: :json
     end
@@ -70,26 +69,26 @@ class AiStudentPodcastsControllerTest < ActionController::TestCase
     assert_equal existing.id, json_response['id']
   end
 
-  test 'find_or_create_student_podcast does not reuse a podcast whose objective set differs' do
+  test 'generate_podcast does not reuse a podcast whose objective set differs' do
     sign_in @user
     other_podcast = AiStudentPodcast.create!(user_id: @user.id, lesson_id: @lesson.id)
     other_podcast.ai_student_podcast_objectives.create!(objective_id: @objective1.id)
 
     assert_difference 'AiStudentPodcast.count', 1 do
-      post :find_or_create_student_podcast,
+      post :generate_podcast,
         params: {lesson_id: @lesson.id, objective_ids: [@objective1.id, @objective2.id]},
         format: :json
     end
-    assert_response :created
+    assert_response :ok
   end
 
-  test 'find_or_create_student_podcast scopes by current_user' do
+  test 'generate_podcast scopes by current_user' do
     sign_in @user
     other_users_podcast = AiStudentPodcast.create!(user_id: @other_user.id, lesson_id: @lesson.id)
     other_users_podcast.ai_student_podcast_objectives.create!(objective_id: @objective1.id)
 
     assert_difference 'AiStudentPodcast.count', 1 do
-      post :find_or_create_student_podcast,
+      post :generate_podcast,
         params: {lesson_id: @lesson.id, objective_ids: [@objective1.id]},
         format: :json
     end
@@ -98,27 +97,29 @@ class AiStudentPodcastsControllerTest < ActionController::TestCase
     assert_equal @user.id, created.user_id
   end
 
-  test 'find_or_create_student_podcast invokes create_and_save_to_s3 with the podcast' do
+  test 'generate_podcast enqueues AiStudentPodcastsJob with the podcast record' do
     sign_in @user
-    AiStudentPodcastsHelper.unstub(:create_and_save_to_s3)
-    AiStudentPodcastsHelper.expects(:create_and_save_to_s3).with(instance_of(AiStudentPodcast))
+    AiStudentPodcastsJob.unstub(:perform_later)
+    AiStudentPodcastsJob.expects(:perform_later).with do |args|
+      args[:request][:student_podcast_data].is_a?(AiStudentPodcast)
+    end
 
-    post :find_or_create_student_podcast,
+    post :generate_podcast,
       params: {lesson_id: @lesson.id, objective_ids: [@objective1.id]},
       format: :json
 
-    assert_response :created
+    assert_response :ok
   end
 
-  test 'find_or_create_student_podcast accepts camelCase lessonId/objectiveIds parameter keys' do
+  test 'generate_podcast accepts camelCase lessonId/objectiveIds parameter keys' do
     sign_in @user
 
     assert_difference 'AiStudentPodcast.count', 1 do
-      post :find_or_create_student_podcast,
+      post :generate_podcast,
         params: {lessonId: @lesson.id, objectiveIds: [@objective1.id]},
         format: :json
     end
-    assert_response :created
+    assert_response :ok
     created = AiStudentPodcast.last
     assert_equal @lesson.id, created.lesson_id
     assert_equal [@objective1.id], created.ai_student_podcast_objectives.pluck(:objective_id)
