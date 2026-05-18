@@ -58,6 +58,3 @@ Backend lives at `dashboard/app/models/levels/javalab.rb` and
 - [phase-6-secondary-features.md](./phase-6-secondary-features.md)
 - [phase-7-levelbuilder-save.md](./phase-7-levelbuilder-save.md)
 - [phase-8-decommission.md](./phase-8-decommission.md)
-
-## Known issues
-- Trying to load an old version crashes the page
