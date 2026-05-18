@@ -151,7 +151,7 @@ export default function ToolbarShell({
             </IconButton>
           </Tooltip>
         </div>
-        {children}
+        <div className={styles['scroll-content']}>{children}</div>
       </Paper>
     </FocusTrap>
   );

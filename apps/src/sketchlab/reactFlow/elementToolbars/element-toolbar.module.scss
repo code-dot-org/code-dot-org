@@ -42,8 +42,6 @@
   color: var(--text-neutral-primary);
   border: 1px solid var(--borders-neutral-primary);
   pointer-events: all;
-  overflow-y: auto;
-  overflow-x: hidden;
 }
 
 .header {
@@ -54,13 +52,22 @@
   // offset makes it so the header (just a close button)
   // doesn't have a massive gap to the toolbar content.
   margin: -4px -4px -10px 0;
-  // Keep the close button reachable while the toolbar body scrolls.
-  // The sticky top matches the negative top margin above so the
-  // visual position is unchanged when not scrolled.
-  position: sticky;
-  top: -4px;
-  z-index: 1;
-  background-color: var(--background-neutral-primary);
+}
+
+.scroll-content {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 8px;
+  min-height: 0;
+  overflow-y: auto;
+  overflow-x: hidden;
+  // Reserve space for the vertical scrollbar so it never paints over
+  // toolbar content (e.g. the right-edge swatch).
+  scrollbar-gutter: stable;
+  // Inner horizontal padding so swatch selection/focus rings
+  // aren't clipped by the scroll container's edge.
+  padding: 0 6px;
 }
 
 .close-button {
