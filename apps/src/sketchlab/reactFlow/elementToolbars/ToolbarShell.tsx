@@ -136,7 +136,7 @@ export default function ToolbarShell({
           <Tooltip title="Close toolbar" placement="top">
             <IconButton
               size="small"
-              className={styles['close-button']}
+              className={styles.closeButton}
               aria-label="Close toolbar"
               onClick={event => {
                 event.stopPropagation();
@@ -151,7 +151,7 @@ export default function ToolbarShell({
             </IconButton>
           </Tooltip>
         </div>
-        <div className={styles['scroll-content']}>{children}</div>
+        <div className={styles.scrollContent}>{children}</div>
       </Paper>
     </FocusTrap>
   );

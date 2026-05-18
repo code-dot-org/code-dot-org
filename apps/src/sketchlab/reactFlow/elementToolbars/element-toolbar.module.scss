@@ -54,7 +54,7 @@
   margin: -4px -4px -10px 0;
 }
 
-.scroll-content {
+.scrollContent {
   display: flex;
   flex-direction: column;
   align-items: stretch;
@@ -70,7 +70,7 @@
   padding: 0 6px;
 }
 
-.close-button {
+.closeButton {
   padding: 2px;
   color: var(--text-neutral-primary);
 }
@@ -229,7 +229,7 @@
   }
 }
 
-.locked-notice {
+.lockedNotice {
   display: flex;
   flex-direction: column;
   align-items: center;
