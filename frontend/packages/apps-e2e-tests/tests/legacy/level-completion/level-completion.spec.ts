@@ -1,55 +1,7 @@
-import {type Page} from '@playwright/test';
-
 import {expect, test} from '../../shared/fixtures';
 import {LEVEL_1_BOUNCE_BLOCKS} from '../activities/bounce/blocks';
 import {Bounce} from '../activities/bounce/Bounce';
-import {
-  expectCodeStudioHeaderReady,
-  waitForStableVisualLayout,
-} from '../shared/visualReadiness';
-
-/**
- * Dismisses the visible instructions overlay that blocks legacy lab controls.
- *
- * @param page - Playwright page on a legacy lab level
- */
-async function dismissInstructionsOverlay(page: Page): Promise<void> {
-  const overlay = page.locator('#overlay');
-  if (await overlay.isVisible({timeout: 1_000}).catch(() => false)) {
-    await overlay.evaluate(element => (element as HTMLElement).click());
-    await overlay.waitFor({state: 'hidden', timeout: 10_000});
-  }
-}
-
-/**
- * Wait for Play Lab's first-run instructions pane to collapse after the
- * overlay is dismissed.
- */
-async function expectPlayLabInitialVisualReady(page: Page): Promise<void> {
-  await page.waitForFunction(
-    () => {
-      const instructions = document.querySelector('.csf-top-instructions');
-      const workspace = document.querySelector('.blocklySvg');
-      if (!instructions || !workspace) return false;
-
-      const instructionsRect = instructions.getBoundingClientRect();
-      const workspaceRect = workspace.getBoundingClientRect();
-
-      return (
-        instructionsRect.height > 80 &&
-        instructionsRect.height < 130 &&
-        workspaceRect.top > instructionsRect.bottom
-      );
-    },
-    undefined,
-    {timeout: 30_000},
-  );
-  await waitForStableVisualLayout(page, [
-    '.csf-top-instructions',
-    '.blocklySvg',
-    '.blocklyBlockCanvas',
-  ]);
-}
+import {PlayLab} from '../activities/playlab/PlayLab';
 
 test.describe('Level completion visual readiness', () => {
   /**
@@ -97,20 +49,16 @@ test.describe('Level completion visual readiness', () => {
     eyes,
   }) => {
     await eyes.open('freeplay playlab sharing');
-    await page.goto(
-      '/courses/playlab/units/1/lessons/1/levels/10?noautoplay=true',
-    );
-    await expect(page.locator('#runButton')).toBeVisible({timeout: 60_000});
-    await expectCodeStudioHeaderReady(page);
-    await dismissInstructionsOverlay(page);
-    await expectPlayLabInitialVisualReady(page);
+    const playLab = new PlayLab(page);
+    await playLab.gotoLevel(10);
+    await playLab.expectInitialVisualReady();
     await eyes.check('initial load');
-    await page.locator('#runButton').click();
-    await expect(page.locator('#finishButton')).toBeVisible({timeout: 30_000});
-    await page.locator('#finishButton').click();
-    await page.keyboard.down('ArrowLeft');
-    await expect(page.locator('.congrats')).toBeVisible({timeout: 30_000});
+    await playLab.run();
+    await expect(playLab.finishButton).toBeVisible({timeout: 30_000});
+    await playLab.finish();
+    await playLab.holdKey('ArrowLeft');
+    await expect(playLab.congratsMessage).toBeVisible({timeout: 30_000});
     await eyes.check('freeplay playab level completion');
-    await page.keyboard.up('ArrowLeft');
+    await playLab.releaseKey('ArrowLeft');
   });
 });
