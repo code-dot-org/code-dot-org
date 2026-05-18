@@ -153,8 +153,8 @@ test.describe('BubbleChoice — progress tracking', () => {
     await expect(page).toHaveURL(/user_id=/);
 
     const lessonProgressBubble = page
-      .locator('#progress-lesson-40 .progress-bubble')
-      .first();
+      .getByRole('row', {name: /40\. Bubble Choice/})
+      .locator('.progress-bubble');
     await expectPerfect(lessonProgressBubble);
 
     await page.goto('/courses/allthethingscourse/units/1/lessons/40/levels/1');
