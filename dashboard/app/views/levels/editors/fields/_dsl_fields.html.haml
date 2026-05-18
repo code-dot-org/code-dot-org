@@ -39,7 +39,18 @@
       %p Edit Markdown:
 
       %textarea#level_markdown_textarea
-      #level_markdown_textarea_preview
+      #level_markdown_textarea_preview{
+        class: [
+          @level.is_a?(TextMatch) && 'text-match',
+          @level.is_a?(External) && 'external',
+          @level.is_a?(External) && 'content-level',
+          @level.is_a?(PeerReview) && 'peer-review',
+          @level.is_a?(Multi) && 'multi',
+          @level.is_a?(Match) && 'match',
+          @level.is_a?(BubbleChoice) && 'bubble-choice',
+          @level.is_a?(CurriculumReference) && 'curriculum-reference',
+        ]
+      }
 
   - if @level.is_a?(BubbleChoice)
     %h4 Tip: Lab2
