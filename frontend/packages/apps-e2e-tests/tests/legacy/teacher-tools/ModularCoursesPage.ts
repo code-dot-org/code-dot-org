@@ -247,7 +247,11 @@ export class ModularCoursesPage {
   }
 
   /**
-   * Waits for the V2 progress dashboard and its skeleton to settle.
+   * Waits for the V2 progress dashboard and unit selector to settle.
+   *
+   * The progress table can render while the "Lessons in" dropdown is still a
+   * skeleton waiting on the section courses API. The visible dropdown is the
+   * user-facing readiness signal for selecting the shared unit.
    */
   private async waitForProgressDashboard(): Promise<void> {
     await this.page
@@ -257,8 +261,8 @@ export class ModularCoursesPage {
     await this.page
       .locator('#ui-test-progress-table-v2')
       .waitFor({state: 'visible', timeout: 30_000});
-    await this.page
-      .locator('#unit-selector-v2')
-      .waitFor({state: 'visible', timeout: 60_000});
+    await expect(this.page.locator('#unit-selector-v2')).toBeVisible({
+      timeout: 120_000,
+    });
   }
 }

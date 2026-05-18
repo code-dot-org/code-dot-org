@@ -10,6 +10,7 @@ import {Dance} from './Dance';
 const stripVarIds = (xml: string) => xml.replace(/ id="[^"]+"/g, '');
 
 const DANCE_PROJECT_EDIT_URL = /\/projects\/dance\/[^/]+\/edit/;
+const DANCE_PROJECT_EDIT_PATH = /^\/projects\/dance\/[^/]+\/edit$/;
 
 /**
  * Remove the default "make a new cat" block from Dance Party level 13.
@@ -62,6 +63,52 @@ async function expectDanceCodeAfterReload(
   await dance.page.reload();
   await expect(dance.runButton).toBeVisible();
   expect(stripVarIds(await dance.getBlockXML())).toBe(memorizedCode);
+}
+
+/**
+ * Click Remix and wait for the browser to land on a different Dance edit URL.
+ *
+ * Project-backed Dance levels already start on a `/projects/dance/.../edit`
+ * URL, so waiting for that pattern alone can resolve before Remix navigates.
+ *
+ * @param dance - Dance Party page object before clicking Remix
+ */
+async function clickRemixAndWaitForNewDanceProject(
+  dance: Dance,
+): Promise<void> {
+  const originalUrl = dance.page.url();
+  await Promise.all([
+    dance.page.waitForURL(
+      url =>
+        url.href !== originalUrl && DANCE_PROJECT_EDIT_PATH.test(url.pathname),
+      {timeout: 60_000},
+    ),
+    dance.projectRemixButton.click(),
+  ]);
+  await dance.waitForDancePage();
+}
+
+/**
+ * Assert the Dance workspace matches the memorized code after navigation.
+ *
+ * The page can briefly expose the new edit URL before the lab finishes
+ * mounting. Retrying the page-ready check and XML read avoids racing that
+ * browser-context replacement.
+ *
+ * @param dance - Dance Party page object after the save/navigation action
+ * @param memorizedCode - normalized XML captured before the save trigger
+ */
+async function expectDanceCodeToMatch(
+  dance: Dance,
+  memorizedCode: string,
+): Promise<void> {
+  await expect(async () => {
+    await dance.waitForDancePage();
+    expect(stripVarIds(await dance.getBlockXML())).toBe(memorizedCode);
+  }).toPass({
+    intervals: [500, 1_000, 2_000],
+    timeout: 60_000,
+  });
 }
 
 /**
@@ -551,10 +598,8 @@ test.describe('Dance Party — dance course — free play save (level 13)', () =
       await resetAndDeleteDefaultCatBlock(dance);
 
       const memorizedCode = stripVarIds(await dance.getBlockXML());
-      await dance.projectRemixButton.click();
-      await dance.page.waitForURL(DANCE_PROJECT_EDIT_URL, {timeout: 60_000});
-      await dance.waitForDancePage();
-      expect(stripVarIds(await dance.getBlockXML())).toBe(memorizedCode);
+      await clickRemixAndWaitForNewDanceProject(dance);
+      await expectDanceCodeToMatch(dance, memorizedCode);
     },
   );
 
@@ -592,10 +637,8 @@ test.describe('Dance Party — dance course — free play save (level 13)', () =
       await resetAndDeleteDefaultCatBlock(dance);
 
       const memorizedCode = stripVarIds(await dance.getBlockXML());
-      await dance.projectRemixButton.click();
-      await dance.page.waitForURL(DANCE_PROJECT_EDIT_URL, {timeout: 60_000});
-      await dance.waitForDancePage();
-      expect(stripVarIds(await dance.getBlockXML())).toBe(memorizedCode);
+      await clickRemixAndWaitForNewDanceProject(dance);
+      await expectDanceCodeToMatch(dance, memorizedCode);
     },
   );
 
