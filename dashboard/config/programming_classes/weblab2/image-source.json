@@ -1,0 +1,14 @@
+{
+  "category_key": "javascript",
+  "content": "# Image Source\n\nThe `.src` property represents the source file for an image element. Use it to change which image is displayed, such as showing a different step, screen, character, or result.",
+  "examples": "[{\"name\":\"Change an Image\",\"description\":\"This changes the image shown by `stepImage`.\",\"code\":\"```\\nconst stepImage = document.getElementById(\\\"stepImage\\\");\\n\\nstepImage.src = \\\"step1.jpg\\\";\\n```\"}]",
+  "external_documentation": "",
+  "fields": "[]",
+  "key": "image-source",
+  "name": "Image Source",
+  "syntax": "`stepImage.src = \"step1.jpg\";`",
+  "tips": "- Use `.src` on an image element that has already been selected.\n- Put the image filename or URL in quotation marks.\n- Make sure the filename matches the image file in your project.\n- Common image file types include `.jpg`, `.jpeg`, `.png`, and `.gif`.\n- In Web Lab, `.src` often appears inside event handlers that change an image after a button click or user choice.",
+  "methods": [
+
+  ]
+}
