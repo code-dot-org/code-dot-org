@@ -20,7 +20,6 @@ const ThreeColumns = props => {
       boxSizing: 'border-box',
     },
     middle: {
-      width: '100%',
       position: 'relative',
       float: isRtl ? 'right' : 'left',
       height,
