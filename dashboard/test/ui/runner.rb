@@ -478,9 +478,8 @@ def report_tests_finished(start_time, run_results, run_status_page_url = nil)
   test_report += "Applitools Eyes Results:\n#{applitools_batch_url}\n\n" if applitools_batch_url
   test_report += status_page_links(run_status_page_url)
   summary = "#{suite_success_count} passed. #{failures.count} failed. Test count: #{run_results.count}. Duration: #{RakeUtils.format_duration(suite_duration)}."
-  # Only meaningful when runner.rb was asked to retry; otherwise the count
-  # is always 0 and "flaky tests" is misleading on a manual rerun.
-  summary += " Total successful reruns of flaky tests: #{total_flaky_successful_reruns}." if $options.retry_count || $options.magic_retry || $options.auto_retry
+  did_retry_flaky_tests = $options.retry_count || $options.magic_retry || $options.auto_retry
+  summary += " Total successful reruns of flaky tests: #{total_flaky_successful_reruns}." if did_retry_flaky_tests
   test_report += "#{summary}\n"
 
   ChatClient.log test_report, color: 'purple'
