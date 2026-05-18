@@ -72,14 +72,17 @@ export interface MiniApp<Signal = unknown> {
   parseException?(traceback: string): string | null;
 
   /**
-   * Optional: the DOM element codebridge should screenshot for the
-   * project thumbnail. Called after a successful run. Returning null
-   * skips the capture. The package exposes which element represents
-   * the visualization; codebridge owns the conversion pipeline (SVG →
-   * canvas → blob → save) because those helpers and the cropping scale
-   * live on the apps side.
+   * Optional: rasterize the mini-app's visualization into a canvas for
+   * the project thumbnail. Called after a successful run. Returning
+   * null skips the capture. Codebridge then applies the universal
+   * post-processing — crop by preview scale, downsize to thumbnail
+   * width, encode PNG — and saves the result.
+   *
+   * SVG-based mini-apps can use the `svgToCanvas` helper exported from
+   * `@code-dot-org/mini-app-base/svg`. Canvas-native mini-apps return
+   * their existing canvas directly.
    */
-  getThumbnailElement?(): Element | null;
+  captureThumbnail?(): Promise<HTMLCanvasElement | null>;
 
   /**
    * Optional: preview scaling factor codebridge should apply when laying

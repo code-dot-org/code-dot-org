@@ -13,7 +13,7 @@ import {getFileByName} from '@cdo/apps/lab2/projects/utils';
 import {MultiFileSource, ProjectFile} from '@cdo/apps/lab2/types';
 import pythonlabI18n from '@cdo/apps/pythonlab/locale';
 import {getStore} from '@cdo/apps/redux';
-import {captureMiniAppThumbnailFromSvg} from '@cdo/apps/util/thumbnail';
+import {captureMiniAppThumbnail} from '@cdo/apps/util/thumbnail';
 
 import {getValidationFromSource, RunType} from '../codebridge';
 
@@ -185,12 +185,12 @@ async function setProjectThumbnail() {
   const shouldCapture = projectManager?.getShouldCaptureThumbnail();
   if (!shouldCapture) return;
   await miniApp?.waitUntilDone(); // Wait for signal processing to be completed.
-  // The mini-app says which DOM element represents its visualization;
-  // codebridge owns the SVG → blob conversion (canvg + crop by preview
-  // scale + resize) because those helpers live on the apps side.
-  const target = miniApp?.getThumbnailElement?.();
-  if (target instanceof SVGSVGElement) {
-    const pngBlob = await captureMiniAppThumbnailFromSvg(target);
+  // The mini-app rasterizes its own visualization into a canvas;
+  // codebridge owns the universal post-processing (crop by preview
+  // scale, downsize, encode PNG) and the save call.
+  const canvas = await miniApp?.captureThumbnail?.();
+  if (canvas) {
+    const pngBlob = await captureMiniAppThumbnail(canvas);
     projectManager?.setThumbnail(pngBlob);
   }
 }

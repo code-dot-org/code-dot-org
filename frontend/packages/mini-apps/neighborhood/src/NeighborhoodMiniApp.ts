@@ -5,6 +5,7 @@ import type {
   MiniAppDeps,
   MiniAppPreviewProps,
 } from '@code-dot-org/mini-app-base';
+import {svgToCanvas} from '@code-dot-org/mini-app-base/svg';
 
 import {NEIGHBORHOOD_NAME, NEIGHBORHOOD_SIGNAL_TAG, SVG_ID} from './constants';
 import Neighborhood from './Neighborhood';
@@ -84,12 +85,14 @@ export class NeighborhoodMiniApp
   }
 
   /**
-   * Codebridge calls this to find the DOM node to screenshot for the
-   * project thumbnail. For Neighborhood, that's the SVG element the
-   * MazeController draws into.
+   * Rasterize the MazeController's SVG into a canvas for codebridge's
+   * thumbnail pipeline. Returns null when the SVG isn't mounted (no run
+   * has happened yet, or the preview was unmounted).
    */
-  getThumbnailElement(): Element | null {
-    return document.getElementById(SVG_ID);
+  captureThumbnail(): Promise<HTMLCanvasElement | null> {
+    const svg = document.getElementById(SVG_ID);
+    if (!(svg instanceof SVGSVGElement)) return Promise.resolve(null);
+    return svgToCanvas(svg);
   }
 }
 

@@ -6,7 +6,7 @@ import {beforeEach, describe, expect, it, vi} from 'vitest';
 //
 // `vi.hoisted` keeps the shared spies usable from both the mock factory
 // (which vitest hoists above the imports) and the test body.
-const {ctorSpy, inner} = vi.hoisted(() => {
+const {ctorSpy, inner, svgToCanvasSpy} = vi.hoisted(() => {
   const innerStub = {
     handleSignal: vi.fn(),
     onRun: vi.fn(),
@@ -16,7 +16,11 @@ const {ctorSpy, inner} = vi.hoisted(() => {
     waitUntilDone: vi.fn().mockResolvedValue(undefined),
     afterInject: vi.fn(),
   };
-  return {ctorSpy: vi.fn(), inner: innerStub};
+  return {
+    ctorSpy: vi.fn(),
+    inner: innerStub,
+    svgToCanvasSpy: vi.fn(),
+  };
 });
 
 vi.mock('../Neighborhood', () => ({
@@ -34,6 +38,13 @@ vi.mock('../Neighborhood', () => ({
   },
 }));
 
+// Mock the base/svg helper so the test doesn't pull canvg into jsdom
+// (canvg's renderer relies on canvas 2d primitives jsdom doesn't
+// implement). We're testing the wrapper's delegation, not the helper.
+vi.mock('@code-dot-org/mini-app-base/svg', () => ({
+  svgToCanvas: svgToCanvasSpy,
+}));
+
 import {NEIGHBORHOOD_NAME, NEIGHBORHOOD_SIGNAL_TAG} from '../constants';
 import {NeighborhoodMiniApp} from '../NeighborhoodMiniApp';
 import NeighborhoodPreview from '../NeighborhoodPreview';
@@ -48,6 +59,7 @@ const stubDeps = () => ({
 describe('NeighborhoodMiniApp', () => {
   beforeEach(() => {
     ctorSpy.mockClear();
+    svgToCanvasSpy.mockClear();
     Object.values(inner).forEach(m => m.mockClear());
   });
 
@@ -119,19 +131,23 @@ describe('NeighborhoodMiniApp', () => {
     expect(inner.afterInject).toHaveBeenCalledWith('a', 'b', 'c');
   });
 
-  it('returns the SVG element for thumbnail capture', () => {
-    // Note: this test runs without jsdom by default, so the lookup
-    // returns null. The assertion pins the contract: the method
-    // queries by SVG_ID and returns null when the element is absent.
+  it('captureThumbnail resolves to null when the SVG is not mounted', async () => {
     const app = new NeighborhoodMiniApp(stubDeps());
-    expect(app.getThumbnailElement()).toBeNull();
+    await expect(app.captureThumbnail()).resolves.toBeNull();
+    expect(svgToCanvasSpy).not.toHaveBeenCalled();
+  });
 
-    // With the SVG mounted in the document, the method returns it.
+  it('captureThumbnail delegates to svgToCanvas when the SVG is mounted', async () => {
     const svg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
     svg.id = 'svgMaze';
     document.body.appendChild(svg);
+    const fakeCanvas = {} as HTMLCanvasElement;
+    svgToCanvasSpy.mockResolvedValueOnce(fakeCanvas);
+
     try {
-      expect(app.getThumbnailElement()).toBe(svg);
+      const app = new NeighborhoodMiniApp(stubDeps());
+      await expect(app.captureThumbnail()).resolves.toBe(fakeCanvas);
+      expect(svgToCanvasSpy).toHaveBeenCalledWith(svg);
     } finally {
       svg.remove();
     }

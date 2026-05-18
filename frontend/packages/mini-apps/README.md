@@ -43,7 +43,7 @@ interface MiniApp<Signal = unknown> {
   waitUntilDone(): Promise<void>;
 
   parseException?(traceback: string): string | null;
-  getThumbnailElement?(): Element | null;
+  captureThumbnail?(): Promise<HTMLCanvasElement | null>;
   getPreviewScale?(): number | undefined;
 
   PreviewComponent: ComponentType<MiniAppPreviewProps>;
@@ -63,10 +63,11 @@ Codebridge and PythonLab drives the mini-app through `pyodideRunner` and
 3. `onStop()` if the user stops, or the program throws.
 4. `onClose()` once stdout is fully drained.
 5. `await waitUntilDone()` before codebridge considers the run finished.
-6. After a successful run, codebridge calls `getThumbnailElement?()` and
-   serializes the returned node to a PNG for the project thumbnail.
-   The package only names the element — the SVG-to-blob pipeline lives
-   in apps because the helpers and cropping scale are apps-side.
+6. After a successful run, codebridge calls `captureThumbnail?()`. The
+   mini-app rasterizes its visualization into a canvas (SVG-based
+   mini-apps can use the `svgToCanvas` helper from
+   `@code-dot-org/mini-app-base/svg`); codebridge then crops by preview
+   scale, downsizes to thumbnail width, encodes a PNG, and saves it.
 
 `reset()` is independent of run lifecycle; codebridge calls it when the
 student edits the project (e.g. resets the maze).

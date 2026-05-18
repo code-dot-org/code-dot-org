@@ -35,6 +35,9 @@
   "stylelint": {
     "extends": "@code-dot-org/lint-config/stylelint/index.mjs"
   },
+  "dependencies": {
+    "canvg": "^4.0.3"
+  },
   "devDependencies": {
     "@code-dot-org/core": "workspace:*",
     "@code-dot-org/lint-config": "workspace:*",

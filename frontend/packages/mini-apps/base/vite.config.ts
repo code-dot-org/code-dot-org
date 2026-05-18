@@ -27,7 +27,7 @@ export default defineConfig({
   build: {
     sourcemap: true,
     lib: {
-      entry: ['src/index.ts'],
+      entry: ['src/index.ts', 'src/svg/index.ts'],
       name: 'mini-app-base',
     },
     rollupOptions: {
