@@ -410,10 +410,16 @@ end
 #   -c Safari          => "Safari UI"
 #   -c Chrome,Firefox  => "Chrome + Firefox UI"
 #   -c iPhone,iPad     => "Mobile UI"
+#   -c iPad            => "iPad UI"
+#   -c iPhone          => "iPhone UI"
+# The "Mobile UI" collapse only applies when both mobile browsers are
+# present. A single-device run (such as a manual rerun copied from the
+# status page) keeps its device name.
 def test_type_label
   return test_type if eyes?
-  return 'Mobile UI' if $browsers.all? {|b| mobile_browser?(b)}
-  "#{$browsers.map {|b| b['name']}.uniq.sort.join(' + ')} UI"
+  browser_names = $browsers.map {|b| b['name']}.uniq.sort
+  return 'Mobile UI' if browser_names.length > 1 && $browsers.all? {|b| mobile_browser?(b)}
+  "#{browser_names.join(' + ')} UI"
 end
 
 def eyes?
