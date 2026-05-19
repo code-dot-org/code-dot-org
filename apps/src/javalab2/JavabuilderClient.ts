@@ -67,6 +67,7 @@ export class JavabuilderClient {
   ) {}
 
   async run(): Promise<void> {
+    const projectAssetUrls = this.opts.bundle.projectAssetUrls;
     const body = {
       levelId: this.opts.levelId,
       channelId: this.opts.channelId,
@@ -79,6 +80,12 @@ export class JavabuilderClient {
         (Object.keys(this.opts.bundle.validation).length > 0
           ? this.opts.bundle.validation
           : undefined),
+      // Friendly-name → URL map for images/binaries uploaded to the
+      // project's asset bucket via codebridge. Rails uses this to seed the
+      // Javabuilder assetUrls hash so student code can refer to images by
+      // their user-facing filename.
+      projectAssetUrls:
+        Object.keys(projectAssetUrls).length > 0 ? projectAssetUrls : undefined,
       options: this.opts.options ?? {},
     };
 

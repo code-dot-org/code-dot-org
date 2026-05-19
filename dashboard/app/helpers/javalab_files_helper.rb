@@ -51,11 +51,37 @@ module JavalabFilesHelper
   #   "validation": <all validation code for a project, in json format>
   # }
   # If the level doesn't have validation and/or a maze, those fields will not be present.
-  def self.get_project_files_with_override_sources(sources, level_id, channel_id)
+  #
+  # `project_asset_urls` is an optional friendly-name → URL hash sent by
+  # the lab2 javalab client. The legacy `get_assets_for_channel` walk lists
+  # bucket objects by their stored (UUID) name, which means Javabuilder
+  # cannot match `new Image("photo.png")`. The lab2 codebridge file
+  # uploader stores the user's chosen filename in the project source and
+  # the UUID name in S3; we use the supplied map to expose the friendly
+  # filenames in assetUrls.
+  def self.get_project_files_with_override_sources(sources, level_id, channel_id, project_asset_urls = nil)
     all_files = get_level_files(level_id)
     all_files["sources"]["main.json"] = {source: sources}.to_json
     get_assets_for_channel(channel_id, all_files) if channel_id
+    merge_project_asset_urls(all_files, project_asset_urls) if project_asset_urls.present?
     all_files
+  end
+
+  # Insert codebridge-uploaded project assets into the Javabuilder assetUrls
+  # hash, keyed by the student's friendly filename. Relative paths get the
+  # dashboard origin prepended; absolute URLs pass through unchanged. This
+  # is the same shape Javabuilder already consumed from the legacy
+  # `get_assets_for_channel` walk — in dev Javabuilder still cannot reach
+  # localhost-studio, but that placeholder fallback is the expected
+  # behavior and matches the legacy java lab.
+  def self.merge_project_asset_urls(all_level_files, project_asset_urls)
+    all_level_files["assetUrls"] ||= {}
+    prefix = get_dashboard_url_prefix
+    project_asset_urls.each do |friendly_name, url|
+      next if friendly_name.blank? || url.blank?
+      absolute = url.start_with?('/') ? "#{prefix}#{url}" : url
+      all_level_files["assetUrls"][friendly_name] = absolute
+    end
   end
 
   # Get all files for the project to be executed as a hash, with validation code provided as an argument.
