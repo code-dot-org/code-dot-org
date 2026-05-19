@@ -250,7 +250,6 @@ const UnitGenerator: React.FC<UnitGeneratorProps> = ({unit}) => {
         isOutlining={isOutlining}
         disabled={isSaving}
         error={outlineError}
-        defaultOpen={!!(unit.generateOutline || '').trim()}
       />
 
       <div className={moduleStyles.lessonList}>

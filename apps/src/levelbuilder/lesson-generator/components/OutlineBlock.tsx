@@ -19,8 +19,10 @@ const OutlineBlock: React.FC<OutlineBlockProps> = ({
   disabled,
   error,
 }) => (
-  <details className={moduleStyles.outlineBlock}>
-    <summary>Optional: generate the levels below from an outline</summary>
+  <div className={moduleStyles.outlineBlock}>
+    <h2 className={moduleStyles.outlineHeading}>
+      Optional: generate the levels below from an outline
+    </h2>
     <p className={moduleStyles.outlineHelp}>
       Describe the learning experience you want this lesson to take a student
       through. The AI will turn that into a sequence of Panels and Web Lab 2
@@ -49,7 +51,7 @@ const OutlineBlock: React.FC<OutlineBlockProps> = ({
         </span>
       )}
     </div>
-  </details>
+  </div>
 );
 
 export default OutlineBlock;
