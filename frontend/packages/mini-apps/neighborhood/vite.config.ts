@@ -2,6 +2,7 @@ import react from '@vitejs/plugin-react';
 import {defineConfig} from 'vite';
 import dts from 'vite-plugin-dts';
 import {externalizeDeps} from 'vite-plugin-externalize-deps';
+import {libInjectCss} from 'vite-plugin-lib-inject-css';
 
 // https://vite.dev/config/
 export default defineConfig({
@@ -10,6 +11,12 @@ export default defineConfig({
     react(),
     // Generate Typescript declaration files using the Vite default tsconfig
     dts({tsconfigPath: './tsconfig.app.json', entryRoot: 'src'}),
+    // Inject `import './style.css'` into the JS entry so consumers
+    // (apps) pull in the bundled CSS as a side effect of importing
+    // the package. Without this, the CSS file is emitted but never
+    // loaded, and component styles (including the Slider's flex
+    // layout) silently no-op.
+    libInjectCss(),
     // Ensure dependencies are externalized for library build
     // Libraries such as react, react-dom, lodash, etc. should not be bundled by the library.
     // Instead, they are expected to be provided by the host application.
@@ -39,6 +46,16 @@ export default defineConfig({
           preserveModules: false,
           dir: 'dist',
           exports: 'named',
+          // `interop: 'auto'` makes rollup wrap each `require()` of an
+          // externalized ESM-default-export module with an interop
+          // helper that unwraps `.default`. Without this, default
+          // imports from packages that emit `exports.default = ...`
+          // (component-library, MUI, etc.) come back as namespace
+          // objects in the CJS dist, and React renders them with
+          // "type is invalid -- got: object". Webpack on the apps
+          // side resolves via the `require` exports-map entry, so
+          // this is the consumer the CJS dist actually serves.
+          interop: 'auto',
         },
       ],
     },

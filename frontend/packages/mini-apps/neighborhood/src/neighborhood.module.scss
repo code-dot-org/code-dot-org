@@ -2,12 +2,41 @@
   background: var(--background-neutral-black-fixed);
 }
 
+// Layout for the visualization wrapper. Previously inherited from
+// apps/style/common.scss's `#visualization` rule via the legacy
+// MazeVisualization → ProtectedVisualizationDiv chain; now owned by
+// the package so the layout works without depending on apps stylesheets.
+// The `#visualization` id on the wrapper element is still required —
+// `scaleMiniApp` in apps (apps/src/codebridge/Workspace/outputHelpers.ts)
+// looks it up via jQuery on resize to apply explicit width/height/
+// margin-left for responsive sizing and horizontal centering. These
+// static rules are the initial state before that runs.
+.visualization {
+  position: relative;
+  height: 400px;
+
+  // Pin transform-origin so the runtime `scale(...)` applied by
+  // scaleMiniApp anchors at the top-left, matching the legacy
+  // `#visualization.responsive > *` rule.
+  > * {
+    transform-origin: 0 0;
+  }
+}
+
 .sliderContainer {
   display: flex;
   justify-content: center;
   margin-top: 2px;
-}
 
-.slider {
-  width: 200px;
+  // Nested under .sliderContainer to raise specificity above the
+  // component-library's standalone `.slider { width: 300px }` rule.
+  // Both classes apply to the Slider's outer div (via the `className`
+  // prop), so without the extra specificity, whichever stylesheet
+  // loads later wins. Before the externalization fix that was
+  // neighborhood (single bundled CSS file); after externalization
+  // component-library's CSS loads later via apps's portal, so this
+  // nesting restores the override.
+  .slider {
+    width: 200px;
+  }
 }

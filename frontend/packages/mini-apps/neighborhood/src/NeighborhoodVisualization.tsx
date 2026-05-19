@@ -29,15 +29,31 @@ const NeighborhoodVisualization = ({
   return (
     <div className={className}>
       <div className={moduleStyles.neighborhoodPreviewBackground}>
-        <svg id={SVG_ID}>
-          <g id={LOOK_ID}>
-            <path d="M 0,-15 a 15 15 0 0 1 15 15" />
-            <path d="M 0,-35 a 35 35 0 0 1 35 35" />
-            <path d="M 0,-55 a 55 55 0 0 1 55 55" />
-          </g>
-        </svg>
+        {/* id="visualization" is a runtime contract with apps —
+            scaleMiniApp (apps/src/codebridge/Workspace/outputHelpers.ts)
+            uses a jQuery selector on this id to apply responsive
+            sizing on resize. The .visualization class supplies the
+            initial static layout. */}
+        <div id="visualization" className={moduleStyles.visualization}>
+          <svg id={SVG_ID}>
+            <g id={LOOK_ID}>
+              <path d="M 0,-15 a 15 15 0 0 1 15 15" />
+              <path d="M 0,-35 a 35 35 0 0 1 35 35" />
+              <path d="M 0,-55 a 55 55 0 0 1 55 55" />
+            </g>
+          </svg>
+        </div>
       </div>
-      <div className={moduleStyles.sliderContainer}>
+      {/* Pin this scope to Light theme so the white-variant slider
+          renders against the fixed-dark preview background using
+          light-theme CSS variables — that's the combination the
+          `color='white'` variant was designed for. In dark page
+          theme, the same variables flip and produce a slider that
+          blends into the background. Before the externalization fix
+          the bundled component-library was isolated from apps's
+          theme context, which incidentally provided the same effect;
+          this makes that intent explicit. */}
+      <div className={moduleStyles.sliderContainer} data-theme="Light">
         <Slider
           name="neighborhood-speed"
           value={sliderValue}

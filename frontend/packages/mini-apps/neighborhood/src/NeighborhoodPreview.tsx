@@ -76,7 +76,12 @@ const NeighborhoodPreview = () => {
     lastBootedRef.current = {miniApp, key: bootKey};
   }, [inputs]);
 
-  return <NeighborhoodVisualization />;
+  // The codebridge preview panel renders against a dark background
+  // (`var(--background-neutral-black-fixed)` from neighborhood.module.scss),
+  // so the visualization always uses the dark-mode slider color. If a
+  // theme-aware consumer arrives, this should move into
+  // NeighborhoodInputs.
+  return <NeighborhoodVisualization isDarkMode={true} />;
 };
 
 export default NeighborhoodPreview;

@@ -95,8 +95,11 @@ defines; the JSON payload is optional. Example from Neighborhood:
 ## Adding a new mini-app
 
 1. **Scaffold the package** under `frontend/packages/mini-apps/<name>/`.
-   Copy `demo/` as a starting point — it's the minimal valid mini-app.
-   Update `package.json` `name`, `description`, and `repository.directory`.
+   Copy `demo/` as a starting point — it's the minimal valid mini-app
+   and comes pre-wired with the build setup the package boundary
+   requires (see ["Why demo declares deps it doesn't use"](#why-demo-declares-deps-it-doesnt-use)
+   below). Update `package.json` `name`, `description`, and
+   `repository.directory`.
 
 2. **Implement `MiniApp`.** Export a `<NAME>` constant for the
    registry key and `<NAME>_SIGNAL_TAG` for the stdout protocol. Keep
@@ -204,6 +207,45 @@ Per-mini-app type aliases (signal shapes, data extensions, callback
 types) live in a `types.ts` next to the implementation. Keep them
 exported through `src/index.ts` so the adapter and the package itself
 agree on shape.
+
+## Why demo declares deps it doesn't use
+
+`demo/package.json` lists `@code-dot-org/component-library`,
+`@mui/material`, `@emotion/react`, and `@emotion/styled` under
+`dependencies` even though `DemoMiniApp` and `DemoPreview` don't
+import any of them. Two reasons, both load-bearing:
+
+**1. Externalization, not bundling.** A mini-app package built with
+`vite-plugin-externalize-deps` leaves anything in `dependencies` and
+`peerDependencies` as `import 'pkg'` statements in the dist; anything
+in `devDependencies` (and any direct import that isn't in either) gets
+**bundled** into the dist. If a mini-app uses a component-library
+component without declaring it as a dependency, the package will
+ship its own copy of component-library, MUI, and emotion. Apps then
+ends up with two MUI instances at runtime — apps's own copy plus the
+one bundled into the mini-app's dist. MUI's `ThemeProvider` context
+travels through only one of them, so theme-aware components (button
+colors, slider variants, etc.) silently render with MUI defaults.
+The duplication also bloats the bundle by ~200 kB and breaks CSS
+hash matching when two emotion instances generate different
+class names. Declaring the deps upfront forestalls all of that.
+
+**2. The plugin needs them present.** `externalize-deps` reads
+`dependencies` to decide what to externalize. A mini-app that imports
+`@code-dot-org/component-library` but doesn't list it in `dependencies`
+won't see it externalized — yarn install succeeds via hoisting, the
+import resolves, vite bundles the whole tree into the dist.
+
+The pre-wired vite config in `demo/` also uses `vite-plugin-lib-inject-css`,
+which inserts `import './index.css'` at the top of the JS entry so
+consumers pull in the bundled CSS as a side effect. Without it, the
+CSS file is emitted but never loaded.
+
+When copying `demo/` as the starting point for a new mini-app, leave
+these deps and the plugin in place even if you don't reach for
+component-library on day one — you almost certainly will, and the
+failure mode of forgetting is invisible until something looks wrong
+in the browser.
 
 ## Where things live
 

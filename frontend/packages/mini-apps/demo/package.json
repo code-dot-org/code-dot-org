@@ -32,6 +32,12 @@
     "typecheck": "tsc -b --noEmit"
   },
   "prettier": "@code-dot-org/lint-config/prettier/index.mjs",
+  "dependencies": {
+    "@code-dot-org/component-library": "workspace:*",
+    "@emotion/react": "catalog:",
+    "@emotion/styled": "catalog:",
+    "@mui/material": "catalog:"
+  },
   "devDependencies": {
     "@code-dot-org/lint-config": "workspace:*",
     "@code-dot-org/mini-app-base": "workspace:*",
@@ -48,6 +54,7 @@
     "vite": "catalog:",
     "vite-plugin-dts": "catalog:",
     "vite-plugin-externalize-deps": "catalog:",
+    "vite-plugin-lib-inject-css": "^2.2.2",
     "vitest": "catalog:"
   },
   "peerDependencies": {
