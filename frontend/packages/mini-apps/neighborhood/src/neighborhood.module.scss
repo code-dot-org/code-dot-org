@@ -25,6 +25,12 @@
   > * {
     transform-origin: 0 0;
   }
+
+  .fitted {
+    height: 100%;
+    object-fit: contain;
+    width: 100%;
+  }
 }
 
 .sliderContainer {
@@ -43,4 +49,11 @@
   .slider {
     width: 200px;
   }
+}
+
+.buttons {
+  display: inline-flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 0.25rem;
 }

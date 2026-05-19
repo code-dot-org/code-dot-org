@@ -35,7 +35,7 @@ const NeighborhoodVisualization = ({
             sizing on resize. The .visualization class supplies the
             initial static layout. */}
         <div id="visualization" className={moduleStyles.visualization}>
-          <svg id={SVG_ID}>
+          <svg id={SVG_ID} className={moduleStyles.fitted}>
             <g id={LOOK_ID}>
               <path d="M 0,-15 a 15 15 0 0 1 15 15" />
               <path d="M 0,-35 a 35 35 0 0 1 35 35" />
