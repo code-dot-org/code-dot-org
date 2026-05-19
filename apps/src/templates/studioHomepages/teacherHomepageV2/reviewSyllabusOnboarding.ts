@@ -249,7 +249,7 @@ export const createReviewSyllabusUnitOverviewSteps = (
       id: 'quiz-level-priority',
       attachTo: {
         element: '#progress-lesson-1',
-        on: 'bottom',
+        on: 'left',
       },
       text: QUIZ_LEVEL_QUESTION,
       buttons: [],
@@ -280,7 +280,9 @@ export const createReviewSyllabusUnitOverviewSteps = (
               target.disabled = true;
               const feedback =
                 document.querySelector<HTMLElement>('.quiz-feedback');
-              if (feedback) feedback.textContent = 'Try again';
+              if (feedback)
+                feedback.textContent =
+                  'Take another look. The purple checkmark indicator on a level means CodeAI recommends teachers review it.';
             }
           };
 

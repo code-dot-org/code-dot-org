@@ -164,8 +164,8 @@
 
 // Quiz step: 2-column grid of answer option buttons.
 .quiz-options-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+  display: flex;
+  flex-direction: column;
   gap: 8px;
   margin-top: 16px;
 }
@@ -210,7 +210,7 @@
   font-family: Figtree, sans-serif;
   font-size: 14px;
   font-weight: 600;
-  color: #fc8181;
+  color: #a0aec0;
 }
 
 // Onboarding tour step container styles.
