@@ -39,6 +39,7 @@
     "@mui/material": "catalog:"
   },
   "devDependencies": {
+    "@code-dot-org/component-library-styles": "workspace:*",
     "@code-dot-org/lint-config": "workspace:*",
     "@code-dot-org/mini-app-base": "workspace:*",
     "@types/node": "catalog:",

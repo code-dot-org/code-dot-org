@@ -92,12 +92,12 @@ defines; the JSON payload is optional. Example from Neighborhood:
 [NEIGHBORHOOD] MOVE_FORWARD {"id":7,"direction":"north"}
 ```
 
-## Adding a new mini-app
+## Adding a new mini-app (manually)
 
 1. **Scaffold the package** under `frontend/packages/mini-apps/<name>/`.
    Copy `demo/` as a starting point — it's the minimal valid mini-app
    and comes pre-wired with the build setup the package boundary
-   requires (see ["Why demo declares deps it doesn't use"](#why-demo-declares-deps-it-doesnt-use)
+   requires (see ["Why demo declares these deps"](#why-demo-declares-these-deps)
    below). Update `package.json` `name`, `description`, and
    `repository.directory`.
 
@@ -208,12 +208,15 @@ types) live in a `types.ts` next to the implementation. Keep them
 exported through `src/index.ts` so the adapter and the package itself
 agree on shape.
 
-## Why demo declares deps it doesn't use
+## Why demo declares these deps
 
 `demo/package.json` lists `@code-dot-org/component-library`,
 `@mui/material`, `@emotion/react`, and `@emotion/styled` under
-`dependencies` even though `DemoMiniApp` and `DemoPreview` don't
-import any of them. Two reasons, both load-bearing:
+`dependencies`. `DemoPreview` uses MUI `Typography` and `Button`
+directly to exercise the build setup end-to-end; component-library
+and emotion are declared because future mini-apps will reach for
+them and the pattern needs to be in place. Two reasons the deps
+have to be `dependencies` rather than `devDependencies`:
 
 **1. Externalization, not bundling.** A mini-app package built with
 `vite-plugin-externalize-deps` leaves anything in `dependencies` and
@@ -236,16 +239,18 @@ class names. Declaring the deps upfront forestalls all of that.
 won't see it externalized — yarn install succeeds via hoisting, the
 import resolves, vite bundles the whole tree into the dist.
 
-The pre-wired vite config in `demo/` also uses `vite-plugin-lib-inject-css`,
-which inserts `import './index.css'` at the top of the JS entry so
-consumers pull in the bundled CSS as a side effect. Without it, the
-CSS file is emitted but never loaded.
+The pre-wired vite config in `demo/` also uses `vite-plugin-lib-inject-css`
+(injects `import './index.css'` at the top of the JS entry so consumers
+pull in the bundled CSS as a side effect — without it, the CSS file is
+emitted but never loaded) and sets `interop: 'auto'` on the rollup CJS
+output (unwraps `.default` when requiring externalized ESM-default
+exports — without it, default imports from packages like
+component-library come back as namespace objects in the CJS dist and
+React renders them with "type is invalid -- got: object").
 
 When copying `demo/` as the starting point for a new mini-app, leave
-these deps and the plugin in place even if you don't reach for
-component-library on day one — you almost certainly will, and the
-failure mode of forgetting is invisible until something looks wrong
-in the browser.
+these deps and the plugin/rollup settings in place. The failure modes
+of forgetting are invisible until something looks wrong in the browser.
 
 ## Where things live
 

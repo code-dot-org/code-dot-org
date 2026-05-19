@@ -79,8 +79,8 @@ const NeighborhoodPreview = () => {
   // The codebridge preview panel renders against a dark background
   // (`var(--background-neutral-black-fixed)` from neighborhood.module.scss),
   // so the visualization always uses the dark-mode slider color. If a
-  // theme-aware consumer arrives, this should move into
-  // NeighborhoodInputs.
+  // theme-aware consumer arrives (i.e. we want to support light and dark
+  // modes together), this should move into NeighborhoodInputs.
   return <NeighborhoodVisualization isDarkMode={true} />;
 };
 

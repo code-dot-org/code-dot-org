@@ -1384,6 +1384,7 @@ __metadata:
   resolution: "@code-dot-org/demo-mini-app@workspace:packages/mini-apps/demo"
   dependencies:
     "@code-dot-org/component-library": "workspace:*"
+    "@code-dot-org/component-library-styles": "workspace:*"
     "@code-dot-org/lint-config": "workspace:*"
     "@code-dot-org/mini-app-base": "workspace:*"
     "@emotion/react": "catalog:"
