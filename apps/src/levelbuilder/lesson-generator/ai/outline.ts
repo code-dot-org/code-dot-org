@@ -74,6 +74,16 @@ export async function generateLessonOutline(
     '  - description: a 1-3 sentence description of what the level should',
     '    teach or do. This becomes the AI prompt that builds the actual',
     '    level content, so be concrete.',
+    ...(ctx.unitOutline
+      ? [
+          '',
+          `Unit context — this lesson sits inside the unit "${
+            ctx.unitName ?? ''
+          }". Keep the level sequence consistent with the unit's arc, but`,
+          'only plan levels for the specific lesson outline below:',
+          ctx.unitOutline,
+        ]
+      : []),
     '',
     `Outline: ${ctx.lessonOutline ?? ''}`,
   ].join('\n');

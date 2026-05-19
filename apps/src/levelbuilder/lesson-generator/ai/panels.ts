@@ -88,6 +88,16 @@ async function planPanels(ctx: LevelContext): Promise<PanelPlan[]> {
     'middle-school classroom. Each panel needs short overlay text (1-3',
     'sentences, markdown allowed) and an image prompt for a single 16:9',
     'illustration with no embedded text.',
+    ...(ctx.unitOutline
+      ? [
+          '',
+          `Unit context — this level sits inside the unit "${
+            ctx.unitName ?? ''
+          }". Use it for broad continuity (recurring themes, tone, arc)`,
+          'but build only the specific level described below:',
+          ctx.unitOutline,
+        ]
+      : []),
     ...(ctx.lessonOutline
       ? [
           '',

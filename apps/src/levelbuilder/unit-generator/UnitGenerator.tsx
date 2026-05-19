@@ -109,7 +109,10 @@ const UnitGenerator: React.FC<UnitGeneratorProps> = ({unit}) => {
     setOutlineError(null);
     setIsOutlining(true);
     try {
-      const planned = await generateUnitOutline(unit.title, outline.trim());
+      const planned = await generateUnitOutline({
+        unitName: unit.title,
+        unitOutline: outline.trim(),
+      });
       const newSpecs: LessonSpec[] = planned.map(l => ({
         reactKey: createUuid(),
         key: l.key,

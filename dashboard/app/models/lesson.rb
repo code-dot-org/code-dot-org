@@ -495,6 +495,8 @@ class Lesson < ApplicationRecord
       lessonPath: get_uncached_show_path,
       rubric: rubric,
       generateOutline: generate_outline,
+      unitName: script&.localized_title,
+      unitOutline: script&.generate_outline,
     }
   end
 

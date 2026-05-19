@@ -70,6 +70,16 @@ export async function generateWeblab2Level(
     '     for them. Express subfolders as a `/` in the file name (e.g.',
     '     "css/style.css"). Honor any explicit file count or layout the',
     '     description specifies.',
+    ...(ctx.unitOutline
+      ? [
+          '',
+          `Unit context — this level sits inside the unit "${
+            ctx.unitName ?? ''
+          }". Use it for broad continuity (recurring themes, tone, arc)`,
+          'but build only the specific level described below:',
+          ctx.unitOutline,
+        ]
+      : []),
     ...(ctx.lessonOutline
       ? [
           '',

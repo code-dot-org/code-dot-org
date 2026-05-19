@@ -3,6 +3,7 @@ import z from 'zod/v3';
 
 import {generateText} from '@cdo/apps/aiGateway';
 
+import {UnitContext} from '../../lesson-generator/ai/context';
 // We piggy-back on the lesson generator's shared logging + model helpers
 // so the unit page tags its prompts with the same `lesson-gen/*` family
 // the lesson generator uses. The console grouping conventions stay
@@ -47,14 +48,13 @@ export interface OutlineLesson {
   description: string;
 }
 
-// Given a unit-level outline (a free-form description of the whole unit),
-// ask the model to break it into a sequence of lessons. Each lesson gets
-// a key, a display name, and a description that becomes the lesson's
+// Given a unit-scope context (free-form outline + unit title), ask the
+// model to break it into a sequence of lessons. Each lesson gets a key,
+// a display name, and a description that becomes the lesson's
 // generate_outline prompt — i.e. the input the per-lesson /generate page
 // will later use to flesh out the lesson's actual content.
 export async function generateUnitOutline(
-  unitTitle: string,
-  outline: string
+  ctx: UnitContext
 ): Promise<OutlineLesson[]> {
   const prompt = [
     'You are helping a curriculum author plan the lessons in a single CS',
@@ -72,12 +72,12 @@ export async function generateUnitOutline(
     '    introduced, what the student does, and what they should be able',
     '    to do by the end.',
     '',
-    `Unit title: ${unitTitle}`,
+    `Unit title: ${ctx.unitName ?? ''}`,
     '',
-    `Unit outline: ${outline}`,
+    `Unit outline: ${ctx.unitOutline ?? ''}`,
   ].join('\n');
 
-  const context = {level: unitTitle, subtask: 'unit-outline'};
+  const context = {level: ctx.unitName ?? '', subtask: 'unit-outline'};
   logPrompt(PROMPT_TAGS.LESSON_OUTLINE, prompt, context);
   const response = await generateText({
     model: getTextModel(),

@@ -146,11 +146,12 @@ const LessonGenerator: React.FC<LessonGeneratorProps> = ({lesson}) => {
     setOutlineError(null);
     setIsOutlining(true);
     try {
-      // Build the lesson-scope context once. Outer-scope fields
-      // (unitName, unitOutline, targetProject) land here later from the
-      // unit + project branches; populating them is a one-line edit at
-      // the builder site, never a signature change.
+      // Build the lesson-scope context once. Outer unit-scope fields are
+      // piped down via lesson.unitName / lesson.unitOutline so the
+      // outline AI can frame this lesson against the broader unit.
       const lessonCtx = {
+        unitName: lesson.unitName,
+        unitOutline: lesson.unitOutline,
         lessonName: lesson.name,
         lessonOutline: outline.trim(),
       };
@@ -178,7 +179,7 @@ const LessonGenerator: React.FC<LessonGeneratorProps> = ({lesson}) => {
     } finally {
       setIsOutlining(false);
     }
-  }, [outline, lesson.name]);
+  }, [outline, lesson.name, lesson.unitName, lesson.unitOutline]);
 
   const validationError = useMemo(() => {
     if (!prefix.trim()) return 'Set a level name prefix before generating.';
@@ -320,6 +321,8 @@ const LessonGenerator: React.FC<LessonGeneratorProps> = ({lesson}) => {
           // sibling-forward (precedingLevels) is fresh per call from the
           // running priorEntries list.
           const levelCtx = {
+            unitName: lesson.unitName,
+            unitOutline: lesson.unitOutline,
             lessonName: lesson.name,
             lessonOutline: outline.trim() || undefined,
             levelName,
