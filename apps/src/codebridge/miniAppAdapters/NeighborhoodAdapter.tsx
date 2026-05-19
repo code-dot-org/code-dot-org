@@ -1,7 +1,7 @@
 import type {LevelProperties} from '@code-dot-org/core/api';
 import type {MiniApp} from '@code-dot-org/mini-app-base';
 import {
-  NEIGHBORHOOD_NAME,
+  loadNeighborhoodSkin,
   NeighborhoodInputsContext,
   type NeighborhoodInputs,
   type NeighborhoodMiniApp,
@@ -12,7 +12,6 @@ import {findFile} from '@codebridge/utils';
 import React, {useMemo, type ReactNode} from 'react';
 
 import {MultiFileSource} from '@cdo/apps/lab2/types';
-import skins from '@cdo/apps/maze/skins';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 interface NeighborhoodAdapterProps {
@@ -42,9 +41,8 @@ const NeighborhoodAdapter = ({miniApp, children}: NeighborhoodAdapterProps) => {
 
   const skin = useMemo(() => {
     if (!levelProperties) return null;
-    return skins.load(
-      (path: string) => levelProperties.baseAssetUrl + path,
-      NEIGHBORHOOD_NAME
+    return loadNeighborhoodSkin(
+      (path: string) => levelProperties.baseAssetUrl + path
     );
   }, [levelProperties]);
 

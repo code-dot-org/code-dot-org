@@ -9,6 +9,8 @@ export type {NeighborhoodInputs} from './NeighborhoodInputsContext';
 export {parseNeighborhoodSignal} from './parseNeighborhoodSignal';
 export {parseNeighborhoodException} from './parseNeighborhoodException';
 
+export {loadNeighborhoodSkin} from './skin';
+
 export {
   ConsoleSignalTypes,
   NeighborhoodExceptionTypes,

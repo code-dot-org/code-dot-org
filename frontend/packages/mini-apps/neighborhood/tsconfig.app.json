@@ -2,7 +2,8 @@
   "extends": "@code-dot-org/lint-config/typescript/tsconfig.vite.app.json",
   "compilerOptions": {
     "baseUrl": ".",
-    "composite": true
+    "composite": true,
+    "resolveJsonModule": true
   },
-  "include": ["src"]
+  "include": ["src/**/*", "src/**/*.json"]
 }
