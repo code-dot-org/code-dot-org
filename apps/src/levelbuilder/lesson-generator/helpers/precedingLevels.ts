@@ -4,12 +4,20 @@ import {Panel, PanelsLevelProperties} from '@cdo/apps/panels/types';
 import {Weblab2Generation} from '../ai/weblab2';
 import {LabType} from '../types';
 
-// Per-spec content captured during a single Generate run, so each level we
-// process can be told what came before it.
-export interface PriorOutput {
-  panels?: Panel[];
-  weblab2?: Weblab2Generation;
+// Per-LabType payload shapes captured during a single Generate run.
+// One entry per supported lab; PriorOutput then narrows to "at most
+// one" of these via Partial. Keep this in sync with SUPPORTED_LAB_TYPES
+// — the call sites that build a PriorOutput are typed against
+// LabType, so adding a lab fails to compile until you add the row.
+export interface PriorOutputByLab {
+  panels: Panel[];
+  weblab2: Weblab2Generation;
 }
+
+// Per-spec content captured during a single Generate run, so each level we
+// process can be told what came before it. Exactly one lab key is
+// populated per entry (the one matching the spec's labType).
+export type PriorOutput = Partial<PriorOutputByLab>;
 
 export interface PriorEntry {
   position: number;

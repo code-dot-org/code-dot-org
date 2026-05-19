@@ -119,7 +119,7 @@ export interface SerializedLevel {
   // The /generate page uses these to pre-populate level rows for existing
   // levels in the lesson.
   type?: string;
-  generatePrompt?: string | null;
+  generateOutline?: string | null;
 }
 
 export type ProgressPhase =

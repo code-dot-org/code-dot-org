@@ -111,7 +111,7 @@ class Level < ApplicationRecord
     skill_keys
     additional_ai_evaluation_instructions
     product_tours
-    generate_prompt
+    generate_outline
   )
 
   # Fix STI routing http://stackoverflow.com/a/9463495
