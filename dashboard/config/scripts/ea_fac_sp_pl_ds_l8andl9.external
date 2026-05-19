@@ -6,7 +6,7 @@ markdown <<MARKDOWN
 # Cleaning and Interpreting Data 
 
 
-#### In the next lessons, students will learn how to clean raw data to make it useful and explore how different visualizations can change our understanding of that data. They'll practice making decisions, discuss the challenges and biases that can arise, and work together to critically analyze and present data.
+In the next lessons, students will learn how to clean raw data to make it useful and explore how different visualizations can change our understanding of that data. They'll practice making decisions, discuss the challenges and biases that can arise, and work together to critically analyze and present data.
 
 ---
 
@@ -15,10 +15,10 @@ markdown <<MARKDOWN
 
 <div style="display: flex; align-items: center; justify-content: space-between; gap: 20px; margin-top: 20px;">
     <div style="flex: 2; line-height: 1.6;">
-        <h4 style="font-size: 18px; margin-bottom: 10px;">In this lesson, students explore how raw data can hinder insights and practice data cleaning decisions.</h4>
-        <h4 style="font-size: 18px; margin-bottom: 20px;">
+        <p>In this lesson, students explore how raw data can hinder insights and practice data cleaning decisions.</p>
+        <p>
             They conclude with a discussion on tradeoffs that can introduce bias and inaccuracy.
-        </h4>
+        </p>
         <p style="font-size: 18px;">
             <strong>Check out the entire lesson plan  
                 <a href="LINK" rel="noopener noreferrer" style="color: #0093A4; text-decoration: none;">here</a>.
@@ -49,12 +49,12 @@ markdown <<MARKDOWN
 
 <div style="display: flex; align-items: center; justify-content: space-between; gap: 20px; margin-top: 20px;">    
     <div style="flex: 2; line-height: 1.6;">
-        <h4 style="font-size: 20px; margin-bottom: 10px;">
+        <p>
             This lesson explores how different data visualizations shape our understanding by highlighting trends, patterns, and outliers.
-        </h4>
-        <h4 style="font-size: 20px; margin-bottom: 20px;">
+        </p>
+        <p>
             Students create visualizations, then collaborate to discuss insights and ethical considerations in data presentation.
-        </h4>
+        </p>
         <p style="font-size: 18px;">
             <strong>Check out the entire lesson plan  
                 <a href="LINK" rel="noopener noreferrer" style="color: #0093A4; text-decoration: none;">here</a>.
@@ -80,7 +80,7 @@ markdown <<MARKDOWN
 
 ## What's Next?
 
-####Let’s take a look at a cleaning data activity from **Lesson 9!** 
+Let’s take a look at a cleaning data activity from **Lesson 9!** 
 
 
 MARKDOWN

@@ -5,26 +5,26 @@ description 'description here'
 markdown <<MARKDOWN
 # Going Beyond Prompt Libraries
 
-#### Prompt libraries are a great place to start exploring the potential of Large Language Models and AI use in education. They provide ready-to-use examples that can help you see what’s possible and give you a starting point for common tasks.
+Prompt libraries are a great place to start exploring the potential of Large Language Models and AI use in education. They provide ready-to-use examples that can help you see what’s possible and give you a starting point for common tasks.
 
-#### However, prompt libraries are not exhaustive. Every classroom is different—your students, your content, your goals, and your context all shape the kinds of support you need. A prompt that works well in one situation may need to be adjusted, or completely rewritten, for another.
+However, prompt libraries are not exhaustive. Every classroom is different—your students, your content, your goals, and your context all shape the kinds of support you need. A prompt that works well in one situation may need to be adjusted, or completely rewritten, for another.
 
-#### To use AI effectively in your teaching practice, it’s important to move beyond copying prompts and begin adapting and creating your own. This allows you to:
-* #### Tailor AI responses to your specific students and learning goals
-* #### Ask more precise and meaningful questions
-* #### Get higher-quality, more relevant outputs
+To use AI effectively in your teaching practice, it’s important to move beyond copying prompts and begin adapting and creating your own. This allows you to:
+* Tailor AI responses to your specific students and learning goals
+* Ask more precise and meaningful questions
+* Get higher-quality, more relevant outputs
 
-#### Rather than thinking of prompts as fixed templates, it’s helpful to think of prompting as a skill. Like any skill, it improves with practice.
+Rather than thinking of prompts as fixed templates, it’s helpful to think of prompting as a skill. Like any skill, it improves with practice.
 
-#### Strong prompts typically include:
-* #### Clear context (grade level, subject, task)
-* #### A specific goal or outcome
-* #### Relevant details or constraints
-* #### A clear request for what you want the AI to produce
+Strong prompts typically include:
+* Clear context (grade level, subject, task)
+* A specific goal or outcome
+* Relevant details or constraints
+* A clear request for what you want the AI to produce
 
-#### When these elements are missing, responses tend to be vague or less useful. When they are included, AI is much more likely to generate something you can actually use.
+When these elements are missing, responses tend to be vague or less useful. When they are included, AI is much more likely to generate something you can actually use.
 
-####  This is where prompt frameworks such as **TaCo FoRT** can help.
+This is where prompt frameworks such as **TaCo FoRT** can help.
 
 <p align="center">
 <img src="https://images.code.org/a9b6ae8f94bfa64afbf2af4a60ec6609-Screenshot 2025-04-07 at 2.01.43 PM.png" alt="lesson plan diagram" width="70%" style="border-radius:10px; border: 5px solid black;">

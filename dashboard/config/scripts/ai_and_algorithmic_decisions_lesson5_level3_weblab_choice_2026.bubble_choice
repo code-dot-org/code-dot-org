@@ -1,6 +1,6 @@
 name 'ai-and-algorithmic-decisions-lesson5-level3-weblab-choice_2026'
-display_name 'Code in Web Lab'
-description 'Choose one of the following UX scenarios and design a flowchart to model it.'
+display_name 'Implement Your Feature'
+description 'Choose the same scenario to convert your flowchart to code.'
 
 sublevels
 level 'ai-and-algorithmic-decisions-lesson5-level3a-weblab_2026'
@@ -10,3 +10,4 @@ level 'ai-and-algorithmic-decisions-lesson5-level3d-weblab_2026'
 
 
 uses_lab2
+navigation_type 'next_level'

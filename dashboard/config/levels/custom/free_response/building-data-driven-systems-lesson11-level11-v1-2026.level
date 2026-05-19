@@ -1,0 +1,31 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 52,
+  "created_at": "2026-05-15T05:40:34.000Z",
+  "level_num": "custom",
+  "user_id": 18603,
+  "properties": {
+    "encrypted": "false",
+    "title": "Reflection: Value Explorer",
+    "long_instructions": "Reflect on your final Value Explorer app.\r\n\r\n* How did your app change from your original plan to the final version?\r\n* What role did AI Tutor play in your process? Give one specific example of how it helped you brainstorm, build, debug, or improve your app.\r\n* How did your search, filter, sort, data, or design choices support fairness, clarity, or user trust?\r\n* What is one future improvement you would make if you had more time?",
+    "stay_on_level_after_submit": "false",
+    "height": "100",
+    "placeholder": "enter response here...",
+    "allow_user_uploads": "false",
+    "submittable": "false",
+    "peer_reviewable": "false",
+    "optional": "false",
+    "allow_multiple_attempts": "false",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "display_name": "Reflection",
+    "bubble_choice_description": "Evaluate your app’s usability, inclusion, and trust. Consider what works well for new users and what future improvements you would make ***(supports completing Milestone 4 tasks)***.",
+    "thumbnail_url": "https://images.code.org/197fb95fc9d1446b8faf8f06c09f58e7-thought-leadership.png",
+    "name_suffix": "_2026"
+  },
+  "audit_log": "[{\"changed_at\":\"2026-05-15T05:40:34.698+00:00\",\"changed\":[\"cloned from \\\"building-data-driven-systems-lesson11-level7-test_2025-pilot_2026\\\"\"],\"cloned_from\":\"building-data-driven-systems-lesson11-level7-test_2025-pilot_2026\"},{\"changed_at\":\"2026-05-15 05:42:33 +0000\",\"changed\":[\"title\",\"long_instructions\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</FreeResponse>

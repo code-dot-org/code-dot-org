@@ -5,7 +5,7 @@ description 'description here'
 markdown <<MARKDOWN
 # Common HTML Tags
 
-####  **HTML Tags**   are like containers with a specific job for the text. The browser reads the tags to decide how to structure and display the page.
+**HTML Tags**   are like containers with a specific job for the text. The browser reads the tags to decide how to structure and display the page.
 
 <table style="width: 100%; border-collapse: collapse; ">
   <thead>
@@ -81,7 +81,7 @@ markdown <<MARKDOWN
 
 ## Opening and Closing Tags 
 
-#### Most HTML elements come in pairs — an opening tag and a closing tag. The slash in the closing tag tells the browser that the element is finished. Everything between the two tags is the content that the browser will display.
+Most HTML elements come in pairs — an opening tag and a closing tag. The slash in the closing tag tells the browser that the element is finished. Everything between the two tags is the content that the browser will display.
 
 <div style="text-align:center;">
   <img

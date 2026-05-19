@@ -6,9 +6,9 @@ markdown <<MARKDOWN
 # What is HTML?
 
 
-#### HTML **(HyperText Markup Language)** is the basic building block of every website. Think of it as the skeleton or structure of a webpage.
+HTML **(HyperText Markup Language)** is the basic building block of every website. Think of it as the skeleton or structure of a webpage.
 
-#### It tells the computer what content to show: text, images, links, buttons, and more.
+It tells the computer what content to show: text, images, links, buttons, and more.
 
 ## Sample HTML Page
 
@@ -34,14 +34,14 @@ markdown <<MARKDOWN
 
 ## HTML Tags
 
-#### Each piece of content is wrapped in a **“tag”** with angle brackets (< >)
+Each piece of content is wrapped in a **“tag”** with angle brackets (< >)
 
 <img src="https://images.code.org/779f2aeb684a6b54da16227d780fbd67-image-1759350247508.png" alt="The **h1** tag makes “Welcome to My Page” appear as a large heading.
 The **p** tag makes a regular block of text.
 The **img*** tag shows the picture (in this case, puppy.jpg), with the text “A cute puppy” used if the image can’t load." width="650px" style="display: block; margin-left: auto; margin-right: auto;">
 
 
-#### HTML doesn’t control colors or style—that’s what **CSS** is for. Instead, it answers the question: “What is on the page?”
+HTML doesn’t control colors or style—that’s what **CSS** is for. Instead, it answers the question: “What is on the page?”
 
 ## Next, let's see how **CSS** layers in!
 

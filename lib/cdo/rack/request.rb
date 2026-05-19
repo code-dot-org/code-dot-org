@@ -1,15 +1,13 @@
 require 'rack/request'
 require 'rack/session/abstract/id'
+require 'i18n'
 require 'ipaddr'
 require 'json'
 require 'country_codes'
 require 'cdo/global_edition'
-require 'cdo/i18n'
 
 module Cdo
   module RequestExtension
-    LOCALE_ENV = 'cdo.locale'.freeze
-
     TRUSTED_PROXIES = JSON.parse(File.read(deploy_dir('lib/cdo/trusted_proxies.json')))['ranges'].map do |proxy|
       IPAddr.new(proxy)
     end
@@ -32,17 +30,8 @@ module Cdo
       locale.split('-').first
     end
 
-    # The requested locale, not the effective rendering locale.
-    #
-    # @note The effective rendering locale is resolved by the I18n backend and is available via `I18n.locale`
-    # @see `VarnishEnvironment` middleware, defined in `/shared/middleware/varnish_environment.rb`
-    # @return [String] the requested locale, or `Cdo::I18n::DEFAULT_LOCALE` when no locale is set
     def locale
-      env[LOCALE_ENV] || Cdo::I18n::DEFAULT_LOCALE
-    end
-
-    def locale=(value)
-      env[LOCALE_ENV] = value if Cdo::I18n.available_locale?(value)
+      ::I18n.locale.to_s
     end
 
     def referer_site_with_port
