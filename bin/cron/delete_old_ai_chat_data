@@ -33,17 +33,11 @@ def main(options)
   if dry_run
     puts "AichatEvent total rows that would be deleted: #{deleted_event_count}"
     puts "AichatRequest total rows that would be deleted: #{deleted_request_count}"
+    puts "AichatEvent rows that would be deleted during retry cleanup: #{deleted_event_retry_count}"
   else
     ChatClient.message('cron-daily', "Deleted #{deleted_event_count} AichatEvent records")
     ChatClient.message('cron-daily', "Deleted #{deleted_request_count} AichatRequest records")
-  end
-
-  if deleted_event_retry_count > 0
-    if dry_run
-      puts "AichatEvent rows that would be deleted during retry cleanup: #{deleted_event_retry_count}"
-    else
-      ChatClient.message('cron-daily', "Deleted #{deleted_event_retry_count} additional AichatEvent records while retrying AichatRequest batch deletes")
-    end
+    ChatClient.message('cron-daily', "Deleted #{deleted_event_retry_count} additional AichatEvent records while retrying AichatRequest batch deletes")
   end
 end
 
