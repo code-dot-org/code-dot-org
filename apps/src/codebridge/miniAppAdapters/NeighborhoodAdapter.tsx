@@ -1,8 +1,8 @@
-import type {LevelProperties} from '@code-dot-org/core/api';
 import type {MiniApp} from '@code-dot-org/mini-app-base';
 import {
   loadNeighborhoodSkin,
   NeighborhoodInputsContext,
+  type NeighborhoodLevelProperties,
   type NeighborhoodInputs,
   type NeighborhoodMiniApp,
 } from '@code-dot-org/neighborhood-mini-app';
@@ -54,7 +54,8 @@ const NeighborhoodAdapter = ({miniApp, children}: NeighborhoodAdapterProps) => {
       // @code-dot-org/core/api. The two shapes describe the same backend
       // response but have divergent `appName` enums; the cast bridges
       // them until apps migrates onto the core/api types.
-      levelProperties: levelProperties as unknown as LevelProperties,
+      levelProperties:
+        levelProperties as unknown as NeighborhoodLevelProperties,
       skin,
       serializedMaze,
     }),
