@@ -218,6 +218,9 @@ module AichatAiHelper
 
     config, request, context = get_config_request_context(stored_messages, new_message, temperature, system_prompt, retrieval_contexts,  model_id, level_id, encrypted_channel_id, user_id, project_id, client_type, json_schema)
 
+    # Release DB connection before blocking on HTTP.
+    ActiveRecord::Base.connection_pool.release_connection
+
     begin
       response = client.get_response(config, request, context)
     rescue Net::ReadTimeout
