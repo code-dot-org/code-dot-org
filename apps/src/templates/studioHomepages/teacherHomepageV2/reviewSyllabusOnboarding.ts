@@ -1,6 +1,9 @@
 import {StepOptions, Tour} from 'shepherd.js';
 
-import {createCompletionStep} from '@cdo/apps/sharedComponents/productTour/productTourHelpers';
+import {
+  createCompletionStep,
+  nextButton,
+} from '@cdo/apps/sharedComponents/productTour/productTourHelpers';
 import {trySetSessionStorage} from '@cdo/apps/utils';
 
 export const REVIEW_SYLLABUS_ONBOARDING_STEP_KEY =
@@ -90,7 +93,7 @@ export const createReviewSyllabusHomepageSteps = (
         on: 'bottom',
       },
       text: withSparkle(
-        'This dropdown lets you jump directly to any lesson in your assigned course. Click it to see your lessons.'
+        "Before you assign anything to students, it helps to know what's coming. The Jump to menu gets you straight to the syllabus for your assigned unit. \n Click the dropdown menu to take a look."
       ),
       advanceOn: {
         selector: `#${DROPDOWN_BUTTON_ID}`,
@@ -99,13 +102,25 @@ export const createReviewSyllabusHomepageSteps = (
       when: highlightAttachedElement(`#${DROPDOWN_BUTTON_ID}`),
     },
     {
-      id: 'select-first-lesson',
+      id: 'teacher-resources-dropdown',
       attachTo: {
-        element: FIRST_DROPDOWN_ITEM_SELECTOR,
+        element: '#teacher-resources-dropdown',
         on: 'bottom',
       },
       text: withSparkle(
-        'Click the first lesson to go directly to the lesson overview page.'
+        'If admin asks what standards you’re covering or you need a refresher before starting something new, the implementation guides, standards alignment, and how-tos are all here.'
+      ),
+      buttons: [nextButton(tour)],
+      when: highlightAttachedElement('#teacher-resources-dropdown'),
+    },
+    {
+      id: 'select-first-lesson',
+      attachTo: {
+        element: FIRST_DROPDOWN_ITEM_SELECTOR,
+        on: 'right',
+      },
+      text: withSparkle(
+        'Your assigned unit is right at the top. Click it to see the full lesson breakdown before your students do. \n Click the unit name to continue.'
       ),
       beforeShowPromise: () =>
         waitForElement(FIRST_DROPDOWN_ITEM_SELECTOR, controller.signal),
@@ -151,6 +166,20 @@ export const createReviewSyllabusHomepageSteps = (
   ];
 };
 
+const QUIZ_LEVEL_QUESTION = `
+  <div class="onboarding-step-content">
+    <i class="fa-solid fa-sparkle onboarding-sparkle-icon"></i>
+    <span class="onboarding-step-text">When you&#8217;re prepping a lesson, you don&#8217;t have time to review every single level &#8212; and you don&#8217;t need to. CodeAI highlights the levels most worth your attention. For Lesson 1, which level would you prioritize reviewing?</span>
+  </div>
+  <div class="quiz-options-grid">
+    <button class="quiz-option" data-answer="wrong" type="button">Level 1</button>
+    <button class="quiz-option" data-answer="wrong" type="button">Level 2</button>
+    <button class="quiz-option" data-answer="wrong" type="button">Level 3</button>
+    <button class="quiz-option" data-answer="correct" type="button">Level 4</button>
+  </div>
+  <div class="quiz-feedback" aria-live="polite"></div>
+`;
+
 // Steps shown on the unit overview page after navigating from the homepage.
 export const createReviewSyllabusUnitOverviewSteps = (
   tour: Tour
@@ -160,6 +189,8 @@ export const createReviewSyllabusUnitOverviewSteps = (
   tour.on('complete', () => controller.abort());
 
   let breadcrumbClickHandler: ((e: Event) => void) | null = null;
+  let quizClickHandler: EventListener | null = null;
+  let quizAdvanceTimer: ReturnType<typeof setTimeout> | null = null;
 
   return [
     {
@@ -169,8 +200,9 @@ export const createReviewSyllabusUnitOverviewSteps = (
         on: 'bottom',
       },
       text: withSparkle(
-        'This breadcrumb link takes you back to the full course overview, where you can see all units and lessons. Click it to explore.'
+        'The Course page is where you can map out what students will learn, lesson by lesson. Need to zoom out and see the bigger picture for the full course? Click the course name above the unit header.'
       ),
+      buttons: [nextButton(tour)],
       beforeShowPromise: () =>
         waitForElement(UNIT_BREADCRUMB_SELECTOR, controller.signal),
       // No advanceOn: we prevent default on the anchor click so the celebration
@@ -209,6 +241,65 @@ export const createReviewSyllabusUnitOverviewSteps = (
               .querySelector(UNIT_BREADCRUMB_LINK_SELECTOR)
               ?.removeEventListener('click', breadcrumbClickHandler);
             breadcrumbClickHandler = null;
+          }
+        },
+      },
+    },
+    {
+      id: 'quiz-level-priority',
+      attachTo: {
+        element: '#progress-lesson-1',
+        on: 'bottom',
+      },
+      text: QUIZ_LEVEL_QUESTION,
+      buttons: [],
+      beforeShowPromise: () =>
+        waitForElement('#progress-lesson-1', controller.signal),
+      when: {
+        show() {
+          quizAdvanceTimer = null;
+
+          quizClickHandler = (e: Event) => {
+            const target = e.currentTarget as HTMLButtonElement;
+            const allOptions = Array.from(
+              document.querySelectorAll<HTMLButtonElement>('.quiz-option')
+            );
+
+            if (target.dataset.answer === 'correct') {
+              target.classList.add('quiz-option-correct');
+              allOptions.forEach(btn => {
+                btn.disabled = true;
+              });
+              quizAdvanceTimer = setTimeout(() => {
+                quizAdvanceTimer = null;
+                tour.next();
+              }, 1000);
+            } else {
+              target.classList.add('quiz-option-wrong');
+              target.textContent = `\u274C ${target.textContent?.trim() ?? ''}`;
+              target.disabled = true;
+              const feedback =
+                document.querySelector<HTMLElement>('.quiz-feedback');
+              if (feedback) feedback.textContent = 'Try again';
+            }
+          };
+
+          document
+            .querySelectorAll<HTMLButtonElement>('.quiz-option')
+            .forEach(btn => btn.addEventListener('click', quizClickHandler!));
+        },
+        hide() {
+          if (quizAdvanceTimer !== null) {
+            clearTimeout(quizAdvanceTimer);
+            quizAdvanceTimer = null;
+          }
+          if (quizClickHandler !== null) {
+            document
+              .querySelectorAll<HTMLButtonElement>('.quiz-option')
+              .forEach(btn =>
+                btn.removeEventListener('click', quizClickHandler!)
+              );
+            quizClickHandler = null;
           }
         },
       },

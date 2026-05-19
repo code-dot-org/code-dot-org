@@ -162,6 +162,57 @@
   flex: 1;
 }
 
+// Quiz step: 2-column grid of answer option buttons.
+.quiz-options-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+  margin-top: 16px;
+}
+
+.quiz-option {
+  padding: 10px 16px;
+  border: 1px solid rgb(255 255 255 / 30%);
+  border-radius: 6px;
+  background: transparent;
+  color: #fff;
+  font-family: Figtree, sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  text-align: left;
+  transition: border-color 0.15s;
+
+  &:not(:disabled):hover {
+    border-color: rgb(255 255 255 / 70%);
+  }
+
+  &:disabled {
+    cursor: default;
+  }
+}
+
+.quiz-option-wrong {
+  border-color: #e53e3e !important;
+  background-color: rgb(229 62 62 / 15%) !important;
+  color: #fc8181 !important;
+}
+
+.quiz-option-correct {
+  border-color: #38a169 !important;
+  background-color: rgb(56 161 105 / 15%) !important;
+  color: #68d391 !important;
+}
+
+.quiz-feedback {
+  margin-top: 12px;
+  min-height: 18px;
+  font-family: Figtree, sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  color: #fc8181;
+}
+
 // Onboarding tour step container styles.
 .custom-shepherd-onboarding-container {
   @extend %shepherd-step-container-base;
