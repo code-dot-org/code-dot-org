@@ -159,8 +159,8 @@ const LessonGenerator: React.FC<LessonGeneratorProps> = ({lesson}) => {
       const id = projectChannelId.trim();
       if (!id) return undefined;
       try {
-        const raw = await loadProjectSources(id);
-        const formatted = formatTargetProject(raw);
+        const {value} = await loadProjectSources(id);
+        const formatted = formatTargetProject(value);
         if (formatted) {
           onLog(`Loaded target project source from channel ${id}.`);
           return formatted;

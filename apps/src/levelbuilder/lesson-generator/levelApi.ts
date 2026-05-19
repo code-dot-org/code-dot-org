@@ -197,17 +197,8 @@ export async function saveLessonActivities(
   });
 }
 
-// GET /v3/sources/<channel-id>/main.json — the Lab2 project source for
-// a given channel. Unauthenticated; the endpoint is open and just checks
-// abuse-score gates. Returns ProjectSources: {source, labConfig?}. For
-// a Weblab2 project, `source` is a MultiFileSource (folders + files).
-//
-// This page uses the response as additional context for the AI, not as
-// state we round-trip. We accept any shape the server returns and only
-// look at MultiFileSource files in the caller.
-export async function loadProjectSources(channelId: string): Promise<unknown> {
-  const {value} = await HttpClient.fetchJson<unknown>(
-    `/v3/sources/${encodeURIComponent(channelId)}/main.json`
-  );
-  return value;
-}
+// Re-export the lab2 sources `get` helper under a clearer name. The
+// page uses the response as additional context for the AI, not state
+// it round-trips — formatTargetProject narrows the typed result down
+// to MultiFileSource files.
+export {get as loadProjectSources} from '@cdo/apps/lab2/projects/sourcesApi';

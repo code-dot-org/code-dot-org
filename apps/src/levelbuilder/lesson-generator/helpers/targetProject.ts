@@ -1,14 +1,13 @@
-import {MultiFileSource, ProjectFileType} from '@cdo/apps/lab2/types';
+import {
+  MultiFileSource,
+  ProjectFileType,
+  ProjectSources,
+} from '@cdo/apps/lab2/types';
 
-// The /v3/sources endpoint returns a ProjectSources blob whose `source`
-// can be any of several Lab2 source shapes. The lesson generator only
-// cares about MultiFileSource (the Weblab2 shape), since the levels it
-// produces are weblab2 + panels. Anything else collapses to "no useful
-// target" and the AI just doesn't get the extra context.
-interface MaybeProjectSources {
-  source?: MultiFileSource | string | Record<string, unknown>;
-}
-
+// The lesson generator only cares about MultiFileSource (the Weblab2
+// shape), since the levels it produces are weblab2 + panels. Anything
+// else collapses to "no useful target" and the AI just doesn't get the
+// extra context.
 function isMultiFileSource(value: unknown): value is MultiFileSource {
   if (!value || typeof value !== 'object') return false;
   const v = value as {files?: unknown; folders?: unknown};
@@ -21,11 +20,12 @@ function isMultiFileSource(value: unknown): value is MultiFileSource {
 // folder's contents that aren't files (folder records, etc).
 //
 // The returned string is suitable to drop verbatim into a generateText
-// prompt as the "final goal" context. Returns null when the response
+// prompt as the "final goal" context. Returns null when the source
 // shape isn't something we can read (e.g. a Blockly or Excalidraw
 // project, or a missing source).
-export function formatTargetProject(raw: unknown): string | null {
-  const project = raw as MaybeProjectSources | null;
+export function formatTargetProject(
+  project: ProjectSources | undefined
+): string | null {
   if (!project || !project.source) return null;
   if (!isMultiFileSource(project.source)) return null;
   const source = project.source;
