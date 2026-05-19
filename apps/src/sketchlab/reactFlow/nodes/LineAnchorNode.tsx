@@ -1,4 +1,5 @@
 import {Handle, Position, useNodeConnections} from '@xyflow/react';
+import classNames from 'classnames';
 import React, {memo} from 'react';
 
 import {LineAnchorNodeData} from '../types';
@@ -15,6 +16,7 @@ function LineAnchorNode({data}: LineAnchorNodeProps) {
   const handleType = isSourceAnchor ? 'source' : 'target';
   const handlePosition = isSourceAnchor ? Position.Right : Position.Left;
   const connections = useNodeConnections();
+  const showHandles = data.showHandles !== false;
 
   // This should become false immediately after a line is created,
   // as we create two hidden nodes with an edge in between them.
@@ -27,7 +29,9 @@ function LineAnchorNode({data}: LineAnchorNodeProps) {
         id={lineAnchorHandleId(handleType)}
         position={handlePosition}
         isConnectable={isConnectable}
-        className={styles.anchorHandle}
+        className={classNames(styles.anchorHandle, {
+          [styles.hidden]: !showHandles,
+        })}
       />
     </div>
   );

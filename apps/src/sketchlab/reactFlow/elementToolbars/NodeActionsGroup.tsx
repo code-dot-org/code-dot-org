@@ -8,9 +8,15 @@ import ActionsGroup from './ActionsGroup';
 
 interface NodeActionsGroupProps {
   nodeId: string;
+  handlesVisible: boolean;
+  onToggleHandles: () => void;
 }
 
-export default function NodeActionsGroup({nodeId}: NodeActionsGroupProps) {
+export default function NodeActionsGroup({
+  nodeId,
+  handlesVisible,
+  onToggleHandles,
+}: NodeActionsGroupProps) {
   const {deleteElements, updateNode, updateNodeData, getNodes, getEdges} =
     useReactFlow();
   const {duplicateNode} = useClipboard();
@@ -27,6 +33,8 @@ export default function NodeActionsGroup({nodeId}: NodeActionsGroupProps) {
         updateNode(nodeId, {zIndex: newBackZIndex(items, nodeId)});
       }}
       onDuplicate={() => duplicateNode(nodeId)}
+      handlesVisible={handlesVisible}
+      onToggleHandles={onToggleHandles}
     />
   );
 }

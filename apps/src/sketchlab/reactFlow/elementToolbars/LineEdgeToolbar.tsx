@@ -1,13 +1,13 @@
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import {IconButton, Tooltip, Typography} from '@mui/material';
-import {useReactFlow} from '@xyflow/react';
+import {useNodesData, useReactFlow} from '@xyflow/react';
 import classNames from 'classnames';
 import React, {useMemo} from 'react';
 
 import {SketchlabReactFlowEdge} from '@cdo/apps/lab2/types';
 
 import {useClipboard} from '../context';
-import {ArrowHeadValue} from '../types';
+import {ArrowHeadValue, LineAnchorNodeType} from '../types';
 import {newBackZIndex, newFrontZIndex} from '../utils/stacking';
 
 import ActionsGroup from './ActionsGroup';
@@ -127,9 +127,30 @@ export default function LineEdgeToolbar({
   onSelectArrowHeads,
   onSetLocked,
 }: LineEdgeToolbarProps) {
-  const {deleteElements, updateEdge, getNodes, getEdges} = useReactFlow();
+  const {deleteElements, updateEdge, updateNodeData, getNodes, getEdges} =
+    useReactFlow();
 
   const isLocked = edge.data?.locked === true;
+
+  // useNodesData subscribes to data changes on these endpoints so the
+  // toolbar's handle-visibility icon flips when showHandles is toggled.
+  const endpointInfo = useNodesData<LineAnchorNodeType>([
+    edge.source,
+    edge.target,
+  ]);
+  const anchorEndpoints = endpointInfo.filter(n => n.type === 'lineAnchor');
+  const handlesVisible =
+    anchorEndpoints.length === 0 ||
+    anchorEndpoints.some(n => n.data.showHandles !== false);
+  const onToggleHandles =
+    anchorEndpoints.length > 0
+      ? () => {
+          const next = !handlesVisible;
+          anchorEndpoints.forEach(n =>
+            updateNodeData(n.id, {showHandles: next})
+          );
+        }
+      : undefined;
 
   const selectedValue =
     (typeof edge.style?.stroke === 'string' && edge.style.stroke) ||
@@ -254,6 +275,8 @@ export default function LineEdgeToolbar({
               const items = [...getNodes(), ...getEdges()];
               updateEdge(edge.id, {zIndex: newBackZIndex(items, edge.id)});
             }}
+            handlesVisible={handlesVisible}
+            onToggleHandles={onToggleHandles}
           />
         </>
       )}

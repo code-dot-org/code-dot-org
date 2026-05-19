@@ -12,6 +12,8 @@ interface ActionsGroupProps {
   onBringToFront?: () => void;
   onSendToBack?: () => void;
   onDuplicate?: () => void;
+  handlesVisible?: boolean;
+  onToggleHandles?: () => void;
 }
 
 export default function ActionsGroup({
@@ -20,6 +22,8 @@ export default function ActionsGroup({
   onBringToFront,
   onSendToBack,
   onDuplicate,
+  handlesVisible,
+  onToggleHandles,
 }: ActionsGroupProps) {
   const isStartMode = getIsStartMode();
 
@@ -90,6 +94,32 @@ export default function ActionsGroup({
               onClick={onSendToBack}
             >
               <FontAwesomeV6Icon iconName="send-back" />
+            </IconButton>
+          </Tooltip>
+        )}
+        {onToggleHandles && (
+          <Tooltip
+            title={
+              handlesVisible
+                ? 'Hide connection handles'
+                : 'Show connection handles'
+            }
+            placement="top"
+          >
+            <IconButton
+              size="small"
+              className={styles.fontSizeButton}
+              aria-label={
+                handlesVisible
+                  ? 'Hide connection handles'
+                  : 'Show connection handles'
+              }
+              aria-pressed={handlesVisible}
+              onClick={onToggleHandles}
+            >
+              <FontAwesomeV6Icon
+                iconName={handlesVisible ? 'circle' : 'empty-set'}
+              />
             </IconButton>
           </Tooltip>
         )}
