@@ -197,6 +197,17 @@ PUT    /ai_lessons/:id/progress                   # write this user's progress
   its inner panels when its container changes size — switching
   checkpoints or resizing the window can leave the editor or preview
   pinned to a stale width.
+- **Per-checkpoint starter code.** Today the source is shared across all
+  same-lab checkpoints in a lesson, but there's no way for the author to
+  seed a checkpoint with a specific starting state (e.g. "checkpoint 3
+  begins with a broken loop the student has to fix"). Need authoring UI
+  for starter code + a way to plumb it through the source-carryover
+  logic.
+- **Per-checkpoint "continue vs fresh" toggle.** Right now every
+  checkpoint of a given lab type picks up from the previous one's
+  source. The author should be able to mark a checkpoint as starting
+  fresh — useful when a new concept needs a clean slate, or when the
+  starter code (above) is meant to replace what the student had.
 - **Organise into subdirectories.** Likely shape:
   - `apps/src/aiLessons/author/` — author page, lesson generator,
     image generator
