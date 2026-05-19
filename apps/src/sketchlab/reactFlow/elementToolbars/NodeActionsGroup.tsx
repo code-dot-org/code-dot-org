@@ -18,7 +18,10 @@ export default function NodeActionsGroup({nodeId}: NodeActionsGroupProps) {
   return (
     <ActionsGroup
       onDelete={() => deleteElements({nodes: [{id: nodeId}]})}
-      onLock={() => updateNodeData(nodeId, {locked: true})}
+      onLock={() => {
+        pushSnapshot();
+        updateNodeData(nodeId, {locked: true});
+      }}
       onBringToFront={() => {
         pushSnapshot();
         const items = [...getNodes(), ...getEdges()];

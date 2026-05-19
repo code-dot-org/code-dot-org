@@ -286,6 +286,7 @@ export function useKeyboardNavigation({
     [paste]
   );
 
+  // Undo: Ctrl/Cmd+Z.
   const handleUndo = useCallback(
     (keyContext: KeyContext): boolean => {
       const {event} = keyContext;
