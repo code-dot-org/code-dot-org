@@ -15,6 +15,11 @@ import {
   PROMPT_TAGS,
 } from '../../lesson-generator/ai/shared';
 
+// Bounds on the unit outline plan. Quoted both in the prompt and in
+// the zod schema so the limits stay in sync.
+const MIN_LESSONS = 2;
+const MAX_LESSONS = 20;
+
 const unitOutlineSchema = Output.object({
   schema: z.object({
     lessons: z
@@ -37,8 +42,8 @@ const unitOutlineSchema = Output.object({
             ),
         })
       )
-      .min(2)
-      .max(20),
+      .min(MIN_LESSONS)
+      .max(MAX_LESSONS),
   }),
 });
 
@@ -59,7 +64,7 @@ export async function generateUnitOutline(
   const prompt = [
     'You are helping a curriculum author plan the lessons in a single CS',
     'unit (a multi-lesson learning experience for middle-school students).',
-    'Break the outline below into a sequence of 2 to 20 lessons that, in',
+    `Break the outline below into a sequence of ${MIN_LESSONS} to ${MAX_LESSONS} lessons that, in`,
     'order, take the student through the learning experience.',
     '',
     'For each lesson, return:',
@@ -77,15 +82,15 @@ export async function generateUnitOutline(
     `Unit outline: ${ctx.unitOutline ?? ''}`,
   ].join('\n');
 
-  const context = {level: ctx.unitName ?? '', subtask: 'unit-outline'};
-  logPrompt(PROMPT_TAGS.LESSON_OUTLINE, prompt, context);
+  const context = {unit: ctx.unitName, subtask: 'outline'};
+  logPrompt(PROMPT_TAGS.UNIT_OUTLINE, prompt, context);
   const response = await generateText({
     model: getTextModel(),
     prompt,
     output: unitOutlineSchema,
   });
   const lessons = (response.output as {lessons: OutlineLesson[]}).lessons;
-  logResponse(PROMPT_TAGS.LESSON_OUTLINE, lessons, context);
+  logResponse(PROMPT_TAGS.UNIT_OUTLINE, lessons, context);
   if (!lessons?.length) {
     throw new Error('Model returned no lessons');
   }
