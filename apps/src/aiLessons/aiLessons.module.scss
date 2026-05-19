@@ -194,12 +194,53 @@ select {
   border-radius: 6px;
   border: 1px solid var(--borders-neutral-primary);
   list-style-position: outside;
-  margin-left: 24px;
   min-width: 0;
+  // Animate a small fade + slide-in when the parent carousel switches
+  // cards, so paging through checkpoints/slides feels horizontal rather
+  // than a hard swap.
+  animation: ai-lessons-carousel-slide 180ms ease-out;
 
   > .field:last-child {
     margin-bottom: 0;
   }
+}
+
+@keyframes ai-lessons-carousel-slide {
+  from {
+    opacity: 0;
+    transform: translateX(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+// One-at-a-time pager for the checkpoint cards and (within a panels
+// checkpoint) the slide cards.  The card itself is rendered inside; the
+// carouselNav row provides the prev/next + position indicator.
+.carousel {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.carouselNav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 6px 0;
+  border-bottom: 1px solid var(--borders-neutral-light);
+}
+
+.carouselPosition {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text-neutral-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
 }
 
 .checkpointRow {

@@ -59,6 +59,15 @@ const AuthorPage: React.FunctionComponent<AuthorPageProps> = ({
   >();
   // Human-readable description of what the page is currently working on.
   const [busyMessage, setBusyMessage] = useState<string | undefined>();
+  // Carousel state: the checkpoint card the author is currently viewing,
+  // and within each panels-typed checkpoint, which slide is showing.
+  // Slide index is keyed by checkpoint id so navigating between
+  // checkpoints remembers where each one left off.
+  const [currentCheckpointIndex, setCurrentCheckpointIndex] =
+    useState<number>(0);
+  const [panelIndexByCheckpoint, setPanelIndexByCheckpoint] = useState<
+    Record<string, number>
+  >({});
 
   // Auto-generate images for every panel slide in the freshly-generated plan,
   // in parallel.  Failures are caught per-slide so a single bad caption
@@ -127,6 +136,11 @@ const AuthorPage: React.FunctionComponent<AuthorPageProps> = ({
       }
       const generated = await generateLessonFromPrompt(prompt);
       setPlan(generated);
+      // Reset the carousel back to the first checkpoint on a fresh
+      // generation; otherwise we might point past the end if the new
+      // plan is shorter than the previous one.
+      setCurrentCheckpointIndex(0);
+      setPanelIndexByCheckpoint({});
 
       // Persist immediately so image uploads have a lessonId to scope to;
       // re-use the existing savedId if the author is regenerating.
@@ -200,14 +214,23 @@ const AuthorPage: React.FunctionComponent<AuthorPageProps> = ({
     );
 
   const removeCheckpoint = (i: number) =>
-    setPlan(p =>
-      p ? {...p, checkpoints: p.checkpoints.filter((_, idx) => idx !== i)} : p
-    );
+    setPlan(p => {
+      if (!p) return p;
+      const next = p.checkpoints.filter((_, idx) => idx !== i);
+      // Clamp the carousel index so we don't end up pointing past the
+      // end after a delete.
+      setCurrentCheckpointIndex(c => Math.min(c, Math.max(0, next.length - 1)));
+      return {...p, checkpoints: next};
+    });
 
   const addCheckpoint = () =>
-    setPlan(p =>
-      p ? {...p, checkpoints: [...p.checkpoints, newCheckpoint()]} : p
-    );
+    setPlan(p => {
+      if (!p) return p;
+      const next = [...p.checkpoints, newCheckpoint()];
+      // Jump to the new checkpoint so the author can start editing it.
+      setCurrentCheckpointIndex(next.length - 1);
+      return {...p, checkpoints: next};
+    });
 
   const updatePanel = (
     cpIndex: number,
@@ -232,6 +255,11 @@ const AuthorPage: React.FunctionComponent<AuthorPageProps> = ({
       if (!p) return p;
       const cp = p.checkpoints[cpIndex];
       const panels: PanelSlide[] = [...(cp.panels || []), {caption: ''}];
+      // Jump to the freshly added slide so the author starts editing it.
+      setPanelIndexByCheckpoint(prev => ({
+        ...prev,
+        [cp.id]: panels.length - 1,
+      }));
       return {
         ...p,
         checkpoints: p.checkpoints.map((c, idx) =>
@@ -245,6 +273,12 @@ const AuthorPage: React.FunctionComponent<AuthorPageProps> = ({
       if (!p) return p;
       const cp = p.checkpoints[cpIndex];
       const panels = (cp.panels || []).filter((_, i) => i !== panelIndex);
+      // Clamp the per-checkpoint slide index so we don't end up past the
+      // end of the slide list after a delete.
+      setPanelIndexByCheckpoint(prev => ({
+        ...prev,
+        [cp.id]: Math.min(prev[cp.id] ?? 0, Math.max(0, panels.length - 1)),
+      }));
       return {
         ...p,
         checkpoints: p.checkpoints.map((c, idx) =>
@@ -252,6 +286,17 @@ const AuthorPage: React.FunctionComponent<AuthorPageProps> = ({
         ),
       };
     });
+
+  const goToCheckpoint = (i: number) => {
+    if (!plan) return;
+    const clamped = Math.max(0, Math.min(i, plan.checkpoints.length - 1));
+    setCurrentCheckpointIndex(clamped);
+  };
+
+  const goToPanel = (checkpointId: string, panelCount: number, i: number) => {
+    const clamped = Math.max(0, Math.min(i, panelCount - 1));
+    setPanelIndexByCheckpoint(prev => ({...prev, [checkpointId]: clamped}));
+  };
 
   const handleGenerateImage = async (
     cpIndex: number,
@@ -285,9 +330,11 @@ const AuthorPage: React.FunctionComponent<AuthorPageProps> = ({
     const key = `${cpIndex}-${panelIndex}`;
     const isGenerating = generatingImageKey === key;
     return (
-      <li key={panelIndex} className={styles.checkpointInput}>
+      <div key={panelIndex} className={styles.checkpointInput}>
         <div className={styles.checkpointRow}>
-          <strong>Slide {panelIndex + 1}</strong>
+          {/* Slide N / Total label is shown by the surrounding carousel
+              nav, so the per-slide header only needs the remove control. */}
+          <span className={styles.muted}>Slide {panelIndex + 1}</span>
           <button
             type="button"
             className={styles.linkButton}
@@ -357,7 +404,7 @@ const AuthorPage: React.FunctionComponent<AuthorPageProps> = ({
             ? 'Regenerate image'
             : 'Generate image'}
         </button>
-      </li>
+      </div>
     );
   };
 
@@ -428,90 +475,191 @@ const AuthorPage: React.FunctionComponent<AuthorPageProps> = ({
           </label>
 
           <h2>Checkpoints</h2>
-          <ol className={styles.checkpointList}>
-            {plan.checkpoints.map((cp, i) => (
-              <li key={cp.id} className={styles.checkpointInput}>
-                <div className={styles.checkpointRow}>
-                  <strong>#{i + 1}</strong>
-                  <SimpleDropdown
-                    name={`checkpoint-${i}-lab-type`}
-                    labelText="Lab type"
-                    isLabelVisible={false}
-                    size="s"
-                    color="black"
-                    items={LAB_ITEMS}
-                    selectedValue={cp.labType}
-                    onChange={e =>
-                      updateCheckpoint(i, {
-                        labType: e.target.value as LabType,
-                      })
-                    }
-                  />
-                  <button
-                    type="button"
-                    className={styles.linkButton}
-                    onClick={() => removeCheckpoint(i)}
-                    aria-label={`Remove checkpoint ${i + 1}`}
-                  >
-                    Remove
-                  </button>
-                </div>
-
-                <label className={styles.field}>
-                  <span>Title</span>
-                  <input
-                    type="text"
-                    value={cp.title}
-                    onChange={e => updateCheckpoint(i, {title: e.target.value})}
-                  />
-                </label>
-
-                <label className={styles.field}>
-                  <span>
-                    Description — what the student should do and any context the
-                    AI Tutor needs. Never shown verbatim; the tutor paraphrases
-                    on the fly.
-                  </span>
-                  <textarea
-                    value={cp.description}
-                    onChange={e =>
-                      updateCheckpoint(i, {description: e.target.value})
-                    }
-                    rows={4}
-                  />
-                </label>
-
-                <label className={styles.field}>
-                  <span>Success criteria (what the AI Tutor checks)</span>
-                  <textarea
-                    value={cp.successCriteria}
-                    onChange={e =>
-                      updateCheckpoint(i, {successCriteria: e.target.value})
-                    }
-                    rows={2}
-                  />
-                </label>
-
-                {cp.labType === 'panels' && (
-                  <div className={styles.field}>
-                    <span>Slide captions</span>
-                    <ol className={styles.checkpointList}>
-                      {(cp.panels || []).map((p, pi) =>
-                        renderSlideEditor(i, pi, p)
-                      )}
-                    </ol>
+          {plan.checkpoints.length === 0 ? (
+            <p className={styles.muted}>
+              No checkpoints yet — add one to get started.
+            </p>
+          ) : (
+            (() => {
+              const i = Math.max(
+                0,
+                Math.min(currentCheckpointIndex, plan.checkpoints.length - 1)
+              );
+              const cp = plan.checkpoints[i];
+              const slideIndex = Math.max(
+                0,
+                Math.min(
+                  panelIndexByCheckpoint[cp.id] ?? 0,
+                  (cp.panels?.length ?? 1) - 1
+                )
+              );
+              return (
+                <div key={cp.id} className={styles.carousel}>
+                  <div className={styles.carouselNav}>
                     <button
                       type="button"
-                      className={styles.secondaryButton}
-                      onClick={() => addPanel(i)}
+                      className={styles.linkButton}
+                      onClick={() => goToCheckpoint(i - 1)}
+                      disabled={i === 0}
+                      aria-label="Previous checkpoint"
                     >
-                      + Add slide
+                      ← Previous
+                    </button>
+                    <span className={styles.carouselPosition}>
+                      Checkpoint {i + 1} of {plan.checkpoints.length}
+                    </span>
+                    <button
+                      type="button"
+                      className={styles.linkButton}
+                      onClick={() => goToCheckpoint(i + 1)}
+                      disabled={i >= plan.checkpoints.length - 1}
+                      aria-label="Next checkpoint"
+                    >
+                      Next →
                     </button>
                   </div>
-                )}
-              </li>
-            ))}
-          </ol>
+                  <div className={styles.checkpointInput}>
+                    <div className={styles.checkpointRow}>
+                      <strong>#{i + 1}</strong>
+                      <SimpleDropdown
+                        name={`checkpoint-${i}-lab-type`}
+                        labelText="Lab type"
+                        isLabelVisible={false}
+                        size="s"
+                        color="black"
+                        items={LAB_ITEMS}
+                        selectedValue={cp.labType}
+                        onChange={e =>
+                          updateCheckpoint(i, {
+                            labType: e.target.value as LabType,
+                          })
+                        }
+                      />
+                      <button
+                        type="button"
+                        className={styles.linkButton}
+                        onClick={() => removeCheckpoint(i)}
+                        aria-label={`Remove checkpoint ${i + 1}`}
+                      >
+                        Remove
+                      </button>
+                    </div>
+
+                    <label className={styles.field}>
+                      <span>Title</span>
+                      <input
+                        type="text"
+                        value={cp.title}
+                        onChange={e =>
+                          updateCheckpoint(i, {title: e.target.value})
+                        }
+                      />
+                    </label>
+
+                    {/* Description + success criteria only apply to lab
+                        checkpoints where the AI Tutor coaches and grades
+                        the student.  Panels checkpoints advance via
+                        Continue, so these are hidden — the slide captions
+                        themselves are the content. */}
+                    {cp.labType !== 'panels' && (
+                      <>
+                        <label className={styles.field}>
+                          <span>
+                            Description — what the student should do and any
+                            context the AI Tutor needs. Never shown verbatim;
+                            the tutor paraphrases on the fly.
+                          </span>
+                          <textarea
+                            value={cp.description}
+                            onChange={e =>
+                              updateCheckpoint(i, {description: e.target.value})
+                            }
+                            rows={4}
+                          />
+                        </label>
+
+                        <label className={styles.field}>
+                          <span>
+                            Success criteria (what the AI Tutor checks)
+                          </span>
+                          <textarea
+                            value={cp.successCriteria}
+                            onChange={e =>
+                              updateCheckpoint(i, {
+                                successCriteria: e.target.value,
+                              })
+                            }
+                            rows={2}
+                          />
+                        </label>
+                      </>
+                    )}
+
+                    {cp.labType === 'panels' && (
+                      <div className={styles.field}>
+                        <span>Slide captions</span>
+                        {(cp.panels?.length ?? 0) === 0 ? (
+                          <p className={styles.muted}>
+                            No slides yet — add one to get started.
+                          </p>
+                        ) : (
+                          <div className={styles.carousel}>
+                            <div className={styles.carouselNav}>
+                              <button
+                                type="button"
+                                className={styles.linkButton}
+                                onClick={() =>
+                                  goToPanel(
+                                    cp.id,
+                                    cp.panels!.length,
+                                    slideIndex - 1
+                                  )
+                                }
+                                disabled={slideIndex === 0}
+                                aria-label="Previous slide"
+                              >
+                                ← Previous
+                              </button>
+                              <span className={styles.carouselPosition}>
+                                Slide {slideIndex + 1} of {cp.panels!.length}
+                              </span>
+                              <button
+                                type="button"
+                                className={styles.linkButton}
+                                onClick={() =>
+                                  goToPanel(
+                                    cp.id,
+                                    cp.panels!.length,
+                                    slideIndex + 1
+                                  )
+                                }
+                                disabled={slideIndex >= cp.panels!.length - 1}
+                                aria-label="Next slide"
+                              >
+                                Next →
+                              </button>
+                            </div>
+                            {renderSlideEditor(
+                              i,
+                              slideIndex,
+                              cp.panels![slideIndex]
+                            )}
+                          </div>
+                        )}
+                        <button
+                          type="button"
+                          className={styles.secondaryButton}
+                          onClick={() => addPanel(i)}
+                        >
+                          + Add slide
+                        </button>
+                      </div>
+                    )}
+                  </div>
+                </div>
+              );
+            })()
+          )}
           <button
             type="button"
             className={styles.secondaryButton}

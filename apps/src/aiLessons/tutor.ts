@@ -61,10 +61,25 @@ const SYSTEM_PROMPT_TEMPLATE = (lesson: LessonPlan, currentIndex: number) => {
   const overview = lesson.checkpoints
     .map((c, i) => {
       const marker = i < currentIndex ? '✓' : i === currentIndex ? '→' : ' ';
-      return `  ${marker} ${i + 1}. ${c.title} (${c.labType}) — ${
-        c.description
-      }`;
+      const tail = c.description ? ` — ${c.description}` : '';
+      return `  ${marker} ${i + 1}. ${c.title} (${c.labType})${tail}`;
     })
+    .join('\n');
+
+  // Panels checkpoints don't have a description or success criteria —
+  // the slide captions carry the content and Continue advances directly.
+  // Skip the empty lines so the prompt doesn't dangle them.
+  const currentDetails = [
+    `  Title: ${current.title}`,
+    `  Lab type: ${current.labType}`,
+    current.description &&
+      `  Description (what the student should do — turn this into your own
+  natural-language guidance for the student; never paste it verbatim):
+  ${current.description}`,
+    current.successCriteria &&
+      `  Success criteria (what you, the tutor, must verify before advancing): ${current.successCriteria}`,
+  ]
+    .filter(Boolean)
     .join('\n');
 
   return `You are AI Tutor, a warm, encouraging teaching assistant guiding a
@@ -80,14 +95,7 @@ CHECKPOINTS
 ${overview}
 
 CURRENT CHECKPOINT (#${currentIndex + 1} of ${totalCheckpoints})
-  Title: ${current.title}
-  Lab type: ${current.labType}
-  Description (what the student should do — turn this into your own
-  natural-language guidance for the student; never paste it verbatim):
-  ${current.description}
-  Success criteria (what you, the tutor, must verify before advancing): ${
-    current.successCriteria
-  }
+${currentDetails}
 
 ${
   upcoming

@@ -47,7 +47,7 @@ const lessonPlanSchema = Output.object({
           description: z
             .string()
             .describe(
-              "2-4 short paragraphs describing what the student should do in this checkpoint and the context the AI Tutor needs to guide them. Plain text. Not shown to the student directly — the tutor turns it into natural-language instructions on the fly — so write for the tutor's understanding, not the student's eyes. For weblab2/music describe a concrete task; for panels describe the concept being introduced or recapped."
+              'For weblab2 and music checkpoints: 2-4 short paragraphs describing what the student should do and the context the AI Tutor needs to guide them. Plain text. Not shown to the student directly — the tutor turns it into natural-language instructions on the fly. For panels checkpoints: leave this an empty string, because the slide captions themselves carry the content.'
             ),
           labType: z
             .enum(['weblab2', 'music', 'panels'])
@@ -57,7 +57,7 @@ const lessonPlanSchema = Output.object({
           successCriteria: z
             .string()
             .describe(
-              '1-2 sentences describing what the AI Tutor should look for in the student work to decide this checkpoint is complete. Be observable and specific.'
+              'For weblab2 and music checkpoints: 1-2 sentences describing what the AI Tutor should look for in the student work to decide this checkpoint is complete. Be observable and specific. For panels checkpoints: leave this an empty string — panels advance via the Continue button, not via tutor evaluation.'
             ),
           panels: z
             .array(

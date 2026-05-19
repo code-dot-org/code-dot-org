@@ -155,9 +155,7 @@ const PanelsCheckpointLab: React.FC<{
       .map(p => ({caption: p.caption.trim(), imageUrl: p.imageUrl}))
       .filter(p => p.caption.length > 0);
     if (explicit.length > 0) return slidesToPanels(explicit);
-    return slidesToPanels([
-      {caption: checkpoint.description || checkpoint.title},
-    ]);
+    return slidesToPanels([{caption: checkpoint.title}]);
   }, [checkpoint]);
 
   return (
