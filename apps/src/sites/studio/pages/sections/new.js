@@ -3,6 +3,7 @@ import React from 'react';
 
 import {displayDifferentiationChat} from '@cdo/apps/aiDifferentiation/aiDiffUtils';
 import SectionsSetUpContainer from '@cdo/apps/templates/sectionsRefresh/SectionsSetUpContainer';
+import {resumeCreateSectionOnboardingTour} from '@cdo/apps/templates/studioHomepages/teacherHomepageV2/useCreateSectionTour';
 import {createReactRoot} from '@cdo/apps/util/createReactRoot';
 import getScriptData from '@cdo/apps/util/getScriptData';
 import i18n from '@cdo/locale';
@@ -31,5 +32,7 @@ $(document).ready(() => {
       legacyReactDomRender: true,
     }
   );
+  // TODO: This is hardcoded for now, but will need to incorporate logic around grade level and pass this in as a parameter in the future once we have the grade sign up flow
+  resumeCreateSectionOnboardingTour(false);
   displayDifferentiationChat();
 });

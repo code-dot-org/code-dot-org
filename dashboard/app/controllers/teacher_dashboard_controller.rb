@@ -19,7 +19,9 @@ class TeacherDashboardController < ApplicationController
   end
 
   def show
-    @sections = current_user.sections_instructed.map(&:concise_summarize)
+    @sections = current_user.sections_instructed.
+      includes(section_instructors: {instructor: :primary_contact_info}).
+      map(&:concise_summarize)
 
     unless @sections.empty?
       if @section.nil?
@@ -35,7 +37,9 @@ class TeacherDashboardController < ApplicationController
 
   def parent_letter
     @section_summary = @section.selected_section_summarize
-    @sections = current_user.sections_instructed.map(&:concise_summarize)
+    @sections = current_user.sections_instructed.
+      includes(section_instructors: {instructor: :primary_contact_info}).
+      map(&:concise_summarize)
     render layout: false
   end
 

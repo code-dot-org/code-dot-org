@@ -6,9 +6,9 @@ markdown <<MARKDOWN
 # Two-way and Nested Selection
 
 
-#### **Two-way selection**, also known as an if/else statement, is where the program chooses one path or the other depending on the condition. (Ex: Is it awkward? Is there free food?)
+**Two-way selection**, also known as an if/else statement, is where the program chooses one path or the other depending on the condition. (Ex: Is it awkward? Is there free food?)
 
-#### A **nested conditional** is an if/else statement ***inside*** another if/else statement, creating multiple paths of decision-making in a program. (Ex: Is there free food?)
+A **nested conditional** is an if/else statement ***inside*** another if/else statement, creating multiple paths of decision-making in a program. (Ex: Is there free food?)
 
 
 <img src="https://images.code.org/7bcd2cf4bb475c5601feda02d3d4b493-image-1741708282166.png" alt="A flowchart depecting is someone should go to a party." width="300px" style="display: block; margin-left: auto; margin-right: auto;">
@@ -22,7 +22,7 @@ markdown <<MARKDOWN
 
 ## Let's see what this looks like in code. 
 
-#### In the next level, study the lines of code and predict what will happen when you run the program. 
+In the next level, study the lines of code and predict what will happen when you run the program. 
 
 
 

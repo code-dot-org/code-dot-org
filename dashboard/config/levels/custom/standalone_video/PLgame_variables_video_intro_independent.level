@@ -14,7 +14,7 @@
     "parent_level_id": 27335,
     "name_suffix": "_independent",
     "encrypted": "false",
-    "long_instructions": "#### Let's take a look at how variables are used in Sprite Lab. "
+    "long_instructions": "Let's take a look at how variables are used in Sprite Lab. "
   },
   "notes": "",
   "audit_log": "[{\"changed_at\":\"2024-06-06T19:16:52.460+00:00\",\"changed\":[\"cloned from \\\"game_variables_video_intro_independent\\\"\"],\"cloned_from\":\"game_variables_video_intro_independent\"},{\"changed_at\":\"2024-07-08 21:23:10 +0000\",\"changed\":[],\"changed_by_id\":18981,\"changed_by_email\":\"melissa.toohey@code.org\"}]",

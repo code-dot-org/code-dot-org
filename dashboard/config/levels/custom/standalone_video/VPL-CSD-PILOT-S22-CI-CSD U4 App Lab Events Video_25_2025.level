@@ -10,7 +10,7 @@
     "instructions_important": "false",
     "skip_dialog": true,
     "skip_sound": true,
-    "long_instructions": "#### After learning how to add elements to the screen, students will learn how to add screens to their apps, how to import screens created by other students, and how to program events to navigate between screens.\r\n\r\n### As you watch the video, consider the following:\r\n\r\n* #### How will students create events in App Lab to respond to user input?",
+    "long_instructions": "After learning how to add elements to the screen, students will learn how to add screens to their apps, how to import screens created by other students, and how to program events to navigate between screens.\r\n\r\n### As you watch the video, consider the following:\r\n\r\n* How will students create events in App Lab to respond to user input?",
     "name_suffix": "_2025"
   },
   "published": true,

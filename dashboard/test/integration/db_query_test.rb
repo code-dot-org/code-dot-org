@@ -10,191 +10,202 @@ class DBQueryTest < ActionDispatch::IntegrationTest
   end
 
   test "script level show" do
-    student = create(:student)
-    sign_in student
+    Rails.cache.with_local_cache do
+      student = create(:student)
+      sign_in student
 
-    script = @unit
-    lesson = script.lessons.first
-    level = lesson.script_levels.first.levels.first
+      script = @unit
+      lesson = script.lessons.first
+      level = lesson.script_levels.first.levels.first
 
-    create(:user_level,
-      user: student,
-      script: script,
-      level: level,
-      level_source: create(:level_source, level: level)
-)
-
-    assert_cached_queries(18) do
-      get course_unit_lesson_script_level_path(
-        course_course_name: script.get_original_unit_group.name,
-        unit_position: 1,
-        lesson_position: 1,
-        id: 1
+      create(:user_level,
+        user: student,
+        script: script,
+        level: level,
+        level_source: create(:level_source, level: level)
       )
-      assert_response :success
+
+      assert_cached_queries(18) do
+        get course_unit_lesson_script_level_path(
+          course_course_name: script.get_original_unit_group.name,
+          unit_position: 1,
+          lesson_position: 1,
+          id: 1
+        )
+        assert_response :success
+      end
     end
   end
 
   test "user progress" do
-    student = create(:student)
-    sign_in student
+    Rails.cache.with_local_cache do
+      student = create(:student)
+      sign_in student
 
-    script = @unit
-    lesson = script.lessons.first
-    level = lesson.script_levels.first.levels.first
+      script = @unit
+      lesson = script.lessons.first
+      level = lesson.script_levels.first.levels.first
 
-    create(:user_level,
-      user: student,
-      script: script,
-      level: level,
-      level_source: create(:level_source, level: level)
-)
+      create(:user_level,
+        user: student,
+        script: script,
+        level: level,
+        level_source: create(:level_source, level: level)
+      )
 
-    user_app_options_path = user_app_options_path(
-      script: script.name,
-      lesson_position: 1,
-      level_position: 1,
-      level: level.id
-    )
+      user_app_options_path = user_app_options_path(
+        script: script.name,
+        lesson_position: 1,
+        level_position: 1,
+        level: level.id
+      )
 
-    assert_cached_queries(5) do
-      get user_app_options_path,
-        headers: {HTTP_USER_AGENT: 'test'}
-      assert_response :success
+      assert_cached_queries(5) do
+        get user_app_options_path,
+          headers: {HTTP_USER_AGENT: 'test'}
+        assert_response :success
+      end
     end
   end
 
   test "post milestone passing last level of progression" do
-    student = create(:student)
-    sign_in student
+    Rails.cache.with_local_cache do
+      student = create(:student)
+      sign_in student
 
-    script = create(:script, :with_levels, levels_count: 3)
-    course = create(:single_unit_course, unit: script)
-    sl = script.script_levels[2]
-    params = {program: 'fake program', testResult: 100, result: 'true'}
+      script = create(:script, :with_levels, levels_count: 3)
+      course = create(:single_unit_course, unit: script)
+      sl = script.script_levels[2]
+      params = {program: 'fake program', testResult: 100, result: 'true'}
 
-    setup_script_cache
-    assert_cached_queries(9) do
-      post milestone_path(
-        user_id: student.id,
-        script_level_id: sl.id,
-        course_id: course.id
-      ), params: params
-      assert_response :success
+      assert_cached_queries(8) do
+        post milestone_path(
+          user_id: student.id,
+          script_level_id: sl.id,
+          course_id: course.id
+        ), params: params
+        assert_response :success
+      end
     end
   end
 
   test "post milestone passing middle level of progression" do
-    student = create(:student)
-    sign_in student
+    Rails.cache.with_local_cache do
+      student = create(:student)
+      sign_in student
 
-    script = create(:script, :with_levels, levels_count: 3)
-    course = create(:single_unit_course, unit: script)
-    sl = script.script_levels[1]
-    params = {program: 'fake program', testResult: 100, result: 'true'}
+      script = create(:script, :with_levels, levels_count: 3)
+      course = create(:single_unit_course, unit: script)
+      sl = script.script_levels[1]
+      params = {program: 'fake program', testResult: 100, result: 'true'}
 
-    setup_script_cache
-    assert_cached_queries(7) do
-      post milestone_path(
-        user_id: student.id,
-        script_level_id: sl.id,
-        course_id: course.id
-      ), params: params
-      assert_response :success
+      Unit.clear_cache
+      assert_cached_queries(7) do
+        post milestone_path(
+          user_id: student.id,
+          script_level_id: sl.id,
+          course_id: course.id
+        ), params: params
+        assert_response :success
+      end
     end
   end
 
   test "post milestone not passing" do
-    student = create(:student)
-    sign_in student
+    Rails.cache.with_local_cache do
+      student = create(:student)
+      sign_in student
 
-    script = create(:script, :with_levels, levels_count: 3)
-    course = create(:single_unit_course, unit: script)
-    sl = script.script_levels[2]
-    params = {program: 'fake program', testResult: 0, result: 'false'}
+      script = create(:script, :with_levels, levels_count: 3)
+      course = create(:single_unit_course, unit: script)
+      sl = script.script_levels[2]
+      params = {program: 'fake program', testResult: 0, result: 'false'}
 
-    assert_cached_queries(8) do
-      post milestone_path(
-        user_id: student.id,
-        script_level_id: sl.id,
-        course_id: course.id
-      ), params: params
-      assert_response :success
+      assert_cached_queries(8) do
+        post milestone_path(
+          user_id: student.id,
+          script_level_id: sl.id,
+          course_id: course.id
+        ), params: params
+        assert_response :success
+      end
     end
   end
 
   test "student in section views uncached hoc unit" do
-    script = create(
-      :script,
-      :with_levels,
-      levels_count: 10
-    )
-    course = create(:single_unit_course, unit: script, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable, version_year: 'unversioned', family_name: 'hoc-family')
-    CourseOffering.add_course_offering(course)
+    Rails.cache.with_local_cache do
+      script = create(
+        :script,
+        :with_levels,
+        levels_count: 10
+      )
+      course = create(:single_unit_course, unit: script, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable, version_year: 'unversioned', family_name: 'hoc-family')
+      CourseOffering.add_course_offering(course)
 
-    teacher = create(:teacher)
-    section = create(:section, user: teacher)
-    student = create(:student)
-    section.students = [student]
-    student.assign_script(script)
-    sign_in student
+      teacher = create(:teacher)
+      section = create(:section, user: teacher)
+      student = create(:student)
+      section.students = [student]
+      student.assign_script(script)
+      sign_in student
 
-    assert_cached_queries(8) do
-      get "/courses/#{course.name}/units/1/"
-      assert_response :success
-    end
+      assert_cached_queries(8) do
+        get "/courses/#{course.name}/units/1/"
+        assert_response :success
+      end
 
-    # Simulate all the ajax requests which the unit overview page sends to the
-    # server on page load.
+      # Simulate all the ajax requests which the unit overview page sends to the
+      # server on page load.
 
-    assert_cached_queries(7) do
-      get "/api/user_progress/#{script.name}"
-      assert_response :success
-    end
+      assert_cached_queries(7) do
+        get "/api/user_progress/#{script.name}"
+        assert_response :success
+      end
 
-    assert_cached_queries(3) do
-      get "/api/v1/teacher_feedbacks/count?student_id=#{student.id}"
-      assert_response :success
+      assert_cached_queries(3) do
+        get "/api/v1/teacher_feedbacks/count?student_id=#{student.id}"
+        assert_response :success
+      end
     end
   end
 
   test "student in section views uncached hoc level" do
-    unit = create(
-      :script,
-      :with_levels,
-      levels_count: 10
-    )
-    course = create(:single_unit_course, unit: unit, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable, version_year: 'unversioned', family_name: 'hoc-family')
-    CourseOffering.add_course_offering(course)
+    Rails.cache.with_local_cache do
+      unit = create(
+        :script,
+        :with_levels,
+        levels_count: 10
+      )
+      course = create(:single_unit_course, unit: unit, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable, version_year: 'unversioned', family_name: 'hoc-family')
+      CourseOffering.add_course_offering(course)
 
-    # make sure the new unit is in the cache
-    setup_script_cache
+      Unit.clear_cache
+      level = unit.levels.first
 
-    level = unit.levels.first
+      teacher = create(:teacher)
+      section = create(:section, user: teacher, script: unit)
+      student = create(:student)
+      section.students = [student]
+      student.assign_script(unit)
+      sign_in student
 
-    teacher = create(:teacher)
-    section = create(:section, user: teacher, script: unit)
-    student = create(:student)
-    section.students = [student]
-    student.assign_script(unit)
-    sign_in student
+      assert_cached_queries(21) do
+        get "/courses/#{course.name}/units/1/lessons/1/levels/1"
+        assert_response :success
+      end
 
-    assert_cached_queries(21) do
-      get "/courses/#{course.name}/units/1/lessons/1/levels/1"
-      assert_response :success
-    end
+      # Simulate all the ajax requests which the level page sends to the
+      # server on page load.
 
-    # Simulate all the ajax requests which the level page sends to the
-    # server on page load.
+      assert_cached_queries(3) do
+        get "/api/user_app_options/#{unit.name}/1/1/#{level.id}"
+        assert_response :success
+      end
 
-    assert_cached_queries(3) do
-      get "/api/user_app_options/#{unit.name}/1/1/#{level.id}"
-      assert_response :success
-    end
-
-    assert_cached_queries(3) do
-      get "/levels/#{level.id}/get_rubric"
-      assert_response :success
+      assert_cached_queries(3) do
+        get "/levels/#{level.id}/get_rubric"
+        assert_response :success
+      end
     end
   end
 end

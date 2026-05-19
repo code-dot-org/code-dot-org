@@ -21,7 +21,7 @@
     "extends": "@code-dot-org/lint-config/stylelint/index.mjs"
   },
   "devDependencies": {
-    "release-it": "^18.1.2"
+    "release-it": "catalog:"
   },
   "publishConfig": {
     "registry": "https://npm.pkg.github.com"

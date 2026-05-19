@@ -52,13 +52,12 @@ export default class BackpackClientApi {
     return !!this.channelId;
   }
 
-  fetchChannelId(callback: () => void) {
-    HttpClient.fetchJson<{channel: string}>(
+  async fetchChannelId(callback?: () => void) {
+    const response = await HttpClient.fetchJson<{channel: string}>(
       `/backpacks/channel/${this.appType}`
-    ).then(response => {
-      this.channelId = response.value.channel;
-      callback();
-    });
+    );
+    this.channelId = response.value.channel;
+    callback?.();
   }
 
   // Fetch a file from the backpack, and return the file contents via callback (or call onError on failure).
@@ -104,33 +103,31 @@ export default class BackpackClientApi {
   }
 
   async getFileList(
-    onError: ErrorCallback,
-    onSuccess: (filenames: string[]) => void
-  ) {
-    if (!this.channelId && this.appType === 'javalab') {
-      onError();
-      return;
-    }
-    const fetchFiles = async () => {
-      try {
-        const response = await HttpClient.fetchJson<FileMetadata[]>(
-          rootUrl(this.channelId!)
-        );
-        const filenames = response.value.map(fileData => fileData.filename);
-        onSuccess(filenames);
-      } catch (error) {
-        onError(error as Error);
+    onError?: ErrorCallback,
+    onSuccess?: (filenames: string[]) => void
+  ): Promise<string[]> {
+    try {
+      // Only fetch channel id if we don't yet have it. Javalab includes backpack channel_id
+      // in appOptions but lab2 labs (e.g., pythonlab) do not use appOptions.
+      if (!this.channelId) {
+        if (this.appType === 'javalab') {
+          throw new Error('Missing backpack channel id for javalab');
+        }
+        await this.fetchChannelId();
       }
-    };
-
-    // Only fetch channel id if we don't yet have it. Javalab includes backpack channel_id
-    // in appOptions but lab2 labs (e.g., pythonlab) do not use appOptions.
-    if (!this.channelId) {
-      this.fetchChannelId(() => {
-        fetchFiles();
-      });
-    } else {
-      fetchFiles();
+      const response = await HttpClient.fetchJson<FileMetadata[]>(
+        rootUrl(this.channelId!)
+      );
+      const filenames = response.value.map(fileData => fileData.filename);
+      onSuccess?.(filenames);
+      return filenames;
+    } catch (error) {
+      if (onError) {
+        onError(error as Error);
+        return [];
+      } else {
+        throw error;
+      }
     }
   }
 
@@ -188,14 +185,13 @@ export default class BackpackClientApi {
   async saveCodebridgeFileFromUrl(
     filename: string,
     fileUrl: string,
-    onError: ErrorCallback,
-    onSuccess: () => void
+    onError?: ErrorCallback,
+    onSuccess?: () => void
   ) {
-    if (!this.channelId) {
-      onError();
-      return;
-    }
     try {
+      if (!this.channelId) {
+        throw new Error('Missing channel id for backpack');
+      }
       const fileResponse = await HttpClient.get(fileUrl);
       if (fileResponse.ok) {
         const responseBlob = await fileResponse.blob();
@@ -208,13 +204,17 @@ export default class BackpackClientApi {
         );
       }
     } catch (error) {
-      onError(error as Error);
-      return;
+      if (onError) {
+        onError(error as Error);
+        return;
+      } else {
+        throw error;
+      }
     }
     Object.values(this.eventListeners).forEach(listener =>
       listener(BackpackEvent.FileAdded, filename)
     );
-    onSuccess();
+    onSuccess?.();
   }
 
   async saveBlobFile(

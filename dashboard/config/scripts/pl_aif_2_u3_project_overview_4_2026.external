@@ -5,7 +5,7 @@ description 'description here'
 markdown <<MARKDOWN
 # Begin with the End in Mind: Final Project Overview
 
-#### Let's take a moment to begin with the end in mind by taking a look at the Final Project for this Unit.
+Let's take a moment to begin with the end in mind by taking a look at the Final Project for this Unit.
 
 <div style="display:flex; gap:30px; align-items:flex-start; max-width:1000px; margin:20px auto;">
 
@@ -13,11 +13,11 @@ markdown <<MARKDOWN
 
 ## Value Explorer
 
-#### In the **Value Explorer** project, students take on the role of **product designers and data stewards**, building a web app that helps users explore a curated set of items or opportunities such as side hustles, volunteer roles, or clubs.
+In the **Value Explorer** project, students take on the role of **product designers and data stewards**, building a web app that helps users explore a curated set of items or opportunities such as side hustles, volunteer roles, or clubs.
 
 <div style="background:#f7f8fa; padding:20px; border-radius:10px; box-shadow:0 4px 6px rgba(0,0,0,0.1); font-size:14pt; line-height:1.6; margin-top:15px;">
 
-<h4 style="margin-top:0; font-weight:bold;">Students will:</h4>
+<p>Students will:</p>
 
 <ul style="padding-left:20px; font-size:14pt;">
 
@@ -51,7 +51,7 @@ style="width:100%; border-radius:10px; box-shadow:0 4px 10px rgba(0,0,0,0.2);">
 
 </div>
 
-#### The result is a web app that helps users explore opportunities through different perspectives, while demonstrating that **data design and algorithms always involve choices.**
+The result is a web app that helps users explore opportunities through different perspectives, while demonstrating that **data design and algorithms always involve choices.**
 
 ---
 
@@ -63,7 +63,7 @@ style="width:100%; border-radius:10px; box-shadow:0 4px 10px rgba(0,0,0,0.2);">
 
 ## What Success Looks Like
 
-#### This project lets students apply their design and coding skills in a creative, authentic way while learning how data structures, algorithms, and values shape digital systems.
+This project lets students apply their design and coding skills in a creative, authentic way while learning how data structures, algorithms, and values shape digital systems.
 
 <div style="display:flex; justify-content:center; gap:16px; flex-wrap:wrap;">
 
@@ -98,7 +98,7 @@ Reflects on data design decisions and trade-offs made during development
 
 ## Now, let’s see how we get here!
 
-#### Arrays are up next!
+Arrays are up next!
 
 
 MARKDOWN

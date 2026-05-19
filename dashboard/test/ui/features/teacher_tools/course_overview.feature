@@ -21,7 +21,7 @@ Feature: CourseOverview
     And I press the first "input[name='grades[]']" element
     And I wait until element "button:contains(High School)" is visible
     And I click selector "button:contains(High School)"
-    And I press the first "input[name='UI Test CSP']" element
+    And I click selector "input[name='UI Test CSP']" once I see it
     And I wait until element "#assignment-version-year" is visible
     And I press "assignment-version-year"
     And I click selector ".assignment-version-title:contains('19-'20)" once I see it

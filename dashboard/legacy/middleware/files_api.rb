@@ -8,6 +8,11 @@ require 'cdo/image_moderation'
 require 'stringio'
 require 'nokogiri'
 
+# Rack's built-in mime type table doesn't include some extensions we serve.
+# Register them globally so Sinatra::Base.mime_type() resolves them correctly.
+Rack::Mime::MIME_TYPES['.webp'] = 'image/webp'
+Rack::Mime::MIME_TYPES['.md'] = 'text/markdown'
+
 class FilesApi < Sinatra::Base
   set :mustermann_opts, check_anchors: false
 
@@ -237,15 +242,7 @@ class FilesApi < Sinatra::Base
     type = File.extname(filename)
     not_found if type.empty?
     unsupported_media_type unless buckets.allowed_file_type?(type)
-    type_params = {}
-    # Sinatra does not have content types for all file extensions we
-    # serve, so we add missing ones here.
-    if type == '.md'
-      type_params = {default: 'text/markdown'}
-    elsif type == '.webp'
-      type_params = {default: 'image/webp'}
-    end
-    content_type(type, type_params)
+    content_type(type)
 
     # Unless this is hosted by codeprojects.org or is a safely viewable file type,
     # serve all files with Content-Disposition set to attachment so browsers
@@ -461,10 +458,7 @@ class FilesApi < Sinatra::Base
         details = exception.message.empty? ? nil : exception.message
         return json_bad_request(details)
       end
-      # TODO(JillianK): we are temporarily ignoring address share failures because our address detection is very broken.
-      # Once we have a better geocoding solution in H1, we should start filtering for addresses again.
-      # Additional context: https://codedotorg.atlassian.net/browse/STAR-1361
-      if share_failure && share_failure[:type] != ShareFiltering::FailureType::ADDRESS
+      if share_failure
         details_key = share_failure.type == ShareFiltering::FailureType::PROFANITY ? "profaneWords" : "pIIWords"
         details = {details_key => [share_failure.content]}
         return json_bad_request(details)

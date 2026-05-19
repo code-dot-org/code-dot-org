@@ -5,7 +5,7 @@ description 'description here'
 markdown <<MARKDOWN
 # Learning Foundations
 
-#### The AI Foundations curriculum is built upon three core foundations, guiding student practice.
+The AI Foundations curriculum is built upon three core foundations, guiding student practice.
 
 <img src="https://images.code.org/7479360e2d350345b2156ad0a54ca15b-image-1760467409776.png" alt="pie chart divided into thirds labeled: AI literacy, human-centered design, and computational thinking" width="450px" style="display: block; margin-left: auto; margin-right: auto;">
 

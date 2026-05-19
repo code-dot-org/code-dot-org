@@ -1,8 +1,8 @@
+import moment from 'moment';
 import React from 'react';
 
 import {MODEL_PARAMETER_LABELS} from '@cdo/apps/aichat/constants';
 import {selectAllVisibleMessages, sendAnalytics} from '@cdo/apps/aichat/redux';
-import {timestampToDateTime} from '@cdo/apps/aichat/redux/utils';
 import {
   ChatEvent,
   ChatEventDescriptionKey,
@@ -17,6 +17,9 @@ import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import copyToClipboard from '@cdo/apps/util/copyToClipboard';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 import {AiInteractionStatus as Status} from '@cdo/generated-scripts/sharedConstants';
+
+const timestampToDateTime = (timestamp: number) =>
+  moment(timestamp).format('YYYY-MM-DD HH:mm');
 
 const CopyChatHistoryButton: React.FunctionComponent = () => {
   const visibleMessages = useAppSelector(selectAllVisibleMessages);

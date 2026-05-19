@@ -4,14 +4,14 @@ description 'description here'
 
 markdown <<MARKDOWN
 #Make a Plan: Student Logins
-#### Thinking through how you want your students to access the course is an important part of planning for your first class. 
+Thinking through how you want your students to access the course is an important part of planning for your first class. 
 
-#### Make a plan for how you will have students log into your Code.org course. **Consider the following when making your plan:**
+Make a plan for how you will have students log into your Code.org course. **Consider the following when making your plan:**
 
-* #### Do my students already have Code.org accounts? 
-* #### What type of log in will my students use? 
-* #### How will students join my class? 
-* #### Will I have printed instructions? Will the instructions be posted somewhere? 
+* Do my students already have Code.org accounts? 
+* What type of log in will my students use? 
+* How will students join my class? 
+* Will I have printed instructions? Will the instructions be posted somewhere? 
 
 <div style="display: flex; align-items: left; margin:20px 0px 30px 0px">
 

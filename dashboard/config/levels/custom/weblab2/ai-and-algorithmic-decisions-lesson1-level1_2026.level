@@ -66,7 +66,7 @@
 
       ]
     },
-    "long_instructions": "## Explore Web App\r\n\r\nGo to Level 2 and try to use the web app.\r\n\r\nRefer to your activity guide for what to pay attention to.\r\n\r\nThen move on to Level 3.",
+    "long_instructions": "## Do This:\r\n\r\nFollow the instructions in the **Document Design Flaws** section of your [Interactivity in Web Apps](https://docs.google.com/document/d/1AtRRufIl4mUbldpHK-seyaVGiGvaUAX3IZwcpw7Ymgo/edit?usp=sharing) activity guide.\r\n",
     "name_suffix": "_2026",
     "ai_tutor_prompt_settings": {
       "answerTypes": [
@@ -75,8 +75,10 @@
       "answerTypeCustomizations": {
         "ask": "Students are exploring two versions of a web app and comparing how the interactions affect the user experience. Ask questions that prompt them to identify what feels confusing or helpful when they interact with the app, but do not explain the issues or tell them which version is better."
       }
-    }
+    },
+    "offer_browser_tts": "false",
+    "require_edit_to_continue": "false"
   },
-  "audit_log": "[{\"changed_at\":\"2026-03-20T23:40:26.161+00:00\",\"changed\":[\"cloned from \\\"ai-and-algorithmic-decisions-lesson1-level1_2025\\\"\"],\"cloned_from\":\"ai-and-algorithmic-decisions-lesson1-level1_2025\"},{\"changed_at\":\"2026-03-27 23:08:06 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-27 23:18:49 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-27 23:19:54 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-29 22:14:11 +0000\",\"changed\":[\"widget_view\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2026-03-20T23:40:26.161+00:00\",\"changed\":[\"cloned from \\\"ai-and-algorithmic-decisions-lesson1-level1_2025\\\"\"],\"cloned_from\":\"ai-and-algorithmic-decisions-lesson1-level1_2025\"},{\"changed_at\":\"2026-03-27 23:08:06 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-27 23:18:49 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-27 23:19:54 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-29 22:14:11 +0000\",\"changed\":[\"widget_view\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-05-09 01:57:41 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
 }]]></config>
 </Weblab2>

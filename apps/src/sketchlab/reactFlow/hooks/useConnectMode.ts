@@ -1,4 +1,4 @@
-import {addEdge, MarkerType, useReactFlow} from '@xyflow/react';
+import {addEdge, useReactFlow} from '@xyflow/react';
 import {useCallback, useEffect, useState} from 'react';
 
 import {
@@ -7,6 +7,7 @@ import {
 } from '@cdo/apps/lab2/types';
 
 import {canCreateConnection} from '../utils/connectionRules';
+import {defaultLineEdgeFields} from '../utils/lineEdges';
 import {getNodeLabel} from '../utils/nodeLabel';
 
 /**
@@ -35,6 +36,7 @@ interface UseConnectModeOptions {
     updater: (edges: SketchlabReactFlowEdge[]) => SketchlabReactFlowEdge[]
   ) => void;
   announce: (message: string) => void;
+  pushSnapshot: () => void;
 }
 
 /**
@@ -47,6 +49,7 @@ export function useConnectMode({
   nodes,
   setEdges,
   announce,
+  pushSnapshot,
 }: UseConnectModeOptions) {
   const {getNode} = useReactFlow<
     SketchlabReactFlowNode,
@@ -97,6 +100,7 @@ export function useConnectMode({
         return;
       }
       const handles = pickHandles(sourceNode, targetNode);
+      pushSnapshot();
       setEdges(currentEdges => {
         if (!canCreateConnection(connectingFrom, targetNodeId, nodes)) {
           return currentEdges;
@@ -106,7 +110,7 @@ export function useConnectMode({
             source: connectingFrom,
             target: targetNodeId,
             ...handles,
-            markerEnd: {type: MarkerType.ArrowClosed},
+            ...defaultLineEdgeFields(),
           },
           currentEdges
         );
@@ -114,7 +118,7 @@ export function useConnectMode({
       announce(`Edge created to ${getNodeLabel(targetNode)}.`);
       setConnectingFrom(null);
     },
-    [connectingFrom, getNode, nodes, setEdges, announce]
+    [connectingFrom, getNode, nodes, pushSnapshot, setEdges, announce]
   );
 
   return {

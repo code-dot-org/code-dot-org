@@ -53,7 +53,7 @@ class UnitTest < ActiveSupport::TestCase
   end
 
   def populate_cache_and_disconnect_db
-    Unit.stubs(:should_cache?).returns true
+    setup_script_cache
     # Only need to populate cache once per test-suite run
     @@script_cached ||= Unit.unit_cache_to_cache
     Unit.script_cache
@@ -431,7 +431,7 @@ class UnitTest < ActiveSupport::TestCase
   end
 
   test 'has_other_versions? makes no queries when there is one other unit group version' do
-    Unit.stubs(:should_cache?).returns true
+    setup_script_cache
 
     csp_2017 = create(:unit_group, name: 'csp-2017', family_name: 'csp', version_year: '2017')
     csp1_2017 = create(:script, name: 'csp1-2017')
@@ -450,7 +450,7 @@ class UnitTest < ActiveSupport::TestCase
   end
 
   test 'has_other_versions? makes no queries when there are no other unit group versions' do
-    Unit.stubs(:should_cache?).returns true
+    setup_script_cache
 
     csp_2017 = create(:unit_group, name: 'csp-2017', family_name: 'csp', version_year: '2017')
     csp1_2017 = create(:script, name: 'csp1-2017')
@@ -2158,6 +2158,18 @@ class UnitTest < ActiveSupport::TestCase
         @single_unit.clone_migrated_unit('coursename2-2021', destination_unit_group_name: versionless_unit_group.name)
       end
     end
+  end
+
+  test 'finish_url for hoai pl unit returns certificate url, not hoc finish url' do
+    unit = create(:script)
+    course = create(:single_unit_course, unit: unit, instructor_audience: 'facilitator', participant_audience: 'teacher')
+    CourseOffering.add_course_offering(course).update!(marketing_initiative: 'HOAI')
+    unit.reload
+
+    assert unit.hoc_or_hoai?
+    assert unit.pl_course?
+    encoded_course_name = ERB::Util.url_encode(Base64.urlsafe_encode64(course.name))
+    assert_equal "#{CDO.default_scheme}//test-studio.code.org/congrats?s=#{encoded_course_name}", unit.finish_url
   end
 
   test 'finish_url returns unit group finish url if in a unit group' do

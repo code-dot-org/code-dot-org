@@ -375,38 +375,42 @@ module Pd::Application
     end
 
     test 'school cache' do
-      school = create(:school)
-      form_data_hash = build(:pd_teacher_application_hash, school: school)
-      application = create(:pd_teacher_application, form_data_hash: form_data_hash)
+      Rails.cache.with_local_cache do
+        school = create(:school)
+        form_data_hash = build(:pd_teacher_application_hash, school: school)
+        application = create(:pd_teacher_application, form_data_hash: form_data_hash)
 
-      # Original query: School, SchoolDistrict
-      assert_queries 2 do
-        assert_equal school.name.titleize, application.school_name
-        assert_equal school.school_district.name.titleize, application.district_name
-      end
+        # Original query: School, SchoolDistrict
+        assert_queries 2 do
+          assert_equal school.name.titleize, application.school_name
+          assert_equal school.school_district.name.titleize, application.district_name
+        end
 
-      # Cached
-      assert_queries 0 do
-        assert_equal school.name.titleize, application.school_name
-        assert_equal school.school_district.name.titleize, application.district_name
+        # Cached
+        assert_queries 0 do
+          assert_equal school.name.titleize, application.school_name
+          assert_equal school.school_district.name.titleize, application.district_name
+        end
       end
     end
 
     test 'cache prefetch' do
-      school = create(:school)
-      workshop = create(:workshop)
-      form_data_hash = build(:pd_teacher_application_hash, school: school)
-      application = create(:pd_teacher_application, form_data_hash: form_data_hash, pd_workshop_id: workshop.id)
+      Rails.cache.with_local_cache do
+        school = create(:school)
+        workshop = create(:workshop)
+        form_data_hash = build(:pd_teacher_application_hash, school: school)
+        application = create(:pd_teacher_application, form_data_hash: form_data_hash, pd_workshop_id: workshop.id)
 
-      # Workshop, Session, Enrollment, School, SchoolDistrict
-      assert_queries 5 do
-        TeacherApplication.prefetch_associated_models([application])
-      end
+        # Workshop, Session, Enrollment, School, SchoolDistrict
+        assert_queries 5 do
+          TeacherApplication.prefetch_associated_models([application])
+        end
 
-      assert_queries 0 do
-        assert_equal school.name.titleize, application.school_name
-        assert_equal school.school_district.name.titleize, application.district_name
-        assert_equal workshop, application.workshop
+        assert_queries 0 do
+          assert_equal school.name.titleize, application.school_name
+          assert_equal school.school_district.name.titleize, application.district_name
+          assert_equal workshop, application.workshop
+        end
       end
     end
 
@@ -1029,15 +1033,17 @@ module Pd::Application
     end
 
     test 'associated models cache prefetch' do
-      workshop = create(:workshop)
-      application = create(:pd_teacher_application, pd_workshop_id: workshop.id)
-      # Workshops, Sessions, Enrollments, Schools, School districts
-      assert_queries 5 do
-        TeacherApplication.prefetch_associated_models([application])
-      end
+      Rails.cache.with_local_cache do
+        workshop = create(:workshop)
+        application = create(:pd_teacher_application, pd_workshop_id: workshop.id)
+        # Workshops, Sessions, Enrollments, Schools, School districts
+        assert_queries 5 do
+          TeacherApplication.prefetch_associated_models([application])
+        end
 
-      assert_queries 0 do
-        assert_equal workshop, application.workshop
+        assert_queries 0 do
+          assert_equal workshop, application.workshop
+        end
       end
     end
 

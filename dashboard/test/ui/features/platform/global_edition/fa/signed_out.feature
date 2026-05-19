@@ -3,8 +3,7 @@
 @no_mobile
 Feature: Global Edition - Farsi Headers when Signed Out
   Background:
-    Given Global Edition is enabled
-    And I set the language cookie
+    Given I set the language cookie
 
   Scenario: Signed out user should see the correct header links on Dashboard
     Given I am on "http://studio.code.org/fa/users/sign_in?lang=fa-IR"

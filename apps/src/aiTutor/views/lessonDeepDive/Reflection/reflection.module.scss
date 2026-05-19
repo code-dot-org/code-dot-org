@@ -1,0 +1,204 @@
+$teal: #00818f;
+$purple: hsl(271deg 58% 65%);
+
+// ── ReflectionBox ─────────────────────────────────────────────────────────────
+
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  color: #fff;
+  max-width: 460px;
+}
+
+.sectionLabel {
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: rgba(255 255 255 / 0.5);
+  margin: 0 0 12px;
+}
+
+.reflectionHeading {
+  font-family: var(--font-family-barlow-semi-condensed-semibold) !important;
+  font-size: clamp(2rem, 7vw, 3rem) !important;
+  font-weight: 800 !important;
+  color: #fff !important;
+  line-height: 1.1 !important;
+  margin: 0 0 6px !important;
+}
+
+.reflectionSubheading {
+  font-size: 0.95rem;
+  color: rgba(255 255 255 / 0.65);
+  margin: 0 0 24px;
+  max-width: 420px;
+}
+
+.objectivesList {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 28px;
+}
+
+.objectiveCard {
+  background: #424d59;
+  border: 1px solid #69788a;
+  border-radius: 4px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.objectiveDescription {
+  font-size: 1rem;
+  color: #f0f2f5;
+  margin: 0;
+  line-height: 1.48;
+}
+
+// Segmented button row — buttons share collapsed borders
+.ratingButtons {
+  display: flex;
+  width: 100%;
+}
+
+.ratingButton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  flex: 1;
+  padding: 8px 12px;
+  border: 1px solid #a1aebb;
+  background: #292f36;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  white-space: nowrap;
+  // Collapse adjacent borders
+  margin-right: -1px;
+  border-radius: 0;
+  transition: background-color 0.12s ease, border-color 0.12s ease;
+
+  &:first-child {
+    border-radius: 4px 0 0 4px;
+  }
+
+  &:last-child {
+    border-radius: 0 4px 4px 0;
+    margin-right: 0;
+  }
+
+  &:hover:not(.ratingButtonActive) {
+    background: rgba(255 255 255 / 0.08);
+  }
+
+  &:focus-visible {
+    outline: 2px solid $teal;
+    outline-offset: 2px;
+    z-index: 1;
+    position: relative;
+  }
+}
+
+.ratingButtonActive {
+  background: $teal;
+  border-color: $teal;
+  color: #fff;
+  // Lift above neighbours so its border paints over theirs
+  position: relative;
+  z-index: 1;
+}
+
+// ── "Anything else?" section ──────────────────────────────────────────────────
+
+.anythingElse {
+  margin-bottom: 24px;
+}
+
+.anythingElseLabel {
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: rgba(255 255 255 / 0.5);
+  margin: 0 0 16px;
+}
+
+.textAreaGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.textAreaLabel {
+  font-size: 0.95rem;
+  color: rgba(255 255 255 / 0.85);
+  font-weight: 500;
+  margin: 0 0 6px;
+}
+
+.textArea {
+  width: 100%;
+  box-sizing: border-box;
+  background: rgba(255 255 255 / 0.05);
+  border: 1px solid rgba(255 255 255 / 0.15);
+  border-radius: 8px;
+  color: #fff;
+  font-size: 0.9rem;
+  padding: 10px 12px;
+  resize: vertical;
+  min-height: 72px;
+  font-family: inherit;
+  transition: border-color 0.15s ease;
+
+  &::placeholder {
+    color: rgba(255 255 255 / 0.3);
+  }
+
+  &:focus {
+    outline: none;
+    border-color: $teal;
+  }
+}
+
+// ── Submit button ─────────────────────────────────────────────────────────────
+
+.submitButton {
+  display: inline-flex;
+  width: 250px;
+  padding: 10px 16px;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  margin-top: 25px;
+  background: var(--background-brand-purple-primary, #9657c7);
+  border: none;
+  border-radius: 4px;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.12s ease;
+
+  &:hover:not(:disabled) {
+    background: var(--background-brand-purple-hover, #7d42ad);
+  }
+
+  &:disabled {
+    opacity: 0.5;
+    cursor: default;
+  }
+
+  &:focus-visible {
+    outline: 2px solid var(--background-brand-purple-focus, #a374d6);
+    outline-offset: 2px;
+  }
+}

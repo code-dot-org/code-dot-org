@@ -1,13 +1,10 @@
+import {ActionDropdown} from '@code-dot-org/component-library/dropdown';
+import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
 
-import PopUpMenu, {MenuBreak} from '@cdo/apps/sharedComponents/PopUpMenu';
 import i18n from '@cdo/locale';
-
-import QuickActionsCell, {
-  QuickActionsCellType,
-} from '../tables/QuickActionsCell';
 
 import ControlProjectSharingDialog from './ControlProjectSharingDialog';
 import {setShowSharingColumn} from './manageStudentsRedux';
@@ -35,26 +32,49 @@ class ManageStudentsActionsHeaderCell extends Component {
     this.props.editAll();
   };
 
-  render() {
+  buildOptions() {
     const {isShareColumnVisible, hideSharingColumn} = this.props;
+    const options = [
+      {
+        value: 'edit-all',
+        label: i18n.editAll(),
+        icon: {iconName: 'pen'},
+        onClick: this.onEditAll,
+      },
+    ];
+    if (!isShareColumnVisible) {
+      options.push({
+        value: 'control-project-sharing',
+        label: i18n.controlProjectSharing(),
+        icon: {iconName: 'share-nodes'},
+        onClick: this.openProjectSharingDialog,
+      });
+    } else {
+      options.push({
+        value: 'hide-sharing-column',
+        label: i18n.hideProjectSharingColumn(),
+        icon: {iconName: 'eye-slash'},
+        onClick: hideSharingColumn,
+      });
+    }
+    return options;
+  }
+
+  render() {
     return (
       <div>
-        <QuickActionsCell type={QuickActionsCellType.header}>
-          <PopUpMenu.Item onClick={this.onEditAll}>
-            {i18n.editAll()}
-          </PopUpMenu.Item>
-          <MenuBreak />
-          {!isShareColumnVisible && (
-            <PopUpMenu.Item onClick={this.openProjectSharingDialog}>
-              {i18n.controlProjectSharing()}
-            </PopUpMenu.Item>
-          )}
-          {isShareColumnVisible && (
-            <PopUpMenu.Item onClick={hideSharingColumn}>
-              {i18n.hideProjectSharingColumn()}
-            </PopUpMenu.Item>
-          )}
-        </QuickActionsCell>
+        <ActionDropdown
+          name="student-header-actions"
+          labelText={i18n.actions()}
+          size="s"
+          menuPlacement="right"
+          options={this.buildOptions()}
+          triggerButtonProps={{
+            color: 'tertiary',
+            variant: 'text',
+            children: <FontAwesomeV6Icon iconName="gear" />,
+          }}
+        />
         <ControlProjectSharingDialog
           isDialogOpen={this.state.isProjectSharingDialogOpen}
           closeDialog={this.closeProjectSharingDialog}

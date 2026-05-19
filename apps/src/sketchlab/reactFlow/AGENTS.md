@@ -18,7 +18,8 @@ tool for making interactive diagrams, used by students in grades 6-12.
 - Use human-readable variable names. Prefer names such as `newWidth` over `newW`, or `element` or `e`.
 - Use constants for any magic numbers.
 - Ensure eslint passes. Run `./tools/hooks/pre-commit` from the repo root after making changes to verify.
-- CSS module names should be in kebab-case.
+- CSS module class names should be camelCase so they can be accessed
+  via `styles.someClass` rather than `styles['some-class']`.
 - Write comments in plain English, avoiding dense jargon.
 - Memoize derived values that are non-trivial to compute. The view re-renders
   frequently, so bias towards wrapping any non-trivial (more than O(1)) computation in `useMemo`.

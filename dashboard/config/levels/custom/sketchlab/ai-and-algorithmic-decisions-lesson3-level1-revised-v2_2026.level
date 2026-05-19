@@ -1,5 +1,6 @@
 <Sketchlab>
   <config><![CDATA[{
+  "published": true,
   "game_id": 75,
   "created_at": "2026-04-08T06:21:19.000Z",
   "level_num": "custom",
@@ -8,497 +9,337 @@
     "encrypted": "false",
     "start_sources": {
       "source": {
-        "type": "excalidraw",
-        "version": 2,
-        "source": "https://levelbuilder-studio.code.org",
-        "elements": [
+        "nodes": [
           {
-            "type": "image",
-            "version": 185,
-            "versionNonce": 1098852240,
-            "isDeleted": false,
             "id": "yPhmpDGmGgMNt6TYK4Wn4",
-            "fillStyle": "solid",
-            "strokeWidth": 2,
-            "strokeStyle": "solid",
-            "roughness": 1,
-            "opacity": 100,
-            "angle": 0,
-            "x": 1301.0054774680737,
-            "y": 204.5367028285723,
-            "strokeColor": "transparent",
-            "backgroundColor": "transparent",
-            "width": 2730.7191516467497,
-            "height": 2894.295237747838,
-            "seed": 1826578144,
-            "groupIds": [
-
-            ],
-            "frameId": null,
-            "roundness": null,
-            "boundElements": [
-
-            ],
-            "updated": 1776389268621,
-            "link": null,
-            "locked": true,
-            "status": "pending",
-            "fileId": "59e13b80f3694a1432c93a7a5cb37662fbe98678",
-            "scale": [
-              1,
-              1
-            ]
+            "type": "image",
+            "position": {
+              "x": 2252.062174270963,
+              "y": 122.43463344933309
+            },
+            "style": {
+              "width": 2730.7191516467497,
+              "height": 2894.295237747838
+            },
+            "data": {
+              "src": "/level_starter_assets/ai-and-algorithmic-decisions-lesson3-level1-revised-v2_2026/uuid/59e13b80f3694a1432c93a7a5cb37662fbe98678.png",
+              "altText": "",
+              "showHandles": false,
+              "locked": true
+            },
+            "measured": {
+              "width": 1429,
+              "height": 1945
+            },
+            "dragging": false,
+            "width": 1429,
+            "height": 1945,
+            "resizing": false
           },
           {
-            "type": "ellipse",
-            "version": 78,
-            "versionNonce": 1997855088,
-            "isDeleted": false,
             "id": "4zr8acwdX20Pxh-EwqVCb",
-            "fillStyle": "hachure",
-            "strokeWidth": 2,
-            "strokeStyle": "solid",
-            "roughness": 1,
-            "opacity": 100,
-            "angle": 0,
-            "x": 4106.1403532844215,
-            "y": 248.39352544919836,
-            "strokeColor": "#1e1e1e",
-            "backgroundColor": "#ffc9c9",
-            "width": 496.62337416741866,
-            "height": 496.62337416741866,
-            "seed": 1584644896,
-            "groupIds": [
-
-            ],
-            "frameId": null,
-            "roundness": {
-              "type": 2
+            "type": "shape",
+            "position": {
+              "x": 3823.9957528478467,
+              "y": 425.0509405198866
             },
-            "boundElements": [
-
-            ],
-            "updated": 1776389268621,
-            "link": null,
-            "locked": false
+            "style": {
+              "width": 496.62337416741866,
+              "height": 496.62337416741866
+            },
+            "data": {
+              "shapeType": "circle",
+              "label": "",
+              "backgroundColor": "var(--sketchlab-bg-pink)",
+              "strokeColor": "#1e1e1e",
+              "showHandles": false
+            },
+            "measured": {
+              "width": 97,
+              "height": 85
+            },
+            "dragging": false,
+            "width": 97,
+            "height": 85,
+            "resizing": false
           },
           {
-            "type": "ellipse",
-            "version": 95,
-            "versionNonce": 1414772112,
-            "isDeleted": false,
             "id": "F0M7bJmFZKBrLLcDPbBN3",
-            "fillStyle": "hachure",
-            "strokeWidth": 2,
-            "strokeStyle": "solid",
-            "roughness": 1,
-            "opacity": 100,
-            "angle": 0,
-            "x": 4106.1403532844215,
-            "y": 789.585663964976,
-            "strokeColor": "#1e1e1e",
-            "backgroundColor": "#b2f2bb",
-            "width": 496.62337416741866,
-            "height": 496.62337416741866,
-            "seed": 1132463904,
-            "groupIds": [
-
-            ],
-            "frameId": null,
-            "roundness": {
-              "type": 2
+            "type": "shape",
+            "position": {
+              "x": 3829.157492154667,
+              "y": 794.6712339709123
             },
-            "boundElements": [
-
-            ],
-            "updated": 1776389268621,
-            "link": null,
-            "locked": false
+            "style": {
+              "width": 496.62337416741866,
+              "height": 496.62337416741866
+            },
+            "data": {
+              "shapeType": "circle",
+              "label": "",
+              "backgroundColor": "var(--sketchlab-bg-green)",
+              "strokeColor": "#1e1e1e",
+              "showHandles": false
+            },
+            "measured": {
+              "width": 80,
+              "height": 64
+            },
+            "width": 80,
+            "height": 64,
+            "resizing": false,
+            "dragging": false
           },
           {
-            "type": "ellipse",
-            "version": 108,
-            "versionNonce": 337128304,
-            "isDeleted": false,
             "id": "2La-uVSnTFsgDfTIkl1Et",
-            "fillStyle": "hachure",
-            "strokeWidth": 2,
-            "strokeStyle": "solid",
-            "roughness": 1,
-            "opacity": 100,
-            "angle": 0,
-            "x": 4110.384997508074,
-            "y": 1337.144768816233,
-            "strokeColor": "#1e1e1e",
-            "backgroundColor": "#a5d8ff",
-            "width": 496.62337416741866,
-            "height": 496.62337416741866,
-            "seed": 2071042848,
-            "groupIds": [
-
-            ],
-            "frameId": null,
-            "roundness": {
-              "type": 2
+            "type": "shape",
+            "position": {
+              "x": 3841.539844454999,
+              "y": 1168.8420372775906
             },
-            "boundElements": [
-
-            ],
-            "updated": 1776389268621,
-            "link": null,
-            "locked": false
+            "style": {
+              "width": 496.62337416741866,
+              "height": 496.62337416741866
+            },
+            "data": {
+              "shapeType": "circle",
+              "label": "",
+              "backgroundColor": "var(--sketchlab-bg-blue)",
+              "strokeColor": "#1e1e1e",
+              "showHandles": false
+            },
+            "measured": {
+              "width": 80,
+              "height": 67
+            },
+            "dragging": false,
+            "width": 80,
+            "height": 67,
+            "resizing": false
           },
           {
-            "type": "ellipse",
-            "version": 109,
-            "versionNonce": 2036761488,
-            "isDeleted": false,
             "id": "NwbKvZ5hsQSX9W_vHmh1Y",
-            "fillStyle": "cross-hatch",
-            "strokeWidth": 2,
-            "strokeStyle": "solid",
-            "roughness": 1,
-            "opacity": 100,
-            "angle": 0,
-            "x": 4106.1403532844215,
-            "y": 1888.9485178911436,
-            "strokeColor": "#1e1e1e",
-            "backgroundColor": "#ffec99",
-            "width": 496.62337416741866,
-            "height": 496.62337416741866,
-            "seed": 1334621984,
-            "groupIds": [
-
-            ],
-            "frameId": null,
-            "roundness": {
-              "type": 2
+            "type": "shape",
+            "position": {
+              "x": 3835.7078562556026,
+              "y": 1562.9270369273274
             },
-            "boundElements": [
-
-            ],
-            "updated": 1776389268621,
-            "link": null,
-            "locked": false
+            "style": {
+              "width": 496.62337416741866,
+              "height": 496.62337416741866
+            },
+            "data": {
+              "shapeType": "circle",
+              "label": "",
+              "backgroundColor": "var(--sketchlab-bg-yellow)",
+              "strokeColor": "#1e1e1e",
+              "showHandles": false
+            },
+            "measured": {
+              "width": 80,
+              "height": 72
+            },
+            "width": 80,
+            "height": 72,
+            "resizing": false,
+            "dragging": false
           },
           {
-            "type": "rectangle",
-            "version": 300,
-            "versionNonce": 417414512,
-            "isDeleted": false,
             "id": "4S7FgUeiboK9ICX3o5FZ1",
-            "fillStyle": "hachure",
-            "strokeWidth": 2,
-            "strokeStyle": "solid",
-            "roughness": 1,
-            "opacity": 100,
-            "angle": 0,
-            "x": 4656.85807298396,
-            "y": 201.70243898901379,
-            "strokeColor": "#1e1e1e",
-            "backgroundColor": "#ffc9c9",
-            "width": 1168.479936546122,
-            "height": 514.2454488467044,
-            "seed": 611886816,
-            "groupIds": [
-
-            ],
-            "frameId": null,
-            "roundness": {
-              "type": 3
+            "type": "shape",
+            "position": {
+              "x": 3972.120264895966,
+              "y": 326.41849865180126
             },
-            "boundElements": [
-
-            ],
-            "updated": 1776389268621,
-            "link": null,
-            "locked": false
+            "style": {
+              "width": 1168.479936546122,
+              "height": 514.2454488467044
+            },
+            "data": {
+              "shapeType": "rectangle",
+              "label": "",
+              "backgroundColor": "var(--sketchlab-bg-pink)",
+              "strokeColor": "#1e1e1e",
+              "showHandles": false,
+              "locked": true
+            },
+            "measured": {
+              "width": 1152,
+              "height": 366
+            },
+            "dragging": false,
+            "width": 1152,
+            "height": 366,
+            "resizing": false
           },
           {
-            "type": "text",
-            "version": 438,
-            "versionNonce": 602554768,
-            "isDeleted": false,
             "id": "4qhvwEyc411qWMHQnpFaQ",
-            "fillStyle": "hachure",
-            "strokeWidth": 2,
-            "strokeStyle": "solid",
-            "roughness": 1,
-            "opacity": 100,
-            "angle": 0,
-            "x": 4683.995320631368,
-            "y": 283.2890351698542,
-            "strokeColor": "#1e1e1e",
-            "backgroundColor": "#ffc9c9",
-            "width": 937.157263236345,
-            "height": 358.61357776082286,
-            "seed": 599705376,
-            "groupIds": [
-
-            ],
-            "frameId": null,
-            "roundness": null,
-            "boundElements": [
-
-            ],
-            "updated": 1776389279633,
-            "link": null,
-            "locked": false,
-            "fontSize": 57.37817244173159,
-            "fontFamily": 1,
-            "text": "The value right now is ...\n\nIt might change when the user ...\n\nThe value might change to ....",
-            "textAlign": "left",
-            "verticalAlign": "top",
-            "containerId": null,
-            "originalText": "The value right now is ...\n\nIt might change when the user ...\n\nThe value might change to ....",
-            "lineHeight": 1.25,
-            "baseline": 337.00000000000045
+            "type": "text",
+            "position": {
+              "x": 4028.2518970467754,
+              "y": 413.5531006220193
+            },
+            "data": {
+              "text": "The value right now is ...\n\nIt might change when the user ...\n\nThe value might change to ....",
+              "fontColor": "var(--sketchlab-stroke-default)",
+              "fontSize": "large",
+              "showHandles": false
+            },
+            "measured": {
+              "width": 336,
+              "height": 160
+            },
+            "dragging": false
           },
           {
-            "type": "rectangle",
-            "version": 318,
-            "versionNonce": 112725872,
-            "isDeleted": false,
             "id": "4hA6fdVImHawpGlUqPfx3",
-            "fillStyle": "hachure",
-            "strokeWidth": 2,
-            "strokeStyle": "solid",
-            "roughness": 1,
-            "opacity": 100,
-            "angle": 0,
-            "x": 4660.0410966295285,
-            "y": 763.6624779451598,
-            "strokeColor": "#1e1e1e",
-            "backgroundColor": "#b2f2bb",
-            "width": 1168.479936546122,
-            "height": 514.2454488467044,
-            "seed": 52786912,
-            "groupIds": [
-
-            ],
-            "frameId": null,
-            "roundness": {
-              "type": 3
+            "type": "shape",
+            "position": {
+              "x": 3967.769542140607,
+              "y": 735.6624779451598
             },
-            "boundElements": [
-
-            ],
-            "updated": 1776389268621,
-            "link": null,
-            "locked": false
+            "style": {
+              "width": 1168.479936546122,
+              "height": 514.2454488467044
+            },
+            "data": {
+              "shapeType": "rectangle",
+              "label": "",
+              "backgroundColor": "var(--sketchlab-bg-green)",
+              "strokeColor": "#1e1e1e",
+              "showHandles": false,
+              "locked": true
+            },
+            "measured": {
+              "width": 1144,
+              "height": 360
+            },
+            "dragging": false,
+            "width": 1144,
+            "height": 360,
+            "resizing": false
           },
           {
-            "type": "rectangle",
-            "version": 354,
-            "versionNonce": 1977917808,
-            "isDeleted": false,
             "id": "E0_XEMKJFUdSkV_U2o71X",
-            "fillStyle": "hachure",
-            "strokeWidth": 2,
-            "strokeStyle": "solid",
-            "roughness": 1,
-            "opacity": 100,
-            "angle": 0,
-            "x": 4655.9043149963,
-            "y": 1309.7176535314925,
-            "strokeColor": "#1e1e1e",
-            "backgroundColor": "#a5d8ff",
-            "width": 1168.479936546122,
-            "height": 514.2454488467044,
-            "seed": 1307780896,
-            "groupIds": [
-
-            ],
-            "frameId": null,
-            "roundness": {
-              "type": 3
+            "type": "shape",
+            "position": {
+              "x": 3965.656038295773,
+              "y": 1130.9285002086638
             },
-            "boundElements": [
-
-            ],
-            "updated": 1776389268621,
-            "link": null,
-            "locked": false
+            "style": {
+              "width": 1168.479936546122,
+              "height": 514.2454488467044
+            },
+            "data": {
+              "shapeType": "rectangle",
+              "label": "",
+              "backgroundColor": "var(--sketchlab-bg-blue)",
+              "strokeColor": "#1e1e1e",
+              "showHandles": false,
+              "locked": true
+            },
+            "measured": {
+              "width": 1138,
+              "height": 364
+            },
+            "width": 1138,
+            "height": 364,
+            "resizing": false,
+            "dragging": false
           },
           {
-            "type": "rectangle",
-            "version": 382,
-            "versionNonce": 900658032,
-            "isDeleted": false,
             "id": "LBqlg3lj-ItcRqXS04iYz",
-            "fillStyle": "hachure",
-            "strokeWidth": 2,
-            "strokeStyle": "solid",
-            "roughness": 1,
-            "opacity": 100,
-            "angle": 0,
-            "x": 4672.451441529218,
-            "y": 1864.046392384283,
-            "strokeColor": "#1e1e1e",
-            "backgroundColor": "#ffec99",
-            "width": 1168.479936546122,
-            "height": 514.2454488467044,
-            "seed": 2142556896,
-            "groupIds": [
-
-            ],
-            "frameId": null,
-            "roundness": {
-              "type": 3
+            "type": "shape",
+            "position": {
+              "x": 3961.8498052250898,
+              "y": 1518.3104578364482
             },
-            "boundElements": [
-
-            ],
-            "updated": 1776389268621,
-            "link": null,
-            "locked": false
+            "style": {
+              "width": 1168.479936546122,
+              "height": 514.2454488467044
+            },
+            "data": {
+              "shapeType": "rectangle",
+              "label": "",
+              "backgroundColor": "var(--sketchlab-bg-yellow)",
+              "strokeColor": "#1e1e1e",
+              "showHandles": false,
+              "locked": true
+            },
+            "measured": {
+              "width": 1130,
+              "height": 326
+            },
+            "dragging": false,
+            "width": 1130,
+            "height": 326,
+            "resizing": false
           },
           {
-            "type": "text",
-            "version": 488,
-            "versionNonce": 489762192,
-            "isDeleted": false,
             "id": "Uu9nodkKpFprvRj7QyENP",
-            "fillStyle": "hachure",
-            "strokeWidth": 2,
-            "strokeStyle": "solid",
-            "roughness": 1,
-            "opacity": 100,
-            "angle": 0,
-            "x": 4696.07498147634,
-            "y": 1959.4092128331954,
-            "strokeColor": "#1e1e1e",
-            "backgroundColor": "#ffc9c9",
-            "width": 937.157263236345,
-            "height": 358.61357776082286,
-            "seed": 353828752,
-            "groupIds": [
-
-            ],
-            "frameId": null,
-            "roundness": null,
-            "boundElements": [
-
-            ],
-            "updated": 1776389289184,
-            "link": null,
-            "locked": false,
-            "fontSize": 57.37817244173159,
-            "fontFamily": 1,
-            "text": "The value right now is ...\n\nIt might change when the user ...\n\nThe value might change to ....",
-            "textAlign": "left",
-            "verticalAlign": "top",
-            "containerId": null,
-            "originalText": "The value right now is ...\n\nIt might change when the user ...\n\nThe value might change to ....",
-            "lineHeight": 1.25,
-            "baseline": 337
+            "type": "text",
+            "position": {
+              "x": 4038.529606980873,
+              "y": 1579.343196470154
+            },
+            "data": {
+              "text": "The value right now is ...\n\nIt might change when the user ...\n\nThe value might change to ....",
+              "fontColor": "var(--sketchlab-stroke-default)",
+              "fontSize": "large",
+              "showHandles": false
+            },
+            "measured": {
+              "width": 336,
+              "height": 160
+            },
+            "dragging": false
           },
           {
-            "type": "text",
-            "version": 474,
-            "versionNonce": 239741808,
-            "isDeleted": false,
             "id": "QL-9IpyFkSuFimSjdbCFK",
-            "fillStyle": "hachure",
-            "strokeWidth": 2,
-            "strokeStyle": "solid",
-            "roughness": 1,
-            "opacity": 100,
-            "angle": 0,
-            "x": 4691.432950556065,
-            "y": 841.8728934925563,
-            "strokeColor": "#1e1e1e",
-            "backgroundColor": "#ffc9c9",
-            "width": 937.157263236345,
-            "height": 358.61357776082286,
-            "seed": 1454118768,
-            "groupIds": [
-
-            ],
-            "frameId": null,
-            "roundness": null,
-            "boundElements": [
-
-            ],
-            "updated": 1776389294434,
-            "link": null,
-            "locked": false,
-            "fontSize": 57.37817244173159,
-            "fontFamily": 1,
-            "text": "The value right now is ...\n\nIt might change when the user ...\n\nThe value might change to ....",
-            "textAlign": "left",
-            "verticalAlign": "top",
-            "containerId": null,
-            "originalText": "The value right now is ...\n\nIt might change when the user ...\n\nThe value might change to ....",
-            "lineHeight": 1.25,
-            "baseline": 337
+            "type": "text",
+            "position": {
+              "x": 4037.9535924236397,
+              "y": 821.7408607664737
+            },
+            "data": {
+              "text": "The value right now is ...\n\nIt might change when the user ...\n\nThe value might change to ....",
+              "fontColor": "var(--sketchlab-stroke-default)",
+              "fontSize": "large",
+              "showHandles": false
+            },
+            "measured": {
+              "width": 336,
+              "height": 160
+            },
+            "dragging": false
           },
           {
-            "type": "text",
-            "version": 492,
-            "versionNonce": 1091777904,
-            "isDeleted": false,
             "id": "UgefCEtDcFO25EKvuGLJg",
-            "fillStyle": "hachure",
-            "strokeWidth": 2,
-            "strokeStyle": "solid",
-            "roughness": 1,
-            "opacity": 100,
-            "angle": 0,
-            "x": 4689.139899137617,
-            "y": 1381.9890373567152,
-            "strokeColor": "#1e1e1e",
-            "backgroundColor": "#ffc9c9",
-            "width": 937.157263236345,
-            "height": 358.61357776082286,
-            "seed": 239139696,
-            "groupIds": [
-
-            ],
-            "frameId": null,
-            "roundness": null,
-            "boundElements": [
-
-            ],
-            "updated": 1776389292967,
-            "link": null,
-            "locked": false,
-            "fontSize": 57.37817244173159,
-            "fontFamily": 1,
-            "text": "The value right now is ...\n\nIt might change when the user ...\n\nThe value might change to ....",
-            "textAlign": "left",
-            "verticalAlign": "top",
-            "containerId": null,
-            "originalText": "The value right now is ...\n\nIt might change when the user ...\n\nThe value might change to ....",
-            "lineHeight": 1.25,
-            "baseline": 337
+            "type": "text",
+            "position": {
+              "x": 4018.802328285654,
+              "y": 1212.1870864458392
+            },
+            "data": {
+              "text": "The value right now is ...\n\nIt might change when the user ...\n\nThe value might change to ....",
+              "fontColor": "var(--sketchlab-stroke-default)",
+              "fontSize": "large",
+              "showHandles": false
+            },
+            "measured": {
+              "width": 336,
+              "height": 160
+            },
+            "dragging": false
           }
         ],
-        "appState": {
-          "gridSize": null,
-          "viewBackgroundColor": "#ffffff",
-          "scrollX": -1284.547013810659,
-          "scrollY": 290.30874511811993,
-          "zoom": {
-            "value": 0.1923732507228852
-          }
-        },
-        "files": {
-          "59e13b80f3694a1432c93a7a5cb37662fbe98678": {
-            "mimeType": "image/png",
-            "id": "59e13b80f3694a1432c93a7a5cb37662fbe98678",
-            "created": 1775753155625,
-            "lastRetrieved": 1775753155625
-          }
-        },
-        "externalFiles": {
-          "59e13b80f3694a1432c93a7a5cb37662fbe98678": {
-            "id": "59e13b80f3694a1432c93a7a5cb37662fbe98678",
-            "url": "/level_starter_assets/ai-and-algorithmic-decisions-lesson3-level1-revised-v2_2026/uuid/59e13b80f3694a1432c93a7a5cb37662fbe98678.png",
-            "starterAsset": true,
-            "filenameWithExtension": "59e13b80f3694a1432c93a7a5cb37662fbe98678.png",
-            "uploaded": true
-          }
+        "edges": [
+
+        ],
+        "viewport": {
+          "x": -1182.5416828331104,
+          "y": -136.04516485879378,
+          "zoom": 0.5643905565810076
         }
       }
     },
@@ -1000,9 +841,8 @@
       }
     },
     "name_suffix": "_2026",
-    "long_instructions": "# Exploring Conditionals\r\n\r\n### **Do This:**\r\n\r\n1. Explore the gaming dashboard and find values that can change, like health or username.\r\n2. Place a circle by each variable and match it to one of the colored prompts on the right. Fill in the prompts by describing:\r\n    - What the value is right now\r\n    - What user action could change it\r\n    - What it might change to"
+    "long_instructions": "## Do This:\r\n\r\n1. Find values that can change in this gaming dashboard, like health or username.\r\n\r\n2. Place one of the circles by each variable.\r\n\r\n3. Complete each variable's matching box by answering the following:\r\n\r\n   - The value right now is _ _ _\r\n\r\n   - It might change when the user _ _ _\r\n\r\n   - The value might change to _ _ _"
   },
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2026-04-08T06:21:19.133+00:00\",\"changed\":[\"cloned from \\\"ai-and-algorithmic-decisions-lesson5-level1a_2026\\\"\"],\"cloned_from\":\"ai-and-algorithmic-decisions-lesson5-level1a_2026\"},{\"changed_at\":\"2026-04-08 06:21:35 +0000\",\"changed\":[\"long_instructions\",\"display_name\",\"bubble_choice_description\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-04-08 06:21:55 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-04-09 16:48:37 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-04-17 01:25:50 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-17 01:26:20 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-17 01:28:23 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-17 01:33:32 +0000\",\"changed\":[],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-21 04:44:59 +0000\",\"changed\":[\"exemplar_sources\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2026-04-08T06:21:19.133+00:00\",\"changed\":[\"cloned from \\\"ai-and-algorithmic-decisions-lesson5-level1a_2026\\\"\"],\"cloned_from\":\"ai-and-algorithmic-decisions-lesson5-level1a_2026\"},{\"changed_at\":\"2026-04-08 06:21:35 +0000\",\"changed\":[\"long_instructions\",\"display_name\",\"bubble_choice_description\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-04-08 06:21:55 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-04-09 16:48:37 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-04-17 01:25:50 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-17 01:26:20 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-17 01:28:23 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-17 01:33:32 +0000\",\"changed\":[],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-21 04:44:59 +0000\",\"changed\":[\"exemplar_sources\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-05-01 07:23:50 -0400\",\"changed\":[\"start_sources\"],\"changed_by_id\":1,\"changed_by_email\":\"levelbuilder@dev.com\"},{\"changed_at\":\"2026-05-08 12:55:57 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":155,\"changed_by_email\":\"dani@code.org\"},{\"changed_at\":\"2026-05-10 11:34:36 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2026-05-10 11:36:13 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2026-05-10 11:38:23 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2026-05-10 11:39:45 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
 }]]></config>
 </Sketchlab>

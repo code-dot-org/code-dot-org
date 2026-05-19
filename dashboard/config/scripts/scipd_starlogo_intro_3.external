@@ -10,7 +10,7 @@ In StarLogo Nova, a model consists of the environment or terrain, the agents who
 
 <br />
 
-#### Model
+Model
 
 A “model” is the virtual world you set up in StarLogo Nova. It can contain agents, the environment, and behaviors that have been specified in computer code. We call running the model forward in time “Simulation”.
 
@@ -19,7 +19,7 @@ A “model” is the virtual world you set up in StarLogo Nova. It can contain a
 
 <br />
 
-#### Simulation of a Model
+Simulation of a Model
 
 There are two main phases in Simulation. The first phase is called the “Setup” or “Initialization” phase in which the world and the agents are created. The second phase is called the “forever” or “runtime” phase. In this second phase, each agent follows its set of instructions then waits for the other agents to finish their set of instructions before taking another turn. Before taking another turn, time moves forward and Spaceland gets redrawn with the updated state of the world and the agents.
 
@@ -31,7 +31,7 @@ There are two main phases in Simulation. The first phase is called the “Setup�
 
 <br/><br/>
 
-#### Pieces of a Model
+Pieces of a Model
 
 There are three major parts of any agent-based model: 
 
@@ -43,7 +43,7 @@ In StarLogo TNG, the first two are easy to see – the agents are the different 
 
 <br/>
 
-#### The Modeler
+The Modeler
 
 As a modeler, you decide what gets included (and what gets left out) of the model, and you get to write the instructions that tell each agent what behaviors to carry out.
 
