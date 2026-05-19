@@ -10,11 +10,20 @@
 # `export_to_analytics` in a model class registers it for materialized view
 # generation in Redshift.
 #
-# Zero ETL cannot export tables that lack a primary key or contain blob
-# (binary) columns. These conditions are validated lazily when
-# `validate_exported_models!` is called, not at class load time, because
-# models may set `self.table_name` or `self.primary_key` after the
-# `export_to_analytics` declaration.
+# Zero ETL cannot export tables that lack a `PRIMARY KEY` constraint or that
+# contain blob (binary) columns. Both conditions are checked against the live
+# database schema (via the model's connection), not the model class, since a
+# Rails-level `self.primary_key = 'id'` declaration does not imply a real
+# database-level primary key (see the `schools` table for an example).
+#
+# Validation is lazy — performed by `validate_exported_models!` /
+# `exportability_errors`, not at class load time — because:
+#   * Models may set `self.table_name` after the `export_to_analytics`
+#     declaration, and we need the final table name to query the schema.
+#   * The database connection is not necessarily available when the model
+#     class is first loaded.
+#   * All models must be loaded (`Rails.application.eager_load!`) before the
+#     registry is complete.
 #
 # Usage:
 #   class User < ApplicationRecord
@@ -48,10 +57,17 @@ module AnalyticsExportable
   end
 
   # Returns validation errors for all registered models.
+  #
+  # The primary-key check consults the database (via `connection.primary_key`)
+  # rather than the Rails model's `primary_key` attribute. A model can declare
+  # `self.primary_key = 'id'` even when the underlying table only has a UNIQUE
+  # index and no `PRIMARY KEY` constraint (e.g., the `schools` table), and Zero
+  # ETL requires a real database-level primary key.
+  #
   # @return [Array<String>] human-readable error messages, empty when valid.
   def self.exportability_errors
     exported_models.each_with_object([]) do |model, errors|
-      if model.primary_key.blank?
+      if model.connection.primary_key(model.table_name).blank?
         errors << "#{model.name} cannot be exported: Zero ETL requires a primary key"
       end
 

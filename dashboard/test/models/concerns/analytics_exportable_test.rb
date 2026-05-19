@@ -50,6 +50,18 @@ class AnalyticsExportableTest < ActiveSupport::TestCase
     assert_includes errors.first, 'Zero ETL requires a primary key'
   end
 
+  test 'exportability_errors flags model whose table has no PK even when model declares one' do
+    # Mirrors the `schools` table: `self.primary_key = 'id'` is declared on the
+    # model, but the underlying table has only a UNIQUE index, no PRIMARY KEY.
+    # The check must consult the database, not the model's declared PK.
+    model = create_base_model('SchoolsLikeModel', primary_key: 'id', db_primary_key: nil)
+    model.export_to_analytics
+
+    errors = AnalyticsExportable.exportability_errors
+    assert_equal 1, errors.size
+    assert_includes errors.first, 'Zero ETL requires a primary key'
+  end
+
   test 'exportability_errors returns error for model with blob columns' do
     blob_col = mock_column('avatar', :binary)
     model = create_base_model('BlobModel', columns: [mock_column('id', :integer), blob_col])
@@ -233,14 +245,25 @@ class AnalyticsExportableTest < ActiveSupport::TestCase
     conn
   end
 
-  private def create_base_model(name, table_name: 'test_table', primary_key: 'id', columns: nil)
+  # `primary_key:` sets the Rails-level primary key on the model class.
+  # `db_primary_key:` sets the database-level primary key reported by the
+  # model's connection (what `connection.primary_key(table_name)` returns).
+  # Defaults to the same value as `primary_key:` to mirror the common case
+  # where the model's declared PK matches the table's PRIMARY KEY constraint.
+  # Pass `db_primary_key: nil` together with `primary_key: 'id'` to reproduce
+  # the `schools` case where the model declares a PK but the table has none.
+  private def create_base_model(name, table_name: 'test_table', primary_key: 'id', db_primary_key: :same_as_model, columns: nil)
     columns ||= [mock_column('id', :integer)]
+    db_pk = db_primary_key == :same_as_model ? primary_key : db_primary_key
+    conn = stub
+    conn.stubs(:primary_key).with(table_name).returns(db_pk)
     klass = Class.new do
       include AnalyticsExportable
       define_singleton_method(:base_class) {self}
       define_singleton_method(:name) {name}
       define_singleton_method(:table_name) {table_name}
       define_singleton_method(:primary_key) {primary_key}
+      define_singleton_method(:connection) {conn}
       define_singleton_method(:columns) {columns}
     end
     klass

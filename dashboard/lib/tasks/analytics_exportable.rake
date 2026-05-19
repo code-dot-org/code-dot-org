@@ -1,3 +1,20 @@
+# IMPORTANT: The tasks in this file (`zero_etl:data_filter`,
+# `zero_etl:update_filter`, and `redshift:sync_materialized_views`) inspect the
+# local database schema to determine which tables can be replicated via Zero
+# ETL and which Redshift materialized views to create. The output is then used
+# to configure the managed test server and production Zero ETL integrations and
+# Redshift materialized views.
+#
+# Before running these against a non-development environment (e.g., `test` or
+# `production`), make sure your local schema matches the target environment:
+#
+#   git switch staging && git pull
+#   (cd dashboard && bundle exec rake db:migrate RAILS_ENV=development)
+#
+# A stale local schema will produce a stale filter expression (missing
+# excludes for newly added tables, or stale excludes for tables that have
+# since gained a primary key) and the wrong set of materialized views.
+
 Rake::Task['db:migrate'].enhance do
   next unless Rails.env.development?
 
