@@ -5,7 +5,7 @@ description 'description here'
 markdown <<MARKDOWN
 # Module Overview 
 
-#### Thinking Critically About AI is organized around a set of **core ideas about how AI works and how humans should use it**. This professional learning module is structured to help you focus on the most important concepts and instructional moves, rather than walking lesson-by-lesson.
+Thinking Critically About AI is organized around a set of **core ideas about how AI works and how humans should use it**. This professional learning module is structured to help you focus on the most important concepts and instructional moves, rather than walking lesson-by-lesson.
 
 ## What's included in this module? 
 
@@ -13,55 +13,55 @@ This professional learning module is organized into **six sections**, each focus
 
 <div style="background-color: #FAFBFC; padding: 20px; border-radius: 10px; width: 88%; margin: 20px auto;">
 
-  <p style="font-size: 13pt; font-weight: bold; margin-top: 0;">
+  <p style="font-size: 17px; font-weight: bold; margin-top: 0;">
     💻 Introduction to Thinking Critically About AI (You're here!)
   </p>
-  <p style="font-size: 13pt;">
+  <p style="font-size: 16px;">
     This section orients you to the unit, including its structure, goals, and the role students take as AI testers and evaluators.
   </p>
 
   <br>
 
-  <p style="font-size: 13pt; font-weight: bold;">
+  <p style="font-size: 17px; font-weight: bold;">
     💪 Big Idea 1: AI is Powerful and (Sometimes) Unreliable
   </p>
-  <p style="font-size: 13pt;">
-    You’ll explore how to help students understand how AI generates outputs based on patterns - not *necessarily* truth - and why it can sound convincing even when it is incorrect.
+  <p style="font-size: 16px;">
+    You’ll explore how to help students understand how AI generates outputs based on patterns - not <b>necessarily</b> truth - and why it can sound convincing even when it is incorrect.
   </p>
 
   <br>
 
-  <p style="font-size: 13pt; font-weight: bold;">
+  <p style="font-size: 17px; font-weight: bold;">
     🔬 Big Idea 2: AI Use Requires Testing & Evidence
   </p>
-  <p style="font-size: 13pt;">
+  <p style="font-size: 16px;">
     You’ll learn how to guide students in systematically testing AI tools, collecting evidence, and identifying patterns in AI behavior.
   </p>
 
   <br>
 
-  <p style="font-size: 13pt; font-weight: bold;">
+  <p style="font-size: 17px; font-weight: bold;">
     📚 Big Idea 3: Context Matters
   </p>
-  <p style="font-size: 13pt;">
+  <p style="font-size: 16px;">
     You’ll examine how to support students in making conditional judgments about when and how AI should be used based on the situation.
   </p>
 
   <br>
 
-  <p style="font-size: 13pt; font-weight: bold;">
+  <p style="font-size: 17px; font-weight: bold;">
     👓 Big Idea 4: Responsible Use Includes Risk Awareness
   </p>
-  <p style="font-size: 13pt;">
+  <p style="font-size: 16px;">
     You’ll explore how to guide students in recognizing risks related to privacy, bias, and misinformation, and how those risks influence responsible use.
   </p>
 
   <br>
 
-  <p style="font-size: 13pt; font-weight: bold;">
+  <p style="font-size: 17px; font-weight: bold;">
     📑 Unit Project: Generate and Judge Guide
   </p>
-  <p style="font-size: 13pt; margin-bottom: 0;">
+  <p style="font-size: 16px; margin-bottom: 0;">
     You’ll learn how the project develops across the unit and how to support students in building an evidence-based guide with clear recommendations for responsible AI use.
   </p>
 
@@ -69,5 +69,5 @@ This professional learning module is organized into **six sections**, each focus
 
 ___
 
-#### This professional learning module is designed to prepare you to teach **Thinking Critically About AI** through its most important ideas and instructional moments. You can engage with the module in sections and return as needed to support your planning and instruction.
+This professional learning module is designed to prepare you to teach **Thinking Critically About AI** through its most important ideas and instructional moments. You can engage with the module in sections and return as needed to support your planning and instruction.
 MARKDOWN
