@@ -48,10 +48,7 @@ export interface Weblab2Generation {
 // Web Lab 2 stores its starter sources as a MultiFileSource, the same
 // structure produced by prepareSourceForLevelbuilderSave in the codebridge
 // editor. Alongside the starter files we ask the model for student-facing
-// instructions (the level's `long_instructions` markdown field). The full
-// LevelContext is passed in so the prompt can fold in every outer scope
-// (lesson outline, preceding levels, and — once those branches land —
-// unit outline + target project) without growing more positional args.
+// instructions (the level's `long_instructions` markdown field).
 export async function generateWeblab2Level(
   ctx: LevelContext
 ): Promise<Weblab2Generation> {
