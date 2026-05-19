@@ -3,90 +3,105 @@ title 'title'
 description 'description here'
 
 markdown <<MARKDOWN
-# What is Project Based Learning?
+# The Student Experience
 
-**Project Based Learning** (PBL) is an instructional approach developed by <a href="www.pblworks.org" target="blank" rel="noopener noreferrer">PBLWorks at the Buck Institute of Education</a> wherein students learn by actively working on a meaningful project over time. Instead of learning concepts first and applying them later, students build understanding as they investigate a central driving question.
+In Thinking Critically About AI, students are not positioned as passive users of AI tools. Instead, they take on the role of AI testers, investigators, and evaluators who make judgments about when AI should - and should not - be trusted.
 
-In PBL, learning is a process of inquiry, feedback, and revision that leads to a final product similar to what industry professional might generate, just at an age-appropriate level.
+<div style="background-color: #FFFFFF; padding: 10px; border-radius: 10px; margin: 20px 0px; border-style: solid; border-width: 1px; border-color: #048899;">
+<p style="font-size: 17px; font-weight: bold; text-align: center; margin-top: 0;">
+Throughout the unit, students repeatedly practice saying:
+</p>
+<div style="display: flex; justify-content: space-between; align-items: flex-start; gap: 10px; margin-top: 30px;">
 
-## Driving Question
-
-A driving question is an open-ended, provocative question that frames a unit. This becomes the foundation for the project that students work toward.
-
-In Thinking Critically About AI, the driving question is:
-
-<div style="background-color: #B7E0E5; color: #000000; padding: 15px; border-radius: 10px; width: 90%; margin: 20px auto;">
-    <p style="font-size: 14pt; line-height: 1.2; margin-top: 10px;">
-        ❓ How can people make thoughtful decisions about when and how to use AI?
-    </p>
-</div>
-
-## Project Based Learning Design Elements
-
-In addition to the Driving Question, PBL uses several design elements to create meaningful learning experiences. We've utilized the following in this unit: 
-
-<div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 15px; width: 100%; margin: 20px auto;">
-
-  <!-- Card 1 -->
-  <div style="background-color: #F5F7F8; padding: 20px; border-radius: 10px; box-shadow: 2px 2px 8px rgba(0,0,0,0.1); text-align: center;">
-    <p style="font-size: 13pt; font-weight: bold; margin: 0 0 10px 0;">Sustained Inquiry</p>
-    <img src="https://images.code.org/60e7ab3ba61ec1c166508500e627aa2a-image-1772670747215.png"
-         alt="" style="width: 50px; height: 50px; margin-bottom: 10px;">
-    <p style="font-size: 12pt; margin: 0; line-height: 1.3;">
-      Projects are grounded in a compelling driving question and include structured opportunities to revisit ideas and deepen understanding over time.
-    </p>
+  <div style="width: 19%; text-align: center;">
+    <img src="https://images.code.org/39878bbf65dcaf0d499b14478a36cda0-image-1779144218623.png" alt="" style="width: 80px; height: auto; margin-bottom: 12px;">
+    <details style="background-color: #B7E0E5; padding: 15px; border-radius: 10px; text-align: left;">
+      <summary style="cursor: pointer; font-weight: bold; font-size: 16px;">I can test AI systems.</summary>
+      <p style="margin-bottom: 0; font-size: 16px;">I can use prompts and structured investigations to explore how AI behaves.</p>
+    </details>
   </div>
 
-  <!-- Card 2 -->
-  <div style="background-color: #F5F7F8; padding: 20px; border-radius: 10px; box-shadow: 2px 2px 8px rgba(0,0,0,0.1); text-align: center;">
-    <p style="font-size: 13pt; font-weight: bold; margin: 0 0 10px 0;">Reflection</p>
-    <img src="https://images.code.org/c0b2d3deb1a26ba6c1c31537dd445292-image-1772670604475.png"
-         alt="" style="width: 50px; height: 50px; margin-bottom: 10px;">
-    <p style="font-size: 12pt; margin: 0; line-height: 1.3;">
-      Students consistently document and reflect on their progress to refine their thinking, processes, and final products.
-    </p>
+  <div style="width: 19%; text-align: center;">
+    <img src="https://images.code.org/07e60598fe514862be1e578cd6baeb7b-image-1779144221629.png" alt="" style="width: 80px; height: auto; margin-bottom: 12px;">
+    <details style="background-color: #B7E0E5; padding: 15px; border-radius: 10px; text-align: left;">
+      <summary style="cursor: pointer; font-weight: bold; font-size: 16px;">I can identify patterns.</summary>
+      <p style="margin-bottom: 0; font-size: 16px;">I can compare outputs and notice repeated behaviors or trends across examples.</p>
+    </details>
   </div>
 
-  <!-- Card 3 -->
-  <div style="background-color: #F5F7F8; padding: 20px; border-radius: 10px; box-shadow: 2px 2px 8px rgba(0,0,0,0.1); text-align: center;">
-    <p style="font-size: 13pt; font-weight: bold; margin: 0 0 10px 0;">Voice &amp; Choice</p>
-    <img src="https://images.code.org/b553f8594e621f659863b8fcb8b13c42-image-1772670604477.png"
-         alt="" style="width: 50px; height: 50px; margin-bottom: 10px;">
-    <p style="font-size: 12pt; margin: 0; line-height: 1.3;">
-      Students make meaningful decisions about their learning pathways, research focus, and how they design and present their final work.
-    </p>
+  <div style="width: 19%; text-align: center;">
+    <img src="https://images.code.org/f6b4e6996a896d479e5c96321e6d8db7-image-1779144225250.png" alt="" style="width: 80px; height: auto; margin-bottom: 12px;">
+    <details style="background-color: #B7E0E5; padding: 15px; border-radius: 10px; text-align: left;">
+      <summary style="cursor: pointer; font-weight: bold; font-size: 16px;">I can collect evidence.</summary>
+      <p style="margin-bottom: 0; font-size: 16px;">I can document findings and revise my thinking as I learn more about AI systems.</p>
+    </details>
   </div>
 
-  <!-- Card 4 -->
-  <div style="background-color: #F5F7F8; padding: 20px; border-radius: 10px; box-shadow: 2px 2px 8px rgba(0,0,0,0.1); text-align: center;">
-    <p style="font-size: 13pt; font-weight: bold; margin: 0 0 10px 0;">Authentic Audience Communication</p>
-    <img src="https://images.code.org/bf4bd2a9e4e8d94867ab59784ea68b20-image-1772670604470.png"
-         alt="" style="width: 50px; height: 50px; margin-bottom: 10px;">
-    <p style="font-size: 12pt; margin: 0; line-height: 1.3;">
-      Students consider real-world stakeholders and communicate their work with a clear audience, purpose, and intended impact.
-    </p>
+  <div style="width: 19%; text-align: center;">
+    <img src="https://images.code.org/aa5dedb4efbae242a3ea57c91a4be78d-image-1779144228090.png" alt="" style="width: 80px; height: auto; margin-bottom: 12px;">
+    <details style="background-color: #B7E0E5; padding: 15px; border-radius: 10px; text-align: left;">
+      <summary style="cursor: pointer; font-weight: bold; font-size: 16px;">I can evaluate risks.</summary>
+      <p style="margin-bottom: 0; font-size: 16px;">I can analyze credibility, bias, privacy, and safety concerns in AI-generated outputs.</p>
+    </details>
   </div>
 
-  <!-- Card 5 -->
-  <div style="background-color: #F5F7F8; padding: 20px; border-radius: 10px; box-shadow: 2px 2px 8px rgba(0,0,0,0.1); text-align: center;">
-    <p style="font-size: 13pt; font-weight: bold; margin: 0 0 10px 0;">Critique &amp; Revision</p>
-    <br>
-    <img src="https://images.code.org/e802f4cab694dd5bb83adb5f3c37f3bf-image-1772670604477.png"
-         alt="" style="width: 50px; height: 50px; margin-bottom: 10px;">
-    <p style="font-size: 12pt; margin: 0; line-height: 1.3;">
-      Students engage in structured feedback cycles, using peer input and rubrics to revise and strengthen their work.
-    </p>
-  </div>
-
-  <!-- Card 6 -->
-  <div style="background-color: #F5F7F8; padding: 20px; border-radius: 10px; box-shadow: 2px 2px 8px rgba(0,0,0,0.1); text-align: center;">
-    <p style="font-size: 13pt; font-weight: bold; margin: 0 0 10px 0;">Public Product Generation</p>
-    <img src="https://images.code.org/234056f4fd813d75217d121475d904b7-image-1772670604478.png"
-         alt="" style="width: 50px; height: 50px; margin-bottom: 10px;">
-    <p style="font-size: 12pt; margin: 0; line-height: 1.3;">
-      Each project culminates in a tangible product shared beyond the individual student, reinforcing purpose and accountability.
-    </p>
+  <div style="width: 19%; text-align: center;">
+    <img src="https://images.code.org/00e114600b652066cee837900966d745-image-1779144230613.png" alt="" style="width: 80px; height: auto; margin-bottom: 12px;">
+    <details style="background-color: #B7E0E5; padding: 15px; border-radius: 10px; text-align: left;">
+      <summary style="cursor: pointer; font-weight: bold; font-size: 16px;">I can make judgments.</summary>
+      <p style="margin-bottom: 0; font-size: 16px;">I can develop evidence-based positions about responsible AI use.</p>
+    </details>
   </div>
 
 </div>
+</div>
+
+<div style="border-top: 1px solid #048899; margin: 30px 0px;"></div>
+
+## Learning Through Investigation
+
+<img src="https://images.code.org/f315d26c1e734b631be014e89a1c4366-image-1779146167366.16.04 PM.png" alt="" style="width: 30%; border-radius: 10px; margin: 0px 0px 10px 10px; float: right;">
+
+Rather than memorizing technical definitions or learning how to code AI systems, students build understanding through hands-on experiences. Many lesson activities ask students to:
+
+* Experiment with prompts
+* Test how AI responds to different inputs
+* Analyze examples of AI-generated text or images
+* Identify what worked, what failed, and why
+ 
+Students revisit these experiences throughout the unit to refine their thinking and build stronger evidence-based conclusions.
+
+### **What Should Teachers Watch For?**
+A major instructional goal of the unit is helping students move beyond simple reactions like:
+
+<div style="display: flex; justify-content: space-between; gap: 12px; margin: 20px 0px;">
+
+  <div style="background-color: #F5F7F8; padding: 20px; border-radius: 10px; width: 32%; text-align: center;">
+    <p style="font-size: 16px; font-weight: bold; margin: 0;">
+      “AI is good.”
+    </p>
+  </div>
+
+  <div style="background-color: #F5F7F8; padding: 20px; border-radius: 10px; width: 32%; text-align: center;">
+    <p style="font-size: 16px; font-weight: bold; margin: 0;">
+      “AI is bad.”
+    </p>
+  </div>
+
+  <div style="background-color: #F5F7F8; padding: 20px; border-radius: 10px; width: 32%; text-align: center;">
+    <p style="font-size: 16px; font-weight: bold; margin: 0;">
+      “AI made a mistake.”
+    </p>
+  </div>
+
+</div>
+
+Instead, students are encouraged to explain:
+
+* Why the AI behaved a certain way
+* What patterns or assumptions might have influenced the output
+* When human oversight matters most
+* What conditions make AI more or less appropriate to use
+
+Throughout the unit, discussion prompts and investigations are designed to help students develop more specific, evidence-based reasoning about AI systems.
 MARKDOWN
