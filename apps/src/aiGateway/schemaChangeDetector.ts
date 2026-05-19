@@ -218,13 +218,10 @@ function compareObjectSchemas(
   for (const key of Object.keys(currentProps)) {
     if (!(key in oldProps)) {
       const childPath = `${path}.${key}`;
-      const isNewRequired = currentRequired.has(key);
       results.push({
-        kind: isNewRequired ? 'HARD_BREAKING' : 'ADDITIVE',
+        kind: 'ADDITIVE',
         path: childPath,
-        description: isNewRequired
-          ? `New required property '${childPath}' added — old servers would not send it`
-          : `New optional property '${childPath}' added`,
+        description: `New property '${childPath}' added`,
       });
     }
   }

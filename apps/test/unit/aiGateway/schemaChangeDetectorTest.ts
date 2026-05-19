@@ -289,16 +289,16 @@ describe('detectChanges — ADDITIVE', () => {
     expect(hardBreaking(results)).toHaveLength(0);
   });
 
-  it('treats a new REQUIRED property as HARD_BREAKING (old server would not send it)', () => {
+  it('treats a new required property as ADDITIVE (new on both sides simultaneously)', () => {
     const old = objectSchema({model: {type: 'string'}}, ['model']);
     const current = objectSchema(
       {model: {type: 'string'}, newField: {type: 'string'}},
-      ['model', 'newField'] // newField in required → hard breaking
+      ['model', 'newField']
     );
     const results = detectChanges(old, current);
-    expect(hardBreaking(results)).toHaveLength(1);
-    expect(hardBreaking(results)[0].path).toContain('newField');
-    expect(additive(results)).toHaveLength(0);
+    expect(additive(results)).toHaveLength(1);
+    expect(additive(results)[0].path).toContain('newField');
+    expect(hardBreaking(results)).toHaveLength(0);
   });
 
   it('detects a new enum value as additive', () => {
