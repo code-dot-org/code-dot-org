@@ -725,8 +725,8 @@ export default function ReactFlowCanvas({
                 defaultMarkerColor={DEFAULT_STROKE_COLOR}
               >
                 <CornerToolbarPanel
-                  edges={edges}
                   nodes={nodes}
+                  edges={edges}
                   setEdges={setEdges}
                   pushSnapshot={pushSnapshot}
                 />
