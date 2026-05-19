@@ -102,18 +102,6 @@ export const createReviewSyllabusHomepageSteps = (
       when: highlightAttachedElement(`#${DROPDOWN_BUTTON_ID}`),
     },
     {
-      id: 'teacher-resources-dropdown',
-      attachTo: {
-        element: '#teacher-resources-dropdown',
-        on: 'bottom',
-      },
-      text: withSparkle(
-        'If admin asks what standards you’re covering or you need a refresher before starting something new, the implementation guides, standards alignment, and how-tos are all here.'
-      ),
-      buttons: [nextButton(tour)],
-      when: highlightAttachedElement('#teacher-resources-dropdown'),
-    },
-    {
       id: 'select-first-lesson',
       attachTo: {
         element: FIRST_DROPDOWN_ITEM_SELECTOR,
@@ -162,6 +150,18 @@ export const createReviewSyllabusHomepageSteps = (
           lessonClickHandler = null;
         },
       },
+    },
+    {
+      id: 'teacher-resources-dropdown',
+      attachTo: {
+        element: '#teacher-resources-dropdown',
+        on: 'bottom',
+      },
+      text: withSparkle(
+        'If admin asks what standards you’re covering or you need a refresher before starting something new, the implementation guides, standards alignment, and how-tos are all here.'
+      ),
+      buttons: [nextButton(tour)],
+      when: highlightAttachedElement('#teacher-resources-dropdown'),
     },
   ];
 };
@@ -303,6 +303,19 @@ export const createReviewSyllabusUnitOverviewSteps = (
           }
         },
       },
+    },
+    {
+      id: 'lesson-resources-intro',
+      attachTo: {
+        element: '#uitest-lesson-plan',
+        on: 'bottom',
+      },
+      text: withSparkle(
+        'Ready to dig into this lesson? The lesson plan, slide decks, and student activity guides are one click away. Plus you can save your own materials alongside them.'
+      ),
+      buttons: [nextButton(tour)],
+      beforeShowPromise: () =>
+        waitForElement('#uitest-lesson-plan', controller.signal),
     },
     createCompletionStep(tour, 'Review the Syllabus', 'Stay on this page'),
   ];
