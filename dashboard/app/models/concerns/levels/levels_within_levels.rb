@@ -144,11 +144,15 @@ module Levels
     def contained_levels
       return [] if contained_level_names.blank?
       cache_key = "LevelsWithinLevels/contained/#{contained_level_names&.join('/')}"
-      Rails.cache.fetch(cache_key, force: !Unit.should_cache?) do
+      Rails.cache.fetch(cache_key, force: !Unit.should_cache?, skip_nil: true) do
         # Curriculum data which does not update frequently. We can have ~20ms replication lag,
         # by reading from the :reading role
         ActiveRecord::Base.connected_to(role: :reading) do
-          result = child_levels.contained
+          # Materialize the relation with `.to_a` so the SELECT happens on the
+          # reader. A lazy relation returned from this block would defer the
+          # query to the caller's enumeration site, which is typically outside
+          # any `connected_to(role: :reading)` scope and would hit the writer.
+          result = child_levels.contained.to_a
 
           # attempt to use the new parent-child many-to-many table to retrieve the
           # levels themselves, but if we have a contained_level_names property and
@@ -173,7 +177,7 @@ module Levels
     def project_template_level
       return nil if try(:project_template_level_name).nil?
       cache_key = "LevelsWithinLevels/project_template/#{project_template_level_name}"
-      Rails.cache.fetch(cache_key, force: !Unit.should_cache?) do
+      Rails.cache.fetch(cache_key, force: !Unit.should_cache?, skip_nil: true) do
         # Curriculum data which does not update frequently. We can have ~20ms replication lag,
         # by reading from the :reading role
         ActiveRecord::Base.connected_to(role: :reading) do

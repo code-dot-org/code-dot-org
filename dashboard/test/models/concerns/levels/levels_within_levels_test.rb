@@ -189,33 +189,30 @@ class LevelsWithinLevelsTest < ActiveSupport::TestCase
     assert_includes applab.errors.full_messages.first, 'template level type Gamelab does not match level type Applab'
   end
 
-  # Swap the global :null_store from test_helper for a real in-memory store so
-  # we can observe Rails.cache.fetch writes and reads.
-  def with_memory_cache
-    original = Rails.cache
-    Rails.cache = ActiveSupport::Cache::MemoryStore.new
-    Unit.stubs(:should_cache?).returns(true)
-    yield
-  ensure
-    Rails.cache = original
-  end
-
   test 'contained_levels writes through to Rails.cache and reuses it' do
     contained = create(:multi)
     parent = create(:level, contained_level_names: [contained.name])
     cache_key = "LevelsWithinLevels/contained/#{contained.name}"
 
-    with_memory_cache do
+    # Rails.cache defaults to :null_store in unit tests (see test_helper.rb);
+    # opt back in to caching for this test via with_local_cache. Also stub
+    # Unit.should_cache? so the `force: !should_cache?` guard does not bypass
+    # the cache.
+    Unit.stubs(:should_cache?).returns(true)
+    Rails.cache.with_local_cache do
       assert_nil Rails.cache.read(cache_key)
       assert_equal [contained], parent.contained_levels
       # If the block uses a non-local `return`, Rails.cache.fetch never writes.
       assert_equal [contained], Rails.cache.read(cache_key),
         'contained_levels did not populate Rails.cache'
 
-      # Delete the join row out-of-band; a working cache must shield the read.
-      ParentLevelsChildLevel.where(parent_level_id: parent.id).delete_all
+      # Block both DB recomputation paths so anything other than a cache hit
+      # would raise. The m2m path reads `child_levels`; the fallback path uses
+      # `Unit.cache_find_level`.
+      parent.expects(:child_levels).never
+      Unit.expects(:cache_find_level).never
       assert_equal [contained], parent.contained_levels,
-        'subsequent contained_levels call hit the DB instead of the cache'
+        'subsequent contained_levels call did not come from cache'
     end
   end
 
@@ -224,15 +221,19 @@ class LevelsWithinLevelsTest < ActiveSupport::TestCase
     real_level = create(:level, project_template_level_name: template_level.name)
     cache_key = "LevelsWithinLevels/project_template/#{template_level.name}"
 
-    with_memory_cache do
+    Unit.stubs(:should_cache?).returns(true)
+    Rails.cache.with_local_cache do
       assert_nil Rails.cache.read(cache_key)
       assert_equal template_level, real_level.project_template_level
       assert_equal template_level, Rails.cache.read(cache_key),
         'project_template_level did not populate Rails.cache'
 
-      ParentLevelsChildLevel.where(parent_level_id: real_level.id).delete_all
+      # Block both DB recomputation paths. The m2m path reads `child_levels`;
+      # the fallback path uses `Level.find_by_key`.
+      real_level.expects(:child_levels).never
+      Level.expects(:find_by_key).never
       assert_equal template_level, real_level.project_template_level,
-        'subsequent project_template_level call hit the DB instead of the cache'
+        'subsequent project_template_level call did not come from cache'
     end
   end
 
