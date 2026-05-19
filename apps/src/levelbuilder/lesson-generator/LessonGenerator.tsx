@@ -146,7 +146,15 @@ const LessonGenerator: React.FC<LessonGeneratorProps> = ({lesson}) => {
     setOutlineError(null);
     setIsOutlining(true);
     try {
-      const planned = await generateLessonOutline(outline.trim());
+      // Build the lesson-scope context once. Outer-scope fields
+      // (unitName, unitOutline, targetProject) land here later from the
+      // unit + project branches; populating them is a one-line edit at
+      // the builder site, never a signature change.
+      const lessonCtx = {
+        lessonName: lesson.name,
+        lessonOutline: outline.trim(),
+      };
+      const planned = await generateLessonOutline(lessonCtx);
       const newSpecs: LevelSpec[] = planned.map(level => ({
         key: createUuid(),
         id: level.id,
@@ -170,7 +178,7 @@ const LessonGenerator: React.FC<LessonGeneratorProps> = ({lesson}) => {
     } finally {
       setIsOutlining(false);
     }
-  }, [outline]);
+  }, [outline, lesson.name]);
 
   const validationError = useMemo(() => {
     if (!prefix.trim()) return 'Set a level name prefix before generating.';
@@ -307,38 +315,32 @@ const LessonGenerator: React.FC<LessonGeneratorProps> = ({lesson}) => {
         if (shouldGenerate) {
           setStage('planning');
           appendLog(`Planning content for "${levelName}"…`);
-          // The outline (if the user typed one) gives every level call the
-          // same lesson-wide framing, so panels + weblab2 levels in the same
-          // lesson stay tonally coherent.
-          const lessonContext = outline.trim() || undefined;
+          // Narrow the lesson-scope context to a LevelContext for this
+          // specific level. Outer-scope fields propagate via the spread;
+          // sibling-forward (precedingLevels) is fresh per call from the
+          // running priorEntries list.
+          const levelCtx = {
+            lessonName: lesson.name,
+            lessonOutline: outline.trim() || undefined,
+            levelName,
+            levelDescription: spec.description.trim(),
+            precedingLevels: precedingLevelsText || undefined,
+          };
           if (spec.labType === 'panels') {
-            const panels = await generatePanelsForLevel(
-              levelName,
-              spec.description.trim(),
-              {
-                onPlanned: count =>
-                  appendLog(`Planned ${count} panel(s) for "${levelName}".`),
-                onPanelStart: (idx, count) => {
-                  setStage('generating-image', `panel ${idx + 1} of ${count}`);
-                  appendLog(
-                    `Generating image for panel ${idx + 1} of ${count}…`
-                  );
-                },
+            const panels = await generatePanelsForLevel(levelCtx, {
+              onPlanned: count =>
+                appendLog(`Planned ${count} panel(s) for "${levelName}".`),
+              onPanelStart: (idx, count) => {
+                setStage('generating-image', `panel ${idx + 1} of ${count}`);
+                appendLog(`Generating image for panel ${idx + 1} of ${count}…`);
               },
-              lessonContext,
-              precedingLevelsText
-            );
+            });
             setStage('saving-properties');
             appendLog(`Saving panel data for "${levelName}"…`);
             await updatePanelsLevel(level.id, panels);
             generatedOutput = {panels};
           } else if (spec.labType === 'weblab2') {
-            const result = await generateWeblab2Level(
-              levelName,
-              spec.description.trim(),
-              lessonContext,
-              precedingLevelsText
-            );
+            const result = await generateWeblab2Level(levelCtx);
             setStage('saving-properties');
             appendLog(`Saving start sources for "${levelName}"…`);
             await updateStartSources(level.id, result.startSources);
