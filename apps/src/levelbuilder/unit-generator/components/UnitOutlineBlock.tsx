@@ -9,10 +9,6 @@ interface UnitOutlineBlockProps {
   isOutlining: boolean;
   disabled: boolean;
   error: string | null;
-  // Controls only the initial render — the user can still toggle the
-  // <details> open/closed afterward and React won't fight them, since
-  // this prop is computed once at mount from the loaded unit.
-  defaultOpen: boolean;
 }
 
 const UnitOutlineBlock: React.FC<UnitOutlineBlockProps> = ({
@@ -22,10 +18,11 @@ const UnitOutlineBlock: React.FC<UnitOutlineBlockProps> = ({
   isOutlining,
   disabled,
   error,
-  defaultOpen,
 }) => (
-  <details className={moduleStyles.outlineBlock} open={defaultOpen}>
-    <summary>Optional: generate the lessons below from a unit outline</summary>
+  <div className={moduleStyles.outlineBlock}>
+    <h2 className={moduleStyles.outlineHeading}>
+      Optional: generate the lessons below from a unit outline
+    </h2>
     <p className={moduleStyles.outlineHelp}>
       Describe the unit as a whole — what it teaches, who it's for, what the
       student should be able to do by the end. The AI will turn that into a
@@ -54,7 +51,7 @@ const UnitOutlineBlock: React.FC<UnitOutlineBlockProps> = ({
         </span>
       )}
     </div>
-  </details>
+  </div>
 );
 
 export default UnitOutlineBlock;
