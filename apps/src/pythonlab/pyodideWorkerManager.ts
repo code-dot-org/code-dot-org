@@ -122,7 +122,7 @@ const setUpPyodideWorker = () => {
           break;
         }
         if (miniApp && message.startsWith(miniApp.signalTag)) {
-          // Mini-app signal envelope (currently only `[NEIGHBORHOOD]`).
+          // Mini-app signal envelope (i.e. `[NEIGHBORHOOD]`).
           const data = miniApp.parseSignal(message);
           if (data) miniApp.handleSignal(data);
           break;
