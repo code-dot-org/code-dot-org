@@ -10,9 +10,9 @@ markdown <<MARKDOWN
      width="125px" 
      style="border-radius:10px; float:right; margin: 0 20px 10px 0px;">
      
-#### Now that you’ve experienced interactive features as a user, let’s zoom in on what’s happening behind the scenes in the code.
+Now that you’ve experienced interactive features as a user, let’s zoom in on what’s happening behind the scenes in the code.
 
-#### Most interactive apps follow a simple pattern: a user <strong>does something</strong>, the program <strong>tracks what changed</strong>, and the interface <strong>updates</strong>.
+Most interactive apps follow a simple pattern: a user <strong>does something</strong>, the program <strong>tracks what changed</strong>, and the interface <strong>updates</strong>.
 </p>
 
 <br>

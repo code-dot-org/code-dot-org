@@ -5,7 +5,7 @@ description 'description here'
 markdown <<MARKDOWN
 # Going Deeper
 
-#### It's important to make the distinction between equality, equity, and justice when tackling topics of education. Take a look at the following image, created by Tony Ruth<sup>4</sup>:
+It's important to make the distinction between equality, equity, and justice when tackling topics of education. Take a look at the following image, created by Tony Ruth<sup>4</sup>:
 <br>
 
 <a href="https://docs.google.com/presentation/d/1EnQ8lf1l2FVqU0AVvwODPcwW9ERlD8vle2ELAyqKIjA/edit?usp=sharing" target="blank" rel="noopener noreferrer"><img src="https://images.code.org/1deaadb47c55ad112dd414bdf93b93f1-image-1732573038355.17.14 PM.png" alt="Four panels show a Giving Tree analogy for inequality, equality, equity, and justice."></a>
@@ -13,7 +13,7 @@ markdown <<MARKDOWN
 
 ## Examples
 
-#### Knowing what each of these key concepts looks like in action will help you to notice and act on issues of inequity in your school. Read the following examples to learn more. While you do so, consider the distinguishing features between each. We'll get into CS-specific examples in the next level.
+Knowing what each of these key concepts looks like in action will help you to notice and act on issues of inequity in your school. Read the following examples to learn more. While you do so, consider the distinguishing features between each. We'll get into CS-specific examples in the next level.
 
 <table style="width: 100%; border-collapse: collapse; margin-top: 20px;">
     <thead>

@@ -4,7 +4,6 @@ import React, {memo, useCallback, useMemo, useRef, useState} from 'react';
 
 import {DEFAULT_ROTATION, MIN_NODE_HEIGHT, MIN_NODE_WIDTH} from '../constants';
 import {useSketchLabReadOnly} from '../context';
-import ShapeNodeToolbar from '../elementToolbars/ShapeNodeToolbar';
 import {
   fontSizePx,
   DEFAULT_TEXT_ALIGN,
@@ -189,8 +188,6 @@ function ShapeNode({id, data, selected}: NodeProps<ShapeNodeType>) {
         minWidth={MIN_NODE_WIDTH}
         minHeight={MIN_NODE_HEIGHT}
       />
-
-      <ShapeNodeToolbar nodeId={id} />
 
       <div className={styles.rotatable} style={rotatableStyle}>
         {/* Background shape */}

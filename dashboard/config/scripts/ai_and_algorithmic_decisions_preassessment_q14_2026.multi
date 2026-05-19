@@ -1,14 +1,14 @@
 name 'ai-and-algorithmic-decisions-preassessment-q14_2026'
 
-question 'A news website adds moving headlines that scroll across the top of the page. Some users like how lively it looks, but others say it\'s distracting and hard to read. What design idea does this situation show?'
+question 'A news website plays a moving headline marquee across the top of the page. Some users say it\'s eye-catching; others find it distracting and hard to read. What does this scenario most directly illustrate?'
 
-wrong 'Good design always adds motion to keep users interested.'
-wrong 'Accessibility only matters for mobile users, not desktop users.'
-right 'Trade-offs are part of design – what helps one user might frustrate another.'
-wrong 'Designers should remove all interactive elements to avoid complaints.'
+wrong 'Marquees are always bad design.'
+wrong 'Users should not visit websites with animation.'
+right 'Design choices involve trade-offs — what helps one user can frustrate another, so interactive features need to be evaluated for accessibility.'
+wrong 'JavaScript animations are slow on most devices.'
 
 allow_multiple_attempts true
 
 teacher_markdown <<MARKDOWN
-Lessons 1, 7
+Lesson 7
 MARKDOWN

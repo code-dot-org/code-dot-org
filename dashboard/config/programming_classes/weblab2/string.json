@@ -1,0 +1,14 @@
+{
+  "category_key": "javascript",
+  "content": "# String\n\nA `string` is text in JavaScript. Use strings for words, names, messages, labels, or any value that should be treated like text.",
+  "examples": "[{\"name\":\"Store Text in a Variable\",\"description\":\"This creates a variable named `petName` and stores the string `\\\"Mochi\\\"`.\",\"code\":\"`let petName = \\\"Mochi\\\";`\"}]",
+  "external_documentation": "",
+  "fields": "[]",
+  "key": "string",
+  "name": "String",
+  "syntax": "`let petName = \"Mochi\";`",
+  "tips": "- Use strings for text values, like names or messages.\n- Put quotation marks around the text.\n- You can use double quotes (`\"Mochi\"`) or single quotes (`'Mochi'`), but be consistent.\n- Do not use quotation marks around numbers if you want JavaScript to treat them like numbers.\n- In Web Lab, strings often appear in variables, `textContent`, messages, and element selectors.",
+  "methods": [
+
+  ]
+}

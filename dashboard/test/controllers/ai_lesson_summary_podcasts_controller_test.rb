@@ -61,6 +61,16 @@ class AiLessonSummaryPodcastsControllerTest < ActionController::TestCase
   # Helper integration tests
   # *****
 
+  test 'generate_podcasts_by_unit returns not_found for missing unit_id' do
+    sign_in @teacher
+
+    DCDO.stubs(:get).with('ai-lesson-summary-podcasts', false).returns(true)
+
+    post :generate_podcasts_by_unit, params: {unit_id: 0}
+
+    assert_response :not_found
+  end
+
   test 'generate_podcasts_by_unit returns forbidden for non-AIF units' do
     sign_in @teacher
 
@@ -83,7 +93,7 @@ class AiLessonSummaryPodcastsControllerTest < ActionController::TestCase
 
     # Create a unit with lessons that have and don't have lesson plans
     unit_with_mixed_lessons = create(:script)
-    unit_with_mixed_lessons.curriculum_umbrella = 'AIF'
+    unit_with_mixed_lessons.curriculum_umbrella = Curriculum::SharedCourseConstants::CURRICULUM_UMBRELLA.foundations_of_cs
     unit_with_mixed_lessons.save!
 
     lesson_group = create(:lesson_group, script: unit_with_mixed_lessons)
@@ -109,7 +119,7 @@ class AiLessonSummaryPodcastsControllerTest < ActionController::TestCase
   test 'show returns correct content type and headers for podcast from S3' do
     sign_in @teacher
 
-    # Mock S3 download
+    AWS::S3.stubs(:exists_in_bucket).with('org.code.autoscale-prod-studio.user-content', 'podcasts/lesson_123_podcast.mp3').returns(true)
     AWS::S3.stubs(:download_from_bucket).with('org.code.autoscale-prod-studio.user-content', 'podcasts/lesson_123_podcast.mp3').returns(@test_audio_data)
 
     get :show, params: {
@@ -125,8 +135,8 @@ class AiLessonSummaryPodcastsControllerTest < ActionController::TestCase
   test 'show returns audio data from S3 as response body' do
     sign_in @teacher
 
-    # Mock with different audio data
     different_audio_data = "different_mp3_binary_content"
+    AWS::S3.stubs(:exists_in_bucket).with('org.code.autoscale-prod-studio.user-content', 'podcasts/lesson_456_podcast.mp3').returns(true)
     AWS::S3.stubs(:download_from_bucket).with('org.code.autoscale-prod-studio.user-content', 'podcasts/lesson_456_podcast.mp3').returns(different_audio_data)
 
     get :show, params: {
@@ -135,6 +145,18 @@ class AiLessonSummaryPodcastsControllerTest < ActionController::TestCase
 
     assert_response :success
     assert_equal different_audio_data, response.body
+  end
+
+  test 'show returns not_found when podcast does not exist in S3' do
+    sign_in @teacher
+
+    AWS::S3.stubs(:exists_in_bucket).with('org.code.autoscale-prod-studio.user-content', 'podcasts/lesson_789_podcast.mp3').returns(false)
+
+    get :show, params: {
+      lesson_id: '789'
+    }
+
+    assert_response :not_found
   end
 
   # *****

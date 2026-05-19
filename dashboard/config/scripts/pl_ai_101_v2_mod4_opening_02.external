@@ -5,9 +5,9 @@ description 'description here'
 markdown <<MARKDOWN
 # Application to All Classrooms
 
-#### AI is becoming part of how students learn, communicate, and make decisions across all subjects.
+AI is becoming part of how students learn, communicate, and make decisions across all subjects.
 
-#### 👉 Click on the cards below to learn more about how AI connects to your subject area(s).
+👉 Click on the cards below to learn more about how AI connects to your subject area(s).
 
 <div style="max-width:1200px; margin:0 auto; font-family:ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial; color:#2f2f2f;">
 
@@ -173,12 +173,12 @@ AI connects across reading, writing, math, science, and digital citizenship. Stu
 </div>
 
 
-#### Teaching about and with AI reinforces skills teachers already prioritize, including:
-* #### Critical thinking and evaluation
-* #### Ethical and responsible decision-making
-* #### Problem solving and communication
-* #### Creativity and collaboration
-* #### Reflection and adaptability
+Teaching about and with AI reinforces skills teachers already prioritize, including:
+* Critical thinking and evaluation
+* Ethical and responsible decision-making
+* Problem solving and communication
+* Creativity and collaboration
+* Reflection and adaptability
 
 >#### **💬 Quick Reflection:** What's one connection to AI in your classroom?
 MARKDOWN

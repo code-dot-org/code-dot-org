@@ -7,9 +7,9 @@ markdown <<MARKDOWN
 
 ## Discuss and Compare
 
-#### A key idea in Data Science is that information can be represented in a variety of ways; data scientists have to make choices, and these choices have trade-offs.
+A key idea in Data Science is that information can be represented in a variety of ways; data scientists have to make choices, and these choices have trade-offs.
 
-#### When students compare their work, they have an opportunity to both communicate the choices they made and to see the choices made by another student. 
+When students compare their work, they have an opportunity to both communicate the choices they made and to see the choices made by another student. 
 
 > #### **Classroom Scenario:** 
 > - #### **Student A** cleaned the data by excluding records with blank fields, but didn't consider including a column for dietary restrictions, like vegetarian or vegan options, which was in the original survey data.
@@ -18,21 +18,21 @@ markdown <<MARKDOWN
 
 ## Consider the Ethical Framework 
 
-#### **Discuss:** Which do you think should be prioritized when deciding how to clean data?
+**Discuss:** Which do you think should be prioritized when deciding how to clean data?
 
-#### For **Accuracy and Bias**, students may bring up things like:
+For **Accuracy and Bias**, students may bring up things like:
 
-- #### Changing the format allows the data scientist's bias to enter the picture
-- #### Cleaned data may not accurately portray what the person wanted
-- #### Cleaned Data helps form a more accurate picture -- someone who misspelled pepperoni still wants pepperoni pizza
+- Changing the format allows the data scientist's bias to enter the picture
+- Cleaned data may not accurately portray what the person wanted
+- Cleaned Data helps form a more accurate picture -- someone who misspelled pepperoni still wants pepperoni pizza
 
-#### For **Privacy**, students may bring up things like:
+For **Privacy**, students may bring up things like:
 
-- #### Creating categories can unintentionally identify certain members of a group
+- Creating categories can unintentionally identify certain members of a group
 
-#### For **Misuse and Consent**, students may bring up things like:
+For **Misuse and Consent**, students may bring up things like:
 
-- #### It’s possible that people have not consented to their data being used in this altered, cleaned, format
+- It’s possible that people have not consented to their data being used in this altered, cleaned, format
 
 
 

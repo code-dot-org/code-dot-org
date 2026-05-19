@@ -13,7 +13,7 @@
     "parent_level_id": 28731,
     "name_suffix": "_2024",
     "encrypted": "false",
-    "long_instructions": "#### The following video provides more information about Code.org's stance toward equity in computer science education. While you watch, consider the following:\r\n\r\n* #### How would you rate your district, school, and/or classroom regarding the 3 components of **access**, **inclusion**, and **diversity**? "
+    "long_instructions": "The following video provides more information about Code.org's stance toward equity in computer science education. While you watch, consider the following:\r\n\r\n* How would you rate your district, school, and/or classroom regarding the 3 components of **access**, **inclusion**, and **diversity**? "
   },
   "notes": "",
   "audit_log": "[{\"changed_at\":\"2025-01-08T21:58:27.582+00:00\",\"changed\":[\"cloned from \\\"self-paced-equity-U1L1-equityvid\\\"\"],\"cloned_from\":\"self-paced-equity-U1L1-equityvid\"},{\"changed_at\":\"2025-01-08 22:13:16 +0000\",\"changed\":[\"video_key\"],\"changed_by_id\":10559,\"changed_by_email\":\"aryanna@code.org\"}]",
