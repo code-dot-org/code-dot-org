@@ -13,6 +13,7 @@ type CourseCardProps = {
 
 /**
  * Catalog card for a single course. Routes branch on entry shape:
+ * - `mobileRoute` → internal mobile-native flow (e.g. /app/m/seats)
  * - `module` + `demoChannelId` → /app/projects/<module>/<channelId>/edit
  * - `externalUrl` → opens existing studio.code.org URL in a new tab
  * - neither → /app/courses/<slug> default detail page
@@ -21,6 +22,7 @@ type CourseCardProps = {
  * so the lazy import has already parsed by the time the user taps.
  */
 export default function CourseCard({entry}: CourseCardProps) {
+  const isMobileNative = Boolean(entry.mobileRoute);
   const isInternalLab = Boolean(entry.module && entry.demoChannelId);
   const isExternal = Boolean(entry.externalUrl);
 
@@ -47,6 +49,18 @@ export default function CourseCard({entry}: CourseCardProps) {
       </CardContent>
     </Card>
   );
+
+  if (isMobileNative) {
+    return (
+      <Link
+        to={entry.mobileRoute!}
+        preload="intent"
+        className={moduleStyles.cardLink}
+      >
+        {cardBody}
+      </Link>
+    );
+  }
 
   if (isInternalLab) {
     return (

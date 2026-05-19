@@ -68,6 +68,14 @@
       "import": "./dist/breadcrumbs/index.mjs",
       "require": "./dist/breadcrumbs/index.js"
     },
+    "./bubbleNode": {
+      "types": {
+        "import": "./dist/bubbleNode/index.d.ts",
+        "require": "./dist/bubbleNode/index.d.ts"
+      },
+      "import": "./dist/bubbleNode/index.mjs",
+      "require": "./dist/bubbleNode/index.js"
+    },
     "./button": {
       "types": {
         "import": "./dist/button/index.d.ts",
@@ -280,6 +288,14 @@
       "import": "./dist/list/simpleList/index.mjs",
       "require": "./dist/list/simpleList/index.js"
     },
+    "./masteryDot": {
+      "types": {
+        "import": "./dist/masteryDot/index.d.ts",
+        "require": "./dist/masteryDot/index.d.ts"
+      },
+      "import": "./dist/masteryDot/index.mjs",
+      "require": "./dist/masteryDot/index.js"
+    },
     "./modal": {
       "types": {
         "import": "./dist/modal/index.d.ts",
@@ -312,6 +328,14 @@
       },
       "import": "./dist/radioButton/index.mjs",
       "require": "./dist/radioButton/index.js"
+    },
+    "./sectionBanner": {
+      "types": {
+        "import": "./dist/sectionBanner/index.d.ts",
+        "require": "./dist/sectionBanner/index.d.ts"
+      },
+      "import": "./dist/sectionBanner/index.mjs",
+      "require": "./dist/sectionBanner/index.js"
     },
     "./segmentedButtons": {
       "types": {

@@ -10,7 +10,10 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as MSeatsRouteImport } from './routes/m/seats'
+import { Route as MJourneyRouteImport } from './routes/m/journey'
 import { Route as CoursesSlugRouteImport } from './routes/courses/$slug'
+import { Route as MLessonLessonIdRouteImport } from './routes/m/lesson.$lessonId'
 import { Route as ProjectsLabTypeChannelIdEditRouteImport } from './routes/projects/$labType/$channelId/edit'
 
 const IndexRoute = IndexRouteImport.update({
@@ -18,9 +21,24 @@ const IndexRoute = IndexRouteImport.update({
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const MSeatsRoute = MSeatsRouteImport.update({
+  id: '/m/seats',
+  path: '/m/seats',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const MJourneyRoute = MJourneyRouteImport.update({
+  id: '/m/journey',
+  path: '/m/journey',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const CoursesSlugRoute = CoursesSlugRouteImport.update({
   id: '/courses/$slug',
   path: '/courses/$slug',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const MLessonLessonIdRoute = MLessonLessonIdRouteImport.update({
+  id: '/m/lesson/$lessonId',
+  path: '/m/lesson/$lessonId',
   getParentRoute: () => rootRouteImport,
 } as any)
 const ProjectsLabTypeChannelIdEditRoute =
@@ -33,30 +51,61 @@ const ProjectsLabTypeChannelIdEditRoute =
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/courses/$slug': typeof CoursesSlugRoute
+  '/m/journey': typeof MJourneyRoute
+  '/m/seats': typeof MSeatsRoute
+  '/m/lesson/$lessonId': typeof MLessonLessonIdRoute
   '/projects/$labType/$channelId/edit': typeof ProjectsLabTypeChannelIdEditRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/courses/$slug': typeof CoursesSlugRoute
+  '/m/journey': typeof MJourneyRoute
+  '/m/seats': typeof MSeatsRoute
+  '/m/lesson/$lessonId': typeof MLessonLessonIdRoute
   '/projects/$labType/$channelId/edit': typeof ProjectsLabTypeChannelIdEditRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/courses/$slug': typeof CoursesSlugRoute
+  '/m/journey': typeof MJourneyRoute
+  '/m/seats': typeof MSeatsRoute
+  '/m/lesson/$lessonId': typeof MLessonLessonIdRoute
   '/projects/$labType/$channelId/edit': typeof ProjectsLabTypeChannelIdEditRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/courses/$slug' | '/projects/$labType/$channelId/edit'
+  fullPaths:
+    | '/'
+    | '/courses/$slug'
+    | '/m/journey'
+    | '/m/seats'
+    | '/m/lesson/$lessonId'
+    | '/projects/$labType/$channelId/edit'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/courses/$slug' | '/projects/$labType/$channelId/edit'
-  id: '__root__' | '/' | '/courses/$slug' | '/projects/$labType/$channelId/edit'
+  to:
+    | '/'
+    | '/courses/$slug'
+    | '/m/journey'
+    | '/m/seats'
+    | '/m/lesson/$lessonId'
+    | '/projects/$labType/$channelId/edit'
+  id:
+    | '__root__'
+    | '/'
+    | '/courses/$slug'
+    | '/m/journey'
+    | '/m/seats'
+    | '/m/lesson/$lessonId'
+    | '/projects/$labType/$channelId/edit'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   CoursesSlugRoute: typeof CoursesSlugRoute
+  MJourneyRoute: typeof MJourneyRoute
+  MSeatsRoute: typeof MSeatsRoute
+  MLessonLessonIdRoute: typeof MLessonLessonIdRoute
   ProjectsLabTypeChannelIdEditRoute: typeof ProjectsLabTypeChannelIdEditRoute
 }
 
@@ -69,11 +118,32 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/m/seats': {
+      id: '/m/seats'
+      path: '/m/seats'
+      fullPath: '/m/seats'
+      preLoaderRoute: typeof MSeatsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/m/journey': {
+      id: '/m/journey'
+      path: '/m/journey'
+      fullPath: '/m/journey'
+      preLoaderRoute: typeof MJourneyRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/courses/$slug': {
       id: '/courses/$slug'
       path: '/courses/$slug'
       fullPath: '/courses/$slug'
       preLoaderRoute: typeof CoursesSlugRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/m/lesson/$lessonId': {
+      id: '/m/lesson/$lessonId'
+      path: '/m/lesson/$lessonId'
+      fullPath: '/m/lesson/$lessonId'
+      preLoaderRoute: typeof MLessonLessonIdRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/projects/$labType/$channelId/edit': {
@@ -89,6 +159,9 @@ declare module '@tanstack/react-router' {
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   CoursesSlugRoute: CoursesSlugRoute,
+  MJourneyRoute: MJourneyRoute,
+  MSeatsRoute: MSeatsRoute,
+  MLessonLessonIdRoute: MLessonLessonIdRoute,
   ProjectsLabTypeChannelIdEditRoute: ProjectsLabTypeChannelIdEditRoute,
 }
 export const routeTree = rootRouteImport

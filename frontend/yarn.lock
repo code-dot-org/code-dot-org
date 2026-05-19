@@ -2292,6 +2292,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@capacitor-community/text-to-speech@npm:^5.0.0":
+  version: 5.1.0
+  resolution: "@capacitor-community/text-to-speech@npm:5.1.0"
+  peerDependencies:
+    "@capacitor/core": ^6.0.0
+  checksum: 10c0/98a024997371bebf07536f8af9341878596ef59b355d999f943cc31518b70e2ee1bc03f0d1e937c0109efd2548627c4bd0b85252e6d691c61db192f0a59ce61c
+  languageName: node
+  linkType: hard
+
 "@capacitor/android@npm:^7.0.0":
   version: 7.6.5
   resolution: "@capacitor/android@npm:7.6.5"
@@ -2776,6 +2785,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@code-dot-org/studio@workspace:apps/studio"
   dependencies:
+    "@capacitor-community/text-to-speech": "npm:^5.0.0"
     "@capacitor/core": "npm:^7.0.0"
     "@code-dot-org/component-library": "workspace:*"
     "@code-dot-org/component-library-styles": "workspace:*"

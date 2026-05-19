@@ -52,6 +52,12 @@ export type CourseEntry = {
   demoChannelId?: string;
   /** External link (existing studio.code.org URL) for courses not yet ported. */
   externalUrl?: string;
+  /**
+   * Internal mobile-native route (e.g. '/m/seats').  When set, the card
+   * navigates directly into the mobile flow instead of the default
+   * CoursePage detail view.  Higher precedence than `module`/`externalUrl`.
+   */
+  mobileRoute?: string;
 };
 
 export const COURSES: CourseEntry[] = [
@@ -74,10 +80,7 @@ export const COURSES: CourseEntry[] = [
       'Five lessons exploring how AI is trained, how it recognizes patterns, and how to use it responsibly.',
     cover: howAiMakesDecisionsCover,
     level: 'K-5',
-    // FUTURE: when the mobile-native module ships, set:
-    //   module: 'k5-ai-data'
-    // For this iteration, content-only — routes to the default CoursePage
-    // which links out to the existing desktop course.
+    mobileRoute: '/m/seats',
   },
   {
     schemaVersion: 1,

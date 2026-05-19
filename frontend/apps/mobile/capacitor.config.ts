@@ -20,6 +20,7 @@ const config: CapacitorConfig = {
   appName: 'Code.org',
   webDir: '../studio/dist',
   includePlugins: [
+    '@capacitor-community/text-to-speech',
     '@capacitor/app',
     '@capacitor/keyboard',
     '@capacitor/preferences',
