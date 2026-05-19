@@ -3968,7 +3968,12 @@ __metadata:
 "@code-dot-org/demo-mini-app@portal:../frontend/packages/mini-apps/demo/::locator=blockly-mooc%40workspace%3A.":
   version: 0.0.0-use.local
   resolution: "@code-dot-org/demo-mini-app@portal:../frontend/packages/mini-apps/demo/::locator=blockly-mooc%40workspace%3A."
+  dependencies:
+    "@emotion/react": "catalog:"
+    "@emotion/styled": "catalog:"
+    "@mui/material": "catalog:"
   peerDependencies:
+    "@code-dot-org/component-library": "*"
     react: ^18.0.0 || ^19.0.0
     react-dom: ^18.0.0 || ^19.0.0
   languageName: node
@@ -4036,7 +4041,11 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@code-dot-org/mini-app-base@portal:../frontend/packages/mini-apps/base/::locator=blockly-mooc%40workspace%3A."
   peerDependencies:
+    canvg: ^4.0.0
     react: ^18.0.0 || ^19.0.0
+  peerDependenciesMeta:
+    canvg:
+      optional: true
   languageName: node
   linkType: soft
 
@@ -4075,7 +4084,12 @@ __metadata:
 "@code-dot-org/neighborhood-mini-app@portal:../frontend/packages/mini-apps/neighborhood/::locator=blockly-mooc%40workspace%3A.":
   version: 0.0.0-use.local
   resolution: "@code-dot-org/neighborhood-mini-app@portal:../frontend/packages/mini-apps/neighborhood/::locator=blockly-mooc%40workspace%3A."
+  dependencies:
+    "@emotion/react": "catalog:"
+    "@emotion/styled": "catalog:"
+    "@mui/material": "catalog:"
   peerDependencies:
+    "@code-dot-org/component-library": "*"
     react: ^18.0.0 || ^19.0.0
     react-dom: ^18.0.0 || ^19.0.0
   languageName: node
@@ -4625,9 +4639,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@emotion/styled@npm:^11.14.0":
-  version: 11.14.0
-  resolution: "@emotion/styled@npm:11.14.0"
+"@emotion/styled@npm:^11.14.1":
+  version: 11.14.1
+  resolution: "@emotion/styled@npm:11.14.1"
   dependencies:
     "@babel/runtime": "npm:^7.18.3"
     "@emotion/babel-plugin": "npm:^11.13.5"
@@ -4641,7 +4655,7 @@ __metadata:
   peerDependenciesMeta:
     "@types/react":
       optional: true
-  checksum: 10/64bb3fd8c5d3042ba803eb2052fddf8e057b927682677f8fc41ecfe2b1abcc0da03944fde79fac8f2f55a56383d5c9547b93d4641bb51452cf59415c02dd9b10
+  checksum: 10/b20ffaaac76e16538051da8d417f1da75f47f0974000edf0999f39f309b23ee0a91ba7dc1d5f60c4017d29fadfed48631ae4a8f697e3662a88318c667d072117
   languageName: node
   linkType: hard
 
@@ -11443,7 +11457,7 @@ __metadata:
     "@dnd-kit/utilities": "npm:^3.2.2"
     "@dsco_/link": "npm:^1.1.2"
     "@emotion/react": "npm:^11.14.0"
-    "@emotion/styled": "npm:^11.14.0"
+    "@emotion/styled": "npm:^11.14.1"
     "@eslint/js": "npm:^9.31.0"
     "@excalidraw/excalidraw": "npm:^0.17.6"
     "@lezer/highlight": "npm:^1.2.0"
