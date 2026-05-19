@@ -5,6 +5,7 @@ import {generateText} from '@cdo/apps/aiGateway';
 import {MultiFileSource, ProjectFileType} from '@cdo/apps/lab2/types';
 import {createUuid} from '@cdo/apps/utils';
 
+import {LevelContext} from './context';
 import {getTextModel, logPrompt, logResponse, PROMPT_TAGS} from './shared';
 
 const weblabPlanSchema = Output.object({
@@ -47,15 +48,12 @@ export interface Weblab2Generation {
 // Web Lab 2 stores its starter sources as a MultiFileSource, the same
 // structure produced by prepareSourceForLevelbuilderSave in the codebridge
 // editor. Alongside the starter files we ask the model for student-facing
-// instructions (the level's `long_instructions` markdown field). Pass
-// `lessonContext` to give the model the lesson outline that frames this
-// level, so the starter code and instructions stay coherent with
-// surrounding panels.
+// instructions (the level's `long_instructions` markdown field). The full
+// LevelContext is passed in so the prompt can fold in every outer scope
+// (lesson outline, preceding levels, and — once those branches land —
+// unit outline + target project) without growing more positional args.
 export async function generateWeblab2Level(
-  levelName: string,
-  description: string,
-  lessonContext?: string,
-  precedingLevels?: string
+  ctx: LevelContext
 ): Promise<Weblab2Generation> {
   const prompt = [
     'You are helping a curriculum author build a "Web Lab 2" level: a',
@@ -72,29 +70,39 @@ export async function generateWeblab2Level(
     '     for them. Express subfolders as a `/` in the file name (e.g.',
     '     "css/style.css"). Honor any explicit file count or layout the',
     '     description specifies.',
-    ...(lessonContext
+    ...(ctx.unitOutline
+      ? [
+          '',
+          `Unit context — this level sits inside the unit "${
+            ctx.unitName ?? ''
+          }". Use it for broad continuity (recurring themes, tone, arc)`,
+          'but build only the specific level described below:',
+          ctx.unitOutline,
+        ]
+      : []),
+    ...(ctx.lessonOutline
       ? [
           '',
           'Lesson context (this level is one piece of a larger lesson — keep',
           'continuity with prior steps, but only build the specific level',
           'described below):',
-          lessonContext,
+          ctx.lessonOutline,
         ]
       : []),
-    ...(precedingLevels
+    ...(ctx.precedingLevels
       ? [
           '',
           'Preceding levels in this lesson, in order. Use them for continuity',
           '— building on the same code, reusing characters or examples — but',
           'do NOT restate them; only build the level described last:',
-          precedingLevels,
+          ctx.precedingLevels,
         ]
       : []),
     '',
-    `Description: ${description}`,
+    `Description: ${ctx.levelDescription}`,
   ].join('\n');
 
-  const planContext = {level: levelName, subtask: 'plan'};
+  const planContext = {level: ctx.levelName, subtask: 'plan'};
   logPrompt(PROMPT_TAGS.WEBLAB2_PLAN, prompt, planContext);
   const response = await generateText({
     model: getTextModel(),

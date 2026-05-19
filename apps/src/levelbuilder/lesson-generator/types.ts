@@ -72,6 +72,11 @@ export interface ExistingLessonData {
   // Persisted outline that drove the last "Generate outline" run (if any).
   // Stored on the lesson so reopening /generate restores it.
   generateOutline?: string;
+  // Outer-scope context piped down from the Unit this lesson belongs to,
+  // so the lesson-level AI prompts can anchor against the unit identity
+  // and the unit-wide outline the curriculum author wrote on /s/[unit]/generate.
+  unitName?: string;
+  unitOutline?: string;
 }
 
 // The shape returned by Lesson#summarize_for_lesson_edit, narrowed to the
