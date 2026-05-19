@@ -29,6 +29,7 @@ import {
 import {
   anchorHandleFlowPosition,
   attachEdgeToFreshAnchor,
+  inheritedAnchorBaseData,
   resolveEdgeEndpoint,
 } from '../utils/lineAnchors';
 import {getNodeLabel} from '../utils/nodeLabel';
@@ -437,7 +438,8 @@ export function useKeyboardNavigation({
         // Otherwise, spawn an anchor at the post-move position.
         const {anchor, edgePatch: patch} = attachEdgeToFreshAnchor(
           postMovePosition,
-          side
+          side,
+          inheritedAnchorBaseData(focusedEdge, side, getNode)
         );
         newAnchors.push(anchor);
         Object.assign(edgePatch, patch);

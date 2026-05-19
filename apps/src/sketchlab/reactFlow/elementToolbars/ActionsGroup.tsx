@@ -118,7 +118,8 @@ export default function ActionsGroup({
               onClick={onToggleHandles}
             >
               <FontAwesomeV6Icon
-                iconName={handlesVisible ? 'circle' : 'empty-set'}
+                iconName={handlesVisible ? 'empty-set' : 'circle'}
+                iconStyle={handlesVisible ? 'solid' : 'regular'}
               />
             </IconButton>
           </Tooltip>

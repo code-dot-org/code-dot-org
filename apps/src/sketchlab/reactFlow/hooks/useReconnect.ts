@@ -3,6 +3,7 @@ import {
   Edge,
   FinalConnectionState,
   HandleType,
+  useReactFlow,
   XYPosition,
 } from '@xyflow/react';
 import {useCallback, useRef} from 'react';
@@ -13,7 +14,10 @@ import {
 } from '@cdo/apps/lab2/types';
 
 import {getEventClientPosition} from '../utils/handleSnap';
-import {attachEdgeToFreshAnchor} from '../utils/lineAnchors';
+import {
+  attachEdgeToFreshAnchor,
+  inheritedAnchorBaseData,
+} from '../utils/lineAnchors';
 
 interface UseReconnectOptions {
   setNodes: (
@@ -36,6 +40,10 @@ export function useReconnect({
   setEdges,
   screenToFlowPosition,
 }: UseReconnectOptions) {
+  const {getNode} = useReactFlow<
+    SketchlabReactFlowNode,
+    SketchlabReactFlowEdge
+  >();
   const reconnectingEdgeRef = useRef<{landed: boolean} | null>(null);
 
   const isReconnecting = useCallback(
@@ -98,7 +106,8 @@ export function useReconnect({
 
       const {anchor, edgePatch} = attachEdgeToFreshAnchor(
         dropPosition,
-        handleType
+        handleType,
+        inheritedAnchorBaseData(edge, handleType, getNode)
       );
       setNodes(currentNodes => [...currentNodes, anchor]);
       setEdges(currentEdges =>
@@ -109,7 +118,7 @@ export function useReconnect({
         )
       );
     },
-    [screenToFlowPosition, setEdges, setNodes]
+    [getNode, screenToFlowPosition, setEdges, setNodes]
   );
 
   return {

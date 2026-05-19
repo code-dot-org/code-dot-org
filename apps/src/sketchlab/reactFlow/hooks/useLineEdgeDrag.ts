@@ -11,6 +11,7 @@ import {snapEdgeEndpointToHandle} from '../utils/handleSnap';
 import {
   anchorHandleFlowPosition,
   attachEdgeToFreshAnchor,
+  inheritedAnchorBaseData,
   resolveEdgeEndpoint,
 } from '../utils/lineAnchors';
 
@@ -57,7 +58,7 @@ export function useLineEdgeDrag({
   screenToFlowPosition,
   flowToScreenPosition,
 }: UseLineEdgeDragOptions) {
-  const {getNode} = useReactFlow<
+  const {getNode, getEdge} = useReactFlow<
     SketchlabReactFlowNode,
     SketchlabReactFlowEdge
   >();
@@ -75,10 +76,14 @@ export function useLineEdgeDrag({
       if (!dragState.hasMoved && dragState.pendingDetaches.length > 0) {
         const newAnchors: SketchlabReactFlowNode[] = [];
         const combinedPatch: Partial<SketchlabReactFlowEdge> = {};
+        const draggedEdge = getEdge(dragState.edgeId);
         dragState.pendingDetaches.forEach(pending => {
           const {anchor, edgePatch} = attachEdgeToFreshAnchor(
             pending.flowPosition,
-            pending.side
+            pending.side,
+            draggedEdge
+              ? inheritedAnchorBaseData(draggedEdge, pending.side, getNode)
+              : undefined
           );
           newAnchors.push(anchor);
           Object.assign(combinedPatch, edgePatch);
@@ -125,7 +130,7 @@ export function useLineEdgeDrag({
         })
       );
     },
-    [screenToFlowPosition, setNodes, setEdges]
+    [getEdge, getNode, screenToFlowPosition, setNodes, setEdges]
   );
 
   const stopLineEdgeDrag = useCallback(
