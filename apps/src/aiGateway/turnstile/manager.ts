@@ -146,13 +146,17 @@ export class TurnstileManager {
           : null;
       if (age !== null && age > TOKEN_MAX_AGE_MS) {
         console.log(
-          `${LOG} Pre-fetch token stale (${(age / 1000).toFixed(0)}s old) — discarding and starting fresh`
+          `${LOG} Pre-fetch token stale (${(age / 1000).toFixed(
+            0
+          )}s old) — discarding and starting fresh`
         );
         this.nextTokenPromise = null;
         this.nextTokenResolvedAt = null;
       } else {
         console.log(
-          `${LOG} Pre-fetch hit — returning in-progress token${age !== null ? ` (${(age / 1000).toFixed(0)}s old)` : ' (pending)'}`
+          `${LOG} Pre-fetch hit — returning in-progress token${
+            age !== null ? ` (${(age / 1000).toFixed(0)}s old)` : ' (pending)'
+          }`
         );
         const p = this.nextTokenPromise;
         this.nextTokenPromise = null;

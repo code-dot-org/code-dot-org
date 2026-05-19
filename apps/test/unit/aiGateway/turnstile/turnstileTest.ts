@@ -1,5 +1,5 @@
-import {TurnstileManager} from '@cdo/apps/aiGateway/turnstile/manager';
 import {TOKEN_MAX_AGE_MS} from '@cdo/apps/aiGateway/turnstile/constants';
+import {TurnstileManager} from '@cdo/apps/aiGateway/turnstile/manager';
 import {
   fetchTurnstileTokenIfEnabled,
   turnstileHeaders,
@@ -76,7 +76,8 @@ describe('TurnstileManager stale pre-fetch', () => {
   });
 
   it('discards a pre-fetched token older than TOKEN_MAX_AGE_MS and runs a fresh challenge', async () => {
-    const m = TurnstileManager.getInstance() as unknown as TurnstileManagerPrivates;
+    const m =
+      TurnstileManager.getInstance() as unknown as TurnstileManagerPrivates;
 
     const freshToken = 'fresh-token';
     const freshChallenge = jest.fn().mockResolvedValue(freshToken);
@@ -93,7 +94,8 @@ describe('TurnstileManager stale pre-fetch', () => {
   });
 
   it('uses a pre-fetched token that is still within TOKEN_MAX_AGE_MS', async () => {
-    const m = TurnstileManager.getInstance() as unknown as TurnstileManagerPrivates;
+    const m =
+      TurnstileManager.getInstance() as unknown as TurnstileManagerPrivates;
 
     const freshChallenge = jest.fn().mockResolvedValue('ignored');
     jest.spyOn(m, 'runSerializedChallenge').mockImplementation(freshChallenge);
