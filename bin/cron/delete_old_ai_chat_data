@@ -13,7 +13,7 @@ BATCH_SIZE = 1000
 #
 # Log the number of records deleted for each table to #cron-daily Slack channel
 # so we can easily monitor the deletion process.
-def delete_in_batches(scope, max_batches: nil, dry_run: false, table_name:)
+def delete_events_in_batches(scope, max_batches: nil, dry_run: false, table_name:)
   affected_record_count = 0
   processed_batches = 0
 
@@ -95,7 +95,7 @@ def main(options)
     puts "AichatRequest delete scope SQL: #{request_scope.to_sql}"
   end
 
-  deleted_event_count = delete_in_batches(event_scope, max_batches: max_batches, dry_run: dry_run, table_name: 'AichatEvent')
+  deleted_event_count = delete_events_in_batches(event_scope, max_batches: max_batches, dry_run: dry_run, table_name: 'AichatEvent')
   deleted_request_count, deleted_event_retry_count = delete_requests_in_batches(request_scope, max_batches: max_batches, dry_run: dry_run)
 
   event_summary = dry_run ? "AichatEvent total rows that would be deleted: #{deleted_event_count}" : "Deleted #{deleted_event_count} AichatEvent records"
