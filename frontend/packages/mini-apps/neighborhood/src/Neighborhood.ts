@@ -116,6 +116,21 @@ export default class Neighborhood {
     this.signals.push(signal);
   }
 
+  // Read-only snapshot of the signal queue for inspector UIs (the
+  // standalone dev App.tsx). Items at indices < nextSignalIndex have
+  // been consumed by processSignals; items at >= nextSignalIndex are
+  // pending. Returns fresh array references so callers can use shallow
+  // equality to detect changes.
+  getQueueSnapshot(): {
+    signals: ReadonlyArray<NeighborhoodSignal | ConsoleSignal>;
+    nextSignalIndex: number;
+  } {
+    return {
+      signals: this.signals.slice(),
+      nextSignalIndex: this.nextSignalIndex,
+    };
+  }
+
   // Process avaiable signals recursively. We process recursively to ensure
   // the commands appear sequential to the user and all commands stay in sync.
   processSignals() {

@@ -38,6 +38,7 @@ export type SkinType = Record<string, unknown>;
 // `LevelProperties` before calling into the inner `Neighborhood`.
 export interface NeighborhoodData {
   serializedMaze: number[];
+  baseAssetUrl: string;
 }
 
 export type NeighborhoodLevelProperties = LevelProperties<NeighborhoodData>;

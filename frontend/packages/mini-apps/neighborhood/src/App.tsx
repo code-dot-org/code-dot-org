@@ -3,15 +3,134 @@ import {Button, Typography} from '@mui/material';
 import {useEffect, useMemo, useState} from 'react';
 
 import {CodeStudioConfig} from '@code-dot-org/core';
-import type {LevelProperties, LevelPropertiesMap} from '@code-dot-org/core/api';
+import type {LevelPropertiesMap} from '@code-dot-org/core/api';
 import * as Observability from '@code-dot-org/core/plugins/observability';
 
+import {NeighborhoodSignalTypes} from './constants';
 import {NeighborhoodInputsContext} from './NeighborhoodInputsContext';
 import {NeighborhoodMiniApp} from './NeighborhoodMiniApp';
 import NeighborhoodPreview from './NeighborhoodPreview';
 import {loadNeighborhoodSkin} from './skin';
+import type {
+  ConsoleSignal,
+  NeighborhoodSignal,
+  NeighborhoodLevelProperties,
+} from './types';
 
 import moduleStyles from './neighborhood.module.scss';
+
+// Canned signals the inspector can inject. Each button calls
+// miniApp.handleSignal() with the value, which appends to the queue.
+// Defaults assume one painter with id=1; INITIALIZE_PAINTER must run
+// before the others have anything to act on.
+// Some buttons emit one signal, others a small sequence (e.g. Turn
+// Right has no protocol signal — it's three TURN_LEFTs, matching how
+// the Python emitter implements it).
+const SIGNAL_PRESETS: ReadonlyArray<{
+  label: string;
+  signals: NeighborhoodSignal[];
+}> = [
+  {
+    label: 'Initialize',
+    signals: [
+      {
+        value: NeighborhoodSignalTypes.INITIALIZE_PAINTER,
+        detail: {id: 1, x: '0', y: '0', direction: 'south'},
+      },
+    ],
+  },
+  {
+    label: 'Move North',
+    signals: [
+      {
+        value: NeighborhoodSignalTypes.MOVE,
+        detail: {id: 1, direction: 'north'},
+      },
+    ],
+  },
+  {
+    label: 'Move East',
+    signals: [
+      {
+        value: NeighborhoodSignalTypes.MOVE,
+        detail: {id: 1, direction: 'east'},
+      },
+    ],
+  },
+  {
+    label: 'Move South',
+    signals: [
+      {
+        value: NeighborhoodSignalTypes.MOVE,
+        detail: {id: 1, direction: 'south'},
+      },
+    ],
+  },
+  {
+    label: 'Move West',
+    signals: [
+      {
+        value: NeighborhoodSignalTypes.MOVE,
+        detail: {id: 1, direction: 'west'},
+      },
+    ],
+  },
+  {
+    label: 'Turn Left',
+    signals: [{value: NeighborhoodSignalTypes.TURN_LEFT, detail: {id: 1}}],
+  },
+  {
+    label: 'Turn Right (×3 Left)',
+    signals: [
+      {value: NeighborhoodSignalTypes.TURN_LEFT, detail: {id: 1}},
+      {value: NeighborhoodSignalTypes.TURN_LEFT, detail: {id: 1}},
+      {value: NeighborhoodSignalTypes.TURN_LEFT, detail: {id: 1}},
+    ],
+  },
+  {
+    label: 'Paint Red',
+    signals: [
+      {
+        value: NeighborhoodSignalTypes.PAINT,
+        detail: {id: 1, color: 'Red'},
+      },
+    ],
+  },
+  {
+    label: 'Paint Blue',
+    signals: [
+      {
+        value: NeighborhoodSignalTypes.PAINT,
+        detail: {id: 1, color: 'Blue'},
+      },
+    ],
+  },
+  {
+    label: 'Remove Paint',
+    signals: [{value: NeighborhoodSignalTypes.REMOVE_PAINT, detail: {id: 1}}],
+  },
+  {
+    label: 'Hide Painter',
+    signals: [{value: NeighborhoodSignalTypes.HIDE_PAINTER, detail: {id: 1}}],
+  },
+  {
+    label: 'Show Painter',
+    signals: [{value: NeighborhoodSignalTypes.SHOW_PAINTER, detail: {id: 1}}],
+  },
+  {
+    label: 'Done',
+    signals: [{value: NeighborhoodSignalTypes.DONE}],
+  },
+];
+
+// Render one queue entry. Console signals carry the message in
+// `detail`; neighborhood signals stringify their detail object so the
+// inspector shows id/direction/color at a glance.
+function formatSignal(s: NeighborhoodSignal | ConsoleSignal): string {
+  if (typeof s.detail === 'string') return `${s.value}: ${s.detail}`;
+  if (s.detail) return `${s.value} ${JSON.stringify(s.detail)}`;
+  return s.value;
+}
 
 // Test level the standalone preview boots against. Used for its
 // `baseAssetUrl` so the skin loader points at real maze assets.
@@ -35,7 +154,6 @@ function App() {
     setLevelPropertiesMap({
       [TEST_LEVEL_ID]: {
         skipUrl: '/projects/pythonlab/new',
-        encrypted: 'false',
         startSources: {
           files: {
             '0': {
@@ -64,10 +182,10 @@ function App() {
           openFiles: ['0', '2'],
         },
         longInstructions: '## Neighborhood level with validation\r\n',
-        hideShareAndRemix: 'true',
+        hideShareAndRemix: true,
         teacherMarkdown: 'Teachers should see this extra info.',
-        aiTutorAvailable: 'true',
-        submittable: 'false',
+        aiTutorAvailable: true,
+        submittable: false,
         predictSettings: {isPredictLevel: false},
         serializedMaze: [
           [
@@ -151,7 +269,7 @@ function App() {
             {tileType: 1, value: 0, assetId: 0},
           ],
         ],
-        enableMicroBit: 'false',
+        enableMicroBit: false,
         miniApp: 'neighborhood',
         validationFile: {
           id: '4',
@@ -164,10 +282,10 @@ function App() {
           open: false,
           type: 'validation',
         },
-        offerBrowserTts: 'false',
-        disableEditRunForSubmission: 'false',
-        widgetView: 'false',
-        widgetViewAllowShowCode: 'false',
+        offerBrowserTts: false,
+        disableEditRunForSubmission: false,
+        widgetView: false,
+        widgetViewAllowShowCode: false,
         containedLevelNames: null,
         name: 'Allthethings Python Lab 9',
         id: 65611,
@@ -181,7 +299,7 @@ function App() {
         enableBlocklyKeyboardNavigation: null,
         validations: [
           {
-            conditions: [{name: 'PASSED_ALL_TESTS', value: 'true'}],
+            conditions: [{name: 'PASSED_ALL_TESTS', value: true}],
             message: '',
             next: true,
           },
@@ -195,10 +313,11 @@ function App() {
 
   // The dashboard endpoint returns `Record<string, LevelProperties>`;
   // for a one-level fetch the first entry is the level we asked for.
-  const levelProperties: LevelProperties | null = useMemo(() => {
+  const levelProperties: NeighborhoodLevelProperties | null = useMemo(() => {
     if (!levelPropertiesMap) return null;
 
-    const ret = Object.values(levelPropertiesMap)[0] ?? null;
+    const ret = (Object.values(levelPropertiesMap)[0] ??
+      null) as unknown as NeighborhoodLevelProperties | null;
 
     return ret
       ? {
@@ -244,10 +363,27 @@ function App() {
       skin,
       serializedMaze: levelProperties
         ? JSON.stringify(levelProperties.serializedMaze)
-        : null,
+        : undefined,
     }),
     [miniApp, levelProperties, skin],
   );
+
+  // Poll the mini-app's queue snapshot so the inspector reflects both
+  // injection (handleSignal) and consumption (processSignals advances
+  // nextSignalIndex). 100ms is fast enough for the eye but slow enough
+  // not to thrash React; the queue size is small so per-tick diff is
+  // cheap.
+  const [queue, setQueue] = useState<{
+    signals: ReadonlyArray<NeighborhoodSignal | ConsoleSignal>;
+    nextSignalIndex: number;
+  }>({signals: [], nextSignalIndex: 0});
+
+  useEffect(() => {
+    const id = setInterval(() => {
+      setQueue(miniApp.getQueueSnapshot());
+    }, 100);
+    return () => clearInterval(id);
+  }, [miniApp]);
 
   return (
     <>
@@ -265,7 +401,7 @@ function App() {
               variant="contained"
               color="primary"
               size="extraSmall"
-              onClick={() => {}}
+              onClick={() => miniApp.onRun()}
             >
               Run
             </Button>
@@ -273,11 +409,48 @@ function App() {
               variant="contained"
               color="primary"
               size="extraSmall"
-              onClick={() => {}}
+              onClick={() => miniApp.reset()}
             >
               Reset
             </Button>
           </div>
+          <Typography variant="body2" component="p">
+            Inject signals (queued in order; click Run to start processing):
+          </Typography>
+          <div className={moduleStyles.buttons}>
+            {SIGNAL_PRESETS.map(({label, signals}) => (
+              <Button
+                key={label}
+                variant="contained"
+                color="secondary"
+                size="extraSmall"
+                onClick={() => signals.forEach(s => miniApp.handleSignal(s))}
+              >
+                {label}
+              </Button>
+            ))}
+          </div>
+          <Typography variant="body2" component="p">
+            Queue ({queue.nextSignalIndex}/{queue.signals.length} consumed):
+          </Typography>
+          <ol className={moduleStyles.queue}>
+            {queue.signals.length === 0 ? (
+              <li className={moduleStyles.queueEmpty}>(empty)</li>
+            ) : (
+              queue.signals.map((s, i) => (
+                <li
+                  key={i}
+                  className={`${moduleStyles.queueItem} ${
+                    i < queue.nextSignalIndex
+                      ? moduleStyles.queueItemConsumed
+                      : moduleStyles.queueItemPending
+                  }`}
+                >
+                  {formatSignal(s)}
+                </li>
+              ))
+            )}
+          </ol>
         </>
       </NeighborhoodInputsContext.Provider>
       <p>Dashboard: {CodeStudioConfig.dashboardApiUrl}</p>

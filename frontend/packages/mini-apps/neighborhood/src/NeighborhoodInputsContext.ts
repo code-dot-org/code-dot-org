@@ -1,9 +1,7 @@
 import {createContext} from 'react';
 
-import type {LevelProperties} from '@code-dot-org/core/api';
-
 import type {NeighborhoodMiniApp} from './NeighborhoodMiniApp';
-import type {SkinType} from './types';
+import type {NeighborhoodLevelProperties, SkinType} from './types';
 
 /**
  * Inputs codebridge supplies to the package's `NeighborhoodPreview` at
@@ -25,7 +23,7 @@ export interface NeighborhoodInputs {
    * the inner Neighborhood and the MazeController it constructs are
    * the real consumers.
    */
-  levelProperties: LevelProperties | null;
+  levelProperties: NeighborhoodLevelProperties | null;
 
   /**
    * Loaded maze skin assets. Resolved by `apps/src/maze/skins`, opaque

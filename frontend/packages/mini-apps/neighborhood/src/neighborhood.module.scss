@@ -57,3 +57,31 @@
   flex-wrap: wrap;
   gap: 0.25rem;
 }
+
+.queue {
+  margin-top: 0.5rem;
+  padding: 0.5rem;
+  background: var(--background-neutral-tertiary);
+  border-radius: 4px;
+  font-family: monospace;
+  font-size: 0.85rem;
+  min-height: 2rem;
+}
+
+.queueItem {
+  padding: 0.125rem 0;
+}
+
+.queueItemConsumed {
+  opacity: 0.4;
+  text-decoration: line-through;
+}
+
+.queueItemPending {
+  font-weight: bold;
+}
+
+.queueEmpty {
+  opacity: 0.6;
+  font-style: italic;
+}

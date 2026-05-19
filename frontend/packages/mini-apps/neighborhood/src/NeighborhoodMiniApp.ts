@@ -110,6 +110,15 @@ export class NeighborhoodMiniApp
   }
 
   /**
+   * Read-only view of the signal queue. Forwards to the inner
+   * `Neighborhood`. Intended for inspector/debug UIs — the package's
+   * own standalone dev App.tsx polls this to visualize consumption.
+   */
+  getQueueSnapshot() {
+    return this.neighborhood.getQueueSnapshot();
+  }
+
+  /**
    * Rasterize the MazeController's SVG into a canvas for codebridge's
    * thumbnail pipeline. Returns null when the SVG isn't mounted (no run
    * has happened yet, or the preview was unmounted).

@@ -72,7 +72,7 @@ export const LevelPropertiesBaseSchema = z.object({
 
 export const LevelPropertiesMapSchema = z.record(
   z.string(),
-  LevelPropertiesBaseSchema,
+  LevelPropertiesBaseSchema.passthrough(),
 );
 
 export const PredictResponseSchema = z.object({
