@@ -113,7 +113,13 @@ class Unit < ApplicationRecord
           {rubric: {learning_goals: :learning_goal_evidence_levels}},
           :standards,
           :opportunity_standards,
-          :jit_pl_concepts
+          :jit_pl_concepts,
+          :lessons_resources,
+          :lessons_vocabularies,
+          :lessons_standards,
+          :lessons_opportunity_standards,
+          :lessons_programming_expressions,
+          :jit_pl_concepts_lessons
         ],
         unit_group_units: {
           unit_group: :course_version

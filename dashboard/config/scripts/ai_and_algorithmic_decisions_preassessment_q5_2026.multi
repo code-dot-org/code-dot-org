@@ -1,11 +1,11 @@
 name 'ai-and-algorithmic-decisions-preassessment-q5_2026'
 
-question 'On a coffee shop app, each time you add a drink to your cart, the total number of items at the top of the screen increases. What is the app using to keep track of how many drinks you\'ve added?'
+question 'A coffee shop app shows a running total at the top of the screen. Every time the user taps a drink, the total updates. What is the app using to make this work?'
 
-right 'A variable that stores and updates the total each time you add a drink'
-wrong 'A color code that changes the text whenever you make a purchase'
-wrong 'A font style that highlights the most popular menu items'
-wrong 'A download counter that measures how many people use the app'
+wrong 'A fixed value that the developer changes manually each day.'
+right 'A variable that stores the total and is updated and re-displayed each time a drink is added.'
+wrong 'The page reloads from the server with a new total each time.'
+wrong 'A timer that refreshes the screen every second.'
 
 allow_multiple_attempts true
 

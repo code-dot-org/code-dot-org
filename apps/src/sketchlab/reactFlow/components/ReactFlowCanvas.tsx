@@ -25,7 +25,9 @@ import {
   DEFAULT_NODE_WIDTH,
   LINE_DEFAULT_LENGTH_PX,
   LINE_RECONNECT_SNAP_RADIUS_PX,
+  MIN_ZOOM,
   SAVE_DEBOUNCE_MS,
+  SKETCHLAB_TOOLBAR_PANEL_CLASS,
 } from '../constants';
 import {
   ClipboardProvider,
@@ -33,12 +35,16 @@ import {
   ToolbarVisibilityProvider,
   type ToolbarTarget,
 } from '../context';
-import LineEdgeToolbar from '../elementToolbars/LineEdgeToolbar';
+import CornerToolbarPanel from '../elementToolbars/CornerToolbarPanel';
+import {
+  DEFAULT_EDGE_TYPE,
+  DEFAULT_LINE_WIDTH,
+  DEFAULT_STROKE_COLOR,
+} from '../elementToolbars/toolbarPalettes';
 import {useCopyPaste} from '../hooks/useCopyPaste';
 import {useFocusManagement} from '../hooks/useFocusManagement';
 import {useKeyboardNavigation} from '../hooks/useKeyboardNavigation';
 import {useLineEdgeDrag} from '../hooks/useLineEdgeDrag';
-import {useLineToolbar} from '../hooks/useLineToolbar';
 import {useReconnect} from '../hooks/useReconnect';
 import {useTabOrder} from '../hooks/useTabOrder';
 import ImageNode from '../nodes/ImageNode';
@@ -256,9 +262,10 @@ export default function ReactFlowCanvas({
   // clearing here would unmount the toolbar before the user can pick.
   const handleContainerBlur = useCallback(
     (event: React.FocusEvent) => {
+      const focusTarget = event.target as HTMLElement;
       if (
         event.currentTarget.contains(event.relatedTarget as Node) ||
-        (event.target as HTMLElement).closest('.react-flow__node-toolbar')
+        focusTarget.closest(`.${SKETCHLAB_TOOLBAR_PANEL_CLASS}`)
       ) {
         return;
       }
@@ -412,7 +419,7 @@ export default function ReactFlowCanvas({
         return addEdge(
           {
             ...connection,
-            ...defaultLineEdgeFields({arrow: true}),
+            ...defaultLineEdgeFields(),
           },
           currentEdges
         );
@@ -473,8 +480,8 @@ export default function ReactFlowCanvas({
         y: window.innerHeight / 2 + stagger,
       });
 
-      // For lines/arrows, create two hidden anchor nodes and connect them.
-      if (type === 'line' || type === 'arrow') {
+      // For lines, create two hidden anchor nodes and connect them.
+      if (type === 'line') {
         const sourceAnchor = createLineAnchorAtHandle(
           {
             x: centerPosition.x - LINE_DEFAULT_LENGTH_PX / 2,
@@ -493,18 +500,21 @@ export default function ReactFlowCanvas({
           id: createUuid(),
           source: sourceAnchor.id,
           target: targetAnchor.id,
-          ...defaultLineEdgeFields({arrow: type === 'arrow'}),
+          ...defaultLineEdgeFields(),
         };
 
         setNodes(currentNodes => [...currentNodes, sourceAnchor, targetAnchor]);
         setEdges(currentEdges => [...currentEdges, newLine]);
 
-        // Move focus to the new line after React Flow renders it.
+        // Move focus to the new line and open its toolbar after React
+        // Flow renders it. focusEntry must run before openToolbar so
+        // lastFocusedEntry matches the toolbar target — otherwise the
+        // close-on-focus-loss effect dismisses the toolbar immediately.
         (document.activeElement as HTMLElement)?.blur();
-        setTimeout(
-          () => focusEntry({type: 'edge', id: newLine.id}),
-          FOCUS_DELAY_MS
-        );
+        setTimeout(() => {
+          focusEntry({type: 'edge', id: newLine.id});
+          openToolbar({type: 'edge', id: newLine.id}, {trapFocus: false});
+        }, FOCUS_DELAY_MS);
         return;
       }
 
@@ -532,14 +542,17 @@ export default function ReactFlowCanvas({
 
       setNodes(currentNodes => [...currentNodes, newNode]);
 
-      // Move focus to the new node after React Flow renders it.
+      // Move focus to the new node and open its toolbar after React
+      // Flow renders it. focusEntry must run before openToolbar so
+      // lastFocusedEntry matches the toolbar target — otherwise the
+      // close-on-focus-loss effect dismisses the toolbar immediately.
       (document.activeElement as HTMLElement)?.blur();
-      setTimeout(
-        () => focusEntry({type: 'node', id: newNodeId}),
-        FOCUS_DELAY_MS
-      );
+      setTimeout(() => {
+        focusEntry({type: 'node', id: newNodeId});
+        openToolbar({type: 'node', id: newNodeId}, {trapFocus: false});
+      }, FOCUS_DELAY_MS);
     },
-    [focusEntry, screenToFlowPosition, setNodes, setEdges]
+    [focusEntry, openToolbar, screenToFlowPosition, setNodes, setEdges]
   );
 
   const handleNodeClick = useCallback(
@@ -553,21 +566,13 @@ export default function ReactFlowCanvas({
     [readOnly, openToolbar, nodes]
   );
 
-  const {
-    handleEdgeClick,
-    openLineEdge,
-    setLineEdgeColor,
-    setLineEdgeWidth,
-    setLineEdgeStrokeStyle,
-    setLineEdgeArrowHeads,
-    setLineEdgeLocked,
-  } = useLineToolbar({
-    edges,
-    readOnly,
-    openToolbarTarget,
-    openToolbar,
-    setEdges,
-  });
+  const handleEdgeClick = useCallback(
+    (_event: React.MouseEvent, edge: {id: string}) => {
+      if (readOnly) return;
+      openToolbar({type: 'edge', id: edge.id}, {trapFocus: false});
+    },
+    [readOnly, openToolbar]
+  );
 
   return (
     <SketchLabReadOnlyProvider value={readOnly}>
@@ -609,6 +614,7 @@ export default function ReactFlowCanvas({
               onReconnectEnd={handleReconnectEnd}
               onNodeDragStop={handleNodeDragStop}
               isValidConnection={isValidConnection}
+              minZoom={MIN_ZOOM}
               connectionRadius={LINE_RECONNECT_SNAP_RADIUS_PX}
               nodeTypes={NODE_TYPES}
               onMoveEnd={handleMoveEnd}
@@ -627,28 +633,20 @@ export default function ReactFlowCanvas({
               disableKeyboardA11y={false}
               autoPanOnNodeFocus={false} // We manage viewport on focus manually in useFocusManagement.
               zIndexMode={'manual'}
+              defaultEdgeOptions={{
+                type: DEFAULT_EDGE_TYPE,
+                style: {
+                  stroke: DEFAULT_STROKE_COLOR,
+                  strokeWidth: DEFAULT_LINE_WIDTH,
+                },
+              }}
+              defaultMarkerColor={DEFAULT_STROKE_COLOR}
             >
-              {openLineEdge && (
-                <LineEdgeToolbar
-                  edge={openLineEdge}
-                  anchorNodeId={openLineEdge.source}
-                  onSelectColor={value =>
-                    setLineEdgeColor(openLineEdge.id, value)
-                  }
-                  onSelectWidth={value =>
-                    setLineEdgeWidth(openLineEdge.id, value)
-                  }
-                  onSelectStrokeStyle={value =>
-                    setLineEdgeStrokeStyle(openLineEdge.id, value)
-                  }
-                  onSelectArrowHeads={value =>
-                    setLineEdgeArrowHeads(openLineEdge.id, value)
-                  }
-                  onSetLocked={value =>
-                    setLineEdgeLocked(openLineEdge.id, value)
-                  }
-                />
-              )}
+              <CornerToolbarPanel
+                nodes={nodes}
+                edges={edges}
+                setEdges={setEdges}
+              />
               <Background />
               <Controls position="bottom-right" />
             </ReactFlow>

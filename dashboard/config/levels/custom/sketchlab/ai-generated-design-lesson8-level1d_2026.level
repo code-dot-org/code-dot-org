@@ -1,7 +1,7 @@
 <Sketchlab>
   <config><![CDATA[{
   "game_id": 75,
-  "created_at": "2026-03-13T19:11:55.000Z",
+  "created_at": "2026-02-24T18:11:49.000Z",
   "level_num": "custom",
   "user_id": 22366,
   "properties": {
@@ -25,9 +25,9 @@
             "data": {
               "shapeType": "rectangle",
               "label": "Page Title",
-              "backgroundColor": "#fff9db",
-              "strokeColor": "#1e1e1e",
-              "fontColor": "#1e1e1e",
+              "backgroundColor": "var(--sketchlab-bg-yellow)",
+              "strokeColor": "var(--sketchlab-stroke-default)",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": "large"
             },
             "measured": {
@@ -50,8 +50,8 @@
               "shapeType": "rectangle",
               "label": "Page Title",
               "backgroundColor": "transparent",
-              "strokeColor": "#1e1e1e",
-              "fontColor": "#1e1e1e",
+              "strokeColor": "var(--sketchlab-stroke-default)",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": "large"
             },
             "measured": {
@@ -74,8 +74,8 @@
               "shapeType": "rectangle",
               "label": "Page Title",
               "backgroundColor": "transparent",
-              "strokeColor": "#1e1e1e",
-              "fontColor": "#1e1e1e",
+              "strokeColor": "var(--sketchlab-stroke-default)",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": "large"
             },
             "measured": {
@@ -98,8 +98,8 @@
               "shapeType": "rectangle",
               "label": "Page Title",
               "backgroundColor": "transparent",
-              "strokeColor": "#1e1e1e",
-              "fontColor": "#1e1e1e",
+              "strokeColor": "var(--sketchlab-stroke-default)",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": "large"
             },
             "measured": {
@@ -122,8 +122,8 @@
               "shapeType": "rectangle",
               "label": "Page Title",
               "backgroundColor": "transparent",
-              "strokeColor": "#1e1e1e",
-              "fontColor": "#1e1e1e",
+              "strokeColor": "var(--sketchlab-stroke-default)",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": "large"
             },
             "measured": {
@@ -136,7 +136,8 @@
             "type": "text",
             "data": {
               "text": "City Explorer",
-              "fontSize": "large"
+              "fontSize": "large",
+              "fontColor": "var(--sketchlab-stroke-default)"
             },
             "position": {
               "x": 432.8064452407892,
@@ -146,11 +147,7 @@
               "width": 145,
               "height": 47
             },
-            "dragging": false,
-            "selected": false,
-            "domAttributes": {
-              "tabIndex": -1
-            }
+            "dragging": false
           }
         ],
         "edges": [
@@ -196,9 +193,9 @@
           }
         ],
         "viewport": {
-          "x": -111.97774563792859,
-          "y": -11.932295401729476,
-          "zoom": 1.418596586047479
+          "x": 27.302450664677963,
+          "y": -131.33491586253882,
+          "zoom": 1.3624523971908598
         }
       }
     },
@@ -915,6 +912,6 @@
     }
   },
   "published": true,
-  "audit_log": "[{\"changed_at\":\"2026-02-24T18:11:49.852+00:00\",\"changed\":[\"cloned from \\\"ai-generated-design-lesson8-level1d_2025\\\"\"],\"cloned_from\":\"ai-generated-design-lesson8-level1d_2025\"},{\"changed_at\":\"2026-03-12 20:13:14 +0000\",\"changed\":[],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-12 20:26:40 +0000\",\"changed\":[],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-16 15:52:08 +0000\",\"changed\":[\"long_instructions\",\"teacher_markdown\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2026-05-01 06:28:13 -0400\",\"changed\":[\"start_sources\"],\"changed_by_id\":1,\"changed_by_email\":\"levelbuilder@dev.com\"}]"
+  "audit_log": "[{\"changed_at\":\"2026-02-24T18:11:49.852+00:00\",\"changed\":[\"cloned from \\\"ai-generated-design-lesson8-level1d_2025\\\"\"],\"cloned_from\":\"ai-generated-design-lesson8-level1d_2025\"},{\"changed_at\":\"2026-03-12 20:13:14 +0000\",\"changed\":[],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-12 20:26:40 +0000\",\"changed\":[],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-16 15:52:08 +0000\",\"changed\":[\"long_instructions\",\"teacher_markdown\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2026-05-01 06:28:13 -0400\",\"changed\":[\"start_sources\"],\"changed_by_id\":1,\"changed_by_email\":\"levelbuilder@dev.com\"},{\"changed_at\":\"2026-05-06 19:10:35 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":155,\"changed_by_email\":\"dani@code.org\"},{\"changed_at\":\"2026-05-08 12:48:21 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":155,\"changed_by_email\":\"dani@code.org\"}]"
 }]]></config>
 </Sketchlab>

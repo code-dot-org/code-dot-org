@@ -5,9 +5,9 @@ description 'description here'
 markdown <<MARKDOWN
 # Final Project: Solving Community Problems with Chatbots
 
-#### In the final project of this curriculum, **students create a chatbot that addresses a personally relevant issue or an issue in their community**. 
+In the final project of this curriculum, **students create a chatbot that addresses a personally relevant issue or an issue in their community**. 
 
-#### Students rely on the user-centered design strategies they’ve seen throughout the unit to create issue statements, design a chatbot, perform user testing, and reflect on the results. Optionally, students can design a presentation on their project and the problem it was designed to address.
+Students rely on the user-centered design strategies they’ve seen throughout the unit to create issue statements, design a chatbot, perform user testing, and reflect on the results. Optionally, students can design a presentation on their project and the problem it was designed to address.
 
 <div style="background-color: #a6e3e8; border-radius: 40px; color: #000000; width: 95%; padding: 1px 20px 1px 20px;">
 
@@ -33,8 +33,8 @@ markdown <<MARKDOWN
 <div style="margin-top: 20px; margin-left: 20px; margin-right: 20px; padding-bottom:20px;">
     <p>
 
-####Participating in the <a href="https://padlet.com/codeorgpl/exploring-generative-ai-self-paced-professional-learning-dgb4yws61unrun" target="_blank">Gen AI Self-Paced PL Learning Community</a> is optional and not necessary to earn a certificate for this module. However, we encourage you to engage with the broader Gen AI learner community. 
-#### **Please share what chatbot you would develop if you were tasked with completing this project.**
+Participating in the <a href="https://padlet.com/codeorgpl/exploring-generative-ai-self-paced-professional-learning-dgb4yws61unrun" target="_blank">Gen AI Self-Paced PL Learning Community</a> is optional and not necessary to earn a certificate for this module. However, we encourage you to engage with the broader Gen AI learner community. 
+**Please share what chatbot you would develop if you were tasked with completing this project.**
 
 </p></div>
 </details>
@@ -47,19 +47,19 @@ markdown <<MARKDOWN
 
 
 
-#### In this project students will work through the **Design Thinking Process**. The process involves five steps that teams use to understand users, challenge assumptions, redefine problems, and create innovative solutions. 
+In this project students will work through the **Design Thinking Process**. The process involves five steps that teams use to understand users, challenge assumptions, redefine problems, and create innovative solutions. 
 
 ### Cyclical Design Process 
 
-#### Students will use this process throughout this unit as they work towards developing a prototype for a computer vision product. It involves understanding users, defining problems, brainstorming solutions, creating prototypes, and testing them while emphasizing a **user-centric mindset**.
+Students will use this process throughout this unit as they work towards developing a prototype for a computer vision product. It involves understanding users, defining problems, brainstorming solutions, creating prototypes, and testing them while emphasizing a **user-centric mindset**.
 
 ### Why use this process?
 
-#### By practicing these steps, students will learn to continuously improve their ideas and ultimately develop their own prototypes. This cyclical process helps students build creativity and problem-solving skills in a practical, hands-on way.
+By practicing these steps, students will learn to continuously improve their ideas and ultimately develop their own prototypes. This cyclical process helps students build creativity and problem-solving skills in a practical, hands-on way.
 
 
 ## Up Next!
-#### Explore the steps students will go through when completing their projects.
+Explore the steps students will go through when completing their projects.
 
 
 MARKDOWN

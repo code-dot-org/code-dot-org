@@ -13,7 +13,7 @@
     "parent_level_id": 28811,
     "name_suffix": "_2026",
     "encrypted": "false",
-    "long_instructions": "\r\n\r\n#### After engaging with AI Lab to train AI Bot to recognize shapes, students will watch this follow up video to deepen their understanding of how AI Bot is being trained. \r\n\r\n## As you watch the video, consider the following:\r\n\r\n#### What is happening behind the scenes when AI Bot is learning to predict a label based on features?  \r\n"
+    "long_instructions": "\r\n\r\nAfter engaging with AI Lab to train AI Bot to recognize shapes, students will watch this follow up video to deepen their understanding of how AI Bot is being trained. \r\n\r\n## As you watch the video, consider the following:\r\n\r\nWhat is happening behind the scenes when AI Bot is learning to predict a label based on features?  \r\n"
   },
   "notes": "",
   "audit_log": "[{\"changed_at\":\"2026-04-13T18:08:38.062+00:00\",\"changed\":[\"cloned from \\\"SP-VPL-CSD-21-mod5-AILabPart2-vid_25_2025\\\"\"],\"cloned_from\":\"SP-VPL-CSD-21-mod5-AILabPart2-vid_25_2025\"},{\"changed_at\":\"2026-04-24 17:58:55 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":10559,\"changed_by_email\":\"aryanna@code.org\"}]",

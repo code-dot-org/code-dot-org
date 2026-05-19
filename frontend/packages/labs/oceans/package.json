@@ -1,0 +1,87 @@
+{
+  "name": "@code-dot-org/oceans-lab",
+  "version": "0.0.0",
+  "private": true,
+  "description": "Code.org AI for Oceans lab",
+  "homepage": "https://github.com/code-dot-org/code-dot-org/blob/staging/frontend/packages/labs/oceans/#readme",
+  "bugs": {
+    "url": "https://github.com/code-dot-org/code-dot-org/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/code-dot-org/code-dot-org.git",
+    "directory": "frontend/packages/labs/oceans"
+  },
+  "license": "SEE LICENSE IN LICENSE",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.cjs"
+    },
+    "./styles.css": "./dist/oceans-lab.css"
+  },
+  "scripts": {
+    "build": "vite build",
+    "dev": "vite",
+    "lint": "eslint .",
+    "lint:fix": "eslint --fix .",
+    "prettier": "prettier --check .",
+    "prettier:fix": "prettier --write .",
+    "preview": "vite preview",
+    "test": "vitest --run",
+    "test:ui": "playwright test",
+    "test:ui:ci": "CI=true playwright test",
+    "typecheck": "tsc -b --noEmit"
+  },
+  "prettier": "@code-dot-org/lint-config/prettier/index.mjs",
+  "stylelint": {
+    "extends": "@code-dot-org/lint-config/stylelint/index.mjs"
+  },
+  "dependencies": {
+    "@code-dot-org/core": "workspace:*",
+    "@code-dot-org/redactable-markdown": "^0.4.0",
+    "@code-dot-org/svm": "^0.1.1",
+    "@tensorflow-models/knn-classifier": "~1.1.0",
+    "@tensorflow-models/mobilenet": "^2.0.4",
+    "@tensorflow/tfjs": "^1.3.1",
+    "messageformat": "2.3.0",
+    "radium": "^0.25.2",
+    "react-typist": "^2.0.5",
+    "rehype-react": "^4.0.1",
+    "remark-parse": "^7.0.2",
+    "remark-rehype": "^5.0.0"
+  },
+  "devDependencies": {
+    "@code-dot-org/lint-config": "workspace:*",
+    "@fortawesome/fontawesome-svg-core": "^1.2.25",
+    "@fortawesome/free-solid-svg-icons": "^5.11.2",
+    "@fortawesome/react-fontawesome": "^0.1.7",
+    "@testing-library/dom": "catalog:",
+    "@testing-library/react": "catalog:",
+    "@types/node": "catalog:",
+    "@vitejs/plugin-react": "catalog:",
+    "eslint": "catalog:",
+    "jsdom": "catalog:",
+    "lodash": "^4.17.5",
+    "playwright": "catalog:",
+    "prettier": "catalog:",
+    "prop-types": "^15.8.1",
+    "query-string": "4.1.0",
+    "react": "catalog:",
+    "react-dom": "catalog:",
+    "typescript": "catalog:",
+    "vite": "catalog:",
+    "vite-plugin-dts": "catalog:",
+    "vite-plugin-externalize-deps": "catalog:",
+    "vitest": "catalog:"
+  },
+  "peerDependencies": {
+    "@fortawesome/fontawesome-svg-core": "^1.2.25",
+    "@fortawesome/free-solid-svg-icons": "^5.11.2",
+    "@fortawesome/react-fontawesome": "^0.1.7",
+    "lodash": "^4.17.5",
+    "react": "^18 || ^19",
+    "react-dom": "^18 || ^19"
+  }
+}

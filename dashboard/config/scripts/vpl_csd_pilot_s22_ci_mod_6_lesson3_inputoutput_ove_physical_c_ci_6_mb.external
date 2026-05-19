@@ -28,7 +28,7 @@ markdown <<MARKDOWN
     <div style="margin-top: 20px; margin-left: 20px; margin-right: 20px;">
     <p>
 
-#### The A (left) button is available in code as `buttonA`. This button is identical to the B Button - other than location.
+The A (left) button is available in code as `buttonA`. This button is identical to the B Button - other than location.
 
 </p></div>
 </details>
@@ -38,7 +38,7 @@ markdown <<MARKDOWN
     <div style="margin-top: 20px; margin-left: 20px; margin-right: 20px;">
     <p>
 
-#### The **Input/Output Pins** on the micro:bit are "0", "1", and "2". These allow you to connect LEDs or buttons.
+The **Input/Output Pins** on the micro:bit are "0", "1", and "2". These allow you to connect LEDs or buttons.
 
 </p></div>
 </details>
@@ -48,7 +48,7 @@ markdown <<MARKDOWN
     <div style="margin-top: 20px; margin-left: 20px; margin-right: 20px;">
     <p>
 
-#### The **"3V pin** is the 3 volt power pin that you can use to power external LEDs and other electronics.
+The **"3V pin** is the 3 volt power pin that you can use to power external LEDs and other electronics.
 
 </p></div>
 </details>
@@ -58,7 +58,7 @@ markdown <<MARKDOWN
     <div style="margin-top: 20px; margin-left: 20px; margin-right: 20px;">
     <p>
 
-#### The **GND pin** is the ground pin. It's used to complete electrical circuits when you connect headphones, LEDs, or external switches to the micro:bit.
+The **GND pin** is the ground pin. It's used to complete electrical circuits when you connect headphones, LEDs, or external switches to the micro:bit.
 
 </p></div>
 </details>
@@ -68,7 +68,7 @@ markdown <<MARKDOWN
     <div style="margin-top: 20px; margin-left: 20px; margin-right: 20px;">
     <p>
 
-#### The B (right) button is available in code as `buttonB`. This button is identical to the A Button - other than location.
+The B (right) button is available in code as `buttonB`. This button is identical to the A Button - other than location.
 
 </p></div>
 </details>
@@ -78,11 +78,11 @@ markdown <<MARKDOWN
     <div style="margin-top: 20px; margin-left: 20px; margin-right: 20px; margin-bottom:100px;">
     <p><img src="https://images.code.org/a5e885401f1337fcc29374bb7bfd3a18-image-1681167337528.gif" style="width:200px; float:left; margin: 5px 20px 0px 10px;">
 
-#### **The Light Emitting Diode (LED)**
+**The Light Emitting Diode (LED)**
 
-#### When a computer only needs to communicate simple information, often a blinky light is the quickest and easiest way to do so. LEDs, or Light Emitting Diodes, are small, low power, and easy to use devices for communicating with light. 
+When a computer only needs to communicate simple information, often a blinky light is the quickest and easiest way to do so. LEDs, or Light Emitting Diodes, are small, low power, and easy to use devices for communicating with light. 
 
-#### The LED is probably the simplest form of output available and the micro:bit has a display of 25 red LEDs for you to program. The LEDs are arranged in a 5x5 grid allowing it to disiplay patterns, images, letters, or numbers. 
+The LED is probably the simplest form of output available and the micro:bit has a display of 25 red LEDs for you to program. The LEDs are arranged in a 5x5 grid allowing it to disiplay patterns, images, letters, or numbers. 
 
 </p></div>
 </details>

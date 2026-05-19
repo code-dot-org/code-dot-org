@@ -19,11 +19,7 @@ export default function ImageNodeToolbar({nodeId}: ImageNodeToolbarProps) {
   const handlesVisible = data.showHandles !== false;
 
   return (
-    <ToolbarShell
-      target={{type: 'node', id: nodeId}}
-      anchorNodeId={nodeId}
-      ariaLabel="Image options"
-    >
+    <ToolbarShell target={{type: 'node', id: nodeId}} ariaLabel="Image options">
       {data.locked ? (
         <LockedNotice onUnlock={() => patchNodeData({locked: false})} />
       ) : (
