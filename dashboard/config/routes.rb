@@ -1291,6 +1291,9 @@ Dashboard::Application.routes.draw do
     # Hackathon: AI-authored lessons backed by simple filesystem JSON storage,
     # deliberately not tied to Level/Lesson/Script models.
     get '/ai_lessons', to: 'ai_lessons#index', as: :ai_lessons
+    # Static path BEFORE the :id route so it doesn't get captured as a
+    # lesson id by the `/ai_lessons/:id` show route below.
+    get '/ai_lessons/progress', to: 'ai_lessons#all_progress', as: :ai_lessons_all_progress
     get '/ai_lessons/new', to: 'ai_lessons#new', as: :new_ai_lesson
     post '/ai_lessons', to: 'ai_lessons#create'
     get '/ai_lessons/:id', to: 'ai_lessons#show', as: :ai_lesson

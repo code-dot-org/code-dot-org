@@ -49,6 +49,9 @@ const LessonsListPage: React.FunctionComponent<LessonsListPageProps> = ({
           <a className={styles.primaryButton} href="/ai_lessons/new">
             + New lesson
           </a>
+          <a className={styles.secondaryButton} href="/ai_lessons/progress">
+            View student progress
+          </a>
         </div>
       </header>
       {error && <div className={styles.error}>{error}</div>}

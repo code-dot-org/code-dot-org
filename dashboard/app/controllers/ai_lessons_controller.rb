@@ -12,6 +12,15 @@ class AiLessonsController < ApplicationController
     @lessons = list_lessons
   end
 
+  # Teacher-facing roll-up: every (lesson, user) pair we have a progress
+  # snapshot for, with the user's name, the lesson's title, the last
+  # completed checkpoint index, and the latest LLM-generated summary.
+  # Currently shows everyone — no section/class filtering yet.
+  def all_progress
+    view_options(full_width: true, no_padding_container: true, no_footer: true)
+    @progress_entries = list_all_progress
+  end
+
   def new
     view_options(full_width: true, no_padding_container: true, no_footer: true)
   end
@@ -171,6 +180,48 @@ class AiLessonsController < ApplicationController
 
   private def write_lesson_json(id, data)
     File.write(lesson_path(id), JSON.pretty_generate(data))
+  end
+
+  # Walks the on-disk progress directory and returns a flat list of every
+  # snapshot we have, enriched with user names + lesson titles for the
+  # teacher view.  Skips entries whose lesson JSON has since been deleted.
+  private def list_all_progress
+    root = File.join(storage_dir, 'progress')
+    return [] unless Dir.exist?(root)
+
+    user_cache = {}
+    lesson_cache = {}
+
+    Dir.glob(File.join(root, '*', '*.json')).sort.flat_map do |path|
+      lesson_id = File.basename(File.dirname(path))
+      user_id = File.basename(path, '.json').to_i
+      next [] if user_id <= 0
+
+      lesson = lesson_cache[lesson_id] ||= load_lesson_json(lesson_id)
+      next [] unless lesson
+
+      parsed = begin
+        JSON.parse(File.read(path))
+      rescue JSON::ParserError
+        next []
+      end
+
+      user = user_cache[user_id] ||= User.find_by(id: user_id)
+      user_label = user ? (user.name.presence || user.username.presence || "Student ##{user_id}") : "Student ##{user_id}"
+
+      [{
+        'user_id' => user_id,
+        'user_label' => user_label,
+        'lesson_id' => lesson_id,
+        'lesson_title' => lesson['title'] || '(untitled lesson)',
+        'lesson_objective' => lesson['objective'],
+        'total_checkpoints' => parsed['totalCheckpoints'] || lesson['checkpoints']&.length || 0,
+        'last_completed_checkpoint_index' => parsed['lastCompletedCheckpointIndex'],
+        'last_completed_checkpoint_id' => parsed['lastCompletedCheckpointId'],
+        'summary' => parsed['summary'] || '',
+        'updated_at' => parsed['updatedAt'] || File.mtime(path).iso8601,
+      }]
+    end
   end
 
   private def list_lessons
