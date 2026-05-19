@@ -17,7 +17,9 @@ import React, {useCallback, useEffect, useRef, useState} from 'react';
 import ChatMessage from '@cdo/apps/aiComponentLibrary/chatMessage/ChatMessage';
 import {Role} from '@cdo/apps/aiComponentLibrary/chatMessage/types';
 
+import {loadLesson} from './api';
 import EmbeddedLab from './EmbeddedLab';
+import {Link} from './router';
 import {
   loadProgress,
   ProgressSnapshot,
@@ -36,12 +38,61 @@ import {useStudentWork} from './useStudentWork';
 import styles from './aiLessons.module.scss';
 
 interface StudentPageProps {
-  lesson: LessonPlan;
+  lessonId: string;
 }
 
 type Phase = 'in-progress' | 'celebrate';
 
-const StudentPage: React.FunctionComponent<StudentPageProps> = ({lesson}) => {
+const StudentPage: React.FunctionComponent<StudentPageProps> = ({lessonId}) => {
+  // The lesson JSON is fetched on mount; until it lands we show a tiny
+  // loading state instead of every downstream `lesson.*` access guarding
+  // against undefined.
+  const [lesson, setLesson] = useState<LessonPlan | undefined>(undefined);
+  const [lessonError, setLessonError] = useState<string | undefined>();
+
+  useEffect(() => {
+    let cancelled = false;
+    loadLesson(lessonId)
+      .then(l => {
+        if (!cancelled) setLesson(l);
+      })
+      .catch(e => {
+        if (!cancelled) {
+          setLessonError(`Could not load lesson: ${(e as Error).message}`);
+        }
+      });
+    return () => {
+      cancelled = true;
+    };
+  }, [lessonId]);
+
+  if (lessonError) {
+    return (
+      <div className={styles.celebrate}>
+        <p className={styles.error}>{lessonError}</p>
+        <p>
+          <Link href="/ai_lessons">Back to lessons</Link>
+        </p>
+      </div>
+    );
+  }
+  if (!lesson) {
+    return (
+      <div className={styles.celebrate}>
+        <p className={styles.muted}>Loading lesson…</p>
+      </div>
+    );
+  }
+  return <StudentPageInner lesson={lesson} />;
+};
+
+interface StudentPageInnerProps {
+  lesson: LessonPlan;
+}
+
+const StudentPageInner: React.FunctionComponent<StudentPageInnerProps> = ({
+  lesson,
+}) => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [phase, setPhase] = useState<Phase>('in-progress');
   const [history, setHistory] = useState<TutorMessage[]>([]);
@@ -236,7 +287,7 @@ const StudentPage: React.FunctionComponent<StudentPageProps> = ({lesson}) => {
         <h1>You did it!</h1>
         <p>{lesson.title}</p>
         <p>
-          <a href="/ai_lessons">Back to lessons</a>
+          <Link href="/ai_lessons">Back to lessons</Link>
         </p>
       </div>
     );

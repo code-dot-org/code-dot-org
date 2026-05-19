@@ -2,21 +2,22 @@ import {ThemeProvider} from '@code-dot-org/component-library/common/contexts';
 import React from 'react';
 import {Provider} from 'react-redux';
 
-import LessonsListPage from '@cdo/apps/aiLessons/LessonsListPage';
+import AiLessonsApp from '@cdo/apps/aiLessons/AiLessonsApp';
 import {forceLightTheme} from '@cdo/apps/aiLessons/pageInit';
+import {RouterProvider} from '@cdo/apps/aiLessons/router';
 import {getStore} from '@cdo/apps/redux';
 import {createReactRoot} from '@cdo/apps/util/createReactRoot';
-import getScriptData from '@cdo/apps/util/getScriptData';
 
 $(document).ready(() => {
   forceLightTheme();
-  const data = getScriptData('aiLessonsIndex');
   createReactRoot(
     <Provider store={getStore()}>
       <ThemeProvider>
-        <LessonsListPage lessons={data.lessons || []} />
+        <RouterProvider>
+          <AiLessonsApp />
+        </RouterProvider>
       </ThemeProvider>
     </Provider>,
-    '#ai-lessons-index-container'
+    '#ai-lessons-app-container'
   );
 });

@@ -1,8 +1,0 @@
-- script_data = {mode: 'edit', lessonId: @lesson_id, initialLesson: @initial_lesson}
-
-- content_for(:head) do
-  = render partial: 'lab_head_deps'
-
-%script{src: webpack_asset_path('js/ai_lessons/edit.js'), data: {aiLessonsAuthor: script_data.to_json}}
-
-#ai-lessons-author-container

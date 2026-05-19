@@ -11,11 +11,12 @@
 import {SimpleDropdown} from '@code-dot-org/component-library/dropdown';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import {WithTooltip} from '@code-dot-org/component-library/tooltip';
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
 
-import {createLesson, updateLesson} from './api';
+import {createLesson, loadLesson, updateLesson} from './api';
 import {generateLessonFromPrompt} from './lessonGenerator';
 import {generatePanelImage} from './panelImageGenerator';
+import {Link} from './router';
 import {Checkpoint, LabType, LessonPlan, PanelSlide} from './types';
 
 import styles from './aiLessons.module.scss';
@@ -28,8 +29,9 @@ const LAB_ITEMS = [
 
 interface AuthorPageProps {
   mode: 'new' | 'edit';
+  // Present only in edit mode.  We fetch the lesson JSON ourselves on
+  // mount so the Rails action stays as a static SPA shell.
   lessonId?: string;
-  initialLesson?: LessonPlan;
 }
 
 // Section header rendered above each editable field on a checkpoint
@@ -80,15 +82,16 @@ function newCheckpoint(): Checkpoint {
 const AuthorPage: React.FunctionComponent<AuthorPageProps> = ({
   mode,
   lessonId,
-  initialLesson,
 }) => {
-  const [prompt, setPrompt] = useState<string>(
-    initialLesson?.authorInputs?.prompt || ''
-  );
-  const [plan, setPlan] = useState<LessonPlan | undefined>(initialLesson);
+  const [prompt, setPrompt] = useState<string>('');
+  const [plan, setPlan] = useState<LessonPlan | undefined>(undefined);
   const [busy, setBusy] = useState(false);
   const [error, setError] = useState<string | undefined>();
   const [savedId, setSavedId] = useState<string | undefined>(lessonId);
+  // In edit mode we fetch the existing lesson on mount; new mode starts blank.
+  const [loadingExisting, setLoadingExisting] = useState<boolean>(
+    mode === 'edit'
+  );
   // Per-slide image-generation state, keyed by `${checkpointIndex}-${panelIndex}`.
   const [generatingImageKey, setGeneratingImageKey] = useState<
     string | undefined
@@ -104,6 +107,28 @@ const AuthorPage: React.FunctionComponent<AuthorPageProps> = ({
   const [panelIndexByCheckpoint, setPanelIndexByCheckpoint] = useState<
     Record<string, number>
   >({});
+
+  // On mount in edit mode: pull the existing lesson JSON so the editor
+  // can seed itself.
+  useEffect(() => {
+    if (mode !== 'edit' || !lessonId) return;
+    let cancelled = false;
+    loadLesson(lessonId)
+      .then(lesson => {
+        if (cancelled) return;
+        setPlan(lesson);
+        setPrompt(lesson.authorInputs?.prompt || '');
+        setLoadingExisting(false);
+      })
+      .catch(e => {
+        if (cancelled) return;
+        setError(`Could not load lesson: ${(e as Error).message}`);
+        setLoadingExisting(false);
+      });
+    return () => {
+      cancelled = true;
+    };
+  }, [mode, lessonId]);
 
   // Auto-generate images for every panel slide in the freshly-generated plan,
   // in parallel.  Failures are caught per-slide so a single bad caption
@@ -444,6 +469,14 @@ const AuthorPage: React.FunctionComponent<AuthorPageProps> = ({
     );
   };
 
+  if (loadingExisting) {
+    return (
+      <div className={styles.authorPage}>
+        <p className={styles.muted}>Loading lesson…</p>
+      </div>
+    );
+  }
+
   return (
     <div className={styles.authorPage}>
       <header className={styles.authorHeader}>
@@ -758,16 +791,16 @@ const AuthorPage: React.FunctionComponent<AuthorPageProps> = ({
               {busy ? 'Saving…' : savedId ? 'Save changes' : 'Save lesson'}
             </button>
             {savedId && (
-              <a
+              <Link
                 className={styles.secondaryButton}
                 href={`/ai_lessons/${savedId}`}
               >
                 Open student view →
-              </a>
+              </Link>
             )}
-            <a className={styles.linkButton} href="/ai_lessons">
+            <Link className={styles.linkButton} href="/ai_lessons">
               Back to list
-            </a>
+            </Link>
           </div>
         </section>
       )}

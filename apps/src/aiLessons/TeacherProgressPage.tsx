@@ -7,7 +7,11 @@
 // just show the union of (lesson, user) pairs that have a progress file
 // on disk.  Sorted most-recently-active first.
 
-import React, {useMemo} from 'react';
+import React, {useEffect, useMemo, useState} from 'react';
+
+import HttpClient from '@cdo/apps/util/HttpClient';
+
+import {Link} from './router';
 
 import styles from './aiLessons.module.scss';
 
@@ -22,10 +26,6 @@ interface TeacherProgressEntry {
   last_completed_checkpoint_id?: string;
   summary: string;
   updated_at: string;
-}
-
-interface TeacherProgressPageProps {
-  entries: TeacherProgressEntry[];
 }
 
 interface StudentGroup {
@@ -77,10 +77,30 @@ function formatRelative(iso: string): string {
   return new Date(then).toLocaleDateString();
 }
 
-const TeacherProgressPage: React.FunctionComponent<
-  TeacherProgressPageProps
-> = ({entries}) => {
-  const groups = useMemo(() => groupByStudent(entries), [entries]);
+const TeacherProgressPage: React.FunctionComponent = () => {
+  // Fetches the full roll-up on mount.  No streaming / pagination — the
+  // hackathon dataset is small enough.
+  const [entries, setEntries] = useState<TeacherProgressEntry[] | undefined>(
+    undefined
+  );
+  const [error, setError] = useState<string | undefined>();
+
+  useEffect(() => {
+    let cancelled = false;
+    HttpClient.get('/ai_lessons/data/progress')
+      .then(r => r.json())
+      .then((data: TeacherProgressEntry[]) => {
+        if (!cancelled) setEntries(data);
+      })
+      .catch(e => {
+        if (!cancelled) setError(`Could not load progress: ${e.message}`);
+      });
+    return () => {
+      cancelled = true;
+    };
+  }, []);
+
+  const groups = useMemo(() => groupByStudent(entries || []), [entries]);
 
   return (
     <div className={styles.listPage}>
@@ -93,13 +113,16 @@ const TeacherProgressPage: React.FunctionComponent<
           checkpoint.
         </p>
         <div className={styles.actions}>
-          <a className={styles.secondaryButton} href="/ai_lessons">
+          <Link className={styles.secondaryButton} href="/ai_lessons">
             ← Back to lessons
-          </a>
+          </Link>
         </div>
       </header>
 
-      {groups.length === 0 ? (
+      {error && <div className={styles.error}>{error}</div>}
+      {entries === undefined ? (
+        <p className={styles.muted}>Loading progress…</p>
+      ) : groups.length === 0 ? (
         <p className={styles.muted}>
           No student progress yet. As students run their work or complete
           checkpoints, they'll appear here.
@@ -121,9 +144,9 @@ const TeacherProgressPage: React.FunctionComponent<
                     className={styles.studentLessonRow}
                   >
                     <div className={styles.studentLessonHead}>
-                      <a href={`/ai_lessons/${entry.lesson_id}`}>
+                      <Link href={`/ai_lessons/${entry.lesson_id}`}>
                         <strong>{entry.lesson_title}</strong>
-                      </a>
+                      </Link>
                       <span className={styles.muted}>
                         Checkpoint{' '}
                         {Math.max(0, entry.last_completed_checkpoint_index + 1)}{' '}

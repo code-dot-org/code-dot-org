@@ -1290,15 +1290,30 @@ Dashboard::Application.routes.draw do
 
     # Hackathon: AI-authored lessons backed by simple filesystem JSON storage,
     # deliberately not tied to Level/Lesson/Script models.
-    get '/ai_lessons', to: 'ai_lessons#index', as: :ai_lessons
-    # Static path BEFORE the :id route so it doesn't get captured as a
-    # lesson id by the `/ai_lessons/:id` show route below.
-    get '/ai_lessons/progress', to: 'ai_lessons#progress', as: :ai_lessons_progress
-    get '/ai_lessons/new', to: 'ai_lessons#new', as: :new_ai_lesson
-    post '/ai_lessons', to: 'ai_lessons#create'
-    get '/ai_lessons/:id', to: 'ai_lessons#show', as: :ai_lesson
-    get '/ai_lessons/:id/edit', to: 'ai_lessons#edit', as: :edit_ai_lesson
+    #
+    # Every in-app page path renders the same SPA shell (#app); the
+    # client-side router in AiLessonsApp inspects window.location and
+    # picks the page.  Data for each page is fetched lazily via the JSON
+    # endpoints further down.
+    # JSON list endpoints — declared before the page paths so the more
+    # specific routes match first.
+    get '/ai_lessons/data/lessons', to: 'ai_lessons#lessons_data'
+    get '/ai_lessons/data/progress', to: 'ai_lessons#progress_data'
     get '/ai_lessons/:id.json', to: 'ai_lessons#read', defaults: {format: 'json'}
+
+    # Page paths — all render the same SPA shell.  Constrained to
+    # format: 'html' so `/ai_lessons/:id.json` requests fall through to
+    # the explicit JSON route above instead of being captured here with
+    # format=json and crashing on the missing template.
+    constraints format: 'html' do
+      get '/ai_lessons', to: 'ai_lessons#app', as: :ai_lessons
+      get '/ai_lessons/progress', to: 'ai_lessons#app', as: :ai_lessons_progress
+      get '/ai_lessons/new', to: 'ai_lessons#app', as: :new_ai_lesson
+      get '/ai_lessons/:id', to: 'ai_lessons#app', as: :ai_lesson
+      get '/ai_lessons/:id/edit', to: 'ai_lessons#app', as: :edit_ai_lesson
+    end
+
+    post '/ai_lessons', to: 'ai_lessons#create'
     patch '/ai_lessons/:id', to: 'ai_lessons#update'
     put '/ai_lessons/:id', to: 'ai_lessons#update'
     delete '/ai_lessons/:id', to: 'ai_lessons#destroy'

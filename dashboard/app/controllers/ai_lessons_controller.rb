@@ -7,38 +7,27 @@
 class AiLessonsController < ApplicationController
   before_action :authenticate_user!, except: [:image]
 
-  def index
-    view_options(full_width: true, no_padding_container: true, no_footer: true)
-    @lessons = list_lessons
-  end
-
-  # Teacher-facing roll-up: every (lesson, user) pair we have a progress
-  # snapshot for, with the user's name, the lesson's title, the last
-  # completed checkpoint index, and the latest LLM-generated summary.
-  # Currently shows everyone — no section/class filtering yet.
-  def progress
-    view_options(full_width: true, no_padding_container: true, no_footer: true)
-    @progress_entries = list_all_progress
-  end
-
-  def new
+  # All in-app page paths (index / new / edit / show / progress) render
+  # the same Single-Page-App shell.  The client-side router in
+  # AiLessonsApp inspects window.location and decides which page to
+  # show; data is fetched lazily via the JSON endpoints below.
+  def app
     view_options(full_width: true, no_padding_container: true, no_footer: true)
   end
 
-  def edit
-    view_options(full_width: true, no_padding_container: true, no_footer: true)
-    @lesson_id = params[:id]
-    @initial_lesson = load_lesson_json(@lesson_id)
-    return head :not_found unless @initial_lesson
+  # JSON: list of all saved lessons (used by the index page).
+  def lessons_data
+    render json: list_lessons
   end
 
-  def show
-    view_options(full_width: true, no_padding_container: true, no_footer: true)
-    @lesson_id = params[:id]
-    @lesson_json = load_lesson_json(@lesson_id)
-    return head :not_found unless @lesson_json
+  # JSON: every (lesson, user) progress snapshot we have on disk,
+  # enriched with user names + lesson titles for the teacher view.
+  def progress_data
+    render json: list_all_progress
   end
 
+  # JSON: full LessonPlan for a single lesson (used by the student
+  # player and the edit page to hydrate themselves on mount).
   def read
     json = load_lesson_json(params[:id])
     return head :not_found unless json

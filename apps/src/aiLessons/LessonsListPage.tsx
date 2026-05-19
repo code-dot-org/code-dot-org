@@ -1,22 +1,36 @@
-// Minimal list of saved AI lessons.
+// Minimal list of saved AI lessons.  Fetches the list itself on mount
+// (we're in a client-routed SPA — the Rails action just renders the
+// shell).
 
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
+
+import HttpClient from '@cdo/apps/util/HttpClient';
 
 import {deleteLesson} from './api';
+import {Link} from './router';
 import {LessonIndexEntry} from './types';
 
 import styles from './aiLessons.module.scss';
 
-interface LessonsListPageProps {
-  lessons: LessonIndexEntry[];
-}
-
-const LessonsListPage: React.FunctionComponent<LessonsListPageProps> = ({
-  lessons: initialLessons,
-}) => {
-  const [lessons, setLessons] = useState<LessonIndexEntry[]>(initialLessons);
+const LessonsListPage: React.FunctionComponent = () => {
+  const [lessons, setLessons] = useState<LessonIndexEntry[] | undefined>();
   const [deletingId, setDeletingId] = useState<string | undefined>();
   const [error, setError] = useState<string | undefined>();
+
+  useEffect(() => {
+    let cancelled = false;
+    HttpClient.get('/ai_lessons/data/lessons')
+      .then(r => r.json())
+      .then((data: LessonIndexEntry[]) => {
+        if (!cancelled) setLessons(data);
+      })
+      .catch(e => {
+        if (!cancelled) setError(`Could not load lessons: ${e.message}`);
+      });
+    return () => {
+      cancelled = true;
+    };
+  }, []);
 
   const handleDelete = async (lesson: LessonIndexEntry) => {
     const label = lesson.title || '(untitled)';
@@ -28,7 +42,7 @@ const LessonsListPage: React.FunctionComponent<LessonsListPageProps> = ({
     setError(undefined);
     try {
       await deleteLesson(lesson.id);
-      setLessons(prev => prev.filter(l => l.id !== lesson.id));
+      setLessons(prev => (prev || []).filter(l => l.id !== lesson.id));
     } catch (e) {
       setError(`Could not delete ${label}: ${(e as Error).message}`);
     } finally {
@@ -46,29 +60,31 @@ const LessonsListPage: React.FunctionComponent<LessonsListPageProps> = ({
           single seamless experience guided by AI Tutor.
         </p>
         <div className={styles.actions}>
-          <a className={styles.primaryButton} href="/ai_lessons/new">
+          <Link className={styles.primaryButton} href="/ai_lessons/new">
             + New lesson
-          </a>
-          <a className={styles.secondaryButton} href="/ai_lessons/progress">
+          </Link>
+          <Link className={styles.secondaryButton} href="/ai_lessons/progress">
             View student progress
-          </a>
+          </Link>
         </div>
       </header>
       {error && <div className={styles.error}>{error}</div>}
-      {lessons.length === 0 ? (
+      {lessons === undefined ? (
+        <p className={styles.muted}>Loading lessons…</p>
+      ) : lessons.length === 0 ? (
         <p className={styles.muted}>No lessons yet — try creating one.</p>
       ) : (
         <ul className={styles.lessonList}>
           {lessons.map(l => (
             <li key={l.id} className={styles.lessonRow}>
-              <a href={`/ai_lessons/${l.id}`}>
+              <Link href={`/ai_lessons/${l.id}`}>
                 <strong>{l.title || '(untitled)'}</strong>
-              </a>
+              </Link>
               <div className={styles.muted}>{l.objective}</div>
               <div className={styles.lessonRowActions}>
-                <a href={`/ai_lessons/${l.id}`}>Open as student</a>
+                <Link href={`/ai_lessons/${l.id}`}>Open as student</Link>
                 {' · '}
-                <a href={`/ai_lessons/${l.id}/edit`}>Edit</a>
+                <Link href={`/ai_lessons/${l.id}/edit`}>Edit</Link>
                 {' · '}
                 <button
                   type="button"

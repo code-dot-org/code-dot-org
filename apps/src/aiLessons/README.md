@@ -109,16 +109,29 @@ schema or seed scars.
 
 ### Routes (Rails)
 
+Every in-app page path serves the same SPA shell (`AiLessonsController#app`).
+The client-side router in `AiLessonsApp.tsx` decides which page to
+render; data is fetched lazily via the JSON endpoints below.
+
 ```
-GET    /ai_lessons                                # lessons index
-GET    /ai_lessons/progress                       # teacher progress (must come before /:id)
+# page paths — all render the same SPA shell:
+GET    /ai_lessons                                # index
+GET    /ai_lessons/progress                       # teacher progress (before /:id)
 GET    /ai_lessons/new                            # author a new lesson
-POST   /ai_lessons                                # create
 GET    /ai_lessons/:id                            # student player
 GET    /ai_lessons/:id/edit                       # edit lesson
-GET    /ai_lessons/:id.json                       # raw lesson JSON
+
+# JSON endpoints — used by the SPA after it mounts:
+GET    /ai_lessons/data/lessons                   # list of lessons (index page)
+GET    /ai_lessons/data/progress                  # teacher progress roll-up
+GET    /ai_lessons/:id.json                       # full LessonPlan JSON
+
+# CRUD:
+POST   /ai_lessons                                # create
 PUT    /ai_lessons/:id                            # update
 DELETE /ai_lessons/:id                            # destroy (also wipes images, sources, progress)
+
+# sub-resources:
 POST   /ai_lessons/:id/images                     # upload generated image
 GET    /ai_lessons/:id/images/:filename           # serve generated image (auth skipped)
 GET    /ai_lessons/:id/sources/:lab_type          # load saved source
@@ -235,16 +248,15 @@ dashboard/tmp/ai_lessons/
 `<lessonId>` is `<timestamp36>-<random6>` (e.g. `tezm2v-b8930f`).
 `<labType>` is one of `weblab2`, `music`, `panels`.
 
-### Entry points
+### Entry point
 
-| Webpack entry | View | Purpose |
-| --- | --- | --- |
-| `ai_lessons/index` | `index.html.haml` | Lessons list |
-| `ai_lessons/new` | `new.html.haml` | Author a new lesson |
-| `ai_lessons/edit` | `edit.html.haml` | Edit an existing lesson |
-| `ai_lessons/show` | `show.html.haml` | Student player |
-| `ai_lessons/progress` | `progress.html.haml` | Teacher progress roll-up |
+The whole surface ships as a single SPA bundle: webpack entry
+`ai_lessons/app` paired with the Rails view `app.html.haml`.  Every
+page path mentioned above hits `AiLessonsController#app`, which just
+renders that template.  Once the bundle loads, `RouterProvider` in
+`router.tsx` watches `window.location` + `popstate`, and
+`AiLessonsApp` swaps the rendered page component accordingly.
 
-All four pages load the shared `_lab_head_deps.html.haml` partial which
-pulls in the locale bundles + blockly.js the embedded lab views depend
-on at module-evaluation time.
+`app.html.haml` includes the shared `_lab_head_deps.html.haml` partial
+which loads the locale bundles + `blockly.js` that the embedded lab
+views depend on at module-evaluation time.
