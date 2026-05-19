@@ -32188,9 +32188,9 @@ canvg@gabelerner/canvg:
   languageName: node
   linkType: hard
 
-"ws@npm:^8.11.0, ws@npm:^8.16.0, ws@npm:^8.2.3, ws@npm:^8.5.0":
-  version: 8.17.0
-  resolution: "ws@npm:8.17.0"
+"ws@npm:^8.11.0, ws@npm:^8.16.0, ws@npm:^8.18.0, ws@npm:^8.2.3, ws@npm:^8.5.0":
+  version: 8.20.1
+  resolution: "ws@npm:8.20.1"
   peerDependencies:
     bufferutil: ^4.0.1
     utf-8-validate: ">=5.0.2"
@@ -32199,22 +32199,7 @@ canvg@gabelerner/canvg:
       optional: true
     utf-8-validate:
       optional: true
-  checksum: 10/5e1dcb0ae70c6e2f158f5b446e0a72a2cd335b07aba73ee1872e9bae1285382286a10e53ed479db21bdd690a5dfd05641a768611ebb236253c62fefa43ef58b4
-  languageName: node
-  linkType: hard
-
-"ws@npm:^8.18.0":
-  version: 8.18.1
-  resolution: "ws@npm:8.18.1"
-  peerDependencies:
-    bufferutil: ^4.0.1
-    utf-8-validate: ">=5.0.2"
-  peerDependenciesMeta:
-    bufferutil:
-      optional: true
-    utf-8-validate:
-      optional: true
-  checksum: 10/3f38e9594f2af5b6324138e86b74df7d77bbb8e310bf8188679dd80bac0d1f47e51536a1923ac3365f31f3d8b25ea0b03e4ade466aa8292a86cd5defca64b19b
+  checksum: 10/8c4d2b06dc65381b6bfab1f2e584275dabd30a99a5ce058b4dc76f3d03fad1921cef3a21d8f53127d30a808cfd1864aa2fe6890a5d43359f682457315baec873
   languageName: node
   linkType: hard
 
