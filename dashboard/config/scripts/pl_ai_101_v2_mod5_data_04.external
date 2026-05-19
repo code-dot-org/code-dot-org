@@ -5,9 +5,9 @@ description 'description here'
 markdown <<MARKDOWN
 # Talking to Students About Data Privacy
 
-#### As students begin using AI tools, it’s important to help them understand not just how to use these tools, but how to use them safely and responsibly. Conversations about data privacy are a key part of this.
+As students begin using AI tools, it’s important to help them understand not just how to use these tools, but how to use them safely and responsibly. Conversations about data privacy are a key part of this.
 
-#### You don’t need to cover every technical detail. Instead, focus on helping students build awareness and good habits around what they share and how they think about their digital footprint.
+You don’t need to cover every technical detail. Instead, focus on helping students build awareness and good habits around what they share and how they think about their digital footprint.
 
 <div style="display:grid; gap:16px; max-width:90%; margin:0 auto; font-family:ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial; color:#292F36;">
 

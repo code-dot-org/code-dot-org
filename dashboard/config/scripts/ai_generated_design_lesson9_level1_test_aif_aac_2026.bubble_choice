@@ -1,0 +1,11 @@
+name 'ai-generated-design-lesson9-level1-test_aif-aac-2026'
+display_name 'Accessibility Audit'
+description 'Explore one of these websites and identify accessibility issues that make the site harder to see, use, or understand. '
+
+sublevels
+level 'ai-generated-design-lesson9-level1-choicea-test_aif-aac-2026'
+level 'ai-generated-design-lesson9-level1-choiceb-test_aif-aac-2026'
+level 'ai-generated-design-lesson9-level1-choicec-test_aif-aac-2026'
+
+uses_lab2
+navigation_type 'next_level'

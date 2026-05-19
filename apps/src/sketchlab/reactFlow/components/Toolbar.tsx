@@ -1,7 +1,11 @@
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
-import {IconButton, Paper, Tooltip} from '@mui/material';
+import {Divider, IconButton, Paper, Tooltip} from '@mui/material';
 import React, {ChangeEvent, useCallback, useId} from 'react';
 
+import {
+  getAppOptionsEditingExemplar,
+  getIsStartMode,
+} from '@cdo/apps/lab2/projects/utils';
 import useHiddenFileInput from '@cdo/apps/util/hooks/useHiddenFileInput';
 import HttpClient from '@cdo/apps/util/HttpClient';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
@@ -14,9 +18,21 @@ import styles from './toolbar.module.scss';
 
 interface ToolbarProps {
   onAddNode: (request: AddNodeRequest) => void;
+  levelName: string;
+  onUndo: () => void;
+  canUndo: boolean;
+  onRedo: () => void;
+  canRedo: boolean;
 }
 
-export default function Toolbar({onAddNode}: ToolbarProps) {
+export default function Toolbar({
+  onAddNode,
+  levelName,
+  onUndo,
+  canUndo,
+  onRedo,
+  canRedo,
+}: ToolbarProps) {
   const channelId = useAppSelector(state => state.lab.channel?.id) ?? '';
   // Use a stable ID prefix for accessibility.
   const uid = useId();
@@ -31,16 +47,34 @@ export default function Toolbar({onAddNode}: ToolbarProps) {
   const onFileSelected = useCallback(
     async (event: ChangeEvent<HTMLInputElement>) => {
       const file = event.target.files?.[0];
-      if (!file || !channelId) {
+      if (!file) {
+        return;
+      }
+
+      const isStarterAssetOrExemplar = !!(
+        getIsStartMode() || getAppOptionsEditingExemplar()
+      );
+      if (!isStarterAssetOrExemplar && !channelId) {
         return;
       }
 
       const extension = file.name.split('.').pop() ?? 'png';
       const filename = `${createUuid()}.${extension}`;
-      const uploadUrl = `${ASSET_PATH_PREFIX}/${channelId}/${filename}`;
+      const uploadUrl = isStarterAssetOrExemplar
+        ? `/level_starter_assets/${encodeURIComponent(
+            levelName
+          )}/uuid/${filename}`
+        : `${ASSET_PATH_PREFIX}/${channelId}/${filename}`;
 
       try {
-        await HttpClient.put(uploadUrl, file);
+        if (isStarterAssetOrExemplar) {
+          const bodyData = new FormData();
+          bodyData.append('files[]', file);
+          await HttpClient.post(uploadUrl, bodyData, true);
+        } else {
+          await HttpClient.put(uploadUrl, file);
+        }
+
         onAddNode({
           type: 'image',
           data: {src: uploadUrl, altText: file.name.replace(/\.[^.]+$/, '')},
@@ -49,7 +83,7 @@ export default function Toolbar({onAddNode}: ToolbarProps) {
         console.error('Failed to upload image:', error);
       }
     },
-    [channelId, onAddNode]
+    [channelId, levelName, onAddNode]
   );
 
   const [openFileInput, FileInput] = useHiddenFileInput(
@@ -63,7 +97,7 @@ export default function Toolbar({onAddNode}: ToolbarProps) {
       className={styles.toolbar}
       elevation={3}
       role="toolbar"
-      aria-label="Add shapes, lines, and images"
+      aria-label="Canvas tools"
       aria-orientation="vertical"
     >
       <Tooltip title="Add rectangle" placement="right">
@@ -131,24 +165,11 @@ export default function Toolbar({onAddNode}: ToolbarProps) {
         </IconButton>
       </Tooltip>
 
-      <Tooltip title="Add line" placement="right">
-        <IconButton
-          aria-label="Add line"
-          id={`${uid}-line`}
-          onClick={() => onAddNode({type: 'line'})}
-          size="small"
-          color="tertiary"
-          variant="outlined"
-        >
-          <FontAwesomeV6Icon iconName="minus" />
-        </IconButton>
-      </Tooltip>
-
       <Tooltip title="Add arrow" placement="right">
         <IconButton
           aria-label="Add arrow"
           id={`${uid}-arrow`}
-          onClick={() => onAddNode({type: 'arrow'})}
+          onClick={() => onAddNode({type: 'line'})}
           size="small"
           color="tertiary"
           variant="outlined"
@@ -169,8 +190,37 @@ export default function Toolbar({onAddNode}: ToolbarProps) {
           <FontAwesomeV6Icon iconName="image" />
         </IconButton>
       </Tooltip>
-
       <FileInput />
+      <Divider flexItem />
+      <Tooltip title="Undo" placement="right">
+        {/* span wrapper required so Tooltip receives pointer events when button is disabled */}
+        <span>
+          <IconButton
+            aria-label="Undo"
+            onClick={onUndo}
+            disabled={!canUndo}
+            size="small"
+            color="tertiary"
+            variant="outlined"
+          >
+            <FontAwesomeV6Icon iconName="rotate-left" />
+          </IconButton>
+        </span>
+      </Tooltip>
+      <Tooltip title="Redo" placement="right">
+        <span>
+          <IconButton
+            aria-label="Redo"
+            onClick={onRedo}
+            disabled={!canRedo}
+            size="small"
+            color="tertiary"
+            variant="outlined"
+          >
+            <FontAwesomeV6Icon iconName="rotate-right" />
+          </IconButton>
+        </span>
+      </Tooltip>
     </Paper>
   );
 }

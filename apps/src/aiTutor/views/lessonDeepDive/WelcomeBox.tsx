@@ -3,38 +3,40 @@ import React, {FC} from 'react';
 
 import styles from './welcome-box.module.scss';
 
-const WelcomeBox: FC = () => (
+interface WelcomeBoxProps {
+  onNext?: () => void;
+}
+
+const WelcomeBox: FC<WelcomeBoxProps> = ({onNext}) => (
   <div className={styles.container}>
-    <p className={styles.sentence}>
-      {"Let's see how you "}
-      <span className={styles.wordWindow}>
-        <span className={styles.wordTrack}>
-          <span className={`${styles.word} ${styles.wordCoded}`}>coded</span>
-          <span className={`${styles.word} ${styles.wordPrompted}`}>
+    <div className={styles.headline}>
+      <span>{"Let's see how you"}</span>
+      <div className={styles.wordWindow}>
+        <div className={styles.wordTrack}>
+          <div className={`${styles.word} ${styles.wordCoded}`}>coded</div>
+          <div className={`${styles.word} ${styles.wordPrompted}`}>
             prompted
-          </span>
-          <span className={`${styles.word} ${styles.wordDesigned}`}>
-            designed
-          </span>
-          <span className={`${styles.word} ${styles.wordDebated}`}>
-            debated
-          </span>
-          <span className={`${styles.word} ${styles.wordCreated}`}>
-            created
-          </span>
-          <span className={`${styles.word} ${styles.wordDebugged}`}>
+          </div>
+          <div className={`${styles.word} ${styles.wordDebugged}`}>
             debugged
-          </span>
-          <span className={`${styles.word} ${styles.wordProblemSolved}`}>
-            problem solved
-          </span>
-        </span>
-      </span>
-      <span className={styles.todayLine}>
-        today
+          </div>
+          <div className={`${styles.word} ${styles.wordCreated}`}>created</div>
+          <div className={`${styles.word} ${styles.wordPersisted}`}>
+            persisted
+          </div>
+        </div>
+      </div>
+      <div className={styles.todayLine}>
+        <span>today</span>
         <FontAwesomeV6Icon iconName={'sparkle'} />
-      </span>
-    </p>
+      </div>
+    </div>
+    {onNext && (
+      <button type="button" className={styles.letsGoButton} onClick={onNext}>
+        {"Let's go"}
+        <FontAwesomeV6Icon iconName={'arrow-right'} />
+      </button>
+    )}
   </div>
 );
 

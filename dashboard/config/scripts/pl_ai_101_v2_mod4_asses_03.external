@@ -5,9 +5,9 @@ description 'description here'
 markdown <<MARKDOWN
 # Grading AI-Supported Work
 
-#### Once expectations are clear, the next step is designing and grading work in ways that reflect those expectations.
+Once expectations are clear, the next step is designing and grading work in ways that reflect those expectations.
 
-#### In an AI-supported classroom, strong assessment design is the most effective way to support learning and reduce misuse. Rather than focusing only on what students produce, the goal is to understand how they think, make decisions, and improve their work.
+In an AI-supported classroom, strong assessment design is the most effective way to support learning and reduce misuse. Rather than focusing only on what students produce, the goal is to understand how they think, make decisions, and improve their work.
 
 <div style="max-width:900px; margin:20px auto; font-family:ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial; color:#292F36;">
 
@@ -44,9 +44,9 @@ Grade What Matters Most
 
 ## Focus on Design Over Detection
 
-#### When assessments are designed to make thinking visible, it becomes less necessary—and less effective—to rely on AI detection tools.
+When assessments are designed to make thinking visible, it becomes less necessary—and less effective—to rely on AI detection tools.
 
-#### AI detection tools are often unreliable and can incorrectly flag student work, especially for multilingual learners or students using structured writing. Over-reliance on these tools can undermine trust without meaningfully supporting learning.
+AI detection tools are often unreliable and can incorrectly flag student work, especially for multilingual learners or students using structured writing. Over-reliance on these tools can undermine trust without meaningfully supporting learning.
 
-#### Instead, focus on creating opportunities for students to demonstrate their understanding through their process, reasoning, and decisions.
+Instead, focus on creating opportunities for students to demonstrate their understanding through their process, reasoning, and decisions.
 MARKDOWN

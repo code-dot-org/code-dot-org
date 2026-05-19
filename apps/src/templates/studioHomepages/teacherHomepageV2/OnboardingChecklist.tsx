@@ -1,20 +1,29 @@
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import {Typography, Button as MuiButton} from '@mui/material';
 import React from 'react';
+import {Tour} from 'shepherd.js';
 
 import styles from './teacherHomepage.module.scss';
 
 const CHECKLIST_ITEMS = [
-  {label: 'Review the syllabus', completed: false},
-  {label: 'Learn how to evaluate', completed: false},
-  {label: 'Create a class section', completed: true},
+  {id: 'review-syllabus', label: 'Review the syllabus', completed: false},
+  {id: 'learn-to-evaluate', label: 'Learn how to evaluate', completed: false},
+  {id: 'create-section', label: 'Create a class section', completed: true},
 ];
 
-const OnboardingChecklist: React.FC = () => {
+interface OnboardingChecklistProps {
+  createSectionTour: Tour | null;
+}
+
+const OnboardingChecklist: React.FC<OnboardingChecklistProps> = ({
+  createSectionTour,
+}) => {
   const [isHidden, setIsHidden] = React.useState(false);
 
-  const handleButtonClick = () => {
-    console.log('Tour started');
+  const handleButtonClick = (id: string) => {
+    if (id === 'create-section') {
+      createSectionTour?.start();
+    }
   };
 
   if (isHidden) {
@@ -25,19 +34,22 @@ const OnboardingChecklist: React.FC = () => {
     <div className={styles.onboardingChecklistOuter}>
       <div className={styles.onboardingChecklistInner}>
         <Typography variant="h4" gutterBottom>
-          ✦ Where should we start?
+          <span className={styles.gradientIcon}>
+            <FontAwesomeV6Icon iconName="sparkle" iconStyle="solid" />
+          </span>
+          Where should we start?
         </Typography>
         <Typography variant="body2">
           Teaching Assistant can help you get started with Code.org
         </Typography>
         <div className={styles.onboardingChecklistButtons}>
-          {CHECKLIST_ITEMS.map(({label, completed}) => (
+          {CHECKLIST_ITEMS.map(({id, label, completed}) => (
             <MuiButton
-              key={label}
+              key={id}
               variant="outlined"
               color="secondary"
               className={styles.onboardingChecklistButton}
-              onClick={handleButtonClick}
+              onClick={() => handleButtonClick(id)}
               type="button"
             >
               {completed && (

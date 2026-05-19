@@ -51,4 +51,30 @@ class PardotHelpersTest < Minitest::Test
     PardotHelpersTest.try_with_exponential_backoff(3, [RuntimeError]) {try_counter += 1}
     assert try_counter == 1
   end
+
+  def reset_access_token_cache
+    PardotHelpers.class_variable_set(:@@access_token, nil)
+  end
+
+  def test_post_request_with_auth_requests_token_when_cache_empty
+    reset_access_token_cache
+
+    PardotHelpersTest.expects(:request_api_access_token).once
+    PardotHelpersTest.expects(:post_request).with('https://example.com').once
+
+    PardotHelpersTest.send(:post_request_with_auth, 'https://example.com')
+  ensure
+    reset_access_token_cache
+  end
+
+  def test_post_request_with_auth_reuses_cached_token
+    PardotHelpers.class_variable_set(:@@access_token, 'fresh-token')
+
+    PardotHelpersTest.expects(:request_api_access_token).never
+    PardotHelpersTest.expects(:post_request).with('https://example.com').once
+
+    PardotHelpersTest.send(:post_request_with_auth, 'https://example.com')
+  ensure
+    reset_access_token_cache
+  end
 end

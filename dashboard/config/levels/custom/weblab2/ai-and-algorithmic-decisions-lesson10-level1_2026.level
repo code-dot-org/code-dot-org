@@ -7,7 +7,7 @@
   "user_id": 18603,
   "properties": {
     "encrypted": "false",
-    "long_instructions": "## Toggle Thinking\r\n\r\n**Do This:**\r\n\r\n1. Select the button multiple times and observe what changes on the screen.\r\n\r\n2. Discuss with a partner:\r\n   - What changed each time you clicked? What stayed the same?\r\n   - What value is changing?",
+    "long_instructions": "## Do This:\r\n\r\nSelect the button multiple times and observe what changes on the screen.\r\n\r\n- What changed each time you clicked? What stayed the same?\r\n- What value is changing?",
     "submittable": "false",
     "disable_edit_run_for_submission": "false",
     "hide_share_and_remix": "false",
@@ -98,6 +98,6 @@
       }
     }
   },
-  "audit_log": "[{\"changed_at\":\"2026-03-20T23:46:37.820+00:00\",\"changed\":[\"cloned from \\\"ai-and-algorithmic-decisions-lesson10-level1_2025\\\"\"],\"cloned_from\":\"ai-and-algorithmic-decisions-lesson10-level1_2025\"},{\"changed_at\":\"2026-04-16 00:22:44 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2026-03-20T23:46:37.820+00:00\",\"changed\":[\"cloned from \\\"ai-and-algorithmic-decisions-lesson10-level1_2025\\\"\"],\"cloned_from\":\"ai-and-algorithmic-decisions-lesson10-level1_2025\"},{\"changed_at\":\"2026-04-16 00:22:44 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-05-16 18:22:49 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
 }]]></config>
 </Weblab2>

@@ -17,7 +17,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2026-04-06 16:35:55 UTC",
+    "serialized_at": "2026-05-18 00:16:36 UTC",
     "hide_within_course": false,
     "published_state": "in_development",
     "instruction_type": null,
@@ -10448,10 +10448,11 @@
   "resources": [
     {
       "name": "[Key] (Warm Up) Word Search",
-      "url": "https://drive.google.com/file/d/1-Ww5pygEZrF62nYQjLS91Z5Y8JFDZJ2d/view?usp=drivesdkview",
+      "url": "https://drive.google.com/file/d/1SDQLWCbYPWFgNDx20grckClfB2dTrX-C/view",
       "key": "_key_warm_up_word_search",
       "properties": {
         "audience": "Verified Teacher",
+        "embeddability_type": "embed_and_resource_dropdown",
         "type": "Answer Key"
       },
       "seeding_key": {
@@ -10460,10 +10461,11 @@
     },
     {
       "name": "[Key] Web Design for Users",
-      "url": "https://docs.google.com/document/d/1SlNIWi6MDDI1ZxHs3QXnzO-a9qU0rDcFreV1mnRAPFg/view",
+      "url": "https://docs.google.com/document/d/12h4gQB8-mBgJRh-EuEsiVwqqAdJifVQwf9PYHgopj58/view",
       "key": "_key_web_design_for_users",
       "properties": {
         "audience": "Verified Teacher",
+        "embeddability_type": "embed_and_resource_dropdown",
         "type": "Answer Key"
       },
       "seeding_key": {
@@ -10472,10 +10474,11 @@
     },
     {
       "name": "(Warm Up) Word Search",
-      "url": "https://docs.google.com/document/d/1fkKYZAhY5eox37teWHAsOIN11N75fkBcCEws2kze8rs/view",
+      "url": "https://docs.google.com/document/d/1vgwEv6Rv5g7AU4Gzja4KECTAlUQeCclNckzq5ADob7c/view",
       "key": "_warm_up_word_search",
       "properties": {
         "audience": "Student",
+        "embeddability_type": "embed_and_resource_dropdown",
         "include_in_pdf": true,
         "type": "Activity Guide"
       },
@@ -10485,10 +10488,11 @@
     },
     {
       "name": "Adding Style to a Webpage - Project Guide",
-      "url": "https://docs.google.com/document/d/1Kg31eruK6eK_7L26aL5mqxOIEtVJnPa2JIqfMmbX1nk/view",
+      "url": "https://docs.google.com/document/d/1SwJ77mIq3kMx46fwUuIZ8geyGDloSTSCP4zRgVMB-Io/view",
       "key": "adding_style_to_a_webpage_-_project_guide",
       "properties": {
         "audience": "Student",
+        "embeddability_type": "embed_and_resource_dropdown",
         "include_in_pdf": true,
         "type": "Activity Guide"
       },
@@ -10498,10 +10502,11 @@
     },
     {
       "name": "Adding Style to a Webpage Rubric",
-      "url": "https://docs.google.com/document/d/1vSTT-HSyqbZgIUhtBsZoYPDnDPdkfffX6Qy4X6wv_oA/view",
+      "url": "https://docs.google.com/document/d/1u7ZbSmMYxSJ2-6iG4UZzw5ljDsjKdLJNjWYACY6owA0/view",
       "key": "adding_style_to_a_webpage_rubric",
       "properties": {
         "audience": "Student",
+        "embeddability_type": "embed_and_resource_dropdown",
         "include_in_pdf": true,
         "type": "Rubric"
       },
@@ -10511,10 +10516,12 @@
     },
     {
       "name": "Body Styling",
-      "url": "https://drive.google.com/file/d/1litE09XshxkmQDw2OjhhmdHyvCDLyup4/view",
+      "url": "https://drive.google.com/file/d/1l3C9AgUz1WFRqdbbiF8D0OQbX-8u4sKA/view",
       "key": "body_styling",
       "properties": {
-        "audience": "Teacher"
+        "audience": "Teacher",
+        "embeddability_type": "embed_and_resource_dropdown",
+        "type": "Resource"
       },
       "seeding_key": {
         "resource.key": "body_styling"
@@ -10522,10 +10529,11 @@
     },
     {
       "name": "Classes",
-      "url": "https://drive.google.com/file/d/1KuGv9v91lGFLjQ5stnkmk0ZW82WRsCag/view",
+      "url": "https://drive.google.com/file/d/1NjDAqaBxYdbMwsoE0X1L-WMxnC1VPlZJ/view",
       "key": "classes",
       "properties": {
         "audience": "Teacher",
+        "embeddability_type": "embed_and_resource_dropdown",
         "type": "Resource"
       },
       "seeding_key": {
@@ -10534,10 +10542,11 @@
     },
     {
       "name": "Computer Science Practices",
-      "url": "https://docs.google.com/document/d/1gX1ki1x8HH7EN-59JcCFjaYnCVPhbniEH4ysZBuGKW8/view",
+      "url": "https://docs.google.com/document/d/1rjlogxzdp6BCpltbxxUhEEZyUzx7HOY4LEE1CxiTLsk/view",
       "key": "computer_science_practices",
       "properties": {
         "audience": "Student",
+        "embeddability_type": "embed_and_resource_dropdown",
         "include_in_pdf": true,
         "type": "Activity Guide"
       },
@@ -10559,10 +10568,11 @@
     },
     {
       "name": "Creative Commons Search",
-      "url": "https://drive.google.com/file/d/1W7c3XSlxyL-JuqHiwkn8kzlFZcwZ9xke/view",
+      "url": "https://drive.google.com/file/d/1bbZHcKD31N6Kx9oig3ZhyIsAChvv1oj1/view",
       "key": "creative_commons_search",
       "properties": {
         "audience": "Teacher",
+        "embeddability_type": "embed_and_resource_dropdown",
         "type": "Resource"
       },
       "seeding_key": {
@@ -10571,7 +10581,7 @@
     },
     {
       "name": "CSS Classes",
-      "url": "https://docs.google.com/presentation/d/1BjZpfjsfXNRzAmtocAJRLpg03V-aQfROw9j7fVXAi10/edit?usp=sharing",
+      "url": "https://docs.google.com/presentation/d/1Y0NQ0mOJ5V32XrqQkQrBKrhvO6Hhf2aP0ILc2R-sSmA/view",
       "key": "css_classes",
       "properties": {
         "audience": "Verified Teacher",
@@ -10585,7 +10595,7 @@
     },
     {
       "name": "CSS Pseudo-classes",
-      "url": "https://docs.google.com/presentation/d/1vXPcUAGPXrkFQ8tr-PKCqkcPcp_kLxUEpWVMGfkVMnc/edit?usp=sharing",
+      "url": "https://docs.google.com/presentation/d/1HhQUImBgqVy0vEiYT1lswcah2SLewpwIvaYNxCAg48s/view",
       "key": "css_pseudo-classes",
       "properties": {
         "audience": "Verified Teacher",
@@ -10598,11 +10608,25 @@
       }
     },
     {
+      "name": "CSS Selectors",
+      "url": "https://drive.google.com/file/d/1k6MwY08Slw4Kk26NjoMjwJfzEmcHEwEH/view",
+      "key": "css_selectors",
+      "properties": {
+        "audience": "Teacher",
+        "embeddability_type": "embed_and_resource_dropdown",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "css_selectors"
+      }
+    },
+    {
       "name": "Digital Footprint",
-      "url": "https://docs.google.com/presentation/d/1VUq00zJ3rNEnMLAAJUyA2OinguCFu6SXnSTPJ8OS_u4/template/preview",
+      "url": "https://docs.google.com/presentation/d/18DcP0dlecMvunMwTT2MaGRztuIuPiAmhhKMiaARPajA/view",
       "key": "digital_footprint",
       "properties": {
         "audience": "Teacher",
+        "embeddability_type": "embed_and_resource_dropdown",
         "type": "Slides"
       },
       "seeding_key": {
@@ -10611,10 +10635,11 @@
     },
     {
       "name": "Div Containers",
-      "url": "https://drive.google.com/file/d/1sBolIQvf2GvnigqaOeQXXSqFlXx9DYYV/view",
+      "url": "https://drive.google.com/file/d/1WgSOdQ-8iRA_mTUPuyJ2z9WXwszVRidH/view",
       "key": "div_containers",
       "properties": {
         "audience": "Teacher",
+        "embeddability_type": "embed_and_resource_dropdown",
         "type": "Resource"
       },
       "seeding_key": {
@@ -10707,14 +10732,29 @@
     },
     {
       "name": "Exemplar - Peer Review",
-      "url": "https://docs.google.com/document/d/13ebsmCxnOJkQGvK2VpYik6ISu3yTzuK1BsGyUFs_a8E/view",
+      "url": "https://docs.google.com/document/d/1WVVh5qVPRqM7XkgmnOJdIJRXLm1FI16iP68x67q0OnY/view",
       "key": "exemplar_-_peer_review",
       "properties": {
         "audience": "Verified Teacher",
+        "embeddability_type": "embed_and_resource_dropdown",
         "type": "Exemplar"
       },
       "seeding_key": {
         "resource.key": "exemplar_-_peer_review"
+      }
+    },
+    {
+      "name": "Exemplar - Peer Review - HTML Web Page",
+      "url": "https://docs.google.com/document/d/1n_qIhsit-fAuDYtq2QLLFRd_GvYPoTyeYzVx2iM7myY/view",
+      "key": "exemplar_-_peer_review_-_html_web_page",
+      "properties": {
+        "audience": "Verified Teacher",
+        "embeddability_type": "embed_and_resource_dropdown",
+        "include_in_pdf": true,
+        "type": "Exemplar"
+      },
+      "seeding_key": {
+        "resource.key": "exemplar_-_peer_review_-_html_web_page"
       }
     },
     {
@@ -10757,10 +10797,11 @@
     },
     {
       "name": "Exploring Web Pages",
-      "url": "https://docs.google.com/presentation/d/10MRScPFtJg4AhHf6ElWz263GRk0jubqkjkFFG9n0FZ8/template/preview",
+      "url": "https://docs.google.com/presentation/d/1loL2CxYTaPKj4hbbv7W8bdObaillPdJ31i6sPtMvmVo/view",
       "key": "exploring_web_pages",
       "properties": {
         "audience": "Teacher",
+        "embeddability_type": "embed_and_resource_dropdown",
         "type": "Slides"
       },
       "seeding_key": {
@@ -10769,7 +10810,7 @@
     },
     {
       "name": "Flex Children for More Control",
-      "url": "https://docs.google.com/presentation/d/1yUgxf9JA1Ix8nhJjvUcz0Cc2QHfzZd3T5DoppOdAAKI/edit?usp=sharing",
+      "url": "https://docs.google.com/presentation/d/1Hoe8N9muW3MdjXbXkWB6hwBoCKd9mW6Zpu7wFd6_mJw/view",
       "key": "flex_children_for_more_control",
       "properties": {
         "audience": "Verified Teacher",
@@ -10783,10 +10824,11 @@
     },
     {
       "name": "Flexbox",
-      "url": "https://drive.google.com/file/d/1aLyYXq7unwWWLGFtmoj8PI-6jotzf_Y8/view",
+      "url": "https://drive.google.com/file/d/18jXemehANtP7sW-Tb9Fw8ZabVFrIW5ZD/view",
       "key": "flexbox",
       "properties": {
         "audience": "Teacher",
+        "embeddability_type": "embed_and_resource_dropdown",
         "type": "Resource"
       },
       "seeding_key": {
@@ -10795,10 +10837,11 @@
     },
     {
       "name": "Flexbox Cheat Sheet",
-      "url": "https://docs.google.com/document/d/1f5t7oUfV-5PRtcKrJVskrb_Mt_r8941VT-Qa-07mP9o/view",
+      "url": "https://docs.google.com/document/d/12lL1-ZDAAb-zaM1soCdvM0OpE0OprDptcz7_rBxDtBA/view",
       "key": "flexbox_cheat_sheet",
       "properties": {
         "audience": "Student",
+        "embeddability_type": "embed_and_resource_dropdown",
         "include_in_pdf": true,
         "type": "Handout"
       },
@@ -10808,10 +10851,11 @@
     },
     {
       "name": "Flexbox Children Cheat Sheet",
-      "url": "https://docs.google.com/document/d/1lrkMGcPwjKo4g5uyvVfaXpFb7kRUfdtqcsqLRtaDWYM/view",
+      "url": "https://docs.google.com/document/d/1sklhgZ-yR8AaL0XDwKMWr8gP-lLaP3QtuB8oRw2c78Q/view",
       "key": "flexbox_children_cheat_sheet",
       "properties": {
         "audience": "Student",
+        "embeddability_type": "embed_and_resource_dropdown",
         "include_in_pdf": true,
         "type": "Handout"
       },
@@ -10821,10 +10865,11 @@
     },
     {
       "name": "Flexbox Children Properties",
-      "url": "https://drive.google.com/file/d/1ccde4pyrCZnH3OsTkk-KJl6wX0YCMxlh/view",
+      "url": "https://drive.google.com/file/d/1inb-5vkiPUldKAXpbMI4BUjuHoJZSTvL/view",
       "key": "flexbox_children_properties",
       "properties": {
         "audience": "Teacher",
+        "embeddability_type": "embed_and_resource_dropdown",
         "type": "Resource"
       },
       "seeding_key": {
@@ -10833,10 +10878,11 @@
     },
     {
       "name": "Formatting HTML",
-      "url": "https://drive.google.com/file/d/1d7hCWlSlvRtPognyhoHssoATapVeUySs/view",
+      "url": "https://drive.google.com/file/d/1v2Hm5zhdWpgwYrQszmGGgqW-hEOrgPYr/view",
       "key": "formatting_html",
       "properties": {
         "audience": "Teacher",
+        "embeddability_type": "embed_and_resource_dropdown",
         "type": "Resource"
       },
       "seeding_key": {
@@ -10845,7 +10891,7 @@
     },
     {
       "name": "Headings and Lists",
-      "url": "https://docs.google.com/presentation/d/1TE7onsjwy3K8E8etDkkdf9bJdmRa8JWYJRNdyHTQg0k/edit?usp=sharing",
+      "url": "https://docs.google.com/presentation/d/1IeGHEa2gcz_UKnXIghFm2MLlyaeOtu3i4fnmQBf7sY4/view",
       "key": "headings_and_lists",
       "properties": {
         "audience": "Verified Teacher",
@@ -10859,10 +10905,11 @@
     },
     {
       "name": "Headings and Paragraphs",
-      "url": "https://drive.google.com/file/d/1hF52QJCswfaE4IBf2sUlg7q5fh_q74mu/view",
+      "url": "https://drive.google.com/file/d/1Gkt6oFKQf2Upps9NuGmFAdwNgGSWDQXt/view",
       "key": "headings_and_paragraphs",
       "properties": {
         "audience": "Teacher",
+        "embeddability_type": "embed_and_resource_dropdown",
         "type": "Resource"
       },
       "seeding_key": {
@@ -10884,10 +10931,11 @@
     },
     {
       "name": "HTML Tags",
-      "url": "https://drive.google.com/file/d/1orGIRkr4_M3YrU9VfvDrZgUCy8cmLmqw/view?usp=drive_link",
+      "url": "https://drive.google.com/file/d/1AeYnLOk2Ugyt3Sdw0Kv7r15-oTZslFvB/view",
       "key": "html_tags",
       "properties": {
         "audience": "Teacher",
+        "embeddability_type": "embed_and_resource_dropdown",
         "type": "Resource"
       },
       "seeding_key": {
@@ -10896,10 +10944,11 @@
     },
     {
       "name": "HTML Web Page Rubric",
-      "url": "https://docs.google.com/document/d/1l6tIyQWurGV_Rc9fjrWiVJHwL52XywbpV34ZJvPYGUQ/view",
+      "url": "https://docs.google.com/document/d/1Oeq3Dvvp2QVfQelCRvBBVuw1wyj66Gy2KFOG7RJS7gE/view",
       "key": "html_web_page_rubric",
       "properties": {
         "audience": "Student",
+        "embeddability_type": "embed_and_resource_dropdown",
         "include_in_pdf": true,
         "type": "Rubric"
       },
@@ -10909,10 +10958,11 @@
     },
     {
       "name": "Hyperlinks",
-      "url": "https://drive.google.com/file/d/1h0lMgCUdMiqQxtNmzTZVaWql5Lz03Hh-/view",
+      "url": "https://drive.google.com/file/d/1VRUhH6gy8VyTi6V_79Wv10uPWHkE9CkP/view",
       "key": "hyperlinks",
       "properties": {
         "audience": "Teacher",
+        "embeddability_type": "embed_and_resource_dropdown",
         "type": "Resource"
       },
       "seeding_key": {
@@ -10921,10 +10971,11 @@
     },
     {
       "name": "Images in HTML",
-      "url": "https://drive.google.com/file/d/1qd50f20T10vhLdc81x0CQlNu7EEX6_fo/view",
+      "url": "https://drive.google.com/file/d/1wXCGQgLsKx7Npdk3siraJjCOzGB95MD5/view",
       "key": "images_in_html",
       "properties": {
         "audience": "Teacher",
+        "embeddability_type": "embed_and_resource_dropdown",
         "type": "Resource"
       },
       "seeding_key": {
@@ -10933,10 +10984,11 @@
     },
     {
       "name": "Intellectual Property",
-      "url": "https://docs.google.com/presentation/d/1nB7lNN6uP63WZKfR7-_YMLK4GEzQu5sD6lPE5xBa8iA/template/preview",
+      "url": "https://docs.google.com/presentation/d/1PJprEKlbLvFdyjj4EfFyvrXXg5xqmWpT-gq795FUnvY/view",
       "key": "intellectual_property",
       "properties": {
         "audience": "Teacher",
+        "embeddability_type": "embed_and_resource_dropdown",
         "type": "Slides"
       },
       "seeding_key": {
@@ -10945,10 +10997,11 @@
     },
     {
       "name": "Internet Scavenger Hunt",
-      "url": "https://docs.google.com/document/d/1aNgU8i8voO1OIZBhuCrZOnMefwPKTk5AUwvD_b_Vqsc/view",
+      "url": "https://docs.google.com/document/d/1M6f4Bt5WrheQsmkeazseK02s2u2oSAqzsDSBTsEMNao/view",
       "key": "internet_scavenger_hunt",
       "properties": {
         "audience": "Student",
+        "embeddability_type": "embed_and_resource_dropdown",
         "include_in_pdf": true,
         "type": "Activity Guide"
       },
@@ -10984,7 +11037,7 @@
     },
     {
       "name": "Intro to HTML",
-      "url": "https://docs.google.com/presentation/d/1lMNpCMeNV_6tR1-Xmxwc7tYOa8ylefkVLn6570D4x1Y/edit?usp=sharing",
+      "url": "https://docs.google.com/presentation/d/1zJogjm6Dx0TeVVT3NeDTUMV2xA8fNoNgyr5pBgr2_ZU/view",
       "key": "intro_to_html",
       "properties": {
         "audience": "Verified Teacher",
@@ -11011,10 +11064,11 @@
     },
     {
       "name": "Layout Prediction",
-      "url": "https://docs.google.com/document/d/1QtnqtR0HrKo24RjTUCf6qCKvBbtYY4vm7YkAdy7nsdc/view",
+      "url": "https://docs.google.com/document/d/1rQl7W49mIVaCN2SQJKcdoELEv5sKnPec7kB7XPvO0UI/view",
       "key": "layout_prediction",
       "properties": {
         "audience": "Student",
+        "embeddability_type": "embed_and_resource_dropdown",
         "include_in_pdf": true,
         "type": "Activity Guide"
       },
@@ -11024,11 +11078,12 @@
     },
     {
       "name": "Layout Properties",
-      "url": "https://drive.google.com/file/d/1M26yx_lXwBwoH4uln6nQuBQ5SdIedVWu/view",
+      "url": "https://drive.google.com/file/d/1AU8_8tgPDQP766Aa7p8eCucHjM3X1CTA/view",
       "key": "layout_properties",
       "properties": {
         "audience": "Teacher",
-        "type": "Resource Page"
+        "embeddability_type": "embed_and_resource_dropdown",
+        "type": "Resource"
       },
       "seeding_key": {
         "resource.key": "layout_properties"
@@ -11036,10 +11091,11 @@
     },
     {
       "name": "Licensing Your Work",
-      "url": "https://docs.google.com/document/d/1QsvL-qX524DaX8laaUEiRAK3mE6UDKrh1DwtlufzBJc/view",
+      "url": "https://docs.google.com/document/d/1seqip23L_Zgd05QQDGFV_oNIZKcZFtHNAHy0vMyivjA/view",
       "key": "licensing_your_work",
       "properties": {
         "audience": "Verified Teacher",
+        "embeddability_type": "embed_and_resource_dropdown",
         "type": "Exemplar"
       },
       "seeding_key": {
@@ -11048,10 +11104,11 @@
     },
     {
       "name": "Licensing Your Work",
-      "url": "https://docs.google.com/document/d/1H8X3BYRQorpHbrErmYGRZaeVYYMFA99OLSA1Z7RB9pY/view",
+      "url": "https://docs.google.com/document/d/1NXWnDWD0dNnkWJdkRnUrsK0UKjjt6J0_URH1FHSQjDw/view",
       "key": "licensing_your_work_1",
       "properties": {
         "audience": "Student",
+        "embeddability_type": "embed_and_resource_dropdown",
         "include_in_pdf": true,
         "type": "Activity Guide"
       },
@@ -11061,10 +11118,11 @@
     },
     {
       "name": "Linking Pages",
-      "url": "https://docs.google.com/presentation/d/1GleidjFmzckgaOdYsfFwC8I560P7to_afnnNg5W0VMM/template/preview",
+      "url": "https://docs.google.com/presentation/d/1nmwaCar5uoqLgM2T3_ep-Zl4-dAvr2JCJbkRB-4AP88/view",
       "key": "linking_pages",
       "properties": {
         "audience": "Teacher",
+        "embeddability_type": "embed_and_resource_dropdown",
         "type": "Slides"
       },
       "seeding_key": {
@@ -11073,10 +11131,11 @@
     },
     {
       "name": "Links and Research",
-      "url": "https://docs.google.com/document/d/1ObV5dB_witrc3nJqhbpsiD8OeKbj5pgRfAU-R2JLklM/view",
+      "url": "https://docs.google.com/document/d/1rFfoEC9tKaqe9ntyrLYaGeCdGLtlGAqgNhJ3WMuU5JA/view",
       "key": "links_and_research",
       "properties": {
         "audience": "Verified Teacher",
+        "embeddability_type": "embed_and_resource_dropdown",
         "type": "Exemplar"
       },
       "seeding_key": {
@@ -11085,10 +11144,11 @@
     },
     {
       "name": "Links and Research",
-      "url": "https://docs.google.com/document/d/1TjrlAkOD5XuU_NPDztiCyzJHasKa2mGhM6CHCKi3rKM/view",
+      "url": "https://docs.google.com/document/d/1JDfWbes4fLKrjcUrtg7sgDq5p5P0TPS0Gs2B2w1l8-8/view",
       "key": "links_and_research_1",
       "properties": {
         "audience": "Student",
+        "embeddability_type": "embed_and_resource_dropdown",
         "include_in_pdf": true,
         "type": "Activity Guide"
       },
@@ -11098,10 +11158,11 @@
     },
     {
       "name": "Lists",
-      "url": "https://drive.google.com/file/d/1o68ZiSXvIZ2pHoTVgii2KD1XakWnJoY8/view",
+      "url": "https://drive.google.com/file/d/11grt8R575i98QumOvNWenMV2w9o97TwY/view",
       "key": "lists",
       "properties": {
         "audience": "Teacher",
+        "embeddability_type": "embed_and_resource_dropdown",
         "type": "Resource"
       },
       "seeding_key": {
@@ -11110,10 +11171,11 @@
     },
     {
       "name": "Mini-Project: HTML Web Page",
-      "url": "https://docs.google.com/presentation/d/1mw-5B7KVYrDvgLI-MKjHZV_c0ztNCNyzBUBldfLjW8E/template/preview",
+      "url": "https://docs.google.com/presentation/d/1CrVjgwizwUbxUQvHmRVIWyyHfeXKaL0AgZgYwBBiuCQ/view",
       "key": "mini-project_html_web_page",
       "properties": {
         "audience": "Teacher",
+        "embeddability_type": "embed_and_resource_dropdown",
         "type": "Slides"
       },
       "seeding_key": {
@@ -11122,10 +11184,11 @@
     },
     {
       "name": "Mini-Project: Your Personal Style",
-      "url": "https://docs.google.com/presentation/d/1kpSJSNVzy9xmcqsMfHN32J4jyebYmOsnP5gsElEX6kw/template/preview",
+      "url": "https://docs.google.com/presentation/d/1WeprmaUVmnEXgK5yd1r8VONOgtIeLcu4jOjqhE4fALo/view",
       "key": "mini-project_your_personal_style",
       "properties": {
         "audience": "Teacher",
+        "embeddability_type": "embed_and_resource_dropdown",
         "type": "Slides"
       },
       "seeding_key": {
@@ -11146,10 +11209,11 @@
     },
     {
       "name": "Option #1 - HTML Web Page Project Guide",
-      "url": "https://docs.google.com/document/d/1N_WaufN75hFmLlxuP5bn5sUYHxMOTRfXvgBDV07Ufvw/view",
+      "url": "https://docs.google.com/document/d/1N8KXg8eEcxkGOeng5iSs9Qzy8e0gKpaRS2Y2Tl5BwU4/view",
       "key": "option_1_-_html_web_page_project_guide",
       "properties": {
         "audience": "Student",
+        "embeddability_type": "embed_and_resource_dropdown",
         "include_in_pdf": true,
         "type": "Activity Guide"
       },
@@ -11159,10 +11223,11 @@
     },
     {
       "name": "Option 1 - Project Rubric",
-      "url": "https://docs.google.com/document/d/1MEan92ixZ7aLrRMjUu1h8L0bJg2DfeHf1KX_rWANYmo/view",
+      "url": "https://docs.google.com/document/d/1LStBLyP3IPQGzbMV4mEF7CulI5RiICNbmLoBF3WHnk0/view",
       "key": "option_1_-_project_rubric",
       "properties": {
         "audience": "Student",
+        "embeddability_type": "embed_and_resource_dropdown",
         "include_in_pdf": true,
         "type": "Resource"
       },
@@ -11172,10 +11237,11 @@
     },
     {
       "name": "Option 1 Chapter 1 Project Guide",
-      "url": "https://docs.google.com/document/d/1llotpD2fYz5CdLkEiQb-ouO1bKtobBh2UyYGfh0uSH8/view",
+      "url": "https://docs.google.com/document/d/13YOCkA7w7mUlH4A-y-ir5oA9PX1gNj7c-pMu4CynlYQ/view",
       "key": "option_1_chapter_1_project_guide",
       "properties": {
         "audience": "Student",
+        "embeddability_type": "embed_and_resource_dropdown",
         "include_in_pdf": true,
         "type": "Activity Guide"
       },
@@ -11185,10 +11251,11 @@
     },
     {
       "name": "Option 1 Student Checklist - Chapter 1 Project",
-      "url": "https://docs.google.com/document/d/1T0-5a1gYerxs4rfu6ktlZpzBnp2NaN341CHPUP0KZQs/view",
+      "url": "https://docs.google.com/document/d/10cLI_eM3ZyXa9oTGNrGrURK8WgudjM4L8EyNkY-ze5Q/view",
       "key": "option_1_student_checklist_-_chapter_1_project",
       "properties": {
         "audience": "Student",
+        "embeddability_type": "embed_and_resource_dropdown",
         "include_in_pdf": true,
         "type": "Resource"
       },
@@ -11210,10 +11277,11 @@
     },
     {
       "name": "Option #2 - HTML Web Page Project Guide",
-      "url": "https://docs.google.com/document/d/1M3O2VKNkrp5B1gzqLo21LI0N7iAxJde7ftpczjWDxtA/view",
+      "url": "https://docs.google.com/document/d/1U5dt-crcLl_xRvkCerhezUgpCHRYsANgnUq_JZz8AuA/view",
       "key": "option_2_-_html_web_page_project_guide",
       "properties": {
         "audience": "Student",
+        "embeddability_type": "embed_and_resource_dropdown",
         "include_in_pdf": true,
         "type": "Activity Guide"
       },
@@ -11223,10 +11291,11 @@
     },
     {
       "name": "Option 2 - Project Rubric",
-      "url": "https://docs.google.com/document/d/1h4LafqbTvxdpygc1jmpNuQ_ngxLDIuoKbIuk2K-5Fp4/view",
+      "url": "https://docs.google.com/document/d/1n4RIAgnZwPI3P3pH1pjzpo7sR5e-r5IImMgT2m9pIwM/view",
       "key": "option_2_-_project_rubric",
       "properties": {
         "audience": "Student",
+        "embeddability_type": "embed_and_resource_dropdown",
         "include_in_pdf": true,
         "type": "Resource"
       },
@@ -11236,10 +11305,11 @@
     },
     {
       "name": "Option 2 Chapter 1 Project Guide",
-      "url": "https://docs.google.com/document/d/1VwEzTDsVaIi8oYILUxdUeEe8DzH00hRpgKvwXUQ6hB4/view",
+      "url": "https://docs.google.com/document/d/1dpvZEjkJ0a9jUwh1NfifOrY9qBtRzD4i7C5sR_45AkI/view",
       "key": "option_2_chapter_1_project_guide",
       "properties": {
         "audience": "Student",
+        "embeddability_type": "embed_and_resource_dropdown",
         "include_in_pdf": true,
         "type": "Activity Guide"
       },
@@ -11249,10 +11319,11 @@
     },
     {
       "name": "Option 2 Student Checklist - Chapter 1 Project",
-      "url": "https://docs.google.com/document/d/1Rxz-8GAoLLJn8zsy_NmwZ5UJ7WND1qzKKxefbxa6zbg/view",
+      "url": "https://docs.google.com/document/d/1hD84Cvs1sZdkZFQnWulAe89-cgQLTi3eI5kRcFsJA-w/view",
       "key": "option_2_student_checklist_-_chapter_1_project",
       "properties": {
         "audience": "Student",
+        "embeddability_type": "embed_and_resource_dropdown",
         "include_in_pdf": true,
         "type": "Resource"
       },
@@ -11274,10 +11345,11 @@
     },
     {
       "name": "Option 3 - Project Rubric",
-      "url": "https://docs.google.com/document/d/1ACaiFhEAMabueHNVEYQKz8YRVHOXqKPHjpOKej8XvHU/view",
+      "url": "https://docs.google.com/document/d/1peETXiTpQmvzL6d3bi4Q_rdIB01gpl6r4Xv6sfZfKCg/view",
       "key": "option_3_-_project_rubric",
       "properties": {
         "audience": "Student",
+        "embeddability_type": "embed_and_resource_dropdown",
         "include_in_pdf": true,
         "type": "Resource"
       },
@@ -11287,10 +11359,11 @@
     },
     {
       "name": "Option 3 Chapter 1 Project Guide",
-      "url": "https://docs.google.com/document/d/1lEq51w4Ldm4xetEsoq9WIMTDbyhvIp-LknibXGFmCRg/view",
+      "url": "https://docs.google.com/document/d/1861TbMd9J1CW_FL9qGBpG1oW6r4cwUjPRi0OuIAZkK4/view",
       "key": "option_3_chapter_1_project_guide",
       "properties": {
         "audience": "Student",
+        "embeddability_type": "embed_and_resource_dropdown",
         "include_in_pdf": true,
         "type": "Activity Guide"
       },
@@ -11300,10 +11373,11 @@
     },
     {
       "name": "Option 3 Student Checklist - Chapter 1 Project",
-      "url": "https://docs.google.com/document/d/1xb5xJyp2QjOrHAkm5bMMGexJWPosC-Off32-mwwL-Fg/view",
+      "url": "https://docs.google.com/document/d/1D-a1VYbSyWqtpSFSMGW4iqp8EjFjHljrr8iIYLDnciA/view",
       "key": "option_3_student_checklist_-_chapter_1_project",
       "properties": {
         "audience": "Student",
+        "embeddability_type": "embed_and_resource_dropdown",
         "include_in_pdf": true,
         "type": "Resource"
       },
@@ -11313,10 +11387,11 @@
     },
     {
       "name": "Option 3 User Web Page Content",
-      "url": "https://docs.google.com/document/d/1Wv1Fe6h9JOaIUxU3FY4oWz1lnPkeEM35oHVb-toIXwI/view",
+      "url": "https://docs.google.com/document/d/1f0BNqCgZpb_BwHlfZCM91kIqC8G6wPHyHtWIYQnSvNM/view",
       "key": "option_3_user_web_page_content",
       "properties": {
         "audience": "Student",
+        "embeddability_type": "embed_and_resource_dropdown",
         "include_in_pdf": true,
         "type": "Handout"
       },
@@ -11326,7 +11401,7 @@
     },
     {
       "name": "Organizing My Content",
-      "url": "https://docs.google.com/presentation/d/1M4zurFpx57j4ZXUug6OSzN6HNw2fPDobGCm1a49mnb4/edit?usp=sharing",
+      "url": "https://docs.google.com/presentation/d/1jwcy6XLj_DG-uAEpgLBXF0pF0DRUIT20qfHXo_jooY4/view",
       "key": "organizing_my_content",
       "properties": {
         "audience": "Verified Teacher",
@@ -11352,10 +11427,11 @@
     },
     {
       "name": "Peer Review",
-      "url": "https://docs.google.com/document/d/1NhJK1vXmFaEzzUZ39eGBs0w9UJRvnj-ATDKWT1kuliY/view",
+      "url": "https://docs.google.com/document/d/1k-ApqzkVKt2Ob3F0AQjTuiI96-ZwGq1m-sEWrxLjWh8/view",
       "key": "peer_review",
       "properties": {
         "audience": "Student",
+        "embeddability_type": "embed_and_resource_dropdown",
         "include_in_pdf": true,
         "type": "Activity Guide"
       },
@@ -11365,10 +11441,11 @@
     },
     {
       "name": "Peer Review - Adding Style to a Webpage ",
-      "url": "https://docs.google.com/document/d/1YpGKn_tdMilI1GT-Hd3v0ISUI-6FwR9BQy5iCIcbkjo/view",
+      "url": "https://docs.google.com/document/d/1w4Hi-p_XBSXuSTjp9ZiNTEIj5FAIBSrPlQT1iu5zKiI/view",
       "key": "peer_review_-_adding_style_to_a_webpage",
       "properties": {
         "audience": "Student",
+        "embeddability_type": "embed_and_resource_dropdown",
         "include_in_pdf": true,
         "type": "Activity Guide"
       },
@@ -11378,10 +11455,11 @@
     },
     {
       "name": "Peer Review - Chapter 1 Project",
-      "url": "https://docs.google.com/document/d/159GK2pwBtgvOMQX7Iw0q6wMRKFwD2LbzO0rM29JW3Qw/view",
+      "url": "https://docs.google.com/document/d/1aHenM6DmHvy2lSuloH2JcXcKhzJpJcVTHCt70J73Plk/view",
       "key": "peer_review_-_chapter_1_project",
       "properties": {
         "audience": "Student",
+        "embeddability_type": "embed_and_resource_dropdown",
         "include_in_pdf": true,
         "type": "Activity Guide"
       },
@@ -11391,10 +11469,11 @@
     },
     {
       "name": "Peer Review - Website for a Purpose",
-      "url": "https://docs.google.com/document/d/1y16gNTM2wWSZ8mvLwFKpc2UCxGyP4DeZRv9CaSFRsW8/view",
+      "url": "https://docs.google.com/document/d/1lDBZx0ICTykPNQgot0AYjH9E_voeCT5PSI5aRSifEVg/view",
       "key": "peer_review_-_website_for_a_purpose",
       "properties": {
         "audience": "Verified Teacher",
+        "embeddability_type": "embed_and_resource_dropdown",
         "type": "Exemplar"
       },
       "seeding_key": {
@@ -11403,10 +11482,11 @@
     },
     {
       "name": "Peer Review - Website for a Purpose",
-      "url": "https://docs.google.com/document/d/1j73YPcfPEpY7Th3U_Znl2jRDfQ5OIFM2xeHIXZyD5fU/view",
+      "url": "https://docs.google.com/document/d/1ka6yER1VGVon4tr9ck9EKUa4bxUAWhe8j-4Ck4AEMu4/view",
       "key": "peer_review_-_website_for_a_purpose_1",
       "properties": {
         "audience": "Student",
+        "embeddability_type": "embed_and_resource_dropdown",
         "include_in_pdf": true,
         "type": "Activity Guide"
       },
@@ -11416,10 +11496,11 @@
     },
     {
       "name": "Peer Review and Final Touches",
-      "url": "https://docs.google.com/presentation/d/1_vkz4jEtQk5kqfUH8tmqHzVvDfCVoGxY6xZY1butEGQ/template/preview",
+      "url": "https://docs.google.com/presentation/d/1I0m9VnZlbi3cSGuqeX6cnWmsm6WOe3WucyGXGb_H5HE/view",
       "key": "peer_review_and_final_touches",
       "properties": {
         "audience": "Teacher",
+        "embeddability_type": "embed_and_resource_dropdown",
         "type": "Slides"
       },
       "seeding_key": {
@@ -11428,10 +11509,11 @@
     },
     {
       "name": "Pictionary Terms Slips",
-      "url": "https://docs.google.com/document/d/1dza1kwmREXH4NC6ENo1Z1M5uAepRTPUX_5nIs33gNzs/view",
+      "url": "https://docs.google.com/document/d/1wNYqidP6dueDJhqukV8zyOb1PjtC9Q8lYEMvlmkl2g8/view",
       "key": "pictionary_terms_slips",
       "properties": {
         "audience": "Teacher",
+        "embeddability_type": "embed_and_resource_dropdown",
         "type": "Resource"
       },
       "seeding_key": {
@@ -11440,11 +11522,13 @@
     },
     {
       "name": "Plan a Multi-Page Website",
-      "url": "https://docs.google.com/document/d/1jHYPkuHIWOlqXzEtcGBYG7kzGBzpBwGsEVtL8C0TcwE/view",
+      "url": "https://docs.google.com/document/d/1C0TGAnqzPQwTXLGVNWEALzYI3roaTLwrpBqKeD1X0Uc/view",
       "key": "plan_a_multi-page_website",
       "properties": {
         "audience": "Student",
-        "include_in_pdf": true
+        "embeddability_type": "embed_and_resource_dropdown",
+        "include_in_pdf": true,
+        "type": "Activity Guide"
       },
       "seeding_key": {
         "resource.key": "plan_a_multi-page_website"
@@ -11452,10 +11536,11 @@
     },
     {
       "name": "Planning a Multi-Page Site",
-      "url": "https://docs.google.com/presentation/d/1l8i9ZFAdB1WYJztfn0oe1bvaYg5_bRmTjJPZkT2zpL8/template/preview",
+      "url": "https://docs.google.com/presentation/d/15cfduenKQU7ZA7L9tzIwnyVNkOrx2TxYfqfs3oQQvPw/view",
       "key": "planning_a_multi-page_site",
       "properties": {
         "audience": "Teacher",
+        "embeddability_type": "embed_and_resource_dropdown",
         "type": "Slides"
       },
       "seeding_key": {
@@ -11464,10 +11549,11 @@
     },
     {
       "name": "Practices Reflection",
-      "url": "https://docs.google.com/document/d/1eCezGZ3d8rPzJi0Uys0Wz0998gFphn4aSaS37_qtQLE/view",
+      "url": "https://docs.google.com/document/d/1VUD2x0A6Mr9D_Igt3RsOQhGGwcTCa_WCW_av4ZMo5Wk/view",
       "key": "practices_reflection",
       "properties": {
         "audience": "Verified Teacher",
+        "embeddability_type": "embed_and_resource_dropdown",
         "type": "Exemplar"
       },
       "seeding_key": {
@@ -11476,10 +11562,11 @@
     },
     {
       "name": "Problem Solving and Design",
-      "url": "https://docs.google.com/document/d/1adyft9qT9H9YNs-UVWuDReqPbiOIF4UfZvPH2m7BBUU/view",
+      "url": "https://docs.google.com/document/d/1Tyzdf9kJahJ-Ar491fvALGBcxnkRueWmVFkKcbRxZqI/view",
       "key": "problem_solving_and_design",
       "properties": {
         "audience": "Student",
+        "embeddability_type": "embed_and_resource_dropdown",
         "include_in_pdf": true,
         "type": "Resource"
       },
@@ -11502,10 +11589,11 @@
     },
     {
       "name": "Project - Website for a Purpose",
-      "url": "https://docs.google.com/presentation/d/1baW5I6--R3oAuu0iEjNxKmIaIJpBPl1peRH13llBqD0/template/preview",
+      "url": "https://docs.google.com/presentation/d/18zPnj_nhG7hB_W1E-3jBVc9aHDvlrzWl-kcYPRn8mNU/view",
       "key": "project_-_website_for_a_purpose",
       "properties": {
         "audience": "Teacher",
+        "embeddability_type": "embed_and_resource_dropdown",
         "type": "Slides"
       },
       "seeding_key": {
@@ -11514,10 +11602,11 @@
     },
     {
       "name": "Project Guide - Website for a Purpose - Prepare",
-      "url": "https://docs.google.com/document/d/1b64kdib8xTbW5paXXxj3grWoshvBoLp--bWZiIxqiZs/view",
+      "url": "https://docs.google.com/document/d/1ddJfT3H5n7zc7YBLpXHZGeAHQ7oiEqZERD0AwgQEGeI/view",
       "key": "project_guide_-_website_for_a_purpose_-_prepare",
       "properties": {
         "audience": "Verified Teacher",
+        "embeddability_type": "embed_and_resource_dropdown",
         "type": "Exemplar"
       },
       "seeding_key": {
@@ -11526,10 +11615,11 @@
     },
     {
       "name": "Project Guide - Website for a Purpose - Reflect",
-      "url": "https://docs.google.com/document/d/11syXtuzZTvZm_WllGLNNdfXR33xs9x8QCE3YTG7lwi8/view",
+      "url": "https://docs.google.com/document/d/15lVE2hWf41PqXiOrxtaw7j3ySIS6EDrp61xbFV9O8RA/view",
       "key": "project_guide_-_website_for_a_purpose_-_reflect",
       "properties": {
         "audience": "Verified Teacher",
+        "embeddability_type": "embed_and_resource_dropdown",
         "type": "Exemplar"
       },
       "seeding_key": {
@@ -11538,10 +11628,11 @@
     },
     {
       "name": "Pseudo-classes",
-      "url": "https://drive.google.com/file/d/1XYDMpDsWDnCFZePYMX2-hWb0KtjkMA7h/view",
+      "url": "https://drive.google.com/file/d/1Sguhzw0-aTJ-I09ahLb23FMfONHb046E/view",
       "key": "pseudo-classes",
       "properties": {
         "audience": "Teacher",
+        "embeddability_type": "embed_and_resource_dropdown",
         "type": "Resource"
       },
       "seeding_key": {
@@ -11563,10 +11654,11 @@
     },
     {
       "name": "Social Sleuth",
-      "url": "https://docs.google.com/document/d/1vF6olHOB8uJ7qiut3r4wvJj5wJjJyPuI8P1LKXNkcXo/view",
+      "url": "https://docs.google.com/document/d/1gWF3g0rfLpGxDAtqKJWL1R2RWTD8Y_0zKeb_-24FjV4/view",
       "key": "social_sleuth",
       "properties": {
         "audience": "Verified Teacher",
+        "embeddability_type": "embed_and_resource_dropdown",
         "type": "Exemplar"
       },
       "seeding_key": {
@@ -11575,10 +11667,11 @@
     },
     {
       "name": "Social Sleuth",
-      "url": "https://docs.google.com/document/d/1ublV9BWfawzHvwZK7N9ZbzOpfpKMUqYMWXIuNqN2tvc/view",
+      "url": "https://docs.google.com/document/d/1rRgPHBXaGiRSi8eJ76m1-XN2ehQznFMa5BBmqzL14mk/view",
       "key": "social_sleuth_1",
       "properties": {
         "audience": "Student",
+        "embeddability_type": "embed_and_resource_dropdown",
         "include_in_pdf": true,
         "type": "Activity Guide"
       },
@@ -11588,10 +11681,11 @@
     },
     {
       "name": "Sources and Research",
-      "url": "https://docs.google.com/presentation/d/182csuhb4oMqlYceybczX3RXKqvDvQFNnAAtKJbofnQQ/template/preview",
+      "url": "https://docs.google.com/presentation/d/1QkkX5en3thR7C1OfoQi4MFIcYz4L7_eXkkyfkl18VCs/view",
       "key": "sources_and_research",
       "properties": {
         "audience": "Teacher",
+        "embeddability_type": "embed_and_resource_dropdown",
         "type": "Slides"
       },
       "seeding_key": {
@@ -11600,10 +11694,11 @@
     },
     {
       "name": "Style Sheets",
-      "url": "https://drive.google.com/file/d/1Tm6ZJ6lM_XmmgRn_e6HeVVyh4ukqkBiA/view",
+      "url": "https://drive.google.com/file/d/1dEtUWarJQOw_iAx444hrOKZ7btSvc6VM/view",
       "key": "style_sheets",
       "properties": {
         "audience": "Teacher",
+        "embeddability_type": "embed_and_resource_dropdown",
         "type": "Resource"
       },
       "seeding_key": {
@@ -11612,7 +11707,7 @@
     },
     {
       "name": "Styling Elements with CSS",
-      "url": "https://docs.google.com/presentation/d/1vZetOBRuFpyTDAJWgBvkY0t81AyjxkHxq4-q4GUBkvc/edit?usp=sharing",
+      "url": "https://docs.google.com/presentation/d/1GkdGW01K6KCgXv6toA-ptSz3g1ABhr7s_xjUoq0H88s/view",
       "key": "styling_elements_with_css",
       "properties": {
         "audience": "Verified Teacher",
@@ -11626,10 +11721,11 @@
     },
     {
       "name": "Styling Text with CSS",
-      "url": "https://docs.google.com/presentation/d/1lN9kHUL9w7hwMV5I6hc-TnnBnFENRCK2gxDBBR4jrXs/template/preview",
+      "url": "https://docs.google.com/presentation/d/1oGPjHYy8Feg5pR4JRIhfz3mmo-JJjsqrUQAF0ECsHqg/view",
       "key": "styling_text_with_css",
       "properties": {
         "audience": "Teacher",
+        "embeddability_type": "embed_and_resource_dropdown",
         "type": "Slides"
       },
       "seeding_key": {
@@ -11638,10 +11734,11 @@
     },
     {
       "name": "Team Problem Solving",
-      "url": "https://docs.google.com/presentation/d/1cAeVr9gUhuyf0kPgq8WklVyUadWHN6cOKDNT1vzM8ak/template/preview",
+      "url": "https://docs.google.com/presentation/d/1Aho9Op2ECsuT9XOwhZdP_RUmHm-eifDJV_WPk3SdLUc/view",
       "key": "team_problem_solving",
       "properties": {
         "audience": "Teacher",
+        "embeddability_type": "embed_and_resource_dropdown",
         "type": "Slides"
       },
       "seeding_key": {
@@ -11675,10 +11772,11 @@
     },
     {
       "name": "Using Images",
-      "url": "https://docs.google.com/presentation/d/1mAUT_XTWrs1Y-nnDBnvXNc13ireAWWPZ28IlIIDdxV4/template/preview",
+      "url": "https://docs.google.com/presentation/d/18NKqgk-MqZ-uUeuVvwe1izP-MIYVi1l7xepRofGSI9s/view",
       "key": "using_images",
       "properties": {
         "audience": "Teacher",
+        "embeddability_type": "embed_and_resource_dropdown",
         "type": "Slides"
       },
       "seeding_key": {
@@ -11739,10 +11837,11 @@
     },
     {
       "name": "Web Design for Users (A)",
-      "url": "https://docs.google.com/document/d/1NYVEB_fULN0TwhKRyIBP7j2e-EZreodBpBhURM9aT8Y/edit",
+      "url": "https://docs.google.com/document/d/1bju62Wsfx8lL1HkmwLxN1sSy8KoEhYAQ4dQ7vkv6YFY/edit?usp=sharing",
       "key": "web_design_for_users_a_",
       "properties": {
         "audience": "Student",
+        "embeddability_type": "embed_and_resource_dropdown",
         "include_in_pdf": true,
         "type": "Activity Guide"
       },
@@ -11752,10 +11851,11 @@
     },
     {
       "name": "Web Design for Users (B)",
-      "url": "https://docs.google.com/document/d/1dZxd7DuruNKhqjp9nxAzr0RSICJFyb3sc-B6bgY2bIs/view",
+      "url": "https://docs.google.com/document/d/1GO0F1VBmPnw6BqMBQ135UQR2FOUUBhoNxJXpSEgMukw/edit?usp=sharing",
       "key": "web_design_for_users_b_",
       "properties": {
         "audience": "Student",
+        "embeddability_type": "embed_and_resource_dropdown",
         "include_in_pdf": true,
         "type": "Activity Guide"
       },
@@ -11765,10 +11865,11 @@
     },
     {
       "name": "Web Design Template ",
-      "url": "https://docs.google.com/presentation/d/1Tuy8PedaZIGagT7B19X3E4cn9jM57RWusXidI8jjncI/view",
+      "url": "https://docs.google.com/presentation/d/1n1O-WLUzm2LeGZHjuNGJjgLrhLFdt-4lfN6q5IWNR1Y/view",
       "key": "web_design_template",
       "properties": {
         "audience": "Student",
+        "embeddability_type": "embed_and_resource_dropdown",
         "include_in_pdf": true,
         "type": "Resource"
       },
@@ -11778,10 +11879,11 @@
     },
     {
       "name": "Web Development - Extra Code in Challenge Levels",
-      "url": "https://docs.google.com/document/d/1tRTtnwBfqYn1-UWoS6Ca2e-mzQN2F0mSzsnzCn8IXrk/edit?usp=sharing",
+      "url": "https://docs.google.com/document/d/1_ql2gcyDZleowQPwTzbb-Dut_ConZ-6pt0Uqzcm-EPc/view",
       "key": "web_development_-_extra_code_in_challenge_levels",
       "properties": {
         "audience": "Teacher",
+        "embeddability_type": "embed_and_resource_dropdown",
         "type": "Resource"
       },
       "seeding_key": {
@@ -11790,10 +11892,11 @@
     },
     {
       "name": "Web Development Challenge Levels Extra Code",
-      "url": "https://docs.google.com/document/d/1zCMJHXk_KISNIkwN3WcoVUCZT4RotkNGfOMhT6sVB-k/view",
+      "url": "https://docs.google.com/document/d/1_ql2gcyDZleowQPwTzbb-Dut_ConZ-6pt0Uqzcm-EPc/view",
       "key": "web_development_challenge_levels_extra_code",
       "properties": {
         "audience": "Student",
+        "embeddability_type": "embed_and_resource_dropdown",
         "include_in_pdf": true,
         "type": "Resource"
       },
@@ -11803,10 +11906,11 @@
     },
     {
       "name": "Website for a Purpose",
-      "url": "https://docs.google.com/document/d/1npD3ERU8C6chX_mXTfid1bzZzeivaUHYVz6CpiF6b5I/view",
+      "url": "https://docs.google.com/document/d/1kpRQfZGiqOve54roqQQuMMS9Xgno4CriRGQzckXMiLU/view",
       "key": "website_for_a_purpose",
       "properties": {
         "audience": "Student",
+        "embeddability_type": "embed_and_resource_dropdown",
         "include_in_pdf": true,
         "type": "Rubric"
       },
@@ -11816,10 +11920,11 @@
     },
     {
       "name": "Website for a Purpose - Reflect",
-      "url": "https://docs.google.com/document/d/1Ni0Ux61HMZyX7_IUTzVNAl1Ev1PbEYQ-xoP-jcKMo8w/view",
+      "url": "https://docs.google.com/document/d/1VTXsCITgcVPeTRxLpcpl4vxz_azqKgtKbx1ZBkgQMX0/view",
       "key": "website_for_a_purpose_-_reflect",
       "properties": {
         "audience": "Student",
+        "embeddability_type": "embed_and_resource_dropdown",
         "include_in_pdf": true,
         "type": "Activity Guide"
       },
@@ -11829,11 +11934,13 @@
     },
     {
       "name": "Website for a Purpose - Student Checklist",
-      "url": "https://docs.google.com/document/d/1foeIXBKOmRdM3vv8JU5ii4YWvzENvO4GGzBdLgi4TrM/view",
+      "url": "https://docs.google.com/document/d/1VZfqjjN0fxUvZHM53FtPoMKfx0bRR4-IcAMpLrSO4dA/view",
       "key": "website_for_a_purpose_-_student_checklist",
       "properties": {
         "audience": "Student",
-        "include_in_pdf": true
+        "embeddability_type": "embed_and_resource_dropdown",
+        "include_in_pdf": true,
+        "type": "Handout"
       },
       "seeding_key": {
         "resource.key": "website_for_a_purpose_-_student_checklist"
@@ -11841,10 +11948,11 @@
     },
     {
       "name": "Website Team Plan",
-      "url": "https://docs.google.com/document/d/144Ra5afPklXapRMYxBNWK3_ODxMlehO5EmLBJ4pDjds/view",
+      "url": "https://docs.google.com/document/d/1BFZ9MKVSZfaeu1UcmlldgRYbT-3lfCjgIhgdQdBIVVU/view",
       "key": "website_team_plan",
       "properties": {
         "audience": "Verified Teacher",
+        "embeddability_type": "embed_and_resource_dropdown",
         "type": "Exemplar"
       },
       "seeding_key": {
@@ -11853,10 +11961,11 @@
     },
     {
       "name": "Website Team Plan",
-      "url": "https://docs.google.com/document/d/1DFwg35wAnukoVVP2_efHLFxOsRZzLNp5MgPuDDsYnZQ/view",
+      "url": "https://docs.google.com/document/d/1zfNIz6kc57xieZQx7QRC3jpRe4rsXWta06V5M0PTfNw/view",
       "key": "website_team_plan_1",
       "properties": {
         "audience": "Student",
+        "embeddability_type": "embed_and_resource_dropdown",
         "include_in_pdf": true,
         "type": "Activity Guide"
       },
@@ -12457,6 +12566,12 @@
     {
       "seeding_key": {
         "lesson.key": "Lesson 5: Mini-Project - HTML Web Page",
+        "resource.key": "exemplar_-_peer_review_-_html_web_page"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 5: Mini-Project - HTML Web Page",
         "resource.key": "html_web_page_rubric"
       }
     },
@@ -12572,6 +12687,12 @@
       "seeding_key": {
         "lesson.key": "Lesson 9: Styling Elements with CSS",
         "resource.key": "body_styling"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 9: Styling Elements with CSS",
+        "resource.key": "css_selectors"
       }
     },
     {
@@ -14046,6 +14167,9 @@
     }
   ],
   "lessons_opportunity_standards": [
+
+  ],
+  "jit_pl_concepts_lessons": [
 
   ],
   "rubrics": [

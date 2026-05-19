@@ -16,13 +16,13 @@
       },
       {
         "text": "## What is an Array?\n-  #### An **Array** is a list of items stored in a single variable.\n-  #### Each item has a position number called an **index.**\n-  #### Indexes start at 0, not 1",
-        "imageUrl": "https://images.code.org/e78ffb8442d0d8880770f1e8994945a9-_Panel Levels AIF U3.png",
+        "imageUrl": "https://images.code.org/deea6c950a66848f09a4aad355af45a1-8Panel Levels AIF U3.png",
         "key": "undefined-ea03636a-a1b5-4568-be2b-86c3c6462665",
         "layout": "text-bottom-left"
       },
       {
         "text": "## Declaring an Array\n- #### Declaring an array means creating a variable that holds a list of items.\n- #### We use square brackets [] to show that it’s an array.\n-  #### Each item inside the brackets is separated by a comma.",
-        "imageUrl": "https://images.code.org/143d16d00ab9b9a0795c2cb36111db29-_Panel Levels AIF U3.png",
+        "imageUrl": "https://images.code.org/e19d13fdd979634e2847bf2808ae07eb-8Panel Levels AIF U3.png",
         "key": "pl-aif-2-U3-array-syntax-panel-2-2d7789a3-15d7-4338-a161-92ef18d852eb",
         "layout": "text-bottom-left"
       },
@@ -50,8 +50,9 @@
         "key": "pl-aif-2-U3-array-syntax-panel-2-8bcc340c-f718-43f8-a3b6-e5b533883ec3",
         "layout": "text-top-center"
       }
-    ]
+    ],
+    "use_links": "false"
   },
-  "audit_log": "[{\"changed_at\":\"2025-12-09T16:49:04.760+00:00\",\"changed\":[\"cloned from \\\"building-data-driven-systems-lesson1-level5a-test-2025\\\"\"],\"cloned_from\":\"building-data-driven-systems-lesson1-level5a-test-2025\"},{\"changed_at\":\"2025-12-09 18:33:58 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"},{\"changed_at\":\"2025-12-09 19:39:45 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"},{\"changed_at\":\"2025-12-09 19:44:03 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"},{\"changed_at\":\"2025-12-10 16:42:14 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"},{\"changed_at\":\"2025-12-10 16:44:18 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"},{\"changed_at\":\"2026-03-16 14:42:53 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-12-09T16:49:04.760+00:00\",\"changed\":[\"cloned from \\\"building-data-driven-systems-lesson1-level5a-test-2025\\\"\"],\"cloned_from\":\"building-data-driven-systems-lesson1-level5a-test-2025\"},{\"changed_at\":\"2025-12-09 18:33:58 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"},{\"changed_at\":\"2025-12-09 19:39:45 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"},{\"changed_at\":\"2025-12-09 19:44:03 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"},{\"changed_at\":\"2025-12-10 16:42:14 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"},{\"changed_at\":\"2025-12-10 16:44:18 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"},{\"changed_at\":\"2026-03-16 14:42:53 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"},{\"changed_at\":\"2026-05-04 20:10:02 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"}]"
 }]]></config>
 </Panels>

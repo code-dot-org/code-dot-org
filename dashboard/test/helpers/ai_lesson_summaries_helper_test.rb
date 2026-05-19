@@ -132,7 +132,7 @@ class AiLessonSummariesHelperTest < ActionView::TestCase
       returns({status: 200, json: "Generated lesson summary"})
 
     assert_difference 'AiLessonSummary.count', 1 do
-      AiLessonSummariesHelper.retrieve_and_save_ai_lesson_summary(@lesson.id, @user.id, false)
+      AiLessonSummariesHelper.retrieve_and_save_ai_lesson_summary(@lesson.id, @user.id, false, true)
     end
 
     created_summary = AiLessonSummary.last
@@ -147,7 +147,7 @@ class AiLessonSummariesHelperTest < ActionView::TestCase
       raises(StandardError.new("Internal server error"))
 
     assert_raises(StandardError) do
-      AiLessonSummariesHelper.retrieve_and_save_ai_lesson_summary(@lesson.id, @user.id, false)
+      AiLessonSummariesHelper.retrieve_and_save_ai_lesson_summary(@lesson.id, @user.id, false, true)
     end
   end
 
@@ -160,7 +160,7 @@ class AiLessonSummariesHelperTest < ActionView::TestCase
     HTTParty.stubs(:post).returns(mock_response)
 
     assert_difference 'AiLessonSummary.count', 1 do
-      AiLessonSummariesHelper.retrieve_and_save_ai_lesson_summary(@lesson.id, @user.id, false)
+      AiLessonSummariesHelper.retrieve_and_save_ai_lesson_summary(@lesson.id, @user.id, false, true)
     end
 
     created_summary = AiLessonSummary.last
@@ -180,7 +180,7 @@ class AiLessonSummariesHelperTest < ActionView::TestCase
       returns({status: 200, json: {podcast_script: @podcast_script}.to_json})
 
     assert_difference 'AiLessonSummary.count', 1 do
-      AiLessonSummariesHelper.retrieve_and_save_ai_lesson_summary(@lesson.id, @user.id, true)
+      AiLessonSummariesHelper.retrieve_and_save_ai_lesson_summary(@lesson.id, @user.id, true, true)
     end
 
     created_summary = AiLessonSummary.last
@@ -198,7 +198,7 @@ class AiLessonSummariesHelperTest < ActionView::TestCase
       raises(StandardError.new("Internal server error"))
 
     assert_raises(StandardError) do
-      AiLessonSummariesHelper.retrieve_and_save_ai_lesson_summary(@lesson.id, @user.id, true)
+      AiLessonSummariesHelper.retrieve_and_save_ai_lesson_summary(@lesson.id, @user.id, true, true)
     end
   end
 
@@ -208,7 +208,7 @@ class AiLessonSummariesHelperTest < ActionView::TestCase
 
     brief_text_lesson_summary = nil
     assert_no_difference 'AiLessonSummary.count' do
-      brief_text_lesson_summary = AiLessonSummariesHelper.retrieve_and_save_ai_lesson_summary(@lesson.id, @user.id, false)
+      brief_text_lesson_summary = AiLessonSummariesHelper.retrieve_and_save_ai_lesson_summary(@lesson.id, @user.id, false, true)
     end
 
     assert_equal @user.id, brief_text_lesson_summary.user_id
@@ -222,7 +222,7 @@ class AiLessonSummariesHelperTest < ActionView::TestCase
 
     podcast_script_lesson_summary = nil
     assert_no_difference 'AiLessonSummary.count' do
-      podcast_script_lesson_summary = AiLessonSummariesHelper.retrieve_and_save_ai_lesson_summary(@lesson.id, @user.id, true)
+      podcast_script_lesson_summary = AiLessonSummariesHelper.retrieve_and_save_ai_lesson_summary(@lesson.id, @user.id, true, true)
     end
 
     assert_equal @user.id, podcast_script_lesson_summary.user_id
@@ -237,8 +237,8 @@ class AiLessonSummariesHelperTest < ActionView::TestCase
     brief_text_lesson_summary = nil
     podcast_script_lesson_summary = nil
     assert_no_difference 'AiLessonSummary.count' do
-      brief_text_lesson_summary = AiLessonSummariesHelper.retrieve_and_save_ai_lesson_summary(@lesson.id, @user.id, false)
-      podcast_script_lesson_summary = AiLessonSummariesHelper.retrieve_and_save_ai_lesson_summary(@lesson.id, @user.id, true)
+      brief_text_lesson_summary = AiLessonSummariesHelper.retrieve_and_save_ai_lesson_summary(@lesson.id, @user.id, false, true)
+      podcast_script_lesson_summary = AiLessonSummariesHelper.retrieve_and_save_ai_lesson_summary(@lesson.id, @user.id, true, true)
     end
 
     assert_equal @user.id, brief_text_lesson_summary.user_id
@@ -260,7 +260,7 @@ class AiLessonSummariesHelperTest < ActionView::TestCase
 
     lesson_summary = nil
     assert_no_difference 'AiLessonSummary.count' do
-      lesson_summary = AiLessonSummariesHelper.retrieve_and_save_ai_lesson_summary(@lesson.id, @user.id, true)
+      lesson_summary = AiLessonSummariesHelper.retrieve_and_save_ai_lesson_summary(@lesson.id, @user.id, true, true)
     end
 
     assert_equal @user.id, lesson_summary.user_id
@@ -279,7 +279,7 @@ class AiLessonSummariesHelperTest < ActionView::TestCase
 
     lesson_summary = nil
     assert_no_difference 'AiLessonSummary.count' do
-      lesson_summary = AiLessonSummariesHelper.retrieve_and_save_ai_lesson_summary(@lesson.id, @user.id, false)
+      lesson_summary = AiLessonSummariesHelper.retrieve_and_save_ai_lesson_summary(@lesson.id, @user.id, false, true)
     end
 
     assert_equal @user.id, lesson_summary.user_id
@@ -287,6 +287,17 @@ class AiLessonSummariesHelperTest < ActionView::TestCase
     assert_equal @lesson_summary, lesson_summary.lesson_summary
     # When generate_script is false, the script gets set to nil in the update
     assert_nil lesson_summary.script
+  end
+
+  test "retrieve_and_save_ai_lesson_summary skips script generation when credits_available is false" do
+    AiLessonSummariesHelper.expects(:generate_lesson_summary).with(@lesson.id, @user.id, AiSystemPrompts::LessonSummariesSystemPromptHelper::RESPONSE_FORMATS[:BRIEF_SUMMARY]).
+      returns({status: 200, json: @lesson_summary})
+    AiLessonSummariesHelper.expects(:generate_lesson_summary).with(@lesson.id, @user.id, AiSystemPrompts::LessonSummariesSystemPromptHelper::RESPONSE_FORMATS[:PODCAST_SCRIPT]).never
+
+    assert_difference 'AiLessonSummary.count', 1 do
+      result = AiLessonSummariesHelper.retrieve_and_save_ai_lesson_summary(@lesson.id, @user.id, true, false)
+      assert_nil result.script
+    end
   end
 
   # *****

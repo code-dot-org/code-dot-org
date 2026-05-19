@@ -1,10 +1,13 @@
 import {NodeResizer, useReactFlow, type NodeProps} from '@xyflow/react';
+import classNames from 'classnames';
 import React, {memo, useCallback, useMemo, useRef, useState} from 'react';
 
 import {DEFAULT_ROTATION, MIN_NODE_HEIGHT, MIN_NODE_WIDTH} from '../constants';
-import {useSketchLabReadOnly} from '../context';
-import ShapeNodeToolbar from '../elementToolbars/ShapeNodeToolbar';
-import {fontSizePx} from '../elementToolbars/toolbarPalettes';
+import {usePushSnapshot, useSketchLabReadOnly} from '../context';
+import {
+  fontSizePx,
+  DEFAULT_TEXT_ALIGN,
+} from '../elementToolbars/toolbarPalettes';
 import {ShapeNodeType, ShapeType} from '../types';
 
 import ConnectionHandles from './ConnectionHandles';
@@ -93,8 +96,10 @@ function ShapeSvg({shapeType, strokeColor, backgroundColor}: ShapeSvgProps) {
 function ShapeNode({id, data, selected}: NodeProps<ShapeNodeType>) {
   const readOnly = useSketchLabReadOnly();
   const {updateNodeData} = useReactFlow();
+  const pushSnapshot = usePushSnapshot();
   const [isEditing, setIsEditing] = useState(false);
   const labelRef = useRef<HTMLDivElement>(null);
+  const labelAtEditStart = useRef<string>('');
 
   const {shapeType, label, backgroundColor, strokeColor} = data;
   const showHandles = data.showHandles !== false;
@@ -103,6 +108,7 @@ function ShapeNode({id, data, selected}: NodeProps<ShapeNodeType>) {
     if (isEditing || readOnly || data.locked) {
       return;
     }
+    labelAtEditStart.current = label;
     setIsEditing(true);
     setTimeout(() => {
       if (labelRef.current) {
@@ -115,13 +121,16 @@ function ShapeNode({id, data, selected}: NodeProps<ShapeNodeType>) {
         selection?.addRange(range);
       }
     }, 0);
-  }, [isEditing, readOnly, data.locked]);
+  }, [isEditing, readOnly, data.locked, label]);
 
   const commitEdit = useCallback(() => {
     setIsEditing(false);
     const newLabel = labelRef.current?.textContent ?? '';
+    if (newLabel !== labelAtEditStart.current) {
+      pushSnapshot();
+    }
     updateNodeData(id, {label: newLabel});
-  }, [id, updateNodeData]);
+  }, [id, pushSnapshot, updateNodeData]);
 
   const handleLabelKeyDown = useCallback(
     (event: React.KeyboardEvent<HTMLDivElement>) => {
@@ -143,6 +152,9 @@ function ShapeNode({id, data, selected}: NodeProps<ShapeNodeType>) {
   );
 
   const isRectangle = shapeType === 'rectangle';
+  const isCircle = shapeType === 'circle';
+  const isTriangle = shapeType === 'triangle';
+  const isDiamond = shapeType === 'diamond';
 
   const rectangleStyle: React.CSSProperties = useMemo(() => {
     const style: React.CSSProperties = {};
@@ -157,12 +169,13 @@ function ShapeNode({id, data, selected}: NodeProps<ShapeNodeType>) {
 
   const labelStyle: React.CSSProperties = useMemo(() => {
     const style: React.CSSProperties = {};
-    if (data.fontColor) {
+    if (data.fontColor && !isEditing) {
       style.color = data.fontColor;
     }
     style.fontSize = fontSizePx(data.fontSize);
+    style.textAlign = data.textAlign ?? DEFAULT_TEXT_ALIGN;
     return style;
-  }, [data.fontColor, data.fontSize]);
+  }, [data.fontColor, data.fontSize, data.textAlign, isEditing]);
 
   const rotation = data.rotation ?? DEFAULT_ROTATION;
   const rotatableStyle: React.CSSProperties = useMemo(
@@ -181,8 +194,6 @@ function ShapeNode({id, data, selected}: NodeProps<ShapeNodeType>) {
         minWidth={MIN_NODE_WIDTH}
         minHeight={MIN_NODE_HEIGHT}
       />
-
-      <ShapeNodeToolbar nodeId={id} />
 
       <div className={styles.rotatable} style={rotatableStyle}>
         {/* Background shape */}
@@ -203,7 +214,14 @@ function ShapeNode({id, data, selected}: NodeProps<ShapeNodeType>) {
         {/* Text label: click or enter to start editing */}
         <div
           ref={labelRef}
-          className={styles.label}
+          className={classNames(
+            styles.label,
+            isEditing && 'nodrag nopan',
+            isCircle && styles.circleLabel,
+            isTriangle && styles.triangleLabel,
+            isDiamond && styles.diamondLabel,
+            isRectangle && styles.rectangleLabel
+          )}
           style={labelStyle}
           contentEditable={isEditing}
           suppressContentEditableWarning
