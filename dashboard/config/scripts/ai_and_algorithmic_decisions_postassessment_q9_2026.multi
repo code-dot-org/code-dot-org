@@ -1,14 +1,14 @@
 name 'ai-and-algorithmic-decisions-postassessment-q9_2026'
 
-question 'A music app automatically suggests "Turn up the volume?" when it detects your phone\'s sound is muted. What kind of logic makes the app decide to show that message only when the volume is off?'
+question 'A weather app needs to show the forecast for any city the user types in. The developer writes `getForecast(city)` so the same function works for "Austin," "Boise," or anywhere else. What is `city` in this function?'
 
-wrong 'A loop that keeps showing the message no matter what'
-right 'An if/else statement that checks whether the phone\'s volume is muted'
-wrong 'A variable that stores your favorite songs but never changes'
-wrong 'A style rule that automatically displays all hidden messages'
+wrong 'A condition that must be true for the function to run.'
+wrong 'A separate event handler.'
+right 'A parameter — a named input that gets replaced with the actual city the user types when the function is called.'
+wrong 'A loop that runs until the forecast loads.'
 
 allow_multiple_attempts true
 
 teacher_markdown <<MARKDOWN
-Lesson 5
+Lesson 6
 MARKDOWN
