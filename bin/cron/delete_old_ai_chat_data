@@ -13,6 +13,40 @@ BATCH_SIZE = 1000
 #
 # Log the number of records deleted for each table to #cron-daily Slack channel
 # so we can easily monitor the deletion process.
+def main(options)
+  dry_run = options[:dry_run]
+  max_batches = options[:batches]
+
+  # Make sure we're deleting Events (90 days old) a day before Requests (91 days old)
+  # to ensure we don't have foreign key constraint issues when deleting Requests that are still referenced by Events.
+  event_scope = AichatEvent.where(created_at: ...90.days.ago)
+  request_scope = AichatRequest.where(created_at: ...91.days.ago)
+
+  if dry_run
+    puts "AichatEvent delete scope SQL: #{event_scope.to_sql}"
+    puts "AichatRequest delete scope SQL: #{request_scope.to_sql}"
+  end
+
+  deleted_event_count = delete_events_in_batches(event_scope, max_batches: max_batches, dry_run: dry_run)
+  deleted_request_count, deleted_event_retry_count = delete_requests_in_batches(request_scope, max_batches: max_batches, dry_run: dry_run)
+
+  if dry_run
+    puts "AichatEvent total rows that would be deleted: #{deleted_event_count}"
+    puts "AichatRequest total rows that would be deleted: #{deleted_request_count}"
+  else
+    ChatClient.message('cron-daily', "Deleted #{deleted_event_count} AichatEvent records")
+    ChatClient.message('cron-daily', "Deleted #{deleted_request_count} AichatRequest records")
+  end
+
+  if deleted_event_retry_count > 0
+    if dry_run
+      puts "AichatEvent rows that would be deleted during retry cleanup: #{deleted_event_retry_count}"
+    else
+      ChatClient.message('cron-daily', "Deleted #{deleted_event_retry_count} additional AichatEvent records while retrying AichatRequest batch deletes")
+    end
+  end
+end
+
 def delete_events_in_batches(scope, max_batches: nil, dry_run: false)
   affected_record_count = 0
   processed_batches = 0
@@ -79,42 +113,6 @@ def parse_options
   end.parse!
 
   options
-end
-
-def main(options)
-  dry_run = options[:dry_run]
-  max_batches = options[:batches]
-
-  # Make sure we're deleting Events (90 days old) a day before Requests (91 days old)
-  # to ensure we don't have foreign key constraint issues when deleting Requests that are still referenced by Events.
-  event_scope = AichatEvent.where(created_at: ...90.days.ago)
-  request_scope = AichatRequest.where(created_at: ...91.days.ago)
-
-  if dry_run
-    puts "AichatEvent delete scope SQL: #{event_scope.to_sql}"
-    puts "AichatRequest delete scope SQL: #{request_scope.to_sql}"
-  end
-
-  deleted_event_count = delete_events_in_batches(event_scope, max_batches: max_batches, dry_run: dry_run)
-  deleted_request_count, deleted_event_retry_count = delete_requests_in_batches(request_scope, max_batches: max_batches, dry_run: dry_run)
-
-  event_summary = dry_run ? "AichatEvent total rows that would be deleted: #{deleted_event_count}" : "Deleted #{deleted_event_count} AichatEvent records"
-  request_summary = dry_run ? "AichatRequest total rows that would be deleted: #{deleted_request_count}" : "Deleted #{deleted_request_count} AichatRequest records"
-
-  if dry_run
-    puts event_summary
-    puts request_summary
-  else
-    ChatClient.message('cron-daily', event_summary)
-    ChatClient.message('cron-daily', request_summary)
-  end
-
-  if deleted_event_retry_count > 0
-    retry_summary = dry_run ?
-      "AichatEvent rows that would be deleted during retry cleanup: #{deleted_event_retry_count}" :
-      "Deleted #{deleted_event_retry_count} additional AichatEvent records while retrying AichatRequest batch deletes"
-    dry_run ? puts(retry_summary) : ChatClient.message('cron-daily', retry_summary)
-  end
 end
 
 main(parse_options)
