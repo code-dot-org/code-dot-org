@@ -26,7 +26,7 @@ export default function PrimaryTeacher({primaryTeacher, numCoteachers}) {
       <div className={styles.primaryTeacher}>
         <Typography variant="strong">{primaryTeacher.name}</Typography>
         <br />
-        {primaryTeacher.email}
+        <Typography variant="body2">{primaryTeacher.email}</Typography>
       </div>
     </div>
   ) : null;

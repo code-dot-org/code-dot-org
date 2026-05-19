@@ -9,6 +9,9 @@ module Cdo
   module I18n
     DEFAULT_LOCALE = 'en-US'
 
+    LOCALE_COOKIE_KEY = 'language_'
+    LOCALE_PARAM_KEY = 'set_locale'
+
     LANGUAGES = CSV.read(CDO.dir('config/i18n/cdo-languages.csv'), headers: true, header_converters: :symbol).freeze
 
     LOCALE_CONFIGS = YAML.load_file(CDO.dir('config/i18n/locales.yml')).each do |_locale, data|
@@ -76,16 +79,6 @@ module Cdo
 
       def locale_direction(locale)
         LOCALE_CONFIGS.dig(locale.to_s, :dir) || TEXT_DIRECTION_LTR
-      end
-
-      def language_change_url(url, locale)
-        uri = URI.parse(url)
-
-        params = URI.decode_www_form(uri.query.to_s).to_h
-        params[VarnishEnvironment::LOCALE_PARAM_KEY] = locale
-        uri.query = URI.encode_www_form(params)
-
-        uri.to_s
       end
 
       # @param cdo_language [CdoLanguage] CDO language record

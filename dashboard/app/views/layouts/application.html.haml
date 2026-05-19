@@ -19,10 +19,11 @@
       = tag 'meta', property: 'description', content: @page_description
     - if @canonical_url
       = tag 'link', rel: 'canonical', href: @canonical_url
-    - begin
-      = ::NewRelic::Agent.browser_timing_header
-    - rescue
-      = ''
+    - if DCDO.get('frontend-newrelic-enabled', true)
+      - begin
+        = ::NewRelic::Agent.browser_timing_header
+      - rescue
+        = ''
     - if view_options[:responsive_content]
       = tag :meta, name: 'viewport', content: 'width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no'
     - else

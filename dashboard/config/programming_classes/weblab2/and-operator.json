@@ -1,0 +1,14 @@
+{
+  "category_key": "javascript",
+  "content": "# AND Operator\n\nThe AND operator `&&` checks whether two conditions are both true. Use `&&` when your app should only do something if both conditions are true.",
+  "examples": "[{\"name\":\"Check Entry\",\"description\":\"Show a message only when the user meets the age rule and has a ticket.\",\"code\":\"```\\nif (meetsAge === true \\u0026\\u0026 hasTicket === true) {\\n  message.textContent = \\\"You can enter.\\\";\\n} else {\\n  message.textContent = \\\"You cannot enter yet.\\\";\\n}\\n```\"}]",
+  "external_documentation": "",
+  "fields": "[]",
+  "key": "and-operator",
+  "name": "AND Operator",
+  "syntax": "`if (meetsAge && hasTicket) { ... }`",
+  "tips": "- Use `&&` between two Boolean values or conditions.\n- Both sides of `&&` must be true for the whole condition to be true.\n- Put each comparison on its own side, like `score > 10 && isReady === true`.\n- Do not use `&&` when only one condition needs to be true.\n- In Web Lab, `&&` is often used to check multiple app states before updating the page.",
+  "methods": [
+
+  ]
+}

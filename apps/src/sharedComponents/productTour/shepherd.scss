@@ -1,7 +1,12 @@
 @import 'shepherd.js/dist/css/shepherd.css';
+@import 'color.scss';
 
-// Style the shepherd step container to approximately match the dsco popover.
-.custom-shepherd-step-container {
+.tour-step-highlight {
+  outline: 2px solid orange !important;
+}
+
+// Shared styles for all shepherd step containers.
+%shepherd-step-container-base {
   font-family: Figtree, sans-serif;
   color: var(--text-neutral-primary);
   background-color: var(--background-neutral-primary);
@@ -74,9 +79,9 @@
     }
 
     &:disabled,
-    &[aria-disabled='true']  {
-        background: var(--background-neutral-disabled);
-        color: var(--text-neutral-disabled-inverse);
+    &[aria-disabled='true'] {
+      background: var(--background-neutral-disabled);
+      color: var(--text-neutral-disabled-inverse);
     }
   }
 
@@ -101,7 +106,119 @@
   }
 
   // The default style for the bottom arrow is a gray color, we want white.
-  &.shepherd-element.shepherd-has-title[data-popper-placement^="bottom"]>.shepherd-arrow:before {
+  &.shepherd-element.shepherd-has-title[data-popper-placement^='bottom']
+    > .shepherd-arrow:before {
     background-color: var(--background-neutral-primary);
+  }
+}
+
+// Style the shepherd step container to approximately match the dsco popover.
+.custom-shepherd-step-container {
+  @extend %shepherd-step-container-base;
+}
+
+.onboarding-completion-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 8px;
+
+  .onboarding-completion-emoji {
+    font-size: 48px;
+    line-height: 1;
+  }
+}
+
+.onboarding-completion-step .shepherd-footer {
+  flex-direction: column;
+  align-items: stretch;
+}
+
+.onboarding-step-content {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.onboarding-sparkle-icon {
+  flex-shrink: 0;
+  margin-top: 2px;
+  background: linear-gradient(
+    to right,
+    #15c5f9,
+    #2b72ff,
+    #8f20ec,
+    #c710c2,
+    #e50976
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.onboarding-step-text {
+  flex: 1;
+}
+
+// Onboarding tour step container styles.
+.custom-shepherd-onboarding-container {
+  @extend %shepherd-step-container-base;
+
+  background-color: $light_black;
+  color: #fff;
+
+  // Lay out the content as a flex row so the sparkle+text and the X button
+  // all sit on the same line, with the footer wrapping beneath.
+  .shepherd-content {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    padding: 24px;
+    gap: 8px;
+  }
+
+  // Text takes all available width and renders first.
+  .shepherd-text {
+    flex: 1;
+    min-width: 0;
+    order: 1;
+    color: #fff;
+    padding: 0;
+    margin-bottom: 0;
+  }
+
+  // Header only contains the cancel icon here; push it to the right.
+  .shepherd-header {
+    order: 2;
+    flex-shrink: 0;
+    background-color: transparent !important;
+    padding: 0 !important;
+    margin-bottom: 0 !important;
+  }
+
+  // Take the cancel icon out of absolute positioning so it sits inline.
+  .shepherd-cancel-icon {
+    position: static;
+    color: #fff;
+
+    &:hover {
+      color: rgb(200 200 200);
+    }
+  }
+
+  // Footer wraps to a second row and aligns buttons to the right.
+  .shepherd-footer {
+    flex-basis: 100%;
+    order: 3;
+    padding: 0;
+    gap: 8px;
+    justify-content: flex-end;
+  }
+
+  &.shepherd-element > .shepherd-arrow:before {
+    background-color: rgb(41 47 54);
   }
 }

@@ -1,9 +1,6 @@
 # frozen_string_literal: true
 
-require 'omniauth'
-
 require 'test_helper'
-require 'cdo/global_edition'
 
 class GlobalEditionTest < ActionDispatch::IntegrationTest
   include Minitest::RSpecMocks
@@ -15,7 +12,6 @@ class GlobalEditionTest < ActionDispatch::IntegrationTest
 
   before do
     allow(DCDO).to receive(:get).and_call_original
-    allow(DCDO).to receive(:get).with('global_edition_enabled', anything).and_return(true)
     allow(Cdo::GlobalEdition).to receive(:target_host?).with('test-studio.code.org').and_return(true)
     allow(Cdo::GlobalEdition).to receive(:target_host?).with('test.code.org').and_return(true)
     allow(Metrics::Events).to receive(:log_event)
@@ -211,6 +207,9 @@ class GlobalEditionTest < ActionDispatch::IntegrationTest
         let(:new_locale) {'en-US'}
 
         before do
+          cookies[:ge_region] = ge_region
+          cookies[:language_] = ge_region_locale
+
           params.merge!(extra_params)
         end
 
@@ -225,7 +224,7 @@ class GlobalEditionTest < ActionDispatch::IntegrationTest
               new_region: nil,
               new_locale:,
             }
-          ).once
+          )
 
           get_regional_page
 
@@ -242,7 +241,7 @@ class GlobalEditionTest < ActionDispatch::IntegrationTest
           must_respond_with 200
           _(request.fullpath).must_equal "#{international_page_path}?#{extra_params.to_query}"
 
-          _(request.locale).must_equal new_locale
+          _(ge_region_html_data).must_be_nil
           _(cookies[:language_]).must_equal new_locale
           _(page_lang).must_equal new_locale
         end
@@ -282,43 +281,6 @@ class GlobalEditionTest < ActionDispatch::IntegrationTest
           error = _ {get_regional_page}.must_raise ActionController::RoutingError
           _(error.message).must_equal "No route matches [GET] #{regional_page_path.inspect}"
         end
-      end
-    end
-  end
-
-  describe 'oauth' do
-    let(:omniauth_test_mode) {OmniAuth.config.test_mode}
-
-    before do
-      cookies[:ge_region] = ge_region
-
-      # Disables OmniAuth test mode to generate real OAuth URLs.
-      OmniAuth.config.test_mode = false
-    end
-
-    after do
-      # Restores the initial OmniAuth test mode configuration.
-      OmniAuth.config.test_mode = omniauth_test_mode
-    end
-
-    {
-      AuthenticationOption::GOOGLE    => 'https://accounts.google.com/o/oauth2/auth',
-      AuthenticationOption::MICROSOFT => 'https://login.microsoftonline.com/common/oauth2/v2.0/authorize',
-      AuthenticationOption::FACEBOOK  => 'https://www.facebook.com/v2.12/dialog/oauth',
-      AuthenticationOption::CLEVER    => 'https://clever.com/oauth/authorize',
-    }.each do |provider, expected_oauth_url|
-      it "#{provider} authentication process is not affected by regional redirection" do
-        post "/fa/users/auth/#{provider}"
-        must_redirect_to %r(^#{expected_oauth_url})
-
-        oauth_uri = URI.parse(response.location)
-        oauth_params = URI.decode_www_form(oauth_uri.query.to_s).to_h
-        oauth_callback_url = oauth_params['redirect_uri']
-        _(oauth_callback_url).must_equal "https://test-studio.code.org/users/auth/#{provider}/callback"
-
-        # GET /users/auth/:provider/callback
-        get oauth_callback_url
-        must_redirect_to '/users/sign_in'
       end
     end
   end

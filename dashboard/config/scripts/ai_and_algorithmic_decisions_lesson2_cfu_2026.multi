@@ -1,0 +1,24 @@
+name 'ai-and-algorithmic-decisions-lesson2-cfu_2026'
+title 'Check for Understanding'
+
+question 'Question'
+
+wrong 'Event listener — it waits for the click to happen.'
+right 'Event handler — it runs when the click is detected.'
+wrong 'Element selector — it points to the button on the page.'
+wrong 'Variable that stores the track name.'
+
+allow_multiple_attempts true
+
+markdown <<MARKDOWN
+A music app has this code:
+
+```
+const playBtn = document.getElementById("play");
+playBtn.addEventListener("click", () => {
+    songTitle.textContent = "Now playing: Track 1";
+});
+```
+
+The arrow function `() => { songTitle.textContent = "Now playing: Track 1"; }` is the:
+MARKDOWN

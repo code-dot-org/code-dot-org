@@ -32,7 +32,7 @@ Feature: Using the assessments tab in the teacher dashboard to get feedback for 
     And I press the first "input[name='grades[]']" element
     And I wait until element "button:contains(Hour of Code)" is visible
     And I click selector "button:contains(Hour of Code)"
-    And I press the first "input[name='UI Test Artist']" element
+    And I click selector "input[name='UI Test Artist']" once I see it
     And I press the first "#uitest-save-section-changes" element
     And I wait for 5 seconds
     And I wait for jquery to load

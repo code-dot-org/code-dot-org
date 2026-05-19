@@ -331,7 +331,7 @@ class Api::V1::SectionsController < Api::V1::JSONApiController
   #   ...
   # ]}
   def code_review_groups
-    groups = @section.code_review_groups
+    groups = @section.code_review_groups.includes(:members)
     groups_details = []
     assigned_follower_ids = []
     groups.each do |group|
@@ -343,7 +343,7 @@ class Api::V1::SectionsController < Api::V1::JSONApiController
       groups_details << {id: group.id, name: group.name, members: members}
     end
 
-    unassigned_students = @section.followers.where.not(id: assigned_follower_ids)
+    unassigned_students = @section.followers.where.not(id: assigned_follower_ids).includes(:student_user)
     unassigned_students = unassigned_students.map {|student| {follower_id: student.id, name: student.student_user.name}}
     groups_details << {unassigned: true, members: unassigned_students}
     render json: {groups: groups_details}
@@ -376,6 +376,23 @@ class Api::V1::SectionsController < Api::V1::JSONApiController
     render json: {result: 'success'}
   rescue ActiveRecord::RecordInvalid
     render json: {result: 'invalid ai_chat_access_level'}, status: :bad_request
+  end
+
+  # GET /api/v1/sections/<id>/suggested_lesson
+  def suggested_lesson
+    if @section.suggested_lesson_stale? && @section.script.present?
+      @section.compute_suggested_lesson
+      @section.reload
+    end
+
+    data = @section.suggested_lesson
+    if data && (lesson = Lesson.find_by(id: data['lesson_id']))
+      data = data.merge(
+        'name' => lesson.localized_title,
+        'url' => script_lesson_path(lesson.script, lesson)
+      )
+    end
+    render json: data
   end
 
   private def find_follower

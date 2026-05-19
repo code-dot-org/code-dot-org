@@ -5,10 +5,10 @@ description 'description here'
 markdown <<MARKDOWN
 # Lesson Resources 
 
-#### Although the professional learning module did not cover every lesson in the Unit, be aware that there are resources for each lesson available to guide you along the way. 
+Although the professional learning module did not cover every lesson in the Unit, be aware that there are resources for each lesson available to guide you along the way. 
 
 ## Lessons
-#### The lessons are designed for **45-minute class periods**, but can be modified for longer or shorter class periods. Some lessons, such as project lessons, take multiple days to complete. Suggested times are included in each lesson plan.
+The lessons are designed for **45-minute class periods**, but can be modified for longer or shorter class periods. Some lessons, such as project lessons, take multiple days to complete. Suggested times are included in each lesson plan.
 
 ### **Lesson Components**
 
@@ -18,7 +18,7 @@ markdown <<MARKDOWN
     <p>
 
 
-#### Each lesson starts with a brief warm-up, offering a shared experience to highlight the need for the lesson's skills and concepts. 
+Each lesson starts with a brief warm-up, offering a shared experience to highlight the need for the lesson's skills and concepts. 
 </p></div>
 </details>
 
@@ -28,7 +28,7 @@ markdown <<MARKDOWN
     <p>
 
 
-#### Students spend most of their time on lesson activities, exploring new computing concepts. These activities are scaffolded to provide just-in-time support, helping students build the knowledge and skills needed for computing.
+Students spend most of their time on lesson activities, exploring new computing concepts. These activities are scaffolded to provide just-in-time support, helping students build the knowledge and skills needed for computing.
 </p></div>
 </details>
 
@@ -38,7 +38,7 @@ markdown <<MARKDOWN
     <p>
 
 
-#### Every lesson ends with a wrap-up, allowing students to reflect on key skills and concepts. 
+Every lesson ends with a wrap-up, allowing students to reflect on key skills and concepts. 
 </p></div>
 </details>
 
@@ -46,13 +46,13 @@ markdown <<MARKDOWN
 
 ## Lesson Resources
 
-#### Everything you need to deliver engaging and effective classes is included with each lesson plan to help make your teaching experience as seamless as possible.
+Everything you need to deliver engaging and effective classes is included with each lesson plan to help make your teaching experience as seamless as possible.
 
 
 <img src="https://images.code.org/7cd9f66961e3f7ce51e78ba95fc1d9c9-Screenshot 2025-12-02 at 3.07.43 PM.png" alt="A lesson plan diagram uses arrows to show where objectives, teaching guides, slides, and student handouts are" width="55%" style="border-radius:10px; float:right; margin: 0 0 10px 40px; border: 3px solid black;">
 
 
-#### Each lesson includes:
+Each lesson includes:
 
 <details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; margin-right: 60%; border: 1px solid transparent; border-radius: 5px;">
     <summary style="font-size: 16pt; font-weight: bold;"><b>1.</b> Clear Objectives</summary>

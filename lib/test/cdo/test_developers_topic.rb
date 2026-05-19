@@ -2,35 +2,64 @@ require_relative '../test_helper'
 require 'cdo/developers_topic'
 
 class DevelopersTopicTest < Minitest::Test
-  describe 'dotd' do
-    it 'returns the dotd (excluding @ symbol)' do
-      Slack.stubs(:get_topic).returns('DOTD: @someone; DTS: yes; DTT: yes; DTP: yes; DTL: yes')
+  describe 'dotd_username' do
+    it 'resolves the user mention to a display name' do
+      Slack.stubs(:get_topic).returns('DOTD: <@U12345>; DTS: yes; DTT: yes; DTP: yes; DTL: yes')
+      Slack.expects(:get_display_name).with('U12345').returns('someone')
 
-      assert_equal 'someone', DevelopersTopic.dotd
+      assert_equal 'someone', DevelopersTopic.dotd_username
     end
 
-    it 'returns the dotd even if not "@" mentioned' do
+    it 'falls back to literal text when the topic has no mention' do
       Slack.stubs(:get_topic).returns('DOTD: someone; DTS: yes; DTT: yes; DTP: yes; DTL: yes')
 
-      assert_equal 'someone', DevelopersTopic.dotd
+      assert_equal 'someone', DevelopersTopic.dotd_username
     end
 
-    it 'handles usernames with a period in them' do
+    it 'falls back to literal text with @ prefix' do
+      Slack.stubs(:get_topic).returns('DOTD: @someone; DTS: yes; DTT: yes; DTP: yes; DTL: yes')
+
+      assert_equal 'someone', DevelopersTopic.dotd_username
+    end
+
+    it 'handles literal usernames with a period in them' do
       Slack.stubs(:get_topic).returns('DOTD: @erin.bond; DTS: yes; DTT: yes; DTP: yes; DTL: yes')
 
-      assert_equal 'erin.bond', DevelopersTopic.dotd
+      assert_equal 'erin.bond', DevelopersTopic.dotd_username
     end
 
-    it 'handles usernames with special characters and spaces in them' do
+    it 'handles literal usernames with special characters and spaces in them' do
       Slack.stubs(:get_topic).returns('DOTD: @Jessie (she/her); DTS: yes; DTT: yes; DTP: yes; DTL: yes')
 
-      assert_equal 'Jessie (she/her)', DevelopersTopic.dotd
+      assert_equal 'Jessie (she/her)', DevelopersTopic.dotd_username
     end
 
     it 'raises an exception if topic is malformed' do
       Slack.stubs(:get_topic).returns('DTS: yes; DTT: yes; DTP: yes; DTL: yes')
 
-      assert_raises {DevelopersTopic.dotd}
+      assert_raises {DevelopersTopic.dotd_username}
+    end
+  end
+
+  describe 'dotd_id' do
+    it 'extracts the Slack user ID from the DOTD mention in the topic' do
+      Slack.stubs(:get_topic).returns('DOTD: <@U12345>; DTS: yes; DTT: yes; DTP: yes; DTL: yes')
+
+      assert_equal 'U12345', DevelopersTopic.dotd_id
+    end
+
+    it 'raises if the topic does not contain a DOTD mention' do
+      Slack.stubs(:get_topic).returns('DOTD: someone; DTS: yes; DTT: yes; DTP: yes; DTL: yes')
+
+      assert_raises {DevelopersTopic.dotd_id}
+    end
+  end
+
+  describe 'dotd_mention' do
+    it 'returns a Slack mention tag wrapping the dotd user ID' do
+      Slack.stubs(:get_topic).returns('DOTD: <@U12345>; DTS: yes; DTT: yes; DTP: yes; DTL: yes')
+
+      assert_equal '<@U12345>', DevelopersTopic.dotd_mention
     end
   end
 
@@ -235,6 +264,17 @@ class DevelopersTopicTest < Minitest::Test
       Slack.stubs(:get_topic).returns('DOTD: @someone; DTS: yes; DTT: yes; DTP: yes')
       Slack.expects(:update_topic).never
       assert_raises {DevelopersTopic.set_dtl('no')}
+    end
+  end
+
+  describe 'set_dotd_mention' do
+    it 'replaces the DOTD field with the given mention tag' do
+      Slack.stubs(:get_topic).returns('DOTD: <@U99999>; DTS: yes; DTT: yes; DTP: yes; DTL: yes')
+      Slack.expects(:update_topic).with(
+        'developers',
+        'DOTD: <@U12345>; DTS: yes; DTT: yes; DTP: yes; DTL: yes'
+      )
+      DevelopersTopic.set_dotd_mention('<@U12345>')
     end
   end
 end

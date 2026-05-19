@@ -5,7 +5,7 @@ description 'description here'
 markdown <<MARKDOWN
 # Teaching About AI
 
-#### A lot of the content we've covered so far in this Module has focused on teaching **with AI**.
+A lot of the content we've covered so far in this Module has focused on teaching **with AI**.
 
 <div style="text-align:center;">
   <img 
@@ -17,11 +17,11 @@ markdown <<MARKDOWN
 
 *Image: TeachAI*
 
-#### Teaching with AI and teaching about AI are closely connected and often happen at the same time.
+Teaching with AI and teaching about AI are closely connected and often happen at the same time.
 
-#### When you use AI as part of your teaching practice, you naturally create opportunities for students to ask questions about how it works, what it produces, and whether it can be trusted.
+When you use AI as part of your teaching practice, you naturally create opportunities for students to ask questions about how it works, what it produces, and whether it can be trusted.
 
-#### However, sometimes you'll want to also teach more explicitly **about AI**. For the remainder of this module we'll focus on teaching about AI.
+However, sometimes you'll want to also teach more explicitly **about AI**. For the remainder of this module we'll focus on teaching about AI.
 
 <body style="margin:0; padding:20px; background-color:#ffffff; font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;">
 <div style="max-width:980px; margin:0 auto;">

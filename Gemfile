@@ -108,6 +108,7 @@ group :development, :test do
   gem 'brakeman'
   gem 'database_cleaner-active_record', '~> 2.1.0'
   gem 'haml-rails' # haml (instead of erb) generators
+  gem 'prosopite'
   gem 'ruby-prof', '>= 1.7.0'
   gem 'vcr', require: false
   # For unit testing.
@@ -188,7 +189,7 @@ gem 'gemoji'
 # Authentication and permissions.
 gem 'cancancan', '~> 3.5.0'
 gem 'devise', '~> 4.9.0'
-gem 'devise_invitable', '~> 2.0.2'
+gem 'devise_invitable', '~> 2.0.12'
 
 gem 'omniauth-classlink', '~> 0.3.1'
 gem 'omniauth-clever', '~> 3.0.0', github: 'code-dot-org/omniauth-clever', tag: 'v3.0.0'

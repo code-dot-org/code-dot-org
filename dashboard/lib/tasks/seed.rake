@@ -453,7 +453,7 @@ namespace :seed do
     UnitGroup.load_from_path(path)
   end
 
-  JIT_PL_DEPENDENCIES = [:environment, :courses_jit_pl]
+  JIT_PL_DEPENDENCIES = [:environment, :courses_jit_pl, :json_videos]
 
   timed_task_with_logging jit_pl_concepts: JIT_PL_DEPENDENCIES do
     JitPlConcept.seed_all(CURRICULUM_CONTENT_DIR)

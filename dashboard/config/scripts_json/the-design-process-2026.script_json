@@ -19,7 +19,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2026-04-30 02:00:42 UTC",
+    "serialized_at": "2026-05-18 00:07:18 UTC",
     "hide_within_course": false,
     "published_state": null,
     "instruction_type": null,
@@ -7143,10 +7143,11 @@
     },
     {
       "name": "Bugs and Features",
-      "url": "https://docs.google.com/presentation/d/1ms_qU7p-LJluP-1WWki6SLjTMUA_zeFPwNKyJoNQvw4/template/preview",
+      "url": "https://docs.google.com/presentation/d/10xHpeYUQ_-6fSnSPL3pB_fjRpzO_GbnFWI98PqSZwp0/view",
       "key": "bugs_and_features_2",
       "properties": {
         "audience": "Teacher",
+        "embeddability_type": "embed_and_resource_dropdown",
         "type": "Slides"
       },
       "seeding_key": {
@@ -7155,10 +7156,11 @@
     },
     {
       "name": "Build a Digital Prototype",
-      "url": "https://docs.google.com/presentation/d/1CCldBGliwXw04-IAVJo2xoMDit8EDgsg0ZIKCvfcGeo/template/preview",
+      "url": "https://docs.google.com/presentation/d/1BLcGsSI9txtVWzI5yakrWmO4bqSSjRJtBvAZLq_hzgM/view",
       "key": "build_a_digital_prototype",
       "properties": {
         "audience": "Teacher",
+        "embeddability_type": "embed_and_resource_dropdown",
         "type": "Slides"
       },
       "seeding_key": {
@@ -7167,10 +7169,11 @@
     },
     {
       "name": "Build a Paper Prototype",
-      "url": "https://docs.google.com/presentation/d/1S6a0QxqE0oKBsLGBLKt5Tgkp4w3kf4YXHTazxNwssts/template/preview",
+      "url": "https://docs.google.com/presentation/d/1cSGyg5ddYXYx5v4phYwLJhqNCBClCSt1hC_ef4LZonM/view",
       "key": "build_a_paper_prototype",
       "properties": {
         "audience": "Teacher",
+        "embeddability_type": "embed_and_resource_dropdown",
         "type": "Slides"
       },
       "seeding_key": {
@@ -7191,10 +7194,11 @@
     },
     {
       "name": "Computer Science Practices",
-      "url": "https://docs.google.com/document/d/1gX1ki1x8HH7EN-59JcCFjaYnCVPhbniEH4ysZBuGKW8/view",
+      "url": "https://docs.google.com/document/d/1rjlogxzdp6BCpltbxxUhEEZyUzx7HOY4LEE1CxiTLsk/view",
       "key": "computer_science_practices",
       "properties": {
         "audience": "Student",
+        "embeddability_type": "embed_and_resource_dropdown",
         "include_in_pdf": true,
         "type": "Activity Guide"
       },
@@ -7294,10 +7298,11 @@
     },
     {
       "name": "Design Mode in App Lab",
-      "url": "https://docs.google.com/presentation/d/1x8n4MBVA_er4Ql8Zqcznbd4jy-wgDfWT80r7QcrUUJM/template/preview",
+      "url": "https://docs.google.com/presentation/d/1qow3ng0wwUqDgpR9TSL-3JBYvbTEzXEESzmG8AzsSxU/view",
       "key": "design_mode_in_app_lab",
       "properties": {
         "audience": "Teacher",
+        "embeddability_type": "embed_and_resource_dropdown",
         "type": "Slides"
       },
       "seeding_key": {
@@ -7306,10 +7311,11 @@
     },
     {
       "name": "Designing Apps for Good",
-      "url": "https://docs.google.com/presentation/d/1UTuFOvi3bgtvB32a5Y-53MlL1U5ZsKEKF1xvcQVg5Tc/template/preview",
+      "url": "https://docs.google.com/presentation/d/1y9gVvYp8s78Cpf0ijjQy5KFyOTQqcbxBH8EcL2X3PKk/view",
       "key": "designing_apps_for_good",
       "properties": {
         "audience": "Teacher",
+        "embeddability_type": "embed_and_resource_dropdown",
         "type": "Slides"
       },
       "seeding_key": {
@@ -7343,10 +7349,11 @@
     },
     {
       "name": "Designing With Empathy",
-      "url": "https://docs.google.com/presentation/d/10LKvtv_d3V2-sY9qyBzGBpg87pugrc9gmXtgc1OmR1Y/template/preview",
+      "url": "https://docs.google.com/presentation/d/13rA2LloMk6CPAkxsCUD0zv0Fg2N17YaWEaEGerB1iIM/view",
       "key": "designing_with_empathy_2",
       "properties": {
         "audience": "Teacher",
+        "embeddability_type": "embed_and_resource_dropdown",
         "type": "Slides"
       },
       "seeding_key": {
@@ -7380,10 +7387,11 @@
     },
     {
       "name": "Events in App Lab",
-      "url": "https://docs.google.com/presentation/d/1z7jOPHf7ieNL-JRvaxc8mbIMTZsxWsC-E4yfu_JAVvc/template/preview",
+      "url": "https://docs.google.com/presentation/d/1ct8trjbsGYvdkUn4ZNCAszED36fnWuG4JI--_xY-HJI/view",
       "key": "events_in_app_lab_1",
       "properties": {
         "audience": "Teacher",
+        "embeddability_type": "embed_and_resource_dropdown",
         "type": "Slides"
       },
       "seeding_key": {
@@ -7490,10 +7498,11 @@
     },
     {
       "name": "Exploring UI Elements",
-      "url": "https://docs.google.com/presentation/d/1zqZIrFRz7b45JXRj5nFb_I9ZQ5UdwlnN1ukT0-ldrH0/template/preview",
+      "url": "https://docs.google.com/presentation/d/1o8qhNNVLZtit-JCIXS4sCJeeT0ZdcOgREHFf7k6sr2Y/view",
       "key": "exploring_ui_elements",
       "properties": {
         "audience": "Teacher",
+        "embeddability_type": "embed_and_resource_dropdown",
         "type": "Slides"
       },
       "seeding_key": {
@@ -7502,10 +7511,11 @@
     },
     {
       "name": "Feedback and Testing",
-      "url": "https://docs.google.com/presentation/d/1qOURzacBWoQU9vBzlkDfuc_4c7t5qU3CeyavM5IRqCI/template/preview",
+      "url": "https://docs.google.com/presentation/d/1SfG8ftZAEg89S09c3WtimSAkf3dwheT3GGfOhZAzWZA/view",
       "key": "feedback_and_testing",
       "properties": {
         "audience": "Teacher",
+        "embeddability_type": "embed_and_resource_dropdown",
         "type": "Slides"
       },
       "seeding_key": {
@@ -7514,10 +7524,11 @@
     },
     {
       "name": "Identifying User Needs",
-      "url": "https://docs.google.com/presentation/d/1fTfisiibLUemChrWGXT49xaVH7ZycjlZ7ibmpoY-aJU/template/preview",
+      "url": "https://docs.google.com/presentation/d/1usCoPOm3GPfnCE_cVX3pq0s-fh-FuxJHO9HZdy0--ZM/view",
       "key": "identifying_user_needs",
       "properties": {
         "audience": "Teacher",
+        "embeddability_type": "embed_and_resource_dropdown",
         "type": "Slides"
       },
       "seeding_key": {
@@ -7575,10 +7586,11 @@
     },
     {
       "name": "Linking Prototype Screens",
-      "url": "https://docs.google.com/presentation/d/1LDygdtxznWMP7giYLSFUsKkM73FBoH-Z0WndF2Iure8/template/preview",
+      "url": "https://docs.google.com/presentation/d/1UstWqJhbOjNpjgA_2CCgy2D1SSSYrJsSbTyvPY-jqOA/view",
       "key": "linking_prototype_screens",
       "properties": {
         "audience": "Teacher",
+        "embeddability_type": "embed_and_resource_dropdown",
         "type": "Slides"
       },
       "seeding_key": {
@@ -7624,10 +7636,11 @@
     },
     {
       "name": "Market Research",
-      "url": "https://docs.google.com/presentation/d/1GxbcqzjgeOvOph4_ZASTGRD4Fes6-zNJjWpmXAqw2Zc/template/preview",
+      "url": "https://docs.google.com/presentation/d/1BYzba1-V6aDhWhHxbySTLqJjOSscZ4REZrhmqVh1lmI/view",
       "key": "market_research_2",
       "properties": {
         "audience": "Teacher",
+        "embeddability_type": "embed_and_resource_dropdown",
         "type": "Slides"
       },
       "seeding_key": {
@@ -7847,10 +7860,11 @@
     },
     {
       "name": "Project - App Presentation",
-      "url": "https://docs.google.com/presentation/d/1U7xnPZWxvuPu3ZCkPUn1p8EdzE1J0DjxxykXd4G__2Y/template/preview",
+      "url": "https://docs.google.com/presentation/d/1RpXBYnQvDg71Xpk0tcKvTCNo6u03nFKnr9IlAfa41v8/view",
       "key": "project_-_app_presentation",
       "properties": {
         "audience": "Teacher",
+        "embeddability_type": "embed_and_resource_dropdown",
         "type": "Slides"
       },
       "seeding_key": {
@@ -7859,10 +7873,11 @@
     },
     {
       "name": "Project - Paper Prototype",
-      "url": "https://docs.google.com/presentation/d/1NPFLu7quARhjhzIDKs94UgHptm6IPI2HYNq8yArDhfw/template/preview",
+      "url": "https://docs.google.com/presentation/d/1I4H-Tb3pEw6h_XZK80a_fq8mxyc4dBWWKMijMB5qito/view",
       "key": "project_-_paper_prototype",
       "properties": {
         "audience": "Teacher",
+        "embeddability_type": "embed_and_resource_dropdown",
         "type": "Slides"
       },
       "seeding_key": {
@@ -7884,10 +7899,11 @@
     },
     {
       "name": "Prototype Testing",
-      "url": "https://docs.google.com/presentation/d/1kIeXBZLLfFXfPqFqI1YR7wdt_2r-DP9igq_POPNgRko/template/preview",
+      "url": "https://docs.google.com/presentation/d/1vLgcpeWdj2v_eLv87NpetvsqbncIP5UXPqa4RL4B59E/view",
       "key": "prototype_testing",
       "properties": {
         "audience": "Teacher",
+        "embeddability_type": "embed_and_resource_dropdown",
         "type": "Slides"
       },
       "seeding_key": {
@@ -8017,10 +8033,11 @@
     },
     {
       "name": "Testing the App",
-      "url": "https://docs.google.com/presentation/d/1UoFvA0d2YtHK24veL4zdV9rOx5WsY-qzO8S5kNyXOMQ/template/preview",
+      "url": "https://docs.google.com/presentation/d/1KWON6kSjaT-3VL22tVBKxPxoOwlDsx_K57K_s0mQ_NQ/view",
       "key": "testing_the_app",
       "properties": {
         "audience": "Teacher",
+        "embeddability_type": "embed_and_resource_dropdown",
         "type": "Slides"
       },
       "seeding_key": {
@@ -8051,10 +8068,11 @@
     },
     {
       "name": "Understanding Your User",
-      "url": "https://docs.google.com/presentation/d/1XaQqqo2AHh7L_P3z2nQIKdq37kOoMIy249mGZsR5stU/template/preview",
+      "url": "https://docs.google.com/presentation/d/13FLn6PIUCerWkiQic_MMOH6VsdD5eVb34fL1yBReo88/view",
       "key": "understanding_your_user",
       "properties": {
         "audience": "Teacher",
+        "embeddability_type": "embed_and_resource_dropdown",
         "type": "Slides"
       },
       "seeding_key": {
@@ -8076,10 +8094,11 @@
     },
     {
       "name": "Updating Your Prototype",
-      "url": "https://docs.google.com/presentation/d/1Q5Bdq9D1MWcc2siYub61R8QeLFBdOnjMqiFF7I8ueEg/template/preview",
+      "url": "https://docs.google.com/presentation/d/1JZNftyEloOJcAhn1ZN07B2xvXEm5lnk99d40cSLl1hs/view",
       "key": "updating_your_prototype_1",
       "properties": {
         "audience": "Teacher",
+        "embeddability_type": "embed_and_resource_dropdown",
         "type": "Slides"
       },
       "seeding_key": {
@@ -8088,10 +8107,11 @@
     },
     {
       "name": "User Centered Design - Define and Prepare",
-      "url": "https://docs.google.com/presentation/d/1uuFzndkmhpgptbh6WMcZMhHjBcOFaonwJPzwa89Zkco/template/preview",
+      "url": "https://docs.google.com/presentation/d/1xYDSudg15tl7jUz4j4HWkzBV6ghfQZeUeR7Ut5I3m-g/view",
       "key": "user_centered_design_-_define_and_prepare",
       "properties": {
         "audience": "Teacher",
+        "embeddability_type": "embed_and_resource_dropdown",
         "type": "Slides"
       },
       "seeding_key": {
@@ -8100,10 +8120,11 @@
     },
     {
       "name": "User Centered Design - Try and Reflect",
-      "url": "https://docs.google.com/presentation/d/1tzMzSCSyWlyZcu-_2R25d7tFzuZ78wZgUL3yuX_LOfk/template/preview",
+      "url": "https://docs.google.com/presentation/d/1xKyJcx5pDSKvIWxDtX-B-OBovSn7_a58JRnVX_ScjHE/view",
       "key": "user_centered_design_-_try_and_reflect",
       "properties": {
         "audience": "Teacher",
+        "embeddability_type": "embed_and_resource_dropdown",
         "type": "Slides"
       },
       "seeding_key": {
@@ -8175,10 +8196,11 @@
     },
     {
       "name": "User Interfaces",
-      "url": "https://docs.google.com/presentation/d/1Ey9Y40sGnWMxqmQHUeQ87EbWYcPRNJ5MJNz3iSE20xI/template/preview",
+      "url": "https://docs.google.com/presentation/d/1_aihzR-7qf12-zpgODTOjtcvHxgZDfKx-0b_vu2NVTw/view",
       "key": "user_interfaces",
       "properties": {
         "audience": "Teacher",
+        "embeddability_type": "embed_and_resource_dropdown",
         "type": "Slides"
       },
       "seeding_key": {
