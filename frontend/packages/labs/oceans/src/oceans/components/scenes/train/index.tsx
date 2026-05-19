@@ -61,18 +61,19 @@ const UnwrappedTrain = class Train extends React.Component<
             {Math.min(999, state.yesCount + state.noCount)}
           </span>
         </div>
-        <div style={styles.eraseButtonContainer}>
-          <FontAwesomeIcon
-            icon={faTrash}
-            style={styles.eraseButton}
-            onClick={() => {
-              setState({
-                showConfirmationDialog: true,
-                confirmationDialogOnYes: resetTrainingFunction,
-              });
-            }}
-          />
-        </div>
+        <button
+          type="button"
+          style={styles.eraseButtonContainer}
+          aria-label={I18n.t('erase')}
+          onClick={() => {
+            setState({
+              showConfirmationDialog: true,
+              confirmationDialogOnYes: resetTrainingFunction,
+            });
+          }}
+        >
+          <FontAwesomeIcon icon={faTrash} style={styles.eraseButton} />
+        </button>
         <div style={styles.trainButtons}>
           <Button
             style={styles.trainButtonNo}
