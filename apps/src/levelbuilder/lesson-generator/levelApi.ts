@@ -75,22 +75,15 @@ async function findLevelByName(
     : null;
 }
 
-// PATCH /levels/:id — write panel data into a Panels level. We post as
-// multipart/form-data to mirror the panels-edit form, since the levels
-// controller expects level[panels] as a JSON string and runs it through
-// handle_json_params.
+// Write panel data into a freshly-created Panels level. The level was
+// produced by this page's createOrFindLevel a moment ago, so there's
+// no stale level_data to worry about — we just write the new panels
+// array through the same generic property path everything else uses.
 export async function updatePanelsLevel(
   levelId: number,
   panels: Panel[]
 ): Promise<void> {
-  const form = new FormData();
-  form.append('level[panels]', JSON.stringify(panels));
-  // Clear out any stale level_data so we don't keep an old "panels" array
-  // hidden in there. EditPanels does the same on save.
-  form.append('level[level_data]', JSON.stringify({}));
-  // Rails resources route both PATCH and PUT to :update; use PUT since
-  // HttpClient doesn't have a patch helper.
-  await HttpClient.put(`/levels/${levelId}`, form, true);
+  await updateLevelProperty(levelId, 'panels', JSON.stringify(panels));
 }
 
 // POST /levels/:id/update_start_code — write start_sources into a Weblab2
@@ -120,7 +113,7 @@ export async function updateStartSources(
 // Narrow the property name to keys this page actually writes. The level
 // edit controller would accept any permitted attribute, but limiting the
 // call sites here catches typos at the boundary and documents intent.
-export type LevelProperty = 'long_instructions' | 'generate_prompt';
+export type LevelProperty = 'long_instructions' | 'generate_outline' | 'panels';
 
 export async function updateLevelProperty(
   levelId: number,

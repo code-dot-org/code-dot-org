@@ -464,7 +464,7 @@ class ScriptLevel < ApplicationRecord
         type: level.type,
         # Recorded by the AI lesson generator; surfaced here so the
         # /generate page can re-populate the prompt for an existing level.
-        generatePrompt: level.try(:generate_prompt),
+        generateOutline: level.try(:generate_outline),
       }
     end
 
