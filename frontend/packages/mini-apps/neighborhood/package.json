@@ -43,7 +43,9 @@
     "canvg": "^4.0.3"
   },
   "devDependencies": {
+    "@code-dot-org/component-library-styles": "workspace:*",
     "@code-dot-org/core": "workspace:*",
+    "@code-dot-org/fonts": "workspace:*",
     "@code-dot-org/lint-config": "workspace:*",
     "@code-dot-org/maze": "2.16.0",
     "@code-dot-org/mini-app-base": "workspace:*",
