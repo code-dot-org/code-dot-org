@@ -412,6 +412,7 @@ export function useKeyboardNavigation({
       if (!deltaX && !deltaY) return false;
       event.preventDefault();
       event.stopPropagation();
+      if (!event.repeat) pushSnapshot();
       if (snapAnchorIfNearHandle(focusedNodeId, deltaX, deltaY)) {
         return true;
       }
@@ -420,7 +421,7 @@ export function useKeyboardNavigation({
       );
       return true;
     },
-    [setNodes, snapAnchorIfNearHandle]
+    [pushSnapshot, setNodes, snapAnchorIfNearHandle]
   );
 
   // On each end ('side') of the edge, figure out the post-move handle position
@@ -532,11 +533,12 @@ export function useKeyboardNavigation({
       const {deltaX, deltaY} = getArrowDelta(event.key);
       if (!deltaX && !deltaY) return false;
       if (!moveEdgeByDelta(focusedEdgeId, deltaX, deltaY)) return false;
+      if (!event.repeat) pushSnapshot();
       event.preventDefault();
       event.stopPropagation();
       return true;
     },
-    [moveEdgeByDelta]
+    [pushSnapshot, moveEdgeByDelta]
   );
 
   /**
@@ -565,6 +567,7 @@ export function useKeyboardNavigation({
 
       event.preventDefault();
       event.stopPropagation();
+      if (!event.repeat) pushSnapshot();
       setNodes(currentNodes =>
         resizeNodeByDelta(currentNodes, focusedNodeId, deltaWidth, deltaHeight)
       );
@@ -575,7 +578,7 @@ export function useKeyboardNavigation({
       );
       return true;
     },
-    [nodes, getNode, setNodes, announce]
+    [nodes, getNode, pushSnapshot, setNodes, announce]
   );
 
   /**
@@ -724,13 +727,14 @@ export function useKeyboardNavigation({
       }
       const target = nativeEvent.target as HTMLElement;
       if (isTargetEditable(target)) return;
+      if (!nativeEvent.repeat) pushSnapshot();
       if (moveEdgeByDelta(edgeId, deltaX, deltaY)) {
         nativeEvent.preventDefault();
       }
     };
     window.addEventListener('keydown', handler);
     return () => window.removeEventListener('keydown', handler);
-  }, [moveEdgeByDelta]);
+  }, [moveEdgeByDelta, pushSnapshot]);
 
   return {connectingFrom, connectAnnouncement, handleKeyDown};
 }
