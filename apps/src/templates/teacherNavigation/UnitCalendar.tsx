@@ -40,11 +40,13 @@ import {
 import {
   placeCalendarItemsIntoSessions,
   placeItemInSession,
+  replaceItemsInSessions,
   removeMatchingPlanItems,
 } from './calendar/calendarPlannerUtils';
 import {
   CalendarPlanItem,
   CalendarPlanSession,
+  CalendarSplitLessonPart,
   SectionCalendarPlan,
 } from './calendar/calendarPlanTypes';
 import CalendarScheduleSettings from './calendar/CalendarScheduleSettings';
@@ -77,6 +79,13 @@ function buildDefaultPlan(
     cancellations: [],
     items: [],
   };
+}
+
+function newCalendarClientId(prefix: string) {
+  if (window.crypto?.randomUUID) {
+    return `${prefix}-${window.crypto.randomUUID()}`;
+  }
+  return `${prefix}-${Date.now()}-${Math.random().toString(36).slice(2)}`;
 }
 
 const UnitCalendar: React.FC = () => {
@@ -352,6 +361,88 @@ const UnitCalendar: React.FC = () => {
     );
   };
 
+  const handleSplitLesson = (
+    item: CalendarPlanItem,
+    targetSession: CalendarPlanSession,
+    parts: CalendarSplitLessonPart[]
+  ) => {
+    if (!item.lessonId) {
+      return;
+    }
+
+    const splitGroupId =
+      item.splitGroupId || newCalendarClientId('split-lesson');
+    const existingSplitPlacements = detailedCalendarSessions
+      .flatMap(session =>
+        session.items.map((sessionItem, index) => ({
+          item: sessionItem,
+          session,
+          sessionSort: index,
+        }))
+      )
+      .filter(({item: sessionItem}) =>
+        item.splitGroupId
+          ? sessionItem.splitGroupId === item.splitGroupId
+          : sessionItem.clientId === item.clientId
+      )
+      .sort(
+        (a, b) => (a.item.splitPartIndex || 0) - (b.item.splitPartIndex || 0)
+      );
+    const existingSplitPlacementsByClientId = new Map(
+      existingSplitPlacements.map(placement => [
+        placement.item.clientId,
+        placement,
+      ])
+    );
+    const fallbackPlacement = {
+      item,
+      session: targetSession,
+      sessionSort: targetSession.items.findIndex(
+        sessionItem => sessionItem.clientId === item.clientId
+      ),
+    };
+    const placements = parts.map((part, index) => {
+      const existingPlacement = part.clientId
+        ? existingSplitPlacementsByClientId.get(part.clientId)
+        : undefined;
+      const session = existingPlacement?.session || targetSession;
+      const sessionSort =
+        existingPlacement?.sessionSort ??
+        Math.max(fallbackPlacement.sessionSort, 0) +
+          Math.max(0, index - existingSplitPlacements.length + 1);
+      const isSplit = parts.length > 1;
+      return {
+        item: {
+          ...(existingPlacement?.item || item),
+          clientId:
+            existingPlacement?.item.clientId ||
+            part.clientId ||
+            (index === 0
+              ? item.clientId
+              : newCalendarClientId(`lesson-${item.lessonId}-copy`)),
+          plannedMinutes: part.minutes,
+          splitGroupId: isSplit ? splitGroupId : undefined,
+          splitPartIndex: isSplit ? index + 1 : undefined,
+          splitPartCount: isSplit ? parts.length : undefined,
+        },
+        session,
+        sessionSort,
+      };
+    });
+
+    setDraftPlan(plan =>
+      plan
+        ? replaceItemsInSessions(
+            plan,
+            existingSplitPlacements.length
+              ? existingSplitPlacements.map(({item}) => item)
+              : [item],
+            placements
+          )
+        : plan
+    );
+  };
+
   const handleRemoveItem = (item: CalendarPlanItem) => {
     setDraftPlan(plan => {
       if (!plan) {
@@ -365,6 +456,49 @@ const UnitCalendar: React.FC = () => {
             planItem => planItem.clientId !== item.clientId
           ),
         };
+      }
+
+      if (item.splitGroupId) {
+        const remainingSplitItems = plan.items
+          .filter(
+            planItem =>
+              planItem.splitGroupId === item.splitGroupId &&
+              planItem.clientId !== item.clientId &&
+              !planItem.removed
+          )
+          .sort((a, b) => (a.splitPartIndex || 0) - (b.splitPartIndex || 0));
+
+        if (remainingSplitItems.length > 0) {
+          const remainingSplitItemsByClientId = new Map(
+            remainingSplitItems.map((planItem, index) => [
+              planItem.clientId,
+              remainingSplitItems.length === 1
+                ? {
+                    ...planItem,
+                    splitGroupId: undefined,
+                    splitPartIndex: undefined,
+                    splitPartCount: undefined,
+                  }
+                : {
+                    ...planItem,
+                    splitPartIndex: index + 1,
+                    splitPartCount: remainingSplitItems.length,
+                  },
+            ])
+          );
+
+          return {
+            ...plan,
+            mode: 'detailed_sessions',
+            items: plan.items
+              .filter(planItem => planItem.clientId !== item.clientId)
+              .map(
+                planItem =>
+                  remainingSplitItemsByClientId.get(planItem.clientId) ||
+                  planItem
+              ),
+          };
+        }
       }
 
       return {
@@ -453,6 +587,7 @@ const UnitCalendar: React.FC = () => {
                     lessons={calendarLessons}
                     onDropItem={handleDropItem}
                     onDragStateChange={setIsDraggingCalendarBlock}
+                    onSplitLesson={handleSplitLesson}
                   />
                 </div>
               </div>

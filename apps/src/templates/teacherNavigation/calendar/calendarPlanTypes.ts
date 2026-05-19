@@ -46,10 +46,18 @@ export interface CalendarPlanItem {
   lessonId?: number;
   placeholderTitle?: string;
   plannedMinutes?: number;
+  splitGroupId?: string;
+  splitPartIndex?: number;
+  splitPartCount?: number;
   sessionDate?: string;
   sessionClientId?: string;
   sessionSort?: number;
   removed: boolean;
+}
+
+export interface CalendarSplitLessonPart {
+  clientId?: string;
+  minutes: number;
 }
 
 export interface SectionCalendarPlan {

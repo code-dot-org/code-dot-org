@@ -16,7 +16,13 @@ import {
   setCalendarDragPayload,
 } from './calendarDragUtils';
 import CalendarPlanItem from './CalendarPlanItem';
-import {CalendarPlanLesson, CalendarPlanSession} from './calendarPlanTypes';
+import {
+  CalendarPlanItem as CalendarPlanItemData,
+  CalendarPlanLesson,
+  CalendarPlanSession,
+  CalendarSplitLessonPart,
+} from './calendarPlanTypes';
+import CalendarSplitLessonDialog from './CalendarSplitLessonDialog';
 
 import styles from './calendar.module.scss';
 
@@ -32,6 +38,11 @@ interface CalendarPlanCalendarProps {
     index: number
   ) => void;
   onDragStateChange?: (isDragging: boolean) => void;
+  onSplitLesson?: (
+    item: CalendarPlanItemData,
+    session: CalendarPlanSession,
+    parts: CalendarSplitLessonPart[]
+  ) => void;
 }
 
 interface CalendarDay {
@@ -68,9 +79,16 @@ const CalendarPlanCalendar: React.FC<CalendarPlanCalendarProps> = ({
   onToggleCancellation,
   onDropItem,
   onDragStateChange,
+  onSplitLesson,
 }) => {
   const [viewMode, setViewMode] = useState<CalendarViewMode>('month');
   const [cursorDate, setCursorDate] = useState(() => moment());
+  const [splitLessonEditor, setSplitLessonEditor] = useState<{
+    item: CalendarPlanItemData;
+    lesson: CalendarPlanLesson;
+    session: CalendarPlanSession;
+    splitItems: CalendarPlanItemData[];
+  } | null>(null);
 
   const lessonsById = useMemo(
     () => new Map(lessons.map(lesson => [lesson.id, lesson])),
@@ -95,6 +113,18 @@ const CalendarPlanCalendar: React.FC<CalendarPlanCalendarProps> = ({
       : `${days[0].date.format('MMM D')} - ${days[6].date.format(
           'MMM D, YYYY'
         )}`;
+
+  const splitItemsForItem = (item: CalendarPlanItemData) => {
+    const items = item.splitGroupId
+      ? sessions
+          .flatMap(session => session.items)
+          .filter(sessionItem => sessionItem.splitGroupId === item.splitGroupId)
+      : [item];
+
+    return items
+      .slice()
+      .sort((a, b) => (a.splitPartIndex || 0) - (b.splitPartIndex || 0));
+  };
 
   const handleDrop = (
     event: React.DragEvent,
@@ -155,32 +185,46 @@ const CalendarPlanCalendar: React.FC<CalendarPlanCalendarProps> = ({
           </MuiTypography>
         ) : (
           <div className={styles.sessionItemList}>
-            {session.items.map((item, index) => (
-              <div
-                className={styles.sessionDropTarget}
-                key={item.clientId}
-                onDragOver={event => event.preventDefault()}
-                onDrop={event => handleDrop(event, session, index)}
-              >
-                <CalendarPlanItem
-                  item={item}
-                  lesson={
-                    item.lessonId ? lessonsById.get(item.lessonId) : undefined
-                  }
-                  draggable
-                  dragHandlePosition="right"
-                  onDragEnd={() => onDragStateChange?.(false)}
-                  onDragStart={event => {
-                    setCalendarDragPayload(event, {item});
-                    onDragStateChange?.(true);
-                  }}
-                  showDragHandle
-                  showDuration={viewMode === 'week'}
-                  showRemoveButton={false}
-                  showTypeIcon={false}
-                />
-              </div>
-            ))}
+            {session.items.map((item, index) => {
+              const lesson = item.lessonId
+                ? lessonsById.get(item.lessonId)
+                : undefined;
+              return (
+                <div
+                  className={styles.sessionDropTarget}
+                  key={item.clientId}
+                  onDragOver={event => event.preventDefault()}
+                  onDrop={event => handleDrop(event, session, index)}
+                >
+                  <CalendarPlanItem
+                    item={item}
+                    lesson={lesson}
+                    draggable
+                    dragHandlePosition="right"
+                    onDragEnd={() => onDragStateChange?.(false)}
+                    onDragStart={event => {
+                      setCalendarDragPayload(event, {item});
+                      onDragStateChange?.(true);
+                    }}
+                    showDragHandle
+                    showDuration
+                    showRemoveButton={false}
+                    showTypeIcon={false}
+                    onSplit={
+                      lesson
+                        ? () =>
+                            setSplitLessonEditor({
+                              item,
+                              lesson,
+                              session,
+                              splitItems: splitItemsForItem(item),
+                            })
+                        : undefined
+                    }
+                  />
+                </div>
+              );
+            })}
           </div>
         )}
       </div>
@@ -275,6 +319,25 @@ const CalendarPlanCalendar: React.FC<CalendarPlanCalendarProps> = ({
           );
         })}
       </div>
+      {splitLessonEditor && (
+        <CalendarSplitLessonDialog
+          initialParts={splitLessonEditor.splitItems.map(splitItem => ({
+            clientId: splitItem.clientId,
+            minutes:
+              splitItem.plannedMinutes ?? splitLessonEditor.lesson.duration,
+          }))}
+          lesson={splitLessonEditor.lesson}
+          onClose={() => setSplitLessonEditor(null)}
+          onSave={parts => {
+            onSplitLesson?.(
+              splitLessonEditor.item,
+              splitLessonEditor.session,
+              parts
+            );
+            setSplitLessonEditor(null);
+          }}
+        />
+      )}
     </div>
   );
 };

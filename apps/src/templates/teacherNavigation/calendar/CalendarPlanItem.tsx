@@ -19,6 +19,7 @@ interface CalendarPlanItemProps {
   onDragEnd?: (event: React.DragEvent) => void;
   onDragStart?: (event: React.DragEvent) => void;
   onRemove?: () => void;
+  onSplit?: () => void;
   showDragHandle?: boolean;
   showDuration?: boolean;
   showRemoveButton?: boolean;
@@ -33,6 +34,7 @@ const CalendarPlanItem: React.FC<CalendarPlanItemProps> = ({
   onDragEnd,
   onDragStart,
   onRemove,
+  onSplit,
   showDragHandle = draggable,
   showDuration = true,
   showRemoveButton = !!onRemove,
@@ -43,13 +45,29 @@ const CalendarPlanItem: React.FC<CalendarPlanItemProps> = ({
     ? item.placeholderTitle
     : lesson?.title.replace(/^Lesson\s+\d+:\s*/, '') ||
       `Lesson ${item.lessonId}`;
-  const plannedMinutes = item.plannedMinutes || lesson?.duration;
+  const splitLabel =
+    item.splitPartIndex && item.splitPartCount
+      ? `${item.splitPartIndex}/${item.splitPartCount}`
+      : null;
+  const plannedMinutes = item.plannedMinutes ?? lesson?.duration;
   const dragHandle = showDragHandle && (
     <FontAwesomeV6Icon
       className={styles.dragHandleIcon}
       iconName="grip-vertical"
       iconStyle="solid"
     />
+  );
+  const splitButton = onSplit && (
+    <IconButton
+      size="small"
+      aria-label="Split lesson"
+      onClick={event => {
+        event.stopPropagation();
+        onSplit();
+      }}
+    >
+      <FontAwesomeV6Icon iconName="code-branch" />
+    </IconButton>
   );
 
   return (
@@ -78,7 +96,7 @@ const CalendarPlanItem: React.FC<CalendarPlanItemProps> = ({
             component="a"
             href={lesson.url}
           >
-            {title}
+            {splitLabel ? `${splitLabel} ${title}` : title}
           </MuiTypography>
         ) : (
           <MuiTypography
@@ -86,10 +104,10 @@ const CalendarPlanItem: React.FC<CalendarPlanItemProps> = ({
             variant="body4"
             component="span"
           >
-            {title}
+            {splitLabel ? `${splitLabel} ${title}` : title}
           </MuiTypography>
         )}
-        {showDuration && plannedMinutes && (
+        {showDuration && plannedMinutes !== undefined && (
           <MuiTypography
             className={styles.calendarItemDuration}
             variant="body4"
@@ -110,7 +128,13 @@ const CalendarPlanItem: React.FC<CalendarPlanItemProps> = ({
           </IconButton>
         )}
       </div>
-      {dragHandlePosition === 'right' && dragHandle}
+      {dragHandlePosition === 'right' && (
+        <div className={styles.calendarItemUtilityColumn}>
+          {dragHandle}
+          {splitButton}
+        </div>
+      )}
+      {dragHandlePosition === 'left' && splitButton}
     </div>
   );
 };

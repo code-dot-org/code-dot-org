@@ -482,8 +482,71 @@
   margin-left: auto;
 }
 
+.calendarItemUtilityColumn {
+  align-items: center;
+  display: flex;
+  flex: 0 0 auto;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.calendarItemUtilityColumn button {
+  min-height: 24px;
+  padding: 2px;
+  width: 24px;
+}
+
 .monthCalendarGrid .calendarItemActions {
   display: none;
+}
+
+.splitLessonDialogContent {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  min-width: min(480px, calc(100vw - 96px));
+}
+
+.splitLessonSummary {
+  align-items: end;
+  display: grid;
+  gap: 12px;
+  grid-template-columns: 1fr minmax(160px, 200px);
+}
+
+.splitLessonParts {
+  display: grid;
+  gap: 12px;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+}
+
+.splitLessonPartRow {
+  align-items: end;
+  display: grid;
+  gap: 4px;
+  grid-template-columns: minmax(0, 1fr) 32px;
+}
+
+.splitLessonPartRow button {
+  height: 40px;
+  margin-bottom: 0;
+  width: 32px;
+}
+
+.splitLessonField {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.splitLessonField input {
+  border: 1px solid var(--borders-neutral-primary);
+  border-radius: 4px;
+  box-sizing: border-box;
+  font: inherit;
+  min-height: 40px;
+  padding: 8px 10px;
+  width: 100%;
 }
 
 @media (max-width: 900px) {

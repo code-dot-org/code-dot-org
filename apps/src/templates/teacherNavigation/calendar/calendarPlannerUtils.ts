@@ -115,9 +115,7 @@ function isMatchingPlanItem(
   item: CalendarPlanItem,
   itemToReplace: CalendarPlanItem
 ) {
-  return itemToReplace.lessonId
-    ? item.lessonId === itemToReplace.lessonId
-    : item.clientId === itemToReplace.clientId;
+  return item.clientId === itemToReplace.clientId;
 }
 
 function placedSessionKey(item: CalendarPlanItem) {
@@ -131,6 +129,25 @@ function sessionMinutesUsed(session: CalendarPlanSession) {
     (total, item) => total + (item.plannedMinutes || 0),
     0
   );
+}
+
+function splitPartIndex(item: CalendarPlanItem) {
+  return item.splitPartIndex === undefined
+    ? Number.MAX_SAFE_INTEGER
+    : item.splitPartIndex;
+}
+
+function orderSplitParts(items: CalendarPlanItem[]) {
+  return items
+    .map((item, index) => ({item, index}))
+    .sort((a, b) => {
+      if (a.item.splitGroupId && a.item.splitGroupId === b.item.splitGroupId) {
+        return splitPartIndex(a.item) - splitPartIndex(b.item);
+      }
+
+      return a.index - b.index;
+    })
+    .map(({item}) => item);
 }
 
 function resequencePlacedItems(items: CalendarPlanItem[]) {
@@ -178,11 +195,11 @@ export function placeItemInSession(
     0,
     Math.min(targetIndex, currentSessionItems.length)
   );
-  const targetSessionItems = [
+  const targetSessionItems = orderSplitParts([
     ...currentSessionItems.slice(0, boundedTargetIndex),
     item,
     ...currentSessionItems.slice(boundedTargetIndex),
-  ];
+  ]);
   const itemsOutsideTargetSession = plan.items.filter(
     planItem =>
       !targetSessionItems.some(sessionItem =>
@@ -205,6 +222,86 @@ export function placeItemInSession(
     items: resequencePlacedItems([
       ...itemsOutsideTargetSession,
       ...placedTargetSessionItems,
+    ]),
+  };
+}
+
+export function replaceItemInSession(
+  plan: SectionCalendarPlan,
+  item: CalendarPlanItem,
+  targetSession: CalendarPlanSession,
+  replacementItems: CalendarPlanItem[]
+): SectionCalendarPlan {
+  if (targetSession.canceled) {
+    return plan;
+  }
+
+  const itemIndex = targetSession.items.findIndex(sessionItem =>
+    isMatchingPlanItem(sessionItem, item)
+  );
+  const insertionIndex =
+    itemIndex === -1 ? targetSession.items.length : itemIndex;
+  const targetSessionItems = targetSession.items.filter(
+    sessionItem => !isMatchingPlanItem(sessionItem, item)
+  );
+  targetSessionItems.splice(insertionIndex, 0, ...replacementItems);
+  const orderedTargetSessionItems = orderSplitParts(targetSessionItems);
+
+  const itemsOutsideTargetSession = plan.items.filter(
+    planItem =>
+      !orderedTargetSessionItems.some(sessionItem =>
+        isMatchingPlanItem(planItem, sessionItem)
+      )
+  );
+  const placedTargetSessionItems = orderedTargetSessionItems.map(
+    (sessionItem, index) => ({
+      ...sessionItem,
+      sessionDate: targetSession.date,
+      sessionClientId: targetSession.sourceClientId,
+      sessionSort: index,
+      removed: false,
+    })
+  );
+
+  return {
+    ...plan,
+    mode: 'detailed_sessions',
+    items: resequencePlacedItems([
+      ...itemsOutsideTargetSession,
+      ...placedTargetSessionItems,
+    ]),
+  };
+}
+
+export interface CalendarPlanItemPlacement {
+  item: CalendarPlanItem;
+  session: CalendarPlanSession;
+  sessionSort: number;
+}
+
+export function replaceItemsInSessions(
+  plan: SectionCalendarPlan,
+  itemsToReplace: CalendarPlanItem[],
+  placements: CalendarPlanItemPlacement[]
+): SectionCalendarPlan {
+  const clientIdsToReplace = new Set(itemsToReplace.map(item => item.clientId));
+  const itemsOutsideReplacements = plan.items.filter(
+    planItem => !clientIdsToReplace.has(planItem.clientId)
+  );
+  const replacementItems = placements.map(({item, session, sessionSort}) => ({
+    ...item,
+    sessionDate: session.date,
+    sessionClientId: session.sourceClientId,
+    sessionSort,
+    removed: false,
+  }));
+
+  return {
+    ...plan,
+    mode: 'detailed_sessions',
+    items: resequencePlacedItems([
+      ...itemsOutsideReplacements,
+      ...replacementItems,
     ]),
   };
 }

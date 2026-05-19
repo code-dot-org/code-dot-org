@@ -2276,6 +2276,9 @@ ActiveRecord::Schema[7.0].define(version: 2026_05_13_123000) do
     t.boolean "removed", default: false, null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "split_group_id"
+    t.integer "split_part_index"
+    t.integer "split_part_count"
     t.index ["lesson_id"], name: "index_section_calendar_items_on_lesson_id"
     t.index ["section_calendar_plan_id", "client_id"], name: "idx_section_calendar_items_client", unique: true
     t.index ["section_calendar_plan_id", "session_client_id", "session_sort"], name: "idx_section_calendar_items_session_client"
