@@ -16,7 +16,7 @@ class AiLessonsController < ApplicationController
   # snapshot for, with the user's name, the lesson's title, the last
   # completed checkpoint index, and the latest LLM-generated summary.
   # Currently shows everyone — no section/class filtering yet.
-  def all_progress
+  def progress
     view_options(full_width: true, no_padding_container: true, no_footer: true)
     @progress_entries = list_all_progress
   end

@@ -1,8 +1,0 @@
-- script_data = {entries: @progress_entries}
-
-- content_for(:head) do
-  = render partial: 'lab_head_deps'
-
-%script{src: webpack_asset_path('js/ai_lessons/all_progress.js'), data: {aiLessonsAllProgress: script_data.to_json}}
-
-#ai-lessons-all-progress-container

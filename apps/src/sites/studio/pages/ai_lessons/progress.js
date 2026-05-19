@@ -10,13 +10,13 @@ import getScriptData from '@cdo/apps/util/getScriptData';
 
 $(document).ready(() => {
   forceLightTheme();
-  const data = getScriptData('aiLessonsAllProgress');
+  const data = getScriptData('aiLessonsProgress');
   createReactRoot(
     <Provider store={getStore()}>
       <ThemeProvider>
         <TeacherProgressPage entries={data.entries || []} />
       </ThemeProvider>
     </Provider>,
-    '#ai-lessons-all-progress-container'
+    '#ai-lessons-progress-container'
   );
 });

@@ -46,7 +46,7 @@ const CODE_STUDIO_ENTRIES = {
   'ai_lessons/new': './src/sites/studio/pages/ai_lessons/new.js',
   'ai_lessons/edit': './src/sites/studio/pages/ai_lessons/edit.js',
   'ai_lessons/show': './src/sites/studio/pages/ai_lessons/show.js',
-  'ai_lessons/all_progress': './src/sites/studio/pages/ai_lessons/all_progress.js',
+  'ai_lessons/progress': './src/sites/studio/pages/ai_lessons/progress.js',
   'lessons/show': './src/sites/studio/pages/lessons/show.js',
   'lessons/student_lesson_plan': './src/sites/studio/pages/lessons/student_lesson_plan.js',
   'lessons/tutor': './src/sites/studio/pages/lessons/tutor.js',
