@@ -5,6 +5,7 @@ import {generateText} from '@cdo/apps/aiGateway';
 
 import {LabType, SUPPORTED_LAB_TYPES} from '../types';
 
+import {LessonContext} from './context';
 import {getTextModel, logPrompt, logResponse, PROMPT_TAGS} from './shared';
 
 // Build the labType enum from SUPPORTED_LAB_TYPES so adding a new lab is
@@ -45,19 +46,19 @@ export interface OutlineLevel {
   description: string;
 }
 
-// Given a free-form outline of a lesson's learning experience, ask the
-// model to break it down into a sequence of 2-8 levels alternating between
-// Panels (narrative) and Weblab2 (hands-on coding). Returns the level
-// specs the caller can drop straight into the per-level form.
+// Given the lesson's context (free-form outline plus whatever outer
+// scopes filled in), ask the model to break it down into a sequence of
+// 2-8 levels alternating between Panels (narrative) and Weblab2
+// (hands-on coding). Returns the level specs the caller can drop
+// straight into the per-level form.
 //
-// `targetProject`, when supplied, is the formatted final-app snapshot
-// (same string the per-level prompts get). It lets the outline AI plan
-// a progression aimed at that destination — picking weblab2 milestones
-// that move the code toward the target and panels that frame the
-// concepts the target uses.
+// ctx.targetProject, when supplied, is the formatted final-app snapshot
+// (same string the per-level prompts read from ctx.targetProject). It
+// lets the outline AI plan a progression aimed at that destination —
+// picking weblab2 milestones that move the code toward the target and
+// panels that frame the concepts the target uses.
 export async function generateLessonOutline(
-  outline: string,
-  targetProject?: string
+  ctx: LessonContext
 ): Promise<OutlineLevel[]> {
   const prompt = [
     'You are helping a curriculum author plan a single lesson for a',
@@ -79,7 +80,7 @@ export async function generateLessonOutline(
     '  - description: a 1-3 sentence description of what the level should',
     '    teach or do. This becomes the AI prompt that builds the actual',
     '    level content, so be concrete.',
-    ...(targetProject
+    ...(ctx.targetProject
       ? [
           '',
           'Target project — the final app the lesson is building toward.',
@@ -89,21 +90,22 @@ export async function generateLessonOutline(
           'panels that motivate or recap the concepts the target uses. The',
           'student never sees this code; do not paste it into any',
           'description — just let it shape the progression.',
-          targetProject,
+          ctx.targetProject,
         ]
       : []),
     '',
-    `Outline: ${outline}`,
+    `Outline: ${ctx.lessonOutline ?? ''}`,
   ].join('\n');
 
-  logPrompt(PROMPT_TAGS.LESSON_OUTLINE, prompt);
+  const logContext = {level: ctx.lessonName, subtask: 'lesson-outline'};
+  logPrompt(PROMPT_TAGS.LESSON_OUTLINE, prompt, logContext);
   const response = await generateText({
     model: getTextModel(),
     prompt,
     output: lessonOutlineSchema,
   });
   const levels = (response.output as {levels: OutlineLevel[]}).levels;
-  logResponse(PROMPT_TAGS.LESSON_OUTLINE, levels);
+  logResponse(PROMPT_TAGS.LESSON_OUTLINE, levels, logContext);
   if (!levels?.length) {
     throw new Error('Model returned no levels');
   }
