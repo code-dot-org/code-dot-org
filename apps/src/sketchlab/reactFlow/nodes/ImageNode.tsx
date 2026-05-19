@@ -12,7 +12,6 @@ import React, {
 
 import {DEFAULT_ROTATION, MIN_NODE_HEIGHT, MIN_NODE_WIDTH} from '../constants';
 import {useSketchLabReadOnly} from '../context';
-import ImageNodeToolbar from '../elementToolbars/ImageNodeToolbar';
 import {ImageNodeType} from '../types';
 
 import ConnectionHandles from './ConnectionHandles';
@@ -82,8 +81,6 @@ function ImageNode({id, data, selected}: NodeProps<ImageNodeType>) {
         minWidth={MIN_NODE_WIDTH}
         minHeight={MIN_NODE_HEIGHT}
       />
-
-      <ImageNodeToolbar nodeId={id} />
 
       <div className={styles.rotatable} style={rotatableStyle}>
         <img

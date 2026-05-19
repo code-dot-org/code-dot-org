@@ -331,7 +331,7 @@ class Api::V1::SectionsController < Api::V1::JSONApiController
   #   ...
   # ]}
   def code_review_groups
-    groups = @section.code_review_groups
+    groups = @section.code_review_groups.includes(:members)
     groups_details = []
     assigned_follower_ids = []
     groups.each do |group|
@@ -343,7 +343,7 @@ class Api::V1::SectionsController < Api::V1::JSONApiController
       groups_details << {id: group.id, name: group.name, members: members}
     end
 
-    unassigned_students = @section.followers.where.not(id: assigned_follower_ids)
+    unassigned_students = @section.followers.where.not(id: assigned_follower_ids).includes(:student_user)
     unassigned_students = unassigned_students.map {|student| {follower_id: student.id, name: student.student_user.name}}
     groups_details << {unassigned: true, members: unassigned_students}
     render json: {groups: groups_details}

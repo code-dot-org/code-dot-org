@@ -5625,7 +5625,7 @@ en:
             * This curriculum has a flexible implementation and can be taught in different configurations based on the needs of each classroom. Check out the [**Implementation Guide**](https://docs.google.com/document/d/10OHyNUPyT2HBINQpqJEKagimXXQDMdA9K0m44A3vOU4/edit?usp=sharing) for more information.
 
             * You can find the *Syllabus* and other resources to help you implement this curriculum in the Teacher Resources menu below.
-          version_title: "'25-'26"
+          version_title: Fall 2025
         teaching-csd-unit2-2025:
           title: Teaching Web Development
           description_short: 'This professional learning module is designed to help you prepare to teach Code.org''s Web Development. '
@@ -6648,7 +6648,7 @@ en:
 
             ## Did you know?
 
-            * Professional development is available to help you get started teaching AI Foundations. [**Click here**](https://code.org/educate/professional-learning/middle-high) to learn more about professional learning opportunities in your region or [**click here**](http://studio.code.org/courses/teaching-ai-foundations-2025) for our self-paced online option.
+            * Professional development is available to help you get started teaching AI Foundations. [**Click here**](https://code.org/educate/professional-learning/middle-high) to learn more about professional learning opportunities in your region or [**click here**](https://studio.code.org/courses/teaching-ai-foundations-2026) for our self-paced online option.
 
             * This curriculum has a flexible implementation and can be taught in different configurations based on the needs of each classroom. Check out the [**AIF Implementation Guide**](https://docs.google.com/document/d/10OHyNUPyT2HBINQpqJEKagimXXQDMdA9K0m44A3vOU4/edit?usp=sharing) for more information.
 
@@ -7254,4 +7254,36 @@ en:
           description_short: This self-paced professional learning module is designed to help prepare you to start teaching AP CSA.
           description_student: This self-paced professional learning module is designed to help prepare you to start teaching AP CSA.
           description_teacher: This self-paced professional learning module is designed to help prepare you to start teaching AP CSA.
+          version_title: "'26-'27"
+        pl-embedding-sandbox:
+          title: pl-embedding-sandbox
+          description_short: ''
+          description_student: ''
+          description_teacher: ''
+          version_title: ''
+        teaching-csd-2026:
+          title: Teaching CS Discoveries
+          description_short: After completing this online professional leanring module, you'll be ready to get started teaching Code.org's Computer Science Discoveries curriculum with your students.
+          description_student: |-
+            ## Welcome
+            Welcome to Code.org's free self-paced online course for educators to get started teaching CS Discoveries! After completing this online course, **you'll be ready to get started teaching Code.org’s Computer Science Discoveries course** with your students.
+
+            ### Find the learning that works for you
+            * **Go at your own pace:** This self-paced course is designed to put you in the driver's seat, and give you control over your own learning. Suggested times are given for each module and lesson.  However, we encourage you to **engage with the content at your own pace.**
+
+            * **Pick your content:** The content of this professional learning course is organized in the suggested progression for teachers new to both Code.org and CS Discoveries. However, you can **engage with the content in the order that best meets your needs.** We recommend all teachers **start with the short welcome unit** to learn more about this professional learning course before getting started.
+          description_teacher: |-
+            ## Welcome
+            Welcome to Code.org's free self-paced online course for educators to get started teaching CS Discoveries! After completing this online course, **you'll be ready to get started teaching Code.org’s Computer Science Discoveries course** with your students.
+
+            ### Find the learning that works for you
+            * **Go at your own pace:** This self-paced course is designed to put you in the driver's seat, and give you control over your own learning. Suggested times are given for each module and lesson.  However, we encourage you to **engage with the content at your own pace.**
+
+            * **Pick your content:** The content of this professional learning course is organized in the suggested progression for teachers new to both Code.org and CS Discoveries. However, you can **engage with the content in the order that best meets your needs.** We recommend all teachers **start with the short welcome unit** to learn more about this professional learning course before getting started.
+          version_title: "'26-'27"
+        virtual-pl-csd-summer-2026:
+          title: CSD Virtual PL Workshop Course
+          description_short: ''
+          description_student: "**You will:**\n\n* Prepare to teach CS Discoveries.\n* Practice key concepts in the CS Discoveries curriculum.\n* Grow in your understanding of equitable CS education. \n* Develop empathy for the student experience. \n* Become a part of a network of teachers who are doing similar work."
+          description_teacher: "**You will:**\n\n* Prepare to teach CS Discoveries.\n* Practice key concepts in the CS Discoveries curriculum.\n* Grow in your understanding of equitable CS education. \n* Develop empathy for the student experience. \n* Become a part of a network of teachers who are doing similar work."
           version_title: "'26-'27"

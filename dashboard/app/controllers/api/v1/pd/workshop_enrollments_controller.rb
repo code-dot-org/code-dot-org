@@ -23,12 +23,17 @@ class Api::V1::Pd::WorkshopEnrollmentsController < ApplicationController
 
   # GET /api/v1/pd/workshops/1/enrollments
   def index
+    enrollments = @workshop.enrollments.includes(
+      :attendances, :pre_workshop_survey,
+      user: {school_info: [:school, :school_district]},
+      school_info: [:school, :school_district]
+    )
     respond_to do |format|
       format.json do
-        render json: @workshop.enrollments, each_serializer: Api::V1::Pd::WorkshopEnrollmentSerializer
+        render json: enrollments, each_serializer: Api::V1::Pd::WorkshopEnrollmentSerializer
       end
       format.csv do
-        response = render_to_json @workshop.enrollments, each_serializer: Api::V1::Pd::WorkshopEnrollmentCsvSerializer
+        response = render_to_json enrollments, each_serializer: Api::V1::Pd::WorkshopEnrollmentCsvSerializer
         send_as_csv_attachment response, 'workshop_enrollments.csv'
       end
     end

@@ -29,6 +29,7 @@ import {
   LINE_RECONNECT_SNAP_RADIUS_PX,
   MIN_ZOOM,
   SAVE_DEBOUNCE_MS,
+  SKETCHLAB_TOOLBAR_PANEL_CLASS,
 } from '../constants';
 import {
   ClipboardProvider,
@@ -37,7 +38,7 @@ import {
   ToolbarVisibilityProvider,
   type ToolbarTarget,
 } from '../context';
-import OpenLineEdgeToolbar from '../elementToolbars/OpenLineEdgeToolbar';
+import CornerToolbarPanel from '../elementToolbars/CornerToolbarPanel';
 import {
   DEFAULT_EDGE_TYPE,
   DEFAULT_LINE_WIDTH,
@@ -116,10 +117,8 @@ export default function ReactFlowCanvas({
   const [nodes, setNodes, onNodesChange] =
     useNodesState<SketchLabNode>(initialNodes);
   const [edges, setEdges, onEdgesChange] = useEdgesState(initialEdges);
-
   const {syncRefs, pushSnapshot, undo, redo, canUndo, canRedo} =
     useUndoHistory();
-
   // Keep undo history refs in sync with current canvas state.
   useEffect(() => {
     syncRefs(nodes, edges);
@@ -336,8 +335,7 @@ export default function ReactFlowCanvas({
       const focusTarget = event.target as HTMLElement;
       if (
         event.currentTarget.contains(event.relatedTarget as Node) ||
-        focusTarget.closest('.react-flow__node-toolbar') ||
-        focusTarget.closest('.react-flow__edge-toolbar')
+        focusTarget.closest(`.${SKETCHLAB_TOOLBAR_PANEL_CLASS}`)
       ) {
         return;
       }
@@ -572,12 +570,15 @@ export default function ReactFlowCanvas({
         setNodes(currentNodes => [...currentNodes, sourceAnchor, targetAnchor]);
         setEdges(currentEdges => [...currentEdges, newLine]);
 
-        // Move focus to the new line after React Flow renders it.
+        // Move focus to the new line and open its toolbar after React
+        // Flow renders it. focusEntry must run before openToolbar so
+        // lastFocusedEntry matches the toolbar target — otherwise the
+        // close-on-focus-loss effect dismisses the toolbar immediately.
         (document.activeElement as HTMLElement)?.blur();
-        setTimeout(
-          () => focusEntry({type: 'edge', id: newLine.id}),
-          FOCUS_DELAY_MS
-        );
+        setTimeout(() => {
+          focusEntry({type: 'edge', id: newLine.id});
+          openToolbar({type: 'edge', id: newLine.id}, {trapFocus: false});
+        }, FOCUS_DELAY_MS);
         return;
       }
 
@@ -605,14 +606,24 @@ export default function ReactFlowCanvas({
 
       setNodes(currentNodes => [...currentNodes, newNode]);
 
-      // Move focus to the new node after React Flow renders it.
+      // Move focus to the new node and open its toolbar after React
+      // Flow renders it. focusEntry must run before openToolbar so
+      // lastFocusedEntry matches the toolbar target — otherwise the
+      // close-on-focus-loss effect dismisses the toolbar immediately.
       (document.activeElement as HTMLElement)?.blur();
-      setTimeout(
-        () => focusEntry({type: 'node', id: newNodeId}),
-        FOCUS_DELAY_MS
-      );
+      setTimeout(() => {
+        focusEntry({type: 'node', id: newNodeId});
+        openToolbar({type: 'node', id: newNodeId}, {trapFocus: false});
+      }, FOCUS_DELAY_MS);
     },
-    [focusEntry, pushSnapshot, screenToFlowPosition, setNodes, setEdges]
+    [
+      focusEntry,
+      openToolbar,
+      pushSnapshot,
+      screenToFlowPosition,
+      setNodes,
+      setEdges,
+    ]
   );
 
   const handleNodeClick = useCallback(
@@ -713,7 +724,7 @@ export default function ReactFlowCanvas({
                 }}
                 defaultMarkerColor={DEFAULT_STROKE_COLOR}
               >
-                <OpenLineEdgeToolbar
+                <CornerToolbarPanel
                   edges={edges}
                   nodes={nodes}
                   setEdges={setEdges}

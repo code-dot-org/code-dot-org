@@ -8,14 +8,14 @@
           "type": "panel",
           "name": "variable_panel",
           "title": "Panel to hold variables for foorm. HIDE AFTER TESTING",
-          "visible": "true",
+          "visible": "false",
           "elements": [
             {
               "type": "text",
               "name": "module",
               "startWithNewLine": false,
               "defaultValueExpression": "{module_name}",
-              "readOnly": false
+              "readOnly": true
             }
           ]
         },
@@ -54,10 +54,62 @@
           "name": "barriers_implementation_ai"
         },
         {
-          "type": "library_item",
-          "library_name": "surveys/pd/self_paced_pl_standards",
-          "library_version": 0,
-          "name": "module_supported_learning"
+          "type": "matrix",
+          "name": "module_supported_learning",
+          "title": "How did each of the following support your learning?",
+          "description": "Rate how helpful was each option from Not helpful (1) to Very helpful (7).",
+          "columns": [
+            {
+              "value": "1",
+              "text": "1 - Not helpful"
+            },
+            {
+              "value": "2",
+              "text": "2"
+            },
+            {
+              "value": "3",
+              "text": "3"
+            },
+            {
+              "value": "4",
+              "text": "4"
+            },
+            {
+              "value": "5",
+              "text": "5"
+            },
+            {
+              "value": "6",
+              "text": "6"
+            },
+            {
+              "value": "7",
+              "text": "7 - Very helpful"
+            }
+          ],
+          "rows": [
+            {
+              "value": "reading",
+              "text": "Reading a page that contained text and images about a topic."
+            },
+            {
+              "value": "task_in_platform",
+              "text": "Trying a task or activity in the Code.org platform."
+            },
+            {
+              "value": "reflections",
+              "text": "Writing reflections on experiences and teaching practices."
+            },
+            {
+              "value": "forum_participation",
+              "text": "Sharing strategies in the Code.org forum."
+            },
+            {
+              "value": "video_content",
+              "text": "Engaging with video content."
+            }
+          ]
         },
         {
           "type": "library_item",
