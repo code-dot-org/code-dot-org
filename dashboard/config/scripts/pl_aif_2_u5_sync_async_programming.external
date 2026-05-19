@@ -6,25 +6,25 @@ markdown <<MARKDOWN
 # Why Apps Wait
   
 
-####  Have you noticed a web app that feels like it “pauses” while it loads something—like a map, feed, or search results?
+Have you noticed a web app that feels like it “pauses” while it loads something—like a map, feed, or search results?
 
-#### That’s your program waiting on work happening somewhere else (usually a network request).
+That’s your program waiting on work happening somewhere else (usually a network request).
 
 <img src="https://images.code.org/1aca9c1c602c02f849d5182bc359154f-image-1770914096808.png" alt="icon of server, network, and clock symbolizing the time it takes for programs to run" width="300px" style="border-radius:10px; float:right; margin: 0 0 10px 10px;">
 
 ## What Is the Program Waiting For?
 
-#### When your app loads data, it often has to ask something outside of itself for help:
-- #### A server
-- #### A database
-- #### An API
-- #### The network
+When your app loads data, it often has to ask something outside of itself for help:
+- A server
+- A database
+- An API
+- The network
 
-#### Those requests take time.
+Those requests take time.
 
-#### The question is not **whether** there will be waiting.
+The question is not **whether** there will be waiting.
 
-#### **The real question is:**
+**The real question is:**
 
 > #### What should the program do *while* it waits?
 
@@ -63,9 +63,9 @@ markdown <<MARKDOWN
 
 ## Why This Matters
      
-- #### **User experience:** Async helps apps stay responsive instead of freezing while they wait.
-- #### **Correctness:** If you use data before it arrives, you get bugs (empty screens, undefined values, wrong results).
-- #### **Performance:** Async lets you overlap “waiting time” with useful work.
+- **User experience:** Async helps apps stay responsive instead of freezing while they wait.
+- **Correctness:** If you use data before it arrives, you get bugs (empty screens, undefined values, wrong results).
+- **Performance:** Async lets you overlap “waiting time” with useful work.
 
  
 

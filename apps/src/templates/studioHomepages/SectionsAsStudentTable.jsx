@@ -4,7 +4,6 @@ import {connect} from 'react-redux';
 
 import fontConstants from '@cdo/apps/fontConstants';
 import Button from '@cdo/apps/legacySharedComponents/Button';
-import {teacherDashboardUrl} from '@cdo/apps/templates/teacherDashboard/urlHelpers';
 import color from '@cdo/apps/util/color';
 import {SectionLoginType} from '@cdo/generated-scripts/sharedConstants';
 import i18n from '@cdo/locale';
@@ -30,16 +29,7 @@ class SectionsAsStudentTable extends React.Component {
     } else if (section.login_type === SectionLoginType.google_classroom) {
       return i18n.loginTypeGoogleClassroom();
     } else {
-      return this.props.isPlSections ? (
-        <a
-          style={plTableLayoutStyles.sectionCodeLink}
-          href={teacherDashboardUrl(`${section.id}/login_info`)}
-        >
-          {section.code}
-        </a>
-      ) : (
-        section.code
-      );
+      return section.code;
     }
   }
 
@@ -124,13 +114,7 @@ class SectionsAsStudentTable extends React.Component {
               className="test-row"
             >
               <td style={{...styles.col, ...styles.sectionNameCol}}>
-                {this.props.isPlSections ? (
-                  <a style={styles.link} href={teacherDashboardUrl(section.id)}>
-                    {section.name}
-                  </a>
-                ) : (
-                  <div>{section.name}</div>
-                )}
+                <div>{section.name}</div>
               </td>
               <td style={{...styles.col, ...styles.courseCol}}>
                 <a href={section.linkToAssigned} style={styles.link}>

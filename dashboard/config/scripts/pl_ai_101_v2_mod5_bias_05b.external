@@ -5,9 +5,9 @@ description 'description here'
 markdown <<MARKDOWN
 # Mitigating Bias
 
-#### Prompting is one of the most immediate ways to influence the quality and inclusiveness of AI responses. By adding context, asking for multiple perspectives, and challenging assumptions, you can guide AI toward more balanced and representative outputs.
+Prompting is one of the most immediate ways to influence the quality and inclusiveness of AI responses. By adding context, asking for multiple perspectives, and challenging assumptions, you can guide AI toward more balanced and representative outputs.
 
-#### Below are examples of how prompting can be used to improve AI responses.
+Below are examples of how prompting can be used to improve AI responses.
 
 <div style="padding:12px 16px 16px 16px;">
 <div style="border-radius:18px; overflow:hidden; box-shadow:0 6px 18px rgba(41,47,54,0.08); border:2px solid #8C52BA;">
@@ -123,12 +123,12 @@ markdown <<MARKDOWN
 
 ## Looking Beyond Prompting
 
-#### While prompting can improve AI outputs, it does not eliminate bias. Even well-crafted prompts can still produce incomplete, unbalanced, or biased responses.
+While prompting can improve AI outputs, it does not eliminate bias. Even well-crafted prompts can still produce incomplete, unbalanced, or biased responses.
 
-#### Mitigating bias requires awareness, intentional use, and critical evaluation.
+Mitigating bias requires awareness, intentional use, and critical evaluation.
 
-* #### Awareness helps you recognize when bias may be present
-* #### Intentional use ensures you are guiding AI toward inclusive outcomes
-* #### Critical evaluation allows you to question, revise, and adapt outputs before using them
+* Awareness helps you recognize when bias may be present
+* Intentional use ensures you are guiding AI toward inclusive outcomes
+* Critical evaluation allows you to question, revise, and adapt outputs before using them
 
 MARKDOWN

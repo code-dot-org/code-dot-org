@@ -1,14 +1,14 @@
 name 'ai-and-algorithmic-decisions-preassessment-q15_2026'
 
-question 'A student uses an AI assistant to help fix an error in their game code. The AI suggests a solution, but when they test it, the game still doesn\'t work as expected. What\'s the best next step for the student?'
+question 'A student asks AI to fix a bug in their game. The AI suggests a code change. The student pastes it in, but the game still doesn\'t work. What should the student do next?'
 
-wrong 'Copy and paste the AI\'s suggestion again until it works.'
-right 'Read the AI\'s code carefully, test it step by step, and look for where the logic breaks.'
-wrong 'Delete the project and start completely over from scratch.'
-wrong 'Ask a classmate to fix it without checking what the AI suggested.'
+wrong 'Ask the AI for a totally different solution and paste that one in.'
+wrong 'Assume the original bug is unfixable and start over.'
+wrong 'Restart the computer.'
+right 'Read the AI''s code carefully, predict what it should do, test step by step, and find where the logic actually breaks.'
 
 allow_multiple_attempts true
 
 teacher_markdown <<MARKDOWN
-Lessons 2-6
+Lesson 2
 MARKDOWN

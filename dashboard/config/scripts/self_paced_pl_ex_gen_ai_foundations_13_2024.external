@@ -5,7 +5,7 @@ description 'description here'
 markdown <<MARKDOWN
 # Lesson 11: Project: Demystifying Generative AI
 
-#### In this project, students read several generative AI opinion articles that contain misrepresentations or exaggerations of what generative AI is capable of and how it works. Using their newfound knowledge from this unit, students draft a rebuttal and create an artifact to help visualize or conceptualize an aspect of their argument. This project acts as a summative assessment for the content of this unit.
+In this project, students read several generative AI opinion articles that contain misrepresentations or exaggerations of what generative AI is capable of and how it works. Using their newfound knowledge from this unit, students draft a rebuttal and create an artifact to help visualize or conceptualize an aspect of their argument. This project acts as a summative assessment for the content of this unit.
 
 ---
 
@@ -23,7 +23,7 @@ markdown <<MARKDOWN
 ---
 
 ## Up Next!
-#### Explore the steps students will go through when completing their projects.
+Explore the steps students will go through when completing their projects.
 
 
 

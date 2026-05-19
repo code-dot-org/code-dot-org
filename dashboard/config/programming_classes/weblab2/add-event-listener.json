@@ -1,0 +1,14 @@
+{
+  "category_key": "javascript",
+  "content": "# Add Event Listener\n\nThe `addEventListener()` method attaches an event listener to an element. Use it when you want an element, like a button, to respond to a user action.",
+  "examples": "[{\"name\":\"Respond to a Button Click\",\"description\":\"This runs code when the button is clicked.\",\"code\":\"```\\nconst buttonOne = document.getElementById(\\\"buttonOne\\\");\\n\\nbuttonOne.addEventListener(\\\"click\\\", () =\\u003e {\\n  buttonOne.textContent = \\\"Clicked!\\\";\\n});\\n```\"}]",
+  "external_documentation": "",
+  "fields": "[]",
+  "key": "add-event-listener",
+  "name": "Add Event Listener",
+  "syntax": "`buttonOne.addEventListener(\"click\", () => { ... });`",
+  "tips": "- Call `addEventListener()` on the element that should respond.\n- The event type goes in quotation marks, like `\"click\"`.\n- The code inside the arrow function is the event handler. It runs when the event happens.\n- Make sure the element has been selected before you call `addEventListener()` on it.\n- In Web Lab, `addEventListener()` is often used with buttons, icons, and other interactive page elements.",
+  "methods": [
+
+  ]
+}

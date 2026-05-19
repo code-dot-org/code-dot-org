@@ -5,7 +5,7 @@ description 'description here'
 markdown <<MARKDOWN
 # Evolving Websites 
 
-#### Take a look at the two versions of the Amazon website — one from around 2000 and one from today.
+Take a look at the two versions of the Amazon website — one from around 2000 and one from today.
 Spend a moment comparing them.
 
 <div style="display: flex; gap: 20px; justify-content: center; align-items: flex-start; max-width: 1000px; margin: auto;">
@@ -24,16 +24,16 @@ Spend a moment comparing them.
 
 
 
-#### What do you notice about how the website has changed over time?
+What do you notice about how the website has changed over time?
 
 
-#### Which version would you rather use, and why?
+Which version would you rather use, and why?
 
 
 ### What do these changes tell you about how websites are designed with users in mind?
 
 
-#### As you reflect, think about how the design choices you see — layout, images, colors, navigation — all relate to user-centered design, the idea that websites are built to meet the needs of the people who use them.
+As you reflect, think about how the design choices you see — layout, images, colors, navigation — all relate to user-centered design, the idea that websites are built to meet the needs of the people who use them.
 
 
 
@@ -45,14 +45,14 @@ Spend a moment comparing them.
 
 ## HTML Tags
 
-#### Each piece of content is wrapped in a **“tag”** with angle brackets (< >)
+Each piece of content is wrapped in a **“tag”** with angle brackets (< >)
 
 <img src="https://images.code.org/779f2aeb684a6b54da16227d780fbd67-image-1759350247508.png" alt="The **h1** tag makes “Welcome to My Page” appear as a large heading.
 The **p** tag makes a regular block of text.
 The **img*** tag shows the picture (in this case, puppy.jpg), with the text “A cute puppy” used if the image can’t load." width="650px" style="display: block; margin-left: auto; margin-right: auto;">
 
 
-#### HTML doesn’t control colors or style—that’s what **CSS** is for. Instead, it answers the question: “What is on the page?”
+HTML doesn’t control colors or style—that’s what **CSS** is for. Instead, it answers the question: “What is on the page?”
 
 ## Next, let's see how **CSS** layers in!
 

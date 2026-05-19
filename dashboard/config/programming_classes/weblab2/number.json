@@ -1,0 +1,14 @@
+{
+  "category_key": "javascript",
+  "content": "# Number\n\nA `number` is a numeric value in JavaScript. Use numbers for app state that can be counted, compared, increased, decreased, or used in math.",
+  "examples": "[{\"name\":\"Store a Score\",\"description\":\"This creates a variable named `energy` and stores the number `10`.\",\"code\":\"`let energy = 10;`\"},{\"name\":\"Convert Text to a Number\",\"description\":\"This uses `Number()` to convert a string into a number before doing math.\",\"code\":\"```\\nlet ageText = \\\"12\\\";\\nlet age = Number(ageText);\\nlet nextAge = age + 1;\\n```\"}]",
+  "external_documentation": "",
+  "fields": "[]",
+  "key": "number",
+  "name": "Number",
+  "syntax": "`let energy = 10;`",
+  "tips": "- Use numbers for values like scores, counts, health, energy, or ratings.\n- Do not put quotation marks around a number if you want JavaScript to treat it like a number.\n- `\"10\"` is a string, but `10` is a number.\n- Use `Number()` to convert a text value into a number when needed.\n- In Web Lab, numbers often appear in variables that track app state, scores, or user choices.",
+  "methods": [
+
+  ]
+}

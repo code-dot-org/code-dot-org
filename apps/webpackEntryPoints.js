@@ -147,6 +147,7 @@ const INTERNAL_ENTRIES = {
   'datasets/index': './src/sites/studio/pages/datasets/index.js',
   'datasets/edit_manifest': './src/sites/studio/pages/datasets/edit_manifest.js',
   'lessons/edit': './src/sites/studio/pages/lessons/edit.js',
+  'lessons/generate': './src/sites/studio/pages/lessons/generate.js',
   'levelbuilder': './src/sites/studio/pages/levelbuilder.js',
   'levels/editors/_applab': './src/sites/studio/pages/levels/editors/_applab.js',
   'levels/editors/_craft': './src/sites/studio/pages/levels/editors/_craft.js',

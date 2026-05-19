@@ -5,11 +5,11 @@ description 'description here'
 markdown <<MARKDOWN
 # Facilitating Ethical Discussions
 
-#### As students begin using AI tools, ethical questions will naturally surface in classroom conversations - sometimes planned, and sometimes unexpectedly. Being prepared to guide these discussions is an important part of using AI responsibly in teaching.
+As students begin using AI tools, ethical questions will naturally surface in classroom conversations - sometimes planned, and sometimes unexpectedly. Being prepared to guide these discussions is an important part of using AI responsibly in teaching.
 
-#### At the same time, these discussions can feel challenging to lead. Topics like bias, fairness, and privacy can be sensitive, and it’s normal to feel uncertain about how to respond to strong opinions or complex questions.
+At the same time, these discussions can feel challenging to lead. Topics like bias, fairness, and privacy can be sensitive, and it’s normal to feel uncertain about how to respond to strong opinions or complex questions.
 
-#### When facilitating conversations about AI and ethics, consider the following strategies:
+When facilitating conversations about AI and ethics, consider the following strategies:
 
 <div style="display:grid; gap:16px; max-width:90%; margin:0 auto; font-family:ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial; color:#292F36;">
 
@@ -82,5 +82,5 @@ Students can build confidence by learning to navigate complexity.
 
 >#### **💬 Quick Reflection:** Which of these stratagies fit best with your teaching style?
 
-#### By guiding these discussions with openness and curiosity, you will help students develop a thoughtful, ethical approach to AI technology.
+By guiding these discussions with openness and curiosity, you will help students develop a thoughtful, ethical approach to AI technology.
 MARKDOWN

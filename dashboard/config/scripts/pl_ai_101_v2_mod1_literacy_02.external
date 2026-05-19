@@ -5,7 +5,7 @@ description 'description here'
 markdown <<MARKDOWN
 # AI Literacy
 
-#### You, your students, or fellow educators may have some misconceptions around AI literacy.
+You, your students, or fellow educators may have some misconceptions around AI literacy.
 
 > #### 💬 **Quick Reflection:** As you review the chart below try to identify any misconceptions you have heard about AI literacy. Where did these misconceptions come from?
 
@@ -113,5 +113,5 @@ markdown <<MARKDOWN
 
 </div>
 
-#### AI literacy is a foundational understanding of AI, how it works, and how it impacts our lives. It is a key component of using AI safely and taking part in the ongoing dialogue around how AI is used in the world today.
+AI literacy is a foundational understanding of AI, how it works, and how it impacts our lives. It is a key component of using AI safely and taking part in the ongoing dialogue around how AI is used in the world today.
 MARKDOWN

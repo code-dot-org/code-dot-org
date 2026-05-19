@@ -10,14 +10,14 @@ markdown <<MARKDOWN
 <p style="line-height: 1.5; margin-left: 10px; margin-right: 10px; margin-top: 10px; margin-bottom: 10px; font-size: 18px; ">Computers have their own binary system - they represent "on" or "off" using 0s and 1s. This is why you may have heard that computer science is all “0’s and 1’s”. When you have a single 0 or 1, that is called one **bit** of information.  
 </p></div>
 
-#### **Bit** - a single piece of binary information.
+**Bit** - a single piece of binary information.
 
 
 ## Pixels 
 
 ##### After learning how to represent letters using ASCII, students will go on to learn how computers represent images using pixels. Students are introduced to the concept of splitting images into squares or "pixels" which can then be turned on or off individually to make the entire image. 
 
-#### **Pixel** - a tiny square or dot which contains a single point of color of a larger image.
+**Pixel** - a tiny square or dot which contains a single point of color of a larger image.
 
 ## Pixelation Widget
 

@@ -11,5 +11,5 @@
 #
 class AiStudentPodcast < ApplicationRecord
   has_many :ai_student_podcast_objectives, dependent: :destroy
-  has_many :objectives, join_table: :ai_student_podcast_objectives
+  has_many :objectives, through: :ai_student_podcast_objectives
 end
