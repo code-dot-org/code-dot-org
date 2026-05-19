@@ -94,17 +94,17 @@ export function buildInitialState(lesson: ExistingLessonData): InitialState {
   const specs = entries.map(
     ({level, scriptLevel, activityIndex, sectionIndex}) => {
       const labType = labTypeFromRailsType(level.type);
-      const description = level.generatePrompt || '';
+      const description = level.generateOutline || '';
       return {
         key: createUuid(),
         id: stripPrefix(level.name),
         // Filler value when unsupported; the dropdown is hidden then.
         labType: labType ?? SUPPORTED_LAB_TYPES[0],
         description,
-        lastGeneratedDescription: level.generatePrompt
-          ? level.generatePrompt
+        lastGeneratedDescription: level.generateOutline
+          ? level.generateOutline
           : undefined,
-        generate: labType !== undefined && !level.generatePrompt,
+        generate: labType !== undefined && !level.generateOutline,
         existing: {activityIndex, sectionIndex, scriptLevel},
         unsupportedType: labType === undefined ? level.type : undefined,
       };

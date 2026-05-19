@@ -27,22 +27,18 @@
 // on a slides page) live on the inner-most scope they belong to, since
 // they're scoped to a single generation pass and don't propagate above.
 //
-// On this branch the unit-scope fields are present in the types but
-// never populated; the unit-generator branch fills them in. Same for
-// `targetProject` (project branch) and the slides-specific scopes
-// (slides branch). Adding a downstream field is a one-line edit on the
-// type that owns it; consumers in derived types pick it up automatically.
+// Every field below is optional except the ones the scope's own page
+// always has. That lets callers spread a partial outer context without
+// breaking the type, and lets the page populate fields it has access
+// to and leave the rest undefined.
 
 export interface UnitContext {
   // Display name of the unit this lesson sits in. Used in prompts to
-  // anchor the AI to the broader artifact identity. Optional only
-  // because on the base branch we don't yet plumb it; on the unit
-  // branch it's always present.
+  // anchor the AI to the broader artifact identity.
   unitName?: string;
 
   // The unit's `generate_outline` — the levelbuilder's free-text
-  // description of what the unit teaches as a whole. Optional because
-  // not every unit has one and the base branch can't yet read it.
+  // description of what the unit teaches as a whole.
   unitOutline?: string;
 }
 
@@ -56,18 +52,21 @@ export interface LessonContext extends UnitContext {
   // consistent framing.
   lessonOutline?: string;
 
-  // Formatted dump of a target Web Lab 2 project's source files (the
-  // result of `formatTargetProject(loadProjectSources(channelId))`).
-  // When set, every per-level AI call uses it as the "final goal" the
-  // lesson is building toward. Field lives at the lesson scope because
-  // the channel id is stored on the Lesson, but downstream scopes
-  // (LevelContext, SlideContext) inherit it.
+  // Prompt-ready text describing a "final goal" the lesson is building
+  // toward — typically a formatted dump of a Web Lab 2 project's
+  // source files. The slot itself is opaque text; how it gets formatted
+  // is the producer's concern. When set, every per-level AI call
+  // includes it as additional context. Field sits at the lesson scope
+  // because the lesson owns the reference (e.g. the channel id is
+  // stored on the Lesson record); downstream scopes inherit the
+  // formatted text via spread.
   targetProject?: string;
 }
 
 export interface LevelContext extends LessonContext {
-  // The level's user-facing name (typically `<prefix>-<id>`). Used in
-  // filenames for generated assets and as a logging tag.
+  // The level's name — same as Level#name in the DB (typically
+  // `<prefix>-<id>` for levels this page created). Used in filenames
+  // for generated assets and as a logging tag.
   levelName: string;
 
   // The levelbuilder's per-level description — the prompt that scopes

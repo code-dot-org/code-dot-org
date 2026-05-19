@@ -52,12 +52,12 @@ class ScriptLevelTest < ActiveSupport::TestCase
     assert_equal 2, sl2.lesson_total
   end
 
-  test 'summarize_for_lesson_edit includes per-level type and generatePrompt' do
-    # The /generate page reads `type` and `generatePrompt` for each level
+  test 'summarize_for_lesson_edit includes per-level type and generateOutline' do
+    # The /generate page reads `type` and `generateOutline` for each level
     # to decide whether the lab type is supported and to pre-populate the
     # description box. Pin the shape.
     panels_level = create(:panels, name: 'panels-summary')
-    panels_level.update!(properties: panels_level.properties.merge('generate_prompt' => 'tell the story'))
+    panels_level.update!(properties: panels_level.properties.merge('generate_outline' => 'tell the story'))
     weblab2_level = create(:weblab2, name: 'weblab2-summary')
     sl = create_script_level_with_ancestors(levels: [panels_level])
     other = create(:script_level, lesson: sl.lesson, script: sl.script, levels: [weblab2_level])
@@ -65,11 +65,11 @@ class ScriptLevelTest < ActiveSupport::TestCase
     panels_summary = sl.summarize_for_lesson_edit[:levels].first
     assert_equal panels_level.id.to_s, panels_summary[:id]
     assert_equal 'Panels', panels_summary[:type]
-    assert_equal 'tell the story', panels_summary[:generatePrompt]
+    assert_equal 'tell the story', panels_summary[:generateOutline]
 
     weblab2_summary = other.summarize_for_lesson_edit[:levels].first
     assert_equal 'Weblab2', weblab2_summary[:type]
-    assert_nil weblab2_summary[:generatePrompt]
+    assert_nil weblab2_summary[:generateOutline]
   end
 
   class InstructorInTrainingTests < ActiveSupport::TestCase

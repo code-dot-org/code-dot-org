@@ -39,13 +39,14 @@ import {
 
 import moduleStyles from './lesson-generator.module.scss';
 
-// Display labels for the per-card Lab dropdown. Keys must be in
-// SUPPORTED_LAB_TYPES; the order here is the dropdown order. Add a label
-// when adding a new supported lab.
-const LAB_LABELS: Record<LabType, string> = {
+// Display labels for the per-card Lab dropdown. `satisfies` keeps the
+// label literals narrow (handy if a caller ever wants them) while
+// still requiring every LabType to have an entry — adding a lab to
+// SUPPORTED_LAB_TYPES is a compile error here until the label lands.
+const LAB_LABELS = {
   panels: 'Panels',
   weblab2: 'Web Lab 2',
-};
+} as const satisfies Record<LabType, string>;
 
 const LAB_OPTIONS: {value: LabType; label: string}[] = SUPPORTED_LAB_TYPES.map(
   v => ({value: v, label: LAB_LABELS[v]})
@@ -364,13 +365,13 @@ const LessonGenerator: React.FC<LessonGeneratorProps> = ({lesson}) => {
         try {
           await updateLevelProperty(
             level.id,
-            'generate_prompt',
+            'generate_outline',
             spec.description.trim()
           );
         } catch (err) {
           const message = err instanceof Error ? err.message : String(err);
           appendLog(
-            `Warning: couldn't save generate prompt for "${levelName}": ${message}`
+            `Warning: couldn't save generate outline for "${levelName}": ${message}`
           );
         }
 
