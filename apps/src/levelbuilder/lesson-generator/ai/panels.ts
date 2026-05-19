@@ -8,6 +8,7 @@ import {SafeAndSupportedImageTypes} from '@cdo/generated-scripts/sharedConstants
 
 import {uploadLevelAsset} from '../levelApi';
 
+import {LevelContext} from './context';
 import {
   getImageModel,
   getTextModel,
@@ -73,15 +74,11 @@ interface PanelPlan {
 
 // Returns the per-panel plan for a Panels-type level. We split planning from
 // image generation so the levelbuilder gets per-panel progress and so a single
-// failed image doesn't waste the whole panel set. Pass `lessonContext` to
-// give the model the outline that frames the whole lesson, so the panels
-// for this level stay coherent with the surrounding levels.
-async function planPanels(
-  levelName: string,
-  description: string,
-  lessonContext?: string,
-  precedingLevels?: string
-): Promise<PanelPlan[]> {
+// failed image doesn't waste the whole panel set. The full LevelContext is
+// passed in so the prompt can fold in every outer scope (lesson outline,
+// preceding levels, and — once those branches land — unit outline + target
+// project) without growing more positional args.
+async function planPanels(ctx: LevelContext): Promise<PanelPlan[]> {
   const prompt = [
     'You are helping a curriculum author build a "Panels" level: a short,',
     'comic-strip-style sequence of full-width panels with overlay text.',
@@ -91,30 +88,30 @@ async function planPanels(
     'middle-school classroom. Each panel needs short overlay text (1-3',
     'sentences, markdown allowed) and an image prompt for a single 16:9',
     'illustration with no embedded text.',
-    ...(lessonContext
+    ...(ctx.lessonOutline
       ? [
           '',
           'Lesson context (this level is one piece of a larger lesson — keep',
           'tone, characters, and continuity consistent with this outline,',
           'but only produce content for the specific level description below):',
-          lessonContext,
+          ctx.lessonOutline,
         ]
       : []),
-    ...(precedingLevels
+    ...(ctx.precedingLevels
       ? [
           '',
           'Preceding levels in this lesson, in order. Use them for continuity',
           '— recurring characters, callbacks, building on earlier setups —',
           'but do NOT regenerate or summarize them; only build the level',
           'described last:',
-          precedingLevels,
+          ctx.precedingLevels,
         ]
       : []),
     '',
-    `Description: ${description}`,
+    `Description: ${ctx.levelDescription}`,
   ].join('\n');
 
-  const planContext = {level: levelName, subtask: 'plan'};
+  const planContext = {level: ctx.levelName, subtask: 'plan'};
   logPrompt(PROMPT_TAGS.PANELS_PLAN, prompt, planContext);
   const response = await generateText({
     model: getTextModel(),
@@ -216,18 +213,10 @@ export interface PanelGenerationCallbacks {
 // End-to-end: plan the panels, then generate + upload each image. Returns
 // a fully-populated panels array ready to PATCH onto the level.
 export async function generatePanelsForLevel(
-  levelName: string,
-  description: string,
-  callbacks: PanelGenerationCallbacks = {},
-  lessonContext?: string,
-  precedingLevels?: string
+  ctx: LevelContext,
+  callbacks: PanelGenerationCallbacks = {}
 ): Promise<Panel[]> {
-  const plan = await planPanels(
-    levelName,
-    description,
-    lessonContext,
-    precedingLevels
-  );
+  const plan = await planPanels(ctx);
   callbacks.onPlanned?.(plan.length);
 
   const panels: Panel[] = [];
@@ -235,11 +224,11 @@ export async function generatePanelsForLevel(
     callbacks.onPanelStart?.(i, plan.length);
     const imageUrl = await generateAndUploadPanelImage(
       plan[i].imagePrompt,
-      levelName,
+      ctx.levelName,
       i
     );
     panels.push({
-      key: `${levelName}-${createUuid()}`,
+      key: `${ctx.levelName}-${createUuid()}`,
       text: plan[i].text,
       imageUrl,
       layout: plan[i].layout,

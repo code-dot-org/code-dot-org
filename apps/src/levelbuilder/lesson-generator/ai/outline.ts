@@ -5,6 +5,7 @@ import {generateText} from '@cdo/apps/aiGateway';
 
 import {LabType, SUPPORTED_LAB_TYPES} from '../types';
 
+import {LessonContext} from './context';
 import {getTextModel, logPrompt, logResponse, PROMPT_TAGS} from './shared';
 
 // Build the labType enum from SUPPORTED_LAB_TYPES so adding a new lab is
@@ -45,12 +46,13 @@ export interface OutlineLevel {
   description: string;
 }
 
-// Given a free-form outline of a lesson's learning experience, ask the
-// model to break it down into a sequence of 2-8 levels alternating between
-// Panels (narrative) and Weblab2 (hands-on coding). Returns the level
-// specs the caller can drop straight into the per-level form.
+// Given the lesson's context (free-form outline plus whatever outer
+// scopes filled in), ask the model to break it down into a sequence of
+// 2-8 levels alternating between Panels (narrative) and Weblab2
+// (hands-on coding). Returns the level specs the caller can drop
+// straight into the per-level form.
 export async function generateLessonOutline(
-  outline: string
+  ctx: LessonContext
 ): Promise<OutlineLevel[]> {
   const prompt = [
     'You are helping a curriculum author plan a single lesson for a',
@@ -73,17 +75,18 @@ export async function generateLessonOutline(
     '    teach or do. This becomes the AI prompt that builds the actual',
     '    level content, so be concrete.',
     '',
-    `Outline: ${outline}`,
+    `Outline: ${ctx.lessonOutline ?? ''}`,
   ].join('\n');
 
-  logPrompt(PROMPT_TAGS.LESSON_OUTLINE, prompt);
+  const logContext = {level: ctx.lessonName, subtask: 'lesson-outline'};
+  logPrompt(PROMPT_TAGS.LESSON_OUTLINE, prompt, logContext);
   const response = await generateText({
     model: getTextModel(),
     prompt,
     output: lessonOutlineSchema,
   });
   const levels = (response.output as {levels: OutlineLevel[]}).levels;
-  logResponse(PROMPT_TAGS.LESSON_OUTLINE, levels);
+  logResponse(PROMPT_TAGS.LESSON_OUTLINE, levels, logContext);
   if (!levels?.length) {
     throw new Error('Model returned no levels');
   }
