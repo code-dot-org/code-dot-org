@@ -6,22 +6,16 @@ import {Panel, PanelLayout} from '@cdo/apps/panels/types';
 import {createUuid} from '@cdo/apps/utils';
 
 import {SlideContext} from '../../lesson-generator/ai/context';
-import {generateAndUploadPanelImage} from '../../lesson-generator/ai/panels';
+import {
+  generateAndUploadPanelImage,
+  PANEL_LAYOUTS,
+} from '../../lesson-generator/ai/panels';
 import {
   getTextModel,
   logPrompt,
   logResponse,
   PROMPT_TAGS,
 } from '../../lesson-generator/ai/shared';
-
-const PANEL_LAYOUTS: PanelLayout[] = [
-  'text-top-left',
-  'text-top-center',
-  'text-top-right',
-  'text-bottom-left',
-  'text-bottom-center',
-  'text-bottom-right',
-];
 
 const slidePlanSchema = Output.object({
   schema: z.object({
@@ -36,14 +30,7 @@ const slidePlanSchema = Output.object({
         'Prompt for generating the slide illustration. MUST describe a single 16:9 widescreen image that contains NO text, letters, numbers, captions, signs, labels, watermarks, or written language of any kind. The narrative text shows up as a separate UI overlay on top of the image — it is NOT part of the picture. If the slide subject involves text (a poster, sign, screen, book, code listing, message), describe the scene with those surfaces left blank, abstract, or only suggested by shapes — never spell out any words.'
       ),
     layout: z
-      .enum([
-        'text-top-left',
-        'text-top-center',
-        'text-top-right',
-        'text-bottom-left',
-        'text-bottom-center',
-        'text-bottom-right',
-      ])
+      .enum(PANEL_LAYOUTS)
       .describe('Where the text overlay sits on the image.'),
     teacherNote: z
       .string()
@@ -146,13 +133,13 @@ export async function generateSlide(ctx: SlideContext): Promise<Panel> {
     level: ctx.lessonName,
     subtask: `slide-${ctx.slideIndex + 1}-plan`,
   };
-  logPrompt(PROMPT_TAGS.PANELS_PLAN, prompt, context);
+  logPrompt(PROMPT_TAGS.SLIDE_PLAN, prompt, context);
   const response = await generateText({
     model: getTextModel(),
     prompt,
     output: slidePlanSchema,
   });
-  logResponse(PROMPT_TAGS.PANELS_PLAN, response.output, context);
+  logResponse(PROMPT_TAGS.SLIDE_PLAN, response.output, context);
   const plan = response.output as SlidePlan;
 
   // Defensively normalise layout in case the model emits a bogus value.

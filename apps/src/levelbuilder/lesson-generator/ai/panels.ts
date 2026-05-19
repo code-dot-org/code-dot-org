@@ -17,7 +17,10 @@ import {
   PROMPT_TAGS,
 } from './shared';
 
-const PANEL_LAYOUTS = [
+// Exported so the slides generator (which also produces Panels-app
+// panels) can reuse the same enum values for its plan schema and
+// layout-normalisation without copy-pasting.
+export const PANEL_LAYOUTS = [
   'text-top-left',
   'text-top-center',
   'text-top-right',

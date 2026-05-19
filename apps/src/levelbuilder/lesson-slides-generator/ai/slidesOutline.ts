@@ -11,6 +11,12 @@ import {
   PROMPT_TAGS,
 } from '../../lesson-generator/ai/shared';
 
+// Bounds on the deck the outline AI is allowed to plan. Quoted both in
+// the prompt and in the zod schema so the limits stay in sync.
+const MIN_SLIDES = 1;
+const MAX_SLIDES = 20;
+const DEFAULT_SLIDES_HINT = '3-6';
+
 const slidesOutlineSchema = Output.object({
   schema: z.object({
     slides: z
@@ -23,8 +29,8 @@ const slidesOutlineSchema = Output.object({
             ),
         })
       )
-      .min(1)
-      .max(20),
+      .min(MIN_SLIDES)
+      .max(MAX_SLIDES),
   }),
 });
 
@@ -53,8 +59,8 @@ export async function generateSlidesOutline(
     'curiosity and enough framing to engage productively.',
     '',
     'Each slide will be implemented as a single Panels-app panel (one',
-    '16:9 illustration + text overlay). Plan 1 to 20 slides; default',
-    'to 3-6 unless the outline below asks for more.',
+    `16:9 illustration + text overlay). Plan ${MIN_SLIDES} to ${MAX_SLIDES} slides; default`,
+    `to ${DEFAULT_SLIDES_HINT} unless the outline below asks for more.`,
     '',
     'Audience and tone: the unit may be aimed at any grade range, from',
     'elementary to high school or beyond. Read the outlines below for',
@@ -128,14 +134,14 @@ export async function generateSlidesOutline(
   ].join('\n');
 
   const context = {level: ctx.lessonName, subtask: 'slides-outline'};
-  logPrompt(PROMPT_TAGS.LESSON_OUTLINE, prompt, context);
+  logPrompt(PROMPT_TAGS.SLIDES_OUTLINE, prompt, context);
   const response = await generateText({
     model: getTextModel(),
     prompt,
     output: slidesOutlineSchema,
   });
   const slides = (response.output as {slides: OutlineSlide[]}).slides;
-  logResponse(PROMPT_TAGS.LESSON_OUTLINE, slides, context);
+  logResponse(PROMPT_TAGS.SLIDES_OUTLINE, slides, context);
   if (!slides?.length) {
     throw new Error('Model returned no slides');
   }
