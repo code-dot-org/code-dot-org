@@ -418,6 +418,7 @@ export default function ReactFlowCanvas({
 
         return addEdge(
           {
+            id: createUuid(),
             ...connection,
             ...defaultLineEdgeFields(),
           },

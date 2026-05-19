@@ -5,6 +5,7 @@ import {
   SketchlabReactFlowEdge,
   SketchlabReactFlowNode,
 } from '@cdo/apps/lab2/types';
+import {createUuid} from '@cdo/apps/utils';
 
 import {canCreateConnection} from '../utils/connectionRules';
 import {defaultLineEdgeFields} from '../utils/lineEdges';
@@ -104,6 +105,7 @@ export function useConnectMode({
         }
         return addEdge(
           {
+            id: createUuid(),
             source: connectingFrom,
             target: targetNodeId,
             ...handles,
