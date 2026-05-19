@@ -9,7 +9,7 @@ class GeocoderTest < Minitest::Test
   def test_finding_potential_addresses
     Geocoder.configure lookup: :mapbox, api_key: nil
     assert_nil(Geocoder.find_potential_street_address('this is just some text'))
-    assert_equal('1 Embarcadero Blvd SF CA', Geocoder.find_potential_street_address('1 Embarcadero Blvd SF CA'))
+    assert_equal('21 Embarcadero Blvd SF CA', Geocoder.find_potential_street_address('21 Embarcadero Blvd SF CA'))
     assert_equal('123 Post Road Westport CT', Geocoder.find_potential_street_address('Hi I live at 123 Post Road Westport CT'))
     assert_equal('123, Post Road, Westport, CT', Geocoder.find_potential_street_address('Hi I live at 123, Post Road, Westport, CT'))
     assert_nil(Geocoder.find_potential_street_address('Hi I live at 123 Post'))
